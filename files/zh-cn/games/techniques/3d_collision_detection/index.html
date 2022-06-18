@@ -13,11 +13,11 @@ translation_of: Games/Techniques/3D_collision_detection
 
 <p>与 2D 碰撞检测一样，轴对齐包围盒是判断两个物体是否重叠的最快算法，物体被包裹在一个非旋转的（因此轴对齐的）盒中，并检查这些盒在三维坐标空间中的位置，以确定它们是否重叠。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11797/Screen%20Shot%202015-10-16%20at%2015.11.21.png" style="display: block; height: 275px; margin: 0px auto; width: 432px;"></p>
+<p><img src="screen_shot_2015-10-16_at_15.11.21.png"></p>
 
 <p>由于性能原因，轴对齐是有一些约束的。两个非旋转的盒子之间是否重叠可以通过逻辑比较进行检查，而旋转的盒子则需要三角运算，这会导致性能下降。如果你有旋转的物体，可以通过修改边框的尺寸，这样盒子仍可以包裹物体，或者选择使用另一种边界几何类型，比如球体 (球体旋转，形状不会变)。下图是一个 AABB 物体旋转，动态调节盒大小适应物体的例子。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11799/rotating_knot.gif" style="display: block; height: 192px; margin: 0px auto; width: 207px;"></p>
+<p><img src="rotating_knot.gif"></p>
 
 <div class="note">
 <p><strong>Note:</strong> 参考<a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js">这里</a>，使用 Three.js 进行边界体积碰撞检测。</p>
@@ -41,7 +41,7 @@ translation_of: Games/Techniques/3D_collision_detection
 
 <p>检查一个 AABB 是否和另一个 AABB 相交类似于检测两个点一样。我们只需要基于每一条坐标轴并利用盒子的边缘去检测。下图显示了我们基于 X 轴的检测 — 当然， <em>A<sub>minX</sub></em>–<em>A<sub>maxX</sub></em> 和 <em>B<sub>minX</sub></em>–<em>B<sub>maxX</sub></em> 会不会重叠？</p>
 
-<p><img alt="updated version" src="https://mdn.mozillademos.org/files/11813/aabb_test.png" style="display: block; height: 346px; margin: 0px auto; width: 461px;"></p>
+<p><img alt="updated version" src="aabb_test.png"></p>
 
 <p>在数学上的表示就像这样：</p>
 
@@ -64,7 +64,7 @@ translation_of: Games/Techniques/3D_collision_detection
 
 <p>检查是否一个球体包含一个点，我们需要计算点和球体的中心之间的距离。如果这个距离小于或等于球的半径，这个点就在里面。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11803/point_vs_sphere.png" style="display: block; height: 262px; margin: 0px auto; width: 385px;"></p>
+<p><img src="point_vs_sphere.png"></p>
 
 <p>两个点 A 和 B 之间的欧氏距离是<br>
  <math><semantics><msqrt><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>x</mi></msub><mo>-</mo><msub><mi>B</mi><mi>x</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>y</mi></msub><mo>-</mo><msub><mi>B</mi><mi>y</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>z</mi></msub><mo>-</mo><msub><mi>B</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></msqrt><annotation encoding="TeX">\sqrt{(A_x - B_x) ^ 2) + (A_y - B_y)^2 + (A_z - B_z)}</annotation></semantics></math> ,我们的公式指出，球体碰撞检测是：</p>
@@ -90,7 +90,7 @@ translation_of: Games/Techniques/3D_collision_detection
 
 <p>球体与球体的距离类似于点和球体。我们需要测试是球体的中心之间的距离小于或等于半径的总和。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11805/sphere_vs_sphere.png" style="display: block; height: 262px; margin: 0px auto; width: 414px;"></p>
+<p><img src="sphere_vs_sphere.png"></p>
 
 <p>在数学上，像这样：</p>
 
@@ -110,7 +110,7 @@ translation_of: Games/Techniques/3D_collision_detection
 
 <p>测试一个球和一个 AABB 的碰撞是稍微复杂，但过程仍然简单和快速。一个合乎逻辑的方法是，检查 AABB 每个顶点，计算每一个点与球的距离。然而这是大材小用了，测试所有的顶点都是不必要的，因为我们可以侥幸计算 AABB 最近的点 (不一定是一个顶点) 和球体的中心之间的距离，看看它是小于或等于球体的半径。我们可以通过逼近球体的中心和 AABB 的距离得到这个值。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11837/sphere_vs_aabb.png" style="display: block; height: 282px; margin: 0px auto; width: 377px;"></p>
+<p><img src="sphere_vs_aabb.png"></p>
 
 <p>在 JavaScript, 我们可以像这样子做：</p>
 
