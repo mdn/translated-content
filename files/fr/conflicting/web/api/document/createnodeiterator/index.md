@@ -60,7 +60,9 @@ Le navigateur ne fournit aucun objet implémentant cette méthode. C'est l'utili
 
 ## Syntaxe
 
-    result = nodeFilter.acceptNode(node)
+```js
+result = nodeFilter.acceptNode(node)
+```
 
 ### Paramètres
 

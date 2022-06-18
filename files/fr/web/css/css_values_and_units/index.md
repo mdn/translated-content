@@ -56,7 +56,9 @@ Les spécifications définissent également des mots-clés utilisables comme val
 
 Lorsque vous consultez une spécification ou un article de MDN à propos d'une propriété, vous pourrez voir les mots-clés autorisés sous la forme suivante. Voici un exemple avec les valeurs autorisées pour la propriété {{cssxref("break-inside")}}.
 
-    auto | avoid | avoid-page | avoid-column | avoid-region
+```
+auto | avoid | avoid-page | avoid-column | avoid-region
+```
 
 Dans une déclaration, on pourra donc écrire (sans quote) :
 

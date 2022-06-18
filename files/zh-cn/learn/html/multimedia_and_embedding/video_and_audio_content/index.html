@@ -32,7 +32,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <h2 id="web_中的音频和视频">web 中的音频和视频</h2>
 
-<p>web 开发者们一直以来想在 Web 中使用音频和视频，自21世纪初以来，我们的带宽开始能够支持任意类型的视频（视频文件比文本和图片要大的多）。在早些时候，传统的 web 技术（如 HTML ）不能够在 Web 中嵌入音频和视频，所以一些像 <a href="https://en.wikipedia.org/wiki/Adobe_Flash">Flash</a> (后来有 <a href="https://en.wikipedia.org/wiki/Microsoft_Silverlight">Silverlight</a> ) 的专利技术在处理这些内容上变得很受欢迎。这些技术能够正常的工作，但是却有着一系列的问题，包括无法很好的支持 HTML/CSS 特性、安全问题，以及可行性问题。</p>
+<p>web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪初以来，我们的带宽开始能够支持任意类型的视频（视频文件比文本和图片要大的多）。在早些时候，传统的 web 技术（如 HTML）不能够在 Web 中嵌入音频和视频，所以一些像 <a href="https://en.wikipedia.org/wiki/Adobe_Flash">Flash</a> (后来有 <a href="https://en.wikipedia.org/wiki/Microsoft_Silverlight">Silverlight</a> ) 的专利技术在处理这些内容上变得很受欢迎。这些技术能够正常的工作，但是却有着一系列的问题，包括无法很好的支持 HTML/CSS 特性、安全问题，以及可行性问题。</p>
 
 <p>传统的解决方案能够解决许多这样的问题，前提是它能够正确的工作。幸运的是，几年之后 {{glossary("HTML5")}} 标准提出，其中有许多的新特性，包括 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 标签，以及一些 {{Glossary("JavaScript")}} 和 {{Glossary("API","APIs")}} 用于对其进行控制。在这里，我们不讨论有关 JavaScript 的问题，仅仅讲解有关 HTML 的基础。</p>
 
@@ -50,7 +50,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
   &lt;p&gt;你的浏览器不支持 HTML5 视频。可点击&lt;a href="rabbit320.mp4"&gt;此链接&lt;/a&gt;观看&lt;/p&gt;
 &lt;/video&gt;</pre>
 
-<p>当中的一些属性如下:</p>
+<p>当中的一些属性如下：</p>
 
 <dl>
  <dt>{{htmlattrxref("src","video")}}</dt>
@@ -73,15 +73,15 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <h4 id="媒体文件的内容">媒体文件的内容</h4>
 
-<p>我们先来快速的了解一下术语。像 MP3、MP4、WebM这些术语叫做<a href="/zh-CN/docs/Web/Media/Formats/Containers">容器格式</a>。他们定义了构成媒体文件的音频轨道和视频轨道的储存结构，其中还包含描述这个媒体文件的元数据，以及用于编码的编码译码器等等。</p>
+<p>我们先来快速的了解一下术语。像 MP3、MP4、WebM 这些术语叫做<a href="/zh-CN/docs/Web/Media/Formats/Containers">容器格式</a>。他们定义了构成媒体文件的音频轨道和视频轨道的储存结构，其中还包含描述这个媒体文件的元数据，以及用于编码的编码译码器等等。</p>
 
 <p>一个格式为 WebM 的电影包含视频轨道，音频轨道和文本轨道，其中视频轨道包含一个主视频轨道和一个可选的 Angle 轨道；音频轨道包含英语和西班牙语的音频轨道，还有一个英语评论的音频轨道；文字轨道包含英语和西班牙语的字幕轨道，如下图所示：</p>
 
 <p><img alt="Diagram conceptualizing the contents of a media file at the track level." src="https://mdn.mozillademos.org/files/16898/ContainersAndTracks.svg"></p>
 
-<p>为了编解码器（codec）编码媒体，容器中的音频和视频轨道以适合的格式保存。音频轨道和视频轨道使用不同的格式。每个音频轨道都使用<a href="/zh-CN/docs/Web/Media/Formats/Audio_codecs">音频编解码器</a>进行编码，而视频轨道则使用（您可能已经猜到了）<a href="/zh-CN/docs/Web/Media/Formats/Video_codecs">视频编解码器</a>进行编码。如前所述，不同的浏览器支持不同的视频和音频格式，以及不同的容器格式（如MP3、MP4和WebM，这些格式又可以包含不同类型的视频和音频）。</p>
+<p>为了编解码器（codec）编码媒体，容器中的音频和视频轨道以适合的格式保存。音频轨道和视频轨道使用不同的格式。每个音频轨道都使用<a href="/zh-CN/docs/Web/Media/Formats/Audio_codecs">音频编解码器</a>进行编码，而视频轨道则使用（您可能已经猜到了）<a href="/zh-CN/docs/Web/Media/Formats/Video_codecs">视频编解码器</a>进行编码。如前所述，不同的浏览器支持不同的视频和音频格式，以及不同的容器格式（如 MP3、MP4 和 WebM，这些格式又可以包含不同类型的视频和音频）。</p>
 
-<p>例如:</p>
+<p>例如：</p>
 
 <ul>
  <li>WebM 容器通常包括了 Opus 或 Vorbis 音频和 VP8/VP9 视频。这在所有的现代浏览器中都支持，除了他们的老版本。</li>
@@ -89,16 +89,16 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
  <li>老式的 Ogg 容器往往支持 Ogg Vorbis  音频和 Ogg Theora 视频。主要在 Firefox 和 Chrome 当中支持，不过这个容器已经被更强大的 WebM 容器所取代。</li>
 </ul>
 
-<p>有一些特殊情况。例如，对于某些类型的音频，通常编解码器的数据存储没有容器或简化容器。其中一个例子就是FLAC编解码器，它通常存储在FLAC文件中，FLAC文件只是FLAC的原始轨迹。</p>
+<p>有一些特殊情况。例如，对于某些类型的音频，通常编解码器的数据存储没有容器或简化容器。其中一个例子就是 FLAC 编解码器，它通常存储在 FLAC 文件中，FLAC 文件只是 FLAC 的原始轨迹。</p>
 
-<p>另一种情况是一直流行的MP3文件。“MP3文件”实际上是存储在MPEG或MPEG-2容器中的MPEG-1音频层III（MPEG-1 Audio Layer III ，MP3）音频轨道。这一点特别有趣，因为尽管大多数浏览器不支持在{{HTMLElement("video")}}和{{HTMLElement("audio")}}元素中使用MPEG媒体，但由于MP3的流行，它们可能仍然支持MP3。</p>
+<p>另一种情况是一直流行的 MP3 文件。“MP3 文件”实际上是存储在 MPEG 或 MPEG-2 容器中的 MPEG-1 音频层 III（MPEG-1 Audio Layer III，MP3）音频轨道。这一点特别有趣，因为尽管大多数浏览器不支持在{{HTMLElement("video")}}和{{HTMLElement("audio")}}元素中使用 MPEG 媒体，但由于 MP3 的流行，它们可能仍然支持 MP3。</p>
 
 <p>音频播放器将会直接播放音频文件，例如 MP3 和 Ogg 文件。这些不需要容器。</p>
 
 <h4 id="浏览器所支持的媒体文件">浏览器所支持的媒体文件</h4>
 
 <div class="callout-box">
-<p><strong>Note:</strong> 你也许会疑惑为什么会有这样的情况存在。<strong>MP3 </strong> (音频格式) 和 <strong>MP4/H.264</strong> (视频格式) 是被广泛支持的两种格式，并且质量良好。然而，他们却有专利的阻碍 — MP3 的专利会持续到2017年（就在我翻译这篇文章的当天，MP3专利解除了），而 H.264 会持续到2027年早期。意思也就是说浏览器若想要支持这些格式，就得支付高额的费用。此外，许多人反对软件技术垄断，支持开放的格式。这就是为什么我们需要准备不同的格式来兼容不同的浏览器。</p>
+<p><strong>Note:</strong> 你也许会疑惑为什么会有这样的情况存在。<strong>MP3 </strong> (音频格式) 和 <strong>MP4/H.264</strong> (视频格式) 是被广泛支持的两种格式，并且质量良好。然而，他们却有专利的阻碍 — MP3 的专利会持续到 2017 年（就在我翻译这篇文章的当天，MP3 专利解除了），而 H.264 会持续到 2027 年早期。意思也就是说浏览器若想要支持这些格式，就得支付高额的费用。此外，许多人反对软件技术垄断，支持开放的格式。这就是为什么我们需要准备不同的格式来兼容不同的浏览器。</p>
 </div>
 
 <p>刚刚所说的格式主要用于将音频和视频压缩成可管理的文件（原始的音频和视频文件非常大）。浏览器包含了不同的 <strong>{{Glossary("Codec","Codecs")}}</strong>,，如 Vorbis 和 H.264，它们用来将已压缩的音频和视频转化成二进制数字。不同的编码器和不同的容器都有各自的优缺点，在你更了解它们后，你可以自己选择使用哪个编码器和容器。</p>
@@ -154,10 +154,10 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
  <dt>{{htmlattrxref("muted","video")}}</dt>
  <dd>这个属性会导致媒体播放时，默认关闭声音。</dd>
  <dt>{{htmlattrxref("poster","video")}}</dt>
- <dd>这个属性指向了一个图像的URL，这个图像会在视频播放前显示。通常用于粗略的预览或者广告。</dd>
+ <dd>这个属性指向了一个图像的 URL，这个图像会在视频播放前显示。通常用于粗略的预览或者广告。</dd>
  <dt>{{htmlattrxref("preload","video")}}</dt>
  <dd>
- <p>这个属性被用来缓冲较大的文件，有3个值可选：</p>
+ <p>这个属性被用来缓冲较大的文件，有 3 个值可选：</p>
 
  <ul>
   <li><code>"none"</code> ：不缓冲</li>
@@ -261,10 +261,10 @@ mediaElem.audioTracks.onaddtrack = function(event) {
 
 <ol>
  <li>以 .vtt 后缀名保存文件。</li>
- <li>用 {{htmlelement("track")}} 标签链接 .vtt 文件， <code>&lt;track&gt;</code> 标签需放在 <code>&lt;audio&gt;</code> 或 <code>&lt;video&gt; 标签当中</code>，同时需要放在所有 &lt;source&gt; 标签之后。使用 {{htmlattrxref("kind","track")}} 属性来指明是哪一种类型，如 subtitles 、 captions 、 descriptions。然后，使用 {{htmlattrxref("srclang","track")}} 来告诉浏览器你是用什么语言来编写的 subtitles。</li>
+ <li>用 {{htmlelement("track")}} 标签链接 .vtt 文件， <code>&lt;track&gt;</code> 标签需放在 <code>&lt;audio&gt;</code> 或 <code>&lt;video&gt; 标签当中</code>，同时需要放在所有 &lt;source&gt; 标签之后。使用 {{htmlattrxref("kind","track")}} 属性来指明是哪一种类型，如 subtitles、captions、descriptions。然后，使用 {{htmlattrxref("srclang","track")}} 来告诉浏览器你是用什么语言来编写的 subtitles。</li>
 </ol>
 
-<p>如下:</p>
+<p>如下：</p>
 
 <pre class="brush: html notranslate">&lt;video controls&gt;
     &lt;source src="example.mp4" type="video/mp4"&gt;
@@ -279,12 +279,12 @@ mediaElem.audioTracks.onaddtrack = function(event) {
 <p>如果你想了解更多细节，你可以阅读 <a href="/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>。在 Github 上你可以找到与本文相关的样例，他们由 Ian Devlin 编写，点击<a href="https://iandevlin.github.io/mdn/video-player-with-captions/">这里</a>可以查看该样例，或者点击<a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">这里</a>查看源代码。这个样例使用了 JavaScript 代码，它使得用户可以选择不同的字幕。注意，若想要显示字幕，你需要点击 "CC" 按钮，并且选择一种语言 — English, Deutsch, 或 Español。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 文本轨道会使你的网站更容易被搜索引擎抓取到 （{{glossary("SEO")}}）， 由于搜索引擎的文本抓取能力非常强大，使用文本轨道甚至可以让搜索引擎通过视频的内容直接链接。</p>
+<p><strong>Note</strong>: 文本轨道会使你的网站更容易被搜索引擎抓取到 （{{glossary("SEO")}}），由于搜索引擎的文本抓取能力非常强大，使用文本轨道甚至可以让搜索引擎通过视频的内容直接链接。</p>
 </div>
 
 <h2 id="实践学习：在你的网站上嵌入你自己的视频或音频。">实践学习：在你的网站上嵌入你自己的视频或音频。</h2>
 
-<p>在这个实践学习当中，我们希望你能够走出去，并且记录一些你自己的视频或者音频 — 如今，大多数手机都能够非常方便的记录视频或者音频，并且你可以将他们上传到你的电脑上面，你可以使用这些功能来记录你的视频或音频。在这时候，你可能需要做一些格式转换，如果是视频的话，你需要将它们转化为 WebM 或者 MP4 ，如果是音频的话，你需要将它们转化为 MP3 或者 Ogg 。 不过你并不需要担心，有许多的程序都能够帮你解决这些问题，例如 <a href="http://www.mirovideoconverter.com/">Miro Video Converter</a> 和 <a href="https://sourceforge.net/projects/audacity/">Audacity</a>。我们非常希望你能够亲自动手实现它。</p>
+<p>在这个实践学习当中，我们希望你能够走出去，并且记录一些你自己的视频或者音频 — 如今，大多数手机都能够非常方便的记录视频或者音频，并且你可以将他们上传到你的电脑上面，你可以使用这些功能来记录你的视频或音频。在这时候，你可能需要做一些格式转换，如果是视频的话，你需要将它们转化为 WebM 或者 MP4 ，如果是音频的话，你需要将它们转化为 MP3 或者 Ogg。不过你并不需要担心，有许多的程序都能够帮你解决这些问题，例如 <a href="http://www.mirovideoconverter.com/">Miro Video Converter</a> 和 <a href="https://sourceforge.net/projects/audacity/">Audacity</a>。我们非常希望你能够亲自动手实现它。</p>
 
 <p>如果你无法取得任意的音频或者视频，你可以使用我们已经为你提供的样本（<a href="https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content">sample audio and video files</a>）。同时你也可以使用我们的代码来作为参考。</p>
 

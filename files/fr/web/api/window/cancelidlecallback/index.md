@@ -9,7 +9,9 @@ La méthode **`window.cancelIdleCallback()`** annule une fonction précedemment 
 
 ## Syntaxe
 
-    window.cancelIdleCallback(idleCallbackId);
+```js
+window.cancelIdleCallback(idleCallbackId);
+```
 
 ### Paramètres
 

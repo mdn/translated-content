@@ -10,15 +10,17 @@ Le DOM Level 1 Core du W3C est un modèle objet puissant permettant de modifier 
 
 Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un gros amas de texte avec quelques balises au milieu. Cependant, c'est aussi beaucoup plus que ça. Tout document HTML (ou, par ailleurs, tout document SGML ou XML) forme une structure arborescente. Par exemple, le document et la structure arborescente qui suivent sont similaires (bien que non identiques — consultez les notes sur [les espaces dans le DOM](/fr/docs/Gestion_des_espaces_dans_le_DOM))&nbsp;:
 
-    <html>
-    <head>
-      <title>Mon document</title>
-    </head>
-    <body>
-      <h1>Titre</h1>
-      <p>Paragraphe</p>
-    </body>
-    </html>
+```html
+<html>
+<head>
+  <title>Mon document</title>
+</head>
+<body>
+  <h1>Titre</h1>
+  <p>Paragraphe</p>
+</body>
+</html>
+```
 
 ![](using_the_w3c_dom_level_1_core-doctree.jpg)
 

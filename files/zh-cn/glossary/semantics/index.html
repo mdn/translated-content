@@ -8,7 +8,7 @@ tags:
 translation_of: Glossary/Semantics
 original_slug: Glossary/语义
 ---
-<p>在编程中，<strong>语义</strong>指的是一段代码的含义 — 例如 "运行这行 JavaScript 代码会产生怎样的影响?", 或者 "这个 HTML 的元素有什么作用，扮演了什么样的角色"（而不只是 "它看上去像是什么?"。）</p>
+<p>在编程中，<strong>语义</strong>指的是一段代码的含义 — 例如 "运行这行 JavaScript 代码会产生怎样的影响？", 或者 "这个 HTML 的元素有什么作用，扮演了什么样的角色"（而不只是 "它看上去像是什么？"。）</p>
 
 <h2 id="JavaScript_中的语义">JavaScript 中的语义</h2>
 
@@ -24,13 +24,13 @@ original_slug: Glossary/语义
 
 <pre class="brush: html">&lt;h1&gt;This is a top level heading&lt;/h1&gt;</pre>
 
-<p>默认情况下，绝大多数浏览器的 <a href="/zh-CN/docs/Web/CSS/Cascade#User-agent_stylesheets">user agent stylesheet</a> 将会赋予一个 {{htmlelement("h1")}} 元素很大的字号尺寸从而使它看上去更像是一个标题（虽然你可以把它格式化为任何你想要的样式），但是更重要的是它的语义会被在很多地方以不同的方式被使用到， 例如搜索引擎会把它包含的内容作为一个重要的关键词，从而影响这个页面在搜索结果中的排序（参见{{ glossary ("SEO")}}），而且屏幕阅读器会使用它来帮助视障用户更好的使用这个页面。</p>
+<p>默认情况下，绝大多数浏览器的 <a href="/zh-CN/docs/Web/CSS/Cascade#User-agent_stylesheets">user agent stylesheet</a> 将会赋予一个 {{htmlelement("h1")}} 元素很大的字号尺寸从而使它看上去更像是一个标题（虽然你可以把它格式化为任何你想要的样式），但是更重要的是它的语义会被在很多地方以不同的方式被使用到，例如搜索引擎会把它包含的内容作为一个重要的关键词，从而影响这个页面在搜索结果中的排序（参见{{ glossary ("SEO")}}），而且屏幕阅读器会使用它来帮助视障用户更好的使用这个页面。</p>
 
 <p>另一方面，你可以通过样式（CSS）来让任何的元素<em>看上去</em>像是一个最高级别的标题，就像下面所展示的方法一样：</p>
 
 <pre class="brush: html">&lt;span style="font-size: 32px; margin: 21px 0;"&gt;Is this a top level heading?&lt;/span&gt;</pre>
 
-<p>这将会把这个元素渲染得像是一个最高级别的标题，但是它的值没有对应到最“最高级别标题”这一语义，所以在此之上，它不会获得更多额外的描述（只是一个普通“span”元素而不是“最高级别标题”这一语义）。所以在恰当的需求下使用恰当的HTML元素是一个不错的主意。</p>
+<p>这将会把这个元素渲染得像是一个最高级别的标题，但是它的值没有对应到最“最高级别标题”这一语义，所以在此之上，它不会获得更多额外的描述（只是一个普通“span”元素而不是“最高级别标题”这一语义）。所以在恰当的需求下使用恰当的 HTML 元素是一个不错的主意。</p>
 
 <p>HTML should be coded to represent the <em>data</em> that will be populated and not based on its default presentation styling. Presentation (how it should look), is the sole responsibility of <a href="/zh-CN/docs/Web/CSS">CSS</a>.</p>
 

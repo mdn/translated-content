@@ -18,7 +18,9 @@ translation_of: Web/API/Document/createCDATASection
 
 ## Syntaxe
 
-    CDATASectionNode = document.createCDATASection(data)
+```js
+CDATASectionNode = document.createCDATASection(data)
+```
 
 - `CDATASectionNode` est un noeud de [Section CDATA](/fr/docs/Web/API/CDATASection).
 - `data` est une string (_chaîne de caractères_) contenant les données à ajouter à la section CDATA.

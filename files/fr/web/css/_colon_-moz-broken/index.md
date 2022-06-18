@@ -16,7 +16,9 @@ Ce sélecteur est principalement destiné à être utilisé par les développeur
 
 ## Syntaxe
 
-    :-moz-broken
+```css
+:-moz-broken
+```
 
 ## Exemples
 

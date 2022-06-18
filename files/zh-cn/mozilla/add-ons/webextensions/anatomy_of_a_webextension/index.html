@@ -20,8 +20,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 <ul>
  <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#后台脚本">后台脚本</a>: 执行一个长时间运行的逻辑。</li>
  <li><a>图标</a>: 用于扩展插件和任何它可能定义的按钮儿。</li>
- <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#侧边栏，弹出窗口，选项页面">侧边栏, 弹出窗口, 选项页</a>: 为各式各样用户界面组件提供内容的HTML文件。</li>
- <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#内容脚本">内容脚本</a>: 扩展中包含的JavaScript，你可以注入它们到网页中。</li>
+ <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#侧边栏，弹出窗口，选项页面">侧边栏，弹出窗口，选项页</a>: 为各式各样用户界面组件提供内容的 HTML 文件。</li>
+ <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#内容脚本">内容脚本</a>: 扩展中包含的 JavaScript，你可以注入它们到网页中。</li>
  <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#网络可访问资源">网络可访问资源</a>: 使打包好的内容可用于网页与内容脚本中。</li>
 </ul>
 
@@ -76,7 +76,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 <p>后台脚本在一个被称为后台页面的特殊页面的上下文环境中运行。此环境为其提供了全局变量 <code><a href="/zh-CN/docs/Web/API/Window">window</a></code> ，也提供了所有的标准 DOM API。</p>
 
 <div class="notecard warning">
-  <p><strong>警告:</strong> 在Firefox浏览器中，后台页面不支持使用 <a href="/zh-CN/docs/Web/API/Window/alert"><code>alert()</code></a>, <a href="/zh-CN/docs/Web/API/Window/alert"><code>confirm()</code></a>和 <a href="/zh-CN/docs/Web/API/Window/alert"><code>prompt()</code></a></p>
+  <p><strong>警告：</strong> 在 Firefox 浏览器中，后台页面不支持使用 <a href="/zh-CN/docs/Web/API/Window/alert"><code>alert()</code></a>, <a href="/zh-CN/docs/Web/API/Window/alert"><code>confirm()</code></a>和 <a href="/zh-CN/docs/Web/API/Window/alert"><code>prompt()</code></a></p>
  
 </div>
 
@@ -113,9 +113,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <h2 id="扩展页面">扩展页面</h2>
 
-<p>您也可以在扩展中包含HTML文档，这些文档不附加到某个预定义的用户界面组件。与您可能为侧边栏，弹出窗口或选项页面提供的文档不同，它们在manifest.json中没有条目。但是，他们也可以像在后台脚本那样拥有一样的权限去使用WebExtension API。</p>
+<p>您也可以在扩展中包含 HTML 文档，这些文档不附加到某个预定义的用户界面组件。与您可能为侧边栏，弹出窗口或选项页面提供的文档不同，它们在 manifest.json 中没有条目。但是，他们也可以像在后台脚本那样拥有一样的权限去使用 WebExtension API。</p>
 
-<p>你通常可以使用 {{WebExtAPIRef("windows.create()")}} 或 {{WebExtAPIRef("tabs.create()")}}加载一个页面.</p>
+<p>你通常可以使用 {{WebExtAPIRef("windows.create()")}} 或 {{WebExtAPIRef("tabs.create()")}}加载一个页面。</p>
 
 <p>若想了解更多，请参考 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">扩展页面</a>。</p>
 
@@ -127,7 +127,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>内容脚本可以像普通脚本一样获取、操作页面的 DOM。</p>
 
-<p>与普通的页面内脚本不同，Content scripts可以：</p>
+<p>与普通的页面内脚本不同，Content scripts 可以：</p>
 
 <ul>
  <li>执行跨域访问</li>
@@ -137,13 +137,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>内容脚本无法直接访问普通网页中的脚本，但是可以通过 <code><a href="/zh-CN/docs/Web/API/Window/postMessage">window.postMessage()</a></code> API 来与之传递信息。</p>
 
-<p>通常情况下，当我们讨论内容脚本时，我们通常指的是JavaScript，但是你也可以用同样的机制来注入 CSS 样式。</p>
+<p>通常情况下，当我们讨论内容脚本时，我们通常指的是 JavaScript，但是你也可以用同样的机制来注入 CSS 样式。</p>
 
 <p>若想了解更多，请参考<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">内容脚本</a>。</p>
 
 <h2 id="网络可访问资源">网络可访问资源</h2>
 
-<p>网络可访问资源指的是像图片、HTML、CSS 和 JavaScript 一类在扩展中包含的资源文件，并且你可以在内容脚本和页面脚本中访问。这些网络可访问资源可以在页面脚本和内容脚本中通过使用特定的URI方案来引用。<br>
+<p>网络可访问资源指的是像图片、HTML、CSS 和 JavaScript 一类在扩展中包含的资源文件，并且你可以在内容脚本和页面脚本中访问。这些网络可访问资源可以在页面脚本和内容脚本中通过使用特定的 URI 方案来引用。<br>
  举个例子来说，如果一个内容脚本想要把一些图片插入网页，你可以在扩展中引入它们并且使他们成为网络可访问资源。接下来，内容脚本就可以创建并追加包含 <code>src</code> 属性的 <a href="/zh-CN/docs/Web/HTML/Element/img">img</a> 标签了。</p>
 
 <p>若想了解更多，请参考 manifest.json 中相关条目的文档：<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a>。</p>

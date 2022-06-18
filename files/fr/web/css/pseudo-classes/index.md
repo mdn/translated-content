@@ -25,9 +25,11 @@ Les pseudo-classes permettent d'appliquer un style à un élément non seulement
 
 ## Syntaxe
 
-    sélecteur:pseudo-classe {
-      propriété: valeur;
-    }
+```
+sélecteur:pseudo-classe {
+  propriété: valeur;
+}
+```
 
 À l'instar des classes, on peut chaîner plusieurs pseudo-classes au sein d'un sélecteur.
 

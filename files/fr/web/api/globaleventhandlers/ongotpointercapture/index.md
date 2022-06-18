@@ -7,7 +7,9 @@ translation_of: Web/API/GlobalEventHandlers/ongotpointercapture
 
 ## Syntaxe
 
-    target.ongotpointercapture = functionRef;
+```js
+target.ongotpointercapture = functionRef;
+```
 
 ### Valeur
 

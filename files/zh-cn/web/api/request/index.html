@@ -79,7 +79,7 @@ translation_of: Web/API/Request
  <dd>返回解决一个{{domxref("USVString")}}(文本) 表示的请求主体的 promise.</dd>
 </dl>
 
-<p class="note">注意：这些 Body 功能只能运行一次; 随后的调用将通过空 strings/ ArrayBuffers 解析。</p>
+<p>注意：这些 Body 功能只能运行一次; 随后的调用将通过空 strings/ ArrayBuffers 解析。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -112,7 +112,7 @@ const myCred = myRequest.credentials; // omit
 const bodyUsed = myRequest.bodyUsed;
 </pre>
 
-<p class="note">注意：body 类型只能是一个{{domxref("Blob")}},{{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} 或者{{domxref("ReadableStream")}}类型，因此增加一个 JSON 对象的有效载荷则需要字符串化该对象。</p>
+<p>注意：body 类型只能是一个{{domxref("Blob")}},{{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} 或者{{domxref("ReadableStream")}}类型，因此增加一个 JSON 对象的有效载荷则需要字符串化该对象。</p>
 
 <p>例如，您可以通过将<code>Request</code>对象作为参数传递给{{domxref("GlobalFetch.fetch()")}}调用来获取此 api 请求，并获得响应：</p>
 

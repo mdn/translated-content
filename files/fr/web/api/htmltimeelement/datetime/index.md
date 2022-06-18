@@ -149,8 +149,10 @@ Le format de la chaîne de caractères doit correspondre à l'une des micro-synt
 
 ## Syntaxe
 
-    dateTimeString = timeElt.dateTime;
-    timeElt.dateTime = dateTimeString
+```js
+dateTimeString = timeElt.dateTime;
+timeElt.dateTime = dateTimeString
+```
 
 ## Exemple
 

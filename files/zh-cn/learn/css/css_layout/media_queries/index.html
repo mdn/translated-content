@@ -5,13 +5,13 @@ translation_of: Learn/CSS/CSS_layout/Media_queries
 ---
 <p>{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}</p>
 
-<p><strong>CSS媒体查询</strong>为你提供了一种应用CSS的方法，仅在浏览器和设备的环境与你指定的规则相匹配的时候CSS才会真的被应用，例如“视口宽于480像素”的时候。媒体查询是响应式Web设计的关键部分，因为它允许你按照视口的尺寸创建不同的布局，不过它也可以用来探测和你的站点运行的环境相关联的其它条件，比如用户是在使用触摸屏还是鼠标。在本节课，你将会先学习到媒体查询的语法，然后继续在一个被安排好的示例中使用它，这个示例还会告诉你一个简单的设计是可以怎么被弄成响应式的。</p>
+<p><strong>CSS 媒体查询</strong>为你提供了一种应用 CSS 的方法，仅在浏览器和设备的环境与你指定的规则相匹配的时候 CSS 才会真的被应用，例如“视口宽于 480 像素”的时候。媒体查询是响应式 Web 设计的关键部分，因为它允许你按照视口的尺寸创建不同的布局，不过它也可以用来探测和你的站点运行的环境相关联的其它条件，比如用户是在使用触摸屏还是鼠标。在本节课，你将会先学习到媒体查询的语法，然后继续在一个被安排好的示例中使用它，这个示例还会告诉你一个简单的设计是可以怎么被弄成响应式的。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">学习前提：</th>
-   <td>HTML基础知识（学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>），对CSS工作方式的大致了解（学习<a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>和<a href="/en-US/docs/Learn/CSS/Building_blocks">CSS building blocks</a>）</td>
+   <td>HTML 基础知识（学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>），对 CSS 工作方式的大致了解（学习<a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>和<a href="/en-US/docs/Learn/CSS/Building_blocks">CSS building blocks</a>）</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -32,8 +32,8 @@ translation_of: Learn/CSS/CSS_layout/Media_queries
 
 <ul>
  <li>一个媒体类型，告诉浏览器这段代码是用在什么类型的媒体上的（例如印刷品或者屏幕）；</li>
- <li>一个媒体表达式，是一个被包含的CSS生效所需的规则或者测试；</li>
- <li>一组CSS规则，会在测试通过且媒体类型正确的时候应用。</li>
+ <li>一个媒体表达式，是一个被包含的 CSS 生效所需的规则或者测试；</li>
+ <li>一组 CSS 规则，会在测试通过且媒体类型正确的时候应用。</li>
 </ul>
 
 <h3 id="媒体类型">媒体类型</h3>
@@ -47,7 +47,7 @@ translation_of: Learn/CSS/CSS_layout/Media_queries
  <li><code>speech</code></li>
 </ul>
 
-<p>下面的媒体查询将会在页面被打印的时候把body设定为只有12pt大小。当页面在浏览器中载入的时候，它将不会生效。</p>
+<p>下面的媒体查询将会在页面被打印的时候把 body 设定为只有 12pt 大小。当页面在浏览器中载入的时候，它将不会生效。</p>
 
 <pre class="brush: css notranslate"><code>@media print {
     body {
@@ -73,9 +73,9 @@ translation_of: Learn/CSS/CSS_layout/Media_queries
 
 <h4 id="宽和高">宽和高</h4>
 
-<p>为了建立响应式设计（已经广受浏览器支持），我们一般最常探测的特征是视口宽度，而且我们可以使用<code>min-width</code>、<code>max-width</code>和<code>width</code>媒体特征，在视口宽度大于或者小于某个大小——或者是恰好处于某个大小——的时候，应用CSS。</p>
+<p>为了建立响应式设计（已经广受浏览器支持），我们一般最常探测的特征是视口宽度，而且我们可以使用<code>min-width</code>、<code>max-width</code>和<code>width</code>媒体特征，在视口宽度大于或者小于某个大小——或者是恰好处于某个大小——的时候，应用 CSS。</p>
 
-<p>这些特征是用来创建响应不同屏幕大小的布局的。例如，要想在视口正好是600像素的时候，让body的文本变为红色，你可能会使用下面的媒体查询。</p>
+<p>这些特征是用来创建响应不同屏幕大小的布局的。例如，要想在视口正好是 600 像素的时候，让 body 的文本变为红色，你可能会使用下面的媒体查询。</p>
 
 <pre class="brush: css notranslate"><code>@media screen and (width: 600px) {
     body {
@@ -85,7 +85,7 @@ translation_of: Learn/CSS/CSS_layout/Media_queries
 
 <p>在浏览器中<a href="https://mdn.github.io/css-examples/learn/media-queries/width.html">打开这个示例</a>，或者<a href="https://github.com/mdn/css-examples/blob/master/learn/media-queries/width.html">查看源代码</a>。</p>
 
-<p><code>width</code>（和<code>height</code>）媒体特征可以以数值范围使用，于是就有了<code>min-</code>或者<code>max-</code>的前缀，指示所给的值是最小值还是最大值。例如，要让颜色在视口窄于400像素的时候变成蓝色的话，可以用<code>max-width</code>：</p>
+<p><code>width</code>（和<code>height</code>）媒体特征可以以数值范围使用，于是就有了<code>min-</code>或者<code>max-</code>的前缀，指示所给的值是最小值还是最大值。例如，要让颜色在视口窄于 400 像素的时候变成蓝色的话，可以用<code>max-width</code>：</p>
 
 <pre class="brush: css notranslate"><code>@media screen and (max-width: 400px) {
     body {
@@ -97,11 +97,11 @@ translation_of: Learn/CSS/CSS_layout/Media_queries
 
 <p>实践中，使用最小值和最大值对响应式设计有很多的用处，所以你会很少见到<code>width</code>或<code>height</code> 单独使用的情况。</p>
 
-<p>还有许多其他媒体特征可以供你测试，尽管于4级和5级媒体查询规范中引入了一些新特征，它们受浏览器支持仍然有限。在MDN上，每个特征都已经同浏览器支持信息一同记载下来，你可以在<a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">使用媒体查询：媒体特征</a>中找到一张完整的列表。</p>
+<p>还有许多其他媒体特征可以供你测试，尽管于 4 级和 5 级媒体查询规范中引入了一些新特征，它们受浏览器支持仍然有限。在 MDN 上，每个特征都已经同浏览器支持信息一同记载下来，你可以在<a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">使用媒体查询：媒体特征</a>中找到一张完整的列表。</p>
 
 <h4 id="朝向">朝向</h4>
 
-<p>一个受到良好支持的媒体特征是<code>orientation</code>，我们可以用它测得竖放（portrait mode）和横放（landscape mode）模式。要在设备处于横向的时候改变body文本颜色的话，可使用下面的媒体查询。</p>
+<p>一个受到良好支持的媒体特征是<code>orientation</code>，我们可以用它测得竖放（portrait mode）和横放（landscape mode）模式。要在设备处于横向的时候改变 body 文本颜色的话，可使用下面的媒体查询。</p>
 
 <pre class="brush: css notranslate"><code>@media (orientation: landscape) {
     body {
@@ -137,7 +137,7 @@ translation_of: Learn/CSS/CSS_layout/Media_queries
 
 <h3 id="媒体查询中的“与”逻辑">媒体查询中的“与”逻辑</h3>
 
-<p>为了混合媒体特征，你可以以与在上面使用<code>and</code>很相同的方式，用<code>and</code>来混合媒体类型和特征。例如，我们可能会想要测得<code>min-width</code>和<code>orientation</code>，而body的文字只会在视口至少为400像素宽，且设备横放时变为蓝色。</p>
+<p>为了混合媒体特征，你可以以与在上面使用<code>and</code>很相同的方式，用<code>and</code>来混合媒体类型和特征。例如，我们可能会想要测得<code>min-width</code>和<code>orientation</code>，而 body 的文字只会在视口至少为 400 像素宽，且设备横放时变为蓝色。</p>
 
 <pre class="brush: css notranslate"><code>@media screen and (min-width: 400px) and (orientation: landscape) {
     body {
@@ -149,7 +149,7 @@ translation_of: Learn/CSS/CSS_layout/Media_queries
 
 <h3 id="媒体查询中的“或”逻辑">媒体查询中的“或”逻辑</h3>
 
-<p>如果你有一组查询，且要其中的任何一个都可以匹配的话，那么你可以使用逗号分开这些查询。在下面的示例中，文本会在视口至少为400像素宽的时候<strong>或者</strong>设备处于横放状态的时候变为蓝色。如果其中的任何一项成立，那么查询就匹配上了。</p>
+<p>如果你有一组查询，且要其中的任何一个都可以匹配的话，那么你可以使用逗号分开这些查询。在下面的示例中，文本会在视口至少为 400 像素宽的时候<strong>或者</strong>设备处于横放状态的时候变为蓝色。如果其中的任何一项成立，那么查询就匹配上了。</p>
 
 <pre class="brush: css notranslate"><code>@media screen and (min-width: 400px), screen and (orientation: landscape) {
     body {
@@ -191,7 +191,7 @@ translation_of: Learn/CSS/CSS_layout/Media_queries
 
 <h3 id="教程：一个简单的移动优先布局">教程：一个简单的移动优先布局</h3>
 
-<p>我们的起始点是一个HTML文档，上面应用了一些CSS，为布局的各部分加入了背景颜色。</p>
+<p>我们的起始点是一个 HTML 文档，上面应用了一些 CSS，为布局的各部分加入了背景颜色。</p>
 
 <pre class="brush: css notranslate"><code>* {
     box-sizing: border-box;
@@ -295,9 +295,9 @@ article {
 
 <p><strong>如果你想要在我们继续的时候，按步骤来并尝试这个示例，在你的电脑上建立一个<a href="https://github.com/mdn/css-examples/blob/master/learn/media-queries/step1.html">step1.html</a>的本地副本。</strong></p>
 
-<p>从这里开始，脱拽响应式设计的窗口，让它变得变得更宽，直到你看到一行变得非常长，有足够空间把导航栏放在一个水平行里面。这是我们加入第一个媒体查询的地方。我们将会使用em，因为这意味着，如果用户已经增加了文本的大小，断点会在行差不多也是这样长，但是视口更宽的时候产生；而文本更小的时候，视口也会更窄。</p>
+<p>从这里开始，脱拽响应式设计的窗口，让它变得变得更宽，直到你看到一行变得非常长，有足够空间把导航栏放在一个水平行里面。这是我们加入第一个媒体查询的地方。我们将会使用 em，因为这意味着，如果用户已经增加了文本的大小，断点会在行差不多也是这样长，但是视口更宽的时候产生；而文本更小的时候，视口也会更窄。</p>
 
-<p><strong>将下面的代码加到你的step1.html的CSS底部。</strong></p>
+<p><strong>将下面的代码加到你的 step1.html 的 CSS 底部。</strong></p>
 
 <pre class="brush: css notranslate"><code>@media screen and (min-width: 40em) {
     article {
@@ -316,13 +316,13 @@ article {
 }
 </code></pre>
 
-<p>这个CSS让我们的文章里面有了个两列布局，两栏分别是文章的内容和在aside元素中相关的信息。我们也已经用弹性盒把导航栏放在了一行里面。</p>
+<p>这个 CSS 让我们的文章里面有了个两列布局，两栏分别是文章的内容和在 aside 元素中相关的信息。我们也已经用弹性盒把导航栏放在了一行里面。</p>
 
 <p>在浏览器中<a href="https://mdn.github.io/css-examples/learn/media-queries/step2.html">打开步骤二</a>，或者<a href="https://github.com/mdn/css-examples/blob/master/learn/media-queries/step2.html">查看源代码</a>。</p>
 
-<p>让我们继续增加宽度，直到我们觉得这里有了足够多的空间来放置侧栏，再形成一列。在媒体查询中，我们会让main元素变成两栏网格。我们之后需要移除文章上的{{cssxref("margin-bottom")}}，让两个侧栏和彼此对齐，然后我们将会往页脚的顶部加上一个{{cssxref("border")}} 。一般来说，为了让设计看起来好看，这些小调整是你将会在每一个断点都需要做的。</p>
+<p>让我们继续增加宽度，直到我们觉得这里有了足够多的空间来放置侧栏，再形成一列。在媒体查询中，我们会让 main 元素变成两栏网格。我们之后需要移除文章上的{{cssxref("margin-bottom")}}，让两个侧栏和彼此对齐，然后我们将会往页脚的顶部加上一个{{cssxref("border")}} 。一般来说，为了让设计看起来好看，这些小调整是你将会在每一个断点都需要做的。</p>
 
-<p><strong>再往你的step1.html的CSS的底部加入下面的代码：</strong></p>
+<p><strong>再往你的 step1.html 的 CSS 的底部加入下面的代码：</strong></p>
 
 <pre class="brush: css notranslate"><code>@media screen and (min-width: 70em) {
     main {
@@ -395,7 +395,7 @@ article {
 
 <h2 id="小试牛刀！">小试牛刀！</h2>
 
-<p>你已经到了此文的结尾，但是你能记住最重要的信息吗？你可以在继续之前，找一个测试来验证下你是否已经掌握了这些信息。见<a href="/en-US/docs/Learn/CSS/CSS_layout/rwd_skills">小试牛刀：响应式Web设计</a>。</p>
+<p>你已经到了此文的结尾，但是你能记住最重要的信息吗？你可以在继续之前，找一个测试来验证下你是否已经掌握了这些信息。见<a href="/en-US/docs/Learn/CSS/CSS_layout/rwd_skills">小试牛刀：响应式 Web 设计</a>。</p>
 
 <h2 id="小结">小结</h2>
 

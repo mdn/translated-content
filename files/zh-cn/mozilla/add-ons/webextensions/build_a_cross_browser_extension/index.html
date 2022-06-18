@@ -2,7 +2,7 @@
 title: 构建一个跨浏览器的扩展程序
 slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 tags:
-  - Web插件
+  - Web 插件
   - 扩展
   - 指南
   - 插件
@@ -11,7 +11,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 ---
 <p>{{AddonSidebar()}}</p>
 
-<p>浏览器扩展 API 的引入为浏览器扩展的开发创造了 “一次开发跨浏览器” 的前景。然而，在使用扩展 API 的浏览器中(主要是 Chrome、 Firefox、 Opera 和 Edge) ，API 的实现和覆盖范围都存在差异。除此之外，Safari 使用了它自己的 Safari 扩展脚本系统。</p>
+<p>浏览器扩展 API 的引入为浏览器扩展的开发创造了“一次开发跨浏览器”的前景。然而，在使用扩展 API 的浏览器中 (主要是 Chrome、Firefox、Opera 和 Edge) ，API 的实现和覆盖范围都存在差异。除此之外，Safari 使用了它自己的 Safari 扩展脚本系统。</p>
 
 <p>最大化兼容浏览器扩展意味着至少在两个不同的浏览器上兼容同一个扩展。本文探讨了在创建跨浏览器扩展时所面临的六个主要挑战，并在每种情况下提出了如何应对这些挑战。</p>
 
@@ -19,7 +19,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 
 <h2 id="跨平台扩展的开发障碍">跨平台扩展的开发障碍</h2>
 
-<p>在开发跨平台扩展时，需要注意以下六个方面:</p>
+<p>在开发跨平台扩展时，需要注意以下六个方面：</p>
 
 <ul>
  <li>API 命名空间</li>
@@ -32,7 +32,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 
 <h3 id="API_命名空间">API 命名空间</h3>
 
-<p>在四大主流浏览器中，有两个 API 命名空间正在使用:</p>
+<p>在四大主流浏览器中，有两个 API 命名空间正在使用：</p>
 
 <ul>
  <li><code>browser.* </code>是 Firefox 和 Edge 使用的扩展 API 的标准</li>
@@ -45,7 +45,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 
 <h3 id="API_异步事件处理">API 异步事件处理</h3>
 
-<p>在四个主要浏览器中，有两种方法可以处理异步事件:</p>
+<p>在四个主要浏览器中，有两种方法可以处理异步事件：</p>
 
 <ul>
  <li>promises 是 Firefox 使用的扩展 API 的标准</li>
@@ -55,18 +55,18 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 <p>Firefox 还支持 <code>chrome.*</code> 命名空间中的 callbacks 风格的 API，这主要是为了便于从 Chrome <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">迁移</a>。然而，应该首选使用 promises（以及 <code>browser.*</code> 命名空间），它已被采纳为拟议标准的一部分。它极大地简化了异步事件处理，特别是在需要将事件链接在一起的情况下。</p>
 
 <div class="blockIndicator note">
-<p>如果你对这两种方法之间的差异不熟悉，可以看一下 <a href="https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee">了解异步 JavaScript: Callbacks、 Promises 和 Async/Await </a>或者 MDN 的 <a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a> 页面。</p>
+<p>如果你对这两种方法之间的差异不熟悉，可以看一下 <a href="https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee">了解异步 JavaScript: Callbacks、Promises 和 Async/Await </a>或者 MDN 的 <a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a> 页面。</p>
 </div>
 
 <h4 id="浏览器扩展_API_的垫片（Polyfill）">浏览器扩展 API 的垫片（Polyfill）</h4>
 
 <p>那么，当 Firefox 是唯一支持它的浏览器时，你如何轻松地使用 promises 呢？解决方案是使用 promises 为 Firefox 编程，并使用<a href="https://github.com/mozilla/webextension-polyfill/">浏览器扩展 API 的垫片（Polyfill）</a>！<br>
  <br>
- 这个 polyfill 解决了跨 Firefox、 Chrome 和 Opera 的 API 名称空间和异步事件处理。在撰写本报告时(2018年11月) ，Edge 的支持正在开发中。<br>
+ 这个 polyfill 解决了跨 Firefox、Chrome 和 Opera 的 API 名称空间和异步事件处理。在撰写本报告时 (2018 年 11 月) ，Edge 的支持正在开发中。<br>
  <br>
  要使用 polyfill，可以使用 npm 安装到开发环境中，或者直接从 <a href="https://github.com/mozilla/webextension-polyfill/releases">GitHub Relase</a> 页面下载。</p>
 
-<p>然后，引入 <code>browser-polyfill.js</code> 到:</p>
+<p>然后，引入 <code>browser-polyfill.js</code> 到：</p>
 
 <ul>
  <li><code>manifest.json</code>，修改后使它可以用于 background 和 content 脚本</li>
@@ -96,7 +96,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 
 <h3 id="API_函数覆盖率">API 函数覆盖率</h3>
 
-<p>这四个主要浏览器提供的 API 函数的实现差异可分为三大类:</p>
+<p>这四个主要浏览器提供的 API 函数的实现差异可分为三大类：</p>
 
 <ul>
  <li><strong>缺乏对整个功能的支持。</strong>例如，在撰写本文时，Edge 没有提供对<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/privacy#Browser_compatibility">隐私</a>功能的支持。</li>
@@ -104,17 +104,17 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
  <li><strong>专有功能，支持特定于浏览器的特性。</strong>例如，在撰写本文时，容器是一个特定于 firefox 的特性，由 <code>contextualidentity</code> 函数支持。</li>
 </ul>
 
-<p>你可以在 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Mozilla Developer Network 浏览器对 JavaScript API 页面的支持</a>上找到4个主要浏览器对扩展 API 的支持细节，以及 Firefox for Android 对扩展 API 的支持细节。浏览器兼容性信息也包含在每个函数及其方法、类型和事件的 Mozilla Developer Network <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">JavaScript APIs</a> 参考页面中。</p>
+<p>你可以在 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Mozilla Developer Network 浏览器对 JavaScript API 页面的支持</a>上找到 4 个主要浏览器对扩展 API 的支持细节，以及 Firefox for Android 对扩展 API 的支持细节。浏览器兼容性信息也包含在每个函数及其方法、类型和事件的 Mozilla Developer Network <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">JavaScript APIs</a> 参考页面中。</p>
 
 <h4 id="处理_API_差异">处理 API 差异</h4>
 
 <p>解决这些差异的一个简单方法是将扩展中使用的函数限制在没有 API 差异的函数范围内。在实践中，对于大多数扩展，这种方法可能限制性太强。<br>
  <br>
- 相反，如果 API 之间存在差异，则应该提供替代实现或降级功能。(请记住: 您可能还需要这样考虑同一浏览器的不同版本之间的 API 支持差异。)</p>
+ 相反，如果 API 之间存在差异，则应该提供替代实现或降级功能。(请记住：您可能还需要这样考虑同一浏览器的不同版本之间的 API 支持差异。)</p>
 
 <p>使用运行时检查函数特性的可用性是实现备选或降级功能的推荐方法。执行运行时检查的好处是，如果函数是可用的，您不需要更新和重新分发扩展来使用它。</p>
 
-<p>下面的代码使您能够执行运行时检查:</p>
+<p>下面的代码使您能够执行运行时检查：</p>
 
 <pre class="brush: js notranslate">if (typeof &lt;function&gt; === "function") {
    // safe to use the function
@@ -122,7 +122,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 
 <h3 id="Manifest_字段">Manifest 字段</h3>
 
-<p>4个主要浏览器支持的 <code><a href="/zh-CN/docs//zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">manifest.json</a></code> 文件字段的差异大致可分为三类:</p>
+<p>4 个主要浏览器支持的 <code><a href="/zh-CN/docs//zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">manifest.json</a></code> 文件字段的差异大致可分为三类：</p>
 
 <ul>
  <li><strong>扩展信息属性。</strong>例如，在撰写本文时，Firefox 和 Opera 包含和 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility">author</a></code> 地位相等的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#Browser_compatibility">developer</a></code> 关键字，以获取扩展的开发者和作者的详细信息。</li>
@@ -139,7 +139,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 <p>通过浏览器扩展商店打包和分发扩展相对简单。</p>
 
 <ul>
- <li>火狐、 Chrome 和 Opera 都使用简单的 zip 格式打包，同时需要 <code>manifest.json</code> 文件位于压缩包的根目录。</li>
+ <li>火狐、Chrome 和 Opera 都使用简单的 zip 格式打包，同时需要 <code>manifest.json</code> 文件位于压缩包的根目录。</li>
  <li>但是，提交到 Microsoft 扩展商店需要对扩展文件进行额外打包。</li>
 </ul>
 
@@ -151,7 +151,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 
 <p>因此，您需要为每个商店分别添加和更新扩展。在某些情况下，您可以使用脚本上传扩展。</p>
 
-<p>下表总结了每个商店的做法和特点:</p>
+<p>下表总结了每个商店的做法和特点：</p>
 
 <table>
  <tbody>
@@ -167,7 +167,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
     <p>发布审核</p>
    </td>
    <td>
-    <p>开发者账号需要2FA验证</p>
+    <p>开发者账号需要 2FA 验证</p>
    </td>
   </tr>
   <tr>
@@ -215,7 +215,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
     <p>否</p>
    </td>
    <td>
-    <p>人工审核，但不需要提供SLA</p>
+    <p>人工审核，但不需要提供 SLA</p>
    </td>
    <td>
     <p>否</p>
@@ -232,7 +232,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
     <p>否</p>
    </td>
    <td>
-    <p>人工审核，需要72小时<sup>2</sup></p>
+    <p>人工审核，需要 72 小时<sup>2</sup></p>
    </td>
    <td>
     <p>是</p>
@@ -257,7 +257,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 
 <h4 id="在不同的实现中共享资源">在不同的实现中共享资源</h4>
 
-<p>即使你要支持的平台中包括 Safari，仍然可以在对于不同浏览器的实现中共享许多资源。其中包括:</p>
+<p>即使你要支持的平台中包括 Safari，仍然可以在对于不同浏览器的实现中共享许多资源。其中包括：</p>
 
 <ul>
  <li>Images</li>

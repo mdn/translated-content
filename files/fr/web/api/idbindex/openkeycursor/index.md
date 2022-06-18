@@ -24,8 +24,10 @@ Cette méthode positionne le curseur sur la clé appropriée, dans la direction 
 
 ## Syntaxe
 
-    var monIndex = objectStore.index("index");
-    var request = monIndex.openKeyCursor(keyRange,direction);
+```js
+var monIndex = objectStore.index("index");
+var request = monIndex.openKeyCursor(keyRange,direction);
+```
 
 ### Paramètres
 

@@ -14,15 +14,19 @@ La méthode **`document.open()`** ouvre un document pour [l'écriture](/fr/docs/
 
 ## Syntaxe
 
-    document.open();
+```js
+document.open();
+```
 
 ## Exemple
 
-    // Dans cet exemple, le contenu du document est
-    // écrasé au cours de la réinitialisation avec open()
-    document.write("<html><p>supprimez-moi</p></html>");
-    document.open();
-    // Le document est vide.
+```js
+// Dans cet exemple, le contenu du document est
+// écrasé au cours de la réinitialisation avec open()
+document.write("<html><p>supprimez-moi</p></html>");
+document.open();
+// Le document est vide.
+```
 
 ## Notes
 

@@ -1,4 +1,4 @@
-## 목차
+# 목차
 
 1. **[MDN 번역 콘텐츠에 대한 일반 지침](#MDN-번역-콘텐츠에-대한-일반-지침)**
 2. **[첫 기여자들을 위한 지침 안내](#첫-기여자들을-위한-지침-안내)**
@@ -11,6 +11,7 @@
 9. **[맺음말](#맺음말)**
 
 ---
+
 ## MDN 번역 콘텐츠에 대한 일반 지침
 
 이 문서는 한국(ko) 지역에 대한 번역 지침입니다. 귀하의 로케일에 대한 몇 가지 특정 지침을 문서화하는 페이지를 추가하고 싶은데 아직 여기에 나타나지 않는 경우, 하나를 추가하거나 [Locale Teams](https://github.com/mdn/translated-content#policies-for-active-community-maintenance-teams)에 문의해주세요.
@@ -51,10 +52,11 @@ yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크]
 2. content 폴더에 들어가서 `yarn install`을 통해 yari 등 필요한 패키지를 다운받습니다.
 3. content 폴더 root에 .env 파일을 추가합니다. (translated-content/files 경로 추가, vscode editor의 경우 `EDITOR=code` 추가)
 
-```
-CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files
-EDITOR=code
-```
+    ```
+    CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files
+    EDITOR=code
+    ```
+
 4. `yarn start`
 
 다음과 같이 진행하면 아래와 같이 실시간으로 반영사항을 확인할 수 있고 4가지 편집 버튼으로 편집할 수 있습니다.
@@ -104,7 +106,7 @@ EDITOR=code
 
 일반적으로 소스 코드에서 이와 같은 줄 바꿈을 사용하지 않으므로 원하는 경우 자유롭게 제거 할 수 있으며 새 번역을 만들 때 추가하지 마십시오. 그러나 최종 렌더링 결과에 영향을 미치지 않으므로 이를 제거하는 데 너무 많은 시간을 소비하지 마십시오.
 
-### 역주/역자주 
+### 역주/역자주
 
 그동안의 MDN 문서에서는 역주로 인한 자의적인 해석이 많았고, 전체적인 문서의 품질을 낮췄습니다. 역주가 꼭 필요한 상황이 아니라면 역주는 남기지 않으며, 남기더라도 따로 역주를 표시하지 않고 본문에 포함합니다.
 예시: [다음 링크 참고](https://github.com/mdn/translated-content/pull/1385#discussion_r667509255)
@@ -152,16 +154,19 @@ EDITOR=code
 ```
 
 - 원문 [(참고 링크)](https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletProcessor/parameterDescriptors)
+
 ```
 The properties of these objects are as follows:
 ```
 
 - 변경 전
+
 ```
 이 객체들의 속성은 다음과 같습니다:
 ```
 
 - 변경 후
+
 ```
 이 객체들의 속성은 다음과 같습니다.
 ```
@@ -171,16 +176,19 @@ The properties of these objects are as follows:
 `: 쌍점,  ; 쌍반점 지침`과 같은 맥락에서 `. 온점`으로 치환하는 것을 권장합니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-965500282)
 
 - 원문
+
 ```
 A value of 0.01 was used for the value to ramp down to in the last function rather than 0, as an invalid or illegal string error is thrown if 0 is used — the value needs to be positive.
 ```
 
 - 변경 전
+
 ```
 오류가 발생되기 때문입니다 — 이 값은 양수일 필요가 있습니다.
 ```
 
 - 변경 후
+
 ```
 오류가 발생되기 때문입니다. 이 값은 양수일 필요가 있습니다.
 ```
@@ -203,10 +211,10 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 + Mozilla
 ```
 
-- "무슨무슨 값" (numeric value, integer value, ...) 같은 경우, 항상 띄어서 표기합니다. 
-    - 통일성을 위해 "반환 값" 같은 경우 띄어서 표기합니다.
-    - 예: 정수 값, 소수 값, 반환 값, 기본 값
-    - 틀린 예: 정숫값, 소숫값, 반환값, 기본값
+- "무슨무슨 값" (numeric value, integer value, ...) 같은 경우, 항상 띄어서 표기합니다.
+  - 통일성을 위해 "반환 값" 같은 경우 띄어서 표기합니다.
+  - 예: 정수 값, 소수 값, 반환 값, 기본 값
+  - 틀린 예: 정숫값, 소숫값, 반환값, 기본값
 
 ### 용어 지침 `참고 링크` 우선 순위
 
@@ -216,7 +224,7 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 
 ## Section Title
 
-각 페이지의 Section Title에 대한 단어 정의입니다. 
+각 페이지의 Section Title에 대한 단어 정의입니다.
 
 **사전 순으로 용어집을 편집해주세요.**
 
@@ -252,7 +260,7 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 
 ## Section Subtitle
 
-각 페이지의 Section Subtitle에 대한 단어 정의입니다. 
+각 페이지의 Section Subtitle에 대한 단어 정의입니다.
 
 **사전 순으로 용어집을 편집해주세요.**
 
@@ -270,9 +278,9 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
-| Note | 참고 | | 
+| Note | 참고 | |
 | Objective | 목표 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) |
-| Prerequisites | 필요한 사전 지식 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) | 
+| Prerequisites | 필요한 사전 지식 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) |
 
 ## 공통 용어
 
@@ -298,8 +306,8 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 | Grammar | 문법 | |
 | Literal | 리터럴 | |
 | Method | 메서드 | [국립국어원 Method](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=11976) |
-| Module | 모듈 | ESM에서 명시하는 모듈의 경우 '모듈'로 변역한다. | | 
-| Module | 과정 | 어떠한 교육 과정, 단위에 의한 표현은 '과정'으로 번역한다. (예: In this module) | | 
+| Module | 모듈 | ESM에서 명시하는 모듈의 경우 '모듈'로 변역한다. | |
+| Module | 과정 | 어떠한 교육 과정, 단위에 의한 표현은 '과정'으로 번역한다. (예: In this module) | |
 | Object | 객체 | |
 | Origin | 출처 | |
 | Override | 재정의 | |
@@ -328,7 +336,7 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 
 | 용어 | 번역 | 기타 | 참고 링크 |
 | --- | --- | --- | ------ |
-| At-rule | @규칙 | | | 
+| At-rule | @규칙 | | |
 | Block | 블록 | | |
 | Border | 테두리 | | |
 | Box | 박스 | | |
@@ -349,36 +357,36 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 
 | 용어 | 번역 | 기타 | 참고 링크 |
 | --- | --- | --- | ------ |
-| Argument | 전달인자, 인수 | | [참고 링크](https://github.com/mdn/translated-content/pull/3888) | 
-| Blocking operation | 블로킹 연산 | | | 
-| Callback | 콜백 | | | 
-| Fulfilled | 이행(함) | | | 
-| Handler | 처리기 | 이벤트 처리기 | | 
-| Interface | 인터페이스 | | | 
-| Iterate | 순회 | | | 
-| Listener | 수신기 | 이벤트 수신기 | | 
-| Mixin | 믹스인 | | | 
-| Non-blocking operation | 논블로킹 연산 | | | 
-| Parameter | 매개변수 | | | 
-| Pending | 대기 | | | 
-| Promise | 프로미스 | | [참고 링크](https://github.com/mdn/translated-content/pull/1081#issuecomment-878333558) | 
-| Promise chaining | 프로미스 체이닝 | | | 
+| Argument | 전달인자, 인수 | | [참고 링크](https://github.com/mdn/translated-content/pull/3888) |
+| Blocking operation | 블로킹 연산 | | |
+| Callback | 콜백 | | |
+| Fulfilled | 이행(함) | | |
+| Handler | 처리기 | 이벤트 처리기 | |
+| Interface | 인터페이스 | | |
+| Iterate | 순회 | | |
+| Listener | 수신기 | 이벤트 수신기 | |
+| Mixin | 믹스인 | | |
+| Non-blocking operation | 논블로킹 연산 | | |
+| Parameter | 매개변수 | | |
+| Pending | 대기 | | |
+| Promise | 프로미스 | | [참고 링크](https://github.com/mdn/translated-content/pull/1081#issuecomment-878333558) |
+| Promise chaining | 프로미스 체이닝 | | |
 | Prototype | 프로토타입 | | |
-| Reject | 거부 | | | 
+| Reject | 거부 | | |
 | Resolve | 이행 | | |
-| Rest parameters | 나머지 매개변수 | | [참고 링크](https://github.com/mdn/translated-content/pull/2549/files) | 
-| Settled | 처리 | | | 
-| Scope | 스코프 | | | 
-| Temporal Dead Zone, TDZ | 시간상 사각지대 | | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files) | 
+| Rest parameters | 나머지 매개변수 | | [참고 링크](https://github.com/mdn/translated-content/pull/2549/files) |
+| Settled | 처리 | | |
+| Scope | 스코프 | | |
+| Temporal Dead Zone, TDZ | 시간상 사각지대 | | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files) |
 
 ### HTTP
 
 | 용어 | 번역 | 기타 | 참고 링크 |
 | --- | --- | --- | ------ |
-| Idempotent | 멱등성 | | | 
-| Payload | 페이로드 | | [참고 링크](https://github.com/mdn/translated-content/pull/2737) | 
-| Request Body | 요청 본문 | | | 
-| Response Body | 응답 본문 | | | 
+| Idempotent | 멱등성 | | |
+| Payload | 페이로드 | | [참고 링크](https://github.com/mdn/translated-content/pull/2737) |
+| Request Body | 요청 본문 | | |
+| Response Body | 응답 본문 | | |
 
 ## code formatter
 
@@ -392,18 +400,20 @@ code formatter의 한 종류인 Prettier의 기본 설정을 따르며, 추가�
 
 issue: [#1008](https://github.com/mdn/translated-content/issues/1008)
 
-다음은 `en-us locale`에 대한 기본 compatibility 항목입니다. 현재 `ko locale`에는 여러 번역 문구들이 있습니다. 이 문구들은 모두 삭제돼야합니다. 
+다음은 `en-us locale`에 대한 기본 compatibility 항목입니다. 현재 `ko locale`에는 여러 번역 문구들이 있습니다. 이 문구들은 모두 삭제돼야합니다.
 
 1차적으로 https://gist.github.com/hochan222/ad801f7a6325e2b2e391ab634d6d18ce 로 30가지 경우에 대해 [PR 1176](https://github.com/mdn/translated-content/pull/1176) 에서 처리했으며, 나머지 경우에 대해 정규표현식을 작성해 삭제하거나 발견시 삭제 바랍니다.
 
 #### 기본 항목
 
 - 1
+
 ```html
 <div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 ```
 
 - 2
+
 ```html
 <div class="hidden">
 <p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
@@ -411,6 +421,7 @@ issue: [#1008](https://github.com/mdn/translated-content/issues/1008)
 ```
 
 - 3
+
 ```html
 <p class="hidden">The compatibility table in this page is generated from structured data.
   If you'd like to contribute to the data, please check out <a

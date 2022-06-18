@@ -19,28 +19,30 @@ original_slug: XMLSerializer
 
 ### Exemple
 
-     var s = new XMLSerializer();
-     var d = document;
-     var str = s.serializeToString(d);
-     alert(str);
+```js
+var s = new XMLSerializer();
+var d = document;
+var str = s.serializeToString(d);
+alert(str);
+```
 
-<!---->
-
-     var s = new XMLSerializer();
-     var stream = {
-       close&nbsp;: function()
-       {
-         alert("Flux fermé");
-       },
-       flush&nbsp;: function()
-       {
-       },
-       write&nbsp;: function(string, count)
-       {
-         alert("'" + string + "'\n nb d'octets&nbsp;: " + count + "");
-       }
-     };
-     s.serializeToStream(document, stream, "UTF-8");
+```js
+var s = new XMLSerializer();
+var stream = {
+  close: function()
+  {
+    alert("Flux fermé");
+  },
+  flush: function()
+  {
+  },
+  write: function(string, count)
+  {
+    alert("'" + string + "'\n nb d'octets&nbsp;: " + count + "");
+  }
+};
+s.serializeToStream(document, stream, "UTF-8");
+```
 
 ### Voir également
 

@@ -15,7 +15,9 @@ La propriété `onbeforeprint` définit et retourne le code du gestionnaire d'é
 
 ## Syntaxe
 
-    window.onbeforeprint = code de traitement de l'événement
+```
+window.onbeforeprint = code de traitement de l'événement
+```
 
 ## Notes
 

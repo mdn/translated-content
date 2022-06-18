@@ -77,7 +77,7 @@ grid-area: unset;</pre>
  <dd>该关键字表明该属性未指定该如何纺织网格项目。网格项目会被以默认跨度（span）<code>1</code>自动放置。</dd>
  <dt><code>&lt;custom-ident&gt;</code> 自定义关键字数据类型</dt>
  <dd>如果存在以 '<code>&lt;custom-ident&gt;-start</code>'/'<code>&lt;custom-ident&gt;-end</code>' 命名的自定义基线，它会将第一个这样的基线贡献给网格单元以布置。
- <p class="note"><strong>注意：</strong> 被命名的网格区域（grid areas）会自动生成隐式的被命名的基线，因此指定 <code>grid-row: foo;</code> 将会选择这个命名区域的开始和结束的边界（除非在它之前存在显式指定的以 <code>foo-start</code>/<code>foo-end</code> 命名的其他基线）。</p>
+ <p><strong>注意：</strong> 被命名的网格区域（grid areas）会自动生成隐式的被命名的基线，因此指定 <code>grid-row: foo;</code> 将会选择这个命名区域的开始和结束的边界（除非在它之前存在显式指定的以 <code>foo-start</code>/<code>foo-end</code> 命名的其他基线）。</p>
 
  <p>否则，它就会被当作整数 <code>1</code> 与 <code>&lt;custom-ident&gt;</code> 一起指定。</p>
  </dd>

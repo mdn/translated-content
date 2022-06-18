@@ -15,7 +15,9 @@ La propriété **`HTMLContentElement.select`** represente l'attribut `select`. L
 
 ## Syntaxe
 
-    object.select = "CSSselector CSSselector ...";
+```js
+object.select = "CSSselector CSSselector ...";
+```
 
 ## Exemple
 

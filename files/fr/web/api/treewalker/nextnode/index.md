@@ -15,7 +15,9 @@ La méthode **`TreeWalker.nextNode()`** déplace le {{domxref("Node")}} courant 
 
 ## Syntaxe
 
-    node = treeWalker.nextNode();
+```js
+node = treeWalker.nextNode();
+```
 
 ## Exemple
 

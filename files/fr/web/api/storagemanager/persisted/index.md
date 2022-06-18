@@ -9,7 +9,9 @@ La propriété **`persisted`** de l’interface {{domxref("StorageManager")}} re
 
 ## Syntaxe
 
-    navigator.storage.persisted().then(function(persistent) { ... })
+```js
+navigator.storage.persisted().then(function(persistent) { ... })
+```
 
 ### Paramètres
 

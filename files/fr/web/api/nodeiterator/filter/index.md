@@ -18,7 +18,9 @@ Lors de la création du {{domxref("NodeIterator")}}, l'objet filtre est transmis
 
 ## Syntaxe
 
-    nodeFilter = nodeIterator.filter;
+```js
+nodeFilter = nodeIterator.filter;
+```
 
 ## Exemple
 

@@ -17,7 +17,9 @@ Lancé lorsque le code dans un élément {{HTMLElement("script")}} déclaré dan
 
 ## Syntaxe
 
-    document.onbeforescriptexecute = funcRef;
+```js
+document.onbeforescriptexecute = funcRef;
+```
 
 _funcRef_ est une référence de fonction appelée lorsque l'évènement est lancé. L'attribut de la `target` (_cible_) d'évènement est défini dans l'{{domxref("Element")}} script qui est sur le point d'être exécuté.
 

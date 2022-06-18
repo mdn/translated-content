@@ -16,7 +16,9 @@ Gecko 1.8 ({{geckoRelease("1.8")}} prend en charge des valeurs d'URL pour manipu
 
 La syntaxe de base (CSS 2.1) pour cette propriété est :
 
-    {{CSSxRef("cursor")}}: [ {{CSSxRef("&lt;url&gt;")}} , ]* {{CSSxRef("cursor", "<var>&lt;keyword&gt;</var>", "#Valeurs")}}
+```
+{{CSSxRef("cursor")}}: [ {{CSSxRef("&lt;url&gt;")}} , ]* {{CSSxRef("cursor", "<var>&lt;keyword&gt;</var>", "#Valeurs")}}
+```
 
 Ceci signifie que zéro URL ou plus peuvent être définies en étant séparées par des virgules et doivent être suivies par un des mots-clés comme `auto` ou `pointer`.
 
@@ -30,11 +32,15 @@ En utilisant cette règle, le moteur essaiera d'abord de charger `toto.cur`. Si 
 
 Le support de la [syntaxe](https://www.w3.org/TR/css3-ui/#cursor) CSS3 pour les valeurs du curseur a été ajoutée à partir de Firefox 1.5.
 
-    {{CSSxRef("cursor")}}: [ {{CSSxRef("&lt;uri&gt;")}} [ <x> <y> ]? , ]* {{CSSxRef("cursor", "<var>&lt;keyword&gt;</var>", "#Valeurs")}}
+```
+{{CSSxRef("cursor")}}: [ {{CSSxRef("&lt;uri&gt;")}} [ <x> <y> ]? , ]* {{CSSxRef("cursor", "<var>&lt;keyword&gt;</var>", "#Valeurs")}}
+```
 
 Cette syntaxe permet d'indiquer les coordonnées des points chauds du curseur qui seront maintenues aux frontières de l'image du curseur. Si aucun n'est indiqué, les coordonnées du point chaud sont lus à partir du fichier lui-même (pour les fichier CUR et XBM) ou sont réglés au coin supérieur gauche de l'image. Un exemple de la syntaxe CSS3 est:
 
-    cursor: url(toto.png) 4 12, auto;
+```css
+cursor: url(toto.png) 4 12, auto;
+```
 
 Le premier nombre est la coordonnée _x_, le second numéro est la coordonnée _y_. L'exemple va régler le point chaud afin d'être le pixel (4,12) par rapport au (0,0) en haut à gauche.
 

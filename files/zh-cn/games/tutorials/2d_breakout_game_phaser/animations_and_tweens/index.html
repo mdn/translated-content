@@ -18,27 +18,27 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}</p>
 
 <div>
-<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser教程</a> 16 的<strong>第14步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson14.html">Gamedev-Phaser-Content-Kit / demos / lesson14.html</a>完成本课程后找到源代码。</p>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 14 步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson14.html">Gamedev-Phaser-Content-Kit / demos / lesson14.html</a>完成本课程后找到源代码。</p>
 </div>
 
-<p>为了使游戏看起来更加多汁和活泼，我们可以使用动画和补间。这将导致更好，更有趣的体验。让我们来探讨如何在游戏中实现Phaser动画和补间。</p>
+<p>为了使游戏看起来更加多汁和活泼，我们可以使用动画和补间。这将导致更好，更有趣的体验。让我们来探讨如何在游戏中实现 Phaser 动画和补间。</p>
 
 <h2 id="动画">动画</h2>
 
-<p>在Phaser，动画中，涉及从外部来源获取spritesheet并依次显示sprites。作为一个例子，当碰到一些东西时，我们会让球摇摆。</p>
+<p>在 Phaser，动画中，涉及从外部来源获取 spritesheet 并依次显示 sprites。作为一个例子，当碰到一些东西时，我们会让球摇摆。</p>
 
-<p>首先，<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/wobble.png">从Github抓取spritesheet</a>并将其保存在您的<code>/img</code>目录中。</p>
+<p>首先，<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/wobble.png">从 Github 抓取 spritesheet</a>并将其保存在您的<code>/img</code>目录中。</p>
 
-<p>接下来，我们将加载spritesheet - 将以下行放在<code>preload()</code>函数的底部：</p>
+<p>接下来，我们将加载 spritesheet - 将以下行放在<code>preload()</code>函数的底部：</p>
 
 <pre class="brush: js">game.load.spritesheet('ball', 'img/wobble.png', 20, 20);
 </pre>
 
-<p>而不是加载单个图像的球，我们可以加载整个spritesheet - 不同图像的集合。我们将按顺序显示精灵，创造动画的幻觉。该<code>spritesheet()</code>方法的两个额外的表格确定给定spritesheet文件中每个单个框架的宽度和高度，指示程序如何切割以获取单个框架。</p>
+<p>而不是加载单个图像的球，我们可以加载整个 spritesheet - 不同图像的集合。我们将按顺序显示精灵，创造动画的幻觉。该<code>spritesheet()</code>方法的两个额外的表格确定给定 spritesheet 文件中每个单个框架的宽度和高度，指示程序如何切割以获取单个框架。</p>
 
 <h2 id="加载动画">加载动画</h2>
 
-<p>接下来，进入你的create()函数，找到加载球精灵的行，下面的调用<code>animations.add()</code>如下所示：</p>
+<p>接下来，进入你的 create() 函数，找到加载球精灵的行，下面的调用<code>animations.add()</code>如下所示：</p>
 
 <pre class="brush: js">ball = game.add.sprite(50, 250, 'ball');
 ball.animations.add('wobble', [0,1,0,2,0,1,0,2,0], 24);
@@ -48,8 +48,8 @@ ball.animations.add('wobble', [0,1,0,2,0,1,0,2,0], 24);
 
 <ul>
  <li>我们为动画选择的名称</li>
- <li>一个数组，定义在动画过程中显示帧的顺序。如果您再次查看<code>wobble.png</code>图像，您会看到有三个框架。Phaser提取它们并将它们存储在数组中 - 位置0，1和2.上面的数组表示我们显示帧0，然后是1，然后是0等。</li>
- <li>帧速率，以fps为单位。由于我们以24fps运行动画，有9帧，动画每秒将显示三次以下。</li>
+ <li>一个数组，定义在动画过程中显示帧的顺序。如果您再次查看<code>wobble.png</code>图像，您会看到有三个框架。Phaser 提取它们并将它们存储在数组中 - 位置 0，1 和 2.上面的数组表示我们显示帧 0，然后是 1，然后是 0 等。</li>
+ <li>帧速率，以 fps 为单位。由于我们以 24fps 运行动画，有 9 帧，动画每秒将显示三次以下。</li>
 </ul>
 
 <h2 id="当球击中桨时应用动画">当球击中桨时应用动画</h2>
@@ -90,7 +90,7 @@ killTween.start();
 
 <ol>
  <li>当定义一个新的补间时，你必须指定哪些属性将被补间 - 在我们的例子中，而不是在被球击中时立即隐藏砖块，我们将把它们的宽度和高度缩放到零，所以它们将很好地消失。最后，我们使用该<code>add.tween()</code>方法，指定<code>brick.scale</code>为参数，因为这是我们想要补间。</li>
- <li>该<code>to()</code>方法定义补间结束时对象的状态。它需要一个包含所选参数的期望结束值的对象（比例取尺度值，1为大小的100％，0为大小的0％等），补间的时间（以毫秒为单位）以及使用的宽松类型补间。</li>
+ <li>该<code>to()</code>方法定义补间结束时对象的状态。它需要一个包含所选参数的期望结束值的对象（比例取尺度值，1 为大小的 100％，0 为大小的 0％等），补间的时间（以毫秒为单位）以及使用的宽松类型补间。</li>
  <li>我们还将添加可选的<code>onComplete</code>事件处理程序，该处理程序定义了在补间程序完成时要执行的函数。</li>
  <li>最后一件事是立即开始补间<code>start()</code>。</li>
 </ol>
@@ -100,7 +100,7 @@ killTween.start();
 <pre class="brush: js">game.add.tween(brick.scale).to({x:2,y:2}, 500, Phaser.Easing.Elastic.Out, true, 100);
 </pre>
 
-<p>这个补间将使用弹性宽松在半秒内将砖的比例翻倍，将自动启动，延迟100毫秒。</p>
+<p>这个补间将使用弹性宽松在半秒内将砖的比例翻倍，将自动启动，延迟 100 毫秒。</p>
 
 <h2 id="比较你的代码">比较你的代码</h2>
 
@@ -110,6 +110,6 @@ killTween.start();
 
 <h2 id="下一步">下一步</h2>
 
-<p>动画和tweens看起来很不错，但我们可以添加更多的我们的游戏 - 在下一节我们将看看处理<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Buttons">按钮</a>输入。</p>
+<p>动画和 tweens 看起来很不错，但我们可以添加更多的我们的游戏 - 在下一节我们将看看处理<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Buttons">按钮</a>输入。</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}</p>

@@ -15,7 +15,9 @@ La méthode **`Element.hasAttribute()`** renvoie une **valeur booléenne** indiq
 
 ## Syntaxe
 
-    var result = element.hasAttribute(name);
+```js
+var result = element.hasAttribute(name);
+```
 
 - `result`
   - : récupère la valeur de retour `true` ou `false`.
