@@ -15,7 +15,7 @@ translation_of: Web/API/Node/appendChild
 {{domxref("Node.cloneNode()")}} メソッドを使用すると、新しい親ノード以下に追加する前に、ノードのコピーを作成することができます。
 `cloneNode` で作成したコピーは自動的に同期されません。
 
-指定された子ノードが {{domxref("DocumentFragment")}} であった場合、その 
+指定された子ノードが {{domxref("DocumentFragment")}} であった場合、その
 {{domxref("DocumentFragment")}} の内容全体が指定された親ノードの子ノードリストに移動します。
 
 > **Note:** このメソッドとは異なり、 {{domxref("Element.append()")}} メソッドは複数の引数や文字列の追加に対応しています。ノードが要素であった場合は、こちらを使用することができます。
