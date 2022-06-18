@@ -38,7 +38,7 @@ Tenga en cuenta que los números de coma flotante en JavaScript cumplen con la n
 ### Obtener un número aleatorio entre 0 (incluido) y 1 (excluido)
 
 ```js
-Function getRandom() {
+function getRandom() {
   return Math.random();
 }
 ```
