@@ -17,7 +17,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
 
 {{EmbedInteractiveExample("pages/js/intl-locale.html")}}
 
-
 ## 構文
 
 ```js
@@ -64,4 +63,3 @@ console.log(locale.hourCycle); // Prints "h12"
 - {{jsxref("Intl.Collator")}}
 - [Unicode ロケール識別子の仕様書](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
 - [FormatJS における `Intl.Locale` のポリフィル](https://formatjs.io/docs/polyfills/intl-locale)
-

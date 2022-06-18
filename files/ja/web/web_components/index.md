@@ -32,11 +32,11 @@ translation_of: Web/Web_Components
 
 ウェブコンポーネントを実装する基本的な流れは、以下に挙げてある通りです。
 
-1.  ウェブコンポーネントの機能を明示したクラスもしくは関数を作成します。クラスを使用するなら、ECMAScript 2015 のクラス構文に従ってください。 (詳細は[クラス](/ja/docs/Web/JavaScript/Reference/Classes)を参照してください。)
-2.  新しく作成したカスタム要素を登録します。{{domxref("CustomElementRegistry.define()")}} メソッドに、要素の名前、機能が明示されているクラスもしくは関数、またオプションでどの要素を継承するかを渡して下さい。
-3.  必要なら {{domxref("Element.attachShadow()")}} メソッドを使って、シャドウ DOM をカスタム要素に紐付けます。通常の DOM メソッドを使って、子要素やイベントリスナーなどをシャドウ DOM に追加して下さい。
-4.  必要なら {{htmlelement("template")}} と {{htmlelement("slot")}} を使って、HTML テンプレートを定義します。通常の DOM メソッドを再度使って、テンプレートをクローンし、シャドウ DOM に紐付けてください。
-5.  ページ内のお好きな場所で、通常の HTML 要素のように、カスタム要素を使って下さい。
+1. ウェブコンポーネントの機能を明示したクラスもしくは関数を作成します。クラスを使用するなら、ECMAScript 2015 のクラス構文に従ってください。 (詳細は[クラス](/ja/docs/Web/JavaScript/Reference/Classes)を参照してください。)
+2. 新しく作成したカスタム要素を登録します。{{domxref("CustomElementRegistry.define()")}} メソッドに、要素の名前、機能が明示されているクラスもしくは関数、またオプションでどの要素を継承するかを渡して下さい。
+3. 必要なら {{domxref("Element.attachShadow()")}} メソッドを使って、シャドウ DOM をカスタム要素に紐付けます。通常の DOM メソッドを使って、子要素やイベントリスナーなどをシャドウ DOM に追加して下さい。
+4. 必要なら {{htmlelement("template")}} と {{htmlelement("slot")}} を使って、HTML テンプレートを定義します。通常の DOM メソッドを再度使って、テンプレートをクローンし、シャドウ DOM に紐付けてください。
+5. ページ内のお好きな場所で、通常の HTML 要素のように、カスタム要素を使って下さい。
 
 ## チュートリアル
 
@@ -46,7 +46,6 @@ translation_of: Web/Web_Components
   - : シャドウ DOM の基礎を眺めるガイドです。シャドウ DOM を要素にどう紐付けるか、シャドウ DOM ツリーにどう追加するか、どうスタイル付けするかなどを紹介しています。
 - [テンプレートとスロットの使用](/ja/docs/Web/Web_Components/Using_templates_and_slots)
   - : {{htmlelement("template")}} と {{htmlelement("slot")}} 要素を使って、再利用可能な HTML 構造体の定義と使用方法を紹介したガイドです。
-</dl>
 
 ## リファレンス
 
