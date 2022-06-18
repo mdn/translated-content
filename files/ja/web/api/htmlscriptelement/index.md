@@ -91,7 +91,6 @@ function prefixScript(url, onloadFunction) {
 
 次の関数は、新しいスクリプトを {{domxref("document.currentScript")}} 要素の直前に追加するのではなく、 {{HTMLElement("head")}} タグの子として追加するものです。
 
-
 ```js
 function loadError(oError) {
   throw new URIError("The script " + oError.target.src + " didn't load correctly.");
