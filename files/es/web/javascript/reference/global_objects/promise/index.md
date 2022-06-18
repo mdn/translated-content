@@ -202,7 +202,7 @@ En el ejemplo anterior, el texto interno del `<iframe>` se actualizará solo si 
     Devuelve una promesa que se resuelve después de que todas las promesas dadas se cumplan o se rechacen, con una matriz de objetos que describen el resultado de cada promesa.
 
 - {{JSxRef("Promise.any", "Promise.any(iterable)")}}
-    - : Toma un iterable de objetos `Promise` y, tan pronto como se cumple una de las promesas en el iterable, devuelve una única promesa que se resuelve con el valor de esa promesa.
+  - : Toma un iterable de objetos `Promise` y, tan pronto como se cumple una de las promesas en el iterable, devuelve una única promesa que se resuelve con el valor de esa promesa.
 - {{JSxRef("Promise.race", "Promise.race(iterable)")}}
 
   - : Espera hasta que alguna de las promesas se cumpla o se rechace.
@@ -216,7 +216,7 @@ En el ejemplo anterior, el texto interno del `<iframe>` se actualizará solo si 
 - {{JSxRef("Promise.resolve", "Promise.resolve(value)")}}
 
   - : Devuelve un nuevo objeto `Promise` que se resuelve con el valor dado. Si el valor tiene un método `then`, la promesa devuelta "seguirá" ese método, adoptando su estado eventual; de lo contrario, la promesa devuelta se cumplirá con el valor.
-    
+
     Generalmente, si no sabe si un valor es una promesa o no, {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} actua en su lugar y trabaja con el valor de retorno como una promesa.
 
 ## Métodos de instancia
