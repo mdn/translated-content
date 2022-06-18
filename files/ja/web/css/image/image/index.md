@@ -45,7 +45,6 @@ background-image: image('myimage.webp#xywh=0,20,40,60');
 
 要素の背景画像は、画像 _myImage.webp_ のうち、 0px, 20px の座標 (左上隅) から始まり、幅 40px、高さ 60px の部分になります。
 
-
 `#xywh=#,#,#,#` というメディアフラグメントの構文は、カンマで区切られた 4 つの数値を取ります。最初の 2 つの値は、作成されるボックスの始点の X および Y 座標を表します。 3 つ目の値はボックスの幅、最後の値は高さです。既定では、これらはピクセル値です。[メディア仕様書の spacial dimension definition](https://www.w3.org/TR/media-frags/#naming-space) によると、パーセント値にも対応しています。
 
 ```css

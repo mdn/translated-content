@@ -23,11 +23,11 @@ translation_of: Web/CSS/Specificity
 
 以下のリストは、セレクターを詳細度の小さな順に並べたものです。
 
-1.  [要素型セレクター](/ja/docs/Web/CSS/Type_selectors)（`h1` など）と擬似要素（`::before` など）
-2.  [クラスセレクター](/ja/docs/Web/CSS/Class_selectors)（`.example` など）、属性セレクター（`[type="radio"]` など)、擬似クラス（`:hover` など）
-3.  [ID セレクター](/ja/docs/Web/CSS/ID_selectors)（`#example` など）
+1. [要素型セレクター](/ja/docs/Web/CSS/Type_selectors)（`h1` など）と擬似要素（`::before` など）
+2. [クラスセレクター](/ja/docs/Web/CSS/Class_selectors)（`.example` など）、属性セレクター（`[type="radio"]` など)、擬似クラス（`:hover` など）
+3. [ID セレクター](/ja/docs/Web/CSS/ID_selectors)（`#example` など）
 
-全称セレクター（{{CSSxRef("Universal_selectors", "*")}}）、結合子（{{CSSxRef("Adjacent_sibling_combinator", "+")}}、{{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, ['` `'](/ja/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}）、否定擬似クラス（{{CSSxRef(":not", ":not()")}}）は詳細度に影響を与えません。（但し、 `:not()` の*中で*宣言されたセレクターは影響を与えます。）
+全称セレクター（{{CSSxRef("Universal_selectors", "*")}}）、結合子（{{CSSxRef("Adjacent_sibling_combinator", "+")}}、{{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [' '](/ja/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}）、否定擬似クラス（{{CSSxRef(":not", ":not()")}}）は詳細度に影響を与えません。（但し、 `:not()` の*中で*宣言されたセレクターは影響を与えます。）
 
 詳しくは[「カスケードと継承」の「詳細度」](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2)または [https://specifishity.com](https://specifishity.com) をご覧ください。
 
@@ -46,8 +46,8 @@ translation_of: Web/CSS/Specificity
 
 **`!important` を使用する代わりに、以下のことを検討してください。**
 
-1.  CSS のカスケードをもっと利用する
-2.  もっと詳細なルールを使う。ルールの選択時に要素の前に１つまたは複数の要素を示すと、詳細度が上がり、より優先度が高くなります。
+1. CSS のカスケードをもっと利用する
+2. もっと詳細なルールを使う。ルールの選択時に要素の前に１つまたは複数の要素を示すと、詳細度が上がり、より優先度が高くなります。
 
     ```html
     <div id="test">
@@ -63,7 +63,7 @@ translation_of: Web/CSS/Specificity
 
     順番に関わらず、テキストは最も詳細度が高いルールである緑色になります。 (また、青のルールはルールの順番にかかわらず、赤のルールを上書きします)
 
-3.  (2)のナンセンスの特殊なケースとして、何も指定する必要がない場合には、単純にセレクターを複製することで詳細度を高めることができます。
+3. (2)のナンセンスの特殊なケースとして、何も指定する必要がない場合には、単純にセレクターを複製することで詳細度を高めることができます。
 
     ```css
     #myId#myId span { color: yellow; }
