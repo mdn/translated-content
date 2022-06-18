@@ -9,7 +9,9 @@ La méthode **`item()`** de l'interface {{domxref("DOMTokenList")}} renvoie un �
 
 ## Syntaxe
 
-    tokenList.item(index);
+```js
+tokenList.item(index);
+```
 
 ### Paramètres
 

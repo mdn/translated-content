@@ -52,9 +52,9 @@ Cet extrait de code est tiré de l'[exemple MDN sw-test](https://github.com/mdn/
 
 Dans le second bloc de code, on attends le déclenchement d'un {{domxref("FetchEvent")}}. On construit ensuite une réponse spéciale comme suit :
 
-1.  Vérifier si il y a un match pour la requête dans le CacheStorage. Le cas échéant, servir ça.
-2.  Sinon, récupérer la requête sur le réseau, puis ouvrir le cache du premier bloc et y ajouter un clone de la requête grâce à {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`.)
-3.  En cas d'échec (e.g. car le réseau est inaccessible), retourner une réponse par défaut.
+1. Vérifier si il y a un match pour la requête dans le CacheStorage. Le cas échéant, servir ça.
+2. Sinon, récupérer la requête sur le réseau, puis ouvrir le cache du premier bloc et y ajouter un clone de la requête grâce à {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`.)
+3. En cas d'échec (e.g. car le réseau est inaccessible), retourner une réponse par défaut.
 
 Enfin, on retourne cette réponse en utilisant {{domxref("FetchEvent.respondWith")}}.
 

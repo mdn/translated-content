@@ -199,9 +199,11 @@ Ensuite, ouvrez le popup. Vous pouvez ensuite revenir à la boîte à outils du 
 
 #### Sélectionner le cadre de la fenêtre popup
 
-Le popup est chargé dans son propre cadre. Ensuite, sélectionnez le document de votre popup à l'aide du [bouton sélection de cadre ](/fr/docs/Tools/Browser_Toolbox#Targeting_a_document)boîte à outils du navigateur :![](frame-selection.png)Le document s'appellera quelque chose comme
+Le popup est chargé dans son propre cadre. Ensuite, sélectionnez le document de votre popup à l'aide du [bouton sélection de cadre](/fr/docs/Tools/Browser_Toolbox#Targeting_a_document)boîte à outils du navigateur :![](frame-selection.png)Le document s'appellera quelque chose comme
 
-    moz-extension://<some-uuid>/path/to/your-popup.html
+```
+moz-extension://<some-uuid>/path/to/your-popup.html
+```
 
 {{EmbedYouTube("/9jdHDCKIN-U")}}
 

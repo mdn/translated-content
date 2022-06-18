@@ -68,8 +68,7 @@ function print_start_and_end_properties(perfEntry) {
 
 | Spécification                                                                                                                                | Statut                               | Commentaire          |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing', '#dom-performanceresourcetiming-redirectstart',
-        'redirectStart')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+| {{SpecName('Resource Timing', '#dom-performanceresourcetiming-redirectstart', 'redirectStart')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

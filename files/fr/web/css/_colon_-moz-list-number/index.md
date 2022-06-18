@@ -10,7 +10,9 @@ Le [pseudo-élément CSS](/fr/docs/Web/CSS/Pseudo-éléments) **`::-moz-list-num
 
 ## Syntaxe
 
-    li::-moz-list-number { propriétés de style }
+```
+li::-moz-list-number { propriétés de style }
+```
 
 ## Exemples
 

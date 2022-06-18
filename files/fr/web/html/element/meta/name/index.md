@@ -19,6 +19,7 @@ La spécification HTML définit les noms de métadonnées standard suivants&nbsp
     >
     > - Les navigateurs peuvent utiliser cette information pour identifier l'application. Cette métadonnée est différente de celle fournie par [`<title>`](/fr/docs/Web/HTML/Element/title) qui comprend généralement le nom de l'application, mais qui peut aussi contenir le nom du document ou un état.
     > - Les pages web simples ne devraient pas utiliser `application-name`.
+
 - `author`
   - : Le nom de la personne qui a écrit le document.
 - `description`

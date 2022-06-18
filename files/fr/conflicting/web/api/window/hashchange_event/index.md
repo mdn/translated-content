@@ -8,15 +8,21 @@ original_slug: Web/API/WindowEventHandlers/onhashchange
 
 ## Syntaxe
 
-    window.onhashchange = funcRef;
+```js
+window.onhashchange = funcRef;
+```
 
 **ou**
 
-    <body onhashchange="funcRef();">
+```html
+<body onhashchange="funcRef();">
+```
 
 **ou**
 
-    window.addEventListener("hashchange", funcRef, false);
+```js
+window.addEventListener("hashchange", funcRef, false);
+```
 
 ### Paramètres
 
@@ -41,7 +47,7 @@ window.onhashchange = locationHashChanged;
 
 ## L'événement hashchange
 
-Lorsque l'observateur d'événement déclenche l'événement hashchange il passe en paramêtres les arguments suivante:
+Lorsque l'observateur d'événement déclenche l'événement hashchange il passe en paramêtres les arguments suivante :
 
 <table class="standard-table">
   <tbody>
@@ -68,16 +74,14 @@ Lorsque l'observateur d'événement déclenche l'événement hashchange il passe
 ```js
 //insérez ce bout de code au début de votre code pour observer les changements de hash dans l'URL
 if(!window.HashChangeEvent)(function(){
-	var lastURL=document.URL;
-	window.addEventListener("hashchange",function(event){
-		Object.defineProperty(event,"oldURL",{enumerable:true,configurable:true,value:lastURL});
-		Object.defineProperty(event,"newURL",{enumerable:true,configurable:true,value:document.URL});
-		lastURL=document.URL;
-	});
+  var lastURL=document.URL;
+  window.addEventListener("hashchange",function(event){
+    Object.defineProperty(event,"oldURL",{enumerable:true,configurable:true,value:lastURL});
+    Object.defineProperty(event,"newURL",{enumerable:true,configurable:true,value:document.URL});
+    lastURL=document.URL;
+  });
 }());
 ```
-
-###
 
 ## Spécifications
 

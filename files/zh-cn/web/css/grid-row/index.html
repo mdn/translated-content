@@ -51,7 +51,7 @@ grid-row: unset;
  <dd>表示对网格的布置行为不做干涉，即自动布置，自动的 span 或者默认 span 值为 1。</dd>
  <dt><code>&lt;custom-ident&gt;</code></dt>
  <dd>如果存在自定义的基线名（'&lt;custom-ident&gt;-start'/'&lt;custom-ident&gt;-end'），它就将第一个这样的基线贡献给网格单元。
- <p class="note"><strong>注意：</strong> 被命名的网格区域（grid areas）会自动生成隐式的被命名的基线，因此指定 <code>grid-row: foo;</code> 将会选择这个命名区域的开始和结束的边界（除非在它之前存在显式指定的以 <code>foo-start</code>/<code>foo-end</code> 命名的其他基线）。</p>
+ <p><strong>注意：</strong> 被命名的网格区域（grid areas）会自动生成隐式的被命名的基线，因此指定 <code>grid-row: foo;</code> 将会选择这个命名区域的开始和结束的边界（除非在它之前存在显式指定的以 <code>foo-start</code>/<code>foo-end</code> 命名的其他基线）。</p>
 
  <p>否则，它就会被当作整数 <code>1</code> 与 <code>&lt;custom-ident&gt;</code> 一起指定。</p>
  </dd>

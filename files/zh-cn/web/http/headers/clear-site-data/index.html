@@ -41,11 +41,11 @@ Clear-Site-Data: "*"
 <h2 id="指令">指令</h2>
 
 <dl>
- <dt id="cache"><code>"cache"</code></dt>
+ <dt><code>"cache"</code></dt>
  <dd>表示服务端希望删除本 URL 原始响应的本地缓存数据（即 ：浏览器缓存，<a href="/en-US/docs/">请参阅 HTTP 缓存</a>）。根据浏览器的不同，可能还会清除预渲染页面，脚本缓存，WebGL 着色器缓存或地址栏建议等内容。</dd>
- <dt id="cookies"><code>"cookies"</code></dt>
+ <dt><code>"cookies"</code></dt>
  <dd>表示服务端希望删除 URL 响应的所有 cookie。 HTTP 身份验证凭据也会被清除。会影响整个主域，包括子域。所以 https://example.com 以及 https://stage.example.com 的 Cookie 都会被清除。</dd>
- <dt id="storage"><code>"storage"</code></dt>
+ <dt><code>"storage"</code></dt>
  <dd>表示服务端希望删除 URL 原响应的所有 DOM 存储。这包括存储机制，如
  <ul>
   <li>localStorage (执行 <code>localStorage.clear</code>),</li>
@@ -58,7 +58,7 @@ Clear-Site-Data: "*"
   <li>Plugin data (Flash via <code><a href="https://wiki.mozilla.org/NPAPI:ClearSiteData">NPP_ClearSiteData</a></code>).</li>
  </ul>
  </dd>
- <dt id="executionContexts"><code>"executionContexts"</code></dt>
+ <dt><code>"executionContexts"</code></dt>
  <dd>表示服务端希望浏览器重新加载本请求 ({{domxref("Location.reload")}}).</dd>
  <dt><code>"*"</code> (通配符)</dt>
  <dd>表示服务端希望清除原请求响应的所有类型的数据。如果在此头的未来版本中添加了更多数据类型，它们也将被涉及。</dd>

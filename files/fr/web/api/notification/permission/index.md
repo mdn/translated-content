@@ -16,7 +16,9 @@ La propriété en lecture seule **`permission`** de l'interface {{domxref ("Noti
 
 ## Syntaxe
 
-    Notification.permission
+```js
+Notification.permission
+```
 
 ### Valeur
 

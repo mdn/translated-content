@@ -5,10 +5,10 @@ translation_of: Glossary/Global_object
 ---
 <p>一个全局对象是一个永远存在于 {{glossary("global scope")}} 的 {{glossary("object")}}.</p>
 
-<p>在 JavaScript 中, 有一个永远被定义的全局对象. 在一个 web 浏览器中, 当脚本创建全局变量时, 他们作为该全局对象的成员被创建. (在 {{Glossary("Node.js")}} 不是这样.) 全局对象的 {{Glossary("interface")}} 取决于脚本在其中运行的执行上下文. 例如:</p>
+<p>在 JavaScript 中，有一个永远被定义的全局对象。在一个 web 浏览器中，当脚本创建全局变量时，他们作为该全局对象的成员被创建。(在 {{Glossary("Node.js")}} 不是这样.) 全局对象的 {{Glossary("interface")}} 取决于脚本在其中运行的执行上下文。例如：</p>
 
 <ul>
- <li>在Web浏览器中，脚本没有专门作为后台任务启动的任何代码都将{{domxref("Window")}} 作为其全局对象。这是Web上绝大多数的JavaScript代码。</li>
+ <li>在 Web 浏览器中，脚本没有专门作为后台任务启动的任何代码都将{{domxref("Window")}} 作为其全局对象。这是 Web 上绝大多数的 JavaScript 代码。</li>
  <li>在 {{domxref("Worker")}} 中运行的代码将{{domxref("WorkerGlobalScope")}} 对象作为其全局对象。</li>
  <li>在{{Glossary("Node.js")}} 环境下运行的脚本具有一个称为<code><a href="https://nodejs.org/api/globals.html#globals_global">global</a></code> 的对象作为其全局对象。</li>
 </ul>

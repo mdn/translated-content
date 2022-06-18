@@ -17,9 +17,11 @@ Création d'un nouveau groupe en ligne dans la [console Web](/en-US/docs/Tools/W
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Syntaxe
 
-    console.group();
+```js
+console.group();
+```
 
 ## Paramètres
 

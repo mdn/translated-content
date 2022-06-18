@@ -17,8 +17,8 @@ Les exemples "live", vous permettent de voir à quoi ressemble le résultat d'un
 
 ## Quelles étapes pour réaliser cette tâche ?
 
-1.  Choisissez un article dans la liste de ceux marqués [NeedsLiveSample](/en-US/docs/tag/NeedsLiveSample), pour lequel le code présenté porte sur des notions qui vous sembles familières.
-2.  Convertissez le code pour qu'il soit "live"
-3.  Supprimer le code ou l'image qui montrait les sorties et résultats du programme. Votre exemple "live" le remplace désormais.
+1. Choisissez un article dans la liste de ceux marqués [NeedsLiveSample](/en-US/docs/tag/NeedsLiveSample), pour lequel le code présenté porte sur des notions qui vous sembles familières.
+2. Convertissez le code pour qu'il soit "live"
+3. Supprimer le code ou l'image qui montrait les sorties et résultats du programme. Votre exemple "live" le remplace désormais.
 
 Pour plus d'information sur la création et l'édition d'exemples "live", voir [Utiliser le système d'exemple "live"](/en-US/docs/Project:MDN/Contributing/Editor_guide/Live_samples) (en anglais).

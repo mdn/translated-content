@@ -534,6 +534,7 @@
 /pt-BR/docs/Web/API/Console.timeEnd	/pt-BR/docs/Web/API/Console/timeEnd
 /pt-BR/docs/Web/API/Coordinates	/pt-BR/docs/Web/API/GeolocationCoordinates
 /pt-BR/docs/Web/API/Coordinates/altitude	/pt-BR/docs/Web/API/GeolocationCoordinates/altitude
+/pt-BR/docs/Web/API/DOMString	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /pt-BR/docs/Web/API/DeviceAcceleration	/pt-BR/docs/Web/API/DeviceMotionEventAcceleration
 /pt-BR/docs/Web/API/DeviceRotationRate	/pt-BR/docs/Web/API/DeviceMotionEventRotationRate
 /pt-BR/docs/Web/API/Document.querySelector	/pt-BR/docs/Web/API/Document/querySelector

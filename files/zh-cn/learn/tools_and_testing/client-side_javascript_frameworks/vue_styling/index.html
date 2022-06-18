@@ -7,7 +7,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_st
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p>现在终于到了使我们的应用程序看起来更好的时候了。在本文中，我们将探讨使用CSS样式Vue组件的不同方法。</p>
+<p>现在终于到了使我们的应用程序看起来更好的时候了。在本文中，我们将探讨使用 CSS 样式 Vue 组件的不同方法。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -16,33 +16,33 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_st
    <td>
     <p>熟悉核心<a href="/en-US/docs/Learn/HTML">HTML</a>，<a href="/en-US/docs/Learn/CSS">CSS</a>和<a href="/en-US/docs/Learn/JavaScript">JavaScript</a>语言，了解<a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">终端/命令行</a>。</p>
 
-    <p>Vue组件是由管理应用程序数据的JavaScript对象和映射到基础DOM结构的基于HTML的模板语法组成的。为了进行安装并使用Vue的一些更高级的功能（例如“单个文件组件”或渲染功能），您将需要一个装有node + npm的终端。</p>
+    <p>Vue 组件是由管理应用程序数据的 JavaScript 对象和映射到基础 DOM 结构的基于 HTML 的模板语法组成的。为了进行安装并使用 Vue 的一些更高级的功能（例如“单个文件组件”或渲染功能），您将需要一个装有 node + npm 的终端。</p>
    </td>
   </tr>
   <tr>
    <th scope="row">目的：</th>
-   <td>了解有关设置Vue组件样式的信息。</td>
+   <td>了解有关设置 Vue 组件样式的信息。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="使用CSS样式化Vue组件">使用CSS样式化Vue组件</h2>
+<h2 id="使用CSS样式化Vue组件">使用 CSS 样式化 Vue 组件</h2>
 
-<p>在继续向我们的应用程序添加更多高级功能之前，我们应该添加一些基本的CSS使其看起来更好。Vue具有三种样式化应用程序的方法：</p>
+<p>在继续向我们的应用程序添加更多高级功能之前，我们应该添加一些基本的 CSS 使其看起来更好。Vue 具有三种样式化应用程序的方法：</p>
 
 <ul>
- <li>外部CSS文件。</li>
+ <li>外部 CSS 文件。</li>
  <li>单个文件组件（<code>.vue</code>文件）中的全局样式。</li>
  <li>单个文件组件中组件范围的样式。</li>
 </ul>
 
 <p>为帮助您熟悉每个应用程序，我们将所有三个功能结合使用，以使我们的应用程序具有更好的外观。</p>
 
-<h2 id="外部CSS文件的样式">外部CSS文件的样式</h2>
+<h2 id="外部CSS文件的样式">外部 CSS 文件的样式</h2>
 
-<p>您可以包括外部CSS文件，并将其全局应用于您的应用程序。让我们看看这是如何完成的。</p>
+<p>您可以包括外部 CSS 文件，并将其全局应用于您的应用程序。让我们看看这是如何完成的。</p>
 
-<p>首先，<code>reset.css</code>在<code>src/assets</code>目录中创建一个名为的文件。Webpack将处理此文件夹中的文件。这意味着我们可以使用CSS预处理器（如SCSS）或后处理器（如PostCSS）。</p>
+<p>首先，<code>reset.css</code>在<code>src/assets</code>目录中创建一个名为的文件。Webpack 将处理此文件夹中的文件。这意味着我们可以使用 CSS 预处理器（如 SCSS）或后处理器（如 PostCSS）。</p>
 
 <p>尽管本教程不会使用此类工具，但很高兴知道在资产文件夹中包含此类代码后，它将自动进行处理。</p>
 
@@ -140,9 +140,9 @@ body {
 
 <h2 id="向单个文件组件添加全局样式">向单个文件组件添加全局样式</h2>
 
-<p>现在，我们已将CSS重置为在浏览器之间统一，我们需要对样式进行更多自定义。我们希望将某些样式应用于应用程序中的各个组件。虽然可以直接将这些文件添加到<code>reset.css</code>样式表中，但是我们将它们添加到的<code>&lt;style&gt;</code>标签中，<code>App.vue</code>以演示如何使用它们。</p>
+<p>现在，我们已将 CSS 重置为在浏览器之间统一，我们需要对样式进行更多自定义。我们希望将某些样式应用于应用程序中的各个组件。虽然可以直接将这些文件添加到<code>reset.css</code>样式表中，但是我们将它们添加到的<code>&lt;style&gt;</code>标签中，<code>App.vue</code>以演示如何使用它们。</p>
 
-<p>文件中已经存在一些样式。让我们删除它们，并用下面的样式替换它们。这些样式可以做一些事情-为按钮和输入添加一些样式，并自定义<code>#app</code>元素及其子元素。</p>
+<p>文件中已经存在一些样式。让我们删除它们，并用下面的样式替换它们。这些样式可以做一些事情 - 为按钮和输入添加一些样式，并自定义<code>#app</code>元素及其子元素。</p>
 
 <p>更新<code>App.vue</code>文件的<code>&lt;style&gt;</code>元素，如下所示：</p>
 
@@ -461,35 +461,35 @@ body {
  <li>Ember
   <ul>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember应用程序的结构和组件化</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember 应用程序的结构和组件化</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">灰烬互动：事件，类和状态</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">灰烬交互性：页脚功能，条件渲染</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">在Ember中路由</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">在 Ember 中路由</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">灰烬资源和故障排除</a></li>
   </ul>
  </li>
  <li>Vue
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Vue入门</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">创建我们的第一个Vue组件</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">渲染Vue组件列表</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">添加新的待办事项表单：Vue事件，方法和模型</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">使用CSS样式化Vue组件</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">使用Vue计算的属性</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue条件渲染：编辑现有待办事项</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">使用Vue裁判进行焦点管理</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue资源</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Vue 入门</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">创建我们的第一个 Vue 组件</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">渲染 Vue 组件列表</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">添加新的待办事项表单：Vue 事件，方法和模型</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">使用 CSS 样式化 Vue 组件</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">使用 Vue 计算的属性</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue 条件渲染：编辑现有待办事项</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">使用 Vue 裁判进行焦点管理</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue 资源</a></li>
   </ul>
  </li>
  <li>斯维尔特
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Svelte入门</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">启动我们的Svelte Todo列表应用</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Svelte中的动态行为：使用变量和道具</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">组成我们的Svelte应用程序</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">先进的Svelte：反应性，生命周期，可访问性</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">与Svelte商店合作</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">Svelte中的TypeScript支持</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Svelte 入门</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">启动我们的 Svelte Todo 列表应用</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Svelte 中的动态行为：使用变量和道具</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">组成我们的 Svelte 应用程序</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">先进的 Svelte：反应性，生命周期，可访问性</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">与 Svelte 商店合作</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">Svelte 中的 TypeScript 支持</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">部署和后续步骤</a></li>
   </ul>
  </li>

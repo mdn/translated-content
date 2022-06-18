@@ -11,9 +11,11 @@ Avant de pouvoir écrire dans le presse-papier, vous devez utiliser [Permissions
 
 > **Note :** Les API Presse-papiers (<i lang="en">clipboard</i>) asynchrones sont toujours en cours d'implémentation. Consultez le [tableau de compatibilité](#compatibilité_des_navigateurs) et la section [Disponibilité du presse-papiers](/fr/docs/Web/API/clipboard#disponibilité_du_presse-papiers) sur la page [`Clipboard`](https://developer.mozilla.org/fr/docs/Web/API/clipboard) pour plus d'informations.
 
-## Syntax
+## Syntaxe
 
-    var promise = navigator.clipboard.write(dataTransfer)
+```js
+var promise = navigator.clipboard.write(dataTransfer);
+```
 
 ### Paramètres
 

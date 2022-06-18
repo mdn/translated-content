@@ -39,7 +39,7 @@ translation_of: WebAssembly/Caching_modules
 
 <h3 id="建立数据库">建立数据库</h3>
 
-<p class="brush: js">在 instantiateCachedURL() 中的第一个辅助函数 openDatabase()，创建一个存储 wasm 模块的对象存储空间，以及在 dbVersion 更新后清除数据库；它返回一个解析成新的数据库的 promise。</p>
+<p>在 instantiateCachedURL() 中的第一个辅助函数 openDatabase()，创建一个存储 wasm 模块的对象存储空间，以及在 dbVersion 更新后清除数据库；它返回一个解析成新的数据库的 promise。</p>
 
 <pre class="brush: js">  function openDatabase() {
     return new Promise((resolve, reject) =&gt; {

@@ -10,7 +10,9 @@ La propriété **`onlanguagechange`** de l'interface {{domxref("WorkerGlobalScop
 
 ## Syntaxe
 
-    self.onlanguagechange = function() { ... };
+```js
+self.onlanguagechange = function() { ... };
+```
 
 ## Exemple
 

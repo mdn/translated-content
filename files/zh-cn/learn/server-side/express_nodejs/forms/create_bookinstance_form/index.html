@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
 
 <h2 class="highlight-spanned" id="导入验证和清理方法">导入验证和清理方法</h2>
 
-<p>打开 <strong>/controllers/bookinstanceController.js</strong>，并在档案最上方加入以下几行:</p>
+<p>打开 <strong>/controllers/bookinstanceController.js</strong>，并在档案最上方加入以下几行：</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');</code></pre>
@@ -133,10 +133,10 @@ block content
 <p>这个视图的结构和行为，几乎等同于 <strong>book_form.pug</strong> 模板，因此我们就不再重覆说明一次了。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 以上的模板将状态值 (Maintenance, Available, 等等) 写死在代码里，而且不能 "记忆" 使用者的输入值。如果你愿意的话，考虑重新实作此列表，当表单被重新呈现时，从控制器传入选项数据，并设定选中的值。</p>
+<p><strong>注意：</strong> 以上的模板将状态值 (Maintenance, Available, 等等) 写死在代码里，而且不能 "记忆" 使用者的输入值。如果你愿意的话，考虑重新实作此列表，当表单被重新呈现时，从控制器传入选项数据，并设定选中的值。</p>
 </div>
 
-<h2 class="highlight-spanned" id="它看起來像是">它看起來像是?</h2>
+<h2 class="highlight-spanned" id="它看起來像是">它看起來像是？</h2>
 
 <p>运行本应用，打开浏览器访问网址 <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>。然后点击创建新书本实例 Create new book instance (copy) 连结。如果每个东西都设定正确了，你的网站看起应该像底下的截图。在你提交一个有效的 <code>BookInstance</code> 之后，它应该会被储存，并且你将被带到详细信息页面。</p>
 
@@ -146,5 +146,5 @@ block content
 
 <ul>
  <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms">Express 教程 6: 使用表单</a></li>
- <li>继续教程 6 的下一个部分: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form">删除作者表单</a></li>
+ <li>继续教程 6 的下一个部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form">删除作者表单</a></li>
 </ul>

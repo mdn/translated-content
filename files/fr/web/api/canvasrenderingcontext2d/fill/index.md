@@ -9,8 +9,10 @@ La méthode **`CanvasRenderingContext2D.fill()`** de l'API Canvas 2D remplit le 
 
 ## Syntaxe
 
-    void ctx.fill([fillRule]);
-    void ctx.fill(path[, fillRule]);
+```js
+void ctx.fill([fillRule]);
+void ctx.fill(path[, fillRule]);
+```
 
 ### Paramètres
 

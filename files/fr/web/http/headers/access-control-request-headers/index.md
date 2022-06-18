@@ -27,7 +27,9 @@ L'entête **`Access-Control-Request-Headers`** est utilisé quand une requête d
 
 ## Syntaxe
 
-    Access-Control-Request-Headers: <header-name>, <header-name>, ...
+```
+Access-Control-Request-Headers: <header-name>, <header-name>, ...
+```
 
 ## Directives
 
@@ -36,7 +38,9 @@ L'entête **`Access-Control-Request-Headers`** est utilisé quand une requête d
 
 ## Exemples
 
-    Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+```
+Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+```
 
 Dans cet exemple le serveur en réponse à la demande de pré-vérification indiquer au demandeur de la pré-vérification que la requête suivante sera accepté si elle contient _X-PINGOTHER_ ou _Content-type_.
 

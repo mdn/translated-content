@@ -9,8 +9,10 @@ La méthode **`CanvasRenderingContext2D.stroke()`** de l'API Canvas 2D dessine l
 
 ## Syntaxe
 
-    void ctx.stroke();
-    void ctx.stroke(path);
+```js
+void ctx.stroke();
+void ctx.stroke(path);
+```
 
 ### Paramètres
 

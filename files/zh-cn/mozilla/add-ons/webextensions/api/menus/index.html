@@ -14,19 +14,19 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 
 
 
-<div>此API基于Chrome的“contextMenus”API构建，该API可让Chrome扩展程序将项目添加到浏览器的上下文菜单中。 <code>browser.menus</code> API为Chrome的API添加了一些功能，特别是可以将项目添加到浏览器的“工具”菜单以及上下文菜单中。</div>
+<div>此 API 基于 Chrome 的“contextMenus”API 构建，该 API 可让 Chrome 扩展程序将项目添加到浏览器的上下文菜单中。 <code>browser.menus</code> API 为 Chrome 的 API 添加了一些功能，特别是可以将项目添加到浏览器的“工具”菜单以及上下文菜单中。</div>
 
 
 
-<div>在Firefox 55之前，这个API最初也被命名为<code>contextMenus</code>，并且这个名字被保留为别名，所以你可以使用<code>contextMenus</code>编写在Firefox和其他浏览器中工作的代码。</div>
+<div>在 Firefox 55 之前，这个 API 最初也被命名为<code>contextMenus</code>，并且这个名字被保留为别名，所以你可以使用<code>contextMenus</code>编写在 Firefox 和其他浏览器中工作的代码。</div>
 
 
 
-<div>你需要拥有“menus”（或别名" contextMenus "）权限来使用此API。</div>
+<div>你需要拥有“menus”（或别名" contextMenus "）权限来使用此 API。</div>
 
 <h2 id="创建菜单项">创建菜单项</h2>
 
-<p>使用 {{WebExtAPIRef("menus.create()")}}方法创建一个菜单项。你需要传递一个包含条目选项的对象，它包括条目的id，类型，和需要显示出来的文本值。</p>
+<p>使用 {{WebExtAPIRef("menus.create()")}}方法创建一个菜单项。你需要传递一个包含条目选项的对象，它包括条目的 id，类型，和需要显示出来的文本值。</p>
 
 <p>绑定一个监听器到{{WebExtAPIRef("contextMenus.onClicked")}}事件来监听你菜单项目的点击事件。此监听器会传递一个{{WebExtAPIRef("contextMenus.OnClickData")}}，它包含该事件的详细信息。</p>
 
@@ -34,20 +34,20 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 
 <ul>
  <li>"normal"：只显示为一个标签的菜单项</li>
- <li>"checkbox"：一个表示二进制状态的菜单项。 它在菜单项旁边显示一个复选标记。 点击该菜单项切换复选标记。监听器会被传递两个额外的属性：“checked”，指示当前是否被选中，以及“wasChecked”，指示在此点击事件发生前是否被选中。</li>
- <li>"radio"：表示一组选项之一的上下文菜单项。 类似于复选框，它也在菜单项旁边显示一个复选标记，监听它的监听器也会被传递“checked”和“wasChecked”。 但是，如果您创建多个单选项，则这些项目将作为一组单选：组内只能选择一项，点击菜单项来选中它。</li>
+ <li>"checkbox"：一个表示二进制状态的菜单项。它在菜单项旁边显示一个复选标记。点击该菜单项切换复选标记。监听器会被传递两个额外的属性：“checked”，指示当前是否被选中，以及“wasChecked”，指示在此点击事件发生前是否被选中。</li>
+ <li>"radio"：表示一组选项之一的上下文菜单项。类似于复选框，它也在菜单项旁边显示一个复选标记，监听它的监听器也会被传递“checked”和“wasChecked”。但是，如果您创建多个单选项，则这些项目将作为一组单选：组内只能选择一项，点击菜单项来选中它。</li>
  <li>"separator"：用于分割菜单的分割线。</li>
 </ul>
 
-<p>如果您创建了多个上下文菜单项目或多个工具菜单项目，则这些项目将被放置在子菜单中。 子菜单的父项将标有扩展名。 例如，下面是一个名为“Menu Demo”的扩展，添加了两个上下文菜单项：</p>
+<p>如果您创建了多个上下文菜单项目或多个工具菜单项目，则这些项目将被放置在子菜单中。子菜单的父项将标有扩展名。例如，下面是一个名为“Menu Demo”的扩展，添加了两个上下文菜单项：</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15431/menus-1.png" style="display: block; height: 501px; margin-left: auto; margin-right: auto; width: 700px;"></p>
 
 <h2 id="图标">图标</h2>
 
-<p>如果你使用 <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/icons">"icons" manifest key</a> 为你的扩展指定一个图标，你的菜单项的旁边就会显示一个指定的图标。浏览器会尝试在普通分辨率下使用16 x 16像素的图标，在高分辨率下使用32 x 32像素的图标：</p>
+<p>如果你使用 <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/icons">"icons" manifest key</a> 为你的扩展指定一个图标，你的菜单项的旁边就会显示一个指定的图标。浏览器会尝试在普通分辨率下使用 16 x 16 像素的图标，在高分辨率下使用 32 x 32 像素的图标：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15433/menus-2.png" style="display: block; height: 409px; margin-left: auto; margin-right: auto; width: 500px;"> 你可以通过调用 {{WebExtAPIRef("menus.create()")}} 时指定icons选项来给子菜单项设置图标。</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/15433/menus-2.png" style="display: block; height: 409px; margin-left: auto; margin-right: auto; width: 500px;"> 你可以通过调用 {{WebExtAPIRef("menus.create()")}} 时指定 icons 选项来给子菜单项设置图标。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15435/menus-3.png" style="display: block; height: 396px; margin-left: auto; margin-right: auto; width: 500px;"></p>
 
@@ -117,7 +117,7 @@ browser.menus.create({
  <dt>{{WebExtAPIRef("contextMenus.ContextType")}}</dt>
  <dd>菜单里可以出现的不同内容。可能的值有："all", "audio", "browser_action", "editable", "frame", "image", "link", "page", "page_action", "password", "selection", "tab", "video".</dd>
  <dt>{{WebExtAPIRef("contextMenus.ItemType")}}</dt>
- <dd>菜单项的类别有: "normal", "checkbox", "radio", "separator".</dd>
+ <dd>菜单项的类别有："normal", "checkbox", "radio", "separator".</dd>
  <dt>{{WebExtAPIRef("contextMenus.OnClickData")}}</dt>
  <dd>当菜单项被点击时发送的信息。</dd>
 </dl>
@@ -126,7 +126,7 @@ browser.menus.create({
 
 <dl>
  <dt>{{WebExtAPIRef("contextMenus.ACTION_MENU_TOP_LEVEL_LIMIT")}}</dt>
- <dd>可以被添加进上下文菜单项的顶级扩展项的最大值，其ContextType可以是"browser_action" 或者 "page_action".</dd>
+ <dd>可以被添加进上下文菜单项的顶级扩展项的最大值，其 ContextType 可以是"browser_action" 或者 "page_action".</dd>
 </dl>
 
 <h2 id="函数">函数</h2>
@@ -157,7 +157,7 @@ browser.menus.create({
 
 <div class="note"><strong>致谢</strong>
 
-<p>此API基于Chromium的 <a href="https://developer.chrome.com/extensions/contextMenus"><code>chrome.contextMenus</code></a> API. 此文档来自于Chromium代码中的<a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a>。</p>
+<p>此 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/contextMenus"><code>chrome.contextMenus</code></a> API. 此文档来自于 Chromium 代码中的<a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a>。</p>
 </div>
 
 <div class="hidden">

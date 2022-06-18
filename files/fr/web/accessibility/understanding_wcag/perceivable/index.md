@@ -743,13 +743,11 @@ This guideline relates to making sure core content is easy to discernable from b
 
 > **Note :** Also see the WCAG description for [Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.](https://www.w3.org/TR/WCAG21/#distinguishable)[.](https://www.w3.org/TR/WCAG21/#distinguishable)
 
-
-
 ## See Also
 
 - [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
 
-  1.  Perceivable
-  2.  [Operable](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  3.  [Understandable](/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  4.  [Robust](/fr/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  1. Perceivable
+  2. [Operable](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable)
+  3. [Understandable](/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable)
+  4. [Robust](/fr/docs/Web/Accessibility/Understanding_WCAG/Robust)

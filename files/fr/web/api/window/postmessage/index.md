@@ -17,7 +17,9 @@ La méthode `window.postMessage`, quand elle est appelée, provoque l'envoi d'un
 
 ## Syntaxe
 
-    otherWindow.postMessage(message, targetOrigin, [transfer]);
+```js
+otherWindow.postMessage(message, targetOrigin, [transfer]);
+```
 
 - `otherWindow`
   - : Une référence à une autre fenêtre ; une telle référence peut être obtenue, par exemple, _via_ la propriété `contentWindow` d'un élément `iframe`, l'objet retourné par [window.open](/fr/docs/DOM/window.open), ou par index nommé ou numérique de [window.frames](/fr/docs/Web/API/window.frames).

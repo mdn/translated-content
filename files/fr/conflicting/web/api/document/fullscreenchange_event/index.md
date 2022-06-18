@@ -10,7 +10,9 @@ La propriété **`Document.onfullscreenchange`** est un gestionnaire d'événe
 
 ## Syntaxe
 
-    targetDocument.onfullscreenchange = fullscreenChangeHandler;
+```js
+targetDocument.onfullscreenchange = fullscreenChangeHandler;
+```
 
 ## Exemple
 

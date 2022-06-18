@@ -112,11 +112,11 @@ Pour accéder aux données plus profondes de la hiérarchie, vous n'avez qu'à e
 superHeroes['members'][1]['powers'][2]
 ```
 
-1.  D'abord, nous partons de la variable — `superHeroes`
-2.  À l'intérieur de laquelle nous désirons accéder à la propriété `members`, donc, nous tapons `["members"]`.
-3.  `members` contient un tableau renfermant des objets. Nous désirons accéder au second de ces objets, donc nous utilisons `[1]`.
-4.  À l'intérieur de cet objet, nous souhaitons accéder à la propriété `powers`, donc, nous utilisons `["powers"]`.
-5.  Enfin, à l'intérieur de cette propriété `powers` nous trouvons un nouveau tableau qui contient les super pouvoirs de ce héros. Nous désirons obtenir le troisième, donc nous tapons `[2]`.
+1. D'abord, nous partons de la variable — `superHeroes`
+2. À l'intérieur de laquelle nous désirons accéder à la propriété `members`, donc, nous tapons `["members"]`.
+3. `members` contient un tableau renfermant des objets. Nous désirons accéder au second de ces objets, donc nous utilisons `[1]`.
+4. À l'intérieur de cet objet, nous souhaitons accéder à la propriété `powers`, donc, nous utilisons `["powers"]`.
+5. Enfin, à l'intérieur de cette propriété `powers` nous trouvons un nouveau tableau qui contient les super pouvoirs de ce héros. Nous désirons obtenir le troisième, donc nous tapons `[2]`.
 
 > **Note :** L'objet JSON vu ci-dessus est disponible au sein d'une variable dans notre exemple [JSONTest.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)). Essayez de le charger et d'accéder aux données en utilisant la console Javascript de votre navigateur.
 
@@ -192,19 +192,19 @@ Nous souhaitons les récupérer et, après quelques manipulations du DOM, les af
 
 Pour charger nos données JSON, nous allons utiliser l'API {{domxref("XMLHttpRequest")}} (qu'on appelle plus couramment **XHR**). Il s'agit d'un objet JavaScript extrêmement utile qui nous permet de construire une requête afin d'interroger un serveur pour obtenir des ressources diverses (images, texte, JSON, ou n'importe quel extrait HTML) le tout en Javascript. En d'autres termes, cela nous permet de mettre à jour de petites sections de contenu sans avoir à recharger notre page toute entière. Ceci conduit à des pages web plus réactives. Mais même si le sujet est très tentant, il dépasse largement l'objet de cet article pour être expliqué plus en détails.
 
-1.  Donc, pour commencer, nous allons charger l'URL du fichier JSON que nous voulons récupérer dans une variable. Aussi, ajouter la ligne suivante à votre code Javascript :
+1. Donc, pour commencer, nous allons charger l'URL du fichier JSON que nous voulons récupérer dans une variable. Aussi, ajouter la ligne suivante à votre code Javascript :
 
     ```js
     var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
     ```
 
-2.  Afin de créer une requête, nous avons besoin d'instancier un nouvel objet `XMLHttpRequest` à partir de son constructeur en utilisant le mot clé new. Ajouter la ligne suivante à votre script :
+2. Afin de créer une requête, nous avons besoin d'instancier un nouvel objet `XMLHttpRequest` à partir de son constructeur en utilisant le mot clé new. Ajouter la ligne suivante à votre script :
 
     ```js
     var request = new XMLHttpRequest();
     ```
 
-3.  Maintenant, nous avons besoin d'ouvrir une nouvelle requête grâce à la méthode [`open()`](/fr/docs/Web/API/XMLHttpRequest/open). Ajoutez la ligne suivante :
+3. Maintenant, nous avons besoin d'ouvrir une nouvelle requête grâce à la méthode [`open()`](/fr/docs/Web/API/XMLHttpRequest/open). Ajoutez la ligne suivante :
 
     ```js
     request.open('GET', requestURL);
@@ -215,14 +215,14 @@ Pour charger nos données JSON, nous allons utiliser l'API {{domxref("XMLHttpReq
     - La méthode HTTP à utiliser sur le réseau pour notre requête. Dans notre cas, la méthode [`GET`](/fr/docs/Web/HTTP/Methods/GET) est appropriée dans la mesure où nous voulons simplement récupérer quelques données.
     - L'URL où adresser notre requête — il s'agit de l'URL du fichier JSON dont nous parlions tout à l'heure.
 
-4.  Ensuite, ajoutez les deux lignes suivantes — ici, nous attribuons la valeur `'json'` à [`responseType`](/fr/docs/Web/API/XMLHttpRequest/responseType), signalant ainsi au serveur que nous attendons une réponse au format JSON. Puis, nous envoyons notre requête à l'aide de la méthode [`send()`](/fr/docs/Web/API/XMLHttpRequest/send)&nbsp;:
+4. Ensuite, ajoutez les deux lignes suivantes — ici, nous attribuons la valeur `'json'` à [`responseType`](/fr/docs/Web/API/XMLHttpRequest/responseType), signalant ainsi au serveur que nous attendons une réponse au format JSON. Puis, nous envoyons notre requête à l'aide de la méthode [`send()`](/fr/docs/Web/API/XMLHttpRequest/send)&nbsp;:
 
     ```js
     request.responseType = 'json';
     request.send();
     ```
 
-5.  La dernière partie de cette section concerne la réponse du serveur et son traitement. Ajoutez les lignes suivantes à la fin de votre code :
+5. La dernière partie de cette section concerne la réponse du serveur et son traitement. Ajoutez les lignes suivantes à la fin de votre code :
 
     ```js
     request.onload = function() {
@@ -297,12 +297,12 @@ Pour commencer, on stocke la propriété `members` de l'objet JavaScript dans un
 
 Maintenant, on utilise une [boucle for](/fr/docs/Apprendre/JavaScript/Building_blocks/Looping_code) pour parcourir chaque object du tableau. Pour chaque cas, il faut :
 
-1.  Créer plusieurs nouveaux éléments : un `<article>`, un `<h2>`, trois `<p>`s, et un `<ul>`.
-2.  Mettre le `name` du héros actuel dans le `<h2>`.
-3.  Remplir les trois paragraphes avec leur `secretIdentity`, leur `age`, et une ligne nommée "Superpowers:" pour présenter la liste des super-pouvoirs.
-4.  Stocker la propriété `powers` dans une nouvelle variable nommée `superPowers` contenant un tableau listant les super-pouvoirs du héros actuel.
-5.  Utiliser une autre boucle `for` pour parcourir les super-pouvoirs du héros actuel — créer pour chacun d'entre eux un élément `<li>`, y placer le super-pouvoir et placer le `listItem` dans l'élément `<ul>` (`myList`) en utilisant `appendChild()`.
-6.  Pour finir, on ajoute `<h2>`, les `<p>`s et `<ul>` à `<article>` (`myArticle`), et on ajoute `<article>` à `<section>`. L'ordre d'ajout est important, c'est l'ordre dans lequel les éléments seront affichés dans le HTML.
+1. Créer plusieurs nouveaux éléments : un `<article>`, un `<h2>`, trois `<p>`s, et un `<ul>`.
+2. Mettre le `name` du héros actuel dans le `<h2>`.
+3. Remplir les trois paragraphes avec leur `secretIdentity`, leur `age`, et une ligne nommée "Superpowers:" pour présenter la liste des super-pouvoirs.
+4. Stocker la propriété `powers` dans une nouvelle variable nommée `superPowers` contenant un tableau listant les super-pouvoirs du héros actuel.
+5. Utiliser une autre boucle `for` pour parcourir les super-pouvoirs du héros actuel — créer pour chacun d'entre eux un élément `<li>`, y placer le super-pouvoir et placer le `listItem` dans l'élément `<ul>` (`myList`) en utilisant `appendChild()`.
+6. Pour finir, on ajoute `<h2>`, les `<p>`s et `<ul>` à `<article>` (`myArticle`), et on ajoute `<article>` à `<section>`. L'ordre d'ajout est important, c'est l'ordre dans lequel les éléments seront affichés dans le HTML.
 
 > **Note :** Si vous ne parvenez pas à faire fonctionner l'exemple, consultez notre code source [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) (ou regardez-le [en action](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html).)
 

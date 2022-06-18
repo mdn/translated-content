@@ -22,7 +22,9 @@ Le cas d'usage le plus probable (bien qu'il ne soit probablement pas répandu) e
 
 ## Syntaxe
 
-    RTCPeerConnection.setConfiguration(configuration);
+```js
+RTCPeerConnection.setConfiguration(configuration);
+```
 
 ### Paramètres
 

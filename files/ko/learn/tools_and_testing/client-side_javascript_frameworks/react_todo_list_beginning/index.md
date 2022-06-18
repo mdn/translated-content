@@ -35,9 +35,6 @@ tags:
  </tbody>
 </table>
 
-
-
-
 ## 우리가 만들 애플리케이션의 유저 스토리
 
 소프트웨어 개발에서 유저 스토리(user story)는 사용자의 관점에서 실행 가능한 목표를 뜻합니다. 개발을 시작하기 전에 유저 스토리를 정의하는 것은 매우 도움이 됩니다. 우리의 애플리케이션은 다음과 같은 스토리를 만족해야 합니다:
@@ -52,8 +49,6 @@ tags:
 - 작업을 특정한 집합으로 나누어 보기: 전체 작업, 진행 중인 작업, 혹은 완료된 작업들.
 
 이 스토리들을 하나하나 다뤄보겠습니다.
-
-
 
 ## 프로젝트를 실행하기 전 점검하기
 
@@ -78,13 +73,9 @@ cd ..
 - 삭제하려는 파일 중 두 개는 애플리케이션을 테스트하기 위해 사용됩니다. 이 기사에서는 테스팅에 대해 다루지 않습니다.
 - 위의 터미널 작업을 수행하기 위해 서버를 멈추었다면, `npm start`를 사용하여 다시 시작해야 합니다.
 
-
-
 ## 프로젝트 시작 코드
 
 프로젝트를 시작하기 위해 여러분이 지금 가지고 있는 것을 대신할 `App()` 함수와 애플리케이션을 꾸밀 CSS를 제공하겠습니다.
-
-
 
 ### JSX
 
@@ -209,8 +200,6 @@ function App(props) {
 - 순서가 매겨지지 않은 세 개의 작업이 있습니다. 각각의 작업은 리스트 아이템([`<li>`](/en-US/docs/Web/HTML/Element/li))이며, 편집하거나 삭제하기 위한 버튼과 완료를 표시할 체크 박스를 가지고 있습니다.
 
 폼은 작업을 *만들* 수 있게 해줍니다; 버튼들은 작업들을 *필터링할* 수 있게 해줍니다; 헤딩과 리스트는 작업들을 *읽을* 수 있게 해줍니다. 작업을 *편집하는* UI는 현재는 없습니다. 이것도 괜찮습니다 – 나중에 만들 거니까요.
-
-
 
 ### 접근성 기능
 
@@ -561,17 +550,13 @@ body {
 
 코드를 저장하고 브라우저로 되돌아오면, 이제 애플리케이션은 적당한 스타일을 가지게 될 겁니다.
 
-
-
 ## 요약
 
 이제 우리의 투두 리스트는 조금 더 진짜 애플리케이션 같아졌습니다! 문제는, 이 앱이 실제로는 아무것도 하지 않는다는 거죠. 다음 챕터에서 해결해봅시다!
 
-
-
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
 <ul>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>

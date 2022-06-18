@@ -18,7 +18,9 @@ La propriété **`error`** de l'interface {{domxref("IDBRequest")}} renvoie l'er
 
 ## Syntaxe
 
-    var myError = request.error;
+```js
+var myError = request.error;
+```
 
 ### Valeur
 

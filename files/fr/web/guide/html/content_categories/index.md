@@ -141,11 +141,15 @@ Si l'élément possède un modèle de contenu transparent, son contenu doit alor
 
 Les éléments {{HTMLElement("del")}} et {{HTMLELement("ins")}} sont des exemples d'éléments transparents.
 
-    <p>Bonjour <del><em>tout</em></del> <ins>le monde</ins>.</p>
+```html
+<p>Bonjour <del><em>tout</em></del> <ins>le monde</ins>.</p>
+```
 
 Si ces éléments étaient retirés, ce fragment de code HTML serait toujours du HTML valide.
 
-    <p>Bonjour <em>tout</em> le monde.</p>
+```html
+<p>Bonjour <em>tout</em> le monde.</p>
+```
 
 ## Autres modèles de contenu
 

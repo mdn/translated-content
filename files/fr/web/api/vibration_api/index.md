@@ -26,8 +26,6 @@ Ces deux exemples illustrent tout deux la vibration de l'appareil pendant 200 mi
 
 Un tableau de valeurs décrit des périodes de temps durant lesquelles le dispositif effectue des vibrations alternées (marche-arrêt répété). Chaque valeur dans le tableau est convertie en entier puis est interprétée alternativement comme le nombre de millisecondes pour lequel le dispositif devrait vibrer et le nombre de millisecondes dont il ne le devrait pas. Par exemple:
 
-
-
 ```js
 window.navigator.vibrate([200, 100, 200]);
 ```

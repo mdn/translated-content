@@ -469,13 +469,13 @@ let jane = new Engineer('Jane Dupont', ['navigateur', 'javascript'], 'belau');
 
 JavaScript suit les étapes suivantes :
 
-1.  L'opérateur `new` crée un objet générique et définit sa propriété `__proto__` à `Engineer.prototype`.
-2.  L'opérateur `new` transmet le nouvel objet au constructeur `Engineer` comme valeur du mot clé `this`.
-3.  Le constructeur crée une nouvelle propriété appelée `base` pour cet objet et affecte la valeur du constructeur `WorkerBee` à la propriété `base`. Cela fait du constructeur `WorkerBee` une méthode de l'objet `Engineer`. Le nom de la propriété `base` n'est pas spécial. Vous pouvez utiliser n'importe quel nom de propriété légal ; `base` est évocateur de son but.
-4.  Le constructeur appelle la méthode `base`, en passant comme arguments deux des arguments passés au constructeur (`"Jane Dupont"` et `["navigateur", "javascript"]`) et également la chaîne `"ingénierie"`. L'utilisation explicite de `"ingénierie"` dans le constructeur indique que tous les objets `Engineer` ont la même valeur pour la propriété `dept` héritée, et cette valeur remplace la valeur héritée de `Employee`.
-5.  Parce que `base` est une méthode de `Engineer`, dans l'appel à `base`, JavaScript lie le mot-clé `this` à l'objet créé à l'étape 1. Ainsi, la fonction `WorkerBee` transmet à son tour les arguments `"Jane Dupont"` et `"ingénierie"` à la fonction du constructeur `Employee`. Au retour de la fonction du constructeur `Employee`, la fonction `WorkerBee` utilise l'argument restant pour définir la propriété `projects`.
-6.  Au retour de la méthode `base`, le constructeur `Engineer` initialise la propriété `machine` de l'objet à `"belau"`.
-7.  Au retour du constructeur, JavaScript affecte le nouvel objet à la variable `jane`.
+1. L'opérateur `new` crée un objet générique et définit sa propriété `__proto__` à `Engineer.prototype`.
+2. L'opérateur `new` transmet le nouvel objet au constructeur `Engineer` comme valeur du mot clé `this`.
+3. Le constructeur crée une nouvelle propriété appelée `base` pour cet objet et affecte la valeur du constructeur `WorkerBee` à la propriété `base`. Cela fait du constructeur `WorkerBee` une méthode de l'objet `Engineer`. Le nom de la propriété `base` n'est pas spécial. Vous pouvez utiliser n'importe quel nom de propriété légal ; `base` est évocateur de son but.
+4. Le constructeur appelle la méthode `base`, en passant comme arguments deux des arguments passés au constructeur (`"Jane Dupont"` et `["navigateur", "javascript"]`) et également la chaîne `"ingénierie"`. L'utilisation explicite de `"ingénierie"` dans le constructeur indique que tous les objets `Engineer` ont la même valeur pour la propriété `dept` héritée, et cette valeur remplace la valeur héritée de `Employee`.
+5. Parce que `base` est une méthode de `Engineer`, dans l'appel à `base`, JavaScript lie le mot-clé `this` à l'objet créé à l'étape 1. Ainsi, la fonction `WorkerBee` transmet à son tour les arguments `"Jane Dupont"` et `"ingénierie"` à la fonction du constructeur `Employee`. Au retour de la fonction du constructeur `Employee`, la fonction `WorkerBee` utilise l'argument restant pour définir la propriété `projects`.
+6. Au retour de la méthode `base`, le constructeur `Engineer` initialise la propriété `machine` de l'objet à `"belau"`.
+7. Au retour du constructeur, JavaScript affecte le nouvel objet à la variable `jane`.
 
 Vous pourriez penser que, ayant appelé le constructeur `WorkerBee` à partir de l'intérieur du constructeur `Engineer`, vous avez mis en place l'héritage de manière appropriée pour les objets `Engineer`. Ce n'est pas le cas. L'appel du constructeur `WorkerBee` garantit qu'un objet `Engineer` commence avec les propriétés spécifiées dans toutes les fonctions des constructeurs qui sont appelées. Cependant, si vous ajoutez ultérieurement des propriétés aux prototypes `Employee` ou `WorkerBee`, ces propriétés ne sont pas héritées par l'objet `Engineer`. Par exemple, supposons que vous ayez les déclarations suivantes :
 
@@ -533,10 +533,10 @@ Les sections précédentes ont décrit comment les constructeurs et prototypes J
 
 Lorsque vous accédez à une propriété d'objet, JavaScript effectue les étapes suivantes, comme décrit précédemment dans ce chapitre :
 
-1.  Vérifiez si la valeur existe localement. Si c'est le cas, elle est retournée.
-2.  S'il n'y a pas de valeur locale, vérifiez la chaîne de prototypes (en utilisant la propriété `__proto__`).
-3.  Si un objet de la chaîne de prototypes possède une valeur pour la propriété spécifiée, renvoyer cette valeur.
-4.  Si aucune propriété de ce type n'est trouvée, l'objet ne possède pas cette propriété.
+1. Vérifiez si la valeur existe localement. Si c'est le cas, elle est retournée.
+2. S'il n'y a pas de valeur locale, vérifiez la chaîne de prototypes (en utilisant la propriété `__proto__`).
+3. Si un objet de la chaîne de prototypes possède une valeur pour la propriété spécifiée, renvoyer cette valeur.
+4. Si aucune propriété de ce type n'est trouvée, l'objet ne possède pas cette propriété.
 
 Le résultat de ces étapes dépend de la façon dont vous définissez les choses en cours de route. L'exemple original avait ces définitions :
 

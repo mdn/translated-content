@@ -3,7 +3,7 @@ title: 书本详细信息页面
 slug: learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 ---
-<p>书本细节页面需要呈现一本指定书本(<code>Book</code>)的信息, 使用它的 <code>_id</code> 字段值(自动产生)做为识别，接着是图书馆中书本实例(<code>BookInstance</code>)的信息。无论我们在哪里呈现一个作者、种类、或书本实例，都应该连结到它的细节页面。</p>
+<p>书本细节页面需要呈现一本指定书本 (<code>Book</code>) 的信息，使用它的 <code>_id</code> 字段值 (自动产生) 做为识别，接着是图书馆中书本实例 (<code>BookInstance</code>) 的信息。无论我们在哪里呈现一个作者、种类、或书本实例，都应该连结到它的细节页面。</p>
 
 <h2 id="控制器">控制器</h2>
 
@@ -41,7 +41,7 @@ exports.book_detail = function(req, res, next) {
 </pre>
 
 <div class="note">
-<p><strong>注意:</strong> 我们不需要用 require 导入 async 和 BookInstance，当我们实作主页面控制器的时候，我们就已经引入这些模组。</p>
+<p><strong>注意：</strong> 我们不需要用 require 导入 async 和 BookInstance，当我们实作主页面控制器的时候，我们就已经引入这些模组。</p>
 </div>
 
 <p>此处的控制器方法使用 <code>async.parallel()</code>，用平行的方式找到 <code>Book</code> 以及它的相应复本 (<code>BookInstances</code>) 。这样的处理方式，就跟上面的 种类细节页面 所说明的完全相同。</p>
@@ -89,7 +89,7 @@ block content
 <p>在这个模板里，几乎每个东西都在先前的章节演示过了。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 与该书相关的種類列表，在模板中的实作，如以下代碼。除了最后一本书之外，在与本书相关的每个种類之后，都会添加一个逗号。</p>
+<p><strong>注意：</strong> 与该书相关的種類列表，在模板中的实作，如以下代碼。除了最后一本书之外，在与本书相关的每个种類之后，都会添加一个逗号。</p>
 
 <pre>  p #[strong Genre:]
     each val, index in book.genre
@@ -98,7 +98,7 @@ block content
         |, </pre>
 </div>
 
-<h2 id="它看起來像是">它看起來像是?</h2>
+<h2 id="它看起來像是">它看起來像是？</h2>
 
 <p>运行本应用，并打开浏览器访问 <a href="http://localhost:3000/">http://localhost:3000/</a>。选择 All books 连结，然后选择其中一本书。如果每个东西都设定正确了，你的页面看起来应该像是底下的截图。</p>
 
@@ -108,5 +108,5 @@ block content
 
 <ul>
  <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教程 5: 呈现图书馆数据</a></li>
- <li>继续教程 5 的下一个部分: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page">作者细节页面</a></li>
+ <li>继续教程 5 的下一个部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page">作者细节页面</a></li>
 </ul>

@@ -14,9 +14,9 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 <pre class="brush: js line-numbers  language-js"><code class="language-js">const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');</code></pre>
 
-<h2 class="highlight-spanned" id="控制器—get路由">控制器—get路由</h2>
+<h2 class="highlight-spanned" id="控制器—get路由">控制器—get 路由</h2>
 
-<p>找到导出的<code>genre_create_get()</code> 控制器方法，并将其替换为以下代码。这只是渲染<strong>genre_form.pug</strong>视图，传递一个title变量。</p>
+<p>找到导出的<code>genre_create_get()</code> 控制器方法，并将其替换为以下代码。这只是渲染<strong>genre_form.pug</strong>视图，传递一个 title 变量。</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">// Display Genre create form on GET.
 exports.genre_create_get = function(req, res, next) {
@@ -85,7 +85,7 @@ exports.genre_create_post =  [
 </ul>
 
 <div class="note">
-<p><strong>注意:</strong> 这种方法是必需的，因为消毒/验证器是中间件功能。</p>
+<p><strong>注意：</strong> 这种方法是必需的，因为消毒/验证器是中间件功能。</p>
 </div>
 
 <p>数组中的第一个方法定义了一个验证器（<code>body</code>），来检查 name 字段是否为空（在执行验证之前调用<code>trim()</code>，以删除任何尾随/前导空格）。</p>
@@ -102,7 +102,7 @@ sanitizeBody('name').trim().escape(),</code></pre>
 </ul>
 
 <div class="note">
-<p><strong>注意:</strong> 验证期间运行的清洁器不会修改请求。这就是为什么我们必须在上面的两个步骤中调用<code>trim()</code>！</p>
+<p><strong>注意：</strong> 验证期间运行的清洁器不会修改请求。这就是为什么我们必须在上面的两个步骤中调用<code>trim()</code>！</p>
 </div>
 
 <p>在指定验证器和清理器之后，我们创建了一个中间件函数，来提取任何验证错误。我们使用<code>isEmpty()</code> 来检查验证结果中，是否有任何错误。如果有，那么我们再次渲染表单，传入我们的已清理种类对象和错误消息的数组（<code>errors.array()</code>）。</p>
@@ -156,7 +156,7 @@ Genre.findOne({ 'name': req.body.name })
 
 <p>当我们创建一个新的种类<code>Genre</code>时，在<code>GET</code>和<code>POST</code>控制器/路由中，都会呈现相同的视图（稍后在我们更新种类<code>Genre</code>时也会使用它）。</p>
 
-<p>在<code>GET</code>情况下，表单为空，我们只传递一个title变量。在<code>POST</code>情况下，用户先前输入了无效数据 - 在种类变量<code>genre</code>中，我们传回了输入数据的已清理版本，并且在<code>errors</code>变量中，我们传回了一组错误消息。</p>
+<p>在<code>GET</code>情况下，表单为空，我们只传递一个 title 变量。在<code>POST</code>情况下，用户先前输入了无效数据 - 在种类变量<code>genre</code>中，我们传回了输入数据的已清理版本，并且在<code>errors</code>变量中，我们传回了一组错误消息。</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">res.render('genre_form', { title: 'Create Genre'});
 res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});</code></pre>
@@ -179,19 +179,19 @@ block content
       for error in errors
         li!= error.msg</code></pre>
 
-<p>从我们之前的教程中，可以很好地理解这个模板的大部分内容。首先，我们扩展 <strong>layout.pug</strong>基本模板，并覆盖名为 “<strong>content</strong>” 的块<code>block</code>。然后我们有一个标题，我们从控制器传入的标题<code>title</code>（通过<code>render()</code> 方法）。</p>
+<p>从我们之前的教程中，可以很好地理解这个模板的大部分内容。首先，我们扩展 <strong>layout.pug</strong>基本模板，并覆盖名为“<strong>content</strong>”的块<code>block</code>。然后我们有一个标题，我们从控制器传入的标题<code>title</code>（通过<code>render()</code> 方法）。</p>
 
-<p>接下来，我们有 HTML表单的 Pug 代码，它使用<code>POST</code>方法将数据发送到服务器，并且因为操作<code>action</code>是空字符串，所以将数据发送到与页面相同的URL。</p>
+<p>接下来，我们有 HTML 表单的 Pug 代码，它使用<code>POST</code>方法将数据发送到服务器，并且因为操作<code>action</code>是空字符串，所以将数据发送到与页面相同的 URL。</p>
 
-<p>表单定义了一个名为 “name” 的 “text” 类型的必填字段。字段的默认值，取决于是否定义了种类变量<code>genre</code>。如果从<code>GET</code>路由调用，它将为空，因为这是一个新表单。如果从<code>POST</code>路由调用，它将包含用户最初输入的（无效）值。</p>
+<p>表单定义了一个名为“name”的“text”类型的必填字段。字段的默认值，取决于是否定义了种类变量<code>genre</code>。如果从<code>GET</code>路由调用，它将为空，因为这是一个新表单。如果从<code>POST</code>路由调用，它将包含用户最初输入的（无效）值。</p>
 
 <p>页面的最后一部分是错误代码。如果已定义错误变量，则只会打印错误列表（换句话说，当模板在<code>GET</code>路由上呈现时，此部分不会出现）。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 这只是呈现错误的一种方法。您还可以从错误变量中，获取受影响字段的名称，并使用这些，来控制错误消息的呈现位置，以及是否应用自定义 CSS 等。</p>
+<p><strong>注意：</strong> 这只是呈现错误的一种方法。您还可以从错误变量中，获取受影响字段的名称，并使用这些，来控制错误消息的呈现位置，以及是否应用自定义 CSS 等。</p>
 </div>
 
-<h2 class="highlight-spanned" id="它看起來像是">它看起來像是?</h2>
+<h2 class="highlight-spanned" id="它看起來像是">它看起來像是？</h2>
 
 <p>运行应用程序，打开浏览器到<a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>，然后选择 Create new genre 链接。如果一切设置正确，您的网站应该类似于以下屏幕截图。输入值后，应保存该值，您将进入种类详细信息页面。</p>
 
@@ -202,7 +202,7 @@ block content
 <p><img alt="" src="https://mdn.mozillademos.org/files/14480/LocalLibary_Express_Genre_Create_Error.png" style="border-style: solid; border-width: 1px; display: block; height: 249px; margin: 0px auto; width: 400px;"></p>
 
 <div class="note">
-<p><strong>注意:</strong> 我们的验证使用<code>trim()</code>，来确保不接受空格作为种类名称。我们还可以在表单中​​的字段定义中，添加值<code>required='true'</code>，来验证客户端字段不为空：</p>
+<p><strong>注意：</strong> 我们的验证使用<code>trim()</code>，来确保不接受空格作为种类名称。我们还可以在表单中​​的字段定义中，添加值<code>required='true'</code>，来验证客户端字段不为空：</p>
 
 <pre class="brush: js"><code>input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), <strong>required='true'</strong> )</code></pre>
 </div>
@@ -211,7 +211,7 @@ block content
 
 <ul>
  <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms">Express 教程 6: 使用表单</a></li>
- <li>继续教程 6 下一个部分: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form">创建作者表单</a></li>
+ <li>继续教程 6 下一个部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form">创建作者表单</a></li>
 </ul>
 
 <div id="SL_balloon_obj" style="display: block;">
