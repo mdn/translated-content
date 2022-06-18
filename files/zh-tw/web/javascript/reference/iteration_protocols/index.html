@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Iteration_protocols
 
 <p>為了成為<strong>可迭代的（iterable）</strong>，一個物件必須實作 <strong>@@iterator</strong> 方法，意思是這個物件（或其<a href="/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">原型鏈</a>中的其中一個原型物件）必須擁有一個鍵（key）值為 <strong>@@iterator</strong>（即 {{jsxref("Symbol.iterator")}} 常數）的屬性：</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">屬性</th>
@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Iteration_protocols
 
 <p>當物件以下列語義實作了 <code><strong>next()</strong></code> 方法即為一個迭代器：</p>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="col">屬性</th>
@@ -321,28 +321,6 @@ aGeneratorObject[Symbol.iterator]() === aGeneratorObject;
 [...aGeneratorObject];
 // [1, 2, 3]
 </pre>
-
-<h2 id="規範">規範</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-iteration', 'Iteration')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-iteration', 'Iteration')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
 
 <h2 id="參見">參見</h2>
 
