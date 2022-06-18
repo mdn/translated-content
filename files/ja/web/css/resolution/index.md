@@ -44,9 +44,11 @@ translation_of: Web/CSS/resolution
 
 ### 有効な解像度
 
-    96dpi
-    50.82dpcm
-    3dppx
+```
+96dpi
+50.82dpcm
+3dppx
+```
 
 ### 無効な解像度
 
