@@ -17,7 +17,9 @@ La méthode **`Intl.PluralRules.prototype.select`** renvoie une chaîne de carac
 
 ## Syntaxe
 
-    pluralRule.select(nombre)
+```js
+pluralRule.select(nombre)
+```
 
 ### Paramètres
 

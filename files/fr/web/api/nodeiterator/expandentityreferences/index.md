@@ -18,7 +18,9 @@ Si cette valeur est `false` (_faux_), les enfants des nœuds de référence d'en
 
 ## Syntaxe
 
-    expand = nodeIterator.expandEntityReferences;
+```js
+expand = nodeIterator.expandEntityReferences;
+```
 
 ## Exemple
 

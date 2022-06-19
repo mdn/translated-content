@@ -9,12 +9,16 @@ Type spécifie la langue de la feuille de style pour cette feuille de style.
 
 ## Syntaxe
 
-    String = stylesheet.type
+```js
+String = stylesheet.type
+```
 
 ## Exemple
 
-     Ss.type = "text / css";
+```
+Ss.type = "text / css";
+```
 
-## spécification
+## Spécification
 
 [type](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-type)

@@ -17,7 +17,9 @@ La fonction **`WebAssembly.compileStreaming()`** permet de compiler un module We
 
 ## Syntaxe
 
-    Promise<WebAssembly.Module> WebAssembly.compileStreaming(source);
+```js
+Promise<WebAssembly.Module> WebAssembly.compileStreaming(source);
+```
 
 ### Paramètres
 

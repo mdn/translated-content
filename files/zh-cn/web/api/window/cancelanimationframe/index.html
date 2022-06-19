@@ -7,7 +7,7 @@ translation_of: Web/API/Window/cancelAnimationFrame
 
 <h2 id="概述">概述</h2>
 
-<p>取消一个先前通过调用{{ domxref("window.requestAnimationFrame()") }}方法添加到计划中的动画帧请求.</p>
+<p>取消一个先前通过调用{{ domxref("window.requestAnimationFrame()") }}方法添加到计划中的动画帧请求。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/API/Window/cancelAnimationFrame
 
 <dl>
  <dt><code>requestID</code></dt>
- <dd>先前调用{{ domxref("window.requestAnimationFrame()") }}方法时返回的ID.</dd>
+ <dd>先前调用{{ domxref("window.requestAnimationFrame()") }}方法时返回的 ID.</dd>
 </dl>
 
 <h2 id="Notes" name="Notes">示例</h2>
@@ -28,7 +28,7 @@ translation_of: Web/API/Window/cancelAnimationFrame
 
 var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
-var start = window.mozAnimationStartTime;  // 只有Firefox支持mozAnimationStartTime属性,其他浏览器可以使用Date.now()来替代.
+var start = window.mozAnimationStartTime;  // 只有 Firefox 支持 mozAnimationStartTime 属性，其他浏览器可以使用 Date.now() 来替代。
 
 var myReq;
 function step(timestamp) {

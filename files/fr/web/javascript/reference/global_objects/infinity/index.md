@@ -17,7 +17,9 @@ La propriété globale **`Infinity`** est une valeur numérique représentant l'
 
 ## Syntaxe
 
-    Infinity
+```js
+Infinity
+```
 
 ## Description
 

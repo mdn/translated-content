@@ -7,6 +7,7 @@ For guidelines relating to specific locales, we have locale-specific docs in
 subdirectories:
 
 - [Russian translation guide / Участие в переводе](ru/translation-guide.md)
+- [Simplified Chinese Guide / 简体中文翻译指南](zh-cn/translation-guide.md)
 - [Traditional Chinese Guide / 正體中文翻譯指南](zh-tw/translation-guide.md)
 
 If you want to add a guide to document some specific guidelines for your locale

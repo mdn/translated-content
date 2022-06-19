@@ -14,7 +14,9 @@ Pour libérer une URL d’objet, il faut appeler {{domxref("URL.revokeObjectURL"
 
 ## Syntaxe
 
-    objectURL = URL.createObjectURL(object);
+```js
+objectURL = URL.createObjectURL(object);
+```
 
 ### Paramètres
 

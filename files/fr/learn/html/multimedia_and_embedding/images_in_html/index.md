@@ -327,15 +327,17 @@ C'est bon. Ça contient ce que vous voulez et c'est aisément stylisable en CSS.
 
 Une meilleure solution consiste en l'utilisation des éléments HTML5 {{htmlelement("figure")}} et {{htmlelement("figcaption")}} . Ils ont été conçus pour cela : fournir un conteneur sémantique aux objets et lier clairement cet objet à sa légende. Notre exemple précédent pourrait être réécrit comme ceci :
 
-    <figure>
-      <img src="images/dinosaur.jpg"
-           alt="The head and torso of a dinosaur skeleton;
-                it has a large head with long sharp teeth"
-           width="400"
-           height="341">
+```html
+<figure>
+  <img src="images/dinosaur.jpg"
+        alt="The head and torso of a dinosaur skeleton;
+            it has a large head with long sharp teeth"
+        width="400"
+        height="341">
 
-      <figcaption>A T-Rex on display in the Manchester University Museum.</figcaption>
-    </figure>
+  <figcaption>A T-Rex on display in the Manchester University Museum.</figcaption>
+</figure>
+```
 
 L'élément {{htmlelement("figcaption")}}  dit au navigateur et aux technologies d'assistance que la légende décrit le contenu de l'autre élément {{htmlelement("figure")}}.
 

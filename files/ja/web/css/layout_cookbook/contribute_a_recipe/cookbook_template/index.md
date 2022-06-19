@@ -13,7 +13,7 @@ translation_of: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
 ---
 {{CSSRef}}
 
-> **Callout:** 
+> **Callout:**
 > **訳注:** レシピはまず英語版で投稿し、承認を受けてから日本語に翻訳してください。日本語版単独のレシピの投稿はできません。このテンプレートは、レシピの翻訳の参考のために翻訳しているものです。
 > _斜体のコメントは、このテンプレートの使い方についての情報です。_
 

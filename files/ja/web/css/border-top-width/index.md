@@ -95,5 +95,5 @@ div:nth-child(2) {
 
 ## 関連情報
 
- - 他の border-width 関連 CSS プロパティ: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, {{Cssxref("border-width")}}
- - 他の border-top 関連 CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-top")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-top-color")}}
+- 他の border-width 関連 CSS プロパティ: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, {{Cssxref("border-width")}}
+- 他の border-top 関連 CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-top")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-top-color")}}

@@ -16,7 +16,7 @@ translation_of: Web/API/Request/cache
 <p>A <code>RequestCache</code> value. The available values are:</p>
 
 <ul>
- <li><code>default</code> — 浏览器从HTTP缓存中寻找匹配的请求。
+ <li><code>default</code> — 浏览器从 HTTP 缓存中寻找匹配的请求。
 
   <ul>
    <li>如果缓存匹配上并且有效（ <a href="/en-US/docs/Web/HTTP/Caching#Freshness">fresh</a>）, 它将直接从缓存中返回资源。</li>
@@ -26,21 +26,21 @@ translation_of: Web/API/Request/cache
  </li>
  <li><code>no-store</code> — 浏览器直接从远程服务器获取资源，不查看缓存，并且不会使用下载的资源更新缓存。</li>
  <li><code>reload</code> — 浏览器直接从远程服务器获取资源，不查看缓存，然后使用下载的资源更新缓存。</li>
- <li><code>no-cache</code> — 浏览器在其HTTP缓存中寻找匹配的请求。
+ <li><code>no-cache</code> — 浏览器在其 HTTP 缓存中寻找匹配的请求。
   <ul>
    <li>如果有匹配，无论是新的还是陈旧的，浏览器都会向远程服务器发出条件请求。如果服务器指示资源没有更改，则将从缓存中返回该资源。否则，将从服务器下载资源并更新缓存。</li>
    <li>如果没有匹配，浏览器将发出正常请求，并使用下载的资源更新缓存。</li>
   </ul>
-  <code>force-cache </code>— 浏览器在其HTTP缓存中寻找匹配的请求。
+  <code>force-cache </code>— 浏览器在其 HTTP 缓存中寻找匹配的请求。
 
   <ul>
    <li>如果有匹配项，不管是新匹配项还是旧匹配项，都将从缓存中返回。</li>
    <li>如果没有匹配，浏览器将发出正常请求，并使用下载的资源更新缓存。</li>
   </ul>
  </li>
- <li><code>only-if-cached</code> — 浏览器在其HTTP缓存中寻找匹配的请求。
+ <li><code>only-if-cached</code> — 浏览器在其 HTTP 缓存中寻找匹配的请求。
   <ul>
-   <li>如果有匹配项(新的或旧的)，则从缓存中返回。</li>
+   <li>如果有匹配项 (新的或旧的)，则从缓存中返回。</li>
    <li>如果没有匹配，浏览器将返回一个错误。</li>
   </ul>
   The <code>"only-if-cached"</code> mode can only be used if the request's <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/mode">mode</a></code> is <code>"same-origin"</code>. Cached redirects will be followed if the request's <code>redirect</code> property is <code>"follow"</code> and the redirects do not violate the <code>"same-origin"</code> mode.</li>

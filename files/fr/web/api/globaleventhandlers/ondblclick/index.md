@@ -1,70 +1,65 @@
 ---
-title: element.ondblclick
+title: GlobalEventHandlers.ondblclick
 slug: Web/API/GlobalEventHandlers/ondblclick
-tags:
-  - DOM
-  - DOM_0
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/GlobalEventHandlers/ondblclick
+browser-compat: api.GlobalEventHandlers.ondblclick
 ---
-{{ ApiRef() }}
+{{ApiRef("HTML DOM")}}
 
-### Résumé
+La propriété **`ondblclick`**, rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`dblclick`](/fr/docs/Web/API/Element/dblclick_event).
 
-La propriété **ondblclick** renvoie le gestionnaire d'évènement `dblclick` de l'élément courant.
+L'évènement `dblclick` est déclenché lorsque la personne double-clique sur un élément. Il est déclenché après deux évènements [`click`](/fr/docs/Web/API/Element/click_event).
 
-### Syntaxe
+## Syntaxe
 
-    element.ondblclick = nomDeFonction;
-
-- `nomDeFonction` est le nom d'une fonction définie par l'utilisateur, sans les parenthèses ni aucun paramètre. Il peut également s'agir d'une déclaration de fonction anonyme, comme&nbsp;:
-
-<!---->
-
-    element.ondblclick = function() { alert("Évènement dblclick détecté"); };
-
-### Exemple
-
-```html
-<html>
-
-<head>
-<title>ondblclick event example</title>
-
-<script type="text/javascript">
-
-function initElement() {
- var p = document.getElementById("foo");
- // Attention&nbsp;: showAlert(); ou showAlert(param); ne fonctionneront pas ici,
- // il doit s'agir d'une référence à un nom de fonction, pas un appel de fonction.
- p.ondblclick = showAlert;
-};
-
-function showAlert() {
- alert("Évènement dblclick détecté")
-}
-</script>
-
-<style type="text/css">
-<!--
-#foo {
-border: solid blue 2px;
-}
--->
-</style>
-</head>
-
-<body onload="initElement()";>
-<span id="foo">Mon élément</span>
-<p>Double-cliquez sur l'élément ci-dessus.</p>
-</body>
-</html>
+```js
+cible.ondblclick = refFonction;
 ```
 
-### Notes
+### Valeur
 
-L'évènement `dblclick` est déclenché lorsque l'utilisateur double-clique sur un élément.
+`refFonction` est un nom de fonction ou une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet [`MouseEvent`](/fr/docs/Web/API/MouseEvent) comme unique argument. À l'intérieur de cette fonction, le mot-clé [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) correspondra à l'élément sur lequel l'évènement a été déclenché.
 
-### Spécification
+Seul un gestionnaire `ondblclick` peut être affecté par objet à un instant donné. Si besoin de plus de flexibilité, on pourra utiliser la méthode [`EventTarget.addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener).
 
-{{ DOM0() }}
+## Exemple
+
+Cet exemple affiche dans un journal la position des doubles-clics.
+
+### HTML
+
+```html
+<p>Double-cliquez n'importe où dans cet exemple.</p>
+<p id="log"></p>
+```
+
+### JavaScript
+
+```js
+let log = document.getElementById('log');
+
+document.ondblclick = logDoubleClick;
+
+function logDoubleClick(e) {
+  log.textContent = `Position : (${e.clientX}, ${e.clientY})`;
+}
+```
+
+### Résultat
+
+{{EmbedLiveSample("")}}
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- L'évènement [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
+- Les gestionnaires d'évènements associés
+  - [`GlobalEventHandlers.onauxclick`](/fr/docs/Web/API/GlobalEventHandlers/onauxclick)
+  - [`GlobalEventHandlers.onclick`](/fr/docs/Web/API/GlobalEventHandlers/onclick)

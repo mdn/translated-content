@@ -15,8 +15,10 @@ var string = document.URL
 
 ## Exemple
 
-    var currentURL = document.URL;
-    alert(currentURL);
+```js
+var currentURL = document.URL;
+alert(currentURL);
+```
 
 ## Specification
 

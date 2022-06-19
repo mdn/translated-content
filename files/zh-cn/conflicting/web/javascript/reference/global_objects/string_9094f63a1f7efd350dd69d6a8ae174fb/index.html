@@ -1,0 +1,49 @@
+---
+title: USVString
+slug: >-
+  conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb
+tags:
+  - USVString
+  - unicode scalar values
+translation_of: Web/API/USVString
+original_slug: Web/API/USVString
+---
+<p>{{APIRef("DOM")}}</p>
+
+<p><strong><code>USVString</code></strong> 对应 unicode 标量值的所有可能序列的集合。在 JavaScript 中返回时， <code>USVString</code> 映射到 {{JSxRef("String")}} 。它通常仅用于执行文本处理的 API，需要一串 unicode 标量值才能进行操作。除了不允许不成对的代理代码之外， <code>USVString</code> 等同于 {{DOMxRef("DOMString")}} 。 <code>USVString</code> 中存在的不成对的代理代码由浏览器转换为 Unicode '替换字符' <code>U+FFFD</code>, (�).</p>
+
+<p> </p>
+
+<p>译注：</p>
+
+<p>Unicode 标量值（ Unicode scalar values ）：字符的代号。</p>
+
+<p>不成对的代理代码（ Unpaired surrogate codepoints ）：高代理代码后面没有低代理代码，或者低代理代码之前没有高代理代码。</p>
+
+<p> </p>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("WebIDL", "#idl-USVString", "USVString")}}</td>
+   <td>{{Spec2("WebIDL")}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="另见">另见</h2>
+
+<ul>
+ <li>{{JSxRef("String")}}</li>
+ <li>{{DOMxRef("DOMString")}}</li>
+ <li>{{DOMxRef("CSSOMString")}}</li>
+ <li><a href="/en-US/docs/Web/API/DOMString/Binary">Binary strings</a></li>
+</ul>

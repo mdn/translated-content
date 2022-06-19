@@ -20,7 +20,9 @@ La méthode **`entries()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScrip
 
 ## Syntaxe
 
-    maMap.entries()
+```js
+maMap.entries()
+```
 
 ### Valeur de retour
 

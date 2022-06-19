@@ -9,7 +9,9 @@ La méthode **`estimate()`** de l’interface {{domxref("StorageManager")}} dema
 
 ## Syntaxe
 
-    var estimatePromise = StorageManager.estimate();
+```js
+var estimatePromise = StorageManager.estimate();
+```
 
 ### Paramètres
 

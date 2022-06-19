@@ -39,8 +39,6 @@ Une valeur `<display-outside>` peut être l'un des mots-clés suivants.
 
 Dans l'exemple suivant, les éléments {{HTMLElement("span")}}, normalement affichés comme des éléments en ligne, sont paramétrés avec `display: block` et passent à la ligne en étendant leur conteneur selon l'axe en ligne.
 
-
-
 ### CSS
 
 ```css
@@ -49,8 +47,6 @@ span {
   border: 1px solid rebeccapurple;
 }
 ```
-
-
 
 ### HTML
 

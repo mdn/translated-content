@@ -16,7 +16,7 @@ Le gestionnaire d'événement **`WindowEventHandlers.onbeforeunload`** contient 
 
 ```html
 <script type="text/javascript">
-	window.onbeforeunload = funcRef
+  window.onbeforeunload = funcRef
 </script>
 ```
 
@@ -40,7 +40,9 @@ window.onbeforeunload = function (e) {
 
 ## Propriétés de l'objet **event**
 
-    returnValue
+```
+returnValue
+```
 
 - Applique ou récupère la valeur de retour de l'évènement.
 

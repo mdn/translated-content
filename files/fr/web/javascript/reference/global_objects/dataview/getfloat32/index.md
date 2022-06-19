@@ -19,7 +19,9 @@ La méthode **`getFloat32()`** permet de lire un nombre flottant signé sur 32 b
 
 ## Syntaxe
 
-    dataview.getFloat32(positionOctet [, littleEndian])
+```js
+dataview.getFloat32(positionOctet [, littleEndian])
+```
 
 ### Paramètres
 

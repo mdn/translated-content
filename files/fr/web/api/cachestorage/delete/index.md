@@ -19,9 +19,11 @@ Vous pouvez accéder à `CacheStorage` via la propriété globale {{domxref("Win
 
 ## Syntaxe
 
-    caches.delete(cacheName).then(function(true) {
-      // le cache est maintenant supprimé
-    });
+```js
+caches.delete(cacheName).then(function(true) {
+  // le cache est maintenant supprimé
+});
+```
 
 ### Paramètres
 

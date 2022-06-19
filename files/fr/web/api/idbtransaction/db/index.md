@@ -17,7 +17,9 @@ La propriété **`db`** de l'interface {{domxref("IDBTransaction")}} renvoie la 
 
 ## Syntaxe
 
-    var myDatabase = transaction.db;
+```js
+var myDatabase = transaction.db;
+```
 
 ### Valeur
 

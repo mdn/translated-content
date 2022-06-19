@@ -28,9 +28,11 @@ L'événement **`beforeprint`** est déclenché lorsque le document associé est
 
 En utilisant `window.addEventListener()` :
 
-    window.addEventListener("beforeprint", (evenement) => {
-      console.log("Before print");
-    });
+```js
+window.addEventListener("beforeprint", (evenement) => {
+  console.log("Before print");
+});
+```
 
 ## Propriétés
 

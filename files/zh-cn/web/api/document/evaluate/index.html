@@ -25,8 +25,8 @@ translation_of: Web/API/Document/evaluate
 
 <ul>
  <li><code>xpathExpression</code> 表示要计算的 Xpath 字符串。</li>
- <li><code>contextNode</code> 表示本次查询的<em>上下文节点</em>（参照XPath规范 <a href="http://www.w3.org/TR/xpath">http://www.w3.org/TR/xpath</a>）。通常会使用 <code>document</code>。</li>
- <li><code>namespaceResolver</code> 是函数。传入名空间前缀，返回跟此前缀相关的名空间URI（字符串）。通常用来解析Xpath内的前缀，以便对文档进行匹配。HTML文档或者不使用名空间前缀的文档，通常传入 <code>null</code>。</li>
+ <li><code>contextNode</code> 表示本次查询的<em>上下文节点</em>（参照 XPath 规范 <a href="http://www.w3.org/TR/xpath">http://www.w3.org/TR/xpath</a>）。通常会使用 <code>document</code>。</li>
+ <li><code>namespaceResolver</code> 是函数。传入名空间前缀，返回跟此前缀相关的名空间 URI（字符串）。通常用来解析 Xpath 内的前缀，以便对文档进行匹配。HTML 文档或者不使用名空间前缀的文档，通常传入 <code>null</code>。</li>
  <li><code>resultType</code> 是整数。指定所返回的 <code>XPathResult</code> 的类型，常使用 <a href="#Result_types">named constant properties</a>，如 <code>XPathResult.ANY_TYPE</code>，范围 0 到 9，见下表。</li>
  <li><code>result</code> 为 <code>XPathResult</code> 型，用以存储查询结果。通常传入 <code>null</code>，此时将创建新的 <code>XPathResult</code> 对象。</li>
 </ul>
@@ -45,14 +45,14 @@ while (thisHeading) {
 alert(alertText); // 显示所有 h2 节点的文本
 </pre>
 
-<p>注意，在上述例子中，最好写更冗长的XPath，而不是常用的简写，比如 <code>//h2</code>。 通常，像上述例子所示，更具体的XPath选择器会得到显著的性能提升，特别是在非常大的文档中。这是因为查询计算不会将时间浪费在查看不需要的节点上。使用 // 通常很慢，这是因为它要从根节点和所有子节点中查找所有可能匹配的节点。</p>
+<p>注意，在上述例子中，最好写更冗长的 XPath，而不是常用的简写，比如 <code>//h2</code>。 通常，像上述例子所示，更具体的 XPath 选择器会得到显著的性能提升，特别是在非常大的文档中。这是因为查询计算不会将时间浪费在查看不需要的节点上。使用 // 通常很慢，这是因为它要从根节点和所有子节点中查找所有可能匹配的节点。</p>
 
 <p>通过谨慎使用上下文参数能得到进一步的优化。比如，如果你知道你要查找的内容在 <code>body</code> 标签的某处，你可以这样做：</p>
 
 <pre class="brush: js">document.evaluate(".//h2", document.body, null, XPathResult.ANY_TYPE, null);
 </pre>
 
-<p>注意上面的 <code>document.body</code> 已经替代了document作为上下文，所以 XPath 从 body 元素开始查找。 （在这个例子中，<code>"."</code> 很重要，因为它指示了查找要从document.body这个上下文节点开始。如果遗漏了 <code>"."</code> (剩下 <code>//h2</code>) ，查找会从根节点（<code>html</code>）处开始，这样会很浪费。）</p>
+<p>注意上面的 <code>document.body</code> 已经替代了 document 作为上下文，所以 XPath 从 body 元素开始查找。（在这个例子中，<code>"."</code> 很重要，因为它指示了查找要从 document.body 这个上下文节点开始。如果遗漏了 <code>"."</code> (剩下 <code>//h2</code>) ，查找会从根节点（<code>html</code>）处开始，这样会很浪费。）</p>
 
 <p>查阅 <a href="/en-US/docs/Introduction_to_using_XPath_in_JavaScript" title="Introduction to using XPath in JavaScript">Introduction to using XPath in JavaScript</a> 获得更多信息。</p>
 

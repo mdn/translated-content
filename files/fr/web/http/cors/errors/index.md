@@ -26,16 +26,18 @@ Si la configuration CORS n'est pas correctement effectuée, la console du naviga
 
 Pour saisir la cause de l'erreur, il faut préalablement découvrir la requête fautive, ainsi que la configuration erronée. Ces étapes peuvent être utiles au processus:
 
-1.  Rendez-vous sur le site défaillant et ouvrez les [Developer Tools](/en-US/docs/Tools).
-2.  Essayez de reproduir la requête qui échoue et vérifiez la [console](/en-US/docs/Tools/Web_Console) pour trouver les messages de violation CORS, ce qui tournerait autours de:
+1. Rendez-vous sur le site défaillant et ouvrez les [Developer Tools](/en-US/docs/Tools).
+2. Essayez de reproduir la requête qui échoue et vérifiez la [console](/en-US/docs/Tools/Web_Console) pour trouver les messages de violation CORS, ce qui tournerait autours de:
 
 ![Firefox console showing CORS error](cors-error2.png)
 
 Le text de l'erreur sera probablement similaire à:
 
-    Cross-Origin Request Blocked: The Same Origin Policy disallows
-    reading the remote resource at https://some-url-here. (Reason:
-    additional information here).
+```
+Cross-Origin Request Blocked: The Same Origin Policy disallows
+reading the remote resource at https://some-url-here. (Reason:
+additional information here).
+```
 
 > **Note :** Pour des raisons de sécurité, il _est impossible_ d'analyser les causes de l'erreur CORS via JavaScript. Seule une indication de l'échec de la requête sera fournie. Il faut donc absolument regarder manuellement les messages d'erreur de la console pour débugger.
 

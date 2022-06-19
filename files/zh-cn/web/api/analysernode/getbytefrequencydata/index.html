@@ -6,9 +6,9 @@ translation_of: Web/API/AnalyserNode/getByteFrequencyData
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>{{ domxref("AnalyserNode") }}接口的<strong><code>getByteFrequencyData()</code></strong>方法将当前频率数据复制到传入的Uint8Array（无符号字节数组）中。</p>
+<p>{{ domxref("AnalyserNode") }}接口的<strong><code>getByteFrequencyData()</code></strong>方法将当前频率数据复制到传入的 Uint8Array（无符号字节数组）中。</p>
 
-<p>如果数组的长度小于 {{domxref("AnalyserNode.frequencyBinCount")}}, 那么Analyser多出的元素会被删除. 如果是大于, 那么数组多余的元素会被忽略.</p>
+<p>如果数组的长度小于 {{domxref("AnalyserNode.frequencyBinCount")}}, 那么 Analyser 多出的元素会被删除。如果是大于，那么数组多余的元素会被忽略。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -25,9 +25,9 @@ analyser.getByteFrequencyData(dataArray); // 调用 getByteFrequencyData 方法�
 
 <h2 id="例子">例子</h2>
 
-<p>下面的例子展示了 {{domxref("AudioContext")}} 创建一个 <code>AnalyserNode</code>, 然后用 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 去反复收集当前音频的频率数据, 并绘制为一个柱状风格的输出(频谱).</p>
+<p>下面的例子展示了 {{domxref("AudioContext")}} 创建一个 <code>AnalyserNode</code>, 然后用 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 去反复收集当前音频的频率数据，并绘制为一个柱状风格的输出 (频谱).</p>
 
-<p>更多的例子/信息, 查看 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 演示 (相关代码在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 的 128行~205行</a>).</p>
+<p>更多的例子/信息，查看 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 演示 (相关代码在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 的 128 行~205 行</a>).</p>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
@@ -69,7 +69,7 @@ draw();</pre>
 
 <dl>
  <dt>array (数组)</dt>
- <dd>必须为{{domxref("Uint8Array")}}, 频域数据将复制到该数组内.</dd>
+ <dd>必须为{{domxref("Uint8Array")}}, 频域数据将复制到该数组内。</dd>
 </dl>
 
 <h2 id="规范">规范</h2>

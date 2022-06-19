@@ -15,7 +15,9 @@ Le [pseudo-élément CSS](/fr/docs/Web/CSS/Pseudo-éléments) non-standard **`::
 
 ## Syntaxe
 
-    li::-moz-list-bullet { propriétés de style }
+```
+li::-moz-list-bullet { propriétés de style }
+```
 
 ## Exemples
 

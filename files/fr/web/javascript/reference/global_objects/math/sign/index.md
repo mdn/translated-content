@@ -19,7 +19,9 @@ La fonction **`Math.sign()`** renvoie le signe d'un nombre et permet de savoir s
 
 ## Syntaxe
 
-    Math.sign(x)
+```js
+Math.sign(x)
+```
 
 ### Paramètres
 

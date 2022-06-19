@@ -5,7 +5,7 @@ translation_of: Web/API/WebGLRenderingContext/blendFunc
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的<strong><code>WebGLRenderingContext.blendFunc()</code></strong> 方法定义了一个用于混合像素算法的函数.</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的<strong><code>WebGLRenderingContext.blendFunc()</code></strong> 方法定义了一个用于混合像素算法的函数。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -16,9 +16,9 @@ translation_of: Web/API/WebGLRenderingContext/blendFunc
 
 <dl>
  <dt><code>sfactor</code></dt>
- <dd> {{domxref("GLenum")}} 为源混合因子指定一个乘数. 默认值是 <code>gl.ONE</code>. 有关可能的值, 查看下面.</dd>
+ <dd> {{domxref("GLenum")}} 为源混合因子指定一个乘数。默认值是 <code>gl.ONE</code>. 有关可能的值，查看下面。</dd>
  <dt><code>dfactor</code></dt>
- <dd> {{domxref("GLenum")}} 为源目标合因子指定一个乘数. 默认值是 <code>gl.ZERO</code>. 有关可能的值, 查看下面.</dd>
+ <dd> {{domxref("GLenum")}} 为源目标合因子指定一个乘数。默认值是 <code>gl.ZERO</code>. 有关可能的值，查看下面。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -28,15 +28,15 @@ translation_of: Web/API/WebGLRenderingContext/blendFunc
 <h3 id="异常">异常</h3>
 
 <ul>
- <li>如果 <code><em>sfactor</em> 或</code> <code><em>dfactor</em> </code>不是列出的可能值一直, 则抛出 <code>gl.INVALID_ENUM</code> 错误.</li>
- <li>如果使用恒定的颜色和恒定的alpha值作为源和目标因子, 则抛出<code>gl.INVALID_ENUM</code> 错误.</li>
+ <li>如果 <code><em>sfactor</em> 或</code> <code><em>dfactor</em> </code>不是列出的可能值一直，则抛出 <code>gl.INVALID_ENUM</code> 错误。</li>
+ <li>如果使用恒定的颜色和恒定的 alpha 值作为源和目标因子，则抛出<code>gl.INVALID_ENUM</code> 错误。</li>
 </ul>
 
 <h2 id="常量">常量</h2>
 
 <p>下列常数可用于  <code><em>sfactor</em></code> 和<code><em>dfactor</em></code>.</p>
 
-<p>混合颜色的公式可以这样描述: color(RGBA) = (sourceColor * <em>sfactor</em>) + (destinationColor * <em>dfactor</em>). RBGA 值在 0 到1 之间.</p>
+<p>混合颜色的公式可以这样描述: color(RGBA) = (sourceColor * <em>sfactor</em>) + (destinationColor * <em>dfactor</em>). RBGA 值在 0 到 1 之间。</p>
 
 <table class="standard-table">
  <thead>
@@ -50,92 +50,92 @@ translation_of: Web/API/WebGLRenderingContext/blendFunc
   <tr>
    <td><code>gl.ZERO</code></td>
    <td>0,0,0,0</td>
-   <td>所有颜色乘0.</td>
+   <td>所有颜色乘 0.</td>
   </tr>
   <tr>
    <td><code>gl.ONE</code></td>
    <td>1,1,1,1</td>
-   <td>所有颜色乘1.</td>
+   <td>所有颜色乘 1.</td>
   </tr>
   <tr>
    <td><code>gl.SRC_COLOR</code></td>
    <td>R<sub>S</sub>, G<sub>S</sub>, B<sub>S</sub>, A<sub>S</sub></td>
-   <td>将所有颜色乘上源颜色.</td>
+   <td>将所有颜色乘上源颜色。</td>
   </tr>
   <tr>
    <td><code>gl.ONE_MINUS_SRC_COLOR</code></td>
    <td>1-R<sub>S</sub>, 1-G<sub>S</sub>, 1-B<sub>S</sub>, 1-A<sub>S</sub></td>
-   <td>每个源颜色所有颜色乘1 .</td>
+   <td>每个源颜色所有颜色乘 1 .</td>
   </tr>
   <tr>
    <td><code>gl.DST_COLOR</code></td>
    <td>R<sub>D</sub>, G<sub>D</sub>, B<sub>D</sub>, A<sub>D</sub></td>
-   <td>将所有颜色与目标颜色相乘.</td>
+   <td>将所有颜色与目标颜色相乘。</td>
   </tr>
   <tr>
    <td><code>gl.ONE_MINUS_DST_COLOR</code></td>
    <td>1-R<sub>D</sub>, 1-G<sub>D</sub>, 1-B<sub>D</sub>, 1-A<sub>D</sub></td>
-   <td>将所有颜色乘以1减去每个目标颜色.</td>
+   <td>将所有颜色乘以 1 减去每个目标颜色。</td>
   </tr>
   <tr>
    <td><code>gl.SRC_ALPHA</code></td>
    <td>A<sub>S</sub>, A<sub>S</sub>, A<sub>S</sub>, A<sub>S</sub></td>
-   <td>将所有颜色乘以源alpha值.</td>
+   <td>将所有颜色乘以源 alpha 值。</td>
   </tr>
   <tr>
    <td><code>gl.ONE_MINUS_SRC_ALPHA</code></td>
    <td>1-A<sub>S</sub>, 1-A<sub>S</sub>, 1-A<sub>S</sub>, 1-A<sub>S</sub></td>
-   <td>将所有颜色乘以1 减去源alpha值.</td>
+   <td>将所有颜色乘以 1 减去源 alpha 值。</td>
   </tr>
   <tr>
    <td><code>gl.DST_ALPHA</code></td>
    <td>A<sub>D</sub>, A<sub>D</sub>, A<sub>D</sub>, A<sub>D</sub></td>
-   <td>将所有颜色与目标alpha值相乘.</td>
+   <td>将所有颜色与目标 alpha 值相乘。</td>
   </tr>
   <tr>
    <td><code>gl.ONE_MINUS_DST_ALPHA</code></td>
    <td>1-A<sub>D</sub>, 1-A<sub>D</sub>, 1-A<sub>D</sub>, 1-A<sub>D</sub></td>
-   <td>将所有颜色乘以1减去目标alpha值.</td>
+   <td>将所有颜色乘以 1 减去目标 alpha 值。</td>
   </tr>
   <tr>
    <td><code>gl.CONSTANT_COLOR</code></td>
    <td>R<sub>C</sub>, G<sub>C</sub>, B<sub>C</sub>, A<sub>C</sub></td>
-   <td>将所有颜色乘以一个常数颜色.</td>
+   <td>将所有颜色乘以一个常数颜色。</td>
   </tr>
   <tr>
    <td><code>gl.ONE_MINUS_CONSTANT_COLOR</code></td>
    <td>1-R<sub>C</sub>, 1-G<sub>C</sub>, 1-B<sub>C</sub>, 1-A<sub>C</sub></td>
-   <td>所有颜色乘以1减去一个常数颜色.</td>
+   <td>所有颜色乘以 1 减去一个常数颜色。</td>
   </tr>
   <tr>
    <td><code>gl.CONSTANT_ALPHA</code></td>
    <td>A<sub>C</sub>, A<sub>C</sub>, A<sub>C</sub>, A<sub>C</sub></td>
-   <td>将所有颜色乘以一个常数.</td>
+   <td>将所有颜色乘以一个常数。</td>
   </tr>
   <tr>
    <td><code>gl.ONE_MINUS_CONSTANT_ALPHA</code></td>
    <td>1-A<sub>C</sub>, 1-A<sub>C</sub>, 1-A<sub>C</sub>, 1-A<sub>C</sub></td>
-   <td>所有颜色乘以1减去一个常数.</td>
+   <td>所有颜色乘以 1 减去一个常数。</td>
   </tr>
   <tr>
    <td><code>gl.SRC_ALPHA_SATURATE</code></td>
    <td>
     <p>min(A<sub>S</sub>, 1 - A<sub>D</sub>), min(A<sub>S</sub>, 1 - A<sub>D</sub>), min(A<sub>S</sub>, 1 - A<sub>D</sub>), 1</p>
    </td>
-   <td>将RGB颜色乘以源alpha值或1减去目标alpha值中的较小值。alpha值乘以1.</td>
+   <td>将 RGB 颜色乘以源 alpha 值或 1 减去目标 alpha 值中的较小值。alpha 值乘以 1.</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="示例">示例</h2>
 
-<p>使用混合函数, 您首先必须使用参数 <code>gl.BLEND</code>来激活{{domxref("WebGLRenderingContext.enable()")}} 的混合.</p>
+<p>使用混合函数，您首先必须使用参数 <code>gl.BLEND</code>来激活{{domxref("WebGLRenderingContext.enable()")}} 的混合。</p>
 
 <pre class="brush: js">gl.enable(gl.BLEND);
 gl.blendFunc(gl.SRC_COLOR, gl.DST_COLOR);
 </pre>
 
-<p>要获得当前的混合函数, 查询<code>BLEND_SRC_RGB</code>, <code>BLEND_SRC_ALPHA</code>, <code>BLEND_DST_RGB</code>, 和<code>BLEND_DST_ALPHA</code> 常量中返回混合函数常量.</p>
+<p>要获得当前的混合函数，查询<code>BLEND_SRC_RGB</code>, <code>BLEND_SRC_ALPHA</code>, <code>BLEND_DST_RGB</code>, 和<code>BLEND_DST_ALPHA</code> 常量中返回混合函数常量。</p>
 
 <pre class="brush: js">gl.enable(gl.BLEND);
 gl.blendFunc(gl.SRC_COLOR, gl.DST_COLOR);

@@ -17,11 +17,11 @@ translation_of: Web/API/Window
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><code>window</code> 对象表示一个包含DOM文档的窗口，其 <code>document</code> 属性指向窗口中载入的 <a href="/zh-CN/docs/Web/API/Document">DOM文档</a> 。使用 {{ Domxref("document.defaultView") }} 属性可以获取指定文档所在窗口。</p>
+<p><code>window</code> 对象表示一个包含 DOM 文档的窗口，其 <code>document</code> 属性指向窗口中载入的 <a href="/zh-CN/docs/Web/API/Document">DOM 文档</a> 。使用 {{ Domxref("document.defaultView") }} 属性可以获取指定文档所在窗口。</p>
 
 <p><code>window</code>作为全局变量，代表了脚本正在运行的窗口，暴露给 Javascript 代码。</p>
 
-<p>本节为 DOM <code>Window</code> 对象中可用的所有方法、属性和事件提供简要参考。<code>window</code> 对象实现了 <code>Window</code> 接口，此接口继承自 <code><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code> 接口。一些额外的全局函数、命名空间、对象、接口和构造函数与 window 没有典型的关联，但却是有效的，它们在 <a href="/en-US/docs/JavaScript/Reference">JavaScript参考</a> 和 <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM参考</a> 中列出。</p>
+<p>本节为 DOM <code>Window</code> 对象中可用的所有方法、属性和事件提供简要参考。<code>window</code> 对象实现了 <code>Window</code> 接口，此接口继承自 <code><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code> 接口。一些额外的全局函数、命名空间、对象、接口和构造函数与 window 没有典型的关联，但却是有效的，它们在 <a href="/en-US/docs/JavaScript/Reference">JavaScript 参考</a> 和 <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM 参考</a> 中列出。</p>
 
 <p>在有标签页功能的浏览器中，每个标签都拥有自己的 <code>window</code> 对象；也就是说，同一个窗口的标签页之间不会共享一个 <code>window</code> 对象。有一些方法，如 {{ Domxref("window.resizeTo") }} 和 {{ Domxref("window.resizeBy") }} 之类的方法会作用于整个窗口而不是 <code>window</code> 对象所属的那个标签。一般而言，如果一样东西无法恰当地作用于标签，那么它就会作用于窗口。</p>
 
@@ -100,7 +100,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.event")}} {{ReadOnlyInline}}</dt>
  <dd>Returns the <strong>current event</strong>, which is the event currently being handled by the JavaScript code's context, or <code>undefined</code> if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.</dd>
  <dt>{{domxref("Window.frameElement")}} {{readOnlyInline}}</dt>
- <dd>返回嵌入窗口的元素，如果未嵌入窗口，则返回null。</dd>
+ <dd>返回嵌入窗口的元素，如果未嵌入窗口，则返回 null。</dd>
  <dt>{{domxref("Window.frames")}} {{readOnlyInline}}</dt>
  <dd>返回当前窗口中所有子窗体的数组。</dd>
  <dt>{{domxref("Window.fullScreen")}}</dt>
@@ -111,15 +111,15 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.history")}} {{ReadOnlyInline}}</dt>
  <dd>返回一个对 history 对象的引用。</dd>
  <dt>{{domxref("Window.innerHeight")}} {{readOnlyInline}}</dt>
- <dd>获得浏览器窗口的内容区域的高度，包含水平滚动条(如果有的话)。</dd>
+ <dd>获得浏览器窗口的内容区域的高度，包含水平滚动条 (如果有的话)。</dd>
  <dt>{{domxref("Window.innerWidth")}} {{readOnlyInline}}</dt>
- <dd>获得浏览器窗口的内容区域的宽度，包含垂直滚动条(如果有的话)。</dd>
+ <dd>获得浏览器窗口的内容区域的宽度，包含垂直滚动条 (如果有的话)。</dd>
  <dt>{{domxref("Window.isSecureContext")}} {{experimental_inline}} {{readOnlyInline}}</dt>
  <dd>指出上下文环境是否能够使用安全上下文环境的特征。</dd>
  <dt>{{domxref("Window.length")}} {{readOnlyInline}}</dt>
  <dd>返回窗口中的 frames 数量。参见 {{domxref("window.frames")}}。</dd>
  <dt>{{domxref("Window.location")}}</dt>
- <dd>获取、设置 window 对象的 location, 或者当前的 URL.</dd>
+ <dd>获取、设置 window 对象的 location，或者当前的 URL.</dd>
  <dt>{{domxref("Window.locationbar")}} {{ReadOnlyInline}}</dt>
  <dd>返回 locationbar 对象，其可视性可以在窗口中切换。</dd>
  <dt>{{domxref("Window.localStorage")}} {{readOnlyInline}}</dt>
@@ -319,7 +319,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.stop()")}}</dt>
  <dd>这个方法停止窗口加载。</dd>
  <dt>{{domxref("Window.updateCommands()")}} {{Non-standard_inline}}</dt>
- <dd>更新当前chrome窗口(UI)命令的状态。</dd>
+ <dd>更新当前 chrome 窗口 (UI) 命令的状态。</dd>
 </dl>
 
 <h3 id="Methods_implemented_from_elsewhere">Methods implemented from elsewhere</h3>

@@ -11,7 +11,7 @@ translation_of: Web/API/WebGLRenderingContext/bufferData
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的<strong><code>WebGLRenderingContext.bufferData()</code></strong>方法创建并初始化了Buffer对象的数据存储区。</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的<strong><code>WebGLRenderingContext.bufferData()</code></strong>方法创建并初始化了 Buffer 对象的数据存储区。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -28,26 +28,26 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 
 <dl>
  <dt>target</dt>
- <dd>{{domxref("GLenum")}} 指定Buffer绑定点（目标）。可取以下值：
+ <dd>{{domxref("GLenum")}} 指定 Buffer 绑定点（目标）。可取以下值：
  <ul>
-  <li><code>gl.ARRAY_BUFFER</code>: 包含顶点属性的Buffer，如顶点坐标，纹理坐标数据或顶点颜色数据。</li>
-  <li><code>gl.ELEMENT_ARRAY_BUFFER</code>: 用于元素索引的Buffer。</li>
+  <li><code>gl.ARRAY_BUFFER</code>: 包含顶点属性的 Buffer，如顶点坐标，纹理坐标数据或顶点颜色数据。</li>
+  <li><code>gl.ELEMENT_ARRAY_BUFFER</code>: 用于元素索引的 Buffer。</li>
   <li>当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 时，可以使用以下值：
    <ul>
-    <li><code>gl.COPY_READ_BUFFER</code>: 从一个Buffer对象复制到另一个Buffer对象。</li>
-    <li><code>gl.COPY_WRITE_BUFFER</code>: 从一个Buffer对象复制到另一个Buffer对象。</li>
-    <li><code>gl.TRANSFORM_FEEDBACK_BUFFER</code>: 用于转换反馈操作的Buffer。</li>
-    <li><code>gl.UNIFORM_BUFFER</code>: 用于存储统一块的Buffer。</li>
-    <li><code>gl.PIXEL_PACK_BUFFER</code>: 用于像素转换操作的Buffer。</li>
-    <li><code>gl.PIXEL_UNPACK_BUFFER</code>: 用于像素转换操作的Buffer。</li>
+    <li><code>gl.COPY_READ_BUFFER</code>: 从一个 Buffer 对象复制到另一个 Buffer 对象。</li>
+    <li><code>gl.COPY_WRITE_BUFFER</code>: 从一个 Buffer 对象复制到另一个 Buffer 对象。</li>
+    <li><code>gl.TRANSFORM_FEEDBACK_BUFFER</code>: 用于转换反馈操作的 Buffer。</li>
+    <li><code>gl.UNIFORM_BUFFER</code>: 用于存储统一块的 Buffer。</li>
+    <li><code>gl.PIXEL_PACK_BUFFER</code>: 用于像素转换操作的 Buffer。</li>
+    <li><code>gl.PIXEL_UNPACK_BUFFER</code>: 用于像素转换操作的 Buffer。</li>
    </ul>
   </li>
  </ul>
  </dd>
  <dt>size</dt>
- <dd>{{domxref("GLsizeiptr")}} 设定Buffer对象的数据存储区大小。</dd>
+ <dd>{{domxref("GLsizeiptr")}} 设定 Buffer 对象的数据存储区大小。</dd>
  <dt>srcData {{optional_inline}}</dt>
- <dd>一个{{jsxref("ArrayBuffer")}}，{{jsxref("SharedArrayBuffer")}} 或者 {{domxref("ArrayBufferView")}} 类型的数组对象，将被复制到Buffer的数据存储区。 如果为<code>null</code>，数据存储区仍会被创建，但是不会进行初始化和定义。</dd>
+ <dd>一个{{jsxref("ArrayBuffer")}}，{{jsxref("SharedArrayBuffer")}} 或者 {{domxref("ArrayBufferView")}} 类型的数组对象，将被复制到 Buffer 的数据存储区。 如果为<code>null</code>，数据存储区仍会被创建，但是不会进行初始化和定义。</dd>
  <dt>usage</dt>
  <dd>{{domxref("GLenum")}} 指定数据存储区的使用方法。可取以下值：
  <ul>
@@ -69,7 +69,7 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
  <dt>srcOffset</dt>
  <dd>{{domxref("GLuint")}} 指定读取缓冲时的初始元素索引偏移量。</dd>
  <dt><code>length</code> {{optional_inline}}</dt>
- <dd>{{domxref("GLuint")}} 默认为0。</dd>
+ <dd>{{domxref("GLuint")}} 默认为 0。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -120,14 +120,14 @@ gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
   <tr>
    <td>{{SpecName('OpenGL ES 2.0', "glBufferData.xml", "glBufferData")}}</td>
    <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>OpenGL API的手册页</td>
+   <td>OpenGL API 的手册页</td>
   </tr>
   <tr>
    <td>{{SpecName('OpenGL ES 3.0', "glBufferData.xhtml", "glBufferData")}}</td>
    <td>{{Spec2('OpenGL ES 3.0')}}</td>
    <td>OpenGL ES 3 API 的手册页<br>
     <br>
-    新增 <code>target</code> 可取的buffer值：<br>
+    新增 <code>target</code> 可取的 buffer 值：<br>
     <code>gl.COPY_READ_BUFFER</code>,<br>
     <code>gl.COPY_WRITE_BUFFER</code>,<br>
     <code>gl.TRANSFORM_FEEDBACK_BUFFER</code>,<br>

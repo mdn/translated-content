@@ -96,16 +96,18 @@ range を整数で指定する場合、無限大を表す値として `infinite`
 
 上記のリストは次のように表示されます。
 
-    1. One
-    □. Two
-    ■. Three
-    □. Four
-    5. Five
-    6. Six
-    ■. Seven
-    □. Eight
-    ■. Nine
-    10. Ten
+```
+1. One
+□. Two
+■. Three
+□. Four
+5. Five
+6. Six
+■. Seven
+□. Eight
+■. Nine
+10. Ten
+```
 
 ## 仕様書
 

@@ -17,7 +17,9 @@ Ce pseudo-élément n'est pas standard et est uniquement pris en charge par les 
 
 ## Syntaxe
 
-    selecteur::-webkit-file-upload-button
+```css
+selecteur::-webkit-file-upload-button
+```
 
 ## Exemples
 

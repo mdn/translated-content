@@ -14,7 +14,7 @@ translation_of: Web/API/NotifyAudioAvailableEvent
 <div id="section_2">
 <dl>
  <dt><code>frameBuffer</code> {{ReadOnlyInline}}</dt>
- <dd>{{jsxref("Float32Array")}}包含从解码音频获得的原始32位浮点音频数据（例如，原始数据被发送到音频硬件与编码音频）。数据是一系列音频样本，每个样本每个音频通道包含一个32位值。默认情况下，所有音频帧被标准化为包含1024个样本，但如果用户使用<code><strong>mozFrameBufferLength</strong></code>属性设置了不同长度，则可以是512到16384个样本之间的任何长度。</dd>
+ <dd>{{jsxref("Float32Array")}}包含从解码音频获得的原始 32 位浮点音频数据（例如，原始数据被发送到音频硬件与编码音频）。数据是一系列音频样本，每个样本每个音频通道包含一个 32 位值。默认情况下，所有音频帧被标准化为包含 1024 个样本，但如果用户使用<code><strong>mozFrameBufferLength</strong></code>属性设置了不同长度，则可以是 512 到 16384 个样本之间的任何长度。</dd>
  <dt><code>time</code></dt>
  <dd>一个浮点值，代表音频轨道开始后的<code>frameBuffer</code>数组中第一个样本的时间（以秒为单位）。</dd>
 </dl>

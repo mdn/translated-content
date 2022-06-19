@@ -216,7 +216,7 @@
 /zh-CN/docs/DOM/CSSStyleSheet/deleteRule	/zh-CN/docs/Web/API/CSSStyleSheet/deleteRule
 /zh-CN/docs/DOM/DOMImplementation.createHTMLDocument	/zh-CN/docs/Web/API/DOMImplementation/createHTMLDocument
 /zh-CN/docs/DOM/DOMParser	/zh-CN/docs/Web/API/DOMParser
-/zh-CN/docs/DOM/DOMString	/zh-CN/docs/Web/API/DOMString
+/zh-CN/docs/DOM/DOMString	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
 /zh-CN/docs/DOM/Document.querySelectorAll	/zh-CN/docs/Web/API/Document/querySelectorAll
 /zh-CN/docs/DOM/Document.scripts	/zh-CN/docs/Web/API/Document/scripts
 /zh-CN/docs/DOM/Element.nextElementSibling	/zh-CN/docs/Web/API/Element/nextElementSibling
@@ -317,7 +317,7 @@
 /zh-CN/docs/DOM/console.trace	/zh-CN/docs/Web/API/Console/trace
 /zh-CN/docs/DOM/document	/zh-CN/docs/Web/API/Document
 /zh-CN/docs/DOM/document.URL	/zh-CN/docs/Web/API/Document/URL
-/zh-CN/docs/DOM/document.activeElement	/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement
+/zh-CN/docs/DOM/document.activeElement	/zh-CN/docs/Web/API/Document/activeElement
 /zh-CN/docs/DOM/document.anchors	/zh-CN/docs/Web/API/Document/anchors
 /zh-CN/docs/DOM/document.applets	/zh-CN/docs/Web/API/Document/applets
 /zh-CN/docs/DOM/document.async	/zh-CN/docs/Web/API/XMLDocument/async
@@ -510,7 +510,6 @@
 /zh-CN/docs/DOM:window.open	/zh-CN/docs/Web/API/Window/open
 /zh-CN/docs/DOM:window.openDialog	/zh-CN/docs/Web/API/Window/openDialog
 /zh-CN/docs/Document_Object_Model_(DOM)/window.onbeforeunload	/zh-CN/docs/conflicting/Web/API/Window/beforeunload_event
-/zh-CN/docs/Download_Mozilla_Source_Code	/en-US/docs/Mozilla/Developer_guide/Source_Code/Downloading_Source_Archives
 /zh-CN/docs/Enumerability_and_ownership_of_properties	/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
 /zh-CN/docs/Firefox_12_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/12
 /zh-CN/docs/Firefox_14_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/14
@@ -1285,7 +1284,7 @@
 /zh-CN/docs/Transforming_XML_with_XSLT	/zh-CN/docs/Web/XSLT/Transforming_XML_with_XSLT
 /zh-CN/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/zh-CN/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 /zh-CN/docs/Updating_extensions_for_Firefox_3	/zh-CN/docs/Mozilla/Firefox/Releases/3/Updating_extensions
-/zh-CN/docs/Using_files_from_web_applications	/zh-CN/docs/Web/API/File/Using_files_from_web_applications
+/zh-CN/docs/Using_files_from_web_applications	/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications
 /zh-CN/docs/WOFF	/zh-CN/docs/Web/Guide/WOFF
 /zh-CN/docs/Web-based_protocol_handlers	/zh-CN/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /zh-CN/docs/Web/API/APIWwindow.sidebar	/zh-CN/docs/Web/API/Window/sidebar
@@ -1293,6 +1292,7 @@
 /zh-CN/docs/Web/API/AmbientLightSensor/reading	/zh-CN/docs/Web/API/AmbientLightSensor/illuminance
 /zh-CN/docs/Web/API/Animation/oncancel	/zh-CN/docs/Web/API/Animation/cancel_event
 /zh-CN/docs/Web/API/ArrayBuffer	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
+/zh-CN/docs/Web/API/ArrayBufferView	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /zh-CN/docs/Web/API/AudioContext/createAnalyser	/zh-CN/docs/Web/API/BaseAudioContext/createAnalyser
 /zh-CN/docs/Web/API/AudioContext/createBiquadFilter	/zh-CN/docs/Web/API/BaseAudioContext/createBiquadFilter
 /zh-CN/docs/Web/API/AudioContext/createBuffer	/zh-CN/docs/Web/API/BaseAudioContext/createBuffer
@@ -1322,6 +1322,7 @@
 /zh-CN/docs/Web/API/CSS分页规则	/zh-CN/docs/Web/API/CSSPageRule
 /zh-CN/docs/Web/API/CanvasCaptureMediaStream	/zh-CN/docs/Web/API/CanvasCaptureMediaStreamTrack
 /zh-CN/docs/Web/API/CanvasGradient.addColorStop	/zh-CN/docs/Web/API/CanvasGradient/addColorStop
+/zh-CN/docs/Web/API/CanvasImageSource	/zh-CN/docs/conflicting/Web/API/CanvasRenderingContext2D_f76bd21a8099cf242d18fbd061cd3ea6
 /zh-CN/docs/Web/API/CanvasRenderingContext2D.createLinearGradient	/zh-CN/docs/Web/API/CanvasRenderingContext2D/createLinearGradient
 /zh-CN/docs/Web/API/CanvasRenderingContext2D.createPattern	/zh-CN/docs/Web/API/CanvasRenderingContext2D/createPattern
 /zh-CN/docs/Web/API/CanvasRenderingContext2D/currentTransform	/zh-CN/docs/conflicting/Web/API/CanvasRenderingContext2D
@@ -1332,6 +1333,8 @@
 /zh-CN/docs/Web/API/Coordinates/latitude	/zh-CN/docs/Web/API/GeolocationCoordinates/latitude
 /zh-CN/docs/Web/API/DOMImplementation.createHTMLDocument	/zh-CN/docs/Web/API/DOMImplementation/createHTMLDocument
 /zh-CN/docs/Web/API/DOMImplementation.hasFeature	/zh-CN/docs/Web/API/DOMImplementation/hasFeature
+/zh-CN/docs/Web/API/DOMString	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
+/zh-CN/docs/Web/API/DOMString/Binary	/zh-CN/docs/conflicting/Web/API/btoa
 /zh-CN/docs/Web/API/DeviceAcceleration	/zh-CN/docs/Web/API/DeviceMotionEventAcceleration
 /zh-CN/docs/Web/API/Document.querySelectorAll	/zh-CN/docs/Web/API/Document/querySelectorAll
 /zh-CN/docs/Web/API/Document.releaseCapture	/zh-CN/docs/Web/API/Document/releaseCapture
@@ -1422,6 +1425,7 @@
 /zh-CN/docs/Web/API/File.getAsText	/zh-CN/docs/Web/API/File/getAsText
 /zh-CN/docs/Web/API/File.lastModifiedDate	/zh-CN/docs/Web/API/File/lastModifiedDate
 /zh-CN/docs/Web/API/File.name	/zh-CN/docs/Web/API/File/name
+/zh-CN/docs/Web/API/File/Using_files_from_web_applications	/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications
 /zh-CN/docs/Web/API/File/fileName	/zh-CN/docs/conflicting/Web/API/File/name
 /zh-CN/docs/Web/API/File/fileSize	/zh-CN/docs/conflicting/Web/API/Blob/size
 /zh-CN/docs/Web/API/File/size	/zh-CN/docs/conflicting/Web/API/Blob/size_3e7c15d3e7851172bb4623d0237d8c9e
@@ -1452,6 +1456,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers.onscroll	/zh-CN/docs/Web/API/GlobalEventHandlers/onscroll
 /zh-CN/docs/Web/API/GlobalEventHandlers.onselect	/zh-CN/docs/Web/API/GlobalEventHandlers/onselect
 /zh-CN/docs/Web/API/GlobalEventHandlers.onsubmit	/zh-CN/docs/Web/API/GlobalEventHandlers/onsubmit
+/zh-CN/docs/Web/API/GlobalEventHandlers/onabort	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncuechange	/zh-CN/docs/Web/API/TextTrack/cuechange_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/动画效果	/zh-CN/docs/Web/API/GlobalEventHandlers/onanimationend
 /zh-CN/docs/Web/API/GlobalEventHandlers/时长改变	/zh-CN/docs/Web/API/GlobalEventHandlers/ondurationchange
@@ -1632,6 +1637,7 @@
 /zh-CN/docs/Web/API/URLUtils/search	/zh-CN/docs/Web/API/HTMLAnchorElement/search
 /zh-CN/docs/Web/API/URLUtils/toString	/zh-CN/docs/Web/API/HTMLAnchorElement/toString
 /zh-CN/docs/Web/API/URLUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
+/zh-CN/docs/Web/API/USVString	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb
 /zh-CN/docs/Web/API/VisualViewport/onscroll	/zh-CN/docs/Web/API/VisualViewport/scroll_event
 /zh-CN/docs/Web/API/WebGLRenderingContext/多边形偏移(polygonOffset)	/zh-CN/docs/Web/API/WebGLRenderingContext/polygonOffset
 /zh-CN/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
@@ -1765,7 +1771,7 @@
 /zh-CN/docs/Web/API/console.time	/zh-CN/docs/Web/API/Console/time
 /zh-CN/docs/Web/API/console.trace	/zh-CN/docs/Web/API/Console/trace
 /zh-CN/docs/Web/API/document.URL	/zh-CN/docs/Web/API/Document/URL
-/zh-CN/docs/Web/API/document.activeElement	/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement
+/zh-CN/docs/Web/API/document.activeElement	/zh-CN/docs/Web/API/Document/activeElement
 /zh-CN/docs/Web/API/document.anchors	/zh-CN/docs/Web/API/Document/anchors
 /zh-CN/docs/Web/API/document.applets	/zh-CN/docs/Web/API/Document/applets
 /zh-CN/docs/Web/API/document.async	/zh-CN/docs/Web/API/XMLDocument/async
@@ -1849,8 +1855,11 @@
 /zh-CN/docs/Web/API/语音识别	/zh-CN/docs/Web/API/SpeechRecognition
 /zh-CN/docs/Web/API/语音识别/result_event	/zh-CN/docs/Web/API/SpeechRecognition/result_event
 /zh-CN/docs/Web/API/鼠标事件	/zh-CN/docs/Web/API/MouseEvent
+/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute	/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden
+/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label
+/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute	/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby
 /zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role
-/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/使用aria-hidden属性	/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute
+/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/使用aria-hidden属性	/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden
 /zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery	/zh-CN/docs/Web/Guide/Audio_and_video_delivery
 /zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained	/zh-CN/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
 /zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/zh-CN/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges

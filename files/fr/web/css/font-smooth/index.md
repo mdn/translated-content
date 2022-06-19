@@ -40,16 +40,12 @@ font-smooth: 2em;
 
 Bien que mentionnée dans les premiers brouillons pour [CSS3 Fonts](https://www.w3.org/TR/WD-font/#font-smooth), `font-smooth` a été retirée de cette spécification et ne fait plus partie du standard.
 
-
-
 - Valeur initiale : `auto`
 - S'applique à tous les éléments et au contenu généré
 - Héritée : oui
 - Valeurs relatives : par rapport à la taille de police utilisée sur l'élément parent
 - Type de média : Visuel
 - Valeur calculée : comme la valeur définie
-
-
 
 ## Compatibilité des navigateurs
 

@@ -17,7 +17,9 @@ Le constructeur **`WebAssembly.LinkError()`** permet de créer un nouvel objet W
 
 ## Syntaxe
 
-    new WebAssembly.LinkError(message, nomFichier, numeroLigne)
+```js
+new WebAssembly.LinkError(message, nomFichier, numeroLigne)
+```
 
 ### Paramètres
 

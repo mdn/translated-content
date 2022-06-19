@@ -7,20 +7,20 @@ translation_of: Web/API/Window/fullScreen
 
 <h2 id="Summary" name="Summary">概述</h2>
 
-<p>这个属性表明了窗口是否处于全屏模式下。仅在Gecko 1.9（Firefox 3）以及之后的版本中有意义，详情参见后附备注。</p>
+<p>这个属性表明了窗口是否处于全屏模式下。仅在 Gecko 1.9（Firefox 3）以及之后的版本中有意义，详情参见后附备注。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
 <pre class="syntaxbox"><var>isInFullScreen</var> = <var>windowRef</var>.fullScreen;
 </pre>
 
-<p>在取得chrome privileges的情况下，这个属性是可读写的，否则将是只读属性。如果你试图在未取得chrome privileges的情况下设置这个属性，虽然实际上修改会失败，却并不会抛出错误。这是为了阻止在IE浏览器中意图通过修改这个属性而进行恶意攻击的脚本。</p>
+<p>在取得 chrome privileges 的情况下，这个属性是可读写的，否则将是只读属性。如果你试图在未取得 chrome privileges 的情况下设置这个属性，虽然实际上修改会失败，却并不会抛出错误。这是为了阻止在 IE 浏览器中意图通过修改这个属性而进行恶意攻击的脚本。</p>
 
 <h2 id="Return_Value" name="Return_Value">返回值</h2>
 
 <dl>
  <dt><code>isInFullScreen</code></dt>
- <dd>一个布尔值. 可能的值如下:</dd>
+ <dd>一个布尔值。可能的值如下：</dd>
 </dl>
 
 <ul>
@@ -43,6 +43,6 @@ translation_of: Web/API/Window/fullScreen
 <h2 id="Notes" name="Notes">备注</h2>
 
 <ul>
- <li>这个属性仅在 Mozilla 1.9（Firefox 3）及之后才有意义。Mozilla 1.8 及早期版本确实有这个属性，但它总是返回false，即使在窗口确实处于全屏模式的情况下({{Bug("127013")}})。</li>
+ <li>这个属性仅在 Mozilla 1.9（Firefox 3）及之后才有意义。Mozilla 1.8 及早期版本确实有这个属性，但它总是返回 false，即使在窗口确实处于全屏模式的情况下 ({{Bug("127013")}})。</li>
  <li>在常规窗口与全屏窗口之间切换会在相应的窗口中触发“resize”事件。</li>
 </ul>

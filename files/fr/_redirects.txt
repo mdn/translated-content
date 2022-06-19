@@ -29,7 +29,7 @@
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-labelledby	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-orientation	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-relevant	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute
-/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-required	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
+/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-required	/fr/docs/Web/Accessibility/ARIA/Attributes/aria-required
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemax	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemin	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute
@@ -47,7 +47,7 @@
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_status	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_textbox	/fr/docs/Web/Accessibility/ARIA/Roles/textbox_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alert	/fr/docs/Web/Accessibility/ARIA/Roles/alert_role
-/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_article	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_article_role
+/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_article	/fr/docs/Web/Accessibility/ARIA/Roles/article_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_button	/fr/docs/Web/Accessibility/ARIA/Roles/button_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog	/fr/docs/Web/Accessibility/ARIA/Roles/dialog_role
 /fr/docs/Accessibilité/ARIA/Zones_live_ARIA	/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
@@ -856,7 +856,7 @@
 /fr/docs/DOM	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/DOM/Autres_ressources	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/DOM/DOMError	/fr/docs/Web/API/DOMError
-/fr/docs/DOM/DOMString	/fr/docs/Web/API/DOMString
+/fr/docs/DOM/DOMString	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/DOM/DataTransfer	/fr/docs/Web/API/DataTransfer
 /fr/docs/DOM/Document.evaluate	/fr/docs/Web/API/Document/evaluate
 /fr/docs/DOM/Document.implementation	/fr/docs/Web/API/Document/implementation
@@ -3561,7 +3561,7 @@
 /fr/docs/Useful_CSS_tips/Color_and_Background	/fr/docs/Web/CSS/color_value
 /fr/docs/Useful_CSS_tips/Links	/fr/docs/Web/CSS/Pseudo-classes
 /fr/docs/Useful_CSS_tips/Tables	/fr/docs/Web/CSS/border-collapse
-/fr/docs/Using_files_from_web_applications	/fr/docs/Web/API/File/Using_files_from_web_applications
+/fr/docs/Using_files_from_web_applications	/fr/docs/Web/API/File_API/Using_files_from_web_applications
 /fr/docs/Using_geolocation	/fr/docs/Web/API/Geolocation_API
 /fr/docs/Utilisation_d'URL_pour_la_propriété_cursor	/fr/docs/conflicting/Web/CSS/cursor
 /fr/docs/Utilisation_daudio_et_video_dans_Firefox	/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
@@ -3616,6 +3616,8 @@
 /fr/docs/Web/API/Console.table	/fr/docs/Web/API/Console/table
 /fr/docs/Web/API/Console/erreur	/fr/docs/Web/API/Console/error
 /fr/docs/Web/API/Coordinates	/fr/docs/Web/API/GeolocationCoordinates
+/fr/docs/Web/API/DOMString	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
+/fr/docs/Web/API/DOMString/Binary	/fr/docs/conflicting/Web/API/btoa
 /fr/docs/Web/API/DOMTokenList/DOMTokenList.add()	/fr/docs/Web/API/DOMTokenList/add
 /fr/docs/Web/API/DeviceOrientationEvent.absolute	/fr/docs/Web/API/DeviceOrientationEvent/absolute
 /fr/docs/Web/API/DeviceRotationRate	/fr/docs/Web/API/DeviceMotionEventRotationRate
@@ -3776,13 +3778,14 @@
 /fr/docs/Web/API/EventTarget/attachEvent	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/EventTarget/detachEvent	/fr/docs/Web/API/EventTarget/removeEventListener
 /fr/docs/Web/API/EventTarget/fireEvent	/fr/docs/Web/API/EventTarget/dispatchEvent
+/fr/docs/Web/API/File/Using_files_from_web_applications	/fr/docs/Web/API/File_API/Using_files_from_web_applications
 /fr/docs/Web/API/File/fileName	/fr/docs/Web/API/File/name
 /fr/docs/Web/API/File/fileSize	/fr/docs/Web/API/Blob/size
 /fr/docs/Web/API/FileList/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FileReader/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FileRequest/lockedFile	/fr/docs/Web/API/IDBFileRequest/lockedFile
 /fr/docs/Web/API/FormData/Utilisation_objets_FormData	/fr/docs/Web/API/FormData/Using_FormData_Objects
-/fr/docs/Web/API/GlobalFetch	/fr/docs/Web/API/WindowOrWorkerGlobalScope
+/fr/docs/Web/API/GlobalEventHandlers/onabort	/fr/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /fr/docs/Web/API/GlobalFetch/fetch	/fr/docs/Web/API/fetch
 /fr/docs/Web/API/HTMLFormElement/submit_event_	/fr/docs/Web/API/HTMLFormElement/submit_event
 /fr/docs/Web/API/HTMLOrForeignElement/blur	/fr/docs/Web/API/HTMLElement/blur
@@ -3827,7 +3830,7 @@
 /fr/docs/Web/API/Node/innerText	/fr/docs/Web/API/HTMLElement/innerText
 /fr/docs/Web/API/Node/localName	/fr/docs/Web/API/Element/localName
 /fr/docs/Web/API/Node/namespaceURI	/fr/docs/Web/API/Element/namespaceURI
-/fr/docs/Web/API/Node/nodePrincipal	/fr/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
+/fr/docs/Web/API/Node/nodePrincipal	/fr/docs/Web/API/Node
 /fr/docs/Web/API/Node/prefix	/fr/docs/Web/API/Element/prefix
 /fr/docs/Web/API/Node/rootNode	/fr/docs/conflicting/Web/API/Node/getRootNode
 /fr/docs/Web/API/NodeFilter	/fr/docs/conflicting/Web/API/Document/createNodeIterator_313cb22e529a804ace2f1dbb1e813ada
@@ -3874,6 +3877,7 @@
 /fr/docs/Web/API/ULongRange	/fr/docs/conflicting/Web/API/MediaTrackConstraints
 /fr/docs/Web/API/URL.createObjectURL	/fr/docs/Web/API/URL/createObjectURL
 /fr/docs/Web/API/URLUtilsReadOnly	/fr/docs/Web/API/WorkerLocation
+/fr/docs/Web/API/USVString	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb
 /fr/docs/Web/API/WebGLRenderingContext/activer	/fr/docs/Web/API/WebGLRenderingContext/enable
 /fr/docs/Web/API/WebGLRenderingContext/canevas	/fr/docs/Web/API/WebGLRenderingContext/canvas
 /fr/docs/Web/API/WebGL_API/By_example/Appliquer_des_couleurs	/fr/docs/Web/API/WebGL_API/By_example/Clearing_with_colors
@@ -3944,7 +3948,6 @@
 /fr/docs/Web/API/Window/mozAnimationStartTime	/fr/docs/Web/API/Animation/startTime
 /fr/docs/Web/API/Window/mozPaintCount	/fr/docs/conflicting/Web/API/Window
 /fr/docs/Web/API/Window/onresize	/fr/docs/conflicting/Web/API/GlobalEventHandlers/onresize
-/fr/docs/Web/API/WindowBase64	/fr/docs/Web/API/WindowOrWorkerGlobalScope
 /fr/docs/Web/API/WindowBase64/Décoder_encoder_en_base64	/fr/docs/Glossary/Base64
 /fr/docs/Web/API/WindowBase64/atob	/fr/docs/Web/API/atob
 /fr/docs/Web/API/WindowBase64/btoa	/fr/docs/Web/API/btoa
@@ -4010,6 +4013,8 @@
 /fr/docs/Web/API/window.location	/fr/docs/Web/API/window/location
 /fr/docs/Web/API/window.requestAnimationFrame	/fr/docs/Web/API/Window/requestAnimationFrame
 /fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/fr/docs/Web/Accessibility/ARIA/Roles/alert_role
+/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute	/fr/docs/Web/Accessibility/ARIA/Attributes/aria-required
+/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_article_role	/fr/docs/Web/Accessibility/ARIA/Roles/article_role
 /fr/docs/Web/Accessibility/ARIA/widgets/overview	/fr/docs/conflicting/Web/Accessibility/ARIA/widgets
 /fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Contraste_de_la_couleur	/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 /fr/docs/Web/Apps/Build/Audio_and_video_delivery	/fr/docs/Web/Guide/Audio_and_video_delivery
@@ -6101,6 +6106,7 @@
 /fr/docs/conflicting/Tools/Responsive_Design_Mode	https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html
 /fr/docs/conflicting/Web/API/Canvas_API/Tutorial	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/conflicting/Web/API/Document_Object_Model_03f6e13c52ad7c539d9b4c33c51ac4a3	/fr/docs/Web/API/Document_Object_Model
+/fr/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556	/fr/docs/Web/API/Node
 /fr/docs/conflicting/Web/API/WebRTC_API_d8621144cbc61520339c3b10c61731f0	/fr/docs/Web/API/WebRTC_API
 /fr/docs/conflicting/Web/API/Web_Storage_API	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/conflicting/Web/API/XSLTProcessor_197eea6e529b0a946d29ce7cc292e7ef	/fr/docs/Web/API/XSLTProcessor

@@ -20,9 +20,11 @@ La méthode **`toLocaleUpperCase()`** renvoie la chaîne de caractères qui appe
 
 ## Syntaxe
 
-    str.toLocaleUpperCase()
-    str.toLocaleUpperCase(locale)
-    str.toLocaleUpperCase([locale, locale, ...])
+```js
+str.toLocaleUpperCase()
+str.toLocaleUpperCase(locale)
+str.toLocaleUpperCase([locale, locale, ...])
+```
 
 ### Paramètres
 

@@ -14,7 +14,7 @@ translation_of: Web/CSS/filter
 
 [CSS](/zh-CN/docs/Web/CSS)属性 **`filter`** 将模糊或颜色偏移等图形效果应用于元素。滤镜通常用于调整图像、背景和边框的渲染。
 
-CSS 标准里包含了一些已实现预定义效果的函数。你也可以参考一个 SVG滤镜，通过一个 URL 链接到 SVG 滤镜元素（[SVG filter element](/zh-CN/docs/Web/SVG/Element/filter)）。
+CSS 标准里包含了一些已实现预定义效果的函数。你也可以参考一个 SVG 滤镜，通过一个 URL 链接到 SVG 滤镜元素（[SVG filter element](/zh-CN/docs/Web/SVG/Element/filter)）。
 
 {{EmbedInteractiveExample("pages/css/filter.html")}}
 
@@ -55,7 +55,7 @@ filter: unset;
 filter: <filter-function> [<filter-function>]* | none
 ```
 
-给SVG元素 {{SVGElement("filter")}} 引用滤镜, 如下：
+给 SVG 元素 {{SVGElement("filter")}} 引用滤镜，如下：
 
 ```css
 filter: url(file.svg#filter-element-id)
@@ -371,7 +371,7 @@ table.standard-table td {
 
 #### drop-shadow()
 
-{{cssxref("filter-function/drop-shadow()", "drop-shadow()")}} 函数对输入图像应用阴影效果。阴影可以设置模糊度的，以特定颜色画出的遮罩图的偏移版本，最终合成在图像下面。函数接受 `<shadow>`（在 [CSS3背景](https://www.w3.org/TR/css-backgrounds-3/#typedef-shadow) 中定义）类型的值，除了 `inset` 和 `spread` 关键字。该函数与已有的 {{cssxref("box-shadow")}} 属性很相似；不同之处在于，通过滤镜，一些浏览器为了更好的性能会提供硬件加速。`<shadow>` 参数如下：
+{{cssxref("filter-function/drop-shadow()", "drop-shadow()")}} 函数对输入图像应用阴影效果。阴影可以设置模糊度的，以特定颜色画出的遮罩图的偏移版本，最终合成在图像下面。函数接受 `<shadow>`（在 [CSS3 背景](https://www.w3.org/TR/css-backgrounds-3/#typedef-shadow)中定义）类型的值，除了 `inset` 和 `spread` 关键字。该函数与已有的 {{cssxref("box-shadow")}} 属性很相似；不同之处在于，通过滤镜，一些浏览器为了更好的性能会提供硬件加速。`<shadow>` 参数如下：
 
 - `<offset-x>` `<offset-y>`（必须）
   - : 这是设置阴影偏移量的两个 {{cssxref("&lt;length&gt;")}} 值。 `<offset-x>` 设定水平方向距离，负值会使阴影出现在元素左边。 `<offset-y>` 设定垂直距离，负值会使阴影出现在元素上方。查看 {{cssxref("&lt;length&gt;")}} 了解可能的单位。
@@ -780,7 +780,7 @@ table.standard-table td {
 
 #### opacity()
 
-{{cssxref("filter-function/opacity()", "opacity()")}}  转化图像的透明程度。`amount` 的值定义转换的比例。值为 `0%` 则是完全透明，值为 `100%` 则图像无变化。值在 `0%` 和 `100%` 之间，则是效果的线性乘数。也相当于图像样本乘以数量。 若未设置值，则默认为 `1`。该函数与已有的 `opacity` 属性很相似，不同之处在于通过 `filter`，一些浏览器为了提升性能会提供硬件加速。
+{{cssxref("filter-function/opacity()", "opacity()")}}  转化图像的透明程度。`amount` 的值定义转换的比例。值为 `0%` 则是完全透明，值为 `100%` 则图像无变化。值在 `0%` 和 `100%` 之间，则是效果的线性乘数。也相当于图像样本乘以数量。若未设置值，则默认为 `1`。该函数与已有的 `opacity` 属性很相似，不同之处在于通过 `filter`，一些浏览器为了提升性能会提供硬件加速。
 
 ```css
 filter: opacity(50%)

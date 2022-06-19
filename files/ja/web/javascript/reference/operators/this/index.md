@@ -148,7 +148,7 @@ function whatsThis() {
   return this.a;  // this の値は関数の呼び出し方によって変わります
 }
 
-whatsThis();          // 'Global' はこの関数では関 this として設定されていないので、既定でグローバルの window オブジェクトになります
+whatsThis();          // 'Global' はこの関数では this として設定されていないので、既定でグローバルの window オブジェクトになります
 whatsThis.call(obj);  // 'Custom' が関数内の this として obj に設定されています
 whatsThis.apply(obj); // 'Custom' が関数内の this として obj に設定されています
 ```
@@ -215,7 +215,6 @@ console.log(foo() === globalObject); // true
 ```
 
 > **Note:** アロー関数の呼び出し時に `this` 引数が `call`, `bind`, `apply` に渡されても無視されます。呼び出しに引数を加えることはできますが、最初の引数 (`thisArg`) は `null` を設定してください。
-
 
 ```js
 // オブジェクトのメソッドとして呼び出す。

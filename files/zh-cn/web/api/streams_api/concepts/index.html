@@ -18,7 +18,7 @@ original_slug: Web/API/Streams_API/概念
 <p>有两种 underlying source:</p>
 
 <ul>
- <li><strong>Push sources</strong> 会在您访问了它们之后，不断地主动推送数据。您可以自行 start, pause, 或 cancel 对流的访问。例如视频流和 TCP/<a href="/en-US/docs/Web/API/WebSockets_API">Web sockets</a> 。</li>
+ <li><strong>Push sources</strong> 会在您访问了它们之后，不断地主动推送数据。您可以自行 start, pause，或 cancel 对流的访问。例如视频流和 TCP/<a href="/en-US/docs/Web/API/WebSockets_API">Web sockets</a> 。</li>
  <li><strong>Pull sources</strong> 需要您在连接到它们后，显式地从它们请求数据。例如通过 <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> 或 <a href="/en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest">XHR</a> 请求访问一个文件。</li>
 </ul>
 
@@ -30,7 +30,7 @@ original_slug: Web/API/Streams_API/概念
 
 <p>流中的 chunks 由一个 <strong>reader</strong> 读取 —— 该数据处理过程一次只处理一个 chunk，允许您对其执行任何类型的操作。reader 加上与它一起运行的其他处理代码合称为一个 <strong>consumer </strong>。</p>
 
-<p>另一个您将用到的对象叫做 <strong>controller</strong> —— 每个 reader 都有一个关联的 controller，用来控制流 （例如，可以将流 close）。</p>
+<p>另一个您将用到的对象叫做 <strong>controller</strong> —— 每个 reader 都有一个关联的 controller，用来控制流（例如，可以将流 close）。</p>
 
 <p>一个流一次只能被一个 reader 读；当一个 reader 被创建并开始读一个流（an <strong>active reader</strong>），我们说，它被 <strong>locked</strong> 在该流上。如果您想让另一个 reader 读这个流，则通常需要先取消第一个 reader ，再执行其他操作。（您可以 <strong>tee</strong> 流，参阅下面的 Teeing 部分）</p>
 

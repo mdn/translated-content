@@ -18,7 +18,9 @@ La méthode **`toString()`** renvoie une chaîne de caractère représentant l'o
 
 ## Syntaxe
 
-    numObj.toString([base])
+```js
+numObj.toString([base])
+```
 
 ### Paramètre
 

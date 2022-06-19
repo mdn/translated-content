@@ -17,7 +17,9 @@ La méthode **`clear()`** permettait de retirer tous les éléments d'un objet `
 
 ## Syntaxe
 
-    wm.clear();
+```js
+wm.clear();
+```
 
 ## Exemples
 

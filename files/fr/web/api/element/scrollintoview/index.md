@@ -14,9 +14,11 @@ La méthode **`Element.scrollIntoView()`** fait défiler la page de manière à 
 
 ## Syntaxe
 
-    element.scrollIntoView();
-    element.scrollIntoView(alignToTop); // Paramètre booléen
-    element.scrollIntoView(scrollIntoViewOptions); // Paramètre d'objet
+```js
+element.scrollIntoView();
+element.scrollIntoView(alignToTop); // Paramètre booléen
+element.scrollIntoView(scrollIntoViewOptions); // Paramètre d'objet
+```
 
 ### Paramètres
 

@@ -19,7 +19,7 @@ Un [gestionnaire d'événement](/en-US/docs/Web/Guide/Events/Event_handlers) pou
 
 Pour des raisons historiques, des arguments différents sont passés aux gestionnaires `window.onerror` et `element.onerror`.
 
-### window\.onerror
+### window.onerror
 
 ```js
 window.onerror = function(messageOrEvent, source, noligne, nocolonne, erreur) { ... }
@@ -35,7 +35,9 @@ Paramètres de la fonction&nbsp;:
 
 ### element.onerror (et `window.addEventListener('error')`)
 
-    element.onerror = function(event) { ... }
+```js
+element.onerror = function(event) { ... }
+```
 
 `element.onerror` accepte une fonction avec un argument unique de type {{domxref("Event")}}.
 
@@ -43,25 +45,27 @@ Paramètres de la fonction&nbsp;:
 
 Quand une erreur de syntaxe**(?)** se produit dans un script chargé à partir d'une [origine différente](/en-US/docs/Web/Security/Same-origin_policy), les détails de l'erreur de syntaxe ne sont pas rapportés, afin de prévenir la fuite d'information (voir {{bug("363897")}}). A la place, l'erreur est simplement reportée en tant que **`"Script error"`**. Ce comportement peut être surchargé par certains navigateurs en utilisant l'attribut `{{htmlattrxref("crossorigin","script")}}` de {{HTMLElement("script")}} et en faisant en sorte que le serveur envoie les entêtes de réponse [CORS](/en-US/docs/Web/HTTP/Access_control_CORS) HTTP appropriés. Un contournement consiste à isoler "Script error" et à la gérer en sachant que les détails de l'erreur ne sont visibles que la console du navigateur et non accessibles en JavaScript.
 
-    window.onerror = function (msg, url, noLigne, noColonne, erreur) {
-        var chaine = msg.toLowerCase();
-        var souschaine = "script error";
-        if (chaine.indexOf(souschaine) > -1){
-            alert('Script Error : voir la Console du Navigateur pour les Détails');
-        } else {
-            var message = [
-                'Message : ' + msg,
-                'URL : ' + url,
-                'Ligne : ' + noLigne,
-                'Colonne : ' + noColonne,
-                'Objet Error : ' + JSON.stringify(erreur)
-            ].join(' - ');
+```js
+window.onerror = function (msg, url, noLigne, noColonne, erreur) {
+  var chaine = msg.toLowerCase();
+  var souschaine = "script error";
+  if (chaine.indexOf(souschaine) > -1){
+    alert('Script Error : voir la Console du Navigateur pour les Détails');
+  } else {
+    var message = [
+      'Message : ' + msg,
+      'URL : ' + url,
+      'Ligne : ' + noLigne,
+      'Colonne : ' + noColonne,
+      'Objet Error : ' + JSON.stringify(erreur)
+    ].join(' - ');
 
-            alert(message);
-        }
+    alert(message);
+  }
 
-        return false;
-    };
+  return false;
+};
+```
 
 Lors de l'utilisation du balisage html intégré (\<body onerror="alert('une erreur est survenue')>...), la spécification HTML requiert que les arguments passés à `onerror` soient nommés `event`, `source`, `lineno`, `colno`, `error`. Dans les navigteurs qui n'ont pas implémenté cette obligation, ils peuvent toujours être obtenus via `arguments[0]` à `arguments[2]`.
 

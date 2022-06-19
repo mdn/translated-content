@@ -12,7 +12,7 @@ translation_of: Web/API/URLSearchParams/getAll
 ---
 <p>{{ApiRef("URL API")}}{{SeeCompatTable}} </p>
 
-<p>{{domxref("URLSearchParams")}}接口的getAll()方法，以数组的形式返回与指定搜索参数对应的所有值。</p>
+<p>{{domxref("URLSearchParams")}}接口的 getAll() 方法，以数组的形式返回与指定搜索参数对应的所有值。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -34,7 +34,7 @@ translation_of: Web/API/URLSearchParams/getAll
 <pre>let url = new URL('https://example.com?foo=1&amp;bar=2');
 let params = new URLSearchParams(url.search.slice(1));
 
-//为foo参数添加第二个值
+//为 foo 参数添加第二个值
 params.append('foo', 4);
 
 console.log(params.getAll('foo')) //输出 ["1","4"].

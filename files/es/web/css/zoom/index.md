@@ -133,7 +133,6 @@ div#c {
 
 No forma parte de ningún estándar. Esta propiedad tiene su origen en Internet Explorer. Apple tiene [una descripción en la Referencia CSS de Safari](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15). Rossen Atanassov de Microsoft posee [un borrador de propuesta de especificación no oficial en Github](https://cdn.jsdelivr.net/gh/atanassov/css-zoom@master/Overview.html).
 
-
 ## Compatibilidad con navegadores
 
 {{Compat}}

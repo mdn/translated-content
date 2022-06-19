@@ -15,29 +15,29 @@ translation_of: Web/API/MediaRecorder/MediaRecorder
 
 <dl>
  <dt><code><strong>stream</strong></code></dt>
- <dd>{{domxref("MediaStream")}} 将要录制的流. 它可以是来自于使用 {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} 创建的流或者来自于 {{HTMLElement("audio")}}, {{HTMLElement("video")}} 以及 {{HTMLElement("canvas")}} DOM元素.</dd>
+ <dd>{{domxref("MediaStream")}} 将要录制的流。它可以是来自于使用 {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} 创建的流或者来自于 {{HTMLElement("audio")}}, {{HTMLElement("video")}} 以及 {{HTMLElement("canvas")}} DOM 元素。</dd>
  <dt>
  <p><strong><code>options</code> </strong>{{optional_inline}}</p>
  </dt>
  <dd>
- <p>一个字典对象,它可以包含下列属性:</p>
+ <p>一个字典对象，它可以包含下列属性：</p>
 
  <ul>
-  <li><code>mimeType</code>: 为新构建的 <code>MediaRecorder</code> 指定录制容器的MIME类型. 在应用中通过调用 {{domxref("MediaRecorder.isTypeSupported()")}} 来检查浏览器是否支持此种<code>mimeType</code> .</li>
-  <li><code>audioBitsPerSecond</code>: 指定音频的比特率.</li>
-  <li><code>videoBitsPerSecond</code>: 指定视频的比特率.</li>
-  <li><code>bitsPerSecond</code>: 指定音频和视频的比特率. 此属性可以用来指定上面两个属性. 如果上面两个属性只有其中之一和此属性被指定, 则此属性可以用于设定另外一个属性.</li>
+  <li><code>mimeType</code>: 为新构建的 <code>MediaRecorder</code> 指定录制容器的 MIME 类型。在应用中通过调用 {{domxref("MediaRecorder.isTypeSupported()")}} 来检查浏览器是否支持此种<code>mimeType</code> .</li>
+  <li><code>audioBitsPerSecond</code>: 指定音频的比特率。</li>
+  <li><code>videoBitsPerSecond</code>: 指定视频的比特率。</li>
+  <li><code>bitsPerSecond</code>: 指定音频和视频的比特率。此属性可以用来指定上面两个属性. 如果上面两个属性只有其中之一和此属性被指定，则此属性可以用于设定另外一个属性。</li>
  </ul>
 
  <div class="note">
- <p>如果视频和/或音频的比特率没有指定, 视频默认采用的比特率是2.5Mbps, 但音频的默认比特率并不固定, 音频的默认比特率根据采样率和轨道数自适应.</p>
+ <p>如果视频和/或音频的比特率没有指定，视频默认采用的比特率是 2.5Mbps，但音频的默认比特率并不固定，音频的默认比特率根据采样率和轨道数自适应。</p>
  </div>
  </dd>
 </dl>
 
 <h2 id="例子">例子</h2>
 
-<p>此例展示了如果对指定的流创建一个音频比特率为128kbps,视频比特率为2.5Mbps的媒体录制器. 被录制的媒体数据会以MP4格式封装(因此你若获取这些媒体数据片段,并存放到磁盘上去,你就会得到一个mp4文件).</p>
+<p>此例展示了如果对指定的流创建一个音频比特率为 128kbps，视频比特率为 2.5Mbps 的媒体录制器。被录制的媒体数据会以 MP4 格式封装 (因此你若获取这些媒体数据片段，并存放到磁盘上去，你就会得到一个 mp4 文件).</p>
 
 <pre class="brush: js">...
 <code class="language-html">

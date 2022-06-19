@@ -13,7 +13,7 @@ translation_of: Web/API/IDBTransaction
 
 <p>If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the <code>complete</code> event by creating a transaction using the experimental (non-standard) <code>readwriteflush</code> mode (see {{domxref("IDBDatabase.transaction")}}.</p>
 
-<p>注意，事务在被创建的时候就已经开始，并非在发起第一个请求（<code>IDBRequest</code>)的时候。例如下面的例子:</p>
+<p>注意，事务在被创建的时候就已经开始，并非在发起第一个请求（<code>IDBRequest</code>) 的时候。例如下面的例子：</p>
 
 <pre class="brush: js" id="comment_text_0">var trans1 = db.transaction("foo", "readwrite");
 var trans2 = db.transaction("foo", "readwrite");
@@ -50,7 +50,7 @@ objectStore1.put("1", "key");
  <dt>{{domxref("IDBTransaction.error")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("DOMException")}} indicating the type of error that occured when there is an unsuccessful transaction. This property is <code>null</code> if the transaction is not finished, is finished and successfully committed, or was aborted with {{domxref("IDBTransaction.abort")}} function.</dd>
  <dt>{{domxref("IDBTransaction.mode")}} {{readonlyInline}}</dt>
- <dd>用于隔离事务作用域内的object store中数据访问的模式。下方的常量章节给出了所有可用的值。默认值是 <code><a href="#const_read_only">readonly</a></code>.</dd>
+ <dd>用于隔离事务作用域内的 object store 中数据访问的模式。下方的常量章节给出了所有可用的值。默认值是 <code><a href="#const_read_only">readonly</a></code>.</dd>
  <dt>{{domxref("IDBTransaction.objectStoreNames")}} {{readonlyinline}}</dt>
  <dd>Returns a {{domxref("DOMStringList")}} of the names of {{domxref("IDBObjectStore")}} objects.</dd>
 </dl>
@@ -80,9 +80,9 @@ objectStore1.put("1", "key");
 
 <dl>
  <dt>{{domxref("IDBTransaction.abort")}}</dt>
- <dd>放弃本次连接的transaction的所有修改，如果当前的transaction处于回滚完毕或完成状态，则会抛出一个错误事件。</dd>
+ <dd>放弃本次连接的 transaction 的所有修改，如果当前的 transaction 处于回滚完毕或完成状态，则会抛出一个错误事件。</dd>
  <dt>{{domxref("IDBTransaction.objectStore")}}</dt>
- <dd>返回表示作为此事务作用域一部分的object store的 {{domxref("IDBObjectStore")}} 对象。</dd>
+ <dd>返回表示作为此事务作用域一部分的 object store 的 {{domxref("IDBObjectStore")}} 对象。</dd>
 </dl>
 
 <h2 id="Constants" name="Constants">模式常量</h2>
@@ -90,10 +90,10 @@ objectStore1.put("1", "key");
 <div>{{ obsolete_header(25) }}</div>
 
 <div class="warning">
-<p>这些常量将不再可用——它们在Gecko 25中被移除。 你应该直接使用字符串常量来作为替代。 ({{ bug(888598) }})</p>
+<p>这些常量将不再可用——它们在 Gecko 25 中被移除。 你应该直接使用字符串常量来作为替代。 ({{ bug(888598) }})</p>
 </div>
 
-<p>Transactions 可使用以下三种模式中的一种:</p>
+<p>Transactions 可使用以下三种模式中的一种：</p>
 
 <table class="standard-table">
  <thead>
@@ -140,7 +140,7 @@ objectStore1.put("1", "key");
  </tbody>
 </table>
 
-<p>即使目前这些常量已经被废弃，但如果你需要使用它，则需要提供向下兼容方案(in Chrome <a href="http://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/">the change was made in version 21</a>)。你应当防止出现对象不存在的情况：</p>
+<p>即使目前这些常量已经被废弃，但如果你需要使用它，则需要提供向下兼容方案 (in Chrome <a href="http://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/">the change was made in version 21</a>)。你应当防止出现对象不存在的情况：</p>
 
 <pre class="brush:js;">var myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || { READ_WRITE: "readwrite" };</pre>
 

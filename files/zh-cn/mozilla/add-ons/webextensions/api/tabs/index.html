@@ -18,12 +18,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 
 <p>与浏览器标签系统进行交互。</p>
 
-<p>你可以使用该API获取一个已打开标签的列表并且使用各种标准过滤标签，并进行 打开， 刷新，移动，重载，移除操作。该API不能直接访问标签中的主机内容，但是你可以使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} APIs，来插入javascript和CSS。</p>
+<p>你可以使用该 API 获取一个已打开标签的列表并且使用各种标准过滤标签，并进行 打开，刷新，移动，重载，移除操作。该 API 不能直接访问标签中的主机内容，但是你可以使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} APIs，来插入 javascript 和 CSS。</p>
 
-<p>你可以在不需要任何特殊权限的情况下使用该APIS的大部分， 除了:</p>
+<p>你可以在不需要任何特殊权限的情况下使用该 APIS 的大部分，除了：</p>
 
 <ul>
- <li>获取 <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.favIconUrl</code>, 你需要拥有 "tabs" <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a>. 在火狐，这也意味着你需要 "tabs" ，来通过URL使用 {{WebExtAPIRef("tabs.query", "query")}}。</li>
+ <li>获取 <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.favIconUrl</code>, 你需要拥有 "tabs" <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a>. 在火狐，这也意味着你需要 "tabs" ，来通过 URL 使用 {{WebExtAPIRef("tabs.query", "query")}}。</li>
  <li>使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} 你必须在目标标签拥有 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a> 。</li>
 </ul>
 
@@ -54,7 +54,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 
 <dl>
  <dt>{{WebExtAPIRef("tabs.TAB_ID_NONE")}}</dt>
- <dd>给予非浏览器标签的一个特殊ID值 （比如，在开发工具中的标签）。</dd>
+ <dd>给予非浏览器标签的一个特殊 ID 值（比如，在开发工具中的标签）。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -87,9 +87,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
  <dt>{{WebExtAPIRef("tabs.highlight()")}}</dt>
  <dd>高亮显示一个或多个标签。</dd>
  <dt>{{WebExtAPIRef("tabs.insertCSS()")}}</dt>
- <dd>向一个页面注入CSS。</dd>
+ <dd>向一个页面注入 CSS。</dd>
  <dt>{{WebExtAPIRef("tabs.removeCSS()")}}</dt>
- <dd>移除之前调用{{WebExtAPIRef("tabs.insertCSS()")}} 注入的一个css。</dd>
+ <dd>移除之前调用{{WebExtAPIRef("tabs.insertCSS()")}} 注入的一个 css。</dd>
  <dt>{{WebExtAPIRef("tabs.move()")}}</dt>
  <dd>移动一个或多个标签页到同一窗口的一个新的位置或是到不同窗口。</dd>
  <dt>{{WebExtAPIRef("tabs.query()")}}</dt>
@@ -99,9 +99,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
  <dt>{{WebExtAPIRef("tabs.remove()")}}</dt>
  <dd>关闭一个或多个标签。</dd>
  <dt>{{WebExtAPIRef("tabs.sendMessage()")}}</dt>
- <dd>向一个指定标签的content script 发送单个消息。</dd>
+ <dd>向一个指定标签的 content script 发送单个消息。</dd>
  <dt>{{WebExtAPIRef("tabs.sendRequest()")}} {{deprecated_inline}}</dt>
- <dd>向一个指定标签的content script 发送一个单一请求。 <strong>过时</strong>: 请使用 {{WebExtAPIRef("tabs.sendMessage()")}} 替代。</dd>
+ <dd>向一个指定标签的 content script 发送一个单一请求。 <strong>过时</strong>: 请使用 {{WebExtAPIRef("tabs.sendMessage()")}} 替代。</dd>
  <dt>{{WebExtAPIRef("tabs.setZoom()")}}</dt>
  <dd>缩放指定标签。</dd>
  <dt>{{WebExtAPIRef("tabs.setZoomSettings()")}}</dt>
@@ -116,7 +116,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
  <dt>{{WebExtAPIRef("tabs.onActivated")}}</dt>
  <dd>当窗口活动标签改变时触发，注意当该消息触发时，标签地址可能没有被设置。</dd>
  <dt>{{WebExtAPIRef("tabs.onActiveChanged")}} {{deprecated_inline}}</dt>
- <dd> <strong>已过时:</strong> 请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。</dd>
+ <dd> <strong>已过时：</strong> 请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。</dd>
  <dt>{{WebExtAPIRef("tabs.onAttached")}}</dt>
  <dd>当一个标签被附加到一个窗口时触发，因为他可能在窗口间移动。</dd>
  <dt>{{WebExtAPIRef("tabs.onCreated")}}</dt>
@@ -124,7 +124,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
  <dt>{{WebExtAPIRef("tabs.onDetached")}}</dt>
  <dd>当一个标签脱离一个窗口时被触发。</dd>
  <dt>{{WebExtAPIRef("tabs.onHighlightChanged")}} {{deprecated_inline}}</dt>
- <dd><strong>过时:</strong> 请使用 {{WebExtAPIRef("tabs.onHighlighted")}} 代替。</dd>
+ <dd><strong>过时：</strong> 请使用 {{WebExtAPIRef("tabs.onHighlighted")}} 代替。</dd>
  <dt>{{WebExtAPIRef("tabs.onHighlighted")}}</dt>
  <dd>当一个标签被高亮显示或是被选中时触发。</dd>
  <dt>{{WebExtAPIRef("tabs.onMoved")}}</dt>
@@ -134,7 +134,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
  <dt>{{WebExtAPIRef("tabs.onReplaced")}}</dt>
  <dd>当一个标签因为预载取代另一个标签时被触发。</dd>
  <dt>{{WebExtAPIRef("tabs.onSelectionChanged")}} {{deprecated_inline}}</dt>
- <dd> <strong>以过时:</strong> 请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。</dd>
+ <dd> <strong>以过时：</strong> 请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。</dd>
  <dt>{{WebExtAPIRef("tabs.onUpdated")}}</dt>
  <dd>当一个标签被更新时触发。</dd>
  <dt>{{WebExtAPIRef("tabs.onZoomChange")}}</dt>

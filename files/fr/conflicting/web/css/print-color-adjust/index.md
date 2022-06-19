@@ -20,8 +20,10 @@ Dans l'exemple précédent, le texte utilise la couleur ({{cssxref("color")}}), 
 
 ## Syntaxe
 
-    color-adjust: economy;
-    color-adjust: exact;
+```css
+color-adjust: economy;
+color-adjust: exact;
+```
 
 La valeur de la propriété `color-adjust` peut être un de ces deux mots-clés.
 

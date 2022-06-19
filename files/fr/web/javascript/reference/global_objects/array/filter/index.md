@@ -20,8 +20,10 @@ La méthode **`filter()`** crée et retourne un nouveau tableau contenant tous l
 
 ## Syntaxe
 
-    arr.filter(callback); // callback(elementCourant[, index[, tableauEntier]])
-    var nouveauTableau = arr.filter(callback, thisArg);
+```js
+arr.filter(callback); // callback(elementCourant[, index[, tableauEntier]])
+var nouveauTableau = arr.filter(callback, thisArg);
+```
 
 ### Paramètres
 
@@ -51,9 +53,9 @@ Un nouveau tableau contenant les éléments qui respectent la condition du filtr
 
 La fonction `callback` est appelée avec trois arguments :
 
-1.  la valeur de l'élément courant,
-2.  l'index de l'élément courant,
-3.  l'objet `Array` parcouru.
+1. la valeur de l'élément courant,
+2. l'index de l'élément courant,
+3. l'objet `Array` parcouru.
 
 Si le paramètre `thisArg` est fourni, il sera utilisé comme valeur `this` lors de l'appel de la fonction `callback`. S'il n'est pas fourni, la valeur `undefined` sera utilisée à la place. La valeur de `this` qui est finalement utilisée par la fonction `callback` est déterminée selon [les règles usuelles pour déterminer la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
 

@@ -14,7 +14,7 @@ translation_of: Web/API/PerformanceEntry/duration
  <li>"<code>mark</code>" - returns "<code>0</code>" (a mark has no duration).</li>
  <li>"<code>measure</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}} that is the duration of the measure.</li>
  <li>"<code>navigation</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}} that is the difference between the {{domxref("PerformanceEntry.loadEventEnd")}} and {{domxref("PerformanceEntry.startTime")}} properties, respectively.例如： entry.entryType "navigation"，entry.duration 3611.26, entry.loadEventEnd 3611.2672285754975, entry.startTime 0；</li>
- <li>"<code>resource</code>" - 返回 resource 的{{domxref("PerformanceEntry.responseEnd","responseEnd")}} {{domxref("DOMHighResTimeStamp","timestamp")}} 和  {{domxref("PerformanceEntry.startTime","startTime")}} {{domxref("DOMHighResTimeStamp","timestamp")}}的时间差. 例如： entry.entryType "resource"，entry.duration 901.1400000000001, entry.responseEnd 2527.82, entry.startTime 1626.68， 2527.82 - 1626.68 == 901.1400000000001；</li>
+ <li>"<code>resource</code>" - 返回 resource 的{{domxref("PerformanceEntry.responseEnd","responseEnd")}} {{domxref("DOMHighResTimeStamp","timestamp")}} 和  {{domxref("PerformanceEntry.startTime","startTime")}} {{domxref("DOMHighResTimeStamp","timestamp")}}的时间差。例如： entry.entryType "resource"，entry.duration 901.1400000000001, entry.responseEnd 2527.82, entry.startTime 1626.68， 2527.82 - 1626.68 == 901.1400000000001；</li>
 </ul>
 
 <p>This property is {{readonlyInline}}.</p>
@@ -27,7 +27,7 @@ translation_of: Web/API/PerformanceEntry/duration
 
 <p>A {{domxref("DOMHighResTimeStamp")}} representing the duration of the {{domxref("PerformanceEntry","performance entry")}}. If the duration concept doesn't apply for a particular performance metric, the browser may choose to return a duration of 0.</p>
 
-<p class="note">Note: if the performance entry has an {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>resource</code>" (i.e. the entry is a {{domxref("PerformanceResourceTiming")}} object), this property returns the difference between the {{domxref("PerformanceEntry.responseEnd")}} and {{domxref("PerformanceEntry.startTime")}} {{domxref("DOMHighResTimeStamp","timestamps")}}.</p>
+<p>Note: if the performance entry has an {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>resource</code>" (i.e. the entry is a {{domxref("PerformanceResourceTiming")}} object), this property returns the difference between the {{domxref("PerformanceEntry.responseEnd")}} and {{domxref("PerformanceEntry.startTime")}} {{domxref("DOMHighResTimeStamp","timestamps")}}.</p>
 
 <h2 id="Example">Example</h2>
 

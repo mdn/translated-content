@@ -2,7 +2,7 @@
 title: HTML 文字处理基础
 slug: learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 tags:
-  - HTML指南
+  - HTML 指南
   - 学习
 translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
@@ -10,30 +10,30 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 
 <div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}</div>
 
-<p>HTML的主要工作是编辑文本结构和文本内容（也称为语义{{glossary("semantics")}}），以便浏览器能正确的显示。 本文介绍了 {{glossary("HTML")}}的使用方法：在一段文本中添加标题和段落，强调语句，创建列表等等。</p>
+<p>HTML 的主要工作是编辑文本结构和文本内容（也称为语义{{glossary("semantics")}}），以便浏览器能正确的显示。本文介绍了 {{glossary("HTML")}}的使用方法：在一段文本中添加标题和段落，强调语句，创建列表等等。</p>
 
 <table class="learn-box standard-table" style="height: 161px; width: 663px;">
  <tbody>
   <tr>
-   <th scope="row">先决条件:</th>
+   <th scope="row">先决条件：</th>
    <td>阅读 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started">开始学习 HTML</a>，了解基本的 HTML 知识。</td>
   </tr>
   <tr>
-   <th scope="row">目的:</th>
-   <td>学习如何用标记(段落、标题、列表、强调、引用)来建立基础文本页面的文本结构和文本内容。</td>
+   <th scope="row">目的：</th>
+   <td>学习如何用标记 (段落、标题、列表、强调、引用) 来建立基础文本页面的文本结构和文本内容。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="基础_标题和段落">基础: 标题和段落</h2>
+<h2 id="基础_标题和段落">基础：标题和段落</h2>
 
-<p>大部分的文本结构由标题和段落组成。 不管是小说、报刊、教科书还是杂志等。</p>
+<p>大部分的文本结构由标题和段落组成。不管是小说、报刊、教科书还是杂志等。</p>
 
 <p><img alt="An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs." src="https://mdn.mozillademos.org/files/16552/peoples.jpg" style="display: block; height: 493px; margin: 0px auto; width: 622px;" title="An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs."></p>
 
 <p>内容结构化会使读者的阅读体验更轻松，更愉快。</p>
 
-<p>在HTML中，每个段落是通过 {{htmlelement("p")}} 元素标签进行定义的, 比如下面这样：</p>
+<p>在 HTML 中，每个段落是通过 {{htmlelement("p")}} 元素标签进行定义的，比如下面这样：</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;我是一个段落，千真万确。&lt;/p&gt;</pre>
 
@@ -71,9 +71,9 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
  <li>在可用的六个标题级别中，您应该只在每页使用不超过三个，除非您认为有必要使用更多。具有许多级别的文档（即，较深的标题层次结构）变得难以操作并且难以导航。在这种情况下，如果可能，建议将内容分散在多个页面上。</li>
 </ul>
 
-<h3 id="为什么我们需要结构化">为什么我们需要结构化?</h3>
+<h3 id="为什么我们需要结构化">为什么我们需要结构化？</h3>
 
-<p>回答这个问题前，让我们先来看一段文档示例“<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html">text-start.html</a>” — 并从运行这段文档示例（美味的豆沙食谱）开始。首先，您可以复制一份并保存到本地机器上，在之后的练习中您将用到它。在这个文档的主体 （body）中包含了多个内容 — 这些内容没有做任何标记，但是编辑时使用了换行 (输入回车/换行跳转到下一行)处理。</p>
+<p>回答这个问题前，让我们先来看一段文档示例“<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html">text-start.html</a>” — 并从运行这段文档示例（美味的豆沙食谱）开始。首先，您可以复制一份并保存到本地机器上，在之后的练习中您将用到它。在这个文档的主体（body）中包含了多个内容 — 这些内容没有做任何标记，但是编辑时使用了换行 (输入回车/换行跳转到下一行) 处理。</p>
 
 <p>然而，当您在浏览器中打开文档时，您会看到文本显示为一整块！</p>
 
@@ -85,12 +85,12 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
  <li>用户在阅读网页时，往往会快速浏览以查找相关内容，经常只是阅读开头的标题（我们通常在一个网页上会花费很少的时间 <a class="external external-icon" href="http://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/">spend a very short time on a web page</a>)。如果用户不能在几秒内看到一些有用的内容，他们很可能会感到沮丧并离开。</li>
  <li>对您的网页建立索引的搜索引擎将标题的内容视为影响网页搜索排名的重要关键字。没有标题，您的网页在{{glossary("SEO")}}（搜索引擎优化）方面效果不佳。</li>
  <li>严重视力障碍者通常不会阅读网页；他们用听力来代替。完成这项工作的软件叫做屏幕阅读器（<a class="external external-icon" href="http://en.wikipedia.org/wiki/Screen_reader" title="screen readers">screen reader</a>）。该软件提供了快速访问给定文本内容的方法。在使用的各种技术中，它们通过朗读标题来提供文档的概述，让用户能快速找到他们需要的信息。如果标题不可用，用户将被迫听到整个文档的大声朗读。</li>
- <li>使用{{glossary("CSS")}}样式化内容，或者使用{{glossary("JavaScript")}}做一些有趣的事情，你需要包含相关内容的元素，所以CSS / JavaScript可以有效地定位它。</li>
+ <li>使用{{glossary("CSS")}}样式化内容，或者使用{{glossary("JavaScript")}}做一些有趣的事情，你需要包含相关内容的元素，所以 CSS / JavaScript 可以有效地定位它。</li>
 </ul>
 
 <p>因此，我们需要给我们的内容结构标记。</p>
 
-<h3 id="实践操作_编辑我们的内容结构">实践操作: 编辑我们的内容结构</h3>
+<h3 id="实践操作_编辑我们的内容结构">实践操作：编辑我们的内容结构</h3>
 
 <p>让我们直接跳进一个实例。在下面的示例中，向“Input”字段中的原始文本添加元素，使其在“Output”字段中显示为标题和两个段落。</p>
 
@@ -204,19 +204,19 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 
 <h3 id="为什么我们需要语义？">为什么我们需要语义？</h3>
 
-<p>在我们身边的任何地方都要依赖语义学 — 我们依靠以前的经验就知道日常事物都代表什么；当我们看到什么，我们就会知道它代表什么。举个例子, 我们知道红色交通灯表示“停止”，绿色交通灯表示”通行“。 如果运用了错误的语义，事情会迅速地变得非常棘手 (难道有某个国家使用红色代表通行？我不希望如此)</p>
+<p>在我们身边的任何地方都要依赖语义学 — 我们依靠以前的经验就知道日常事物都代表什么；当我们看到什么，我们就会知道它代表什么。举个例子，我们知道红色交通灯表示“停止”，绿色交通灯表示”通行“。如果运用了错误的语义，事情会迅速地变得非常棘手 (难道有某个国家使用红色代表通行？我不希望如此)</p>
 
 <p>同样的道理，我们需要确保使用了正确的元素来给予内容正确的意思、作用以及外形。在这里，{{htmlelement("h1")}} 元素也是一个语义元素，它给出了包裹在您的页面上用来表示顶级标题的角色（或意义）的文本。</p>
 
 <pre class="brush: html notranslate">&lt;h1&gt;这是一个顶级标题&lt;/h1&gt;</pre>
 
-<p>一般来说，浏览器会给它一个更大的字形来让它看上去像个标题（虽然你可以使用CSS让它变成任何你想要的样式。更重要的是，它的语义值将以多种方式被使用，比如通过搜索引擎和屏幕阅读器（上文提到过的）。</p>
+<p>一般来说，浏览器会给它一个更大的字形来让它看上去像个标题（虽然你可以使用 CSS 让它变成任何你想要的样式。更重要的是，它的语义值将以多种方式被使用，比如通过搜索引擎和屏幕阅读器（上文提到过的）。</p>
 
 <p>在另一方面，你可以让任一元素看起来像一个顶级标题，如下：</p>
 
 <pre class="brush: html notranslate">&lt;span style="font-size: 32px; margin: 21px 0;"&gt;这是顶级标题吗？&lt;/span&gt;</pre>
 
-<p>这是一个 {{htmlelement("span")}} 元素，它没有语义。当您想要对它用CSS（或者JS）时，您可以用它包裹内容，且不需要附加任何额外的意义（在未来的课程中你会发现更多这类元素）。我们已经对它使用了CSS来让它看起来像一个顶级标题。然而，由于它没有语义值，所以它不会有任何上文提到的帮助。最好的方法是使用相关的HTML元素来标记这个项目。</p>
+<p>这是一个 {{htmlelement("span")}} 元素，它没有语义。当您想要对它用 CSS（或者 JS）时，您可以用它包裹内容，且不需要附加任何额外的意义（在未来的课程中你会发现更多这类元素）。我们已经对它使用了 CSS 来让它看起来像一个顶级标题。然而，由于它没有语义值，所以它不会有任何上文提到的帮助。最好的方法是使用相关的 HTML 元素来标记这个项目。</p>
 
 <h2 id="列表_Lists">列表 Lists</h2>
 
@@ -250,9 +250,9 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
   &lt;li&gt;焦圈&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<h4 id="实践操作_标记无序列表">实践操作: 标记无序列表</h4>
+<h4 id="实践操作_标记无序列表">实践操作：标记无序列表</h4>
 
-<p>尝试编辑下面的示例来创建一个HTML无序列表。</p>
+<p>尝试编辑下面的示例来创建一个 HTML 无序列表。</p>
 
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code 2</h6>
@@ -374,7 +374,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 继续走 300 米，学校就在你的右手边
 </pre>
 
-<p>这个标记的结构和无序列表一样，除了需要用{{htmlelement("ol")}} 元素将所有项目包裹, 而不是<code>&lt;ul&gt;：</code></p>
+<p>这个标记的结构和无序列表一样，除了需要用{{htmlelement("ol")}} 元素将所有项目包裹，而不是<code>&lt;ul&gt;：</code></p>
 
 <pre class="brush: html notranslate">&lt;ol&gt;
   &lt;li&gt;沿着条路走到头&lt;/li&gt;
@@ -384,9 +384,9 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
   &lt;li&gt;继续走 300 米，学校就在你的右手边&lt;/li&gt;
 &lt;/ol&gt;</pre>
 
-<h4 id="实践操作_标记有序列表">实践操作: 标记有序列表</h4>
+<h4 id="实践操作_标记有序列表">实践操作：标记有序列表</h4>
 
-<p>尝试编辑下面的示例来创建一个HTML有序列表：</p>
+<p>尝试编辑下面的示例来创建一个 HTML 有序列表：</p>
 
 <div class="hidden">
 <h6 id="Playable_code_3">Playable code 3</h6>
@@ -500,7 +500,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 
 <p>{{ EmbedLiveSample('Playable_code_3', 700, 500, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<h3 id="实践操作_标记我们的食谱">实践操作: 标记我们的食谱</h3>
+<h3 id="实践操作_标记我们的食谱">实践操作：标记我们的食谱</h3>
 
 <p>到了这里，你拥有了所有你需要的信息来标记我们的食谱样例。你可以选择从<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html">text-start.html</a>复制一份文件并保存在本地，打开它进行编辑，或者在下面的例子中进行编辑。因为在本地你可以保存你的项目，所以在本地做这个工作可能更好。而如果你在下面可编辑的样本中作业，下一次你打开这个网站时你可能会丢失你的数据。各有利弊吧。</p>
 
@@ -669,11 +669,11 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 
 <p>{{ EmbedLiveSample('Playable_code_4', 700, 800, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<p>如果你感到棘手，你可以随时按下<em>Show solution</em>按钮，或者在我们的github repo上检查我们的 <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-complete.html">text-complete.html</a> 样例。</p>
+<p>如果你感到棘手，你可以随时按下<em>Show solution</em>按钮，或者在我们的 github repo 上检查我们的 <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-complete.html">text-complete.html</a> 样例。</p>
 
 <h3 id="嵌套列表_Nesting_lists">嵌套列表 Nesting lists</h3>
 
-<p>将一个列表嵌入到另一个列表是完全可以的。 你可能想让一些子项目列在首项目之下。让我们从食谱示例中获取第二个列表：</p>
+<p>将一个列表嵌入到另一个列表是完全可以的。你可能想让一些子项目列在首项目之下。让我们从食谱示例中获取第二个列表：</p>
 
 <pre class="brush: html notranslate">&lt;ol&gt;
   &lt;li&gt;先用蛋白一个、盐半茶匙及淀粉两大匙搅拌均匀，调成“腌料”，鸡胸肉切成约一厘米见方的碎丁并用“腌料”搅拌均匀，腌渍半小时。&lt;/li&gt;
@@ -714,32 +714,32 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 
 <p>第一句话听起来真的像松了一口气因为没有迟到。相反，第二句话听起来具有讽刺性而且有隐含的攻击性，表达对一个人迟到的恼怒。</p>
 
-<p>在HTML中我们用{{htmlelement("em")}}（emphasis）元素来标记这样的情况。这样做既可以让文档读起来更有趣，也可以被屏幕阅读器识别出来，并以不同的语调发出。浏览器默认风格为斜体，但你不应该纯粹使用这个标签来获得斜体风格，为了获得斜体风格，你应该使用{{htmlelement("span")}}元素和一些CSS，或者是{{htmlelement("i")}}元素（见下文）。</p>
+<p>在 HTML 中我们用{{htmlelement("em")}}（emphasis）元素来标记这样的情况。这样做既可以让文档读起来更有趣，也可以被屏幕阅读器识别出来，并以不同的语调发出。浏览器默认风格为斜体，但你不应该纯粹使用这个标签来获得斜体风格，为了获得斜体风格，你应该使用{{htmlelement("span")}}元素和一些 CSS，或者是{{htmlelement("i")}}元素（见下文）。</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;I am &lt;em&gt;glad&lt;/em&gt; you weren't &lt;em&gt;late&lt;/em&gt;.&lt;/p&gt;</pre>
 
 <h3 id="非常重要">非常重要</h3>
 
-<p>为了强调重要的词，在口语方面我们往往用重音强调，在文字方面则是用粗体字来达到强调的效果。例如下面这段:</p>
+<p>为了强调重要的词，在口语方面我们往往用重音强调，在文字方面则是用粗体字来达到强调的效果。例如下面这段：</p>
 
 <p>This liquid is <strong>highly toxic</strong>.</p>
 
 <p>I am counting on you. <strong>Do not</strong> be late!</p>
 
-<p>在HTML中我们用{{htmlelement("strong")}} (strong importance) 元素来标记这样的情况。这样做既可以让文档更加地有用，也可以被屏幕阅读器识别出来，并以不同的语调发出。浏览器默认风格为粗体，但你不应该纯粹使用这个标签来获得粗体风格，为了获得粗体风格，你应该使用{{htmlelement("span")}}元素和一些CSS，或者是 {{htmlelement("b")}} 元素 (见下文)。</p>
+<p>在 HTML 中我们用{{htmlelement("strong")}} (strong importance) 元素来标记这样的情况。这样做既可以让文档更加地有用，也可以被屏幕阅读器识别出来，并以不同的语调发出。浏览器默认风格为粗体，但你不应该纯粹使用这个标签来获得粗体风格，为了获得粗体风格，你应该使用{{htmlelement("span")}}元素和一些 CSS，或者是 {{htmlelement("b")}} 元素 (见下文)。</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;This liquid is &lt;strong&gt;highly toxic&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;I am counting on you. &lt;strong&gt;Do not&lt;/strong&gt; be late!&lt;/p&gt;</pre>
 
-<p>如有需要你可以将strong元素和em元素嵌套在其他的标签中：</p>
+<p>如有需要你可以将 strong 元素和 em 元素嵌套在其他的标签中：</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;This liquid is &lt;strong&gt;highly toxic&lt;/strong&gt; —
 if you drink it, &lt;strong&gt;you may &lt;em&gt;die&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;</pre>
 
-<h3 id="实践操作_我们是重要的!">实践操作: 我们是重要的!</h3>
+<h3 id="实践操作_我们是重要的!">实践操作：我们是重要的！</h3>
 
-<p>在这个实践操作中，我们提供了可编辑的例子。在这个例子中，我们想让你把斜体(em)和加粗(strong)放在你认为重要的词汇上，仅仅为了练习。</p>
+<p>在这个实践操作中，我们提供了可编辑的例子。在这个例子中，我们想让你把斜体 (em) 和加粗 (strong) 放在你认为重要的词汇上，仅仅为了练习。</p>
 
 <div class="hidden">
 <h6 id="Playable_code_5">Playable code 5</h6>
@@ -779,11 +779,11 @@ if you drink it, &lt;strong&gt;you may &lt;em&gt;die&lt;/em&gt;&lt;/strong&gt;.&
         const original =
 `AlphaGo 李世乭五番棋
 
-&lt;p&gt;2016年3月8日到3月15日，韩国职业棋士李世乭（이세돌）九段与由 Google DeepMind 开发的计算机围棋软件 AlphaGo 对弈的五局三胜制围棋比赛在韩国首尔举行。结果为 AlphaGo 以四胜一负的战绩击败李世乭。赛后韩国棋院授予 AlphaGo 荣誉九段的称号。&lt;/p&gt;`;
+&lt;p&gt;2016 年 3 月 8 日到 3 月 15 日，韩国职业棋士李世乭（이세돌）九段与由 Google DeepMind 开发的计算机围棋软件 AlphaGo 对弈的五局三胜制围棋比赛在韩国首尔举行。结果为 AlphaGo 以四胜一负的战绩击败李世乭。赛后韩国棋院授予 AlphaGo 荣誉九段的称号。&lt;/p&gt;`;
         const answer =
 `&lt;h1&gt;AlphaGo 李世乭五番棋&lt;/h1&gt;
 
-&lt;p&gt;&lt;strong&gt;2016年3月8日&lt;/strong&gt;到&lt;strong&gt;3月15日&lt;/strong&gt;，韩国职业棋士&lt;strong&gt;李世乭（이세돌）&lt;em&gt;九段&lt;/em&gt;&lt;/strong&gt;与由 Google DeepMind 开发的计算机围棋软件 &lt;strong&gt;AlphaGo&lt;/strong&gt; 对弈的五局三胜制围棋比赛在韩国&lt;strong&gt;首尔&lt;/strong&gt;举行。结果为 AlphaGo 以&lt;strong&gt;四胜一负&lt;/strong&gt;的战绩击败李世乭。赛后韩国棋院授予 AlphaGo &lt;strong&gt;荣誉九段&lt;/strong&gt;的称号。&lt;/p&gt;`;
+&lt;p&gt;&lt;strong&gt;2016 年 3 月 8 日&lt;/strong&gt;到&lt;strong&gt;3 月 15 日&lt;/strong&gt;，韩国职业棋士&lt;strong&gt;李世乭（이세돌）&lt;em&gt;九段&lt;/em&gt;&lt;/strong&gt;与由 Google DeepMind 开发的计算机围棋软件 &lt;strong&gt;AlphaGo&lt;/strong&gt; 对弈的五局三胜制围棋比赛在韩国&lt;strong&gt;首尔&lt;/strong&gt;举行。结果为 AlphaGo 以&lt;strong&gt;四胜一负&lt;/strong&gt;的战绩击败李世乭。赛后韩国棋院授予 AlphaGo &lt;strong&gt;荣誉九段&lt;/strong&gt;的称号。&lt;/p&gt;`;
         let userEntry = "";
 
         init();
@@ -851,9 +851,9 @@ if you drink it, &lt;strong&gt;you may &lt;em&gt;die&lt;/em&gt;&lt;/strong&gt;.&
 
 <h3 id="斜体字、粗体字、下划线...">斜体字、粗体字、下划线...</h3>
 
-<p>迄今为止我们已经讨论的元素都是意义清楚的语义元素。{{htmlelement("b")}}, {{htmlelement("i")}}, 和 {{htmlelement("u")}} 的情况却有点复杂。它们出现于人们要在文本中使用粗体、斜体、下划线但CSS仍然不被完全支持的时期。像这样的元素，仅仅影响表象而且没有语义，被称为<strong>表象元素（presentational elements）</strong>并且不应该再被使用。因为正如我们在之前看到的，语义对可访问性，SEO（搜索引擎优化）等非常重要。</p>
+<p>迄今为止我们已经讨论的元素都是意义清楚的语义元素。{{htmlelement("b")}}, {{htmlelement("i")}}, 和 {{htmlelement("u")}} 的情况却有点复杂。它们出现于人们要在文本中使用粗体、斜体、下划线但 CSS 仍然不被完全支持的时期。像这样的元素，仅仅影响表象而且没有语义，被称为<strong>表象元素（presentational elements）</strong>并且不应该再被使用。因为正如我们在之前看到的，语义对可访问性，SEO（搜索引擎优化）等非常重要。</p>
 
-<p>HTML5用新的语义规则重新定义了<code>&lt;b&gt;</code>,<code>&lt;i&gt;</code>和<code>&lt;u&gt;</code>,使得它们的语言显得稍微有点混乱。</p>
+<p>HTML5 用新的语义规则重新定义了<code>&lt;b&gt;</code>,<code>&lt;i&gt;</code>和<code>&lt;u&gt;</code>,使得它们的语言显得稍微有点混乱。</p>
 
 <p>这里是最好的经验法则：如果没有更合适的元素，那么使用 <code>&lt;b&gt;</code>、<code>&lt;i&gt;</code> 或 <code>&lt;u&gt;</code> 来表达传统上的粗体、斜体或下划线表达的意思是合适的。然而，始终拥有<a href="/zh-CN/docs/learn/Accessibility">可访问性</a>的思维模式是至关重要的。斜体的概念对人们使用屏幕阅读器是没有帮助的，对使用其他书写系统而不是拉丁文书写系统的人们也是没有帮助的。</p>
 
@@ -864,7 +864,7 @@ if you drink it, &lt;strong&gt;you may &lt;em&gt;die&lt;/em&gt;&lt;/strong&gt;.&
 </ul>
 
 <div class="note">
-<p>使用下划线的忠告：因为我们常常会认为网页中的下划线代表着一个超链接<strong>，</strong>所以最好只用下划线来代表超链接。而在语义适合的情况下不得不使用&lt;u&gt;元素时，可以使用CSS来改变&lt;u&gt;元素对应的下划线的默认样式，从而和超链接的下划线区分开来。下面是一个具体的例子：</p>
+<p>使用下划线的忠告：因为我们常常会认为网页中的下划线代表着一个超链接<strong>，</strong>所以最好只用下划线来代表超链接。而在语义适合的情况下不得不使用&lt;u&gt;元素时，可以使用 CSS 来改变&lt;u&gt;元素对应的下划线的默认样式，从而和超链接的下划线区分开来。下面是一个具体的例子：</p>
 </div>
 
 <pre class="brush: html notranslate">&lt;!-- 学名 --&gt;
@@ -896,7 +896,7 @@ if you drink it, &lt;strong&gt;you may &lt;em&gt;die&lt;/em&gt;&lt;/strong&gt;.&
 
 <h2 id="总结">总结</h2>
 
-<p>至此，本文应该给您做了一个很好的了解，如何开始在HTML中标记文本，并介绍了一些最重要的元素。在这一领域还有许多语义元素，我们将在后面的“更多语义元素”文章中看到更多的语义元素。 在下一篇文章中，我们将详细介绍如何创建超链接（<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">create hyperlinks</a>），它可能是Web上最重要的元素。</p>
+<p>至此，本文应该给您做了一个很好的了解，如何开始在 HTML 中标记文本，并介绍了一些最重要的元素。在这一领域还有许多语义元素，我们将在后面的“更多语义元素”文章中看到更多的语义元素。在下一篇文章中，我们将详细介绍如何创建超链接（<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">create hyperlinks</a>），它可能是 Web 上最重要的元素。</p>
 
 <p>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}</p>
 

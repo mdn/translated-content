@@ -40,12 +40,12 @@ translation_of: Web/Accessibility/ARIA/forms/alerts
 <p>表单有效性检验由这几个步骤组成：</p>
 
 <ol>
- <li>检查电子邮件地址或输入的名称是否有效。 每个字段都有一组必须通过验证的标准。 为了简化此示例，我们将检查电子邮件地址是否包含“ @”符号，以及名称条目是否包含至少1个字符。</li>
+ <li>检查电子邮件地址或输入的名称是否有效。 每个字段都有一组必须通过验证的标准。 为了简化此示例，我们将检查电子邮件地址是否包含“ @”符号，以及名称条目是否包含至少 1 个字符。</li>
  <li>如果不满足上述条件，则该字段的<code>aria-invalid</code>属性将被赋予“ <code>true</code>”值。</li>
- <li>如果不符合条件，用户将被通过警报来通知。 我们将使用简单的WAI-ARIA小部件来进行通知，而不是使用JavaScript的“<code>alert</code>”功能。 这会通知用户错误，但允许他们继续修改表单而不会失去焦点（由JavaScript默认的“<code>alert</code>”功能中的“ <code>onblur</code>”处理函数引起）。</li>
+ <li>如果不符合条件，用户将被通过警报来通知。 我们将使用简单的 WAI-ARIA 小部件来进行通知，而不是使用 JavaScript 的“<code>alert</code>”功能。 这会通知用户错误，但允许他们继续修改表单而不会失去焦点（由 JavaScript 默认的“<code>alert</code>”功能中的“ <code>onblur</code>”处理函数引起）。</li>
 </ol>
 
-<p>下面是一个能够被插入在结束“ <code>head</code>”标签上方的示例JavaScript代码 </p>
+<p>下面是一个能够被插入在结束“ <code>head</code>”标签上方的示例 JavaScript 代码 </p>
 
 <pre class="brush: js notranslate"> &lt;script type="application/javascript"&gt;
  function removeOldAlert()
@@ -84,7 +84,7 @@ translation_of: Web/Accessibility/ARIA/forms/alerts
 
 <h2 id="checkValidity_函数"><code>checkValidity</code> 函数</h2>
 
-<p>JavaScript中用于表单验证的主要方法是<code>checkValidity</code>函数。 此方法采用三个参数：要验证的<code>输入</code>的ID，要确保有效性的搜索项，以及要插入警报中的错误消息。</p>
+<p>JavaScript 中用于表单验证的主要方法是<code>checkValidity</code>函数。 此方法采用三个参数：要验证的<code>输入</code>的 ID，要确保有效性的搜索项，以及要插入警报中的错误消息。</p>
 
 <p>要查看其是否有效，该函数将检查<code>输入</code>的<code>indexOf</code>值是否大于<code>-1</code>。 如果在值内找不到搜索词的索引，则返回<code>-1</code>或更小的值。</p>
 
@@ -99,13 +99,13 @@ translation_of: Web/Accessibility/ARIA/forms/alerts
 
 <h2 id="addAlert_函数"><code>addAlert</code> 函数</h2>
 
-<p>此功能首先删除所有旧警报。 该函数很简单：它查找ID为“<code>alert</code>”的元素，如果找到，则将其从<a href="/zh-CN/docs/Mozilla/Tech/XUL/Tutorial/Document_Object_Model">文档对象模型</a>中删除。</p>
+<p>此功能首先删除所有旧警报。 该函数很简单：它查找 ID 为“<code>alert</code>”的元素，如果找到，则将其从<a href="/zh-CN/docs/Mozilla/Tech/XUL/Tutorial/Document_Object_Model">文档对象模型</a>中删除。</p>
 
-<p>接下来，这个函数创建一个<code>div</code>元素来保存警告文本。 它得到了一个 “<code>alert</code>”的ID.，并且它具有“<code>alert</code>”角色集。 这实际上是受ARIA启发的，即使它在属性名称中没有标明“aria”。 这是因为该角色基于<a href="http://www.w3.org/TR/xhtml-role/">XHTML角色属性模块</a>，为简单起见，该模块简单地移植到HTML。</p>
+<p>接下来，这个函数创建一个<code>div</code>元素来保存警告文本。 它得到了一个 “<code>alert</code>”的 ID.，并且它具有“<code>alert</code>”角色集。 这实际上是受 ARIA 启发的，即使它在属性名称中没有标明“aria”。 这是因为该角色基于<a href="http://www.w3.org/TR/xhtml-role/">XHTML 角色属性模块</a>，为简单起见，该模块简单地移植到 HTML。</p>
 
 <p>这些文字被加入这个<code>div</code>元素，然后这个<code>div</code>元素被加入文档。</p>
 
-<p>发生这种情况时，当此<code>div</code>出现时，Firefox将向辅助技术触发“警报”事件。 大多数屏幕阅读器都会自动选择并说出来。 这类似于Firefox中的提示栏，提示您是否要保存密码。 我们刚刚创建的警报没有任何可按的按钮，只是告诉我们出了什么问题。</p>
+<p>发生这种情况时，当此<code>div</code>出现时，Firefox 将向辅助技术触发“警报”事件。 大多数屏幕阅读器都会自动选择并说出来。 这类似于 Firefox 中的提示栏，提示您是否要保存密码。 我们刚刚创建的警报没有任何可按的按钮，只是告诉我们出了什么问题。</p>
 
 <h2 id="修改“onblur”_事件">修改“<code>onblur</code>” 事件</h2>
 
@@ -120,14 +120,14 @@ translation_of: Web/Accessibility/ARIA/forms/alerts
 
 <p><strong>测试示例</strong></p>
 
-<p>如果你在使用Firefox 3和一个当前支持的屏幕阅读器，试试看下面的操作：</p>
+<p>如果你在使用 Firefox 3 和一个当前支持的屏幕阅读器，试试看下面的操作：</p>
 
 <ol>
- <li>在姓名输入框中，只输入你的名。按下Tab键时，您会听到警告，提示您输入了无效的姓名。 然后，您可以向后移Tab键并更正错误。</li>
+ <li>在姓名输入框中，只输入你的名。按下 Tab 键时，您会听到警告，提示您输入了无效的姓名。 然后，您可以向后移 Tab 键并更正错误。</li>
  <li>输入不带“ @”符号的电子邮件地址。 跳出此字段时，您应该听到一条警告，提示您未输入有效的电子邮件地址。</li>
 </ol>
 
-<p>在两种情况下，当将焦点返回到相关字段时，您的屏幕阅读器应该告诉您该字段无效。 JAWS 9 支持这个功能，但是JAWS 8不支持，所以这个功能不一定能够在所有版本的支持的屏幕阅读器中正常工作。</p>
+<p>在两种情况下，当将焦点返回到相关字段时，您的屏幕阅读器应该告诉您该字段无效。 JAWS 9 支持这个功能，但是 JAWS 8 不支持，所以这个功能不一定能够在所有版本的支持的屏幕阅读器中正常工作。</p>
 
 <h2 id="您可能遇到的一些问题">您可能遇到的一些问题</h2>
 
@@ -135,9 +135,9 @@ translation_of: Web/Accessibility/ARIA/forms/alerts
  <dt>
  <p>Q. 为什么在某些输入中同时在标签文本和“<code>aria-required</code>”属性中都添加了“<code>(required)</code>”？</p>
  </dt>
- <dd>A. 如果这是一个实例中的表格，并且尚不支持ARIA的浏览器正在访问该网站，我们仍然希望表明这是必填字段。</dd>
+ <dd>A. 如果这是一个实例中的表格，并且尚不支持 ARIA 的浏览器正在访问该网站，我们仍然希望表明这是必填字段。</dd>
  <dt>Q. 为什么不将焦点自动设置回无效字段？</dt>
- <dd>A. 因为Windows API规范（可能还有其他规范）不允许这样做。 同样，让焦点在没有实际用户交互的情况下过于频繁地跳动通常也不是一件好事。</dd>
+ <dd>A. 因为 Windows API 规范（可能还有其他规范）不允许这样做。 同样，让焦点在没有实际用户交互的情况下过于频繁地跳动通常也不是一件好事。</dd>
 </dl>
 
-<div class="warning">TBD:让我们重新考虑一下-就个人而言，我认为如果不引起键盘陷阱，设置焦点可能会很好。</div>
+<div class="warning">TBD:让我们重新考虑一下 - 就个人而言，我认为如果不引起键盘陷阱，设置焦点可能会很好。</div>

@@ -16,7 +16,9 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 
 ## Syntaxe
 
-    Map[Symbol.species]
+```js
+Map[Symbol.species]
+```
 
 ## Description
 

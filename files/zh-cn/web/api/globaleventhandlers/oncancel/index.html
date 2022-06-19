@@ -15,7 +15,7 @@ translation_of: Web/API/GlobalEventHandlers/oncancel
 
 <p>{{domxref("GlobalEventHandlers")}} 的<code><strong>oncancel</strong></code> 属性是一个{{event("Event_handlers", "event handler")}}，它是用来处理发送给{{HTMLElement("dialog")}}元素的{{event("cancel")}} 事件的。</p>
 
-<p>当用户需要离开一个&lt;dialog&gt;元素的时候就会触发 <code>cancel</code> 事件. 这个事件处理器会防止事件向上传递,因此任何父处理器都不会接受到该事件。</p>
+<p>当用户需要离开一个&lt;dialog&gt;元素的时候就会触发 <code>cancel</code> 事件。这个事件处理器会防止事件向上传递，因此任何父处理器都不会接受到该事件。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -24,9 +24,9 @@ translation_of: Web/API/GlobalEventHandlers/oncancel
 
 <h3 id="参数">参数</h3>
 
-<p><code>functionRef</code> 是一个函数名 或者 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function">函数表达式</a>. 这个函数接收一个 {{domxref("Event")}} 对象作为它唯一的参数.</p>
+<p><code>functionRef</code> 是一个函数名 或者 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function">函数表达式</a>. 这个函数接收一个 {{domxref("Event")}} 对象作为它唯一的参数。</p>
 
-<p>每次只有一个 <code>oncancel</code> 处理器可以被赋值给一个对象. 你可能更喜欢用 {{domxref("EventTarget.addEventListener()")}} 方法, 因为它更灵活.</p>
+<p>每次只有一个 <code>oncancel</code> 处理器可以被赋值给一个对象。你可能更喜欢用 {{domxref("EventTarget.addEventListener()")}} 方法，因为它更灵活。</p>
 
 <h2 id="规范">规范</h2>
 

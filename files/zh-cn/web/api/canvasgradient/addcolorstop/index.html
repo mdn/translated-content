@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasGradient/addColorStop
 ---
 <div>{{APIRef("Canvas")}}</div>
 
-<p><code><strong>CanvasGradient</strong></code><strong><code>.addColorStop()</code></strong> 方法添加一个由<strong><code>偏移值</code></strong>和<strong><code>颜色值</code></strong>指定的断点到渐变。如果偏移值不在<code>0</code>到<code>1</code>之间，将抛出<code>INDEX_SIZE_ERR</code>错误，如果颜色值不能被解析为有效的CSS颜色值 {{cssxref("&lt;color&gt;")}}，将抛出<code>SYNTAX_ERR</code>错误。</p>
+<p><code><strong>CanvasGradient</strong></code><strong><code>.addColorStop()</code></strong> 方法添加一个由<strong><code>偏移值</code></strong>和<strong><code>颜色值</code></strong>指定的断点到渐变。如果偏移值不在<code>0</code>到<code>1</code>之间，将抛出<code>INDEX_SIZE_ERR</code>错误，如果颜色值不能被解析为有效的 CSS 颜色值 {{cssxref("&lt;color&gt;")}}，将抛出<code>SYNTAX_ERR</code>错误。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/API/CanvasGradient/addColorStop
  <dt>offset</dt>
  <dd><code>0</code>到<code>1</code>之间的值，超出范围将抛出<code>INDEX_SIZE_ERR</code>错误</dd>
  <dt>color</dt>
- <dd>CSS颜色值 {{cssxref("&lt;color&gt;")}}。如果颜色值不能被解析为有效的CSS颜色值 <code>&lt;color&gt;</code>，将抛出<code>SYNTAX_ERR</code>错误。</dd>
+ <dd>CSS 颜色值 {{cssxref("&lt;color&gt;")}}。如果颜色值不能被解析为有效的 CSS 颜色值 <code>&lt;color&gt;</code>，将抛出<code>SYNTAX_ERR</code>错误。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -43,7 +43,7 @@ ctx.fillStyle = gradient;
 ctx.fillRect(10,10,200,100);
 </pre>
 
-<p>编辑以下代码可看到画布变化:</p>
+<p>编辑以下代码可看到画布变化：</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
