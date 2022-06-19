@@ -52,7 +52,7 @@ Você pode usar os seguintes pseudo-elementos para customizar diversas partes da
 .mostly-customized-scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
-  background-color: #aaa; /* or add it to the track */
+  background-color: #aaa; /* ou que isso seja adicionado ao "caminho" da barra */
 }
 
 /* Add a thumb */
