@@ -1,96 +1,53 @@
 ---
 title: HTMLEmbedElement
 slug: Web/API/HTMLEmbedElement
+page-type: web-api-interface
 tags:
-  - DOM
-  - DOM Reference
-  - 翻訳中
+  - API
+  - HTML DOM
+  - インターフェイス
+  - NeedsNewLayout
+  - リファレンス
+browser-compat: api.HTMLEmbedElement
 translation_of: Web/API/HTMLEmbedElement
 ---
-<div>{{ApiRef}}</div>
+{{APIRef("HTML DOM")}}
 
-<div class="note">
-<p>この頁では HTML5 標準仕様で定義されている <a href="http://www.w3.org/TR/html5/the-iframe-element.html#htmlembedelement">HTMLEmbedElement</a> インタフェースについて説明しています。HTML5 以前の仕様はこのインタフェースに対応していません。</p>
-</div>
+**`HTMLEmbedElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものに加えて） {{HTMLElement("embed")}} 要素を操作するための特別なプロパティを提供します。
 
-<p>DOM の <code>embed</code> 要素は、その特別なプロパティを操作する為の <a href="http://www.w3.org/TR/html5/the-iframe-element.html#htmlembedelement">HTMLEmbedElement</a> インタフェースを公開します。 <code>embed</code> 要素は通常の {{domxref("HTMLElement")}} オブジェクトインタフェースからも継承により操作可能となっています。</p>
+> **Note:** このトピックでは、標準規格で定義されている `HTMLEmbedElement` インターフェイスについて説明します。それ以前の、標準化されていない版ののインターフェースは扱いません。
 
-<p><code>HTMLElement</code> インタフェースから継承するものの他にいくつかの固有プロパティを持ちます。</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">名称</th>
-   <th scope="col">型</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>align</code> {{obsolete_inline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are <code>"left"</code>, <code>"right"</code>, <code>"center"</code>, and <code>"justify"</code>.</td>
-  </tr>
-  <tr>
-   <td><code>height</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>{{htmlattrxref("height", "embed")}} HTML 属性を反映。リソースの高さ（※内部的な数値でない、実際に表示されているリソースの高さ）を含む</td>
-  </tr>
-  <tr>
-   <td><code>name</code> {{obsolete_inline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The name of the embedded object.</td>
-  </tr>
-  <tr>
-   <td><code>src</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>{{htmlattrxref("src", "embed")}} HTML 属性を反映。リソースのアドレスを含む</td>
-  </tr>
-  <tr>
-   <td><code>type</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>{{htmlattrxref("type", "embed")}} HTML 属性を反映。リソースの型を含む</td>
-  </tr>
-  <tr>
-   <td><code>width</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>{{htmlattrxref("width", "embed")}} HTML 属性を反映。リソースの幅（※内部的な数値でない、実際に表示されているリソースの幅）を含む</td>
-  </tr>
- </tbody>
-</table>
+- {{domxref("HTMLEmbedElement.align")}} {{deprecated_inline}}
+  - : 列挙型のプロパティを表す文字列で、要素の内容を周囲のコンテキストから見てどう配置するかを示します。指定可能な値は `"left"`, `"right"`, `"center"`, `"justify"` です。
+- {{domxref("HTMLEmbedElement.height")}}
+  - : 文字列で HTML の {{htmlattrxref("height", "embed")}} 属性を反映しており、リソースが表示される高さが入ります。
+- {{domxref("HTMLEmbedElement.name")}} {{deprecated_inline}}
+  - : 文字列で、埋め込まれたオブジェクトの名前を表します。
+- {{domxref("HTMLEmbedElement.src")}}
+  - : 文字列で HTML の {{htmlattrxref("src", "embed")}} 属性を反映しており、リソースの場所が入ります。
+- {{domxref("HTMLEmbedElement.type")}}
+  - : 文字列で HTML の {{htmlattrxref("type", "embed")}} 属性を反映しており、リソースの型が入ります。
+- {{domxref("HTMLEmbedElement.width")}}
+  - : 文字列で HTML の {{htmlattrxref("height", "embed")}} 属性を反映しており、リソースが表示される幅が入ります。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## メソッド
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "embedded-content-0.html#the-embed-element", "HTMLEmbedElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}, but it formally adds two obsolete properties, <code>name</code> and <code>align</code>, to help with compatibility with old Web sites.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-embed-element", "HTMLEmbedElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## 仕様書
 
-<p>{{Compat("api.HTMLEmbedElement")}}</p>
+{{Specifications}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## ブラウザーの互換性
 
-<ul>
- <li>{{HTMLElement('embed')}} 要素 - HTMLEmbedElement インタフェースを持つ HTML 要素</li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- このインターフェイスを実装している HTML 要素: {{ HTMLElement("embed") }}

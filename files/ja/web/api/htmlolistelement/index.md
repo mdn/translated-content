@@ -1,88 +1,54 @@
 ---
 title: HTMLOListElement
 slug: Web/API/HTMLOListElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
-  - Interface
-  - Reference
+  - インターフェイス
+  - リファレンス
+browser-compat: api.HTMLOListElement
 translation_of: Web/API/HTMLOListElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p><strong><code>HTMLOListElement</code></strong> インターフェイスは  インターフェイスは、 (<a href="/ja/docs/Web/API/HTMLElement"><code>HTMLElement</code></a> から継承したものより詳細に) <a href="/ja/docs/Web/HTML/Element/ol" title="HTML の &lt;button> 要素はクリックできるボタンを表し、フォームや、文書で単純なボタン機能が必要なあらゆる場所で使用することができます。"><code>&lt;ol&gt;</code></a> 要素を操作するためのプロパティやメソッドを提供します。</p>
+**`HTMLOListElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものに加えて）順序付きリスト要素を操作するための特別なプロパティを提供します。
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## プロパティ
 
-<p><em>親である <a href="/ja/docs/Web/API/HTMLElement"><code>HTMLElement</code></a> からプロパティを継承しています。</em></p>
+_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
-<dl>
- <dt>{{domxref("HTMLOListElement.reversed")}}</dt>
- <dd>{{domxref("Boolean")}} で、{{htmlattrxref("reversed", "ol")}} を反映します。番号が降順の場合は<code>true</code>で、昇順の場合は<code>falseです。</code></dd>
- <dt>{{domxref("HTMLOListElement.start")}}</dt>
- <dd>Is a <code>long</code> value reflecting the {{htmlattrxref("start", "ol")}} and defining the value of the first number of the first element of the list.</dd>
- <dt>{{domxref("HTMLOListElement.type")}}</dt>
- <dd>Is a {{domxref("DOMString")}} value reflecting the {{htmlattrxref("type", "ol")}} and defining the kind of marker to be used to display. It can have the following values:
- <ul>
-  <li><code>'1'</code> meaning that decimal numbers are used: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, …</li>
-  <li><code>'a'</code> meaning that the lowercase latin alphabet is used:  <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>, <code>e</code>, …</li>
-  <li><code>'A'</code> meaning that the uppercase latin alphabet is used: <code>A</code>, <code>B</code>, <code>C</code>, <code>D</code>, <code>E</code>, …</li>
-  <li><code>'i'</code> meaning that the lowercase latin numerals are used: <code>i</code>, <code>ii</code>, <code>iii</code>, <code>iv</code>, <code>v</code>, …</li>
-  <li><code>'I'</code> meaning that the uppercase latin numerals are used: <code>I</code>, <code>II</code>, <code>III</code>, <code>IV</code>, <code>V</code>, …</li>
- </ul>
- </dd>
- <dt>{{domxref("HTMLOListElement.compact")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("Boolean")}} indicating that spacing between list items should be reduced. This property reflects the {{htmlattrxref("compact", "ol")}} attribute only, it doesn't consider the {{cssxref("line-height")}} CSS property used for that behavior in modern pages.</dd>
-</dl>
+- {{domxref("HTMLOListElement.reversed")}}
+  - : 論理値で {{htmlattrxref("reversed", "ol")}} を反映しており、番号が降順なるのであれば値が `true` を、昇順になるのであれば `false` を定義します。
+- {{domxref("HTMLOListElement.start")}}
+  - : `long` 型の値で {{htmlattrxref("start", "ol")}} を反映しており、リストの最初の要素の最初の番号の値を定義します。
+- {{domxref("HTMLOListElement.type")}}
 
-<h2 id="Methods">Methods</h2>
+  - : 文字列で {{htmlattrxref("type", "ol")}} を反映しており、表示に使用するマーカーの種類を定義します。以下の値を取ることができます。
 
-<p><em>固有のメソッドはありません。親である{{domxref("HTMLElement")}}からメソッドを継承しています。</em></p>
+    - `'1'` は数字が使用されることを意味します。例: `1`, `2`, `3`, `4`, `5`, …
+    - `'a'` は小文字のラテンアルファベットが使用されることを意味します。例:  `a`, `b`, `c`, `d`, `e`, …
+    - `'A'` は大文字のラテンアルファベットが使用されることを意味します。例: `A`, `B`, `C`, `D`, `E`, …
+    - `'i'` は小文字のラテン数字が使用されることを意味します。例: `i`, `ii`, `iii`, `iv`, `v`, …
+    - `'I'` は大文字のラテン数字が使用されることを意味します。例: `I`, `II`, `III`, `IV`, `V`, …
 
-<h2 id="Specifications">Specifications</h2>
+- {{domxref("HTMLOListElement.compact")}} {{deprecated_inline}}
+  - : 論理値で、リスト項目間の間隔を縮小すべきであることを示します。このプロパティは {{htmlattrxref("compact", "ol")}} 属性を反映するのみで、最近のページでは、その動作に使用される CSS の {{cssxref("line-height")}} プロパティは考慮されません。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlolistelement", "HTMLOListElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "grouping-content.html#the-ol-element", "HTMLOListElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td><code>reversed</code> プロパティが追加された。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-58056027', 'HTMLOListElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>{{SpecName("DOM1")}}から変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-58056027', 'HTMLOListElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+## メソッド
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
+## 仕様書
 
+{{Specifications}}
 
-<p>{{Compat("api.HTMLOListElement")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>このインターフェイスを実装している HTML 要素: {{ HTMLElement("ol") }}</li>
-</ul>
+## 関連情報
+
+- このインターフェイスを実装している HTML 要素: {{ HTMLElement("ol") }}
