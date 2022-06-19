@@ -13,7 +13,9 @@ original_slug: Glossaire/Quality_values
 
 La syntaxe suivante :
 
-    text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+```
+text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+```
 
 indique l'ordre de priorité :
 
@@ -25,7 +27,9 @@ indique l'ordre de priorité :
 
 S'il n'y a pas de priorité définie pour les deux premières valeurs, l'ordre dans la liste est sans importance. Néanmoins, avec la même qualité, des valeurs plus spécifiques ont la priorité sur celles qui le sont moins :
 
-    text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
+```
+text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
+```
 
 | Valeur      | Priorité                       |
 | ----------- | ------------------------------ |

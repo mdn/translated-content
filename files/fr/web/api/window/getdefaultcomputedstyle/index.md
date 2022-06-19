@@ -14,7 +14,9 @@ translation_of: Web/API/window/getDefaultComputedStyle
 
 ## Syntaxe
 
-    var miseEnForme = window.getDefaultComputedStyle(element[, pseudoElt]);
+```js
+var miseEnForme = window.getDefaultComputedStyle(element[, pseudoElt]);
+```
 
 - element
   - : L'{{domxref("Element")}} dont on veut obtenir la mise en forme calculée.

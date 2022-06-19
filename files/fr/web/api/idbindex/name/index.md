@@ -17,8 +17,10 @@ La propriété **`name`**, rattachée à l'interface {{domxref("IDBIndex")}}, co
 
 ## Syntaxe
 
-    var indexName = IDBIndex.name;
-    IDBIndex.name = indexName;
+```js
+var indexName = IDBIndex.name;
+IDBIndex.name = indexName;
+```
 
 ### Valeur
 

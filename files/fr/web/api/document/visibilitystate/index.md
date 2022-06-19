@@ -24,7 +24,9 @@ L'utilisation typique de ceci peut être d'empêcher le téléchargement de cert
 
 ## Syntaxe
 
-    var string = document.visibilityState
+```js
+var string = document.visibilityState
+```
 
 ## Exemples
 

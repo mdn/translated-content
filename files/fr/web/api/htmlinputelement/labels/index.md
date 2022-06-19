@@ -14,7 +14,9 @@ La propriété en lecture seule **`HTMLInputElement.labels`** renvoie une {{domx
 
 ## Syntaxe
 
-    var labelElements = input.labels;
+```js
+var labelElements = input.labels;
+```
 
 ### Valeur retournée
 

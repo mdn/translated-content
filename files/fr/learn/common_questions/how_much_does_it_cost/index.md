@@ -126,8 +126,8 @@ Vous pouvez également utiliser un environnement pré-paramétré par votre héb
 
 Si des options gratuites existent, pourquoi donc faudrait-il payer pour un hébergement ?
 
-1.  Un hébergement payant vous permet d'avoir plus de libertés : votre site vous appartient et vous pouvez le migrer d'un hébergeur à un autre lorsque c'est nécessaire.
-2.  Un hébergement gratuit est souvent accompagné de publicité et vous contrôlez moins votre contenu.
+1. Un hébergement payant vous permet d'avoir plus de libertés : votre site vous appartient et vous pouvez le migrer d'un hébergeur à un autre lorsque c'est nécessaire.
+2. Un hébergement gratuit est souvent accompagné de publicité et vous contrôlez moins votre contenu.
 
 Certains choisissent une approche hybride en hébergeant leur site principal avec un nom de domaine et un hébergeur payants et utilisent un service gratuit pour héberger des contenus moins stratégiques.
 

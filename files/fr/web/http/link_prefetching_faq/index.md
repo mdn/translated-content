@@ -21,15 +21,21 @@ Le préchargement de liens est un mécanisme du navigateur qui utilise le temps 
 
 Le navigateur cherche soit une balise HTML `link`, soit un en-tête HTTP `Link:` avec un type de relation `next` ou `prefetch`. Ci-dessous, un exemple d’utilisation de la balise `link`&nbsp;:
 
-    <link rel="prefetch" href="/images/big.jpeg">
+```html
+<link rel="prefetch" href="/images/big.jpeg">
+```
 
 La même cible à précharger, cette fois avec un en-tête HTTP `Link:`&nbsp;:
 
-    Link: </images/big.jpeg>; rel=prefetch
+```
+Link: </images/big.jpeg>; rel=prefetch
+```
 
 L’en-tête `Link:` peut également être spécifiée à l’intérieur d’un document HTML en utilisant une balise HTML `meta`&nbsp;:
 
-    <meta http-equiv="Link" content="&lt;/images/big.jpeg&gt;; rel=prefetch">
+```html
+<meta http-equiv="Link" content="&lt;/images/big.jpeg&gt;; rel=prefetch">
+```
 
 Le format pour l’en-tête `Link:`est décrit dans le [RFC 2068](http://tools.ietf.org/html/rfc2068) section 19.6.2.4.
 
@@ -39,8 +45,10 @@ Le navigateur surveille toutes ces cibles et met en attente chaque requête uniq
 
 Quelques exemples en plus, ci-dessous&nbsp;:
 
-    <link rel="prefetch alternate stylesheet" title="Designed for Mozilla" href="mozspecific.css">
-    <link rel="next" href="2.html">
+```html
+<link rel="prefetch alternate stylesheet" title="Designed for Mozilla" href="mozspecific.css">
+<link rel="next" href="2.html">
+```
 
 ### Les balises ancres (\<a>) sont-elles préchargées&nbsp;?
 
@@ -80,7 +88,9 @@ Cela peut impacter l'analyse de l'affluence qui est communément utilisée sur d
 
 Oui, l'en-tête suivant est envoyé avec chaque requête préchargée&nbsp;:
 
-     X-moz: prefetch
+```
+X-moz: prefetch
+```
 
 Bien sûr, cet en-tête de requête n'est absolument pas standardisé et il peut changer dans les futures versions de Mozilla.
 
@@ -88,7 +98,9 @@ Bien sûr, cet en-tête de requête n'est absolument pas standardisé et il peut
 
 Oui, il existe une préférence cachée pour désactiver le préchargement de liens. Ajoutez cette ligne dans votre fichier prefs.js qui se trouve dans votre répertoire de profil (ou faite le changement approprié via `about:config`)&nbsp;:
 
-     user_pref("network.prefetch-next", false);
+```
+user_pref("network.prefetch-next", false);
+```
 
 Toutefois, la théorie est que si le préchargement de liens a besoin d'être désactivé c'est qu'il doit y avoir un problème dans l'implémentation. On doit améliorer l'implémentation si ça ne marche pas correctement plutôt que d'attendre que l'utilisateur trouve et modifie une obscure préférence.
 
@@ -96,8 +108,8 @@ Toutefois, la théorie est que si le préchargement de liens a besoin d'être d�
 
 En fait, il y a deux façons d'aborder ce problème&nbsp;:
 
-1.  Les sites Web peuvent provoquer le chargement de choses de façon transparente en utilisant des hacks JS/DOM.
-2.  Le préchargement est une fonctionnalité du navigateur, les utilisateurs devraient pouvoir le désactiver facilement.
+1. Les sites Web peuvent provoquer le chargement de choses de façon transparente en utilisant des hacks JS/DOM.
+2. Le préchargement est une fonctionnalité du navigateur, les utilisateurs devraient pouvoir le désactiver facilement.
 
 Il est important que les sites web adoptent la balise `<link>` pour le préchargement, plutôt que d'essayer d'initier le chargement en tâche de fond avec des hacks JS/DOM. La balise `<link>` donne au navigateur la capacité de savoir quels sites sont à charger et on peut utiliser cette information pour améliorer le système de priorité du préchargement des liens. La préférence utilisateur pour désactiver le préchargement par la balise `<link>` encourage simplement les sites Web à s'abstenir d'utiliser des hacks JS/DOM. Cela n'apporterait rien de positif aux utilisateurs. C'est une des raisons pour lesquelles le préchargement est activé par défaut.
 

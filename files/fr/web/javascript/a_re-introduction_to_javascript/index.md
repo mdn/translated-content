@@ -194,8 +194,8 @@ JavaScript fait la distinction entre [`null`](/fr/docs/Web/JavaScript/Reference/
 
 JavaScript dispose d'un type booléen, dont les valeurs possibles sont `true` (vrai) et `false` (faux). L'un et l'autre sont des mots clés. Toute valeur peut être convertie en une valeur booléenne selon les règles suivantes :
 
-1.  `false`, `0`, la chaîne vide (`""`), `NaN`, `null` et `undefined` deviennent toutes `false`
-2.  toutes les autres valeurs deviennent `true`.
+1. `false`, `0`, la chaîne vide (`""`), `NaN`, `null` et `undefined` deviennent toutes `false`
+2. toutes les autres valeurs deviennent `true`.
 
 Cette conversion peut être faite de manière explicite à l'aide de la fonction `Boolean()` :
 

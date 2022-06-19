@@ -13,13 +13,13 @@ original_slug: Jeux/Introduction_to_HTML5_Game_Gevelopment_(summary)
 
 ## Avantages
 
-1.  Les jeux construits avec HTML5 fonctionnent sur les smartphones, les tablettes, les PC et les téléviseurs intelligents.
-2.  Annoncez et promouvez votre jeu sur le Web, ainsi que sur d'autres médias.
-3.  Paiements. Chargez ce que vous voulez et utilisez le service de traitement des paiements de votre choix.
-4.  Mettez à jour votre jeu quand vous le souhaitez.
-5.  Collectez vos propres analyses !
-6.  Connectez-vous plus étroitement avec vos clients,
-7.  Les joueurs peuvent jouer au jeu n'importe où, n'importe quand.
+1. Les jeux construits avec HTML5 fonctionnent sur les smartphones, les tablettes, les PC et les téléviseurs intelligents.
+2. Annoncez et promouvez votre jeu sur le Web, ainsi que sur d'autres médias.
+3. Paiements. Chargez ce que vous voulez et utilisez le service de traitement des paiements de votre choix.
+4. Mettez à jour votre jeu quand vous le souhaitez.
+5. Collectez vos propres analyses !
+6. Connectez-vous plus étroitement avec vos clients,
+7. Les joueurs peuvent jouer au jeu n'importe où, n'importe quand.
 
 ## Technologies Web
 

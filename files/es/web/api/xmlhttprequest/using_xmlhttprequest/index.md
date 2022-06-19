@@ -15,7 +15,7 @@ como para los más inusuales.
 Para enviar una solicitud HTTP, cree un objeto `XMLHttpRequest`, abra una URL y
 envíe la solicitud. Una vez que la transacción haya sido completada, el objeto
 contendrá información útil tal como el cuerpo de la respuesta y el estado [HTTP
-status](/en-US/docs/Web/HTTP/Status) del resultado.
+status](/es/docs/Web/HTTP/Status) del resultado.
 
 ```js
 function reqListener () {
@@ -37,7 +37,7 @@ de forma asíncrona o sincrónica. El tipo de petición viene dictado por el arg
 no se especifica, la `XMLHttpRequest` se procesa de forma asíncrona, de lo contrario
 el proceso se realiza de forma síncrona. Una discusión detallada y demostraciones de estos
 de estos dos tipos de peticiones en la página [peticiones síncronas
-y asíncronas](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). No utilice solicitudes sincrónicas fuera de los Web
+y asíncronas](/es/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). No utilice solicitudes sincrónicas fuera de los Web
 Workers.
 
 > **Nota:** A partir de Gecko 30.0 {{ geckoRelease("30.0")
@@ -79,7 +79,7 @@ Principalmente hay cuatro formas de analizar este documento XML:
 > **Nota:** `XMLHttpRequest` ahora puede interpretar HTML por ti
 > utilizando la propiedad {{domxref("XMLHttpRequest.responseXML", "responseXML")}}. Lea el
 > artículo sobre [HTML
-> en XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) para aprender como hacerlo.
+> en XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) para aprender como hacerlo.
 
 ### Procesamiento de una propiedad responseText que contiene un documento HTML
 
@@ -90,8 +90,8 @@ tres formas de analizar y parsear esta cadena de HTML en bruto:
 
 1. Utilizar la propiedad `XMLHttpRequest.responseXML` como se explica en el artículo
     [HTML en
-    XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
-2. Inyectar el contenido en el cuerpo de un [fragmento de documento](/en-US/docs/Web/API/DocumentFragment) mediante
+    XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+2. Inyectar el contenido en el cuerpo de un [fragmento de documento](/es/docs/Web/API/DocumentFragment) mediante
     `fragment.body.innerHTML` y recorrer el DOM del fragmento.
 3. {{jsxref("RegExp")}} puede utilizarse si siempre se conoce el contenido del HTML
     `responseText` de antemano. Es posible que desee eliminar los saltos de línea, si utiliza `RegExp` para
@@ -136,7 +136,7 @@ oReq.send();
 ```
 
 Para ver más ejemplos, consulte la página [Envío y
-recepción de datos binarios](/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data)
+recepción de datos binarios](/es/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data)
 
 ## Seguimiento del progreso
 
@@ -256,7 +256,8 @@ Las instancias de `XMLHttpRequest` pueden utilizarse para enviar formularios de 
 - utilizando la API {{domxref("FormData")}}
 
 El uso de la API `FormData` es el más sencillo y rápido, pero tiene la
-desventaja de que los datos recogidos no pueden ser [stringificados](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+desventaja de que los datos recogidos no pueden ser [stringificados](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+
 Utilizar sólo AJAX es más complejo, pero suele ser más flexible y potente.
 
 ### Usando nada más que `XMLHttpRequest`
@@ -303,7 +304,7 @@ dependiendo del tipo de codificación que esté utilizando:
   ```
 
 - Método: `POST`; Tipo de codificación:
-  [`multipart/form-data`](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data):
+  [`multipart/form-data`](/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data):
 
   ```plain
   Content-Type: multipart/form-data; boundary=---------------------------314911788813839
@@ -350,7 +351,7 @@ formas de _enviar_, y de **subir archivos**:
 |*|
 |*|  :: XMLHttpRequest.prototype.sendAsBinary() Polyfill ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
+|*|  https://developer.mozilla.org/es/docs/DOM/XMLHttpRequest#sendAsBinary()
 \*/
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
@@ -369,7 +370,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 |*|
 |*|  :: AJAX Framework de envío de formulario ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
+|*|  https://developer.mozilla.org/es/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
 |*|
 |*|  Este framework está publicado bajo la licencia pública GNU, versión 3 o posterior.
 |*|  https://www.gnu.org/licenses/gpl-3.0-standalone.html
@@ -914,7 +915,7 @@ Establecer `overrideMimeType` no funciona desde un {{domxref("Worker")}}. Ver
 
 1. [MDN introducción a AJAX](/es/docs/Web/Guide/AJAX/Getting_Started)
 1. [HTML en
-    XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+    XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
 1. [Control de acceso HTTP](/es/docs/Web/HTTP/CORS)
 1. [XMLHttpRequest -
     REST y la experiencia de usuario enriquecida](https://www.peej.co.uk/articles/rich-user-experience.html)

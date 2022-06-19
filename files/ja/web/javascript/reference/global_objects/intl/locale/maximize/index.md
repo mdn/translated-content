@@ -18,7 +18,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 
 {{EmbedInteractiveExample("pages/js/intl-locale-prototype-maximize.html")}}
 
-
 ## 構文
 
 ```js

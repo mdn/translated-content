@@ -24,9 +24,11 @@ Les objets `Cache` sont cherchés par ordre de création.
 
 ## Syntaxe
 
-    caches.match(request,{options}).then(function(response) {
-      // faire quelque-chose avec la requête et la réponse
-    });
+```js
+caches.match(request,{options}).then(function(response) {
+  // faire quelque-chose avec la requête et la réponse
+});
+```
 
 ### Paramètres
 
@@ -49,9 +51,9 @@ Une {{jsxref("Promise", "Promesse")}} qui renvoie les {{domxref("Response", "Ré
 
 Cet exemple est tiré du MDN [sw-test example](https://github.com/mdn/sw-test/) (voir [sw-test running live](https://mdn.github.io/sw-test/)). Nous attendons pour un évènement {{domxref("FetchEvent")}} et nous construisons une réponse comme suit:
 
-1.  Vérifier si une correspondance pour la requète est trouvée dans le {{domxref("CacheStorage")}} en utilisant {{domxref("CacheStorage.match")}}. Si oui, la servir.
-2.  Si non, ouvrire le cache `v1` avec `open()`, mettre le réseau par défaut dans le cache avec {{domxref("Cache.put")}} et retourner un clone du réseau par défaut en utilisant `return response.clone()` — obligatoire car `put()` détruit le corps de la réponse.
-3.  Si ceci échoue (e.g., parce que le réseau est inactif), retourner une réponse de secours.
+1. Vérifier si une correspondance pour la requète est trouvée dans le {{domxref("CacheStorage")}} en utilisant {{domxref("CacheStorage.match")}}. Si oui, la servir.
+2. Si non, ouvrire le cache `v1` avec `open()`, mettre le réseau par défaut dans le cache avec {{domxref("Cache.put")}} et retourner un clone du réseau par défaut en utilisant `return response.clone()` — obligatoire car `put()` détruit le corps de la réponse.
+3. Si ceci échoue (e.g., parce que le réseau est inactif), retourner une réponse de secours.
 
 ```js
 self.addEventListener('fetch', function(event) {

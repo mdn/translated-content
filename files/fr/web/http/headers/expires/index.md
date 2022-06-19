@@ -32,7 +32,9 @@ Si un header {{HTTPHeader("Cache-Control")}} contient une directive "max-age" ou
 
 ## Syntaxe
 
-    Expires: <http-date>
+```
+Expires: <http-date>
+```
 
 ## Directives
 
@@ -41,7 +43,9 @@ Si un header {{HTTPHeader("Cache-Control")}} contient une directive "max-age" ou
 
 ## Exemples
 
-    Expires: Wed, 21 Oct 2015 07:28:00 GMT
+```
+Expires: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Spécifications
 

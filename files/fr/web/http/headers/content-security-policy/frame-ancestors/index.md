@@ -46,8 +46,10 @@ Définir cette directive à `'none'` est comparable à len-tête HTTP {{HTTPHead
 
 Une ou plusieurs sources peuvent être autorisées pour cette directive :
 
-    Content-Security-Policy: frame-ancestors <source>;
-    Content-Security-Policy: frame-ancestors <source> <source>;
+```
+Content-Security-Policy: frame-ancestors <source>;
+Content-Security-Policy: frame-ancestors <source> <source>;
+```
 
 ### Sources
 

@@ -19,7 +19,9 @@ Si les sélecteurs spécifiés dans paramètre sont invalides une {{domxref("DOM
 
 ## Syntaxe
 
-    element = documentfragment.querySelector(selectors);
+```js
+element = documentfragment.querySelector(selectors);
+```
 
 ### Paramètres
 

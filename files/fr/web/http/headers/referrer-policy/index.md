@@ -35,14 +35,16 @@ L'en-tête {{glossary("HTTP header")}} **`Referrer-Policy`** contrôle la quanti
 
 > **Note :** Le nom originel de l'en-tête, {{HTTPHeader("Referer")}}, est une faute de frappe du mot anglais "referrer". L'en-tête `Referrer-Policy` ne comporte pas cette erreur.
 
-    Referrer-Policy: no-referrer
-    Referrer-Policy: no-referrer-when-downgrade
-    Referrer-Policy: origin
-    Referrer-Policy: origin-when-cross-origin
-    Referrer-Policy: same-origin
-    Referrer-Policy: strict-origin
-    Referrer-Policy: strict-origin-when-cross-origin
-    Referrer-Policy: unsafe-url
+```
+Referrer-Policy: no-referrer
+Referrer-Policy: no-referrer-when-downgrade
+Referrer-Policy: origin
+Referrer-Policy: origin-when-cross-origin
+Referrer-Policy: same-origin
+Referrer-Policy: strict-origin
+Referrer-Policy: strict-origin-when-cross-origin
+Referrer-Policy: unsafe-url
+```
 
 ## Directives
 
@@ -204,7 +206,9 @@ CSS peut demander des ressources référencées dans des feuilles de styles. Ces
 
 Si vous voulez spécifier une règle à appliquer par défaut dans les où la règle voulue n'est pas supportée par les navigateurs, utilisez un liste de valeurs séparées par des virgules avec la règle voulue fournie en dernière position :
 
-    Referrer-Policy: no-referrer, strict-origin-when-cross-origin
+```
+Referrer-Policy: no-referrer, strict-origin-when-cross-origin
+```
 
 Ici, `no-referrer` ne sera utilisée que si `strict-origin-when-cross-origin` n'est pas supportée par le navigateur.
 

@@ -11,7 +11,9 @@ Voir aussi la méthode {{domxref("CanvasRenderingContext2D.fillText()")}} pour d
 
 ## Syntaxe
 
-    void ctx.strokeText(texte, x, y [, largeurMax]);
+```js
+void ctx.strokeText(texte, x, y [, largeurMax]);
+```
 
 ### Paramètres
 

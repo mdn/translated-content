@@ -15,7 +15,9 @@ La méthode `WebGLRenderingContext.getShaderParameter()` de l'API WebGL retourne
 
 ## Syntaxe
 
-    quelconque gl.getShaderParameter(shader, nomp);
+```js
+quelconque gl.getShaderParameter(shader, nomp);
+```
 
 ### Parameters
 

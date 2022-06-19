@@ -21,10 +21,12 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ## Syntaxe
 
-    var removing = browser.tabs.removeCSS(
-      tabId,           // optional integer
-      details          // object
-    )
+```js
+var removing = browser.tabs.removeCSS(
+  tabId,           // optional integer
+  details          // object
+)
+```
 
 ### Paramètres
 
