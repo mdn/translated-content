@@ -44,7 +44,7 @@ Limpar o cache do navegador:
 
 ```js
 function onRemoved() {
-  console.log("removed");
+  console.log("removido");
 }
 
 function onError(error) {
