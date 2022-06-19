@@ -18,8 +18,8 @@ translation_of: Web/CSS/z-index
 
 位置指定されたボックス (つまり、`position` が `static` 以外のもの) では、`z-index` プロパティが以下のことを定義します。
 
-1.  現在の[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)におけるボックスの重ね合わせレベル
-2.  ボックスがローカルな重ね合わせコンテキストを作るかどうか
+1. 現在の[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)におけるボックスの重ね合わせレベル
+2. ボックスがローカルな重ね合わせコンテキストを作るかどうか
 
 ## 構文
 

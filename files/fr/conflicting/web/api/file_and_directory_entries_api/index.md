@@ -22,14 +22,16 @@ La méthode `requestFileSystem()` permet d'indiquer si on souhaite un stockage p
 
 Pour utiliser un stockage permanent, Chrome expose la méthode `requestQuota`. Il faut invoquer cette méthode ainsi :
 
-    var requestedBytes = 1024*1024*10; // 10MB
+```js
+var requestedBytes = 1024*1024*10; // 10MB
 
-    navigator.webkitPersistentStorage.requestQuota (
-        requestedBytes, function(grantedBytes) {
-            window.requestFileSystem(PERSISTENT, grantedBytes, onInitFs, errorHandler);
+navigator.webkitPersistentStorage.requestQuota (
+  requestedBytes, function(grantedBytes) {
+    window.requestFileSystem(PERSISTENT, grantedBytes, onInitFs, errorHandler);
 
-        }, function(e) { console.log('Error', e); }
-    );
+  }, function(e) { console.log('Error', e); }
+);
+```
 
 L'utilisateur doit fournir la permission à l'application pour enregistrer des données locales avant que l'application puisse utiliser le stockage permanent. Une fois que l'utilisateur a autorisé l'accès, il n'est plus nécessaire d'appeler `requestQuota()` (des appels ultérieurs n'auront aucun effet).
 
@@ -68,12 +70,14 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
 
 Cette méthode permet de demander l'accès à uyn système de fichier pour stocker des données. On peut ainsi accéder à un système de fichier placé dans un bac à sable en demandant un objet `LocalFileSystem` avec la méthode globale `window.requestFileSystem()`.
 
-    void requestFileSystem(
-      in unsigned short type,
-      in unsigned long long size,
-      in FileSystemCallback successCallback,
-      in ErrorCallback errorCallback
-    );
+```
+void requestFileSystem(
+  in unsigned short type,
+  in unsigned long long size,
+  in FileSystemCallback successCallback,
+  in ErrorCallback errorCallback
+);
+```
 
 #### Paramètres
 
@@ -107,11 +111,13 @@ Cette méthode peut lever une exception [`FileError`](/en-US/docs/Web/API/FileEr
 
 Cette méthode permet de consulter une entrée pour un fichier ou un répertoire avec une URL locale.
 
-    void resolveLocalFileSystemURL(
-      in DOMString url,
-      in EntryCallback successCallback,
-      in optional ErrorCallback errorCallback
-    );
+```
+void resolveLocalFileSystemURL(
+  in DOMString url,
+  in EntryCallback successCallback,
+  in optional ErrorCallback errorCallback
+);
+```
 
 #### Paramètres
 

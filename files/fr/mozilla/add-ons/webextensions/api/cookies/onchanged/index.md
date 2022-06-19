@@ -19,8 +19,8 @@ L'événement `onChanged` de l'API {{WebExtAPIRef("cookies")}} est déclenché l
 
 Notez que la mise à jour des propriétés d'un cookie est implémentée en deux étapes :
 
-1.  Tout d'abord, le cookie à mettre à jour est tout d'abord entiérement supprimé, généralement une notification avec un  {{WebExtAPIRef("cookies.OnChangedCause")}} d'écrasement.
-2.  Ensuite, un nouveau cookie est écrit avec les valeurs mises à jour, généralement une seconde notification avec un {{WebExtAPIRef("cookies.OnChangedCause")}} `explicite`.
+1. Tout d'abord, le cookie à mettre à jour est tout d'abord entiérement supprimé, généralement une notification avec un  {{WebExtAPIRef("cookies.OnChangedCause")}} d'écrasement.
+2. Ensuite, un nouveau cookie est écrit avec les valeurs mises à jour, généralement une seconde notification avec un {{WebExtAPIRef("cookies.OnChangedCause")}} `explicite`.
 
 ## Syntaxe
 

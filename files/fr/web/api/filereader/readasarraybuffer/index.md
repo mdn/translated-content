@@ -16,7 +16,9 @@ La méthode **`readAsArrayBuffer()`** de l'interface {{domxref("FileReader")}} p
 
 ## Syntaxe
 
-    instanceOfFileReader.readAsArrayBuffer(blob);
+```js
+instanceOfFileReader.readAsArrayBuffer(blob);
+```
 
 ### Paramètres
 

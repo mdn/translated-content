@@ -16,9 +16,9 @@ Les langages de bas niveau, tels que C, possèdent des primitives permettant de 
 
 Quel que soit le langage de programmation, le cycle de vie de la mémoire ressemblera à :
 
-1.  Allouer la mémoire dont on a besoin
-2.  Utiliser cette mémoire allouée (lecture, écriture)
-3.  Libérer la mémoire allouée lorsqu'on n'en a plus besoin
+1. Allouer la mémoire dont on a besoin
+2. Utiliser cette mémoire allouée (lecture, écriture)
+3. Libérer la mémoire allouée lorsqu'on n'en a plus besoin
 
 Le deuxième point est explicite, au niveau du code, pour tous les langages de programmation. Le premier et le troisième points sont explicites pour les langages de bas niveau mais souvent implicites pour les langages de haut niveau tels que JavaScript.
 

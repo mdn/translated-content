@@ -76,10 +76,10 @@ A la différence des fonctions de trajet que nous allons voir dans la prochaine 
 
 Les seules autres formes primitives sont les _trajets_. Un trajet est une liste de points, reliés par des segments de lignes qui peuvent être de différentes formes, incurvées ou non, de largeur différente et de couleur différente. Un trajet, ou même un sous-trajet, peut être fermé. La réalisation de formes utilisant des trajets requiert quelques étapes supplémentaires :
 
-1.  Tout d'abord, vous devez créer le trajet.
-2.  Ensuite vous devez utiliser des [instructions de dessin](/fr-FR/docs/Web/API/CanvasRenderingContext2D#Paths) pour dessiner sur le trajet.
-3.  Finalement, vous devez fermer le trajet.
-4.  Une fois que le trajet a été créé, vous devez le tracer ou le remplir pour le faire apparaître.
+1. Tout d'abord, vous devez créer le trajet.
+2. Ensuite vous devez utiliser des [instructions de dessin](/fr-FR/docs/Web/API/CanvasRenderingContext2D#Paths) pour dessiner sur le trajet.
+3. Finalement, vous devez fermer le trajet.
+4. Une fois que le trajet a été créé, vous devez le tracer ou le remplir pour le faire apparaître.
 
 Voici les functions utilisées pour réaliser ces étapes :
 
@@ -501,11 +501,11 @@ Comme nous l'avons vu dans le dernier exemple, il peut y avoir une série de tra
 - {{domxref("Path2D.Path2D", "Path2D()")}}
   - : Le constructor **`Path2D()`** retourne un objet `Path2D` nouvellement instancié, optionellement avec un autre trajet comme argument (crée une copie), ou optionellement avec une chaîne constituée de données de [trajet SVG](/fr-FR/docs/Web/SVG/Tutorial/Paths).
 
-<!---->
-
-    new Path2D();     // objet trajet vide
-    new Path2D(trajet); // copie depuis un autre objet Path2D
-    new Path2D(d);    // trajet depuis des données de trajet SVG
+```js
+new Path2D();     // objet trajet vide
+new Path2D(trajet); // copie depuis un autre objet Path2D
+new Path2D(d);    // trajet depuis des données de trajet SVG
+```
 
 Toutes les [méthodes de trajet](/en-US/docs/Web/API/CanvasRenderingContext2D#Paths) telles que `moveTo`, `rect`, `arc` ou `quadraticCurveTo`, etc., que nous avons appris à connaître ci-dessus, sont disponibles sur les objets `Path2D`.
 
@@ -553,6 +553,8 @@ Une autre fonctionnalité puissante de la nouvelle API `Path2D` de canevas est l
 
 Le trajet se déplacera au point (`M10 10`) et se déplacera alors de 80 points horizontalement vers la droite (`h 80`), ensuite de 80 points vers le bas (`v 80`), puis de 80 points vers la gauche (`h -80`), et reviendra alors au départ (`z`). Vous pouvez voir cet exemple sur la page du [constructeur P`ath2D`](/en-US/docs/Web/API/Path2D.Path2D#Using_SVG_paths).
 
-    var p = new Path2D("M10 10 h 80 v 80 h -80 Z");
+```js
+var p = new Path2D("M10 10 h 80 v 80 h -80 Z");
+```
 
 {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}

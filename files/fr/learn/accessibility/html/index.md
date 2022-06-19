@@ -66,9 +66,9 @@ Non seulement `<button>` possède des styles adéquats par défaut (que vous vou
 
 Le HTML sémantique ne demande pas plus de temps à écrire que du (mauvais) balisage non-sémantique si vous le faites de manière constante dès le début de votre projet, et il a également des bénéfices au delà de l'accessibilité :
 
-1.  **Facilite les développements** — comme mentionné ci-dessus, certaines fonctionnalités sont gratuites, et c'est indiscutablement plus compréhensible.
-2.  **Meilleur pour le mobile** — le HTML sémantique est indiscutablement plus léger en la taille du fichier que le code spaghetti non sémantique, et plus aisé à rendre responsive.
-3.  **Bon pour le SEO** — les moteurs de recherche donnent plus d'importance aux mots clés contenus dans les titres, liens, etc. que des mots-clés contenus dans des `<div>` non sémantiques, et donc vos documents seront plus facilement trouvés par vos clients.
+1. **Facilite les développements** — comme mentionné ci-dessus, certaines fonctionnalités sont gratuites, et c'est indiscutablement plus compréhensible.
+2. **Meilleur pour le mobile** — le HTML sémantique est indiscutablement plus léger en la taille du fichier que le code spaghetti non sémantique, et plus aisé à rendre responsive.
+3. **Bon pour le SEO** — les moteurs de recherche donnent plus d'importance aux mots clés contenus dans les titres, liens, etc. que des mots-clés contenus dans des `<div>` non sémantiques, et donc vos documents seront plus facilement trouvés par vos clients.
 
 Continuons et jetons un œil au HTML accessible dans le détail.
 
@@ -112,10 +112,10 @@ L'une des meilleures aides en accessibilité qu'un utilisateur de lecteur d'écr
 
 Nous avons préparé pour vous une version avec un texte plus long afin de l'essayer avec lecteur d'écran (voir [la bonne sémantique](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). Si vous essayez de naviguer dans ce document, vous verrez qu'il est assez simple de s'y retrouver :
 
-1.  Le lecteur d'écran lit à voix haute chaque élément au fur et à mesure que vous progressez dans le contenu, vous notifiant ce qui est un paragraphe, ce qui est un titre, etc.
-2.  Il s'arrête après chaque élément, vous laissant aller à n'importe quel endroit vous convenant.
-3.  Vous pouvez sauter au précédent ou au prochain titre avec de nombreux lecteurs d'écran.
-4.  Vous pouvez aussi dresser une liste de tous les titres avec de nombreux lecteurs d'écrans, vous permettant de les utiliser comme une table des matières pratique pour trouver un contenu spécifique.
+1. Le lecteur d'écran lit à voix haute chaque élément au fur et à mesure que vous progressez dans le contenu, vous notifiant ce qui est un paragraphe, ce qui est un titre, etc.
+2. Il s'arrête après chaque élément, vous laissant aller à n'importe quel endroit vous convenant.
+3. Vous pouvez sauter au précédent ou au prochain titre avec de nombreux lecteurs d'écran.
+4. Vous pouvez aussi dresser une liste de tous les titres avec de nombreux lecteurs d'écrans, vous permettant de les utiliser comme une table des matières pratique pour trouver un contenu spécifique.
 
 Les gens écrivent parfois des titres, des paragraphes, etc. utilisant le HTML de présentation et retours à la ligne, quelque chose comme ce qui suit :
 
@@ -458,19 +458,20 @@ Alors que le contenu textuel est intrinsèquement accessible, il n'en est pas de
 
 Nous avons un exemple simple écrit, [accessible-image.html](http://mdn.github.io/learning-area/accessibility/html/accessible-image.html), comporte quatre copies de la même image :
 
-    <img src="dinosaur.png">
+```html
+<img src="dinosaur.png">
 
-    <img src="dinosaur.png"
-         alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées.">
+<img src="dinosaur.png"
+      alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées.">
 
-    <img src="dinosaur.png"
-         alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées."
-         title="Le dinosaure rouge de Mozilla ">
+<img src="dinosaur.png"
+      alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées."
+      title="Le dinosaure rouge de Mozilla ">
 
+<img src="dinosaur.png" aria-labelledby="dino-label">
 
-    <img src="dinosaur.png" aria-labelledby="dino-label">
-
-    <p id="dino-label"> Tyrannosaure rouge Rex de Mozilla: Dinosaure à deux jambes, debout comme un être humain, avec des armes légères et une grosse tête avec beaucoup de dents acérées.</p>
+<p id="dino-label"> Tyrannosaure rouge Rex de Mozilla: Dinosaure à deux jambes, debout comme un être humain, avec des armes légères et une grosse tête avec beaucoup de dents acérées.</p>
+```
 
 La première image, lorsqu'elle est visualisée par un lecteur d'écran, n'offre pas beaucoup d'aide à l'utilisateur. VoiceOver, par exemple, lit « /dinosaur.png, image&nbsp;». Il lit le nom du fichier pour essayer de fournir de l'aide. Dans cet exemple, l'utilisateur ou l’utilisatrice saura au moins qu'il s'agit d'un dinosaure, mais les fichiers peuvent souvent être chargés avec des noms de fichiers générés par une machine (par exemple, à partir d'un appareil photo numérique) et ces noms de fichiers ne fourniront probablement aucun contexte au contenu de l'image.
 

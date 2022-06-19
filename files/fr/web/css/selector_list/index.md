@@ -22,7 +22,9 @@ Afin de réduire la taille d'une feuille de style, on peut grouper les sélecteu
 
 ## Syntaxe
 
-    element, element, element { propriétés de style }
+```
+element, element, element { propriétés de style }
+```
 
 ## Exemples
 

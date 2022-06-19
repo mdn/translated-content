@@ -19,10 +19,12 @@ Affiche un message d'erreur dans la console du navigateur.
 
 ## Syntaxe
 
-    console.error(obj1 [, obj2, ..., objN]);
-    console.error(msg [, subst1, ..., substN]);
-    console.exception(obj1 [, obj2, ..., objN]);
-    console.exception(msg [, subst1, ..., substN]);
+```js
+console.error(obj1 [, obj2, ..., objN]);
+console.error(msg [, subst1, ..., substN]);
+console.exception(obj1 [, obj2, ..., objN]);
+console.exception(msg [, subst1, ..., substN]);
+```
 
 > **Note :** `console.exception()` est un alias de `console.error()`; ils sont fonctionnellement identiques.
 

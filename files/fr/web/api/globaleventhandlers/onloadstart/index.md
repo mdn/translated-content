@@ -15,7 +15,9 @@ La propriété **`onloadstart`** du "mixin" {{domxref("GlobalEventHandlers")}} e
 
 ## Syntaxe
 
-    img.onloadstart = funcRef;
+```js
+img.onloadstart = funcRef;
+```
 
 ### Valeur
 

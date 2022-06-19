@@ -18,7 +18,9 @@ Renvoie un `boxObject` (x, y, largeur, hauteur) pour un élément spécifié.
 
 ## Syntaxe
 
-    boxObject = document.getBoxObjectFor(element);
+```js
+boxObject = document.getBoxObjectFor(element);
+```
 
 - `boxObject` est un `nsIBoxObject`.
 - `element` est un {{domxref("element","DOMElement")}}

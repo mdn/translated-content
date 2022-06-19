@@ -18,7 +18,9 @@ Fait défiler le document du nombre de lignes spécifié.
 
 ## Syntaxe
 
-    window.scrollByLines(lignes)
+```js
+window.scrollByLines(lignes)
+```
 
 ## Paramètres
 

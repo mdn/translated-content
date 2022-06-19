@@ -59,6 +59,7 @@ for (let button of buttons) {
 ```
 
 ### 結果
+
 {{ EmbedLiveSample('Example','100%',100) }}
 
 ## 仕様書

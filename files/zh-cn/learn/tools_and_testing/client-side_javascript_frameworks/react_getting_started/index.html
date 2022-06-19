@@ -133,7 +133,7 @@ translation_of: >-
 </ul>
 
 <div class="blockIndicator note">
-<p><strong>注意：如果你的电脑上安装了 yarn 的话，create-react-app 会默认使用 yarn 而非 npm。如果你同时安装了 yarn 和 npm，但你希望使用 npm 的话，在 create-react-app 的时候需要输入 </strong> <code>--use-npm</code><strong> :</strong></p>
+<p><strong>备注：</strong>如果你的电脑上安装了 yarn 的话，create-react-app 会默认使用 yarn 而非 npm。如果你同时安装了 yarn 和 npm，但你希望使用 npm 的话，在 create-react-app 的时候需要输入 <code>--use-npm</code><strong> :</strong></p>
 
 <pre class="brush: bash notranslate">npx create-react-app moz-todo-react --use-npm</pre>
 </div>
@@ -142,7 +142,7 @@ translation_of: >-
 
 <p>处理完成之后，你可以 <code>cd</code> 到 <code>moz-todo-react</code> 文件夹下，然后键入 <code>npm start</code> 命令并回车，先前由 create-react-app 创建的脚本会启动一个地服务 <a href="localhost:3000">localhost:3000</a>，并打开你的默认浏览器来访问这个服务。成功启动浏览器的话，你的浏览器上会显示如下画面：</p>
 
-<p><img alt="Firefox MacOS的屏幕截图，打开到localhost：3000，显示了默认的create-react-app应用程序" src="https://mdn.mozillademos.org/files/17203/default-create-react-app.png" style="border-style: solid; border-width: 1px; height: 980px; width: 1600px;"></p>
+<p><img alt="Firefox MacOS的屏幕截图，打开到localhost：3000，显示了默认的create-react-app应用程序" src="default-create-react-app.png"></p>
 
 <h3 id="应用结构">应用结构</h3>
 
@@ -315,7 +315,7 @@ serviceWorker.unregister();</pre>
 <p>上述所有都告诉 React 我们想把 <code>App</code> 组件作为 root 或者第一个组件来渲染我们的 React App。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>: 在 JSX 中，React 组件和 HTML 元素必须有 closing slashes，如 <code>&lt;App /&gt;</code>，如果我们写 <code>&lt;App&gt;</code> 或者 <code>&lt;img&gt;</code> 将会报错。</p>
+<p><strong>备注：</strong>在 JSX 中，React 组件和 HTML 元素必须有关闭斜杠（<code>/</code>），如 <code>&lt;App /&gt;</code>，如果我们写 <code>&lt;App&gt;</code> 或者 <code>&lt;img&gt;</code> 将会报错。</p>
 </div>
 
 <p><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> 能让我们的 App 离线运行，但它不在本篇文章的范围中，您可以删除第 5 行和第 9 到 12 行。</p>

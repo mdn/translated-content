@@ -18,7 +18,9 @@ L'événement `auxclick` est déclenché lorsqu'un bouton non principal a été 
 
 ## Syntaxe
 
-    target.onauxclick = functionRef;
+```js
+target.onauxclick = functionRef;
+```
 
 ### Valeur
 

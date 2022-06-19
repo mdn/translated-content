@@ -35,7 +35,9 @@ IE 版では、`-ms-grid-column-span` と `-ms-grid-row-span` の新しい仕様
 
 人気のツール _[Autoprefixer](https://github.com/postcss/autoprefixer)_ が更新され、`-ms-` バージョンのグリッドに対応しました。既定ではグリッドの接頭辞は無効ですが、`grid: true` オプションで有効にすることができます。
 
-    autoprefixer({ grid: 'autoplace' })
+```js
+autoprefixer({ grid: 'autoplace' })
+```
 
 グリッドの接頭辞は既定では無効になっています。なぜなら、接頭辞をつけることができないプロパティがあるからです。
 
@@ -379,7 +381,7 @@ CSS グリッドレイアウト仕様書では、グリッドアイテムにな�
 
 ### 垂直方向の配置
 
-配置プロパティ {{cssxref("vertical-align")}} は、グリッドアイテムには影響を与えません。 `display: inline-block` や ` display: ``table` を使ったレイアウトでは、 vertical-align プロパティを使って基本的な整列を行うことができます。グリッドレイアウトには、より強力なボックス配置プロパティがあります。
+配置プロパティ {{cssxref("vertical-align")}} は、グリッドアイテムには影響を与えません。 `display: inline-block` や `display: table` を使ったレイアウトでは、 vertical-align プロパティを使って基本的な整列を行うことができます。グリッドレイアウトには、より強力なボックス配置プロパティがあります。
 
 ### 段組みレイアウト
 

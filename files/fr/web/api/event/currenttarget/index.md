@@ -15,7 +15,9 @@ La propriété **`currentTarget`**, accessible en lecture seule et rattachée à
 
 ## Syntaxe
 
-    var currentEventTarget = event.currentTarget;
+```js
+var currentEventTarget = event.currentTarget;
+```
 
 ### Valeur
 

@@ -19,7 +19,9 @@ Ces événements sont reçus par l'objet implémentant cette interface, généra
 
 ## Syntaxe
 
-    object.onlanguagechange = function;
+```js
+object.onlanguagechange = function;
+```
 
 ### Valeur
 

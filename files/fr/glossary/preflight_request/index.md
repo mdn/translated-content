@@ -16,19 +16,23 @@ Une requête de pré-vérification est automatiquement envoyée par le navigateu
 
 Par exemple, un client peut demander au serveur si celui-ci autorise l'usage de la méthode {{HTTPMethod("DELETE")}} dans la requête HTTP, avant d'envoyer la "vraie" requête avec la méthode {{HTTPMethod("DELETE")}} :
 
-    OPTIONS /resource/foo
-    Access-Control-Request-Method: DELETE
-    Access-Control-Request-Headers: origin, x-requested-with
-    Origin: https://foo.bar.org
+```
+OPTIONS /resource/foo
+Access-Control-Request-Method: DELETE
+Access-Control-Request-Headers: origin, x-requested-with
+Origin: https://foo.bar.org
+```
 
-Si le serveur l'accepte, alors celui-ci va répondre à la requête de pré-vérification en envoyant une réponse HTTP contenant l'entête {{HTTPHeader("Access-Control-Allow-Methods")}} dont la valeur contiendra dans sa liste la méthode `DELETE`:
+Si le serveur l'accepte, alors celui-ci va répondre à la requête de pré-vérification en envoyant une réponse HTTP contenant l'entête {{HTTPHeader("Access-Control-Allow-Methods")}} dont la valeur contiendra dans sa liste la méthode `DELETE` :
 
-    HTTP/1.1 200 OK
-    Content-Length: 0
-    Connection: keep-alive
-    Access-Control-Allow-Origin: https://foo.bar.org
-    Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
-    Access-Control-Max-Age: 86400
+```
+HTTP/1.1 200 OK
+Content-Length: 0
+Connection: keep-alive
+Access-Control-Allow-Origin: https://foo.bar.org
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Max-Age: 86400
+```
 
 À remarquer dans cet exemple que le serveur autorise les méthodes : POST ; GET ; OPTIONS et DELETE.
 

@@ -216,7 +216,6 @@ console.log(foo() === globalObject); // true
 
 > **Note:** アロー関数の呼び出し時に `this` 引数が `call`, `bind`, `apply` に渡されても無視されます。呼び出しに引数を加えることはできますが、最初の引数 (`thisArg`) は `null` を設定してください。
 
-
 ```js
 // オブジェクトのメソッドとして呼び出す。
 var obj = {func: foo};

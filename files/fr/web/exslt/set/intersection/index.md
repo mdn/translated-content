@@ -12,7 +12,9 @@ translation_of: Web/EXSLT/set/intersection
 
 ### Syntaxe
 
-    set:intersection(ensembleNœuds1,ensembleNœuds2)
+```
+set:intersection(ensembleNœuds1,ensembleNœuds2)
+```
 
 ### Arguments
 

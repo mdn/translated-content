@@ -16,7 +16,9 @@ Sachez qu'appeler `history.pushState()` ou `history.replaceState()` ne déclench
 
 ### Syntaxe
 
-    window.onpopstate = funcRef;
+```js
+window.onpopstate = funcRef;
+```
 
 - `funcRef` est une référence à une fonction.
 
