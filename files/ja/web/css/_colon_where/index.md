@@ -50,7 +50,7 @@ CSS では、セレクターリストを使用する場合、いずれかのセ�
 }
 ```
 
-Will still parse correctly and match `:valid` even in browsers which don't support `:unsupported`, whereas:
+は `:unsupported` の部分に対応していないブラウザーでも `:valid` の部分が有効となり正しく解釈されます。一方で
 
 ```css
 :valid, :unsupported {
@@ -58,7 +58,7 @@ Will still parse correctly and match `:valid` even in browsers which don't suppo
 }
 ```
 
-Will be ignored in browsers which don't support `:unsupported` even if they support `:valid`.
+では、`:unsupported` に対応していないブラウザーでは、`:valid` に対応している場合でも全体が無視されます。
 
 ## 例
 
