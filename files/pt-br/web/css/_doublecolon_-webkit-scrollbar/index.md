@@ -55,7 +55,7 @@ Você pode usar os seguintes pseudo-elementos para customizar diversas partes da
   background-color: #aaa; /* ou que isso seja adicionado ao "caminho" da barra */
 }
 
-/* Add a thumb */
+/* Adiciona a barra arrastável */
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
     background: #000;
 }
