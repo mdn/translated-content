@@ -36,7 +36,7 @@ let removing = browser.browsingData.removeCache(
 
 ### Valor retornado
 
-Uma [`Promessa`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) que será realizada sem argumentos quando a remoção for finalizada. Se ocorrer qualquer erro, a promessa será rejeitada com uma mensagem de erro.
+Uma [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) que será realizada sem argumentos quando a remoção for finalizada. Se ocorrer qualquer erro, a promise será rejeitada com uma mensagem de erro.
 
 ## Exemplos
 
