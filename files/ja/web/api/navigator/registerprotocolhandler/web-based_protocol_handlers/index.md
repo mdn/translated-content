@@ -9,19 +9,19 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 ---
 <h2 id="Background" name="Background">背景</h2>
 
-<p>ウェブページで <code>http</code> ではないプロトコルを使用したリソースへのリンクを見つけることがよくあります。例えば、 <code>mailto:</code> プロトコルです。</p>
+<p>ウェブページで `http` ではないプロトコルを使用したリソースへのリンクを見つけることがよくあります。例えば、 `mailto:` プロトコルです。</p>
 
 <div style="overflow: hidden;">
 <pre class="brush:html">&lt;a href="mailto:webmaster@example.com"&gt;ウェブマスター&lt;/a&gt;</pre>
 </div>
 
-<p>ウェブ制作者は、ユーザーがウェブページから直接 E メールを送るのに便利な方法を提供したいときに、 <code>mailto:</code> リンクを用いることができます。リンクがアクティブ化されたとき、ブラウザは、E メールを扱うための標準のデスクトップアプリケーションを起動させるはずです。これは、<em>デスクトップベース</em> プロトコルハンドラーと考えることができます。</p>
+<p>ウェブ制作者は、ユーザーがウェブページから直接 E メールを送るのに便利な方法を提供したいときに、 `mailto:` リンクを用いることができます。リンクがアクティブ化されたとき、ブラウザは、E メールを扱うための標準のデスクトップアプリケーションを起動させるはずです。これは、<em>デスクトップベース</em> プロトコルハンドラーと考えることができます。</p>
 
-<p>ウェブベースプロトコルハンドラーは、ウェブベースアプリーケーションもその処理に追加することを可能にします。これはアプリケーションをウェブに移行させるうえでますます重要になってきています。実際、 <code>mailto</code> リンクを処理できる可能性がある多くのウェブベースの E メールを扱うアプリケーションが存在しています。</p>
+<p>ウェブベースプロトコルハンドラーは、ウェブベースアプリーケーションもその処理に追加することを可能にします。これはアプリケーションをウェブに移行させるうえでますます重要になってきています。実際、 `mailto` リンクを処理できる可能性がある多くのウェブベースの E メールを扱うアプリケーションが存在しています。</p>
 
 <h2 id="Registering" name="Registering">登録</h2>
 
-<p>ウェブアプリケーションをプロトコルハンドラーとして設定するのは、難しい処理ではありません。基本的に、ウェブアプリケーションは自身を指定したプロトコルのための可能なハンドラーとしてブラウザに登録するために <code><a href="/ja/docs/DOM/window.navigator.registerProtocolHandler">registerProtocolHandler()</a></code> を使用します。</p>
+<p>ウェブアプリケーションをプロトコルハンドラーとして設定するのは、難しい処理ではありません。基本的に、ウェブアプリケーションは自身を指定したプロトコルのための可能なハンドラーとしてブラウザに登録するために `<a href="/ja/docs/DOM/window.navigator.registerProtocolHandler">registerProtocolHandler()</a>` を使用します。</p>
 
 <pre class="brush: js">navigator.registerProtocolHandler("web+burger",
                                   "http://www.google.co.uk/?uri=%s",
@@ -30,16 +30,16 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 <p>ここでの引数は次の通りです。</p>
 
 <ul>
- <li>プロトコル。</li>
- <li>URL のテンプレート。"%s" は、リンクの <code>href</code> 属性の値に置換され、GET は置換後の URL に対して実行されます。</li>
- <li>プロトコルハンドラーのためのユーザーにわかりやすい名前。</li>
+- プロトコル。
+- URL のテンプレート。"%s" は、リンクの `href` 属性の値に置換され、GET は置換後の URL に対して実行されます。
+- プロトコルハンドラーのためのユーザーにわかりやすい名前。
 </ul>
 
 <p>ブラウザがこのコードを実行するとき、ユーザーにプロンプトを表示し、そのプロトコルのためのハンドラーとしてそのウェブアプリケーションを登録して良いかどうかの許可を求めるはずです。Firefox は、情報バーエリアに以下のプロンプトを表示します。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/9683/protocolregister.png" style="display: block; height: 401px; margin: 0px auto; width: 700px;"></p>
 
-<div class="note"><strong>メモ:</strong> URL テンプレートが提供されるとき、登録する URL は登録が行われようとするウェブページと同じドメインである<strong>必要があります</strong>。異なるドメインであった場合は、登録は失敗します。 例えば <code>http://example.com/homepage.html</code> では <code>http://example.com/handle_mailto/%s</code> はプロトコルハンドラーとして登録可能ですが、 <code>http://example.<em><strong>org</strong></em>/handle_mailto/%s</code> はプロトコルハンドラーとして登録することはできません。</div>
+<div class="note"><strong>メモ:</strong> URL テンプレートが提供されるとき、登録する URL は登録が行われようとするウェブページと同じドメインである<strong>必要があります</strong>。異なるドメインであった場合は、登録は失敗します。 例えば `http://example.com/homepage.html` では `http://example.com/handle_mailto/%s` はプロトコルハンドラーとして登録可能ですが、 `http://example.<em><strong>org</strong></em>/handle_mailto/%s` はプロトコルハンドラーとして登録することはできません。</div>
 
 <p>同じプロトコルハンドラーを二回以上登録すると、そのプロトコルハンドラーが既に登録済みであることを示す別のポップアップが表示されます。従って、プロトコルハンドラーの登録を呼び出すのを防ぐために、以下のように既に登録済みであるかどうかを確認するのが良いでしょう。</p>
 
@@ -81,14 +81,14 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 
 <h2 id="Handling" name="Handling">ハンドリング</h2>
 
-<p>次の段階は、アクションをハンドリング（実行）することです。ブラウザはアクティブ化されたリンクから <code>href</code> 属性の値を展開し、ハンドラー登録時に提供された URL テンプレートと結合し、その URL 上で HTTP GET を行います。ですから、上記の例では、ブラウザは、次の URL 上で GET を行います。</p>
+<p>次の段階は、アクションをハンドリング（実行）することです。ブラウザはアクティブ化されたリンクから `href` 属性の値を展開し、ハンドラー登録時に提供された URL テンプレートと結合し、その URL 上で HTTP GET を行います。ですから、上記の例では、ブラウザは、次の URL 上で GET を行います。</p>
 
 <pre>http://www.google.co.uk/?uri=web+burger:cheeseburger
 </pre>
 
 <p>サーバー側コードは、クエリ文字列パラメータを展開し、要求されたアクションを行います。</p>
 
-<div class="note"><strong>メモ:</strong> サーバー側コードには <code>href</code> 属性の値の <strong>完全</strong> な内容が渡されます。つまり、サーバー側コードは、そのデータからプロトコルを解釈しなければならないということです。</div>
+<div class="note"><strong>メモ:</strong> サーバー側コードには `href` 属性の値の <strong>完全</strong> な内容が渡されます。つまり、サーバー側コードは、そのデータからプロトコルを解釈しなければならないということです。</div>
 
 <h3 id="Example_3" name="Example_3">例</h3>
 
@@ -117,14 +117,14 @@ if ( isset ( $_GET["value"] ) ) {
 <h2 id="References" name="References">仕様書</h2>
 
 <ul>
- <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers">http://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers</a></li>
+- <a href="http://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers">http://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers</a>
 </ul>
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
- <li><a href="/ja/docs/DOM/window.navigator.registerContentHandler">window.navigator.registerContentHandler</a></li>
- <li><a href="/ja/docs/XPCOM_Interface_Reference/nsIProtocolHandler">nsIProtocolHandler</a> (XUL のみ)</li>
- <li><a class="external" href="http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/">RegisterProtocolHandler Enhancing the Federated Web</a> at Mozilla Webdev</li>
- <li><a href="https://developers.google.com/web/updates/2011/06/Registering-a-custom-protocol-handler">Register a custom protocolHandler</a> at Google Developers.</li>
+- <a href="/ja/docs/DOM/window.navigator.registerContentHandler">window.navigator.registerContentHandler</a>
+- <a href="/ja/docs/XPCOM_Interface_Reference/nsIProtocolHandler">nsIProtocolHandler</a> (XUL のみ)
+- <a class="external" href="http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/">RegisterProtocolHandler Enhancing the Federated Web</a> at Mozilla Webdev
+- <a href="https://developers.google.com/web/updates/2011/06/Registering-a-custom-protocol-handler">Register a custom protocolHandler</a> at Google Developers.
 </ul>
