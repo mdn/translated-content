@@ -47,8 +47,8 @@ Você pode usar os seguintes pseudo-elementos para customizar diversas partes da
   display: none;
 }
 
-/* Demonstrate a "mostly customized" scrollbar
-  * (won't be visible otherwise if width/height is specified) */
+/* Demonstração de uma barra de rolagem personalizada
+  * (não será visível ao menos que a largura/altura seja especificada) */
 .mostly-customized-scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
