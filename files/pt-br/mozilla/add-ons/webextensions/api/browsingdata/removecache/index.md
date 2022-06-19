@@ -17,7 +17,7 @@ translation-of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 
 Limpa o cache do navegador.
 
-Note que apesar desta função receber um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, isso será ignorado. Todo o cache sempre será limpo usando esta função.
+Note que apesar desta função receber um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, ele será ignorado. Todo o cache sempre será limpo usando esta função.
 
 Esta é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
