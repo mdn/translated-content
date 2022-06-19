@@ -25,7 +25,7 @@ Esta é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/Jav
 
 ```js
 let removing = browser.browsingData.removeCache(
-  removalOptions            // RemovalOptions object
+  removalOptions            // objeto RemovalOptions
 )
 ```
 
