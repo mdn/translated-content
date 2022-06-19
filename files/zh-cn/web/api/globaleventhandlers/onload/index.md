@@ -9,71 +9,73 @@ tags:
   - onload
 translation_of: Web/API/GlobalEventHandlers/onload
 ---
-<p>{{ ApiRef() }}</p>
+{{ApiRef()}}
 
-<p>{{domxref("GlobalEventHandlers")}} mixin 的 <code>onload</code> 属性是一个事件处理程序用于处理{{domxref("Window")}}, {{domxref("XMLHttpRequest")}}, {{htmlelement("img")}} 等元素的加载事件，当资源已加载时被触发。</p>
+{{domxref("GlobalEventHandlers")}} 混入（mixin）的 **`onload`** 属性是一个[事件处理程序](/zh-CN/docs/Web/Events/Event_handlers)，用于处理 {{domxref("Window")}}、{{domxref("XMLHttpRequest")}}、{{htmlelement("iframe")}} 和 {{htmlelement("img")}} 等元素的 {{domxref("Window/load_event", "load")}} 事件。
 
-<h3 id="Syntax" name="Syntax">语法</h3>
+`load` 事件在给定的资源加载完成时触发。
 
-<pre class="eval">window.onload = <em>funcRef</em>;
-</pre>
+## 语法
 
-<ul>
- <li> 当 window  <code style="font-style: normal;">load</code>  事件触发时，funcRef 方法会被调用。</li>
-</ul>
+```js
+target.onload = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### 值
 
-<p>funcRef 是窗口加载事件触发时调用的处理函数。</p>
+`functionRef` 是窗口 `load` 事件触发时调用的处理函数。
 
-<h3 id="Example" name="Example">示例</h3>
+### 示例
 
-<pre class="brush: js">window.onload = function() {
+```js
+window.onload = function() {
   init();
   doSomethingElse();
 };
-</pre>
+```
 
-<pre><code>&lt;!doctype html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;onload test&lt;/title&gt;
+```html
+<!doctype html>
+<html>
+  <head>
+    <title>onload test</title>
     // ES5
-    &lt;script&gt;
+    <script>
       function load() {
         console.log("load event detected!");
       }
       window.onload = load;
-    &lt;/script&gt;
-    // ES2015(aka: ES6)
-    &lt;script&gt;
-      const load = () =&gt; {
+    </script>
+    // ES2015
+    <script>
+      const load = () => {
         console.log("load event detected!");
       }
       window.onload = load;
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;The load event fires when the document has finished loading!&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+    </script>
+  </head>
+  <body>
+    <p>The load event fires when the document has finished loading!</p>
+  </body>
+</html>
+```
 
-<h3 id="Notes" name="Notes">注意</h3>
+## 注意
 
-<p>在文档装载完成后会触发  <code>load</code> 事件。此时，在文档中的所有对象都在 DOM 中，所有图片，脚本，链接以及子框都完成了装载。 </p>
+在文档加载完成后会触发 `load` 事件。此时，在文档中的所有对象都在 DOM 中，所有图片、脚本、链接以及子框都加载完成了。
 
-<p>同时也会有 <a href="/en/Gecko-Specific_DOM_Events">Gecko-指定 DOM 事件</a>，如 <code>DOMContentLoaded</code> 和 <code>DOMFrameContentLoaded</code> (它们可以使用 {{ domxref("EventTarget.addEventListener()") }} 来处理 ) ， 这些事件在页面 DOM 构建起来后就会触发，而不会等到其他的资源都装载完成。 </p>
+同时也会有 [DOM 事件](/zh-CN/docs/Web/Events)，如 `DOMContentLoaded` 和 `DOMFrameContentLoaded`（它们可以使用 {{domxref("EventTarget.addEventListener()")}} 来处理），这些事件在页面 DOM 构建起来后就会触发，而不会等到其它的资源都加载完成。 
 
-<h3 id="Specification" name="Specification">规范</h3>
+## 规范
 
-<p>这个事件处理程序在  <a class="external" href="http://www.whatwg.org/html/#handler-window-onload">HTML</a> 中指定。</p>
+{{Specifications}}
 
-<h3 id="参见">参见</h3>
+## 浏览器兼容性
 
-<ul>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded">监听事件：简单的 DOM 事件</a>中的 DOMContentLoaded</code>  事件 </li>
- <li><code>DOMContentLoaded</code> event in <a href="https://developer.mozilla.org/en-US/docs/Listening_to_events_in_Firefox_extensions#Simple_DOM_events">Listening to events: Simple DOM events</a></li>
- <li>IIEF <a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression" rel="nofollow noreferrer">Immediately-invoked function expression</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a></li>
- <li> </li>
-</ul>
+{{Compat}}
+
+## 参见
+
+- {{domxref("Window/load_event", "load")}} 事件
+- {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}} 事件
+- {{glossary("IIFE", "立即调用函数表达式（IIFE）")}}
