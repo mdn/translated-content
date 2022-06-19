@@ -13,7 +13,7 @@ Un **système de coordonnées** est un système où l'orientation des trois axes
 
 ### Système de coordonnées terrestre
 
-Le système de coordonnées terrestre est un repère dont l'origine est fixée au centre de la Terre et dont les axes sont orientés selon l'axe de gravité et le pôle Nord. On utilise des lettres majuscules ("X", "Y", et "Z") pour décrire les axes du système de coordonnées terrestre.
+Le système de coordonnées terrestre est un repère dont l'origine est fixée au centre de la Terre et dont les axes sont orientés selon l'axe de gravité et le pôle Nord. On utilise des lettres majuscules («&nbsp;X&nbsp;», «&nbsp;Y&nbsp;», et «&nbsp;Z&nbsp;») pour décrire les axes du système de coordonnées terrestre.
 
 - L'axe **X** suit le plan du sol, est perpendiculaire à l'axe Y. Sa valeur est positive et croissante vers l'est (et négative et décroissante donc vers l'ouest).
 - L'axe **Y** suit le plan du sol, sa valeur est positive et croissante vers le pôle Nord fixe (pas le pôle magnétique) et négative et décroissante vers le sud.
@@ -21,7 +21,7 @@ Le système de coordonnées terrestre est un repère dont l'origine est fixée a
 
 ### Système de coordonnées de l'appareil
 
-Le système de coordonnées de l'appareil a son origine située au centre de l'appareil. On utilise les lettres minuscules ("x", "y", et "z") pour décrire les axes de ce système.
+Le système de coordonnées de l'appareil a son origine située au centre de l'appareil. On utilise les lettres minuscules («&nbsp;x&nbsp;», «&nbsp;y&nbsp;», et «&nbsp;z&nbsp;») pour décrire les axes de ce système.
 
 ![](axes.png)
 
@@ -41,7 +41,7 @@ La rotation autour de l'axe z consiste à faire tourner l'appareil sur son plan.
 
 ![](alpha.png)
 
-L'angle alpha vaut0° lorsque le haut de l'appareil est orienté vers le pôle Nord. Cet angle augmente lorsque l'appareil est tourné vers la gauche.
+L'angle alpha vaut 0° lorsque le haut de l'appareil est orienté vers le pôle Nord. Cet angle augmente lorsque l'appareil est tourné vers la gauche.
 
 ### Bêta
 
