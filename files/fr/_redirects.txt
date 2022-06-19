@@ -4825,7 +4825,6 @@
 /fr/docs/Web/JavaScript/Reference/Erreurs/Stmt_after_return	/fr/docs/Web/JavaScript/Reference/Errors/Stmt_after_return
 /fr/docs/Web/JavaScript/Reference/Erreurs/Strict_Non_Simple_Params	/fr/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 /fr/docs/Web/JavaScript/Reference/Erreurs/Too_much_recursion	/fr/docs/Web/JavaScript/Reference/Errors/Too_much_recursion
-/fr/docs/Web/JavaScript/Reference/Erreurs/Typed_array_invalid_arguments	/fr/docs/orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
 /fr/docs/Web/JavaScript/Reference/Erreurs/Undeclared_var	/fr/docs/Web/JavaScript/Reference/Errors/Undeclared_var
 /fr/docs/Web/JavaScript/Reference/Erreurs/Undefined_prop	/fr/docs/Web/JavaScript/Reference/Errors/Undefined_prop
 /fr/docs/Web/JavaScript/Reference/Erreurs/Unexpected_token	/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_token
@@ -4836,7 +4835,6 @@
 /fr/docs/Web/JavaScript/Reference/Erreurs/in_operator_no_object	/fr/docs/Web/JavaScript/Reference/Errors/in_operator_no_object
 /fr/docs/Web/JavaScript/Reference/Erreurs/invalid_right_hand_side_instanceof_operand	/fr/docs/Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 /fr/docs/Web/JavaScript/Reference/Erreurs/is_not_iterable	/fr/docs/Web/JavaScript/Reference/Errors/is_not_iterable
-/fr/docs/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments	/fr/docs/orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
 /fr/docs/Web/JavaScript/Reference/Fonctions	/fr/docs/Web/JavaScript/Reference/Functions
 /fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode	/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées	/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions
@@ -4869,7 +4867,6 @@
 /fr/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/String/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
-/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/clear	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 /fr/docs/Web/JavaScript/Reference/Grammaire_lexicale	/fr/docs/Web/JavaScript/Reference/Lexical_grammar
@@ -5560,7 +5557,6 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakMap/set	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/set
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/add	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/add
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/clear	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/delete	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/has	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/has
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
@@ -5609,7 +5605,7 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/undefined	/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/unescape	/fr/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/uneval	/fr/docs/Web/JavaScript/Reference/Global_Objects/uneval
-/fr/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/fr/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
+/fr/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/fr/docs/Web/JavaScript/Reference/Operators
 /fr/docs/Web/JavaScript/Reference/Opérateurs	/fr/docs/Web/JavaScript/Reference/Operators
 /fr/docs/Web/JavaScript/Reference/Opérateurs/Addition	/fr/docs/Web/JavaScript/Reference/Operators/Addition
 /fr/docs/Web/JavaScript/Reference/Opérateurs/Addition_avec_assignement	/fr/docs/Web/JavaScript/Reference/Operators/Addition_assignment
@@ -5639,7 +5635,7 @@
 /fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_logiques	/fr/docs/Web/JavaScript/Reference/Operators
 /fr/docs/Web/JavaScript/Reference/Opérateurs/Précédence_des_opérateurs	/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 /fr/docs/Web/JavaScript/Reference/Opérateurs/Syntaxe_décomposition	/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-/fr/docs/Web/JavaScript/Reference/Opérateurs/Tube	/fr/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
+/fr/docs/Web/JavaScript/Reference/Opérateurs/Tube	/fr/docs/Web/JavaScript/Reference/Operators
 /fr/docs/Web/JavaScript/Reference/Opérateurs/async_function	/fr/docs/Web/JavaScript/Reference/Operators/async_function
 /fr/docs/Web/JavaScript/Reference/Opérateurs/await	/fr/docs/Web/JavaScript/Reference/Operators/await
 /fr/docs/Web/JavaScript/Reference/Opérateurs/class	/fr/docs/Web/JavaScript/Reference/Operators/class
@@ -6234,6 +6230,7 @@
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media
 /fr/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/Web/HTML/Element/Heading_Elements
+/fr/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator	/fr/docs/Web/JavaScript/Reference/Operators
 /fr/docs/orphaned/Web/Reference	/fr/docs/Web
 /fr/docs/orphaned/Web/Reference/API	/fr/docs/Web/API
 /fr/docs/setAttribute	/fr/docs/Web/API/Element/setAttribute

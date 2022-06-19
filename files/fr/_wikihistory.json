@@ -41815,12 +41815,6 @@
       "Goofy"
     ]
   },
-  "orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
-    "modified": "2020-03-12T19:45:50.257Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
     "modified": "2020-10-15T21:27:51.341Z",
     "contributors": [
@@ -41925,18 +41919,6 @@
     "contributors": [
       "SphinxKnight",
       "teoli"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
-    "modified": "2020-10-15T21:30:59.712Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T21:59:06.221Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   }
 }
