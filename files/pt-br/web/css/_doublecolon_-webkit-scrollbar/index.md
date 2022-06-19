@@ -33,7 +33,7 @@ Você pode usar os seguintes pseudo-elementos para customizar diversas partes da
 
 ## Exemplos
 
-### CSS</h3>
+### CSS
 
 ```CSS
 .visible-scrollbar, .invisible-scrollbar, .mostly-customized-scrollbar {
