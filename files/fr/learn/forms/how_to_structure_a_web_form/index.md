@@ -189,14 +189,14 @@ Chaque groupe de fonctionnalités séparées doit être contenu dans un élémen
 
 Mettons ces idées en pratique et construisons une structure de formulaire un peu plus sophistiquée — un formulaire de paiement. Il contiendra un certain nombre de types de widgets que vous ne comprenez pas encore — ne vous inquiétez pas pour l'instant ; vous découvrirez comment ils fonctionnent dans l'article suivant ([Les widgets natifs pour formulaire](/fr/docs/Learn/HTML/Forms/The_native_form_widgets)). Pour l'instant, lisez attentivement les descriptions en suivant les instructions ci-dessous et commencez à vous faire une idée des éléments enveloppes que nous utilisons pour structurer le formulaire, et pourquoi.
 
-1.  Pour commencer, faites une copie locale de notre [fichier modèle vierge](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) et des [CSS pour notre formulaire de paiement](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css) dans un nouveau répertoire.
-2.  Primo, appliquez les CSS au HTML en ajoutant la ligne suivante dans l'élément {{htmlelement("head")}} du HTML&nbsp;:
+1. Pour commencer, faites une copie locale de notre [fichier modèle vierge](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) et des [CSS pour notre formulaire de paiement](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css) dans un nouveau répertoire.
+2. Primo, appliquez les CSS au HTML en ajoutant la ligne suivante dans l'élément {{htmlelement("head")}} du HTML&nbsp;:
 
     ```html
     <link href="payment-form.css" rel="stylesheet">
     ```
 
-3.  Ensuite, commencez le formulaire en ajoutant un élément {{htmlelement("form")}}&nbsp;:
+3. Ensuite, commencez le formulaire en ajoutant un élément {{htmlelement("form")}}&nbsp;:
 
     ```html
     <form>
@@ -204,14 +204,14 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
     </form>
     ```
 
-4.  Entre les balises `<form>`, ajoutez un en‑tête et un paragraphe pour informer les utilisateurs comment sont marqués les champs obligatoires&nbsp;:
+4. Entre les balises `<form>`, ajoutez un en‑tête et un paragraphe pour informer les utilisateurs comment sont marqués les champs obligatoires&nbsp;:
 
     ```html
     <h1>Formulaire de paiement</h1>
     <p>Les champs obligatoires sont suivis par un <strong><abbr title="required">*</abbr></strong>.</p>
     ```
 
-5.  Ensuite, nous ajoutons une grande section de code dans le formulaire, sous la précédente. Ici vous verrez que nous enveloppons les champs d'informations de contact dans des éléments {{htmlelement("section")}} distincts. De plus, nous avons un ensemble de deux boutons radio, que nous mettons chacun à l'intérieur de leur propre élément de liste ({{htmlelement("li")}}). Enfin, nous avons deux zones de texte standard {{htmlelement("input")}} et leurs éléments {{htmlelement("label")}} associés, chacun contenu dans un élément {{htmlelement("p")}}, plus une entrée pour le mot de passe. Ajoutez ce code à votre formulaire maintenant :
+5. Ensuite, nous ajoutons une grande section de code dans le formulaire, sous la précédente. Ici vous verrez que nous enveloppons les champs d'informations de contact dans des éléments {{htmlelement("section")}} distincts. De plus, nous avons un ensemble de deux boutons radio, que nous mettons chacun à l'intérieur de leur propre élément de liste ({{htmlelement("li")}}). Enfin, nous avons deux zones de texte standard {{htmlelement("input")}} et leurs éléments {{htmlelement("label")}} associés, chacun contenu dans un élément {{htmlelement("p")}}, plus une entrée pour le mot de passe. Ajoutez ce code à votre formulaire maintenant :
 
     ```html
     <section>
@@ -257,7 +257,7 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
     </section>
     ```
 
-6.  Nous arrivons maintenant à la deuxième `<section>` de notre formulaire — l'information de paiement. Ici nous avons trois widgets distincts avec leur étiquette, chacun contenu dans un paragraphe `<p>`. Le premier est un menu déroulant ({{htmlelement("select")}}) pour le choix du type de la carte de crédit. Le deuxième est un élément `<input>` de type nombre pour entrer le numéro de la carte de crédit. Le dernier est un élément `<input>` de type `date` pour entrer la date d'expiration de la carte de crédit (il sera accompagné d'un widget dateur pour les navigateurs prenant en charge cette fonctionnalité, et sera un simple champ textuel pour les navigateurs ne la prenant pas en charge). À nouveau, entrez ce qui suit après la section ci‑dessus&nbsp;:
+6. Nous arrivons maintenant à la deuxième `<section>` de notre formulaire — l'information de paiement. Ici nous avons trois widgets distincts avec leur étiquette, chacun contenu dans un paragraphe `<p>`. Le premier est un menu déroulant ({{htmlelement("select")}}) pour le choix du type de la carte de crédit. Le deuxième est un élément `<input>` de type nombre pour entrer le numéro de la carte de crédit. Le dernier est un élément `<input>` de type `date` pour entrer la date d'expiration de la carte de crédit (il sera accompagné d'un widget dateur pour les navigateurs prenant en charge cette fonctionnalité, et sera un simple champ textuel pour les navigateurs ne la prenant pas en charge). À nouveau, entrez ce qui suit après la section ci‑dessus&nbsp;:
 
     ```html
     <section>
@@ -290,7 +290,7 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
     </section>
     ```
 
-7.  La dernière section est plus simple&nbsp;; elle ne contient qu'un bouton {{htmlelement("button")}} de type `submit`, pour adresser les données du formulaire. Ajoutez ceci au bas du formulaire&nbsp;:
+7. La dernière section est plus simple&nbsp;; elle ne contient qu'un bouton {{htmlelement("button")}} de type `submit`, pour adresser les données du formulaire. Ajoutez ceci au bas du formulaire&nbsp;:
 
     ```html
     <p> <button type="submit">Valider le paiement</button> </p>

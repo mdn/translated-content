@@ -322,8 +322,6 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 
 - {{domxref("GlobalEventHandlers.onabort")}}
 
-
-
   - : Appelé quand le chargement d'une ressource a été avorté, comme par le fait qu'un utilisateur annule un chargement alors qu'il était encore en cours.
 
 <!---->

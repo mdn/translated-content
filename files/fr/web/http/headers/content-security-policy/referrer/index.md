@@ -23,7 +23,9 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`referrer`**
 
 Soit cet en-tête CSP :
 
-    Content-Security-Policy: referrer <referrer-policy>;
+```
+Content-Security-Policy: referrer <referrer-policy>;
+```
 
 Où `<referrer-policy>` peut être une valeur parmi :
 
@@ -41,7 +43,9 @@ Où `<referrer-policy>` peut être une valeur parmi :
 
 ## Exemples
 
-    Content-Security-Policy: referrer "none";
+```
+Content-Security-Policy: referrer "none";
+```
 
 ## Spécifications
 

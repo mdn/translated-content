@@ -47,13 +47,13 @@ Cet article décrit comment créer le squelette du site web du projet. Ensuite, 
 
 La création est aisée:
 
-1.  Utilisez la commande `django-admin` pour créer le dossier du projet ainsi que les sous-dossiers et fichiers de base ainsi que le script de gestion du projet (**manage.py**).
-2.  Utilisez **manage.py** pour créer une ou plusieurs _applications_ du projet.
+1. Utilisez la commande `django-admin` pour créer le dossier du projet ainsi que les sous-dossiers et fichiers de base ainsi que le script de gestion du projet (**manage.py**).
+2. Utilisez **manage.py** pour créer une ou plusieurs _applications_ du projet.
 
     > **Note :** Un site web consiste en une ou plusieurs sections, par exemple un site principal, un blog, un wiki,... La bonne pratique avec Django est de réaliser chacun des composants comme des applications séparées qui pourront éventuellement être réutilisées dans d'autres projets.
 
-3.  Enregistrez la nouvelle application dans le projet.
-4.  Liez les urls et chemins pour chaque application.
+3. Enregistrez la nouvelle application dans le projet.
+4. Liez les urls et chemins pour chaque application.
 
 Pour [le site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website), le dossier du site web et celui du projet auront le même nom _locallibrary_. Une seule application _catalog_ sera utilisée. La hiérachie de dossier du projet à la forme ci-dessous :
 
@@ -98,7 +98,9 @@ locallibrary/
 
 Votre répertoire de travail est de la forme :
 
-    ../django_projects/locallibrary/
+```
+../django_projects/locallibrary/
+```
 
 Le sous-dossier _locallibrary_ permettra de gérer les requêtes web, il contient :
 
@@ -271,11 +273,13 @@ Django ne s'occupe pas nativement de fichiers statiques tels que des fichiers CS
 
 Ajoutez les lignes ci-dessous au bas du fichier **urls.py** :
 
-    # Use static() to add url mapping to serve static files during development (only)
-    from django.conf import settings
-    from django.conf.urls.static import static
+```python
+# Use static() to add url mapping to serve static files during development (only)
+from django.conf import settings
+from django.conf.urls.static import static
 
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+```
 
 > **Note :** Il y a plusieurs manière pour ajouter des routes à la variable `urlpatterns` (dans les étapes décrites ci-dessus nous avons ajouté petit à patir en utilisant l'opérateur `+=` pour bien séparer les étapes). Il est en réalité tout à fait possible de tout regrouper dans une seule étape :
 >

@@ -15,7 +15,9 @@ La méthode **`WebGLRenderingContext.shaderSource()`** de l'[API WebGL](/en-US/d
 
 ## Syntaxe
 
-    void gl.shaderSource(shader, source);
+```js
+void gl.shaderSource(shader, source);
+```
 
 ### Parameters
 

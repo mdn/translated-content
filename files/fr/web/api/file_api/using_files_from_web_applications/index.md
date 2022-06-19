@@ -338,16 +338,16 @@ Nous commençons par la recherche de l'URL du {{ HTMLElement("div") }} dont l'ID
 
 Si l'objet {{ domxref("FileList") }} passé à `handleFiles()` est `null`, nous définissons simplement le contenu HTML du bloc pour pour afficher "Aucun fichier sélectionné ! ". Nous commençons dans le cas contraire à construire notre liste de fichiers, comme ceci&nbsp;:
 
-1.  Une nouvelle liste non ordonnée ({{ HTMLElement("ul") }}) est créée.
-2.  L'élement de la liste nouvellement créée est ajoutée dans le bloc {{ HTMLElement("div") }} en appelant sa méthode {{ domxref("Node.appendChild()") }}.
-3.  Pour chaque {{ domxref("File") }} dans le {{ domxref("FileList") }} représenté par `files`&nbsp;:
+1. Une nouvelle liste non ordonnée ({{ HTMLElement("ul") }}) est créée.
+2. L'élement de la liste nouvellement créée est ajoutée dans le bloc {{ HTMLElement("div") }} en appelant sa méthode {{ domxref("Node.appendChild()") }}.
+3. Pour chaque {{ domxref("File") }} dans le {{ domxref("FileList") }} représenté par `files`&nbsp;:
 
-    1.  Création et ajout à la liste d'un nouvel élément de liste {{ HTMLElement("li") }}.
-    2.  Création d'un nouvel élément image {{ HTMLElement("img") }}.
-    3.  Définition d'un nouvel objet URL représentant le fichier comme source de l'image, en utilisant {{ domxref("window.URL.createObjectURL()") }} pour la création de l'URL du Blob.
-    4.  Définition de la hauteur de l'image à 60 pixels.
-    5.  Définition du gestionnaire pour l'événement `load` de l'image afin de libérer l'objet URL, devenu inutile une fois l'image chargée. La libération est effectuée en appelant la méthode {{ domxref("window.URL.revokeObjectURL()") }} avec en paramètre la chaîne de l'objet URL de l'attribut `img.src`.
-    6.  Ajout du nouvel élément à la liste.
+    1. Création et ajout à la liste d'un nouvel élément de liste {{ HTMLElement("li") }}.
+    2. Création d'un nouvel élément image {{ HTMLElement("img") }}.
+    3. Définition d'un nouvel objet URL représentant le fichier comme source de l'image, en utilisant {{ domxref("window.URL.createObjectURL()") }} pour la création de l'URL du Blob.
+    4. Définition de la hauteur de l'image à 60 pixels.
+    5. Définition du gestionnaire pour l'événement `load` de l'image afin de libérer l'objet URL, devenu inutile une fois l'image chargée. La libération est effectuée en appelant la méthode {{ domxref("window.URL.revokeObjectURL()") }} avec en paramètre la chaîne de l'objet URL de l'attribut `img.src`.
+    6. Ajout du nouvel élément à la liste.
 
 ## Exemple&nbsp;: Télécharger sur le serveur un fichier sélectionné par l'utilisateur
 
@@ -406,12 +406,12 @@ La fonction `FileUpload()` montrée ci-dessus crée un indicateur d'activité (_
 
 Il est nécessaire de prévoir quelques étapes préparatoires avant le téléchargement effectif des données&nbsp;:
 
-1.  Le processus d'écoute de l'événement `progress` du XMLHttpRequest est écrit de telle façon que l'indicateur d'activité affiche l'information de progression du téléchargement la plus récente.
-2.  Le gestionnaire de l'événement `load` du XMLHttpRequest est écrit pour que l'indicateur d'activité affiche 100% afin d'être sûr atteigne effectivement les 100%, même en cas granularité anormale lors du processus. Le gestionnaire supprime ensuite l'indicateur devenu inutile, entraînant sa disparition à la fin normale du téléchargement.
-3.  La requête de téléchargement de l'image est ouverte par l'appel à la méthode `open()` du XMLHttpRequest, démarrant la création d'une requête POST.
-4.  Le type MIME pour le téléchargement est défini en appelant la fonction `overrideMimeType()` du `XMLHttpRequest`. Nous utilisons ici un type MIME générique&nbsp;; vous pouvez selon les cas définir ou ne définir aucun type MIME.
-5.  L'objet `FileReader` est utilisé pour la conversion du fichier en chaîne binaire.
-6.  La fonction `send()` du XMLHttpRequest est appelée en dernier pour télécharger le contenu du fichier complètement chargé.
+1. Le processus d'écoute de l'événement `progress` du XMLHttpRequest est écrit de telle façon que l'indicateur d'activité affiche l'information de progression du téléchargement la plus récente.
+2. Le gestionnaire de l'événement `load` du XMLHttpRequest est écrit pour que l'indicateur d'activité affiche 100% afin d'être sûr atteigne effectivement les 100%, même en cas granularité anormale lors du processus. Le gestionnaire supprime ensuite l'indicateur devenu inutile, entraînant sa disparition à la fin normale du téléchargement.
+3. La requête de téléchargement de l'image est ouverte par l'appel à la méthode `open()` du XMLHttpRequest, démarrant la création d'une requête POST.
+4. Le type MIME pour le téléchargement est défini en appelant la fonction `overrideMimeType()` du `XMLHttpRequest`. Nous utilisons ici un type MIME générique&nbsp;; vous pouvez selon les cas définir ou ne définir aucun type MIME.
+5. L'objet `FileReader` est utilisé pour la conversion du fichier en chaîne binaire.
+6. La fonction `send()` du XMLHttpRequest est appelée en dernier pour télécharger le contenu du fichier complètement chargé.
 
 > **Note :** la méthode non standard `sendAsBinary` utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31 {{ geckoRelease(31) }}&nbsp;; utilisez plutôt la méthode standard `send(Blob data)`.
 

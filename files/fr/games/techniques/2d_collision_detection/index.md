@@ -67,11 +67,11 @@ Cet algorithme permet de détecter une collision entre deux polygones _convexes_
 
 L’implémentation de cet algorithme est hors de propos sur cette page, nous vous conseillons les articles suivants&nbsp;:
 
-1.  [Separating Axis Theorem (SAT) explanation](http://www.sevenson.com.au/actionscript/sat/)&nbsp;;
-2.  [(Anglais) Collision detection and response (en)](http://www.metanetsoftware.com/technique/tutorialA.html)&nbsp;;
-3.  [Collision detection Using the Separating Axis Theorem (en)](http://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)&nbsp;;
-4.  [SAT (Separating Axis Theorem) (en)](http://www.codezealot.org/archives/55)&nbsp;;
-5.  [Separation of Axis Theorem (SAT) for Collision Detection (en)](http://rocketmandevelopment.com/blog/separation-of-axis-theorem-for-collision-detection/).
+1. [Separating Axis Theorem (SAT) explanation](http://www.sevenson.com.au/actionscript/sat/)&nbsp;;
+2. [(Anglais) Collision detection and response (en)](http://www.metanetsoftware.com/technique/tutorialA.html)&nbsp;;
+3. [Collision detection Using the Separating Axis Theorem (en)](http://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)&nbsp;;
+4. [SAT (Separating Axis Theorem) (en)](http://www.codezealot.org/archives/55)&nbsp;;
+5. [Separation of Axis Theorem (SAT) for Collision Detection (en)](http://rocketmandevelopment.com/blog/separation-of-axis-theorem-for-collision-detection/).
 
 ## Performances
 

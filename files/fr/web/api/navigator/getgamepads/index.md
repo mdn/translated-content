@@ -11,7 +11,9 @@ Des éléments dans le tableau peuvent être `null` si un contrôleur est décon
 
 ## Syntaxe
 
-     var arrayGP = navigator.getGamepads();
+```js
+var arrayGP = navigator.getGamepads();
+```
 
 ## Exemple
 

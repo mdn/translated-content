@@ -26,11 +26,11 @@ browser-compat: javascript.operators.unary_plus
 
 它不會對該運算元進行任何其他操作。
 
-它可以將字串轉為整數和浮點數（如果字串值符合）；亦可使用在非字串的運算元，例如 `true`、`false`、`null`。 
+它可以將字串轉為整數和浮點數（如果字串值符合）；亦可使用在非字串的運算元，例如 `true`、`false`、`null`。
 
-正號運算子支持十進制和十六進制整數（`0x`前綴）、負數（雖然不適用於十六進制）格式。 
+正號運算子支持十進制和十六進制整數（`0x`前綴）、負數（雖然不適用於十六進制）格式。
 
-若用於 BigInt 類型的值，會觸發 TypeError。 
+若用於 BigInt 類型的值，會觸發 TypeError。
 
 如果無法解析值，它會回傳 {{jsxref("NaN")}}。
 
@@ -70,10 +70,10 @@ console.log(+y);
 
 - [相加運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Addition)
 - [相減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [相除運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Division) 
+- [相除運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Division)
 - [相乘運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication)
 - [餘數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Remainder)
 - [相乘運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication)
 - [指數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Exponentiation)
 - [遞減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [負號運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_negation) 
+- [負號運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_negation)

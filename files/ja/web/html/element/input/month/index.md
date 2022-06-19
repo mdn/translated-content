@@ -356,6 +356,7 @@ input:valid+span:after {
 一つ目はネイティブの `month` 入力欄であり、もう一つは年と月を個別に選択することができる一組の {{HTMLElement("select")}} 要素で、まだ `<input type="month">` に対応していないブラウザーのためのものです。
 
 ### 結果
+
 {{EmbedLiveSample('Examples', 600, 140)}}
 
 ### HTML

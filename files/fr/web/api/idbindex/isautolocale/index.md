@@ -16,8 +16,10 @@ La propriété en lecture seule **`isAutoLocale`**, rattachée à l'interface {{
 
 ## Syntaxe
 
-    var monIndex = objectStore.index('index');
-    console.log(monIndex.isAutoLocale);
+```js
+var monIndex = objectStore.index('index');
+console.log(monIndex.isAutoLocale);
+```
 
 ### Valeur
 

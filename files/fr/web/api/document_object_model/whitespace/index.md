@@ -14,18 +14,20 @@ La présence d'espaces et de blancs dans le [DOM](fr/DOM) peut rendre la manipul
 
 En d'autres termes, l'arbre DOM pour le document qui suit ressemblera à l'image ci-dessous (où «&nbsp;\n&nbsp;» représente un retour à la ligne)&nbsp;:
 
-    <!-- My document -->
-    <html>
-    <head>
-      <title>My Document</title>
-    </head>
-    <body>
-      <h1>Header</h1>
-      <p>
-        Paragraph
-      </p>
-    </body>
-    </html>
+```html
+<!-- My document -->
+<html>
+<head>
+  <title>My Document</title>
+</head>
+<body>
+  <h1>Header</h1>
+  <p>
+    Paragraph
+  </p>
+</body>
+</html>
+```
 
 ![Arbre du DOM équivalent à l'exemple HTML ci-avant](dom-string.png)
 

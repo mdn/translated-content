@@ -10,7 +10,9 @@ La propriété **`ononline`** de l'interface {{domxref("WorkerGlobalScope")}} re
 
 ## Syntaxe
 
-    self.ononline = function() { ... };
+```js
+self.ononline = function() { ... };
+```
 
 ## Exemple
 

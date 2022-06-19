@@ -30,7 +30,7 @@ similar). Uma promessa {{domxref("fetch()")}} _não_ rejeita erros HTTP (`404`, 
 
 O método `fetch()` é controlado pela diretiva `connect-src` da [Content Security Policy](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) em vez da diretiva dos recursos que está recuperando.
 
-> **Note:** Os parâmetros do método `fetch()` são idênticos 
+> **Note:** Os parâmetros do método `fetch()` são idênticos
 > aos do construtor {{domxref("Request.Request","Request()")}}.
 
 ## Sintaxe

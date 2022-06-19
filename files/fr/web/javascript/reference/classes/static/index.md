@@ -16,7 +16,9 @@ Le mot-clé **`static`** permet de définir une méthode statique d'une classe. 
 
 ## Syntaxe
 
-    static nomMéthode() { ... }
+```js
+static nomMéthode() { ... }
+```
 
 ## Description
 

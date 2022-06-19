@@ -15,15 +15,19 @@ La propriété en lecture seule isTrusted, de l'interface {{domxref("Event")}}, 
 
 ## Syntaxe
 
-    var bool = event.isTrusted;
+```js
+var bool = event.isTrusted;
+```
 
 ## Exemple
 
-     if (e.isTrusted) {
-         /* The event is trusted. */
-     } else {
-         /* The event is not trusted. */
-     }
+```js
+if (e.isTrusted) {
+  /* The event is trusted. */
+} else {
+  /* The event is not trusted. */
+}
+```
 
 ## Spécifications
 

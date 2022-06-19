@@ -9,7 +9,9 @@ La méthode **`querySelector()`** de l'interface [`Element`](/fr/docs/Web/API/El
 
 ## Syntaxe
 
-    element = baseElement.querySelector(selectors);
+```js
+element = baseElement.querySelector(selectors);
+```
 
 ### Paramètres
 

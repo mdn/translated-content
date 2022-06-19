@@ -13,7 +13,9 @@ Si le nouveau nœud est un fragment de document, les enfants du fragment sont in
 
 ## Syntaxe
 
-    range.insertNode(newNode);
+```js
+range.insertNode(newNode);
+```
 
 ### Paramètres
 

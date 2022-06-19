@@ -12,7 +12,7 @@ translation_of: Web/API/DataTransfer/getData
 
 **`DataTransfer.getData()`** 메소드는 특정 형태를 위해 ({{domxref("DOMString")}}로) 끌어낸 데이터를 회수한다. 가령, 끌어내는 동작이 데이터를 포함하지 않는다면, 이 메소드는 빈 문자열을 반환한다.
 
-예시 데이터 형식으로는 `text/plain` 와 `text/uri-list `이 있다.
+예시 데이터 형식으로는 `text/plain` 와 `text/uri-list` 이 있다.
 
 ## 구문
 

@@ -17,7 +17,9 @@ La méthode `createBiquadFilter()` de l'interface {{ domxref("BaseAudioContext")
 
 ## Syntaxe
 
-    baseAudioContext.createBiquadFilter();
+```js
+baseAudioContext.createBiquadFilter();
+```
 
 ### Retourne
 

@@ -16,7 +16,9 @@ La propriété **`onopen`** de l'interface {{domxref("EventSource")}} est un {{e
 
 ## Syntaxe
 
-    eventSource.onopen = function
+```js
+eventSource.onopen = function
+```
 
 ## Exemples
 

@@ -19,29 +19,35 @@ Traditionnellement, les en-têtes sont classés en catégories, mais cette class
 
 Requête basique avec un seul en-tête :
 
-    GET /example.http HTTP/1.1
-    Host: example.com
+```
+GET /example.http HTTP/1.1
+Host: example.com
+```
 
 Les redirections ont des en-têtes obligatoires ({{HTTPHeader("Location")}}) :
 
-    302 Found
-    Location: /NewPage.html
+```
+302 Found
+Location: /NewPage.html
+```
 
 Un ensemble d'en-têtes typique :
 
-    304 Not Modified
-    Access-Control-Allow-Origin: *
-    Age: 2318192
-    Cache-Control: public, max-age=315360000
-    Connection: keep-alive
-    Date: Mon, 18 Jul 2016 16:06:00 GMT
-    Server: Apache
-    Vary: Accept-Encoding
-    Via: 1.1 3dc30c7222755f86e824b93feb8b5b8c.cloudfront.net (CloudFront)
-    X-Amz-Cf-Id: TOl0FEm6uI4fgLdrKJx0Vao5hpkKGZULYN2TWD2gAWLtr7vlNjTvZw==
-    X-Backend-Server: developer6.webapp.scl3.mozilla.com
-    X-Cache: Hit from cloudfront
-    X-Cache-Info: cached
+```
+304 Not Modified
+Access-Control-Allow-Origin: *
+Age: 2318192
+Cache-Control: public, max-age=315360000
+Connection: keep-alive
+Date: Mon, 18 Jul 2016 16:06:00 GMT
+Server: Apache
+Vary: Accept-Encoding
+Via: 1.1 3dc30c7222755f86e824b93feb8b5b8c.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: TOl0FEm6uI4fgLdrKJx0Vao5hpkKGZULYN2TWD2gAWLtr7vlNjTvZw==
+X-Backend-Server: developer6.webapp.scl3.mozilla.com
+X-Cache: Hit from cloudfront
+X-Cache-Info: cached
+```
 
 ## En apprendre plus
 

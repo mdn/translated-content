@@ -209,7 +209,7 @@ async/await はプロミスの上に成り立っています。例えば上記�
 ```js
 process.on("unhandledRejection", (reason, promise) => {
   /* ここにコードを追加することで、 "promise" および "reason" の値を
-	 * 検査することができます。 */
+  * 検査することができます。 */
 });
 ```
 
