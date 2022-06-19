@@ -100,7 +100,7 @@ Will be ignored in browsers which don't support `:unsupported` even if they supp
 </article>
 ```
 
-このややわざとらしい例では、2 つの article要素がそれぞれ section、aside、footer 要素を含んでいます。2つの article は、子要素をマークするために使われるクラスが異なります。
+このややわざとらしい例では、2 つの article 要素がそれぞれ section、aside、footer 要素を含んでいます。2つの article は、子要素をマークするために使われるクラスが異なります。
 
 中のリンクの選択をより簡単にしながらも、区別できるようにするために、次のように `:is()` や `:where()` を使うことができます。
 
