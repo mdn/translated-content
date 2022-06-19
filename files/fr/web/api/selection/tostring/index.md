@@ -13,7 +13,9 @@ Renvoie une chaîne de caractères représentant l'actuel objet `selection`, i.e
 
 ### Syntaxe
 
-    string =sel.toString()
+```js
+string =sel.toString()
+```
 
 - `string` est la représentation sous la forme d'une chaîne de caractères de la sélection.
 
@@ -27,8 +29,10 @@ Cette méthode renvoie le texte sélectionné.
 
 En [JavaScript](fr/JavaScript), cette méthode est appelée automatiquement pour des objets `selection` aux fonctions nécessitant un paramètre `string`&nbsp;:
 
-    alert(window.getSelection()) // Appel automatique
-    alert(window.getSelection().toString())  // Appel explicite
+```js
+alert(window.getSelection()) // Appel automatique
+alert(window.getSelection().toString())  // Appel explicite
+```
 
 ### Voir aussi
 

@@ -129,7 +129,6 @@ log("de-DE");
 
 {{Compat}}
 
-
 ## 関連情報
 
 - 導入: [The ECMAScript Internationalization API](https://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)

@@ -60,20 +60,20 @@ html,body,svg { height:100% }
 
 ## 属性
 
-*   {{SVGAttr("clipPathUnits")}}
-    *   : `<clipPath>` 要素の内容物の座標系を定義します。
-        *値の型*: `userSpaceOnUse`|`objectBoundingBox` ; *既定値*: `userSpaceOnUse`; *アニメーション*: **可**
+- {{SVGAttr("clipPathUnits")}}
+  - : `<clipPath>` 要素の内容物の座標系を定義します。
+    *値の型*: `userSpaceOnUse`|`objectBoundingBox` ; *既定値*: `userSpaceOnUse`; *アニメーション*: **可**
 
 ### グローバル属性
 
-*   [コア属性](/ja/docs/Web/SVG/Attribute/Core)
-    *   : 最重要なもの: {{SVGAttr('id')}}
-*   [スタイル付け属性](/ja/docs/Web/SVG/Attribute/Styling)
-    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-*   [条件処理属性](/ja/docs/Web/SVG/Attribute/Conditional_Processing)
-    *   : 最重要なもの: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-*   [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
-    *   : 最重要なもの: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- [コア属性](/ja/docs/Web/SVG/Attribute/Core)
+  - : 最重要なもの: {{SVGAttr('id')}}
+- [スタイル付け属性](/ja/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [条件処理属性](/ja/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : 最重要なもの: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
+  - : 最重要なもの: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 
 ## 利用メモ
 
@@ -89,5 +89,5 @@ html,body,svg { height:100% }
 
 ## 関連情報
 
-*   クリッピングとマスクの SVG 要素: {{SVGElement("mask")}}
-*   CSS プロパティ: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}
+- クリッピングとマスクの SVG 要素: {{SVGElement("mask")}}
+- CSS プロパティ: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}

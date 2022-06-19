@@ -19,7 +19,7 @@ Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui on
 
 - Les optimizations [Asm.js](http://asmjs.org/spec/latest/) sont activées, rendant possible la compilation d'applications C / C++ vers un sous-ensemble Javascript pour de meilleures performances.
 - La syntaxe ES6 [Arrow Function](/fr/docs/JavaScript/Reference/arrow_functions) a été implémentée ({{bug(846406)}}).
-- La nouvelle fonction [Object.is ](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is)a été ajoutée ({{bug(839979)}}).
+- La nouvelle fonction [Object.is](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is) a été ajoutée ({{bug(839979)}}).
 
 ### DOM
 

@@ -141,8 +141,6 @@
 /zh-TW/docs/Firefox_3_supports_Cross-site_XMLHttpRequest	/zh-TW/docs/orphaned/Cross-site_XMLHttpRequest
 /zh-TW/docs/Firefox_3_技術文件	/zh-TW/docs/Mozilla/Firefox/Releases/3
 /zh-TW/docs/Firefox_4_for_developers	/zh-TW/docs/Mozilla/Firefox/Releases/4
-/zh-TW/docs/Firefox_4_for_developers/Firefox_4_開發者新功能概覽	/zh-TW/docs/orphaned/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽
-/zh-TW/docs/Firefox_4_開發者新功能概覽	/zh-TW/docs/orphaned/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽
 /zh-TW/docs/Firefox_7_for_developers	/zh-TW/docs/Mozilla/Firefox/Releases/7
 /zh-TW/docs/Games/Workflows	/zh-TW/docs/Games/Tutorials
 /zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
@@ -487,7 +485,6 @@
 /zh-TW/docs/Mozilla/Firefox/Releases/2/Firefox_2_的安全功能	/zh-TW/docs/Mozilla/Firefox/Releases/2/Security_changes
 /zh-TW/docs/Mozilla/Firefox/Releases/2/新增消息來源閱讀工具	/zh-TW/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /zh-TW/docs/Mozilla/Firefox/Releases/3/Firefox_3_Dom_Improvements	/zh-TW/docs/Mozilla/Firefox/Releases/3/DOM_improvements
-/zh-TW/docs/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽	/zh-TW/docs/orphaned/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽
 /zh-TW/docs/Mozilla_event_reference	/zh-TW/docs/Web/Events
 /zh-TW/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
 /zh-TW/docs/Python	/zh-TW/docs/conflicting/Learn/Server-side/Django

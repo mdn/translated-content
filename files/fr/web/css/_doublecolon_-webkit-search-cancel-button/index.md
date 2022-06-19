@@ -14,7 +14,9 @@ Le pseudo-élément **`::-webkit-search-cancel-button`** représente le bouton d
 
 ## **Syntaxe**
 
-     selecteur::-webkit-search-cancel-button
+```css
+selecteur::-webkit-search-cancel-button
+```
 
 ## Spécifications
 

@@ -171,7 +171,7 @@ Chaque enregistrement a une valeur. Il peut s'agir de n'importe quelle valeur qu
 - [Un nombre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number),
 - [Une chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String),
 - [Une date](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date),
-- [Un objet](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object), 
+- [Un objet](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object),
 - [Un tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array),
 - [Une expression rationnelle](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp),
 - [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined),

@@ -33,8 +33,6 @@ function Default() {
 var defaultReference = new Default();
 ```
 
-
-
 ## Pour approfondir
 
 ### Culture générale

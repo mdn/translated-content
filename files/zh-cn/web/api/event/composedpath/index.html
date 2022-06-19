@@ -7,9 +7,9 @@ translation_of: Web/API/Event/composedPath
 ---
 <p>{{APIRef("Shadow DOM")}}</p>
 
-<p> <strong><code>composedPath()</code></strong> 是 {{domxref("Event")}} 接口的一个方法，当对象数组调用该侦听器时返回事件路径。 如果影子根节点被创建并且{{domxref("ShadowRoot.mode")}}是关闭的，那么该路径不包括影子树中的节点。</p>
+<p><strong><code>composedPath()</code></strong> 是 {{domxref("Event")}} 接口的一个方法，当对象数组调用该侦听器时返回事件路径。 如果影子根节点被创建并且{{domxref("ShadowRoot.mode")}}是关闭的，那么该路径不包括影子树中的节点。</p>
 
-<h2 id="语法"><strong>语法</strong></h2>
+<h2 id="语法">语法</h2>
 
 <pre class="syntaxbox">var <em>composed</em> = <em>Event</em>.composedPath();
 </pre>
@@ -22,7 +22,7 @@ translation_of: Web/API/Event/composedPath
 
 <p>一个 {{domxref("EventTarget")}}对象数组，表示将在其上调用事件侦听器的对象。</p>
 
-<h2 id="例子"><strong>例子</strong></h2>
+<h2 id="示例">示例</h2>
 
 <p>在我们的 composed-composed-path 例子中，我们定义了两个自定义元素，<code>&lt;open-shadow&gt;</code> 和 <code>&lt;closed-shadow&gt;，</code>两 个全都调用了它们文本属性的内容然后作为<code>&lt;p&gt;</code>  元素的文本内容将它们插入到元素的影子 DOM 中。两者之间唯一的区别是它们影子的根结点是在它们的模式被分别设置成<code>open</code> 和 <code>closed</code> 的情况下连接的。</p>
 
@@ -64,26 +64,11 @@ translation_of: Web/API/Event/composedPath
 
 <p>在第二个例子中，事件监听器仅能够传播到 <code>&lt;closed-shadow&gt;</code> 元素本身，但是不会到影子边界内的节点。</p>
 
-<h2 id="规范"><strong>规范</strong></h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规格</th>
-   <th scope="col">状态</th>
-   <th scope="col">评语</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '##dom-event-composedpath', 'composedPath()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容"><strong>浏览器兼容</strong></h2>
-
-
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <div>
 <p>{{Compat("api.Event.composedPath")}}</p>

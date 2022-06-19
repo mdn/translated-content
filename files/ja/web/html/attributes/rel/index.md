@@ -139,7 +139,7 @@ translation_of: Web/HTML/Attributes/rel
 
   - : {{htmlelement('form')}}, {{htmlelement('a')}}, {{htmlelement('area')}} に関連するもので、ハイパーリンクがそもそもこれらのいずれかを作成する (つまり、適切な `target` 属性値を持っている) 場合、補助的な閲覧コンテキストではない最上位の閲覧コンテキストを作成します。言い換えれば、 [`window.opener`](/ja/docs/Web/API/Window/opener) が null で `[target](target)="_parent"` が設定されているかのようにリンクを動作させます。<br>
 
-	これは [opener](#opener) の逆です。
+    これは [opener](#opener) の逆です。
 - {{htmlattrdef("noreferrer")}}
   - : {{htmlelement('form')}}, {{htmlelement('a')}}, {{htmlelement('area')}} に関連するもので、この値を含めると、リファラーを不明とし (`Referer` ヘッダーが含まれません)、あたかも `noopener` も設定されているかのように、最上位のの閲覧コンテキストが生成されます。
 - {{htmlattrdef("opener")}}
@@ -163,7 +163,7 @@ translation_of: Web/HTML/Attributes/rel
 
   - : {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}} の各要素に関連する `search` キーワードは、ハイパーリンクが、現在の文書、サイト、および関連リソースでの検索のために特別に設計されたインターフェイスを持つ文書を参照していることを示し、検索に使用できるリソースへのリンクを提供します。
 
-	  [`type`](type) 属性が `application/opensearchdescription+xml` に設定されている場合、そのリソースは、Firefox や Internet Explorer などの一部のブラウザーのインターフェイスに簡単に追加できる [OpenSearch](/ja/docs/Web/OpenSearch) プラグインです。
+   [`type`](type) 属性が `application/opensearchdescription+xml` に設定されている場合、そのリソースは、Firefox や Internet Explorer などの一部のブラウザーのインターフェイスに簡単に追加できる [OpenSearch](/ja/docs/Web/OpenSearch) プラグインです。
 
 - {{htmlattrdef("stylesheet")}}
 

@@ -32,45 +32,44 @@ Le gestionnaire d'événement **`onerror`** de la transaction affiche le code d'
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-	note.innerHTML += '<li>Connexion établie.</li>';
+  note.innerHTML += '<li>Connexion établie.</li>';
 
-	// On affecte la connexion à la variable db.
-	db = DBOpenRequest.result;
+  // On affecte la connexion à la variable db.
+  db = DBOpenRequest.result;
 
-	// On exécute la fonction addData () pour ajouter
-    // des données dans la base
-	addData();
+  // On exécute la fonction addData () pour ajouter
+  // des données dans la base
+  addData();
 };
 function addData() {
-	// On crée un nouvel objet prêt à être emmagasiné
-	newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  // On crée un nouvel objet prêt à être emmagasiné
+  newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
 
-	// On ouvre une transaction de lecture / écriture
-    // pour traiter les données via la connexion
-	var transaction = db.transaction(["toDoList"], "readwrite");
+  // On ouvre une transaction de lecture / écriture
+  // pour traiter les données via la connexion
+ var transaction = db.transaction(["toDoList"], "readwrite");
 
-	// En cas de succès de l'ouverture de la transaction
-    // on utilise ce gestionnaire
-	transaction.oncomplete = function(event) {
-		note.innerHTML += '<li>Transaction terminée : modification de la base de données OK.</li>';
-	};
-	// En  cas d'échec de l'ouverture de la transaction
-    // on utilisera ce gestionnaire
-	transaction.onerror = function(event) {
-		note.innerHTML += '<li>L\'erreur: "' + transaction.error +'" s\'est produite, échec de la transaction.</li>';
-	};
+  // En cas de succès de l'ouverture de la transaction
+  // on utilise ce gestionnaire
+  transaction.oncomplete = function(event) {
+    note.innerHTML += '<li>Transaction terminée : modification de la base de données OK.</li>';
+  };
+  // En  cas d'échec de l'ouverture de la transaction
+  // on utilisera ce gestionnaire
+ transaction.onerror = function(event) {
+   note.innerHTML += '<li>L\'erreur: "' + transaction.error +'" s\'est produite, échec de la transaction.</li>';
+  };
 
-	// On ouvre l'accès au magasin "toDoList" de la transaction
-	var objectStore = transaction.objectStore("toDoList");
+  // On ouvre l'accès au magasin "toDoList" de la transaction
+  var objectStore = transaction.objectStore("toDoList");
 
-	// Enfin on ajoute un enregistrement
-	var objectStoreRequest = objectStore.add(newItem[0]);
-	objectStoreRequest.onsuccess = function(event) {
-		// On signale l'ajout de l'enregistrement
-		note.innerHTML += '<li>Enregistrement ajouté.</li>';
-	};
- };
-
+  // Enfin on ajoute un enregistrement
+  var objectStoreRequest = objectStore.add(newItem[0]);
+  objectStoreRequest.onsuccess = function(event) {
+    // On signale l'ajout de l'enregistrement
+    note.innerHTML += '<li>Enregistrement ajouté.</li>';
+  };
+};
 ```
 
 > **Note :** Pour un exemple de travail complet, voir l'application [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([exemple _live_ disponible ici](https://mdn.github.io/to-do-notifications/)).

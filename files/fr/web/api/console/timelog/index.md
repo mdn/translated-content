@@ -21,7 +21,9 @@ Voir [Timers](/en-US/docs/Web/API/console#Timers) dans la documentation pour des
 
 ## Syntaxe
 
-    console.timeLog(label);
+```js
+console.timeLog(label);
+```
 
 ### Paramètres
 
@@ -32,29 +34,39 @@ Voir [Timers](/en-US/docs/Web/API/console#Timers) dans la documentation pour des
 
 Si aucun label n'est inclus
 
-    default: 1042ms
+```
+default: 1042ms
+```
 
 Si un `label` est inclus:
 
-    timer name: 1242ms
+```
+timer name: 1242ms
+```
 
 ### Exceptions
 
 Si aucun timer n'est en cours d'éxecution, `timeLog()` retourne l'avertissement suivant :
 
-    Timer “default” doesn’t exist.
+```
+Timer “default” doesn’t exist.
+```
 
 Si le paramètre label est spécifé mais aucun timer n'y correspond :
 
-     Timer “timer name” doesn’t exist.
+```
+Timer “timer name” doesn’t exist.
+```
 
 ## Exemples
 
-    console.time("answer time");
-    alert("Click to continue");
-    console.timeLog("answer time");
-    alert("Do a bunch of other stuff...");
-    console.timeEnd("answer time");
+```js
+console.time("answer time");
+alert("Click to continue");
+console.timeLog("answer time");
+alert("Do a bunch of other stuff...");
+console.timeEnd("answer time");
+```
 
 Le résultat de l'exemple ci-dessus montre le temps qu'a mis l'utilisateur à fermer la première pop-up d'alerte, puis le temps que l'utilisateur a pris pour fermer la seconde :
 

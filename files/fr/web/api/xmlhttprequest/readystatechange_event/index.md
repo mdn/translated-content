@@ -12,7 +12,9 @@ Un [`EventHandler`](/en-US/docs/Web/API/EventHandler) qui réagit aux changement
 
 ## Syntaxe
 
-    XMLHttpRequest.onreadystatechange = callback;
+```js
+XMLHttpRequest.onreadystatechange = callback;
+```
 
 ### Valeurs
 

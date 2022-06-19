@@ -35,9 +35,9 @@ Un service worker est d'abord enregistré en utilisant la méthode {{domxref("Se
 
 A cette étape, votre service worker observera le cycle de vie suivant :
 
-1.  Téléchargement
-2.  Installation
-3.  Activation
+1. Téléchargement
+2. Installation
+3. Activation
 
 Le service worker est immédiatement téléchargé lorsqu'un utilisateur accède pour la première fois à une page ou à un site contrôlé par un service worker.
 

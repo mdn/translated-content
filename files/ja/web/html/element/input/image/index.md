@@ -233,6 +233,7 @@ translation_of: Web/HTML/Element/input/image
 次の例は、前と同じボタンを、典型的なログインフォームのコンテキストに含めて表示したものです。
 
 #### 実行例
+
 {{ EmbedLiveSample('A_login_form', 600, 170) }}
 
 #### HTML
@@ -276,6 +277,7 @@ label {
 この例では、前の例を応用して画像のための空間を確保し、 {{cssxref("object-fit")}} と {{cssxref("object-position")}} で実際の画像の大きさと位置を調整しています。
 
 #### 実行例
+
 {{EmbedLiveSample("Adjusting_the_image_position_and_scaling", 600, 300)}}
 
 #### HTML

@@ -20,7 +20,9 @@ Renvoie le nombre de fois où le document actuel a été peint à l'écran dans 
 
 ## Syntaxe
 
-    var paintCount = window.mozPaintCount;
+```js
+var paintCount = window.mozPaintCount;
+```
 
 - `paintCount` stocke la valeur de la propriété `window.mozPaintCount`.
 - La valeur `window.mozPaintCount` est `longue`, et commence à zéro lorsque le document est créé pour la première fois, en incrémentant de un à chaque fois que le document est peint.

@@ -181,15 +181,17 @@ Dans notre JavaScript, nous écoutons les clics sur les choix contextuels. Nous 
 
 La structure finale de l’add‐on devrait ressembler à ceci&nbsp;:
 
-    button/
-        icons/
-            page-16.png
-            page-32.png
-        popup/
-            choose_page.css
-            choose_page.html
-            choose_page.js
-        manifest.json
+```
+button/
+    icons/
+        page-16.png
+        page-32.png
+    popup/
+        choose_page.css
+        choose_page.html
+        choose_page.js
+    manifest.json
+```
 
 Maintenant, rechargez l’extension, cliquez de nouveau sur le bouton et essayez de cliquer sur les choix dans la fenêtre contextuelle&nbsp;:
 

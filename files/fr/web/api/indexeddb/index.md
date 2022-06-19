@@ -16,7 +16,9 @@ La propriété **`indexedDB`** en lecture seule, rattachée au _mixin_ {{domxref
 
 ## Syntaxe
 
-    var IDBFactory = self.indexedDB;
+```js
+var IDBFactory = self.indexedDB;
+```
 
 ### Valeur de retour
 
