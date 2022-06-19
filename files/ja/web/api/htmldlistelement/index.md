@@ -1,80 +1,41 @@
 ---
 title: HTMLDListElement
 slug: Web/API/HTMLDListElement
+page-type: web-api-interface
 tags:
-  - DOM
-  - DOM Reference
+  - API
+  - HTML DOM
+  - インターフェイス
+  - NeedsNewLayout
+  - リファレンス
+browser-compat: api.HTMLDListElement
 translation_of: Web/API/HTMLDListElement
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p><code>HTMLDListElement</code> インタフェースは {{htmlelement("dl")}} を操作する為の特別なプロパティを持つインタフェースです。 <code>&lt;dl&gt;</code> 要素はこのインタフェースの継承元である {{domxref("HTMLElement")}} からも操作可能です。</p>
+**`HTMLDListElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものに加えて）定義リスト要素 ({{HtmlElement("dl")}}) をを操作するための特別なプロパティを提供します。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+{{InheritanceDiagram}}
 
-<p>{{domxref("HTMLElement")}} インタフェースから継承するプロパティの他に、以下の固有プロパティを持ちます。</p>
+## プロパティ
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">名称</th>
-   <th scope="col">型</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>compact</code> {{obsolete_inline}}</td>
-   <td>{{domxref("Boolean")}}</td>
-   <td>リスト項目間の（視覚上の）間隔を詰める事を示す</td>
-  </tr>
- </tbody>
-</table>
+_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+- {{domxref("HTMLDListElement.compact")}} {{deprecated_inline}}
+  - : 論理値で、リスト項目間の間隔を縮小することを示します。
 
-<p>{{domxref("HTMLElement")}} インタフェースから継承するもの以外のメソッドは持ちません。</p>
+## メソッド
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "grouping-content.html#the-dl-element", "HTMLDListElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>{{SpecName("HTML5 W3C")}} より変更無し</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "grouping-content.html#the-dl-element", "HTMLDListElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>{{SpecName("DOM2 HTML")}} より変更無し</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-52368974', 'HTMLDListElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>{{SpecName("DOM1")}} より変更無し</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-52368974', 'HTMLDListElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>最初期の定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+{{Specifications}}
 
+## ブラウザーの互換性
 
+{{Compat}}
 
-<p>{{Compat("api.HTMLDListElement")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{HTMLElement("dl")}} 要素 - <code>HTMLDListElement</code> インタフェースを持つ HTML 要素</li>
-</ul>
+- このインターフェイスを実装している HTML 要素: {{ HTMLElement("dl") }}

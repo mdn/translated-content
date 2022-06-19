@@ -1,80 +1,47 @@
 ---
 title: HTMLParamElement
 slug: Web/API/HTMLParamElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
-  - Interface
-  - Reference
+  - インターフェイス
+  - リファレンス
+  - 非推奨
+browser-compat: api.HTMLParamElement
 translation_of: Web/API/HTMLParamElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}{{Deprecated_Header}}
 
-<p><strong><code>HTMLParamElement</code></strong>インターフェースが提供する（継承している通常の{{domxref("HTMLElement")}}オブジェクトインターフェースより優れた）特別の属性を用いて，{{HTMLElement("param")}}要素を，キー・値の組として，ちょうど{{HTMLElement("object")}}要素のパラメータと同様に，操作できます。</p>
+**`HTMLParamElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものに加えて） {{HTMLElement("param")}} 要素を操作するための特別なプロパティを提供し、 {{HTMLElement("object")}} 要素の引数として機能するキーと値の組を表します。
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="属性">属性</h2>
+## プロパティ
 
-<p><em>親である{{domxref("HTMLElement")}}より属性を継承。</em></p>
+_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
-<dl>
- <dt>{{domxref("HTMLParamElement.name")}}</dt>
- <dd>は{{domxref("DOMString")}}で，パラメータの名前を示します。{{htmlattrxref("name", "param")}}属性を反映します。</dd>
- <dt>{{domxref("HTMLParamElement.value")}}</dt>
- <dd>は{{domxref("DOMString")}}で，パラメータに紐付けられた値を示します。{{htmlattrxref("value", "param")}}属性を反映します。</dd>
- <dt>{{domxref("HTMLParamElement.type")}} {{obsolete_inline}}</dt>
- <dd>は{{domxref("DOMString")}}で，<code>valueType</code>の値が<code>"ref"</code>である時のパラメータの型です。{{htmlattrxref("type", "param")}}属性を反映します。</dd>
- <dt>{{domxref("HTMLParamElement.valueType")}} {{obsolete_inline}}</dt>
- <dd>は{domxref("DOMString")}}で，valueの型です。containing the type of the <code>value</code>. It reflects the {{htmlattrxref("valuetype", "param")}}属性を反映しており，値は次の内孰れかです: <code>"data"</code>，<code>"ref"</code>，又は<code>"object"</code>。</dd>
-</dl>
+- {{domxref("HTMLParamElement.name")}}
+  - : 文字列で、引数の名前を表します。 {{htmlattrxref("name", "param")}} 属性を反映しています。
+- {{domxref("HTMLParamElement.value")}}
+  - : 文字列で、この引数に関連付けられた値を表します。 {{htmlattrxref("value", "param")}} 属性を反映しています。
+- {{domxref("HTMLParamElement.type")}} {{deprecated_inline}}
+  - : 文字列で、 `valueType` が `"ref"` の値であった場合の引数の型を示します。 {{htmlattrxref("type", "param")}} 属性を反映しています。
+- {{domxref("HTMLParamElement.valueType")}} {{deprecated_inline}}
+  - : 文字列で、 `value` の型を表します。これは {{htmlattrxref("<code>valuetype</code>", "param")}} 属性を反映しており、値は `"data"`, `"ref"`, `"object"` のいずれかになります。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<p><em>固有のメソッドはなく，親である{{domxref("HTMLElement")}}よりメソッドを継承します。</em></p>
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlparamelement", "HTMLParamElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-param-element", "HTMLParamElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>次の属性が廃止されました: <code>type</code>，及び<code>valueType</code>。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-64077273', 'HTMLParamElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>{{SpecName("DOM1")}}より変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-64077273', 'HTMLParamElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.HTMLParamElement")}}</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li>本インターフェースを実装しているHTML要素: {{ HTMLElement("param") }}.</li>
-</ul>
+- このインターフェイスを実装している HTML 要素: {{ HTMLElement("param") }}
