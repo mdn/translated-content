@@ -1,102 +1,75 @@
 ---
 title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
+page-type: web-api-constructor
+tags:
+  - コンストラクター
+  - リファレンス
+browser-compat: api.CustomEvent.CustomEvent
 translation_of: Web/API/CustomEvent/CustomEvent
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code><strong>CustomEvent()</strong></code> コンストラクターは新しい {{domxref("CustomEvent")}} を生成します。</p>
+**`CustomEvent()`** コンストラクターは新しい {{domxref("CustomEvent")}} を作成します。
 
-<p>{{AvailableInWorkers}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+new CustomEvent(type)
+new CustomEvent(type, options)
+```
 
-<pre class="syntaxbox"> <var>event</var> = new CustomEvent(<var>typeArg</var>, <var>customEventInit</var>);</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `type`
+  - : イベントの名前を表す文字列です。
+    大文字と小文字を区別し、ブラウザーは常に `customevent` を設定します。
+- `options` {{optional_inline}}
+  - : オブジェクトで、 {{domxref("Event/Event", "Event()")}} で定義されるプロパティに加えて、以下のプロパティを指定することができます。
+    - `detail` {{optional_inline}}
+      - : イベントと関連付けられたイベント依存の値。この値は、ハンドラーが {{domxref("CustomEvent.detail")}} プロパティを用いて利用できるようになります。
+        既定値は `null` です。
 
-<dl>
- <dt><var>typeArg</var></dt>
- <dd>{{domxref("DOMString")}} で、イベントの名前を表します。</dd>
- <dt><var>customEventInit</var> {{optional_inline}}</dt>
- <dd><code>CustomEventInit</code> 辞書で、以下のフィールドを持ちます。
- <ul>
-  <li><code>"detail"</code>: 省略可で既定値は <code>null</code> であり、任意の型であり、イベントに関連付けられたイベントに依存する値です。</li>
- </ul>
+### 返値
 
- <div class="note">
- <p><code>CustomEventInit</code> 辞書は、 {{domxref("Event.Event", "EventInit")}} 辞書のフィールドも受け付けます。</p>
- </div>
- </dd>
-</dl>
+新しい {{domxref("CustomEvent")}} オブジェクトです。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+## 例
 
-<p>A new <code>CustomEvent</code> object of the specified type, with any other properties configured according to the <code>CustomEventInit</code> dictionary (if one was provided).</p>
-
-<h2 id="Example" name="Example">例</h2>
-
-<pre class="brush: js">// add an appropriate event listener
-obj.addEventListener("cat", function(e) { process(e.detail) });
-
-// create and dispatch the event
-var event = new CustomEvent("cat", {
+```js
+// カスタムイベントを作成
+const catFound = new CustomEvent('animalfound', {
   detail: {
-    hazcheeseburger: true
+    name: 'cat'
   }
 });
-obj.dispatchEvent(event);</pre>
+const dogFound = new CustomEvent('animalfound', {
+  detail: {
+    name: 'dog'
+  }
+});
 
-<p>その他の例は、<a href="/ja/docs/Web/Guide/Events/Creating_and_triggering_events">イベントの作成とトリガ</a>にあります。</p>
+// 適切なイベントリスナーを追加
+obj.addEventListener('animalfound', (e) => console.log(e.detail.name));
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+// イベントの配信
+obj.dispatchEvent(catFound);
+obj.dispatchEvent(dogFound);
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#interface-customevent','CustomEvent()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+// "cat" および "dog" がコンソールの出力される
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+その他の例が[イベントの作成と軌道](/ja/docs/Web/Events/Creating_and_triggering_events)にあります。
 
-<p>{{Compat("api.CustomEvent.CustomEvent")}}</p>
+## 仕様書
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+{{Specifications}}
 
-<p>Internet Explorer 9 以上では、 <code>CustomEvent()</code> の機能を以下のコードで代替することができます。</p>
+## ブラウザーの互換性
 
-<pre class="brush: js">(function () {
+{{Compat}}
 
-  if ( typeof window.CustomEvent === "function" ) return false;
+## 関連情報
 
-  function CustomEvent ( event, params ) {
-    params = params || { bubbles: false, cancelable: false, detail: undefined };
-    var evt = document.createEvent( 'CustomEvent' );
-    evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
-    return evt;
-   }
-
-  CustomEvent.prototype = window.Event.prototype;
-
-  window.CustomEvent = CustomEvent;
-})();</pre>
-
-<p>Internet Explorer 9 以上では CustomEvent オブジェクトを window に追加していますが、正しい実装では、これは関数です。</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("CustomEvent")}}</li>
- <li><a href="/ja/docs/Web/Guide/Events/Creating_and_triggering_events">イベントの作成とトリガ</a></li>
-</ul>
+- {{domxref("CustomEvent")}}
+- [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)
