@@ -19,7 +19,7 @@ Limpa o cache do navegador.
 
 Note que apesar desta função receber um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, isso será ignorado. Todo o cache sempre será limpo usando esta função.
 
-Esta é uma função assíncrona que retorna uma [`Promessa`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Esta é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Sintaxe
 
