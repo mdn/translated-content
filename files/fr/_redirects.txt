@@ -5682,8 +5682,8 @@
 /fr/docs/Web/Progressive_web_apps/Responsive/Media_types	/fr/docs/Web/CSS/Media_Queries/Using_media_queries
 /fr/docs/Web/Progressive_web_apps/Securisee	/fr/docs/conflicting/Web/Progressive_web_apps_0d5c38b9aa908cbb52e4c39037b4f28b
 /fr/docs/Web/Progressive_web_apps/ajouter_a_lecran_daccueil_a2hs	/fr/docs/Web/Progressive_web_apps/Add_to_home_screen
-/fr/docs/Web/Reference	/fr/docs/orphaned/Web/Reference
-/fr/docs/Web/Reference/API	/fr/docs/orphaned/Web/Reference/API
+/fr/docs/Web/Reference	/fr/docs/Web
+/fr/docs/Web/Reference/API	/fr/docs/Web/API
 /fr/docs/Web/SVG/Application_d_effets_SVG_a_du_contenu_HTML	/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content
 /fr/docs/Web/SVG/Element/animateColor	/fr/docs/conflicting/Web/SVG/Element/animate
 /fr/docs/Web/SVG/Element/cercle	/fr/docs/Web/SVG/Element/circle
@@ -6234,6 +6234,8 @@
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media
 /fr/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/Web/HTML/Element/Heading_Elements
+/fr/docs/orphaned/Web/Reference	/fr/docs/Web
+/fr/docs/orphaned/Web/Reference/API	/fr/docs/Web/API
 /fr/docs/setAttribute	/fr/docs/Web/API/Element/setAttribute
 /fr/docs/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
 /fr/docs/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toString
