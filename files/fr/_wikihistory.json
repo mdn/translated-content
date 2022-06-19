@@ -41780,41 +41780,6 @@
       "xaky"
     ]
   },
-  "orphaned/Web/HTML/Element/isindex": {
-    "modified": "2020-10-15T21:24:06.247Z",
-    "contributors": [
-      "SphinxKnight",
-      "tregagnon"
-    ]
-  },
-  "orphaned/Web/HTML/Element/listing": {
-    "modified": "2020-10-15T21:24:01.189Z",
-    "contributors": [
-      "SphinxKnight",
-      "tregagnon"
-    ]
-  },
-  "orphaned/Web/HTML/Element/multicol": {
-    "modified": "2020-10-15T21:27:07.686Z",
-    "contributors": [
-      "SphinxKnight",
-      "msherefel"
-    ]
-  },
-  "orphaned/Web/HTML/Element/nextid": {
-    "modified": "2020-10-15T21:51:55.717Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "orphaned/Web/HTML/Preloading_content": {
-    "modified": "2020-10-15T21:55:30.755Z",
-    "contributors": [
-      "nhoizey",
-      "SphinxKnight",
-      "Goofy"
-    ]
-  },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
     "modified": "2020-10-15T21:27:51.341Z",
     "contributors": [
