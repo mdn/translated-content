@@ -1,148 +1,142 @@
 ---
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
+page-type: web-api-instance-method
 tags:
   - API
-  - DOM
-  - DOM Reference
-  - Method
+  - HTML DOM
+  - メソッド
   - Navigator
-  - Reference
-  - Web-Based Protocol Handlers
+  - リファレンス
+  - ウェブベースプロトコルハンドラー
   - registerProtocolHandler
+browser-compat: api.Navigator.registerProtocolHandler
 translation_of: Web/API/Navigator/registerProtocolHandler
 ---
-<div>{{APIRef("HTML DOM")}}{{securecontext_header}}</div>
+{{APIRef("HTML DOM")}}{{securecontext_header}}
 
-<p><span class="seoSummary"><strong>{{domxref("Navigator")}}</strong> の <code><strong>registerProtocolHandler()</strong></code> メソッドは、ウェブサイトが特定の URL スキーム (別名プロトコル) を開いたり処理したりする能力を登録することを可能にします。</span></p>
+**{{domxref("Navigator")}}** の **`registerProtocolHandler()`** メソッドで、ウェブサイトが特定の URL スキーム（別名プロトコル）を開いたり処理したりする機能を登録することを可能にします。
 
-<p>例えば、この API はウェブメールサイトを <code>mailto:</code> の URL で開かせたり、 <abbr title="Voice over Internet Protocol, also called IP telephony">VoIP</abbr> サイトを <code>tel:</code> の URL で開かせたりします。</p>
+例えば、この API はウェブメールサイトで `mailto:` の URL を開かせたり、 VoIP サイトで `tel:` の URL を開かせたりします。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">navigator.registerProtocolHandler(<var>scheme</var>, <var>url</var>, <var>title</var>);
-</pre>
+```js
+registerProtocolHandler(scheme, url)
+registerProtocolHandler(scheme, url, title)
+```
 
-<div class="note"><strong>注:</strong> 最近になって <code>navigator.registerProtocolHandler(<var>scheme</var>, <var>url</var>)</code> と更新されましたが、こちらに対応しているブラウザーは今のところありませx。</div>
+> **Note:** 非推奨の `title` 引数が付いたものは、互換性のために推奨されます（下記の引数情報を参照してください）。
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>scheme</var></code></dt>
- <dd>サイトが処理したいプロトコルを指定する文字列。例えば、 <code>"sms"</code> スキームを渡すことで、SMS テキストメッセージリンクを扱うように登録することができます。</dd>
- <dt><code><var>url</var></code></dt>
- <dd>ハンドラーの URL を指定する文字列。この文字列には、処理される文書の URL をエスケープした者で置き換えられるプレイスホルダー "%s" を含めてください。この URL は本物の URL のほか、電話番号、メールアドレスなどにすることもできます。
- <div class="note"><strong>注:</strong> ハンドラー URL のスキームは <code>https</code> でなければなりません。ブラウザーによってはセキュリティのため、 HTTPS の URL であることを求めるため、<em>そうするべきです</em>。</div>
- </dd>
- <dt><code><var>title</var></code> {{Obsolete_Inline}}</dt>
- <dd>ハンドラーを表す人間が読めるタイトル文字列です。これは、「このサイトで [スキーム] リンクを扱うことを許可しますか？」というプロンプトや、ブラウザーの設定で登録されたハンドラーを一覧表示するなどの形で<strong>ユーザーに表示されます</strong>。
- <div class="note"><strong>注:</strong> タイトルはなりすましの懸念から仕様から削除されましたが、現在のすべてのブラウザーでは<strong>まだ必要とされています</strong>。更新された仕様に対応しているブラウザーはほとんどの場合、下位互換性があり、まだ受け付けている可能性が高いので、<strong>常にタイトルを設定</strong>しておくことをお勧めします (ただし、使用はしません)。</div>
- </dd>
-</dl>
+- `scheme`
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+  - : サイトが扱いたいプロトコルの[許可されているスキーム](#許可されているスキーム)が入った文字列です。
+    例えば、 `"sms"` スキームを渡すことで、SMS テキストメッセージリンクを扱うように登録することができます。
 
-<dl>
- <dt>{{Exception("SecurityError")}}</dt>
- <dd>ユーザーエージェントが登録をブロックしました。以下のような場合に起こる可能性があります。</dd>
-</dl>
+- `url`
 
-<ul>
- <li>ブラウザーが独自に処理するスキーム (<code>https:</code>, <code>about:</code>, など) など、登録されているスキーム (プロトコル) が無効です。</li>
- <li>ハンドラーの URL の{{Glossary("origin", "オリジン")}}が、本 API を呼び出すページのオリジンと一致しない。</li>
- <li>ブラウザーが、この関数を安全なコンテキストから呼び出す必要がある。</li>
- <li>ブラウザーがハンドラーの URL が HTTPS 以上であることを要求している。</li>
-</ul>
+  - : ハンドラーの URL を指定する文字列。
+    **この URL には `%s` を含める必要があり**、これは取り扱う URL を[エスケープした](/ja/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)もので置き換得られるプレイスホルダーとして扱われます。
 
-<dl>
- <dt>{{Exception("SyntaxError")}}</dt>
- <dd><code>%s</code> が指定されたハンドラー URL に含まれていない。</dd>
-</dl>
+    > **Note:** ハンドラーの URL は `https` スキームを使用する必要があります。古いブラウザーは `http` にも対応しています。
 
-<h2 id="Permitted_schemes" name="Permitted_schemes">許可されたスキーム</h2>
+- `title` {{deprecated_inline}}
 
-<p>セキュリティ上の理由により <code>registerProtocolHandler()</code> は登録可能なスキームに制限を設けています。</p>
+  - : ハンドラーを表す人間が読めるタイトル文字列です。
+    **これはユーザーに表示されます**。例えば、「このサイトで [スキーム] のリンクを扱うことを許可しますか？」と尋ねたり、ブラウザーの設定で登録されたハンドラーの一覧に表示されたりします。
 
-<p><strong>カスタムスキーム</strong>は次のような場合に登録されます。</p>
+    > **Note:** タイトルはなりすましの懸念から仕様から削除されました。
+    > しかし `title` は一部のブラウザーが**まだ必要としている**ため、設定する必要があります（[下記の互換性一覧表](#ブラウザーの互換性)をご覧ください）。
+    > 更新された仕様に対応しているブラウザーはほとんどの場合、タイトルを受け付けますが、無視します。
 
-<ul>
- <li>カスタムスキームの名前が <code>web+</code> で始まる</li>
- <li>カスタムスキームの名前が <code>web+</code> 接頭辞の後に1文字以上ある</li>
- <li>カスタムスキームの名前に小文字の ASCII 文字のみが含まれている</li>
-</ul>
+### 返値
 
-<p>例えば下の <a href="#example">例</a> で使われている <code>web+burger</code> などが挙げられます。</p>
+なし ({{jsxref("undefined")}})。
 
-<p>もしくは、以下のホワイトリストに挙げられているスキームでなければなりません。</p>
+### 例外
 
-<div class="threecolumns">
-<ul>
- <li><code>bitcoin</code></li>
- <li><code>geo</code></li>
- <li><code>im</code></li>
- <li><code>irc</code></li>
- <li><code>ircs</code></li>
- <li><code>magnet</code></li>
- <li><code>mailto</code></li>
- <li><code>mms</code></li>
- <li><code>news</code></li>
- <li><code>nntp</code></li>
- <li><code>openpgp4fpr</code></li>
- <li><code>sip</code></li>
- <li><code>sms</code></li>
- <li><code>smsto</code></li>
- <li><code>ssh</code></li>
- <li><code>tel</code></li>
- <li><code>urn</code></li>
- <li><code>webcal</code></li>
- <li><code>wtai</code></li>
- <li><code>xmpp</code></li>
-</ul>
-</div>
+- `SecurityError` {{domxref("DOMException")}}
+  - : ユーザーエージェントが登録をブロックしました。
+    以下のような場合に起こる可能性があります。
 
-<h2 id="Example" name="Example">例</h2>
+    - ブラウザーが自身が処理するスキーム（`https:`, `about:`, など）であるなど、登録されているスキーム（プロトコル）が無効である場合。
+    - ハンドラーの URL の{{Glossary("origin", "オリジン")}}が、本 API を呼び出すページのオリジンと一致しない場合。
+    - ブラウザーが、この関数を安全なコンテキストから呼び出すことを要求している場合。
+    - ブラウザーが、ハンドラーの URL が HTTPS であることを要求している場合。
 
-<p>ウェブアプリケーションが <code>burgers.example.com</code> にある場合、次のようにして <code>web+burger:</code> リンクを処理するプロトコルハンドラーを登録できます:</p>
+- `SyntaxError`{{domxref("DOMException")}}
+  - : `%s` が指定されたハンドラー URL に含まれていない場合。
 
-<pre class="brush: js notranslate">navigator.registerProtocolHandler("web+burger",
+## 許可されているスキーム
+
+セキュリティ上の理由により `registerProtocolHandler()` は登録可能なスキームに制限を設けています。
+
+**カスタムスキーム**は次のような場合に登録されます。
+
+- カスタムスキームの名前が `web+` で始まる
+- カスタムスキームの名前が `web+` 接頭辞の後に 1 文字以上ある
+- カスタムスキームの名前に小文字の ASCII 文字のみが含まれている
+
+例えば下の [例](#例) で使われている `web+burger` などが挙げられます。
+
+もしくは、以下のホワイトリストに挙げられているスキームでなければなりません。
+
+- `bitcoin`
+- `ftp`
+- `ftps`
+- `geo`
+- `im`
+- `irc`
+- `ircs`
+- `magnet`
+- `mailto`
+- `matrix`
+- `mms`
+- `news`
+- `nntp`
+- `openpgp4fpr`
+- `sftp`
+- `sip`
+- `sms`
+- `smsto`
+- `ssh`
+- `tel`
+- `urn`
+- `webcal`
+- `wtai`
+- `xmpp`
+
+<!-- これは https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme と同じものです -->
+
+## 例
+
+ウェブアプリケーションが `burgers.example.com` にある場合、次のようにして `web+burger:` リンクを処理するプロトコルハンドラーを登録することができます。
+
+```js
+navigator.registerProtocolHandler("web+burger",
                                   "https://burgers.example.com/?burger=%s",
-                                  "Burger handler");
-</pre>
+                                  "Burger handler"); // 最後の title 引数は互換性のために入れている
+```
 
-<p>これは、 <code>web+burger:</code> リンクがアクセスしたバーガーの URL を <code>%s</code> プレースホルダーに挿入し、ユーザーをサイトに誘導するハンドラーを作成します。</p>
+これは、 `web+burger:` リンクがアクセスしたバーガーの URL を `%s` プレースホルダーに挿入し、ユーザーをサイトに誘導するハンドラーを作成します。
 
-<p>このスクリプトはハンドラーの URL と同じオリジン (すなわち、 <code>https://burgers.example.com</code> にあるページのいずれか) から実行する必要があり、ハンドラーの URL は <code>http</code> または <code>https</code> である必要があります。</p>
+このスクリプトはハンドラーの URL と同じオリジン (すなわち、 `https://burgers.example.com` にあるページのいずれか) から実行する必要があり、ハンドラーの URL は `http` または `https` である必要があります。
 
-<p>あなたのコードがプロトコルハンドラーを登録しようとしていることはユーザーに通知され、ユーザーは登録を許可するかどうか決めることができます。以下のスクリーンショットは <code>google.co.uk</code> での例です。</p>
+コードがプロトコルハンドラーを登録しようとしていることはユーザーに通知され、ユーザーは登録を許可するかどうか決めることができます。以下のスクリーンショットは `google.co.uk` での例です。
 
-<p><img alt="A browser notification reads “Add Burger handler (www.google.co.uk) as an application for burger links?”, and offers an “Add Application” button and a close to ignore the handler request." src="https://mdn.mozillademos.org/files/9683/protocolregister.png"></p>
+![ブラウザーの通知には、 "Add Burger handler (www.google.co.uk) as application for burger links?" と表示され、「アプリケーションの追加」ボタンとハンドラー要求を無視するクローズボタンが提供されます。](protocolregister.png)
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'system-state.html#custom-handlers', 'registerProtocolHandler()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Navigator.registerProtocolHandler")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web-based_protocol_handlers">ウェブベースのプロトコルハンドラー</a></li>
- <li>Mozilla Webdev の <a href="http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/">RegisterProtocolHandler Enhancing the Federated Web</a></li>
-</ul>
+- [ウェブベースのプロトコルハンドラー](/ja/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
+- [RegisterProtocolHandler Enhancing the Federated Web](https://blog.mozilla.org/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) (Mozilla Webdev)
