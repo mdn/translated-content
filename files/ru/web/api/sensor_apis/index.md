@@ -16,43 +16,44 @@ browser-compat: api.Sensor
 
 **Sensor APIs** - это набор интерфейсов, построенных по общему дизайну, которые последовательно предоставляют доступ к датчикам устройств на веб-платформе.
 
-## Sensor APIs concepts and usage
+## Концепции и использование Sensor APIs
 
-Although the Generic Sensor API specification defines a {{domxref('Sensor')}} interface, as a web developer you will never use it. Instead you'll use one of its subclasses to retrieve specific kinds of sensor data. For example, the {{domxref('accelerometer')}} interface returns the acceleration of the device along all three axes at the time it is read.
+Несмотря на то, что спецификация Generic Sensor API определяет интерфейс {{domxref('Sensor')}}, вам, как веб-разработчику, не придётся его использовать. Вместо него, для получения данных с конкретных датчиков, вы будете использовать один из его подклассов. Например, интерфейс {{domxref('accelerometer')}} возвращает ускорение устройства по всем трём осям на момент его считывания. 
 
-Sensors may or may not correspond exactly to a physical device sensor. For example, the {{domxref('Gyroscope')}} interface corresponds exactly to a physical device interface. Alternatively, the {{domxref('AbsoluteOrientationSensor')}} interface provides information that is algorithmically aggregated from two or more device sensors. These sensor types are referred to as _low-level_ and _high-level_ respectively. The latter type of sensor is also called a fusion sensor (alternatively, virtual or synthetic sensors).
+Данные с датчиков могут точно соответствовать данным с физических датчиков устройства, либо не соответствовать им. Например, интерфейс датчика {{domxref('Gyroscope')}} точно соответствует интерфейсу физического датчика. В качестве альтернативы, интерфейс {{domxref('AbsoluteOrientationSensor')}} предоставляет информацию, которая алгоритмически объединяет данные с двух и более датчиков устройста. Два эти типа датчиков называются _низкоуровневыми_ и _высокоуровневыми_ соответственно. Второй тип так же называют объединяющим датчиком (либо, виртуальным или, синтетическим).
 
-### Feature detection
+### Возможность использования
 
-Sensor interfaces are only proxies for the underlying device sensors. Consequently, feature detection is more complicated for sensors than it is for other APIs. The presence of a sensor API does not tell you whether that API is connected to a real hardware sensor, whether that sensor works, if it's still connected, or even whether the user has granted access to it. Making all this information consistently available is costly to performance and battery life.
+Интерфейсы датчиков - это только прокси для датчиков устройства. Как следствие, задача определения возможности использования датчиков гораздо сложнее, чем для других API. Наличие API датчика не значит, что этот API подключен к реальному аппаратному датчику, работает ли он, подключен или, даже, предоставил ли пользователь к нему доступ. Обеспечение постоянного доступа ко всей этой информации приводит к снижению производительности и разряду батареи.
 
-Therefore, feature detection for sensor APIs must include both detection of the APIs themselves and [defensive programming strategies (see below)](#defensive_programming).
+Таким образом, определение возможности использования API датчиков должно включать определение наличия самого этого API и [стратегии оборонительного программирования (см. ниже)](#defensive_programming). 
 
-The examples below show three methods for detecting sensor APIs. Additionally you can put object instantiation inside a {{jsxref('statements/try...catch', 'try...catch')}} block. Notice that detection through the {{domxref('Navigator')}} interface is not one of the available options.
+Пример ниже показывает три метода определения API датчика. Кроме того, вы можете обернуть создание экземпляра объекта в блок {{jsxref('statements/try...catch', 'try...catch')}}. Обратите внимание, что определение через интерфейс {{domxref('Navigator')}} не единственный возможный путь.
 
 ```js
 if (typeof Gyroscope === "function") {
-    // run in circles...
+    // бег по кругу...
 }
 
 if ("ProximitySensor" in window) {
-    // watch out!
+    // берегись!
 }
 
 if (window.AmbientLightSensor) {
-    // go dark...
+    // погрузись во тьму...
 }
 ```
 
-### Defensive programming
+### Оборонительное программирование
 
-As stated in Feature Detection, checking for a particular sensor API is insufficient for feature detection. The existence of an actual sensor must be confirmed as well. This is where defensive programming is needed. Defensive programming requires three strategies.
+Как указано в разделе Возможность использования, проверить наличие конкретного API датчика недостаточно. Наличие фактического датчика также должно быть подтверждено. Как раз здесь и необходимо оборонительное программированиею Оно требует три стратегии.
 
-- Checking for thrown errors when instantiating a sensor object.
-- Listening for errors thrown during its use.
-- Handling the errors gracefully so that the user experience is enhanced rather than degraded.
+- Проверка на наличие ошибок при создании экземпляра объекта датчика.
+- Прослушивание ошибок, возникающих во время его использования.
+- Корректная обработка ошибок для улучшения, а не ухудшения пользовательского опыта.
 
-The code example below illustrates these principles. The {{jsxref('statements/try...catch', 'try...catch')}} block catches errors thrown during sensor instantiation. It listens for {{domxref('Sensor.error_event', 'error')}} events to catch errors thrown during use. The only time anything is shown to the user is when [permissions](/en-US/docs/Web/API/Permissions_API) need to be requested and when the sensor type isn't supported by the device.
+Приведенный ниже пример кода иллюстрирует эти принципы. Блок {{jsxref('statements/try...catch', 'try...catch')}} ловит ошибки, возникающие при создании объекта датчика. Этот объект слушает события {{domxref('Sensor.error_event', 'error')}}, чтобы поймать ошибки, возникающие во время использования датчика. Единственный раз, когда что-либо показывается пользователю, это когда необходимо запросить [разрешения](/en-US/docs/Web/API/Permissions_API) и когда датчик не поддерживается устройством.
+
 
 > **Note:** If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
