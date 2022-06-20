@@ -3,15 +3,14 @@ title: window.setTimeout
 slug: Web/API/setTimeout
 tags:
   - Timers
-  - WindowOrWorkerGlobalScope
   - WindowTimers
   - setTimeout
-translation_of: Web/API/WindowOrWorkerGlobalScope/setTimeout
+translation_of: Web/API/setTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p> {{domxref("WindowOrWorkerGlobalScope")}} 混合的 <strong><code>setTimeout()</code></strong>方法设置一个定时器，该定时器在定时器到期后执行一个函数或指定的一段代码。</p>
+<p><code>WindowOrWorkerGlobalScope</code> 混合的 <strong><code>setTimeout()</code></strong>方法设置一个定时器，该定时器在定时器到期后执行一个函数或指定的一段代码。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -33,14 +32,14 @@ var<em> </em>timeoutID = <em>scope</em>.setTimeout(<em>code</em>[, <em>delay</em
 </dl>
 
 <div class="note">
-<p><strong>备注</strong>：需要注意的是，IE9 及更早的 IE 浏览器不支持向回调函数传递额外参数 (第一种语法)。如果你想要在 IE 中达到同样的功能，你必须使用一种兼容代码 (查看  <a href="#兼容旧环境（polyfill）">兼容旧环境（polyfill）</a> 一段).</p>
+<p><strong>备注</strong>：需要注意的是，IE9 及更早的 IE 浏览器不支持向回调函数传递额外参数 (第一种语法)。如果你想要在 IE 中达到同样的功能，你必须使用一种兼容代码 (查看 <a href="#兼容旧环境（polyfill）">兼容旧环境（polyfill）</a> 一段).</p>
 </div>
 
 <h3 id="Examples" name="Examples">返回值</h3>
 
-<p>返回值<code>timeoutID</code>是一个正整数，表示定时器的编号。这个值可以传递给{{domxref("WindowOrWorkerGlobalScope.clearTimeout","clearTimeout()")}}来取消该定时器。</p>
+<p>返回值<code>timeoutID</code>是一个正整数，表示定时器的编号。这个值可以传递给{{domxref("clearTimeout()")}}来取消该定时器。</p>
 
-<p>需要注意的是<code>setTimeout()</code>和{{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}共用一个编号池，技术上，<code>clearTimeout()</code>和 {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} 可以互换。但是，为了避免混淆，不要混用取消定时函数。</p>
+<p>需要注意的是 <code>setTimeout()</code> 和 {{domxref("setInterval()")}} 共用一个编号池，技术上，<code>clearTimeout()</code> 和 {{domxref("clearInterval()")}} 可以互换。但是，为了避免混淆，不要混用取消定时函数。</p>
 
 <p>在同一个对象上（一个 window 或者 worker），<code>setTimeout()</code>或者<code>setInterval()</code>在后续的调用不会重用同一个定时器编号。但是不同的对象使用独立的编号池。</p>
 
@@ -329,9 +328,9 @@ setTimeout(myBoundMethod, 1500, "1"); // prints "one" after 1.5 seconds
 
 <h2 id="备注">备注</h2>
 
-<p>你可以使用 {{domxref("WindowOrWorkerGlobalScope.clearTimeout()","clearTimeout()")}}来取消定时器。</p>
+<p>你可以使用 {{domxref("clearTimeout()")}}来取消定时器。</p>
 
-<p>如果你希望你的代码被重复的调用 (比如每 N 毫秒一次),考虑使用{{domxref("WindowOrWorkerGlobalScope.setInterval()","setInterval()")}}。</p>
+<p>如果你希望你的代码被重复的调用 (比如每 N 毫秒一次),考虑使用{{domxref("setInterval()")}}。</p>
 
 <h3 id="传递字符串字面量">传递字符串字面量</h3>
 
@@ -355,9 +354,9 @@ window.setTimeout("alert(\"Hello World!\");", 500);
 
 <h4 id="最小延时_>4ms">最小延时 &gt;=4ms</h4>
 
-<p>在浏览器中，<code>setTimeout()/</code>{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} 的每调用一次定时器的最小间隔是 4ms，这通常是由于函数嵌套导致（嵌套层级达到一定深度），或者是由于已经执行的 setInterval 的回调函数阻塞导致的。例如：</p>
+<p>在浏览器中，<code>setTimeout()</code>/{{domxref("setInterval()")}} 的每调用一次定时器的最小间隔是 4ms，这通常是由于函数嵌套导致（嵌套层级达到一定深度），或者是由于已经执行的 setInterval 的回调函数阻塞导致的。例如：</p>
 
-<pre class="brush: js notranslate" id="ct-0"><code>function cb() { f(); setTimeout(cb, 0); }
+<pre class="brush: js notranslate"><code>function cb() { f(); setTimeout(cb, 0); }
 setTimeout(cb, 0);</code></pre>
 
 <pre class="brush: js notranslate"><code>setInterval(f, 0);</code></pre>
@@ -429,48 +428,22 @@ foo has been called</code></pre>
 
 <h3 id="最大延时值">最大延时值</h3>
 
-<p>包括 IE,  Chrome, Safari, Firefox 在内的浏览器其内部以 32 位带符号整数存储延时。这就会导致如果一个延时 (delay) 大于 2147483647 毫秒 (大约 24.8 天) 时就会溢出，导致定时器将会被立即执行。</p>
+<p>包括 IE、Chrome、Safari、Firefox 在内的浏览器其内部以 32 位带符号整数存储延时。这就会导致如果一个延时 (delay) 大于 2147483647 毫秒 (大约 24.8 天) 时就会溢出，导致定时器将会被立即执行。</p>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-settimeout', 'WindowOrWorkerGlobalScope.setTimeout()')}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Method moved to the <code>WindowOrWorkerGlobalScope</code> mixin in the latest spec.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "webappapis.html#dom-settimeout", "WindowTimers.setTimeout()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition (DOM Level 0)</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div id="compat-desktop">
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
+<p>{{Compat}}</p>
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.setTimeout")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">相关链接：</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Timers" title="/en-US/docs/JavaScript/Timers">JavaScript timers</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Timer.jsm" title="/en-US/docs/Mozilla/JavaScript_code_modules/Timer.jsm">Timer.jsm</a></li>
- <li>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</li>
+ <li>{{domxref("clearTimeout")}}</li>
  <li>{{domxref("WindowTimers.setInterval")}}</li>
  <li>{{domxref("window.requestAnimationFrame")}}</li>
  <li><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Timers/Daemons" title="/en-US/docs/JavaScript/Timers/Daemons"><em>Daemons</em> management</a></li>

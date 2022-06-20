@@ -27,7 +27,7 @@ translation_of: Web/API/AbortController
 
 <dl>
  <dt>{{domxref("AbortController.abort()")}}</dt>
- <dd>在一個 DOM 請求完成前中斷他。這可以用來中斷 <a href="/zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch 請求</a>、對任何 Response {{domxref("Body")}} 的讀取、或是資料流。</dd>
+ <dd>在一個 DOM 請求完成前中斷他。這可以用來中斷 <a href="/zh-TW/docs/Web/API/fetch">fetch 請求</a>、對任何 Response {{domxref("Body")}} 的讀取、或是資料流。</dd>
 </dl>
 
 <h2 id="範例">範例</h2>
@@ -36,7 +36,7 @@ translation_of: Web/API/AbortController
 
 <p>我們首先用 {{domxref("AbortController.AbortController","AbortController()")}} 建立一個控制器，然後透過 {{domxref("AbortController.signal")}} 屬性取得他的 {{domxref("AbortSignal")}} 物件。</p>
 
-<p>在初始化 <a href="/en-TW/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch 請求</a> 的時候，我們把 <code>AbortSignal</code> 作為選項傳入該請求的選項物件中（參考下方的 <code>{signal}</code>）。這樣會把剛才的中斷訊號與控制器跟 fetch 請求關聯起來，讓我們可以透過呼叫 {{domxref("AbortController.abort()")}} 來中斷該請求。請參考下方範例中第二個事件處理器。</p>
+<p>在初始化 <a href="/en-TW/docs/Web/API/fetch">fetch 請求</a> 的時候，我們把 <code>AbortSignal</code> 作為選項傳入該請求的選項物件中（參考下方的 <code>{signal}</code>）。這樣會把剛才的中斷訊號與控制器跟 fetch 請求關聯起來，讓我們可以透過呼叫 {{domxref("AbortController.abort()")}} 來中斷該請求。請參考下方範例中第二個事件處理器。</p>
 
 <pre class="brush: js">var controller = new AbortController();
 var signal = controller.signal;

@@ -19,7 +19,7 @@ translation_of: Web/API/Streams_API
 
 <p>还有更多的优点——你可以检测流何时开始或结束，将流链接在一起，根据需要处理错误和取消流，并对流的读取速度做出反应。</p>
 
-<p>流的基础应用围绕着使响应可以被流处理展开。例如，一个成功的 <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> 响应 {{domxref("Body")}} 会暴露为 {{domxref("ReadableStream")}}，之后你就可以使用 {{domxref("ReadableStream.getReader()")}} 建立的 reader 读取它，使用 {{domxref("ReadableStream.cancel()")}} 取消它等等。</p>
+<p>流的基础应用围绕着使响应可以被流处理展开。例如，一个成功的 <a href="/en-US/docs/Web/API/fetch">fetch request</a> 响应 {{domxref("Body")}} 会暴露为 {{domxref("ReadableStream")}}，之后你就可以使用 {{domxref("ReadableStream.getReader()")}} 建立的 reader 读取它，使用 {{domxref("ReadableStream.cancel()")}} 取消它等等。</p>
 
 <p>更复杂的应用包括使用 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 创建你自己的流，比如在 <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a> 中处理数据。</p>
 
@@ -66,9 +66,9 @@ translation_of: Web/API/Streams_API
 
 <dl>
  <dt>{{domxref("Request")}}</dt>
- <dd>当构造一个新的 <code>Request</code> 对象后，你可以给它的 <code>RequestInit</code> 中的 <code>body</code> 属性传入一个 {{domxref("ReadableStream")}}。这个 <code>Request</code> 对象就可以被传入 {{domxref("WindowOrWorkerGlobalScope.fetch()")}} 中，开始接收流。</dd>
+ <dd>当构造一个新的 <code>Request</code> 对象后，你可以给它的 <code>RequestInit</code> 中的 <code>body</code> 属性传入一个 {{domxref("ReadableStream")}}。这个 <code>Request</code> 对象就可以被传入 {{domxref("fetch()")}} 中，开始接收流。</dd>
  <dt>{{domxref("Body")}}</dt>
- <dd>一个成功的 <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> 响应 {{domxref("Body")}} 会默认暴露为 {{domxref("ReadableStream")}}，从而可以采用相应的阅读器来处理等。</dd>
+ <dd>一个成功的 <a href="/en-US/docs/Web/API/fetch">fetch request</a> 响应 {{domxref("Body")}} 会默认暴露为 {{domxref("ReadableStream")}}，从而可以采用相应的阅读器来处理等。</dd>
 </dl>
 
 <h3 id="字节流相关接口">字节流相关接口</h3>
