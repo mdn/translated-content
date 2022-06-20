@@ -52,7 +52,7 @@ if (window.AmbientLightSensor) {
 - Прослушивание ошибок, возникающих во время его использования.
 - Корректная обработка ошибок для улучшения, а не ухудшения пользовательского опыта.
 
-Приведенный ниже пример кода иллюстрирует эти принципы. Блок {{jsxref('statements/try...catch', 'try...catch')}} ловит ошибки, возникающие при создании объекта датчика. Этот объект слушает события {{domxref('Sensor.error_event', 'error')}}, чтобы поймать ошибки, возникающие во время использования датчика. Единственный раз, когда что-либо показывается пользователю, это когда необходимо запросить [разрешения](/en-US/docs/Web/API/Permissions_API) и когда датчик не поддерживается устройством.
+Приведенный ниже пример кода иллюстрирует эти принципы. Блок {{jsxref('statements/try...catch', 'try...catch')}} ловит ошибки, возникающие при создании объекта датчика. Этот объект слушает события {{domxref('Sensor.error_event', 'error')}}, чтобы поймать ошибки, возникающие во время использования датчика. Единственный раз, когда что-либо показывается пользователю, это когда необходимо запросить [разрешения](/ru/docs/Web/API/Permissions_API) и когда датчик не поддерживается устройством.
 
 
 > **Note:** Если функциональная политика блокирует использование функции, то это происходит потому, что ваш код не соответствует политикам, установленным на вашем сервере. Это не то, что когда-либо будет показано пользователю. Статья о HTTP заголовке {{httpheader('Feature-Policy')}} содержит инструкцию по реализации.
@@ -85,58 +85,60 @@ try {
 }
 ```
 
-### Permissions and Feature Policy
+### Разрешения и Функциональные Политики
 
-Sensor readings may not be taken unless the user grants permission to a specific sensor type. Do this using the [Permissions API](/en-US/docs/Web/API/Permissions_API). A brief example, shown below, requests permission before attempting to use the sensor.
+Показания датчиков могут сниматься только в том случае, если пользователь дает разрешение на определенный тип датчика. Сделать это можно используя [Permissions API](/ru/docs/Web/API/Permissions_API). Короткий пример, показанный ниже, запрашивает у пользователя разрешение перед попыткой использовать датчик.
 
 ```js
 navigator.permissions.query({ name: 'accelerometer' })
 .then(result => {
   if (result.state === 'denied') {
-    console.log('Permission to use accelerometer sensor is denied.');
+    console.log('Использование датчика не разрешено.');
     return;
   }
-  // Use the sensor.
+  // Используйте датчик.
 });
 ```
 
-An alternative approach is to attempt to use the sensor and listen for the `SecurityError`.
+Альтернативный подход заключается в попытке использовать датчик и прослушивании `SecurityError`.
 
 ```js
 const sensor = new AbsoluteOrientationSensor();
 sensor.start();
 sensor.addEventListener('error', error => {
   if (event.error.name === 'SecurityError')
-    console.log("No permissions to use AbsoluteOrientationSensor.");
+    console.log("Нет разрешения использовать AbsoluteOrientationSensor.");
 });
 ```
 
-The following table describes for each sensor type, the name required for the Permissions API, the {{HTMLElement('iframe')}} element's `allow` attribute and the {{httpheader('Feature-Policy')}} directive.
+В следующей таблице для каждого типа датчика описано имя, требуемое для Permissions API, атрибут `allow` элемента {{HTMLElement('iframe')}} и директива {{httpheader('Feature-Policy')}}.
 
-| Sensor                      | Permission/Feature Policy Name                         |
+
+| Датчик                      | Разрешение/Имя Feature Policy                          |
 | --------------------------- | ------------------------------------------------------ |
-| `AbsoluteOrientationSensor` | `'accelerometer'`, `'gyroscope'`, and `'magnetometer'` |
+| `AbsoluteOrientationSensor` | `'accelerometer'`, `'gyroscope'`, и `'magnetometer'`   |
 | `Accelerometer`             | `'accelerometer'`                                      |
 | `AmbientLightSensor`        | `'ambient-light-sensor'`                               |
 | `GravitySensor`             | `'accelerometer'`                                      |
 | `Gyroscope`                 | `'gyroscope'`                                          |
 | `LinearAccelerationSensor`  | `'accelerometer'`                                      |
 | `Magnetometer`              | `'magnetometer'`                                       |
-| `RelativeOrientationSensor` | `'accelerometer'`, and `'gyroscope'`                   |
+| `RelativeOrientationSensor` | `'accelerometer'`, и   `'gyroscope'`                   |
 
-### Readings
+### Показания
 
-Sensor readings are received through the {{domxref('Sensor.reading_event', 'reading')}} event callback which is inherited by all sensor types. Reading frequency is decided by you, accomplished with an option passed to a sensor's constructor. The option is a number that specifies the number of readings per second. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends device hardware and consequently may be less than requested.
+Показания датчиков принимаются через событие {{domxref('Sensor.reading_event', 'reading')}}, которое унаследовано для всех типов датчиков. Частота получения данных зависит от вас и указывается как параметр объекта, переданного в конструктор класса. Этот параметр определяет количество опросов датчика в секунду. Можно использовать целое или десятичное число, последнее для частот менее секунды. Фактическая частота считывания зависит от аппаратного обеспечения устройства и, следовательно, может быть меньше запрошенной.
 
-The following example illustrates this using the {{domxref('Magnetometer')}} sensor.
+Пример ниже иллюстрирует это используя {{domxref('Magnetometer')}}. 
+
 
 ```js
 let magSensor = new Magnetometer({frequency: 60});
 
 magSensor.addEventListener('reading', e => {
-  console.log("Magnetic field along the X-axis " + magSensor.x);
-  console.log("Magnetic field along the Y-axis " + magSensor.y);
-  console.log("Magnetic field along the Z-axis " + magSensor.z);
+  console.log("Магнитное поле вдоль оси X " + magSensor.x);
+  console.log("Магнитное поле вдоль оси Y " + magSensor.y);
+  console.log("Магнитное поле вдоль оси Z " + magSensor.z);
 })
 magSensor.addEventListener('error', event => {
   console.log(event.error.name, event.error.message);
@@ -144,10 +146,10 @@ magSensor.addEventListener('error', event => {
 magSensor.start();
 ```
 
-## Interfaces
+## Интерфейсы
 
 - {{domxref('AbsoluteOrientationSensor')}}{{securecontext_inline}}
-  - : Describes the device's physical orientation in relation to the Earth's reference coordinate system.
+  - : Описывает физическую ориентацию устройства относительно системы координат Земли.
 - {{domxref('Accelerometer')}}{{securecontext_inline}}
   - : Provides the acceleration applied to the device along all three axes.
 - {{domxref('AmbientLightSensor')}}{{securecontext_inline}}
