@@ -10,7 +10,6 @@ tags:
   - Event
   - Reference
   - onchange
-browser-compat: api.MediaQueryList.change_event
 ---
 {{APIRef("CSSOM")}}
 
@@ -49,10 +48,10 @@ var mql = window.matchMedia('(max-width: 600px)');
 
 mql.onchange = (e) => {
     if (e.matches) {
-    /* 视口等于或小于600像素 */
+    /* 视口等于或小于 600 像素 */
     console.log('This is a narrow screen — less than 600px wide.')
   } else {
-    /* 视口大于600像素 */
+    /* 视口大于 600 像素 */
     console.log('This is a wide screen — more than 600px wide.')
   }
 }
@@ -68,8 +67,8 @@ mql.onchange = (e) => {
 
 ## 参见
 
-- [Media queries](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

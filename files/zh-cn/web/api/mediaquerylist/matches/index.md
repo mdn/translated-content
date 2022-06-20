@@ -13,7 +13,6 @@ tags:
   - Property
   - Reference
   - matches
-browser-compat: api.MediaQueryList.matches
 ---
 {{APIRef("CSSOM")}}
 
@@ -59,8 +58,8 @@ addMQListener(window.matchMedia("(orientation:landscape)"),
 
 ## 参见
 
-- [Media queries](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

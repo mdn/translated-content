@@ -9,11 +9,10 @@ tags:
   - Media Queries
   - MediaQueryListEvent
   - Reference
-browser-compat: api.MediaQueryListEvent.MediaQueryListEvent
 ---
 {{APIRef("CSSOM")}}
 
-**`MediaQueryListEvent()`** 创建一个新的 {{DOMxRef("MediaQueryListEvent")}} 对象。
+**`MediaQueryListEvent()`** 构造函数用于创建一个新的 {{DOMxRef("MediaQueryListEvent")}} 对象。
 
 ## 语法
 
@@ -56,8 +55,8 @@ var myMediaQueryListEvent = new MediaQueryListEvent("change", {media, matches});
 
 ## 参见
 
-- [Media queries](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

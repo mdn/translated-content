@@ -9,11 +9,10 @@ tags:
   - Media Queries
   - MediaQueryListEvent
   - Reference
-browser-compat: api.MediaQueryListEvent
 ---
 {{APIRef("CSSOM")}}
 
-`MediaQueryListEvent`对象存储着发生在 {{DOMxRef("MediaQueryList")}} 对象上的变化的信息——作为一个在函数中被{{DOMxRef("MediaQueryList.change_event", "change")}} 事件引用的事件对象，该对象的实例是可用的。
+`MediaQueryListEvent` 对象存储着发生在 {{DOMxRef("MediaQueryList")}} 对象上的变化的信息——作为一个在函数中被 {{DOMxRef("MediaQueryList.change_event", "change")}} 事件引用的事件对象。
 
 {{InheritanceDiagram}}
 
@@ -43,11 +42,11 @@ var mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {
-    /* 视口等于或小于600像素 */
+    /* 视口等于或小于 600 像素 */
     para.textContent = 'This is a narrow screen — less than 600px wide.';
     document.body.style.backgroundColor = 'red';
   } else {
-    /* 视口大于600像素 */
+    /* 视口大于 600 像素 */
     para.textContent = 'This is a wide screen — more than 600px wide.';
     document.body.style.backgroundColor = 'blue';
   }
@@ -66,7 +65,7 @@ mql.addListener(screenTest);
 
 ## 参见
 
-- [Media queries](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
