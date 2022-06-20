@@ -1,70 +1,62 @@
 ---
 title: HTMLIFrameElement.referrerPolicy
 slug: Web/API/HTMLIFrameElement/referrerPolicy
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - HTMLIFrameElement
-  - Property
-  - Reference
-  - Referrer Policy
+  - プロパティ
+  - リファレンス
+  - リファラーポリシー
+browser-compat: api.HTMLIFrameElement.referrerPolicy
 translation_of: Web/API/HTMLIFrameElement/referrerPolicy
 ---
-<div>{{APIRef}}{{SeeCompatTable}}</div>
+{{APIRef}}
 
-<p><code><strong>HTMLIFrameElement</strong></code><strong><code>.referrerPolicy</code></strong> プロパティは、リソース取得時にリファラを送信するかを決める {{HTMLElement("iframe")}} 要素の {{htmlattrxref("referrerpolicy","iframe")}} 属性を反映します。</p>
+**`HTMLIFrameElement.referrerPolicy`** プロパティは HTML の
+{{HTMLElement("iframe")}} 要素の {{htmlattrxref("referrerpolicy","iframe")}} 属性を反映し、リソースの取得時にどのリファラーを送信するかを定義します。
 
-<h2 id="構文">構文</h2>
+## 値
 
-<pre class="syntaxbox"><var>refStr</var> = <var>iframeElt</var>.referrerPolicy;
-<var>iframeElt</var>.referrerPolicy = <var>refStr</var>;</pre>
+- `no-referrer`
+  - : {{HTTPHeader("Referer")}} ヘッダーは完全に省略されます。リクエストと共に送信されるリファラー情報はありません。
+- `no-referrer-when-downgrade`
+  - : プロトコルのセキュリティレベルが変わらない場合（例: HTTP→HTTP、HTTPS→HTTPS）にはリファラーとして URL を送信し、セキュリティレベルの低い宛先（例: HTTPS→HTTP）には送信しません。
+- `origin`
+  - : どのような場合でも、この文書のオリジンだけをリファラーとして送信します。
+    文書 `https://example.com/page.html` はリファラーとして `https://example.com/` を送ります。
+- `origin-when-cross-origin`
+  - : 同一オリジンリクエストを行う場合は完全な URL を送信し、それ以外の場合は文書のオリジンのみを送信します。
+- `same-origin`
+  - : リファラーは[同一サイトオリジン](/ja/docs/Web/Security/Same-origin_policy)には送信されますが、オリジン間リクエストではリファラー情報が送信されません。
+- `strict-origin`
+  - : プロトコルのセキュリティレベルが変わらない場合（例: HTTPS→HTTPS）だけ、文書のオリジンをリファラーとして送信し、セキュリティレベルの低い宛先（例: HTTPS→HTTP）には送信しないようにします。
+- `strict-origin-when-cross-origin` (default)
+  - : これは、ポリシーが指定されていない場合のユーザーエージェントの既定の動作です。同一オリジンリクエストを行う場合は完全な URL を送信し、プロトコルのセキュリティレベルが変わらない場合はオリジンのみを送信し（例: HTTPS→HTTPS）、セキュリティレベルの低い宛先にはヘッダーを送信しません（例: HTTPS→HTTP）。
+- `unsafe-url`
+  - : 同一オリジンまたはオリジン間リクエストを実行するときに、完全な URL を送信します。このポリシーは、 TLS で保護されたリソースから安全でないオリジンへのオリジンとパスを漏洩します。
+    この設定の影響を慎重に検討してください。
 
-<h3 id="値">値</h3>
+## 例
 
-<dl>
- <dd>
- <ul>
-  <li><code>"no-referrer"</code> は、<code>Referer:</code> HTTP ヘッダーがリファラを送信しないことを意味します。</li>
-  <li><code>"origin"</code> は、リファラがページのオリジンになることを意味します。大まかにいえば、オリジンはスキーマとホスト、ポートです。</li>
-  <li><code>"unsafe-url"</code> は、リファラにオリジンとパスが含まれることを意味します（フラグメントやパスワード、ユーザー名は含まれません）。このケースは、TLS を使用して 3rd パーティーから隠しているパス情報が漏洩する可能性があるため、安全ではありません。</li>
- </ul>
- </dd>
-</dl>
-
-<h2 id="例">例</h2>
-
-<pre class="brush: js;highlight:[3]">var iframe = document.createElement("iframe");
+```js
+var iframe = document.createElement("iframe");
 iframe.src = "/";
 iframe.referrerPolicy = "unsafe-url";
 var body = document.getElementsByTagName("body")[0];
-body.appendChild(iframe); // Fetch the image using the complete URL as the referrer
-</pre>
+body.appendChild(iframe); // 完全な URL をリファラーとして使用して画像を取得
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrerpolicy attribute')}}</td>
-   <td>{{Spec2('Referrer Policy')}}</td>
-   <td><code>referrerPolicy</code> 属性の追加。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.HTMLIFrameElement.referrerPolicy")}}</p>
+{{Compat}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("HTMLAnchorElement.referrerPolicy")}} と {{domxref("HTMLAreaElement.referrerPolicy")}}、{{domxref("HTMLAreaElement.referrerPolicy")}}。</li>
-</ul>
+- {{domxref("HTMLAnchorElement.referrerPolicy")}},
+  {{domxref("HTMLAreaElement.referrerPolicy")}},
+  {{domxref("HTMLAreaElement.referrerPolicy")}}

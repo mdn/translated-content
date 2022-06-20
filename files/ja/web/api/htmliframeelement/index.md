@@ -1,98 +1,80 @@
 ---
 title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
+page-type: web-api-interface
 tags:
   - API
+  - HTML DOM
+  - インターフェイス
+  - リファレンス
+browser-compat: api.HTMLIFrameElement
 translation_of: Web/API/HTMLIFrameElement
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLIFrameElement</code></strong> interface provides special properties and methods (beyond those of the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of inline frame elements.</p>
+**`HTMLIFrameElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものに加えて）インラインフレーム要素を操作するための特別なプロパティを提供します。
 
-<h2 id="Properties">Properties</h2>
+{{InheritanceDiagram}}
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}</em>.</p>
+## プロパティ
 
-<dl>
- <dt>{{domxref("HTMLIFrameElement.align")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that specifies the alignment of the frame with respect to the surrounding context.</dd>
- <dt>{{domxref("HTMLIFrameElement.allowfullscreen")}} {{experimental_inline}}</dt>
- <dd>Is a {{domxref("Boolean")}} that indicates whether or not the inline frame is willing to be placed into full screen mode. See <a href="/ja/docs/DOM/Using_full-screen_mode" title="https://developer.mozilla.org/en/DOM/Using_full-screen_mode">Using full-screen mode</a> for details.</dd>
- <dt>{{domxref("HTMLIFrameElement.contentDocument")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("Document")}}, the active document in the inline frame's nested browsing context.</dd>
- <dt>{{domxref("HTMLIFrameElement.contentWindow")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("WindowProxy")}}, the window proxy for the nested browsing context.</dd>
- <dt>{{domxref("HTMLIFrameElement.frameborder")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that indicates whether to create borders between frames.</dd>
- <dt>{{domxref("HTMLIFrameElement.height")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("height", "iframe")}} HTML attribute, indicating the height of the frame.</dd>
- <dt>{{domxref("HTMLIFrameElement.longDesc")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that contains the URI of a long description of the frame.</dd>
- <dt>{{domxref("HTMLIFrameElement.marginHeight")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} being the height of the frame margin.</dd>
- <dt>{{domxref("HTMLIFrameElement.marginWidth")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} being the width of the frame margin.</dd>
- <dt>{{domxref("HTMLIFrameElement.name")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("name", "iframe")}} HTML attribute, containing a name by which to refer to the frame.</dd>
- <dt>{{domxref("HTMLIFrameElement.sandbox")}}</dt>
- <dd>Is a {{domxref("DOMSettableTokenList")}} that reflects the {{htmlattrxref("sandbox", "iframe")}} HTML attribute, indicating extra restrictions on the behavior of the nested content.</dd>
- <dt>{{domxref("HTMLIFrameElement.scrolling")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that indicates whether the browser should provide scrollbars for the frame.</dd>
- <dt>{{domxref("HTMLIFrameElement.seamless")}} {{experimental_inline}}</dt>
- <dd>Is a {{domxref("Boolean")}} that reflects the {{htmlattrxref("seamless", "iframe")}} HTML attribute, indicating that the inline frame should be rendered seamlessly within the parent document.</dd>
- <dt>{{domxref("HTMLIFrameElement.src")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("src", "iframe")}} HTML attribute, containing the address of the content to be embedded.</dd>
- <dt>{{domxref("HTMLIFrameElement.srcdoc")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that represents the content to display in the frame.</dd>
- <dt>{{domxref("HTMLIFrameElement.width")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("width", "iframe")}} HTML attribute, indicating the width of the frame.</dd>
-</dl>
+_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
-<h2 id="Methods">Methods</h2>
+- {{domxref("HTMLIFrameElement.align")}} {{deprecated_inline}}
+  - : 文字列で、周囲のコンテキストに対するフレームの配置を指定します。
+- {{domxref("HTMLIFrameElement.allow")}} {{experimental_inline}}
+  - : フレームがコンテンツを表示することを許可されているオリジンのリストです。この属性には `self` と `src` という値も指定でき、これらは iframe の src 属性で指定されたオリジンを表します。既定値は `src` です。
+- {{domxref("HTMLIFrameElement.allowfullscreen")}} {{experimental_inline}}
+  - : 論理値で、インラインフレームを全画面モードにすることが期待されているかを示します。詳細は、[全画面モードの使用](/ja/docs/Web/API/Fullscreen_API)を参照してください。
+- {{domxref("HTMLIFrameElement.allowPaymentRequest")}} {{deprecated_inline}}
+  - : 論理値で、[支払いリクエスト API](/ja/docs/Web/API/Payment_Request_API) をクロスオリジンの iframe 内で起動できるかどうかを示します。
+- {{domxref("HTMLIFrameElement.contentDocument")}} {{readonlyInline}}
+  - : インラインフレームの中にある閲覧コンテキストのアクティブな文書を {{domxref("Document")}} で返します。
+- {{domxref("HTMLIFrameElement.contentWindow")}} {{readonlyInline}}
+  - : {{domxref("WindowProxy")}} で、中にある閲覧コンテキストのウィンドウプロキシーを返します。
+- {{domxref("HTMLIFrameElement.csp")}}
+  - : 埋め込み文書が自分自身に適用することに同意しなければならないコンテンツセキュリティポリシーを指定します。
+- {{domxref("HTMLIFrameElement.fetchPriority")}}
+  - : オプションの文字列で、他の iframe との比較においてこの iframe の取得を優先させるためのブラウザーへのヒントを表します。この値を指定する場合、許可されている値のいずれかでなければなりません。高い優先度で取得する場合は `high`、低い優先度で取得する場合は `low`、優先度を設定しない場合は `auto` （これが既定値）です。
+- {{domxref("HTMLIFrameElement.frameBorder")}} {{deprecated_inline}}
+  - : 文字列で、フレーム間に境界線を生成するかどうかを示します。
+- {{domxref("HTMLIFrameElement.height")}}
+  - : 文字列で HTML 属性の {{htmlattrxref("height", "iframe")}} を反映し、フレームの高さを表します。
+- {{domxref("HTMLIFrameElement.longDesc")}} {{deprecated_inline}}
+  - : フレームの長い説明文の URI をが入った文字列です。
+- {{domxref("HTMLIFrameElement.marginHeight")}} {{deprecated_inline}}
+  - : フレームのマージンの高さである文字列です。
+- {{domxref("HTMLIFrameElement.marginWidth")}} {{deprecated_inline}}
+  - : フレームのマージンの幅である文字列です。
+- {{domxref("HTMLIFrameElement.name")}}
+  - : 文字列で HTML 属性の {{htmlattrxref("name", "iframe")}} を反映し、フレームを参照するための名前を表します。
+- {{domxref("HTMLIFrameElement.featurePolicy")}} {{readonlyinline}}{{experimental_inline}}
+  - : 特定の文書に適用される機能ポリシーを簡単にイントロスペクトするための API を提供する {{domxref("FeaturePolicy")}} インターフェイスを返します。
+- {{domxref("HTMLIFrameElement.referrerPolicy")}} {{experimental_inline}}
+  - : 文字列で、 HTML の {{htmlattrxref("referrerPolicy", "iframe")}} 属性を反映し、リンク先のリソースを取得する際にどのリファラーを使用するかを示します。
+- {{domxref("HTMLIFrameElement.sandbox")}}
+  - : {{domxref("DOMTokenList")}} で HTML の {{htmlattrxref("sandbox", "iframe")}} 属性を反映し、ネストされたコンテンツの動作に特別な制限を加えることを示します。
+- {{domxref("HTMLIFrameElement.scrolling")}} {{deprecated_inline}}
+  - : 文字列で、ブラウザーがフレームにスクロールバーを提供すべきかどうかを示します。
+- {{domxref("HTMLIFrameElement.src")}}
+  - : 文字列で HTML の {{htmlattrxref("src", "iframe")}} 属性を反映し、埋め込むコンテンツのアドレスが入ります。プログラムから `<iframe>` の src 属性を削除すると（例えば {{domxref("Element.removeAttribute()")}} によって）、 Firefox （バージョン65以降）、 Chromium ベースのブラウザー、および Safari/iOS ではフレーム内に `about:blank` が読み込まれることに注意してください。
+- {{domxref("HTMLIFrameElement.srcdoc")}}
+  - : 文字列で、フレームに表示する内容を表します。
+- {{domxref("HTMLIFrameElement.width")}}
+  - : 文字列で、 HTML の {{htmlattrxref("width", "iframe")}} 属性を反映し、フレームの幅を表します。
 
-<p><em>No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}</em>.</p>
+## メソッド
 
-<h2 id="Specifications">Specifications</h2>
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "the-iframe-element.html#the-iframe-element", "HTMLIFrameElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>The following property has been added: <code>allowFullscreen</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-iframe-element", "HTMLIFrameElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>The following properties are now obsolete: <code>scrolling</code>, <code>marginWidth</code>, <code>marginHeight</code>, <code>longDesc</code>, <code>frameBorder</code>, and <code>align</code>.<br>
-    The following properties have been added: <code>srcdoc</code>, <code>sandbox</code>, <code>seamless</code>, and <code>contentWindow</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-50708718', 'HTMLIFrameElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>The <code>contentDocument</code> property has been added.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-50708718', 'HTMLIFrameElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat("api.HTMLIFrameElement")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("iframe")}}</li>
-</ul>
+## 関連情報
+
+- このインターフェイスを実装している HTML 要素: {{HTMLElement("iframe")}}

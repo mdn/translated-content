@@ -1,8 +1,40 @@
 ---
 title: HTMLIFrameElement.contentWindow
 slug: Web/API/HTMLIFrameElement/contentWindow
+page-type: web-api-instance-property
+tags:
+  - API
+  - HTML DOM
+  - HTMLIFrameElement
+  - プロパティ
+  - 読み取り専用
+  - リファレンス
+  - ウェブ
+browser-compat: api.HTMLIFrameElement.contentWindow
 translation_of: Web/API/HTMLIFrameElement/contentWindow
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>contentWindow</code></strong>  プロパティは、<a href="/ja/docs/Web/HTML/Element/iframe">&lt;iframe&gt; 要素</a> の <a href="/ja/docs/Web/API/Window">Window</a> オブジェクトを返します。この Window オブジェクトを使用して iframe のドキュメントとその内部 DOM にアクセスできます。この属性は読み取り専用ですが、そのプロパティはグローバルな Window オブジェクトのように操作できます。</span></p>
+**`contentWindow`** プロパティは、 [HTMLIFrameElement](/ja/docs/Web/API/HTMLIFrameElement) が所属する [Window](/ja/docs/Web/API/Window) オブジェクトを返します。この `Window` オブジェクトを使用して、 iframe の文書や内部 DOM にアクセスすることができます。この属性は読み取り専用ですが、グローバルの `Window` オブジェクトのように操作することができます。
+
+## 値
+
+[Window](/ja/docs/Web/API/Window) オブジェクト。
+
+## 例
+
+```js
+var x = document.getElementsByTagName("iframe")[0].contentWindow;
+//x = window.frames[0];
+
+x.document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
+// 文書内の 1 番目の iframe が青くなります。
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
