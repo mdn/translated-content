@@ -129,7 +129,7 @@ Function.prototype.construct = function (aArgs) {
 使用示例：
 
 ```js
-function MyConstructor(arguments) {
+function MyConstructor() {
   for (let nProp = 0; nProp < arguments.length; nProp++) {
     this['property' + nProp] = arguments[nProp];
   }
