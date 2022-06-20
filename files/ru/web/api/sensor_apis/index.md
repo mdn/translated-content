@@ -151,30 +151,30 @@ magSensor.start();
 - {{domxref('AbsoluteOrientationSensor')}}{{securecontext_inline}}
   - : Описывает физическую ориентацию устройства относительно системы координат Земли.
 - {{domxref('Accelerometer')}}{{securecontext_inline}}
-  - : Provides the acceleration applied to the device along all three axes.
+  - : Показывает ускорение, приложенное к устройству по всем трём осям.
 - {{domxref('AmbientLightSensor')}}{{securecontext_inline}}
-  - : Returns the current light level or illuminance of the ambient light around the hosting device.
+  - : Возвращает текущий уровень освещенности или освещенность окружающего освещения вокруг устройства.
 - {{domxref('GravitySensor')}}{{securecontext_inline}}
-  - : Provides the gravity applied to the device along all three axes.
+  - : Показывает силу тяжести, приложенную к устройству по всем трём осям.
 - {{domxref('Gyroscope')}}{{securecontext_inline}}
-  - : Provides the angular velocity of the device along all three axes.
+  - : Показывает угловую скорость устройства по всем трём осям.
 - {{domxref('LinearAccelerationSensor')}}{{securecontext_inline}}
-  - : Provides the acceleration applied to the device along all three axes, but without the contribution of gravity.
+  - : Показывает ускорение, приложенное к устройству по всем трём осям, но без силы тяжести.
 - {{domxref('Magnetometer')}}{{securecontext_inline}}
-  - : Provides information about the magnetic field as detected by the device's primary magnetometer sensor.
+  - : Предоставляет информацию о магнитном поле, обнаруженном основным магнитометром устройства.
 - {{domxref('OrientationSensor')}}{{securecontext_inline}}
-  - : The base class for the {{domxref('AbsoluteOrientationSensor')}}. This interface cannot be used directly, instead it provides properties and methods accessed by interfaces that inherit from it.
+  - : Базовый класс для {{domxref('AbsoluteOrientationSensor')}}. Этот класс не может быть использован сам по себе, вместо этого он предоставляет свойства и методы, к которым обращаются наследуемые от него интерфейсы.
 - {{domxref('RelativeOrientationSensor')}}{{securecontext_inline}}
-  - : Describes the device's physical orientation without regard to the Earth's reference coordinate system.
+  - : Описывает физическую ориентацию устройства без учета системы координат Земли.
 - {{domxref('Sensor')}}{{securecontext_inline}}
-  - : The base class for all the other sensor interfaces. This interface cannot be used directly. Instead it provides properties, event handlers, and methods accessed by interfaces that inherit from it.
+  - : Базовый класс для всех других интерфесов датчиков. Этот класс не может быть использован сам по себе. Вместо этого он предоставляет свойства, обработчики событий и методы, к которым обращаются интерфейсы, которые наследуются от него.
 - {{domxref('SensorErrorEvent')}}{{securecontext_inline}}
-  - : Provides information about errors thrown by a {{domxref('Sensor')}} or related interface.
+  - : Предоставляет информацию об ошибках, вызванных {{domxref('Sensor')}} или связанным интерфейсом.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Браузерная совместимость
 
 {{Compat}}
