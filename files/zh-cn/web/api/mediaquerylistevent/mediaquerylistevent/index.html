@@ -1,0 +1,78 @@
+---
+title: MediaQueryListEvent()
+slug: Web/API/MediaQueryListEvent/MediaQueryListEvent
+translation_of: Web/API/MediaQueryListEvent/MediaQueryListEvent
+---
+<div>{{APIRef("CSSOM View")}}</div>
+
+<p><code><strong>MediaQueryListEvent()</strong></code> 构造函数创建出一个新的 {{DOMxRef("MediaQueryListEvent")}} 对象</p>
+
+<h2 id="语法" name="语法">语法</h2>
+
+<pre class="brush: js">
+new MediaQueryListEvent(type)
+new MediaQueryListEvent(type, options)  
+</pre>
+
+<h3 id="参数" name="参数">参数</h3>
+
+<dl>
+ <dt><code>type</code></dt>
+ <dd>一个带有该事件名字的字符串。该字符串是大小写敏感的，且浏览器通常将其设置为 <code>change</code>。</dd>
+ <dt><code>options</code> {{optional_inline}}</dt>
+  <dd>一个对象，<em>在 {{domxref("Event/Event", "Event()")}}已经定义好的属性基础上</em>，其可以有如下的属性：
+  <dl>
+    <dt><code>media</code> {{optional_inline}}</dt>
+    <dd>一个字符串，代表着一个序列化的媒体查询。默认值为 <code>""</code></dd>
+    <dt><code>matches</code> {{optional_inline}}</dt>
+    <dd>一个布尔值，代表着匹配媒体查询状态。如果匹配该值为<code>true</code>，反之为<code>false</code>。默认值为 <code>false</code></dd>
+  </dl>
+  </dd>
+</dl>
+
+
+<h3 id="返回值" name="返回值">返回值</h3>
+
+<p>一个新的<code>{{DOMxRef("MediaQueryListEvent")}}</code> 对象</p>
+
+<h2 id="示例" name="示例">示例</h2>
+
+<pre class="brush: js">
+var media = '(max-width: 600px)';
+var matches = true;
+
+var myMediaQueryListEvent = new MediaQueryListEvent("change", {media, matches});
+</pre>
+
+<table class="standard-table">
+  <table class="standard-table">
+    <thead>
+      <tr>
+        <th scope="col">Specification</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+         <td>{{SpecName("CSSOM View", "#dom-mediaquerylistevent-mediaquerylistevent","# dom-mediaquerylistevent-mediaquerylistevent")}}</td>
+      </tr>
+    </tbody>
+  </table>
+</table>
+
+<h2 id="浏览器兼容性" name="浏览器兼容性">浏览器兼容性</h2>
+
+<p>{{Compat("api.MediaQueryListEvent.MediaQueryListEvent")}}</p>
+
+<h2 id="参见" name="参见">参见</h2>
+
+<ul>
+  <li><a href="/en-US/docs/Web/CSS/Media_Queries">Media queries</a></li>
+  <li>
+    <a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries"
+      >Using media queries from code</a
+    >
+  </li>
+  <li>{{DOMxRef("window.matchMedia()")}}</li>
+  <li>{{DOMxRef("MediaQueryList")}}</li>
+  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
+</ul>

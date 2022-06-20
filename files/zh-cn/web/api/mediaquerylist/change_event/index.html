@@ -1,0 +1,104 @@
+---
+title: 'MediaQueryList: change event'
+slug: Web/API/MediaQueryList/change_event
+translation_of: Web/API/MediaQueryList/change_event
+original_slug: Web/API/MediaQueryList/change_event
+---
+
+<p>{{APIRef("CSSOM")}}</p>
+
+<p>
+  当媒体查询的支持情况改变时，{{DOMxRef("MediaQueryList")}} 接口的<code
+    ><strong>change</strong></code
+  >事件触发。
+</p>
+
+<h2 id="语法">语法</h2>
+
+<p>
+  在像 {{domxref("EventTarget.addEventListener", "addEventListener()")}}
+  这样的方法中使用该事件名字，或者设置一个事件处理函数属性
+</p>
+
+<pre class="brush: js">
+addEventListener('change', event => { });
+
+onchange = event => { };
+</pre>
+
+<h2 id="事件类型" name="事件类型">事件类型</h2>
+
+<p>{{domxref("MediaQueryListEvent")}} 类型。 继承于 {{domxref("Event")}}。</p>
+
+{{InheritanceDiagram("MediaQueryListEvent")}}
+
+<h2 id="事件属性" name="事件属性">事件属性</h2>
+
+<p>
+  <code><em>MediaQueryListEvent</em></code>
+  接口的属性继承自它的父接口，{{domxref("Event")}}。
+</p>
+
+<dl>
+  <dt>
+    <code>{{DOMxRef("MediaQueryListEvent.matches")}}</code>{{ReadOnlyInline}}
+  </dt>
+  <dd>
+    一个布尔值，如果 {{DOMxRef("document")}}
+    目前匹配媒体查询列表，该值为<code>true</code>，反之为<code>false</code>。
+  </dd>
+  <dt>
+    <code>{{DOMxRef("MediaQueryListEvent.media")}}</code>{{ReadOnlyInline}}
+  </dt>
+  <dd>一个字符串，代表着一个序列化的媒体查询。</dd>
+</dl>
+
+<h2 id="示例" name="示例">示例</h2>
+
+<pre class="brush: js">
+var mql = window.matchMedia('(max-width: 600px)');
+
+function screenTest(e) {
+  if (e.matches) {
+    /* 视口小于或等于600像素 */
+    console.log('This is a narrow screen — less than 600px wide.')
+  } else {
+    /* 视口大于600像素 */
+    console.log('This is a wide screen — more than 600px wide.')
+  }
+}
+
+mql.addListener(screenTest);
+</pre>
+
+<h2 id="规范" name="规范">规范</h2>
+
+<table class="standard-table">
+  <table class="standard-table">
+    <thead>
+      <tr>
+        <th scope="col">Specification</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+         <td>{{SpecName("CSSOM View", "#dom-mediaquerylist-onchange","# dom-mediaquerylist-onchange")}}</td>
+      </tr>
+    </tbody>
+  </table>
+</table>
+
+<h2 id="浏览器兼容性" name="浏览器兼容性">浏览器兼容性</h2>
+
+<p>{{Compat("api.MediaQueryList.change_event")}}</p>
+
+<h2 id="参见" name="参见">参见</h2>
+
+<ul>
+  <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
+  <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from code</a></li>
+  <li>{{DOMxRef("window.matchMedia()")}}</li>
+  <li>{{DOMxRef("MediaQueryList")}}</li>
+  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
+
+ </ul>
