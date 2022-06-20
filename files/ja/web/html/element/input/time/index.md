@@ -13,7 +13,7 @@ tags:
   - 入力型
   - リファレンス
   - Time
-browser-compat: html.elements.input.input-time
+browser-compat: html.elements.input.type-time
 translation_of: Web/HTML/Element/input/time
 ---
 
@@ -21,7 +21,7 @@ translation_of: Web/HTML/Element/input/time
 
 {{htmlelement("input")}} 要素の **`time`** 型は、ユーザーが簡単に時刻 (時と分、任意で秒) を入力できるように設計された入力欄を生成します。
 
-コントロールのユーザーインターフェイスは、ブラウザーによってまちまちです。最近のブラウザーは対応が進んでおり、 Safari は有名なブラウザーの中で唯一実装していません。対応していないブラウザーでは、このコントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされます。
+コントロールのユーザーインターフェイスは、ブラウザーによってまちまちです。ブラウザーの互換詳細については[ブラウザーの互換性](#browser_compatibility)を参照してください。対応していないブラウザーでは、このコントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされます。
 
 {{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}
 
