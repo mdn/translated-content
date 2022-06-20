@@ -55,29 +55,30 @@ if (window.AmbientLightSensor) {
 Приведенный ниже пример кода иллюстрирует эти принципы. Блок {{jsxref('statements/try...catch', 'try...catch')}} ловит ошибки, возникающие при создании объекта датчика. Этот объект слушает события {{domxref('Sensor.error_event', 'error')}}, чтобы поймать ошибки, возникающие во время использования датчика. Единственный раз, когда что-либо показывается пользователю, это когда необходимо запросить [разрешения](/en-US/docs/Web/API/Permissions_API) и когда датчик не поддерживается устройством.
 
 
-> **Note:** If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+> **Note:** Если функциональная политика блокирует использование функции, то это происходит потому, что ваш код не соответствует политикам, установленным на вашем сервере. Это не то, что когда-либо будет показано пользователю. Статья о HTTP заголовке {{httpheader('Feature-Policy')}} содержит инструкцию по реализации.
+
 
 ```js
 let accelerometer = null;
 try {
     accelerometer = new Accelerometer({ referenceFrame: 'device' });
     accelerometer.addEventListener('error', event => {
-        // Handle runtime errors.
+        // Обработчик ошибок времени исполнения.
         if (event.error.name === 'NotAllowedError') {
-            // Branch to code for requesting permission.
+            // Переход к коду для запроса разрешения.
         } else if (event.error.name === 'NotReadableError' ) {
-            console.log('Cannot connect to the sensor.');
+            console.log('Не могу подключиться к датчику.');
         }
     });
     accelerometer.addEventListener('reading', () => reloadOnShake(accelerometer));
     accelerometer.start();
 } catch (error) {
-    // Handle construction errors.
+    // Обработчик ошибок создания объекта.
     if (error.name === 'SecurityError') {
-        // See the note above about feature policy.
-        console.log('Sensor construction was blocked by a feature policy.');
+        // Смотри заметку о функциональных политиках.
+        console.log('Создание экземпляра объекта датчика было задлокировано по функциональным политикам.');
     } else if (error.name === 'ReferenceError') {
-        console.log('Sensor is not supported by the User Agent.');
+        console.log('Датчик не поддерживается в User agent.');
     } else {
         throw error;
     }
