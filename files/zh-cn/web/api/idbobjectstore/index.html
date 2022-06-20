@@ -429,7 +429,9 @@ objectstore.delete(key);</pre>
 
 <pre><a href="/en/IndexedDB/IDBRequest" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#get" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="#get">get</a> (in any key) raises (<a href="/en-US/docs/DOM/DOMException" style="font-family: 'Courier New', 'Andale Mono', monospace;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</pre>
 
-<p>{{ Note("This function produces the same result if no record with the given key exists in the database as when a record exists, but with an <code>undefined</code> value. To tell these situations apart, call the openCursor() method with the same key. That method provides a cursor if the record exists, and no cursor if it does not.") }}</p>
+<div class="note">
+ <p><strong>备注：</strong>This function produces the same result if no record with the given key exists in the database as when a record exists, but with an <code>undefined</code> value. To tell these situations apart, call the openCursor() method with the same key. That method provides a cursor if the record exists, and no cursor if it does not.</p>
+</div>
 
 <h5 id="Parameters_4">Parameters</h5>
 

@@ -236,7 +236,9 @@ public class Engineer extends WorkerBee {
 
 <p>使用這些定義，可以創建這些物件的實例。這些實例將獲得其屬性的預設值。圖例 8.3 展現了使用這些 JavaScript 定義創建新定義，並顯示了新物件中的屬性值。</p>
 
-<p>{{ note('術語 <em><em>實例（instance）</em></em>在 基於類的語言中具有特定的技術含義。在這些語言中，實例是指類的個體成員，與類有著根本性的不同。在 JavaScript 中，“實例”並不具有這種技術含義，因為 JavaScript 中不存在類和實例之間的這種差異。然而，在談論 JavaScript 時，“實例”可以非正式地用於表示用特定的建構函數創建的物件。所以，在這個例子中，你可以非正式地 <code>jane</code> 是 <code>Engineer</code> 的一個實例。與之類似，儘管術語<em>父（parent）</em>，<em>子（child）</em>，<em>祖先（ancestor）</em>，和<em>後代（descendant）</em>在 JavaScript 中並沒有正式的含義，您可以非正式地使用這些術語用於指代原型鏈中處於更高層次或者更低層次的物件。') }}</p>
+<div class="note">
+ <p><strong>備註：</strong>術語 <em>實例（instance）</em>在 基於類的語言中具有特定的技術含義。在這些語言中，實例是指類的個體成員，與類有著根本性的不同。在 JavaScript 中，“實例”並不具有這種技術含義，因為 JavaScript 中不存在類和實例之間的這種差異。然而，在談論 JavaScript 時，“實例”可以非正式地用於表示用特定的建構函數創建的物件。所以，在這個例子中，你可以非正式地 <code>jane</code> 是 <code>Engineer</code> 的一個實例。與之類似，儘管術語<em>父（parent）</em>，<em>子（child）</em>，<em>祖先（ancestor）</em>，和<em>後代（descendant）</em>在 JavaScript 中並沒有正式的含義，您可以非正式地使用這些術語用於指代原型鏈中處於更高層次或者更低層次的物件。</p>
+</div>
 
 <p><img alt="figure8.3.png" src="/@api/deki/files/4403/=figure8.3.png"><br>
  <small><strong>圖例 8.3：通過簡單的定義創建物件</strong></small></p>
@@ -394,7 +396,9 @@ public class Engineer extends WorkerBee {
 
 <p>JavaScript 的邏輯 OR 操作符（<code>||）</code>將求解它的第一個參數。如果該參數的值可以轉換為真，則操作符返回該值。否則，操作符返回第二個參數的值。因此，這行代碼首先檢查 <code>name</code> 是否具有一個對 <code>name</code> 屬性有用的值。如果有，則設置其為 <code>this.name</code> 的值。否則，設置 <code>this.name</code> 的值為空的字串。為求簡潔，本章將使用這一慣用法，儘管咋一看它有些費解。</p>
 
-<p>{{ note('如果調用建構函數時，指定了可以轉換為 <code><code>false</code></code> 的參數（比如 <code>0</code> （零）和空字串<code><code>（""）），結果可能出乎調用者意料。此時，將使用預設值（譯者注：而不是指定的參數值 0 和 ""）。</code></code>') }}</p>
+<div class="note">
+ <p><strong>備註：</strong>如果調用建構函數時，指定了可以轉換為 <code><code>false</code></code> 的參數（比如 <code>0</code> （零）和空字串（<code>""</code>）），結果可能出乎調用者意料。此時，將使用預設值（譯者注：而不是指定的參數值 0 和 ""）。</p>
+</div>
 
 <p>基於這些定義，當創建物件的實例時，可以為本地定義的屬性指定值。正如 <a href="#8.5">圖例 8.5</a> 所示一樣，您可以通過如下語句創建新的 <code>Engineer</code>：</p>
 
