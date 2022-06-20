@@ -1,37 +1,26 @@
 ---
-title: srcdoc
+title: HTMLIFrameElement.srcdoc
 slug: Web/API/HTMLIFrameElement/srcdoc
+page-type: web-api-instance-property
+browser-compat: api.HTMLIFrameElement.srcdoc
 translation_of: Web/API/HTMLIFrameElement/srcdoc
 ---
-<div>{{APIRef('HTMLIFrameElement')}}</div>
+{{APIRef('HTMLIFrameElement')}}
 
-<p>{{domxref("HTMLIFrameElement")}} の <strong><code>srcdoc</code></strong> プロパティは、ページの内容を指定します。</p>
+**`srcdoc`** は {{domxref("HTMLIFrameElement")}} インターフェイスのプロパティで、このページの内容を指定します。
 
-<h2 id="Example_of_contentDocument" name="Example_of_contentDocument">例</h2>
+## 例
 
-<pre class="brush: js highlight:[3] line-numbers language-js">var iframe = document.createElement("iframe");
-iframe.srcdoc = `&lt;!DOCTYPE html&gt;&lt;p&gt;Hello World!&lt;/p&gt;`;
-document.body.appendChild(iframe);</pre>
+```js
+var iframe = document.createElement("iframe");
+iframe.srcdoc = `<!DOCTYPE html><p>Hello World!</p>`;
+document.body.appendChild(iframe);
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#attr-iframe-srcdoc', 'HTMLIFrameElement: srcdoc')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.HTMLIFrameElement.srcdoc")}}</p>
+{{Compat}}
