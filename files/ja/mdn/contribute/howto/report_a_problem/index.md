@@ -2,7 +2,7 @@
 title: MDN の問題を報告する
 slug: MDN/Contribute/Howto/Report_a_problem
 tags:
-  - Guide
+  - ガイド
   - Howto
   - MDN Meta
 translation_of: MDN/Contribute/Howto/Report_a_problem

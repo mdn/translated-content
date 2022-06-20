@@ -5,7 +5,7 @@ tags:
   - Beginner
   - Contribute
   - Glossary
-  - Guide
+  - ガイド
   - Howto
   - Intro
   - MDN Meta
