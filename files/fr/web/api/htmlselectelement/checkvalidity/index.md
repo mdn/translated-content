@@ -7,11 +7,7 @@ translation_of: Web/API/HTMLSelectElement/checkValidity
 ---
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLSelectElement.checkValidity()`** method checks
-whether the element has any constraints and whether it satisfies them. If the element
-fails its constraints, the browser fires a cancelable {{domxref("HTMLSelectElement/invalid_event", "invalid")}} event at the
-element, and then returns `false`.
-La méthode **`HTMLSelectElement.checkValidity()`** vérifie si l'élément a des contraintes et s'il les satisfait. Si l'élément ne respecte pas ses contraintes, le navigateur déclenche un événement [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) annulable sur l'élément, puis renvoie `false`.
+La méthode **`HTMLSelectElement.checkValidity()`** vérifie si l'élément a des contraintes et s'il les satisfait. Si l'élément ne respecte pas ses contraintes, le navigateur déclenche un évènement [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) annulable sur l'élément, puis renvoie `false`.
 
 ## Syntaxe
 
@@ -23,9 +19,9 @@ checkValidity()
 
 Aucun.
 
-### Valeur retournée
+### Valeur de retour
 
-Aucun([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+Aucun ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Spécifications
 
@@ -37,4 +33,4 @@ Aucun([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined))
 
 ## Voir aussi
 
-- [Validation de formulaire](/fr/docs/Web/Guide/HTML/Constraint_validation)
+- [Validation des contraintes](/fr/docs/Web/Guide/HTML/Constraint_validation)
