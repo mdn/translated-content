@@ -59,8 +59,7 @@ Sin embargo, es importante considerar los siguientes escenarios:
     desde el ámbito global o desde el ámbito de una función.
 
     - Del mismo modo, `delete` no puede eliminar ninguna función en el ámbito global (ya sea parte de una definición de una función o una expresión de función).
-    - Funciones que son partes de un objeto (y no sean del ámbito global) sí pueden
-    ser eliminadas con `delete`.
+    - Funciones que son partes de un objeto (y no sean del ámbito global) sí pueden ser eliminadas con `delete`.
 
   - Las propiedades declaradas con {{jsxref("Statements/let","let")}} o
     {{jsxref("Statements/const","const")}} no pueden ser eliminadas dentro del
