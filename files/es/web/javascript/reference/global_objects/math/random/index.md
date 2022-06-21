@@ -33,7 +33,7 @@ Un número de coma flotante pseudo-aleatorio entre los números 0 (incluido) y 1
 
 ## Ejemplos
 
-Tenga en cuenta que los números de coma flotante en JavaScript cumplen con la norma IEEE 754. Debido a esto, dichos números tienen un comportamiento de redondeo al evento más cercano. Es por eso que en las funciones descritas en los siguientes ejemplos (excluyendo a la propia `Math.random()` ) los rangos declarados no son exactos. Si se eligen límites extremadamente grandes (2⁵³ o superiores), es posible, en casos extremadamente raros, calcular el "habitualmente excluido" límite superior.
+Tenga en cuenta que los números de coma flotante en JavaScript cumplen con la norma IEEE 754. Debido a esto, dichos números tienen un comportamiento de redondeo al evento más cercano. Es por eso que en las funciones descritas en los siguientes ejemplos (excluyendo a la propia `Math.random()` ) los rangos declarados no son exactos. Si se eligen límites extremadamente grandes (2^53 o superiores), es posible, en casos extremadamente raros, calcular el "habitualmente excluido" límite superior.
 
 ### Obtener un número aleatorio entre 0 (incluido) y 1 (excluido)
 
