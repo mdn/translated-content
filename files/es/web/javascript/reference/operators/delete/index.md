@@ -25,9 +25,9 @@ delete object['property']
 
 ### Parámetros
 
-- `objeto`
+- `object`
   - : El nombre de un objeto, o una expresión que evalúa a un objeto.
-- `propiedad`
+- `property`
   - : La propiedad a eliminar.
 
 ### Valor de retorno
