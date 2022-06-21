@@ -34,6 +34,10 @@ delete objeto['propiedad']
 
 `true` para todos los casos excepto cuando la propiedad es una propiedad {{jsxref("Object.hasOwnProperty", "own")}} {{jsxref("Errors/Cant_delete", "non-configurable")}}, en cuyo caso, se retorna `false` en modo no estricto.
 
+### Excepciones
+
+Arroja un {{jsxref("TypeError")}} en [modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode) si la propiedad es una propiedad directa no configurable.
+
 ## Descripción
 
 Al contrario de lo que se podría pensar (tal vez debido a otros lenguajes de programación como
