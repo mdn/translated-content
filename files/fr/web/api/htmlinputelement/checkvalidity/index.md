@@ -7,7 +7,7 @@ translation_of: Web/API/HTMLInputElement/checkValidity
 ---
 {{APIRef("HTML DOM")}}
 
-La méthode **`HTMLInputElement.checkValidity()`** renvoie une valeur booléenne qui indique la validité de la valeur de l'élément. Si la valeur n'est pas valide, cette méthode déclenche également l'événement [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) sur l'élément
+La méthode **`HTMLInputElement.checkValidity()`** renvoie une valeur booléenne qui indique la validité de la valeur de l'élément. Si la valeur n'est pas valide, cette méthode déclenche également l'évènement [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) sur l'élément.
 
 ## Syntaxe
 
