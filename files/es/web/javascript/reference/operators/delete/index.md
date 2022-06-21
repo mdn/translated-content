@@ -16,7 +16,7 @@ mantienen más referencias a la misma propiedad, eventualmente se libera automá
 delete expresion
 ```
 
-Donde la `expresion` debe ser una referencia a la [propiedad](/es/docs/Glossary/property/JavaScript), p. ej.:
+Donde `expresion` debe evaluarse como una referencia a la [propiedad](/es/docs/Glossary/property/JavaScript), por ejemplo:
 
 ```js
 delete objeto.propiedad
