@@ -244,7 +244,7 @@ delete foo.bar; // retorna true
 console.log(foo.bar); // 42
 
 // Eliminar la propiedad en el prototipo.
-delete Foo.prototype.bar; // reotnra true
+delete Foo.prototype.bar; // retorna true
 
 // La propiedad "bar" ya no puede ser heredada
 // de foo ya que ha sido eliminada.
