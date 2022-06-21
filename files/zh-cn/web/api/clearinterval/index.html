@@ -3,15 +3,14 @@ title: WindowTimers.clearInterval()
 slug: Web/API/clearInterval
 tags:
   - API
-  - WindowOrWorkerGlobalScope
   - 参考
   - 方法
-translation_of: Web/API/WindowOrWorkerGlobalScope/clearInterval
-original_slug: Web/API/WindowOrWorkerGlobalScope/clearInterval
+translation_of: Web/API/clearInterval
+original_slug: Web/API/clearInterval
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p>{{domxref("WindowOrWorkerGlobalScope")}} mixin 的 <strong><code>clearInterval()</code></strong> 方法可取消先前通过 {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} 设置的重复定时任务。</p>
+<p><code>WindowOrWorkerGlobalScope</code> mixin 的 <strong><code>clearInterval()</code></strong> 方法可取消先前通过 {{domxref("setInterval()")}} 设置的重复定时任务。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,7 +24,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/clearInterval
  <dd>要取消的定时器的 ID。是由 <code>setInterval()</code> 返回的。</dd>
 </dl>
 
-<p>值得一提的是，{{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} 和 {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} 共用其定义的 IDs，即可以使用 <code>clearInterval()</code> 和 {{domxref("WindowOrWorkerGlobalScope.clearTimeout", "clearTimeout()")}} 中的任意一个。然而，为了使代码可读性更强，你应该尽量避免这种用法。</p>
+<p>值得一提的是，{{domxref("setInterval()")}} 和 {{domxref("setTimeout()")}} 共用其定义的 IDs，即可以使用 <code>clearInterval()</code> 和 {{domxref("clearTimeout()")}} 中的任意一个。然而，为了使代码可读性更强，你应该尽量避免这种用法。</p>
 
 <h3 id="返回值">返回值</h3>
 
@@ -47,9 +46,9 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/clearInterval
 
 <ul>
  <li><a href="/en-US/docs/JavaScript/Timers" title="JavaScript/Timers">JavaScript 定时器</a></li>
- <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</li>
+ <li>{{domxref("setTimeout")}}</li>
+ <li>{{domxref("setInterval")}}</li>
+ <li>{{domxref("clearTimeout")}}</li>
  <li>{{domxref("Window.requestAnimationFrame")}}</li>
  <li><a href="/en-US/docs/JavaScript/Timers/Daemons" title="JavaScript/Timers/Daemons"><em>Daemons</em> management</a></li>
 </ul>

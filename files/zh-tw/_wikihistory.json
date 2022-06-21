@@ -4466,12 +4466,6 @@
       "jackblackevo"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2020-10-15T22:29:08.795Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/XMLHttpRequest": {
     "modified": "2020-10-15T21:21:13.079Z",
     "contributors": [
@@ -7841,18 +7835,6 @@
     "contributors": [
       "teoli",
       "Kennyluck"
-    ]
-  },
-  "conflicting/Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2019-03-23T22:30:45.308Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
-  "conflicting/Web/API/WindowOrWorkerGlobalScope_e2691f7ad05781a30c5fc5bb3b3f633a": {
-    "modified": "2019-03-18T21:16:54.761Z",
-    "contributors": [
-      "jackblackevo"
     ]
   },
   "conflicting/Web/CSS/@viewport": {

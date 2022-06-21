@@ -20,7 +20,7 @@ original_slug: MDN/Kuma/Beheben_von_KumaScript_Fehlern
  <dt>Sonderzeichen in einem Makro Parameter.</dt>
  <dd>Wenn " oder \  innerhalb eines Makro Parameters stehen, kann ein Schrägstrich \ vorangestellt werden: <code>\\</code> oder <code>\"</code></dd>
  <dt>Fehlende Kommas zwischen den Makro Parametern.</dt>
- <dd>Makro Parameters sind mit Kommas (,) zu trennen, jedoch sollte am Ende der Parameterliste kein Komma stehen: z. B. <code>\{\{anch("top", "Back to top")}}</code>.</dd>
+ <dd>Makro Parameters sind mit Kommas (,) zu trennen, jedoch sollte am Ende der Parameterliste kein Komma stehen: z. B. <code>\{\{compat("html.elements.link", 2)}}</code>.</dd>
  <dt>HTML Tags innerhalb eines Makro Aufrufs</dt>
  <dd>Makros werden oft durch Textformatiertungen zerstört. <code>So kann z. B. das Tag &lt;/code&gt;</code> in den Quellcode des Makros geraten. Die Quellcode Ansicht (source view) zeigt die zu beseitigenden Formatierungselemente.</dd>
 </dl>
@@ -36,7 +36,6 @@ original_slug: MDN/Kuma/Beheben_von_KumaScript_Fehlern
 
 <dl>
  <dt>Typos in der Benennung von Makro oder Namensänderungen von Makros.</dt>
- <dd>Der Aufruf der Template Seite zeigt die richtigen Namen der Makros. Die URLs für Template Seiten erhält man durch Anheften des Template Namen ans Ende der URL <code>https://developer.mozilla.org/en-US/docs/Template: z.B. ist die Template Seite für</code> <code>\{\{anch("top", "Back to top")}}</code>: <a href="https://developer.mozilla.org/en-US/docs/Template:anch">https://developer.mozilla.org/en-US/docs/Template:anch</a>.<br>
  <br>
  Es gibt eine eigene Liste von <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Content/Custom_macros">Makros für MDN</a>, die das gesuchte Makro mit korrekter bzw. neuer Schreibweise enthalten kann.</dd>
 </dl>
