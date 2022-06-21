@@ -165,7 +165,7 @@ uno esperaría luego de haber eliminado la propiedad y agregarla nuevamente.
 
 Si usted desea usar un arreglo asociativo ordenado con soporte para
 implementaciones antiguas, use un objeto {{jsxref("Map")}} si está disponible
-(a través de un polyfill, por ejemplo), o simule esta estructura con dos
+(a través de un [_polyfill_](/es/docs/Glossary/Polyfill), por ejemplo), o simule esta estructura con dos
 arreglos separados (uno para las claves y otro para los valores), o construya
 un arreglo de objetos con una única propiedad, etc.
 
