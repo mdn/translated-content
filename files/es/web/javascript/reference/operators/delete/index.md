@@ -19,8 +19,8 @@ delete expresion
 Donde `expresion` debe evaluarse como una referencia a la [propiedad](/es/docs/Glossary/property/JavaScript), por ejemplo:
 
 ```js
-delete objeto.propiedad
-delete objeto['propiedad']
+delete object.property
+delete object['property']
 ```
 
 ### Parámetros
