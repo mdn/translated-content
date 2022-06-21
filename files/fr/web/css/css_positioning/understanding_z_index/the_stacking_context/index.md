@@ -79,6 +79,7 @@ Il est important de noter que les blocs DIV #4, DIV #5 et DIV #6 sont les enfant
 >       - DIV #4 - z-index à 6, empilé sous un élément avec `z-index` à 4, qui aboutit à un ordre de rendu de 4.6
 >
 >     - DIV #1 - z-index à 5
+
 ## Exemple
 
 ### HTML

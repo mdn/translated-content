@@ -9,8 +9,10 @@ La méthode **`forEach()`** de l'interface {{domxref("DOMTokenList")}} appelle l
 
 ## Syntaxe
 
-    tokenList.forEach(callback);
-    tokenList.forEach(callback, argument);
+```js
+tokenList.forEach(callback);
+tokenList.forEach(callback, argument);
+```
 
 ### Paramètres
 

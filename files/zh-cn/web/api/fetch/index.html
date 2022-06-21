@@ -1,5 +1,5 @@
 ---
-title: WorkerOrGlobalScope.fetch()
+title: fetch()
 slug: Web/API/fetch
 tags:
   - API
@@ -8,21 +8,21 @@ tags:
   - FetchAPI
   - GlobalFetch
   - request
-translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
+translation_of: Web/API/fetch
 original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
 <p>{{APIRef("Fetch")}}</p>
 
-<p>位于 {{domxref("WorkerOrGlobalScope")}} 这一个 mixin 中的 <strong><code>fetch()</code> </strong>方法用于发起获取资源的请求。它返回一个 promise，这个 promise 会在请求响应后被 resolve，并传回 {{domxref("Response")}} 对象。</p>
+<p>全局的 <strong><code>fetch()</code></strong> 方法用于发起获取资源的请求。它返回一个 promise，这个 promise 会在请求响应后被 resolve，并传回 {{domxref("Response")}} 对象。</p>
 
 <p>{{domxref("Window")}} 和 {{domxref("WorkerGlobalScope")}} 都实现了 WorkerOrGlobalScope。 ——这意味着基本在任何场景下只要你想获取资源，都可以使用 位于 WorkerOrGlobalScope 中的 <code>fetch()</code> 方法。</p>
 
-<p>当遇到网络错误时，{{domxref("WorkerOrGlobalScope.fetch","fetch()")}} 返回的 promise 会被 reject，并传回 {{jsxref("TypeError")}}，虽然这也可能因为权限或其它问题导致。成功的 fetch() 检查不仅要包括 promise 被 resolve，还要包括 {{domxref("Response.ok")}} 属性为 true。HTTP 404 状态并不被认为是网络错误。</p>
+<p>当遇到网络错误时，{{domxref("fetch()")}} 返回的 promise 会被 reject，并传回 {{jsxref("TypeError")}}，虽然这也可能因为权限或其它问题导致。成功的 fetch() 检查不仅要包括 promise 被 resolve，还要包括 {{domxref("Response.ok")}} 属性为 true。HTTP 404 状态并不被认为是网络错误。</p>
 
 <p><code>fetch()</code> 方法由 <a href="/en-US/docs/Security/CSP/CSP_policy_directives">Content Security Policy</a> 的 <code>connect-src</code>指令控制，而不是它请求的资源。</p>
 
 <div class="note">
-<p><strong>注意</strong>:{{domxref("WorkerOrGlobalScope.fetch","fetch()")}} 方法的参数与 {{domxref("Request.Request","Request()")}} 构造器是一样的。</p>
+<p><strong>备注：</strong>{{domxref("fetch()")}} 方法的参数与 {{domxref("Request.Request","Request()")}} 构造器是一样的。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -133,36 +133,11 @@ var myRequest = new Request('flowers.jpg', myInit);</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#fetch-method','fetch()')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Defined in a <code>WindowOrWorkerGlobalScope</code> partial in the newest spec.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-global-fetch','fetch()')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Credential Management')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Adds {{domxref("FederatedCredential")}} or {{domxref("PasswordCredential")}} instance as a possible value for <code>init.credentials</code>.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-
-
-<p>{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="相关链接">相关链接</h2>
 

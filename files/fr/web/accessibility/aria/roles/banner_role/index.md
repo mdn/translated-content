@@ -19,8 +19,6 @@ Une page web ne doit pas contenir plus d'un rôle `banner`, mais il est tout à 
 
 ### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
-
-
 > **Note :** il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.
 
 ### Exemples

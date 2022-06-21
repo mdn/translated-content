@@ -3,7 +3,6 @@ title: Lexical grammar
 slug: Web/JavaScript/Reference/Lexical_grammar
 translation_of: Web/JavaScript/Reference/Lexical_grammar
 ---
-<div>
 <p>{{JsSidebar("More")}}</p>
 
 <p>此篇介紹 Javascript 的lexical grammar。ECMAScript 的原始碼從左到右被掃描並被轉換成一系列的輸入元素也就是 token、控制字元、行終止字元、註解或是空白字元。ECMAScript 也定義了一些特定的關鍵字和實體語法還有用來自動插入分號來結束陳述式的規則。</p>
@@ -12,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
 
 <p>控制字元是用來控制對文本的解釋，但無法被顯示出來。</p>
 
-<table class="standard-table">
+<table>
  <caption>Unicode 格式的控制字元</caption>
  <tbody>
   <tr>
@@ -48,7 +47,7 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
 
 <p>空白字元提升了程式碼的可讀性也能將 tokens 分開。這些字元通常對程式的執行是不必要的。<a href="http://en.wikipedia.org/wiki/Minification_%28programming%29">壓縮源碼工具</a>通常會移除不必要的空白來減少資料傳輸量。</p>
 
-<table class="standard-table">
+<table>
  <caption>空白字元</caption>
  <tbody>
   <tr>
@@ -109,7 +108,7 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
 
 <p>在 ECMAScript 中，只有以下的Unicode碼位被視為行終止字元，其他如 Next Line, NEL, U+0085 等的行終止字元被視為空白字元。</p>
 
-<table class="standard-table">
+<table>
  <caption>行終止字元</caption>
  <tbody>
   <tr>
@@ -495,41 +494,11 @@ a + b;
 
 <h2 id="規格">規格</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規格</th>
-   <th scope="col">狀態</th>
-   <th scope="col">備註</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2("ES1")}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-7', 'Lexical Conventions')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Added: Binary and Octal Numeric literals, Unicode code point escapes, Templates</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
 <p>{{Compat("javascript.grammar")}}</p>
-
-<p> </p>
 
 <h2 id="參閱">參閱</h2>
 
@@ -541,4 +510,3 @@ a + b;
  <li>{{jsxref("RegExp")}}</li>
  <li>{{jsxref("String")}}</li>
 </ul>
-</div>

@@ -132,6 +132,7 @@ Modifions la déclaration de `position` dans le code&nbsp;
 ```css
 position: absolute;
 ```
+
 Si vous enregistrez et actualisez maintenant, vous verrez quelque chose comme ceci apparaître&nbsp;:
 
 ```html hidden

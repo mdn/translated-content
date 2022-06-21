@@ -7,9 +7,11 @@ translation_of: Web/API/ImageData/data
 
 La propriété en lecteur seul `ImageData.data` retourne un {{jsxref("Uint8ClampedArray")}}. Il représente un tableau unidirectionnel contenant les données sous forme d'entiers inclus entre 0 et 255 dans l'ordre RGBA comme ceci&nbsp;: `[r1,g1,b1,a1,…,rn;gn;bn;an]`.
 
-## Syntax
+## Syntaxe
 
-    imagedata.data
+```js
+imagedata.data
+```
 
 ## Exemple
 

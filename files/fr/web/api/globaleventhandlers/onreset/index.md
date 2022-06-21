@@ -15,7 +15,9 @@ La propriété **`GlobalEventHandlers.onreset`** contient un {{event("Event_hand
 
 ## Syntaxe
 
-    window.onreset = funcRef;
+```js
+window.onreset = funcRef;
+```
 
 ### Paramètres
 

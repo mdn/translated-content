@@ -13,7 +13,9 @@ La propriété **onmouseover** renvoie le code de gestion de l'évènement `onMo
 
 ### Syntaxe
 
-    code de gestion de l'évènement = element.onmouseover
+```
+code de gestion de l'évènement = element.onmouseover
+```
 
 ### Notes
 

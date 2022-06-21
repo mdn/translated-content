@@ -743,7 +743,7 @@ const emailRegExp = /^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-
 function addEvent(element, event, callback) {
   let previousEventCallBack = element["on"+event];
   element["on"+event] = function (e) {
-    const output = callback(e);
+    let output = callback(e);
 
     // Колбэк, который возвращает `false`, останавливает цепочку колбэков
     // и прерывает выполнение колбэка события
@@ -753,8 +753,8 @@ function addEvent(element, event, callback) {
       output = previousEventCallBack(e);
       if(output === false) return false;
     }
-  }
-};
+  };
+}
 
 // Теперь мы можем изменить наши критерии валидации
 // Поскольку мы не полагаемся на CSS-псевдокласс, для поля email

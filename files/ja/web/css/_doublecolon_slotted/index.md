@@ -36,7 +36,7 @@ translation_of: Web/CSS/::slotted
 
 ## 例
 
-###スロット化された要素を強調
+### スロット化された要素を強調
 
 以下のコードの断片は [slotted-pseudo-element](https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element) デモから取られたものです ([ライブでもご覧ください](https://mdn.github.io/web-components-examples/slotted-pseudo-element/))。
 

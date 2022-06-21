@@ -34,8 +34,8 @@ La structure de la page HTML est vraiment simple, car tout le jeu sera contenu d
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+      * { padding: 0; margin: 0; }
+      canvas { background: #eee; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -43,7 +43,7 @@ La structure de la page HTML est vraiment simple, car tout le jeu sera contenu d
 <canvas id="myCanvas" width="480" height="320"></canvas>
 
 <script>
-	// JavaScript code goes here
+  // JavaScript code goes here
 </script>
 
 </body>

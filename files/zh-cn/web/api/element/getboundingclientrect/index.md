@@ -88,7 +88,7 @@ for (var key in rect) {
 
 注意：`width`/`height` 是与元素的 `width`/`height` + `padding` 相等的。
 
-也同样注意 `x`/`left`、`y`/`top`、`right` 和 `buttom` 与视口边缘到元素对应的一侧的绝对距离相等。
+也同样注意 `x`/`left`、`y`/`top`、`right` 和 `bottom` 与视口边缘到元素对应的一侧的绝对距离相等。
 
 ### 滚动
 

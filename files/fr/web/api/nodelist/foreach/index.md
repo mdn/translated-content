@@ -10,7 +10,9 @@ La méthode **`forEach()`** de l'interface {{domxref("NodeList")}} appelle le ra
 
 ## Syntaxe
 
-    nodeList.forEach(callback[, thisArg]);
+```js
+nodeList.forEach(callback[, thisArg]);
+```
 
 ### Paramètres
 
@@ -60,9 +62,11 @@ list.forEach(
 
 résultat :
 
-    [object HTMLParagraphElement], 0, myThisArg
-    [object Text], 1, myThisArg
-    [object HTMLSpanElement], 2, myThisArg
+```
+[object HTMLParagraphElement], 0, myThisArg
+[object Text], 1, myThisArg
+[object HTMLSpanElement], 2, myThisArg
+```
 
 ## Polyfill
 

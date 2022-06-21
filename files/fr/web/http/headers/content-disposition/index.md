@@ -49,18 +49,22 @@ L'en-tête `Content-Disposition` est défini dans le contexte plus large des mes
 Le premier paramètre dans le contexte HTTP est en ligne (valeur par défaut, indiquant qu'il peut être affiché à l'intérieur de la page Web ou en tant que page Web) ou pièce jointe (en indiquant qu'il devrait être téléchargé), la plupart des navigateurs présentant une boîte de dialogue "Enregistrer sous" Avec la valeur des paramètres du nom de
 fichier si présent.
 
-    Content-Disposition: inline
-    Content-Disposition: attachment
-    Content-Disposition: attachment; filename="filename.jpg"
+```
+Content-Disposition: inline
+Content-Disposition: attachment
+Content-Disposition: attachment; filename="filename.jpg"
+```
 
 ### En tant qu'en-tête pour un corps à plusieurs parties
 
 Le premier paramètre dans le contexte HTTP est toujours une donnée de forme. Les paramètres supplémentaires sont insensibles à la casse et ont des arguments, qui utilisent la syntaxe de chaîne cité après le signe '='. Les paramètres multiples sont
 séparés par un point-virgule (';').
 
-    Content-Disposition: form-data Content-Disposition: form-data;
-    name="fieldName" Content-Disposition: form-data;
-    name="fieldName"; filename="filename.jpg"
+```
+Content-Disposition: form-data Content-Disposition: form-data;
+name="fieldName" Content-Disposition: form-data;
+name="fieldName"; filename="filename.jpg"
+```
 
 ## Directives
 
@@ -92,19 +96,21 @@ Ce fichier HTML simple sera sauvegardé en tant que téléchargement régulier p
 
 Un exemple de formulaire HTML, publié à l'aide du format `multipart / form-data` qui utilise l'en-tête `Content-Disposition`:
 
-    POST /test.html HTTP/1.1
-    Host: example.org
-    Content-Type: multipart/form-data;boundary="boundary"
+```
+POST /test.html HTTP/1.1
+Host: example.org
+Content-Type: multipart/form-data;boundary="boundary"
 
-    --boundary
-    Content-Disposition: form-data; name="field1"
+--boundary
+Content-Disposition: form-data; name="field1"
 
-    value1
-    --boundary
-    Content-Disposition: form-data; name="field2"; filename="example.txt"
+value1
+--boundary
+Content-Disposition: form-data; name="field2"; filename="example.txt"
 
-    value2
-    --boundary--
+value2
+--boundary--
+```
 
 ## Spécifications
 

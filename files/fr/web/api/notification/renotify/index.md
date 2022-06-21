@@ -19,7 +19,9 @@ La propriété en lecture seule **`renotify`** de l'interface {{domxref ("Notifi
 
 ## Syntaxe
 
-    Notification.renotify
+```js
+Notification.renotify
+```
 
 ### Valeur
 

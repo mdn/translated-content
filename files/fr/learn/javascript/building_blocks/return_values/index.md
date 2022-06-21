@@ -115,8 +115,8 @@ Les fonctions de la ligne sont évaluées en premières, et leurs valeurs de ret
 
 Allons-y, écrivons nos propres fonctions avec des valeurs de retour.
 
-1.  Pour commencer, faites une copie locale du fichier [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) à partir de GitHub. Il s'agit d'une simple page HTML contenant un champ texte  {{htmlelement("input")}} et un paragraphe. Il y a également un élément {{htmlelement("script")}} qui référence ces éléments HTML dans deux variables. Cette page vous permettra d'entrer un nombre dans le champ texte, et affichera, dans le paragraphe au-dessous, différents nombres en lien avec celui entré.
-2.  Ajoutons quelques fonctions dans `<script>` . Sous les deux lignes existantes de JavaScript, ajoutez les définitions des fonctions suivantes:
+1. Pour commencer, faites une copie locale du fichier [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) à partir de GitHub. Il s'agit d'une simple page HTML contenant un champ texte  {{htmlelement("input")}} et un paragraphe. Il y a également un élément {{htmlelement("script")}} qui référence ces éléments HTML dans deux variables. Cette page vous permettra d'entrer un nombre dans le champ texte, et affichera, dans le paragraphe au-dessous, différents nombres en lien avec celui entré.
+2. Ajoutons quelques fonctions dans `<script>` . Sous les deux lignes existantes de JavaScript, ajoutez les définitions des fonctions suivantes:
 
     ```js
     function squared(num) {
@@ -139,7 +139,7 @@ Allons-y, écrivons nos propres fonctions avec des valeurs de retour.
 
     Les fonctions `squared()` et `cubed()` sont plutôt évidentes, elle retournent le carré et le cube du nombre donné en paramètre. La fonction `factorial()` retourne la [factorielle](https://en.wikipedia.org/wiki/Factorial) du nombre donné.
 
-3.  Ensuite, nous allons ajouter un moyen d'afficher des informations sur le nombre entré dans le champ texte. Ajoutez le gestionnaire d'événement suivant à la suite des fonctions:
+3. Ensuite, nous allons ajouter un moyen d'afficher des informations sur le nombre entré dans le champ texte. Ajoutez le gestionnaire d'événement suivant à la suite des fonctions:
 
     ```js
     input.onchange = function() {
@@ -160,7 +160,7 @@ Allons-y, écrivons nos propres fonctions avec des valeurs de retour.
 
     Si le test retourne `false`, la valeur `num` est un nombre, alors une phrase s'affiche dans le paragraphe indiquant le carré, le cube et la factorielle du nombre. La phrase appelle les fonctions `squared()`, `cubed()` et `factorial()` pour obtenir les valeurs désirées.
 
-4.  Sauvegardez votre code, chargez-le dans votre navigateur et testez-le.
+4. Sauvegardez votre code, chargez-le dans votre navigateur et testez-le.
 
 > **Note :** Si vous rencontrez des difficultés pour faire fonctionner cet exemple, vous pouvez vérifier le code en le comparant à la [Version final sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html) (également [Démonstration en direct](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)), ou demandez-nous de l'aide.
 
@@ -183,8 +183,6 @@ Si vous n'avez pas compris quelque chose, n'hésitez pas à relire l'article, ou
 - [Fonction Callback en JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — Une façon courante en JavaScript consiste à passer une fonction à une autre en tant qu'argument, qui est alors appelée à l'intérieur de la première fonction. Cela va au delà de la portée de ce cours, mais mériterait d'être étudier rapidement.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-
 
 ## Dans ce module
 

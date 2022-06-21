@@ -13,7 +13,9 @@ translation_of: Web/API/Node/parentElement
 
 ## Syntaxe
 
-    parentElement = node.parentElement
+```js
+parentElement = node.parentElement
+```
 
 **`parentElement`** référence l'élément parent d'un nœud (**`node`**). C'est toujours un objet {{domxref("Element")}} du DOM ou `null`.
 

@@ -11,7 +11,7 @@ tags:
 
 A exceção do modo strict do Javascript "can't assign to property" ocorre quando é feita
 a tentativa de criar uma propriedade em um valor [primitivo](/pt-BR/docs/Glossary/Primitive)
-como um [symbol](/pt-BR/docs/Glossary/Symbol), uma [string](/pt-BR/docs/Glossary/String), um [number](/pt-BR/docs/Glossary/Number) ou um [boolean](/pt-BR/docs/Glossary/Boolean). 
+como um [symbol](/pt-BR/docs/Glossary/Symbol), uma [string](/pt-BR/docs/Glossary/String), um [number](/pt-BR/docs/Glossary/Number) ou um [boolean](/pt-BR/docs/Glossary/Boolean).
 Valores [primitivos](/pt-BR/docs/Glossary/Primitive) nâo podem ter nenhuma [propriedade](/pt-BR/docs/Glossary/property/JavaScript).
 
 ## Mensagem

@@ -152,12 +152,12 @@ myCar.year = 1969
 <pre class="brush: js">if (cond) var x = {hi: "there"};
 </pre>
 
-<p>下例创建了有三个属性的 <code>myHonda</code> 对象。注意它的 <code>engine</code> 属性也是一个拥有自己属性的对象。</p>
+<p>下例创建了有三个属性的 <code>myHonda</code> 对象。注意它的 <code>engine</code> 属性也是一个拥有自己属性的对象。</p>
 
 <pre class="brush: js">var myHonda = {color: "red", wheels: 4, engine: {cylinders: 4, size: 2.2}};
 </pre>
 
-<p>你也可以用对象初始化器来创建数组。参见 {{ web.link("Values%2C_variables%2C_and_literals#Array_literals", "array literals") }}.</p>
+<p>你也可以用对象初始化器来创建数组。参见<a href="/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#数组字面量_array_literals">数组字面量</a></p>
 
 <p>在 JavaScript 1.1 及更早版本中，你不能使用对象初始化器。你只能通过使用构造函数或其他对象的函数来创建对象。参见 <a href="#使用构造函数">使用构造函数</a>.</p>
 
@@ -239,7 +239,7 @@ var car2 = new Car("Nissan", "300ZX", 1992, ken);
 
 <h3 id="使用_Object.create_方法">使用 Object.create 方法</h3>
 
-<p>对象也可以用 {{jsxref("Object.create()")}} 方法创建。该方法非常有用，因为它允许你为创建的对象选择一个原型对象，而不用定义构造函数。</p>
+<p>对象也可以用 {{jsxref("Object.create()")}} 方法创建。该方法非常有用，因为它允许你为创建的对象选择一个原型对象，而不用定义构造函数。</p>
 
 <pre class="brush: js">// Animal properties and method encapsulation
 var Animal = {
@@ -258,8 +258,6 @@ var fish = Object.create(Animal);
 fish.type = "Fishes";
 fish.displayType(); // Output:Fishes
 </pre>
-
-<p>该函数更多的信息及详细用法，参见 {{ web.link("/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/create", "Object.create method") }}</p>
 
 <h2 id="继承"><strong>继承</strong></h2>
 
@@ -459,7 +457,7 @@ console.log(o.b) // Runs the getter, which yields a + 1 or 6
 
 <h2 id="删除属性">删除属性</h2>
 
-<p>你可以用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/delete">delete</a> 操作符删除一个<strong>不是继承而来</strong>的属性。下面的例子说明如何删除一个属性：</p>
+<p>你可以用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code></a> 操作符删除一个<strong>不是继承而来</strong>的属性。下面的例子说明如何删除一个属性：</p>
 
 <pre class="brush: js">//Creates a new object, myobj, with two properties, a and b.
 var myobj = new Object;
@@ -470,13 +468,11 @@ myobj.b = 12;
 delete myobj.a;
 </pre>
 
-<p>如果一个全局变量不是用 <code>var</code> 关键字声明的话，你也可以用 <code>delete</code> 删除它：</p>
+<p>如果一个全局变量不是用 <code>var</code> 关键字声明的话，你也可以用 <code>delete</code> 删除它：</p>
 
 <pre class="brush: js">g = 17;
 delete g;
 </pre>
-
-<p>参见<code>{{ web.link("Expressions_and_operators#delete", "delete") }}</code> 以获取更多信息。</p>
 
 <h2 id="比较对象">比较对象</h2>
 
