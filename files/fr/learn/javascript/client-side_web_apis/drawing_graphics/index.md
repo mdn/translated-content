@@ -244,7 +244,7 @@ Dessinons un triangle équilatéral sur le canevas.
 
     Tout d'abord, on dessine une ligne jusqu'au point de coordonnées (150, 50), autrement dit, le chemin progresse de 100 pixels vers la droite sur l'axe horizontal.
 
-    Ensuite, on calcule la hauteur du triangle équilatéral en utilisant une formule de trigonométrie. Le triangle sera dessiné avec la pointe vers le bas et les angles d'un triangle équilatéral mesurent tous 60 degrés. Pour calculer la hauteur, on peut diviser le triangle équilatéral en deux triangles rectangles qui auront chacun trois angles&nbsp;: un à 90 degrés, un deuxième à 60 degrés et le troisième à 30 degrés. Les termes utilisés pour les côtés sont &nbsp;:
+    Ensuite, on calcule la hauteur du triangle équilatéral en utilisant une formule de trigonométrie. Le triangle sera dessiné avec la pointe vers le bas et les angles d'un triangle équilatéral mesurent tous 60 degrés. Pour calculer la hauteur, on peut diviser le triangle équilatéral en deux triangles rectangles qui auront chacun trois angles&nbsp;: un à 90 degrés, un deuxième à 60 degrés et le troisième à 30 degrés. Les termes utilisés pour les côtés sont&nbsp;:
 
     - **L'hypoténuse** pour le côté le plus long
     - Le côté **adjacent** pour celui qui participe à l'angle de 60 degrés et dont on sait que sa longueur mesure 50 pixels (la moitié de la ligne qu'on vient de dessiner)
@@ -364,7 +364,7 @@ Il est possible d'afficher des images externes sur le canevas. Il peut s'agir d'
     ```
 
     - Le premier paramètre est toujours la référence à l'image (comme avant).
-    - Les deuxième et troisième paramètres définissent les coordonnées du coin supérieur gauche de la zone à découper de l'image, relativement au coin supérieur gauche de l'image. Tout ce qui est situé à gauche du deuxième paramètre ou au dessus du troisième paramètre dans l'image ne sera pas dessiné.
+    - Les deuxième et troisième paramètres définissent les coordonnées du coin supérieur gauche de la zone à découper de l'image, relativement au coin supérieur gauche de l'image. Tout ce qui est situé à gauche du deuxième paramètre ou au-dessus du troisième paramètre dans l'image ne sera pas dessiné.
     - Les quatrième et cinquième paramètres définissent la largeur et la hauteur de la zone à rogner de l'image.
     - Les sixième et septième paramètres définissent les coordonnées où placer le coin supérieur gauche de l'image dans le canevas, relativement au coin supérieur gauche de ce dernier.
     - Les huitième et neuvième paramètres définissent la largeur et la hauteur selon lesquelles dessiner l'image rognée. Ici, nous avons utilisé les mêmes dimensions que la portion rognée, mais on pourrait utiliser des valeurs différentes (et alors avoir une image aux proportions déformées).
@@ -579,7 +579,7 @@ Créons maintenant notre propre animation en recréant un personnage d'un ancien
 9. Ensuite, il nous faut modifier la valeur de `posX` pour chaque itération. Ajoutez le code qui suit après le reste.
 
     ```js
-    if(posX > width/2) {
+    if (posX > width/2) {
       let newStartPos = -((width/2) + 102);
       posX = Math.ceil(newStartPos);
       console.log(posX);
@@ -630,7 +630,7 @@ canvas.addEventListener('mousedown', () => pressed = true);
 canvas.addEventListener('mouseup', () => pressed = false);
 ```
 
-When the "Clear canvas" button is pressed, we run a simple function that clears the whole canvas back to black, the same way we've seen before:
+Quand le bouton «&nbsp;<i lang="en">Clear canvas</i>&nbsp;» (effacer le canvas) est cliqué, nous exécutons une simple fonction qui efface entièrement le canvas grâce à un rectangle noir, de la même manière que nous avons vu précédemment&nbsp;:
 
 ```js
 clearBtn.addEventListener('click', () => {
@@ -643,7 +643,7 @@ La boucle de dessin est plutôt simple. Si le bouton de la souris est enclenché
 
 ```js
 function draw() {
-  if(pressed) {
+  if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
     ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);
@@ -789,7 +789,7 @@ Nous avons ici uniquement abordé les bases du canevas. Il existe bien plus de c
 
 - [Tutoriels sur le canevas](/fr/docs/Web/API/Canvas_API/Tutorial)
   - : Une série de tutoriels détaillés qui explique ce qu'il faut connaître sur le canevas en deux dimensions, avec bien plus de détails que cet article. Une lecture essentielle.
-- [Tutoriels WebGL](/fr/docs/Web/API/WebGL_API/Tutorial) 
+- [Tutoriels WebGL](/fr/docs/Web/API/WebGL_API/Tutorial)
   - : Une série de tutoriels qui enseigne les bases de la programmation en WebGL brut.
 - [Construire une démo simple avec Three.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)
   - : Un tutoriel de base pour la bibliothèque Three.js. Il y a également des guides équivalents pour [PlayCanvas](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) ou [Babylon.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js).
@@ -807,7 +807,7 @@ Nous avons ici uniquement abordé les bases du canevas. Il existe bien plus de c
 
 ## Dans ce module
 
-- [Introduction aux API Web](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+- [Introduction aux API web](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
 - [Manipuler des documents](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
 - [Récupérer des données depuis le server](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - [Les API tierces](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
