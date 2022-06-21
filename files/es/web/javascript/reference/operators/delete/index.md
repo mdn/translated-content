@@ -160,7 +160,7 @@ impidiendo que otros navegadores utilicen objetos simples como
 literales de objeto como si fuesen arreglos asociativos ordenados.
 En Internet Explorer, mientras que la propiedad _value_ es de hecho establecida
 como `undefined`, si uno luego añade una propiedad con el mismo nombre, la
-propiedad será iterada en su posición _old_ y no al final de la secuencia como
+propiedad será iterada en su posición _anterior_ y no al final de la secuencia como
 uno esperaría luego de haber eliminado la propiedad y agregarla nuevamente.
 
 Si usted desea usar un arreglo asociativo ordenado con soporte para
