@@ -93,10 +93,10 @@ ningún efecto, y retornará `false`. En modo estricto esta situación
 arrojará un `TypeError`.
 
 ```js
-var Empleado = {};
-Object.defineProperty(Empleado, 'nombre', {configurable: false});
+var Employee = {};
+Object.defineProperty(Employee, 'name', {configurable: false});
 
-console.log(delete Empleado.nombre);  // retorna false
+console.log(delete Employee.name);  // retorna false
 ```
 
 {{jsxref("Statements/var","var")}}, {{jsxref("Statements/let","let")}}, y
