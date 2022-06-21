@@ -1,5 +1,5 @@
 ---
-title: operador delete
+title: Operador delete
 slug: Web/JavaScript/Reference/Operators/delete
 translation_of: Web/JavaScript/Reference/Operators/delete
 ---
@@ -10,29 +10,29 @@ mantienen más referencias a la misma propiedad, eventualmente se libera automá
 
 {{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
 
-## Syntax
+## Sintaxis
 
 ```js
 delete expresion
 ```
 
-Donde la `expresion` debe ser una referencia a la [propiedad](/es/docs/Glossary/property/JavaScript), p. ej.:
+Donde `expresion` debe evaluarse como una referencia a la [propiedad](/es/docs/Glossary/property/JavaScript), por ejemplo:
 
 ```js
-delete objeto.propiedad
-delete objeto['propiedad']
+delete object.property
+delete object['property']
 ```
 
 ### Parámetros
 
-- `objeto`
+- `object`
   - : El nombre de un objeto, o una expresión que evalúa a un objeto.
-- `propiedad`
+- `property`
   - : La propiedad a eliminar.
 
 ### Valor de retorno
 
-`true` para todos los casos excepto cuando la propiedad es una propiedad {{jsxref("Object.hasOwnProperty", "own")}} {{jsxref("Errors/Cant_delete", "non-configurable")}}, en cuyo caso, se retorna `false` en modo no estricto.
+`true` para todos los casos excepto cuando es una propiedad {{jsxref("Object.hasOwnProperty", "propia")}} {{jsxref("Errors/Cant_delete", "no configurable")}}, en cuyo caso, se retorna `false` en modo no estricto.
 
 ### Excepciones
 
@@ -45,7 +45,7 @@ Al contrario de lo que se podría pensar (tal vez debido a otros lenguajes de pr
 La gestión de memoria se hace de manera indirecta eliminando referencias. Véase la página [gestión de memoria](/es/docs/Web/JavaScript/Memory_Management) para más detalles.
 
 El operador **`delete`** remueve una propiedad dada de un objeto.
-En caso de que la supresión sea exitosa, retornará `true`, en otro caso
+En caso de que la eliminación sea exitosa, retornará `true`, en otro caso
 se retornará `false`.
 
 Sin embargo, es importante considerar los siguientes escenarios:
@@ -164,12 +164,12 @@ impidiendo que otros navegadores utilicen objetos simples como
 literales de objeto como si fuesen arreglos asociativos ordenados.
 En Internet Explorer, mientras que la propiedad _value_ es de hecho establecida
 como `undefined`, si uno luego añade una propiedad con el mismo nombre, la
-propiedad será iterada en su posición _old_ y no al final de la secuencia como
+propiedad será iterada en su posición _anterior_ y no al final de la secuencia como
 uno esperaría luego de haber eliminado la propiedad y agregarla nuevamente.
 
 Si usted desea usar un arreglo asociativo ordenado con soporte para
 implementaciones antiguas, use un objeto {{jsxref("Map")}} si está disponible
-(a través de un polyfill, por ejemplo), o simule esta estructura con dos
+(a través de un [_polyfill_](/es/docs/Glossary/Polyfill), por ejemplo), o simule esta estructura con dos
 arreglos separados (uno para las claves y otro para los valores), o construya
 un arreglo de objetos con una única propiedad, etc.
 
@@ -248,7 +248,7 @@ delete foo.bar; // retorna true
 console.log(foo.bar); // 42
 
 // Eliminar la propiedad en el prototipo.
-delete Foo.prototype.bar; // reotnra true
+delete Foo.prototype.bar; // retorna true
 
 // La propiedad "bar" ya no puede ser heredada
 // de foo ya que ha sido eliminada.
@@ -256,7 +256,7 @@ delete Foo.prototype.bar; // reotnra true
 console.log(foo.bar); // undefined
 ```
 
-### Eliminando elmenetos de arreglos
+### Eliminando elementos de arreglos
 
 Cuando se elimina un elemento de un arreglo, la propiedad `length` no se ve
 afectada. Se mantiene incluso si se elimina el último elemento del arreglo.
