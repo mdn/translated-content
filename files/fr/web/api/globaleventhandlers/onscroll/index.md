@@ -13,7 +13,9 @@ La propriété **onscroll** renvoie le gestionnaire d'évènement `scroll` pour 
 
 ### Syntaxe
 
-    code de gestion d'évènement = element.onscroll;
+```
+code de gestion d'évènement = element.onscroll;
+```
 
 ### Notes
 

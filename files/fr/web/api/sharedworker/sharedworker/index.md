@@ -11,8 +11,10 @@ Le constructeur **`SharedWorker()`** crée un objet {{domxref("SharedWorker")}} 
 
 ## Syntaxe
 
-    var monWorker = new SharedWorker(uneURL, nom);
-    var monWorker = new SharedWorker(uneURL, options);
+```js
+var monWorker = new SharedWorker(uneURL, nom);
+var monWorker = new SharedWorker(uneURL, options);
+```
 
 ### Paramètre
 

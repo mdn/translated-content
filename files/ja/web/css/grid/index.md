@@ -57,7 +57,7 @@ grid: auto-flow dense / 30%;
 grid: auto-flow 300px / repeat(3, [line1 line2 line3] 200px);
 grid: auto-flow dense 40% / [line1] minmax(20em, max-content);
 
-/* グローバル値	 */
+/* グローバル値 */
 grid: inherit;
 grid: initial;
 grid: revert;

@@ -38,7 +38,7 @@ tags:
 #### 廃止
 
 - [Network Information API](/ja/docs/Web/API/Network_Information_API) は以前 Android (限定) で有効化していましたが、すべてのプラットフォームでデフォルトで無効になりました。
-  この API は、フィンガープリンティングに使用されると思われるかなりの量のユーザー情報を公開するため、削除する過程にあります 
+  この API は、フィンガープリンティングに使用されると思われるかなりの量のユーザー情報を公開するため、削除する過程にあります
   ({{bug(1637922)}})。
 
 ### WebDriver conformance (Marionette)

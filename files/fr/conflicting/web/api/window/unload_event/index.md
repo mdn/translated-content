@@ -17,8 +17,10 @@ Les navigateurs équipés d'un bloqueur de pop-up vont ignorer tout appel de `wi
 
 ## Syntaxe
 
-    window.addEventListener("unload", function(event) { ... });
-    window.onunload = function(event) { ... };
+```js
+window.addEventListener("unload", function(event) { ... });
+window.onunload = function(event) { ... };
+```
 
 Généralement, mieux vaut utiliser {{domxref("EventTarget.addEventListener", "window.addEventListener()")}} et l'événement {{event("unload")}} plutôt que `onunload`.
 

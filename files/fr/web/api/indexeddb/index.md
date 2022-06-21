@@ -16,7 +16,9 @@ La propriété globale en lecture seule **`indexedDB`** fournit un mécanisme qu
 
 ## Syntaxe
 
-    var IDBFactory = self.indexedDB;
+```js
+var IDBFactory = self.indexedDB;
+```
 
 ### Valeur de retour
 

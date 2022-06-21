@@ -7,7 +7,7 @@ translation_of: Web/API/Navigator/cookieEnabled
 
 `navigator.cookieEnabled` retourne une valeur booléenne qui indique si les cookies sont activés. Cette propriété est en lecture seule.
 
-## Syntax
+## Syntaxe
 
 ```js
 var cookieEnabled = navigator.cookieEnabled;

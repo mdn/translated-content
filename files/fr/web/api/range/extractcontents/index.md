@@ -13,7 +13,9 @@ Les nœuds partiellement sélectionnés sont clonés pour inclure les balises pa
 
 ## Syntaxe
 
-    documentFragment = range.extractContents();
+```js
+documentFragment = range.extractContents();
+```
 
 ## Exemples
 

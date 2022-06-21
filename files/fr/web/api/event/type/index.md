@@ -19,7 +19,9 @@ Pour une liste des types d'événements disponibles, aller voir la page [Référ
 
 ## Syntaxe
 
-    event.type
+```js
+event.type
+```
 
 ## Exemples
 

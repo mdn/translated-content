@@ -62,7 +62,7 @@ La propriété `pointer-events` est définie grâce à un mot-clé parmi ceux de
 
 ## Description
 
-Lorsque cette propriété n'est pas définie pour le contenu SVG, on aura le même effet qu'avec la valeur `visiblePainted`. 
+Lorsque cette propriété n'est pas définie pour le contenu SVG, on aura le même effet qu'avec la valeur `visiblePainted`.
 
 Lorsqu'on utilise la valeur `none`, cela indique que l'élément ne peut pas recevoir d'événement de pointeur mais également qu'on peut passer «&nbsp;au travers&nbsp;» de l'élément pour atteindre des contrôles qui pourraient être «&nbsp;en dessous/derrière&nbsp;».
 
@@ -132,4 +132,3 @@ Bien que l'extension de `pointer-events` au contenu HTML soit incluse dans les p
 - [Spécification WebKit pour étendre la propriété `pointer-events` (en anglais)](https://webkit.org/specs/PointerEventsProperty.html) au contenu (X)HTML
 - La propriété [`user-select`](/fr/docs/Web/CSS/user-select) qui contrôle lorsque l'utilisateur peut sélectionner du texte
 - [La page du wiki de Mozilla pour recenser les cas d'usage nécessitant l'extension des valeurs implémentées pour HTML](https://wiki.mozilla.org/SVG:pointer-events)
-

@@ -25,11 +25,11 @@ La Web Audio API impliqe de réaliser les opérations de traitement audio dans u
 
 Les noeuds audio sont reliés au niveau de leurs entrées et sorties. Ils forment une chaîne qui commence avec une ou plusieurs sources, traverse un ou plusieurs noeuds de traitement, et se termine par une destination (bien qu'il ne soit pas néessaire d'avoir une destination si l'on souhaite simplement visualiser des données audio). Un scénario simple, représentatif de la Web Audio API, pourrait ressembler à ceci&nbsp;:
 
-1.  Création d'un contexte audio
-2.  Dans ce contexte, création des sources — telles que `<audio>`, oscillateur, flux
-3.  Création des noeuds d'effets, tels que réverb, filtres biquad, balance,  compresseur
-4.  Choix final de la sortie audio, par exemple les enceintes du système
-5.  Connection des sources aux effets, et des effets à la sortie.
+1. Création d'un contexte audio
+2. Dans ce contexte, création des sources — telles que `<audio>`, oscillateur, flux
+3. Création des noeuds d'effets, tels que réverb, filtres biquad, balance,  compresseur
+4. Choix final de la sortie audio, par exemple les enceintes du système
+5. Connection des sources aux effets, et des effets à la sortie.
 
 ### Création d'un contexte audio
 

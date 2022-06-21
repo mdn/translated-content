@@ -24,4 +24,3 @@ translation_of: Web/API/HTMLButtonElement/disabled
 ## ブラウザーの互換性
 
 {{Compat}}
-

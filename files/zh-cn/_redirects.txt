@@ -1460,7 +1460,6 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncuechange	/zh-CN/docs/Web/API/TextTrack/cuechange_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/动画效果	/zh-CN/docs/Web/API/GlobalEventHandlers/onanimationend
 /zh-CN/docs/Web/API/GlobalEventHandlers/时长改变	/zh-CN/docs/Web/API/GlobalEventHandlers/ondurationchange
-/zh-CN/docs/Web/API/GlobalFetch	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope
 /zh-CN/docs/Web/API/GlobalFetch/fetch	/zh-CN/docs/Web/API/fetch
 /zh-CN/docs/Web/API/HTMLAnchorElement/referrer	/zh-CN/docs/Web/API/HTMLAnchorElement/referrerPolicy
 /zh-CN/docs/Web/API/HTMLCanvasElement/捕获流	/zh-CN/docs/Web/API/HTMLCanvasElement/captureStream
@@ -1724,7 +1723,6 @@
 /zh-CN/docs/Web/API/Window/performance	/zh-CN/docs/Web/API/performance_property
 /zh-CN/docs/Web/API/Window/setInterval	/zh-CN/docs/Web/API/setInterval
 /zh-CN/docs/Web/API/Window/setTimeout	/zh-CN/docs/Web/API/setTimeout
-/zh-CN/docs/Web/API/WindowBase64	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope#方法
 /zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/zh-CN/docs/Glossary/Base64
 /zh-CN/docs/Web/API/WindowBase64/atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/Web/API/WindowBase64/btoa	/zh-CN/docs/Web/API/btoa
@@ -1752,7 +1750,6 @@
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask	/zh-CN/docs/Web/API/queueMicrotask
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-CN/docs/Web/API/setInterval
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/zh-CN/docs/Web/API/setTimeout
-/zh-CN/docs/Web/API/WindowTimers	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope
 /zh-CN/docs/Web/API/WindowTimers/clearTimeout	/zh-CN/docs/Web/API/clearTimeout
 /zh-CN/docs/Web/API/Worker/onmessage	/zh-CN/docs/conflicting/Web/API/Worker/message_event
 /zh-CN/docs/Web/API/Worker/onmessageerror	/zh-CN/docs/conflicting/Web/API/Worker/messageerror_event

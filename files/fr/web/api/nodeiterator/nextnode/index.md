@@ -20,7 +20,9 @@ Dans les navigateurs anciens, comme spécifié dans les anciennes version des sp
 
 ## Syntaxe
 
-    node = nodeIterator.nextNode();
+```js
+node = nodeIterator.nextNode();
+```
 
 ## Exemple
 

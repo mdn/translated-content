@@ -20,9 +20,11 @@ Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr
 
 ## Syntaxe
 
-    caches.keys().then(function(keyList) {
-      // faire quelque-chose avec votre keylist
-    });
+```js
+caches.keys().then(function(keyList) {
+  // faire quelque-chose avec votre keylist
+});
+```
 
 ### Paramètres
 

@@ -17,12 +17,12 @@ HTTP/2 ne modifie en aucune façon la sémantique d'application de HTTP. Tous le
 
 ## Voir aussi
 
-1.  Culture générale
+1. Culture générale
 
-    1.  [HTTP sur le MDN](/fr/docs/Web/HTTP)
-    2.  {{interwiki("wikipedia", "HTTP/2", "HTTP/2")}} sur Wikipedia
+    1. [HTTP sur le MDN](/fr/docs/Web/HTTP)
+    2. {{interwiki("wikipedia", "HTTP/2", "HTTP/2")}} sur Wikipedia
 
-2.  [Glossaire](/fr/docs/Glossaire)
+2. [Glossaire](/fr/docs/Glossaire)
 
-    1.  {{glossary("HTTP")}}
-    2.  {{glossary("Latency","Latence")}}
+    1. {{glossary("HTTP")}}
+    2. {{glossary("Latency","Latence")}}

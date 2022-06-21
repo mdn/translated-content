@@ -348,7 +348,7 @@ function mediaForward() {
    <li>我们清除在快进功能上设置的所有 classes 和 intervals ––这样做是因为如果我们在按下<code>fwd</code>（快进）按钮后再按下<code>rwd</code>（快退）按钮，就可以取消任何快进的功能并将其替换为快退功能。如果我们试图同时做到这两点，播放器就会暂停。</li>
    <li>使用<code>if</code>语句检查是否已在<code>rwd</code>按钮上设置了用来指示它已被按下的<code>active</code>类。{{domxref("classList")}}是一个非常方便的属性，存在于每个元素上 ––它包含元素上设置的所有类的列表，以及添加/删除类的方法等。使用<code>classList.contains（）</code>方法检查列表是否包含<code>active</code>类。这将返回布尔值<code>true/false</code>结果。</li>
    <li>如果在<code>rwd</code>按钮上设置了<code>active</code>，我们使用<code>classList.remove（）</code>删除它，清除第一次按下按钮时设置的间隔（参见下面的更多解释），并使用{{domxref("HTMLMediaElement.play()")}}取消快退并开始正常播放视频。</li>
-   <li>如果尚未设置，使用<code>classList.add（）</code>将<code>active</code>类添加到<code>rwd</code>按钮，使用{{domxref("HTMLMediaElement.pause()")}}暂停视频，然后设置<code>intervalRwd</code>变量为{{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}的调用。调用时，<code>setInterval（）</code>会创建一个活动间隔，这意味着它每隔 x 毫秒运行一个作为第一个参数给出的函数，其中 x 是第二个参数的值。所以这里我们每 200 毫秒运行一次<code>windBackward（）</code>函数 ––我们将使用此函数不断向后滚动（快退动作）视频。要停止{{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}运行，你必须调用{{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}，给它识别要清除的间隔的名称，在本例中是变量名称 intervalRwd（请参阅函数中较早的 clearInterval（）调用）。</li>
+   <li>如果尚未设置，使用<code>classList.add（）</code>将<code>active</code>类添加到<code>rwd</code>按钮，使用{{domxref("HTMLMediaElement.pause()")}}暂停视频，然后设置<code>intervalRwd</code>变量为 {{domxref("setInterval()")}} 的调用。调用时，<code>setInterval（）</code>会创建一个活动间隔，这意味着它每隔 x 毫秒运行一个作为第一个参数给出的函数，其中 x 是第二个参数的值。所以这里我们每 200 毫秒运行一次<code>windBackward（）</code>函数 ––我们将使用此函数不断向后滚动（快退动作）视频。要停止 {{domxref("setInterval()")}} 运行，你必须调用 {{domxref("clearInterval()")}}，给它识别要清除的间隔的名称，在本例中是变量名称 intervalRwd（请参阅函数中较早的 clearInterval（）调用）。</li>
   </ol>
  </li>
  <li>

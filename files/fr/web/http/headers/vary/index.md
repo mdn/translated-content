@@ -30,8 +30,10 @@ L'en-tête `Vary` doit être renseigné de manière identique sur une réponse {
 
 ## Syntaxe
 
-    Vary: *
-    Vary: <header-name>, <header-name>, ...
+```
+Vary: *
+Vary: <header-name>, <header-name>, ...
+```
 
 ## Directives
 
@@ -46,7 +48,9 @@ L'en-tête `Vary` doit être renseigné de manière identique sur une réponse {
 
 Lorsque l'en-tête `Vary: User-Agent` est utilisée, les serveurs de cache doivent prendre en compte l'agent de l'utilisateur pour décider de servir la page depuis le cache ou non. Par exemple, si vous servez du contenu différent pour les utilisateurs sur mobile, il aide à éviter qu'une version ordinateur de votre site ne soit distribuée à un utilisateur sur mobile. Il peut aider google et d'autres moteurs de recherche à prendre en compte la version pour mobile d'un site, ainsi que de signaler que le [Cloaking](https://en.wikipedia.org/wiki/Cloaking) n'est pas intentionel.
 
-    Vary: User-Agent
+```
+Vary: User-Agent
+```
 
 ## Spécifications
 

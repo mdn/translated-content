@@ -18,7 +18,9 @@ Renvoie le codage déterminé par la déclaration XML. Devrait être `null` si n
 
 Si la déclaration XML indique :
 
-    <?xml version="1.0" encoding="UTF-16"?>
+```xml
+<?xml version="1.0" encoding="UTF-16"?>
+```
 
 ... le résultat doit être "UTF-16".
 

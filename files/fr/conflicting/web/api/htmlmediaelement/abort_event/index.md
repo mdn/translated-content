@@ -20,7 +20,9 @@ Bien que le [standard pour l'abandon d'un chargement de document](https://html.s
 
 ## Syntaxe
 
-    window.onabort = refFonc
+```js
+window.onabort = refFonc
+```
 
 - `refFonc` : référence à une fonction
 

@@ -12,23 +12,23 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 
 <p>本章描述了 JavaScript 的表达式和运算符，包括了赋值，比较，算数，位运算，逻辑，字符串，三元等等。</p>
 
-<p>一个完整详细的运算符列表和表达式可以参见 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators">reference</a>.</p>
+<p>一个完整详细的运算符列表和表达式可以参见 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators">reference</a>.</p>
 
 <h2 id="运算符">运算符</h2>
 
 <p>JavaScript 拥有如下类型的运算符。本节描述了运算符和运算符的优先级。</p>
 
 <ul>
- <li>{{ web.link("#赋值运算符", "赋值运算符 (Assignment operators)") }}</li>
- <li>{{ web.link("#比较运算符", "比较运算符 (Comparison operators)") }}</li>
- <li>{{ web.link("#算术运算符", "算数运算符 (Arithmetic operators)") }}</li>
- <li>{{ web.link("#位运算符", "位运算符 (Bitwise operators)") }}</li>
- <li>{{ web.link("#逻辑运算符", "逻辑运算符 (Logical operators)") }}</li>
- <li>{{ web.link("#字符串运算符", "字符串运算符 (String operators)") }}</li>
- <li>{{ web.link("#conditional_operator", "条件（三元）运算符 (Conditional operator)")}}</li>
- <li>{{ web.link("#comma_operator", "逗号运算符 (Comma operator)")}}</li>
- <li>{{ web.link("#delete", "一元运算符 (Unary operators)")}}</li>
- <li>{{ web.link("#关系操作符", "关系运算符 (Relational operator)")}}</li>
+ <li><a href="#赋值运算符">赋值运算符（Assignment operators）</a></li>
+ <li><a href="#比较运算符">比较运算符（Comparison operators）</a></li>
+ <li><a href="#算术运算符">算数运算符（Arithmetic operators）</a></li>
+ <li><a href="#位运算符">位运算符（Bitwise operators）</a></li>
+ <li><a href="#逻辑运算符">逻辑运算符（Logical operators）</a></li>
+ <li><a href="#字符串运算符">字符串运算符（String operators）</a></li>
+ <li><a href="#conditional_operator">条件（三元）运算符（Conditional operator）</a></li>
+ <li><a href="#comma_operator">逗号运算符（Comma operator）</a></li>
+ <li><a href="#delete">一元运算符（Unary operators）</a></li>
+ <li><a href="#关系运算符">关系运算符（Relational operator）</a></li>
 </ul>
 
 <p>JavaScript 拥有二元和一元运算符， 和一个特殊的三元运算符（条件运算符）。一个二元运算符需要两个操作数，分别在运算符的前面和后面：</p>
@@ -50,7 +50,7 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 
 <h3 id="赋值运算符">赋值运算符</h3>
 
-<p>一个 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">赋值运算符 (assignment operator)</a> 将它右边操作数的值赋给它左边的操作数。最简单的赋值运算符是等于（<code>=</code>），它将右边的操作数值赋给左边的操作数。那么 <code>x = y</code> 就是将 y 的值赋给 x。</p>
+<p>一个 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">赋值运算符 (assignment operator)</a> 将它右边操作数的值赋给它左边的操作数。最简单的赋值运算符是等于（<code>=</code>），它将右边的操作数值赋给左边的操作数。那么 <code>x = y</code> 就是将 y 的值赋给 x。</p>
 
 <p>还有一些复合赋值操作符，它们是下表列出的这些操作的缩写：</p>
 
@@ -65,67 +65,67 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
  </thead>
  <tbody>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Assignment">赋值 (Assignment)</a></td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Assignment">赋值 (Assignment)</a></td>
    <td><code>x = y</code></td>
    <td><code>x = y</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Addition_assignment">加法赋值 (Addition assignment)</a></td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Addition_assignment">加法赋值 (Addition assignment)</a></td>
    <td><code>x += y</code></td>
    <td><code>x = x + y</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Subtraction_assignment">减法赋值 (Subtraction assignment)</a></td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Subtraction_assignment">减法赋值 (Subtraction assignment)</a></td>
    <td><code>x -= y</code></td>
    <td><code>x = x - y</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Multiplication_assignment">乘法赋值 (Multiplication assignment)</a></td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Multiplication_assignment">乘法赋值 (Multiplication assignment)</a></td>
    <td><code>x *= y</code></td>
    <td><code>x = x * y</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Division_assignment">除法赋值 (Division assignment)</a></td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Division_assignment">除法赋值 (Division assignment)</a></td>
    <td><code>x /= y</code></td>
    <td><code>x = x / y</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Remainder_assignment">求余赋值 (Remainder assignment)</a></td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Remainder_assignment">求余赋值 (Remainder assignment)</a></td>
    <td><code>x %= y</code></td>
    <td><code>x = x % y</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Exponentiation_assignment">求幂赋值 (Exponentiation assignment)</a></td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Exponentiation_assignment">求幂赋值 (Exponentiation assignment)</a></td>
    <td><code>x **= y</code></td>
    <td><code>x = x ** y</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Left_shift_assignment">左移位赋值 (Left shift assignment)</a></td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Left_shift_assignment">左移位赋值 (Left shift assignment)</a></td>
    <td><code>x &lt;&lt;= y</code></td>
    <td><code>x = x &lt;&lt; y</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Right_shift_assignment">右移位赋值 (Right shift assignment)</a></td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Right_shift_assignment">右移位赋值 (Right shift assignment)</a></td>
    <td><code>x &gt;&gt;= y</code></td>
    <td><code>x = x &gt;&gt; y</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Unsigned_right_shift_assignment">无符号右移位赋值 (Unsigned right shift assignment)</a></td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Unsigned_right_shift_assignment">无符号右移位赋值 (Unsigned right shift assignment)</a></td>
    <td><code>x &gt;&gt;&gt;= y</code></td>
    <td><code>x = x &gt;&gt;&gt; y</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Bitwise_AND_assignment">按位与赋值 (Bitwise AND assignment)</a></td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Bitwise_AND_assignment">按位与赋值 (Bitwise AND assignment)</a></td>
    <td><code>x &amp;= y</code></td>
    <td><code>x = x &amp; y</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Bitwise_XOR_assignment">按位异或赋值 (Bitwise XOR assignment)</a></td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Bitwise_XOR_assignment">按位异或赋值 (Bitwise XOR assignment)</a></td>
    <td><code>x ^= y</code></td>
    <td><code>x = x ^ y</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Bitwise_OR_assignment">按位或赋值 (Bitwise OR assignment)</a></td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Bitwise_OR_assignment">按位或赋值 (Bitwise OR assignment)</a></td>
    <td><code>x |= y</code></td>
    <td><code>x = x | y</code></td>
   </tr>
@@ -134,7 +134,7 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 
 <h4 id="解构">解构</h4>
 
-<p>对于更复杂的赋值，<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解构赋值</a>语法是一个能从数组或对象对应的数组结构或对象字面量里提取数据的 Javascript 表达式。</p>
+<p>对于更复杂的赋值，<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解构赋值</a>语法是一个能从数组或对象对应的数组结构或对象字面量里提取数据的 Javascript 表达式。</p>
 
 <pre class="brush: js">var foo = ["one", "two", "three"];
 
@@ -148,7 +148,7 @@ var [one, two, three] = foo;</pre>
 
 <h3 id="比较运算符">比较运算符</h3>
 
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比较运算符</a>比较它的操作数并返回一个基于表达式是否为真的逻辑值。操作数可以是数字，字符串，逻辑，对象值。字符串比较是基于标准的字典顺序，使用 Unicode 值。在多数情况下，如果两个操作数不是相同的类型， JavaScript 会尝试转换它们为恰当的类型来比较。这种行为通常发生在数字作为操作数的比较。类型转换的例外是使用 <code>===</code> 和 <code>!==</code> 操作符，它们会执行严格的相等和不相等比较。这些运算符不会在检查相等之前转换操作数的类型。下面的表格描述了该示例代码中的各比较运算符</p>
+<p><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比较运算符</a>比较它的操作数并返回一个基于表达式是否为真的逻辑值。操作数可以是数字，字符串，逻辑，对象值。字符串比较是基于标准的字典顺序，使用 Unicode 值。在多数情况下，如果两个操作数不是相同的类型， JavaScript 会尝试转换它们为恰当的类型来比较。这种行为通常发生在数字作为操作数的比较。类型转换的例外是使用 <code>===</code> 和 <code>!==</code> 操作符，它们会执行严格的相等和不相等比较。这些运算符不会在检查相等之前转换操作数的类型。下面的表格描述了该示例代码中的各比较运算符</p>
 
 <pre class="brush: js">var var1 = 3;
 var var2 = 4;</pre>
@@ -164,7 +164,7 @@ var var2 = 4;</pre>
  </thead>
  <tbody>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality">等于 Equal</a> (<code>==</code>)</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality">等于 Equal</a> (<code>==</code>)</td>
    <td>
     <p>如果两边操作数相等时返回 true。</p>
    </td>
@@ -173,42 +173,42 @@ var var2 = 4;</pre>
     <code>3 == '3'</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality">不等于 Not equal</a> (<code>!=</code>)</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality">不等于 Not equal</a> (<code>!=</code>)</td>
    <td>如果两边操作数不相等时返回 true</td>
    <td><code>var1 != 4<br>
     var2 != "3"</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity">全等 Strict equal</a> (<code>===</code>)</td>
-   <td>两边操作数相等且类型相同时返回 true。 参见 {{jsxref("Object.is")}} and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness" title="/en-US/docs/Web/JavaScript/Guide/Sameness">sameness in JS</a>.</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity">全等 Strict equal</a> (<code>===</code>)</td>
+   <td>两边操作数相等且类型相同时返回 true。 参见 {{jsxref("Object.is")}} and <a href="/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness">sameness in JS</a>.</td>
    <td><code>3 === var1</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity">不全等 Strict not equal</a> (<code>!==</code>)</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity">不全等 Strict not equal</a> (<code>!==</code>)</td>
    <td>两边操作数不相等或类型不同时返回 true。</td>
    <td><code>var1 !== "3"<br>
     3 !== '3'</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_operator">大于 Greater than</a> (<code>&gt;</code>)</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_operator">大于 Greater than</a> (<code>&gt;</code>)</td>
    <td>左边的操作数大于右边的操作数返回 true</td>
    <td><code>var2 &gt; var1<br>
     "12" &gt; 2</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_or_equal_operator">大于等于 Greater than or equal</a> (<code>&gt;=</code>)</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_or_equal_operator">大于等于 Greater than or equal</a> (<code>&gt;=</code>)</td>
    <td>左边的操作数大于或等于右边的操作数返回 true</td>
    <td><code>var2 &gt;= var1<br>
     var1 &gt;= 3</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator">小于 Less than</a> (<code>&lt;</code>)</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator">小于 Less than</a> (<code>&lt;</code>)</td>
    <td>左边的操作数小于右边的操作数返回 true</td>
    <td><code>var1 &lt; var2<br>
     "2" &lt; 12</code></td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_or_equal_operator">小于等于 Less than or equal</a> (<code>&lt;=</code>)</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_or_equal_operator">小于等于 Less than or equal</a> (<code>&lt;=</code>)</td>
    <td>左边的操作数小于或等于右边的操作数返回 true</td>
    <td><code>var1 &lt;= var2<br>
     var2 &lt;= 5</code></td>
@@ -217,7 +217,7 @@ var var2 = 4;</pre>
 </table>
 
 <div class="note">
-<p><strong>备注：</strong>（<strong>=&gt;</strong>）不是运算符，而是<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>的标记符号 。</p>
+<p><strong>备注：</strong>（<strong>=&gt;</strong>）不是运算符，而是<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>的标记符号 。</p>
 </div>
 
 <h3 id="算术运算符">算术运算符</h3>
@@ -321,29 +321,29 @@ var var2 = 4;</pre>
  </thead>
  <tbody>
   <tr>
-   <td>按位与<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND"> AND</a></td>
+   <td>按位与<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND"> AND</a></td>
    <td><code>a &amp; b</code></td>
    <td>
     <p>在 a,b 的位表示中，每一个对应的位都为 1 则返回 1， 否则返回 0.</p>
    </td>
   </tr>
   <tr>
-   <td>按位或<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR"> OR</a></td>
+   <td>按位或<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR"> OR</a></td>
    <td><code>a | b</code></td>
    <td>在 a,b 的位表示中，每一个对应的位，只要有一个为 1 则返回 1， 否则返回 0.</td>
   </tr>
   <tr>
-   <td>按位异或<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR"> XOR</a></td>
+   <td>按位异或<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR"> XOR</a></td>
    <td><code>a ^ b</code></td>
    <td>在 a,b 的位表示中，每一个对应的位，两个不相同则返回 1，相同则返回 0.</td>
   </tr>
   <tr>
-   <td>按位非<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT"> NOT</a></td>
+   <td>按位非<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT"> NOT</a></td>
    <td><code>~ a</code></td>
    <td>反转被操作数的位。</td>
   </tr>
   <tr>
-   <td>左移<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Left_shift"> shift</a></td>
+   <td>左移<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Left_shift"> shift</a></td>
    <td><code>a &lt;&lt; b</code></td>
    <td>将 a 的二进制串向左移动 b 位，右边移入 0.</td>
   </tr>
@@ -484,17 +484,17 @@ var var2 = 4;</pre>
  </thead>
  <tbody>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND">逻辑与</a><code> (&amp;&amp;</code>)</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND">逻辑与</a><code> (&amp;&amp;</code>)</td>
    <td><code>expr1 &amp;&amp; expr2</code></td>
    <td>(逻辑与) 如果 expr1 能被转换为 false，那么返回 expr1；否则，返回<code>expr2</code>。因此<code>，&amp;&amp;</code>用于布尔值时，当操作数都为 true 时返回 true；否则返回 false.</td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR">逻辑或 </a>(<code>||</code>)</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR">逻辑或 </a>(<code>||</code>)</td>
    <td><code>expr1 || expr2</code></td>
    <td>(逻辑或) 如果 expr1 能被转换为 true，那么返回 expr1；否则，返回<code>expr2</code>。因此，|| 用于布尔值时，当任何一个操作数为 true 则返回 true；如果操作数都是 false 则返回 false。</td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT">逻辑非</a><code> (!)</code></td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT">逻辑非</a><code> (!)</code></td>
    <td><code>!expr</code></td>
    <td>(逻辑非) 如果操作数能够转换为 true 则返回 false；否则返回 true。</td>
   </tr>
@@ -592,7 +592,7 @@ for (var i = 0, j = 9; i &lt;= j; i++, j--)
 
 <h4 id="delete"><code>delete</code></h4>
 
-<p><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>操作符，删除一个对象的属性或者一个数组中某一个键值。语法如下：</p>
+<p><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>操作符，删除一个对象的属性或者一个数组中某一个键值。语法如下：</p>
 
 <pre class="brush: js">delete objectName.property;
 delete objectName[index];
@@ -601,7 +601,7 @@ delete property; // legal only within a with statement
 
 <p><code>objectName</code>是一个对象名，<code>property</code> 是一个已经存在的属性，<code>index</code>是数组中的一个已经存在的键值的索引值。</p>
 
-<p>第三行的形式只在<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code>声明的状态下是合法的， 从对象中删除一个属性。</p>
+<p>第三行的形式只在<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/with">with</a></code>声明的状态下是合法的， 从对象中删除一个属性。</p>
 
 <p>你能使用 <code>delete</code> 删除各种各样的隐式声明， 但是被<code>var</code>声明的除外。</p>
 
@@ -724,13 +724,13 @@ void expression
 <pre class="brush: html">&lt;a href="javascript:void(document.form.submit())"&gt;
 Click here to submit&lt;/a&gt;</pre>
 
-<h3 id="关系操作符">关系操作符</h3>
+<h3 id="关系运算符">关系运算符</h3>
 
-<p>关系操作符对操作数进行比较，根据比较结果真或假，返回相应的布尔值。</p>
+<p>关系运算符对操作数进行比较，根据比较结果真或假，返回相应的布尔值。</p>
 
 <h4 id="in"><code>in</code></h4>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code>操作符</a>，如果所指定的<strong>属性</strong>确实存在于所指定的对象中，则会返回<code>true</code>，语法如下：</p>
+<p><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/in"><code>in</code>操作符</a>，如果所指定的<strong>属性</strong>确实存在于所指定的对象中，则会返回<code>true</code>，语法如下：</p>
 
 <pre class="brush: js">propNameOrNumber in objectName
 </pre>
@@ -861,7 +861,7 @@ if (theDay instanceof Date) {
  </tbody>
 </table>
 
-<p>上表有一个更详细的版本，它包含了各操作符更详细的说明，可在 <a href="/zh-CN/docs/JavaScript/Reference/Operators/Operator_Precedence#Table" title="zh-CN/docs/JavaScript/Reference/Operators/Operator_Precedence#Table">JavaScript 参考手册</a> 中找到。</p>
+<p>上表有一个更详细的版本，它包含了各操作符更详细的说明，可在 <a href="/zh-CN/docs/JavaScript/Reference/Operators/Operator_Precedence#Table">JavaScript 参考手册</a>中找到。</p>
 
 <h2 id="表达式">表达式</h2>
 
@@ -876,9 +876,9 @@ if (theDay instanceof Date) {
 <p>JavaScript 有以下表达式类型：</p>
 
 <ul>
- <li>算数：得出一个数字，例如 3.14159. (通常使用 {{ web.link("#Arithmetic_operators", "arithmetic operators") }}.)</li>
- <li>字符串：得出一个字符串，例如，"Fred" 或 "234". (通常使用 {{ web.link("#String_operators", "string operators") }}.)</li>
- <li>逻辑值：得出 true 或者 false. (经常涉及到 {{ web.link("#Logical_operators", "logical operators") }}.)</li>
+ <li>算数：得出一个数字，例如 3.14159。（通常使用<a href="#算术运算符">算数运算符</a>）</li>
+ <li>字符串：得出一个字符串，例如，"Fred" 或 "234"。（通常使用<a href="#字符串运算符">字符串运算符</a>。）</li>
+ <li>逻辑值：得出 true 或者 false。（经常涉及到<a href="#逻辑运算符">逻辑运算符</a>。）</li>
  <li>基本表达式: javascript 中基本的关键字和一般表达式。</li>
  <li>左值表达式：分配给左值。</li>
 </ul>
@@ -887,7 +887,7 @@ if (theDay instanceof Date) {
 
 <h4 id="this"><code>this</code></h4>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a>关键字被用于指代当前的对象，通常，<code>this</code>指代的是方法中正在被调用的对象。用法如下：</p>
+<p><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a>关键字被用于指代当前的对象，通常，<code>this</code>指代的是方法中正在被调用的对象。用法如下：</p>
 
 <pre class="brush: js">this["propertyName"]
 this.propertyName
@@ -934,7 +934,7 @@ a * c + b * c // 9</pre>
  <dt>{{experimental_inline}} {{jsxref("Operators/Array_comprehensions", "[for (x of y) x]")}}</dt>
  <dd>数列数值推导（非标准用法）</dd>
  <dt>{{experimental_inline}} {{jsxref("Operators/Generator_comprehensions", "(for (x of y) y)")}}</dt>
- <dd>生成器数值推导（译者注：生成器数值推导标准化可能不大，推荐使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions">生成器函数</a>）</dd>
+ <dd>生成器数值推导（译者注：生成器数值推导标准化可能不大，推荐使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions">生成器函数</a>）</dd>
 </dl>
 
 <p>Comprehensions 特性被许多编程语言所采用，该特性能够使你快速地通过一个已有的数组来创建出一个新的数组，比如：</p>
@@ -952,14 +952,14 @@ var abc = [ "A", "B", "C" ];
 
 <h4 id="new"><code>new</code></h4>
 
-<p>你可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a> 创建一个自定义类型或者是<code>预置类型</code>的对象实例。用法如下：</p>
+<p>你可以使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a> 创建一个自定义类型或者是<code>预置类型</code>的对象实例。用法如下：</p>
 
 <pre class="brush: js">var objectName = new objectType([param1, param2, ..., paramN]);
 </pre>
 
 <p>super</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super">super </a>关键字可以用来调用一个对象父类的函数，它在用来调用一个<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">类</a>的父类的构造函数时非常有用，比如：</p>
+<p><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/super">super </a>关键字可以用来调用一个对象父类的函数，它在用来调用一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Classes">类</a>的父类的构造函数时非常有用，比如：</p>
 
 <pre>super([arguments]); // calls the parent constructor. super.functionOnParent([arguments]);</pre>
 

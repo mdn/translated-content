@@ -422,10 +422,12 @@ Les nombres {{jsxref("Number")}} et les grands entiers {{jsxref("BigInt")}} peuv
 
 Voici des exemples pour ces littéraux :
 
-    0, 117, -345, 123456789123456789n (notation décimale, base 10)
-    015, 0001, -077, 0o7777777777777n (notation octale, base 8)
-    0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn (notation hexadécimale, base 16)
-    0b11, 0B0011, -0b11, 0b11101001010101010101n (notation binaire, base 2)
+```
+0, 117, -345, 123456789123456789n (notation décimale, base 10)
+015, 0001, -077, 0o7777777777777n (notation octale, base 8)
+0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn (notation hexadécimale, base 16)
+0b11, 0B0011, -0b11, 0b11101001010101010101n (notation binaire, base 2)
+```
 
 Pour plus d'informations, voir [les littéraux numériques dans la grammaire lexicale de JavaScript](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Littéraux_numériques).
 
@@ -444,13 +446,17 @@ Des exemples sont : 3.1415, -3.1E12, .1e12, et 2E-12.
 
 On peut raccourcir cette syntaxe en :
 
-    [(+|-)][chiffres].[chiffres][(E|e)[(+|-)]chiffres]
+```
+[(+|-)][chiffres].[chiffres][(E|e)[(+|-)]chiffres]
+```
 
 Par exemple :
 
-    3.14
-    2345.789
-    .3333333333333333333
+```
+3.14
+2345.789
+.3333333333333333333
+```
 
 ### Les littéraux d'objets
 
@@ -623,7 +629,9 @@ console.log(citation);
 
 Le résultat serait alors
 
-    Il lit "Bug Jargal" de V. Hugo.
+```
+Il lit "Bug Jargal" de V. Hugo.
+```
 
 Pour inclure une barre oblique inversée dans une chaîne de caractères, il faut aussi l'échapper. Par exemple, pour stocker le chemin `c:\temp` dans une chaîne de caractères, on utilisera le code suivant :
 

@@ -9,7 +9,9 @@ La méthode **`getRegistration()`** de l'interface {{domxref("ServiceWorkerConta
 
 ## Syntaxe
 
-    serviceWorkerContainer.getRegistration(scope).then(function(serviceWorkerRegistration) { ... });
+```js
+serviceWorkerContainer.getRegistration(scope).then(function(serviceWorkerRegistration) { ... });
+```
 
 ### Paramètres
 

@@ -41,7 +41,9 @@ Un en-tête `Referer` n'est pas envoyé par les navigateurs si :
 
 ## Syntaxe
 
-    Referer: <url>
+```
+Referer: <url>
+```
 
 ## Directives
 
@@ -50,7 +52,9 @@ Un en-tête `Referer` n'est pas envoyé par les navigateurs si :
 
 ## Exemples
 
-    Referer: https://developer.mozilla.org/fr/docs/Web/JavaScript
+```
+Referer: https://developer.mozilla.org/fr/docs/Web/JavaScript
+```
 
 ## Spécifications
 

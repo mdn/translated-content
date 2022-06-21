@@ -15,7 +15,9 @@ La propriété en lecture seule **`TreeWalker.root`** renvoie le noeud qui est l
 
 ## Syntaxe
 
-    root = TreeWalker.root;
+```js
+root = TreeWalker.root;
+```
 
 ## Exemple
 
