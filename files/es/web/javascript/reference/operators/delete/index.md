@@ -10,7 +10,7 @@ mantienen más referencias a la misma propiedad, eventualmente se libera automá
 
 {{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
 
-## Syntax
+## Sintaxis
 
 ```js
 delete expresion
