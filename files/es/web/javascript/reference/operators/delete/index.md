@@ -252,7 +252,7 @@ delete Foo.prototype.bar; // retorna true
 console.log(foo.bar); // undefined
 ```
 
-### Eliminando elmenetos de arreglos
+### Eliminando elementos de arreglos
 
 Cuando se elimina un elemento de un arreglo, la propiedad `length` no se ve
 afectada. Se mantiene incluso si se elimina el último elemento del arreglo.
