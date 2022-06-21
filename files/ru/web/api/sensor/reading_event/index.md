@@ -14,14 +14,13 @@ browser-compat: api.Sensor.reading_event
 ---
 {{APIRef("Sensor API")}}
 
-The **`reading`** event is fired when a new reading is available on a sensor.
+Событие **`reading`** происходит когда на датчике доступны новые показания.
 
-The {{domxref('Sensor')}} interface is a base class, `onreading` and the `reading` event may only be used
-on one of the [derived classes](/en-US/docs/Web/API/Sensor#interfaces_based_on_sensor).
+Интерфейс {{domxref('Sensor')}} это базовый класс, события `onreading` и `reading` могут быть использованы только в одном из [наследуемых классов](/ru/docs/Web/API/Sensor#interfaces_based_on_sensor).
 
-## Syntax
+## Синтаксис
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Можно использовать как название события в {{domxref("EventTarget.addEventListener", "addEventListener()")}}, так и как свойство - обработчик события.
 
 ```js
 addEventListener('reading', event => { })
@@ -29,35 +28,35 @@ addEventListener('reading', event => { })
 onreading = event => { }
 ```
 
-## Event type
+## Тип события
 
-A generic {{domxref("Event")}} with no added properties.
+Общий {{domxref("Event")}} без дополнительных свойств.
 
-## Examples
+## Примеры
 
-### Reading acceleration
+### Получение ускорения
 
-This example adds an event listener to read acceleration values of an {{domxref("Accelerometer")}}. It reads sixty times a second.
+Этот пример добавляет слушатель, который получает значения ускорения из {{domxref("Accelerometer")}}. Слушатель читает данные шестьдесят раз в секунду.
 
 ```js
 const acl = new Accelerometer({frequency: 60});
 acl.addEventListener('reading', () => {
-  console.log("Acceleration along the X-axis " + acl.x);
-  console.log("Acceleration along the Y-axis " + acl.y);
-  console.log("Acceleration along the Z-axis " + acl.z);
+  console.log("Ускорение по оси X " + acl.x);
+  console.log("Ускорение по оси Y " + acl.y);
+  console.log("Ускорение по оси Z " + acl.z);
 });
 acl.start();
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Браузерная совместимость
 
 {{Compat}}
 
-## See also
+## Смотри также
 
-- Sensor {{domxref('Sensor.activate_event', 'activate')}} event
-- Sensor {{domxref('Sensor.error_event', 'error')}} event
+- Событие {{domxref('Sensor.activate_event', 'activate')}}
+- Событие {{domxref('Sensor.error_event', 'error')}}

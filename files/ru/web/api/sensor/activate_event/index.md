@@ -16,14 +16,11 @@ browser-compat: api.Sensor.activate_event
 
 Событие **`activate`** происходит, когда датчик переходит в активное состояние. Это значит, что он начинает собирать показания.
 
-Интерфейс {{domxref('Sensor')}} это базовый класс, события `onactivate` и `activate` могут быть использованы только в одном из 
-
-The {{domxref('Sensor')}} interface is a base class, `onactivate` and the `activate` event may only be used [наследуемых классов](/ru/docs/Web/API/Sensor#interfaces_based_on_sensor).
+Интерфейс {{domxref('Sensor')}} это базовый класс, события `onactivate` и `activate` могут быть использованы только в одном из [наследуемых классов](/ru/docs/Web/API/Sensor#interfaces_based_on_sensor).
 
 ## Синтаксис
 
 Можно использовать как название события в {{domxref("EventTarget.addEventListener", "addEventListener()")}}, так и как свойство - обработчик события.
-
 
 ```js
 addEventListener('activate', event => { })
