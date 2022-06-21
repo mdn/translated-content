@@ -23,7 +23,7 @@ alert(message)
 
 ### Valor de retorno
 
-None ({{jsxref("undefined")}}).
+Ninguno ({{jsxref("undefined")}}).
 
 
 ## Ejemplo
