@@ -104,20 +104,20 @@ console.log(delete Employee.name);  // retorna false
 que no pueden ser eliminadas con el operador `delete`:
 
 ```js
-var otroNombre = 'XYZ';
+var nameOther = 'XYZ';
 
 // Podemos acceder a esta propiedad global usando:
-Object.getOwnPropertyDescriptor(window, 'otroNombre');
+Object.getOwnPropertyDescriptor(window, 'nameOther');
 
-// output: Object {value: "XYZ",
+// salida: Object {value: "XYZ",
 //                  writable: true,
 //                  enumerable: true,
 //                  configurable: false}
 
-// Debido a que "otroNombre" es añadido usando la palabra
+// Debido a que "nameOther" es añadido usando la palabra
 // reservada var, es marcada como "no configurable"
 
-delete otroNombre;   // retorna false
+delete nameOther;   // retorna false
 ```
 
 En modo estricto, esto hubiese arrojado una excepción.
