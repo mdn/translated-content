@@ -32,7 +32,7 @@ delete object['property']
 
 ### Valor de retorno
 
-`true` para todos los casos excepto cuando la propiedad es una propiedad {{jsxref("Object.hasOwnProperty", "own")}} {{jsxref("Errors/Cant_delete", "non-configurable")}}, en cuyo caso, se retorna `false` en modo no estricto.
+`true` para todos los casos excepto cuando es una propiedad {{jsxref("Object.hasOwnProperty", "propia")}} {{jsxref("Errors/Cant_delete", "no configurable")}}, en cuyo caso, se retorna `false` en modo no estricto.
 
 ## Descripción
 
