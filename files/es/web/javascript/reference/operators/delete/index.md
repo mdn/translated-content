@@ -72,18 +72,18 @@ Sin embargo, es importante considerar los siguientes escenarios:
 El siguiente bloque de código muestra un ejemplo simple:
 
 ```js
-var Empleado = {
-  edad: 28,
-  nombre: 'abc',
-  puesto: 'desarrollador'
+var Employee = {
+  age: 28,
+  name: 'abc',
+  designation: 'desarrollador'
 }
 
-console.log(delete Empleado.name);   // retorna true
-console.log(delete Empleado.age);    // retorna true
+console.log(delete Employee.name);   // retorna true
+console.log(delete Employee.age);    // retorna true
 
 // Cuando se trata de eliminar una propiedad
 // que no existe, retorna true
-console.log(delete Empleado.salario); // retorna true
+console.log(delete Employee.salary); // retorna true
 ```
 
 ### Propiedades no configurables
