@@ -41,7 +41,7 @@ Al contrario de lo que se podría pensar (tal vez debido a otros lenguajes de pr
 La gestión de memoria se hace de manera indirecta eliminando referencias. Véase la página [gestión de memoria](/es/docs/Web/JavaScript/Memory_Management) para más detalles.
 
 El operador **`delete`** remueve una propiedad dada de un objeto.
-En caso de que la supresión sea exitosa, retornará `true`, en otro caso
+En caso de que la eliminación sea exitosa, retornará `true`, en otro caso
 se retornará `false`.
 
 Sin embargo, es importante considerar los siguientes escenarios:
