@@ -1,5 +1,5 @@
 ---
-title: IDBEnvironment.indexedDB
+title: indexedDB
 slug: Web/API/indexedDB
 tags:
   - API
@@ -7,12 +7,12 @@ tags:
   - Propriété
   - Reference
   - WindowOrWorkerGlobalScope
-translation_of: Web/API/WindowOrWorkerGlobalScope/indexedDB
+translation_of: Web/API/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
 {{APIRef}}
 
-La propriété **`indexedDB`** en lecture seule, rattachée au _mixin_ {{domxref("WindowOrWorkerGlobalScope")}} fournit un mécanisme qui permet aux applications d'accéder aux bases de données indexées de façon asynchrone.
+La propriété globale en lecture seule **`indexedDB`** fournit un mécanisme qui permet aux applications d'accéder aux bases de données indexées de façon asynchrone.
 
 ## Syntaxe
 
