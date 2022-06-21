@@ -154,7 +154,7 @@ function func(param) {
 console.log(delete func); // false
 ```
 
-### Notas de compatibilidad entre navegadores
+### Notas entre navegadores
 
 Según la especificación moderna de ECMAScript, el orden de recorrido de las
 propiedades de un objeto está bien definido y es estable a través de las
