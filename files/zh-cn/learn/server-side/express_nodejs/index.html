@@ -8,64 +8,64 @@ translation_of: Learn/Server-side/Express_Nodejs
 ---
 <div>{{LearnSidebar}}</div>
 
-<p class="summary">Express是一款受欢迎的开源web框架，构建语言是JavaScript，可以在node.js环境运行。本系列文章介绍了该框架的优点，如何搭建开发环境以及部署web开发环境并进行开发任务。</p>
+<p>Express 是一款受欢迎的开源 web 框架，构建语言是 JavaScript，可以在 node.js 环境运行。本系列文章介绍了该框架的优点，如何搭建开发环境以及部署 web 开发环境并进行开发任务。</p>
 
 <h2 id="前提">前提</h2>
 
 <p>在开始这个模块之前你需要知道什么是服务端网页编程和 web 框架，建议你先阅读 <a href="/zh-CN/docs/Learn/Server-side">服务端网页编程</a> 模块。强烈推荐了解编程概念和  <a href="/zh-CN/docs/Web/JavaScript">JavaScript</a> ，但这对理解核心概念不是必需的。</p>
 
 <div class="note">
-<p>注意：这个网站有很多有用的资源用来学习JavaScript做客户端开发： <a href="/zh-CN/docs/Web/JavaScript">JavaScript</a>, <a href="/zh-CN/docs/Web/JavaScript/Guide">JavaScript Guide</a>, <a href="/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript Basics</a>, <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> (learning). 核心的JavaScript语言和概念用Nodejs服务端开发是相同的，也是相关的。Node.js 提供<a href="https://nodejs.org/dist/latest-v6.x/docs/api/"> 额外的API</a> 用于支持在无浏览器环境中有用的功能，例如，创建HTTP服务器并访问文件系统，但不支持JavaScript API以使用浏览器和DOM。</p>
+<p>注意：这个网站有很多有用的资源用来学习 JavaScript 做客户端开发： <a href="/zh-CN/docs/Web/JavaScript">JavaScript</a>, <a href="/zh-CN/docs/Web/JavaScript/Guide">JavaScript Guide</a>, <a href="/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript Basics</a>, <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> (learning). 核心的 JavaScript 语言和概念用 Nodejs 服务端开发是相同的，也是相关的。Node.js 提供<a href="https://nodejs.org/dist/latest-v6.x/docs/api/"> 额外的 API</a> 用于支持在无浏览器环境中有用的功能，例如，创建 HTTP 服务器并访问文件系统，但不支持 JavaScript API 以使用浏览器和 DOM。</p>
 
-<p>这篇指南将会提供一些Node.js 和 Express的信息， 并且有很多优秀的网络资源和书籍。一些链接 比如<a href="http://stackoverflow.com/a/5511507/894359">How do I get started with Node.js</a> (StackOverflow) 和 <a href="https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?">What are the best resources for learning Node.js?</a> (Quora).</p>
+<p>这篇指南将会提供一些 Node.js 和 Express 的信息，并且有很多优秀的网络资源和书籍。一些链接 比如<a href="http://stackoverflow.com/a/5511507/894359">How do I get started with Node.js</a> (StackOverflow) 和 <a href="https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?">What are the best resources for learning Node.js?</a> (Quora).</p>
 </div>
 
 <h2 id="指南">指南</h2>
 
 <dl>
  <dt><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node 介绍</a></dt>
- <dd>在这篇文章中，我们回答了“什么是 Node？”和“什么是 Express？”并为您概述了Express web框架的特殊之处。我们将介绍主要功能，并向您展示Express应用程序的一些主要构建模块（尽管此时您还没有可用于测试它的开发环境）。</dd>
+ <dd>在这篇文章中，我们回答了“什么是 Node？”和“什么是 Express？”并为您概述了 Express web 框架的特殊之处。我们将介绍主要功能，并向您展示 Express 应用程序的一些主要构建模块（尽管此时您还没有可用于测试它的开发环境）。</dd>
  <dt><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment">搭建 Node(Express) 开发环境</a></dt>
  <dd>介绍了 Express 的所用之处后，我们将向您展示如何在不同操作系统下建立并验证 Node/Express 开发环境。无论您使用任何操作系统，这篇文章都可以完全指导如何开始构建 Express 应用。</dd>
  <dt><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express 教程——第一部分：本地图书馆</a></dt>
- <dd>该实用教程系列中的第一篇文章，介绍了即将学习的内容，并概述了在后续文章中不断迭代的 “本地图书馆”例子 。</dd>
+ <dd>该实用教程系列中的第一篇文章，介绍了即将学习的内容，并概述了在后续文章中不断迭代的“本地图书馆”例子。</dd>
  <dt><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express 教程——第二部分：建立网站的骨架</a></dt>
- <dd>这篇文章将介绍如何建立一个网站项目的 “骨架”，然后您可以继续添加自己的路由、模板/视图和数据库。</dd>
+ <dd>这篇文章将介绍如何建立一个网站项目的“骨架”，然后您可以继续添加自己的路由、模板/视图和数据库。</dd>
  <dt><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose">Express 教程——第三部分：使用数据库（Mongoose）</a></dt>
  <dd>这篇文章简单介绍了在 Node/Express 中如何使用数据库。本文中我们将会使用 Mongoose 为该项目（本地图书馆）提供数据访问，同时解释了如何定义对象模式、模型和基础和验证。本文也简单介绍了访问模型数据的一些主流方式。</dd>
  <dt><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes">Express 教程——第四部分：路由和控制器</a></dt>
- <dd>我们在本教程中会设置路由来编写一些本地图书馆所需的伪造端点（endpoints）。在接下来的文章中，路由会有一个模块结构，可用来拓展real handler functions。最终，我们会对用Express创建模块化路由有很好的理解。</dd>
+ <dd>我们在本教程中会设置路由来编写一些本地图书馆所需的伪造端点（endpoints）。在接下来的文章中，路由会有一个模块结构，可用来拓展 real handler functions。最终，我们会对用 Express 创建模块化路由有很好的理解。</dd>
  <dt><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教程——第五部分：在 HTML 上展示图书数据</a></dt>
 </dl>
 
-<p>我们现在已经准备好为展示本地图书馆图书和其他数据添加页面，包括展示每个model有多少记录的主页，以及list和detail页面。我们会积累从database获取记录以及使用模版的实战经验。</p>
+<p>我们现在已经准备好为展示本地图书馆图书和其他数据添加页面，包括展示每个 model 有多少记录的主页，以及 list 和 detail 页面。我们会积累从 database 获取记录以及使用模版的实战经验。</p>
 
 <dl>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms">Express教程——第六部分： 如何使用表单</a></dt>
- <dd>本教程我们会教你如何在Express使用HTML表单，Pug，以及从数据库中创建，更新，删除文件。</dd>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment">Express教程——第七部分：如何部署到生产环境</a></dt>
+ <dt><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms">Express 教程——第六部分：如何使用表单</a></dt>
+ <dd>本教程我们会教你如何在 Express 使用 HTML 表单，Pug，以及从数据库中创建，更新，删除文件。</dd>
+ <dt><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment">Express 教程——第七部分：如何部署到生产环境</a></dt>
  <dd>现在你已经创建了一个很棒的本地图书馆网站，你可以把本地环境迁移到公共网络服务器上，别人也可以使用网站。本章提供了如何找服务器，部署网站到生产环境的概览。</dd>
 </dl>
 
 <h2 id="另见">另见</h2>
 
 <dl>
- <dt><a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry">在PWS/Cloud Foundry安装LocalLibrary</a></dt>
- <dd>本文提供了如何在<a href="http://run.pivotal.io">Pivotal Web Services PaaS </a>云上安装LocalLibrary的实际演示 - 这是Heroku的全功能，开源替代品，Heroku是本教程第7部分中使用的PaaS云服务，如上所列。 如果您正在寻找Heroku（或其他PaaS云服务）的替代方案，或者只是想尝试不同的东西，PWS / Cloud Foundry绝对值得一试。</dd>
+ <dt><a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry">在PWS/Cloud Foundry 安装 LocalLibrary</a></dt>
+ <dd>本文提供了如何在<a href="http://run.pivotal.io">Pivotal Web Services PaaS </a>云上安装 LocalLibrary 的实际演示 - 这是 Heroku 的全功能，开源替代品，Heroku 是本教程第 7 部分中使用的 PaaS 云服务，如上所列。如果您正在寻找 Heroku（或其他 PaaS 云服务）的替代方案，或者只是想尝试不同的东西，PWS / Cloud Foundry 绝对值得一试。</dd>
  <dd></dd>
 </dl>
 
 <h2 id="其它教程">其它教程</h2>
 
 <div>
-<p>本教程到此结束，如果你想要更进一步，以下包含更多有趣的主题:</p>
+<p>本教程到此结束，如果你想要更进一步，以下包含更多有趣的主题：</p>
 
 <ul>
- <li>使用sessions</li>
+ <li>使用 sessions</li>
  <li>使用者授权</li>
  <li>使用者许可</li>
- <li>测试Express网页应用</li>
- <li>Express网页应用的安全</li>
+ <li>测试 Express 网页应用</li>
+ <li>Express 网页应用的安全</li>
 </ul>
 
 <p>当然，如果做一个评估任务会更好！</p>

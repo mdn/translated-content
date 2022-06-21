@@ -61,7 +61,7 @@ box-shadow: unset;
   - 値が 2 つだけ与えられた場合、 `<offset-x>` および `<offset-y>` として解釈されます。
   - 3 つ目の値が与えられた場合、 `<blur-radius>` として解釈されます。
   - 4 つ目の値が与えられた場合、 `<spread-radius>` として解釈されます。
-   
+
 - 任意で、 `inset` キーワード
 - 任意で、 [`<color>`](#color) の値
 

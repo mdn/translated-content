@@ -11,7 +11,7 @@ original_slug: Web/CSS/min()
 <pre class="brush: css; no-line-numbers notranslate">/* property: min(expression [, expression]) */
 width: min(1vw, 4em, 80px);</pre>
 
-<p>在上面的例子中，宽度最多是80px。如果视口的宽度小于800px，或者一个em的宽度小于20px，则会更窄。换句话说，最大宽度是80px，</p>
+<p>在上面的例子中，宽度最多是 80px。如果视口的宽度小于 800px，或者一个 em 的宽度小于 20px，则会更窄。换句话说，最大宽度是 80px，</p>
 
 <h2 id="语法">语法</h2>
 
@@ -35,7 +35,7 @@ width: min(1vw, 4em, 80px);</pre>
 
 <h3 id="Growing_images_to_a_maximum_size">Growing images to a maximum size</h3>
 
-<p><code>min()</code> 让我们在设置图像的最大宽度时更简单。在下面这个例子中，在小型设备上宽度拉伸为window的一半，但在大型设备上，不超过300px，不使用媒体查询：</p>
+<p><code>min()</code> 让我们在设置图像的最大宽度时更简单。在下面这个例子中，在小型设备上宽度拉伸为 window 的一半，但在大型设备上，不超过 300px，不使用媒体查询：</p>
 
 <pre class="brush: css; notranslate">.logo {
   width: min(50vw, 300px);
@@ -46,11 +46,11 @@ width: min(1vw, 4em, 80px);</pre>
 
 <p>{{EmbedLiveSample("Growing_images_to_a_maximum_size", "100%", "60")}}</p>
 
-<p>在这个例子中，除非视口比 600px 更窄，否则logo的宽会被设置为 300px，到时候，它会随着视口的缩小而缩小，而且总是视口宽度的50%。</p>
+<p>在这个例子中，除非视口比 600px 更窄，否则 logo 的宽会被设置为 300px，到时候，它会随着视口的缩小而缩小，而且总是视口宽度的 50%。</p>
 
 <h3 id="给_label_和_input_设置最大值">给 label 和 input 设置最大值</h3>
 
-<p>CSS方法的另一个用途时设置响应式组件（form）的最大尺寸：让 label 和 input 的宽度随着组件的缩小而缩小。</p>
+<p>CSS 方法的另一个用途时设置响应式组件（form）的最大尺寸：让 label 和 input 的宽度随着组件的缩小而缩小。</p>
 
 <p>看下面的样式：</p>
 
@@ -69,7 +69,7 @@ form {
 }
 </pre>
 
-<p>这里，form 的 margin，border，padding 总是它父元素的宽度的100%。我们声明 input 和 label 的宽度比form的40%还小或者400px宽，只要取决于哪一个最小。换句话说，input 和 label 的最大宽度就是400px，最窄就是form的40%。因此看起来会显得很小。</p>
+<p>这里，form 的 margin，border，padding 总是它父元素的宽度的 100%。我们声明 input 和 label 的宽度比 form 的 40% 还小或者 400px 宽，只要取决于哪一个最小。换句话说，input 和 label 的最大宽度就是 400px，最窄就是 form 的 40%。因此看起来会显得很小。</p>
 
 <pre class="brush: html notranslate">&lt;form&gt;
   &lt;label&gt;Type something:&lt;/label&gt;
@@ -89,7 +89,7 @@ form {
   font-size: max(min(0.5vw, 0.5em), 1rem);
 }</pre>
 
-<p>这用于保证最小值是1rem，这样在页面缩放时文本也会缩放。</p>
+<p>这用于保证最小值是 1rem，这样在页面缩放时文本也会缩放。</p>
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>

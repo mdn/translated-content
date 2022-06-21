@@ -21,15 +21,15 @@ translation_of: Web/API/IDBObjectStore/indexNames
 
 <h2 id="Example">Example</h2>
 
-<p>在下面的代码片段中，我们在数据库上打开一个读/写事务并使用 <code>add()</code> 向对象存储添加一些数据。创建对象存储后，我们将打印 <span style="background-color: #fafbfc; font-family: consolas,monaco,andale mono,monospace; font-size: 1rem; line-height: 19px; white-space: pre;"><code>objectStore.indexNames</code></span> 到控制台。有关完整的工作示例，请参阅我们的 <a href="https://github.com/mdn/to-do-notifications/">待办事项通知</a>应用程序<span style="line-height: 1.5;"> ( </span><a href="http://mdn.github.io/to-do-notifications/">实时查看示例</a><span style="line-height: 1.5;"> )</span></p>
+<p>在下面的代码片段中，我们在数据库上打开一个读/写事务并使用 <code>add()</code> 向对象存储添加一些数据。创建对象存储后，我们将打印 <code>objectStore.indexNames</code> 到控制台。有关完整的工作示例，请参阅我们的 <a href="https://github.com/mdn/to-do-notifications/">待办事项通知</a>应用程序 ( <a href="http://mdn.github.io/to-do-notifications/">实时查看示例</a> )</p>
 
 <pre class="brush: js" style="font-size: 14px;">// 让我们来打开我们的数据库
-<span style="line-height: 1.5;">var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-</span><span style="line-height: 1.5;">DBOpenRequest.onsuccess = function(event) {</span>
+DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
-  // 将打开数据库的结果存储在db变量中
+  // 将打开数据库的结果存储在 db 变量中
   // 下面经常用到这个
   db = this.result;
 
@@ -38,7 +38,7 @@ translation_of: Web/API/IDBObjectStore/indexNames
 };
 
 function addData() {
-  // 创建一个新对象以准备插入到IDB中
+  // 创建一个新对象以准备插入到 IDB 中
   var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
 
   // 打开读/写数据库事务，准备添加数据
@@ -101,7 +101,7 @@ function addData() {
 
 <ul>
  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">使用 IndexedDB</a></li>
- <li><span id="w_40">启动</span><span id="w_41">事务</span> : {{domxref("IDBDatabase")}}</li>
+ <li>启动事务 : {{domxref("IDBDatabase")}}</li>
  <li>使用事务 : {{domxref("IDBTransaction")}}</li>
  <li>设置键的范围 : {{domxref("IDBKeyRange")}}</li>
  <li>检索和更改数据 : {{domxref("IDBObjectStore")}}</li>

@@ -9,15 +9,21 @@ translation_of: Web/XSLT/Element
 
 A ce propos, tous les attributs d'un LRE et certains attributs d'un nombre limité d'éléments XSLT peuvent inclure ce que l'on appelle un modèle de valeur d'attribut. Un modèle de valeur d'attribut est simplement une chaîne qui intègre une expression XPath utilisée pour spécifier la valeur de l'attribut. Lors de l'exécution, l'expression est évaluée et le résultat de cette évaluation est substitué à l'expression XPath. Par exemple, considérons que variable «&nbsp;\<tt>image-dir\</tt>&nbsp;» est définie comme ci-dessous&nbsp;:
 
-    <xsl:variable name="image-dir">/images</xsl:variable>
+```xml
+<xsl:variable name="image-dir">/images</xsl:variable>
+```
 
 L'expression a évaluer est placée entre accolades&nbsp;:
 
-    <img src="{$image-dir}/mygraphic.jpg"/>
+```html
+<img src="{$image-dir}/mygraphic.jpg"/>
+```
 
 Ce qui donnera&nbsp;:
 
-    <img src="/images/mygraphic.jpg"/>
+```html
+<img src="/images/mygraphic.jpg"/>
+```
 
 Les définitions des éléments ci-dessous incluent une description, la syntaxe, une liste des attributs requis ou optionnels, une description du type et de la position, les sources dans la recommandation du W3C et le niveau de support actuel dans Gecko.
 

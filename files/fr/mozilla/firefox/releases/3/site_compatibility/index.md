@@ -21,11 +21,15 @@ Dans Gecko 1.8, il n'était pas possible de définir des gestionnaires d'évène
 
 Par exemple, ceci&nbsp;:
 
-    window.addEventListener('load', votreFonction, true);
+```js
+window.addEventListener('load', votreFonction, true);
+```
 
 devrait être remplacé par ceci&nbsp;:
 
-    window.addEventListener('load', votreFonction, false);
+```js
+window.addEventListener('load', votreFonction, false);
+```
 
 Pour une explication du fonctionnement de la capture des évènements, consultez [DOM Level 2 Event capture](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) (en)
 
@@ -35,7 +39,7 @@ Dans Gecko 1.8, la méthode `preventBubble` existait sur les évènements pour l
 
 ### Quelques autres anciennes API d'évènements ne sont plus supportées
 
-[window.captureEvents](fr/DOM/window.captureEvents), [window.releaseEvents](fr/DOM/window.releaseEvents) et `window.routeEvent` ne sont plus supportées ({{ Obsolete_inline() }}) dans Gecko 1.9.
+[window.captureEvents](fr/DOM/window.captureEvents), [window.releaseEvents](fr/DOM/window.releaseEvents) et `window.routeEvent` ne sont plus supportées dans Gecko 1.9.
 
 ## DOM
 

@@ -14,9 +14,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Deprecated_source_map_pragma
 
 ## Message
 
-    Warning: SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+```
+Warning: SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
 
-    Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+```
 
 ## Type d'erreur
 

@@ -1,11 +1,11 @@
 ---
-title: 媒体流(MediaStream)
+title: 媒体流 (MediaStream)
 slug: Web/API/MediaStream
 translation_of: Web/API/MediaStream
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<div><span class="seoSummary"><strong><code>MediaStream</code></strong><strong> </strong>接口是一个媒体内容的流.。一个流包含几个<em>轨道</em>，比如视频和音频轨道。</span></div>
+<div><strong><code>MediaStream</code></strong><strong> </strong>接口是一个媒体内容的流.。一个流包含几个<em>轨道</em>，比如视频和音频轨道。</div>
 
 <h2 id="属性">属性</h2>
 
@@ -14,38 +14,38 @@ translation_of: Web/API/MediaStream
 
 <dl>
  <dt>{{domxref("MediaStream.active")}} {{readonlyinline}}</dt>
- <dd>布尔型。如果这个流处于活动状态值为true，反之为false</dd>
+ <dd>布尔型。如果这个流处于活动状态值为 true，反之为 false</dd>
  <dt>{{domxref("MediaStream.ended")}} {{readonlyInline}}{{obsolete_inline()}}</dt>
- <dd>布尔型。如果 {{event("ended (MediaStream)", "ended")}} 事件在这个对象上触发了，也就是说这个流已经被完全读取，值为true。 如果还没有到达这个流的尾部，值为false。</dd>
+ <dd>布尔型。如果 {{event("ended (MediaStream)", "ended")}} 事件在这个对象上触发了，也就是说这个流已经被完全读取，值为 true。 如果还没有到达这个流的尾部，值为 false。</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("MediaStream.id")}} {{readonlyInline}}</dt>
- <dd>这是一个包含36个字符的 {{domxref("DOMString")}} ，用来作为这个对象的唯一标识符 (GUID) 。</dd>
+ <dd>这是一个包含 36 个字符的 {{domxref("DOMString")}} ，用来作为这个对象的唯一标识符 (GUID) 。</dd>
 </dl>
 
 <h3 id="事件处理">事件处理</h3>
 
 <dl>
  <dt>{{domxref("MediaStream.onaddtrack")}}</dt>
- <dd>这是{{event("addtrack")}}事件在这个对象上触发时调用的事件处理器[{{event("Event_handlers", "event handler")}}]，这时一个{{domxref("MediaStreamTrack")}}对象被添加到这个流。</dd>
+ <dd>这是{{event("addtrack")}}事件在这个对象上触发时调用的事件处理器 [{{event("Event_handlers", "event handler")}}]，这时一个{{domxref("MediaStreamTrack")}}对象被添加到这个流。</dd>
  <dt>{{domxref("MediaStream.onended")}}</dt>
- <dd>这是当流终止[{{event("ended (MediaStream)","ended")}}]时触发的事件。</dd>
+ <dd>这是当流终止 [{{event("ended (MediaStream)","ended")}}] 时触发的事件。</dd>
  <dt>{{domxref("MediaStream.onremovetrack")}}</dt>
- <dd>这是{{event("removetrack")}}事件在这个对象上触发事调用的事件处理器[{{event("Event_handlers", "event handler")}}]，这时一个对象从流上移除。</dd>
+ <dd>这是{{event("removetrack")}}事件在这个对象上触发事调用的事件处理器 [{{event("Event_handlers", "event handler")}}]，这时一个对象从流上移除。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
 
 <dl>
  <dt>{{domxref("MediaStream.addTrack()")}}</dt>
- <dd>存储传入参数 {{domxref("MediaStreamTrack")}} 的一个副本。如果这个轨道已经被添加到了这个媒体流，什么也不会发生; 如果目标轨道为“完成”状态（也就是已经到尾部了），一个<span style="font-family: consolas,monaco,andale mono,monospace;">INVALID_STATE_RAISE异常会产生。</span></dd>
+ <dd>存储传入参数 {{domxref("MediaStreamTrack")}} 的一个副本。如果这个轨道已经被添加到了这个媒体流，什么也不会发生; 如果目标轨道为“完成”状态（也就是已经到尾部了），一个 INVALID_STATE_RAISE 异常会产生。</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("MediaStream.clone()")}}</dt>
- <dd>返回这个<code style="font-style: normal;">MediaStream对象的克隆版本。返回的版本会有一个新的ID。</code></dd>
- <dd>返回给定ID的轨道。如果没有参数或者没有指定ID的轨道，将返回null。如果有几个轨道有同一个ID，将返回第一个。</dd>
+ <dd>返回这个<code style="font-style: normal;">MediaStream 对象的克隆版本。返回的版本会有一个新的 ID。</code></dd>
+ <dd>返回给定 ID 的轨道。如果没有参数或者没有指定 ID 的轨道，将返回 null。如果有几个轨道有同一个 ID，将返回第一个。</dd>
 </dl>
 
 <dl>
@@ -54,23 +54,23 @@ translation_of: Web/API/MediaStream
 </dl>
 
 <dl>
- <dt><span style="line-height: 1.572;">{{domxref("MediaStream.getAudioTracks()")}}</span></dt>
- <dd>返回流中kind属性为"audio"的{{domxref("MediaStreamTrack")}}列表。顺序是不确定的，不同浏览器间会有不同，每次调用也有可能不同。</dd>
+ <dt>{{domxref("MediaStream.getAudioTracks()")}}</dt>
+ <dd>返回流中 kind 属性为"audio"的{{domxref("MediaStreamTrack")}}列表。顺序是不确定的，不同浏览器间会有不同，每次调用也有可能不同。</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("MediaStream.getTrackById()")}}</dt>
- <dd>返回给定ID的轨道。如果没有参数或者没有指定ID的轨道，将返回null。如果有几个轨道有同一个ID，将返回第一个。</dd>
+ <dd>返回给定 ID 的轨道。如果没有参数或者没有指定 ID 的轨道，将返回 null。如果有几个轨道有同一个 ID，将返回第一个。</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("MediaStream.getVideoTracks()")}}</dt>
- <dd>返回流中kind属性为"video"的{{domxref("MediaStreamTrack")}}列表。顺序是不确定的，不同浏览器间会有不同，每次调用也有可能不同。</dd>
+ <dd>返回流中 kind 属性为"video"的{{domxref("MediaStreamTrack")}}列表。顺序是不确定的，不同浏览器间会有不同，每次调用也有可能不同。</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("MediaStream.removeTrack()")}}</dt>
- <dd>移除作为参数传入的 {{domxref("MediaStreamTrack")}}。 如果这个轨道不在<code style="font-size: 14px;">MediaStream对象中什么也不会发生；</code> 如果目标轨道为“完成”状态，一个<span style="font-family: consolas,monaco,andale mono,monospace;">INVALID_STATE_RAISE异常会产生。</span></dd>
+ <dd>移除作为参数传入的 {{domxref("MediaStreamTrack")}}。 如果这个轨道不在<code style="font-size: 14px;">MediaStream 对象中什么也不会发生；</code> 如果目标轨道为“完成”状态，一个 INVALID_STATE_RAISE 异常会产生。</dd>
 </dl>
 
 <h2 id="说明">说明</h2>

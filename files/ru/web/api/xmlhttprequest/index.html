@@ -556,7 +556,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 
 <ul>
  <li class="note">By default, Firefox 3 limits the number of <code>XMLHttpRequest</code> connections per server to 6 (previous versions limit this to 2 per server). Some interactive web sites may keep an <code>XMLHttpRequest</code> connection open, so opening multiple sessions to such sites may result in the browser hanging in such a way that the window no longer repaints and controls don't respond. This value can be changed by editing the <code>network.http.max-persistent-connections-per-server</code> preference in <code><a class="linkification-ext" href="/about:config" title="Linkification: about:config">about:config</a></code>.</li>
- <li class="note">From {{ gecko("7.0") }} headers set by {{ manch("setRequestHeader") }} are sent with the request when following a redirect. Previously these headers would not be sent.</li>
+ <li class="note">From {{ gecko("7.0") }} headers set by <a href="#setrequestheader">setRequestHeader</a> are sent with the request when following a redirect. Previously these headers would not be sent.</li>
  <li class="note"><code>XMLHttpRequest</code> is implemented in Gecko using the <code>nsIXMLHttpRequest</code>, <code>nsIXMLHttpRequestEventTarget</code>, and <code>nsIJSXMLHttpRequest</code> interfaces.</li>
  <li class="note">When a request reaches its timeout value, a "timeout" event is raised.</li>
 </ul>

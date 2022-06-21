@@ -17,9 +17,11 @@ Le mot-clé **`async function`** peut être utilisé pour définir une fonction 
 
 ## Syntaxe
 
-    async function [name]([param1[, param2[, ..., paramN]]]) {
-       instructions
-    }
+```js
+async function [name]([param1[, param2[, …, paramN]]]) {
+  instructions
+}
+```
 
 ### Paramètres
 

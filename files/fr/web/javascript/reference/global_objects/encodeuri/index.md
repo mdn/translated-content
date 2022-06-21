@@ -16,7 +16,9 @@ La fonction **`encodeURI()`** encode un Uniform Resource Identifier (URI) en rem
 
 ## Syntaxe
 
-    encodeURI(URI)
+```js
+encodeURI(URI)
+```
 
 ### Paramètres
 
@@ -31,7 +33,9 @@ Une nouvelle chaîne de caractères représentant un URI, encodé, à partir de 
 
 `encodeURI()` échappe tous les caractères sauf ceux-ci :
 
-    A-Z a-z 0-9 ; , / ? : @ & = + $ - _ . ! ~ * ' ( ) #
+```
+A-Z a-z 0-9 ; , / ? : @ & = + $ - _ . ! ~ * ' ( ) #
+```
 
 `encodeURI()` est différente de {{jsxref("encodeURIComponent")}}. Par exemple :
 

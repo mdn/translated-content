@@ -21,7 +21,9 @@ Voir [Stack traces](/fr/docs/Web/API/console#Stack_traces) dans la documentation
 
 ## Syntaxe
 
-    console.trace();
+```js
+console.trace();
+```
 
 ## Exemple
 

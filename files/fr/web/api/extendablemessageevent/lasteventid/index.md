@@ -17,7 +17,9 @@ La propriété en lecture seule **`lastEventID`** de l'interface {{domxref("Exte
 
 ## Syntaxe
 
-    var myLastEventId = ExtendableMessageEventInstance.lastEventId;
+```js
+var myLastEventId = ExtendableMessageEventInstance.lastEventId;
+```
 
 ### Value
 

@@ -426,6 +426,7 @@
 /pt-BR/docs/MDN/Contribute/Estruturas	/pt-BR/docs/MDN/Structures
 /pt-BR/docs/MDN/Contribute/Estruturas/Compatibility_tables	/pt-BR/docs/MDN/Structures/Compatibility_tables
 /pt-BR/docs/MDN/Contribute/Estruturas/Macros	/pt-BR/docs/MDN/Structures/Macros
+/pt-BR/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example	/pt-BR/docs/conflicting/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 /pt-BR/docs/MDN/Contribute/Processos	/pt-BR/docs/MDN/Contribute/Processes
 /pt-BR/docs/MDN/Contribute/Tools	/pt-BR/docs/MDN/Tools
 /pt-BR/docs/MDN/Contribute/Tools/KumaScript	/pt-BR/docs/MDN/Tools/KumaScript
@@ -435,7 +436,7 @@
 /pt-BR/docs/MDN/Contribute/guia/Como-marcar-as-paginas-corretamente	/pt-BR/docs/MDN/Contribute/Howto/Tag
 /pt-BR/docs/MDN/Contribute/guia/Converter_exemplos_codigo_para_ao_vivo	/pt-BR/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live
 /pt-BR/docs/MDN/Contribute/guia/Create_an_interactive_exercise_to_help_learning_the_web	/pt-BR/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
-/pt-BR/docs/MDN/Contribute/guia/Create_an_interactive_exercise_to_help_learning_the_web/distant_example	/pt-BR/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example
+/pt-BR/docs/MDN/Contribute/guia/Create_an_interactive_exercise_to_help_learning_the_web/distant_example	/pt-BR/docs/conflicting/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 /pt-BR/docs/MDN/Feedback	/pt-BR/docs/MDN/Contribute/Feedback
 /pt-BR/docs/MDN/Guidelines/Style_guide	/pt-BR/docs/MDN/Guidelines/Writing_style_guide
 /pt-BR/docs/MDN/Kuma	/pt-BR/docs/MDN/Yari
@@ -507,7 +508,7 @@
 /pt-BR/docs/Tools/Web_Console/UI_Tour	https://firefox-source-docs.mozilla.org/devtools-user/web_console/ui_tour/index.html
 /pt-BR/docs/Tools/Working_with_iframes	https://firefox-source-docs.mozilla.org/devtools-user/working_with_iframes/index.html
 /pt-BR/docs/Tools/atuação	https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html
-/pt-BR/docs/Using_files_from_web_applications	/pt-BR/docs/Web/API/File/Using_files_from_web_applications
+/pt-BR/docs/Using_files_from_web_applications	/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications
 /pt-BR/docs/Using_geolocation	/pt-BR/docs/Web/API/Geolocation_API
 /pt-BR/docs/Web/API/API_Push	/pt-BR/docs/Web/API/Push_API
 /pt-BR/docs/Web/API/API_Push/Best_Practices	/pt-BR/docs/Web/API/Push_API/Best_Practices
@@ -533,6 +534,7 @@
 /pt-BR/docs/Web/API/Console.timeEnd	/pt-BR/docs/Web/API/Console/timeEnd
 /pt-BR/docs/Web/API/Coordinates	/pt-BR/docs/Web/API/GeolocationCoordinates
 /pt-BR/docs/Web/API/Coordinates/altitude	/pt-BR/docs/Web/API/GeolocationCoordinates/altitude
+/pt-BR/docs/Web/API/DOMString	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /pt-BR/docs/Web/API/DeviceAcceleration	/pt-BR/docs/Web/API/DeviceMotionEventAcceleration
 /pt-BR/docs/Web/API/DeviceRotationRate	/pt-BR/docs/Web/API/DeviceMotionEventRotationRate
 /pt-BR/docs/Web/API/Document.querySelector	/pt-BR/docs/Web/API/Document/querySelector
@@ -557,12 +559,15 @@
 /pt-BR/docs/Web/API/EventListener	/pt-BR/docs/conflicting/Web/API/EventTarget/addEventListener
 /pt-BR/docs/Web/API/EventSource/onerror	/pt-BR/docs/Web/API/EventSource/error_event
 /pt-BR/docs/Web/API/Fetch_API/Uso_de_busca_Cross-global	/pt-BR/docs/Web/API/Fetch_API/Cross-global_fetch_usage
+/pt-BR/docs/Web/API/File/Using_files_from_web_applications	/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications
 /pt-BR/docs/Web/API/FileReader/onload	/pt-BR/docs/Web/API/FileReader/load_event
 /pt-BR/docs/Web/API/FullscreenOptions	/pt-BR/docs/orphaned/Web/API/FullscreenOptions
+/pt-BR/docs/Web/API/GlobalEventHandlers/onabort	/pt-BR/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /pt-BR/docs/Web/API/HTMLContentElement/Seletor	/pt-BR/docs/Web/API/HTMLContentElement/select
 /pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Example
 /pt-BR/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
-/pt-BR/docs/Web/API/Navigator.battery	/pt-BR/docs/Web/API/Navigator/battery
+/pt-BR/docs/Web/API/Navigator.battery	/pt-BR/docs/Web/API/Navigator/getBattery
+/pt-BR/docs/Web/API/Navigator/battery	/pt-BR/docs/Web/API/Navigator/getBattery
 /pt-BR/docs/Web/API/Node.appendChild	/pt-BR/docs/Web/API/Node/appendChild
 /pt-BR/docs/Web/API/Node.childNodes	/pt-BR/docs/Web/API/Node/childNodes
 /pt-BR/docs/Web/API/Node.contains	/pt-BR/docs/Web/API/Node/contains

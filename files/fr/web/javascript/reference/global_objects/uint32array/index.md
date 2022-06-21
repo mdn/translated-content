@@ -17,11 +17,13 @@ Le tableau typé **`Uint32Array`** permet de représenter un tableau d'entiers n
 
 ## Syntaxe
 
-    new Uint32Array(); // apparu avec ES2017
-    new Uint32Array(longueur);
-    new Uint32Array(tableauTypé);
-    new Uint32Array(objet);
-    new Uint32Array(tampon [, décalage [, longueur]]);
+```js
+new Uint32Array(); // apparu avec ES2017
+new Uint32Array(longueur);
+new Uint32Array(tableauTypé);
+new Uint32Array(objet);
+new Uint32Array(tampon [, décalage [, longueur]]);
+```
 
 Pour plus d'informations sur la syntaxe du constructeur et le rôle des différents paramètres, voir la page _[TypedArray](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Syntaxe)_.
 

@@ -78,7 +78,7 @@ mask: unset;
 
 ```css
 .exemple{
-  mask:url(https://developer.mozilla.org/static/img/favicon72.png) luminance 20%;
+  mask:url(firefox.png) luminance 20%;
 }
 ```
 

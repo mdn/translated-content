@@ -14,11 +14,11 @@ translation_of: Web/API/XMLHttpRequest/status
 ---
 <div>{{APIRef('XMLHttpRequest')}}</div>
 
-<div>只读属性 <code><strong>XMLHttpRequest.status</strong></code> 返回了<code>XMLHttpRequest</code> 响应中的数字状态码。<code>status</code> 的值是一个<code>无符号短整型</code>。在请求完成前，<code>status</code>的值为<code>0</code>。值得注意的是，如果 XMLHttpRequest 出错，浏览器返回的 status 也为0。</div>
+<div>只读属性 <code><strong>XMLHttpRequest.status</strong></code> 返回了 <code>XMLHttpRequest</code> 响应中的数字状态码。<code>status</code> 的值是一个<code>无符号短整型</code>。在请求完成前，<code>status</code> 的值为 <code>0</code>。值得注意的是，如果 XMLHttpRequest 出错，浏览器返回的 status 也为 0。</div>
 
 <div> </div>
 
-<div>status码是标准的<a href="/en-US/docs/Web/HTTP/Response_codes">HTTP status codes</a>。举个例子，<code>status</code> <code>200</code> 代表一个成功的请求。如果服务器响应中没有明确指定status码，<code>XMLHttpRequest.status</code> 将会默认为<code>200</code>。</div>
+<div>status 码是标准的 <a href="/en-US/docs/Web/HTTP/Response_codes">HTTP status codes</a>。举个例子，<code>status</code> <code>200</code> 代表一个成功的请求。如果服务器响应中没有明确指定 status 码，<code>XMLHttpRequest.status</code> 将会默认为 <code>200</code>。</div>
 
 <h2 id="例子">例子</h2>
 
@@ -41,10 +41,10 @@ xhr.send(null);
 /**
  * 输出如下：
  *
- * UNSENT（未发送） 0
- * OPENED（已打开） 0
- * LOADING（载入中） 200
- * DONE（完成） 200
+ * UNSENT（未发送）0
+ * OPENED（已打开）0
+ * LOADING（载入中）200
+ * DONE（完成）200
  */
 </pre>
 
@@ -72,6 +72,6 @@ xhr.send(null);
 <h2 id="其他相关资料">其他相关资料</h2>
 
 <ul>
- <li>HTTP响应代码（<a href="/en-US/docs/Web/HTTP/Response_codes">HTTP response codes</a>） 列表</li>
+ <li>HTTP 响应代码（<a href="/en-US/docs/Web/HTTP/Response_codes">HTTP response codes</a>）列表</li>
  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

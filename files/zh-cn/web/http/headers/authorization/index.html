@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Headers/Authorization
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>HTTP协议中的 <strong><code>Authorization</code></strong> 请求消息头含有服务器用于验证用户代理身份的凭证，通常会在服务器返回{{HTTPStatus("401")}} <code>Unauthorized</code> 状态码以及{{HTTPHeader("WWW-Authenticate")}} 消息头之后在后续请求中发送此消息头。</p>
+<p>HTTP 协议中的 <strong><code>Authorization</code></strong> 请求消息头含有服务器用于验证用户代理身份的凭证，通常会在服务器返回{{HTTPStatus("401")}} <code>Unauthorized</code> 状态码以及{{HTTPHeader("WWW-Authenticate")}} 消息头之后在后续请求中发送此消息头。</p>
 
 <table class="properties">
  <tbody>
@@ -30,19 +30,19 @@ translation_of: Web/HTTP/Headers/Authorization
  <dt>&lt;type&gt;</dt>
  <dd><a href="/en-US/docs/Web/HTTP/Authentication#Authentication_schemes">验证类型</a>。 常见的是 <a href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">"基本验证（Basic）"</a> 。其他类型包括：
  <ul>
-  <li><a href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">在IANA机构注册的验证方案</a></li>
-  <li><a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">AWS服务器的验证方案 (<code>AWS4-HMAC-SHA256</code>)</a></li>
+  <li><a href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">在 IANA 机构注册的验证方案</a></li>
+  <li><a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">AWS 服务器的验证方案 (<code>AWS4-HMAC-SHA256</code>)</a></li>
  </ul>
  </dd>
  <dt>&lt;credentials&gt;</dt>
  <dd>如果使用“基本验证”方案，凭证通过如下步骤生成：
  <ul>
   <li>用冒号将用户名和密码进行拼接（如：aladdin:opensesame）。</li>
-  <li>将第一步生成的结果用 <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64</a> 方式编码(YWxhZGRpbjpvcGVuc2VzYW1l)。</li>
+  <li>将第一步生成的结果用 <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64</a> 方式编码 (YWxhZGRpbjpvcGVuc2VzYW1l)。</li>
  </ul>
 
  <div class="note">
- <p><strong>注意</strong>: Base64编码并不是一种加密方法或者hashing方法！这种方法的安全性与明文发送等同（base64可以逆向解码）。“基本验证”方案需要与HTTPS协议配合使用。</p>
+ <p><strong>注意</strong>: Base64 编码并不是一种加密方法或者 hashing 方法！这种方法的安全性与明文发送等同（base64 可以逆向解码）。“基本验证”方案需要与 HTTPS 协议配合使用。</p>
  </div>
  </dd>
 </dl>
@@ -52,7 +52,7 @@ translation_of: Web/HTTP/Headers/Authorization
 <pre>Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 </pre>
 
-<p>请参考<a href="/en-US/docs/Web/HTTP/Authentication"> HTTP authentication</a> 来获取在Apache或nginx中使用HTTP基本验证方案加密保护站点的配置示例。</p>
+<p>请参考<a href="/en-US/docs/Web/HTTP/Authentication"> HTTP authentication</a> 来获取在 Apache 或 nginx 中使用 HTTP 基本验证方案加密保护站点的配置示例。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -83,5 +83,5 @@ translation_of: Web/HTTP/Headers/Authorization
  <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
 </ul>
 
-<p>[ ... ]也可以看看<textarea></textarea>参见<br>
+<p>[ ... ] 也可以看看<textarea></textarea>参见<br>
  参看</p>

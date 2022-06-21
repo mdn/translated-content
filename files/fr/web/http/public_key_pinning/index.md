@@ -22,7 +22,9 @@ HPKP est une technique qui s'appuie sur la confiance au premier accès (TOFU, _T
 
 Activer cette fonctionnalité pour votre site est simple : il faut juste retourner l'en tête HTTP `Public-Key-Pins` HTTP quand le site est accédé via HTTPS :
 
-    Public-Key-Pins: pin-sha256="base64=="; max-age=expireTime [; includeSubdomains][; report-uri="reportURI"]
+```
+Public-Key-Pins: pin-sha256="base64=="; max-age=expireTime [; includeSubdomains][; report-uri="reportURI"]
+```
 
 - `pin-sha256`
   - : La chaîne de caractère entre guillemets est l’empreinte du *Subject Public Key Information* (SPKI) encodé en base 64. Il est possible de spécifier plusieurs épinglage (pin) pour différentes clé publiques. Certains navigateurs pourraient autoriser dans le future d'autres algorithmes de hachage que SHA-256. Voir plus bas comment extraire cette information depuis le fichier d'un certificat ou d'une clé.
@@ -46,25 +48,25 @@ En premier, vous devez extraire la clé publique depuis votre fichier de certifi
 
 Les commandes suivantes vous aideront à extraire la clé publique et à l'encoder en base 64 depuis le fichier d'une clé, d'un certificat ou d'un CSR (Certificate Signing Request).
 
-    openssl rsa -in my-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
+```bash
+openssl rsa -in my-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
+```
 
-<!---->
+```bash
+openssl req -in my-signing-request.csr -pubkey -noout | openssl rsa -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+```
 
-    openssl req -in my-signing-request.csr -pubkey -noout | openssl rsa -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
-
-<!---->
-
-    openssl x509 -in my-certificate.crt -pubkey -noout | openssl rsa -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
-
-###  
+```bash
+openssl x509 -in my-certificate.crt -pubkey -noout | openssl rsa -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+```
 
 ### Exemple d'entête HPKP
 
-    Public-Key-Pins: pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="; pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="; max-age=5184000; includeSubdomains; report-uri="https://www.example.net/hpkp-report"
+```
+Public-Key-Pins: pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="; pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="; max-age=5184000; includeSubdomains; report-uri="https://www.example.net/hpkp-report"
+```
 
 Dans cet exemple, **pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="** épingle la clé publique utilisée en production par le serveur. La deuxième déclaration d'épinglage **pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="** représente la clé de sauvegarde. **max-age=5184000** dit au client de mémoriser cette information pendant deux mois, ce qui est un temps raisonnable d'après la RFC. Cet épinglage s'applique aussi à tous les sous-domaines, car **includeSubdomains** est présent. Enfin, **report-uri="https\://www\.example.net/hpkp-report"** indique où envoyer les rapports d'erreurs de validation.
-
-
 
 ### Mettre en place le header HPKP sur votre serveur web
 
@@ -76,23 +78,31 @@ Inclure une ligne similaire à votre configuration activera HPKP, en remplaçant
 
 #### Apache
 
-    Header always set Public-Key-Pins "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains"
+```
+Header always set Public-Key-Pins "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains"
+```
 
 **Note :** Cela demande le module `mod_headers` activé.
 
 #### Nginx
 
-    add_header Public-Key-Pins 'pin-sha256="base64+primary=="; pin-sha256="base64+backup=="; max-age=5184000; includeSubDomains';
+```
+add_header Public-Key-Pins 'pin-sha256="base64+primary=="; pin-sha256="base64+backup=="; max-age=5184000; includeSubDomains';
+```
 
 **Note :** Cela demande le module `ngx_http_headers_module`.
 
 #### Lighttpd
 
-    setenv.add-response-header  = ( "Public-Key-Pins" => "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")
+```
+setenv.add-response-header  = ( "Public-Key-Pins" => "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")
+```
 
 **Note:** Cela demande le module `mod_setenv` chargé, ce qui peut être fait en ajoutant la ligne suivante (s'il n'est pas déjà chargé) :
 
-    server.modules += ( "mod_setenv" )
+```
+server.modules += ( "mod_setenv" )
+```
 
 ## Spécifications
 

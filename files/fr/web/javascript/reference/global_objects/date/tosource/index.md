@@ -16,8 +16,10 @@ La méthode **`toSource()`** renvoie une chaîne de caractères représentant le
 
 ## Syntaxe
 
-    dateObj.toSource()
-    Date.toSource()
+```js
+dateObj.toSource()
+Date.toSource()
+```
 
 ### Valeur de retour
 

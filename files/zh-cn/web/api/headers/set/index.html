@@ -19,7 +19,7 @@ translation_of: Web/API/Headers/set
 
 <dl>
  <dt><code>name</code></dt>
- <dd><strong><code>name</code></strong>就是需要对HTTP header 设置新值的key, 一般为字符串。如果设置的<strong><code>name</code></strong> 不是HTTP header规范里面规定的name，那么将会抛出错误"TypeError"。</dd>
+ <dd><strong><code>name</code></strong>就是需要对 HTTP header 设置新值的 key，一般为字符串。如果设置的<strong><code>name</code></strong> 不是 HTTP header 规范里面规定的 name，那么将会抛出错误"TypeError"。</dd>
  <dt><code>value</code></dt>
  <dd> <strong><code>value </code></strong>就是 <strong><code>name </code></strong>对应的值。</dd>
 </dl>
@@ -30,17 +30,17 @@ translation_of: Web/API/Headers/set
 
 <h2 id="Example">Example</h2>
 
-<p>创建一个新的 <code>Headers</code> 对象:</p>
+<p>创建一个新的 <code>Headers</code> 对象：</p>
 
 <pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
 
-<p>你可以用<a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/append">append()</a>方法给<code>Headers</code> 对象增添一个新的键值对，然后用<code><strong>set()</strong></code>方法去改变这个键值对:</p>
+<p>你可以用<a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/append">append()</a>方法给<code>Headers</code> 对象增添一个新的键值对，然后用<code><strong>set()</strong></code>方法去改变这个键值对：</p>
 
 <pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.set('Content-Type', 'text/html');
 </pre>
 
-<p>如果这个键值对不存在，那么<strong><code>set()</code></strong>方法首先创建一个键值对，然后给它赋值。如果这个键值对存在，那么<code><strong>set()</strong></code>方法将会覆盖之前的<strong><code>value</code></strong>值:</p>
+<p>如果这个键值对不存在，那么<strong><code>set()</code></strong>方法首先创建一个键值对，然后给它赋值。如果这个键值对存在，那么<code><strong>set()</strong></code>方法将会覆盖之前的<strong><code>value</code></strong>值：</p>
 
 <pre class="brush: js">myHeaders.set('Accept-Encoding', 'deflate');
 myHeaders.set('Accept-Encoding', 'gzip');

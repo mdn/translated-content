@@ -72,9 +72,9 @@ _Cette interface hérite également des propriétés de {{domxref("XMLHttpReques
   - : Un booléen. S'il est vrai, la politique d'origine unique ne sera pas vérifiée pour la requête.
 - {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
   - : Un booléen qui indique si l'objet représente une requête de service en arrière-plan.
-- {{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{obsolete_inline("6")}} {{ReadOnlyInline}}
+- {{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{deprecated_inline}}{{ReadOnlyInline}}
   - : Un objet {{jsxref("ArrayBuffer")}} qui est la réponse à la requête sous la forme d'un tableau typé JavaScript.
-- {{domxref("XMLHttpRequest.multipart")}}{{obsolete_inline("22")}}
+- {{domxref("XMLHttpRequest.multipart")}} {{deprecated_inline}}
   - : **Cette fonctionnalité spécifique à Gecko a été retirée avec Firefox/Gecko 22.** Veuillez utiliser [les évènements serveurs](/fr/docs/Web/API/Server-sent_events) ou [les web sockets](/fr/docs/Web/API/WebSockets_API) ou encore la propriété `responseText` des évènements de progression.
 
 ### Gestionnaires d'évènement

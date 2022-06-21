@@ -1,5 +1,5 @@
 ---
-title: 为Firefox 3升级扩展
+title: 为 Firefox 3 升级扩展
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
 tags:
   - Firefox 3
@@ -32,7 +32,7 @@ original_slug: Updating_extensions_for_Firefox_3
               <li><a href="/zh-CN/docs/Mozilla/">Mozilla 项目</a></li>
               <li><a href="/zh-CN/docs/Mozilla/Gecko">Gecko</a></li>
               <li><a href="/zh-CN/docs/Mozilla/Firefox/Headless_mode">Headless mode</a></li>
-              <li><a href="/zh-CN/docs/Mozilla/JavaScript_code_modules">JavaScript代码模块</a></li>
+              <li><a href="/zh-CN/docs/Mozilla/JavaScript_code_modules">JavaScript 代码模块</a></li>
               <li><a href="/zh-CN/docs/Mozilla/js-ctypes">JS-ctypes</a></li>
               <li><a href="/zh-CN/docs/Mozilla/MathML_Project">MathML 项目</a></li>
               <li><a href="/zh-CN/docs/Mozilla/MFBT">MFBT</a></li>
@@ -51,38 +51,38 @@ original_slug: Updating_extensions_for_Firefox_3
               <li><a href="/zh-CN/docs/Mozilla/Developer_guide/Build_Instructions">构建说明</a></li>
               <li><a href="/zh-CN/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">配置构建选项</a></li>
               <li><a href="/zh-CN/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works">构建系统如何工作</a></li>
-              <li><a href="/zh-CN/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Mozilla源代码</a></li>
+              <li><a href="/zh-CN/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Mozilla 源代码</a></li>
               <li><a href="/zh-CN/docs/Mozilla/Localization">本地化</a></li>
               <li><a href="/zh-CN/docs/Mozilla/Mercurial">Mercurial</a></li>
               <li><a href="/zh-CN/docs/Mozilla/QA">质量保证</a></li>
-              <li><a href="/zh-CN/docs/Mozilla/Using_Mozilla_code_in_other_projects">在其他项目中使用来自Mozilla的代码</a></li>
+              <li><a href="/zh-CN/docs/Mozilla/Using_Mozilla_code_in_other_projects">在其他项目中使用来自 Mozilla 的代码</a></li>
             </ol>
         </details>
     </li>
   </ol>
 </section></div>
 
-<p>英文原文取自于 <a class="external" href="http://developer.mozilla.org/en/docs/Extensions" rel="freelink">http://developer.mozilla.org/en/docs/Extensions</a>  这篇文章将对于那些想把他们的扩展在Firefox 3中正常运行的开发者提供一些有用的信息。</p>
+<p>英文原文取自于 <a class="external" href="http://developer.mozilla.org/en/docs/Extensions" rel="freelink">http://developer.mozilla.org/en/docs/Extensions</a>  这篇文章将对于那些想把他们的扩展在 Firefox 3 中正常运行的开发者提供一些有用的信息。</p>
 
-<p>在进入主题之前，首先要提示一下：如果你的扩展所需要的唯一改变只是安装文件中的<code>maxVersion</code>信息，并且你的扩展所在的主机是<a class="link-https" href="https://addons.mozilla.org">addons.mozilla.org</a>，事实上你不需要上传你的新的版本的扩展！只需要在AMO中使用开发者控制面板调整<code>maxVersion</code>。通过这种方式你可以避免你的扩展被再次审核。</p>
+<p>在进入主题之前，首先要提示一下：如果你的扩展所需要的唯一改变只是安装文件中的<code>maxVersion</code>信息，并且你的扩展所在的主机是<a class="link-https" href="https://addons.mozilla.org">addons.mozilla.org</a>，事实上你不需要上传你的新的版本的扩展！只需要在 AMO 中使用开发者控制面板调整<code>maxVersion</code>。通过这种方式你可以避免你的扩展被再次审核。</p>
 
-<h3 id=".E7.AC.AC.E4.B8.80.E6.AD.A5_.E5.8D.87.E7.BA.A7.E5.AE.89.E8.A3.85.E6.96.87.E4.BB.B6" name=".E7.AC.AC.E4.B8.80.E6.AD.A5:_.E5.8D.87.E7.BA.A7.E5.AE.89.E8.A3.85.E6.96.87.E4.BB.B6">第一步: 升级安装文件</h3>
+<h3 id=".E7.AC.AC.E4.B8.80.E6.AD.A5_.E5.8D.87.E7.BA.A7.E5.AE.89.E8.A3.85.E6.96.87.E4.BB.B6" name=".E7.AC.AC.E4.B8.80.E6.AD.A5:_.E5.8D.87.E7.BA.A7.E5.AE.89.E8.A3.85.E6.96.87.E4.BB.B6">第一步：升级安装文件</h3>
 
-<p>第一步，当然，对于大多数的扩展也仅需要这一步——更新安装文件<code>install.rdf</code>，声明扩展兼容Firefox 3。</p>
+<p>第一步，当然，对于大多数的扩展也仅需要这一步——更新安装文件<code>install.rdf</code>，声明扩展兼容 Firefox 3。</p>
 
-<p>找到声明兼容的最大版本号的那一行（对于Firefox2，如下）：</p>
+<p>找到声明兼容的最大版本号的那一行（对于 Firefox2，如下）：</p>
 
 <pre class="eval"> &lt;em:maxVersion&gt;2.0.*&lt;/em:maxVersion&gt;
 </pre>
 
-<p>对于Firefox 3，如下:</p>
+<p>对于 Firefox 3，如下：</p>
 
 <pre class="eval"> &lt;em:maxVersion&gt;3.0.*&lt;/em:maxVersion&gt;
 </pre>
 
 <p>然后重新安装扩展。</p>
 
-<p>注意，在Firefox3的本版号中没有额外的“.0”，所以请使用“3.0.*”，而非“3.0.0.*”。</p>
+<p>注意，在 Firefox3 的本版号中没有额外的“.0”，所以请使用“3.0.*”，而非“3.0.0.*”。</p>
 
 <div class="blockIndicator note"><strong>Note:</strong> Note that at this point more changes in Firefox 3 are expected. These changes may break some extensions, so you shouldn't release an extension with <code>3.0.*</code> <code>maxVersion</code> to the users until the Firefox 3 release candidate is out. During the Firefox 3 Beta period, you should use <code>3.0b5</code> as your <code>maxVersion</code>.</div>
 
@@ -106,11 +106,11 @@ original_slug: Updating_extensions_for_Firefox_3
 <h4 id="DOM" name="DOM">DOM</h4>
 
 
-<p>将外部文档的节点插入当前文档之前,你必须使用 <a href="/zh-CN/docs/Web/API/Document/importNode" title="将外部文档的一个节点拷贝一份,然后可以把这个拷贝的节点插入到当前文档中."><code>document.importNode()</code></a> 从外部文档导入源节点,或者使用 <a href="/zh-CN/docs/Web/API/Document/adoptNode" title="从其他的document文档中获取一个节点。 该节点以及它的子树上的所有节点都会从原文档删除 (如果有这个节点的话), 并且它的ownerDocument 属性会变成当前的document文档。 之后你可以把这个节点插入到当前文档中。"><code>document.adoptNode()</code></a>导入源节点,
-    想要了解更多的 <a href="/zh-CN/docs/Web/API/Node/ownerDocument" title="Node.ownerDocument 只读属性会返回当前节点的顶层的 document 对象。"><code>Node.ownerDocument</code></a> 问题,请参考 <a class="external" href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
+<p>将外部文档的节点插入当前文档之前，你必须使用 <a href="/zh-CN/docs/Web/API/Document/importNode" title="将外部文档的一个节点拷贝一份,然后可以把这个拷贝的节点插入到当前文档中."><code>document.importNode()</code></a> 从外部文档导入源节点，或者使用 <a href="/zh-CN/docs/Web/API/Document/adoptNode" title="从其他的document文档中获取一个节点。 该节点以及它的子树上的所有节点都会从原文档删除 (如果有这个节点的话), 并且它的ownerDocument 属性会变成当前的document文档。 之后你可以把这个节点插入到当前文档中。"><code>document.adoptNode()</code></a>导入源节点，
+    想要了解更多的 <a href="/zh-CN/docs/Web/API/Node/ownerDocument" title="Node.ownerDocument 只读属性会返回当前节点的顶层的 document 对象。"><code>Node.ownerDocument</code></a> 问题，请参考 <a class="external" href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
 
-    <p>即使你不执行导入动作,就执行插入外部文档中的节点.Firefox目前也不会报错(如果严格按标准执行,很多已有的网站都无法正常运行).
-    我们鼓励开发者严格按标准修改自己已有的不符合上述标准的代码.</p>
+    <p>即使你不执行导入动作，就执行插入外部文档中的节点.Firefox 目前也不会报错 (如果严格按标准执行，很多已有的网站都无法正常运行).
+    我们鼓励开发者严格按标准修改自己已有的不符合上述标准的代码。</p>
 
 <h4 id="Bookmarks__History" name="Bookmarks_&amp;_History">Bookmarks &amp; History</h4>
 

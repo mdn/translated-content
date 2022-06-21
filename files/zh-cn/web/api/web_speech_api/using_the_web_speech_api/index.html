@@ -6,52 +6,52 @@ tags:
   - 语音识别
 translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 ---
-<p class="summary">Web Speech API 提供了两类不同方向的函数——语音识别和语音合成(也被称为文本转为语音，英语简写是tts)——开启了有趣的新可用性和控制机制。这篇文章提供了这两个方向的简单介绍，并且都带有例子。</p>
+<p>Web Speech API 提供了两类不同方向的函数——语音识别和语音合成 (也被称为文本转为语音，英语简写是 tts)——开启了有趣的新可用性和控制机制。这篇文章提供了这两个方向的简单介绍，并且都带有例子。</p>
 
 <h2 id="Speech_recognition">Speech recognition</h2>
 
-<p>Speech recognition(语音识别) 涉及三个过程：首先，需要设备的麦克风接收这段语音；其次，speech recognition service(语音识别服务器) 会根据一系列语法(基本上，语法是你希望在具体的应用中能够识别出来的词汇) 来检查这段语音；最后，当一个单词或者短语被成功识别后，结果会以文本字符串的形式返回(结果可以有多个)，以及更多的行为可以设置被触发。</p>
+<p>Speech recognition(语音识别) 涉及三个过程：首先，需要设备的麦克风接收这段语音；其次，speech recognition service(语音识别服务器) 会根据一系列语法 (基本上，语法是你希望在具体的应用中能够识别出来的词汇) 来检查这段语音；最后，当一个单词或者短语被成功识别后，结果会以文本字符串的形式返回 (结果可以有多个)，以及更多的行为可以设置被触发。</p>
 
-<p>Web Speech API 有一个主要的控制接口——<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition"><code>SpeechRecognition</code></a>， 外加一些如表示语法、表示结果等等亲密相关的接口。通常，设备都有可使用的默认语音识别系统，大部分现代操作系统使用这个语音识别系统来处理语音命令，比如 Mac OS X 上的 Dictation，iOS上的 Siri，Win10上的 Cortana，Android Speech 等等。</p>
+<p>Web Speech API 有一个主要的控制接口——<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition"><code>SpeechRecognition</code></a>， 外加一些如表示语法、表示结果等等亲密相关的接口。通常，设备都有可使用的默认语音识别系统，大部分现代操作系统使用这个语音识别系统来处理语音命令，比如 Mac OS X 上的 Dictation，iOS 上的 Siri，Win10 上的 Cortana，Android Speech 等等。</p>
 
-<p><span style='font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 1.375rem;'>Demo</span></p>
+<p>Demo</p>
 
-<p>为了简单展示 Web speech recognition 的作用，我们写了一个demo——<a href="https://github.com/mdn/web-speech-api/tree/master/speech-color-changer">Speech color changer</a>。点击屏幕之后，说出 HTML 颜色关键字(网页里罗列的单词就是)，接下来应用的背景颜色就会变成你说的颜色。</p>
+<p>为了简单展示 Web speech recognition 的作用，我们写了一个 demo——<a href="https://github.com/mdn/web-speech-api/tree/master/speech-color-changer">Speech color changer</a>。点击屏幕之后，说出 HTML 颜色关键字 (网页里罗列的单词就是)，接下来应用的背景颜色就会变成你说的颜色。</p>
 
 <p><img alt="The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red." src="https://mdn.mozillademos.org/files/11975/speech-color-changer.png" style="border: 1px solid black; display: block; height: 533px; margin: 0px auto; width: 300px;"></p>
 
-<p>为了跑这个 demo，可以 clone Github仓库(上面甩出的就是，或者<a href="https://github.com/mdn/web-speech-api/archive/master.zip">directly download</a>)，可以在支持的移动端浏览器(比如Chrome) 导航到 <a href="http://mdn.github.io/web-speech-api/speech-color-changer/">live demo URL</a> 直接观看(亲测desktop browser也是可以的，不过只能是Chrome)，也可以通过 <a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE">WebIDE</a> 作为一个app加载到Firefox OS(Firefox OS使用API的权限问题见下文)。</p>
+<p>为了跑这个 demo，可以 clone Github 仓库 (上面甩出的就是，或者<a href="https://github.com/mdn/web-speech-api/archive/master.zip">directly download</a>)，可以在支持的移动端浏览器 (比如 Chrome) 导航到 <a href="http://mdn.github.io/web-speech-api/speech-color-changer/">live demo URL</a> 直接观看 (亲测 desktop browser 也是可以的，不过只能是 Chrome)，也可以通过 <a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE">WebIDE</a> 作为一个 app 加载到 Firefox OS(Firefox OS 使用 API 的权限问题见下文)。</p>
 
 <h3 id="Browser_support">Browser support</h3>
 
-<p>对于 Web Speech API speech recognition(语音识别)的支持，在各浏览器中还不成熟，还在发展，现在主要的限制如下：</p>
+<p>对于 Web Speech API speech recognition(语音识别) 的支持，在各浏览器中还不成熟，还在发展，现在主要的限制如下：</p>
 
 <ul>
  <li>
-  <p>Firefox 桌面端和移动端在Gecko 44+中都支持，并且是没有前缀的，它可以在<code>about:config</code> 中把 <code>media.webspeech.recognition.enable</code> 设置为 <code>true</code> 打开。权限设置/UI还没有整理出来，所以权限还不能被用户使用，也就是不能用。不过很快会修复吧~</p>
+  <p>Firefox 桌面端和移动端在 Gecko 44+ 中都支持，并且是没有前缀的，它可以在<code>about:config</code> 中把 <code>media.webspeech.recognition.enable</code> 设置为 <code>true</code> 打开。权限设置/UI 还没有整理出来，所以权限还不能被用户使用，也就是不能用。不过很快会修复吧~</p>
  </li>
  <li>
-  <p>Firefox OS 2.5+ 也支持，但作为一个特权API(privileged API)需要权限，因此你需要在<a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Build/Manifest">manifest.webapp</a> (也可以通过 WebIDE 下载， 或者使应用得到验证后在 <a href="https://marketplace.firefox.com/">Firefox Marketplace</a> 可使用)如下设置：</p>
+  <p>Firefox OS 2.5+ 也支持，但作为一个特权 API(privileged API) 需要权限，因此你需要在<a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Build/Manifest">manifest.webapp</a> (也可以通过 WebIDE 下载， 或者使应用得到验证后在 <a href="https://marketplace.firefox.com/">Firefox Marketplace</a> 可使用) 如下设置：</p>
 
-  <pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"permissions":</span> <span class="punctuation token">{</span>
-  <span class="key token">"audio-capture" :</span> <span class="punctuation token">{</span>
-    <span class="key token">"description" :</span> <span class="string token">"Audio capture"</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="key token">"speech-recognition" :</span> <span class="punctuation token">{</span>
-    <span class="key token">"description" :</span> <span class="string token">"Speech recognition"</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+  <pre class="brush: json line-numbers  language-json"><code class="language-json">"permissions": {
+  "audio-capture" : {
+    "description" : "Audio capture"
+  },
+  "speech-recognition" : {
+    "description" : "Speech recognition"
+  }
+}</code></pre>
 
-  <pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"type":</span> <span class="string token">"privileged"</span></code></pre>
+  <pre class="brush: json line-numbers  language-json"><code class="language-json">"type": "privileged"</code></pre>
  </li>
  <li>
-  <p>Chrome桌面端和Android端自version 33 以来均支持，但是带有前缀，所以你需要使用带有前缀的版本，比如：<code>webkitSpeechRecognition</code></p>
+  <p>Chrome 桌面端和 Android 端自 version 33 以来均支持，但是带有前缀，所以你需要使用带有前缀的版本，比如：<code>webkitSpeechRecognition</code></p>
  </li>
 </ul>
 
 <h3 id="HTML_和_CSS">HTML 和 CSS</h3>
 
-<p>对于这个应用来说，HTML和CSS部分是无足轻重的。仅仅只有一个标题，一个介绍段落和一个div用来输出check的结果。</p>
+<p>对于这个应用来说，HTML 和 CSS 部分是无足轻重的。仅仅只有一个标题，一个介绍段落和一个 div 用来输出 check 的结果。</p>
 
 <pre class="brush: html">&lt;h1&gt;Speech color changer&lt;/h1&gt;
 &lt;p&gt;Tap/click then say a color to change the background color of the app.&lt;/p&gt;
@@ -59,15 +59,15 @@ translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
   &lt;p class="output"&gt;&lt;em&gt;...diagnostic messages&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<p>CSS也只是提供了简单的响应式样式，跨设备看上去也是ok的。</p>
+<p>CSS 也只是提供了简单的响应式样式，跨设备看上去也是 ok 的。</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p>JavaScript部分会介绍更多细节。</p>
+<p>JavaScript 部分会介绍更多细节。</p>
 
 <h4 id="浏览器支持">浏览器支持</h4>
 
-<p>之前有说到过，Chrome现在支持的是带有前缀的 speech recognition，因此在code开始部分得加些内容保证在需要前缀的Chrome和不需要前缀的像Firefox中，使用的object都是正确的。</p>
+<p>之前有说到过，Chrome 现在支持的是带有前缀的 speech recognition，因此在 code 开始部分得加些内容保证在需要前缀的 Chrome 和不需要前缀的像 Firefox 中，使用的 object 都是正确的。</p>
 
 <pre class="brush: js">var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
@@ -84,41 +84,41 @@ var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = ' + colors.joi
 
 <ul>
  <li>
-  <p>每一行用分号分隔，和js中一样</p>
+  <p>每一行用分号分隔，和 js 中一样</p>
  </li>
  <li>
   <p>第一行——<code>#JSGF V1.0</code> ——说的是语法使用的格式和版本。这总是需要首先包括在内</p>
  </li>
  <li>
-  <p>第二行表示我们想要识别的<code>term</code> 的类型(这里就是<code>colors</code>)。<code>public</code> 声明这是一条公共规则，尖括号中的字符串定义需要识别<code>term</code> 的名字(这里就是<code>color</code>)，等号后面的是这个<code>term</code> 可以被识别和接受的具体值。得注意每一个值如何被一个管道符号分割开的</p>
+  <p>第二行表示我们想要识别的<code>term</code> 的类型 (这里就是<code>colors</code>)。<code>public</code> 声明这是一条公共规则，尖括号中的字符串定义需要识别<code>term</code> 的名字 (这里就是<code>color</code>)，等号后面的是这个<code>term</code> 可以被识别和接受的具体值。得注意每一个值如何被一个管道符号分割开的</p>
  </li>
  <li>
-  <p>你可以按照上面的结构，在多行中，想定义多少就定义多少<code>terms</code> ，也可以包括相当复杂的语法定义。对于我们这个简单的demo，就把语法定义的简单些</p>
+  <p>你可以按照上面的结构，在多行中，想定义多少就定义多少<code>terms</code> ，也可以包括相当复杂的语法定义。对于我们这个简单的 demo，就把语法定义的简单些</p>
  </li>
 </ul>
 
-<h4 id="将grammer插入speech_recognition">将grammer插入speech recognition</h4>
+<h4 id="将grammer插入speech_recognition">将 grammer 插入 speech recognition</h4>
 
-<p>接下来是使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/SpeechRecognition"><code>SpeechRecognition()</code></a> 构造函数，定义一个speech recognition实例，控制对于这个应用的识别。还需要使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/SpeechGrammarList"><code>SpeechGrammarList()</code></a> 构造函数，创立一个speech grammer list对象，包含我们的语法。</p>
+<p>接下来是使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/SpeechRecognition"><code>SpeechRecognition()</code></a> 构造函数，定义一个 speech recognition 实例，控制对于这个应用的识别。还需要使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/SpeechGrammarList"><code>SpeechGrammarList()</code></a> 构造函数，创立一个 speech grammer list 对象，包含我们的语法。</p>
 
 <pre class="brush: js">var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();</pre>
 
-<p>使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/addFromString"><code>SpeechGrammarList.addFromString()</code></a> 把语法添加到列表(list)，这个方法接收两个参数，第一个是我们想要添加的包含语法内容的字符串，第二个是对添加的这条语法的权重(权重值范围是0~1)，权重其实是相对于其他语法，这一条语法的重要程度。添加到列表的语法就是可用的，并且是一个<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar"><code>SpeechGrammar</code></a> 实例。</p>
+<p>使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/addFromString"><code>SpeechGrammarList.addFromString()</code></a> 把语法添加到列表 (list)，这个方法接收两个参数，第一个是我们想要添加的包含语法内容的字符串，第二个是对添加的这条语法的权重 (权重值范围是 0~1)，权重其实是相对于其他语法，这一条语法的重要程度。添加到列表的语法就是可用的，并且是一个<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar"><code>SpeechGrammar</code></a> 实例。</p>
 
 <pre class="brush: js">speechRecognitionList.addFromString(grammar, 1);</pre>
 
-<p>我们然后通过设置 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/grammars"><code>SpeechRecognition.grammars</code></a> 属性值，把我们的<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList"><code>SpeechGrammarList</code></a> 添加到speech recognition实例。在继续往前走之前，我们还需要设置recognition实例其他的一些属性：</p>
+<p>我们然后通过设置 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/grammars"><code>SpeechRecognition.grammars</code></a> 属性值，把我们的<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList"><code>SpeechGrammarList</code></a> 添加到 speech recognition 实例。在继续往前走之前，我们还需要设置 recognition 实例其他的一些属性：</p>
 
 <ul>
  <li>
   <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/lang"><code>SpeechRecognition.lang</code></a> ：设置识别的是什么语言。这个设定是良好的做好，因此墙裂推荐~</p>
  </li>
  <li>
-  <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/interimResults"><code>SpeechRecognition.interimResults</code></a> ：定义speech recognition系统要不要返回临时结果(interim results)，还是只返回最终结果。对于这个简单demo，只返回最终结果就够了。</p>
+  <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/interimResults"><code>SpeechRecognition.interimResults</code></a> ：定义 speech recognition 系统要不要返回临时结果 (interim results)，还是只返回最终结果。对于这个简单 demo，只返回最终结果就够了。</p>
  </li>
  <li>
-  <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/maxAlternatives"><code>SpeechRecognition.maxAlternatives</code></a> ：定义每次结果返回的可能匹配值的数量。这有时有用，比如要的结果不明确，你想要用一个列表展示所有可能值，让用户自己从中选择一个正确的。但这里这个简单demo就不用了，因此我们设置为1(1也就是默认值)。</p>
+  <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/maxAlternatives"><code>SpeechRecognition.maxAlternatives</code></a> ：定义每次结果返回的可能匹配值的数量。这有时有用，比如要的结果不明确，你想要用一个列表展示所有可能值，让用户自己从中选择一个正确的。但这里这个简单 demo 就不用了，因此我们设置为 1(1 也就是默认值)。</p>
  </li>
 </ul>
 
@@ -129,12 +129,12 @@ recognition.interimResults = false;
 recognition.maxAlternatives = 1;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/continuous"><code>SpeechRecognition.continuous</code></a> 控制的是每一次允许多个结果被捕捉(比如在这个demo中连着说两个颜色关键字，都可以被捕捉)，或者一次只能识别一个结果。代码中它被注释掉的原因是，在Gecko中它还不被支持，所以如果把它加进去会破坏这个应用。你可以在收到第一个结果后简单地停止识别，从而得到类似的结果，稍后将会看到。</p>
+<p><strong>Note</strong>: <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/continuous"><code>SpeechRecognition.continuous</code></a> 控制的是每一次允许多个结果被捕捉 (比如在这个 demo 中连着说两个颜色关键字，都可以被捕捉)，或者一次只能识别一个结果。代码中它被注释掉的原因是，在 Gecko 中它还不被支持，所以如果把它加进去会破坏这个应用。你可以在收到第一个结果后简单地停止识别，从而得到类似的结果，稍后将会看到。</p>
 </div>
 
 <h4 id="开始语音识别">开始语音识别</h4>
 
-<p>在获取输出的<code>&lt;div&gt;</code> 和 html元素引用之后(这些我们可以用来待会输出语音识别诊断的结果，更新应用的背景颜色)，我们添加了一个<code>onclick</code> 事件处理，作用是当屏幕被点击后，语音识别服务将开启——这通过调用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/start"><code>SpeechRecognition.start()</code></a> 实现。<code>forEach()</code> 方法内部的工作是，为每个颜色关键字添加一个这个颜色的背景色，这样就直观知道了这个颜色关键字指向什么颜色。</p>
+<p>在获取输出的<code>&lt;div&gt;</code> 和 html 元素引用之后 (这些我们可以用来待会输出语音识别诊断的结果，更新应用的背景颜色)，我们添加了一个<code>onclick</code> 事件处理，作用是当屏幕被点击后，语音识别服务将开启——这通过调用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/start"><code>SpeechRecognition.start()</code></a> 实现。<code>forEach()</code> 方法内部的工作是，为每个颜色关键字添加一个这个颜色的背景色，这样就直观知道了这个颜色关键字指向什么颜色。</p>
 
 <pre class="brush: js">var diagnostic = document.querySelector('.output');
 var bg = document.querySelector('html');
@@ -154,7 +154,7 @@ document.body.onclick = function() {
 
 <h4 id="接收、处理结果">接收、处理结果</h4>
 
-<p>一旦语音识别开始，有许多event handlers可以用于做结果返回的后续操作，除了识别的结果外还有些零碎的相关信息可供操作(可查看 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition#Event_handlers"><code>SpeechRecognition</code> event handlers list</a> )。最常见会使用的一个是 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onresult"><code>SpeechRecognition.onresult</code></a> ，这在收到一个成功的结果时候触发。</p>
+<p>一旦语音识别开始，有许多 event handlers 可以用于做结果返回的后续操作，除了识别的结果外还有些零碎的相关信息可供操作 (可查看 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition#Event_handlers"><code>SpeechRecognition</code> event handlers list</a> )。最常见会使用的一个是 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onresult"><code>SpeechRecognition.onresult</code></a> ，这在收到一个成功的结果时候触发。</p>
 
 <pre class="brush: js">recognition.onresult = function(event) {
   var last = event.results.length - 1;
@@ -164,25 +164,25 @@ document.body.onclick = function() {
   console.log('Confidence: ' + event.results[0][0].confidence);
 }</pre>
 
-<p>代码中第三行看上去有一点复杂，让我们一步一步解释以下。<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/results"><code>SpeechRecognitionEvent.results</code></a> 属性返回的是一个<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList"><code>SpeechRecognitionResultList</code></a> 对象(这个对象会包含<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult"><code>SpeechRecognitionResult</code></a> 对象们)，它有一个getter，所以它包含的这些对象可以像一个数组被访问到——所以<code>[last]</code> 返回的是排在最后位置(最新)的<code>SpeechRecognitionResult</code>对象。每个<code>SpeechRecognitionResult</code> 对象包含的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative"><code>SpeechRecognitionAlternative</code></a> 对象含有一个被识别的单词。这些<code>SpeechRecognitionResult</code> 对象也有一个getter，所以<code>[0]</code> 返回的是其中包含的第一个<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative"><code>SpeechRecognitionAlternative</code></a> 对象。最后返回的<code>transcript</code>属性就是被识别单词的字符串，把背景颜色设置为这个颜色，并在UI中报告出这个结果信息。</p>
+<p>代码中第三行看上去有一点复杂，让我们一步一步解释以下。<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/results"><code>SpeechRecognitionEvent.results</code></a> 属性返回的是一个<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList"><code>SpeechRecognitionResultList</code></a> 对象 (这个对象会包含<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult"><code>SpeechRecognitionResult</code></a> 对象们)，它有一个 getter，所以它包含的这些对象可以像一个数组被访问到——所以<code>[last]</code> 返回的是排在最后位置 (最新) 的<code>SpeechRecognitionResult</code>对象。每个<code>SpeechRecognitionResult</code> 对象包含的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative"><code>SpeechRecognitionAlternative</code></a> 对象含有一个被识别的单词。这些<code>SpeechRecognitionResult</code> 对象也有一个 getter，所以<code>[0]</code> 返回的是其中包含的第一个<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative"><code>SpeechRecognitionAlternative</code></a> 对象。最后返回的<code>transcript</code>属性就是被识别单词的字符串，把背景颜色设置为这个颜色，并在 UI 中报告出这个结果信息。</p>
 
-<p>也使用了 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onspeechend"><code>SpeechRecognition.onspeechend</code></a> 这个handle停止语音识别服务(具体工作在<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/stop"><code>SpeechRecognition.stop()</code></a>) ，一旦一个单词被识别就不能再说咯(必须再点击屏幕再次开启语音识别)</p>
+<p>也使用了 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onspeechend"><code>SpeechRecognition.onspeechend</code></a> 这个 handle 停止语音识别服务 (具体工作在<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/stop"><code>SpeechRecognition.stop()</code></a>) ，一旦一个单词被识别就不能再说咯 (必须再点击屏幕再次开启语音识别)</p>
 
 <pre class="brush: js">recognition.onspeechend = function() {
   recognition.stop();
 }</pre>
 
-<h4 id="处理error和未能识别的语音">处理error和未能识别的语音</h4>
+<h4 id="处理error和未能识别的语音">处理 error 和未能识别的语音</h4>
 
-<p>最后两个handlers处理的两种情况，一种是你说的内容不在定义的语法中所以识别不了，另一种是出现了error。</p>
+<p>最后两个 handlers 处理的两种情况，一种是你说的内容不在定义的语法中所以识别不了，另一种是出现了 error。</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onnomatch"><code>SpeechRecognition.onnomatch</code></a> 支持的就是第一种，但是得注意它似乎在Firefox或者Chrome中触发会有问题；它只是返回任何被识别的内容：</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onnomatch"><code>SpeechRecognition.onnomatch</code></a> 支持的就是第一种，但是得注意它似乎在 Firefox 或者 Chrome 中触发会有问题；它只是返回任何被识别的内容：</p>
 
 <pre class="brush: js">recognition.onnomatch = function(event) {
   diagnostic.textContent = 'I didnt recognise that color.';
 }</pre>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onerror"><code>SpeechRecognition.onerror</code></a> 处理的是第二种情况，识别成功了但是有error出现—— <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionError/error"><code>SpeechRecognitionError.error</code></a> 属性包含的信息就是返回的确切的error是什么。</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onerror"><code>SpeechRecognition.onerror</code></a> 处理的是第二种情况，识别成功了但是有 error 出现—— <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionError/error"><code>SpeechRecognitionError.error</code></a> 属性包含的信息就是返回的确切的 error 是什么。</p>
 
 <pre class="brush: js">recognition.onerror = function(event) {
   diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
@@ -190,17 +190,17 @@ document.body.onclick = function() {
 
 <h2 id="Speech_synthesis">Speech synthesis</h2>
 
-<p>语音合成(也被称作是文本转为语音，英语简写是tts) 包括接收app中需要语音合成的文本，再在设备麦克风播放出来这两个过程。</p>
+<p>语音合成 (也被称作是文本转为语音，英语简写是 tts) 包括接收 app 中需要语音合成的文本，再在设备麦克风播放出来这两个过程。</p>
 
-<p>Web Speech API 对此有一个主要控制接口——<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis"><code>SpeechSynthesis</code></a> ，外加一些处理如何表示要被合成的文本(也被称为 utterances)，用什么声音来播出 utterances 等工作的相关接口。同样的，许多操作系统都有自己的某种语音合成系统，在这个任务中我们调用可用的API来使用语音合成系统。</p>
+<p>Web Speech API 对此有一个主要控制接口——<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis"><code>SpeechSynthesis</code></a> ，外加一些处理如何表示要被合成的文本 (也被称为 utterances)，用什么声音来播出 utterances 等工作的相关接口。同样的，许多操作系统都有自己的某种语音合成系统，在这个任务中我们调用可用的 API 来使用语音合成系统。</p>
 
 <h3 id="Demo">Demo</h3>
 
-<p>为了展示 Web语音合成的简单使用，我们提供了一个例子—— <a href="https://github.com/mdn/web-speech-api/tree/gh-pages/speak-easy-synthesis">Speak easy synthesis</a> 。例子是一套表单控件，包括输入需要被合成的文本，设置音调、语速和发出文本时需要的语音。在输入文本之后，按下<code>Enter</code>/<code>Return</code>键使它播放。</p>
+<p>为了展示 Web 语音合成的简单使用，我们提供了一个例子—— <a href="https://github.com/mdn/web-speech-api/tree/gh-pages/speak-easy-synthesis">Speak easy synthesis</a> 。例子是一套表单控件，包括输入需要被合成的文本，设置音调、语速和发出文本时需要的语音。在输入文本之后，按下<code>Enter</code>/<code>Return</code>键使它播放。</p>
 
 <p><img alt="UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesised, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices." src="https://mdn.mozillademos.org/files/11977/speak-easy-synthesis.png" style="border: 1px solid black; display: block; height: 533px; margin: 0px auto; width: 300px;"></p>
 
-<p>想跑这个例子，你可以git clone Github仓库中的部分(或者<a href="https://github.com/mdn/web-speech-api/archive/master.zip">直接下载</a>)，在桌面版支持的浏览器打开 index.html 文件，或者在移动端浏览器直接导向 <a href="http://mdn.github.io/web-speech-api/speak-easy-synthesis/">live demo URL</a> ，像 Chrome和Firefox OS。</p>
+<p>想跑这个例子，你可以 git clone Github 仓库中的部分 (或者<a href="https://github.com/mdn/web-speech-api/archive/master.zip">直接下载</a>)，在桌面版支持的浏览器打开 index.html 文件，或者在移动端浏览器直接导向 <a href="http://mdn.github.io/web-speech-api/speak-easy-synthesis/">live demo URL</a> ，像 Chrome 和 Firefox OS。</p>
 
 <h3 id="浏览器支持_2">浏览器支持</h3>
 
@@ -208,19 +208,19 @@ document.body.onclick = function() {
 
 <ul>
  <li>
-  <p>Firefox 桌面版和移动版在 Gecko 42+(Windows)/44+支持，但是没有前缀，可以通过将<code>media.webspeech.synth.enabled</code>标志在<code>about:config</code>中转为<code>true</code>来启用。</p>
+  <p>Firefox 桌面版和移动版在 Gecko 42+(Windows)/44+ 支持，但是没有前缀，可以通过将<code>media.webspeech.synth.enabled</code>标志在<code>about:config</code>中转为<code>true</code>来启用。</p>
  </li>
  <li>
   <p>Firefox OS 2.5+ 支持，但是默认的，不需要任何权限。</p>
  </li>
  <li>
-  <p>Chrome 桌面版和安卓版自33版以来都支持，但是没有前缀</p>
+  <p>Chrome 桌面版和安卓版自 33 版以来都支持，但是没有前缀</p>
  </li>
 </ul>
 
 <h3 id="HTML_和_CSS_2">HTML 和 CSS</h3>
 
-<p>HTML和CSS还是无足轻重，只是简单包含一个标题，一段介绍文字，以及一个表格带有一些简单控制功能。<code>&lt;select&gt;</code> 元素初始时空的，之后会用 js使用<code>&lt;option&gt;</code> 填充。</p>
+<p>HTML 和 CSS 还是无足轻重，只是简单包含一个标题，一段介绍文字，以及一个表格带有一些简单控制功能。<code>&lt;select&gt;</code> 元素初始时空的，之后会用 js 使用<code>&lt;option&gt;</code> 填充。</p>
 
 <pre class="brush: html">&lt;h1&gt;Speech synthesiser&lt;/h1&gt;
 
@@ -245,11 +245,11 @@ document.body.onclick = function() {
 
 <h3 id="JavaScript_2">JavaScript</h3>
 
-<p>让我们看看js在这个app中的强大表现。</p>
+<p>让我们看看 js 在这个 app 中的强大表现。</p>
 
 <h4 id="设置变量">设置变量</h4>
 
-<p>首先我们获得UI中涉及的DOM元素的引用，但更有趣的是，我们获得了<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/speechSynthesis"><code>Window.speechSynthesis</code></a> 的引用。这是API的入口点——它返回了<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis"><code>SpeechSynthesis</code></a> 的一个实例，对于 web语音合成的控制接口。</p>
+<p>首先我们获得 UI 中涉及的 DOM 元素的引用，但更有趣的是，我们获得了<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/speechSynthesis"><code>Window.speechSynthesis</code></a> 的引用。这是 API 的入口点——它返回了<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis"><code>SpeechSynthesis</code></a> 的一个实例，对于 web 语音合成的控制接口。</p>
 
 <pre class="brush: js">var synth = window.speechSynthesis;
 
@@ -267,7 +267,7 @@ var voices = [];
 
 <h4 id="填充_select_元素">填充 select 元素</h4>
 
-<p>为使用设备可使用的不同的语音选项填充<code>&lt;select&gt;</code>元素，我们写了<code>populateVoiceList()</code> 方法。首先调用<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices"><code>SpeechSynthesis.getVoices()</code></a> ，这个函数返回包含所有可用语音(<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice"><code>SpeechSynthesisVoice</code></a>对象)的列表。接下来循环这个列表，每次创建一个<code>&lt;option&gt;</code> 元素，设置它的文本内容以显示声音的名称（从<code>SpeechSynthesisVoice.name</code>获取），语音的语言（从<code>SpeechSynthesisVoice.lang</code>获取），如果某个语音是合成引擎默认的(检查<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/default"><code>SpeechSynthesisVoice.default</code></a>属性返回<code>true</code>) 在文本内容后面添加<code>-- DEFAULT</code>。</p>
+<p>为使用设备可使用的不同的语音选项填充<code>&lt;select&gt;</code>元素，我们写了<code>populateVoiceList()</code> 方法。首先调用<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices"><code>SpeechSynthesis.getVoices()</code></a> ，这个函数返回包含所有可用语音 (<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice"><code>SpeechSynthesisVoice</code></a>对象) 的列表。接下来循环这个列表，每次创建一个<code>&lt;option&gt;</code> 元素，设置它的文本内容以显示声音的名称（从<code>SpeechSynthesisVoice.name</code>获取），语音的语言（从<code>SpeechSynthesisVoice.lang</code>获取），如果某个语音是合成引擎默认的 (检查<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/default"><code>SpeechSynthesisVoice.default</code></a>属性返回<code>true</code>) 在文本内容后面添加<code>-- DEFAULT</code>。</p>
 
 <p>对于每个<code>option</code>元素，我们也创建了<code>data-</code> 属性，属性值是语音的名字和语言，这样在之后我们可以轻松获取这个信息。之后把所有的<code>option</code>元素作为孩子添加到<code>select</code> 元素。</p>
 
@@ -288,7 +288,7 @@ var voices = [];
   }
 }</pre>
 
-<p>接下来是运行这个函数，我们做如下代码工作。因为Firefox不支持<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/onvoiceschanged"><code>SpeechSynthesis.onvoiceschanged</code></a> ，所以很常规地只是返回语音对象列表当<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices"><code>SpeechSynthesis.getVoices()</code></a> 被触发。但是 Chrome 就有点不同了，在<code>SpeechSynthesis.getVoices()</code> 被触发时，先要等待事件触发(有点绕~按照下面代码，<code>populateVoiceList</code> 函数在Firefox运行一次，在Chrome中运行两次)：</p>
+<p>接下来是运行这个函数，我们做如下代码工作。因为 Firefox 不支持<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/onvoiceschanged"><code>SpeechSynthesis.onvoiceschanged</code></a> ，所以很常规地只是返回语音对象列表当<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices"><code>SpeechSynthesis.getVoices()</code></a> 被触发。但是 Chrome 就有点不同了，在<code>SpeechSynthesis.getVoices()</code> 被触发时，先要等待事件触发 (有点绕~按照下面代码，<code>populateVoiceList</code> 函数在 Firefox 运行一次，在 Chrome 中运行两次)：</p>
 
 <pre class="brush: js">populateVoiceList();
 if (speechSynthesis.onvoiceschanged !== undefined) {
@@ -297,7 +297,7 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 
 <h4 id="说出输入的文本">说出输入的文本</h4>
 
-<p>接下来我们创建一个事件处理器(handler)，开始说出在文本框中输入的文本。我们把<code>onsubmit</code> 处理器挂在表单上，当<code>Enter/Return</code> 被按下，对应行为就会发生。我们首先通过构造函数创建一个新的<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance"><code>SpeechSynthesisUtterance()</code></a> 实例——把文本输入框中的值作为参数传递。</p>
+<p>接下来我们创建一个事件处理器 (handler)，开始说出在文本框中输入的文本。我们把<code>onsubmit</code> 处理器挂在表单上，当<code>Enter/Return</code> 被按下，对应行为就会发生。我们首先通过构造函数创建一个新的<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance"><code>SpeechSynthesisUtterance()</code></a> 实例——把文本输入框中的值作为参数传递。</p>
 
 <p>接下来，我们需要弄清楚使用哪种语音。使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement"><code>HTMLSelectElement</code></a> <code>selectedOptions</code> 属性返回当前选中的 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option"><code>&lt;option&gt;</code></a> 元素。然后使用元素的<code>data-name</code>属性，找到 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice"><code>SpeechSynthesisVoice</code></a> 对象的<code>name</code>匹配<code>data-name</code> 的值。把匹配的语音对象设置为<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/voice"><code>SpeechSynthesisUtterance.voice</code></a> 的属性值。</p>
 
@@ -325,14 +325,14 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
     event.utterance.text + '", which is "' + char + '".');
   }</pre>
 
-<p>最后，我们在文本输入框添加了 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/blur">blur()</a> 方法。这主要是在Firefox操作系统上隐藏键盘</p>
+<p>最后，我们在文本输入框添加了 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/blur">blur()</a> 方法。这主要是在 Firefox 操作系统上隐藏键盘</p>
 
 <pre class="brush: js">  inputTxt.blur();
 }</pre>
 
 <h4 id="Updating_the_displayed_pitch_and_rate_values">Updating the displayed pitch and rate values</h4>
 
-<p>代码的最后部分，在每次滑动条移动时，简单地更新<code>pitch/rate</code>在UI中展示的值。</p>
+<p>代码的最后部分，在每次滑动条移动时，简单地更新<code>pitch/rate</code>在 UI 中展示的值。</p>
 
 <pre class="brush: js">pitch.onchange = function() {
   pitchValue.textContent = pitch.value;

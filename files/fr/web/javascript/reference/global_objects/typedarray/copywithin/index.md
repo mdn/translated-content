@@ -18,7 +18,9 @@ La méthode **`copyWithin()`** permet de copier des éléments d'un tableau dans
 
 ## Syntaxe
 
-    typedarray.copyWithin(cible, début[, fin = this.length])
+```js
+typedarray.copyWithin(cible, début[, fin = this.length])
+```
 
 ### Paramètres
 

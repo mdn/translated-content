@@ -18,7 +18,9 @@ Un **`XSLTProcessor`** applique une transformation de feuille de style [XSLT](/e
 
 Le constructeur n'a pas de paramètre.
 
-    new XSLTProcessor()
+```
+new XSLTProcessor()
+```
 
 ## Méthodes
 
@@ -68,9 +70,9 @@ Les propriétés suivantes sont [`[ChromeOnly]`](/en-US/docs/Mozilla/WebIDL_bind
 
 ## Exemples
 
-1.  [Exemple simple](/fr-FR/docs/XSLT/XSLT_JS_Interface_in_Gecko/Basic_Example)
-2.  [Exemple avancé](/fr-FR/docs/XSLT/XSLT_JS_Interface_in_Gecko/Advanced_Example)
-3.  [Exemple additionnel](/fr-FR/docs/XSLT/XSLT_JS_Interface_in_Gecko/JavaScript_XSLT_Bindings)
+1. [Exemple simple](/fr-FR/docs/XSLT/XSLT_JS_Interface_in_Gecko/Basic_Example)
+2. [Exemple avancé](/fr-FR/docs/XSLT/XSLT_JS_Interface_in_Gecko/Advanced_Example)
+3. [Exemple additionnel](/fr-FR/docs/XSLT/XSLT_JS_Interface_in_Gecko/JavaScript_XSLT_Bindings)
 
 ## Spécifications
 

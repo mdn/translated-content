@@ -11,7 +11,7 @@ translation_of: Web/API/WebGLRenderingContext/blendEquation
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.blendEquation()</code></strong> 方法用于将RGB混合方程和阿尔法混合方程设置为单个方程。</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.blendEquation()</code></strong> 方法用于将 RGB 混合方程和阿尔法混合方程设置为单个方程。</p>
 
 <p>混合方程式确定新像素如何与 {{domxref("WebGLFramebuffer")}} 中的像素组合。</p>
 
@@ -26,7 +26,7 @@ translation_of: Web/API/WebGLRenderingContext/blendEquation
  <dt><code>mode</code></dt>
  <dd>{{domxref("GLenum")}} 指定源和目标颜色的组合方式。 必须是：
  <ul>
-  <li><code>gl.FUNC_ADD</code>: 源+目的地（默认值），</li>
+  <li><code>gl.FUNC_ADD</code>: 源 + 目的地（默认值），</li>
   <li><code>gl.FUNC_SUBTRACT</code>: 源 - 目的地，</li>
   <li><code>gl.FUNC_REVERSE_SUBTRACT</code>: 目的地 - 源</li>
   <li>当使用 {{domxref("EXT_blend_minmax")}} 扩展名时：
@@ -35,7 +35,7 @@ translation_of: Web/API/WebGLRenderingContext/blendEquation
     <li><code>ext.MAX_EXT</code>: 最大源和目的地。</li>
    </ul>
   </li>
-  <li>当使用 {{domxref("WebGL2RenderingContex","WebGL 2上下文","",1)}} 时，可以使用以下值：
+  <li>当使用 {{domxref("WebGL2RenderingContex","WebGL 2 上下文","",1)}} 时，可以使用以下值：
    <ul>
     <li><code>gl.MIN</code>: 最小的源和目的地，</li>
     <li><code>gl.MAX</code>: 最大源和目的地。</li>
@@ -47,7 +47,7 @@ translation_of: Web/API/WebGLRenderingContext/blendEquation
 
 <h3 id="异常">异常</h3>
 
-<p>如果模式不是三个可能的值之一，则会抛出gl.INVALID_ENUM错误。</p>
+<p>如果模式不是三个可能的值之一，则会抛出 gl.INVALID_ENUM 错误。</p>
 
 <h3 id="返回值">返回值</h3>
 

@@ -5,13 +5,13 @@ translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<div>只读的 <span class="seoSummary"><strong>{{domxref("RTCPeerConnection")}}</strong></span> 属性 <code>canTrickleIceCandidates</code> 返回一个{{jsxref("Boolean")}}，它指示远程对等端是否可以接受 <a href="https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice-02">trickled ICE candidates</a> 。<br>
+<div>只读的 <strong>{{domxref("RTCPeerConnection")}}</strong> 属性 <code>canTrickleIceCandidates</code> 返回一个{{jsxref("Boolean")}}，它指示远程对等端是否可以接受 <a href="https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice-02">trickled ICE candidates</a> 。<br>
 <br>
-<strong>ICE trickling</strong><span class="tlid-translation translation" lang="zh-CN"><span title="">是在初始发送或回应已经发送给其他设备之后继续发送候选的过程。</span><br>
+<strong>ICE trickling</strong>是在初始发送或回应已经发送给其他设备之后继续发送候选的过程。<br>
 <br>
-<span title="">仅在调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}之后才设置此属性。</span> <span title="">理想情况下，您的信令协议提供了一种检测滴流支持的方法，因此您无需依赖此属性。</span> <span title="">WebRTC浏览器将始终支持</span></span>trickle ICE<span class="tlid-translation translation" lang="zh-CN"><span title="">。</span> <span title="">如果不支持滴流，或者您无法辨别，则可以检查此属性的伪值，然后等待{{domxref("RTCPeerConnection.iceGatheringState","iceGatheringState")}}的值更改</span><span title="">在创建和发送之前“完成”。</span></span></div>
+仅在调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}之后才设置此属性。 理想情况下，您的信令协议提供了一种检测滴流支持的方法，因此您无需依赖此属性。 WebRTC 浏览器将始终支持 trickle ICE。 如果不支持滴流，或者您无法辨别，则可以检查此属性的伪值，然后等待{{domxref("RTCPeerConnection.iceGatheringState","iceGatheringState")}}的值更改在创建和发送之前“完成”。</div>
 
-<div><span class="tlid-translation translation" lang="zh-CN"><span title="">这样，发送信息包含所有候选。</span></span></div>
+<div>这样，发送信息包含所有候选。</div>
 
 
 
@@ -21,10 +21,10 @@ translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 
 <h3 id="值">值</h3>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">{{jsxref("Boolean")}}　如果远程对等体可以接受滴入的</span></span>ICE candidate<span class="tlid-translation translation" lang="zh-CN"><span title="">，则为true;如果不能，则为false。</span> <span title="">如果尚未建立远程对等方，则此值为null。</span></span></p>
+<p>{{jsxref("Boolean")}} 如果远程对等体可以接受滴入的 ICE candidate，则为 true;如果不能，则为 false。 如果尚未建立远程对等方，则此值为 null。</p>
 
 <div class="note">
-<p><strong>Note:</strong> <span class="tlid-translation translation" lang="zh-CN"><span title="">一旦本地对等方调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}，就确定该属性的值;</span> <span title="">ICE代理使用所提供的描述来确定远程对等体是否支持滴入的</span></span>ICE candidates<span class="tlid-translation translation" lang="zh-CN"><span title="">。</span></span></p>
+<p><strong>Note:</strong> 一旦本地对等方调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}，就确定该属性的值; ICE 代理使用所提供的描述来确定远程对等体是否支持滴入的 ICE candidates。</p>
 </div>
 
 <h2 id="用例">用例</h2>
@@ -61,7 +61,7 @@ pc.addEventListener('icecandidate', e =&gt; {
  <tbody>
   <tr class="gt-baf-entry">
    <td>
-    <h2 class="gt-baf-cell gt-baf-term-text-parent" id="规范"><span class="gt-baf-term-text"><span class="gt-baf-cell gt-baf-word-clickable">规范</span></span></h2>
+    <h2 class="gt-baf-cell gt-baf-term-text-parent" id="规范">规范</h2>
    </td>
    <td>
     <div class="gt-baf-cell gt-baf-translations gt-baf-translations-mobile"></div>
@@ -87,7 +87,7 @@ pc.addEventListener('icecandidate', e =&gt; {
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性"><span class="tlid-translation translation" lang="zh-CN"><span title="">浏览器兼容性</span></span></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 
 

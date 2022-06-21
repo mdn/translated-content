@@ -107,6 +107,7 @@ box.ontransitionend = function(event) {
 ## 浏览器兼容性
 
 {{Compat}}
+
 ## 参见
 
 - 触发此事件处理函数的 {{event("transitionend")}} 事件。

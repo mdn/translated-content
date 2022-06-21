@@ -12,18 +12,18 @@ translation_of: Web/API/Performance/now
 <p><code><strong>performance.now()</strong></code>方法返回一个精确到毫秒的  {{domxref("DOMHighResTimeStamp")}} 。</p>
 
 <div class="warning">
-<p>这个时间戳实际上并不是高精度的。为了降低像<a href="https://spectreattack.com/">Spectre</a>这样的安全威胁，各类浏览器对该类型的值做了不同程度上的四舍五入处理。（Firefox从Firefox 59开始四舍五入到2毫秒精度）一些浏览器还可能对这个值作稍微的随机化处理。这个值的精度在未来的版本中可能会再次改善；浏览器开发者还在调查这些时间测定攻击和如何更好的缓解这些攻击。</p>
+<p>这个时间戳实际上并不是高精度的。为了降低像<a href="https://spectreattack.com/">Spectre</a>这样的安全威胁，各类浏览器对该类型的值做了不同程度上的四舍五入处理。（Firefox 从 Firefox 59 开始四舍五入到 2 毫秒精度）一些浏览器还可能对这个值作稍微的随机化处理。这个值的精度在未来的版本中可能会再次改善；浏览器开发者还在调查这些时间测定攻击和如何更好的缓解这些攻击。</p>
 </div>
 
 <p>{{AvailableInWorkers}}</p>
 
 <p>返回值表示为从<a href="/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>之后到当前调用时经过的时间</p>
 
-<p>牢记如下几点:</p>
+<p>牢记如下几点：</p>
 
 <ul>
- <li>在以{{domxref("Window")}}上下文创建各个worker中，<code>performance.now()</code>的值要比在创建这些worker的window中的小。它原来等于main上下文的<code>t0</code>，但是现在不是了。</li>
- <li>在共享worker或服务worker中，在worker中的值可能要比main上下文中高，因为window对象可能在这些worker之后创建。</li>
+ <li>在以{{domxref("Window")}}上下文创建各个 worker 中，<code>performance.now()</code>的值要比在创建这些 worker 的 window 中的小。它原来等于 main 上下文的<code>t0</code>，但是现在不是了。</li>
+ <li>在共享 worker 或服务 worker 中，在 worker 中的值可能要比 main 上下文中高，因为 window 对象可能在这些 worker 之后创建。</li>
 </ul>
 
 <h2 id="语法">语法</h2>
@@ -36,17 +36,17 @@ translation_of: Web/API/Performance/now
 <pre class="brush: js notranslate">const t0 = window.performance.now();
 doSomething();
 const t1 = window.performance.now();
-console.log("doSomething函数执行了" + (t1 - t0) + "毫秒.")
+console.log("doSomething 函数执行了" + (t1 - t0) + "毫秒.")
 </pre>
 
-<p>和JavaScript中其他可用的时间类函数（比如<code><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/now" title="/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/now">Date.now</a></code>）不同的是，<code>window.performance.now()</code>返回的时间戳没有被限制在一毫秒的精确度内，相反，它们以浮点数的形式表示时间，精度最高可达微秒级。</p>
+<p>和 JavaScript 中其他可用的时间类函数（比如<code><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/now" title="/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/now">Date.now</a></code>）不同的是，<code>window.performance.now()</code>返回的时间戳没有被限制在一毫秒的精确度内，相反，它们以浮点数的形式表示时间，精度最高可达微秒级。</p>
 
-<p>另外一个不同点是，<code>window.performance.now()</code>是以一个恒定的速率慢慢增加的，它不会受到系统时间的影响（系统时钟可能会被手动调整或被NTP等软件篡改）。另外，<code>performance.timing.navigationStart + performance.now()</code> 约等于 <code>Date.now()</code>。</p>
+<p>另外一个不同点是，<code>window.performance.now()</code>是以一个恒定的速率慢慢增加的，它不会受到系统时间的影响（系统时钟可能会被手动调整或被 NTP 等软件篡改）。另外，<code>performance.timing.navigationStart + performance.now()</code> 约等于 <code>Date.now()</code>。</p>
 
 <h2 id="时间精度降低">时间精度降低</h2>
 
-<p>为了提供对定时攻击和指纹的保护，performance.now()的精度可能会根据浏览器的设置而被舍弃。<br>
- 在Firefox中，privacy.reduceTimerPrecision偏好是默认启用的，默认值为1ms。</p>
+<p>为了提供对定时攻击和指纹的保护，performance.now() 的精度可能会根据浏览器的设置而被舍弃。<br>
+ 在 Firefox 中，privacy.reduceTimerPrecision 偏好是默认启用的，默认值为 1ms。</p>
 
 <pre class="notranslate">// 降低时间精度 (1ms) 在 Firefox 60
 performance.now();
@@ -63,14 +63,14 @@ performance.now();
 // 8866700
 // ...</pre>
 
-<p>在Firefox中，您还可以启用 <code>privacy.resistFingerprinting</code> 这将精度改为100ms或<code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code> 的值，以较大者为准。</p>
+<p>在 Firefox 中，您还可以启用 <code>privacy.resistFingerprinting</code> 这将精度改为 100ms 或<code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code> 的值，以较大者为准。</p>
 
-<p>从Firefox 79开始，如果您使用{{HTTPHeader("Cross-Origin-Opener-Policy")}}和{{HTTPHeader("Cross-Origin-Embedder-Policy")}}头来跨源隔离您的文档，就可以使用高分辨率定时器。</p>
+<p>从 Firefox 79 开始，如果您使用{{HTTPHeader("Cross-Origin-Opener-Policy")}}和{{HTTPHeader("Cross-Origin-Embedder-Policy")}}头来跨源隔离您的文档，就可以使用高分辨率定时器。</p>
 
 <pre class="notranslate">Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp</pre>
 
-<p>这些头确保顶层文档不会与跨源文档共享浏览上下文组。COOP过程--隔离你的文档，潜在的攻击者如果在弹出窗口中打开你的全局对象，就无法访问它，从而防止一组被称为 <a href="https://github.com/xsleaks/xsleaks">XS-Leaks</a> 的跨源攻击。</p>
+<p>这些头确保顶层文档不会与跨源文档共享浏览上下文组。COOP 过程 -- 隔离你的文档，潜在的攻击者如果在弹出窗口中打开你的全局对象，就无法访问它，从而防止一组被称为 <a href="https://github.com/xsleaks/xsleaks">XS-Leaks</a> 的跨源攻击。</p>
 
 <h2 id="规范">规范</h2>
 

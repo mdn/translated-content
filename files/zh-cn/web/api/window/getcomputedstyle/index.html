@@ -11,7 +11,7 @@ translation_of: Web/API/Window/getComputedStyle
 
 <h2 id="摘要">摘要</h2>
 
-<p><code>Window.getComputedStyle()</code>方法返回一个对象，该对象在应用活动样式表并解析这些值可能包含的任何基本计算后报告元素的所有CSS属性的值。 私有的CSS属性值可以通过对象提供的API或通过简单地使用CSS属性名称进行索引来访问。</p>
+<p><code>Window.getComputedStyle()</code>方法返回一个对象，该对象在应用活动样式表并解析这些值可能包含的任何基本计算后报告元素的所有 CSS 属性的值。 私有的 CSS 属性值可以通过对象提供的 API 或通过简单地使用 CSS 属性名称进行索引来访问。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/Window/getComputedStyle
  <dd>指定一个要匹配的伪元素的字符串。必须对普通元素省略（或<code>null</code>）。</dd>
 </dl>
 
-<div class="note">注意：在Gecko2.0<span style="line-height: 1.5;"> {{geckoRelease("2.0")}}之前版本，参数pseudoElt是必要的。</span>如果为null，则不指定其他主要浏览器必须指定此参数。<span style="line-height: 1.5;">Gecko</span>已经更改为匹配其他浏览器的行为。<span style="line-height: 1.5;">。</span></div>
+<div class="note">注意：在 Gecko2.0 {{geckoRelease("2.0")}}之前版本，参数 pseudoElt 是必要的。如果为 null，则不指定其他主要浏览器必须指定此参数。Gecko 已经更改为匹配其他浏览器的行为。。</div>
 
 <p>返回的<code>style</code>是一个实时的 {{domxref("CSSStyleDeclaration")}} 对象，当元素的样式更改时，它会自动更新本身。</p>
 
@@ -82,15 +82,15 @@ let style = window.getComputedStyle(elem1, null);
 
 <p>返回的对象与从元素的 {{domxref("HTMLElement.style", "style")}}  属性返回的对象具有相同的类型;然而，两个对象具有不同的目的。从<code>getComputedStyle</code>返回的对象是只读的，可以用于检查元素的样式（包括由一个<code>&lt;style&gt;</code>元素或一个外部样式表设置的那些样式）。<code>elt.style</code>对象应用于在特定元素上设置样式。</p>
 
-<p>第一个参数必须是Element对象(传递一个非节点元素，如 一个#text 节点， 将会抛出一个错误). 从Gecko 1.9.2   {{geckoRelease("1.9.2")}} 开始, 现在返回的一个在URL周围有引号的URL值，像这样： <code>url("http://foo.com/bar.jpg")</code>.</p>
+<p>第一个参数必须是 Element 对象 (传递一个非节点元素，如 一个#text 节点， 将会抛出一个错误). 从 Gecko 1.9.2   {{geckoRelease("1.9.2")}} 开始，现在返回的一个在 URL 周围有引号的 URL 值，像这样： <code>url("http://foo.com/bar.jpg")</code>.</p>
 
 <h2 id="defaultView"><code>defaultView</code></h2>
 
-<p>在许多在线的演示代码中，<code>getComputedStyle</code>是通过 <code>document.defaultView</code> 对象来调用的。大部分情况下，这是不需要的，因为可以直接通过<code>window</code>对象调用。但有一种情况，你必需要使用 <code>defaultView</code>,  那是在firefox3.6上访问子框架内的样式 。</p>
+<p>在许多在线的演示代码中，<code>getComputedStyle</code>是通过 <code>document.defaultView</code> 对象来调用的。大部分情况下，这是不需要的，因为可以直接通过<code>window</code>对象调用。但有一种情况，你必需要使用 <code>defaultView</code>,  那是在 firefox3.6 上访问子框架内的样式 。</p>
 
 <h2 id="与伪元素一起使用">与伪元素一起使用</h2>
 
-<p>getComputedStyle 可以从<strong>伪元素</strong>拉取样式信息 (比如, <code>::after</code>, <code>::before</code>, <code>::marker</code>, <code>::line-marker</code>—查看 <a class="external" href="http://dev.w3.org/csswg/css3-content/#pseudo-elements">详情</a> 这里).</p>
+<p>getComputedStyle 可以从<strong>伪元素</strong>拉取样式信息 (比如，<code>::after</code>, <code>::before</code>, <code>::marker</code>, <code>::line-marker</code>—查看 <a class="external" href="http://dev.w3.org/csswg/css3-content/#pseudo-elements">详情</a> 这里).</p>
 
 <pre class="brush: html">&lt;style&gt;
     h3::after {
@@ -114,21 +114,21 @@ let style = window.getComputedStyle(elem1, null);
 
 <p> </p>
 
-<p>返回的{{domxref("CSSStyleDeclaration")}}对象将包含所有受支持的CSS属性长名称的活动值。示例名称是<code>border-bottom-width</code>，<code>border-width</code>和<code>border</code>是示例速记属性名称。仅使用像<code>font-size</code>这样的名字来查询值是最安全的。 查询诸如<code>font</code>等简写名称不适用于大多数浏览器。</p>
+<p>返回的{{domxref("CSSStyleDeclaration")}}对象将包含所有受支持的 CSS 属性长名称的活动值。示例名称是<code>border-bottom-width</code>，<code>border-width</code>和<code>border</code>是示例速记属性名称。仅使用像<code>font-size</code>这样的名字来查询值是最安全的。 查询诸如<code>font</code>等简写名称不适用于大多数浏览器。</p>
 
-<p>CSS规范也允许使用驼峰命名，比如<code>fontSize</code>或<code>paddingTop</code>。</p>
+<p>CSS 规范也允许使用驼峰命名，比如<code>fontSize</code>或<code>paddingTop</code>。</p>
 
-<p>CSS属性值可以使用<code>getPropertyValue(propName)</code>API或直接索引到对象，如<code>cs ['z-index']</code>或<code>cs.zIndex</code>。</p>
+<p>CSS 属性值可以使用<code>getPropertyValue(propName)</code>API 或直接索引到对象，如<code>cs ['z-index']</code>或<code>cs.zIndex</code>。</p>
 
 <p> </p>
 
-<p><code>getComputedStyle</code>的返回值是 {{cssxref("resolved_value", "resolved values")}},  通常跟CSS2.1中的{{cssxref("computed_value","computed values")}}是相同的值。 但对于一些旧的属性，比如<code>width</code>, <code>height</code>, <code>padding </code>它们的值又为 {{cssxref("used_value","used values")}}。 最初, CSS2.0定义的计算值Computed values 就是属性的最终值。 但是CSS2.1 重新定义了 computed values 为布局前的值， used values布局后的值。 布局前与布局后的区别是， width 或者 height的 百分比可以代表元素的宽度，在布局后会被像素值替换.</p>
+<p><code>getComputedStyle</code>的返回值是 {{cssxref("resolved_value", "resolved values")}},  通常跟 CSS2.1 中的{{cssxref("computed_value","computed values")}}是相同的值。 但对于一些旧的属性，比如<code>width</code>, <code>height</code>, <code>padding </code>它们的值又为 {{cssxref("used_value","used values")}}。 最初，CSS2.0 定义的计算值 Computed values 就是属性的最终值。 但是 CSS2.1 重新定义了 computed values 为布局前的值， used values 布局后的值。 布局前与布局后的区别是， width 或者 height 的 百分比可以代表元素的宽度，在布局后会被像素值替换。</p>
 
-<p>在某些情况下，通过浏览器会特意返回不准确的值。 特别是在避免CSS 浏览历史泄露的安全问题， 比如，浏览者看过某个网站， 它的链接通常会变成蓝色带下划线的链接，通过判断链接的颜色（getComputedSytle(node, null).color) 是否为蓝色，就会泄露用户的浏览历史， 所以浏览器会特意返回不准确的值，保护用户隐私。可以了解更多关于css安全的链接<a class="external" href="http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/">http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/</a> 和 <a class="external" href="http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/">http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/</a></p>
+<p>在某些情况下，通过浏览器会特意返回不准确的值。 特别是在避免 CSS 浏览历史泄露的安全问题， 比如，浏览者看过某个网站， 它的链接通常会变成蓝色带下划线的链接，通过判断链接的颜色（getComputedSytle(node, null).color) 是否为蓝色，就会泄露用户的浏览历史， 所以浏览器会特意返回不准确的值，保护用户隐私。可以了解更多关于 css 安全的链接<a class="external" href="http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/">http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/</a> 和 <a class="external" href="http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/">http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/</a></p>
 
-<p>在CSS过渡期间，<code>getComputedStyle</code>返回Firefox中的原始属性值，但返回WebKit中的最终属性值。</p>
+<p>在 CSS 过渡期间，<code>getComputedStyle</code>返回 Firefox 中的原始属性值，但返回 WebKit 中的最终属性值。</p>
 
-<p>在Firefox中，属性值为<code>auto</code>的会直接返回使用值，而不是<code>auto</code>。比如，你在设定了一个元素的css为<code>height:30px; top: auto; bottom:0;</code>它的父元素<code>height:100px;</code>，在请求<code>top</code>的计算样式时，Firefox会返回<code>'70px' = 100px - 30px;</code>。</p>
+<p>在 Firefox 中，属性值为<code>auto</code>的会直接返回使用值，而不是<code>auto</code>。比如，你在设定了一个元素的 css 为<code>height:30px; top: auto; bottom:0;</code>它的父元素<code>height:100px;</code>，在请求<code>top</code>的计算样式时，Firefox 会返回<code>'70px' = 100px - 30px;</code>。</p>
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 

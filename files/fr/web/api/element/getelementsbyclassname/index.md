@@ -18,7 +18,9 @@ La méthode **`Element.getElementsByClassName()`** retourne une {{domxref("HTMLC
 
 ## Syntaxe
 
-    var elements = element.getElementsByClassName(names);
+```js
+var elements = element.getElementsByClassName(names);
+```
 
 - **elements** est une {{ domxref("HTMLCollection") }} de référence vers les élements trouvés.
 - **names** est une chaine représentant la liste des noms de classes à trouver; les noms de classes sont séparés par un espace.

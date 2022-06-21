@@ -6,7 +6,7 @@ original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
 ---
 <p>{{APIRef("Shadow DOM")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">{{domxref("DocumentOrShadowRoot")}} 接口的 <strong><code>elementFromPoint()</code></strong> 方法返回给定坐标点下最上层的 {{domxref('element')}} 元素。 </span></p>
+<p>{{domxref("DocumentOrShadowRoot")}} 接口的 <strong><code>elementFromPoint()</code></strong> 方法返回给定坐标点下最上层的 {{domxref('element')}} 元素。 </p>
 
 <p>If the element at the specified point belongs to another document (for example, an iframe's subdocument), the subdocument's parent element is returned (the iframe itself). If the element at the given point is anonymous or XBL generated content, such as a textbox's scroll bars, then the first non-anonymous ancestor element (for example, the textbox) is returned.</p>
 
@@ -62,25 +62,8 @@ function changeColor(newColor) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shadow DOM','#extensions-to-the-documentorshadowroot-mixin','DocumentOrShadowRoot')}}</td>
-   <td>{{Spec2('Shadow DOM')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_Compatibility">Browser Compatibility</h2>
 
-<div>
-
-
-<p>{{Compat("api.DocumentOrShadowRoot.elementFromPoint")}}</p>
-</div>
+{{Compat}}

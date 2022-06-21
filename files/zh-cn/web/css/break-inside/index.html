@@ -5,7 +5,7 @@ tags:
   - CSS
 translation_of: Web/CSS/break-inside
 ---
-<div>{{CSSRef}}{{Draft}}</div>
+<div>{{CSSRef}}</div>
 
 <p><strong><code>break-inside</code></strong> <a href="/en-US/docs/CSS">CSS</a> 属性描述了在多列布局页面下的内容盒子如何中断，如果多列布局没有内容盒子，这个属性会被忽略。</p>
 
@@ -16,13 +16,13 @@ break-inside: avoid-column;
 break-inside: avoid-region;
 </pre>
 
-<p>在每一个元素的边界，都可能生成一个中断点，这些中断点由三个属性来定义。{{cssxref("break-after")}} 属性定义之前元素的中断点，{{cssxref("break-before")}} 定义了之后元素的中断点， <strong><code>break-inside</code></strong> 定义了当前元素的中断点。</p>
+<p>每一个可能的断点（可以理解为元素的边界）由三个属性来定义。前一个元素的{{cssxref("break-after")}}，后一个元素的{{cssxref("break-before")}}，以及当前元素的<strong><code>break-inside</code></strong>。</p>
 
-<p>如果需要定义一个中断点，必须遵循以下原则:</p>
+<p>如果需要定义一个中断点，必须遵循以下原则：</p>
 
 <ol>
  <li>如果这三个中断属性的值有一个是<em>强制中断值</em>（这些强制中断值包括了 <code>always</code>, <code>left</code>, <code>right</code>, <code>page</code>, <code>column</code>, <code>region</code>），那么这个属性的值就具有优先权。如果其中一个以上是这样的断点，则使用流中最新出现的元素的值。因此，<code>break-before</code>值优先于<code>break-after</code>值，而后者又优先于<code>break-inside</code>值。</li>
- <li>如果三个相关值中的任何一个是避免中断值, 相关值包括 <code>avoid</code>, <code>avoid-page</code>, <code>avoid-region</code>, <code>avoid-column</code>, 则在该点上不应用此类中断。</li>
+ <li>如果三个相关值中的任何一个是避免中断值，相关值包括 <code>avoid</code>, <code>avoid-page</code>, <code>avoid-region</code>, <code>avoid-column</code>, 则在该点上不应用此类中断。</li>
 </ol>
 
 <p>一旦应用了强制中断，如果需要，可以添加软中断，但不能在元素边界上添加相应的<code>avoid</code>值。</p>
@@ -35,7 +35,7 @@ break-inside: avoid-region;
 
 <dl>
  <dt><code>auto</code></dt>
- <dd>允许(既不禁止也不强制)在主框中插入任何中断(页、列或区域)。</dd>
+ <dd>允许 (既不禁止也不强制) 在主框中插入任何中断 (页、列或区域)。</dd>
  <dt><code>avoid-page</code></dt>
  <dd>避免主框中任何页的中断点</dd>
  <dt><code>avoid-column</code></dt>

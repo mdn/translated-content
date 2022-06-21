@@ -39,12 +39,12 @@ translation_of: Web/API/CSSStyleDeclaration
  <dt>{{domxref("CSSStyleDeclaration.getPropertyValue()")}}</dt>
  <dd>返回给定属性的值。</dd>
  <dt>{{domxref("CSSStyleDeclaration.item()")}}</dt>
- <dd>返回用index标记的属性名，当index越界时返回空字符串。</dd>
- <dd>另一个可选方案：使用nodeList[<var>i</var>]（在i越界时返回 undefined）获取。通常在非JavaScript Dom 实现方案是很有用。</dd>
+ <dd>返回用 index 标记的属性名，当 index 越界时返回空字符串。</dd>
+ <dd>另一个可选方案：使用 nodeList[<var>i</var>]（在 i 越界时返回 undefined）获取。通常在非 JavaScript Dom 实现方案是很有用。</dd>
  <dt>{{domxref("CSSStyleDeclaration.removeProperty()")}}</dt>
  <dd>从 CSS 声明块中删除属性。</dd>
  <dt>{{domxref("CSSStyleDeclaration.setProperty()")}}</dt>
- <dd>在CSS声明块中修改现有属性或设置新属性。</dd>
+ <dd>在 CSS 声明块中修改现有属性或设置新属性。</dd>
  <dt>{{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{obsolete_inline}}</dt>
  <dd><strong>仅在火狐浏览器中支持 getComputedStyle.</strong> 返回 {{ domxref("CSSPrimitiveValue") }} or <code>null</code> for <a href="/en-US/docs/Web/CSS/Shorthand_properties" title="en/Guide to Shorthand CSS">shorthand properties</a>.</dd>
 </dl>
@@ -63,27 +63,7 @@ console.log(styleObj.cssText);</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM', '#the-cssstyledeclaration-interface', 'CSSStyleDeclaration')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSStyleDeclaration')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

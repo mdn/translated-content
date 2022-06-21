@@ -19,9 +19,11 @@ La portée des propriétés personnalisées est celle des éléments sur lesquel
 
 ## Syntaxe
 
-    --unmotcle: left;
-    --unecouleur: #0000ff;
-    --unevaleurcomplexe: 3px 6px rgb(20, 32, 54);
+```css
+--unmotcle: left;
+--unecouleur: #0000ff;
+--unevaleurcomplexe: 3px 6px rgb(20, 32, 54);
+```
 
 - `<declaration-value>`
   - : Cette valeur correspond à une séquence de un ou plusieurs fragments tant que la séquence ne contient pas de fragments interdits. Elle représente l'intégralité de ce qu'une déclaration valide peut avoir comme valeur.

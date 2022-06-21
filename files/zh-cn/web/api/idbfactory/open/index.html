@@ -4,7 +4,7 @@ slug: Web/API/IDBFactory/open
 translation_of: Web/API/IDBFactory/open
 ---
 <p>{{APIRef("IDBFactory")}}</p>
-<div class="summary">
+<div>
  <p><strong><code>IDBFactory.open</code></strong> 方法用于<a href="/en-US/docs/IndexedDB#gloss_database_connection">打开一个数据库连接</a>。本方法立即返回一个 {{domxref("IDBOpenDBRequest")}} 对象，但打开数据库的操作是异步执行的。</p>
 </div>
 <p>连接数据库在一个单独的线程中进行，包括以下几个步骤：</p>
@@ -17,16 +17,16 @@ translation_of: Web/API/IDBFactory/open
  </li>
  <li>如果已有数据库版本高于给定的 <code>version，中止操作并返回</code>类型为 <code style="font-size: 14px;">VersionError 的</code> <code>DOMError</code> 。</li>
  <li>如果已有数据库版本低于给定的 <code>version，触发一个</code> <code>versionchange</code> 操作。</li>
- <li>如果数据库不存在，创建指定名称的数据库，将版本号设置为给定版本，如果给定版本号，则设置为1，and no object stores.</li>
+ <li>如果数据库不存在，创建指定名称的数据库，将版本号设置为给定版本，如果给定版本号，则设置为 1，and no object stores.</li>
  <li>创建数据库连接。</li>
 </ol>
 <p>如果操作成功执行，将触发 <code>success</code> 事件 on the request object that is returned from this method, with its <code>result</code> attribute set to the new {{domxref("IDBDatabase")}} object for the connection.</p>
 <p>If an error occurs while the database connection is being opened, then an <a href="/en-US/docs/IndexedDB/IDBErrorEvent">error event</a> is fired on the request object returned from this method.</p>
 <h2 id="Syntax">Syntax</h2>
 <p>For the current standard:</p>
-<pre class="syntaxbox"><span class="idlInterface" id="idl-def-IDBFactory"><span class="idlMethod"> <span class="idlMethType"><a class="idlType" href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#idl-def-IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a></span> <span class="idlMethName"><a href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#widl-IDBFactory-open-IDBOpenDBRequest-DOMString-name-unsigned-long-long-version">open</a></span> (<span class="idlParam"><span class="idlParamType">DOMString</span> <span class="idlParamName">name</span></span>, <span class="idlParam">[<span class="extAttr">EnforceRange</span>] optional <span class="idlParamType">unsigned long long</span> <span class="idlParamName">version</span></span>);</span></span></pre>
+<pre class="syntaxbox"> <a class="idlType" href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#idl-def-IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> <a href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#widl-IDBFactory-open-IDBOpenDBRequest-DOMString-name-unsigned-long-long-version">open</a> (DOMString name, [EnforceRange] optional unsigned long long version);</pre>
 <p>For the experimental version with <code>options</code> (see below):</p>
-<pre class="syntaxbox"><span class="idlInterface"><span class="idlMethod">IDBOpenDBRequest open (DOMString name, optional IDBOpenDBOptions options);</span></span></pre>
+<pre class="syntaxbox">IDBOpenDBRequest open (DOMString name, optional IDBOpenDBOptions options);</pre>
 <h2 id="示例">示例</h2>
 <p>For the current standard:</p>
 <pre class="brush: js">var request = window.indexedDB.open("toDoList", 4);</pre>
@@ -41,7 +41,7 @@ translation_of: Web/API/IDBFactory/open
  <dt>
   version</dt>
  <dd>
-  指定数据库版本，当你想要更改数据库格式（比如增加对象存储，非增加记录），必须指定更高版本，通过 <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">versionchange 来更改</span></dd>
+  指定数据库版本，当你想要更改数据库格式（比如增加对象存储，非增加记录），必须指定更高版本，通过 versionchange 来更改</dd>
  <dt>
   options (version and storage) {{ NonStandardBadge() }}</dt>
  <dd>

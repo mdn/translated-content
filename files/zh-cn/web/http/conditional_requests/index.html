@@ -9,7 +9,7 @@ translation_of: Web/HTTP/Conditional_requests
 ---
 <p>{{HTTPSidebar}}</p>
 
-<p class="summary">在 HTTP 协议中有一个“<strong>条件式请求</strong>”的概念，在这类请求中，请求的结果，甚至请求成功的状态，都会随着验证器与受影响资源的比较结果的变化而变化。这类请求可以用来验证缓存的有效性，省去不必要的控制手段，以及验证文件的完整性，例如在断点续传的场景下或者在上传或者修改服务器端的文件的时候避免更新丢失问题。</p>
+<p>在 HTTP 协议中有一个“<strong>条件式请求</strong>”的概念，在这类请求中，请求的结果，甚至请求成功的状态，都会随着验证器与受影响资源的比较结果的变化而变化。这类请求可以用来验证缓存的有效性，省去不必要的控制手段，以及验证文件的完整性，例如在断点续传的场景下或者在上传或者修改服务器端的文件的时候避免更新丢失问题。</p>
 
 <h2 id="基本原理">基本原理</h2>
 
@@ -42,7 +42,7 @@ translation_of: Web/HTTP/Conditional_requests
 
 <h3 id="强验证类型">强验证类型</h3>
 
-<p id="sect1">强验证类型的作用在于确保要比较的资源与其相比较的对象之间每一个字节都相同。对于有些首部来说需要明确指定该验证类型，而对于另外一些来说则是默认值就是强验证类型。强验证类型的要求相当严格，在服务器层面来说可能较难保证。但是它确保了数据在任何时候都没有缺损，有时候则需要以牺牲性能为代价。</p>
+<p>强验证类型的作用在于确保要比较的资源与其相比较的对象之间每一个字节都相同。对于有些首部来说需要明确指定该验证类型，而对于另外一些来说则是默认值就是强验证类型。强验证类型的要求相当严格，在服务器层面来说可能较难保证。但是它确保了数据在任何时候都没有缺损，有时候则需要以牺牲性能为代价。</p>
 
 <p>使用 {{HTTPHeader("Last-Modified")}} 首部很难为强验证类型提供一个唯一标识。通常这是由 {{HTTPHeader("ETag")}} 首部来完成的，该首部可以提供使用 MD5 算法获取的资源（或其衍生品）的散列值。</p>
 
@@ -137,7 +137,7 @@ translation_of: Web/HTTP/Conditional_requests
 
 <p><img alt="Like for a regular upload, the first upload of a resource is subject to a race condition: If-None-Match can prevent it." src="https://mdn.mozillademos.org/files/13753/HTTPFirst.png" style="height: 311px; width: 895px;"></p>
 
-<p><code>If-None-Match</code> 首部只可应用于兼容 HTTP/1.1 （及后续版本）的服务器。假如不确定所访问的服务器是否兼容，需要首先向要访问的资源发送一次 {{HTTPMethod("HEAD")}} 请求来进行确认。</p>
+<p><code>If-None-Match</code> 首部只可应用于兼容 HTTP/1.1（及后续版本）的服务器。假如不确定所访问的服务器是否兼容，需要首先向要访问的资源发送一次 {{HTTPMethod("HEAD")}} 请求来进行确认。</p>
 
 <h2 id="结语">结语</h2>
 

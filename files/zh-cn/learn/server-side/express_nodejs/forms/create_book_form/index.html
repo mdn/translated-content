@@ -34,7 +34,7 @@ exports.book_create_get = function(req, res, next) {
 
 };</pre>
 
-<p>这使用异步模块 async（在<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">教程5：显示数据库中的数据</a>），来获取所有作者和种类对象。然后将它们作为名为<code>authors</code>和<code>genres</code>的变量（以及页面标题<code>title</code>），传递给视图<code><strong>book_form.pug</strong></code>。</p>
+<p>这使用异步模块 async（在<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">教程 5：显示数据库中的数据</a>），来获取所有作者和种类对象。然后将它们作为名为<code>authors</code>和<code>genres</code>的变量（以及页面标题<code>title</code>），传递给视图<code><strong>book_form.pug</strong></code>。</p>
 
 <h2 class="highlight-spanned" id="控制器—post_路由">控制器—post 路由</h2>
 
@@ -131,7 +131,7 @@ exports.book_create_post = [
     next();
 },</pre>
 
-<p>然后，我们在清理器中使用通配符（*）来单独验证每个种类数组条目。下面的代码显示了 - 这转换为 “清理关键种类<code>genre</code>下的每个项目”。</p>
+<p>然后，我们在清理器中使用通配符（*）来单独验证每个种类数组条目。下面的代码显示了 - 这转换为“清理关键种类<code>genre</code>下的每个项目”。</p>
 
 <pre class="brush: js line-numbers  language-js">sanitizeBody('genre.*').trim().escape(),</pre>
 
@@ -194,14 +194,14 @@ block content
  <li>种类集合显示为复选框，使用我们在控制器中设置的检查值<code>checked</code>，来确定是否应该选中该框。</li>
  <li>作者集合显示为单选下拉列表。在这种情况下，我们通过比较当前作者选项的 id 与用户先前输入的值（作为<code>book</code>变量传入），来确定要显示的作者。这在上面突出显示！
   <div class="note">
-  <p><strong>注意:</strong> 如果提交的表单中存在错误，那么，当要重新呈现表单时，新的书本作者仅使用字符串（作者列表中选中选项的值）进行标识。相比之下，现有的书本作者的<code>_id</code>属性不是字符串。因此，要比较新的和现有的，我们必须将每个现有书本作者的<code>_id</code>，强制转换为字符串，如上所示。</p>
+  <p><strong>注意：</strong> 如果提交的表单中存在错误，那么，当要重新呈现表单时，新的书本作者仅使用字符串（作者列表中选中选项的值）进行标识。相比之下，现有的书本作者的<code>_id</code>属性不是字符串。因此，要比较新的和现有的，我们必须将每个现有书本作者的<code>_id</code>，强制转换为字符串，如上所示。</p>
   </div>
  </li>
 </ul>
 
-<h2 class="highlight-spanned" id="它看起來像是">它看起來像是?</h2>
+<h2 class="highlight-spanned" id="它看起來像是">它看起來像是？</h2>
 
-<p>运行应用程序，将浏览器打开到<a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000</a>，然后选择Create new book链接。如果一切设置正确，您的网站应该类似于以下屏幕截图。提交有效的图书后，应将其保存，然后您将进入图书详细信息页面。</p>
+<p>运行应用程序，将浏览器打开到<a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000</a>，然后选择 Create new book 链接。如果一切设置正确，您的网站应该类似于以下屏幕截图。提交有效的图书后，应将其保存，然后您将进入图书详细信息页面。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14484/LocalLibary_Express_Book_Create_Empty.png" style="display: block; height: 498px; margin: 0px auto; width: 1000px;"></p>
 
@@ -209,4 +209,4 @@ block content
 
 <p>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms">Express 教程 6: 使用表单</a></p>
 
-<p>继续教程 6 的下一个部分: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form">创建书本实例表单</a></p>
+<p>继续教程 6 的下一个部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form">创建书本实例表单</a></p>

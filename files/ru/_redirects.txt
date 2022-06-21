@@ -198,6 +198,7 @@
 /ru/docs/Learn/CSS/Styling_text/Стилизация_списков	/ru/docs/Learn/CSS/Styling_text/Styling_lists
 /ru/docs/Learn/CSS/Как	/ru/docs/Learn/CSS/Howto
 /ru/docs/Learn/Discover_browser_developer_tools	/ru/docs/Learn/Common_questions/What_are_browser_developer_tools
+/ru/docs/Learn/Forms/Your_first_form/Example	/ru/docs/Learn/Forms/Your_first_form
 /ru/docs/Learn/Getting_started_with_the_web/Веб_и_веб_стандарты	/ru/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards
 /ru/docs/Learn/Getting_started_with_the_web/Установка_базового_программного_обеспечения	/ru/docs/Learn/Getting_started_with_the_web/Installing_basic_software
 /ru/docs/Learn/HTML/Forms	/ru/docs/Learn/Forms
@@ -355,7 +356,7 @@
 /ru/docs/Tools/Производительность	https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html
 /ru/docs/Tools/Производительность/Waterfall	https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html
 /ru/docs/Using_Firefox_1.5_caching	/ru/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
-/ru/docs/Using_files_from_web_applications	/ru/docs/Web/API/File/Using_files_from_web_applications
+/ru/docs/Using_files_from_web_applications	/ru/docs/Web/API/File_API/Using_files_from_web_applications
 /ru/docs/Web/API/AbortSignal/onabort	/ru/docs/conflicting/Web/API/AbortSignal/abort_event
 /ru/docs/Web/API/AudioContext.currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
 /ru/docs/Web/API/AudioContext/createPanner	/ru/docs/Web/API/BaseAudioContext/createPanner
@@ -372,6 +373,7 @@
 /ru/docs/Web/API/Canvas_API/Tutorial/Рисование_фигур	/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /ru/docs/Web/API/Canvas_API/Рисование_графики_с_помощью_Canvas	/ru/docs/Web/API/Canvas_API/Tutorial
 /ru/docs/Web/API/Coordinates	/ru/docs/Web/API/GeolocationCoordinates
+/ru/docs/Web/API/DOMString	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
 /ru/docs/Web/API/Document.querySelectorAll	/ru/docs/Web/API/Document/querySelectorAll
 /ru/docs/Web/API/Document/async	/ru/docs/Web/API/XMLDocument/async
 /ru/docs/Web/API/Document/defaultView/popstate_event	/ru/docs/Web/API/Window/popstate_event
@@ -386,11 +388,13 @@
 /ru/docs/Web/API/Element/accessKey	/ru/docs/Web/API/HTMLElement/accessKey
 /ru/docs/Web/API/EventListener	/ru/docs/conflicting/Web/API/EventTarget/addEventListener
 /ru/docs/Web/API/EventTarget.addEventListener	/ru/docs/Web/API/EventTarget/addEventListener
+/ru/docs/Web/API/File/Using_files_from_web_applications	/ru/docs/Web/API/File_API/Using_files_from_web_applications
 /ru/docs/Web/API/File/fileName	/ru/docs/conflicting/Web/API/File/name
 /ru/docs/Web/API/FileReader/onabort	/ru/docs/Web/API/FileReader/abort_event
 /ru/docs/Web/API/File_and_Directory_Entries_API/Введение	/ru/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /ru/docs/Web/API/Geolocation/Using_geolocation	/ru/docs/Web/API/Geolocation_API
 /ru/docs/Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API	/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
+/ru/docs/Web/API/GlobalEventHandlers/onabort	/ru/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /ru/docs/Web/API/HTMLAudioElement/Audio()	/ru/docs/Web/API/HTMLAudioElement/Audio
 /ru/docs/Web/API/HTMLElement/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/hash	/ru/docs/Web/API/HTMLAnchorElement/hash
@@ -410,6 +414,7 @@
 /ru/docs/Web/API/KeyboardEvent/which	/ru/docs/Web/API/UIEvent/which
 /ru/docs/Web/API/MediaRecorder/ondataavailable	/ru/docs/Web/API/MediaRecorder/dataavailable_event
 /ru/docs/Web/API/MouseEvent/which	/ru/docs/conflicting/Web/API/UIEvent/which
+/ru/docs/Web/API/Navigator/battery	/ru/docs/Web/API/Navigator/getBattery
 /ru/docs/Web/API/NetworkInformation/connection	/ru/docs/Web/API/Navigator/connection
 /ru/docs/Web/API/Node.appendChild	/ru/docs/Web/API/Node/appendChild
 /ru/docs/Web/API/Node.contains	/ru/docs/Web/API/Node/contains
@@ -432,6 +437,7 @@
 /ru/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ru/docs/conflicting/Web/API/Pointer_events
 /ru/docs/Web/API/USB/onconnect	/ru/docs/Web/API/USB/connect_event
 /ru/docs/Web/API/USB/ondisconnect	/ru/docs/Web/API/USB/disconnect_event
+/ru/docs/Web/API/USVString	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb
 /ru/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ru/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ru/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
@@ -576,6 +582,7 @@
 /ru/docs/Web/HTML/CORS_settings_attributes	/ru/docs/Web/HTML/Attributes/crossorigin
 /ru/docs/Web/HTML/Canvas	/ru/docs/Web/API/Canvas_API
 /ru/docs/Web/HTML/Canvas/Рисование_графики_с_помощью_Canvas	/ru/docs/Web/API/Canvas_API/Tutorial
+/ru/docs/Web/HTML/Element/Input/datetime	/ru/docs/conflicting/Web/HTML/Element/input/datetime-local
 /ru/docs/Web/HTML/Element/video/seeking_event	/ru/docs/Web/API/HTMLMediaElement/seeking_event
 /ru/docs/Web/HTML/Element/кнопка	/ru/docs/Web/HTML/Element/button
 /ru/docs/Web/HTML/Element/ссылка	/ru/docs/Web/HTML/Element/link
@@ -597,6 +604,7 @@
 /ru/docs/Web/HTML/Ссылки	/ru/docs/Web/HTML/Reference
 /ru/docs/Web/HTML/Строчные_Элементы	/ru/docs/Web/HTML/Inline_elements
 /ru/docs/Web/HTML/Типы_ссылок	/ru/docs/Web/HTML/Link_types
+/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web_RU	/ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Полный_список_типов_MIME	/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 /ru/docs/Web/HTTP/Response_codes	/ru/docs/Web/HTTP/Status

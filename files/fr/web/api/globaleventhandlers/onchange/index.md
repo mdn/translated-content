@@ -1,43 +1,62 @@
 ---
-title: element.onchange
+title: GlobalEventHandlers.onchange
 slug: Web/API/GlobalEventHandlers/onchange
-tags:
-  - DOM
-  - DOM_0
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/GlobalEventHandlers/onchange
+browser-compat: api.GlobalEventHandlers.onchange
 ---
-{{ ApiRef() }}
+{{ApiRef("HTML DOM")}}
 
-### Résumé
+La propriété **`onchange`**, rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`change`](/fr/docs/Web/API/HTMLElement/change_event).
 
-La propriété `onchange` définit et renvoie le gestionnaire d'évènement `onChange` (modification) pour l'élément courant.
+Les évènements `change` sont déclenchés lorsque la personne valide un changement de valeur dans un contrôle d'un formulaire. Cela peut se produire, par exemple, lors d'un clic à l'extérieur du contrôle ou en utilisant la touche <kbd>Tab</kbd> pour passer à un contrôle différent.
 
-### Syntaxe
+> **Note :** À la différence de [`oninput`](/fr/docs/Web/API/GlobalEventHandlers/oninput), le gestionnaire d'évènements `onchange` n'est pas nécessairement appelé pour chaque modification de la valeur (`value`) d'un élément.
 
-    element.onchange = code de gestion de l'évènement
+## Syntaxe
 
-### Notes
+```js
+cible.onchange = refFonction;
+```
 
-Le pseudo code suivant illustre la manière dont le gestionnaire d'évènement `change` est implémenté dans Mozilla&nbsp;:
+`refFonction` est un nom de fonction ou une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet [`Event`](/fr/docs/Web/API/Event) comme unique argument.
 
-      control.onfocus = focus;
-      control.onblur = blur;
-      function focus () {
-          original_value = control.value;
-      }
+## Exemple
 
-      function blur () {
-          if (control.value&nbsp;!= original_value)
-            control.onchange();
-      }
+Dans cet exemple, on affiche dans un journal le nombre de caractères d'un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) après chaque modification, une fois que le focus a été retiré du contrôle.
 
-Par conséquent, vous pouvez rencontrer des comportements inattendus dans l'évènement `change` si vous modifiez la valeur du contrôle dans vos propres gestionnaires d'évènements `focus` ou `blur`. De plus, l'évènement `change` se déclenche avant l'évènement `blur`. Ce comportement n'est pas le même que celui d'Internet Explorer.
+### HTML
 
-### Specification
+```html
+<input type="text" placeholder="Saisissez quelque chose ici, puis cliquez en dehors du champ." size="50">
+<p id="log"></p>
+```
 
-{{ DOM0() }}
+### JavaScript
 
-### Voir aussi
+```js
+let input = document.querySelector('input');
+let log = document.getElementById('log');
 
-- [DOM Level 2: HTML event types](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-eventgroupings-htmlevents) — traduction en français (non normative)&nbsp;: [DOM Niveau 2 Events&nbsp;: Les types d'événements HTML](http://www.yoyodesign.org/doc/w3c/dom2-events/events.html#Events-eventgroupings-htmlevents)
+input.onchange = handleChange;
+
+function handleChange(e) {
+  log.textContent = `La valeur du champ mesure 
+      ${e.target.value.length} caractère(s).`;
+}
+```
+
+### Résultat
+
+{{EmbedLiveSample("")}}
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- L'évènement [`change`](/fr/docs/Web/API/HTMLElement/change_event)

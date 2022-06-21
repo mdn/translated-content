@@ -1,5 +1,5 @@
 ---
-title: 常见web布局都包含什么？
+title: 常见 web 布局都包含什么？
 slug: Learn/Common_questions/Common_web_layouts
 tags:
   - CSS

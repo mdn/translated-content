@@ -12,13 +12,13 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 
 <p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}</p>
 
-<div class="summary">
+<div>
 <p>超文本标记语言 (英语：<strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage，简称：HTML ) 是一种用来结构化 Web 网页及其内容的标记语言。网页内容可以是：一组段落、一个重点信息列表、也可以含有图片和数据表。正如标题所示，本文将对 HTML 及其功能做一个基本介绍。</p>
 </div>
 
 <h2 id="HTML_到底是什么？">HTML 到底是什么？</h2>
 
-<p>HTML 不是一门编程语言，而是一种用于定义内容结构的<em>标记语言</em>。HTML 由一系列的<strong>元素（{{Glossary("element", "elements")}}）</strong>组成，这些元素可以用来包围不同部分的内容，使其以某种方式呈现或者工作。 一对标签（ {{Glossary("tag", "tags")}}）可以为一段文字或者一张图片添加超链接，将文字设置为斜体，改变字号，等等。 例如，键入下面一行内容：</p>
+<p>HTML 不是一门编程语言，而是一种用于定义内容结构的<em>标记语言</em>。HTML 由一系列的<strong>元素（{{Glossary("element", "elements")}}）</strong>组成，这些元素可以用来包围不同部分的内容，使其以某种方式呈现或者工作。一对标签（ {{Glossary("tag", "tags")}}）可以为一段文字或者一张图片添加超链接，将文字设置为斜体，改变字号，等等。例如，键入下面一行内容：</p>
 
 <pre class="notranslate">我的猫非常脾气暴躁
 </pre>
@@ -46,7 +46,7 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 
 <p><img alt="HTML 属性" src="https://mdn.mozillademos.org/files/16476/attribute.png" style="display: block; margin: 0px auto;"></p>
 
-<p>属性包含了关于元素的一些额外信息，这些信息本身不应显现在内容中。本例中，<code>class</code> 是属性名称，<code>editor-note</code> 是属性的值 。<code>class</code> 属性可为元素提供一个标识名称，以便进一步为元素指定样式或进行其他操作时使用。</p>
+<p>属性包含了关于元素的一些额外信息，这些信息本身不应显现在内容中。本例中，<code>class</code> 是属性名称，<code>editor-note</code> 是属性的值。<code>class</code> 属性可为元素提供一个标识名称，以便进一步为元素指定样式或进行其他操作时使用。</p>
 
 <p>属性应该包含：</p>
 
@@ -62,7 +62,7 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 
 <h3 id="嵌套元素">嵌套元素</h3>
 
-<p>也可以将一个元素置于其他元素之中 —— 称作<strong>嵌套</strong>。要表明猫咪非常暴躁，可以将 “暴躁” 用 {{htmlelement("strong")}} 元素包围，爆字将突出显示：</p>
+<p>也可以将一个元素置于其他元素之中 —— 称作<strong>嵌套</strong>。要表明猫咪非常暴躁，可以将“暴躁”用 {{htmlelement("strong")}} 元素包围，爆字将突出显示：</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;我的猫咪脾气&lt;strong&gt;暴躁&lt;/strong&gt;:)&lt;/p&gt;</pre>
 
@@ -101,7 +101,7 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
  <li><code>&lt;!DOCTYPE html&gt;</code> — 文档类型。混沌初分，HTML 尚在襁褓（大约是 1991/92 年）之时，<code>DOCTYPE</code> 用来链接一些 HTML 编写守则，比如自动查错之类。<code>DOCTYPE</code> 在当今作用有限，仅用于保证文档正常读取。现在知道这些就足够了。</li>
  <li><code>&lt;html&gt;&lt;/html&gt;</code> — {{htmlelement("html")}} 元素。该元素包含整个页面的内容，也称作根元素。</li>
  <li><code>&lt;head&gt;&lt;/head&gt;</code> — {{htmlelement("head")}} 元素。该元素的内容对用户不可见，其中包含例如面向搜索引擎的搜索关键字（{{Glossary("keyword", "keywords")}}）、页面描述、CSS 样式表和字符编码声明等。</li>
- <li><code>&lt;meta charset="utf-8"&gt;</code> — 该元素指定文档使用 UTF-8 字符编码 ，UTF-8 包括绝大多数人类已知语言的字符。基本上 UTF-8 可以处理任何文本内容，还可以避免以后出现某些问题，没有理由再选用其他编码。</li>
+ <li><code>&lt;meta charset="utf-8"&gt;</code> — 该元素指定文档使用 UTF-8 字符编码，UTF-8 包括绝大多数人类已知语言的字符。基本上 UTF-8 可以处理任何文本内容，还可以避免以后出现某些问题，没有理由再选用其他编码。</li>
  <li><code>&lt;title&gt;&lt;/title&gt;</code> — {{htmlelement("title")}} 元素。该元素设置页面的标题，显示在浏览器标签页上，也作为收藏网页的描述文字。</li>
  <li><code>&lt;body&gt;&lt;/body&gt;</code> — {{htmlelement("body")}} 元素。该元素包含期望让用户在访问页面时看到的内容，包括文本、图像、视频、游戏、可播放的音轨或其他内容。</li>
 </ul>
@@ -147,7 +147,7 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 <p>可以尝试在 {{htmlelement("img")}} 元素上面添加一个合适的标题。</p>
 
 <div class="blockIndicator note">
-<p>注：可以发现 MDN 网站上 第一级标题的主题是隐藏的。不要使用标题元素来加大、加粗字体，因为标题对于 <a href="/zh-CN/docs/learn/Accessibility">无障碍访问</a> 和 <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化">搜索引擎优化</a> 等问题非常有意义。要保持页面结构清晰，标题整洁，不要发生标题级别跳跃。</p>
+<p>注：你可以看到第一级标题是有隐式的主题样式。不要使用标题元素来加大、加粗字体，因为标题对于 <a href="/zh-CN/docs/learn/Accessibility">无障碍访问</a> 和 <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化">搜索引擎优化</a> 等问题非常有意义。要保持页面结构清晰，标题整洁，不要发生标题级别跳跃。</p>
 </div>
 
 <h3 id="段落（Paragraph）">段落（Paragraph）</h3>
@@ -192,7 +192,7 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 <p>链接非常重要 — 它们赋予 Web 网络属性。要植入一个链接，我们需要使用一个简单的元素 — {{htmlelement("a")}} — a 是 "anchor" （锚）的缩写。要将一些文本添加到链接中，只需如下几步：</p>
 
 <ol>
- <li>选择一些文本。比如 “Mozilla 宣言”。</li>
+ <li>选择一些文本。比如“Mozilla 宣言”。</li>
  <li>将文本包含在 {{htmlelement("a")}} 元素内，就像这样：
   <pre class="brush: html notranslate">&lt;a&gt;Mozilla 宣言&lt;/a&gt;</pre>
  </li>

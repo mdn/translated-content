@@ -20,9 +20,11 @@ La méthode **`fill()`** remplit tous les éléments d'un tableau entre deux ind
 
 ## Syntaxe
 
-    arr.fill(valeur)
-    arr.fill(valeur, début)
-    arr.fill(valeur, début, fin)
+```js
+arr.fill(valeur)
+arr.fill(valeur, début)
+arr.fill(valeur, début, fin)
+```
 
 ### Paramètres
 

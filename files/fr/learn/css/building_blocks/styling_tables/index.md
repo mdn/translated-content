@@ -95,9 +95,9 @@ Il est d'aspect resserré, difficile à lire et austère. Utilisons une règle C
 
 Dans cette section d'apprentissage actif, nous allons travailler le style de l'exemple de tableau ci-dessus.
 
-1.  Pour débuter, faites une copie locale de l'[exemple de balisage](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html), téléchargez les images ([noise.png](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) et [leopardskin.jpg](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg)) et placez les trois fichiers dans un répertoire de travail quelque part sur votre ordinateur.
-2.  Ensuite, créez un nouveau fichier nommé `style.css` et enregistrez‑le dans le même répertoire que les autres fichiers.
-3.  Liez le CSS au HTML en mettant la ligne suivante dans l'élément {{htmlelement("head")}} :
+1. Pour débuter, faites une copie locale de l'[exemple de balisage](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html), téléchargez les images ([noise.png](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) et [leopardskin.jpg](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg)) et placez les trois fichiers dans un répertoire de travail quelque part sur votre ordinateur.
+2. Ensuite, créez un nouveau fichier nommé `style.css` et enregistrez‑le dans le même répertoire que les autres fichiers.
+3. Liez le CSS au HTML en mettant la ligne suivante dans l'élément {{htmlelement("head")}} :
 
     ```html
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -213,16 +213,18 @@ Maintenant, graphisme et couleurs ! Comme ce tableau est plein de postures punk,
 
 Commençons par ajouter le CSS suivant à la fin du fichier `style.css` :
 
-    thead, tfoot {
-      background: url(leopardskin.jpg);
-      color: white;
-      text-shadow: 1px 1px 1px black;
-    }
+```css
+thead, tfoot {
+  background: url(leopardskin.jpg);
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
 
-    thead th, tfoot th, tfoot td {
-      background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
-      border: 3px solid purple;
-    }
+thead th, tfoot th, tfoot td {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+  border: 3px solid purple;
+}
+```
 
 Encore une fois, il n'y a rien de propre aux tableaux ici, mais cela vaut la peine de noter certaines choses.
 

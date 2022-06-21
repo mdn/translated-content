@@ -4509,7 +4509,7 @@ These keys are found on the keyboard's numeric keypad. However, not all are pres
       <th scope="col">Android</th>
     </tr>
     <tr>
-      <td><code>"Decimal"</code> [1] {{obsolete_inline}}</td>
+      <td><code>"Decimal"</code> [1] {{deprecated_inline}}</td>
       <td>
         The decimal point key (typically <kbd>.</kbd> or <kbd>,</kbd> depending
         on the region. In newer browsers, this value to simply be the character
@@ -4537,7 +4537,7 @@ These keys are found on the keyboard's numeric keypad. However, not all are pres
       <td></td>
     </tr>
     <tr>
-      <td><code>"Multiply"</code> [1] {{obsolete_inline}}</td>
+      <td><code>"Multiply"</code> [1] {{deprecated_inline}}</td>
       <td>The numeric keypad's multiplication key, <kbd>*</kbd>.</td>
       <td><code>VK_MULTIPLY</code> (0x6A)</td>
       <td><code>kVK_ANSI_KeypadMultiply</code> (0x43)</td>
@@ -4550,7 +4550,7 @@ These keys are found on the keyboard's numeric keypad. However, not all are pres
       <td><code>KEYCODE_NUMPAD_MULTIPLY</code> (155)</td>
     </tr>
     <tr>
-      <td><code>"Add"</code> [1] {{obsolete_inline}}</td>
+      <td><code>"Add"</code> [1] {{deprecated_inline}}</td>
       <td>The numeric keypad's addition key, <kbd>+</kbd>.</td>
       <td><code>VK_ADD</code> (0x6B)</td>
       <td><code>kVK_ANSI_KeypadPlus</code> (0x45)</td>
@@ -4569,7 +4569,7 @@ These keys are found on the keyboard's numeric keypad. However, not all are pres
       <td><code>KEYCODE_CLEAR</code> (28)</td>
     </tr>
     <tr>
-      <td><code>"Divide"</code> [1] {{obsolete_inline}}</td>
+      <td><code>"Divide"</code> [1] {{deprecated_inline}}</td>
       <td>The numeric keypad's division key, /.</td>
       <td><code>VK_DIVIDE</code> (0x6F)</td>
       <td><code>kVK_ANSI_KeypadDivide</code> (0x4B)</td>
@@ -4580,7 +4580,7 @@ These keys are found on the keyboard's numeric keypad. However, not all are pres
       <td><code>KEYCODE_NUMPAD_DIVIDE</code> (154)</td>
     </tr>
     <tr>
-      <td><code>"Subtract"</code> [1] {{obsolete_inline}}</td>
+      <td><code>"Subtract"</code> [1] {{deprecated_inline}}</td>
       <td>The numeric keypad's subtraction key, -.</td>
       <td><code>VK_SUBTRACT</code> (0x6D)</td>
       <td><code>kVK_ANSI_KeypadMinus</code> (0x4E)</td>

@@ -41,7 +41,7 @@ translation_of: Web/API/HTMLElement/change_event
 変更される要素の種類やユーザーが要素を操作する方法によって、 `change` イベントは異なる時点で発行されます。
 
 - `{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}` 要素が（クリックやキーボードを使用して）チェックされたり解除されたりした場合
-- `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` 要素がチェックされた場合（ただし介助された場合は発行されない）
+- `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` 要素がチェックされた場合（ただし解除された場合は発行されない）
 - ユーザが明示的に変更を確定したとき（たとえば、 {{HTMLElement("select")}} のドロップダウンの値をマウスクリックで選択した場合、 `{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}` の日付ピッカーで日付を選択した場合、 `{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}` のファイル選択ダイアログでファイルを選択した場合など）。
 - 要素の値が変更されたが、確定しないうちに要素がフォーカスを失ったとき（たとえば、 {{HTMLElement("textarea")}} または `{{HTMLElement('input/text', '&lt;input type="text"&gt;')}}` の値を編集した後に、要素がフォーカスを失った場合）。
 

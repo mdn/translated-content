@@ -41,9 +41,9 @@ box-decoration-break: unset;
 
 <dl>
  <dt><code>slice</code></dt>
- <dd>元素被按照盒子被切割前的原始样式渲染，之后，针对每个行/列/页面将此假设框渲染成片段。请注意，假设框对于每个片段可以是不同的，因为如果中断发生在行内方向，则它使用自己的高度，如果中断发生在块方向，则它使用自己的宽度。有关详细信息，请参阅CSS规范。</dd>
+ <dd>元素被按照盒子被切割前的原始样式渲染，之后，针对每个行/列/页面将此假设框渲染成片段。请注意，假设框对于每个片段可以是不同的，因为如果中断发生在行内方向，则它使用自己的高度，如果中断发生在块方向，则它使用自己的宽度。有关详细信息，请参阅 CSS 规范。</dd>
  <dt><code>clone</code></dt>
- <dd>每个框片段与指定的边框、填充和边距独立呈现。The {{ Cssxref("border-radius") }}、{{ Cssxref("border-image") }}、 {{ Cssxref("box-shadow") }}独立地应用于每个片段,每个片段的背景也是独立绘制的, 这意味着使用 {{ Cssxref("background-repeat") }}<code>: no-repeat</code> 的背景图片仍然可能重复多次.</dd>
+ <dd>每个框片段与指定的边框、填充和边距独立呈现。The {{ Cssxref("border-radius") }}、{{ Cssxref("border-image") }}、 {{ Cssxref("box-shadow") }}独立地应用于每个片段，每个片段的背景也是独立绘制的，这意味着使用 {{ Cssxref("background-repeat") }}<code>: no-repeat</code> 的背景图片仍然可能重复多次。</dd>
 </dl>
 
 <h3 id="正式语法">正式语法</h3>
@@ -73,17 +73,17 @@ box-decoration-break: unset;
 ...
 &lt;span class="example"&gt;The&lt;br&gt;quick&lt;br&gt;orange fox&lt;/span&gt;</pre>
 
-<p>... 效果:</p>
+<p>... 效果：</p>
 
 <p><img alt="A screenshot of the rendering of an inline element styled with box-decoration-break:slice and styles given in the example." src="https://mdn.mozillademos.org/files/8167/box-decoration-break-inline-slice.png" style="height: 177px; width: 191px;"></p>
 
-<p>添加 <code>box-decoration-break: clone</code> 样式之后:</p>
+<p>添加 <code>box-decoration-break: clone</code> 样式之后：</p>
 
 <pre class="brush:css notranslate">-webkit-box-decoration-break: clone;
 box-decoration-break: clone;
 </pre>
 
-<p>... 效果:</p>
+<p>... 效果：</p>
 
 <p><img alt="A screenshot of the rendering of an inline element styled with box-decoration-break:clone and styles given in the example" src="https://mdn.mozillademos.org/files/8169/box-decoration-break-inline-clone.png" style="height: 180px; width: 231px;"></p>
 

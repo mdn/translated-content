@@ -17,11 +17,11 @@ translation_of: Web/API/MediaDevices
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<p><span class="seoSummary"><strong><code>MediaDevices</code></strong> 接口提供访问连接媒体输入的设备，如照相机和麦克风，以及屏幕共享等。它可以使你取得任何硬件资源的媒体数据。</span></p>
+<p><strong><code>MediaDevices</code></strong> 接口提供访问连接媒体输入的设备，如照相机和麦克风，以及屏幕共享等。它可以使你取得任何硬件资源的媒体数据。</p>
 
 <h2 id="属性">属性</h2>
 
-<p><em>从父类{{domxref("EventTarget")}}中继承的属性.</em></p>
+<p><em>从父类{{domxref("EventTarget")}}中继承的属性。</em></p>
 
 <h2 id="事件">事件</h2>
 
@@ -41,7 +41,7 @@ translation_of: Web/API/MediaDevices
  <dt>{{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}</dt>
  <dd>返回一个符合 {{domxref("MediaTrackSupportedConstraints")}} 的对象。该对象指明了 {{domxref("MediaStreamTrack")}} 接口支持的可约束的属性。查看 {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}} 去了解更多相关信息。</dd>
  <dt>{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}</dt>
- <dd>提示用户选择显示器或显示器的一部分（例如窗口）以捕获为{{domxref("MediaStream")}} 以便共享或记录。返回解析为MediaStream的Promise。</dd>
+ <dd>提示用户选择显示器或显示器的一部分（例如窗口）以捕获为{{domxref("MediaStream")}} 以便共享或记录。返回解析为 MediaStream 的 Promise。</dd>
  <dt>{{ domxref("MediaDevices.getUserMedia()") }}</dt>
  <dd>在用户通过提示允许的情况下，打开系统上的相机或屏幕共享和/或麦克风，并提供 {{domxref("MediaStream")}} 包含视频轨道和/或音频轨道的输入。</dd>
  <dt></dt>

@@ -42,7 +42,7 @@ var gcoText = [
 '图像中，那些重叠和正常绘制之外的其他地方是透明的。',
 '将顶层像素与底层相应像素相乘，结果是一幅更黑暗的图片。',
 '像素被倒转，相乘，再倒转，结果是一幅更明亮的图片。',
-'multiply和screen的结合，原本暗的地方更暗，原本亮的地方更亮。',
+'multiply 和 screen 的结合，原本暗的地方更暗，原本亮的地方更亮。',
 '保留两个图层中最暗的像素。',
 '保留两个图层中最亮的像素。',
 '将底层除以顶层的反置。',
@@ -50,10 +50,10 @@ var gcoText = [
 '屏幕相乘（A combination of multiply and screen）类似于叠加，但上下图层互换了。',
 '用顶层减去底层或者相反来得到一个正值。',
 '一个柔和版本的强光（hard-light）。纯黑或纯白不会导致纯黑或纯白。',
-'和difference相似，但对比度较低。',
+'和 difference 相似，但对比度较低。',
 '保留了底层的亮度（luma）和色度（chroma），同时采用了顶层的色调（hue）。',
 '保留底层的亮度（luma）和色调（hue），同时采用顶层的色度（chroma）。',
-'保留了底层的亮度（luma），同时采用了顶层的色调(hue)和色度(chroma)。',
+'保留了底层的亮度（luma），同时采用了顶层的色调 (hue) 和色度 (chroma)。',
 '保持底层的色调（hue）和色度（chroma），同时采用顶层的亮度（luma）。'
           ].reverse();
 var width = 320;
@@ -83,7 +83,7 @@ var height = 340;
 };
 </pre>
 
-<p>这部分代码,，<code>runComposite()</code>，处理了大部分的工作，但需要依赖于许多效用函数来完成复杂的处理工作。</p>
+<p>这部分代码，<code>runComposite()</code>，处理了大部分的工作，但需要依赖于许多效用函数来完成复杂的处理工作。</p>
 
 <pre class="brush: js">function createCanvas() {
     var canvas = document.createElement("canvas");
@@ -157,7 +157,7 @@ function runComposite() {
 };
 </pre>
 
-<h3 id="效用函数(Utility_functions)">效用函数(Utility functions)</h3>
+<h3 id="效用函数(Utility_functions)">效用函数 (Utility functions)</h3>
 
 <p>程序需要依赖许多效用函数。</p>
 

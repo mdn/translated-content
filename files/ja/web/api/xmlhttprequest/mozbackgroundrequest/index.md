@@ -13,7 +13,7 @@ tags:
   - mozBackgroundRequest
 translation_of: Web/API/XMLHttpRequest/mozBackgroundRequest
 ---
-{{draft}}{{APIRef('XMLHttpRequest')}}
+{{APIRef('XMLHttpRequest')}}
 
 > **Note:** このメソッドは、ウェブコンテンツからは使用できません。アクセスするには管理者特権が必要です。
 

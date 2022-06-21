@@ -53,7 +53,9 @@ Les types de donnée non terminaux sont de deux sortes :
 
 Les crochets permettent de regrouper plusieurs entités, combinateurs et multiplicateurs pour les transformer en un seul composant. Cela permet de grouper les composants afin d' appliquer des règles de priorités (supérieures aux règles de précédence).
 
-    bold [ thin && <length> ]
+```
+bold [ thin && <length> ]
+```
 
 Cet exemple pourra illustrer les valeurs suivantes :
 
@@ -69,7 +71,9 @@ Mais ne correspondra pas à :
 
 Si on place plusieurs mots-clés, littéraux ou types de donnée les uns à la suite des autres, séparés par un ou plusieurs blancs, cela indique que tous les composants sont **obligatoires et doivent apparaître dans cet ordre**.
 
-    bold <length> , thin
+```
+bold <length> , thin
+```
 
 Cet exemple pourra illustrer les valeurs suivantes :
 
@@ -88,7 +92,9 @@ Mais il ne correspondra pas à :
 
 Lorsqu'on sépare deux ou plusieurs composants par une double esperluette, cela signifie que **toutes les entités sont obligatoires mais peuvent apparaître dans n'importe quel ordre**.
 
-    bold && <length>
+```
+bold && <length>
+```
 
 Cet exemple pourra illustrer les valeurs suivantes :
 
@@ -108,7 +114,9 @@ Mais il ne correspondra pas à :
 
 Lorsque deux ou plusieurs composants sont séparés par une double barre verticale `||`. Cela signifie qu'au moins un composant doit **être présent et qu'ils peuvent apparaître dans n'importe quel ordre**. Généralement, ceci est utilisé pour définir les différentes valeurs d'une propriété raccourcie.
 
-    <'border-width'> || <'border-style'> || <'border-color'>
+```
+<'border-width'> || <'border-style'> || <'border-color'>
+```
 
 Cet exemple pourra illustrer les valeurs suivantes :
 
@@ -127,7 +135,9 @@ Mais il ne correspondra pas à :
 
 Lorsqu'on sépare deux entités par une barre verticale. Cela signifie que les différentes options sont exclusives : **seule une des options doit être présente**. Généralement, cela permet de séparer différents mots-clés possible.
 
-    <percentage> | <length> | left | center | right | top | bottom
+```
+<percentage> | <length> | left | center | right | top | bottom
+```
 
 Cet exemple pourra illustrer les valeurs suivantes :
 
@@ -155,7 +165,9 @@ Un multiplicateur est un signe qui indique nombre de fois qu'une entité peut ê
 
 L'astérisque indique qu'une entité peut apparaître **zéro, une ou plusieurs fois**.
 
-    bold smaller*
+```
+bold smaller*
+```
 
 Cet exemple pourra illustrer les valeurs suivantes :
 
@@ -172,7 +184,9 @@ Mais il ne correspondra pas à :
 
 Le multiplicateur « plus » indique que l'entité peut apparaître **une ou plusieurs fois**.
 
-    bold smaller+
+```
+bold smaller+
+```
 
 Cet exemple pourra illustrer les valeurs suivantes :
 
@@ -189,7 +203,9 @@ Mais il ne correspondra pas à :
 
 Le point d'interrogation indique que l'entité est optionnelle et doit apparaître **zéro ou une fois**.
 
-    bold smaller?
+```
+bold smaller?
+```
 
 Cet exemple pourra illustrer les valeurs suivantes :
 
@@ -205,7 +221,9 @@ Mais il ne correspondra pas à :
 
 Les accolades encadrent deux entiers A et B, séparés par une virgule et indiquent que l'entité **doit apparaître au moins A fois et au plus B fois**.
 
-    bold smaller{1,3}
+```
+bold smaller{1,3}
+```
 
 Cet exemple pourra illustrer les valeurs suivantes :
 
@@ -223,7 +241,9 @@ Mais il ne correspondra pas à :
 
 Le symbole dièse indique qu'une entité doit être répétée **une ou plusieurs fois et que chaque occurrence est séparée par une virgule**.
 
-    bold smaller#
+```
+bold smaller#
+```
 
 Cet exemple pourra illustrer les valeurs suivantes :
 
@@ -241,7 +261,9 @@ Mais il ne correspondra pas à :
 
 Le multiplicateur _point d'exclamation_ est utilisé après un groupe pour indiquer que celui-ci ne doit produire qu'une seule valeur. Ici, même si la grammaire des éléments du groupe indiquent que tous les composants peuvent être absents, il faut qu'il y ait au moins un composant présent.
 
-    [ bold? smaller? ]!
+```
+[ bold? smaller? ]!
+```
 
 Cet exemple correspondra aux valeurs suivantes :
 

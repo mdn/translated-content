@@ -8,12 +8,12 @@ original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 
 <p>设置页面可以让用户查看，修改扩展的一些设置。</p>
 
-<p>对于WebExtensions，设置通常使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code> API 保存. 实现一个设置页面通常包含以下三步:</p>
+<p>对于 WebExtensions，设置通常使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code> API 保存。实现一个设置页面通常包含以下三步：</p>
 
 <ul>
- <li>制作一个HTML 文件用以显示并修改设置</li>
- <li>写一个包含于该HTML文件的脚本，其可以使设置页面存储与存储设备中并在用户修改后更新他。</li>
- <li>在manifest.json文件 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code> 关键字中 设置HTML文件的路径。通过这种方式，该HTML将会被显示浏览器管理器里该插件名字和描述的旁边。</li>
+ <li>制作一个 HTML 文件用以显示并修改设置</li>
+ <li>写一个包含于该 HTML 文件的脚本，其可以使设置页面存储与存储设备中并在用户修改后更新他。</li>
+ <li>在 manifest.json 文件 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code> 关键字中 设置 HTML 文件的路径。通过这种方式，该 HTML 将会被显示浏览器管理器里该插件名字和描述的旁边。</li>
 </ul>
 
 <div class="note">
@@ -24,7 +24,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 
 <p>首先，我们写一个向用户访问的所有页面添加一个蓝色边框的扩展。</p>
 
-<p>创建一个新的文件夹命名为“setting”，然后创建文件“manifest.json”它包含以下内容:</p>
+<p>创建一个新的文件夹命名为“setting”，然后创建文件“manifest.json”它包含以下内容：</p>
 
 <pre class="brush: json">{
 
@@ -41,15 +41,15 @@ original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 
 }</pre>
 
-<p>该扩展指示浏览器在用户访问的网站上加载一个名为"borderify.js“的Content Script。</p>
+<p>该扩展指示浏览器在用户访问的网站上加载一个名为"borderify.js“的 Content Script。</p>
 
-<p>接下来，在"setting"目录下创建"borderify.js"，然后给予他以下内容:</p>
+<p>接下来，在"setting"目录下创建"borderify.js"，然后给予他以下内容：</p>
 
 <pre class="brush: js">document.body.style.border = "10px solid blue";</pre>
 
 <p>这只是向网页加入了一一个蓝色边框</p>
 
-<p>现在 <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">安装该扩展</a> 并测试它——打开任意一个网页:</p>
+<p>现在 <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">安装该扩展</a> 并测试它——打开任意一个网页：</p>
 
 <p>{{EmbedYouTube("E-WUhihF8fw")}}</p>
 
@@ -57,7 +57,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 
 <p>现在让我们创建一个设置页面来允许用户设置边框的颜色。</p>
 
-<p>首先更新 "manifest.json" 使他拥有如下内容:</p>
+<p>首先更新 "manifest.json" 使他拥有如下内容：</p>
 
 <pre class="brush: json">{
 
@@ -81,14 +81,14 @@ original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 }
 </pre>
 
-<p>我们加入了两个manifest 关键字:</p>
+<p>我们加入了两个 manifest 关键字：</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code>: 设置了一个HTML来作为设置页面。</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>: 我们使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code> API 来保存设置, 所以我们需要请求权限来使用该API。</li>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code>: 设置了一个 HTML 来作为设置页面。</li>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>: 我们使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code> API 来保存设置，所以我们需要请求权限来使用该 API。</li>
 </ul>
 
-<p>接下来，因为我们承诺提供"options.html"，让我们来创建他，在"setting"目录创建一个该文件并具有以下内容:</p>
+<p>接下来，因为我们承诺提供"options.html"，让我们来创建他，在"setting"目录创建一个该文件并具有以下内容：</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 
@@ -113,7 +113,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 
 <p>这里定义了一个带有标记文字{{htmlelement("input")}}的 {{htmlelement("form")}} 和一个 提交 {{htmlelement("button")}}. 也包含了一个名为"options.js"的脚本。</p>
 
-<p>仍然在"settting"目录下创建 "options.js"，并给予他以下内容:</p>
+<p>仍然在"settting"目录下创建 "options.js"，并给予他以下内容：</p>
 
 <pre class="brush: js">function saveOptions(e) {
   e.preventDefault();
@@ -140,17 +140,17 @@ document.addEventListener("DOMContentLoaded", restoreOptions);
 document.querySelector("form").addEventListener("submit", saveOptions);
 </pre>
 
-<p>它做了两件事:</p>
+<p>它做了两件事：</p>
 
 <ul>
- <li>当网页被加载它使用<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get">storage.local.get()</a></code> 从存贮设备中获取了名为"color”的值.如果该值未被设置其为默认值blue。</li>
+ <li>当网页被加载它使用<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get">storage.local.get()</a></code> 从存贮设备中获取了名为"color”的值。如果该值未被设置其为默认值 blue。</li>
  <li>当用户点击提交按钮，使用<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set">storage.local.set()</a></code> 存贮颜色值。</li>
 </ul>
 
-<p>最后，更新"borderify.js" 来读取边框颜色:</p>
+<p>最后，更新"borderify.js" 来读取边框颜色：</p>
 
 <div class="warning">
-<p>因为 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get">browser.storage.local.get()</a> 在火狐52版本之前的一个漏洞 ,以下代码没法起作用。为了使它生效，<code>onGot()中的 item.color 必须改为 item[0].color。</code></p>
+<p>因为 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get">browser.storage.local.get()</a> 在火狐 52 版本之前的一个漏洞 ,以下代码没法起作用。为了使它生效，<code>onGot()中的 item.color 必须改为 item[0].color。</code></p>
 </div>
 
 <pre class="brush: js"> function onError(error) {
@@ -169,7 +169,7 @@ var getting = browser.storage.local.get("color");
 getting.then(onGot, onError);
 </pre>
 
-<p>最后，完整的扩展看起来是这样:</p>
+<p>最后，完整的扩展看起来是这样：</p>
 
 <pre>settings/
     borderify.js
@@ -177,7 +177,7 @@ getting.then(onGot, onError);
     options.html
     options.js</pre>
 
-<p>现在:</p>
+<p>现在：</p>
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on">重新载入扩展</a></li>
@@ -196,7 +196,7 @@ getting.then(onGot, onError);
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code> 关键字文档</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code> API 文档</li>
  <li>使用<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage">runtime.openOptionsPage()</a></code> 直接打开你的设置页面</li>
- <li>另一个设置页面例子:
+ <li>另一个设置页面例子：
   <ul>
    <li><a href="https://github.com/mdn/webextensions-examples/tree/master/favourite-colour">favourite-colour</a></li>
   </ul>

@@ -137,7 +137,7 @@ En outre, certains raccourcis ne fonctionnent comme prévu que si vous incluez l
 animation: 3s ease-in 1s 2 reverse both paused slidein;
 ```
 
-À titre d'exemple, la première valeur qui peut être analysée comme un [`<time>`](/fr/docs/Web/CSS/time "Le type de données CSS <time> ; représente une valeur de temps exprimée en secondes ou en millisecondes. Il est utilisé dans les propriétés d'animation, de transition et autres propriétés connexes.") est affecté à la propriété [`animation-duration`](/fr/docs/Web/CSS/animation-duration "La propriété CSS animation-duration définit la durée nécessaire à une animation pour effectuer un cycle. "), et la seconde est affectée à [`animation-delay`](/fr/docs/Web/CSS/animation-delay "La propriété CSS animation-delay définit le moment où une animation commence. L'animation peut démarrer plus tard, immédiatement dès son début, ou immédiatement et à mi-chemin de l'animation."). Pour plus de détails, lisez l'intégralité de [syntaxe de l'animation](/fr/docs/Web/CSS/animation#syntax).
+À titre d'exemple, la première valeur qui peut être analysée comme un [`<time>`](/fr/docs/Web/CSS/time) est affecté à la propriété [`animation-duration`](/fr/docs/Web/CSS/animation-duration), et la seconde est affectée à [`animation-delay`](/fr/docs/Web/CSS/animation-delay). Pour plus de détails, lisez l'intégralité de [syntaxe de l'animation](/fr/docs/Web/CSS/animation#syntax).
 
 ### Utilisez des guillemets doubles autour des valeurs
 

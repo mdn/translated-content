@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Django/Deployment
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">现<font><font>在，您已经创建（并测试）了一个令人敬畏的</font></font><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website" style='color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; text-decoration: none; font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: 20px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'><font><font>LocalLibrary</font></font></a><font><font>网站，如果您希望将其安装在公共Web服务器上，以便图书馆工作人员和成员可以通过Internet访问它。</font><font>本文概述了如何找到主机来部署您的网站，以及您需要做什么才能让您的网站准备好生产</font></font>。</p>
+<p>现在，您已经创建（并测试）了一个令人敬畏的<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website" style='color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; text-decoration: none; font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: 20px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'>LocalLibrary</a>网站，如果您希望将其安装在公共 Web 服务器上，以便图书馆工作人员和成员可以通过 Internet 访问它。本文概述了如何找到主机来部署您的网站，以及您需要做什么才能让您的网站准备好生产。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -19,30 +19,27 @@ translation_of: Learn/Server-side/Django/Deployment
   </tr>
   <tr>
    <th scope="row"><strong style='background-color: #ffe8d4; color: #333333; display: inline !important; float: none; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; font-weight: 700; letter-spacing: normal; text-align: left; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>目的</strong>：</th>
-   <td>了解您可以在何处以及如何将Django应用程序部署到生产环境。</td>
+   <td>了解您可以在何处以及如何将 Django 应用程序部署到生产环境。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="概述">概述</h2>
 
-<p><span style='background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>一旦您的网站完成（或完成“足够”开始公开测试），您将需要将其托管在比您的个人开发计算机更公开和可访问的地方。</span></p>
+<p>一旦您的网站完成（或完成“足够”开始公开测试），您将需要将其托管在比您的个人开发计算机更公开和可访问的地方。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>到目前为止，您一直在开发环境中工作，使用Django开发Web服务器将您的站点共享到本地浏览器/网络，并使用暴露调试和其他私人信息的（不安全）开发设置运行您的网站。</font><font>在您可以从外部托管网站之前，您首先必须：</font></font></p>
-
-<ul style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
-</ul>
+<p>到目前为止，您一直在开发环境中工作，使用 Django 开发 Web 服务器将您的站点共享到本地浏览器/网络，并使用暴露调试和其他私人信息的（不安全）开发设置运行您的网站。在您可以从外部托管网站之前，您首先必须：</p>
 
 <ul>
- <li>对你的项目设置(project settings)做一定的修改</li>
- <li>选择一个用来托管Django app的环境</li>
+ <li>对你的项目设置 (project settings) 做一定的修改</li>
+ <li>选择一个用来托管 Django app 的环境</li>
  <li>选择一个用来托管所有静态文件的环境</li>
  <li>设置一个产品级的设施来为你的网站服务</li>
 </ul>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>本教程为您选择托管站点提供了一些指导，简要概述了为了让您的Django应用程序可用于生产需要做什么以及如何将LocalLibrary网站安装到</font></font><a class="external external-icon" href="https://www.heroku.com/" rel="noopener" style="font-style: normal !important; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; text-decoration: none; white-space: pre-line;"><font><font>Heroku</font></font></a><font><font>云托管上服务。</font></font></p>
+<p>本教程为您选择托管站点提供了一些指导，简要概述了为了让您的 Django 应用程序可用于生产需要做什么以及如何将 LocalLibrary 网站安装到<a class="external external-icon" href="https://www.heroku.com/" rel="noopener" style="font-style: normal !important; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; text-decoration: none; white-space: pre-line;">Heroku</a>云托管上服务。</p>
 
-<h2 id="什么是生产环境">什么是生产环境?</h2>
+<h2 id="什么是生产环境">什么是生产环境？</h2>
 
 <p>生产环境是一个由服务器电脑提供的环境，你将在这里运行你的网站，为外部使用提供服务。生产环境包括：</p>
 
@@ -50,7 +47,7 @@ translation_of: Learn/Server-side/Django/Deployment
  <li>网站运行所需要的电脑硬件</li>
  <li>操作系统 (例如 Linux, Windows).</li>
  <li>编程语言运行库和框架库，在其上编写您的网站。</li>
- <li>用于提供页面和其他内容的Web服务器（例如Nginx，Apache）。</li>
+ <li>用于提供页面和其他内容的 Web 服务器（例如 Nginx，Apache）。</li>
  <li>在 Django 网站和 Web 服务器之间，传递“动态”请求的应用程序服务器。</li>
  <li>您的网站所依赖的数据库。</li>
 </ul>
@@ -59,12 +56,12 @@ translation_of: Learn/Server-side/Django/Deployment
 <p><strong>注意</strong>: 根据您的生产配置方式，您可能还有反向代理，负载均衡器等。</p>
 </div>
 
-<p>服务器计算机可以位于您的场所，并通过快速链接连接到 Internet，但使用托管“在云中”的计算机更为常见。这实际上意味着，您的代码在托管公司的数据中心的某台远程计算机（或可能是“虚拟”计算机）上运行。远程服务器通常会以特定价格，提供一些保证级别的计算资源（例如CPU，RAM，存储器等）和互联网连接。</p>
+<p>服务器计算机可以位于您的场所，并通过快速链接连接到 Internet，但使用托管“在云中”的计算机更为常见。这实际上意味着，您的代码在托管公司的数据中心的某台远程计算机（或可能是“虚拟”计算机）上运行。远程服务器通常会以特定价格，提供一些保证级别的计算资源（例如 CPU，RAM，存储器等）和互联网连接。</p>
 
-<p>这种可远程访问的计算/网络硬件，称为基础架构即服务（IaaS）。许多IaaS供应商，提供预安装特定操作系统的选项，您必须在其上安装生产环境的其他组件。其他供应商允许您选择功能更全面的环境，可能包括完整的 Django ，和 Web 服务器设置。</p>
+<p>这种可远程访问的计算/网络硬件，称为基础架构即服务（IaaS）。许多IaaS供应商，提供预安装特定操作系统的选项，您必须在其上安装生产环境的其他组件。其他供应商允许您选择功能更全面的环境，可能包括完整的 Django，和 Web 服务器设置。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 预构建环境可以使您的网站设置变得非常简单，因为它们会减少配置，但可用选项可能会限制您使用不熟悉的服务器（或其他组件），并且可能基于较旧版本的操作系统。通常最好自己安装组件，以便获得所需的组件，当您需要升级系统的某些部分时，您就知道从哪里开始！</p>
+<p><strong>注意：</strong> 预构建环境可以使您的网站设置变得非常简单，因为它们会减少配置，但可用选项可能会限制您使用不熟悉的服务器（或其他组件），并且可能基于较旧版本的操作系统。通常最好自己安装组件，以便获得所需的组件，当您需要升级系统的某些部分时，您就知道从哪里开始！</p>
 </div>
 
 <p>其他托管服务提供商，支持 Django 作为平台即服务（PaaS）产品的一部分。在这种托管中，您不必担心大多数生产环境（Web 服务器，应用程序服务器，负载平衡器），因为主机平台会为您处理这些（以及为了扩展您的应用程序，而需要做的大部分工作）。这使得部署非常简单，因为您只需要专注于 Web 应用程序，而不是所有其他服务器的基础结构。</p>
@@ -72,12 +69,12 @@ translation_of: Learn/Server-side/Django/Deployment
 <p>相对于 PaaS，一些开发人员会选择 IaaS 所提供的更高灵活性，而其他开发人员，则欣赏 PaaS 降低的维护开销，和更轻松地扩展。当您开始使用时，在 PaaS 系统上设置您的网站，要容易得多，因此我们将在本教程中这么做。</p>
 
 <div class="note">
-<p><strong>提示:</strong> 如果您选择一个 Python/Django 友好的托管服务提供商，他们应该提供有关如何使用不同配置的网络服务器，应用服务器，反向代理等设置 Django 网站的说明（如果您选择 PaaS，这就没有关系了）。例如，<a href="https://www.digitalocean.com/community/tutorials?q=django">Digital Ocean Django 社区文档 </a>中的各种配置，有许多手把手指南。</p>
+<p><strong>提示：</strong> 如果您选择一个 Python/Django 友好的托管服务提供商，他们应该提供有关如何使用不同配置的网络服务器，应用服务器，反向代理等设置 Django 网站的说明（如果您选择 PaaS，这就没有关系了）。例如，<a href="https://www.digitalocean.com/community/tutorials?q=django">Digital Ocean Django 社区文档 </a>中的各种配置，有许多手把手指南。</p>
 </div>
 
 <h2 id="选择托管服务提供商">选择托管服务提供商</h2>
 
-<p>已知有超过100个托管服务提供商，积极支持或与 Django 合作（您可以在 <a href="http://djangofriendly.com/hosts/">Djangofriendly hosts </a>主机上，找到相当广泛的列表）。这些供应商提供不同类型的环境（IaaS，PaaS），以及不同价格、不同级别的计算和网络资源。</p>
+<p>已知有超过 100 个托管服务提供商，积极支持或与 Django 合作（您可以在 <a href="http://djangofriendly.com/hosts/">Djangofriendly hosts </a>主机上，找到相当广泛的列表）。这些供应商提供不同类型的环境（IaaS，PaaS），以及不同价格、不同级别的计算和网络资源。</p>
 
 <p>选择主机时需要考虑的一些事项：</p>
 
@@ -93,12 +90,12 @@ translation_of: Learn/Server-side/Django/Deployment
  <li>您所依赖的“免费”等级，是否会随着时间的推移而过期，以及迁移到更昂贵等级的成本，是否意味着，您最好一开始就使用其他服务！</li>
 </ul>
 
-<p>当你刚开始时，好消息是，有很多网站提供了 “免费” 的 “评估”、“开发者” 或 “爱好者” 计算环境。这些始终是资源相当受限/有限的环境，您需要注意，它们可能会在广告期限后过期。然而，它们非常适合在真实环境中，测试低流量站点，并且可以在您的站点变得更加繁忙时，付费取得更多资源，并轻松迁移。此类别中的热门选择包括<a href="https://www.heroku.com/">Heroku</a>, <a href="https://www.pythonanywhere.com/">Python Anywhere</a>, <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a>, <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure</a> 等。</p>
+<p>当你刚开始时，好消息是，有很多网站提供了“免费”的“评估”、“开发者”或“爱好者”计算环境。这些始终是资源相当受限/有限的环境，您需要注意，它们可能会在广告期限后过期。然而，它们非常适合在真实环境中，测试低流量站点，并且可以在您的站点变得更加繁忙时，付费取得更多资源，并轻松迁移。此类别中的热门选择包括<a href="https://www.heroku.com/">Heroku</a>, <a href="https://www.pythonanywhere.com/">Python Anywhere</a>, <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a>, <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure</a> 等。</p>
 
 <p>许多提供商还有“基本”层，可提供更多有用的计算能力和更少的限制。<a href="https://www.digitalocean.com/">Digital Ocean</a> 和 <a href="https://www.pythonanywhere.com/">Python Anywhere</a> ，就是流行的托管服务提供商的例子，提供相对便宜的基本计算等级（每月 5 美元到 10 美元不等）。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 请记住，价格不是唯一的选择标准。如果您的网站成功，可能会发现，可扩展性是最重要的考虑因素。</p>
+<p><strong>注意：</strong> 请记住，价格不是唯一的选择标准。如果您的网站成功，可能会发现，可扩展性是最重要的考虑因素。</p>
 </div>
 
 <h2 id="让您的网站准备好发布">让您的网站准备好发布</h2>
@@ -106,14 +103,14 @@ translation_of: Learn/Server-side/Django/Deployment
 <p>使用 django-admin 和 manage.py 工具创建的 Django 骨架网站，是为了使开发更容易而配置的。出于安全性或性能原因，许多 Django 项目设置（在<strong>settings.py</strong>中指定），在生产应该是不同的。</p>
 
 <div class="note">
-<p><strong>提示:</strong> 通常有一个单独的 <strong>settings.py</strong> 文件用于生产环境，并从单独的文件或环境变量，导入敏感设置。即使其他源代码在公共存储库中可用，也应保护此文件。</p>
+<p><strong>提示：</strong> 通常有一个单独的 <strong>settings.py</strong> 文件用于生产环境，并从单独的文件或环境变量，导入敏感设置。即使其他源代码在公共存储库中可用，也应保护此文件。</p>
 </div>
 
 <p>您必须检查的关键设置是：</p>
 
 <ul>
  <li><code>DEBUG</code>. 这应该在生产环境中设置为 <code>False</code>（<code>DEBUG = False</code>）。这将停止显示敏感/机密调试跟踪和变量信息。</li>
- <li><code>SECRET_KEY</code>. 这是用于CRSF保护等的大随机值。重要的是，生产中使用的密钥，不应在源代码管理中、或在生产服务器外部可访问。 Django文档表明，可能最好从环境变量加载，或从仅供服务的文件中读取。
+ <li><code>SECRET_KEY</code>. 这是用于 CRSF 保护等的大随机值。重要的是，生产中使用的密钥，不应在源代码管理中、或在生产服务器外部可访问。Django 文档表明，可能最好从环境变量加载，或从仅供服务的文件中读取。
   <pre class="notranslate"># Read SECRET_KEY from an environment variable
 import os
 SECRET_KEY = os.environ['SECRET_KEY']
@@ -149,40 +146,40 @@ with open('/etc/secret_key.txt') as f:
 <p><strong>注意</strong>: 如果我们可以直接将<code>DJANGO_DEBUG</code>环境变量设置为<code>True</code>或<code>False</code>，而不是分别使用“any string”或“empty string”，那将更直观。不幸的是，环境变量值存储为 Python 字符串，计算结果为 <code>False</code> 的唯一字符串，是空字符串（例如<code>bool('')==False</code>）。</p>
 </div>
 
-<p><a href="https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/">部署清单（Django文档）</a>中，提供了您可能要更改的完整设置清单。您还可以使用下面的终端命令，列出其中的一些：</p>
+<p><a href="https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/">部署清单（Django 文档）</a>中，提供了您可能要更改的完整设置清单。您还可以使用下面的终端命令，列出其中的一些：</p>
 
 <pre class="brush: python notranslate">python3 manage.py check --deploy
 </pre>
 
-<h2 id="示例：在Heroku上安装LocalLibrary">示例：在Heroku上安装LocalLibrary</h2>
+<h2 id="示例：在Heroku上安装LocalLibrary">示例：在 Heroku 上安装 LocalLibrary</h2>
 
 <p>本节提供了如何在 <a href="http://heroku.com">Heroku PaaS cloud </a>云上安装 LocalLibrary 的实际演示。</p>
 
-<h3 id="为何选择Heroku？">为何选择Heroku？</h3>
+<h3 id="为何选择Heroku？">为何选择 Heroku？</h3>
 
 <p>Heroku 是运行时间最长，且最受欢迎的基于云的 PaaS 服务之一。它最初只支持 Ruby 应用程序，但现在可用于托管来自许多编程环境的应用程序，包括 Django！</p>
 
-<p>我们选择使用Heroku有以下几个原因：</p>
+<p>我们选择使用 Heroku 有以下几个原因：</p>
 
 <ul>
  <li>Heroku 有一个真正免费的免费套餐<a href="https://www.heroku.com/pricing">free tier</a> （尽管有一些限制）。</li>
  <li>作为 PaaS，Heroku 为我们提供了大量的 Web 基础架构。这使得入门更加容易，因为您不必担心 Heroku 为我们提供的服务器，负载平衡器，反向代理或任何其他 Web 基础结构。</li>
  <li>虽然它确实有一些限制，但这些不会影响本教程的应用程序。例如：
   <ul>
-   <li>Heroku只提供短期储存，因此用户上传的文件无法安全地存储在 Heroku 本身。</li>
+   <li>Heroku 只提供短期储存，因此用户上传的文件无法安全地存储在 Heroku 本身。</li>
    <li>如果半小时内没有请求，免费套餐将使不活动的网络应用程序进入睡眠。然后，该网站可能需要几秒钟才能被唤醒。</li>
-   <li>免费套餐将您网站运行的时间，限制为每月一定的小时数（不包括网站“睡着”的时间）。这对于低使用/演示站点来说很好，但如果需要100％的正常运行时间则不适用。</li>
+   <li>免费套餐将您网站运行的时间，限制为每月一定的小时数（不包括网站“睡着”的时间）。这对于低使用/演示站点来说很好，但如果需要 100％的正常运行时间则不适用。</li>
    <li>在 <a href="https://devcenter.heroku.com/articles/limits">Limits</a> (Heroku 文档) 中列出了其他限制。</li>
   </ul>
  </li>
  <li>大多数情况下它只是能工作，如果你最终喜欢它，扩展你的应用程序非常容易。</li>
 </ul>
 
-<p>虽然 Heroku 非常适合用于此演示，但它可能并不适合您的真实网站。 Heroku可以轻松设置和扩展，但代价是灵活性较低，而且一旦退​​出免费套餐，可能会花费更多。</p>
+<p>虽然 Heroku 非常适合用于此演示，但它可能并不适合您的真实网站。Heroku 可以轻松设置和扩展，但代价是灵活性较低，而且一旦退​​出免费套餐，可能会花费更多。</p>
 
-<h3 id="Heroku是如何工作的？">Heroku是如何工作的？</h3>
+<h3 id="Heroku是如何工作的？">Heroku 是如何工作的？</h3>
 
-<p>Heroku 在一个或多个 “<a href="https://devcenter.heroku.com/articles/dynos">Dynos</a>” 中，运行Django网站，这是一个独立的虚拟化 Unix 容器，提供运行应用程序所需的环境。<a href="https://devcenter.heroku.com/articles/dynos">Dynos </a>是完全隔离的，并且有一个短暂的文件系统（一个短暂的文件系统，每次dyno 重新启动时，都会清理/清空）。 Dynos 默认共享的唯一内容，是应用程序配置变量。 Heroku 内部使用负载均衡器，将 Web 流量分配给所有 “web” dynos。由于他们之间没有任何共享，Heroku可以通过添加更多 dynos ，来水平扩展应用程序（当然，您可能还需要扩展数据库，以接受其他连接）。</p>
+<p>Heroku 在一个或多个“<a href="https://devcenter.heroku.com/articles/dynos">Dynos</a>”中，运行 Django 网站，这是一个独立的虚拟化 Unix 容器，提供运行应用程序所需的环境。<a href="https://devcenter.heroku.com/articles/dynos">Dynos </a>是完全隔离的，并且有一个短暂的文件系统（一个短暂的文件系统，每次 dyno 重新启动时，都会清理/清空）。Dynos 默认共享的唯一内容，是应用程序配置变量。Heroku 内部使用负载均衡器，将 Web 流量分配给所有“web”dynos。由于他们之间没有任何共享，Heroku 可以通过添加更多 dynos，来水平扩展应用程序（当然，您可能还需要扩展数据库，以接受其他连接）。</p>
 
 <p>由于文件系统是暂时的，因此无法直接安装应用程序所需的服务（例如数据库，队列，缓存系统，存储，电子邮件服务等）。取代的是，Heroku Web 应用程序，使用 Heroku 或第三方作为独立“附加组件”提供的支持服务。一旦连接到 Web 应用程序，dynos 就会使用应用程序配置变量中包含的信息，来访问服务。</p>
 
@@ -190,29 +187,29 @@ with open('/etc/secret_key.txt') as f:
 
 <ul>
  <li><strong>runtime.txt</strong>:<strong> </strong>要使用的编程语言和版本。</li>
- <li><strong>requirements.txt</strong>: Python组件依赖项，包括Django。</li>
- <li><strong>Procfile</strong>: 启动 Web 应用程序要执行的进程列表。对于Django，这通常是 Gunicorn Web 应用程序服务器（带有 <code>.wsgi </code>脚本）。</li>
- <li><strong>wsgi.py</strong>: 在 Heroku 环境中，调用我们的Django 应用程序的 <a href="http://wsgi.readthedocs.io/en/latest/what.html">WSGI </a>配置。</li>
+ <li><strong>requirements.txt</strong>: Python 组件依赖项，包括 Django。</li>
+ <li><strong>Procfile</strong>: 启动 Web 应用程序要执行的进程列表。对于 Django，这通常是 Gunicorn Web 应用程序服务器（带有 <code>.wsgi </code>脚本）。</li>
+ <li><strong>wsgi.py</strong>: 在 Heroku 环境中，调用我们的 Django 应用程序的 <a href="http://wsgi.readthedocs.io/en/latest/what.html">WSGI </a>配置。</li>
 </ul>
 
-<p>开发人员使用特殊的客户端应用程序/终端与 Heroku 交互，这很像Unix bash 脚本。这允许您上传存在 git 储存库中的代码，检查正在运行的进程，查看日志，设置配置变量等等！</p>
+<p>开发人员使用特殊的客户端应用程序/终端与 Heroku 交互，这很像 Unix bash 脚本。这允许您上传存在 git 储存库中的代码，检查正在运行的进程，查看日志，设置配置变量等等！</p>
 
-<p>为了让我们的应用程序在Heroku上工作，我们需要将我们的 Django Web 应用程序，放入git储存库，添加上面的文件，集成数据库附加组件，并进行更改，以正确处理静态文件。</p>
+<p>为了让我们的应用程序在 Heroku 上工作，我们需要将我们的 Django Web 应用程序，放入 git 储存库，添加上面的文件，集成数据库附加组件，并进行更改，以正确处理静态文件。</p>
 
 <p>完成所有操作后，我们可以设置 Heroku 帐户，获取 Heroku 客户端，并使用它来安装我们的网站。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 以下说明反映了在撰写本书时，如何使用 Heroku。如果 Heroku 显着改变了他们的操作过程，您可能希望检查他们的设置文档：<a href="https://devcenter.heroku.com/articles/getting-started-with-python#introduction">在Heroku上开始使用 Django</a>。</p>
+<p><strong>注意：</strong> 以下说明反映了在撰写本书时，如何使用 Heroku。如果 Heroku 显着改变了他们的操作过程，您可能希望检查他们的设置文档：<a href="https://devcenter.heroku.com/articles/getting-started-with-python#introduction">在 Heroku 上开始使用 Django</a>。</p>
 </div>
 
 <p>就是您一开始所需的所有概述（请参阅 <a href="https://devcenter.heroku.com/articles/how-heroku-works">Heroku 如何工作</a>，以获取更全面的指南）。</p>
 
 <h3 id="在_Github_中创建应用程序储存库">在 Github 中创建应用程序储存库</h3>
 
-<p>Heroku 与 <strong>git</strong> 源代码版本控制系统紧密集成，使用它来上传/同步您对实时系统所做的任何更改。它通过添加一个名为 heroku 的新的heroku “远程” 储存库，来指向 Heroku 云上的源储存库。在开发期间，您使用 git 在“主”储存库中储存更改。如果要部署站点，请将更改同步到 Heroku 储存库。</p>
+<p>Heroku 与 <strong>git</strong> 源代码版本控制系统紧密集成，使用它来上传/同步您对实时系统所做的任何更改。它通过添加一个名为 heroku 的新的 heroku“远程”储存库，来指向 Heroku 云上的源储存库。在开发期间，您使用 git 在“主”储存库中储存更改。如果要部署站点，请将更改同步到 Heroku 储存库。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 如果您习惯于遵循良好的软件开发实践，那么您可能已经在使用 git，或其他一些 SCM 系统。如果您已有 git 储存库，则可以跳过此步骤。</p>
+<p><strong>注意：</strong> 如果您习惯于遵循良好的软件开发实践，那么您可能已经在使用 git，或其他一些 SCM 系统。如果您已有 git 储存库，则可以跳过此步骤。</p>
 </div>
 
 <p>有很多方法可以使用 git，但最简单的方法之一，是首先在 <a href="https://github.com/">Github</a> 上建立一个帐户，在那里创建储存库，然后将它同步到本地：</p>
@@ -222,15 +219,15 @@ with open('/etc/secret_key.txt') as f:
  <li>登录后，点击顶部工具栏中的 + 链接，然后选择新建储存库 <strong>New repository</strong>。</li>
  <li>填写此表单上的所有字段。虽然这些不是强制性的，但强烈建议使用它们。
   <ul>
-   <li>输入新的储存库名称（例如 django_local_library）和描述（例如 “用 Django编写的本地图书馆网站”）。</li>
-   <li>在Add .gitignore 选择列表中，选择 <strong>Python</strong>。</li>
+   <li>输入新的储存库名称（例如 django_local_library）和描述（例如“用 Django 编写的本地图书馆网站”）。</li>
+   <li>在 Add .gitignore 选择列表中，选择 <strong>Python</strong>。</li>
    <li>在添加许可证选择列表中，选择您想要的许可证。</li>
    <li>选中使用自述文件初始化此储存库（<strong>Initialize this repository with a README）</strong>。</li>
   </ul>
  </li>
  <li>点击 <strong>Create repository</strong>.</li>
- <li>点击新仓库页面上的绿色 “克隆或下载”<strong> </strong>（<strong>Clone or download</strong>）按钮 。</li>
- <li>从显示的对话框中的文本字段中复制URL值（它应该类似于： <strong>https://github.com/<em>&lt;your_git_user_id&gt;</em>/django_local_library.git</strong>）。</li>
+ <li>点击新仓库页面上的绿色“克隆或下载”<strong> </strong>（<strong>Clone or download</strong>）按钮。</li>
+ <li>从显示的对话框中的文本字段中复制 URL 值（它应该类似于： <strong>https://github.com/<em>&lt;your_git_user_id&gt;</em>/django_local_library.git</strong>）。</li>
 </ol>
 
 <p>现在创建了储存库（“repo”），我们将要在本地计算机上克隆它：</p>
@@ -246,7 +243,7 @@ with open('/etc/secret_key.txt') as f:
  </li>
 </ol>
 
-<p>最后一步是复制你的应用程序，然后使用 git ，将文件添加到你的仓库：</p>
+<p>最后一步是复制你的应用程序，然后使用 git，将文件添加到你的仓库：</p>
 
 <ol>
  <li>将您的 Django 应用程序，复制到此文件夹（与 <strong>manage.py</strong> 级别相同的、和以下级别的所有文件，而<strong>不是</strong>包含 locallibrary 文件夹的文件）。</li>
@@ -283,10 +280,10 @@ Changes to be committed:
  </li>
 </ol>
 
-<p>完成此操作后，您应该可以返回创建储存库的 Github上的页面，刷新页面，并看到您的整个应用程序已经上传。使用此添加/提交/推送循环，您可以在文件更改时，继续更新储存库。</p>
+<p>完成此操作后，您应该可以返回创建储存库的 Github 上的页面，刷新页面，并看到您的整个应用程序已经上传。使用此添加/提交/推送循环，您可以在文件更改时，继续更新储存库。</p>
 
 <div class="note">
-<p><strong>提示:</strong> 这是备份您的“vanilla”项目的一个好时机 - 虽然我们将在以下部分中，进行的一些更改，可能对有些人在任何平台（或开发）上的部署有用，对其他人可能没有用。</p>
+<p><strong>提示：</strong> 这是备份您的“vanilla”项目的一个好时机 - 虽然我们将在以下部分中，进行的一些更改，可能对有些人在任何平台（或开发）上的部署有用，对其他人可能没有用。</p>
 
 <p>执行此操作的最佳方法，是使用 git 来管理您的修订。使用 git，您不仅可以回到特定的旧版本，而且可以在生产变更的单独“分支”中进行维护，并选择在生产和开发分支之间移动的任何更改。<a href="https://help.github.com/articles/good-resources-for-learning-git-and-github/">学习 Git</a> 非常值得，但超出了本主题的范围。</p>
 
@@ -295,7 +292,7 @@ Changes to be committed:
 
 <h3 id="更新_Heroku_的应用程序">更新 Heroku 的应用程序</h3>
 
-<p>本节介绍了您需要对 LocalLibrary 应用程序进行的更改，以使其在Heroku上运行。虽然 Heroku 的<a href="https://devcenter.heroku.com/articles/getting-started-with-python#introduction">在 Heroku 使用 Django 入门教程</a>，假设您将使用 Heroku 客户端，来运行您的本地开发环境，但我们的更改，与现有的 Django 开发服务器，以及我们已经学习的工作方式兼容。</p>
+<p>本节介绍了您需要对 LocalLibrary 应用程序进行的更改，以使其在 Heroku 上运行。虽然 Heroku 的<a href="https://devcenter.heroku.com/articles/getting-started-with-python#introduction">在 Heroku 使用 Django 入门教程</a>，假设您将使用 Heroku 客户端，来运行您的本地开发环境，但我们的更改，与现有的 Django 开发服务器，以及我们已经学习的工作方式兼容。</p>
 
 <h4 id="Procfile">Procfile</h4>
 
@@ -303,7 +300,7 @@ Changes to be committed:
 
 <pre class="notranslate">web: gunicorn locallibrary.wsgi --log-file -</pre>
 
-<p>“<code>web:</code>”告诉 Heroku ，这是一个 web dyno，可以发送 HTTP 流量。在这个 dyno 中启动的进程，是 gunicorn，这是 Heruko 推荐的一种流行的 Web 应用程序服务器。我们使用模块 <code>locallibrary.wsgi</code>（使用我们的应用程序框架创建：<strong>/locallibrary/wsgi.py </strong>）中的配置信息启动 Gunicorn。</p>
+<p>“<code>web:</code>”告诉 Heroku，这是一个 web dyno，可以发送 HTTP 流量。在这个 dyno 中启动的进程，是 gunicorn，这是 Heruko 推荐的一种流行的 Web 应用程序服务器。我们使用模块 <code>locallibrary.wsgi</code>（使用我们的应用程序框架创建：<strong>/locallibrary/wsgi.py </strong>）中的配置信息启动 Gunicorn。</p>
 
 <h4 id="Gunicorn">Gunicorn</h4>
 
@@ -341,10 +338,10 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)</pre>
 
 <div class="note">
-<p><strong>注意:</strong></p>
+<p><strong>注意：</strong></p>
 
 <ul>
- <li>我们仍然会在开发期间使用SQLite，因为我们的开发计算机上不会设置<code>DATABASE_URL</code>环境变量。</li>
+ <li>我们仍然会在开发期间使用 SQLite，因为我们的开发计算机上不会设置<code>DATABASE_URL</code>环境变量。</li>
  <li><code>conn_max_age=500</code>的值使连接持久，这比在每个请求周期重新创建连接更有效。但是，这是可选的，如果需要可以删除。</li>
 </ul>
 </div>
@@ -353,7 +350,7 @@ DATABASES['default'].update(db_from_env)</pre>
 
 <p>Django 需要 psycopg2 来处理 Postgres 数据库，你需要将它添加到<a href="#requirements">requirements.txt </a>中，以便 Heroku 在远程服务器上进行设置（如下面的 requirements 部分所述）。</p>
 
-<p>Django 默认会在本地使用我们的 SQLite 数据库，因为我们的本地环境中，没有设置<code>DATABASE_URL</code>环境变量。如果您想完全切换到Postgres ，并使用我们的 Heroku 免费等级数据库，进行开发和生产，那么您可以这么做。例如，要在基于 Linux 的系统上，本地安装psycopg2 及其依赖项，您将使用以下 bash / terminal 命令：</p>
+<p>Django 默认会在本地使用我们的 SQLite 数据库，因为我们的本地环境中，没有设置<code>DATABASE_URL</code>环境变量。如果您想完全切换到 Postgres，并使用我们的 Heroku 免费等级数据库，进行开发和生产，那么您可以这么做。例如，要在基于 Linux 的系统上，本地安装 psycopg2 及其依赖项，您将使用以下 bash / terminal 命令：</p>
 
 <pre class="brush: bash notranslate"><code>sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib</code>
 pip3 install psycopg2
@@ -368,16 +365,16 @@ pip3 install psycopg2
 <p>在开发过程中，我们使用 Django 和 Django 开发 Web 服务器，来提供静态文件（CSS，JavaScript 等）。在生产环境中，我们通常提供来自内容传送网络（CDN）或 Web 服务器的静态文件。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 通过 Django/web 应用程序提供静态文件是低效的，因为请求必须通过不必要的附加代码（Django），而不是由 Web 服务器或完全独立的 CDN 直接处理。虽然这对于开发期间的本地使用无关紧要，但如果我们在生产环境中使用相同的方法，则会对性能产生重大影响。</p>
+<p><strong>注意：</strong> 通过 Django/web 应用程序提供静态文件是低效的，因为请求必须通过不必要的附加代码（Django），而不是由 Web 服务器或完全独立的 CDN 直接处理。虽然这对于开发期间的本地使用无关紧要，但如果我们在生产环境中使用相同的方法，则会对性能产生重大影响。</p>
 </div>
 
-<p>为了便于将静态文件与 Django Web 应用程序分开托管，Django 提供了 collectstatic 工具，来收集这些文件以进行部署（有一个设置变量，用于定义在运行 collectstatic 时，应该收集文件的位置）。 Django 模板是指相对于设置变量（<code>STATIC_URL</code>）的静态文件的托管位置，因此如果将静态文件移动到另一个主机/服务器，则可以更改此位置。</p>
+<p>为了便于将静态文件与 Django Web 应用程序分开托管，Django 提供了 collectstatic 工具，来收集这些文件以进行部署（有一个设置变量，用于定义在运行 collectstatic 时，应该收集文件的位置）。Django 模板是指相对于设置变量（<code>STATIC_URL</code>）的静态文件的托管位置，因此如果将静态文件移动到另一个主机/服务器，则可以更改此位置。</p>
 
 <p>相关的设置变量是：</p>
 
 <ul>
- <li><code>STATIC_URL</code>:  这是将提供静态文件的基本 URL 位置，例如，在CDN上。这用于在我们的基本模板中访问的静态模板变量（请参阅 <a href="/zh-CN/docs/Learn/Server-side/Django/Home_page">Django 教程 5：创建我们的主页</a>）。</li>
- <li><code>STATIC_ROOT</code>: 这是 Django 的 “collectstatic” 工具将收集模板中引用的任何静态文件的目录的绝对路径。收集完成后，可以将这些文件，作为一个组上载到托管文件的任何位置。</li>
+ <li><code>STATIC_URL</code>:  这是将提供静态文件的基本 URL 位置，例如，在 CDN 上。这用于在我们的基本模板中访问的静态模板变量（请参阅 <a href="/zh-CN/docs/Learn/Server-side/Django/Home_page">Django 教程 5：创建我们的主页</a>）。</li>
+ <li><code>STATIC_ROOT</code>: 这是 Django 的“collectstatic”工具将收集模板中引用的任何静态文件的目录的绝对路径。收集完成后，可以将这些文件，作为一个组上载到托管文件的任何位置。</li>
  <li><code>STATICFILES_DIRS</code>: 这列出了 Django 的 collectstatic 工具应该搜索静态文件的其他目录。</li>
 </ul>
 
@@ -397,14 +394,14 @@ STATIC_URL = '/static/'
 
 <p>我们实际上，将使用名为 <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> 的库来提供文件，我们将在下一节中安装和配置。</p>
 
-<p>有关更多信息，请参阅 <a href="https://devcenter.heroku.com/articles/django-assets">Django和静态资产</a>（Heroku 文档）。<br>
+<p>有关更多信息，请参阅 <a href="https://devcenter.heroku.com/articles/django-assets">Django 和静态资产</a>（Heroku 文档）。<br>
  <br>
  Whitenoise</p>
 
-<p>有许多方法可以在生产环境中提供静态文件（我们在前面的部分中看到了相关的 Django 设置）。 Heroku 建议在生产环境中使用 <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> 项目，直接从 Gunicorn 提供静态资产。</p>
+<p>有许多方法可以在生产环境中提供静态文件（我们在前面的部分中看到了相关的 Django 设置）。Heroku 建议在生产环境中使用 <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> 项目，直接从 Gunicorn 提供静态资产。</p>
 
 <div class="note">
-<p><strong>注意: </strong>Heroku 会在上传您的应用程序后，自动调用collectstatic 并准备静态文件，以供 WhiteNoise 使用。查看 <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> 文档，了解其工作原理以及实现，为什么是提供这些文件的相对有效方法。</p>
+<p><strong>注意：</strong>Heroku 会在上传您的应用程序后，自动调用 collectstatic 并准备静态文件，以供 WhiteNoise 使用。查看 <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> 文档，了解其工作原理以及实现，为什么是提供这些文件的相对有效方法。</p>
 </div>
 
 <p>设置 WhiteNoise 以便在项目中使用的步骤如下：</p>
@@ -441,7 +438,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 <h4 id="Requirements">Requirements</h4>
 
-<p>Web 应用程序的 Python requirements ，必须放在储存库根目录中的文件 <strong>requirements.txt</strong> 中。然后 Heroku 将在重建您的环境时，自动安装它们。您可以在命令行上，使用 pip 创建此文件（在 repo 根目录中，运行以下命令）：</p>
+<p>Web 应用程序的 Python requirements，必须放在储存库根目录中的文件 <strong>requirements.txt</strong> 中。然后 Heroku 将在重建您的环境时，自动安装它们。您可以在命令行上，使用 pip 创建此文件（在 repo 根目录中，运行以下命令）：</p>
 
 <pre class="brush: bash notranslate">pip3 freeze &gt; requirements.txt</pre>
 
@@ -465,7 +462,7 @@ whitenoise==3.2.2
 <pre class="notranslate">python-3.6.4</pre>
 
 <div class="note">
-<p><strong>注意:</strong> Heroku 只支持少量的 <a href="https://devcenter.heroku.com/articles/python-support#supported-python-runtimes">Python 运行库</a>（在编写本文时，包括上面的那个）。 Heroku 将使用受支持的运行库，而不管此文件中指定的值。</p>
+<p><strong>注意：</strong> Heroku 只支持少量的 <a href="https://devcenter.heroku.com/articles/python-support#supported-python-runtimes">Python 运行库</a>（在编写本文时，包括上面的那个）。Heroku 将使用受支持的运行库，而不管此文件中指定的值。</p>
 </div>
 
 <h4 id="将更改保存到_Github_并重新测试">将更改保存到 Github 并重新测试</h4>
@@ -484,7 +481,7 @@ git push origin master</pre>
 
 <h3 id="获取_Heroku_帐户">获取 Heroku 帐户</h3>
 
-<p>要开始使用Heroku，您首先需要创建一个帐户：</p>
+<p>要开始使用 Heroku，您首先需要创建一个帐户：</p>
 
 <ul>
  <li>访问 <a href="https://www.heroku.com/">www.heroku.com</a> ，并单击免费注册按钮（<strong>SIGN UP FOR FREE）</strong>。</li>
@@ -510,18 +507,18 @@ git push origin master</pre>
 <pre class="brush: bash notranslate">heroku create</pre>
 
 <div class="note">
-<p><strong>注意:</strong> 如果您愿意，可以通过在“创建”之后指定值来命名远程。如果你不这样做，你会得到一个随机的名字。该名称用于默认URL。</p>
+<p><strong>注意：</strong> 如果您愿意，可以通过在“创建”之后指定值来命名远程。如果你不这样做，你会得到一个随机的名字。该名称用于默认 URL。</p>
 </div>
 
 <p>然后我们可以将应用程序，推送到 Heroku 储存库，如下所示。这将上传应用程序，将其打包到 dyno 中，运行 collectstatic，然后启动该站点。</p>
 
 <pre class="brush: bash notranslate">git push heroku master</pre>
 
-<p>如果我们很幸运，该应用程序现在在网站上“运行”，但它将无法正常工作，因为我们尚未设置数据库表，以供我们的应用程序使用。为此，我们需要使用 heroku run命令，并启动 “<a href="https://devcenter.heroku.com/articles/deploying-python#one-off-dynos">one off dyno</a>” 来执行迁移操作。在终端中输入以下命令：</p>
+<p>如果我们很幸运，该应用程序现在在网站上“运行”，但它将无法正常工作，因为我们尚未设置数据库表，以供我们的应用程序使用。为此，我们需要使用 heroku run 命令，并启动“<a href="https://devcenter.heroku.com/articles/deploying-python#one-off-dynos">one off dyno</a>”来执行迁移操作。在终端中输入以下命令：</p>
 
 <pre class="brush: bash notranslate">heroku run python manage.py migrate</pre>
 
-<p>我们还需要能够添加书本和作者，所以我们再次使用一次性dyno，创建我们的管理超级用户：</p>
+<p>我们还需要能够添加书本和作者，所以我们再次使用一次性 dyno，创建我们的管理超级用户：</p>
 
 <pre class="brush: bash notranslate">heroku run python manage.py createsuperuser</pre>
 
@@ -542,7 +539,7 @@ Add-on                                     Plan       Price  State
 heroku-postgresql (postgresql-flat-26536)  hobby-dev  free   created
  └─ as DATABASE</pre>
 
-<p>在这里，我们看到我们只有一个附加组件，即 postgres SQL数据库。这是免费的，并且是在我们创建应用时，自动创建的。您可以使用以下命令，更详细地打开网页，以检查数据库附加组件（或任何其他附加组件）：</p>
+<p>在这里，我们看到我们只有一个附加组件，即 postgres SQL 数据库。这是免费的，并且是在我们创建应用时，自动创建的。您可以使用以下命令，更详细地打开网页，以检查数据库附加组件（或任何其他附加组件）：</p>
 
 <pre class="brush: bash notranslate">heroku addons:open heroku-postgresql
 </pre>
@@ -561,7 +558,7 @@ DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-20
 <p>如果您回想起来<strong>准备发布网站</strong>的部分，我们必须为<code>DJANGO_SECRET_KEY</code> 和 <code>DJANGO_DEBUG</code>设置环境变量。我们现在就这样做。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 密钥需要真正的保密！生成新密钥的一种方法，是创建一个新的 Django 项目（<code>django-admin startproject someprojectname</code>），然后从 <strong>settings.py </strong>中，获取为您生成的密钥。</p>
+<p><strong>注意：</strong> 密钥需要真正的保密！生成新密钥的一种方法，是创建一个新的 Django 项目（<code>django-admin startproject someprojectname</code>），然后从 <strong>settings.py </strong>中，获取为您生成的密钥。</p>
 </div>
 
 <p>我们使用 <code>config:set</code>命令，设置<code>DJANGO_SECRET_KEY</code>（如下所示）。记得使用自己的密钥！</p>
@@ -598,7 +595,7 @@ git push heroku master</pre>
 
 <h3 id="除错调试">除错调试</h3>
 
-<p>Heroku客户端提供了一些调试工具：</p>
+<p>Heroku 客户端提供了一些调试工具：</p>
 
 <pre class="brush: bash notranslate">heroku logs  # Show current logs
 heroku logs --tail # Show current logs and keep updating with any new results
@@ -608,9 +605,9 @@ heroku ps   #Display dyno status
 
 <p>如果您需要比这些更多的信息，您将需要开始研究 <a href="https://docs.djangoproject.com/en/2.0/topics/logging/">Django Logging</a>。</p>
 
-<h2 id="总结"><strong><span style='font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 2.5rem;'>总结</span></strong></h2>
+<h2 id="总结"><strong>总结</strong></h2>
 
-<p>本教程讲述如何在生产环境中配置Django应用，也是本系列Django教程的结尾。我们希望你觉得教程有用。你可以在Github上取得一个完全可工作版本的<a href="https://github.com/mdn/django-locallibrary-tutorial">源码（用力点击此处）</a>。</p>
+<p>本教程讲述如何在生产环境中配置 Django 应用，也是本系列 Django 教程的结尾。我们希望你觉得教程有用。你可以在 Github 上取得一个完全可工作版本的<a href="https://github.com/mdn/django-locallibrary-tutorial">源码（用力点击此处）</a>。</p>
 
 <p>下一步是阅读我们此前的一些文章，然后完成评估任务。</p>
 

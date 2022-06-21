@@ -9,7 +9,7 @@ translation_of: Web/API/CanvasRenderingContext2D/createImageData
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.createImageData()</code></strong> 是 Canvas 2D API 创建一个新的、空白的、指定大小的 {{domxref("ImageData")}} 对象。 所有的像素在新对象中都是透明的。</p>
+<p><strong><code>CanvasRenderingContext2D.createImageData()</code></strong> 是 Canvas 2D API 创建一个新的、空白的、指定大小的 {{domxref("ImageData")}} 对象。所有的像素在新对象中都是透明的。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -30,7 +30,7 @@ ImageData <var><em>ctx</em>.createImageData(imagedata);</var>
 
 <h3 id="返回值">返回值</h3>
 
-<p>指定了宽度和高度的，新的 {{domxref("ImageData")}} 对象。 新对象使用透明的像素进行填充。</p>
+<p>指定了宽度和高度的，新的 {{domxref("ImageData")}} 对象。新对象使用透明的像素进行填充。</p>
 
 <h3 id="抛出错误">抛出错误</h3>
 
@@ -43,7 +43,7 @@ ImageData <var><em>ctx</em>.createImageData(imagedata);</var>
 
 <h3 id="使用_createImageData_方法">使用 <code>createImageData</code> 方法</h3>
 
-<p>这是一段简单地使用 <code>createImageData</code> 方法的代码片段。 获取更多信息，请看 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">canvas像素控制</a> 和 {{domxref("ImageData")}} 对象。</p>
+<p>这是一段简单地使用 <code>createImageData</code> 方法的代码片段。 获取更多信息，请看 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">canvas 像素控制</a> 和 {{domxref("ImageData")}} 对象。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -63,20 +63,7 @@ console.log(ctx.createImageData(100, 100));
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-createimagedata", "CanvasRenderingContext2D.createImageData")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
@@ -87,8 +74,8 @@ console.log(ctx.createImageData(100, 100));
 <ul>
  <li>从 {{geckoRelease("5.0")}}开始：
   <ul>
-   <li>如果矩形小于指定的1个像素，<code style="font-style: normal;">createImageData()</code> 会返回图像数据至少1个像素值。</li>
-   <li>当调用 <code style="font-style: normal;">createImageData()</code> 指定非限制值时，会抛出<code style="font-style: normal;">NOT_SUPPORTED_ERR</code> exception异常。</li>
+   <li>如果矩形小于指定的 1 个像素，<code>createImageData()</code> 会返回图像数据至少 1 个像素值。</li>
+   <li>当调用 <code>createImageData()</code> 指定非限制值时，会抛出<code>NOT_SUPPORTED_ERR</code> exception 异常。</li>
    <li><code>createImageData()</code> 根据规定处理负数变量，会围绕对称轴翻转矩形区域。</li>
   </ul>
  </li>
@@ -99,5 +86,5 @@ console.log(ctx.createImageData(100, 100));
 <ul>
  <li>接口定义，{{domxref("CanvasRenderingContext2D")}}.</li>
  <li>{{domxref("ImageData")}}</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">canvas像素控制</a></li>
+ <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">canvas 像素控制</a></li>
 </ul>

@@ -21,7 +21,9 @@ Dans les versions récentes des applications basées sur Mozilla ainsi que sur I
 
 ## Syntaxe
 
-    document.clear()
+```js
+document.clear()
+```
 
 ## Spécifications
 

@@ -26,7 +26,7 @@ translation_of: 'Web/CSS/:not'
  <li>可以利用这个伪类写一个完全没有用处的选择器。例如， <code>:not(*)</code> 匹配任何非元素的元素，因此，这个规则将永远不会被应用。</li>
  <li>可以利用这个伪类提高规则的<a href="/zh-CN/docs/Web/CSS/Specificity">优先级</a>。例如， <code>#foo:not(#bar)</code> 和 <code>#foo</code> 会匹配相同的元素，但是前者的优先级更高。</li>
  <li><code>:not(.foo)</code> 将匹配任何非 <code>.foo</code> 的元素，<em>包括 {{HTMLElement("html")}} 和 {{HTMLElement("body")}}</em>。</li>
- <li>这个选择器只会应用在一个元素上，无法用它来排除所有父元素。比如， <code>body :not(table) a</code> 依旧会应用到表格元素 {{HTMLElement("table")}} 内部的 {{HTMLElement("a")}} 上, 因为 {{HTMLElement("tr")}}将会被 <code>:not(table)</code> 这部分选择器匹配。</li>
+ <li>这个选择器只会应用在一个元素上，无法用它来排除所有父元素。比如， <code>body :not(table) a</code> 依旧会应用到表格元素 {{HTMLElement("table")}} 内部的 {{HTMLElement("a")}} 上，因为 {{HTMLElement("tr")}}将会被 <code>:not(table)</code> 这部分选择器匹配。</li>
 </ul>
 </div>
 

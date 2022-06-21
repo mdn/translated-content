@@ -16,7 +16,9 @@ La syntaxe **`new.target`** est disponible dans toutes les fonctions et permet e
 
 ## Syntaxe
 
-    new.target
+```js
+new.target
+```
 
 ## Description
 

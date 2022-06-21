@@ -12,7 +12,9 @@ L'élément `<xsl:apply-imports>`, utilisé la plupart du temps dans les feuille
 
 ### Syntaxe
 
-    <xsl:apply-imports/>
+```xml
+<xsl:apply-imports />
+```
 
 ### Attributs obligatoires
 

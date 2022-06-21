@@ -28,13 +28,13 @@ translation_of: Web/API/CanvasRenderingContext2D/ellipse
  <dt><code>radius</code>Y</dt>
  <dd>椭圆短轴的半径。</dd>
  <dt><code>rotation</code></dt>
- <dd>椭圆的旋转角度，以弧度表示(<strong>非角度度数</strong>)。</dd>
+ <dd>椭圆的旋转角度，以弧度表示 (<strong>非角度度数</strong>)。</dd>
  <dt><code>startAngle</code></dt>
- <dd>将要绘制的起始点角度，从 x 轴测量，以弧度表示(<strong>非角度度数</strong>)。</dd>
+ <dd>将要绘制的起始点角度，从 x 轴测量，以弧度表示 (<strong>非角度度数</strong>)。</dd>
  <dt><code>endAngle</code></dt>
- <dd>椭圆将要绘制的结束点角度，以弧度表示(<strong>非角度度数</strong>)。</dd>
+ <dd>椭圆将要绘制的结束点角度，以弧度表示 (<strong>非角度度数</strong>)。</dd>
  <dt><code>anticlockwise</code> {{optional_inline}}</dt>
- <dd>{{jsxref("Boolean")}} 选项，如果为 <code>true</code>，逆时针方向绘制椭圆 （逆时针）， 反之顺时针方向绘制。</dd>
+ <dd>{{jsxref("Boolean")}} 选项，如果为 <code>true</code>，逆时针方向绘制椭圆（逆时针），反之顺时针方向绘制。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -54,7 +54,7 @@ translation_of: Web/API/CanvasRenderingContext2D/ellipse
 var ctx = canvas.getContext('2d');
 ctx.setLineDash([]);
 ctx.beginPath();
-ctx.ellipse(100, 100, 50, 75, 45 * Math.PI/180, 0, 2 * Math.PI); //倾斜45°角
+ctx.ellipse(100, 100, 50, 75, 45 * Math.PI/180, 0, 2 * Math.PI); //倾斜 45°角
 ctx.stroke();
 ctx.setLineDash([5]);
 ctx.moveTo(0,200);
@@ -74,7 +74,7 @@ ctx.stroke();</code></pre>
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.setLineDash([]);
 ctx.beginPath();
-ctx.ellipse(100, 100, 50, 75, 45 * Math.PI/180, 0, 2 * Math.PI); //倾斜45°角
+ctx.ellipse(100, 100, 50, 75, 45 * Math.PI/180, 0, 2 * Math.PI); //倾斜 45°角
 ctx.stroke();
 ctx.setLineDash([5]);
 ctx.moveTo(0,200);
@@ -112,20 +112,7 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-ellipse", "CanvasRenderingContext2D.ellipse")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

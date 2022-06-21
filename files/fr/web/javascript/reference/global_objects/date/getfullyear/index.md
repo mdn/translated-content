@@ -20,7 +20,9 @@ Cette méthode doit être utilisée à la place de {{jsxref("Date.prototype.getY
 
 ## Syntaxe
 
-    dateObj.getFullYear()
+```js
+dateObj.getFullYear()
+```
 
 ### Valeur de retour
 

@@ -52,12 +52,12 @@ original_slug: Web/Media/Formats/코덱파라미터
 
 <div class="index">
 <ul>
- <li>{{anch("ISO-BMFF", "3GP")}}</li>
- <li>{{anch("AV1")}}</li>
- <li>{{anch("ISO-BMFF", "ISO BMFF")}}</li>
- <li>{{anch("ISO-BMFF", "MPEG-4")}}</li>
- <li>{{anch("ISO-BMFF", "QuickTime")}}</li>
- <li>{{anch("WebM")}}</li>
+ <li><a href="#iso-bmff">3GP</a></li>
+ <li><a href="#av1">AV1</a></li>
+ <li><a href="#iso-bmff">ISO BMFF</a></li>
+ <li><a href="#iso-bmff">MPEG-4</a></li>
+ <li><a href="#iso-bmff">QuickTime</a></li>
+ <li><a href="#webm">WebM</a></li>
 </ul>
 </div>
 
@@ -256,12 +256,12 @@ original_slug: Web/Media/Formats/코덱파라미터
  <dt><code>cccc[.pp]*</code> (Generic ISO BMFF)</dt>
  <dd><code>cccc</code> 는 4 글자 코덱 ID이며  <code>pp</code>는 0~2자리 인코딩 된 문자입니다.</dd>
  <dt><code>mp4a.oo[.A]</code> (MPEG-4 audio)</dt>
- <dd><code>oo</code> 는 미디어 콘텐츠를 더 정확하게 기술하는 Object Type Indication 값이며 <code>A</code> 는 한자리 숫자<em>오디오</em> OTI입니다. OTI로 가능한 값은 MP4 Registration Authority 웹사이트의 <a href="http://mp4ra.org/#/object_types">Object Types page</a> 페이지에서 확인할 수 있습니다. 예를들어 MP4 파일의 Opus 오디오는 <code>mp4a.ad</code>로 기술합니다. 자세한 내용은 {{anch("MPEG-4 audio")}}를 참조하세요.</dd>
+ <dd><code>oo</code> 는 미디어 콘텐츠를 더 정확하게 기술하는 Object Type Indication 값이며 <code>A</code> 는 한자리 숫자<em>오디오</em> OTI입니다. OTI로 가능한 값은 MP4 Registration Authority 웹사이트의 <a href="http://mp4ra.org/#/object_types">Object Types page</a> 페이지에서 확인할 수 있습니다. 예를들어 MP4 파일의 Opus 오디오는 <code>mp4a.ad</code>로 기술합니다. 자세한 내용은 <a href="#mpeg-4_audio">MPEG-4 audio</a>를 참조하세요.</dd>
  <dt><code>mp4v.oo[.V]</code> (MPEG-4 video)</dt>
  <dd>마찬가지로 <code>oo</code> 는 미디어 콘텐츠를 명시하는 OTI 값이며, <code>V</code> 는 한자리 숫자 <em>비디오</em> OTI 값입니다.</dd>
  <dt><code>avc1.oo[.PPCCLL]</code> (AVC video)</dt>
  <dd>
- <p><code>oo</code> 는 콘텐츠를 명시하는 OTI 값이며, while <code>PPCCLL</code> 는 6자리 16진수로써 프로파일 넘버 (<code>PP</code>), 제약 플래그 (<code>CC</code>), 레벨 (<code>LL</code>)을 의미합니다. <code>PP</code>로 가능한 값은 {{anch("AVC profiles")}}를 참조하세요.</p>
+ <p><code>oo</code> 는 콘텐츠를 명시하는 OTI 값이며, while <code>PPCCLL</code> 는 6자리 16진수로써 프로파일 넘버 (<code>PP</code>), 제약 플래그 (<code>CC</code>), 레벨 (<code>LL</code>)을 의미합니다. <code>PP</code>로 가능한 값은 <a href="#avc_profiles">AVC profiles</a>를 참조하세요.</p>
 
  <p>제약 플래그는 1 비트 불리언 값이며, MSB는 flag 0(또는 일부에선 <code>constraint_set0_flag</code>)로 취급합니다. 그리고 이어지는 비트는 하나씩 번호가 높게 매겨집니다. 현재로썬 0부터 2번째 비트까지만 사용하며;나머지 5개의 비트는 <em>반드시</em> 0이어야합니다. 각 플래그의 의미는 사용하는 프로파일에 따라 달라집니다.</p>
 

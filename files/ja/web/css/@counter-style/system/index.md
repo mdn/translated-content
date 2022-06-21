@@ -85,9 +85,11 @@ system: extends decimal;
 
 ブラウザーが対応していれば、この例は次のように描画されます。
 
-    ◉ One
-    ◉ Two
-    ◉ Three
+```
+◉ One
+◉ Two
+◉ Three
+```
 
 #### CSS
 
@@ -119,11 +121,13 @@ ul {
 
 ブラウザーが対応していれば、この例は次のように描画されます。
 
-    ➀ One
-    ➁ Two
-    ➂ Three
-    4 Four
-    5 Five
+```
+➀ One
+➁ Two
+➂ Three
+4 Four
+5 Five
+```
 
 #### CSS
 
@@ -157,14 +161,16 @@ ul {
 
 ブラウザーが対応していれば、この例は次のように描画されます。
 
-      a. One
-      b. Two
-      c. Three
-     aa. Four
-     bb. Five
-     cc. Six
-    aaa. Seven
-    bbb. Eight
+```
+  a. One
+  b. Two
+  c. Three
+ aa. Four
+ bb. Five
+ cc. Six
+aaa. Seven
+bbb. Eight
+```
 
 #### CSS
 
@@ -201,14 +207,16 @@ ul {
 
 ブラウザーが対応していれば、この例は次のように描画されます。
 
-     a. One
-     b. Two
-     c. Three
-    aa. Four
-    ab. Five
-    ac. Six
-    ba. Seven
-    bb. Seven
+```
+ a. One
+ b. Two
+ c. Three
+aa. Four
+ab. Five
+ac. Six
+ba. Seven
+bb. Seven
+```
 
 #### CSS
 
@@ -245,14 +253,16 @@ ul {
 
 ブラウザーが対応していれば、この例は次のように描画されます。
 
-     b. One
-     c. Two
-    ba. Three
-    bb. Four
-    bc. Five
-    ca. Six
-    cb. Seven
-    cc. Eight
+```
+ b. One
+ c. Two
+ba. Three
+bb. Four
+bc. Five
+ca. Six
+cb. Seven
+cc. Eight
+```
 
 `symbols` 記述子で指定された最初の記号は、ここでは `0` と解釈されます。
 

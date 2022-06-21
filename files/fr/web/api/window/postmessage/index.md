@@ -17,7 +17,9 @@ La méthode `window.postMessage`, quand elle est appelée, provoque l'envoi d'un
 
 ## Syntaxe
 
-    otherWindow.postMessage(message, targetOrigin, [transfer]);
+```js
+otherWindow.postMessage(message, targetOrigin, [transfer]);
+```
 
 - `otherWindow`
   - : Une référence à une autre fenêtre ; une telle référence peut être obtenue, par exemple, _via_ la propriété `contentWindow` d'un élément `iframe`, l'objet retourné par [window.open](/fr/docs/DOM/window.open), ou par index nommé ou numérique de [window.frames](/fr/docs/Web/API/window.frames).
@@ -86,7 +88,7 @@ function receiveMessage(event)
 {
   // Faisons-nous confiance à l'expéditeur de ce message ?  (il pourrait être
   // différent de la fenêtre que nous avons ouverte au départ, par exemple).
-  if (event.origin&nbsp;!== "http://example.org")
+  if (event.origin !== "http://example.org")
     return;
 
   // event.source est la popup
@@ -104,7 +106,7 @@ window.addEventListener("message", receiveMessage, false);
 function receiveMessage(event)
 {
   // Faisons-nous confiance à l'expéditeur de ce message ?
-  if (event.origin&nbsp;!== "http://example.com:8080")
+  if (event.origin !== "http://example.com:8080")
     return;
 
   // event.source est window.opener

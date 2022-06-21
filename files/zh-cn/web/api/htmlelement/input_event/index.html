@@ -39,7 +39,7 @@ original_slug: Web/Events/input
 
 <p><strong><code>input</code></strong> 事件也适用于启用了 {{domxref("HTMLElement.contentEditable", "contenteditable")}} 的元素，以及开启了 {{domxref("Document.designMode", "designMode")}} 的任意元素。在<code>contenteditable</code> 和 <code>designMode</code> 的情况下，事件的 target 为当前正在编辑的宿主。如果这些属性应用于多个元素上，当前正在编辑的宿主为最近的父节点不可编辑的祖先元素。</p>
 
-<p>对于 <code>type=checkbox</code> 或 <code>type=radio</code> 的 <code>input</code> 元素，每当用户切换控件（通过触摸、鼠标或键盘）时（<a href="https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2">HTML5规范</a>），<code>input</code> 事件都应该触发。然而，历史事实并非如此。请检查兼容性，或使用 {{event("change")}} 事件代替这些类型的元素。</p>
+<p>对于 <code>type=checkbox</code> 或 <code>type=radio</code> 的 <code>input</code> 元素，每当用户切换控件（通过触摸、鼠标或键盘）时（<a href="https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2">HTML5 规范</a>），<code>input</code> 事件都应该触发。然而，历史事实并非如此。请检查兼容性，或使用 {{event("change")}} 事件代替这些类型的元素。</p>
 
 <div class="blockIndicator note">
 <p><strong>注意：</strong> 每当元素的 <code>value</code> 改变，<code>input</code> 事件都会被触发。这与 {{domxref("HTMLInputElement.change_event", "change")}} 事件不同。change 事件仅当 value 被提交时触发，如按回车键，从一个 options 列表中选择一个值等。</p>
@@ -133,7 +133,7 @@ function updateValue(e) {
 
 <p>[1] 在 Gecko 12.0 {{geckoRelease("12.0")}} 之前，用户在输入法中输入时，或者 dead keys were used on Mac OS X 时，Gecko 不触发 input 事件。</p>
 
-<p>[2] IE 9 在用户删除输入的文字时不触发 input 事件(例如，按 Backspace 或者删除键，或者“剪切”文字).</p>
+<p>[2] IE 9 在用户删除输入的文字时不触发 input 事件 (例如，按 Backspace 或者删除键，或者“剪切”文字).</p>
 
 <p>[3] Opera 在用户把文字拖进输入框时，不触发 input 事件。</p>
 

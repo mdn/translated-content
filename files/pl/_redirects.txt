@@ -396,8 +396,8 @@
 /pl/docs/DOM/event.initUIEvent	/pl/docs/Web/API/UIEvent/initUIEvent
 /pl/docs/DOM/event.isChar	/pl/docs/Web/API/UIEvent/isChar
 /pl/docs/DOM/event.keyCode	/pl/docs/Web/API/KeyboardEvent/keyCode
-/pl/docs/DOM/event.layerX	/pl/docs/Web/API/UIEvent/layerX
-/pl/docs/DOM/event.layerY	/pl/docs/Web/API/UIEvent/layerY
+/pl/docs/DOM/event.layerX	/pl/docs/Web/API/MouseEvent/layerX
+/pl/docs/DOM/event.layerY	/pl/docs/Web/API/MouseEvent/layerY
 /pl/docs/DOM/event.metaKey	/pl/docs/Web/API/MouseEvent/metaKey
 /pl/docs/DOM/event.pageX	/pl/docs/Web/API/MouseEvent/pageX
 /pl/docs/DOM/event.pageY	/pl/docs/Web/API/MouseEvent/pageY
@@ -630,8 +630,8 @@
 /pl/docs/DOM:event.initUIEvent	/pl/docs/Web/API/UIEvent/initUIEvent
 /pl/docs/DOM:event.isChar	/pl/docs/Web/API/UIEvent/isChar
 /pl/docs/DOM:event.keyCode	/pl/docs/Web/API/KeyboardEvent/keyCode
-/pl/docs/DOM:event.layerX	/pl/docs/Web/API/UIEvent/layerX
-/pl/docs/DOM:event.layerY	/pl/docs/Web/API/UIEvent/layerY
+/pl/docs/DOM:event.layerX	/pl/docs/Web/API/MouseEvent/layerX
+/pl/docs/DOM:event.layerY	/pl/docs/Web/API/MouseEvent/layerY
 /pl/docs/DOM:event.metaKey	/pl/docs/Web/API/MouseEvent/metaKey
 /pl/docs/DOM:event.pageX	/pl/docs/Web/API/MouseEvent/pageX
 /pl/docs/DOM:event.pageY	/pl/docs/Web/API/MouseEvent/pageY
@@ -1454,8 +1454,8 @@
 /pl/docs/Web/API/Event/initUIEvent	/pl/docs/Web/API/UIEvent/initUIEvent
 /pl/docs/Web/API/Event/isChar	/pl/docs/Web/API/UIEvent/isChar
 /pl/docs/Web/API/Event/keyCode	/pl/docs/Web/API/KeyboardEvent/keyCode
-/pl/docs/Web/API/Event/layerX	/pl/docs/Web/API/UIEvent/layerX
-/pl/docs/Web/API/Event/layerY	/pl/docs/Web/API/UIEvent/layerY
+/pl/docs/Web/API/Event/layerX	/pl/docs/Web/API/MouseEvent/layerX
+/pl/docs/Web/API/Event/layerY	/pl/docs/Web/API/MouseEvent/layerY
 /pl/docs/Web/API/Event/metaKey	/pl/docs/Web/API/MouseEvent/metaKey
 /pl/docs/Web/API/Event/pageX	/pl/docs/Web/API/MouseEvent/pageX
 /pl/docs/Web/API/Event/pageY	/pl/docs/Web/API/MouseEvent/pageY
@@ -1500,6 +1500,8 @@
 /pl/docs/Web/API/Stylesheet/cssRules	/pl/docs/Web/API/CSSRuleList
 /pl/docs/Web/API/Stylesheet/deleteRule	/pl/docs/Web/API/CSSStyleSheet/deleteRule
 /pl/docs/Web/API/Stylesheet/insertRule	/pl/docs/Web/API/CSSStyleSheet/insertRule
+/pl/docs/Web/API/UIEvent/layerX	/pl/docs/Web/API/MouseEvent/layerX
+/pl/docs/Web/API/UIEvent/layerY	/pl/docs/Web/API/MouseEvent/layerY
 /pl/docs/Web/API/UIEvent/pageX	/pl/docs/Web/API/MouseEvent/pageX
 /pl/docs/Web/API/UIEvent/pageY	/pl/docs/Web/API/MouseEvent/pageY
 /pl/docs/Web/API/Window/clearInterval	/pl/docs/Web/API/clearInterval

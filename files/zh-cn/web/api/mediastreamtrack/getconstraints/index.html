@@ -10,57 +10,57 @@ tags:
   - getConstraints
 translation_of: Web/API/MediaStreamTrack/getConstraints
 ---
-<p><font><font>{{APIRef("Media Capture and Streams")}}</font></font></p>
+<p>{{APIRef("Media Capture and Streams")}}</p>
 
-<p><span class="seoSummary"><font><font>的</font></font><strong><code>getConstraints()</code></strong><font><font>所述{{domxref("MediaStreamTrack")}}的方法接口返回{{domxref("MediaTrackConstraints")}}包含集使用现有呼叫最近的轨道建立约束来{{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}。</font><font>这些约束指示网站或应用程序指定的值和值范围对于包含的可约束属性是必需的或可接受的。</font></font></span></p>
+<p>的<strong><code>getConstraints()</code></strong>所述{{domxref("MediaStreamTrack")}}的方法接口返回{{domxref("MediaTrackConstraints")}}包含集使用现有呼叫最近的轨道建立约束来{{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}。这些约束指示网站或应用程序指定的值和值范围对于包含的可约束属性是必需的或可接受的。</p>
 
-<p><font><font>约束条件可以用来确保媒体符合你喜欢的某些指导方针。</font><font>例如，您可能更喜欢高清视频，但要求帧率略低，以帮助保持足够低的数据速率而不会使网络负担过重。</font><font>约束还可以指定理想和/或可接受的尺寸或尺寸范围。</font><font>有关</font><font>如何使用可约束属性的详细信息</font></font><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints"><font><font>，</font></font></a><font><font>请参阅</font><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints"><font>能力，约束和设置</font></a><font>。</font></font></p>
+<p>约束条件可以用来确保媒体符合你喜欢的某些指导方针。例如，您可能更喜欢高清视频，但要求帧率略低，以帮助保持足够低的数据速率而不会使网络负担过重。约束还可以指定理想和/或可接受的尺寸或尺寸范围。有关如何使用可约束属性的详细信息<a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">，</a>请参阅<a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">能力，约束和设置</a>。</p>
 
-<h2 id="句法"><font><font>句法</font></font></h2>
+<h2 id="句法">句法</h2>
 
-<pre class="syntaxbox"><font><font>var </font></font><em><font><font>constraints</font></font></em><font><font> = </font></font><em><font><font>MediaStreamTrack</font></font></em><font><font>.getConstraints();</font></font></pre>
+<pre class="syntaxbox">var <em>constraints</em> = <em>MediaStreamTrack</em>.getConstraints();</pre>
 
-<h3 id="参数"><font><font>参数</font></font></h3>
+<h3 id="参数">参数</h3>
 
-<p><font><font>没有。</font></font></p>
+<p>没有。</p>
 
-<h3 id="返回值"><span style="font-size: 1.714rem; letter-spacing: -0.021em; line-height: 1;"><font><font>返回值</font></font></span></h3>
+<h3 id="返回值">返回值</h3>
 
-<p><font><font>指示使用{{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}最近设置的网站或应用程序的可约束属性的{{domxref('MediaTrackConstraints')}}对象。</font><font>返回对象中的属性按照与设置时相同的顺序列出，并且未包含未由网站或应用专门设置的属性。</font></font></p>
+<p>指示使用{{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}最近设置的网站或应用程序的可约束属性的{{domxref('MediaTrackConstraints')}}对象。返回对象中的属性按照与设置时相同的顺序列出，并且未包含未由网站或应用专门设置的属性。</p>
 
 <div class="note">
-<p><font><font>返回的一组约束条件不一定描述媒体的实际状态; </font><font>如果任何约束无法满足，它们仍然包含在网站代码最初设置的返回对象中。</font><font>要获得所有可约束属性的当前活动设置，您应该调用{{domxref("MediaStreamTrack.getSettings", "getSettings()")}}。</font></font></p>
+<p>返回的一组约束条件不一定描述媒体的实际状态; 如果任何约束无法满足，它们仍然包含在网站代码最初设置的返回对象中。要获得所有可约束属性的当前活动设置，您应该调用{{domxref("MediaStreamTrack.getSettings", "getSettings()")}}。</p>
 </div>
 
-<h2 id="例"><font><font>例</font></font></h2>
+<h2 id="例">例</h2>
 
-<p><font><font>本示例获取当前轨道约束，设置{{domxref("MediaTrackConstraints.facingMode", "facingMode")}}，并应用更新的约束。</font></font></p>
+<p>本示例获取当前轨道约束，设置{{domxref("MediaTrackConstraints.facingMode", "facingMode")}}，并应用更新的约束。</p>
 
-<pre class="brush: js"><font><font>function switchCameras(track，camera){</font></font><font><font>
-  let constraints = track.getConstraints();</font></font><font><font>
-  constraints.facingMode = camera;</font></font><font><font>
-  track.applyConstraints(约束);</font></font><font><font>
-}</font></font></pre>
+<pre class="brush: js">function switchCameras(track，camera){
+  let constraints = track.getConstraints();
+  constraints.facingMode = camera;
+  track.applyConstraints(约束);
+}</pre>
 
-<h2 id="产品规格"><font><font>产品规格</font></font></h2>
+<h2 id="产品规格">产品规格</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="col"><font><font>规范</font></font></th>
-   <th scope="col"><font><font>状态</font></font></th>
-   <th scope="col"><font><font>评论</font></font></th>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">评论</th>
   </tr>
   <tr>
-   <td><font><font>{{SpecName('Media Capture', '＃dom-mediastreamtrack-getconstraints', 'getConstraints()')}}</font></font></td>
-   <td><font><font>{{Spec2('Media Capture')}}</font></font></td>
-   <td><font><font>初始定义。</font></font></td>
+   <td>{{SpecName('Media Capture', '＃dom-mediastreamtrack-getconstraints', 'getConstraints()')}}</td>
+   <td>{{Spec2('Media Capture')}}</td>
+   <td>初始定义。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性"><font><font>浏览器兼容性</font></font></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 
 
-<p><font><font>{{COMPAT( "api.MediaStreamTrack.getConstraints")}}</font></font></p>
+<p>{{COMPAT( "api.MediaStreamTrack.getConstraints")}}</p>

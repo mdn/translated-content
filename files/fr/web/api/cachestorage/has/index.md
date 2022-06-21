@@ -20,9 +20,11 @@ Vous pouvez accéder à `CacheStorage` via la propriété globale {{domxref("Win
 
 ## Syntaxe
 
-    caches.has(cacheName).then(function(true) {
-      // le cache existe!
-    });
+```js
+caches.has(cacheName).then(function(true) {
+  // le cache existe!
+});
+```
 
 ### Paramètres
 

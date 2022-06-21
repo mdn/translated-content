@@ -9,7 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:blank
 ---
-{{CSSRef}}{{Draft}}{{SeeCompatTable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 > **Note :** Le sélecteur `:blank` est une fonctionnalité considérée risquée car en cours de modification par le CSSWG. Voir [l'_issue_ n°1967 à ce propos](https://github.com/w3c/csswg-drafts/issues/1967 "[selectors] decide on :blank").
 

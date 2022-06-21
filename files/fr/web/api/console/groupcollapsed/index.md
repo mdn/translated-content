@@ -24,7 +24,9 @@ Voir [Using groups in the console](/fr/docs/Web/API/console#Using_groups_in_the_
 
 ## Syntaxe
 
-    console.groupCollapsed([label]);
+```js
+console.groupCollapsed([label]);
+```
 
 ## Paramètres
 

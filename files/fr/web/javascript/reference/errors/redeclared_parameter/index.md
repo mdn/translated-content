@@ -12,9 +12,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Redeclared_parameter
 
 ## Message
 
-    SyntaxError: Let/Const redeclaration (Edge)
-    SyntaxError: redeclaration of formal parameter "x" (Firefox)
-    SyntaxError: Identifier "x" has already been declared (Chrome)
+```
+SyntaxError: Let/Const redeclaration (Edge)
+SyntaxError: redeclaration of formal parameter "x" (Firefox)
+SyntaxError: Identifier "x" has already been declared (Chrome)
+```
 
 ## Type d'erreur
 

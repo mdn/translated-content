@@ -2724,13 +2724,6 @@
       "arthur2323"
     ]
   },
-  "MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example": {
-    "modified": "2019-01-17T10:48:33.130Z",
-    "contributors": [
-      "wbamberg",
-      "arthur2323"
-    ]
-  },
   "MDN/Contribute/Howto/Create_and_edit_pages": {
     "modified": "2020-01-20T16:42:55.893Z",
     "contributors": [
@@ -3857,12 +3850,6 @@
       "jeronimojr"
     ]
   },
-  "Web/API/DOMString": {
-    "modified": "2019-03-23T22:03:59.387Z",
-    "contributors": [
-      "oirodolfo"
-    ]
-  },
   "Web/API/DOMStringList": {
     "modified": "2019-03-23T22:03:44.815Z",
     "contributors": [
@@ -4760,13 +4747,6 @@
       "Beterraba"
     ]
   },
-  "Web/API/File/Using_files_from_web_applications": {
-    "modified": "2019-03-23T23:36:41.452Z",
-    "contributors": [
-      "chrisdavidmills",
-      "FelipeFonseca"
-    ]
-  },
   "Web/API/FileList": {
     "modified": "2019-03-23T22:14:37.211Z",
     "contributors": [
@@ -4823,6 +4803,13 @@
     "modified": "2019-03-23T22:15:55.068Z",
     "contributors": [
       "fellypsantos"
+    ]
+  },
+  "Web/API/File_API/Using_files_from_web_applications": {
+    "modified": "2019-03-23T23:36:41.452Z",
+    "contributors": [
+      "chrisdavidmills",
+      "FelipeFonseca"
     ]
   },
   "Web/API/FormData": {
@@ -4975,12 +4962,6 @@
     "modified": "2019-03-23T22:31:33.398Z",
     "contributors": [
       "teoli"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onabort": {
-    "modified": "2019-03-23T22:28:55.671Z",
-    "contributors": [
-      "cezaraugusto"
     ]
   },
   "Web/API/GlobalEventHandlers/onblur": {
@@ -5438,14 +5419,6 @@
       "teoli"
     ]
   },
-  "Web/API/Navigator/battery": {
-    "modified": "2019-03-23T23:16:59.785Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "eliezerb"
-    ]
-  },
   "Web/API/Navigator/cookieEnabled": {
     "modified": "2020-10-15T22:13:23.552Z",
     "contributors": [
@@ -5463,6 +5436,14 @@
     "contributors": [
       "mateusvelleda",
       "michaelycus"
+    ]
+  },
+  "Web/API/Navigator/getBattery": {
+    "modified": "2019-03-23T23:16:59.785Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "eliezerb"
     ]
   },
   "Web/API/Navigator/getUserMedia": {
@@ -15960,6 +15941,13 @@
       "jswisher"
     ]
   },
+  "conflicting/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web": {
+    "modified": "2019-01-17T10:48:33.130Z",
+    "contributors": [
+      "wbamberg",
+      "arthur2323"
+    ]
+  },
   "conflicting/Mozilla/Add-ons": {
     "modified": "2019-03-23T23:05:15.518Z",
     "contributors": [
@@ -16042,6 +16030,12 @@
       "teoli",
       "khalid32",
       "Leeehandro"
+    ]
+  },
+  "conflicting/Web/API/HTMLMediaElement/abort_event": {
+    "modified": "2019-03-23T22:28:55.671Z",
+    "contributors": [
+      "cezaraugusto"
     ]
   },
   "conflicting/Web/API/HTML_Drag_and_Drop_API": {
@@ -16248,12 +16242,9 @@
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
-    "modified": "2020-10-15T21:58:05.452Z",
+    "modified": "2019-03-23T22:03:59.387Z",
     "contributors": [
-      "akinncar",
-      "coloringa",
-      "Perrottacooking",
-      "brunopulis"
+      "oirodolfo"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/WeakMap": {

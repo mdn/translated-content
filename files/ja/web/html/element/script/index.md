@@ -76,7 +76,7 @@ translation_of: Web/HTML/Element/script
 
     これは論理属性です。論理属性が要素にあれば真の値を表し、属性がなければ偽の値を表します。  
 
-    ブラウザーの対応状況については{{anch("ブラウザーの互換性")}}をご覧ください。 [asm.js 向け非同期スクリプト](/ja/docs/Games/Techniques/Async_scripts)もご覧ください。
+    ブラウザーの対応状況については[ブラウザーの互換性](#ブラウザーの互換性)をご覧ください。 [asm.js 向け非同期スクリプト](/ja/docs/Games/Techniques/Async_scripts)もご覧ください。
 
 - {{htmlattrdef("crossorigin")}}
   - : 通常の `script` 要素は標準の {{Glossary("CORS")}} チェックに通らないスクリプトに対して、 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} に最小限の情報しか渡しません。別のドメインを使用するサイトに静的メディアへのエラーログ出力ができるようにするためには、この属性を使用してください。有効な値について、詳しくは [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)をご覧ください。

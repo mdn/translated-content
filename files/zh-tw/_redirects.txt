@@ -141,10 +141,7 @@
 /zh-TW/docs/Firefox_3_supports_Cross-site_XMLHttpRequest	/zh-TW/docs/orphaned/Cross-site_XMLHttpRequest
 /zh-TW/docs/Firefox_3_技術文件	/zh-TW/docs/Mozilla/Firefox/Releases/3
 /zh-TW/docs/Firefox_4_for_developers	/zh-TW/docs/Mozilla/Firefox/Releases/4
-/zh-TW/docs/Firefox_4_for_developers/Firefox_4_開發者新功能概覽	/zh-TW/docs/orphaned/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽
-/zh-TW/docs/Firefox_4_開發者新功能概覽	/zh-TW/docs/orphaned/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽
 /zh-TW/docs/Firefox_7_for_developers	/zh-TW/docs/Mozilla/Firefox/Releases/7
-/zh-TW/docs/Firefox_中的離線資源	/zh-TW/docs/orphaned/Firefox_中的離線資源
 /zh-TW/docs/Games/Workflows	/zh-TW/docs/Games/Tutorials
 /zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
 /zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
@@ -176,7 +173,7 @@
 /zh-TW/docs/HTTP/Link_prefetching_FAQ	/zh-TW/docs/Web/HTTP/Link_prefetching_FAQ
 /zh-TW/docs/HTTP/Response_codes	/zh-TW/docs/Web/HTTP/Status
 /zh-TW/docs/HTTP/X-Frame-Options	/zh-TW/docs/Web/HTTP/Headers/X-Frame-Options
-/zh-TW/docs/HTTP/data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/zh-TW/docs/HTTP/data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-TW/docs/IndexedDB	/zh-TW/docs/Web/API/IndexedDB_API
 /zh-TW/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/zh-TW/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /zh-TW/docs/IndexedDB/Using_IndexedDB	/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB
@@ -457,9 +454,6 @@
 /zh-TW/docs/MDN/Contribute/Content	/zh-TW/docs/MDN/Guidelines
 /zh-TW/docs/MDN/Contribute/Content/Style_guide	/zh-TW/docs/MDN/Guidelines/Writing_style_guide
 /zh-TW/docs/MDN/Contribute/Creating_and_editing_pages	/zh-TW/docs/MDN/Contribute/Howto/Create_and_edit_pages
-/zh-TW/docs/MDN/Contribute/Editor	/zh-TW/docs/orphaned/MDN/Editor
-/zh-TW/docs/MDN/Contribute/Editor/Basics	/zh-TW/docs/orphaned/MDN/Editor/Basics
-/zh-TW/docs/MDN/Contribute/Editor/Edit_box	/zh-TW/docs/orphaned/MDN/Editor/Keyboard_shortcuts
 /zh-TW/docs/MDN/Contribute/Guidelines	/zh-TW/docs/MDN/Guidelines
 /zh-TW/docs/MDN/Contribute/Guidelines/Style_guide	/zh-TW/docs/MDN/Guidelines/Writing_style_guide
 /zh-TW/docs/MDN/Contribute/Guidelines/Writing_style_guide	/zh-TW/docs/MDN/Guidelines/Writing_style_guide
@@ -471,9 +465,6 @@
 /zh-TW/docs/MDN/Contribute/Tools	/zh-TW/docs/MDN/Tools
 /zh-TW/docs/MDN/Contribute/Tools/KumaScript	/zh-TW/docs/MDN/Tools/KumaScript
 /zh-TW/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/zh-TW/docs/MDN/Tools/KumaScript/Troubleshooting
-/zh-TW/docs/MDN/Editor	/zh-TW/docs/orphaned/MDN/Editor
-/zh-TW/docs/MDN/Editor/Basics	/zh-TW/docs/orphaned/MDN/Editor/Basics
-/zh-TW/docs/MDN/Editor/Edit_box	/zh-TW/docs/orphaned/MDN/Editor/Keyboard_shortcuts
 /zh-TW/docs/MDN/Getting_started	/zh-TW/docs/MDN/Contribute/Getting_started
 /zh-TW/docs/MDN/Kuma	/zh-TW/docs/MDN/Yari
 /zh-TW/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	/zh-TW/docs/MDN/Tools/KumaScript/Troubleshooting
@@ -494,7 +485,6 @@
 /zh-TW/docs/Mozilla/Firefox/Releases/2/Firefox_2_的安全功能	/zh-TW/docs/Mozilla/Firefox/Releases/2/Security_changes
 /zh-TW/docs/Mozilla/Firefox/Releases/2/新增消息來源閱讀工具	/zh-TW/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /zh-TW/docs/Mozilla/Firefox/Releases/3/Firefox_3_Dom_Improvements	/zh-TW/docs/Mozilla/Firefox/Releases/3/DOM_improvements
-/zh-TW/docs/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽	/zh-TW/docs/orphaned/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽
 /zh-TW/docs/Mozilla_event_reference	/zh-TW/docs/Web/Events
 /zh-TW/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
 /zh-TW/docs/Python	/zh-TW/docs/conflicting/Learn/Server-side/Django
@@ -543,7 +533,7 @@
 /zh-TW/docs/Tools/Web_Console/Split_console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/split_console/index.html
 /zh-TW/docs/Tools/Web_Console/The_command_line_interpreter	https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html
 /zh-TW/docs/Tools/Web_Console/UI_Tour	https://firefox-source-docs.mozilla.org/devtools-user/web_console/ui_tour/index.html
-/zh-TW/docs/Using_files_from_web_applications	/zh-TW/docs/Web/API/File/Using_files_from_web_applications
+/zh-TW/docs/Using_files_from_web_applications	/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications
 /zh-TW/docs/Using_geolocation	/zh-TW/docs/Web/API/Geolocation_API
 /zh-TW/docs/Web/API/Ambient_Light_Events	/zh-TW/docs/orphaned/Web/API/Ambient_Light_Events
 /zh-TW/docs/Web/API/AnimationEvent/initAnimationEvent	/zh-TW/docs/Web/API/AnimationEvent/AnimationEvent
@@ -561,6 +551,7 @@
 /zh-TW/docs/Web/API/Coordinates/latitude	/zh-TW/docs/Web/API/GeolocationCoordinates/latitude
 /zh-TW/docs/Web/API/Coordinates/longitude	/zh-TW/docs/Web/API/GeolocationCoordinates/longitude
 /zh-TW/docs/Web/API/Coordinates/speed	/zh-TW/docs/Web/API/GeolocationCoordinates/speed
+/zh-TW/docs/Web/API/DOMString	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
 /zh-TW/docs/Web/API/Detecting_device_orientation	/zh-TW/docs/orphaned/Web/API/Detecting_device_orientation
 /zh-TW/docs/Web/API/DocumentTemp	/zh-TW/docs/Web/API/Document
 /zh-TW/docs/Web/API/DocumentTemp/createElement	/zh-TW/docs/Web/API/Document/createElement
@@ -579,6 +570,7 @@
 /zh-TW/docs/Web/API/ElementCSSInlineStyle/style	/zh-TW/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /zh-TW/docs/Web/API/Event/createEvent	/zh-TW/docs/Web/API/Document/createEvent
 /zh-TW/docs/Web/API/EventListener	/zh-TW/docs/Web/API/EventTarget/addEventListener
+/zh-TW/docs/Web/API/File/Using_files_from_web_applications	/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications
 /zh-TW/docs/Web/API/File/fileName	/zh-TW/docs/Web/API/File/name
 /zh-TW/docs/Web/API/File_Handle_API	/zh-TW/docs/Web/API/File_and_Directory_Entries_API
 /zh-TW/docs/Web/API/Geolocation/Using_geolocation	/zh-TW/docs/Web/API/Geolocation_API
@@ -611,12 +603,10 @@
 /zh-TW/docs/Web/API/Window.onpopstate	/zh-TW/docs/Web/API/Window/popstate_event
 /zh-TW/docs/Web/API/Window.requestAnimationFrame	/zh-TW/docs/Web/API/window/requestAnimationFrame
 /zh-TW/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/zh-TW/docs/conflicting/Web/OpenSearch
-/zh-TW/docs/Web/API/WindowBase64	/zh-TW/docs/conflicting/Web/API/WindowOrWorkerGlobalScope
 /zh-TW/docs/Web/API/WindowEventHandlers/onbeforeunload	/zh-TW/docs/Web/API/Window/beforeunload_event
 /zh-TW/docs/Web/API/WindowEventHandlers/onpopstate	/zh-TW/docs/Web/API/Window/popstate_event
 /zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/zh-TW/docs/Web/API/btoa
 /zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-TW/docs/Web/API/setInterval
-/zh-TW/docs/Web/API/WindowTimers	/zh-TW/docs/conflicting/Web/API/WindowOrWorkerGlobalScope_e2691f7ad05781a30c5fc5bb3b3f633a
 /zh-TW/docs/Web/API/XMLHttpRequest/FormData	/zh-TW/docs/Web/API/FormData
 /zh-TW/docs/Web/API/XMLHttpRequest/onreadystatechange	/zh-TW/docs/Web/API/XMLHttpRequest/readystatechange_event
 /zh-TW/docs/Web/API/document.createTreeWalker	/zh-TW/docs/Web/API/Document/createTreeWalker
@@ -706,11 +696,12 @@
 /zh-TW/docs/Web/HTML/Supported_media_formats	/zh-TW/docs/conflicting/Web/Media/Formats
 /zh-TW/docs/Web/HTML/區塊級元素	/zh-TW/docs/Web/HTML/Block-level_elements
 /zh-TW/docs/Web/HTTP/Access_control_CORS	/zh-TW/docs/Web/HTTP/CORS
+/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-TW/docs/Web/HTTP/Response_codes	/zh-TW/docs/Web/HTTP/Status
 /zh-TW/docs/Web/HTTP/Server-Side_Access_Control	/zh-TW/docs/conflicting/Web/HTTP/CORS
 /zh-TW/docs/Web/HTTP/Status/418_I_m_a_teapot	/zh-TW/docs/Web/HTTP/Status/418
 /zh-TW/docs/Web/HTTP/X-Frame-Options	/zh-TW/docs/Web/HTTP/Headers/X-Frame-Options
-/zh-TW/docs/Web/HTTP/data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/zh-TW/docs/Web/HTTP/data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_Overview	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_概觀	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_概觀（JavaScript_Overview）	/zh-TW/docs/Web/JavaScript/Guide/Introduction

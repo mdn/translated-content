@@ -30,19 +30,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 
 <h2 id="Examples">例子</h2>
 
-<pre class="brush: js">// 新对象默认是可扩展的.
+<pre class="brush: js">// 新对象默认是可扩展的。
 var empty = {};
 Object.isExtensible(empty); // === true
 
-// ...可以变的不可扩展.
+// ...可以变的不可扩展。
 Object.preventExtensions(empty);
 Object.isExtensible(empty); // === false
 
-// 密封对象是不可扩展的.
+// 密封对象是不可扩展的。
 var sealed = Object.seal({});
 Object.isExtensible(sealed); // === false
 
-// 冻结对象也是不可扩展.
+// 冻结对象也是不可扩展。
 var frozen = Object.freeze({});
 Object.isExtensible(frozen); // === false
 </pre>

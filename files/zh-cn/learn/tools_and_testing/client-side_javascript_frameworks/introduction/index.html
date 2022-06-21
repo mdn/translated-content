@@ -14,70 +14,70 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 
 <div>{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p class="summary">在本章节我们开始大致了解框架, 简要回顾JavaScript和框架的历史,为什么框架会存在以及它们提供了什么, 如何开始考虑选择一个框架并学习, 以及对于客户端框架还有什么替代方案.</p>
+<p>在本章节我们开始大致了解框架，简要回顾 JavaScript 和框架的历史，为什么框架会存在以及它们提供了什么，如何开始考虑选择一个框架并学习，以及对于客户端框架还有什么替代方案。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">先决条件：</th>
-   <td>熟悉 <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, 以及 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言的核心.</td>
+   <td>熟悉 <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, 以及 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言的核心。</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
-   <td>了解客户端JavaScript框架是如何存在的，它们能解决什么问题，还有哪些替代方案，以及如何选择一个框架.</td>
+   <th scope="row">目标：</th>
+   <td>了解客户端 JavaScript 框架是如何存在的，它们能解决什么问题，还有哪些替代方案，以及如何选择一个框架。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="简史">简史</h2>
 
-<p>当JavaScript在1996被发布后, 它给网络增加了少许的交互性和乐趣, 直到那时, 网页仍由静态文档组成. 网络应该不仅仅是阅读,更是创造的地方. 随着JavaScript的流行. 使用JavaScript的开发者们创造工具来解决他们遇到的问题, 并且将其打包成称为<strong>库</strong>的可复用组件, 这样就能和他人共享解决方案. 这种共享库的体系帮助塑造了网络的增长.</p>
+<p>当 JavaScript 在 1996 被发布后，它给网络增加了少许的交互性和乐趣，直到那时，网页仍由静态文档组成。网络应该不仅仅是阅读，更是创造的地方。随着 JavaScript 的流行。使用 JavaScript 的开发者们创造工具来解决他们遇到的问题，并且将其打包成称为<strong>库</strong>的可复用组件，这样就能和他人共享解决方案。这种共享库的体系帮助塑造了网络的增长。</p>
 
-<p>现在, JavaScript是网络的基本部分, <a href="https://w3techs.com/technologies/details/cp-javascript">used on 95% of all websites</a>, 而且网络又是现代生活的基本部分. 用户在网络上写文章, 管理预算, 听音乐, 看电影,  以及和相隔万里的人通过文字, 音频, 视频聊天来瞬时交流. 网络让我们能够做到那些过去只能在电脑上安装本地应用程序才能做到的事. 这些现代的, 复杂的, 具有交互性的网站通常被称为 <strong>网络应用程序</strong>.</p>
+<p>现在，JavaScript 是网络的基本部分，<a href="https://w3techs.com/technologies/details/cp-javascript">used on 95% of all websites</a>, 而且网络又是现代生活的基本部分。用户在网络上写文章，管理预算，听音乐，看电影，  以及和相隔万里的人通过文字，音频，视频聊天来瞬时交流。网络让我们能够做到那些过去只能在电脑上安装本地应用程序才能做到的事。这些现代的，复杂的，具有交互性的网站通常被称为 <strong>网络应用程序</strong>.</p>
 
-<p>现代JavaScript框架的到来加快了打造高度动态化和交互性强的应用程序的速度.  <strong>框架</strong> 就是提供该如何构建应用程序的意见的库。这些意见能使应用具有可预测性和同质性。可预测性让软件能在扩展到很大规模的同时仍保持可维护性。可预测性和可维护性对于一个软件的长久健康运行是十分重要的。</p>
+<p>现代 JavaScript 框架的到来加快了打造高度动态化和交互性强的应用程序的速度.  <strong>框架</strong> 就是提供该如何构建应用程序的意见的库。这些意见能使应用具有可预测性和同质性。可预测性让软件能在扩展到很大规模的同时仍保持可维护性。可预测性和可维护性对于一个软件的长久健康运行是十分重要的。</p>
 
-<p>在现代网络中，JavaScript框架为众多令人印象深刻的软件提供支持——包括许多你可能每天都使用的网站。你正在阅读的这个MDN Web 文档页面, 就是使用React / ReactDOM框架为其前端提供动力。</p>
+<p>在现代网络中，JavaScript 框架为众多令人印象深刻的软件提供支持——包括许多你可能每天都使用的网站。你正在阅读的这个 MDN Web 文档页面，就是使用 React / ReactDOM 框架为其前端提供动力。</p>
 
-<h2 id="有哪些框架">有哪些框架?</h2>
+<h2 id="有哪些框架">有哪些框架？</h2>
 
 <p>有很多框架可供你选择，但以下主要介绍目前公认的“四大框架”。</p>
 
 <h3 id="Ember">Ember</h3>
 
-<p><a href="https://emberjs.com/">Ember</a>于2011年12月发布，最初作为<a href="https://en.wikipedia.org/wiki/SproutCore">SproutCore</a>项目的延续而开始。比其新式的替代品（例如React和Vue），作为老框架它的用户人数要少得多。但因其稳定性、社区支持以及一些明智的编程原则，它仍然享有很高的知名度。</p>
+<p><a href="https://emberjs.com/">Ember</a>于 2011 年 12 月发布，最初作为<a href="https://en.wikipedia.org/wiki/SproutCore">SproutCore</a>项目的延续而开始。比其新式的替代品（例如 React 和 Vue），作为老框架它的用户人数要少得多。但因其稳定性、社区支持以及一些明智的编程原则，它仍然享有很高的知名度。</p>
 
 <h3 id="Angular">Angular</h3>
 
-<p><a href="https://angular.io">Angular </a>是一个开源 Web 应用程序框架，正式发布于2016年9月14日。它由构建<a href="https://angularjs.org/"> AngularJS</a> 的团队完全重写，并由 Google 的 Angular 团队以及个人和公司社区共同领导。</p>
+<p><a href="https://angular.io">Angular </a>是一个开源 Web 应用程序框架，正式发布于 2016 年 9 月 14 日。它由构建<a href="https://angularjs.org/"> AngularJS</a> 的团队完全重写，并由 Google 的 Angular 团队以及个人和公司社区共同领导。</p>
 
-<p>Angular 是一种基于组件的框架，使用声明式的HTML模板。在应用构建时，框架的编译器将 HTML 模板转换为优化好的 JavaScript 指令，这一过程对开发者是透明的。Angular 使用 TypeScript，它是 JavaScript 的超集，我们将在下一章中对其进行更多介绍。</p>
+<p>Angular 是一种基于组件的框架，使用声明式的 HTML 模板。在应用构建时，框架的编译器将 HTML 模板转换为优化好的 JavaScript 指令，这一过程对开发者是透明的。Angular 使用 TypeScript，它是 JavaScript 的超集，我们将在下一章中对其进行更多介绍。</p>
 
 <h3 id="Vue">Vue</h3>
 
-<p>在工作和学习了 <a href="https://angularjs.org/">AngularJS</a> 的源码之后，Evan You （尤雨溪） 在2014年第一次发布 <a href="https://vuejs.org/">Vue</a> 。Vue 是“四大框架”中最年轻的，但在最近，它的人气迅速上升。</p>
+<p>在工作和学习了 <a href="https://angularjs.org/">AngularJS</a> 的源码之后，Evan You（尤雨溪）在 2014 年第一次发布 <a href="https://vuejs.org/">Vue</a> 。Vue 是“四大框架”中最年轻的，但在最近，它的人气迅速上升。</p>
 
 <p>Vue，就像 <a href="https://angularjs.org/">AngularJS</a>，用它自己的代码拓展了 HTML。除此之外，它完全依赖于现代的、标准化的 JavaScript。</p>
 
 <h3 id="React">React</h3>
 
-<p>Facebook 在 2013 发布了 React。在当时 React 已经被Facebook内部用来解决许多问题。 严格来说 React 本身并不是框架，而是一个用来渲染UI 组件的库。 React 被用来组合<em>其它</em>用来构建应用的库 —— React 和 <a href="https://reactnative.dev/">React Native</a> 让开发者能够用 JavaScript 构建移动应用； React 和 <a href="https://reactjs.org/docs/react-dom.html">ReactDOM</a> 使他们能够被用来制作 web 应用程序等。</p>
+<p>Facebook 在 2013 发布了 React。在当时 React 已经被 Facebook 内部用来解决许多问题。严格来说 React 本身并不是框架，而是一个用来渲染 UI 组件的库。React 被用来组合<em>其它</em>用来构建应用的库 —— React 和 <a href="https://reactnative.dev/">React Native</a> 让开发者能够用 JavaScript 构建移动应用；React 和 <a href="https://reactjs.org/docs/react-dom.html">ReactDOM</a> 使他们能够被用来制作 web 应用程序等。</p>
 
 <p>因为 React 和 ReactDOM 被经常放在一起使用，通俗地讲，React 可以被理解为是一个 JavaScript 框架。当你通读了这个模块时，我们将使用这种口语化的理解进行工作。</p>
 
 <p>React 用类似 HTML 的语法的 <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a> 拓展了 JavaScript。</p>
 
-<h2 id="框架为何会存在">框架为何会存在?</h2>
+<h2 id="框架为何会存在">框架为何会存在？</h2>
 
 <p>我们已经讨论了因为什么契机而创造了框架，但我们仍不知道为什么开发者认为有必要创造它。要知道这个问题的答案，我们首先需要检查软件开发中的各种挑战。</p>
 
-<p>设想一个很常见的软件：一个To-Do清单创建器，在接下来的章节中我们会使用各种框架来实现它。这个应用应让用户可以完成诸如呈现任务列表、添加和删除任务等操作，且在完成这些操作的同时能可靠地跟踪和更新应用程序的底层数据。在软件开发中，这种底层数据被称为状态。</p>
+<p>设想一个很常见的软件：一个 To-Do 清单创建器，在接下来的章节中我们会使用各种框架来实现它。这个应用应让用户可以完成诸如呈现任务列表、添加和删除任务等操作，且在完成这些操作的同时能可靠地跟踪和更新应用程序的底层数据。在软件开发中，这种底层数据被称为状态。</p>
 
 <p>上述每个目标理论上都很简单。我们可以遍历数据来列出清单，添加一个对象来创建新任务，使用标识符来查找、编辑和删除任务。需要注意的是，用户都是在浏览器中使用应用的这些功能，然而这就引出了一些问题： <strong>每当我们修改应用的数据时，我们都需要更新用户界面以使其匹配。</strong> </p>
 
-<p>我们可以通过To-Do应用的一个功能来检验这个问题的难点：呈现任务清单。</p>
+<p>我们可以通过 To-Do 应用的一个功能来检验这个问题的难点：呈现任务清单。</p>
 
-<h2 id="冗长的DOM操作">冗长的DOM操作</h2>
+<h2 id="冗长的DOM操作">冗长的 DOM 操作</h2>
 
 <p>Building HTML elements and rendering them in the browser at the appropriate time takes a surprising amount of code. Let's say that our state is an array of objects structured like this:</p>
 
@@ -152,7 +152,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
  <li><code><a href="/en-US/docs/Web/API/Node/removeChild">node.removeChild()</a></code></li>
 </ul>
 
-<h2 id="另一种打造UIs的方式">另一种打造UIs的方式</h2>
+<h2 id="另一种打造UIs的方式">另一种打造 UIs 的方式</h2>
 
 <p>Every JavaScript framework offers a way to write user interfaces more <em>declaratively</em>. That is, they allow you to write code that describes how your UI should look, and the framework makes it happen in the DOM behind the scenes.</p>
 

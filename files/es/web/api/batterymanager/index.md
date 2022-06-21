@@ -15,7 +15,6 @@ browser-compat: api.BatteryManager
 
 La interfaz `BatteryManager` de la [API del Estado de la Batería](/en-US/docs/Web/API/Battery_Status_API) proporciona la información del nivel de carga de la bateria del sistema. El método {{domxref("navigator.getBattery()")}} regresa una promesa que resuelve con la interfaz de `BatteryManager`.
 
-
 ## Propiedades
 
 - {{domxref("BatteryManager.charging")}} {{ReadOnlyInline}}
@@ -26,7 +25,6 @@ La interfaz `BatteryManager` de la [API del Estado de la Batería](/en-US/docs/W
   - : Número que indica el tiempo restante en segundos hasta que la batería esté completamente descargada y el sistema entra en suspensión.
 - {{domxref("BatteryManager.level")}} {{ReadOnlyInline}}
   - : Número que indica el nivel de carga de la batería del sistema, los valores están escalados entre 0.0 y 1.0.
-
 
 ### Eventos del controlador
 
@@ -46,7 +44,6 @@ _Hereda métodos de su interfaz padre:_ {{domxref("EventTarget")}}.
 ## Especificaciones
 
 {{Specifications}}
-
 
 ## Compatibilidad del navegador
 

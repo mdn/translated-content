@@ -11,7 +11,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 ---
 <p>{{DefaultAPISidebar("Fetch API")}}</p>
 
-<div class="summary">
+<div>
 <p><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 提供了一種 JavaScript Interface 來操作 HTTP pipeline，比方 request 和 response。同時它也提供了 global 的 {{domxref("GlobalFetch.fetch","fetch()")}} method，使得在網路上非同步地 fetch resources 這件事變得簡單易懂。</p>
 </div>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 <ul>
  <li><code>fetch()</code> 回傳的 promise <strong>不會 reject HTTP 的 error status</strong>，就算是 HTTP 404 或 500 也一樣。相反地，它會正常地 resolve，並把 <code>ok</code> status 設為 false。會讓它發生 reject 的只有網路錯誤或其他會中斷 request 的情況。</li>
  <li><code>fetch</code> <strong>可以接收跨站的 cookies</strong>，你可以用 Fetch 來建立跨站的 session。</li>
- <li><code>fetch</code> <strong>不會傳送 cookies</strong>，除非你有設定 credentials 的 <a href="/zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters">init option</a>。 (Since <a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">Aug 25, 2017</a>. The spec changed the default credentials policy to <code>same-origin</code>. Firefox changed since 61.0b13.)</li>
+ <li><code>fetch</code> <strong>不會傳送 cookies</strong>，除非你有設定 credentials 的 <a href="/zh-TW/docs/Web/API/fetch#Parameters">init option</a>。 (Since <a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">Aug 25, 2017</a>. The spec changed the default credentials policy to <code>same-origin</code>. Firefox changed since 61.0b13.)</li>
 </ul>
 
 <h2 id="使用_Fetch_發送請求_request">使用 Fetch 發送請求 ( request )</h2>
@@ -345,28 +345,11 @@ fetch("/login", {
 
 <h2 id="技術指標">技術指標</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">技術名稱</th>
-   <th scope="col">狀態</th>
-   <th scope="col">說明</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div class="bc-data" id="bcd:api.WindowOrWorkerGlobalScope.fetch">
-
-
-<p>{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="參見">參見</h2>
 

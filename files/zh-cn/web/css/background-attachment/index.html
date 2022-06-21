@@ -14,19 +14,18 @@ translation_of: Web/CSS/background-attachment
 
 <div>{{EmbedInteractiveExample("pages/css/background-attachment.html")}}</div>
 
-<p class="hidden">该交互式示例网页的源码存储在GitHub中，如果你想为该网页项目做点贡献的话，请进此链接 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并给我们一个请求加入的回复。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="brush: css no-line-numbers language-css"><code class="language-css"><span class="comment token">/* 关键 属性值 */</span>
-<span class="property token">background-attachment</span><span class="punctuation token">:</span> scroll<span class="punctuation token">;</span>
-<span class="property token">background-attachment</span><span class="punctuation token">:</span> fixed<span class="punctuation token">;</span>
-<span class="property token">background-attachment</span><span class="punctuation token">:</span> local<span class="punctuation token">;</span>
+<pre class="brush: css no-line-numbers language-css"><code class="language-css">/* 关键 属性值 */
+background-attachment: scroll;
+background-attachment: fixed;
+background-attachment: local;
 
-<span class="comment token">/* 全局 属性值 */</span>
-<span class="property token">background-attachment</span><span class="punctuation token">:</span> inherit<span class="punctuation token">;</span>
-<span class="property token">background-attachment</span><span class="punctuation token">:</span> initial<span class="punctuation token">;</span>
-<span class="property token">background-attachment</span><span class="punctuation token">:</span> unset<span class="punctuation token">;</span></code></pre>
+/* 全局 属性值 */
+background-attachment: inherit;
+background-attachment: initial;
+background-attachment: unset;</code></pre>
 
 <h3 id="取值" style="font-size: 1.71428571428571rem;">取值</h3>
 
@@ -34,9 +33,9 @@ translation_of: Web/CSS/background-attachment
  <dt><code>fixed</code></dt>
  <dd>此关键属性值表示背景相对于视口固定。即使一个元素拥有滚动机制，背景也不会随着元素的内容滚动。</dd>
  <dt><code>local</code></dt>
- <dd>此关键属性值表示背景相对于元素的内容固定。如果一个元素拥有滚动机制，背景将会随着元素的内容滚动， 并且背景的绘制区域和定位区域是相对于可滚动的区域而不是包含他们的边框。</dd>
+ <dd>此关键属性值表示背景相对于元素的内容固定。如果一个元素拥有滚动机制，背景将会随着元素的内容滚动，并且背景的绘制区域和定位区域是相对于可滚动的区域而不是包含他们的边框。</dd>
  <dt><code>scroll</code></dt>
- <dd>此关键属性值表示背景相对于元素本身固定， 而不是随着它的内容滚动（对元素边框是有效的）。</dd>
+ <dd>此关键属性值表示背景相对于元素本身固定，而不是随着它的内容滚动（对元素边框是有效的）。</dd>
  <dt>
  <h3 id="标准语法" style="font-size: 1.71428571428571rem;">标准语法</h3>
  </dt>
@@ -48,7 +47,7 @@ translation_of: Web/CSS/background-attachment
 
 <h3 id="简单的例子">简单的例子</h3>
 
-<h4 id="CSS样式表">CSS样式表</h4>
+<h4 id="CSS样式表">CSS 样式表</h4>
 
 <pre class="brush:css; highlight:[3];">p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
@@ -56,7 +55,7 @@ translation_of: Web/CSS/background-attachment
 }
 </pre>
 
-<h4 id="HTML源码">HTML源码</h4>
+<h4 id="HTML源码">HTML 源码</h4>
 
 <pre class="brush: html">&lt;p&gt;
   There were doors all round the hall, but they were all locked; and when
@@ -73,7 +72,7 @@ translation_of: Web/CSS/background-attachment
 
 <p>此属性支持多张背景图片。你可以用逗号分隔来为每一张背景图片指定不同的<code>&lt;attachment&gt;属性值。</code>每一张背景图片顺序对应相应的 attachment 属性。</p>
 
-<h4 id="CSS样式表_2">CSS样式表</h4>
+<h4 id="CSS样式表_2">CSS 样式表</h4>
 
 <pre class="brush:css; highlight:[3];">p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
@@ -81,7 +80,7 @@ translation_of: Web/CSS/background-attachment
   background-repeat: no-repeat, repeat-y;
 }</pre>
 
-<h4 id="HTML源码_2">HTML源码</h4>
+<h4 id="HTML源码_2">HTML 源码</h4>
 
 <pre class="brush: html">&lt;p&gt;
   There were doors all round the hall, but they were all locked; and when
@@ -108,7 +107,7 @@ translation_of: Web/CSS/background-attachment
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col">CSS版本</th>
+   <th scope="col">CSS 版本</th>
    <th scope="col">推荐状态</th>
    <th scope="col">点评</th>
   </tr>
@@ -117,7 +116,7 @@ translation_of: Web/CSS/background-attachment
   <tr>
    <td>{{SpecName('CSS3 Backgrounds', '#the-background-attachment', 'background-attachment')}}</td>
    <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>该简单上手的属性已经支持更多的背景图和局部(local)值</td>
+   <td>该简单上手的属性已经支持更多的背景图和局部 (local) 值</td>
   </tr>
   <tr>
    <td>{{SpecName('CSS2.1', 'colors.html#propdef-background-attachment', 'background-attachment')}}</td>

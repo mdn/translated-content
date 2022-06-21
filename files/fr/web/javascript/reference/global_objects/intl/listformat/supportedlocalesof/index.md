@@ -17,7 +17,9 @@ The **`Intl.ListFormat.supportedLocalesOf()`** renvoie, parmi les locales fourni
 
 ## Syntaxe
 
-    Intl.ListFormat.supportedLocalesOf(locales[, options])
+```js
+Intl.ListFormat.supportedLocalesOf(locales[, options])
+```
 
 ### Paramètres
 

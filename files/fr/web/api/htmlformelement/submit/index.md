@@ -19,9 +19,11 @@ Cette méthode est similaire, mais pas identique, à l’activation du script su
 
 Si un contrôle de formulaire (tel qu'un submit bouton ) a un`name` ou un `id` de `submit`, cette méthode masquera la méthode d'envoi du formulaire.
 
-## Syntax
+## Syntaxe
 
-    HTMLFormElement.submit()
+```js
+HTMLFormElement.submit()
+```
 
 ## Exemple
 

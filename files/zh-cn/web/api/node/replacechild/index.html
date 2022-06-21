@@ -40,29 +40,29 @@ translation_of: Web/API/Node/replaceChild
 //  &lt;span id="childSpan"&gt;foo bar&lt;/span&gt;
 // &lt;/div&gt;
 
-// 创建一个空的span元素节点
-// 没有id,没有任何属性和内容
+// 创建一个空的 span 元素节点
+// 没有 id，没有任何属性和内容
 var sp1 = document.createElement("span");
 
-// 添加一个id属性,值为'newSpan'
+// 添加一个 id 属性，值为'newSpan'
 sp1.setAttribute("id", "newSpan");
 
 // 创建一个文本节点
-var sp1_content = document.createTextNode("新的span元素的内容.");
+var sp1_content = document.createTextNode("新的 span 元素的内容.");
 
-// 将文本节点插入到span元素中
+// 将文本节点插入到 span 元素中
 sp1.appendChild(sp1_content);
 
-// 获得被替换节点和其父节点的引用.
+// 获得被替换节点和其父节点的引用。
 var sp2 = document.getElementById("childSpan");
 var parentDiv = sp2.parentNode;
 
-// 用新的span元素sp1来替换掉sp2
+// 用新的 span 元素 sp1 来替换掉 sp2
 parentDiv.replaceChild(sp1, sp2);
 
-// 结果:
+// 结果：
 // &lt;div&gt;
-//   &lt;span id="newSpan"&gt;新的span元素的内容.&lt;/span&gt;
+//   &lt;span id="newSpan"&gt;新的 span 元素的内容.&lt;/span&gt;
 // &lt;/div&gt;
 </pre>
 

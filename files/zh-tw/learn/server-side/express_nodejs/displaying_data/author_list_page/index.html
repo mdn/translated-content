@@ -5,48 +5,48 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_pag
 ---
 <p>作者列表頁面，需要呈現數據庫中所有作者的列表，有每位作者的名字，並連結到作者詳細內容頁面。出生與死亡日期應該在名字後面，並且在同一列。</p>
 
-<h2 class="highlight-spanned" id="Controller_控制器"><span class="highlight-span">Controller </span>控制器</h2>
+<h2 class="highlight-spanned" id="Controller_控制器">Controller 控制器</h2>
 
 <p>作者列表控制器函數，需要獲取所有作者實例的列表，然後將這些實例傳遞給模板進行渲染。</p>
 
 <p>打開 <strong>/controllers/authorController.js</strong>。在文件頂部附近，找到導出的 <code>author_list() </code>控制器方法，並將其替換為以下代碼（更改後的代碼以<strong>粗體</strong>顯示）。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Display list of all Authors.</span>
-exports<span class="punctuation token">.</span>author_list <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// Display list of all Authors.
+exports.author_list = function(req, res, next) {
 
-  Author<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span><span class="punctuation token">)</span>
-    <span class="punctuation token">.</span><span class="function token">sort</span><span class="punctuation token">(</span><span class="punctuation token">[</span><span class="punctuation token">[</span><span class="string token">'family_name'</span><span class="punctuation token">,</span> <span class="string token">'ascending'</span><span class="punctuation token">]</span><span class="punctuation token">]</span><span class="punctuation token">)</span>
-    <span class="punctuation token">.</span><span class="function token">exec</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">,</span> list_authors<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
-      <span class="comment token">//Successful, so render</span>
-      res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'author_list'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Author List'</span><span class="punctuation token">,</span> author_list<span class="punctuation token">:</span> list_authors <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  Author.find()
+    .sort([['family_name', 'ascending']])
+    .exec(function (err, list_authors) {
+      if (err) { return next(err); }
+      //Successful, so render
+      res.render('author_list', { title: 'Author List', author_list: list_authors });
+    });
 
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+};</code></pre>
 
 <p>The method uses the model's <code>find()</code>, <code>sort()</code> and <code>exec()</code> functions to return all <code>Author</code> objects sorted by <code>family_name</code> in alphabetic order. The callback passed to the <code>exec()</code> method is called with any errors (or <code>null</code>) as the first parameter, or a list of all authors on success. If there is an error it calls the next middleware function with the error value, and if not it renders the <strong>author_list</strong>(.pug) template, passing the page <code>title</code> and the list of authors (<code>author_list</code>).</p>
 
-<h2 class="highlight-spanned" id="View"><span class="highlight-span">View</span></h2>
+<h2 class="highlight-spanned" id="View">View</h2>
 
 <p>Create <strong>/views/author_list.pug</strong> and replace its content with the text below.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">extends</span> <span class="class-name token">layout</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">extends layout
 
 block content
-  h1<span class="operator token">=</span> title
+  h1= title
 
   ul
-    each author <span class="keyword token">in</span> author_list
+    each author in author_list
       li
-        <span class="function token">a</span><span class="punctuation token">(</span>href<span class="operator token">=</span>author<span class="punctuation token">.</span>url<span class="punctuation token">)</span> #<span class="punctuation token">{</span>author<span class="punctuation token">.</span>name<span class="punctuation token">}</span>
-        <span class="operator token">|</span>  <span class="punctuation token">(</span>#<span class="punctuation token">{</span>author<span class="punctuation token">.</span>date_of_birth<span class="punctuation token">}</span> <span class="operator token">-</span> #<span class="punctuation token">{</span>author<span class="punctuation token">.</span>date_of_death<span class="punctuation token">}</span><span class="punctuation token">)</span>
+        a(href=author.url) #{author.name}
+        |  (#{author.date_of_birth} - #{author.date_of_death})
 
-    <span class="keyword token">else</span>
-      li There are no authors<span class="punctuation token">.</span></code></pre>
+    else
+      li There are no authors.</code></pre>
 
 <p>The view follows exactly the same pattern as our other templates.</p>
 
-<h2 class="highlight-spanned" id="What_does_it_look_like"><span class="highlight-span">What does it look like?</span></h2>
+<h2 class="highlight-spanned" id="What_does_it_look_like">What does it look like?</h2>
 
 <p>Run the application and open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>All authors </em>link. If everything is set up correctly, the page should look something like the following screenshot.</p>
 
@@ -58,7 +58,7 @@ block content
 <p><code>return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';</code></p>
 </div>
 
-<h2 id="Genre_list_page—challenge!Edit">Genre list page—challenge!<a class="button section-edit only-icon" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!" rel="nofollow, noindex"><span>Edit</span></a></h2>
+<h2 id="Genre_list_page—challenge!Edit">Genre list page—challenge!<a class="button section-edit only-icon" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!" rel="nofollow, noindex">Edit</a></h2>
 
 <p>In this section you should implement your own genre list page. The page should display a list of all genres in the database, with each genre linked to its associated detail page. A screenshot of the expected result is shown below.</p>
 

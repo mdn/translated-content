@@ -12,22 +12,22 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>扩展程序包含的某些UI组件，例如： <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">popups</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">sidebars</a>, <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Options_pages">options pages</a> ，实际上可以用如下方式统一定义：</p>
+<p>扩展程序包含的某些 UI 组件，例如： <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">popups</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">sidebars</a>, <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Options_pages">options pages</a> ，实际上可以用如下方式统一定义：</p>
 
 <ol>
- <li>创建一个HTML文件用于描述该UI组件的页面结构</li>
- <li>在manifest.json中添加字段 (<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code>, 或 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code>) 以指向其对应的页面</li>
+ <li>创建一个 HTML 文件用于描述该 UI 组件的页面结构</li>
+ <li>在 manifest.json 中添加字段 (<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code>, 或 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code>) 以指向其对应的页面</li>
 </ol>
 
-<p>这种方式面临的一个挑战是如何使用浏览器自带的样式，以使得组件的UI表现与浏览器的UI风格相符。要解决这个问题，可以在该字段的配置中增加一个可字段 <code>browser_sytle</code> ，如果设置了这个字段并且值为 <code>true</code> ,  那么该UI组件的HTML将会被插入一个或多个样式表，样式表会使你的扩展程序的UI表现与浏览器的风格一致 (并且与其它同样应用了这个字段的扩展程序一致)。</p>
+<p>这种方式面临的一个挑战是如何使用浏览器自带的样式，以使得组件的 UI 表现与浏览器的 UI 风格相符。要解决这个问题，可以在该字段的配置中增加一个可字段 <code>browser_sytle</code> ，如果设置了这个字段并且值为 <code>true</code> ,  那么该 UI 组件的 HTML 将会被插入一个或多个样式表，样式表会使你的扩展程序的 UI 表现与浏览器的风格一致 (并且与其它同样应用了这个字段的扩展程序一致)。</p>
 
-<p>若使用了 <code>browser_style: true</code> , 你需要在不同的浏览器主题中测试你的扩展程序，以确保其UI表现和期望的一致。 </p>
+<p>若使用了 <code>browser_style: true</code> , 你需要在不同的浏览器主题中测试你的扩展程序，以确保其 UI 表现和期望的一致。 </p>
 
 <div class="blockIndicator note">
-<p><strong>谷歌浏览器Google Chrome</strong> 和 欧朋浏览器 <strong>Opera</strong> 使用字段名 <code>chrome_style</code> 而非<code>browser_style</code>, 因此如果要适配它们，你需要同时添加这两个字段。</p>
+<p><strong>谷歌浏览器 Google Chrome</strong> 和 欧朋浏览器 <strong>Opera</strong> 使用字段名 <code>chrome_style</code> 而非<code>browser_style</code>, 因此如果要适配它们，你需要同时添加这两个字段。</p>
 </div>
 
-<p>在火狐浏览器中，这个样式文件可以在 <code>chrome://browser/content/extension.css</code>查看。为Mac OS X系统额外准备的样式文件也可以在  <code>chrome://browser/content/extension-mac.css</code> 查看。</p>
+<p>在火狐浏览器中，这个样式文件可以在 <code>chrome://browser/content/extension.css</code>查看。为 Mac OS X 系统额外准备的样式文件也可以在  <code>chrome://browser/content/extension-mac.css</code> 查看。</p>
 
 <p>大多数样式是自动应用的，但是某些元素需要添加非标准的类名 <code style="white-space: nowrap;">browser-style</code> 来获得其样式，如下表所示：</p>
 
@@ -90,11 +90,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 
 <p>{{Compat("webextensions.browser_style")}}</p>
 
-<h2 id="火狐面板组件Firefox_Panel_Components">火狐面板组件Firefox Panel Components</h2>
+<h2 id="火狐面板组件Firefox_Panel_Components">火狐面板组件 Firefox Panel Components</h2>
 
 <div class="blockIndicator nonStandard">
 <p><strong>非标准</strong><br>
- 此功能不是通用标准，仅支持在firefox中使用</p>
+ 此功能不是通用标准，仅支持在 firefox 中使用</p>
 </div>
 
 <p><code>chrome://browser/content/extension.css</code> 样式文件中也包含了火狐面板组件的样式</p>

@@ -5,49 +5,49 @@ translation_of: Web/API/Canvas_API/Tutorial/Using_images
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}</div>
 
-<p><font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">使用影像是</font></span></font>{{HTMLElement("canvas")}}<font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">另一個有趣的功能，這個功能可以用來動態組合圖片或作為背景等等。任何瀏覽器支援的外部圖片格式都可以使用，例如</font></span></font><font face="DejaVu Sans, sans-serif">PNG, GIF, </font><font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">或</font></span></font><font face="DejaVu Sans, sans-serif">JPEG</font><font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">，甚至也可以利用同一份頁面上其他畫布元素產生的影像.</font></span></font></p>
+<p>使用影像是{{HTMLElement("canvas")}}另一個有趣的功能，這個功能可以用來動態組合圖片或作為背景等等。任何瀏覽器支援的外部圖片格式都可以使用，例如PNG, GIF, 或JPEG，甚至也可以利用同一份頁面上其他畫布元素產生的影像.</p>
 
-<p><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">載入影像到畫布中基本上需要兩個步驟：</span></font></p>
+<p>載入影像到畫布中基本上需要兩個步驟：</p>
 
 <ol>
  <li>
-  <p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">取得</span></font><font face="DejaVu Sans, sans-serif">{{domxref("HTMLImageElement")}}</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">物件或其他畫布元素的參照</span></font><font face="DejaVu Sans, sans-serif">(reference)</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">作為來源，透過單純提供</span></font><font face="DejaVu Sans, sans-serif">URL</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">或圖片位置的方式是行不通的</span></font>.</p>
+  <p>取得{{domxref("HTMLImageElement")}}物件或其他畫布元素的參照(reference)作為來源，透過單純提供URL或圖片位置的方式是行不通的.</p>
  </li>
  <li>
-  <p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">用</span></font><font face="DejaVu Sans, sans-serif">drawImage()</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">函數在畫布上畫影像</span></font>.</p>
+  <p>用drawImage()函數在畫布上畫影像.</p>
  </li>
 </ol>
 
-<p><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">接下來便來看看要怎麼做</span></font>.</p>
+<p>接下來便來看看要怎麼做.</p>
 
-<h2 id="取得影像"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">取得影像</span></font></h2>
+<h2 id="取得影像">取得影像</h2>
 
-<p><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">畫布</span></font><font face="DejaVu Sans, sans-serif">API</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">能接受以下資料型態作為影像來源</span></font>:</p>
+<p>畫布API能接受以下資料型態作為影像來源:</p>
 
 <dl>
  <dt>{{domxref("HTMLImageElement")}}</dt>
  <dd>
- <p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">用</span></font><font face="DejaVu Sans, sans-serif">Image()</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">建構成的影像或是</span></font><font face="DejaVu Sans, sans-serif">{{HTMLElement("img")}}</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">元素</span></font>.</p>
+ <p>用Image()建構成的影像或是{{HTMLElement("img")}}元素.</p>
  </dd>
  <dt>{{domxref("HTMLVideoElement")}}</dt>
  <dd>
- <p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">用</span></font><font face="DejaVu Sans, sans-serif">{{domxref("HTMLVideoElement")}}</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">元素作影像來源，抓取影片目前的影像畫格當作影像使用</span></font>.</p>
+ <p>用{{domxref("HTMLVideoElement")}}元素作影像來源，抓取影片目前的影像畫格當作影像使用.</p>
  </dd>
  <dt>{{domxref("HTMLCanvasElement")}}</dt>
  <dd>
- <p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">用另一個</span></font><font face="DejaVu Sans, sans-serif">{{domxref("HTMLCanvasElement")}}</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">元素當影像來源</span></font>.</p>
+ <p>用另一個{{domxref("HTMLCanvasElement")}}元素當影像來源.</p>
  </dd>
  <dt>{{domxref("ImageBitmap")}}</dt>
  <dd>
- <p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">可以被快速渲染的點陣圖</span></font><font face="DejaVu Sans, sans-serif">(bitmap)</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">，點陣圖能由上述所有來源產生</span></font>.</p>
+ <p>可以被快速渲染的點陣圖(bitmap)，點陣圖能由上述所有來源產生.</p>
  </dd>
 </dl>
 
-<p><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">這些來源統一參照</span></font> <font face="DejaVu Sans, sans-serif"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts">CanvasImageSource</a><span lang="zh-TW">型態</span></font>.</p>
+<p>這些來源統一參照 <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts">CanvasImageSource</a>型態.</p>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">有好幾種方法能夠取得影像用於畫布<font face="DejaVu Sans, sans-serif">.</font></span></font></p>
+<p>有好幾種方法能夠取得影像用於畫布.</p>
 
-<p style="margin-bottom: 0in;"> </p>
+<p> </p>
 
 <h3 id="使用同一份網頁上的影像">使用同一份網頁上的影像</h3>
 

@@ -19,8 +19,10 @@ La méthode **`Object.create()`** crée un nouvel objet avec un prototype donné
 
 ## Syntaxe
 
-    Object.create(proto)
-    Object.create(proto, objetPropriétés)
+```js
+Object.create(proto)
+Object.create(proto, objetPropriétés)
+```
 
 ### Paramètres
 

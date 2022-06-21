@@ -235,7 +235,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 wait(10000).then(() =&gt; saySomething("10 seconds")).catch(failureCallback);
 </pre>
 
-<p>通常，Promise 的构造器接收一个执行函数(executor)，我们可以在这个执行函数里手动地 resolve 和 reject 一个 Promise。既然 <code>setTimeout</code> 并不会真的执行失败，那么我们可以在这种情况下忽略 reject。</p>
+<p>通常，Promise 的构造器接收一个执行函数 (executor)，我们可以在这个执行函数里手动地 resolve 和 reject 一个 Promise。既然 <code>setTimeout</code> 并不会真的执行失败，那么我们可以在这种情况下忽略 reject。</p>
 
 <h2 id="组合">组合</h2>
 
@@ -269,7 +269,7 @@ const composeAsync = (...funcs) =&gt; x =&gt; funcs.reduce(applyAsync, Promise.r
 const result3 = transformData(data);
 </pre>
 
-<p>在 ECMAScript 2017 标准中, 时序组合可以通过使用 <code>async/await</code> 而变得更简单：</p>
+<p>在 ECMAScript 2017 标准中，时序组合可以通过使用 <code>async/await</code> 而变得更简单：</p>
 
 <pre class="brush: js">let result;
 for (const f of [func1, func2, func3]) {
@@ -306,9 +306,9 @@ console.log(1); // 1, 2, 3, 4</pre>
 .then(() =&gt; moreCriticalStuff())
 .catch(e =&gt; console.log("Critical failure: " + e.message));// 没有输出</pre>
 
-<p>注意,有些代码步骤是嵌套的，而不是一个简单的纯链式，这些语句前与后都被括号 <code>()</code> 包裹着。</p>
+<p>注意，有些代码步骤是嵌套的，而不是一个简单的纯链式，这些语句前与后都被括号 <code>()</code> 包裹着。</p>
 
-<p>这个内部的 <code>catch</code>  语句仅能捕获到 <code>doSomethingOptional()</code> 和 <code>doSomethingExtraNice()</code> 的失败，<code>之后就恢复到moreCriticalStuff()</code> 的运行。重要提醒：如果 <code>doSomethingCritical()</code> 失败，这个错误仅会被最后的（外部）<code>catch</code> 语句捕获到。</p>
+<p>这个内部的 <code>catch</code>  语句仅能捕获到 <code>doSomethingOptional()</code> 和 <code>doSomethingExtraNice()</code> 的失败，<code>之后就恢复到 moreCriticalStuff()</code> 的运行。重要提醒：如果 <code>doSomethingCritical()</code> 失败，这个错误仅会被最后的（外部）<code>catch</code> 语句捕获到。</p>
 
 <h2 id="常见错误">常见错误</h2>
 
