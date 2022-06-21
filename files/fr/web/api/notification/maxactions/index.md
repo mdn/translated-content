@@ -17,7 +17,9 @@ L'attribut **`maxActions`** de l'interface {{domxref ("Notification")}} renvoie 
 
 ## Syntaxe
 
-    Notification.maxActions
+```js
+Notification.maxActions
+```
 
 ### Valeur
 

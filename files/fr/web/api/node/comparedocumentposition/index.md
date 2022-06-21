@@ -27,7 +27,9 @@ La valeur retournée est un masque de bits avec les valeurs suivantes :
 
 ## Syntaxe
 
-    node.compareDocumentPosition( otherNode )
+```js
+node.compareDocumentPosition( otherNode )
+```
 
 ## Exemple
 

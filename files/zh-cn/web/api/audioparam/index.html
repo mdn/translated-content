@@ -13,7 +13,7 @@ translation_of: Web/API/AudioParam
 
 <ul>
  <li id="a-rate">一个 <em>a-rate</em> <code>AudioParam</code> 获取音频信号的每个<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_buffers.3A_frames.2C_samples_and_channels">采样帧</a>的当前音频参数值。</li>
- <li id="k-rate">一个 <em>k-rate</em> <code>AudioParam</code> 对于待处理的整个块使用相同的初始音频参数值，即128个采样帧。</li>
+ <li id="k-rate">一个 <em>k-rate</em> <code>AudioParam</code> 对于待处理的整个块使用相同的初始音频参数值，即 128 个采样帧。</li>
 </ul>
 
 <p>每个 {{domxref("AudioNode")}} 定义了其规格中哪一个参数是 <em>a-rate</em> 或 <em>k-rate</em> 。</p>
@@ -49,7 +49,7 @@ translation_of: Web/API/AudioParam
  <dt>{{domxref("AudioParam.setTargetAtTime()")}}</dt>
  <dd>将开始计划改变 <code>AudioParam 的值</code>。这个改变将从 <code>startTime 指定的时间开始，并且以指定的方式向目标参数给定的值改变。指数衰减速率由 timeConstant 参数定义，</code>time 参数使以秒作为测量单位的时间。</dd>
  <dt>{{domxref("AudioParam.setValueCurveAtTime()")}}</dt>
- <dd>调整 <code>AudioParam</code> 的值以跟随一组定义为 {{domxref("Float32Array")}} 的值，数值会缩放到适应给定的间隔,，从 <code>startTime 时间开始并具有特定的持续时间（duration）。</code> </dd>
+ <dd>调整 <code>AudioParam</code> 的值以跟随一组定义为 {{domxref("Float32Array")}} 的值，数值会缩放到适应给定的间隔，从 <code>startTime</code> 时间开始并具有特定的持续时间（duration）。</dd>
  <dt>{{domxref("AudioParam.cancelScheduledValues()")}}</dt>
  <dd>取消全部在 <code>AudioParam 中</code>的未来计划发生的改变。</dd>
  <dt>{{domxref("AudioParam.cancelAndHoldAtTime()")}}</dt>

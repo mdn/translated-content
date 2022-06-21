@@ -24,7 +24,7 @@ translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 <ol>
  <li><code><strong>aria-live</strong></code>: <code>aria-live=POLITENESS_SETTING</code> 被用来设置屏幕阅读器对待活动区域更新的优先级 - 可能的设置：<code>off</code>, <code>polite</code> or <code>assertive</code> 。默认设置是 <code>off</code> 。这个设置是到目前为止最重要的。</li>
  <li>
-  <p class="comment"><code><strong>aria-controls</strong></code>: <code>aria-controls=[IDLIST]</code> 被用来将控制动作与它控制的区域相关联。区域就像<code>div</code> 里面的 <code>id</code> 被鉴别；多区域可以被一个带空格的控制动作关联，例如： <code>aria-controls="myRegionID1 myRegionsID2"</code>  。</p>
+  <p><code><strong>aria-controls</strong></code>: <code>aria-controls=[IDLIST]</code> 被用来将控制动作与它控制的区域相关联。区域就像<code>div</code> 里面的 <code>id</code> 被鉴别；多区域可以被一个带空格的控制动作关联，例如： <code>aria-controls="myRegionID1 myRegionsID2"</code>  。</p>
 
   <div class="warning"><strong>警告：</strong>尚不知道在当前的辅助技术工具中是否实现了实时区域的 ARIA 控制方面。 需要研究。</div>
  </li>
@@ -203,7 +203,7 @@ setInterval(function() {
 <p><strong>注意：</strong> 正如我们观察到的那样，重新设置/更新 innerHTML 会导致整个文本被重新播报，无论你是否设置 <code>aria-atomic="true"</code> ，所以以上的时钟示例并不能像预期那样地工作。</p>
 </div>
 
-<p class="syntaxbox">一个简单的年份控件的工作示例，可以帮助您更好地理解：</p>
+<p>一个简单的年份控件的工作示例，可以帮助您更好地理解：</p>
 
 <pre class="brush: html notranslate">&lt;div id="date-input"&gt;
   &lt;label&gt;Year:
@@ -216,7 +216,7 @@ setInterval(function() {
   &lt;span id="year-output"&gt;1990&lt;/span&gt;
 &lt;/div&gt;</pre>
 
-<p class="syntaxbox"></p>
+<p></p>
 
 <pre class="brush: js notranslate">function change(event) {
   var yearOut = document.getElementById("year-output");
@@ -229,7 +229,7 @@ setInterval(function() {
   }
 };</pre>
 
-<p class="syntaxbox"></p>
+<p></p>
 
 <p>如果没有 <code>aria-atomic="true"</code> ，屏幕阅读器只会播报"年"的数值的改变。</p>
 

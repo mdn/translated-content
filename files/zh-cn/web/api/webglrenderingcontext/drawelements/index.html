@@ -10,7 +10,7 @@ translation_of: Web/API/WebGLRenderingContext/drawElements
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p>该 <strong><code>WebGLRenderingContext.drawElements()</code></strong> 方法 在 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 从数组数据渲染图元.</p>
+<p>该 <strong><code>WebGLRenderingContext.drawElements()</code></strong> 方法 在 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 从数组数据渲染图元。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -21,25 +21,25 @@ translation_of: Web/API/WebGLRenderingContext/drawElements
 
 <dl>
  <dt><code>mode</code></dt>
- <dd>{{domxref("枚举类型")}} 指定要渲染的图元类型。可以是以下类型:
+ <dd>{{domxref("枚举类型")}} 指定要渲染的图元类型。可以是以下类型：
  <ul>
   <li><code>gl.POINTS</code>: 画单独的点。</li>
   <li><code>gl.LINE_STRIP</code>: 画一条直线到下一个顶点。</li>
-  <li><code>gl.LINE_LOOP</code>: 绘制一条直线到下一个顶点，并将最后一个顶点返回到第一个顶点.</li>
-  <li><code>gl.LINES</code>: 在一对顶点之间画一条线.</li>
+  <li><code>gl.LINE_LOOP</code>: 绘制一条直线到下一个顶点，并将最后一个顶点返回到第一个顶点。</li>
+  <li><code>gl.LINES</code>: 在一对顶点之间画一条线。</li>
   <li><code><a href="https://en.wikipedia.org/wiki/Triangle_strip">gl.TRIANGLE_STRIP</a></code></li>
   <li><code><a href="https://en.wikipedia.org/wiki/Triangle_fan">gl.TRIANGLE_FAN</a></code></li>
-  <li><code>gl.TRIANGLES</code>: 为一组三个顶点绘制一个三角形.</li>
+  <li><code>gl.TRIANGLES</code>: 为一组三个顶点绘制一个三角形。</li>
  </ul>
  </dd>
  <dt>count</dt>
- <dd>{{domxref("整数型")}} 指定要渲染的元素数量.</dd>
+ <dd>{{domxref("整数型")}} 指定要渲染的元素数量。</dd>
  <dt>type</dt>
- <dd>{{domxref("枚举类型")}} 指定元素数组缓冲区中的值的类型。可能的值是:
+ <dd>{{domxref("枚举类型")}} 指定元素数组缓冲区中的值的类型。可能的值是：
  <ul>
   <li><code>gl.UNSIGNED_BYTE</code></li>
   <li><code>gl.UNSIGNED_SHORT</code></li>
-  <li>当使用 {{domxref("OES_element_index_uint")}} 扩展时:
+  <li>当使用 {{domxref("OES_element_index_uint")}} 扩展时：
    <ul>
     <li><code>gl.UNSIGNED_INT</code></li>
    </ul>
@@ -47,7 +47,7 @@ translation_of: Web/API/WebGLRenderingContext/drawElements
  </ul>
  </dd>
  <dt>offset</dt>
- <dd> {{domxref("字节单位")}} 指定元素数组缓冲区中的偏移量。必须是给定类型大小的有效倍数.</dd>
+ <dd> {{domxref("字节单位")}} 指定元素数组缓冲区中的偏移量。必须是给定类型大小的有效倍数。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -57,9 +57,9 @@ translation_of: Web/API/WebGLRenderingContext/drawElements
 <h3 id="异常">异常</h3>
 
 <ul>
- <li>如果 <code>mode</code> 不是正确值,  <code>gl.INVALID_ENUM</code> 将会抛出错误异常.</li>
- <li>如果<code>offset</code> 不是给定类型大小的有效倍数, <code>gl.INVALID_OPERATION</code> 将会抛出错误异常.</li>
- <li>如果 <code>count</code> 是负的,  <code>gl.INVALID_VALUE</code> 将会抛出错误异常.</li>
+ <li>如果 <code>mode</code> 不是正确值， <code>gl.INVALID_ENUM</code> 将会抛出错误异常。</li>
+ <li>如果<code>offset</code> 不是给定类型大小的有效倍数，<code>gl.INVALID_OPERATION</code> 将会抛出错误异常。</li>
+ <li>如果 <code>count</code> 是负的， <code>gl.INVALID_VALUE</code> 将会抛出错误异常。</li>
 </ul>
 
 <h2 id="例子">例子</h2>
@@ -79,7 +79,7 @@ translation_of: Web/API/WebGLRenderingContext/drawElements
   <tr>
    <td>{{SpecName('WebGL', "#5.14.11", "drawElements")}}</td>
    <td>{{Spec2('WebGL')}}建议</td>
-   <td>第一次定义.</td>
+   <td>第一次定义。</td>
   </tr>
   <tr>
    <td>{{SpecName('OpenGL ES 2.0', "glDrawElements.xml", "glDrawElements")}}</td>

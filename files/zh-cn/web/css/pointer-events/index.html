@@ -28,7 +28,7 @@ pointer-events: inherit;
 pointer-events: initial;
 pointer-events: unset;</pre>
 
-<p>当此属性未指定时，<code>visiblePainted</code>值的相同特征适用于 SVG（可缩放矢量图形） 内容。</p>
+<p>当此属性未指定时，<code>visiblePainted</code>值的相同特征适用于 SVG（可缩放矢量图形）内容。</p>
 
 <p>除了指示该元素不是鼠标事件的目标之外，值<code>none</code>表示鼠标事件“穿透”该元素并且指定该元素“下面”的任何东西。</p>
 
@@ -42,12 +42,12 @@ pointer-events: unset;</pre>
 
 <dl>
  <dt><code>auto</code></dt>
- <dd>与<code>pointer-events</code>属性未指定时的表现效果相同，对于SVG内容，该值与<code>visiblePainted</code>效果相同</dd>
+ <dd>与<code>pointer-events</code>属性未指定时的表现效果相同，对于 SVG 内容，该值与<code>visiblePainted</code>效果相同</dd>
  <dt><code>none</code></dt>
  <dd>元素永远不会成为鼠标事件的<a href="https://developer.mozilla.org/en-US/docs/Web/API/event.target">target</a>。但是，当其后代元素的<code>pointer-events</code>属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶段触发父元素的事件侦听器。</dd>
  <dt><code>visiblePainted</code></dt>
  <dd>
- <div>只适用于SVG。元素只有在以下情况才会成为鼠标事件的目标：</div>
+ <div>只适用于 SVG。元素只有在以下情况才会成为鼠标事件的目标：</div>
 
  
 
@@ -57,14 +57,14 @@ pointer-events: unset;</pre>
  </ul>
  </dd>
  <dt><code>visibleFill</code></dt>
- <dd>只适用于SVG。只有在元素<code>visibility</code>属性值为<code>visible</code>，且鼠标指针在元素内部时,元素才会成为鼠标事件的目标，<code>fill</code>属性的值不影响事件处理。</dd>
+ <dd>只适用于 SVG。只有在元素<code>visibility</code>属性值为<code>visible</code>，且鼠标指针在元素内部时，元素才会成为鼠标事件的目标，<code>fill</code>属性的值不影响事件处理。</dd>
  <dt><code>visibleStroke</code></dt>
- <dd>只适用于SVG。只有在元素<code>visibility</code>属性值为<code>visible</code>，且鼠标指针在元素边界时,元素才会成为鼠标事件的目标，<code>stroke</code>属性的值不影响事件处理。</dd>
+ <dd>只适用于 SVG。只有在元素<code>visibility</code>属性值为<code>visible</code>，且鼠标指针在元素边界时，元素才会成为鼠标事件的目标，<code>stroke</code>属性的值不影响事件处理。</dd>
  <dt><code>visible</code></dt>
- <dd>只适用于SVG。只有在元素<code>visibility</code>属性值为<code>visible</code>，且鼠标指针在元素内部或边界时,元素才会成为鼠标事件的目标，<code>fill</code>和<code>stroke</code>属性的值不影响事件处理。</dd>
+ <dd>只适用于 SVG。只有在元素<code>visibility</code>属性值为<code>visible</code>，且鼠标指针在元素内部或边界时，元素才会成为鼠标事件的目标，<code>fill</code>和<code>stroke</code>属性的值不影响事件处理。</dd>
  <dt><code>painted</code></dt>
  <dd>
- <div>只适用于SVG。元素只有在以下情况才会成为鼠标事件的目标：</div>
+ <div>只适用于 SVG。元素只有在以下情况才会成为鼠标事件的目标：</div>
 
  
 
@@ -76,11 +76,11 @@ pointer-events: unset;</pre>
  <div><code>visibility</code>属性的值不影响事件处理。</div>
  </dd>
  <dt><code>fill</code></dt>
- <dd>只适用于SVG。只有鼠标指针在元素内部时,元素才会成为鼠标事件的目标，<code>fill</code>和<code>visibility</code>属性的值不影响事件处理。</dd>
+ <dd>只适用于 SVG。只有鼠标指针在元素内部时，元素才会成为鼠标事件的目标，<code>fill</code>和<code>visibility</code>属性的值不影响事件处理。</dd>
  <dt><code>stroke</code></dt>
- <dd>只适用于SVG。只有鼠标指针在元素边界上时,元素才会成为鼠标事件的目标，<code>stroke</code>和<code>visibility</code>属性的值不影响事件处理。</dd>
+ <dd>只适用于 SVG。只有鼠标指针在元素边界上时，元素才会成为鼠标事件的目标，<code>stroke</code>和<code>visibility</code>属性的值不影响事件处理。</dd>
  <dt><code>all</code></dt>
- <dd>只适用于SVG。只有鼠标指针在元素内部或边界时,元素才会成为鼠标事件的目标，<code>fill</code>、<code>stroke</code>和<code>visibility</code>属性的值不影响事件处理。</dd>
+ <dd>只适用于 SVG。只有鼠标指针在元素内部或边界时，元素才会成为鼠标事件的目标，<code>fill</code>、<code>stroke</code>和<code>visibility</code>属性的值不影响事件处理。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -111,9 +111,9 @@ img {
 
 <p>使用<code>pointer-events</code>来阻止元素成为鼠标事件目标不一定意味着元素上的事件侦听器永远不会触发。如果元素后代明确指定了<code>pointer-events</code>属性并允许其成为鼠标事件的目标，那么指向该元素的任何事件在事件传播过程中都将通过父元素，并以适当的方式触发其上的事件侦听器。当然，位于父元素但不在后代元素上的鼠标活动都不会被父元素和后代元素捕获（鼠标活动将会穿过父元素而指向位于其下面的元素）。</p>
 
-<p>我们希望为HTML提供更为精细的控制（而不仅仅是<code>auto</code>和<code>none</code>），以控制元素哪一部分何时会捕获鼠标事件。如果你有独特的想法，请添加至<a href="https://wiki.mozilla.org/SVG:pointer-events">wiki页面</a>的Use Cases部分，以帮助我们如何针对HTML扩展<code>pointer-events</code>。</p>
+<p>我们希望为 HTML 提供更为精细的控制（而不仅仅是<code>auto</code>和<code>none</code>），以控制元素哪一部分何时会捕获鼠标事件。如果你有独特的想法，请添加至<a href="https://wiki.mozilla.org/SVG:pointer-events">wiki 页面</a>的 Use Cases 部分，以帮助我们如何针对 HTML 扩展<code>pointer-events</code>。</p>
 
-<p>该属性也可用来提高滚动时的帧频。的确，当滚动时，鼠标悬停在某些元素上，则触发其上的hover效果，然而这些影响通常不被用户注意，并多半导致滚动出现问题。对<code>body</code>元素应用<code>pointer-events：none</code>，禁用了包括<code>hover</code>在内的鼠标事件，从而提高滚动性能。</p>
+<p>该属性也可用来提高滚动时的帧频。的确，当滚动时，鼠标悬停在某些元素上，则触发其上的 hover 效果，然而这些影响通常不被用户注意，并多半导致滚动出现问题。对<code>body</code>元素应用<code>pointer-events：none</code>，禁用了包括<code>hover</code>在内的鼠标事件，从而提高滚动性能。</p>
 
 <h2 id="规范">规范</h2>
 

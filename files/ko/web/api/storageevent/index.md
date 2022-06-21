@@ -39,7 +39,7 @@ translation_of: Web/API/StorageEvent
 ## 메서드
 
 부모 인터페이스인 {{domxref("Event")}}의 메서드를 상속합니다.
-    
+
 ## 명세
 
 {{Specifications}}

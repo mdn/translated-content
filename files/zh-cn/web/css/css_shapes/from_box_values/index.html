@@ -6,7 +6,7 @@ translation_of: Web/CSS/CSS_Shapes/From_box_values
 <div>{{CSSRef}}</div>
 
 <div>A straightforward way to create a shape is to use a value from the CSS Box Model. This article explains how to do this.
-<p id="content">创建形状的一个简单方法是使用CSS框模型中的值。本文将解释如何执行此操作</p>
+<p>创建形状的一个简单方法是使用 CSS 框模型中的值。本文将解释如何执行此操作</p>
 
 <p><br>
  The <a href="https://drafts.csswg.org/css-shapes-1/#shapes-from-box-values">box values</a> allowable as a shape value are:<br>
@@ -26,7 +26,7 @@ translation_of: Web/CSS/CSS_Shapes/From_box_values
 <h2 id="CSS_box_model">CSS box model</h2>
 
 <p>The values listed above correspond to the various parts of the CSS Box Model. A box in CSS has content, padding, border, and margin.<br>
- 上面列出的值对应于CSS方框模型的各个部分。CSS中的框具有内容、填充、边框和边距。</p>
+ 上面列出的值对应于 CSS 方框模型的各个部分。CSS 中的框具有内容、填充、边框和边距。</p>
 
 <p><img alt="The Box Model consists of the margin, border, padding and content boxes." src="https://mdn.mozillademos.org/files/15845/box-model.png" style="height: 267px; width: 447px;"></p>
 
@@ -39,14 +39,14 @@ translation_of: Web/CSS/CSS_Shapes/From_box_values
  边界框是由外部边界边定义的形状，包括形状的角半径（如果边界半径已用于定义元素）。</p>
 
 <p>In the example below, we have a circular purple item which is a {{htmlelement("div")}} with a height, width, and background colour. The <code>border-radius</code> property has been used to create a circle by setting <code>border-radius: 50%</code>. As the element has a margin, you can see that the content is flowing around the circular shape and the margin applied to it.<br>
- 在下面的示例中，我们有一个圆形的紫色项，它是一个带有高度、宽度和背景色的&lt;div&gt;项。border radius属性已用于通过设置border radius:50%创建圆。由于元素有一个边距，您可以看到内容围绕圆形流动，并且应用于圆形的边距。</p>
+ 在下面的示例中，我们有一个圆形的紫色项，它是一个带有高度、宽度和背景色的&lt;div&gt;项。border radius 属性已用于通过设置 border radius:50% 创建圆。由于元素有一个边距，您可以看到内容围绕圆形流动，并且应用于圆形的边距。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/shapes/box/margin-box.html", '100%', 800)}}</p>
 
 <h3 id="border-box">border-box</h3>
 
 <p>The <code>border-box</code> value is the shape defined by the outside border edge. This shape follows all of the normal border radius shaping rules for the outside of the border. You still have a border, even if you have not used the CSS {{cssxref("border")}} property. In this case it will be the same as <code>padding-box</code>, the shape defined by the outside padding edge.<br>
- 边框值是由外部边框边缘定义的形状。此形状遵循边框外部的所有常规边框半径形状规则。即使没有使用css border属性，您仍然有边框。在这种情况下，它将与由外部填充边定义的形状padding box相同。</p>
+ 边框值是由外部边框边缘定义的形状。此形状遵循边框外部的所有常规边框半径形状规则。即使没有使用 css border 属性，您仍然有边框。在这种情况下，它将与由外部填充边定义的形状 padding box 相同。</p>
 
 <p>In the example below you can see how the text now follows the line created by the border. Change the border size and the content follows it.<br>
  在下面的示例中，您可以看到文本现在是如何遵循由边框创建的行的。更改边框大小和内容。</p>
@@ -63,7 +63,7 @@ translation_of: Web/CSS/CSS_Shapes/From_box_values
 <h3 id="content-box">content-box</h3>
 
 <p>The <code>content-box</code> value defines the shape enclosed by the outside content edge. Each corner radius of this box is the larger of 0 or border-radius − border-width − padding. This Means that it is impossible to have a negative value here.<br>
- 内容框值定义由外部内容边缘包围的形状。此框的每个角半径都是0或border radius-border width-padding中的较大值。这意味着这里不可能有负值。</p>
+ 内容框值定义由外部内容边缘包围的形状。此框的每个角半径都是 0 或 border radius-border width-padding 中的较大值。这意味着这里不可能有负值。</p>
 
 
 
@@ -72,10 +72,10 @@ translation_of: Web/CSS/CSS_Shapes/From_box_values
 <h2 id="When_to_use_the_box_values">When to use the box values</h2>
 
 <p>Using box values is a simple way to create shapes, however this is by nature only going to work with very simple shapes that can be defined using the well-supported <code>border-radius</code> property. The examples shown above show one such use case. You can create a circular shape using border-radius and then curve text around it.<br>
- 使用框值是创建形状的一种简单方法，但这本质上只适用于可以使用受良好支持的border radius属性定义的非常简单的形状。上面显示的示例显示了一个这样的用例。可以使用边框半径创建圆形，然后围绕它弯曲文本。</p>
+ 使用框值是创建形状的一种简单方法，但这本质上只适用于可以使用受良好支持的 border radius 属性定义的非常简单的形状。上面显示的示例显示了一个这样的用例。可以使用边框半径创建圆形，然后围绕它弯曲文本。</p>
 
 <p>You can create some interesting effects however with just this simple technique. In my final example of this section, I have floated two elements left and right, giving each a border-radius of 100% in the direction closest to the text.<br>
- 不过，您可以使用这个简单的技术来创建一些有趣的效果。在本节的最后一个示例中，我将左右浮动两个元素，使每个元素在最接近文本的方向上具有100%的边框半径。</p>
+ 不过，您可以使用这个简单的技术来创建一些有趣的效果。在本节的最后一个示例中，我将左右浮动两个元素，使每个元素在最接近文本的方向上具有 100% 的边框半径。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/shapes/box/bottom-margin-box.html", '100%', 800)}}</p>
 

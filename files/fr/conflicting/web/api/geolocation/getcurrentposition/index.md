@@ -10,7 +10,9 @@ la propriété **`PositionOptions.enableHighAccuracy`** est un {{domxref("Bool
 
 ## Syntax
 
-    positionOptions.enableHighAccuracy = booleanValue
+```
+positionOptions.enableHighAccuracy = booleanValue
+```
 
 ## Spécifications
 

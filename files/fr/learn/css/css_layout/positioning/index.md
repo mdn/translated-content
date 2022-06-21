@@ -84,8 +84,10 @@ Si vous sauvegardez et actualisez à ce stade, vous ne verrez aucun changement d
 
 {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} sont utilisés conjointement à {{cssxref("position")}} pour définir exactement là où placer l'élément positionné. Pour le tester, ajoutez les déclarations suivantes à la règle `.positioned` dans la CSS&nbsp;:
 
-    top: 30px;
-    left: 30px;
+```css
+top: 30px;
+left: 30px;
+```
 
 > **Note :** les valeurs de ces propriétés peuvent prendre n'importe quelle [unité](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units) logiquement attendue — pixels, mm, rem, %, etc.
 
@@ -131,6 +133,7 @@ Le positionnement absolu nous apporte des résultats bien différents. Modifions
 ```css
     position: absolute;
 ```
+
 Si vous enregistrez et actualisez maintenant, vous verrez quelque chose comme ceci apparaitre :
 
 ```html hidden
@@ -178,7 +181,9 @@ Quel élément est « le conteneur » d'un élément positionné de manière abs
 
 Nous pouvons changer ce **contexte de positionnement** — par rapport à quel élément est placé l'élément à positionner en absolu. Cela s'effectue en définissant le positionnement sur un des autres éléments parents — un des éléments dans lequel il est imbriqué (vous ne pouvez pas le positionner par rapport à un élément dans lequel il n'est pas imbriqué). Pour l'illustrer, ajoutez la déclaration suivante à la règle body:
 
-    position: relative;
+```css
+position: relative;
+```
 
 Cela devrait donner le résultat suivant:
 
@@ -230,12 +235,14 @@ Tout ce positionnement absolu est amusant, mais il y a autre chose que nous n'av
 
 Ajoutez le code suivant à la CSS, pour faire en sorte que le premier paragraphe soit aussi en positionnement absolu :
 
-    p:nth-of-type(1) {
-      position: absolute;
-      background: lime;
-      top: 10px;
-      right: 30px;
-    }
+```css
+p:nth-of-type(1) {
+  position: absolute;
+  background: lime;
+  top: 10px;
+  right: 30px;
+}
+```
 
 A ce stade, vous verrez le premier paragraphe coloré en vert, déplacé hors du cours normal des documents et positionné un peu au-dessus de l'endroit où il se trouvait à l'origine. Il est également empilé sous le paragraphe `.positioned` original, là où les deux se chevauchent. C'est parce que le paragraphe `.positioned` est le deuxième paragraphe dans l'ordre du code source ; les éléments positionnés en dernier dans l'ordre du code source l'emportent sur les éléments positionnés plus en amont dans l'ordre du code source.
 
@@ -245,7 +252,9 @@ Les pages Web ont aussi un axe z : une ligne imaginaire qui va de la surface de 
 
 Pour modifier l'ordre d'empilement, ajoutez la déclaration suivante à la règle `p:nth-of-type(1)` :
 
-    z-index: 1;
+```css
+z-index: 1;
+```
 
 Voici maintenant l'exemple terminé :
 

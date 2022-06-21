@@ -3225,12 +3225,6 @@
       "alattalatta"
     ]
   },
-  "Web/API/CSSOMString": {
-    "modified": "2019-03-18T21:23:46.366Z",
-    "contributors": [
-      "cs09g"
-    ]
-  },
   "Web/API/CSSStyleSheet": {
     "modified": "2020-10-15T21:52:17.278Z",
     "contributors": [
@@ -3625,13 +3619,6 @@
     "modified": "2020-10-15T22:30:25.978Z",
     "contributors": [
       "composite"
-    ]
-  },
-  "Web/API/DOMString": {
-    "modified": "2020-08-23T06:55:37.415Z",
-    "contributors": [
-      "alattalatta",
-      "cs09g"
     ]
   },
   "Web/API/DOMTokenList": {
@@ -4511,12 +4498,6 @@
       "alattalatta"
     ]
   },
-  "Web/API/File/Using_files_from_web_applications": {
-    "modified": "2019-04-12T12:59:03.189Z",
-    "contributors": [
-      "cs09g"
-    ]
-  },
   "Web/API/File/name": {
     "modified": "2020-10-15T22:11:39.883Z",
     "contributors": [
@@ -4564,6 +4545,12 @@
     "contributors": [
       "fscholz",
       "junho85"
+    ]
+  },
+  "Web/API/File_API/Using_files_from_web_applications": {
+    "modified": "2019-04-12T12:59:03.189Z",
+    "contributors": [
+      "cs09g"
     ]
   },
   "Web/API/File_and_Directory_Entries_API": {
@@ -6412,14 +6399,6 @@
     "modified": "2020-10-15T22:26:21.105Z",
     "contributors": [
       "LeeJunyeol"
-    ]
-  },
-  "Web/API/USVString": {
-    "modified": "2020-02-19T12:36:27.811Z",
-    "contributors": [
-      "alattalatta",
-      "cs09g",
-      "DeadIntegral"
     ]
   },
   "Web/API/VREyeParameters": {
@@ -17385,15 +17364,6 @@
     "modified": "2020-10-15T22:15:02.439Z",
     "contributors": [
       "cs09g"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
-    "modified": "2019-09-19T03:24:36.691Z",
-    "contributors": [
-      "dbs6339",
-      "pusanbear",
-      "teoli",
-      "MoGi"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/SyntaxError": {

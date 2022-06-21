@@ -18,22 +18,28 @@ L'identité et l'emplacement d'une ressource sur le Web sont souvent déterminé
 
 La forme la plus commune des URI est l'URL (_Uniform Resource Locator_ ({{Glossary("URL")}})) que l'on connaît sous le nom d'adresse web.
 
-    https://developer.mozilla.org
-    https://developer.mozilla.org/fr/docs/Learn/
-    https://developer.mozilla.org/fr/search?q=URL
+```
+https://developer.mozilla.org
+https://developer.mozilla.org/fr/docs/Learn/
+https://developer.mozilla.org/fr/search?q=URL
+```
 
 Vous pouvez entrer chacune de ces URLs dans votre navigateur pour lui demander de charger la page associée (il s'agit ici de la ressource).
 
 Une URL est composée de différentes parties, certaines obligatoires et d'autres facultatives. Voici un exemple plus complet :
 
-    http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+```
+http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+```
 
 ### URNs
 
 Une URN ou _Uniform Resource Name_ est une URI qui identifie une ressource à l'aide d'un nom dans un espace de noms (namespace) particulier.
 
-    urn:isbn:9780141036144
-    urn:ietf:rfc:7230
+```
+urn:isbn:9780141036144
+urn:ietf:rfc:7230
+```
 
 Ces deux URNs correspondent :
 
@@ -87,11 +93,13 @@ Ces deux URNs correspondent :
 
 ## Exemples
 
-    https://developer.mozilla.org/en-US/docs/Learn
-    tel:+1-816-555-1212
-    git@github.com:mdn/browser-compat-data.git
-    ftp://example.org/resource.txt
-    urn:isbn:9780141036144
+```
+https://developer.mozilla.org/en-US/docs/Learn
+tel:+1-816-555-1212
+git@github.com:mdn/browser-compat-data.git
+ftp://example.org/resource.txt
+urn:isbn:9780141036144
+```
 
 ## Spécifications
 

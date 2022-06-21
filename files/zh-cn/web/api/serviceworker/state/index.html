@@ -5,7 +5,7 @@ translation_of: Web/API/ServiceWorker/state
 ---
 <div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
 
-<div>ServiceWorker接口的这个只读的<strong>state</strong>属性返回一个代表service worker当前状态的字符串。值可以是以下这些：installing, installed, activating, activated, 或者是redundant.</div>
+<div>ServiceWorker 接口的这个只读的<strong>state</strong>属性返回一个代表 service worker 当前状态的字符串。值可以是以下这些：installing, installed, activating, activated，或者是 redundant.</div>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/API/ServiceWorker/state
 
 <h2 id="示例">示例</h2>
 
-<p>这块代码出自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>). 代码监听了任何{{domxref("ServiceWorker.state")}}中的改变，并返回它的值.</p>
+<p>这块代码出自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>). 代码监听了任何{{domxref("ServiceWorker.state")}}中的改变，并返回它的值。</p>
 
 <pre class="brush: js">var serviceWorker;
 if (registration.installing) {

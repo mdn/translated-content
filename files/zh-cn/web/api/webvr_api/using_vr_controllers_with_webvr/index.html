@@ -7,7 +7,7 @@ translation_of: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 
 <p>Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>, and specifically the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions">Gamepad Extensions API</a> that adds API features for accessing <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose">controller pose</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator">haptic actuators</a>, and more. This article explains the basics.</p>
 
-<p>许多WebVR硬件的功能设置控制器与头戴设备在一起，实际这些功能可以通过手柄控制器在WebVR软件中实现，尤其对于添加了姿态控制器，触觉驱动器，等拓展性API的手柄控制器。本篇文章介绍了一些基本的内容。</p>
+<p>许多 WebVR 硬件的功能设置控制器与头戴设备在一起，实际这些功能可以通过手柄控制器在 WebVR 软件中实现，尤其对于添加了姿态控制器，触觉驱动器，等拓展性 API 的手柄控制器。本篇文章介绍了一些基本的内容。</p>
 
 <h2 id="The_WebVR_API">The WebVR API</h2>
 
@@ -78,7 +78,7 @@ if(navigator.getVRDisplays &amp;&amp; navigator.getGamepads) {
 
 <p>This function first uses the promise-based {{domxref("Navigator.getVRDisplays()")}} method, which resolves with an array containing {{domxref("VRDisplay")}} objects representing the connected displays. Next, it prints out each display's {{domxref("VRDisplay.displayId")}} and {{domxref("VRDisplay.displayName")}} values, and a number of useful values contained in the display's associated {{domxref("VRCapabilities")}} object. The most useful of these are {{domxref("VRCapabilities.hasOrientation","hasOrientation")}} and {{domxref("VRCapabilities.hasPosition","hasPosition")}}, which allow you to detect whether the device can return orientation and position data and set up your app accordingly.</p>
 
-<p>The last line contained in this function is a {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}} call, which runs the <code>reportGamepads()</code> function after a 1 second delay. Why do we need to do this? First of all, VR controllers will only be ready after their associated VR headset is active, so we need to invoke this after <code>getVRDisplays()</code> has been called and returned the display information. Second, the Gamepad API is much older than the WebVR API, and not promise-based. As you'll see later, the <code>getGamepads()</code> method is synchronous, and just returns the <code>Gamepad</code> objects immediately — it doesn't wait for the controller to be ready to report information. Unless you wait for a little while, returned information may not be accurate (at least, this is what we found in our tests).</p>
+<p>The last line contained in this function is a {{domxref("setTimeout()")}} call, which runs the <code>reportGamepads()</code> function after a 1 second delay. Why do we need to do this? First of all, VR controllers will only be ready after their associated VR headset is active, so we need to invoke this after <code>getVRDisplays()</code> has been called and returned the display information. Second, the Gamepad API is much older than the WebVR API, and not promise-based. As you'll see later, the <code>getGamepads()</code> method is synchronous, and just returns the <code>Gamepad</code> objects immediately — it doesn't wait for the controller to be ready to report information. Unless you wait for a little while, returned information may not be accurate (at least, this is what we found in our tests).</p>
 
 <h3 id="Getting_the_Gamepad_information">Getting the Gamepad information</h3>
 

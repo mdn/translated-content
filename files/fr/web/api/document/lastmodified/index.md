@@ -9,7 +9,9 @@ Retourne une chaîne de caractère contenant la date et l'heure à laquelle le p
 
 ## Syntaxe
 
-    string = document.lastModified;
+```js
+string = document.lastModified;
+```
 
 ## Exemples
 

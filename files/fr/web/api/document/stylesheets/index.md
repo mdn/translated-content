@@ -11,7 +11,9 @@ La propriété **`Document.styleSheets`** est en lecture seule et retourne une l
 
 ## Syntaxe
 
-    var styleSheetList = document.styleSheets;
+```js
+var styleSheetList = document.styleSheets;
+```
 
 L'objet retourné est une liste {{domxref("StyleSheetList")}}.
 

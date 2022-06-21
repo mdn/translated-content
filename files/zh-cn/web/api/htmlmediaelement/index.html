@@ -5,14 +5,14 @@ tags:
   - API
   - HTML
   - HTMLMediaElement
-  - HTML媒体元素
+  - HTML 媒体元素
   - Media
   - Video
 translation_of: Web/API/HTMLMediaElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<div>HTML媒体元素接口在属性和方法中添加了 {{domxref("HTMLElement", "HTML元素")}}来支持基础的媒体相关的能力，就像audio和video一样。{{domxref("HTMLVideoElement", "HTML 视频元素")}}和 {{domxref("HTMLAudioElement", "HTML 音频元素")}}元素都继承自此接口。</div>
+<div>HTML 媒体元素接口在属性和方法中添加了 {{domxref("HTMLElement", "HTML 元素")}}来支持基础的媒体相关的能力，就像 audio 和 video 一样。{{domxref("HTMLVideoElement", "HTML 视频元素")}}和 {{domxref("HTMLAudioElement", "HTML 音频元素")}}元素都继承自此接口。</div>
 
 
 
@@ -42,7 +42,7 @@ translation_of: Web/API/HTMLMediaElement
    <td><code>autoplay</code></td>
    <td>{{domxref("Boolean")}}</td>
    <td>
-    <p>表示{{ htmlattrxref("autoplay", "video") }}的HTML属性，表明在视频加载可用时是否不中断地自动播放资源</p>
+    <p>表示{{ htmlattrxref("autoplay", "video") }}的 HTML 属性，表明在视频加载可用时是否不中断地自动播放资源</p>
    </td>
   </tr>
   <tr>
@@ -54,13 +54,13 @@ translation_of: Web/API/HTMLMediaElement
    <td><code>controller</code></td>
    <td>{{ domxref("MediaController")}}</td>
    <td>
-    <p>返回当前媒体控制器的MediaController 对象，如果没有连接就返回null</p>
+    <p>返回当前媒体控制器的 MediaController 对象，如果没有连接就返回 null</p>
    </td>
   </tr>
   <tr>
    <td><code>controls</code></td>
    <td>{{domxref("Boolean")}}</td>
-   <td>映射在HTML标签。{{ htmlattrxref("controls", "video") }}属性控制是否显示用户播放界面的控制 HTML</td>
+   <td>映射在 HTML 标签。{{ htmlattrxref("controls", "video") }}属性控制是否显示用户播放界面的控制 HTML</td>
   </tr>
   <tr>
    <td><code>crossOrigin</code></td>
@@ -70,7 +70,7 @@ translation_of: Web/API/HTMLMediaElement
   <tr>
    <td><code>currentSrc</code> {{readonlyinline}}</td>
    <td>{{ domxref("DOMString") }}</td>
-   <td>用{{domxref("DOMString")}}表示媒体文件的绝对URL。如果<code>networkState</code> 为<code>EMPTY，</code>那么值为空字符串。</td>
+   <td>用{{domxref("DOMString")}}表示媒体文件的绝对 URL。如果<code>networkState</code> 为<code>EMPTY，</code>那么值为空字符串。</td>
   </tr>
   <tr>
    <td><code>currentTime</code></td>
@@ -80,17 +80,17 @@ translation_of: Web/API/HTMLMediaElement
   <tr>
    <td><code>defaultMuted</code></td>
    <td>{{domxref("Boolean")}}</td>
-   <td>映射在HTML标签上。 {{ htmlattrxref("muted", "video") }} 属性表示媒体声音被播放时是否应该被静音。这个属性不能动态设置静音/不静音，如果希望设置静音/不静音，请使用 <code>muted</code> 属性</td>
+   <td>映射在 HTML 标签上。 {{ htmlattrxref("muted", "video") }} 属性表示媒体声音被播放时是否应该被静音。这个属性不能动态设置静音/不静音，如果希望设置静音/不静音，请使用 <code>muted</code> 属性</td>
   </tr>
   <tr>
    <td><code>defaultPlaybackRate</code></td>
    <td><code>double</code></td>
-   <td>控制媒体的播放速度。1.0表示正常的播放速度，如果值小于1.0，则播放速度会比”正常速度“慢，如果值大于1.0，则播放速度会比”正常速度“快。0.0是一个无效的值，并且会抛出 <code>NOT_SUPPORTED_ERR</code> 错误。</td>
+   <td>控制媒体的播放速度。1.0 表示正常的播放速度，如果值小于 1.0，则播放速度会比”正常速度“慢，如果值大于 1.0，则播放速度会比”正常速度“快。0.0 是一个无效的值，并且会抛出 <code>NOT_SUPPORTED_ERR</code> 错误。</td>
   </tr>
   <tr>
    <td><code>duration </code>{{readonlyinline}}</td>
    <td><code>double</code></td>
-   <td>媒体以秒为单位的总长度时间，如果媒体不可用，则为0.  如果媒体可用，但时间长度未知, 值为NAN. 如果媒体是以stream形式传输并且没有预定长度，则值为Inf。</td>
+   <td>媒体以秒为单位的总长度时间，如果媒体不可用，则为 0.  如果媒体可用，但时间长度未知，值为 NAN. 如果媒体是以 stream 形式传输并且没有预定长度，则值为 Inf。</td>
   </tr>
   <tr>
    <td><code>ended </code>{{readonlyinline}}</td>
@@ -110,12 +110,12 @@ translation_of: Web/API/HTMLMediaElement
   <tr>
    <td><code>loop</code></td>
    <td>{{domxref("Boolean")}}</td>
-   <td>会映射在HTML标签  {{ htmlattrxref("loop", "video") }} 属性 , 决定该媒体是否循环播放.</td>
+   <td>会映射在 HTML 标签  {{ htmlattrxref("loop", "video") }} 属性 , 决定该媒体是否循环播放。</td>
   </tr>
   <tr>
    <td><code>mediaGroup</code></td>
    <td>{{domxref("DOMString")}}</td>
-   <td>反映在HTML {{ htmlattrxref("mediagroup", "video")}} 标签上。 表示元素所归属的分组，同一组的媒体元素会共享同一个控制器（<code>controller</code>）。</td>
+   <td>反映在 HTML {{ htmlattrxref("mediagroup", "video")}} 标签上。 表示元素所归属的分组，同一组的媒体元素会共享同一个控制器（<code>controller</code>）。</td>
   </tr>
   <tr>
    <td>mediaKeys {{experimental_inline}}{{readonlyinline}}</td>
@@ -144,7 +144,7 @@ translation_of: Web/API/HTMLMediaElement
   <tr>
    <td><code>mozSampleRate </code>{{readonlyinline}} {{ non-standard_inline() }}</td>
    <td><code>long</code></td>
-   <td>播放内容的采样率（每秒采样次数）。比如，44100 就是一张CD的采样率。</td>
+   <td>播放内容的采样率（每秒采样次数）。比如，44100 就是一张 CD 的采样率。</td>
   </tr>
   <tr>
    <td><code>mozSrcObject </code>{{ non-standard_inline() }}</td>
@@ -154,7 +154,7 @@ translation_of: Web/API/HTMLMediaElement
   <tr>
    <td><code>muted</code></td>
    <td>{{domxref("Boolean")}}</td>
-   <td><code>静音时为true</code> ，否则是<code>false</code> .</td>
+   <td><code>静音时为 true</code> ，否则是<code>false</code> .</td>
   </tr>
   <tr>
    <td><code>networkState</code></td>
@@ -180,7 +180,7 @@ translation_of: Web/API/HTMLMediaElement
       <tr>
        <td><code>NETWORK_LOADING</code></td>
        <td>2</td>
-       <td>正在加载.</td>
+       <td>正在加载。</td>
       </tr>
       <tr>
        <td><code>NETWORK_NO_SOURCE</code></td>
@@ -295,7 +295,7 @@ translation_of: Web/API/HTMLMediaElement
   <tr>
    <td><code>volume</code></td>
    <td><code>double</code></td>
-   <td>表示音频的音量。值从0.0（静音）到1.0（最大音量）。</td>
+   <td>表示音频的音量。值从 0.0（静音）到 1.0（最大音量）。</td>
   </tr>
  </tbody>
 </table>

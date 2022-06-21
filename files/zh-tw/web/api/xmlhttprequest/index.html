@@ -35,23 +35,23 @@ translation_of: Web/API/XMLHttpRequest
 <p><em>此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("EventTarget")}} 的屬性。</em></p>
 
 <dl>
- <dt id="xmlhttprequest-onreadystatechange">{{domxref("XMLHttpRequest.onreadystatechange")}}</dt>
+ <dt>{{domxref("XMLHttpRequest.onreadystatechange")}}</dt>
  <dd>一個 {{event("Event_handlers", "event handler")}}（事件處理器）函式，會於 <code>readyState</code> 屬性之狀態改變時被呼叫。</dd>
- <dt id="xmlhttprequest-readystate">{{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}</dt>
  <dd>回傳一個無符號短整數（<code>unsigned short</code>）代表請求之狀態。</dd>
  <dt>{{domxref("XMLHttpRequest.response")}} {{readonlyinline}}</dt>
  <dd>回傳的內容可能是 {{domxref("ArrayBuffer")}}、{{domxref("Blob")}}、{{domxref("Document")}}、JavaScript 物件或 {{domxref("DOMString")}}。完全根據 {{domxref("XMLHttpRequest.responseType")}} 的值決定回傳的內容為何種型態，資料為回應實體中的內容（response entity body）。</dd>
- <dt id="xmlhttprequest-responsetext">{{domxref("XMLHttpRequest.responseText")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.responseText")}} {{readonlyinline}}</dt>
  <dd>回傳一個 {{domxref("DOMString")}}，其內容為請求之回應的文字內容。如請求失敗或尚未發送，則為 <code>null</code>。</dd>
- <dt id="xmlhttprequest-responsetype">{{domxref("XMLHttpRequest.responseType")}}</dt>
+ <dt>{{domxref("XMLHttpRequest.responseType")}}</dt>
  <dd>為一可列舉（enumerated）值，定義回應內容的資料類型（response type）。</dd>
- <dt id="xmlhttprequest-responsexml">{{domxref("XMLHttpRequest.responseURL")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.responseURL")}} {{readonlyinline}}</dt>
  <dd>回傳一個回應（response）的序列化 URL，如 URL 為 null 則回傳空字串。</dd>
- <dt id="xmlhttprequest-responsexml">{{domxref("XMLHttpRequest.responseXML")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.responseXML")}} {{readonlyinline}}</dt>
  <dd>回傳一個 {{domxref("Document")}}，其內容為請求之回應內容所解析成的文件物件。如請求失敗或尚未發送，又或是無法解析成 XML、HTML，則為 <code>null</code>。Not available in workers.</dd>
- <dt id="xmlhttprequest-status">{{domxref("XMLHttpRequest.status")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.status")}} {{readonlyinline}}</dt>
  <dd>回傳一個無符號短整數（<code>unsigned short</code>）表示已發送請求之回應的狀態。</dd>
- <dt id="xmlhttprequest-statustext">{{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}</dt>
  <dd>回傳一個 {{domxref("DOMString")}} 表示 HTTP 伺服器回應之字串。和 {{domxref("XMLHTTPRequest.status")}} 不同的是，<code>XMLHttpRequest.statusText</code> 包含了回應的整個文字訊息（如 "<code>200 OK</code>"）。</dd>
 </dl>
 
@@ -60,13 +60,13 @@ translation_of: Web/API/XMLHttpRequest
 </div>
 
 <dl>
- <dt id="xmlhttprequest-timeout">{{domxref("XMLHttpRequest.timeout")}}</dt>
+ <dt>{{domxref("XMLHttpRequest.timeout")}}</dt>
  <dd>為一無符號長整數（<code>unsigned long</code>），代表一個請求在逾時而被自動中止前的可等待時間（毫秒）。</dd>
- <dt id="xmlhttprequesteventtarget-ontimeout">{{domxref("XMLHttpRequestEventTarget.ontimeout")}}</dt>
+ <dt>{{domxref("XMLHttpRequestEventTarget.ontimeout")}}</dt>
  <dd>為一 {{event("Event_handlers", "event handler")}} 物件，會於請求逾時時被呼叫。</dd>
- <dt id="xmlhttprequest-upload">{{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}</dt>
  <dd>為一 {{domxref("XMLHttpRequestUpload")}} 物件，代表上傳的進度。</dd>
- <dt id="xmlhttprequest-withcredentials">{{domxref("XMLHttpRequest.withCredentials")}}</dt>
+ <dt>{{domxref("XMLHttpRequest.withCredentials")}}</dt>
  <dd>{{domxref("Boolean","布林值")}}。表示是否允許在跨站存取（cross-site <code>Access-Control</code>）之請求當中，發送如 cookies 或 authorization headers 等憑證資訊（credentials）。</dd>
 </dl>
 

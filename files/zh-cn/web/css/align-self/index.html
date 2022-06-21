@@ -17,7 +17,7 @@ translation_of: Web/CSS/align-self
 
 
 
-<p>align-self属性不适用于块类型的盒模型和表格单元。如果任何 flexbox 元素的侧轴方向 margin 值设置为 auto，则会忽略 <code>align-self</code>。</p>
+<p>align-self 属性不适用于块类型的盒模型和表格单元。如果任何 flexbox 元素的侧轴方向 margin 值设置为 auto，则会忽略 <code>align-self</code>。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -59,12 +59,12 @@ align-self: unset;</pre>
 </dl>
 
 <dl>
- <dd>效果取决于当前的布局模式:</dd>
+ <dd>效果取决于当前的布局模式：</dd>
  <dd>
  <ul>
-  <li>绝对定位布局中，normal在绝对定位的替代元素上表现为<code>start</code>，在<em>所有其他</em>绝对定位元素上表现为<code>stretch</code>。</li>
+  <li>绝对定位布局中，normal 在绝对定位的替代元素上表现为<code>start</code>，在<em>所有其他</em>绝对定位元素上表现为<code>stretch</code>。</li>
   <li>在绝对定位的静态元素上表现为<code>stretch</code>。</li>
-  <li>flex布局中表现为stretch。</li>
+  <li>flex 布局中表现为 stretch。</li>
   <li>For grid items, this keyword leads to a behavior similar to the one of <code>stretch</code>, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like <code>start</code>.</li>
   <li>在块级和表格单元中无效。</li>
  </ul>

@@ -5,12 +5,12 @@ translation_of: Web/API/KeyboardEvent/keyCode
 ---
 <p>{{APIRef("DOM Events")}}{{deprecated_header()}}</p>
 
-<p>这个只读的属性 <strong><code>KeyboardEvent.keyCode</code></strong> 代表着一个唯一标识的所按下的键的未修改值，它依据于一个系统和实现相关的数字代码。这通常是与密钥对应的二进制的ASCII ({{RFC(20)}})或Windows 1252 码。如果这个键不能被标志，这个值为0。</p>
+<p>这个只读的属性 <strong><code>KeyboardEvent.keyCode</code></strong> 代表着一个唯一标识的所按下的键的未修改值，它依据于一个系统和实现相关的数字代码。这通常是与密钥对应的二进制的 ASCII ({{RFC(20)}}) 或 Windows 1252 码。如果这个键不能被标志，这个值为 0。</p>
 
 <p>你应该尽量避免使用它；它已经被弃用了一段时间。相反的，如果它在你的浏览器中被实现了的话，你应该使用{{domxref("KeyboardEvent.code")}}。 不幸的是，有一些浏览器还是没有实现它，所以你在使用之前必须要小心，确认你所使用的那个被所有目标浏览器所支持。</p>
 
 <div class="note">
-<p>在处理keydown和keyup事件时，Web开发人员不应使用可打印字符的keycode属性。如上所述，keycode属性对可打印字符不有用，尤其是那些按下shift或alt键的输入。在实现快捷键处理程序时，事件（“keypress”）事件通常更好（至少当gecko是正在使用的运行时）。详情请参见Gecko按键事件.</p>
+<p>在处理 keydown 和 keyup 事件时，Web 开发人员不应使用可打印字符的 keycode 属性。如上所述，keycode 属性对可打印字符不有用，尤其是那些按下 shift 或 alt 键的输入。在实现快捷键处理程序时，事件（“keypress”）事件通常更好（至少当 gecko 是正在使用的运行时）。详情请参见 Gecko 按键事件。</p>
 </div>
 
 <h2 id="Example">Example</h2>
@@ -22,9 +22,9 @@ translation_of: Web/API/KeyboardEvent/keyCode
 
   var handled = false;
   if (event.key !== undefined) {
-    // 使用KeyboardEvent.key处理事件，并将handled设置为true。
+    // 使用 KeyboardEvent.key 处理事件，并将 handled 设置为 true。
   } else if (event.keyCode !== undefined) {
-    //使用KeyboardEvent.keyCode处理事件并将handled设置为true。
+    //使用 KeyboardEvent.keyCode 处理事件并将 handled 设置为 true。
   }
 
   if (handled) {
@@ -41,7 +41,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
   <tr>
    <th scope="col">规范</th>
    <th scope="col">状态</th>
-   <th scope="col">Comment评论</th>
+   <th scope="col">Comment 评论</th>
   </tr>
  </thead>
  <tbody>
@@ -62,57 +62,57 @@ translation_of: Web/API/KeyboardEvent/keyCode
 <h3 id="标准位置的可打印键">标准位置的可打印键</h3>
 
 <p>在标准位置按下或释放可打印键导致的按键事件值在浏览器之间不兼容。<br>
- IE只将本机虚拟密钥代码值公开为keyboardvent.keycode。<br>
- Google Chrome、Chromium和Safari必须根据输入字符确定值。如果输入字符可以用US键盘布局输入，则使用US键盘布局上的keycode值。<br>
- 从gecko 15 geckore lease（“15.0”）开始，gecko从一个可由键输入的ASCII字符（即使具有移位修饰符或支持ASCII的键盘布局）决定键码值。有关详细信息，请参见以下规则：</p>
+ IE 只将本机虚拟密钥代码值公开为 keyboardvent.keycode。<br>
+ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果输入字符可以用 US 键盘布局输入，则使用 US 键盘布局上的 keycode 值。<br>
+ 从 gecko 15 geckore lease（“15.0”）开始，gecko 从一个可由键输入的 ASCII 字符（即使具有移位修饰符或支持 ASCII 的键盘布局）决定键码值。有关详细信息，请参见以下规则：</p>
 
 <ol>
- <li>如果系统是Windows，并且按下键的本机键代码指示键是A-Z或0-9，请使用keycode。</li>
- <li>如果系统是Mac，并且按下键的本机键码指示键为0-9，则使用keycode。</li>
- <li>如果按下键输入一个ASCII字母或数字，没有修改键，请使用keycode。</li>
- <li>如果按下键输入带SHIFT键的ASCII字母或数字，请使用keycode。</li>
- <li>如果按下键输入另一个没有修改键的ASCII字符，请使用keycode。</li>
- <li>如果按下键输入另一个带SHIFT键的ASCII字符，请使用keycode。</li>
- <li>否则，即按下键输入一个Unicode字符：</li>
+ <li>如果系统是 Windows，并且按下键的本机键代码指示键是 A-Z 或 0-9，请使用 keycode。</li>
+ <li>如果系统是 Mac，并且按下键的本机键码指示键为 0-9，则使用 keycode。</li>
+ <li>如果按下键输入一个 ASCII 字母或数字，没有修改键，请使用 keycode。</li>
+ <li>如果按下键输入带 SHIFT 键的 ASCII 字母或数字，请使用 keycode。</li>
+ <li>如果按下键输入另一个没有修改键的 ASCII 字符，请使用 keycode。</li>
+ <li>如果按下键输入另一个带 SHIFT 键的 ASCII 字符，请使用 keycode。</li>
+ <li>否则，即按下键输入一个 Unicode 字符：</li>
 </ol>
 
 <ul>
- <li>如果键盘布局是支持ASCII的键盘布局（即，可以输入ASCII字母），则使用0或者根据下面的附加规则计算。</li>
- <li>否则，即键盘布局不支持ASCII，使用环境中安装的具有最高优先级的支持ASCII的键盘布局：
+ <li>如果键盘布局是支持 ASCII 的键盘布局（即，可以输入 ASCII 字母），则使用 0 或者根据下面的附加规则计算。</li>
+ <li>否则，即键盘布局不支持 ASCII，使用环境中安装的具有最高优先级的支持 ASCII 的键盘布局：
   <ul>
-   <li>如果按备用键盘布局上的键输入一个ASCII字母或数字，请使用keycode。</li>
-   <li>否则，使用0或者根据下面的附加规则计算。</li>
+   <li>如果按备用键盘布局上的键输入一个 ASCII 字母或数字，请使用 keycode。</li>
+   <li>否则，使用 0 或者根据下面的附加规则计算。</li>
   </ul>
  </li>
 </ul>
 
-<p>从 Firefox 60 {{geckoRelease("60.0")}}开始, Gecko 会尽可能的根据以下规则额设置标点符号的 <code>keyCode</code> 值（当满足上述7.1或者7.2的时候）:</p>
+<p>从 Firefox 60 {{geckoRelease("60.0")}}开始，Gecko 会尽可能的根据以下规则额设置标点符号的 <code>keyCode</code> 值（当满足上述 7.1 或者 7.2 的时候）:</p>
 
 <div class="warning">
-<p>这些附加规则的目的是为了使键盘布局映射unicode字符映射到美国键盘标点符号的用户可以使用只支持ASCII的键盘或者美国键盘布局的Firefox的web应用。否则，新映射的 <code>keyCode</code> 值可能会和其他按键冲突。例如，如果当前键盘布局是俄语，<code>"Period"</code> 键 和 <code>"Slash"</code> 键的 <code>keyCode</code> 都会是 <code>190</code> （<code>KeyEvent.DOM_VK_PERIOD</code>）。如果你需要区分这些按键但是你自己又不想支持时间上所有的键盘布局，你可能应该使用 {{domxref("KeyboardEvent.code")}}。</p>
+<p>这些附加规则的目的是为了使键盘布局映射 unicode 字符映射到美国键盘标点符号的用户可以使用只支持 ASCII 的键盘或者美国键盘布局的 Firefox 的 web 应用。否则，新映射的 <code>keyCode</code> 值可能会和其他按键冲突。例如，如果当前键盘布局是俄语，<code>"Period"</code> 键 和 <code>"Slash"</code> 键的 <code>keyCode</code> 都会是 <code>190</code> （<code>KeyEvent.DOM_VK_PERIOD</code>）。如果你需要区分这些按键但是你自己又不想支持时间上所有的键盘布局，你可能应该使用 {{domxref("KeyboardEvent.code")}}。</p>
 </div>
 
 <ol>
- <li>如果运行macOS或者Linux:
+ <li>如果运行 macOS 或者 Linux:
   <ol>
-   <li>如果你当前的键盘布局不支持ASCII并且候选支持ASCII键盘布局可用。
+   <li>如果你当前的键盘布局不支持 ASCII 并且候选支持 ASCII 键盘布局可用。
     <ol>
-     <li>如果候选支持ASCII的键盘布局仅通过未修改的键产生ASCII字符，请对该字符使用<code>keyCode。</code></li>
-     <li>如果候选支持ASCII的键盘布局产生带有Shift键修饰符的ASCII字符，请对该字符使用<code>keyCode</code>。</li>
-     <li>否则，在美国键盘布局激活时，使用使用<code>keyCode</code>表示由按键产生的ASCII字符。</li>
+     <li>如果候选支持 ASCII 的键盘布局仅通过未修改的键产生 ASCII 字符，请对该字符使用<code>keyCode。</code></li>
+     <li>如果候选支持 ASCII 的键盘布局产生带有 Shift 键修饰符的 ASCII 字符，请对该字符使用<code>keyCode</code>。</li>
+     <li>否则，在美国键盘布局激活时，使用使用<code>keyCode</code>表示由按键产生的 ASCII 字符。</li>
     </ol>
    </li>
-   <li>否则，在美国键盘布局激活时，使用使用<code>keyCode</code>表示由按键产生的ASCII字符。</li>
+   <li>否则，在美国键盘布局激活时，使用使用<code>keyCode</code>表示由按键产生的 ASCII 字符。</li>
   </ol>
  </li>
- <li>如果运行Windows：
+ <li>如果运行 Windows：
   <ol>
-   <li>当美国键盘布局激活时，使用映射到Windows的相同虚拟键代码的按键产生的ASCII字符的<code>keyCode</code>值。</li>
+   <li>当美国键盘布局激活时，使用映射到 Windows 的相同虚拟键代码的按键产生的 ASCII 字符的<code>keyCode</code>值。</li>
   </ol>
  </li>
 </ol>
 
-<p>由标准位置的可打印键引起的每个浏览器的keydown事件的keycode值</p>
+<p>由标准位置的可打印键引起的每个浏览器的 keydown 事件的 keycode 值</p>
 
 <table class="standard-table">
  <thead>
@@ -615,7 +615,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
  </tbody>
 </table>
 
-<p>由标准位置的可打印键（US布局中的标点符号）引起的每个浏览器的keydown事件的keycode值：</p>
+<p>由标准位置的可打印键（US 布局中的标点符号）引起的每个浏览器的 keydown 事件的 keycode 值：</p>
 
 <table class="standard-table">
  <thead>
@@ -1047,16 +1047,16 @@ translation_of: Web/API/KeyboardEvent/keyCode
  </tbody>
 </table>
 
-<p>*1该值是从JIS键盘输入的。使用ANSI键盘时，键代码值和输入字符是从美国键盘布局中选择的。<br>
- *2按键是一个死键。keyup事件的值是0xba（186）。<br>
- *3按键是一个死键。keyup事件的值为0x10（16）。<br>
- *4没有触发任何按键事件。<br>
- *5该键在希腊键盘布局中不可用（不输入任何字符）。keyup事件的值为0x00（0）。</p>
+<p>*1 该值是从 JIS 键盘输入的。使用 ANSI 键盘时，键代码值和输入字符是从美国键盘布局中选择的。<br>
+ *2 按键是一个死键。keyup 事件的值是 0xba（186）。<br>
+ *3 按键是一个死键。keyup 事件的值为 0x10（16）。<br>
+ *4 没有触发任何按键事件。<br>
+ *5 该键在希腊键盘布局中不可用（不输入任何字符）。keyup 事件的值为 0x00（0）。</p>
 
 <h3 id="不可打印键（功能键）">不可打印键（功能键）</h3>
 
 <table class="standard-table">
- <caption>由修改键引起的每个浏览器的keydown事件的keycode值：</caption>
+ <caption>由修改键引起的每个浏览器的 keydown 事件的 keycode 值：</caption>
  <thead>
   <tr>
    <th colspan="1" rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
@@ -1211,11 +1211,11 @@ translation_of: Web/API/KeyboardEvent/keyCode
  </tbody>
 </table>
 
-<p>*1在Windows上，“altgraph”键导致“controlLeft”键事件和“altRight”键事件。<br>
- *2当日语键盘布局处于活动状态时，“capslock”键没有 <kbd>Shift</kbd> 会导致0xf0（240）。该键作为“<code>Alphanumeric</code>”键工作，其标签为“英数”。<br>
- *3当日语键盘布局处于活动状态时，“capslock”键没有 <kbd>Shift</kbd> 会导致0x00（0）。该键作为“<code>Alphanumeric</code>”键工作，其标签为“英数”。</p>
+<p>*1 在 Windows 上，“altgraph”键导致“controlLeft”键事件和“altRight”键事件。<br>
+ *2 当日语键盘布局处于活动状态时，“capslock”键没有 <kbd>Shift</kbd> 会导致 0xf0（240）。该键作为“<code>Alphanumeric</code>”键工作，其标签为“英数”。<br>
+ *3 当日语键盘布局处于活动状态时，“capslock”键没有 <kbd>Shift</kbd> 会导致 0x00（0）。该键作为“<code>Alphanumeric</code>”键工作，其标签为“英数”。</p>
 
-<p>由不可打印的键引起的每个浏览器的keydown事件的keycode值：</p>
+<p>由不可打印的键引起的每个浏览器的 keydown 事件的 keycode 值：</p>
 
 <table class="standard-table">
  <thead>
@@ -1471,14 +1471,14 @@ translation_of: Web/API/KeyboardEvent/keyCode
  </tbody>
 </table>
 
-<p>*1 keypress事件被激发，其keypcode和charcode为0x10（16），但文本未输入编辑器。<br>
- *2在Mac电脑上，“<code>Help</code>”键映射到电脑键盘的“<code>Insert</code>”键。这些<code>keyCode</code> 值与“<code>Insert</code>”键的<code>keyCode</code>值相同。<br>
- *3在Fedora 20上测试。<br>
- *4仅激发keyup事件。<br>
- *5 PC的“<code>PrintScreen</code>”、“<code>ScrollLock</code>”和“<code>Pause</code>”映射到Mac的“F13”、“F14”和“F15”。Chrome和Safari用Mac的键映射相同的<code>keyCode</code>值。<br>
- *6“<code>Pause</code>”键加上 <kbd>Control</kbd> 导致0x03（3）。</p>
+<p>*1 keypress 事件被激发，其 keypcode 和 charcode 为 0x10（16），但文本未输入编辑器。<br>
+ *2 在 Mac 电脑上，“<code>Help</code>”键映射到电脑键盘的“<code>Insert</code>”键。这些<code>keyCode</code> 值与“<code>Insert</code>”键的<code>keyCode</code>值相同。<br>
+ *3 在 Fedora 20 上测试。<br>
+ *4 仅激发 keyup 事件。<br>
+ *5 PC 的“<code>PrintScreen</code>”、“<code>ScrollLock</code>”和“<code>Pause</code>”映射到 Mac 的“F13”、“F14”和“F15”。Chrome 和 Safari 用 Mac 的键映射相同的<code>keyCode</code>值。<br>
+ *6“<code>Pause</code>”键加上 <kbd>Control</kbd> 导致 0x03（3）。</p>
 
-<p>由功能键引起的每个浏览器的keydown事件的keycode值：</p>
+<p>由功能键引起的每个浏览器的 keydown 事件的 keycode 值：</p>
 
 <table class="standard-table">
  <thead>
@@ -1789,18 +1789,18 @@ translation_of: Web/API/KeyboardEvent/keyCode
  </tbody>
 </table>
 
-<p>*1在Fedora 20上测试。<br>
- *2 PC的“<code>PrintScreen</code>”、“<code>ScrollLock</code>”和“<code>Pause</code>”映射到Mac的“F13”、“F14”和“F15”。火狐映射到和PC相同的<code>keyCode</code>。<br>
- *3在Fedora 20上测试。这些键不会导致<code>GDK_Fxx</code> 按键符号。如果键产生正确的按键符号，这些值必须与IE相同。<br>
- *4在Fedora 20上测试。这些键不会在chromium上引起dom键事件。<br>
- *5 keyup事件的keycode值为0x83（131）。<br>
- *6在Fedora 20上测试。这些密钥不会在Firefox上引起DOM密钥事件。<br>
- *7仅激发keydown事件。<br>
- *8在Firefox上不会触发任何DOM密钥事件。</p>
+<p>*1 在 Fedora 20 上测试。<br>
+ *2 PC 的“<code>PrintScreen</code>”、“<code>ScrollLock</code>”和“<code>Pause</code>”映射到 Mac 的“F13”、“F14”和“F15”。火狐映射到和 PC 相同的<code>keyCode</code>。<br>
+ *3 在 Fedora 20 上测试。这些键不会导致<code>GDK_Fxx</code> 按键符号。如果键产生正确的按键符号，这些值必须与 IE 相同。<br>
+ *4 在 Fedora 20 上测试。这些键不会在 chromium 上引起 dom 键事件。<br>
+ *5 keyup 事件的 keycode 值为 0x83（131）。<br>
+ *6 在 Fedora 20 上测试。这些密钥不会在 Firefox 上引起 DOM 密钥事件。<br>
+ *7 仅激发 keydown 事件。<br>
+ *8 在 Firefox 上不会触发任何 DOM 密钥事件。</p>
 
 <h3 id="小键盘键">小键盘键</h3>
 
-<p>由numPad中的键在numLock状态下导致的每个浏览器的keyDown事件的keycode值</p>
+<p>由 numPad 中的键在 numLock 状态下导致的每个浏览器的 keyDown 事件的 keycode 值</p>
 
 <table class="standard-table">
  <thead>
@@ -2078,9 +2078,9 @@ translation_of: Web/API/KeyboardEvent/keyCode
  </tbody>
 </table>
 
-<p>*1“numlock”键在Mac上作为“clear”键工作。</p>
+<p>*1“numlock”键在 Mac 上作为“clear”键工作。</p>
 
-<p>由处于无numlock状态的numpad中的键引起的每个浏览器的keydown事件的keycode值</p>
+<p>由处于无 numlock 状态的 numpad 中的键引起的每个浏览器的 keydown 事件的 keycode 值</p>
 
 <table class="standard-table">
  <thead>
@@ -2207,11 +2207,11 @@ translation_of: Web/API/KeyboardEvent/keyCode
  </tbody>
 </table>
 
-<p>*最近的Mac没有“numlock”键和状态。因此，未锁定状态不可用。</p>
+<p>*最近的 Mac 没有“numlock”键和状态。因此，未锁定状态不可用。</p>
 
 <h2 id="常数值的键码">常数值的键码</h2>
 
-<p>gecko在keyboardvent中定义了许多keycode值，用于显式地生成映射表。这些值对Firefox的附加开发人员很有用，但在公共网页中却没有那么有用。</p>
+<p>gecko 在 keyboardvent 中定义了许多 keycode 值，用于显式地生成映射表。这些值对 Firefox 的附加开发人员很有用，但在公共网页中却没有那么有用。</p>
 
 <table class="standard-table" style="width: auto;">
  <tbody>
@@ -3153,10 +3153,10 @@ translation_of: Web/API/KeyboardEvent/keyCode
  </tbody>
 </table>
 
-<h3 id="Windows上的OEM特定密钥">Windows上的OEM特定密钥</h3>
+<h3 id="Windows上的OEM特定密钥">Windows 上的 OEM 特定密钥</h3>
 
-<p>在Windows上，虚拟密钥代码的某些值是为特定于OEM的密钥定义（保留）的。它们可用于非标准键盘上的特殊键。换句话说，一些值被两个或多个供应商（或硬件）用于不同的含义。</p>
+<p>在 Windows 上，虚拟密钥代码的某些值是为特定于 OEM 的密钥定义（保留）的。它们可用于非标准键盘上的特殊键。换句话说，一些值被两个或多个供应商（或硬件）用于不同的含义。</p>
 
-<p>从gecko 21（并且早于15）开始，仅在Windows上的keycode属性上提供OEM特定的键值。因此，它们对于通常的Web应用程序不有用。它们仅对内部网应用程序或类似情况有用。</p>
+<p>从 gecko 21（并且早于 15）开始，仅在 Windows 上的 keycode 属性上提供 OEM 特定的键值。因此，它们对于通常的 Web 应用程序不有用。它们仅对内部网应用程序或类似情况有用。</p>
 
-<p>查看MSDN上的"<a href="http://msdn.microsoft.com/en-us/library/aa452679.aspx">Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)</a>"了解更多</p>
+<p>查看 MSDN 上的"<a href="http://msdn.microsoft.com/en-us/library/aa452679.aspx">Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)</a>"了解更多</p>

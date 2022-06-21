@@ -4,13 +4,13 @@ slug: Glossary/speculative_parsing
 translation_of: Glossary/speculative_parsing
 original_slug: Web/HTML/Optimizing_your_pages_for_speculative_parsing
 ---
-<p>在传统的浏览器中，HTML 解析器运行于主线程之中，并且在遇到 &lt;/script&gt; 标签后会被阻塞，直到脚本从网络中被获取和执行。 Firefox 4 和后续的版本支持从主线程中分离的预解析技术。 当脚本在获取和执行的过程中，预解析技术能提前解析HTML文档。在Firefox 3.5 和 3.6中, HTML 解析器能够在文档流中预先加载脚本、层叠样式表和图片。然而, 在Firefox 4 和后续的版本中 HTML 解析器也预先运行HTML 树构建算法。 这一举措的优点是当预解析成功后，就没有必要再重新解析已经扫描过并且成功下载的脚本，层叠样式表和图片；缺点就是当预解析失败之后，有很多工作需要去做。</p>
+<p>在传统的浏览器中，HTML 解析器运行于主线程之中，并且在遇到 &lt;/script&gt; 标签后会被阻塞，直到脚本从网络中被获取和执行。Firefox 4 和后续的版本支持从主线程中分离的预解析技术。当脚本在获取和执行的过程中，预解析技术能提前解析 HTML 文档。在 Firefox 3.5 和 3.6 中，HTML 解析器能够在文档流中预先加载脚本、层叠样式表和图片。然而，在 Firefox 4 和后续的版本中 HTML 解析器也预先运行 HTML 树构建算法。这一举措的优点是当预解析成功后，就没有必要再重新解析已经扫描过并且成功下载的脚本，层叠样式表和图片；缺点就是当预解析失败之后，有很多工作需要去做。</p>
 
 <p>这篇文档旨在帮助你避免预解析失败和页面加载变慢。</p>
 
 <h2 id="使预加载成功">使预加载成功</h2>
 
-<p>让脚本、层叠样式表和图片预加载成功的规则只有一条:</p>
+<p>让脚本、层叠样式表和图片预加载成功的规则只有一条：</p>
 
 <ul>
  <li>如果你使用 <code>&lt;base&gt;</code> 元素重载页面的基 URI，将这个元素放置到文档的非脚本部分。不要通过 <code>document.write()</code> 或者 <code>document.createElement() 添加</code>.</li>
@@ -18,13 +18,13 @@ original_slug: Web/HTML/Optimizing_your_pages_for_speculative_parsing
 
 <h2 id="避免树构建器的输出丢失">避免树构建器的输出丢失</h2>
 
-<p>当document.write() 改变了文档树的状态时，树构建器的预构建过程会失败。 例如，当所有被<code>document.write() 插入的内容被解析之后&lt;/script&gt;</code> 标签后的预处理状态不再持有。 然而，只有不寻常地使用 <code>document.write()</code> 才会产生问题。 这些事情需要避免：</p>
+<p>当 document.write() 改变了文档树的状态时，树构建器的预构建过程会失败。例如，当所有被<code>document.write() 插入的内容被解析之后&lt;/script&gt;</code> 标签后的预处理状态不再持有。然而，只有不寻常地使用 <code>document.write()</code> 才会产生问题。这些事情需要避免：</p>
 
 <ul>
  <li>不要写不对称的文档树。<code>&lt;script&gt;document.write("&lt;div&gt;");&lt;/script&gt;</code> 很糟糕。<code>&lt;script&gt;document.write("&lt;div&gt;&lt;/div&gt;");&lt;/script&gt;</code> 则是可行的。</li>
  <li>不要写未完成的标识。 <code>&lt;script&gt;document.write("&lt;div&gt;&lt;/div");&lt;/script&gt;</code> 很糟糕。</li>
  <li>不要以回车结束内容。 <code>&lt;script&gt;document.write("Hello World!\r");&lt;/script&gt;</code> 很糟糕。​​​​​​​ <code>&lt;script&gt;document.write("Hello World!\n");&lt;/script&gt; </code>则是可行的。</li>
- <li>注意即使对称的标签也可能导致文档的不对称。 比如：<code>head</code> 元素中的<code>&lt;script&gt;document.write("&lt;div&gt;&lt;/div&gt;");&lt;/script&gt;</code> i会被解析成 <code>&lt;script&gt;document.write("&lt;/head&gt;&lt;body&gt;&lt;div&gt;&lt;/div&gt;");&lt;/script&gt;</code> 因次文档是不对称的。</li>
+ <li>注意即使对称的标签也可能导致文档的不对称。比如：<code>head</code> 元素中的<code>&lt;script&gt;document.write("&lt;div&gt;&lt;/div&gt;");&lt;/script&gt;</code> i 会被解析成 <code>&lt;script&gt;document.write("&lt;/head&gt;&lt;body&gt;&lt;div&gt;&lt;/div&gt;");&lt;/script&gt;</code> 因次文档是不对称的。</li>
  <li>不要仅格式化部分表格。 <code>&lt;table&gt;&lt;script&gt;document.write("&lt;tr&gt;&lt;td&gt;Hello World!&lt;/td&gt;&lt;/tr&gt;");&lt;/script&gt;&lt;/table&gt;</code> 很糟糕。然而， <code>&lt;script&gt;document.write("</code><code>&lt;table&gt;</code><code>&lt;tr&gt;&lt;td&gt;Hello World!&lt;/td&gt;&lt;/tr&gt;</code><code>&lt;/table&gt;");&lt;/script&gt;</code> 则是可行的。</li>
- <li>TODO: 在其它格式化元素中使用document.write。</li>
+ <li>TODO: 在其它格式化元素中使用 document.write。</li>
 </ul>

@@ -20,7 +20,9 @@ Obtient la coordonnée X du coin supérieur gauche de la fenêtre de la fenêtre
 
 ## Syntaxe
 
-    screenX = window.mozInnerScreenX;
+```js
+screenX = window.mozInnerScreenX;
+```
 
 ### Valeur
 

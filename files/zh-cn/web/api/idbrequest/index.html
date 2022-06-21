@@ -7,13 +7,13 @@ translation_of: Web/API/IDBRequest
 <p>{{APIRef("IndexedDB")}}</p>
 </div>
 
-<div>IndexedDB api中的IDBRequest接口提供了根据绑定事件处理函数访问结果集的方法。其中结果集来自对数据库和数据库对象发起的异步查询。对数据库的读写操作都是通过request的方式来实现。</div>
+<div>IndexedDB api 中的 IDBRequest 接口提供了根据绑定事件处理函数访问结果集的方法。其中结果集来自对数据库和数据库对象发起的异步查询。对数据库的读写操作都是通过 request 的方式来实现。</div>
 
 <div> </div>
 
-<p>该request对象初始时不包括任何关于操作结果的信息，当request上的事件触发时，可以通过IDBRequest实例上的事件处理函数访问相关信息。</p>
+<p>该 request 对象初始时不包括任何关于操作结果的信息，当 request 上的事件触发时，可以通过 IDBRequest 实例上的事件处理函数访问相关信息。</p>
 
-<p>继承自: <a href="/en/DOM/EventTarget" style="line-height: inherit;" title="en/DOM/EventTarget">EventTarget</a></p>
+<p>继承自：<a href="/en/DOM/EventTarget" style="line-height: inherit;" title="en/DOM/EventTarget">EventTarget</a></p>
 
 <h2 id="About_this_document">About this document</h2>
 
@@ -21,9 +21,9 @@ translation_of: Web/API/IDBRequest
 
 <h2 id="基础概念">基础概念</h2>
 
-<p>所有异步操作立即返回一个IDBRequest实例。每一个请求都有一个readyState属性，初始时为pending，当请求完成或失败的时候，readyState会变为done。当状态值变为done时，每一个请求都会返回result和error属性，并且会触发一个事件。当状态保持为pending时，任何尝试访问result或error属性的行为会触发一个InvalidStateError异常。</p>
+<p>所有异步操作立即返回一个 IDBRequest 实例。每一个请求都有一个 readyState 属性，初始时为 pending，当请求完成或失败的时候，readyState 会变为 done。当状态值变为 done 时，每一个请求都会返回 result 和 error 属性，并且会触发一个事件。当状态保持为 pending 时，任何尝试访问 result 或 error 属性的行为会触发一个 InvalidStateError 异常。</p>
 
-<p>用直白的话来说就是：所有的异步方法返回一个request对象。如果request对象成功执行了，结果可以通过result属性访问到，并且该request对象上会触发success事件。如果操作中有错误发生，一个error事件会触发，并且会通过result属性抛出一个异常。</p>
+<p>用直白的话来说就是：所有的异步方法返回一个 request 对象。如果 request 对象成功执行了，结果可以通过 result 属性访问到，并且该 request 对象上会触发 success 事件。如果操作中有错误发生，一个 error 事件会触发，并且会通过 result 属性抛出一个异常。</p>
 
 <p>示例</p>
 

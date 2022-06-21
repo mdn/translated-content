@@ -16,13 +16,18 @@ Un serveur doit annoncer sa prise en charge de telles indications via l'en-tête
 
 Ainsi, après avoir reçu l'en-tête `Accept-CH` suivant dans une réponse. Le client pourrait ajouter les en-têtes [`Width`](/fr/docs/Web/HTTP/Headers/Width), [`Viewport-Width`](/fr/docs/Web/HTTP/Headers/Viewport-Width), et [`Downlink`](/fr/docs/Web/HTTP/Headers/Downlink) aux requêtes suivantes.
 
-    Accept-CH: Width, Viewport-Width, Downlink
+```
+Accept-CH: Width, Viewport-Width, Downlink
+```
 
 Le serveur peut alors utiliser ces informations du client pour déterminer les ressources à lui envoyer.
 
 > **Note :** Les indications du client peuvent aussi être formulées en HTML à l'aide de l'élément [`<meta>`](/fr/docs/Web/HTML/Element/meta) avec l'attribut [`http-equiv`](/fr/docs/Web/HTML/Element/meta#attr-http-equiv) :
 >
->     <meta http-equiv="Accept-CH" content="Width, Viewport-Width, Downlink">
+>
+> ```html
+> <meta http-equiv="Accept-CH" content="Width, Viewport-Width, Downlink">
+> ```
 
 ## Client Hints Infrastructures variables
 
@@ -30,7 +35,9 @@ Afin d'indiquer à la gestion du cache que les [indications du client](/fr/docs/
 
 Exemple de réponse variable :
 
-    Vary: Accept, Width, Viewport-Width, Downlink
+```
+Vary: Accept, Width, Viewport-Width, Downlink
+```
 
 ## Voir aussi
 

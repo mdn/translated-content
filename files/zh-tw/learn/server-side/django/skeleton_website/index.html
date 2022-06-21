@@ -39,7 +39,7 @@ translation_of: Learn/Server-side/Django/skeleton_website
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">為每個應用分配url。</li>
 </ol>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>為  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px;">locallibrary</a>  這個項目創建的網站文件夾和它的工程文件夾都命名為<em>locallibrary</em>。我們只創建一個名為<em>catalog</em>的應用。最高層的項目文件結構如下所示：</p>
+<p>為  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px;">locallibrary</a>  這個項目創建的網站文件夾和它的工程文件夾都命名為<em>locallibrary</em>。我們只創建一個名為<em>catalog</em>的應用。最高層的項目文件結構如下所示：</p>
 
 <pre class="brush: bash"><em>locallibrary/         # Website folder</em>
     <strong>manage.py         </strong># Script to run Django tools for this project (created using django-admin)
@@ -71,7 +71,7 @@ cd locallibrary</pre>
         urls.py
         wsgi.py</code></pre>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>locallibrary項目的子文件夾是整個網站的進入點：</p>
+<p>locallibrary項目的子文件夾是整個網站的進入點：</p>
 
 <ul style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><strong>__init__.py</strong> 是一個空文件，指示 Python 將此目錄視為 Python 套件。</li>
@@ -80,7 +80,7 @@ cd locallibrary</pre>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><strong style="border: 0px; font-style: normal !important; line-height: 1.5; margin: 0px; padding: 0px;">wsgi.py </strong> 幫助Django應用和網絡服務器間的通訊。你可以把這個當作模板。</li>
 </ul>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">manage.py</strong>腳本可以創建應用，和資料庫通訊，啟動開發用網絡服務器。</p>
+<p><strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">manage.py</strong>腳本可以創建應用，和資料庫通訊，啟動開發用網絡服務器。</p>
 
 <h2 id="創建_catalog_應用">創建 catalog 應用</h2>
 
@@ -89,16 +89,16 @@ cd locallibrary</pre>
 <pre class="brush: bash">python3 manage.py startapp catalog</pre>
 
 <div class="note">
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 18px; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'><strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">注意：</strong> Linux/Mac OS X應用可以使用上面的命令。在windows平台下應該改為： <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem;'>py -3 manage.py startapp catalog</code></p>
+<p><strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">注意：</strong> Linux/Mac OS X應用可以使用上面的命令。在windows平台下應該改為： <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem;'>py -3 manage.py startapp catalog</code></p>
 
-<p style='font-style: normal; margin: 0px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 18px; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>如果你是windows系統，在這個部分用<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem;'>py -3</code>替代<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem;'>python3</code>。</p>
+<p>如果你是windows系統，在這個部分用<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem;'>py -3</code>替代<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem;'>python3</code>。</p>
 
 <p>如果您使用的是Python 3.7.0，則應使用<code>py manage.py startapp catalog</code></p>
 </div>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>這個工具創建了一個新的文件夾，並為該應用創建了不同的文件（下面黑體所示）。絕大多數文件的命名和它們的目的有關（比如視圖函數就是<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">views.py，</strong>模型就是<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">models.py，</strong>測試是<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">tests.py，</strong>網站管理設置是<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">admin.py，</strong>註冊應用是<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">apps.py）</strong>，並且還包含了為項目所用的最小模板。</p>
+<p>這個工具創建了一個新的文件夾，並為該應用創建了不同的文件（下面黑體所示）。絕大多數文件的命名和它們的目的有關（比如視圖函數就是<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">views.py，</strong>模型就是<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">models.py，</strong>測試是<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">tests.py，</strong>網站管理設置是<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">admin.py，</strong>註冊應用是<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">apps.py）</strong>，並且還包含了為項目所用的最小模板。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>執行命令後的文件夾結構如下所示：</p>
+<p>執行命令後的文件夾結構如下所示：</p>
 
 <pre class="brush: bash"><em>locallibrary/</em>
     manage.py
@@ -113,7 +113,7 @@ cd locallibrary</pre>
         <em>migrations/</em></strong>
 </pre>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>除上面所說的文件外，我們還有：</p>
+<p>除上面所說的文件外，我們還有：</p>
 
 <ul style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">一個<em>migration</em>文件夾，用來存放 “migrations” ——當你修改你的數據模型時，這個文件會自動升級你的資料庫。</li>
@@ -126,9 +126,9 @@ cd locallibrary</pre>
 
 <h2 id="註冊catalog應用">註冊catalog應用</h2>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>既然應用已經創建好了，我們還必須在項目裡註冊它，以便工具在運行時它會包括在裡面（比如在數據庫裡添加模型時）。在項目的settings裡，把應用添加進<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>INSTALLED_APPS</code> ，就完成了註冊。</p>
+<p>既然應用已經創建好了，我們還必須在項目裡註冊它，以便工具在運行時它會包括在裡面（比如在數據庫裡添加模型時）。在項目的settings裡，把應用添加進<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>INSTALLED_APPS</code> ，就完成了註冊。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>打開項目設置文件  <strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">locallibrary/locallibrary/settings.py</strong>找到   <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>INSTALLED_APPS</code> 列表裡的定義。如下所示，在列表的最後添加新的一行。</p>
+<p>打開項目設置文件  <strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">locallibrary/locallibrary/settings.py</strong>找到   <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>INSTALLED_APPS</code> 列表裡的定義。如下所示，在列表的最後添加新的一行。</p>
 
 <pre class="brush: bash">INSTALLED_APPS = [
     'django.contrib.admin',
@@ -148,9 +148,9 @@ cd locallibrary</pre>
 
 <h2 id="配置資料庫">配置資料庫</h2>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>現在可以為項目配置資料庫了——為了避免性能上的差異，最好在生產和開發中使用同一種資料庫。你可以在<a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/settings/#databases" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">資料庫</a>  裡找到不同的設置方法(Django文檔)。 </p>
+<p>現在可以為項目配置資料庫了——為了避免性能上的差異，最好在生產和開發中使用同一種資料庫。你可以在<a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/settings/#databases" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">資料庫</a>  裡找到不同的設置方法(Django文檔)。 </p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>在這個項目裡，我們使用SQLite。因為在展示用的數據庫中，我們不會有很多並發存取的行為。同時，也因為SQLite不需要額外的配置工作。你可以在<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">settings.py</strong>裡看到這個數據庫怎樣配置的。（更多信息如下所示）</p>
+<p>在這個項目裡，我們使用SQLite。因為在展示用的數據庫中，我們不會有很多並發存取的行為。同時，也因為SQLite不需要額外的配置工作。你可以在<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">settings.py</strong>裡看到這個數據庫怎樣配置的。（更多信息如下所示）</p>
 
 <pre class="brush: python">DATABASES = {
     'default': {
@@ -168,7 +168,7 @@ cd locallibrary</pre>
 
 <pre class="brush: python">TIME_ZONE = 'Asia/Taipei'</pre>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>有兩個設置你現在不會用到，不過你應該留意：</p>
+<p>有兩個設置你現在不會用到，不過你應該留意：</p>
 
 <ul style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>SECRET_KEY</code>. 這個密匙值，是Django網站安全策略的一部分。如果在開發環境中，沒有保護好這個密匙，把代碼投入生產環境時，最好用不同的密匙代替。（可能從環境變量或文件中讀取）。</li>
@@ -177,9 +177,9 @@ cd locallibrary</pre>
 
 <h2 id="鏈接URL映射器">鏈接URL映射器</h2>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>在項目文件夾裡，創建網站時同時生成了URL映射器（<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">urls.py</strong>）。儘管你可以用它來管理所有的URL映射，但是更常用的做法是把URL映射留到它們相關的應用中。</p>
+<p>在項目文件夾裡，創建網站時同時生成了URL映射器（<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">urls.py</strong>）。儘管你可以用它來管理所有的URL映射，但是更常用的做法是把URL映射留到它們相關的應用中。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>打開<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">locallibrary/locallibrary/urls.py</strong>  注意指導文字解釋了一些使用URL映射器的方法。</p>
+<p>打開<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">locallibrary/locallibrary/urls.py</strong>  注意指導文字解釋了一些使用URL映射器的方法。</p>
 
 <pre class="brush: python">"""locallibrary URL Configuration
 
@@ -204,7 +204,7 @@ urlpatterns = [
 ]
 </pre>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>URL映射通過<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>urlpatterns</code> 變量管理，它是一個<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>path()</code>函數的Python列表。每個<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>path()</code>函數，要么將URL式樣(URL pattern)關聯到特定視圖( <em>specific view)</em>，當模式匹配時將會顯示，要么關聯到某個URL式樣列表的測試代碼。(第二種情況下，URL式樣是目標模型裡的“基本URL”). <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>urlpatterns</code> 列表初始化定義了單一函數，把所有帶有 'admin/' 模式的 URL，映射到<code>admin.site.urls</code>。這個函數，包含了Administration應用自己的URL映射定義。</p>
+<p>URL映射通過<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>urlpatterns</code> 變量管理，它是一個<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>path()</code>函數的Python列表。每個<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>path()</code>函數，要么將URL式樣(URL pattern)關聯到特定視圖( <em>specific view)</em>，當模式匹配時將會顯示，要么關聯到某個URL式樣列表的測試代碼。(第二種情況下，URL式樣是目標模型裡的“基本URL”). <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>urlpatterns</code> 列表初始化定義了單一函數，把所有帶有 'admin/' 模式的 URL，映射到<code>admin.site.urls</code>。這個函數，包含了Administration應用自己的URL映射定義。</p>
 
 <div class="note">
 <p><strong>注意</strong>: <code>path()</code>中的路由是一個字符串，用於定義要匹配的URL模式。該字符串可能包括一個命名變量（在尖括號中），例如<code>'catalog/&lt;id&gt;/'</code>。此模式將匹配<strong> /catalog/</strong><em>any_chars</em><strong>/</strong> 等URL，並將any_chars 作為參數名稱為<code>id</code> 的字符串，傳遞給視圖。我們將在後面的主題中，進一步討論路徑方法和路由模式</p>
@@ -221,9 +221,9 @@ urlpatterns += [
 ]
 </pre>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>現在我們把我們網站的根URL(例如<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>127.0.0.1:8000</code>)，重新導向URL <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>127.0.0.1:8000/catalog/</code>;這是項目中唯一的應用，所以我們最好這樣做。為了完成這個目標，我們使用一個特別的視圖函數( <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>RedirectView</code>)，當<code>path()</code>函數中的 url 式樣被識別以後（在這個例子中是根 url），就會把第一個參數，也就是新的相對 URL ，重定向到（<code>/catalog/</code>）。</p>
+<p>現在我們把我們網站的根URL(例如<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>127.0.0.1:8000</code>)，重新導向URL <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>127.0.0.1:8000/catalog/</code>;這是項目中唯一的應用，所以我們最好這樣做。為了完成這個目標，我們使用一個特別的視圖函數( <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>RedirectView</code>)，當<code>path()</code>函數中的 url 式樣被識別以後（在這個例子中是根 url），就會把第一個參數，也就是新的相對 URL ，重定向到（<code>/catalog/</code>）。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>把下面的代碼加到文件最後：</p>
+<p>把下面的代碼加到文件最後：</p>
 
 <pre class="brush: python">#Add URL maps to redirect the base URL to our application
 from django.views.generic import RedirectView
@@ -278,15 +278,15 @@ urlpatterns = [
 
 <h2 id="測試網站框架">測試網站框架</h2>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>現在我們有了一個完整的框架項目。這個網站現在還什麼都不能做，但是我們仍然要運行，以確保我們的更改是有效的。</p>
+<p>現在我們有了一個完整的框架項目。這個網站現在還什麼都不能做，但是我們仍然要運行，以確保我們的更改是有效的。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>在運行前，我們應該先運行<em>數據庫遷移</em>。這會更新我們的數據庫並且包含所有安裝的應用（同時去除一些警告）。</p>
+<p>在運行前，我們應該先運行<em>數據庫遷移</em>。這會更新我們的數據庫並且包含所有安裝的應用（同時去除一些警告）。</p>
 
 <h3 id="運行資料庫遷移">運行資料庫遷移</h3>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>Django使用對象關係映射器（ORM），將Django代碼中的模型定義，映射到底層資料庫使用的數據結構。當我們更改模型定義時，Django會跟踪更改，並創建資料庫遷移腳本(位於 <strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">/locallibrary/catalog/migrations/</strong> )，來自動遷移資料庫中的底層數據結構。</p>
+<p>Django使用對象關係映射器（ORM），將Django代碼中的模型定義，映射到底層資料庫使用的數據結構。當我們更改模型定義時，Django會跟踪更改，並創建資料庫遷移腳本(位於 <strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">/locallibrary/catalog/migrations/</strong> )，來自動遷移資料庫中的底層數據結構。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>當我們創建網站時，Django會自動添加一些模型，供網站的管理部分使用（稍後我們會解釋）。運行以下命令，來定義資料庫中這些模型的表（確認你位於包含 <strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">manage.py </strong>的目錄中):</p>
+<p>當我們創建網站時，Django會自動添加一些模型，供網站的管理部分使用（稍後我們會解釋）。運行以下命令，來定義資料庫中這些模型的表（確認你位於包含 <strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">manage.py </strong>的目錄中):</p>
 
 <pre class="brush: bash">python3 manage.py makemigrations
 python3 manage.py migrate
@@ -296,9 +296,9 @@ python3 manage.py migrate
 <p><strong>重要</strong>: 每次模型改變，都需要運行以上命令，來影響需要存放的數據結構（包括添加和刪除整個模型和單個字段）。</p>
 </div>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>該<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>makemigrations</code></strong>命令，創建（但不實施）項目中安裝的所有應用程序的遷移（你可以指定應用程序名稱，也可以為單個項目運行遷移）。這讓你有機會在應用這些遷移之前，檢查這些遷移代碼—當你是Django專家時，你可以選擇稍微調整它們。</p>
+<p>該<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>makemigrations</code></strong>命令，創建（但不實施）項目中安裝的所有應用程序的遷移（你可以指定應用程序名稱，也可以為單個項目運行遷移）。這讓你有機會在應用這些遷移之前，檢查這些遷移代碼—當你是Django專家時，你可以選擇稍微調整它們。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>這個 <strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>migrate</code></strong>命令，真正對你的資料庫實施遷移（Django跟踪哪些已添加到當前資料庫）。</p>
+<p>這個 <strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>migrate</code></strong>命令，真正對你的資料庫實施遷移（Django跟踪哪些已添加到當前資料庫）。</p>
 
 <div class="note">
 <p><strong>注意</strong>: 參見 <a href="https://docs.djangoproject.com/en/2.0/topics/migrations/">Migrations</a> (Django 文件) ，了解較少使用的遷移命令的其他信息。</p>
@@ -343,16 +343,16 @@ python3 manage.py migrate
 
 <h2 id="挑戰自我">挑戰自我</h2>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>該 <strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">catalog/  </strong>目錄包含應用程序的視圖、模型、和應用的其他部分，你可以打開這些文件並查看樣板。</p>
+<p>該 <strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">catalog/  </strong>目錄包含應用程序的視圖、模型、和應用的其他部分，你可以打開這些文件並查看樣板。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>如上所述，管理站點的URL映射，已經添加到項目的 <strong>urls.py</strong>。在瀏覽器中查看管理區域，看看會發生什麼（你可以從上面映射，推斷正確的URL）。</p>
+<p>如上所述，管理站點的URL映射，已經添加到項目的 <strong>urls.py</strong>。在瀏覽器中查看管理區域，看看會發生什麼（你可以從上面映射，推斷正確的URL）。</p>
 
 <ul>
 </ul>
 
 <h2 id="總結">總結</h2>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>你現在已經創建了一個完整的骨架網站項目，你可以繼續加入網址、模型、視圖、和模版。</p>
+<p>你現在已經創建了一個完整的骨架網站項目，你可以繼續加入網址、模型、視圖、和模版。</p>
 
 <p>現在，<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px;">Local Library website</a>的骨架已經完成並運行了，是時候開始寫些代碼，讓網站做些它應該做的事了。</p>
 

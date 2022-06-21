@@ -14,7 +14,9 @@ translation_of: Web/API/Document/writeln
 
 ## Syntaxe
 
-    document.writeln(ligne);
+```js
+document.writeln(ligne);
+```
 
 ### Paramètres
 
@@ -22,7 +24,9 @@ translation_of: Web/API/Document/writeln
 
 ## Exemple
 
-    document.writeln("<p>Entrez votre mot de passe :</p>");
+```js
+document.writeln("<p>Entrez votre mot de passe :</p>");
+```
 
 ## Notes
 

@@ -12,7 +12,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}</div>
 
-<p>在本教程前面的部分中，我们已经了解了Canvas网格和坐标空间。到目前为止，我们只是根据我们的需要使用默认的网格，改变整个画布的大小。变形是一种更强大的方法，可以将原点移动到另一点、对网格进行旋转和缩放。</p>
+<p>在本教程前面的部分中，我们已经了解了 Canvas 网格和坐标空间。到目前为止，我们只是根据我们的需要使用默认的网格，改变整个画布的大小。变形是一种更强大的方法，可以将原点移动到另一点、对网格进行旋转和缩放。</p>
 
 <h2 id="Saving_and_restoring_state" name="Saving_and_restoring_state">状态的保存和恢复 Saving and restoring state</h2>
 
@@ -20,12 +20,12 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.save", "save()")}}</dt>
- <dd>保存画布(canvas)的所有状态</dd>
+ <dd>保存画布 (canvas) 的所有状态</dd>
  <dt>{{domxref("CanvasRenderingContext2D.restore", "restore()")}}</dt>
  <dd>save 和 restore 方法是用来保存和恢复 canvas 状态的，都没有参数。Canvas 的状态就是当前画面应用的所有样式和变形的一个快照。</dd>
 </dl>
 
-<p>Canvas状态存储在栈中，每当<code>save()</code>方法被调用后，当前的状态就被推送到栈中保存。一个绘画状态包括：</p>
+<p>Canvas 状态存储在栈中，每当<code>save()</code>方法被调用后，当前的状态就被推送到栈中保存。一个绘画状态包括：</p>
 
 <ul>
  <li>当前应用的变形（即移动，旋转和缩放，见下）</li>
@@ -92,7 +92,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>这个例子显示了一些移动 canvas 原点的好处。如果不使用 <code>translate </code>方法，那么所有矩形都将被绘制在相同的位置（0,0）。<code>translate </code>方法同时让我们可以任意放置这些图案，而不需要在 <code>fillRect()</code> 方法中手工调整坐标值，既好理解也方便使用。</p>
 
-<p>我在 <code>draw </code>方法中调用 <code>fillRect()</code> 方法 9 次，用了 2 层循环。每一次循环，先移动 canvas ，画螺旋图案，然后恢复到原始状态。</p>
+<p>我在 <code>draw </code>方法中调用 <code>fillRect()</code> 方法 9 次，用了 2 层循环。每一次循环，先移动 canvas，画螺旋图案，然后恢复到原始状态。</p>
 
 <pre class="brush: js; highlight:[7] notranslate">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
@@ -124,7 +124,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <dl>
  <dt><code>rotate(angle)</code></dt>
- <dd>这个方法只接受一个参数：旋转的角度(angle)，它是顺时针方向的，以弧度为单位的值。</dd>
+ <dd>这个方法只接受一个参数：旋转的角度 (angle)，它是顺时针方向的，以弧度为单位的值。</dd>
 </dl>
 
 <p>旋转的中心点始终是 canvas 的原点，如果要改变它，我们需要用到 <code>translate </code>方法。</p>
@@ -171,10 +171,10 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <dl>
  <dt><code><strong>scale(x, y)</strong></code></dt>
- <dd><code>scale </code> 方法可以缩放画布的水平和垂直的单位。两个参数都是实数，可以为负数，x 为水平缩放因子，y 为垂直缩放因子，如果比1小，会缩小图形， 如果比1大会放大图形。默认值为1， 为实际大小。</dd>
+ <dd><code>scale </code> 方法可以缩放画布的水平和垂直的单位。两个参数都是实数，可以为负数，x 为水平缩放因子，y 为垂直缩放因子，如果比 1 小，会缩小图形，如果比 1 大会放大图形。默认值为 1，为实际大小。</dd>
 </dl>
 
-<p>画布初始情况下， 是以左上角坐标为原点的第一象限。如果参数为负实数， 相当于以x 或 y轴作为对称轴镜像反转（例如， 使用<code>translate(0,canvas.height); scale(1,-1);</code> 以y轴作为对称轴镜像反转， 就可得到著名的笛卡尔坐标系，左下角为原点）。</p>
+<p>画布初始情况下，是以左上角坐标为原点的第一象限。如果参数为负实数，相当于以 x 或 y 轴作为对称轴镜像反转（例如，使用<code>translate(0,canvas.height); scale(1,-1);</code> 以 y 轴作为对称轴镜像反转，就可得到著名的笛卡尔坐标系，左下角为原点）。</p>
 
 <p>默认情况下，canvas 的 1 个单位为 1 个像素。举例说，如果我们设置缩放因子是 0.5，1 个单位就变成对应 0.5 个像素，这样绘制出来的形状就会是原先的一半。同理，设置为 2.0 时，1 个单位就对应变成了 2 像素，绘制的结果就是图形放大了 2 倍。</p>
 
@@ -234,7 +234,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.setTransform", "setTransform(a, b, c, d, e, f)")}}</dt>
- <dd>这个方法会将当前的变形矩阵重置为单位矩阵，然后用相同的参数调用 <code>transform </code>方法。如果任意一个参数是无限大，那么变形矩阵也必须被标记为无限大，否则会抛出异常。从根本上来说，该方法是取消了当前变形,然后设置为指定的变形,一步完成。</dd>
+ <dd>这个方法会将当前的变形矩阵重置为单位矩阵，然后用相同的参数调用 <code>transform </code>方法。如果任意一个参数是无限大，那么变形矩阵也必须被标记为无限大，否则会抛出异常。从根本上来说，该方法是取消了当前变形，然后设置为指定的变形，一步完成。</dd>
 </dl>
 
 <dl>

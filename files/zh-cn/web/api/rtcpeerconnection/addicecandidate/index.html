@@ -27,7 +27,7 @@ addIceCandidate(<em>candidate</em>, <em>successCallback</em>, <em>failureCallbac
 
 <h3 id="Deprecated_parameters">Deprecated parameters</h3>
 
-<p>在一些老旧的代码和文档中, 你可能会看到一个回调函数(callback)版本的函数。这种函数是过期的，强烈建议不要使用。你应该更新你的代码，使用 {{jsxref("Promise")}}-版本的 <code>addIceCandidate()</code> . 这个版本的参数格式附在下面, 方便你更新已有的代码.</p>
+<p>在一些老旧的代码和文档中，你可能会看到一个回调函数 (callback) 版本的函数。这种函数是过期的，强烈建议不要使用。你应该更新你的代码，使用 {{jsxref("Promise")}}-版本的 <code>addIceCandidate()</code> . 这个版本的参数格式附在下面，方便你更新已有的代码。</p>
 
 <dl>
  <dt><code>successCallback</code> {{deprecated_inline}}</dt>
@@ -57,7 +57,7 @@ addIceCandidate(<em>candidate</em>, <em>successCallback</em>, <em>failureCallbac
 
 <h2 id="Example">Example</h2>
 
-<p>下段代码会展示如何使用一个SDP字符串(这个字符串包含了候选的描述)去构建一个候选对象。这个字符串来自于信道(signaling channel)。</p>
+<p>下段代码会展示如何使用一个 SDP 字符串 (这个字符串包含了候选的描述) 去构建一个候选对象。这个字符串来自于信道 (signaling channel)。</p>
 
 <pre class="brush: js">// |receivedSDP| is an SDP string received over the signaling channel
 // by our handler for "new ICE candidate" messages.

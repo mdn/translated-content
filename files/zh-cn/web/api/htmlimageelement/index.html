@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLImageElement
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p><strong><code>HTMLImageElement</code></strong> 接口提供了特别的属性和方法 (在常规的 {{domxref("HTMLElement")}}之外，它也能通过继承使用)来操纵 {{HTMLElement("img")}} 元素的布局和图像。</p>
+<p><strong><code>HTMLImageElement</code></strong> 接口提供了特别的属性和方法 (在常规的 {{domxref("HTMLElement")}}之外，它也能通过继承使用) 来操纵 {{HTMLElement("img")}} 元素的布局和图像。</p>
 
 <p>{{InheritanceDiagram(600, 120)}}</p>
 
@@ -26,9 +26,9 @@ translation_of: Web/API/HTMLImageElement
  <dt>{{domxref("HTMLImageElement.complete")}} {{readonlyInline}}</dt>
  <dd>返回一个 {{domxref("Boolean")}} 如果浏览器已经下载完毕，并且图像是<a href="/en-US/docs/HTML/Element/Img#Image_Format" title="HTML/Element/Img#Image Format">受支持的图片类型</a>、解码的过程中没有发生错误，则返回 <code>true</code>。That means this value is also <code>true</code> if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.</dd>
  <dt>{{domxref("HTMLImageElement.crossOrigin")}}</dt>
- <dd>一个 {{domxref("DOMString")}} 表示这个img元素的 CORS 设置。参考 <a href="/en-US/docs/HTML/CORS_settings_attributes" title="HTML/CORS settings attributes">CORS settings attributes</a>。This may be <code>null</code> if CORS is not used.</dd>
+ <dd>一个 {{domxref("DOMString")}} 表示这个 img 元素的 CORS 设置。参考 <a href="/en-US/docs/HTML/CORS_settings_attributes" title="HTML/CORS settings attributes">CORS settings attributes</a>。This may be <code>null</code> if CORS is not used.</dd>
  <dt>{{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}</dt>
- <dd>返回一个 {{domxref("DOMString")}}  表示加载当前显示的图像的URL。<br>
+ <dd>返回一个 {{domxref("DOMString")}}  表示加载当前显示的图像的 URL。<br>
  这可能会改变，因为图像是调整，由于不断变化的条件，由任何 <a href="/zh-CN/docs/Web/CSS/Media_Queries">media queries</a> 的地方。</dd>
  <dt>{{domxref("HTMLImageElement.decoding")}}</dt>
  <dd>An optional {{domxref("DOMString")}} representing a hint given to the browser on how it should decode the image. If this value is provided, it must be one of the possible permitted values: <code>sync</code> to decode the image synchronously, <code>async</code> to decode it asynchronously, or <code>auto</code> to indicate no preference (which is the default). Read the {{domxref("HTMLImageElement.decoding", "decoding")}} page for details on the implications of this property's values.</dd>
@@ -47,7 +47,7 @@ translation_of: Web/API/HTMLImageElement
  <dt>{{domxref("HTMLImageElement.src")}}</dt>
  <dd>一个 {{domxref("DOMString")}} 表示 HTML 属性 {{htmlattrxref("src", "img")}}，包含图像的完整的 URL，包含图像的基础 URL。</dd>
  <dt>{{domxref("HTMLImageElement.srcset")}} {{experimental_inline}}</dt>
- <dd>一个 {{domxref("DOMString")}} 表示 HTML 属性 {{htmlattrxref("srcset", "img")}}，包含了候选图像列表，用逗号分隔（<code>',', U+002C COMMA</code>）。一个候选的图像是一个URL 跟着一个 <code>'w'</code> 表示图像的宽度，或者一个 <code>'x'</code> 表示像素密度.</dd>
+ <dd>一个 {{domxref("DOMString")}} 表示 HTML 属性 {{htmlattrxref("srcset", "img")}}，包含了候选图像列表，用逗号分隔（<code>',', U+002C COMMA</code>）。一个候选的图像是一个 URL 跟着一个 <code>'w'</code> 表示图像的宽度，或者一个 <code>'x'</code> 表示像素密度。</dd>
  <dt>{{domxref("HTMLImageElement.useMap")}}</dt>
  <dd>一个 {{domxref("DOMString")}} 表示 HTML 属性 {{htmlattrxref("usemap", "img")}}，包含一个 {{HTMLElement("map")}} 元素的页面本地 URL。The page-local URL is a pound (hash) symbol (<code>#</code>) followed by the ID of the <code>&lt;map&gt;</code> element, such as <code>#my-map-element</code>. The <code>&lt;map&gt;</code> in turn contains {{HTMLElement("area")}} elements indicating the clickable areas in the image.</dd>
  <dt>{{domxref("HTMLImageElement.width")}}</dt>
@@ -138,9 +138,9 @@ alert(document.images[0].src);
   <tr>
    <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-img-element", "HTMLImageElement")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>一个构造器（带有 2 个可选的参数）已经被添加.<br>
+   <td>一个构造器（带有 2 个可选的参数）已经被添加。<br>
     以下属性已被弃用：<code>name</code>、<code>border</code>、<code>align</code>、<code>hspace</code>、<code>vspace</code>，和 <code>longdesc</code>.<br>
-    以下属性现在是 <code>unsigned long</code>, 类型，不再是 <code>long</code> 类型: <code>height</code> 和 <code>width</code>。<br>
+    以下属性现在是 <code>unsigned long</code>, 类型，不再是 <code>long</code> 类型：<code>height</code> 和 <code>width</code>。<br>
     添加了以下属性：<code>crossorigin</code>, <code>naturalWidth</code>, <code>naturalHeight</code>, 和<code>complete</code>.</td>
   </tr>
   <tr>

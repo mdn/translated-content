@@ -32,7 +32,7 @@ translation_of: Web/API/Intersection_Observer_API
 
 <p>假如有一个无限滚动的网页，开发者使用了一个第三方库来管理整个页面的广告，又用了另外一个库来实现消息盒子和点赞，并且页面有很多动画（译注：动画往往意味着较高的性能消耗）。两个库都有自己的相交检测程序，都运行在主线程里，而网站的开发者对这些库的内部实现知之甚少，所以并未意识到有什么问题。但当用户滚动页面时，这些相交检测程序就会在页面滚动回调函数里不停触发调用，造成性能问题，体验效果让人失望。</p>
 
-<p>Intersection Observer API 会注册一个回调函数，每当被监视的元素进入或者退出另外一个元素时(或者 {{Glossary("viewport")}} )，或者两个元素的相交部分大小发生变化时，该回调方法会被触发执行。这样，我们网站的主线程不需要再为了监听元素相交而辛苦劳作，浏览器会自行优化元素相交管理。</p>
+<p>Intersection Observer API 会注册一个回调函数，每当被监视的元素进入或者退出另外一个元素时 (或者 {{Glossary("viewport")}} )，或者两个元素的相交部分大小发生变化时，该回调方法会被触发执行。这样，我们网站的主线程不需要再为了监听元素相交而辛苦劳作，浏览器会自行优化元素相交管理。</p>
 
 <p>注意 Intersection Observer API 无法提供重叠的像素个数或者具体哪个像素重叠，他的更常见的使用方式是——当两个元素相交比例在 N% 左右时，触发回调，以执行某些逻辑。</p>
 
@@ -41,19 +41,19 @@ translation_of: Web/API/Intersection_Observer_API
 <p>Intersection Observer API 允许你配置一个回调函数，当以下情况发生时会被调用</p>
 
 <ul>
- <li>每当目标(<strong>target</strong>)元素与设备视窗或者其他指定元素发生交集的时候执行。设备视窗或者其他元素我们称它为根元素或根(<strong>root</strong>)。</li>
+ <li>每当目标 (<strong>target</strong>) 元素与设备视窗或者其他指定元素发生交集的时候执行。设备视窗或者其他元素我们称它为根元素或根 (<strong>root</strong>)。</li>
  <li>Observer 第一次监听目标元素的时候</li>
 </ul>
 
-<p>通常，您需要关注文档最接近的可滚动祖先元素的交集更改，如果元素不是可滚动元素的后代，则默认为设备视窗。如果要观察相对于根(<strong>root</strong>)元素的交集，请指定根(<strong>root</strong>)元素为<code>null</code>。</p>
+<p>通常，您需要关注文档最接近的可滚动祖先元素的交集更改，如果元素不是可滚动元素的后代，则默认为设备视窗。如果要观察相对于根 (<strong>root</strong>) 元素的交集，请指定根 (<strong>root</strong>) 元素为<code>null</code>。</p>
 
-<p>无论您是使用视口还是其他元素作为根，API都以相同的方式工作，只要目标元素的可见性发生变化，就会执行您提供的回调函数，以便它与所需的交叉点交叉。</p>
+<p>无论您是使用视口还是其他元素作为根，API 都以相同的方式工作，只要目标元素的可见性发生变化，就会执行您提供的回调函数，以便它与所需的交叉点交叉。</p>
 
-<p>目标(<strong>target</strong>)元素与根(<strong>root</strong>)元素之间的交叉度是交叉比(<strong>intersection ratio</strong>)。这是目标(<strong>target</strong>)元素相对于根(<strong>root</strong>)的交集百分比的表示，它的取值在0.0和1.0之间。</p>
+<p>目标 (<strong>target</strong>) 元素与根 (<strong>root</strong>) 元素之间的交叉度是交叉比 (<strong>intersection ratio</strong>)。这是目标 (<strong>target</strong>) 元素相对于根 (<strong>root</strong>) 的交集百分比的表示，它的取值在 0.0 和 1.0 之间。</p>
 
 <h3 id="创建一个_intersection_observer">创建一个 intersection observer</h3>
 
-<p>创建一个 IntersectionObserver 对象，并传入相应参数和回调用函数，该回调函数将会在目标(<strong>target</strong>)元素和根(<strong>root</strong>)元素的交集大小超过阈值(<strong>threshold</strong>)规定的大小时候被执行。</p>
+<p>创建一个 IntersectionObserver 对象，并传入相应参数和回调用函数，该回调函数将会在目标 (<strong>target</strong>) 元素和根 (<strong>root</strong>) 元素的交集大小超过阈值 (<strong>threshold</strong>) 规定的大小时候被执行。</p>
 
 <pre class="brush: js">let options = {
   root: document.querySelector('#scrollArea'),
@@ -64,7 +64,7 @@ translation_of: Web/API/Intersection_Observer_API
 let observer = new IntersectionObserver(callback, options);
 </pre>
 
-<p>阈值为1.0意味着目标元素完全出现在 root 选项指定的元素中可见时，回调函数将会被执行。</p>
+<p>阈值为 1.0 意味着目标元素完全出现在 root 选项指定的元素中可见时，回调函数将会被执行。</p>
 
 <h4 id="Intersection_observer_options">Intersection observer options</h4>
 
@@ -72,11 +72,11 @@ let observer = new IntersectionObserver(callback, options);
 
 <dl>
  <dt><code>root</code></dt>
- <dd>指定根(<strong>root</strong>)元素，用于检查目标的可见性。必须是目标元素的父级元素。如果未指定或者为<code>null</code>，则默认为浏览器视窗。</dd>
+ <dd>指定根 (<strong>root</strong>) 元素，用于检查目标的可见性。必须是目标元素的父级元素。如果未指定或者为<code>null</code>，则默认为浏览器视窗。</dd>
  <dt><code>rootMargin</code></dt>
- <dd>根(<strong>root</strong>)元素的外边距。类似于 CSS 中的 {{cssxref("margin")}} 属性，比如 "<code>10px 20px 30px 40px"</code> (top, right, bottom, left)。如果有指定 root 参数，则 rootMargin 也可以使用百分比来取值。该属性值是用作 root 元素和 target 发生交集时候的计算交集的区域范围，使用该属性可以控制 root 元素每一边的收缩或者扩张。默认值为0。</dd>
+ <dd>根 (<strong>root</strong>) 元素的外边距。类似于 CSS 中的 {{cssxref("margin")}} 属性，比如 "<code>10px 20px 30px 40px"</code> (top, right, bottom, left)。如果有指定 root 参数，则 rootMargin 也可以使用百分比来取值。该属性值是用作 root 元素和 target 发生交集时候的计算交集的区域范围，使用该属性可以控制 root 元素每一边的收缩或者扩张。默认值为 0。</dd>
  <dt><code>threshold</code></dt>
- <dd>可以是单一的 number 也可以是 number 数组，target 元素和 root 元素相交程度达到该值的时候 IntersectionObserver 注册的回调函数将会被执行。如果你只是想要探测当 target 元素的在 root 元素中的可见性超过50%的时候，你可以指定该属性值为0.5。如果你想要 target 元素在 root 元素的可见程度每多25%就执行一次回调，那么你可以指定一个数组 <code>[0, 0.25, 0.5, 0.75, 1]</code>。默认值是0 (意味着只要有一个 target 像素出现在 root 元素中，回调函数将会被执行)。该值为1.0含义是当 target 完全出现在 root 元素中时候 回调才会被执行。</dd>
+ <dd>可以是单一的 number 也可以是 number 数组，target 元素和 root 元素相交程度达到该值的时候 IntersectionObserver 注册的回调函数将会被执行。如果你只是想要探测当 target 元素的在 root 元素中的可见性超过 50% 的时候，你可以指定该属性值为 0.5。如果你想要 target 元素在 root 元素的可见程度每多 25% 就执行一次回调，那么你可以指定一个数组 <code>[0, 0.25, 0.5, 0.75, 1]</code>。默认值是 0 (意味着只要有一个 target 像素出现在 root 元素中，回调函数将会被执行)。该值为 1.0 含义是当 target 完全出现在 root 元素中时候 回调才会被执行。</dd>
  <dt>
  <h4 id="Targeting_an_element_to_be_observed">Targeting an element to be observed</h4>
  </dt>
@@ -115,14 +115,14 @@ observer.observe(target);
 
 <h4 id="The_intersection_root_and_root_margin">The intersection root and root margin</h4>
 
-<p>在我们开始跟踪 target 元素和容器元素之前，我们要先知道什么是容器 (root) 元素。容器元素又称为 <strong>intersection root</strong>，或 <strong>root element</strong>。 这个既可以是 target 元素祖先元素也可以是指定 null 则使用浏览器视口做为容器(root)。</p>
+<p>在我们开始跟踪 target 元素和容器元素之前，我们要先知道什么是容器 (root) 元素。容器元素又称为 <strong>intersection root</strong>，或 <strong>root element</strong>。 这个既可以是 target 元素祖先元素也可以是指定 null 则使用浏览器视口做为容器 (root)。</p>
 
 
-<p><strong><dfn>root intersection rectangle</dfn></strong> 是用来对目标元素进行相交检测的矩形，它的大小有以下几种情况:</p>
+<p><strong><dfn>root intersection rectangle</dfn></strong> 是用来对目标元素进行相交检测的矩形，它的大小有以下几种情况：</p>
 
 <ul>
  <li>如果 intersection root 隐含 root (值为<code>null</code>) (也就是顶级 {{domxref("Document")}}), 那么 root intersection 矩形就是视窗的矩形大小。</li>
- <li>如果 intersection root 有溢出部分, 则 root intersection 矩形是 root 元素的内容 (content) 区域.</li>
+ <li>如果 intersection root 有溢出部分，则 root intersection 矩形是 root 元素的内容 (content) 区域。</li>
  <li>否则，root intersection 矩形就是 intersection root 的 bounding client rectangle (可以调用元素的 {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} 方法获取).</li>
 </ul>
 
@@ -130,9 +130,9 @@ observer.observe(target);
 
 <h4 id="Thresholds">Thresholds</h4>
 
-<p>IntersectionObserver API 并不会每次在元素的交集发生变化的时候都会执行回调。相反它使用了 <strong>thresholds</strong> 参数。当你创建一个 observer 的时候，你可以提供一个或者多个 number 类型的数值用来表示 target 元素在 root 元素的可见程序的百分比，然后，API的回调函数只会在元素达到 <strong>thresholds</strong> 规定的阈值时才会执行。</p>
+<p>IntersectionObserver API 并不会每次在元素的交集发生变化的时候都会执行回调。相反它使用了 <strong>thresholds</strong> 参数。当你创建一个 observer 的时候，你可以提供一个或者多个 number 类型的数值用来表示 target 元素在 root 元素的可见程序的百分比，然后，API 的回调函数只会在元素达到 <strong>thresholds</strong> 规定的阈值时才会执行。</p>
 
-<p>例如，当你想要在 target 在 root 元素中中的可见性每超过25%或者减少25%的时候都通知一次。你可以在创建 observer 的时候指定 <strong>thresholds</strong> 属性值为 <code>[0, 0.25, 0.5, 0.75, 1]</code>，你可以通过检测在每次交集发生变化的时候的都会传递回调函数的参数 {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} 的属性值来判断 target 元素在 root 元素中的可见性是否发生变化。如果 <code>isIntersecting</code> 为真，target 元素的至少已经达到 <strong>thresholds</strong> 属性值当中规定的其中一个阈值，如果为假，则 target 元素不在给定的阈值范围内可见。</p>
+<p>例如，当你想要在 target 在 root 元素中中的可见性每超过 25% 或者减少 25% 的时候都通知一次。你可以在创建 observer 的时候指定 <strong>thresholds</strong> 属性值为 <code>[0, 0.25, 0.5, 0.75, 1]</code>，你可以通过检测在每次交集发生变化的时候的都会传递回调函数的参数 {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} 的属性值来判断 target 元素在 root 元素中的可见性是否发生变化。如果 <code>isIntersecting</code> 为真，target 元素的至少已经达到 <strong>thresholds</strong> 属性值当中规定的其中一个阈值，如果为假，则 target 元素不在给定的阈值范围内可见。</p>
 
 <p>Note that it's possible to have a non-zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.</p>
 
@@ -141,7 +141,7 @@ observer.observe(target);
 <ul>
  <li>第一个盒子的 thresholds 包含每个可视百分比，也就是说，{{domxref("IntersectionObserver.thresholds")}} 数组是 <code>[0.00, 0.01, 0.02, ..., 0.99, 1.00]</code>。</li>
  <li>第二个盒子只有唯一的值 <code>[0.5]</code>。</li>
- <li>第三个盒子的 thresholds 按10%从0递增(0%, 10%, 20%, etc.)。</li>
+ <li>第三个盒子的 thresholds 按 10% 从 0 递增 (0%, 10%, 20%, etc.)。</li>
  <li>最后一个盒子为 <code>[0, 0.25, 0.5, 0.75, 1.0]</code>。</li>
 </ul>
 

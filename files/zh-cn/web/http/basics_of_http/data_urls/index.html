@@ -21,7 +21,7 @@ original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 <pre class="syntaxbox">data:[&lt;mediatype&gt;][;base64],&lt;data&gt;
 </pre>
 
-<p><code>mediatype </code>是个 MIME 类型的字符串，例如 "<code>image/jpeg</code>" 表示 JPEG 图像文件。如果被省略，则默认值为 <code>text/plain;charset=US-ASCII</code></p>
+<p><code>mediatype</code> 是个 MIME 类型的字符串，例如 "<code>image/jpeg</code>" 表示 JPEG 图像文件。如果被省略，则默认值为 <code>text/plain;charset=US-ASCII</code></p>
 
 <p>如果数据是文本类型，你可以直接将文本嵌入 (根据文档类型，使用合适的实体字符或转义字符)。如果是二进制数据，你可以将数据进行 base64 编码之后再进行嵌入。</p>
 
@@ -40,7 +40,7 @@ original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 
 <h2 id="Encoding_data_into_base64_format" name="Encoding_data_into_base64_format">给数据作 base64 编码</h2>
 
-<p>在 Linux 或者 Mac OS 系统上，你可以使用 <code>uuencode</code> 命令行工具来简单实现编码：</p>
+<p>在 Linux 或者 macOS 系统上，你可以使用 <code>uuencode</code> 命令行工具来简单实现编码：</p>
 
 <pre class="eval">uuencode -m <code>infile</code> <code>remotename</code>
 </pre>

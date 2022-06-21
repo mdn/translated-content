@@ -21,7 +21,7 @@ translation_of: Web/CSS/background-size
 background-size: cover
 background-size: contain
 
-/* 一个值: 这个值指定图片的宽度，图片的高度隐式的为auto */
+/* 一个值：这个值指定图片的宽度，图片的高度隐式的为 auto */
 background-size: 50%
 background-size: 3em
 background-size: 12px
@@ -35,7 +35,7 @@ background-size: auto 6px
 background-size: auto auto
 
 /* 逗号分隔的多个值：设置多重背景 */
-background-size: auto, auto     /* 不同于background-size: auto auto */
+background-size: auto, auto     /* 不同于 background-size: auto auto */
 background-size: 50%, 25%, 25%
 background-size: 6px, auto, contain
 
@@ -114,7 +114,7 @@ background-size: unset;</pre>
  <li>设定宽度和高度值</li>
 </ul>
 
-<p>当通过宽度和高度值来设定尺寸时，你可以提供一或者两个数值:</p>
+<p>当通过宽度和高度值来设定尺寸时，你可以提供一或者两个数值：</p>
 
 <ul>
  <li>如果仅有一个数值被给定，这个数值将作为宽度值大小，高度值将被设定为<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size$edit#auto">auto</a>。</code></li>
@@ -171,12 +171,12 @@ background-size: 50% 25%;</code></pre>
  <dt><code>contain</code> 或 <code>cover</code>:</dt>
  <dd>保留固有比例，最大的包含或覆盖背景区。如果图像没有固有比例，则按背景区大小。</dd>
  <dt><code>auto</code> 或 <code>auto auto</code>:</dt>
- <dd>图像如果有两个长度，则按这个尺寸。如果没有固有尺寸与固有比例，则按背景区的大小。如果没有固有尺寸但是有固有比例， 效果同 <code>contain</code>。如果有一个长度与比例，则由此长度与比例计算大小。如果有一个长度但是没有比例，则使用此长度与背景区相应的长度。</dd>
- <dt>一个为 <code>auto</code> 另一个不是auto:</dt>
+ <dd>图像如果有两个长度，则按这个尺寸。如果没有固有尺寸与固有比例，则按背景区的大小。如果没有固有尺寸但是有固有比例，效果同 <code>contain</code>。如果有一个长度与比例，则由此长度与比例计算大小。如果有一个长度但是没有比例，则使用此长度与背景区相应的长度。</dd>
+ <dt>一个为 <code>auto</code> 另一个不是 auto:</dt>
  <dd>如果图像有固有比例，则指定的长度使用指定值，未指定的长度由指定值与固有比例计算。如果图像没有固有比例，则指定的长度使用指定值，未指定的长度使用图像相应的固有长度，若没有固有长度，则使用背景区相应的长度。</dd>
 </dl>
 
-<p>注意，对于没有固有尺寸或固有比例的矢量图不是所有的浏览器都支持。特别注意测试Firefox 7- 与Firefox 8+，以确定不同之处能否接受。</p>
+<p>注意，对于没有固有尺寸或固有比例的矢量图不是所有的浏览器都支持。特别注意测试 Firefox 7- 与 Firefox 8+，以确定不同之处能否接受。</p>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
@@ -190,7 +190,7 @@ background-size: 50% 25%;</code></pre>
 
 <h2 id="备注">备注</h2>
 
-<p>如果用渐变作为背景并且对它使用了<code>background-size</code> ，最好不要只用一个auto， 或者只指定一个宽度值 (例如 <code>background-size: 50%</code>)。对这两种情况 Firefox 8有所改变， 并且目前各浏览器表现不一致，不是全部浏览器都完全支持 <a href="http://www.w3.org/TR/css3-background/#the-background-size">CSS3 <code>background-size</code> 规范</a> 与 <a href="http://dev.w3.org/csswg/css3-images/#gradients">CSS3 Image Values gradient 规范</a> 。</p>
+<p>如果用渐变作为背景并且对它使用了<code>background-size</code> ，最好不要只用一个 auto，或者只指定一个宽度值 (例如 <code>background-size: 50%</code>)。对这两种情况 Firefox 8 有所改变，并且目前各浏览器表现不一致，不是全部浏览器都完全支持 <a href="http://www.w3.org/TR/css3-background/#the-background-size">CSS3 <code>background-size</code> 规范</a> 与 <a href="http://dev.w3.org/csswg/css3-images/#gradients">CSS3 Image Values gradient 规范</a> 。</p>
 
 <pre class="brush: css notranslate">.bar {
        width: 50px; height: 100px;
@@ -208,7 +208,7 @@ background-size: 50% 25%;</code></pre>
 }
 </pre>
 
-<p>特别不推荐对渐变px与<code>auto</code>一起用, 因为Firefox 8之前不能重复渲染，并且对于没有实现Firefox 8渲染特性的浏览器，不知道指定了背景的元素的确切大小。</p>
+<p>特别不推荐对渐变 px 与<code>auto</code>一起用，因为 Firefox 8 之前不能重复渲染，并且对于没有实现 Firefox 8 渲染特性的浏览器，不知道指定了背景的元素的确切大小。</p>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">规范</h2>
 

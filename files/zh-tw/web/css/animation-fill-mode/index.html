@@ -31,7 +31,7 @@ animation-fill-mode: both, forwards, none;
  <dd>动画执行后停留到最后一个关键帧动画的计算值，<code><strong>简单来说执行结束动画会停留到结束时候的状态</strong></code>，不会是动画执行之前的效果。比如一个元素从左往右运动，添加当前属性值 <strong><code>forwards</code></strong> 元素会停留到动画执行结束后的右边而不是最初的左边。可以看以下图</dd>
  <dt><a href="https://gitee.com/yoonasy/externalLink/raw/master/animation-fill-mode_forwards.gif"><img alt="" src="https://gitee.com/yoonasy/externalLink/raw/master/animation-fill-mode_forwards.gif" style="height: 736px; width: 1723px;"></a></dt>
  <dd>当然最后动画停留显示的关键帧会取决于 <code>"animation-direction"</code> 和 <code>"animation-iteration-count"</code>这两个属性 运行方向和运行次数:
- <table class="standard-table">
+ <table>
   <thead>
    <tr>
     <th scope="col"><code>animation-direction</code></th>
@@ -79,7 +79,7 @@ animation-fill-mode: both, forwards, none;
  <dd>会在延迟之后才开始执行关键帧动画，而不是一开始使用第一帧进行停留，具体可以结合<code><strong>both</strong></code>的例子进行尝试。</dd>
  <dd><img alt="" src="https://gitee.com/yoonasy/externalLink/raw/master/animation-fill-mode_backwards.gif" style="height: 736px; width: 1698px;"></dd>
  <dd>第一个相关关键帧会取决于 <code>"animation-direction"</code> 方向属性:
- <table class="standard-table">
+ <table>
   <thead>
    <tr>
     <th scope="col"><code>animation-direction</code></th>

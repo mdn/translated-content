@@ -40,7 +40,7 @@ if (foo.childElementCount &gt; 0) {
     // do something
 }</code></pre>
 
-<p>下例演示了一个元素节点的<code>childElementCount</code>属性以及<code>children</code>属性的用法.</p>
+<p>下例演示了一个元素节点的<code>childElementCount</code>属性以及<code>children</code>属性的用法。</p>
 
 <pre class="eval">&lt;head&gt;
     &lt;script type="text/javascript"&gt;
@@ -48,17 +48,17 @@ if (foo.childElementCount &gt; 0) {
             var container = document.getElementById ("container");
 
             var childCount = 0;
-            //如果支持childElementCount属性
+            //如果支持 childElementCount 属性
             if ('childElementCount' in container) {
                 childCount = container.childElementCount;
             }
             else {
-            //如果支持children属性,IE6/7/8
-            //译者注:没有判断nodeType是否为1,可能包含注释节点.
+            //如果支持 children 属性，IE6/7/8
+            //译者注：没有判断 nodeType 是否为 1，可能包含注释节点。
                 if (container.children) {
                     childCount = container.children.length;
                 }
-                else {  //,如果都不支持,Firefox 3.5之前版本
+                else {  //,如果都不支持，Firefox 3.5 之前版本
                     var child = container.firstChild;
                     while (child) {
                         if (child.nodeType == 1 /*Node.ELEMENT_NODE*/) {
@@ -87,7 +87,7 @@ if (foo.childElementCount &gt; 0) {
 &lt;/body&gt;
 </pre>
 
-<div>执行上面的例子:<a class="external" href="http://help.dottoro.com/external/examples/ljsfamht/childElementCount_1.htm">http://help.dottoro.com/external/examples/ljsfamht/childElementCount_1.htm</a></div>
+<div>执行上面的例子：<a class="external" href="http://help.dottoro.com/external/examples/ljsfamht/childElementCount_1.htm">http://help.dottoro.com/external/examples/ljsfamht/childElementCount_1.htm</a></div>
 
 <p> </p>
 

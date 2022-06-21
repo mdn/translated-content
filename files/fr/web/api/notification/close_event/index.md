@@ -18,8 +18,10 @@ La propriété **`onclose`** de l'interface {{domxref ("Notification")}} défini
 
 ## Syntaxe
 
-    Notification.onclose = function(event) { ... }
-    Notification.onclose = (event) => { ... }
+```js
+Notification.onclose = function(event) { ... }
+Notification.onclose = (event) => { ... }
+```
 
 ## Compatibilité des navigateurs
 

@@ -26,7 +26,7 @@ tags:
 - {{CSSxRef("counter-reset")}} プロパティで、_逆順の_ [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) を生成する `reversed()` 関数をサポートしました。これは、降順の番号つき要素を意図するものです。
   これは `list-item` カウンターと合わせて、番号つきリストを自動的に、リスト内の要素の数から始まる逆順にするために使用します。
   (`list-item` は {{HTMLElement("ol")}} を使用して生成したリストのような番号つきリストへ自動的に適用されるカウンターです)。
-  Firefox はこの機能を、`<ol>` の [`reversed` 属性](/ja/docs/Web/HTML/Element/ol#attr-reversed) をサポートするため内部的に使用しています 
+  Firefox はこの機能を、`<ol>` の [`reversed` 属性](/ja/docs/Web/HTML/Element/ol#attr-reversed) をサポートするため内部的に使用しています
   ({{bug(1706346)}})。
 
 ### JavaScript
@@ -41,17 +41,15 @@ tags:
 ### API
 
 - {{domxref("navigator.canShare()")}} を Android でサポートしました。特定のターゲットに対して {{domxref("navigator.share()")}} が成功するかをコードから確認できます。
-  この機能は、デスクトップオペレーティングシステムでは設定項目で制御されています 
+  この機能は、デスクトップオペレーティングシステムでは設定項目で制御されています
   ({{bug(1666203)}})。
 - [Web Locks API](/ja/docs/Web/API/Web_Locks_API) をデフォルトで有効にしました。複数のタブや worker で実行されている Web アプリが、使用するリソースを調整できます ({{bug(1740044)}})。
-
 
 #### Canvas
 
 - [WebP](/ja/docs/Web/Media/Formats/Image_types#webp) 画像形式のエンコーダーをサポートしました。
-  canvas 要素が、以下のメソッドを使用して内容物を WebP データとしてエクスポートできます: {{domxref("HTMLCanvasElement.toDataURL()")}}、{{domxref("HTMLCanvasElement.toBlob()")}}、{{domxref("OffscreenCanvas.convertToBlob", "OffscreenCanvas.toBlob")}} 
+  canvas 要素が、以下のメソッドを使用して内容物を WebP データとしてエクスポートできます: {{domxref("HTMLCanvasElement.toDataURL()")}}、{{domxref("HTMLCanvasElement.toBlob()")}}、{{domxref("OffscreenCanvas.convertToBlob", "OffscreenCanvas.toBlob")}}
   ({{bug(1511670)}})。
-
 
 #### DOM
 
@@ -59,7 +57,7 @@ tags:
 
 #### Media、WebRTC、Web Audio
 
-- 複数の非推奨な非標準の静的フィールドを [WebRTC Statistics API](/ja/docs/Web/API/WebRTC_Statistics_API) から削除しました。`bitrateMean`、`bitrateStdDev`、`framerateMean`、`framerateStdDev`、`droppedFrames` が含まれます 
+- 複数の非推奨な非標準の静的フィールドを [WebRTC Statistics API](/ja/docs/Web/API/WebRTC_Statistics_API) から削除しました。`bitrateMean`、`bitrateStdDev`、`framerateMean`、`framerateStdDev`、`droppedFrames` が含まれます
   ({{bug(1367562)}})。
 
 ### WebDriver conformance (Marionette)

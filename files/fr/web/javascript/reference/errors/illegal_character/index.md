@@ -12,9 +12,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Illegal_character
 
 ## Message
 
-    SyntaxError: Invalid character (Edge)
-    SyntaxError: illegal character (Firefox)
-    SyntaxError: Invalid or unexpected token (Chrome)
+```
+SyntaxError: Invalid character (Edge)
+SyntaxError: illegal character (Firefox)
+SyntaxError: Invalid or unexpected token (Chrome)
+```
 
 ## Type d'erreur
 

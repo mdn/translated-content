@@ -6,38 +6,38 @@ translation_of: Web/API/AudioBuffer
 <p>{{APIRef("Web Audio API")}}</p>
 
 <div>
-<p>AudioBuffer接口表示存在内存里的一段短小的音频资源，利用{{ domxref("AudioContext.decodeAudioData()") }}方法从一个音频文件构建，或者利用 {{ domxref("AudioContext.createBuffer()") }}从原始数据构建。把音频放入AudioBuffer后，可以传入到一个 {{ domxref("AudioBufferSourceNode") }}进行播放。</p>
+<p>AudioBuffer 接口表示存在内存里的一段短小的音频资源，利用{{ domxref("AudioContext.decodeAudioData()") }}方法从一个音频文件构建，或者利用 {{ domxref("AudioContext.createBuffer()") }}从原始数据构建。把音频放入 AudioBuffer 后，可以传入到一个 {{ domxref("AudioBufferSourceNode") }}进行播放。</p>
 </div>
 
-<p>这些类型对象被设计来控制小音频片段，往往短于45秒。对于更长的声音，通过 {{domxref("MediaElementAudioSourceNode")}}来实现更为合适。缓存区（buffer）包含以下数据：不间断的IEEE754 32位线性PCM，从-1到1的范围额定，就是说，32位的浮点缓存区的每个样本在-1.0到1.0之间。如果{{domxref("AudioBuffer")}}有不同的频道，他们通常被保存在独立的缓存区。</p>
+<p>这些类型对象被设计来控制小音频片段，往往短于 45 秒。对于更长的声音，通过 {{domxref("MediaElementAudioSourceNode")}}来实现更为合适。缓存区（buffer）包含以下数据：不间断的 IEEE754 32 位线性 PCM，从-1 到 1 的范围额定，就是说，32 位的浮点缓存区的每个样本在-1.0 到 1.0 之间。如果{{domxref("AudioBuffer")}}有不同的频道，他们通常被保存在独立的缓存区。</p>
 
 <h2 id="属性">属性</h2>
 
 <dl>
  <dt>{{domxref("AudioBuffer.sampleRate")}} {{readonlyInline}}</dt>
- <dd>存储在缓存区的PCM数据的采样率：浮点数，单位为 sample/s。</dd>
+ <dd>存储在缓存区的 PCM 数据的采样率：浮点数，单位为 sample/s。</dd>
  <dt>{{domxref("AudioBuffer.length")}} {{readonlyInline}}</dt>
- <dd>返回存储在缓存区的PCM数据的采样帧率：整形。</dd>
+ <dd>返回存储在缓存区的 PCM 数据的采样帧率：整形。</dd>
  <dt>{{domxref("AudioBuffer.duration")}} {{readonlyInline}}</dt>
- <dd>返回存储在缓存区的PCM数据的时长：双精度型（单位为秒），。</dd>
+ <dd>返回存储在缓存区的 PCM 数据的时长：双精度型（单位为秒），。</dd>
  <dt>{{domxref("AudioBuffer.numberOfChannels")}} {{readonlyInline}}</dt>
- <dd>返回存储在缓存区的PCM数据的通道数：整形。</dd>
+ <dd>返回存储在缓存区的 PCM 数据的通道数：整形。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
 
 <dl>
  <dt>{{domxref("AudioBuffer.getChannelData()")}}</dt>
- <dd>返回一个 {{jsxref("Float32Array")}}，包含了带有频道的PCM数据，由频道参数定义（有0代表第一个频道）</dd>
+ <dd>返回一个 {{jsxref("Float32Array")}}，包含了带有频道的 PCM 数据，由频道参数定义（有 0 代表第一个频道）</dd>
  <dt>{{domxref("AudioBuffer.copyFromChannel()")}}</dt>
- <dd>从AudioBuffer的指定频道复制到数组终端。</dd>
+ <dd>从 AudioBuffer 的指定频道复制到数组终端。</dd>
  <dt>{{domxref("AudioBuffer.copyToChannel()")}}</dt>
- <dd>复制样品到原数组的AudioBuffer的指定频道</dd>
+ <dd>复制样品到原数组的 AudioBuffer 的指定频道</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
 
-<p>以下的例子展示了如何构建一个AudioBuffer以及随机用白噪音填充。你可以在 <a href="https://github.com/mdn/webaudio-examples/tree/master/audio-buffer">audio-buffer demo</a>库发现完整的源代码；一个<a href="https://mdn.github.io/webaudio-examples/audio-buffer/">running live</a> 的版本也可获得。</p>
+<p>以下的例子展示了如何构建一个 AudioBuffer 以及随机用白噪音填充。你可以在 <a href="https://github.com/mdn/webaudio-examples/tree/master/audio-buffer">audio-buffer demo</a>库发现完整的源代码；一个<a href="https://mdn.github.io/webaudio-examples/audio-buffer/">running live</a> 的版本也可获得。</p>
 
 <pre class="brush: js;highlight:[7,14,27] notranslate">// Stereo
 var channels = 2;
@@ -90,5 +90,5 @@ button.onclick = function() {
 <h2 id="可查看">可查看</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">应用Web Audio API </a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">应用 Web Audio API </a></li>
 </ul>

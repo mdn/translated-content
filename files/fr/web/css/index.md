@@ -66,7 +66,7 @@ La section [Apprendre le Web](/fr/docs/Learn/CSS) fournit différents modules qu
 - [Le service de validation CSS du W3C](https://jigsaw.w3.org/css-validator/) permet de vérifier si une feuille de style CSS est valide.
 - [Les outils de développement Firefox](/fr/docs/Tools) permettent de visualiser, d'éditer une feuille de style en direct grâce à [l'inspecteur](/fr/docs/Tools/Page_Inspector) et à [l'éditeur de styles](/fr/docs/Tools/Style_Editor).
 - [L'extension Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/) permet d'éditer le code CSS des sites visités à la volée.
-- [D'autres outils](/fr/docs/conflicting/Web/CSS_c2c099599c0a58c69d1390033045f244), [guide pour les débutants](https://www.cssdebutant.com/).
+- [D'autres outils](/fr/docs/Web/CSS), [guide pour les débutants](https://www.cssdebutant.com/).
 
 ## Voir aussi
 

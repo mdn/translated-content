@@ -1,5 +1,5 @@
 ---
-title: Firefox 21网站兼容性
+title: Firefox 21 网站兼容性
 slug: Mozilla/Firefox/Releases/21/Site_compatibility
 translation_of: Mozilla/Firefox/Releases/21/Site_compatibility
 original_slug: Site_Compatibility_for_Firefox_21
@@ -7,7 +7,7 @@ original_slug: Site_Compatibility_for_Firefox_21
 <div>{{FirefoxSidebar}}</div><section id="sect1">
   <h2 id="CSS">CSS</h2>
   <section id="sect2">
-    <h3 id="-moz-user-selectnone的表现变得和-moz-user-select-moz-none相同也就是和其他浏览器实现了统一"><code>-moz-user-select:none的表现变得和</code><code>-moz-user-select:-moz-none</code>相同,也就是和其他浏览器实现了统一</h3>
+    <h3 id="-moz-user-selectnone的表现变得和-moz-user-select-moz-none相同也就是和其他浏览器实现了统一"><code>-moz-user-select:none的表现变得和</code><code>-moz-user-select:-moz-none</code>相同，也就是和其他浏览器实现了统一</h3>
     <ul>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=816298">Bug 816298 – Change "-moz-user-select:none" to behave like WebKit, IE, and Opera (and "-moz-user-select:-moz-none")</a></li>
     </ul>
@@ -92,7 +92,7 @@ original_slug: Site_Compatibility_for_Firefox_21
 <section id="sect33">
   <h2 id="JavaScript">JavaScript</h2>
   <section id="sect34">
-    <h3 id="E4X已经被完全删除">E4X已经被完全删除</h3>
+    <h3 id="E4X已经被完全删除">E4X 已经被完全删除</h3>
     <ul>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=788293">Bug 788293 – Remove E4X from Spidermonkey</a></li>
     </ul>
@@ -106,7 +106,7 @@ original_slug: Site_Compatibility_for_Firefox_21
     <p>The <a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/parseInt"><code>parseInt</code></a> method implementation has been updated to conform to the ECMAScript 5 spec, and it now parses leading-zero strings as decimal, not octal. Therefore, <code>parseInt("042")</code> will return <code>42</code> instead of <code>34</code>. If you'd like to parse strings as octal, specify the radix like <code>parseInt(str, 8)</code>.</p>
   </section>
   <section id="sect36">
-    <h3 id="修正String.localeCompare在无参情况下的表现以符合ES5规范">修正<code>String.localeCompare</code>在无参情况下的表现,以符合ES5规范</h3>
+    <h3 id="修正String.localeCompare在无参情况下的表现以符合ES5规范">修正<code>String.localeCompare</code>在无参情况下的表现，以符合 ES5 规范</h3>
     <ul>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=789393">Bug 789393 – String.prototype.localeCompare() with no argument always returns 0</a></li>
     </ul>
@@ -116,7 +116,7 @@ original_slug: Site_Compatibility_for_Firefox_21
 <section id="sect37">
   <h2 id="SVG">SVG</h2>
   <section id="sect38">
-    <h3 id="删除掉那些未实现的SVG特性">删除掉那些未实现的SVG特性</h3>
+    <h3 id="删除掉那些未实现的SVG特性">删除掉那些未实现的 SVG 特性</h3>
     <ul>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=824218">Bug 824218 – Remove unimplemented SVG features</a></li>
     </ul>
@@ -136,7 +136,7 @@ original_slug: Site_Compatibility_for_Firefox_21
 <section id="sect42">
   <h2 id="安全">安全</h2>
   <section id="sect43">
-    <h3 id="CSP实现更新到符合最新规范">CSP实现更新到符合最新规范</h3>
+    <h3 id="CSP实现更新到符合最新规范">CSP 实现更新到符合最新规范</h3>
     <ul>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=746978">Bug 746978 – sync CSP directive parsing and directive names with w3c CSP 1.0 spec</a></li>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783049">Bug 783049 – CSP : use existing/old parser for X-Content-Security-Policy header, new/CSP 1.0 spec compliant parser for Content-Security-Policy header</a></li>

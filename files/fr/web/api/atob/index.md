@@ -17,7 +17,9 @@ Pour une utilisation avec des chaînes Unicode ou UTF-8, voir [cette note sur l'
 
 ## Syntaxe
 
-    var donneesDecodees = scope.atob(donneesEncodees);
+```js
+var donneesDecodees = scope.atob(donneesEncodees);
+```
 
 ### Déclenche
 
@@ -25,8 +27,10 @@ Déclenche une {{jsxref("DOMException")}} si la longueur de la chaîne passée e
 
 ## Exemple
 
-    donneesEncodees = window.btoa('Salut, monde'); // encode une chaîne
-    donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
+```js
+donneesEncodees = window.btoa('Salut, monde'); // encode une chaîne
+donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
+```
 
 ## Spécifications
 
