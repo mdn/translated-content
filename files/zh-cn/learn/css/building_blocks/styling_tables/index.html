@@ -69,7 +69,7 @@ translation_of: Learn/CSS/Building_blocks/Styling_tables
 
 <p>由于{{htmlattrxref("scope","th")}}、{{htmlelement("caption")}}、{{htmlelement("thead")}}、{{htmlelement("tbody")}}等特性，表格被很好地标记了，易于使用，并且易于访问，不幸的是，它在屏幕上呈现时看起来不太好（见它的预览版 <a href="http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html">punk-bands-unstyled.html</a>）：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13064/table-unstyled.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="table-unstyled.png"></p>
 
 <p>它看起来很拥挤，很难阅读，也很无聊。我们需要使用一些 CSS 来解决这个问题。</p>
 
@@ -124,14 +124,14 @@ th, td {
  <li>在你的表上，给{{cssxref("table-layout")}}属性设置一个为<code>fixed</code>的值通常是一个好主意，因为它使表的行为在默认情况下更可预测。通常情况下，表列的尺寸会根据所包含的内容大小而变化，这会产生一些奇怪的结果。通过 <code>table-layout: fixed</code>，您可以根据列标题的宽度来规定列的宽度，然后适当地处理它们的内容。这就是为什么我们使用了<code>thead th:nth-child(<em>n</em>)</code> 选择了四个不同的标题 ({{cssxref(":nth-child")}}) 选择器（“选择第 n 个子元素，它是一个顺序排列的{{htmlelement("th")}}元素，且其父元素是{{htmlelement("thead")}}元素”）并给定了它们的百分比宽度。整个列宽度与列标题的宽度是一样的，这是一种很好的设定表列尺寸的方式。Chris Coyier 在<a href="https://css-tricks.com/fixing-tables-long-strings/">Fixed Table Layouts</a>中更详细地讨论了这一技术。<br>
   <br>
   我们将它与一个 100% 的{{cssxref("width")}}组合在一起，这意味着该表将填充它放入的任何容器，并且能很好的响应（虽然它仍然需要更多的工作来让它在窄屏宽度上看起来很好）。</li>
- <li>一个{{cssxref("border-collapse")}}属性的<code>collapse</code>值对于任何表样式的工作来说都是一个标准的最佳实践。默认情况下，当您在表元素上设置边框时，它们之间将会有间隔，如下图所示：<img alt="" src="https://mdn.mozillademos.org/files/13068/no-border-collapse.png" style="display: block; margin: 0 auto;">这看起来不太好 (虽然可能是你想要的样子，谁知道呢？)。使用 <code>border-collapse: collapse;</code> ，让边框合为一条，现在看起来好多了：<img alt="" src="https://mdn.mozillademos.org/files/13066/border-collapse.png" style="display: block; margin: 0 auto;"></li>
+ <li>一个{{cssxref("border-collapse")}}属性的<code>collapse</code>值对于任何表样式的工作来说都是一个标准的最佳实践。默认情况下，当您在表元素上设置边框时，它们之间将会有间隔，如下图所示：<img src="no-border-collapse.png">这看起来不太好 (虽然可能是你想要的样子，谁知道呢？)。使用 <code>border-collapse: collapse;</code> ，让边框合为一条，现在看起来好多了：<img src="border-collapse.png"></li>
  <li>我们在整个表设置了一个{{cssxref("border")}}，这是必要的，因为我们将在表页眉和页脚后面设置一些边框——当你在表格外面没有一个边界而且以空隙结尾的时候，它看起来很奇怪，而且是不连贯的。</li>
  <li>我们在{{htmlelement("th")}}和{{htmlelement("td")}}元素上设置了一些{{cssxref("padding")}}——这些元素使数据项有了一些空间，使表看起来更加清晰。</li>
 </ul>
 
 <p>此刻，我们的表看起来好多了：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13070/table-with-spacing.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="table-with-spacing.png"></p>
 
 <h3 id="一些简单的排版：">一些简单的排版：</h3>
 
@@ -183,7 +183,7 @@ tfoot th {
 
 <p>结果看起来更整洁一些：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13072/table-with-typography.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="table-with-typography.png"></p>
 
 <h3 id="图形和颜色">图形和颜色</h3>
 
@@ -237,7 +237,7 @@ table {
 
 <p>这种颜色爆炸的结果如下：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13074/table-with-color.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="table-with-color.png"></p>
 
 <p>现在，这可能有点过头不符合你的品味，但我们在这里想要指出的一点是，表格并非只能是枯燥无味的，学术性的。</p>
 
@@ -257,7 +257,7 @@ table {
 
 <p>这里没有什么值得注意的地方，除了{{cssxref("caption-side")}}属性，它被赋予了一个<code>bottom</code>的值。这就导致标题被放置在表格的底部，与其他声明一起提供了最后的外观（见预览版<a href="http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">punk-bands-complete.html</a>）：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13076/table-with-caption.png" style="display: block; height: 357px; margin: 0px auto; width: 723px;"></p>
+<p><img src="table-with-caption.png"></p>
 
 <h2 id="自主学习：样式化你自己的表格">自主学习：样式化你自己的表格</h2>
 
