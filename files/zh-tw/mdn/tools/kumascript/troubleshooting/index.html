@@ -19,7 +19,7 @@ translation_of: MDN/Tools/KumaScript/Troubleshooting
  <dt>Use of a special character in a macro parameter.</dt>
  <dd>If you need to use a " or a \  inside of a macro parameter they can be escaped with a \ like this: <code>\\</code> or <code>\"</code></dd>
  <dt>Missing commas between macro parameters.</dt>
- <dd>Macro parameters need to be delimited by a comma (,) but not at the end of the list of parameters; for example <code>\{\{anch("top", "Back to top")}}</code>.</dd>
+ <dd>Macro parameters need to be delimited by a comma (,) but not at the end of the list of parameters; for example <code>\{\{compat("html.elements.link", 2)}}</code>.</dd>
  <dt>HTML tags appearing inside a macro call</dt>
  <dd>If you apply styling to a macro, it will often break because, for example, a <code>&lt;/code&gt;</code> tag may have appeared inside the macro code in the source code. Check the source view to see what's there, and remove any unnecessary styling.</dd>
 </dl>
@@ -35,7 +35,6 @@ translation_of: MDN/Tools/KumaScript/Troubleshooting
 
 <dl>
  <dt>Misspelling of macro names or renamed macros.</dt>
- <dd>You can try visiting the template page for the macro to see if it's named correctly. The URL for the template page can be constructed by adding the template name to the end of the URL <code>https://developer.mozilla.org/en-US/docs/Template: — </code>for example the template page for <code>\{\{anch("top", "Back to top")}}</code>  is <a href="https://developer.mozilla.org/en-US/docs/Template:anch">https://developer.mozilla.org/en-US/docs/Template:anch</a>.<br>
  <br>
  There is a partial list of <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Content/Custom_macros">macros for the MDN</a>, which may include the existing macro you are looking at, or its correct/new spelling.</dd>
 </dl>
