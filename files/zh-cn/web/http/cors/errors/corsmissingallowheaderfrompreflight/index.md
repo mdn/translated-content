@@ -10,7 +10,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 ## 原因
 
 ```
-原因: missing token 'xyz' in CORS header 'Access-Control-Allow-Headers' from CORS preflight channel
+原因: 预检通道的 `Access-Control-Allow-Headers` 标头不匹配
 ```
 
 ## 哪里错了?
