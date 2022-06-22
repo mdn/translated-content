@@ -6,7 +6,12 @@ browser-compat: api.Window.alert
 ---
 {{ APIRef }}
 
-El método `Window.alert()` muestra un diálogo de alerta con opción de especificar contenido, aguardará hasta que el usuario cierre la ventana de diálogo.
+El método `Window.alert()` muestra un diálogo de alerta con un mensaje opcional,
+y aguardará hasta que el usuario cierre la ventana de diálogo.
+
+En algunas condiciones, por ejemplo — cuando el usuario cambia de pestaña,
+es posible que el navegador no muestre un cuadro de diálogo o que no espere
+a que el usuario cierre el cuadro de diálogo.
 
 ## Sintaxis
 
@@ -15,7 +20,7 @@ alert()
 alert(message)
 ```
 
-### Parametros
+### Parámetros
 
 - `message` {{optional_inline}}
   - : Es un valor opcional del texto que se desea mostrar en el diálogo de alerta,
@@ -25,12 +30,11 @@ alert(message)
 
 Ninguno ({{jsxref("undefined")}}).
 
-
 ## Ejemplo
 
 ```js
-window.alert("Hola Mundo!");
-alert("Hola Mundo!");
+window.alert("Hello world!");
+alert("Hello world!");
 ```
 
 Ambos producen:
@@ -40,7 +44,7 @@ Ambos producen:
 ## Notas
 
 El diálogo `alert` debe ser usado para mensajes que no requieren respuesta por
-parte del usuario, solo el acuse de recibido del mensaje.
+parte del usuario, solo el acuse de recibo del mensaje.
 
 Los cuadros de diálogo son ventanas modales - previenen que el usuario acceda
 al resto de la interfaz del programa hasta que el diálogo sea cerrado.
