@@ -1,13 +1,6 @@
 ---
 title: Math.random()
-slug: Web/JavaScript/Reference/Global_objects/Math/random
-tags:
-  - JavaScript
-  - Math
-  - Math.random()
-  - Method
-  - Random
-  - Reference
+slug: Web/JavaScript/Reference/Global_Objects/Math/random
 browser-compat: javascript.builtins.Math.random
 ---
 
@@ -53,9 +46,12 @@ function getRandomArbitrary(min, max) {
 }
 ```
 
-### Obtener un número **entero** entre dos valores determinados
+### Obtener un número entero entre dos valores determinados
+
+Este ejemplo devuelve un número aleatorio situado entre los valores especificados. El valor devuelto no será más bajo que `min` (o el siguiente entero más alto, en caso de que _min_ no sea un número entero), y será menor (pero no igual) que `max` . 
 
 ```js
+// Notesé que también en este caso `min` será incluido y `max`   excluido
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -63,11 +59,9 @@ function getRandomInt(min, max) {
 }
 ```
 
-Notesé que en este caso también `min` será incluido y `max` excluido.
+> **Nota:** Puede ser tentador utilizar `Math.round()` para conseguir lo mismo, pero al hacerlo, los números aleatorios devueltos no seguirán una distribución uniforme. Esto podría no ser aceptable para sus necesidades.
 
-> **Nota:** Puede ser tentador utilizar `Math.round()` para conseguir lo mismo, pero al hacerlo, los números aleatorios devueltos por la función **no** seguirán una distribución uniforma, tal y como **si** hace `Math.random()`. Esto podría no ser aceptable para sus necesidades.
-
-### Obtener un número entero aleatorio entre dos determinados valores (incluyendo ambos)
+### Obtener un número entero aleatorio entre dos valores (incluyendo ambos)
 
 La función `getRandomInt()` descrita anteriormente incluye el valor mínimo, pero excluye al máximo. ¿Y si necesitamos que el resultado incluya tanto al mínimo como al máximo? La siguiente función `getRandomIntInclusive()` lo consigue.
 
@@ -77,9 +71,8 @@ function getRandomIntInclusive(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
+// Ahora, tanto el valor mínimo como el máximo están incluidos en el resultado.
 ```
-
-Ahora, tanto el valor mínimo como el máximo están incluidos en el resultado.
 
 ## Especificaciones
 
