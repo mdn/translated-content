@@ -17,8 +17,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadabl
 <p><code>@@isConcatSpreadable</code> 符号 (<code>Symbol.isConcatSpreadable</code>) 可以直接定义为对象属性或继承而来，它是布尔类型。它可以控制数组或类似数组（array-like）的对象的行为：</p>
 
 <ul>
- <li>对于数组对象，默认情况下，用于concat时，会按数组元素展开然后进行连接（数组元素作为新数组的元素）。重置<code>Symbol.isConcatSpreadable</code>可以改变默认行为。</li>
- <li>对于类似数组的对象，用于concat时，该对象整体作为新数组的元素，重置<code>Symbol.isConcatSpreadable</code>可改变默认行为。</li>
+ <li>对于数组对象，默认情况下，用于 concat 时，会按数组元素展开然后进行连接（数组元素作为新数组的元素）。重置<code>Symbol.isConcatSpreadable</code>可以改变默认行为。</li>
+ <li>对于类似数组的对象，用于 concat 时，该对象整体作为新数组的元素，重置<code>Symbol.isConcatSpreadable</code>可改变默认行为。</li>
 </ul>
 
 <p>{{js_property_attributes(0,0,0)}}</p>
@@ -50,7 +50,7 @@ console.log(alphaNumeric); // 结果: ['a', 'b', 'c', [1, 2, 3] ]
 
 <h3 id="Array-like_对象">Array-like 对象</h3>
 
-<p>对于类数组 (array-like)对象，默认不展开。期望展开其元素用于连接，需要设置 <code>Symbol.isConcatSpreadable</code> 为true：</p>
+<p>对于类数组 (array-like) 对象，默认不展开。期望展开其元素用于连接，需要设置 <code>Symbol.isConcatSpreadable</code> 为 true：</p>
 
 <pre class="brush: js">var x = [1, 2, 3];
 

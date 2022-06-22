@@ -11,99 +11,99 @@ translation_of: Web/API/TextDecoder
 ---
 <div>{{APIRef("Encoding API")}}</div>
 
-<p><code><strong>TextDecoder</strong></code><font><font> 接口表示一个文本解码器，一个解码器只支持一种特定文本编码，例如 </font></font><code>utf-8</code><font><font>、</font></font><code>iso-8859-2</code><font><font>、</font></font><code>koi8</code><font><font>、</font></font><code>cp1261</code><font><font>，</font></font><code>gbk</code><font><font> 等等。</font></font>解码器将字节流作为输入，并提供代码点流作为输出<font><font>。</font></font></p>
+<p><code><strong>TextDecoder</strong></code> 接口表示一个文本解码器，一个解码器只支持一种特定文本编码，例如 <code>utf-8</code>、<code>iso-8859-2</code>、<code>koi8</code>、<code>cp1261</code>，<code>gbk</code> 等等。解码器将字节流作为输入，并提供代码点流作为输出。</p>
 
-<h2 id="例子"><font><font>例子</font></font></h2>
+<h2 id="例子">例子</h2>
 
-<h3 id="用类型化数组表示文本"><font><font>用类型化数组表示文本</font></font></h3>
+<h3 id="用类型化数组表示文本">用类型化数组表示文本</h3>
 
-<p><font><font>本示例展示如何解码中文/日语字符</font></font><img alt="" src="https://mdn.mozillademos.org/files/16663/2019-05-21_191907.png" style="height: 32px; width: 41px;"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string"><font><font>，用五个不同的数组类型表示</font></font></span></span></span></span><font><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string"><font>：</font></span></span></span></span></font> {{jsxref("Uint8Array")}}, {{jsxref("Int8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Int32Array")}}</p>
+<p>本示例展示如何解码中文/日语字符<img alt="" src="https://mdn.mozillademos.org/files/16663/2019-05-21_191907.png" style="height: 32px; width: 41px;">，用五个不同的数组类型表示： {{jsxref("Uint8Array")}}, {{jsxref("Int8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Int32Array")}}</p>
 
-<pre class="brush: js; line-numbers language-js notranslate"><code class="language-js"><span class="keyword token">let</span> utf8decoder <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">TextDecoder</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// default 'utf-8' or 'utf8'</span>
+<pre class="brush: js; line-numbers language-js notranslate"><code class="language-js">let utf8decoder = new TextDecoder(); // default 'utf-8' or 'utf8'
 
-<span class="keyword token">let</span> u8arr <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Uint8Array</span><span class="punctuation token">(</span><span class="punctuation token">[</span><span class="number token">240</span><span class="punctuation token">,</span> <span class="number token">160</span><span class="punctuation token">,</span> <span class="number token">174</span><span class="punctuation token">,</span> <span class="number token">183</span><span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">let</span> i8arr <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Int8Array</span><span class="punctuation token">(</span><span class="punctuation token">[</span><span class="operator token">-</span><span class="number token">16</span><span class="punctuation token">,</span> <span class="operator token">-</span><span class="number token">96</span><span class="punctuation token">,</span> <span class="operator token">-</span><span class="number token">82</span><span class="punctuation token">,</span> <span class="operator token">-</span><span class="number token">73</span><span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">let</span> u16arr <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Uint16Array</span><span class="punctuation token">(</span><span class="punctuation token">[</span><span class="number token">41200</span><span class="punctuation token">,</span> <span class="number token">47022</span><span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">let</span> i16arr <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Int16Array</span><span class="punctuation token">(</span><span class="punctuation token">[</span><span class="operator token">-</span><span class="number token">24336</span><span class="punctuation token">,</span> <span class="operator token">-</span><span class="number token">18514</span><span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">let</span> i32arr <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Int32Array</span><span class="punctuation token">(</span><span class="punctuation token">[</span><span class="operator token">-</span><span class="number token">1213292304</span><span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+let u8arr = new Uint8Array([240, 160, 174, 183]);
+let i8arr = new Int8Array([-16, -96, -82, -73]);
+let u16arr = new Uint16Array([41200, 47022]);
+let i16arr = new Int16Array([-24336, -18514]);
+let i32arr = new Int32Array([-1213292304]);
 
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>utf8decoder<span class="punctuation token">.</span><span class="function token">decode</span><span class="punctuation token">(</span>u8arr<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>utf8decoder<span class="punctuation token">.</span><span class="function token">decode</span><span class="punctuation token">(</span>i8arr<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>utf8decoder<span class="punctuation token">.</span><span class="function token">decode</span><span class="punctuation token">(</span>u16arr<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>utf8decoder<span class="punctuation token">.</span><span class="function token">decode</span><span class="punctuation token">(</span>i16arr<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>utf8decoder<span class="punctuation token">.</span><span class="function token">decode</span><span class="punctuation token">(</span>i32arr<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+console.log(utf8decoder.decode(u8arr));
+console.log(utf8decoder.decode(i8arr));
+console.log(utf8decoder.decode(u16arr));
+console.log(utf8decoder.decode(i16arr));
+console.log(utf8decoder.decode(i32arr));</code></pre>
 
-<h3 id="处理非UTF8文本"><font><font>处理非UTF8文本</font></font></h3>
+<h3 id="处理非UTF8文本">处理非UTF8文本</h3>
 
-<p><font><font>在此示例中，我们对俄语文本“Привет，мир！”(</font></font> "Hello, world."<font><font>)进行解码。</font><font>在我们的</font></font> {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} <font><font>构造函数中，我们指定Windows-1251字符编码，适用于西里尔字母。</font></font></p>
+<p>在此示例中，我们对俄语文本“Привет，мир！”( "Hello, world.")进行解码。在我们的 {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} 构造函数中，我们指定Windows-1251字符编码，适用于西里尔字母。</p>
 
-<pre class="brush: js; line-numbers language-js notranslate"><code class="language-js"><span class="keyword token">let</span> win1251decoder <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">TextDecoder</span><span class="punctuation token">(</span><span class="string token">'windows-1251'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">let</span> bytes <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Uint8Array</span><span class="punctuation token">(</span><span class="punctuation token">[</span><span class="number token">207</span><span class="punctuation token">,</span> <span class="number token">240</span><span class="punctuation token">,</span> <span class="number token">232</span><span class="punctuation token">,</span> <span class="number token">226</span><span class="punctuation token">,</span> <span class="number token">229</span><span class="punctuation token">,</span> <span class="number token">242</span><span class="punctuation token">,</span> <span class="number token">44</span><span class="punctuation token">,</span> <span class="number token">32</span><span class="punctuation token">,</span> <span class="number token">236</span><span class="punctuation token">,</span> <span class="number token">232</span><span class="punctuation token">,</span> <span class="number token">240</span><span class="punctuation token">,</span> <span class="number token">33</span><span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>win1251decoder<span class="punctuation token">.</span><span class="function token">decode</span><span class="punctuation token">(</span>bytes<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Привет, мир!</span></code></pre>
+<pre class="brush: js; line-numbers language-js notranslate"><code class="language-js">let win1251decoder = new TextDecoder('windows-1251');
+let bytes = new Uint8Array([207, 240, 232, 226, 229, 242, 44, 32, 236, 232, 240, 33]);
+console.log(win1251decoder.decode(bytes)); // Привет, мир!</code></pre>
 
 <h2 id="构造函数">构造函数</h2>
 
 <dl>
  <dt>{{DOMxRef("TextDecoder.TextDecoder", "TextDecoder()")}}</dt>
- <dd><font><font>返回一个新构造的 </font></font><code>TextDecoder</code><font><font>，它使用参数中指定的解码方法生成代码点流。</font></font></dd>
+ <dd>返回一个新构造的 <code>TextDecoder</code>，它使用参数中指定的解码方法生成代码点流。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
 
-<p><em><code>TextDecoder</code><font><font> 接口不继承任何属性。</font></font></em></p>
+<p><em><code>TextDecoder</code> 接口不继承任何属性。</em></p>
 
 <dl>
  <dt>{{DOMxRef("TextDecoder.prototype.encoding")}}{{ReadOnlyInline}}</dt>
- <dd><font><font>{{DOMxRef("DOMString")}}所包含的解码器的名称，表示</font></font><code>TextDecoder</code><font><font>所使用的解码方法的字符串。</font></font></dd>
- <dt><font>{{DOMxRef("TextDecoder.prototype.fatal")}}{{ReadOnlyInline}}</font></dt>
- <dd><font><font><font>布尔值，{{jsxref('Boolean')}}，是否显示致命错误。</font></font></font></dd>
- <dt><font><font><font>{{DOMxRef("TextDecoder.prototype.ignoreBOM")}} {{ReadOnlyInline}}</font></font></font></dt>
- <dd><font><font><font>布尔值，{{jsxref('Boolean')}}，是否忽略 BOM（</font></font></font>byte order marker<font><font><font>）标记。</font></font></font></dd>
+ <dd>{{DOMxRef("DOMString")}}所包含的解码器的名称，表示<code>TextDecoder</code>所使用的解码方法的字符串。</dd>
+ <dt>{{DOMxRef("TextDecoder.prototype.fatal")}}{{ReadOnlyInline}}</dt>
+ <dd>布尔值，{{jsxref('Boolean')}}，是否显示致命错误。</dd>
+ <dt>{{DOMxRef("TextDecoder.prototype.ignoreBOM")}} {{ReadOnlyInline}}</dt>
+ <dd>布尔值，{{jsxref('Boolean')}}，是否忽略 BOM（byte order marker）标记。</dd>
 </dl>
 
-<h2 id="方法"><font><font><font>方法</font></font></font></h2>
+<h2 id="方法">方法</h2>
 
 <dl>
 </dl>
 
-<p><font><em><em><code>TextDecoder</code><font><font> 接口不继承任何</font></font></em><font><font>方法</font></font></em><font><font>。</font></font></font></p>
+<p><em><em><code>TextDecoder</code> 接口不继承任何</em>方法</em>。</p>
 
 <dl>
- <dt><font>{{DOMxRef("TextDecoder.prototype.decode()")}}</font></dt>
- <dd><font><font><font>返回一个{{DOMxRef("DOMString")}}，其中包含使用特定 </font></font><code>TextDecoder</code><font><font> 对象</font><font>的方法解码的文本</font><font>。</font></font></font></dd>
+ <dt>{{DOMxRef("TextDecoder.prototype.decode()")}}</dt>
+ <dd>返回一个{{DOMxRef("DOMString")}}，其中包含使用特定 <code>TextDecoder</code> 对象的方法解码的文本。</dd>
 </dl>
 
-<h2 id="规范"><font>规范</font></h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="col"><font><font><font>规格</font></font></font></th>
-   <th scope="col"><font><font><font>状态</font></font></font></th>
-   <th scope="col"><font><font><font>评论</font></font></font></th>
+   <th scope="col">规格</th>
+   <th scope="col">状态</th>
+   <th scope="col">评论</th>
   </tr>
   <tr>
-   <td><font>{{SpecName("Encoding", "#interface-textdecoder", "TextDecoder")}}</font></td>
-   <td><font>{{Spec2("Encoding")}}</font></td>
-   <td><font><font><font>初始定义。</font></font></font></td>
+   <td>{{SpecName("Encoding", "#interface-textdecoder", "TextDecoder")}}</td>
+   <td>{{Spec2("Encoding")}}</td>
+   <td>初始定义。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性"><font><font><font>浏览器兼容性</font></font></font></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <div>
 
 
-<p><font>{{Compat("api.TextDecoder")}}</font></p>
+<p>{{Compat("api.TextDecoder")}}</p>
 </div>
 
-<h2 id="相关链接"><font><font><font>相关链接</font></font></font></h2>
+<h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li><font>{{DOMxRef("TextEncoder")}} <font><font>接口描述了逆操作。</font></font></font></li>
- <li><font><a href="/en-US/Add-ons/Code_snippets/StringView"><code>StringView</code></a><font><font> –基于类型数组的字符串的类似C的表示形式</font></font></font></li>
- <li><font><font><font>一个</font></font><a href="http://code.google.com/p/stringencoding/"><font><font>垫片</font></font></a><font><font>，允许在不支持它的浏览器使用这个接口。</font></font></font></li>
- <li><font><code><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></code></font></li>
- <li><font><a href="https://nodejs.org/api/util.html#util_class_util_textdecoder"><font><font>Node.js支持从v11.0.0全局导出</font></font></a></font></li>
+ <li>{{DOMxRef("TextEncoder")}} 接口描述了逆操作。</li>
+ <li><a href="/en-US/Add-ons/Code_snippets/StringView"><code>StringView</code></a> –基于类型数组的字符串的类似C的表示形式</li>
+ <li>一个<a href="http://code.google.com/p/stringencoding/">垫片</a>，允许在不支持它的浏览器使用这个接口。</li>
+ <li><code><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></code></li>
+ <li><a href="https://nodejs.org/api/util.html#util_class_util_textdecoder">Node.js支持从v11.0.0全局导出</a></li>
 </ul>

@@ -5,10 +5,10 @@ translation_of: Web/API/WebGLRenderingContext/uniform
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的<strong><code>WebGLRenderingContext.uniform[1234][fi][v]()</code></strong> 方法指定了uniform 变量的值。所有在ShaderProgram对象中定义的，且激活的uniform变量在ShaderProgram 执行link成功后被初始化为0。它们将保留通过调用此方法分配给它们的值，直到再次将其初始化为0时，也就是ShaderProgram对象上发生下一次成功的link操作为止。</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的<strong><code>WebGLRenderingContext.uniform[1234][fi][v]()</code></strong> 方法指定了 uniform 变量的值。所有在 ShaderProgram 对象中定义的，且激活的 uniform 变量在 ShaderProgram 执行 link 成功后被初始化为 0。它们将保留通过调用此方法分配给它们的值，直到再次将其初始化为 0 时，也就是 ShaderProgram 对象上发生下一次成功的 link 操作为止。</p>
 
 <div class="note">
-<p>这里描述的许多函数都扩展了 WebGL 2 接口, 可在以下地址查看 {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.</p>
+<p>这里描述的许多函数都扩展了 WebGL 2 接口，可在以下地址查看 {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -38,9 +38,9 @@ void <var>gl</var>.uniform4iv(<var>location</var>, <var>value</var>);
 
 <dl>
  <dt>location</dt>
- <dd> {{domxref("WebGLUniformLocation")}} 对象包含了将要修改的uniform 属性位置.</dd>
+ <dd> {{domxref("WebGLUniformLocation")}} 对象包含了将要修改的 uniform 属性位置。</dd>
  <dt><code>value, v0, v1, v2, v3</code></dt>
- <dd>新的值将被用于uniform 变量. 可能的类型:
+ <dd>新的值将被用于 uniform 变量。可能的类型：
  <ul>
   <li>浮点值 {{jsxref("Number")}}(方法名跟"f").</li>
   <li>浮点数组 (例如 {{jsxref("Float32Array")}} 或 {{jsxref("Array")}} 的数组) 用于浮点型向量方法 (方法名跟 "fv").</li>
@@ -75,7 +75,7 @@ void <var>gl</var>.uniform4iv(<var>location</var>, <var>value</var>);
   <tr>
    <td>{{SpecName('OpenGL ES 2.0', "glUniform.xml", "glUniform")}}</td>
    <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>OpenGL API的主页.</td>
+   <td>OpenGL API 的主页。</td>
   </tr>
  </tbody>
 </table>

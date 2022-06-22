@@ -5,19 +5,19 @@ translation_of: Web/API/Performance/getEntries
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p><strong><code>getEntries()</code></strong> 对于给定的filter,此方法返回 {{domxref("PerformanceEntry")}} 对象数组. 数组成员（入口）可以在显式的时间点用 performance <em>marks或</em><em>measures</em> 来创建(例如调用{{domxref("Performance.mark","mark()")}} 方法) .</p>
+<p><strong><code>getEntries()</code></strong> 对于给定的 filter，此方法返回 {{domxref("PerformanceEntry")}} 对象数组。数组成员（入口）可以在显式的时间点用 performance <em>marks 或</em><em>measures</em> 来创建 (例如调用{{domxref("Performance.mark","mark()")}} 方法) .</p>
 
-<p class="note">此方法暴露给{{domxref("Window")}} 和 {{domxref("Worker")}}接口.</p>
+<p>此方法暴露给{{domxref("Window")}} 和 {{domxref("Worker")}}接口。</p>
 
 <h2 id="语法">语法</h2>
 
-<p>取全部:</p>
+<p>取全部：</p>
 
 <pre class="syntaxbox"><em>entries</em> = window.performance.getEntries();
 <em>entries</em> = window.performance.getEntries(<em>PerformanceEntryFilterOptions</em>);
 </pre>
 
-<p>取特定:</p>
+<p>取特定：</p>
 
 <pre class="syntaxbox">entries = performance.getEntries({name: "entry_name", entryType: "mark"});
 </pre>
@@ -29,12 +29,12 @@ translation_of: Web/API/Performance/getEntries
 </dl>
 
 <dl>
- <dd><code>PerformanceEntryFilterOptions</code> 是一个带有以下键值的字典:
+ <dd><code>PerformanceEntryFilterOptions</code> 是一个带有以下键值的字典：
 
  <ul>
   <li><code>"name"</code>,  performance entry. 的名字</li>
-  <li><code>"entryType"</code>, entry 类型. 合法的entry类型可以从{{domxref("PerformanceEntry.entryType")}} 方法获取.</li>
-  <li><code>"initiatorType"</code>, 初始化资源的类型(例如一个HTML element). 其取值被 {{domxref("PerformanceResourceTiming.initiatorType")}} 接口所定义.</li>
+  <li><code>"entryType"</code>, entry 类型。合法的 entry 类型可以从{{domxref("PerformanceEntry.entryType")}} 方法获取。</li>
+  <li><code>"initiatorType"</code>, 初始化资源的类型 (例如一个 HTML element). 其取值被 {{domxref("PerformanceResourceTiming.initiatorType")}} 接口所定义。</li>
  </ul>
  </dd>
 </dl>
@@ -43,7 +43,7 @@ translation_of: Web/API/Performance/getEntries
 
 <dl>
  <dt>entries</dt>
- <dd>一个由符合filter条件的{{domxref("PerformanceEntry")}} 对象构成的数组 . 数组成员按PerformanceEntry.{{domxref("PerformanceEntry.startTime","startTime")}}时间顺序排列 . 如果没有符合filter条件的对象，那么返回空数组. 如果不带任何参数，返回全部entries.</dd>
+ <dd>一个由符合 filter 条件的{{domxref("PerformanceEntry")}} 对象构成的数组 . 数组成员按 PerformanceEntry.{{domxref("PerformanceEntry.startTime","startTime")}}时间顺序排列 . 如果没有符合 filter 条件的对象，那么返回空数组。如果不带任何参数，返回全部 entries.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>

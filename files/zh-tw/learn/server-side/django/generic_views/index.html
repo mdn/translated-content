@@ -7,9 +7,9 @@ translation_of: Learn/Server-side/Django/Generic_views
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">本教程擴充了 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 網站，為書本與作者增加列表與細節頁面。此處我們將學到通用類別視圖，並演示如何降低你必須為一般使用案例撰寫的程式碼數量。我們也會更加深入 URL 處理細節，演示如何實施基本模式匹配。</p>
+<p>本教程擴充了 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 網站，為書本與作者增加列表與細節頁面。此處我們將學到通用類別視圖，並演示如何降低你必須為一般使用案例撰寫的程式碼數量。我們也會更加深入 URL 處理細節，演示如何實施基本模式匹配。</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">前提:</th>
@@ -230,7 +230,7 @@ class BookListView(generic.ListView):
 
 <p>The main parts of the syntax you will need to know for declaring the pattern matches are:</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Symbol</th>
@@ -281,7 +281,7 @@ class BookListView(generic.ListView):
 
 <p>Lets consider a few real examples of patterns:</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Pattern</th>

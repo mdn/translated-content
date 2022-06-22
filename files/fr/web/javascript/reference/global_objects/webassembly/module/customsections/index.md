@@ -19,7 +19,9 @@ La méthode **`WebAssembly.customSections()`** renvoie un tableau qui contient l
 
 ## Syntaxe
 
-    var custSec = WebAssembly.Module.customSections(module, nomSection);
+```js
+var custSec = WebAssembly.Module.customSections(module, nomSection);
+```
 
 ### Paramètres
 

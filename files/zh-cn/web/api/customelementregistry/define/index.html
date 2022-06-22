@@ -15,8 +15,8 @@ translation_of: Web/API/CustomElementRegistry/define
 <p>你可以创建两种类型的自定义元素：</p>
 
 <ul>
- <li><strong>自主定制元素</strong>：独立元素; 它们不会从内置HTML元素继承。</li>
- <li><strong>自定义内置元素</strong>：这些元素继承自 - 并扩展 - 内置HTML元素</li>
+ <li><strong>自主定制元素</strong>：独立元素; 它们不会从内置 HTML 元素继承。</li>
+ <li><strong>自定义内置元素</strong>：这些元素继承自 - 并扩展 - 内置 HTML 元素</li>
 </ul>
 
 <h2 id="语法">语法</h2>
@@ -28,13 +28,13 @@ translation_of: Web/API/CustomElementRegistry/define
 
 <dl>
  <dt>name</dt>
- <dd>自定义元素名.</dd>
+ <dd>自定义元素名。</dd>
  <dt>constructor</dt>
- <dd>自定义元素构造器.</dd>
+ <dd>自定义元素构造器。</dd>
  <dt>options {{optional_inline}}</dt>
- <dd>控制元素如何定义. 目前有一个选项支持:
+ <dd>控制元素如何定义。目前有一个选项支持：
  <ul>
-  <li><code>extends</code>. 指定继承的已创建的元素. 被用于创建自定义元素.</li>
+  <li><code>extends</code>. 指定继承的已创建的元素。被用于创建自定义元素。</li>
  </ul>
  </dd>
 </dl>
@@ -47,7 +47,7 @@ translation_of: Web/API/CustomElementRegistry/define
 
 <h3 id="自主定制元素">自主定制元素</h3>
 
-<p>以下代码取自我们的 <a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">popup-info-box-web-component</a> 示例(<a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">see it live also</a>)。</p>
+<p>以下代码取自我们的 <a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">popup-info-box-web-component</a> 示例 (<a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">see it live also</a>)。</p>
 
 <pre class="brush: js">// Create a class for the element
 class PopUpInfo extends HTMLElement {
@@ -181,20 +181,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "custom-elements.html#dom-customelementregistry-define", "customElements.define()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 

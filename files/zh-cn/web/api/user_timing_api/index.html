@@ -1,15 +1,15 @@
 ---
-title: 自定义时间测量API
+title: 自定义时间测量 API
 slug: Web/API/User_Timing_API
 translation_of: Web/API/User_Timing_API
 ---
-<div>{{DefaultAPISidebar("自定义时间测量API")}}</div>
+<div>{{DefaultAPISidebar("自定义时间测量 API")}}</div>
 
 <p><strong><code>User Timing</code></strong>接口允许开发者在浏览器性能时间线中创建针对特定应用的 {{domxref("DOMHighResTimeStamp","时间戳")}}。有两种自定义时间测量事件类型："<code>mark</code>" {{domxref("PerformanceEntry.entryType","事件类型")}}和"<code>measure</code>" {{domxref("PerformanceEntry.entryType","事件类型")}}。</p>
 
-<p><code><strong>mark</strong><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">事件可以指定任意的名字并且可以在放在应用的任何位置，</span></font><strong>measure</strong></code>事件也可以指定为任意的名字，但是需要放在两个mark之间，所以它实际上是两个mark的中间点。</p>
+<p><code><strong>mark</strong>事件可以指定任意的名字并且可以在放在应用的任何位置，<strong>measure</strong></code>事件也可以指定为任意的名字，但是需要放在两个 mark 之间，所以它实际上是两个 mark 的中间点。</p>
 
-<p>此文档提供了对<code>mark<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">和</span></font></code><code>measure</code>{{domxref("PerformanceEntry.entryType","性能事件类型")}}的概览，包括四个拓展了{{domxref("Performance")}}接口的<code>User Timing</code>方法。 想要了解这两种性能事件类型和相关方法的更多详细内容和示例代码，请查阅<a href="/Web/API/User_Timing_API/Using_the_User_Timing_API">使用自定义时间测量API</a>。</p>
+<p>此文档提供了对<code>mark 和</code><code>measure</code>{{domxref("PerformanceEntry.entryType","性能事件类型")}}的概览，包括四个拓展了{{domxref("Performance")}}接口的<code>User Timing</code>方法。 想要了解这两种性能事件类型和相关方法的更多详细内容和示例代码，请查阅<a href="/Web/API/User_Timing_API/Using_the_User_Timing_API">使用自定义时间测量 API</a>。</p>
 
 <h2 id="性能标记">性能<code>标记</code></h2>
 
@@ -19,13 +19,13 @@ translation_of: Web/API/User_Timing_API
 
 <p>{{domxref("Performance.mark","performance.mark()")}}方法被用来创建一个性能标记。这个方法需要一个参数，标记的名称（例如<code>performance.mark("mark-1")</code>）。</p>
 
-<p><code>标记的</code>{{domxref("PerformanceEntry","性能入口")}}包含以下属性值:</p>
+<p><code>标记的</code>{{domxref("PerformanceEntry","性能入口")}}包含以下属性值：</p>
 
 <ul>
  <li>{{domxref("PerformanceEntry.entryType","entryType")}} - 设置为"<code>mark</code>".</li>
  <li>{{domxref("PerformanceEntry.name","name")}} - 设置为创建该标记时"<code>name</code>"参数传入的值</li>
  <li>{{domxref("PerformanceEntry.startTime","startTime")}} - 设置为<code>标记</code>被取消时的{{domxref("DOMHighResTimeStamp","时间戳")}}。</li>
- <li>{{domxref("PerformanceEntry.duration","duration")}} - 设置为"<code>0</code>" （一个没有时间间隔的标记）</li>
+ <li>{{domxref("PerformanceEntry.duration","duration")}} - 设置为"<code>0</code>"（一个没有时间间隔的标记）</li>
 </ul>
 
 <h3 id="检索一个性能标记">检索一个性能<code>标记</code></h3>
@@ -53,7 +53,7 @@ translation_of: Web/API/User_Timing_API
 
 <p><code>测量</code>通过调用<code>performance.measure(measureName, startMarkName, endMarkName)</code>来创建，<code>measureName</code>指定了该测量的名称，<code>startMarkName</code>和<code>endMarkName</code>分别指定了性能时间线上该测量前后的两个标记的名称。</p>
 
-<p><code>测量</code>{{domxref("PerformanceEntry","性能条目")}}包含以下属性值:</p>
+<p><code>测量</code>{{domxref("PerformanceEntry","性能条目")}}包含以下属性值：</p>
 
 <ul>
  <li>{{domxref("PerformanceEntry.entryType","entryType")}} - 设置为"<code>measure</code>".</li>
@@ -81,9 +81,9 @@ translation_of: Web/API/User_Timing_API
 
 <h2 id="互操作性">互操作性</h2>
 
-<p>如{{domxref("Performance")}}接口的<a href="/Web/API/Performance#Browser_compatibility">浏览器兼容性</a>表所示，<code>User Timing</code> 方法被大多数桌面和移动浏览器（唯一的例外是桌面Safari和移动版Safari，<a href="https://developer.apple.com/safari/technology-preview/release-notes/#r24">Safari Technology Preview 24已经支持该方法</a>)。</p>
+<p>如{{domxref("Performance")}}接口的<a href="/Web/API/Performance#Browser_compatibility">浏览器兼容性</a>表所示，<code>User Timing</code> 方法被大多数桌面和移动浏览器（唯一的例外是桌面 Safari 和移动版 Safari，<a href="https://developer.apple.com/safari/technology-preview/release-notes/#r24">Safari Technology Preview 24 已经支持该方法</a>)。</p>
 
-<p>想要测试你的浏览器是否支持该API，运行<code><a href="https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html">perf-api-support</a></code>程序。</p>
+<p>想要测试你的浏览器是否支持该 API，运行<code><a href="https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html">perf-api-support</a></code>程序。</p>
 
 <h2 id="相关内容">相关内容</h2>
 

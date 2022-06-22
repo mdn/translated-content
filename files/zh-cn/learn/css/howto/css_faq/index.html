@@ -4,20 +4,20 @@ slug: Learn/CSS/Howto/CSS_FAQ
 translation_of: Learn/CSS/Howto/CSS_FAQ
 original_slug: Web/CSS/Common_CSS_Questions
 ---
-<h2 id="为什么我有效的CSS没有正确的渲染？">为什么我有效的CSS没有正确的渲染？</h2>
+<h2 id="为什么我有效的CSS没有正确的渲染？">为什么我有效的 CSS 没有正确的渲染？</h2>
 
-<p>浏览器使用DOCTYPE声明来选择是否使用更符合Web标准或兼容旧浏览器的bug的模式。在你的HTML的开始使用一个正确的和现代的DOCTYPE声明将改善浏览器标准执行。</p>
+<p>浏览器使用 DOCTYPE 声明来选择是否使用更符合 Web 标准或兼容旧浏览器的 bug 的模式。在你的 HTML 的开始使用一个正确的和现代的 DOCTYPE 声明将改善浏览器标准执行。</p>
 
 <p>现代浏览器主要有两种渲染模式：</p>
 
 <ul>
- <li><em>怪异模式：</em> 又称向后兼容模式,，允许将传统网页渲染为作者意图。 旧浏览器使用的非标准渲染规则。 不完整的、不正确的、缺少DOCTYPE声明或已知的DOCTYPE声明中普遍使用2001年以前的文件将在怪异模式中呈现。</li>
- <li><em>标准模式：</em>浏览器试图严格遵守W3C标准。新HTML网页有望被设计为符合标准的浏览器，这样做的结果就是，用现代DOCTYPE声明的页面将被用标准模式呈现。</li>
+ <li><em>怪异模式：</em> 又称向后兼容模式，，允许将传统网页渲染为作者意图。 旧浏览器使用的非标准渲染规则。 不完整的、不正确的、缺少 DOCTYPE 声明或已知的 DOCTYPE 声明中普遍使用 2001 年以前的文件将在怪异模式中呈现。</li>
+ <li><em>标准模式：</em>浏览器试图严格遵守 W3C 标准。新 HTML 网页有望被设计为符合标准的浏览器，这样做的结果就是，用现代 DOCTYPE 声明的页面将被用标准模式呈现。</li>
 </ul>
 
-<p>基于Gecko的浏览器， 有三分之一 <em><a href="https://developer.mozilla.org/en-US/docs/Gecko's_%22Almost_Standards%22_Mode">Almost Standards Mode</a></em>， 只有一些小怪癖。</p>
+<p>基于 Gecko 的浏览器， 有三分之一 <em><a href="https://developer.mozilla.org/en-US/docs/Gecko's_%22Almost_Standards%22_Mode">Almost Standards Mode</a></em>，只有一些小怪癖。</p>
 
-<p>这是最常用的触发标准模式或准标准模式的DOCTYPE声明列表：</p>
+<p>这是最常用的触发标准模式或准标准模式的 DOCTYPE 声明列表：</p>
 
 <pre>&lt;!DOCTYPE html&gt; /* 这一行是 HTML5 的 doctype 声明。，使用该声明会使现代浏览器使用
                    HTML5 解析器处理页面，这是推荐的 doctype 声明。*/
@@ -35,36 +35,36 @@ original_slug: Web/CSS/Common_CSS_Questions
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
 </pre>
 
-<h2 id="My_CSS_is_valid.2C_but_not_correctly_rendered" name="My_CSS_is_valid.2C_but_not_correctly_rendered">为什么我有效的css完全没有被渲染？ </h2>
+<h2 id="My_CSS_is_valid.2C_but_not_correctly_rendered" name="My_CSS_is_valid.2C_but_not_correctly_rendered">为什么我有效的 css 完全没有被渲染？ </h2>
 
-<p>为了使浏览器渲染样式文件，CSS样式表必须用text/css的MIME。如果Web服务器不服务于这种类型，则CSS也不会被应用。</p>
+<p>为了使浏览器渲染样式文件，CSS 样式表必须用 text/css 的 MIME。如果 Web 服务器不服务于这种类型，则 CSS 也不会被应用。</p>
 
-<h2 id="Difference_between_id_and_class" name="Difference_between_id_and_class">id和class有什么不同？</h2>
+<h2 id="Difference_between_id_and_class" name="Difference_between_id_and_class">id 和 class 有什么不同？</h2>
 
 <p>HTML元素可以拥有一个id/或class属性。 id属性为元素指定应用一个有效名称，只能有一个具有该名称的元素。class属性指定一个类名的元素，而这个名称可以被页面内的许多元素被使用。 CSS允许你可以对特定的id和/或类名的元素应用样式。<br>
  <br>
- 当你想给一个特定元素或块应用样式规则时就使用ID选择符。此样式将只用于与该特定id匹配的元素。</p>
+ 当你想给一个特定元素或块应用样式规则时就使用 ID 选择符。此样式将只用于与该特定 id 匹配的元素。</p>
 
 <p><br>
- 当你想要将样式规则应用于多个块和元素时，你应该使用class选择符。</p>
+ 当你想要将样式规则应用于多个块和元素时，你应该使用 class 选择符。</p>
 
-<p>较少样式的样式表通常性能更高。因此建议尽可能多地使用类， 保留id作为特定用途 (比如链接label标签和form元素或者为语义上唯一的元素应用样式)。</p>
+<p>较少样式的样式表通常性能更高。因此建议尽可能多地使用类， 保留 id 作为特定用途 (比如链接 label 标签和 form 元素或者为语义上唯一的元素应用样式)。</p>
 
 <p>查看 <a href="/en/CSS/Getting_Started/Selectors" title="en/CSS/Getting_Started/Selectors">CSS selectors</a></p>
 
 <h2 id="Restoring_the_default_property_value" name="Restoring_the_default_property_value">我如何还原属性的默认值？</h2>
 
-<p>最初CSS没有提供“defaule”关键字和还原默认属性的值，唯一途径是显式地重新声明该属性。</p>
+<p>最初 CSS 没有提供“defaule”关键字和还原默认属性的值，唯一途径是显式地重新声明该属性。</p>
 
-<p>与CSS2相比，已经发生了改变。 关键字 <a href="/es/CSS/initial" title="initial">initial</a> 现在是一个有效的CSS属性。它将给定的CSS属性值重置为默认值。</p>
+<p>与 CSS2 相比，已经发生了改变。 关键字 <a href="/es/CSS/initial" title="initial">initial</a> 现在是一个有效的 CSS 属性。它将给定的 CSS 属性值重置为默认值。</p>
 
-<h2 id="Derived_styles" name="Derived_styles">我如何才可以从一个样式中衍生出另一种样式?</h2>
+<h2 id="Derived_styles" name="Derived_styles">我如何才可以从一个样式中衍生出另一种样式？</h2>
 
 <p>CSS 不允许这样做。(See <a class="external" href="http://archivist.incutio.com/viewlist/css-discuss/2685">Eric Meyer's note about the Working Group's stance)</a>. 但是，将多个类分配给单个元素，可以提供相同的效果。</p>
 
 <h2 id="Assigning_multiple_classes" name="Assigning_multiple_classes">我该如何给一个元素分配多个类？</h2>
 
-<p>HTML元素可以通过列出的类属性，用空格分开它们。</p>
+<p>HTML 元素可以通过列出的类属性，用空格分开它们。</p>
 
 <pre>&lt;style type="text/css"&gt;
 .news { background: black; color: white; }
@@ -76,13 +76,13 @@ original_slug: Web/CSS/Common_CSS_Questions
 &lt;/div&gt;
 </pre>
 
-<p>如果相同的属性中声明的规则，解决冲突首先通过特异性，然后根据CSS声明的顺序。在class属性类的顺序是不相关的。</p>
+<p>如果相同的属性中声明的规则，解决冲突首先通过特异性，然后根据 CSS 声明的顺序。在 class 属性类的顺序是不相关的。</p>
 
 <h2 id="Style_rules_that_don.27t_work" name="Style_rules_that_don.27t_work">为什么我的样式规则不能正确地工作？</h2>
 
 <p>在语法上正确的样式规则可能在某些情况下不适用。你可以使用 <a href="/en/DOM_Inspector" title="en/DOM_Inspector">DOM Inspector</a>'s <em>CSS Style Rules</em> 调试这类问题。 下面列出了最常见的忽略样式规则的实例：</p>
 
-<h3 id="HTML_elements_hierarchy" name="HTML_elements_hierarchy">HTML元素层次结构</h3>
+<h3 id="HTML_elements_hierarchy" name="HTML_elements_hierarchy">HTML 元素层次结构</h3>
 
 <p>The way CSS styles are applied to HTML elements depends also on the elements hierarchy. It is important to remember that a rule applied to a descendent overrides the style of the parent, in spite of any specificity or priority of CSS rules.</p>
 
@@ -169,7 +169,7 @@ original_slug: Web/CSS/Common_CSS_Questions
 
 <h2 id="What_do_the_-moz-.2A_properties_do.3F" name="What_do_the_-moz-.2A_properties_do.3F"> -moz-*， -ms-*， -webkit-*， -o-* 以及 -khtml-* 属性有什么用？</h2>
 
-<h2 id="What_do_the_-moz-.2A_properties_do.3F" name="What_do_the_-moz-.2A_properties_do.3F"><span style="font-size: 14px; font-weight: normal; line-height: 1.5;">These  properties, called </span><em>prefixed properties</em><span style="font-size: 14px; font-weight: normal; line-height: 1.5;">, are extension to the CSS standard. They are used to use experimental and non-standard features without polluting the regular namespace, preventing future incompatibilities to arise when the standard is extended.</span></h2>
+<h2 id="What_do_the_-moz-.2A_properties_do.3F" name="What_do_the_-moz-.2A_properties_do.3F">These  properties, called <em>prefixed properties</em>, are extension to the CSS standard. They are used to use experimental and non-standard features without polluting the regular namespace, preventing future incompatibilities to arise when the standard is extended.</h2>
 
 <p>The use of such properties on production websites is not recommended. If nevertheless needed, you are hinted to make a plan for the website evolution: these prefixed properties can be modified or even suppressed when the standard evolve.</p>
 
@@ -177,8 +177,8 @@ original_slug: Web/CSS/Common_CSS_Questions
 
 <h2 id="z-index_属性与定位有什么关系？">z-index 属性与定位有什么关系？</h2>
 
-<p>z-index属性指定了元素的栈序。</p>
+<p>z-index 属性指定了元素的栈序。</p>
 
 <p>有较高z-index/栈序的元素总是在有着较低z-index/栈序的元素之前。</p>
 
-<p>z-index只会在有着指定position (<code>position:absolute</code>, <code>position:relative</code>, or <code>position:fixed</code>)的元素上工作。</p>
+<p>z-index 只会在有着指定 position (<code>position:absolute</code>, <code>position:relative</code>, or <code>position:fixed</code>) 的元素上工作。</p>

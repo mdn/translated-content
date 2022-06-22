@@ -12,10 +12,12 @@ original_slug: Web/JavaScript/Reference/Erreurs/Invalid_array_length
 
 ## Message
 
-    RangeError: Array length must be a finite positive integer (Edge)
-    RangeError: invalid array length (Firefox)
-    RangeError: Invalid array length (Chrome)
-    RangeError: Invalid array buffer length (Chrome)
+```
+RangeError: Array length must be a finite positive integer (Edge)
+RangeError: invalid array length (Firefox)
+RangeError: Invalid array length (Chrome)
+RangeError: Invalid array buffer length (Chrome)
+```
 
 ## Type d'erreur
 

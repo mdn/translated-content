@@ -33,11 +33,11 @@ translation_of: Web/API/MediaStream/getAudioTracks
 <p><strong>注意</strong>：数组中返回的顺序并不是由规范定义的，事实上，每次调用 <code>getAudioTracks()</code> 的结果都可能有所不同。</p>
 </div>
 
-<p>更早版本的本API中，包含一个用做列表中每个音频类型的 <code>AudioStreamTrack</code> 接口；现在已被合并至 {{domxref("MediaStreamTrack")}} 主接口中。</p>
+<p>更早版本的本 API 中，包含一个用做列表中每个音频类型的 <code>AudioStreamTrack</code> 接口；现在已被合并至 {{domxref("MediaStreamTrack")}} 主接口中。</p>
 
 <h2 id="示例">示例</h2>
 
-<p><font><font>本示例使用 </font></font>{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} <font><font>获取视频流中的网络摄像机的音频和视频，并将媒体流绑定到 </font></font>{{HTMLElement("video")}} <font><font>元素，然后设置一个计时器，计时器到期时会停止在该媒体流中找到的第一个音轨。</font></font></p>
+<p>本示例使用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 获取视频流中的网络摄像机的音频和视频，并将媒体流绑定到 {{HTMLElement("video")}} 元素，然后设置一个计时器，计时器到期时会停止在该媒体流中找到的第一个音轨。</p>
 
 <pre class="brush: js">navigator.mediaDevices.getUserMedia({audio: true, video: true})
 .then(mediaStream =&gt; {

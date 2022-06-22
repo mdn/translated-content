@@ -12,7 +12,9 @@ La fonction `function-available` détermine si une fonction donnée est disponib
 
 ### Syntaxe
 
-    function-available( nom )
+```
+function-available( nom )
+```
 
 ### Arguments
 

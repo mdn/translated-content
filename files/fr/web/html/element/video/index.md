@@ -223,13 +223,17 @@ Si le type MIME de la vidéo n'est pas indiqué correctement sur le serveur, la 
 
 Si vous utilisez Apache pour servir des vidéos Ogg Theora, vous pouvez ajouter les extensions utilisées pour les fichiers en face du type MIME. Pour cela, il faut éditer le fichier de configuration `mime.types` (situé dans le dossier `/etc/apache` ) ou utiliser la directive de configuration `AddType` dans le fichier `httpd.conf`.
 
-    AddType video/ogg .ogm
-    AddType video/ogg .ogv
-    AddType video/ogg .ogg
+```
+AddType video/ogg .ogm
+AddType video/ogg .ogv
+AddType video/ogg .ogg
+```
 
 Pour les vidéos WebM, le problème peut également être réglé en modifiant le fichier `mime.types` situé dans `/etc/apache` ou en ajoutant une directive `AddType` au fichier `httpd.conf`.
 
-    AddType video/webm .webm
+```
+AddType video/webm .webm
+```
 
 ## Accessibilité
 
@@ -239,21 +243,23 @@ Si on utilise un service de sous-titrage automatique est utilisé, il est néces
 
 En plus des dialogues, les sous-titres et retranscription doivent également inclure les informations permettant d'identifier la musique et les effets sonores qui communiquent des informations importantes (l'émotion et le ton entre autres) :
 
-    14
-    00:03:14 --> 00:03:18
-    [Musique rock théâtrale]
+```
+14
+00:03:14 --> 00:03:18
+[Musique rock théâtrale]
 
-    15
-    00:03:19 --> 00:03:21
-    [Murmure] Qu'est-ce que c'est au loin ?
+15
+00:03:19 --> 00:03:21
+[Murmure] Qu'est-ce que c'est au loin ?
 
-    16
-    00:03:22 --> 00:03:24
-    C'est… C'est un…
+16
+00:03:22 --> 00:03:24
+C'est… C'est un…
 
-    16 00:03:25 --> 00:03:32
-    [Bruit de choc]
-    [La vaisselle se brise]
+16 00:03:25 --> 00:03:32
+[Bruit de choc]
+[La vaisselle se brise]
+```
 
 Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuvent être positionnés grâce à [l'indication `align`](/fr/docs/Web/API/WebVTT_API#Cue_settings).
 

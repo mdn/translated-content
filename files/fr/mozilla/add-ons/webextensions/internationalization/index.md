@@ -120,15 +120,15 @@ Ici, nous récupérons des chaînes de message en fonction des paramètres régi
 
 Pour appeler une chaîne de message comme celle-ci, vous devez le spécifier comme ceci :
 
-1.  Deux underscores, suivi de
-2.  La chaîne "MSG", suivi de
-3.  Un trait de soulignement, suivi de
-4.  Le nom du message que vous souhaitez appeler tel que défini dans `messages.json`, suivi de
-5.  Deux underscores
+1. Deux underscores, suivi de
+2. La chaîne "MSG", suivi de
+3. Un trait de soulignement, suivi de
+4. Le nom du message que vous souhaitez appeler tel que défini dans `messages.json`, suivi de
+5. Deux underscores
 
-<!---->
-
+    ```
     __MSG_ + messageName + __
+    ```
 
 ### Spécification d'un paramètre régional par défaut
 
@@ -160,14 +160,14 @@ Donc, vous avez configuré vos chaînes de message et votre manifest. Maintenant
 - Les méthodes {{WebExtAPIRef("i18n.getAcceptLanguages()")}} et {{WebExtAPIRef("i18n.getUILanguage()")}} peuvent être utilisées si vous avez besoin de personnaliser l'interface utilisateur en fonction des paramètres régionaux — peut-être que vous souhaitez pour afficher les préférences spécifiques aux langues préférées des utilisateurs plus haut dans une liste de préférences, ou afficher des informations culturelles pertinentes uniquement pour une certaine langue, ou formater les dates affichées de manière appropriée selon les paramètres régionaux du navigateur.
 - La méthode {{WebExtAPIRef("i18n.detectLanguage()")}} peut être utilisée pour détecter la langue du contenu soumis par l'utilisateur et la formater de manière appropriée.
 
-Dans notre exemple [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n), le[ script d'arrière plan](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js) contient les lignes suivantes :
+Dans notre exemple [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n), le [script d'arrière plan](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js) contient les lignes suivantes :
 
 ```js
 var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);
 ```
 
-La première récupère juste le `message` du champ `notificationTitle `du fichier `messages.json` le plus approprié pour les paramètres régionaux actuels du navigateur. Le second est similaire, mais il est passé une URL en tant que deuxième paramètre. Ce qui donne? C'est ainsi que vous spécifiez le contenu pour remplacer l'espace réservé `$URL$`  que nous voyons dans le champ `message` du champ  `notificationContent` :
+La première récupère juste le `message` du champ `notificationTitle` du fichier `messages.json` le plus approprié pour les paramètres régionaux actuels du navigateur. Le second est similaire, mais il est passé une URL en tant que deuxième paramètre. Ce qui donne? C'est ainsi que vous spécifiez le contenu pour remplacer l'espace réservé `$URL$`  que nous voyons dans le champ `message` du champ  `notificationContent` :
 
 ```json
 "notificationContent": {
@@ -186,11 +186,15 @@ Le membre `"placeholders"` définit tous les espaces réservés et d'où ils son
 
 Parcourons un exemple: la chaîne originale du message  `notificationContent` dans le fichier  `en/messages.json` est
 
-    You clicked $URL$.
+```
+You clicked $URL$.
+```
 
 Disons que le lien a été cliqué sur `https://developer.mozilla.org`. Après l'appel  {{WebExtAPIRef("i18n.getMessage()")}} , le contenu du deuxième paramètre est mis à disposition dans messages.json sous la forme `$1`, qui remplace l'espace réservé `$URL$` tel qu'il est défini dans l'espace réservé  `"url"`. Donc, la chaîne de message final est
 
-    You clicked https://developer.mozilla.org.
+```
+You clicked https://developer.mozilla.org.
+```
 
 ### Utilisation de l'espace réservé direct
 
@@ -229,10 +233,10 @@ En outre, vous pouvez utiliser ces substitutions pour spécifier les parties de 
 
 Les paramètres régionaux peuvent être spécifiés en utilisant uniquement un code de langue, comme `fr` ou `en`, ou ils peuvent être qualifiés avec un code de région, comme `en_US` ou `en_GB`, qui décrit une variante régionale du même langage de base. Lorsque vous demandez au système i18n une chaîne, il sélectionne une chaîne en utilisant l'algorithme suivant:
 
-1.  S'il existe un fichier `messages.json` pour l'environnement local actuel exact et qu'il contient la chaîne, renvoyez-le.
-2.  Sinon, si l'environnement local actuel est qualifié avec une région (par exemple `en_US`) et qu'il existe un fichier `messages.json` pour la version sans région de cet environnement local (par exemple `en`), et que ce fichier contient la chaîne, renvoyez-le.
-3.  Sinon, s'il existe un fichier `messages.json` pour l'argument `default_locale` défini dans `manifest.json`, et qu'il contient la chaîne, renvoyez-le.
-4.  Sinon, renvoyez une chaîne vide.
+1. S'il existe un fichier `messages.json` pour l'environnement local actuel exact et qu'il contient la chaîne, renvoyez-le.
+2. Sinon, si l'environnement local actuel est qualifié avec une région (par exemple `en_US`) et qu'il existe un fichier `messages.json` pour la version sans région de cet environnement local (par exemple `en`), et que ce fichier contient la chaîne, renvoyez-le.
+3. Sinon, s'il existe un fichier `messages.json` pour l'argument `default_locale` défini dans `manifest.json`, et qu'il contient la chaîne, renvoyez-le.
+4. Sinon, renvoyez une chaîne vide.
 
 Prenons l'exemple suivant :
 
@@ -267,11 +271,15 @@ Supposons que `default_locale` soit défini sur `fr`, et que les paramètres ré
 
 Le module i18n nous fournit des messages prédéfinis, que nous pouvons appeler de la manière que nous l'avons vu précédemment dans [Récupération des chaînes localisées dans le manifest](#récupération_des_chaînes_localisées_dans_le_manifest). Par exemple :
 
-    __MSG_extensionName__
+```
+__MSG_extensionName__
+```
 
 Les messages prédéfinis utilisent exactement la même syntaxe, sauf avec `@@` avant le nom du message, par exemple
 
-    __MSG_@@ui_locale__
+```
+__MSG_@@ui_locale__
+```
 
 Le tableau suivant montre les différents messages prédéfinis disponibles :
 
@@ -397,10 +405,10 @@ Depuis Firefox 45, vous pouvez installer temporairement des extensions à partir
 
 Ensuite, changez les paramètres régionaux de Firefox en un supporté dans l'extension que vous voulez tester.
 
-1.  Ouvrez "about:config" dans Firefox, et recherchez la préférence  `intl.locale.requested`  (gardez à l'esprit qu'avant Firefox 59, cette préférence s'appellait `general.useragent.locale`).
-2.  Double-cliquez sur la préférence (ou appuyez sur Retour/Entrée) pour le sélectionner, entrez le code de langue pour les paramètres régionaux que vous voulez tester, puis cliquez sur "OK" (ou appuyez sur Retour/Entrée). Par exemple, dans notre exemple d'extension, "en" (anglais), "de" (allemand), "nl" (néérlandais), et "ja" (Japonais) sont pris en charge.
-3.  Recherchez `intl.locale.matchOS` et double-cliquez sur la préférence pour qu'elle soit définie sur `false`.
-4.  Redémarrez votre navigateur pour terminer la modification.
+1. Ouvrez "about:config" dans Firefox, et recherchez la préférence  `intl.locale.requested` (gardez à l'esprit qu'avant Firefox 59, cette préférence s'appellait `general.useragent.locale`).
+2. Double-cliquez sur la préférence (ou appuyez sur Retour/Entrée) pour le sélectionner, entrez le code de langue pour les paramètres régionaux que vous voulez tester, puis cliquez sur "OK" (ou appuyez sur Retour/Entrée). Par exemple, dans notre exemple d'extension, "en" (anglais), "de" (allemand), "nl" (néérlandais), et "ja" (Japonais) sont pris en charge.
+3. Recherchez `intl.locale.matchOS` et double-cliquez sur la préférence pour qu'elle soit définie sur `false`.
+4. Redémarrez votre navigateur pour terminer la modification.
 
 > **Note :** Cela fonctionne pour modifier les paramètres régionaux du navigateur, même si vous n'avez pas installé le [pack de language](/fr/firefox/language-tools/) pour cette langue. Vous obtiendrez simplement l'interface du navigateur dans votre langue par défaut si c'est le cas.
 

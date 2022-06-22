@@ -321,12 +321,6 @@
       "alattalatta"
     ]
   },
-  "Glossary/DHTML": {
-    "modified": "2019-03-23T23:41:48.331Z",
-    "contributors": [
-      "Sebuls"
-    ]
-  },
   "Glossary/DOM": {
     "modified": "2019-03-18T21:26:45.962Z",
     "contributors": [
@@ -719,13 +713,6 @@
     "modified": "2019-11-17T11:56:15.038Z",
     "contributors": [
       "enfroze"
-    ]
-  },
-  "Glossary/Plugin": {
-    "modified": "2019-01-16T15:11:14.478Z",
-    "contributors": [
-      "teoli",
-      "Anonymous"
     ]
   },
   "Glossary/Polyfill": {
@@ -2656,32 +2643,6 @@
       "Netaras"
     ]
   },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:51:24.922Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "zziuni",
-      "frankradio",
-      "galcyurio",
-      "Vi01et",
-      "jswisher"
-    ]
-  },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-11-30T12:49:14.835Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09"
-    ]
-  },
-  "MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2020-09-30T16:51:25.656Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Silvermist"
-    ]
-  },
   "MDN/Yari": {
     "modified": "2019-09-06T03:29:26.311Z",
     "contributors": [
@@ -2995,121 +2956,6 @@
       "jongho"
     ]
   },
-  "Mozilla/Firefox/Releases": {
-    "modified": "2020-11-26T10:13:11.306Z",
-    "contributors": [
-      "dink95",
-      "alattalatta",
-      "ziyunfei"
-    ]
-  },
-  "Mozilla/Firefox/Releases/1.5": {
-    "modified": "2019-03-23T23:42:08.585Z",
-    "contributors": [
-      "teoli",
-      "Sebuls",
-      "Netaras"
-    ]
-  },
-  "Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5": {
-    "modified": "2019-03-23T23:42:04.353Z",
-    "contributors": [
-      "teoli",
-      "Netaras"
-    ]
-  },
-  "Mozilla/Firefox/Releases/2": {
-    "modified": "2019-01-16T16:12:14.974Z",
-    "contributors": [
-      "CN",
-      "Netaras",
-      "Yh",
-      "C0d3h4ck",
-      "Ranio710",
-      "Channy"
-    ]
-  },
-  "Mozilla/Firefox/Releases/2/Updating_extensions": {
-    "modified": "2019-03-23T23:47:28.581Z",
-    "contributors": [
-      "Channy"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3": {
-    "modified": "2019-03-23T23:19:50.607Z",
-    "contributors": [
-      "nacyot",
-      "ethertank"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3.5": {
-    "modified": "2019-03-24T00:00:11.117Z",
-    "contributors": [
-      "teoli",
-      "Gilchris"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3.6": {
-    "modified": "2019-12-13T20:33:13.788Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "teoli",
-      "kladess"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3/DOM_improvements": {
-    "modified": "2019-03-23T23:52:57.206Z",
-    "contributors": [
-      "teoli",
-      "Suguni"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3/Full_page_zoom": {
-    "modified": "2019-03-23T23:51:11.591Z",
-    "contributors": [
-      "teoli",
-      "Wladimir_Palant",
-      "Jeongkyu"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3/Notable_bugs_fixed": {
-    "modified": "2019-03-23T23:51:11.073Z",
-    "contributors": [
-      "teoli",
-      "Jeongkyu"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3/SVG_improvements": {
-    "modified": "2019-03-23T23:51:12.606Z",
-    "contributors": [
-      "teoli",
-      "Suguni"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3/Updating_extensions": {
-    "modified": "2019-12-13T20:35:48.646Z",
-    "contributors": [
-      "wbamberg",
-      "Sheppy",
-      "Suguni"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3/Updating_web_applications": {
-    "modified": "2019-03-23T23:50:12.740Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "Sheppy",
-      "Channy"
-    ]
-  },
-  "Mozilla/Firefox/Releases/66": {
-    "modified": "2019-04-07T22:34:47.827Z",
-    "contributors": [
-      "niceman114"
-    ]
-  },
   "Web": {
     "modified": "2020-02-16T02:49:58.384Z",
     "contributors": [
@@ -3377,12 +3223,6 @@
     "modified": "2020-10-15T22:19:18.892Z",
     "contributors": [
       "alattalatta"
-    ]
-  },
-  "Web/API/CSSOMString": {
-    "modified": "2019-03-18T21:23:46.366Z",
-    "contributors": [
-      "cs09g"
     ]
   },
   "Web/API/CSSStyleSheet": {
@@ -3781,13 +3621,6 @@
       "composite"
     ]
   },
-  "Web/API/DOMString": {
-    "modified": "2020-08-23T06:55:37.415Z",
-    "contributors": [
-      "alattalatta",
-      "cs09g"
-    ]
-  },
   "Web/API/DOMTokenList": {
     "modified": "2020-10-15T21:59:28.763Z",
     "contributors": [
@@ -3853,15 +3686,6 @@
     "contributors": [
       "wbamberg",
       "hoony"
-    ]
-  },
-  "Web/API/Document/alinkColor": {
-    "modified": "2019-03-23T23:47:30.441Z",
-    "contributors": [
-      "fscholz",
-      "AshfaqHossain",
-      "teoli",
-      "pusanbear"
     ]
   },
   "Web/API/Document/all": {
@@ -4674,12 +4498,6 @@
       "alattalatta"
     ]
   },
-  "Web/API/File/Using_files_from_web_applications": {
-    "modified": "2019-04-12T12:59:03.189Z",
-    "contributors": [
-      "cs09g"
-    ]
-  },
   "Web/API/File/name": {
     "modified": "2020-10-15T22:11:39.883Z",
     "contributors": [
@@ -4727,6 +4545,12 @@
     "contributors": [
       "fscholz",
       "junho85"
+    ]
+  },
+  "Web/API/File_API/Using_files_from_web_applications": {
+    "modified": "2019-04-12T12:59:03.189Z",
+    "contributors": [
+      "cs09g"
     ]
   },
   "Web/API/File_and_Directory_Entries_API": {
@@ -5557,16 +5381,6 @@
       "fscholz"
     ]
   },
-  "Web/API/Navigator/battery": {
-    "modified": "2019-03-23T23:26:40.127Z",
-    "contributors": [
-      "fscholz",
-      "khalid32",
-      "Cho.Eun",
-      "teoli",
-      "oohii"
-    ]
-  },
   "Web/API/Navigator/connection": {
     "modified": "2019-03-23T23:26:48.403Z",
     "contributors": [
@@ -5580,6 +5394,16 @@
     "modified": "2020-10-15T22:19:19.512Z",
     "contributors": [
       "alattalatta"
+    ]
+  },
+  "Web/API/Navigator/getBattery": {
+    "modified": "2019-03-23T23:26:40.127Z",
+    "contributors": [
+      "fscholz",
+      "khalid32",
+      "Cho.Eun",
+      "teoli",
+      "oohii"
     ]
   },
   "Web/API/Navigator/mediaDevices": {
@@ -6577,14 +6401,6 @@
       "LeeJunyeol"
     ]
   },
-  "Web/API/USVString": {
-    "modified": "2020-02-19T12:36:27.811Z",
-    "contributors": [
-      "alattalatta",
-      "cs09g",
-      "DeadIntegral"
-    ]
-  },
   "Web/API/VREyeParameters": {
     "modified": "2020-10-15T21:54:28.385Z",
     "contributors": [
@@ -7348,43 +7164,6 @@
     "modified": "2020-10-15T22:30:03.395Z",
     "contributors": [
       "DeadIntegral"
-    ]
-  },
-  "Web/API/XSLTProcessor": {
-    "modified": "2019-01-16T16:14:51.504Z",
-    "contributors": [
-      "Sebuls"
-    ]
-  },
-  "Web/API/XSLTProcessor/Basic_Example": {
-    "modified": "2019-01-16T16:14:48.906Z",
-    "contributors": [
-      "Sebuls"
-    ]
-  },
-  "Web/API/XSLTProcessor/Browser_Differences": {
-    "modified": "2019-01-16T16:15:11.615Z",
-    "contributors": [
-      "Sebuls"
-    ]
-  },
-  "Web/API/XSLTProcessor/Generating_HTML": {
-    "modified": "2019-01-16T16:14:51.789Z",
-    "contributors": [
-      "Sebuls"
-    ]
-  },
-  "Web/API/XSLTProcessor/Introduction": {
-    "modified": "2019-01-16T16:14:50.568Z",
-    "contributors": [
-      "Sebuls"
-    ]
-  },
-  "Web/API/XSLTProcessor/Resources": {
-    "modified": "2019-03-23T23:42:20.360Z",
-    "contributors": [
-      "teoli",
-      "Sebuls"
     ]
   },
   "Web/API/crypto_property": {
@@ -11005,7 +10784,7 @@
       "devcken"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Data_URIs": {
+  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
     "modified": "2019-03-23T22:27:00.710Z",
     "contributors": [
       "devcken"
@@ -17346,24 +17125,11 @@
       "chansbro"
     ]
   },
-  "conflicting/Web/API/RTCPeerConnection/icegatheringstatechange_event": {
-    "modified": "2020-10-15T22:21:36.115Z",
-    "contributors": [
-      "chansbro"
-    ]
-  },
   "conflicting/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL": {
     "modified": "2019-03-23T22:54:05.275Z",
     "contributors": [
       "fscholz",
       "hanmomhanda"
-    ]
-  },
-  "conflicting/Web/API/Window/popstate_event": {
-    "modified": "2019-03-23T22:33:09.328Z",
-    "contributors": [
-      "joeunha",
-      "joshua1988"
     ]
   },
   "conflicting/Web/CSS/@viewport": {
@@ -17598,15 +17364,6 @@
     "modified": "2020-10-15T22:15:02.439Z",
     "contributors": [
       "cs09g"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
-    "modified": "2019-09-19T03:24:36.691Z",
-    "contributors": [
-      "dbs6339",
-      "pusanbear",
-      "teoli",
-      "MoGi"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/SyntaxError": {

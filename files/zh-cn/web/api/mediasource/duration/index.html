@@ -5,7 +5,7 @@ translation_of: Web/API/MediaSource/duration
 ---
 <div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
 
-<p>{{domxref("MediaSource")}} 接口的属性 <code><strong>duration</strong></code> 用来获取或者设置当前媒体展示的时长.</p>
+<p>{{domxref("MediaSource")}} 接口的属性 <code><strong>duration</strong></code> 用来获取或者设置当前媒体展示的时长。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -15,11 +15,11 @@ var myDuration = mediaSource.duration;</pre>
 
 <h3 id="值">值</h3>
 
-<p>以秒为单位的 双精度浮点数.</p>
+<p>以秒为单位的 双精度浮点数。</p>
 
 <h3 id="错误">错误</h3>
 
-<p>设置新的值的时候可能会有下面的错误抛出.</p>
+<p>设置新的值的时候可能会有下面的错误抛出。</p>
 
 <table class="standard-table">
  <thead>
@@ -31,35 +31,35 @@ var myDuration = mediaSource.duration;</pre>
  <tbody>
   <tr>
    <td><code>InvalidAccessError</code></td>
-   <td>时长尝试设置一个负数, 或者 <code>NaN</code>.</td>
+   <td>时长尝试设置一个负数，或者 <code>NaN</code>.</td>
   </tr>
   <tr>
    <td><code>InvalidStateError</code></td>
-   <td>{{domxref("MediaSource.readyState")}} 状态不是 <code>open</code>, 或者 一个或多个 {{domxref("SourceBuffer")}} 对象在 {{domxref("MediaSource.sourceBuffers")}} 中被更新  (例如. 该 {{domxref("SourceBuffer.updating")}}属性 为 <code>true</code>.)</td>
+   <td>{{domxref("MediaSource.readyState")}} 状态不是 <code>open</code>, 或者 一个或多个 {{domxref("SourceBuffer")}} 对象在 {{domxref("MediaSource.sourceBuffers")}} 中被更新  (例如。该 {{domxref("SourceBuffer.updating")}}属性 为 <code>true</code>.)</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="例子">例子</h2>
 
-<p>下面的代码片段取自 Nick Desaulniers写的简单例子 (想进一步了解 <a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">查看完整例子</a>, 或者 <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">下载源代码</a> .)</p>
+<p>下面的代码片段取自 Nick Desaulniers 写的简单例子 (想进一步了解 <a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">查看完整例子</a>, 或者 <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">下载源代码</a> .)</p>
 
-<pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">function</span> sourceOpen <span class="punctuation token">(</span>_<span class="punctuation token">)</span> <span class="punctuation token">{</span>
- <span class="comment token"> //console.log(this.readyState); // open
-</span>  <span class="keyword token">var</span> mediaSource <span class="operator token">=</span> <span class="keyword token">this</span><span class="punctuation token">;</span>
-  <span class="keyword token">var</span> sourceBuffer <span class="operator token">=</span> mediaSource<span class="punctuation token">.</span><span class="function token">addSourceBuffer<span class="punctuation token">(</span></span>mimeCodec<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="function token">fetchAB<span class="punctuation token">(</span></span>assetURL<span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span>buf<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    sourceBuffer<span class="punctuation token">.</span><span class="function token">addEventListener<span class="punctuation token">(</span></span><span class="string token">'updateend'</span><span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span>_<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      mediaSource<span class="punctuation token">.</span><span class="function token">endOfStream<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;
-      mediaSource.duration = 120;</span>
-      video<span class="punctuation token">.</span><span class="function token">play<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-     <span class="comment token"> //console.log(mediaSource.readyState); // ended
-</span>    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    sourceBuffer<span class="punctuation token">.</span><span class="function token">appendBuffer<span class="punctuation token">(</span></span>buf<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;
+<pre class="brush: js  language-js"><code class="language-js">function sourceOpen (_) {
+  //console.log(this.readyState); // open
+  var mediaSource = this;
+  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  fetchAB(assetURL, function (buf) {
+    sourceBuffer.addEventListener('updateend', function (_) {
+      mediaSource.endOfStream();
+      mediaSource.duration = 120;
+      video.play();
+      //console.log(mediaSource.readyState); // ended
+    });
+    sourceBuffer.appendBuffer(buf);
+  });
+};
 
-...</span></code></pre>
+...</code></pre>
 
 <h2 id="规范">规范</h2>
 

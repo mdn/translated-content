@@ -12,8 +12,10 @@ original_slug: Web/JavaScript/Reference/Erreurs/Missing_curly_after_property_lis
 
 ## Message
 
-    SyntaxError: Expected '}' (Edge)
-    SyntaxError: missing } after property list (Firefox)
+```
+SyntaxError: Expected '}' (Edge)
+SyntaxError: missing } after property list (Firefox)
+```
 
 ## Type d'erreur
 

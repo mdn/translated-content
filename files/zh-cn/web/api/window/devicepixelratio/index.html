@@ -5,9 +5,9 @@ translation_of: Web/API/Window/devicePixelRatio
 ---
 <p>{{APIRef}}</p>
 
-<p>{{domxref("Window")}} 接口的<code><strong>devicePixelRatio</strong></code>返回当前显示设备的<em>物理像素</em>分辨率与<em>CSS像素</em>分辨率之比。 此值也可以解释为像素大小的比率：一个CSS像素的大小与一个物理像素的大小。 简单来说，它告诉浏览器应使用多少屏幕实际像素来绘制单个CSS像素。</p>
+<p>{{domxref("Window")}} 接口的<code><strong>devicePixelRatio</strong></code>返回当前显示设备的<em>物理像素</em>分辨率与<em>CSS 像素</em>分辨率之比。 此值也可以解释为像素大小的比率：一个 CSS 像素的大小与一个物理像素的大小。 简单来说，它告诉浏览器应使用多少屏幕实际像素来绘制单个 CSS 像素。</p>
 
-<p>当处理标准显示器与HiDPI或Retina显示器之间的差异时，这很有用，后者使用更多的屏幕像素绘制相同的对象，从而获得更清晰的图像。</p>
+<p>当处理标准显示器与 HiDPI 或 Retina 显示器之间的差异时，这很有用，后者使用更多的屏幕像素绘制相同的对象，从而获得更清晰的图像。</p>
 
 <p>您可以使用{{domxref("Window.matchMedia", "window.matchMedia()")}} 检查<code>devicePixelRatio</code>的值是否发生更改（例如，如果用户将窗口拖动到带有 不同的像素密度）。 请参阅<a href="#监视屏幕分辨率或缩放级别的更改">下面的例子</a>。</p>
 
@@ -16,9 +16,9 @@ translation_of: Web/API/Window/devicePixelRatio
 <pre class="syntaxbox"><em><var>value</var></em> = window.devicePixelRatio;
 </pre>
 
-<h3 id="值Value">值Value</h3>
+<h3 id="值Value">值 Value</h3>
 
-<p>一个双精度浮点值，指示显示器的物理像素分辨率与CSS像素分辨率之比。 值1表示经典96 DPI（在某些平台上为76 DPI）显示，而对于HiDPI / Retina显示屏则期望值为2。 在异常低分辨率的显示器中，或更常见的是，当屏幕的像素深度比简单地将96或76 DPI的标准分辨率提高一倍时，可能还会返回其他值。</p>
+<p>一个双精度浮点值，指示显示器的物理像素分辨率与 CSS 像素分辨率之比。 值 1 表示经典 96 DPI（在某些平台上为 76 DPI）显示，而对于 HiDPI / Retina 显示屏则期望值为 2。 在异常低分辨率的显示器中，或更常见的是，当屏幕的像素深度比简单地将 96 或 76 DPI 的标准分辨率提高一倍时，可能还会返回其他值。</p>
 
 <h2 id="例子">例子</h2>
 
@@ -69,7 +69,7 @@ ctx.fillText(textString, x, y);</pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<p>JavaScript代码创建媒体查询，以监控设备分辨率并在每次更改时检查<code>devicePixelRatio</code>的值。</p>
+<p>JavaScript 代码创建媒体查询，以监控设备分辨率并在每次更改时检查<code>devicePixelRatio</code>的值。</p>
 
 <pre>let pixelRatioBox = document.querySelector(".pixel-ratio");
 let mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
@@ -85,7 +85,7 @@ updatePixelRatio();
 matchMedia(mqString).addListener(updatePixelRatio);
 </pre>
 
-<p>字符串<code>mqString</code>设置为媒体查询本身。 媒体查询以<code>(resolution: 1dppx)</code>（对于标准显示）或<code>(resolution: 2dppx)</code>（对于Retina / HiDPI显示）开始，检查当前显示分辨率是否与每个像素<code>px</code>的实际设备像素点匹配。</p>
+<p>字符串<code>mqString</code>设置为媒体查询本身。 媒体查询以<code>(resolution: 1dppx)</code>（对于标准显示）或<code>(resolution: 2dppx)</code>（对于 Retina / HiDPI 显示）开始，检查当前显示分辨率是否与每个像素<code>px</code>的实际设备像素点匹配。</p>
 
 <p><code>updatePixelRatio()</code>函数获取<code>devicePixelRatio</code>的当前值，然后将<code>pixelRatioBox</code>的 {{domxref("HTMLElement.innerText", "innerText")}}设置为一个字符串，该字符串同时显示百分比和原始十进制值比率，最多两位小数。</p>
 
@@ -93,7 +93,7 @@ matchMedia(mqString).addListener(updatePixelRatio);
 
 <h4 id="HTML_2">HTML</h4>
 
-<p>HTML将创建包含说明的框和将显示当前像素比率信息的<code>pixel-ratio</code> 框。</p>
+<p>HTML 将创建包含说明的框和将显示当前像素比率信息的<code>pixel-ratio</code> 框。</p>
 
 <pre>&lt;div class="container"&gt;
   &lt;div class="inner-container"&gt;

@@ -16,16 +16,16 @@ translation_of: Learn/Server-side/Express_Nodejs/development_environment
 
 <div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">你已经了解了 Express 的用途，接下来将在 Windows、Linux（Ubuntu）和 Mac OS X 下搭建 Node/Express 开发环境。本节将介绍主流操作系统下开发 Express 程序的必备知识。</p>
+<p>你已经了解了 Express 的用途，接下来将在 Windows、Linux（Ubuntu）和 Mac OS X 下搭建 Node/Express 开发环境。本节将介绍主流操作系统下开发 Express 程序的必备知识。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">预备知识:</th>
+   <th scope="row">预备知识：</th>
    <td>会打开终端 / 命令行。会为开发用操作系统安装软件包。</td>
   </tr>
   <tr>
-   <th scope="row">学习目标:</th>
+   <th scope="row">学习目标：</th>
    <td>在电脑上搭建 Express 开发环境。</td>
   </tr>
  </tbody>
@@ -41,13 +41,13 @@ translation_of: Learn/Server-side/Express_Nodejs/development_environment
 
 <p>Node 和 NPM 包管理器可以用二进制包、安装程序或系统包管理器一并安装（下文将介绍）。然后在开发每个 Express web 应用时，由 NPM 针对当前应用将 Express（以及模板引擎、数据库驱动程序、身份验证中间件、静态文件托管中间件等其它库）作为依赖项进行安装。</p>
 
-<p>NPM 也可以安装（全局的）<strong>Express 应用生成器</strong>，可用于创建遵循 <a href="/zh-CN/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">MVC模式</a> 的 Express 应用框架。它不是必备的，因为无需这个工具就可以创建 Express 应用（或相同架构布局或依赖的 Express 应用）。但我们还是会使用它，因为它更容易上手，还有助于应用结构的模块化管理。</p>
+<p>NPM 也可以安装（全局的）<strong>Express 应用生成器</strong>，可用于创建遵循 <a href="/zh-CN/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">MVC 模式</a> 的 Express 应用框架。它不是必备的，因为无需这个工具就可以创建 Express 应用（或相同架构布局或依赖的 Express 应用）。但我们还是会使用它，因为它更容易上手，还有助于应用结构的模块化管理。</p>
 
 <div class="note">
-<p><strong>注:</strong> 与某些其他Web框架不同，开发环境不包含单独的开发Web服务器。在Node / Express中，Web应用程序将创建并运行自己的Web服务器！</p>
+<p><strong>注：</strong> 与某些其他 Web 框架不同，开发环境不包含单独的开发 Web 服务器。在 Node / Express 中，Web 应用程序将创建并运行自己的 Web 服务器！</p>
 </div>
 
-<p>典型的开发环境中还需要一些外围工具，包括用于编写代码的 <a href="zh-CN/docs/Learn/Common_questions/实用文本编辑器">文本编辑器</a> 或 IDE ，用于代码控制管理的工具（比如代码版本控制工具 <a href="https://git-scm.com/">Git</a>）。这里假定你已经安装了这些工具（尤其是文本编辑器）。</p>
+<p>典型的开发环境中还需要一些外围工具，包括用于编写代码的 <a href="zh-CN/docs/Learn/Common_questions/实用文本编辑器">文本编辑器</a> 或 IDE，用于代码控制管理的工具（比如代码版本控制工具 <a href="https://git-scm.com/">Git</a>）。这里假定你已经安装了这些工具（尤其是文本编辑器）。</p>
 
 <h3 id="支持哪些操作系统？">支持哪些操作系统？</h3>
 
@@ -80,7 +80,7 @@ translation_of: Learn/Server-side/Express_Nodejs/development_environment
 <p>在 Windows 和 macOS 上安装 Node 和 NPM 非常简单明了，使用现成的安装包就行了：</p>
 
 <ol>
- <li>下载安装包:
+ <li>下载安装包：
   <ol>
    <li>访问 <a href="https://nodejs.org/zh-cn/">https://nodejs.org/zh-cn/</a></li>
    <li>左侧按钮上写着“推荐多数用户使用（LTS）”，点击下载。</li>
@@ -143,7 +143,7 @@ server.listen(port, hostname, () =&gt; {
 });
 </pre>
 
-  <p>代码导入了 <code>"http"</code> 模块，并用它（<code>createServer()</code>）创建了一个服务器来监听 3000 端口的 HTTP 请求。随后在控制台打印一条信息，提示测试服务器的正确 URL。<code>createServer()</code> 函数接受一个回调函数作为参数，并在接收 HTTP 请求后进行回调。直接返回了 HTTP 状态码 200 （"<code>OK</code>"），以及纯文本信息 "Hello World"。</p>
+  <p>代码导入了 <code>"http"</code> 模块，并用它（<code>createServer()</code>）创建了一个服务器来监听 3000 端口的 HTTP 请求。随后在控制台打印一条信息，提示测试服务器的正确 URL。<code>createServer()</code> 函数接受一个回调函数作为参数，并在接收 HTTP 请求后进行回调。直接返回了 HTTP 状态码 200（"<code>OK</code>"），以及纯文本信息 "Hello World"。</p>
 
   <div class="note">
   <p><strong>注：</strong>现在看不懂这些代码请不要担心，开始使用 Express 后候会进行更加详细的解释。</p>
@@ -165,7 +165,7 @@ server.listen(port, hostname, () =&gt; {
 <p><strong>注：</strong>以 Node 的角度来看，Express 只是一个用 NPM 安装、供人使用的包而已。</p>
 </div>
 
-<p>可以用 NPM 手动逐个安装所需包。但通常可用 <a href="https://docs.npmjs.com/files/package.json">package.json</a> 文件来管理依赖。把每个<font><font>依赖以一个</font></font> JavaScript “包”的形式（其中<font><font>包括名称、版本、描述，初始执行文件、生产依赖，开发依赖、支持的 </font></font><em><font><font>Node </font></font></em><font><font>版本，等等</font></font>）罗<font><font>列在这个文件中。package.json 文件包含 NPM 获取和运行应用程序所需的所有内容（在编写可重用的库时，可以用它把包上传到 NPM 仓库中供其他用户使用）。</font></font></p>
+<p>可以用 NPM 手动逐个安装所需包。但通常可用 <a href="https://docs.npmjs.com/files/package.json">package.json</a> 文件来管理依赖。把每个依赖以一个 JavaScript“包”的形式（其中包括名称、版本、描述，初始执行文件、生产依赖，开发依赖、支持的 <em>Node </em>版本，等等）罗列在这个文件中。package.json 文件包含 NPM 获取和运行应用程序所需的所有内容（在编写可重用的库时，可以用它把包上传到 NPM 仓库中供其他用户使用）。</p>
 
 <h3 id="添加依赖项">添加依赖项</h3>
 

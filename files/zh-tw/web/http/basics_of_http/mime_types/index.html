@@ -9,7 +9,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary"><strong>媒體類別(多用途網際網路郵件擴展</strong>或是<strong>MIME類別</strong>)是一種表示文件、檔案或各式位元組的標準。它被定義並規範在IETF的</span> {{RFC(6838)}}<strong>。</strong></p>
+<p><strong>媒體類別(多用途網際網路郵件擴展</strong>或是<strong>MIME類別</strong>)是一種表示文件、檔案或各式位元組的標準。它被定義並規範在IETF的 {{RFC(6838)}}<strong>。</strong></p>
 
 <p><a href="https://www.iana.org/">國際網路號碼分配局(IANA)</a> 負責所有官方的MIME類別，你可以從他們的 <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">Media Types</a> 頁面找到最新且完整的類別清單。</p>
 
@@ -66,7 +66,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 
 <h4 id="Multipart_types">Multipart types</h4>
 
-<p id="sect1"><strong>Multipart</strong> types indicate a category of document broken into pieces, often with different MIME types; they can also be used — especially in email scenarios — to represent multiple, separate files which are all part of the same transaction. They represent a <strong>composite document</strong>.</p>
+<p><strong>Multipart</strong> types indicate a category of document broken into pieces, often with different MIME types; they can also be used — especially in email scenarios — to represent multiple, separate files which are all part of the same transaction. They represent a <strong>composite document</strong>.</p>
 
 <p>With the exception of <code>multipart/form-data</code>, used in the {{HTTPMethod("POST")}} method of <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a>, and <code>multipart/byteranges</code>, used with {{HTTPStatus("206")}} <code>Partial Content</code> to send part of a document, HTTP doesn't handle multipart documents in a special way: the message is transmitted to the browser (which will likely show a "Save As" window if it doesn't know how to display the document).</p>
 
@@ -105,7 +105,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 <p><strong>Note:</strong> Use <code>application/xml</code> or <code>application/xhtml+xml</code> if you want XML’s strict parsing rules, <code><a href="/en-US/docs/Web/API/CDATASection">&lt;![CDATA[…]]&gt;</a></code> sections, or elements that aren't from HTML/SVG/MathML namespaces.</p>
 </div>
 
-<h3 id="textjavascript"><span id="JavaScript_types">text/javascript</span></h3>
+<h3 id="textjavascript">text/javascript</h3>
 
 <p>Per the HTML specification, JavaScript files should always be served using the MIME type <code>text/javascript</code>. No other values are considered valid, and using any of those may result in scripts that do not load or run.</p>
 

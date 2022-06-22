@@ -24,8 +24,10 @@ L’en-tête de requête **`Origin`** indique la provenance de la requête. Il n
 
 ## Syntaxe
 
-    Origin: ""
-    Origin: <scheme> "://" <hostname> [ ":" <port> ]
+```
+Origin: ""
+Origin: <scheme> "://" <hostname> [ ":" <port> ]
+```
 
 `Origin` peut être une chaîne vide&nbsp;: c’est utile, par exemple, si la source est une `data` URL.
 
@@ -40,7 +42,9 @@ L’en-tête de requête **`Origin`** indique la provenance de la requête. Il n
 
 ## Exemples
 
-    Origin: https://developer.mozilla.org
+```
+Origin: https://developer.mozilla.org
+```
 
 ## Spécifications
 

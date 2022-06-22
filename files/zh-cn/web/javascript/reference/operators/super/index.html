@@ -54,12 +54,12 @@ class Square extends Polygon {
   constructor(length) {
     this.height; // ReferenceError，super 需要先被调用！
 
-    // 这里，它调用父类的构造函数的,
-    // 作为Polygon 的 height, width
+    // 这里，它调用父类的构造函数的，
+    // 作为 Polygon 的 height, width
     super(length, length);
 
-    // 注意: 在派生的类中, 在你可以使用'this'之前, 必须先调用super()。
-    // 忽略这, 这将导致引用错误。
+    // 注意：在派生的类中，在你可以使用'this'之前，必须先调用 super()。
+    // 忽略这，这将导致引用错误。
     this.name = 'Square';
   }
 }
@@ -130,7 +130,7 @@ console.log(y.prop); // 1</pre>
 
 <h3 id="在对象字面量中使用super.prop">在对象字面量中使用<code>super.prop</code></h3>
 
-<p><code>Super</code>也可以在<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer / literal</a> 符号中使用。在下面的例子中，两个对象各定义了一个方法。在第二个对象中, 我们使用<code>super</code>调用了第一个对象中的方法。 当然，这需要我们先利用 {{jsxref("Object.setPrototypeOf()")}} 设置<code>obj2</code>的原型为<code>obj1</code>，然后才能够使用<code>super</code>调用 <code>obj1</code>上的<code>method1</code>。</p>
+<p><code>Super</code>也可以在<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer / literal</a> 符号中使用。在下面的例子中，两个对象各定义了一个方法。在第二个对象中，我们使用<code>super</code>调用了第一个对象中的方法。 当然，这需要我们先利用 {{jsxref("Object.setPrototypeOf()")}} 设置<code>obj2</code>的原型为<code>obj1</code>，然后才能够使用<code>super</code>调用 <code>obj1</code>上的<code>method1</code>。</p>
 
 <pre class="brush: js">var obj1 = {
   method1() {

@@ -8,7 +8,7 @@ tags:
   - 風險
 translation_of: Web/Security/Insecure_passwords
 ---
-<p class="summary">提供 HTTP 的登入表單非常危險，因為目前有很多已知的用戶密碼擷取手法。竊聽者可以透過側錄該網路或修改傳輸頁面進行大量的惡意攻擊，並直接竊取用戶憑證或密碼。<span class="seoSummary">本頁將詳細說明 Firefox 用以警示用戶與開發者有關不安全的密碼及密碼竊取風險的安全機制。</span></p>
+<p>提供 HTTP 的登入表單非常危險，因為目前有很多已知的用戶密碼擷取手法。竊聽者可以透過側錄該網路或修改傳輸頁面進行大量的惡意攻擊，並直接竊取用戶憑證或密碼。本頁將詳細說明 Firefox 用以警示用戶與開發者有關不安全的密碼及密碼竊取風險的安全機制。</p>
 
 <p><a href="https://mdn.mozillademos.org/files/5951/insecure_page2_with_arrows_cropped.jpeg" title="https://en.wikipedia.org/wiki/HTTP_Secure">HTTPS</a> 通訊協定，旨在保護用戶的資料於傳輸時不會遭到竊聽與竄改，並保護其機密性與原始完整性。負責處理用戶資料的網站應使用 HTTPS 保護其用戶不受惡意駭客攻擊。如果沒有使用 HTTPS，竊取諸如登入憑證之類的用戶資訊是小事一樁。著名的 <a href="https://codebutler.github.io/firesheep/" title="http://codebutler.com/firesheep/">Firesheep</a> 附加套件曾示範過此種攻擊方式。</p>
 
@@ -22,12 +22,12 @@ translation_of: Web/Security/Insecure_passwords
  <li>
   <p>Firefox 51 以後會在網址列的左方顯示一個紅色劃叉的鎖頭警告標示，如下圖所示。</p>
 
-  <p style="text-align: center;"><img alt="鎖頭標示" src="https://support.cdn.mozilla.net/media/uploads/gallery/images/2015-11-17-12-13-18-2faa61.png" style="height: 25px; width: 25px;"></p>
+  <p><img alt="鎖頭標示" src="https://support.cdn.mozilla.net/media/uploads/gallery/images/2015-11-17-12-13-18-2faa61.png" style="height: 25px; width: 25px;"></p>
  </li>
  <li>
   <p>Firefox 52 以後會在任何不安全表單的 URL 欄位與密碼區域清楚呈現警告：</p>
 
-  <p style="text-align: center;"><img alt="警告" src="https://support.cdn.mozilla.net/media/uploads/gallery/images/2017-04-21-23-52-53-ba340d.png" style="height: 133px; width: 328px;"></p>
+  <p><img alt="警告" src="https://support.cdn.mozilla.net/media/uploads/gallery/images/2017-04-21-23-52-53-ba340d.png" style="height: 133px; width: 328px;"></p>
  </li>
  <li>
   <p>Firefox 52 以後還會禁止在不安全表單自動填入密碼。用戶依舊可以藉由下拉列表，填入已存登錄的資訊。</p>
@@ -45,7 +45,7 @@ translation_of: Web/Security/Insecure_passwords
 
 <p>即使表單是傳送到 HTTPS 網址，用戶的登入表單仍未受保護，因為攻擊者可以修改用戶接收到的頁面。例如，攻擊者可插入鍵盤側錄腳本，導致用戶輸入的資料外洩，或變更表單目的地為攻擊者控制的伺服器。網路主控台的安全面板會警告開發者及用戶，並標示這項安全性問題。</p>
 
-<p style="text-align: center;"><img alt="不安全的登入欄位，會顯示於網頁主控台及密碼欄位中的對應警告。" src="https://mdn.mozillademos.org/files/14783/Insecure_Password_Console_Contextual_sm.png" style="height: 566px; width: 790px;"></p>
+<p><img alt="不安全的登入欄位，會顯示於網頁主控台及密碼欄位中的對應警告。" src="https://mdn.mozillademos.org/files/14783/Insecure_Password_Console_Contextual_sm.png" style="height: 566px; width: 790px;"></p>
 
 <div class="note">
 <p><strong>備註</strong>：在 HTTP 文件中嵌入 HTTPS 登入頁面也不安全 — 攻擊者可以變更頁框超連結以指向惡意網站。</p>
@@ -55,7 +55,7 @@ translation_of: Web/Security/Insecure_passwords
 
 <p>在這種情況下，任何用戶輸入的資料都以明文傳送。對於任何側錄該網路的人，從資料送出到抵達網頁伺服器，用戶密碼都清楚可見。</p>
 
-<p style="text-align: center;"><img alt="不安全的登入表單行為，會顯示於網頁主控台及密碼欄位中的對應警告。" src="https://mdn.mozillademos.org/files/14785/Insecure_Action_Password_Console_Contextual_sm.png" style="height: 566px; width: 790px;"></p>
+<p><img alt="不安全的登入表單行為，會顯示於網頁主控台及密碼欄位中的對應警告。" src="https://mdn.mozillademos.org/files/14785/Insecure_Action_Password_Console_Contextual_sm.png" style="height: 566px; width: 790px;"></p>
 
 <h2 id="重複使用相同密碼">重複使用相同密碼</h2>
 
@@ -73,4 +73,4 @@ translation_of: Web/Security/Insecure_passwords
  <li class="entry-title"><a class="external" href="https://blog.mozilla.org/tanvi/2016/01/28/no-more-passwords-over-http-please/">No More Passwords over HTTP, Please!</a> — 提供詳細資訊和常見問題的部落格文章</li>
 </ul>
 
-<p class="entry-title">{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</p>
+<p>{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</p>

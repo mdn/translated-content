@@ -17,7 +17,9 @@ Initialement, la spécification DOM3 définissait cet attribut en lecture/écrit
 
 ## Syntaxe
 
-    var string = document.documentURI;
+```js
+var string = document.documentURI;
+```
 
 ## Notes
 

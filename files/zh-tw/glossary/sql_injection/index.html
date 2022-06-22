@@ -15,11 +15,11 @@ translation_of: Glossary/SQL_Injection
 
 <p>在輸入 username （用戶名）與 password （密碼）後，GUI 背後的 SQL 查詢會這樣工作：</p>
 
-<pre style="margin-left: 0px;"><strong><span style="color: #0000cd;">"SELECT Count(*) FROM Users WHERE Username=' " + txt.User.Text+" ' AND Password=' "+ txt.Password.Text+" ' ";</span></strong></pre>
+<pre style="margin-left: 0px;"><strong>"SELECT Count(*) FROM Users WHERE Username=' " + txt.User.Text+" ' AND Password=' "+ txt.Password.Text+" ' ";</strong></pre>
 
 <p>假設用戶在 username 欄位輸入了 admin 還在 password 欄位輸入了 passwd123，接著按了下面的 Log in（登入）， SQL 查詢會這樣運作：</p>
 
-<pre><strong><span style="color: #0000cd;">"SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' passwd123 ' ";</span>
+<pre><strong>"SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' passwd123 ' ";
 </strong></pre>
 
 <p>如果驗證正確，用戶就可以登入，是個很簡單（所以很不安全）的機制。駭客利用者這種不安全，獲取未經授權的訪問。</p>
@@ -32,7 +32,7 @@ translation_of: Glossary/SQL_Injection
 
 <p>在按下 login 按鈕以後，SQL 查詢會這樣運作：</p>
 
-<pre><strong><span style="color: #0000cd;">"SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' anything 'or'1'='1 ' ";</span>
+<pre><strong>"SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' anything 'or'1'='1 ' ";
 </strong></pre>
 
 <p>仔細檢查一下查詢密碼的部分。</p>
@@ -43,13 +43,13 @@ translation_of: Glossary/SQL_Injection
 
 <h2 id="如何避免">如何避免</h2>
 
-<p style="margin-left: 40px;">在執行用戶的憑證查詢前，先做如下的改變：</p>
+<p>在執行用戶的憑證查詢前，先做如下的改變：</p>
 
-<pre><span style="color: #0000ff;">$id = $_GET['id'] </span>
+<pre>$id = $_GET['id'] 
 
-<span style="color: #0000ff;">(1) $id = Stripslashes($id)</span>
+(1) $id = Stripslashes($id)
 
-<span style="color: #0000ff;">(2) $id = mysql_real_escape_String($id)</span></pre>
+(2) $id = mysql_real_escape_String($id)</pre>
 
 <p>藉由 (1) 所有輸入字串的單引號 ' 取代成雙引號 "，還有 (2) 在每個 ' 之前加上 /。 修正後的 Magical String 不能繞過驗證，並使你的資料庫保持安全。</p>
 

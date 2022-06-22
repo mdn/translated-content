@@ -18,7 +18,9 @@ La méthode **`getHours()`** renvoie l'heure pour la date renseignée, d'après 
 
 ## Syntaxe
 
-    dateObj.getHours()
+```js
+dateObj.getHours()
+```
 
 ### Valeur de retour
 

@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Headers/Accept
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong><code>Accept</code></strong> 请求头用来告知（服务器）客户端可以处理的内容类型，这种内容类型用<a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME类型</a>来表示。借助<a href="/en-US/docs/Web/HTTP/Content_negotiation">内容协商机制</a>, 服务器可以从诸多备选项中选择一项进行应用，并使用 {{HTTPHeader("Content-Type")}} 应答头通知客户端它的选择。浏览器会基于请求的上下文来为这个请求头设置合适的值，比如获取一个CSS层叠样式表时值与获取图片、视频或脚本文件时的值是不同的。</p>
+<p><strong><code>Accept</code></strong> 请求头用来告知（服务器）客户端可以处理的内容类型，这种内容类型用<a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME 类型</a>来表示。借助<a href="/en-US/docs/Web/HTTP/Content_negotiation">内容协商机制</a>, 服务器可以从诸多备选项中选择一项进行应用，并使用 {{HTTPHeader("Content-Type")}} 应答头通知客户端它的选择。浏览器会基于请求的上下文来为这个请求头设置合适的值，比如获取一个 CSS 层叠样式表时值与获取图片、视频或脚本文件时的值是不同的。</p>
 
 <table class="properties">
  <tbody>
@@ -37,12 +37,12 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8</pre>
 
 <dl>
  <dt><code>&lt;MIME_type&gt;/&lt;MIME_subtype&gt;</code></dt>
- <dd>单一精确的 <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME </a>类型, 例如<code>text/html</code>.</dd>
+ <dd>单一精确的 <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME </a>类型，例如<code>text/html</code>.</dd>
  <dt><code>&lt;MIME_type&gt;/*</code></dt>
- <dd>一类 MIME 类型, 但是没有指明子类。 <code>image/*</code> 可以用来指代 <code>image/png</code>, <code>image/svg</code>, <code>image/gif</code> 以及任何其他的图片类型。</dd>
+ <dd>一类 MIME 类型，但是没有指明子类。 <code>image/*</code> 可以用来指代 <code>image/png</code>, <code>image/svg</code>, <code>image/gif</code> 以及任何其他的图片类型。</dd>
  <dt><code>*/*</code></dt>
  <dd>任意类型的 MIME 类型</dd>
- <dt><code>;q=</code> (q因子权重)</dt>
+ <dt><code>;q=</code> (q 因子权重)</dt>
  <dd>值代表优先顺序，用相对<a href="/en-US/docs/Glossary/Quality_values">质量价值</a>表示，又称作权重。</dd>
 </dl>
 

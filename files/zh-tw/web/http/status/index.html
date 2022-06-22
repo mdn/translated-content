@@ -5,20 +5,20 @@ translation_of: Web/HTTP/Status
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">HTTP 狀態碼表明一個 <a href="/zh-TW/docs/Web/HTTP">HTTP</a> 要求是否已經被完成。回應分為五種：</span></p>
+<p>HTTP 狀態碼表明一個 <a href="/zh-TW/docs/Web/HTTP">HTTP</a> 要求是否已經被完成。回應分為五種：</p>
 
 <ol>
- <li class="summary"><span class="seoSummary">資訊回應 (Informational responses, <code>100</code>–<code>199</code>),</span></li>
- <li class="summary"><span class="seoSummary">成功回應 (Successful responses, <code>200</code>–<code>299</code>),</span></li>
- <li class="summary"><span class="seoSummary">重定向 (Redirects, <code>300</code>–<code>399</code>),</span></li>
- <li class="summary"><span class="seoSummary">用戶端錯誤 (Client errors, <code>400</code>–<code>499</code>),</span></li>
- <li class="summary"><span class="seoSummary">伺服器端錯誤 (Server errors, <code>500</code>–<code>599</code>).</span></li>
+ <li>資訊回應 (Informational responses, <code>100</code>–<code>199</code>),</li>
+ <li>成功回應 (Successful responses, <code>200</code>–<code>299</code>),</li>
+ <li>重定向 (Redirects, <code>300</code>–<code>399</code>),</li>
+ <li>用戶端錯誤 (Client errors, <code>400</code>–<code>499</code>),</li>
+ <li>伺服器端錯誤 (Server errors, <code>500</code>–<code>599</code>).</li>
 </ol>
 
-<p class="summary">以下的狀態碼定義在 <a href="https://tools.ietf.org/html/rfc2616#section-10">section 10 of RFC 2616</a> 中。你可以在 <a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">RFC 7231</a> 查看更新過的規範。</p>
+<p>以下的狀態碼定義在 <a href="https://tools.ietf.org/html/rfc2616#section-10">section 10 of RFC 2616</a> 中。你可以在 <a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">RFC 7231</a> 查看更新過的規範。</p>
 
 <div class="blockIndicator note">
-<p class="summary">如果你收到任何不在清單內的回應，那很可能伺服器自行軟體實作的非標準規範。</p>
+<p>如果你收到任何不在清單內的回應，那很可能伺服器自行軟體實作的非標準規範。</p>
 </div>
 
 <h2 id="資訊回應">資訊回應</h2>
@@ -46,7 +46,7 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(201, "201 Created")}}</dt>
  <dd>請求成功且新的資源成功被創建，通常用於 POST 或一些 PUT 請求後的回應。</dd>
  <dt>{{HTTPStatus(202, "202 Accepted")}}</dt>
- <dd>此請求已經被接受但尚未處理。此狀態為非承諾性，代表 HTTP 無法在之後傳送一個非同步的回應告知請求的處理結果。最初<span class="tlid-translation translation" lang="zh-TW"><span title="">目的為外部程序或其他伺服器處理</span></span>請求的情況，或用於批次處理中。</dd>
+ <dd>此請求已經被接受但尚未處理。此狀態為非承諾性，代表 HTTP 無法在之後傳送一個非同步的回應告知請求的處理結果。最初目的為外部程序或其他伺服器處理請求的情況，或用於批次處理中。</dd>
  <dt>{{HTTPStatus(203, "203 Non-Authoritative Information")}}</dt>
  <dd>此回應碼表示回傳的中介資料集與並非與原始伺服器上的有效確定集合完全相同，而是來自本地或第三方的副本。除此情況外，200 OK 回應碼應該被優先使用。</dd>
  <dt>{{HTTPStatus(204, "204 No Content")}}</dt>

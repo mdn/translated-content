@@ -9,7 +9,7 @@ translation_of: Web/API/HTMLElement/animationiteration_event
 ---
 <div>{{APIRef}}</div>
 
-<p><strong><code>animationiteration</code></strong> 事件将被触发 当<a href="/en-US/docs/Web/CSS/CSS_Animations">CSS 动画</a>的迭代结束且另一个迭代开始时。此事件不会与 {{domxref("HTMLElement/animationend_event", "animationend")}} 事件同时发生t, 因此对于<code>animation-iteration-count</code>次数为1的动画不会发生。</p>
+<p><strong><code>animationiteration</code></strong> 事件将被触发 当<a href="/en-US/docs/Web/CSS/CSS_Animations">CSS 动画</a>的迭代结束且另一个迭代开始时。此事件不会与 {{domxref("HTMLElement/animationend_event", "animationend")}} 事件同时发生 t，因此对于<code>animation-iteration-count</code>次数为 1 的动画不会发生。</p>
 
 <table class="properties">
  <tbody>
@@ -34,7 +34,7 @@ translation_of: Web/API/HTMLElement/animationiteration_event
 
 <h2 id="例子">例子</h2>
 
-<p>此代码使用 <code>animationiteration</code> 来跟踪动画已完成的迭代次数:</p>
+<p>此代码使用 <code>animationiteration</code> 来跟踪动画已完成的迭代次数：</p>
 
 <pre class="brush: js notranslate">const animated = document.querySelector('.animated');
 
@@ -45,7 +45,7 @@ animated.addEventListener('animationiteration', () =&gt; {
   console.log(`Animation iteration count: ${iterationCount}`);
 });</pre>
 
-<p>相同, 但使用 <code>onanimationiteration</code> 事件处理程序属性：</p>
+<p>相同，但使用 <code>onanimationiteration</code> 事件处理程序属性：</p>
 
 <pre class="brush: js notranslate">const animated = document.querySelector('.animated');
 

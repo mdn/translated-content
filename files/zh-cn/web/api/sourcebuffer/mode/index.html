@@ -7,18 +7,18 @@ translation_of: Web/API/SourceBuffer/mode
 
 <p>{{domxref("SourceBuffer")}} 接口的 <code><strong>mode</strong></code> 属性用来控制媒体片段添加到<code>SourceBuffer</code> 时的顺序是可以任意的还是有严格顺序的。</p>
 
-<p>两个可用的值:</p>
+<p>两个可用的值：</p>
 
 <ul>
- <li><code>segments</code>: 媒体片段的时间戳决定段的播放顺序。这些片段可以按任意顺序添加到sourcebuffer。</li>
- <li><code>sequence</code>: 媒体片段添加到sourcebuffer的顺序决定了它们的播放顺序。片段上的时间戳为遵守此顺序自动生成。</li>
+ <li><code>segments</code>: 媒体片段的时间戳决定段的播放顺序。这些片段可以按任意顺序添加到 sourcebuffer。</li>
+ <li><code>sequence</code>: 媒体片段添加到 sourcebuffer 的顺序决定了它们的播放顺序。片段上的时间戳为遵守此顺序自动生成。</li>
 </ul>
 
-<p>moder的值最初是在使用mediasource.addsourcebuffer（）创建sourcebuffer时设置的。如果媒体片段上已经存在时间戳，则该值将设置为<code>segments</code>；如果没有，则该值将设置为<code>sequence</code>.</p>
+<p>moder 的值最初是在使用 mediasource.addsourcebuffer（）创建 sourcebuffer 时设置的。如果媒体片段上已经存在时间戳，则该值将设置为<code>segments</code>；如果没有，则该值将设置为<code>sequence</code>.</p>
 
-<p>如果mode初始值为sequence想要改为segments则会引发错误, 必须以<code>sequence</code>模式维护现有段顺序。但是，可以将值从<code>segments模式</code>改为<code>sequence模式</code>。它意味着播放顺序将被固定，并会生成新的时间戳。</p>
+<p>如果 mode 初始值为 sequence 想要改为 segments 则会引发错误，必须以<code>sequence</code>模式维护现有段顺序。但是，可以将值从<code>segments 模式</code>改为<code>sequence 模式</code>。它意味着播放顺序将被固定，并会生成新的时间戳。</p>
 
-<p>当 sourceBuffer 正在处理时mode的值无法改变，如 {{domxref("SourceBuffer.appendBuffer","appendBuffer()")}} 或 {{domxref("SourceBuffer.remove","remove()")}} .</p>
+<p>当 sourceBuffer 正在处理时 mode 的值无法改变，如 {{domxref("SourceBuffer.appendBuffer","appendBuffer()")}} 或 {{domxref("SourceBuffer.remove","remove()")}} .</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -56,7 +56,7 @@ sourceBuffer.mode = 'sequence';
 
 <h2 id="Example">Example</h2>
 
-<p>此代码段是将sourcebuffer的模式设置为“sequence”（如果当前设置为“segments”），假如原先的播放顺序为segments.</p>
+<p>此代码段是将 sourcebuffer 的模式设置为“sequence”（如果当前设置为“segments”），假如原先的播放顺序为 segments.</p>
 
 <pre class="brush: js">var curMode = sourceBuffer.mode;
 if (curMode == 'segments') {

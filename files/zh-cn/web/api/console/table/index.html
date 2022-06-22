@@ -17,7 +17,7 @@ translation_of: Web/API/Console/table
 
 <p>它会把数据 <code>data</code> 以表格的形式打印出来。数组中的每一个元素（或对象中可枚举的属性）将会以行的形式显示在表格中。</p>
 
-<p>表格的第一列是 <code>index</code>。如果数据 <code>data</code> 是一个数组，那么这一列的单元格的值就是数组的索引。 如果数据是一个对象，那么它们的值就是各对象的属性名称。 注意（在 FireFox 中）<code>console.table</code> 被限制为只显示1000行（第一行是被标记的索引（原文：labeled index））。</p>
+<p>表格的第一列是 <code>index</code>。如果数据 <code>data</code> 是一个数组，那么这一列的单元格的值就是数组的索引。如果数据是一个对象，那么它们的值就是各对象的属性名称。注意（在 FireFox 中）<code>console.table</code> 被限制为只显示 1000 行（第一行是被标记的索引（原文：labeled index））。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -125,27 +125,8 @@ console.table([john, jane, emily], ["firstName"]);</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#table", "console.table()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
-
-
-<p>{{Compat("api.Console.table")}}</p>
-</div>
+{{Compat}}

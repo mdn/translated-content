@@ -15,7 +15,9 @@ La méthode **`WebGLRenderingContext.bindBuffer()`** de l'[API WebGL](/fr-FR/doc
 
 ## Syntaxe
 
-    void gl.bindBuffer(cible, tampon);
+```js
+void gl.bindBuffer(cible, tampon);
+```
 
 ### Paramètres
 

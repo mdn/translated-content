@@ -3,93 +3,93 @@ title: 创建书本实例表单
 slug: learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
 translation_of: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
 ---
-<p><a class="button section-edit only-icon" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_BookInstance_form" rel="nofollow, noindex"><span>Edi</span></a>本章节演示如何定义一个页面/表单，以创建<code>BookInstance</code> 物件。这很像我们用来创建书本 <code>Book</code> 物件的表单。</p>
+<p><a class="button section-edit only-icon" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_BookInstance_form" rel="nofollow, noindex">Edi</a>本章节演示如何定义一个页面/表单，以创建<code>BookInstance</code> 物件。这很像我们用来创建书本 <code>Book</code> 物件的表单。</p>
 
 <h2 class="highlight-spanned" id="导入验证和清理方法">导入验证和清理方法</h2>
 
-<p>打开 <strong>/controllers/bookinstanceController.js</strong>，并在档案最上方加入以下几行:</p>
+<p>打开 <strong>/controllers/bookinstanceController.js</strong>，并在档案最上方加入以下几行：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> <span class="punctuation token">{</span> body<span class="punctuation token">,</span>validationResult <span class="punctuation token">}</span> <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'express-validator/check'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> <span class="punctuation token">{</span> sanitizeBody <span class="punctuation token">}</span> <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'express-validator/filter'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">const { body,validationResult } = require('express-validator/check');
+const { sanitizeBody } = require('express-validator/filter');</code></pre>
 
-<h2 class="highlight-spanned" id="控制器—get_路由"><span class="highlight-span">控制器—get 路由</span></h2>
+<h2 class="highlight-spanned" id="控制器—get_路由">控制器—get 路由</h2>
 
 <p>在档案最上方，用 require 导入书本模型 (因为每个<code>BookInstance</code> 都有关连的 <code>Book</code>)。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> Book <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'../models/book'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var Book = require('../models/book');</code></pre>
 
 <p>找到导出的 <code>bookinstance_create_get()</code> 控制器方法，并替换为底下代码。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Display BookInstance create form on GET.</span>
-exports<span class="punctuation token">.</span>bookinstance_create_get <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// Display BookInstance create form on GET.
+exports.bookinstance_create_get = function(req, res, next) {
 
-    Book<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span><span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">,</span><span class="string token">'title'</span><span class="punctuation token">)</span>
-    <span class="punctuation token">.</span><span class="function token">exec</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">,</span> books<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
-      <span class="comment token">// Successful, so render.</span>
-      res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'bookinstance_form'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span>title<span class="punctuation token">:</span> <span class="string token">'Create BookInstance'</span><span class="punctuation token">,</span> book_list<span class="punctuation token">:</span>books<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    Book.find({},'title')
+    .exec(function (err, books) {
+      if (err) { return next(err); }
+      // Successful, so render.
+      res.render('bookinstance_form', {title: 'Create BookInstance', book_list:books});
+    });
 
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+};</code></pre>
 
 <p>控制器取得所有书本的列表 (<code>book_list</code>) 并将它传送到视图 <code><strong>bookinstance_form.pug</strong></code> (里面附加上 <code>title</code>)。</p>
 
-<h2 class="highlight-spanned" id="控制器—post_路由"><span class="highlight-span">控制器—post 路由</span></h2>
+<h2 class="highlight-spanned" id="控制器—post_路由">控制器—post 路由</h2>
 
 <p>找到导出的  <code>bookinstance_create_post()</code> 控制器方法，并替换为底下代码。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Handle BookInstance create on POST.</span>
-exports<span class="punctuation token">.</span>bookinstance_create_post <span class="operator token">=</span> <span class="punctuation token">[</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// Handle BookInstance create on POST.
+exports.bookinstance_create_post = [
 
-    <span class="comment token">// Validate fields.</span>
-    <span class="function token">body</span><span class="punctuation token">(</span><span class="string token">'book'</span><span class="punctuation token">,</span> <span class="string token">'Book must be specified'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">isLength</span><span class="punctuation token">(</span><span class="punctuation token">{</span> min<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">trim</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-    <span class="function token">body</span><span class="punctuation token">(</span><span class="string token">'imprint'</span><span class="punctuation token">,</span> <span class="string token">'Imprint must be specified'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">isLength</span><span class="punctuation token">(</span><span class="punctuation token">{</span> min<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">trim</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-    <span class="function token">body</span><span class="punctuation token">(</span><span class="string token">'due_back'</span><span class="punctuation token">,</span> <span class="string token">'Invalid date'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">optional</span><span class="punctuation token">(</span><span class="punctuation token">{</span> checkFalsy<span class="punctuation token">:</span> <span class="keyword token">true</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">isISO8601</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
+    // Validate fields.
+    body('book', 'Book must be specified').isLength({ min: 1 }).trim(),
+    body('imprint', 'Imprint must be specified').isLength({ min: 1 }).trim(),
+    body('due_back', 'Invalid date').optional({ checkFalsy: true }).isISO8601(),
 
-    <span class="comment token">// Sanitize fields.</span>
-    <span class="function token">sanitizeBody</span><span class="punctuation token">(</span><span class="string token">'book'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">trim</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">escape</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-    <span class="function token">sanitizeBody</span><span class="punctuation token">(</span><span class="string token">'imprint'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">trim</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">escape</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-    <span class="function token">sanitizeBody</span><span class="punctuation token">(</span><span class="string token">'status'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">trim</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">escape</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-    <span class="function token">sanitizeBody</span><span class="punctuation token">(</span><span class="string token">'due_back'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">toDate</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
+    // Sanitize fields.
+    sanitizeBody('book').trim().escape(),
+    sanitizeBody('imprint').trim().escape(),
+    sanitizeBody('status').trim().escape(),
+    sanitizeBody('due_back').toDate(),
 
-    <span class="comment token">// Process request after validation and sanitization.</span>
-    <span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
+    // Process request after validation and sanitization.
+    (req, res, next) =&gt; {
 
-        <span class="comment token">// Extract the validation errors from a request.</span>
-        <span class="keyword token">const</span> errors <span class="operator token">=</span> <span class="function token">validationResult</span><span class="punctuation token">(</span>req<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        // Extract the validation errors from a request.
+        const errors = validationResult(req);
 
-        <span class="comment token">// Create a BookInstance object with escaped and trimmed data.</span>
-        <span class="keyword token">var</span> bookinstance <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">BookInstance</span><span class="punctuation token">(</span>
-          <span class="punctuation token">{</span> book<span class="punctuation token">:</span> req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>book<span class="punctuation token">,</span>
-            imprint<span class="punctuation token">:</span> req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>imprint<span class="punctuation token">,</span>
-            status<span class="punctuation token">:</span> req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>status<span class="punctuation token">,</span>
-            due_back<span class="punctuation token">:</span> req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>due_back
-           <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+        // Create a BookInstance object with escaped and trimmed data.
+        var bookinstance = new BookInstance(
+          { book: req.body.book,
+            imprint: req.body.imprint,
+            status: req.body.status,
+            due_back: req.body.due_back
+           });
 
-        <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>errors<span class="punctuation token">.</span><span class="function token">isEmpty</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-            <span class="comment token">// There are errors. Render form again with sanitized values and error messages.</span>
-            Book<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span><span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">,</span><span class="string token">'title'</span><span class="punctuation token">)</span>
-                <span class="punctuation token">.</span><span class="function token">exec</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">,</span> books<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-                    <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
-                    <span class="comment token">// Successful, so render.</span>
-                    res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'bookinstance_form'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Create BookInstance'</span><span class="punctuation token">,</span> book_list <span class="punctuation token">:</span> books<span class="punctuation token">,</span> selected_book <span class="punctuation token">:</span> bookinstance<span class="punctuation token">.</span>book<span class="punctuation token">.</span>_id <span class="punctuation token">,</span> errors<span class="punctuation token">:</span> errors<span class="punctuation token">.</span><span class="function token">array</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span> bookinstance<span class="punctuation token">:</span>bookinstance <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-            <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-            <span class="keyword token">return</span><span class="punctuation token">;</span>
-        <span class="punctuation token">}</span>
-        <span class="keyword token">else</span> <span class="punctuation token">{</span>
-            <span class="comment token">// Data from form is valid.</span>
-            bookinstance<span class="punctuation token">.</span><span class="function token">save</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-                <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
-                   <span class="comment token">// Successful - redirect to new record.</span>
-                   res<span class="punctuation token">.</span><span class="function token">redirect</span><span class="punctuation token">(</span>bookinstance<span class="punctuation token">.</span>url<span class="punctuation token">)</span><span class="punctuation token">;</span>
-                <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-        <span class="punctuation token">}</span>
-    <span class="punctuation token">}</span>
-<span class="punctuation token">]</span><span class="punctuation token">;</span></code></pre>
+        if (!errors.isEmpty()) {
+            // There are errors. Render form again with sanitized values and error messages.
+            Book.find({},'title')
+                .exec(function (err, books) {
+                    if (err) { return next(err); }
+                    // Successful, so render.
+                    res.render('bookinstance_form', { title: 'Create BookInstance', book_list : books, selected_book : bookinstance.book._id , errors: errors.array(), bookinstance:bookinstance });
+            });
+            return;
+        }
+        else {
+            // Data from form is valid.
+            bookinstance.save(function (err) {
+                if (err) { return next(err); }
+                   // Successful - redirect to new record.
+                   res.redirect(bookinstance.url);
+                });
+        }
+    }
+];</code></pre>
 
 <p>此代码的结构和行为，与创建其他对象的结构和行为相同。首先，我们验证数据，并為数据做無害化處理。如果数据无效，我们会重新显示表單，以及用户最初输入的数据，還有错误消息列表。如果数据有效，我们保存新的<code>BookInstance</code>记录，并将用户重定向到详细信息页面。</p>
 
-<h2 class="highlight-spanned" id="视图"><span class="highlight-span">视图</span></h2>
+<h2 class="highlight-spanned" id="视图">视图</h2>
 
 <p>创建 <strong>/views/bookinstance_form.pug</strong> ，并复制贴上以下代码。</p>
 
@@ -133,10 +133,10 @@ block content
 <p>这个视图的结构和行为，几乎等同于 <strong>book_form.pug</strong> 模板，因此我们就不再重覆说明一次了。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 以上的模板将状态值 (Maintenance, Available, 等等) 写死在代码里，而且不能 "记忆" 使用者的输入值。如果你愿意的话，考虑重新实作此列表，当表单被重新呈现时，从控制器传入选项数据，并设定选中的值。</p>
+<p><strong>注意：</strong> 以上的模板将状态值 (Maintenance, Available, 等等) 写死在代码里，而且不能 "记忆" 使用者的输入值。如果你愿意的话，考虑重新实作此列表，当表单被重新呈现时，从控制器传入选项数据，并设定选中的值。</p>
 </div>
 
-<h2 class="highlight-spanned" id="它看起來像是"><span class="highlight-span">它看起來像是?</span></h2>
+<h2 class="highlight-spanned" id="它看起來像是">它看起來像是？</h2>
 
 <p>运行本应用，打开浏览器访问网址 <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>。然后点击创建新书本实例 Create new book instance (copy) 连结。如果每个东西都设定正确了，你的网站看起应该像底下的截图。在你提交一个有效的 <code>BookInstance</code> 之后，它应该会被储存，并且你将被带到详细信息页面。</p>
 
@@ -146,5 +146,5 @@ block content
 
 <ul>
  <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms">Express 教程 6: 使用表单</a></li>
- <li>继续教程 6 的下一个部分: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form">删除作者表单</a></li>
+ <li>继续教程 6 的下一个部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form">删除作者表单</a></li>
 </ul>

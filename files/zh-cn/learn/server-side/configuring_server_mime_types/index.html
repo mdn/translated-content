@@ -8,11 +8,11 @@ original_slug: Web/Security/Securing_your_site/Configuring_server_MIME_types
 ---
 <h2 id="Background" name="Background">Background</h2>
 
-<p>默认情况下，许多web服务器会为那些未知内容类型的文件配置一个默认MIME类型<code>text/plain</code> 或者<code>application/octet-stream</code> 。当一种新的内容类型被创造或者被添加到web服务器上，web管理者在添加它到web服务器配置中可能会失败。主要原因是用户使用Gecko-based 的浏览器，而这种浏览器只相信由web服务器和web应用所发布的MIME类型</p>
+<p>默认情况下，许多 web 服务器会为那些未知内容类型的文件配置一个默认 MIME 类型<code>text/plain</code> 或者<code>application/octet-stream</code> 。当一种新的内容类型被创造或者被添加到 web 服务器上，web 管理者在添加它到 web 服务器配置中可能会失败。主要原因是用户使用 Gecko-based 的浏览器，而这种浏览器只相信由 web 服务器和 web 应用所发布的 MIME 类型</p>
 
 <h3 id="What_are_MIME_types.3F" name="What_are_MIME_types.3F">What are MIME types?</h3>
 
-<p>MIME类型描述了邮件或者web服务器或者web应用中的媒体内容的类型，其目的是为了指导web浏览器对媒体内容的处理和表现。MIME类型的示例如下：</p>
+<p>MIME 类型描述了邮件或者 web 服务器或者 web 应用中的媒体内容的类型，其目的是为了指导 web 浏览器对媒体内容的处理和表现。MIME 类型的示例如下：</p>
 
 <ul>
  <li><code>text/html</code>  对于一般网页</li>
@@ -26,71 +26,71 @@ original_slug: Web/Security/Securing_your_site/Configuring_server_MIME_types
 
 <h3 id="Technical_Background" name="Technical_Background">Technical Background</h3>
 
-<p>完整的MIME类型列表可在 <a class="external" href="http://www.iana.org/assignments/media-types/index.html">IANA | MIME Media Types</a> 查看.</p>
+<p>完整的 MIME 类型列表可在 <a class="external" href="http://www.iana.org/assignments/media-types/index.html">IANA | MIME Media Types</a> 查看。</p>
 
-<p>在<a class="external" href="http://www.w3.org/Protocols/HTTP/1.1/spec.html">HTTP specification</a> 中定义了能够描述在web中使用的媒体类型的MIME超集。</p>
+<p>在<a class="external" href="http://www.w3.org/Protocols/HTTP/1.1/spec.html">HTTP specification</a> 中定义了能够描述在 web 中使用的媒体类型的 MIME 超集。</p>
 
 <h3 id="Why_are_correct_MIME_types_important.3F" name="Why_are_correct_MIME_types_important.3F">Why are correct MIME types important?</h3>
 
-<p><img alt="Example of an incorrect MIME type result" class="internal" src="/@api/deki/files/729/=Incorrect-mime-screen.jpg" style="float: right;"> 假如web服务器或者应用报告内容的MIME类型不正确，根据HTTP规范，或许发起人想要处理和显示内容通过他所规定的MIME类型，因此web浏览器无法采取任何措施。</p>
+<p><img alt="Example of an incorrect MIME type result" class="internal" src="/@api/deki/files/729/=Incorrect-mime-screen.jpg" style="float: right;"> 假如 web 服务器或者应用报告内容的 MIME 类型不正确，根据 HTTP 规范，或许发起人想要处理和显示内容通过他所规定的 MIME 类型，因此 web 浏览器无法采取任何措施。</p>
 
-<p>对于某些浏览器，例如IE，它尝试允许web服务器对于错误配置通过其源码猜测它可能的正确MIME类型。</p>
+<p>对于某些浏览器，例如 IE，它尝试允许 web 服务器对于错误配置通过其源码猜测它可能的正确 MIME 类型。</p>
 
-<p>这种做法将会避免许多由web管理员他们的错误。因为当内容的MIME类型错误，IE将会用可能正确的MIME类型来继续处理内容。例如你设置一个<code>img</code>的类型为<code>text/plain</code> ,IE可能会设置它为正确的MIME类型<code>images/*</code></p>
+<p>这种做法将会避免许多由 web 管理员他们的错误。因为当内容的 MIME 类型错误，IE 将会用可能正确的 MIME 类型来继续处理内容。例如你设置一个<code>img</code>的类型为<code>text/plain</code> ,IE 可能会设置它为正确的 MIME 类型<code>images/*</code></p>
 
-<p>出于安全原因，使用正确的MIME类型的服务内容也是重要的； 恶意内容可能会影响用户的计算机，假装它是一个安全类型文档，实际上不是。</p>
+<p>出于安全原因，使用正确的 MIME 类型的服务内容也是重要的；恶意内容可能会影响用户的计算机，假装它是一个安全类型文档，实际上不是。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 从历史角度, 只要HTML文档请求处理CSS文件 ，Firefox 能够正常加载CSS即使它设置了错误的MIME类型。处于安全原因, {{ gecko("2.0") }} 对于从请求文档不同来源加载的样式表，将不再这样做。如果CSS来自于不同来源，你必须设置它的正确MIME类型 (<code>text/css</code>).</p>
+<p><strong>注意：</strong> 从历史角度，只要 HTML 文档请求处理 CSS 文件，Firefox 能够正常加载 CSS 即使它设置了错误的 MIME 类型。处于安全原因，{{ gecko("2.0") }} 对于从请求文档不同来源加载的样式表，将不再这样做。如果 CSS 来自于不同来源，你必须设置它的正确 MIME 类型 (<code>text/css</code>).</p>
 
-<p>Gecko 1.9.1.11 (Firefox 3.5.11) 和 Gecko 1.9.2.5 (Firefox 3.6.5) 同样实施这种安全措施，但是提高它的实用性。如果样式表中的第一行看起来是一个很好的CSS构造，则存在允许加载的临时启发式算法。在Firefox 4中已经删除了启发式，您必须正确设置<code>text/css</code> 的MIME类型，才能够识别CSS。</p>
+<p>Gecko 1.9.1.11 (Firefox 3.5.11) 和 Gecko 1.9.2.5 (Firefox 3.6.5) 同样实施这种安全措施，但是提高它的实用性。如果样式表中的第一行看起来是一个很好的 CSS 构造，则存在允许加载的临时启发式算法。在 Firefox 4 中已经删除了启发式，您必须正确设置<code>text/css</code> 的 MIME 类型，才能够识别 CSS。</p>
 </div>
 
 <h2 id="Why_browsers_should_not_guess_MIME_types" name="Why_browsers_should_not_guess_MIME_types">为何浏览器不应该猜测 MIME 类型</h2>
 
-<p>除了违返了HTTP规范，让浏览器去猜测正确的MIME类型是一个差劲的策略。原因如下</p>
+<p>除了违返了 HTTP 规范，让浏览器去猜测正确的 MIME 类型是一个差劲的策略。原因如下</p>
 
 <h4 id="Loss_of_control" name="Loss_of_control">失去控制</h4>
 
-<p>假如浏览器忽略报告的MIME类型，web管理员和用户不在对内容如何进行处理有发言权了。</p>
+<p>假如浏览器忽略报告的 MIME 类型，web 管理员和用户不在对内容如何进行处理有发言权了。</p>
 
-<p>例如，面对web开发员的网址可能希望发送某些实例HTML文档，同时通希望能够以 <code>text/html</code>或者 <code>text/plain</code> 的MIME类型进行数据的处理和显示 或者 作为一个源代码。如果浏览器猜测它的正确MIME类型为 <code>text/html</code> 那么开发员不在有权利进行选择了。</p>
+<p>例如，面对 web 开发员的网址可能希望发送某些实例 HTML 文档，同时通希望能够以 <code>text/html</code>或者 <code>text/plain</code> 的 MIME 类型进行数据的处理和显示 或者 作为一个源代码。如果浏览器猜测它的正确 MIME 类型为 <code>text/html</code> 那么开发员不在有权利进行选择了。</p>
 
 <h4 id="Security" name="Security">安全性</h4>
 
-<p>一些内容类型，例如可执行程序，本质上是不安全的。原因是经过规范化的MIME类型都有经过严格规定浏览器如何对这类类型的文件进行操作。一个可执行程序不能够在用户的电脑浏览器上执行，但可以通过弹出会话询问是否下载这个文件</p>
+<p>一些内容类型，例如可执行程序，本质上是不安全的。原因是经过规范化的 MIME 类型都有经过严格规定浏览器如何对这类类型的文件进行操作。一个可执行程序不能够在用户的电脑浏览器上执行，但可以通过弹出会话询问是否下载这个文件</p>
 
-<p>MIME类型猜测导致IE浏览器的安全漏洞（通过利用IE能够将错误的MIME类型 修改为正确的类型）。这绕过了正常的下载对话框，导致InternetExplorer猜测内容是可执行程序，然后在用户的计算机上运行。</p>
+<p>MIME 类型猜测导致 IE 浏览器的安全漏洞（通过利用 IE 能够将错误的 MIME 类型 修改为正确的类型）。这绕过了正常的下载对话框，导致 InternetExplorer 猜测内容是可执行程序，然后在用户的计算机上运行。</p>
 
 <h2 id="如何确定服务器发送内容的_MIME_类型">如何确定服务器发送内容的 MIME 类型</h2>
 
-<p>通过开发者工具的 ContentType 查看MIME类型。</p>
+<p>通过开发者工具的 ContentType 查看 MIME 类型。</p>
 
-<p>根据标准，通过一个 <code>meta</code> 标签来设置MIME类型 例如 <code><span class="nowiki">&lt;meta http-equiv="Content-Type" content="text/html"&gt;</span></code><span class="nowiki"> 当包含</span>{{HTTPHeader("Content-Type")}} 时则忽略 <code>meta</code> 标签</p>
+<p>根据标准，通过一个 <code>meta</code> 标签来设置 MIME 类型 例如 <code>&lt;meta http-equiv="Content-Type" content="text/html"&gt;</code> 当包含{{HTTPHeader("Content-Type")}} 时则忽略 <code>meta</code> 标签</p>
 
 
 
 <h2 id="如何为你的内容确定正确的_MIME_类型">如何为你的内容确定正确的 MIME 类型</h2>
 
-<p>这里有几种方法来确定文件的正确MIME类型</p>
+<p>这里有几种方法来确定文件的正确 MIME 类型</p>
 
 <ol>
- <li>如果你的内容是通过供应商软件应用创建的，那么你可以阅读供应商文档确认不同媒体文件的MIME值</li>
- <li>通过查看完整的MIME类型表 <a class="external" href="http://www.iana.org/assignments/media-types/index.html">IANA | MIME Media Types registry</a> </li>
- <li>如果使用插件netscape gecko显示媒体类型，请安装插件，然后查看“帮助”&gt;“关于插件”菜单，以查看哪些MIME类型与媒体类型相关联。</li>
- <li>搜索文件扩展名 <a class="external" href="http://filext.com/">FILExt</a> 或者<a class="external" href="http://www.file-extensions.org/">File extensions reference</a> ，确认扩展名和哪种类型的MIME相关联</li>
+ <li>如果你的内容是通过供应商软件应用创建的，那么你可以阅读供应商文档确认不同媒体文件的 MIME 值</li>
+ <li>通过查看完整的 MIME 类型表 <a class="external" href="http://www.iana.org/assignments/media-types/index.html">IANA | MIME Media Types registry</a> </li>
+ <li>如果使用插件 netscape gecko 显示媒体类型，请安装插件，然后查看“帮助”&gt;“关于插件”菜单，以查看哪些 MIME 类型与媒体类型相关联。</li>
+ <li>搜索文件扩展名 <a class="external" href="http://filext.com/">FILExt</a> 或者<a class="external" href="http://www.file-extensions.org/">File extensions reference</a> ，确认扩展名和哪种类型的 MIME 相关联</li>
 </ol>
 
-<h2 id="如何设置服务器以发送正确的MIME类型">如何设置服务器以发送正确的MIME类型</h2>
+<h2 id="如何设置服务器以发送正确的MIME类型">如何设置服务器以发送正确的 MIME 类型</h2>
 
-<p>基本的方法是配置你的服务器发送正确的HTTP <code>ContentType</code>类型给每个文档</p>
+<p>基本的方法是配置你的服务器发送正确的 HTTP <code>ContentType</code>类型给每个文档</p>
 
 <ul>
- <li>如果您正在使用Apache Web服务器，只需将此示例.htaccess文件复制到包含要使用正确MIME类型发送的文件的目录中。 如果你有一个完整的文件子目录，只需将文件放在父目录中；您不需要将它放在每个子目录中。</li>
- <li>如果您使用的是Microsoft IIS, 请参阅<a href="http://www.iana.org/assignments/media-types/index.html">IANA | MIME Media Types registry</a>这篇文章。</li>
- <li>如果您使用服务器端脚本生成内容，通常可以在脚本顶部附近添加一行。 您可以从Perl，PHP，ASP或Java提供HTML以外的内容 - 只需相应地更改MIME类型即可。
+ <li>如果您正在使用 Apache Web 服务器，只需将此示例.htaccess 文件复制到包含要使用正确 MIME 类型发送的文件的目录中。如果你有一个完整的文件子目录，只需将文件放在父目录中；您不需要将它放在每个子目录中。</li>
+ <li>如果您使用的是 Microsoft IIS, 请参阅<a href="http://www.iana.org/assignments/media-types/index.html">IANA | MIME Media Types registry</a>这篇文章。</li>
+ <li>如果您使用服务器端脚本生成内容，通常可以在脚本顶部附近添加一行。您可以从 Perl，PHP，ASP 或 Java 提供 HTML 以外的内容 - 只需相应地更改 MIME 类型即可。
   <ul>
-   <li>对于 Perl CGI，你应该在文档其他行之前输出 <code>print "Content-Type: text/html\n\n";</code>。如果您正在使用CGI模块, 你可以使用 <code>print $cgi-&gt;header('text/html');</code>  代替, 其中 <code>$cgi</code> 是对CGI实例的引用。</li>
+   <li>对于 Perl CGI，你应该在文档其他行之前输出 <code>print "Content-Type: text/html\n\n";</code>。如果您正在使用 CGI 模块，你可以使用 <code>print $cgi-&gt;header('text/html');</code>  代替，其中 <code>$cgi</code> 是对 CGI 实例的引用。</li>
    <li>对于 PHP，你应该在文档其他行之前输出 <code>header('Content-Type: text/html');</code>。</li>
    <li>对于 ASP, 你应该在文档其他行之前输出<code>response.ContentType = "text/html";</code>。</li>
    <li>对于 Java servlet, 你需要在<code>doGet</code> 或 <code>doPost</code> 方法之前输出<code>response.setContentType("text/html");</code> ，其中 <code>response</code> 是对 <code>HttpServletResponse</code>的引用。</li>

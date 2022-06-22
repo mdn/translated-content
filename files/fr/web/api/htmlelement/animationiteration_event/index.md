@@ -6,7 +6,7 @@ original_slug: Web/Events/animationiteration
 ---
 L'événement `animationiteration` est déclenché lorsqu'une itération d'une animation se termine. Cet événement ne se produit pas pour les animations avec animation-iteration-count valant 1.`
 
-## informations générales
+## Informations générales
 
 - Spécification
   - : [CSS Animations](http://www.w3.org/TR/css3-animations/#animation-events)

@@ -22,9 +22,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
    <th scope="row">範例</th>
    <td>
     <pre class="brush: json no-line-numbers  language-json">
-<code class="language-json"><span class="key token">"background":</span> <span class="punctuation token">{</span>
-  <span class="key token">"scripts":</span> <span class="punctuation token">[</span><span class="string token">"background.js"</span><span class="punctuation token">]</span>
-<span class="punctuation token">}</span></code></pre>
+<code class="language-json">"background": {
+  "scripts": ["background.js"]
+}</code></pre>
    </td>
   </tr>
  </tbody>
@@ -73,15 +73,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 
 <h2 id="範例">範例</h2>
 
-<pre class="brush: json no-line-numbers  language-json"><code class="language-json">  <span class="key token">"background":</span> <span class="punctuation token">{</span>
-    <span class="key token">"scripts":</span> <span class="punctuation token">[</span><span class="string token">"jquery.js"</span><span class="punctuation token">,</span> <span class="string token">"my-background.js"</span><span class="punctuation token">]</span>
-  <span class="punctuation token">}</span></code></pre>
+<pre class="brush: json no-line-numbers  language-json"><code class="language-json">  "background": {
+    "scripts": ["jquery.js", "my-background.js"]
+  }</code></pre>
 
 <p>讀取兩個後端腳本。</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"background":</span> <span class="punctuation token">{</span>
-    <span class="key token">"page":</span> <span class="string token">"my-background.html"</span>
-  <span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">"background": {
+    "page": "my-background.html"
+  }</code></pre>
 
 <p>讀取一個自訂的後端頁面。</p>
 

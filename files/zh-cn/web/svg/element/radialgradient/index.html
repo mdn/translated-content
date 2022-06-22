@@ -3,7 +3,7 @@ title: radialGradient
 slug: Web/SVG/Element/radialGradient
 tags:
   - SVG
-  - SVG渐变
+  - SVG 渐变
   - 元素
 translation_of: Web/SVG/Element/radialGradient
 ---
@@ -22,7 +22,7 @@ translation_of: Web/SVG/Element/radialGradient
 <ul>
  <li><a href="/en-US/docs/Web/SVG/Attribute#Core">核心属性</a> »</li>
  <li><a href="/en-US/docs/Web/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#XLink">Xlink属性</a> »</li>
+ <li><a href="/en-US/docs/Web/SVG/Attribute#XLink">Xlink 属性</a> »</li>
  <li>{{SVGAttr("class")}}</li>
  <li>{{SVGAttr("style")}}</li>
  <li>{{SVGAttr("externalResourcesRequired")}}</li>
@@ -51,29 +51,29 @@ translation_of: Web/SVG/Element/radialGradient
 
 <h3 id="SVG">SVG</h3>
 
-<pre class="brush: xml"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>svg</span> <span class="attr-name token">width</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>120<span class="punctuation token">"</span></span> <span class="attr-name token">height</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>120<span class="punctuation token">"</span></span> <span class="attr-name token">viewBox</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>0 0 240 120<span class="punctuation token">"</span></span>
-   <span class="attr-name token">xmlns</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>http://www.w3.org/2000/svg<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>defs</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>radialGradient</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>exampleGradient<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>stop</span> <span class="attr-name token">offset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>10%<span class="punctuation token">"</span></span> <span class="attr-name token">stop-color</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>gold<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>stop</span> <span class="attr-name token">offset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>95%<span class="punctuation token">"</span></span> <span class="attr-name token">stop-color</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>green<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>radialGradient</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>radialGradient</span> <span class="attr-name token">spreadMethod</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>reflect<span class="punctuation token">"</span></span>
-                    <span class="attr-name token">cx</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>50%<span class="punctuation token">"</span></span>
-                    <span class="attr-name token">cy</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>50%<span class="punctuation token">"</span></span>
-                    <span class="attr-name token">r</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>50%<span class="punctuation token">"</span></span>
-                    <span class="attr-name token">fx</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>25%<span class="punctuation token">"</span></span>
-                    <span class="attr-name token">fy</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>75%<span class="punctuation token">"</span></span>
-                    <span class="attr-name token">fr</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>10%<span class="punctuation token">"</span></span>
-                   <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>flameGradient<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>stop</span> <span class="attr-name token">offset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>0%<span class="punctuation token">"</span></span> <span class="attr-name token">stop-color</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>white<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>stop</span> <span class="attr-name token">offset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>10%<span class="punctuation token">"</span></span> <span class="attr-name token">stop-color</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>yellow<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>stop</span> <span class="attr-name token">offset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>95%<span class="punctuation token">"</span></span> <span class="attr-name token">stop-color</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>red<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>radialGradient</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>defs</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>circle</span> <span class="attr-name token">fill</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>url(#exampleGradient)<span class="punctuation token">"</span></span> <span class="attr-name token">cx</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>60<span class="punctuation token">"</span></span> <span class="attr-name token">cy</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>60<span class="punctuation token">"</span></span> <span class="attr-name token">r</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>50<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>circle</span> <span class="attr-name token">fill</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>url(#flameGradient)<span class="punctuation token">"</span></span> <span class="attr-name token">cx</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>180<span class="punctuation token">"</span></span> <span class="attr-name token">cy</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>60<span class="punctuation token">"</span></span> <span class="attr-name token">r</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>50<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>svg</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: xml"><code class="language-html">&lt;svg width="120" height="120" viewBox="0 0 240 120"
+   xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;defs&gt;
+    &lt;radialGradient id="exampleGradient"&gt;
+      &lt;stop offset="10%" stop-color="gold"/&gt;
+      &lt;stop offset="95%" stop-color="green"/&gt;
+    &lt;/radialGradient&gt;
+    &lt;radialGradient spreadMethod="reflect"
+                    cx="50%"
+                    cy="50%"
+                    r="50%"
+                    fx="25%"
+                    fy="75%"
+                    fr="10%"
+                   id="flameGradient"&gt;
+      &lt;stop offset="0%" stop-color="white"/&gt;
+      &lt;stop offset="10%" stop-color="yellow"/&gt;
+      &lt;stop offset="95%" stop-color="red"/&gt;
+    &lt;/radialGradient&gt;
+  &lt;/defs&gt;
+  &lt;circle fill="url(#exampleGradient)" cx="60" cy="60" r="50"/&gt;
+  &lt;circle fill="url(#flameGradient)" cx="180" cy="60" r="50"/&gt;
+&lt;/svg&gt;</code></pre>
 
 <h3 id="结果">结果</h3>
 

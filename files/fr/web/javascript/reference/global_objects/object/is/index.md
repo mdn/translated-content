@@ -17,7 +17,9 @@ La méthode **`Object.is()`** permet de déterminer si deux valeurs sont [les m�
 
 ## Syntaxe
 
-    Object.is(value1, value2);
+```js
+Object.is(value1, value2);
+```
 
 ### Paramètres
 

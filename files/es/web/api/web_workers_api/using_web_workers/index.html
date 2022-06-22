@@ -370,7 +370,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 <p>The worker thread is killed immediately without an opportunity to complete its operations or clean up after itself.</p>
 
-<p>Workers may close themselves by calling their own {{ ifmethod("nsIWorkerScope", "close") }} method:</p>
+<p>Workers may close themselves by calling their own <code>nsIWorkerScope.close()</code> method:</p>
 
 <pre class="syntaxbox notranslate">self.close();</pre>
 

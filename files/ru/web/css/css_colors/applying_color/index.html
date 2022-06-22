@@ -12,9 +12,9 @@ original_slug: Web/HTML/Applying_color
 
 <p>К счастью, присвоить цвет к HTML-элементу очень просто, и это можно сделать практически со всеми элементами.</p>
 
-<p>Мы затронем большинство из того, что нужно знать при использовании цвета, включая {{anch("Что может иметь цвет", "список элементов, которые могут иметь цвет, и необходимые для этого CSS-свойства")}}, {{anch("Как задать цвет", "как задать цвет")}}, и как  {{anch("Использование цвета", "использовать его в таблицах стилей и в JS скриптах")}}. Мы также рассмотрим как {{anch("Предоставляем возможность пользователю выбрать цвет", "предоставить возможность пользователю выбрать цвет")}}. </p>
+<p>Мы затронем большинство из того, что нужно знать при использовании цвета, включая <a href="#что_может_иметь_цвет">список элементов, которые могут иметь цвет, и необходимые для этого CSS-свойства</a>, <a href="#как_задать_цвет">как задать цвет</a>, и как  <a href="#использование_цвета">использовать его в таблицах стилей и в JS скриптах</a>. Мы также рассмотрим как <a href="#предоставляем_возможность_пользователю_выбрать_цвет">предоставить возможность пользователю выбрать цвет</a>. </p>
 
-<p>Завершим мы статью размышлениями на тему как {{anch("Using color wisely", "использовать цвет с умом")}}: как выбрать подходящий цвет, учитывая потребности людей с различными визуальными способностями.</p>
+<p>Завершим мы статью размышлениями на тему как <a href="#using_color_wisely">использовать цвет с умом</a>: как выбрать подходящий цвет, учитывая потребности людей с различными визуальными способностями.</p>
 
 <h2 id="Что_может_иметь_цвет">Что может иметь цвет</h2>
 
@@ -55,7 +55,7 @@ original_slug: Web/HTML/Applying_color
 
 <dl>
  <dt>{{cssxref("Borders")}}</dt>
- <dd>См. раздел {{anch("Borders")}} с перечнем свойств CSS, с помощью которых можно присвоить цвет границам блока.</dd>
+ <dd>См. раздел <a href="#borders">Borders</a> с перечнем свойств CSS, с помощью которых можно присвоить цвет границам блока.</dd>
  <dt>{{cssxref("background-color")}}</dt>
  <dd>Цвет фона блока.</dd>
  <dt>{{cssxref("column-rule-color")}}</dt>
@@ -238,7 +238,7 @@ th {
 
 <h2 id="Использование_цвета">Использование цвета</h2>
 
-<p>Теперь, когда вы знаете какие существуют свойства CSS для присваивания цвета к элементам и какие есть форматы описания цвета, вы можете соединить это вместе, чтобы начать использовать цвет. Как вы уже видели в списке под разделом {{anch("Что может иметь цвет")}}, существует множество вещей, к которым можно применить цвет, используя CSS. Давайте взглянем на это с двух сторон: использовать цвет в таблицах стилей ({{Glossary("stylesheet")}}) и добавлять, изменять цвет, используя {{Glossary("JavaScript")}} код.</p>
+<p>Теперь, когда вы знаете какие существуют свойства CSS для присваивания цвета к элементам и какие есть форматы описания цвета, вы можете соединить это вместе, чтобы начать использовать цвет. Как вы уже видели в списке под разделом <a href="#что_может_иметь_цвет">Что может иметь цвет</a>, существует множество вещей, к которым можно применить цвет, используя CSS. Давайте взглянем на это с двух сторон: использовать цвет в таблицах стилей ({{Glossary("stylesheet")}}) и добавлять, изменять цвет, используя {{Glossary("JavaScript")}} код.</p>
 
 <h3 id="Цвет_в_таблицах_стилей_CSS">Цвет в таблицах стилей CSS</h3>
 
@@ -355,7 +355,7 @@ th {
 
 <p>There are many situations in which your web site may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own {{interwiki("wikipedia", "color picker")}}, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using <code>"color"</code> as the value of its {{htmlattrxref("type", "input")}} attribute.</p>
 
-<p>The <code>&lt;input&gt;</code> element represents a color only in the {{anch("Hexadecimal string notation", "hexadecimal string notation")}} covered above.</p>
+<p>The <code>&lt;input&gt;</code> element represents a color only in the <a href="#hexadecimal_string_notation">hexadecimal string notation</a> covered above.</p>
 
 <h3 id="Example_Picking_a_color">Example: Picking a color</h3>
 
@@ -437,7 +437,7 @@ colorPicker.addEventListener("change", function(event) {
 
 <h4 id="Fleshing_out_the_palette">Fleshing out the palette</h4>
 
-<p>Once you have decided on your base color, there are plenty of online tools that can help you build out a palette of appropriate colors to use along with your base color by applying color theory to your base color to determine appropriate added colors. Many of these tools also support viewing the colors filtered so you can see what they would look like to people with various forms of color blindness. See {{anch("Color and accessibility")}} for a brief explanation of why this matters.</p>
+<p>Once you have decided on your base color, there are plenty of online tools that can help you build out a palette of appropriate colors to use along with your base color by applying color theory to your base color to determine appropriate added colors. Many of these tools also support viewing the colors filtered so you can see what they would look like to people with various forms of color blindness. See <a href="#color_and_accessibility">Color and accessibility</a> for a brief explanation of why this matters.</p>
 
 <p>A few examples (all free to use as of the time this list was last revised):</p>
 

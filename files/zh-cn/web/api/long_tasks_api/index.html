@@ -7,20 +7,20 @@ translation_of: Web/API/Long_Tasks_API
 
 <h2 id="目的">目的</h2>
 
-<p><em>Long Tasks，</em>这是一个实验性API，它可以直观地告诉我们哪些任务执行耗费了50毫秒或更多时间。50毫秒这个阈值标准来源于《<a href="https://developers.google.com/web/fundamentals/performance/rail">RAIL Model</a>》中 <a href="https://developers.google.com/web/fundamentals/performance/rail#response">"Response: process events in under 50ms"</a> 章节。</p>
+<p><em>Long Tasks，</em>这是一个实验性 API，它可以直观地告诉我们哪些任务执行耗费了 50 毫秒或更多时间。50 毫秒这个阈值标准来源于《<a href="https://developers.google.com/web/fundamentals/performance/rail">RAIL Model</a>》中 <a href="https://developers.google.com/web/fundamentals/performance/rail#response">"Response: process events in under 50ms"</a> 章节。</p>
 
-<p>阻塞主线程达50毫秒或以上的任务会导致以下问题：</p>
+<p>阻塞主线程达 50 毫秒或以上的任务会导致以下问题：</p>
 
 <ul>
  <li><a href="https://www.w3.org/TR/2017/WD-longtasks-1-20170907/#intro">{{domxref("可交互时间")}} 延迟</a></li>
- <li>严重不稳定的交互行为(轻击、单击、滚动、滚轮等)延迟（<a href="https://www.w3.org/TR/2017/WD-longtasks-1-20170907/#intro">High/variable input latency</a>）</li>
+ <li>严重不稳定的交互行为 (轻击、单击、滚动、滚轮等) 延迟（<a href="https://www.w3.org/TR/2017/WD-longtasks-1-20170907/#intro">High/variable input latency</a>）</li>
  <li>严重不稳定的事件回调延迟（<a href="https://www.w3.org/TR/2017/WD-longtasks-1-20170907/#intro">High/variable event handling latency</a>）</li>
  <li>紊乱的动画和滚动（<a href="https://www.w3.org/TR/2017/WD-longtasks-1-20170907/#intro">Janky animations and scrolling</a>）</li>
 </ul>
 
 <h2 id="概念">概念</h2>
 
-<p>长任务（Long task）API使用的一些关键术语或思想。</p>
+<p>长任务（Long task）API 使用的一些关键术语或思想。</p>
 
 <dl>
  <dt>
@@ -28,12 +28,12 @@ translation_of: Web/API/Long_Tasks_API
  </dt>
 </dl>
 
-<p>任何连续不间断的且主UI线程繁忙50毫秒及以上的时间区间。比如以下常规场景：</p>
+<p>任何连续不间断的且主 UI 线程繁忙 50 毫秒及以上的时间区间。比如以下常规场景：</p>
 
 <ul>
  <li>长耗时的事件回调（long running event handlers）</li>
  <li>代价高昂的回流和其他重绘（expensive reflows and other re-renders）</li>
- <li>浏览器在超过50毫秒的事件循环的相邻循环之间所做的工作（work the browser does between different turns of the event loop that exceeds 50 ms）</li>
+ <li>浏览器在超过 50 毫秒的事件循环的相邻循环之间所做的工作（work the browser does between different turns of the event loop that exceeds 50 ms）</li>
 </ul>
 
 <h3 id="浏览上下文的罪魁容器">浏览上下文的罪魁容器</h3>

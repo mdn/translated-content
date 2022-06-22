@@ -7,14 +7,14 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 
 <p>我们已经为主页创建了一个路由。为了完成页面，我们需要更新控制器函数，以从数据库中提取记录的“计数”，并创建一个可用于呈现页面的视图（模板）。</p>
 
-<h2 class="highlight-spanned" id="路由"><span class="highlight-span">路由</span></h2>
+<h2 class="highlight-spanned" id="路由">路由</h2>
 
 <p>在 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes">前面的教程</a>，我们创建 index 页面路由。此处要提醒的是，所有的路由函式，都定义在 <strong>/routes/catalog.js</strong>:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// GET catalog home page.</span>
-router<span class="punctuation token">.</span><span class="keyword token">get</span><span class="punctuation token">(</span><span class="string token">'/'</span><span class="punctuation token">,</span> book_controller<span class="punctuation token">.</span>index<span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">//This actually maps to /catalog/ because we import the route with a /catalog prefix</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// GET catalog home page.
+router.get('/', book_controller.index);  //This actually maps to /catalog/ because we import the route with a /catalog prefix</code></pre>
 
-<p>在 <strong>/controllers/bookController.js</strong> 中，定义回调函数参数(<code>book_controller.index</code>) ：</p>
+<p>在 <strong>/controllers/bookController.js</strong> 中，定义回调函数参数 (<code>book_controller.index</code>) ：</p>
 
 <pre class="brush: js"><code>exports.index = function(req, res, next) {
     res.send('NOT IMPLEMENTED: Site Home Page');
@@ -23,17 +23,17 @@ router<span class="punctuation token">.</span><span class="keyword token">get</s
 
 <p>我们扩展这个控制器函数，以从我们的模型获取信息，然后使用模板（视图）渲染它。</p>
 
-<h2 class="highlight-spanned" id="控制器"><span class="highlight-span">控制器</span></h2>
+<h2 class="highlight-spanned" id="控制器">控制器</h2>
 
-<p>索引控制器函数需要获取以下有关信息，即数据库中有多少<code>Book</code>，<code>BookInstance</code>，可用的<code>BookInstance</code>，<code>Author</code>和<code>Genre</code>记录，将这些数据渲染到模板中，以创建HTML页面，然后将其返回到HTTP响应中。</p>
+<p>索引控制器函数需要获取以下有关信息，即数据库中有多少<code>Book</code>，<code>BookInstance</code>，可用的<code>BookInstance</code>，<code>Author</code>和<code>Genre</code>记录，将这些数据渲染到模板中，以创建 HTML 页面，然后将其返回到 HTTP 响应中。</p>
 
 <div class="note">
-<p><strong>Note:</strong> 我们使用<code><a class="external external-icon" href="http://mongoosejs.com/docs/api.html#model_Model.count" rel="noopener">count()</a></code> 方法来获取每个模型的实例数量。这在具有一组可选条件的模型上进行调用，以匹配第一个参数，而回调放在第二个参数（如<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">使用数据库</a><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">(Mongoose)</a>）中讨论的那样，并且还可以返回 <code>Query</code> ，然后稍后以回调执行它。当数据库返回计数时，将返回该回调，并将错误值（或空值<code>null</code>）作为第一个参数，并将记录计数（如果存在错误，则返回null）作为第二个参数。</p>
+<p><strong>Note:</strong> 我们使用<code><a class="external external-icon" href="http://mongoosejs.com/docs/api.html#model_Model.count" rel="noopener">count()</a></code> 方法来获取每个模型的实例数量。这在具有一组可选条件的模型上进行调用，以匹配第一个参数，而回调放在第二个参数（如<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">使用数据库</a><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">(Mongoose)</a>）中讨论的那样，并且还可以返回 <code>Query</code> ，然后稍后以回调执行它。当数据库返回计数时，将返回该回调，并将错误值（或空值<code>null</code>）作为第一个参数，并将记录计数（如果存在错误，则返回 null）作为第二个参数。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">SomeModel<span class="punctuation token">.</span><span class="function token">count</span><span class="punctuation token">(</span><span class="punctuation token">{</span> a_model_field<span class="punctuation token">:</span> <span class="string token">'match_value'</span> <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">,</span> count<span class="punctuation token">)</span> <span class="punctuation token">{</span>
- <span class="comment token">// ... do something if there is an err</span>
- <span class="comment token">// ... do something with the count if there was no error</span>
- <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">SomeModel.count({ a_model_field: 'match_value' }, function (err, count) {
+ // ... do something if there is an err
+ // ... do something with the count if there was no error
+ });</code></pre>
 </div>
 
 <p>打开 <strong>/controllers/bookController.js</strong>. 在文件顶部附近，您应该看到导出的 <code>index()</code> 函数。</p>
@@ -44,81 +44,81 @@ exports.index = function(req, res, next) {
  res.send('NOT IMPLEMENTED: Site Home Page');
 }</code></pre>
 
-<p>用以下代码片段替换上面的所有代码。这要做的第一件事，是导入(<code>require()</code>)所有模型（以粗体突出高亮显示）。我们需要这样做，是因为我们将使用它们来获取记录的计数。然后它会导入异步模块<em> async</em> 。</p>
+<p>用以下代码片段替换上面的所有代码。这要做的第一件事，是导入 (<code>require()</code>) 所有模型（以粗体突出高亮显示）。我们需要这样做，是因为我们将使用它们来获取记录的计数。然后它会导入异步模块<em> async</em> 。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> Book <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'../models/book'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> Author <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'../models/author'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> Genre <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'../models/genre'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> BookInstance <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'../models/bookinstance'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var Book = require('../models/book');
+var Author = require('../models/author');
+var Genre = require('../models/genre');
+var BookInstance = require('../models/bookinstance');
 
-<span class="keyword token">var</span> <span class="keyword token">async</span> <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'async'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+var async = require('async');
 
-exports<span class="punctuation token">.</span>index <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+exports.index = function(req, res) {
 
-    <span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">parallel</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-        book_count<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-            Book<span class="punctuation token">.</span><span class="function token">count</span><span class="punctuation token">({}, </span>callback<span class="punctuation token">); // Pass an empty object as match condition to find all documents of this collection</span>
-        <span class="punctuation token">}</span><span class="punctuation token">,</span>
-        book_instance_count<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-            BookInstance<span class="punctuation token">.</span><span class="function token">count</span><span class="punctuation token">({}, </span>callback<span class="punctuation token">)</span><span class="punctuation token">;</span>
-        <span class="punctuation token">}</span><span class="punctuation token">,</span>
-        book_instance_available_count<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-            BookInstance<span class="punctuation token">.</span><span class="function token">count</span><span class="punctuation token">(</span><span class="punctuation token">{</span>status<span class="punctuation token">:</span><span class="string token">'Available'</span><span class="punctuation token">}</span><span class="punctuation token">,</span> callback<span class="punctuation token">)</span><span class="punctuation token">;</span>
-        <span class="punctuation token">}</span><span class="punctuation token">,</span>
-        author_count<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-            Author<span class="punctuation token">.</span><span class="function token">count</span><span class="punctuation token">({}, </span>callback<span class="punctuation token">)</span><span class="punctuation token">;</span>
-        <span class="punctuation token">}</span><span class="punctuation token">,</span>
-        genre_count<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-            Genre<span class="punctuation token">.</span><span class="function token">count</span><span class="punctuation token">({}, </span>callback<span class="punctuation token">)</span><span class="punctuation token">;</span>
-        <span class="punctuation token">}</span><span class="punctuation token">,</span>
-    <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span>err<span class="punctuation token">,</span> results<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'index'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Local Library Home'</span><span class="punctuation token">,</span> error<span class="punctuation token">:</span> err<span class="punctuation token">,</span> data<span class="punctuation token">:</span> results <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+    async.parallel({
+        book_count: function(callback) {
+            Book.count({}, callback); // Pass an empty object as match condition to find all documents of this collection
+        },
+        book_instance_count: function(callback) {
+            BookInstance.count({}, callback);
+        },
+        book_instance_available_count: function(callback) {
+            BookInstance.count({status:'Available'}, callback);
+        },
+        author_count: function(callback) {
+            Author.count({}, callback);
+        },
+        genre_count: function(callback) {
+            Genre.count({}, callback);
+        },
+    }, function(err, results) {
+        res.render('index', { title: 'Local Library Home', error: err, data: results });
+    });
+};</code></pre>
 
 <p><code>async.parallel()</code> 方法传递一个对象，其中包含用于获取每个模型计数的函数。这些函数都是在同一时间开始的。当这些函数全部完成时，最终回调将与结果参数中的计数（或错误）一起被调用。</p>
 
-<p>成功时，回调函数调用 <code><a class="external external-icon" href="http://expressjs.com/en/4x/api.html#res.render" rel="noopener">res.render()</a></code>，指定名为 '<strong>index</strong>' 的视图（模板），以及一个对象包含了要插入其中的数据 （这包括我们模型计数的结果对象）。数据以键值对的形式提供，可以使用键在模板中访问。</p>
+<p>成功时，回调函数调用 <code><a class="external external-icon" href="http://expressjs.com/en/4x/api.html#res.render" rel="noopener">res.render()</a></code>，指定名为 '<strong>index</strong>' 的视图（模板），以及一个对象包含了要插入其中的数据（这包括我们模型计数的结果对象）。数据以键值对的形式提供，可以使用键在模板中访问。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 上面的<code>async.parallel()</code>裡的回调函数有点不寻常，因为不管是否出现错误，我们都会渲染页面（通常您可能使用单独的执行路径来处理错误的显示）。</p>
+<p><strong>注意：</strong> 上面的<code>async.parallel()</code>裡的回调函数有点不寻常，因为不管是否出现错误，我们都会渲染页面（通常您可能使用单独的执行路径来处理错误的显示）。</p>
 </div>
 
 <h2 class="highlight-spanned" id="视图">视图</h2>
 
 <p>打开 <strong>/views/index.pug</strong> ，并用底下文字取代它的内容。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">extends</span> <span class="class-name token">layout</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">extends layout
 
 block content
-  h1<span class="operator token">=</span> title
-  p Welcome to #<span class="punctuation token">[</span>em LocalLibrary<span class="punctuation token">]</span><span class="punctuation token">,</span> a very basic Express website developed <span class="keyword token">as</span> a tutorial example on the Mozilla Developer Network<span class="punctuation token">.</span>
+  h1= title
+  p Welcome to #[em LocalLibrary], a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
 
   h1 Dynamic content
 
-  <span class="keyword token">if</span> error
-    p Error getting dynamic content<span class="punctuation token">.</span>
-  <span class="keyword token">else</span>
-    p The library has the following record counts<span class="punctuation token">:</span>
+  if error
+    p Error getting dynamic content.
+  else
+    p The library has the following record counts:
 
     ul
-      li #<span class="punctuation token">[</span>strong Books<span class="punctuation token">:</span><span class="punctuation token">]</span> <span class="operator token">!</span><span class="punctuation token">{</span>data<span class="punctuation token">.</span>book_count<span class="punctuation token">}</span>
-      li #<span class="punctuation token">[</span>strong Copies<span class="punctuation token">:</span><span class="punctuation token">]</span> <span class="operator token">!</span><span class="punctuation token">{</span>data<span class="punctuation token">.</span>book_instance_count<span class="punctuation token">}</span>
-      li #<span class="punctuation token">[</span>strong Copies available<span class="punctuation token">:</span><span class="punctuation token">]</span> <span class="operator token">!</span><span class="punctuation token">{</span>data<span class="punctuation token">.</span>book_instance_available_count<span class="punctuation token">}</span>
-      li #<span class="punctuation token">[</span>strong Authors<span class="punctuation token">:</span><span class="punctuation token">]</span> <span class="operator token">!</span><span class="punctuation token">{</span>data<span class="punctuation token">.</span>author_count<span class="punctuation token">}</span>
-      li #<span class="punctuation token">[</span>strong Genres<span class="punctuation token">:</span><span class="punctuation token">]</span> <span class="operator token">!</span><span class="punctuation token">{</span>data<span class="punctuation token">.</span>genre_count<span class="punctuation token">}</span></code></pre>
+      li #[strong Books:] !{data.book_count}
+      li #[strong Copies:] !{data.book_instance_count}
+      li #[strong Copies available:] !{data.book_instance_available_count}
+      li #[strong Authors:] !{data.author_count}
+      li #[strong Genres:] !{data.genre_count}</code></pre>
 
 <p>这个视图很简单。我们扩展了 <strong>layout.pug</strong> 基本模板，覆盖了名为 '<strong>content</strong>' 的模块 <code>block</code>。第一个<code>h1</code>标题，将是传递给<code>render()</code>函数的<code>title</code> 变量的转义文本 — 请注意 '<code>h1=</code>' 的使用方式，将使得接下來的文本，被视为 JavaScript 表达式。然后我们放入一个介绍本地图书馆的段落。</p>
 
 <p>在动态内容标题下，我们检查从<code>render()</code>函数传入的错误变量，是否已定义。如果是这样，我们列出这个错误。如果不是，我们从<code>data</code>变量中，获取并列出每个模型的副本数量。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 我们没有转义计数值 (i.e. 我们使用 <code>!{}</code> 语法) ，因为计数值已经被计算过了。如果信息是由终端用户提供的，那么我们就会转义該变量，以用于显示。</p>
+<p><strong>注意：</strong> 我们没有转义计数值 (i.e. 我们使用 <code>!{}</code> 语法) ，因为计数值已经被计算过了。如果信息是由终端用户提供的，那么我们就会转义該变量，以用于显示。</p>
 </div>
 
-<h2 class="highlight-spanned" id="它看起来像是">它看起来像是?</h2>
+<h2 class="highlight-spanned" id="它看起来像是">它看起来像是？</h2>
 
-<p>此处，我们应该已经创建了呈现index页面，所需要的每样东西。运行本地图书馆应用，并打开浏览器访问 <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>。如果每样东西都设定正确了，你的网站看起来应该像底下的截图。</p>
+<p>此处，我们应该已经创建了呈现 index 页面，所需要的每样东西。运行本地图书馆应用，并打开浏览器访问 <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>。如果每样东西都设定正确了，你的网站看起来应该像底下的截图。</p>
 
 <p><img alt="Home page - Express Local Library site" src="https://mdn.mozillademos.org/files/14458/LocalLibary_Express_Home.png" style="display: block; height: 440px; margin: 0px auto; width: 1000px;"></p>
 
@@ -130,5 +130,5 @@ block content
 
 <ul>
  <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教程 5: 呈现图书馆数据</a></li>
- <li>继续教程 5 下個部分: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page">书本列表页面</a></li>
+ <li>继续教程 5 下個部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page">书本列表页面</a></li>
 </ul>

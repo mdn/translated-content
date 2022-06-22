@@ -10,7 +10,7 @@ translation_of: Web/CSS/clear
 ---
 <div>{{CSSRef}}</div>
 
-<p> <strong><code>clear</code></strong> <a href="/en-US/docs/CSS" title="CSS">CSS</a> 属性指定一个元素是否必须移动(清除浮动后)到在它之前的浮动元素下面。<code>clear</code> 属性适用于浮动和非浮动元素。</p>
+<p> <strong><code>clear</code></strong> <a href="/en-US/docs/CSS" title="CSS">CSS</a> 属性指定一个元素是否必须移动 (清除浮动后) 到在它之前的浮动元素下面。<code>clear</code> 属性适用于浮动和非浮动元素。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/clear.html")}}</div>
 
@@ -23,7 +23,7 @@ translation_of: Web/CSS/clear
 <p>要被清除的相关浮动元素指的是在相同<a href="https://developer.mozilla.org/en-US/docs/CSS/block_formatting_context" title="CSS/block_formatting_context">块级格式化上下文</a>中的前置浮动。</p>
 
 <div class="note">
-<p><strong>注意：</strong>如果一个元素里只有浮动元素，那它的高度会是0。如果你想要它自适应即包含所有浮动元素，那你需要清除它的子元素。一种方法叫做<strong>clearfix</strong>，即<code>clear</code>一个不浮动的 {{cssxref("::after")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">伪元素</a>。</p>
+<p><strong>注意：</strong>如果一个元素里只有浮动元素，那它的高度会是 0。如果你想要它自适应即包含所有浮动元素，那你需要清除它的子元素。一种方法叫做<strong>clearfix</strong>，即<code>clear</code>一个不浮动的 {{cssxref("::after")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">伪元素</a>。</p>
 
 <pre><code>#container::after {
   content: "";
@@ -52,17 +52,17 @@ clear: unset;</code></pre>
 
 <dl>
  <dt><code>none</code></dt>
- <dd>元素<em>不会</em>向下移动清除之前的浮动。</dd>
+ <dd>元素<em>不会</em>被向下移动以清除浮动。</dd>
  <dt><code>left</code></dt>
- <dd>元素被向下移动用于清除之前的左浮动。</dd>
+ <dd>元素被向下移动以清除左浮动。</dd>
  <dt><code>right</code></dt>
- <dd>元素被向下移动用于清除之前的右浮动。</dd>
+ <dd>元素被向下移动以清除右浮动。</dd>
  <dt><code>both</code></dt>
- <dd>元素被向下移动用于清除之前的左右浮动。</dd>
+ <dd>元素被向下移动以清除左右浮动。</dd>
  <dt><code>inline-start</code></dt>
- <dd>该关键字表示该元素向下移动以清除其包含块的起始侧上的浮动。即在某个区域的左侧浮动或右侧浮动。</dd>
+ <dd>元素被向下移动以清除其包含块的起始侧浮动，即 ltr 时清除左浮动，rtl 时清除右浮动。</dd>
  <dt><code>inline-end</code></dt>
- <dd>该关键字表示该元素向下移动以清除其包含块的末端的浮点，即在某个区域的右侧浮动或左侧浮动。</dd>
+ <dd>元素被向下移动以清除其包含块的结束侧浮动，即 ltr 时清除右浮动，rtl 时清除左浮动。</dd>
  <dt>
  <h3 id="Formal_syntax">Formal syntax</h3>
 

@@ -16,7 +16,9 @@ La méthode **`flat()`** permet de créer un nouveau tableau contenant les élé
 
 ## Syntaxe
 
-    var nouveauTableau = monTableau.flat([profondeur]);
+```js
+var nouveauTableau = monTableau.flat([profondeur]);
+```
 
 ### Paramètres
 

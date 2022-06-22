@@ -435,7 +435,7 @@ for (const button of buttons) {
 ## 이 과정은
 
 - [JavaScript가 뭔가요?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript 첫 걸음](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [JavaScript에 발 담그기](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
 - [뭐가 잘못됐을까요? JavaScript 문제 해결](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
 - [필요한 정보를 저장하기 — 변수](/ko/docs/Learn/JavaScript/First_steps/Variables)
 - [JavaScript 기초 수학 — 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math)

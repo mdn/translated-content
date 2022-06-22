@@ -28,11 +28,11 @@ right: unset;</code>
 <ul>
  <li>当<code>position</code>设置为<code>absolute</code>或<code>fixed</code>时，<code>right</code>属性指定了定位元素右外边距边界与其包含块右边界之间的偏移。</li>
  <li>当<code>position</code>设置为<code>relative</code>时，<code>right</code>属性指定了元素的右边界离开其正常位置的偏移。</li>
- <li>当<code>position</code>设置为<code>sticky</code>时，如果元素在viewport里面，<code>right</code>属性的效果和position为<code>relative</code>等同；如果元素在viewport外面，<code>right</code>属性的效果和position为<code>fixed</code>等同。</li>
+ <li>当<code>position</code>设置为<code>sticky</code>时，如果元素在 viewport 里面，<code>right</code>属性的效果和 position 为<code>relative</code>等同；如果元素在 viewport 外面，<code>right</code>属性的效果和 position 为<code>fixed</code>等同。</li>
  <li>当<code>position</code>设置为<code>static</code>时，<code>right</code>属性无效。</li>
 </ul>
 
-<p>当{{cssxref("left")}}​​​​​​和<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">right</span></font>同时指定时，元素的位置会被重复指定。当容器是从左到右时，<code>left</code>的值会被优先设定；当容器是从右到左时，<code>right</code>的值会被优先设定。</p>
+<p>当{{cssxref("left")}}​​​​​​和 right 同时指定时，元素的位置会被重复指定。当容器是从左到右时，<code>left</code>的值会被优先设定；当容器是从右到左时，<code>right</code>的值会被优先设定。</p>
 
 <p>{{cssinfo}}</p>
 
@@ -42,7 +42,7 @@ right: unset;</code>
 
 <dl>
  <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>可以是负的，正的 或者 null {{cssxref("&lt;length&gt;")}} 表示:
+ <dd>可以是负的，正的 或者 null {{cssxref("&lt;length&gt;")}} 表示：
  <ul>
   <li>对于<strong>绝对定位的元素</strong>，元素右外边距边界与其包含块右边界之间的偏移。</li>
   <li>对于<strong>相对定位定位的元素，</strong>元素的右边界离开其正常位置的偏移。</li>
@@ -51,9 +51,9 @@ right: unset;</code>
  <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
  <dd>代表元素包含块的宽度的百分比 {{cssxref("&lt;percentage&gt;")}}。</dd>
  <dt><code>auto</code></dt>
- <dd>这个关键字表示:
+ <dd>这个关键字表示：
  <ul>
-  <li>对于绝对定位元素，元素将忽略此属性而以{{ Cssxref("left") }}属性为准，如果此时设置<code>width: auto</code>，将基于内容需要的宽度设置宽度；如果<code>left</code>也为<code>auto</code>的话，元素的水平位置就是它假如作为静态(即static)元素时该在的位置。</li>
+  <li>对于绝对定位元素，元素将忽略此属性而以{{ Cssxref("left") }}属性为准，如果此时设置<code>width: auto</code>，将基于内容需要的宽度设置宽度；如果<code>left</code>也为<code>auto</code>的话，元素的水平位置就是它假如作为静态 (即 static) 元素时该在的位置。</li>
   <li>对于相对定位元素，元素相对正常位置的偏移量将基于{{ Cssxref("left") }}属性；如果<code>left</code>也为 <code>auto</code>的话，元素将不会有偏移。</li>
  </ul>
  </dd>

@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>sort()</strong></code> 方法用<a href="https://en.wikipedia.org/wiki/In-place_algorithm">原地算法</a>对数组的元素进行排序，并返回数组。默认排序顺序是在将元素转换为字符串，然后比较它们的UTF-16代码单元值序列时构建的</p>
+<p><code><strong>sort()</strong></code> 方法用<a href="https://en.wikipedia.org/wiki/In-place_algorithm">原地算法</a>对数组的元素进行排序，并返回数组。默认排序顺序是在将元素转换为字符串，然后比较它们的 UTF-16 代码单元值序列时构建的</p>
 
 <p>由于它取决于具体实现，因此无法保证排序的时间和空间复杂性。</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 <dl>
  <dt><code>compareFunction</code> {{optional_inline}}</dt>
- <dd>用来指定按某种顺序进行排列的函数。如果省略，元素按照转换为的字符串的各个字符的Unicode位点进行排序。
+ <dd>用来指定按某种顺序进行排列的函数。如果省略，元素按照转换为的字符串的各个字符的 Unicode 位点进行排序。
  <dl>
   <dt><code>firstEl</code></dt>
   <dd>第一个用于比较的元素。</dd>
@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 <h2 id="Description">描述</h2>
 
-<p>如果没有指明 <code>compareFunction</code> ，那么元素会按照转换为的字符串的诸个字符的Unicode位点进行排序。例如 "Banana" 会被排列到 "cherry" 之前。当数字按由小到大排序时，9 出现在 80 之前，但因为（没有指明 <code>compareFunction</code>），比较的数字会先被转换为字符串，所以在Unicode顺序上 "80" 要比 "9" 要靠前。</p>
+<p>如果没有指明 <code>compareFunction</code> ，那么元素会按照转换为的字符串的诸个字符的 Unicode 位点进行排序。例如 "Banana" 会被排列到 "cherry" 之前。当数字按由小到大排序时，9 出现在 80 之前，但因为（没有指明 <code>compareFunction</code>），比较的数字会先被转换为字符串，所以在 Unicode 顺序上 "80" 要比 "9" 要靠前。</p>
 
 <p>如果指明了 <code>compareFunction</code> ，那么数组会按照调用该函数的返回值排序。即 a 和 b 是两个将要被比较的元素：</p>
 
@@ -64,7 +64,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 <p>所以，比较函数格式如下：</p>
 
 <pre class="brush: js">function compare(a, b) {
-  if (a &lt; b ) {           // 按某种排序标准进行比较, a 小于 b
+  if (a &lt; b ) {           // 按某种排序标准进行比较，a 小于 b
     return -1;
   }
   if (a &gt; b ) {
@@ -300,5 +300,5 @@ var result = mapped.map(function(el){
 <ul>
  <li>{{jsxref("Array.prototype.reverse()")}}</li>
  <li>{{jsxref("String.prototype.localeCompare()")}}</li>
- <li><a href="https://zhuanlan.zhihu.com/p/55338902">[译] V8引擎中的排序</a></li>
+ <li><a href="https://zhuanlan.zhihu.com/p/55338902">[译] V8 引擎中的排序</a></li>
 </ul>

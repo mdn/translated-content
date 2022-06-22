@@ -5,11 +5,11 @@ translation_of: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 ---
 <p>{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}</p>
 
-<p>在使用灯光之前，首先我们需要了解，与定义更广泛的OpenGL不同，WebGL并没有继承OpenGL中灯光的支持。所以你只能由自己完全得控制灯光。幸运得是，这也并不是很难，本文接下来就会介绍完成灯光的基础。</p>
+<p>在使用灯光之前，首先我们需要了解，与定义更广泛的 OpenGL 不同，WebGL 并没有继承 OpenGL 中灯光的支持。所以你只能由自己完全得控制灯光。幸运得是，这也并不是很难，本文接下来就会介绍完成灯光的基础。</p>
 
-<h2 id="在3D空间中模拟现实灯光">在3D空间中模拟现实灯光</h2>
+<h2 id="在3D空间中模拟现实灯光">在 3D 空间中模拟现实灯光</h2>
 
-<p>在3D空间中模拟现实世界的灯光的具体原理和细节绝非本篇文章能够描述清楚的，但是对灯光模型有一定的了解对我们的学习还是很有帮助的。虽然这里没办法深入讲解，但是维基百科中的<a href="https://zh.wikipedia.org/wiki/Phong%E8%91%97%E8%89%B2%E6%B3%95">Phong着色法</a>给出了一个不错的概要介绍，其中包含了最常用的几种光照模型。</p>
+<p>在 3D 空间中模拟现实世界的灯光的具体原理和细节绝非本篇文章能够描述清楚的，但是对灯光模型有一定的了解对我们的学习还是很有帮助的。虽然这里没办法深入讲解，但是维基百科中的<a href="https://zh.wikipedia.org/wiki/Phong%E8%91%97%E8%89%B2%E6%B3%95">Phong 着色法</a>给出了一个不错的概要介绍，其中包含了最常用的几种光照模型。</p>
 
 <p>光源类型可以概括成如下三种：</p>
 
@@ -32,7 +32,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 
 <h2 id="建立顶点法线">建立顶点法线</h2>
 
-<p>首先我们需要做的是建立一个数组来存放立方体所有顶点的法线。由于立方体是一个很简单的物体，所以很容易实现；显然如果是对复杂物体，则法线的计算方法需要更深入的研究。(注：译者调试后发现此处new WebGLFloatArray(...) 可能应该使用new Float32Array())</p>
+<p>首先我们需要做的是建立一个数组来存放立方体所有顶点的法线。由于立方体是一个很简单的物体，所以很容易实现；显然如果是对复杂物体，则法线的计算方法需要更深入的研究。(注：译者调试后发现此处 new WebGLFloatArray(...) 可能应该使用 new Float32Array())</p>
 
 <pre class="brush: js">cubeVerticesNormalBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesNormalBuffer);
@@ -78,17 +78,17 @@ var vertexNormals = [
 gl.bufferData(gl.ARRAY_BUFFER, new WebGLFloatArray(vertexNormals), gl.STATIC_DRAW);
 </pre>
 
-<p>现在我们应该对此非常熟悉了；创建新的buffer，将它和gl.ARRAR_BUFFER绑定在一起，然后通过调用bufferData()把我们的顶点法线数组一起传入。</p>
+<p>现在我们应该对此非常熟悉了；创建新的 buffer，将它和 gl.ARRAR_BUFFER 绑定在一起，然后通过调用 bufferData() 把我们的顶点法线数组一起传入。</p>
 
-<p>然后我们在drawScene()中添加代码，将法线数组和着色器的attribute绑定起来以便着色器能够获取到法线数组的信息。</p>
+<p>然后我们在 drawScene() 中添加代码，将法线数组和着色器的 attribute 绑定起来以便着色器能够获取到法线数组的信息。</p>
 
-<p>（此处变量 vertexNormalAttribute 应该在initShader()函数中声明， 并赋值： vertexNormalAttribute = gl.getAttribLocation(shaderProgram, "aVertexNormal"）; gl.enableVertexAttribArray(vertexNormalAttribute);)</p>
+<p>（此处变量 vertexNormalAttribute 应该在 initShader() 函数中声明， 并赋值： vertexNormalAttribute = gl.getAttribLocation(shaderProgram, "aVertexNormal"）; gl.enableVertexAttribArray(vertexNormalAttribute);)</p>
 
 <pre class="brush: js">gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesNormalBuffer);
 gl.vertexAttribPointer(vertexNormalAttribute, 3, gl.FLOAT, false, 0, 0);
 </pre>
 
-<p>最后，我们（为了读者便于理解， 此处代码应该在setMatrixUniforms() 函数中添加）需要更新下代码，在着色器中建立和传递法线向量矩阵，用这个矩阵来处理当前立方体相对于光源位置法线向量的转换(注：译者调试后发现此处new WebGLFloatArray(...) 应该使用new Float32Array())：</p>
+<p>最后，我们（为了读者便于理解， 此处代码应该在 setMatrixUniforms() 函数中添加）需要更新下代码，在着色器中建立和传递法线向量矩阵，用这个矩阵来处理当前立方体相对于光源位置法线向量的转换 (注：译者调试后发现此处 new WebGLFloatArray(...) 应该使用 new Float32Array())：</p>
 
 <pre class="brush: js">var normalMatrix = mvMatrix.inverse();
 normalMatrix = normalMatrix.transpose();
@@ -136,9 +136,9 @@ gl.uniformMatrix4fv(nUniform, false, new WebGLFloatArray(normalMatrix.flatten())
 
 <p>一旦顶点位置计算完毕，我们就可以获得纹理对应于顶点的坐标，从而计算出顶点的阴影。</p>
 
-<p>我们先根据立方体位置和朝向，通过顶点法线乘以法线矩阵来转换法线。接着我们可以通过计算转换过后的法线与方向向量（即，光来自的方向）的点积来计算得出顶点反射方向光的量。如果计算出的这个值小于0，则我们把值固定设为0，因为你不会有小于0的光。</p>
+<p>我们先根据立方体位置和朝向，通过顶点法线乘以法线矩阵来转换法线。接着我们可以通过计算转换过后的法线与方向向量（即，光来自的方向）的点积来计算得出顶点反射方向光的量。如果计算出的这个值小于 0，则我们把值固定设为 0，因为你不会有小于 0 的光。</p>
 
-<p>当方向光的量计算完，我们可以通过获取环境光并且添加方向光的颜色和要提供的定向光的量来生成光照值（lighting value）。最终结果我们会得到一个RGB值，用于片段着色器调整我们渲染的每一个像素的颜色。</p>
+<p>当方向光的量计算完，我们可以通过获取环境光并且添加方向光的颜色和要提供的定向光的量来生成光照值（lighting value）。最终结果我们会得到一个 RGB 值，用于片段着色器调整我们渲染的每一个像素的颜色。</p>
 
 <h3 id="片段着色器">片段着色器</h3>
 

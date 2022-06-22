@@ -7,10 +7,10 @@ translation_of: Web/HTTP/Content_negotiation
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary">在 <a href="/en-US/docs/Glossary/HTTP">HTTP</a> 协议中，内容协商是这样一种机制，通过为同一 URI 指向的资源提供不同的展现形式，可以使用户代理选择与用户需求相适应的最佳匹配（例如，文档使用的自然语言，图片的格式，或者内容编码形式）。</p>
+<p>在 <a href="/en-US/docs/Glossary/HTTP">HTTP</a> 协议中，内容协商是这样一种机制，通过为同一 URI 指向的资源提供不同的展现形式，可以使用户代理选择与用户需求相适应的最佳匹配（例如，文档使用的自然语言，图片的格式，或者内容编码形式）。</p>
 
 <div class="note">
-<p>注意：HTTP内容协商的一些不好的地方在这篇文章中有介绍<a href="https://wiki.whatwg.org/wiki/Why_not_conneg">a wiki page from WHATWG</a>，HTML5提供其他的选择来进行内容协商，如<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code> element</a>。</p>
+<p>注意：HTTP 内容协商的一些不好的地方在这篇文章中有介绍<a href="https://wiki.whatwg.org/wiki/Why_not_conneg">a wiki page from WHATWG</a>，HTML5 提供其他的选择来进行内容协商，如<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code> element</a>。</p>
 </div>
 
 <h2 id="内容协商的基本原则">内容协商的基本原则</h2>
@@ -70,7 +70,7 @@ translation_of: Web/HTTP/Content_negotiation
  <tbody>
   <tr>
    <td><code>Device-Memory</code></td>
-   <td>标明客户端设备的 RAM 内存大小。该值是个估计值，设备的实际内存值会向2的次方取整，且除以1024。比如512MB的内存对应的值为0.5。</td>
+   <td>标明客户端设备的 RAM 内存大小。该值是个估计值，设备的实际内存值会向 2 的次方取整，且除以 1024。比如 512MB 的内存对应的值为 0.5。</td>
   </tr>
   <tr>
    <td><code>DPR</code></td>
@@ -103,13 +103,13 @@ translation_of: Web/HTTP/Content_negotiation
 
 <h3 id="Accept-Encoding_首部"><code>Accept-Encoding</code> 首部</h3>
 
-<p>{{HTTPHeader("Accept-Encoding")}} 首部明确说明了（接收端）可以接受的内容编码形式（所支持的压缩算法）。该首部的值是一个Q因子清单（例如 br, gzip;q=0.8），用来提示不同编码类型值的优先级顺序。默认值 identity 则优先级最低（除非声明为其他优先级）。</p>
+<p>{{HTTPHeader("Accept-Encoding")}} 首部明确说明了（接收端）可以接受的内容编码形式（所支持的压缩算法）。该首部的值是一个 Q 因子清单（例如 br, gzip;q=0.8），用来提示不同编码类型值的优先级顺序。默认值 identity 则优先级最低（除非声明为其他优先级）。</p>
 
 <p>将 HTTP 消息进行压缩是一种最重要的提升 Web 站点性能的方法。该方法会减小所要传输的数据量的大小，节省可用带宽。浏览器总是会发送该首部，服务器则应该配置为接受它，并且采用一定的压缩方案。</p>
 
 <h3 id="Accept-Language_首部"><code>Accept-Language</code> 首部</h3>
 
-<p>{{HTTPHeader("Accept-Language")}} 首部用来提示用户期望获得的自然语言的优先顺序。该首部的值是一个Q因子清单（例如 "de, en;q=0.7"）。用户代理的图形界面上所采用的语言通常可以用来设置为默认值，但是大多数浏览器允许设置不同优先级的语言选项。</p>
+<p>{{HTTPHeader("Accept-Language")}} 首部用来提示用户期望获得的自然语言的优先顺序。该首部的值是一个 Q 因子清单（例如 "de, en;q=0.7"）。用户代理的图形界面上所采用的语言通常可以用来设置为默认值，但是大多数浏览器允许设置不同优先级的语言选项。</p>
 
 <p>由于<a href="https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy">基于配置信息的信息熵</a>的增加，修改后的值可以用作识别用户的指纹，所以不建议对其进行修改，不过这样的话 Web 站点也就不能依赖该值来揭示用户的真实期望。站点设计者不能过度热衷于通过这个首部来进行语言检测，因为它可能会导致糟糕的用户体验：</p>
 

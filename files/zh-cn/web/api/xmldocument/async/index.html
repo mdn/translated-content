@@ -5,15 +5,15 @@ translation_of: Web/API/XMLDocument/async
 ---
 <p>{{APIRef("DOM")}}{{Non-standard_header}}{{Deprecated_header}}</p>
 
-<p><code>document.async</code> 可以被赋值,用来表明 <code><a href="/zh-cn/DOM/document.load" title="zh-cn/DOM/document.load">document.load</a></code> 被调用时,是使用异步模式还是同步模式进行请求. <code>true</code> 为默认值, 表明该文档应该被异步加载.</p>
+<p><code>document.async</code> 可以被赋值，用来表明 <code><a href="/zh-cn/DOM/document.load" title="zh-cn/DOM/document.load">document.load</a></code> 被调用时，是使用异步模式还是同步模式进行请求。<code>true</code> 为默认值，表明该文档应该被异步加载。</p>
 
-<p>(从Gecko 1.4alpha 开始,文档请求可以以异步模式进行,在这之前,只有同步模式可用.)</p>
+<p>(从 Gecko 1.4alpha 开始，文档请求可以以异步模式进行，在这之前，只有同步模式可用。)</p>
 
 <h2 id="Code_example" name="Code_example">代码示例</h2>
 
 <pre>function loadXMLData(e)
 {
-alert(new XMLSerializer().serializeToString(e.target)); // 返回一个包含querydata.xml内容的字符串.
+alert(new XMLSerializer().serializeToString(e.target)); // 返回一个包含 querydata.xml 内容的字符串。
 }
 
 var xmlDoc = document.implementation.createDocument("", "test", null);

@@ -19,8 +19,10 @@ Le fragment n'est pas [décodé en pourcent](/en-US/docs/Glossary/percent-encodi
 
 ## Syntaxe
 
-    string = object.hash;
-    object.hash = string;
+```js
+string = object.hash;
+object.hash = string;
+```
 
 ### Valeur
 

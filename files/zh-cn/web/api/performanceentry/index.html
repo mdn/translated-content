@@ -12,9 +12,9 @@ translation_of: Web/API/PerformanceEntry
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p><strong><code>PerformanceEntry</code></strong> 对象代表了 performance 时间列表中的单个 metric 数据. 每一个 <em>performance entry 都可以在应用运行过程中通过手动构建 </em><em>{{domxref("PerformanceMark","mark")}}</em> 或者 <em>{{domxref("PerformanceMeasure","measure")}}</em> (例如调用 {{domxref("Performance.mark","mark()")}} 方法) 生成. 此外, Performance entries 在资源加载的时候，也会被动生成（例如图片、script、css等资源加载）</p>
+<p><strong><code>PerformanceEntry</code></strong> 对象代表了 performance 时间列表中的单个 metric 数据。每一个 <em>performance entry 都可以在应用运行过程中通过手动构建 </em><em>{{domxref("PerformanceMark","mark")}}</em> 或者 <em>{{domxref("PerformanceMeasure","measure")}}</em> (例如调用 {{domxref("Performance.mark","mark()")}} 方法) 生成。此外， Performance entries 在资源加载的时候，也会被动生成（例如图片、script、css 等资源加载）</p>
 
-<p class="note">Note: Performance 对象暴露给了 {{domxref("Window")}} 和 {{domxref("Worker")}}. 同时该对象扩展了几个其他对象的属性，包括 {{domxref("PerformanceMark")}}, {{domxref("PerformanceMeasure")}}, {{domxref("PerformanceFrameTiming")}}, {{domxref("PerformanceNavigationTiming")}} 以及 {{domxref("PerformanceResourceTiming")}}.</p>
+<p>Note: Performance 对象暴露给了 {{domxref("Window")}} 和 {{domxref("Worker")}}. 同时该对象扩展了几个其他对象的属性，包括 {{domxref("PerformanceMark")}}, {{domxref("PerformanceMeasure")}}, {{domxref("PerformanceFrameTiming")}}, {{domxref("PerformanceNavigationTiming")}} 以及 {{domxref("PerformanceResourceTiming")}}.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/PerformanceEntry
  <dt>{{domxref("PerformanceEntry.name")}} {{readonlyInline}}</dt>
  <dd>{{domxref("DOMString")}} 该 performance entry 的名字</dd>
  <dt>{{domxref("PerformanceEntry.entryType")}} {{readonlyInline}}</dt>
- <dd>{{domxref("DOMString")}} 代表所上报的 performance metric 的 entryType 类型，例如 "mark". 可以通过 {{domxref("PerformanceEntry.entryType","entryType")}} 查阅完整的 entryType type 类型.</dd>
+ <dd>{{domxref("DOMString")}} 代表所上报的 performance metric 的 entryType 类型，例如 "mark". 可以通过 {{domxref("PerformanceEntry.entryType","entryType")}} 查阅完整的 entryType type 类型。</dd>
  <dt>{{domxref("PerformanceEntry.startTime")}} {{readonlyInline}}</dt>
  <dd> {{domxref("DOMHighResTimeStamp")}}  此为 metric 上报时的时间</dd>
  <dt>{{domxref("PerformanceEntry.duration")}} {{readonlyInline}}</dt>

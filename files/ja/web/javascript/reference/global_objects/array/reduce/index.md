@@ -196,11 +196,9 @@ array.reduce(reducer);
 
 `reduce()` の返値は、コールバック呼び出しの最後の返値である (`85`) となるでしょう。
 
-
 ### 初期値がある場合の reduce() の動作
 
 ここでは、同じアルゴリズムで同じ配列を減らしますが、 `reduce()` の 2 番目の引数として `10` という*初期値*を渡します。
-```
 
 ```js
 [15, 16, 17, 18, 19].reduce( (previousValue, currentValue, currentIndex, array) => previousValue + currentValue, 10 )

@@ -3,11 +3,11 @@ title: 関数
 slug: Web/JavaScript/Reference/Functions
 tags:
   - Function
-  - Functions
-  - Guide
+  - 関数
+  - ガイド
   - JavaScript
   - Parameter
-  - parameters
+  - 引数
 browser-compat: javascript.functions
 translation_of: Web/JavaScript/Reference/Functions
 ---
@@ -143,7 +143,7 @@ function* name([param[, param[, ... param]]]) {
   - : 関数に渡される引数の名前です。
 - `statements`
   - : 関数の本体を構成する文。
- 
+
 ### ジェネレーター関数式 (`function*` 式)
 
 ジェネレーター関数式は、ジェネレーター関数宣言と似ており、同じ構文を持っています （詳細は {{jsxref('Operators/function*', 'function* 式')}} を参照してください）。
@@ -541,7 +541,6 @@ if ('function' === typeof window.noFunc) {
 - {{jsxref("Functions/Default_parameters", "デフォルト引数")}}
 - {{jsxref("Functions/rest_parameters", "残余引数")}}
 - {{jsxref("Functions/arguments", "arguments オブジェクト")}}
-- {{jsxref("Functions/get", "getter")}}
-- {{jsxref("Functions/set", "setter")}}
+- {{jsxref("Functions/get", "ゲッター")}}
+- {{jsxref("Functions/set", "セッター")}}
 - {{jsxref("Functions/Method_definitions", "メソッド定義")}}
-- [関数と関数スコープ](/ja/docs/Web/JavaScript/Reference/Functions)

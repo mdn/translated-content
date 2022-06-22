@@ -3,11 +3,11 @@ title: grid layout 和其它布局方法的联系
 slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 tags:
   - CSS
-  - CSS网格
+  - CSS 网格
   - 指南
 translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
-<p>CSS 网格布局作为实现布局的一个完整系统，其设计使之和css其它部分能协同合作。在这个指南中，我会向你解释网格布局是如何与你正在使用的其它技巧协同合作的。</p>
+<p>CSS 网格布局作为实现布局的一个完整系统，其设计使之和 css 其它部分能协同合作。在这个指南中，我会向你解释网格布局是如何与你正在使用的其它技巧协同合作的。</p>
 
 <h2 id="Grid_and_flexbox">Grid and flexbox</h2>
 
@@ -17,7 +17,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <p>一个简单的例子可以说明一维和二维布局的区别。</p>
 
-<p>这个例子中我用弹性盒布置了一些盒子。容器中有5个元素，它们被设置了伸缩属性，在200px基准上伸缩。</p>
+<p>这个例子中我用弹性盒布置了一些盒子。容器中有 5 个元素，它们被设置了伸缩属性，在 200px 基准上伸缩。</p>
 
 <p>我还设置了{{ cssxref("flex-wrap") }}属性，从而当容器变得太窄时，元素会换到新的一行。</p>
 
@@ -66,9 +66,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <p>从而产生了一个常见问题：如何能让这些元素对齐？这时你需要一种二维布局的方法，你希望通过行和列来控制对齐，是时候该网格登场了。</p>
 
-<h3 id="用CSS网格达成同样布局">用CSS网格达成同样布局</h3>
+<h3 id="用CSS网格达成同样布局">用 CSS 网格达成同样布局</h3>
 
-<p>下例中我用网格创建同样的布局。这次我们有3个1fr的列轨道。我们并不需要给这些子元素设置任何属性，它们会自动按顺序填充到网格的单元格中。你可以看到它们按网格规整的排列，行与行、列与列对齐。当有5个子元素时，第二行的尾部会留出一个空隙。</p>
+<p>下例中我用网格创建同样的布局。这次我们有 3 个 1fr 的列轨道。我们并不需要给这些子元素设置任何属性，它们会自动按顺序填充到网格的单元格中。你可以看到它们按网格规整的排列，行与行、列与列对齐。当有 5 个子元素时，第二行的尾部会留出一个空隙。</p>
 
 <div class="Two_Dimensional_With_Grid">
 <div class="hidden">
@@ -115,13 +115,13 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
  <li>我需要同时按行和列控制布局？那就用网格</li>
 </ul>
 
-<h3 id="从内容出发还是从布局入手">从内容出发还是从布局入手?</h3>
+<h3 id="从内容出发还是从布局入手">从内容出发还是从布局入手？</h3>
 
 <p>除了一维和二维布局之间的区别，还有一种办法决定该使用弹性盒还是网格来布局。弹性盒从内容出发。一个使用弹性盒的理想情形是你有一组元素，希望它们能平均地分布在容器中。你让内容的大小决定每个元素占据多少空间。如果元素换到了新的一行，它们会根据新行的可用空间决定它们自己的大小。</p>
 
-<p>网格则从布局入手。当使用CSS网格时，你先创建网格，然后再把元素放入网格中，或者让自动放置规则根据把元素按照网格排列。我们能创建根据内容改变大小的网格轨道，但整个轨道的大小都会随之改变。</p>
+<p>网格则从布局入手。当使用 CSS 网格时，你先创建网格，然后再把元素放入网格中，或者让自动放置规则根据把元素按照网格排列。我们能创建根据内容改变大小的网格轨道，但整个轨道的大小都会随之改变。</p>
 
-<p>当你使用弹性盒，并发现自己禁用了一些弹性特性，那你可能需要的是CSS网格布局。例如，你给一个弹性元素设置百分比宽度来使它和上一行的元素对齐。这种情况下，网格很可能是一个更好的选择。</p>
+<p>当你使用弹性盒，并发现自己禁用了一些弹性特性，那你可能需要的是 CSS 网格布局。例如，你给一个弹性元素设置百分比宽度来使它和上一行的元素对齐。这种情况下，网格很可能是一个更好的选择。</p>
 
 <h3 id="盒对齐">盒对齐</h3>
 
@@ -132,7 +132,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <p>本系列稍晚的指南中我会正式介绍盒对齐（Box Alignment）和它在网格布局中是如何工作的。不过现在我们先看一个比较弹性盒和网格的简单例子。</p>
 
-<p>在这第一个例子中，我使用了弹性盒，一个容器内有三个元素。wrapper设定了 {{cssxref("min-height")}}，确定了弹性容器的高度。我还在弹性容器中定义了{{cssxref("align-items")}}: <code>flex-end, 因此子元素会从弹性容器尾部开始排列。我还在box1上定义了</code>{{cssxref("align-self")}}<code>属性，这会覆盖默认值，使它延长至容器的高度；box2上也定义了</code>{{cssxref("align-self")}}，所以它会与弹性容器的起点对齐。</p>
+<p>在这第一个例子中，我使用了弹性盒，一个容器内有三个元素。wrapper 设定了 {{cssxref("min-height")}}，确定了弹性容器的高度。我还在弹性容器中定义了{{cssxref("align-items")}}: <code>flex-end, 因此子元素会从弹性容器尾部开始排列。我还在box1上定义了</code>{{cssxref("align-self")}}<code>属性，这会覆盖默认值，使它延长至容器的高度；box2上也定义了</code>{{cssxref("align-self")}}，所以它会与弹性容器的起点对齐。</p>
 
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
@@ -176,7 +176,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <p>{{ EmbedLiveSample('Box_alignment', '300', '230') }}</p>
 
-<h3 id="CSS网格中的对齐">CSS网格中的对齐</h3>
+<h3 id="CSS网格中的对齐">CSS 网格中的对齐</h3>
 
 <div id="Alignment_in_CSS_Grids">
 <p>这个第二个例子使用了网格创建一个同样的布局。这次我们使用了应用于网格布局的盒对齐属性。因此我们是相对网格而不是弹性盒的起始对齐。对于网格来说，我们是让元素在它们各自的网格区域中对齐。在本例中就是一个单元格，但它也可能是多个单元格组成的一个区域。</p>
@@ -228,17 +228,17 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 
 
-<p>我们已经看到了fr单元如何在网格容器中分配一定比例的可用空间到我们的网格轨道。当与{{cssxref("minmax", "minmax()")}} 函数结合使用时，fr单元可以给我们与flexbox中的flex属性非常相似的行为 - 同时仍然可以创建二维布局。</p>
+<p>我们已经看到了 fr 单元如何在网格容器中分配一定比例的可用空间到我们的网格轨道。当与{{cssxref("minmax", "minmax()")}} 函数结合使用时，fr 单元可以给我们与 flexbox 中的 flex 属性非常相似的行为 - 同时仍然可以创建二维布局。</p>
 
-<p>之前我们通过例子验证了一维布局和二维布局的差异，可以发现这两种布局方式对响应式的处理存在着不同。对于弹性布局，当我们拖拽以改变浏览器大小时，弹性盒会根据可用空间适当的调整行中项目的个数。当有足够的空间时，全部的5个项目全部在一行展示，当容器变的过窄时，每行则只能展示一个项目。</p>
+<p>之前我们通过例子验证了一维布局和二维布局的差异，可以发现这两种布局方式对响应式的处理存在着不同。对于弹性布局，当我们拖拽以改变浏览器大小时，弹性盒会根据可用空间适当的调整行中项目的个数。当有足够的空间时，全部的 5 个项目全部在一行展示，当容器变的过窄时，每行则只能展示一个项目。</p>
 
-<p>相较而言，网格布局则始终保持3列轨道。轨道会自动拉伸，但始终会保持我们定义网格时的轨道数量，也就是3个。</p>
+<p>相较而言，网格布局则始终保持 3 列轨道。轨道会自动拉伸，但始终会保持我们定义网格时的轨道数量，也就是 3 个。</p>
 
 <h4 id="自动填充网格轨道">自动填充网格轨道</h4>
 
 <p>我们可以通过使用<code>repeat</code>方法，配合<code>auto-fill</code>和<code>auto-fit</code>属性，创建类似弹性盒的效果，同时保证内容严格按照行和列的固定规则排列。</p>
 
-<p>在接下来的例子中，在<code>repeat</code>方法中使用<code>auto-fill</code>属性替换整数值，并且设置轨道的宽度为200px。这意味着网格布局将会根据容器的宽度创建最多的宽度为200px的列轨道。</p>
+<p>在接下来的例子中，在<code>repeat</code>方法中使用<code>auto-fill</code>属性替换整数值，并且设置轨道的宽度为 200px。这意味着网格布局将会根据容器的宽度创建最多的宽度为 200px 的列轨道。</p>
 
 <div id="Auto-filling_grid_tracks">
 <div class="hidden">
@@ -278,7 +278,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <h3 id="灵活的轨道数量"><strong>灵活的轨道数量</strong></h3>
 
-<p>到这为止就和弹性盒布局不太一样了。在弹性盒布局例子中，子元素在被包裹起来之前大于基准的200px。我们可以用使用网格布局中的<code>auto-fill</code>和{{cssxref("minmax", "minmax()")}}函数实现同样的功能。在这个例子中，我创建了一个用<code>minmax</code>自动填充的轨道。我想要这个轨道的元素最小有200px，最大<code>1fr</code>的宽度。 一旦浏览器计算出有多少个200px会填充到这个容器里面，并算好网格间距，那么，浏览器就会把剩余的空间等分成以最大<code>1fr</code>单位计算的区域给其他元素。</p>
+<p>到这为止就和弹性盒布局不太一样了。在弹性盒布局例子中，子元素在被包裹起来之前大于基准的 200px。我们可以用使用网格布局中的<code>auto-fill</code>和{{cssxref("minmax", "minmax()")}}函数实现同样的功能。在这个例子中，我创建了一个用<code>minmax</code>自动填充的轨道。我想要这个轨道的元素最小有 200px，最大<code>1fr</code>的宽度。 一旦浏览器计算出有多少个 200px 会填充到这个容器里面，并算好网格间距，那么，浏览器就会把剩余的空间等分成以最大<code>1fr</code>单位计算的区域给其他元素。</p>
 
 <div id="A_flexible_number_of_tracks">
 <div class="hidden">
@@ -379,7 +379,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <p>{{ EmbedLiveSample('A_grid_container_as_containing_block', '500', '330') }}</p>
 
-<p>可以看到该项目占据的区域是纵向的第2条线到第4条线，横向起于第1条线。然后使用 <code>top</code> 和 <code>left</code> 属性在该区域中进行偏移。就像通常绝对定位的元素会脱离标准文档流一样，该项目也脱离了文档流，被自动定位规则定位在包含块中（译注：它会叠加在其他元素之上）。因为该项目脱离了文档流，所以不会再创建一个跨越纵向第3条线的轨道。</p>
+<p>可以看到该项目占据的区域是纵向的第 2 条线到第 4 条线，横向起于第 1 条线。然后使用 <code>top</code> 和 <code>left</code> 属性在该区域中进行偏移。就像通常绝对定位的元素会脱离标准文档流一样，该项目也脱离了文档流，被自动定位规则定位在包含块中（译注：它会叠加在其他元素之上）。因为该项目脱离了文档流，所以不会再创建一个跨越纵向第 3 条线的轨道。</p>
 
 <p>你可以试试看，如果把规则 <code>position: absolute</code> 从 <code>.box3</code> 的样式中移除掉，没有定位的元素会如何显示（译注：此时该元素仍表现得像普通的网格项目一样，<code>top</code> 和 <code>left</code> 属性都不起作用）。</p>
 
@@ -393,7 +393,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <h3 id="以网格区域作为父级">以网格区域作为父级</h3>
 
-<p>如果绝对定位的项目嵌套在网格区域内，该区域则成为该项目的参照语境。 在下面的例子中，网格和上例相同，但是这次我们在网格 <code>.box3</code> 里嵌套了一个项目。</p>
+<p>如果绝对定位的项目嵌套在网格区域内，该区域则成为该项目的参照语境。在下面的例子中，网格和上例相同，但是这次我们在网格 <code>.box3</code> 里嵌套了一个项目。</p>
 
 <p><code>.box3</code> 被设置了 <code>position: relative</code> 属性，其子元素设置了定位的偏移属性。此时，子元素的定位的参照语境就变成了网格区域（译注：这个网格区域即是 <code>.box3</code>）。</p>
 
@@ -576,15 +576,15 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 <p>{{ EmbedLiveSample('Display_Contents_After', '400', '330') }}</p>
 </div>
 
-<p>这可以让项目嵌套到网格中，就好像它们是网格的一部分一样，并且可以用它解决 <code>subgrid</code> 值尚未实现时要解决的一些问题。 也可以在 flex 布局中用类似的方法通过 <code>display: contents</code> 使嵌套的项目成为 flex 项目。</p>
+<p>这可以让项目嵌套到网格中，就好像它们是网格的一部分一样，并且可以用它解决 <code>subgrid</code> 值尚未实现时要解决的一些问题。也可以在 flex 布局中用类似的方法通过 <code>display: contents</code> 使嵌套的项目成为 flex 项目。</p>
 
 <p>正如本文中所述，CSS Grid Layout 只是您工具包的一部分。不要害怕在布局时将它与其他布局方法混用，大胆用它获得你想要的效果吧。</p>
 
 <section id="Quick_links">
 <ol>
  <li><a href="/zh-CN/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/zh-CN/docs/Web/CSS/Reference"><strong>CSS索引</strong></a></li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS网格布局</a></li>
+ <li><a href="/zh-CN/docs/Web/CSS/Reference"><strong>CSS 索引</strong></a></li>
+ <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS 网格布局</a></li>
  <li data-default-state="open"><a href="#"><strong>指南</strong></a>
   <ol>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">网格布局的基本概念</a></li>
@@ -595,8 +595,8 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">网格布局中的自动定位</a></li>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">网格布局中的盒模型对齐</a></li>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">网格、逻辑值和书写模式</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS网格布局和可访问性</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS网格布局和渐进增强</a></li>
+   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS 网格布局和可访问性</a></li>
+   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS 网格布局和渐进增强</a></li>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">使用网格实现常见布局</a></li>
   </ol>
  </li>

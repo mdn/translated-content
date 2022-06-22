@@ -22,12 +22,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
    <th scope="row">範例</th>
    <td>
     <pre class="brush: json no-line-numbers  language-json">
-<code class="language-json"><span class="key token">"applications":</span> <span class="punctuation token">{</span>
-  <span class="key token">"gecko":</span> <span class="punctuation token">{</span>
-    <span class="key token">"id":</span> <span class="string token">"addon@example.com"</span><span class="punctuation token">,</span>
-    <span class="key token">"strict_min_version":</span> <span class="string token">"42.0"</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+<code class="language-json">"applications": {
+  "gecko": {
+    "id": "addon@example.com",
+    "strict_min_version": "42.0"
+  }
+}</code></pre>
    </td>
   </tr>
  </tbody>
@@ -48,7 +48,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
 
 <p>查看<a href="https://addons.mozilla.org/en-US/firefox/pages/appversions/">可用Gecko版本</a>。</p>
 
-<h3 class="highlight-spanned" id="套件ID格式"><span class="highlight-span">套件ID格式</span></h3>
+<h3 class="highlight-spanned" id="套件ID格式">套件ID格式</h3>
 
 <p>套件ID格式必須是下列其中一種：</p>
 
@@ -61,9 +61,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
 
 <p>例如：</p>
 
-<pre class="brush:json;auto-links:false no-line-numbers  language-json"><code class="language-json"><span class="key token">"id":</span> <span class="string token">"extensionname@example.org"</span><span class="punctuation token">,</span>
+<pre class="brush:json;auto-links:false no-line-numbers  language-json"><code class="language-json">"id": "extensionname@example.org",
 
-<span class="key token">"id":</span> <span class="string token">"{daf44bf7-a45e-4450-979c-91cf07434c3d}"</span></code></pre>
+"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"</code></pre>
 
 <p> </p>
 
@@ -71,14 +71,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
 
 <p>包含所有可用鍵的範例。註：大多數套件會忽略 <code>strict_max_version</code> 和 <code>update_url</code>。</p>
 
-<pre class="brush: json no-line-numbers  language-json"><code class="language-json"><span class="key token">"applications":</span> <span class="punctuation token">{</span>
-  <span class="key token">"gecko":</span> <span class="punctuation token">{</span>
-    <span class="key token">"id":</span> <span class="string token">"addon@example.com"</span><span class="punctuation token">,</span>
-    <span class="key token">"strict_min_version":</span> <span class="string token">"42.0"</span><span class="punctuation token">,</span>
-    <span class="key token">"strict_max_version":</span> <span class="string token">"50.*"</span><span class="punctuation token">,</span>
-    <span class="key token">"update_url":</span> <span class="string token">"https://example.com/updates.json"</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json no-line-numbers  language-json"><code class="language-json">"applications": {
+  "gecko": {
+    "id": "addon@example.com",
+    "strict_min_version": "42.0",
+    "strict_max_version": "50.*",
+    "update_url": "https://example.com/updates.json"
+  }
+}</code></pre>
 
 <h2 id="瀏覽器兼容">瀏覽器兼容</h2>
 </div>

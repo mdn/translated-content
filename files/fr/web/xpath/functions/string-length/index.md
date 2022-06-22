@@ -12,7 +12,9 @@ La fonction `string-length` retourne le nombre de caractères dans une chaîne d
 
 ### Syntaxe
 
-    string-length( [chaîne] )
+```
+string-length( [chaîne] )
+```
 
 ### Arguments
 

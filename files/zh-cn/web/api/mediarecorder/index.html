@@ -5,13 +5,13 @@ translation_of: Web/API/MediaRecorder
 ---
 <div>{{APIRef("Media Recorder API")}}</div>
 
-<p><strong><code>MediaRecorder</code></strong> 是 <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> 提供的用来进行媒体轻松录制的接口, 他需要通过调用 {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} 构造方法进行实例化.</p>
+<p><strong><code>MediaRecorder</code></strong> 是 <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> 提供的用来进行媒体轻松录制的接口，他需要通过调用 {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} 构造方法进行实例化。</p>
 
 <h2 id="构造函数">构造函数</h2>
 
 <dl>
  <dt>{{domxref("MediaRecorder.MediaRecorder()")}}</dt>
- <dd>    创建一个新的<code>MediaRecorder</code>对象,对指定的{{domxref("MediaStream")}} 对象进行录制,支持的配置项包括设置容器的MIME 类型 (例如<code>"video/webm"</code> 或者 <code>"video/mp4"</code>)和音频及视频的码率或者二者同用一个码率</dd>
+ <dd>    创建一个新的<code>MediaRecorder</code>对象，对指定的{{domxref("MediaStream")}} 对象进行录制，支持的配置项包括设置容器的 MIME 类型 (例如<code>"video/webm"</code> 或者 <code>"video/mp4"</code>) 和音频及视频的码率或者二者同用一个码率</dd>
  <dd></dd>
 </dl>
 
@@ -21,18 +21,18 @@ translation_of: Web/API/MediaRecorder
  <dt>{{domxref("MediaRecorder.mimeType")}} {{readonlyInline}}</dt>
  <dd>    返回 <code>MediaRecorder</code> 对象创建时选择器选择的录制容器的 MIME type</dd>
  <dt>{{domxref("MediaRecorder.state")}} {{readonlyInline}}</dt>
- <dd>    返回录制对象<code>MediaRecorder</code>  的当前状态(闲置中,录制中或者暂停 ) (<code>inactive</code>, <code>recording</code>, or <code>paused</code>.)</dd>
+ <dd>    返回录制对象<code>MediaRecorder</code>  的当前状态 (闲置中，录制中或者暂停 ) (<code>inactive</code>, <code>recording</code>, or <code>paused</code>.)</dd>
  <dt>{{domxref("MediaRecorder.stream")}} {{readonlyInline}}</dt>
- <dd>    返回录制器对象 <code>MediaRecorder </code>创建时构造函数传入的stream对象</dd>
+ <dd>    返回录制器对象 <code>MediaRecorder </code>创建时构造函数传入的 stream 对象</dd>
  <dd></dd>
  <dt>{{domxref("MediaRecorder.ignoreMutedMedia")}}</dt>
  <dd></dd>
- <dd>    用以指定 <code>MediaRecorder</code>是否录制无声的输入源. 如果这个属性是false. 录制器对象<code>MediaRecorder</code>  会录制无声的音频或者黑屏的视频, 默认值是false</dd>
+ <dd>    用以指定 <code>MediaRecorder</code>是否录制无声的输入源。如果这个属性是 false. 录制器对象<code>MediaRecorder</code>  会录制无声的音频或者黑屏的视频，默认值是 false</dd>
  <dd></dd>
  <dt>{{domxref("MediaRecorder.videoBitsPerSecond")}} {{readonlyInline}}</dt>
- <dd>返回视频采用的编码比率. 它可能和构造函数的设置比率不同.  (if it was provided).</dd>
+ <dd>返回视频采用的编码比率。它可能和构造函数的设置比率不同.  (if it was provided).</dd>
  <dt>{{domxref("MediaRecorder.audioBitsPerSecond")}} {{readonlyInline}}</dt>
- <dd>返回音频采用的编码比率,它可能和构造函数中设置的比率不同. (if it was provided).</dd>
+ <dd>返回音频采用的编码比率，它可能和构造函数中设置的比率不同. (if it was provided).</dd>
  <dd></dd>
 </dl>
 
@@ -40,17 +40,17 @@ translation_of: Web/API/MediaRecorder
 
 <dl>
  <dt>{{domxref("MediaRecorder.canRecordMimeType()", "MediaRecorder.isTypeSupported()")}}</dt>
- <dd>返回一个{{domxref("Boolean")}} 值,来表示设置的MIME type 是否被当前用户的设备支持.</dd>
+ <dd>返回一个{{domxref("Boolean")}} 值，来表示设置的 MIME type 是否被当前用户的设备支持。</dd>
  <dt>{{domxref("MediaRecorder.pause()")}}</dt>
  <dd>暂停媒体录制</dd>
  <dt>{{domxref("MediaRecorder.requestData()")}}</dt>
- <dd>请求一个从开始到当前接收到的,存储为{{domxref("Blob")}}类型的录制内容. (或者是返回从上一次调用<code>requestData()</code> 方法之后到现在的内容).  调用这个方法后,录制将会继续进行,但是会创建一个新的<code>Blob</code>对象</dd>
+ <dd>请求一个从开始到当前接收到的，存储为{{domxref("Blob")}}类型的录制内容. (或者是返回从上一次调用<code>requestData()</code> 方法之后到现在的内容).  调用这个方法后，录制将会继续进行，但是会创建一个新的<code>Blob</code>对象</dd>
  <dt>{{domxref("MediaRecorder.resume()")}}</dt>
- <dd>继续录制之前被暂停的录制动作.</dd>
+ <dd>继续录制之前被暂停的录制动作。</dd>
  <dt>{{domxref("MediaRecorder.start()")}}</dt>
- <dd>开始录制媒体,这个方法调用时可以通过给<code>timeslice</code>参数设置一个毫秒值,如果设置这个毫秒值,那么录制的媒体会按照你设置的值进行分割成一个个单独的区块, 而不是以默认的方式录制一个非常大的整块内容.</dd>
+ <dd>开始录制媒体，这个方法调用时可以通过给<code>timeslice</code>参数设置一个毫秒值，如果设置这个毫秒值，那么录制的媒体会按照你设置的值进行分割成一个个单独的区块，而不是以默认的方式录制一个非常大的整块内容。</dd>
  <dt>{{domxref("MediaRecorder.stop()")}}</dt>
- <dd>停止录制. 同时触发{{event("dataavailable")}}事件,返回一个存储<code>Blob</code>内容的录制数据.之后不再记录</dd>
+ <dd>停止录制。同时触发{{event("dataavailable")}}事件，返回一个存储<code>Blob</code>内容的录制数据。之后不再记录</dd>
  <dd></dd>
 </dl>
 
@@ -58,7 +58,7 @@ translation_of: Web/API/MediaRecorder
 
 <dl>
  <dt>{{domxref("MediaRecorder.isTypeSupported()")}}</dt>
- <dd>静态方法，判断给定的MIME类型是否支持。返回{{domxref("Boolean")}}类型的值。</dd>
+ <dd>静态方法，判断给定的 MIME 类型是否支持。返回{{domxref("Boolean")}}类型的值。</dd>
  <dt></dt>
 </dl>
 
@@ -66,17 +66,17 @@ translation_of: Web/API/MediaRecorder
 
 <dl>
  <dt>{{domxref("MediaRecorder.ondataavailable")}}</dt>
- <dd>调用它用来处理 {{event("dataavailable")}} 事件, 该事件可用于获取录制的媒体资源 (在事件的 <code>data</code> 属性中会提供一个可用的 {{domxref("Blob")}} 对象.)</dd>
+ <dd>调用它用来处理 {{event("dataavailable")}} 事件，该事件可用于获取录制的媒体资源 (在事件的 <code>data</code> 属性中会提供一个可用的 {{domxref("Blob")}} 对象.)</dd>
  <dt>{{domxref("MediaRecorder.onerror")}}</dt>
  <dd>An {{event("Event_handlers", "event handler")}} called to handle the {{event("recordingerror")}} event, including reporting errors that arise with media recording. These are fatal errors that stop recording.</dd>
  <dt>{{domxref("MediaRecorder.onpause")}}</dt>
- <dd>用来处理 {{event("pause")}} 事件, 该事件在媒体暂停录制时触发（{{domxref("MediaRecorder.pause()")}}）.</dd>
+ <dd>用来处理 {{event("pause")}} 事件，该事件在媒体暂停录制时触发（{{domxref("MediaRecorder.pause()")}}）.</dd>
  <dt>{{domxref("MediaRecorder.onresume")}}</dt>
- <dd>用来处理 {{event("resume")}} 事件, 该事件在暂停后回复录制视频时触发（{{domxref("MediaRecorder.resume()")}}）.</dd>
+ <dd>用来处理 {{event("resume")}} 事件，该事件在暂停后回复录制视频时触发（{{domxref("MediaRecorder.resume()")}}）.</dd>
  <dt>{{domxref("MediaRecorder.onstart")}}</dt>
- <dd>用来处理 {{event("start")}} 事件, 该事件在媒体开始录制时触发（{{domxref("MediaRecorder.start()")}}）.</dd>
+ <dd>用来处理 {{event("start")}} 事件，该事件在媒体开始录制时触发（{{domxref("MediaRecorder.start()")}}）.</dd>
  <dt>{{domxref("MediaRecorder.onstop")}}</dt>
- <dd>用来处理 {{event("stop")}} 事件, 该事件会在媒体录制结束时、媒体流（{{domxref("MediaStream")}}）结束时、或者调用{{domxref("MediaRecorder.stop()")}} 方法后触发.</dd>
+ <dd>用来处理 {{event("stop")}} 事件，该事件会在媒体录制结束时、媒体流（{{domxref("MediaStream")}}）结束时、或者调用{{domxref("MediaRecorder.stop()")}} 方法后触发。</dd>
 </dl>
 
 <h2 id="事件">事件</h2>

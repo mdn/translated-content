@@ -3,12 +3,12 @@ title: Background Tasks API
 slug: Web/API/Background_Tasks_API
 tags:
   - API
-  - 后台任务API
+  - 后台任务 API
   - 指南
   - 概述
 translation_of: Web/API/Background_Tasks_API
 ---
-<div>{{DefaultAPISidebar("Background Tasks")}}{{draft}}</div>
+<div>{{DefaultAPISidebar("Background Tasks")}}</div>
 
 <p><strong>幕后任务协作调度 API</strong> (也叫幕后任务 API 或者简单称为 <code>requestIdleCallback()</code> API) 提供了由用户代理决定，在空闲时间自动执行队列任务的能力。</p>
 
@@ -24,15 +24,15 @@ translation_of: Web/API/Background_Tasks_API
 
 <ul>
  <li><strong>对非高优先级的任务使用空闲回调。</strong> 已经创建了多少回调，用户系统的繁忙程度，你的回调多久会执行一次（除非你指定了 <code>timeout</code>），这些都是未知的。不能保证每次事件循环（甚至每次屏幕更新）后都能执行空闲回调；如果事件循环用尽了所有可用时间，那你可就倒霉了（再说一遍，除非你用了 <code>timeout</code>）。 </li>
- <li><strong>空闲回调应尽可能不超支分配到的时间。</strong>尽管即使你超出了规定的时间上限，通常来说浏览器、代码、网页也能继续正常运行，这里的时间限制是用来保证系统能留有足够的时间去完成当前的事件循环然后进入下一个循环，而不会导致其他代码卡顿或动画效果延迟。目前，{{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} 有一个50 ms 的上限时间，但实际上你能用的时间比这个少，因为在复杂的页面中事件循环可能已经花费了其中的一部分，浏览器的扩展插件也需要处理时间，等等。</li>
- <li><strong>避免在空闲回调中改变 DOM。 </strong>空闲回调执行的时候，当前帧已经结束绘制了，所有布局的更新和计算也已经完成。如果你做的改变影响了布局， 你可能会强制停止浏览器并重新计算，而从另一方面来看，这是不必要的。 如果你的回调需要改变DOM，它应该使用{{domxref("Window.requestAnimationFrame()")}}来调度它。</li>
- <li><strong>避免运行时间无法预测的任务。</strong> 你的空闲回调必须避免做任何占用时间不可预测的事情。比如说，应该避免做任何会影响页面布局的事情。你也必须避免 执行{{domxref("Promise")}} 的<code>resolve</code>和<code>reject</code>，因为这会在你的回调函数返回后立即引用Promise对象对<code>resolve</code>和<code>reject</code>的处理程序。</li>
- <li><strong>在你需要的时候要用 timeout，但记得只在需要的时候才用。</strong> 使用 timeout可以保证你的代码按时执行，但是在剩余时间不足以强制执行你的代码的同时保证浏览器的性能表现的情况下，timeout就会造成延迟或者动画不流畅。</li>
+ <li><strong>空闲回调应尽可能不超支分配到的时间。</strong>尽管即使你超出了规定的时间上限，通常来说浏览器、代码、网页也能继续正常运行，这里的时间限制是用来保证系统能留有足够的时间去完成当前的事件循环然后进入下一个循环，而不会导致其他代码卡顿或动画效果延迟。目前，{{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} 有一个 50 ms 的上限时间，但实际上你能用的时间比这个少，因为在复杂的页面中事件循环可能已经花费了其中的一部分，浏览器的扩展插件也需要处理时间，等等。</li>
+ <li><strong>避免在空闲回调中改变 DOM。 </strong>空闲回调执行的时候，当前帧已经结束绘制了，所有布局的更新和计算也已经完成。如果你做的改变影响了布局， 你可能会强制停止浏览器并重新计算，而从另一方面来看，这是不必要的。 如果你的回调需要改变 DOM，它应该使用{{domxref("Window.requestAnimationFrame()")}}来调度它。</li>
+ <li><strong>避免运行时间无法预测的任务。</strong> 你的空闲回调必须避免做任何占用时间不可预测的事情。比如说，应该避免做任何会影响页面布局的事情。你也必须避免 执行{{domxref("Promise")}} 的<code>resolve</code>和<code>reject</code>，因为这会在你的回调函数返回后立即引用 Promise 对象对<code>resolve</code>和<code>reject</code>的处理程序。</li>
+ <li><strong>在你需要的时候要用 timeout，但记得只在需要的时候才用。</strong> 使用 timeout 可以保证你的代码按时执行，但是在剩余时间不足以强制执行你的代码的同时保证浏览器的性能表现的情况下，timeout 就会造成延迟或者动画不流畅。</li>
 </ul>
 
 <h3 id="回退到_setTimeout">回退到 setTimeout</h3>
 
-<p>因为后台任务API还是相当新的，而你的代码可能需要在那些不仍不支持此API的浏览器上运行。你可以把 {{domxref("WindowTimers.setTimeout()", "setTimeout()")}} 用作回调选项来做这样的事。这个并不是 {{Glossary("polyfill")}} ，因为它在功能上并不相同； <code>setTimeout()</code> 并不会让你利用空闲时段，而是使你的代码在情况允许时执行你的代码，以使我们可以尽可能地避免造成用户体验性能表现延迟的后果。</p>
+<p>因为后台任务 API 还是相当新的，而你的代码可能需要在那些不仍不支持此 API 的浏览器上运行。你可以把 {{domxref("WindowTimers.setTimeout()", "setTimeout()")}} 用作回调选项来做这样的事。这个并不是 {{Glossary("polyfill")}} ，因为它在功能上并不相同； <code>setTimeout()</code> 并不会让你利用空闲时段，而是使你的代码在情况允许时执行你的代码，以使我们可以尽可能地避免造成用户体验性能表现延迟的后果。</p>
 
 <pre class="brush: js">window.requestIdleCallback = window.requestIdleCallback || function(handler) {
   let startTime = Date.now();
@@ -47,11 +47,11 @@ translation_of: Web/API/Background_Tasks_API
   }, 1);
 }</pre>
 
-<p>如果 {{domxref("Window.requestIdleCallback", "window.requestIdleCallback")}} 是undefined, 我们在这里把它创建出来。这个函数首先会记录我们调用具体实现的时间。我们将用它计算填充程序{{domxref("IdleDeadline.timeRemaining()", "timeRemaining()")}}返回的值 。</p>
+<p>如果 {{domxref("Window.requestIdleCallback", "window.requestIdleCallback")}} 是 undefined, 我们在这里把它创建出来。这个函数首先会记录我们调用具体实现的时间。我们将用它计算填充程序{{domxref("IdleDeadline.timeRemaining()", "timeRemaining()")}}返回的值。</p>
 
-<p>接着，我们调用 {{domxref("WindowTimers.setTimeout", "setTimeout()")}}，并给它传一个函数，在这个函数里，我们传给<code>requestIdleCallback()</code>的具体实现的回调会得以执行。这个回调会接收一个和{{domxref("IdleDeadline")}}相符合的object，此object的 {{domxref("IdleDeadline.didTimeout", "didTimeout")}}被设定为false，并拥有一个{{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} 方法，用来给回调函数50毫秒的开始时间。每次调用<code>timeRemaining()</code>，它都会从开始的50毫秒中减去已逝去的时间，来确定还剩余的时间。</p>
+<p>接着，我们调用 {{domxref("WindowTimers.setTimeout", "setTimeout()")}}，并给它传一个函数，在这个函数里，我们传给<code>requestIdleCallback()</code>的具体实现的回调会得以执行。这个回调会接收一个和{{domxref("IdleDeadline")}}相符合的 object，此 object 的 {{domxref("IdleDeadline.didTimeout", "didTimeout")}}被设定为 false，并拥有一个{{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} 方法，用来给回调函数 50 毫秒的开始时间。每次调用<code>timeRemaining()</code>，它都会从开始的 50 毫秒中减去已逝去的时间，来确定还剩余的时间。</p>
 
-<p>结果是，虽然我们的填充程序不会像真正的<code>requestIdleCallback()</code>将自己限制在当前事件循环传递中的空闲时间内，但它至少将每次传递的运行时间限制为不超过50毫秒。</p>
+<p>结果是，虽然我们的填充程序不会像真正的<code>requestIdleCallback()</code>将自己限制在当前事件循环传递中的空闲时间内，但它至少将每次传递的运行时间限制为不超过 50 毫秒。</p>
 
 <p>我们{{domxref("Window.cancelIdleCallback", "cancelIdleCallback()")}}的具体实现要简单的多。</p>
 
@@ -59,39 +59,39 @@ translation_of: Web/API/Background_Tasks_API
   clearTimeout(id);
 }</pre>
 
-<p>如果<code>cancelIdleCallback()</code>没有定义，它将创建一个来简单地把指定回调ID传递给{{domxref("WindowTimers.clearTimeout", "clearTimeout()")}}。</p>
+<p>如果<code>cancelIdleCallback()</code>没有定义，它将创建一个来简单地把指定回调 ID 传递给{{domxref("WindowTimers.clearTimeout", "clearTimeout()")}}。</p>
 
-<p>现在，尽管效率不高，你的代码也可以在不支持后台任务API的浏览器上运行了。</p>
+<p>现在，尽管效率不高，你的代码也可以在不支持后台任务 API 的浏览器上运行了。</p>
 
 <h2 id="接口">接口</h2>
 
-<p>后台任务API只添加了一个新的接口：</p>
+<p>后台任务 API 只添加了一个新的接口：</p>
 
 <dl>
  <dt>{{domxref("IdleDeadline")}}</dt>
  <dd>这个类型的对象接口空闲回调以提供空闲时段的预估持续时长，以及回调是否因为定时时段过期使其正在运行当中。</dd>
 </dl>
 
-<p>这个API给 {{domxref("Window")}} 接口增加了新的 {{domxref("window.requestIdleCallback", "requestIdleCallback()")}} 和 {{domxref("window.cancelIdleCallback", "cancelIdleCallback()")}} 方法。</p>
+<p>这个 API 给 {{domxref("Window")}} 接口增加了新的 {{domxref("window.requestIdleCallback", "requestIdleCallback()")}} 和 {{domxref("window.cancelIdleCallback", "cancelIdleCallback()")}} 方法。</p>
 
 <h2 id="Example" name="Example">示例</h2>
 
 <p>在这个示例中，我们将了解我们怎么用{{domxref("window.requestIdleCallback", "requestIdleCallback()")}}来在浏览器空闲时运行高耗时、低优先级的任务。此外，这个示例会演示如何使用{{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}}安排文档内容的更新。</p>
 
-<p>在下面，你只会看到示例的HTML和JavaScript。CSS没有展示出来，因为它对理解此功能并不关键。</p>
+<p>在下面，你只会看到示例的 HTML 和 JavaScript。CSS 没有展示出来，因为它对理解此功能并不关键。</p>
 
 <h3 id="HTML_内容">HTML 内容</h3>
 
-<p>为了了解我们的目标，看一下HTML。这里创建了一个盒子 (ID <code>"Container"</code>)来显示操作进度（因为毕竟我们没法知道解码“ <span class="tlid-translation translation" lang="zh-CN"><span title="">量子丝极谱发射</span></span> ”会用多长时间），还创建了一个次要的盒子 (ID <code>"logBox"</code>)来展示文本输出。</p>
+<p>为了了解我们的目标，看一下 HTML。这里创建了一个盒子 (ID <code>"Container"</code>) 来显示操作进度（因为毕竟我们没法知道解码“量子丝极谱发射”会用多长时间），还创建了一个次要的盒子 (ID <code>"logBox"</code>) 来展示文本输出。</p>
 
 <pre>&lt;p&gt;
   演示使用 &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API"&gt;
    协作调度幕后任务 &lt;/a&gt; 使用 &lt;code&gt;requestIdleCallback()&lt;/code&gt;
-  方法.
+  方法。
 &lt;/p&gt;
 
 &lt;div class="container"&gt;
-  &lt;div class="label"&gt;解码<span class="tlid-translation translation" lang="zh-CN"><span title="">量子丝极谱发射</span></span>中...&lt;/div&gt;
+  &lt;div class="label"&gt;解码量子丝极谱发射中...&lt;/div&gt;
   &lt;progress id="progress" value="0"&gt;&lt;/progress&gt;
   &lt;div class="button" id="startButton"&gt;
     开始
@@ -109,7 +109,7 @@ translation_of: Web/API/Background_Tasks_API
   &lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>这个进度框用一个 {{HTMLElement("progress")}} 元素展示进度，随着它标签部分的变化，会呈现进度的数字信息。此外，这还有一个开始按钮（id为'startButton'），用户可以使用它开始数据处理。</p>
+<p>这个进度框用一个 {{HTMLElement("progress")}} 元素展示进度，随着它标签部分的变化，会呈现进度的数字信息。此外，这还有一个开始按钮（id 为'startButton'），用户可以使用它开始数据处理。</p>
 
 <div class="hidden">
 <h3 id="CSS_content">CSS content</h3>
@@ -188,7 +188,7 @@ translation_of: Web/API/Background_Tasks_API
 
 <h3 id="JavaScript_内容">JavaScript 内容</h3>
 
-<p>现在，已经定义了文档结构，再构造出JavaS代码就可以运行了。目标：可以<span class="tlid-translation translation" lang="zh-CN"><span title="">向队列添加调用函数的请求，并具有一个空闲回调，空闲回调会在系统空闲且空闲时间足够长以取得进展时运行。</span></span></p>
+<p>现在，已经定义了文档结构，再构造出 JavaScript 代码就可以运行了。目标：可以向队列添加调用函数的请求，并具有一个空闲回调，空闲回调会在系统空闲且空闲时间足够长以取得进展时运行。</p>
 
 <h4 id="变量声明">变量声明</h4>
 
@@ -214,7 +214,7 @@ let startButtonElem = document.getElementById("startButton");
 let logElem = document.getElementById("log");
 </pre>
 
-<p>接下来我们有了引用要交互DOM元素的变量。这些元素是：</p>
+<p>接下来我们有了引用要交互 DOM 元素的变量。这些元素是：</p>
 
 <ul>
  <li><code>totalTaskCountElem</code>  {{HTMLElement("span")}} 用于插入我们在进度框显示状态中创建的任务总数。</li>
@@ -290,11 +290,11 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 <p>为了把任务排成队列，我们把一个对象（object）<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">push</a>到<code>taskList</code>数组；此对象包含<code>taskHandler</code>和<code>taskData</code>的值（命名分别是<code>handler</code>和<code>data</code>），然后体现我们队列里任务总数的<code>totalTaskCount</code>增加（我们不会在从队列中移除任务时减少<code>totalTaskCount</code>）。</p>
 
-<p>接下来，我们来检查我们是否已经创建了一个空闲回调；如果<code>taskHandle</code>是0，那我们得知还没有空闲回调，所以我们调用{{domxref("Window.requestIdleCallback", "requestIdleCallback()")}}去创建一个。它被配置为调用一个叫<code>runTaskQueue()</code>的函数（我们随后会对其研究），它的<code>timeout</code>为1秒，因此，即使没有任何实际可用的空闲时间，它也至少会每秒运行一次。</p>
+<p>接下来，我们来检查我们是否已经创建了一个空闲回调；如果<code>taskHandle</code>是 0，那我们得知还没有空闲回调，所以我们调用{{domxref("Window.requestIdleCallback", "requestIdleCallback()")}}去创建一个。它被配置为调用一个叫<code>runTaskQueue()</code>的函数（我们随后会对其研究），它的<code>timeout</code>为 1 秒，因此，即使没有任何实际可用的空闲时间，它也至少会每秒运行一次。</p>
 
 <h5 id="执行任务">执行任务</h5>
 
-<p>我们的空闲回调处理方法，<code>runTaskQueue()</code>，将在浏览器确定有足够的可用空闲时间让我们做一些我们的工作时，或者1秒的<code>timeout</code>到期时被调用。这个方法的作用是执行队列中的任务。</p>
+<p>我们的空闲回调处理方法，<code>runTaskQueue()</code>，将在浏览器确定有足够的可用空闲时间让我们做一些我们的工作时，或者 1 秒的<code>timeout</code>到期时被调用。这个方法的作用是执行队列中的任务。</p>
 
 <pre class="brush: js">function runTaskQueue(deadline) {
   while ((deadline.timeRemaining() &gt; 0 || deadline.didTimeout) &amp;&amp; taskList.length) {
@@ -313,7 +313,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 }
 </pre>
 
-<p><code>runTaskQueue()</code>的核心是一个循环，只要有剩余时间（通过检查{{domxref("deadline.timeRemaining", "IdleDeadline.timeRemaining")}}来确认它大于0），或者已经达到了timeout期限（{{domxref("IdleDeadline.didTimeout", "deadline.didTimeout")}}值为真），且任务列表中有任务就会一直持续。</p>
+<p><code>runTaskQueue()</code>的核心是一个循环，只要有剩余时间（通过检查{{domxref("deadline.timeRemaining", "IdleDeadline.timeRemaining")}}来确认它大于 0），或者已经达到了 timeout 期限（{{domxref("IdleDeadline.didTimeout", "deadline.didTimeout")}}值为真），且任务列表中有任务就会一直持续。</p>
 
 <p>对队列中每个我们有时间执行的任务，我们做以下操作：</p>
 
@@ -324,15 +324,15 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
  <li>我们调用一个方法，<code>scheduleStatusRefresh()</code>，去处理调度一个屏幕更新来体现我们进度的变化。</li>
 </ol>
 
-<p>当时间耗尽，如果列表里还有任务，我们再次调用{{domxref("Window.requestIdleCallback", "requestIdleCallback()")}}使我们可以在下次有可用空闲时间时继续运行这些任务。如果队列是空的，我们将把<code>taskHandle</code>设置为0来表示我们没有回调日程了。这样，下一次<code>enqueueTask()</code>被调用时，我们就知道要请求一个回调了。</p>
+<p>当时间耗尽，如果列表里还有任务，我们再次调用{{domxref("Window.requestIdleCallback", "requestIdleCallback()")}}使我们可以在下次有可用空闲时间时继续运行这些任务。如果队列是空的，我们将把<code>taskHandle</code>设置为 0 来表示我们没有回调日程了。这样，下一次<code>enqueueTask()</code>被调用时，我们就知道要请求一个回调了。</p>
 
 <h4 id="更新状态显示">更新状态显示</h4>
 
-<p>我们想要能够做的一件事是根据记录输出和进度信息来更新文档。然后在空闲回调中改变DOM是不安全的。作为替代，我们使用 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 来让浏览器在可以安全地更新显示时通知我们。</p>
+<p>我们想要能够做的一件事是根据记录输出和进度信息来更新文档。然后在空闲回调中改变 DOM 是不安全的。作为替代，我们使用 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 来让浏览器在可以安全地更新显示时通知我们。</p>
 
 <h5 id="安排显示的更新">安排显示的更新</h5>
 
-<p>调用<code>scheduleStatusRefresh()</code>函数来安排DOM的改变。</p>
+<p>调用<code>scheduleStatusRefresh()</code>函数来安排 DOM 的改变。</p>
 
 <pre class="brush: js">function scheduleStatusRefresh() {
     if (!statusRefreshScheduled) {
@@ -346,7 +346,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 <h5 id="更新显示">更新显示</h5>
 
-<p><code>updateDisplay()</code>函数负责绘制进度框的内容和记录。当DOM的状况安全，我们可以在下次渲染过程中申请改变时，浏览器会调用它。</p>
+<p><code>updateDisplay()</code>函数负责绘制进度框的内容和记录。当 DOM 的状况安全，我们可以在下次渲染过程中申请改变时，浏览器会调用它。</p>
 
 <pre class="brush: js">function updateDisplay() {
   let scrolledToEnd = logElem.scrollHeight - logElem.clientHeight &lt;= logElem.scrollTop + 1;
@@ -390,7 +390,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 <h4 id="向记录添加文本">向记录添加文本</h4>
 
-<p><code>log()</code>函数可以向记录中添加指定的文本。因为我们不知道调用<code>log()</code>的时候是否可以立即安全地联系DOM，我们将缓存记录文本一直到可以安全更新。在上面，在<code>updateDisplay</code><code>()</code>的代码中，你可以找到更新动画帧时，实际添加记录的代码。</p>
+<p><code>log()</code>函数可以向记录中添加指定的文本。因为我们不知道调用<code>log()</code>的时候是否可以立即安全地联系 DOM，我们将缓存记录文本一直到可以安全更新。在上面，在<code>updateDisplay</code><code>()</code>的代码中，你可以找到更新动画帧时，实际添加记录的代码。</p>
 
 <pre class="brush: js">function log(text) {
   if (!logFragment) {
@@ -402,9 +402,9 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
   logFragment.appendChild(el);
 }</pre>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">首先，如果当前不存在一个名为</span></span><code>logFragment</code><span class="tlid-translation translation" lang="zh-CN"><span title="">的</span></span> {{domxref("DocumentFragment")}} <span class="tlid-translation translation" lang="zh-CN"><span title="">对象。</span> <span title="">该元素是伪DOM，我们可以在其中插入元素，而无需立即更改主DOM本身。</span></span></p>
+<p>首先，如果当前不存在一个名为<code>logFragment</code>的 {{domxref("DocumentFragment")}} 对象。该元素是伪 DOM，我们可以在其中插入元素，而无需立即更改主 DOM 本身。</p>
 
-<p>然后我们创建一个新的元素， <span class="tlid-translation translation" lang="zh-CN"><span title="">并将其内容设置为与输入文本匹配</span></span>。接下来我们向<code>logFragment</code>中的伪DOM末尾添加一个新的元素。<code>logFragment</code>将会累积记录条目直到下次因DOM改变而调用<code>updateDisplay()</code>的时候。</p>
+<p>然后我们创建一个新的元素，并将其内容设置为与输入文本匹配。接下来我们向<code>logFragment</code>中的伪 DOM 末尾添加一个新的元素。<code>logFragment</code>将会累积记录条目直到下次因 DOM 改变而调用<code>updateDisplay()</code>的时候。</p>
 
 <h3 id="运行任务">运行任务</h3>
 
@@ -412,7 +412,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 <h4 id="任务处理器">任务处理器</h4>
 
-<p><code>logTaskHandler()</code>，将是我们用来作为任务处理器的函数，也是用作任务对象<code>handler</code>属性的值。它是一个简单的为每个任务向记录输出大量内容的函数。 <span class="tlid-translation translation" lang="zh-CN"><span title="">在您自己的应用程序中，您可以将此代码替换为您希望在空闲时间执行的任何任务</span></span> 。只要记住任何DOM变化都需要通过 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 处理。</p>
+<p><code>logTaskHandler()</code>，将是我们用来作为任务处理器的函数，也是用作任务对象<code>handler</code>属性的值。它是一个简单的为每个任务向记录输出大量内容的函数。在您自己的应用程序中，您可以将此代码替换为您希望在空闲时间执行的任何任务。只要记住任何 DOM 变化都需要通过 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 处理。</p>
 
 <pre class="brush: js">function logTaskHandler(data) {
   log("&lt;strong&gt;Running task #" + currentTaskNumber + "&lt;/strong&gt;");
@@ -459,13 +459,13 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 
 <p><code>decodeTechnoStuff()</code>开始执行时会将任务总数（到现在为止添加到队列中的任务数）清零，并随后调用<code>updateDisplay()</code>以重置显示为“没有任何事发生”的状态。</p>
 
-<p>这个示例去创建一个随机数量（100到200之间）的任务。为此，我们使用{{jsxref("Math.random()")}}文档中作为示例提供的<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive"><code>getRandomIntInclusive()</code></a>以获得要创建的任务数。</p>
+<p>这个示例去创建一个随机数量（100 到 200 之间）的任务。为此，我们使用{{jsxref("Math.random()")}}文档中作为示例提供的<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive"><code>getRandomIntInclusive()</code></a>以获得要创建的任务数。</p>
 
 <p>随后我们开始一个循环以创建实际的任务。对于每个任务，我们创建一个对象，<code>taskData</code>，其中包含两个属性：</p>
 
 <ul>
  <li><code>count</code> 是要从任务输出到记录中的字符串数量。</li>
- <li><code>text</code> <span class="tlid-translation translation" lang="zh-CN"><span title="">是要输出到日志的文本（由</span></span><code>count</code><span class="tlid-translation translation" lang="zh-CN"><span title="">指定的次数）。</span></span></li>
+ <li><code>text</code> 是要输出到日志的文本（由<code>count</code>指定的次数）。</li>
 </ul>
 
 <p>我们调用<code>enqueueTask()</code>来将每个任务排入队列，将<code>logTaskHandler</code><code>()</code>传入作为处理函数，将<code>taskData</code>传入，待处理函数调用时传入其中。</p>
@@ -481,20 +481,7 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Background Tasks")}}</td>
-   <td>{{Spec2("Background Tasks")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

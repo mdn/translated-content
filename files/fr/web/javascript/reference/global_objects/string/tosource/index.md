@@ -17,8 +17,10 @@ La méthode **`toSource()`** permet de renvoyer une chaîne de caractères repr�
 
 ## Syntaxe
 
-    String.toSource()
-    str.toSource()
+```js
+String.toSource()
+str.toSource()
+```
 
 ### Valeur de retour
 

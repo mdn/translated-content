@@ -29,18 +29,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 
 <h3 id="异常">异常</h3>
 
-<p>如果target或者newTarget不是构造函数，抛出{{jsxref("TypeError")}},异常。</p>
+<p>如果 target 或者 newTarget 不是构造函数，抛出{{jsxref("TypeError")}},异常。</p>
 
 <h2 id="描述">描述</h2>
 
-<p><code>Reflect.construct</code>允许你使用可变的参数来调用构造函数 ，这和使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new操作符</a>搭配<a href="https://developer.mozilla.org/ zh-CN/docs/Web/JavaScript/Reference/Operators/new">对象展开符</a>调用一样。</p>
+<p><code>Reflect.construct</code>允许你使用可变的参数来调用构造函数 ，这和使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new 操作符</a>搭配<a href="https://developer.mozilla.org/ zh-CN/docs/Web/JavaScript/Reference/Operators/new">对象展开符</a>调用一样。</p>
 
 <pre class="brush: js">var obj = new Foo(...args);
 var obj = Reflect.construct(Foo, args); </pre>
 
 <h3 id="Reflect.construct_vs_Object.create"><code>Reflect.construct()</code> vs <code>Object.create()</code></h3>
 
-<p><code>在新语法Reflect</code>出现之前，是通过明确指定构造函数和原型对象（ 使用{{jsxref("Object.create()")}}）来创建一个对象的。</p>
+<p><code>在新语法 Reflect</code>出现之前，是通过明确指定构造函数和原型对象（ 使用{{jsxref("Object.create()")}}）来创建一个对象的。</p>
 
 <pre class="brush: js">function OneClass() {
     this.name = 'one';
@@ -50,10 +50,10 @@ function OtherClass() {
     this.name = 'other';
 }
 
-// 创建一个对象:
+// 创建一个对象：
 var obj1 = Reflect.construct(OneClass, args, OtherClass);
 
-// 与上述方法等效:
+// 与上述方法等效：
 var obj2 = Object.create(OtherClass.prototype);
 OneClass.apply(obj2, args);
 
@@ -70,7 +70,7 @@ console.log(obj2 instanceof OtherClass); // true</pre>
 
 <p>当使用<code>Object.create()</code>和{{jsxref("Function.prototype.apply()")}}时，如果不使用<code>new</code>操作符调用构造函数，构造函数内部的<code>new.target</code>值会指向<code>undefined</code>。</p>
 
-<p>当调用<code>Reflect.construct()</code>来创建对象，<code>new.target</code>值会自动指定到<code>target</code>（或者newTarget，前提是newTarget指定了）。</p>
+<p>当调用<code>Reflect.construct()</code>来创建对象，<code>new.target</code>值会自动指定到<code>target</code>（或者 newTarget，前提是 newTarget 指定了）。</p>
 
 <pre class="brush: js">function OneClass() {
     console.log('OneClass');
@@ -82,18 +82,18 @@ function OtherClass() {
 }
 
 var obj1 = Reflect.construct(OneClass, args);
-// 输出:
+// 输出：
 //     OneClass
 //     function OneClass { ... }
 
 var obj2 = Reflect.construct(OneClass, args, OtherClass);
-// 输出:
+// 输出：
 //     OneClass
 //     function OtherClass { ... }
 
 var obj3 = Object.create(OtherClass.prototype);
 OneClass.apply(obj3, args);
-// 输出:
+// 输出：
 //     OneClass
 //     undefined</pre>
 

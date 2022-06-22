@@ -5,10 +5,10 @@ translation_of: Web/API/CanvasRenderingContext2D/clearRect
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.clearRect()</code></strong>是Canvas 2D API的方法，这个方法通过把像素设置为透明以达到擦除一个矩形区域的目的。</p>
+<p><strong><code>CanvasRenderingContext2D.clearRect()</code></strong>是 Canvas 2D API 的方法，这个方法通过把像素设置为透明以达到擦除一个矩形区域的目的。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意:</strong> 如果没有依照 <a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#%E7%BB%98%E5%88%B6%E8%B7%AF%E5%BE%84">绘制路径</a> 的步骤，使用 <code>clearRect()</code> 会导致意想之外的结果。请确保在调用 <code>clearRect()</code>之后绘制新内容前调用{{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} 。</p>
+<p><strong>注意：</strong> 如果没有依照 <a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#%E7%BB%98%E5%88%B6%E8%B7%AF%E5%BE%84">绘制路径</a> 的步骤，使用 <code>clearRect()</code> 会导致意想之外的结果。请确保在调用 <code>clearRect()</code>之后绘制新内容前调用{{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} 。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -16,7 +16,7 @@ translation_of: Web/API/CanvasRenderingContext2D/clearRect
 <pre class="syntaxbox notranslate">void <em>ctx</em>.clearRect(<em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>);
 </pre>
 
-<p> <code>clearRect()</code> 方法在一个矩形区域内设置所有像素都是透明的(<code>rgba(0,0,0,0)</code>)。这个矩形范围的左上角在 <code>(x, y)</code>，宽度和高度分别由 <code>width</code> 和<code>height</code>确定。</p>
+<p> <code>clearRect()</code> 方法在一个矩形区域内设置所有像素都是透明的 (<code>rgba(0,0,0,0)</code>)。这个矩形范围的左上角在 <code>(x, y)</code>，宽度和高度分别由 <code>width</code> 和<code>height</code>确定。</p>
 
 <h3 id="参数">参数</h3>
 
@@ -52,7 +52,7 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<p>下面代码中被清除的区域是一个矩形，它的左上点坐标在(10, 10)，宽度和高度分别是120和100像素。</p>
+<p>下面代码中被清除的区域是一个矩形，它的左上点坐标在 (10, 10)，宽度和高度分别是 120 和 100 像素。</p>
 
 <pre class="brush: js; highlight:[11] notranslate">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
@@ -80,20 +80,7 @@ ctx.clearRect(10, 10, 120, 100);</pre>
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-clearrect", "CanvasRenderingContext2D.clearRect")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

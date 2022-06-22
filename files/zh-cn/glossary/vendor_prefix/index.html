@@ -8,23 +8,23 @@ translation_of: Glossary/Vendor_Prefix
 <p>浏览器厂商们有时会给实验性的或者非标准的 CSS 属性和 JavaScript API 添加前缀，这样开发者就可以用这些新的特性进行试验，同时（理论上）防止他们的试验代码被依赖，从而在标准化过程中破坏 web 开发者的代码。开发者应该等到浏览器行为标准化之后再使用未加前缀的属性。</p>
 
 <div class="note">
-<p>浏览器厂商们正在努力停止使用前缀来表示实验性质的代码的行为。Web开发者一直在生产环境的网站上使用这些实验性代码，这使得浏览器厂商更难保证浏览器兼容性和处理新特性；这也伤害了更小众的浏览器，它们被迫添加其他浏览器前缀以加载热门网站。</p>
+<p>浏览器厂商们正在努力停止使用前缀来表示实验性质的代码的行为。Web 开发者一直在生产环境的网站上使用这些实验性代码，这使得浏览器厂商更难保证浏览器兼容性和处理新特性；这也伤害了更小众的浏览器，它们被迫添加其他浏览器前缀以加载热门网站。</p>
 
 <p>现在的趋势是将实验性功能添加在需要用户自行设置偏好或标记（flag）的地方，同时编写一个更小规模的规范，以更快达到稳定状态。</p>
 </div>
 
 <h2 id="CSS_前缀">CSS 前缀</h2>
 
-<p>主流浏览器引擎前缀:</p>
+<p>主流浏览器引擎前缀：</p>
 
 <ul>
- <li><code>-webkit-</code> （谷歌，Safari，新版Opera浏览器，以及几乎所有iOS系统中的浏览器（包括 iOS 系统中的火狐浏览器）；基本上所有基于WebKit 内核的浏览器）</li>
+ <li><code>-webkit-</code> （谷歌，Safari，新版 Opera 浏览器，以及几乎所有 iOS 系统中的浏览器（包括 iOS 系统中的火狐浏览器）；基本上所有基于 WebKit 内核的浏览器）</li>
  <li><code>-moz-</code> （火狐浏览器）</li>
- <li><code>-o-</code> （旧版Opera浏览器）</li>
- <li><code>-ms-</code> （IE浏览器 和 Edge浏览器）</li>
+ <li><code>-o-</code> （旧版 Opera 浏览器）</li>
+ <li><code>-ms-</code> （IE 浏览器 和 Edge 浏览器）</li>
 </ul>
 
-<p>示例:</p>
+<p>示例：</p>
 
 <pre class="notranslate"><em>-webkit-</em>transition: all 4s ease;
 <em>-moz-</em>transition: all 4s ease;
@@ -34,17 +34,17 @@ transition: all 4s ease; </pre>
 
 <h2 id="API_前缀">API 前缀</h2>
 
-<p>过去，浏览器引擎也使用前缀修饰实验性质的API。如果整个接口都是实验性的，前缀修饰的就是接口名（但不包括其中的属性或者方法）。如果将一个实验性的接口或者方法添加到一个标准化的接口中，这个新增的接口或者方法被前缀修饰。 </p>
+<p>过去，浏览器引擎也使用前缀修饰实验性质的 API。如果整个接口都是实验性的，前缀修饰的就是接口名（但不包括其中的属性或者方法）。如果将一个实验性的接口或者方法添加到一个标准化的接口中，这个新增的接口或者方法被前缀修饰。 </p>
 
 <h3 id="接口前缀">接口前缀</h3>
 
 <p>需要使用大写的前缀修饰接口名：</p>
 
 <ul>
- <li><code>WebKit</code> (谷歌, Safari, 新版Opera浏览器, 以及几乎所有iOS系统中的浏览器(包括iOS 系统中的火狐浏览器); 简单的说，所有基于WebKit 内核的浏览器)</li>
+ <li><code>WebKit</code> (谷歌，Safari, 新版 Opera 浏览器，以及几乎所有 iOS 系统中的浏览器 (包括 iOS 系统中的火狐浏览器); 简单的说，所有基于 WebKit 内核的浏览器)</li>
  <li><code>Moz</code> (火狐浏览器)</li>
- <li><code>O</code> (旧版Opera浏览器)</li>
- <li><code>MS</code> (IE浏览器 和 Edge浏览器)</li>
+ <li><code>O</code> (旧版 Opera 浏览器)</li>
+ <li><code>MS</code> (IE 浏览器 和 Edge 浏览器)</li>
 </ul>
 
 <h3 id="属性和方法前缀">属性和方法前缀</h3>
@@ -52,13 +52,13 @@ transition: all 4s ease; </pre>
 <p>需要使用小写的前缀修饰属性或者方法</p>
 
 <ul>
- <li><code>webkit</code> (谷歌, Safari, 新版Opera浏览器, 以及几乎所有iOS系统中的浏览器(包括iOS 系统中的火狐浏览器); 简单的说，所有基于WebKit 内核的浏览器)</li>
+ <li><code>webkit</code> (谷歌，Safari, 新版 Opera 浏览器，以及几乎所有 iOS 系统中的浏览器 (包括 iOS 系统中的火狐浏览器); 简单的说，所有基于 WebKit 内核的浏览器)</li>
  <li><code>moz</code> (火狐浏览器)</li>
- <li><code>o</code> (旧版Opera浏览器等</li>
- <li><code>ms</code> (IE浏览器 和 Edge浏览器)</li>
+ <li><code>o</code> (旧版 Opera 浏览器等</li>
+ <li><code>ms</code> (IE 浏览器 和 Edge 浏览器)</li>
 </ul>
 
-<p>示例:</p>
+<p>示例：</p>
 
 <pre class="brush: js notranslate">var requestAnimationFrame = window.requestAnimationFrame ||
                             window.mozRequestAnimationFrame ||
@@ -71,7 +71,7 @@ transition: all 4s ease; </pre>
 <h3 id="基础知识">基础知识</h3>
 
 <ul>
- <li><span>维基百科{{Interwiki("wikipedia", "CSS_hack#Browser_prefixes", "浏览器引擎前缀（</span>Vendor prefix<span>）")}} </span></li>
+ <li>维基百科{{Interwiki("wikipedia", "CSS_hack#Browser_prefixes", "浏览器引擎前缀（Vendor prefix）")}} </li>
 </ul>
 
 <p>{{QuickLinksWithSubpages("/zh-CN/docs/Glossary")}}</p>

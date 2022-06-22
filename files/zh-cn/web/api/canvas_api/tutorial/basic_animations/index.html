@@ -12,7 +12,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}</div>
 
-<div class="summary">
+<div>
 <p>由于我们是用 JavaScript 去操控 {{HTMLElement("canvas")}} 对象，这样要实现一些交互动画也是相当容易的。在本章中，我们将看看如何做一些基本的动画。</p>
 </div>
 
@@ -20,11 +20,11 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 
 <h2 id="Basic_animation_steps" name="Basic_animation_steps">动画的基本步骤</h2>
 
-<p>你可以通过以下的步骤来画出一帧:</p>
+<p>你可以通过以下的步骤来画出一帧：</p>
 
 <ol>
  <li><strong>清空 canvas</strong><br>
-  除非接下来要画的内容会完全充满 canvas （例如背景图），否则你需要清空所有。最简单的做法就是用 <code>clearRect</code> 方法。</li>
+  除非接下来要画的内容会完全充满 canvas（例如背景图），否则你需要清空所有。最简单的做法就是用 <code>clearRect</code> 方法。</li>
  <li><strong>保存 canvas 状态</strong><br>
   如果你要改变一些会改变 canvas 状态的设置（样式，变形之类的），又要在每画一帧之时都是原始状态的话，你需要先保存一下。</li>
  <li><strong>绘制动画图形（animated shapes）</strong><br>
@@ -37,7 +37,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 
 <p>在 canvas 上绘制内容是用 canvas 提供的或者自定义的方法，而通常，我们仅仅在脚本执行结束后才能看见结果，比如说，在 for 循环里面做完成动画是不太可能的。</p>
 
-<p>因此， 为了实现动画，我们需要一些可以定时执行重绘的方法。有两种方法可以实现这样的动画操控。首先可以通过 <code>setInterval</code> 和 <code>setTimeout</code> 方法来控制在设定的时间点上执行重绘。</p>
+<p>因此，为了实现动画，我们需要一些可以定时执行重绘的方法。有两种方法可以实现这样的动画操控。首先可以通过 <code>setInterval</code> 和 <code>setTimeout</code> 方法来控制在设定的时间点上执行重绘。</p>
 
 <h3 id="有安排的更新画布_Scheduled_updates"><strong>有安排的更新画布 </strong>Scheduled updates</h3>
 
@@ -45,7 +45,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 
 <dl>
  <dt>{{domxref("WindowTimers.setInterval", "setInterval(function, delay)")}}</dt>
- <dd>当设定好间隔时间后，function会定期执行。</dd>
+ <dd>当设定好间隔时间后，function 会定期执行。</dd>
  <dt>{{domxref("WindowTimers.setTimeout", "setTimeout(function, delay)")}}</dt>
  <dt>在设定好的时间之后执行函数</dt>
  <dd></dd>
@@ -53,10 +53,10 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
  <dd>告诉浏览器你希望执行一个动画，并在重绘之前，请求浏览器执行一个特定的函数来更新动画。</dd>
 </dl>
 
-<p>如果你并不需要与用户互动，你可以使用setInterval()方法，它就可以定期执行指定代码。如果我们需要做一个游戏，我们可以使用键盘或者鼠标事件配合上setTimeout()方法来实现。通过设置事件监听，我们可以捕捉用户的交互，并执行相应的动作。</p>
+<p>如果你并不需要与用户互动，你可以使用 setInterval() 方法，它就可以定期执行指定代码。如果我们需要做一个游戏，我们可以使用键盘或者鼠标事件配合上 setTimeout() 方法来实现。通过设置事件监听，我们可以捕捉用户的交互，并执行相应的动作。</p>
 
 <div class="note">
-<p>下面的例子，采用 {{domxref("window.requestAnimationFrame()")}}实现动画效果。这个方法提供了更加平缓并更加有效率的方式来执行动画，当系统准备好了重绘条件的时候，才调用绘制动画帧。一般每秒钟回调函数执行60次，也有可能会被降低。想要了解更多关于动画循环的信息，尤其是游戏，可以在<a href="https://developer.mozilla.org/zh-CN/docs/Games">Game development zone</a> 参考这篇文章 <a href="https://developer.mozilla.org/zh-CN/docs/Games/Anatomy">Anatomy of a video game</a>。</p>
+<p>下面的例子，采用 {{domxref("window.requestAnimationFrame()")}}实现动画效果。这个方法提供了更加平缓并更加有效率的方式来执行动画，当系统准备好了重绘条件的时候，才调用绘制动画帧。一般每秒钟回调函数执行 60 次，也有可能会被降低。想要了解更多关于动画循环的信息，尤其是游戏，可以在<a href="https://developer.mozilla.org/zh-CN/docs/Games">Game development zone</a> 参考这篇文章 <a href="https://developer.mozilla.org/zh-CN/docs/Games/Anatomy">Anatomy of a video game</a>。</p>
 </div>
 
 <h2 id="太阳系的动画">太阳系的动画</h2>
@@ -120,7 +120,7 @@ init();
 
 <h2 id="动画时钟">动画时钟</h2>
 
-<p>这个例子实现一个动态时钟， 可以显示当前时间。</p>
+<p>这个例子实现一个动态时钟，可以显示当前时间。</p>
 
 <pre class="brush: js">function clock(){
   var now = new Date();
@@ -230,7 +230,7 @@ window.requestAnimationFrame(clock);
 
 <h2 id="循环全景照片">循环全景照片</h2>
 
-<p>在这个例子中，会有一个自左向右滑动的全景图。我们使用了在维基百科中找到的<a href="https://mdn.mozillademos.org/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg">尤塞米提国家公园的图片</a>，当然你可以随意找一张任何尺寸大于canvas的图片。</p>
+<p>在这个例子中，会有一个自左向右滑动的全景图。我们使用了在维基百科中找到的<a href="https://mdn.mozillademos.org/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg">尤塞米提国家公园的图片</a>，当然你可以随意找一张任何尺寸大于 canvas 的图片。</p>
 
 <pre class="brush: js">var img = new Image();
 
@@ -322,7 +322,7 @@ function draw() {
 <pre class="brush: html">&lt;canvas id="canvas" width="800" height="200"&gt;&lt;/canvas&gt;</pre>
 </div>
 
-<p>下方就是是图片在其中滑动的 {{HTMLElement("canvas")}}。需要注意的是这里定义的width和height必须与JavaScript代码中的变量值<code>CanvasXZSize</code>和<code>CanvasYSize</code>保持一致。 </p>
+<p>下方就是是图片在其中滑动的 {{HTMLElement("canvas")}}。需要注意的是这里定义的 width 和 height 必须与 JavaScript 代码中的变量值<code>CanvasXZSize</code>和<code>CanvasYSize</code>保持一致。 </p>
 
 <pre>&lt;canvas id="canvas" width="800" height="200"&gt;&lt;/canvas&gt;</pre>
 
@@ -458,7 +458,7 @@ function draw() {
 
 <h5 id="OutPut">OutPut</h5>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <td>
@@ -696,7 +696,7 @@ function draw() {
 
 <h5 id="Output">Output</h5>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <td>

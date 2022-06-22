@@ -5,7 +5,7 @@ translation_of: Web/API/DOMPoint/DOMPoint
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary"><strong><code>DOMPoint()</code></strong>构造函数创建并返回一个 {{domxref("DOMPoint")}} 对象，可提供部分或全部属性值作为其参数。</span></p>
+<p><strong><code>DOMPoint()</code></strong>构造函数创建并返回一个 {{domxref("DOMPoint")}} 对象，可提供部分或全部属性值作为其参数。</p>
 
 <p>也可以通过调用静态方法 {{domxref("DOMPoint.fromPoint()")}} 来创建 <code>DOMPoint</code> 。此方法接受一个 {{domxref("DOMPointInit")}} 兼容对象（<code>DOMPoint</code> 或 {{domxref("DOMPointReadOnly")}}）作为参数 。</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/API/DOMPoint/DOMPoint
 
 <h2 id="示例">示例</h2>
 
-<p>示例首先创建了一个表示当前窗口左上角的 <code>DOMPoint</code> ，接着根据第一个点创建一个新的 <code>DOMPoint</code> 并将其在垂直和水平方向上偏移100px。</p>
+<p>示例首先创建了一个表示当前窗口左上角的 <code>DOMPoint</code> ，接着根据第一个点创建一个新的 <code>DOMPoint</code> 并将其在垂直和水平方向上偏移 100px。</p>
 
 <pre class="brush: js">var windTopLeft = new DOMPoint(window.screenX, window.screenY);
 var newTopLeft = DOMPoint.fromPoint(windTopLeft);
@@ -38,20 +38,7 @@ newTopLeft.y += 100;
 
 <h2 id="Specification" name="Specification">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Geometry Interfaces', '#dom-dompoint-dompoint', 'DOMPoint()')}}</td>
-   <td>{{Spec2('Geometry Interfaces')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

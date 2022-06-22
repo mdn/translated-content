@@ -9,9 +9,9 @@ translation_of: Web/API/WebRTC_API
 ---
 <p>{{WebRTCSidebar}}</p>
 
-<p><span class="seoSummary"><strong>WebRTC</strong> (Web Real-Time Communications) 是一项实时通讯技术，它允许网络应用或者站点，在不借助中间媒介的情况下，建立浏览器之间</span>点对点<span class="seoSummary">（Peer-to-Peer）的连接，实现视频流和（或）音频流或者其他任意数据的传输。WebRTC包含的这些标准使用户在无需安装任何插件或者第三方的软件的情况下，创建</span>点对点<span class="seoSummary">（Peer-to-Peer）的数据分享和电话会议成为可能。</span></p>
+<p><strong>WebRTC</strong> (Web Real-Time Communications) 是一项实时通讯技术，它允许网络应用或者站点，在不借助中间媒介的情况下，建立浏览器之间点对点（Peer-to-Peer）的连接，实现视频流和（或）音频流或者其他任意数据的传输。WebRTC 包含的这些标准使用户在无需安装任何插件或者第三方的软件的情况下，创建点对点（Peer-to-Peer）的数据分享和电话会议成为可能。</p>
 
-<p>WebRTC包含了若干相互关联的API和协议以达到这个目标。你在这里看到的文档将会帮助你理解WebRTC的基本概念，还会教你如何去建立和使用可以传输媒体数据和其他任意数据的连接。当然你还会学到更多其他的东西。</p>
+<p>WebRTC 包含了若干相互关联的 API 和协议以达到这个目标。你在这里看到的文档将会帮助你理解 WebRTC 的基本概念，还会教你如何去建立和使用可以传输媒体数据和其他任意数据的连接。当然你还会学到更多其他的东西。</p>
 
 <h2 id="参考">参考</h2>
 
@@ -36,28 +36,28 @@ translation_of: Web/API/WebRTC_API
 
 <dl>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Architecture">WebRTC 架构概述</a></dt>
- <dd>用来创建WebRTC连接的API底层使用了一系列的网络协议和连接标准。这篇文章涵盖了这些标准。</dd>
+ <dd>用来创建 WebRTC 连接的 API 底层使用了一系列的网络协议和连接标准。这篇文章涵盖了这些标准。</dd>
  <dt><a href="/en-US/docs/Web/API/WebRTC_API/WebRTC_basics">WebRTC 基础</a></dt>
- <dd>这篇文建将带你贯穿一个跨浏览器RTC应用的整个创建过程。结束的时候，你将拥有一个可以运行的点对点（peer-to-peer）数据通道（data channel）和媒体通道（media channel）。</dd>
+ <dd>这篇文建将带你贯穿一个跨浏览器 RTC 应用的整个创建过程。结束的时候，你将拥有一个可以运行的点对点（peer-to-peer）数据通道（data channel）和媒体通道（media channel）。</dd>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">WebRTC 协议</a></dt>
- <dd>这篇文章介绍了一系列的协议，WebRTC API就是建立于他们之上。</dd>
+ <dd>这篇文章介绍了一系列的协议，WebRTC API 就是建立于他们之上。</dd>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC 连接</a></dt>
- <dd>这篇文章将向你介绍为创建点对点的连接并且实现数据或/和媒体的传输，各个WebRTC相关的协议是如何相互协作的。</dd>
+ <dd>这篇文章将向你介绍为创建点对点的连接并且实现数据或/和媒体的传输，各个 WebRTC 相关的协议是如何相互协作的。</dd>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Overview">WebRTC API 概览</a></dt>
- <dd>WebRTC包含了一些关联的API和协议，它们相互协作以支持数据或媒体在两个或多个点之间传输。这篇文章将向你展示这些API的简要介绍以及它们的用途。</dd>
+ <dd>WebRTC 包含了一些关联的 API 和协议，它们相互协作以支持数据或媒体在两个或多个点之间传输。这篇文章将向你展示这些 API 的简要介绍以及它们的用途。</dd>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">WebRTC 会话的生命周期</a></dt>
- <dd>WebRTC让你可以在基于浏览器应用中实现任意点对点（peer-to-peer）的数据、音频、视频 或它们的任意组合的通信。在这篇文章中我们一起来看一下WebRTC的生命周期。从建立连接开始，一直到不再需要的时候将它关闭掉。</dd>
+ <dd>WebRTC 让你可以在基于浏览器应用中实现任意点对点（peer-to-peer）的数据、音频、视频 或它们的任意组合的通信。在这篇文章中我们一起来看一下 WebRTC 的生命周期。从建立连接开始，一直到不再需要的时候将它关闭掉。</dd>
 </dl>
 
 <h2 id="教程">教程</h2>
 
 <dl>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/adapter.js">使用WebRTC adapter.js提高应用的兼容性</a></dt>
- <dd>WebRTC组织在GitHub上提供了<a href="https://github.com/webrtc/adapter/">WebRTC适配器</a>，来解决因不同浏览器对WebRTC实现不同导致的问题。adapter.js是一个JavaScript库，可以让你写的WebRTC应用“一处编写，处处运行”。</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">使用WebRTC拍摄静止的照片</a></dt>
- <dd>这篇文章介绍了如何在WebRTC的支持下可以访问到电脑或者手机的摄像头并且使用它来拍摄照片。</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">一个简易RTCDataChannel的例子</a></dt>
- <dd>{{domxref("RTCDataChannel")}} 接口是一个特性，使用它你可以在两个点之间发送和接收任意数据。它的API和<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket_API">WebSocket API</a>非常相似，所以同样的代码对他们来说都可以使用。</dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/adapter.js">使用 WebRTC adapter.js 提高应用的兼容性</a></dt>
+ <dd>WebRTC 组织在 GitHub 上提供了<a href="https://github.com/webrtc/adapter/">WebRTC 适配器</a>，来解决因不同浏览器对 WebRTC 实现不同导致的问题。adapter.js 是一个 JavaScript 库，可以让你写的 WebRTC 应用“一处编写，处处运行”。</dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">使用 WebRTC 拍摄静止的照片</a></dt>
+ <dd>这篇文章介绍了如何在 WebRTC 的支持下可以访问到电脑或者手机的摄像头并且使用它来拍摄照片。</dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">一个简易 RTCDataChannel 的例子</a></dt>
+ <dd>{{domxref("RTCDataChannel")}} 接口是一个特性，使用它你可以在两个点之间发送和接收任意数据。它的 API 和<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket_API">WebSocket API</a>非常相似，所以同样的代码对他们来说都可以使用。</dd>
 </dl>
 
 <h2 class="Related_Topics" id="Related_Topics" name="Related_Topics">资源</h2>
@@ -114,13 +114,13 @@ translation_of: Web/API/WebRTC_API
    <td>{{SpecName('Media Capture DOM Elements')}}</td>
    <td>{{Spec2('Media Capture DOM Elements')}}</td>
    <td>
-    <p>如何从DOM标签的内容中获取流的初始定义</p>
+    <p>如何从 DOM 标签的内容中获取流的初始定义</p>
    </td>
   </tr>
  </tbody>
 </table>
 
-<p class="Related_Topics">除了这些定义WebRTC需要的API的标准之外，还有其他的一些协议，在<a href="#Protocols">资源</a>中列了出来。</p>
+<p>除了这些定义 WebRTC 需要的 API 的标准之外，还有其他的一些协议，在<a href="#Protocols">资源</a>中列了出来。</p>
 
 <h2 class="Related_Topics" id="Related_Topics" name="Related_Topics">相关链接</h2>
 

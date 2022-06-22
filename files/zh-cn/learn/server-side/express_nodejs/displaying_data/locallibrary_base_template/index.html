@@ -3,7 +3,7 @@ title: 本地图书馆基础模板
 slug: learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
 ---
-<p>现在我们了解如何使用Pug拓展模板，让我们开始项目，创建一个基础模板。这个模板会有一个侧边栏，连结到本教程中将要创建的各个页面（例如，呈现并创建书本、种类、作者等等），以及一个主要内容区域，我们将在每个页面中进行覆写。</p>
+<p>现在我们了解如何使用 Pug 拓展模板，让我们开始项目，创建一个基础模板。这个模板会有一个侧边栏，连结到本教程中将要创建的各个页面（例如，呈现并创建书本、种类、作者等等），以及一个主要内容区域，我们将在每个页面中进行覆写。</p>
 
 <p>开启 <strong>/views/layout.pug</strong> ，并以下列代码置换其内容。</p>
 
@@ -47,17 +47,17 @@ html(lang='en')
         div(class='col-sm-10')
           block content</code></pre>
 
-<p>此模板使用（并包含）来自 <a class="external external-icon" href="http://getbootstrap.com/" rel="noopener">Bootstrap</a> 的 JavaScript 和 CSS ，以改进HTML页面的布局和呈现方式。使用Bootstrap 或其它客户端网页框架，是一种快速的方式，可以创建吸引人的网页，能够良好地适应不同的浏览器尺寸，并且允许我们处理页面的呈现，而不需要纠缠于任何不同尺寸的细节—此处我们只想专注于伺服端代码！</p>
+<p>此模板使用（并包含）来自 <a class="external external-icon" href="http://getbootstrap.com/" rel="noopener">Bootstrap</a> 的 JavaScript 和 CSS，以改进 HTML 页面的布局和呈现方式。使用 Bootstrap 或其它客户端网页框架，是一种快速的方式，可以创建吸引人的网页，能够良好地适应不同的浏览器尺寸，并且允许我们处理页面的呈现，而不需要纠缠于任何不同尺寸的细节—此处我们只想专注于伺服端代码！</p>
 
 <p>布局的安排应该相当明白，假如你已经阅读了之前的 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#Template_primer">模板入门</a>。注意，使用 <code>block content</code> 当做定位符号，放到页面内容将要放置的地方。</p>
 
-<p>基础模板也参考了一个本地 css 档 (<strong>style.css</strong>) ，此档提供了一些额外的样式。打开 <strong>/public/stylesheets/style.css</strong> ，并用底下的 CSS 代码，取代它的内容:</p>
+<p>基础模板也参考了一个本地 css 档 (<strong>style.css</strong>) ，此档提供了一些额外的样式。打开 <strong>/public/stylesheets/style.css</strong> ，并用底下的 CSS 代码，取代它的内容：</p>
 
-<pre class="brush: css line-numbers  language-css notranslate"><code class="language-css"><span class="selector token"><span class="class token">.sidebar-nav</span> </span><span class="punctuation token">{</span>
-    <span class="property token">margin-top</span><span class="punctuation token">:</span> <span class="number token">20</span>px<span class="punctuation token">;</span>
-    <span class="property token">padding</span><span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">;</span>
-    <span class="property token">list-style</span><span class="punctuation token">:</span> none<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: css line-numbers  language-css notranslate"><code class="language-css">.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}</code></pre>
 
 <p>当我们开始运行网站时，我们应该看到侧边栏出现！在本教程的下个部分，我们将使用以上的布局，来定义各个页面。</p>
 
@@ -65,5 +65,5 @@ html(lang='en')
 
 <ul>
  <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教程 5: 呈现图书馆数据</a></li>
- <li>继续教程 5 的下個部分: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page">主页</a></li>
+ <li>继续教程 5 的下個部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page">主页</a></li>
 </ul>

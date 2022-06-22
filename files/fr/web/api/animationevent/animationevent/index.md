@@ -9,9 +9,11 @@ Le constructeur **`AnimationEvent()`** retourne un nouvel {{domxref("AnimationEv
 
 ## Syntaxe
 
-    animationEvent = new AnimationEvent(type, {animationName: aPropertyName,
-                                               elapsedTime  : aFloat,
-                                               pseudoElement: aPseudoElementName});
+```js
+animationEvent = new AnimationEvent(type, {animationName: aPropertyName,
+                                           elapsedTime  : aFloat,
+                                           pseudoElement: aPseudoElementName});
+```
 
 ### Paramètres
 

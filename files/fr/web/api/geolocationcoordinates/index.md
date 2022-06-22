@@ -28,11 +28,7 @@ _L'interface `Coordinates` n'hérite d'aucune propriété._
 
 **_L'interface_ `Coordinates` _n'implémente et n'hérite d'aucune méthode._**
 
-
-
 ## Spécifications
-
-
 
 | Spécification                                                                | Statut                           | Commentaire             |
 | ---------------------------------------------------------------------------- | -------------------------------- | ----------------------- |

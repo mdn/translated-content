@@ -181,7 +181,7 @@ translation_of: Mozilla/Firefox/Releases/8
 <h3 id="XUL">XUL</h3>
 
 <ul>
- <li>A bug in <a href="/zh-TW/docs/Web/API/Document/execCommand" title="当一个HTML文档切换到设计模式，文档对象会暴漏execCommand 方法，可以让用户运行命令操作可编辑区域的内容。大多指令作用于文档的选择（加粗，斜体等等），另外一些则是插入新元素（如添加一个链接）或者作用于一整行（如缩进）。当使用contentEditable 属性时，使用execCommand() 将会作用于当前激活的可编辑区域。"><code>document.execCommand()</code></a> that occurred when calling it on the value of <code><span><a href="https://developer.mozilla.org/zh-TW/docs/XUL/Property/contentDocument">contentDocument</a></span></code> has been fixed. Since Firefox 3, this resulted in errors instead of working correctly.</li>
+ <li>A bug in <a href="/zh-TW/docs/Web/API/Document/execCommand" title="当一个HTML文档切换到设计模式，文档对象会暴漏execCommand 方法，可以让用户运行命令操作可编辑区域的内容。大多指令作用于文档的选择（加粗，斜体等等），另外一些则是插入新元素（如添加一个链接）或者作用于一整行（如缩进）。当使用contentEditable 属性时，使用execCommand() 将会作用于当前激活的可编辑区域。"><code>document.execCommand()</code></a> that occurred when calling it on the value of <code><a href="https://developer.mozilla.org/zh-TW/docs/XUL/Property/contentDocument">contentDocument</a></code> has been fixed. Since Firefox 3, this resulted in errors instead of working correctly.</li>
  <li><a href="/en/Extensions/Bootstrapped_extensions" title="Bootstrapped extensions">Bootstrapped add-ons</a> can now load chrome using a <a href="/en/Chrome_Registration" title="en/chrome.manifest"><code>chrome.manifest</code></a> file. See the section <a href="/en/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest" title="en/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest">Adding user interface with a chrome.manifest</a> for details.</li>
  <li><a href="/en/XUL/image" title="en/XUL/image">XUL images</a> now shrink down with the same ratio in both directions when specifying maximum sizes.</li>
 </ul>
@@ -221,7 +221,7 @@ translation_of: Mozilla/Firefox/Releases/8
  <li>The <code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISelection3" title="">nsISelection3</a></code> interface has been merged into the <code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISelection" title="">nsISelection</a></code> interface.</li>
  <li>The <code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISessionStartup" title="">nsISessionStartup</a></code> attribute state is now a <a href="/En/SpiderMonkey/JSAPI_Reference/Jsval" title="en/jsval"><code>jsval</code></a> instead of a string, for performance reasons.</li>
  <li>The <code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocShell" title="">nsIDocShell</a></code> attribute <code>isActive</code> is now <code>false</code> for minimized windows.</li>
- <li>The <code><a href="https://developer.mozilla.org/zh-TW/docs/XPCOM_Interface_Reference/nsIDownloadHistory#addDownload()">nsIDownloadHistory.addDownload()</a></code> method now saves <span id="summary_alias_container"><span id="short_desc_nonedit_display">the the target where the download is saved on the local file system.</span></span></li>
+ <li>The <code><a href="https://developer.mozilla.org/zh-TW/docs/XPCOM_Interface_Reference/nsIDownloadHistory#addDownload()">nsIDownloadHistory.addDownload()</a></code> method now saves the the target where the download is saved on the local file system.</li>
 </ul>
 
 <h4 id="Removed_interfaces">Removed interfaces</h4>

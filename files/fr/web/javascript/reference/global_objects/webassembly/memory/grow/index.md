@@ -17,7 +17,9 @@ La méthode **`grow()`**, rattachée au prototype de l'objet [`Memory`](/fr/docs
 
 ## Syntaxe
 
-    memory.grow(nombre);
+```js
+memory.grow(nombre);
+```
 
 ### Paramètres
 

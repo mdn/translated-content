@@ -5,16 +5,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/create
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>创建一个新的窗口.</p>
+<p>创建一个新的窗口。</p>
 
-<p>当你创建一个窗口时，你可以:</p>
+<p>当你创建一个窗口时，你可以：</p>
 
 <ul>
- <li>加载一个或多个新的标签到该窗口中.</li>
- <li>将一个现有窗口的.标签移动到新的窗口中</li>
+ <li>加载一个或多个新的标签到该窗口中。</li>
+ <li>将一个现有窗口的。标签移动到新的窗口中</li>
  <li>设置窗口的大小和位置</li>
  <li>创建一个面板样式的窗口，它没有浏览器的默认样式（地址栏，工具栏等）</li>
- <li>设置窗口的多种属性, 像是获得焦点或是为隐私窗口.</li>
+ <li>设置窗口的多种属性，像是获得焦点或是为隐私窗口。</li>
 </ul>
 
 <p>这是一个异步的方法返回一个 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
@@ -34,32 +34,32 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/create
  <dd>
  <dl class="reference-values">
   <dt><code>url</code>{{optional_inline}}</dt>
-  <dd><code><code>字符串或字符串数组</code></code>. 一个URL或都URL数组要在该窗口中打开成标签页的. 完整的需要包括scheme (像. <code>http://www.google.com</code>, not <code>www.google.com</code>). 相对路径将相对于该拓展中的当前页. 默认为打开新标签页.</dd>
+  <dd><code><code>字符串或字符串数组</code></code>. 一个 URL 或都 URL 数组要在该窗口中打开成标签页的。完整的需要包括 scheme (像。<code>http://www.google.com</code>, not <code>www.google.com</code>). 相对路径将相对于该拓展中的当前页。默认为打开新标签页。</dd>
   <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. 如果设置了该值，将该tab从一个现有的窗口中移到新窗口中.</dd>
+  <dd><code>integer</code>. 如果设置了该值，将该 tab 从一个现有的窗口中移到新窗口中。</dd>
   <dt><code>left</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. 窗口左边到屏幕左边缘的距离.如果没有设定，新窗口将按上一个焦点窗口定位水平位置. 对于panel样式窗口，该值不起作用.</dd>
+  <dd><code>integer</code>. 窗口左边到屏幕左边缘的距离。如果没有设定，新窗口将按上一个焦点窗口定位水平位置。对于 panel 样式窗口，该值不起作用。</dd>
   <dt><code>top</code>{{optional_inline}}</dt>
-  <dd>窗口顶部到屏幕的顶部距离.如果没有设定，新窗口将按上一个焦点窗口定位垂直位置. 对于panel样式窗口，该值不起作用.</dd>
+  <dd>窗口顶部到屏幕的顶部距离。如果没有设定，新窗口将按上一个焦点窗口定位垂直位置。对于 panel 样式窗口，该值不起作用。</dd>
   <dt><code>width</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. 新窗口的宽度, 包含框架. 未设定则使用默认宽度。.</dd>
+  <dd><code>integer</code>. 新窗口的宽度，包含框架。未设定则使用默认宽度。.</dd>
   <dt><code>height</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. 新窗口的高度, 包含框架. 未设定则使用默认高度。.</dd>
+  <dd><code>integer</code>. 新窗口的高度，包含框架。未设定则使用默认高度。.</dd>
   <dt><code>focused</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>.如果 为<code>true</code>, 新窗口将获取焦点. 否则新窗口当在后台打开并且当前焦点窗口继续保持焦点.。.默认为true</dd>
+  <dd><code>boolean</code>.如果 为<code>true</code>, 新窗口将获取焦点。否则新窗口当在后台打开并且当前焦点窗口继续保持焦点.。.默认为 true</dd>
   <dt><code>incognito</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. 是否打开为一个隐私窗口. <code>如果设定为隐私窗口并且引入了tabId</code>, 则tabId对应的标签必须是一个隐私标签— 即不能把一个不是隐私标签的标签页移动到隐私窗口中。</dd>
+  <dd><code>boolean</code>. 是否打开为一个隐私窗口。<code>如果设定为隐私窗口并且引入了tabId</code>, 则 tabId 对应的标签必须是一个隐私标签— 即不能把一个不是隐私标签的标签页移动到隐私窗口中。</dd>
   <dt><code>type</code>{{optional_inline}}</dt>
-  <dd>一{{WebExtAPIRef('windows.CreateType')}} 值，表示创建窗口的类型. <code>panel</code> 或者<code>popup</code> 样式将打开一个没有默认浏览器样式的窗口 (地址栏，工具栏等）。</dd>
+  <dd>一{{WebExtAPIRef('windows.CreateType')}} 值，表示创建窗口的类型。<code>panel</code> 或者<code>popup</code> 样式将打开一个没有默认浏览器样式的窗口 (地址栏，工具栏等）。</dd>
   <dt><code>state</code>{{optional_inline}}</dt>
-  <dd>一个 {{WebExtAPIRef('windows.WindowState')}} 值， 窗口的祲状态。 最小化、最大化、全屏状态不能与<code>left</code>, <code>top</code>, <code>width</code>, or <code>height</code>属性一起使用。</dd>
+  <dd>一个 {{WebExtAPIRef('windows.WindowState')}} 值，窗口的祲状态。最小化、最大化、全屏状态不能与<code>left</code>, <code>top</code>, <code>width</code>, or <code>height</code>属性一起使用。</dd>
  </dl>
  </dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> 其中传入一个包含新窗口细节的 {{WebExtAPIRef('windows.Window')}} 对象。 这个{{WebExtAPIRef('windows.Window')}} 有自己的tabs属性集 ,而不像 {{WebExtAPIRef("windows.get()")}}返回的窗口对象和相似的API,  如果传递了populate项其仅仅包含tabs. 如果发生了错误 promise will be rejected with an error message.</p>
+<p>一个 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> 其中传入一个包含新窗口细节的 {{WebExtAPIRef('windows.Window')}} 对象。这个{{WebExtAPIRef('windows.Window')}} 有自己的 tabs 属性集 ,而不像 {{WebExtAPIRef("windows.get()")}}返回的窗口对象和相似的 API,  如果传递了 populate 项其仅仅包含 tabs. 如果发生了错误 promise will be rejected with an error message.</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -85,7 +85,7 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
   creating.then(onCreated, onError);
 });</pre>
 
-<p>当用户点击一个browser action打开一个窗口，并且将当前活跃的标签移动其中</p>
+<p>当用户点击一个 browser action 打开一个窗口，并且将当前活跃的标签移动其中</p>
 
 <pre class="brush: js">function onCreated(windowInfo) {
   console.log(`Created window: ${windowInfo.id}`);

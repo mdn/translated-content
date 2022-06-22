@@ -116,7 +116,7 @@ Ces changements affectent les développeurs d'extensions ainsi que les développ
 
 ### Rapporteur de mémoire
 
-Ajout du support pour le multi-reporters, c'est le rapporteur de mémoire qui rassemble des données sur demande et effectue un rappel pour chaque résultat généré. Voir `nsIMemoryMultiReporter` et `nsIMemoryMultiReporterCallback` pour les interfaces nécessaires, ainsi que les méthodes {{ifmethod("nsIMemoryReporterManager", "registerMultiReporter")}} et {{ifmethod("nsIMemoryReporterManager", "unregisterMultiReporter")}}.
+Ajout du support pour le multi-reporters, c'est le rapporteur de mémoire qui rassemble des données sur demande et effectue un rappel pour chaque résultat généré. Voir `nsIMemoryMultiReporter` et `nsIMemoryMultiReporterCallback` pour les interfaces nécessaires, ainsi que les méthodes `nsIMemoryReporterManager.registerMultiReporter()` et `nsIMemoryReporterManager.unregisterMultiReporter()`.
 
 ### Changements de l'expérience utilisateur
 
@@ -131,16 +131,16 @@ Ajout du support pour le multi-reporters, c'est le rapporteur de mémoire qui ra
 ### Changements dans les interfaces
 
 - `nsISocketTransport` offre désormais un nouveau drapeau de connexion : `DISABLE_IPV6`, cela entraîne des tentatives de connexion uniquement aux adresses IPv4, en ignorant toutes les adresses IPv6 disponibles. De plus, `nsIDNSService` offre désormais un nouveau drapeau de résolution : `RESOLVE_DISABLE_IPV6`, ce qui entraîne un résolution des noms de domaine en ne tenant compte que des hôtes IPv4 et en ignorant toutes les adresses IPv6 disponibles. Ces changements permettent d'implémenter la [stratégie "happy eyeballs"](http://tools.ietf.org/html/draft-wing-http-new-tech-00) pour améliorer le temps de réponse lors d'une tentative de connexion sur les hôtes qui supportent à la fois IPv4 et IPv6 (en particulier ceux qui ont brisé la connectivité IPv6).
-- `inIDOMUtils` a deux nouvelles méthodes, {{ifmethod("inIDOMUtils","getChildrenForNode")}} qui renvoie une liste des nœuds enfants d'un noeud et {{ifmethod("inIDOMUtils","getUsedFontFaces")}} qui renvoie la liste des police de caractères utilisées dans une gamme.
+- `inIDOMUtils` a deux nouvelles méthodes, `inIDOMUtils.getChildrenForNode()` qui renvoie une liste des nœuds enfants d'un noeud et `inIDOMUtils.getUsedFontFaces()` qui renvoie la liste des police de caractères utilisées dans une gamme.
 - L'interface `nsIMarkupDocumentViewer_MOZILLA_2_0_BRANCH` a été intégrée dans l'interface `nsIMarkupDocumentViewer`.
 - L'interface `nsIDOMWindow2` a été intégrée dans l'interface `nsIDOMWindow`.
 - L'interface `nsIDOMWindow_2_0_BRANCH` a été intégrée dans l'interface `nsIDOMWindowInternal`.
 - Les méthodes `nsINavHistoryObserver` avec des paramètres d'URI exigent désormais un GUID.
 - L'interface `nsISHistory_2_0_BRANCH` a été intégrée dans l'interface `nsISHistory`.
-- `nsITelemetry` a une nouvelle méthode, {{ifmethod("nsITelemetry","getHistogramById")}} qui retourne un histogramme par son ID, et un nouvel attribut `canRecord` qui, lorsqu'il est défini sur `false` désactive l'enregistrement des statistiques de télémétrie. Les statistiques de télémétrie ne sont plus enregistrées lorsque l'on est en mode de navigation privée. (voir {{bug("661574")}} et {{bug("661573")}})
-  Les histogrammes de télémétrie définis avec {{ifmethod("nsITelemetry","newHistogram")}} ne seront pas rapportés dans le ping de télémétrie.
+- `nsITelemetry` a une nouvelle méthode, `nsITelemetry.getHistogramById()` qui retourne un histogramme par son ID, et un nouvel attribut `canRecord` qui, lorsqu'il est défini sur `false` désactive l'enregistrement des statistiques de télémétrie. Les statistiques de télémétrie ne sont plus enregistrées lorsque l'on est en mode de navigation privée. (voir {{bug("661574")}} et {{bug("661573")}})
+  Les histogrammes de télémétrie définis avec `nsITelemetry.newHistogram()` ne seront pas rapportés dans le ping de télémétrie.
 - L'interface `nsIMemoryReporter` a été sensiblement modifiée, si vous l'utilisez, vous devez faire quelques ajustements à votre code.
-- Les en-têtes `nsIXMLHttpRequest` fixées par {{ifmethod("nsIXMLHttpRequest","setRequestHeader")}} sont envoyées à la demande lorsque l'on suit une redirection. Auparavant, ces en-têtes n'auraient pas été envoyées.
+- Les en-têtes `nsIXMLHttpRequest` fixées par `nsIXMLHttpRequest.setRequestHeader()` sont envoyées à la demande lorsque l'on suit une redirection. Auparavant, ces en-têtes n'auraient pas été envoyées.
 - `nsIDocShell` a un nouvel attribut `allowWindowControl`. Si il est `true`, le contenu du docshell est autorisé à contrôler la fenêtre (c'est-à-dire la déplacer ou la redimensionner).
 - L'interface `nsIThreadInternal2` a été intégrée dans l'interface `nsIThreadInternal`.
 

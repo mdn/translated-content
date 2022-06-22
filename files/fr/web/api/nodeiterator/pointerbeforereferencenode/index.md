@@ -16,7 +16,9 @@ La propriété en lecture seule **`NodeIterator.pointerBeforeReferenceNode`** re
 
 ## Syntaxe
 
-    flag = nodeIterator.pointerBeforeReferenceNode;
+```js
+flag = nodeIterator.pointerBeforeReferenceNode;
+```
 
 ## Exemple
 

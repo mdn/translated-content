@@ -20,7 +20,9 @@ La méthode **`Intl.Collator.supportedLocalesOf()`** renvoie, parmi les locales 
 
 ## Syntaxe
 
-    Intl.Collator.supportedLocalesOf(locales [, options])
+```js
+Intl.Collator.supportedLocalesOf(locales [, options])
+```
 
 ### Paramètres
 

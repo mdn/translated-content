@@ -7,7 +7,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 
 <p> </p>
 
-<p>原生应用清单是一个符合特定规则的JSON文件，它应该使用与 extension 不同的安装方式存放在用户的计算机上。举个例子，原生应用清单是由设备管理员或者通过原生应用安装器提供的。</p>
+<p>原生应用清单是一个符合特定规则的 JSON 文件，它应该使用与 extension 不同的安装方式存放在用户的计算机上。举个例子，原生应用清单是由设备管理员或者通过原生应用安装器提供的。</p>
 
 <p>有三种不同的原生应用清单：</p>
 
@@ -28,7 +28,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
   <tr>
    <td><a href="#PKCS #11 清单">PKCS #11 清单</a></td>
    <td>
-    <p>定义了 extension 使用 {{WebExtAPIRef("pkcs11")}} API 去枚举 PKCS #11 安全模型 并在Firefox安装它们。</p>
+    <p>定义了 extension 使用 {{WebExtAPIRef("pkcs11")}} API 去枚举 PKCS #11 安全模型 并在 Firefox 安装它们。</p>
    </td>
   </tr>
  </tbody>
@@ -38,7 +38,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 
 <h2 id="原生应用通信清单_2">原生应用通信清单<a id="原生应用通信清单" name="原生应用通信清单"></a></h2>
 
-<p>原生应用通信清单中包含单个JSON对象，对象具有如下属性：</p>
+<p>原生应用通信清单中包含单个 JSON 对象，对象具有如下属性：</p>
 
 <table class="fullwidth-table standard-table">
  <thead>
@@ -57,7 +57,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 
     <p>它必须与 extension 调用 {{WebExtAPIRef("runtime.connectNative()")}} 和 {{WebExtAPIRef("runtime.sendNativeMessage()")}} 时传入的名称保持一致。</p>
 
-    <p>在 OS X 和 Linux 中，它必须和清单文件的文件名保持一致（除.json文件扩展名外）。</p>
+    <p>在 OS X 和 Linux 中，它必须和清单文件的文件名保持一致（除.json 文件扩展名外）。</p>
 
     <p>在 Windows 中，它必须和你创建的包含原生应用清单路径的注册表一致。</p>
 
@@ -93,10 +93,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
    <td><code>allowed_extensions</code></td>
    <td>Array of String</td>
    <td>
-    <p>由 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Add-on ID</a> 组成的数组。每个值代表允许ID为该值的 extension 与这个原生应用通信。</p>
+    <p>由 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Add-on ID</a> 组成的数组。每个值代表允许 ID 为该值的 extension 与这个原生应用通信。</p>
 
     <div class="note">
-    <p>这意味着你可能需要在你 extension 的 manifest.json 中包含 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> 字段，并为 extension 设置一个显示的ID，哪怕是在开发时</p>
+    <p>这意味着你可能需要在你 extension 的 manifest.json 中包含 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> 字段，并为 extension 设置一个显示的 ID，哪怕是在开发时</p>
     </div>
    </td>
   </tr>
@@ -113,11 +113,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
   "allowed_extensions": [ "ping_pong@example.org" ]
 }</pre>
 
-<p>清单表示：它允许ID为 ping_pong@example.org 的 extension 通过传入 ping_pong 给 {{WebExtAPIRef("runtime")}} 与自己连接。原生应用自身在 /path/to/native-messaging/app/ping_pong.py 中。</p>
+<p>清单表示：它允许 ID 为 ping_pong@example.org 的 extension 通过传入 ping_pong 给 {{WebExtAPIRef("runtime")}} 与自己连接。原生应用自身在 /path/to/native-messaging/app/ping_pong.py 中。</p>
 
 <h2 id="存储管理清单_2">存储管理清单<a id="存储管理清单" name="存储管理清单"></a></h2>
 
-<p>存储管理清单中包含单个JSON对象，对象具有如下属性：</p>
+<p>存储管理清单中包含单个 JSON 对象，对象具有如下属性：</p>
 
 <table class="fullwidth-table standard-table">
  <thead>
@@ -134,14 +134,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
    <td>
     <p><strong>一个</strong> extension 的 ID，表示这个 extension 可以读取这个仓库。</p>
 
-    <p>给出这个ID需要你的 extension 的 manifest.json 文件包含 <a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> 字段。</p>
+    <p>给出这个 ID 需要你的 extension 的 manifest.json 文件包含 <a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> 字段。</p>
    </td>
   </tr>
   <tr>
    <td><code>description</code></td>
    <td>String</td>
    <td>
-    <p>人类可读的描述，Firefox会忽略它。</p>
+    <p>人类可读的描述，Firefox 会忽略它。</p>
    </td>
   </tr>
   <tr>
@@ -155,7 +155,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
    <td><code>data</code></td>
    <td>Object</td>
    <td>
-    <p>一个JSON对象，其中可以包含任何合法的JSON值（string、number、boolean、array、object），他们将成为<code>browser.storage.managed</code>可访问的数据。</p>
+    <p>一个 JSON 对象，其中可以包含任何合法的 JSON 值（string、number、boolean、array、object），他们将成为<code>browser.storage.managed</code>可访问的数据。</p>
    </td>
   </tr>
  </tbody>
@@ -163,26 +163,26 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 
 <p>举个例子：</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="punctuation token">{</span>
-  <span class="key token">"name":</span> <span class="string token">"favourite-colour-examples@mozilla.org"</span><span class="punctuation token">,</span>
-  <span class="key token">"description":</span> <span class="string token">"ignored"</span><span class="punctuation token">,</span>
-  <span class="key token">"type":</span> <span class="string token">"storage"</span><span class="punctuation token">,</span>
-  <span class="key token">"data":</span>
-  <span class="punctuation token">{</span>
-    <span class="key token">"colour":</span> <span class="string token">"management thinks it should be blue!"</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">{
+  "name": "favourite-colour-examples@mozilla.org",
+  "description": "ignored",
+  "type": "storage",
+  "data":
+  {
+    "colour": "management thinks it should be blue!"
+  }
+}</code></pre>
 
 <p>在给出的清单文件中，ID 为 favourite-colour-examples@mozilla.org 的 extension 有权限使用清单中的 data 字段中的数据，代码如下：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> storageItem <span class="operator token">=</span> browser<span class="punctuation token">.</span>storage<span class="punctuation token">.</span>managed<span class="punctuation token">.</span><span class="keyword token">get</span><span class="punctuation token">(</span><span class="string token">'colour'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-storageItem<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="punctuation token">(</span>res<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`Managed colour is: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>res<span class="punctuation token">.</span>colour<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var storageItem = browser.storage.managed.get('colour');
+storageItem.then((res) =&gt; {
+  console.log(`Managed colour is: ${res.colour}`);
+});</code></pre>
 
 <h2 id="PKCS_11_清单">PKCS #11 清单<a id="PKCS #11 清单" name="PKCS #11 清单"></a></h2>
 
-<p>PKCS #11 清单中包含单个JSON对象，对象具有如下属性：</p>
+<p>PKCS #11 清单中包含单个 JSON 对象，对象具有如下属性：</p>
 
 <table class="fullwidth-table standard-table">
  <thead>
@@ -214,7 +214,7 @@ storageItem<span class="punctuation token">.</span><span class="function token">
    <td>
     <p>关于该模块的描述。</p>
 
-    <p>它将被用在浏览器界面中为模块设置一个友好的名字（比如，在Firefox的“安全设备”对话框中）</p>
+    <p>它将被用在浏览器界面中为模块设置一个友好的名字（比如，在 Firefox 的“安全设备”对话框中）</p>
    </td>
   </tr>
   <tr>
@@ -235,10 +235,10 @@ storageItem<span class="punctuation token">.</span><span class="function token">
    <td><code>allowed_extensions</code></td>
    <td>Array of String</td>
    <td>
-    <p>由 <a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Add-on ID</a> 组成的数组。每个值代表允许ID为该值的 extension 与这个模块通信。</p>
+    <p>由 <a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Add-on ID</a> 组成的数组。每个值代表允许 ID 为该值的 extension 与这个模块通信。</p>
 
     <div class="note">
-    <p>这意味着你可能需要在你 extension 的 manifest.json 中包含 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> 字段，并为 extension 设置一个显示的ID，哪怕是在开发时</p>
+    <p>这意味着你可能需要在你 extension 的 manifest.json 中包含 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> 字段，并为 extension 设置一个显示的 ID，哪怕是在开发时</p>
     </div>
    </td>
   </tr>
@@ -255,7 +255,7 @@ storageItem<span class="punctuation token">.</span><span class="function token">
   "allowed_extensions": ["my-extension@mozilla.org"]
 }</pre>
 
-<p>给出的这个JSON清单，保存为 my_module.json，ID为 my-extension@mozilla.org 的 extension 就能够使用类似于如下代码安装 /path/to/libpkcs11testmodule.dylib 安全模块：</p>
+<p>给出的这个 JSON 清单，保存为 my_module.json，ID 为 my-extension@mozilla.org 的 extension 就能够使用类似于如下代码安装 /path/to/libpkcs11testmodule.dylib 安全模块：</p>
 
 <pre class="brush: js line-numbers  language-js">browser.pkcs11.installModule("my_module");</pre>
 
@@ -280,7 +280,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\&lt;name&gt;</pre>
 <p><img alt="为原生应用通信清单建立的注册表" src="https://mdn.mozillademos.org/files/15643/native-message-regkey-exaple.png" style="height: 308px; width: 1027px;"></p>
 
 <div class="note">
-<p><em>对于原生应用清单，即使原生应用是32位的，也不能在 <a href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system">Wow6432Node</a> 下创建注册表。浏览器将总会在 native 视图下寻找注册表的，而不是32位放在环境。确保注册表的创建在原生视图中，你可以键入KEY_WOW64_64KEY 或 KEY_WOW64_32KEY  到 RegCreateKeyEx。请参考：<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx">Accessing an Alternate Registry View</a></em></p>
+<p><em>对于原生应用清单，即使原生应用是 32 位的，也不能在 <a href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system">Wow6432Node</a> 下创建注册表。浏览器将总会在 native 视图下寻找注册表的，而不是 32 位放在环境。确保注册表的创建在原生视图中，你可以键入 KEY_WOW64_64KEY 或 KEY_WOW64_32KEY  到 RegCreateKeyEx。请参考：<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx">Accessing an Alternate Registry View</a></em></p>
 </div>
 
 <p>如果想要用户级别的可见，使用下面的路径创建注册表：</p>

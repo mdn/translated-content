@@ -9,7 +9,7 @@ translation_of: Web/API/IDBDatabase/deleteObjectStore
 <p> <strong><code>deleteObjectStore()</code></strong> 方法从 {{domxref("IDBDatabase")}} 中销毁指定名称的对象存储，及这个对象存储所包含的任何索引。</p>
 </div>
 
-<p>与 {{ domxref("IDBDatabase.createObjectStore") }} 一样，<font><font>此方法</font></font><em><font><font>只能</font></font></em><font><font>在</font></font><a href="https://developer.mozilla.org/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE"><code>versionchange</code></a><font><font>事务中</font><font>调用</font><font>。</font></font></p>
+<p>与 {{ domxref("IDBDatabase.createObjectStore") }} 一样，此方法<em>只能</em>在<a href="https://developer.mozilla.org/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE"><code>versionchange</code></a>事务中调用。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -71,7 +71,7 @@ request.onupgradeneeded = function(e) {
   // etc. for version &lt; 3, 4...
 };</pre>
 
-<h2 id="Specification"><span style="font-size: 2.14285714285714rem;">Specification</span></h2>
+<h2 id="Specification">Specification</h2>
 
 <table class="standard-table">
  <tbody>

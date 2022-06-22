@@ -7,7 +7,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 <p>本文會一一說明拖曳各步驟的作業。</p>
 
-<p class="note">The drag operations described in this document use the {{domxref("DataTransfer")}} interface. This document does <em>not</em> use the {{domxref("DataTransferItem")}} interface nor the {{domxref("DataTransferItemList")}} interface.</p>
+<p>The drag operations described in this document use the {{domxref("DataTransfer")}} interface. This document does <em>not</em> use the {{domxref("DataTransferItem")}} interface nor the {{domxref("DataTransferItemList")}} interface.</p>
 
 <h2 id="draggableattribute" name="draggableattribute">Draggable 屬性</h2>
 
@@ -56,20 +56,20 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 <p>當拖曳時，資料必須和被拖曳目標作連結，比如說拖曳文字框中反白選擇的文字，那麼文字本身便是連結資料，同理，拖曳連結時URL便是連結資料。</p>
 
-<p>資料包含兩個部分，一是資料型態(或格式)、二是資料值。所謂資料型態是用文字描述資料型態(如<a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text" style="line-height: 1.5;" title="text/plain">text/plain</a><span style="line-height: 1.5;">代表文字資料)，而資料值則是文字，要加入拖</span>曳<span style="line-height: 1.5;">資料需要提供資料的型態和內容值；有了資料後，我們可以在dragenter或dragover事件處理器中，透過檢查資料型態來決定是否可以接受後續的放置操作，比如說只接受連結類資料的拖</span>曳<span style="line-height: 1.5;">目標區(drop target)，會檢查資料型態是否為</span><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link" style="line-height: 1.5;" title="text/uri-list">text/uri-list</a><span style="line-height: 1.5;">。</span></p>
+<p>資料包含兩個部分，一是資料型態(或格式)、二是資料值。所謂資料型態是用文字描述資料型態(如<a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text" style="line-height: 1.5;" title="text/plain">text/plain</a>代表文字資料)，而資料值則是文字，要加入拖曳資料需要提供資料的型態和內容值；有了資料後，我們可以在dragenter或dragover事件處理器中，透過檢查資料型態來決定是否可以接受後續的放置操作，比如說只接受連結類資料的拖曳目標區(drop target)，會檢查資料型態是否為<a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link" style="line-height: 1.5;" title="text/uri-list">text/uri-list</a>。</p>
 
-<p>資料型態符合MIME型態，如<a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text" style="line-height: 1.5;" title="text/plain">text/plain</a><span style="line-height: 1.5;">或</span><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#image" style="line-height: 1.5;" title="image/jpeg">image/jpeg</a><span style="line-height: 1.5;">等等，而我們自己也可以自定義其他型態，最常使用的型態請見</span><a href="/en-US/docs/DragDrop/Recommended_Drag_Types" style="line-height: 1.5;" title="/en-US/docs/DragDrop/Recommended_Drag_Types">推薦拖曳資料型態</a>。</p>
+<p>資料型態符合MIME型態，如<a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text" style="line-height: 1.5;" title="text/plain">text/plain</a>或<a href="/en-US/docs/DragDrop/Recommended_Drag_Types#image" style="line-height: 1.5;" title="image/jpeg">image/jpeg</a>等等，而我們自己也可以自定義其他型態，最常使用的型態請見<a href="/en-US/docs/DragDrop/Recommended_Drag_Types" style="line-height: 1.5;" title="/en-US/docs/DragDrop/Recommended_Drag_Types">推薦拖曳資料型態</a>。</p>
 
 <p>一趟拖曳作業中可以攜帶多個多種型態的資料，所以我們可以自定義自己的型態同時，還提供其他資料給不認得自定義資料型態的其他拖曳目標區使用。通常最通用的資料會是文字類型資料。</p>
 
-<p>呼叫<a href="/en-US/docs/DragDrop/DataTransfer#setData.28.29" style="line-height: 1.5;" title="setData">setData</a><span style="line-height: 1.5;">方法，傳入資料型態和資料，這樣就可以攜帶想要的資料了：</span></p>
+<p>呼叫<a href="/en-US/docs/DragDrop/DataTransfer#setData.28.29" style="line-height: 1.5;" title="setData">setData</a>方法，傳入資料型態和資料，這樣就可以攜帶想要的資料了：</p>
 
 <pre class="brush: js">event.dataTransfer.setData("text/plain", "Text to drag");
 </pre>
 
 <p>上例資料是”Text to drag”文字，型態是text/plain。</p>
 
-<p><span style="line-height: 1.5;">呼叫多次setData我們就可以攜帶多種資料。</span></p>
+<p>呼叫多次setData我們就可以攜帶多種資料。</p>
 
 <pre class="brush: js">var dt = event.dataTransfer;
 dt.setData("application/x-bookmark", bookmarkString);
@@ -81,7 +81,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>如果對同一種資料型態加入兩次資料，則新加資料會取代舊資料。</p>
 
-<p><span style="line-height: 1.5;">呼叫</span><a href="/en-US/docs/DragDrop/DataTransfer#clearData.28.29" style="line-height: 1.5;" title="clearData">clearData</a><span style="line-height: 1.5;">會清除資料。</span></p>
+<p>呼叫<a href="/en-US/docs/DragDrop/DataTransfer#clearData.28.29" style="line-height: 1.5;" title="clearData">clearData</a>會清除資料。</p>
 
 <pre class="brush: js">event.dataTransfer.clearData("text/uri-list");
 </pre>
@@ -97,7 +97,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>setDragImage需要三個參數，一是圖片來源(通常是圖片元素，但也可以是canvas元素或其他元素)，拖曳使用圖片會依照圖片來源在螢幕上所顯示的樣子產生；二和三是圖片相對於滑鼠指標的位置位移量。</p>
 
-<p><span style="line-height: 1.5;">不過也是能夠使用文件外部的圖片或canvas元素，當需要透過canvas元素產生客製圖片時，這個技巧很有用，如下範例所示：</span></p>
+<p>不過也是能夠使用文件外部的圖片或canvas元素，當需要透過canvas元素產生客製圖片時，這個技巧很有用，如下範例所示：</p>
 
 <pre class="brush: js">function dragWithCustomImage(event) {
   var canvas = document.createElementNS("http://www.w3.org/1999/xhtml","canvas");
@@ -123,21 +123,21 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>試想下面這個 {{XULElem("panel")}}元素:</p>
 
-<pre class="brush: xml">&lt;<span class="start-tag">panel</span><span class="attribute-name"> id</span>=<span class="attribute-value">"panel" </span><span class="attribute-name">style</span>=<span class="attribute-value">"opacity: 0.6</span><span class="attribute-value">"</span>&gt;
-  &lt;<span class="start-tag">description</span><span class="attribute-name"> id</span>=<span class="attribute-value">"pb"</span>&gt;Drag Me&lt;/<span class="end-tag">description</span>&gt;
-&lt;/<span class="end-tag">panel</span>&gt;
+<pre class="brush: xml">&lt;panel id="panel" style="opacity: 0.6"&gt;
+  &lt;description id="pb"&gt;Drag Me&lt;/description&gt;
+&lt;/panel&gt;
 
-&lt;<span class="start-tag">vbox</span><span class="attribute-name"> align</span>=<span class="attribute-value">"start" </span><span class="attribute-name">style</span>=<span class="attribute-value">"border: 1px solid black;" </span><span class="attribute-name">ondragstart</span>=<span class="attribute-value">"startDrag(event)"</span>&gt;
-  &lt;<span class="start-tag">description</span>&gt;Drag Me&lt;/<span class="end-tag">description</span>&gt;
-&lt;/<span class="end-tag">vbox</span>&gt;
+&lt;vbox align="start" style="border: 1px solid black;" ondragstart="startDrag(event)"&gt;
+  &lt;description&gt;Drag Me&lt;/description&gt;
+&lt;/vbox&gt;
 </pre>
 
 <p>當使用者拖曳{{XULElem("vbox")}} 元素時，startDrag函數會被呼叫。</p>
 
-<pre class="brush: js"><span class="cdata">function startDrag(event) {
+<pre class="brush: js">function startDrag(event) {
   event.dataTransfer.setData("text/plain", "&lt;strong&gt;Body&lt;/strong&gt;");
   event.dataTransfer.setDragImage(document.getElementById("panel"), 20, 20);
-}</span>
+}
 </pre>
 
 <p>我們用HTML格式的"&lt;strong&gt;Body&lt;/strong&gt;"作為資料，然後用pnael元素作為圖片。</p>
@@ -146,7 +146,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>拖曳作業有好機種；copy作業代表被拖曳資料會被複製一份到拖曳目標區，move作業代表移動被拖曳的資料，link作業代表拖曳來源區和拖曳目標區有某種關係。</p>
 
-<p>在dragstart事件中可以設定<a href="/en-US/docs/DragDrop/DataTransfer#effectAllowed.28.29" style="line-height: 1.5;" title="effectAllowed">effectAllowed</a><span style="line-height: 1.5;">屬性，指定拖曳源頭允許的作業。</span></p>
+<p>在dragstart事件中可以設定<a href="/en-US/docs/DragDrop/DataTransfer#effectAllowed.28.29" style="line-height: 1.5;" title="effectAllowed">effectAllowed</a>屬性，指定拖曳源頭允許的作業。</p>
 
 <pre class="brush: js">event.dataTransfer.effectAllowed = "copy";
 </pre>
@@ -175,7 +175,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p><a href="/en-US/docs/DragDrop/DataTransfer#effectAllowed.28.29" title="effectAllowed">effectAllowed</a> 屬性預設所有作業都接受，如all值。</p>
 
-<p>在dragenter或dragover事件中，我們可以藉由檢查effectAllowed來知道那些作業是被允許的，另外，另一個相關聯的<a href="/en-US/docs/DragDrop/DataTransfer#dropEffect.28.29" style="line-height: 1.5;" title="dropEffect">dropEffect</a><span style="line-height: 1.5;">屬性應該要是effectAllowed的其中一個作業，但是dropEffect不接受多重作業，只可以是none, copy, move和link。</span></p>
+<p>在dragenter或dragover事件中，我們可以藉由檢查effectAllowed來知道那些作業是被允許的，另外，另一個相關聯的<a href="/en-US/docs/DragDrop/DataTransfer#dropEffect.28.29" style="line-height: 1.5;" title="dropEffect">dropEffect</a>屬性應該要是effectAllowed的其中一個作業，但是dropEffect不接受多重作業，只可以是none, copy, move和link。</p>
 
 <p>dropEffect屬性會在在dragenter以及dragover事件中初始化為使用者想要執行的作業效果，使用者能夠透過按鍵(依平台不同，通常是Shift或Ctrl鍵)，在複製、移動、連接作業之間切換，同時滑鼠指標也會跟著相應變換，例如複製作業的滑鼠旁會多出一個+的符號。</p>
 
@@ -203,7 +203,7 @@ event.dataTransfer.dropEffect = "copy";
 
 <p>通常我們只有在適當的時機點才需要呼叫event.preventDefault方法、取消預設事件行為，比如說被拖曳進來的是連結。所以檢查被拖曳進來的物件，當符合條件後再來取消預設事件行為。</p>
 
-<p>藉由檢查拖曳資料型態來決定是否允許放置，是最常見的作法。dataTransfer物件的<a href="/en-US/docs/DragDrop/DataTransfer#types.28.29" style="line-height: 1.5;" title="types">types</a><span style="line-height: 1.5;">屬性是一個拖曳資料型態的列表，其中順序按照資料被加入之先後排序。</span></p>
+<p>藉由檢查拖曳資料型態來決定是否允許放置，是最常見的作法。dataTransfer物件的<a href="/en-US/docs/DragDrop/DataTransfer#types.28.29" style="line-height: 1.5;" title="types">types</a>屬性是一個拖曳資料型態的列表，其中順序按照資料被加入之先後排序。</p>
 
 <pre class="brush: js">function doDragOver(event)
 {
@@ -244,15 +244,15 @@ event.dataTransfer.dropEffect = "copy";
 
 <p>其他比如說插入圖片等，在dragenter事件內執行更多更複雜的樣式變化也是可以的。</p>
 
-<p>倘若想要做出圖片更著滑鼠在拖曳目標區上面移動的效果，那麼可以在dragover事件內來取得的<a href="/en-US/docs/DOM/event.clientX" style="line-height: 1.5;" title="clientX">clientX</a><span style="line-height: 1.5;">和</span><a href="/en-US/docs/DOM/event.clientY" style="line-height: 1.5;" title="clientY">clientY</a><span style="line-height: 1.5;">的滑鼠座標資訊。</span></p>
+<p>倘若想要做出圖片更著滑鼠在拖曳目標區上面移動的效果，那麼可以在dragover事件內來取得的<a href="/en-US/docs/DOM/event.clientX" style="line-height: 1.5;" title="clientX">clientX</a>和<a href="/en-US/docs/DOM/event.clientY" style="line-height: 1.5;" title="clientY">clientY</a>的滑鼠座標資訊。</p>
 
 <p>最後，應該要在dragleave事件內復原之前所做樣式變更，dragleave事件不需要取消預設事件行為、永遠都會觸發，即使拖曳被取消了；至於使用-moz-drag-over的CSS方法的話，樣式復原會自動執行，不用擔心。</p>
 
 <h2 id="drop" name="drop">執行放置作業</h2>
 
-<p>當使用者在拖曳目標區上放開滑鼠時，drop事件就會觸發。<span style="line-height: 1.5;">當drop事件發生，我們需要取出被丟入的資料，然後處理之。</span></p>
+<p>當使用者在拖曳目標區上放開滑鼠時，drop事件就會觸發。當drop事件發生，我們需要取出被丟入的資料，然後處理之。</p>
 
-<p>要取出被丟入的資料，那就要呼叫dataTransfer物件的<a href="/en-US/docs/DragDrop/DataTransfer#getData.28.29" style="line-height: 1.5;" title="getData">getData</a><span style="line-height: 1.5;">方法。getData方法接受資料型態的參數，它會回傳</span><a href="/en-US/docs/DragDrop/DataTransfer#setData.28.29" style="line-height: 1.5;" title="setData">setData</a><span style="line-height: 1.5;">所存入的對應資料型態的資料，倘若沒有對應型態資料，那空字串就會被回傳。</span></p>
+<p>要取出被丟入的資料，那就要呼叫dataTransfer物件的<a href="/en-US/docs/DragDrop/DataTransfer#getData.28.29" style="line-height: 1.5;" title="getData">getData</a>方法。getData方法接受資料型態的參數，它會回傳<a href="/en-US/docs/DragDrop/DataTransfer#setData.28.29" style="line-height: 1.5;" title="setData">setData</a>所存入的對應資料型態的資料，倘若沒有對應型態資料，那空字串就會被回傳。</p>
 
 <pre class="brush: js">function onDrop(event)
 {
@@ -261,11 +261,11 @@ event.dataTransfer.dropEffect = "copy";
   event.preventDefault();
 } </pre>
 
-<p><span style="line-height: 1.5;">上面的範例會取出文字資料，假設拖曳目標區是文字區域，例如p或div元素，那麼資料就會被當作文字內容，插入目標元素之中。</span></p>
+<p>上面的範例會取出文字資料，假設拖曳目標區是文字區域，例如p或div元素，那麼資料就會被當作文字內容，插入目標元素之中。</p>
 
 <p>網頁之中，如果我們已經處理過放置資料，那應該要呼叫{preventDefault}方法防止瀏覽器再次處理資料，比如說，Firefox預設是會開啟拖入的連結，但我們可以取消這項預設行為來避免開啟連結。</p>
 
-<p>當然也可以取得其他種類資料來使用，比如說連結資料，<a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link" style="line-height: 1.5;" title="text/uri-list">text/uri-list</a><span style="line-height: 1.5;">。</span></p>
+<p>當然也可以取得其他種類資料來使用，比如說連結資料，<a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link" style="line-height: 1.5;" title="text/uri-list">text/uri-list</a>。</p>
 
 <pre class="brush: js">function doDrop(event)
 {
@@ -283,7 +283,7 @@ event.dataTransfer.dropEffect = "copy";
 }
 </pre>
 
-<p>上面的範例取得連結資料，然後生成連結元素、加入頁面。從text/uri-list字面上不難猜出這種資料是一行行的URL，所以我們呼叫<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/split" style="line-height: 1.5;" title="split">split</a><span style="line-height: 1.5;">方法拆開一行行的URL，再將URL一個一個加入頁面。請注意我們有避開開頭為”#”字元的註解。</span></p>
+<p>上面的範例取得連結資料，然後生成連結元素、加入頁面。從text/uri-list字面上不難猜出這種資料是一行行的URL，所以我們呼叫<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/split" style="line-height: 1.5;" title="split">split</a>方法拆開一行行的URL，再將URL一個一個加入頁面。請注意我們有避開開頭為”#”字元的註解。</p>
 
 <p>更簡單的作法是採用特別URL型態。URL型態是一個特殊簡寫用途形態，它不會出現在{types}屬性中，但它可以方便的取得第一個連結，如下:</p>
 
@@ -306,11 +306,11 @@ event.dataTransfer.dropEffect = "copy";
 
 <h2 id="dragend" name="dragend">完成拖曳</h2>
 
-<p>拖曳作業完成後，不論成功或取消於否，被拖曳元素的<code style="line-height: 1.5;"><a href="/en-US/docs/Web/Reference/Events/dragend" style="line-height: 1.5;">dragend</a></code><span style="line-height: 1.5;">事件都會觸發，如果想要判別作業是否完成，可以檢查dropEffect屬性，若是dropEffect為none，代表拖曳作業被取消，否則dropEffect的值代表所完成的作業類型。</span></p>
+<p>拖曳作業完成後，不論成功或取消於否，被拖曳元素的<code style="line-height: 1.5;"><a href="/en-US/docs/Web/Reference/Events/dragend" style="line-height: 1.5;">dragend</a></code>事件都會觸發，如果想要判別作業是否完成，可以檢查dropEffect屬性，若是dropEffect為none，代表拖曳作業被取消，否則dropEffect的值代表所完成的作業類型。</p>
 
-<p>有一個Gecko專屬的<a href="/en-US/docs/DragDrop/DataTransfer#mozUserCancelled.28.29" style="line-height: 1.5;" title="dropEffect">mozUserCancelled</a><span style="line-height: 1.5;">屬性，當使用者按ESC鍵取消拖曳後，這個屬性會為true，但若是因其他理由被取消或成功，則為false</span></p>
+<p>有一個Gecko專屬的<a href="/en-US/docs/DragDrop/DataTransfer#mozUserCancelled.28.29" style="line-height: 1.5;" title="dropEffect">mozUserCancelled</a>屬性，當使用者按ESC鍵取消拖曳後，這個屬性會為true，但若是因其他理由被取消或成功，則為false</p>
 
-<p>拖曳作業的放置可以發生在同一個視窗或其他應用程式，而且dragend事件還是會觸發，不過事件中的<a href="/en-US/docs/DOM/event.screenX" style="line-height: 1.5;" title="screenX">screenX</a><span style="line-height: 1.5;">與</span><a href="/en-US/docs/DOM/event.screenY" style="line-height: 1.5;" title="screenY">screenY</a><span style="line-height: 1.5;">屬性會是放置發生點的資訊。</span></p>
+<p>拖曳作業的放置可以發生在同一個視窗或其他應用程式，而且dragend事件還是會觸發，不過事件中的<a href="/en-US/docs/DOM/event.screenX" style="line-height: 1.5;" title="screenX">screenX</a>與<a href="/en-US/docs/DOM/event.screenY" style="line-height: 1.5;" title="screenY">screenY</a>屬性會是放置發生點的資訊。</p>
 
 <p>當dragend事件結束傳遞後，拖曳作業也完成了。</p>
 

@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
 
 <h2 id="说明">说明</h2>
 
-<p>{{jsxref("Date")}} 对象的 <code>[@@toPrimitive]()</code> 方法可以返回一个原始值，或是 string，或是number。</p>
+<p>{{jsxref("Date")}} 对象的 <code>[@@toPrimitive]()</code> 方法可以返回一个原始值，或是 string，或是 number。</p>
 
 <p>如果 <code>hint</code> 是 <code>"string"</code> 或 <code>"default"</code>，<code>[@@toPrimitive]()</code> 将会调用 {{jsxref("Object.prototype.toString()", "toString")}}。如果 <code>toString</code> 属性不存在，则调用 {{jsxref("Object.prototype.valueOf()", "valueOf")}}。如果 <code>valueOf</code> 也不存在，则抛出一个{{jsxref("TypeError")}}。</p>
 

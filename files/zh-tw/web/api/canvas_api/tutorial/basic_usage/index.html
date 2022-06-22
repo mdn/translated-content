@@ -5,7 +5,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}</div>
 
-<div class="summary">
+<div>
 <p>Let's start this tutorial by looking at the {{HTMLElement("canvas")}} {{Glossary("HTML")}} element itself. At the end of this page, you will know how to set up a canvas 2D context and have drawn a first example in your browser.</p>
 </div>
 
@@ -14,26 +14,26 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 <pre class="brush: html">&lt;canvas id="tutorial" width="150" height="150"&gt;&lt;/canvas&gt;
 </pre>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">首先，先來看看 </span></font>{{HTMLElement("canvas")}}<font face="DejaVu Sans, sans-serif"><span lang="zh-TW">，它看起來有點像 </span></font>{{HTMLElement("img")}}<font face="DejaVu Sans, sans-serif"><span lang="zh-TW"> 元素，其中的差異點在於 </span></font><code>&lt;canvas&gt;</code><font face="DejaVu Sans, sans-serif"><span lang="zh-TW"> 沒有 </span></font><code>src</code><font face="DejaVu Sans, sans-serif"> <span lang="zh-TW">和</span> </font><code>alt</code><font face="DejaVu Sans, sans-serif"> <span lang="zh-TW">屬性，</span></font><code>&lt;canvas&gt;</code><font face="DejaVu Sans, sans-serif"><span lang="zh-TW"> 只有 </span></font>{{htmlattrxref("width", "canvas")}}<font face="DejaVu Sans, sans-serif"><span lang="zh-TW"> </span><span lang="zh-TW">與 </span></font>{{htmlattrxref("height", "canvas")}}<font face="DejaVu Sans, sans-serif"><span lang="zh-TW"> 這兩個屬性，這兩個屬性皆為非必須、能透過</span></font><a href="/en-US/docs/DOM" rel="internal" title="en/DOM"> DOM</a><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">屬性設定；若是沒有設定 </span></font><code>width</code><font face="DejaVu Sans, sans-serif"><span lang="zh-TW"> 和 </span></font><code>height</code><font face="DejaVu Sans, sans-serif"><span lang="zh-TW"> 屬性，畫布寬預設值為</span></font><strong><font face="DejaVu Sans, sans-serif"> </font>300 pixels</strong><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">、高預設值為<strong> </strong></span></font><strong>150 pixels</strong><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">，我們可以用 </span></font><a href="/en-US/docs/Web/CSS" rel="internal" title="en/CSS">CSS </a><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">強制設定元素尺寸，但當渲染時，影像會縮放以符合元素的尺寸。</span></font></p>
+<p>首先，先來看看 {{HTMLElement("canvas")}}，它看起來有點像 {{HTMLElement("img")}} 元素，其中的差異點在於 <code>&lt;canvas&gt;</code> 沒有 <code>src</code> 和 <code>alt</code> 屬性，<code>&lt;canvas&gt;</code> 只有 {{htmlattrxref("width", "canvas")}} 與 {{htmlattrxref("height", "canvas")}} 這兩個屬性，這兩個屬性皆為非必須、能透過<a href="/en-US/docs/DOM" rel="internal" title="en/DOM"> DOM</a>屬性設定；若是沒有設定 <code>width</code> 和 <code>height</code> 屬性，畫布寬預設值為<strong> 300 pixels</strong>、高預設值為<strong> </strong><strong>150 pixels</strong>，我們可以用 <a href="/en-US/docs/Web/CSS" rel="internal" title="en/CSS">CSS </a>強制設定元素尺寸，但當渲染時，影像會縮放以符合元素的尺寸。</p>
 
 <div class="note">
-<p style="margin-bottom: 0in;"><strong>Note:</strong><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">如果繪圖結果看起來有些扭曲，可以改試著用</span></font><font face="DejaVu Sans, sans-serif">&lt;canvas&gt;</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">自身的</span></font><font face="DejaVu Sans, sans-serif">width</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">和</span></font><font face="DejaVu Sans, sans-serif">height</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">屬性而不要用</span></font><font face="DejaVu Sans, sans-serif">CSS</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">來設定寬高。</span></font></p>
+<p><strong>Note:</strong>如果繪圖結果看起來有些扭曲，可以改試著用&lt;canvas&gt;自身的width和height屬性而不要用CSS來設定寬高。</p>
 </div>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">幾乎所有</span></font><font face="DejaVu Sans, sans-serif">HTML</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">元素都有</span></font><font face="DejaVu Sans, sans-serif">id</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">屬性，</span></font><font face="DejaVu Sans, sans-serif">&lt;canvas&gt;</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">也不例外，為了方便於程式碼腳本找到需要的</span></font><font face="DejaVu Sans, sans-serif">&lt;canvas&gt;</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">，每次都設定</span></font><font face="DejaVu Sans, sans-serif">id</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">是一項不錯的作法。</span></font></p>
+<p>幾乎所有HTML元素都有id屬性，&lt;canvas&gt;也不例外，為了方便於程式碼腳本找到需要的&lt;canvas&gt;，每次都設定id是一項不錯的作法。</p>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">如同一般的影像可以設定如邊界</span></font><font face="DejaVu Sans, sans-serif">(margin)</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">、邊框</span></font><font face="DejaVu Sans, sans-serif">(border)</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">、背景</span></font><font face="DejaVu Sans, sans-serif">(background)</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">等等，</span></font><font face="DejaVu Sans, sans-serif">&lt;canvas&gt;</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">元素一樣可以設定這些樣式，然而，這些樣式規則不會影響</span></font><font face="DejaVu Sans, sans-serif">canvas</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">實際繪圖，稍後我們會看到相關範例。當沒有套用樣式規定時，</span></font><font face="DejaVu Sans, sans-serif">&lt;canvas&gt;</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">會被初始成全透明。</span></font></p>
+<p>如同一般的影像可以設定如邊界(margin)、邊框(border)、背景(background)等等，&lt;canvas&gt;元素一樣可以設定這些樣式，然而，這些樣式規則不會影響canvas實際繪圖，稍後我們會看到相關範例。當沒有套用樣式規定時，&lt;canvas&gt;會被初始成全透明。</p>
 
-<p style="margin-bottom: 0in;"> </p>
+<p> </p>
 
 <div id="section_2">
-<h3 id="錯誤替代內容(Fallback_content)"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">錯誤替代內容(</span></font>Fallback content)</h3>
+<h3 id="錯誤替代內容(Fallback_content)">錯誤替代內容(Fallback content)</h3>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">因為舊版瀏覽器</span></font><font face="DejaVu Sans, sans-serif">(</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">特別是</span></font><font face="DejaVu Sans, sans-serif">IE9</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">之前的</span></font><font face="DejaVu Sans, sans-serif">IE)</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">不支援</span></font><font face="DejaVu Sans, sans-serif">{&lt;canvas&gt;}</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">元素，我們應該為這些瀏覽器準備錯誤替代內容。</span></font></p>
+<p>因為舊版瀏覽器(特別是IE9之前的IE)不支援{&lt;canvas&gt;}元素，我們應該為這些瀏覽器準備錯誤替代內容。</p>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">當不支援</span></font><font face="DejaVu Sans, sans-serif">&lt;canvas&gt;</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">的瀏覽器看到不認識的</span></font><font face="DejaVu Sans, sans-serif">&lt;canvas&gt;</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">時會忽略</span></font><font face="DejaVu Sans, sans-serif">&lt;canvas&gt;</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">，而此時在</span></font><font face="DejaVu Sans, sans-serif">&lt;canvas&gt;</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">下瀏覽器認識的替代內容則會被瀏覽器解析顯示，至於支援</span></font><font face="DejaVu Sans, sans-serif">&lt;canvas&gt;</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">的瀏覽器則是會正常解析</span></font><font face="DejaVu Sans, sans-serif">&lt;canvas&gt;</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">，忽略替代內容。</span></font></p>
+<p>當不支援&lt;canvas&gt;的瀏覽器看到不認識的&lt;canvas&gt;時會忽略&lt;canvas&gt;，而此時在&lt;canvas&gt;下瀏覽器認識的替代內容則會被瀏覽器解析顯示，至於支援&lt;canvas&gt;的瀏覽器則是會正常解析&lt;canvas&gt;，忽略替代內容。</p>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">例如，我們可以準備一段</span></font><font face="DejaVu Sans, sans-serif">canvas</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">內容的說明文字或</span></font><font face="DejaVu Sans, sans-serif">canvas</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">繪圖完成後的靜態圖片，如下所示</span></font><font face="DejaVu Sans, sans-serif">:</font></p>
+<p>例如，我們可以準備一段canvas內容的說明文字或canvas繪圖完成後的靜態圖片，如下所示:</p>
 
 <pre class="brush: html">&lt;canvas id="stockGraph" width="150" height="150"&gt;
   current stock price: $3.15 +0.15
@@ -46,38 +46,38 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 
 <h6 id="sect1"> </h6>
 
-<h2 id="需要&lt;canvas>標籤"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">需要</span></font><font face="DejaVu Sans, sans-serif">&lt;/canvas&gt;</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">標籤</span></font></h2>
+<h2 id="需要&lt;canvas>標籤">需要&lt;/canvas&gt;標籤</h2>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">不像</font></span></font>{{HTMLElement("img")}}<font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">元素，</font></span></font><font face="DejaVu Sans, sans-serif">{{HTMLElement("canvas")}}</font><font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">元素必須要有</font></span></font><font face="DejaVu Sans, sans-serif">&lt;/canvas&gt;</font><font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">結束標籤。</font></span></font></p>
+<p>不像{{HTMLElement("img")}}元素，{{HTMLElement("canvas")}}元素必須要有&lt;/canvas&gt;結束標籤。</p>
 
-<p style="margin-bottom: 0in;"> </p>
+<p> </p>
 
 <div class="note">
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">縱使早期</span></font><font face="DejaVu Sans, sans-serif">Apple</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">的</span></font><font face="DejaVu Sans, sans-serif">Safari</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">瀏覽器不需要結束標籤，但是基於規範，這是必須的，所以，為了相容性考量，應該要有結束標籤。</span></font><font face="DejaVu Sans, sans-serif">Safari 2.0</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">以前的版本會同時解析</span></font><font face="DejaVu Sans, sans-serif">canvas</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">以及替代內容，除非我們用</span></font><font face="DejaVu Sans, sans-serif">CSS</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">去遮蓋內容，不過幸運的是，現在已經沒有甚麼人在用這些舊版</span></font><font face="DejaVu Sans, sans-serif">Safari</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">。</span></font></p>
+<p>縱使早期Apple的Safari瀏覽器不需要結束標籤，但是基於規範，這是必須的，所以，為了相容性考量，應該要有結束標籤。Safari 2.0以前的版本會同時解析canvas以及替代內容，除非我們用CSS去遮蓋內容，不過幸運的是，現在已經沒有甚麼人在用這些舊版Safari。</p>
 </div>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">如果不需要錯誤替代內容，簡單的</span></font><font face="DejaVu Sans, sans-serif">&lt;canvas id="foo" ...&gt;&lt;/canvas&gt;</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">便可以完全相容於所有支援的瀏覽器。</span></font></p>
+<p>如果不需要錯誤替代內容，簡單的&lt;canvas id="foo" ...&gt;&lt;/canvas&gt;便可以完全相容於所有支援的瀏覽器。</p>
 
-<p style="margin-bottom: 0in;"> </p>
+<p> </p>
 
-<h2 id="渲染環境(rendering_context)"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">渲染環境</span></font>(rendering context)</h2>
+<h2 id="渲染環境(rendering_context)">渲染環境(rendering context)</h2>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif">{{HTMLElement("canvas")}}</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">產生一個固定大小的繪圖畫布，這個畫布上有一或多個</span></font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">渲染環境</span></font><font face="DejaVu Sans, sans-serif">(rendering context)，我們</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">可以用</span></font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">渲染環境</span></font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">來產生或操作顯示內容的渲染環境</span></font><font face="DejaVu Sans, sans-serif">(rendering context)</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">。</span></font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">不同</font>環境</span></font><font face="DejaVu Sans, sans-serif">(context)</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">可能會提供不同型態的渲染方式，好比說</span></font><a href="/en-US/docs/Web/WebGL" title="/en-US/docs/Web/WebGL">WebGL</a><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">使用</span></font><a class="external" href="http://www.khronos.org/opengles/" rel="external" title="http://en.wikipedia.org/wiki/OpenGL_ES">OpenGL ES</a><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">的</span></font><font face="DejaVu Sans, sans-serif">3D</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">環境</span></font><font face="DejaVu Sans, sans-serif">(context)，</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">而這裡我們主要將討論</span></font><font face="DejaVu Sans, sans-serif">2D</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">渲染環境</span></font><font face="DejaVu Sans, sans-serif">(rendering context)</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">。</span></font></p>
+<p>{{HTMLElement("canvas")}}產生一個固定大小的繪圖畫布，這個畫布上有一或多個渲染環境(rendering context)，我們可以用渲染環境來產生或操作顯示內容的渲染環境(rendering context)。不同環境(context)可能會提供不同型態的渲染方式，好比說<a href="/en-US/docs/Web/WebGL" title="/en-US/docs/Web/WebGL">WebGL</a>使用<a class="external" href="http://www.khronos.org/opengles/" rel="external" title="http://en.wikipedia.org/wiki/OpenGL_ES">OpenGL ES</a>的3D環境(context)，而這裡我們主要將討論2D渲染環境(rendering context)。</p>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">一開始</font></span></font><font face="DejaVu Sans, sans-serif">canvas</font><font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">為空白，程式碼腳本需要先存取渲染環境，在上面繪圖，然後才會顯現影像。</font></span></font>{{HTMLElement("canvas")}} <font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">素有一個方法</font></span></font><font face="DejaVu Sans, sans-serif">(</font><a href="/en-US/docs/Web/API/HTMLCanvasElement#Methods" title="/en-US/docs/Web/API/HTMLCanvasElement#Methods">method</a><font face="DejaVu Sans, sans-serif">)</font><font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">叫</font></span></font><font face="DejaVu Sans, sans-serif">getContext()</font><font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">，透過此方法可以取得渲染環境及其繪圖函數</font></span></font><font face="DejaVu Sans, sans-serif">(function)</font><font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">；</font></span></font><font face="DejaVu Sans, sans-serif">getContext()</font><font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">輸入參數只有渲染環境類型一項，像本教學所討論的</font></span></font><font face="DejaVu Sans, sans-serif">2D</font><font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">繪圖，就是輸入”</font></span></font><font face="DejaVu Sans, sans-serif">2d”</font><font face="DejaVu Sans"><span lang="zh-TW"><font face="DejaVu Sans, sans-serif">。</font></span></font></p>
+<p>一開始canvas為空白，程式碼腳本需要先存取渲染環境，在上面繪圖，然後才會顯現影像。{{HTMLElement("canvas")}} 素有一個方法(<a href="/en-US/docs/Web/API/HTMLCanvasElement#Methods" title="/en-US/docs/Web/API/HTMLCanvasElement#Methods">method</a>)叫getContext()，透過此方法可以取得渲染環境及其繪圖函數(function)；getContext()輸入參數只有渲染環境類型一項，像本教學所討論的2D繪圖，就是輸入”2d”。</p>
 
 <pre class="brush: js">var canvas = document.getElementById('tutorial');
 var ctx = canvas.getContext('2d');
 </pre>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">上面第一行先呼叫</span></font>{{domxref("document.getElementById()")}}<font face="DejaVu Sans, sans-serif"><span lang="zh-TW">來取得</span></font>{{HTMLElement("canvas")}}<font face="DejaVu Sans, sans-serif"><span lang="zh-TW">元素，一旦取得元素後，便可以用其</span></font><font face="DejaVu Sans, sans-serif">getContext()</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">取得渲染環境。</span></font></p>
+<p>上面第一行先呼叫{{domxref("document.getElementById()")}}來取得{{HTMLElement("canvas")}}元素，一旦取得元素後，便可以用其getContext()取得渲染環境。</p>
 
-<p style="margin-bottom: 0in;"> </p>
+<p> </p>
 
 <div id="section_5">
-<h2 id="支援性檢查"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">支援性檢查</span></font></h2>
+<h2 id="支援性檢查">支援性檢查</h2>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">替代內容會被不支援</span></font>{{HTMLElement("canvas")}}.<font face="DejaVu Sans, sans-serif"><span lang="zh-TW">的瀏覽器所顯示。程式碼腳本也可以利用檢查</span></font><font face="DejaVu Sans, sans-serif">getContext()</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">方法是否存在來檢查是否支援</span></font><font face="DejaVu Sans, sans-serif">&lt;canvas&gt;</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">，我們可以修改上面例子成如下</span></font><font face="DejaVu Sans, sans-serif">:</font></p>
+<p>替代內容會被不支援{{HTMLElement("canvas")}}.的瀏覽器所顯示。程式碼腳本也可以利用檢查getContext()方法是否存在來檢查是否支援&lt;canvas&gt;，我們可以修改上面例子成如下:</p>
 
 <pre class="brush: js">var canvas = document.getElementById('tutorial');
 
@@ -93,9 +93,9 @@ if (canvas.getContext){
 
 <h6 id="sect2"> </h6>
 
-<h2 id="一個範本"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">一個範本</span></font></h2>
+<h2 id="一個範本">一個範本</h2>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">這裡是一個最簡單的範本，之後就是我們範例的起始點。</span></font></p>
+<p>這裡是一個最簡單的範本，之後就是我們範例的起始點。</p>
 
 <pre class="brush: html">&lt;html&gt;
   &lt;head&gt;
@@ -118,15 +118,15 @@ if (canvas.getContext){
 &lt;/html&gt;
 </pre>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">一旦網頁載入完成後，程式碼會呼叫</span></font><font face="DejaVu Sans, sans-serif">draw()</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">函數</span></font><font face="DejaVu Sans, sans-serif">(</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">這是利用</span></font><font face="DejaVu Sans, sans-serif">document</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">上的</span></font><font face="DejaVu Sans, sans-serif">load</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">事件完成</span></font><font face="DejaVu Sans, sans-serif">)</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">，這類</span></font><font face="DejaVu Sans, sans-serif">draw()</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">函數也可以透過</span></font>{{domxref("window.setTimeout()")}}<font face="DejaVu Sans, sans-serif">, </font>{{domxref("window.setInterval()")}}<font face="DejaVu Sans, sans-serif"><span lang="zh-TW">或其他事件處理函數來呼叫，只要呼叫的時間點是在網頁載入完後。</span></font></p>
+<p>一旦網頁載入完成後，程式碼會呼叫draw()函數(這是利用document上的load事件完成)，這類draw()函數也可以透過{{domxref("window.setTimeout()")}}, {{domxref("window.setInterval()")}}或其他事件處理函數來呼叫，只要呼叫的時間點是在網頁載入完後。</p>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">這是我們的範本實際看起來的樣子</span></font><font face="DejaVu Sans, sans-serif">:</font></p>
+<p>這是我們的範本實際看起來的樣子:</p>
 
 <p>{{EmbedLiveSample("A_skeleton_template", 160, 160)}}</p>
 
-<h2 id="一個簡單的範例"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">一個簡單的範例</span></font></h2>
+<h2 id="一個簡單的範例">一個簡單的範例</h2>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">首先，讓我們先來畫兩個相交的正方形，其中一個正方形有</span></font><font face="DejaVu Sans, sans-serif">alpha</font><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">透明值，之後我們會說明這是如何達成的。</span></font></p>
+<p>首先，讓我們先來畫兩個相交的正方形，其中一個正方形有alpha透明值，之後我們會說明這是如何達成的。</p>
 
 <pre class="brush: html">&lt;html&gt;
  &lt;head&gt;
@@ -151,7 +151,7 @@ if (canvas.getContext){
 &lt;/html&gt;
 </pre>
 
-<p style="margin-bottom: 0in;"><font face="DejaVu Sans, sans-serif"><span lang="zh-TW">本範例的結果如下</span></font><font face="DejaVu Sans, sans-serif">:</font></p>
+<p>本範例的結果如下:</p>
 
 <p>{{EmbedLiveSample("A_simple_example", 160, 160, "https://mdn.mozillademos.org/files/228/canvas_ex1.png")}}</p>
 

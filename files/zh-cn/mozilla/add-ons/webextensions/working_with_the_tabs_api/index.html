@@ -8,34 +8,34 @@ translation_of: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 ---
 <p>{{AddonSidebar}}</p>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">选项卡允许用户在其浏览器窗口中打开多个网页，然后在这些网页之间切换。</span> <span title="">使用Tabs API，您可以使用和操作这些选项卡来创建实用程序，为用户提供使用选项卡或提供扩展功能的新方法。</span></span></p>
+<p>选项卡允许用户在其浏览器窗口中打开多个网页，然后在这些网页之间切换。使用 Tabs API，您可以使用和操作这些选项卡来创建实用程序，为用户提供使用选项卡或提供扩展功能的新方法。</p>
 
-<p>在这篇how-to文章中我们将看到：</p>
+<p>在这篇 how-to 文章中我们将看到：</p>
 
 <ul>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">使用Tabs API所需的权限。</span></span></li>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">使用{{WebExtAPIRef("tabs.query")}}发现有关标签及其属性的更多信息。</span></span></li>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">创建、复制、移动、更新、重新加载和删除选项卡。</span></span></li>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">操纵标签的缩放大小。</span></span></li>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">操纵选项卡的CSS。</span></span></li>
+ <li>使用 Tabs API 所需的权限。</li>
+ <li>使用{{WebExtAPIRef("tabs.query")}}发现有关标签及其属性的更多信息。</li>
+ <li>创建、复制、移动、更新、重新加载和删除选项卡。</li>
+ <li>操纵标签的缩放大小。</li>
+ <li>操纵选项卡的 CSS。</li>
 </ul>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">最后，我们通过查看API提供的其他一些其他功能。</span></span></p>
+<p>最后，我们通过查看 API 提供的其他一些其他功能。</p>
 
 <div class="blockIndicator note">
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">注意：其他地方有一些Tab API功能。</span> <span title="">这些是可用于使用脚本操作选项卡内容的方法{{WebExtAPIRef("tabs.connect")}}，{{WebExtAPIRef("tabs.sendMessage")}}和{{WebExtAPIRef("tabs.executeScript")}}</span>。<span title="">如果您需要有关这些方法的更多信息，请参阅概念文章<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">内容脚本</a>和操作指南<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">修改网页</a>。</span></span></p>
+<p>注意：其他地方有一些 Tab API 功能。这些是可用于使用脚本操作选项卡内容的方法{{WebExtAPIRef("tabs.connect")}}，{{WebExtAPIRef("tabs.sendMessage")}}和{{WebExtAPIRef("tabs.executeScript")}}。如果您需要有关这些方法的更多信息，请参阅概念文章<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">内容脚本</a>和操作指南<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">修改网页</a>。</p>
 </div>
 
-<h2 id="权限和选项卡API"><span class="tlid-translation translation" lang="zh-CN"><span title="">权限和选项卡API</span></span></h2>
+<h2 id="权限和选项卡API">权限和选项卡 API</h2>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">对于大多数Tabs API函数，您不需要任何权限;</span> <span title="">但是，有一些例外：</span></span></p>
+<p>对于大多数 Tabs API 函数，您不需要任何权限; 但是，有一些例外：</p>
 
 <ul>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">需要</span></span><code>"tabs"</code><span class="tlid-translation translation" lang="zh-CN"><span title="">权限才能访问Tab对象的<code>Tab.url</code>，<code>Tab.title</code>和<code>Tab.favIconUrl</code>属性。</span> <span title="">在Firefox中，您还需要</span></span><code>"tabs"</code><span class="tlid-translation translation" lang="zh-CN"><span title="">来按URL执行<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">查询</a>。</span></span></li>
+ <li>需要<code>"tabs"</code>权限才能访问 Tab 对象的<code>Tab.url</code>，<code>Tab.title</code>和<code>Tab.favIconUrl</code>属性。在 Firefox 中，您还需要<code>"tabs"</code>来按 URL 执行<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">查询</a>。</li>
  <li>{{WebExtAPIRef("tabs.executeScript")}}或{{WebExtAPIRef("tabs.insertCSS")}}需要<a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">主机权限</a>。</li>
 </ul>
 
-<p>以下是您可以在扩展程序的manifest.json文件中请求<code>"tabs"</code>权限的方法：</p>
+<p>以下是您可以在扩展程序的 manifest.json 文件中请求<code>"tabs"</code>权限的方法：</p>
 
 <pre class="brush: json">"permissions": [
   "&lt;all_urls&gt;",
@@ -43,14 +43,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 ],
 </pre>
 
-<p>此请求允许您在用户访问的所有网站上使用所有标签API功能。 还有一种替代方法可以请求权限使用{{WebExtAPIRef("tabs.executeScript")}}或{{WebExtAPIRef("tabs.insertCSS")}}，其中您不需要主机权限，形式为<a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>"activeTab"</code></a>。 此权限与<code>&lt;all_urls&gt;</code>提供与<code>"tabs"</code>相同的权限，但有两个限制：</p>
+<p>此请求允许您在用户访问的所有网站上使用所有标签 API 功能。还有一种替代方法可以请求权限使用{{WebExtAPIRef("tabs.executeScript")}}或{{WebExtAPIRef("tabs.insertCSS")}}，其中您不需要主机权限，形式为<a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>"activeTab"</code></a>。此权限与<code>&lt;all_urls&gt;</code>提供与<code>"tabs"</code>相同的权限，但有两个限制：</p>
 
 <ul>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">用户必须通过其浏览器或页面操作，上下文菜单或快捷键与扩展进行交互。</span></span></li>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">它仅在活动选项卡中授予权限。</span></span></li>
+ <li>用户必须通过其浏览器或页面操作，上下文菜单或快捷键与扩展进行交互。</li>
+ <li>它仅在活动选项卡中授予权限。</li>
 </ul>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">这种方法的好处是用户不会收到权限警告，也就是说您的扩展程序可以“访问所有网站的数据”。</span> <span title="">这是因为</span></span><code>&lt;all_urls&gt;</code><span class="tlid-translation translation" lang="zh-CN"><span title="">权限使扩展能够在任何选项卡中随时执行脚本，而</span></span><a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>"activeTab"</code></a><span class="tlid-translation translation" lang="zh-CN"><span title="">仅限于允许扩展在当前选项卡中执行用户请求的操作。</span></span></p>
+<p>这种方法的好处是用户不会收到权限警告，也就是说您的扩展程序可以“访问所有网站的数据”。这是因为<code>&lt;all_urls&gt;</code>权限使扩展能够在任何选项卡中随时执行脚本，而<a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>"activeTab"</code></a>仅限于允许扩展在当前选项卡中执行用户请求的操作。</p>
 
 <h2 id="Discovering_more_about_tabs_and_their_properties">Discovering more about tabs and their properties</h2>
 

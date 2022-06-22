@@ -40,7 +40,7 @@ translation_of: Web/API/CanvasRenderingContext2D/createRadialGradient
 
 <h3 id="使用_createRadialGradient_方法">使用 <code>createRadialGradient</code> 方法</h3>
 
-<p>这是一段简单的代码片段， 使用 <code>createRadialGradient</code> 方法创建一个指定了开始和结束圆的 {{domxref("CanvasGradient")}} 对象。 一旦创建，你可以使用 {{domxref("CanvasGradient.addColorStop()")}} 方法根据指定的偏移和颜色定义一个新的终止。你可以将当前的{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}设置成此渐变， 当使用{{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时，会在canvas上绘制出效果， 如示例所示。</p>
+<p>这是一段简单的代码片段，使用 <code>createRadialGradient</code> 方法创建一个指定了开始和结束圆的 {{domxref("CanvasGradient")}} 对象。 一旦创建，你可以使用 {{domxref("CanvasGradient.addColorStop()")}} 方法根据指定的偏移和颜色定义一个新的终止。你可以将当前的{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}设置成此渐变，当使用{{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时，会在 canvas 上绘制出效果， 如示例所示。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -59,7 +59,7 @@ ctx.fillStyle = gradient;
 ctx.fillRect(0,0,200,200);
 </pre>
 
-<p>修改下面的代码并在线查看 canvas的变化：</p>
+<p>修改下面的代码并在线查看 canvas 的变化：</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
@@ -107,20 +107,7 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-createradialgradient", "CanvasRenderingContext2D.createRadialGradient")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

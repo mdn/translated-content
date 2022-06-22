@@ -14,11 +14,15 @@ La méthode **`allowsFeature()`** de l'interface {{DOMxRef("FeaturePolicy")}} pe
 
 ## Syntaxe
 
-    const listePermissions = FeaturePolicy.allowsFeature(<nomDirective>)
+```js
+const listePermissions = FeaturePolicy.allowsFeature(<nomDirective>)
+```
 
 ou
 
-    const listePermissions = FeaturePolicy.allowsFeature(<nomDirective>, <origine>)
+```js
+const listePermissions = FeaturePolicy.allowsFeature(<nomDirective>, <origine>)
+```
 
 ### Paramètres
 

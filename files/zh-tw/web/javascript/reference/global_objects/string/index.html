@@ -201,8 +201,6 @@ console.log(eval(s2));      // 回傳字串 "2 + 2"
  <dd>能讓字串物件增加屬性。</dd>
 </dl>
 
-<div>{{jsOverrides("Function", "Properties", "prototype")}}</div>
-
 <h2 id="Methods">方法</h2>
 
 <dl>
@@ -211,8 +209,6 @@ console.log(eval(s2));      // 回傳字串 "2 + 2"
  <dt>{{jsxref("String.fromCodePoint()")}} {{experimental_inline}}</dt>
  <dd>利用編碼位置的序列建立並回傳一個字串。</dd>
 </dl>
-
-<div>{{jsOverrides("Function", "Methods", "fromCharCode", "fromCodePoint")}}</div>
 
 <h2 id="String_通用方法"><code>String</code> 通用方法</h2>
 
@@ -226,9 +222,9 @@ console.log(eval(s2));      // 回傳字串 "2 + 2"
 alert(String.replace(num, /5/, '2'));
 </pre>
 
-<p class="brush: js"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods">Generics</a> are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods">Generics</a> are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.</p>
 
-<p class="brush: js">The following is a shim to provide support to non-supporting browsers:</p>
+<p>The following is a shim to provide support to non-supporting browsers:</p>
 
 <pre class="brush: js">/*globals define*/
 // Assumes all supplied String instance methods already present
@@ -283,35 +279,7 @@ for (let i = 0, n = inputValues.length; i &lt; n; ++i) {
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5', 'String')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-string-objects', 'String')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string-objects', 'String')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 

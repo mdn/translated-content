@@ -1,9 +1,9 @@
 ---
-title: Firefox 25网站兼容性
+title: Firefox 25 网站兼容性
 slug: Mozilla/Firefox/Releases/25/Site_Compatibility
 translation_of: Mozilla/Firefox/Releases/25/Site_Compatibility
 ---
-<div>{{FirefoxSidebar}}</div><p>{{ draft() }}</p>
+<div>{{FirefoxSidebar}}</div>
 <section id="sect1">
   <h2 id="DOM">DOM</h2>
   <section id="sect2">
@@ -11,14 +11,14 @@ translation_of: Mozilla/Firefox/Releases/25/Site_Compatibility
     <ul>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=885177">Bug 885177 – Make window.ImageDocument ChromeOnly</a></li>
     </ul>
-    <p>非标准的 {{ domxref("ImageDocument") }} 接口在普通页面中不能访问了.</p>
+    <p>非标准的 {{ domxref("ImageDocument") }} 接口在普通页面中不能访问了。</p>
   </section>
   <section id="sect3">
     <h3 id="worker_中的所有事件名都加上_Worker_前缀">worker 中的所有事件名都加上 <code>Worker 前缀</code></h3>
     <ul>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=887236">Bug 887236 – prefix the current events in workers with "Worker"</a></li>
     </ul>
-    <p>为了能让 <a href="/zh-CN/docs/Web/Reference/Events">普通的 DOM 事件</a> 能在 worker 中正常使用, 目前 worker 中的事件 {{domxref("Event") }}, {{ domxref("MessageEvent") }}, {{ domxref("ErrorEvent") }} and {{ domxref("ProgressEvent") }}  被重命名为了 {{ domxref("WorkerEvent") }}, {{ domxref("WorkerMessageEvent") }}, {{ domxref("WorkerErrorEvent") }} and {{ domxref("WorkerProgressEvent") }}.</p>
+    <p>为了能让 <a href="/zh-CN/docs/Web/Reference/Events">普通的 DOM 事件</a> 能在 worker 中正常使用，目前 worker 中的事件 {{domxref("Event") }}, {{ domxref("MessageEvent") }}, {{ domxref("ErrorEvent") }} and {{ domxref("ProgressEvent") }}  被重命名为了 {{ domxref("WorkerEvent") }}, {{ domxref("WorkerMessageEvent") }}, {{ domxref("WorkerErrorEvent") }} and {{ domxref("WorkerProgressEvent") }}.</p>
   </section>
 </section>
 <section id="sect4">
@@ -28,13 +28,13 @@ translation_of: Mozilla/Firefox/Releases/25/Site_Compatibility
     <ul>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=788172">Bug 788172 – Proxy is not a function (typeof Proxy should be 'function')</a></li>
     </ul>
-    <p>以前, <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy"><code>Proxy</code></a> 是一个对象类型的值. 现在 <code>typeof Proxy</code> 会返回 <code>function</code> ,且不需要在前面加 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a> 运算符也可以正常调用了.</p>
+    <p>以前，<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy"><code>Proxy</code></a> 是一个对象类型的值。现在 <code>typeof Proxy</code> 会返回 <code>function</code> ,且不需要在前面加 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a> 运算符也可以正常调用了。</p>
   </section>
   <section id="sect6">
     <h3 id="yield_without_a_value_has_been_deprecated"><code>yield</code> without a value has been deprecated</h3>
     <ul>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=885463">Bug 885463 – Warn about 'yield' without operand</a></li>
     </ul>
-    <p><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/yield"><code>yield</code></a> 运算符不再需要一个操作数, 该变化遵循了 <a href="/zh-CN/docs/JavaScript/ECMAScript_6_support_in_Mozilla">ECMAScript 6</a> 规范草案.</p>
+    <p><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/yield"><code>yield</code></a> 运算符不再需要一个操作数，该变化遵循了 <a href="/zh-CN/docs/JavaScript/ECMAScript_6_support_in_Mozilla">ECMAScript 6</a> 规范草案。</p>
   </section>
 </section>

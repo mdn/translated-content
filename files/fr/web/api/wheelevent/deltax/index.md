@@ -17,7 +17,9 @@ La propriété en lecture seule **`WheelEvent.deltaX`** est un `double` représe
 
 ## Syntaxe
 
-    var dX = event.deltaX;
+```js
+var dX = event.deltaX;
+```
 
 ## Exemple
 

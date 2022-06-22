@@ -186,13 +186,13 @@ translation_of: Web/API/Document/drag_event
 &lt;script&gt;
   var dragged;
 
-  /* 拖动目标元素时触发drag事件 */
+  /* 拖动目标元素时触发 drag 事件 */
   document.addEventListener("drag", function( event ) {
 
   }, false);
 
   document.addEventListener("dragstart", function( event ) {
-      // 保存拖动元素的引用(ref.)
+      // 保存拖动元素的引用 (ref.)
       dragged = event.target;
       // 使其半透明
       event.target.style.opacity = .5;
@@ -205,7 +205,7 @@ translation_of: Web/API/Document/drag_event
 
   /* 放置目标元素时触发事件 */
   document.addEventListener("dragover", function( event ) {
-      // 阻止默认动作以启用drop
+      // 阻止默认动作以启用 drop
       event.preventDefault();
   }, false);
 

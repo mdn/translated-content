@@ -5,13 +5,12 @@ translation_of: Web/HTML/Element/picture
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong>HTML <code>&lt;picture&gt;</code> 元素</strong> 包含了零或零以上個 {{HTMLElement("source")}} 元素以及一個 {{HTMLElement("img")}} 元素，以為不同顯示器/裝置提供同張圖片的不同版本。</span> </p>
+<p><strong>HTML <code>&lt;picture&gt;</code> 元素</strong> 包含了零或零以上個 {{HTMLElement("source")}} 元素以及一個 {{HTMLElement("img")}} 元素，以為不同顯示器/裝置提供同張圖片的不同版本。 </p>
 
 <p>瀏覽器將會考慮每個 <code>&lt;source&gt;</code> 元素，並且在其中選出最適當的選項。如果沒有找到最適當的選項——或是瀏覽器不支援 <code>&lt;picture&gt;</code> 元素——則 <code>&lt;img&gt;</code> 屬性的 URL 會被選擇。被選擇的圖片將會在 <code>&lt;img&gt;</code> 元素存在的位置顯示。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}</div>
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
 
 <p>為了決定載入哪一個 URL，{{Glossary("user agent")}} 會檢視每一個 <code>&lt;source&gt;</code> 的 {{htmlattrxref("srcset", "source")}}、{{htmlattrxref("media", "source")}} 以及 {{htmlattrxref("type", "source")}} 屬性，以選出最適合當前版面以及顯示裝置支援度的圖片。</p>
 
@@ -123,22 +122,7 @@ translation_of: Web/HTML/Element/picture
 
 <h2 id="規格">規格</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#the-picture-element', '&lt;picture&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器支援度">瀏覽器支援度</h2>
 

@@ -12,15 +12,14 @@ translation_of: Web/CSS/flex
 ---
 <div>{{CSSRef}}</div>
 
-<p><code>flex</code> <a href="/zh-CN/docs/Web/CSS/Shorthand_properties">CSS简写属性</a>设置了弹性项目如何增大或缩小以适应其弹性容器中可用的空间。</p>
+<p><code>flex</code> <a href="/zh-CN/docs/Web/CSS/Shorthand_properties">CSS 简写属性</a>设置了弹性项目如何增大或缩小以适应其弹性容器中可用的空间。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/flex.html")}}</div>
 
-<p class="hidden">这个交互案例的源码存储在github仓库。如果你想对此案例做贡献，请克隆项目<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并且给我们推送一个请求(PR)。</p>
 
 <h2 id="成分属性">成分属性</h2>
 
-<p>此属性是以下CSS属性的简写：</p>
+<p>此属性是以下 CSS 属性的简写：</p>
 
 <ul>
  <li>{{cssxref("flex-grow")}}</li>
@@ -37,21 +36,21 @@ flex: auto;
 flex: initial;
 flex: none;
 
-/* 一个值, 无单位数字: flex-grow */
+/* 一个值，无单位数字：flex-grow */
 flex: 2;
 
-/* 一个值, width/height: flex-basis */
+/* 一个值，width/height: flex-basis */
 flex: 10em;
 flex: 30px;
 flex: min-content;
 
-/* 两个值: flex-grow | flex-basis */
+/* 两个值：flex-grow | flex-basis */
 flex: 1 30px;
 
-/* 两个值: flex-grow | flex-shrink */
+/* 两个值：flex-grow | flex-shrink */
 flex: 2 2;
 
-/* 三个值: flex-grow | flex-shrink | flex-basis */
+/* 三个值：flex-grow | flex-shrink | flex-basis */
 flex: 2 2 10%;
 
 /*全局属性值 */
@@ -62,27 +61,27 @@ flex: unset;
 
 <p>可以使用一个，两个或三个值来指定 <code>flex</code>属性。</p>
 
-<p><strong>单值语法</strong>: 值必须为以下其中之一:</p>
+<p><strong>单值语法</strong>: 值必须为以下其中之一：</p>
 
 <ul>
- <li>一个无单位<strong>数({{cssxref("&lt;number&gt;")}})</strong>: 它会被当作<code>flex:&lt;number&gt; 1 0;</code> <code><a href="/zh-CN/docs/Web/CSS/flex-shrink">&lt;flex-shrink&gt;</a></code>的值被假定为1，然后<code><a href="/zh-CN/docs/Web/CSS/flex-basis">&lt;flex-basis&gt;</a></code> 的值被假定为<code>0</code>。</li>
- <li>一个有效的<strong>宽度({{cssxref("width")}})</strong>值: 它会被当作 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis">&lt;flex-basis&gt;</a>的值。</code></li>
- <li>关键字<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex#none">none</a></code><font face="Open Sans, arial, x-locale-body, sans-serif">，</font><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex#auto">auto</a></code>或<code>initial</code>.</li>
+ <li>一个无单位<strong>数 ({{cssxref("&lt;number&gt;")}})</strong>: 它会被当作<code>flex:&lt;number&gt; 1 0;</code> <code><a href="/zh-CN/docs/Web/CSS/flex-shrink">&lt;flex-shrink&gt;</a></code>的值被假定为 1，然后<code><a href="/zh-CN/docs/Web/CSS/flex-basis">&lt;flex-basis&gt;</a></code> 的值被假定为<code>0</code>。</li>
+ <li>一个有效的<strong>宽度 ({{cssxref("width")}})</strong>值：它会被当作 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis">&lt;flex-basis&gt;</a>的值。</code></li>
+ <li>关键字<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex#none">none</a></code>，<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex#auto">auto</a></code>或<code>initial</code>.</li>
 </ul>
 
 <p><strong>双值语法</strong>: 第一个值必须为一个无单位数，并且它会被当作 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow">&lt;flex-grow&gt;</a></code> 的值。第二个值必须为以下之一：</p>
 
 <ul>
  <li>一个无单位数：它会被当作 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink">&lt;flex-shrink&gt;</a></code> 的值。</li>
- <li>一个有效的宽度值: 它会被当作 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis">&lt;flex-basis&gt;</a></code> 的值。</li>
+ <li>一个有效的宽度值：它会被当作 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis">&lt;flex-basis&gt;</a></code> 的值。</li>
 </ul>
 
-<p><strong>三值语法:</strong></p>
+<p><strong>三值语法：</strong></p>
 
 <ul>
  <li>第一个值必须为一个无单位数，并且它会被当作 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow">&lt;flex-grow&gt;</a></code> 的值。</li>
  <li>第二个值必须为一个无单位数，并且它会被当作  <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink">&lt;flex-shrink&gt;</a></code> 的值。</li>
- <li>第三个值必须为一个有效的宽度值， 并且它会被当作 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis">&lt;flex-basis&gt;</a></code> 的值。</li>
+ <li>第三个值必须为一个有效的宽度值，并且它会被当作 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis">&lt;flex-basis&gt;</a></code> 的值。</li>
 </ul>
 
 <h3 id="Values" name="Values">取值</h3>
@@ -93,22 +92,22 @@ flex: unset;
 </dl>
 
 <dl>
- <dt id="auto"><code>auto</code></dt>
+ <dt><code>auto</code></dt>
  <dd>元素会根据自身的宽度与高度来确定尺寸，但是会伸长并吸收 flex 容器中额外的自由空间，也会缩短自身来适应 flex 容器。这相当于将属性设置为 "<code>flex: 1 1 auto</code>".</dd>
- <dt id="none"><code>none</code></dt>
+ <dt><code>none</code></dt>
  <dd>元素会根据自身宽高来设置尺寸。它是完全非弹性的：既不会缩短，也不会伸长来适应 flex 容器。相当于将属性设置为"<code>flex: 0 0 auto</code>"。</dd>
  <dt><code>&lt;'flex-grow'&gt;</code></dt>
- <dd>定义 flex 项目的 {{cssxref("flex-grow")}} 。负值无效。省略时默认值为 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">1</span></font>。 (初始值为 <code>0</code>)</dd>
+ <dd>定义 flex 项目的 {{cssxref("flex-grow")}} 。负值无效。省略时默认值为 1。 (初始值为 <code>0</code>)</dd>
  <dt><code>&lt;'flex-shrink'&gt;</code></dt>
  <dd>定义 flex 元素的 {{cssxref("flex-shrink")}} 。负值无效。省略时默认值为<code>1</code>。 (初始值为 <code>1</code>)</dd>
  <dt><code>&lt;'flex-basis'&gt;</code></dt>
- <dd>定义 flex 元素的 {{cssxref("flex-basis")}} 属性。若值为<code>0</code>，则必须加上单位，以免被视作伸缩性。省略时默认值为 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">0</span></font>。(初始值为 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">auto</span></font>)</dd>
+ <dd>定义 flex 元素的 {{cssxref("flex-basis")}} 属性。若值为<code>0</code>，则必须加上单位，以免被视作伸缩性。省略时默认值为 0。(初始值为 auto)</dd>
  <dt>
  <h3 id="描述">描述</h3>
  </dt>
 </dl>
 
-<p>大多数情况下，开发者需要将 <code>flex</code> 设置为以下值之一： <code>auto</code>，<code>initial</code>，<code>none</code>，或一个无单位正数。要查看这些值的效果，请尝试调整以下 flex容器的大小：</p>
+<p>大多数情况下，开发者需要将 <code>flex</code> 设置为以下值之一： <code>auto</code>，<code>initial</code>，<code>none</code>，或一个无单位正数。要查看这些值的效果，请尝试调整以下 flex 容器的大小：</p>
 
 <div id="flex">
 <pre class="hidden brush: html notranslate">&lt;div class="flex-container"&gt;

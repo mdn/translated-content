@@ -5,9 +5,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>有两种方式可以让浏览器扩展与系统剪贴板交互: {{domxref("Document.execCommand()")}} 方法以及现代的异步的 <a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a>.</p>
+<p>有两种方式可以让浏览器扩展与系统剪贴板交互：{{domxref("Document.execCommand()")}} 方法以及现代的异步的 <a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a>.</p>
 
-<p>{{domxref("Document.execCommand()")}} 方法常通过以下指令使用:</p>
+<p>{{domxref("Document.execCommand()")}} 方法常通过以下指令使用：</p>
 
 <ul>
  <li><code>document.execCommand("copy")</code></li>
@@ -15,23 +15,23 @@ translation_of: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
  <li><code>document.execCommand("paste")</code></li>
 </ul>
 
-<p>Clipboard API 提供了异步的连接来直接读写剪贴板内容. 例, 如此从剪贴板读取文本:</p>
+<p>Clipboard API 提供了异步的连接来直接读写剪贴板内容。例，如此从剪贴板读取文本：</p>
 
 <pre class="brush: js">navigator.clipboard.readText().then(text =&gt; outputElem.innerText = text);</pre>
 
-<p>这将请求剪贴板内容, 并且当接收到响应时存储剪贴板文本到一个元素的 {{domxref("Node.innerText", "innerText")}}.</p>
+<p>这将请求剪贴板内容，并且当接收到响应时存储剪贴板文本到一个元素的 {{domxref("Node.innerText", "innerText")}}.</p>
 
 <div class="blockIndicator note">
-<p>注意: 异步的 Clipboard API 方法是一个近期新增的规范, 并且这个规范可能不适用于所有浏览器. 请在使用前测试了每一种方法的兼容性, 以确保支持满足您的需求.</p>
+<p>注意：异步的 Clipboard API 方法是一个近期新增的规范，并且这个规范可能不适用于所有浏览器。请在使用前测试了每一种方法的兼容性，以确保支持满足您的需求。</p>
 </div>
 
 <h2 id="写入系统粘贴板">写入系统粘贴板</h2>
 
-<p>有两种向剪贴板写入数据的方法. 你可以使用 {{domxref("Document.execCommand", "document.execCommand()")}}  来触发 "剪切" 和 "复制" 行为, 这将用选择的数据覆盖剪贴板的当前内容. 另一个选项是使用 Clipboard API 的 {{domxref("Clipboard.writeText()")}} 或 {{domxref("Clipboard.write()")}} 方法来用指定数据覆盖剪贴板内容.</p>
+<p>有两种向剪贴板写入数据的方法。你可以使用 {{domxref("Document.execCommand", "document.execCommand()")}}  来触发 "剪切" 和 "复制" 行为，这将用选择的数据覆盖剪贴板的当前内容。另一个选项是使用 Clipboard API 的 {{domxref("Clipboard.writeText()")}} 或 {{domxref("Clipboard.write()")}} 方法来用指定数据覆盖剪贴板内容。</p>
 
 <h3 id="使用_execCommand()">使用 execCommand()</h3>
 
-<p>{{domxref("Document.execCommand", "document.execCommand()")}}  方法的 <code>"cut"</code> 与 <code>"copy"</code> 命令可以被用于以选中素材代替剪贴板的当前内容. 这些命令无需任何特别的权限就可以使用, 如果你在一个用于用户操作的短生存期的事件处理程序中使用他们(例如, 一次点击事件).</p>
+<p>{{domxref("Document.execCommand", "document.execCommand()")}}  方法的 <code>"cut"</code> 与 <code>"copy"</code> 命令可以被用于以选中素材代替剪贴板的当前内容。这些命令无需任何特别的权限就可以使用，如果你在一个用于用户操作的短生存期的事件处理程序中使用他们 (例如，一次点击事件).</p>
 
 <p>例如，假设你有一个下面的弹出菜单页面：</p>
 
@@ -65,52 +65,52 @@ browser.alarms.create({
 
 browser.alarms.onAlarm.addListener(copy);</pre>
 
-<p>这种触发不一定成功，它取决于浏览器是否支持。Firefox浏览器就不支持该功能，你会在浏览器控制台中看到以下信息：</p>
+<p>这种触发不一定成功，它取决于浏览器是否支持。Firefox 浏览器就不支持该功能，你会在浏览器控制台中看到以下信息：</p>
 
 <pre>"document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler."</pre>
 
-<p>为了能够在这种情形下使用，你需要拥有"clipboardWrite"的权限（ <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>）。 因此，"clipboardWrite"权限能使你不通过临时事件处理程序就可以写入系统粘贴板中。</p>
+<p>为了能够在这种情形下使用，你需要拥有"clipboardWrite"的权限（ <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>）。因此，"clipboardWrite"权限能使你不通过临时事件处理程序就可以写入系统粘贴板中。</p>
 
 <h3 id="使用_Clipboard_API">使用 Clipboard API</h3>
 
-<p>Clipboard API 更加灵活, 因为你不仅可以将当前选择复制到剪贴板中, 还可以直接指定要放入剪贴板的信息.</p>
+<p>Clipboard API 更加灵活，因为你不仅可以将当前选择复制到剪贴板中，还可以直接指定要放入剪贴板的信息。</p>
 
-<p>要使用 Clipboard API 需要在你的 <code>manifest.json</code> 文件中申请 <code>clipboardRead</code> 与 <code>clipboardWrite</code> 权限.</p>
+<p>要使用 Clipboard API 需要在你的 <code>manifest.json</code> 文件中申请 <code>clipboardRead</code> 与 <code>clipboardWrite</code> 权限。</p>
 
-<p>对于页面脚本, 需要权限 API 的 <code>clipboard-write</code> 权限. 你可通过 {{domxref("Permissions.query", "navigator.permissions.query()")}} 来检查这个权限:</p>
+<p>对于页面脚本，需要权限 API 的 <code>clipboard-write</code> 权限。你可通过 {{domxref("Permissions.query", "navigator.permissions.query()")}} 来检查这个权限：</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">navigator<span class="punctuation token">.</span>permissions<span class="punctuation token">.</span><span class="function token">query</span><span class="punctuation token">(</span><span class="punctuation token">{</span>name<span class="punctuation token">:</span> <span class="string token">"clipboard-write"</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>result <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>result<span class="punctuation token">.</span>state <span class="operator token">==</span> <span class="string token">"granted"</span> <span class="operator token">||</span> result<span class="punctuation token">.</span>state <span class="operator token">==</span> <span class="string token">"prompt"</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">/* write to the clipboard now */</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">navigator.permissions.query({name: "clipboard-write"}).then(result =&gt; {
+  if (result.state == "granted" || result.state == "prompt") {
+    /* write to the clipboard now */
+  }
+});</code></pre>
 
-<p>这个函数使用一个字符串作为输入并且用它更新剪贴板:</p>
+<p>这个函数使用一个字符串作为输入并且用它更新剪贴板：</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">updateClipboard</span><span class="punctuation token">(</span>newClip<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  navigator<span class="punctuation token">.</span>clipboard<span class="punctuation token">.</span><span class="function token">writeText</span><span class="punctuation token">(</span>newClip<span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">/* clipboard successfully set */</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">/* clipboard write failed */</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">function updateClipboard(newClip) {
+  navigator.clipboard.writeText(newClip).then(function() {
+    /* clipboard successfully set */
+  }, function() {
+    /* clipboard write failed */
+  });
+}</code></pre>
 
 <h3 id="特定浏览器注意事项">特定浏览器注意事项</h3>
 
-<p> 这里涉及的剪贴板和其他API正在快速发展, 因此浏览器在工作方式上存在差异.</p>
+<p> 这里涉及的剪贴板和其他 API 正在快速发展，因此浏览器在工作方式上存在差异。</p>
 
-<p>在Chrome中:</p>
+<p>在 Chrome 中：</p>
 
 <ul>
  <li>你可以在所有执行上下文中写入系统粘贴板，像背景网页、内容脚本、标签页和弹出菜单。</li>
  <li>你不需要 <code>"clipboardWrite"</code> 权限，甚至不需要在用户生成的事件处理程序中写入粘贴板</li>
 </ul>
 
-<p>在Firefox中:</p>
+<p>在 Firefox 中：</p>
 
 <ul>
- <li>除了背景网页外，你可以在所有执行上下文中使用 execCommand 写入粘贴板。在Firefox中，你无法选择文本或将输入字段聚焦在后台页面中，因此无法使用 execCommand 从后台页面写入剪贴板。</li>
- <li>只有version 51以上才支持"clipboardWrite" 权限。</li>
+ <li>除了背景网页外，你可以在所有执行上下文中使用 execCommand 写入粘贴板。在 Firefox 中，你无法选择文本或将输入字段聚焦在后台页面中，因此无法使用 execCommand 从后台页面写入剪贴板。</li>
+ <li>只有 version 51 以上才支持"clipboardWrite" 权限。</li>
  <li>从 version 57 开始，可以使用 <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData">clipboard.setImageData()</a></code> API 将图像复制到剪贴板。</li>
  <li>在 Firefox 633 中添加了对 Clipboard API {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} 方法的支持。</li>
  <li>当使用一个内容脚本，Clipboard API 只可用于 HTTPS 页。解决方法是，在内容脚本和后台脚本之间使用消息传递。</li>
@@ -124,31 +124,31 @@ browser.alarms.onAlarm.addListener(copy);</pre>
 
 <p>首先，你需要为扩展申请 <code>"clipboardRead"</code> <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> 。即便你在用户生成的事件处理程序 ( 例如 {{event("click")}} 或 {{event("keypress")}} ) 中使用 "paste" 指令也是如此。</p>
 
-<p>假设你的HTML页面内容如下：</p>
+<p>假设你的 HTML 页面内容如下：</p>
 
 <pre class="brush: html">&lt;input id="output" type="text"/&gt;
 &lt;button id="paste"&gt;粘贴&lt;/button&gt;
 </pre>
 
-<p>要在用户单机 id 为 <code>"paste"</code> 的 {{HTMLElement("button")}} 时从剪贴板设置 id 为 <code>"output"</code> 的 {{HTMLElement("textarea")}} 的内容，可以使用这样的代码:</p>
+<p>要在用户单机 id 为 <code>"paste"</code> 的 {{HTMLElement("button")}} 时从剪贴板设置 id 为 <code>"output"</code> 的 {{HTMLElement("textarea")}} 的内容，可以使用这样的代码：</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">paste</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> pasteText <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">"#output"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  pasteText<span class="punctuation token">.</span><span class="function token">focus</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  document<span class="punctuation token">.</span><span class="function token">execCommand</span><span class="punctuation token">(</span><span class="string token">"paste"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>pasteText<span class="punctuation token">.</span>textContent<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers language-js"><code class="language-js">function paste() {
+  var pasteText = document.querySelector("#output");
+  pasteText.focus();
+  document.execCommand("paste");
+  console.log(pasteText.textContent);
+}
 
-document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">"#paste"</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"click"</span><span class="punctuation token">,</span> paste<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+document.querySelector("#paste").addEventListener("click", paste);</code></pre>
 
 <h3 id="使用_Clipboard_API_2">使用 Clipboard API</h3>
 
 <p>剪贴板 API 的 {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} 和 {{domxref("Clipboard.read", "navigator.clipboard.read()")}} 方法让你从剪贴板读取任意文本或二进制数据。这让你从剪贴板访问数据无需将它们粘贴至一个可编辑的元素中。</p>
 
-<p>一旦你通过 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</a> 获取了 <code>"clipboard-read"</code> 权限，你就可以轻松读取剪贴板:</p>
+<p>一旦你通过 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</a> 获取了 <code>"clipboard-read"</code> 权限，你就可以轻松读取剪贴板：</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">navigator<span class="punctuation token">.</span>clipboard<span class="punctuation token">.</span><span class="function token">readText</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>clipText <span class="operator token">=&gt;</span>
-  document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"outbox"</span><span class="punctuation token">)</span><span class="punctuation token">.</span>innerText <span class="operator token">=</span> clipText<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">navigator.clipboard.readText().then(clipText =&gt;
+  document.getElementById("outbox").innerText = clipText);</code></pre>
 
 <p>这个代码片段从剪贴板提取文本并且用该文本替换 ID 为 <code>"outbox"</code> 的元素的当前内容。</p>
 

@@ -24,11 +24,11 @@ translation_of: Web/API/URLSearchParams/get
 
 <h2 id="示例">示例</h2>
 
-<p>如果一个页面的URL是 <code>https://example.com/?name=Jonathan&amp;age=18</code> ，你可以这样解析参数“name”和“age”:</p>
+<p>如果一个页面的 URL 是 <code>https://example.com/?name=Jonathan&amp;age=18</code> ，你可以这样解析参数“name”和“age”:</p>
 
 <pre class="default prettyprint prettyprinted"><code>let params = new URLSearchParams(document.location.search.substring(1));
-let name = params.get("name")<span class="kwd">; // is the string "Jonathan"
-</span>let age = parseInt(params.get("age"), 10<span class="kwd">); // is the number 18</span></code>
+let name = params.get("name"); // is the string "Jonathan"
+let age = parseInt(params.get("age"), 10); // is the number 18</code>
 </pre>
 
 <p>查找一个不存在的键名则返回 <code><strong>null</strong></code>:</p>

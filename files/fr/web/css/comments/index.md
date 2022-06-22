@@ -15,7 +15,9 @@ Les commentaires sont utilisés afin d'ajouter des notes explicatives ou pour em
 
 On peut utiliser des commentaires à chaque endroit où un blanc est autorisé.
 
-    /* Commentaire */
+```css
+/* Commentaire */
+```
 
 ## Exemples
 

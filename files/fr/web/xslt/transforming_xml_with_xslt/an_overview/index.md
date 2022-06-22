@@ -19,9 +19,9 @@ L'eXtensible Stylesheet Language/Transform est un langage très puissant, et une
 - L'espace de nommage imposé pour XSLT est "http\://www\.w3.org/1999/XSL/Transform".
   - : Les espaces de nommages sont une source de confusion importante dans XML. Bien qu'ils semblent souvent être des URI, ils ne se réfèrent pas à une ressource située à cette adresse. Ils sont uniquement un moyen d'attribuer un identifiant unique à un ensemble d'éléments connus. La chaîne "http\://www\.w3.org/1999/XSL/Transform" est une constante qui marque les éléments ainsi désignés comme appartenant à l'ensemble des balises définies par le W3C dans sa recommandation XSLT de 1999. Une autre chaîne occasionnellement utilisée dans les feuilles de styles, "http\://www\.w3.org/TR/WD-xsl", indique la conformité avec un des premiers brouillons de travail (Working Draft en anglais, d'où le WD) du document du W3C. Ce dernier espace de nommage n'est pas compatible avec celui que la W3C a adopté et il n'est pas supporté par Netscape. Comme saisir la chaîne "http\://www\.w3.org/1999/XSL/Transform" à chaque fois serait pénible et rendrait la balisage difficile à lire, il existe un mécanisme pour assigner une abréviation à un espace de nommage dans l'en-tête de la feuille de styles. Dans sa totalité, l'élément ouvrant d'une feuille de style serait&nbsp;:
 
-<!---->
-
+    ```xml
     <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    ```
 
 - Le pseudo attribut xmlns définit xsl comme l'abréviation du nom complet de l'espace de nommage pour ce document. Ainsi l'élément stylesheet ci-dessus est préfixé par `xsl:`. Bien que xsl soit conventionnellement utilisé, il n'est pas imposé et il est possible de choisir un autre raccourci. Les exemples de ce document utilisent tous le préfixe xsl.
 - Toutes les transformations XSLT sont exécutées sur les arbres, et non sur les documents.
@@ -35,9 +35,9 @@ L'eXtensible Stylesheet Language/Transform est un langage très puissant, et une
 - Les feuilles de styles peuvent être attachées à un document XML par l'intermédiaire d'une instruction de traitement.
 - La méthode la plus simple pour indiquer la feuille de styles XSLT à utiliser pour traiter un document XML particulier est d'inclure une instruction de traitement dans le document XML lui-même. Par exemple, si la feuille de styles se nomme inventory.xsl et se trouve dans le même répertoire que le document XML, l'instruction de traitement dans le document pourrait ressembler à&nbsp;:
 
-<!---->
-
-    <?xml-stylesheet type="text/xml" href="inventory.xsl"?>
+  ```xml
+  <?xml-stylesheet type="text/xml" href="inventory.xsl"?>
+  ```
 
 Cette instruction doit être placée dans le prologue du document XML.
 

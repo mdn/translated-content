@@ -8,66 +8,66 @@ original_slug: learn/Server-side/Django/主页构建
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">  我们现在可以添加代码来显示我们的第一个完整页面 -  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 网站的主页，显示每个模型类型有多少条记录，并提供我们其他页面的侧边栏导航链接。一路上，我们将获得编写基本URL地图和视图，从数据库获取记录以及使用模板的实践经验。</p>
+<p>  我们现在可以添加代码来显示我们的第一个完整页面 -  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 网站的主页，显示每个模型类型有多少条记录，并提供我们其他页面的侧边栏导航链接。一路上，我们将获得编写基本 URL 地图和视图，从数据库获取记录以及使用模板的实践经验。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">前提:</th>
+   <th scope="row">前提：</th>
    <td>读 the <a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django Introduction</a>. 完成上章节 (including <a href="/zh-CN/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a>).</td>
   </tr>
   <tr>
-   <th scope="row">目的:</th>
-   <td>了解如何创建简单的URL映射和视图（没有数据编码在URL中）以及如何从模型中获取数据并创建模版。</td>
+   <th scope="row">目的：</th>
+   <td>了解如何创建简单的 URL 映射和视图（没有数据编码在 URL 中）以及如何从模型中获取数据并创建模版。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="概要">概要</h2>
 
-<p>现在我们已经定义了我们的模型，并创建了一些初始库记录来处理，现在是编写代码以向用户呈现该信息的时候了。我们需要做的第一件事是确定我们希望能够在我们的页面中显示哪些信息，然后为返回这些资源定义适当的URL。那么我们将需要创建一个url映射器，视图和模板来显示这些页面。</p>
+<p>现在我们已经定义了我们的模型，并创建了一些初始库记录来处理，现在是编写代码以向用户呈现该信息的时候了。我们需要做的第一件事是确定我们希望能够在我们的页面中显示哪些信息，然后为返回这些资源定义适当的 URL。那么我们将需要创建一个 url 映射器，视图和模板来显示这些页面。</p>
 
 <p>以下图表提供了处理HTTP请求/响应时需要实现的数据和事情的主要流程。我们已经创建了这个模型，我们需要创建的主要内容是：</p>
 
 <ul>
- <li>URL映射-根据-支持的URL（以及任何编码在URL里的信息）跳转到相应的<strong>View</strong>功能函数。</li>
- <li><strong>View</strong> 函数从模型中获取请求的数据，创建一个显示数据的HTML页面，并将其返回给用户在浏览器查看。</li>
- <li><strong>Templates</strong> 在View视图中进行数据渲染的时候使用。</li>
+ <li>URL 映射 - 根据 - 支持的 URL（以及任何编码在 URL 里的信息）跳转到相应的<strong>View</strong>功能函数。</li>
+ <li><strong>View</strong> 函数从模型中获取请求的数据，创建一个显示数据的 HTML 页面，并将其返回给用户在浏览器查看。</li>
+ <li><strong>Templates</strong> 在 View 视图中进行数据渲染的时候使用。</li>
 </ul>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13931/basic-django.png" style="display: block; margin: 0px auto;"></p>
 
-<p>正如你将在下一节中看到的，我们将要显示5个页面，这在一篇文章中是很重要的。因此，本文的大部分内容将重点介绍如何实现主页（我们将在随后的文章中介绍其他页面）。这应该让您对URL映射器，视图和模型在实践中如何工作有一个很好的端到端的了解。</p>
+<p>正如你将在下一节中看到的，我们将要显示 5 个页面，这在一篇文章中是很重要的。因此，本文的大部分内容将重点介绍如何实现主页（我们将在随后的文章中介绍其他页面）。这应该让您对 URL 映射器，视图和模型在实践中如何工作有一个很好的端到端的了解。</p>
 
-<h2 id="定义资源URL">定义资源URL</h2>
+<h2 id="定义资源URL">定义资源 URL</h2>
 
-<p>由于本版本的LocalLibrary对于最终用户本质上是只读的，所以我们只需要为该网站（主页）提供一个着陆页，以及显示书籍和作者的列表和详细视图的页面。</p>
+<p>由于本版本的 LocalLibrary 对于最终用户本质上是只读的，所以我们只需要为该网站（主页）提供一个着陆页，以及显示书籍和作者的列表和详细视图的页面。</p>
 
-<p>下面这些URL 是我们页面需要的：</p>
+<p>下面这些 URL 是我们页面需要的：</p>
 
 <ul>
  <li><code>catalog/</code> — 主页</li>
  <li><code>catalog/books/</code> — 书单页</li>
  <li><code>catalog/authors/</code> — 作者页</li>
- <li><code>catalog/book/<em>&lt;id&gt;</em></code> — 主键字段 ID的具体书（默认） —详细视图。如下例子 <code>／catalog／book／3</code>，第三本书。</li>
- <li><code>catalog/author/<em>&lt;id&gt;</em></code><em> </em>— 主键字段 ID的具体作者（默认） —详细视图。如下例子 <code>/catalog/author/11</code>，第11个作者。</li>
+ <li><code>catalog/book/<em>&lt;id&gt;</em></code> — 主键字段 ID 的具体书（默认） —详细视图。如下例子 <code>／catalog／book／3</code>，第三本书。</li>
+ <li><code>catalog/author/<em>&lt;id&gt;</em></code><em> </em>— 主键字段 ID 的具体作者（默认） —详细视图。如下例子 <code>/catalog/author/11</code>，第 11 个作者。</li>
 </ul>
 
-<p>前三个URL用于列出索引，书籍和作者。这些不会对任何附加信息进行编码，而返回的结果将取决于数据库中的内容，运行获取信息的查询将始终保持一致。</p>
+<p>前三个 URL 用于列出索引，书籍和作者。这些不会对任何附加信息进行编码，而返回的结果将取决于数据库中的内容，运行获取信息的查询将始终保持一致。</p>
 
-<p>相比之下，最后两个URL用于显示有关特定书籍或作者的详细信息 - 这些URL将编码要显示在URL中的项目的标识（如上所示&lt;id&gt;）。URL映射器可以提取编码信息并将其传递给视图，然后将动态地确定从数据库获取哪些信息。通过对我们的URL中的信息进行编码，我们只需要一个URL映射，视图和模板来处理每本书（或作者）。</p>
+<p>相比之下，最后两个 URL 用于显示有关特定书籍或作者的详细信息 - 这些 URL 将编码要显示在 URL 中的项目的标识（如上所示&lt;id&gt;）。URL 映射器可以提取编码信息并将其传递给视图，然后将动态地确定从数据库获取哪些信息。通过对我们的 URL 中的信息进行编码，我们只需要一个 URL 映射，视图和模板来处理每本书（或作者）。</p>
 
 <div class="note">
-<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'><font><font>注意</font></font></strong><font><font>：Django允许您以任何您喜欢的方式构建您的URL - 您可以如上所示编码URL正文中的信息，或使用URL<span> </span></font></font><code style='margin: 0px; padding: 0px; border: 0px; font-style: normal; font-weight: normal; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: 18px; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 243, 212); text-decoration-style: initial;'>GET</code><font><font>参数（例如 <span> </span></font></font><code style='margin: 0px; padding: 0px; border: 0px; font-style: normal; font-weight: normal; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: 18px; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 243, 212); text-decoration-style: initial;'>/book/?id=6</code><font><font>）。</font><font>无论您使用哪种方法，URL都应保持清洁，逻辑和可读性</font></font> (<a href="https://www.w3.org/Provider/Style/URI">check out the W3C advice here</a>).<br>
+<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意</strong>：Django 允许您以任何您喜欢的方式构建您的 URL - 您可以如上所示编码 URL 正文中的信息，或使用 URL <code style='margin: 0px; padding: 0px; border: 0px; font-style: normal; font-weight: normal; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: 18px; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 243, 212); text-decoration-style: initial;'>GET</code>参数（例如  <code style='margin: 0px; padding: 0px; border: 0px; font-style: normal; font-weight: normal; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: 18px; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 243, 212); text-decoration-style: initial;'>/book/?id=6</code>）。无论您使用哪种方法，URL 都应保持清洁，逻辑和可读性 (<a href="https://www.w3.org/Provider/Style/URI">check out the W3C advice here</a>).<br>
  <br>
- <font><font>Django文档倾向于在URL的主体中推荐编码信息，这是他们觉得鼓励更好的URL设计的实践。</font></font></p>
+ Django 文档倾向于在 URL 的主体中推荐编码信息，这是他们觉得鼓励更好的 URL 设计的实践。</p>
 </div>
 
 <p>如概述，本文其余部分介绍如何构建索引页</p>
 
 <h2 id="创建索引页">创建索引页</h2>
 
-<p>我们创建的第一个页面将会是索引页（catalog/)。这会显示一些静态HTML，以及数据库中不同记录的一些计算的“计数“。为了使其工作，我们必须创建一个URL映射，视图和模版。</p>
+<p>我们创建的第一个页面将会是索引页（catalog/)。这会显示一些静态 HTML，以及数据库中不同记录的一些计算的“计数“。为了使其工作，我们必须创建一个 URL 映射，视图和模版。</p>
 
 <div class="note">
 <p><strong>注意</strong>: 本节应该特别注意。一些”材料“在所有页面都通用。</p>
@@ -75,7 +75,7 @@ original_slug: learn/Server-side/Django/主页构建
 
 <h3 id="URL_映射">URL 映射</h3>
 
-<p>在我们创建的<a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">基础网站</a>上，更新 <strong>/locallibrary/urls.py</strong> 文件。以确保每当收到以<code><strong>catalog/</strong></code>开头的URL时，URLConf模块中的<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"><strong>catalog.urls</strong></span></font> 会处理剩余的字符串。</p>
+<p>在我们创建的<a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">基础网站</a>上，更新 <strong>/locallibrary/urls.py</strong> 文件。以确保每当收到以<code><strong>catalog/</strong></code>开头的 URL 时，URLConf 模块中的<strong>catalog.urls</strong> 会处理剩余的字符串。</p>
 
 <p>打开 catalog/<strong>urls.py</strong> ，复制下面代码</p>
 
@@ -83,21 +83,21 @@ original_slug: learn/Server-side/Django/主页构建
 <strong>    path('', views.index, name='index'),</strong>
 ]</pre>
 
-<p>如果检测到URL模式''，(views.index——在view.py中函数命名index() ）将被调用。URL模式是<a href="https://docs.python.org/3/library/re.html">Python 正则表达式</a> (RE)。我们将在本教程中进一步介绍RE。</p>
+<p>如果检测到 URL 模式''，(views.index——在 view.py 中函数命名 index() ）将被调用。URL 模式是<a href="https://docs.python.org/3/library/re.html">Python 正则表达式</a> (RE)。我们将在本教程中进一步介绍 RE。</p>
 
 <div class="note">
-<p><strong>注意: </strong>在  <strong>/locallibrary/locallibrary/urls.py</strong> </p>
+<p><strong>注意：</strong>在  <strong>/locallibrary/locallibrary/urls.py</strong> </p>
 
 <pre><code>urlpatterns += [
     path('catalog/', include('catalog.urls')),
 ]</code></pre>
 
-<p>每当Django 使用 include() （<a href="https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include" title="django.conf.urls.include"><code>django.conf.urls.include()），</code></a><code>它排除与该点 匹配URL的任何部分，并将剩余的字符串发送到随附的 URLconf 进行一步处理。</code></p>
+<p>每当 Django 使用 include() （<a href="https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include" title="django.conf.urls.include"><code>django.conf.urls.include()），</code></a><code>它排除与该点 匹配URL的任何部分，并将剩余的字符串发送到随附的 URLconf 进行一步处理。</code></p>
 
-<p>匹配的URL 实际上是 <code>catalog/</code>+&lt;空字符串&gt; （<code>/catalog/</code> 假定是因为 <code>include()</code>是使用的方法）。如果我们收到一个URL的HTTP请求，我们的第一个视图函数将被调用<code>/catalog/。</code></p>
+<p>匹配的 URL 实际上是 <code>catalog/</code>+&lt;空字符串&gt; （<code>/catalog/</code> 假定是因为 <code>include()</code>是使用的方法）。如果我们收到一个 URL 的 HTTP 请求，我们的第一个视图函数将被调用<code>/catalog/。</code></p>
 </div>
 
-<p>此函数还说明了一个<code>name</code>参数，此唯一标识指定 URL 映射。你可以使用 "reverse" 映射—去动态创建指定映射设计处理的资源的一个URL。例如，我们现在可以通过在我们的模版中创建以下链接到我们的主页：</p>
+<p>此函数还说明了一个<code>name</code>参数，此唯一标识指定 URL 映射。你可以使用 "reverse" 映射—去动态创建指定映射设计处理的资源的一个 URL。例如，我们现在可以通过在我们的模版中创建以下链接到我们的主页：</p>
 
 <pre class="brush: html">&lt;a href="<strong>{% url 'index' %}</strong>"&gt;Home&lt;/a&gt;.</pre>
 
@@ -107,9 +107,9 @@ original_slug: learn/Server-side/Django/主页构建
 
 <h3 id="View_基于功能">View (基于功能)</h3>
 
-<p>视图是处理HTTP请求的功能，根据需要从数据库获取数据，通过使用HTML模板呈现此数据生成HTML页面，然后以HTTP响应返回HTML以显示给用户。索引视图遵循此模型 - 它提取有关数据库中有多少<code>Book</code>，<code>BookInstance </code>可用 <code>BookInstance</code> 和<code> Author</code> 记录的信息，并将其传递给模板以进行显示。</p>
+<p>视图是处理 HTTP 请求的功能，根据需要从数据库获取数据，通过使用 HTML 模板呈现此数据生成 HTML 页面，然后以 HTTP 响应返回 HTML 以显示给用户。索引视图遵循此模型 - 它提取有关数据库中有多少<code>Book</code>，<code>BookInstance </code>可用 <code>BookInstance</code> 和<code> Author</code> 记录的信息，并将其传递给模板以进行显示。</p>
 
-<p>打开catalog / views.py，并注意该文件已经导入了 使用模板和数据生成HTML文件的 <a href="https://docs.djangoproject.com/en/1.10/topics/http/shortcuts/#django.shortcuts.render">render()</a> 快捷方式函数。</p>
+<p>打开 catalog / views.py，并注意该文件已经导入了 使用模板和数据生成 HTML 文件的 <a href="https://docs.djangoproject.com/en/1.10/topics/http/shortcuts/#django.shortcuts.render">render()</a> 快捷方式函数。</p>
 
 <pre class="brush: python">from django.shortcuts import render
 
@@ -138,23 +138,23 @@ def index(request):
         context={'num_books':num_books,'num_instances':num_instances,'num_instances_available':num_instances_available,'num_authors':num_authors},
     )</pre>
 
-<p>视图函数的第一部分使用<code>objects.all()</code>模型类的属性来获取记录计数。它还会获取一个<code>BookInstance</code>状态字段值为“a”（可用）的对象列表。您可以在前面的教程 (<a href="/en-US/docs/Learn/Server-side/Django/Models#Searching_for_records">Django Tutorial Part 3: Using models &gt; Searching for records</a>)中找到更多关于如何访问模型的信息。</p>
+<p>视图函数的第一部分使用<code>objects.all()</code>模型类的属性来获取记录计数。它还会获取一个<code>BookInstance</code>状态字段值为“a”（可用）的对象列表。您可以在前面的教程 (<a href="/en-US/docs/Learn/Server-side/Django/Models#Searching_for_records">Django Tutorial Part 3: Using models &gt; Searching for records</a>) 中找到更多关于如何访问模型的信息。</p>
 
-<p>在函数结束时，我们将该函数称为<code>render()</code>创建和返回HTML页面作为响应（此快捷方式函数包含许多其他函数，简化了这种非常常见的用例）。它将原始<code>request</code>对象（an HttpRequest）作为参数，具有数据占位符的HTML模板以及<code>context</code>变量（包含要插入到这些占位符中的数据的Python字典）。</p>
+<p>在函数结束时，我们将该函数称为<code>render()</code>创建和返回 HTML 页面作为响应（此快捷方式函数包含许多其他函数，简化了这种非常常见的用例）。它将原始<code>request</code>对象（an HttpRequest）作为参数，具有数据占位符的 HTML 模板以及<code>context</code>变量（包含要插入到这些占位符中的数据的 Python 字典）。</p>
 
 <p>我们将在下一节中详细介绍模板和上下文变量; 让我们创建我们的模板，以便我们可以向用户显示一些内容</p>
 
 <h3 id="模版">模版</h3>
 
-<p>模版是定义一个文件（例如HTML页面）的结构与布局的文本文件，其中占位符用于表示实际内容。Django将自动在应用程序“templates”目录查找模版。所以例如，在我们刚刚加的索引页，<code>render()</code> 函数会期望能够找到<strong>/locallibrary/catalog/templates/<em>index.html</em></strong>这个文件，如何找不到该文件，则会引发错误。如果保存以前的更改并返回到浏览器，你可以看到访问 <code><a href="127.0.0.1:8000">127.0.0.1:8000</a> 现在将提供你一个相当直观的错误信息</code>"<strong>TemplateDoesNotExist at /catalog/</strong>“以及其他详细信息。</p>
+<p>模版是定义一个文件（例如 HTML 页面）的结构与布局的文本文件，其中占位符用于表示实际内容。Django 将自动在应用程序“templates”目录查找模版。所以例如，在我们刚刚加的索引页，<code>render()</code> 函数会期望能够找到<strong>/locallibrary/catalog/templates/<em>index.html</em></strong>这个文件，如何找不到该文件，则会引发错误。如果保存以前的更改并返回到浏览器，你可以看到访问 <code><a href="127.0.0.1:8000">127.0.0.1:8000</a> 现在将提供你一个相当直观的错误信息</code>"<strong>TemplateDoesNotExist at /catalog/</strong>“以及其他详细信息。</p>
 
 <div class="note">
-<p><strong>注意</strong>: Django 将根据你的项目的设置文件, 来查看模版的许多位置 (在已安装的应用程序中进行搜索是默认设置). 你可以查阅更多关于Django如何找到模版以及它支持的模版格式在<a href="https://docs.djangoproject.com/en/1.10/topics/templates/">（Templates</a> ）。</p>
+<p><strong>注意</strong>: Django 将根据你的项目的设置文件，来查看模版的许多位置 (在已安装的应用程序中进行搜索是默认设置). 你可以查阅更多关于 Django 如何找到模版以及它支持的模版格式在<a href="https://docs.djangoproject.com/en/1.10/topics/templates/">（Templates</a> ）。</p>
 </div>
 
 <h4 id="扩展模版">扩展模版</h4>
 
-<p>索引模版将需要标准的HTML标记头部和正文，以及用于导航的部分（去我们尚为创建的网站其他的页面）以及显示一些介绍文本和我们书籍数据。我们网站上的每一页，大部分文字（HTML和导航结构）都是一样的。Django模版语言不是强制开发人员在每个页面中复制这个“样板”，而是让你声明一个基本模版，然后再扩展它，仅替换每个特定页面不同的位置。</p>
+<p>索引模版将需要标准的 HTML 标记头部和正文，以及用于导航的部分（去我们尚为创建的网站其他的页面）以及显示一些介绍文本和我们书籍数据。我们网站上的每一页，大部分文字（HTML 和导航结构）都是一样的。Django 模版语言不是强制开发人员在每个页面中复制这个“样板”，而是让你声明一个基本模版，然后再扩展它，仅替换每个特定页面不同的位置。</p>
 
 <p>例如，基本模版 <code>base_generic.html</code> 可能看起来像下面的文本。正如你所见的，它包含一些“常见“HTML”和标题，侧边栏和使用命名 <code>block</code> 和 <code>endblock</code> 模版标记（粗体显示）标记的内容部分。块可以是空的，或者包含将被派生页“默认使用”的内容。</p>
 
@@ -177,7 +177,7 @@ def index(request):
 
 <p>当我们要为特定视图定义一个模版时，我们首先指定基本模版（使用 <code>extends</code> 模版标签—查看下一个代码片段）。如果我们想要在模版中替换的章节，会使用相同的 <code>block/endblock </code>部分在基本模版表明。</p>
 
-<p>例如，下面我们使用 <code>extends</code> 模版标签，并覆盖 <code>content</code> 块。生成的最终HTML页面将具有基本模版中定义的所以HTML和结构（包括你在<code>title</code>块中定义的默认内容），但你新的 <code>content</code> 块插入到了默认的那块。</p>
+<p>例如，下面我们使用 <code>extends</code> 模版标签，并覆盖 <code>content</code> 块。生成的最终 HTML 页面将具有基本模版中定义的所以 HTML 和结构（包括你在<code>title</code>块中定义的默认内容），但你新的 <code>content</code> 块插入到了默认的那块。</p>
 
 <p><code>base_generic.html</code> 详细会在下文中，请耐心往下看。</p>
 
@@ -188,9 +188,9 @@ def index(request):
 &lt;p&gt;Welcome to &lt;em&gt;LocalLibrary&lt;/em&gt;, a very basic Django website developed as a tutorial example on the Mozilla Developer Network.&lt;/p&gt;
 {% endblock %}</pre>
 
-<h4 id="本地图书馆-基本模版">本地图书馆-基本模版</h4>
+<h4 id="本地图书馆-基本模版">本地图书馆 - 基本模版</h4>
 
-<p>下面就是我们计划的基本模版用于本地图书馆网站。正如所看到的，内容包括一些HTML和定义块 <code>title</code> ，<code>sidebar</code> 和 <code>content</code>。我们有默认的 <code>title</code>（当然我们可以改）和默认的所以书籍和作者的链接列表 <code>sidebar</code> （我们可能并不会怎么改，但需要时，我们通过把想法放入块<code>block</code>中，比如想法是—允许范围）。</p>
+<p>下面就是我们计划的基本模版用于本地图书馆网站。正如所看到的，内容包括一些 HTML 和定义块 <code>title</code> ，<code>sidebar</code> 和 <code>content</code>。我们有默认的 <code>title</code>（当然我们可以改）和默认的所以书籍和作者的链接列表 <code>sidebar</code> （我们可能并不会怎么改，但需要时，我们通过把想法放入块<code>block</code>中，比如想法是—允许范围）。</p>
 
 <div class="note">
 <p><strong>注意</strong>: 我们再介绍两个额外的模版标签： <code>url</code> 和 <code>load static </code>。下文中我们会详细介绍。</p>
@@ -237,9 +237,9 @@ def index(request):
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>该模版使用（并包含）JavaScript 和  <a href="http://getbootstrap.com/">Bootstrap  </a>（css框架）来改进HTML页面的布局和显示，这个框架或者另一个客户端网络框架，这是快速创建一个可用页面来适应在不同浏览器尺寸和允许我们处理页面呈现且不用一点细节—我们只需要专注在服务器端。</p>
+<p>该模版使用（并包含）JavaScript 和  <a href="http://getbootstrap.com/">Bootstrap  </a>（css 框架）来改进 HTML 页面的布局和显示，这个框架或者另一个客户端网络框架，这是快速创建一个可用页面来适应在不同浏览器尺寸和允许我们处理页面呈现且不用一点细节—我们只需要专注在服务器端。</p>
 
-<p>基本模版还引用了一个本地css文件 (<strong>styles.css</strong>) ，它提供了一些额外的样式。 新建 <strong>/locallibrary/catalog/static/css/styles.css</strong> 如下：</p>
+<p>基本模版还引用了一个本地 css 文件 (<strong>styles.css</strong>) ，它提供了一些额外的样式。新建 <strong>/locallibrary/catalog/static/css/styles.css</strong> 如下：</p>
 
 <pre class="brush: css">.sidebar-nav {
     margin-top: 20px;
@@ -249,7 +249,7 @@ def index(request):
 
 <h4 id="索引模版">索引模版</h4>
 
-<p>新建HTML文件 <strong>/locallibrary/catalog/templates/<em>index.html</em></strong> 写入下面代码。第一行我们扩展了我们的基本模版, 使用 <code>content</code>替换默认块。</p>
+<p>新建 HTML 文件 <strong>/locallibrary/catalog/templates/<em>index.html</em></strong> 写入下面代码。第一行我们扩展了我们的基本模版，使用 <code>content</code>替换默认块。</p>
 
 <pre class="brush: html">{% extends "base_generic.html" %}
 
@@ -274,10 +274,10 @@ def index(request):
 <p>注意：由于本网站就是通过<strong>django </strong>来运维，<code><strong>\{{ </strong></code>的模版标签 在上面代码中会运行，只能通过增加 <code>\ </code>来转义，而不能直接写出“双大括号”。</p>
 </div>
 
-<p>在动态内容部分，我们的占位符（模版变量），是给我们想要视图的信息声明。变量使用“双大括号“ 或者“句柄“语法进行标记。</p>
+<p>在动态内容部分，我们的占位符（模版变量），是给我们想要视图的信息声明。变量使用“双大括号“或者“句柄“语法进行标记。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 你可以轻松地识别是否使用变量或模版标签（函数），因为变量具有双括号(<code>\{{ num_books }}</code>) 而标记被包含在带有百分比符号 (<code>{% extends "base_generic.html" %}</code>)的单个大括号中。</p>
+<p><strong>注意：</strong> 你可以轻松地识别是否使用变量或模版标签（函数），因为变量具有双括号 (<code>\{{ num_books }}</code>) 而标记被包含在带有百分比符号 (<code>{% extends "base_generic.html" %}</code>) 的单个大括号中。</p>
 </div>
 
 <p>这里要注意的重要事情是这些变量用我们视图函数<code>render</code>中的字典—注入 <code>context</code> （下面）；当渲染模版时，这些将替换为相关联的值。</p>
@@ -290,7 +290,7 @@ def index(request):
 
 <h4 id="在模版中引用静态文件">在模版中引用静态文件</h4>
 
-<p>你的项目可能会使用静态资源，包括<strong>javascript</strong>，<strong>css</strong> 和图像。由于这些文件的位置可能不知道（或者可能会发生变化），则Django允许你指定你的模版相对于这些文件的位置 <code><strong>STATIC_URL</strong></code> 全局设置（默认基本网站设置的值 <code><strong>STATIC_URL</strong></code>，以“<code><strong>／static／</strong></code>”，但你可能选择在CDN和其他地方托管内容）。</p>
+<p>你的项目可能会使用静态资源，包括<strong>javascript</strong>，<strong>css</strong> 和图像。由于这些文件的位置可能不知道（或者可能会发生变化），则 Django 允许你指定你的模版相对于这些文件的位置 <code><strong>STATIC_URL</strong></code> 全局设置（默认基本网站设置的值 <code><strong>STATIC_URL</strong></code>，以“<code><strong>／static／</strong></code>”，但你可能选择在 CDN 和其他地方托管内容）。</p>
 
 <p>在模版中，你首先调用 <code>load</code> 指定“ <code>static</code>”去添加此模版库（如下）。静态加载后，你可以使用 <code>static</code> 模版标签，指定感兴趣的文件相对<code>URL</code></p>
 
@@ -305,28 +305,28 @@ def index(request):
 </pre>
 
 <div class="note">
-<p><strong>主题</strong>: 上面的更改指定文件所在的位置，但Django默认不提供它们。当我们<a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">created the website skeleton</a>,我们在全局URL映射器r (<strong>/locallibrary/locallibrary/urls.py</strong>) 中开发Web服务器提供服务，你仍然需要安排它们在生产中投放。我们接下来看一看</p>
+<p><strong>主题</strong>: 上面的更改指定文件所在的位置，但 Django 默认不提供它们。当我们<a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">created the website skeleton</a>,我们在全局 URL 映射器 r (<strong>/locallibrary/locallibrary/urls.py</strong>) 中开发 Web 服务器提供服务，你仍然需要安排它们在生产中投放。我们接下来看一看</p>
 </div>
 
 <p>更多内容—<a href="https://docs.djangoproject.com/en/1.10/howto/static-files/">Managing static files</a> (Django docs).</p>
 
-<h4 id="链接URLs">链接URLs</h4>
+<h4 id="链接URLs">链接 URLs</h4>
 
 <p>基本的模版引入<code> url</code> 模版标签</p>
 
 <pre class="brush: python">&lt;li&gt;&lt;a href="{% url 'index' %}"&gt;Home&lt;/a&gt;&lt;/li&gt;
 </pre>
 
-<p>此标记<code>url()</code>使用您的<strong>urls.py</strong>中调用的函数的名称 和相关视图将从该函数接收的任何参数的值，并返回可用于链接到该资源的URL。</p>
+<p>此标记<code>url()</code>使用您的<strong>urls.py</strong>中调用的函数的名称 和相关视图将从该函数接收的任何参数的值，并返回可用于链接到该资源的 URL。</p>
 
 <h2 id="它看起来什么样？">它看起来什么样？</h2>
 
-<p>运行 (<code>python3 manage.py runserver</code>) 和在浏览器中打开 <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>. I如果一切都正确设置，当当当当。</p>
+<p>运行 (<code>python3 manage.py runserver</code>) 和在浏览器中打开 <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>. I 如果一切都正确设置，当当当当。</p>
 
 <p><img alt="Index page for LocalLibrary website" src="https://mdn.mozillademos.org/files/14045/index_page_ok.png" style="border-style: solid; border-width: 1px; display: block; height: 356px; margin: 0px auto; width: 874px;"></p>
 
 <div class="note">
-<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'><font><font>注意：</font></font></strong><font><font>由于尚未定义这些网页的网址，视图和模板，因此</font><font>您将无法使用“<span> </span></font></font><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'><font><font>所有图书</font></font></strong><font><font>和</font></font><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'><font><font>所有作者”</font></font></strong><font><font>链接（目前我们刚刚在</font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: normal; font-weight: normal; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>base_generic.html</code><font><font>模板中</font><font>插入了这些链接的占位符</font><font>）</font></font></p>
+<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意：</strong>由于尚未定义这些网页的网址，视图和模板，因此您将无法使用“ <strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>所有图书</strong>和<strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>所有作者”</strong>链接（目前我们刚刚在<code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: normal; font-weight: normal; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>base_generic.html</code>模板中插入了这些链接的占位符）</p>
 </div>
 
 <h2 id="挑战自己">挑战自己</h2>
@@ -341,7 +341,7 @@ def index(request):
 
 <h2 id="概要_2">概要</h2>
 
-<p>我们现在已经为我们的网站创建了主页 - 一个HTML页面，显示数据库中的一些记录数，并且链接到我们其他尚待创建的页面。一路上，我们已经学到了很多有关url映射器，视图，使用我们的模型查询数据库的基本信息，如何从您的视图传递信息到模板，以及如何创建和扩展模板。</p>
+<p>我们现在已经为我们的网站创建了主页 - 一个 HTML 页面，显示数据库中的一些记录数，并且链接到我们其他尚待创建的页面。一路上，我们已经学到了很多有关 url 映射器，视图，使用我们的模型查询数据库的基本信息，如何从您的视图传递信息到模板，以及如何创建和扩展模板。</p>
 
 <p>在我们的下一篇文章中，我们将基于我们的知识来创建其他四个页面。</p>
 

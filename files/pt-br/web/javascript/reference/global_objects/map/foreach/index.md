@@ -57,8 +57,8 @@ forEach(function callbackFn(value, key, map) { ... }, thisArg)
 ## Descrição
 
 O método `forEach` executa o `callback` fornecido uma vez para cada chave do map
-que realmente existe. 
-Ele não é invocado para chaves que foram deletadas. 
+que realmente existe.
+Ele não é invocado para chaves que foram deletadas.
 Porém, é executado para valores que estão presentes mesmo tendo o valor `undefined`.
 
 O `callback` é invocado com **três argumentos**:
@@ -67,14 +67,14 @@ O `callback` é invocado com **três argumentos**:
 - A `key` de entrada
 - o **objeto `Map`** que está sendo percorrido
 
-Se o parâmetro `thisArg` for fornecido para o `forEach`, ele será passado para o 
+Se o parâmetro `thisArg` for fornecido para o `forEach`, ele será passado para o
 `callback` quando for invocado, para ser usado como o valor de `this`. De outra forma,
-o valor `undefined` será usado como valor de `this`. O valor de `this` será 
+o valor `undefined` será usado como valor de `this`. O valor de `this` será
 observado pelo `callback` em última análise e será determinado de acordo com
 [as regras usuais para a determinação do `this` visto por uma função](/pt-BR/docs/Web/JavaScript/Reference/Operators/this).
 
 Cada valor será visitado uma vez, exceto no caso em que foram deletados e adicionados novamente
-antes do `forEach` ser finalizado. O `callback` não é invocado para valores que foram removidos antes de 
+antes do `forEach` ser finalizado. O `callback` não é invocado para valores que foram removidos antes de
 terem sidos visitados. Novos valores adicionados antes do `forEach` terminar serão visitados.
 
 ## Exemplos

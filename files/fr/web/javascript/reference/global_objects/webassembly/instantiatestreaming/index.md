@@ -17,7 +17,9 @@ La fonction **`WebAssembly.instantiateStreaming()`** permet de compiler et d'ins
 
 ## Syntaxe
 
-    Promise<ResultObject> WebAssembly.instantiateStreaming(source, importObject);
+```js
+Promise<ResultObject> WebAssembly.instantiateStreaming(source, importObject);
+```
 
 ### Paramètres
 
@@ -40,7 +42,7 @@ Un objet `Promise` dont la valeur de résolution est un objet `ResultObject` con
 
 ## Examples
 
-Dans l'exemple suivant (également disponible sur GitHub : [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) et avec [le résultat _live_](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)), on récupère le flux d'un module .wasm depuis une source, on le compile et on l'instancie. La promesse est alors résolue avec un objet `ResultObject`. La méthode `instantiateStreaming()`  acceptant une promesse fournissant un objet {{domxref("Response")}}, on peut directement l'appel de {{domxref("WindowOrWorkerGlobalScope.fetch()")}} en argument qui transfèrera la réponse lorsque la promesse résultante sera tenue.
+Dans l'exemple suivant (également disponible sur GitHub : [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) et avec [le résultat _live_](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)), on récupère le flux d'un module .wasm depuis une source, on le compile et on l'instancie. La promesse est alors résolue avec un objet `ResultObject`. La méthode `instantiateStreaming()`  acceptant une promesse fournissant un objet {{domxref("Response")}}, on peut directement l'appel de [`fetch()`](/fr/docs/Web/API/fetch) en argument qui transfèrera la réponse lorsque la promesse résultante sera tenue.
 
 ```js
 var importObject = { imports: { imported_func: arg => console.log(arg) } };

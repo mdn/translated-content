@@ -12,7 +12,7 @@ translation_of: Web/API/MessageChannel
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p>Channel Messaging API的<strong><code>MessageChannel</code></strong> 接口允许我们创建一个新的消息通道，并通过它的两个{{domxref("MessagePort")}} 属性发送数据。</p>
+<p>Channel Messaging API 的<strong><code>MessageChannel</code></strong> 接口允许我们创建一个新的消息通道，并通过它的两个{{domxref("MessagePort")}} 属性发送数据。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -20,9 +20,9 @@ translation_of: Web/API/MessageChannel
 
 <dl>
  <dt>{{domxref("MessageChannel.port1")}} {{readonlyInline}}</dt>
- <dd>返回channel的port1。</dd>
+ <dd>返回 channel 的 port1。</dd>
  <dt>{{domxref("MessageChannel.port2")}} {{readonlyInline}}</dt>
- <dd>返回channel的port2。</dd>
+ <dd>返回 channel 的 port2。</dd>
 </dl>
 
 <h2 id="构造函数">构造函数</h2>
@@ -30,13 +30,13 @@ translation_of: Web/API/MessageChannel
 <dl>
  <dt>{{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}</dt>
  <dd>
- <p>返回一个带有两个MessagePort属性的MessageChannel新对象。</p>
+ <p>返回一个带有两个 MessagePort 属性的 MessageChannel 新对象。</p>
  </dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
-<p>在以下代码块中，您可以看到使用MessageChannel构造函数实例化了一个channel对象。当iframe加载完毕，我们使用MessagePort.postMessage方法把一条消息和MessageChannel.port2传递给iframe。handleMessage处理程序将会从iframe中（使用MessagePort.onmessage监听事件）接收到信息，将数据其放入innerHTML中。</p>
+<p>在以下代码块中，您可以看到使用 MessageChannel 构造函数实例化了一个 channel 对象。当 iframe 加载完毕，我们使用 MessagePort.postMessage 方法把一条消息和 MessageChannel.port2 传递给 iframe。handleMessage 处理程序将会从 iframe 中（使用 MessagePort.onmessage 监听事件）接收到信息，将数据其放入 innerHTML 中。</p>
 
 <pre class="brush: js">var channel = new MessageChannel();
 var para = document.querySelector('p');
@@ -55,7 +55,7 @@ function handleMessage(e) {
   para.innerHTML = e.data;
 }   </pre>
 
-<p>一个完整的运行示例，可以在Github上查看 <a class="external external-icon" href="https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic">channel messaging basic demo</a>  (<a class="external external-icon" href="https://mdn.github.io/dom-examples/channel-messaging-basic/">run it live too</a>).</p>
+<p>一个完整的运行示例，可以在 GitHub 上查看 <a class="external external-icon" href="https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic">channel messaging basic demo</a>  (<a class="external external-icon" href="https://mdn.github.io/dom-examples/channel-messaging-basic/">run it live too</a>).</p>
 
 <h2 id="Specifications规范">Specifications/规范</h2>
 

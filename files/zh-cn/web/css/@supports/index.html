@@ -12,7 +12,7 @@ translation_of: Web/CSS/@supports
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong><code>@supports</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> 您可以指定依赖于浏览器中的一个或多个特定的CSS功能的支持声明。这被称为<em>特性查询</em>。该规则可以放在代码的顶层，也可以嵌套在任何其他<a href="/en-US/docs/Web/CSS/At-rule#Conditional_group_rules">条件组规则中</a>。</p>
+<p><strong><code>@supports</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> 您可以指定依赖于浏览器中的一个或多个特定的 CSS 功能的支持声明。这被称为<em>特性查询</em>。该规则可以放在代码的顶层，也可以嵌套在任何其他<a href="/en-US/docs/Web/CSS/At-rule#Conditional_group_rules">条件组规则中</a>。</p>
 
 <pre class="brush: css; no-line-numbers notranslate">@supports (display: grid) {
   div {
@@ -30,7 +30,7 @@ translation_of: Web/CSS/@supports
 
 <h2 id="语法">语法</h2>
 
-<p><code>@supports</code> at-rule 由一组样式声明和一条<em>支持条件</em>构成。支持条件由一条或多条使用 逻辑与（<code>and</code>）、逻辑或（<code>or</code>）、逻辑非（<code>not</code>）结合的名称-值对（name-value pair）组成。可以使用圆括号调整操作符的优先级。</p>
+<p><code>@supports</code> at-rule 由一组样式声明和一条<em>支持条件</em>构成。支持条件由一条或多条使用 逻辑与（<code>and</code>）、逻辑或（<code>or</code>）、逻辑非（<code>not</code>）结合的名称 - 值对（name-value pair）组成。可以使用圆括号调整操作符的优先级。</p>
 
 <h3 id="声明语法">声明语法</h3>
 
@@ -44,7 +44,7 @@ translation_of: Web/CSS/@supports
 
 <h4 id="selector" name="selector()"><code>selector()</code> {{Experimental_Inline}}</h4>
 
-<p>测试浏览器是否支持经过测试的选择器语法。如果浏览器支持<a href="/en-US/docs/Web/CSS/Child_combinator">子组合器</a>，则以下示例返回true：</p>
+<p>测试浏览器是否支持经过测试的选择器语法。如果浏览器支持<a href="/en-US/docs/Web/CSS/Child_combinator">子组合器</a>，则以下示例返回 true：</p>
 
 <pre class="brush: css notranslate">@supports selector(A &gt; B) {}</pre>
 
@@ -102,25 +102,25 @@ translation_of: Web/CSS/@supports
 <h3 id="检测是否支持指定的_CSS_属性">检测是否支持指定的 CSS 属性</h3>
 
 <pre class="brush:css; notranslate">@supports (animation-name: test) {
-    … /* 如果支持不带前缀的animation-name,则下面指定的CSS会生效 */
-    @keyframes { /* @supports是一个CSS条件组at-rule,它可以包含其他相关的at-rules */
+    … /* 如果支持不带前缀的 animation-name，则下面指定的 CSS 会生效 */
+    @keyframes { /* @supports 是一个 CSS 条件组 at-rule，它可以包含其他相关的 at-rules */
       …
     }
 }
 </pre>
 
-<h3 id="检测是否支持指定的CSS属性或者其带前缀版本">检测是否支持指定的CSS属性或者其带前缀版本</h3>
+<h3 id="检测是否支持指定的CSS属性或者其带前缀版本">检测是否支持指定的 CSS 属性或者其带前缀版本</h3>
 
 <pre class="brush:css; notranslate">@supports ( (perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) or
             (-ms-perspective: 10px) or (-o-perspective: 10px) ) {
-    … /* 如果支持不带前缀以及带前缀的perspective属性,则下面指定的CSS会生效 */
+    … /* 如果支持不带前缀以及带前缀的 perspective 属性，则下面指定的 CSS 会生效 */
 }
 </pre>
 
-<h3 id="检测是否不支持指定的CSS属性">检测是否不支持指定的CSS属性</h3>
+<h3 id="检测是否不支持指定的CSS属性">检测是否不支持指定的 CSS 属性</h3>
 
 <pre class="brush:css; notranslate">@supports ( not ((text-align-last:justify) or (-moz-text-align-last:justify) ){
-    … /* 这里的CSS代码用来模拟text-align-last:justify */
+    … /* 这里的 CSS 代码用来模拟 text-align-last:justify */
 }</pre>
 
 <h3 id="测试是否支持自定义属性">测试是否支持自定义属性</h3>
@@ -150,7 +150,7 @@ translation_of: Web/CSS/@supports
 
 @supports selector(:nth-child(1n of a, b)) {
   /* 这条规则需要内嵌在 @supports 块内。
-     否则该规则在支持 :nth-child(…)但不支持其内的 `of` 参数的浏览器中，
+     否则该规则在支持 :nth-child(…) 但不支持其内的 `of` 参数的浏览器中，
      只有部分生效 */
   :is(:nth-child(1n of ul, ol) a,
   details &gt; summary) {

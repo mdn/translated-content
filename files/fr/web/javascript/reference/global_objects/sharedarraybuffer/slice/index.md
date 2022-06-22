@@ -20,9 +20,11 @@ La méthode **`SharedArrayBuffer.prototype.slice()`** renvoie un nouvel objet {{
 
 ## Syntaxe
 
-    sab.slice()
-    sab.slice(début)
-    sab.slice(début, fin)
+```js
+sab.slice()
+sab.slice(début)
+sab.slice(début, fin)
+```
 
 ### Paramètres
 

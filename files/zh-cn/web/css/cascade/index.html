@@ -1,39 +1,39 @@
 ---
-title: CSS层叠
+title: CSS 层叠
 slug: Web/CSS/Cascade
 translation_of: Web/CSS/Cascade
 ---
 <p>{{ CSSRef() }}</p>
 
-<p><span class="seoSummary">层叠是CSS的一个基本特征，它是一个定义了如何合并来自多个源的属性值的算法。它在CSS处于核心地位，CSS的全称层叠样式表正是强调了这一点。</span></p>
+<p>层叠是 CSS 的一个基本特征，它是一个定义了如何合并来自多个源的属性值的算法。它在 CSS 处于核心地位，CSS 的全称层叠样式表正是强调了这一点。</p>
 
-<h2 id="哪些CSS实体会参与层叠计算">哪些CSS实体会参与层叠计算</h2>
+<h2 id="哪些CSS实体会参与层叠计算">哪些 CSS 实体会参与层叠计算</h2>
 
-<p>只有CSS声明，就是属性名值对，会参与层叠计算。这表示包含CSS声明以外实体的@规则不参与层叠计算，比如包含描述符（descriptors）的{{ cssxref("@font-face")}}。对于这些情形，@规则是做为一个整体参与层叠计算，比如@font-face的层叠是由其描述符font-family确定的。如果对同一个描述符定义了多次 @font-face，则最适合的 @font-face是做为一个整体而被考虑的。</p>
+<p>只有 CSS 声明，就是属性名值对，会参与层叠计算。这表示包含 CSS 声明以外实体的 @规则不参与层叠计算，比如包含描述符（descriptors）的{{ cssxref("@font-face")}}。对于这些情形，@规则是做为一个整体参与层叠计算，比如 @font-face 的层叠是由其描述符 font-family 确定的。如果对同一个描述符定义了多次 @font-face，则最适合的 @font-face 是做为一个整体而被考虑的。</p>
 
-<p>包含在大多数@规则的CSS声明是参与层叠计算的，比如包含于{{cssxref("@media")}}、{{cssxref("@documents")}}或者{{cssxref("@supports")}}的CSS声明，但是包含于{{cssxref("@keyframes")}}的声明不参与计算，正如{{cssxref("@font-face")}}，它是作为一个整体参与层叠算法的筛选。</p>
+<p>包含在大多数 @规则的 CSS 声明是参与层叠计算的，比如包含于{{cssxref("@media")}}、{{cssxref("@documents")}}或者{{cssxref("@supports")}}的 CSS 声明，但是包含于{{cssxref("@keyframes")}}的声明不参与计算，正如{{cssxref("@font-face")}}，它是作为一个整体参与层叠算法的筛选。</p>
 
 <p>最后，注意 {{cssxref("@import")}}和{{cssxref("@charset")}}遵循特定的算法，并且不受层叠算法影响。</p>
 
-<h2 id="CSS声明的源">CSS声明的源</h2>
+<h2 id="CSS声明的源">CSS 声明的源</h2>
 
-<p>CSS层叠算法期望通过挑选CSS声明来给CSS属性设置正确的值。CSS声明可以有不同的来源：</p>
+<p>CSS 层叠算法期望通过挑选 CSS 声明来给 CSS 属性设置正确的值。CSS 声明可以有不同的来源：</p>
 
 <ul>
- <li>浏览器会有一个基本的样式表来给任何网页设置默认样式。这些样式统称**用户代理样式**。一些浏览器通过使用真正的样式表，而其他则通过代码模拟，但无论是哪种情形都应是不可被检测的。而且部分浏览器允许用户修改用户代理样式。尽管HTML标准对用户代理样式做了诸多限制，浏览器仍大有可为，具体表现在不同浏览器间会存在重大的差异。为了减轻开发成本以及降低样式表运行所需的基本环境，网页开发者通常会使用一个CSS reset样式表，强制将常见的属性值转为确定状态。</li>
+ <li>浏览器会有一个基本的样式表来给任何网页设置默认样式。这些样式统称**用户代理样式**。一些浏览器通过使用真正的样式表，而其他则通过代码模拟，但无论是哪种情形都应是不可被检测的。而且部分浏览器允许用户修改用户代理样式。尽管 HTML 标准对用户代理样式做了诸多限制，浏览器仍大有可为，具体表现在不同浏览器间会存在重大的差异。为了减轻开发成本以及降低样式表运行所需的基本环境，网页开发者通常会使用一个 CSS reset 样式表，强制将常见的属性值转为确定状态。</li>
  <li>网页的作者可以定义文档的样式，这是最常见的样式表。大多数情况下此类型样式表会定义多个，它们构成网站的视觉和体验，即主题。</li>
  <li>读者，作为浏览器的用户，可以使用自定义样式表定制使用体验。</li>
 </ul>
 
-<p>尽管CSS样式会来自这些不同的源，但它们的作用范围是重叠的，而层叠算法则定义了它们如何相互作用。</p>
+<p>尽管 CSS 样式会来自这些不同的源，但它们的作用范围是重叠的，而层叠算法则定义了它们如何相互作用。</p>
 
 <h2 id="层叠顺序">层叠顺序</h2>
 
 <p>层叠算法决定如何找出要应用到每个文档元素的每个属性上的值。</p>
 
 <ol>
- <li>它首先过滤来自不同源的全部规则，并保留要应用到指定元素上的那些规则。这意味着这些规则的选择器匹配指定元素，同时也是一个合适的@规则（at-rule）的一部分。</li>
- <li>其次，它依据重要性对这些规则进行排序。即是指，规则后面是否跟随者!import以及规则的来源。层叠是按升序排列的，这意味着来着用户自定义样式表的!important值比用户代理样式表的普通值优先级高：
+ <li>它首先过滤来自不同源的全部规则，并保留要应用到指定元素上的那些规则。这意味着这些规则的选择器匹配指定元素，同时也是一个合适的 @规则（at-rule）的一部分。</li>
+ <li>其次，它依据重要性对这些规则进行排序。即是指，规则后面是否跟随者 !import 以及规则的来源。层叠是按升序排列的，这意味着来着用户自定义样式表的 !important 值比用户代理样式表的普通值优先级高：
   <table class="standard-table">
    <thead>
     <tr>
@@ -60,7 +60,7 @@ translation_of: Web/CSS/Cascade
     </tr>
     <tr>
      <td>4</td>
-     <td>CSS动画</td>
+     <td>CSS 动画</td>
      <td>见下节</td>
     </tr>
     <tr>
@@ -80,7 +80,7 @@ translation_of: Web/CSS/Cascade
     </tr>
     <tr>
      <td>8</td>
-     <td>css 过渡(css transitions)</td>
+     <td>css 过渡 (css transitions)</td>
      <td></td>
     </tr>
    </tbody>
@@ -91,29 +91,29 @@ translation_of: Web/CSS/Cascade
 
 <h2 id="重置样式">重置样式</h2>
 
-<p>当你的css对样式完成更改之后，也许会在某种情况下希望把他们还原到一个已知样式上，这可能发生在动画、主题修改之类的情形中。CSS属性{{cssxref("all")}}能够让你快速地把（几乎）所有CSS属性设置到一个已知样式上。</p>
+<p>当你的 css 对样式完成更改之后，也许会在某种情况下希望把他们还原到一个已知样式上，这可能发生在动画、主题修改之类的情形中。CSS 属性{{cssxref("all")}}能够让你快速地把（几乎）所有 CSS 属性设置到一个已知样式上。</p>
 
 <p>all 属性让你能够立刻把所有的属性都还原到它们初始（默认）的状态，或是继承自前一个层叠顺序等级的状态，又或是指定一个特定的来源（用户代理、页面作者或者用户），甚至还可以选择完全清除所有的属性。</p>
 
-<h2 id="CSS动画与层叠">CSS动画与层叠</h2>
+<h2 id="CSS动画与层叠">CSS 动画与层叠</h2>
 
-<p><a href="/en-US/docs/CSS/Using_CSS_animations">CSS动画</a>，指使用{{ cssxref("@keyframes")}} @规则定义状态间的动画。关键帧不参与层叠，意味着在任何时候CSS都是取单一的@keyframes的值而不会是某几个@keyframe的混合。</p>
+<p><a href="/en-US/docs/CSS/Using_CSS_animations">CSS 动画</a>，指使用{{ cssxref("@keyframes")}} @规则定义状态间的动画。关键帧不参与层叠，意味着在任何时候 CSS 都是取单一的 @keyframes 的值而不会是某几个 @keyframe 的混合。</p>
 
 <p>当有多个满足条件的关键帧时，在最重要的文档里面最后定义的关键帧会被选中，而不会是将它们组合在一起。</p>
 
-<p>同时仍应注意用@keyframes @规则定义的值会覆盖全部普通值，但会被!important的值覆盖。</p>
+<p>同时仍应注意用 @keyframes @规则定义的值会覆盖全部普通值，但会被 !important 的值覆盖。</p>
 
 <h2 id="例子">例子</h2>
 
-<p><strong>用户代理CSS：</strong></p>
+<p><strong>用户代理 CSS：</strong></p>
 
 <pre class="brush:css;">li { margin-left: 10px }</pre>
 
-<p><strong>网页作者CSS1：</strong></p>
+<p><strong>网页作者 CSS1：</strong></p>
 
 <pre class="brush:css;">li { margin-left: 0 } /* This is a reset */</pre>
 
-<p><strong>网页作者CSS2：</strong></p>
+<p><strong>网页作者 CSS2：</strong></p>
 
 <pre class="brush:css;">@media screen {
   li { margin-left: 3px }
@@ -124,7 +124,7 @@ translation_of: Web/CSS/Cascade
 }
 </pre>
 
-<p><strong>用户CSS：</strong></p>
+<p><strong>用户 CSS：</strong></p>
 
 <pre class="brush:css;">.specific { margin-left: 1em }</pre>
 
@@ -136,9 +136,9 @@ translation_of: Web/CSS/Cascade
 &lt;/ul&gt;
 </pre>
 
-<p>对于这个情形，应当应用li和.specific里面的声明。由于没有声明被标记为!important，所以优先顺序为页面作者样式优于用户样式，用户代理样式最低。</p>
+<p>对于这个情形，应当应用 li 和.specific 里面的声明。由于没有声明被标记为 !important，所以优先顺序为页面作者样式优于用户样式，用户代理样式最低。</p>
 
-<p>故是这3条声明的竞争：</p>
+<p>故是这 3 条声明的竞争：</p>
 
 <pre class="brush:css;">margin-left: 0</pre>
 
@@ -150,7 +150,7 @@ translation_of: Web/CSS/Cascade
 
 <pre class="brush:css;">margin-left: 3px</pre>
 
-<p>注意尽管定义在用户CSS里面的声明有更高的优先级，但它并不会被选中，因为层叠算法是先于优先级算法的。</p>
+<p>注意尽管定义在用户 CSS 里面的声明有更高的优先级，但它并不会被选中，因为层叠算法是先于优先级算法的。</p>
 
 <h2 id="See_also">See also</h2>
 

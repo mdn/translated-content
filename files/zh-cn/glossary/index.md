@@ -16,8 +16,6 @@ Web 技术文档和代码中含有大量的术语和缩写。本术语表给出�
 
 > **备注：** 编辑术语表是一项永无止境的工作，你可以[添加新的条目](/zh-CN/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary)或改进、完善现有条目。
 
-{{LearnBox({"title":"学习一个新术语："})}}
-
 <section id="Quick_links">
  <ol>
   <li><strong><a href="/zh-CN/docs/Glossary">MDN Web 文档术语</a></strong>{{ListSubpagesForSidebar("/zh-CN/docs/Glossary", 1)}}</li>

@@ -106,9 +106,9 @@ obj1.internal.a = 'aValue';
 
 obj1.internal.a // 'aValue'</pre>
 
-<p class="brush: js">如果要成為一個常數物件，整個物件參考圖 (包含直接指向或間接指向其他物件) 必須都只能指向被凍結的不可變物件。一個物件被稱作不可變是因為它的整個物件狀態 (值或是指向其他物件的參考) 是固定的。注意，string, number 和 boolean 這些原始型別的值是永遠不變的，Function 和 Array 都屬於物件的一種。</p>
+<p>如果要成為一個常數物件，整個物件參考圖 (包含直接指向或間接指向其他物件) 必須都只能指向被凍結的不可變物件。一個物件被稱作不可變是因為它的整個物件狀態 (值或是指向其他物件的參考) 是固定的。注意，string, number 和 boolean 這些原始型別的值是永遠不變的，Function 和 Array 都屬於物件的一種。</p>
 
-<p class="brush: js">要讓一個物件變成常數物件，就必須遞迴地凍結每個是物件型別的屬性 (稱作深凍結)。只有當你知道物件的參考圖不存在任何<em><a href="https://en.wikipedia.org/wiki/Cycle_(graph_theory)">循環</a> </em>的時候才能使用以上遞迴的方式來凍結物件，不然就可能會造成無窮迴圈。一個改善以下範例中 deepFreeze() 來解決無窮迴圈問題的方法是 - 創建一個接受一個路徑參數 (像是陣列) 的內部用函數，用來避免無窮遞迴地呼叫 deepFreeze() - 當發現欲凍結的物件已經出現在之前凍結的物件行列中就不繼續遞迴下去。需要注意的是你可能會不小心凍結一個不應該被凍結的物件，像是 [window]。</p>
+<p>要讓一個物件變成常數物件，就必須遞迴地凍結每個是物件型別的屬性 (稱作深凍結)。只有當你知道物件的參考圖不存在任何<em><a href="https://en.wikipedia.org/wiki/Cycle_(graph_theory)">循環</a> </em>的時候才能使用以上遞迴的方式來凍結物件，不然就可能會造成無窮迴圈。一個改善以下範例中 deepFreeze() 來解決無窮迴圈問題的方法是 - 創建一個接受一個路徑參數 (像是陣列) 的內部用函數，用來避免無窮遞迴地呼叫 deepFreeze() - 當發現欲凍結的物件已經出現在之前凍結的物件行列中就不繼續遞迴下去。需要注意的是你可能會不小心凍結一個不應該被凍結的物件，像是 [window]。</p>
 
 <pre class="brush: js">// 用這個函數來進行對物件的深凍結
 function deepFreeze(obj) {
@@ -154,30 +154,7 @@ TypeError: 1 is not an object // ES5 code
 
 <h2 id="規格">規格</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規格</th>
-   <th scope="col">狀態</th>
-   <th scope="col">備註</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.9', 'Object.freeze')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>第一版。實作於 JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.freeze', 'Object.freeze')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 

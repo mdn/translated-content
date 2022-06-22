@@ -99,7 +99,7 @@ function importScript (sSrc, fOnload) {
   oScript.onerror = loadError;
   if (fOnload) { oScript.onload = fOnload; }
   document.currentScript.parentNode.insertBefore(oScript, document.currentScript);
-  <span style="line-height: normal;">oScript.src = sSrc;</span>
+  oScript.src = sSrc;
 }</pre>
 
 <p>…the same thing, but appending the new scripts as last childs of the {{ HTMLElement("head") }} tag, instead of appending them immediately before the {{domxref("document.currentScript")}} element:</p>

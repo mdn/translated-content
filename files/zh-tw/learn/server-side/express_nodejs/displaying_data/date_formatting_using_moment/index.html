@@ -11,7 +11,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting
 <p><strong>注意:</strong>  我們可以直接在 Pug 模板中，使用 moment 格式化字符串，或者可以在許多其它地方格式化字符串。使用虛擬屬性，可以使我們獲得格式化的日期，這與我們當前獲取 <code>due_date</code> 的方式完全相同。</p>
 </div>
 
-<h2 class="highlight-spanned" id="安裝_moment"><span class="highlight-span">安裝 moment</span></h2>
+<h2 class="highlight-spanned" id="安裝_moment">安裝 moment</h2>
 
 <p>在項目的根目錄，輸入下列命令</p>
 
@@ -24,17 +24,17 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting
 <ol>
  <li>打開 <strong>./models/bookinstance.js</strong>.</li>
  <li>在此頁面最上方，引入 <em>moment</em>.
-  <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> moment <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'moment'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+  <pre class="brush: js line-numbers  language-js"><code class="language-js">var moment = require('moment');</code></pre>
  </li>
 </ol>
 
 <p>在 url 屬性後面，加入虛擬屬性 <code>due_back_formatted</code> 。</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">BookInstanceSchema
-<span class="punctuation token">.</span><span class="function token">virtual</span><span class="punctuation token">(</span><span class="string token">'due_back_formatted'</span><span class="punctuation token">)</span>
-<span class="punctuation token">.</span><span class="keyword token">get</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">return</span> <span class="function token">moment</span><span class="punctuation token">(</span><span class="keyword token">this</span><span class="punctuation token">.</span>due_back<span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">format</span><span class="punctuation token">(</span><span class="string token">'MMMM Do, YYYY'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+.virtual('due_back_formatted')
+.get(function () {
+  return moment(this.due_back).format('MMMM Do, YYYY');
+});</code></pre>
 
 <div class="note">
 <p><strong>注意:</strong>  格式化方法可以使用幾乎任何模式顯示日期。 <a class="external external-icon" href="http://momentjs.com/docs/#/displaying/" rel="noopener">moment</a>文檔中，可以找到表示不同日期組件的語法。</p>
@@ -44,9 +44,9 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting
 
 <p>打開 <strong>/views/bookinstance_list.pug</strong> ，然後用 <code>due_back_formatted</code> 取代 <code>due_back</code> 。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">      <span class="keyword token">if</span> val<span class="punctuation token">.</span>status<span class="operator token">!=</span><span class="string token">'Available'</span>
-        <span class="comment token">//span  (Due: #{val.due_back} )</span>
-        span <span class="function token"> </span><span class="punctuation token">(</span>Due<span class="punctuation token">:</span> #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>due_back_formatted<span class="punctuation token">}</span> <span class="punctuation token">)</span>       </code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">      if val.status!='Available'
+        //span  (Due: #{val.due_back} )
+        span  (Due: #{val.due_back_formatted} )       </code></pre>
 
 <p>這就是本章節的全部了。如果你訪問側邊欄的 <em>All book-instances</em> ，你應該會看到所有的歸還日期都更吸引人了！</p>
 

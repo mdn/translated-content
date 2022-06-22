@@ -10,9 +10,9 @@ translation_of: Web/API/Document/getElementById
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<p>{{domxref("Document")}}的方法 {{domxref("Document.getElementById", "getElementById()")}}返回一个匹配特定 <a href="/en-US/docs/DOM/element.id" title="en-US/docs/DOM/element.id">ID</a>的元素. 由于元素的 ID 在大部分情况下要求是独一无二的，这个方法自然而然地成为了一个高效查找特定元素的方法。</p>
+<p>{{domxref("Document")}}的方法 {{domxref("Document.getElementById", "getElementById()")}}返回一个匹配特定 <a href="/en-US/docs/DOM/element.id" title="en-US/docs/DOM/element.id">ID</a>的元素。由于元素的 ID 在大部分情况下要求是独一无二的，这个方法自然而然地成为了一个高效查找特定元素的方法。</p>
 
-<p>如果需要查找到那些没有ID 的元素，你可以考虑通过CSS选择器使用 {{domxref("Document.querySelector", "querySelector()")}}。</p>
+<p>如果需要查找到那些没有 ID 的元素，你可以考虑通过 CSS 选择器使用 {{domxref("Document.querySelector", "querySelector()")}}。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -22,15 +22,15 @@ translation_of: Web/API/Document/getElementById
 <h3 id="参数">参数</h3>
 
 <ul>
- <li><strong><code>element</code></strong>是一个 <a href="/zh-CN/docs/Web/API/Element" title="en-US/docs/DOM/element">Element</a> 对象。如果当前文档中拥有特定ID的元素不存在则返回null.</li>
- <li><strong><code>id</code></strong>是大小写敏感的字符串，代表了所要查找的元素的唯一ID.</li>
+ <li><strong><code>element</code></strong>是一个 <a href="/zh-CN/docs/Web/API/Element" title="en-US/docs/DOM/element">Element</a> 对象。如果当前文档中拥有特定 ID 的元素不存在则返回 null.</li>
+ <li><strong><code>id</code></strong>是大小写敏感的字符串，代表了所要查找的元素的唯一 ID.</li>
 </ul>
 
 <h3 id="返回值">返回值</h3>
 
 <p>返回一个匹配到 ID 的 DOM {{domxref("Element")}} 对象。若在当前 {{domxref("Document")}} 下没有找到，则返回 null。</p>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="示例" name="示例">示例</h2>
 
 <h3 id="HTML">HTML</h3>
 
@@ -57,13 +57,13 @@ translation_of: Web/API/Document/getElementById
 
 <h3 id="执行结果">执行结果</h3>
 
-<p>{{ EmbedLiveSample('Example1', 250, 100) }}</p>
+<p>{{ EmbedLiveSample('示例', 250, 100) }}</p>
 
-<h2 id="注意"><span style='font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 2.5rem;'>注意</span></h2>
+<h2 id="注意">注意</h2>
 
 <p>对 “Id” 的拼写一定要正确。如果大小写不匹配，无论看起来多么合情合理，<code>getElementByID()</code> 都是不合理的且永远都不会工作的。</p>
 
-<p>不同于其他 <code>Element</code> 查找方法（如{{domxref("Document.querySelector()")}} 以及 {{domxref("Document.querySelectorAll()")}}），<code>getElementById()</code> 只有在作为 <code>document</code> 的方法时才能起作用，而在DOM中的其他元素下无法生效。这是因为 ID 值在整个网页中必须保持唯一。因此没有必要为这个方法创建所谓的 “局部” 版本。</p>
+<p>不同于其他 <code>Element</code> 查找方法（如{{domxref("Document.querySelector()")}} 以及 {{domxref("Document.querySelectorAll()")}}），<code>getElementById()</code> 只有在作为 <code>document</code> 的方法时才能起作用，而在 DOM 中的其他元素下无法生效。这是因为 ID 值在整个网页中必须保持唯一。因此没有必要为这个方法创建所谓的 “局部” 版本。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -89,52 +89,22 @@ translation_of: Web/API/Document/getElementById
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>如果没有查找到对应的元素，方法会返回null。注意ID参数是大小写敏感的，所以<span style="font-family: consolas,monaco,andale mono,monospace;">document.getElementById("</span><strong style="font-family: consolas,monaco,andale mono,monospace;">M</strong><span style="font-family: consolas,monaco,andale mono,monospace;">ain")无法获取到元素&lt;div id="</span><strong style="font-family: consolas,monaco,andale mono,monospace;">m</strong><span style="font-family: consolas,monaco,andale mono,monospace;">ain"&gt;，因为'M'和'm'是不一样的。</span></p>
+<p>如果没有查找到对应的元素，方法会返回 null。注意 ID 参数是大小写敏感的，所以 document.getElementById("<strong style="font-family: consolas,monaco,andale mono,monospace;">M</strong>ain") 无法获取到元素&lt;div id="<strong style="font-family: consolas,monaco,andale mono,monospace;">m</strong>ain"&gt;，因为'M'和'm'是不一样的。</p>
 
-<p>getElementById方法不会搜索<strong>不在文档中的元素。</strong>当创建一个元素，并且分配ID后，你必须要使用<a href="/en-US/docs/DOM/Node.insertBefore" style="font-family: Consolas, Monaco, 'Andale Mono', monospace;" title="en-US/docs/DOM/Node.insertBefore">insertBefore</a>或其他类似的方法把元素插入到文档中，之后才能使用 getElementById 获取到:</p>
+<p>getElementById 方法不会搜索<strong>不在文档中的元素。</strong>当创建一个元素，并且分配 ID 后，你必须要使用<a href="/en-US/docs/DOM/Node.insertBefore" style="font-family: Consolas, Monaco, 'Andale Mono', monospace;" title="en-US/docs/DOM/Node.insertBefore">insertBefore</a>或其他类似的方法把元素插入到文档中，之后才能使用 getElementById 获取到：</p>
 
 <pre class="brush: js notranslate">var element = document.createElement("div");
 element.id = 'testqq';
 var el = document.getElementById('testqq'); // el 是个 null
 </pre>
 
-<p><strong>非HTML文档（Non-HTML documents</strong>）。 DOM的实现必须说明哪个属性是ID类型。只有DTD定义了'id'是ID属性时’id‘才会被认为是ID属性。在 <a href="/en-US/docs/XHTML" title="en-US/docs/XHTML">XHTML</a>, <a href="/en-US/docs/XUL" style="text-decoration: underline;" title="en-US/docs/XUL">XUL</a>或者其他文档中，'id'通常被定义为ID类型的属性。不知道哪个属性是ID类型的实现中，这会返回null结果。</p>
+<p><strong>非 HTML 文档（Non-HTML documents</strong>）。 DOM 的实现必须说明哪个属性是 ID 类型。只有 DTD 定义了'id'是 ID 属性时’id‘才会被认为是 ID 属性。在 <a href="/en-US/docs/XHTML" title="en-US/docs/XHTML">XHTML</a>, <a href="/en-US/docs/XUL" style="text-decoration: underline;" title="en-US/docs/XUL">XUL</a>或者其他文档中，'id'通常被定义为 ID 类型的属性。不知道哪个属性是 ID 类型的实现中，这会返回 null 结果。</p>
 
 <h2 id="Specification" name="Specification">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">说明</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1','level-one-html.html#method-getElementById','getElementById')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>接口初始定义</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core','core.html#ID-getElBId','getElementById')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>取代DOM 1</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','core.html#ID-getElBId','getElementById')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>取代DOM 2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#interface-nonelementparentnode','getElementById')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>准备取代DOM 3</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
-
-
 
 <p>{{Compat("api.Document.getElementById")}}</p>
 
@@ -142,6 +112,6 @@ var el = document.getElementById('testqq'); // el 是个 null
 
 <ul>
  <li><a href="/zh-CN/docs/DOM/document" title="en-US/docs/DOM/document">document</a> 包含其他用于在文档中查找元素的方法</li>
- <li><a href="/zh-CN/docs/Web/API/document.querySelector">document.querySelector()</a> 类似<span style="font-family: consolas,monaco,andale mono,monospace;">'div.myclass'的元素的选择</span></li>
+ <li><a href="/zh-CN/docs/Web/API/document.querySelector">document.querySelector()</a> 类似'div.myclass'的元素的选择</li>
  <li><a href="/zh-CN/docs/xml/xml:id" title="en-US/docs/xml/id">xml:id</a> - has a utility method for allowing <code>getElementById</code> to obtain 'xml:id' in XML documents (such as returned by Ajax calls)</li>
 </ul>

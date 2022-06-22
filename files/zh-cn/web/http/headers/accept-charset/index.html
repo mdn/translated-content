@@ -14,10 +14,10 @@ translation_of: Web/HTTP/Headers/Accept-Charset
 
 <p><strong><code>Accept-Charset</code></strong> 请求头用来告知（服务器）客户端可以处理的字符集类型。 借助<a href="/en-US/docs/Web/HTTP/Content_negotiation">内容协商机制</a>，服务器可以从诸多备选项中选择一项进行应用， 并使用{{HTTPHeader("Content-Type")}} 应答头通知客户端它的选择。浏览器通常不会设置此项值，因为每种内容类型的默认值通常都是正确的，但是发送它会更有利于识别。</p>
 
-<p>如果服务器不能提供任何可以匹配的字符集的版本，那么理论上来说应该返回一个 {{HTTPStatus("406")}} （Not Acceptable，不被接受）的错误码。但是为了更好的用户体验，这种方法很少采用，取而代之的是将其忽略。</p>
+<p>如果服务器不能提供任何可以匹配的字符集的版本，那么理论上来说应该返回一个 {{HTTPStatus("406")}}（Not Acceptable，不被接受）的错误码。但是为了更好的用户体验，这种方法很少采用，取而代之的是将其忽略。</p>
 
 <div class="note">
-<p>在早期版本的HTTP/1.1协议中，规定了一个默认的字符集(ISO-8859-1)。但是现在情况不同了，目前每一种内容类型都有自己的默认字符集。</p>
+<p>在早期版本的 HTTP/1.1 协议中，规定了一个默认的字符集 (ISO-8859-1)。但是现在情况不同了，目前每一种内容类型都有自己的默认字符集。</p>
 </div>
 
 <table class="properties">
@@ -44,9 +44,9 @@ Accept-Charset: utf-8, iso-8859-1;q=0.5</pre>
 
 <dl>
  <dt><code>&lt;charset&gt;</code></dt>
- <dd><code>诸如 utf-8</code> 或 <code>iso-8859-15的字符集。</code></dd>
+ <dd><code>诸如 utf-8</code> 或 <code>iso-8859-15 的字符集。</code></dd>
  <dt><code>*</code></dt>
- <dd><code><font face="Open Sans, arial, sans-serif">在这个消息头中未提及的任意其他字符集；</font>'*'</code> 用来表示通配符。</dd>
+ <dd><code>在这个消息头中未提及的任意其他字符集；'*'</code> 用来表示通配符。</dd>
  <dt><code>;q=</code> (q-factor weighting)</dt>
  <dd>值代表优先顺序，用相对<a href="/en-US/docs/Glossary/Quality_values">质量价值</a>表示，又称为权重。</dd>
 </dl>

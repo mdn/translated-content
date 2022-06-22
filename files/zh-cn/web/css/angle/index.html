@@ -9,7 +9,7 @@ translation_of: Web/CSS/angle
 
 <h2 id="语法">语法</h2>
 
-<p><code>&lt;angle&gt;</code> 数据类型由 {{cssxref("&lt;number&gt;")}} 和下列单位组成。数字与单位之间没有空格。数字为0时，单位可以省略。</p>
+<p><code>&lt;angle&gt;</code> 数据类型由 {{cssxref("&lt;number&gt;")}} 和下列单位组成。数字与单位之间没有空格。数字为 0 时，单位可以省略。</p>
 
 <p><code>&lt;angle&gt;</code> 可以使用 <code>+</code> 或 <code>-</code> 开头。正数表示顺时针的角，负数表示逆时针的角。对于静态的角，同样的角度可以使用任意等效的值表示。比如 <code>90deg</code> 等于 <code>-270deg</code>，<code>1turn</code> 等于 <code>4turn</code>。而对于动态的角，比如应用了 {{cssxref("animation")}} 或 {{cssxref("transition")}} 时，显示效果则不一样。</p>
 
@@ -17,12 +17,12 @@ translation_of: Web/CSS/angle
 
 <dl>
  <dt><code>deg</code></dt>
- <dd><a href="https://zh.wikipedia.org/wiki/%E5%BA%A6_(%E8%A7%92)">度</a>。一个完整的圆是 <code>360deg</code>。例：<code>0deg</code>，<code>90deg<font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">，</span></font></code><code>14.23deg</code>。</dd>
+ <dd><a href="https://zh.wikipedia.org/wiki/%E5%BA%A6_(%E8%A7%92)">度</a>。一个完整的圆是 <code>360deg</code>。例：<code>0deg</code>，<code>90deg，</code><code>14.23deg</code>。</dd>
  <dt><code>grad</code></dt>
  <dd><a href="https://zh.wikipedia.org/wiki/%E7%99%BE%E5%88%86%E5%BA%A6">百分度</a>。一个完整的圆是 <code>400grad</code>。例：<code>0grad</code>，<code>100grad</code>，<code>38.8grad</code>。</dd>
  <dt><code>rad</code></dt>
  <dd><a href="https://zh.wikipedia.org/wiki/%E5%BC%A7%E5%BA%A6">弧度</a>。一个完整的圆是 2π 弧度，约等于 <code>6.2832rad</code>。<code>1rad</code> 是 180/π 度。例：<code>0rad</code>，<code>1.0708rad</code>，<code>6.2832rad</code>。</dd>
- <dt><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">turn</span></font></dt>
+ <dt>turn</dt>
  <dd>圈数。一个完整的圆是 <code>1turn</code>。例：<code>0turn</code>，<code>0.25turn</code>，<code>1.2turn</code>。</dd>
 </dl>
 

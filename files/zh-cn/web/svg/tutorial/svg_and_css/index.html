@@ -4,33 +4,33 @@ slug: Web/SVG/Tutorial/SVG_and_CSS
 translation_of: Web/SVG/Tutorial/SVG_and_CSS
 original_slug: Web/Guide/CSS/Getting_started/SVG_and_CSS
 ---
-<div>
- {{CSSTutorialTOC}}</div>
-<p>本节将演示如何将CSS应用到 <a href="/en-US/docs/SVG">SVG</a> 中。</p>
-<p>你将创建一个简单的演示代码并在支持SVG的浏览器中运行。</p>
+{{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
+
+<p>本节将演示如何将 CSS 应用到 <a href="/en-US/docs/SVG">SVG</a> 中。</p>
+<p>你将创建一个简单的演示代码并在支持 SVG 的浏览器中运行。</p>
 <p>这是 <a href="/en-US/docs/Web/Guide/CSS/Getting_started">CSS 教程</a> 第二部分的第二节<br>
- 前一节: <a href="/en-US/docs/Web/JavaScript/Getting_Started">JavaScript</a><br>
- 下一节: <a href="/en-US/docs/Web/Guide/CSS/Getting_started/XML_data">XML data</a></p>
+ 前一节：<a href="/en-US/docs/Web/JavaScript/Getting_Started">JavaScript</a><br>
+ 下一节：<a href="/en-US/docs/Web/Guide/CSS/Getting_started/XML_data">XML data</a></p>
 <h3 id="Information:_SVG" name="Information:_SVG">信息: SVG</h3>
-<p><em>SVG</em> (Scalable Vector Graphics)是一个基于XML的图形描述语言。</p>
+<p><em>SVG</em> (Scalable Vector Graphics) 是一个基于 XML 的图形描述语言。</p>
 <p>它可以用于描述静态图、动画，以及用户界面。</p>
-<p>和其他基于XML的语言一样，SVG 支持用 CSS 样式表将图形内容和图形样式分离。</p>
-<p>在样式表中你可以在任何可以可以指定图片的地方指定一个SVG的URL。比如，在HTML的样式表中，你可以为 <code>background</code> 属性指定一个SVG的URL。</p>
+<p>和其他基于 XML 的语言一样，SVG 支持用 CSS 样式表将图形内容和图形样式分离。</p>
+<p>在样式表中你可以在任何可以可以指定图片的地方指定一个 SVG 的 URL。比如，在 HTML 的样式表中，你可以为 <code>background</code> 属性指定一个 SVG 的 URL。</p>
 <table style="border: 1px solid #36b; padding: 1em; background-color: #f4f4f4; margin-bottom: 1em; width: 100%;">
  <caption>
   更多细节</caption>
  <tbody>
   <tr>
    <td>
-    <p>在这个教程编写的时间点(2011中旬)，绝大多数现代浏览器都对SVG有基本的支持。其中包括 Internet Explorer 9 及其后续版本。一些SVG特性只被某些浏览器支持。参见 <a href="http://caniuse.com/#search=SVG">SVG tables on caniuse.com</a> 了解支持情况。 参见 <a href="/en-US/docs/SVG/Element">SVG element reference</a> 了解兼容情况。</p>
-    <p>通过安装 <a href="http://www.adobe.com/svg/viewer/install/main.html">Adobe</a> 提供的插件，你可以让某些浏览器支持SVG。</p>
-    <p>欲在Mozilla了解更多关于SVG的信息，参考 <a href="/en-US/docs/SVG">这里SVG</a>。</p>
+    <p>在这个教程编写的时间点 (2011 中旬)，绝大多数现代浏览器都对 SVG 有基本的支持。其中包括 Internet Explorer 9 及其后续版本。一些 SVG 特性只被某些浏览器支持。参见 <a href="http://caniuse.com/#search=SVG">SVG tables on caniuse.com</a> 了解支持情况。 参见 <a href="/en-US/docs/SVG/Element">SVG element reference</a> 了解兼容情况。</p>
+    <p>通过安装 <a href="http://www.adobe.com/svg/viewer/install/main.html">Adobe</a> 提供的插件，你可以让某些浏览器支持 SVG。</p>
+    <p>欲在 Mozilla 了解更多关于 SVG 的信息，参考 <a href="/en-US/docs/SVG">这里 SVG</a>。</p>
    </td>
   </tr>
  </tbody>
 </table>
-<h3 id="Action:_An_SVG_demonstration" name="Action:_An_SVG_demonstration">实例: 一个SVG演示</h3>
-<p>建立一个SVG文件<code>doc8.svg。</code>复制下面所有内容：</p>
+<h3 id="Action:_An_SVG_demonstration" name="Action:_An_SVG_demonstration">实例：一个 SVG 演示</h3>
+<p>建立一个 SVG 文件<code>doc8.svg。</code>复制下面所有内容：</p>
 <pre class="brush: xml">&lt;?xml version="1.0" standalone="no"?&gt;
 
 &lt;?xml-stylesheet type="text/css" href="style8.css"?&gt;
@@ -85,7 +85,7 @@ original_slug: Web/Guide/CSS/Getting_started/SVG_and_CSS
 
 &lt;/svg&gt;
 </pre>
-<p>创建一个CSS文件, <code>style8.css。</code> 复制下面所有内容：</p>
+<p>创建一个 CSS 文件，<code>style8.css。</code> 复制下面所有内容：</p>
 <pre class="brush: css">/*** SVG demonstration ***/
 
 /* page */
@@ -164,8 +164,8 @@ svg {
   stroke: green;
   }
 </pre>
-<p>在支持SVG的浏览器中打开上面的文档。将鼠标移到图上。</p>
-<p>由于这个wiki不支持嵌入SVG，所以下面是一个截图供参考:</p>
+<p>在支持 SVG 的浏览器中打开上面的文档。将鼠标移到图上。</p>
+<p>由于这个 wiki 不支持嵌入 SVG，所以下面是一个截图供参考：</p>
 <table style="border: 2px outset #36b;">
  <tbody>
   <tr>
@@ -173,10 +173,10 @@ svg {
   </tr>
  </tbody>
 </table>
-<p>解释:</p>
+<p>解释：</p>
 <ul>
- <li>这个SVG文档使用常见连接方法引入样式表。</li>
- <li>SVG有自己一套CSS属性和对应的值。其中一些和HTML使用的CSS属性相似。</li>
+ <li>这个 SVG 文档使用常见连接方法引入样式表。</li>
+ <li>SVG 有自己一套 CSS 属性和对应的值。其中一些和 HTML 使用的 CSS 属性相似。</li>
 </ul>
 <table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; margin-bottom: 1em;">
  <caption>
@@ -187,6 +187,6 @@ svg {
   </tr>
  </tbody>
 </table>
-<h4 id="What_next.3F" name="What_next.3F">接下来?</h4>
+<h4 id="What_next.3F" name="What_next.3F">接下来？</h4>
 <p>如果你有任何疑问或评论请移步到<a href="/en-US/docs/Talk:CSS/Getting_Started/SVG_and_CSS">讨论区</a>。</p>
-<p>在这个演示中，支持SVG的浏览器知道如何显示SVG元素。样式表只是修改其呈现的方式。同样，这对HTML和XUL文档也是适用的。你也可以将CSS用于XML文档。（与HTML相比，）XML没有预先为元素定义样式。下一个节将对此进行演示: <a href="/en-US/docs/Web/Guide/CSS/Getting_started/XML_data">XML data</a></p>
+<p>在这个演示中，支持 SVG 的浏览器知道如何显示 SVG 元素。样式表只是修改其呈现的方式。同样，这对 HTML 和 XUL 文档也是适用的。你也可以将 CSS 用于 XML 文档。（与 HTML 相比，）XML 没有预先为元素定义样式。下一个节将对此进行演示：<a href="/en-US/docs/Web/Guide/CSS/Getting_started/XML_data">XML data</a></p>

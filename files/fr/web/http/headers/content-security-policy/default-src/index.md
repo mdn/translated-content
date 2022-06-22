@@ -54,8 +54,10 @@ Pour chacune des directives suivantes, l'agent utilisateur consultera la directi
 
 Une ou plusieurs sources peuvent être autorisées pour cette directive :
 
-    Content-Security-Policy: default-src <source>;
-    Content-Security-Policy: default-src <source> <source>;
+```
+Content-Security-Policy: default-src <source>;
+Content-Security-Policy: default-src <source> <source>;
+```
 
 ### Sources
 

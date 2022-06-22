@@ -48,9 +48,9 @@ Simple et direct, mais nous ne sommes pas là pour gagner un prix de beauté.&nb
 
 Vérifier la validité et avertir l’utilisateur se déroule en plusieurs étapes&nbsp;:
 
-1.  Vérifions que l’adresse électronique pour le nom saisi sont valides. Pour rester simple, nous vérifions si l’adresse contient un symbole «&nbsp;@&nbsp;», et si le nom saisi contient au moins une espace «&nbsp;\[ ]&nbsp;».
-2.  Définissons l’attribut `aria-invalid` du champ et donnons lui la valeur `true`.
-3.  Notifions à l’utilisateur via une alerte que la valeur saisie n’est pas correcte. Plutôt que d’utiliser la boîte de dialogue envahissante créée par la fonction JavaScript `alert`, nous utiliserons pour ceci un simple composant WAI-ARIA. Cela avertira l’utilisateur, mais le laissera continuer à interagir avec le formulaire sans l’interrompre.
+1. Vérifions que l’adresse électronique pour le nom saisi sont valides. Pour rester simple, nous vérifions si l’adresse contient un symbole «&nbsp;@&nbsp;», et si le nom saisi contient au moins une espace «&nbsp;\[ ]&nbsp;».
+2. Définissons l’attribut `aria-invalid` du champ et donnons lui la valeur `true`.
+3. Notifions à l’utilisateur via une alerte que la valeur saisie n’est pas correcte. Plutôt que d’utiliser la boîte de dialogue envahissante créée par la fonction JavaScript `alert`, nous utiliserons pour ceci un simple composant WAI-ARIA. Cela avertira l’utilisateur, mais le laissera continuer à interagir avec le formulaire sans l’interrompre.
 
 Tout ceci se passe lorsque le champ de saisi perd le focus, c’est-à-dire dans le gestionnaire d’événements `onblur`.
 
@@ -99,8 +99,8 @@ Pour déterminer la validité, la fonction vérifie si l’`indexOf` de la valeu
 
 Si non valide, la fonction fait deux choses&nbsp;:
 
-1.  Elle définit l’attribut `aria-invalid` de l’élément à `true`, ce qui indiquera au lecteur d’écran que le contenu n’est pas correct.
-2.  Elle appellera la fonction `addAlert` pour ajouter une alerte avec le message d’erreur donné.
+1. Elle définit l’attribut `aria-invalid` de l’élément à `true`, ce qui indiquera au lecteur d’écran que le contenu n’est pas correct.
+2. Elle appellera la fonction `addAlert` pour ajouter une alerte avec le message d’erreur donné.
 
 Si le terme recherché est trouvé, l’attribut `aria-invalid` est réinitialisé à `true`. De plus, toute alerte qui subsisterait serait supprimée.
 
@@ -130,8 +130,8 @@ Tout ce qu’il reste à faire, c’est ajouter un gestionnaire d’événement.
 
 Si vous utilisez Firefox 3 (ou supérieur) et un lecteur d’écran actuellement pris en charge, essayez ce qui suit&nbsp;:
 
-1.  Saisissez uniquement votre prénom dans le champ «&nbsp;Nom&nbsp;». Lorsque vous changerez de champ avec la touche tabulation, vous entendrez une alerte vous avertissant que vous avez saisi un nom invalide. Vous pourrez alors revenir en arrière et corriger l’erreur.
-2.  Saisissez une adresse électronique sans le symbole «&nbsp;@&nbsp;». Lorsque vous changerez de champ avec la touche tabulation, vous devriez entendre un avertissement vous indiquant que vous avez saisi une adresse électronique invalide.
+1. Saisissez uniquement votre prénom dans le champ «&nbsp;Nom&nbsp;». Lorsque vous changerez de champ avec la touche tabulation, vous entendrez une alerte vous avertissant que vous avez saisi un nom invalide. Vous pourrez alors revenir en arrière et corriger l’erreur.
+2. Saisissez une adresse électronique sans le symbole «&nbsp;@&nbsp;». Lorsque vous changerez de champ avec la touche tabulation, vous devriez entendre un avertissement vous indiquant que vous avez saisi une adresse électronique invalide.
 
 Dans les deux cas, lorsque le focus revient sur le champ concerné, votre lecteur d’écran devrait vous dire que le champ est invalide. JAWS 9 prend en charge cette fonction, mais pas JAWS 8, aussi il se peut que ça ne fonctionne pas pour toutes les versions des lecteurs d’écran pris en charge.
 

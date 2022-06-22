@@ -13,7 +13,9 @@ Un gestionnaire d'évènement pour l'évènement `load` (chargement) de la fenê
 
 ### Syntaxe
 
-    window.onload = refFct;
+```js
+window.onload = refFct;
+```
 
 ### Paramètres
 
@@ -21,7 +23,9 @@ Un gestionnaire d'évènement pour l'évènement `load` (chargement) de la fenê
 
 ### Exemple
 
-    window.onload = init;
+```js
+window.onload = init;
+```
 
 ### Notes
 

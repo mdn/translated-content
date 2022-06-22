@@ -11,8 +11,8 @@ translation_of: Web/CSS/computed_value
 
 **計算値** (computed value) は [CSS](/ja/docs/Web/CSS) プロパティにおいて、継承の過程で親から子へと伝えられる値です。これは[指定値](/ja/docs/Web/CSS/specified_value)から計算されます。
 
-1.  特殊な値である {{cssxref("inherit")}}, {{cssxref("initial")}}, {{cssxref("unset")}}, {{cssxref("revert")}} を扱います。
-2.  プロパティの概要の「計算値」に記載された値に達するのに必要な計算を行います。
+1. 特殊な値である {{cssxref("inherit")}}, {{cssxref("initial")}}, {{cssxref("unset")}}, {{cssxref("revert")}} を扱います。
+2. プロパティの概要の「計算値」に記載された値に達するのに必要な計算を行います。
 
 プロパティの計算値に達するのに必要な計算は、一般に (`em` の単位やパーセントなどの) 相対値を絶対値に変換する計算を含みます。例えば、ある要素に `font-size: 16px` と `padding-top: 2em` が指定された場合、 `padding-top` の計算値は `32px` (フォントサイズの倍) になります。
 

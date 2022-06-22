@@ -3,76 +3,76 @@ title: sessions.Session
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 ---
-<div><font><font>{{AddonSidebar()}}</font></font></div>
+<div>{{AddonSidebar()}}</div>
 
-<p><font><font>该</font></font><code>Session</code><font><font>对象表示用户在当前浏览会话中已关闭的选项卡或窗口。</font></font></p>
+<p>该<code>Session</code>对象表示用户在当前浏览会话中已关闭的选项卡或窗口。</p>
 
-<p><font><font>如果关闭了选项卡但未关闭其窗口，则会话以{{WebExtAPIRef("tabs.Tab", "Tab")}}对象表示：例如，因为用户单击了“关闭选项卡”按钮，并且此选项卡不是其窗口中的唯一选项卡。</font></font></p>
+<p>如果关闭了选项卡但未关闭其窗口，则会话以{{WebExtAPIRef("tabs.Tab", "Tab")}}对象表示：例如，因为用户单击了“关闭选项卡”按钮，并且此选项卡不是其窗口中的唯一选项卡。</p>
 
-<p><font><font>如果关闭窗口，则会话表示为{{WebExtAPIRef("windows.Window", "Window")}}对象：例如，由于用户单击“关闭窗口”按钮，或关闭了窗口中唯一打开的选项卡。</font></font></p>
+<p>如果关闭窗口，则会话表示为{{WebExtAPIRef("windows.Window", "Window")}}对象：例如，由于用户单击“关闭窗口”按钮，或关闭了窗口中唯一打开的选项卡。</p>
 
-<p><font><font>请注意，不同的浏览器可能对会话何时为Tab和何时为Window有不同的想法。</font><font>例如：</font></font></p>
+<p>请注意，不同的浏览器可能对会话何时为 Tab 和何时为 Window 有不同的想法。例如：</p>
 
 <ul>
- <li><font><font>在Chrome中，如果用户关闭包含多个标签的窗口，则会话将记录为“窗口”。</font><font>如果用户关闭了仅包含一个选项卡的窗口，则该窗口将记录为一个选项卡。</font></font></li>
- <li><font><font>在Firefox中，如果用户关闭窗口（或该窗口中最后一个选项卡的选项卡），则将会话记录为窗口，如果用户关闭窗口中最后一个选项卡中的选项卡，则将会话记录为一个Tab。</font></font></li>
+ <li>在 Chrome 中，如果用户关闭包含多个标签的窗口，则会话将记录为“窗口”。如果用户关闭了仅包含一个选项卡的窗口，则该窗口将记录为一个选项卡。</li>
+ <li>在 Firefox 中，如果用户关闭窗口（或该窗口中最后一个选项卡的选项卡），则将会话记录为窗口，如果用户关闭窗口中最后一个选项卡中的选项卡，则将会话记录为一个 Tab。</li>
 </ul>
 
-<p><font><font>打开的选项卡的Tab对象没有</font></font><code>sessionId</code><font><font>。</font><font>关闭选项卡时，它将具有一个</font></font><code>sessionId</code><font><font>但没有选项卡</font></font><code>id</code><font><font>。</font><font>如果恢复了该标签页，它将获得一个新的标签页，</font></font><code>id</code><font><font>并且会丢失</font></font><code>sessionId</code><font><font>。</font></font></p>
+<p>打开的选项卡的 Tab 对象没有<code>sessionId</code>。关闭选项卡时，它将具有一个<code>sessionId</code>但没有选项卡<code>id</code>。如果恢复了该标签页，它将获得一个新的标签页，<code>id</code>并且会丢失<code>sessionId</code>。</p>
 
-<h2 id="类型"><font><font>类型</font></font></h2>
+<h2 id="类型">类型</h2>
 
-<p><font><font>此类型的值是对象。</font><font>它们包含以下属性：</font></font></p>
+<p>此类型的值是对象。它们包含以下属性：</p>
 
 <dl class="reference-values">
  <dt><code>lastModified</code></dt>
- <dd><code>number</code><font><font>。</font><font>选项卡或窗口关闭的时间，</font></font><a href="https://en.wikipedia.org/wiki/Unix_time"><font><font>自epoch以来的毫秒数</font></font></a><font><font>。</font></font></dd>
- <dt><code>tab</code><font><font>{{optional_inline}}</font></font></dt>
- <dd><code>object</code><font><font>。</font><font>如果对象表示关闭的选项卡，则此属性存在，并且将是{{WebExtAPIRef("tabs.Tab")}}对象。</font><font>仅当扩展名具有“ tabs” </font><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"><font>许可</font></a><font>权时</font></font><code>url</code><font><font>，</font><font>它才会包含</font></font><code>title</code><font><font>和</font><font>。</font></font><code>favIconUrl</code></dd>
- <dt><code>window</code><font><font>{{optional_inline}}</font></font></dt>
- <dd><code>object</code><font><font>。</font><font>如果对象表示一个关闭的窗口，则此属性存在并且将是{{WebExtAPIRef("windows.Window")}}对象。</font></font></dd>
+ <dd><code>number</code>。选项卡或窗口关闭的时间，<a href="https://en.wikipedia.org/wiki/Unix_time">自 epoch 以来的毫秒数</a>。</dd>
+ <dt><code>tab</code>{{optional_inline}}</dt>
+ <dd><code>object</code>。如果对象表示关闭的选项卡，则此属性存在，并且将是{{WebExtAPIRef("tabs.Tab")}}对象。仅当扩展名具有“tabs” <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">许可</a>权时<code>url</code>，它才会包含<code>title</code>和。<code>favIconUrl</code></dd>
+ <dt><code>window</code>{{optional_inline}}</dt>
+ <dd><code>object</code>。如果对象表示一个关闭的窗口，则此属性存在并且将是{{WebExtAPIRef("windows.Window")}}对象。</dd>
 </dl>
 
-<h2 id="浏览器兼容性"><font><font>浏览器兼容性</font></font></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 
 
-<p><font><font>{{Compat("webextensions.api.sessions.Session")}}</font></font></p>
+<p>{{Compat("webextensions.api.sessions.Session")}}</p>
 
-<div class="note"><strong><font><font>致谢</font></font></strong>
+<div class="note"><strong>致谢</strong>
 
-<p><font><font>该API基于Chromium的</font></font><a href="https://developer.chrome.com/extensions/sessions"><code>chrome.sessions</code></a><font><font>API。</font></font></p>
+<p>该 API 基于 Chromium 的<a href="https://developer.chrome.com/extensions/sessions"><code>chrome.sessions</code></a>API。</p>
 
-<p><font><font>Microsoft Edge兼容性数据由Microsoft Corporation提供，并在此处包含在Creative Commons Attribution 3.0美国许可证下。</font></font></p>
+<p>Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并在此处包含在 Creative Commons Attribution 3.0 美国许可证下。</p>
 </div>
 
 <div class="hidden">
-<pre class="notranslate"><font><font>//版权所有2015 The Chromium Authors。</font><font>版权所有。</font></font><font><font>
-//</font></font><font><font>
-//以或不以源代码和二进制格式重新分发和使用</font></font><font><font>
-//修改，只要满足以下条件</font></font><font><font>
-//遇到：</font></font><font><font>
-//</font></font><font><font>
-// *重新分发源代码必须保留上述版权</font></font><font><font>
-//注意，此条件列表和以下免责声明。</font></font><font><font>
-// *二进制形式的重新分发必须重现上述内容</font></font><font><font>
-//版权声明，此条件列表和以下免责声明</font></font><font><font>
-//在随附的文档和/或其他材料中</font></font><font><font>
-//分配。</font></font><font><font>
-// *无论是Google Inc.的名称还是Google Inc.的名称</font></font><font><font>
-//贡献者可用于认可或宣传由</font></font><font><font>
-//此软件未经事先特别书面许可。</font></font><font><font>
-//</font></font><font><font>
-//此软件由版权所有者和贡献者提供</font></font><font><font>
-//“按原样”以及任何明示或暗示的保证，包括但不限于</font></font><font><font>
-//仅限于对产品的适销性和适用性的默示担保</font></font><font><font>
-//不提供特殊用途。</font><font>在任何情况下，版权</font></font><font><font>
-//所有者或贡献者对任何直接，间接，偶然的，</font></font><font><font>
-//特殊，示范性或后果性损害（包括但不包括）</font></font><font><font>
-//仅限于，购买替代商品或服务；</font><font>使用损失，</font></font><font><font>
-//数据或利润；</font><font>或业务中断）</font></font><font><font>
-//责任理论，无论是合同形式，严格责任还是侵权行为</font></font><font><font>
-//（包括疏忽大意或其他原因）出于使用目的的任何方式</font></font><font><font>
-//即使已告知可能发生此类损坏，也可以使用本软件。</font></font>
+<pre class="notranslate">//版权所有 2015 The Chromium Authors。版权所有。
+//
+//以或不以源代码和二进制格式重新分发和使用
+//修改，只要满足以下条件
+//遇到：
+//
+// *重新分发源代码必须保留上述版权
+//注意，此条件列表和以下免责声明。
+// *二进制形式的重新分发必须重现上述内容
+//版权声明，此条件列表和以下免责声明
+//在随附的文档和/或其他材料中
+//分配。
+// *无论是 Google Inc.的名称还是 Google Inc.的名称
+//贡献者可用于认可或宣传由
+//此软件未经事先特别书面许可。
+//
+//此软件由版权所有者和贡献者提供
+//“按原样”以及任何明示或暗示的保证，包括但不限于
+//仅限于对产品的适销性和适用性的默示担保
+//不提供特殊用途。在任何情况下，版权
+//所有者或贡献者对任何直接，间接，偶然的，
+//特殊，示范性或后果性损害（包括但不包括）
+//仅限于，购买替代商品或服务；使用损失，
+//数据或利润；或业务中断）
+//责任理论，无论是合同形式，严格责任还是侵权行为
+//（包括疏忽大意或其他原因）出于使用目的的任何方式
+//即使已告知可能发生此类损坏，也可以使用本软件。
 </pre>
 </div>

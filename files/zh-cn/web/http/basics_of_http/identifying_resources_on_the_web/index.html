@@ -8,7 +8,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary">HTTP 请求的内容通称为"资源"。”资源“这一概念非常宽泛，它可以是一份文档，一张图片，或所有其他你能够想到的格式。每个资源都由一个 ({{Glossary("URI")}}) 来进行标识。</p>
+<p>HTTP 请求的内容通称为"资源"。”资源“这一概念非常宽泛，它可以是一份文档，一张图片，或所有其他你能够想到的格式。每个资源都由一个 ({{Glossary("URI")}}) 来进行标识。</p>
 
 <p>一般情况下，资源的名称和位置由同一个 URL（统一资源定位符，它是 URI 的一种）来标识。也有某些特殊情况，资源的名称和位置由不同的 URI 进行标识：例如，待请求的资源希望客户端从另外一个位置访问它。我们可以使用一个特定的首部字段，{{HTTPHeader("Alt-Svc")}}，来指示这种情况。</p>
 
@@ -40,7 +40,7 @@ urn:ietf:rfc:7230
 
 <ul>
  <li>乔治·奥威尔所著的《1984》</li>
- <li>IETF规范7230，超文本传输​​协议 (HTTP/1.1)：Message Syntax and Routing.</li>
+ <li>IETF 规范 7230，超文本传输​​协议 (HTTP/1.1)：Message Syntax and Routing.</li>
 </ul>
 
 <h2 id="统一资源标识符的语法_(URI)">统一资源标识符的语法 (URI)</h2>
@@ -98,7 +98,7 @@ urn:ietf:rfc:7230
   </tr>
   <tr>
    <td>ws/wss</td>
-   <td>（加密的） <a href="/zh-CN/docs/WebSockets">WebSocket</a> 连接</td>
+   <td>（加密的）<a href="/zh-CN/docs/WebSockets">WebSocket</a> 连接</td>
   </tr>
  </tbody>
 </table>
@@ -114,7 +114,7 @@ urn:ietf:rfc:7230
 
 <dl>
  <dt><img alt="Port" src="https://mdn.mozillademos.org/files/8017/mdn-url-port@x2.png" style="height: 70px; width: 440px;"></dt>
- <dd><code>:80</code> 是端口。它表示用于访问 Web 服务器上资源的技术“门”。如果访问的该 Web 服务器使用HTTP协议的标准端口（HTTP为80，HTTPS为443）授予对其资源的访问权限，则通常省略此部分。否则端口就是 URI 必须的部分。</dd>
+ <dd><code>:80</code> 是端口。它表示用于访问 Web 服务器上资源的技术“门”。如果访问的该 Web 服务器使用 HTTP 协议的标准端口（HTTP 为 80，HTTPS 为 443）授予对其资源的访问权限，则通常省略此部分。否则端口就是 URI 必须的部分。</dd>
 </dl>
 
 <h3 id="路径">路径</h3>
@@ -135,7 +135,7 @@ urn:ietf:rfc:7230
 
 <dl>
  <dt><img alt="Anchor" src="https://mdn.mozillademos.org/files/8023/mdn-url-anchor@x2.png" style="height: 70px; width: 440px;"></dt>
- <dd><code>#SomewhereInTheDocument</code> 是资源本身的某一部分的一个锚点。锚点代表资源内的一种“书签”，它给予浏览器显示位于该“加书签”点的内容的指示。 例如，在HTML文档上，浏览器将滚动到定义锚点的那个点上；在视频或音频文档上，浏览器将转到锚点代表的那个时间。值得注意的是 # 号后面的部分，也称为片段标识符，永远不会与请求一起发送到服务器。</dd>
+ <dd><code>#SomewhereInTheDocument</code> 是资源本身的某一部分的一个锚点。锚点代表资源内的一种“书签”，它给予浏览器显示位于该“加书签”点的内容的指示。 例如，在 HTML 文档上，浏览器将滚动到定义锚点的那个点上；在视频或音频文档上，浏览器将转到锚点代表的那个时间。值得注意的是 # 号后面的部分，也称为片段标识符，永远不会与请求一起发送到服务器。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>

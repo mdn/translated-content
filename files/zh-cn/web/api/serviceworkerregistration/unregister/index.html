@@ -5,7 +5,7 @@ translation_of: Web/API/ServiceWorkerRegistration/unregister
 ---
 <div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
 
-<p>{{domxref("ServiceWorkerRegistration")}} 接口的 <code><strong>unregister</strong></code> 方法用于取消对service worker的注册并返回一个 {{jsxref("Promise")}}。没有找到注册时，这个 promise 返回 <code>false</code> ，否则，不论取消成功与否都返回 <code>true</code> （当其他人在同一作用域调用了 {{domxref("ServiceWorkerContainer.register")}} 可能取消失败）service worker 会在取消注册前完成一切正在进行的操作。</p>
+<p>{{domxref("ServiceWorkerRegistration")}} 接口的 <code><strong>unregister</strong></code> 方法用于取消对 service worker 的注册并返回一个 {{jsxref("Promise")}}。没有找到注册时，这个 promise 返回 <code>false</code> ，否则，不论取消成功与否都返回 <code>true</code> （当其他人在同一作用域调用了 {{domxref("ServiceWorkerContainer.register")}} 可能取消失败）service worker 会在取消注册前完成一切正在进行的操作。</p>
 
 <div class="note">
 <p><strong>Note</strong>: 这一特性同样适用于 <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
@@ -22,11 +22,11 @@ translation_of: Web/API/ServiceWorkerRegistration/unregister
 
 <h3 id="返回">返回</h3>
 
-<p>Promise 返回一个bool值表示 service worker 是否被取消注册。</p>
+<p>Promise 返回一个 bool 值表示 service worker 是否被取消注册。</p>
 
 <h2 id="例子" style="line-height: 30px; font-size: 2.14285714285714rem;">例子</h2>
 
-<p>下面的简单例子中注册了一个service worker，然后立即取消了：</p>
+<p>下面的简单例子中注册了一个 service worker，然后立即取消了：</p>
 
 <pre class="brush: js">if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
@@ -46,9 +46,9 @@ translation_of: Web/API/ServiceWorkerRegistration/unregister
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="col"><font face="Open Sans, sans-serif"><span style="font-weight: normal;">Specification</span></font></th>
-   <th scope="col"><font face="Open Sans, sans-serif"><span style="font-weight: normal;">Status</span></font></th>
-   <th scope="col"><font face="Open Sans, sans-serif"><span style="font-weight: normal;">Comment</span></font></th>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
   </tr>
   <tr>
    <td>{{SpecName('Service Workers', '#service-worker-registration-unregister-method', 'ServiceWorkerRegistration.unregister()')}}</td>

@@ -55,7 +55,7 @@ _Cette interface hérite aussi des méthodes de son parent {{domxref("HTMLElemen
   - : renvoie `true` si les contrôles du formulaire sont soumis à des contraintes de validation et les respectent. Elle renvoie `false` si certains contrôles ne respectent pas leurs contraintes. Elle déclenche un évènement {{event("invalid")}} pour chaque contrôle qui ne respecte pas ses contraintes. De tels contrôles sont considérés invalides si l'évènement n'est pas annulé. C'est au développeur de choisir comment réagir face à la valeur `false` produite par cette méthode.
 - {{domxref("HTMLFormElement.reportValidity()")}}
   - : renvoie `true` si les contrôles du formulaire respectent leurs contraintes de validation. Lorsque `false` est renvoyé, des évènements annulables {{Event("invalid")}} sont déclenchés pour chaque contrôle invalide et les problèmes de validation sont rapportés à l'utilisateur.
-- {{domxref("HTMLFormElement.requestAutocomplete()")}} {{obsolete_inline}}
+- {{domxref("HTMLFormElement.requestAutocomplete()")}} {{deprecated_inline}}
   - : déclenche une interface native du navigateur afin d'aider les utilisateurs à remplir les champs pour lesquels [la valeur nommée du champ à remplissage automatique](https://html.spec.whatwg.org/#autofill-field-name) ne vaut pas `off` ou `on`. Le formulaire reçoit un évènement lorsque l'utilisateur a fini d'intéragir avec l'interface, l'événement sera {{event("autocomplete")}} si les champs ont bien été remplis ou {{event("autocompleteerror")}} s'il y a eu un problème. **Cette méthode a été retirée de Chrome et Firefox — cf. {{bug(1270740)}} pour plus d'informations et les raisons associées.**
 
 ## Notes d'utilisation

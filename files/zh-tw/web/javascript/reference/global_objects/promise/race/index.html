@@ -92,7 +92,7 @@ setTimeout(function(){
 // Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: "non-Promise value" }
 </pre>
 
-<h3 id="使用_Promise.race_–_及_setTimeout_的範例">使用 <code>Promise.race</code> – 及 <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout</a></code> 的範例</h3>
+<h3 id="使用_Promise.race_–_及_setTimeout_的範例">使用 <code>Promise.race</code> – 及 <code><a href="/en-US/docs/Web/API/setTimeout">setTimeout</a></code> 的範例</h3>
 
 <pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
     setTimeout(resolve, 500, 'one');
@@ -137,25 +137,7 @@ Promise.race([p5, p6]).then(function(value) {
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-promise.race', 'Promise.race')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition in an ECMA standard.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.race', 'Promise.race')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 

@@ -1,30 +1,30 @@
 ---
-title: 什么是URL？
+title: 什么是 URL？
 slug: Learn/Common_questions/What_is_a_URL
 translation_of: Learn/Common_questions/What_is_a_URL
 ---
-<div class="summary">
-<p>本文讨论了统一资源定位符(URL)，并解释了他们是什么，以及如何被构建的。</p>
+<div>
+<p>本文讨论了统一资源定位符 (URL)，并解释了他们是什么，以及如何被构建的。</p>
 </div>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">前提:</th>
+   <th scope="row">前提：</th>
    <td>你首先需要知道<a href="/zh-CN/docs/Learn/How_the_Internet_works"> 互联网是如何工作的</a>，<a href="/zh-CN/docs/Learn/Common_questions/What_is_a_web_server">什么是网络服务器</a> 以及 <a href="/zh-CN/docs/Learn/Common_questions/What_are_hyperlinks">网络中超链接的概念</a>。</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
-   <td>你将会学习到 URL是什么，以及它在网络上是如何工作的 。</td>
+   <th scope="row">目标：</th>
+   <td>你将会学习到 URL 是什么，以及它在网络上是如何工作的。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="概述">概述</h2>
 
-<p><span class="seoSummary">和 {{Glossary("Hypertext")}} 以及 {{Glossary("HTTP")}} 一样，<strong><dfn>URL </dfn></strong><dfn>是 Web 中的一个核心概念。它是</dfn>{{Glossary("Browser","浏览器")}}<dfn>用来检索 web 上公布的任何资源的机制。</dfn></span></p>
+<p>和 {{Glossary("Hypertext")}} 以及 {{Glossary("HTTP")}} 一样，<strong><dfn>URL </dfn></strong><dfn>是 Web 中的一个核心概念。它是</dfn>{{Glossary("Browser","浏览器")}}<dfn>用来检索 web 上公布的任何资源的机制。</dfn></p>
 
-<p><strong>URL 代表着是统一资源定位符（</strong><em>Uniform Resource Locator</em><strong>）</strong>。URL 无非就是一个给定的独特资源在 Web 上的地址。理论上说，每个有效的 URL 都指向一个唯一的资源。这个资源可以是一个 HTML 页面，一个 CSS 文档，一幅图像，等等。而在实际中，也有一些例外，最常见的情况就是一个 URL 指向了不存在的或是被移动过的资源。由于通过 URL 呈现的资源和 URL 本身由 Web 服务器处理，因此 web 服务器的拥有者需要认真地维护资源以及与它关联的URL。</p>
+<p><strong>URL 代表着是统一资源定位符（</strong><em>Uniform Resource Locator</em><strong>）</strong>。URL 无非就是一个给定的独特资源在 Web 上的地址。理论上说，每个有效的 URL 都指向一个唯一的资源。这个资源可以是一个 HTML 页面，一个 CSS 文档，一幅图像，等等。而在实际中，也有一些例外，最常见的情况就是一个 URL 指向了不存在的或是被移动过的资源。由于通过 URL 呈现的资源和 URL 本身由 Web 服务器处理，因此 web 服务器的拥有者需要认真地维护资源以及与它关联的 URL。</p>
 
 <h2 id="自主学习">自主学习</h2>
 
@@ -32,9 +32,9 @@ translation_of: Learn/Common_questions/What_is_a_URL
 
 <h2 id="深入探索">深入探索</h2>
 
-<h3 id="基础：剖析URL">基础：剖析URL</h3>
+<h3 id="基础：剖析URL">基础：剖析 URL</h3>
 
-<p>下面是一些URL的示例：</p>
+<p>下面是一些 URL 的示例：</p>
 
 <pre class="notranslate">https://developer.mozilla.org
 https://developer.mozilla.org/en-US/docs/Learn/
@@ -42,55 +42,55 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
 
 <p>您可以将上面的这些网址输进您的浏览器地址栏来告诉浏览器加载相关联的页面（或资源）。</p>
 
-<p>一个URL由不同的部分组成，其中一些是必须的，而另一些是可选的。让我们以下面这个URL为例看看其中最重要的部分：</p>
+<p>一个 URL 由不同的部分组成，其中一些是必须的，而另一些是可选的。让我们以下面这个 URL 为例看看其中最重要的部分：</p>
 
 <pre class="notranslate">http://www.example.com:80/path/to/myfile.html?key1=value1&amp;key2=value2#SomewhereInTheDocument</pre>
 
 <dl>
  <dt><img alt="Protocol" src="https://mdn.mozillademos.org/files/15766/mdn-url-protocol@x2_update.png" style="height: 70px; width: 440px;"></dt>
- <dd><code>http</code> 是协议。它表明了浏览器必须使用何种协议。它通常都是HTTP协议或是HTTP协议的安全版，即HTTPS。Web需要它们二者之一，但浏览器也知道如何处理其他协议，比如<code>mailto:（打开邮件客户端）或者<font face="Open Sans, Arial, sans-serif"> </font></code><code>ftp:（处理文件传输），所以当你看到这些协议时，不必惊讶。</code></dd>
+ <dd><code>http</code> 是协议。它表明了浏览器必须使用何种协议。它通常都是 HTTP 协议或是 HTTP 协议的安全版，即 HTTPS。Web 需要它们二者之一，但浏览器也知道如何处理其他协议，比如<code>mailto:（打开邮件客户端）或者 </code><code>ftp:（处理文件传输），所以当你看到这些协议时，不必惊讶。</code></dd>
  <dt><img alt="Domaine Name" src="https://mdn.mozillademos.org/files/8015/mdn-url-domain@x2.png" style="height: 70px; width: 440px;"></dt>
- <dd><code>www.example.com</code> 是域名。 它表明正在请求哪个Web服务器。或者，可以直接使用{{Glossary("IP address")}}, 但是因为它不太方便，所以它不经常在网络上使用。.</dd>
+ <dd><code>www.example.com</code> 是域名。它表明正在请求哪个 Web 服务器。或者，可以直接使用{{Glossary("IP address")}}, 但是因为它不太方便，所以它不经常在网络上使用。.</dd>
  <dt><img alt="Port" src="https://mdn.mozillademos.org/files/8017/mdn-url-port@x2.png" style="height: 70px; width: 440px;"></dt>
- <dd><code>:80</code> 是端口。 它表示用于访问Web服务器上的资源的技术“门”。如果Web服务器使用HTTP协议的标准端口（HTTP为80，HTTPS为443）来授予其资源的访问权限，则通常会被忽略。否则是强制性的。</dd>
+ <dd><code>:80</code> 是端口。它表示用于访问 Web 服务器上的资源的技术“门”。如果 Web 服务器使用 HTTP 协议的标准端口（HTTP 为 80，HTTPS 为 443）来授予其资源的访问权限，则通常会被忽略。否则是强制性的。</dd>
  <dt><img alt="Path to the file" src="https://mdn.mozillademos.org/files/8019/mdn-url-path@x2.png" style="height: 70px; width: 440px;"></dt>
- <dd><code>/path/to/myfile.html</code> 是网络服务器上资源的路径。在Web的早期阶段，像这样的路径表示Web服务器上的物理文件位置。如今，它主要是由没有任何物理现实的Web服务器处理的抽象。</dd>
+ <dd><code>/path/to/myfile.html</code> 是网络服务器上资源的路径。在 Web 的早期阶段，像这样的路径表示 Web 服务器上的物理文件位置。如今，它主要是由没有任何物理现实的 Web 服务器处理的抽象。</dd>
  <dt><img alt="Parameters" src="https://mdn.mozillademos.org/files/8021/mdn-url-parameters@x2.png" style="height: 70px; width: 440px;"></dt>
- <dd><code>?key1=value1&amp;key2=value2</code> 是提供给网络服务器的额外参数。 这些参数是用 <code>&amp; </code>符号分隔的键/值对列表。在返回资源之前，Web服务器可以使用这些参数来执行额外的操作。每个Web服务器都有自己关于参数的规则，唯一可靠的方式来知道特定Web服务器是否处理参数是通过询问Web服务器所有者。</dd>
+ <dd><code>?key1=value1&amp;key2=value2</code> 是提供给网络服务器的额外参数。这些参数是用 <code>&amp; </code>符号分隔的键/值对列表。在返回资源之前，Web服务器可以使用这些参数来执行额外的操作。每个Web服务器都有自己关于参数的规则，唯一可靠的方式来知道特定Web服务器是否处理参数是通过询问Web服务器所有者。</dd>
  <dt><img alt="Anchor" src="https://mdn.mozillademos.org/files/8023/mdn-url-anchor@x2.png" style="height: 70px; width: 440px;"></dt>
- <dd><code>#SomewhereInTheDocument</code> 是资源本身的另一部分的锚点. 锚点表示资源中的一种“书签”，给浏览器显示位于该“加书签”位置的内容的方向。例如，在HTML文档上，浏览器将滚动到定义锚点的位置;在视频或音频文档上，浏览器将尝试转到锚代表的时间。值得注意的是，＃后面的部分（也称为片段标识符）从来没有发送到请求的服务器。</dd>
+ <dd><code>#SomewhereInTheDocument</code> 是资源本身的另一部分的锚点。锚点表示资源中的一种“书签”，给浏览器显示位于该“加书签”位置的内容的方向。例如，在 HTML 文档上，浏览器将滚动到定义锚点的位置;在视频或音频文档上，浏览器将尝试转到锚代表的时间。值得注意的是，＃后面的部分（也称为片段标识符）从来没有发送到请求的服务器。</dd>
 </dl>
 
-<p>{{Note('这里是关于URLs的 <a href="http://en.wikipedia.org/wiki/Uniform_Resource_Locator">一些额外的部分和一些额外的规则</a> , 但它们对于普通用户或Web开发者不是非常重要。 你不必担心这个，要构筑和使用完全实用的URLs不必了解这些。')}}</p>
+<p>{{Note('这里是关于 URLs 的 <a href="http://en.wikipedia.org/wiki/Uniform_Resource_Locator">一些额外的部分和一些额外的规则</a> , 但它们对于普通用户或 Web 开发者不是非常重要。你不必担心这个，要构筑和使用完全实用的 URLs 不必了解这些。')}}</p>
 
-<p>你可能想到一个URL类似普通信件的地址：协议代表你要使用的邮政服务，域名是城市或者城镇，端口则像邮政编码；路径代表着你的信件所有递送的大楼；参数则提供额外的信息，如大楼所在单元；最后，锚点表示信件的收件人。</p>
+<p>你可能想到一个 URL 类似普通信件的地址：协议代表你要使用的邮政服务，域名是城市或者城镇，端口则像邮政编码；路径代表着你的信件所有递送的大楼；参数则提供额外的信息，如大楼所在单元；最后，锚点表示信件的收件人。</p>
 
-<h3 id="如何使用URL">如何使用URL</h3>
+<h3 id="如何使用URL">如何使用 URL</h3>
 
-<p>可以直接在浏览器的地址栏里输入任何URL，来获得后台的资源。但是这仅仅是冰山一角。</p>
+<p>可以直接在浏览器的地址栏里输入任何 URL，来获得后台的资源。但是这仅仅是冰山一角。</p>
 
-<p> {{Glossary("HTML")}} 语言 — <a href="/en-US/docs/Learn/HTML/HTML_tags">后续会再来讨论</a> — 对URLs有大量的使用:</p>
+<p> {{Glossary("HTML")}} 语言 — <a href="/en-US/docs/Learn/HTML/HTML_tags">后续会再来讨论</a> — 对 URLs 有大量的使用：</p>
 
 <ul>
  <li>为在其他文档中新建链接，用 {{HTMLElement("a")}} ;</li>
  <li>为将文档与它的相关资源关联，用各种标签如 {{HTMLElement("link")}} 或 {{HTMLElement("script")}} ;</li>
  <li>为显示多媒体如图片 (用 {{HTMLElement("img")}} ), 视频 (用 {{HTMLElement("video")}} ), 声音和音乐 (用 {{HTMLElement("audio")}} ), 等等;</li>
- <li>为显示其他HTML文档，用 {{HTMLElement("iframe")}} .</li>
+ <li>为显示其他 HTML 文档，用 {{HTMLElement("iframe")}} .</li>
 </ul>
 
-<p>其他大量使用URLs的技术如 {{Glossary("CSS")}} 或 {{Glossary("JavaScript")}}, 这些才是Web的中心。</p>
+<p>其他大量使用 URLs 的技术如 {{Glossary("CSS")}} 或 {{Glossary("JavaScript")}}, 这些才是 Web 的中心。</p>
 
-<h3 id="绝对URL和相对URL">绝对URL和相对URL</h3>
+<h3 id="绝对URL和相对URL">绝对 URL 和相对 URL</h3>
 
-<p>我们上面看到的是一个绝对的URL，但也有一个叫做相对URL的东西。我们来看看这个区别意味着什么呢？</p>
+<p>我们上面看到的是一个绝对的 URL，但也有一个叫做相对 URL 的东西。我们来看看这个区别意味着什么呢？</p>
 
-<p>URL的必需部分在很大程度上取决于使用URL的上下文。在浏览器的地址栏中，网址没有任何上下文，因此您必须提供一个完整的（或绝对的）URL，就像我们上面看到的一样。您不需要包括协议（浏览器默认使用HTTP）或端口（仅当目标Web服务器使用某些异常端口时才需要），但URL的所有其他部分都是必需的。</p>
+<p>URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏览器的地址栏中，网址没有任何上下文，因此您必须提供一个完整的（或绝对的）URL，就像我们上面看到的一样。您不需要包括协议（浏览器默认使用 HTTP）或端口（仅当目标 Web 服务器使用某些异常端口时才需要），但 URL 的所有其他部分都是必需的。</p>
 
-<p>当文档中使用URL时，例如HTML页面中的内容有所不同。因为浏览器已经有文档自己的URL，它可以使用这些信息来填写该文档中可用的任何URL的缺失部分。我们可以通过仅查看URL的路径部分来区分绝对URL和相对URL。<strong>如果URL的路径部分以“/”字符开头，则浏览器将从服务器的顶部根目录获取该资源，而不引用当前文档给出的上下文</strong>。</p>
+<p>当文档中使用 URL 时，例如 HTML 页面中的内容有所不同。因为浏览器已经有文档自己的 URL，它可以使用这些信息来填写该文档中可用的任何 URL 的缺失部分。我们可以通过仅查看 URL 的路径部分来区分绝对 URL 和相对 URL。<strong>如果 URL 的路径部分以“/”字符开头，则浏览器将从服务器的顶部根目录获取该资源，而不引用当前文档给出的上下文</strong>。</p>
 
 <p>我们来看一些例子来使这个更清楚。</p>
 
-<h4 id="绝对URL示例">绝对URL示例</h4>
+<h4 id="绝对URL示例">绝对 URL 示例</h4>
 
 <dl>
  <dt>完整网址（与之前使用的网址相同）</dt>
@@ -101,19 +101,19 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
  <dd>
  <pre class="notranslate">//developer.mozilla.org/en-US/docs/Learn</pre>
 
- <p>在这种情况下，浏览器将使用与用于加载该URL的文档相同的协议来调用该URL。</p>
+ <p>在这种情况下，浏览器将使用与用于加载该 URL 的文档相同的协议来调用该 URL。</p>
  </dd>
  <dt>隐去域名</dt>
  <dd>
  <pre class="notranslate">/en-US/docs/Learn</pre>
 
- <p>这是HTML文档中绝对URL最常见的用例。浏览器将使用与用于加载托管该URL的文档相同的协议和相同的域名。<strong>注意</strong>：不可能省略该域名而不省略协议。</p>
+ <p>这是 HTML 文档中绝对 URL 最常见的用例。浏览器将使用与用于加载托管该 URL 的文档相同的协议和相同的域名。<strong>注意</strong>：不可能省略该域名而不省略协议。</p>
  </dd>
 </dl>
 
-<h4 id="相对URL示例">相对URL示例</h4>
+<h4 id="相对URL示例">相对 URL 示例</h4>
 
-<p>为了更好地了解以下示例，我们假设从位于以下URL的文档中调用URL： <code>https://developer.mozilla.org/en-US/docs/Learn</code></p>
+<p>为了更好地了解以下示例，我们假设从位于以下 URL 的文档中调用 URL： <code>https://developer.mozilla.org/en-US/docs/Learn</code></p>
 
 <dl>
  <dt>子资源</dt>
@@ -125,15 +125,15 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
  <dd>
  <pre class="notranslate">../CSS/display</pre>
 
- <p>在这种情况下，我们使用从UNIX文件系统世界继承的../写入约定来告诉我们要从一个目录上升的浏览器。在这里，我们要达到以下URL：https://developer.mozilla.org/en-US/docs/Learn/../CSS/display，可以将其简化为：https://developer.mozilla.org/en-US/docs/CSS/display</p>
+ <p>在这种情况下，我们使用从 UNIX 文件系统世界继承的../写入约定来告诉我们要从一个目录上升的浏览器。在这里，我们要达到以下 URL：https://developer.mozilla.org/en-US/docs/Learn/../CSS/display，可以将其简化为：https://developer.mozilla.org/en-US/docs/CSS/display</p>
  </dd>
 </dl>
 
 <h3 id="语义_URLs">语义 URLs</h3>
 
-<p>尽管URL具有非常的技术性，但URL表示一个可读性的网站入口点。它们可以被记住，并且任何人都可以将它们输入浏览器的地址栏。人是Web的核心，因此建立所谓的 <em><a href="http://en.wikipedia.org/wiki/Semantic_URL">semantic URLs</a> </em>被认为是最佳实践。语义URL使用具有固有含义的单词，任何人都可以理解，无论他们的技术水平如何。</p>
+<p>尽管 URL 具有非常的技术性，但 URL 表示一个可读性的网站入口点。它们可以被记住，并且任何人都可以将它们输入浏览器的地址栏。人是 Web 的核心，因此建立所谓的 <em><a href="http://en.wikipedia.org/wiki/Semantic_URL">semantic URLs</a> </em>被认为是最佳实践。语义 URL 使用具有固有含义的单词，任何人都可以理解，无论他们的技术水平如何。</p>
 
-<p>语言语义当然与电脑无关。您可能经常看到看起来像随机字符混搭的网址。但创建人类可读的URL有很多优点：</p>
+<p>语言语义当然与电脑无关。您可能经常看到看起来像随机字符混搭的网址。但创建人类可读的 URL 有很多优点：</p>
 
 <ul>
  <li>操作它们更容易</li>

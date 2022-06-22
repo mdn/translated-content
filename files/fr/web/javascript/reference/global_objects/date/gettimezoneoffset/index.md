@@ -18,7 +18,9 @@ La méthode **`getTimezoneOffset()`** retourne la différence en minutes entre l
 
 ## Syntaxe
 
-    dateObj.getTimezoneOffset()
+```js
+dateObj.getTimezoneOffset()
+```
 
 ### Valeur de retour
 

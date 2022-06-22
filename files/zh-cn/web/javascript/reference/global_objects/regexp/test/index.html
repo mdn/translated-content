@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 <h2 id="Description">描述</h2>
 
-<p>当你想要知道一个正则表达式是否与指定的字符串匹配时，就可以使用 <code>test()</code>（类似于<code> </code> {{jsxref("String.prototype.search()")}} 方法），差别在于test返回一个布尔值，而 search 返回索引（如果找到）或者-1（如果没找到）；若想知道更多信息（然而执行比较慢），可使用{{jsxref("RegExp.prototype.exec()", "exec()")}} 方法（类似于 {{jsxref("String.prototype.match()")}} 方法）。 和 {{jsxref("RegExp.prototype.exec()", "exec()")}} (或者组合使用),一样，在相同的全局正则表达式实例上多次调用<code><code>test</code></code>将会越过之前的匹配。</p>
+<p>当你想要知道一个正则表达式是否与指定的字符串匹配时，就可以使用 <code>test()</code>（类似于<code> </code> {{jsxref("String.prototype.search()")}} 方法），差别在于 test 返回一个布尔值，而 search 返回索引（如果找到）或者-1（如果没找到）；若想知道更多信息（然而执行比较慢），可使用{{jsxref("RegExp.prototype.exec()", "exec()")}} 方法（类似于 {{jsxref("String.prototype.match()")}} 方法）。 和 {{jsxref("RegExp.prototype.exec()", "exec()")}} (或者组合使用),一样，在相同的全局正则表达式实例上多次调用<code><code>test</code></code>将会越过之前的匹配。</p>
 
 <h2 id="Examples">示例</h2>
 
@@ -112,13 +112,13 @@ regex.test('foo'); // false
 
 <p>{{Compat("javascript.builtins.RegExp.test")}}</p>
 
-<h2 id="Firefox特殊注意">Firefox特殊注意</h2>
+<h2 id="Firefox_特殊注意">Firefox 特殊注意</h2>
 
-<p>在 Firefox 8之前， <code>test()</code> 被不正确地实现了；当无参数地调用时，它会匹配之前的输入值 (RegExp.input 属性)，而不是字符串"undefined"。这已经被修正了；现在 <code>/undefined/.test()</code> 正确地返回<code>true</code>，而不是错误。</p>
+<p>在 Firefox 8 之前， <code>test()</code> 被不正确地实现了；当无参数地调用时，它会匹配之前的输入值 (RegExp.input 属性)，而不是字符串"undefined"。这已经被修正了；现在 <code>/undefined/.test()</code> 正确地返回<code>true</code>，而不是错误。</p>
 
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>在<a href="/zh-CN/docs/Web/JavaScript/Guide" title="JavaScript/Guide">JavaScript指南</a>的<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" title="JavaScript/Guide/Regular_Expressions">正则表达式</a>章节</li>
+ <li>在<a href="/zh-CN/docs/Web/JavaScript/Guide" title="JavaScript/Guide">JavaScript 指南</a>的<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" title="JavaScript/Guide/Regular_Expressions">正则表达式</a>章节</li>
  <li>{{jsxref("RegExp")}}</li>
 </ul>

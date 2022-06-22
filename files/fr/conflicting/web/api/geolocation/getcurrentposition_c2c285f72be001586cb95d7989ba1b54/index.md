@@ -11,7 +11,9 @@ La propriété **`PositionOptions.maximumAge`** est de type `long` positif in
 
 ## Syntax
 
-    positionOptions.maximumAge = timeLength
+```
+positionOptions.maximumAge = timeLength
+```
 
 ## Spécifications
 
