@@ -60,12 +60,14 @@ Vous pouvez utiliser Node.js pour créer un simple serveur web en utilisant l'AP
 
 L'exemple qui suit crée un serveur web qui écoute toutes sortes de requêtes HTTP sur l'URL `https://127.0.0.1:8000/`. Quand une requête est reçue, le script répond avec la chaine « Salut tout le monde ». Si vous avez déjà installé Node, suivez les étapes de l'exemple suivant :
 
-1.  Ouvrez un terminal (sur Windows, ouvrez l'invite de commande (cmd)),
-2.  Créez le dossier où vous voulez sauvegarder le programme, appelez-le par exemple `test-node` et placez-vous dedans en utilisant la commande suivante dans votre console :
+1. Ouvrez un terminal (sur Windows, ouvrez l'invite de commande (cmd)),
+2. Créez le dossier où vous voulez sauvegarder le programme, appelez-le par exemple `test-node` et placez-vous dedans en utilisant la commande suivante dans votre console :
 
-        cd test-node
+    ```bash
+    cd test-node
+    ```
 
-3.  Dans votre éditeur de texte favori, créez un fichier nommé `"hello.js"` et collez ce qui suit dedans :
+3. Dans votre éditeur de texte favori, créez un fichier nommé `"hello.js"` et collez ce qui suit dedans :
 
     ```js
     // Charge le module HTTP
@@ -92,8 +94,8 @@ L'exemple qui suit crée un serveur web qui écoute toutes sortes de requêtes H
     })
     ```
 
-4.  Sauvegardez le fichier dans le dossier créé plus haut.
-5.  Retournez au terminal et tapez :
+4. Sauvegardez le fichier dans le dossier créé plus haut.
+5. Retournez au terminal et tapez :
 
     ```bash
     node hello.js
@@ -383,10 +385,12 @@ app.use(express.static('public'));
 
 Tous les fichiers du répertoire public sont servis en ajoutant leur nom de fichier (_relatif_ au répertoire "public" de base) à l'URL de base. Ainsi, par exemple :
 
-    https://localhost:3000/images/dog.jpg
-    https://localhost:3000/css/style.css
-    https://localhost:3000/js/app.js
-    https://localhost:3000/about.html
+```
+https://localhost:3000/images/dog.jpg
+https://localhost:3000/css/style.css
+https://localhost:3000/js/app.js
+https://localhost:3000/about.html
+```
 
 Vous pouvez appeler `static()` plusieurs fois pour servir plusieurs répertoires. Si un fichier ne peut pas être trouvé par une fonction middleware, alors il sera simplement transmis au _middleware_ suivant (l'ordre dans lequel le _middleware_ est appelé est basé sur votre ordre de déclaration).
 
@@ -403,9 +407,11 @@ app.use('/media', express.static('public'));
 
 Maintenant, vous pouvez charger les fichiers qui se trouvent dans le répertoire `public` à partir du préfixe du chemin `/media`.
 
-    https://localhost:3000/media/images/dog.jpg
-    https://localhost:3000/media/video/cat.mp4
-    https://localhost:3000/media/cry.mp3
+```
+https://localhost:3000/media/images/dog.jpg
+https://localhost:3000/media/video/cat.mp4
+https://localhost:3000/media/cry.mp3
+```
 
 > **Note :** Voir également [Servir des fichiers statiques dans Express](https://expressjs.com/fr/starter/static-files.html).
 

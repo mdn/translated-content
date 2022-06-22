@@ -15,7 +15,9 @@ Le constructeur **`EventTarget()`** crée une nouvelle instance d'objet {{domxre
 
 ## Syntaxe
 
-    var myEventTarget = new EventTarget();
+```js
+var myEventTarget = new EventTarget();
+```
 
 ### Paramètres
 

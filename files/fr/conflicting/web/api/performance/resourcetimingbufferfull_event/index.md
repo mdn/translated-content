@@ -46,8 +46,7 @@ function init() {
 
 | Spécification                                                                                                                                                | Statut                               | Commentaire          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing', '#dom-performance-onresourcetimingbufferfull',
-        'onresourcetimingbufferfull')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+| {{SpecName('Resource Timing', '#dom-performance-onresourcetimingbufferfull', 'onresourcetimingbufferfull')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

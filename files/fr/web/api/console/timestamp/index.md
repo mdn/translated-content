@@ -19,7 +19,9 @@ Vous pouvez éventuellement fournir un argument pour étiqueter l'horodatage, et
 
 ## Syntaxe
 
-    console.timeStamp(label);
+```js
+console.timeStamp(label);
+```
 
 ## Paramètres
 

@@ -9,7 +9,9 @@ La méthode **`remove()`** de l'interface {{domxref("DOMTokenList")}} supprime s
 
 ## Syntaxe
 
-    tokenList.remove(token1[, token2[, ...]]);
+```js
+tokenList.remove(token1[, token2[, ...]]);
+```
 
 ### Paramètres
 

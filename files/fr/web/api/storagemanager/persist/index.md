@@ -9,7 +9,9 @@ La méthode **`persist()`** de l’interface {{domxref("StorageManager")}} fait 
 
 ## Syntaxe
 
-    navigator.storage.persist().then(function(persistent) { ... })
+```js
+navigator.storage.persist().then(function(persistent) { ... })
+```
 
 ### Paramètres
 

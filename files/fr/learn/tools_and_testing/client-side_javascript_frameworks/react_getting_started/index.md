@@ -159,28 +159,30 @@ Lorsque le processus est terminé, naviguez dans le répertoire `moz-todo-react`
 
 create-react-app prépare tout ce dont nous avons besoin pour développer une application React. Sa structure de fichier initiale ressemble à ceci&nbsp;:
 
-    moz-todo-react
-    ├── README.md
-    ├── node_modules
-    ├── package.json
-    ├── package-lock.json
-    ├── .gitignore
-    ├── public
-    │   ├── favicon.ico
-    │   ├── index.html
-    │   ├── logo192.png
-    │   ├── logo512.png
-    │   ├── manifest.json
-    │   └── robots.txt
-    └── src
-        ├── App.css
-        ├── App.js
-        ├── App.test.js
-        ├── index.css
-        ├── index.js
-        ├── logo.svg
-        ├── reportWebVitals.js
-        └── setupTests.js
+```
+moz-todo-react
+├── README.md
+├── node_modules
+├── package.json
+├── package-lock.json
+├── .gitignore
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    ├── reportWebVitals.js
+    └── setupTests.js
+```
 
 Le répertoire **`src`** est l'endroit où nous passerons la plupart de notre temps, car c'est là que réside le code source de notre application.
 
@@ -235,6 +237,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 ```
+
 La première instruction importe la bibliothèque React elle-même. Comme React transforme l'instruction JSX que nous écrivons en `React.createElement()`, tous les composants React doivent importer le module `React`. Si vous ignorez cette étape, votre application produira une erreur.
 
 La deuxième instruction importe un logo depuis `'./logo.svg'`. Notez le `./` au début du chemin et l'extension `.svg` à la fin — ceux-ci nous indiquent que le fichier est local et qu'il ne s'agit pas d'un fichier JavaScript. En effet, le fichier `logo.svg` est contenu dans notre répertoire source.

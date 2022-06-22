@@ -40,7 +40,9 @@ Configurer une stratégie CSP nécessite d'utiliser un en-tête HTTP {{HTTPHeade
 
 On peut utiliser l'en-tête HTTP {{HTTPHeader("Content-Security-Policy")}} pour définir la règle ainsi :
 
-    Content-Security-Policy: règle
+```
+Content-Security-Policy: règle
+```
 
 La `règle` est une chaîne de caractères contenant la liste des règles qui constituent la règle CSP.
 
@@ -56,19 +58,25 @@ Cette section propose des règles CSP pour les scenarios les plus classiques.
 
 Ici, on souhaite que tout le contenu du site soit fourni par la même origine (on exclut les sous-domaines) :
 
-    Content-Security-Policy: default-src 'self';
+```
+Content-Security-Policy: default-src 'self';
+```
 
 ### Exemple 2
 
 Pour un site dont tout le contenu est fourni par le site lui-même ou par les sous-domaines de `source-sure.example.net` (qui peut être un autre site) :
 
-    Content-Security-Policy: default-src 'self' *.source-sure.example.net
+```
+Content-Security-Policy: default-src 'self' *.source-sure.example.net
+```
 
 ### Exemple 3
 
 Pour un site dont les images peuvent venir de n'importe où, les musiques et vidéos de `toto.local` ou `tata.local`, les scripts par `scripts.local` :
 
-    Content-Security-Policy: default-src 'self'; img-src *; media-src toto.local tata.local; script-src scripts.local
+```
+Content-Security-Policy: default-src 'self'; img-src *; media-src toto.local tata.local; script-src scripts.local
+```
 
 Ici, les contenus doivent par défaut venir de la même origine que la page avec les exceptions précédemment décrites. Cela peut permettre aux utilisateurs d'afficher des images quelconques, mais de ne faire confiance qu'à certains domaines pour les musiques, vidéos et scripts.
 
@@ -76,7 +84,9 @@ Ici, les contenus doivent par défaut venir de la même origine que la page avec
 
 Pour un site dont les données sont critiques/privées et pour lequel toutes les données devraient être transmises en HTTPS depuis un domaine précis :
 
-    Content-Security-Policy: default-src https://confidentiel.example.net
+```
+Content-Security-Policy: default-src https://confidentiel.example.net
+```
 
 Cette règle force l'utilisation de HTTPS et exclut tout usage de contenu ne venant pas de `https://confidentiel.example.net`.
 
@@ -84,7 +94,9 @@ Cette règle force l'utilisation de HTTPS et exclut tout usage de contenu ne ven
 
 Pour un webmail qui permet d'afficher des mails incluant de l'HTML, des images provenant de n'importe où mais pas de JavaScript ou d'autres contenus potentiellement dangereux :
 
-    Content-Security-Policy: default-src 'self'; img-src *; child-src: *
+```
+Content-Security-Policy: default-src 'self'; img-src *; child-src: *
+```
 
 On notera que dans cet exemple, on n'a pas de directive {{CSP("script-src")}}. C'est la directive `default-src` qui indique le comportement par défaut et donc qui limite le chargement des scripts à l'origine.
 
@@ -94,7 +106,9 @@ Pour faciliter le déploiement de CSP, on peut configurer le serveur afin de rap
 
 Pour cela, il suffit d'utiliser l'en-tête {{HTTPHeader("Content-Security-Policy-Report-Only")}}, comme cela :
 
-    Content-Security-Policy-Report-Only: règle
+```
+Content-Security-Policy-Report-Only: règle
+```
 
 Si les en-têtes HTTP {{HTTPHeader("Content-Security-Policy-Report-Only")}} et {{HTTPHeader("Content-Security-Policy")}} sont tous deux présents dans la réponse du serveur, les deux règles seront respectées, ce qui permet le test d'une nouvelle règle quand il y en a déjà une en place.
 
@@ -106,7 +120,9 @@ Si une règle contient une directive {{CSP("report-uri")}} valide, les navigateu
 
 Par défaut, les violations de la règle de sécurité ne sont pas rapportées. Pour avoir des rapports de violation, il faut fournir directive {{CSP("report-uri")}} avec au moins une URL valide à laquelle envoyer les rapports :
 
-    Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.example.com/collector.cgi
+```
+Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.example.com/collector.cgi
+```
 
 Il faut également configurer le serveur qui doit recevoir les rapports pour traiter les rapports en question et par exemple les stocker afin de les consulter.
 
@@ -137,7 +153,9 @@ Le rapport est un objet JSON qui contient :
 
 Si l'on considère une page `http://example.com/connexion.html`, qui utilise la règle CSP suivante (qui interdit tout par défaut et autorise les feuilles de style CSS provenant de `cdn.example.com`) :
 
-    Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
+```
+Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
+```
 
 et qui contient le code HTML suivant :
 
@@ -156,15 +174,17 @@ et qui contient le code HTML suivant :
 
 Dans cette situation, les clients qui visiteraient cette page la verrait avec les styles de base de leur navigateur car les feuilles de style autorisées ne peuvent venir que de `cdn.example.com` et non du site lui-même (l'origine même de la page) comme `<link rel="stylesheet" href="css/style.css">` l'indique au navigateur. En outre, un navigateur (qui supporte CSP) enverrait le rapport de violation de règle CSP suivant à l'adresse `http://example.com/_/csp-reports` à chaque visite de la page dont il est question :
 
-    {
-      "csp-report": {
-        "document-uri": "http://example.com/connexion.html",
-        "referrer": "",
-        "blocked-uri": "http://example.com/css/style.css",
-        "violated-directive": "style-src cdn.example.com",
-        "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports"
-      }
-    }
+```json
+{
+  "csp-report": {
+    "document-uri": "http://example.com/connexion.html",
+    "referrer": "",
+    "blocked-uri": "http://example.com/css/style.css",
+    "violated-directive": "style-src cdn.example.com",
+    "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports"
+  }
+}
+```
 
 Comme vous pouvez le constater, le rapport inclus l'URI complète de la ressource dans `blocked-uri`. Ce n'est le cas en général. Ainsi, si la page avait essayé de charger la feuille de style `http://anothercdn.example.com/stylesheet.css`, le navigateur aurait indiqué seulement `"blocked-uri": "http://anothercdn.example.com/"`, c'est à dire l'origine et non l'URI complète car l'origine de la feuille bloquée est différente de l'origine du site lui-même. La spécification de la CSP, [disponible en anglais sur le site du W3C](http://www.w3.org/TR/CSP/#security-violation-reports), explique les raisons de ce comportement qui peut surprendre de prime abord. En résumé, ce comportement évite les risques de diffuser des informations confidentielles qui pourraient être incluses dans les URI des ressources provenant d'autres origines.
 

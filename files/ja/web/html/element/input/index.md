@@ -675,7 +675,7 @@ translation_of: Web/HTML/Element/input
 
   - : `pattern` 属性は、指定された場合、入力の {{htmlattrxref("value")}} が一致すれば値が[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)を通過したとみなされる正規表現を指定します。これは {{jsxref("RegExp")}} 型で使用される有効な JavaScript の正規表現でなければならず、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で説明されている通りです。正規表現をコンパイルする際には `'u'` フラグが指定され、パターンが ASCII ではなく Unicode コードポイントのシーケンスとして扱われます。パターンのテキストの周囲にスラッシュを指定しないでください。
 
- `pattern` 属性が存在するが、指定されていないか無効な場合、正規表現は適用されず、この属性は完全に無視されます。 `pattern` 属性が有効で、空でない値がパターンと一致しない場合、制約の検証によりフォームの送信ができなくなります。
+    `pattern` 属性が存在するが、指定されていないか無効な場合、正規表現は適用されず、この属性は完全に無視されます。 `pattern` 属性が有効で、空でない値がパターンと一致しない場合、制約の検証によりフォームの送信ができなくなります。
 
     > **Note:** `pattern` 属性を使用する場合は、期待される書式をユーザーに知らせる説明文を近くに配置してください。また、パターンに一致させるための要件が何であるかを説明するために、 {{htmlattrxref("title", "input")}} 属性を含めることもできます。ほとんどのブラウザーはこのタイトルをツールチップとして表示します。ツールチップは改善手段です。
 
@@ -1057,7 +1057,7 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 - [HTML フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
 - [HTML フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [ フォームウィジェット向けプロパティ実装状況一覧](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [フォームウィジェット向けプロパティ実装状況一覧](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
 
 ## 追加機能
 

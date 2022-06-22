@@ -52,7 +52,7 @@ translation_of: Web/CSS/CSS_Selectors
 ## 結合子
 
 - [子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)
-  - : ` ` (空白) 結合子は、第 1 の要素の子孫にあたるノードを選択します。  
+  - : " " (空白) 結合子は、第 1 の要素の子孫にあたるノードを選択します。  
     **構文:** `A B`  
     **例:** `div span` は {{HTMLElement("div")}} 要素の中にある {{HTMLElement("span")}} 要素をすべて選択します。  
 

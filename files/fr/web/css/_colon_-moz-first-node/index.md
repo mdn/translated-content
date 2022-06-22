@@ -16,7 +16,9 @@ La pseudo-classe **`:-moz-first-node`** correspond à un élément si celui-ci e
 
 ## Syntaxe
 
-    span:-moz-first-node { propriétés de mise en forme }
+```
+span:-moz-first-node { propriétés de mise en forme }
+```
 
 ## Exemples
 

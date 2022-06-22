@@ -187,7 +187,6 @@ JavaScript の基本的なキーワードと一般的な式です。
 
 - {{JSxRef("Operators/Optional_chaining", "?.")}}
   - : オプショナルチェーン演算子は、参照が [nullish](/ja/docs/Glossary/Nullish) ([`null`](/ja/docs/Web/JavaScript/Reference/Global_Objects/null) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined)) の場合にエラーを発生させるのではなく、`undefined` を返します。
- 
 
 <h3 id="Assignment_operators">代入演算子</h3>
 
@@ -228,7 +227,6 @@ JavaScript の基本的なキーワードと一般的な式です。
 - {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
   {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
   - : 分割代入は、配列やオブジェクトのプロパティを、配列やオブジェクトリテラルに似た構文を使用して変数に代入します。
- 
 
 <h3 id="Comma_operator">カンマ演算子</h3>
 

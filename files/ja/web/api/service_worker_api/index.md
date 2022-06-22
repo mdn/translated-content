@@ -124,7 +124,6 @@ translation_of: Web/API/Service_Worker_API
 - {{DOMxRef("WindowClient")}} {{Experimental_Inline}}
   - : アクティブなワーカーによって制御されるブラウザーコンテキスト内の文書であるサービスワーカークライアントのスコープを表します。
 
-
 ## 仕様書
 
 | 仕様書                                           |

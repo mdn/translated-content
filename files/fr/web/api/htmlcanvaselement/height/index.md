@@ -16,8 +16,10 @@ C'est l'une des deux propriétés, l'autre étant {{domxref("HTMLCanvasElement.w
 
 ## Syntaxe
 
-    var pxl = canvas.height;
-    canvas.height = pxl;
+```js
+var pxl = canvas.height;
+canvas.height = pxl;
+```
 
 ## Exemples
 
