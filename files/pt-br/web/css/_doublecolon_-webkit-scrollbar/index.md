@@ -79,7 +79,7 @@ Você pode usar os seguintes pseudo-elementos para customizar diversas partes da
 </div>
 
 <div class="invisible-scrollbar">
-Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
+Estaéumapalavramuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuitolonga
 </div>
 
 <div class="mostly-customized-scrollbar">
