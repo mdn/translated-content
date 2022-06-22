@@ -83,13 +83,13 @@ user.save()
 
 <p>啟動開發服務器，然後在本地Web瀏覽器（<a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a>）中導航到管理站點。 使用您的超級用戶帳戶的憑據登錄到該站點。 管理站點的頂層顯示所有模型，按“ django應用程序”排序。 在“<strong>Authentication and Authorisation</strong>”部分，您可以單擊<strong>Users</strong> 或<strong>Groups</strong>鏈接以查看其現有記錄。</p>
 
-<p><img alt="Admin site - add groups or users" src="https://mdn.mozillademos.org/files/14091/admin_authentication_add.png" style="border-style: solid; border-width: 1px; display: block; height: 364px; margin: 0px auto; width: 661px;"></p>
+<p><img alt="Admin site - add groups or users" src="admin_authentication_add.png"></p>
 
 <p>首先，讓我們為圖書館成員創建一個新組。</p>
 
 <ol>
  <li>單擊<strong>Add</strong>按鈕（在組旁邊）以創建一個新組； 輸入該組的名稱“Library Members”。<br>
-  <img alt="Admin site - add group" src="https://mdn.mozillademos.org/files/14093/admin_authentication_add_group.png" style="border-style: solid; border-width: 1px; display: block; height: 561px; margin: 0px auto; width: 800px;"></li>
+  <img alt="Admin site - add group" src="admin_authentication_add_group.png"></li>
  <li>我們不需要該組的任何權限，因此只需按<strong>SAVE</strong> （您將被帶到組列表）。</li>
 </ol>
 
@@ -98,12 +98,12 @@ user.save()
 <ol>
  <li>導航回到管理站點的主頁</li>
  <li>單擊“用戶”旁邊的“添加”按鈕以打開“添加用戶”對話框。<br>
-  <img alt="Admin site - add user pt1" src="https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png" style="border-style: solid; border-width: 1px; display: block; height: 409px; margin: 0px auto; width: 800px;"></li>
+  <img alt="Admin site - add user pt1" src="admin_authentication_add_user_prt1.png"></li>
  <li>輸入適合您的測試用戶的用戶名和密碼/密碼確認</li>
  <li>按<strong>SAVE</strong>創建用戶。<br>
   管理站點將創建新用戶，並立即將您帶到“更改用戶”視窗，您可以在其中更改用戶名並為用戶模型的可選字段添加信息。 這些字段包括名字，姓氏，電子郵件地址，用戶狀態和權限（僅應設置“活動”標誌）。 在更下方的位置，您可以指定用戶的組和權限，並查看與該用戶相關的重要日期（例如，他們的加入日期和上次登錄日期）。<br>
-  <img alt="Admin site - add user pt2" src="https://mdn.mozillademos.org/files/14097/admin_authentication_add_user_prt2.png" style="border-style: solid; border-width: 1px; display: block; height: 635px; margin: 0px auto; width: 800px;"></li>
- <li>在“組”部分中，從“可用組”列表中選擇“<strong>Library Member</strong>”組，然後按框之間的右箭頭將其移至“選擇的組”框中。<img alt="Admin site - add user to group" src="https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png" style="border-style: solid; border-width: 1px; display: block; height: 414px; margin: 0px auto; width: 933px;"></li>
+  <img alt="Admin site - add user pt2" src="admin_authentication_add_user_prt2.png"></li>
+ <li>在“組”部分中，從“可用組”列表中選擇“<strong>Library Member</strong>”組，然後按框之間的右箭頭將其移至“選擇的組”框中。<img alt="Admin site - add user to group" src="admin_authentication_user_add_group.png"></li>
  <li>我們在這裡不需要執行任何其他操作，因此只需再次選擇<strong>SAVE</strong> 即可進入用戶列表。</li>
 </ol>
 
@@ -238,7 +238,7 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 
 <p>保存模板後，導航回到登錄頁面（<a href="http://127.0.0.1:8000/accounts/login/">http://127.0.0.1:8000/accounts/login/</a>），您應該看到類似以下內容：</p>
 
-<p><img alt="Library login page v1" src="https://mdn.mozillademos.org/files/14101/library_login.png" style="border-style: solid; border-width: 1px; display: block; height: 173px; margin: 0px auto; width: 441px;"></p>
+<p><img alt="Library login page v1" src="library_login.png"></p>
 
 <p>如果嘗試登錄將成功，並且您將被重定向到另一個頁面（默認情況下為<a href="http://127.0.0.1:8000/accounts/profile/">http://127.0.0.1:8000/accounts/profile/</a>）。 這裡的問題是，默認情況下，Django期望登錄後將您帶到個人資料頁面，情況可能與否。 由於您尚未定義此頁面，因此會出現另一個錯誤！</p>
 
@@ -263,7 +263,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>這個模板非常簡單。 它僅顯示一條消息，通知您已註銷，並提供一個鏈接，您可以按此鏈接返回登錄屏幕。 如果再次進入註銷URL，您應該看到以下頁面：</p>
 
-<p><img alt="Library logout page v1" src="https://mdn.mozillademos.org/files/14103/library_logout.png" style="border-style: solid; border-width: 1px; display: block; height: 169px; margin: 0px auto; width: 385px;"></p>
+<p><img alt="Library logout page v1" src="library_logout.png"></p>
 
 <h3 id="Password_reset_templates">Password reset templates</h3>
 
@@ -586,7 +586,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>當任何用戶登錄後，他們將在邊欄中看到“<em>My Borrowed</em> ”，並且書的列表顯示如下（第一本書沒有截止日期，這是我們希望在以後的教程中解決的錯誤！） 。</p>
 
-<p><img alt="Library - borrowed books by user" src="https://mdn.mozillademos.org/files/14105/library_borrowed_by_user.png" style="border-style: solid; border-width: 1px; display: block; height: 215px; margin: 0px auto; width: 530px;"></p>
+<p><img alt="Library - borrowed books by user" src="library_borrowed_by_user.png"></p>
 
 <h2 id="Permissions">Permissions</h2>
 
@@ -656,7 +656,7 @@ class MyView(PermissionRequiredMixin, View):
 <p><strong>重要</strong>：請記住不要將您的超級用戶用於基於權限的測試（即使尚未定義權限，權限檢查也始終對超級用戶返回true！）。 而是創建一個圖書管理員用戶，並添加所需的功能。</p>
 </div>
 
-<p>完成後，您的頁面應類似於以下屏幕截圖。<img alt="All borrowed books, restricted to librarian" src="https://mdn.mozillademos.org/files/14115/library_borrowed_all.png" style="border-style: solid; border-width: 1px; display: block; height: 283px; margin: 0px auto; width: 500px;"></p>
+<p>完成後，您的頁面應類似於以下屏幕截圖。<img alt="All borrowed books, restricted to librarian" src="library_borrowed_all.png"></p>
 
 <ul>
 </ul>

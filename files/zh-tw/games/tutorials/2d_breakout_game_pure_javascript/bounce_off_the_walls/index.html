@@ -68,7 +68,7 @@ if(y + dy &gt; canvas.height || y + dy &lt; 0) {
 
 <p>測試你的代碼在這一點上，你會留下深刻的印象-現在我們有一個球，反彈了所有四個邊緣的畫布！然而，我們有另一個問題-當球擊中每一個牆，它下沉到它略有改變方向：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10432/ball-in-wall.png" style="display: block; height: 320px; margin: 0px auto; width: 480px;"></p>
+<p><img src="ball-in-wall.png"></p>
 
 <p>這是因為我們計算的牆壁和球的中心的碰撞點，而我們應該做它的圓周。球應該反彈後，如果接觸牆，而不是當它已經在牆上的一半，所以讓我們調整我們的陳述有點包括。更新您添加到的最後一個代碼：</p>
 

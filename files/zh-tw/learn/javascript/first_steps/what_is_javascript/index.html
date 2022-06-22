@@ -35,7 +35,7 @@ translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 
 <p>JavaScript 是一種腳本，也能稱它為程式語言，可以讓你在網頁中實現出複雜的功能。當網頁不只呈現靜態的內容，另外提供了像是：內容即時更新、地圖交動、繪製 2D/3D 圖形，影片播放控制……等，你就可以大膽地認為 JavaScript 已經參與其中。它是標準網頁技術蛋糕的第三層，而其他兩層（<a href="/zh-TW/docs/Learn/HTML">HTML</a> 和 <a href="/zh-TW/docs/Learn/CSS">CSS</a>）我們在其他學習單元中有更多詳細的介紹。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13502/cake.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="cake.png"></p>
 
 <ul>
  <li>{{glossary("HTML")}} 是一種標記語言，我們使用它組織網頁裡的內容並給予定義， 例如：定義段落、標題、資料表格，或是在頁面嵌入圖片和影片。.</li>
@@ -47,7 +47,7 @@ translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 
 <pre class="brush: html notranslate">&lt;p&gt;Player 1: Chris&lt;/p&gt;</pre>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13422/just-html.png" style="height: 28px; width: 108px;"></p>
+<p><img src="just-html.png"></p>
 
 <p>然後我們可以加一些 CSS ，讓它看起來更好：</p>
 
@@ -66,7 +66,7 @@ translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
   cursor:pointer;
 }</pre>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13424/html-and-css.png" style="height: 48px; width: 187px;"></p>
+<p><img src="html-and-css.png"></p>
 
 <p>最後，我們可以加一些  JavaScript 來作出互動的行為：</p>
 
@@ -103,7 +103,7 @@ function updateName() {
 
 <p>他們通常分為兩類。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13508/browser.png" style="display: block; height: 511px; margin: 0px auto; width: 815px;"></p>
+<p><img src="browser.png"></p>
 
 <p><strong>瀏覽器 API（Browser APIs）</strong>內建在你的瀏覽器中，能夠依本地的電腦環境輸出資料或實現複雜的功能。舉例而言：</p>
 
@@ -137,7 +137,7 @@ function updateName() {
 
 <p>簡單回顧一下當瀏覽器載入一個網站時會發生的事情（第一次是在我們的<a href="/zh-TW/Learn/CSS/Introduction_to_CSS/How_CSS_works#How_does_CSS_actually_work">CSS 如何工作</a>章節中提到）。當瀏覽器載入一個網頁，就是在執行環境（瀏覽器分頁）中執行程式碼（HTML，CSS 和 JavaScript）。就像是工廠收集原料（程式碼）並且產出商品（網頁呈現的結果）。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13504/execution.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="execution.png"></p>
 
 <p>透過 DOM API （上面提到的）動態調整 HTML 與 CSS 進行改變網頁呈現，在 JavaScript 是很常見的使用方式。要注意的是，檔案中的程式碼通常會以出現在頁面上的順序來執行。如果 JavaScript 比準備操作的 HTML 、 CSS 更早被載入，就可能會發生錯誤。你將會在這個章節的後段學到一些解決問題的方法，它在<a href="/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies">腳本載入策略</a>的部分。</p>
 

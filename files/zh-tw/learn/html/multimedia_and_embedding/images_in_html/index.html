@@ -65,7 +65,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 
 <p>我們上面的程式碼將有以下結果：</p>
 
-<p><img alt='A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it' src="https://mdn.mozillademos.org/files/12700/basic-image.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+<p><img alt='A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it' src="basic-image.png"></p>
 
 <div class="note">
 <p><strong>提醒</strong>: &lt;img&gt;和&lt;video&gt;之類的元素有時也稱為替換元素。 這是因為元素的內容和圖片大小是由外部（例如圖片或影音檔）所定義的，而不是由元素的內容定義。</p>
@@ -83,7 +83,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
      alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"&gt;</pre>
 
-<p>測試替代文字最簡單方法是故意拼錯檔名。 例如，如果我們的圖片名稱為dinosooooor.jpg，則瀏覽器將不會顯示該圖片，而是顯示alt文本：<img alt="The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place." src="https://mdn.mozillademos.org/files/12702/alt-text.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+<p>測試替代文字最簡單方法是故意拼錯檔名。 例如，如果我們的圖片名稱為dinosooooor.jpg，則瀏覽器將不會顯示該圖片，而是顯示alt文本：<img alt="The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place." src="alt-text.png"></p>
 
 <p>那麼，為什麼您會看到或需要替代文字？ 它可以派上用場的原因有很多：</p>
 
@@ -122,7 +122,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 
 <p>This doesn't result in much difference to the display, under normal circumstances. But if the image isn't being displayed, for example, the user has just navigated to the page, and the image hasn't yet loaded, you'll notice the browser is leaving a space for the image to appear in:</p>
 
-<p><img alt="The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings" src="https://mdn.mozillademos.org/files/12706/alt-text-with-width-height.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings" src="alt-text-with-width-height.png"></p>
 
 <p>This is a good thing to do, resulting in the page loading quicker and more smoothly.</p>
 
@@ -145,7 +145,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 
 <p>This gives us a tooltip on mouse hover, just like link titles:</p>
 
-<p><img alt="The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum " src="https://mdn.mozillademos.org/files/12708/image-with-title.png" style="display: block; height: 341px; margin: 0px auto; width: 400px;"></p>
+<p><img alt="The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum " src="image-with-title.png"></p>
 
 <p>However, this does not come recommended — <code>title</code> has a number of accessibility problems, mainly based around the fact that screen reader support is very unpredictable and most browsers won't show it unless you are hovering with a mouse (so e.g. no access to keyboard users). If you are interested in more information about this, read <a href="https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/">The Trials and Tribulations of the Title Attribute</a> by Scott O'Hara.</p>
 

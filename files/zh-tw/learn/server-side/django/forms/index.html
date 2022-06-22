@@ -28,7 +28,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>儘管到目前為止，本教程中尚未創建任何表單，但我們已經在Django Admin網站中遇到過這些表單-例如，下面的屏幕截圖顯示了一種用於編輯我們的<a href="/en-US/docs/Learn/Server-side/Django/Models">Book</a> 模型的表單，該表單由許多選擇列表和 文字編輯器。</p>
 
-<p><img alt="Admin Site - Book Add" src="https://mdn.mozillademos.org/files/13979/admin_book_add.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Admin Site - Book Add" src="admin_book_add.png"></p>
 
 <p>使用表單可能會很複雜！開發人員需要為表單編寫HTML，在服務器上（也可能在瀏覽器中）驗證並正確清理輸入的數據，使用錯誤消息重新發布表單以通知用戶任何無效字段，並在成功提交數據後處理數據，最後以某種方式回應用戶以表示成功。 Django表單通過提供一個框架使您能夠以編程方式定義表單及其字段，然後使用這些對像生成表單HTML代碼並處理許多驗證和用戶交互，從而完成了所有這些步驟中的大量工作。</p>
 
@@ -38,7 +38,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>首先簡要介紹一下 <a href="/en-US/docs/Learn/HTML/Forms">HTML Forms</a>。 考慮一個簡單的 HTML 表單，其中有一個用於輸入某些“團隊”名稱的文本字段及其相關標籤：</p>
 
-<p><img alt="Simple name field example in HTML form" src="https://mdn.mozillademos.org/files/14117/form_example_name_field.png" style="border-style: solid; border-width: 1px; display: block; height: 44px; margin: 0px auto; width: 399px;"></p>
+<p><img alt="Simple name field example in HTML form" src="form_example_name_field.png"></p>
 
 <p>表單在HTML中定義為 <code>&lt;form&gt;...&lt;/form&gt;</code> 標記內元素的集合，其中至少包含<code>type="submit"</code>.的<code>input</code>元素。</p>
 
@@ -72,7 +72,7 @@ translation_of: Learn/Server-side/Django/Forms
 <p>Django的表單處理使用了我們在以前的教程中學到的所有相同技術（用於顯示有關模型的信息）：視圖獲取請求，執行所需的任何操作，包括從模型中讀取數據，然後生成並返回HTML頁面（ 從模板中，我們傳遞一個包含要顯示的數據的上下文）。 使事情變得更加複雜的是，服務器還需要能夠處理用戶提供的數據，並在出現任何錯誤時重新顯示頁面。</p>
 
 <p>下面顯示了Django處理表單請求的過程流程圖，該流程圖從對包含表單的頁面的請求（以綠色顯示）開始。<br>
- <img alt="Updated form handling process doc." src="https://mdn.mozillademos.org/files/14205/Form%20Handling%20-%20Standard.png" style="display: block; height: 569px; margin: 0px auto; width: 800px;"></p>
+ <img alt="Updated form handling process doc." src="form_handling_-_standard.png"></p>
 
 <p>根據上圖，Django表單處理的主要功能是：</p>
 
@@ -430,15 +430,15 @@ def renew_book_librarian(request, pk):
 
 <p>If you are successful, the default form will look like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14209/forms_example_renew_default.png" style="border-style: solid; border-width: 1px; display: block; height: 292px; margin: 0px auto; width: 680px;"></p>
+<p><img src="forms_example_renew_default.png"></p>
 
 <p>The form with an invalid value entered, will look like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14211/forms_example_renew_invalid.png" style="border-style: solid; border-width: 1px; display: block; height: 290px; margin: 0px auto; width: 658px;"></p>
+<p><img src="forms_example_renew_invalid.png"></p>
 
 <p>The list of all books with renew links will look like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14207/forms_example_renew_allbooks.png" style="border-style: solid; border-width: 1px; display: block; height: 256px; margin: 0px auto; width: 613px;"></p>
+<p><img src="forms_example_renew_allbooks.png"></p>
 
 <h2 id="ModelForms">ModelForms</h2>
 
@@ -600,7 +600,7 @@ class AuthorDelete(DeleteView):
 
 <p>Then navigate to the author create page: <a href="http://127.0.0.1:8000/catalog/author/create/">http://127.0.0.1:8000/catalog/author/create/</a>, which should look like the screenshot below.</p>
 
-<p><img alt="Form Example: Create Author" src="https://mdn.mozillademos.org/files/14223/forms_example_create_author.png" style="border-style: solid; border-width: 1px; display: block; height: 184px; margin: 0px auto; width: 645px;"></p>
+<p><img alt="Form Example: Create Author" src="forms_example_create_author.png"></p>
 
 <p>Enter values for the fields and then press <strong>Submit</strong> to save the author record. You should now be taken to a detail view for your new author, with a URL of something like <em>http://127.0.0.1:8000/catalog/author/10</em>.</p>
 
@@ -608,13 +608,13 @@ class AuthorDelete(DeleteView):
 
 <p>Last of all we can delete the page, by appending delete to the end of the author detail-view URL (e.g. <em>http://127.0.0.1:8000/catalog/author/10/delete/</em>). Django should display the delete page shown below. Press <strong>Yes, delete.</strong> to remove the record and be taken to the list of all authors.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14221/forms_example_delete_author.png" style="border-style: solid; border-width: 1px; display: block; height: 194px; margin: 0px auto; width: 561px;"></p>
+<p><img src="forms_example_delete_author.png"></p>
 
 <h2 id="Challenge_yourself">Challenge yourself</h2>
 
 <p>Create some forms to create, edit and delete <code>Book</code> records. You can use exactly the same structure as for <code>Authors</code>. If your <strong>book_form.html</strong> template is just a copy-renamed version of the <strong>author_form.html</strong> template, then the new "create book" page will look like the screenshot below:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14225/forms_example_create_book.png" style="border-style: solid; border-width: 1px; display: block; height: 521px; margin: 0px auto; width: 595px;"></p>
+<p><img src="forms_example_create_book.png"></p>
 
 <ul>
 </ul>
