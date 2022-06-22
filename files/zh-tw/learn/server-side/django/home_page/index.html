@@ -35,7 +35,7 @@ translation_of: Learn/Server-side/Django/Home_page
  <li>在視圖中呈現數據時要使用的模板。</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13931/basic-django.png" style="display: block; margin: 0px auto;"></p>
+<p><img src="basic-django.png"></p>
 
 <p>正如您將在下一節中看到的那樣，我們將顯示5頁，這是太多信息，無法在一篇文章中進行記錄。 因此，本文將重點介紹如何實現主頁，我們將在後續文章中介紹其他頁面。 這應該使您對URL映射器，視圖和模型在實踐中如何工作有很好的端到端理解。</p>
 
@@ -319,7 +319,7 @@ return render(request, 'index.html', context=context)</pre>
 
 <p>此時，我們應該已經創建了顯示索引頁面所需的所有內容。 運行服務器(<code>python3 manage.py runserver</code>)，然後打開瀏覽器到<a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>。 如果一切設置正確，則您的站點應類似於以下螢幕截圖。</p>
 
-<p><img alt="Index page for LocalLibrary website" src="https://mdn.mozillademos.org/files/14045/index_page_ok.png" style="border-style: solid; border-width: 1px; display: block; height: 356px; margin: 0px auto; width: 874px;"></p>
+<p><img alt="Index page for LocalLibrary website" src="index_page_ok.png"></p>
 
 <div class="note">
 <p><strong>注意</strong>：您將無法使用<strong>All books</strong>和<strong>All authors</strong>鏈接，因為尚未定義這些頁面的路徑，視圖和模板（當前我們僅在<code>base_generic.html</code> html模板中插入了這些鏈接的佔位符）。</p>

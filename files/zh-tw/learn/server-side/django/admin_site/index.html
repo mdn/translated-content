@@ -74,13 +74,13 @@ admin.site.register(BookInstance)</pre>
 
 <p>網站中的這部分羅列了所有以我們安裝的 app 分組的模型，你可以點擊模型名稱進入陳列所有與其相關連資料的頁面，而你可以進一步編輯它們，或者你也可以直接點擊模型名稱旁邊的 <strong>Add</strong> 連結來開始創建該類型的資料。</p>
 
-<p><img alt="Admin Site - Home page" src="https://mdn.mozillademos.org/files/13975/admin_home.png" style="display: block; height: 634px; margin: 0px auto; width: 998px;"></p>
+<p><img alt="Admin Site - Home page" src="admin_home.png"></p>
 
 <p>點擊 Books 右邊的 <strong>Add</strong> 連結來新增一本新書(會產生如下方的對話方塊)，可以去觀察每個字段(field)、小部件、提示文字(如果有的話)是如何對應到你的模型的。</p>
 
 <p>在字段中輸入值，你可以透過各個字段旁邊的 <strong>+</strong> 按鈕來新增「作者」或「書籍類別」(或者從列表中選擇你已經新增的值)，當你完成後可以點選 <strong>SAVE</strong>, <strong>Save and add another</strong>, 或 <strong>Save and continue editing</strong> 來儲存該筆資料。</p>
 
-<p><img alt="Admin Site - Book Add" src="https://mdn.mozillademos.org/files/13979/admin_book_add.png" style="border-style: solid; border-width: 1px; display: block; height: 780px; margin: 0px auto; width: 841px;"></p>
+<p><img alt="Admin Site - Book Add" src="admin_book_add.png"></p>
 
 <div class="note">
 <p><strong>注意：在這邊我們希望你花點時間在你的 app 中新增一些書本、作者和書及類型(例如：奇幻等)。請確保每位作者與每種書籍類型都分別關聯了一本以上的書(這在文章稍後的實作的時候，會讓你的列表與細節視圖更加豐富有趣)</strong>。</p>
@@ -88,19 +88,19 @@ admin.site.register(BookInstance)</pre>
 
 <p>當你新增完書本後，點擊上方書籤的 <strong>Home</strong> 連結回到主要管理頁面，接著點擊 <strong>Books</strong> 連結來展示目前的書本清單(你也可以點及其他連結看看其他模型的列表)，現在你已經加了幾本書，畫面應該會與下方截圖類似，你可以看到下方陳列了每本書的標題，這是我們在上一篇文章所提到的 Book 模型中的 <code>__str__()</code> 方法所回傳的值。</p>
 
-<p><img alt="Admin Site - List of book objects" src="https://mdn.mozillademos.org/files/13935/admin_book_list.png" style="border-style: solid; border-width: 1px; display: block; height: 407px; margin: 0px auto; width: 1000px;"></p>
+<p><img alt="Admin Site - List of book objects" src="admin_book_list.png"></p>
 
 <p>在列表中，如果要刪掉你不想要的書，只需要先勾選欲刪除書本的勾選方框，從動作下拉選單選擇刪除動作(delete action)，接著點選 <strong>GO</strong> 按鈕即可，另外你也可以點選 <strong>ADD BOOK</strong> 按鈕來新增一本書。</p>
 
 <p>你可以點擊書名來編輯它，下方顯示的書本編輯頁面幾乎與 <strong>Add</strong> 頁面相同，主要差異在於頁面的標題(Change book)以及增加了 <strong>Delete</strong>, <strong>HISTORY</strong> 和 <strong>VIEW ON SITE </strong>按鈕(會有這個按鈕出現是因為我們之前在模型中有定義了 <code>get_absolute_url()</code> 的方法)</p>
 
-<p><img alt="Admin Site - Book Edit" src="https://mdn.mozillademos.org/files/13977/admin_book_modify.png" style="border-style: solid; border-width: 1px; display: block; height: 780px; margin: 0px auto; width: 841px;"></p>
+<p><img alt="Admin Site - Book Edit" src="admin_book_modify.png"></p>
 
 <p>現在透過頁面上方的索引連結回到 <strong>Home</strong> 頁面，然後看看 <strong>Author</strong> 和 <strong>Genre</strong> 列表，你在新增書本的時候應該已經新增了一些資料，不過你還可以再新增更多。</p>
 
 <p>你還沒有任何書本實例(Book Instances)，因為這不會在建立書本時就產生(但你可以在新增 <code>BookInstance</code> 資料時新增 <code>Book</code>  ，這是 <code>ForeignKey</code> 字段的性質)。現在回到 Home 頁面然後點擊 Book instances 的 <strong>Add</strong> 按鈕，畫面會呈現如下圖的頁面，注意第一列有個很長、全域唯一的 id 編碼，它可以用來區分每本書在圖書館裡的每個副本。</p>
 
-<p><img alt="Admin Site - BookInstance Add" src="https://mdn.mozillademos.org/files/13981/admin_bookinstance_add.png" style="border-style: solid; border-width: 1px; display: block; height: 514px; margin: 0px auto; width: 863px;"></p>
+<p><img alt="Admin Site - BookInstance Add" src="admin_bookinstance_add.png"></p>
 
 <p>幫你的每本書都新增幾筆不同的資料，有些資料的狀態(Status)請設成 <em>Available ，有些則設成 On loan，如果狀態為 </em><strong>not</strong> <em>Available，那記得需要設定到期日(Due back</em> date<em>)。</em></p>
 
@@ -185,7 +185,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>現在把網站導向作者列表，上方所設定的字段應該會被陳列出來，如下：</p>
 
-<p><img alt="Admin Site - Improved Author List" src="https://mdn.mozillademos.org/files/14023/admin_improved_author_list.png" style="border-style: solid; border-width: 1px; display: block; height: 302px; margin: 0px auto; width: 941px;"></p>
+<p><img alt="Admin Site - Improved Author List" src="admin_improved_author_list.png"></p>
 
 <p>至於我們的 <code>Book</code> 模型，我們將額外添加 <code>author</code> 和 <code>genre</code> 兩樣。<code>author</code> 是一個<code>ForeignKey</code> 外鍵字段(一對一)關係，因此他將會透過關聯紀錄的 <code>__str__()</code> 值來表示。</p>
 
@@ -211,7 +211,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>保存模型並更新管理員後，打開您的網站並轉到“Books”列表頁面； 您應該會看到類似以下的書籍清單：</p>
 
-<p><img alt="Admin Site - Improved Book List" src="https://mdn.mozillademos.org/files/14025/admin_improved_book_list.png" style="border-style: solid; border-width: 1px; display: block; height: 337px; margin: 0px auto; width: 947px;"></p>
+<p><img alt="Admin Site - Improved Book List" src="admin_improved_book_list.png"></p>
 
 <p><code>Genre</code> 模型(如果定義了語言模型，則還有 <code>Language</code> 模型）都有一個欄位，因此沒有必要為它們創建其他模型以顯示欄位。</p>
 
@@ -229,7 +229,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>現在的列表視圖右邊會多了一個過濾器。你可以選擇 dates 和 status 來做過濾:</p>
 
-<p><img alt="Admin Site - BookInstance List Filters" src="https://mdn.mozillademos.org/files/14037/admin_improved_bookinstance_list_filters.png" style="height: 528px; width: 960px;"></p>
+<p><img alt="Admin Site - BookInstance List Filters" src="admin_improved_bookinstance_list_filters.png"></p>
 
 <h3 id="組織詳細視圖佈局">組織詳細視圖佈局</h3>
 
@@ -252,7 +252,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>在您的網站上，轉到作者詳細信息視圖-現在應如下所示：</p>
 
-<p><img alt="Admin Site - Improved Author Detail" src="https://mdn.mozillademos.org/files/14027/admin_improved_author_detail.png" style="border-style: solid; border-width: 1px; display: block; height: 282px; margin: 0px auto; width: 928px;"></p>
+<p><img alt="Admin Site - Improved Author Detail" src="admin_improved_author_detail.png"></p>
 
 <div class="note">
 <p><strong>注意</strong>: 您還可以使用 <code>exclude</code> 屬性來聲明要從表單中排除的屬性列表（將顯示模型中的所有其他屬性）。</p>
@@ -281,7 +281,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Now navigate to a book instance view in your website; the form should appear as shown below:</p>
 
-<p><img alt="Admin Site - Improved BookInstance Detail with sections" src="https://mdn.mozillademos.org/files/14029/admin_improved_bookinstance_detail_sections.png" style="border-style: solid; border-width: 1px; display: block; height: 580px; margin: 0px auto; width: 947px;"></p>
+<p><img alt="Admin Site - Improved BookInstance Detail with sections" src="admin_improved_bookinstance_detail_sections.png"></p>
 
 <h3 id="Inline_editing_of_associated_records">Inline editing of associated records</h3>
 
@@ -300,7 +300,7 @@ class BookAdmin(admin.ModelAdmin):
 
 <p>Now navigate to a view for a <code>Book</code> in your website — at the bottom you should now see the book instances relating to this book (immediately below the book's genre fields):</p>
 
-<p><img alt="Admin Site - Book with Inlines" src="https://mdn.mozillademos.org/files/14033/admin_improved_book_detail_inlines.png" style="border-style: solid; border-width: 1px; display: block; height: 889px; margin: 0px auto; width: 937px;"></p>
+<p><img alt="Admin Site - Book with Inlines" src="admin_improved_book_detail_inlines.png"></p>
 
 <p>In this case all we've done is declare our tabular inline class, which just adds all fields from the <em>inlined</em> model. You can specify all sorts of additional information for the layout, including the fields to display, their order, whether they are read only or not,  etc. (see <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> for more information). </p>
 
