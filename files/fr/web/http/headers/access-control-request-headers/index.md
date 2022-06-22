@@ -29,7 +29,7 @@ Access-Control-Request-Headers: <nom_en-tete>, <nom_en-tete>, …
 
 ## Directives
 
-- \<nom_en-tete>
+- `<nom_en-tete>`
   - : Une liste [d'en-têtes HTTP](/fr/docs/Web/HTTP/Headers) séparés par des virgules qui sont inclus dans la requête.
 
 ## Exemples
