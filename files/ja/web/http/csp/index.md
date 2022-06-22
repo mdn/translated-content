@@ -16,11 +16,16 @@ browser-compat: http.headers.csp
 
 **コンテンツセキュリティポリシー** ({{Glossary("CSP")}}) は、クロスサイトスクリプティング ({{Glossary("Cross-site_scripting")}}) やデータインジェクション攻撃などのような、特定の種類の攻撃を検知し、影響を軽減するために追加できるセキュリティレイヤーです。これらの攻撃はデータの窃取からサイトの改ざん、マルウェアの拡散に至るまで、様々な目的に用いられます。
 
-CSP は完全な後方互換性を保って設計されています (ただし、 CSP 2 については後方互換性がない点もあり、明示的に記述されています。詳細は[こちら](https://www.w3.org/TR/CSP2)の 1.1 章を参照してください)。そのため、 CSP に未対応のブラウザーでも CSP 実装済のサーバーと通信でき、逆もまた同様です。 CSP 未対応のブラウザーは単に CSP を無視し、ウェブコンテンツにはこれまで通り標準の同一オリジンポリシーを適用します。 CSP ヘッダーを送信しないサーバーに対しても、ブラウザーは同様に標準の [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy) を適用します。
+CSP は完全な後方互換性を保って設計されています (ただし、 CSP 2 については後方互換性がない点もあり、明示的に記述されています。詳細は[こちら](https://www.w3.org/TR/CSP2)の 1.1 章を参照してください)。そのため、 CSP に未対応のブラウザーでも CSP 実装済のサーバーと通信でき、逆もまた同様です。 CSP 未対応のブラウザーは単に CSP を無視し、ウェブコンテンツにはこれまで通り標準の同一オリジンポリシーを適用します。  CSP ヘッダーを送信しないサーバーに対しても、ブラウザーは同様に標準の [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy) を適用します。
 
 CSP を有効にするには、ウェブサーバーから {{HTTPHeader("Content-Security-Policy")}} HTTP ヘッダーを返すように設定する必要があります (`X-Content-Security-Policy` ヘッダーに関する記述が時々ありますが、これは古いバージョンのものであり、今日このヘッダーを指定する必要はありません)。
 
-他にも、 {{HTMLElement("meta")}} 要素を用いてポリシーを指定することも可能です。 例えば: `&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';"&gt;`
+他にも、 {{HTMLElement("meta")}} 要素を用いてポリシーを指定することも可能です。 例えば: 
+
+```html
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src https://*; child-src 'none';">
+```
 
 ## 脅威
 
@@ -28,7 +33,7 @@ CSP を有効にするには、ウェブサーバーから {{HTTPHeader("Content
 
 CSP の第一の目的は XSS 攻撃の軽減と報告です。 XSS 攻撃とは、サーバーから取得したコンテンツをブラウザーが信頼する性質を悪用した攻撃です。ブラウザーはコンテンツの送信元を信頼するため、たとえ実際の送信元が見かけ上とは異なっていたとしても、悪意あるスクリプトが被害者のブラウザー上で実行されてしまいます。
 
-サーバー管理者が CSP を利用する場合、実行を許可するスクリプトの正しいドメインをブラウザーに向けて指定することにより、 XSS の発生する箇所を削減・根絶することができます。 CSP をサポートするブラウザーは、サーバーから指定された許可リストに載っているドメインのスクリプトのみ実行し、他のスクリプトはすべて無視します (インラインスクリプトや HTML 属性値のイベントハンドラも無視する対象に含まれます)。
+サーバー管理者が CSP を利用する場合、ブラウザーが実行可能なスクリプトの有効なソースとみなすドメインを指定することにより、 XSS の発生する箇所を削減・根絶することができます。 CSP をサポートするブラウザーは、サーバーから指定された許可リストに載っているドメインのスクリプトのみ実行し、他のスクリプトはすべて無視します (インラインスクリプトや HTML 属性値のイベントハンドラも無視する対象に含まれます)。
 
 究極的な防衛策として、スクリプトを決して実行させたくないサイトは、スクリプトの実行を全面的に拒否することも可能です。
 
@@ -38,7 +43,7 @@ CSP の第一の目的は XSS 攻撃の軽減と報告です。 XSS 攻撃とは
 
 ## CSP の適用
 
-コンテンツセキュリティポリシーを適用するには、該当するウェブページについて {{HTTPHeader("Content-Security-Policy")}} HTTP ヘッダーを返すようにし、その値にはユーザエージェントに読み込ませたいリソースの情報を指定します。例えば、画像のアップロード・表示を行うページの場合、画像の出元は任意の場所で構いませんが、フォームの action 属性値は特定のエンドポイントに制限する必要があります。コンテンツセキュリティポリシーを適切に設計すれば、クロスサイトスクリプティング攻撃に対する耐性を高めることができます。この記事では、適切なヘッダーの作成方法と記述例を紹介します。
+コンテンツセキュリティポリシーを適用するには、該当するウェブページに {{HTTPHeader("Content-Security-Policy")}} HTTP ヘッダーを返すようにし、ユーザエージェントが読み込むことのできるリソースの情報を指定します。例えば、画像のアップロード・表示を行うページの場合、画像の出元は任意の場所で構いませんが、フォームの action 属性値は特定のエンドポイントに制限する必要があります。コンテンツセキュリティポリシーを適切に設計すれば、クロスサイトスクリプティング攻撃に対する耐性を高めることができます。この記事では、適切なヘッダーの作成方法と記述例を紹介します。
 
 ### ポリシーの設定
 
@@ -52,7 +57,9 @@ Content-Security-Policy: policy
 
 ### ポリシーの記述
 
-ポリシーはポリシーディレクティブを列挙することで表現します。このポリシーディレクティブは、特定の種類のリソースや、ポリシーの適用範囲をそれぞれ表すものです。ポリシーには {{CSP("default-src")}} ディレクティブを指定するべきでしょう。このディレクティブは、ポリシーについて特に指定のないリソースに対するフォールバックの役目を果たします (一覧については {{CSP("default-src")}} の説明を参照してください)。また、インラインスクリプトや `eval()` の実行を防ぐには {{CSP("default-src")}} や {{CSP("script-src")}} を指定する必要があります。さらに、{{HTMLElement("style")}} 要素や `style` 属性によるインラインスタイルの適用を防ぐには {{CSP("default-src")}} や {{CSP("style-src")}} の指定が必要となります。
+ポリシーはポリシーディレクティブを列挙することで表現します。このポリシーディレクティブは、特定の種類のリソースや、ポリシーの適用範囲をそれぞれ表すものです。ポリシーには {{CSP("default-src")}} ディレクティブを指定するべきでしょう。このディレクティブは、ポリシーについて特に指定のないリソースに対するフォールバックの役目を果たします (一覧については {{CSP("default-src")}} の説明を参照してください)。また、インラインスクリプトや `eval()` の実行を防ぐには {{CSP("default-src")}} や {{CSP("script-src")}} を指定する必要があります。さらに、{{HTMLElement("style")}} 要素や `style` 属性によるインラインスタイルの適用を防ぐには {{CSP("default-src")}} や {{CSP("style-src")}} の指定が必要となります。さまざまな種別のアイテムに対して特定のディレクティブが存在します。フォント、フレーム、画像、音声・動画、スクリプト・ワーカーなど、各々の種別に固有のポリシーを持たせることができます。
+
+ポリシーディレクティブの一覧については[Content-Security-Policy header](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)を参照してください。
 
 ## 一般的な適用例
 
@@ -71,7 +78,7 @@ Content-Security-Policy: default-src 'self'
 サイト管理者が、信頼されたドメインとそのすべてのサブドメインからのコンテンツを許可したい場合 (CSPがセットされたドメインと同一とは限らない)。
 
 ```http
-Content-Security-Policy: default-src 'self' trusted.com *.trusted.com
+Content-Security-Policy: default-src 'self' example.com *.example.com
 ```
 
 ### 例 3
@@ -79,13 +86,13 @@ Content-Security-Policy: default-src 'self' trusted.com *.trusted.com
 サイト管理者がウェブアプリのユーザーに、任意のドメインからの画像読み込みを許可したい場合。ただし、音声や動画は信頼された配信元からのものだけに制限し、すべてのスクリプトは、信頼されたコードをホストする特定のサーバーのみに制限する。
 
 ```http
-Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com media2.com; script-src userscripts.example.com
+Content-Security-Policy: default-src 'self'; img-src *; media-src example.org example.net; script-src userscripts.example.com
 ```
 
 この例では、コンテンツのデフォルト設定としてドキュメント自身のホストのみを許可していますが、以下の例外を認めています。
 
 - 画像は任意の場所から読み込まれます (ワイルドカード "*" による指定に注意)。
-- メディアは media1.com と media2.com のものだけが許可されます (ただしサブドメインは許可されません)。
+- メディアは example.org と example.net のものだけが許可されます (ただしサブドメインは許可されません)。
 - 実行可能なスクリプトは userscripts.example.com のものだけ許可されます。
 
 ### 例 4
@@ -93,17 +100,17 @@ Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com med
 サイト管理者がオンラインバンキングのウェブサイトについて、リクエスト時の盗聴攻撃を防ぐため、すべてのコンテンツを TLS で読み込むようにしたい場合。
 
 ```http
-Content-Security-Policy: default-src https://onlinebanking.jumbobank.com
+Content-Security-Policy: default-src https://onlinebanking.example.com
 ```
 
-この例では、ドメインを単一オリジン onlinebanking.jumbobank.com のみに制限し、かつドキュメントへのアクセスを HTTPS のみに制限しています。
+この例では、ドメインを単一オリジン onlinebanking.example.com のみに制限し、かつドキュメントへのアクセスを HTTPS のみに制限しています。
 
 ### 例 5
 
 サイト管理者がウェブメールサイトについて、メール内の HTML を許可し、任意のドメインから画像の読み込みを許可するが、JavaScript や他に危険性のあるコンテンツは許可したくない場合。
 
 ```http
-Content-Security-Policy: default-src 'self' *.mailsite.com; img-src *
+Content-Security-Policy: default-src 'self' *.example.com; img-src *
 ```
 
 この例では、 {{CSP("script-src")}} を指定していないことに注意してください。この CSP を適用したサイトは、スクリプトに関して {{CSP("default-src")}} ディレクティブの設定を適用します。つまり、スクリプトは元のサーバーのものだけ読み込まれます。
@@ -137,17 +144,17 @@ URI を指定したら報告を受け取るサーバーを立ち上げます。�
 - `blocked-uri`
   - : コンテンツセキュリティポリシーによって読み込みがブロックされたリソースの URI。ブロックされた URI が `document-uri` とは異なるオリジンだった場合、ブロックされた URI はスキーム・ホスト・ポートのみを含むように切り詰められます。
 - `disposition`
-  - : `"enforce"` または `"report"` のいずれかで、 {{HTTPHeader("Content-Security-Policy-Report-Only")}} ヘッダーか `Content-Security-Policy` ヘッダーのどちらが使われているかで決まる。
+  - : `"enforce"` または `"report"` のいずれかで、 {{HTTPHeader("Content-Security-Policy-Report-Only")}} ヘッダーか `Content-Security-Policy` ヘッダーのどちらが使われているかで決まります。
 - `document-uri`
   - : 違反が生じたドキュメントの URI。
 - `effective-directive`
-  - : 実行により違反を起こしたディレクティブです。
+  - : 実行により違反を起こしたディレクティブ。いくつかのブラウザーは異なる値を提供します。例えば Chromeの場合は実際に違反が発生したディレクティブが `style-src` でも `style-src-elem`/`style-src-attr` を提供します。
 - `original-policy`
   - : `Content-Security-Policy` HTTP ヘッダーに元々指定されていたポリシー。
 - `referrer`
   - : 違反が生じたドキュメントのリファラー。
 - `script-sample`
-  - : 違反を起こしたインラインスクリプト、イベントハンドラー、スタイルの最初の 40 文字、
+  - : 違反を起こしたインラインスクリプト、イベントハンドラー、スタイルの最初の 40 文字。 `'report-sample'` が含まれている場合に `script-src*` と `style-src*` のみに適用されます。
 - `status-code`
   - : グローバルオブジェクトが初期化されたリソースの HTTP ステータスコード。
 - `violated-directive`
@@ -206,3 +213,5 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 - [ウェブワーカーでの CSP](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#CSP_in_workers)
 - [プライバシー、許可、情報セキュリティ](/ja/docs/Web/Privacy)
 - [CSP Evaluator](https://github.com/google/csp-evaluator) - Evaluate your Content Security Policy
+- [CSP Scanner](https://cspscanner.com/) - Improve your Content Security Policy
+
