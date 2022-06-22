@@ -1,16 +1,29 @@
 ---
 title: stroke-dasharray
 slug: Web/SVG/Attribute/stroke-dasharray
-tags:
-  - Attribut SVG
-  - SVG
 translation_of: Web/SVG/Attribute/stroke-dasharray
+browser-compat: svg.attributes.presentation.stroke-dasharray
 ---
-L'attribut `stroke-dasharray` contrôle le motif et l'espacement entre les segments utilisés pour tracer le contour d'un élément via l'attribut stroke. L'attribut définit ainsi un motif constitué d'une suite de segments et de vides dont la forme se rapprochera d'une ligne de pointillés.
+{{SVGRef}}
 
-> **Note :** Comme il s'agit d'un attribut de présentation, `stroke-dasharray` peut aussi être utilisé directement dans une feuille de style CSS.
+L'attribut **`stroke-dasharray`** est un attribut de présentation qui définit le motif des traits et des espaces utilisés pour dessiner le contour de la forme.
 
-Les éléments suivants peuvent utiliser l'attribut `stroke-dasharray`: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
+> **Note :** Étant un attribut de présentation, `stroke-dasharray` peut être utilisé comme propriété CSS.
+
+Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
+
+- [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph)
+- [`<circle>`](/fr/docs/Web/SVG/Element/circle)
+- [`<ellipse>`](/fr/docs/Web/SVG/Element/ellipse)
+- [`<path>`](/fr/docs/Web/SVG/Element/path)
+- [`<line>`](/fr/docs/Web/SVG/Element/line)
+- [`<polygon>`](/fr/docs/Web/SVG/Element/polygon)
+- [`<polyline>`](/fr/docs/Web/SVG/Element/polyline)
+- [`<rect>`](/fr/docs/Web/SVG/Element/rect)
+- [`<text>`](/fr/docs/Web/SVG/Element/text)
+- [`<textPath>`](/fr/docs/Web/SVG/Element/textPath)
+- [`<tref>`](/fr/docs/Web/SVG/Element/tref)
+- [`<tspan>`](/fr/docs/Web/SVG/Element/tspan)
 
 ## Exemple
 
@@ -19,55 +32,58 @@ html,body,svg { height:100% }
 ```
 
 ```html
-<svg viewBox="0 0 30 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pas de tirets ou d'espaces -->
+  <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
 
-    <line                                  x1="0" y1="1" x2="30" y2="1" stroke="black" />
-    <line stroke-dasharray="4"             x1="0" y1="3" x2="30" y2="3" stroke="black" />
-    <line stroke-dasharray="4, 1"          x1="0" y1="5" x2="30" y2="5" stroke="black" />
-    <line stroke-dasharray="4, 1, 2"       x1="0" y1="7" x2="30" y2="7" stroke="black" />
-    <line stroke-dasharray="4, 1, 2, 3"    x1="0" y1="9" x2="30" y2="9" stroke="black" />
+  <!-- Traits et espaces de même taille -->
+  <line x1="0" y1="3" x2="30" y2="3" stroke="black"
+          stroke-dasharray="4" />
+
+  <!-- Traits et espaces de tailles différentes -->
+  <line x1="0" y1="5" x2="30" y2="5" stroke="black"
+          stroke-dasharray="4 1" />
+
+  <!-- Traits et espaces de tailles différentes avec un nombre impair de valeurs -->
+  <line x1="0" y1="7" x2="30" y2="7" stroke="black"
+          stroke-dasharray="4 1 2" />
+
+  <!-- Traits et espaces de tailles différentes avec un nombre pair de valeurs -->
+  <line x1="0" y1="9" x2="30" y2="9" stroke="black"
+          stroke-dasharray="4 1 2 3" />
 </svg>
 ```
 
-{{ EmbedLiveSample('Exemple', '220', '150', '', 'Web/SVG/Attribute/stroke-dasharray') }}
+{{EmbedLiveSample("", '100%', 150)}}
 
-## Contexte d'usage
+## Notes d'utilisation
 
-<table class="standard-table">
+<table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Catégories</th>
-      <td>Attribut de présentation</td>
-    </tr>
-    <tr>
       <th scope="row">Valeur</th>
-      <td>none | &#x3C;dasharray> | inherit</td>
+      <td><code>none</code> | <code>&lt;dasharray&gt;</code></td>
     </tr>
     <tr>
-      <th scope="row">Animable</th>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>none</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Peut être animé</th>
       <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Document normatif</th>
-      <td>
-        <a href="http://www.w3.org/TR/SVG/painting.html#StrokeDasharrayProperty"
-          >SVG 1.1 (2nd Edition)</a
-        >
-      </td>
     </tr>
   </tbody>
 </table>
 
-- \<dasharray>
-  - : Il s'agit d'une liste de mesures [\<length>](/fr/SVG/Content_type#Length "en/SVG/Content_type#Length") et [\<percentage>](/fr/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage") séparées par des virgules ou des espaces blancs. Ils permettent de spécifier la longeur de l'alternance entre segments et vides. Si un nombre impair de valeurs est entré, alors la liste sera répartie afin de créer un nombre pair de valeurs par répétition. Ainsi, **5,3,2** sera rendu comme **5,3,2,5,3,2**.
+- `<dasharray>`
+  - : Une liste de valeurs [`<length>`](/fr/docs/Web/SVG/Content_type#length) et [`<percentage>`](/fr/docs/Web/SVG/Content_type#percentage), séparées par des espaces ou des virgules, qui indiquent les longueurs alternées des traits et des espaces.
+
+    Si un nombre impair de valeurs est fourni, la liste est répétée afin d'obtenir un nombre pair de valeur. Ainsi, `5,3,2` sera équivalent à `5,3,2,5,3,2`.
+
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.stroke-dasharray")}}
-
-## Spécification
-
-| Spécification                                                                                                    | Statut                   | Commentaire                                   |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------- |
-| {{SpecName("SVG2", "painting.html#StrokeDasharrayProperty", "stroke-dasharray")}}     | {{Spec2("SVG2")}} | Définition pour les formes et textes          |
-| {{SpecName("SVG1.1", "painting.html#StrokeDasharrayProperty", "stroke-dasharray")}} | {{Spec2("SVG1.1")}} | Définition initiale pour les formes et textes |
+{{Compat}}

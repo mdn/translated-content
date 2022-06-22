@@ -39,14 +39,23 @@ translation_of: Web/CSS/ime-mode
 	ime-mode: auto !important;
 }
 </pre>
-<p>{{ Note("一般說來，公開的網站不該自行調整輸入法模式的行為。這個特性主要是給網際應用程式使用的。") }}
-</p><p>Mac 版的 Gecko 1.9 中，若某欄位設定停用輸入法，則自該欄位移開輸入焦點時並無法自行恢復輸入法狀態，所以若使用 <code>disabled</code> 值，Mac 的使用者可能會碰上麻煩。
-</p><p>{{ Note("別僅僅仰賴停用輸入法的招術來避免使用者輸入擴充字元，因為即使輸入法被停用，使用者依然可自他處剪下擴充字元後貼到表單欄位中。") }}
-</p>
-<h3 id=".E8.A6.8F.E6.A0.BC.E5.87.BA.E8.99.95" name=".E8.A6.8F.E6.A0.BC.E5.87.BA.E8.99.95"> 規格出處 </h3>
-<ul><li> <a class="external" href="http://msdn2.microsoft.com/en-us/library/ms533883.aspx">微軟規格</a>
-</li></ul>
-<h3 id=".E7.80.8F.E8.A6.BD.E5.99.A8.E7.9B.B8.E5.AE.B9.E6.80.A7" name=".E7.80.8F.E8.A6.BD.E5.99.A8.E7.9B.B8.E5.AE.B9.E6.80.A7"> 瀏覽器相容性 </h3>
-<p>Firefox 3 以後便能同 Internet Explorer 一般支援 <code>ime-mode</code> 特性。
-</p><p><br>
-</p>
+
+<div class="note">
+ <p><strong>備註：</strong>一般說來，公開的網站不該自行調整輸入法模式的行為。這個特性主要是給網際應用程式使用的。</p>
+</div>
+
+<p>Mac 版的 Gecko 1.9 中，若某欄位設定停用輸入法，則自該欄位移開輸入焦點時並無法自行恢復輸入法狀態，所以若使用 <code>disabled</code> 值，Mac 的使用者可能會碰上麻煩。</p>
+
+<div class="note">
+ <p><strong>備註：</strong>別僅僅仰賴停用輸入法的招術來避免使用者輸入擴充字元，因為即使輸入法被停用，使用者依然可自他處剪下擴充字元後貼到表單欄位中。</p>
+</div>
+
+<h3 id=".E8.A6.8F.E6.A0.BC.E5.87.BA.E8.99.95"> 規格出處 </h3>
+
+<ul>
+ <li><a class="external" href="http://msdn2.microsoft.com/en-us/library/ms533883.aspx">微軟規格</a></li>
+</ul>
+
+<h3 id=".E7.80.8F.E8.A6.BD.E5.99.A8.E7.9B.B8.E5.AE.B9.E6.80.A7">瀏覽器相容性</h3>
+
+<p>Firefox 3 以後便能同 Internet Explorer 一般支援 <code>ime-mode</code> 特性。</p>

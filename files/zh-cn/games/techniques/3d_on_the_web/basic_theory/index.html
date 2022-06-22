@@ -16,7 +16,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p>3D 指的是有关在 3D 空间中所有形状的表示，并且可以使用坐标系统来计算其位置。</p>
 
-<p><img alt="Coordinate system" src="https://mdn.mozillademos.org/files/13326/mdn-games-3d-coordinate-system.png" style="height: 338px; width: 600px;"></p>
+<p><img alt="Coordinate system" src="mdn-games-3d-coordinate-system.png"></p>
 
 <p>WebGL 使用右手坐标系统 — <code>x</code> 轴向右，<code>y</code> 轴向上 <code>z</code> 轴指向屏幕外，在上图可以看到。</p>
 
@@ -33,7 +33,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p>你可以使用这些信息建立几何体 — 这是一个立方体的例子：</p>
 
-<p><img alt="Cube" src="https://mdn.mozillademos.org/files/13324/mdn-games-3d-cube.png" style="height: 265px; width: 600px;"></p>
+<p><img alt="Cube" src="mdn-games-3d-cube.png"></p>
 
 <p>给定形状的一个面是顶点之间的一个平面。例如，一个立方体有 8 个不同的顶点和 6 个不同的面 每个面由 4 个顶点构成。一条法线定义面的朝向。同时，连接这些点可以创建立方体的边。这个几何体通过点和面构成，材质使用的是一张纹理贴图，这里使用一个纯蓝色或一张图片。该物体的几何形状 (geometry) 由顶点和面构成，而材质 (material) 则是由纹理构成。如果我们将几何体和材质连接起来会得到一个网格 (mesh).</p>
 
@@ -41,7 +41,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p>渲染流程是个将之前准备好的模型输出到屏幕的过程。3D 渲染流程会接受使用顶点描述 3D 物体的原始数据作为输入用于处理，并计算其片段 (fragment), 然后渲染为像素 (pixels) 输出到屏幕。</p>
 
-<p><img alt="Rendering pipeline" src="https://mdn.mozillademos.org/files/13334/mdn-games-3d-rendering-pipeline.png" style="height: 225px; width: 600px;"></p>
+<p><img alt="Rendering pipeline" src="mdn-games-3d-rendering-pipeline.png"></p>
 
 <p>上图中用到了如下术语：</p>
 
@@ -57,15 +57,15 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p>顶点处理是将独立的顶点信息组合成原始数据并设置其在 3D 空间中的坐标，方便显示器识别。就像是对你准备的场景进行拍照 — 你必须先放置物品，设置相机参数，然后开拍。</p>
 
-<p><img alt="Vertex processing" src="https://mdn.mozillademos.org/files/13336/mdn-games-3d-vertex-processing.png" style="height: 338px; width: 600px;"></p>
+<p><img alt="Vertex processing" src="mdn-games-3d-vertex-processing.png"></p>
 
 <p>这个过程分为四步：第一步是筹备世界坐标中的物体，也被称为<strong>模型转换 (model transformation)</strong>. 然后是<strong>视图转换 (view transformation)</strong> , 这一步只关心位置和 3D 空间中摄像机的朝向设置。摄像机有三个参数 (位置，方向和朝向), 在新创建的场景中必须定义这三个参数。</p>
 
-<p><img alt="Camera" src="https://mdn.mozillademos.org/files/13322/mdn-games-3d-camera.png" style="height: 225px; width: 600px;"></p>
+<p><img alt="Camera" src="mdn-games-3d-camera.png"></p>
 
 <p><strong>投射转换</strong>(projection transformation), 也被称作透视转换 (perspective transformation), 这一步定义摄像机设置，在此过程会设置哪些在摄像机中可见，配置包含视野 (field of view), 宽高比例 (aspect ratio) 和可选的近裁剪和远裁剪参数。阅读 Three.js 文章<a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#Camera">摄像机</a>了解更多。</p>
 
-<p><img alt="Camera settings" src="https://mdn.mozillademos.org/files/13320/mdn-games-3d-camera-settings.png" style="height: 338px; width: 600px;"></p>
+<p><img alt="Camera settings" src="mdn-games-3d-camera-settings.png"></p>
 
 <p>最后一步是<strong>视图窗口转换</strong>(viewport transformation), 这一步会将一切都输出给渲染流程中的下一步。</p>
 
@@ -73,7 +73,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p>栅格化将原始数据 (从顶点信息转换过来的) 转换为一系列的片段。</p>
 
-<p><img alt="Rasterization" src="https://mdn.mozillademos.org/files/13332/mdn-games-3d-rasterization.png" style="height: 338px; width: 600px;"></p>
+<p><img alt="Rasterization" src="mdn-games-3d-rasterization.png"></p>
 
 <p>那些片段 (2D 像素的 3D 投射) 是对应到像素网格的，所以在渲染合成阶段最后他们会被 2D 的屏幕直接打印到像素点上。</p>
 
@@ -81,7 +81,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p>片段合成关注关注的是纹理和光照 — 它会基于给定参数计算最终的颜色。</p>
 
-<p><img alt="Fragment processing" src="https://mdn.mozillademos.org/files/13328/mdn-games-3d-fragment-processing.png" style="height: 338px; width: 600px;"></p>
+<p><img alt="Fragment processing" src="mdn-games-3d-fragment-processing.png"></p>
 
 <h3 id="纹理">纹理</h3>
 
@@ -104,7 +104,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p>在输出操作阶段所有来自 3D 空间的原始数据的片段会被转换到 2D 像素网格中，然后打印到屏幕像素上。</p>
 
-<p><img alt="Output merging" src="https://mdn.mozillademos.org/files/13330/mdn-games-3d-output-merging.png" style="height: 338px; width: 600px;"></p>
+<p><img alt="Output merging" src="mdn-games-3d-output-merging.png"></p>
 
 <p>在输出合成阶段同样可以忽略不必要的信息，例如在屏幕外的模型参数或者被其他模型遮挡的模型，因为是不可见的所以不会被计算。</p>
 

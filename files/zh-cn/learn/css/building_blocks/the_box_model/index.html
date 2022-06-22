@@ -111,7 +111,7 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
 
 <p>如下图：</p>
 
-<p><img alt="Diagram of the box model" src="https://mdn.mozillademos.org/files/16558/box-model.png" style="height: 300px; width: 544px;"></p>
+<p><img alt="Diagram of the box model" src="box-model.png"></p>
 
 <h3 id="标准盒模型">标准盒模型</h3>
 
@@ -130,7 +130,7 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
 
 <p>如果使用标准模型宽度 = 410px (350 + 25 + 25 + 5 + 5)，高度 = 210px (150 + 25 + 25 + 5 + 5)，padding 加 border 再加 content box。</p>
 
-<p><img alt="Showing the size of the box when the standard box model is being used." src="https://mdn.mozillademos.org/files/16559/standard-box-model.png" style="height: 300px; width: 500px;"></p>
+<p><img alt="Showing the size of the box when the standard box model is being used." src="standard-box-model.png"></p>
 
 <div class="blockIndicator note">
 <p><strong>注</strong>: margin 不计入实际大小 —— 当然，它会影响盒子在页面所占空间，但是影响的是盒子外部空间。盒子的范围到边框为止 —— 不会延伸到 margin。</p>
@@ -140,7 +140,7 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
 
 <p>你可能会认为盒子的大小还要加上边框和内边距，这样很麻烦，而且你的想法是对的 ! 因为这个原因，css 还有一个替代盒模型。使用这个模型，所有宽度都是可见宽度，所以内容宽度是该宽度减去边框和填充部分。使用上面相同的样式得到 (width = 350px, height = 150px).</p>
 
-<p><img alt="Showing the size of the box when the alternate box model is being used." src="https://mdn.mozillademos.org/files/16557/alternate-box-model.png" style="height: 240px; width: 440px;"></p>
+<p><img alt="Showing the size of the box when the alternate box model is being used." src="alternate-box-model.png"></p>
 
 <p>默认浏览器会使用标准模型。如果需要使用替代模型，您可以通过为其设置 <code>box-sizing: border-box</code> 来实现。 这样就可以告诉浏览器使用 <code>border-box</code> 来定义区域，从而设定您想要的大小。</p>
 
@@ -177,7 +177,7 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
 
 <p>您的 <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">浏览器开发者工具</a> 可以使您更容易地理解 box 模型。如果您在 Firefox 的 DevTools 中查看一个元素，您可以看到元素的大小以及它的外边距、内边距和边框。这是一个很好的检查元素大小的方式，可以便捷的判断您的盒子大小是否符合预期 !</p>
 
-<p><img alt="Inspecting the box model of an element using Firefox DevTools" src="https://mdn.mozillademos.org/files/16560/box-model-devtools.png" style="height: 683px; width: 1150px;"></p>
+<p><img alt="Inspecting the box model of an element using Firefox DevTools" src="box-model-devtools.png"></p>
 
 <h2 id="外边距，内边距，边框">外边距，内边距，边框</h2>
 

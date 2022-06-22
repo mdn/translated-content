@@ -13,7 +13,7 @@ translation_of: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 
 <p>在本教程结束时，您将有一个功能齐全的游戏 demo：<a href="http://orb.enclavegames.com/">Cyber Orb </a>。如下所示：</p>
 
-<p><img alt="A 2D game board featuring a small yellow ball. There is a large black hole for the ball to escape down, and a number of barriers blocking the ball from escaping." src="https://mdn.mozillademos.org/files/10297/cyber-orb.png" style="display: block; height: 450px; margin: 0px auto; width: 300px;"></p>
+<p><img alt="A 2D game board featuring a small yellow ball. There is a large black hole for the ball to escape down, and a number of barriers blocking the ball from escaping." src="cyber-orb.png"></p>
 
 <h2 id="Phaser_framework">Phaser framework</h2>
 
@@ -23,7 +23,7 @@ translation_of: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 
 <p>您能够在 GitHub 看到它的源代码 <a href="https://github.com/EnclaveGames/Cyber-Orb">Cyber Orb</a>。文件夹结构非常简单：起点是 <code>index.html</code>。我们在该文件中初始化框架并设置 html 元素 {{htmlelement("canvas")}} 以呈现游戏。</p>
 
-<p><img alt="Screenshot of the GitHub repository with the Cyber Orb game code, listing the folders and the files in the main structure." src="https://mdn.mozillademos.org/files/10357/cyber-orb-github.png" style="height: 423px; width: 620px;"></p>
+<p><img alt="Screenshot of the GitHub repository with the Cyber Orb game code, listing the folders and the files in the main structure." src="cyber-orb-github.png"></p>
 
 
 
@@ -275,7 +275,7 @@ else if(this.keys.down.isDown) {
 
 <p>The more you tilt the device, the more force is applied to the ball, therefore the faster it moves (the velocity is higher).</p>
 
-<p><img alt="An explanation of the X, Y and Z axes of a Flame mobile device with the Cyber Orb game demo on the screen." src="https://mdn.mozillademos.org/files/10369/cyber-orb-flame-orientation.png" style="height: 480px; width: 620px;"></p>
+<p><img alt="An explanation of the X, Y and Z axes of a Flame mobile device with the Cyber Orb game demo on the screen." src="cyber-orb-flame-orientation.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: To find more out about implementing device orientation and what raw code would look like, read <a href="/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes">Keep it level: responding to device orientation changes</a>.</p>
@@ -366,7 +366,7 @@ this.physics.arcade.collide(this.ball, this.levels[this.level-1], this.wallColli
 
 <p>When collision detection works as expected let's add some special effects with the help from the Vibration API.</p>
 
-<p><img alt="A visualization of the vibrations of a Flame mobile device with the Cyber Orb game demo on the screen." src="https://mdn.mozillademos.org/files/10371/cyber-orb-flame-vibration.png" style="height: 480px; width: 620px;"></p>
+<p><img alt="A visualization of the vibrations of a Flame mobile device with the Cyber Orb game demo on the screen." src="cyber-orb-flame-vibration.png"></p>
 
 <p>The best way to use it in our case is to vibrate the phone every time the ball hits the walls — inside the <code>wallCollision</code> function:</p>
 

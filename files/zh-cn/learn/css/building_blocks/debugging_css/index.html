@@ -40,7 +40,7 @@ translation_of: Learn/CSS/Building_blocks/Debugging_CSS
 
 <p>从页面上选择一个元素，可以通过以下方法：右键该元素，选择审查元素（Inspect）；从 DevTools 左侧 HTML tree 中选择该元素。试试选择 class 为 <code>box1</code> 的元素吧，它是页面上的第一个元素，周围画有边框。</p>
 
-<p><img alt="The example page for this tutorial with DevTools open." src="https://mdn.mozillademos.org/files/16606/inspecting1.png" style="border-style: solid; border-width: 1px; height: 1527px; width: 2278px;"></p>
+<p><img alt="The example page for this tutorial with DevTools open." src="inspecting1.png"></p>
 
 <p>如果查看 HTML 右边的 <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Rules_view">Rules view</a> 栏，你应该能看到该元素的 CSS 属性与值。你能看到直接应用到 <code>box1</code> 类上的规则，还有其继承了祖先的 CSS（该例中指 <code>&lt;body&gt;</code>）。这在一种情况下就很有帮助——你看到有些 CSS 并非在计划之内（或许它们继承自某个父元素然而你没有覆盖它们）。</p>
 
@@ -58,7 +58,7 @@ translation_of: Learn/CSS/Building_blocks/Debugging_CSS
 
 <p><strong>选择了 <code>box1</code> 以后，点击显示应用在边框的颜色的色块（被涂上颜色的圆），会打开一个颜色选择器，然后你就能尝试一些不同的颜色，页面上的显示会进行实时的更新。类似地，你也可以用这种方法改变宽度或者边框的样式。</strong></p>
 
-<p><img alt="DevTools Styles Panel with a color picker open." src="https://mdn.mozillademos.org/files/16607/inspecting2-color-picker.png" style="border-style: solid; border-width: 1px; height: 1173px; width: 2275px;"></p>
+<p><img alt="DevTools Styles Panel with a color picker open." src="inspecting2-color-picker.png"></p>
 
 <h2 id="添加一个新属性">添加一个新属性</h2>
 
@@ -66,7 +66,7 @@ translation_of: Learn/CSS/Building_blocks/Debugging_CSS
 
 <p><strong>你可以点击在规则中合拢的花括号，开始向里面键入一个新的声明，此时你可以开始键入新的属性，开发者工具会展示给你一个自动填充的对应属性列表。在选择了 <code>font-size</code> 以后，键入你想要尝试的值。你也可以点击“+”按钮以添加一个对应于相同选择器的规则，将你的新规则加到那里。</strong></p>
 
-<p><img alt="The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open" src="https://mdn.mozillademos.org/files/16608/inspecting3-font-size.png" style="border-style: solid; border-width: 1px; height: 956px; width: 2275px;"></p>
+<p><img alt="The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open" src="inspecting3-font-size.png"></p>
 
 <div class="blockIndicator note">
 <p><strong>备注</strong>：在 Rules view 里面还有其他有用的功能，例如带有无效值的声明会被划掉。你可以在<a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS">检查并编辑 CSS</a>里了解更多。</p>
@@ -84,7 +84,7 @@ translation_of: Learn/CSS/Building_blocks/Debugging_CSS
 
 <p>带有 <code>box2</code> 类的盒子使用了 <code>border-box</code>，所以此时内边距和边框的值是从你赋给元素的值里面减去的，也就是说页面上被盒子占据的空间大小就是你指定的大小，此例中为 <code>width: 400px</code>。</p>
 
-<p><img alt="The Layout section of the DevTools" src="https://mdn.mozillademos.org/files/16609/inspecting4-box-model.png" style="border-style: solid; border-width: 1px; height: 1532px; width: 2275px;"></p>
+<p><img alt="The Layout section of the DevTools" src="inspecting4-box-model.png"></p>
 
 <div class="blockIndicator note">
 <p><strong>备注</strong>：在<a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model">仔细检查盒模型</a>里了解更多。</p>
@@ -111,7 +111,7 @@ translation_of: Learn/CSS/Building_blocks/Debugging_CSS
 
 <p><strong>检查有 <code>.special</code> 类的 <code>&lt;em&gt;</code> 元素，开发者工具会告诉你橘黄色是实际生效的颜色，还会将应用在 em 上的 <code>color</code> 属性划掉。你这样就能看到是类选择器覆盖了元素选择器了。</strong></p>
 
-<p><img alt="Selecting an em and looking at DevTools to see what is over-riding the color." src="https://mdn.mozillademos.org/files/16610/inspecting5-specificity.png" style="border-style: solid; border-width: 1px; height: 1161px; width: 2275px;"></p>
+<p><img alt="Selecting an em and looking at DevTools to see what is over-riding the color." src="inspecting5-specificity.png"></p>
 
 <h2 id="进一步了解火狐开发者工具">进一步了解火狐开发者工具</h2>
 
@@ -138,7 +138,7 @@ translation_of: Learn/CSS/Building_blocks/Debugging_CSS
 
 <p>浏览器会忽略他们不理解的 CSS。如果您正在测试的浏览器不支持您正在使用的属性或值，则不会奔溃，但 CSS 不会被应用。DevTools 通常会以某种方式突出显示不支持的属性和值。在下面的屏幕截图中，浏览器不支持以下子网格值 {{cssxref("grid-template-columns")}}.</p>
 
-<p><img alt="Image of browser DevTools with the grid-template-columns: subgrid crossed out as the subgrid value is not supported." src="https://mdn.mozillademos.org/files/16641/no-support.png"></p>
+<p><img alt="Image of browser DevTools with the grid-template-columns: subgrid crossed out as the subgrid value is not supported." src="no-support.png"></p>
 
 <p>您还可以查看 MDN 每个属性页底部的浏览器兼容性表。这些向您显示浏览器对该属性的支持，如果支持该属性的某些用法，而不支持其他用法，则经常会 break down。 <a href="/zh-CN/docs/">这里</a>显示了 {{cssxref("shape-outside")}} 属性的兼容性数据。</p>
 

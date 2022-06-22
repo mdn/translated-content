@@ -69,7 +69,7 @@ if(y + dy &gt; canvas.height || y + dy &lt; 0) {
 
 <p>测试你的代码，你会看到我们的球碰到任一边缘都会反弹！然而，我们还发现了一个问题，当球碰撞到边缘，反弹之前：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10432/ball-in-wall.png" style="display: block; height: 320px; margin: 0px auto; width: 480px;"></p>
+<p><img src="ball-in-wall.png"></p>
 
 <p>这是因为我们正在计算墙和球的中心碰撞点，而我们应该围绕它的周长来做。如果碰到墙壁，球应该会弹起来，而不是陷入墙壁一半时，所以让我们来调整一下我们的判断条件。更新你之前添加的代码：</p>
 
