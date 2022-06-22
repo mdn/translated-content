@@ -22,7 +22,7 @@ translation_of: Web/HTTP/Cookies
  <dd>記錄並分析使用者行為</dd>
 </dl>
 
-<p>Cookies 曾被當作一般的客戶端儲存方式來使用。這在當時 cookie 仍是將資料儲存在客戶端的唯一方法時是合法的，現在則建議使用現代的 storage APIs。Cookies 會被每一個請求發送出去，所以可能會影響效能（尤其是行動裝置的資料連線）。現代客戶端的 storage APIs 為 <a href="/zh-TW/docs/Web/API/Web_Storage_API" title="DOM Storage">Web storage API</a> （<code>localStorage</code> 和 <code>sessionStorage</code>）以及 <a href="/zh-TW/docs/Web/API/IndexedDB_API">IndexedDB</a>。</p>
+<p>Cookies 曾被當作一般的客戶端儲存方式來使用。這在當時 cookie 仍是將資料儲存在客戶端的唯一方法時是合法的，現在則建議使用現代的 storage APIs。Cookies 會被每一個請求發送出去，所以可能會影響效能（尤其是行動裝置的資料連線）。現代客戶端的 storage APIs 為 <a href="/zh-TW/docs/Web/API/Web_Storage_API">Web storage API</a> （<code>localStorage</code> 和 <code>sessionStorage</code>）以及 <a href="/zh-TW/docs/Web/API/IndexedDB_API">IndexedDB</a>。</p>
 
 <div class="note">
 <p>要檢視儲存的 cookies（以及其他網頁可以使用的儲存資料），你可以開啟開發者工具中的<a href="/zh-TW/docs/Tools/Storage_Inspector">儲存檢示器（Storage Inspector）</a>並自儲存樹（storage tree）選擇 Cookies。</p>
@@ -172,7 +172,7 @@ console.log(document.cookie);
 
 <h3 id="Zombie_cookies_and_Evercookies">Zombie cookies and Evercookies</h3>
 
-<p>Zombie cookies 或「Evercookies」是一個更激進的手段，刻意讓 cookies 在被刪除後重新創造，使其很難被永遠的刪除。這些 cookies 使用 <a href="/zh-TW/docs/Web/API/Web_Storage_API" title="DOM Storage">Web storage API</a>、Flash Local Shared Objects 和其他的技術，使得當他們被偵測不存在時，就會立刻重新創造。</p>
+<p>Zombie cookies 或「Evercookies」是一個更激進的手段，刻意讓 cookies 在被刪除後重新創造，使其很難被永遠的刪除。這些 cookies 使用 <a href="/zh-TW/docs/Web/API/Web_Storage_API">Web storage API</a>、Flash Local Shared Objects 和其他的技術，使得當他們被偵測不存在時，就會立刻重新創造。</p>
 
 <ul>
  <li><a href="https://github.com/samyk/evercookie">Evercookie by Samy Kamkar</a></li>
@@ -187,8 +187,8 @@ console.log(document.cookie);
  <li>{{domxref("Document.cookie")}}</li>
  <li>{{domxref("Navigator.cookieEnabled")}}</li>
  <li><a href="/zh-TW/docs/Tools/Storage_Inspector">Inspecting cookies using the Storage Inspector</a></li>
- <li><a class="external" href="https://tools.ietf.org/html/rfc6265">Cookie specification: RFC 6265</a></li>
- <li><a class="external" href="https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/">Nicholas Zakas article on cookies</a></li>
- <li><a class="external" href="https://www.nczonline.net/blog/2009/05/12/cookies-and-security/">Nicholas Zakas article on cookies and security</a></li>
+ <li><a href="https://tools.ietf.org/html/rfc6265">Cookie specification: RFC 6265</a></li>
+ <li><a href="https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/">Nicholas Zakas article on cookies</a></li>
+ <li><a href="https://www.nczonline.net/blog/2009/05/12/cookies-and-security/">Nicholas Zakas article on cookies and security</a></li>
  <li><a href="https://en.wikipedia.org/wiki/HTTP_cookie">HTTP cookie on Wikipedia</a></li>
 </ul>

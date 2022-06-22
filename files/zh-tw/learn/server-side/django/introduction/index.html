@@ -13,7 +13,7 @@ translation_of: Learn/Server-side/Django/Introduction
  <tbody>
   <tr>
    <th scope="row">先備知識:</th>
-   <td>基本的電腦知識.對<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps">服務器端網站編程的一般了解</a> ,特別是<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">網站中客戶端-服務器交互的機制</a> .</td>
+   <td>基本的電腦知識.對<a href="/en-US/docs/Learn/Server-side/First_steps">服務器端網站編程的一般了解</a> ,特別是<a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">網站中客戶端-服務器交互的機制</a> .</td>
   </tr>
   <tr>
    <th scope="row">目標:</th>
@@ -69,11 +69,11 @@ translation_of: Learn/Server-side/Django/Introduction
 
 <h2 id="Django有多受歡迎">Django有多受歡迎?</h2>
 
-<p>服務器端框架的受歡迎程度沒有任何可靠和明確的測量（儘管<a class="external external-icon" href="http://hotframeworks.com/" rel="noopener">Hot Frameworks</a>網站嘗試使用諸如計算每個平台的GitHub項目數量和StackOverflow問題的機制來評估流行度）。一個更好的問題是Django是否“足夠流行”，以避免不受歡迎的平台的問題。它是否繼續發展？如果您需要幫助，可以幫您嗎？如果您學習Django，有機會獲得付費工作嗎？</p>
+<p>服務器端框架的受歡迎程度沒有任何可靠和明確的測量（儘管<a href="http://hotframeworks.com/">Hot Frameworks</a>網站嘗試使用諸如計算每個平台的GitHub項目數量和StackOverflow問題的機制來評估流行度）。一個更好的問題是Django是否“足夠流行”，以避免不受歡迎的平台的問題。它是否繼續發展？如果您需要幫助，可以幫您嗎？如果您學習Django，有機會獲得付費工作嗎？</p>
 
 <p>基於使用Django的流行網站數量，為代碼庫貢獻的人數以及提供免費和付費支持的人數，那麼是的，Django是一個流行的框架！</p>
 
-<p>使用Django的流行網站包括：Disqus，Instagram，騎士基金會，麥克阿瑟基金會，Mozilla，國家地理，開放知識基金會，Pinterest和開放棧（來源：<a class="external external-icon" href="https://www.djangoproject.com/" rel="noopener">Django home page</a> ).</p>
+<p>使用Django的流行網站包括：Disqus，Instagram，騎士基金會，麥克阿瑟基金會，Mozilla，國家地理，開放知識基金會，Pinterest和開放棧（來源：<a href="https://www.djangoproject.com/">Django home page</a> ).</p>
 
 <h2 id="Django_是特定用途的">Django 是特定用途的?</h2>
 
@@ -104,7 +104,7 @@ translation_of: Learn/Server-side/Django/Introduction
 </ul>
 
 <div class="note">
-<p><strong>注意</strong> : Django將此組織稱為“模型視圖模板（MVT）”架構。它與更加熟悉的<a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Model View Controller</a>架構有許多相似之處. </p>
+<p><strong>注意</strong> : Django將此組織稱為“模型視圖模板（MVT）”架構。它與更加熟悉的<a href="/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Model View Controller</a>架構有許多相似之處. </p>
 </div>
 
 <ul>
@@ -155,7 +155,7 @@ def index(request):
 <p><strong>注意</strong> :一點點Python:</p>
 
 <ul>
- <li><a class="external external-icon" href="https://docs.python.org/3/tutorial/modules.html" rel="noopener">Python模塊</a>是函數的“庫”，存放在單獨的文件中，我們可能希望在代碼中使用。在這裡，我們只導入了<code>HttpResponse</code>從對象<code>django.http</code>模塊，使我們可以在視圖中使用<br>
+ <li><a href="https://docs.python.org/3/tutorial/modules.html">Python模塊</a>是函數的“庫”，存放在單獨的文件中，我們可能希望在代碼中使用。在這裡，我們只導入了<code>HttpResponse</code>從對象<code>django.http</code>模塊，使我們可以在視圖中使用<br>
   <code>from django.http import HttpResponse</code>。<br>
   還有其他方法可以從模塊導入一些或所有對象</li>
  <li>使用<code>def</code>，如上所示的關鍵字聲明函數，命參數在函數名稱後面的括號中列出：整行以冒號結尾。注意下一行是否都<strong>縮進</strong>。縮進很重要，因為它指定代碼行在該特定塊內(強制縮進是Python的一個關鍵特徵，而且是Python代碼很容易閱讀的一個原因)。</li>

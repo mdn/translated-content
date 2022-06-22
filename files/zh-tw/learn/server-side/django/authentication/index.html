@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Django/Authentication
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}</div>
 
-<p>在本教程中，我們將會展示如何允許用戶使用自己的帳戶登入到您的網站，以及如何根據用戶是否已登入和權限的不同來控制他們可以執行和查看的內容。作為展示的一部分，我們會擴展 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 網站，添加登入頁面和登出頁面，以及用來查看已借閱的圖書的頁面 - 分為用戶與員工兩種不同頁面。</p>
+<p>在本教程中，我們將會展示如何允許用戶使用自己的帳戶登入到您的網站，以及如何根據用戶是否已登入和權限的不同來控制他們可以執行和查看的內容。作為展示的一部分，我們會擴展 <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 網站，添加登入頁面和登出頁面，以及用來查看已借閱的圖書的頁面 - 分為用戶與員工兩種不同頁面。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -30,7 +30,7 @@ translation_of: Learn/Server-side/Django/Authentication
 <p><strong>注意</strong>: 從Django角度而言，身份驗證系統需要做到非常通用，因此不提供其他網頁身份驗證系統中提供的某些功能。 需要解決一些常見問題的話可以透過第三方軟件包。 例如，限制登錄嘗試和透過第三方進行身份驗證（例如OAuth）。</p>
 </div>
 
-<p>在本教程中，我們將會展示如何在<a href="https://developer.mozilla.org/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a>網站中啟用用戶身份驗證，並建立自己的登入和登出頁面，為模型添加權限以及控制對頁面的訪問。 我們將根據身份驗證/權限顯示為用戶或是圖書館員設計的已借出書籍列表。</p>
+<p>在本教程中，我們將會展示如何在<a href="/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a>網站中啟用用戶身份驗證，並建立自己的登入和登出頁面，為模型添加權限以及控制對頁面的訪問。 我們將根據身份驗證/權限顯示為用戶或是圖書館員設計的已借出書籍列表。</p>
 
 <p>身份驗證系統非常有彈性，您可以根據需要從頭開始構建URL，表單，視圖和模板，只透過提供的API來登入用戶。 但是，在本文中，我們將為登入與登出頁面使用Django的“ stock”身份驗證視圖和表單。 我們仍然需要建立一些模板，但這很簡單。</p>
 
@@ -38,7 +38,7 @@ translation_of: Learn/Server-side/Django/Authentication
 
 <h2 id="Enabling_authentication">Enabling authentication</h2>
 
-<p>當我們<a href="https://developer.mozilla.org/zh-TW/docs/Learn/Server-side/Django/skeleton_website">創建框架網站</a>時（在教程2中），身份驗證已自動啟用，因此您此時無需執行任何其他操作。</p>
+<p>當我們<a href="/zh-TW/docs/Learn/Server-side/Django/skeleton_website">創建框架網站</a>時（在教程2中），身份驗證已自動啟用，因此您此時無需執行任何其他操作。</p>
 
 <div class="note">
 <p><strong>注意</strong>: 當我們使用<code>django-admin startproject</code>命令創建應用程序時，所有必要的配置都為我們完成了。 用戶和模型權限的數據庫表是在我們首次調用<code>python manage.py migrate</code>時創建的。</p>
@@ -62,7 +62,7 @@ MIDDLEWARE = [
 
 <h2 id="Creating_users_and_groups">Creating users and groups</h2>
 
-<p>當我們在教程4中查看<a href="https://developer.mozilla.org/zh-TW/docs/Learn/Server-side/Django/Admin_site">Django管理站</a>點時，您已經創建了第一個用戶（這是一個超級用戶，使用命令p<code>python manage.py createsuperuser</code>創建）。 我們的超級用戶已經通過身份驗證，並且具有所有權限，因此我們需要創建一個測試用戶來代表普通站點用戶。 我們將使用管理站點來創建本地圖書館組和網站登錄名，因為這是最快的方法之一。</p>
+<p>當我們在教程4中查看<a href="/zh-TW/docs/Learn/Server-side/Django/Admin_site">Django管理站</a>點時，您已經創建了第一個用戶（這是一個超級用戶，使用命令p<code>python manage.py createsuperuser</code>創建）。 我們的超級用戶已經通過身份驗證，並且具有所有權限，因此我們需要創建一個測試用戶來代表普通站點用戶。 我們將使用管理站點來創建本地圖書館組和網站登錄名，因為這是最快的方法之一。</p>
 
 <div class="note">
 <p><strong>注意</strong>: 您還可以通過編程方式創建用戶，如下所示。 例如，如果要開發一個界面以允許用戶創建自己的登錄名，則必須這樣做（您不應授予用戶訪問管理站點的權限）。</p>

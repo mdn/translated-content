@@ -11,7 +11,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <h2 id="畫矩形">畫矩形</h2>
 
-<p>不同於<a href="/en-US/docs/SVG" rel="internal" title="en/SVG">SVG</a>，{{HTMLElement("canvas")}}只支援一種原始圖形，矩形。所有的圖形都必須由一或多個繪圖路徑構成，而我們正好有一些繪圖路徑函數可以讓我們畫出複雜的圖形。</p>
+<p>不同於<a href="/en-US/docs/SVG">SVG</a>，{{HTMLElement("canvas")}}只支援一種原始圖形，矩形。所有的圖形都必須由一或多個繪圖路徑構成，而我們正好有一些繪圖路徑函數可以讓我們畫出複雜的圖形。</p>
 
 <div id="section_3">
 <p>首先來看看矩形，共有三個矩形繪圖函數:</p>
@@ -68,7 +68,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
  <dd>產生一個新路徑，產生後再使用繪圖指令來設定路徑。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.closePath", "closePath()")}}</dt>
  <dd>閉合路徑好讓新的繪圖指令來設定路徑。</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">路徑 API</a></dt>
+ <dt><a href="/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">路徑 API</a></dt>
  <dd>路徑 API，這些 API 便是繪圖指令</dd>
 </dl>
 
@@ -284,7 +284,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <h3 id="貝茲曲線(Bezier_curve)與二次曲線(quadratic_curve)">貝茲曲線(Bezier curve)與二次曲線(quadratic curve)</h3>
 
-<p>二次與三次<a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve" title="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">貝茲曲線(Bézier curves)</a>是另一種可用來構成複雜有機圖形的路徑。</p>
+<p>二次與三次<a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">貝茲曲線(Bézier curves)</a>是另一種可用來構成複雜有機圖形的路徑。</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}</dt>
@@ -501,7 +501,7 @@ function roundedRect(ctx,x,y,width,height,radius){
 new Path2D(path); // 複製傳入的 Path2D 物件，然後以之建立 Path2D 物件
 new Path2D(d);    // 以傳入的 SVG 路徑建立 Path2D 物件</pre>
 
-<p>所有已知的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">路徑 API</a>，如 rect, arc 等等，都可以在 Path2D 上找到。</p>
+<p>所有已知的 <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">路徑 API</a>，如 rect, arc 等等，都可以在 Path2D 上找到。</p>
 
 <p>Path2D 物件還可以加入其他 Path2D 物件，這讓我們可以很方便的組合多個物件使用。</p>
 
@@ -536,7 +536,7 @@ new Path2D(d);    // 以傳入的 SVG 路徑建立 Path2D 物件</pre>
 
 <p>另一個強而有力的特色是在 SVG 和 Canvas 中我們都可以使用 SVG path。</p>
 
-<p>下面的路徑會移到座標點 (10, 10) (M10, 10)，然後水平右移 80 點 (h 80)，垂至下移 80 點 (v 80) 水平左移 80 點 (h -80) 最後回到起始點 (z)，請到<a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D.Path2D#Using_SVG_paths"><code>Path2D</code> 建構子頁面</a>看繪圖範例結果。</p>
+<p>下面的路徑會移到座標點 (10, 10) (M10, 10)，然後水平右移 80 點 (h 80)，垂至下移 80 點 (v 80) 水平左移 80 點 (h -80) 最後回到起始點 (z)，請到<a href="/en-US/docs/Web/API/Path2D.Path2D#Using_SVG_paths"><code>Path2D</code> 建構子頁面</a>看繪圖範例結果。</p>
 
 <pre class="brush: js;">var p = new Path2D("M10 10 h 80 v 80 h -80 Z");</pre>
 

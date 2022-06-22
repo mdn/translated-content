@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Django/Home_page
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}</div>
 
-<p>我們現在可以添加代碼，來顯示我們的第一個完整頁面 - <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 網站的主頁，顯示每個模型類型有多少條記錄，並提供我們其他頁面的側邊欄導航鏈接。一路上，我們將獲得編寫基本URL 地圖和視圖、從數據庫獲取記錄、以及使用模板的實踐經驗。</p>
+<p>我們現在可以添加代碼，來顯示我們的第一個完整頁面 - <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 網站的主頁，顯示每個模型類型有多少條記錄，並提供我們其他頁面的側邊欄導航鏈接。一路上，我們將獲得編寫基本URL 地圖和視圖、從數據庫獲取記錄、以及使用模板的實踐經驗。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -85,7 +85,7 @@ translation_of: Learn/Server-side/Django/Home_page
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>: 每當Django遇到導入函數 <code><a href="https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.include" title="django.conf.urls.include">django.urls.include()</a></code>時，它都會在指定的結束字符處分割URL字符串，並將剩餘的子字符串發送到所包含的<em>URLconf</em> 模塊以進行進一步處理。</p>
+<p><strong>注意</strong>: 每當Django遇到導入函數 <code><a href="https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.include">django.urls.include()</a></code>時，它都會在指定的結束字符處分割URL字符串，並將剩餘的子字符串發送到所包含的<em>URLconf</em> 模塊以進行進一步處理。</p>
 </div>
 
 <p>我們還為<em>URLConf </em>模塊創建了一個佔位符文件，名為 <strong>/catalog/urls.py</strong>。 將以下行添加到該文件：</p>

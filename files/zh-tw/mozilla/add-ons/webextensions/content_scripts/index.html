@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 <p>就像一般網頁裡的 scripts 一樣，content scripts 可以透過 standard DOM APIs 存取並修改頁面內容。</p>
 
-<p>Content scripts 只能使用can only access <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs">一小部分的擴充套件APIs</a>，但它們可以透過一個訊息系統<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">來與後端腳本溝通</a>，從而間接地使用擴充套件APIs。</p>
+<p>Content scripts 只能使用can only access <a href="/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs">一小部分的擴充套件APIs</a>，但它們可以透過一個訊息系統<a href="/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">來與後端腳本溝通</a>，從而間接地使用擴充套件APIs。</p>
 
 <div class="note">
 <p>留意到 content scripts 目前會在 addons.mozilla.org 和 testpilot.firefox.com 中被阻擋。如果你嘗試在這些網域下的頁面注入一段 content script 會失敗並且在日誌裡記下一個 <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> 錯誤。</p>
@@ -34,8 +34,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 <p>你可以透過下列三種方式將內容腳本讀入頁面：</p>
 
 <ol>
- <li><strong>在安裝時讀入至符合URL模式的頁面：</strong>透過你的 manifest.json 中的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> 鍵，你可以要求瀏覽器在每次讀取URL<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns">符合給定模式</a>的頁面時讀入內容腳本。</li>
- <li><strong>在執行時讀入至符合URL模式的頁面：</strong>透過 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> API，你可以要求瀏覽器在每次讀取URL<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns">符合給定模式</a>的頁面時讀入內容腳本。這就像第一種方法，不同的是你可以在執行時增加或移除內容腳本。</li>
+ <li><strong>在安裝時讀入至符合URL模式的頁面：</strong>透過你的 manifest.json 中的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> 鍵，你可以要求瀏覽器在每次讀取URL<a href="/en-US/Add-ons/WebExtensions/Match_patterns">符合給定模式</a>的頁面時讀入內容腳本。</li>
+ <li><strong>在執行時讀入至符合URL模式的頁面：</strong>透過 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> API，你可以要求瀏覽器在每次讀取URL<a href="/en-US/Add-ons/WebExtensions/Match_patterns">符合給定模式</a>的頁面時讀入內容腳本。這就像第一種方法，不同的是你可以在執行時增加或移除內容腳本。</li>
  <li><strong>在執行時讀入至特定的頁籤：透過</strong> <code><a href="/en-US/Add-ons/WebExtensions/API/Tabs/executeScript">tabs.executeScript()</a></code> API，你可以在任何時候將內容腳本讀入特定的頁籤：舉例來說可以在使用者點擊<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action">工具列按鈕</a>時給予回應。</li>
 </ol>
 
@@ -157,7 +157,7 @@ window.confirm("Are you sure?"); // 呼叫原本的 window.confirm()</pre>
 
 <p>內容腳本可以透過一般的 <code><a href="/en-US/docs/Web/API/XMLHttpRequest">window.XMLHttpRequest</a></code> 與 <code><a href="/en-US/docs/Web/API/Fetch_API">window.fetch()</a></code> APIs 來發出請求。</p>
 
-<p>內容腳本跟套件的其他部分擁有相同的跨網域權限： 所以如果套件在 manifest.json 中透過 <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> 鍵要求了某一網域的使用，那麼它的內容腳本也能使用同樣的網域。</p>
+<p>內容腳本跟套件的其他部分擁有相同的跨網域權限： 所以如果套件在 manifest.json 中透過 <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> 鍵要求了某一網域的使用，那麼它的內容腳本也能使用同樣的網域。</p>
 
 <p>這是透過公開更多內容腳本中授權的XHR以及fetch實例來達成的。這件事情會導致標頭中不會設置 <code><a href="/en-US/docs/Web/HTTP/Headers/Origin">Origin</a></code> 與 <code><a href="/en-US/docs/Web/HTTP/Headers/Referer">Referer</a></code>的副作用，就像頁面請求自己一樣，一般會避免請求將跨來源泄露出去。從58版本號以後套件要傳送一些彷彿是頁面內容自己傳送的請求時可以改用 <code>content.XMLHttpRequest</code> 與 <code>content.fetch()</code>。對跨瀏覽器套件來說，這些事情的存在必須要能被做特徵檢測。</p>
 

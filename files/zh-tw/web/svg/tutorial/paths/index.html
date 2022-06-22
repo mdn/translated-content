@@ -10,7 +10,7 @@ original_slug: Web/SVG/Tutorial/路径
 
 <p><code><a href="/en-US/Web/SVG/Element/path">&lt;path&gt;</a></code> 元件可說是SVG程式庫中最強大的<a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">基本形狀</a>了，你可以用它來產生線條、曲線、圓弧等形狀。</p>
 
-<p>路徑(paths) 藉由結合多個直線或曲線來產生複雜形狀。路徑和折線雖然可以產生相似外觀的形狀，例如：可由<a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes#Polyline" style="font-size: 1rem; letter-spacing: -0.00278rem;">折線</a>組成由單純的直線組成的複雜形狀 。但折線需要產生許多小段的直線去模擬曲線的外觀，如果遇到需要放大的情形，會較難 scale。好好瞭解路徑對於繪製 SVG 是重要的。雖然不建議使用XML編輯器或文字編輯器建立複雜路徑，但了解它們的工作原理，將與助於發現和修復 SVG 的顯示問題。</p>
+<p>路徑(paths) 藉由結合多個直線或曲線來產生複雜形狀。路徑和折線雖然可以產生相似外觀的形狀，例如：可由<a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes#Polyline">折線</a>組成由單純的直線組成的複雜形狀 。但折線需要產生許多小段的直線去模擬曲線的外觀，如果遇到需要放大的情形，會較難 scale。好好瞭解路徑對於繪製 SVG 是重要的。雖然不建議使用XML編輯器或文字編輯器建立複雜路徑，但了解它們的工作原理，將與助於發現和修復 SVG 的顯示問題。</p>
 
 <p>path 元素，由一個屬性定義：{{ SVGAttr("d") }}（可參考<a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">基本形狀</a> ）。 <code>"d"</code> 屬性包含了一系列的指令(command)，以及這些指令各自使用的參數。</p>
 
@@ -94,7 +94,7 @@ original_slug: Web/SVG/Tutorial/路径
 
 <h2 id="Curve_commands">Curve commands</h2>
 
-<p>There are three different commands that you can use to create smooth curves. Two of those curves are Bezier curves, and the third is an "arc" or part of a circle. You might have already gained practical experience with Bezier curves using path tools in Inkscape, Illustrator or Photoshop. For a complete description of the math behind Bezier curves, go to a reference like the one on <a class="external" href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">Wikipedia</a>. There are an infinite number of Bezier curves, but only two simple ones are available in path elements: a cubic one, called with C, and a quadratic one, called with Q.</p>
+<p>There are three different commands that you can use to create smooth curves. Two of those curves are Bezier curves, and the third is an "arc" or part of a circle. You might have already gained practical experience with Bezier curves using path tools in Inkscape, Illustrator or Photoshop. For a complete description of the math behind Bezier curves, go to a reference like the one on <a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">Wikipedia</a>. There are an infinite number of Bezier curves, but only two simple ones are available in path elements: a cubic one, called with C, and a quadratic one, called with Q.</p>
 
 <h3 id="Bezier_Curves">Bezier Curves</h3>
 
