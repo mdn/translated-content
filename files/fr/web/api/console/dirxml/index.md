@@ -14,7 +14,9 @@ translation_of: Web/API/Console/dirxml
 
 ## Syntaxe
 
-    console.dirxml(object);
+```js
+console.dirxml(object);
+```
 
 ## Paramètres
 

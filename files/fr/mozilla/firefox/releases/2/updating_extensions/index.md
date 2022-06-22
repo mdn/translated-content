@@ -6,8 +6,6 @@ original_slug: Mise_à_jour_des_extensions_pour_Firefox_2
 ---
 {{FirefoxSidebar}}
 
-
-
 Cet article s'adresse aux développeurs qui souhaitent mettre à jour leur extension pour qu'elle fonctionne correctement avec Firefox 2.
 
 ## Étape 1&nbsp;: Mise à jour du manifeste d'installation
@@ -16,11 +14,15 @@ La première étape - pour de nombreuses extensions, la seule nécessaire - est 
 
 Trouvez la ligne indiquant la plus récente version de Firefox compatible. Pour Firefox 1.5, elle serait&nbsp;:
 
-     <em:maxVersion>1.5.0.*</em:maxVersion>
+```xml
+<em:maxVersion>1.5.0.*</em:maxVersion>
+```
 
 Et remplacez-la par celle-ci&nbsp;:
 
-     <em:maxVersion>2.0.0.*</em:maxVersion>
+```xml
+<em:maxVersion>2.0.0.*</em:maxVersion>
+```
 
 Réinstallez ensuite votre extension.
 

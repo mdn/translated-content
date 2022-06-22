@@ -28,7 +28,6 @@ cible.onfocus = refFonction;
 
 Cet exemple utilise [`onblur`](/fr/docs/Web/API/GlobalEventHandlers/onblur) et `onfocus` pour changer le texte au sein d'un élément [`<input>`](/fr/docs/Web/HTML/Element/Input).
 
-
 ### HTML
 
 ```html

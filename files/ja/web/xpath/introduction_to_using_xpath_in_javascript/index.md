@@ -226,14 +226,14 @@ while (thisHeading) {
 <?xml version="1.0"?>
 <people xmlns:xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
   <person>
-	<name first="george" last="bush" />
-	<address street="1600 pennsylvania avenue" city="washington" country="usa"/>
-	<phoneNumber>202-456-1111</phoneNumber>
+    <name first="george" last="bush" />
+    <address street="1600 pennsylvania avenue" city="washington" country="usa"/>
+    <phoneNumber>202-456-1111</phoneNumber>
   </person>
   <person>
-	<name first="tony" last="blair" />
-	<address street="10 downing street" city="london" country="uk"/>
-	<phoneNumber>020 7925 0918</phoneNumber>
+    <name first="tony" last="blair" />
+    <address street="10 downing street" city="london" country="uk"/>
+    <phoneNumber>020 7925 0918</phoneNumber>
   </person>
 </people>
 ```
@@ -269,7 +269,9 @@ Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(Componen
 
 この例は説明のためだけのものです。 この関数は、`xpathExpression` から名前空間接頭辞を取り、その接頭辞に対応する URI を返さなければなりません。例えば、この式は、
 
-    '//xhtml:td/mathml:math'
+```
+'//xhtml:td/mathml:math'
+```
 
 (X)HTML のテーブルデータセル要素の子要素である全ての [MathML](/ja/docs/Web/MathML) 式を選択します。
 

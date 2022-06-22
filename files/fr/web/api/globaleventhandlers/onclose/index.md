@@ -15,7 +15,9 @@ Un gestionnaire d'évènement utilisé lorsque des évènements de fermeture son
 
 ## Syntaxe
 
-    window.onclose = funcRef;
+```js
+window.onclose = funcRef;
+```
 
 ### Paramètres
 

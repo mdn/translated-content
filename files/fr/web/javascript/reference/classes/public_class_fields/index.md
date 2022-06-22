@@ -20,19 +20,21 @@ Les champs publics, tant statiques que d'instance, sont des propriétés qui peu
 
 ## Syntaxe
 
-    class ClasseAvecChampDInstance {
-      champDInstance = 'champ d\'instance'
-    }
+```js
+class ClasseAvecChampDInstance {
+  champDInstance = 'champ d\'instance'
+}
 
-    class ClasseAvecChampStatique {
-      static champStatique = 'champ statique'
-    }
+class ClasseAvecChampStatique {
+  static champStatique = 'champ statique'
+}
 
-    class ClasseAvecMethodeDInstancePublique {
-      methodePublique() {
-        return 'hello world'
-      }
-    }
+class ClasseAvecMethodeDInstancePublique {
+  methodePublique() {
+    return 'hello world'
+  }
+}
+```
 
 ## Exemples
 

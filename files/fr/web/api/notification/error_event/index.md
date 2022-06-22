@@ -18,8 +18,10 @@ La propriété **`onerror`** de l'interface {{domxref ("Notification")}} spécif
 
 ## Syntaxe
 
-    Notification.onerror = function(event) { ... }
-    Notification.onerror = (even) => { ... }
+```js
+Notification.onerror = function(event) { ... }
+Notification.onerror = (even) => { ... }
+```
 
 ## Spécifications
 

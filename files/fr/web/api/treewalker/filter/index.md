@@ -17,7 +17,9 @@ Lors de la création du `TreeWalker`, l'objet filtre est transmis comme 3ème pa
 
 ## Syntaxe
 
-    nodeFilter = treeWalker.filter;
+```js
+nodeFilter = treeWalker.filter;
+```
 
 ## Exemple
 

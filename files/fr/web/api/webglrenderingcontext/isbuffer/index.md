@@ -14,7 +14,9 @@ La méthode **`WebGLRenderingContext.isBuffer()`** de l'[API WebGL](/fr-FR/docs/
 
 ## Syntaxe
 
-    GLboolean gl.isBuffer(tampon);
+```js
+GLboolean gl.isBuffer(tampon);
+```
 
 ### Paramètres
 

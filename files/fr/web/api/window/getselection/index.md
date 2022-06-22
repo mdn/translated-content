@@ -9,7 +9,9 @@ Renvoie un objet selection représentant le ou les objets sélectionnés.
 
 ## Syntaxe
 
-    selection = window.getSelection()
+```js
+selection = window.getSelection()
+```
 
 ## Paramètres
 
@@ -17,12 +19,14 @@ Renvoie un objet selection représentant le ou les objets sélectionnés.
 
 ## Exemple
 
-    function foo() {
-       var selObj = window.getSelection();
-       alert(selObj);
-       var selRange = selObj.getRangeAt(0);
-       // travailler avec la sélection
-    }
+```js
+function foo() {
+  var selObj = window.getSelection();
+  alert(selObj);
+  var selRange = selObj.getRangeAt(0);
+  // travailler avec la sélection
+}
+```
 
 ## Notes
 

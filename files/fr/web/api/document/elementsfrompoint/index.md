@@ -20,7 +20,9 @@ La propriété **`elementsFromPoint()`** de l'interface {{domxref("DocumentOrSha
 
 ## Syntaxe
 
-    var elements = document.elementsFromPoint(x, y);
+```js
+var elements = document.elementsFromPoint(x, y);
+```
 
 ### Paramètres
 

@@ -1,12 +1,12 @@
 ---
-title: WindowOrWorkerGlobalScope.setInterval()
+title: setInterval()
 slug: Web/API/setInterval
-translation_of: Web/API/WindowOrWorkerGlobalScope/setInterval
+translation_of: Web/API/setInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><strong><code>setInterval()</code></strong> 函式, {{domxref("Window")}} 與 {{domxref("Worker")}} 介面皆提供此一函式, 此函式作用為重複地執行一個函式呼叫或一個程式碼片斷, 每一次執行間隔固定的延遲時間. 此函式呼叫時將傳回一個間隔代碼(Interval ID)用以識別該間隔程序, 因此後續您可以呼叫 {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} 函式移除該間隔程序. 此函式為由 {{domxref("WindowOrWorkerGlobalScope")}} 混合定義.</p>
+<p><strong><code>setInterval()</code></strong> 函式, {{domxref("Window")}} 與 {{domxref("Worker")}} 介面皆提供此一函式, 此函式作用為重複地執行一個函式呼叫或一個程式碼片斷, 每一次執行間隔固定的延遲時間. 此函式呼叫時將傳回一個間隔代碼(Interval ID)用以識別該間隔程序, 因此後續您可以呼叫 {{domxref("clearInterval()")}} 函式移除該間隔程序. 此函式為由 <code>WindowOrWorkerGlobalScope</code> 混合定義。</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -33,9 +33,9 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 
 <h3 id="Return_value">Return value</h3>
 
-<p>The returned <code>intervalID</code> is a numeric, non-zero value which identifies the timer created by the call to <code>setInterval()</code>; this value can be passed to {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}} to cancel the timeout.</p>
+<p>The returned <code>intervalID</code> is a numeric, non-zero value which identifies the timer created by the call to <code>setInterval()</code>; this value can be passed to {{domxref("clearInterval()")}} to cancel the timeout.</p>
 
-<p>It may be helpful to be aware that <code>setInterval()</code> and {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} share the same pool of IDs, and that <code>clearInterval()</code> and {{domxref("WindowOrWorkerGlobalScope.clearTimeout", "clearTimeout()")}} can technically be used interchangeably. For clarity, however, you should try to always match them to avoid confusion when maintaining your code.</p>
+<p>It may be helpful to be aware that <code>setInterval()</code> and {{domxref("setTimeout()")}} share the same pool of IDs, and that <code>clearInterval()</code> and {{domxref("clearTimeout()")}} can technically be used interchangeably. For clarity, however, you should try to always match them to avoid confusion when maintaining your code.</p>
 
 <div class="note"><strong>Note</strong>: The <code>delay</code> argument is converted to a signed 32-bit integer. This effectively limits <code>delay</code> to 2147483647 ms, since it's specified as a signed integer in the IDL.</div>
 
@@ -559,19 +559,19 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>The <code>setInterval()</code> function is commonly used to set a delay for functions that are executed again and again, such as animations. You can cancel the interval using {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}.</p>
+<p>The <code>setInterval()</code> function is commonly used to set a delay for functions that are executed again and again, such as animations. You can cancel the interval using {{domxref("clearInterval()")}}.</p>
 
-<p>If you wish to have your function called <em>once</em> after the specified delay, use {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.</p>
+<p>If you wish to have your function called <em>once</em> after the specified delay, use {{domxref("setTimeout()")}}.</p>
 
 <h3 id="Delay_restrictions">Delay restrictions</h3>
 
 <p>It's possible for intervals to be nested; that is, the callback for <code>setInterval()</code> can in turn call <code>setInterval()</code> to start another interval running, even though the first one is still going. To mitigate the potential impact this can have on performance, once intervals are nested beyond five levels deep, the browser will automatically enforce a 4 ms minimum value for the interval. Attempts to specify a value less than 4 ms in deeply-nested calls to <code>setInterval()</code> will be pinned to 4 ms.</p>
 
-<p>Browsers may enforce even more stringent minimum values for the interval under some circumstances, although these should not be common. Note also that the actual amount of time that elapses between calls to the callback may be longer than the given <code>delay</code>; see {{SectionOnPage("/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout", "Reasons for delays longer than specified")}} for examples.</p>
+<p>Browsers may enforce even more stringent minimum values for the interval under some circumstances, although these should not be common. Note also that the actual amount of time that elapses between calls to the callback may be longer than the given <code>delay</code>; see {{SectionOnPage("/en-US/docs/Web/API/setTimeout", "Reasons for delays longer than specified")}} for examples.</p>
 
 <h3 id="Ensure_that_execution_duration_is_shorter_than_interval_frequency">Ensure that execution duration is shorter than interval frequency</h3>
 
-<p>If there is a possibility that your logic could take longer to execute than the interval time, it is recommended that you recursively call a named function using {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}. For example, if using <code>setInterval()</code> to poll a remote server every 5 seconds, network latency, an unresponsive server, and a host of other issues could prevent the request from completing in its allotted time. As such, you may find yourself with queued up XHR requests that won't necessarily return in order.</p>
+<p>If there is a possibility that your logic could take longer to execute than the interval time, it is recommended that you recursively call a named function using {{domxref("setTimeout()")}}. For example, if using <code>setInterval()</code> to poll a remote server every 5 seconds, network latency, an unresponsive server, and a host of other issues could prevent the request from completing in its allotted time. As such, you may find yourself with queued up XHR requests that won't necessarily return in order.</p>
 
 <p>In these cases, a recursive <code>setTimeout()</code> pattern is preferred:</p>
 
@@ -598,9 +598,9 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <ul>
  <li><a href="/en-US/Add-ons/Code_snippets/Timers">JavaScript timers</a></li>
- <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.clearInterval")}}</li>
+ <li>{{domxref("setTimeout")}}</li>
+ <li>{{domxref("clearTimeout")}}</li>
+ <li>{{domxref("clearInterval")}}</li>
  <li>{{domxref("window.requestAnimationFrame")}}</li>
  <li><a href="/en-US/Add-ons/Code_snippets/Timers/Daemons"><em>Daemons</em> management</a></li>
 </ul>

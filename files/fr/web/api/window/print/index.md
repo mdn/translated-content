@@ -17,7 +17,9 @@ Ouvre la fenêtre de dialogue d'impression pour imprimer le document courant.
 
 ## Syntaxe
 
-    window.print()
+```js
+window.print()
+```
 
 ## Notes
 

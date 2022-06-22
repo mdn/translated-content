@@ -133,4 +133,3 @@ Array.from(myEmptyIterable);  // []
 - {{jsxref("Map")}}
 - [ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)
 - [for…of](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
-</ul>

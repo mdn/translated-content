@@ -15,7 +15,9 @@ Le constructeur **`Extendable.MessageEvent()`** crée une nouvelle instance d'un
 
 ## Syntaxe
 
-    var myEME = new ExtendableMessageEvent(type, init);
+```js
+var myEME = new ExtendableMessageEvent(type, init);
+```
 
 ### Paramètres
 

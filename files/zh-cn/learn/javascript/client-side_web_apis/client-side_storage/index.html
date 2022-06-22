@@ -605,7 +605,7 @@ function deleteItem(e) {
 }</pre>
  </li>
  <li>
-  <p>以下片段是从内部<code>fetchVideoFromNetwork()</code>获取的 - 这里我们使用两个单独的<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>WindowOrWorkerGlobalScope.fetch()</code></a>请求获取视频的 MP4 和 WebM 版本。然后，我们使用该<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Blob" title="Blob 对象表示一个不可变、原始数据的类文件对象。Blob 表示的不一定是JavaScript原生格式的数据。File 接口基于Blob，继承了 blob 的功能并将其扩展使其支持用户系统上的文件。"><code>Body.blob()</code></a>方法将每个响应的主体提取为 blob，为我们提供可以在以后存储和显示的视频的对象表示。</p>
+  <p>以下片段是从内部<code>fetchVideoFromNetwork()</code>获取的 - 这里我们使用两个单独的<a href="/zh-CN/docs/Web/API/Fetch"><code>fetch()</code></a>请求获取视频的 MP4 和 WebM 版本。然后，我们使用该<a href="/zh-CN/docs/Web/API/Blob"><code>Body.blob()</code></a>方法将每个响应的主体提取为 blob，为我们提供可以在以后存储和显示的视频的对象表示。</p>
 
   <p>我们在这里遇到了一个问题 - 这两个请求都是异步的，但我们只想在两个 promises 都满足时尝试显示或存储视频。幸运的是，有一种处理这种问题的内置方法 - <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all" title="Promise.all(iterable) 方法返回一个 Promise 实例，此实例在 iterable 参数内所有的 promise 都“完成（resolved）”或参数中不包含 promise 时回调完成（resolve）；如果参数中  promise 有一个失败（rejected），此实例回调失败（reject），失败原因的是第一个失败 promise 的结果。"><code>Promise.all()</code></a>。这需要一个参数 - 引用您要检查放置在数组中的履行的所有单个承诺 - 并且本身是基于承诺的。</p>
 
@@ -745,7 +745,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <p>在这个块中，我们<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CacheStorage/match" title="CacheStorage 接口(可适用于全局性caches) 的 match() 方法检查给定的Request 对象或url字符串是否是一个已存储的 Response 对象的key. 这个方法针对 Response 返回一个 Promise ，如果没有匹配则返回 undefined 。"><code>CacheStorage.match()</code></a>用来检查是否可以在任何缓存中找到匹配的请求（即匹配 URL）。如果未找到匹配，或者<code>undefined</code>如果未找到匹配，则此承诺将满足匹配的响应。</p>
 
-<p>如果找到匹配项，我们只需将其作为自定义响应返回。如果没有，我们从网络中<a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">获取（）</a>响应并返回该响应。</p>
+<p>如果找到匹配项，我们只需将其作为自定义响应返回。如果没有，我们从网络中<a href="/en-US/docs/Web/API/fetch">获取（）</a>响应并返回该响应。</p>
 
 <pre class="brush: js notranslate">self.addEventListener('fetch', function(e) {
   console.log(e.request.url);

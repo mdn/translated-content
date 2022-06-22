@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 <h2 id="撰寫正規表達模式">撰寫正規表達模式</h2>
 
-<p>正規表達模式由數個簡易字元組成，例如 <code>/abc/</code>，或是由簡易字元及特殊符號組合而成，例如 <code>/ab*c/</code>、<code>/Chapter (\d+)\.\d*/ )</code>。最後一個範例用到了括號，這在正規表達式中用作記憶組，使用括號的匹配將會被留到後面使用，在 {{ web.link("#Using_Parenthesized_Substring_Matches", "使用帶括號的配對子字串 Using Parenthesized Substring Matches") }} 有更多解釋。</p>
+<p>正規表達模式由數個簡易字元組成，例如 <code>/abc/</code>，或是由簡易字元及特殊符號組合而成，例如 <code>/ab*c/</code>、<code>/Chapter (\d+)\.\d*/ )</code>。最後一個範例用到了括號，這在正規表達式中用作記憶組，使用括號的匹配將會被留到後面使用，在<a href="#Using_Parenthesized_Substring_Matches">使用帶括號的配對子字串</a>有更多解釋。</p>
 
 <h3 id="使用簡易模式">使用簡易模式</h3>
 
@@ -367,7 +367,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 <h3 id="使用括號">使用括號 </h3>
 
-<p>Parentheses around any part of the regular expression pattern causes that part of the matched substring to be remembered. Once remembered, the substring can be recalled for other use, as described in {{ web.link("#Using_parenthesized_substring_matches", "Using Parenthesized Substring Matches") }}.</p>
+<p>Parentheses around any part of the regular expression pattern causes that part of the matched substring to be remembered. Once remembered, the substring can be recalled for other use, as described in <a href="#Using_parenthesized_substring_matches">Using Parenthesized Substring Matches</a>.</p>
 
 <p>For example, the pattern <code>/Chapter (\d+)\.\d*/</code> illustrates additional escaped and special characters and indicates that part of the pattern should be remembered. It matches precisely the characters 'Chapter ' followed by one or more numeric characters (<code>\d</code> means any numeric character and <code>+</code> means 1 or more times), followed by a decimal point (which in itself is a special character; preceding the decimal point with \ means the pattern must look for the literal character '.'), followed by any numeric character 0 or more times (<code>\d</code> means numeric character, <code>*</code> means 0 or more times). In addition, parentheses are used to remember the first matched numeric characters.</p>
 
@@ -473,7 +473,7 @@ var myArray = myRe.exec('cdbbdbsbz');
   <tr>
    <td rowspan="2"><code>myRe</code></td>
    <td><code>lastIndex</code></td>
-   <td>The index at which to start the next match. (This property is set only if the regular expression uses the g option, described in {{ web.link("#Advanced_searching_with_flags", "Advanced Searching With Flags") }}.)</td>
+   <td>The index at which to start the next match. (This property is set only if the regular expression uses the g option, described in <a href="#Advanced_searching_with_flags">Advanced Searching With Flags</a>.)</td>
    <td><code>5</code></td>
   </tr>
   <tr>

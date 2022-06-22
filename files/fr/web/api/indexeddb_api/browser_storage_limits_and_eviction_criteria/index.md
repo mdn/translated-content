@@ -32,12 +32,13 @@ Par défaut, le stockage temporaire sera utilisé dans la plupart des contextes 
 
 Dans Firefox, vous pouvez choisir le type de stockage que vous souhaitez utiliser en incluant une option propriétaire — `storage` — lorsque vous créez une base de données IndexedDB en utilisant {{domxref ("IDBFactory.open ()", "open ()")}} :
 
-- ```js
-  var request = indexedDB.open("myDatabase", { version: 1, storage: "persistent" });
-  ```
-- ```js
-  var request = indexedDB.open("myDatabase", { version: 1, storage: "temporary" });
-  ```
+```js
+var request = indexedDB.open("myDatabase", { version: 1, storage: "persistent" });
+```
+
+```js
+var request = indexedDB.open("myDatabase", { version: 1, storage: "temporary" });
+```
 
 Dans Firefox, quand le stockage persistant est choisi, l'utilisateur reçoit une fenêtre de dialogue d'interface utilisateur pour l'avertir que ces données persisteront et lui demander s'il en est satisfait.
 

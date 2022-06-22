@@ -16,7 +16,9 @@ Cette pseudo-classe est principalement destinée aux développeurs de thèmes.
 
 ## Syntaxe
 
-    :-moz-loading
+```css
+:-moz-loading
+```
 
 ## Exemples
 

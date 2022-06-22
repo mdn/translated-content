@@ -58,7 +58,7 @@ L'objet `WebAssembly` est notamment utilisé pour :
 
 ## Exemples
 
-L'exemple suivant (cf. le fichier [`instantiate-streaming.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) sur GitHub et [le résultat obtenu](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)) permet de récupérer le module WebAssembly via un flux depuis une source, de le compiler, puis de l'instancier. La promesse est résolue avec un objet `ResultObject`. La méthode `instantiateStreaming()` accepte une promesse pour l'argument {{domxref("Response")}}, on peut lui passer directement un appel à {{domxref("WindowOrWorkerGlobalScope.fetch()")}} qui passera ensuite la réponse à la fonction lors de la complétion de la promesse.
+L'exemple suivant (cf. le fichier [`instantiate-streaming.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) sur GitHub et [le résultat obtenu](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)) permet de récupérer le module WebAssembly via un flux depuis une source, de le compiler, puis de l'instancier. La promesse est résolue avec un objet `ResultObject`. La méthode `instantiateStreaming()` accepte une promesse pour l'argument {{domxref("Response")}}, on peut lui passer directement un appel à [`fetch()`](/fr/docs/Web/API/fetch) qui passera ensuite la réponse à la fonction lors de la complétion de la promesse.
 
 ```js
 var importObject = { imports: { imported_func: arg => console.log(arg) } };

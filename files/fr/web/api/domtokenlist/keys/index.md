@@ -9,7 +9,9 @@ La méthode **`keys()`** de l'interface {{domxref("DOMTokenList")}} renvoie un {
 
 ## Syntaxe
 
-    tokenList.keys();
+```js
+tokenList.keys();
+```
 
 ### Paramètres
 

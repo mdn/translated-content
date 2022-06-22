@@ -17,7 +17,9 @@ La fonction de transformation `perspective()`s'applique à l'élément qu'on veu
 
 ## Syntaxe
 
-    perspective(l)
+```
+perspective(l)
+```
 
 ### Valeurs
 
