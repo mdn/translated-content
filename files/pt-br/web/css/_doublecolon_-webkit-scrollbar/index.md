@@ -83,10 +83,10 @@ Estaéumapalavramuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuitolong
 </div>
 
 <div class="mostly-customized-scrollbar">
-Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br>
-And pretty tall<br>
-thing with weird scrollbars.<br>
-Who thought scrollbars could be made weeeeird?
+Estaéumapalavramuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuitolonga<br>
+E bem alta<br>
+com uma barra de rolagem estranha.<br>
+Quem diria que barras de rolagem poderiam ser estraaaanhas?
 </div>
 ```
 ### Resultado
