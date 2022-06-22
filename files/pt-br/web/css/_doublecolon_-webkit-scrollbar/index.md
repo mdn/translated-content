@@ -129,7 +129,7 @@ Não é parte de nenhum padrão.
 
 ## Veja Também
 
-- WebKit blog em [Styling Scrollbars](https://webkit.org/blog/363/styling-scrollbars/)
+- WebKit blog em [Estilizando barras de rolagem](https://webkit.org/blog/363/styling-scrollbars/)
 - [WebKit test](https://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html) para os estilos da barra de rolagem mencionados acima
 - {{CSSxRef("scrollbar-width")}}
 - {{CSSxRef("scrollbar-color")}}
