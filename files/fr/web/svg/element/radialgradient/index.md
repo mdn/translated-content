@@ -64,7 +64,7 @@ html,body,svg { height:100% }
     - Type de valeur
       - : [`<length>`](/fr/docs/Web/SVG/Content_type#length)
     - Valeur par défaut
-      - : Same as `cx`
+      - : La même que celle de `cx`
     - Peut être animé
       - : Oui
 - [`fy`](/fr/docs/Web/SVG/Attribute/fy)
@@ -72,7 +72,7 @@ html,body,svg { height:100% }
     - Type de valeur
       - : [`<length>`](/fr/docs/Web/SVG/Content_type#length)
     - Valeur par défaut
-      - : Same as `cy`
+      - : La même que celle de `cy`
     - Peut être animé
       - : Oui
 - [`gradientUnits`](/fr/docs/Web/SVG/Attribute/gradientUnits)
@@ -134,7 +134,7 @@ html,body,svg { height:100% }
   - : [Attributs d'évènements universels](/fr/docs/Web/SVG/Attribute/Events#global_event_attributes), [attributs relatifs aux évènements du document](/fr/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 - [Attributs de présentation](/fr/docs/Web/SVG/Attribute/Presentation)
   - : Notamment [`clip-path`](/fr/docs/Web/SVG/Attribute/clip-path), [`clip-rule`](/fr/docs/Web/SVG/Attribute/clip-rule), [`color`](/fr/docs/Web/SVG/Attribute/color), [`color-interpolation`](/fr/docs/Web/SVG/Attribute/color-interpolation), [`color-rendering`](/fr/docs/Web/SVG/Attribute/color-rendering), [`cursor`](/fr/docs/Web/SVG/Attribute/cursor), [`display`](/fr/docs/Web/SVG/Attribute/display), [`fill`](/fr/docs/Web/SVG/Attribute/fill), [`fill-opacity`](/fr/docs/Web/SVG/Attribute/fill-opacity), [`fill-rule`](/fr/docs/Web/SVG/Attribute/fill-rule), [`filter`](/fr/docs/Web/SVG/Attribute/filter), [`mask`](/fr/docs/Web/SVG/Attribute/mask), [`opacity`](/fr/docs/Web/SVG/Attribute/opacity), [`pointer-events`](/fr/docs/Web/SVG/Attribute/pointer-events), [`shape-rendering`](/fr/docs/Web/SVG/Attribute/shape-rendering), [`stroke`](/fr/docs/Web/SVG/Attribute/stroke), [`stroke-dasharray`](/fr/docs/Web/SVG/Attribute/stroke-dasharray), [`stroke-dashoffset`](/fr/docs/Web/SVG/Attribute/stroke-dashoffset), [`stroke-linecap`](/fr/docs/Web/SVG/Attribute/stroke-linecap), [`stroke-linejoin`](/fr/docs/Web/SVG/Attribute/stroke-linejoin), [`stroke-miterlimit`](/fr/docs/Web/SVG/Attribute/stroke-miterlimit), [`stroke-opacity`](/fr/docs/Web/SVG/Attribute/stroke-opacity), [`stroke-width`](/fr/docs/Web/SVG/Attribute/stroke-width), [`transform`](/fr/docs/Web/SVG/Attribute/transform), [`vector-effect`](/fr/docs/Web/SVG/Attribute/vector-effect), [`visibility`](/fr/docs/Web/SVG/Attribute/visibility)
-- Attributs XLink
+- Attributs `xlink`
   - : [`xlink:href`](/fr/docs/Web/SVG/Attribute/xlink:href), [`xlink:title`](/fr/docs/Web/SVG/Attribute/xlink:title)
 
 ## Notes d'utilisation

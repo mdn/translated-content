@@ -52,11 +52,11 @@ Cette propriété peut être définie selon deux formes&nbsp;:
 - `character-variant()`
   - : Cette fonction active l'utilisation d'un ensemble de caractères stylistiques alternatifs. Elle est semblable à `styleset()` mais n'implique pas de cohérence entre les différents caractères. Avec cette valeur, les différents caractères peuvent avoir un style indépendant qui peut ne pas être cohérent. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Elle correspond à la valeur OpenType `cvXY` (par exemple `cv02`).
 - `swash()`
-  - : Cette fonction active l'affichage des glypes [pour les lettres ornées](https://fr.wikipedia.org/wiki/Lettre_orn%C3%A9e). Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Elle correspond aux valeurs OpenType `swsh` et `cswh` (par exemple `swsh 2` ou `cswh 2`).
+  - : Cette fonction active l'affichage des glyphes [pour les lettres ornées](https://fr.wikipedia.org/wiki/Lettre_ornée). Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Elle correspond aux valeurs OpenType `swsh` et `cswh` (par exemple `swsh 2` ou `cswh 2`).
 - `ornaments()`
   - : Cette fonction active l'affichage des ornements tels que les [fleurons](https://fr.wikipedia.org/wiki/Fleuron_(typographie)) et autres casseaux. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType `ornm` (par exemple `ornm 2`).
 
-    > **Note :** afin de préserver la sémantique de la fonte, les fondeurs sont invités à ne pas créer de casseaux qui correspondent aux caractères Unicode déjà définis comme variantes d'ornement pour la puce (U+2022). De nombreuses fontes passent outre cette règle et perdent ainsi en qualité.
+    > **Note :** Afin de préserver la sémantique de la fonte, les fondeurs sont invités à ne pas créer de casseaux qui correspondent aux caractères Unicode déjà définis comme variantes d'ornement pour la puce (`U+2022`). De nombreuses fontes passent outre cette règle et perdent ainsi en qualité.
 
 - `annotation()`
   - : Cette fonction active l'affichage des annotations (telles que les chiffres entourés ou les caractères inversés). Le paramètre est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType `nalt` (par exemple `nalt 2`).
@@ -71,14 +71,16 @@ Cette propriété peut être définie selon deux formes&nbsp;:
 
 ## Exemples
 
-### HTML
+### Activer l'affichage de glyphes pour les lettres ornées
+
+#### HTML
 
 ```html
 <p>MDN c'est là !</p>
 <p class="variant">MDN c'est là !</p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 @font-feature-values "Leitura Display Swashes" {
@@ -95,7 +97,7 @@ p {
 }
 ```
 
-### Résultat
+#### Résultat
 
 > **Note :** Pour que cet exemple fonctionne, il faut avoir installé la fonte Open Type Leitura Display Swashes. Une version de test est disponible sur [fontsgeek.com](https://fontsgeek.com).
 

@@ -33,7 +33,7 @@ Il y a différents types de positionnement que vous pouvez appliquer à des él�
 
 ## Positionnement statique
 
-Le positionnement statique` est celui reçu par défaut par chaque élément. Cela veut tout simplement dire «&nbsp;positionner l'élément selon le flux normal, rien de spécial à voir ici&nbsp;».
+Le positionnement statique est celui reçu par défaut par chaque élément. Cela veut tout simplement dire «&nbsp;positionner l'élément selon le flux normal, rien de spécial à voir ici&nbsp;».
 
 Pour illustrer ce positionnement (et disposer d'exemple qui nous servira pour les prochaines sections), ajoutez tout d'abord une classe `positioned` pour le deuxième [`<p>`](/fr/docs/Web/HTML/Element/p) dans le HTML&nbsp;:
 
@@ -117,17 +117,17 @@ span {
 
 {{EmbedLiveSample('', '100%', 500)}}
 
-Cool, n'est-ce-pas&nbsp;? Oui, mais ce n'était probablement pas ce à quoi vous vous attendiez. Pourquoi le déplacement s'est‑il effectué vers le bas et à droite si nous avons défini `top` (haut) et `left` (gauche)&nbsp;? Même si cela peut paraître illogique, c'est la façon dont fonctionne le positionnement relatif. Songez à une force invisible poussant le côté spécifié de l'élément à positionner, le déplaçant ainsi dans la direction opposée. Par exemple, si nous spécifions `top: 30px;`, une force pousse le haut de la boîte, entraînant son déplacement vers le bas de 30px.
+Cool, n'est-ce pas&nbsp;? Oui, mais ce n'était probablement pas ce à quoi vous vous attendiez. Pourquoi le déplacement s'est‑il effectué vers le bas et à droite si nous avons défini `top` (haut) et `left` (gauche)&nbsp;? Même si cela peut paraître illogique, c'est la façon dont fonctionne le positionnement relatif. Songez à une force invisible poussant le côté spécifié de l'élément à positionner, le déplaçant ainsi dans la direction opposée. Par exemple, si nous spécifions `top: 30px;`, une force pousse le haut de la boîte, entraînant son déplacement vers le bas de 30px.
 
 > **Note :** À ce stade de l'article, vous pouvez retrouver un exemple ici [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/2_relative-positioning.html)).
 
 ## Positionnement absolu
 
-Le positionnement absolu nous apporte des résultats bien différents. 
+Le positionnement absolu nous apporte des résultats bien différents.
 
 ### Appliquer `position: absolute`
 
-Modifions la déclaration de `position` dans le code&nbsp;
+Modifions la déclaration de `position` dans le code&nbsp;:
 
 ```css
 position: absolute;
@@ -259,9 +259,9 @@ p:nth-of-type(1) {
 
 À ce stade, vous verrez le premier paragraphe coloré en vert, déplacé hors du cours normal des documents et positionné un peu au-dessus de l'endroit où il se trouvait à l'origine. Il est également empilé sous le paragraphe `.positioned` original, là où les deux se chevauchent. C'est parce que le paragraphe `.positioned` est le deuxième paragraphe dans l'ordre du code source HTML&nbsp;; les éléments positionnés en dernier dans l'ordre du code source l'emportent sur les éléments positionnés plus en amont dans l'ordre du code source.
 
-Est‑il possible de changer l'ordre d'empilement&nbsp;? Oui, vous le pouvez avec la propriété [`z-index`](/fr/docs/Web/CSS/z-index). «&nbsp;<i lang="en">z-index</i>&nbsp;» est une référence à l'axe **z**. Vous vous souvenez peut-être de points précédents du cours où nous avions discuté des pages Web en utilisant des coordonnées horizontales (axe x pour les abscisses) et verticales (axe y pour les ordonnées) pour déterminer le positionnement de choses comme les images de fond et les décalages d'ombres portées. (0,0) est en haut à gauche de la page (ou de l'élément), et les axes x et y vont respectivement vers la droite et vers le bas de la page (pour les langues s'écrivant de gauche à droite, en tout cas).
+Est‑il possible de changer l'ordre d'empilement&nbsp;? Oui, vous le pouvez avec la propriété [`z-index`](/fr/docs/Web/CSS/z-index). «&nbsp;<i lang="en">z-index</i>&nbsp;» est une référence à l'axe **z**. Vous vous souvenez peut-être de points précédents du cours où nous avions discuté des pages Web en utilisant des coordonnées horizontales (axe x pour les abscisses) et verticales (axe y pour les ordonnées) pour déterminer le positionnement de choses comme les images de fond et les décalages d'ombres portées. `(0,0)` est en haut à gauche de la page (ou de l'élément), et les axes x et y vont respectivement vers la droite et vers le bas de la page (pour les langues s'écrivant de gauche à droite, en tout cas).
 
-Les pages web ont aussi un axe z&nbsp;: une ligne imaginaire qui va de la surface de votre écran, vers votre visage. Les valeurs de [`z-index`](/fr/docs/Web/CSS/z-index) affectent l'emplacement des éléments positionnés sur cet axe&nbsp;; les valeurs positives les déplacent vers le haut de la pile, et les valeurs négatives les déplacent vers le bas de la pile. Par défaut, les éléments positionnés ont tous un `z-index`  `auto`, qui est effectivement 0.
+Les pages web ont aussi un axe z&nbsp;: une ligne imaginaire qui va de la surface de votre écran, vers votre visage. Les valeurs de [`z-index`](/fr/docs/Web/CSS/z-index) affectent l'emplacement des éléments positionnés sur cet axe&nbsp;; les valeurs positives les déplacent vers le haut de la pile, et les valeurs négatives les déplacent vers le bas de la pile. Par défaut, la propriété `z-index` des éléments positionnés vaut `auto`, qui est effectivement 0.
 
 Pour modifier l'ordre d'empilement, ajoutez la déclaration suivante à la règle `p:nth-of-type(1)`&nbsp;:
 
@@ -326,11 +326,11 @@ Notez que `z-index` n'accepte que des valeurs d'index sans unité&nbsp;; vous ne
 
 ## Positionnement fixe
 
-Voyons maintenant le positionnement fixe. Cela fonctionne exactement de la même manière que le positionnement absolu, avec une différence essentielle : alors que le positionnement absolu fixe un élément en place par rapport à l'élément [`<html>`](/fr/docs/Web/HTML/Element/html) ou son parent positionné le plus proche, le positionnement fixe fige un élément en place par rapport à la vue par la fenêtre du navigateur elle-même. Cela signifie que vous pouvez créer des éléments d'interface utilisateur utiles qui sont fixés en place, comme des menus de navigation persistants.
+Voyons maintenant le positionnement fixe. Cela fonctionne exactement de la même manière que le positionnement absolu, avec une différence essentielle&nbsp;: alors que le positionnement absolu fixe un élément en place par rapport à l'élément [`<html>`](/fr/docs/Web/HTML/Element/html) ou son parent positionné le plus proche, le positionnement fixe fige un élément en place par rapport à la vue par la fenêtre du navigateur elle-même. Cela signifie que vous pouvez créer des éléments d'interface utilisateur utiles qui sont fixés en place, comme des menus de navigation persistants.
 
 Voici un exemple simple pour montrer ce que nous voulons dire. D'abord, supprimez la règle de `p:nth-of-type(1)` et `.positioned` de la CSS.
 
-Maintenant, mettez à jour la règle `body` : supprimez la déclaration `position : relative ;` et ajoutez une hauteur fixe, ainsi :
+Maintenant, mettez à jour la règle `body`. Supprimez la déclaration `position: relative;` et ajoutez une hauteur fixe, ainsi&nbsp;:
 
 ```css
 body {
@@ -415,7 +415,7 @@ p:nth-of-type(1) {
 
 ## Positionnement adhérent (<i lang="en">sticky</i>)
 
-Il existe une autre valeur de positionnement disponible&nbsp;: `position : sticky`. Elle est un peu plus récente que les autres. Il s'agit essentiellement d'un hybride entre position relative et position fixe&nbsp;: l'élément à positionner est en positionnement relatif jusqu'à un certain seuil (par exemple, 10px du haut de la fenêtre), seuil au-delà duquel il est en positionnement fixe.
+Il existe une autre valeur de positionnement disponible&nbsp;: `position: sticky`. Elle est un peu plus récente que les autres. Il s'agit essentiellement d'un hybride entre position relative et position fixe&nbsp;: l'élément à positionner est en positionnement relatif jusqu'à un certain seuil (par exemple, 10px du haut de la fenêtre), seuil au-delà duquel il est en positionnement fixe.
 
 ### Exemple simple
 
@@ -494,7 +494,7 @@ Une utilisation courante et pleine d'intérêt de `position: sticky` consiste à
 </dl>
 ```
 
-Le CSS pourrait ressembler à ce qui suit. Dans le flux normal, les éléments [`<dt>`](/fr/docs/Web/HTML/Element/dt) défilent avec le contenu. Quand on ajoute `position : sticky` à l'élément [`<dt>`](/fr/docs/Web/HTML/Element/dt) avec une valeur [`top`](/fr/docs/Web/CSS/top) de 0, les navigateurs prenant en charge ce positionnement colleront les titres au sommet de la vue de la fenêtre au fur et à mesure qu'ils atteignent cette position. Chaque en-tête suivant remplacera l'en-tête précédent au fur et à mesure que le contenu défile.
+Le CSS pourrait ressembler à ce qui suit. Dans le flux normal, les éléments [`<dt>`](/fr/docs/Web/HTML/Element/dt) défilent avec le contenu. Quand on ajoute `position: sticky` à l'élément [`<dt>`](/fr/docs/Web/HTML/Element/dt) avec une valeur [`top`](/fr/docs/Web/CSS/top) de 0, les navigateurs prenant en charge ce positionnement colleront les titres au sommet de la vue de la fenêtre au fur et à mesure qu'ils atteignent cette position. Chaque en-tête suivant remplacera l'en-tête précédent au fur et à mesure que le contenu défile.
 
 ```css
 dt {
@@ -522,7 +522,6 @@ Les éléments ainsi positionnés «&nbsp;adhèrent&nbsp;» au plus proche ancê
 
 > **Note :** À ce stade de l'article, vous pouvez voir un exemple en direct ici [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html)).
 
-
 ## Testez vos compétences&nbsp;!
 
 Vous avez atteint la fin de cet article, mais avez-vous retenu les informations les plus importantes&nbsp;? Vous pouvez évaluer ce que vous avez retenu avant de poursuivre&nbsp;: voir [Testez vos compétences&nbsp;: le positionnement](/fr/docs/Learn/CSS/CSS_layout/Position_skills).
@@ -542,7 +541,7 @@ On espère que vous vous êtes amusé⋅e à jouer avec le positionnement de bas
 
 - [Introduction à la disposition en CSS](/fr/docs/Learn/CSS/CSS_layout/Introduction)
 - [Le flux normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
+- [Les boîtes flexibles (<i lang="en">Flexbox</i>)](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
 - [Les grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids)
 - [Le flottement](/fr/docs/Learn/CSS/CSS_layout/Floats)
 - **Le positionnement**

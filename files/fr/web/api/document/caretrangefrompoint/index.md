@@ -56,9 +56,9 @@ function insertBreakAtPoint(e) {
     textNode = range.offsetNode;
     offset = range.offset;
   } else {
-    document.body.textContent = "[Ce navigateur ne supporte ni"
-      + " document.caretRangeFromPoint"
-      + " ni document.caretPositionFromPoint.]";
+    document.body.textContent = '[Ce navigateur ne supporte ni'
+      + ' document.caretRangeFromPoint'
+      + ' ni document.caretPositionFromPoint.]';
     return;
   }
   // On opère uniquement sur le texte
@@ -69,7 +69,7 @@ function insertBreakAtPoint(e) {
   }
 }
 
-let paragraphs = document.getElementsByTagName("p");
+let paragraphs = document.getElementsByTagName('p');
 for (let i = 0; i < paragraphs.length; i++) {
   paragraphs[i].addEventListener('click', insertBreakAtPoint, false);
 }

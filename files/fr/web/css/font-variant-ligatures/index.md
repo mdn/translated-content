@@ -45,7 +45,7 @@ La valeur de cette propriété peut être l'un des mots-clés définis ci-après
   - : Cette valeur désactive toutes les ligatures et formes contextuelles, y compris celles couramment utilisées.
 
 - `<common-lig-values>`
-  - : Ces valeurs contrôlent les ligatures les plus courantes, comme `fi`, `ffi`, `th` et autres. Elles correspondent aux valeurs OpenType `liga` and `clig`. Deux valeurs sont possibles&nbsp;:
+  - : Ces valeurs contrôlent les ligatures les plus courantes, comme `fi`, `ffi`, `th` et autres. Elles correspondent aux valeurs OpenType `liga` et `clig`. Deux valeurs sont possibles&nbsp;:
 
     - `common-ligatures`&nbsp;: active ces ligatures. Notez que la valeur `normal` active ces ligatures.
     - `no-common-ligatures`&nbsp;: désactive ces ligatures.
