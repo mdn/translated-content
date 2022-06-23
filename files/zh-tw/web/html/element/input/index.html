@@ -202,7 +202,7 @@ translation_of: Web/HTML/Element/input
  </dd>
  <dt>{{htmlattrdef("disabled")}}</dt>
  <dd>
- <p>This Boolean attribute indicates that the form control is not available for interaction. In particular, the <code>click</code> event <a class="external" href="https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute">will not be dispatched</a> on disabled controls. Also, a disabled control's value isn't submitted with the form.</p>
+ <p>This Boolean attribute indicates that the form control is not available for interaction. In particular, the <code>click</code> event <a href="https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute">will not be dispatched</a> on disabled controls. Also, a disabled control's value isn't submitted with the form.</p>
 
  <p>Unlike other browsers, Firefox will by default <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state</a> of an <code>&lt;input&gt;</code> across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.</p>
  </dd>
@@ -302,7 +302,7 @@ translation_of: Web/HTML/Element/input
  <dd>The name of a {{HTMLElement("map")}} element to be used as an image map.</dd>
  <dt>{{htmlattrdef("value")}}</dt>
  <dd>The initial value of the control. This attribute is optional except when the value of the <strong>type</strong> attribute is <code>radio</code> or <code>checkbox</code>.<br>
- Note that when reloading the page, Gecko and IE <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">will ignore the value specified in the HTML source</a>, if the value was changed before the reload.</dd>
+ Note that when reloading the page, Gecko and IE <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">will ignore the value specified in the HTML source</a>, if the value was changed before the reload.</dd>
  <dt>{{htmlattrdef("width")}} {{HTMLVersionInline("5")}}</dt>
  <dd>If the value of the <strong>type</strong> attribute is <code>image</code>, this attribute defines the width of the image displayed for the button.</dd>
 </dl>
@@ -412,5 +412,5 @@ e.value = "foo";
 
 <ul>
  <li>Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.</li>
- <li><a class="external" href="http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text">Cross-browser HTML5 placeholder text</a></li>
+ <li><a href="http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text">Cross-browser HTML5 placeholder text</a></li>
 </ul>

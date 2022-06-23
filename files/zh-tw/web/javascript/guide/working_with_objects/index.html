@@ -93,10 +93,10 @@ myCar.year = 1969</pre>
 
 <h2 id="Enumerate_the_properties_of_an_object">Enumerate the properties of an object</h2>
 
-<p>Starting with <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla" title="en-US/docs/JavaScript/ECMAScript 5 support in Mozilla">ECMAScript 5</a>, there are three native ways to list/traverse object properties:</p>
+<p>Starting with <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla">ECMAScript 5</a>, there are three native ways to list/traverse object properties:</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in" title="en-US/docs/JavaScript/Reference/Statements/for...in">for...in</a></code> loops<br>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> loops<br>
   This method traverses all enumerable properties of an object and its prototype chain</li>
  <li>{{jsxref("Object.keys", "Object.keys(o)")}}<br>
   This method returns an array with all the own (not in the prototype chain) enumerable properties' names ("keys") of an object <code>o</code>.</li>
@@ -269,7 +269,7 @@ fish.displayType(); // Output:Fishes</pre>
 car1.color = 'black';
 </pre>
 
-<p>See the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype" title="en-US/docs/JavaScript/Reference/Global Objects/Function/prototype"><code>prototype</code> property</a> of the <code>Function</code> object in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a> for more information.</p>
+<p>See the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype"><code>prototype</code> property</a> of the <code>Function</code> object in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a> for more information.</p>
 
 <h2 id="Defining_methods">Defining methods</h2>
 
@@ -388,9 +388,7 @@ console.log(o.a); // 25
  <li><code>o.c</code> — a setter that sets the value of <code>o.a</code> to half of the value <code>o.c</code> is being set to</li>
 </ul>
 
-<p>Please note that function names of getters and setters defined in an object literal using "[gs]et <em>property</em>()" (as opposed to <code>__define[GS]etter__</code> ) are not the names of the getters themselves, even though the <code>[gs]et <em>propertyName</em>(){ }</code> syntax may mislead you to think otherwise. To name a function in a getter or setter using the "[gs]et <em>property</em>()" syntax, define an explicitly named function programmatically using <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty" title="en-US/docs/Core JavaScript 1.5 Reference/Global
-Objects/Object/defineProperty">Object.defineProperty</a></code> (or the <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineGetter" title="en-US/docs/Core JavaScript 1.5 Reference/Global
-Objects/Object/defineGetter">Object.prototype.__defineGetter__</a></code> legacy fallback).</p>
+<p>Please note that function names of getters and setters defined in an object literal using "[gs]et <em>property</em>()" (as opposed to <code>__define[GS]etter__</code> ) are not the names of the getters themselves, even though the <code>[gs]et <em>propertyName</em>(){ }</code> syntax may mislead you to think otherwise. To name a function in a getter or setter using the "[gs]et <em>property</em>()" syntax, define an explicitly named function programmatically using <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code> (or the <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineGetter">Object.prototype.__defineGetter__</a></code> legacy fallback).</p>
 
 <p>The following code illustrates how getters and setters can extend the {{jsxref("Date")}} prototype to add a <code>year</code> property to all instances of the predefined <code>Date</code> class. It uses the <code>Date</code> class's existing <code>getFullYear</code> and <code>setFullYear</code> methods to support the <code>year</code> property's getter and setter.</p>
 

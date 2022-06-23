@@ -24,7 +24,7 @@ translation_of: Learn/JavaScript/Building_blocks/Functions
  <tbody>
   <tr>
    <th scope="row">前提条件：</th>
-   <td>基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读： <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a>（JS 的入门）。</td>
+   <td>基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读： <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a>（JS 的入门）。</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -92,7 +92,7 @@ console.log(madeAString);
 
 <h2 id="自定义函数">自定义函数</h2>
 
-<p>您在过去的课程中还看到很多定制功能 - 在代码中定义的功能，而不是在浏览器中。每当您看到一个自定义名称后面都带有括号，那么您使用的是自定义函数。在我们的<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">循环文章中</a>的<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a>示例（另见完整的<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">源代码</a>）中，我们包括一个如下所示的自定义函数：<code>draw()</code></p>
+<p>您在过去的课程中还看到很多定制功能 - 在代码中定义的功能，而不是在浏览器中。每当您看到一个自定义名称后面都带有括号，那么您使用的是自定义函数。在我们的<a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">循环文章中</a>的<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a>示例（另见完整的<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">源代码</a>）中，我们包括一个如下所示的自定义函数：<code>draw()</code></p>
 
 <pre class="brush: js notranslate">function draw() {
   ctx.clearRect(0,0,WIDTH,HEIGHT);
@@ -104,7 +104,7 @@ console.log(madeAString);
   }
 }</pre>
 
-<p>该函数在<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="使用HTML &lt;canvas>元素与canvas脚本API来绘制图形和动画。"><code>&lt;canvas&gt;</code></a>元素中绘制 100 个随机圆。每次我们想要这样做，我们可以使用这个函数来调用这个功能</p>
+<p>该函数在<a href="/en-US/docs/Web/HTML/Element/canvas">元素与canvas脚本API来绘制图形和动画。"><code>&lt;canvas&gt;</code></a>元素中绘制 100 个随机圆。每次我们想要这样做，我们可以使用这个函数来调用这个功能</p>
 
 <pre class="brush: js notranslate">draw();</pre>
 
@@ -114,7 +114,7 @@ console.log(madeAString);
   return Math.floor(Math.random()*number);
 }</pre>
 
-<p>我们需要这个函数，因为浏览器的内置<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random（）</a>函数只生成一个 0 到 1 之间的随机十进制数。我们想要一个 0 到一个指定数字之间的随机整数。</p>
+<p>我们需要这个函数，因为浏览器的内置<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random（）</a>函数只生成一个 0 到 1 之间的随机十进制数。我们想要一个 0 到一个指定数字之间的随机整数。</p>
 
 <div class="hidden"></div>
 
@@ -200,11 +200,11 @@ anotherGreeting();</pre>
 <p><strong>Note</strong>: 参数有时称为参数（arguments），属性（properties）或甚至属性（attributes）</p>
 </div>
 
-<p>例如，浏览器的内置<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random（）</a>函数不需要任何参数。当被调用时，它总是返回 0 到 1 之间的随机数：</p>
+<p>例如，浏览器的内置<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random（）</a>函数不需要任何参数。当被调用时，它总是返回 0 到 1 之间的随机数：</p>
 
 <pre class="brush: js notranslate">var myNumber = Math.random();</pre>
 
-<p>浏览器的内置字符串<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace（）</a>函数需要两个参数：在主字符串中查找的子字符串，以及用以下替换该字符串的子字符串：</p>
+<p>浏览器的内置字符串<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace（）</a>函数需要两个参数：在主字符串中查找的子字符串，以及用以下替换该字符串的子字符串：</p>
 
 <pre class="brush: js notranslate">var myText = 'I am a string';
 var newString = myText.replace('string', 'sausage');</pre>
@@ -213,7 +213,7 @@ var newString = myText.replace('string', 'sausage');</pre>
 <p><strong>Note</strong>:当您需要指定多个参数时，它们以逗号分隔。</p>
 </div>
 
-<p>还应该注意，有时参数不是必须的 —— 您不必指定它们。如果没有，该功能一般会采用某种默认行为。作为示例，数组 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join（）</a>函数的参数是可选的：</p>
+<p>还应该注意，有时参数不是必须的 —— 您不必指定它们。如果没有，该功能一般会采用某种默认行为。作为示例，数组 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join（）</a>函数的参数是可选的：</p>
 
 <pre class="brush: js notranslate">var myArray = ['I', 'love', 'chocolate', 'frogs'];
 var madeAString = myArray.join(' ');
@@ -289,7 +289,7 @@ function greeting() {
 <pre class="brush: js notranslate">output(y);
 output(z);</pre>
 
-<p>这两个都应该返回错误沿“ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError：y 未定义</a> ”。这是为什么？由于函数作用域 - <code>y和</code><code>z</code>被锁定在函数<code>a()</code>和<code>b()</code>函数中，所以<code>output()</code>从全局作用域调用时无法访问它们。</p>
+<p>这两个都应该返回错误沿“ <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError：y 未定义</a> ”。这是为什么？由于函数作用域 - <code>y和</code><code>z</code>被锁定在函数<code>a()</code>和<code>b()</code>函数中，所以<code>output()</code>从全局作用域调用时无法访问它们。</p>
 
 <p>        5.但是，从另一个函数里面调用什么呢？尝试编辑<code>a()</code>，<code>b()</code>所以他们看起来像这样：</p>
 
@@ -408,7 +408,7 @@ function subFunction3(value) {
 
 <h2 id="测试你的技能！"><strong>测试你的技能！</strong></h2>
 
-<p>你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions">测试你的技能：函数</a>（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。</p>
+<p>你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看<a href="/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions">测试你的技能：函数</a>（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。</p>
 
 <h2 id="总结">总结</h2>
 

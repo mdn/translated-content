@@ -14,7 +14,7 @@ translation_of: Web/CSS/@font-face
 
 <h2 id="摘要">摘要</h2>
 
-<p>The <code>@font-face</code> <a href="/en-US/docs/CSS" title="CSS">CSS</a> <a href="/en-US/docs/CSS/At-rule" title="At-rule">at-rule</a> allows authors to specify online fonts to display text on their web pages. By allowing authors to provide their own fonts, <code>@font-face</code> eliminates the need to depend on the limited number of fonts users have installed on their computers. The <code>@font-face</code> at-rule may be used not only at the top level of a CSS, but also inside any <a href="/en-US/docs/CSS/At-rule#Conditional_Group_Rules" title="CSS/At-rule#Conditional_Group_Rules">CSS conditional-group at-rule</a>.</p>
+<p>The <code>@font-face</code> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/CSS/At-rule">at-rule</a> allows authors to specify online fonts to display text on their web pages. By allowing authors to provide their own fonts, <code>@font-face</code> eliminates the need to depend on the limited number of fonts users have installed on their computers. The <code>@font-face</code> at-rule may be used not only at the top level of a CSS, but also inside any <a href="/en-US/docs/CSS/At-rule#Conditional_Group_Rules">CSS conditional-group at-rule</a>.</p>
 
 <p>{{seeCompatTable}}</p>
 
@@ -44,9 +44,9 @@ translation_of: Web/CSS/@font-face
  <dt><code>&lt;font-stretch&gt;</code></dt>
  <dd>A {{cssxref("font-stretch")}} value.</dd>
  <dt><code>&lt;weight&gt;</code></dt>
- <dd>A <a href="/en-US/docs/CSS/font-weight" title="CSS/font-weight">font weight</a> value.</dd>
+ <dd>A <a href="/en-US/docs/CSS/font-weight">font weight</a> value.</dd>
  <dt><code>&lt;style&gt;</code></dt>
- <dd>A <a href="/en-US/docs/CSS/font-style" title="CSS/font-style">font style</a> value.</dd>
+ <dd>A <a href="/en-US/docs/CSS/font-style">font style</a> value.</dd>
 </dl>
 
 <p>You can specify a font on the user's local computer by name using the <code>local()</code> syntax. If that font isn't found, other sources will be tried until one is found.</p>
@@ -55,7 +55,7 @@ translation_of: Web/CSS/@font-face
 
 <p>這個範例指定一個可供下載的字型，並套用至 document 的整個 body。</p>
 
-<p><a href="/@api/deki/files/2935/=webfont-sample.html" title="/@api/deki/files/2935/=webfont-sample.html">檢視線上範例</a></p>
+<p><a href="/@api/deki/files/2935/=webfont-sample.html">檢視線上範例</a></p>
 
 <pre>&lt;html&gt;
 &lt;head&gt;
@@ -89,7 +89,7 @@ translation_of: Web/CSS/@font-face
 <h2 id="注意事項">注意事項</h2>
 
 <ul>
- <li>In Gecko, web fonts are subject to the same domain restriction (font files must be on the same domain as the page using them), unless <a href="/en-US/docs/HTTP_access_control" title="HTTP access control">HTTP access controls</a> are used to relax this restriction.</li>
+ <li>In Gecko, web fonts are subject to the same domain restriction (font files must be on the same domain as the page using them), unless <a href="/en-US/docs/HTTP_access_control">HTTP access controls</a> are used to relax this restriction.</li>
  <li>
   <div class="note"><strong>Note:</strong> Because there are no defined MIME types for TrueType, OpenType, and Web Open File Format (WOFF) fonts, the MIME type of the file specified is not considered.</div>
  </li>
@@ -107,11 +107,11 @@ translation_of: Web/CSS/@font-face
 <h2 id="詳見">詳見</h2>
 
 <ul>
- <li><a href="/en-US/docs/WOFF" title="About WOFF">About WOFF</a></li>
- <li><a class="external" href="http://www.fontsquirrel.com/fontface/generator">FontSquirrel @font-face generator</a></li>
- <li><a class="external" href="http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/">Beautiful fonts with @font-face</a></li>
- <li><a class="external" href="http://openfontlibrary.org/" title="http://openfontlibrary.org/">Open Font Library</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/library/ms530757(VS.85).aspx">Microsoft Developer Network (MSDN) @font-face reference</a></li>
- <li><a class="external" href="http://caniuse.com/woff">When can I use WOFF?</a></li>
- <li><a class="external" href="http://caniuse.com/svg-fonts">When can I use SVG Fonts?</a></li>
+ <li><a href="/en-US/docs/WOFF">About WOFF</a></li>
+ <li><a href="http://www.fontsquirrel.com/fontface/generator">FontSquirrel @font-face generator</a></li>
+ <li><a href="http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/">Beautiful fonts with @font-face</a></li>
+ <li><a href="http://openfontlibrary.org/">Open Font Library</a></li>
+ <li><a href="http://msdn.microsoft.com/en-us/library/ms530757(VS.85).aspx">Microsoft Developer Network (MSDN) @font-face reference</a></li>
+ <li><a href="http://caniuse.com/woff">When can I use WOFF?</a></li>
+ <li><a href="http://caniuse.com/svg-fonts">When can I use SVG Fonts?</a></li>
 </ul>

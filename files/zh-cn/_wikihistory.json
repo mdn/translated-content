@@ -13229,18 +13229,6 @@
       "linshehai"
     ]
   },
-  "Web/API/GlobalEventHandlers/oncanplay": {
-    "modified": "2020-10-15T22:15:54.774Z",
-    "contributors": [
-      "chenqingyue"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/oncanplaythrough": {
-    "modified": "2019-03-18T20:46:32.884Z",
-    "contributors": [
-      "fanruhua"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onchange": {
     "modified": "2019-09-11T00:08:58.607Z",
     "contributors": [
@@ -13299,13 +13287,6 @@
     "modified": "2019-03-23T22:07:22.391Z",
     "contributors": [
       "Silencewanghui"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ondurationchange": {
-    "modified": "2020-10-15T22:21:15.042Z",
-    "contributors": [
-      "suvyme",
-      "amehito"
     ]
   },
   "Web/API/GlobalEventHandlers/onended": {
@@ -14495,20 +14476,15 @@
     ]
   },
   "Web/API/HTMLMediaElement/canplay_event": {
-    "modified": "2019-03-18T20:49:25.869Z",
+    "modified": "2020-10-15T22:15:54.774Z",
     "contributors": [
-      "estelle",
-      "fscholz",
-      "linfengdoor",
-      "xgqfrms-GitHub"
+      "chenqingyue"
     ]
   },
   "Web/API/HTMLMediaElement/canplaythrough_event": {
-    "modified": "2019-03-18T20:49:29.441Z",
+    "modified": "2019-03-18T20:46:32.884Z",
     "contributors": [
-      "estelle",
-      "fscholz",
-      "linfengdoor"
+      "fanruhua"
     ]
   },
   "Web/API/HTMLMediaElement/controller": {
@@ -46145,6 +46121,13 @@
       "AutumnFish",
       "liuhe",
       "zhangqiong"
+    ]
+  },
+  "conflicting/Web/API/HTMLMediaElement/durationchange_event": {
+    "modified": "2020-10-15T22:21:15.042Z",
+    "contributors": [
+      "suvyme",
+      "amehito"
     ]
   },
   "conflicting/Web/API/Headers/get": {

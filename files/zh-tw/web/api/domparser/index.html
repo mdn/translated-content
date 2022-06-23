@@ -9,13 +9,13 @@ translation_of: Web/API/DOMParser
 
 <p><code>DOMParser可以將XML或是HTML格式的字串轉成</code>DOM <a href="/en-US/docs/DOM/document">文件</a>. <code>DOMParser</code>的規格請參閱<a href="http://html5.org/specs/dom-parsing.html">DOM解譯與串流化</a>.</p>
 
-<p>請注意<a href="/en-US/docs/DOM/XMLHttpRequest" title="DOM/XMLHttpRequest">XMLHttpRequest</a>解譯的是URL連結內容裡的XML與HTML文件.</p>
+<p>請注意<a href="/en-US/docs/DOM/XMLHttpRequest">XMLHttpRequest</a>解譯的是URL連結內容裡的XML與HTML文件.</p>
 
 <h2 id="產生一個_DOMParser">產生一個 DOMParser</h2>
 
 <p>" <code>new DOMParser()" 可產生DOMParser</code>.</p>
 
-<p><code>關於如何在Firefox外掛程式中產生DOMParser,</code>請參考<code><a href="/en-US/docs/nsIDOMParser" title="nsIDOMParser">nsIDOMParser</a>文件</code></p>
+<p><code>關於如何在Firefox外掛程式中產生DOMParser,</code>請參考<code><a href="/en-US/docs/nsIDOMParser">nsIDOMParser</a>文件</code></p>
 
 <h2 id="解譯_XML">解譯 XML</h2>
 
@@ -35,7 +35,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 &lt;/parsererror&gt;
 </pre>
 
-<p>解譯錯誤也會記錄在錯誤終端機中（<a href="/en-US/docs/Error_Console" title="Error Console">Error Console</a>）, 紀錄裡頭的文件URI (如下) 則為錯誤來源.</p>
+<p>解譯錯誤也會記錄在錯誤終端機中（<a href="/en-US/docs/Error_Console">Error Console</a>）, 紀錄裡頭的文件URI (如下) 則為錯誤來源.</p>
 
 <h2 id="解譯_SVG_或_HTML_文件">解譯 SVG 或 HTML 文件</h2>
 
@@ -115,8 +115,8 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 <h2 id="See_also" name="See_also">參考資料</h2>
 
 <ul>
- <li><a href="/en-US/docs/Parsing_and_serializing_XML" title="Parsing_and_serializing_XML">Parsing and serializing XML</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest" title="DOM/XMLHttpRequest">XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/XMLSerializer" title="XMLSerializer">XMLSerializer</a></li>
+ <li><a href="/en-US/docs/Parsing_and_serializing_XML">Parsing and serializing XML</a></li>
+ <li><a href="/en-US/docs/DOM/XMLHttpRequest">XMLHttpRequest</a></li>
+ <li><a href="/en-US/docs/XMLSerializer">XMLSerializer</a></li>
  <li><a href="/en-US/Add-ons/Code_snippets/HTML_to_DOM">Parsing HTML to DOM</a></li>
 </ul>

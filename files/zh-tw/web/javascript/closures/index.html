@@ -26,7 +26,7 @@ init();</pre>
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/78dg25ax/", "js,result", 250)}}</p>
 
-<p><a href="http://jsfiddle.net/xAFs9/3/" title="http://jsfiddle.net/xAFs9/">運行</a>這個程式碼並注意 <code>displayName()</code> 裡面的 <code>alert()</code> 宣告，它能顯示位於上一層的 <code>name</code> 變數。這實例在描述<em>語法作用域</em>碰上巢狀函式時，解析器（parser）會如何解讀（resolve）變數。「作用域」一詞，指的正是作用域環境在程式碼指定變數時，使用 location 來決定該變數用在哪裡的事情。巢狀函式的內部函式，能訪問在該函式作用域之外的變數。</p>
+<p><a href="http://jsfiddle.net/xAFs9/3/">運行</a>這個程式碼並注意 <code>displayName()</code> 裡面的 <code>alert()</code> 宣告，它能顯示位於上一層的 <code>name</code> 變數。這實例在描述<em>語法作用域</em>碰上巢狀函式時，解析器（parser）會如何解讀（resolve）變數。「作用域」一詞，指的正是作用域環境在程式碼指定變數時，使用 location 來決定該變數用在哪裡的事情。巢狀函式的內部函式，能訪問在該函式作用域之外的變數。</p>
 
 <h2 id="閉包">閉包</h2>
 
@@ -130,7 +130,7 @@ document.getElementById('size-16').onclick = size16;
 
 <p>JavaScript 並沒有的提供原生的方法完成這種事，不過它藉由閉包來模擬私有方法。私有方法不只能限制程式碼的存取，它還提供了強而有力的方式來管理全域命名空間，避免非必要的方法弄亂公開介面。</p>
 
-<p>以下展示如何使用閉包來定義一個能夠訪問私有函式與變數的公開函式。這種閉包的用法稱為模組設計模式(<a class="external" href="http://www.google.com/search?q=javascript+module+pattern" title="http://www.google.com/search?q=javascript+module+pattern">module pattern</a>)。</p>
+<p>以下展示如何使用閉包來定義一個能夠訪問私有函式與變數的公開函式。這種閉包的用法稱為模組設計模式(<a href="http://www.google.com/search?q=javascript+module+pattern">module pattern</a>)。</p>
 
 <pre class="brush: js">var counter = (function() {
   var privateCounter = 0;
@@ -205,7 +205,7 @@ alert(counter2.value()); /* Alerts 0 */
 
 <h2 id="在迴圈建立閉包：一個常見錯誤">在迴圈建立閉包：一個常見錯誤</h2>
 
-<p>在 ECMAScript 2015 導入 <a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/let" title="let"><code>let</code></a> 前，迴圈內建立的閉包，常會發生問題。請思考以下的範例：</p>
+<p>在 ECMAScript 2015 導入 <a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a> 前，迴圈內建立的閉包，常會發生問題。請思考以下的範例：</p>
 
 <pre class="brush: html">&lt;p id="help"&gt;Helpful notes will appear here&lt;/p&gt;
 &lt;p&gt;E-mail: &lt;input type="text" id="email" name="email"&gt;&lt;/p&gt;
@@ -300,7 +300,7 @@ function setupHelp() {
 
 setupHelp();</pre>
 
-<p>如果你不想用更多閉包的話，你可以使用 ES2015 的 <code><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Statements/let">let</a></code> 關鍵字：</p>
+<p>如果你不想用更多閉包的話，你可以使用 ES2015 的 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/let">let</a></code> 關鍵字：</p>
 
 <pre class="brush: js">function showHelp(help) {
   document.getElementById('help').innerHTML = help;

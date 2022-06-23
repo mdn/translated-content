@@ -43,7 +43,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Using_images
  </dd>
 </dl>
 
-<p>這些來源統一參照 <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts">CanvasImageSource</a>型態.</p>
+<p>這些來源統一參照 <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts">CanvasImageSource</a>型態.</p>
 
 <p>有好幾種方法能夠取得影像用於畫布.</p>
 
@@ -61,7 +61,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Using_images
 
 <h3 id="使用來自其他網域的影像">使用來自其他網域的影像</h3>
 
-<p>Using the <a href="/en-US/docs/HTML/CORS_settings_attributes" rel="internal" title="CORS settings attributes"><code>crossOrigin</code></a> attribute on an 透過{{HTMLElement("HTMLImageElement")}}的<a href="/en-US/docs/HTML/CORS_settings_attributes" rel="internal" title="CORS settings attributes"><code>crossOrigin</code></a>屬性, 我們可以要求從另一個網域載入影像來使用，若是寄存網域(thehosting domain)准許跨網路存取該影像，那麼我們便可以使用它而不用污染(taint)我們的畫布，反之，使用該影像會污染畫布(<a href="https://developer.mozilla.org/en-US/docs/HTML/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" rel="internal" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">taint the canvas</a>)。</p>
+<p>Using the <a href="/en-US/docs/HTML/CORS_settings_attributes"><code>crossOrigin</code></a> attribute on an 透過{{HTMLElement("HTMLImageElement")}}的<a href="/en-US/docs/HTML/CORS_settings_attributes"><code>crossOrigin</code></a>屬性, 我們可以要求從另一個網域載入影像來使用，若是寄存網域(thehosting domain)准許跨網路存取該影像，那麼我們便可以使用它而不用污染(taint)我們的畫布，反之，使用該影像會污染畫布(<a href="/en-US/docs/HTML/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">taint the canvas</a>)。</p>
 
 <h3 id="使用其他畫布元素">使用其他畫布元素</h3>
 
@@ -88,16 +88,16 @@ img.addEventListener("load", function() {
 img.src = 'myImage.png'; // Set source path
 </pre>
 
-<p>若是只要載入一份影像，可以用上面的方法，不過當需要載入、追蹤多個影像時，我們就需要更好的方法了，雖然管理多個影像載入已經超出本教學的範疇，然而如果有興趣的話，可以參考<a class="external" href="http://www.webreference.com/programming/javascript/gr/column3/" rel="external" title="http://www.webreference.com/programming/javascript/gr/column3/">JavaScript Image Preloader</a>這份文件.</p>
+<p>若是只要載入一份影像，可以用上面的方法，不過當需要載入、追蹤多個影像時，我們就需要更好的方法了，雖然管理多個影像載入已經超出本教學的範疇，然而如果有興趣的話，可以參考<a href="http://www.webreference.com/programming/javascript/gr/column3/">JavaScript Image Preloader</a>這份文件.</p>
 
 <h3 id="以dataURL嵌入影像">以data:URL嵌入影像</h3>
 
-<p>另一個載入影像的方法是利用<a class="external" href="/en-US/docs/data_URIs" rel="external" title="http://en.wikipedia.org/wiki/Data:_URL">data: url</a>，透過data URL可以直接將影像定義成Base64編碼的字串，然後嵌入程式碼之中.</p>
+<p>另一個載入影像的方法是利用<a href="/en-US/docs/data_URIs">data: url</a>，透過data URL可以直接將影像定義成Base64編碼的字串，然後嵌入程式碼之中.</p>
 
 <pre class="js">var img_src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==';
 </pre>
 
-<p>data URL的好處之一是立即產生影像而不用再和伺服器連線，另一個好處是這樣便能夠將影像包入你的<a href="/en-US/docs/Web/CSS" title="/en-US/docs/Web/CSS">CSS</a>, <a href="/en-US/docs/Web/JavaScript" title="/en-US/docs/Web/JavaScript">JavaScript</a>, <a href="/en-US/docs/Web/HTML" title="/en-US/docs/Web/HTML">HTML</a>之中，讓影像更具可攜性.</p>
+<p>data URL的好處之一是立即產生影像而不用再和伺服器連線，另一個好處是這樣便能夠將影像包入你的<a href="/en-US/docs/Web/CSS">CSS</a>, <a href="/en-US/docs/Web/JavaScript">JavaScript</a>, <a href="/en-US/docs/Web/HTML">HTML</a>之中，讓影像更具可攜性.</p>
 
 <p>壞處則是影像將不會被快取起來，而且對大影像來說編碼後的URL會很長.</p>
 
@@ -116,7 +116,7 @@ img.src = 'myImage.png'; // Set source path
 </pre>
 
 <p>上面的方法會回傳一個{{domxref("HTMLVideoElement")}}的影像物件，如前所述，這個物件可以被視為CanvasImageSource類別的物件來使用。<br>
- 關於如何利用&lt;video&gt;元素於畫布上的進階說明，可以參考html5Doctor的“<a href="http://html5doctor.com/video-canvas-magic/" title="http://html5doctor.com/video-canvas-magic/">video + canvas = magic</a>”一文.</p>
+ 關於如何利用&lt;video&gt;元素於畫布上的進階說明，可以參考html5Doctor的“<a href="http://html5doctor.com/video-canvas-magic/">video + canvas = magic</a>”一文.</p>
 
 <h2 id="影像繪圖">影像繪圖</h2>
 

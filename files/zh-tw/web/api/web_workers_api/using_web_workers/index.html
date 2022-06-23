@@ -4,7 +4,7 @@ slug: Web/API/Web_Workers_API/Using_web_workers
 translation_of: Web/API/Web_Workers_API/Using_web_workers
 ---
 <div>
-<p>Web Workers 提供簡單的方法讓網頁在背景執行緒 (Thread) 中執行程式，而不干擾使用者介面運行，另外，Worker也可以利用 <a href="https://developer.mozilla.org/en/nsIXMLHttpRequest" style="line-height: inherit;" title="https://developer.mozilla.org/en/nsIXMLHttpRequest">XMLHttpRequest</a> 執行輸出/輸入(但是responseXML 和channel這兩個屬性為null)；一個worker可以藉由事件處理器來和 web worker 創造端互相傳送訊息，接下來本文會提供使用 web worker 的詳細說明。</p>
+<p>Web Workers 提供簡單的方法讓網頁在背景執行緒 (Thread) 中執行程式，而不干擾使用者介面運行，另外，Worker也可以利用 <a href="/en/nsIXMLHttpRequest">XMLHttpRequest</a> 執行輸出/輸入(但是responseXML 和channel這兩個屬性為null)；一個worker可以藉由事件處理器來和 web worker 創造端互相傳送訊息，接下來本文會提供使用 web worker 的詳細說明。</p>
 </div>
 
 <h2 id="Web_Workers_API">Web Workers API</h2>
@@ -21,11 +21,11 @@ translation_of: Web/API/Web_Workers_API/Using_web_workers
 
 <p>主執行緒和 worker 執行緒之間用 postMessage() 方法發送訊息，然後透過 <code>onmessage</code> 事件接受訊息 (訊息存在 {{event("Message")}} 事件的 data 屬性之中)，其中被傳送的資料並非共享而是複製一份後傳送。</p>
 
-<p>worker 可以產生新 worker，只要新 worker 的來源 (origin) 和父頁面相同，也可以利用 <a href="https://developer.mozilla.org/en/nsIXMLHttpRequest" style="line-height: inherit;" title="https://developer.mozilla.org/en/nsIXMLHttpRequest">XMLHttpRequest</a> 執行輸出/輸入(但是responseXML 和channel這兩個屬性為null)。</p>
+<p>worker 可以產生新 worker，只要新 worker 的來源 (origin) 和父頁面相同，也可以利用 <a href="/en/nsIXMLHttpRequest">XMLHttpRequest</a> 執行輸出/輸入(但是responseXML 和channel這兩個屬性為null)。</p>
 
 <h2 id="Dedicated_workers">Dedicated workers</h2>
 
-<p>dedicated worker 只能被產生它的檔案存取，下面我們先介紹簡單的 <a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>) 範例。這個範例會將兩個數字送入 worker 相乘，然後再於前端頁面顯示相乘結果。</p>
+<p>dedicated worker 只能被產生它的檔案存取，下面我們先介紹簡單的 <a href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>) 範例。這個範例會將兩個數字送入 worker 相乘，然後再於前端頁面顯示相乘結果。</p>
 
 <h3 id="偵測_Worker_功能">偵測 Worker 功能</h3>
 
@@ -104,7 +104,7 @@ second.onchange = function() {
 
 <h3 id="錯誤處理">錯誤處理</h3>
 
-<p>當執行時期錯誤發生時，onerror 事件處理器會被呼叫，onerror事件處理器會收到一名為 error 的事件物件 (實作 ErrorEvent Interface)，該事件不會 bubble 且可取消，如果要避免事件預設行為，可以呼叫 <a class="internal" href="/en-US/docs/Web/API/Event/preventDefault"><code>preventDefault()</code></a>。</p>
+<p>當執行時期錯誤發生時，onerror 事件處理器會被呼叫，onerror事件處理器會收到一名為 error 的事件物件 (實作 ErrorEvent Interface)，該事件不會 bubble 且可取消，如果要避免事件預設行為，可以呼叫 <a href="/en-US/docs/Web/API/Event/preventDefault"><code>preventDefault()</code></a>。</p>
 
 <p>以下三個部分是錯誤事件較關鍵的地方:</p>
 
@@ -130,13 +130,13 @@ importScripts('foo.js');                /* imports just "foo.js" */
 importScripts('foo.js', 'bar.js');      /* imports two scripts */
 </pre>
 
-<p>瀏覽器會載入並執行每個程式碼腳本，然後 worker 能夠存取程式碼腳本內定義的全域變數，若是腳本無法載入，會產生一個 NETWORK_ERROR，後續的程式碼不會被執行，但是先前執行過的程式碼或用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.setTimeout" title="https://developer.mozilla.org/en-US/docs/Web/API/window.setTimeout">window.setTimeout()</a> 延遲執行的程式碼依然有效，而 importScripts() 之後宣告的函數也一樣存在，因為這些程式碼總是在其他程式碼之前就解析過了。</p>
+<p>瀏覽器會載入並執行每個程式碼腳本，然後 worker 能夠存取程式碼腳本內定義的全域變數，若是腳本無法載入，會產生一個 NETWORK_ERROR，後續的程式碼不會被執行，但是先前執行過的程式碼或用 <a href="/en-US/docs/Web/API/window.setTimeout">window.setTimeout()</a> 延遲執行的程式碼依然有效，而 importScripts() 之後宣告的函數也一樣存在，因為這些程式碼總是在其他程式碼之前就解析過了。</p>
 
 <div class="note"><strong>Note:</strong> 雖然程式碼腳本的下載順序不一定，但執行順序會遵照傳入importScripts()的順序，這是同步完成的，importScripts()不會回傳直到所有的程式碼都下載並執行完。</div>
 
 <h2 id="Shared_workers">Shared workers</h2>
 
-<p>shared worker 能夠被多個程式腳本存取，縱使跨越不同 window、iframe 或 worker。這邊的 <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-shared-worker/">run shared worker</a>) 範例和 dedicated worker 範例類似，但多了兩個可以讓多個檔案存取的函數：<em>數字相乘以及數字平方</em>。</p>
+<p>shared worker 能夠被多個程式腳本存取，縱使跨越不同 window、iframe 或 worker。這邊的 <a href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a href="http://mdn.github.io/simple-shared-worker/">run shared worker</a>) 範例和 dedicated worker 範例類似，但多了兩個可以讓多個檔案存取的函數：<em>數字相乘以及數字平方</em>。</p>
 
 <p>請注意 dedicated worker 與 shared worker 間的差異處，範例裡會有兩份 HTML 頁面，各自都利用同一個 worker 處理運算。</p>
 
@@ -598,11 +598,11 @@ onmessage = function(event) {
 
 <p>和 worker 溝通則是利用 postMessage。</p>
 
-<p><a class="external" href="/samples/workers/fibonacci">範例測試</a>。</p>
+<p><a href="/samples/workers/fibonacci">範例測試</a>。</p>
 
 <h3 id="在背景中執行_web_IO">在背景中執行 web I/O</h3>
 
-<p>範例請見 <a class="internal" href="/en-US/docs/Using_workers_in_extensions">Using workers in extensions</a> 。</p>
+<p>範例請見 <a href="/en-US/docs/Using_workers_in_extensions">Using workers in extensions</a> 。</p>
 
 <h3 id="分割任務到多個_workers">分割任務到多個 workers</h3>
 
@@ -614,7 +614,7 @@ onmessage = function(event) {
 
 <ul>
  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a> 基本上如同介於 web app 和瀏覽器以及網路之間的代理伺服器 (proxy server)，這類 worker 重點在實現離線服務，service worker 會攔截網路請求，然後依據網路連線和資源狀態做出反應，他們可以存取推播和背景同步 APIs。</li>
- <li>Chrome Workers 是 Firefox 唯一的 worker 類型，他們可以用在開發 add-ons，或是想要使用 <a href="https://developer.mozilla.org/en/js-ctypes">js-ctypes</a>。詳情請見 {{domxref("ChromeWorker")}}。</li>
+ <li>Chrome Workers 是 Firefox 唯一的 worker 類型，他們可以用在開發 add-ons，或是想要使用 <a href="/en/js-ctypes">js-ctypes</a>。詳情請見 {{domxref("ChromeWorker")}}。</li>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API#Audio_Workers">Audio Workers</a> 主要用於音效處理部分。</li>
 </ul>
 
@@ -642,8 +642,8 @@ onmessage = function(event) {
 <h2 id="延伸閱讀">延伸閱讀</h2>
 
 <ul>
- <li><code><a class="internal" href="/en-US/docs/Web/API/Worker">Worker</a></code> interface</li>
- <li><code><a class="internal" href="/en-US/docs/Web/API/SharedWorker">SharedWorker</a></code> interface</li>
+ <li><code><a href="/en-US/docs/Web/API/Worker">Worker</a></code> interface</li>
+ <li><code><a href="/en-US/docs/Web/API/SharedWorker">SharedWorker</a></code> interface</li>
  <li><a href="/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">Functions available to workers</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Advanced concepts and examples</a></li>
 </ul>

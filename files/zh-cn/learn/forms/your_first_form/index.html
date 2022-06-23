@@ -36,8 +36,8 @@ original_slug: Learn/HTML/Forms/Your_first_HTML_form
 <p>在开始编写代码之前，最好先退一步，花点时间考虑一下您的表单。设计一个快速的模型将帮助您定义您想要询问用户的正确的数据集。从用户体验 (UX) 的角度来看，要记住：表单越大，失去用户的风险就越大。保持简单，保持专注：只要求必要的数据。在构建站点或应用程序时，设计表单是非常重要的一步。这超出了本文的范围，涵盖了表单的用户体验，但是如果您想深入了解这个主题，您应该阅读下面的文章：</p>
 
 <ul>
- <li>杂志&lt;Smashing Magazine&gt;中有<a href="http://uxdesign.smashingmagazine.com/tag/forms/">很好的关于表单用户体验的文章</a>，或许其中最重要的应该是他们的<a href="http://uxdesign.smashingmagazine.com/2011/11/08/extensive-guide-web-form-usability/" rel="external">Extensive Guide To Web Form Usability</a>.</li>
- <li>UXMatters 也是一个非常有思想的资源，从基本的<a href="http://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php" rel="拓展">最佳实践</a>到复杂的问题如<a href="https://www.uxmatters.com/mt/archives/2010/03/pagination-in-web-forms-evaluating-the-effectiveness-of-web-forms.php">多页表单</a>，都有很好的建议。</li>
+ <li>杂志&lt;Smashing Magazine&gt;中有<a href="http://uxdesign.smashingmagazine.com/tag/forms/">很好的关于表单用户体验的文章</a>，或许其中最重要的应该是他们的<a href="http://uxdesign.smashingmagazine.com/2011/11/08/extensive-guide-web-form-usability/">Extensive Guide To Web Form Usability</a>.</li>
+ <li>UXMatters 也是一个非常有思想的资源，从基本的<a href="http://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php">最佳实践</a>到复杂的问题如<a href="https://www.uxmatters.com/mt/archives/2010/03/pagination-in-web-forms-evaluating-the-effectiveness-of-web-forms.php">多页表单</a>，都有很好的建议。</li>
 </ul>
 
 <p>在本文中，我们将构建一个简单的联系人表单。让我们做一个粗略的草图。</p>
@@ -68,7 +68,7 @@ original_slug: Learn/HTML/Forms/Your_first_HTML_form
 </ul>
 
 <div class="note">
-<p><strong>注意：</strong>如果您想深入了解这些属性是如何工作的，那么将在<a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">发送表单数据</a>文章中详细说明。</p>
+<p><strong>注意：</strong>如果您想深入了解这些属性是如何工作的，那么将在<a href="/zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">发送表单数据</a>文章中详细说明。</p>
 </div>
 
 <p>现在，将上面的{{htmlelement("form")}} 元素添加到您的 HTML 主体中</p>
@@ -96,13 +96,13 @@ original_slug: Learn/HTML/Forms/Your_first_HTML_form
 
 <p>更新您的表单代码，使其看起来像上面的代码。</p>
 
-<p>使用{{HTMLElement("div")}} 元素可以使我们更加方便地构造我们自己的代码，并且更容易样式化 (参见本文后面的文章)。注意在所有{{HTMLElement("label")}}元素上使用<code>for</code>属性；它是将标签链接到表单小部件的一种正规方式。这个属性引用对应的小部件的<code>id</code>。这样做有一些好处。最明显的一个好处是允许用户单击标签以激活相应的小部件。如果您想更好地理解这个属性的其他好处，您可以找到<a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">如何构造 HTML 表单的详细信息</a>。</p>
+<p>使用{{HTMLElement("div")}} 元素可以使我们更加方便地构造我们自己的代码，并且更容易样式化 (参见本文后面的文章)。注意在所有{{HTMLElement("label")}}元素上使用<code>for</code>属性；它是将标签链接到表单小部件的一种正规方式。这个属性引用对应的小部件的<code>id</code>。这样做有一些好处。最明显的一个好处是允许用户单击标签以激活相应的小部件。如果您想更好地理解这个属性的其他好处，您可以找到<a href="/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">如何构造 HTML 表单的详细信息</a>。</p>
 
-<p>在 {{HTMLElement("input")}}元素中，最重要的属性是<code>type</code> 属性。这个属性非常重要，因为它定义了{{HTMLElement("input")}}属性的行为方式。它可以从根本上改变元素，所以要注意它。稍后您将在<a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets">原生表单控件</a>文章中找到更多关于此的内容。</p>
+<p>在 {{HTMLElement("input")}}元素中，最重要的属性是<code>type</code> 属性。这个属性非常重要，因为它定义了{{HTMLElement("input")}}属性的行为方式。它可以从根本上改变元素，所以要注意它。稍后您将在<a href="/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets">原生表单控件</a>文章中找到更多关于此的内容。</p>
 
 <ul>
  <li>在我们的简单示例中，我们使用值 <code>text</code> 作为第一个输入——这个属性的默认值。它表示一个基本的单行文本字段，接受任何类型的文本输入。</li>
- <li>对于第二个输入，我们使用值<code>email</code>，它定义了一个只接受格式正确的电子邮件地址的单行文本字段。这会将一个基本的文本字段转换为一种“智能”字段，该字段将对用户输入的数据进行一些检查。在稍后的表单数据验证文章中，您将了解到更多关于<a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Forms/Data_form_validation">表单验证</a>的信息。</li>
+ <li>对于第二个输入，我们使用值<code>email</code>，它定义了一个只接受格式正确的电子邮件地址的单行文本字段。这会将一个基本的文本字段转换为一种“智能”字段，该字段将对用户输入的数据进行一些检查。在稍后的表单数据验证文章中，您将了解到更多关于<a href="/zh-CN/docs/Learn/HTML/Forms/Data_form_validation">表单验证</a>的信息。</li>
 </ul>
 
 <p>最后但同样重要的是，要注意<code>&lt;input&gt;</code> 和 <code>&lt;textarea&gt;&lt;/textarea&gt;</code>的语法。这是 HTML 的一个奇怪之处。 <code>&lt;input&gt;</code> 标签是一个空元素，这意味着它不需要关闭标签。相反， {{HTMLElement("textarea")}}不是一个空元素，因此必须使用适当的结束标记来关闭它。这对 HTML 表单的特定特性有影响：定义默认值的方式。要定义{{HTMLElement("input")}}的默认值，你必须使用<code>value</code> 属性，如下所示：</p>
@@ -252,7 +252,7 @@ button {
 
   ...</pre>
 
-<p>在我们的例子中，表单会发送三个已命名的数据块 "<code>user_name</code>", "<code>user_email</code>", 和 "<code>user_message</code>"。这些数据将用使用<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST">HTTP <code>POST</code></a> 方法，把信息发送到 URL 为 "<code>/my-handling-form-page</code>"目录下。</p>
+<p>在我们的例子中，表单会发送三个已命名的数据块 "<code>user_name</code>", "<code>user_email</code>", 和 "<code>user_message</code>"。这些数据将用使用<a href="/en-US/docs/Web/HTTP/Methods/POST">HTTP <code>POST</code></a> 方法，把信息发送到 URL 为 "<code>/my-handling-form-page</code>"目录下。</p>
 
 <p>在服务器端，位于 URL"<code>/my-handling-form-page</code>" 上的脚本将接收的数据作为HTTP请求中包含的3个键/值项的列表。这个脚本处理这些数据的方式取决于您。每个服务器端语言(PHP、Python、Ruby、Java、c等等)都有自己的机制。深入到这个主题已经超出了本指南的范围，但是如果您想了解更多，我们已经在<a href="/zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">发送表单数据</a>文章中提供了一些示例。 </p>
 
