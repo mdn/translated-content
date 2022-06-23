@@ -19,7 +19,7 @@ addEventListener('show', event => { });
 onshow = event => { };
 ```
 
-## Tipo de Evento
+## Tipo de evento
 
 Un {{domxref("Event")}} genérico.
 
