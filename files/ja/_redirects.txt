@@ -3205,6 +3205,8 @@
 /ja/docs/Web/API/Geolocation.watchPosition	/ja/docs/Web/API/Geolocation/watchPosition
 /ja/docs/Web/API/Geolocation/Using_geolocation	/ja/docs/Web/API/Geolocation_API
 /ja/docs/Web/API/GlobalEventHandlers/onabort	/ja/docs/Web/API/HTMLMediaElement/abort_event
+/ja/docs/Web/API/GlobalEventHandlers/oncanplay	/ja/docs/conflicting/Web/API/HTMLMediaElement/canplay_event
+/ja/docs/Web/API/GlobalEventHandlers/oncanplaythrough	/ja/docs/conflicting/Web/API/HTMLMediaElement/canplaythrough_event
 /ja/docs/Web/API/GlobalFetch	/ja/docs/Web/API/WindowOrWorkerGlobalScope
 /ja/docs/Web/API/GlobalFetch/fetch	/ja/docs/Web/API/fetch
 /ja/docs/Web/API/HTMLElement/oncopy	/ja/docs/Web/API/HTMLElement/copy_event
