@@ -14,7 +14,7 @@ La especificación CSS define propiedades abreviadas para agrupar la definición
 
 Hay algunos casos especiales a tener en cuenta al usar propiedades abreviadas.
 
-### Omitir propiedades
+### Omitiendo propiedades
 
 Un valor que no se especifica se establece en su valor inicial. Eso significa que **anula** los valores establecidos previamente. Por ejemplo:
 
@@ -27,9 +27,9 @@ p {
 
 Esto no establecerá el color del fondo en `red` sino en el valor predeterminado para {{cssxref("background-color")}}, que es `transparent`.
 
-Solo los valores de las propiedades individuales pueden heredar. Como los valores omitidos se reemplazan por su valor inicial, es imposible permitir la herencia de propiedades individuales omitiendolas. La palabra clave `inherit` se puede aplicar a una propiedad, pero solo como un todo, no como palabra clave para un valor u otro. Eso significa que la única forma de hacer que un valor específico se herede es usar la propiedad junto con la palabra clave `inherit`.
+Solo los valores de las propiedades individuales pueden heredar. Como los valores omitidos se reemplazan por su valor inicial, es imposible permitir la herencia de propiedades individuales omitiéndolas. La palabra clave `inherit` se puede aplicar a una propiedad, pero solo como un todo, no como palabra clave para un valor u otro. Eso significa que la única forma de hacer que un valor específico se herede es usar la propiedad junto con la palabra clave `inherit`.
 
-### Ordenar propiedades
+### Ordenando propiedades
 
 Las propiedades abreviadas intentan no forzar un orden específico para los valores de las propiedades que reemplazan. Esto funciona bien cuando estas propiedades usan valores de diferentes tipos, ya que el orden no tiene importancia, pero no funciona tan fácilmente cuando varias propiedades pueden tener valores idénticos.
 
