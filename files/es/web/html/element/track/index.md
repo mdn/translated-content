@@ -113,7 +113,7 @@ Un elemento multimedia no puede tener más de un `track` con el mismo `kind`, `s
 
 El {{domxref("TextTrack")}} subyacente, indicado por la propiedad {{domxref("HTMLTrackElement.track", "track")}}, recibe un evento `cuechange` cada vez que se cambia la señal actual. Esto sucede incluso si la pista no está asociada con un elemento multimedia.
 
-Si la pista _está_ asociada con un elemento de medios, usando el elemento {{HTMLElement("track")}} como elemento hijo del elemento {{HTMLElement("audio")}} o {{HTMLElement("video")}} , el evento `cuechange` también se envía a {{domxref("HTMLTrackElement")}}.
+Si la pista _está_ asociada con un elemento de medios, usando el elemento {{HTMLElement("track")}} como elemento hijo del elemento {{HTMLElement("audio")}} o {{HTMLElement("video")}}, el evento `cuechange` también se envía a {{domxref("HTMLTrackElement")}}.
 
 ```js
 let textTrackElem = document.getElementById("texttrack");
@@ -123,7 +123,7 @@ textTrackElem.addEventListener("cuechange", event => {
 });
 ```
 
-## Examples
+## Ejemplos
 
 ```html
 <video controls poster="/images/sample.gif">
