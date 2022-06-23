@@ -18,7 +18,7 @@ addEventListener('error', event => { });
 onerror = event => { };
 ```
 
-## Tipo de Evento
+## Tipo de evento
 
 Un {{domxref("Event")}} genérico.
 
