@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransfer
@@ -9,49 +10,54 @@ tags:
   - Reference
   - clearData
   - drag and drop
+browser-compat: api.DataTransfer.clearData
 translation_of: Web/API/DataTransfer/clearData
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p><strong><code>DataTransfer.clearData()</code></strong> メソッドは、指定されたタイプのドラッグ操作の {{domxref("DataTransfer", "ドラッグデータ")}} を削除します。指定された型のデータが存在しない場合、このメソッドは何もしません。</p>
+**`DataTransfer.clearData()`** メソッドは、ドラッグ操作の {{domxref("DataTransfer", "ドラッグデータ")}}の中で指定された型のものを削除します。指定された型のデータが存在しない場合、このメソッドは何もしません。
 
-<p class="note">このメソッドが引数なしで呼び出された場合、またはフォーマットが空の {{domxref("DOMString", "string")}} であった場合、すべての型のデータが削除されます。</p>
+このメソッドが引数なしで呼び出された場合、またはフォーマットが空文字列であった場合、すべての型のデータが削除されます。
 
-<p>このメソッドはドラッグ操作からファイルを削除<em>しない</em>ので、ドラッグに含まれるファイルがある場合、オブジェクトの {{domxref("DataTransfer.types")}} リストに <code>"Files"</code> タイプのエントリが残る可能性があります。</p>
+このメソッドはドラッグ操作からファイルを削除*しない*ので、ドラッグに含まれるファイルがある場合、 `"Files"` 型の項目がオブジェクトの {{domxref("DataTransfer.types")}} の一覧に残る可能性があります。
 
-<div class="note">
-<p>このメソッドは、{{event("dragstart")}} イベントのハンドラでのみ使用できます。なぜなら、ドラッグ操作のデータストアが書き込み可能なのはその時だけだからです。</p>
-</div>
+> **Note:** このメソッドは、 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントのハンドラーでのみ使用できます。ドラッグ操作のデータストアが書き込み可能なのはその時だけだからです。
 
-<h2 id="シンタックス">シンタックス</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>DataTransfer</var>.clearData([<em>format</em>]);
-</pre>
+```js
+clearData()
+clearData(format)
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### 引数
 
-<dl>
- <dt><code>format</code> {{optional_inline}}</dt>
- <dd>削除するデータの型を指定する {{domxref("DOMString", "文字列")}}。このパラメータが空の文字列であったり、指定されていない場合は、すべての型のデータが削除されます。</dd>
-</dl>
+- `format` {{optional_inline}}
+  - : 削除するデータの型を指定する文字列。この引数が空の文字列であったり、指定されていない場合は、すべての型のデータが削除されます。
 
-<h2 id="Example">Example</h2>
+### 返値
 
-<p>この例では、{{domxref("DataTransfer")}} オブジェクトの{{domxref("DataTransfer.getData()", "getData()")}}、{{domxref("DataTransfer.setData()", "setData()")}}、および {{domxref("DataTransfer.clearData()", "clearData()")}} メソッドを使用しています。</p>
+なし ({{jsxref("undefined")}})。
 
-<h3 id="HTML">HTML</h3>
+## 例
 
-<pre class="brush: html notranslate">&lt;span class="tweaked" id="source" draggable="true"&gt;
-  この要素を選択し、ドロップゾーンにドラッグしてから選択を解除して要素を移動します。
-&lt;/span&gt;
-&lt;span class="tweaked" id="target"&gt;ドロップゾーン&lt;/span&gt;
-&lt;div&gt;ステータス: &lt;span id="status"&gt;ドラッグして開始&lt;/span&gt;&lt;/div&gt;
-&lt;div&gt;データ: &lt;span id="data"&gt;未初期化&lt;/span&gt;&lt;/div&gt;
-</pre>
+この例では、 {{domxref("DataTransfer")}} オブジェクトの {{domxref("DataTransfer.getData()","getData()")}}、{{domxref("DataTransfer.setData()","setData()")}}、{{domxref("DataTransfer.clearData()","clearData()")}} メソッドを使用しています。
 
-<h3 id="CSS">CSS</h3>
+### HTML
 
-<pre class="brush: css notranslate">span.tweaked {
+```html
+<span class="tweaked" id="source" draggable="true">
+  この要素を選択し、ドロップゾーンにドラッグした後、選択を解除して要素を移動してください。
+</span>
+<span class="tweaked" id="target">ドロップゾーン</span>
+<div>状態: <span id="status">ドラッグで開始</span></div>
+<div>データ: <span id="data">未初期化</span></div>
+```
+
+### CSS
+
+```css
+span.tweaked {
   display: inline-block;
   margin: 1em 0;
   padding: 1em 2em;
@@ -65,27 +71,28 @@ translation_of: Web/API/DataTransfer/clearData
 #target {
   border: 1px solid black;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">window.addEventListener('DOMContentLoaded', function () {
-  // HTML要素を選択する
-  var draggable = document.getElementById('source');
-  var dropable = document.getElementById('target');
-  var status = document.getElementById('status');
-  var data = document.getElementById('data');
-  var dropped = false;
+```js
+window.addEventListener('DOMContentLoaded', function () {
+  // HTML 要素を選択する
+  const draggable = document.getElementById('source');
+  const droppable = document.getElementById('target');
+  const status = document.getElementById('status');
+  const data = document.getElementById('data');
+  let dropped = false;
 
-  // イベントハンドラを登録する
+  // イベントハンドラーを登録する
   draggable.addEventListener('dragstart', dragStartHandler);
   draggable.addEventListener('dragend', dragEndHandler);
-  dropable.addEventListener('dragover', dragOverHandler);
-  dropable.addEventListener('dragleave', dragLeaveHandler);
-  dropable.addEventListener('drop', dropHandler);
+  droppable.addEventListener('dragover', dragOverHandler);
+  droppable.addEventListener('dragleave', dragLeaveHandler);
+  droppable.addEventListener('drop', dropHandler);
 
   function dragStartHandler (event) {
-    status.innerHTML = 'ドラッグ中';
+    status.textContent = 'ドラッグ中';
 
     // ドラッグが開始されたことを示すように、ターゲット要素の境界線を変更する
     event.currentTarget.style.border = '1px dashed blue';
@@ -95,18 +102,18 @@ translation_of: Web/API/DataTransfer/clearData
 
     event.dataTransfer.clearData();
 
-    // ドラッグのフォーマットとデータを設定します(データはイベントターゲットのIDを使用)
+    // ドラッグのフォーマットとデータを設定する（データにはイベントターゲットの id を使用する）
     event.dataTransfer.setData('text/plain', event.target.id);
 
-    data.innerHTML = event.dataTransfer.getData('text/plain');
+    data.textContent = event.dataTransfer.getData('text/plain');
   }
 
   function dragEndHandler (event) {
     if (!dropped) {
-      status.innerHTML = 'ドラッグのキャンセル';
+      status.textContent = 'ドラッグのキャンセル';
     }
 
-    data.innerHTML = event.dataTransfer.getData('text/plain') || 'empty';
+    data.textContent = event.dataTransfer.getData('text/plain') || 'empty';
 
     // ドラッグ中ではないことを示すために境界線を変更する
     event.currentTarget.style.border = '1px solid black';
@@ -115,20 +122,20 @@ translation_of: Web/API/DataTransfer/clearData
       // すべてのイベントリスナーを削除
       draggable.removeEventListener('dragstart', dragStartHandler);
       draggable.removeEventListener('dragend', dragEndHandler);
-      dropable.removeEventListener('dragover', dragOverHandler);
-      dropable.removeEventListener('dragleave', dragLeaveHandler);
-      dropable.removeEventListener('drop', dropHandler);
+      droppable.removeEventListener('dragover', dragOverHandler);
+      droppable.removeEventListener('dragleave', dragLeaveHandler);
+      droppable.removeEventListener('drop', dropHandler);
     }
   }
 
   function dragOverHandler (event) {
-    status.innerHTML = 'ドロップ可能';
+    status.textContent = 'ドロップ可能';
 
     event.preventDefault();
   }
 
   function dragLeaveHandler (event) {
-    status.innerHTML = 'ドラッグ中 (ドロップは可能)';
+    status.textContent = 'ドラッグ中（ドロップは可能）';
 
     event.preventDefault();
   }
@@ -136,52 +143,40 @@ translation_of: Web/API/DataTransfer/clearData
   function dropHandler (event) {
     dropped = true;
 
-    status.innerHTML = 'ドロップしました。';
+    status.textContent = 'ドロップしました。';
 
     event.preventDefault();
 
-    // イベント形式に連動したデータを取得する « text »
-    var _data = event.dataTransfer.getData('text/plain');
-    var element = document.getElementById(_data);
+    // イベント形式に連動したデータを取得する « text »
+    const _data = event.dataTransfer.getData('text/plain');
+    const element = document.getElementById(_data);
 
     // イベントのターゲット要素にドラッグソース要素を追加する
     event.target.appendChild(element);
 
-    // CSSスタイルと表示テキストを変更する
+    // CSS スタイルと表示テキストを変更する
     element.style.cssText = 'border: 1px solid black;display: block; color: red';
-    element.innerHTML = "ドロップゾーンに入りました!";
+    element.textContent = "ドロップゾーンに入りました!";
   }
 })
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example', 300, 250)}}</p>
+### 結果
 
-<h2 id="仕様">仕様</h2>
+{{EmbedLiveSample('Examples', 300, 300)}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-datatransfer-cleardata','DataTransfer.clearData()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#dom-datatransfer-cleardata','DataTransfer.clearData()')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+{{Specifications}}
 
-<p>{{Compat("api.DataTransfer.clearData")}}</p>
+## ブラウザーの互換性
 
-<h2 id="あわせて参照">あわせて参照</h2>
+{{Compat}}
 
-<p>{{page("/ja/docs/Web/API/DataTransfer", "あわせて参照")}}</p>
+## 関連情報
+
+- [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
+- [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
