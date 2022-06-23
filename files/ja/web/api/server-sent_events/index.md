@@ -1,151 +1,59 @@
 ---
-title: Server-sent events
+title: サーバー送信イベント
 slug: Web/API/Server-sent_events
+page-type: web-api-overview
 tags:
   - API
+  - Overview
   - SSE
   - Server-sent events
-  - 概要
+spec-urls: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
 translation_of: Web/API/Server-sent_events
 ---
-<p>{{DefaultAPISidebar("Server Sent Events")}}</p>
+{{DefaultAPISidebar("Server Sent Events")}}
 
-<p>伝統的には、ウェブページが新たなデータを受け取るために、サーバーにリクエストを送信しなければなりません。すなわち、ページがサーバーからデータを要求します。サーバー送信イベントによって、サーバーがウェブページにメッセージをプッシュ送信することにより、サーバーからウェブページへ新たなデータをいつでも送信することができます。入ってくるメッセージは、ウェブページ内の<em><a href="/ja/docs/DOM/event">イベント</a>およびデータ</em>として扱うことができます。</p>
+伝統的には、ウェブページが新たなデータを受け取るために、サーバーにリクエストを送信しなければなりません。すなわち、ページがサーバーからデータを要求します。サーバー送信イベントによって、サーバーがウェブページにメッセージをプッシュ送信することにより、サーバーからウェブページへ新たなデータをいつでも送信することができます。入ってくるメッセージは、ウェブページ内の _[イベント](/ja/docs/Web/API/Event)およびデータ_ として扱うことができます。
 
-<h2 id="概念と使用方法">概念と使用方法</h2>
+{{AvailableInWorkers}}
 
-<p>Server-Sent events の使い方を学ぶには、 <a href="/ja/docs/Web/API/Server-sent_events/Using_server-sent_events">Server-Sent events の利用</a>を参照してください。</p>
+> **Note:** Firefox は現在、サービスワーカーでのサーバー送信イベントの使用に対応していません（専用ワーカーと共有ワーカーでは対応しています）。 {{bug(1681218)}} を参照してください。
 
-<h2 id="Interfaces" name="Interfaces">インターフェイス</h2>
+## 概念と使用方法
 
-<dl>
- <dt>{{domxref("EventSource")}}</dt>
- <dd>サーバーへの接続、イベントやデータの受信、エラー、コネクションの切断など、すべての機能の扱いを定義します。</dd>
-</dl>
+サーバー送信イベントの使い方を学ぶには、[サーバー送信イベントの使用](/ja/docs/Web/API/Server-sent_events/Using_server-sent_events)を参照してください。
 
-<h2 id="Examples" name="Examples">例</h2>
+## インターフェイス
 
-<ul>
- <li><a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">PHP を使用した簡単な SSE のデモ</a></li>
-</ul>
+- {{domxref("EventSource")}}
+  - : サーバーへの接続、イベントやデータの受信、エラー、コネクションの切断など、すべての機能の扱いを定義します。
 
-<h2 id="Specification" name="Specification">仕様策定状況</h2>
+## 例
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#server-sent-events', 'Server-sent events')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+- [PHP を使用した簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-<div>{{CompatibilityTable}}</div>
+## 仕様書
 
-<div id="compat-desktop">
-<table class="compat-table">
- <thead>
-  <tr>
-   <th>機能</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>EventSource の対応</td>
-   <td>6</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("6.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>5</td>
-  </tr>
-  <tr>
-   <td>共有かつ専用ワーカーで使用可<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("53.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Specifications}}
 
-<div id="compat-mobile">
-<table class="compat-table">
- <thead>
-  <tr>
-   <th>機能</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>EventSource の対応</td>
-   <td>4.4</td>
-   <td>45</td>
-   <td>{{CompatNo}}</td>
-   <td>12</td>
-   <td>4.1</td>
-  </tr>
-  <tr>
-   <td>共有かつ専用ワーカーで使用可<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("53.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+## 関連情報
 
-<p>[1] 但し<a href="https://github.com/w3c/ServiceWorker/issues/947">サービスワーカーはまだ</a>です。</p>
+### ツール
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+- [Mercure: a real-time communication protocol (publish-subscribe) built on top of SSE](https://mercure.rocks)
+- [Node.js 向けの EventSource のポリフィル](https://github.com/EventSource/eventsource)
+- Remy Sharp による [EventSource のポリフィル](https://github.com/remy/polyfills/blob/master/EventSource.js)
+- Yaffle の [EventSource のポリフィル](https://github.com/Yaffle/EventSource)
+- Rick Waldron's [jquery plugin](https://github.com/rwaldron/jquery.eventsource)
+- intercooler.js [declarative SSE support](https://intercoolerjs.org/docs.html#sse)
 
-<h3 id="Tools" name="Tools">ツール</h3>
+### 関連トピック
 
-<ul>
- <li>Remy Sharp による <a class="link-https" href="https://github.com/remy/polyfills/blob/master/EventSource.js">EventSource のポリフィル</a></li>
- <li>Yaffle による <a class="link-https" href="https://github.com/Yaffle/EventSource">EventSource のポリフィル</a></li>
- <li>Rick Waldron による <a class="link-https" href="https://github.com/rwldrn/jquery.eventsource">jquery プラグイン</a></li>
- <li>intercooler.js <a href="http://intercoolerjs.org/docs.html#sse">declarative SSE support</a></li>
-</ul>
+- [AJAX](/ja/docs/Web/Guide/AJAX)
+- [JavaScript](/ja/docs/Web/JavaScript)
+- [WebSocket](/ja/docs/Web/API/WebSockets_API)
 
-<h3 class="Related_Topics" id="Related_Topics" name="Related_Topics">関連トピック</h3>
+### その他のリソース
 
-<ul>
- <li><a href="/ja/docs/AJAX" title="AJAX">AJAX</a></li>
- <li><a href="/ja/docs/JavaScript" title="JavaScript">JavaScript</a></li>
- <li><a href="/ja/docs/WebSockets" title="WebSockets">WebSockets</a></li>
-</ul>
-
-<h3 id="Other_resources" name="Other_resources">その他のリソース</h3>
-
-<ul>
- <li>Server-sent events を使用した <a href="http://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/">Twitter のようなアプリケーション</a>。<a class="link-https" href="https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline">コードは Github にあります</a>。</li>
- <li><a href="http://dsheiko.com/weblog/html5-and-server-sent-events">HTML5 and Server-sent events</a></li>
- <li><a href="http://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html">Server-sent events using Asp.Net</a></li>
-</ul>
+- [Twitter 風のアプリケーション](https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) powered by server-sent events and [its code on GitHub](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
+- [HTML5 and Server-sent events](https://dsheiko.com/weblog/html5-and-server-sent-events/)
