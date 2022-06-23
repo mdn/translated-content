@@ -18,7 +18,7 @@ addEventListener('close', event => { });
 onclose = event => { };
 ```
 
-## Tipo de Evento
+## Tipo de evento
 
 Un {{domxref("Event")}} genérico.
 
