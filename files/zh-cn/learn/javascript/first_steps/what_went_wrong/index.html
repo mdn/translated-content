@@ -43,7 +43,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 <h2 id="一个出错的示例">一个出错的示例</h2>
 
-<p>让我们重回猜数字游戏，这次我们将故意引入一些错误。请到 Github 下载一份 <a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html">number-game-errors.html</a> （或 <a class="external external-icon" href="https://roy-tian.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html">在线运行</a>）。</p>
+<p>让我们重回猜数字游戏，这次我们将故意引入一些错误。请到 Github 下载一份 <a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html">number-game-errors.html</a> （或 <a href="https://roy-tian.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html">在线运行</a>）。</p>
 
 <ol>
  <li>请分别在你的文本编辑器和浏览器中打开刚下载的文件。</li>
@@ -82,12 +82,12 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 <pre class="brush: js notranslate">guessSubmit.addeventListener('click', checkGuess);</pre>
 
 <ol start="4">
- <li>出错信息显示“guessSubmit.addeventListener 不是一个函数”，说明这里可能存在拼写错误。如果你不确定某语法的拼写是否正确，可以到 MDN 上去查找，目前最简便的方法就是去你喜欢的搜索引擎搜索“MDN + 语言<em>特性”。就本文当前内容你可以点击</em>：<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>。</li>
+ <li>出错信息显示“guessSubmit.addeventListener 不是一个函数”，说明这里可能存在拼写错误。如果你不确定某语法的拼写是否正确，可以到 MDN 上去查找，目前最简便的方法就是去你喜欢的搜索引擎搜索“MDN + 语言<em>特性”。就本文当前内容你可以点击</em>：<code><a href="/zh-CN/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>。</li>
  <li>因此这里错误显然是我们把函数名写错造成的。请记住，JavaScript 区分大小写，所以任何轻微的不同或大小写问题都会导致出错。将 <code>addeventListener</code> 改为 <code>addEventListener</code> 便可解决。</li>
 </ol>
 
 <div class="note">
-<p><strong>注：</strong>更多信息请参考 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_a_function">类型错误：“x”不是一个函数</a>。</p>
+<p><strong>注：</strong>更多信息请参考 <a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_a_function">类型错误：“x”不是一个函数</a>。</p>
 </div>
 
 <h3 id="语法错误：第二轮">语法错误：第二轮</h3>
@@ -96,7 +96,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
  <li>保存页面并刷新，可以看到出错信息不见了。</li>
  <li>现在，如果尝试输入一个数字并按确定按钮，你会看到...另一个错误！ <img alt="" src="https://mdn.mozillademos.org/files/16264/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7_2018-10-17_21.56.00.png" style="display: block; height: 1266px; margin: 0px auto; width: 1646px;"></li>
  <li>此次出错信息为“TypeError：lowOrHi is null”（“类型错误：lowOrHi 为 null”），在第 78 行。
-  <div class="note"><strong>注</strong>：<code><a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Null">Null</a></code>是一个特殊值，意思是“什么也没有”，或者“没有值”。这表示 <code>lowOrHi</code> 已声明并初始化，但没有任何有意义的值，可以说：它没有类型没有值。</div>
+  <div class="note"><strong>注</strong>：<code><a href="/zh-CN/docs/Glossary/Null">Null</a></code>是一个特殊值，意思是“什么也没有”，或者“没有值”。这表示 <code>lowOrHi</code> 已声明并初始化，但没有任何有意义的值，可以说：它没有类型没有值。</div>
 
   <div class="note"><strong>注</strong>：这条错误没有在页面加载时立即发生，是因为它发生在函数内部（<code>checkGuess() { ... }</code>块中）。函数内部的代码运行于一个外部代码相互独立的域内，后面函数的文章中将更详细地讲解。此时此刻，只有当代码运行至 86 行并调用 <code>checkGuess()</code> 函数时，代码才会抛出出错信息。</div>
  </li>
@@ -110,11 +110,11 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
   <pre class="brush: js notranslate">console.log(lowOrHi);</pre>
 
   <div class="note">
-  <p><strong>注</strong>：<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/log">console.log()</a></code> 是一个非常实用的调试功能，它可以把值打印到控制台。因此我们将其置于代码第 48 行时，它会将 <code>lowOrHi</code> 的值打印至控制台。</p>
+  <p><strong>注</strong>：<code><a href="/zh-CN/docs/Web/API/Console/log">console.log()</a></code> 是一个非常实用的调试功能，它可以把值打印到控制台。因此我们将其置于代码第 48 行时，它会将 <code>lowOrHi</code> 的值打印至控制台。</p>
   </div>
  </li>
  <li>保存并刷新，你将在控制台看到 <code>console.log()</code> 的执行结果：<img alt="" src="https://mdn.mozillademos.org/files/16275/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7_2018-10-18_16.43.40.png" style="display: block; height: 1246px; margin: 0px auto; width: 1606px;"> 显然，此处 <code>lowOrHi</code> 的值为 <code>null</code>，所以第 48 行肯定有问题。</li>
- <li>我们来思考问题有哪些可能。第 48 行使用 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelector">document.querySelector()</a></code> 方法和一个 CSS 选择器来取得一个元素的引用。进一步查看我们的文件，我们可以找到有问题的段落：
+ <li>我们来思考问题有哪些可能。第 48 行使用 <code><a href="/zh-CN/docs/Web/API/Document/querySelector">document.querySelector()</a></code> 方法和一个 CSS 选择器来取得一个元素的引用。进一步查看我们的文件，我们可以找到有问题的段落：
   <pre class="brush: js notranslate">&lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
  </li>
  <li>这里我们需要一个类选择器，它应以一个点开头（<code>.</code>），但被传递到第 48 行的<code>querySelector()</code>方法中的选择器没有点。这可能是问题所在！尝试将第 48 行中的<code> lowOrHi</code> 改成 <code>.lowOrHi</code>。</li>
@@ -122,7 +122,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 </ol>
 
 <div class="note">
-<p><strong>注</strong>：此错误的更多详细信息请参阅：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Errors/Unexpected_type">类型错误：“x”（不）是“y”</a>。</p>
+<p><strong>注</strong>：此错误的更多详细信息请参阅：<a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Unexpected_type">类型错误：“x”（不）是“y”</a>。</p>
 </div>
 
 <h3 id="语法错误：第三轮">语法错误：第三轮</h3>
@@ -197,7 +197,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 <p>将抛出一个错误。因为系统认为你在做其他事情。请不要把赋值运算符（<code>=</code>，为一个变量赋值）和严格等于运算符（<code>===</code>，比较两个值是否相等，返回 <code>true</code>/<code>false</code>）弄混淆。</p>
 
 <div class="note">
-<p><strong>注：</strong>此错误的更多详细信息请参考 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements">SyntaxError: missing ; before statement</a> 。</p>
+<p><strong>注：</strong>此错误的更多详细信息请参考 <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements">SyntaxError: missing ; before statement</a> 。</p>
 </div>
 
 <h3 id="不管输入什么程序总说“你猜对了！”">不管输入什么程序总说“你猜对了！”</h3>
@@ -272,13 +272,13 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 <h2 id="本章目录">本章目录</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">JavaScript 是什么？</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">JavaScript 初体验</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">查找并解决 JavaScript 代码的错误 </a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables">变量：储存所需信息</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math">数字和运算符：JavaScript 的基本算数</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings">字符串：JavaScript 文本的处理</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">字符串的一些实用方法</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays">数组</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator">课程评估：笑话机</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">JavaScript 是什么？</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">JavaScript 初体验</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">查找并解决 JavaScript 代码的错误 </a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Variables">变量：储存所需信息</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Math">数字和运算符：JavaScript 的基本算数</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Strings">字符串：JavaScript 文本的处理</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">字符串的一些实用方法</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays">数组</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator">课程评估：笑话机</a></li>
 </ul>
