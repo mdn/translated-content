@@ -7,17 +7,17 @@ translation_of: 'Web/CSS/::first-letter'
 
 <h2 id="概要">概要</h2>
 
-<p><code>::first-letter</code> <a href="/zh-TW/CSS" title="CSS">CSS</a> <a href="/zh-TW/CSS/Pseudo-elements" title="Pseudo-elements">虛擬元素</a>選取了一個區塊第一行的第一個字母，如果那一行前面沒有其他內容（例如圖片或是行內表格）。</p>
+<p><code>::first-letter</code> <a href="/zh-TW/CSS">CSS</a> <a href="/zh-TW/CSS/Pseudo-elements">虛擬元素</a>選取了一個區塊第一行的第一個字母，如果那一行前面沒有其他內容（例如圖片或是行內表格）。</p>
 
 <p>The first letter of an element is not necessarily trivial to identify:</p>
 
 <ul>
  <li>Punctuation, that is any characters defined in Unicode in the <em>open</em> (Ps), <em>close</em> (Pe), <em>initial quote</em> (Pi), <em>final quote</em> (Pf) and <em>other punctuation</em> (Po) classes, preceding or immediately following the first letter is also matched by this pseudo-element.</li>
- <li>Similarly some languages have digraphs that are always capitalized together, like the <code>IJ</code> in Dutch. In these rare cases, both letters of the digraph should be matched by the <code>::first-letter</code> pseudo-element. (This is poorly supported by browsers, check the <a href="/En/CSS/::first-letter#Browser_compatibility" title="https://developer.mozilla.org/En/CSS/::first-letter#Browser_compatibility">browser compatibility table</a>).</li>
+ <li>Similarly some languages have digraphs that are always capitalized together, like the <code>IJ</code> in Dutch. In these rare cases, both letters of the digraph should be matched by the <code>::first-letter</code> pseudo-element. (This is poorly supported by browsers, check the <a href="/En/CSS/::first-letter#Browser_compatibility">browser compatibility table</a>).</li>
  <li>Finally, a combination of the {{ cssxref("::before") }} pseudo-element and the {{ cssxref("content") }} property may inject some text at the beginning of the element. In that case, <code>::first-letter</code> will match the first letter of this generated content.</li>
 </ul>
 
-<p>A first line has meaning only in a <a href="/en/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes" title="https://developer.mozilla.org/en/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes">block-container box</a>, therefore the <code>::first-letter</code> pseudo-element has an effect only on elements with a {{ cssxref("display") }} value of <code>block</code>, <code>inline-block</code>, <code>table-cell</code>, <code>list-item</code> or <code>table-caption</code>. In all other cases, <code>::first-letter</code> has no effect.</p>
+<p>A first line has meaning only in a <a href="/en/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes">block-container box</a>, therefore the <code>::first-letter</code> pseudo-element has an effect only on elements with a {{ cssxref("display") }} value of <code>block</code>, <code>inline-block</code>, <code>table-cell</code>, <code>list-item</code> or <code>table-caption</code>. In all other cases, <code>::first-letter</code> has no effect.</p>
 
 <p>Only a small subset of all CSS properties can be used inside a declaration block of a CSS ruleset containing a selector using the <code>::first-letter</code> pseudo-element:</p>
 

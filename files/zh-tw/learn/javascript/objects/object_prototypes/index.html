@@ -50,11 +50,11 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 
 <p>如果你在自己的 JavaScript 主控台中鍵入「<code>person1.」，應該會看到瀏覽器根據此物件可用的成員名稱開始自動補完：</code></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13853/object-available-members.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="object-available-members.png"></p>
 
 <p>在此列表中，可以看到 <code>person1</code> 原型物件上所定義的成員，也就是 <code>Person()</code> 建構子 — <code>name</code>、<code>age</code>、<code>gender</code>、<code>interests</code>、<code>bio</code>、<code>greeting</code>。你也會看到其他如 <code>watch</code>、<code>valueOf 等，同樣也是定義在</code> <code>Person()</code> 建構子原型物件之上的成員，如此構成 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>。下圖顯示原型鍊的運作方式。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13891/MDN-Graphics-person-person-object-2.png" style="display: block; height: 150px; margin: 0px auto; width: 700px;"></p>
+<p><img src="mdn-graphics-person-person-object-2.png"></p>
 
 <p>所以當你在 <code>person1 上呼叫了「實際上是定義於 Object 上的函式」，會發生什麼事呢？舉例來說：</code></p>
 

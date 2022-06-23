@@ -98,7 +98,7 @@ console.log(b); // 7
 
 <p>兩個變數可以透過一個解構指派式交換。</p>
 
-<p>沒有解構指派式時，這需要一個暫存變數來達成（或者像某些低階語言的 <a class="external" href="https://en.wikipedia.org/wiki/XOR_swap_algorithm">XOR-swap trick</a>）。</p>
+<p>沒有解構指派式時，這需要一個暫存變數來達成（或者像某些低階語言的 <a href="https://en.wikipedia.org/wiki/XOR_swap_algorithm">XOR-swap trick</a>）。</p>
 
 <pre class="brush:js">let a = 1;
 let b = 3;
@@ -352,7 +352,7 @@ console.log(foo); // "bar"
 
 <h3 id="在物件解構時使用其餘變數">在物件解構時使用其餘變數</h3>
 
-<p><a class="external external-icon" href="https://github.com/tc39/proposal-object-rest-spread">ECMAScript 中的其餘/展開屬性</a>在 proposal (stage 4) 新增了在解構式內使用<a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters">其餘 (rest)</a> 語法的定義。其餘屬性可以收集解構式中沒有指定的屬性值。</p>
+<p><a href="https://github.com/tc39/proposal-object-rest-spread">ECMAScript 中的其餘/展開屬性</a>在 proposal (stage 4) 新增了在解構式內使用<a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters">其餘 (rest)</a> 語法的定義。其餘屬性可以收集解構式中沒有指定的屬性值。</p>
 
 <pre class="brush: js">let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}
 a; // 10

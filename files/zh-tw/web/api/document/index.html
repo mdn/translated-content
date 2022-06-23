@@ -15,11 +15,11 @@ translation_of: Web/API/Document
 
 
 
-<p><strong><code>Document</code></strong> 介面代表所有在瀏覽器中載入的網頁，也是作為網頁內容 <a href="/en-US/docs/Using_the_W3C_DOM_Level_1_Core" title="Using_the_W3C_DOM_Level_1_Core">DOM 樹</a>（包含如 {{HTMLElement("body")}}、{{HTMLElement("table")}} 與其它的{{domxref("Element", "元素")}}）的進入點。<code>Document</code> 提供了網頁文件所需的通用函式，例如取得頁面 URL 或是建立網頁文件中新的元素節點等。</p>
+<p><strong><code>Document</code></strong> 介面代表所有在瀏覽器中載入的網頁，也是作為網頁內容 <a href="/en-US/docs/Using_the_W3C_DOM_Level_1_Core">DOM 樹</a>（包含如 {{HTMLElement("body")}}、{{HTMLElement("table")}} 與其它的{{domxref("Element", "元素")}}）的進入點。<code>Document</code> 提供了網頁文件所需的通用函式，例如取得頁面 URL 或是建立網頁文件中新的元素節點等。</p>
 
 <p>{{inheritanceDiagram}}</p>
 
-<p><code>Document</code> 介面描述了各種類型文件的共同屬性與方法。根據文件的類型（如 <a href="/zh-TW/docs/HTML" title="HTML">HTML</a>、<a href="/zh-TW/docs/XML" title="XML">XML</a>、SVG 等），也會擁有各自的 API：HTML 文件（content type 為 <code>text/html</code>）實作了 {{domxref("HTMLDocument")}} 介面，而 XML 及 SVG 文件實作了 {{domxref("XMLDocument")}} 介面。</p>
+<p><code>Document</code> 介面描述了各種類型文件的共同屬性與方法。根據文件的類型（如 <a href="/zh-TW/docs/HTML">HTML</a>、<a href="/zh-TW/docs/XML">XML</a>、SVG 等），也會擁有各自的 API：HTML 文件（content type 為 <code>text/html</code>）實作了 {{domxref("HTMLDocument")}} 介面，而 XML 及 SVG 文件實作了 {{domxref("XMLDocument")}} 介面。</p>
 
 <p>請注意 <code>window.document</code> 物件為 <code>HTMLDocument</code> 所建構。</p>
 
@@ -286,7 +286,7 @@ translation_of: Web/API/Document
 
 <dl>
  <dt>{{domxref("document.createExpression","document.createExpression(String expression, XPathNSResolver resolver)")}}</dt>
- <dd>Compiles an <code><a href="/en-US/docs/XPathExpression" title="XPathExpression">XPathExpression</a></code> which can then be used for (repeated) evaluations.</dd>
+ <dd>Compiles an <code><a href="/en-US/docs/XPathExpression">XPathExpression</a></code> which can then be used for (repeated) evaluations.</dd>
  <dt>{{domxref("document.createNSResolver","document.createNSResolver(Node resolver)")}}</dt>
  <dd>Creates an {{domxref("XPathNSResolver")}} object.</dd>
  <dt>{{domxref("document.evaluate","document.evaluate(String expression, Node contextNode, XPathNSResolver resolver, Number type, Object result)")}}</dt>
@@ -357,7 +357,7 @@ translation_of: Web/API/Document
  <dt>{{domxref("document.getBoxObjectFor")}} {{obsolete_inline}}</dt>
  <dd>Use the {{domxref("Element.getBoundingClientRect()")}} method instead.</dd>
  <dt>{{domxref("document.loadOverlay")}}</dt>
- <dd>Loads a <a href="/en-US/docs/XUL_Overlays" title="XUL_Overlays">XUL overlay</a> dynamically. This only works in XUL documents.</dd>
+ <dd>Loads a <a href="/en-US/docs/XUL_Overlays">XUL overlay</a> dynamically. This only works in XUL documents.</dd>
  <dt>{{domxref("document.queryCommandText")}} {{obsolete_inline("14.0")}}</dt>
  <dd>This method never did anything but throw an exception, and was removed in Gecko 14.0 {{geckoRelease("14.0")}}.</dd>
 </dl>
@@ -368,7 +368,7 @@ translation_of: Web/API/Document
 
 <dl>
  <dt>{{domxref("document.fileSize")}}* {{non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See <a href="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx" title="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx">MSDN</a>.</dd>
+ <dd>Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See <a href="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx">MSDN</a>.</dd>
  <dt>Internet Explorer does not support all methods from the <code>Node</code> interface in the <code>Document</code> interface:</dt>
 </dl>
 

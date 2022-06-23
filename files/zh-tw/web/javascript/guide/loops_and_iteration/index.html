@@ -314,13 +314,13 @@ car.model = Mustang
 
 <h2 id="for...of_陳述式"><code>for...of</code> 陳述式</h2>
 
-<p> <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> 陳述式在<a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/iterable">iterable objects</a>(可迭代的物件)上建立了一個循環 (包含 {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, <a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a>(參數) 物件 等等), 對每個獨特屬性的值使用一個準備被執行的有陳述式的自訂迭代掛勾。</p>
+<p> <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> 陳述式在<a href="/zh-TW/docs/Web/JavaScript/Guide/iterable">iterable objects</a>(可迭代的物件)上建立了一個循環 (包含 {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, <a href="/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a>(參數) 物件 等等), 對每個獨特屬性的值使用一個準備被執行的有陳述式的自訂迭代掛勾。</p>
 
 <pre class="syntaxbox">for (<em>variable</em> of <em>object</em>) {
   <em>statement
 </em>}</pre>
 
-<p>下列的範例可看出<code>for...of</code> 迴圈跟 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in" title="en-US/docs/JavaScript/Reference/Statements/for...in">for...in</a></code> 迴圈的差別。 <code>for...in</code> 在屬性名字循環，而<code>for...of</code> 在屬性的值循環。</p>
+<p>下列的範例可看出<code>for...of</code> 迴圈跟 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> 迴圈的差別。 <code>for...in</code> 在屬性名字循環，而<code>for...of</code> 在屬性的值循環。</p>
 
 <pre class="brush:js">let arr = [3, 5, 7];
 arr.foo = "hello";

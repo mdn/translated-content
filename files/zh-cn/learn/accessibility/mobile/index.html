@@ -36,7 +36,7 @@ translation_of: Learn/Accessibility/Mobile
 
 <p>现代移动设备对无障碍和大多数 Web 标准有很好的支持。那个因为移动设备和桌面设备使用了完全不同的技术而强制要求开发者根据设备不同将用户分发到不同的域名的时代已经结束了（虽然现在还有一些公司仍然在检测用户移动设备的使用，并为他提供一个独立的手机域名）。</p>
 
-<p>目前，移动设备一般都可以处理“full fat”的网站了，同时，为了能够让盲人成功的使用网站，主流平台甚至还内置了阅读器。移动设备也倾向于对<a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">“</a><a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">”</a>有个好的支持。</p>
+<p>目前，移动设备一般都可以处理“full fat”的网站了，同时，为了能够让盲人成功的使用网站，主流平台甚至还内置了阅读器。移动设备也倾向于对<a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">“</a><a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a><a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">”</a>有个好的支持。</p>
 
 <p>你只要需要遵守好的 web 设计规范和最佳的无障碍实践，就可以让你的网站在手机上可用且无障碍。</p>
 
@@ -202,11 +202,11 @@ translation_of: Learn/Accessibility/Mobile
 
 <h2 id="控制机制">控制机制</h2>
 
-<p>在我们的 CSS 和 JavaScript 可访问性文章中，我们研究了特定于某种控制机制的事件的概念（请参阅<a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events">鼠标特定的事件</a>）。回顾一下，因为其他控制机制不能激活相关的功能，将会导致辅助功能的问题。</p>
+<p>在我们的 CSS 和 JavaScript 可访问性文章中，我们研究了特定于某种控制机制的事件的概念（请参阅<a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events">鼠标特定的事件</a>）。回顾一下，因为其他控制机制不能激活相关的功能，将会导致辅助功能的问题。</p>
 
-<p>举例来说，<a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick">点击事件</a>在可访问性方面是好的 - 通过点击处理器设置的元素，选中它并按下回车或返回，或者在触摸屏设备上点击它，可以调用关联的事件处理程序。试试我们的例子<a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html">simple-button-example.html</a>(<a href="https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html">查看在线例子</a>) 来看看我们是什么意思。</p>
+<p>举例来说，<a href="/en-US/docs/Web/API/GlobalEventHandlers/onclick">点击事件</a>在可访问性方面是好的 - 通过点击处理器设置的元素，选中它并按下回车或返回，或者在触摸屏设备上点击它，可以调用关联的事件处理程序。试试我们的例子<a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html">simple-button-example.html</a>(<a href="https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html">查看在线例子</a>) 来看看我们是什么意思。</p>
 
-<p>另一方面，像<a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousedown">mousedown</a>和<a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseup">mouseup</a>这些特定的鼠标事件会产生一些问题 - 他们的事件处理程序不能使用除了鼠标意外的设备操作。</p>
+<p>另一方面，像<a href="/en-US/docs/Web/API/GlobalEventHandlers/onmousedown">mousedown</a>和<a href="/en-US/docs/Web/API/GlobalEventHandlers/onmouseup">mouseup</a>这些特定的鼠标事件会产生一些问题 - 他们的事件处理程序不能使用除了鼠标意外的设备操作。</p>
 
 <p>如果你尝试通过键盘或触摸来试试我们的<a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html">simple-box-drag.html</a>(<a href="https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html">查看在线例子</a>)，你将发现问题。它发生的原因是我们用了下面的代码：</p>
 
@@ -231,7 +231,7 @@ panel.ontouchend = stopMove;</pre>
 
 <p>我们提供了一个简单的例子来展示如何使用鼠标和触摸事件 - <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html">multi-control-box-drag.html </a>(<a href="https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html">查看在线例子</a>)</p>
 
-<p><strong>注意</strong>: 你可以看到一个功能完善的例子，展示如何在实现<a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms">游戏控制机制</a>中实现不同的控制机制。</p>
+<p><strong>注意</strong>: 你可以看到一个功能完善的例子，展示如何在实现<a href="/en-US/docs/Games/Techniques/Control_mechanisms">游戏控制机制</a>中实现不同的控制机制。</p>
 
 <h2 id="响应式设计">响应式设计</h2>
 
@@ -253,7 +253,7 @@ panel.ontouchend = stopMove;</pre>
 
 <h4 id="不能缩放">不能缩放</h4>
 
-<p>我们可以利用<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>来禁止用户缩放，在你的<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">&lt;head&gt;</a>中加入下列代码即可：</p>
+<p>我们可以利用<a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>来禁止用户缩放，在你的<a href="/en-US/docs/Web/HTML/Element/head">&lt;head&gt;</a>中加入下列代码即可：</p>
 
 <pre>&lt;meta name="viewport" content="user-scalable=no"&gt;</pre>
 
@@ -302,13 +302,13 @@ panel.ontouchend = stopMove;</pre>
 <h2 id="在这个模块中">在这个模块中</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">什么是可访问性？</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript">CSS and JavaScript accessibility best practices</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basics</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Multimedia">Accessible multimedia</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Mobile">Mobile accessibility</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting">Accessibility troubleshooting</a></li>
+ <li><a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">什么是可访问性？</a></li>
+ <li><a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a></li>
+ <li><a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript">CSS and JavaScript accessibility best practices</a></li>
+ <li><a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basics</a></li>
+ <li><a href="/en-US/docs/Learn/Accessibility/Multimedia">Accessible multimedia</a></li>
+ <li><a href="/en-US/docs/Learn/Accessibility/Mobile">Mobile accessibility</a></li>
+ <li><a href="/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting">Accessibility troubleshooting</a></li>
 </ul>
 </div>
 </div>

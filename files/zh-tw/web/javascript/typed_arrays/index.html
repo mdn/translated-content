@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Typed_arrays
 ---
 <p>{{JsSidebar("Advanced")}}</p>
 
-<p>當 Webapp 有了視頻、<a href="/zh_tw/Introducing_the_Audio_API_Extension" title="zh tw/Introducing the Audio API Extension">音頻操作</a>及用 <a href="/zh_tw/WebSockets" title="zh tw/WebSockets">WebSockets</a> 存取原始資料等等的功能而變得越來越強大，讓 JavaScript 代碼可以快速、簡單地操作原始二進制資料的好處就越來越明顯。以前唯一的解法是視原始資料為<a href="/zh_tw/Core_JavaScript_1.5_教學/預先定義的核心物件/String_物件" title="zh tw/Core JavaScript 1.5 教學/預先定義的核心物件/String 物件">字串</a>並用 <a href="/en/JavaScript/Reference/Global_Objects/String/charCodeAt" title="en/Core JavaScript 1.5 Reference/Global Objects/String/charCodeAt"><code>charCodeAt()</code></a> 方法讀取資料緩衝的位元組。</p>
+<p>當 Webapp 有了視頻、<a href="/zh_tw/Introducing_the_Audio_API_Extension">音頻操作</a>及用 <a href="/zh_tw/WebSockets">WebSockets</a> 存取原始資料等等的功能而變得越來越強大，讓 JavaScript 代碼可以快速、簡單地操作原始二進制資料的好處就越來越明顯。以前唯一的解法是視原始資料為<a href="/zh_tw/Core_JavaScript_1.5_教學/預先定義的核心物件/String_物件">字串</a>並用 <a href="/en/JavaScript/Reference/Global_Objects/String/charCodeAt"><code>charCodeAt()</code></a> 方法讀取資料緩衝的位元組。</p>
 
 <p>然而，由於需要多次型別轉換（特別是二進制資料並非以位元組計算，如32位元整數或浮點數），這個解法既慢又容易發生錯誤。</p>
 
@@ -39,11 +39,11 @@ translation_of: Web/JavaScript/Typed_arrays
 <h2 id="Web_APIs_using_typed_arrays">Web APIs using typed arrays</h2>
 
 <dl>
- <dt><a href="/zh-TW/docs/Web/API/FileReader#readAsArrayBuffer()" title="/zh-TW/docs/Web/API/FileReader#readAsArrayBuffer()"><code>FileReader.prototype.readAsArrayBuffer()</code></a></dt>
- <dd>The <code>FileReader.prototype.readAsArrayBuffer()</code> method starts reading the contents of the specified <a href="/zh-TW/docs/Web/API/Blob" title="/zh-TW/docs/DOM/Blob"><code>Blob</code></a> or <a href="/zh-TW/docs/Web/API/File" title="/zh-TW/docs/DOM/File"><code>File</code></a>.</dd>
- <dt><a href="/zh-TW/docs/Web/API/XMLHttpRequest#send()" title="/zh-TW/docs/Web/API/XMLHttpRequest#send()"><code>XMLHttpRequest.prototype.send()</code></a></dt>
+ <dt><a href="/zh-TW/docs/Web/API/FileReader#readAsArrayBuffer()"><code>FileReader.prototype.readAsArrayBuffer()</code></a></dt>
+ <dd>The <code>FileReader.prototype.readAsArrayBuffer()</code> method starts reading the contents of the specified <a href="/zh-TW/docs/Web/API/Blob"><code>Blob</code></a> or <a href="/zh-TW/docs/Web/API/File"><code>File</code></a>.</dd>
+ <dt><a href="/zh-TW/docs/Web/API/XMLHttpRequest#send()"><code>XMLHttpRequest.prototype.send()</code></a></dt>
  <dd><code>XMLHttpRequest</code> instances' <code>send()</code> method now supports typed arrays and {{jsxref("ArrayBuffer")}} objects as argument.</dd>
- <dt><code><a href="https://developer.mozilla.org/zh-TW/docs/Web/API/ImageData">ImageData.data</a></code></dt>
+ <dt><code><a href="/zh-TW/docs/Web/API/ImageData">ImageData.data</a></code></dt>
  <dd>Is a {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between <code>0</code> and <code>255</code> inclusive.</dd>
 </dl>
 
@@ -98,11 +98,11 @@ for (var i = 0; i &lt; int16View.length; i++) {
 console.log("現在32位元陣列的欄位0是" + int32View[0]);
 </pre>
 
-<p>輸出為"現在32位元陣列的欄位0是32"。也就是，這兩個陣列真的是同一個資料緩衝的在不同格式下的看法。其他 <a href="/en/JavaScript_typed_arrays/ArrayBufferView#Typed_array_subclasses" title="en/JavaScript typed arrays/ArrayBufferView#Typed array subclasses">view types</a> 也是同樣的情形。</p>
+<p>輸出為"現在32位元陣列的欄位0是32"。也就是，這兩個陣列真的是同一個資料緩衝的在不同格式下的看法。其他 <a href="/en/JavaScript_typed_arrays/ArrayBufferView#Typed_array_subclasses">view types</a> 也是同樣的情形。</p>
 
 <h3 id="處理複雜的資料結構">處理複雜的資料結構</h3>
 
-<p>在單一個緩衝使用不同型別、不同起始偏移的多個視圖以操作資料物件含有的多個資料型別。這個方法可以用在使用 <a href="/en/WebGL" title="en/WebGL">WebGL</a> 、資料檔案、<a href="/en/js-ctypes" title="en/js-ctypes">js-ctypes</a> 時遇到的複雜的資料結構。</p>
+<p>在單一個緩衝使用不同型別、不同起始偏移的多個視圖以操作資料物件含有的多個資料型別。這個方法可以用在使用 <a href="/en/WebGL">WebGL</a> 、資料檔案、<a href="/en/js-ctypes">js-ctypes</a> 時遇到的複雜的資料結構。</p>
 
 <p>考慮這個 C 結構：</p>
 
@@ -125,7 +125,7 @@ var amountDueView = new Float32Array(buffer, 20, 1);
 
 <p>舉例來說，可以用 <code>amountDueView[0]</code> 存取 amountDue。</p>
 
-<div class="notecard note"><p><strong>備註：</strong>C 結構的 <a class="external" href="http://en.wikipedia.org/wiki/Data_structure_alignment" title="http://en.wikipedia.org/wiki/Data_structure_alignment">data structure alignment</a> 是與使用平台有關，須小心這些填充上的差異。</p></div>
+<div class="notecard note"><p><strong>備註：</strong>C 結構的 <a href="http://en.wikipedia.org/wiki/Data_structure_alignment">data structure alignment</a> 是與使用平台有關，須小心這些填充上的差異。</p></div>
 
 <h3 id="Conversion_to_normal_arrays">Conversion to normal arrays</h3>
 
@@ -148,8 +148,8 @@ normalArray.constructor === Array;
 <h2 id="參見">參見</h2>
 
 <ul>
- <li><a href="/zh-TW/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer" title="/zh-TW/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">Getting <code>ArrayBuffer</code>s or typed arrays from <em>Base64</em>-encoded strings</a></li>
- <li><a href="/zh-TW/docs/Code_snippets/StringView" title="/zh-TW/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
+ <li><a href="/zh-TW/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">Getting <code>ArrayBuffer</code>s or typed arrays from <em>Base64</em>-encoded strings</a></li>
+ <li><a href="/zh-TW/docs/Code_snippets/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
  <li><a href="https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays">Faster Canvas Pixel Manipulation with Typed Arrays</a></li>
  <li><a href="http://www.html5rocks.com/en/tutorials/webgl/typed_arrays">Typed Arrays: Binary Data in the Browser</a></li>
  <li>{{Glossary("Endianness")}}</li>

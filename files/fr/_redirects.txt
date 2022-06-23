@@ -1956,7 +1956,7 @@
 /fr/docs/HTML/Formulaires/Comment_structurer_un_formulaire_HTML/Exemple	/fr/docs/Learn/Forms/How_to_structure_a_web_form/Example
 /fr/docs/HTML/Formulaires/Les_blocs_de_formulaires_natifs	/fr/docs/Learn/Forms/Basic_native_form_controls
 /fr/docs/HTML/Formulaires/Mon_premier_formulaire_HTML	/fr/docs/Learn/Forms/Your_first_form
-/fr/docs/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple	/fr/docs/conflicting/Learn/Forms/Your_first_form
+/fr/docs/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple	/fr/docs/Learn/Forms/Your_first_form
 /fr/docs/HTML/Global_attributes	/fr/docs/Web/HTML/Global_attributes
 /fr/docs/HTML/HTML5	/fr/docs/Glossary/HTML5
 /fr/docs/HTML/HTML5/Introduction_to_HTML5	/fr/docs/Learn/HTML
@@ -2998,11 +2998,12 @@
 /fr/docs/Learn/CSS/Basic_text_styling_in_CSS	/fr/docs/Learn/CSS/Styling_text/Fundamentals
 /fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS	/fr/docs/Learn/CSS/First_steps/What_is_CSS
 /fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge	/fr/docs/Learn/CSS/First_steps/Styling_a_biography_page
+/fr/docs/Learn/CSS/Howto/customize_a_list	/fr/docs/Learn/CSS/Styling_text/Styling_lists
 /fr/docs/Learn/CSS/Howto/style_text	/fr/docs/Learn/CSS/Styling_text/Fundamentals
 /fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens	/fr/docs/Learn/CSS/Styling_text/Styling_links
 /fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte	/fr/docs/Learn/CSS/Styling_text/Fundamentals
 /fr/docs/Learn/CSS/Using_CSS_in_a_web_page	/fr/docs/Learn/CSS/First_steps/How_CSS_works
-/fr/docs/Learn/Forms/Your_first_form/Example	/fr/docs/conflicting/Learn/Forms/Your_first_form
+/fr/docs/Learn/Forms/Your_first_form/Example	/fr/docs/Learn/Forms/Your_first_form
 /fr/docs/Learn/Index	/fr/docs/Learn
 /fr/docs/Learn/JavaScript/Asynchronous/Async_await	/fr/docs/Learn/JavaScript/Asynchronous/Promises
 /fr/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/fr/docs/Learn/JavaScript/Asynchronous
@@ -4562,7 +4563,7 @@
 /fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers	/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers
 /fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs	/fr/docs/Learn/Forms/Basic_native_form_controls
 /fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML	/fr/docs/Learn/Forms/Your_first_form
-/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple	/fr/docs/conflicting/Learn/Forms/Your_first_form
+/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple	/fr/docs/Learn/Forms/Your_first_form
 /fr/docs/Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets	/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls
 /fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript	/fr/docs/Learn/Forms/Sending_forms_through_JavaScript
 /fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire	/fr/docs/Learn/Forms/Form_validation
@@ -4654,7 +4655,7 @@
 /fr/docs/Web/HTML/Formulaires/Comment_structurer_un_formulaire_HTML/Exemple	/fr/docs/Learn/Forms/How_to_structure_a_web_form/Example
 /fr/docs/Web/HTML/Formulaires/Les_blocs_de_formulaires_natifs	/fr/docs/Learn/Forms/Basic_native_form_controls
 /fr/docs/Web/HTML/Formulaires/Mon_premier_formulaire_HTML	/fr/docs/Learn/Forms/Your_first_form
-/fr/docs/Web/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple	/fr/docs/conflicting/Learn/Forms/Your_first_form
+/fr/docs/Web/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple	/fr/docs/Learn/Forms/Your_first_form
 /fr/docs/Web/HTML/Gestion_du_focus_en_HTML	/fr/docs/Web/API/Document/hasFocus
 /fr/docs/Web/HTML/HTML5	/fr/docs/Glossary/HTML5
 /fr/docs/Web/HTML/HTML5/Liste_des_éléments_HTML5	/fr/docs/conflicting/Web/HTML/Element
@@ -4710,6 +4711,7 @@
 /fr/docs/Web/JavaScript/Extensions_JavaScript_Microsoft/debugger	/fr/docs/Web/JavaScript/Reference/Statements/debugger
 /fr/docs/Web/JavaScript/Extensions_Microsoft/debugger	/fr/docs/Web/JavaScript/Reference/Statements/debugger
 /fr/docs/Web/JavaScript/Gestion_de_la_mémoire	/fr/docs/Web/JavaScript/Memory_Management
+/fr/docs/Web/JavaScript/Getting_Started	/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /fr/docs/Web/JavaScript/Guide/Apropos	/fr/docs/Web/JavaScript/Guide/Introduction
 /fr/docs/Web/JavaScript/Guide/Boucles_et_itération	/fr/docs/Web/JavaScript/Guide/Loops_and_iteration
 /fr/docs/Web/JavaScript/Guide/BoucleÉvénements	/fr/docs/Web/JavaScript/EventLoop
@@ -6058,10 +6060,13 @@
 /fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_dba75d8c56ccc773f03d946ce2dbb25c	/fr/docs/Learn/CSS/First_steps/How_CSS_works
 /fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_ecbda2160290b96c02dcfa8276c0333a	/fr/docs/Learn/CSS/First_steps/How_CSS_works
 /fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals_8249b1bf53d09b06ed51f43697880b5b	/fr/docs/Learn/CSS/Styling_text/Fundamentals
+/fr/docs/conflicting/Learn/CSS/Styling_text/Styling_lists	/fr/docs/Learn/CSS/Styling_text/Styling_lists
 /fr/docs/conflicting/Learn/CSS/Styling_text/Styling_lists_06e9538892250c13976a84639f0dadd2	/fr/docs/Learn/CSS/Styling_text/Styling_lists
 /fr/docs/conflicting/Learn/Common_questions/set_up_a_local_testing_server	/fr/docs/Learn/Common_questions/set_up_a_local_testing_server
+/fr/docs/conflicting/Learn/Forms/Your_first_form	/fr/docs/Learn/Forms/Your_first_form
 /fr/docs/conflicting/Learn/Getting_started_with_the_web	/fr/docs/Learn/Getting_started_with_the_web
 /fr/docs/conflicting/Learn/Getting_started_with_the_web/Dealing_with_files	/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files
+/fr/docs/conflicting/Learn/Getting_started_with_the_web/JavaScript_basics	/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /fr/docs/conflicting/Learn/HTML/Introduction_to_HTML	/fr/docs/Learn/HTML/Introduction_to_HTML
 /fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting	/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 /fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting_b235e00aa38ee1d4b535fc921395f446	/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting

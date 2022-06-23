@@ -22,11 +22,11 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>通过压缩——排除不必要空格，注释，和将脚本、CSS 放入外部文件等减小页面的大小，可以在页面结构改变很小的情况下提高下载性能。</p>
 
-<p>诸如 <a class="external" href="http://tidy.sourceforge.net/">HTML Tidy</a> 这类的工具可以从有效的 HTML 源文件中自动截去行首空格和额外的空行，其它工具则可以通过重新格式化源代码来压缩 JavaScript 或者通过混淆源码将长标识符替换为短标识符来减小文件大小。</p>
+<p>诸如 <a href="http://tidy.sourceforge.net/">HTML Tidy</a> 这类的工具可以从有效的 HTML 源文件中自动截去行首空格和额外的空行，其它工具则可以通过重新格式化源代码来压缩 JavaScript 或者通过混淆源码将长标识符替换为短标识符来减小文件大小。</p>
 
 <h3 id="Minimize_the_number_of_files" name="Minimize_the_number_of_files">最小化文件数量</h3>
 
-<p>减少一个页面引用的文件数量可以降低在下载一个页面的过程中需要的<a href="https://developer.mozilla.org/en-US/docs/HTTP">HTTP</a>请求数量，从而减少这些请求的收发时间。</p>
+<p>减少一个页面引用的文件数量可以降低在下载一个页面的过程中需要的<a href="/en-US/docs/HTTP">HTTP</a>请求数量，从而减少这些请求的收发时间。</p>
 
 <p>根据其缓存设置，浏览器可能会为每个所引用的文件发送一个带 <a href="/zh-CN/docs/Web/HTTP/Headers/If-Modified-Since">If-Modified-Since</a> 的请求给网络服务器，以查询这些文件自上次加载后是否有被修改。查询引用文件上次修改时间会花费太多时间，导致网页首屏延迟，这是因为在渲染页面之前浏览器必须确认每个文件的修改时间。</p>
 
@@ -86,7 +86,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>使用合法标记还有其它优点。首先，浏览器在解释 HTML 时无需做错误校正（除了一些哲理性的问题，例如，是允许用户输入格式不一致，而后再用程序“校准”或统一化呢？还是加强约束规则，限制用户输入的格式？）。</p>
 
-<p>再者，合法标记可以让那些给你的网站做预处理的工具功能最大化。例如，<a class="external external-icon" href="http://tidy.sourceforge.net/">HTML Tidy</a> 可以移除空白（whitespace）和可选的末尾标记（ending tags）；然而，在有严重的错误标记的网页中这些工具便无法工作。</p>
+<p>再者，合法标记可以让那些给你的网站做预处理的工具功能最大化。例如，<a href="http://tidy.sourceforge.net/">HTML Tidy</a> 可以移除空白（whitespace）和可选的末尾标记（ending tags）；然而，在有严重的错误标记的网页中这些工具便无法工作。</p>
 
 <h3 id="Chunk_your_content" name="Chunk_your_content">给内容分块</h3>
 
@@ -128,7 +128,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <pre class="line-numbers  language-html"><code class="language-html">table-layout: fixed;</code></pre>
 
-<p>用 <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col">&lt;col&gt;</a></code> 和 <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup">&lt;colgroup&gt;</a></code> 元素来指定列宽。</p>
+<p>用 <code><a href="/en-US/docs/Web/HTML/Element/col">&lt;col&gt;</a></code> 和 <code><a href="/en-US/docs/Web/HTML/Element/colgroup">&lt;colgroup&gt;</a></code> 元素来指定列宽。</p>
 
 <h3 id="Choose_your_user_agent_requirements_wisely" name="Choose_your_user_agent_requirements_wisely">合理的选择 user-agent</h3>
 
@@ -140,7 +140,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <h3 id="尽可能使用_async_和_defer">尽可能使用 async 和 defer</h3>
 
-<p>确保 JavaScript 脚本兼容 <a href="https://developer.mozilla.org/en-US/docs/HTML/Element/script#Attributes" title="https://developer.mozilla.org/en-US/docs/HTML/Element/script">async</a> 和 <a href="https://developer.mozilla.org/en-US/docs/HTML/Element/script#Attributes" title="https://developer.mozilla.org/en-US/docs/HTML/Element/script">defer</a>，任何时候都要尽可能使用  <a href="https://developer.mozilla.org/en-US/docs/HTML/Element/script#Attributes" title="https://developer.mozilla.org/en-US/docs/HTML/Element/script">async</a> ，特别是当你有较多的 script 标签时。</p>
+<p>确保 JavaScript 脚本兼容 <a href="/en-US/docs/HTML/Element/script#Attributes">async</a> 和 <a href="/en-US/docs/HTML/Element/script#Attributes">defer</a>，任何时候都要尽可能使用  <a href="/en-US/docs/HTML/Element/script#Attributes">async</a> ，特别是当你有较多的 script 标签时。</p>
 
 <p>这样在加载 JavaScript 的过程中页面就不会重新绘制，否则，浏览器在不具有这些特性的 script 标签后就不会重绘任何东西。</p>
 
@@ -193,9 +193,9 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <ul>
  <li>书籍： <a href="http://www.websiteoptimization.com/">"Speed Up Your Site" by Andy King</a></li>
- <li>非常棒、讲的很全 <a class="external external-icon" href="http://developer.yahoo.com/performance/rules.html">Best Practices for Speeding Up Your Web Site</a> (Yahoo!)</li>
+ <li>非常棒、讲的很全 <a href="http://developer.yahoo.com/performance/rules.html">Best Practices for Speeding Up Your Web Site</a> (Yahoo!)</li>
  <li>用来分析和优化的工具：<a href="https://developers.google.com/speed/pagespeed/">Google PageSpeed Tools</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Paint_Flashing_Tool">Paint Flashing Tool</a></li>
+ <li><a href="/en-US/docs/Tools/Paint_Flashing_Tool">Paint Flashing Tool</a></li>
 </ul>
 
 <div class="originaldocinfo">

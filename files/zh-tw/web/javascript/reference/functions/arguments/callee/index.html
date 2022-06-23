@@ -11,11 +11,11 @@ translation_of: Web/JavaScript/Reference/Functions/arguments/callee
 
 <p><code>callee</code> is a property of the <code>arguments</code> object. It can be used to refer to the currently executing function inside the function body of that function. This is useful when the name of the function is unknown, such as within a function expression with no name (also called "anonymous functions").</p>
 
-<div class="notecard warning"><p><strong>Warning:</strong> The 5th edition of ECMAScript (ES5) forbids use of <code>arguments.callee()</code> in <a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>. Avoid using <code>arguments.callee()</code> by either giving function expressions a name or use a function declaration where a function must call itself.</p></div>
+<div class="notecard warning"><p><strong>Warning:</strong> The 5th edition of ECMAScript (ES5) forbids use of <code>arguments.callee()</code> in <a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>. Avoid using <code>arguments.callee()</code> by either giving function expressions a name or use a function declaration where a function must call itself.</p></div>
 
 <h3 id="Why_was_arguments.callee_removed_from_ES5_strict_mode">Why was <code>arguments.callee</code> removed from ES5 strict mode?</h3>
 
-<p>(adapted from <a href="http://stackoverflow.com/a/235760/578288" title="http://stackoverflow.com/a/235760/578288">a Stack Overflow answer by olliej</a>)</p>
+<p>(adapted from <a href="http://stackoverflow.com/a/235760/578288">a Stack Overflow answer by olliej</a>)</p>
 
 <p>Early versions of JavaScript did not allow named function expressions, and for this reason you could not make a recursive function expression.</p>
 
@@ -78,9 +78,9 @@ sillyFunction();</pre>
 
 <h3 id="Using_arguments.callee_in_an_anonymous_recursive_function">Using <code>arguments.callee</code> in an anonymous recursive function</h3>
 
-<p>A recursive function must be able to refer to itself. Typically, a function refers to itself by its name. However, an anonymous function (which can be created by a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function" title="JavaScript/Reference/Operators/Special/function">function expression</a> or the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="JavaScript/Reference/Global_Objects/Function"><code>Function</code> constructor</a>) does not have a name. Therefore if there is no accessible variable referring to it, the only way the function can refer to itself is by <code>arguments.callee</code>.</p>
+<p>A recursive function must be able to refer to itself. Typically, a function refers to itself by its name. However, an anonymous function (which can be created by a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a> or the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code> constructor</a>) does not have a name. Therefore if there is no accessible variable referring to it, the only way the function can refer to itself is by <code>arguments.callee</code>.</p>
 
-<p>The following example defines a function, which, in turn, defines and returns a factorial function. This example isn't very practical, and there are nearly no cases where the same result cannot be achieved with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function" title="JavaScript/Reference/Operators/Special/function">named function expressions</a>.</p>
+<p>The following example defines a function, which, in turn, defines and returns a factorial function. This example isn't very practical, and there are nearly no cases where the same result cannot be achieved with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">named function expressions</a>.</p>
 
 <pre class="brush: js">function create() {
    return function(n) {
