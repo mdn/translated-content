@@ -66,7 +66,7 @@ f2() === undefined; //true</pre>
 <p>所以在嚴格模式下，如果 <code>this</code> 沒有定義到執行環境內，其預設值就會是 <code>undefined</code>。</p>
 
 <div class="notecard note">
-<p><strong>備註：</strong>在第二個例子裡面，<code>this</code> 應為 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>，因為 <code>f2</code> 是直接被呼叫，而不是在其為某個物件的方法或屬性的情況下（例如 <code>window.f2()</code>）被直接呼叫。某些瀏覽器首次支援<a href="/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="Strict mode">嚴格模式</a>時沒導入這個特徵，它們會因此錯誤的回傳 <code>window</code> 物件。</p>
+<p><strong>備註：</strong>在第二個例子裡面，<code>this</code> 應為 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>，因為 <code>f2</code> 是直接被呼叫，而不是在其為某個物件的方法或屬性的情況下（例如 <code>window.f2()</code>）被直接呼叫。某些瀏覽器首次支援<a href="/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">嚴格模式</a>時沒導入這個特徵，它們會因此錯誤的回傳 <code>window</code> 物件。</p>
 </div>
 
 <p>要從某個語境訪問另一個 <code>this</code> 語境的值，請使用 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a> 或 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a>:</p>

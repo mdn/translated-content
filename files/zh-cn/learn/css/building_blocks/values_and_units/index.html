@@ -11,7 +11,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td>基本的计算机知识，<a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">安装基本的软件</a>，<a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a>基本知识，HTML 基础知识  (<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">学习 HTML 入门</a>)，以及 CSS 如何工作的基本常识 (如果完全不了解 CSS，请移步 <a href="/en-US/docs/Learn/CSS/First_steps">学习 CSS 第一步</a>.)</td>
+   <td>基本的计算机知识，<a href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">安装基本的软件</a>，<a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a>基本知识，HTML 基础知识  (<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">学习 HTML 入门</a>)，以及 CSS 如何工作的基本常识 (如果完全不了解 CSS，请移步 <a href="/en-US/docs/Learn/CSS/First_steps">学习 CSS 第一步</a>.)</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -22,14 +22,14 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <h2 id="什么是CSS的值">什么是 CSS 的值？</h2>
 
-<p>在 CSS 规范和 MDN 的属性页上，您将能够发现值的存在，因为它们将被尖括号包围，如<code>&lt;color&gt;</code>或<code>&lt;length&gt;</code>。当您看到值<code>&lt;color&gt;</code>对特定属性有效时，这意味着您可以使用任何有效的颜色作为该属性的值，如 <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>参考页面所列。</p>
+<p>在 CSS 规范和 MDN 的属性页上，您将能够发现值的存在，因为它们将被尖括号包围，如<code>&lt;color&gt;</code>或<code>&lt;length&gt;</code>。当您看到值<code>&lt;color&gt;</code>对特定属性有效时，这意味着您可以使用任何有效的颜色作为该属性的值，如 <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>参考页面所列。</p>
 
 <div class="blockIndicator note">
 <p><strong>注意</strong>：您还将看到被称为数据类型的 CSS 值。这些术语基本上是可以互换的——当你在 CSS 中看到一些被称为数据类型的东西时，它实际上只是一种表示值的奇特方式。</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>：是的，CSS 值倾向于使用尖括号表示，以区别于 CSS 属性 (例如{{cssxref("color")}}属性和 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> 数据类型)。您可能还会混淆 CSS 数据类型和 HTML 元素，因为它们都使用尖括号，但这不太可能——它们在完全不一样的上下文中使用。</p>
+<p><strong>注意</strong>：是的，CSS 值倾向于使用尖括号表示，以区别于 CSS 属性 (例如{{cssxref("color")}}属性和 <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> 数据类型)。您可能还会混淆 CSS 数据类型和 HTML 元素，因为它们都使用尖括号，但这不太可能——它们在完全不一样的上下文中使用。</p>
 </div>
 
 <p>在下面的例子中，我们使用关键字设置标题的颜色，使用<code>rgb()</code>函数设置背景：</p>
@@ -40,7 +40,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 } </code>
 </pre>
 
-<p>CSS 中的值是一种定义允许子值集合的方法。这意味着如果您看到<code>&lt;color&gt;</code>是有效的，那么您就不需要考虑可以使用哪些不同类型的颜色值—关键字、十六进制值、<code>rgb()</code>函数等等。假设浏览器支持这些可用的<code>&lt;color&gt;</code>值，则可以使用它们任意一个。MDN 上针对每个值的页面将提供有关浏览器支持的信息。例如，如果您查看 <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>的页面，您将看到浏览器兼容性部分列出了不同类型的颜色值以及对它们的支持。</p>
+<p>CSS 中的值是一种定义允许子值集合的方法。这意味着如果您看到<code>&lt;color&gt;</code>是有效的，那么您就不需要考虑可以使用哪些不同类型的颜色值—关键字、十六进制值、<code>rgb()</code>函数等等。假设浏览器支持这些可用的<code>&lt;color&gt;</code>值，则可以使用它们任意一个。MDN 上针对每个值的页面将提供有关浏览器支持的信息。例如，如果您查看 <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>的页面，您将看到浏览器兼容性部分列出了不同类型的颜色值以及对它们的支持。</p>
 
 <p>让我们来看看您可能经常遇到的一些值和单位类型，并提供一些示例，以便您尝试使用各种值的可能性。</p>
 
@@ -253,7 +253,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <h3 id="颜色关键词">颜色关键词</h3>
 
-<p>在这学习示例或 MDN 上的其他示例中，您经常会看到使用的颜色关键字，因为它们是一种指定颜色的简单易懂的方式。有一些关键词，其中一些有相当有趣的名字！您可以在页面上看到 <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>值的完整列表。</p>
+<p>在这学习示例或 MDN 上的其他示例中，您经常会看到使用的颜色关键字，因为它们是一种指定颜色的简单易懂的方式。有一些关键词，其中一些有相当有趣的名字！您可以在页面上看到 <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>值的完整列表。</p>
 
 <p><strong>在下面的示例中尝试使用不同的颜色值，以了解它们是如何工作的。</strong></p>
 
@@ -325,7 +325,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <h2 id="位置">位置</h2>
 
-<p><code><a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a></code> 数据类型表示一组 2D 坐标，用于定位一个元素，如背景图像 (通过 <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position">background-position</a></code>)。它可以使用关键字 (如 <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>, 以及<code>center</code> ) 将元素与 2D 框的特定边界对齐，以及表示框的顶部和左侧边缘偏移量的长度。</p>
+<p><code><a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a></code> 数据类型表示一组 2D 坐标，用于定位一个元素，如背景图像 (通过 <code><a href="/en-US/docs/Web/CSS/background-position">background-position</a></code>)。它可以使用关键字 (如 <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>, 以及<code>center</code> ) 将元素与 2D 框的特定边界对齐，以及表示框的顶部和左侧边缘偏移量的长度。</p>
 
 <p>一个典型的位置值由两个值组成——第一个值水平地设置位置，第二个值垂直地设置位置。如果只指定一个轴的值，另一个轴将默认为 <code>center</code>。</p>
 
@@ -339,7 +339,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>在上面的示例中，我们看到关键字被用作值的地方 (例如<code>&lt;color&gt;</code>关键字，如 <code>red</code>, <code>black</code>, <code>rebeccapurple</code>, and <code>goldenrod</code>)。这些关键字被更准确地描述为标识符，一个 CSS 可以理解的特殊值。因此它们没有使用引号括起来——它们不被当作字符串。</p>
 
-<p>在某些地方可以使用 CSS 中的字符串，例如 <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#Generating_content_with_before_and_after">在指定生成的内容时</a>。在本例中，引用该值以证明它是一个字符串。在下面的示例中，我们使用非引号括起来的颜色关键字和引号括起来的内容字符串。</p>
+<p>在某些地方可以使用 CSS 中的字符串，例如 <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#Generating_content_with_before_and_after">在指定生成的内容时</a>。在本例中，引用该值以证明它是一个字符串。在下面的示例中，我们使用非引号括起来的颜色关键字和引号括起来的内容字符串。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}} </p>
 
@@ -355,11 +355,11 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <h2 id="总结">总结</h2>
 
-<p>本文简要介绍了您可能会遇到的最常见的值和单位类型。你可以看看所有不同类型的 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS 的值和单位</a> 参考页面；当你学习这些课程时，你将会遇到很多这样的情况。</p>
+<p>本文简要介绍了您可能会遇到的最常见的值和单位类型。你可以看看所有不同类型的 <a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS 的值和单位</a> 参考页面；当你学习这些课程时，你将会遇到很多这样的情况。</p>
 
 <p>需要记住的关键一点是，每个属性都有一个已定义的允许值列表，每个值都有一个定义来解释子值是什么。然后您可以在 MDN 上查看详细信息。</p>
 
-<p>例如，理解 <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code>还允许您创建一个颜色渐变有意义的，但也许这个章节并不会提供太多明显的相关知识！</p>
+<p>例如，理解 <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code>还允许您创建一个颜色渐变有意义的，但也许这个章节并不会提供太多明显的相关知识！</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}</p>
 

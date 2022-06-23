@@ -54,7 +54,7 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 
 <p>When inserting HTML into a page by using <code>insertAdjacentHTML</code> be careful not to use user input that hasn't been escaped.</p>
 
-<p>It is not recommended you use <code>insertAdjacentHTML</code> when inserting plain text; instead, use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent" title="The Node.textContent property represents the text content of a node and its descendants."><code>Node.textContent</code></a> property or <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentText" title="The insertAdjacentText() method inserts a given text node at a given position relative to the element it is invoked upon."><code>Element.insertAdjacentText()</code></a> method. This doesn't interpret the passed content as HTML, but instead inserts it as raw text.</p>
+<p>It is not recommended you use <code>insertAdjacentHTML</code> when inserting plain text; instead, use the <a href="/en-US/docs/Web/API/Node/textContent"><code>Node.textContent</code></a> property or <a href="/en-US/docs/Web/API/Element/insertAdjacentText"><code>Element.insertAdjacentText()</code></a> method. This doesn't interpret the passed content as HTML, but instead inserts it as raw text.</p>
 
 <h2 id="Specification" name="Specification">Specification</h2>
 
@@ -70,5 +70,5 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
  <li>{{domxref("Element.insertAdjacentElement()")}}</li>
  <li>{{domxref("Element.insertAdjacentText()")}}</li>
  <li>{{domxref("XMLSerializer")}}: Construct a DOM representation of XML text</li>
- <li><a class="external" href="https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/">hacks.mozilla.org guest post</a> by Henri Sivonen including benchmark showing that insertAdjacentHTML can be way faster in some cases.</li>
+ <li><a href="https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/">hacks.mozilla.org guest post</a> by Henri Sivonen including benchmark showing that insertAdjacentHTML can be way faster in some cases.</li>
 </ul>

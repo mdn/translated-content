@@ -8,7 +8,7 @@ tags:
 translation_of: Web/HTTP/Basics_of_HTTP/Data_URIs
 original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
-<p><code>data</code> URIs, 由 <a class="external" href="http://tools.ietf.org/html/rfc2397" title="http://tools.ietf.org/html/rfc2397">RFC 2397</a> 文件定義, 允許作者在文件中嵌入檔案.</p>
+<p><code>data</code> URIs, 由 <a href="http://tools.ietf.org/html/rfc2397">RFC 2397</a> 文件定義, 允許作者在文件中嵌入檔案.</p>
 
 <h2 id="Syntax" name="Syntax">表達式</h2>
 
@@ -52,11 +52,11 @@ YSBzbGlnaHRseSBsb25nZXIgdGVzdCBmb3IgdGV2ZXIK
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p>請先閱讀文章《 <a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding" title="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding">Base64 encoding and decoding</a>. 》。</p>
+<p>請先閱讀文章《 <a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding">Base64 encoding and decoding</a>. 》。</p>
 
 <h2 id="Converting_an_nsIFile_to_a_data_URI" name="Converting_an_nsIFile_to_a_data_URI">轉換 nsIFile 至data URI</h2>
 
-<p>This function returns a base 64-encoded data URI from the passed <a href="/en/XPCOM_Interface_Reference/nsIFile" title="en/nsIFile">nsIFile</a>.</p>
+<p>This function returns a base 64-encoded data URI from the passed <a href="/en/XPCOM_Interface_Reference/nsIFile">nsIFile</a>.</p>
 
 <pre class="brush: js notranslate">function generateDataURI(file) {
   var contentType = Components.classes["@mozilla.org/mime;1"]
@@ -87,7 +87,7 @@ YSBzbGlnaHRseSBsb25nZXIgdGVzdCBmb3IgdGV2ZXIK
  <dt>表達式</dt>
  <dd><code>data</code> URIs 的格式十分簡單, 但是我們容易忘記在 "data" 區塊前面使用逗號, 或是不正確的將資料轉換為 base64 的格式.</dd>
  <dt>在HTML 的格式</dt>
- <dd>A <code>data</code> URI provides a file within a file, which can potentially be very wide relative to the width of the enclosing document. As a URL, the <code>data</code> should be formatable with whitespace (linefeed, tab, or spaces), but there are practical issues that arise <a class="external" href="http://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12">when using base64 encoding</a>.</dd>
+ <dd>A <code>data</code> URI provides a file within a file, which can potentially be very wide relative to the width of the enclosing document. As a URL, the <code>data</code> should be formatable with whitespace (linefeed, tab, or spaces), but there are practical issues that arise <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12">when using base64 encoding</a>.</dd>
  <dt>長度限制</dt>
  <dd>Although Mozilla supports <code>data</code> URIs of essentially unlimited length, browsers are not required to support any particular maximum length of data. For example, the Opera 11 browser limits <code>data</code> URIs to around 65000 characters.</dd>
  <dt>缺乏錯誤處理</dt>
@@ -115,15 +115,15 @@ YSBzbGlnaHRseSBsb25nZXIgdGVzdCBmb3IgdGV2ZXIK
 <h2 id="參見">參見</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding" title="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding">Base64 encoding and decoding</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding">Base64 encoding and decoding</a></li>
  <li>{{domxref("WindowBase64.atob","atob()")}}</li>
  <li>{{domxref("WindowBase64.btoa","btoa()")}}</li>
- <li><a href="/en-US/docs/Web/CSS/uri" title="/en-US/docs/Web/CSS/uri">CSS <code>url()</code></a></li>
- <li><a href="/en-US/docs/URI" title="/en-US/docs/URI">URI</a></li>
+ <li><a href="/en-US/docs/Web/CSS/uri">CSS <code>url()</code></a></li>
+ <li><a href="/en-US/docs/URI">URI</a></li>
 </ul>
 
 <h2 id="Resources" name="Resources">資源</h2>
 
 <ul>
- <li><a class="external" href="http://tools.ietf.org/html/rfc2397" title="http://tools.ietf.org/html/rfc2397">RFC 2397</a> -- The "data" URL scheme"</li>
+ <li><a href="http://tools.ietf.org/html/rfc2397">RFC 2397</a> -- The "data" URL scheme"</li>
 </ul>

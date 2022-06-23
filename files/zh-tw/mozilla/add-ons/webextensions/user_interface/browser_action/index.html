@@ -14,7 +14,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 
 <h2 id="詳細指定工具列按鈕">詳細指定工具列按鈕</h2>
 
-<p>透過在 manifest.json 中使用 <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> 鍵來定義工具列按鈕的屬性：</p>
+<p>透過在 manifest.json 中使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> 鍵來定義工具列按鈕的屬性：</p>
 
 <pre class="brush: json line-numbers  language-json"><code class="language-json">"browser_action": {
   "default_icon": {
@@ -26,7 +26,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 
 <p>唯一一個強制的鍵只有 <code>default_icon</code>。</p>
 
-<p>指定工具列按鈕的方式有兩種： 有<a href="/en-US/Add-ons/WebExtensions/Popups">彈出視窗</a>跟沒有<a href="/en-US/Add-ons/WebExtensions/Popups">彈出視窗</a>。如果你不指定彈出視窗，當用戶點擊按鈕事件會被傳送到套件，而套件透過 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>browserAction.onClicked</code></a> 監聽：</p>
+<p>指定工具列按鈕的方式有兩種： 有<a href="/en-US/Add-ons/WebExtensions/Popups">彈出視窗</a>跟沒有<a href="/en-US/Add-ons/WebExtensions/Popups">彈出視窗</a>。如果你不指定彈出視窗，當用戶點擊按鈕事件會被傳送到套件，而套件透過 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked"><code>browserAction.onClicked</code></a> 監聽：</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">browser.browserAction.onClicked.addListener(handleClick);</code></pre>
 
@@ -34,11 +34,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 
 <p>註： 你的套件只能有一個工具列按鈕。</p>
 
-<p>你可以透過 <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> API 程式化地更改任何工具列按鈕的屬性。</p>
+<p>你可以透過 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> API 程式化地更改任何工具列按鈕的屬性。</p>
 
 <h2 id="圖示">圖示</h2>
 
-<p>更多關於建立工具列按鈕使用的圖示，請查看文件<a class="grey-90 no-underline hover-no-underline" href="https://design.firefox.com/photon/index.html">光子設計系統</a>裡的<a href="https://design.firefox.com/photon/visuals/iconography.html">圖示學</a>。</p>
+<p>更多關於建立工具列按鈕使用的圖示，請查看文件<a href="https://design.firefox.com/photon/index.html">光子設計系統</a>裡的<a href="https://design.firefox.com/photon/visuals/iconography.html">圖示學</a>。</p>
 
 <h2 id="範例">範例</h2>
 

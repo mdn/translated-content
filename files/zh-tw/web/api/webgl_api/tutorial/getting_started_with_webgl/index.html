@@ -8,9 +8,9 @@ translation_of: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ---
 <p>{{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}</p>
 
-<p><a href="http://www.khronos.org/webgl/" title="http://www.khronos.org/webgl/">WebGL</a> 讓網頁內容能藉由一種基於 <a href="http://www.khronos.org/opengles/" title="http://www.khronos.org/opengles/">OpenGL ES</a> 2.0 的 API 的幫助，於支援此 API 的瀏覽器環境中，不需使用外掛程式就能在HTML的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API"><code>canvas</code></a> 元素中實現二維及三維渲染。 WebGL 程式包含了由 JavaSrcipt 及著色器(GLSL)撰寫的控制碼以及在電腦的圖形處理器( GPU )上執行的特效程式碼(著色器程式碼)。WebGL 元素可以加入其他 HTML 元素之中並與網頁或網頁背景的其他部分混合。</p>
+<p><a href="http://www.khronos.org/webgl/">WebGL</a> 讓網頁內容能藉由一種基於 <a href="http://www.khronos.org/opengles/">OpenGL ES</a> 2.0 的 API 的幫助，於支援此 API 的瀏覽器環境中，不需使用外掛程式就能在HTML的 <a href="/en-US/docs/Web/API/Canvas_API"><code>canvas</code></a> 元素中實現二維及三維渲染。 WebGL 程式包含了由 JavaSrcipt 及著色器(GLSL)撰寫的控制碼以及在電腦的圖形處理器( GPU )上執行的特效程式碼(著色器程式碼)。WebGL 元素可以加入其他 HTML 元素之中並與網頁或網頁背景的其他部分混合。</p>
 
-<p>這篇文章將會向您介紹 WebGL 的基礎。這篇文章假設您已經對於三維圖學涉及的數學有所了解，並且它將不會被佯裝為三維圖學的教材。在我們的學習區域內有初學者指南讓你完成編程任務：<a href="https://developer.mozilla.org/zh-TW/docs/Learn/WebGL">Learn WebGL for 2D and 3D graphics</a>.</p>
+<p>這篇文章將會向您介紹 WebGL 的基礎。這篇文章假設您已經對於三維圖學涉及的數學有所了解，並且它將不會被佯裝為三維圖學的教材。在我們的學習區域內有初學者指南讓你完成編程任務：<a href="/zh-TW/docs/Learn/WebGL">Learn WebGL for 2D and 3D graphics</a>.</p>
 
 <p>在此教學文件中的程式碼範例都能在 <a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial">webgl-examples GitHub repository</a> 之中找到。</p>
 
@@ -52,7 +52,7 @@ function main() {
 
 <p>在此我們做的第一件事是取得 canvas 元素的參考，並存入 canvas 變數中。</p>
 
-<p>一旦我們取得了 canvas ，我們透過呼叫 <a href="https://developer.mozilla.org/zh-TW/docs/Web/API/HTMLCanvasElement/getContext">getContext</a> 並傳入 <code>"webgl"</code> 字串來取得 <a href="https://developer.mozilla.org/zh-TW/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a>。若瀏覽器不支援 webgl <code>getContext</code> 會回傳 <code>null</code> 同時會顯示訊息給使用者並且離開。</p>
+<p>一旦我們取得了 canvas ，我們透過呼叫 <a href="/zh-TW/docs/Web/API/HTMLCanvasElement/getContext">getContext</a> 並傳入 <code>"webgl"</code> 字串來取得 <a href="/zh-TW/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a>。若瀏覽器不支援 webgl <code>getContext</code> 會回傳 <code>null</code> 同時會顯示訊息給使用者並且離開。</p>
 
 <p>如果成功初始化， <code>gl</code> 就會成為一個 WebGL背景資料的參考。在這裡我們設置清除色為黑色，並透過該色清除 context (用背景色重新繪製 canvas )。</p>
 

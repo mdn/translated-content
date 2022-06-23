@@ -28,14 +28,14 @@ translation_of: Web/JavaScript/Guide/Functions
 </pre>
 </div>
 
-<p>函式square有一個參數，叫作number。這個函式只有一行程式碼，它會回傳number自乘的結果。函式的 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/return" title="return"><code>return</code></a> 語法描述函式的返回值。</p>
+<p>函式square有一個參數，叫作number。這個函式只有一行程式碼，它會回傳number自乘的結果。函式的 <a href="/en-US/docs/JavaScript/Reference/Statements/return"><code>return</code></a> 語法描述函式的返回值。</p>
 
 <pre class="brush: js">return number * number;
 </pre>
 
 <p>原始參數（例如一個數字）被作為值傳遞給函式，如果呼叫的函式改變了這個參數的值，不會影響到函式外部的原始變數。</p>
 
-<p>如果傳遞一個物件（例如 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a> 或自定義的其它物件）作為參數，而函式改變了這個物件的屬性，這樣的改變對函式外部是有作用的(因為是傳遞物件的位址)，如下面的例子所示：</p>
+<p>如果傳遞一個物件（例如 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a> 或自定義的其它物件）作為參數，而函式改變了這個物件的屬性，這樣的改變對函式外部是有作用的(因為是傳遞物件的位址)，如下面的例子所示：</p>
 
 <pre class="brush: js">function myFunc(theObject) {
   theObject.make = "Toyota";
@@ -96,7 +96,7 @@ console.log(factorial(3));
 // 結果會回傳 [0, 1, 8, 125, 1000]
 </pre>
 
-<p>除了上述的定義方式以外，我們也可以透過 <a href="/en-US/docs/JavaScript/Guide/Predefined_Core_Objects#Function_Object" title="en-US/docs/JavaScript/Guide/Predefined Core Objects#Function Object"><code>Function</code> constructor</a> 來定義, 類似 <a href="/en-US/docs/JavaScript/Guide/Functions#eval_Function" title="en-US/docs/JavaScript/Guide/Functions#eval_Function"><code>eval()</code></a>.</p>
+<p>除了上述的定義方式以外，我們也可以透過 <a href="/en-US/docs/JavaScript/Guide/Predefined_Core_Objects#Function_Object"><code>Function</code> constructor</a> 來定義, 類似 <a href="/en-US/docs/JavaScript/Guide/Functions#eval_Function"><code>eval()</code></a>.</p>
 
 <h2 id="呼叫函式">呼叫函式</h2>
 
@@ -122,7 +122,7 @@ square = function (n) {
 }
 </pre>
 
-<p>The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function, too. The <code>show_props</code> function (defined in <a href="/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties" title="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties">Working with Objects</a>) is an example of a function that takes an object as an argument.</p>
+<p>The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function, too. The <code>show_props</code> function (defined in <a href="/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties">Working with Objects</a>) is an example of a function that takes an object as an argument.</p>
 
 <p>A function can be recursive; that is, it can call itself. For example, here is a function that computes factorials recursively:</p>
 
@@ -144,7 +144,7 @@ d = factorial(4); // d gets the value 24
 e = factorial(5); // e gets the value 120
 </pre>
 
-<p>There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime. It turns out that functions are, themselves, objects, and these objects in turn have methods (see the <a href="/en-US/docs/JavaScript/Guide/Obsolete_Pages/Predefined_Core_Objects/Function_Object" title="Function Object"><code>Function</code> object</a>). One of these, the <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/apply" title="apply"><code>apply()</code></a> method, can be used to achieve this goal.</p>
+<p>There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime. It turns out that functions are, themselves, objects, and these objects in turn have methods (see the <a href="/en-US/docs/JavaScript/Guide/Obsolete_Pages/Predefined_Core_Objects/Function_Object"><code>Function</code> object</a>). One of these, the <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/apply"><code>apply()</code></a> method, can be used to achieve this goal.</p>
 
 <h2 id="Function_scope">Function scope</h2>
 
@@ -252,7 +252,7 @@ getCode();    // Returns the secret code
 }
 </pre>
 
-<p>The magical <code>this</code> variable is very tricky in closures. They have to be used carefully, as what <code>this</code> refers to depends completely on where the function was called, rather than where it was defined. An excellent and elaborate article on closures can be found <a class="external" href="http://jibbering.com/faq/notes/closures/">here</a>.</p>
+<p>The magical <code>this</code> variable is very tricky in closures. They have to be used carefully, as what <code>this</code> refers to depends completely on where the function was called, rather than where it was defined. An excellent and elaborate article on closures can be found <a href="http://jibbering.com/faq/notes/closures/">here</a>.</p>
 
 <h2 id="Using_the_arguments_object">Using the arguments object</h2>
 
@@ -292,7 +292,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 
 <p>Please note that the <code>arguments</code> variable is "array-like", but not an array. It is array-like in that is has a numbered index and a <code>length</code> property. However, it does not possess all of the array-manipulation methods.</p>
 
-<p>See the <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function" title="en-US/docs/JavaScript/Reference/Global Objects/Function"><code>Function</code> object</a> in the JavaScript Reference for more information.</p>
+<p>See the <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function"><code>Function</code> object</a> in the JavaScript Reference for more information.</p>
 
 <h2 id="Predefined_functions">Predefined functions</h2>
 
@@ -307,7 +307,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
  <li><a href="#escape_and_unescape_functions">encodeURI, decodeURI, encodeURIComponent, and decodeURIComponent</a> (all available with Javascript 1.5 and later).</li>
 </ul>
 
-<p>The following sections introduce these functions. See the <a href="/en-US/docs/JavaScript/Reference" title="en-US/docs/JavaScript/Reference">JavaScript Reference</a> for detailed information on all of these functions.</p>
+<p>The following sections introduce these functions. See the <a href="/en-US/docs/JavaScript/Reference">JavaScript Reference</a> for detailed information on all of these functions.</p>
 
 <h3 id="eval_Function">eval Function</h3>
 
@@ -391,14 +391,14 @@ objRef = String(objRef);
 
 <p><code>objRef 是物件的參照</code>。 Number uses the valueOf() method of the object; String uses the toString() method of the object.</p>
 
-<p>下列範例將<code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date" title="en-US/docs/JavaScript/Reference/Global Objects/Date"> 日期</a></code> 物件轉換為可讀字串。</p>
+<p>下列範例將<code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date"> 日期</a></code> 物件轉換為可讀字串。</p>
 
 <pre class="brush: js">var D = new Date(430054663215),
     x;
 x = String(D); // x 等於 "星期二 八月 18 04:37:43 GMT-0700  1983"
 </pre>
 
-<p>下列範例將 <code><a class="internal" href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="en-US/docs/JavaScript/Reference/Global Objects/String">字串</a></code> 物件轉換為 <code><a class="internal" href="/en-US/docs/JavaScript/Reference/Global_Objects/Number" title="en-US/docs/JavaScript/Reference/Global Objects/Number">數字</a></code> 物件。</p>
+<p>下列範例將 <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String">字串</a></code> 物件轉換為 <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Number">數字</a></code> 物件。</p>
 
 <pre class="brush: js">var str = "12",
     num;
@@ -417,7 +417,7 @@ document.write(typeof num);
 
 <h3 id="escape_與_unescape_函式(JavaScript_1.5後去除)">escape 與 unescape 函式(JavaScript 1.5後去除)</h3>
 
-<p><code>escape</code> 與 <code>unescape</code> 對於非ASCII 字元無法處理。 在 JavaScript 1.5 之後改用 <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/encodeURI" title="en-US/docs/JavaScript/Reference/Global_Functions/encodeURI">encodeURI</a></code>, <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/decodeURI" title="en-US/docs/JavaScript/Reference/Global_Functions/decodeURI">decodeURI</a></code>, <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/encodeURIComponent" title="en-US/docs/JavaScript/Reference/Global_Functions/encodeURIComponent">encodeURIComponent</a></code>, 與 <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/decodeURIComponent" title="en-US/docs/JavaScript/Reference/Global_Functions/decodeURIComponent">decodeURIComponent</a></code>.</p>
+<p><code>escape</code> 與 <code>unescape</code> 對於非ASCII 字元無法處理。 在 JavaScript 1.5 之後改用 <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/encodeURI">encodeURI</a></code>, <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/decodeURI">decodeURI</a></code>, <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/encodeURIComponent">encodeURIComponent</a></code>, 與 <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/decodeURIComponent">decodeURIComponent</a></code>.</p>
 
 <p><code>escape</code> 與 <code>unescape</code> 用於編碼與解碼字串。 <code>escape</code> 函式回傳十六進位編碼。 <code>unescape</code> 函式會將十六進位的編碼轉換回 ASCII 字串。</p>
 
