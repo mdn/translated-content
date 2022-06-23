@@ -48,13 +48,13 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 <p>这些包括{{HTMLElement("legend")}}元素，但不能在所有平台上正确定位。Checkbox 和 radio 按钮也不能直接应用样式，但是，感谢 CSS3，你可以解决这个问题。{{htmlattrxref("placeholder", "input")}} 的内容不能以任何标准方式应用样式，但是实现它的所有浏览器也都实现了私有的 CSS 伪元素或伪类，让你可以对其定义样式。</p>
 
-<p>我们会在<a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">如何构建自定义表单挂件</a>一文中讲述如何处理更多特定的问题。</p>
+<p>我们会在<a href="/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">如何构建自定义表单挂件</a>一文中讲述如何处理更多特定的问题。</p>
 
 <h4 id="丑陋的">丑陋的</h4>
 
 <p>有些元素根本不能用应用 CSS 样式。这些包括：所有高级用户界面小部件，如范围，颜色或日期控件; 和所有下拉小部件，包括{{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}和{{HTMLElement("datalist")}} 元素。文件选择器小部件也被称为不可样式化。新的{{HTMLElement("progress")}}和{{HTMLElement("meter")}} 元素也属于这个类别。</p>
 
-<p>所有这些小部件的主要问题来自于它们具有非常复杂的结构，而 CSS 目前还不足以表达这些小部件的所有细微部分。如果你想定制这些小部件，你必须依靠 JavaScript 来构建一个你能够应用样式的 DOM 树。我们会在 <a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form widgets</a>一文中探索如何实现这一点。</p>
+<p>所有这些小部件的主要问题来自于它们具有非常复杂的结构，而 CSS 目前还不足以表达这些小部件的所有细微部分。如果你想定制这些小部件，你必须依靠 JavaScript 来构建一个你能够应用样式的 DOM 树。我们会在 <a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form widgets</a>一文中探索如何实现这一点。</p>
 
 <h2 id="基本样式美化">基本样式美化</h2>
 
@@ -159,7 +159,7 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 <h3 id="The_HTML">The HTML</h3>
 
-<p>HTML 只比我们在 <a href="/en-US/docs/HTML/Forms/My_first_HTML_form" title="/en-US/docs/HTML/Forms/My_first_HTML_form">the first article of this guide</a> 中涉及到的多一些；它只有一些额外的 id 和 title。</p>
+<p>HTML 只比我们在 <a href="/en-US/docs/HTML/Forms/My_first_HTML_form">the first article of this guide</a> 中涉及到的多一些；它只有一些额外的 id 和 title。</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;h1&gt;to: Mozilla&lt;/h1&gt;
@@ -191,9 +191,9 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 <p>好戏要开始了！在开始写代码之前，我们需要三个额外的静态文件：</p>
 
 <ol>
- <li>明信片的<a href="/files/4151/background.jpg" title="The postcard background">背景</a>——下载这幅图片，把它和你的 HTML 文件保存在相同目录下。</li>
- <li>打字机字体：<a href="http://www.fontsquirrel.com/fonts/Secret-Typewriter" rel="external">源自 fontsquirrel.com 的 "Secret Typewriter“字体</a>——将 TTF 文件下载到和上面相同的文件夹里。</li>
- <li>手绘字体：<a href="http://www.fontsquirrel.com/fonts/Journal" rel="external">源自 fontsquirrel.com 的 The "Journal" 字体 </a> —— 将 TTF 文件下载到和上面相同的文件夹里。</li>
+ <li>明信片的<a href="/files/4151/background.jpg">背景</a>——下载这幅图片，把它和你的 HTML 文件保存在相同目录下。</li>
+ <li>打字机字体：<a href="http://www.fontsquirrel.com/fonts/Secret-Typewriter">源自 fontsquirrel.com 的 "Secret Typewriter“字体</a>——将 TTF 文件下载到和上面相同的文件夹里。</li>
+ <li>手绘字体：<a href="http://www.fontsquirrel.com/fonts/Journal">源自 fontsquirrel.com 的 The "Journal" 字体 </a> —— 将 TTF 文件下载到和上面相同的文件夹里。</li>
 </ol>
 
 <p>在你开始之前需要对字体做一些处理：</p>
@@ -324,7 +324,7 @@ form {
   overflow: auto;
 }</pre>
 
-<p>{{HTMLElement("button")}} 元素上使用 CSS 非常方便；你可以做你任何想做得事情，甚至包括使用 <a href="/en-US/docs/CSS/Pseudo-elements" title="/en-US/docs/CSS/Pseudo-elements">伪元素</a>：</p>
+<p>{{HTMLElement("button")}} 元素上使用 CSS 非常方便；你可以做你任何想做得事情，甚至包括使用 <a href="/en-US/docs/CSS/Pseudo-elements">伪元素</a>：</p>
 
 <pre class="brush: css">button {
   position     : absolute;
@@ -366,24 +366,24 @@ button:focus {
 
 <h2 id="总结">总结</h2>
 
-<p>如你所见，若我们想构建只包含文本域和按钮的表单，用 CSS 美化它们非常容易。如果你想要知道更多能够让你的处理表单组件时更轻松的 CSS 小技巧，看一看 <a href="http://necolas.github.com/normalize.css" rel="external">normalize.css </a>项目的表单部分。</p>
+<p>如你所见，若我们想构建只包含文本域和按钮的表单，用 CSS 美化它们非常容易。如果你想要知道更多能够让你的处理表单组件时更轻松的 CSS 小技巧，看一看 <a href="http://necolas.github.com/normalize.css">normalize.css </a>项目的表单部分。</p>
 
-<p><a href="/en-US/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms" title="/en-US/docs/Advanced_styling_for_HTML_forms">下一篇文章中</a>，我们将会看到如何处理落入"不好的" 和"丑陋的" 分类的表单组件。</p>
+<p><a href="/en-US/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms">下一篇文章中</a>，我们将会看到如何处理落入"不好的" 和"丑陋的" 分类的表单组件。</p>
 
 <p>{{PreviousMenuNext("Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms/Advanced_styling_for_HTML_forms", "Learn/HTML/Forms")}}</p>
 
 <h2 id="在本单元中">在本单元中</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form">Your first HTML form</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">How to structure an HTML form</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">The native form widgets</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form widgets</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">Advanced styling for HTML forms</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form">Your first HTML form</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">How to structure an HTML form</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">The native form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">Advanced styling for HTML forms</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
 </ul>

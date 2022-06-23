@@ -102,7 +102,7 @@ main(); //开始循环</pre>
 
 <h2 id="用JavaScript构建一个更优化的主循环">用 JavaScript 构建一个更优化的主循环</h2>
 
-<p>基本上，在 JavaScript 的中，浏览器有它自己的主循环，而你的代码存在于循环某些阶段。上面描述的主循环，试图避免脱离浏览器的控制。这种主循环附着于<code>window.requestAnimationFrame()</code>方法，该方法将在浏览器的下一帧中执行，具体取决于浏览器如何与将其自己的主循环关联起来。<a href="https://developer.mozilla.org/en-US/docs/Games/Anatomy">W3C 规范</a>并没有真正定义什么时候浏览器必须执行 requestAnimationFrame 回调。这有一个好处，浏览器厂商可以自由地实现他们认为最好的解决方案，并随着时间的推移进行调整。</p>
+<p>基本上，在 JavaScript 的中，浏览器有它自己的主循环，而你的代码存在于循环某些阶段。上面描述的主循环，试图避免脱离浏览器的控制。这种主循环附着于<code>window.requestAnimationFrame()</code>方法，该方法将在浏览器的下一帧中执行，具体取决于浏览器如何与将其自己的主循环关联起来。<a href="/en-US/docs/Games/Anatomy">W3C 规范</a>并没有真正定义什么时候浏览器必须执行 requestAnimationFrame 回调。这有一个好处，浏览器厂商可以自由地实现他们认为最好的解决方案，并随着时间的推移进行调整。</p>
 
 <p>现代版的 Firefox 和 Google Chrome（可能还有其他版本）试图在框架的时间片的开始时将请求 AnimationFrame 回调与它们的主线程进行连接。因此，浏览器的主线程看起来就像下面这样：</p>
 

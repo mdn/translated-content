@@ -48,14 +48,14 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 <p>如果希望不要有任何的使用者互動影響，請使用setInterval()，因為它會確實地每隔一段時間就執行程式碼。如果你想製作遊戲 , 我們能夠使用keyboard 或是 mouse event來控制動畫,並使用setTimeout()函數一起。藉由設定EventListeners,我們能夠捕捉任何使用者的動作,並執行我們的動畫函數。</p>
 
 <div class="note">
-<p>在下面的範例,我們將使用<strong>window.requestAnimationFrame()</strong>方法來控制動畫,<strong>window.requestAnimationFrame()</strong>方法為動畫提供更順暢更有效率的方式來執行,當系統準備好繪製畫面時,藉由呼叫動畫andmation frame()的callback函數 。callback通常每秒鐘執行60次,當執行background tab時,執行次數會更低,想知道更多關於動畫迴圈(animation loop)的資訊,尤其是遊戲的應用,請查看我們在 <a href="https://developer.mozilla.org/en-US/docs/Games">Game development zone</a> 的主題 <a href="https://developer.mozilla.org/en-US/docs/Games/Anatomy">Anatomy of a video game</a> 。</p>
+<p>在下面的範例,我們將使用<strong>window.requestAnimationFrame()</strong>方法來控制動畫,<strong>window.requestAnimationFrame()</strong>方法為動畫提供更順暢更有效率的方式來執行,當系統準備好繪製畫面時,藉由呼叫動畫andmation frame()的callback函數 。callback通常每秒鐘執行60次,當執行background tab時,執行次數會更低,想知道更多關於動畫迴圈(animation loop)的資訊,尤其是遊戲的應用,請查看我們在 <a href="/en-US/docs/Games">Game development zone</a> 的主題 <a href="/en-US/docs/Games/Anatomy">Anatomy of a video game</a> 。</p>
 </div>
 
 <h3 id="從使用者輸入操作控制動畫">從使用者輸入操作控制動畫</h3>
 
 <p>我們也可以從使用者輸入操作控制動畫，就像是電玩遊戲一般；像是在鍵盤上設置事件處理器{{domxref("EventListener")}}捕捉使用者輸入並執行對應動畫。</p>
 
-<p>你可以利用我們的<a href="https://developer.mozilla.org/en-US/docs/DOM/window.setInterval#A_little_framework" title="https://developer.mozilla.org/en-US/docs/DOM/window.setInterval#A_little_framework">次要版</a>或<a href="https://developer.mozilla.org/en-US/docs/JavaScript/Timers/Daemons" title="https://developer.mozilla.org/en-US/docs/JavaScript/Timers/Daemons">主要版動畫框架</a>。</p>
+<p>你可以利用我們的<a href="/en-US/docs/DOM/window.setInterval#A_little_framework">次要版</a>或<a href="/en-US/docs/JavaScript/Timers/Daemons">主要版動畫框架</a>。</p>
 
 <pre>var myAnimation = new MiniDaemon(null, animateShape, 500, Infinity);</pre>
 
@@ -236,7 +236,7 @@ function clock(){
 
 <h4 id="循環景色">循環景色</h4>
 
-<p>本例會產一個由左到右循環捲動<a href="http://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg" title="http://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg">美國優勝美地國家公園</a>景色，你也可以自行替換其他比畫布還大的圖片。</p>
+<p>本例會產一個由左到右循環捲動<a href="http://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg">美國優勝美地國家公園</a>景色，你也可以自行替換其他比畫布還大的圖片。</p>
 
 <pre class="brush: js">var img = new Image();
 
@@ -309,27 +309,27 @@ function draw() {
 <h2 id="Other_examples" name="Other_examples">其他範例</h2>
 
 <dl>
- <dt><a class="external" href="http://www.gartic.net/" title="http://www.gartic.net/">Gartic</a></dt>
+ <dt><a href="http://www.gartic.net/">Gartic</a></dt>
  <dd>
  <p>多人繪圖遊戲</p>
  </dd>
- <dt><a class="external" href="http://www.abrahamjoffe.com.au/ben/canvascape/">Canvascape</a></dt>
+ <dt><a href="http://www.abrahamjoffe.com.au/ben/canvascape/">Canvascape</a></dt>
  <dd>
  <p>第一人稱3D冒險遊戲</p>
  </dd>
- <dt><a href="/en-US/docs/Web/Guide/HTML/A_basic_ray-caster" title="/en-US/docs/Web/Guide/HTML/A_basic_ray-caster">A basic ray-caster</a></dt>
+ <dt><a href="/en-US/docs/Web/Guide/HTML/A_basic_ray-caster">A basic ray-caster</a></dt>
  <dd>透過鍵盤控制動畫範例</dd>
- <dt><a class="external" href="http://andrewwooldridge.com/canvas/canvasgame001/canvasgame002.html">canvas adventure</a></dt>
+ <dt><a href="http://andrewwooldridge.com/canvas/canvasgame001/canvasgame002.html">canvas adventure</a></dt>
  <dd>
  <p>另一個透過鍵盤控制動畫範例</p>
  </dd>
- <dt><a class="external" href="http://www.blobsallad.se/">An interactive Blob</a></dt>
+ <dt><a href="http://www.blobsallad.se/">An interactive Blob</a></dt>
  <dd>和Blob遊戲</dd>
- <dt><a class="external" href="http://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html">Flying through a starfield</a></dt>
+ <dt><a href="http://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html">Flying through a starfield</a></dt>
  <dd>
  <p>飛越星河</p>
  </dd>
- <dt><a class="external" href="http://igrapher.com/" title="http://igrapher.com/">iGrapher</a></dt>
+ <dt><a href="http://igrapher.com/">iGrapher</a></dt>
  <dd>
  <p>股票市場圖</p>
  </dd>
@@ -338,10 +338,10 @@ function draw() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/JavaScript/Timers" title="/en-US/docs/JavaScript/Timers">JavaScript timers</a></li>
- <li><a href="/en-US/docs/DOM/window.setInterval#A_little_framework" title="/en-US/docs/DOM/window.setInterval#A_little_framework"><code>setInterval</code> – A little framework</a></li>
- <li><a href="/en-US/docs/JavaScript/Timers/Daemons" title="/en-US/docs/JavaScript/Timers/Daemons">JavaScript Daemons Management</a></li>
- <li><a href="/en-US/docs/DOM/HTMLCanvasElement" title="/en-US/docs/DOM/HTMLCanvasElement">HTMLCanvasElement</a></li>
+ <li><a href="/en-US/docs/JavaScript/Timers">JavaScript timers</a></li>
+ <li><a href="/en-US/docs/DOM/window.setInterval#A_little_framework"><code>setInterval</code> – A little framework</a></li>
+ <li><a href="/en-US/docs/JavaScript/Timers/Daemons">JavaScript Daemons Management</a></li>
+ <li><a href="/en-US/docs/DOM/HTMLCanvasElement">HTMLCanvasElement</a></li>
 </ul>
 
 <p>{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Compositing", "Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas")}}</p>

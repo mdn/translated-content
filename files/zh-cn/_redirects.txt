@@ -1457,9 +1457,12 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers.onselect	/zh-CN/docs/Web/API/GlobalEventHandlers/onselect
 /zh-CN/docs/Web/API/GlobalEventHandlers.onsubmit	/zh-CN/docs/Web/API/GlobalEventHandlers/onsubmit
 /zh-CN/docs/Web/API/GlobalEventHandlers/onabort	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/abort_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/oncanplay	/zh-CN/docs/Web/API/HTMLMediaElement/canplay_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/oncanplaythrough	/zh-CN/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncuechange	/zh-CN/docs/Web/API/TextTrack/cuechange_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/ondurationchange	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/durationchange_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/动画效果	/zh-CN/docs/Web/API/GlobalEventHandlers/onanimationend
-/zh-CN/docs/Web/API/GlobalEventHandlers/时长改变	/zh-CN/docs/Web/API/GlobalEventHandlers/ondurationchange
+/zh-CN/docs/Web/API/GlobalEventHandlers/时长改变	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/durationchange_event
 /zh-CN/docs/Web/API/GlobalFetch/fetch	/zh-CN/docs/Web/API/fetch
 /zh-CN/docs/Web/API/HTMLAnchorElement/referrer	/zh-CN/docs/Web/API/HTMLAnchorElement/referrerPolicy
 /zh-CN/docs/Web/API/HTMLCanvasElement/捕获流	/zh-CN/docs/Web/API/HTMLCanvasElement/captureStream

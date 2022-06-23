@@ -3,10 +3,10 @@ title: 使用 async 進行非同步流控制
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
 ---
-<p>有些<em>本地圖書館</em>網頁的控制器代碼，會依賴多重非同步要求的結果，可能會需要以某種特定次序運行，或者以平行方式運行。為了管理流控制，並在我們所有需要用到的信息，都已經可以取用的時候，再繪製網頁，我們將使用許多人採用的 node <a class="external external-icon" href="https://www.npmjs.com/package/async" rel="noopener">async</a> 模組。</p>
+<p>有些<em>本地圖書館</em>網頁的控制器代碼，會依賴多重非同步要求的結果，可能會需要以某種特定次序運行，或者以平行方式運行。為了管理流控制，並在我們所有需要用到的信息，都已經可以取用的時候，再繪製網頁，我們將使用許多人採用的 node <a href="https://www.npmjs.com/package/async">async</a> 模組。</p>
 
 <div class="note">
-<p><strong>注意:</strong>  在 JavaScript 中有許多其他方法，可以管理異步行為和流控制，包括相對較新的 JavaScript 語言功能，如 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Techniques/Promises">Promises</a>。</p>
+<p><strong>注意:</strong>  在 JavaScript 中有許多其他方法，可以管理異步行為和流控制，包括相對較新的 JavaScript 語言功能，如 <a href="/en-US/docs/Mozilla/Add-ons/Techniques/Promises">Promises</a>。</p>
 </div>
 
 <p>Async 有很多有用的方法（請查看<a href="http://caolan.github.io/async/docs.html">文檔</a>）。一些最重要的功能是：</p>
@@ -14,16 +14,16 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 <p> </p>
 
 <ul>
- <li><code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#parallel" rel="noopener">async.parallel()</a></code> 執行必須並行執行的任何操作。</li>
- <li><code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#series" rel="noopener">async.series()</a></code> 用於當需要確保異步操作是序列執行的。</li>
- <li><code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#waterfall" rel="noopener">async.waterfall()</a></code> 用於必須序列運行的操作，每個操作取決於前面操作的結果。</li>
+ <li><code><a href="http://caolan.github.io/async/docs.html#parallel">async.parallel()</a></code> 執行必須並行執行的任何操作。</li>
+ <li><code><a href="http://caolan.github.io/async/docs.html#series">async.series()</a></code> 用於當需要確保異步操作是序列執行的。</li>
+ <li><code><a href="http://caolan.github.io/async/docs.html#waterfall">async.waterfall()</a></code> 用於必須序列運行的操作，每個操作取決於前面操作的結果。</li>
 </ul>
 
 <h2 class="highlight-spanned" id="為什麼需要這麼做">為什麼需要這麼做?</h2>
 
 <p>我們在 <em>Express</em> 中使用的大多數方法，都是異步的 - 您指定要執行的操作，傳遞回調。該方法立即返回，並在請求的操作完成時，調用回調。按照 <em>Express</em> 中的慣例，回調函數將<em>錯誤值</em>作為第一個參數傳遞（或成功時為 <code>null</code>），並將函數的結果（如果有的話）作為第二個參數傳遞。</p>
 
-<p>如果控制器只需要<em>執行<strong>一個</strong>異步操作</em>，來獲取呈現頁面所需的信息，那麼實現很簡單 - 我們只需在回調中呈現模板。下面的代碼片段，顯示了一個函數，該函數呈現模型 <code>SomeModel</code> 的計數（使用Mongoose <code><a class="external external-icon" href="http://mongoosejs.com/docs/api.html#model_Model.count" rel="noopener">count()</a></code>方法）：</p>
+<p>如果控制器只需要<em>執行<strong>一個</strong>異步操作</em>，來獲取呈現頁面所需的信息，那麼實現很簡單 - 我們只需在回調中呈現模板。下面的代碼片段，顯示了一個函數，該函數呈現模型 <code>SomeModel</code> 的計數（使用Mongoose <code><a href="http://mongoosejs.com/docs/api.html#model_Model.count">count()</a></code>方法）：</p>
 
 <pre class="brush: js"><code>exports.some_model_count = function(req, res, next) {
 
@@ -42,7 +42,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <h2 class="highlight-spanned" id="Asynchronous_operations_in_parallel">Asynchronous operations in parallel</h2>
 
-<p>The method <code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#parallel" rel="noopener">async.parallel()</a></code> is used to run multiple asynchronous operations in parallel.</p>
+<p>The method <code><a href="http://caolan.github.io/async/docs.html#parallel">async.parallel()</a></code> is used to run multiple asynchronous operations in parallel.</p>
 
 <p>The first argument to <code>async.parallel()</code> is a collection of the asynchronous functions to run (an array, object or other iterable). Each function is passed a <code>callback(err, result)</code> which it must call on completion with an error <code>err</code> (which can be <code>null</code>) and an optional <code>results</code> value.</p>
 
@@ -66,7 +66,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <h2 class="highlight-spanned" id="Asynchronous_operations_in_series">Asynchronous operations in series</h2>
 
-<p>The method <code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#series" rel="noopener">async.series()</a></code> is used to run multiple asynchronous operations in sequence, when subsequent functions do not depend on the output of earlier functions. It is essentially declared and behaves in the same way as <code>async.parallel()</code>.</p>
+<p>The method <code><a href="http://caolan.github.io/async/docs.html#series">async.series()</a></code> is used to run multiple asynchronous operations in sequence, when subsequent functions do not depend on the output of earlier functions. It is essentially declared and behaves in the same way as <code>async.parallel()</code>.</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">async.series({
   one: function(callback) { ... },
@@ -102,7 +102,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <h2 class="highlight-spanned" id="Dependent_asynchronous_operations_in_series">Dependent asynchronous operations in series</h2>
 
-<p>The method <code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#waterfall" rel="noopener">async.waterfall()</a></code> is used to run multiple asynchronous operations in sequence when each operation is dependent on the result of the previous operation.</p>
+<p>The method <code><a href="http://caolan.github.io/async/docs.html#waterfall">async.waterfall()</a></code> is used to run multiple asynchronous operations in sequence when each operation is dependent on the result of the previous operation.</p>
 
 <p>The callback invoked by each asynchronous function contains <code>null</code> for the first argument and results in subsequent arguments. Each function in the series takes the results arguments of the previous callback as the first parameters, and then a callback function. When all operations are complete, a final callback is invoked with the result of the last operation. The way this works is more clear when you consider the code fragment below (this example is from the <em>async</em> documentation):</p>
 

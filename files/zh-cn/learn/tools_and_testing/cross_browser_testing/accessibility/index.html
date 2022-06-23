@@ -55,9 +55,9 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/可访问性
  <li>设备性能不高的用户（他们可能具有较慢的处理器）</li>
 </ul>
 
-<p>在某种程度上，本模块都是关于可访问性的 — 跨浏览器测试可确保你的网站可以被尽可能多的人使用。这篇<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Accessibility/What_is_accessibility">可访问性是什么？</a> 更全面透彻地定义了什么是可访问性。</p>
+<p>在某种程度上，本模块都是关于可访问性的 — 跨浏览器测试可确保你的网站可以被尽可能多的人使用。这篇<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility">可访问性是什么？</a> 更全面透彻地定义了什么是可访问性。</p>
 
-<p>也就是说，本文将涵盖跨浏览器和有关残疾人的测试问题以及他们如何使用 Web。我们在其他地方已经讨论过其他领域，例如<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1%E9%97%AE%E9%A2%98">响应式设计问题</a>和<a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Performance_issues">性能</a>。</p>
+<p>也就是说，本文将涵盖跨浏览器和有关残疾人的测试问题以及他们如何使用 Web。我们在其他地方已经讨论过其他领域，例如<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1%E9%97%AE%E9%A2%98">响应式设计问题</a>和<a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Performance_issues">性能</a>。</p>
 
 <div class="note">
 <p><strong>Note</strong>: 就像 Web 开发中的许多事情一样，可访问性不是 100% 的成功或失败可以定义的；对于所有内容而言，几乎不可能实现 100％的可访问性，尤其是当站点变得越来越复杂时。我们更多的是通过防御性编码并遵循最佳实践，努力使尽可能多的人可以访问尽可能多的内容。</p>
@@ -68,7 +68,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/可访问性
 <p>在本节中，我们将围绕 Web 可访问性，详细介绍与特定技术相关的一些主要问题、要遵循的最佳实践，以及可以进行的一些快速测试，以查看你的网站是否朝着正确的方向发展。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 可访问性在道德上是正确的事情，对企业也有好处 (残疾用户，移动用户等构成了重要的细分市场), 并且在世界许多地方，提供出来的网络媒体资源无法为残疾人服务也是违法的。阅读<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Accessibility/What_is_accessibility#%E6%97%A0%E9%9A%9C%E7%A2%8D%E6%8C%87%E5%8D%97%E5%92%8C%E6%B3%95%E5%BE%8B">无障碍指南和法律</a>获取更多相关信息。</p>
+<p><strong>Note</strong>: 可访问性在道德上是正确的事情，对企业也有好处 (残疾用户，移动用户等构成了重要的细分市场), 并且在世界许多地方，提供出来的网络媒体资源无法为残疾人服务也是违法的。阅读<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility#%E6%97%A0%E9%9A%9C%E7%A2%8D%E6%8C%87%E5%8D%97%E5%92%8C%E6%B3%95%E5%BE%8B">无障碍指南和法律</a>获取更多相关信息。</p>
 </div>
 
 <h3 id="HTML">HTML</h3>
@@ -157,7 +157,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>有时可能无法使用键盘完成可访问性。你可能有一个语义不是很好的网站（也许你最终得到了一个糟糕的 CMS 网页，该 CMS 生成了由&lt;div&gt; 组成的按钮），或者你正在使用一个没有内置键盘可访问性的复杂控件，例如 HTML5 {{htmlelement("video")}} 元素（令人惊奇的是，Opera 是唯一允许你在&lt;video&gt;元素的默认浏览器控件之间进行制表的浏览器）。你有几种选择：</p>
 
 <ol>
- <li>使用&lt;button&gt;元素（默认情况下都是可以在 button 间使用 Tab 键）和 JavaScript 创建自定义控件，以连接其功能。有关此示例，请参见<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a>。</li>
+ <li>使用&lt;button&gt;元素（默认情况下都是可以在 button 间使用 Tab 键）和 JavaScript 创建自定义控件，以连接其功能。有关此示例，请参见<a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a>。</li>
  <li>通过 JavaScript 创建键盘快捷键，因此当你按键盘上的某些键时，功能被激活。请参阅<a href="/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard">Desktop mouse and keyboard controls</a>，以获取一些可用于任何目的（比如游戏）的例子。</li>
  <li>使用一些有趣的策略来伪造按钮行为。以我们的<a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a>示例为例（<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">查看源码</a>）。这里我们通过为每个假按钮赋予属性<code>tabindex="0"</code>（请参阅​​WebAIM 的<a href="http://webaim.org/techniques/keyboard/tabindex">tabindex 文章</a>以获取更多详细信息），使假的&lt;div&gt;按钮能够被聚焦（包括通过制表符）。这使我们可以跳到按钮上，但不能通过回车键激活它们。为此，我们必须添加以下 JavaScript 代码：
   <pre class="brush: js">document.onkeydown = function(e) {
@@ -177,7 +177,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>替代文本对于可访问性非常重要 — 如果一个人有视觉或听觉障碍使他们无法看到或听到某些内容，那么这就是一个问题。可用的最简单的文本替代方法是<code>alt</code>属性，我们应该在所有包含相关内容的图像上包括该属性。其中应包含对图像的描述，该描述可在页面上成功传达其含义和内容，并由屏幕阅读器读取并读出给用户。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 更多信息请阅读<a href="https://developer.mozilla.org/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E6%96%87%E6%9C%AC%E6%9B%BF%E4%BB%A3%E5%93%81">Text alternatives</a></p>
+<p><strong>Note</strong>: 更多信息请阅读<a href="/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E6%96%87%E6%9C%AC%E6%9B%BF%E4%BB%A3%E5%93%81">Text alternatives</a></p>
 </div>
 
 <p>可以通过多种方法来测试缺少的替代文本，例如，使用可访问性<a href="#审计工具">审计工具</a>。</p>
@@ -614,12 +614,12 @@ a:focus, input:focus, button:focus, select:focus {
 <h2 id="指南">指南</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">跨浏览器测试简介</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies">测试策略</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">处理常见的 HTML 和 CSS 问题</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">处理常见的 JavaScript 问题</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">处理常见的可访问性问题</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">实现特征检查</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">自动测试简介</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">建立你自己的自动化测试环境</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">跨浏览器测试简介</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies">测试策略</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">处理常见的 HTML 和 CSS 问题</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">处理常见的 JavaScript 问题</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">处理常见的可访问性问题</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">实现特征检查</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">自动测试简介</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">建立你自己的自动化测试环境</a></li>
 </ul>

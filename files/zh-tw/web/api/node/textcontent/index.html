@@ -16,8 +16,8 @@ element.textContent = "this is some sample text";
 <h2 id="Notes" name="Notes">描述</h2>
 
 <ul>
- <li><code>textContent</code> returns <code>null</code> if the element is a <a href="/en-US/docs/DOM/document" title="DOM/Document">document</a>, a document type, or a notation. To grab all of the text and CDATA data for the whole document, one could use<code> <a href="/en-US/docs/DOM/document.documentElement" title="DOM/document.documentElement">document.documentElement</a>.textContent</code>.</li>
- <li>If the node is a CDATA section, a comment, a processing instruction, or a text node, <code>textContent</code> returns the text inside this node (the <a href="/en-US/docs/DOM/Node.nodeValue" title="DOM/Node/NodeValue/Node.nodeValue">nodeValue</a>).</li>
+ <li><code>textContent</code> returns <code>null</code> if the element is a <a href="/en-US/docs/DOM/document">document</a>, a document type, or a notation. To grab all of the text and CDATA data for the whole document, one could use<code> <a href="/en-US/docs/DOM/document.documentElement">document.documentElement</a>.textContent</code>.</li>
+ <li>If the node is a CDATA section, a comment, a processing instruction, or a text node, <code>textContent</code> returns the text inside this node (the <a href="/en-US/docs/DOM/Node.nodeValue">nodeValue</a>).</li>
  <li>For other node types, <code>textContent</code> returns the concatenation of the <code>textContent</code> attribute value of every child node, excluding comments and processing instruction nodes. This is an empty string if the node has no children.</li>
  <li>Setting this property on a node removes all of its children and replaces them with a single text node with the given value.</li>
 </ul>

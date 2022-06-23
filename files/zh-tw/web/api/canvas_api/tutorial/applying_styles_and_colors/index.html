@@ -5,7 +5,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}</div>
 
-<p>在<a href="/en-US/docs//zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes" title="/en-US/docs//en-US/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes">繪畫圖形</a>章節中，我們只用了預設的線條與填滿樣式，而在本章，我們將進一步看看所有可用的樣式選項，畫出更吸引人的圖。</p>
+<p>在<a href="/en-US/docs//zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes">繪畫圖形</a>章節中，我們只用了預設的線條與填滿樣式，而在本章，我們將進一步看看所有可用的樣式選項，畫出更吸引人的圖。</p>
 
 <h2 id="Colors" name="Colors">顏色</h2>
 
@@ -551,7 +551,7 @@ lineargradient.addColorStop(1, 'black');
 <dl>
  <dt><code>createPattern(<em>image</em>, <em>type</em>)</code></dt>
  <dd>呼叫createPattern()會產一個畫布樣式物件，然後回傳出來。<br>
- 其中image是<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts">CanvasImageSource</a>類別物件(像是{{domxref("HTMLImageElement")}},、&lt;canvas&gt;元素、{{HTMLElement("video")}} 元素等)</dd>
+ 其中image是<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts">CanvasImageSource</a>類別物件(像是{{domxref("HTMLImageElement")}},、&lt;canvas&gt;元素、{{HTMLElement("video")}} 元素等)</dd>
 </dl>
 
 <p>Type是一串字串，定義了如何產生樣式，允許的值有:</p>
@@ -633,7 +633,7 @@ var ptrn = ctx.createPattern(img,'repeat');
 <p><code>shadowOffsetX和shadowOffsetY會決定陰影延伸大小，若是為正值，則陰影會往右(沿X軸)和往下(沿Y軸)延伸，若是為負值，則會往正值相反方向延伸。</code></p>
 
 <div class="geckoVersionNote">
-<p>Note: 基於HTML5提議規格變更，從 開始，陰影只會在source-over的<a href="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing" title="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing">構圖排列</a>下產生</p>
+<p>Note: 基於HTML5提議規格變更，從 開始，陰影只會在source-over的<a href="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing">構圖排列</a>下產生</p>
 </div>
 
 <h3 id="文字陰影範例">文字陰影範例</h3>

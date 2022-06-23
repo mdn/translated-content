@@ -54,7 +54,7 @@ translation_of: Web/API/Server-sent_events/Using_server-sent_events
 <p>上述的程式碼大同小異，不同之處在於若伺服器傳送了 <code>event</code> 欄位值為「ping」的訊息時它就會把 <code>data</code> 欄位的值解析為 JSON 並輸出到畫面上。</p>
 
 <div class="blockIndicator warning">
-<p>當連線不是透過<strong> HTTP/2</strong> 時，SSE 會受到最大連線數限制所苦，尤其當開啟多個分頁。每個瀏覽器有自己的限制數而且被限制在很低的數量（6）。這個問題已經被 <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955" rel="noreferrer">Chrome</a> 和 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896" rel="noreferrer">Firefox</a> 標註為「Won't fix」（不修復）。限制是基於每個瀏覽器 + 網域，也就是說你可以針對 www.example1.com 網域在所有的分頁中開啟六個 SSE 連線，另一個網域 www.example2.com 也可以開啟六個（根據 <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>）。當使用 HTTP/2 時最大同時 <em>HTTP streams</em> 連線數是由伺服器和客戶端之間協調（預設 100）。</p>
+<p>當連線不是透過<strong> HTTP/2</strong> 時，SSE 會受到最大連線數限制所苦，尤其當開啟多個分頁。每個瀏覽器有自己的限制數而且被限制在很低的數量（6）。這個問題已經被 <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955">Chrome</a> 和 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896">Firefox</a> 標註為「Won't fix」（不修復）。限制是基於每個瀏覽器 + 網域，也就是說你可以針對 www.example1.com 網域在所有的分頁中開啟六個 SSE 連線，另一個網域 www.example2.com 也可以開啟六個（根據 <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>）。當使用 HTTP/2 時最大同時 <em>HTTP streams</em> 連線數是由伺服器和客戶端之間協調（預設 100）。</p>
 </div>
 
 <h2 id="從伺服器發送事件">從伺服器發送事件</h2>

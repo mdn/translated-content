@@ -14212,18 +14212,6 @@
       "genzai"
     ]
   },
-  "Web/API/GlobalEventHandlers/oncanplay": {
-    "modified": "2020-10-28T06:22:22.159Z",
-    "contributors": [
-      "mpcjazz"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/oncanplaythrough": {
-    "modified": "2020-10-28T06:55:40.744Z",
-    "contributors": [
-      "mpcjazz"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onchange": {
     "modified": "2020-10-15T21:36:50.058Z",
     "contributors": [
@@ -47013,6 +47001,18 @@
     "modified": "2019-03-23T22:27:32.009Z",
     "contributors": [
       "MakeNowJust"
+    ]
+  },
+  "conflicting/Web/API/HTMLMediaElement/canplay_event": {
+    "modified": "2020-10-28T06:22:22.159Z",
+    "contributors": [
+      "mpcjazz"
+    ]
+  },
+  "conflicting/Web/API/HTMLMediaElement/canplaythrough_event": {
+    "modified": "2020-10-28T06:55:40.744Z",
+    "contributors": [
+      "mpcjazz"
     ]
   },
   "conflicting/Web/API/IDBRequest/success_event": {

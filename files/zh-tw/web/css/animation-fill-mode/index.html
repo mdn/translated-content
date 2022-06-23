@@ -5,7 +5,7 @@ translation_of: Web/CSS/animation-fill-mode
 ---
 <div> </div>
 
-<p><strong><code>animation-fill-mode</code></strong>  <a href="/en/CSS" title="CSS">CSS</a> 属性指定CSS动画应该如何在其执行前后的样式展示情况。</p>
+<p><strong><code>animation-fill-mode</code></strong>  <a href="/en/CSS">CSS</a> 属性指定CSS动画应该如何在其执行前后的样式展示情况。</p>
 
 <pre class="brush: css no-line-numbers">/* Single animation */
 animation-fill-mode: none;
@@ -75,7 +75,7 @@ animation-fill-mode: both, forwards, none;
  </dd>
  <dt><code>backwards</code></dt>
  <dd>与上面 <strong><code>forwards</code></strong> 值效果相反，动画执行后停留到第一个关键帧动画，准确说是<code><strong>没有执行动画之前的初始状态</strong></code>。</dd>
- <dd>【（the animation will apply the values defined in the first relevant <a href="https://developer.mozilla.org/en-US/docs/CSS/@keyframes">keyframe</a> as soon as it is applied to the target, and retain this during the <code>"animation-delay"</code> period.）原文大概意思是会停留第一个关键帧，并会保留 <code>"animation-delay"</code> 延迟属性的所设定周期。】</dd>
+ <dd>【（the animation will apply the values defined in the first relevant <a href="/en-US/docs/CSS/@keyframes">keyframe</a> as soon as it is applied to the target, and retain this during the <code>"animation-delay"</code> period.）原文大概意思是会停留第一个关键帧，并会保留 <code>"animation-delay"</code> 延迟属性的所设定周期。】</dd>
  <dd>会在延迟之后才开始执行关键帧动画，而不是一开始使用第一帧进行停留，具体可以结合<code><strong>both</strong></code>的例子进行尝试。</dd>
  <dd><img alt="" src="https://gitee.com/yoonasy/externalLink/raw/master/animation-fill-mode_backwards.gif" style="height: 736px; width: 1698px;"></dd>
  <dd>第一个相关关键帧会取决于 <code>"animation-direction"</code> 方向属性:
@@ -148,11 +148,11 @@ animation-fill-mode: both, forwards, none;
 
 <p> </p>
 
-<p>查看 <a href="/en/CSS/CSS_animations" title="en/CSS/CSS_animations">CSS animations</a> 更多有關的例子</p>
+<p>查看 <a href="/en/CSS/CSS_animations">CSS animations</a> 更多有關的例子</p>
 
 <h2 id="相關鏈接">相關鏈接</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Using CSS animations</a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS animations</a></li>
  <li>JavaScript {{domxref("AnimationEvent")}} API</li>
 </ul>
