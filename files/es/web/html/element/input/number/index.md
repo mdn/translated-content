@@ -7,7 +7,7 @@ browser-compat: html.elements.input.input-number
 
 {{HTMLRef("Input_types")}}
 
-Los elementos {{HTMLElement("input")}} del tipo **`number`** son usados para permitir al usuario ingresar un número. Éstos incluyen validación incorporada para rechazar entradas no numéricas. El navegador puede optar por proveer flechas de pasos para permitir al usuario, usando su ratón o símplemente pulsando con la punta del dedo, incrementar y decrementar el valor.
+Los elementos {{HTMLElement("input")}} del tipo **`number`** son usados para permitir al usuario ingresar un número. Éstos incluyen validación incorporada para rechazar entradas no numéricas. El navegador puede optar por proveer flechas de pasos para permitir al usuario, usando su ratón o simplemente pulsando con la punta del dedo, incrementar y decrementar el valor.
 
 {{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}
 
@@ -16,7 +16,7 @@ En navegadores que no soportan entradas de tipo `number`, una entrada `number` r
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong><a href="#value">Value</a></strong></td>
+   <td><strong><a href="#value">Valor</a></strong></td>
    <td>Un {{jsxref("Number")}} representando un número, o vacío.</td>
   </tr>
   <tr>
@@ -31,6 +31,10 @@ En navegadores que no soportan entradas de tipo `number`, una entrada `number` r
    <td><strong>Atributos IDL</strong></td>
    <td><code>list</code>, <code>value</code>, <code>valueAsNumber</code></td>
   </tr>
+  <tr>
+      <td><strong>Interfaz DOM</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
   <tr>
    <td><strong>Métodos</strong></td>
    <td>{{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}</td>
@@ -48,13 +52,13 @@ Un {{jsxref("Number")}} representando el valor del número ingresado en la entra
 
 {{EmbedLiveSample('Value', 600, 40)}}
 
-## Additional attributes
+## Atributos adicionales
 
 Además de los atributos comúnmente soportados por todos los tipos de {{HTMLElement("input")}}, las entradas de tipo `number` soportan estos atributos:
 
 ### `list`
 
-Los valores del atributo lista es el {{domxref("Element.id", "id")}} de un elemento {{HTMLElement("datalist")}} localizado en el mismo documento. {{HTMLElement("datalist")}} proporciona una lista de valores predefinidos sugeridos al usuario para esta entrada. Cualquier valor de esta lista que no sea compatable con el {{htmlattrxref("type", "input")}} no es incluido entre las sugerencias. Los valores proporcionados son sugerencias, no requeridos: los usuarios pueden seleccionar un valor de la lista o proporcionar uno diferente.
+Los valores del atributo lista es el {{domxref("Element.id", "id")}} de un elemento {{HTMLElement("datalist")}} localizado en el mismo documento. {{HTMLElement("datalist")}} proporciona una lista de valores predefinidos sugeridos al usuario para esta entrada. Cualquier valor de esta lista que no sea compatible con el {{htmlattrxref("type", "input")}} no es incluido entre las sugerencias. Los valores proporcionados son sugerencias, no requerimientos: los usuarios pueden seleccionar un valor de la lista o proporcionar uno diferente.
 
 ## `max`
 
@@ -72,13 +76,13 @@ Este valor debe ser menor que o igual al valor del atributo `max`.
 
 El atributo `placeholder` es una cadena de texto que proporciona una pista corta al usuario sobre qué tipo de información se espera en la entrada. Debe ser una palabra o una frase corta que muestre el tipo de dato esperado, y no un mensaje explicatorio. El texto _no tiene_ que incluir avances de línea.
 
-Si el controlador de contenido no tiene direccionalidad ({{Glossary("LTR")}} o {{Glossary("RTL")}}), pero necesitas presentar el marcador de posición en la direccionalidad opuesta, puedes usar el algoritmo bidireccional para formatear caracteres Unicode para sobreescribir la direccionalidad del marcador de posición; véase [Cómo usar los controles Unicode para texto bidireccional](https://www.w3.org/International/questions/qa-bidi-unicode-controls) para más información.
+Si el controlador de contenido tiene una direccionalidad ({{Glossary("LTR")}} o {{Glossary("RTL")}}), pero necesitas presentar el marcador de posición en la direccionalidad opuesta, puedes usar el algoritmo bidireccional para formatear caracteres Unicode para sobreescribir la direccionalidad del marcador de posición; véase [Cómo usar los controles Unicode para texto bidireccional](https://www.w3.org/International/questions/qa-bidi-unicode-controls) para más información.
 
 > **Nota**: Evita usar el atributo `placeholder` si tu puedes. No es semánticamente útil como otras formas de explicar tu formulario, y puede causar problemas técnicos imprevisto con tu contenido. Véase {{SectionOnPage("/es/docs/Web/HTML/Element/input", "Marcadores y parámetros de ejemplo")}} para más información.
 
 ### `readonly`
 
-Un atributo booleano el cuál, si está presente, expresa que este campo no puede ser editado por el usuario. Este `value` puede todavía cambiarse con JavaScript directamente estableciendo la propiedad {{domxref("HTMLInputElement")}} `value`.
+Un atributo booleano el cual, si está presente, expresa que este campo no puede ser editado por el usuario. Este `value` puede todavía cambiarse con JavaScript directamente estableciendo la propiedad {{domxref("HTMLInputElement")}} `value`.
 
 > **Nota**: A causa de que una entrada solo de lectura no puede tener un valor, `required` no tiene ningún efecto en entradas con el atributo `readonly`.
 
@@ -88,19 +92,19 @@ El atributo `step` es un número que especifica la granularidad a la que debe ad
 
 Un valor de cadena `any` significa que ningún escalonado es implicado, y cualquier valor es permitido (salvo otras restricciones, tales como [`min`](#min) and [`max`](#max)).
 
-> **Nota**: Cuando los datos ingresados por el usuario no se adhieran a la configuración de escalonado, el {{Glossary("user agent")}} puede redondear al valor válido más cercano, prefiriendo numeros en la dirección positiva cuando hayan dos opciones igualmente cercanas.
+> **Nota**: Cuando los datos ingresados por el usuario no se adhieran a la configuración de escalonado, el {{Glossary("user agent")}} puede redondear al valor válido más cercano, prefiriendo números en la dirección positiva cuando hayan dos opciones igualmente cercanas.
 
 El valor por omisión para entradas `number` es `1`, permitiendo solo ingresar números enteros, _a menos que_ la base del escalonado no sea un entero.
 
 ## Usar entradas numéricas
 
-La entrada de tipo `number` solo deben usarse para números incrementales, especialmente cuando los botones para incrementar y desincrementar son útiles para la experiencia del usuario. La entradas de tipo `number` no son apropiadas para valores que solo consisten en números, pero que no son estrictamente hablando un número, como códigos postales o números de tarjeta de crédito. Para entradas no numéricas, considera usar un tipo de entrada diferente, como [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel) o otros tipos de {{HTMLElement('input')}} con el atributo {{HTMLAttrXref('inputmode')}}:
+La entrada de tipo `number` solo debe usarse para números incrementales, especialmente cuando los botones para incrementar y decrementar son útiles para la experiencia del usuario. La entradas de tipo `number` no son apropiadas para valores que solo consisten en números, pero que no son estrictamente hablando un número, como códigos postales o números de tarjeta de crédito. Para entradas no numéricas, considera usar un tipo de entrada diferente, como [`<input type="tel">`](/es/docs/Web/HTML/Element/input/tel) u otros tipos de {{HTMLElement('input')}} con el atributo {{HTMLAttrXref('inputmode')}}:
 
 ```html
 <input type="text" inputmode="numeric" pattern="\d*" />
 ```
 
-Los elementos `<input type="number">` puede ayudar a simplificar tu trabajo cuando construyes la interfaz de usuario y la lógica para introducir números en un formulario. Cuando tu creas una entrada de tipo número con el valor `type` indicado, `number`, consigues validación automática de que el texto introducido es un número y usualmente un conjunto de botones arriba/abajo para incrementar o disminuir el valor.
+Los elementos `<input type="number">` puede ayudar a simplificar tu trabajo cuando construyes la interfaz de usuario y la lógica para introducir números en un formulario. Cuando tu creas una entrada de tipo número con el valor `type` indicado: `number`, consigues validación automática de que el texto introducido es un número y usualmente un conjunto de botones arriba/abajo para incrementar o disminuir el valor.
 
 > **Advertencia:** Ten en mente que, lógicamente, no deberías poder ingresar otros caracteres que no sean números dentro de una entrada numérica. Parece haber algo de desacuerdo acerca de esto entre navegadores; ver {{bug(1398528)}}.
 
@@ -113,24 +117,24 @@ Los navegadores de móviles ayudan más con la experiencia de usuario mostrando 
 En su forma más básica, una entrada numérica puede ser implementada así:
 
 ```html
-<label for="ticketNum">Número de tickets que tu gustaría comprar:</label>
+<label for="ticketNum">Número de tickets que te gustaría comprar:</label>
 <input id="ticketNum" type="number" name="ticketNum" value="0" />
 ```
 
 {{EmbedLiveSample('A_simple_number_input', 600, 40)}}
 
-Una entrada numérica es considerada válida cuando está vacía y cuando un único número es ingresado, pero en cualquier otro caso será inválida. Si el atributo {{htmlattrxref("required", "input")}} es usado, la entrada ya no es considerada válida cuando está vacía.
+Una entrada numérica es considerada válida cuando está vacía y cuando un único número es ingresado, pero en cualquier otro caso es inválida. Si el atributo {{htmlattrxref("required", "input")}} es usado, la entrada ya no es considerada válida cuando está vacía.
 
-> **Nota**: Cualquier número es un valor aceptable, en la medida de que sea un [número de coma flotante válido](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number), es decir, que no sea [NaN](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN) o [Infinity](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity).
+> **Nota**: Cualquier número es un valor aceptable, en la medida de que sea un [número de coma flotante válido](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number), es decir, que no sea [NaN](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN) o [Infinity](/es/docs/Web/JavaScript/Reference/Global_Objects/Infinity).
 
 ### Marcadores de posición
 
 Algunas veces es de ayuda ofrecer una indicación contextual sobre qué forma deben tomar los datos de entrada. Esto puede ser especialmente importante si el diseño de la página no ofrece etiquetas descriptivas para cada {{HTMLElement("input")}}. Es aquí donde entran los **marcadores de posición**. Un marcador de posición es un valor comúnmente usado para proveer un indicio del formato que la entrada debe tomar por `value`. Este es mostrado dentro de la caja de edición cuando el `value` del elemento es `""`. Una vez que los datos son ingresados dentro de la caja, la marca de posición desaparece; si la caja se vacía, la marca de lugar reaparece.
 
-Aquí, tenemos una entrada `number` con el marcador de posición "`Múltiple de 10`". Nota cómo el marcador de posición desaparece y reaparece conforme manipulas el contenido del campo de edición.
+Aquí, tenemos una entrada `number` con el marcador de posición "`Múltiplo de 10`". Nota cómo el marcador de posición desaparece y reaparece conforme manipulas el contenido del campo de edición.
 
 ```html
-<input type="number" placeholder="Múltiple de 10" />
+<input type="number" placeholder="Múltiplo de 10" />
 ```
 
 {{EmbedLiveSample('Placeholders', 600, 40)}}
@@ -140,7 +144,7 @@ Aquí, tenemos una entrada `number` con el marcador de posición "`Múltiple de 
 Por defecto, los botones arriba y abajo provistos para que cambies el número pasarán el valor arriba y abajo de 1 en 1. Puedes cambiar esto con el atributo {{htmlattrxref("step", "input")}}, el cual toma como valor un número que especifica la cantidad de escalones. Tomando nuestro ejemplo de arriba, este contiene un marcador de posición que indica que el valor debe ser un múltiplo de 10; por lo tanto, tiene sentido agregar un valor a `step` de `10`:
 
 ```html
-<input type="number" placeholder="Múltiple of 10" step="10" />
+<input type="number" placeholder="Múltiplo de 10" step="10" />
 ```
 
 {{EmbedLiveSample('Controlling_step_size', 600, 40)}}
@@ -152,7 +156,7 @@ En este ejemplo, verás que las flechas de subir y bajar escalón incrementan y 
 Puedes usar los atributos {{htmlattrxref("min", "input")}} y {{htmlattrxref("max", "input")}} para especificar un valor mínimo y máximo que pueda tener el campo. Por ejemplo, demos a nuestro ejemplo un mínimo de `0` y un máximo de `100`:
 
 ```html
-<input type="number" placeholder="múltiple de 10" step="10" min="0" max="100" />
+<input type="number" placeholder="Múltiplo de 10" step="10" min="0" max="100" />
 ```
 
 {{EmbedLiveSample('Specifying_minimum_and_maximum_values', 600, 40)}}
@@ -178,14 +182,7 @@ Los elementos {{HTMLElement("input")}} de tipo `number` no soportan atributos de
 Por ejemplo, para ajustar el ancho de la entrada para que sea tan ancho como se necesita para ingresar un número de tres dígitos, podemos cambiar nuestro HTML para incluir un {{htmlattrxref("id")}} y acortar nuestro marcador de posición ya que el campo es demasiado ancho para el texto que hemos estado usando hasta ahora:
 
 ```html
-<input
-  type="number"
-  placeholder="x10"
-  step="10"
-  min="0"
-  max="100"
-  id="number"
-/>
+<input type="number" placeholder="x10" step="10" min="0" max="100" id="number">
 ```
 
 Entonces añadimos un poco de CSS para acortar el ancho del elemento con el selector `id` `#number`:
@@ -221,11 +218,11 @@ Tú puedes proveer una lista de opciones por defecto que el usuario puede selecc
 
 ## Validación
 
-Ya hemos mencionado una serie de diferentes opciones de validación para las entradas `number, pero revisémoslas ahora:
+Ya hemos mencionado una serie de diferentes opciones de validación para las entradas `number`, pero revisémoslas ahora:
 
 - Los elementos `<input type="number">` automáticamente invalidan cualquier entrada que no sea un número (o vacío, si `required` está especificado).
-- Puedes usar el atributo {{htmlattrxref("required", "input")}} para hacer las entradas vacías inválidas. (En otras palabras, la entrata _tiene_ que ser completada).
-- Puedes usar el atributo {{htmlattrxref("step", "input")}} para limitar los valores válidos a cierto grupo de escalones (como por ejemplo, múltiples de 10).
+- Puedes usar el atributo {{htmlattrxref("required", "input")}} para hacer las entradas vacías inválidas. (En otras palabras, la entrada _tiene_ que ser completada).
+- Puedes usar el atributo {{htmlattrxref("step", "input")}} para limitar los valores válidos a cierto grupo de escalones (como por ejemplo, múltiplos de 10).
 - Puedes usar los atributos {{htmlattrxref("min", "input")}} y {{htmlattrxref("max", "input")}} para limitar los valores mínimo y máximo.
 
 El siguiente ejemplo presenta todas las características anteriores, así como el uso de CSS para mostrar íconos de validez o invalidez, dependiendo del valor del `input`:
@@ -233,16 +230,8 @@ El siguiente ejemplo presenta todas las características anteriores, así como e
 ```html
 <form>
   <div>
-    <label for="balloons">Número de globos a comprar (múltiples de 10):</label>
-    <input
-      id="balloons"
-      type="number"
-      name="balloons"
-      step="10"
-      min="0"
-      max="100"
-      required
-    />
+    <label for="balloons">Número de globos a comprar (múltiplos de 10):</label>
+    <input id="balloons" type="number" name="balloons" step="10" min="0" max="100" required>
     <span class="validity"></span>
   </div>
   <div>
@@ -253,7 +242,7 @@ El siguiente ejemplo presenta todas las características anteriores, así como e
 
 {{EmbedLiveSample("Validation", 600, 110)}}
 
-Trata de mandar el formulario con diferentes valores inválidos (sin valor, valores por debeajo de 0 o por encima de 100, valores que no sea múltiples de 10) y fíjate como el mensaje de error que te arroja el navegador varía.
+Trata de mandar el formulario con diferentes valores inválidos (por ejemplo: sin valor, valores por debajo de 0 o por encima de 100, valores que no sea múltiples de 10) y fíjate como el mensaje de error que te arroja el navegador varía.
 
 El CSS aplicado a este ejemplo es el siguiente:
 
@@ -281,7 +270,7 @@ Lo colocamos en un elemento separado `<span>` para mayor flexibilidad. Algunos n
 >
 > Es demasiado fácil para alguien hacer ajustes al HTML que le permitan evitar la validación o removerla completamente. También es posible para alguien evadir tu HTML y enviar los datos directamente a tu servidor.
 >
-> Si tu código del lado del servidor falla en validar los datos que recibe, esto puede conllevar consecuencias desastosas cuando datos que no están formateados apropiadamente sean enviados (o cuando los datos son demasiado grandes o son del tipo incorrecto).
+> Si tu código del lado del servidor falla en validar los datos que recibe, esto puede conllevar consecuencias desastrosas cuando datos que no están formateados apropiadamente son enviados (o cuando los datos son demasiado grandes o son del tipo incorrecto, entre otros casos).
 
 ### Validación de patrón
 
@@ -293,7 +282,7 @@ La fundamentación para esto es que las entradas numéricas no serán válidas s
 
 Ya hemos cubierto el hecho de que, por defecto, el incremento es `1` y tú puedes usar el atributo {{htmlattrxref("step", "input")}} para permitir entradas decimales. Echemos un vistazo más de cerca.
 
-En el siguiente ejemplo hay un formulario para ingresar la estatura del usuario. Por defecto, acepta la estatura en metros, pero puedes hacer click en el botón para que el formulario a que acepte pies y pulgadas. La entrada para la estatura en metros acepta decimales a dos posiciones.
+En el siguiente ejemplo hay un formulario para ingresar la estatura del usuario. Por defecto, acepta la estatura en metros, pero puedes hacer click en el botón para que el formulario acepte pies y pulgadas. La entrada para la estatura en metros acepta decimales a dos posiciones.
 
 {{EmbedLiveSample("Examples", 600, 100)}}
 
@@ -302,16 +291,8 @@ El HTML se ve así:
 ```html
 <form>
   <div class="metersInputGroup">
-    <label for="meters">Introduce tu estatura, en metros:</label>
-    <input
-      id="meters"
-      type="number"
-      name="meters"
-      step="0.01"
-      min="0"
-      placeholder="e.g. 1.78"
-      required
-    />
+    <label for="meters">Introduce tu estatura en metros:</label>
+    <input id="meters" type="number" name="meters" step="0.01" min="0" placeholder="p. ej. 1.78" required>
     <span class="validity"></span>
   </div>
   <div class="feetInputGroup" style="display: none;">
@@ -324,21 +305,17 @@ El HTML se ve así:
     <span class="validity"></span>
   </div>
   <div>
-    <input
-      type="button"
-      class="meters"
-      value="Introduce la altura en pies y pulgadas"
-    />
+    <input type="button" class="meters" value="Introduce la altura en pies y pulgadas">
   </div>
   <div>
-    <input type="submit" value="Submit form" />
+    <input type="submit" value="Enviar formulario" />
   </div>
 </form>
 ```
 
-Verás que estamos usando muchos de los atributos que ya hemos visto antes en el artículo. Como queremos que acepte un valor de medida en centímetros, hemos colocado el valor de `step` a `0.01`, de manera que valores como _1.78_ no sean vistos como inválidos. También hemos provisto una marcadores de posición para esa entrada.
+Verás que estamos usando muchos de los atributos que ya hemos visto antes en el artículo. Como queremos que acepte un valor de medida en centímetros, hemos colocado el valor de `step` a `0.01`, de manera que valores como _1.78_ no sean vistos como inválidos. También hemos provisto un marcador de posición para esa entrada.
 
-Hemos escondido las entradas de pies y pulgadas inicialmente usando `class="hidden"`, de manera que metros sea el tipo de entrada preseleccionado.
+Hemos escondido las entradas de pies y pulgadas inicialmente usando `style="display: none;"`, de manera que metros sea el tipo de entrada preseleccionado.
 
 Ahora, al CSS. Este se ve muy similar al estilo de validación que vimos antes; nada extraordinario aquí.
 
@@ -382,7 +359,7 @@ let switchBtn = document.querySelector('input[type="button"]');
 switchBtn.addEventListener("click", function () {
   if (switchBtn.getAttribute("class") === "meters") {
     switchBtn.setAttribute("class", "feet");
-    switchBtn.value = "Enter height in meters";
+    switchBtn.value = "Introduce tu estatura en metros:";
 
     metersInputGroup.style.display = "none";
     feetInputGroup.style.display = "block";
@@ -394,7 +371,7 @@ switchBtn.addEventListener("click", function () {
     metersInput.value = "";
   } else {
     switchBtn.setAttribute("class", "meters");
-    switchBtn.value = "Enter height in feet and inches";
+    switchBtn.value = "Introduce la altura en pies y pulgadas";
 
     metersInputGroup.style.display = "block";
     feetInputGroup.style.display = "none";
@@ -409,7 +386,7 @@ switchBtn.addEventListener("click", function () {
 });
 ```
 
-Después de declarar unas pocas variables, un manejador de eventos es agredgado al `button` para controlar el botón. Esto es bastante simple, principalmente involucra cambiar las {{HTMLElement("label")}} y `class` del botón, y actualizar los valores de muestra de los dos conjuntos de entradas cuando el botón sea presionado.
+Después de declarar unas pocas variables, un manejador de eventos es agregado al `button` para controlar el botón. Esto es bastante simple, principalmente involucra cambiar las {{HTMLElement("label")}} y `class` del botón, y actualizar los valores de muestra de los dos conjuntos de entradas cuando el botón sea presionado.
 
 (Fíjate que aquí no estamos convirtiendo de aquí para allá entre metros y pies/pulgadas, lo que probablemente haría una aplicación web en la vida real.)
 
@@ -419,7 +396,7 @@ Después de declarar unas pocas variables, un manejador de eventos es agredgado 
 
 ## Accessibilidad
 
-El [role](/es/docs/Web/Accessibility/ARIA/Roles) implícito para el elemento `<input type="number">` es [`spinbutton`](/es/docs/Web/Accessibility/ARIA/Roles/spinbutton). Si el spinbutton no es una funcionalidad importante para el controlador de tu formulario, considera _no_ usar `type="number"`. Por el contrario, usa [`inputmode="numeric"`](/es/docs/Web/HTML/Global_attributes/inputmode) junto con el atributo [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) que limita los caracteres a números y a caracteres asociados. Con `<input type="number">`, existe el riesgo que los usuarios accidentamente incremento un número cuando ellos están intentanto hacer otra cosa. Adicionalmente, si los usuarios tratan de introducir algo que no es un número, no hay ninguna sugerencia explícita sobre que se está haciendo mal.
+El [role](/es/docs/Web/Accessibility/ARIA/Roles) implícito para el elemento `<input type="number">` es [`spinbutton`](/es/docs/Web/Accessibility/ARIA/Roles/spinbutton). Si el spinbutton no es una funcionalidad importante para el controlador de tu formulario, considera _no_ usar `type="number"`. Por el contrario, usa [`inputmode="numeric"`](/es/docs/Web/HTML/Global_attributes/inputmode) junto con el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern) que limita los caracteres a números y a caracteres asociados. Con `<input type="number">`, existe el riesgo que los usuarios accidentalmente incrementen un número cuando están intentando hacer otra cosa. Adicionalmente, si los usuarios tratan de introducir algo que no es un número, no hay ninguna sugerencia explícita sobre qué están haciendo mal.
 
 También considera usar el atributo [`autocomplete`](/es/docs/Web/HTML/Attributes/autocomplete) para ayudar a los usuarios a completar formularios más rapidamente con menos oportunidades para el error. Por ejemplo, para habilitar el autocompletado en un campo de código postal, estipula `autocomplete="postal-code"`.
 
@@ -431,7 +408,7 @@ También considera usar el atributo [`autocomplete`](/es/docs/Web/HTML/Attribute
 
 {{Compat}}
 
-## See also
+## Véase también
 
 - [Guía de formularios HTML](/es/docs/Learn/Forms)
 - {{HTMLElement("input")}}
