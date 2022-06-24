@@ -5,11 +5,11 @@ page-type: web-api-instance-method
 browser-compat: api.Notification.close
 ---
 
-La interfaz `DOMException` representa un evento anormal(llamado **excepción**) que ocurre como el resultado de llamar a un método o acceder a una propiedad de una web API. Asi es como las condiciones de los errores se describen en las web APIs.
+La interfaz **`DOMException`** representa un evento anormal (llamado **excepción**) que ocurre como el resultado de llamar a un método o acceder a una propiedad de una API web. Asi es como las condiciones de error se describen en las API web.
 
-Cada excepción tiene un nombre, el cual es una cadena corta de estilo "PascalCase" que identifica el error o la condición anormal.
+Cada excepción tiene un **nombre**(_name_), el cual es una cadena corta de estilo "PascalCase" que identifica el error o la condición anormal.
 
-`DOMException` es un {{Glossary("Serializable object")}}, por lo que puede ser clonado con {{domxref("structuredClone()")}} o copiado entre [Workers](/es/docs/Web/API/Worker) usando {{domxref("Worker.postMessage()", "postMessage()")}}.
+`DOMException` es un {{Glossary("Serializable object","Objeto serializable")}}, por lo que puede ser clonado con {{domxref("structuredClone()")}} o copiado entre [`Workers`](/es/docs/Web/API/Worker) usando {{domxref("Worker.postMessage()", "postMessage()")}}.
 
 ## Constructor
 
@@ -21,13 +21,13 @@ Cada excepción tiene un nombre, el cual es una cadena corta de estilo "PascalCa
 - {{domxref("DOMException.code")}} {{deprecated_inline}} {{readOnlyInline}}
   - : Retorna una de las constantes de código de error heredado, o `0` si ninguna coincide.
 - {{domxref("DOMException.message")}} {{readOnlyInline}}
-  - : Retorna una cadena que representa un mensaje o descripción asociado con el [nombre de error](#error_names) dado.
+  - : Retorna una cadena que representa un mensaje o descripción asociado con el [nombre de error](#Nombres_de_errores) dado.
 - {{domxref("DOMException.name")}} {{readOnlyInline}}
-  - : Retorna una cadena que contiene una de las cadenas asociadas con un [nombre de error](#error_names).
+  - : Retorna una cadena que contiene una de las cadenas asociadas con un [nombre de error](#Nombres_de_errores).
 
 ## Nombres de errores
 
-Los nombres comunes de errores son listados aqui. Algunas APIs definen sus propios conjuntos de nombres, por lo tanto esta no es un lista completa necesariamente.
+Los nombres comunes de errores son listados aqui. Algunas API definen sus propios conjuntos de nombres, por lo tanto esta no es un lista completa necesariamente.
 
 Tenga en cuenta que los siguientes errores históricos obsoletos no tienen un nombre de error pero en cambio tiene solo un valor de código constante heredado y un nombre de constante heredado:
 
@@ -60,7 +60,7 @@ Tenga en cuenta que los siguientes errores históricos obsoletos no tienen un no
 - `InvalidModificationError`
   - : El objeto no puede ser modificado de esta manera. (Valor de código heredado: `13` y nombre de constante heredado: `INVALID_MODIFICATION_ERR`)
 - `NamespaceError`
-  - : La operación no esta permitida por el espacio de nombres en el XML. (Valor de código heredado: `14` y nombre de constante heredado: `NAMESPACE_ERR`)
+  - : La operación no esta permitida por el {{Glossary("Namespace","espacio de nombres")}} en el XML. (Valor de código heredado: `14` y nombre de constante heredado: `NAMESPACE_ERR`)
 - `InvalidAccessError`
   - : El objeto no admite la operación o el argumento. (Valor de código heredado: `15` y nombre de constante heredado: `INVALID_ACCESS_ERR`)
 - `TypeMismatchError` {{deprecated_inline}}
@@ -86,13 +86,13 @@ Tenga en cuenta que los siguientes errores históricos obsoletos no tienen un no
 - `NotReadableError` {{experimental_inline}}
   - : La operación de lectura de entrada/salida falló (Sin valor de código heredado ni nombre de constante).
 - `UnknownError` {{experimental_inline}}
-  - : La operación fallo por una razón desconocida transitoria(p.ej. Memoria agotada) (Sin valor de código heredado ni nombre de constante).
+  - : La operación fallo por una razón desconocida transitoria (p.ej. memoria agotada) (Sin valor de código heredado ni nombre de constante).
 - `ConstraintError` {{experimental_inline}}
-  - : Una operación de mutación falló en una transacción porque no se cumplió una restricción(Sin valor de código heredado ni nombre de constante).
+  - : Una operación de mutación falló en una transacción porque no se cumplió una restricción (Sin valor de código heredado ni nombre de constante).
 - `DataError` {{experimental_inline}}
   - : Los datos proporcionados son inadecuados (Sin valor de código heredado ni nombre de constante).
 - `TransactionInactiveError` {{experimental_inline}}
-  - : Una solicitud fue realizada contra una transacción que esta actualmente inactiva o finalizada (Sin valor de código heredado ni nombre de constante).
+  - : Una solicitud fue realizada hacia una transacción que esta actualmente inactiva o finalizada (Sin valor de código heredado ni nombre de constante).
 - `ReadOnlyError` {{experimental_inline}}
   - : La operación de mutación se intentó en una transacción de "solo lectura" (Sin valor de código heredado ni nombre de constante).
 - `VersionError` {{experimental_inline}}
@@ -106,7 +106,7 @@ Tenga en cuenta que los siguientes errores históricos obsoletos no tienen un no
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 
