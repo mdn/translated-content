@@ -593,7 +593,6 @@
 /fr/docs/CSS/margin-left	/fr/docs/Web/CSS/margin-left
 /fr/docs/CSS/margin-right	/fr/docs/Web/CSS/margin-right
 /fr/docs/CSS/margin-top	/fr/docs/Web/CSS/margin-top
-/fr/docs/CSS/marks	/fr/docs/orphaned/Web/CSS/@page/marks
 /fr/docs/CSS/max-height	/fr/docs/Web/CSS/max-height
 /fr/docs/CSS/max-width	/fr/docs/Web/CSS/max-width
 /fr/docs/CSS/min-height	/fr/docs/Web/CSS/min-height
@@ -4078,7 +4077,6 @@
 /fr/docs/Web/CSS/-webkit-print-color-adjust	/fr/docs/Web/CSS/print-color-adjust
 /fr/docs/Web/CSS/:-moz-placeholder	/fr/docs/Web/CSS/:placeholder-shown
 /fr/docs/Web/CSS/:-moz-ui-invalid	/fr/docs/Web/CSS/:user-invalid
-/fr/docs/Web/CSS/:-moz-ui-valid	/fr/docs/orphaned/Web/CSS/:-moz-ui-valid
 /fr/docs/Web/CSS/:-ms-input-placeholder	/fr/docs/Web/CSS/:placeholder-shown
 /fr/docs/Web/CSS/:-webkit-autofill	/fr/docs/Web/CSS/:autofill
 /fr/docs/Web/CSS/::-moz-list-bullet	/fr/docs/Web/CSS/:-moz-list-bullet
@@ -4094,9 +4092,6 @@
 /fr/docs/Web/CSS/:host()	/fr/docs/Web/CSS/:host_function
 /fr/docs/Web/CSS/:matches	/fr/docs/Web/CSS/:is
 /fr/docs/Web/CSS/:visited_et_la_vie_privée	/fr/docs/Web/CSS/Privacy_and_the_:visited_selector
-/fr/docs/Web/CSS/@media/scan	/fr/docs/orphaned/Web/CSS/@media/scan
-/fr/docs/Web/CSS/@page/bleed	/fr/docs/orphaned/Web/CSS/@page/bleed
-/fr/docs/Web/CSS/@page/marks	/fr/docs/orphaned/Web/CSS/@page/marks
 /fr/docs/Web/CSS/@styleset	/fr/docs/Web/CSS/@font-feature-values
 /fr/docs/Web/CSS/@viewport/height	/fr/docs/Web/CSS/@viewport
 /fr/docs/Web/CSS/@viewport/max-height	/fr/docs/Web/CSS/@viewport
@@ -4301,7 +4296,6 @@
 /fr/docs/Web/CSS/Média_Paginé	/fr/docs/Web/CSS/Paged_Media
 /fr/docs/Web/CSS/Média_paginés	/fr/docs/Web/CSS/Paged_Media
 /fr/docs/Web/CSS/Outils	/fr/docs/conflicting/Web/CSS_c2c099599c0a58c69d1390033045f244
-/fr/docs/Web/CSS/Outils/Générateur_de_courbe_de_Bézier	/fr/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
 /fr/docs/Web/CSS/Propriétés_raccourcies	/fr/docs/Web/CSS/Shorthand_properties
 /fr/docs/Web/CSS/Pseudo-éléments	/fr/docs/Web/CSS/Pseudo-elements
 /fr/docs/Web/CSS/Redimensionnement_arrière-plans_SVG	/fr/docs/Web/CSS/Scaling_of_SVG_backgrounds
@@ -4336,8 +4330,6 @@
 /fr/docs/Web/CSS/Sélecteurs_enfant	/fr/docs/Web/CSS/Child_combinator
 /fr/docs/Web/CSS/Sélecteurs_universels	/fr/docs/Web/CSS/Universal_selectors
 /fr/docs/Web/CSS/Tools	/fr/docs/conflicting/Web/CSS_c2c099599c0a58c69d1390033045f244
-/fr/docs/Web/CSS/Tools/Cubic_Bezier_Generator	/fr/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
-/fr/docs/Web/CSS/Tools/Générateur_de_courbe_de_Bézier	/fr/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
 /fr/docs/Web/CSS/Tools/Outil_Selecteur_Couleurs_CSS	/fr/docs/Web/CSS/CSS_Colors/Color_picker_tool
 /fr/docs/Web/CSS/Type_color	/fr/docs/Web/CSS/color_value
 /fr/docs/Web/CSS/Type_position	/fr/docs/Web/CSS/position_value
@@ -4390,7 +4382,6 @@
 /fr/docs/Web/CSS/linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/Web/CSS/longueur	/fr/docs/Web/CSS/length
-/fr/docs/Web/CSS/marks	/fr/docs/orphaned/Web/CSS/@page/marks
 /fr/docs/Web/CSS/max()	/fr/docs/Web/CSS/max
 /fr/docs/Web/CSS/min()	/fr/docs/Web/CSS/min
 /fr/docs/Web/CSS/minmax()	/fr/docs/Web/CSS/minmax
@@ -6230,6 +6221,7 @@
 /fr/docs/orphaned/Web/API/ServiceWorkerState	/fr/docs/Web/API/ServiceWorker/state
 /fr/docs/orphaned/Web/API/URLUtilsReadOnly	/fr/docs/Web/API/WorkerLocation
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
+/fr/docs/orphaned/Web/CSS/transform-function/translateX	/fr/docs/Web/CSS/transform-function/translateX
 /fr/docs/orphaned/Web/Guide/Events	/fr/docs/Web/Events
 /fr/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
 /fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media

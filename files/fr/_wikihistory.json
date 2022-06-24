@@ -41609,40 +41609,6 @@
       "Arzak656"
     ]
   },
-  "orphaned/Web/CSS/:-moz-ui-valid": {
-    "modified": "2020-10-15T21:48:25.437Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "Aaaaaaa"
-    ]
-  },
-  "orphaned/Web/CSS/@media/scan": {
-    "modified": "2020-10-15T21:47:29.526Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "orphaned/Web/CSS/@page/bleed": {
-    "modified": "2020-10-15T21:47:32.177Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "orphaned/Web/CSS/@page/marks": {
-    "modified": "2020-10-15T21:20:05.400Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "orphaned/Web/CSS/Tools/Cubic_Bezier_Generator": {
-    "modified": "2019-04-06T13:46:55.571Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "orphaned/Web/CSS/conic-gradient()": {
     "modified": "2020-11-05T10:00:17.716Z",
     "contributors": [
@@ -41715,13 +41681,6 @@
       "chrisdavidmills",
       "SphinxKnight",
       "a-mt"
-    ]
-  },
-  "orphaned/Web/CSS/transform-function/translateX": {
-    "modified": "2019-04-06T11:48:19.824Z",
-    "contributors": [
-      "SphinxKnight",
-      "mrstork"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
