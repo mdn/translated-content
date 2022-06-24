@@ -38,9 +38,9 @@ Tenga en cuenta que los siguientes errores históricos obsoletos no tienen un no
 > **Nota:** Debido a que históricamente los errores estaban identificados por un valor numérico que correspondía con un nombre de variable definida para tener ese valor, algunas de las entradas a continuación indican el valor de código heredado y el nombre constante que se usó en el pasado.
 
 - `IndexSizeError`
-  - : El índice no es un rango permitido. Por ejemplo, esto podría ser arrojado por el objeto {{ domxref("Range") }}. (Valor de código heradado: `1` y nombre de constante heredado: `INDEX_SIZE_ERR`)
+  - : El índice no está en el rango permitido. Por ejemplo, esto podría ser arrojado por el objeto {{ domxref("Range") }}. (Valor de código heradado: `1` y nombre de constante heredado: `INDEX_SIZE_ERR`)
 - `HierarchyRequestError`
-  - : El nodo del arbol jerárquico no es correcto. (Valor de código heredado: `3` y nombre de constante heredado: `HIERARCHY_REQUEST_ERR`)
+  - : La jerarquía del árbol de nodos no es correcta. (Valor de código heredado: `3` y nombre de constante heredado: `HIERARCHY_REQUEST_ERR`)
 - `WrongDocumentError`
   - : El objeto esta en el {{ domxref("Document") }} incorrecto. (Valor de código heredado: `4` y nombre de constante heredado: `WRONG_DOCUMENT_ERR`)
 - `InvalidCharacterError`
@@ -50,7 +50,7 @@ Tenga en cuenta que los siguientes errores históricos obsoletos no tienen un no
 - `NotFoundError`
   - : El objeto no pudo ser encontrado aquí. (Valor de código heredado: `8` y nombre de constante heredado: `NOT_FOUND_ERR`)
 - `NotSupportedError`
-  - : La operación no esta soportada. (Valor de código heredado: `9` y nombre de constante heredado: `NOT_SUPPORTED_ERR`)
+  - : La operación no es compatible. (Valor de código heredado: `9` y nombre de constante heredado: `NOT_SUPPORTED_ERR`)
 - `InvalidStateError`
   - : El objeto esta en un estado inválido. (Valor de código heredado: `11` y nombre de constante heredado: `INVALID_STATE_ERR`)
 - `InUseAttributeError`
