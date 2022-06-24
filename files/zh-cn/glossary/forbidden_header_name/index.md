@@ -12,7 +12,7 @@ translation_of: Glossary/Forbidden_header_name
 
 **禁止修改的消息首部**指的是不能在代码中通过编程的方式进行修改的 [HTTP 消息首部](/zh-CN/docs/Web/HTTP/Headers)，具体指 HTTP **请求**消息首部（和{{Glossary("Forbidden response header name", "禁止修改的响应消息首部")}}形成对比）。
 
-因为用户代理保留对此类消息首部的完全控制，所以它们被禁止修改。保留以 `Sec-` 开头的名称，以用于在 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 请求中创建安全的新消息首部，这些 {{glossary("API")}} 授予开发人员对消息首部的控制权，例如：{{domxref("XMLHttpRequest")}}。
+因为用户代理保留对此类消息首部的完全控制，所以它们被禁止修改。保留以 `Sec-` 开头的名称，以用于在使用 [fetch 算法](https://fetch.spec.whatwg.org/#concept-fetch)的请求中创建安全的新消息首部，这些 {{glossary("API")}} 授予开发人员对消息首部的控制权，例如：{{domxref("XMLHttpRequest")}}。
 
 禁止修改的消息首部包括以 `Proxy-` 和 `Sec-` 开头的消息首部，以及下面列出的消息首部：
 
