@@ -43159,18 +43159,6 @@
       "Mgjbot"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-10-29T00:08:21.948Z",
-    "contributors": [
-      "mpcjazz",
-      "kachick",
-      "segayuu",
-      "TakashiHarano",
-      "x2357",
-      "teoli",
-      "chikoski"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/parseFloat": {
     "modified": "2020-10-15T21:13:40.466Z",
     "contributors": [
@@ -43803,6 +43791,18 @@
       "segayuu",
       "YuichiNukiyama",
       "shide55"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-10-29T00:08:21.948Z",
+    "contributors": [
+      "mpcjazz",
+      "kachick",
+      "segayuu",
+      "TakashiHarano",
+      "x2357",
+      "teoli",
+      "chikoski"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {

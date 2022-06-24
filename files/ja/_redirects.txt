@@ -859,7 +859,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/TypeError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/URIError	/ja/docs/Web/JavaScript/Reference/Global_Objects/URIError
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/URIError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/URIError
-/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/null	/ja/docs/Web/JavaScript/Reference/Global_Objects/null
+/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/null	/ja/docs/Web/JavaScript/Reference/Operators/null
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/parseInt	/ja/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/uneval	/ja/docs/Web/JavaScript/Reference/Global_Objects/uneval
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Properties	/ja/docs/Web/JavaScript/Reference/Global_Objects
@@ -4512,6 +4512,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
+/ja/docs/Web/JavaScript/Reference/Global_Objects/null	/ja/docs/Web/JavaScript/Reference/Operators/null
 /ja/docs/Web/JavaScript/Reference/Global_Properties	/ja/docs/Web/JavaScript/Reference/Global_Objects
 /ja/docs/Web/JavaScript/Reference/Global_Properties/Infinity	/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 /ja/docs/Web/JavaScript/Reference/Global_Properties/NaN	/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN

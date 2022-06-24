@@ -21208,16 +21208,6 @@
       "Sheppy"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-10-15T21:29:52.036Z",
-    "contributors": [
-      "yar85",
-      "YozhEzhi",
-      "boxa6",
-      "SphinxKnight",
-      "Mingun"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/parseFloat": {
     "modified": "2020-10-15T21:31:40.524Z",
     "contributors": [
@@ -21563,6 +21553,16 @@
       "vitaliylag",
       "Isk1n",
       "uleming"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-10-15T21:29:52.036Z",
+    "contributors": [
+      "yar85",
+      "YozhEzhi",
+      "boxa6",
+      "SphinxKnight",
+      "Mingun"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {

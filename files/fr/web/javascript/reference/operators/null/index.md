@@ -1,13 +1,13 @@
 ---
 title: 'null'
-slug: Web/JavaScript/Reference/Global_Objects/null
+slug: Web/JavaScript/Reference/Operators/null
 tags:
   - JavaScript
   - Littéral
   - Primitive
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/null
-original_slug: Web/JavaScript/Reference/Objets_globaux/null
+original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
 {{jsSidebar("Objects")}}
 

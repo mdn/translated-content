@@ -694,6 +694,7 @@
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/contains	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+/ru/docs/Web/JavaScript/Reference/Global_Objects/null	/ru/docs/Web/JavaScript/Reference/Operators/null
 /ru/docs/Web/JavaScript/Reference/Methods_Index	/ru/docs/Web/JavaScript/Reference
 /ru/docs/Web/JavaScript/Reference/Operators/Spread_operator	/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /ru/docs/Web/JavaScript/Reference/Operators/Группировка	/ru/docs/Web/JavaScript/Reference/Operators/Grouping

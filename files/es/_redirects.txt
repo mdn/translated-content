@@ -2142,6 +2142,7 @@
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
+/es/docs/Web/JavaScript/Reference/Global_Objects/null	/es/docs/Web/JavaScript/Reference/Operators/null
 /es/docs/Web/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference
 /es/docs/Web/JavaScript/Referencia/Acerca_de	/es/docs/Web/JavaScript/Reference/About
 /es/docs/Web/JavaScript/Referencia/Características_Desaprobadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
@@ -2482,7 +2483,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/isFinite	/es/docs/Web/JavaScript/Reference/Global_Objects/isFinite
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/isFinite_	/es/docs/Web/JavaScript/Reference/Global_Objects/isFinite
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/isNaN	/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/null	/es/docs/Web/JavaScript/Reference/Global_Objects/null
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/null	/es/docs/Web/JavaScript/Reference/Operators/null
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/parseFloat	/es/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/parseInt	/es/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/undefined	/es/docs/Web/JavaScript/Reference/Global_Objects/undefined

@@ -41724,21 +41724,6 @@
       "AlexChao"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-10-15T21:21:19.908Z",
-    "contributors": [
-      "wallena3",
-      "RainSlide",
-      "GreedyPig",
-      "zxsunrise",
-      "zhuangyin",
-      "Jiang-Xuan",
-      "SphinxKnight",
-      "ziyunfei",
-      "AlexChao",
-      "teoli"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/parseFloat": {
     "modified": "2020-10-15T21:21:34.049Z",
     "contributors": [
@@ -42474,6 +42459,21 @@
       "sunhengzhe",
       "ngtmuzi",
       "ccnuzindex"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-10-15T21:21:19.908Z",
+    "contributors": [
+      "wallena3",
+      "RainSlide",
+      "GreedyPig",
+      "zxsunrise",
+      "zhuangyin",
+      "Jiang-Xuan",
+      "SphinxKnight",
+      "ziyunfei",
+      "AlexChao",
+      "teoli"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {

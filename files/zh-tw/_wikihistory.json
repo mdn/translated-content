@@ -7184,12 +7184,6 @@
       "iigmir"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-03-12T19:44:24.320Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/parseInt": {
     "modified": "2020-10-15T21:48:43.179Z",
     "contributors": [
@@ -7291,6 +7285,12 @@
       "kuolun",
       "liuderchi",
       "roycrxtw"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-03-12T19:44:24.320Z",
+    "contributors": [
+      "jackblackevo"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {

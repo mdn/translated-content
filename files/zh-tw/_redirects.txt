@@ -828,6 +828,7 @@
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/prototype	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Promise
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/prototype	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
+/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/null	/zh-TW/docs/Web/JavaScript/Reference/Operators/null
 /zh-TW/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Operators
 /zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Operators_7c8eb9475d97a4a734c5991857698560
 /zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Operators_310dc67549939233c3d18a8fa2cdbb23
