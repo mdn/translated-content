@@ -44,5 +44,5 @@ a <<= 2; // 20
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
 - [左シフト演算子](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift)

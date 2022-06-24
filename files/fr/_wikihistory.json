@@ -37902,14 +37902,6 @@
       "BenoitL"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-10-15T21:27:56.698Z",
-    "contributors": [
-      "SphinxKnight",
-      "benjamin-chevillon",
-      "teoli"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/parseFloat": {
     "modified": "2020-10-15T21:16:59.325Z",
     "contributors": [
@@ -38203,6 +38195,14 @@
     "contributors": [
       "SphinxKnight",
       "blackfox"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-10-15T21:27:56.698Z",
+    "contributors": [
+      "SphinxKnight",
+      "benjamin-chevillon",
+      "teoli"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {

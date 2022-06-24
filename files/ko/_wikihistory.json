@@ -15061,13 +15061,6 @@
       "Netaras"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-10-15T21:40:32.117Z",
-    "contributors": [
-      "alattalatta",
-      "nicesh"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/parseFloat": {
     "modified": "2020-10-15T21:58:14.258Z",
     "contributors": [
@@ -15311,6 +15304,13 @@
     "contributors": [
       "alattalatta",
       "Netaras"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-10-15T21:40:32.117Z",
+    "contributors": [
+      "alattalatta",
+      "nicesh"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {

@@ -729,7 +729,7 @@
 /zh-CN/docs/JS-ref/Global_Objects/WeakSet	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /zh-CN/docs/JS-ref/Global_Objects/decodeURI	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/decodeURI
 /zh-CN/docs/JS-ref/Global_Objects/isFinite	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isFinite
-/zh-CN/docs/JS-ref/Global_Objects/null	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null
+/zh-CN/docs/JS-ref/Global_Objects/null	/zh-CN/docs/Web/JavaScript/Reference/Operators/null
 /zh-CN/docs/JS-ref/Global_Objects/parseFloat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
 /zh-CN/docs/JS-ref/Global_Objects/undefined	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined
 /zh-CN/docs/JS-ref/Operators	/zh-CN/docs/Web/JavaScript/Reference/Operators
@@ -974,7 +974,7 @@
 /zh-CN/docs/JavaScript/Reference/Global_Objects/WeakSet	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /zh-CN/docs/JavaScript/Reference/Global_Objects/decodeURI	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/decodeURI
 /zh-CN/docs/JavaScript/Reference/Global_Objects/isFinite	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isFinite
-/zh-CN/docs/JavaScript/Reference/Global_Objects/null	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null
+/zh-CN/docs/JavaScript/Reference/Global_Objects/null	/zh-CN/docs/Web/JavaScript/Reference/Operators/null
 /zh-CN/docs/JavaScript/Reference/Global_Objects/parseFloat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
 /zh-CN/docs/JavaScript/Reference/Global_Objects/undefined	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined
 /zh-CN/docs/JavaScript/Reference/Operators	/zh-CN/docs/Web/JavaScript/Reference/Operators
@@ -2321,6 +2321,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/contains	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null	/zh-CN/docs/Web/JavaScript/Reference/Operators/null
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 /zh-CN/docs/Web/JavaScript/Reference/Methods_Index	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax

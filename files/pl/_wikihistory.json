@@ -8263,12 +8263,6 @@
       "Takenbot"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-03-12T19:45:50.208Z",
-    "contributors": [
-      "JacobDesight"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/parseFloat": {
     "modified": "2020-03-12T19:37:26.647Z",
     "contributors": [
@@ -8456,6 +8450,12 @@
     "modified": "2020-03-12T19:45:06.300Z",
     "contributors": [
       "ssuperczynski"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-03-12T19:45:50.208Z",
+    "contributors": [
+      "JacobDesight"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {

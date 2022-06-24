@@ -19080,18 +19080,6 @@
       "Talisker"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-03-12T19:42:06.401Z",
-    "contributors": [
-      "mkiramu",
-      "ivanagui2",
-      "diegoazh",
-      "BubuAnabelas",
-      "hmorv",
-      "AugustoEsquen",
-      "AsLogd"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/parseFloat": {
     "modified": "2020-07-04T20:00:21.182Z",
     "contributors": [
@@ -19372,6 +19360,18 @@
     "modified": "2020-03-12T19:45:24.263Z",
     "contributors": [
       "jorgecas"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-03-12T19:42:06.401Z",
+    "contributors": [
+      "mkiramu",
+      "ivanagui2",
+      "diegoazh",
+      "BubuAnabelas",
+      "hmorv",
+      "AugustoEsquen",
+      "AsLogd"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {

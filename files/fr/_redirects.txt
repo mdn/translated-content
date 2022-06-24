@@ -2437,7 +2437,7 @@
 /fr/docs/JavaScript/Reference/Objets_globaux/eval	/fr/docs/Web/JavaScript/Reference/Global_Objects/eval
 /fr/docs/JavaScript/Reference/Objets_globaux/isFinite	/fr/docs/Web/JavaScript/Reference/Global_Objects/isFinite
 /fr/docs/JavaScript/Reference/Objets_globaux/isNaN	/fr/docs/Web/JavaScript/Reference/Global_Objects/isNaN
-/fr/docs/JavaScript/Reference/Objets_globaux/null	/fr/docs/Web/JavaScript/Reference/Global_Objects/null
+/fr/docs/JavaScript/Reference/Objets_globaux/null	/fr/docs/Web/JavaScript/Reference/Operators/null
 /fr/docs/JavaScript/Reference/Objets_globaux/parseFloat	/fr/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
 /fr/docs/JavaScript/Reference/Objets_globaux/parseInt	/fr/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 /fr/docs/JavaScript/Reference/Objets_globaux/pop	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
@@ -4867,6 +4867,7 @@
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
+/fr/docs/Web/JavaScript/Reference/Global_Objects/null	/fr/docs/Web/JavaScript/Reference/Operators/null
 /fr/docs/Web/JavaScript/Reference/Grammaire_lexicale	/fr/docs/Web/JavaScript/Reference/Lexical_grammar
 /fr/docs/Web/JavaScript/Reference/Index_des_méthodes	/fr/docs/Web/JavaScript/Reference
 /fr/docs/Web/JavaScript/Reference/Index_propriétés	/fr/docs/Web/JavaScript/Reference
@@ -5596,7 +5597,7 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/globalThis	/fr/docs/Web/JavaScript/Reference/Global_Objects/globalThis
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/isFinite	/fr/docs/Web/JavaScript/Reference/Global_Objects/isFinite
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/isNaN	/fr/docs/Web/JavaScript/Reference/Global_Objects/isNaN
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/null	/fr/docs/Web/JavaScript/Reference/Global_Objects/null
+/fr/docs/Web/JavaScript/Reference/Objets_globaux/null	/fr/docs/Web/JavaScript/Reference/Operators/null
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/parseFloat	/fr/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/parseInt	/fr/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/pop	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
