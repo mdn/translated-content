@@ -23,7 +23,7 @@ Cada excepción tiene un **nombre** (_name_), el cual es una cadena corta de est
 - {{domxref("DOMException.message")}} {{readOnlyInline}}
   - : Retorna una cadena que representa un mensaje o descripción asociado con el [nombre de error](#Nombres_de_errores) dado.
 - {{domxref("DOMException.name")}} {{readOnlyInline}}
-  - : Retorna una cadena que contiene una de las cadenas asociadas con un [nombre de error](#Nombres_de_errores).
+  - : Retorna una cadena que contiene una de las cadenas asociadas con un [nombre de error](#nombres_de_errores).
 
 ## Nombres de errores
 
