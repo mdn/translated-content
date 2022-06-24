@@ -74,7 +74,7 @@ Este valor debe ser menor que o igual al valor del atributo `max`.
 
 ### `placeholder`
 
-El atributo `placeholder` es una cadena de texto que proporciona una pista corta al usuario sobre qué tipo de información se espera en la entrada. Debe ser una palabra o una frase corta que muestre el tipo de dato esperado, y no un mensaje explicatorio. El texto _no tiene_ que incluir avances de línea.
+El atributo `placeholder` es una cadena de texto que proporciona una pista corta al usuario sobre qué tipo de información se espera en la entrada. Debe ser una palabra o una frase corta que muestre el tipo de dato esperado, y no un mensaje explicatorio. El texto _no debe_ incluir retornos de carro o saltos de línea.
 
 Si el controlador de contenido tiene una direccionalidad ({{Glossary("LTR")}} o {{Glossary("RTL")}}), pero necesitas presentar el marcador de posición en la direccionalidad opuesta, puedes usar el algoritmo bidireccional para formatear caracteres Unicode para sobreescribir la direccionalidad del marcador de posición; véase [Cómo usar los controles Unicode para texto bidireccional](https://www.w3.org/International/questions/qa-bidi-unicode-controls) para más información.
 
