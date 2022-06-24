@@ -240,7 +240,7 @@ console.log(words); // ['two', 'three', 'four']
 
 ### 配列の平板化
 
-次の例は学習目的だけのものです。内蔵メソッドを使用して配列を平板化したい場合は、{{jsxref("Array.prototype.flat()")}} を使用することができます (ES2019 の一部となる予定で、一部のブラウザーではすでに実装済み)。
+次の例は学習目的だけのものです。内蔵メソッドを使用して配列を平板化したい場合は、{{jsxref("Array.prototype.flat()")}} を使用することができます。
 
 ```js
 const flatten = (arr) => {
