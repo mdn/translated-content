@@ -36,6 +36,10 @@ En navegadores que no soportan entradas de tipo `number`, una entrada `number` r
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
   <tr>
+      <td><strong>Interfaz DOM</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+  <tr>
    <td><strong>Métodos</strong></td>
    <td>{{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}</td>
   </tr>
