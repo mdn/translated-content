@@ -118,7 +118,7 @@ var a = 0;
 var b = 0;
 </pre>
 
-<p>接下来我们使用 {{ event("gamepadconnected") }} 世界来检查控制器是否连接。当有一个控制连接时，我们就使用 {{ domxref("Navigator.getGamepads()") }}<code>[0]</code> 来抓取，输出控制器信息到我们“控制器信息”的 <code>div</code> 里，并开始 <code>gameLoop()</code> 函数来启动球的运动进程。</p>
+<p>接下来我们使用 {{ event("gamepadconnected") }} 事件来检查控制器是否连接。当有一个控制连接时，我们就使用 {{ domxref("Navigator.getGamepads()") }}<code>[0]</code> 来抓取，输出控制器信息到我们“控制器信息”的 <code>div</code> 里，并开始 <code>gameLoop()</code> 函数来启动球的运动进程。</p>
 
 <pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
   var gp = navigator.getGamepads()[e.gamepad.index];
