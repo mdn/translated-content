@@ -65,7 +65,7 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 <p>Lo primero que tenemos que hacer es crear el constructor Profesor<code>()</code>  — añadimos lo siguiente tras el código existente:</p>
 
 <pre class="brush: js notranslate">function Profesor(nombrePila, apellido, edad, genero, intereses, materia) {
-  Person.call(this, nombrePila, apellido, edad, genero, intereses);
+  Persona.call(this, nombrePila, apellido, edad, genero, intereses);
 
   this.materia = materia;
 }</pre>
@@ -153,7 +153,7 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 
 <p>Ahora que ha ingresado todo el código, intente creando una instancia de objeto desde <code>Profesor()</code> poniendo lo que sigue al final de su archivo (o algo similar a su elección):</p>
 
-<pre class="brush: js notranslate">var teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');</pre>
+<pre class="brush: js notranslate">var teacher1 = new Profesor('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');</pre>
 
 <p>Ahora guarde y actualice, e intente accediendo a las propiedades y metodos de su nuevo<code> teacher1</code> objecto, por ejemplo:</p>
 
@@ -164,7 +164,7 @@ teacher1.subject;
 teacher1.greeting();
 teacher1.farewell();</pre>
 
-<p>Esto deberia trabajar bien. Las consultas de las líneas 1, 2, 3, y 6 acceden a miembros heredados del genérico<code> Person()</code> constructor (clase). La consulta de la línea 4 accede un miembro que es disponible solamente en el mas especializado<code> Teacher()</code> constructor (clase). La consulta de la línea 5 accedería a un miembro desde<code> Person()</code>, excepto por el hecho que <code>Teacher()</code> tiene sus propios miembros con el mismo nombre, entonces la consulta accede a ese miembro.</p>
+<p>Esto deberia trabajar bien. Las consultas de las líneas 1, 2, 3, y 6 acceden a miembros heredados del genérico<code> Persona()</code> constructor (clase). La consulta de la línea 4 accede un miembro que es disponible solamente en el mas especializado<code> Profesor()</code> constructor (clase). La consulta de la línea 5 accedería a un miembro desde<code> Persona()</code>, excepto por el hecho que <code>Profesor()</code> tiene sus propios miembros con el mismo nombre, entonces la consulta accede a ese miembro.</p>
 
 <div class="note">
 <p><strong>Nota</strong>: Si tiene problemas con el funcionamiento, compare su código con nuestra <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html">versión final</a> (vea <a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html">corriendo en vivo</a> también).</p>
@@ -178,7 +178,7 @@ teacher1.farewell();</pre>
 
 <h2 id="Un_ejercicio_mas_allá">Un ejercicio mas allá</h2>
 
-<p>En nuestra <a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters">Sección teórica de POO</a>, también incluimos una clase <code>Student</code> como un concepto, el cual hereda todas las características de <code>Person</code>, y también tiene un método diferende de <code>greeting()</code> que <code>Person</code> que es mas informal que el saludo de los profesores <code>Teacher</code>. Dele una mirada al saludo de los estudiantes, y trate de implementar su propio constructor de saludo <code>Student()</code> que herede todas las características de <code>Person()</code>, e implemente las diferentes funciones de saludo <code>greeting()</code>.</p>
+<p>En nuestra <a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters">Sección teórica de POO</a>, también incluimos una clase <code>Student</code> como un concepto, el cual hereda todas las características de <code>Person</code>, y también tiene un método diferende de <code>greeting()</code> que <code>Person</code> que es mas informal que el saludo de los profesores <code>Profesor</code>. Dele una mirada al saludo de los estudiantes, y trate de implementar su propio constructor de saludo <code>Student()</code> que herede todas las características de <code>Person()</code>, e implemente las diferentes funciones de saludo <code>greeting()</code>.</p>
 
 <div class="note">
 <p><strong>Nota</strong>: Si tiene problemas resolviendo esto, dele una mirada a nuestra<a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html"> versión final</a> (véala tambien <a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html">funcionando</a> ).</p>
