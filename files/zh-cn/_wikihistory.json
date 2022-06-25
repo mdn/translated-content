@@ -13210,15 +13210,6 @@
       "maicss"
     ]
   },
-  "Web/API/GlobalEventHandlers/onblur": {
-    "modified": "2019-03-24T00:16:18.088Z",
-    "contributors": [
-      "teoli",
-      "Hasilt",
-      "ziyunfei",
-      "Bingdian3721"
-    ]
-  },
   "Web/API/GlobalEventHandlers/oncancel": {
     "modified": "2020-10-15T22:14:52.164Z",
     "contributors": [
@@ -13303,14 +13294,6 @@
       "coolguy",
       "xgqfrms-GitHub",
       "KingMario"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onfocus": {
-    "modified": "2019-03-24T00:18:09.356Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "ziyunfei"
     ]
   },
   "Web/API/GlobalEventHandlers/onformdata": {
@@ -42381,6 +42364,13 @@
       "lunix01"
     ]
   },
+  "Web/JavaScript/Reference/Operators/import.meta": {
+    "modified": "2020-10-15T22:07:59.455Z",
+    "contributors": [
+      "gitHber",
+      "JonathanLee-LX"
+    ]
+  },
   "Web/JavaScript/Reference/Operators/in": {
     "modified": "2020-10-15T21:21:37.099Z",
     "contributors": [
@@ -42921,13 +42911,6 @@
       "wengeezhang",
       "sartrey",
       "WangZishi"
-    ]
-  },
-  "Web/JavaScript/Reference/Statements/import.meta": {
-    "modified": "2020-10-15T22:07:59.455Z",
-    "contributors": [
-      "gitHber",
-      "JonathanLee-LX"
     ]
   },
   "Web/JavaScript/Reference/Statements/label": {
@@ -46399,10 +46382,27 @@
       "WenbingZheng"
     ]
   },
+  "conflicting/Web/API/Window/blur_event": {
+    "modified": "2019-03-24T00:16:18.088Z",
+    "contributors": [
+      "teoli",
+      "Hasilt",
+      "ziyunfei",
+      "Bingdian3721"
+    ]
+  },
   "conflicting/Web/API/Window/deviceorientation_event": {
     "modified": "2019-03-18T21:38:06.143Z",
     "contributors": [
       "Aaron_Zhung"
+    ]
+  },
+  "conflicting/Web/API/Window/focus_event": {
+    "modified": "2019-03-24T00:18:09.356Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "ziyunfei"
     ]
   },
   "conflicting/Web/API/Window/gamepadconnected_event": {

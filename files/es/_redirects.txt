@@ -1600,6 +1600,8 @@
 /es/docs/Web/API/Geolocation.clearWatch	/es/docs/Web/API/Geolocation/clearWatch
 /es/docs/Web/API/Geolocation.getCurrentPosition	/es/docs/Web/API/Geolocation/getCurrentPosition
 /es/docs/Web/API/Geolocation.watchPosition	/es/docs/Web/API/Geolocation/watchPosition
+/es/docs/Web/API/GlobalEventHandlers/onblur	/es/docs/Web/API/Window/blur_event
+/es/docs/Web/API/GlobalEventHandlers/onfocus	/es/docs/Web/API/Window/focus_event
 /es/docs/Web/API/HTMLElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /es/docs/Web/API/HTMLElement/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
 /es/docs/Web/API/HTMLOrForeignElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
@@ -2143,6 +2145,7 @@
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 /es/docs/Web/JavaScript/Reference/Global_Objects/null	/es/docs/Web/JavaScript/Reference/Operators/null
+/es/docs/Web/JavaScript/Reference/Statements/import.meta	/es/docs/Web/JavaScript/Reference/Operators/import.meta
 /es/docs/Web/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference
 /es/docs/Web/JavaScript/Referencia/Acerca_de	/es/docs/Web/JavaScript/Reference/About
 /es/docs/Web/JavaScript/Referencia/Características_Desaprobadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
@@ -2551,7 +2554,7 @@
 /es/docs/Web/JavaScript/Referencia/Sentencias/function*	/es/docs/Web/JavaScript/Reference/Statements/function*
 /es/docs/Web/JavaScript/Referencia/Sentencias/if...else	/es/docs/Web/JavaScript/Reference/Statements/if...else
 /es/docs/Web/JavaScript/Referencia/Sentencias/import	/es/docs/Web/JavaScript/Reference/Statements/import
-/es/docs/Web/JavaScript/Referencia/Sentencias/import.meta	/es/docs/Web/JavaScript/Reference/Statements/import.meta
+/es/docs/Web/JavaScript/Referencia/Sentencias/import.meta	/es/docs/Web/JavaScript/Reference/Operators/import.meta
 /es/docs/Web/JavaScript/Referencia/Sentencias/label	/es/docs/Web/JavaScript/Reference/Statements/label
 /es/docs/Web/JavaScript/Referencia/Sentencias/let	/es/docs/Web/JavaScript/Reference/Statements/let
 /es/docs/Web/JavaScript/Referencia/Sentencias/return	/es/docs/Web/JavaScript/Reference/Statements/return

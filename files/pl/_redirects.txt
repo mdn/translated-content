@@ -1464,6 +1464,8 @@
 /pl/docs/Web/API/Event/screenY	/pl/docs/Web/API/MouseEvent/screenY
 /pl/docs/Web/API/Event/shiftKey	/pl/docs/Web/API/MouseEvent/shiftKey
 /pl/docs/Web/API/Event/view	/pl/docs/Web/API/UIEvent/view
+/pl/docs/Web/API/GlobalEventHandlers/onblur	/pl/docs/Web/API/Window/blur_event
+/pl/docs/Web/API/GlobalEventHandlers/onfocus	/pl/docs/Web/API/Window/focus_event
 /pl/docs/Web/API/HTMLOrForeignElement/blur	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /pl/docs/Web/API/HTMLOrForeignElement/focus	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /pl/docs/Web/API/Navigator/appCodeName	/pl/docs/orphaned/Web/API/NavigatorID/appCodeName

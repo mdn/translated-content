@@ -563,6 +563,8 @@
 /pt-BR/docs/Web/API/FileReader/onload	/pt-BR/docs/Web/API/FileReader/load_event
 /pt-BR/docs/Web/API/FullscreenOptions	/pt-BR/docs/orphaned/Web/API/FullscreenOptions
 /pt-BR/docs/Web/API/GlobalEventHandlers/onabort	/pt-BR/docs/conflicting/Web/API/HTMLMediaElement/abort_event
+/pt-BR/docs/Web/API/GlobalEventHandlers/onblur	/pt-BR/docs/Web/API/Window/blur_event
+/pt-BR/docs/Web/API/GlobalEventHandlers/onfocus	/pt-BR/docs/Web/API/Window/focus_event
 /pt-BR/docs/Web/API/HTMLContentElement/Seletor	/pt-BR/docs/Web/API/HTMLContentElement/select
 /pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Example
 /pt-BR/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
@@ -808,6 +810,7 @@
 /pt-BR/docs/Web/JavaScript/Reference/Operators/operador_de_coalescencia_nula	/pt-BR/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 /pt-BR/docs/Web/JavaScript/Reference/Properties_Index	/pt-BR/docs/Web/JavaScript/Reference
 /pt-BR/docs/Web/JavaScript/Reference/Statements/funcoes_assincronas	/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function
+/pt-BR/docs/Web/JavaScript/Reference/Statements/import.meta	/pt-BR/docs/Web/JavaScript/Reference/Operators/import.meta
 /pt-BR/docs/Web/JavaScript/Reference/template_strings	/pt-BR/docs/Web/JavaScript/Reference/Template_literals
 /pt-BR/docs/Web/MathML/Exemplos	/pt-BR/docs/Web/MathML/Examples
 /pt-BR/docs/Web/Performance/caminho_de_renderizacao_critico	/pt-BR/docs/Web/Performance/Critical_rendering_path

@@ -395,6 +395,8 @@
 /ru/docs/Web/API/Geolocation/Using_geolocation	/ru/docs/Web/API/Geolocation_API
 /ru/docs/Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API	/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
 /ru/docs/Web/API/GlobalEventHandlers/onabort	/ru/docs/conflicting/Web/API/HTMLMediaElement/abort_event
+/ru/docs/Web/API/GlobalEventHandlers/onblur	/ru/docs/Web/API/Window/blur_event
+/ru/docs/Web/API/GlobalEventHandlers/onfocus	/ru/docs/Web/API/Window/focus_event
 /ru/docs/Web/API/HTMLAudioElement/Audio()	/ru/docs/Web/API/HTMLAudioElement/Audio
 /ru/docs/Web/API/HTMLElement/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/hash	/ru/docs/Web/API/HTMLAnchorElement/hash
@@ -702,6 +704,7 @@
 /ru/docs/Web/JavaScript/Reference/Operators/Присваивание	/ru/docs/Web/JavaScript/Reference/Operators/Assignment
 /ru/docs/Web/JavaScript/Reference/Operators/Условный_оператор	/ru/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 /ru/docs/Web/JavaScript/Reference/Properties_Index	/ru/docs/Web/JavaScript/Reference
+/ru/docs/Web/JavaScript/Reference/Statements/import.meta	/ru/docs/Web/JavaScript/Reference/Operators/import.meta
 /ru/docs/Web/JavaScript/Reference/Statements/Блок	/ru/docs/Web/JavaScript/Reference/Statements/block
 /ru/docs/Web/JavaScript/Reference/template_strings	/ru/docs/Web/JavaScript/Reference/Template_literals
 /ru/docs/Web/JavaScript/Reference/Об	/ru/docs/Web/JavaScript/Reference/About

@@ -1512,7 +1512,7 @@
 /ja/docs/DOM/window.navigator.vendor-redirect-1	/ja/docs/Web/API/Navigator/vendor
 /ja/docs/DOM/window.navigator.vendorSub	/ja/docs/Web/API/Navigator/vendorSub
 /ja/docs/DOM/window.onabort	/ja/docs/Web/API/HTMLMediaElement/abort_event
-/ja/docs/DOM/window.onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
+/ja/docs/DOM/window.onblur	/ja/docs/Web/API/Window/blur_event
 /ja/docs/DOM/window.onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/DOM/window.onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
 /ja/docs/DOM/window.onhashchange	/ja/docs/conflicting/Web/API/Window/hashchange_event
@@ -1731,7 +1731,7 @@
 /ja/docs/DOM:window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
 /ja/docs/DOM:window.navigator.vendorSub	/ja/docs/Web/API/Navigator/vendorSub
 /ja/docs/DOM:window.onabort	/ja/docs/Web/API/HTMLMediaElement/abort_event
-/ja/docs/DOM:window.onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
+/ja/docs/DOM:window.onblur	/ja/docs/Web/API/Window/blur_event
 /ja/docs/DOM:window.onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/DOM:window.onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
 /ja/docs/DOM:window.open	/ja/docs/Web/API/Window/open
@@ -3205,8 +3205,10 @@
 /ja/docs/Web/API/Geolocation.watchPosition	/ja/docs/Web/API/Geolocation/watchPosition
 /ja/docs/Web/API/Geolocation/Using_geolocation	/ja/docs/Web/API/Geolocation_API
 /ja/docs/Web/API/GlobalEventHandlers/onabort	/ja/docs/Web/API/HTMLMediaElement/abort_event
+/ja/docs/Web/API/GlobalEventHandlers/onblur	/ja/docs/Web/API/Window/blur_event
 /ja/docs/Web/API/GlobalEventHandlers/oncanplay	/ja/docs/conflicting/Web/API/HTMLMediaElement/canplay_event
 /ja/docs/Web/API/GlobalEventHandlers/oncanplaythrough	/ja/docs/conflicting/Web/API/HTMLMediaElement/canplaythrough_event
+/ja/docs/Web/API/GlobalEventHandlers/onfocus	/ja/docs/Web/API/Window/focus_event
 /ja/docs/Web/API/GlobalFetch	/ja/docs/Web/API/WindowOrWorkerGlobalScope
 /ja/docs/Web/API/GlobalFetch/fetch	/ja/docs/Web/API/fetch
 /ja/docs/Web/API/HTMLElement/oncopy	/ja/docs/Web/API/HTMLElement/copy_event
@@ -3470,12 +3472,12 @@
 /ja/docs/Web/API/Window/mozPaintCount	/ja/docs/conflicting/Web/API/Window
 /ja/docs/Web/API/Window/onafterprint	/ja/docs/conflicting/Web/API/Window/afterprint_event
 /ja/docs/Web/API/Window/onappinstalled	/ja/docs/conflicting/Web/API/Window/appinstalled_event
-/ja/docs/Web/API/Window/onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
+/ja/docs/Web/API/Window/onblur	/ja/docs/Web/API/Window/blur_event
 /ja/docs/Web/API/Window/onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/Web/API/Window/onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
 /ja/docs/Web/API/Window/ondevicemotion	/ja/docs/conflicting/Web/API/Window/devicemotion_event
 /ja/docs/Web/API/Window/ondeviceproximity	/ja/docs/orphaned/Web/API/Window/ondeviceproximity
-/ja/docs/Web/API/Window/onfocus	/ja/docs/Web/API/GlobalEventHandlers/onfocus
+/ja/docs/Web/API/Window/onfocus	/ja/docs/Web/API/Window/focus_event
 /ja/docs/Web/API/Window/ongamepadconnected	/ja/docs/conflicting/Web/API/Window/gamepadconnected_event
 /ja/docs/Web/API/Window/ongamepaddisconnected	/ja/docs/conflicting/Web/API/Window/gamepaddisconnected_event
 /ja/docs/Web/API/Window/oninstall	/ja/docs/conflicting/Web/API/Window/appinstalled_event
@@ -3705,11 +3707,11 @@
 /ja/docs/Web/API/window.navigator.vendorSub	/ja/docs/Web/API/Navigator/vendorSub
 /ja/docs/Web/API/window.onabort	/ja/docs/Web/API/HTMLMediaElement/abort_event
 /ja/docs/Web/API/window.onbeforeunload	/ja/docs/conflicting/Web/API/Window/beforeunload_event
-/ja/docs/Web/API/window.onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
+/ja/docs/Web/API/window.onblur	/ja/docs/Web/API/Window/blur_event
 /ja/docs/Web/API/window.onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/Web/API/window.onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
 /ja/docs/Web/API/window.onclose	/ja/docs/Web/API/GlobalEventHandlers/onclose
-/ja/docs/Web/API/window.onfocus	/ja/docs/Web/API/GlobalEventHandlers/onfocus
+/ja/docs/Web/API/window.onfocus	/ja/docs/Web/API/Window/focus_event
 /ja/docs/Web/API/window.onhashchange	/ja/docs/conflicting/Web/API/Window/hashchange_event
 /ja/docs/Web/API/window.onkeydown	/ja/docs/Web/API/GlobalEventHandlers/onkeydown
 /ja/docs/Web/API/window.onkeyup	/ja/docs/Web/API/GlobalEventHandlers/onkeyup
@@ -4543,6 +4545,7 @@
 /ja/docs/Web/JavaScript/Reference/Properties_Index	/ja/docs/Web/JavaScript/Reference
 /ja/docs/Web/JavaScript/Reference/Reserved_Words	/ja/docs/Web/JavaScript/Reference/Lexical_grammar
 /ja/docs/Web/JavaScript/Reference/Statements/default	/ja/docs/Web/JavaScript/Reference/Statements/switch
+/ja/docs/Web/JavaScript/Reference/Statements/import.meta	/ja/docs/Web/JavaScript/Reference/Operators/import.meta
 /ja/docs/Web/JavaScript/Reference/Statements/yield	/ja/docs/Web/JavaScript/Reference/Operators/yield
 /ja/docs/Web/JavaScript/Reference/arrow_functions	/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /ja/docs/Web/JavaScript/Reference/template_strings	/ja/docs/Web/JavaScript/Reference/Template_literals

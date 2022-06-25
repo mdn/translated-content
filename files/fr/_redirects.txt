@@ -949,11 +949,11 @@
 /fr/docs/DOM/element.offsetParent	/fr/docs/Web/API/HTMLElement/offsetParent
 /fr/docs/DOM/element.offsetTop	/fr/docs/Web/API/HTMLElement/offsetTop
 /fr/docs/DOM/element.offsetWidth	/fr/docs/Web/API/HTMLElement/offsetWidth
-/fr/docs/DOM/element.onblur	/fr/docs/Web/API/GlobalEventHandlers/onblur
+/fr/docs/DOM/element.onblur	/fr/docs/Web/API/Window/blur_event
 /fr/docs/DOM/element.onchange	/fr/docs/Web/API/GlobalEventHandlers/onchange
 /fr/docs/DOM/element.onclick	/fr/docs/Web/API/GlobalEventHandlers/onclick
 /fr/docs/DOM/element.ondblclick	/fr/docs/Web/API/GlobalEventHandlers/ondblclick
-/fr/docs/DOM/element.onfocus	/fr/docs/Web/API/GlobalEventHandlers/onfocus
+/fr/docs/DOM/element.onfocus	/fr/docs/Web/API/Window/focus_event
 /fr/docs/DOM/element.onkeydown	/fr/docs/Web/API/GlobalEventHandlers/onkeydown
 /fr/docs/DOM/element.onkeypress	/fr/docs/Web/API/GlobalEventHandlers/onkeypress
 /fr/docs/DOM/element.onkeyup	/fr/docs/Web/API/GlobalEventHandlers/onkeyup
@@ -1107,11 +1107,11 @@
 /fr/docs/DOM:element.offsetParent	/fr/docs/Web/API/HTMLElement/offsetParent
 /fr/docs/DOM:element.offsetTop	/fr/docs/Web/API/HTMLElement/offsetTop
 /fr/docs/DOM:element.offsetWidth	/fr/docs/Web/API/HTMLElement/offsetWidth
-/fr/docs/DOM:element.onblur	/fr/docs/Web/API/GlobalEventHandlers/onblur
+/fr/docs/DOM:element.onblur	/fr/docs/Web/API/Window/blur_event
 /fr/docs/DOM:element.onchange	/fr/docs/Web/API/GlobalEventHandlers/onchange
 /fr/docs/DOM:element.onclick	/fr/docs/Web/API/GlobalEventHandlers/onclick
 /fr/docs/DOM:element.ondblclick	/fr/docs/Web/API/GlobalEventHandlers/ondblclick
-/fr/docs/DOM:element.onfocus	/fr/docs/Web/API/GlobalEventHandlers/onfocus
+/fr/docs/DOM:element.onfocus	/fr/docs/Web/API/Window/focus_event
 /fr/docs/DOM:element.onkeydown	/fr/docs/Web/API/GlobalEventHandlers/onkeydown
 /fr/docs/DOM:element.onkeypress	/fr/docs/Web/API/GlobalEventHandlers/onkeypress
 /fr/docs/DOM:element.onkeyup	/fr/docs/Web/API/GlobalEventHandlers/onkeyup
@@ -3723,11 +3723,11 @@
 /fr/docs/Web/API/Element.offsetParent	/fr/docs/Web/API/HTMLElement/offsetParent
 /fr/docs/Web/API/Element.offsetTop	/fr/docs/Web/API/HTMLElement/offsetTop
 /fr/docs/Web/API/Element.offsetWidth	/fr/docs/Web/API/HTMLElement/offsetWidth
-/fr/docs/Web/API/Element.onblur	/fr/docs/Web/API/GlobalEventHandlers/onblur
+/fr/docs/Web/API/Element.onblur	/fr/docs/Web/API/Window/blur_event
 /fr/docs/Web/API/Element.onchange	/fr/docs/Web/API/GlobalEventHandlers/onchange
 /fr/docs/Web/API/Element.onclick	/fr/docs/Web/API/GlobalEventHandlers/onclick
 /fr/docs/Web/API/Element.ondblclick	/fr/docs/Web/API/GlobalEventHandlers/ondblclick
-/fr/docs/Web/API/Element.onfocus	/fr/docs/Web/API/GlobalEventHandlers/onfocus
+/fr/docs/Web/API/Element.onfocus	/fr/docs/Web/API/Window/focus_event
 /fr/docs/Web/API/Element.onkeydown	/fr/docs/Web/API/GlobalEventHandlers/onkeydown
 /fr/docs/Web/API/Element.onkeypress	/fr/docs/Web/API/GlobalEventHandlers/onkeypress
 /fr/docs/Web/API/Element.onkeyup	/fr/docs/Web/API/GlobalEventHandlers/onkeyup
@@ -3787,6 +3787,8 @@
 /fr/docs/Web/API/FileRequest/lockedFile	/fr/docs/Web/API/IDBFileRequest/lockedFile
 /fr/docs/Web/API/FormData/Utilisation_objets_FormData	/fr/docs/Web/API/FormData/Using_FormData_Objects
 /fr/docs/Web/API/GlobalEventHandlers/onabort	/fr/docs/conflicting/Web/API/HTMLMediaElement/abort_event
+/fr/docs/Web/API/GlobalEventHandlers/onblur	/fr/docs/Web/API/Window/blur_event
+/fr/docs/Web/API/GlobalEventHandlers/onfocus	/fr/docs/Web/API/Window/focus_event
 /fr/docs/Web/API/GlobalFetch/fetch	/fr/docs/Web/API/fetch
 /fr/docs/Web/API/HTMLFormElement/submit_event_	/fr/docs/Web/API/HTMLFormElement/submit_event
 /fr/docs/Web/API/HTMLOrForeignElement/blur	/fr/docs/Web/API/HTMLElement/blur
@@ -4891,7 +4893,7 @@
 /fr/docs/Web/JavaScript/Reference/Instructions/function*	/fr/docs/Web/JavaScript/Reference/Statements/function*
 /fr/docs/Web/JavaScript/Reference/Instructions/if...else	/fr/docs/Web/JavaScript/Reference/Statements/if...else
 /fr/docs/Web/JavaScript/Reference/Instructions/import	/fr/docs/Web/JavaScript/Reference/Statements/import
-/fr/docs/Web/JavaScript/Reference/Instructions/import.meta	/fr/docs/Web/JavaScript/Reference/Statements/import.meta
+/fr/docs/Web/JavaScript/Reference/Instructions/import.meta	/fr/docs/Web/JavaScript/Reference/Operators/import.meta
 /fr/docs/Web/JavaScript/Reference/Instructions/label	/fr/docs/Web/JavaScript/Reference/Statements/label
 /fr/docs/Web/JavaScript/Reference/Instructions/let	/fr/docs/Web/JavaScript/Reference/Statements/let
 /fr/docs/Web/JavaScript/Reference/Instructions/return	/fr/docs/Web/JavaScript/Reference/Statements/return
@@ -5647,6 +5649,7 @@
 /fr/docs/Web/JavaScript/Reference/Opérateurs/yield	/fr/docs/Web/JavaScript/Reference/Operators/yield
 /fr/docs/Web/JavaScript/Reference/Opérateurs/yield*	/fr/docs/Web/JavaScript/Reference/Operators/yield*
 /fr/docs/Web/JavaScript/Reference/Reserved_Words	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
+/fr/docs/Web/JavaScript/Reference/Statements/import.meta	/fr/docs/Web/JavaScript/Reference/Operators/import.meta
 /fr/docs/Web/JavaScript/Reference/Strict_mode/Passer_au_mode_strict	/fr/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 /fr/docs/Web/JavaScript/Reference/Valeurs_par_défaut_des_arguments	/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /fr/docs/Web/JavaScript/Reference/Virgules_finales	/fr/docs/Web/JavaScript/Reference/Trailing_commas

@@ -4964,12 +4964,6 @@
       "teoli"
     ]
   },
-  "Web/API/GlobalEventHandlers/onblur": {
-    "modified": "2019-03-23T22:28:57.111Z",
-    "contributors": [
-      "cezaraugusto"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onchange": {
     "modified": "2019-03-23T22:28:49.180Z",
     "contributors": [
@@ -4993,12 +4987,6 @@
     "modified": "2019-03-23T22:31:39.576Z",
     "contributors": [
       "mantovani"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onfocus": {
-    "modified": "2019-03-23T22:26:20.214Z",
-    "contributors": [
-      "tmoraes"
     ]
   },
   "Web/API/GlobalEventHandlers/onkeyup": {
@@ -6233,6 +6221,12 @@
       "LeoNicolas"
     ]
   },
+  "Web/API/Window/blur_event": {
+    "modified": "2019-03-23T22:28:57.111Z",
+    "contributors": [
+      "cezaraugusto"
+    ]
+  },
   "Web/API/Window/closed": {
     "modified": "2019-03-18T20:58:51.070Z",
     "contributors": [
@@ -6259,6 +6253,12 @@
     "modified": "2019-03-23T22:34:58.265Z",
     "contributors": [
       "macalha"
+    ]
+  },
+  "Web/API/Window/focus_event": {
+    "modified": "2019-03-23T22:26:20.214Z",
+    "contributors": [
+      "tmoraes"
     ]
   },
   "Web/API/Window/fullScreen": {
@@ -14727,6 +14727,12 @@
       "alefesouza"
     ]
   },
+  "Web/JavaScript/Reference/Operators/import.meta": {
+    "modified": "2020-10-15T22:30:56.248Z",
+    "contributors": [
+      "joaopclima"
+    ]
+  },
   "Web/JavaScript/Reference/Operators/in": {
     "modified": "2020-10-15T22:00:04.247Z",
     "contributors": [
@@ -14998,12 +15004,6 @@
       "cezaraugusto",
       "PauloNevesF",
       "tamorim"
-    ]
-  },
-  "Web/JavaScript/Reference/Statements/import.meta": {
-    "modified": "2020-10-15T22:30:56.248Z",
-    "contributors": [
-      "joaopclima"
     ]
   },
   "Web/JavaScript/Reference/Statements/label": {
