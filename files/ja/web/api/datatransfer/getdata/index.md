@@ -1,64 +1,73 @@
 ---
 title: DataTransfer.getData()
 slug: Web/API/DataTransfer/getData
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
   - Method
   - Reference
   - drag and drop
+browser-compat: api.DataTransfer.getData
 translation_of: Web/API/DataTransfer/getData
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>DataTransfer.getData()</code></strong> メソッドは、指定した型のドラッグデータを ({{domxref("DOMString")}} として) 受け取ります。ドラッグ操作がデータを含まない場合、このメソッドは空文字列を返します。</p>
+**`DataTransfer.getData()`** メソッドは、指定した型のドラッグデータを（文字列として）受け取ります。ドラッグ操作がデータを含んでいない場合、このメソッドは空文字列を返します。
 
-<p>データ型は、例えば <code>text/plain</code> や <code>text/uri-list</code> です。</p>
+データ型は、例えば `text/plain` や `text/uri-list` です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">DOMString <var>dataTransfer</var>.getData(format);
-</pre>
+```js
+getData(format)
+```
 
-<h3 id="Arguments" name="Arguments">引数</h3>
+## 引数
 
-<dl>
- <dt><em>format</em></dt>
- <dd>受け取るデータの型を表す {{domxref("DOMString")}}。</dd>
-</dl>
+- `format`
+  - : 文字列で、受け取るデータの型を表します。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 返値
 
-<dl>
- <dt>{{domxref("DOMString")}}</dt>
- <dd>指定した <code>format</code> のドラッグデータを表す {{domxref("DOMString")}}。ドラッグ操作がデータを持たないか、指定した <code>format</code> のデータを持たない場合、このメソッドは空文字列を返します。</dd>
-</dl>
+文字列で、 `format` で指定した型のドラッグデータを表します。ドラッグ操作にデータがなかったり、 `format` で指定した型のデータがなかったりした場合、このメソッドは空文字列を返します。
 
-<h2 id="Example" name="Example">例</h2>
+### 注意事項
 
-<p>この例は、{{domxref("DataTransfer")}} オブジェクトの {{domxref("DataTransfer.getData","getData()")}} メソッドおよび {{domxref("DataTransfer.setData","setData()")}} メソッドの使い方を紹介します。</p>
+- データの利用可能性
+  - [HTML5 Drag and Drop 仕様書](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode)では、「ドラッグデータストアモード」が規定されています。
+    これは、 **`DataTransfer.getData()`** が期待した値を返さないという、予期しない動作をする可能性があります。すべてのブラウザーがこの制限を強制しているわけではないからです。
 
-<h3 id="HTML_Content" name="HTML_Content">HTML コンテンツ</h3>
+    `dragstart` と `drop` イベントの処理中は、安全にデータにアクセスすることができます。それ以外のイベントでは、データは利用できないものと考えてください。それでも、項目とその形式を列挙することは可能です。
 
-<pre class="brush: html">&lt;div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;
-    &lt;span id="drag" draggable="true" ondragstart="drag(event)"&gt;drag me to the other box&lt;/span&gt;
-&lt;/div&gt;
-&lt;div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;&lt;/div&gt;
-</pre>
+## 例
 
-<h3 id="CSS_Content" name="CSS_Content">CSS コンテンツ</h3>
+この例は、{{domxref("DataTransfer")}} オブジェクトの {{domxref("DataTransfer.getData","getData()")}} メソッドおよび {{domxref("DataTransfer.setData","setData()")}} メソッドの使い方を紹介します。
 
-<pre class="brush: css">#div1, #div2 {
+### HTML コンテンツ
+
+```html
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <span id="drag" draggable="true" ondragstart="drag(event)">drag me to the other box</span>
+</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+```
+
+### CSS コンテンツ
+
+```css
+#div1, #div2 {
     width:100px;
     height:50px;
     padding:10px;
     border:1px solid #aaaaaa;
 }
-</pre>
+```
 
-<h3 id="JavaScript_Content" name="JavaScript_Content">JavaScript コンテンツ</h3>
+### JavaScript
 
-<pre class="brush: js">function allowDrop(allowdropevent) {
+```js
+function allowDrop(allowdropevent) {
     allowdropevent.target.style.color = 'blue';
     allowdropevent.preventDefault();
 }
@@ -70,42 +79,28 @@ function drag(dragevent) {
 
 function drop(dropevent) {
     dropevent.preventDefault();
-    var data = dropevent.dataTransfer.getData("text");
+    const data = dropevent.dataTransfer.getData("text");
     dropevent.target.appendChild(document.getElementById(data));
     document.getElementById("drag").style.color = 'black';
 }
-</pre>
+```
 
-<h3 id="Result" name="Result">実行結果</h3>
+### 結果
 
-<p id="EmbedLiveSample('Example'_''_''_''_'WebAPIDataTransfergetData')">{{ EmbedLiveSample('Example', 600, '', '', 'Web/API/DataTransfer/getData') }}</p>
+{{EmbedLiveSample('Examples', 600) }}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "interaction.html#dom-datatransfer-getdata", "getData()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "editing.html#dom-datatransfer-getdata", "getData()")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.DataTransfer.getData")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<p>{{page("/docs/Web/API/DataTransfer", "See_also")}}</p>
+- [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
+- [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
