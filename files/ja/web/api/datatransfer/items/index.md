@@ -1,117 +1,126 @@
 ---
 title: DataTransfer.items
 slug: Web/API/DataTransfer/items
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
   - Property
   - Reference
   - drag and drop
+browser-compat: api.DataTransfer.items
 translation_of: Web/API/DataTransfer/items
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>読み取り専用の {{domxref("DataTransfer")}} プロパティの <code>items</code> プロパティは、ドラッグ操作での {{domxref("DataTransferItemList", "list")}} の {{domxref("DataTransferItem", "DataTransfer items")}} です。リストには操作中の項目ごとに1つの項目が含まれており、操作中に項目がなかった場合はリストは空になります。</p>
+{{domxref("DataTransfer")}} インターフェイスの `items` プロパティは読み取り専用で、ドラッグ操作での{{domxref("DataTransferItem", "データ転送項目", "", 1)}}の{{domxref("DataTransferItemList", "リスト", "", 1)}}です。リストには操作中の項目ごとに 1 つの項目が含まれており、操作に項目がなかった場合はリストは空になります。
 
-<h2 id="シンタックス">シンタックス</h2>
+## 値
 
-<pre class="syntaxbox notranslate"><em>itemList</em> = <em>dataTransfer</em>.items;
-</pre>
+ドラッグ操作でドラッグされる項目を表す {{domxref("DataTransferItem")}} オブジェクトを含む {{domxref("DataTransferItemList")}} オブジェクトで、ドラッグされるオブジェクトごとに 1 つのリスト項目があります。ドラッグ操作にデータがない場合、リストは空になります。
 
-<h3 id="戻り値">戻り値</h3>
+## 例
 
-<p>ドラッグ操作でドラッグされる項目を表す {{domxref("DataTransferItem")}} オブジェクトを含む {{domxref("DataTransferItemList")}} オブジェクトで、ドラッグされるオブジェクトごとに1つのリスト項目があります。ドラッグ操作にデータがない場合、リストは空です。</p>
+### ドラッグされた項目の記録
 
-<h2 id="例">例</h2>
+この例では、`items` を使って、ドラッグした項目の情報を記録します。
 
-<p>この例では、<code>items</code> と{{domxref("DataTransfer.types", "types")}} プロパティを使用しています。</p>
+#### HTML
 
-<pre class="brush: js notranslate">&lt;!DOCTYPE html&gt;
-&lt;html lang=ja&gt;
-&lt;title&gt;DataTransfer.{types,item}プロパティの例&lt;/title&gt;
-&lt;meta content="width=device-width"&gt;
-&lt;style&gt;
-  div {
-    margin: 0em;
-    padding: 2em;
-  }
-  #target {
-    border: 1px solid black;
-  }
-&lt;/style&gt;
-&lt;script&gt;
-function dragstart_handler(ev) {
- console.log("dragStart: target.id = " + ev.target.id);
- // この要素の id をドラッグ ペイロードに追加し、
- // drop ハンドラがどの要素をツリーに追加するかを知ることができるようにします。
+```html
+<ul>
+  <li id="source1" draggable="true">項目 1 をドロップゾーンにドラッグしてください</li>
+  <li id="source2" draggable="true">項目 2 をドロップゾーンにドラッグしてください</li>
+</ul>
+<div id="target">ドロップゾーン</div>
+
+<pre id="output"></pre>
+<button id="reset">リセット</button>
+```
+
+#### CSS
+
+```css
+div {
+  margin: 0em;
+  padding: 2em;
+}
+
+#target {
+  border: 1px solid black;
+}
+
+#output {
+  height: 100px;
+  overflow: scroll;
+}
+```
+
+#### JavaScript
+
+```js
+function dragstartHandler(ev) {
+ log(`dragstart: target.id = ${ev.target.id}`);
+ // この要素の ID をドラッグの内容に追加し、ドロップハンドラーがどの
+ // 要素をツリーに追加すればよいかを知ることができるようにします。
  ev.dataTransfer.setData("text/plain", ev.target.id);
  ev.dataTransfer.effectAllowed = "move";
 }
 
-function drop_handler(ev) {
- console.log("drop: target.id = " + ev.target.id);
+function dropHandler(ev) {
  ev.preventDefault();
- // ターゲットの ID を取得し、移動した要素をターゲットの DOM に追加します。
- var data = ev.dataTransfer.getData("text");
+ // ターゲットの ID を取得し、移動した要素をターゲットの DOM に追加します
+ const data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
- // 各フォーマットタイプをプリントする
- if (ev.dataTransfer.types != null) {
-   for (var i=0; i &lt; ev.dataTransfer.types.length; i++) {
-     console.log("... types[" + i + "] = " + ev.dataTransfer.types[i]);
-   }
- }
- // 各項目の "kind" と "type" をプリントする
+ // 各項目の "kind" と "type" を表示する
  if (ev.dataTransfer.items != null) {
-   for (var i=0; i &lt; ev.dataTransfer.items.length; i++) {
-     console.log("... items[" + i + "].kind = " + ev.dataTransfer.items[i].kind + " ; type = " + ev.dataTransfer.items[i].type);
+   for (const item of ev.dataTransfer.items) {
+     log(`kind = ${item.kind}, type = ${item.type}`);
    }
  }
 }
 
-function dragover_handler(ev) {
- console.log("dragOver");
+function dragoverHandler(ev) {
  ev.preventDefault();
- // dropEffect を移動するように設定します。
+ // dropEffect を move に設定する
  ev.dataTransfer.dropEffect = "move"
 }
-&lt;/script&gt;
-&lt;body&gt;
-&lt;h1&gt;&lt;code&gt;DataTransfer&lt;/code&gt;.{&lt;code&gt;types&lt;/code&gt;, &lt;code&gt;items&lt;/code&gt;} プロパティの例&lt;/h1&gt;
- &lt;ul&gt;
-   &lt;li id="i1" ondragstart="dragstart_handler(event);" draggable="true"&gt;アイテム1をドロップゾーンにドラッグ&lt;/li&gt;
-   &lt;li id="i2" ondragstart="dragstart_handler(event);" draggable="true"&gt;アイテム2をドロップゾーンにドラッグ&lt;/li&gt;
- &lt;/ul&gt;
- &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;ドロップゾーン&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
 
-<h2 id="仕様">仕様</h2>
+const source1 = document.querySelector("#source1");
+const source2 = document.querySelector("#source2");
+const target = document.querySelector("#target");
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "interaction.html#dom-datatransfer-items", "items")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "editing.html#dom-datatransfer-items", "items")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+source1.addEventListener("dragstart", dragstartHandler)
+source2.addEventListener("dragstart", dragstartHandler)
+target.addEventListener("dragover", dragoverHandler)
+target.addEventListener("drop", dropHandler)
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+function log(message) {
+  const output = document.querySelector("#output");
+  output.textContent = `${output.textContent}\n${message}`;
+  output.scrollTop = output.scrollHeight;
+}
 
-<p>{{Compat("api.DataTransfer.items")}}</p>
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => document.location.reload());
+```
 
-<h2 id="あわせて参照">あわせて参照</h2>
+#### 結果
 
-<p>{{page("/ja/docs/Web/API/DataTransfer", "あわせて参照")}}</p>
+{{EmbedLiveSample("Logging dragged items", 0, 400)}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
+- [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
