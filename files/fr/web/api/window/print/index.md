@@ -35,7 +35,7 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 
 {{Compat}}
 
-## Voir 
+## Voir aussi
 
 - [Guide sur l'impression](/fr/docs/Web/Guide/Printing)
 - [L'évènement `beforeprint`](/fr/docs/Web/API/Window/beforeprint_event)
