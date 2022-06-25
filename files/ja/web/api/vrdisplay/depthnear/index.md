@@ -1,52 +1,56 @@
 ---
 title: VRDisplay.depthNear
 slug: Web/API/VRDisplay/depthNear
+page-type: web-api-instance-property
+tags:
+  - API
+  - Deprecated
+  - Property
+  - Reference
+  - VR
+  - VRDisplay
+  - Virtual Reality
+  - WebVR
+  - depthNear
+browser-compat: api.VRDisplay.depthNear
 translation_of: Web/API/VRDisplay/depthNear
 original_slug: Web/API/VRDevice/depthNear
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>{{domxref("VRDisplay")}} インターフェイスの <code><strong>depthNear</strong></code> プロパティは， <a href="https://en.wikipedia.org/wiki/Viewing_frustum">eye view frustum</a>(ビューフラスタム；つまりシーンの可視領域の境界) のnear平面を定義しているz-depthの取得と設定を行います．</p>
+**`depthNear`** は {{domxref("VRDisplay")}} インターフェイスのプロパティで、 [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum) (ビューフラスタム；つまりシーンの可視領域の境界) の near 平面を定義している z-depth の取得と設定を行います。
 
-<h2 id="シンタックス">シンタックス</h2>
+> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
-<pre class="brush: js">var mydepthNear = vrDisplayInstance.depthNear;
+一般的には、この値をそのままにしておきますが、遅いコンピューターでパフォーマンスを向上させようとしている場合や、ニアバウンダリーをより遠くに作ることで UI が意味をなす場合などは、この値を大きくするとよいでしょう。
 
-vrDisplayInstance.depthNear = 1.0;
-</pre>
+## 値
 
-<h3 id="値">値</h3>
+double 値で z-depth をメートル単位で表します。初期値は `0.01` です。
 
-<p>z-depth をメートル単位で表すdouble値; 初期値は <code>0.01 です．</code></p>
+## 例
 
-<h2 id="例">例</h2>
+```js
+var vrDisplay;
 
-<pre>TBD.</pre>
+navigator.getVRDisplays().then(function(displays) {
+  vrDisplay = displays[0];
+  vrDisplay.depthNear = 1.0;
+  vrDisplay.depthFar = 7500.0;
+});
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#dom-vrdisplay-depthnear', 'depthNear')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
 
-<p>{{Compat("api.VRDisplay.depthNear")}}</p>
+## ブラウザーの互換性
 
-<h2 id="参照">参照</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+## 関連情報
+
+- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。

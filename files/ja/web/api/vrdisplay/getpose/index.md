@@ -1,54 +1,80 @@
 ---
 title: VRDisplay.getPose()
 slug: Web/API/VRDisplay/getPose
+page-type: web-api-instance-method
+tags:
+  - API
+  - Deprecated
+  - Method
+  - Reference
+  - VR
+  - VRDisplay
+  - Virtual Reality
+  - WebVR
+  - getPose()
+browser-compat: api.VRDisplay.getPose
 translation_of: Web/API/VRDisplay/getPose
 original_slug: Web/API/VRDevice/getPose
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{deprecated_header}}
 
-<p>{{domxref("VRDisplay")}} インターフェイスの <code><strong>getPose()</strong></code> メソッドは，現在のフレームが実際に描画される時点の未来の <code>VRDisplay</code> の予測ポーズを決める {{domxref("VRPose")}} オブジェクトを返します．</p>
+**`getPose()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、現在のフレームが実際に描画される時点の未来の `VRDisplay` の予測ポーズを決める {{domxref("VRPose")}} オブジェクトを返します。
 
-<h2 id="シンタックス">シンタックス</h2>
+> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+>
+> こちらでも非推奨でした。 — 代わりに {{domxref("VRDisplay.getFrameData()")}} で {{domxref("VRPose")}} オブジェクトを受け取ってください。
 
-<pre class="brush: js">var myPose = vrDisplayInstance.getPose();
-</pre>
+## 構文
 
-<h3 id="パラメータ">パラメータ</h3>
+```js
+getPose()
+```
 
-<p>なし．</p>
+### 引数
 
-<h3 id="戻り値">戻り値</h3>
+なし．
 
-<p>{{domxref("VRPose")}} オブジェクト．</p>
+### 返値
 
-<h2 id="例">例</h2>
+{{domxref("VRPose")}} オブジェクトです。
 
-<pre>TBD.</pre>
+## 例
 
-<h2 id="仕様">仕様</h2>
+{{domxref("VRDisplay")}} オブジェクトへの参照を得ると、ディスプレイの現在のポーズを表す {{domxref("VRPose")}} を取得することができるようになります。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#dom-vrdisplay-getpose', 'getPose()')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+```js
+if(navigator.getVRDisplays) {
+  console.log('WebVR 1.1 supported');
+  // Then get the displays attached to the computer
+  navigator.getVRDisplays().then(function(displays) {
+    // If a display is available, use it to present the scene
+    if(displays.length > 0) {
+      vrDisplay = displays[0];
+      console.log('Display found');
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+          // Return the current VRPose object for the display
+          var pose = vrDisplay.getPose();
 
-<p>{{Compat("api.VRDisplay.getPose")}}</p>
+          ...
 
-<h2 id="参照">参照</h2>
+    }
+  });
+}
+```
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+しかし、非推奨ではない {{domxref("VRFrameData")}} オブジェクト（{{domxref("VRDisplay.getFrameData()")}}で取得）の {{domxref("VRFrameData.pose", "pose")}} プロパティを使用して、表示するためにディスプレイに送信する前に各フレームの現在の姿勢を取得することをお勧めします。これはアプリのレンダリングループの各反復処理で行われるため、ポーズデータが最新であることを確認することができます。
+
+## 仕様書
+
+このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
+
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。

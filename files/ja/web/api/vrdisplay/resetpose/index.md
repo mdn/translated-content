@@ -1,58 +1,67 @@
 ---
-title: VRDevice.resetPose()
+title: VRDisplay.resetPose()
 slug: Web/API/VRDisplay/resetPose
+page-type: web-api-instance-method
+tags:
+  - API
+  - Deprecated
+  - Method
+  - Reference
+  - VR
+  - VRDevice
+  - Virtual Reality
+  - WebVR
+  - resetPose()
+browser-compat: api.VRDisplay.resetPose
 translation_of: Web/API/VRDisplay/resetPose
 original_slug: Web/API/VRDevice/resetPose
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{deprecated_header}}
 
-<p>{{domxref("VRDisplay")}} インターフェイスの <code><strong>resetPose()</strong></code> メソッドは，<code>VRDisplay</code> のポーズをリセットして，現在の {{domxref("VRPose.position")}} と {{domxref("VRPose.orientation")}} を "原点/ゼロ位置" の値として扱います．</p>
+**`resetPose()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、`VRDisplay` のポーズをリセットして、現在の {{domxref("VRPose.position")}} と {{domxref("VRPose.orientation")}} を "原点/ゼロ位置" の値として扱います。
 
-<p><code>resetPost()</code> を呼出した後は， {{domxref("VRDisplay.getPose()")}}/{{domxref("VRDisplay.getImmediatePose()")}}  から返された未来予測ポーズは，<code>resetPose()</code> が最後に呼び出された時点からの相対的な <code>VRDisplay</code> の位置になります．また，<code>resetPose()</code> が最後に呼び出された時点のVRディスプレイのヨー(yaw)を前方として扱います．</p>
+> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
-<p><code>重力の方向に対して決まるので，resetPose()</code> が呼び出されたとしてもVRDisplayのレポートするロール(roll)とピッチ(pitch)は変更されません．<code>resetPose()</code> の呼出しによって {{domxref("VRStageParameters.sittingToStandingTransform")}} 行列が変化する場合があります．</p>
+`resetPost()` を呼出した後は、 {{domxref("VRDisplay.getPose()")}}/{{domxref("VRDisplay.getImmediatePose()")}}  から返された未来予測ポーズは、`resetPose()` が最後に呼び出された時点からの相対的な `VRDisplay` の位置になります。また、`resetPose()` が最後に呼び出された時点の VR ディスプレイのヨー (yaw) を前方として扱います。
 
-<h2 id="シンタックス">シンタックス</h2>
+VRDisplay の報告されるロール (roll) とピッチ (pitch) は重力に対して相対的なので `resetPose()` を呼んでも変化しません。 `resetPose()` を呼び出すと {{domxref("VRStageParameters.sittingToStandingTransform")}} 行列が変更される場合があります。
 
-<pre class="brush: js">vrDisplayInstance.resetPose();
-</pre>
+## 構文
 
-<h3 id="パラメータ">パラメータ</h3>
+```js
+resetPose()
+```
 
-<p>なし．</p>
+### 引数
 
-<h3 id="戻り値">戻り値</h3>
+なし。
 
-<p>void．</p>
+### 返値
 
-<h2 id="例">例</h2>
+なし ({{jsxref("undefined")}})。
 
-<pre>TBD.</pre>
+## 例
 
-<h2 id="仕様">仕様</h2>
+```js
+// Assuming vrDisplay already contains a VRDisplay object,
+// and we have a <button> referenced inside btn
+btn.addEventListener('click', function() {
+  vrDisplay.resetPose();
+  console.log('Current pose set as origin/center');
+});
+```
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#dom-vrdisplay-resetpose', 'resetPose()')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
 
-<p>{{Compat("api.VRDisplay.resetPose")}}</p>
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
 
-<h2 id="参照">参照</h2>
+## ブラウザーの互換性
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
