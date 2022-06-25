@@ -1,38 +1,36 @@
 ---
 title: DataTransfer.types
 slug: Web/API/DataTransfer/types
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
   - Property
   - Reference
   - drag and drop
+browser-compat: api.DataTransfer.types
 translation_of: Web/API/DataTransfer/types
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p><strong><code>DataTransfer.types</code></strong> 読み取り専用 プロパティは、{{event("dragstart")}} イベントで設定された ({{domxref("DOMString", "strings")}}としての) ドラッグデータフォーマットの配列を返します。フォーマットの順序は、ドラッグ操作に含まれるデータの順序と同じです。</p>
+**`DataTransfer.types`** は読み取り専用プロパティで、 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントで設定されたドラッグデータ形式の（文字列の）配列を返します。形式の順序は、ドラッグ操作に含まれるデータの順序と同じです。
 
-<p>フォーマットは、データのタイプまたはフォーマットを与える Unicode 文字列で、一般的には MIME タイプで与えられます。MIME タイプではない値の中には、レガシーな理由で特殊なものもあります (例えば "<code>text</code>" など)。</p>
+形式は、データの型や形式を示す Unicode 文字列で、一般的には MIME タイプで指定されます。 MIME タイプでないいくつかの値も、レガシーな理由から特殊なケースに入れられます（たとえば "`text`" など）。
 
-<h2 id="シンタックス">シンタックス</h2>
+## 値
 
-<pre class="syntaxbox notranslate"><var>dataTransfer</var>.types;
-</pre>
+ドラッグ操作で使用されるデータ形式の配列。各形式は文字列です。ドラッグ操作にデータが含まれていない場合、このリストは空になります。ドラッグ操作にファイルが含まれている場合は、その型の 1 つが文字列 `Files` になります。
 
-<h3 id="戻り値">戻り値</h3>
+## 例
 
-<p>ドラッグ操作で使用されるデータ形式の配列。各フォーマットは {{domxref("DOMString", "string")}} です。ドラッグ操作にデータが含まれていない場合、このリストは空になります。ドラッグ操作にファイルが含まれている場合は、その型の 1 つが文字列 <code>Files</code> になります。</p>
+この例では、`types` と {{domxref("DataTransfer.items", "items")}} プロパティを使用しています。
 
-<h2 id="例">例</h2>
-
-<p>この例では、<code>types</code> と {{domxref("DataTransfer.items", "items")}} プロパティを使用しています。</p>
-
-<pre class="brush: js notranslate">&lt;!DOCTYPE html&gt;
-&lt;html lang=ja&gt;
-&lt;title&gt;DataTransfer.{types,item}プロパティの例&lt;/title&gt;
-&lt;meta content="width=device-width"&gt;
-&lt;style&gt;
+```js
+<!DOCTYPE html>
+<html lang=en>
+<title>DataTransfer.{types,items} プロパティの例</title>
+<meta content="width=device-width">
+<style>
   div {
     margin: 0em;
     padding: 2em;
@@ -40,12 +38,12 @@ translation_of: Web/API/DataTransfer/types
   #target {
     border: 1px solid black;
   }
-&lt;/style&gt;
-&lt;script&gt;
+</style>
+<script>
 function dragstart_handler(ev) {
  console.log("dragStart: target.id = " + ev.target.id);
- // この要素の id をドラッグ ペイロードに追加し、
- // drop ハンドラがどの要素をツリーに追加するかを知ることができるようにします。
+ // ドラッグ内容にこの要素の ID を追加し、ドロップハンドラーがどの要素を
+ // ツリーに追加すればよいかを知ることができるようにします。
  ev.dataTransfer.setData("text/plain", ev.target.id);
  ev.dataTransfer.effectAllowed = "move";
 }
@@ -54,17 +52,17 @@ function drop_handler(ev) {
  console.log("drop: target.id = " + ev.target.id);
  ev.preventDefault();
  // ターゲットの ID を取得し、移動した要素をターゲットの DOM に追加します。
- var data = ev.dataTransfer.getData("text");
+ const data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
- // 各フォーマットタイプをプリントする
+ // それぞれの形式を表示する
  if (ev.dataTransfer.types != null) {
-   for (var i=0; i &lt; ev.dataTransfer.types.length; i++) {
+   for (let i=0; i < ev.dataTransfer.types.length; i++) {
      console.log("... types[" + i + "] = " + ev.dataTransfer.types[i]);
    }
  }
- // 各項目の "kind" と "type" をプリントする
+ // それぞれの項目の "kind" と "type" を表示する
  if (ev.dataTransfer.items != null) {
-   for (var i=0; i &lt; ev.dataTransfer.items.length; i++) {
+   for (let i=0; i < ev.dataTransfer.items.length; i++) {
      console.log("... items[" + i + "].kind = " + ev.dataTransfer.items[i].kind + " ; type = " + ev.dataTransfer.items[i].type);
    }
  }
@@ -73,47 +71,33 @@ function drop_handler(ev) {
 function dragover_handler(ev) {
  console.log("dragOver");
  ev.preventDefault();
- // dropEffect を移動するように設定します。
+ // dropEffect を move に設定する
  ev.dataTransfer.dropEffect = "move"
 }
-&lt;/script&gt;
-&lt;body&gt;
-&lt;h1&gt;&lt;code&gt;DataTransfer&lt;/code&gt;.{&lt;code&gt;types&lt;/code&gt;, &lt;code&gt;items&lt;/code&gt;} プロパティの例&lt;/h1&gt;
- &lt;ul&gt;
-   &lt;li id="i1" ondragstart="dragstart_handler(event);" draggable="true"&gt;アイテム1をドロップゾーンにドラッグ&lt;/li&gt;
-   &lt;li id="i2" ondragstart="dragstart_handler(event);" draggable="true"&gt;アイテム2をドロップゾーンにドラッグ&lt;/li&gt;
- &lt;/ul&gt;
- &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;ドロップゾーン&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body>
+<h1>Examples of <code>DataTransfer</code>.{<code>types</code>, <code>items</code>} properties</h1>
+ <ul>
+   <li id="i1" ondragstart="dragstart_handler(event);" draggable="true">項目 1 をドロップゾーンへドラッグしてください</li>
+   <li id="i2" ondragstart="dragstart_handler(event);" draggable="true">項目 2 をドロップゾーンへドラッグしてください</li>
+ </ul>
+ <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">ドロップゾーン</div>
+</body>
+</html>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "interaction.html#dom-datatransfer-types", "types")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "editing.html#dom-datatransfer-types", "types")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.DataTransfer.types")}}</p>
+{{Compat}}
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## 関連情報
 
-<p>{{page("/ja/docs/Web/API/DataTransfer", "あわせて参照")}}</p>
+- [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
+- [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
