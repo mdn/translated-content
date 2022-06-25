@@ -14,11 +14,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 
 <p>它需要两个强制的参数：native application 的名字和要发送给它的 JSON 对象。浏览器将会加载 native application 然后发送这个消息。</p>
 
-<p>这是一个异步函数，返回一个 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>对象。native application 发送的第一条消息将被当作<code>sendNativeMessage()</code> 的回复，并且 promise 将这个消息作为参数.。注意你不能使用 {{WebExtAPIRef("runtime.onMessage")}} 从应用获取回复：你必须使用回调函数来替代。</p>
+<p>这是一个异步函数，返回一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>对象。native application 发送的第一条消息将被当作<code>sendNativeMessage()</code> 的回复，并且 promise 将这个消息作为参数.。注意你不能使用 {{WebExtAPIRef("runtime.onMessage")}} 从应用获取回复：你必须使用回调函数来替代。</p>
 
 <p>每次调用 <code>runtime.sendNativeMessage()</code>都会生成一个新的实例。浏览器将会在收到回复后结束这个 native application。为了结束这个 native application，浏览器将会关闭 pipe，并给进程几秒的时间优雅的退出，如果它没有关闭就杀死它。</p>
 
-<p>更对信息，参考 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a>。</p>
+<p>更对信息，参考 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a>。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -32,14 +32,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 
 <dl>
  <dt><code>application</code></dt>
- <dd><code>字符串类型。</code>native application 的名字。它必须和 <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_messaging#App_manifest">native application's manifest file</a>中的‘name’字段一致。</dd>
+ <dd><code>字符串类型。</code>native application 的名字。它必须和 <a href="/en-US/Add-ons/WebExtensions/Native_messaging#App_manifest">native application's manifest file</a>中的‘name’字段一致。</dd>
  <dt><code>message</code></dt>
  <dd><code>对象类型。一个将要发送给</code> native application 的 JSON 对象。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>对象。如果 native application 发送了一个回复，它将会填充回复的 JSON 对象作为参数。否则它不会填充参数。如果在 native application 连接期间发生了错误，promise 将会被一个错误的消息拒绝。</p>
+<p>一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>对象。如果 native application 发送了一个回复，它将会填充回复的 JSON 对象作为参数。否则它不会填充参数。如果在 native application 连接期间发生了错误，promise 将会被一个错误的消息拒绝。</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

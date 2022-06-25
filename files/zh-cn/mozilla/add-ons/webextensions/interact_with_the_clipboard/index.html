@@ -111,7 +111,7 @@ browser.alarms.onAlarm.addListener(copy);</pre>
 <ul>
  <li>除了背景网页外，你可以在所有执行上下文中使用 execCommand 写入粘贴板。在 Firefox 中，你无法选择文本或将输入字段聚焦在后台页面中，因此无法使用 execCommand 从后台页面写入剪贴板。</li>
  <li>只有 version 51 以上才支持"clipboardWrite" 权限。</li>
- <li>从 version 57 开始，可以使用 <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData">clipboard.setImageData()</a></code> API 将图像复制到剪贴板。</li>
+ <li>从 version 57 开始，可以使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData">clipboard.setImageData()</a></code> API 将图像复制到剪贴板。</li>
  <li>在 Firefox 633 中添加了对 Clipboard API {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} 方法的支持。</li>
  <li>当使用一个内容脚本，Clipboard API 只可用于 HTTPS 页。解决方法是，在内容脚本和后台脚本之间使用消息传递。</li>
 </ul>
@@ -122,7 +122,7 @@ browser.alarms.onAlarm.addListener(copy);</pre>
 
 <h3 id="使用_execCommand()_2">使用 execCommand()</h3>
 
-<p>首先，你需要为扩展申请 <code>"clipboardRead"</code> <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> 。即便你在用户生成的事件处理程序 ( 例如 {{event("click")}} 或 {{event("keypress")}} ) 中使用 "paste" 指令也是如此。</p>
+<p>首先，你需要为扩展申请 <code>"clipboardRead"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> 。即便你在用户生成的事件处理程序 ( 例如 {{event("click")}} 或 {{event("keypress")}} ) 中使用 "paste" 指令也是如此。</p>
 
 <p>假设你的 HTML 页面内容如下：</p>
 
@@ -145,7 +145,7 @@ document.querySelector("#paste").addEventListener("click", paste);</code></pre>
 
 <p>剪贴板 API 的 {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} 和 {{domxref("Clipboard.read", "navigator.clipboard.read()")}} 方法让你从剪贴板读取任意文本或二进制数据。这让你从剪贴板访问数据无需将它们粘贴至一个可编辑的元素中。</p>
 
-<p>一旦你通过 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</a> 获取了 <code>"clipboard-read"</code> 权限，你就可以轻松读取剪贴板：</p>
+<p>一旦你通过 <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> 获取了 <code>"clipboard-read"</code> 权限，你就可以轻松读取剪贴板：</p>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js">navigator.clipboard.readText().then(clipText =&gt;
   document.getElementById("outbox").innerText = clipText);</code></pre>
@@ -154,4 +154,4 @@ document.querySelector("#paste").addEventListener("click", paste);</code></pre>
 
 <h3 id="特定浏览器注意事项_2">特定浏览器注意事项</h3>
 
-<p>Firefox 在 54 版本提供了 <code>"clipboardRead"</code> <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> ，但是仅支持向处于 <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Editable_content">内容可编辑模式</a> 的元素粘贴，对于内容脚本，只能在 {{HTMLElement("textarea")}} 工作。对于后台脚本，任何元素都可被设置为内容可编辑模式。</p>
+<p>Firefox 在 54 版本提供了 <code>"clipboardRead"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> ，但是仅支持向处于 <a href="/en-US/docs/Web/Guide/HTML/Editable_content">内容可编辑模式</a> 的元素粘贴，对于内容脚本，只能在 {{HTMLElement("textarea")}} 工作。对于后台脚本，任何元素都可被设置为内容可编辑模式。</p>

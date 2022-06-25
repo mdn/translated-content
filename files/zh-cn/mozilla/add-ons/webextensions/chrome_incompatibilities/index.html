@@ -76,7 +76,7 @@ setCookie.then(logCookie, logError);
  <li>If you call <code>notifications.create()</code> more than once in rapid succession, Firefox may end up not displaying any notification at all. Waiting to make subsequent calls until within the <code>chrome.notifications.create() callback</code> function is not a sufficiently long delay to prevent this from happening.</li>
 </ul>
 
-<h4 id="proxy"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy">proxy</a></h4>
+<h4 id="proxy"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy">proxy</a></h4>
 
 <ul>
  <li>This API is completely different to the design of the Chrome API. With Chrome's API an extension can register a PAC file, but can also define explicit proxying rules. Since this is also possible using the extended PAC files, this API only supports the PAC file approach. Because this API is incompatible with the Chrome <code>proxy</code> API, this API is only available through the <code>browser</code> namespace.</li>
@@ -98,7 +98,7 @@ setCookie.then(logCookie, logError);
 <ul>
  <li>在 Firefx 中，只有原网址使用 <code>http:</code> <code>或 https:</code> 协议时所请求的重定向才有效。</li>
  <li>In Firefox, events are not fired for system requests (for example, extension upgrades or searchbar suggestions). From Firefox 57 onwards, Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.</li>
- <li>In Firefox, if an extension wants to redirect a public (e.g. HTTPS) URL to an <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension page</a>, the extension's manifest.json file must contain a <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a> key that lists the URL for the extension page. Note that any website may then link or redirect to that url, and extensions should treat any input (POST data, for examples) as if it came from an untrusted source, just as a normal web page should.</li>
+ <li>In Firefox, if an extension wants to redirect a public (e.g. HTTPS) URL to an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension page</a>, the extension's manifest.json file must contain a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a> key that lists the URL for the extension page. Note that any website may then link or redirect to that url, and extensions should treat any input (POST data, for examples) as if it came from an untrusted source, just as a normal web page should.</li>
 </ul>
 
 <h4 id="windows"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows">windows</a></h4>
@@ -129,11 +129,11 @@ setCookie.then(logCookie, logError);
 
 <h4 id="Content_script_requests_happen_in_the_context_of_extension_not_content_page">Content script requests happen in the context of extension, not content page</h4>
 
-<p>In Chrome when request is called (for example, using <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">fetch()</a></code>) to relative URL like <code>/api</code> from content script, it will be sent to <code>https://example.com/api</code>. In Firefox you have to provide absolute URLs. </p>
+<p>In Chrome when request is called (for example, using <code><a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch">fetch()</a></code>) to relative URL like <code>/api</code> from content script, it will be sent to <code>https://example.com/api</code>. In Firefox you have to provide absolute URLs. </p>
 
 <h2 id="manifest.json_键">manifest.json 键</h2>
 
-<p>The main <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> page includes a table describing browser support for manifest.json keys. Where there are caveats around support for a given key, this is indicated in the table with an asterisk "*" and in the reference page for the key, the caveats are explained.</p>
+<p>The main <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> page includes a table describing browser support for manifest.json keys. Where there are caveats around support for a given key, this is indicated in the table with an asterisk "*" and in the reference page for the key, the caveats are explained.</p>
 
 <p>These tables are generated from compatibility data stored as <a href="https://github.com/mdn/browser-compat-data">JSON files in GitHub</a>.</p>
 
