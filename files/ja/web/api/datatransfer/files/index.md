@@ -1,60 +1,39 @@
 ---
 title: DataTransfer.files
 slug: Web/API/DataTransfer/files
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
   - Property
   - Reference
   - drag and drop
+browser-compat: api.DataTransfer.files
 translation_of: Web/API/DataTransfer/files
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p><strong><code>DataTransfer.files</code></strong> プロパティは、ドラッグ操作中の {{domxref("FileList", "ファイルのリスト")}} となります。操作にファイルが含まれていない場合、リストは空です。</p>
+**`files`** は [`DataTransfer`](/ja/docs/Web/API/DataTransfer) オブジェクトのプロパティで、ドラッグ操作中の{{domxref("FileList", "ファイルのリスト", "", 1)}}です。操作にファイルが含まれていない場合、リストは空になります。
 
-<p>この機能を利用して、ユーザーの<em>デスクトップ</em>からブラウザにファイルをドラッグすることができます。</p>
+この機能を利用して、ユーザーのデスクトップからブラウザーにファイルをドラッグすることができます。
 
-<h2 id="シンタックス">シンタックス</h2>
+> **Note:** [`DataTransfer`](/ja/docs/Web/API/DataTransfer) オブジェクトの `files` プロパティは、 `drop` イベントの中からのみアクセスできます。それ以外のどのイベントでも、 `files` プロパティは空になります。その基礎となるデータストアが[保護モード](<https://html.spec.whatwg.org/multipage/dnd.html#the-drag-data-store>)になるからです。
 
-<pre class="syntaxbox notranslate"><var>dataTransfer</var>.files;
-</pre>
+## 返値
 
-<h3 id="戻り値">戻り値</h3>
+ドラッグ操作中のファイルの{{domxref("FileList", "リスト", "", 1)}}で、 1 つのリスト項目が 1 つのファイルを表します。操作にファイルが含まれていない場合、リストは空になります。
 
-<p>ドラッグ操作のファイルの {{domxref("FileList", "list")}}。ドラッグ操作にファイルがない場合、リストは空です。</p>
+## 例
 
-<h2 id="例">例</h2>
+このインターフェイスには 2 つのライブ例があります。
 
-<p>このインターフェイスの実例は2つあります。</p>
+- Firefox 専用: <https://jsfiddle.net/9C2EF/>
+- すべてのブラウザー: [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 
-<ul>
- <li>Firefox のみ: <a class="external" href="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></li>
- <li>全てのブラウザ: <a class="external" href="https://jsbin.com/hiqasek/edit?html,js,output">https://jsbin.com/hiqasek/</a></li>
-</ul>
+## 仕様書
 
-<h2 id="仕様">仕様</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "interaction.html#dom-datatransfer-files", "files")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "editing.html#dom-datatransfer-files", "files")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
-
-<p>{{Compat("api.DataTransfer.files")}}</p>
+{{Compat}}
