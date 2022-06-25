@@ -1,63 +1,60 @@
 ---
 title: DataTransfer.dropEffect
 slug: Web/API/DataTransfer/dropEffect
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
   - Property
   - Reference
   - drag and drop
+browser-compat: api.DataTransfer.dropEffect
 translation_of: Web/API/DataTransfer/dropEffect
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p><strong><code>DataTransfer.dropEffect</code></strong> プロパティは、ドラッグ＆ドロップ操作中にユーザに与えられるフィードバック (通常は視覚的) を制御します。これは、ドラッグ中に表示されるカーソルに影響します。例えば、ユーザがターゲットのドロップ要素の上にカーソルを置くと、ブラウザのカーソルは、どのタイプの操作が発生するかを示すことができます。</p>
+**`DataTransfer.dropEffect`** プロパティは、ドラッグ＆ドロップ操作中にユーザーに与えられるフィードバック（通常は視覚的）を制御します。これは、ドラッグ中に表示されるカーソルに影響します。例えば、ユーザーがターゲットのドロップ要素の上にカーソルを置くと、ブラウザーのカーソルが、どの種類の操作が発生するかを示すことができます。
 
-<p>{{domxref("DataTransfer")}} オブジェクトを作成すると、<code>dropEffect</code> には文字列の値が設定されます。取得時には、現在の値を返します。設定時、新しい値が以下の値のいずれかであれば、プロパティの現在の値が新しい値に設定され、それ以外の値は無視されます。</p>
+{{domxref("DataTransfer")}} オブジェクトを作成すると、 `dropEffect` には文字列の値が設定されます。取得時には、現在の値を返します。設定時、新しい値が以下の値のいずれかであれば、プロパティの現在の値が新しい値に設定され、それ以外の値は無視されます。
 
-<p>{{event("dragenter")}} と {{event("dragover")}} イベントでは、ユーザーがどのようなアクションを要求しているかに基づいて、<code>dropEffect</code> が初期化されます。これをどのように決定するかはプラットフォームによって異なりますが、通常、ユーザーは alt キーなどの修飾キーを押して、希望するアクションを調整することができます。{{event("dragenter")}} と {{event("dragover")}} イベントのイベントハンドラ内では、ユーザーが要求しているアクションとは異なるアクションが必要な場合、<code>dropEffect</code> を修正する必要があります。</p>
+{{domxref("HTMLElement/dragenter_event", "dragenter")}} および {{domxref("HTMLElement/dragover_event", "dragover")}} イベントでは、ユーザーがどのような操作を要求しているかに基づいて、`dropEffect` が初期化されます。これをどのように決定するかはプラットフォームによって異なりますが、通常、ユーザーは alt キーなどの修飾キーを押して、希望する操作を調整することができます。{{domxref("HTMLElement/dragenter_event", "dragenter")}} と {{domxref("HTMLElement/dragover_event", "dragover")}} イベントのイベントハンドラー内では、ユーザーが要求している操作とは異なる操作が必要な場合、`dropEffect` を修正する必要があります。
 
-<p>{{event("drop")}} と {{event("dragend")}} イベントでは、<code>dropEffect</code> には希望するアクションが設定され、前回の {{event("dragenter")}} または {{event("dragover")}} イベントの後の値が <code>dropEffect</code> になります。例えば、{{event("dragend")}} イベントで、希望する dropEffect が  "move" であれば、ドラッグされているデータはソースから削除されるべきです。</p>
+{{domxref("HTMLElement/drop_event", "drop")}} および {{domxref("HTMLElement/dragend_event", "dragend")}} イベントでは、 `dropEffect` に希望した動作が設定されます。これは、 `dropEffect` が前回の {{domxref("HTMLElement/dragenter_event", "dragenter")}} または {{domxref("HTMLElement/dragover_event", "dragover")}} イベントの後に有していた値となります。例えば {{domxref("HTMLElement/dragend_event", "dragend")}} イベントにおいて、望ましい dropEffect が "move" であれば、ドラッグされたデータをソースから削除する必要があります。
 
-<h2 id="シンタックス">シンタックス</h2>
+## 値
 
-<pre class="syntaxbox notranslate"><var>dataTransfer</var>.dropEffect;
-</pre>
+文字列で、ドラッグ操作の効果を表します。取りうる値は以下の通りです。
 
-<h3 id="値">値</h3>
+- `copy`
+  - : 新しい場所にソースアイテムのコピーが作成されます。
+- `move`
+  - : アイテムを新しい場所に移動します。
+- `link`
+  - : 新しい場所のソースにリンクが確立されます。
+- `none`
+  - : アイテムはドロップしない場合があります。
 
-<p>ドラッグ操作の効果を表す {{domxref("DOMString")}}。可能な値は以下の通りです。</p>
+`dropEffect` に他の値を代入しても効果はなく、古い値が保持されます。
 
-<dl>
- <dt><code>copy</code></dt>
- <dd>新しい場所にソースアイテムのコピーが作成されます。</dd>
- <dt><code>move</code></dt>
- <dd>アイテムを新しい場所に移動します。</dd>
- <dt><code>link</code></dt>
- <dd>新しい場所のソースにリンクが確立されます。</dd>
- <dt><code>none</code></dt>
- <dd>アイテムはドロップしない場合があります。</dd>
-</dl>
+## 例
 
-<p><code>dropEffect</code> に他の値を代入しても効果はなく、古い値が保持されます。</p>
+この例では、`dropEffect` と{{domxref("DataTransfer.effectAllowed", "effectAllowed")}} プロパティを使用しています。
 
-<h2 id="Example">Example</h2>
+### HTML
 
-<p>この例では、<code>dropEffect</code> と{{domxref("DataTransfer.effectAllowed", "effectAllowed")}} プロパティを使用しています。</p>
+```html
+<div>
+  <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
+    この要素を選択し、ドロップゾーンにドラッグして放すと、要素が移動します。
+  </p>
+</div>
+<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">ドロップゾーン</div>
+```
 
-<h3 id="HTML_コンテンツ">HTML コンテンツ</h3>
+### CSS
 
-<pre class="brush: html notranslate">&lt;div&gt;
-  &lt;p id="source" ondragstart="dragstart_handler(event);" draggable="true"&gt;
-    この要素を選択し、ドロップゾーンにドラッグしてから選択を解除して要素を移動します。
-  &lt;/p&gt;
-&lt;/div&gt;
-&lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;ドロップゾーン&lt;/div&gt;
-</pre>
-
-<h3 id="CSS_コンテンツ">CSS コンテンツ</h3>
-
-<pre class="brush: css notranslate">div {
+```css
+div {
   margin: 0em;
   padding: 2em;
 }
@@ -70,14 +67,15 @@ translation_of: Web/API/DataTransfer/dropEffect
 #target {
   border: 1px solid black;
 }
-</pre>
+```
 
-<h3 id="JavaScript_コンテンツ">JavaScript コンテンツ</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">function dragstart_handler(ev) {
+```js
+function dragstart_handler(ev) {
   console.log("dragStart: dropEffect = " + ev.dataTransfer.dropEffect + " ; effectAllowed = " + ev.dataTransfer.effectAllowed);
 
-  // この要素の id をドラッグ ペイロードに追加し、ドロップ ハンドラが
+  // この要素の id をドラッグ ペイロードに追加し、ドロップ ハンドラーが
   // どの要素をツリーに追加するかを知ることができるようにします。
   ev.dataTransfer.setData("text", ev.target.id);
   ev.dataTransfer.effectAllowed = "move";
@@ -98,38 +96,24 @@ function dragover_handler(ev) {
   // dropEffect を移動するように設定します。
   ev.dataTransfer.dropEffect = "move"
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example', 300, 250)}}</p>
+### 結果
 
-<h2 id="仕様">仕様</h2>
+{{EmbedLiveSample('Example', 300, 250)}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-datatransfer-dropeffect','dropEffect')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#dom-datatransfer-dropeffect','dropEffect')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>初期定義</td>
-  </tr>
-  <tr>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+{{Specifications}}
 
-<p>{{Compat("api.DataTransfer.dropEffect")}}</p>
+## ブラウザーの互換性
 
-<h2 id="あわせて参照">あわせて参照</h2>
+{{Compat}}
 
-<p>{{page("/ja/docs/Web/API/DataTransfer", "あわせて参照")}}</p>
+## 関連情報
+
+- [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
+- [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

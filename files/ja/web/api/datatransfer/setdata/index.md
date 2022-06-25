@@ -1,49 +1,49 @@
 ---
 title: DataTransfer.setData()
 slug: Web/API/DataTransfer/setData
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
   - Method
   - Reference
   - drag and drop
+browser-compat: api.DataTransfer.setData
 translation_of: Web/API/DataTransfer/setData
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p><strong><code>DataTransfer.setData()</code></strong> メソッドは、ドラッグ操作の {{domxref("DataTransfer","drag data")}} に指定したデータと型を設定します。与えられた型のデータが存在しない場合、このデータはドラッグデータストアの末尾に加えられ、このような {{domxref("DataTransfer.types","types")}} リストの最後のアイテムは新しい型になります。与えられた型のデータが存在する場合、既存のデータが同じ位置で置き換えられます。同じ型のデータが置き換えられる時、{{domxref("DataTransfer.types","types")}} リストの並び順は変更されません。</p>
+**`DataTransfer.setData()`** メソッドは、ドラッグ操作の {{domxref("DataTransfer","drag data")}} に指定したデータと型を設定します。与えられた型のデータが存在しない場合、このデータはドラッグデータストアの末尾に加えられ、このような {{domxref("DataTransfer.types","types")}} リストの最後の項目は新しい型になります。与えられた型のデータが存在する場合、既存のデータが同じ位置で置き換えられます。同じ型のデータが置き換えられる時、{{domxref("DataTransfer.types","types")}} リストの並び順は変更されません。
 
-<p>データ型は、例えば <code>text/plain</code> や <code>text/uri-list</code> です。</p>
+データ型は、例えば `text/plain` や `text/uri-list` です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">void <var>dataTransfer</var>.setData(format, data);
-</pre>
+```js
+setData(format, data)
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><em>format</em></dt>
- <dd>{{domxref("DataTransfer","drag object")}} に追加するドラッグデータの型を表す {{domxref("DOMString")}}。</dd>
- <dt><em>data</em></dt>
- <dd>{{domxref("DataTransfer","drag object")}} に追加するデータを表す {{domxref("DOMString")}}。</dd>
-</dl>
+- `format`
+  - : 文字列で、{{domxref("DataTransfer","ドラッグオブジェクト", "", 1)}}に追加するドラッグデータの型を表します。
+- `data`
+  - : 文字列で、{{domxref("DataTransfer","ドラッグオブジェクト", "", 1)}}に追加するデータを表します。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 返値
 
-<dl>
- <dt>無効。</dt>
-</dl>
+なし ({{jsxref("undefined")}})。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例は、{{domxref("DataTransfer")}} オブジェクトの {{domxref("DataTransfer.getData","getData()")}} メソッドおよび {{domxref("DataTransfer.setData","setData()")}} メソッド、{{domxref("DataTransfer.clearData","clearData()")}} メソッドの使い方を紹介します。</p>
+この例は、{{domxref("DataTransfer")}} オブジェクトの {{domxref("DataTransfer.getData","getData()")}} メソッドおよび {{domxref("DataTransfer.setData","setData()")}} メソッド、{{domxref("DataTransfer.clearData","clearData()")}} メソッドの使い方を紹介します。
 
-<pre class="brush: js">&lt;!DOCTYPE html&gt;
-&lt;html lang=en&gt;
-&lt;title&gt;Examples of DataTransfer's setData(), getData(), and clearData()&lt;/title&gt;
-&lt;meta content="width=device-width"&gt;
-&lt;style&gt;
+```js
+<!DOCTYPE html>
+<html lang=en>
+<title>Examples of DataTransfer's setData(), getData() and clearData()</title>
+<meta content="width=device-width">
+<style>
   div {
     margin: 0em;
     padding: 2em;
@@ -55,8 +55,8 @@ translation_of: Web/API/DataTransfer/setData
   #target {
     border: 1px solid black;
   }
-&lt;/style&gt;
-&lt;script&gt;
+</style>
+<script>
 function dragstart_handler(ev) {
  console.log("dragStart");
  // Change the source element's background color to signify drag has started
@@ -74,49 +74,35 @@ function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
  // Get the data, which is the id of the drop target
- var data = ev.dataTransfer.getData("text");
+ const data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
  // Clear the drag data cache (for all formats/types)
  ev.dataTransfer.clearData();
 }
-&lt;/script&gt;
-&lt;body&gt;
-&lt;h1&gt;Examples of &lt;code&gt;DataTransfer&lt;/code&gt;: &lt;code&gt;setData()&lt;/code&gt;, &lt;code&gt;getData()&lt;/code&gt;, &lt;code&gt;clearData()&lt;/code&gt;&lt;/h1&gt;
- &lt;div&gt;
-   &lt;p id="source" ondragstart="dragstart_handler(event);" draggable="true"&gt;
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
- &lt;/div&gt;
- &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body>
+<h1>Examples of <code>DataTransfer</code>: <code>setData()</code>, <code>getData()</code>, <code>clearData()</code></h1>
+ <div>
+   <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
+     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+ </div>
+ <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+</body>
+</html>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "interaction.html#dom-datatransfer-setdata", "setData()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "editing.html#dom-datatransfer-setdata", "setData()")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.DataTransfer.setData")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<p>{{page("/docs/Web/API/DataTransfer", "See_also")}}</p>
+- [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
+- [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
