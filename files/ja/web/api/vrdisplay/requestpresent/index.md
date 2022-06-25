@@ -1,50 +1,57 @@
 ---
 title: VRDisplay.requestPresent()
 slug: Web/API/VRDisplay/requestPresent
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
+  - Deprecated
+  - Method
+  - Reference
+  - VR
+  - VRDisplay
+  - Virtual Display
+  - WebVR
+  - requestPresent()
+browser-compat: api.VRDisplay.requestPresent
 translation_of: Web/API/VRDisplay/requestPresent
 original_slug: Web/API/VRDevice/requestPresent
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>{{domxref("VRDisplay")}} インターフェイスの <code><strong>requestPresent()</strong></code> メソッドは，<code>VRDisplay</code> へのシーン表示を開始します．</p>
+**`requestPresent()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、`VRDisplay` へのシーン表示を開始します。
 
-<h2 id="シンタックス">シンタックス</h2>
+> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
-<pre class="brush: js notranslate">vrDisplayInstance.requestPresent(<em>layers</em>).then(function() {
-  // Do something after the presentation has begun
-});
-</pre>
+## 構文
 
-<h3 id="パラメータ">パラメータ</h3>
+```js
+requestPresent(layers)
+```
 
-<dl>
- <dt>layers</dt>
- <dd>表示したいシーンを表す {{domxref("VRLayer")}} オブジェクトの配列．なお現時点では，指定できるのは最小0要素，最大1要素です．</dd>
+### 引数
+
+- `layers`
+  - : 表示したいシーンを表す {{domxref("VRLayerInit")}} オブジェクトの配列です。現時点では、指定できるのは最小 0 要素、最大 1 要素です。
 </dl>
 
-<h3 id="戻り値">戻り値</h3>
+### 返値
 
-<p>表示が開始されたかを解決するpromise．</p>
+プレゼンテーションが開始されると解決されるプロミスです。プロミスの履行または拒否にはいくつかのルールがあります。
 
-<div class="note">
-<p><strong>注記</strong>: {{domxref("VRDisplayCapabilities.canPresent")}} が <code>false，あるいは</code> <code>VRLayer</code> 配列数が {{domxref("VRDisplayCapabilities.maxLayers")}} レイヤより多い場合, promiseはリジェクトされます．</p>
-</div>
+- {{domxref("VRDisplayCapabilities.canPresent")}} が false の場合、または VRLayer 配列に {{domxref("VRDisplayCapabilities.maxLayers")}} を超えるレイヤーがある場合、プロミスは拒否されます。
+- `requestPresent()` が呼び出された時、 {{domxref("VRDisplay")}} が既に表示していた場合、 `VRDisplay` は表示している `VRLayer` 配列を更新します。
+- もし `requestPresent()` の呼び出しが `VRDisplay` が既に表示されている状態で拒否された場合は、その表示を終了します。
+- もし `requestPresent()` がエンゲージメントジェスチャーの外で呼び出された場合、`VRDisplay` が既に表示されていない限り、そのプロミスは拒否されます。このエンゲージメントジェスチャーは、プレゼンテーションが終了するまで [`requestPointerLock()`](/en-US/docs/Web/API/Element/requestPointerLock) の呼び出しを許可することにも使えます。
 
-<div class="note">
-<p><strong>注記</strong>:   <code>requestPresent()</code> を呼出した時に<code>VRDisplay</code> が表示中の場合，<code>VRDisplay</code> は表示する <code>VRLayer</code> 配列を更新します．<code>VRDisplayが表示中で</code> <code>requestPresent()</code> がリジェクトされたら，<code>VRDisplay</code> は表示を終了します．</p>
-</div>
+## 例
 
-<h2 id="例">例</h2>
-
-<pre class="notranslate">if(navigator.getVRDisplays) {
+```js
+if(navigator.getVRDisplays) {
   console.log('WebVR 1.1 supported');
   // Then get the displays attached to the computer
   navigator.getVRDisplays().then(function(displays) {
     // If a display is available, use it to present the scene
-    if(displays.length &gt; 0) {
+    if(displays.length > 0) {
       vrDisplay = displays[0];
       console.log('Display found');
       // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
@@ -80,36 +87,22 @@ original_slug: Web/API/VRDevice/requestPresent
       });
     }
   });
-}</pre>
+}
+```
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: You can see this complete code at <a href="https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js">raw-webgl-example</a>.</p>
-</div>
+> **Note:** この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#dom-vrdisplay-requestpresent', 'requestPresent()')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
 
-<p>{{Compat("api.VRDisplay.requestPresent")}}</p>
+## ブラウザーの互換性
 
-<h2 id="参照">参照</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+## 関連情報
+
+- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。

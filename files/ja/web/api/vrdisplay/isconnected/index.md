@@ -1,50 +1,65 @@
 ---
-title: VRdisplay.isConnected
+title: VRDisplay.isConnected
 slug: Web/API/VRDisplay/isConnected
+page-type: web-api-instance-property
+tags:
+  - API
+  - Deprecated
+  - Property
+  - Reference
+  - VR
+  - VRDisplay
+  - Virtual Reality
+  - WebVR
+  - isConnected
+browser-compat: api.VRDisplay.isConnected
 translation_of: Web/API/VRDisplay/isConnected
 original_slug: Web/API/VRDevice/isConnected
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>{{domxref("VRDisplay")}} インターフェイスの <code><strong>isConnected</strong></code> 読取専用プロパティは， <code>VRDisplay がコンピュータに接続されているかどうかを示す </code>{{domxref("Boolean")}} を返します．</p>
+**`isConnected`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、この `VRDisplay` がコンピューターに接続されているかどうかを示す論理値を返します。
 
-<h2 id="シンタックス">シンタックス</h2>
+> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
-<pre class="brush: js">var isItConnected = vrDisplayInstance.isConnected;
-</pre>
+### 値
 
-<h3 id="値">値</h3>
+論理値です。 `true` の場合はディスプレイが接続されていることを意味します。 `false` はそうでないことを意味します。
 
-<p>{{domxref("Boolean")}}; <code>true</code> の場合はディスプレイが接続されていることを意味します;  それ以外は <code>false</code>.</p>
+## 例
 
-<h2 id="例">例</h2>
+```js
+navigator.getVRDisplays().then(function(displays) {
+  // ディスプレイがある場合は、それを使ってシーンを表示する
+  if(displays.length > 0) {
+    vrDisplay = displays[0];
 
-<pre>TBD.</pre>
+    // ボタンがクリックされたときに表示を開始。ユーザーのジェスチャーに応答してのみ呼び出すことができます。
+    btn.addEventListener('click', function() {
+      // ディスプレイが接続されている場合のみ、表示を要求します。
+      if(vrDisplay.isConnected) {
+        vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+          // アプリの描画を開始するなど。
+        });
+      } else {
+        console.log('Connection to display lost');
+      }
+    });
+  }
+});
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#dom-vrdisplay-isconnected', 'isConnected')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
 
-<p>{{Compat("api.VRDisplay.isConnected")}}</p>
+## ブラウザーの互換性
 
-<h2 id="参照">参照</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+## 関連情報
+
+- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。

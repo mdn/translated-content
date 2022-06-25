@@ -1,9 +1,10 @@
 ---
 title: VRDisplay.capabilities
 slug: Web/API/VRDisplay/capabilities
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -11,53 +12,35 @@ tags:
   - Virtual Reality
   - WebVR
   - capabilities
+browser-compat: api.VRDisplay.capabilities
 translation_of: Web/API/VRDisplay/capabilities
 original_slug: Web/API/VRDevice/capabilities
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>{{domxref("VRDisplay")}} インターフェイスの <strong><code>capabilities</code></strong> 読取専用プロパティは，<code>VRDisplay</code> の様々な利用可能な機能を示す {{domxref("VRDisplayCapabilities")}} オブジェクトを返します。</p>
+**`capabilities`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、 `VRDisplay` の様々な利用可能な機能を示す {{domxref("VRDisplayCapabilities")}} オブジェクトを返します。
 
-<h2 id="構文">構文</h2>
+> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
-<pre class="brush: js notranslate">var myCapabilities = vrDisplayInstance.capabilities;</pre>
+### 値
 
-<h3 id="値">値</h3>
+{{domxref("VRDisplayCapabilities")}} オブジェクト。
 
-<p>{{domxref("VRDisplayCapabilities")}} オブジェクト。</p>
+## 例
 
-<h2 id="例">例</h2>
+コード例については [`VRDisplayCapabilities`](/ja/docs/Web/API/VRDisplayCapabilities#examples) を参照してください。
 
-<p>{{page("/Web/API/VRDisplayCapabilities", "Examples")}}</p>
+## 仕様書
 
-<h2 id="仕様">仕様</h2>
+このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#dom-vrdisplay-capabilities', 'capabilities')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.VRDisplay.capabilities")}}</p>
+{{Compat}}
 
-<div id="compat-desktop"></div>
+## 関連情報
 
-<div id="compat-mobile"></div>
-
-<h2 id="参照">参照</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。

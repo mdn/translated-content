@@ -1,54 +1,57 @@
 ---
 title: VRDisplay.getLayers()
 slug: Web/API/VRDisplay/getLayers
+page-type: web-api-instance-method
+tags:
+  - API
+  - Deprecated
+  - Deprecated
+  - Method
+  - Reference
+  - VR
+  - VRDisplay
+  - Virtual Reality
+  - WebVR
+  - getLayers()
+browser-compat: api.VRDisplay.getLayers
 translation_of: Web/API/VRDisplay/getLayers
 original_slug: Web/API/VRDevice/getLayers
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>{{domxref("VRDisplay")}} インターフェイスの <code><strong>getLayers()</strong></code> メソッドは，<code>VRDisplay</code> で現在表示されているレイヤを返します．</p>
+**`getLayers()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 `VRDisplay` が現在表示しているレイヤーを返します。
 
-<h2 id="シンタックス">シンタックス</h2>
+> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
-<pre class="brush: js">var myLayers = vrDisplayInstance.getLayers();
-</pre>
+## 構文
 
-<h3 id="パラメータ">パラメータ</h3>
+```js
+getLayers()
+```
 
-<p>なし．</p>
+### 引数
 
-<h3 id="戻り値">戻り値</h3>
+なし．
 
-<p>{{domxref("VRLayer")}} オブジェクトの配列．</p>
+### 返値
 
-<h2 id="例">例</h2>
+{{domxref("VRDisplay")}} が表示中の場合、このメソッドは現在表示中の {{domxref("VRLayerInit")}} オブジェクトの配列を返します（現在 {{domxref("VRDisplayCapabilities.maxLayers")}} は常に 1 なので、これは 1 つになります）。 {{domxref("VRDisplay")}}が表示されていない場合、このメソッドは空の配列を返します。
 
-<pre>TBD.</pre>
+## 例
 
-<h2 id="仕様">仕様</h2>
+例については [`VRLayerInit`](/ja/docs/Web/API/VRLayerInit#例) を参照してください。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#dom-vrdisplay-getlayers', 'getLayers()')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
 
-<p>{{Compat("api.VRDisplay.getLayers")}}</p>
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
 
-<h2 id="参照">参照</h2>
+## ブラウザーの互換性
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> —  Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。

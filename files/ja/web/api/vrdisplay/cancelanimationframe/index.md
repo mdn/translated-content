@@ -1,57 +1,116 @@
 ---
 title: VRDisplay.cancelAnimationFrame()
 slug: Web/API/VRDisplay/cancelAnimationFrame
+page-type: web-api-instance-method
+tags:
+  - API
+  - Deprecated
+  - Method
+  - Reference
+  - VR
+  - VRDisplay
+  - Virtual Reality
+  - WebVR
+  - cancelAnimationFrame()
+browser-compat: api.VRDisplay.cancelAnimationFrame
 translation_of: Web/API/VRDisplay/cancelAnimationFrame
 original_slug: Web/API/VRDevice/cancelAnimationFrame
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>{{domxref("VRDisplay")}} インターフェイスの <code><strong>cancelAnimationFrame()</strong></code> メソッドは， {{domxref("Window.cancelAnimationFrame")}} の特別な実装で， {{domxref("VRDisplay.requestAnimationFrame()")}} で登録したコールバックを登録解除します．</p>
+**`cancelAnimationFrame()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 {{domxref("Window.cancelAnimationFrame")}} の特別な実装であり、 {{domxref("VRDisplay.requestAnimationFrame()")}} で登録したコールバックを登録解除します．
 
-<h2 id="シンタックス">シンタックス</h2>
+> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
-<pre class="brush: js">vrDisplayInstance.cancelAnimationFrame(<em>handle</em>);
-</pre>
+## 構文
 
-<h3 id="パラメータ">パラメータ</h3>
+```js
+cancelAnimationFrame(handle)
+```
 
-<dl>
- <dt>handle</dt>
- <dd>登録解除したいハンドルを与えます．ハンドルは {{domxref("VRDisplay.requestAnimationFrame()")}} を呼出した時に戻り値として取得できます．</dd>
-</dl>
+### 引数
 
-<h3 id="戻り値">戻り値</h3>
+- `handle`
+  - : 登録解除するための {{domxref("VRDisplay.requestAnimationFrame()")}} の呼び出しで返されたハンドルです。
 
-<p>void．</p>
+### 返値
 
-<h2 id="例">例</h2>
+なし ({{jsxref("undefined")}})。
 
-<pre>TBD.</pre>
+## 例
 
-<h2 id="仕様">仕様</h2>
+```js
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+drawScene();
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#dom-vrdisplay-cancelanimationframe', 'cancelAnimationFrame()')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+// WebVR: Check to see if WebVR is supported
+if(navigator.getVRDisplays) {
+  console.log('WebVR 1.1 supported');
+  // Then get the displays attached to the computer
+  navigator.getVRDisplays().then(function(displays) {
+    // If a display is available, use it to present the scene
+    if(displays.length > 0) {
+      vrDisplay = displays[0];
+      console.log('Display found');
+      // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
+      btn.addEventListener('click', function() {
+        if(btn.textContent === 'Start VR display') {
+          vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+            console.log('Presenting to WebVR display');
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+            // Set the canvas size to the size of the vrDisplay viewport
 
-<p>{{Compat("api.VRDisplay.cancelAnimationFrame")}}</p>
+            var leftEye = vrDisplay.getEyeParameters('left');
+            var rightEye = vrDisplay.getEyeParameters('right');
 
-<h2 id="参照">参照</h2>
+            canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
+            canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+            // stop the normal presentation, and start the vr presentation
+            window.cancelAnimationFrame(normalSceneFrame);
+            drawVRScene();
+
+            btn.textContent = 'Exit VR display';
+          });
+        } else {
+          vrDisplay.exitPresent();
+          console.log('Stopped presenting to WebVR display');
+
+          btn.textContent = 'Start VR display';
+
+          // Stop the VR presentation, and start the normal presentation
+          vrDisplay.cancelAnimationFrame(vrSceneFrame);
+          drawScene();
+        }
+      });
+    }
+  });
+} else {
+  info.textContent = 'WebVR API not supported by this browser.'
+}
+
+function drawVRScene() {
+  // WebVR: Request the next frame of the animation
+  vrSceneFrame = vrDisplay.requestAnimationFrame(drawVRScene);
+
+  ...
+}
+```
+
+> **Note:** 完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
+
+## 仕様書
+
+このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
+
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。

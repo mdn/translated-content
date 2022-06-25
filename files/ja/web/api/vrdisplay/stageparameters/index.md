@@ -1,50 +1,46 @@
 ---
 title: VRDisplay.stageParameters
 slug: Web/API/VRDisplay/stageParameters
+page-type: web-api-instance-property
+tags:
+  - API
+  - Deprecated
+  - Property
+  - Reference
+  - VR
+  - VRDisplay
+  - Virtual Reality
+  - WebVR
+  - stageParameters
+browser-compat: api.VRDisplay.stageParameters
 translation_of: Web/API/VRDisplay/stageParameters
 original_slug: Web/API/VRDevice/stageParameters
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>{{domxref("VRDisplay")}} インターフェイスの <code><strong>stageParameters</strong></code> 読取専用プロパティは， <code>VRDisplay</code> がルームスケール体験をサポートしている場合に，ルームスケールパラメータを持つ {{domxref("VRStageParameters")}} オブジェクトを返します． </p>
+**`stageParameters`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、 `VRDisplay` がルームスケール体験をサポートしている場合に、ルームスケールパラメーターを持つ {{domxref("VRStageParameters")}} オブジェクトを返します． 
 
-<h2 id="シンタックス">シンタックス</h2>
+> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
-<pre class="brush: js">var myStageParameters = vrDisplayInstance.stageParameters;
-</pre>
+### 値
 
-<h3 id="値">値</h3>
+`VRDisplay` のルームスケールパラメーターを持つ {{domxref("VRStageParameters")}} オブジェクトです。 `VRDisplay` がルームスケール体験をサポートしていない場合は  `null` です。
 
-<p><code>VRDisplay</code> のルームスケールパラメータを持つ {{domxref("VRStageParameters")}} オブジェクトです．ルームスケール体験をサポートしていない<code>VRDisplayでは</code> <code>null</code> です．</p>
+## 例
 
-<h2 id="例">例</h2>
+例については [`VRStageParameters`](/ja/docs/Web/API/VRStageParameters#例) を参照してください。
 
-<p>{{page("/Web/API/VRStageParameters", "Examples")}}</p>
+## 仕様書
 
-<h2 id="仕様">仕様</h2>
+このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#dom-vrdisplay-stageparameters', 'stageParameters')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.VRDisplay.stageParameters")}}</p>
+{{Compat}}
 
-<h2 id="参照">参照</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
