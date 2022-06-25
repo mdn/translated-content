@@ -135,7 +135,7 @@ var b = 0;
   cancelRequestAnimationFrame(start);
 });</pre>
 
-<p>Chrome 在这里有些区别。它没有在变量内不断的更新存储控制器的最后状态，而存储只是当时的一个快照，所以你要在 Chrome 中做到同样的事情的话，就需要不断地轮询，然后在可用的时候只能在代码中使用 {{ domxref("Gamepad") }} 对象来达到目的。我们下面用 {{ domxref("Window.setInterval()") }}实现了 7；一旦控制器的可以输出了，游戏循环就会开始，可以使用 {{ domxref("Window.clearInterval()") }} 清除定时循环。请注意在较旧版本的 Chrome 中实现 {{ domxref("Navigator.getGamepads()") }} 需要加上  <code>webkit</code> 前缀。我们尝试对两种前缀版本都进行监测和处理，以向后兼容。</p>
+<p>Chrome 在这里有些区别。它没有在变量内不断的更新存储控制器的最后状态，而存储只是当时的一个快照，所以你要在 Chrome 中做到同样的事情的话，就需要不断地轮询，然后在可用的时候只能在代码中使用 {{ domxref("Gamepad") }} 对象来达到目的。我们下面用 {{ domxref("Window.setInterval()") }}实现了; 一旦对象可用，控制器信息就会被输出，游戏循环就会开始，可以使用 {{ domxref("Window.clearInterval()") }} 清除定时循环。请注意在较旧版本的 Chrome 中实现 {{ domxref("Navigator.getGamepads()") }} 需要加上  <code>webkit</code> 前缀。我们尝试对两种前缀版本都进行监测和处理，以向后兼容。</p>
 
 <pre class="brush: js">var interval;
 
