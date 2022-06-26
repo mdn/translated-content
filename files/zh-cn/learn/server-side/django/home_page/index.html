@@ -8,7 +8,7 @@ original_slug: learn/Server-side/Django/主页构建
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}</div>
 
-<p>  我们现在可以添加代码来显示我们的第一个完整页面 -  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 网站的主页，显示每个模型类型有多少条记录，并提供我们其他页面的侧边栏导航链接。一路上，我们将获得编写基本 URL 地图和视图，从数据库获取记录以及使用模板的实践经验。</p>
+<p>  我们现在可以添加代码来显示我们的第一个完整页面 -  <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 网站的主页，显示每个模型类型有多少条记录，并提供我们其他页面的侧边栏导航链接。一路上，我们将获得编写基本 URL 地图和视图，从数据库获取记录以及使用模板的实践经验。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -92,7 +92,7 @@ original_slug: learn/Server-side/Django/主页构建
     path('catalog/', include('catalog.urls')),
 ]</code></pre>
 
-<p>每当 Django 使用 include() （<a href="https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include" title="django.conf.urls.include"><code>django.conf.urls.include()），</code></a><code>它排除与该点 匹配URL的任何部分，并将剩余的字符串发送到随附的 URLconf 进行一步处理。</code></p>
+<p>每当 Django 使用 include() （<a href="https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include"><code>django.conf.urls.include()），</code></a><code>它排除与该点 匹配URL的任何部分，并将剩余的字符串发送到随附的 URLconf 进行一步处理。</code></p>
 
 <p>匹配的 URL 实际上是 <code>catalog/</code>+&lt;空字符串&gt; （<code>/catalog/</code> 假定是因为 <code>include()</code>是使用的方法）。如果我们收到一个 URL 的 HTTP 请求，我们的第一个视图函数将被调用<code>/catalog/。</code></p>
 </div>

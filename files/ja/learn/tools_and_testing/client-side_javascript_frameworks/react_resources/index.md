@@ -73,7 +73,7 @@ React DevTools は様々な形態で提供されています。
 
 これらのうち一つをインストールしてみて、作ったアプリの検査に使ってみてください！
 
-[React のブログで React DevTools について詳しく読むことができます。](https://reactjs.org/blog/2019/08/15/new-react-devtools.html) 
+[React のブログで React DevTools について詳しく読むことができます。](https://reactjs.org/blog/2019/08/15/new-react-devtools.html)
 
 ## コンテクスト API
 

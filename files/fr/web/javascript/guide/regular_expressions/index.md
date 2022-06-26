@@ -401,7 +401,7 @@ La tableau qui suit fournit une liste complète des caractères spéciaux pouvan
       <td><code>\b</code></td>
       <td>
         <p>
-          Correspond à la position d'uneAfter the <em>limite de mot</em>. Une
+          Correspond à la position d'une <em>limite de mot</em>. Une
           limite de mot correspond à la position où un caractère d'un mot n'est
           pas suivi ou précédé d'un autre caractère de mot. Il faut savoir que
           la limite correspondante n'est pas incluse dans le résultat. Autrement

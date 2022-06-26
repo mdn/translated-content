@@ -155,9 +155,11 @@ p { font-face: Arial; font-size: 10pt; margin-left: .125in; }
 
 このスクリプトは以下の項目を表示します。
 
-    BODY
-    P
-    #LUMPY
+```
+BODY
+P
+#LUMPY
+```
 
 ## 例 5: イベント伝播 (propagation)
 

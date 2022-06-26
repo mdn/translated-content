@@ -24,7 +24,7 @@ translation_of: Web/API/Document/createTreeWalker
  <dd>是遍历这个 {{domxref("TreeWalker")}} 的根节点 (root {{domxref("Node")}})。通常这是文档的一个元素。</dd>
  <dt><em>whatToShow {{optional_inline}}</em></dt>
  <dd>一个无符号长整型，表示一个整合自 <code><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter</a></code> 常量属性的位掩码。这是筛选特定类型节点的便捷方式。默认为 0xFFFFFFFF，表示 <code>SHOW_ALL</code> 常量。
- <table class="standard-table">
+ <table>
   <tbody>
    <tr>
     <td class="header">常量</td>
@@ -130,26 +130,7 @@ while(currentNode) {
 
 <h2 id="Specification" name="Specification">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-createtreewalker', 'Document.createTreeWalker')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Removed the <code>expandEntityReferences</code> parameter.<br>
-    Made the <code>whatToShow</code> and <code>filter</code> parameters optionals.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#NodeIteratorFactory-createTreeWalker', 'Document.createTreeWalker')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

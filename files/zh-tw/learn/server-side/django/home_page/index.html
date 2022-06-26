@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Django/Home_page
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}</div>
 
-<p>我們現在可以添加代碼，來顯示我們的第一個完整頁面 - <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 網站的主頁，顯示每個模型類型有多少條記錄，並提供我們其他頁面的側邊欄導航鏈接。一路上，我們將獲得編寫基本URL 地圖和視圖、從數據庫獲取記錄、以及使用模板的實踐經驗。</p>
+<p>我們現在可以添加代碼，來顯示我們的第一個完整頁面 - <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 網站的主頁，顯示每個模型類型有多少條記錄，並提供我們其他頁面的側邊欄導航鏈接。一路上，我們將獲得編寫基本URL 地圖和視圖、從數據庫獲取記錄、以及使用模板的實踐經驗。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -35,7 +35,7 @@ translation_of: Learn/Server-side/Django/Home_page
  <li>在視圖中呈現數據時要使用的模板。</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13931/basic-django.png" style="display: block; margin: 0px auto;"></p>
+<p><img src="basic-django.png"></p>
 
 <p>正如您將在下一節中看到的那樣，我們將顯示5頁，這是太多信息，無法在一篇文章中進行記錄。 因此，本文將重點介紹如何實現主頁，我們將在後續文章中介紹其他頁面。 這應該使您對URL映射器，視圖和模型在實踐中如何工作有很好的端到端理解。</p>
 
@@ -85,7 +85,7 @@ translation_of: Learn/Server-side/Django/Home_page
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>: 每當Django遇到導入函數 <code><a href="https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.include" title="django.conf.urls.include">django.urls.include()</a></code>時，它都會在指定的結束字符處分割URL字符串，並將剩餘的子字符串發送到所包含的<em>URLconf</em> 模塊以進行進一步處理。</p>
+<p><strong>注意</strong>: 每當Django遇到導入函數 <code><a href="https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.include">django.urls.include()</a></code>時，它都會在指定的結束字符處分割URL字符串，並將剩餘的子字符串發送到所包含的<em>URLconf</em> 模塊以進行進一步處理。</p>
 </div>
 
 <p>我們還為<em>URLConf </em>模塊創建了一個佔位符文件，名為 <strong>/catalog/urls.py</strong>。 將以下行添加到該文件：</p>
@@ -319,7 +319,7 @@ return render(request, 'index.html', context=context)</pre>
 
 <p>此時，我們應該已經創建了顯示索引頁面所需的所有內容。 運行服務器(<code>python3 manage.py runserver</code>)，然後打開瀏覽器到<a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>。 如果一切設置正確，則您的站點應類似於以下螢幕截圖。</p>
 
-<p><img alt="Index page for LocalLibrary website" src="https://mdn.mozillademos.org/files/14045/index_page_ok.png" style="border-style: solid; border-width: 1px; display: block; height: 356px; margin: 0px auto; width: 874px;"></p>
+<p><img alt="Index page for LocalLibrary website" src="index_page_ok.png"></p>
 
 <div class="note">
 <p><strong>注意</strong>：您將無法使用<strong>All books</strong>和<strong>All authors</strong>鏈接，因為尚未定義這些頁面的路徑，視圖和模板（當前我們僅在<code>base_generic.html</code> html模板中插入了這些鏈接的佔位符）。</p>

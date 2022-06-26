@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
 <p>使用 <code>history</code> API 与浏览器历史记录进行交互。</p>
 
 <div class="note">
-<p>注意：下载也被当做一个 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem" title="A HistoryItem object provides information about a page in the browser history."><code>HistoryItem</code></a> 对象。因此，<code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited" title="Fired each time the user visits a page. A history.HistoryItem object is passed to the listener. This event fires before the page has loaded.">history.onVisited</a></code>等事件也会被下载所触发。</p>
+<p>注意：下载也被当做一个 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem"><code>HistoryItem</code></a> 对象。因此，<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited">history.onVisited</a></code>等事件也会被下载所触发。</p>
 </div>
 
 <p>浏览器历史记录是对用户所访问的页面按时间顺序进行的记录和保存。history API 可以帮你实现以下功能：</p>
@@ -38,7 +38,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
  <li><a href="/en-US/Add-ons/WebExtensions/API/history/deleteRange">移除给定期间内任意页面的访问记录的集合</a></li>
 </ul>
 
-<p>使用该 API 之前，扩展程序必须在其 <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> 文件中获取 history 的<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">许可</a>。</p>
+<p>使用该 API 之前，扩展程序必须在其 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> 文件中获取 history 的<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">许可</a>。</p>
 
 <h2 id="类型">类型</h2>
 
@@ -59,7 +59,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
 
 <dl>
  <dt>{{WebExtAPIRef("history.search()")}}</dt>
- <dd>在浏览器历史记录中查找符合给定条件的<code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem" title="A HistoryItem object provides information about one result from a history query.">history.HistoryItem</a></code></dd>
+ <dd>在浏览器历史记录中查找符合给定条件的<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem">history.HistoryItem</a></code></dd>
  <dt>{{WebExtAPIRef("history.getVisits()")}}</dt>
  <dd>获取指定页面的访问集信息。</dd>
  <dt>{{WebExtAPIRef("history.addUrl()")}}</dt>

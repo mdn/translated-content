@@ -11,7 +11,7 @@ translation_of: Web/API/Window/prompt
 
 <h3 id="Syntax" name="Syntax">语法</h3>
 
-<pre class="eval"><em>result</em> = window.prompt(<em>text</em>, <em>value</em>);
+<pre class="brush: js">result = window.prompt(text, value);
 </pre>
 
 <ul>
@@ -22,7 +22,7 @@ translation_of: Web/API/Window/prompt
 
 <h3 id="Example" name="Example">例子</h3>
 
-<pre class="eval">var sign = prompt("你是什么星座的？");
+<pre class="brush: js">var sign = prompt("你是什么星座的？");
 if (sign == "天蝎座"){
    alert("哇！我也是天蝎座的耶！");
 }
@@ -43,10 +43,14 @@ prompt 和 alert 以及类似的对话框都是模态窗口，它们会阻止用
 
 <div>Chrome 上下文执行的脚本 (例如扩展开发) 应该使用 XPCOM <a href="/zh-cn/XPCOM_Interface_Reference/nsIPromptService" title="zh-cn/XPCOM_Interface_Reference/nsIPromptService">nsIPromptService</a>  来替代 window.prompt。</div>
 
-<h3 id="Specification" name="Specification">规范</h3>
+<h2 id="规范">规范</h2>
 
-<p>{{ DOM0() }}</p>
+{{Specifications}}
 
-<h3 id="See_also" name="See_also">相关链接</h3>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+{{Compat}}
+
+<h3 id="See_also" name="See_also">参见</h3>
 
 <p><a href="/zh-cn/DOM/window.alert" title="zh-cn/DOM/window.alert">alert</a>, <a href="/zh-cn/DOM/window.confirm" title="zh-cn/DOM/window.confirm">confirm</a></p>

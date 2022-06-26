@@ -200,15 +200,15 @@ request.send();</pre>
 
 <h4 id="那么Fetch代码中发生了什么呢">那么 Fetch 代码中发生了什么呢？</h4>
 
-<p>首先，我们调用了<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WorkerOrWindowGlobalScope/fetch" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!">fetch()</a></code>方法，将我们要获取的资源的 URL 传递给它。这相当于现代版的 XHR 中的<code>request.open()</code>,另外，您不需要任何等效的<code>send()</code>方法。</p>
+<p>首先，我们调用了<code><a href="/zh-CN/docs/Web/API/WorkerOrWindowGlobalScope/fetch">fetch()</a></code>方法，将我们要获取的资源的 URL 传递给它。这相当于现代版的 XHR 中的<code>request.open()</code>,另外，您不需要任何等效的<code>send()</code>方法。</p>
 
-<p>然后，你可以看到<code>.then()</code>方法连接到了<code>fetch()</code>末尾 - 这个方法是<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise 对象用于一个异步操作的最终完成（或失败）及其结果值的表示。(简单点说就是处理异步请求。我们经常会做些承诺，如果我赢了你就嫁给我，如果输了我就嫁给你之类的诺言。这就是promise的中文含义：诺言，一个成功，一个失败。)"><code>Promises</code></a>的一部分，是一个用于执行异步操作的现代 JavaScript 特性。<code>fetch()</code>返回一个 promise，它将解析从服务器发回的响应。我们使用<code>then()</code>来运行一些后续代码，这是我们在其内部定义的函数。这相当于 XHR 版本中的<code>onload</code>事件处理程序。</p>
+<p>然后，你可以看到<code>.then()</code>方法连接到了<code>fetch()</code>末尾 - 这个方法是<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promises</code></a>的一部分，是一个用于执行异步操作的现代 JavaScript 特性。<code>fetch()</code>返回一个 promise，它将解析从服务器发回的响应。我们使用<code>then()</code>来运行一些后续代码，这是我们在其内部定义的函数。这相当于 XHR 版本中的<code>onload</code>事件处理程序。</p>
 
 <p>当<code>fetch()</code> promise 解析时，这个函数会自动将响应从服务器传递给参数。在函数内部，我们获取响应并运行其<code>text()</code>方法。这基本上将响应作为原始文本返回，这相当于在 XHR 版本中的<code>responseType = 'text'</code>。</p>
 
 <p>你会看到 <code>text()</code> 也返回了一个 promise, 所以我们连接另外一个 <code>.then()</code> 到它上面，在其中我们定义了一个函数来接收 <code>text()</code> promise 解析的生文本。</p>
 
-<p>在 promise 的函数内部，我们做的和在 XHR 版本中差不多— 设置 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre" title="The HTML &lt;pre> element represents preformatted text which is to be presented exactly as written in the HTML file."><code>&lt;pre&gt;</code></a> 元素的文本内容为 text 的值。</p>
+<p>在 promise 的函数内部，我们做的和在 XHR 版本中差不多— 设置 <a href="/en-US/docs/Web/HTML/Element/pre"> element represents preformatted text which is to be presented exactly as written in the HTML file."><code>&lt;pre&gt;</code></a> 元素的文本内容为 text 的值。</p>
 
 <h3 id="关于promises">关于 promises </h3>
 
@@ -224,7 +224,7 @@ request.send();</pre>
 
 <p>第一行是说‘’获取位于 url 里的资源 (<code>fetch(url)</code>)‘’和“然后当 promise 解析后运行指定的函数 (<code>.then(function() { ... })</code>)”。"解析"的意思是"在将来某一时刻完成指定的操作"。在本例中，指定的操作是从指定的 URL(使用 HTTP 请求) 获取资源，并返回对我们执行某些操作的响应。</p>
 
-<p>实际上，传递给 <code>then()</code> 是一段不会立即执行的代码 — 而是当返回响应时代码会被运行。注意，你还可以选择把你的 promise 保存到一个变量里，链接 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" title="The then() method returns a Promise. It takes up to two arguments: callback functions for the success and failure cases of the Promise."><code>.then()</code></a> 在相同的位置。下面的代码会做相同的事情。</p>
+<p>实际上，传递给 <code>then()</code> 是一段不会立即执行的代码 — 而是当返回响应时代码会被运行。注意，你还可以选择把你的 promise 保存到一个变量里，链接 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then"><code>.then()</code></a> 在相同的位置。下面的代码会做相同的事情。</p>
 
 <pre class="brush: js">let myFetch = fetch(url);
 
@@ -252,7 +252,7 @@ myFetch.then(function(response) {
   });
 }</pre>
 
-<p>response 对象有个 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/text" title="The text() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with a USVString object (text). The response is always decoded using UTF-8."><code>text()</code></a>方法，获取响应主体中的原始数据 a 并把它转换成纯文本，那是我们想要的格式。它也返回一个 promise (解析结果文本字符串), 所以这里我们再使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" title="The then() method returns a Promise. It takes up to two arguments: callback functions for the success and failure cases of the Promise."><code>.then()</code></a>, 在里面我们再定义一个操作文本字符串的函数。我们设置诗歌的 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre" title="The HTML &lt;pre> element represents preformatted text which is to be presented exactly as written in the HTML file."><code>&lt;pre&gt;</code></a> 元素的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent">textContent</a></code> 属性和这个文本字符串相同，这样就非常简单地解决了。</p>
+<p>response 对象有个 <a href="/en-US/docs/Web/API/Body/text"><code>text()</code></a>方法，获取响应主体中的原始数据 a 并把它转换成纯文本，那是我们想要的格式。它也返回一个 promise (解析结果文本字符串), 所以这里我们再使用 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then"><code>.then()</code></a>, 在里面我们再定义一个操作文本字符串的函数。我们设置诗歌的 <a href="/en-US/docs/Web/HTML/Element/pre"> element represents preformatted text which is to be presented exactly as written in the HTML file."><code>&lt;pre&gt;</code></a> 元素的 <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> 属性和这个文本字符串相同，这样就非常简单地解决了。</p>
 
 <p>值得注意的是你可以直接将 promise 块 (<code>.then()</code>块，但也有其他类型) 链接到另一个的尾部，顺着链条将每个块的结果传到下一个块。 这使得 promises 非常强大。</p>
 
@@ -385,11 +385,11 @@ myFetch.then(function(response) {
 <h2 id="模块大纲">模块大纲</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">介绍 web APIs</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">操作 DOM documents</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">从服务器获取数据</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs">第三方 APIs</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">绘图</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">视频音频 APIs</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">客户端存储</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">介绍 web APIs</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">操作 DOM documents</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">从服务器获取数据</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs">第三方 APIs</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">绘图</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">视频音频 APIs</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">客户端存储</a></li>
 </ul>

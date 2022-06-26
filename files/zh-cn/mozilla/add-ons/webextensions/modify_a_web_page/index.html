@@ -43,7 +43,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 
 }</pre>
 
-<p>"content_scripts"指出符合 URL 格式的页面地址，然后让浏览器加载脚本 (“page-eater.js“) 到匹配的 URL 页面 (<a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a> )。</p>
+<p>"content_scripts"指出符合 URL 格式的页面地址，然后让浏览器加载脚本 (“page-eater.js“) 到匹配的 URL 页面 (<a href="/">https://developer.mozilla.org/</a> )。</p>
 
 <div class="note">
 <p>由于 <code>content_scripts</code> 的 <code>"js"</code> 属性是一个数组，因此可以使用它将多个脚本注入匹配的页面。如果这样做，页面将按照数组中列出的顺序加载多个脚本。</p>
@@ -61,7 +61,7 @@ var header = document.createElement('h1');
 header.textContent = "This page has been eaten";
 document.body.appendChild(header);</pre>
 
-<p>现在安装这个<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">WebExtension</a>, 然后浏览 <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a>：</p>
+<p>现在安装这个<a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">WebExtension</a>, 然后浏览 <a href="/">https://developer.mozilla.org/</a>：</p>
 
 <p>{{EmbedYouTube("lxf2Tkg6U1M")}}</p>
 
@@ -96,7 +96,7 @@ document.body.appendChild(header);</pre>
 
 <ul>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>:要向页面中注入脚本，就需要拥有修改页面对应的权限。<a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>activeTab</code></a>可以临时获得修改当前活动标签所加载的页面的权限。另外还通过 contextmenus 来获取添加右键菜单项的权限。</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></code>: 加载名为 "background.js" 的 <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">"background script"</a> （长期有效的后台脚本），在该脚本中，我们将设置注入右键菜单的内容脚本。</li>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></code>: 加载名为 "background.js" 的 <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">"background script"</a> （长期有效的后台脚本），在该脚本中，我们将设置注入右键菜单的内容脚本。</li>
 </ul>
 
 <p>在 "modify-page" 文件夹下创建名为 "background.js"的新文件，内容如下：</p>
@@ -124,7 +124,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
     manifest.json
     page-eater.js</code></pre>
 
-<p>重新加载<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on">WebExtension</a>, 打开页面 (这次可以是任何一个页面) 激活右键菜单，然后选择 "Eat this page"：</p>
+<p>重新加载<a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on">WebExtension</a>, 打开页面 (这次可以是任何一个页面) 激活右键菜单，然后选择 "Eat this page"：</p>
 
 <p>{{EmbedYouTube("zX4Bcv8VctA")}}</p>
 
@@ -201,12 +201,12 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 browser.runtime.onMessage.addListener(eatPage);
 </pre>
 
-<p>现在，不再立即执行吞页，内容脚本将先通过使用 <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code>来监听消息。当监听到消息时，内容脚本才开始运作，除了来自<code>request.replacement</code>的替换文本不一样以外，其他的脚本运作本质上与之前的相同。</p>
+<p>现在，不再立即执行吞页，内容脚本将先通过使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code>来监听消息。当监听到消息时，内容脚本才开始运作，除了来自<code>request.replacement</code>的替换文本不一样以外，其他的脚本运作本质上与之前的相同。</p>
 
 <p>如果我们想将消息从内容脚本发送到后台页面，除了在内容脚本中使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> ，其他与上面的过程相反。</p>
 
 <div class="note">
-<p>这些例子注入的都是 JavaScript; 想注入 CSS 可以使用 <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS()</a></code> 函数。</p>
+<p>这些例子注入的都是 JavaScript; 想注入 CSS 可以使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS()</a></code> 函数。</p>
 </div>
 
 <h2 id="了解更多">了解更多</h2>
@@ -230,8 +230,8 @@ browser.runtime.onMessage.addListener(eatPage);
  </li>
  <li>使用<code>tabs.executeScript()</code>的例子：
   <ul>
-   <li><a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/beastify">beastify</a></li>
-   <li><a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/context-menu-demo">context-menu-demo</a></li>
+   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">beastify</a></li>
+   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/context-menu-demo">context-menu-demo</a></li>
   </ul>
  </li>
 </ul>

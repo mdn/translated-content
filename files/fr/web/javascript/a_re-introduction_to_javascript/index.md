@@ -600,7 +600,7 @@ Les tableaux sont accompagnés d'un certain nombre de méthodes. Voir également
 | `a.unshift(item1[, item2[, ...[, itemN]]])`          | Ajoute des éléments au début du tableau.                                                                                 |
 | `a.slice(start[, end])`                              | Renvoie un sous-tableau.                                                                                                 |
 | `a.sort([cmpfn])`                                    | Trie le tableau (avec une fonction de comparaison optionnelle).                                                          |
-| `a.splice(start, delcount[, item1[, ...[, itemN]]])` | Permet de modifier un tableau en en supprimant une partie et en la remplaçant avec plus d'éléments.                      |
+| `a.splice(start, delcount[, item1[, ...[, itemN]]])` | Permet de modifier un tableau en supprimant une partie et en la remplaçant avec plus d'éléments.                      |
 | `a.reverse()`                                        | Retourne le tableau.                                                                                                     |
 
 ## Les fonctions

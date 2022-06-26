@@ -91,7 +91,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <p>所有瀏覽器都支援 <code>XMLHttpRequest</code> 物件實體的 <code>onreadystatechange</code> 屬性。</p>
 
-<p>之後，各個瀏覽器實作了多種額外的事件處理器（如 <code>onload</code>、<code>onerror</code>、<code>onprogress</code> 等）。請參考<a href="https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">使用 XMLHttpRequest</a>。</p>
+<p>之後，各個瀏覽器實作了多種額外的事件處理器（如 <code>onload</code>、<code>onerror</code>、<code>onprogress</code> 等）。請參考<a href="/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">使用 XMLHttpRequest</a>。</p>
 
 <p>除了以 <code>on*</code> 屬性來設定事件處理函式，更多現代覽瀏器（包括 Firefox）也支援使用標準的 <code><a href="/zh-TW/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> API 註冊監聽 <code>XMLHttpRequest</code> 的事件。</p>
 
@@ -108,7 +108,7 @@ translation_of: Web/API/XMLHttpRequest
  <dt>{{domxref("XMLHttpRequest.getResponseHeader()")}}</dt>
  <dd>回傳指定標頭文字之字串，假如回應尚未被接收或是標頭不存在於回應中則為 <code>null</code>。</dd>
  <dt>{{domxref("XMLHttpRequest.open()")}}</dt>
- <dd>初始化一個請求。此方法用於 JavaScript 中；若要在 native code 中初始化請求，請以 <a class="internal" href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#openRequest()"><code>openRequest()</code></a> 作為替代。</dd>
+ <dd>初始化一個請求。此方法用於 JavaScript 中；若要在 native code 中初始化請求，請以 <a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#openRequest()"><code>openRequest()</code></a> 作為替代。</dd>
  <dt>{{domxref("XMLHttpRequest.overrideMimeType()")}}</dt>
  <dd>覆寫伺服器回傳的 MIME type。</dd>
  <dt>{{domxref("XMLHttpRequest.send()")}} </dt>
@@ -128,7 +128,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <dl>
  <dt>{{domxref("XMLHttpRequest.openRequest()")}}</dt>
- <dd>初始化請求。這方法是用於原生程式，若想在 JavaScript 中初始化一個請求，請使用 <a class="internal" href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#open()"><code>open()</code></a> 這個方法來代替。請參照 <code>open()</code> 的相關文件。</dd>
+ <dd>初始化請求。這方法是用於原生程式，若想在 JavaScript 中初始化一個請求，請使用 <a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#open()"><code>open()</code></a> 這個方法來代替。請參照 <code>open()</code> 的相關文件。</dd>
  <dt>{{domxref("XMLHttpRequest.sendAsBinary()")}}{{deprecated_inline()}}</dt>
  <dd>另一種 <code>send()</code> 方法，用來送出二進位資料。</dd>
 </dl>
@@ -154,7 +154,7 @@ translation_of: Web/API/XMLHttpRequest
    <li><a href="/zh-TW/docs/Web/API/FormData"><code>FormData</code></a></li>
   </ul>
  </li>
- <li><a class="external" href="http://www.html5rocks.com/en/tutorials/file/xhr2/">HTML5 Rocks — New Tricks in XMLHttpRequest2</a></li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/file/xhr2/">HTML5 Rocks — New Tricks in XMLHttpRequest2</a></li>
  <li><code>Chrome scope availability</code> — how to access XMLHttpRequest from JSM modules etc., which do not have access to DOM
   <ul>
    <li><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>

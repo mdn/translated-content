@@ -48,7 +48,11 @@ text-shadow: unset;</pre>
 
 <dl>
  <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>可选。可以在偏移量之前或之后指定。如果没有指定颜色，则使用 UA（用户代理）自行选择的颜色。 {{ note("如果想确保跨浏览器的一致性，请明确地指定一种颜色") }}</dd>
+ <dd>可选。可以在偏移量之前或之后指定。如果没有指定颜色，则使用 UA（用户代理）自行选择的颜色。
+  <div class="note">
+   <p><strong>备注：</strong>如果想确保跨浏览器的一致性，请明确地指定一种颜色</p>
+  </div>
+ </dd>
  <dt><code>&lt;offset-x&gt; &lt;offset-y&gt;</code></dt>
  <dd>必选。这些长度值指定阴影相对文字的偏移量。<code>&lt;offset-x&gt;</code> 指定水平偏移量，若是负值则阴影位于文字左边。 <code>&lt;offset-y&gt;</code> 指定垂直偏移量，若是负值则阴影位于文字上面。如果两者均为 0，则阴影位于文字正后方（如果设置了<code>&lt;blur-radius&gt; </code>则会产生模糊效果)。<br>
  可用单位请查看 {{ cssxref("&lt;length&gt;") }}。</dd>
