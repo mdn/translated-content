@@ -48,13 +48,13 @@ translation_of: Learn/Server-side/Django/web_application_security
  <li>进入创建作者页面 (地址可能会是：<code><a href="http://127.0.0.1:8000/catalog/author/create/">http://127.0.0.1:8000/catalog/author/create/</a></code>)。</li>
  <li>输入姓名、生日等信息，随后在 Last Name 这个字段里面填入以下的内容：<br>
   <code>&lt;script&gt;alert('Test alert');&lt;/script&gt;</code><br>
-  <img alt="Author Form XSS test" src="https://mdn.mozillademos.org/files/14305/author_create_form_alert_xss.png" style="border-style: solid; border-width: 1px; height: 245px; width: 594px;">
+  <img alt="Author Form XSS test" src="author_create_form_alert_xss.png">
   <div class="note">
   <p><strong>注意：</strong> 这一段代码并没有任何杀伤力，在执行的时候只会在浏览器中弹出一个警告提示框。如果这个警告提示框出现，则表明本网站存在可被 XSS 攻击的漏洞。</p>
   </div>
  </li>
  <li>点击 <strong>Submit</strong> 按钮保存信息。</li>
- <li>保存后的作者信息将会显示为下图的样式。因为 XSS 防护措施的存在，注入代码中的<code>alert()</code>部分并没有执行，而只是用文本的方式直接显示了出来。<img alt="Author detail view XSS test" src="https://mdn.mozillademos.org/files/14307/author_detail_alert_xss.png" style="border-style: solid; border-width: 1px; height: 248px; width: 986px;"></li>
+ <li>保存后的作者信息将会显示为下图的样式。因为 XSS 防护措施的存在，注入代码中的<code>alert()</code>部分并没有执行，而只是用文本的方式直接显示了出来。<img alt="Author detail view XSS test" src="author_detail_alert_xss.png"></li>
 </ol>
 
 <p>如果你有兴趣阅读下页面的 HTML 源码，则会发现危险的字符已被转义成了无害的字符 (例如： <code>&gt;</code> 被转义为了 <code>&amp;gt;</code> )</p>
