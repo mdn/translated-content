@@ -62,7 +62,7 @@ else
 }
 </pre>
 
-<p>不要被<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>物件中，布林值的 <code>true</code> 和 <code>false</code> 給混淆了。任何值只要不是 <code>false</code>、 <code>undefined</code>、 <code>null</code>、 <code>0</code>、 <code>NaN</code>，或者空字串 (<code>""</code>)，並且任何物件，包括其值是 <code>false</code>的布林物件 ，仍然會被條件陳述式視為條件成立。舉例而言：</p>
+<p>不要被<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>物件中，布林值的 <code>true</code> 和 <code>false</code> 給混淆了。任何值只要不是 <code>false</code>、 <code>undefined</code>、 <code>null</code>、 <code>0</code>、 <code>NaN</code>，或者空字串 (<code>""</code>)，並且任何物件，包括其值是 <code>false</code>的布林物件 ，仍然會被條件陳述式視為條件成立。舉例而言：</p>
 
 <pre class="brush: js">var b = new Boolean(false);
 if (b) // this condition is truthy

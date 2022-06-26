@@ -7,7 +7,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <h2 id="问题">问题</h2>
 
-<p>大多数 JavaScript 工具包提供了模拟类似桌面界面行为的客户端小部件库。 滑块，菜单栏，文件列表视图等可以通过 JavaScript，CSS 和 HTML 的组合构建。 由于 HTML 4 规范不提供语义上描述这些窗口小部件的内置标签，因此开发人员通常会使用通用元素（如&lt;div&gt;和&lt;span&gt;）。 虽然这导致了一个看起来像桌面对应的小部件，但标记中通常没有足够的辅助技术可用的语义信息。 网页上的动态内容对于无论何种原因无法查看屏幕的用户来说都是特别有问题的。 股票行情，实时 twitter 消息更新，进度指示器和类似内容以辅助技术（AT）可能不知道的方式修改 DOM。 那就是<a href="/en/ARIA" title="ARIA">ARIA</a>存在的意义。</p>
+<p>大多数 JavaScript 工具包提供了模拟类似桌面界面行为的客户端小部件库。 滑块，菜单栏，文件列表视图等可以通过 JavaScript，CSS 和 HTML 的组合构建。 由于 HTML 4 规范不提供语义上描述这些窗口小部件的内置标签，因此开发人员通常会使用通用元素（如&lt;div&gt;和&lt;span&gt;）。 虽然这导致了一个看起来像桌面对应的小部件，但标记中通常没有足够的辅助技术可用的语义信息。 网页上的动态内容对于无论何种原因无法查看屏幕的用户来说都是特别有问题的。 股票行情，实时 twitter 消息更新，进度指示器和类似内容以辅助技术（AT）可能不知道的方式修改 DOM。 那就是<a href="/en/ARIA">ARIA</a>存在的意义。</p>
 
 <p><em>Example 1: Markup for a tabs widget built without ARIA labeling. There's no information in the markup to describe the widget's form and function.</em></p>
 
@@ -35,7 +35,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <h2 id="ARIA">ARIA</h2>
 
-<p><a class="external" href="http://www.w3.org/WAI/intro/aria.php" title="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a>, 来自 W3C 的网络无障碍计划（<a class="external" href="http://www.w3.org/WAI/" title="http://www.w3.org/WAI/">Web Accessibility Initiative</a>） 的可访问的富互联网应用程序（<strong>Accessible Rich Internet Applications）规范，</strong>提供了一种添加辅助技术（如屏幕阅读器）所需的缺少语义的方法。ARIA 使开发人员可以通过向标记添加特殊属性来更详细地描述其小部件。 旨在填补在动态 web 应用在发现的标准 HTML 标签与桌面式控件之的差距，ARIA 提供了角色和状态以描述大多数常见的 UI 小部件的行为。</p>
+<p><a href="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a>, 来自 W3C 的网络无障碍计划（<a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>） 的可访问的富互联网应用程序（<strong>Accessible Rich Internet Applications）规范，</strong>提供了一种添加辅助技术（如屏幕阅读器）所需的缺少语义的方法。ARIA 使开发人员可以通过向标记添加特殊属性来更详细地描述其小部件。 旨在填补在动态 web 应用在发现的标准 HTML 标签与桌面式控件之的差距，ARIA 提供了角色和状态以描述大多数常见的 UI 小部件的行为。</p>
 
 <p>The ARIA specification is split up into three different types of attributes: roles, states, and properties. Roles describe widgets that aren't otherwise available in HTML 4, such as sliders, menu bars, tabs, and dialogs. Properties describe characteristics of these widgets, such as if they are draggable, have a required element, or have a popup associated with them. States describe the current interaction state of an element, informing the assistive technology if it is busy, disabled, selected, or hidden.</p>
 
@@ -81,7 +81,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
  <li><strong><code>aria-grabbed</code></strong>: indicates the 'grabbed' state of an object in a drag-and-drop operation</li>
 </ul>
 
-<p>(For a full list of ARIA states, consult the <a class="external" href="http://www.w3.org/TR/wai-aria/states_and_properties" title="http://www.w3.org/TR/wai-aria/states_and_properties">ARIA list of states and properties</a>.)</p>
+<p>(For a full list of ARIA states, consult the <a href="http://www.w3.org/TR/wai-aria/states_and_properties">ARIA list of states and properties</a>.)</p>
 
 <p>Developers should use ARIA states to indicate the state of UI widget elements and use CSS attribute selectors to alter the visual appearance based on the state changes (rather than using script to change a class name on the element).</p>
 
@@ -189,7 +189,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <h3 id="异步内容变化">?异步内容变化</h3>
 
-<div class="note">Under construction. See also <a href="/en/ARIA/Live_Regions" title="Live Regions">Live Regions</a></div>
+<div class="note">Under construction. See also <a href="/en/ARIA/Live_Regions">Live Regions</a></div>
 
 <h2 id="键盘导航">?键盘导航</h2>
 
@@ -207,16 +207,16 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
  <li>If in doubt, mimic the standard desktop behavior of the control you are creating.</li>
 </ul>
 
-<p>So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the &lt;ol&gt; in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the &lt;li&gt; elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On Mac OS X, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating <a href="/en/Accessibility/Keyboard-navigable_JavaScript_widgets" title="en/Accessibility/Keyboard-navigable JavaScript widgets">Keyboard-navigable JavaScript widgets</a> describes how to implement this behavior with JavaScript.</p>
+<p>So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the &lt;ol&gt; in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the &lt;li&gt; elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On Mac OS X, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating <a href="/en/Accessibility/Keyboard-navigable_JavaScript_widgets">Keyboard-navigable JavaScript widgets</a> describes how to implement this behavior with JavaScript.</p>
 
-<p>For more detail about desktop-style keyboard navigation conventions, a comprehensive <a class="external" href="http://access.aol.com/dhtml-style-guide-working-group/" title="http://dev.aol.com/dhtml_style_guide">DHTML style guide</a> is available. It provides an overview of how keyboard navigation should work for each type of widget supported by ARIA. The W3C also offers a helpful <a class="external" href="http://www.w3.org/WAI/PF/aria-practices/Overview.html" title="http://www.w3.org/WAI/PF/aria-practices/Overview.html">ARIA Best Practices</a> document that includes keyboard navigation and shortcut conventions for a variety of widgets. </p>
+<p>For more detail about desktop-style keyboard navigation conventions, a comprehensive <a href="http://access.aol.com/dhtml-style-guide-working-group/">DHTML style guide</a> is available. It provides an overview of how keyboard navigation should work for each type of widget supported by ARIA. The W3C also offers a helpful <a href="http://www.w3.org/WAI/PF/aria-practices/Overview.html">ARIA Best Practices</a> document that includes keyboard navigation and shortcut conventions for a variety of widgets. </p>
 
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="/en/ARIA" title="ARIA">ARIA</a></li>
- <li><a href="/en/Accessibility/Web_applications_and_ARIA_FAQ" title="Web applications and ARIA FAQ">Web applications and ARIA FAQ</a></li>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/" title="http://www.w3.org/TR/wai-aria/">WAI-ARIA Specification</a></li>
- <li><a class="external" href="http://www.w3.org/WAI/PF/aria-practices/Overview.html" title="http://www.w3.org/WAI/PF/aria-practices/Overview.html">WAI-ARIA Best Practices</a></li>
- <li><a class="external" href="http://access.aol.com/dhtml-style-guide-working-group/" title="http://dev.aol.com/dhtml_style_guide">DHTML Style Guide</a></li>
+ <li><a href="/en/ARIA">ARIA</a></li>
+ <li><a href="/en/Accessibility/Web_applications_and_ARIA_FAQ">Web applications and ARIA FAQ</a></li>
+ <li><a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA Specification</a></li>
+ <li><a href="http://www.w3.org/WAI/PF/aria-practices/Overview.html">WAI-ARIA Best Practices</a></li>
+ <li><a href="http://access.aol.com/dhtml-style-guide-working-group/">DHTML Style Guide</a></li>
 </ul>

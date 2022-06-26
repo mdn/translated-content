@@ -72,9 +72,9 @@ findIndex(function(element, index, array) { /* ... */ }, thisArg)
 
 `callbackFn` は 3 つの引数で呼び出されます。
 
-1.  その要素の値
-2.  その要素の位置
-3.  走査されている配列オブジェクト
+1. その要素の値
+2. その要素の位置
+3. 走査されている配列オブジェクト
 
 `thisArg` 引数を `findIndex()` に与えた場合、それぞれの `callbackFn` の呼び出し時に、その与えたオブジェクトが `this` として使用されます。この引数を省略した場合は {{jsxref("undefined")}} になります。
 

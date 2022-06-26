@@ -21,7 +21,7 @@ original_slug: Learn/JavaScript/Objects/Inheritance
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td>基本的计算机素养，对 HTML 和 CSS 有基本的理解，熟悉 JavaScript 基础（参见 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps">First steps</a> 和 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Building_blocks">Building blocks</a>）以及面向对象的 JavaScript (OOJS) 基础（参见 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>）。</td>
+   <td>基本的计算机素养，对 HTML 和 CSS 有基本的理解，熟悉 JavaScript 基础（参见 <a href="/zh-CN/docs/Learn/JavaScript/First_steps">First steps</a> 和 <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks">Building blocks</a>）以及面向对象的 JavaScript (OOJS) 基础（参见 <a href="/zh-CN/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>）。</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -32,7 +32,7 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 
 <h2 id="原型式的继承">原型式的继承</h2>
 
-<p>到目前为止我们已经了解了一些关于原型链的实现方式以及成员变量是如何通过它来实现继承，但是之前涉及到的大部分都是浏览器内置函数（比如 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>、<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>、<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> 和 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>），那么我们如何创建一个继承自另一对象的 JavaScript 对象呢？</p>
+<p>到目前为止我们已经了解了一些关于原型链的实现方式以及成员变量是如何通过它来实现继承，但是之前涉及到的大部分都是浏览器内置函数（比如 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>、<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>、<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> 和 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>），那么我们如何创建一个继承自另一对象的 JavaScript 对象呢？</p>
 
 <p>正如前面课程所提到的，有些人认为 JavaScript 并不是真正的面向对象语言，在经典的面向对象语言中，您可能倾向于定义类对象，然后您可以简单地定义哪些类继承哪些类（参考<a href="http://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm">C++ inheritance</a>里的一些简单的例子），JavaScript 使用了另一套实现方式，继承的对象函数并不是通过复制而来，而是通过原型链继承（通常被称为 <strong>原型式继承 —— </strong><strong>prototypal inheritance）</strong>。</p>
 
@@ -281,7 +281,7 @@ leia.farewell();
 
 <p>但这里有一个小问题。</p>
 
-<p>不同于老式的构造函数，其中 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> 运算符</a>进行初始化 <code>this</code> 到一个新分配的对象。这里不会为由 <a href="/zh-CN/docs/Web/JavaScript/Reference/Classes/extends" >extends</a> 关键字定义的类自动初始化，例如，子类。</p>
+<p>不同于老式的构造函数，其中 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> 运算符</a>进行初始化 <code>this</code> 到一个新分配的对象。这里不会为由 <a href="/zh-CN/docs/Web/JavaScript/Reference/Classes/extends">extends</a> 关键字定义的类自动初始化，例如，子类。</p>
 
 <p>因此运行上面的代码会报错：</p>
 

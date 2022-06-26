@@ -36,7 +36,7 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 <p>在传统的 OOP 中，首先定义“类”，此后创建对象实例时，类中定义的所有属性和方法都被复制到实例中。在 JavaScript 中并不如此复制——而是在对象实例和它的构造器之间建立一个链接（它是__proto__属性，是从构造函数的<code>prototype</code>属性派生的），之后通过上溯原型链，在构造器中找到这些属性和方法。</p>
 
 <div class="note">
-<p><strong>注意：</strong>理解对象的原型（可以通过<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(obj)</a></code>或者已被弃用的<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code>属性获得）与构造函数的<code>prototype</code>属性之间的区别是很重要的。前者是每个实例上都有的属性，后者是构造函数的属性。也就是说，<code>Object.getPrototypeOf(new Foobar())</code>和<code>Foobar.prototype</code>指向着同一个对象。</p>
+<p><strong>注意：</strong>理解对象的原型（可以通过<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(obj)</a></code>或者已被弃用的<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code>属性获得）与构造函数的<code>prototype</code>属性之间的区别是很重要的。前者是每个实例上都有的属性，后者是构造函数的属性。也就是说，<code>Object.getPrototypeOf(new Foobar())</code>和<code>Foobar.prototype</code>指向着同一个对象。</p>
 </div>
 
 <p>以上描述很抽象；我们先看一个例子。</p>

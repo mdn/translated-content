@@ -233,7 +233,7 @@ const guessField = document.querySelector('.guessField');
 let guessCount = 1;
 let resetButton;</pre>
 
-<p>這一區塊的程式碼設定我們的程式中用來儲存資料的變數。簡單的來說，「變數」是「值」的容器(值可以是數字、一串文字或是其他東西)。你可以用「關鍵字」(keyword) <code>let</code>(或是<code>var</code>)後面加上變數的名字來建立變數(在<a href="https://developer.mozilla.org/zh-TW/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let">之後的文章</a>你會看到兩者的差別)。利用關鍵字 <code>const</code> 建立常數，常數(Constant)是用來儲存你不會更改的值。我們用常數儲存使用者介面的參照，使用者介面中的文字可能會改變，但是參照所指的HTML元素的不會改變。</p>
+<p>這一區塊的程式碼設定我們的程式中用來儲存資料的變數。簡單的來說，「變數」是「值」的容器(值可以是數字、一串文字或是其他東西)。你可以用「關鍵字」(keyword) <code>let</code>(或是<code>var</code>)後面加上變數的名字來建立變數(在<a href="/zh-TW/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let">之後的文章</a>你會看到兩者的差別)。利用關鍵字 <code>const</code> 建立常數，常數(Constant)是用來儲存你不會更改的值。我們用常數儲存使用者介面的參照，使用者介面中的文字可能會改變，但是參照所指的HTML元素的不會改變。</p>
 
 <p>藉由等於符號(<code>=</code>)後面加上一個值，你可以指定變數或是常數的值。</p>
 
@@ -257,7 +257,7 @@ let resetButton;</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: 從<a href="https://developer.mozilla.org/en-US/docs/user:chrisdavidmills/variables">下一篇文章</a>開始，你會學到更多有關變數的事。</p>
+<p><strong>Note</strong>: 從<a href="/en-US/docs/user:chrisdavidmills/variables">下一篇文章</a>開始，你會學到更多有關變數的事。</p>
 </div>
 
 <h3 id="函式">函式</h3>
@@ -549,7 +549,7 @@ greeting;</pre>
 
 <pre class="brush: js notranslate">guessSubmit.addEventListener('click', checkGuess);</pre>
 
-<p>這裡我們為 <code>guessSubmit</code> 按鈕添加一個事件偵聽器。這是一個函式，它接受兩個輸入值（稱為<em>參數</em>） - 我們正在監聽的事件類型字串（本例中的 <code>click</code>），以及我們想要在事件發生時運行的程式碼（在這種情況下是<code>checkGuess()</code>函式） — 請注意，在編寫 <a href="https://developer.mozilla.org/zh-TW/docs/Web/API/EventTarget/addEventListener" title="EventTarget.addEventListener() 方法能將指定的事件監聽器註冊到 EventTarget 實作物件上。EventTarget 可能是 Document 中的 Element 物件、Document 物件本身、Window 物件，或是其它支援事件的物件（如：XMLHttpRequest）。"><code>addEventListener()</code></a> 內部時我們不需要為函式加上括號。</p>
+<p>這裡我們為 <code>guessSubmit</code> 按鈕添加一個事件偵聽器。這是一個函式，它接受兩個輸入值（稱為<em>參數</em>） - 我們正在監聽的事件類型字串（本例中的 <code>click</code>），以及我們想要在事件發生時運行的程式碼（在這種情況下是<code>checkGuess()</code>函式） — 請注意，在編寫 <a href="/zh-TW/docs/Web/API/EventTarget/addEventListener"><code>addEventListener()</code></a> 內部時我們不需要為函式加上括號。</p>
 
 <p>現在保存並重整頁面，現在你的範例應該可以正常執行了。現在唯一的問題是，如果你猜對了正確的答案或用完了猜測機會，那麼遊戲就會出錯，因為我們還沒有定義 <code>setGameOver()</code> — 遊戲結束後應該執行的函式。現在讓我們加上缺少的程式碼並完成範例功能。</p>
 

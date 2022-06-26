@@ -19,7 +19,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 
 其值不是 {{jsxref("undefined")}} 或 {{jsxref("null")}} 的任何对象（包括其值为 `false` 的布尔对象）在传递给条件语句时都将计算为 `true`。例如，以下 {{jsxref("Statements/if...else", "if")}} 语句中的条件评估为 `true`：
 
-
 ```js
 const x = new Boolean(false);
 if (x) {

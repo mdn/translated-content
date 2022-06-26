@@ -16,8 +16,8 @@ element.textContent = "this is some sample text";
 <h2 id="Notes" name="Notes">描述</h2>
 
 <ul>
- <li><code>textContent</code> returns <code>null</code> if the element is a <a href="/en-US/docs/DOM/document" title="DOM/Document">document</a>, a document type, or a notation. To grab all of the text and CDATA data for the whole document, one could use<code> <a href="/en-US/docs/DOM/document.documentElement" title="DOM/document.documentElement">document.documentElement</a>.textContent</code>.</li>
- <li>If the node is a CDATA section, a comment, a processing instruction, or a text node, <code>textContent</code> returns the text inside this node (the <a href="/en-US/docs/DOM/Node.nodeValue" title="DOM/Node/NodeValue/Node.nodeValue">nodeValue</a>).</li>
+ <li><code>textContent</code> returns <code>null</code> if the element is a <a href="/en-US/docs/DOM/document">document</a>, a document type, or a notation. To grab all of the text and CDATA data for the whole document, one could use<code> <a href="/en-US/docs/DOM/document.documentElement">document.documentElement</a>.textContent</code>.</li>
+ <li>If the node is a CDATA section, a comment, a processing instruction, or a text node, <code>textContent</code> returns the text inside this node (the <a href="/en-US/docs/DOM/Node.nodeValue">nodeValue</a>).</li>
  <li>For other node types, <code>textContent</code> returns the concatenation of the <code>textContent</code> attribute value of every child node, excluding comments and processing instruction nodes. This is an empty string if the node has no children.</li>
  <li>Setting this property on a node removes all of its children and replaces them with a single text node with the given value.</li>
 </ul>
@@ -74,36 +74,13 @@ document.getElementById("divA").textContent = "This is some text";
 }
 </pre>
 
+<h2 id="Specifications">規範</h2>
+
+{{Specifications}}
+
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-{{Compat("api.Node.textContent")}}
-
-<h2 id="Specifications" name="Specifications">規範</h2>
-
-<table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-node-textcontent','Node.textContent')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No changes versus DOM4</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4','#dom-node-textcontent','Node.textContent')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','core.html#Node3-textContent','Node.textContent')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Introduced</td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
 <h2 id="參見">參見</h2>
 

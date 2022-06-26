@@ -258,10 +258,10 @@ a { display: block; margin-bottom: 0.5em }
 
 `tel:` リンクは端末の能力によって様々な動作をします。
 
-  - 携帯電話ではその番号に自動ダイヤルします。
-  - 多くのオペレーティングシステムには、 Skype や FaceTime のように電話をかけるプログラムがあります。
-  - ウェブサイトは {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}} によって `web.skype.com` などを用いて電話を掛けることができます。
-  - 他にも、連絡先の電話番号をしたり、他の端末へ電話番号を送信したりする動作があります。
+- 携帯電話ではその番号に自動ダイヤルします。
+- 多くのオペレーティングシステムには、 Skype や FaceTime のように電話をかけるプログラムがあります。
+- ウェブサイトは {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}} によって `web.skype.com` などを用いて電話を掛けることができます。
+- 他にも、連絡先の電話番号をしたり、他の端末へ電話番号を送信したりする動作があります。
 
 `tel` URL スキームについての構文、追加機能、その他の詳細について、詳しくは {{RFC(3966)}} をご覧ください。
 
@@ -468,7 +468,7 @@ document.querySelector('a').addEventListener('click', event =>
 
 間隔は {{CSSxRef("margin")}} などの CSS プロパティを使用して作成することができます。
 
-  - [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
+- [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
 
 ## 仕様書
 

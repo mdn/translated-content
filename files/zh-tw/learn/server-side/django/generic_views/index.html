@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Django/Generic_views
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}</div>
 
-<p>本教程擴充了 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 網站，為書本與作者增加列表與細節頁面。此處我們將學到通用類別視圖，並演示如何降低你必須為一般使用案例撰寫的程式碼數量。我們也會更加深入 URL 處理細節，演示如何實施基本模式匹配。</p>
+<p>本教程擴充了 <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 網站，為書本與作者增加列表與細節頁面。此處我們將學到通用類別視圖，並演示如何降低你必須為一般使用案例撰寫的程式碼數量。我們也會更加深入 URL 處理細節，演示如何實施基本模式匹配。</p>
 
 <table>
  <tbody>
@@ -24,7 +24,7 @@ translation_of: Learn/Server-side/Django/Generic_views
 
 <h2 id="Overview">Overview</h2>
 
-<p>本教程中，通過為書本和作者添加列表和詳細信息頁面，我們將完成第一個版本的 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 網站（或者更準確地說，我們將向您展示如何實現書頁，並讓您自己創建作者頁面！） ）</p>
+<p>本教程中，通過為書本和作者添加列表和詳細信息頁面，我們將完成第一個版本的 <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 網站（或者更準確地說，我們將向您展示如何實現書頁，並讓您自己創建作者頁面！） ）</p>
 
 <p>該過程在創建索引頁面，我們在上一個教程中展示了該頁面。我們仍然需要創建URL地圖，視圖和模板。主要區別在於，對於詳細信息頁面，我們還有一個額外的挑戰，即從URL對於這些頁面，我們將演示一種完全不同的視圖類型：基於類別的通用列表和詳細視圖。這些可以顯著減少所需的視圖代碼量，有助於更容易編寫和維護。</p>
 
@@ -474,11 +474,11 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 
 <p>Click the <strong>All books</strong> link to display the list of books. </p>
 
-<p><img alt="Book List Page" src="https://mdn.mozillademos.org/files/14049/book_list_page_no_pagination.png" style="border-style: solid; border-width: 1px; display: block; height: 216px; margin: 0px auto; width: 823px;"></p>
+<p><img alt="Book List Page" src="book_list_page_no_pagination.png"></p>
 
 <p>Then click a link to one of your books. If everything is set up correctly, you should see something like the following screenshot.</p>
 
-<p><img alt="Book Detail Page" src="https://mdn.mozillademos.org/files/14051/book_detail_page_no_pagination.png" style="border-style: solid; border-width: 1px; display: block; height: 783px; margin: 0px auto; width: 926px;"></p>
+<p><img alt="Book Detail Page" src="book_detail_page_no_pagination.png"></p>
 
 <h2 id="Pagination">Pagination</h2>
 
@@ -534,7 +534,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 
 <p>The pagination links are displayed on the bottom, with next/previous links being displayed depending on which page you're on.</p>
 
-<p><img alt="Book List Page - paginated" src="https://mdn.mozillademos.org/files/14057/book_list_paginated.png" style="border-style: solid; border-width: 1px; display: block; height: 216px; margin: 0px auto; width: 924px;"></p>
+<p><img alt="Book List Page - paginated" src="book_list_paginated.png"></p>
 
 <h2 id="Challenge_yourself">Challenge yourself</h2>
 
@@ -561,12 +561,12 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 
 <p>When you are finished, your pages should look something like the screenshots below.</p>
 
-<p><img alt="Author List Page" src="https://mdn.mozillademos.org/files/14053/author_list_page_no_pagination.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Author List Page" src="author_list_page_no_pagination.png"></p>
 
 <ul>
 </ul>
 
-<p><img alt="Author Detail Page" src="https://mdn.mozillademos.org/files/14055/author_detail_page_no_pagination.png" style="border-style: solid; border-width: 1px; display: block; height: 358px; margin: 0px auto; width: 825px;"></p>
+<p><img alt="Author Detail Page" src="author_detail_page_no_pagination.png"></p>
 
 <ul>
 </ul>

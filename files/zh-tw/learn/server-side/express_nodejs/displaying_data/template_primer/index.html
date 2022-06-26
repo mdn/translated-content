@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 
 <h2 id="Express_模板選擇">Express 模板選擇</h2>
 
-<p>Express 可以與許多不同的<a href="https://expressjs.com/zh-tw/guide/using-template-engines.html">模板渲染引擎</a>一起使用。在本教程中，我們使用 <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a>（以前稱為 <em>Jade</em>）作為模板。這是最流行的 Node 模板語言，並且官方將自身描述為 “用於編寫 HTML，語法乾淨且空格敏感，受 <a class="external external-icon" href="http://haml.info/" rel="noopener">Haml </a>影響很大”。</p>
+<p>Express 可以與許多不同的<a href="https://expressjs.com/zh-tw/guide/using-template-engines.html">模板渲染引擎</a>一起使用。在本教程中，我們使用 <a href="https://pugjs.org/api/getting-started.html">Pug</a>（以前稱為 <em>Jade</em>）作為模板。這是最流行的 Node 模板語言，並且官方將自身描述為 “用於編寫 HTML，語法乾淨且空格敏感，受 <a href="http://haml.info/">Haml </a>影響很大”。</p>
 
 <p>不同的模板語言使用不同的方法，來定義佈局和標記數據的佔位符 — 一些使用 HTML 來定義佈局，而另一些則使用可以編譯為 HTML 的不同標記格式。 Pug 是第二種類型；它使用 HTML 的<em>表示形式</em>，其中任何行中的第一個單詞，通常表示HTML元素，後續行中的縮進，用於表示嵌套在這些元素中的任何內容。結果是一個頁面定義直接轉換為 HTML，但可以說更簡潔，更容易閱讀。</p>
 
@@ -17,7 +17,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 
 <h2 class="highlight-spanned" id="Template_configuration">Template configuration</h2>
 
-<p>The <em>LocalLibrary</em> was configured to use <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a> when we <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">created the skeleton website</a>. You should see the pug module included as a dependency in the website's <strong>package.json</strong> file, and the following configuration settings in the <strong>app.js</strong> file. The settings tell us that we're using pug as the view engine, and that <em>Express</em> should search for templates in the <strong>/views</strong> subdirectory.</p>
+<p>The <em>LocalLibrary</em> was configured to use <a href="https://pugjs.org/api/getting-started.html">Pug</a> when we <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">created the skeleton website</a>. You should see the pug module included as a dependency in the website's <strong>package.json</strong> file, and the following configuration settings in the <strong>app.js</strong> file. The settings tell us that we're using pug as the view engine, and that <em>Express</em> should search for templates in the <strong>/views</strong> subdirectory.</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">// View engine setup.
 app.set('views', path.join(__dirname, 'views'));
@@ -97,7 +97,7 @@ p This line has an un-escaped string: !{'&lt;em&gt; is emphasised&lt;/em&gt;'}, 
 <p><strong>Tip:</strong> You will almost always want to escape data from users (via the <strong><code>#{}</code></strong> syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.</p>
 </div>
 
-<p>You can use the pipe ('<strong>|</strong>') character at the beginning of a line to indicate "<a class="external external-icon" href="https://pugjs.org/language/plain-text.html" rel="noopener">plain text</a>". For example, the additional text shown below will be displayed on the same line as the preceding anchor, but will not be linked.</p>
+<p>You can use the pipe ('<strong>|</strong>') character at the beginning of a line to indicate "<a href="https://pugjs.org/language/plain-text.html">plain text</a>". For example, the additional text shown below will be displayed on the same line as the preceding anchor, but will not be linked.</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">a(href='http://someurl/') Link text
 | Plain text</code></pre>
@@ -115,13 +115,13 @@ else
   each val in [1, 2, 3, 4, 5]
     li= val</code></pre>
 
-<p>The syntax also supports comments (that can be rendered in the output—or not—as you choose), mixins to create reusable blocks of code, case statements, and many other features. For more detailed information see <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">The Pug docs</a>.</p>
+<p>The syntax also supports comments (that can be rendered in the output—or not—as you choose), mixins to create reusable blocks of code, case statements, and many other features. For more detailed information see <a href="https://pugjs.org/api/getting-started.html">The Pug docs</a>.</p>
 
 <h2 class="highlight-spanned" id="Extending_templates">Extending templates</h2>
 
 <p>Across a site, it is usual for all pages to have a common structure, including standard HTML markup for the head, footer, navigation, etc. Rather than forcing developers to duplicate this "boilerplate" in every page, <em>Pug</em> allows you to declare a base template and then extend it, replacing just the bits that are different for each specific page.</p>
 
-<p>For example, the base template <strong>layout.pug</strong> created in our <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">skeleton project</a> looks like this:</p>
+<p>For example, the base template <strong>layout.pug</strong> created in our <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">skeleton project</a> looks like this:</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">doctype html
 html

@@ -57,7 +57,7 @@ translation_of: Web/HTTP/CORS
 
 <p>我們將在此展示三種情境，來說明跨來源資源共用如何運作。所有的範例都使用 {{domxref("XMLHttpRequest")}} 物件，<code>XMLHttpRequest</code> 可以讓任何支援的瀏覽器進行跨站請求。</p>
 
-<p>本節的 JavaScript 程式碼片段（以及處理跨站請求的伺服器端程式運作實體）可以在 <a class="external external-icon" href="http://arunranga.com/examples/access-control/">http://arunranga.com/examples/access-control/</a> 看到，並可以運行在支援跨站 {{domxref("XMLHttpRequest")}} 請求的瀏覽器上。</p>
+<p>本節的 JavaScript 程式碼片段（以及處理跨站請求的伺服器端程式運作實體）可以在 <a href="http://arunranga.com/examples/access-control/">http://arunranga.com/examples/access-control/</a> 看到，並可以運行在支援跨站 {{domxref("XMLHttpRequest")}} 請求的瀏覽器上。</p>
 
 <p>對於伺服器端的跨來源資源共用討論（包含 PHP 範例）可參考<a href="/zh-TW/docs/Web/HTTP/Server-Side_Access_Control">伺服器端存取控制</a>。</p>
 
@@ -99,7 +99,7 @@ translation_of: Web/HTTP/CORS
 
 <div class="note"><strong>備註：</strong>雖然這些都是網頁目前已經可以送出的跨站請求，但除非伺服器回傳適當標頭，否則不會有資料回傳，因此不允許跨站請求的網站無須擔心會受到新的 HTTP 存取控制影響。</div>
 
-<div class="note"><strong>備註：</strong>WebKit Nightly 與 Safari Technology Preview 對 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 及 {{HTTPHeader("Content-Language")}} 標頭值加入了額外的限制。假如這三個標頭中有任一個擁有「非標準」值，WebKit／Safari 就不會將該請求視為「簡單請求」。WebKit／Safari 並沒有於文件中定義何者為「非標準」值，只有在以下 WebKit bugs 中討論：<a href="https://bugs.webkit.org/show_bug.cgi?id=165178" rel="nofollow noreferrer">Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language</a>、<a href="https://bugs.webkit.org/show_bug.cgi?id=165566" rel="nofollow noreferrer">Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS</a> 和 <a href="https://bugs.webkit.org/show_bug.cgi?id=166363" rel="nofollow noreferrer">Switch to a blacklist model for restricted Accept headers in simple CORS requests</a>。其它的瀏覽器沒有實作這些額外的限制，因為這並不是規範中的一部分。</div>
+<div class="note"><strong>備註：</strong>WebKit Nightly 與 Safari Technology Preview 對 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 及 {{HTTPHeader("Content-Language")}} 標頭值加入了額外的限制。假如這三個標頭中有任一個擁有「非標準」值，WebKit／Safari 就不會將該請求視為「簡單請求」。WebKit／Safari 並沒有於文件中定義何者為「非標準」值，只有在以下 WebKit bugs 中討論：<a href="https://bugs.webkit.org/show_bug.cgi?id=165178">Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language</a>、<a href="https://bugs.webkit.org/show_bug.cgi?id=165566">Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS</a> 和 <a href="https://bugs.webkit.org/show_bug.cgi?id=166363">Switch to a blacklist model for restricted Accept headers in simple CORS requests</a>。其它的瀏覽器沒有實作這些額外的限制，因為這並不是規範中的一部分。</div>
 
 <p>例如，假設 <code class="plain">http://foo.example</code> 網域上的網頁內容想要呼叫 <code class="plain">http://bar.other</code> 網域內的內容，以下程式碼可能會在 foo.example 上執行：</p>
 
@@ -195,7 +195,7 @@ Content-Type: application/xml
  <li><strong>或是假如</strong>請求中有一個 {{domxref("ReadableStream")}} 物件被於上傳。</li>
 </ul>
 
-<div class="note"><strong>備註：</strong>WebKit Nightly 與 Safari Technology Preview 對 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 及 {{HTTPHeader("Content-Language")}} 標頭值加入了額外的限制。假如這三個標頭中有任一個擁有「非標準」值，WebKit／Safari 便會傳送預檢請求。WebKit／Safari 並沒有於文件中定義何者為「非標準」值，只有在以下 WebKit bugs 中討論：<a href="https://bugs.webkit.org/show_bug.cgi?id=165178" rel="nofollow noreferrer">Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language</a>、<a href="https://bugs.webkit.org/show_bug.cgi?id=165566" rel="nofollow noreferrer">Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS</a> 和 <a href="https://bugs.webkit.org/show_bug.cgi?id=166363" rel="nofollow noreferrer">Switch to a blacklist model for restricted Accept headers in simple CORS requests</a>。其它的瀏覽器沒有實作這些額外的限制，因為這並不是規範中的一部分。</div>
+<div class="note"><strong>備註：</strong>WebKit Nightly 與 Safari Technology Preview 對 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 及 {{HTTPHeader("Content-Language")}} 標頭值加入了額外的限制。假如這三個標頭中有任一個擁有「非標準」值，WebKit／Safari 便會傳送預檢請求。WebKit／Safari 並沒有於文件中定義何者為「非標準」值，只有在以下 WebKit bugs 中討論：<a href="https://bugs.webkit.org/show_bug.cgi?id=165178">Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language</a>、<a href="https://bugs.webkit.org/show_bug.cgi?id=165566">Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS</a> 和 <a href="https://bugs.webkit.org/show_bug.cgi?id=166363">Switch to a blacklist model for restricted Accept headers in simple CORS requests</a>。其它的瀏覽器沒有實作這些額外的限制，因為這並不是規範中的一部分。</div>
 
 <p>下面是一段會引起預檢請求的範例：</p>
 
@@ -331,15 +331,15 @@ Access-Control-Max-Age: 86400</pre>
 <p>但若難以實施以上方法，仍有其他可行的方式：</p>
 
 <ol>
- <li>建立一個<a href="#Simple_requests">簡單請求</a>來測定（使用 Fetch API 的 <a href="/zh-TW/docs/Web/API/Response/url">Response.url</a> 或 <a href="https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/responseURL">XHR.responseURL</a> 來測定預檢請求最終真正導向的 URL）。</li>
- <li>建立另一個請求（「真正的」請求）傳送至第一步自 <a href="/zh-TW/docs/Web/API/Response/url">Response.url</a> 或 <a href="https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/responseURL">XHR.responseURL</a> 所獲得的 URL。</li>
+ <li>建立一個<a href="#Simple_requests">簡單請求</a>來測定（使用 Fetch API 的 <a href="/zh-TW/docs/Web/API/Response/url">Response.url</a> 或 <a href="/zh-TW/docs/Web/API/XMLHttpRequest/responseURL">XHR.responseURL</a> 來測定預檢請求最終真正導向的 URL）。</li>
+ <li>建立另一個請求（「真正的」請求）傳送至第一步自 <a href="/zh-TW/docs/Web/API/Response/url">Response.url</a> 或 <a href="/zh-TW/docs/Web/API/XMLHttpRequest/responseURL">XHR.responseURL</a> 所獲得的 URL。</li>
 </ol>
 
 <p>然而，假如請求是由於存在 <code>Authorization</code> 標頭而觸發預檢，便無法利用以上的步驟來解除限制。並且直到你對被請求的伺服擁有控制權前，沒有其他方式能夠解決。</p>
 
 <h3 id="附帶身分驗證的請求">附帶身分驗證的請求</h3>
 
-<p>{{domxref("XMLHttpRequest")}} 或 <a href="https://developer.mozilla.org/zh-TW/docs/Web/API/Fetch_API">Fetch</a> 在 CORS 中最有趣的功能為傳送基於 <a href="/zh-TW/docs/Web/HTTP/Cookies">HTTP cookies</a> 和 HTTP 認證（Authentication）資訊的「身分驗證（credentialed）」請求。預設情況下，在跨站 {{domxref("XMLHttpRequest")}} 或 <a href="https://developer.mozilla.org/zh-TW/docs/Web/API/Fetch_API">Fetch</a> 呼叫時，瀏覽器<strong>不會</strong>送出身分驗證。必須要於 {{domxref("XMLHttpRequest")}} 物件中或是在呼叫 {{domxref("Request")}} 建構式時設置一個特定的旗標。</p>
+<p>{{domxref("XMLHttpRequest")}} 或 <a href="/zh-TW/docs/Web/API/Fetch_API">Fetch</a> 在 CORS 中最有趣的功能為傳送基於 <a href="/zh-TW/docs/Web/HTTP/Cookies">HTTP cookies</a> 和 HTTP 認證（Authentication）資訊的「身分驗證（credentialed）」請求。預設情況下，在跨站 {{domxref("XMLHttpRequest")}} 或 <a href="/zh-TW/docs/Web/API/Fetch_API">Fetch</a> 呼叫時，瀏覽器<strong>不會</strong>送出身分驗證。必須要於 {{domxref("XMLHttpRequest")}} 物件中或是在呼叫 {{domxref("Request")}} 建構式時設置一個特定的旗標。</p>
 
 <p>在這個範例中，一個來自 <code class="plain">http://foo.example</code> 的內容發出了一個簡單的 GET 去請求一個 <code class="plain">http://bar.other</code> 的資源，且該站會設定 Cookies。foo.example 的內容可能包含類似的 JavaScript：</p>
 
@@ -452,7 +452,7 @@ Content-Type: text/plain
 <pre class="brush: none">Access-Control-Allow-Credentials: true
 </pre>
 
-<p><a class="internal" href="#Requests_with_credentials">驗證請求</a>在上面的討論當中。</p>
+<p><a href="#Requests_with_credentials">驗證請求</a>在上面的討論當中。</p>
 
 <h3 id="Access-Control-Allow-Methods">Access-Control-Allow-Methods</h3>
 
@@ -461,7 +461,7 @@ Content-Type: text/plain
 <pre class="brush: none">Access-Control-Allow-Methods: &lt;method&gt;[, &lt;method&gt;]*
 </pre>
 
-<p>一個<a class="internal" href="#Preflighted_requests">預檢請求的範例已在上面提供</a>，其中包含了一個回傳此標頭予瀏覽器的例子。</p>
+<p>一個<a href="#Preflighted_requests">預檢請求的範例已在上面提供</a>，其中包含了一個回傳此標頭予瀏覽器的例子。</p>
 
 <h3 id="Access-Control-Allow-Headers">Access-Control-Allow-Headers</h3>
 
@@ -494,7 +494,7 @@ Content-Type: text/plain
 <pre class="brush: none">Access-Control-Request-Method: &lt;method&gt;
 </pre>
 
-<p>此標頭的相關範例可參考<a class="internal" href="#Preflighted_requests">上方說明</a>。</p>
+<p>此標頭的相關範例可參考<a href="#Preflighted_requests">上方說明</a>。</p>
 
 <h3 id="Access-Control-Request-Headers">Access-Control-Request-Headers</h3>
 
@@ -503,7 +503,7 @@ Content-Type: text/plain
 <pre class="brush: none">Access-Control-Request-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*
 </pre>
 
-<p>此標頭的相關範例可參考<a class="internal" href="#Preflighted_requests">上方說明</a>。</p>
+<p>此標頭的相關範例可參考<a href="#Preflighted_requests">上方說明</a>。</p>
 
 <h2 id="規範">規範</h2>
 
@@ -523,12 +523,12 @@ Content-Type: text/plain
 <h2 id="參見">參見</h2>
 
 <ul>
- <li><a class="external" href="http://arunranga.com/examples/access-control/">Code Samples Showing <code>XMLHttpRequest</code> and Cross-Origin Resource Sharing</a></li>
+ <li><a href="http://arunranga.com/examples/access-control/">Code Samples Showing <code>XMLHttpRequest</code> and Cross-Origin Resource Sharing</a></li>
  <li><a href="https://github.com/jackblackevo/cors-jsonp-sample">Client-Side &amp; Server-Side (Java) sample for Cross-Origin Resource Sharing (CORS)</a></li>
- <li><a class="internal" href="/zh-TW/docs/Web/HTTP/Server-Side_Access_Control">Cross-Origin Resource Sharing From a Server-Side Perspective (PHP, etc.)</a></li>
- <li><a class="external" href="http://www.w3.org/TR/cors/">Cross-Origin Resource Sharing specification</a></li>
+ <li><a href="/zh-TW/docs/Web/HTTP/Server-Side_Access_Control">Cross-Origin Resource Sharing From a Server-Side Perspective (PHP, etc.)</a></li>
+ <li><a href="http://www.w3.org/TR/cors/">Cross-Origin Resource Sharing specification</a></li>
  <li>{{domxref("XMLHttpRequest")}}</li>
  <li><a href="/zh-TW/docs/Web/API/Fetch_API">Fetch API</a></li>
- <li><a class="external" href="http://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx">Using CORS with All (Modern) Browsers</a></li>
+ <li><a href="http://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx">Using CORS with All (Modern) Browsers</a></li>
  <li><a href="http://www.html5rocks.com/en/tutorials/cors/">Using CORS - HTML5 Rocks</a></li>
 </ul>

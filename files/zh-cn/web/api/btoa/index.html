@@ -1,21 +1,20 @@
 ---
-title: WindowOrWorkerGlobalScope.btoa()
+title: btoa()
 slug: Web/API/btoa
 tags:
   - API
   - Base64
   - Web
-  - WindowOrWorkerGlobalScope
   - 参考
   - 字符串
   - 数据
   - 方法
-translation_of: Web/API/WindowOrWorkerGlobalScope/btoa
+translation_of: Web/API/btoa
 original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p><strong><code>WindowOrWorkerGlobalScope.btoa()</code> </strong> 从 {{jsxref("String")}} 对象中创建一个 base-64 编码的 ASCII 字符串，其中字符串中的每个字符都被视为一个二进制数据字节。</p>
+<p><strong><code>btoa()</code> </strong> 从 {{jsxref("String")}} 对象中创建一个 base-64 编码的 ASCII 字符串，其中字符串中的每个字符都被视为一个二进制数据字节。</p>
 
 <div class="note">
 <p><strong>Note</strong>: 由于这个函数将每个字符视为二进制数据的字节，而不管实际组成字符的字节数是多少，所以如果任何字符的{{Glossary("code point", "码位")}}超出 <code>0x00</code> ~ <code>0xFF</code> 这个范围，则会引发 <code>InvalidCharacterError</code> 异常。请参阅 <a href="#unicode_字符串">Unicode_字符串</a> ，该示例演示如何编码含有码位超出 <code>0x00</code> ~ <code>0xFF</code> 范围的字符的字符串。</p>
@@ -45,7 +44,7 @@ let decodedData = window.atob(encodedData);    // 解码
 
 <h2 id="备注">备注</h2>
 
-<p>你可以使用此方法对可能导致通信问题的数据进行编码，传输，然后使用 <code>{{domxref("WindowOrWorkerGlobalScope.atob","atob()")}}</code> 方法再次解码数据。例如，可以编码控制字符，包括 ASCII 值为 0 到 31 的字符。</p>
+<p>你可以使用此方法对可能导致通信问题的数据进行编码，传输，然后使用 {{domxref("atob()")}} 方法再次解码数据。例如，可以编码控制字符，包括 ASCII 值为 0 到 31 的字符。</p>
 
 <p>在用 JavaScript 编写 XPCOM 组件时，<code>btoa()</code> 方法也是可用的，虽然全局对象已经不是 {{domxref("Window")}} 了。</p>
 
@@ -142,6 +141,6 @@ atou('SSDimaEgVW5pY29kZSE='); // "I ♡ Unicode!"
 <ul>
  <li>{{domxref("WindowBase64/Base64_encoding_and_decoding", "Base64 encoding and decoding")}}</li>
  <li><a href="/zh-CN/docs/data_URIs"><code>data</code> URI</a></li>
- <li>{{domxref("WindowOrWorkerGlobalScope.atob","atob()")}}</li>
+ <li>{{domxref("atob()")}}</li>
  <li><a href="/zh-CN/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
 </ul>

@@ -31,7 +31,7 @@ translation_of: Web/API/HTMLSlotElement
 ## イベント
 
 - {{domxref('HTMLSlotElement.slotchange_event', 'slotchange')}}
-  - : スロットに含まれるノードが変更されたときに `HTMLSlotElement` インスタンス ([`<slot>`](/en-US/docs/Web/HTML/Element/slot "<slot> は HTML の要素 — ウェブコンポーネント技術の一部 — は、ウェブコンポーネント内で別な DOM ツリーを構築し、いっしょに表示することができる独自のマークアップを入れることができるプレイスホルダーです。") 要素) に発生します。
+  - : スロットに含まれるノードが変更されたときに `HTMLSlotElement` インスタンス ([`<slot>`](/en-US/docs/Web/HTML/Element/slot) 要素) に発生します。
 
 ## 例
 

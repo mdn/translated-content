@@ -66,13 +66,15 @@ repeating-conic-gradient の構文は、 {{cssxref("gradient/conic-gradient()", 
 
 上記のグラデーションは 3 分の 1 が青、 3 分の 1 が赤、 3 分の 1 が黄色として定義されています。
 
-    repeating-conic-gradient(from 0deg, red 0deg 30deg, yellow 30deg 60deg, blue 60deg 90deg);
+```css
+repeating-conic-gradient(from 0deg, red 0deg 30deg, yellow 30deg 60deg, blue 60deg 90deg);
 
-    repeating-radial-gradient(red 0 8%, yellow 8% 16%, blue 16% 24%);
+repeating-radial-gradient(red 0 8%, yellow 8% 16%, blue 16% 24%);
 
-    conic-gradient(red 120deg, yellow 120deg 240deg, blue 240deg);
+conic-gradient(red 120deg, yellow 120deg 240deg, blue 240deg);
 
-    radial-gradient(red 33%, yellow 33% 66%, blue 66%);
+radial-gradient(red 33%, yellow 33% 66%, blue 66%);
+```
 
 反復グラデーションを繰り返すためには、最初と最後の色経由点を定義します。繰り返さないグラデーションと同様に、最初と最後の色経由点は、明示的に宣言されていない場合、 0 と 100% または 360deg のいずれかであると仮定されます。これらの値を既定値とした場合、反復アークは360度となるため、繰り返されません。
 

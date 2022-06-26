@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 
 <h2 id="Express_模板选择">Express 模板选择</h2>
 
-<p>Express 可以与许多不同的<a href="https://expressjs.com/en/guide/using-template-engines.html">模板渲染引擎</a>一起使用。在本教程中，我们使用<a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a>（以前称为 Jade）作为模板。这是最流行的 Node 模板语言，并且官方将自身描述为“用于编写 HTML，语法干净且空格敏感，受 <a class="external external-icon" href="http://haml.info/" rel="noopener">Haml</a>影响很大”。</p>
+<p>Express 可以与许多不同的<a href="https://expressjs.com/en/guide/using-template-engines.html">模板渲染引擎</a>一起使用。在本教程中，我们使用<a href="https://pugjs.org/api/getting-started.html">Pug</a>（以前称为 Jade）作为模板。这是最流行的 Node 模板语言，并且官方将自身描述为“用于编写 HTML，语法干净且空格敏感，受 <a href="http://haml.info/">Haml</a>影响很大”。</p>
 
 <p>不同的模板语言使用不同的方法，来定义布局和标记数据的占位符 —  一些使用 HTML 来定义布局，而另一些则使用可以编译为 HTML 的不同标记格式。Pug 是第二种类型；它使用 HTML 的表示形式，其中任何行中的第一个单词，通常表示 HTML 元素，后续行中的缩进，用于表示嵌套在这些元素中的任何内容。结果是一个页面定义直接转换为 HTML，但可以说更简洁，更容易阅读。</p>
 
@@ -17,7 +17,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 
 <h2 class="highlight-spanned" id="模板组态">模板组态</h2>
 
-<p>在我们<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website">创建骨架网站</a>时，LocalLibrary 配置为使用 <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a>。您应该看到 Pug 模块作为依赖项，包含在网站的 <strong>package.json</strong>文件中，以及 <strong>app.js</strong>文件中的以下配置设置。设置告诉我们，使用 Pug 作为视图引擎，Express 应该在<strong> /views</strong>子目录中搜索模板。</p>
+<p>在我们<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website">创建骨架网站</a>时，LocalLibrary 配置为使用 <a href="https://pugjs.org/api/getting-started.html">Pug</a>。您应该看到 Pug 模块作为依赖项，包含在网站的 <strong>package.json</strong>文件中，以及 <strong>app.js</strong>文件中的以下配置设置。设置告诉我们，使用 Pug 作为视图引擎，Express 应该在<strong> /views</strong>子目录中搜索模板。</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">// View engine setup.
 app.set('views', path.join(__dirname, 'views'));
@@ -115,7 +115,7 @@ else
   each val in [1, 2, 3, 4, 5]
     li= val</code></pre>
 
-<p>语法还支持注释（可以在输出中呈现 - 或者不是 - 可自行选择），支持 mixins 创建可重用的代码块，case 语句和许多其他功能。有关更多详细信息，请参阅<a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a>文档。</p>
+<p>语法还支持注释（可以在输出中呈现 - 或者不是 - 可自行选择），支持 mixins 创建可重用的代码块，case 语句和许多其他功能。有关更多详细信息，请参阅<a href="https://pugjs.org/api/getting-started.html">Pug</a>文档。</p>
 
 <h2 class="highlight-spanned" id="扩展模板">扩展模板</h2>
 

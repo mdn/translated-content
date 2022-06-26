@@ -49,7 +49,7 @@ _このインターフェースは親である {{domxref("Event")}} からプ�
 - {{domxref("MessageEvent.source")}} {{readonlyInline}}
   - : ({{domxref("WindowProxy")}}、 {{domxref("MessagePort")}}、{{domxref("ServiceWorker")}} の何れかのオブジェクトの場合がある)  `MessageEventSource` で、メッセージ送信元を表します。
 - {{domxref("MessageEvent.ports")}} {{readonlyInline}}
-  - : メッセージが送信される（例えば、チャンネルメッセージや共有ワーカーにメッセージを送信した場合）チャンネルと対応したポートを表す {{domxref("MessagePort")}} オブジェクトの配列です。 
+  - : メッセージが送信される（例えば、チャンネルメッセージや共有ワーカーにメッセージを送信した場合）チャンネルと対応したポートを表す {{domxref("MessagePort")}} オブジェクトの配列です。
 
 ## メソッド
 

@@ -700,6 +700,7 @@
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler	/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply	/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 /ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype	/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError
+/ko/docs/Web/JavaScript/Reference/Global_Objects/null	/ko/docs/Web/JavaScript/Reference/Operators/null
 /ko/docs/Web/JavaScript/Reference/Global_Properties	/ko/docs/Web/JavaScript/Reference/Global_Objects
 /ko/docs/Web/JavaScript/Reference/Methods_Index	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/Objects	/ko/docs/Web/JavaScript/Reference/Global_Objects

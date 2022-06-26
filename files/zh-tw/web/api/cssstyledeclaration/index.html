@@ -11,8 +11,8 @@ translation_of: Web/API/CSSStyleDeclaration
 
 <ul>
  <li>{{domxref("HTMLElement.style")}} - to manipulate the style of a single element (&lt;elem style="..."&gt;);</li>
- <li>(TODO: reword) is an interface to the <a class="external" href="http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block">declaration block</a> returned by the <code><a href="/en/DOM/cssRule.style" rel="internal" title="en/DOM/cssRule.style">style</a></code> property of a <code><a href="/en/DOM/cssRule" rel="internal" title="en/DOM/cssRule">cssRule</a></code> in a <a href="/en/DOM/stylesheet" rel="internal" title="en/DOM/stylesheet">stylesheet</a>, when the rule is a <a href="/en/DOM/cssRule#CSSStyleRule" title="en/DOM/cssRule#CSSStyleRule">CSSStyleRule</a>.</li>
- <li><code>CSSStyleDeclaration</code> is also a <strong>read-only</strong> interface to the result of <a href="/en/DOM/window.getComputedStyle" title="en/DOM/window.getComputedStyle">window.getComputedStyle</a>().</li>
+ <li>(TODO: reword) is an interface to the <a href="http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block">declaration block</a> returned by the <code><a href="/en/DOM/cssRule.style">style</a></code> property of a <code><a href="/en/DOM/cssRule">cssRule</a></code> in a <a href="/en/DOM/stylesheet">stylesheet</a>, when the rule is a <a href="/en/DOM/cssRule#CSSStyleRule">CSSStyleRule</a>.</li>
+ <li><code>CSSStyleDeclaration</code> is also a <strong>read-only</strong> interface to the result of <a href="/en/DOM/window.getComputedStyle">window.getComputedStyle</a>().</li>
 </ul>
 
 <h2 id="Syntax" name="Syntax">屬性</h2>
@@ -40,7 +40,7 @@ translation_of: Web/API/CSSStyleDeclaration
  <dt>{{domxref("CSSStyleDeclaration.setProperty()")}}</dt>
  <dd>Modifies an existing CSS property or creates a new CSS property in the declaration block/.</dd>
  <dt>{{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{obsolete_inline}}</dt>
- <dd>Only supported via getComputedStyle in Firefox. Returns the property value as a {{ domxref("CSSPrimitiveValue") }} or <code>null</code> for <a href="/en/CSS/Shorthand_properties" title="en/Guide to Shorthand CSS">shorthand properties</a>.</dd>
+ <dd>Only supported via getComputedStyle in Firefox. Returns the property value as a {{ domxref("CSSPrimitiveValue") }} or <code>null</code> for <a href="/en/CSS/Shorthand_properties">shorthand properties</a>.</dd>
 </dl>
 
 <h2 id="Example" name="Example">範例</h2>
@@ -62,7 +62,7 @@ console.log(styleObj.cssText);</pre>
 <h2 id="參見">參見</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Properties_Reference" title="/en-US/docs/Web/CSS/CSS_Properties_Reference">DOM CSS Properties</a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Properties_Reference">DOM CSS Properties</a></li>
 </ul>
 
 <h2 id="Specification" name="Specification">規範</h2>

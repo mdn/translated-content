@@ -9,7 +9,7 @@ original_slug: Web/Guide/HTML/Using_data_attributes
 ---
 <p>{{LearnSidebar}}</p>
 
-<p><a href="/en-US/docs/Web/Guide/HTML/HTML5" title="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a>是具有扩展性的设计，它初衷是数据应与特定的元素相关联，但不需要任何定义。<a href="/en-US/docs/Web/HTML/Global_attributes#data-*">data-* 属性</a>允许我们在标准内于 HTML 元素中存储额外的信息，而不需要使用类似于 <a href="/en-US/docs/Web/API/Element.classList">classList</a>，标准外属性，DOM 额外属性或是 <a href="/en-US/docs/Web/API/Node.setUserData">setUserData</a> 之类的技巧。</p>
+<p><a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a>是具有扩展性的设计，它初衷是数据应与特定的元素相关联，但不需要任何定义。<a href="/en-US/docs/Web/HTML/Global_attributes#data-*">data-* 属性</a>允许我们在标准内于 HTML 元素中存储额外的信息，而不需要使用类似于 <a href="/en-US/docs/Web/API/Element.classList">classList</a>，标准外属性，DOM 额外属性或是 <a href="/en-US/docs/Web/API/Node.setUserData">setUserData</a> 之类的技巧。</p>
 
 <h2 id="HTML_语法">HTML 语法</h2>
 
@@ -25,7 +25,7 @@ original_slug: Web/Guide/HTML/Using_data_attributes
 
 <h2 id="JavaScript_访问">JavaScript 访问</h2>
 
-<p>在外部使用<a href="/en-US/docs/Web/JavaScript" title="/en-US/docs/Web/JavaScript">JavaScript</a>去访问这些属性的值同样非常简单。你可以使用{{domxref("Element.getAttribute", "getAttribute()")}}配合它们完整的 HTML 名称去读取它们，但标准定义了一个更简单的方法：{{domxref("DOMStringMap")}}你可以使用{{domxref("HTMLElement.dataset", "dataset")}}读取到数据。</p>
+<p>在外部使用<a href="/en-US/docs/Web/JavaScript">JavaScript</a>去访问这些属性的值同样非常简单。你可以使用{{domxref("Element.getAttribute", "getAttribute()")}}配合它们完整的 HTML 名称去读取它们，但标准定义了一个更简单的方法：{{domxref("DOMStringMap")}}你可以使用{{domxref("HTMLElement.dataset", "dataset")}}读取到数据。</p>
 
 <p>为了使用<code>dataset</code>对象去获取到数据属性，需要获取属性名中<code>data-</code>之后的部分 (要注意的是破折号连接的名称需要改写为骆驼拼写法 (如"index-number"转换为"indexNumber"))。</p>
 
@@ -39,13 +39,13 @@ article.dataset.parent // "cars"</pre>
 
 <h2 id="CSS_访问">CSS 访问</h2>
 
-<p>注意，data 设定为 HTML 属性，他们同样能被<a href="/en-US/docs/Web/CSS" title="/en-US/docs/Web/CSS">CSS</a>访问。比如你可以通过<a href="/en-US/docs/Web/CSS/content" title="/en-US/docs/Web/CSS/content">generated content</a>使用函数{{cssxref("attr")}}来显示 data-parent 的内容：</p>
+<p>注意，data 设定为 HTML 属性，他们同样能被<a href="/en-US/docs/Web/CSS">CSS</a>访问。比如你可以通过<a href="/en-US/docs/Web/CSS/content">generated content</a>使用函数{{cssxref("attr")}}来显示 data-parent 的内容：</p>
 
 <pre class="brush: css">article::before {
   content: attr(data-parent);
 }</pre>
 
-<p>你也同样可以在 CSS 中使用<a href="/en-US/docs/Web/CSS/Attribute_selectors" title="/en-US/docs/Web/CSS/Attribute_selectors">属性选择器</a>根据 data 来改变样式：</p>
+<p>你也同样可以在 CSS 中使用<a href="/en-US/docs/Web/CSS/Attribute_selectors">属性选择器</a>根据 data 来改变样式：</p>
 
 <pre class="brush: css">article[data-columns='3'] {
   width: 400px;

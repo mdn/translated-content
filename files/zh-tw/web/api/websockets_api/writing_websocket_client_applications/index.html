@@ -18,7 +18,7 @@ original_slug: WebSockets/Writing_WebSocket_client_applications
 
 <h2 id="建立一個_WebSocket_物件">建立一個 WebSocket 物件</h2>
 
-<p>你必須建立一個 <a href="/zh_tw/WebSockets/WebSockets_reference/WebSocket" title="zh tw/WebSockets/WebSockets reference/WebSocket"><code>WebSocket</code></a> 物件才能讓瀏覽器／伺服器得以以 WebSocket 協定進行通訊，此物件在被建立之後會自動與伺服器連線。</p>
+<p>你必須建立一個 <a href="/zh_tw/WebSockets/WebSockets_reference/WebSocket"><code>WebSocket</code></a> 物件才能讓瀏覽器／伺服器得以以 WebSocket 協定進行通訊，此物件在被建立之後會自動與伺服器連線。</p>
 
 <div class="note"><strong>注：</strong>別忘記在 Firefox 6.0 中 <code>WebSocket</code> 物件仍有前輟，所以在這裡須改成 <code>MozWebSocket</code>。</div>
 
@@ -69,18 +69,18 @@ WebSocket WebSocket(
 
 <h2 id="傳資料給伺服器">傳資料給伺服器</h2>
 
-<p>連線開啟之後即可開始傳資料給伺服器。呼叫 <code>WebSocket</code> 的 <a href="/zh_tw/WebSockets/WebSockets_reference/WebSocket#send()" title="zh tw/WebSockets/WebSockets reference/WebSocket#send()"><code>send()</code></a> 來發送訊息：</p>
+<p>連線開啟之後即可開始傳資料給伺服器。呼叫 <code>WebSocket</code> 的 <a href="/zh_tw/WebSockets/WebSockets_reference/WebSocket#send()"><code>send()</code></a> 來發送訊息：</p>
 
 <pre>mySocket.send("這是伺服器正迫切需要的文字！");
 </pre>
 
-<p>可以被傳送的內容包括字串、<a href="/en/DOM/Blob" title="en/DOM/Blob"><code>Blob</code></a> 或是 <a href="/zh_tw/JavaScript_typed_arrays/ArrayBuffer" title="zh tw/JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a>。</p>
+<p>可以被傳送的內容包括字串、<a href="/en/DOM/Blob"><code>Blob</code></a> 或是 <a href="/zh_tw/JavaScript_typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a>。</p>
 
 <div class="note"><strong>注：</strong>Firefox 目前只支援字串傳送。</div>
 
 <h3 id="用_JSON_傳輸物件">用 JSON 傳輸物件</h3>
 
-<p>有一個很方便的方法是用 <a href="/en/JSON" title="en/JSON">JSON</a> 傳送複雜的資料給伺服器，舉例來說，聊天程式可以設計一種協定，這個協定傳送以 JSON 封裝的資料封包：</p>
+<p>有一個很方便的方法是用 <a href="/en/JSON">JSON</a> 傳送複雜的資料給伺服器，舉例來說，聊天程式可以設計一種協定，這個協定傳送以 JSON 封裝的資料封包：</p>
 
 <pre class="brush: js">// 透過伺服器傳送文字給所有使用者
 
@@ -97,7 +97,7 @@ function sendText() {
 }
 </pre>
 
-<p>這份代碼先建立一個物件：<code>msg</code>，它包含伺服器處理訊息所需的種種資訊，然後呼叫 <a href="/en/JavaScript/Reference/Global_Objects/JSON/stringify" title="en/JavaScript/Reference/Global Objects/JSON/stringify"><code>JSON.stringify()</code></a> 使該物件轉換成 JSON 格式並呼叫 WebSocket 的 <a href="/zh_tw/WebSockets/WebSockets_reference/WebSocket#send()" title="zh tw/WebSockets/WebSockets reference/WebSocket#send()"><code>send()</code></a> 方法來傳輸資料至伺服器。</p>
+<p>這份代碼先建立一個物件：<code>msg</code>，它包含伺服器處理訊息所需的種種資訊，然後呼叫 <a href="/en/JavaScript/Reference/Global_Objects/JSON/stringify"><code>JSON.stringify()</code></a> 使該物件轉換成 JSON 格式並呼叫 WebSocket 的 <a href="/zh_tw/WebSockets/WebSockets_reference/WebSocket#send()"><code>send()</code></a> 方法來傳輸資料至伺服器。</p>
 
 <h2 id="從伺服器接收訊息">從伺服器接收訊息</h2>
 
@@ -157,11 +157,11 @@ function sendText() {
 };
 </pre>
 
-<p>這裡我們使用 <a href="/en/JavaScript/Reference/Global_Objects/JSON/parse" title="en/JavaScript/Reference/Global Objects/JSON/parse"><code>JSON.parse()</code></a> 使 JSON 物件轉換成原來的物件，檢驗並根據內容採取行動。</p>
+<p>這裡我們使用 <a href="/en/JavaScript/Reference/Global_Objects/JSON/parse"><code>JSON.parse()</code></a> 使 JSON 物件轉換成原來的物件，檢驗並根據內容採取行動。</p>
 
 <h2 id="關閉連線">關閉連線</h2>
 
-<p>當你想結束 WebSocket 連線的時候，呼叫 WebSocket 的 <a href="/zh_tw/WebSockets/WebSockets_reference/WebSocket#close()" title="zh tw/WebSockets/WebSockets reference/WebSocket#close()"><code>close()</code></a> 方法：</p>
+<p>當你想結束 WebSocket 連線的時候，呼叫 WebSocket 的 <a href="/zh_tw/WebSockets/WebSockets_reference/WebSocket#close()"><code>close()</code></a> 方法：</p>
 
 <pre>mySocket.close();
 </pre>

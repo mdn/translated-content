@@ -5,7 +5,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
 <p>{{AddonSidebar}}</p>
 
-<p>假如你已經讀過了 <a href="https://developer.mozilla.org/zh-TW/Add-ons/WebExtensions/Your_first_WebExtension">你的第一個 WebExtension</a>，你也已經知道該如何寫一個 extension（外掛），在這篇文章中我們將會教你寫一個稍微複雜一點的 extension，來 demo 一些 API 的使用。</p>
+<p>假如你已經讀過了 <a href="/zh-TW/Add-ons/WebExtensions/Your_first_WebExtension">你的第一個 WebExtension</a>，你也已經知道該如何寫一個 extension（外掛），在這篇文章中我們將會教你寫一個稍微複雜一點的 extension，來 demo 一些 API 的使用。</p>
 
 <p>在這個 extension 中，將會新增一個按鈕到 Firefox 的工具列上，當使用者按下按鈕後，將會顯示一個彈出視窗 (pop-up) 並可選擇一個動物。當使用者選擇了一個動物後，將會在當前的網頁中顯示使用者所選的動物圖片。</p>
 
@@ -87,7 +87,7 @@ cd beastify</pre>
 </pre>
 
 <ul>
- <li>最前面的三個 key：<code><a href="https://developer.mozilla.org/zh-TW/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>、<code><a href="https://developer.mozilla.org/zh-TW/Add-ons/WebExtensions/manifest.json/name">name</a></code>、<code><a href="https://developer.mozilla.org/zh-TW/Add-ons/WebExtensions/manifest.json/version">version</a></code> 必須寫進去，它包含了附加元件的基本詮釋資料（metadata）。</li>
+ <li>最前面的三個 key：<code><a href="/zh-TW/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>、<code><a href="/zh-TW/Add-ons/WebExtensions/manifest.json/name">name</a></code>、<code><a href="/zh-TW/Add-ons/WebExtensions/manifest.json/version">version</a></code> 必須寫進去，它包含了附加元件的基本詮釋資料（metadata）。</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></code> 和 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></code> 為非必要但建議加上：主要在說明該 extension。</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> 為非必要但建議加上：它允許附加元件指定圖示、也會在附加元件的管理員顯示</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> 列出了該 extension 所需要的權限。這邊我們只會要求 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>activeTab</code> permission</a> 。</li>
@@ -167,7 +167,7 @@ touch choose_beast.html choose_beast.css choose_beast.js</code></pre>
 
 &lt;/html&gt;</pre>
 
-<p>我們在 ID 為 <code>"popup-content"</code>  的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">&lt;div&gt;</a></code>  元件裡建立了一個包含每種動物選項的元件。當載入 popup 發生問題時，用另外一個 ID 為 <code>"error-content"</code> 且類別定義為 <code>"hidden"</code> 的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">&lt;div&gt;</a></code>  元件來處理。</p>
+<p>我們在 ID 為 <code>"popup-content"</code>  的 <code><a href="/en-US/docs/Web/HTML/Element/div">&lt;div&gt;</a></code>  元件裡建立了一個包含每種動物選項的元件。當載入 popup 發生問題時，用另外一個 ID 為 <code>"error-content"</code> 且類別定義為 <code>"hidden"</code> 的 <code><a href="/en-US/docs/Web/HTML/Element/div">&lt;div&gt;</a></code>  元件來處理。</p>
 
 <p>值得注意的是我們在這個檔案裡引用了 CSS 與 JS 檔案，就如同一般網頁。</p>
 

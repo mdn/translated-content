@@ -88,7 +88,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 
 <h3 id="关闭透明度">关闭透明度</h3>
 
-<p>如果你的游戏使用画布而且不需要透明，当使用 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext" title="The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported.">HTMLCanvasElement.getContext()</a></code> 创建一个绘图上下文时把 <code>alpha</code> 选项设置为 <code>false</code> 。这个选项可以帮助浏览器进行内部优化。</p>
+<p>如果你的游戏使用画布而且不需要透明，当使用 <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext()</a></code> 创建一个绘图上下文时把 <code>alpha</code> 选项设置为 <code>false</code> 。这个选项可以帮助浏览器进行内部优化。</p>
 
 <pre class="brush: js">var ctx = canvas.getContext('2d', { alpha: false });</pre>
 

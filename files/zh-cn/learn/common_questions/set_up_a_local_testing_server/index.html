@@ -14,7 +14,7 @@ translation_of: Learn/Common_questions/set_up_a_local_testing_server
  <tbody>
   <tr>
    <th scope="row">前提：</th>
-   <td>你需要知道<a href="https://developer.mozilla.org/zh-CN/docs/learn/How_the_Internet_works">互联网是怎么工作的</a>，以及<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Common_questions/What_is_a_web_server">什么是网络服务器</a>。</td>
+   <td>你需要知道<a href="/zh-CN/docs/learn/How_the_Internet_works">互联网是怎么工作的</a>，以及<a href="/zh-CN/docs/Learn/Common_questions/What_is_a_web_server">什么是网络服务器</a>。</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -34,7 +34,7 @@ translation_of: Learn/Common_questions/set_up_a_local_testing_server
 <p>某些示例如果你将其作为本地文件打开的话，它将不会运行。这可能是由于各种原因，最有可能是：</p>
 
 <ul>
- <li><strong>它们具有异步请求。</strong> 如果你只是从本地文件运行示例，一些浏览器（包括 Chrome）将不会运行异步请求（请参阅 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">从服务器获取数据</a>）。这是因为安全限制（更多关于 Web 安全的信息，请参阅 <a href="https://developer.mozilla.org/zh-CN/docs/learn/Server-side/First_steps/Website_security">站点安全</a>）。</li>
+ <li><strong>它们具有异步请求。</strong> 如果你只是从本地文件运行示例，一些浏览器（包括 Chrome）将不会运行异步请求（请参阅 <a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">从服务器获取数据</a>）。这是因为安全限制（更多关于 Web 安全的信息，请参阅 <a href="/zh-CN/docs/learn/Server-side/First_steps/Website_security">站点安全</a>）。</li>
  <li><strong>它们具有服务端代码。</strong> 服务器端语言（如 PHP 或 Python）需要一个特殊的服务器来解释代码并提供结果。</li>
 </ul>
 
@@ -92,7 +92,7 @@ python -m <code>SimpleHTTPServer</code></pre>
 <p>Python 的<code>SimpleHTTPServer</code>模块是有用的，但它不知道如何运行用 PHP 或 Python 等语言编写的代码。为了处理这个问题，你需要更多的东西 - 正是你需要的东西取决于你正在运行的服务器端语言。这里有几个例子：</p>
 
 <ul>
- <li>要运行 Python 服务器端代码，您需要使用 Python 网络框架。您可以通过阅读<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django">Django Web Framework（Python）</a>来了解如何使用 Django 框架。<a href="http://flask.pocoo.org/">Flask</a>也是一个不错的选择（稍微轻量一点）。要运行 Flask，你需要先<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment#Installing_Python_3">安装 Python / PIP</a>，然后使用<code>pip3 install flask </code>来安装 Flask。此时，您应该能够运行 Python Flask 示例<code>python3 python-example.py</code>，然后在您的浏览器中打开 <code>localhost:5000</code> 查看。</li>
- <li>要运行 Node.js（JavaScript）服务器端代码，您可以直接使用 Node 或选择构建于其上的框架。Express 是一个不错的选择 - 请参阅<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs">Express Web Framework（Node.js / JavaScript）</a>。</li>
+ <li>要运行 Python 服务器端代码，您需要使用 Python 网络框架。您可以通过阅读<a href="/en-US/docs/Learn/Server-side/Django">Django Web Framework（Python）</a>来了解如何使用 Django 框架。<a href="http://flask.pocoo.org/">Flask</a>也是一个不错的选择（稍微轻量一点）。要运行 Flask，你需要先<a href="/en-US/docs/Learn/Server-side/Django/development_environment#Installing_Python_3">安装 Python / PIP</a>，然后使用<code>pip3 install flask </code>来安装 Flask。此时，您应该能够运行 Python Flask 示例<code>python3 python-example.py</code>，然后在您的浏览器中打开 <code>localhost:5000</code> 查看。</li>
+ <li>要运行 Node.js（JavaScript）服务器端代码，您可以直接使用 Node 或选择构建于其上的框架。Express 是一个不错的选择 - 请参阅<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs">Express Web Framework（Node.js / JavaScript）</a>。</li>
  <li>要运行 PHP 服务器端代码，您需要一个可以解释 PHP 的服务器设置。本地 PHP 测试的好选择是<a href="https://www.mamp.info/en/downloads/">MAMP</a>（Mac 和 Windows），  <a href="http://ampps.com/download">AMPPS</a>（Mac，Windows，Linux）和<a href="https://www.linux.com/learn/easy-lamp-server-installation">LAMP</a>（Linux，Apache，MySQL 和 PHP / Python / Perl）。这些是完整的包，创建本地设置，允许您运行 Apache 服务器，PHP 和 MySQL 数据库。</li>
 </ul>

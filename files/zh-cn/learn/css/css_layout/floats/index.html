@@ -466,7 +466,7 @@ footer {
 
 <p>{{cssxref("box-sizing")}} 通过更改盒模型来拯救我们，盒子的宽度取值为 content + padding + border，而不仅是之前的 content——所以当增加内边距或边界的宽度时，不会使盒子更宽——而是会使内容调整得更窄。</p>
 
-<p>我们有另一个问题——页脚正压在最长列上，在这一点并不理想——我们来试着清除页脚浮动的同时给出一些顶部外边距（ <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top" title="The margin-top CSS property sets the margin area on the top of an element. A positive value will place it farther than normal from its neighbors, while a negative value will place it closer."><code>margin-top</code></a> ）来解决这个问题：</p>
+<p>我们有另一个问题——页脚正压在最长列上，在这一点并不理想——我们来试着清除页脚浮动的同时给出一些顶部外边距（ <a href="/en-US/docs/Web/CSS/margin-top"><code>margin-top</code></a> ）来解决这个问题：</p>
 
 <pre class="brush: css notranslate">footer {
   clear: both;
@@ -511,7 +511,7 @@ footer {
 <p><strong>注：</strong> 查看在这个阶段最后一个解决的例子<a href="https://mdn.github.io/learning-area/css/css-layout/floats/4_fixed-layout-border-box.html">4_fixed-layout-border-box.html</a> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/4_fixed-layout-border-box.html">source code</a>)。</p>
 </div>
 
-<p>这里要注意的另一小点是，<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing" title="The CSS box-sizing property is used to alter the default CSS box model used to calculate width and height of the elements."><code>box-sizing</code></a> 出现可以追溯到 Internet Explorer 8——如果您明确需要支持较老的浏览器，您可能需要手动调整列的宽度，以允许内边距和边界宽度。这不是一种非常精确的技术，特别是考虑到你不能用百分比来确定边界——你只需要在尽可能充满父宽度的同时留出足够的空间。你可以看到这样的实战修复<code><a href="https://mdn.github.io/learning-area/css/css-layout/floats/fixed-layout-adjusted-percentages.html">fixed-layout-adjusted-percentages.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/fixed-layout-adjusted-percentages.html">见源代码</a>)。</p>
+<p>这里要注意的另一小点是，<a href="/en-US/docs/Web/CSS/box-sizing"><code>box-sizing</code></a> 出现可以追溯到 Internet Explorer 8——如果您明确需要支持较老的浏览器，您可能需要手动调整列的宽度，以允许内边距和边界宽度。这不是一种非常精确的技术，特别是考虑到你不能用百分比来确定边界——你只需要在尽可能充满父宽度的同时留出足够的空间。你可以看到这样的实战修复<code><a href="https://mdn.github.io/learning-area/css/css-layout/floats/fixed-layout-adjusted-percentages.html">fixed-layout-adjusted-percentages.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/fixed-layout-adjusted-percentages.html">见源代码</a>)。</p>
 
 <h3 id="浮动项目的背景高度">浮动项目的背景高度</h3>
 

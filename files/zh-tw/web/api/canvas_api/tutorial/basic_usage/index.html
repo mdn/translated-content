@@ -14,7 +14,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 <pre class="brush: html">&lt;canvas id="tutorial" width="150" height="150"&gt;&lt;/canvas&gt;
 </pre>
 
-<p>首先，先來看看 {{HTMLElement("canvas")}}，它看起來有點像 {{HTMLElement("img")}} 元素，其中的差異點在於 <code>&lt;canvas&gt;</code> 沒有 <code>src</code> 和 <code>alt</code> 屬性，<code>&lt;canvas&gt;</code> 只有 {{htmlattrxref("width", "canvas")}} 與 {{htmlattrxref("height", "canvas")}} 這兩個屬性，這兩個屬性皆為非必須、能透過<a href="/en-US/docs/DOM" rel="internal" title="en/DOM"> DOM</a>屬性設定；若是沒有設定 <code>width</code> 和 <code>height</code> 屬性，畫布寬預設值為<strong> 300 pixels</strong>、高預設值為<strong> </strong><strong>150 pixels</strong>，我們可以用 <a href="/en-US/docs/Web/CSS" rel="internal" title="en/CSS">CSS </a>強制設定元素尺寸，但當渲染時，影像會縮放以符合元素的尺寸。</p>
+<p>首先，先來看看 {{HTMLElement("canvas")}}，它看起來有點像 {{HTMLElement("img")}} 元素，其中的差異點在於 <code>&lt;canvas&gt;</code> 沒有 <code>src</code> 和 <code>alt</code> 屬性，<code>&lt;canvas&gt;</code> 只有 {{htmlattrxref("width", "canvas")}} 與 {{htmlattrxref("height", "canvas")}} 這兩個屬性，這兩個屬性皆為非必須、能透過<a href="/en-US/docs/DOM"> DOM</a>屬性設定；若是沒有設定 <code>width</code> 和 <code>height</code> 屬性，畫布寬預設值為<strong> 300 pixels</strong>、高預設值為<strong> </strong><strong>150 pixels</strong>，我們可以用 <a href="/en-US/docs/Web/CSS">CSS </a>強制設定元素尺寸，但當渲染時，影像會縮放以符合元素的尺寸。</p>
 
 <div class="note">
 <p><strong>Note:</strong>如果繪圖結果看起來有些扭曲，可以改試著用&lt;canvas&gt;自身的width和height屬性而不要用CSS來設定寬高。</p>
@@ -62,9 +62,9 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 
 <h2 id="渲染環境(rendering_context)">渲染環境(rendering context)</h2>
 
-<p>{{HTMLElement("canvas")}}產生一個固定大小的繪圖畫布，這個畫布上有一或多個渲染環境(rendering context)，我們可以用渲染環境來產生或操作顯示內容的渲染環境(rendering context)。不同環境(context)可能會提供不同型態的渲染方式，好比說<a href="/en-US/docs/Web/WebGL" title="/en-US/docs/Web/WebGL">WebGL</a>使用<a class="external" href="http://www.khronos.org/opengles/" rel="external" title="http://en.wikipedia.org/wiki/OpenGL_ES">OpenGL ES</a>的3D環境(context)，而這裡我們主要將討論2D渲染環境(rendering context)。</p>
+<p>{{HTMLElement("canvas")}}產生一個固定大小的繪圖畫布，這個畫布上有一或多個渲染環境(rendering context)，我們可以用渲染環境來產生或操作顯示內容的渲染環境(rendering context)。不同環境(context)可能會提供不同型態的渲染方式，好比說<a href="/en-US/docs/Web/WebGL">WebGL</a>使用<a href="http://www.khronos.org/opengles/">OpenGL ES</a>的3D環境(context)，而這裡我們主要將討論2D渲染環境(rendering context)。</p>
 
-<p>一開始canvas為空白，程式碼腳本需要先存取渲染環境，在上面繪圖，然後才會顯現影像。{{HTMLElement("canvas")}} 素有一個方法(<a href="/en-US/docs/Web/API/HTMLCanvasElement#Methods" title="/en-US/docs/Web/API/HTMLCanvasElement#Methods">method</a>)叫getContext()，透過此方法可以取得渲染環境及其繪圖函數(function)；getContext()輸入參數只有渲染環境類型一項，像本教學所討論的2D繪圖，就是輸入”2d”。</p>
+<p>一開始canvas為空白，程式碼腳本需要先存取渲染環境，在上面繪圖，然後才會顯現影像。{{HTMLElement("canvas")}} 素有一個方法(<a href="/en-US/docs/Web/API/HTMLCanvasElement#Methods">method</a>)叫getContext()，透過此方法可以取得渲染環境及其繪圖函數(function)；getContext()輸入參數只有渲染環境類型一項，像本教學所討論的2D繪圖，就是輸入”2d”。</p>
 
 <pre class="brush: js">var canvas = document.getElementById('tutorial');
 var ctx = canvas.getContext('2d');

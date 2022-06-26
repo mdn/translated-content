@@ -86,7 +86,7 @@ parentDiv.insertBefore(sp1, sp2);
 &lt;/script&gt;
 </pre>
 
-<p>There is no <code>insertAfter</code> method. It can be emulated by combining the <code>insertBefore</code> method with <code><a href="/en-US/docs/DOM/Node.nextSibling" title="DOM/Node.nextSibling">nextSibling</a></code>.</p>
+<p>There is no <code>insertAfter</code> method. It can be emulated by combining the <code>insertBefore</code> method with <code><a href="/en-US/docs/DOM/Node.nextSibling">nextSibling</a></code>.</p>
 
 <p>In the previous example, <code>sp1</code> could be inserted after <code>sp2</code> using:</p>
 
@@ -96,7 +96,7 @@ parentDiv.insertBefore(sp1, sp2);
 
 <h2 id="Example" name="Example">Example</h2>
 
-<p>Insert an element before the first child element, using the <a href="/en-US/docs/DOM/Node.firstChild" title="Node.firstChild">firstChild</a> property.</p>
+<p>Insert an element before the first child element, using the <a href="/en-US/docs/DOM/Node.firstChild">firstChild</a> property.</p>
 
 <pre class="brush:js">// Get a reference to the element in which we want to insert a new node
 var parentElement = document.getElementById('parentElement');
@@ -114,46 +114,11 @@ parentElement.insertBefore(newElement, theFirstChild);
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("api.Node.insertBefore")}}</p>
 
 <h2 id="Specifications" name="Specifications">Specifications</h2>
 
-<table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-node-insertbefore','Node.insertBefore')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Fixes errors in the insertion algorithm</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4','#dom-node-insertbefore','Node.insertBefore')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td>Describes the algorithm in more detail</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','core.html#ID-952280727','Node.insertBefore')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No notable changes</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core','core.html#ID-952280727','Node.insertBefore')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No notable changes</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1','level-one-core.html#method-insertBefore','Node.insertBefore')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Introduced</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="See_also" name="See_also">See also</h2>
 

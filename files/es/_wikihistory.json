@@ -6413,12 +6413,6 @@
       "fscholz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onblur": {
-    "modified": "2019-03-23T22:33:17.308Z",
-    "contributors": [
-      "Grijander81"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onchange": {
     "modified": "2019-03-23T22:18:11.571Z",
     "contributors": [
@@ -6444,12 +6438,6 @@
     "contributors": [
       "wbamberg",
       "galegosimpatico"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onfocus": {
-    "modified": "2019-03-18T21:31:41.059Z",
-    "contributors": [
-      "ANDRUS74"
     ]
   },
   "Web/API/GlobalEventHandlers/ongotpointercapture": {
@@ -7137,6 +7125,13 @@
     "modified": "2019-03-23T23:26:56.897Z",
     "contributors": [
       "palfrei",
+      "maedca"
+    ]
+  },
+  "Web/API/Media_Streams_API/Taking_still_photos": {
+    "modified": "2019-03-23T23:26:57.758Z",
+    "contributors": [
+      "robertoasq",
       "maedca"
     ]
   },
@@ -8180,13 +8175,6 @@
       "voylinux"
     ]
   },
-  "Web/API/WebRTC_API/Taking_still_photos": {
-    "modified": "2019-03-23T23:26:57.758Z",
-    "contributors": [
-      "robertoasq",
-      "maedca"
-    ]
-  },
   "Web/API/WebSocket": {
     "modified": "2019-03-18T20:53:48.099Z",
     "contributors": [
@@ -8392,6 +8380,12 @@
       "Bant89"
     ]
   },
+  "Web/API/Window/blur_event": {
+    "modified": "2019-03-23T22:33:17.308Z",
+    "contributors": [
+      "Grijander81"
+    ]
+  },
   "Web/API/Window/cancelAnimationFrame": {
     "modified": "2019-03-23T22:30:46.211Z",
     "contributors": [
@@ -8435,6 +8429,12 @@
     "modified": "2019-03-18T21:17:09.045Z",
     "contributors": [
       "Grijander81"
+    ]
+  },
+  "Web/API/Window/focus_event": {
+    "modified": "2019-03-18T21:31:41.059Z",
+    "contributors": [
+      "ANDRUS74"
     ]
   },
   "Web/API/Window/frameElement": {
@@ -19080,18 +19080,6 @@
       "Talisker"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-03-12T19:42:06.401Z",
-    "contributors": [
-      "mkiramu",
-      "ivanagui2",
-      "diegoazh",
-      "BubuAnabelas",
-      "hmorv",
-      "AugustoEsquen",
-      "AsLogd"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/parseFloat": {
     "modified": "2020-07-04T20:00:21.182Z",
     "contributors": [
@@ -19334,6 +19322,12 @@
       "daniel.duarte"
     ]
   },
+  "Web/JavaScript/Reference/Operators/import.meta": {
+    "modified": "2020-10-15T22:29:50.934Z",
+    "contributors": [
+      "cinthylli"
+    ]
+  },
   "Web/JavaScript/Reference/Operators/in": {
     "modified": "2020-10-15T21:19:59.064Z",
     "contributors": [
@@ -19372,6 +19366,18 @@
     "modified": "2020-03-12T19:45:24.263Z",
     "contributors": [
       "jorgecas"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-03-12T19:42:06.401Z",
+    "contributors": [
+      "mkiramu",
+      "ivanagui2",
+      "diegoazh",
+      "BubuAnabelas",
+      "hmorv",
+      "AugustoEsquen",
+      "AsLogd"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {
@@ -19636,12 +19642,6 @@
       "javiernunez",
       "Siro_Diaz",
       "jepumares"
-    ]
-  },
-  "Web/JavaScript/Reference/Statements/import.meta": {
-    "modified": "2020-10-15T22:29:50.934Z",
-    "contributors": [
-      "cinthylli"
     ]
   },
   "Web/JavaScript/Reference/Statements/label": {

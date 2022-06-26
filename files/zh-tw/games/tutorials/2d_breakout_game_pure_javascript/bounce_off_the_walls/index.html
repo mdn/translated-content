@@ -8,10 +8,10 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}</p>
 
 <div>
-<p>這是 <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>中的第三步 你可以在以下的連結中查看原始碼<a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html">Gamedev-Canvas-workshop/lesson3.html</a>.</p>
+<p>這是 <a href="/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>中的第三步 你可以在以下的連結中查看原始碼<a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html">Gamedev-Canvas-workshop/lesson3.html</a>.</p>
 </div>
 
-<p>很好我們現在可以讓球移動了, 但目前他會在移動到邊緣後消失, 這使我們少了點樂趣! 為了解決這個問題我們稍後會加入一些碰撞處理 ( <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection">later</a> ) 使球可以再碰到邊緣時反彈.</p>
+<p>很好我們現在可以讓球移動了, 但目前他會在移動到邊緣後消失, 這使我們少了點樂趣! 為了解決這個問題我們稍後會加入一些碰撞處理 ( <a href="/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection">later</a> ) 使球可以再碰到邊緣時反彈.</p>
 
 <h2 id="簡單的碰撞偵測">簡單的碰撞偵測</h2>
 
@@ -68,7 +68,7 @@ if(y + dy &gt; canvas.height || y + dy &lt; 0) {
 
 <p>測試你的代碼在這一點上，你會留下深刻的印象-現在我們有一個球，反彈了所有四個邊緣的畫布！然而，我們有另一個問題-當球擊中每一個牆，它下沉到它略有改變方向：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10432/ball-in-wall.png" style="display: block; height: 320px; margin: 0px auto; width: 480px;"></p>
+<p><img src="ball-in-wall.png"></p>
 
 <p>這是因為我們計算的牆壁和球的中心的碰撞點，而我們應該做它的圓周。球應該反彈後，如果接觸牆，而不是當它已經在牆上的一半，所以讓我們調整我們的陳述有點包括。更新您添加到的最後一個代碼：</p>
 
@@ -93,6 +93,6 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
 
 <h2 id="下一步">下一步</h2>
 
-<p>我們現在已經進入了舞台，我們的球是移動和停留在遊戲板上。 在第四章中，我們將討論實現一個可控制的球拍 - 參見 <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls">Paddle and keyboard controls</a>.</p>
+<p>我們現在已經進入了舞台，我們的球是移動和停留在遊戲板上。 在第四章中，我們將討論實現一個可控制的球拍 - 參見 <a href="/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls">Paddle and keyboard controls</a>.</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}</p>

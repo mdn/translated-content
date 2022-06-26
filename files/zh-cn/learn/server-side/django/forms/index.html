@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}</div>
 
-<p>在本教程中，我们将向您展示如何在 Django 中使用 HTML 表单，特别是编写表单以创建，更新和删除模型实例的最简单方法。作为本演示的一部分，我们将扩展<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website" style='color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; text-decoration: none; font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: 20px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'>LocalLibrary</a>网站，以便图书馆员可以使用我们自己的表单（而不是使用管理员应用程序）更新图书，创建，更新和删除作者。</p>
+<p>在本教程中，我们将向您展示如何在 Django 中使用 HTML 表单，特别是编写表单以创建，更新和删除模型实例的最简单方法。作为本演示的一部分，我们将扩展<a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a>网站，以便图书馆员可以使用我们自己的表单（而不是使用管理员应用程序）更新图书，创建，更新和删除作者。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -420,7 +420,7 @@ def renew_book_librarian(request, pk):
 
 <h3 id="测试页面">测试页面</h3>
 
-<p>如果您接受了<a href="https://developer.mozilla.org/zh-CN/docs/learn/Server-side/Django/Authentication#Challenge_yourself">Django 教程第 8 部分中的“挑战”：用户身份验证和权限</a>，您将获得图书馆中借出的所有书本的列表，这只有图书馆工作人员才能看到。我们可以使用下面的模板代码，为每个项目旁边的续借页面，添加链接。</p>
+<p>如果您接受了<a href="/zh-CN/docs/learn/Server-side/Django/Authentication#Challenge_yourself">Django 教程第 8 部分中的“挑战”：用户身份验证和权限</a>，您将获得图书馆中借出的所有书本的列表，这只有图书馆工作人员才能看到。我们可以使用下面的模板代码，为每个项目旁边的续借页面，添加链接。</p>
 
 <pre class="brush: html">{% if perms.catalog.can_mark_returned %}- &lt;a href="{% url 'renew-book-librarian' bookinst.id %}"&gt;Renew&lt;/a&gt;  {% endif %}</pre>
 

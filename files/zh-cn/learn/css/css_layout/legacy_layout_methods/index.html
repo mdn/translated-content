@@ -167,7 +167,7 @@ div:nth-of-type(2) {
 
 <p>我们的目标是把它变成一个有两行十二列的演示网格——第一行显示各列的大小，第二行显示网格上不同大小的区域。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13901/simple-grid-finished.png" style="display: block; height: 50px; margin: 0px auto; width: 952px;"></p>
+<p><img src="simple-grid-finished.png"></p>
 
 <p>在{{htmlelement("style")}}中，加入下面的代码，使容器右侧的内边距为 20 像素，总的宽度变为 980 像素。这样给我们留出 960 像素可以放置列和它们的间隔——这种情况下，内边距会被从总的内容宽度中减去，因为我们在{{cssxref("box-sizing")}}中将站点上所有的元素设置成了<code>border-box</code> （可以查看<a href="/zh-CN/docs/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely">完全改变盒模型</a>，获得更多解释）。</p>
 
@@ -397,7 +397,7 @@ body {
 
 <p>试着载入，刷新来查看区别，或者查看我们的<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html">fluid-grid-offset.html</a>示例（另见<a href="http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html">实时</a>示例）。完成的示例应该看起来像这样：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13903/offset-grid-finished.png" style="display: block; height: 47px; margin: 0px auto; width: 944px;"></p>
+<p><img src="offset-grid-finished.png"></p>
 
 <div class="note">
 <p><strong>备注：</strong>作为额外练习，你能实现一个<code>offset-by-two</code>类吗？</p>
@@ -448,7 +448,7 @@ body {
 
 <p>在顶行，我们有十二个整齐的盒子，它们在视口宽度改变时同等地放大缩小。可是在下一行，我们只有四个物件，它们也从六十像素的基础上变大变小。因为它们只有四个，它们可以长得比上一行的物件更快，结果是它们都占据了第二行的相同宽度。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13905/flexbox-grid-incomplete.png" style="display: block; height: 71px; margin: 0px auto; width: 944px;"></p>
+<p><img src="flexbox-grid-incomplete.png"></p>
 
 <p>为了解决这个问题，我们仍然需要包含<code>span</code>类，以提供一个用于那个元素的，可以替换掉为 <code>flex-basis</code>所使用的值的宽度。</p>
 

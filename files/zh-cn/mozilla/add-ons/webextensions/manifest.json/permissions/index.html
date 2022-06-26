@@ -45,12 +45,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 
 <h2 id="主机权限">主机权限</h2>
 
-<p> 主机权限使用 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns </a>指定，扩展在每一个表达式指定的网址上请求额外权限。</p>
+<p> 主机权限使用 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns </a>指定，扩展在每一个表达式指定的网址上请求额外权限。</p>
 
 <p>额外权限包括：</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> 和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch</a> 用于访问无跨源限制的源文件（包括从 content scripts 发出的访问请求）</li>
+ <li><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> 和 <a href="/en-US/docs/Web/API/Fetch_API">fetch</a> 用于访问无跨源限制的源文件（包括从 content scripts 发出的访问请求）</li>
  <li>以编程方式（使用 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">tabs.executeScript</a>）将脚本注入到来自源服务器（origins）提供的页面的功能。</li>
  <li>使用 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a> 在其主机上获取消息的能力。</li>
  <li>使用 <a href="/en-US/Add-ons/WebExtensions/API/cookies">cookies</a> API 访问主机 cookies 的能力，只要 cookies api 的权限也被请求。</li>
@@ -61,7 +61,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 
 <pre class="notranslate"><code>moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/</code></pre>
 
-<p><code>60a20a9b-1ad4-af49-9b6c-c64c98c37920</code> 是扩展内部 ID。编程时可使用 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL">extension.getURL()</a> 来返回此 URL 路径：</p>
+<p><code>60a20a9b-1ad4-af49-9b6c-c64c98c37920</code> 是扩展内部 ID。编程时可使用 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL">extension.getURL()</a> 来返回此 URL 路径：</p>
 
 <ol>
  <li>
@@ -155,7 +155,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 
 <ul>
  <li>能使扩展突破{{WebExtAPIRef("storage.local")}} API 设定的 quota 限制</li>
- <li>Firefox 浏览器中，无须提示用户授权，便可帮助扩展创建永久保存的 IndexedDB 数据库 <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Firefox_specifics">"persistent" IndexedDB database</a></li>
+ <li>Firefox 浏览器中，无须提示用户授权，便可帮助扩展创建永久保存的 IndexedDB 数据库 <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Firefox_specifics">"persistent" IndexedDB database</a></li>
 </ul>
 
 <dl>

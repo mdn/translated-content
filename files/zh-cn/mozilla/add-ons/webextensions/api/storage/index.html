@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 
 <p>此存储系统 API 基于 <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a>, 并有少许不同。</p>
 
-<p>为了使用该 API，您需要在<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>文件包含"storage"<a href="https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/manifest.json/permissions">权限</a>。每一个浏览器扩展有自己的储存区域，每一个储存区域又分为几种不同的存储类型。</p>
+<p>为了使用该 API，您需要在<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>文件包含"storage"<a href="/zh-CN/Add-ons/WebExtensions/manifest.json/permissions">权限</a>。每一个浏览器扩展有自己的储存区域，每一个储存区域又分为几种不同的存储类型。</p>
 
 <p>虽然此 API 类似于{{domxref("Window.localStorage")}}，但仍建议您不要在插件中使用<code>Window.localStorage。当用户由于隐私原因清除历史浏览记录及数据时，火狐会将在浏览器扩展使用</code> localStorage API 存储的数据一并清除。而使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a>API存储的数据将会恰当保留。</code></p>
 
@@ -53,9 +53,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 <p>{{Compat("webextensions.api.storage")}}</p>
 
 <div class="hidden note">
-<p>"Chrome 不兼容"这部分来源于 <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> 使用<a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
+<p>"Chrome 不兼容"这部分来源于 <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> 使用<a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
 
-<p>如果需要更新这部分，请编辑 <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, 然后刷新页面即可看见所做更改。</p>
+<p>如果需要更新这部分，请编辑 <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, 然后刷新页面即可看见所做更改。</p>
 </div>
 
 <h3 id="在Edge中的不兼容">在 Edge 中的不兼容</h3>
