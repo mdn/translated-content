@@ -16156,6 +16156,14 @@
       "w05163"
     ]
   },
+  "Web/API/Media_Streams_API/Taking_still_photos": {
+    "modified": "2020-03-10T16:08:27.768Z",
+    "contributors": [
+      "lxuewu",
+      "崮生",
+      "Move"
+    ]
+  },
   "Web/API/MessageChannel": {
     "modified": "2020-10-15T21:53:04.720Z",
     "contributors": [
@@ -21238,14 +21246,6 @@
       "chen4w",
       "bigfat",
       "yxxgoogle"
-    ]
-  },
-  "Web/API/WebRTC_API/Taking_still_photos": {
-    "modified": "2020-03-10T16:08:27.768Z",
-    "contributors": [
-      "lxuewu",
-      "崮生",
-      "Move"
     ]
   },
   "Web/API/WebRTC_API/adapter.js": {

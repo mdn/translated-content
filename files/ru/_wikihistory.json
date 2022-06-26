@@ -8814,6 +8814,14 @@
       "sh7dm"
     ]
   },
+  "Web/API/Media_Streams_API/Taking_still_photos": {
+    "modified": "2020-02-17T09:19:46.393Z",
+    "contributors": [
+      "mechtool",
+      "lolyanepizdi",
+      "tifund"
+    ]
+  },
   "Web/API/MouseEvent": {
     "modified": "2019-11-13T05:14:10.400Z",
     "contributors": [
@@ -10269,14 +10277,6 @@
     "modified": "2020-02-18T05:04:43.227Z",
     "contributors": [
       "mechtool"
-    ]
-  },
-  "Web/API/WebRTC_API/Taking_still_photos": {
-    "modified": "2020-02-17T09:19:46.393Z",
-    "contributors": [
-      "mechtool",
-      "lolyanepizdi",
-      "tifund"
     ]
   },
   "Web/API/WebRTC_API/Using_data_channels": {

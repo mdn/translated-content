@@ -7128,6 +7128,13 @@
       "maedca"
     ]
   },
+  "Web/API/Media_Streams_API/Taking_still_photos": {
+    "modified": "2019-03-23T23:26:57.758Z",
+    "contributors": [
+      "robertoasq",
+      "maedca"
+    ]
+  },
   "Web/API/MessageEvent": {
     "modified": "2019-03-18T21:44:05.386Z",
     "contributors": [
@@ -8166,13 +8173,6 @@
     "contributors": [
       "maedca",
       "voylinux"
-    ]
-  },
-  "Web/API/WebRTC_API/Taking_still_photos": {
-    "modified": "2019-03-23T23:26:57.758Z",
-    "contributors": [
-      "robertoasq",
-      "maedca"
     ]
   },
   "Web/API/WebSocket": {

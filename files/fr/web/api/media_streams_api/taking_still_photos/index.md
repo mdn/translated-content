@@ -1,13 +1,13 @@
 ---
 title: Prendre des photos avec la webcam
-slug: Web/API/WebRTC_API/Taking_still_photos
+slug: Web/API/Media_Streams_API/Taking_still_photos
 tags:
   - API
   - Avancé
   - WebRTC
   - getusermedia
 translation_of: Web/API/WebRTC_API/Taking_still_photos
-original_slug: WebRTC/Prendre_des_photos_avec_la_webcam
+original_slug: Web/API/WebRTC_API/Taking_still_photos
 ---
 ## Introduction et demo
 

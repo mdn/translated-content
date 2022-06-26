@@ -16822,6 +16822,15 @@
       "AbrahamT"
     ]
   },
+  "Web/API/Media_Streams_API/Taking_still_photos": {
+    "modified": "2019-03-23T23:34:23.933Z",
+    "contributors": [
+      "teoli",
+      "yluom",
+      "peb85",
+      "Hub"
+    ]
+  },
   "Web/API/MessageEvent": {
     "modified": "2019-03-23T22:37:35.554Z",
     "contributors": [
@@ -19086,15 +19095,6 @@
       "tonybengue",
       "amineSsa",
       "wordsbybird"
-    ]
-  },
-  "Web/API/WebRTC_API/Taking_still_photos": {
-    "modified": "2019-03-23T23:34:23.933Z",
-    "contributors": [
-      "teoli",
-      "yluom",
-      "peb85",
-      "Hub"
     ]
   },
   "Web/API/WebSocket": {

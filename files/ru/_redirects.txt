@@ -445,6 +445,7 @@
 /ru/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /ru/docs/Web/API/WebGL_API/Tutorial/Создание_3D_объектов_с_помощью_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /ru/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
+/ru/docs/Web/API/WebRTC_API/Taking_still_photos	/ru/docs/Web/API/Media_Streams_API/Taking_still_photos
 /ru/docs/Web/API/WebRTC_API/протоколы	/ru/docs/Web/API/WebRTC_API/Protocols
 /ru/docs/Web/API/WebRTC_API/связь	/ru/docs/Web/API/WebRTC_API/Connectivity
 /ru/docs/Web/API/Window/crypto	/ru/docs/Web/API/crypto_property
