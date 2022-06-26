@@ -28,7 +28,7 @@ translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
  </tbody>
 </table>
 
-<h2 dir="ltr" id="广义的定义">广义的定义</h2>
+<h2 id="广义的定义">广义的定义</h2>
 
 <p>JavaScript 是一种脚本，一门编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新，交互式的地图，2D/3D 动画，滚动播放的视频等等。JavaScript 怎能缺席。它是标准 Web 技术蛋糕的第三层，其中 <a href="/en-US/docs/Learn/HTML">HTML </a>和 <a href="/en-US/docs/Learn/CSS">CSS </a>我们已经在学习中心的其他部分进行了详细的讲解。</p>
 
@@ -141,7 +141,7 @@ function updateName() {
 
 <p>JavaScript 能做的远不止这些。让我们来仔细探索。</p>
 
-<h2 dir="ltr" id="它到底可以做什么？">它到底可以做什么？</h2>
+<h2 id="它到底可以做什么？">它到底可以做什么？</h2>
 
 <p>客户端（client-side）JavaScript 语言的核心包含一些普遍的编程特性，以让你可以做到如下的事情：</p>
 
@@ -186,7 +186,7 @@ function updateName() {
 
 <p>先稳住！你看到的只是冰山一角。你不可能学一天 JavaScript 就能构建下一个 Facebook, 谷歌地图，或者 Instagram。敬请「牢记初心，砥砺前行」。</p>
 
-<h2 dir="ltr" id="JavaScript_在页面上做了什么？">JavaScript 在页面上做了什么？</h2>
+<h2 id="JavaScript_在页面上做了什么？">JavaScript 在页面上做了什么？</h2>
 
 <p>现在我们实实在在的学习一些代码，与此同时，探索 JavaScript 运行时背后发生的事情。</p>
 
@@ -198,7 +198,7 @@ function updateName() {
 
 <p>这样很好，因为 JavaScript 最普遍的用处是通过 DOM API（见上文）动态修改 HTML 和 CSS 来更新用户界面（user interface）。如果 JavaScript 在 HTML 和 CSS 就位之前加载运行，就会引发错误。</p>
 
-<h3 dir="ltr" id="浏览器安全">浏览器安全</h3>
+<h3 id="浏览器安全">浏览器安全</h3>
 
 <p>每个浏览器标签页就是其自身用来运行代码的独立容器（这些容器用专业术语称为“运行环境”）。大多数情况下，每个标签页中的代码完全独立运行，而且一个标签页中的代码不能直接影响另一个标签页（或者另一个网站）中的代码。这是一个好的安全措施，如果不这样，黑客就可以从其他网站盗取信息，等等。</p>
 
@@ -206,7 +206,7 @@ function updateName() {
 <p><strong>注</strong>：以安全的方式在不同网站/标签页中传送代码和数据的方法是存在的，但这些技术较为高级，本课程不会涉及。</p>
 </div>
 
-<h3 dir="ltr" id="JavaScript_运行次序">JavaScript 运行次序</h3>
+<h3 id="JavaScript_运行次序">JavaScript 运行次序</h3>
 
 <p>当浏览器执行到一段 JavaScript 代码时，通常会按从上往下的顺序执行这段代码。这意味着你需要注意代码书写的顺序。比如，我们回到第一个例子中的 JavaScript 代码：</p>
 
@@ -227,7 +227,7 @@ function updateName() {
 <p><strong>注</strong>：这是一个很常见的错误，在引用对象之前必须确保该对象已经存在。</p>
 </div>
 
-<h3 dir="ltr" id="解释代码_vs_编译代码">解释代码 vs 编译代码</h3>
+<h3 id="解释代码_vs_编译代码">解释代码 vs 编译代码</h3>
 
 <p>作为程序员，你或许听说过这两个术语：<strong>解释（</strong><strong>interpret）</strong>和 <strong>编译 (compile)</strong>。在解释型语言中，代码自上而下运行，且实时返回运行结果。代码在由浏览器执行前，不需要将其转化为其他形式。代码将直接以文本格式（text form）被接收和处理。</p>
 
@@ -237,23 +237,23 @@ function updateName() {
 
 <p>两种类型的语言各有优势，这个问题我们暂且不谈。</p>
 
-<h3 dir="ltr" id="服务器端代码_vs_客户端代码">服务器端代码 vs 客户端代码</h3>
+<h3 id="服务器端代码_vs_客户端代码">服务器端代码 vs 客户端代码</h3>
 
 <p>你或许还听说过<strong>服务器端（server-side）</strong>和 <strong>客户端（client-side）</strong>代码这两个术语，尤其是在 web 开发时。客户端代码是在用户的电脑上运行的代码，在浏览一个网页时，它的客户端代码就会被下载，然后由浏览器来运行并展示。这就是<strong>客户端 JavaScript</strong>。</p>
 
 <p>而服务器端代码在服务器上运行，接着运行结果才由浏览器下载并展示出来。流行的服务器端 web 语言包括：PHP、Python、Ruby、ASP.NET 以及...... JavaScript！JavaScript 也可用作服务器端语言，比如现在流行的 Node.js 环境，你可以在我们的 <a href="/zh-CN/docs/Learn/Server-side">动态网页 - 服务器端编程</a> 主题中找到更多关于服务器端 JavaScript 的知识。</p>
 
-<h3 dir="ltr" id="动态代码_vs_静态代码">动态代码 vs 静态代码</h3>
+<h3 id="动态代码_vs_静态代码">动态代码 vs 静态代码</h3>
 
 <p>“<strong>动态</strong>”一词既适用于客户端 JavaScript，又适用于描述服务器端语言。是指通过按需生成新内容来更新 web 页面 / 应用，使得不同环境下显示不同内容。服务器端代码会在服务器上动态生成新内容，例如从数据库中提取信息。而客户端 JavaScript 则在用户端浏览器中动态生成新内容，比如说创建一个新的 HTML 表格，用从服务器请求到的数据填充，然后在网页中向用户展示这个表格。两种情况的意义略有不同，但又有所关联，且两者（服务器端和客户端）经常协同作战。</p>
 
 <p>没有动态更新内容的网页叫做“<strong>静态</strong>”页面<strong>，</strong>所显示的内容不会改变。</p>
 
-<h2 dir="ltr" id="怎样向页面添加_JavaScript？">怎样向页面添加 JavaScript？</h2>
+<h2 id="怎样向页面添加_JavaScript？">怎样向页面添加 JavaScript？</h2>
 
 <p>可以像添加 CSS 那样将 JavaScript 添加到 HTML 页面中。CSS 使用 {{htmlelement("link")}} 元素链接外部样式表，使用 {{htmlelement("style")}} 元素向 HTML 嵌入内部样式表，JavaScript 这里只需一个元素——{{htmlelement("script")}}。我们来看看它是怎么工作的。</p>
 
-<h3 dir="ltr" id="内部_JavaScript">内部 JavaScript</h3>
+<h3 id="内部_JavaScript">内部 JavaScript</h3>
 
 <ol dir="ltr">
  <li>首先，下载示例文件 <a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html">apply-javascript.html</a>。放在一个好记的文件夹里。</li>
@@ -291,7 +291,7 @@ function updateName() {
 <p><strong>注</strong>: 你可以在 GitHub 上查看此版本 <a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html">apply-internal.html</a> (<a href="https://roy-tian.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html">也可在线查看</a>)。</p>
 </div>
 
-<h3 dir="ltr" id="外部_JavaScript">外部 JavaScript</h3>
+<h3 id="外部_JavaScript">外部 JavaScript</h3>
 
 <p>这很不错，但是能不能把 JavaScript 代码放置在一个外部文件中呢？现在我们来研究一下。</p>
 
@@ -320,7 +320,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 <p><strong>注</strong>：你可以在 GitHub 上查看这个版本 <a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html">apply-external.html</a> 以及 <a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js">script.js</a> (<a href="https://roy-tian.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html">也可在线查看</a>).</p>
 </div>
 
-<h3 dir="ltr" id="内联_JavaScript_处理器">内联 JavaScript 处理器</h3>
+<h3 id="内联_JavaScript_处理器">内联 JavaScript 处理器</h3>
 
 <p>注意，有时候你会遇到在 HTML 中存在着一丝真实的 JavaScript 代码。它或许看上去像这样：</p>
 
@@ -378,7 +378,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 <p><strong>注</strong>：请尝试修改 <code>apply-javascript.html</code> 以添加更多按钮。刷新后可发现按下任一按钮时都会创建一个段落。很高效吧。</p>
 </div>
 
-<h3 dir="ltr" id="脚本调用策略">脚本调用策略</h3>
+<h3 id="脚本调用策略">脚本调用策略</h3>
 
 <p>要让脚本调用的时机符合预期，需要解决一系列的问题。这里看似简单，实际大有文章。最常见的问题就是：HTML 元素是按其在页面中出现的次序调用的，如果用 JavaScript 来管理页面上的元素（更精确的说法是使用 <a href="/zh-CN/docs/Web/API/Document_Object_Model">文档对象模型</a> DOM），若 JavaScript 加载于欲操作的 HTML 元素之前，则代码将出错。</p>
 
@@ -404,7 +404,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>解决此问题的旧方法是：把脚本元素放在文档体的底端（<code>&lt;/body&gt;</code> 标签之前，与之相邻），这样脚本就可以在 HTML 解析完毕后加载了。此方案（以及上述的 <code>DOMContentLoaded</code> 方案）的问题是：只有在所有 HTML DOM 加载完成后才开始脚本的加载/解析过程。对于有大量 JavaScript 代码的大型网站，可能会带来显著的性能损耗。这也是 <code>async</code> 属性诞生的初衷。</p>
 
-<h4 dir="ltr" id="async_和_defer"><code>async</code> 和 <code>defer</code></h4>
+<h4 id="async_和_defer"><code>async</code> 和 <code>defer</code></h4>
 
 <p>上述的脚本阻塞问题实际有两种解决方案 —— <code>async</code> 和 <code>defer</code>。我们来依次讲解。</p>
 
@@ -437,7 +437,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
  <li>如果脚本需要等待页面解析，且依赖于其它脚本，调用这些脚本时应使用 <code>defer</code>，将关联的脚本按所需顺序置于 HTML 中。</li>
 </ul>
 
-<h2 dir="ltr" id="注释">注释</h2>
+<h2 id="注释">注释</h2>
 
 <p>就像 HTML 和 CSS，JavaScript 代码中也可以添加注释，浏览器会忽略它们，注释只是为你的同事（还有你，如果半年后再看自己写的代码你会说，这是什么垃圾玩意。）提供关于代码如何工作的指引。注释非常有用，而且应该经常使用，尤其在大型应用中。注释分为两类：</p>
 
@@ -474,7 +474,7 @@ for (let i = 0; i &lt; buttons.length; i++) {
   buttons[i].addEventListener('click', createParagraph);
 }</pre>
 
-<h2 dir="ltr" id="小结">小结</h2>
+<h2 id="小结">小结</h2>
 
 <p>恭喜你，迈出了探索 JavaScript 世界的第一步。我们从理论开始，介绍为什么要使用 JavaScript，以及用它能做什么事情。过程中穿插了一些代码示例并讲解了 JavaScript 如何与网站中其他代码适配，等等。</p>
 
@@ -482,7 +482,7 @@ for (let i = 0; i &lt; buttons.length; i++) {
 
 <p>{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}</p>
 
-<h2 dir="ltr" id="本章目录">本章目录</h2>
+<h2 id="本章目录">本章目录</h2>
 
 <ul dir="ltr">
  <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript">JavaScript 是什么？</a></li>

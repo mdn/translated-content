@@ -12,7 +12,7 @@ translation_of: Web/API/Document/createTreeWalker
 
 <p><strong><code>document.createTreeWalker()</code></strong> 方法，能创建并返回一个 {{domxref("TreeWalker")}} 对象。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>treeWalker</em> = <em>document</em>.createTreeWalker(<em>root</em>, <em>whatToShow</em>, <em>filter</em>, <em>entityReferenceExpansion</em>);
 </pre>
@@ -109,7 +109,7 @@ translation_of: Web/API/Document/createTreeWalker
 
 <p>一个新的 {{domxref("TreeWalker")}} 对象。</p>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <p>以下示例遍历 body 下的所有节点，将节点集合缩小至元素，简单地传递每个可接受的节点（也可在 <code>acceptNode()</code> 方法中缩小集合），然后利用创建的 TreeWalker 迭代器在节点上推进（现在是所有的元素）并把它们推入一个数组。</p>
 
@@ -128,7 +128,7 @@ while(currentNode) {
   currentNode = treeWalker.nextNode();
 }</pre>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 {{Specifications}}
 

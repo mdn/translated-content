@@ -5,14 +5,14 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Create_book_form
 ---
 <p><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_book_form">Edit</a> 此子文档显示如何定义页面/表单以创建<code>Book</code>对象。这比相同的作者<code>Author</code>或种类<code>Genre</code>页面稍微复杂一点，因为我们需要在我们的书本表单中，获取并显示可用的作者和种类记录。</p>
 
-<h2 class="highlight-spanned" id="导入验证和清理方法">导入验证和清理方法</h2>
+<h2 id="导入验证和清理方法">导入验证和清理方法</h2>
 
 <p>打开 <strong>/controllers/bookController.js</strong>，并在文件顶部添加以下行：</p>
 
 <pre class="brush: js line-numbers  language-js">const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');</pre>
 
-<h2 class="highlight-spanned" id="控制器—get_路由">控制器—get 路由</h2>
+<h2 id="控制器—get_路由">控制器—get 路由</h2>
 
 <p>找到导出的<code>book_create_get()</code> 控制器方法，并将其替换为以下代码。</p>
 
@@ -36,7 +36,7 @@ exports.book_create_get = function(req, res, next) {
 
 <p>这使用异步模块 async（在<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">教程 5：显示数据库中的数据</a>），来获取所有作者和种类对象。然后将它们作为名为<code>authors</code>和<code>genres</code>的变量（以及页面标题<code>title</code>），传递给视图<code><strong>book_form.pug</strong></code>。</p>
 
-<h2 class="highlight-spanned" id="控制器—post_路由">控制器—post 路由</h2>
+<h2 id="控制器—post_路由">控制器—post 路由</h2>
 
 <p>找到导出的<code>book_create_post()</code>控制器方法，并将其替换为以下代码。</p>
 
@@ -145,7 +145,7 @@ for (let i = 0; i &lt; results.genres.length; i++) {
     }
 }</pre>
 
-<h2 class="highlight-spanned" id="视图">视图</h2>
+<h2 id="视图">视图</h2>
 
 <p>创建 <strong>/views/book_form.pug</strong>，并复制下面的文本。</p>
 
@@ -199,7 +199,7 @@ block content
  </li>
 </ul>
 
-<h2 class="highlight-spanned" id="它看起來像是">它看起來像是？</h2>
+<h2 id="它看起來像是">它看起來像是？</h2>
 
 <p>运行应用程序，将浏览器打开到<a href="http://localhost:3000/">http://localhost:3000</a>，然后选择 Create new book 链接。如果一切设置正确，您的网站应该类似于以下屏幕截图。提交有效的图书后，应将其保存，然后您将进入图书详细信息页面。</p>
 

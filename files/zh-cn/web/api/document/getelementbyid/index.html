@@ -14,7 +14,7 @@ translation_of: Web/API/Document/getElementById
 
 <p>如果需要查找到那些没有 ID 的元素，你可以考虑通过 CSS 选择器使用 {{domxref("Document.querySelector", "querySelector()")}}。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="brush: js notranslate">var element = document.getElementById(<em>id</em>);
 </pre>
@@ -30,7 +30,7 @@ translation_of: Web/API/Document/getElementById
 
 <p>返回一个匹配到 ID 的 DOM {{domxref("Element")}} 对象。若在当前 {{domxref("Document")}} 下没有找到，则返回 null。</p>
 
-<h2 id="示例" name="示例">示例</h2>
+<h2 id="示例">示例</h2>
 
 <h3 id="HTML">HTML</h3>
 
@@ -100,15 +100,15 @@ var el = document.getElementById('testqq'); // el 是个 null
 
 <p><strong>非 HTML 文档（Non-HTML documents</strong>）。 DOM 的实现必须说明哪个属性是 ID 类型。只有 DTD 定义了'id'是 ID 属性时’id‘才会被认为是 ID 属性。在 <a href="/en-US/docs/XHTML" title="en-US/docs/XHTML">XHTML</a>, <a href="/en-US/docs/XUL" style="text-decoration: underline;" title="en-US/docs/XUL">XUL</a>或者其他文档中，'id'通常被定义为 ID 类型的属性。不知道哪个属性是 ID 类型的实现中，这会返回 null 结果。</p>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
+<h2 id="Browser_Compatibility">浏览器兼容性</h2>
 
 <p>{{Compat("api.Document.getElementById")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li><a href="/zh-CN/docs/DOM/document" title="en-US/docs/DOM/document">document</a> 包含其他用于在文档中查找元素的方法</li>

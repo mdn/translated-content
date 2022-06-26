@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 
 <p>我们已经为主页创建了一个路由。为了完成页面，我们需要更新控制器函数，以从数据库中提取记录的“计数”，并创建一个可用于呈现页面的视图（模板）。</p>
 
-<h2 class="highlight-spanned" id="路由">路由</h2>
+<h2 id="路由">路由</h2>
 
 <p>在 <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">前面的教程</a>，我们创建 index 页面路由。此处要提醒的是，所有的路由函式，都定义在 <strong>/routes/catalog.js</strong>:</p>
 
@@ -23,7 +23,7 @@ router.get('/', book_controller.index);  //This actually maps to /catalog/ becau
 
 <p>我们扩展这个控制器函数，以从我们的模型获取信息，然后使用模板（视图）渲染它。</p>
 
-<h2 class="highlight-spanned" id="控制器">控制器</h2>
+<h2 id="控制器">控制器</h2>
 
 <p>索引控制器函数需要获取以下有关信息，即数据库中有多少<code>Book</code>，<code>BookInstance</code>，可用的<code>BookInstance</code>，<code>Author</code>和<code>Genre</code>记录，将这些数据渲染到模板中，以创建 HTML 页面，然后将其返回到 HTTP 响应中。</p>
 
@@ -84,7 +84,7 @@ exports.index = function(req, res) {
 <p><strong>注意：</strong> 上面的<code>async.parallel()</code>裡的回调函数有点不寻常，因为不管是否出现错误，我们都会渲染页面（通常您可能使用单独的执行路径来处理错误的显示）。</p>
 </div>
 
-<h2 class="highlight-spanned" id="视图">视图</h2>
+<h2 id="视图">视图</h2>
 
 <p>打开 <strong>/views/index.pug</strong> ，并用底下文字取代它的内容。</p>
 
@@ -116,7 +116,7 @@ block content
 <p><strong>注意：</strong> 我们没有转义计数值 (i.e. 我们使用 <code>!{}</code> 语法) ，因为计数值已经被计算过了。如果信息是由终端用户提供的，那么我们就会转义該变量，以用于显示。</p>
 </div>
 
-<h2 class="highlight-spanned" id="它看起来像是">它看起来像是？</h2>
+<h2 id="它看起来像是">它看起来像是？</h2>
 
 <p>此处，我们应该已经创建了呈现 index 页面，所需要的每样东西。运行本地图书馆应用，并打开浏览器访问 <a href="http://localhost:3000/">http://localhost:3000/</a>。如果每样东西都设定正确了，你的网站看起来应该像底下的截图。</p>
 

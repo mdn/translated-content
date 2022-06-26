@@ -15,7 +15,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 <p><strong>注意：</strong> 使用 Pug 的缺点，是它对缩进和空格敏感（如果在错误的位置添加额外的空格，可能会得到没什么帮助的错误代码）。但是，一旦您的模板到位，它们就很容易阅读和维护。</p>
 </div>
 
-<h2 class="highlight-spanned" id="模板组态">模板组态</h2>
+<h2 id="模板组态">模板组态</h2>
 
 <p>在我们<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website">创建骨架网站</a>时，LocalLibrary 配置为使用 <a href="https://pugjs.org/api/getting-started.html">Pug</a>。您应该看到 Pug 模块作为依赖项，包含在网站的 <strong>package.json</strong>文件中，以及 <strong>app.js</strong>文件中的以下配置设置。设置告诉我们，使用 Pug 作为视图引擎，Express 应该在<strong> /views</strong>子目录中搜索模板。</p>
 
@@ -32,7 +32,7 @@ app.set('view engine', 'pug');</code></pre>
     layout.pug</code>
 </pre>
 
-<h2 class="highlight-spanned" id="模板语法">模板语法</h2>
+<h2 id="模板语法">模板语法</h2>
 
 <p>下面的示例模板文件，展示了许多 Pug 最有用的功能。</p>
 
@@ -117,7 +117,7 @@ else
 
 <p>语法还支持注释（可以在输出中呈现 - 或者不是 - 可自行选择），支持 mixins 创建可重用的代码块，case 语句和许多其他功能。有关更多详细信息，请参阅<a href="https://pugjs.org/api/getting-started.html">Pug</a>文档。</p>
 
-<h2 class="highlight-spanned" id="扩展模板">扩展模板</h2>
+<h2 id="扩展模板">扩展模板</h2>
 
 <p>在一个站点中，通常所有页面都有一个共同的结构，包括页首，页脚，导航等的标准 HTML 标记。比起强迫开发人员在每个页面中复制这个“样板”的做法，Pug 允许你声明一个基本模板，然后扩展它，只替换每个特定页面不同的地方。</p>
 

@@ -13,7 +13,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 
 <p><code>WindowOrWorkerGlobalScope</code> 内置的<strong><code>clearTimeout()</code></strong>方法取消了先前通过调用{{domxref("setTimeout()")}}建立的定时器。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="notranslate"><em>scope</em>.clearTimeout(<em>timeoutID</em>)</pre>
 
@@ -28,7 +28,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 
 <p>值得注意的是，{{domxref("setTimeout()")}} 和 {{domxref("setInterval()")}} 使用共享的 ID 池，意味着在技术上可以混用 <code>clearTimeout()</code> 和 {{domxref("clearInterval()")}}。但是，为了清楚起见，你应该避免这样做。</p>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <p>在一个网页中运行如下脚本，并且点击一次页面。一秒钟后你会看见弹出一条信息。如果你在一秒内不停点击页面，弹出框将不再出现。</p>
 
@@ -53,11 +53,11 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 };
 window.onclick = function() { alarm.setup() };</pre>
 
-<h2 id="Notes" name="Notes">注意</h2>
+<h2 id="Notes">注意</h2>
 
 <p>传入一个错误的 ID 给 <code>clearTimeout()</code>不会有任何影响；也不会抛出异常。</p>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 {{Specifications}}
 
@@ -65,7 +65,7 @@ window.onclick = function() { alarm.setup() };</pre>
 
 {{Compat("api.clearTimeout")}}
 
-<h2 id="See_also" name="See_also">更多</h2>
+<h2 id="See_also">更多</h2>
 
 <ul>
  <li>{{domxref("WindowTimers.setTimeout()")}}</li>
