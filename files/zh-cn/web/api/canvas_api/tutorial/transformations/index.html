@@ -14,7 +14,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>在本教程前面的部分中，我们已经了解了 Canvas 网格和坐标空间。到目前为止，我们只是根据我们的需要使用默认的网格，改变整个画布的大小。变形是一种更强大的方法，可以将原点移动到另一点、对网格进行旋转和缩放。</p>
 
-<h2 id="Saving_and_restoring_state" name="Saving_and_restoring_state">状态的保存和恢复 Saving and restoring state</h2>
+<h2 id="Saving_and_restoring_state">状态的保存和恢复 Saving and restoring state</h2>
 
 <p>在了解变形之前，我先介绍两个在你开始绘制复杂图形时必不可少的方法。</p>
 
@@ -35,7 +35,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>你可以调用任意多次 <code>save</code>方法。每一次调用 <code>restore</code> 方法，上一个保存的状态就从栈中弹出，所有设定都恢复。</p>
 
-<h3 id="A_save_and_restore_canvas_state_example" name="A_save_and_restore_canvas_state_example"><code>save</code> 和 <code>restore</code> 的应用例子</h3>
+<h3 id="A_save_and_restore_canvas_state_example"><code>save</code> 和 <code>restore</code> 的应用例子</h3>
 
 <p><img alt="" class="internal" src="/@api/deki/files/104/=Canvas_savestate.png" style="float: right;">我们尝试用这个连续矩形的例子来描述 canvas 的状态栈是如何工作的。</p>
 
@@ -75,7 +75,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 <pre class="brush: js notranslate">draw();</pre>
 </div>
 
-<h2 id="Translating" name="Translating">移动 Translating</h2>
+<h2 id="Translating">移动 Translating</h2>
 
 <p><img alt="" class="internal" src="/@api/deki/files/85/=Canvas_grid_translate.png" style="float: right;"></p>
 
@@ -88,7 +88,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>在做变形之前先保存状态是一个良好的习惯。大多数情况下，调用 restore 方法比手动恢复原先的状态要简单得多。又，如果你是在一个循环中做位移但没有保存和恢复 canvas 的状态，很可能到最后会发现怎么有些东西不见了，那是因为它很可能已经超出 canvas 范围以外了。</p>
 
-<h3 id="A_translate_example" name="A_translate_example"><code>translate</code> 的例子</h3>
+<h3 id="A_translate_example"><code>translate</code> 的例子</h3>
 
 <p>这个例子显示了一些移动 canvas 原点的好处。如果不使用 <code>translate </code>方法，那么所有矩形都将被绘制在相同的位置（0,0）。<code>translate </code>方法同时让我们可以任意放置这些图案，而不需要在 <code>fillRect()</code> 方法中手工调整坐标值，既好理解也方便使用。</p>
 
@@ -116,7 +116,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>{{EmbedLiveSample("A_translate_example", "160", "160", "https://mdn.mozillademos.org/files/9857/translate.png")}}</p>
 
-<h2 id="Rotating" name="Rotating">旋转 Rotating</h2>
+<h2 id="Rotating">旋转 Rotating</h2>
 
 <p><img alt="" class="internal" src="/@api/deki/files/84/=Canvas_grid_rotate.png" style="float: right;"></p>
 
@@ -129,7 +129,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>旋转的中心点始终是 canvas 的原点，如果要改变它，我们需要用到 <code>translate </code>方法。</p>
 
-<h3 id="A_rotate_example" name="A_rotate_example"><code>rotate</code> 的例子</h3>
+<h3 id="A_rotate_example"><code>rotate</code> 的例子</h3>
 
 <p><img alt="" class="internal" src="/@api/deki/files/103/=Canvas_rotate.png" style="float: right;"></p>
 
@@ -165,7 +165,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 }
 </pre>
 
-<h2 id="Scaling" name="Scaling">缩放 Scaling</h2>
+<h2 id="Scaling">缩放 Scaling</h2>
 
 <p>接着是缩放。我们用它来增减图形在 canvas 中的像素数目，对形状，位图进行缩小或者放大。</p>
 
@@ -178,7 +178,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>默认情况下，canvas 的 1 个单位为 1 个像素。举例说，如果我们设置缩放因子是 0.5，1 个单位就变成对应 0.5 个像素，这样绘制出来的形状就会是原先的一半。同理，设置为 2.0 时，1 个单位就对应变成了 2 像素，绘制的结果就是图形放大了 2 倍。</p>
 
-<h3 id="A_scale_example" name="A_scale_example"><code>scale</code> 的例子</h3>
+<h3 id="A_scale_example"><code>scale</code> 的例子</h3>
 
 <p>这最后的例子里，我们用不同的缩放方式来画两个图形。</p>
 
@@ -205,7 +205,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>{{EmbedLiveSample("A_scale_example", "160", "160", "https://mdn.mozillademos.org/files/9861/scale.png")}}</p>
 
-<h2 id="Transforms" name="Transforms">变形 Transforms</h2>
+<h2 id="Transforms">变形 Transforms</h2>
 
 <p>最后一个方法允许对变形矩阵直接修改。</p>
 

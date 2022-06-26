@@ -5,7 +5,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_pag
 ---
 <p>作者列表页面，需要呈现数据库中所有作者的列表，有每位作者的名字，并连结到作者详细内容页面。出生与死亡日期应该在名字后面，并且在同一列。</p>
 
-<h2 class="highlight-spanned" id="控制器">控制器</h2>
+<h2 id="控制器">控制器</h2>
 
 <p>作者列表控制器函数，需要获取所有作者实例的列表，然后将这些实例传递给模板进行渲染。</p>
 
@@ -26,7 +26,7 @@ exports.author_list = function(req, res, next) {
 
 <p>该方法使用模型的 <code>find()</code>, <code>sort()</code> 和 <code>exec()</code> 函数，以返回所有<code>Author</code>对象，并按<code>family_name</code>的字母顺排列。传递给<code>exec()</code>方法的回调被调用，并将传入任何错误（或<code>null</code>）作为第一个参数，或者成功时，传入所有作者列表。如果出现错误，则调用带有错误值的下一个中间件函数，如果没有错误，则呈现<strong> author_list</strong>（.pug）模板，传递页面标题<code>title，</code>和作者列表（<code>author_list</code>）。</p>
 
-<h2 class="highlight-spanned" id="视图">视图</h2>
+<h2 id="视图">视图</h2>
 
 <p>打开 <strong>/views/author_list.pug </strong>，用底下文字取代它的内容。</p>
 
@@ -46,7 +46,7 @@ block content
 
 <p>如同我们其它的模板，上面视图也依照着同样的模式。</p>
 
-<h2 class="highlight-spanned" id="它看起來像是">它看起來像是？</h2>
+<h2 id="它看起來像是">它看起來像是？</h2>
 
 <p>运行本应用，并打开浏览器访问 <a href="http://localhost:3000/">http://localhost:3000/</a> 。然后选择所有作者 All authors 连结。如果每个东西都设定正确了，页面看起来应该像底下的截图。</p>
 

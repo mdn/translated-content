@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 
 <p>正如<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms#form_design">表单设计</a>部分所讨论的那样，我们的策略是，只允许删除“未被其他对象引用”的对象（在这种情况下，这意味着如果作者<code>Author</code>被一本书<code>Book</code>引用，我们将不允许删除作者）。在实现方面，这意味着，表单需要在删除作者之前，先确认没有关联的书籍。如果存在关联的书籍，则应显示它们，并说明在删除<code>Author</code>对象之前，必须删除它们。</p>
 
-<h2 class="highlight-spanned" id="控制器—get_路由">控制器—get 路由</h2>
+<h2 id="控制器—get_路由">控制器—get 路由</h2>
 
 <p>打开<strong>/controllers/authorController.js</strong>。找到导出的<code>author_delete_get()</code> 控制器方法，并将其替换为以下代码。</p>
 
@@ -44,7 +44,7 @@ exports.author_delete_get = function(req, res, next) {
     }</code></pre>
 </div>
 
-<h2 class="highlight-spanned" id="控制器—post_路由">控制器—post 路由</h2>
+<h2 id="控制器—post_路由">控制器—post 路由</h2>
 
 <p>找到导出的<code>author_delete_post()</code>控制器方法，并将其替换为以下代码。</p>
 
@@ -83,7 +83,7 @@ exports.author_delete_post = function(req, res, next) {
 <p><strong>注意：</strong> 我们可以检查对<code>findById()</code>的调用，是否返回任何结果，如果没有，则立即呈现所有作者的列表。为简洁起见，我们将代码保留在上面（如果找不到 id，它仍会返回作者列表，但这将在<code>findByIdAndRemove()</code>之后发生）。</p>
 </div>
 
-<h2 class="highlight-spanned" id="视图">视图</h2>
+<h2 id="视图">视图</h2>
 
 <p>创建 <strong>/views/author_delete.pug</strong> 并复制贴上底下文字。</p>
 
@@ -123,7 +123,7 @@ block content
  <li>如果没有书本，则页面会显示确认提示。如果单击“删除”<strong>Delete</strong>按钮，则会在<code>POST</code>请求中，将作者 ID 发送到服务器，并且将删除该作者的记录。</li>
 </ul>
 
-<h2 class="highlight-spanned" id="加入一个删除控制器">加入一个删除控制器</h2>
+<h2 id="加入一个删除控制器">加入一个删除控制器</h2>
 
 <p>接下来，我们将向 Author 详细视图添加 <strong>Delete </strong>控件（详细信息页面是删除记录的好地方）。</p>
 
@@ -141,7 +141,7 @@ p
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14492/LocalLibary_Express_Author_Detail_Delete.png" style="border-style: solid; border-width: 1px; display: block; height: 202px; margin: 0px auto; width: 500px;"></p>
 
-<h2 class="highlight-spanned" id="它看起來像是">它看起來像是？</h2>
+<h2 id="它看起來像是">它看起來像是？</h2>
 
 <p>运行应用程序，并将浏览器打开，到<a href="http://localhost:3000/">http://localhost:3000/</a>。然后选择所有作者链接<em> All authors</em>，然后选择一个特定作者。最后选择删除作者链接 <em>Delete</em> author。</p>
 

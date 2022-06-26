@@ -5,14 +5,14 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
 ---
 <p><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_BookInstance_form">Edi</a>本章节演示如何定义一个页面/表单，以创建<code>BookInstance</code> 物件。这很像我们用来创建书本 <code>Book</code> 物件的表单。</p>
 
-<h2 class="highlight-spanned" id="导入验证和清理方法">导入验证和清理方法</h2>
+<h2 id="导入验证和清理方法">导入验证和清理方法</h2>
 
 <p>打开 <strong>/controllers/bookinstanceController.js</strong>，并在档案最上方加入以下几行：</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');</code></pre>
 
-<h2 class="highlight-spanned" id="控制器—get_路由">控制器—get 路由</h2>
+<h2 id="控制器—get_路由">控制器—get 路由</h2>
 
 <p>在档案最上方，用 require 导入书本模型 (因为每个<code>BookInstance</code> 都有关连的 <code>Book</code>)。</p>
 
@@ -34,7 +34,7 @@ exports.bookinstance_create_get = function(req, res, next) {
 
 <p>控制器取得所有书本的列表 (<code>book_list</code>) 并将它传送到视图 <code><strong>bookinstance_form.pug</strong></code> (里面附加上 <code>title</code>)。</p>
 
-<h2 class="highlight-spanned" id="控制器—post_路由">控制器—post 路由</h2>
+<h2 id="控制器—post_路由">控制器—post 路由</h2>
 
 <p>找到导出的  <code>bookinstance_create_post()</code> 控制器方法，并替换为底下代码。</p>
 
@@ -89,7 +89,7 @@ exports.bookinstance_create_post = [
 
 <p>此代码的结构和行为，与创建其他对象的结构和行为相同。首先，我们验证数据，并為数据做無害化處理。如果数据无效，我们会重新显示表單，以及用户最初输入的数据，還有错误消息列表。如果数据有效，我们保存新的<code>BookInstance</code>记录，并将用户重定向到详细信息页面。</p>
 
-<h2 class="highlight-spanned" id="视图">视图</h2>
+<h2 id="视图">视图</h2>
 
 <p>创建 <strong>/views/bookinstance_form.pug</strong> ，并复制贴上以下代码。</p>
 
@@ -136,7 +136,7 @@ block content
 <p><strong>注意：</strong> 以上的模板将状态值 (Maintenance, Available, 等等) 写死在代码里，而且不能 "记忆" 使用者的输入值。如果你愿意的话，考虑重新实作此列表，当表单被重新呈现时，从控制器传入选项数据，并设定选中的值。</p>
 </div>
 
-<h2 class="highlight-spanned" id="它看起來像是">它看起來像是？</h2>
+<h2 id="它看起來像是">它看起來像是？</h2>
 
 <p>运行本应用，打开浏览器访问网址 <a href="http://localhost:3000/">http://localhost:3000/</a>。然后点击创建新书本实例 Create new book instance (copy) 连结。如果每个东西都设定正确了，你的网站看起应该像底下的截图。在你提交一个有效的 <code>BookInstance</code> 之后，它应该会被储存，并且你将被带到详细信息页面。</p>
 
