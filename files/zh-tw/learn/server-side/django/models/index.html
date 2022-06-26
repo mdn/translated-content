@@ -3,7 +3,7 @@ title: 'Django Tutorial Part 3: Using models'
 slug: Learn/Server-side/Django/Models
 translation_of: Learn/Server-side/Django/Models
 ---
-<div>，{{LearnSidebar}}</div>
+<div>{{LearnSidebar}}</div>
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}</div>
 
@@ -48,11 +48,10 @@ translation_of: Learn/Server-side/Django/Models
 
 <p>該圖顯示模型之間的關係，包括它們的多重性。多重性是圖中的數字，顯示可能存在於關係中的每個模型的數量（最大值和最小值）。例如，盒子之間的連接線，顯示書和類型相關。書模型中數字表明，一本書必須有一個或多個類型（想要多少就多少），而類型(Genres)模型線的另一端的數字(0..*)，表明它可以有零個或多個關聯書本(可以有這個書籍類別，也有對應的書；也可以是有這個書籍類別，但沒有對應的書)。</p>
 
-<p><img alt="LocalLibrary Model UML" src="https://mdn.mozillademos.org/files/15646/local_library_model_uml.png" style="height: 660px; width: 977px;"></p>
+<p><img alt="LocalLibrary Model UML" src="local_library_model_uml.svg"></p>
 
 <div class="note">
-<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意</strong> :下一節提供一個基本解釋模型的定義與使用，當你在讀的時候，也需要一邊考慮如何構建上圖中的每個模型。<br>
-  </p>
+<p><strong>備註：</strong>下一節提供一個基本解釋模型的定義與使用，當你在讀的時候，也需要一邊考慮如何構建上圖中的每個模型。</p>
 </div>
 
 <h2 id="模型入門">模型入門</h2>
