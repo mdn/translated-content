@@ -3,90 +3,66 @@ title: 行動無障礙檢核清單
 slug: Web/Accessibility/Mobile_accessibility_checklist
 translation_of: Web/Accessibility/Mobile_accessibility_checklist
 ---
-<div>
-<p>本文提供行動應用程式開發者一個簡潔的無障礙必備要件檢核清單，本文將隨著更多模型產生而不斷地演進。</p>
-</div>
+本文提供行動應用程式開發者一個簡潔的無障礙必備要件檢核清單，本文將隨著更多模型產生而不斷地演進。
 
-<h2 id="顏色">顏色</h2>
+## 顏色
 
-<ul>
- <li>顏色對比<strong>必須</strong>符合<a href="http://www.w3.org/TR/WCAG/">WCAG 2.0</a> AA 等級要求:
+- 顏色對比**必須**符合[WCAG 2.0](http://www.w3.org/TR/WCAG/) AA 等級要求:
 
-  <ul>
-   <li>一般文字對比值為4.5:1(小於18點字或14點粗體)</li>
-   <li>大文字對比值為 3:1(大於18點字或14點粗體)</li>
-  </ul>
- </li>
- <li>透過顏色傳遞資訊 <strong>必須</strong> 能藉由其他方式獲得資訊 (底線文字表示連結等)</li>
-</ul>
+  - 一般文字對比值為 4.5:1(小於 18 點字或 14 點粗體)
+  - 大文字對比值為  3:1(大於 18 點字或 14 點粗體)
 
-<div class="note">
-<p><strong>備註：</strong> Jon Snook已撰寫實用的 <a href="http://snook.ca/technical/colour_contrast/colour.html">Colour Contrast Checker</a> 能用於檢查背景與前景顏色的對比。同樣地，<a href="http://contrast-finder.tanaguru.com/">Tanaguru Contrast-Finder</a> 也提供類似功能，而且建議相似且更好的對比顏色提供你考量使用。</p>
-</div>
+- 透過顏色傳遞資訊  **必須**  能藉由其他方式獲得資訊 (底線文字表示連結等)
 
-<h2 id="可視性">可視性</h2>
+> **備註：** Jon Snook 已撰寫實用的  [Colour Contrast Checker](http://snook.ca/technical/colour_contrast/colour.html)  能用於檢查背景與前景顏色的對比。同樣地，[Tanaguru Contrast-Finder](http://contrast-finder.tanaguru.com/)  也提供類似功能，而且建議相似且更好的對比顏色提供你考量使用。
 
-<ul>
- <li>內容隱藏技術如完全不透明、Z型態索引順序與螢幕外的配置<strong>必須不能</strong>單獨用於處理可視性。</li>
- <li>目前可視螢幕之外的所有事物<strong>必須</strong>真正地不可見(特別適用於具有多個卡片的單一頁面應用程式)：
-  <ul>
-   <li><strong>使用</strong> <code>hidden</code> 屬性或 <code>visibility</code> 或 <code>display</code> 樣式屬性。</li>
-   <li>除非絕對無法避免，否則<strong>不應</strong>使用<code>aria-hidden</code> 屬性。</li>
-  </ul>
- </li>
-</ul>
+## 可視性
 
-<h2 id="焦點">焦點</h2>
+- 內容隱藏技術如完全不透明、Z 型態索引順序與螢幕外的配置**必須不能**單獨用於處理可視性。
+- 目前可視螢幕之外的所有事物**必須**真正地不可見(特別適用於具有多個卡片的單一頁面應用程式)：
 
-<ul>
- <li>所有可觸發的元素<strong>必須</strong>可獲得焦點：
+  - **使用** `hidden` 屬性或  `visibility` 或  `display`  樣式屬性。
+  - 除非絕對無法避免，否則**不應**使用`aria-hidden` 屬性。
 
-  <ul>
-   <li>標準的控制措施如連結、按鈕與表單輸入框預設為可獲得焦點。</li>
-   <li>非標準的控制措施<strong>必須</strong>賦予它們合適的<a href="http://www.w3.org/TR/wai-aria/roles">ARIA Role</a> ，如按鈕、連結或核取框。</li>
-  </ul>
- </li>
- <li>焦點應該以邏輯的順序與一致的方式處理。</li>
-</ul>
+## 焦點
 
-<h2 id="文字相等意義">文字相等意義</h2>
+- 所有可觸發的元素**必須**可獲得焦點：
 
-<ul>
- <li>在應用程式之中，為每一個非嚴格呈現的非文字元素提供文字相等意義。
-  <ul>
-   <li>在適當情況下使用<em>alt與</em><em>title</em>(使用指引請參見Steve Faulkner關於<a href="http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute</a>的文章)。</li>
-   <li>如果上述屬性不適用，則使用合適的<a href="http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header">ARIA屬性</a>如<code>aria-label</code>、<code>aria-labelledby</code>或 <code>aria-describedby。</code></li>
-  </ul>
- </li>
- <li>文字圖片 <strong>必須</strong>避免使用。</li>
- <li>所有表單控制措施<strong>必須</strong>有標籤({{ htmlelement("label") }} 元素) ，以利於螢幕報讀器使用者使用。</li>
-</ul>
+  - 標準的控制措施如連結、按鈕與表單輸入框預設為可獲得焦點。
+  - 非標準的控制措施**必須**賦予它們合適的[ARIA Role](http://www.w3.org/TR/wai-aria/roles) ，如按鈕、連結或核取框。
 
-<h2 id="處理狀態">處理狀態</h2>
+- 焦點應該以邏輯的順序與一致的方式處理。
 
-<ul>
- <li>標準控制措施如選項按鈕與核取框可被作業系統處理。然而，其他客製的控制措施狀態改變必須透過<a href="http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header">ARIA狀態</a>如<code> aria-checked</code>、<code>aria-disabled</code>、<code>ria-selected</code>、<code>aria-expanded</code>與<code>aria-pressed</code>來提供。</li>
-</ul>
+## 文字相等意義
 
-<h2 id="一般準則">一般準則</h2>
+- 在應用程式之中，為每一個非嚴格呈現的非文字元素提供文字相等意義。
 
-<ul>
- <li>應用程式的名稱<strong>必須</strong>提供。</li>
- <li>標題<strong>必須</strong>不能破壞層級結構。
-  <pre class="brush: html">&lt;h1&gt;Top level heading&lt;/h1&gt;
-  &lt;h2&gt;Secondary heading&lt;/h2&gt;
-  &lt;h2&gt;Another secondary heading&lt;/h2&gt;
-    &lt;h3&gt;Low level heading&lt;/h3&gt;</pre>
- </li>
- <li><a href="http://www.w3.org/TR/wai-aria/roles#landmark_roles_header">ARIA地標角色</a><strong>應該</strong>用於描述應用程式或文件結構，例如<code>banner</code>、<code>complementary</code>、<code>contentinfo</code>、 <code>main</code>、 <code>navigation</code>、<code>search</code>。</li>
- <li>觸控事件處理器<strong>必須</strong>只有在<code>touchend</code>事件上觸發。</li>
- <li>觸控目標<strong>必須</strong>提供使用者足夠大的互動操作(有用的觸控目標大小指引請參見<a href="http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size">BBC Mobile Accessibility Guidelines</a>)。</li>
-</ul>
+  - 在適當情況下使用*alt 與\*\*title*(使用指引請參見 Steve Faulkner 關於[Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/)的文章)。
+  - 如果上述屬性不適用，則使用合適的[ARIA 屬性](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header)如`aria-label`、`aria-labelledby`或  `aria-describedby。`
 
-<div class="note">
-<p><strong>備註：</strong> <a href="http://www.tanaguru.com/">Tanaguru自動無障礙測試服務</a>提供有用的方法去發現一些發生於網頁或安裝的網頁應用程式(如Firefox OS)無障礙錯誤。你可在<a href="http://tanaguru.org/">tanaguru.org</a>找到更多關於Tanaguru技術開發，以及貢獻該專案的資訊。</p>
-</div>
+- 文字圖片 **必須**避免使用。
+- 所有表單控制措施**必須**有標籤({{ htmlelement("label") }} 元素) ，以利於螢幕報讀器使用者使用。
 
-<div class="note">
-<p><strong>備註：</strong> <a href="http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html">本文件原始版本</a>由<a href="http://yzen.github.io/">Yura Zenevich</a>撰寫。</p>
-</div>
+## 處理狀態
+
+- 標準控制措施如選項按鈕與核取框可被作業系統處理。然而，其他客製的控制措施狀態改變必須透過[ARIA 狀態](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header)如` aria-checked`、`aria-disabled`、`ria-selected`、`aria-expanded`與`aria-pressed`來提供。
+
+## 一般準則
+
+- 應用程式的名稱**必須**提供。
+- 標題**必須**不能破壞層級結構。
+
+  ```html
+  <h1>Top level heading</h1>
+    <h2>Secondary heading</h2>
+    <h2>Another secondary heading</h2>
+      <h3>Low level heading</h3>
+  ```
+
+- [ARIA 地標角色](http://www.w3.org/TR/wai-aria/roles#landmark_roles_header)**應該**用於描述應用程式或文件結構，例如`banner`、`complementary`、`contentinfo`、 `main`、 `navigation`、`search`。
+- 觸控事件處理器**必須**只有在`touchend`事件上觸發。
+- 觸控目標**必須**提供使用者足夠大的互動操作(有用的觸控目標大小指引請參見[BBC Mobile Accessibility Guidelines](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size))。
+
+> **備註：** [Tanaguru 自動無障礙測試服務](http://www.tanaguru.com/)提供有用的方法去發現一些發生於網頁或安裝的網頁應用程式(如 Firefox OS)無障礙錯誤。你可在[tanaguru.org](http://tanaguru.org/)找到更多關於 Tanaguru 技術開發，以及貢獻該專案的資訊。
+
+> **備註：** [本文件原始版本](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)由[Yura Zenevich](http://yzen.github.io/)撰寫。
