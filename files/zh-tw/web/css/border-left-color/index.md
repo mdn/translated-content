@@ -12,7 +12,7 @@ translation_of: Web/CSS/border-left-color
 ---
 {{CSSRef}}
 
-**`border-left-color`**是一種CSS屬性，用來設定元件左側[邊框](/zh-TW/docs/Web/CSS/border)的顏色。也可由含括此屬性功能的簡寫屬性{{cssxref("border-color")}}或{{cssxref("border-color")}}設定該屬性值。
+**`border-left-color`** 是一種CSS屬性，用來設定元件左側[邊框](/zh-TW/docs/Web/CSS/border)的顏色。也可由含括此屬性功能的簡寫屬性{{cssxref("border-color")}}或{{cssxref("border-left")}}設定該屬性值。
 
 {{EmbedInteractiveExample("pages/css/border-left-color.html")}}
 
@@ -42,7 +42,7 @@ border-left-color: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : 定義左側邊框色彩。
 
-## Formal definition 語法定義
+## Formal definition 標準定義
 
 {{CSSInfo}}
 
