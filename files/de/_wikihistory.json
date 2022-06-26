@@ -12338,14 +12338,6 @@
       "zf2timo"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-10-15T21:32:16.691Z",
-    "contributors": [
-      "schlagi123",
-      "HolgerJeromin",
-      "cuatro"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/parseFloat": {
     "modified": "2020-10-15T21:34:09.121Z",
     "contributors": [
@@ -12600,6 +12592,14 @@
     "contributors": [
       "hporten",
       "schlagi123"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-10-15T21:32:16.691Z",
+    "contributors": [
+      "schlagi123",
+      "HolgerJeromin",
+      "cuatro"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {

@@ -32,12 +32,12 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
   <tr>
    <td>{{event('dragend')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondragend','ondragend')}}</td>
-   <td>於拖曳操作結束時觸發（如放開滑鼠按鍵或按下鍵盤的 escape 鍵）。（請參考<a href="/en-US/docs/DragDrop/Drag_Operations#dragend" title="Finishing a Drag">結束拖曳</a>。）</td>
+   <td>於拖曳操作結束時觸發（如放開滑鼠按鍵或按下鍵盤的 escape 鍵）。（請參考<a href="/en-US/docs/DragDrop/Drag_Operations#dragend">結束拖曳</a>。）</td>
   </tr>
   <tr>
    <td>{{event('dragenter')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondragenter','ondragenter')}}</td>
-   <td>於一個元素或文字選取區塊被拖曳移動進入一個有效的放置目標時觸發。（請參考<a href="/en-US/docs/DragDrop/Drag_Operations#droptargets" title="Specifying Drop Targets">指定拖曳目標</a>。）</td>
+   <td>於一個元素或文字選取區塊被拖曳移動進入一個有效的放置目標時觸發。（請參考<a href="/en-US/docs/DragDrop/Drag_Operations#droptargets">指定拖曳目標</a>。）</td>
   </tr>
   <tr>
    <td>{{event('dragexit')}}</td>
@@ -57,12 +57,12 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
   <tr>
    <td>{{event('dragstart')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondragstart','ondragstart')}}</td>
-   <td>於使用者開始拖曳一個元素或文字選取區塊時觸發。（請參考<a href="/en-US/docs/DragDrop/Drag_Operations#dragstart" title="Starting a Drag Operation">開始拖曳</a>。）</td>
+   <td>於使用者開始拖曳一個元素或文字選取區塊時觸發。（請參考<a href="/en-US/docs/DragDrop/Drag_Operations#dragstart">開始拖曳</a>。）</td>
   </tr>
   <tr>
    <td>{{event('drop')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondrop','ondrop')}}</td>
-   <td>於一個元素或文字選取區塊被放置至一個有效的放置目標時觸發。（請參考<a href="/en-US/docs/DragDrop/Drag_Operations#drop" title="Performing a Drop">執行放置</a>。）</td>
+   <td>於一個元素或文字選取區塊被放置至一個有效的放置目標時觸發。（請參考<a href="/en-US/docs/DragDrop/Drag_Operations#drop">執行放置</a>。）</td>
   </tr>
  </tbody>
 </table>
@@ -85,7 +85,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 
 <h3 id="Gecko-specific_interfaces">Gecko-specific interfaces</h3>
 
-<p>Mozilla and Firefox support some features not in the standard drag and drop model. These are <em>convenience functions</em> to facilitate dragging multiple items and dragging non-string data (such as files). For more information, see <a href="/en-US/docs/DragDrop/Dragging_and_Dropping_Multiple_Items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a>. Additionally, see the {{domxref("DataTransfer")}} reference page for all of the <a href="/en-US/docs/Web/API/DataTransfer#Gecko_properties">Gecko-specific properties</a> and <a href="/en-US/docs/Web/API/DataTransfer#Gecko_methods">Gecko-specific methods</a>.</p>
+<p>Mozilla and Firefox support some features not in the standard drag and drop model. These are <em>convenience functions</em> to facilitate dragging multiple items and dragging non-string data (such as files). For more information, see <a href="/en-US/docs/DragDrop/Dragging_and_Dropping_Multiple_Items">Dragging and Dropping Multiple Items</a>. Additionally, see the {{domxref("DataTransfer")}} reference page for all of the <a href="/en-US/docs/Web/API/DataTransfer#Gecko_properties">Gecko-specific properties</a> and <a href="/en-US/docs/Web/API/DataTransfer#Gecko_methods">Gecko-specific methods</a>.</p>
 
 <h2 id="基本用法">基本用法</h2>
 
@@ -106,7 +106,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 &lt;/body&gt;
 </pre>
 
-<p>See the <a href="/en-US/docs/Web/HTML/Global_attributes/draggable" title="draggable global attribute">draggable attribute reference</a> and the <a href="/en-US/docs/Web/Guide/HTML/Drag_operations#draggableattribute">Drag operations guide</a> for more information.</p>
+<p>See the <a href="/en-US/docs/Web/HTML/Global_attributes/draggable">draggable attribute reference</a> and the <a href="/en-US/docs/Web/Guide/HTML/Drag_operations#draggableattribute">Drag operations guide</a> for more information.</p>
 
 <h3 id="Define_the_drag's_data">Define the drag's data</h3>
 
@@ -122,7 +122,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 }
 </pre>
 
-<p>For a list of common data types used for drag and drop (such as text, HTML, links, and files), see <a href="/en-US/docs/DragDrop/Recommended_Drag_Types" title="Recommended Drag Types">Recommended Drag Types</a> and for more information about drag data, see <a href="/en-US/docs/Web/Guide/HTML/Drag_operations#dragdata" title="Drag Data">Drag Data</a>.</p>
+<p>For a list of common data types used for drag and drop (such as text, HTML, links, and files), see <a href="/en-US/docs/DragDrop/Recommended_Drag_Types">Recommended Drag Types</a> and for more information about drag data, see <a href="/en-US/docs/Web/Guide/HTML/Drag_operations#dragdata">Drag Data</a>.</p>
 
 <h3 id="Define_the_drag_image">Define the drag image</h3>
 
@@ -138,7 +138,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 }
 </pre>
 
-<p>To learn more about drag feedback images, see <a href="/en-US/docs/DragDrop/Drag_Operations#dragfeedback" title="Setting the Drag Feedback Image">Setting the Drag Feedback Image</a>.</p>
+<p>To learn more about drag feedback images, see <a href="/en-US/docs/DragDrop/Drag_Operations#dragfeedback">Setting the Drag Feedback Image</a>.</p>
 
 <h3 id="Define_the_drag_effect">Define the drag <em>effect</em></h3>
 
@@ -162,7 +162,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 }
 </pre>
 
-<p>See <a href="/en-US/docs/Web/Guide/HTML/Drag_operations#drageffects" title="Drag Effects">Drag Effects</a> for more details.</p>
+<p>See <a href="/en-US/docs/Web/Guide/HTML/Drag_operations#drageffects">Drag Effects</a> for more details.</p>
 
 <h3 id="Define_a_drop_zone">Define a <em>drop zone</em></h3>
 
@@ -186,7 +186,7 @@ function drop_handler(ev) {
 
 <p>Note each handler calls {{domxref("Event.preventDefault","preventDefault()")}} to prevent additional event processing for this prevent (such as touch events or pointer events).</p>
 
-<p>For more information, see <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Drag_operations#droptargets">Specifying Drop Targets</a>.</p>
+<p>For more information, see <a href="/en-US/docs/Web/Guide/HTML/Drag_operations#droptargets">Specifying Drop Targets</a>.</p>
 
 <h3 id="Handle_the_drop_effect">Handle the drop <em>effect</em></h3>
 
@@ -216,13 +216,13 @@ function drop_handler(ev) {
 &lt;/body&gt;
 </pre>
 
-<p>For more information, see <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Drag_operations#drop">Performing a Drop</a>.</p>
+<p>For more information, see <a href="/en-US/docs/Web/Guide/HTML/Drag_operations#drop">Performing a Drop</a>.</p>
 
 <h3 id="Drag_end">Drag end</h3>
 
 <p>At the end of a drag operation, the {{event("dragend")}} event fires at the <em>source</em> element - the element that was the target of the drag start. This event fires whether the drag completed or was canceled. The {{event("dragend")}} event handler can check the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine if the drag operation succeeded or not.</p>
 
-<p>For more information about handling the end of a drag operation, see <a href="/en-US/docs/DragDrop/Drag_Operations#dragend" title="Finishing a Drag">Finishing a Drag</a>.</p>
+<p>For more information about handling the end of a drag operation, see <a href="/en-US/docs/DragDrop/Drag_Operations#dragend">Finishing a Drag</a>.</p>
 
 <h2 id="Interoperability">Interoperability</h2>
 
@@ -233,8 +233,8 @@ function drop_handler(ev) {
 <ul>
  <li><a href="https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html">Copying and moving elements with the <code>DataTransfer</code> interface</a></li>
  <li><a href="http://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html">Copying and moving elements with the <code>DataTransferListItem</code> interface</a></li>
- <li>Dragging and dropping files; Firefox only: <a class="external" href="http://jsfiddle.net/9C2EF/" title="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></li>
- <li>Dragging and dropping files; All browsers: <a class="external" href="https://jsbin.com/hiqasek/edit?html,js,output" title="https://jsbin.com/hiqasek">https://jsbin.com/hiqasek/</a></li>
+ <li>Dragging and dropping files; Firefox only: <a href="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></li>
+ <li>Dragging and dropping files; All browsers: <a href="https://jsbin.com/hiqasek/edit?html,js,output">https://jsbin.com/hiqasek/</a></li>
  <li>A parking project using the Drag and Drop API: <a href="https://park.glitch.me/">https://park.glitch.me/</a> (You can edit <a href="https://glitch.com/edit/#!/park">here</a>)</li>
 </ul>
 
@@ -245,9 +245,9 @@ function drop_handler(ev) {
 <h2 id="See_also" name="See_also">參見</h2>
 
 <ul>
- <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations" title="Drag Operations">Drag Operations</a></li>
- <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a></li>
- <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types" title="Recommended Drag Types">Recommended Drag Types</a></li>
- <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd" title="Drag and Drop Standard">HTML5 Living Standard: Drag and Drop</a></li>
- <li><a href="http://caniuse.com/#search=draganddrop" title="Drag and Drop interoperability data from CanIUse">Drag and Drop interoperability data from CanIUse</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
+ <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML5 Living Standard: Drag and Drop</a></li>
+ <li><a href="http://caniuse.com/#search=draganddrop">Drag and Drop interoperability data from CanIUse</a></li>
 </ul>

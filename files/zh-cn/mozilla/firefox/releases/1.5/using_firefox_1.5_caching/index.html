@@ -5,7 +5,7 @@ translation_of: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 ---
 <div>{{FirefoxSidebar}}</div><h2 id="Introduction" name="Introduction">介绍</h2>
 
-<p><a href="/en-US/docs/Firefox_1.5_for_developers" title="Firefox_1.5_for_developers">Firefox 1.5</a> 对整个 web 页面的一个浏览器会话进行了内存缓存，包括他们对 JavaScript 状态。在访问过的页面间后退和前进不需要页面加载同时保存 JavaScript 状态。这个特性，被称为 bfcache（“后退前进缓存”），使得页面导航（切换）非常快。这个状态缓存被保存直到用户关闭浏览器。 </p>
+<p><a href="/en-US/docs/Firefox_1.5_for_developers">Firefox 1.5</a> 对整个 web 页面的一个浏览器会话进行了内存缓存，包括他们对 JavaScript 状态。在访问过的页面间后退和前进不需要页面加载同时保存 JavaScript 状态。这个特性，被称为 bfcache（“后退前进缓存”），使得页面导航（切换）非常快。这个状态缓存被保存直到用户关闭浏览器。 </p>
 
 <p>有时候，Firefox 不缓存页面。下面是一些页面不被缓存的常见的编程的原因：</p>
 
@@ -38,7 +38,7 @@ translation_of: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 
 <p>如果你使用新的事件，你的页面在其他浏览器依然会正确显示  (我们已经测试了早期版本的 Firefox, Internet Explorer, Opera, 和 Safari)，而且在 Firefox 1.5 加载时将会使用新的缓存功能。</p>
 
-<p>注意：直至 10-2009 开发版本的 Safari 添加了这些新的事件的支持 (见 <a class="link-https" href="https://bugs.webkit.org/show_bug.cgi?id=28758">the webkit bug</a>).</p>
+<p>注意：直至 10-2009 开发版本的 Safari 添加了这些新的事件的支持 (见 <a href="https://bugs.webkit.org/show_bug.cgi?id=28758">the webkit bug</a>).</p>
 
 <p>标准的页面行为是：</p>
 
@@ -179,6 +179,6 @@ function loadOnlyFirst() {
 
 <h2 id="Developing_Firefox_extensions" name="Developing_Firefox_extensions">开发 Firefox 扩展</h2>
 
-<p>Firefox 1.5 <a href="/en-US/docs/Building_an_Extension" title="Building_an_Extension">extensions</a> 需要允许缓存功能。如果你在开发一个兼容 1.5 及以前版本的 Firefox 扩展，确保它监听事件触发 <code>load</code> 可被缓存，监听的 <code>pageshow</code> 事件触发不应该被缓存。</p>
+<p>Firefox 1.5 <a href="/en-US/docs/Building_an_Extension">extensions</a> 需要允许缓存功能。如果你在开发一个兼容 1.5 及以前版本的 Firefox 扩展，确保它监听事件触发 <code>load</code> 可被缓存，监听的 <code>pageshow</code> 事件触发不应该被缓存。</p>
 
 <p>例如，Firefox 的 Google 工具栏为了兼容 1.5 和更早的版本，应该为 autolink 监听 <code>load</code> 事件函数，为 PageRank 监听 <code>pageshow</code> 事件函数。</p>

@@ -35,7 +35,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
  </tbody>
 </table>
 
-<p>CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们相对正常布局流、周边元素、父容器或者主视口/窗口的位置。在这个模块中将涉及更多关于页面<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Layout_mode">布局技术</a>的细节：</p>
+<p>CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们相对正常布局流、周边元素、父容器或者主视口/窗口的位置。在这个模块中将涉及更多关于页面<a href="/zh-CN/docs/Web/CSS/Layout_mode">布局技术</a>的细节：</p>
 
 <ul>
  <li>正常布局流</li>
@@ -81,11 +81,11 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 <p>下列布局技术会覆盖默认的布局行为：</p>
 
 <ul>
- <li><strong> {{cssxref("display")}} </strong>属性 — 标准的 value，比如<code>block</code>, <code>inline</code> 或者 <code>inline-block</code> 元素在正常布局流中的表现形式 (见 <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes">Types of CSS boxes</a>). 接着是全新的布局方式，通过设置<code>display</code>的值，比如 <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids">CSS Grid</a> 和 <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>.</li>
+ <li><strong> {{cssxref("display")}} </strong>属性 — 标准的 value，比如<code>block</code>, <code>inline</code> 或者 <code>inline-block</code> 元素在正常布局流中的表现形式 (见 <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes">Types of CSS boxes</a>). 接着是全新的布局方式，通过设置<code>display</code>的值，比如 <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">CSS Grid</a> 和 <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>.</li>
  <li><strong>浮动</strong>——应用 <strong>{{cssxref("float")}}</strong> 值，诸如 <code>left</code> 能够让块级元素互相并排成一行，而不是一个堆叠在另一个上面。</li>
  <li><strong>{{cssxref("position")}} </strong>属性 — 允许你精准设置盒子中的盒子的位置，正常布局流中，默认为 <code>static</code> ，使用其它值会引起元素不同的布局方式，例如将元素固定到浏览器视口的左上角。</li>
  <li><strong>表格布局</strong>— 表格的布局方式可以用在非表格内容上，可以使用<code>display: table</code>和相关属性在非表元素上使用。</li>
- <li><strong>多列布局</strong>— 这个 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns">Multi-column layout</a> 属性 可以让块按列布局，比如报纸的内容就是一列一列排布的。</li>
+ <li><strong>多列布局</strong>— 这个 <a href="/en-US/docs/Web/CSS/CSS_Columns">Multi-column layout</a> 属性 可以让块按列布局，比如报纸的内容就是一列一列排布的。</li>
 </ul>
 
 <h2 id="display属性">display 属性</h2>
@@ -478,7 +478,7 @@ p {
 
 <p>{{ EmbedLiveSample('Absolute_1', '100%', 300) }}</p>
 
-<p>这和之前截然不同！定位元素现在已经与页面布局的其余部分完全分离，并位于页面的顶部。其他两段现在靠在一起，好像之前那个中间段落不存在一样。{{cssxref("top")}}和{{cssxref("left")}}属性对绝对位置元素的影响不同于相对位置元素。在这一案例当中，他们没有指定元素相对于原始位置的移动程度。相反，在这一案例当中，它们指定元素应该从页面边界的顶部和左边的距离 (确切地说，是 <code>&lt;html&gt;</code>元素的距离)。我们也可以修改作为容器的那个元素（在这里是<code>&lt;html&gt;</code>元素），要了解这方面的知识，参见关于<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning">定位 (positioning)</a>的课程</p>
+<p>这和之前截然不同！定位元素现在已经与页面布局的其余部分完全分离，并位于页面的顶部。其他两段现在靠在一起，好像之前那个中间段落不存在一样。{{cssxref("top")}}和{{cssxref("left")}}属性对绝对位置元素的影响不同于相对位置元素。在这一案例当中，他们没有指定元素相对于原始位置的移动程度。相反，在这一案例当中，它们指定元素应该从页面边界的顶部和左边的距离 (确切地说，是 <code>&lt;html&gt;</code>元素的距离)。我们也可以修改作为容器的那个元素（在这里是<code>&lt;html&gt;</code>元素），要了解这方面的知识，参见关于<a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">定位 (positioning)</a>的课程</p>
 
 <p>我们现在暂时不讨论固定定位（fixed positioning）——它基本上以相同的方式工作，除了它仍然固定在浏览器窗口的边缘，而不是它定位的父节点的边缘。</p>
 

@@ -42,10 +42,10 @@ translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 
 <h2 id="例子">例子</h2>
 
-<p>让我们构建一个简单的例子来解释这些着色器的动作。假设你已经看过<a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Three.js 教程</a>并掌握了场景，物体和材质的基本概念。</p>
+<p>让我们构建一个简单的例子来解释这些着色器的动作。假设你已经看过<a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Three.js 教程</a>并掌握了场景，物体和材质的基本概念。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 记住你没必要使用 Three.js 或者其他库来编写着色器 -- 纯<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a> 完全够了。我们这里使用 Three.js 来制作背景代码更简单和易理解。所以你只需关注着色器代码。Three.js 和其他 3D 库给你抽象了很多东西出来 -- 如果你想要用纯 WebGL 创建这个例子，你得写很多其他的代码才能运行。</p>
+<p><strong>注意</strong>: 记住你没必要使用 Three.js 或者其他库来编写着色器 -- 纯<a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> 完全够了。我们这里使用 Three.js 来制作背景代码更简单和易理解。所以你只需关注着色器代码。Three.js 和其他 3D 库给你抽象了很多东西出来 -- 如果你想要用纯 WebGL 创建这个例子，你得写很多其他的代码才能运行。</p>
 </div>
 
 <h3 id="环境设置">环境设置</h3>
@@ -53,7 +53,7 @@ translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 <p>要开始编写 WebGL 着色器你不需要做太多，只需：</p>
 
 <ul>
- <li>确保你在使用对 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a> 有良好支持的现代浏览器，比如最新版的 Firefox 或 Chrome.</li>
+ <li>确保你在使用对 <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> 有良好支持的现代浏览器，比如最新版的 Firefox 或 Chrome.</li>
  <li>创建一个目录保存你的实验。</li>
  <li>拷贝一份的 <a href="http://threejs.org/build/three.min.js">压缩版的 Three.js 库</a> 到你的目录。</li>
 </ul>
@@ -99,7 +99,7 @@ translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 
 <h3 id="立方体源代码">立方体源代码</h3>
 
-<p>我们可以复用<a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Building up a basic demo with Three.js</a> 中立方体的源代码，大多数元素例如渲染器，摄像机和灯光都没有发生改变，但是基本的材质会用到自己写的着色器。</p>
+<p>我们可以复用<a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Building up a basic demo with Three.js</a> 中立方体的源代码，大多数元素例如渲染器，摄像机和灯光都没有发生改变，但是基本的材质会用到自己写的着色器。</p>
 
 <p>去<a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html">cube.html file on GitHub</a>中，复制第二个{{htmlelement("script")}}元素中所有的 JavaScript 代码，粘贴到当前例子中的第三个<code>&lt;script&gt;</code>  标签中。保存并运行 <code>index.html</code> — 然后你会看到一个蓝色立方体</p>
 

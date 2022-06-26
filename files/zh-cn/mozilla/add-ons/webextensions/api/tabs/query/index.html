@@ -8,7 +8,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/tabs/查询
 
 <p>获取具有指定属性的所有选项卡，如果未指定任何属性，则获取所有选项卡。</p>
 
-<p>这是返回 的异步函数。<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code></p>
+<p>这是返回 的异步函数。<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code></p>
 
 <h2 id="语法">语法</h2>
 
@@ -32,7 +32,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/tabs/查询
   <dt><code>autoDiscardable</code>[optional_inline]</dt>
   <dd><code>boolean</code>.当资源不足时，浏览器是否可以自动丢弃选项卡。</dd>
   <dt><code>cookieStoreId</code>[optional_inline]</dt>
-  <dd><code>string</code>.使用此仅返回其 Cookie 存储 ID 为 的选项卡。此选项仅在加载项具有权限时<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">才可用</a>。<code>cookieStoreId</code><code>"cookies"</code></dd>
+  <dd><code>string</code>.使用此仅返回其 Cookie 存储 ID 为 的选项卡。此选项仅在加载项具有权限时<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">才可用</a>。<code>cookieStoreId</code><code>"cookies"</code></dd>
   <dt><code>currentWindow</code>[optional_inline]</dt>
   <dd><code>boolean</code>.选项卡是否在当前窗口中。</dd>
   <dt><code>discarded</code>[optional_inline]</dt>
@@ -65,7 +65,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/tabs/查询
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A that will be fulfilled with an of objects, containing information about each matching tab.<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code><code>array</code><code>{{WebExtAPIRef('tabs.Tab')}}</code></p>
+<p>A that will be fulfilled with an of objects, containing information about each matching tab.<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code><code>array</code><code>{{WebExtAPIRef('tabs.Tab')}}</code></p>
 
 <p>If any error occurs, the promise will be rejected with an error message.</p>
 

@@ -23,8 +23,6 @@ translation_of: Web/API/CustomEvent
 
 <h2 id="方法">方法</h2>
 
-<p> </p>
-
 <dl>
  <dt>{{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}</dt>
  <dd>
@@ -36,11 +34,9 @@ translation_of: Web/API/CustomEvent
 
 <p>{{Page("/zh-CN/docs/Web/API/Event", "Methods")}}</p>
 
-<p> </p>
-
 <h2 id="Method_overview" name="Method_overview">方法概述</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <td><code>void <a href="#initCustomEvent()">initCustomEvent</a>(in DOMString type, in boolean canBubble, in boolean cancelable, in any detail);</code></td>
@@ -50,7 +46,7 @@ translation_of: Web/API/CustomEvent
 
 <h2 id="Attributes" name="Attributes">属性</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <th>属性</th>
@@ -132,15 +128,10 @@ var event = new CustomEvent("cat", {"detail":{"hazcheeseburger":true}})
 obj.dispatchEvent(event)
 </pre>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Specification">规范</h2>
 
+{{Specifications}}
 
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <p>{{Compat("api.CustomEvent")}}</p>
-
-<h2 id="Specification" name="Specification">规范</h2>
-
-<ul>
- <li>{{ spec("http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#interface-customevent","DOM4 : Interface CustomEvent","ED") }}</li>
- <li>{{ spec("http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html#interface-CustomEvent","DOM Level 3 Events : CustomEvent","WD") }}</li>
-</ul>

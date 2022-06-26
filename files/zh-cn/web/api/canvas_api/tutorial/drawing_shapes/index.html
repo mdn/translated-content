@@ -82,7 +82,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <ol>
  <li>首先，你需要创建路径起始点。</li>
- <li>然后你使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">画图命令</a>去画出路径。</li>
+ <li>然后你使用<a href="/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">画图命令</a>去画出路径。</li>
  <li>之后你把路径封闭。</li>
  <li>一旦路径生成，你就能通过描边或填充路径区域来渲染图形。</li>
 </ol>
@@ -313,7 +313,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <h3 id="二次贝塞尔曲线及三次贝塞尔曲线">二次贝塞尔曲线及三次贝塞尔曲线</h3>
 
-<p>下一个十分有用的路径类型就是<a href="https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A" rel="external">贝塞尔曲线</a>。二次及三次贝塞尔曲线都十分有用，一般用来绘制复杂有规律的图形。</p>
+<p>下一个十分有用的路径类型就是<a href="https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A">贝塞尔曲线</a>。二次及三次贝塞尔曲线都十分有用，一般用来绘制复杂有规律的图形。</p>
 
 <dl>
  <dt><code>quadraticCurveTo(cp1x, cp1y, x, y)</code></dt>
@@ -574,7 +574,7 @@ new Path2D(d);    // 从 SVG 建立 Path 对象</code></pre>
 
 <p>新的 Path2D API 有另一个强大的特点，就是使用 SVG path data 来初始化 canvas 上的路径。这将使你获取路径时可以以 SVG 或 canvas 的方式来重用它们。</p>
 
-<p>这条路径将先移动到点 <code>(M10 10)</code> 然后再水平移动 80 个单位<code>(h 80)</code>，然后下移 80 个单位 <code>(v 80)</code>，接着左移 80 个单位 <code>(h -80)</code>，再回到起点处 (<code>z</code>)。你可以在<a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D.Path2D#Using_SVG_paths">Path2D constructor</a> 查看这个例子。</p>
+<p>这条路径将先移动到点 <code>(M10 10)</code> 然后再水平移动 80 个单位<code>(h 80)</code>，然后下移 80 个单位 <code>(v 80)</code>，接着左移 80 个单位 <code>(h -80)</code>，再回到起点处 (<code>z</code>)。你可以在<a href="/en-US/docs/Web/API/Path2D.Path2D#Using_SVG_paths">Path2D constructor</a> 查看这个例子。</p>
 
 <pre class="brush: js; line-numbers  language-js notranslate"><code class="language-js">var p = new Path2D("M10 10 h 80 v 80 h -80 Z");</code></pre>
 </div>

@@ -18,7 +18,7 @@ translation_of: Web/CSS/box-sizing
 
 <p>The <strong><code>box-sizing</code></strong> property is used to alter the default <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS box model</a> used to calculate width and height of the elements. It is possible to use this property to emulate the behavior of browsers that do not correctly support the CSS box model specification.</p>
 
-<p><strong><code>box-sizing</code></strong>  屬性 用於更改預設 <a href="https://developer.mozilla.org/en-US/docs/CSS/Box_model" title="CSS/Box_model">CSS 盒子模型</a> 中所計算的寬度和高度。可以使用此屬性來模擬不正確支持CSS盒子模型規範的瀏覽器的行為。</p>
+<p><strong><code>box-sizing</code></strong>  屬性 用於更改預設 <a href="/en-US/docs/CSS/Box_model">CSS 盒子模型</a> 中所計算的寬度和高度。可以使用此屬性來模擬不正確支持CSS盒子模型規範的瀏覽器的行為。</p>
 
 <p>{{cssinfo}}</p>
 
@@ -42,7 +42,7 @@ box-sizing: unset;
  <br>
  簡單來說，尺寸計算公式：width = 內容的寬度，height = 內容的高度。寬度和高度都不包含內容的邊框（border）和內邊距（padding）。</dd>
  <dt><code>border-box</code></dt>
- <dd> {{Cssxref("width")}} 和 {{Cssxref("height")}} 屬性包括內容（content），內邊距（padding）和邊框（border），但不包括外邊距（margin）。這是當文檔處於 Quirks 模式時 Internet Explorer 所使用的<a href="https://developer.mozilla.org/en-US/docs/CSS/Box_model" title="CSS/Box_model">盒模型</a>。注意，內邊距和邊框都將在盒子內 ，例如，<code>.box {width: 350px; border: 10px solid black;} </code>，渲染出的容器寬度會固定在 350px，而內容（content）的寬度就會變成 330px， 因為邊框（border）佔了20px。內容框不能為負，並且進位到 0，使得不可能使用 border-box 使元素消失。<br>
+ <dd> {{Cssxref("width")}} 和 {{Cssxref("height")}} 屬性包括內容（content），內邊距（padding）和邊框（border），但不包括外邊距（margin）。這是當文檔處於 Quirks 模式時 Internet Explorer 所使用的<a href="/en-US/docs/CSS/Box_model">盒模型</a>。注意，內邊距和邊框都將在盒子內 ，例如，<code>.box {width: 350px; border: 10px solid black;} </code>，渲染出的容器寬度會固定在 350px，而內容（content）的寬度就會變成 330px， 因為邊框（border）佔了20px。內容框不能為負，並且進位到 0，使得不可能使用 border-box 使元素消失。<br>
  <br>
  這裡的維度計算為：</dd>
  <dd><em>width = border + padding + 內容的  width</em>，</dd>
