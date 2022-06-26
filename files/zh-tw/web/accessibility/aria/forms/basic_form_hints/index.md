@@ -5,117 +5,121 @@ tags:
   - 待翻譯
 translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 ---
-<h2 id="Form_labels">表單的 label</h2>
+## 表單的 label
 
-<p>當使用傳統的 HTML 表單元素建立表單時，提供控制用的標籤（label）以及將標籤與對應表單元素建立關聯是非常重要的。當 screen reader （例如瀏覽器、電子郵件……等等）瀏覽一個頁面時，screen reader 會顯示 form controls ，但若沒有標示 control 和 label 之間的關聯，  screen reader 沒法知道哪個 label 是對應哪個 control。</p>
+當使用傳統的 HTML 表單元素建立表單時，提供控制用的標籤（label）以及將標籤與對應表單元素建立關聯是非常重要的。當  screen reader （例如瀏覽器、電子郵件……等等）瀏覽一個頁面時，screen reader 會顯示  form controls ，但若沒有標示 control 和  label 之間的關聯，  screen reader 沒法知道哪個 label 是對應哪個 control。
 
-<p>下面的範例顯示一個使用標籤的表單。注意每一個 {{ HTMLElement("input") }} 元件都有 <strong><code>id</code></strong>，每一個 {{ HTMLElement("label") }} 元件有 <strong><code>for </code></strong>屬性，用來對應 {{ HTMLElement("input") }} 元素的<strong> </strong><strong><code>id</code></strong> 。</p>
+下面的範例顯示一個使用標籤的表單。注意每一個 {{ HTMLElement("input") }} 元件都有 **`id`**，每一個 {{ HTMLElement("label") }} 元件有 **`for `**屬性，用來對應 {{ HTMLElement("input") }} 元素的** \*\***`id`\*\* 。
 
-<p><em>範例 1. 使用 label 的簡易表單</em></p>
+_範例 1. 使用 label 的簡易表單_
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;input id="wine-1" type="checkbox" value="riesling"/&gt;
-      &lt;label for="wine-1"&gt;Berg Rottland Riesling&lt;/label&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;input id="wine-2" type="checkbox" value="weissbergunder"/&gt;
-      &lt;label for="wine-2"&gt;Weissbergunder&lt;/label&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;input id="wine-3" type="checkbox" value="pinot-grigio"/&gt;
-      &lt;label for="wine-3"&gt;Pinot Grigio&lt;/label&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;input id="wine-4" type="checkbox" value="gewurztraminer"/&gt;
-      &lt;label for="wine-4"&gt;Berg Rottland Riesling&lt;/label&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form>
+  <ul>
+    <li>
+      <input id="wine-1" type="checkbox" value="riesling"/>
+      <label for="wine-1">Berg Rottland Riesling</label>
+    </li>
+    <li>
+      <input id="wine-2" type="checkbox" value="weissbergunder"/>
+      <label for="wine-2">Weissbergunder</label>
+    </li>
+    <li>
+      <input id="wine-3" type="checkbox" value="pinot-grigio"/>
+      <label for="wine-3">Pinot Grigio</label>
+    </li>
+    <li>
+      <input id="wine-4" type="checkbox" value="gewurztraminer"/>
+      <label for="wine-4">Berg Rottland Riesling</label>
+    </li>
+  </ul>
+</form>
+```
 
-<h2 id="Labeling_with_ARIA">使用 ARIA 標籤</h2>
+## 使用 ARIA 標籤
 
-<p>HTML 的 {{ HTMLElement("label") }} 元素適用於表單相關元素 , 但是許多表單控件被實現為動態JavaScript小部件 , 使用 {{ HTMLElement("div") }} 或 {{ HTMLElement("span") }}。<a href="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a>, 來自 W3C 的網路無障礙計畫 ( <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a> ) 的<strong>無障礙互聯網應用程序</strong>規範 ( <strong>Accessible Rich Internet Applications</strong> specification ) , 為這些情況提供了 <a href="https://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby"><strong><code>aria-labelledby</code></strong></a> 屬性。</p>
+HTML 的 {{ HTMLElement("label") }} 元素適用於表單相關元素 , 但是許多表單控件被實現為動態 JavaScript 小部件 , 使用 {{ HTMLElement("div") }} 或 {{ HTMLElement("span") }}。[WAI-ARIA](http://www.w3.org/WAI/intro/aria.php), 來自 W3C 的網路無障礙計畫 ( [Web Accessibility Initiative](http://www.w3.org/WAI/) ) 的**無障礙互聯網應用程序**規範 ( **Accessible Rich Internet Applications** specification ) , 為這些情況提供了 [**`aria-labelledby`**](https://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby) 屬性。
 
-<p>下面的範例顯示使用無序列表 (unordered list ) 實現的單選按鈕組 (radio button group )。注意程式碼第三行 , {{ HTMLElement("li") }} 元素將 <code><strong>aria-labelledby</strong></code> 屬性設置為 <code>"rg1_label"</code> , 在第一行中元素 {{ HTMLElement("h3") }} 的 <strong><code>id</code> </strong>, 即單選按鈕組的標籤。</p>
+下面的範例顯示使用無序列表 (unordered list ) 實現的單選按鈕組 (radio button group )。注意程式碼第三行 , {{ HTMLElement("li") }} 元素將  **`aria-labelledby`** 屬性設置為 `"rg1_label"` , 在第一行中元素 {{ HTMLElement("h3") }} 的  **`id` **, 即單選按鈕組的標籤。
 
-<p><em>範例 2. </em>使用無序列表實現的單選按鈕組</p>
+_範例 2._ 使用無序列表實現的單選按鈕組
 
-<pre class="brush: html">&lt;h3 id="rg1_label"&gt;Lunch Options&lt;/h3&gt;
+```html
+<h3 id="rg1_label">Lunch Options</h3>
 
-&lt;ul class="radiogroup" id="rg1"  role="radiogroup" aria-labelledby="rg1_label"&gt;
-  &lt;li id="r1"  tabindex="-1" role="radio" aria-checked="false"&gt;
-    &lt;img role="presentation" src="radio-unchecked.gif" /&gt; Thai
-  &lt;/li&gt;
-  &lt;li id="r2"  tabindex="-1" role="radio"  aria-checked="false"&gt;
-    &lt;img role="presentation" src="radio-unchecked.gif" /&gt; Subway
-  &lt;/li&gt;
-  &lt;li id="r3"   tabindex="0" role="radio" aria-checked="true"&gt;
-    &lt;img role="presentation" src="radio-checked.gif" /&gt; Radio Maria
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-
-<h2 id="Describing_with_ARIA">Describing with ARIA</h2>
-
-<p>Form controls sometimes have a description associated with them, in addition to the label. ARIA provides the <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-describedby"><strong>aria-describedby</strong></a> attribute to directly associate the description with the control.</p>
-
-<p>The example below shows a {{ HTMLElement("button") }} element that is described by a sentence in a separate {{ HTMLElement("div") }} element. The <strong>aria-describedby</strong> attribute on the {{ HTMLElement("button") }} references the <strong>id</strong> of the {{ HTMLElement("div") }}.</p>
-
-<p><em>Example 3. A button described by a separate element.</em></p>
-
-<pre class="brush: html">&lt;button aria-describedby="descriptionRevert"&gt;Revert&lt;/button&gt;
-&lt;div id="descriptionRevert"&gt;Reverting will undo any changes that have been made
-                            since the last save.&lt;/div&gt;</pre>
-
-<p>(Note that the <strong>aria-describedby</strong> attribute is used for other purposes, in addition to form controls.)</p>
-
-<h2 id="Required_and_invalid_fields">Required and invalid fields</h2>
-
-<p>Web developers typically use presentational strategies to indicated required or invalid fields, but assistive technologies (ATs) cannot necessarily infer this information from the presentation. ARIA provides attributes for indicating that form controls are required or invalid:</p>
-
-<ul>
- <li>The <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required"><strong>aria-required</strong></a> property can be applied to a form element to indicate to an AT that it is required to complete the form.</li>
- <li>The <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid"><strong>aria-invalid</strong></a> state can be programmatically applied to indicate to an AT which data fields have incorrect data, so that the user knows they have entered invalid data.</li>
+<ul class="radiogroup" id="rg1"  role="radiogroup" aria-labelledby="rg1_label">
+  <li id="r1"  tabindex="-1" role="radio" aria-checked="false">
+    <img role="presentation" src="radio-unchecked.gif" /> Thai
+  </li>
+  <li id="r2"  tabindex="-1" role="radio"  aria-checked="false">
+    <img role="presentation" src="radio-unchecked.gif" /> Subway
+  </li>
+  <li id="r3"   tabindex="0" role="radio" aria-checked="true">
+    <img role="presentation" src="radio-checked.gif" /> Radio Maria
+  </li>
 </ul>
+```
 
-<p>The example below shows a simple form with three fields. On lines 4 and 12, the <strong>aria-required</strong> attributes are set to true (in addition to the asterisks next to the labels) indicating that the name and email fields are required. The second part of the example is a snippet of JavaScript that validates the email format and sets the <strong>aria-invalid</strong> attribute of the email field (line 12 of the HTML) according to the result (in addition to changing the presentation of the element).</p>
+## Describing with ARIA
 
-<p><em>Example 4a. A form with required fields.</em></p>
+Form controls sometimes have a description associated with them, in addition to the label. ARIA provides the [**aria-describedby**](http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-describedby) attribute to directly associate the description with the control.
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="name"&gt;* Name:&lt;/label&gt;
-    &lt;input type="text" value="name" id="name" aria-required="true"/&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="phone"&gt;Phone:&lt;/label&gt;
-    &lt;input type="text" value="phone" id="phone" aria-required="false"/&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="email"&gt;* E-mail:&lt;/label&gt;
-    &lt;input type="text" value="email" id="email" aria-required="true"/&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+The example below shows a {{ HTMLElement("button") }} element that is described by a sentence in a separate {{ HTMLElement("div") }} element. The **aria-describedby** attribute on the {{ HTMLElement("button") }} references the **id** of the {{ HTMLElement("div") }}.
 
-<p><em>Example 4b. Part of a script that validates the form entry.</em></p>
+_Example 3. A button described by a separate element._
 
-<pre class="brush: js">var validate = function () {
+```html
+<button aria-describedby="descriptionRevert">Revert</button>
+<div id="descriptionRevert">Reverting will undo any changes that have been made
+                            since the last save.</div>
+```
+
+(Note that the **aria-describedby** attribute is used for other purposes, in addition to form controls.)
+
+## Required and invalid fields
+
+Web developers typically use presentational strategies to indicated required or invalid fields, but assistive technologies (ATs) cannot necessarily infer this information from the presentation. ARIA provides attributes for indicating that form controls are required or invalid:
+
+- The [**aria-required**](http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required) property can be applied to a form element to indicate to an AT that it is required to complete the form.
+- The [**aria-invalid**](http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid) state can be programmatically applied to indicate to an AT which data fields have incorrect data, so that the user knows they have entered invalid data.
+
+The example below shows a simple form with three fields. On lines 4 and 12, the **aria-required** attributes are set to true (in addition to the asterisks next to the labels) indicating that the name and email fields are required. The second part of the example is a snippet of JavaScript that validates the email format and sets the **aria-invalid** attribute of the email field (line 12 of the HTML) according to the result (in addition to changing the presentation of the element).
+
+_Example 4a. A form with required fields._
+
+```html
+<form>
+  <div>
+    <label for="name">* Name:</label>
+    <input type="text" value="name" id="name" aria-required="true"/>
+  </div>
+  <div>
+    <label for="phone">Phone:</label>
+    <input type="text" value="phone" id="phone" aria-required="false"/>
+  </div>
+  <div>
+    <label for="email">* E-mail:</label>
+    <input type="text" value="email" id="email" aria-required="true"/>
+  </div>
+</form>
+```
+
+_Example 4b. Part of a script that validates the form entry._
+
+```js
+var validate = function () {
   var emailElement = document.getElementById(emailFieldId);
   var valid = emailValid(formData.email); // returns true if valid, false otherwise
 
   emailElement.setAttribute("aria-invalid", !valid);
   setElementBorderColour(emailElement, valid); // sets the border to red if second arg is false
-};</pre>
+};
+```
 
-<h2 id="Providing_Helpful_Error_Messages">提供有幫助的錯誤訊息</h2>
+## 提供有幫助的錯誤訊息
 
-<p>繼續閱讀了解如何使用 <a href="/en-US/docs/aria/forms/alerts">ARIA alerts to enhance forms</a>.</p>
+繼續閱讀了解如何使用  [ARIA alerts to enhance forms](/en-US/docs/aria/forms/alerts).
 
-<div class="note">
- <p><strong>備註：</strong> TBD: we should either combine into one article or separate into techniques, or both. Also, is ARIA markup appropriate for error messages in a page loaded after server side validation?</p>
-</div>
+> **備註：** TBD: we should either combine into one article or separate into techniques, or both. Also, is ARIA markup appropriate for error messages in a page loaded after server side validation?
 
-<p>參閱 <a href="http://www.w3.org/TR/wai-aria-practices/">WAI-ARIA Authoring Practices</a> .</p>
+參閱 [WAI-ARIA Authoring Practices](http://www.w3.org/TR/wai-aria-practices/) .
