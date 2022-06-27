@@ -11,101 +11,62 @@ tags:
   - 许可
 translation_of: MDN/About
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>MDN Web Docs 是一个提供 Web 技术和促进 Web 技术软件的不断发展的学习平台，包括：</p>
+MDN Web Docs（以前称为 MDN——the Mozilla Developer Network）是一个提供 Web 技术和促进 Web  技术软件的不断发展的学习平台，包括：[CSS](/zh-CN/docs/Web/CSS)、[HTML](/zh-CN/docs/Web/HTML) 和 [JavaScript](/zh-CN/docs/Web/JavaScript)。我们还有一套详细的给初学者的学习资料——参见[学习 Web 开发](/zh-CN/docs/Learn)。
 
-<ul>
- <li>Web 标准（例如：<a href="/zh-CN/docs/CSS">CSS</a>、<a href="/zh-CN/docs/HTML">HTML</a> 和 <a href="/zh-CN/docs/JavaScript">JavaScript</a>）</li>
- <li><a href="/zh-CN/docs/">开放 Web 应用开发</a></li>
- <li><a href="/zh-CN/docs/Add-ons">Firefox 附加组件开发</a></li>
-</ul>
+## 使用 MDN 的内容
 
-<h2 id="我们的使命">我们的使命</h2>
+MDN的内容是免费的，并在开源许可证下提供。
 
-<p>MDN 的使命很简单：为开发人员提供在开放的 Web 网络上轻松构建项目所必需的信息。如果它是一种暴露于 Web 网络上的开放技术，我们希望将其记录下来。</p>
+### 版权和许可
 
-<p>此外，我们还提供有关 <a href="/zh-CN/docs/Mozilla">Mozilla 产品</a> 以及如何<a href="/zh-CN/docs/Mozilla">构建和贡献 Mozilla 项目</a>的文档。</p>
+MDN的内容在各种开源许可证下完全可用。本节介绍我们提供的内容类型以及每种内容的许可证。
 
-<p>如果你不确定 MDN 是否应涵盖特定主题，请阅读：<a href="/zh-CN/docs/MDN/Contribute/Content/Rules_Of_MDN_Documenting">这是否属于 MDN？</a></p>
+#### 文档
 
-<h2 id="如何帮助我们">如何帮助我们</h2>
+> **备注：** MDN 文档来自于包括 Mozilla 基金会内部与外部编辑者的贡献。除非另有说明，文档基于[署名 - 相同方式共享许可](https://creativecommons.org/licenses/by-sa/2.5/)（CC-BY-SA）V2.5 及以上版本发布。
 
-<p>想要帮助 MDN，你并不需要编写代码的能力！你可以通过很多其他的途径帮助我们，包括复查文章来保证文章的可读性，添加示例代码等。实际上，帮助我们的方法有很多，我们还专门建立了一个<a href="/zh-CN/docs/MDN/Getting_started">入门指南</a>来帮你上手，它可以根据你的兴趣和你的空闲时间推荐合适的任务！</p>
+在复用 MDN 内容时，你需要确保两点：
 
-<p>你也可以在个人博客或网站中<a href="/zh-CN/docs/MDN/Promote">添加 MDN 链接</a>来帮助我们推广。</p>
+1. 归属权属于原文档。
 
-<h2 id="MDN_社区">MDN 社区</h2>
+文档的归属权属于“Mozilla 贡献者”。你应该将源文档的超链接（如果是在线使用）或 URL（如果是印刷版）放在你的材料当中。以本文为例，你可以这样写：
 
-<p>我们的社区遍及全球！我们拥有来自世界各地、使用不同语言的了不起的贡献者。如果您想了解更多我们的信息，或者想以任何方式帮助 MDN，请查看我们的邮件列表或 IRC 聊天频道！</p>
+> [About MDN](/en-US/docs/MDN/About) by [Mozilla Contributors](/en-US/docs/MDN/About/contributors.txt) is licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/).
 
-<h2 id="版权和许可">版权和许可</h2>
+注意在示例当中，“Mozilla 贡献者”被引用到页面的历史记录当中。参见[版权归属的最佳实践](https://wiki.creativecommons.org/wiki/Marking/Users)以获取更为详细的信息。
 
-<p>MDN 文档来自于包括 Mozilla 基金会内部与外部编辑者的贡献。除非另有说明，文档基于<a href="http://creativecommons.org/licenses/by-sa/2.5/">署名 - 相同方式共享许可</a>（CC-BY-SA）V2.5 及以上版本发布。请在包括链接至特定文档页面的内容来源在内，以“Mozilla 贡献者”名义署名。例如，在为本文署名时，你需要这样写：</p>
+2. 你的重用文档将在与原始内容相同的许可证[署名 - 相同方式共享许可](https://creativecommons.org/licenses/by-sa/2.5/)（CC-BY-SA）V2.5 及以上版本发布。
 
-<pre class="notranslate">“ <a href="/zh-CN/docs/MDN/About$history">Mozilla 贡献者</a>基于<a href="http://creativecommons.org/licenses/by-sa/2.5/">CC-BY-SA 2.5</a>协议发布的<a href="/zh-CN/docs/MDN/About">关于 MDN</a>. ”</pre>
+#### 代码示例和代码片段
 
-<p>注意，在示例中，“Mozilla 贡献者”链接了引用页面的历史版本。请浏览<a href="https://wiki.creativecommons.org/Marking/Users">Best practices for attribution</a>以获得进一步的解释。</p>
+2010 年 8 月 20 日或之后添加的代码示例都属于[公有领域](https://creativecommons.org/publicdomain/zero/1.0/) ([CC0](https://creativecommons.org/publicdomain/zero/1.0/))。不需要有意添加许可信息。如果你需要的话，可以使用：
 
-<div class="note">
-<p><strong>注意：</strong> 请浏览 <a href="/zh-CN/docs/MDN_content_on_WebPlatform.org">MDN content on WebPlatform.org</a> 获取在上述网站使用和署名 MDN 内容的信息。</p>
-</div>
+> Any copyright is dedicated to the Public Domain. http://creativecommons.org/publicdomain/zero/1.0/
 
-<p>在 2010 年 8 月 20 日之前添加到 wiki 中的示例代码通过<a href="http://www.opensource.org/licenses/mit-license.php">MIT license</a>发布，你应该向 MIT 模板中添加相应的属性信息："© &lt;最后修订时间&gt; &lt;发布者姓名&gt;"。</p>
+2010 年 8 月 20 日之前的代码示例基于 [MIT license](https://opensource.org/licenses/mit-license.php)，你应该在 MIT 模板中插入以下归属信息：
 
-<p>在 2010 年 8 月 20 日之后添加到 wiki 中的示例代码属于 <a href="http://creativecommons.org/publicdomain/zero/1.0/">public domain</a>. 版权声明是不必要的，如果你需要，可以使用以下内容："Any copyright is dedicated to the Public Domain. http://creativecommons.org/publicdomain/zero/1.0/".</p>
+> © \<date of last wiki page revision> \<name of person who put it in the wiki>
 
-<p>如果你需要对该 wiki 作出贡献，你必须在 Attribution-ShareAlike license (或者在你编辑的页面已经制定的其他版权许可) 下发布你的文档，在 <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC-0</a> (a Public Domain dedication) 下发布你的示例代码。将内容添加到这个 wiki 表明你同意在相应的许可之下发布你贡献的内容。</p>
+自 2020 年 12 月 14 日推出新的 Yari MDN 平台以来，目前还无法确定你需要哪一个。我们正在进行这方面的工作，并将很快更新此内容。
 
-<p>一些历史内容是在不同于以上的版权许可之下发布的，这些已在页面底部通过<a href="/Archive/Meta_docs/Examples/Alternate_License_Block">其他版权许可</a>的方式进行了标注。</p>
+#### 贡献
 
-<div class="warning">
-<p><strong>重要说明：</strong> 任何新建的页面都不可以使用其他版权许可。</p>
-</div>
+如果你需要对该 wiki 作出贡献，你必须在 Attribution-ShareAlike license（或者在你编辑的页面已经制定的其它版权许可）下发布你的文档，在 [Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/)（专用于公有领域）下发布你的示例代码。将内容添加到这个 wiki 表明你同意在相应的许可之下发布你贡献的内容。
 
-<p>贡献的内容的版权在作者未授予他人之前归原作者所有。</p>
+一些历史内容是在不同于以上的版权许可之下发布的，这些已在页面底部通过*其它版权许可*的方式进行了标注。
 
-<p>对于此处讨论的话题有任何问题，请联系 <a href="mailto:eshepherd@mozilla.com">Eric Shepherd</a>。</p>
+> **警告：** 任何新建的页面都不可以使用其它版权许可。
 
-<hr>
-<p>Mozilla 基金会的商标、标识、服务标志以及网站的设计、外观不包含在基于知识共享许可的范围内。从某种意义上说，它们是内容的创造者（如图标和图形设计），而这些内容并不在上述许可范畴内发布。 如果你也希望这样发布文档，或者你对这些许可条款还有任何的疑问，你可以联系 Mozilla 基金会以获得更多的帮助： <a href="mailto:licensing@mozilla.org">licensing@mozilla.org</a>.</p>
+**贡献的内容的版权在作者未授予他人之前归原作者所有**。
 
-<h2 id="下载整站内容">下载整站内容</h2>
+对于此处讨论的话题有任何问题，请联系 [MDN 管理员](mailto:mdn-admins@mozilla.org?subject=MDN%20licensing%20question)。
 
-<p>你可以下载 <a href="https://mdn-downloads.s3-us-west-2.amazonaws.com/developer.mozilla.org.tar.gz">MDN 的镜像文件</a>(2017 年 2 月，总共 2.1GB)</p>
+#### 徽标、商标、服务标记和文字标记
 
-<h3 id="单独页面">单独页面</h3>
+Mozilla 基金会的商标、标识、服务标志以及网站的设计、外观不包含在基于知识共享许可的范围内。从某种意义上说，它们是内容的创造者（如图标和图形设计），而这些内容并不在上述许可范畴内发布。如果你也希望这样发布文档，或者你对这些许可条款还有任何的疑问，你可以联系 Mozilla 基金会以获得更多的帮助：[licensing@mozilla.org](mailto:licensing@mozilla.org "mailto:licensing@mozilla.org")
 
-<p>你可以通过在页面 URL 后添加<a href="/zh-CN/docs/MDN/Kuma/API#Document_parameters">文档参数</a>来制定需要的格式，获取 MDN 上每个单页的内容。</p>
+### 链接到 MDN
 
-<h3 id="第三方工具">第三方工具</h3>
-
-<p>你可以使用第三方工具访问 MDN 的内容，例如 <a href="http://kapeli.com/dash">Dash</a> (适用于 Mac OS) 和 <a href="http://zealdocs.org/">Zeal</a> (适用于 Linux 和 Windows)。</p>
-
-<h2 id="向_MDN_报告错误">向 MDN 报告错误</h2>
-
-<p>在使用 MDN 的过程中，你将不时遇到问题。不论是网站基础设施的问题或者你查看的文档的错误，你都可以自己修改或报告错误。前者是更推荐的，但有时候后者可能更适合于你，那当然也是可行的。</p>
-
-<h3 id="文档错误">文档错误</h3>
-
-<p>显然，由于 MDN 是一个 wiki，因而最佳的解决你遇到的问题的方法是自己动手解决。然而有时候，你也许不知道如何解决或者因为其他重要的事无法脱身，那么此时你需要将问题记录下来，以便于之后方便其他人查看。</p>
-
-<p>你只需要在 <a href="https://bugzilla.mozilla.org/form.doc">documentation request bug</a> 登陆后提交一个错误表单来报告错误，之后的工作将由 Mozilla 处理。我们的文档请求表单便捷易用，它会收集解决问题所需的必要信息。</p>
-
-<p>当然，我们的编辑社区是十分繁忙的，因而有时候最快的确认文档问题是否解决的方案是自己动手修正。参见<a href="/zh-CN/docs/MDN/Contribute/Creating_and_editing_pages">创建与编辑页面</a>以了解更多信息。</p>
-
-<h3 id="站点错误反馈或新特性请求">站点错误反馈或新特性请求</h3>
-
-<p><a href="/zh-CN/docs/Project:MDN/Kuma">Kuma</a> 是 Mozilla 开发的用于驱动 MDN 的平台，目前仍处在持续开发的进程中。我们的开发者，以及大量的志愿者，正在不断的对这个平台作出改进。如果你在使用网站时发现了错误，或者遇到的问题，或者有新的可以让这个软件更加完美的想法建议，可以使用 <a href="https://bugzilla.mozilla.org/form.mdn">Kuma bug form</a> 进行反馈。</p>
-
-<h2 id="MDN历史">MDN 历史</h2>
-
-<p>Mozilla 开发者网络（亦称作 Mozilla 开发者中心（MDC）或 Devmo）在 2005 年年初启动。那时 <a href="http://www.mozillafoundation.org">Mozilla 基金会</a> 从 AOL 获得了许可协议，得以使用原创的 <a href="/Project:cn/DevEdge">DevEdge</a> 内容。DevEdge 内容的引入具有抛砖引玉之效，因此在那不久在社区志愿者的努力下它被迁移到了这个更易于更新与维护的 wiki。</p>
-
-<p>此后，这个项目不断发展，现在已经成为所有与关于 Mozilla 项目和开放网络技术的文档的核心一环。在 2010 年，该项目更名为 Mozilla 开发者网络（Mozilla Developer Network）。2011 年，又添加了供 web 开发者分享与展示代码的 <a href="/zh-CN/demos">Demo Studio</a> 与提供教程的 <a href="/zh-CN/learn">Learning</a> 页面。（MDC 现在表示了"MDN 文档中心（MDN Doc Center）"）现在，Mozilla 开发者网络正向着成为供 Web 设计师、应用开发者、以及拓展、主题制作者们时常参考的资源的方向发展。</p>
-
-<p>更多关于 Mozilla 的后世前身可在我们的<a href="/zh-CN/docs/MDN_at_ten">十周年纪念庆</a>页面查看，其中还有参与者发表的 Ta 对 Mozilla 的评价。</p>
-
-<h2 id="关于_Mozilla">关于 Mozilla</h2>
-
-<p>想要了解是什么在驱动着我们，是什么使我们与众不同，请访问<a href="http://www.mozilla.org/zh-CN/mission/">使命</a>页面。在那里你能了解更多关于我们的信息，不论你想知道如何成为 Mozilla 的一员，或者仅仅想知道如何找到我们。</p>
+我们经常会有用户问我们如何链接到 MDN 的问题，甚至问是否允许这样做。简单的答案是：**是的，你可以链接到 MDN**！超文本链接不仅是 Web 的本质，它既是将你的用户指向宝贵资源的一种方式，也是对我们社区所做工作的信任。
