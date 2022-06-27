@@ -369,13 +369,13 @@ tfoot {
 
 <p>本篇文章提供了更一步的技术来使表格的可访问性尽可能地提高。</p>
 
-<h3 class="attTitle" id="使用列和行的标题">使用列和行的标题</h3>
+<h3 id="使用列和行的标题">使用列和行的标题</h3>
 
 <p>屏幕阅读设备会识别所有的标题，然后在它们和它们所关联的单元格之间产生编程关联。列和行标题的组合将标识和解释每个单元格中的数据，以便屏幕阅读器用户可以类似于视力正常的用户的操作来理解表格。</p>
 
 <p>我们之前的文章就提到过这一点，可见 <a href="/en-US/docs/Learn/HTML/Tables/Basics#Adding_headers_with_%3Cth%3E_elements">Adding headers with &lt;th&gt; elements</a>.</p>
 
-<h3 class="attTitle" id="scope_属性">scope 属性</h3>
+<h3 id="scope_属性">scope 属性</h3>
 
 <p>本篇文章的一个新话题是 {{htmlattrxref("scope","th")}} 属性，可以添加在<code>&lt;th&gt;</code> 元素中，用来帮助屏幕阅读设备更好地理解那些标题单元格，这个标题单元格到底是列标题呢，还是行标题。比如：回顾我们之前的支出记录示例，你可以明确地将列标题这样定义：</p>
 
@@ -403,7 +403,7 @@ tfoot {
 
 <p><code>scope</code> 还有两个可选的值： <code>colgroup</code> 和 <code>rowgroup</code>。这些用于位于多个列或行的顶部的标题。如果你回顾这部分文章开始部分的 "Items Sold August 2016" 表格。你会看到 "Clothes" 单元格在"Trousers", "Skirts", 和 "Dresses" 单元格的上面。这几个单元格都应该被标记为 (<code>&lt;th&gt;</code>)，但是 "Clothes" 是一个位于顶部且定义了其他三个子标题的标题。 因此 "Clothes" 应该有一个 <code>scope="colgroup"</code>属性，而另外三个子标题应该有 <code>scope="col"</code>属性。</p>
 
-<h3 class="attTitle" id="id_和标题属性">id 和标题属性</h3>
+<h3 id="id_和标题属性">id 和标题属性</h3>
 
 <p>如果要替代 <code>scope</code> 属性，可以使用 {{htmlattrxref("id")}} 和 {{htmlattrxref("headers", "td")}} 属性来创造标题与单元格之间的联系。使用方法如下：</p>
 

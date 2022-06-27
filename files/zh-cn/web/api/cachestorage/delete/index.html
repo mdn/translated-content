@@ -25,7 +25,7 @@ translation_of: Web/API/CacheStorage/delete
  <dd>想要删除的 cache 对象的名称。</dd>
 </dl>
 
-<h2 id="实例" style="line-height: 30px; font-size: 2.14285714285714rem;">实例</h2>
+<h2 id="实例">实例</h2>
 
 <p>在此代码片段中，我们等待一个 activate 事件，然后运行一个 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} 块，其在一个新的 service worker 被激活前清除所有旧的、未使用的 cache. 这里我们有一个白名单，其中包含我们想要保留的 cache 的 name. 我们使用 {{domxref("CacheStorage.keys")}} 返回 {{domxref("CacheStorage")}} 对象中 cache 的键，然后检查每个键值，以查看它是否在白名单中。如果没有，我们使用 <code>delete()</code> 删除它。</p>
 

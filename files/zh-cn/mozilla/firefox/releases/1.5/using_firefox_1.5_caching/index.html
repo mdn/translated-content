@@ -3,7 +3,7 @@ title: Using Firefox 1.5 caching
 slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 translation_of: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 ---
-<div>{{FirefoxSidebar}}</div><h2 id="Introduction" name="Introduction">介绍</h2>
+<div>{{FirefoxSidebar}}</div><h2 id="Introduction">介绍</h2>
 
 <p><a href="/en-US/docs/Firefox_1.5_for_developers">Firefox 1.5</a> 对整个 web 页面的一个浏览器会话进行了内存缓存，包括他们对 JavaScript 状态。在访问过的页面间后退和前进不需要页面加载同时保存 JavaScript 状态。这个特性，被称为 bfcache（“后退前进缓存”），使得页面导航（切换）非常快。这个状态缓存被保存直到用户关闭浏览器。 </p>
 
@@ -34,7 +34,7 @@ translation_of: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 
 <p>两个新的浏览器事件使得用户可以做到这 2 个要求。</p>
 
-<h2 id="New_browser_events" name="New_browser_events">新的浏览器事件</h2>
+<h2 id="New_browser_events">新的浏览器事件</h2>
 
 <p>如果你使用新的事件，你的页面在其他浏览器依然会正确显示  (我们已经测试了早期版本的 Firefox, Internet Explorer, Opera, 和 Safari)，而且在 Firefox 1.5 加载时将会使用新的缓存功能。</p>
 
@@ -56,7 +56,7 @@ translation_of: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 
 <p>如果你拥有当用户导航离页面是执行的行为，但是你想利用这个新的缓存功能，因此不想使用 unload 处理程序，使用新的 <code>pagehide</code> 事件</p>
 
-<h3 id="pageshow_event" name="pageshow_event">pageshow 事件</h3>
+<h3 id="pageshow_event">pageshow 事件</h3>
 
 <p>这个事件和 <code>load</code> 事件一样的工作（效果）, 除了它每次页面加载是都执行 that it fires every time the page is loaded (然而  <code>load</code> 事件在 Firefox 1.5 中当页面从缓存中加载时不执行). 页面第一次加载时， <code>pageshow</code> 事件在 <code>load</code> 事件执行后执行。 <code>pageshow</code> 事件使用一个命名为<code>persisted</code> 的 boolean 属性，在初始加载时默认设置为 <code>false</code>。如果它不是初始加载，被设置为<code>true</code>（换句话说，但页面被缓存时它被设置为 true）.</p>
 
@@ -64,7 +64,7 @@ translation_of: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 
 <p>如果你将 JavaScript 函数作为 pageshow 事件的一部分调用，你可以通过调用<code>pageshow</code> 事件作为<code>load</code>事件的一部分确保在不同于 Firefox 1.5 的浏览器在页面加载时调用这些函数，如在本文后面所示的示例。</p>
 
-<h3 id="pagehide_event" name="pagehide_event">pagehide 事件</h3>
+<h3 id="pagehide_event">pagehide 事件</h3>
 
 <p>如果你想定义当用户导航离页面时的行为，但是你不想使用 <code>unload</code>  (这将导致页面不被缓存)，你可以使用新的  <code>pagehide</code> 事件。像 <code>pageshow</code> ， <code>pagehide</code> 事件使用一个命名为<code>persisted</code> 的属性。这个属性在页面未被浏览器缓存时设置为 <code>false</code>  ，如果页面被浏览器缓存则设置为 <code>true</code> 。如果这个属性被设置为 <code>false</code>，如果有设置<code>unload</code> 处理程序的话，<code>unload</code> 事件在<code>pagehide</code> 事件执行后马上执行。</p>
 
@@ -177,7 +177,7 @@ function loadOnlyFirst() {
 &lt;body onload="onLoad();"&gt;
 </pre>
 
-<h2 id="Developing_Firefox_extensions" name="Developing_Firefox_extensions">开发 Firefox 扩展</h2>
+<h2 id="Developing_Firefox_extensions">开发 Firefox 扩展</h2>
 
 <p>Firefox 1.5 <a href="/en-US/docs/Building_an_Extension">extensions</a> 需要允许缓存功能。如果你在开发一个兼容 1.5 及以前版本的 Firefox 扩展，确保它监听事件触发 <code>load</code> 可被缓存，监听的 <code>pageshow</code> 事件触发不应该被缓存。</p>
 

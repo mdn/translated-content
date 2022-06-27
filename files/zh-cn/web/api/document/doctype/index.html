@@ -7,7 +7,7 @@ translation_of: Web/API/Document/doctype
 
 <div>返回当前文档关联的文档类型定义 (DTD). 返回的对象实现了 <a href="../../../zh-CN/DOM/DocumentType" title="zh-CN/DOM/DocumentType">DocumentType</a> 接口。使用 {{domxref("DOMImplementation.createDocumentType()")}} 方法可以创建一个<code>DocumentType</code>类型的对象。</div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><var>doctype</var> = <var>document</var>.doctype;
 </pre>
@@ -27,13 +27,13 @@ console.log(
   "doctypeObj.systemId: "       + doctypeObj.systemId
 );</pre>
 
-<h2 id="Notes" name="Notes">附注</h2>
+<h2 id="Notes">附注</h2>
 
 <p>如果当前文档没有 DTD，则该属性返回<code>null</code>。</p>
 
 <p>DOM level 2 不支持编辑文档类型定义。</p>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 <table>
  <thead>
