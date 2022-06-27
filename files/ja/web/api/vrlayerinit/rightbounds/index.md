@@ -1,11 +1,12 @@
 ---
 title: VRLayerInit.rightBounds
 slug: Web/API/VRLayerInit/rightBounds
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
-  - Refe
+  - Reference
   - VR
   - VRLayerInit
   - Virtual Reality
@@ -14,56 +15,34 @@ tags:
 translation_of: Web/API/VRLayerInit/rightBounds
 original_slug: Web/API/VRLayer/rightBounds
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>{{domxref("VRLayerInit")}} インターフェイス (辞書) の <code><strong>rightBounds</strong></code> プロパティは、 {{domxref("VRDisplay")}} によってコンテンツが表示されるキャンバスの右のテクスチャ境界を定義します。</p>
+**`rightBounds`** は {{domxref("VRLayerInit")}} インターフェイス（辞書）のプロパティで、 {{domxref("VRDisplay")}} によってコンテンツが表示されるキャンバスの右側のテクスチャ境界を定義します。
 
-<h2 id="構文">構文</h2>
+> **Note:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
-<pre class="brush: js notranslate">var myVRLayerInit = { };
-myVRLayerInit.rightBounds = <code>[0.5, 0.0, 0.5, 1.0]</code>;</pre>
+## 値
 
-<h3 id="値">値</h3>
+4 つの浮動小数点値の配列で、 0.0–1.0 の値を取ることができます。
 
-<p>4つの浮動小数点値の配列で 0.0–1.0 の値を取ることができます:</p>
+1. 境界の左側のオフセット。
+2. 境界の上側のオフセット。
+3. 境界の幅。
+4. 境界の高さ。
 
-<ol>
- <li>境界の左オフセット。</li>
- <li>境界の上オフセット。</li>
- <li>境界の幅。</li>
- <li>境界の高さ。</li>
-</ol>
+この辞書で `leftBounds` が指定されていない場合、使用される既定値は `[0.5, 0.0, 0.5, 1.0]` です。
 
-<p>辞書で <code>leftBounds</code> が指定されていない場合、使用されるデフォルト値は <code>[0.5, 0.0, 0.5, 1.0]</code> です。</p>
+## 例
 
-<h2 id="例">例</h2>
+例については [`VRLayerInit`](/ja/docs/Web/API/VRLayerInit#例) を参照してください。
 
-<p>{{page("/Web/API/VRLayerInit", "Examples")}}</p>
+## 仕様書
 
-<h2 id="仕様">仕様</h2>
+このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#dom-vrlayerinit-rightbounds', 'rightBounds')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## 関連情報
 
-<p>{{Compat("api.VRLayerInit.rightBounds")}}</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。

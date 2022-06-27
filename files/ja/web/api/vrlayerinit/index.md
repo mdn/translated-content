@@ -1,29 +1,41 @@
 ---
-title: VRLayer
+title: VRLayerInit
 slug: Web/API/VRLayerInit
+page-type: web-api-interface
+tags:
+  - API
+  - Dictionary
+  - Deprecated
+  - Interface
+  - Reference
+  - VR
+  - VRLayerInit
+  - Virtual Reality
+  - WebVR
 translation_of: Web/API/VRLayerInit
 original_slug: Web/API/VRLayer
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> の <strong><code>VRLayer</code></strong> インターフェイス (ディクショナリ)は，VRHMDへ表示したいコンテンツレイヤー( {{domxref("HTMLCanvasElement")}} または {{domxref("OffscreenCanvas")}})を表します。</p>
+**`VRLayerInit`** 辞書は [WebVR API](/ja/docs/Web/API/WebVR_API) の辞書で、 VR ディスプレイに表示したいコンテンツレイヤー （{{domxref("HTMLCanvasElement")}} または {{domxref("OffscreenCanvas")}}） を表します。
 
-<p>{{domxref("VRDisplay.requestPresent()")}} メソッドを使うことでレイヤーを表示することができます。</p>
+> **Note:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
-<h2 id="プロパティ">プロパティ</h2>
+`VRLayerInit` オブジェクトは {{domxref("VRDisplay.getLayers()")}} メソッドを使用して受ける取り、 {{domxref("VRDisplay.requestPresent()")}} メソッドを使用して表示することができます。
 
-<dl>
- <dt>{{domxref("VRLayer.leftBounds")}}</dt>
- <dd>{{domxref("VRDisplay")}} に表示されるキャンバスの左側テクスチャ境界を定義します。</dd>
- <dt>{{domxref("VRLayer.rightBounds")}}</dt>
- <dd>{{domxref("VRDisplay")}} に表示されるキャンバスの右側テクスチャ境界を定義します。</dd>
- <dt>{{domxref("VRLayer.source")}}</dt>
- <dd>{{domxref("VRDisplay")}} に表示されるコンテンツの対象となるキャンバスを定義します。</dd>
-</dl>
+## プロパティ
 
-<h2 id="例">例</h2>
+- {{domxref("VRLayerInit.leftBounds")}} {{deprecated_inline}}
+  - : {{domxref("VRDisplay")}} によって内容が表示されるキャンバスの左側のテクスチャ境界を定義します。
+- {{domxref("VRLayerInit.rightBounds")}} {{deprecated_inline}}
+  - : {{domxref("VRDisplay")}} によって内容が表示されるキャンバスの右側のテクスチャ境界を定義します。
+- {{domxref("VRLayerInit.source")}} {{deprecated_inline}}
+  - : {{domxref("VRDisplay.submitFrame()")}} が呼び出されたときに、 {{domxref("VRDisplay")}} が表示するコンテンツを持つキャンバスを定義します。
 
-<pre class="notranslate">// currently returns an empty array
+## 例
+
+```js
+// currently returns an empty array
 var layers = vrDisplay.getLayers();
 
 if(navigator.getVRDisplays) {
@@ -31,7 +43,7 @@ if(navigator.getVRDisplays) {
   // Then get the displays attached to the computer
   navigator.getVRDisplays().then(function(displays) {
     // If a display is available, use it to present the scene
-    if(displays.length &gt; 0) {
+    if(displays.length > 0) {
       vrDisplay = displays[0];
       console.log('Display found');
       // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
@@ -47,46 +59,28 @@ if(navigator.getVRDisplays) {
       });
     }
   });
-}</pre>
+}
+```
 
-<p>{{domxref("VRLayerInit")}} objects look something like this:</p>
+{{domxref("VRLayerInit")}} オブジェクトは下記のように見えます。
 
-<pre class="notranslate">{
+```js
+{
   leftBounds : [ ... ],
   rightBounds: [ ... ],
-  source: <em>canvasReference</em>
-}</pre>
+  source: canvasReference
+}
+```
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: The <code>canvasReference</code> refers to the {{htmlelement("canvas")}} element itself, not the WebGL context associated with the canvas. The other two members are arrays</p>
-</div>
+> **Note:** `canvasReference` は {{htmlelement("canvas")}} 要素そのものを指すものであり、キャンバスに関連付けられた WebGL コンテキストを指すわけではありません。他の 2 つのメンバーは配列です。
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#interface-vrlayer', 'VRLayer')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
 
-<p>{{Compat("api.VRLayerInit")}}</p>
+## 関連情報
 
-<div id="compat-mobile"></div>
-
-<h2 id="参照">参照</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
