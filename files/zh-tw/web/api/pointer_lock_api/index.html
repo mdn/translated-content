@@ -13,7 +13,7 @@ translation_of: Web/API/Pointer_Lock_API
 
 <p>即使滑鼠游標移出瀏覽器或螢幕之外，Pointer lock 還是能讓你存取滑鼠事件。舉例來說，消費者還是可繼續移動滑鼠以旋轉或操作 3D 模型。若沒有 Pointer lock，則只要指標移出瀏覽器或螢幕之外，旋轉或操作隨即停止。遊戲玩家會特別喜歡此功能。他們現在可以隨便亂按按鈕並隨意滑動滑鼠；不再擔心滑鼠游標滑出遊戲區域而點到其他應用程式，結果退出遊戲發生慘案！</p>
 
-<h2 id="basics" name="basics">基本概念</h2>
+<h2 id="basics">基本概念</h2>
 
 <p>Pointer lock 與 <a href="/en/DOM/element.setCapture">mouse capture </a>相關。在拖曳滑鼠時，Mouse capture 可持續向目標元素傳遞事件，且只要放開滑鼠按鈕隨即跟著停止。Pointer lock 與 mouse capture 不同之處在於：</p>
 
@@ -24,7 +24,7 @@ translation_of: Web/API/Pointer_Lock_API
  <li>Pointer lock 會隱藏游標。</li>
 </ul>
 
-<h2 id="example" name="example">範例</h2>
+<h2 id="example">範例</h2>
 
 <p>下列範例可讓你設定自己網頁上的 Pointer lock。</p>
 
@@ -101,7 +101,7 @@ function lockPointer() {
 &lt;/script&gt;
 </pre>
 
-<h2 id="method_overview" name="method_overview"><strong>函式/屬性概述</strong></h2>
+<h2 id="method_overview"><strong>函式/屬性概述</strong></h2>
 
 <p>Pointer lock API 與 Fullscreen API 類似，可添增 <a href="/en-US/docs/Web/API/Element.requestPointerLock">requestPointerLock</a> 新函式 (目前尚未標準化) 而擴充 DOM 元素。可為下列：</p>
 
@@ -158,19 +158,19 @@ document.addEventListener('webkitpointerlockchange', pointerLockChange, false);
 document.exitPointerLock();
 </pre>
 
-<h2 id="mouselocklostevent" name="mouselocklostevent">pointerlockchange 事件</h2>
+<h2 id="mouselocklostevent">pointerlockchange 事件</h2>
 
 <p>若 Pointer lock 狀態改變，如呼叫 <a href="/en-US/docs/Web/API/Element.requestPointerLock">requestPointerLock</a>、<a href="/en-US/docs/Web/API/Document.exitPointerLock">exitPointerLock</a>，或使用者按下 ESC 鍵等。則 <a href="/en-US/docs/Web/API/GlobalEventHandlers.pointerlockchange">pointerlockchange</a> 事件隨即傳送至 <code>document</code>。此簡單事件不包含額外資料。</p>
 
 <div class="note">此事件目前在 Firefox 中的前綴為 <code>mozpointerlockchange</code>；在 Chrome 中的前綴為 <code>webkitpointerlockchange</code>。</div>
 
-<h2 id="mouselocklostevent" name="mouselocklostevent">pointerlockerror 事件</h2>
+<h2 id="mouselocklostevent">pointerlockerror 事件</h2>
 
 <p>當呼叫 <a href="/en-US/docs/Web/API/Element.requestPointerLock">requestPointerLock</a> 或 <a href="/en-US/docs/Web/API/Document.exitPointerLock">exitPointerLock</a> 而發生錯誤時，隨即傳送 <a href="/en-US/docs/Web/API/GlobalEventHandlers.pointerlockerror">pointerlockerror</a> 事件至 <code>document</code>。此簡單事件不包含額外資料。</p>
 
 <div class="note">此事件在 Firefox 中的前綴為 <code>mozpointerlockerror</code>；在 Chrome 中的前綴為 <code>webkitpointerlockerror</code>。</div>
 
-<h2 id="extensions" name="extensions">擴充至滑鼠事件</h2>
+<h2 id="extensions">擴充至滑鼠事件</h2>
 
 <p>Pointer lock API 可透過位移屬性而擴充標準的 <a href="/en-US/docs/Web/API/MouseEvent">MouseEvent</a> 介面。</p>
 
@@ -183,11 +183,11 @@ document.exitPointerLock();
 
 <p>滑鼠事件的二個新參數 (即 <a href="/en-US/docs/Web/API/MouseEvent.movementX">movementX</a> 與 <a href="/en-US/docs/Web/API/MouseEvent.movementY">movementY</a>) 將提供滑鼠位置的變化情形。此二項參數的值，等於 <a href="/en-US/docs/Web/API/MouseEvent">MouseEvent</a> 屬性值 (即 <a href="/en-US/docs/Web/API/MouseEvent.screenX">screenX</a> 與 <a href="/en-US/docs/Web/API/MouseEvent.screenY">screenY</a>) 之間的變化；而 <a href="/en-US/docs/Web/API/MouseEvent">MouseEvent</a> 屬性另儲存於二項連續的 <a href="/en-US/docs/Web/API/GlobalEventHandlers.mousemove">mousemove</a> 事件 (即 eNow 與 ePrevious) 之內。換句話說，Pointer lock 參數 <code>movementX = eNow.screenX - ePrevious.screenX</code>。</p>
 
-<h3 id="locked_state" name="locked_state">鎖定狀態</h3>
+<h3 id="locked_state">鎖定狀態</h3>
 
 <p>在啟動 Pointer lock 之後，標準的 <a href="/en-US/docs/Web/API/MouseEvent">MouseEvent</a> 屬性 <a href="/en-US/docs/Web/API/MouseEvent.clientX">clientX</a>、<a href="/en-US/docs/Web/API/MouseEvent.clientY">clientY</a>、<a href="/en-US/docs/Web/API/MouseEvent.screenX">screenX</a>、<a href="/en-US/docs/Web/API/MouseEvent.screenY">screenY</a> 均維持不變，如同滑鼠沒有移動。<a href="/en-US/docs/Web/API/MouseEvent.movementX">movementX</a> 與 <a href="/en-US/docs/Web/API/MouseEvent.movementY">movementY</a> 屬性將持續提供滑鼠的位置變化。如果滑鼠朝單一方向持續移動，<a href="/en-US/docs/Web/API/MouseEvent.movementX">movementX</a> 與 <a href="/en-US/docs/Web/API/MouseEvent.movementY">movementY</a> 的值也就不受限。此時「滑鼠游標」的概念不存在，游標無法移出視窗之外，也不會受限於螢幕邊界。</p>
 
-<h3 id="unlocked_state" name="unlocked_state"><strong>未鎖定狀態</strong></h3>
+<h3 id="unlocked_state"><strong>未鎖定狀態</strong></h3>
 
 <p>無論滑鼠的鎖定狀態為何，<a href="/en-US/docs/Web/API/MouseEvent.movementX">movementX</a> 與 <a href="/en-US/docs/Web/API/MouseEvent.movementY">movementY</a> 參數均保持有效；另為了方便起見，甚至在未鎖定狀態下仍可保持有效。</p>
 
@@ -203,11 +203,11 @@ document.exitPointerLock();
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">瀏覽器相容性</h2>
+<h2 id="Browser_compatibility">瀏覽器相容性</h2>
 
 {{Compat("api.Element.requestPointerLock")}}
 
-<h2 id="See_also" name="See_also">另可參閱</h2>
+<h2 id="See_also">另可參閱</h2>
 
 <ul>
  <li>{{domxref("MouseEvent")}}</li>

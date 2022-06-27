@@ -7,7 +7,7 @@ original_slug: Web/API/document.createTreeWalker
 <div>
  {{ApiRef("Document")}}</div>
 <p><strong><code>Document.createTreeWalker()</code></strong> 方法，能建立一個 {{domxref("TreeWalker")}} 物件並傳回.</p>
-<h2 id="Syntax" name="Syntax">語法</h2>
+<h2 id="Syntax">語法</h2>
 <pre class="syntaxbox"><em>treeWalker</em> = <em>document</em>.createTreeWalker(<em>root</em>, <em>whatToShow</em>, <em>filter</em>, <em>entityReferenceExpansion</em>);
 </pre>
 <h3 id="參數">參數</h3>
@@ -104,7 +104,7 @@ original_slug: Web/API/document.createTreeWalker
  <dd>
   Is a {{domxref("Boolean")}} flag indicating if when discarding an {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.</dd>
 </dl>
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 <p>The following example goes through all nodes in the body, reduces the set of nodes to elements, simply passes through as acceptable each node (it could reduce the set in the <code>acceptNode()</code> method instead), and then makes use of tree walker iterator that is created to advance through the nodes (now all elements) and push them into an array.</p>
 <pre class="brush: js">var treeWalker = document.createTreeWalker(
   document.body,
@@ -117,7 +117,7 @@ var nodeList = [];
 
 while(treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
 </pre>
-<h2 id="Specification" name="Specification">Specifications</h2>
+<h2 id="Specification">Specifications</h2>
 {{Specifications}}
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 {{Compat("api.Document.createTreeWalker")}}

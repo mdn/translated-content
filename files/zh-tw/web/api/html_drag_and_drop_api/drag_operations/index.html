@@ -9,7 +9,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 <p>The drag operations described in this document use the {{domxref("DataTransfer")}} interface. This document does <em>not</em> use the {{domxref("DataTransferItem")}} interface nor the {{domxref("DataTransferItemList")}} interface.</p>
 
-<h2 id="draggableattribute" name="draggableattribute">Draggable 屬性</h2>
+<h2 id="draggableattribute">Draggable 屬性</h2>
 
 <p>網頁中有些預設的拖曳行為，例如文字選擇、圖片或超連結，當拖曳圖片或超連結時，圖片或超連結的 URL 會被當作拖曳作業中所攜帶的資料，而其他類型元素則必須另外處理才能拖曳，試試看選擇網頁某一部分，然後按住滑鼠鍵來進行拖曳，依據OS不同，或許會有一些跟著滑鼠移動的效果，但這僅僅只是預設效果行為，實際上沒有任何資料跟著被拖曳。</p>
 
@@ -39,7 +39,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 <pre class="brush: html">&lt;button label="Drag Me" ondragstart="event.dataTransfer.setData('text/plain', 'Drag Me Button');"&gt;
 </pre>
 
-<h2 id="dragstart" name="dragstart">開始拖曳</h2>
+<h2 id="dragstart">開始拖曳</h2>
 
 <p>下方範例在dragstart註冊一個事件處理器。</p>
 
@@ -50,7 +50,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 <p>當拖曳作業開始，dragstart 事件會觸發，然後我們可以在事件處理器中準備好我們所要攜帶的資料、想要的拖曳回饋效果，不過基本上其實只需要準備資料就好，因為預設拖曳回饋效果已經足以應付大多數的狀況，此外，我們也可以改在上一層父元素註冊事件處理器，因為拖曳事件會上向傳遞 ( Bubble up ) 。</p>
 
-<h2 id="dragdata" name="dragdata">拖曳資料</h2>
+<h2 id="dragdata">拖曳資料</h2>
 
 <p>所有的拖曳事件物件都有一個 <a href="/en-US/docs/DragDrop/DataTransfer">dataTransfer</a> 屬性，這個屬性是用來攜帶資料。</p>
 
@@ -88,7 +88,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>如果呼叫clearData時有傳入資料型態，則只會清除該型態資料，如果沒有傳入任何型態，則所有資料皆會被清除。</p>
 
-<h2 id="dragfeedback" name="dragfeedback">設定拖曳圖片</h2>
+<h2 id="dragfeedback">設定拖曳圖片</h2>
 
 <p>當拖曳進行中，以拖曳元素為基礎，一個半透明的圖片會自動產生出來，並且跟著滑鼠移動。如果想要，我們也可以呼叫<code><a href="/en-US/docs/DragDrop/DataTransfer#setDragImage.28.29">setDragImage()來指定我們自己的拖曳使用圖片。</a></code></p>
 
@@ -142,7 +142,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>我們用HTML格式的"&lt;strong&gt;Body&lt;/strong&gt;"作為資料，然後用pnael元素作為圖片。</p>
 
-<h2 id="drageffects" name="drageffects">拖曳效果</h2>
+<h2 id="drageffects">拖曳效果</h2>
 
 <p>拖曳作業有好機種；copy作業代表被拖曳資料會被複製一份到拖曳目標區，move作業代表移動被拖曳的資料，link作業代表拖曳來源區和拖曳目標區有某種關係。</p>
 
@@ -191,7 +191,7 @@ event.dataTransfer.dropEffect = "copy";
 
 <p>若effectAllowed或dropEffect為none，那麼沒有放置作業可以被執行。</p>
 
-<h2 id="droptargets" name="droptargets">指定拖曳目標</h2>
+<h2 id="droptargets">指定拖曳目標</h2>
 
 <p>dragenter和dragover事件就是用來指定拖曳目標區，也就是放置資料的目標區，絕大多數的元素預設的事件都不准放置資料。</p>
 
@@ -229,7 +229,7 @@ event.dataTransfer.dropEffect = "copy";
 
 <p>You could always use some feature detection to determine which method is supported on <code>types</code>, and run code as appropriate.</p>
 
-<h2 id="dropfeedback" name="dropfeedback">放置回饋</h2>
+<h2 id="dropfeedback">放置回饋</h2>
 
 <p>有好幾種方法回饋使用者，告訴使用者甚麼元素可以接受放置作業，最簡單的是滑鼠會指標會自動變換樣式(視平台而定)。</p>
 
@@ -248,7 +248,7 @@ event.dataTransfer.dropEffect = "copy";
 
 <p>最後，應該要在dragleave事件內復原之前所做樣式變更，dragleave事件不需要取消預設事件行為、永遠都會觸發，即使拖曳被取消了；至於使用-moz-drag-over的CSS方法的話，樣式復原會自動執行，不用擔心。</p>
 
-<h2 id="drop" name="drop">執行放置作業</h2>
+<h2 id="drop">執行放置作業</h2>
 
 <p>當使用者在拖曳目標區上放開滑鼠時，drop事件就會觸發。當drop事件發生，我們需要取出被丟入的資料，然後處理之。</p>
 
@@ -304,7 +304,7 @@ event.dataTransfer.dropEffect = "copy";
   event.preventDefault();
 }</pre>
 
-<h2 id="dragend" name="dragend">完成拖曳</h2>
+<h2 id="dragend">完成拖曳</h2>
 
 <p>拖曳作業完成後，不論成功或取消於否，被拖曳元素的<code style="line-height: 1.5;"><a href="/en-US/docs/Web/Reference/Events/dragend">dragend</a></code>事件都會觸發，如果想要判別作業是否完成，可以檢查dropEffect屬性，若是dropEffect為none，代表拖曳作業被取消，否則dropEffect的值代表所完成的作業類型。</p>
 
@@ -324,7 +324,7 @@ event.dataTransfer.dropEffect = "copy";
 <div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_copy" title="將文字複製到剪貼簿"> </div>
 </div>
 
-<h2 id="See_also" name="See_also">參見</h2>
+<h2 id="See_also">參見</h2>
 
 <ul>
  <li><a href="/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API (Overview)</a></li>

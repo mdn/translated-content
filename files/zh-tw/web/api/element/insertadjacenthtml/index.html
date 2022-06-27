@@ -7,7 +7,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 
 <p><code>insertAdjacentHTML()</code> 把傳入的字串解析成 HTML 或 XML，並把該節點插入到 DOM 樹指定的位置。它不會重新解析被使用的元素，因此他不會破壞該元素裡面原有的元素。這避免了序列化的複雜步驟，使得它比直接操作  <code>innerHTML</code> 快上許多。</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre><em>element</em>.insertAdjacentHTML(<em>position</em>, <em>text</em>);</pre>
 
@@ -39,7 +39,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 
 <div class="note"><strong>Note: </strong> <code>beforebegin</code> 和 <code>afterend</code> 只在該節點位於 DOM 樹內、並且有母元素時有效。</div>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush: js">// &lt;div id="one"&gt;one&lt;/div&gt;
 var d1 = document.getElementById('one');
@@ -48,7 +48,7 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 // At this point, the new structure is:
 // &lt;div id="one"&gt;one&lt;/div&gt;&lt;div id="two"&gt;two&lt;/div&gt;</pre>
 
-<h2 id="Specification" name="Specification">Notes</h2>
+<h2 id="Specification">Notes</h2>
 
 <h3 id="Security_Considerations">Security Considerations</h3>
 
@@ -56,11 +56,11 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 
 <p>It is not recommended you use <code>insertAdjacentHTML</code> when inserting plain text; instead, use the <a href="/en-US/docs/Web/API/Node/textContent"><code>Node.textContent</code></a> property or <a href="/en-US/docs/Web/API/Element/insertAdjacentText"><code>Element.insertAdjacentText()</code></a> method. This doesn't interpret the passed content as HTML, but instead inserts it as raw text.</p>
 
-<h2 id="Specification" name="Specification">Specification</h2>
+<h2 id="Specification">Specification</h2>
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
+<h2 id="Browser_Compatibility">Browser compatibility</h2>
 
 {{Compat("api.Element.insertAdjacentHTML")}}
 

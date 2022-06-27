@@ -5,7 +5,7 @@ translation_of: Web/API/Document_Object_Model/Examples
 ---
 <p>本章介紹了使用 DOM 進行 Web 以及 XML 開發的一些長範例。只要可能，在例子就會使用通用的 JavaScript Web API 、技巧以及模式來操作文檔對象（the document object）。</p>
 
-<h2 id="Example_1:_height_and_width" name="Example_1:_height_and_width">範例一：高度和寬度</h2>
+<h2 id="Example_1:_height_and_width">範例一：高度和寬度</h2>
 
 <p>下面的例子展示了在不同尺寸的圖片時使用其高（height）和寬（width）屬性的情況：</p>
 
@@ -62,7 +62,7 @@ function init() {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_2:_Image_Attributes" name="Example_2:_Image_Attributes">範例二：圖片屬性</h2>
+<h2 id="Example_2:_Image_Attributes">範例二：圖片屬性</h2>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -93,7 +93,7 @@ function setBorderWidth(width) {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_3:_Manipulating_Styles" name="Example_3:_Manipulating_Styles">範例三：改變樣式（style）</h2>
+<h2 id="Example_3:_Manipulating_Styles">範例三：改變樣式（style）</h2>
 
 <p>在下面這個簡單的例子中，透過取得的 DOM 元素中的 style 物件和 style 物件中的屬性，我們可以取得 HTML 段落中的一些基本樣式屬性。在本例中，你可以直接操控各別的樣式屬性。在下一個的例子裡（見例4），你可以使用 stylesheets 和它的規則來改變整個文檔的樣式。</p>
 
@@ -123,7 +123,7 @@ function changeText() {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_4:_Using_Stylesheets" name="Example_4:_Using_Stylesheets">範例四：使用樣式表（stylesheets）</h2>
+<h2 id="Example_4:_Using_Stylesheets">範例四：使用樣式表（stylesheets）</h2>
 
 <p>在文檔物件的 styleSheets 屬性會回傳一系列載入文檔中的樣式表（stylesheets）。你可以透過 styleSheets、style 和 CSSRule 物件來獲取樣式表和每條樣式規則。在下面的例子中，把所有的樣式規則中的選擇器文本（字符串）打印到控制台中。</p>
 
@@ -149,7 +149,7 @@ P
 #LUMPY
 </pre>
 
-<h2 id="Example_5:_Event_Propagation" name="Example_5:_Event_Propagation">範例五：事件傳遞</h2>
+<h2 id="Example_5:_Event_Propagation">範例五：事件傳遞</h2>
 
 <p>本例以一種簡單的方法闡述了事件是如何觸發以及在 DOM 中是如何處理的。當這個 HTML 文檔 BODY 載入的時候，在表格的首行註冊了一個事件監聽器。事件監聽器透過執行函數 stopEvent 來處理事件，從而改變在該表格底部的值。</p>
 
@@ -197,7 +197,7 @@ function load() {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_6:_getComputedStyle" name="Example_6:_getComputedStyle">Example 6: getComputedStyle</h2>
+<h2 id="Example_6:_getComputedStyle">Example 6: getComputedStyle</h2>
 
 <p>這個例子演示了如何用 {{domxref("window.getComputedStyle")}} 方法來獲取一個尚未被透過樣式元素或 JavaScript 設定的元素樣式（例如，elt.style.backgroundColor="RGB(173，216，230)"）。列舉在 {{domxref("element.style", "elt.style")}} 後面的類型的樣式可以用更直接{{domxref("element.style", "elt.style")}} 屬性獲取。</p>
 
@@ -257,7 +257,7 @@ function cStyles() {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_7:_Displaying_Event_Object_Properties" name="Example_7:_Displaying_Event_Object_Properties">範例七：顯示事件物件的屬性</h2>
+<h2 id="Example_7:_Displaying_Event_Object_Properties">範例七：顯示事件物件的屬性</h2>
 
 <p>這個例子使用 DOM 方法來顯示所有 {{domxref("window.onload")}} {{domxref("event")}} 物件的屬性及其在 table 中的值。這個方法也展示一個有用的技術，使用 for...in 迴圈來來遍歷一個物件的屬性，以得到它們的值。</p>
 
@@ -328,7 +328,7 @@ window.onload = function(event){
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_8:_Using_the_DOM_Table_Interface" name="Example_8:_Using_the_DOM_Table_Interface">範例八：使用 DOM Table 介面</h2>
+<h2 id="Example_8:_Using_the_DOM_Table_Interface">範例八：使用 DOM Table 介面</h2>
 
 <p>DOM HTMLTableElement 介面提供了一些方便的方法用於創建和操作資料表。兩種常用的方法是{{domxref("HTMLTableElement.insertRow")}}和{{domxref("tableRow.insertCell")}}.。</p>
 
@@ -355,7 +355,7 @@ for (var i = 0; i &lt; 2; i++) {
 &lt;/script&gt;
 </pre>
 
-<h3 id="Notes" name="Notes">提醒</h3>
+<h3 id="Notes">提醒</h3>
 
 <ul>
  <li>表格的{{domxref("element.innerHTML","innerHTML")}}屬性絕不應該被用來修改表，雖然你可以用它來寫一個完整的表格或細格中的內容。</li>

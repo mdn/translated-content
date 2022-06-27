@@ -52,13 +52,13 @@ translation_of: Learn/Server-side/Django/development_environment
 <p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意</strong>: 其他可能的安裝選項在官方Django文檔中介紹。<a href="/zh-CN/docs/learn/Server-side/Django/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83#furtherreading">相應文件點擊這裡</a>。</p>
 </div>
 
-<h4 id="支持哪些操作系統" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>支持哪些操作系統?</h4>
+<h4 id="支持哪些操作系統">支持哪些操作系統?</h4>
 
 <p>幾乎任何可以運行Python編程語言的機器可以運行Django 網絡應用程序：Windows，Mac OSX，Linux/Unix，Solaris，僅舉幾例。幾乎任何計算機都應該在開發過程中運行Django所需的性能。</p>
 
 <p>在本文中。我們將提供Windows，Mac OS X 和Linux/Unix的說明。</p>
 
-<h4 id="你應該使用什麼版本的Python" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>你應該使用什麼版本的Python?</h4>
+<h4 id="你應該使用什麼版本的Python">你應該使用什麼版本的Python?</h4>
 
 <p>我們建議您使用最新版本 - 在編寫本文時，這是Python 3.7。</p>
 
@@ -68,7 +68,7 @@ translation_of: Learn/Server-side/Django/development_environment
 <p><strong>注意</strong>: Python 2.7不能與Django 2.0一起使用（Django 1.11.x系列是最後一個支持Python 2.7的系列）。</p>
 </div>
 
-<h4 id="我們在哪裡下載Django" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>我們在哪裡下載Django?</h4>
+<h4 id="我們在哪裡下載Django">我們在哪裡下載Django?</h4>
 
 <p>有三個地方可以下載Django:</p>
 
@@ -80,7 +80,7 @@ translation_of: Learn/Server-side/Django/development_environment
 
 <p>本文介紹如何從PyPi安裝Django，從獲得最新的穩定版本。</p>
 
-<h4 id="哪個數據庫" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>哪個數據庫?</h4>
+<h4 id="哪個數據庫">哪個數據庫?</h4>
 
 <p>Django支持四個主要數據庫（PostgreSQL，MySQL，Oracle和SQLite），還有一些社區庫，可以為其他流行的SQL和NOSQL數據庫，提供不同級別的支持。我們建議你為生產和開發，選擇相同的數據庫（儘管Django使用其對象關係映射器（ORM）抽像出許多數據庫差異，但是仍然存在可以避免的<a href="https://docs.djangoproject.com/en/1.10/ref/databases/">潛在問題</a> ).</p>
 
@@ -90,7 +90,7 @@ translation_of: Learn/Server-side/Django/development_environment
 <p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意</strong> :當你使用標準工具（django-admin）啟動你的網站項目時，Django將默認配置為使用SQLite。用來入門，這是一個很好的選擇，因為它不需要額外的配置和設置。</p>
 </div>
 
-<h4 id="安裝到整個本機系統還是Python虛擬環境中" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>安裝到整個本機系統還是Python虛擬環境中?</h4>
+<h4 id="安裝到整個本機系統還是Python虛擬環境中">安裝到整個本機系統還是Python虛擬環境中?</h4>
 
 <p>安裝Python3時，您將獲得一個由所有Python3代碼共享的單一全局環境。雖然您可以在環境中，安裝任何您喜歡的Python軟件包，但您一次只能安裝每個軟件包的一個特定版本。</p>
 

@@ -164,7 +164,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));</pre>
 <p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意:</strong>每個模型都映射到MongoDB數據庫中的文檔集合。這些文檔將包含模型綱要<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>Schema</code>中定義的字段/綱要型態。</p>
 </div>
 
-<h4 id="定義綱要Schemas" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>定義綱要Schemas</h4>
+<h4 id="定義綱要Schemas">定義綱要Schemas</h4>
 
 <p>下面的代碼片段，顯示了您可以如何定義一個簡單的綱要。首先<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>require()</code>mongoose，然後使用Schema構造函數，創建一個新的Schema實例，在構造函數的對象參數中，定義其中的各個字段。</p>
 
@@ -182,7 +182,7 @@ var SomeModelSchema = new Schema({
 
 <p>在上面的例子中，我們只有兩個字段，一個字符串和一個日期。在接下來的部分中，我們將展示一些其他的字段類型，驗證和其他方法。</p>
 
-<h4 id="創建模型" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>創建模型</h4>
+<h4 id="創建模型">創建模型</h4>
 
 <p>使用<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>mongoose.model()</code>方法從綱要創建模型：</p>
 
@@ -203,7 +203,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
 <p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意:</strong>定義模型類後，可以使用它們來創建，更新或刪除記錄，並運行查詢，以獲取記錄的所有記錄，或特定子集。我們將在以下“使用模型”部分，向您展示如何執行上述操作，以及當創建視圖時，如何執行此操作。</p>
 </div>
 
-<h4 id="綱要型態（字段）" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>綱要型態（字段）</h4>
+<h4 id="綱要型態（字段）">綱要型態（字段）</h4>
 
 <p>綱要schema可以有任意數量的字段 — 每個字段代表存儲在MongoDB 文檔中的字段。如下的示例綱要，顯示許多常見字段類型及其聲明方式。</p>
 
@@ -245,7 +245,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
 
 <p>有關選項的更多訊息，請參閱<a href="http://mongoosejs.com/docs/schematypes.html">SchemaTypes</a>（Mongoose docs）。</p>
 
-<h4 id="驗證" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>驗證</h4>
+<h4 id="驗證">驗證</h4>
 
 <p>Mongoose 提供內置和自定義驗證器，以及同步和異步驗證器。它允許您在所有情況下，指定可接受的範圍或值，以及驗證失敗的錯誤消息。</p>
 
@@ -282,7 +282,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
 
 <p>有關字段驗證的完整訊息，請參閱<a href="http://mongoosejs.com/docs/validation.html">驗證</a>（Mongoose docs）。</p>
 
-<h4 id="虛擬屬性" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>虛擬屬性</h4>
+<h4 id="虛擬屬性">虛擬屬性</h4>
 
 <p>虛擬屬性是您可以獲取和設置的文檔屬性，但不會持久保存到MongoDB。getter 對格式化或組合字段非常有用，而setter 可用於將單個值分解為多個值，以進行存儲。</p>
 
@@ -294,7 +294,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
 
 <p>欲了解更多訊息，請參閱<a href="http://mongoosejs.com/docs/guide.html#virtuals">虛擬</a>（Mongoose文檔）。</p>
 
-<h4 id="方法和查詢幫助" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>方法和查詢幫助</h4>
+<h4 id="方法和查詢幫助">方法和查詢幫助</h4>
 
 <p>綱要schema也可以有<a href="http://mongoosejs.com/docs/guide.html#methods">實例方法</a>，<a href="http://mongoosejs.com/docs/guide.html#statics">靜態方法</a>和<a href="http://mongoosejs.com/docs/guide.html#query-helpers">查詢助手</a>。實例和靜態方法很相似，但有明顯的區別，即實例方法與特定記錄相關聯，並且可以訪問當前對象。查詢助手允許您擴展mongoose的<a href="http://mongoosejs.com/docs/queries.html">鍊式查詢構建器API</a>（例如，除了<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>find()</code>, <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>findOne()</code>和<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>findById()</code>方法外，還允許您添加一個“byName”查詢。</p>
 
@@ -304,7 +304,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
 
 <p>我們在下面簡要介紹一下。有關更多訊息，請參閱：<a href="http://mongoosejs.com/docs/models.html">模型</a>（Mongoose docs）。</p>
 
-<h4 id="創建和修改文檔" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>創建和修改文檔</h4>
+<h4 id="創建和修改文檔">創建和修改文檔</h4>
 
 <p>要創建記錄，您可以定義模型的實例，然後調用<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>save()</code>。下面的例子假設，SomeModel是我們從綱要創建的模型（帶有單一字段“name” ）。</p>
 
@@ -341,7 +341,7 @@ console.log(<code>awesome_instance.name</code>); //should log '<code>also_awesom
    });</code>
 </pre>
 
-<h4 id="尋找紀錄" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>尋找紀錄</h4>
+<h4 id="尋找紀錄">尋找紀錄</h4>
 
 <p>可以使用查詢方法搜索記錄，將查詢條件指定為JSON 文檔。下面的代碼片段，顯示瞭如何在數據庫中，找到所有參加網球運動的運動員，只返回運動員姓名和年齡的字段。這裡我們只指定一個匹配的字段（運動 sport），但您可以添加更多條件，指定正則表達式標準，或完全刪除條件以返回所有運動員。</p>
 
@@ -406,7 +406,7 @@ query.exec(function (err, athletes) {
 
 <p>查詢可以做更多的事情。有關更多訊息，請參閱：<a href="http://mongoosejs.com/docs/queries.html">查詢</a>（Mongoose文檔）。</p>
 
-<h4 id="運用相關文檔—_population方法" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>運用相關文檔— population方法</h4>
+<h4 id="運用相關文檔—_population方法">運用相關文檔— population方法</h4>
 
 <p>您可以使用<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>ObjectId</code>綱要字段，從一個文檔/模型實例，創建一對一引用，或者使用<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>ObjectIds</code>數組，從一個文檔創建一對多的引用。該字段存儲相關模型的ID。如果需要關聯文檔的實際內容，可以在查詢中使用<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'><a href="http://mongoosejs.com/docs/api.html#query_Query-populate">populate()</a></code>方法，將id替換為實際數據。</p>
 
@@ -568,14 +568,14 @@ SomeModel.find(callback_function);</code></pre>
 
 <p>您現在已經創建了數據庫，並且有一個可以用來訪問它的URL（帶有用戶名和密碼）。這看起來像是這樣的：<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: medium; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>mongodb://your_user_namer:your_password@ds119748.mlab.com:19748/local_library</code>.</p>
 
-<h2 id="安裝_Mongoose" style='font-style: normal; line-height: 1.2; margin: 103px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 2.5rem; position: relative; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>安裝 Mongoose</h2>
+<h2 id="安裝_Mongoose">安裝 Mongoose</h2>
 
 <p>打開命令提示符，並到您創建<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website">本地圖書館骨架網站</a>的目錄。輸入以下命令，安裝Mongoose（及其依賴項），並將其添加到您的<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">package.json</strong>文件中，除非您在閱讀上述<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">Mongoose入門</strong>時，已經這樣做了。</p>
 
 <pre class="brush: bash notranslate">npm install mongoose
 </pre>
 
-<h2 id="連接到_MongoDB" style='font-style: normal; line-height: 1.2; margin: 103px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 2.5rem; position: relative; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>連接到 MongoDB</h2>
+<h2 id="連接到_MongoDB">連接到 MongoDB</h2>
 
 <p>打開<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">/app.js</strong>（位於項目的根目錄），並在宣告Express應用程序對象的位置（在<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>var app = express();</code>之後）複製以下文本。將數據庫url字符串（'insert_your_database_url_here'）替換為表示您自己的數據庫的位置URL（即是使用<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">來自上面mLab</strong>的訊息）。</p>
 
@@ -589,7 +589,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));</pre>
 
 <p>正如上面的<strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>Mongoose入門</strong>中所討論的，此代碼創建了與數據庫的默認連接，並綁定到錯誤事件（以便將錯誤打印到控制台）。</p>
 
-<h2 id="定義本地圖書館綱要" style='font-style: normal; line-height: 1.2; margin: 103px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 2.5rem; position: relative; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>定義本地圖書館綱要</h2>
+<h2 id="定義本地圖書館綱要">定義本地圖書館綱要</h2>
 
 <p>如上所述，我們將為每個模型定義一個單獨的模塊。首先在項目根目錄（<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">/models</strong>）中，為我們的模型創建一個文件夾，然後為每個模型創建單獨的文件：</p>
 
@@ -645,7 +645,7 @@ module.exports = mongoose.model('Author', AuthorSchema);
 
 <p>在模塊的最後，我們導出了模型。</p>
 
-<h3 class="highlight-spanned" id="書本模型" style='font-style: normal; line-height: 1.25; margin: 20px 0px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.5rem; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>書本模型</h3>
+<h3 id="書本模型">書本模型</h3>
 
 <p>複製下面顯示的<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>Book</code>綱要代碼，並將其粘貼到<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">./models/book.js</strong>文件中。其中大部分與作者模型相似—我們已經聲明了一個具有多個字符串字段的綱要，以及一個虛擬屬性，用於獲取特定書籍記錄的URL，並且我們已經導出了模型。</p>
 
