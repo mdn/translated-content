@@ -11,7 +11,6 @@ tags:
 
 ## Visión general
 
-
 La caché HTTP almacena una respuesta asociada con una solicitud y reutiliza la respuesta almacenada para solicitudes posteriores.
 
 Hay varias ventajas de reusabilidad. En primer lugar, dado que no es necesario enviar la solicitu al servidor origen, cuanto más cerca están el cliente y la cache, más rápida será la respuesta. El ejemplo más típico es cuando el navegador almacena una cache para las solicitudes.
