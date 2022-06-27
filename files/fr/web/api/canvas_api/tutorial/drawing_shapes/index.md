@@ -206,7 +206,7 @@ function draw() {
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
     
-    // Triangle plei
+    // Triangle plein
     ctx.beginPath();
     ctx.moveTo(25, 25);
     ctx.lineTo(105, 25);
