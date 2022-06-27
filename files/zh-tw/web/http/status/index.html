@@ -124,7 +124,7 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(416, "416 Requested Range Not Satisfiable")}}</dt>
  <dd>The range specified by the <code>Range</code> header field in the request can't be fulfilled; it's possible that the range is outside the size of the target URI's data.</dd>
  <dt>{{HTTPStatus(417, "417 Expectation Failed")}}</dt>
- <dd>此回應代表伺服器未收到標頭的<code>Expect</code>欄位。</dd>
+ <dd>此回應代表伺服器未能滿足請求標頭的<code>Expect</code>欄位所提出的期望回應。</dd>
  <dt>{{HTTPStatus(418, "418 I'm a teapot")}}</dt>
  <dd>The server refuses the attempt to brew coffee with a teapot.</dd>
  <dt>{{HTTPStatus(421, "421 Misdirected Request")}}</dt>
@@ -155,11 +155,11 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(501, "501 Not Implemented")}}</dt>
  <dd>伺服器不支援請求的方法，僅有<code>GET</code>與<code>HEAD</code>是伺服器必須支援的方法。</dd>
  <dt>{{HTTPStatus(502, "502 Bad Gateway")}}</dt>
- <dd>伺服器作為閘道器使用時需要處理請求而得到無效的回應。</dd>
+ <dd>作為閘道的伺服器，在獲取處理請求所需的回應時，得到無效回應。</dd>
  <dt>{{HTTPStatus(503, "503 Service Unavailable")}}</dt>
  <dd>The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded. Note that together with this response, a user-friendly page explaining the problem should be sent. This responses should be used for temporary conditions and the <code>Retry-After:</code> HTTP header should, if possible, contain the estimated time before the recovery of the service. The webmaster must also take care about the caching-related headers that are sent along with this response, as these temporary condition responses should usually not be cached.</dd>
  <dt>{{HTTPStatus(504, "504 Gateway Timeout")}}</dt>
- <dd>伺服器作為閘道器使用時無法及時得到回應。</dd>
+ <dd>伺服器作為閘道器時無法及時得到回應。</dd>
  <dt>{{HTTPStatus(505, "505 HTTP Version Not Supported")}}</dt>
  <dd>請求使用的 HTTP 版本不被伺服器支援。</dd>
  <dt>{{HTTPStatus(506, "506 Variant Also Negotiates")}}</dt>
