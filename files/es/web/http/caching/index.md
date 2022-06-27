@@ -281,7 +281,7 @@ A menudo se afirma que la combinación de `max-age=0` y `must-revalidate` tiene 
 Cache-Control: max-age=0, must-revalidate
 ```
 
-`max-age=0` significa que la respuesta es stale de inmediato, y `must-revalidate` significa que no debe reutilizarse sin revalidación una vez que esté stale; por lo tanto, en combinación, la semántica parece ser la misma que `no- caché`.
+`max-age=0` significa que la respuesta es stale de inmediato, y `must-revalidate` significa que no debe reutilizarse sin revalidación una vez que esté stale; por lo tanto, en combinación, la semántica parece ser la misma que `no-cache`.
 
 Sin embargo, ese uso de `max-age=0` es un remanente del hecho de que muchas implementaciones anteriores a HTTP/1.1 no pudieron manejar la directiva `no-cache` y, por lo tanto, para lidiar con esa limitación, `max-age =0` se utilizó como solución alternativa.
 
