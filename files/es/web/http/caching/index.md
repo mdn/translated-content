@@ -15,7 +15,7 @@ Además, cuando una respuesta es reutilizable, el servidor de origen no necesita
 
 El funcionamiento adecuado de la memoria caché es fundamental para la salud del sistema.
 
-## Tipos de chaches
+## Tipos de caché
 
 En la especificación [HTTP Caching](https://httpwg.org/specs/rfc9111.html), hay dos tipos principales de caché: **caché privada** y **caché compartida**.
 
