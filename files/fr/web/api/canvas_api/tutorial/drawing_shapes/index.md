@@ -51,12 +51,12 @@ Ci-dessous la fonction `draw()` de la page précédente, mais utilisant maintena
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
-    
-    ctx.fillRect(25, 25, 100, 100)
-       ctx.clearRect(45, 45, 60, 60);
+    const ctx = canvas.getContext('2d');
+
+    ctx.fillRect(25, 25, 100, 100);
+    ctx.clearRect(45, 45, 60, 60);
     ctx.strokeRect(50, 50, 50, 50);
   }
 }
@@ -118,9 +118,9 @@ Par exemple, le code pour dessiner un triangle peut ressembler à ce qui suit&nb
 
 ```js
 function draw() {
-  var canevas = document.getElementById('canvas');
-  if (canevas.getContext) {
-    var ctx = canevas.getContext('2d');
+  const canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    const ctx = canvas.getContext('2d');
 
     ctx.beginPath();
     ctx.moveTo(75, 50);
@@ -156,9 +156,9 @@ Pour essayer par vous-même, vous pouvez utiliser le fragment de code ci-dessous
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
 
     ctx.beginPath();
     ctx.arc(75, 75, 50, 0, Math.PI * 2, true);  // Cercle extérieur
@@ -202,9 +202,9 @@ L'exemple ci-dessous dessine deux triangles, un rempli et un filaire.
 
 ```js
 function draw() {
-  var canevas = document.getElementById('canvas');
-  if (canevas.getContext) {
-    var ctx = canevas.getContext('2d');
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
     
     // Triangle plei
     ctx.beginPath();
@@ -263,19 +263,19 @@ L'instruction pour le paramètre `antihoraire` a pour résultat que la première
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
 
-    for (var i = 0; i < 4; i++) {
-      for (var j = 0; j < 3; j++) {
+    for (let i = 0; i < 4; i++) {
+      for (let j = 0; j < 3; j++) {
         ctx.beginPath();
-        var x = 25 + j * 50; // abscisse (x)
-        var y = 25 + i * 50; // ordonnée (y)
-        var radius = 20; // rayon d'arc
-        var startAngle = 0; // Point de départ du cercle
-        var endAngle = Math.PI + (Math.PI * j) / 2; // Point final pour le cercle
-        var counterclockwise = i % 2 !== 0; // sens de rotation horaire ou non
+        const x = 25 + j * 50; // abscisse (x)
+        const y = 25 + i * 50; // ordonnée (y)
+        const radius = 20; // rayon d'arc
+        const startAngle = 0; // Point de départ du cercle
+        const endAngle = Math.PI + (Math.PI * j) / 2; // Point final pour le cercle
+        const counterclockwise = i % 2 !== 0; // sens de rotation horaire ou non
 
         ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
 
@@ -325,19 +325,19 @@ Cet exemple utilise plusieurs courbes quadratiques de Bézier pour rendre une bu
 
 ```js
 function draw() {
-  var canevas = document.getElementById('canvas');
+  const canevas = document.getElementById('canvas');
   if (canevas.getContext) {
-    var ctx = canevas.getContext('2d');
+    const ctx = canevas.getContext('2d');
     
-    // Exemples de c
+    // Exemples de courbes quadratiques
     ctx.beginPath();
     ctx.moveTo(75, 25);
     ctx.quadraticCurveTo(25, 25, 25, 62.5);
     ctx.quadraticCurveTo(25, 100, 50, 100);
     ctx.quadraticCurveTo(50, 120, 30, 125);
-    ctx.quadraticCurveTo(60, 120, 65, 100)
-    ctx.quadraticCurveTo(125, 100, 125, 62
-       ctx.quadraticCurveTo(125, 25, 75, 25);
+    ctx.quadraticCurveTo(60, 120, 65, 100);
+    ctx.quadraticCurveTo(125, 100, 125, 62.5);
+    ctx.quadraticCurveTo(125, 25, 75, 25);
     ctx.stroke();
   }
 }
@@ -359,19 +359,19 @@ Cet exemple dessine un cœur en utilisant les courbes de Bézier cubiques.
 
 ```js
 function draw() {
-  var canevas = document.getElementById('canvas');
+  const canevas = document.getElementById('canvas');
   if (canevas.getContext) {
-    var ctx = canevas.getContext('2d');
+    const ctx = canevas.getContext('2d');
     
-    // Exemple de co
+    // Exemple de courbes cubiques
     ctx.beginPath();
     ctx.moveTo(75, 40);
     ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
-    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5
+    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
     ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
-    ctx.bezierCurveTo(110, 102, 130, 80, 130, 
-    ctx.bezierCurveTo(130, 62.5, 130, 25, 100,
-       ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+    ctx.bezierCurveTo(130, 62.5, 130, 25, 100,, 25);
+    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
     ctx.fill();
   }
 }
@@ -418,7 +418,7 @@ function draw() {
     ctx.lineTo(31, 37);
     ctx.fill();
     
-    for(var i = 0; i< 8; i++) {
+    for(let i = 0; i < 8; i++) {
       ctx.fillRect(51 + i * 16, 35, 4, 4);
     }
     
@@ -430,7 +430,7 @@ function draw() {
     ctx.fillRect(51 + i * 16, 99, 4, 4);
     }
     
-    ctx.beginPat
+    ctx.beginPath();
     ctx.moveTo(83, 116);
     ctx.lineTo(83, 102);
     ctx.bezierCurveTo(83, 94, 89, 88, 97, 88);
@@ -444,10 +444,10 @@ function draw() {
     ctx.lineTo(83, 116);
     ctx.fill();
     
-    ctx.fillStyle = 
+    ctx.fillStyle = 'white';
     ctx.beginPath();
     ctx.moveTo(91, 96);
-    ctx.bezierCurveT
+    ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
     ctx.bezierCurveTo(87, 103, 88, 106, 91, 106);
     ctx.bezierCurveTo(94, 106, 95, 103, 95, 101);
     ctx.bezierCurveTo(95, 99, 94, 96, 91, 96);
@@ -480,7 +480,7 @@ function rectArrondi(ctx, x, y, largeur, hauteur, rayon) {
   ctx.quadraticCurveTo(x + largeur, y + hauteur, x + largeur, y + hauteur - rayon);
   ctx.lineTo(x + largeur, y + rayon);
   ctx.quadraticCurveTo(x + largeur, y, x + largeur - rayon, y);
-  ctx.lineTo(x + rayon,y);
+  ctx.lineTo(x + rayon, y);
   ctx.quadraticCurveTo(x, y, x, y + rayon);
   ctx.stroke();
 }
@@ -528,14 +528,14 @@ Dans cet exemple, on crée un rectangle et un cercle. Tous deux sont stockés co
 
 ```js
 function draw() {
-  var canevas = document.getElementById('canvas');
-  if (canevas.getContext){
-    var ctx = canevas.getContext('2d');
+  const canvas = document.getElementById('canvas');
+  if (canvas.getContext){
+    const ctx = canvas.getContext('2d');
 
-    var rectangle = new Path2D();
+    const rectangle = new Path2D();
     rectangle.rect(10, 10, 50, 50);
 
-    var cercle = new Path2D();
+    const cercle = new Path2D();
     cercle.moveTo(125, 35);
     cercle.arc(100, 35, 25, 0, 2 * Math.PI);
 
