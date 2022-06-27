@@ -9,34 +9,45 @@ tags:
   - 表单元素
 translation_of: Web/API/HTMLFormElement/submit
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef("HTML DOM") }}
 
-<p> <strong><code>HTMLFormElement.submit()</code></strong>用来提交表单。</p>
+**`HTMLFormElement.submit()`** 用来提交表单 {{HtmlElement("form")}}。
 
-<p>这个方法和触发提交表单按钮很类似，但有所不同：</p>
+这个方法和触发提交表单按钮很类似，但有所不同：
 
-<ul>
- <li>没有引发 {{event("submit")}} 事件。 特别是，表单的 {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} 事件处理程序不会运行。</li>
- <li>不会触发 <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">约束验证</a> 。</li>
-</ul>
+- 没有引发 {{event("submit")}} 事件。即，表单的 {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} 事件处理程序不会运行。
+- 不会触发[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation) 。
 
-<p>如果一个表单控件（比如一个提交按钮）的 <code>name</code> 或 <code>id</code> 的值为 <code>submit</code>，则它将覆盖表单的 submit 方法。</p>
+{{domxref("HTMLFormElement.requestSubmit()")}} 方法与触发表单提交的 {{HtmlElement("button")}} 的效果是相同的。
 
-<h2 id="语法">语法</h2>
+如果一个表单控件（比如一个提交按钮）的 `name` 或 `id` 的值为 `submit`，则它将覆盖表单的 submit 方法。
 
-<pre class="syntaxbox notranslate"><em>HTMLFormElement</em>.submit()</pre>
+使用 `HTMLFormElement.submit()` 方法时，属性 `type="submit"` 的 {{HtmlElement("input")}} 不会与表单一起被提交，但在使用原始的 HTML 表单提交时，它将被提交。
 
-<h2 id="例子">例子</h2>
+## 语法
 
-<pre class="brush: js notranslate">document.forms["myform"].submit();
-</pre>
+ ```js
+submit()
+```
 
-<h2 id="规范">规范</h2>
+### 参数
 
-<p><a href="https://html.spec.whatwg.org/multipage/forms.html#the-form-element">HTML Living standard: The form element</a></p>
+无。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+### 返回值
 
+无（{{jsxref("undefined")}}）。
 
+## 示例
 
-<p>{{Compat("api.HTMLFormElement.submit")}}</p>
+```js
+document.forms["myform"].submit();
+```
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
