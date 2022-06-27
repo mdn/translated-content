@@ -670,7 +670,7 @@ Un service worker podría hacer lo mismo si pudiera eliminar el contenido de la 
 
 Para obtener más información, consulte la documentación de su CDN y consulte la [documentación del trabajador de servicios](/es/docs/Web/API/Service_Worker_API).
 
-## Ver también
+## Véase también
 
 - [RFC 9111: Hypertext Transfer Protocol (HTTP/1.1): Caching](https://datatracker.ietf.org/doc/html/RFC9111)
 - [Caching Tutorial - Mark Nottingham](https://www.mnot.net/cache_docs/)
