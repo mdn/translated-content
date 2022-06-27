@@ -15,21 +15,28 @@ L'interface **`HTMLHeadingElement`** représente les différents éléments d'en
 
 *Hérite des propriétés de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement)*.
 
- - [`HTMLHeadingElement.align`](/fr/docs/Web/API/HTMLHeadingElement/align)
- - : Chaîne représentant un attribut énuméré indiquant l'alignement de l'en-tête par rapport au contexte environnant. Les valeurs possibles sont `"left"`, `"right"`, `"justify"`, et `"center"`.
+- [`HTMLHeadingElement.align`](/fr/docs/Web/API/HTMLHeadingElement/align) {deprecated_inline}}
+  - : Chaîne représentant un attribut énuméré indiquant l'alignement de l'en-tête par rapport au contexte environnant. Les valeurs possibles sont `"left"`, `"right"`, `"justify"`, et `"center"`.
 
-## Méthode
+## Méthodes
 
-Aucune méthode spécifique ; hérite des méthodes de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
+*Aucune méthode spécifique&nbsp;; hérite des méthodes de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement).*
 
 ## Spécifications
 
 {{Specifications}}
 
-## Voir aussi
+## Compatibilité des navigateurs
 
 {{Compat}}
 
 ## Voir aussi
 
-L'élément HTML implémentant cette interface : [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements) et [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements).
+L'élément HTML implémentant cette interface&nbsp;:
+
+- [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements)
+- [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements)
+- [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements)
+- [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements)
+- [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements)
+- [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements)
