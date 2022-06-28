@@ -202,9 +202,9 @@ L'exemple ci-dessous dessine deux triangles, un rempli et un filaire.
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
     
     // Triangle plein
     ctx.beginPath();
@@ -402,9 +402,9 @@ Jusqu'à présent, chaque exemple de cette page a utilisé un seul type de fonct
 
 ```js
 function draw() {
-  var canevas = document.getElementById('canvas');
+  const canevas = document.getElementById('canvas');
   if (canevas.getContext) {
-    var ctx = canevas.getContext('2d');
+    const ctx = canevas.getContext('2d');
     
     rectArrondi(ctx, 12, 12, 150, 150, 15);
     rectArrondi(ctx, 19, 19, 150, 150, 9);
