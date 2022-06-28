@@ -15,7 +15,7 @@ translation_of: Web/API/Element/matches
 <p>有一些浏览器使用前缀，在非标准名称  matchesSelector () 下实现了这个方法！</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="eval"><em>let result</em> = <em>element.matches(selectorString);</em>
 </pre>
@@ -25,7 +25,7 @@ translation_of: Web/API/Element/matches
  <li><code>selectorString</code> 是个 css 选择器字符串。</li>
 </ul>
 
-<h2 id="Example" name="Example">例子</h2>
+<h2 id="Example">例子</h2>
 
 <pre class="brush: html"><code>&lt;ul id="birds"&gt;
   &lt;li&gt;Orange-winged parrot&lt;/li&gt;
@@ -62,7 +62,7 @@ translation_of: Web/API/Element/matches
  <dd>如果给定的 css 选择器无效。在 Gecko 2.0 之前，该方法会返回<code>false,2.0 之后</code>,会直接抛出异常。</dd>
 </dl>
 
-<h2 id="替代方案(Polyfill)" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">替代方案 (Polyfill)</h2>
+<h2 id="替代方案(Polyfill)">替代方案 (Polyfill)</h2>
 
 <p>对于不支持 <code style="font-style: normal;">Element.matches()</code> 或<code>Element.matchesSelector()，但支持</code>document.querySelectorAll() 方法的<code>浏览器，存在以下替代方案</code></p>
 
@@ -91,11 +91,11 @@ if (!Element.prototype.matches) {
 </ul>
 </blockquote>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 
 

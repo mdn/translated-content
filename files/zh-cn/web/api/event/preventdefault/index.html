@@ -12,7 +12,7 @@ translation_of: Web/API/Event/preventDefault
 
 <p>{{domxref("Event")}} 接口的 <code><strong>preventDefault()</strong></code>方法，告诉{{Glossary("user agent")}}：如果此事件没有被显式处理，它默认的动作也不应该照常执行。此事件还是继续传播，除非碰到事件侦听器调用{{domxref("Event.stopPropagation", "stopPropagation()")}} 或{{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}，才停止传播。</p>
 
-<h3 id="Syntax" name="Syntax">语法</h3>
+<h3 id="Syntax">语法</h3>
 
 <pre class="eval"><em>event</em>.preventDefault();
 
@@ -26,9 +26,9 @@ translation_of: Web/API/Event/preventDefault
 
 <p><code>undefined</code></p>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
-<h3 id="Blocking_default_click_handling" name="Blocking_default_click_handling">阻止默认的点击事件执行</h3>
+<h3 id="Blocking_default_click_handling">阻止默认的点击事件执行</h3>
 
 <p>选中复选框是点击复选框的默认行为。下面这个例子说明了怎样阻止默认行为的发生：</p>
 
@@ -56,7 +56,7 @@ translation_of: Web/API/Event/preventDefault
 
 <p>{{EmbedLiveSample("Blocking_default_click_handling")}}</p>
 
-<h3 id="Stopping_keystrokes_from_reaching_an_edit_field" name="Stopping_keystrokes_from_reaching_an_edit_field">在编辑域中阻止按键</h3>
+<h3 id="Stopping_keystrokes_from_reaching_an_edit_field">在编辑域中阻止按键</h3>
 
 <p>下面的这个例子说明了如何使用<code>preventDefault()</code>在文本编辑域中阻止有效的文本输入。如今，你通常可以使用<a href="/zh-CN/docs/Learn/HTML/Forms/Data_form_validation">原生的 HTML 表单验证</a>来代替。</p>
 
@@ -141,7 +141,7 @@ function displayWarning(msg) {
 
 <p>你可以使用 {{domxref("Event.cancelable")}} 来检查该事件是否支持取消。为一个不支持 cancelable 的事件调用<code>preventDefault()</code>将没有效果。</p>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="Specifications">规范</h2>
 
 {{Specifications}}
 

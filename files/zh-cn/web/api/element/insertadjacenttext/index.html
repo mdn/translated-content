@@ -9,7 +9,7 @@ translation_of: Web/API/Element/insertAdjacentText
 
 <p><strong><code>insertAdjacentText()</code></strong> 方法将一个给定的文本节点插入在相对于被调用的元素给定的位置。</p>
 
-<h2 id="Syntax" name="Syntax">句法</h2>
+<h2 id="Syntax">句法</h2>
 
 <pre><em>element</em>.insertAdjacentText(<em>position</em>, <em>element</em>);</pre>
 
@@ -62,7 +62,7 @@ foo
 
 <div class="note">注意：只有当节点位于树中并具有元素父元素时，beforebegin 和 afterend 位置才能工作。</div>
 
-<h2 id="Example" name="Example">范例</h2>
+<h2 id="Example">范例</h2>
 
 <pre class="brush: js">beforeBtn.addEventListener('click', function() {
   para.insertAdjacentText('afterbegin',textInput.value);
@@ -74,11 +74,11 @@ afterBtn.addEventListener('click', function() {
 
 <p>Have a look at our <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html">insertAdjacentText.html</a> demo on GitHub (see the <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html">source code</a> too.) Here we have a simple paragraph. You can enter some text into the form element, then press the <em>Insert before</em> and <em>Insert after</em> buttons to insert it before or after the existing paragraph text using <code>insertAdjacentText()</code>. Note that the existing text node is not added to — further text nodes are created containing the new additions.</p>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
+<h2 id="Browser_Compatibility">浏览器兼容性</h2>
 
 {{Compat("api.Element.insertAdjacentText")}}
 

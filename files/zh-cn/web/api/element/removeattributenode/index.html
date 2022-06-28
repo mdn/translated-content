@@ -7,7 +7,7 @@ translation_of: Web/API/Element/removeAttributeNode
 
 <p><code>removeAttributeNode</code> 从当前的 element(元素节点) 删除指定的属性</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="eval"><em>removedAttr</em> = <em>element</em>.removeAttributeNode(<em>attributeNode</em>)
 </pre>
@@ -17,7 +17,7 @@ translation_of: Web/API/Element/removeAttributeNode
  <li><code>removedAttr</code> 是被删除了的 Attr 节点。</li>
 </ul>
 
-<h2 id="Example" name="Example">例如</h2>
+<h2 id="Example">例如</h2>
 
 <pre>// &lt;div id="top" align="center" /&gt;
 var d = document.getElementById("top");
@@ -27,7 +27,7 @@ d.removeAttributeNode(d_align);
 //  现在 align 被删除了: &lt;div id="top" /&gt;
 </pre>
 
-<h2 id="Notes" name="Notes">注意</h2>
+<h2 id="Notes">注意</h2>
 
 <p>如果删除有默认值的属性，相当于将属性值替换为默认值。属性只有在具有同样的命名空间、本地名称以及原始前缀时，才会在被删除的时候替换为默认值。</p>
 
@@ -35,6 +35,6 @@ d.removeAttributeNode(d_align);
 
 <p>{{ DOMAttributeMethods() }}</p>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 <p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-D589198">DOM Level 2 Core: removeAttributeNode</a> (<a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttributeNode">DOM Level 1 Core</a> 里面的介绍)</p>
