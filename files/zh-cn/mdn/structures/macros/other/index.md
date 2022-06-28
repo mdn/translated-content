@@ -24,7 +24,6 @@ tags:
 
 - [`ListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/ListSubpages.ejs) 生成指向当前页面所有直接子级的无序列表；用于自动生成文档集的目录。
 - [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs) 输出当前页面所有直接子页面的两列定义列表，其标题为 {{HTMLElement("dt")}}，其 SEO 摘要为 {{HTMLElement("dd")}}。这使得自动生成相当有吸引力的着陆页变得容易。
-- [`NavListWithPrioritizedPages`](https://github.com/mdn/yari/tree/main/kumascript/macros/NavListWithPrioritizedPages.ejs) 生成格式正确的有序列表，以便在区域导航侧边栏（或快速链接）中使用。作为输入，您可以指定零个或多个应从主列表中拉出并按给定顺序插入到列表顶部的页面 slug。所有剩余的页面按字母顺序放置在列表中。包括一级子页面。
 - [`APIListAlpha`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIListAlpha.ejs) 构建当前页面的子页面列表，格式为 API 术语列表，按首字母划分。有三个参数。对于第一个参数，如果要包含所有顶级子页面则将其设为 0，如果要包含带有“.”的子页面则将其设为 1。以他们的名字。第二个和第三个让您添加文本以在每个链接中显示为名称的一部分。这可用于为元素链接添加“<”和“>”，或在方法名称列表的末尾添加“()”。
 - [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs) 构造当前页面的所有直接子级的定义列表。没有进行其他的格式化。您可以使用 [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs) 获得一个两栏式列表，准备用作多栏式着陆页。
 
