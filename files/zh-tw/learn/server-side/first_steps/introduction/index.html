@@ -45,7 +45,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 
 <p>此伺服器從它的檔案系統取回被請求的文件，並回傳一個包含此文件以及<a href="/zh-TW/docs/Web/HTTP/Status#成功回應">成功狀態碼</a>（通常為200 OK）的HTTP回應。若檔案因某些原因無法被取回，則回傳一個錯誤狀態（參見 <a href="/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應">用戶端錯誤回應</a> 與 <a href="/zh-TW/docs/Web/HTTP/Status#伺服器端錯誤回應">伺服器端錯誤回應</a>）。</p>
 
-<p><img alt="A simplified diagram of a static web server." src="https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png" style="height: 223px; width: 800px;"></p>
+<p><img alt="A simplified diagram of a static web server." src="basic_static_app_server.png"></p>
 
 <h3 id="動態網站">動態網站</h3>
 
@@ -59,7 +59,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 
 <p>對於<em>靜態</em>資源的請求處理方式如同靜態網站的方式（靜態資源為任何不會改變的檔案 — 通常為CSS、JavaScript、圖片、預產生的PDF檔案等）。 </p>
 
-<p><img alt="A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview." src="https://mdn.mozillademos.org/files/13839/Web%20Application%20with%20HTML%20and%20Steps.png"></p>
+<p><img alt="A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview." src="web_application_with_html_and_steps.png"></p>
 
 <p>對於動態資源的請求方式則為轉送(2)至伺服端程式碼（如圖中的<em>網頁應用程式 Web Application</em>）。對於＂動態請求＂，伺服器解釋該請求、從資料庫讀取所需資訊(3)、與HTML範本結合取得的資料(4)，最後送回一個包含已產生HTML的回應(5,6)。</p>
 

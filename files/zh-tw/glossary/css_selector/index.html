@@ -7,26 +7,28 @@ tags:
   - 選擇器
 translation_of: Glossary/CSS_Selector
 ---
-<p><strong>CSS 選擇器</strong>是 CSS 規則的一部分。它能讓你選定要調整哪個（或哪些）元素的樣式。例如：</p>
+<p><strong>CSS 選擇器</strong>是 CSS 規則的一部分。它能讓你選定要調整哪個（或哪些）元素的樣式。</p>
 
-<pre><code>***HTML***
+<h2 id="範例">範例</h2>
+
+<pre class="brush: html">
 &lt;div&gt; I am inside of a div element. &lt;/div&gt;
 &lt;p&gt; I am inside of a paragraph element. &lt;/p&gt;
+</pre>
 
-
-***CSS***
+<pre class="brush: css">
 div {
  color: green;
 }
 
 p {
  color: red;
-}</code>
+}
 </pre>
 
 <p>在第一個 CSS 規則，我選取了 <code>&lt;div&gt;</code> 元素、並將該元素的文字變成了綠色。在第二個 CSS 規則，我選取了 <code>&lt;p&gt;</code> 元素、並將該元素的文字變成了紅色。結果應該長成這個樣子：</p>
 
-<p><img alt="CSS 選擇器的結果" src="https://mdn.mozillademos.org/files/13941/cssSelectorMDNGlossary.jpg" style="border: 1px solid black; height: 101px; width: 343px;"></p>
+{{EmbedLiveSample("範例", 640, 80)}}
 
 <h2 id="深入理解">深入理解</h2>
 

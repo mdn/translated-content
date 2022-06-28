@@ -63,7 +63,7 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 
 <p>結果如下:</p>
 
-<p>{{EmbedLiveSample("A_fillStyle_example", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}</p>
+<p>{{EmbedLiveSample("A_fillStyle_example", 160, 160, "canvas_fillstyle.png")}}</p>
 
 <h3 id="A_strokeStyle_example" name="A_strokeStyle_example"><code>strokeStyle</code>範例</h3>
 
@@ -91,7 +91,7 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 
 <p>結果如下:</p>
 
-<p>{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}</p>
+<p>{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}</p>
 
 <h2 id="Transparency" name="Transparency">透明度</h2>
 
@@ -148,7 +148,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}</p>
+<p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}</p>
 
 <h3 id="An_example_using_rgba()" name="An_example_using_rgba()"><code>rgba()</code>使用範例</h3>
 
@@ -182,7 +182,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "https://mdn.mozillademos.org/files/246/Canvas_rgba.png")}}</p>
+<p>{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "canvas_rgba.png")}}</p>
 
 <h2 id="Line_styles" name="Line_styles">線條樣式</h2>
 
@@ -227,11 +227,11 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("A_lineWidth_example", "180", "180", "https://mdn.mozillademos.org/files/239/Canvas_linewidth.png")}}</p>
+<p>{{EmbedLiveSample("A_lineWidth_example", "180", "180", "canvas_linewidth.png")}}</p>
 
 <p>為了畫出清晰的直線，我們需要了解繪圖路徑是如何產生；如下方圖示，網格代表畫布座標軸，網格所框出的方格則代表螢幕上的像素，第一張圖片填滿了座標(2,1)到(5,5)的紅色區域，而這個紅色區域的邊際正好符合像素間的邊際，所以會產生出清晰的影像。</p>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/201/Canvas-grid.png"></p>
+<p><img src="canvas-grid.png"></p>
 
 <p>第二張圖片中，有一條寬1.0單位的直線從座標(3,1)到(3,5)被畫在畫布上，不過由於線條寬度的起算點是從繪圖路徑中央開始往兩旁各延伸一半設定寬度，所以當勾勒線條時，繪圖路徑兩旁的像素格只有一半會被填滿暗藍色，至於另外一半則會經由計算填入近似色(淡藍色)，結果就是整格像素並非全部填入相同的暗藍色，進而產生出邊緣較為模糊的線條，上面程式碼範例中的奇數寬度直線就是因此而產生不清晰的線條。</p>
 
@@ -251,7 +251,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>這個屬性決定線條端點的樣式，總共有三種樣式可選:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/236/Canvas_linecap.png" style="float: right; height: 190px; width: 190px;"></p>
+<p><img src="canvas_linecap.png"></p>
 
 <dl>
  <dt><code>butt</code></dt>
@@ -298,7 +298,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("A_lineCap_example", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}</p>
+<p>{{EmbedLiveSample("A_lineCap_example", "180", "180", "canvas_linecap.png")}}</p>
 
 <h3 id="A_lineJoin_example" name="A_lineJoin_example"><code>lineJoin</code>範例</h3>
 
@@ -306,7 +306,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>lineJoin屬性共有三個屬性值如下，其中miter為預設值，請注意一點若是兩個連接區段的繪圖方向一致，那代表不會有連接處，所以測定是無效的。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/237/Canvas_linejoin.png" style="float: right; height: 190px; width: 190px;"></p>
+<p><img src="canvas_linejoin.png"></p>
 
 <dl>
  <dt><code>round</code></dt>
@@ -342,7 +342,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}</p>
+<p>{{EmbedLiveSample("A_lineJoin_example", "180", "180", "canvas_linejoin.png")}}</p>
 
 <h3 id="A_demo_of_the_miterLimit_property" name="A_demo_of_the_miterLimit_property"><code>miterLimit</code>屬性</h3>
 
@@ -418,7 +418,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}</p>
+<p>{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "canvas_miterlimit.png")}}</p>
 
 <h2 id="Gradients" name="Gradients">漸層</h2>
 
@@ -490,7 +490,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>第二個漸層起始位置(position 0.0)的顏色並沒有被指定，所以下一個漸層顏色會自動被設為起始位置顏色，因此即使我們沒有指定漸層起始位置顏色也沒有關係，就像本範例自動會設定起始位置的顏色等於位置0.5的黑色。</p>
 
-<p>{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "https://mdn.mozillademos.org/files/235/Canvas_lineargradient.png")}}</p>
+<p>{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "canvas_lineargradient.png")}}</p>
 
 <h3 id="A_createRadialGradient_example" name="A_createRadialGradient_example"><code>createRadialGradient</code>範例</h3>
 
@@ -542,7 +542,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>每一個漸層圖案最後一個漸層色都是全透明的，如果希望倒數第二個漸層色能夠平順地轉換到這個最後一個漸層色，那麼兩者應該設定一樣的顏色值，像是程式碼範例中的漸層色 #019F62 其實就等於 rgba(1,159,98,1)。</p>
 
-<p>{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}</p>
+<p>{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}</p>
 
 <h2 id="Patterns" name="Patterns">樣式(Patterns)</h2>
 
@@ -613,7 +613,7 @@ var ptrn = ctx.createPattern(img,'repeat');
 <p>結果如下 :</p>
 </div>
 
-<p>{{EmbedLiveSample("A_createPattern_example", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}</p>
+<p>{{EmbedLiveSample("A_createPattern_example", "180", "180", "canvas_createpattern.png")}}</p>
 
 <h2 id="陰影">陰影</h2>
 
@@ -660,6 +660,6 @@ var ptrn = ctx.createPattern(img,'repeat');
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "https://mdn.mozillademos.org/files/2505/shadowed-string.png")}}</p>
+<p>{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "shadowed-string.png")}}</p>
 
 <p>{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Using_images", "Web/Guide/HTML/Canvas_tutorial/Transformations")}}</p>

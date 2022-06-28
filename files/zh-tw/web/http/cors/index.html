@@ -22,7 +22,7 @@ translation_of: Web/HTTP/CORS
 
 <p>基於安全性考量，程式碼所發出的跨來源 HTTP 請求會受到限制。例如，{{domxref("XMLHttpRequest")}} 及 {{domxref("Fetch_API", "Fetch")}} 都遵守<a href="/zh-TW/docs/Web/Security/Same-origin_policy">同源政策（same-origin policy）</a>。這代表網路應用程式所使用的 API 除非使用 CORS 標頭，否則只能請求與應用程式相同網域的 HTTP 資源。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14295/CORS_principle.png" style="height: 305px; width: 440px;"></p>
+<p><img src="cors_principle.png"></p>
 
 <p>跨來源資源共用（Cross-Origin Resource Sharing，簡稱 {{Glossary("CORS")}}）機制提供了網頁伺服器跨網域的存取控制，增加跨網域資料傳輸的安全性。現代瀏覽器支援在 API 容器（如 {{domxref("XMLHttpRequest")}} 或 {{domxref("Fetch_API", "Fetch")}}）中使用 CORS 以降低跨來源 HTTP 請求的風險。</p>
 
@@ -219,7 +219,7 @@ function callOtherDomain(){
 
 <p>在這個例子中，第 3 行建立了一段 XML 內容資料並於第 8 行使用 <code>POST</code> 請求送出。而在第 9 行，設定了一個自定義的（非標準）之 HTTP 請求標頭（<code>X-PINGOTHER: pingpong</code>）。此標頭並非 HTTP/1.1 通訊協定的一部分，但廣泛的使用於 Web 應用程式。而因為請求的 Content-type 為 <code>application/xml</code>，且設定了自定義標頭，故此請求為預檢請求。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16753/preflight_correct.png" style="height: 553px; width: 521px;"></p>
+<p><img src="preflight_correct.png"></p>
 
 <p>我們來看看客戶端與伺服器端之間完整的交換資訊。第一次的交換為<em>預檢請求／回應</em>：</p>
 
