@@ -39,13 +39,15 @@ forEach(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : 各要素に対して実行するコールバック関数で、1 つから 3 つの引数を受け付けます。
+  - : 各要素に対して実行されるコールバック関数です。
+  
+    この関数は、以下の引数と共に呼び出されます。
 
     - `element`
       - : 現在処理されている配列の要素です。
-    - `index` {{optional_inline}}
+    - `index`
       - : 配列内の `currentValue` の添字です。
-    - `array` {{optional_inline}}
+    - `array`
       - : `forEach()` が呼び出されている配列です。
 
 - `thisArg` {{optional_inline}}
