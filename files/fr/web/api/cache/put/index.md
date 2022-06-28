@@ -17,7 +17,7 @@ translation_of: Web/API/Cache/put
 
 La méthode **`put()`** de l'interface {{domxref("Cache")}} permet d'ajouter des paires clé/valeur à l'objet {{domxref("Cache")}} en cours.
 
-Souvent, le comportement voulu est juste de {{domxref("WindowOrWorkerGlobalScope.fetch","fetch()")}} une ou plusieurs requête, et d'ajouter les résultats directement dans le cache. Dans ce type de cas, il est plus judicieux d'utiliser  {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}} , étant donné que ces méthodes sont des raccourcis pour une ou plusieurs de ces opérations&nbsp;:
+Souvent, le comportement voulu est juste de [`fetch()`](/fr/docs/Web/API/fetch) une ou plusieurs requête, et d'ajouter les résultats directement dans le cache. Dans ce type de cas, il est plus judicieux d'utiliser  {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}} , étant donné que ces méthodes sont des raccourcis pour une ou plusieurs de ces opérations&nbsp;:
 
 ```js
 fetch(url).then(function(response) {
@@ -92,4 +92,4 @@ var cachedResponse = caches.match(event.request).catch(function() {
 
 - [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WindowOrWorkerGlobalScope.caches")}}
+- [`caches`](/fr/docs/Web/API/caches)

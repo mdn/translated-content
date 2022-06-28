@@ -43,11 +43,11 @@ translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_pr
 
 <p>让我们看下我们的个人网站， <code>http://demozilla.examplehostingprovider.net/</code>.。没有出现我们预期的图片！</p>
 
-<p><img alt="Oops, the ‘unicorn’ image is missing" src="https://mdn.mozillademos.org/files/9643/image-missing.png" style="height: 189px; width: 380px;"></p>
+<p><img alt="Oops, the ‘unicorn’ image is missing" src="image-missing.png"></p>
 
 <p>打开 Firefox 的 Network tool (<strong>Tools ➤ Web Developer ➤ Network</strong>) 并重新加载页面：</p>
 
-<p><img alt="The image has a 404 error" src="https://mdn.mozillademos.org/files/9645/error404.png" style="height: 304px; width: 562px;"></p>
+<p><img alt="The image has a 404 error" src="error404.png"></p>
 
 <p>这就是问题所在，位于底部的"404" 。 "404" 意味着 "资源未找到", 也就是我们无法看到图片的原因。</p>
 
@@ -81,15 +81,15 @@ translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_pr
 
 <p>所以是哪里出错了？</p>
 
-<p><img alt="Le list of images in our project" src="https://mdn.mozillademos.org/files/9649/demozilla-images-list.png" style="height: 71px; width: 407px;"></p>
+<p><img alt="Le list of images in our project" src="demozilla-images-list.png"></p>
 
 <p>乍一看，我们请求的图片似乎在正确的位置... 但是网络工具却出现了"404"的报错.。事实证明我们的 HTML 代码中出现了错别字： <code>unicorn_pics.png</code> 而不是<code>unicorn_pic.png</code>.。所以，通过在你的代码编辑器中改变图片的<code>src</code> 属性来纠正错别字。</p>
 
-<p><img alt="Deleting the ‘s’" src="https://mdn.mozillademos.org/files/9651/code-correct.png" style="height: 125px; width: 775px;"></p>
+<p><img alt="Deleting the ‘s’" src="code-correct.png"></p>
 
 <p>保存，<a href="/en-US/Learn/Upload_files_to_a_web_server">推送到服务器</a>，并在你的浏览器中重现加载网页。</p>
 
-<p><img alt="The image loads corectly in the browser" src="https://mdn.mozillademos.org/files/9655/image-corrected.png" style="height: 554px; width: 565px;"></p>
+<p><img alt="The image loads corectly in the browser" src="image-corrected.png"></p>
 
 <p>搞定！让我们再看一遍 {{Glossary("HTTP")}} 状态：</p>
 
@@ -108,7 +108,7 @@ translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_pr
 
 <p>我们想要输入 <code>http://demozilla.examplehostingprovider.net/</code> 但输入得太快而遗漏了一个“l”：</p>
 
-<p><img alt="Address unreachable" src="https://mdn.mozillademos.org/files/9657/cannot-find-server.png" style="height: 425px; width: 908px;"></p>
+<p><img alt="Address unreachable" src="cannot-find-server.png"></p>
 
 <p>这个地址显然无法找到。</p>
 
@@ -122,7 +122,7 @@ translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_pr
 
 <p>打开控制台 (<strong>Tools ➤ Web developer ➤ Web Console</strong>) 并重新加载页面：</p>
 
-<p><img alt="A Javascript error is shown in the Console" src="https://mdn.mozillademos.org/files/9659/js-error.png" style="height: 511px; width: 523px;"></p>
+<p><img alt="A Javascript error is shown in the Console" src="js-error.png"></p>
 
 <p>在这个例子中，我们清楚（相当清楚）错误所在，可以马上进行修复 (我们将在 <a href="/en-US/Learn/JavaScript">另一个系列 </a>的文章中提到 JavaScript )。</p>
 
@@ -134,7 +134,7 @@ translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_pr
 
 <p>页面加载足够快吗？类似 <a href="http://www.webpagetest.org/">WebPagetest.org</a> 的网站或者类似 <a href="https://addons.mozilla.org/en-US/firefox/addon/yslow/">YSlow</a> 的浏览器附加组件可以告诉你一些有趣的事情。</p>
 
-<p><img alt="Yslow diagnostics" src="https://mdn.mozillademos.org/files/9661/yslow-diagnostics.png" style="height: 766px; width: 637px;"></p>
+<p><img alt="Yslow diagnostics" src="yslow-diagnostics.png"></p>
 
 <p>等级从 A 到 F。我们的页面较小，符合大部分的标准。但是我们可以注意到如果使用 {{Glossary("CDN")}} 将会更好。 当我们只提供一张图片的时候，这无关紧要，但对于提供数千张图片的高带宽网站来说，这一点至关重要。</p>
 

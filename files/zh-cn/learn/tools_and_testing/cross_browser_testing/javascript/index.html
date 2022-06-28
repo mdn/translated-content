@@ -63,7 +63,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 <p>The <a href="http://jshint.com/">JSHint homepage</a> provides an online linter, which allows you to enter your JavaScript code on the left and provides an output on the right, including metrics, warnings, and errors.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14175/jshint-online.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="jshint-online.png"></p>
 
 <h4 id="Code_editor_plugins">Code editor plugins</h4>
 
@@ -79,7 +79,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
  <li>After the packages have finished installing, try loading up a JavaScript file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.</li>
 </ol>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14173/jshint-linter.png" style="display: block; margin: 0 auto;">Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs"  section of the <a href="http://jshint.com/install/">JSHint install page</a>.</p>
+<p><img src="jshint-linter.png">Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs"  section of the <a href="http://jshint.com/install/">JSHint install page</a>.</p>
 
 <h4 id="其他方式">其他方式</h4>
 
@@ -92,7 +92,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 <p>You can then point these tools at JavaScript files you want to lint, for example:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14171/js-hint-commandline.png" style="display: block; height: 478px; margin: 0px auto; width: 697px;">You can also use these tools with a task runner/build tool such as <a href="http://gulpjs.com/">Gulp</a> or <a href="https://webpack.github.io/">Webpack</a> to automatically lint your JavaScript during development. (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#Using_a_task_runner_to_automate_testing_tools">Using a task runner to automate testing tools</a> in a later article.) See <a href="http://eslint.org/docs/user-guide/integrations">ESLint integrations</a> for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. <a href="https://github.com/webpack/jshint-loader">JSHint loader for Webpack</a>.</p>
+<p><img src="js-hint-commandline.png">You can also use these tools with a task runner/build tool such as <a href="http://gulpjs.com/">Gulp</a> or <a href="https://webpack.github.io/">Webpack</a> to automatically lint your JavaScript during development. (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#Using_a_task_runner_to_automate_testing_tools">Using a task runner to automate testing tools</a> in a later article.) See <a href="http://eslint.org/docs/user-guide/integrations">ESLint integrations</a> for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. <a href="https://github.com/webpack/jshint-loader">JSHint loader for Webpack</a>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: ESLint takes a bit more setup and configuration than JSHint, but it is more powerful too.</p>
@@ -102,11 +102,9 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 <p>浏览器开发者工具有很多功能可以帮助定位 JavaScript 的问题，尤其是在开发的工程中，JavaScript 的 Console 会提醒一些错误信息</p>
 
-<p>下载示例文件 <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/broken-ajax.html">broken-ajax.html</a> 到本地 (也可以阅读 <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/broken-ajax.html">source code</a> ). 如果你打开 console 面板，你将会看到下图中的输出信息：</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14165/broken-ajax.png" style="display: block; height: 86px; margin: 0px auto; width: 635px;"></p>
-
-<p>错误提示 "TypeError: jsonObj is null", 标示出问题出现在代码的第 37 行。如果你看了源代码，相关的代码如下面所示：</p>
+<p>下载示例文件 <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/broken-ajax.html">broken-ajax.html</a> 到本地 (也可以阅读 <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/broken-ajax.html">source code</a> )。</p>
+  
+<p>如果你打开 console 面板，你将会看到错误提示 "TypeError: jsonObj is null"，标示出问题出现在代码的第 37 行。如果你看了源代码，相关的代码如下面所示：</p>
 
 <pre class="brush: js">function populateHeader(jsonObj) {
   var myH1 = document.createElement('h1');
@@ -136,9 +134,7 @@ showHeroes(superHeroes);</pre>
 
 <pre class="brush: js">console.log('Response value: ' + superHeroes);</pre>
 
-<p>Refresh the page in the browser, and you will get an output in the console like so:</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14167/console-log.png" style="display: block; height: 99px; margin: 0px auto; width: 638px;"></p>
+<p>Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before</p>
 
 <p>The <code>console.log()</code> output shows that the <code>superHeroes</code> object doesn't appear to contain anything, although note that the error message has now changed, to "TypeError: heroes is undefined". This shows that the error is intermittent, giving further evidence that this is some kind of asynchronous error. Let's fix the current error and move on — remove the <code>console.log()</code> line, and update this code block:</p>
 
@@ -168,7 +164,7 @@ showHeroes(superHeroes);</pre>
 
 <p>In Firefox, the Debugger tab looks as follows:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14169/debugger-tab.png" style="display: block; height: 253px; margin: 0px auto; width: 800px;"></p>
+<p><img src="debugger-tab.png"></p>
 
 <ul>
  <li>On the left, you can select the script you want to debug (in this case we have only one).</li>
@@ -180,7 +176,7 @@ showHeroes(superHeroes);</pre>
 
 <p>Let's get to work. First of all, we know that the error is being thrown at line 51. Click on line number 51 in the center panel to add a breakpoint to it (you'll see a blue arrow appear over the top of it). Now refresh the page (Cmd/Ctrl + R) — the browser will pause execution of the code at line 51. At this point, the right-hand side will update to show some very useful information.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14163/breakpoint.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="breakpoint.png"></p>
 
 <ul>
  <li>Under <em>Breakpoints</em>, you'll see the details of the break-point you have set.</li>
@@ -340,7 +336,7 @@ fetch('flowers.jpg').then(function(response) {
 });</pre>
  </li>
  <li>Now if you load it in a browser that doesn't support Fetch (Safari and IE are obvious candidates), you should still see the flower image appear — cool! <br>
-  <img alt="" src="https://mdn.mozillademos.org/files/14183/fetch-image.jpg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+  <img src="fetch-image.jpg"></li>
 </ol>
 
 <div class="note">

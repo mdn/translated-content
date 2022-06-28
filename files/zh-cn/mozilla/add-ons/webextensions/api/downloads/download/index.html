@@ -20,7 +20,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
  <li>如果<code>filename</code> 和 <code>saveAs</code> 都已经指定，那么将会弹出“保存为”对话框，并且默认名称显示为<code>filename</code>.</li>
 </ul>
 
-<p>这是一个异步函数，其返回值为 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>这是一个异步函数，其返回值为 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="语法">语法</h2>
 
@@ -73,7 +73,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. 如果成功开始下载，promise 会被新创建的{{WebExtAPIRef("downloads.DownloadItem")}} 的 <code>id</code> 填充。否则 promise 会被拒绝并产生一条{{WebExtAPIRef("downloads.InterruptReason")}}错误信息。</p>
+<p>一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. 如果成功开始下载，promise 会被新创建的{{WebExtAPIRef("downloads.DownloadItem")}} 的 <code>id</code> 填充。否则 promise 会被拒绝并产生一条{{WebExtAPIRef("downloads.InterruptReason")}}错误信息。</p>
 
 <p>如果你使用 <a href="/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL()</a> 下载由 JavaScript 创建的数据并且之后想要 (使用 <a href="/en-US/docs/Web/API/URL/revokeObjectURL">revokeObjectURL</a>) 撤销对象链接 (并且强烈推荐这么做)，你必须在下载完成后再这么做。监听 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged">downloads.onChanged</a> 事件来判断是否下载完成。</p>
 

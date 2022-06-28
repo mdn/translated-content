@@ -23,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 <p>你可以在不需要任何特殊权限的情况下使用该 APIS 的大部分，除了：</p>
 
 <ul>
- <li>获取 <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.favIconUrl</code>, 你需要拥有 "tabs" <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a>. 在火狐，这也意味着你需要 "tabs" ，来通过 URL 使用 {{WebExtAPIRef("tabs.query", "query")}}。</li>
+ <li>获取 <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.favIconUrl</code>, 你需要拥有 "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a>. 在火狐，这也意味着你需要 "tabs" ，来通过 URL 使用 {{WebExtAPIRef("tabs.query", "query")}}。</li>
  <li>使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} 你必须在目标标签拥有 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a> 。</li>
 </ul>
 
@@ -61,7 +61,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 
 <dl>
  <dt>{{WebExtAPIRef("tabs.connect()")}}</dt>
- <dd>在运行于该标签的任何 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts </a> 和该扩展的后台脚本（或者其他的比如弹出菜单脚本或者设置页面脚本）间创建一个消息连接。</dd>
+ <dd>在运行于该标签的任何 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts </a> 和该扩展的后台脚本（或者其他的比如弹出菜单脚本或者设置页面脚本）间创建一个消息连接。</dd>
  <dt>{{WebExtAPIRef("tabs.create()")}}</dt>
  <dd>创建一个新标签。</dd>
  <dt>{{WebExtAPIRef("tabs.captureVisibleTab()")}}</dt>
@@ -77,7 +77,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
  <dt>{{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}</dt>
  <dd>获取指定窗口所有标签的详细信息。</dd>
  <dt>{{WebExtAPIRef("tabs.getCurrent()")}}</dt>
- <dd>返回一个 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab" title="This type contains information about a tab."><code>tabs.Tab</code></a> 对象包含了该脚本当前的宿主标签的信息。</dd>
+ <dd>返回一个 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab"><code>tabs.Tab</code></a> 对象包含了该脚本当前的宿主标签的信息。</dd>
  <dt>{{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}</dt>
  <dd>获取在指定窗口被选定的标签。</dd>
  <dt>{{WebExtAPIRef("tabs.getZoom()")}}</dt>
@@ -146,9 +146,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 <p>{{Compat("webextensions.api.tabs")}}</p>
 
 <div class="hidden note">
-<p>The "Chrome incompatibilities" section is included from <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> using the <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
+<p>The "Chrome incompatibilities" section is included from <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> using the <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
 
-<p>If you need to update this content, edit <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, then shift-refresh this page to see your changes.</p>
+<p>If you need to update this content, edit <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, then shift-refresh this page to see your changes.</p>
 </div>
 
 <p> {{WebExtExamples("h2")}}</p>

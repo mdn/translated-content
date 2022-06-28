@@ -15,7 +15,7 @@ translation_of: Web/API/Element/closest
 
 <p><code><strong>Element.closest()</strong></code> 方法用来获取：匹配特定选择器且离当前元素最近的祖先元素（也可以是当前元素本身）。如果匹配不到，则返回 <code>null</code>。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">var <var>closestElement</var><em> = </em><var>targetElement</var>.closest(<em>selectors</em>);
 </pre>
@@ -67,7 +67,7 @@ var r3 = el.closest("article &gt; div");
 var r4 = el.closest(":not(div)");
 // 返回最近的非 div 的祖先元素，这里的话就是最外层的 article</pre>
 
-<h2 id="Polyfill" name="Polyfill">兼容</h2>
+<h2 id="Polyfill">兼容</h2>
 
 <p>部分浏览器并不支持<code>Element.closest()</code>，但却支持了<code>element.matches()</code>（或拥有私有前缀，如 IE9+），一个 polyfill 案例：</p>
 
@@ -103,11 +103,11 @@ if (!Element.prototype.closest)
 }
 </pre>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <p>{{Compat("api.Element.closest")}}</p>
 

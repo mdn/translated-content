@@ -92,6 +92,6 @@ b.setAttribute("disabled", "");
 
 <p>{{Compat("api.Element.setAttribute")}}</p>
 
-<h3 id="Notes" name="Notes">Gecko 备注</h3>
+<h3 id="Notes">Gecko 备注</h3>
 
 <p>使用 <code>setAttribute()</code> 修改某些属性值时，尤其是 XUL 中的 <code>value</code>，可能得不到期望结果。这是由于 <code>attribute</code> 指定的是默认值。要访问或修改当前值，应该使用 <code>property</code> 属性。例如，使用 <code>Element.value</code> 代替 <code>Element.setAttribute()</code>。</p>

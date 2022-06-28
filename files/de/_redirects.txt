@@ -761,6 +761,7 @@
 /de/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft	/de/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /de/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight	/de/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /de/docs/Web/JavaScript/Reference/Global_Objects/String/suchen	/de/docs/Web/JavaScript/Reference/Global_Objects/String/search
+/de/docs/Web/JavaScript/Reference/Global_Objects/null	/de/docs/Web/JavaScript/Reference/Operators/null
 /de/docs/Web/JavaScript/Reference/Klassen	/de/docs/Web/JavaScript/Reference/Classes
 /de/docs/Web/JavaScript/Reference/Klassen/constructor	/de/docs/Web/JavaScript/Reference/Classes/constructor
 /de/docs/Web/JavaScript/Reference/Klassen/extends	/de/docs/Web/JavaScript/Reference/Classes/extends

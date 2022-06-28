@@ -10,7 +10,7 @@ original_slug: Web/SVG/Tutorial/路径
 
 <p><code><a href="/en-US/Web/SVG/Element/path">&lt;path&gt;</a></code> 元件可說是SVG程式庫中最強大的<a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">基本形狀</a>了，你可以用它來產生線條、曲線、圓弧等形狀。</p>
 
-<p>路徑(paths) 藉由結合多個直線或曲線來產生複雜形狀。路徑和折線雖然可以產生相似外觀的形狀，例如：可由<a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes#Polyline" style="font-size: 1rem; letter-spacing: -0.00278rem;">折線</a>組成由單純的直線組成的複雜形狀 。但折線需要產生許多小段的直線去模擬曲線的外觀，如果遇到需要放大的情形，會較難 scale。好好瞭解路徑對於繪製 SVG 是重要的。雖然不建議使用XML編輯器或文字編輯器建立複雜路徑，但了解它們的工作原理，將與助於發現和修復 SVG 的顯示問題。</p>
+<p>路徑(paths) 藉由結合多個直線或曲線來產生複雜形狀。路徑和折線雖然可以產生相似外觀的形狀，例如：可由<a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes#Polyline">折線</a>組成由單純的直線組成的複雜形狀 。但折線需要產生許多小段的直線去模擬曲線的外觀，如果遇到需要放大的情形，會較難 scale。好好瞭解路徑對於繪製 SVG 是重要的。雖然不建議使用XML編輯器或文字編輯器建立複雜路徑，但了解它們的工作原理，將與助於發現和修復 SVG 的顯示問題。</p>
 
 <p>path 元素，由一個屬性定義：{{ SVGAttr("d") }}（可參考<a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">基本形狀</a> ）。 <code>"d"</code> 屬性包含了一系列的指令(command)，以及這些指令各自使用的參數。</p>
 
@@ -94,7 +94,7 @@ original_slug: Web/SVG/Tutorial/路径
 
 <h2 id="Curve_commands">Curve commands</h2>
 
-<p>There are three different commands that you can use to create smooth curves. Two of those curves are Bezier curves, and the third is an "arc" or part of a circle. You might have already gained practical experience with Bezier curves using path tools in Inkscape, Illustrator or Photoshop. For a complete description of the math behind Bezier curves, go to a reference like the one on <a class="external" href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">Wikipedia</a>. There are an infinite number of Bezier curves, but only two simple ones are available in path elements: a cubic one, called with C, and a quadratic one, called with Q.</p>
+<p>There are three different commands that you can use to create smooth curves. Two of those curves are Bezier curves, and the third is an "arc" or part of a circle. You might have already gained practical experience with Bezier curves using path tools in Inkscape, Illustrator or Photoshop. For a complete description of the math behind Bezier curves, go to a reference like the one on <a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">Wikipedia</a>. There are an infinite number of Bezier curves, but only two simple ones are available in path elements: a cubic one, called with C, and a quadratic one, called with Q.</p>
 
 <h3 id="Bezier_Curves">Bezier Curves</h3>
 
@@ -167,7 +167,7 @@ original_slug: Web/SVG/Tutorial/路径
 
 <p>Both curves produce similar results, although the cubic allows you greater freedom in exactly what your curve looks like. Deciding which curve to use is situational and depends on the amount of symmetry your line has.</p>
 
-<h3 id="Arcs" name="Arcs">Arcs</h3>
+<h3 id="Arcs">Arcs</h3>
 
 <p>The other type of curved line you can create using SVG is the arc, called with A. Arcs are sections of circles or ellipses. For a given x-radius and y-radius, there are two ellipses that can connect any two points (as long as they're within the radius of the circle). Along either of those circles there are two possible paths that you can take to connect the points, so in any situation there are four possible arcs available. Because of that, arcs have to take in quite a few arguments:</p>
 
@@ -179,7 +179,7 @@ original_slug: Web/SVG/Tutorial/路径
 
 <p>The third parameter describes the rotation of the arc. This is best explained with an example:</p>
 
-<p><img alt="SVGArcs_XAxisRotation_with_grid" class="internal" src="https://mdn.mozillademos.org/files/10409/SVGArcs_XAxisRotation_with_grid.png" style="float: right; height: 201px; width: 200px;"></p>
+<p><img alt="SVGArcs_XAxisRotation_with_grid" src="svgarcs_xaxisrotation_with_grid.png"></p>
 
 <pre class="brush: xml">&lt;svg width="320" height="320" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path d="M10 315
@@ -194,7 +194,7 @@ original_slug: Web/SVG/Tutorial/路径
 
 <p>For the unrotated ellipse in the image above, there are only two different arcs and not four to choose from because the line drawn from the start and end of the arc goes through the center of the ellipse. In a slightly modified example you can see the two ellipses that form the four different arcs:</p>
 
-<p><img alt="Show the 4 arcs on the Ellipse example" src="https://mdn.mozillademos.org/files/15822/SVGArcs_XAxisRotation_with_grid_ellipses.png" style="height: 320px; width: 320px;"></p>
+<p><img alt="Show the 4 arcs on the Ellipse example" src="svgarcs_xaxisrotation_with_grid_ellipses.png"></p>
 
 <pre>&lt;svg xmlns="http://www.w3.org/2000/svg" width="320" height="320"&gt;
   &lt;path d="M10 315

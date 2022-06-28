@@ -6,7 +6,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 <div>{{AddonSidebar}}</div>
 
 <div>
-<p>使用 WebExtension API 开发的插件默认应用了内容安全策略 (Content Security Policy, 缩写 CSP)。这限制了可以加载的<strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"> </a></strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a> 和 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object">&lt;object&gt;</a> 的资源来源，并且禁止了潜在的不安全用法如 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>.</p>
+<p>使用 WebExtension API 开发的插件默认应用了内容安全策略 (Content Security Policy, 缩写 CSP)。这限制了可以加载的<strong><a href="/en-US/docs/Web/HTML/Element/script"> </a></strong><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a> 和 <a href="/en-US/docs/Web/HTML/Element/object">&lt;object&gt;</a> 的资源来源，并且禁止了潜在的不安全用法如 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>.</p>
 
 <p>这篇文章简单地解释了 CSP 是什么，默认的策略是什么，这对插件来说意味着什么，以及插件如何改变默认 CSP。</p>
 </div>
@@ -59,13 +59,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 
 <ul>
  <li>
-  <p><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_Security_Policy#Location_of_script_and_object_resources">你只能将本地的 &lt;script&gt; 和 &lt;object&gt; 资源加载到插件中。</a></p>
+  <p><a href="/en-US/Add-ons/WebExtensions/Content_Security_Policy#Location_of_script_and_object_resources">你只能将本地的 &lt;script&gt; 和 &lt;object&gt; 资源加载到插件中。</a></p>
  </li>
  <li>
-  <p><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_Security_Policy#eval()_and_friends">插件无法将字符串转换为 JavaScript 执行。</a></p>
+  <p><a href="/en-US/Add-ons/WebExtensions/Content_Security_Policy#eval()_and_friends">插件无法将字符串转换为 JavaScript 执行。</a></p>
  </li>
  <li>
-  <p><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_Security_Policy#Inline_JavaScript">内联 JavaScript 不会被执行。</a></p>
+  <p><a href="/en-US/Add-ons/WebExtensions/Content_Security_Policy#Inline_JavaScript">内联 JavaScript 不会被执行。</a></p>
  </li>
 </ul>
 

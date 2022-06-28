@@ -9,7 +9,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
 
 <p>这个消息将被 content scripts 中 {{WebExtAPIRef("runtime.onMessage")}} 事件的所有监听者收到，然后它们可以选择通过使用 <code>sendResponse</code> 这个方法发送一个 response 到 background scripts。</p>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -32,14 +32,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
  <dd>
  <dl class="reference-values">
   <dt><code>frameId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Sends the message to a specific frame identified by <code>frameId</code> instead of all frames in the tab. Whether the content script is executed in all frames depends on the <code>all_frames</code> setting in the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/content_scripts"><code>content_scripts</code></a> section of manifest.json.</dd>
+  <dd><code>integer</code>. Sends the message to a specific frame identified by <code>frameId</code> instead of all frames in the tab. Whether the content script is executed in all frames depends on the <code>all_frames</code> setting in the <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts"><code>content_scripts</code></a> section of manifest.json.</dd>
  </dl>
  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with the JSON response object sent by the handler of the message in the content script, or with no arguments if the content script did not send a response. If an error occurs while connecting to the specified tab or any other error occurs, the promise will be rejected with an error message. If several frames response to the message, the promise is resolved to one of answers.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with the JSON response object sent by the handler of the message in the content script, or with no arguments if the content script did not send a response. If an error occurs while connecting to the specified tab or any other error occurs, the promise will be rejected with an error message. If several frames response to the message, the promise is resolved to one of answers.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

@@ -142,7 +142,7 @@ typeof Math.sin === 'function';
 
 <p>自從 JavaScript 一開始出現, JavaScript 的值就總以型別標簽跟著一個值的方式表示。物件的型別標簽是 0. 而 <code>null</code> 這個值是使用 NULL 指標 (在大部份平台上是 0x00) 來表示. 因此, null 看起來像是一個以 0 為型別標簽的值, 並使得 <code>typeof</code> 傳回不甚正確的結果. (<a href="http://www.2ality.com/2013/10/typeof-null.html">參考來源</a>)</p>
 
-<p>這個問題已計畫<a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null">在下一版 ECMAScript 予以修正</a> (會以 opt-in 方式提供). 屆時它將會做出如 <code>typeof null === 'null'</code> 的正確回傳結果。</p>
+<p>這個問題已計畫<a href="http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null">在下一版 ECMAScript 予以修正</a> (會以 opt-in 方式提供). 屆時它將會做出如 <code>typeof null === 'null'</code> 的正確回傳結果。</p>
 
 <div class="notecard note">
 <p><strong>備註：</strong>此修正計畫已被拒絕</p>
@@ -173,5 +173,5 @@ typeof /s/ === 'object'; // Firefox 5+ ...    // 符合 ECMAScript 5.1
 <h2 id="See_also">參照</h2>
 
 <ul>
- <li><a href="/en-US/docs/JavaScript/Reference/Operators/instanceof" title="/en-US/docs/JavaScript/Reference/Operators/instanceof">instanceof</a></li>
+ <li><a href="/en-US/docs/JavaScript/Reference/Operators/instanceof">instanceof</a></li>
 </ul>

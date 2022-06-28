@@ -11,7 +11,7 @@ translation_of: Web/API/WindowOrWorkerGlobalScope/atob
 original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
 {{APIRef ("HTML DOM")}}
-La fonction `WindowOrWorkerGlobalScope.atob()` décode une chaîne de données qui a été codée en utilisant le codage en base 64. Vous pouvez utiliser la méthode {{domxref("WindowOrWorkerGlobalScope.btoa","btoa()")}} pour encoder et transmettre des données qui pourraient causer des problèmes de communication, puis les transmettre et utiliser la méthode atob() pour décoder les données . Par exemple, vous pouvez coder, transmettre et décoder des caractères de contrôle tels que les valeurs ASCII 0 à 31.
+La fonction `WindowOrWorkerGlobalScope.atob()` décode une chaîne de données qui a été codée en utilisant le codage en base 64. Vous pouvez utiliser la méthode [`btoa()`](/fr/docs/Web/API/btoa) pour encoder et transmettre des données qui pourraient causer des problèmes de communication, puis les transmettre et utiliser la méthode atob() pour décoder les données . Par exemple, vous pouvez coder, transmettre et décoder des caractères de contrôle tels que les valeurs ASCII 0 à 31.
 
 Pour une utilisation avec des chaînes Unicode ou UTF-8, voir [cette note sur l'encodage et le décodage Base64](/fr/docs/D%C3%A9coder_encoder_en_base64) et [cette note sur btoa()](/fr-FR/docs/Web/API/window.btoa#Unicode_Strings).
 
@@ -49,5 +49,5 @@ donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
 
 - [Base64 encoding and decoding](/Web/API/WindowBase64/Base64_encoding_and_decoding)
 - [Les URL de `données`](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
-- {{domxref("WindowOrWorkerGlobalScope.btoa","window.btoa()")}}
+- [`btoa()`](/fr/docs/Web/API/btoa)
 - [Components.utils.importGlobalProperties](/fr-FR/docs/Components.utils.importGlobalProperties)

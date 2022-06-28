@@ -55,7 +55,7 @@ grid-template: unset;
 ### 値
 
 - `none`
-  - : 3 個すべてのプロパティの値に `none` を設定するキーワードで、こ明示的なグリッドがないことを意味します。名前付きグリッド領域はありません。行と列は暗黙的に生成されます。これらのサイズは {{cssxref("grid-auto-rows")}} および {{cssxref("grid-auto-columns")}} プロパティによって決定されます。
+  - : 3 個すべてのプロパティの値に `none` を設定するキーワードで、明示的なグリッドがないことを意味します。名前付きグリッド領域はありません。行と列は暗黙的に生成されます。これらのサイズは {{cssxref("grid-auto-rows")}} および {{cssxref("grid-auto-columns")}} プロパティによって決定されます。
 - `<'grid-template-rows'> / <'grid-template-columns'>`
   - : {{cssxref("grid-template-rows")}} および {{cssxref("grid-template-columns")}} に特定の値を設定し、{{cssxref("grid-template-areas")}} の値に `none` を設定します。
 - `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <explicit-track-list> ]?`

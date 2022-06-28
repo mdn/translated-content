@@ -104,13 +104,13 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(406, "406 Not Acceptable")}}</dt>
  <dd>This response is sent when the web server, after performing <a href="/zh-TW/docs/HTTP/Content_negotiation#Server-driven_negotiation">server-driven content negotiation</a>, doesn't find any content following the criteria given by the user agent.</dd>
  <dt>{{HTTPStatus(407, "407 Proxy Authentication Required")}}</dt>
- <dd>This is similar to 401 but authentication is needed to be done by a proxy.</dd>
+ <dd>類似於401，但需要被代理伺服器驗證。.</dd>
  <dt>{{HTTPStatus(408, "408 Request Timeout")}}</dt>
  <dd>This response is sent on an idle connection by some servers, even without any previous request by the client. It means that the server would like to shut down this unused connection. This response is used much more since some browsers, like Chrome, Firefox 27+, or IE9, use HTTP pre-connection mechanisms to speed up surfing. Also note that some servers merely shut down the connection without sending this message.</dd>
  <dt>{{HTTPStatus(409, "409 Conflict")}}</dt>
  <dd>表示請求與伺服器目前狀態衝突</dd>
  <dt>{{HTTPStatus(410, "410 Gone")}}</dt>
- <dd>This response would be sent when requested content has been deleted from server.</dd>
+ <dd>當伺服器已刪除請求的內容時會送出此回應。</dd>
  <dt>{{HTTPStatus(411, "411 Length Required")}}</dt>
  <dd>伺服器拒絕該請求，因為 <code>Content-Length</code> 頭沒有被定義，然而伺服器要求。</dd>
  <dt>{{HTTPStatus(412, "412 Precondition Failed")}}</dt>
@@ -124,13 +124,13 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(416, "416 Requested Range Not Satisfiable")}}</dt>
  <dd>The range specified by the <code>Range</code> header field in the request can't be fulfilled; it's possible that the range is outside the size of the target URI's data.</dd>
  <dt>{{HTTPStatus(417, "417 Expectation Failed")}}</dt>
- <dd>This response code means the expectation indicated by the <code>Expect</code> request header field can't be met by the server.</dd>
+ <dd>此回應代表伺服器未能滿足請求標頭的<code>Expect</code>欄位所提出的期望回應。</dd>
  <dt>{{HTTPStatus(418, "418 I'm a teapot")}}</dt>
  <dd>The server refuses the attempt to brew coffee with a teapot.</dd>
  <dt>{{HTTPStatus(421, "421 Misdirected Request")}}</dt>
  <dd>The request was directed at a server that is not able to produce a response. This can be sent by a server that is not configured to produce responses for the combination of scheme and authority that are included in the request URI.</dd>
  <dt>{{HTTPStatus(422, "422 Unprocessable Entity")}} ({{Glossary("WebDAV")}})</dt>
- <dd>The request was well-formed but was unable to be followed due to semantic errors.</dd>
+ <dd>請求格式正確，但有部分語意上的錯誤而無法執行請求。</dd>
  <dt>{{HTTPStatus(423, "423 Locked")}} ({{Glossary("WebDAV")}})</dt>
  <dd>被訪問的資源被鎖定。</dd>
  <dt>{{HTTPStatus(424, "424 Failed Dependency")}} ({{Glossary("WebDAV")}})</dt>
@@ -153,13 +153,13 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(500, "500 Internal Server Error")}}</dt>
  <dd>伺服器端發生未知或無法處理的錯誤。</dd>
  <dt>{{HTTPStatus(501, "501 Not Implemented")}}</dt>
- <dd>The request method is not supported by the server and cannot be handled. The only methods that servers are required to support (and therefore that must not return this code) are <code>GET</code> and <code>HEAD</code>.</dd>
+ <dd>伺服器不支援請求的方法，僅有<code>GET</code>與<code>HEAD</code>是伺服器必須支援的方法。</dd>
  <dt>{{HTTPStatus(502, "502 Bad Gateway")}}</dt>
- <dd>This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response.</dd>
+ <dd>作為閘道的伺服器，在獲取處理請求所需的回應時，得到無效回應。</dd>
  <dt>{{HTTPStatus(503, "503 Service Unavailable")}}</dt>
  <dd>The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded. Note that together with this response, a user-friendly page explaining the problem should be sent. This responses should be used for temporary conditions and the <code>Retry-After:</code> HTTP header should, if possible, contain the estimated time before the recovery of the service. The webmaster must also take care about the caching-related headers that are sent along with this response, as these temporary condition responses should usually not be cached.</dd>
  <dt>{{HTTPStatus(504, "504 Gateway Timeout")}}</dt>
- <dd>This error response is given when the server is acting as a gateway and cannot get a response in time.</dd>
+ <dd>伺服器作為閘道器時無法及時得到回應。</dd>
  <dt>{{HTTPStatus(505, "505 HTTP Version Not Supported")}}</dt>
  <dd>請求使用的 HTTP 版本不被伺服器支援。</dd>
  <dt>{{HTTPStatus(506, "506 Variant Also Negotiates")}}</dt>
@@ -167,11 +167,11 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(507, "507 Insufficient Storage")}}</dt>
  <dd>The server has an internal configuration error: the chosen variant resource is configured to engage in transparent content negotiation itself, and is therefore not a proper end point in the negotiation process.</dd>
  <dt>{{HTTPStatus(508, "508 Loop Detected")}} ({{Glossary("WebDAV")}})</dt>
- <dd>The server detected an infinite loop while processing the request.</dd>
+ <dd>伺服器處理請求時偵測到無限迴圈。</dd>
  <dt>{{HTTPStatus(510, "510 Not Extended")}}</dt>
- <dd>Further extensions to the request are required for the server to fulfill it.</dd>
+ <dd>伺服器需要對請求做進一步的擴充才能完成請求。</dd>
  <dt>{{HTTPStatus(511, "511 Network Authentication Required")}}</dt>
- <dd>The 511 status code indicates that the client needs to authenticate to gain network access.</dd>
+ <dd>用戶需要經過認證才能取得網路存取權。</dd>
 </dl>
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>

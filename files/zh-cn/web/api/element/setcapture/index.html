@@ -5,11 +5,11 @@ translation_of: Web/API/Element/setCapture
 ---
 <p>{{ ApiRef() }}</p>
 
-<h3 id="Summary" name="Summary">概要</h3>
+<h3 id="Summary">概要</h3>
 
 <p>在处理一个 mousedown 事件过程中调用这个方法来把全部的鼠标事件重新定向到这个元素，直到鼠标按钮被释放或者 {{ domxref("document.releaseCapture()") }} 被调用。</p>
 
-<h3 id="Syntax" name="Syntax">语法</h3>
+<h3 id="Syntax">语法</h3>
 
 <pre class="eval">element.setCapture(<em>retargetToElement</em>);
 </pre>
@@ -19,7 +19,7 @@ translation_of: Web/API/Element/setCapture
  <dd>如果被设置为 <code>true</code>, 所有事件被直接定向到这个元素; 如果是 <code>false</code>, 事件也可以在这个元素的子元素上触发。</dd>
 </dl>
 
-<h3 id="Example" name="Example">示例</h3>
+<h3 id="Example">示例</h3>
 
 <p>在这个例子中，当你在一个元素中点击并且按住鼠标，然后再使用鼠标拖动的时候，当前鼠标位置的坐标就会被绘制出来。</p>
 
@@ -67,11 +67,11 @@ translation_of: Web/API/Element/setCapture
 
 <p><a href="/samples/domref/mousecapture.html">查看在线演示</a></p>
 
-<h3 id="Notes" name="Notes">注意</h3>
+<h3 id="Notes">注意</h3>
 
 <p>这个元素可能不会完全被滚动到顶部或者底部，这取决于其他元素的布局。</p>
 
-<h3 id="Specification" name="Specification">规范</h3>
+<h3 id="Specification">规范</h3>
 
 <p>无</p>
 

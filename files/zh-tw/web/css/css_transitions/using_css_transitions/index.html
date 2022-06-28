@@ -10,7 +10,7 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
 <h3 id="sect1">   </h3>
 <div>
- <p>原文 : <a href="/en/CSS/CSS_transitions" title="en/CSS/CSS_transitions">https://developer.mozilla.org/en/CSS/CSS_transitions</a></p>
+ <p>原文 : <a href="/en/CSS/CSS_transitions">https://developer.mozilla.org/en/CSS/CSS_transitions</a></p>
  <p> </p>
  <div>
   <p>{{ SeeCompatTable() }}</p>
@@ -18,7 +18,7 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
   <div class="note">
    <strong>注意：</strong> CSS transitions specification 目前仍舊以草案形式存在，所以當你要在 Gecko 的系統中使用時，記得加上 "-moz-" 的前綴。此外，為了更好的相容，你還得加上 "-webkit-" 前綴 (給基於 Webkit 技術的瀏覽器)以及 "-o-" (Opera 使用)。舉例來說，你可能會寫出包含有 <code>-moz-transition</code>, <code>-webkit-transition 及</code> <code>-o-transition 的程式。</code></div>
   <h2 id="可供調整的_CSS_property_清單">可供調整的 CSS property 清單</h2>
-  <p>  CSS transitions 和 CSS animations 中可以用來修改的屬性在 <a class="external" href="http://oli.jp/2010/css-animatable-properties/">CSS animatable properties</a> 可以看到。這裡頭同時包含了 SVG properties。</p>
+  <p>  CSS transitions 和 CSS animations 中可以用來修改的屬性在 <a href="http://oli.jp/2010/css-animatable-properties/">CSS animatable properties</a> 可以看到。這裡頭同時包含了 SVG properties。</p>
   <div class="note">
    <strong>注意:</strong> 這些列出 properties 可能都還會改變，所以請使用已經被支援的那些，以免造成無法預期的結果。</div>
   <h2 id="CSS_transition_properties">CSS transition properties</h2>
@@ -45,7 +45,7 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
   <h2 id="使用漸變函式_(transition_timing_function)">使用漸變函式 (transition timing function)</h2>
   <p>  漸變函式可用來定義轉場發生的時間曲線。其規範方式是以四個參數的貝茲曲線代表：</p>
   <p><img alt="" src="/@api/deki/files/5226/=transition-timing-function.png"></p>
-  <p>  <a class="external" href="http://cssglue.com/cubic">CSS transition function manipulator</a> 是一個可以讓你非常容易以視覺化方式了解轉場流程的工具。</p>
+  <p>  <a href="http://cssglue.com/cubic">CSS transition function manipulator</a> 是一個可以讓你非常容易以視覺化方式了解轉場流程的工具。</p>
   <p>  除了自行定義之外，尚有幾個已經預先定義好的函式：</p>
   <ul>
    <li><strong>ease</strong>, 等同於 <code>cubic-bezier(0.25, 0.1, 0.25, 1.0)</code></li>
@@ -56,7 +56,7 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
   </ul>
   <h3 id="一個_transition_timing_effect_範例">一個 transition timing effect 範例</h3>
   <p>  我們在這直接用範例來說明。</p>
-  <p>  在看程式碼之前，或許你會想先看看實際的執行效果。請挑個有支援 transitions 的瀏覽器，然後<a href="/samples/cssref/transitions/sample3" title="samples/cssref/transitions/sample3">看看這個</a> (而<a href="/samples/cssref/transitions/sample3/transitions.css" title="samples/cssref/transitions/sample3/transitions.css">這裡</a>有這個範例的相關 CSS 程式碼)。</p>
+  <p>  在看程式碼之前，或許你會想先看看實際的執行效果。請挑個有支援 transitions 的瀏覽器，然後<a href="/samples/cssref/transitions/sample3">看看這個</a> (而<a href="/samples/cssref/transitions/sample3/transitions.css">這裡</a>有這個範例的相關 CSS 程式碼)。</p>
   <p>  首先，先以 HTML 創建這個範例的主要外殼：</p>
   <pre class="brush: html">&lt;ul&gt;
   &lt;li id="long1"&gt;Long, gradual transition...&lt;/li&gt;
@@ -137,7 +137,7 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 }</pre>
   <h2 id="使用_transitions_來強調選單中的選項">使用 transitions 來強調選單中的選項</h2>
   <p>  一個使用 CSS 的好時機是用來強調目前使用者滑鼠經過的選單位置。使用 transitions 可以使效果變得更吸引人。</p>
-  <p>  在看實際的程式碼之前，你可以先看<a href="/samples/cssref/transitions/sample2" title="samples/cssref/transitions/sample2">實際的範例</a> (當然你的瀏覽器要能支援 transitions)。相關的 CSS 程式在<a href="/samples/cssref/transitions/sample2/transitions.css" title="samples/cssref/transitions/sample2/transitions.css">這裡</a>。 </p>
+  <p>  在看實際的程式碼之前，你可以先看<a href="/samples/cssref/transitions/sample2">實際的範例</a> (當然你的瀏覽器要能支援 transitions)。相關的 CSS 程式在<a href="/samples/cssref/transitions/sample2/transitions.css">這裡</a>。 </p>
   <p>  我們先用 HTML 構建外殼：</p>
   <pre class="brush: html">&lt;div class="sidebar"&gt;
   &lt;p&gt;&lt;a class="menuButton" href="home"&gt;Home&lt;/a&gt;&lt;/p&gt;
@@ -217,13 +217,13 @@ document.addEventListener('click', function(ev){
   transition: all 1s;  
 }
 </pre>
-  <p>  你可以到 <a class="external" href="http://jsfiddle.net/RwtHn/5/" title="http://jsfiddle.net/RwtHn/5/">http://jsfiddle.net/RwtHn/5/</a> 看範例。</p>
+  <p>  你可以到 <a href="http://jsfiddle.net/RwtHn/5/">http://jsfiddle.net/RwtHn/5/</a> 看範例。</p>
   <h2 id="使用_transition_events_來替_object_製作動畫">使用 transition events 來替 object 製作動畫</h2>
   <p>  這裡讓我們看個例子，一個內含文字的方塊左右來回移動，並且會在兩種顏色之間做轉變：</p>
   <p> </p>
   <video controls src="https://developer.mozilla.org/samples/cssref/transitions/sample1/transitiondemo1.ogv">
     </video>
-  <p>  在我們仔細研究程式碼之前可以先看<a href="/samples/cssref/transitions/sample1" title="samples/cssref/transitions/sample1">範例</a>。同樣地，可以到<a href="/samples/cssref/transitions/sample1/transitions.css" title="samples/cssref/transitions/sample1/transitions.css">這</a>看其 CSS 的寫法。</p>
+  <p>  在我們仔細研究程式碼之前可以先看<a href="/samples/cssref/transitions/sample1">範例</a>。同樣地，可以到<a href="/samples/cssref/transitions/sample1/transitions.css">這</a>看其 CSS 的寫法。</p>
   <h3 id="HTML_程式碼">HTML 程式碼</h3>
   <p>  搭配上面範例的 HTML 程式碼並不複雜：</p>
   <pre class="brush: html">&lt;!DOCTYPE html&gt;
@@ -240,7 +240,7 @@ document.addEventListener('click', function(ev){
 </pre>
   <p>  這裡唯一要注意的地方是我們用 slideRight 來修飾 "This is a box!"。此外，在這個文件被讀取時，就會觸發 <code>runDemo()</code> function。</p>
   <h3 id="CSS_程式碼">CSS 程式碼</h3>
-  <p>  我們使用 slideRight 和 slideLeft 這兩個 CSS class 來建構動畫 (請參閱 <a href="/samples/cssref/transitions/sample1/transitions.css" title="https://developer.mozilla.org/samples/cssref/transitions/sample1/transitions.css"><code>transitions.css</code></a> )。這裡列出部分：</p>
+  <p>  我們使用 slideRight 和 slideLeft 這兩個 CSS class 來建構動畫 (請參閱 <a href="/samples/cssref/transitions/sample1/transitions.css"><code>transitions.css</code></a> )。這裡列出部分：</p>
   <pre class="brush: css">.slideRight {
   position: absolute;
   -moz-transition-property: background-color, color, left;
@@ -277,7 +277,7 @@ document.addEventListener('click', function(ev){
   <h3 id="JavaScript_程式碼">JavaScript 程式碼</h3>
   <p>  在定義了左右兩端點的狀態後，現在我們可以準備來描述 animation 了。這可以簡單的透過 JavaScript 達成。</p>
   <div class="note">
-   <strong>注意：</strong> 在這裡，倘若 <a class="external" href="/zh_tw/CSS_動畫" title="zh_tw/CSS_動畫">CSS animations</a> 被使用者的瀏覽器支援，那就未必要使用 JavaScript 了。</div>
+   <strong>注意：</strong> 在這裡，倘若 <a href="/zh_tw/CSS_動畫">CSS animations</a> 被使用者的瀏覽器支援，那就未必要使用 JavaScript 了。</div>
   <p>  首先定義 <code>runDemo()</code> function，他將在文件被讀取後立刻執行：</p>
   <pre class="brush: js">function runDemo() {
   var el = updateTransition();
@@ -308,9 +308,9 @@ document.addEventListener('click', function(ev){
 
   <h2 id="更多資訊">更多資訊</h2>
   <ul>
-   <li><a class="external" href="http://dev.w3.org/csswg/css3-transitions/">CSS Transitions</a></li>
-   <li><a class="external" href="http://www.w3.org/TR/css3-transitions" title="http://www.w3.org/TR/css3-transitions">CSS Transitions Module Level 3</a></li>
-   <li><a class="external" href="http://oli.jp/2010/css-animatable-properties/">CSS animatable properties</a></li>
+   <li><a href="http://dev.w3.org/csswg/css3-transitions/">CSS Transitions</a></li>
+   <li><a href="http://www.w3.org/TR/css3-transitions">CSS Transitions Module Level 3</a></li>
+   <li><a href="http://oli.jp/2010/css-animatable-properties/">CSS animatable properties</a></li>
    <li>{{ cssxref("-moz-transition") }}</li>
    <li>{{ cssxref("-moz-transition-property") }}</li>
    <li>{{ cssxref("-moz-transition-duration") }}</li>

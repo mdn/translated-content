@@ -26,7 +26,7 @@ translation_of: Learn/Server-side/Django/Models
 
 <p>Django 网络应用通过作为模型被参照的 Python 对象访问并管理数据。模型定义了储存数据的结构，包括域类型和可能的最大值，默认值，可选择的列表，帮助理解文档的文本，表格内的标签文本，等等。模型的定义是独立于数据库的——你可以为你自己的项目设置选择一种。一旦你已经选择了你想用的数据库，你不需要直接谈论它——你只是写出你的模型结构和其他代码，然后 Django 会为你处理所有繁琐的和数据库打交道的工作。</p>
 
-<p>这个教程展示了如何定义并访问 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary website</a> 的模型。</p>
+<p>这个教程展示了如何定义并访问 <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary website</a> 的模型。</p>
 
 <h2 id="设计LocalLibaray模型">设计 LocalLibaray 模型</h2>
 
@@ -112,34 +112,34 @@ class MyModelName(models.Model):
 <p>当声明很多／大多数不同的字段类型时，可以使用以下常用参数：</p>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#help-text" rel="noopener">help_text</a>  :提供 HTML 表单文本标签 (eg i 在管理站点中),如上所述。</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#verbose-name" rel="noopener">verbose_name</a>  :字段标签中的可读性名称，如果没有被指定，Django 将从字段名称推断默认的详细名称。</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#default" rel="noopener">default</a>  :该字段的默认值。这可以是值或可呼叫物件 (callable object)，在这种情况下，每次创建新纪录时都将呼叫该物件。</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#null" rel="noopener">null</a>：如为<code>True</code>，即允许 Django 于资料库该栏位写入<code>NULL</code>（但栏位型态如为<code>CharField</code>则会写入空字串）。预设值是<code>False</code>。</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#blank" rel="noopener">blank</a>  :如果<code><strong>True</strong></code>，表单中的字段被允许为空白。默认是<code>False</code>，这意味着 Django 的表单验证将强制你输入一个值。这通常搭配  <code>NULL=True</code> 使用，因为如果要允许空值，你还希望数据库能够适当地表示它们。</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#choices" rel="noopener">choices</a>  :这是给此字段的一组选项。如果提供这一项，预设对应的表单部件是「该组选项的列表」，而不是原先的标准文本字段。</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#primary-key" rel="noopener">primary_key</a>  :如果是 True，将当前字段设置为模型的主键（主键是被指定用来唯一辨识所有不同表记录的特殊数据库栏位 (column)）。如果没有指定字段作为主键，则 Django 将自动为此添加一个字段。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#help-text">help_text</a>  :提供 HTML 表单文本标签 (eg i 在管理站点中),如上所述。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#verbose-name">verbose_name</a>  :字段标签中的可读性名称，如果没有被指定，Django 将从字段名称推断默认的详细名称。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#default">default</a>  :该字段的默认值。这可以是值或可呼叫物件 (callable object)，在这种情况下，每次创建新纪录时都将呼叫该物件。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#null">null</a>：如为<code>True</code>，即允许 Django 于资料库该栏位写入<code>NULL</code>（但栏位型态如为<code>CharField</code>则会写入空字串）。预设值是<code>False</code>。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#blank">blank</a>  :如果<code><strong>True</strong></code>，表单中的字段被允许为空白。默认是<code>False</code>，这意味着 Django 的表单验证将强制你输入一个值。这通常搭配  <code>NULL=True</code> 使用，因为如果要允许空值，你还希望数据库能够适当地表示它们。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#choices">choices</a>  :这是给此字段的一组选项。如果提供这一项，预设对应的表单部件是「该组选项的列表」，而不是原先的标准文本字段。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#primary-key">primary_key</a>  :如果是 True，将当前字段设置为模型的主键（主键是被指定用来唯一辨识所有不同表记录的特殊数据库栏位 (column)）。如果没有指定字段作为主键，则 Django 将自动为此添加一个字段。</li>
 </ul>
 
-<p>还有许多其他选项—你可以在<a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#field-options" rel="noopener">这里看到完整的字段选项</a>。</p>
+<p>还有许多其他选项—你可以在<a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#field-options">这里看到完整的字段选项</a>。</p>
 
 <h5 id="Common_field_types">Common field types</h5>
 
 <p>以下列表描述了一些更常用的字段类型。</p>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" rel="noopener">CharField</a> 是用来定义短到中等长度的字段字符串。你必须指定<code>max_length</code>要存储的数据。</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.TextField" rel="noopener">TextField </a>用于大型任意长度的字符串。你可以<code>max_length</code>为该字段指定一个字段，但仅当该字段以表单显示时才会使用（不会在数据库级别强制执行）。</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.IntegerField" rel="noopener" title="django.db.models.IntegerField">IntegerField</a> 是一个用于存储整数（整数）值的字段，用于在表单中验证输入的值为整数。</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#datefield" rel="noopener">DateField</a> 和<a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#datetimefield" rel="noopener">DateTimeField</a> 用于存储／表示日期和日期／时间信息（分别是<code>Python.datetime.date</code> 和  <code>datetime.datetime</code> 对象）。这些字段可以另外表明（互斥）参数  <code>auto_now=Ture</code>（在每次保存模型时将该字段设置为当前日期），<code>auto_now_add</code>（仅设置模型首次创建时的日期）和  <code>default</code>（设置默认日期，可以被用户覆盖）。</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#emailfield" rel="noopener">EmailField</a> 用于存储和验证电子邮件地址。</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#filefield" rel="noopener">FileField</a> 和<a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#imagefield" rel="noopener">ImageField</a> 分别用于上传文件和图像（<code>ImageField</code> 只需添加上传的文件是图像的附加验证）。这些参数用于定义上传文件的存储方式和位置。</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#autofield" rel="noopener">AutoField</a> 是一种  <strong>IntegerField </strong>自动递增的特殊类型。如果你没有明确指定一个主键，则此类型的主键将自动添加到模型中。</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#foreignkey" rel="noopener">ForeignKey</a> 用于指定与另一个数据库模型的一对多关系（例如，汽车有一个制造商，但制造商可以制作许多汽车）。关系的“一”侧是包含密钥的模型。</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#manytomanyfield" rel="noopener">ManyToManyField</a> 用于指定<a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#manytomanyfield" rel="noopener">多对多</a>关系（例如，一本书可以有几种类型，每种类型可以包含几本书）。在我们的图书馆应用程序中，我们将非常类似地使用它们 ForeignKeys，但是可以用更复杂的方式来描述组之间的关系。这些具有参数  <code>on_delete</code> 来定义关联记录被删除时会发生什么（例如，值  <code>models.SET_NULL</code> 将简单地设置为值 NULL）。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField">CharField</a> 是用来定义短到中等长度的字段字符串。你必须指定<code>max_length</code>要存储的数据。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.TextField">TextField </a>用于大型任意长度的字符串。你可以<code>max_length</code>为该字段指定一个字段，但仅当该字段以表单显示时才会使用（不会在数据库级别强制执行）。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.IntegerField">IntegerField</a> 是一个用于存储整数（整数）值的字段，用于在表单中验证输入的值为整数。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#datefield">DateField</a> 和<a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#datetimefield">DateTimeField</a> 用于存储／表示日期和日期／时间信息（分别是<code>Python.datetime.date</code> 和  <code>datetime.datetime</code> 对象）。这些字段可以另外表明（互斥）参数  <code>auto_now=Ture</code>（在每次保存模型时将该字段设置为当前日期），<code>auto_now_add</code>（仅设置模型首次创建时的日期）和  <code>default</code>（设置默认日期，可以被用户覆盖）。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#emailfield">EmailField</a> 用于存储和验证电子邮件地址。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#filefield">FileField</a> 和<a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#imagefield">ImageField</a> 分别用于上传文件和图像（<code>ImageField</code> 只需添加上传的文件是图像的附加验证）。这些参数用于定义上传文件的存储方式和位置。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#autofield">AutoField</a> 是一种  <strong>IntegerField </strong>自动递增的特殊类型。如果你没有明确指定一个主键，则此类型的主键将自动添加到模型中。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#foreignkey">ForeignKey</a> 用于指定与另一个数据库模型的一对多关系（例如，汽车有一个制造商，但制造商可以制作许多汽车）。关系的“一”侧是包含密钥的模型。</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#manytomanyfield">ManyToManyField</a> 用于指定<a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#manytomanyfield">多对多</a>关系（例如，一本书可以有几种类型，每种类型可以包含几本书）。在我们的图书馆应用程序中，我们将非常类似地使用它们 ForeignKeys，但是可以用更复杂的方式来描述组之间的关系。这些具有参数  <code>on_delete</code> 来定义关联记录被删除时会发生什么（例如，值  <code>models.SET_NULL</code> 将简单地设置为值 NULL）。</li>
 </ul>
 
-<p>还有许多其他类型的字段，包括不同类型数字的字段（大整数，小整数，浮点数），布林值，URLs，唯一 ids 和其他“时间相关”的信息（持续时间，时间等）。你可以查阅<a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#field-types" rel="noopener">完整列表</a>  .</p>
+<p>还有许多其他类型的字段，包括不同类型数字的字段（大整数，小整数，浮点数），布林值，URLs，唯一 ids 和其他“时间相关”的信息（持续时间，时间等）。你可以查阅<a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#field-types">完整列表</a>  .</p>
 
 <h4 id="元数据Metadata">元数据 (Metadata)</h4>
 
@@ -165,7 +165,7 @@ class MyModelName(models.Model):
 
 <p>许多其他元数据选项控制模型中必须使用哪些数据库以及数据的存储方式。（如果你需要模型映射一个现有数据库，这会有用）。</p>
 
-<p>完整有用的元数据选项在这里<a href="https://docs.djangoproject.com/en/1.10/ref/models/options/" rel="noopener">Model metadata options</a>  (Django docs).</p>
+<p>完整有用的元数据选项在这里<a href="https://docs.djangoproject.com/en/1.10/ref/models/options/">Model metadata options</a>  (Django docs).</p>
 
 <h4 id="方法Methods">方法 (Methods)</h4>
 
@@ -237,7 +237,7 @@ a_record.save()</pre>
 number_wild_books = Book.objects.filter(title__contains='wild').count()
 </pre>
 
-<p>要比对的字段与比对方法都要被定义在筛选的参数名称里，并且使用这个格式：<code>比對字段__比對方法</code> (请注意上方范例中的  <code>title</code> 与  <code>contains</code> 中间隔了两个底线唷)。在上面我们使用大小写区分的方式比对<code>title</code>。还有很多比对方式可以使用：  <code>icontains</code>(不区分大小写), <code>iexact</code>(不大小写区分且完全符合), <code>exact</code>(区分大小写但完全符合) 还有  <code>in</code>, <code>gt</code>(大于), <code>startswith</code>,之类的。<a href="https://docs.djangoproject.com/en/2.0/ref/models/querysets/#field-lookups" rel="noopener">全部的用法在这里。</a></p>
+<p>要比对的字段与比对方法都要被定义在筛选的参数名称里，并且使用这个格式：<code>比對字段__比對方法</code> (请注意上方范例中的  <code>title</code> 与  <code>contains</code> 中间隔了两个底线唷)。在上面我们使用大小写区分的方式比对<code>title</code>。还有很多比对方式可以使用：  <code>icontains</code>(不区分大小写), <code>iexact</code>(不大小写区分且完全符合), <code>exact</code>(区分大小写但完全符合) 还有  <code>in</code>, <code>gt</code>(大于), <code>startswith</code>,之类的。<a href="https://docs.djangoproject.com/en/2.0/ref/models/querysets/#field-lookups">全部的用法在这里。</a></p>
 
 <p>有时候你会须要透过某个一对多的字段来筛选 (例如一个  <code>外鍵</code>)。这样的状况下，你可以使用两个底线来指定相关模型的字段。例如透过某个特定的 genre 名称筛选书籍，如下所示：</p>
 
@@ -248,7 +248,7 @@ number_wild_books = Book.objects.filter(title__contains='wild').count()
 <p><strong>Note</strong>: 你可以用下划线来表示不同关系 (<code>ForeignKey</code>/<code>ManyToManyField</code>) .例如，一本书有不同的类型，用“cover“关系可能会帮助起一个参数名字 <code>type__cover__name__exact='hard'.</code></p>
 </div>
 
-<p>还有很多是你可以用索引 (queries) 来做的，包含从相关的模型做向后查询 (backwards searches)、连锁过滤器 (chaining filters)、回传「值的小集合」等。更多资讯可以到  <a href="https://docs.djangoproject.com/en/2.0/topics/db/queries/" rel="noopener">Making queries</a> (Django Docs) 查询。</p>
+<p>还有很多是你可以用索引 (queries) 来做的，包含从相关的模型做向后查询 (backwards searches)、连锁过滤器 (chaining filters)、回传「值的小集合」等。更多资讯可以到  <a href="https://docs.djangoproject.com/en/2.0/topics/db/queries/">Making queries</a> (Django Docs) 查询。</p>
 
 <h2 id="Defining_the_LocalLibrary_Models">Defining the LocalLibrary Models</h2>
 

@@ -310,9 +310,9 @@ app.use('/wiki', wiki);
 <p><strong>注：</strong>中间件可以执行任何操作，运行任何代码，更改请求和响应对象，也可以<strong>结束“请求 - 响应”周期</strong>。如果它没有结束循环，则必须调用 <code>next()</code> 将控制传递给下一个中间件函数（否则请求将成为悬挂请求）。</p>
 </div>
 
-<p>大多数应用会使用<strong>第三方</strong>中间件来简化常见的 web 开发任务，比如 cookie、会话、用户身份验证、访问请求 <code>POST</code> 和 JSON 数据，日志记录等。参见 <a href="https://www.expressjs.com.cn/resources/middleware.html" rel="noopener">Express 团队维护的中间件包列表</a>（包含受欢迎的第三方包）。NPM 有提供其它 Express 包。</p>
+<p>大多数应用会使用<strong>第三方</strong>中间件来简化常见的 web 开发任务，比如 cookie、会话、用户身份验证、访问请求 <code>POST</code> 和 JSON 数据，日志记录等。参见 <a href="https://www.expressjs.com.cn/resources/middleware.html">Express 团队维护的中间件包列表</a>（包含受欢迎的第三方包）。NPM 有提供其它 Express 包。</p>
 
-<p>要使用第三方中间件，首先需要使用 NPM 将其安装到当前应用中。比如，要安装 <a href="https://www.expressjs.com.cn/resources/middleware/morgan.html" rel="noopener">morgan</a> HTTP 请求记录器中间件，可以这样做：</p>
+<p>要使用第三方中间件，首先需要使用 NPM 将其安装到当前应用中。比如，要安装 <a href="https://www.expressjs.com.cn/resources/middleware/morgan.html">morgan</a> HTTP 请求记录器中间件，可以这样做：</p>
 
 <pre class="brush: bash">$ npm install morgan
 </pre>
@@ -359,7 +359,7 @@ app.listen(3000);</pre>
 <p><strong>JavaScript 提示：</strong>上面代码中单独声明了中间件函数，并把它设置为回调。之前是把路由处理函数在使用时声明为回调。在 JavaScript 中，两种方法都可行。</p>
 </div>
 
-<p>请参阅 Express 文档中关于 <a href="https://www.expressjs.com.cn/guide/using-middleware.html" rel="noopener">使用</a> 和 <a href="https://www.expressjs.com.cn/guide/writing-middleware.html" rel="noopener">开发</a> Express 中间件的内容。</p>
+<p>请参阅 Express 文档中关于 <a href="https://www.expressjs.com.cn/guide/using-middleware.html">使用</a> 和 <a href="https://www.expressjs.com.cn/guide/writing-middleware.html">开发</a> Express 中间件的内容。</p>
 
 <h3 id="托管静态文件">托管静态文件</h3>
 

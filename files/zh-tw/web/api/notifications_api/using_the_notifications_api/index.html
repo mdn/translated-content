@@ -15,7 +15,7 @@ translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 
 <p>在 Apps 傳送通知之前，使用者必須先許可 Apps 的動作。只要 APIs 嘗試予網頁之外的東西互動，均必須先獲得使用者的授權。如此可避免濫發通知而影響使用經驗。</p>
 
-<p>透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification.permission" title="The permission property indicates the current permission granted by the user about web notification for the current application."><code>Notification.permission</code></a> 唯讀屬性，要傳送通知的 Apps 將檢查目前的授權狀態。此屬性共有 3 組參數：</p>
+<p>透過 <a href="/en-US/docs/Web/API/Notification.permission"><code>Notification.permission</code></a> 唯讀屬性，要傳送通知的 Apps 將檢查目前的授權狀態。此屬性共有 3 組參數：</p>
 
 <ul>
  <li><code>default：</code>使用者尚未給予任何權限 (因此不會顯示任何通知)</li>
@@ -27,7 +27,7 @@ translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 <p><strong>注意：</strong>Chrome 與 Safari 尚未建構 <code>permission</code> 屬性。</p>
 </div>
 
-<p>若使用者尚未給予權限，則 Apps 必須透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification.requestPermission" title="The requestPermission static method is used to ask the user for his permission to display a Notification to him."><code>Notification.requestPermission()</code></a> 函式讓使用者選擇，接著由此函式接收 1 組回呼 (Callback) 函式作為參數；而該回呼函式則提供使用者是否授權的資訊。</p>
+<p>若使用者尚未給予權限，則 Apps 必須透過 <a href="/en-US/docs/Web/API/Notification.requestPermission"><code>Notification.requestPermission()</code></a> 函式讓使用者選擇，接著由此函式接收 1 組回呼 (Callback) 函式作為參數；而該回呼函式則提供使用者是否授權的資訊。</p>
 
 <p>以下為啟動 Apps 時要求權限的常用範例：</p>
 
@@ -41,12 +41,12 @@ translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 });</pre>
 
 <div class="note">
-<p><strong>注意：</strong>Chrome 不允許於載入事件中呼叫 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification.requestPermission" title="The requestPermission static method is used to ask the user for his permission to display a Notification to him."><code>Notification.requestPermission()</code></a> (參閱 <a href="https://code.google.com/p/chromium/issues/detail?id=274284" title="https://code.google.com/p/chromium/issues/detail?id=274284">issue 274284</a>)。</p>
+<p><strong>注意：</strong>Chrome 不允許於載入事件中呼叫 <a href="/en-US/docs/Web/API/Notification.requestPermission"><code>Notification.requestPermission()</code></a> (參閱 <a href="https://code.google.com/p/chromium/issues/detail?id=274284">issue 274284</a>)。</p>
 </div>
 
 <h3 id="已安裝的_Apps">已安裝的 Apps</h3>
 
-<p>在安裝 Apps 之後，若於 <a href="https://developer.mozilla.org/zh-TW/docs/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/Manifest-840092-dup" title="/en-US/docs/Web/Apps/Manifest">Apps 的 manifest 檔案</a>中直接添加權限，即可省去再次向使用者要求權限的動作。</p>
+<p>在安裝 Apps 之後，若於 <a href="/zh-TW/docs/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/Manifest-840092-dup">Apps 的 manifest 檔案</a>中直接添加權限，即可省去再次向使用者要求權限的動作。</p>
 
 <pre class="brush: json">permissions: {
   "desktop-notification": {
@@ -56,23 +56,23 @@ translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 
 <h2 id="建立通知">建立通知</h2>
 
-<p>透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification" title="The Notification object is used to configure and display desktop notifications to the user."><code>Notification</code></a> 建構子 (Constructor) 即可建立通知。此建構子包含 1 組標題，可於通知內顯示；另有如 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification.icon" title="The icon property indicates the URL of the icon to use with the notification."><code>icon</code></a> 或文字 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification.body" title="The body property represents the text content of the body of the notification."><code>body</code></a><code> 等</code>數個選項，可強化通知的內容。</p>
+<p>透過 <a href="/en-US/docs/Web/API/Notification"><code>Notification</code></a> 建構子 (Constructor) 即可建立通知。此建構子包含 1 組標題，可於通知內顯示；另有如 <a href="/en-US/docs/Web/API/Notification.icon"><code>icon</code></a> 或文字 <a href="/en-US/docs/Web/API/Notification.body"><code>body</code></a><code> 等</code>數個選項，可強化通知的內容。</p>
 
-<p>在建立實體 (Instantiated) 之後，就會儘快顯示通知。若要追蹤通知的目前狀態，必須在 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification" title="The Notification object is used to configure and display desktop notifications to the user."><code>Notification</code></a> 的實體階層觸發 4 個事件：</p>
+<p>在建立實體 (Instantiated) 之後，就會儘快顯示通知。若要追蹤通知的目前狀態，必須在 <a href="/en-US/docs/Web/API/Notification"><code>Notification</code></a> 的實體階層觸發 4 個事件：</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/show" title="/en-US/docs/Web/Reference/Events/show">show</a>：對使用者顯示通知之後，隨即觸發</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/click" title="/en-US/docs/Web/Reference/Events/click">click</a>：使用者點擊通知之後，隨即觸發</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/close" title="/en-US/docs/Web/Reference/Events/close">close</a>：關閉通知之後，隨即觸發</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/error" title="/en-US/docs/Web/Reference/Events/error">error</a>：通知發生任何錯誤 (大多數是因為某種情況而未顯示通知)，隨即觸發</li>
+ <li><a href="/en-US/docs/Web/Reference/Events/show">show</a>：對使用者顯示通知之後，隨即觸發</li>
+ <li><a href="/en-US/docs/Web/Reference/Events/click">click</a>：使用者點擊通知之後，隨即觸發</li>
+ <li><a href="/en-US/docs/Web/Reference/Events/close">close</a>：關閉通知之後，隨即觸發</li>
+ <li><a href="/en-US/docs/Web/Reference/Events/error">error</a>：通知發生任何錯誤 (大多數是因為某種情況而未顯示通知)，隨即觸發</li>
 </ul>
 
-<p>而透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification.onshow" title="Specifies an event listener to receive show events. These events occur when a Notification is displayed."><code>onshow</code></a>、<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification.onclick" title="Specifies an event listener to receive click events. These events occur when the user clicks on a displayed Notification."><code>onclick</code></a>、<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification.onclose" title="Specifies an event listener to receive close events. These events occur when a Notification is closed."><code>onclose</code></a>，或 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification.onerror" title="Specifies an event listener to receive error events. These events occur when something goes wrong with a Notification (in many cases an error prevented the notification from being displayed)."><code>onerror</code></a> 等事件處理器 (Event handler)，即可追蹤這些事件。由於 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification" title="The Notification object is used to configure and display desktop notifications to the user."><code>Notification</code></a> 是繼承 <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget" title="EventTarget is a DOM interface implemented by objects that can receive DOM events and have listeners for them."><code>EventTarget</code></a> 而來，因此亦可使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener" title="addEventListener() registers the specified listener on the EventTarget it's called on. The event target may be an Element in a document, the Document itself, a Window, or any other object that supports events (such as XMLHttpRequest)."><code>addEventListener()</code></a> 函式。</p>
+<p>而透過 <a href="/en-US/docs/Web/API/Notification.onshow"><code>onshow</code></a>、<a href="/en-US/docs/Web/API/Notification.onclick"><code>onclick</code></a>、<a href="/en-US/docs/Web/API/Notification.onclose"><code>onclose</code></a>，或 <a href="/en-US/docs/Web/API/Notification.onerror"><code>onerror</code></a> 等事件處理器 (Event handler)，即可追蹤這些事件。由於 <a href="/en-US/docs/Web/API/Notification"><code>Notification</code></a> 是繼承 <a href="/en-US/docs/Web/API/EventTarget"><code>EventTarget</code></a> 而來，因此亦可使用 <a href="/en-US/docs/Web/API/EventTarget.addEventListener"><code>addEventListener()</code></a> 函式。</p>
 
 <div class="note">
 <p><strong>注意：</strong>Firefox 與 Safari 並未遵守 close 事件的規格。此規格雖然規定「僅限使用者能關閉通知」，但 Firefox 與 Safari 卻可於數分鐘後自動關閉通知。因此不一定是由使用者關閉通知。</p>
 
-<p>此規格並明確規定「應透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification.close" title="The close method is used to close a Notification that has been displayed."><code>Notification.close()</code></a> 函式，於應用程式層級完成自動關閉通知」。範例程式碼如下：</p>
+<p>此規格並明確規定「應透過 <a href="/en-US/docs/Web/API/Notification.close"><code>Notification.close()</code></a> 函式，於應用程式層級完成自動關閉通知」。範例程式碼如下：</p>
 
 <pre class="brush: js">var n = new Notification("Hi!");
 n.onshow = function () {
