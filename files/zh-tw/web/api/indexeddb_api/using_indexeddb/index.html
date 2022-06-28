@@ -6,7 +6,7 @@ translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 <p>IndexedDB提供了在瀏覽器上儲存保留資料的功能，藉由它，不論是線上或線下我們的應用都可以進行資料存取。</p>
 <h2 id="關於本文">關於本文</h2>
 <p>本文會帶領各位操作非同步IndexedDB的API，如果不知道甚麼是IndexedDB，請先看看<a href="/zh-TW/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB">"IndexedDB基本礎念"</a>。</p>
-<h2 id="pattern" name="pattern">基本操作步驟</h2>
+<h2 id="pattern">基本操作步驟</h2>
 <p>操作IndexedDB的基本步驟建議如下:</p>
 <ol>
  <li>開啟資料庫和交易(transaction)。</li>
@@ -22,7 +22,7 @@ translation_of: Web/API/IndexedDB_API/Using_IndexedDB
  </li>
 </ol>
 <p>好了，知道了上述概念後，我們可以來實際做些甚麼。</p>
-<h2 id="open" name="open">建立和結構資料庫</h2>
+<h2 id="open">建立和結構資料庫</h2>
 <p>由於IndexedDB的標準仍在演進，所以目前一些實作還需要加上瀏覽器前綴標示(如Gecko基礎瀏覽器的前綴標示為moz，WebKit基礎瀏覽器的前綴標示為webkit)，瀏覽器的實作也可能會有所差異，不過一旦共識標準達成，無瀏覽器前綴標示實作將出現。其實，Internet Explorer 10, Firefox 16, Chrome 24已經有了無瀏覽器前綴標示實作。</p>
 <h3 id="操作實驗性質的IndexedDB">操作實驗性質的IndexedDB</h3>
 <p>如果需要試驗瀏覽器的前綴標示，可以如下:</p>
@@ -388,7 +388,7 @@ function useDatabase(db) {
 <p>第一、每一筆交易結束後都應該要保持資料庫完整性，例如說，有一串使用者編輯項目清單正要存入資料庫，我們如果先在一個交易中清除舊清單，然後在另一個交易中存入新清單，那就會面臨到清除完就清單後，新清單存入交易還來不及回存，瀏覽器就關閉的風險，而這個時候資料庫裡面的清單資料將消失。所以比較好的做法應該是在同一筆交易中完成清除舊清單和存入新清單。</p>
 <p>第二、永遠不要在unload事件中執行資料庫交易，因為如果unload事件是觸發在瀏覽器關閉下，任何資料庫交易都不會發生，或許，瀏覽器(或分頁)打開時讀取資料庫，更新資料庫當使用者編輯資料，當瀏覽器(或分頁)關閉時儲存資料這樣的做法比較直覺，不過資料庫的操作是非同步進行地，所以瀏覽器關閉的執行會在資料庫操作前發生，進而中斷後續非同步的資料庫交易，所以在unload事件中執行資料庫交易是行不通地。</p>
 <p>事實上不論瀏覽器是否正常關閉，都沒有任何方法保證IndexedDB交易能夠順利完成，請見{{ bug(870645) }}。</p>
-<h2 id="Full_IndexedDB_example" name="Full_IndexedDB_example">完整IndexedDB範例</h2>
+<h2 id="Full_IndexedDB_example">完整IndexedDB範例</h2>
 <h3 id="HTML">HTML</h3>
 <pre class="brush: html">&lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"&gt;&lt;/script&gt;
 

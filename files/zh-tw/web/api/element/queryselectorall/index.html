@@ -5,11 +5,11 @@ translation_of: Web/API/Element/querySelectorAll
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<h2 id="Summary" name="Summary">總覽</h2>
+<h2 id="Summary">總覽</h2>
 
 <p>Returns a non-live <a href="/en-US/docs/DOM/NodeList"><code>NodeList</code></a> of all elements descended from the element on which it is invoked that matches the specified group of CSS selectors. (The base element itself is not included, even if it matches.)</p>
 
-<h2 id="Syntax" name="Syntax">表達式</h2>
+<h2 id="Syntax">表達式</h2>
 
 <pre class="syntaxbox"><em>elementList</em> = baseElement.querySelectorAll(<em>selectors</em>);</pre>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/Element/querySelectorAll
  <dd>is a group of <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">selectors</a> to match on or elements of the DOM. </dd>
 </dl>
 
-<h2 id="Example" name="Example">範例</h2>
+<h2 id="Example">範例</h2>
 
 <p>下例是從整個網頁的 body 中，取得所有 <code>p</code> 元素：</p>
 
@@ -40,7 +40,7 @@ let matches = el.querySelectorAll('div.highlighted &gt; p'); // return a NodeLis
 <pre class="brush: js">let matches = el.querySelectorAll('iframe[data-src]');
 </pre>
 
-<h2 id="Notes" name="Notes">註</h2>
+<h2 id="Notes">註</h2>
 
 <p>If the specified “selectors” are not found inside the DOM of the page, the method <code>queryselectorAll</code> returns an empty NodeList as specified below:</p>
 
@@ -106,7 +106,7 @@ inner.length; // 0
 
 <p>[1] Supported in Opera 15+ by enabling the "<strong>Enable &lt;style scoped&gt;</strong>" or "<strong>Enable experimental Web Platform features</strong>" flag in <code>chrome://flags</code>.</p>
 
-<h2 id="See_also" name="See_also">參見</h2>
+<h2 id="See_also">參見</h2>
 
 <ul>
  <li><a href="/en-US/docs/DOM/Document.querySelectorAll"><code>document.querySelectorAll</code></a></li>

@@ -28,7 +28,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>在这个教程目前为止，我们还没有创造任何表单，但我们已经在 Django 管理站点遇到这些表单了— 例如以下的撷图展示了一张表单，用于编辑我们的一个 <a href="/zh-CN/docs/Learn/Server-side/Django/Models">Book 书本</a>模型，包含一些选择列表以及文字编辑框。</p>
 
-<p><img alt="Admin Site - Book Add" src="https://mdn.mozillademos.org/files/13979/admin_book_add.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Admin Site - Book Add" src="admin_book_add.png"></p>
 
 <p>表单的使用可以很复杂！开发者需要为表单撰写 HTML 语法，在服务端验证输入的资料并经过充分的安全处理（并且可能在浏览器端也需要），回到表单呈现错误信息，告知使用者任何无效的栏位，当成功提交时处理资料，在最后用某些方式回应使用者表单提交成功的信息。经由提供一个框架，让你程序化定义表单以及其中的栏位，Django 表单接手处理了以上这些步骤的大量工作，比如使用这些物件，产生表单的 HTML 源码，并处理大量的验证、使用者互动的工作。</p>
 
@@ -38,7 +38,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>首先简要概述<a href="/zh-CN/docs/Learn/HTML/Forms">HTML 表单</a>。考虑一个简单的 HTML 表单，其中包含一个文本字段，用于输入某些“团队”的名称及其相关标签：</p>
 
-<p><img alt="Simple name field example in HTML form" src="https://mdn.mozillademos.org/files/14117/form_example_name_field.png" style="border-style: solid; border-width: 1px; display: block; height: 44px; margin: 0px auto; width: 399px;"></p>
+<p><img alt="Simple name field example in HTML form" src="form_example_name_field.png"></p>
 
 <p>表单在 HTML 中定义为<code>&lt;form&gt;...&lt;/form&gt;</code> 标记内的元素集合，包含至少一个<code>type="submit"</code>的<code>input</code> 输入元素。</p>
 
@@ -72,7 +72,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>下面显示了 Django 如何处理表单请求的流程图，从对包含表单的页面的请求开始（以绿色显示）。</p>
 
-<p><img alt="Updated form handling process doc." src="https://mdn.mozillademos.org/files/14205/Form%20Handling%20-%20Standard.png" style="display: block; height: 569px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="Updated form handling process doc." src="form_handling_-_standard.png"></p>
 
 <p>基于上图，Django 表单处理的主要内容是：</p>
 
@@ -434,15 +434,15 @@ def renew_book_librarian(request, pk):
 
 <p>如果您成功，默认表单将如下所示：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14209/forms_example_renew_default.png" style="border-style: solid; border-width: 1px; display: block; height: 292px; margin: 0px auto; width: 680px;"></p>
+<p><img src="forms_example_renew_default.png"></p>
 
 <p>输入无效值的表单将如下所示：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14211/forms_example_renew_invalid.png" style="border-style: solid; border-width: 1px; display: block; height: 290px; margin: 0px auto; width: 658px;"></p>
+<p><img src="forms_example_renew_invalid.png"></p>
 
 <p>所有包含续借链接的图书清单如下所示：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14207/forms_example_renew_allbooks.png" style="border-style: solid; border-width: 1px; display: block; height: 256px; margin: 0px auto; width: 613px;"></p>
+<p><img src="forms_example_renew_allbooks.png"></p>
 
 <h2 id="模型表单">模型表单</h2>
 
@@ -604,7 +604,7 @@ class AuthorDelete(DeleteView):
 
 <p>然后导航到作者创建页面： <a href="http://127.0.0.1:8000/catalog/author/create/">http://127.0.0.1:8000/catalog/author/create/</a>，它应该如下面的截图。</p>
 
-<p><img alt="Form Example: Create Author" src="https://mdn.mozillademos.org/files/14223/forms_example_create_author.png" style="border-style: solid; border-width: 1px; display: block; height: 184px; margin: 0px auto; width: 645px;"></p>
+<p><img alt="Form Example: Create Author" src="forms_example_create_author.png"></p>
 
 <p>输入字段的值，然后按“提交” <strong>Submit</strong>  ，保存作者记录。现在，您应该进入新作者的详细视图，其 URL 为 http://127.0.0.1:8000/catalog/author/10。</p>
 
@@ -612,7 +612,7 @@ class AuthorDelete(DeleteView):
 
 <p>最后，我们可以删除页面，方法是将删除，附加到作者详细信息视图 URL 的末尾（例如 http://127.0.0.1:8000/catalog/author/10/delete/）。Django 应该显示如下所示的删除页面。按 "是，删除" <strong>(Yes, delete)</strong>。删除记录，并将其带到所有作者的列表中。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14221/forms_example_delete_author.png" style="border-style: solid; border-width: 1px; display: block; height: 194px; margin: 0px auto; width: 561px;"></p>
+<p><img src="forms_example_delete_author.png"></p>
 
 <p> </p>
 
@@ -620,7 +620,7 @@ class AuthorDelete(DeleteView):
 
 <p>创建一些表单，来创建、编辑和删除书本记录<code>Book</code>。您可以使用与作者<code>Authors</code>完全相同的结构。如果您的 <strong>book_form.html</strong> 模板只是<strong> author_form.html</strong> 模板的复制重命名版本，则新的“创建图书”页面，将如下所示：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14225/forms_example_create_book.png" style="border-style: solid; border-width: 1px; display: block; height: 521px; margin: 0px auto; width: 595px;"></p>
+<p><img src="forms_example_create_book.png"></p>
 
 <ul>
 </ul>

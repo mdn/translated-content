@@ -1,6 +1,6 @@
 ---
 title: HTML 调试
-slug: learn/HTML/Introduction_to_HTML/Debugging_HTML
+slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 tags:
   - Debug
   - HTML
@@ -35,7 +35,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 
 <p>写代码通常都是按部就班的，但是一旦犯了错，可怕的代码问题就出现了：或彻底罢工，或得不到正确结果。比如，以下窗口显示了：用 <a href="https://www.rust-lang.org/">Rust</a> 编写的一个小程序在 {{glossary("compile", "编译")}} 时得到的出错信息：</p>
 
-<p><img alt="一个控制台窗口，显示了一个rust工程编译时的出错信息。（println宏少一个引号）" src="https://mdn.mozillademos.org/files/16527/03.gif" style="display: block; height: 463px; margin: 0px auto; width: 658px;">这里错误信息比较容易理解："unterminated double quote string"，即"双引号字符串未闭合"。错误列表中可以看到 <code>println!(Hello, world!");</code> 这里少一个双引号，然而当程序规模变大时，错误信息也会变得更复杂和更难解释，同时对于 Rust 新手而言，上述提示也是找不到北。</p>
+<p><img alt="一个控制台窗口，显示了一个rust工程编译时的出错信息。（println宏少一个引号）" src="error-message.png">这里错误信息比较容易理解："unterminated double quote string"，即"双引号字符串未闭合"。错误列表中可以看到 <code>println!(Hello, world!");</code> 这里少一个双引号，然而当程序规模变大时，错误信息也会变得更复杂和更难解释，同时对于 Rust 新手而言，上述提示也是找不到北。</p>
 
 <p>调试其实没有那么可怕，写代码和调试的关键其实是：熟悉语言本身和相关工具。</p>
 
@@ -63,19 +63,19 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 <p>现在来研究 HTML 代码的宽松特性。</p>
 
 <ol>
- <li>首先，下载并保存 <a href="https://github.com/roy-tian/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html">debug-example.html</a>。代码中故意留了一些错误，以便探究（这里的 HTML 标记写成了 <strong>糟糕的格式</strong>，与 <strong>良好的格式</strong> 相反）。</li>
- <li>下一步，在浏览器中打开，可以看到：<img alt="一个简单的HTML文档，但其中包含一些常见的HTML错误，比如：未关闭的元素、嵌套混乱的元素、未关闭的属性。" src="https://mdn.mozillademos.org/files/16528/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7_2019-02-22_06.28.07.png" style="display: block; margin: 0px auto;"></li>
+ <li>首先，下载并保存 <a href="https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html">debug-example.html</a>。代码中故意留了一些错误，以便探究（这里的 HTML 标记写成了<strong>糟糕的格式</strong>，与<strong>良好的格式</strong>相反）。</li>
+ <li>下一步，在浏览器中打开，可以看到：<img alt="一个简单的HTML文档，但其中包含一些常见的HTML错误，比如：未关闭的元素、嵌套混乱的元素、未关闭的属性。" src="badly-formed-html.png"></li>
  <li>看起来糟透了，我们到源代码中寻找原因（只列出 <code>body</code> 部分）：
-  <pre class="brush: html notranslate">&lt;h1&gt;HTML 调试示例&lt;/h1&gt;
+  <pre class="brush: html notranslate">&lt;h1&gt;HTML debugging examples&lt;/h1&gt;
 
-&lt;p&gt;什么使得 HTML 出错？
+&lt;p&gt;What causes errors in HTML?
 
 &lt;ul&gt;
-  &lt;li&gt;未闭合的元素：如果元素&lt;strong&gt;没有正确的结束标记，那么将影响下方整个区域，这不是你期望的。
+  &lt;li&gt;Unclosed elements: If an element is &lt;strong&gt;not closed properly, then its effect can spread to areas you didn't intend
 
-  &lt;li&gt;错误嵌套元素：正确进行嵌套是一项重要的编码习惯。&lt;strong&gt;重点（strong）&lt;em&gt;重点强调（strongly emphasised）？&lt;/strong&gt;这又是什么鬼？&lt;/em&gt;
+  &lt;li&gt;Badly nested elements: Nesting elements properly is also very important for code behaving correctly. &lt;strong&gt;strong &lt;em&gt;strong emphasized?&lt;/strong&gt; what is this?&lt;/em&gt;
 
-  &lt;li&gt;未闭合的属性：另一种 HTML 常见错误。来看一个示例：&lt;a href="https://www.mozilla.org/&gt;Mozilla 主页链接&lt;/a&gt;
+  &lt;li&gt;Unclosed attributes: Another common source of HTML problems. Let's look at an example: &lt;a href="https://www.mozilla.org/&gt;link to Mozilla homepage&lt;/a&gt;
 &lt;/ul&gt;
 </pre>
  </li>
@@ -88,7 +88,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
   </ul>
  </li>
  <li>下面暂时忽略源代码中的标记，先看一下浏览器渲染出的标记。打开浏览器的开发者工具。如果不太熟悉，请先阅读 <a href="/zh-CN/docs/Learn/Discover_browser_developer_tools">浏览器开发工具概览</a>。</li>
- <li>在 DOM 查看器中可以看到渲染的标记：<img alt="Firefox控制台中的HTML检查器，可标亮元素，（图中标亮了“什么使得HTML出错？”）可以看到浏览器自动补齐了&lt;/p>关闭标签" src="https://mdn.mozillademos.org/files/16529/html-inspector.png" style="display: block; height: 1214px; margin: 0px auto; width: 1700px;"></li>
+ <li>在 DOM 查看器中可以看到渲染的标记：<img alt="Firefox控制台中的HTML检查器，可标亮元素，（图中标亮了“什么使得HTML出错？”）可以看到浏览器自动补齐了&lt;/p>关闭标签" src="html-inspector.png"></li>
  <li>通过 DOM 查看器可以清楚地看到，浏览器已经尝试修补代码错误（我们尝试了 Firefox，其他现代浏览器也应给出同样结果）：
   <ul>
    <li>段落和列表元素加上了关闭标签。</li>
@@ -114,24 +114,24 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 
 <p>最好的方法就是让你的 HTML 页面通过 <a href="https://validator.w3.org/">Markup Validation Service</a>。由 W3C（制定 HTML、CSS 和其他网络技术标准的组织）创立并维护的标记验证服务。把一个 HTML 文档加载至本网页并运行，网页会返回一个错误报告。</p>
 
-<p><img alt="The HTML validator homepage" src="https://mdn.mozillademos.org/files/12441/validator.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="The HTML validator homepage" src="validator.png"></p>
 
 <p>网页可以接受网址、上传一个 HTML 文档，或者直接输入一些 HTML 代码。</p>
 
 <h3 id="主动学习：验证_HTML_文档">主动学习：验证 HTML 文档</h3>
 
-<p>不妨用上文的 <a href="https://github.com/roy-tian/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html">debug-example.html</a> 尝试一下：</p>
+<p>不妨用上文的 <a href="https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html">debug-example.html</a> 尝试一下：</p>
 
 <ol>
  <li>在浏览器中打开 <a href="https://validator.w3.org/">Markup Validation Service</a> 。</li>
- <li>选择 <a href="https://validator.w3.org/#validate_by_input">Validate by Direct Input</a> 标签。</li>
+ <li>选择 <a href="https://validator.w3.org/#validate_by_input">Validate by Direct Input</a> 标签。</li>
  <li>将整个示例文档的代码（而不仅仅是<code>body</code>部分）复制粘贴到正中的文本框内。</li>
  <li><em>点击 </em><strong>Check</strong><em> 按钮。</em></li>
 </ol>
 
 <p>将返回一个包含错误和其它信息的列表。</p>
 
-<p><img alt="W3C验证工具为本示例给出的验证结果。" src="https://mdn.mozillademos.org/files/16530/validation-result.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="W3C验证工具为本示例给出的验证结果。" src="validation-results.png"></p>
 
 <h4 id="错误信息分析">错误信息分析</h4>
 
@@ -156,7 +156,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 
 <p>所有错误都修复之后会得到以下输出：</p>
 
-<p><img alt="W3C站点上HTML通过验证的横幅" src="https://mdn.mozillademos.org/files/16531/valid-html-banner.png" style="display: block; height: 96px; margin: 0px auto; width: 996px;"></p>
+<p><img alt="W3C站点上HTML通过验证的横幅" src="valid-html-banner.png"></p>
 
 <h2 id="小结">小结</h2>
 

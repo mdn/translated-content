@@ -5,7 +5,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Create_author_form
 ---
 <p><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_author_form">Edi</a>本章節演示，如何為創建作者對象 <code>Author</code>定義一個頁面。</p>
 
-<h2 class="highlight-spanned" id="導入驗證和清理方法">導入驗證和清理方法</h2>
+<h2 id="導入驗證和清理方法">導入驗證和清理方法</h2>
 
 <p>為了在種類表單使用 <em>express</em> 驗證器，我們必須用 <em>require</em> 導入我們想用的函式。</p>
 
@@ -14,7 +14,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Create_author_form
 <pre class="brush: js line-numbers  language-js"><code class="language-js">const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');</code></pre>
 
-<h2 class="highlight-spanned" id="Controller—get_route">Controller—get route</h2>
+<h2 id="Controller—get_route">Controller—get route</h2>
 
 <p>Find the exported <code>author_create_get()</code> controller method and replace it with the following code. This simply renders the <strong>author_form.pug</strong> view, passing a <code>title</code> variable.</p>
 
@@ -23,7 +23,7 @@ exports.author_create_get = function(req, res, next) {
     res.render('author_form', { title: 'Create Author'});
 };</code></pre>
 
-<h2 class="highlight-spanned" id="Controller—post_route">Controller—post route</h2>
+<h2 id="Controller—post_route">Controller—post route</h2>
 
 <p>Find the exported <code>author_create_post()</code> controller method, and replace it with the following code.</p>
 
@@ -103,7 +103,7 @@ body('first_name').isLength({ min: 1 }).trim().withMessage('First name must be s
  </li>
 </ul>
 
-<h2 class="highlight-spanned" id="View">View</h2>
+<h2 id="View">View</h2>
 
 <p>Create <strong>/views/author_form.pug</strong> and copy in the text below.</p>
 
@@ -137,7 +137,7 @@ block content
 
 <p>The template above is missing a field for entering the <code>date_of_death</code>. Create the field following the same pattern as the date of birth form group!</p>
 
-<h2 class="highlight-spanned" id="What_does_it_look_like">What does it look like?</h2>
+<h2 id="What_does_it_look_like">What does it look like?</h2>
 
 <p>Run the application, open your browser to <a href="http://localhost:3000/">http://localhost:3000/</a>, then select the <em>Create new author </em>link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the author detail page.</p>
 

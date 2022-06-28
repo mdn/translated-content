@@ -5,7 +5,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_pag
 ---
 <p>作者列表頁面，需要呈現數據庫中所有作者的列表，有每位作者的名字，並連結到作者詳細內容頁面。出生與死亡日期應該在名字後面，並且在同一列。</p>
 
-<h2 class="highlight-spanned" id="Controller_控制器">Controller 控制器</h2>
+<h2 id="Controller_控制器">Controller 控制器</h2>
 
 <p>作者列表控制器函數，需要獲取所有作者實例的列表，然後將這些實例傳遞給模板進行渲染。</p>
 
@@ -26,7 +26,7 @@ exports.author_list = function(req, res, next) {
 
 <p>The method uses the model's <code>find()</code>, <code>sort()</code> and <code>exec()</code> functions to return all <code>Author</code> objects sorted by <code>family_name</code> in alphabetic order. The callback passed to the <code>exec()</code> method is called with any errors (or <code>null</code>) as the first parameter, or a list of all authors on success. If there is an error it calls the next middleware function with the error value, and if not it renders the <strong>author_list</strong>(.pug) template, passing the page <code>title</code> and the list of authors (<code>author_list</code>).</p>
 
-<h2 class="highlight-spanned" id="View">View</h2>
+<h2 id="View">View</h2>
 
 <p>Create <strong>/views/author_list.pug</strong> and replace its content with the text below.</p>
 
@@ -46,7 +46,7 @@ block content
 
 <p>The view follows exactly the same pattern as our other templates.</p>
 
-<h2 class="highlight-spanned" id="What_does_it_look_like">What does it look like?</h2>
+<h2 id="What_does_it_look_like">What does it look like?</h2>
 
 <p>Run the application and open your browser to <a href="http://localhost:3000/">http://localhost:3000/</a>. Then select the <em>All authors </em>link. If everything is set up correctly, the page should look something like the following screenshot.</p>
 

@@ -11,7 +11,7 @@ original_slug: Web/CSS/Common_CSS_Questions
 ---
 <p>
 </p>
-<h4 id=".E6.88.91.E7.9A.84_CSS_.E5.90.88.E4.B9.8E.E8.A6.8F.E6.A0.BC.EF.BC.8C.E4.BD.86.E7.B9.AA.E5.87.BA.E7.9A.84.E7.89.88.E9.9D.A2.E6.9C.89.E8.AA.A4" name=".E6.88.91.E7.9A.84_CSS_.E5.90.88.E4.B9.8E.E8.A6.8F.E6.A0.BC.EF.BC.8C.E4.BD.86.E7.B9.AA.E5.87.BA.E7.9A.84.E7.89.88.E9.9D.A2.E6.9C.89.E8.AA.A4"> 我的 CSS 合乎規格，但繪出的版面有誤 </h4>
+<h4 id=".E6.88.91.E7.9A.84_CSS_.E5.90.88.E4.B9.8E.E8.A6.8F.E6.A0.BC.EF.BC.8C.E4.BD.86.E7.B9.AA.E5.87.BA.E7.9A.84.E7.89.88.E9.9D.A2.E6.9C.89.E8.AA.A4"> 我的 CSS 合乎規格，但繪出的版面有誤 </h4>
 <p>如果想讓大部分的瀏覽器都能正確繪製標準 HTML/CSS 頁面，便須於 HTML 檔案中放上完整的正確 DOCTYPE。
 </p><p>新近瀏覽器都有兩種佈局模式：
 </p>
@@ -34,7 +34,7 @@ original_slug: Web/CSS/Common_CSS_Questions
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
 </pre>
-<h4 id="id_.E8.88.87_class_.E4.B9.8B.E9.96.93.E7.9A.84.E5.B7.AE.E5.88.A5" name="id_.E8.88.87_class_.E4.B9.8B.E9.96.93.E7.9A.84.E5.B7.AE.E5.88.A5"> <code>id</code> 與 <code>class</code> 之間的差別 </h4>
+<h4 id="id_.E8.88.87_class_.E4.B9.8B.E9.96.93.E7.9A.84.E5.B7.AE.E5.88.A5"> <code>id</code> 與 <code>class</code> 之間的差別 </h4>
 <p>HTML 元素都可有 <code>id</code> 及 <code>class</code> 屬性。<code>id</code> 屬性是讓你為元素命名的，整個頁面中的元素名稱也不應有重複；<code>class</code> 屬性則可將元素歸為某特定類別，通常也會有很多元素屬於同一種類別 (意即 <code>class</code> 屬性值相同。) CSS 可以讓你以 <code>id</code> 或 <code>class</code> 來決定某元素的樣式。
 </p><p>如果你想指定某特定單一元素的樣式，則應使用 <code>id</code>。
 </p>
@@ -43,15 +43,15 @@ original_slug: Web/CSS/Common_CSS_Questions
 </p><p>這方面的資訊亦可參考 <a href="zh_tw/CSS/Getting_Started/Selectors">CSS 選取符</a>。
 </p>
 <hr>
-<h4 id=".E6.81.A2.E5.BE.A9.E6.9F.90.E7.89.B9.E6.80.A7.E7.9A.84.E9.A0.90.E8.A8.AD.E5.80.BC" name=".E6.81.A2.E5.BE.A9.E6.9F.90.E7.89.B9.E6.80.A7.E7.9A.84.E9.A0.90.E8.A8.AD.E5.80.BC"> 恢復某特性的預設值 </h4>
+<h4 id=".E6.81.A2.E5.BE.A9.E6.9F.90.E7.89.B9.E6.80.A7.E7.9A.84.E9.A0.90.E8.A8.AD.E5.80.BC"> 恢復某特性的預設值 </h4>
 <p>CSS2 並不提供任何指定某特性預設值的方法，所以要恢復某特性預設值的唯一方法就是重新指定此值。此外你自己得知道預設值是什麼，因為 CSS 也沒有所謂 <i>default</i> 的關鍵字。
 </p><p>所以，以選取符撰寫樣式時須特別注意 (例如以標籤名稱 <code>p</code> 作為選取符)，或許可以用更明確的選取符 (例如 ID 或 class)。以標籤名稱作選取符茲事體大，一旦使用便將影響整個網頁，而且沒有自動恢復預設值的方法。
 </p><p>此外，由於 CSS 具<i>串聯</i>特性，指定選取符時通常越明確越好，以免把不相干的元素都牽扯進來。
 </p>
-<h4 id=".E7.9B.B8.E4.BE.9D.E6.A8.A3.E5.BC.8F" name=".E7.9B.B8.E4.BE.9D.E6.A8.A3.E5.BC.8F"> 相依樣式 </h4>
+<h4 id=".E7.9B.B8.E4.BE.9D.E6.A8.A3.E5.BC.8F"> 相依樣式 </h4>
 <p>CSS 並不支援「以另一個樣式規則為基準」的樣式設定法。 (參考 <a href="http://archivist.incutio.com/viewlist/css-discuss/2685">Eric Meyer 所寫、關於 CSS 工作小組的說明</a>。) 不過，你可以為某單一元素套上多重樣式，製作出類似效果。
 </p>
-<h4 id=".E5.A5.97.E7.94.A8.E5.A4.9A.E9.87.8D.E9.A1.9E.E5.88.A5" name=".E5.A5.97.E7.94.A8.E5.A4.9A.E9.87.8D.E9.A1.9E.E5.88.A5"> 套用多重類別 </h4>
+<h4 id=".E5.A5.97.E7.94.A8.E5.A4.9A.E9.87.8D.E9.A1.9E.E5.88.A5"> 套用多重類別 </h4>
 <p>你可以在 HTML 元素的 <code>class</code> 屬性裡以空白字元分隔填上多個樣式類別名稱，便能同時套用多重類別。
 </p>
 <pre>&lt;style type="text/css"&gt;
@@ -67,7 +67,7 @@ original_slug: Web/CSS/Common_CSS_Questions
 </pre>
 <p>若是這些規則中設定了同一種特性值，則會依序以明確性（specificity）、定義位置先後決定顯示方式，與<code>class</code> 屬性中的次序無關。
 </p>
-<h4 id=".E7.84.A1.E7.94.A8.E6.A8.A3.E5.BC.8F" name=".E7.84.A1.E7.94.A8.E6.A8.A3.E5.BC.8F"> 無用樣式 </h4>
+<h4 id=".E7.84.A1.E7.94.A8.E6.A8.A3.E5.BC.8F"> 無用樣式 </h4>
 <p>即使樣式規則已經正確設定完畢，還是可能為瀏覽器所忽略，此時通常是經過語法及優先權法則判斷後的正常現象。
 </p><p>以下是導致樣式被略過的常見情形：
 </p>
@@ -158,6 +158,6 @@ original_slug: Web/CSS/Common_CSS_Questions
 </pre>
 <p>如果樣式規則的選取符分成好幾段，計算方式就更為複雜一些。需要瞭解完整資訊者，請參考 <a href="http://www.w3.org/TR/CSS21/cascade.html#specificity">CSS 2.1 規格書的 6.4.3 一節</a>。
 </p>
-<h4 id="-moz-.2A_.E7.89.B9.E6.80.A7.E6.98.AF.E4.BB.80.E9.BA.BC.E7.8E.A9.E6.84.8F.EF.BC.9F" name="-moz-.2A_.E7.89.B9.E6.80.A7.E6.98.AF.E4.BB.80.E9.BA.BC.E7.8E.A9.E6.84.8F.EF.BC.9F"> -moz-* 特性是什麼玩意？ </h4>
+<h4 id="-moz-.2A_.E7.89.B9.E6.80.A7.E6.98.AF.E4.BB.80.E9.BA.BC.E7.8E.A9.E6.84.8F.EF.BC.9F"> -moz-* 特性是什麼玩意？ </h4>
 <p>請見 <a href="zh_tw/Mozilla_%e6%93%b4%e5%85%85%e7%9a%84_CSS">Mozilla 擴充的 CSS</a>。由於這些擴充規格不是 W3C 標準的一部分，因此並不建議使用。
 </p>

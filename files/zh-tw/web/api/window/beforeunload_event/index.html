@@ -16,7 +16,7 @@ original_slug: Web/API/WindowEventHandlers/onbeforeunload
 <p><strong>注意:</strong> 为了避免不必要的弹出窗口，除非页面已经有过互动，否则可能不会显示beforeunload创建的询问窗口。对于特定的浏览器列表，请参阅浏览器兼容性部分。</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">window.onbeforeunload = <var>funcRef</var></pre>
 
@@ -25,7 +25,7 @@ original_slug: Web/API/WindowEventHandlers/onbeforeunload
  <li>这个函数应该设置一个字符串到事件对象的 returnValue 属性上，且返回该字符串。</li>
 </ul>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <pre class="brush:js">window.onbeforeunload = function(e) {
   var dialogText = 'Dialog text here';
@@ -54,7 +54,7 @@ original_slug: Web/API/WindowEventHandlers/onbeforeunload
 
 {{Compat("api.WindowEventHandlers.onbeforeunload")}}
 
-<h2 id="See also" name="See also">See also</h2>
+<h2 id="See also">See also</h2>
 
 <ul>
  <li><a href="http://msdn.microsoft.com/en-us/library/ms536907(VS.85).aspx">MSDN: onbeforeunload event</a></li>

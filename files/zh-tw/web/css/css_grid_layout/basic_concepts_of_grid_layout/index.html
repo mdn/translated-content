@@ -74,7 +74,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>在它下面的直接子元素，現在都是格線單元了。從網路瀏覽器來看，各單元變成格線的前後，似乎沒什麼不同，因為目前格線只有建立一個格線列，來放所有的格線單元。這時候，你會發現<a href="/zh-TW/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">格線檢測器</a>相當好用。如果在 Firefox 檢查這個示例的格線，你會發現在 <code>grid</code> 值旁邊，有一個小圖標。點選這個小圖標，瀏覽器視窗的元素，就會被一個圖層覆蓋。</p>
 
-<p><img alt="Using the Grid Highlighter in DevTools to view a grid" src="https://mdn.mozillademos.org/files/14631/1-grid-inspector.png" style="height: 753px; width: 900px;"></p>
+<p><img alt="Using the Grid Highlighter in DevTools to view a grid" src="1-grid-inspector.png"></p>
 
 <p>在理解並與 CSS 格線共事時，這個工具能幫你視覺化理解，格線到底怎麼做動的。</p>
 
@@ -84,7 +84,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>我們在格線裡透過 {{cssxref("grid-template-columns")}} 與 {{cssxref("grid-template-rows")}} 屬性定義了行與列。它們也定義了格線軌道。<em>格線軌道</em>是在格線的兩個欄位之間的空隙。下圖就會看到軌道的高亮：就在格線裡面的第一行。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14637/1_Grid_Track.png" style="height: 261px; width: 392px;"></p>
+<p><img src="1_grid_track.png"></p>
 
 <p>I can add to our earlier example by adding the <code>grid-template-columns</code> property, then defining the size of the column tracks.</p>
 
@@ -327,7 +327,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>It should be noted that when we define a grid we define the grid tracks, not the lines. Grid then gives us numbered lines to use when positioning items. In our three column, two row grid we have four column lines.</p>
 
-<p><img alt="Diagram showing numbered grid lines." src="https://mdn.mozillademos.org/files/14761/1_diagram_numbered_grid_lines.png" style="height: 456px; width: 764px;"></p>
+<p><img alt="Diagram showing numbered grid lines." src="1_diagram_numbered_grid_lines.png"></p>
 
 <p>Lines are numbered according to the writing mode of the document. In a left-to-right language, line 1 is on the left-hand side of the grid. In a right-to-left language, it is on the right-hand side of the grid. Lines can also be named, and we will look at how to do this in a later guide in this series.</p>
 
@@ -397,13 +397,13 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>A <em>grid cell</em> is the smallest unit on a grid, conceptually it is like a table cell. As we saw in our earlier examples, once a grid is defined on a parent the child items will lay themselves out once in each cell of the defined grid. In the below image I have highlighted the first cell of the grid.</p>
 
-<p><img alt="The first cell of the grid highlighted" src="https://mdn.mozillademos.org/files/14643/1_Grid_Cell.png" style="height: 233px; width: 350px;"></p>
+<p><img alt="The first cell of the grid highlighted" src="1_grid_cell.png"></p>
 
 <h2 id="Grid_areas">Grid areas</h2>
 
 <p>Items can span one or more cells both by row or by column, and this creates a <em>grid area</em>. Grid areas have to be rectangular – it isn’t possible to create an L-shaped area for example. The highlighted grid area spans two row and two column tracks.</p>
 
-<p><img alt="A grid area" src="https://mdn.mozillademos.org/files/14645/1_Grid_Area.png" style="height: 238px; width: 357px;"></p>
+<p><img alt="A grid area" src="1_grid_area.png"></p>
 
 <h2 id="Gutters">Gutters</h2>
 
@@ -471,7 +471,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<p><img alt="Nested grid in flow" src="https://mdn.mozillademos.org/files/14641/1_Nested_Grids_in_flow.png" style="height: 512px; width: 900px;"></p>
+<p><img alt="Nested grid in flow" src="1_nested_grids_in_flow.png"></p>
 
 <p>If I set <code>box1</code> to <code>display: grid</code> I can give it a track definition and it too will become a grid, the items then lay out on this new grid.</p>
 

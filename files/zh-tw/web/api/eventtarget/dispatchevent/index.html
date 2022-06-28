@@ -7,7 +7,7 @@ translation_of: Web/API/EventTarget/dispatchEvent
 
 <p>於此 {{domxref("EventTarget")}} 物件上觸發特定的 {{domxref("Event")}} 物件實體，相當於依照註冊的順序呼叫它的 {{domxref("EventListener")}}。一般事件處理規則（包含捕捉（capturing）和可選的冒泡（bubbling）階段）也適用於用 <code>dispatchEvent()</code> 手動觸發事件。</p>
 
-<h2 id="Syntax" name="Syntax">語法</h2>
+<h2 id="Syntax">語法</h2>
 
 <pre class="syntaxbox"><em>cancelled</em> = !<em>target</em>.dispatchEvent(<em>event</em>)
 </pre>
@@ -38,20 +38,20 @@ translation_of: Web/API/EventTarget/dispatchEvent
 
 <p>事件處理器（event handlers）會在一群呼叫堆（nested callstack）上執行：事件的呼叫方（caller）會先由處理器會阻擋暫停執行，直到事件完成才繼續執行，但是要注意的是，事件若發生異常並不會傳回給呼叫方。</p>
 
-<h2 id="Notes" name="Notes">注意</h2>
+<h2 id="Notes">注意</h2>
 
 <p><code>dispatchEvent</code> 是「建立→初始化→觸發」的最後一步驟。這些步驟是用來觸發事件，讓事件完成。事件有多種建立方式，例如用 {{domxref("​document.createEvent")}} 並用 <a href="/en-US/docs/DOM/event.initEvent">initEvent</a> 或其他特殊 methods ，像是 <a href="/en-US/docs/DOM/event.initMouseEvent">initMouseEvent</a> 或 <a href="/en-US/docs/DOM/event.initUIEvent">initUIEvent</a> 來初始化。</p>
 
 <p>詳請可參考《{{domxref("Event")}}》。</p>
 
-<h2 id="Example" name="Example">範例</h2>
+<h2 id="Example">範例</h2>
 
 <p>請參閱《<a href="/zh-TW/docs/Web/Guide/Events/Creating_and_triggering_events">建立或觸發事件</a>》。</p>
 
-<h2 id="Specification" name="Specification">規格</h2>
+<h2 id="Specification">規格</h2>
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">瀏覽器支援度</h2>
+<h2 id="Browser_Compatibility">瀏覽器支援度</h2>
 
 {{Compat("api.EventTarget.dispatchEvent")}}

@@ -101,7 +101,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <h2 id="dragfeedback" name="dragfeedback">设置拖拽反馈图像</h2>
 
-<p>当拖拽发生时，会生成拖拽目标的一个半透明图像（触发"{event("dragstart")}}" 事件的元素），并在拖拽过程中跟踪鼠标指针。这个图像是自动创建的，所以你不需要自己创建它。但是，你可以使用 {{domxref("DataTransfer.setDragImage","setDragImage()")}} 方法来自定义拖拽反馈图像。</p>
+<p>当拖拽发生时，会生成拖拽目标的一个半透明图像（触发"{{event("dragstart")}}" 事件的元素），并在拖拽过程中跟踪鼠标指针。这个图像是自动创建的，所以你不需要自己创建它。但是，你可以使用 {{domxref("DataTransfer.setDragImage","setDragImage()")}} 方法来自定义拖拽反馈图像。</p>
 
 <pre class="brush: js notranslate">event.dataTransfer.setDragImage(image, xOffset, yOffset);
 </pre>
@@ -232,7 +232,7 @@ function doDragOver(event) {
 
 <p>对于更复杂的视觉效果，你可以在 <code>{{event("dragenter")}}</code> 事件中执行其他操作。例如在放置位置插入一个元素，这样的元素可以表示一个插入标记，或表示被拖拽的元素移动到了新位置。为此你可以在 <code>{{event("dragenter")}}</code> 事件中创建一个新元素，然后将其插入到文档中。</p>
 
-<p><code>{event("dragover")}}</code> 事件在鼠标指向的元素上触发。自然，你可能需要将插入标记移动到事件发生的位置附近。你可以使用事件的 {{domxref("MouseEvent.clientX","clientX")}} 和 {{domxref("MouseEvent.clientY","clientY")}} 属性，还有其他鼠标事件的属性来确定鼠标的位置。</p>
+<p><code>{{event("dragover")}}</code> 事件在鼠标指向的元素上触发。自然，你可能需要将插入标记移动到事件发生的位置附近。你可以使用事件的 {{domxref("MouseEvent.clientX","clientX")}} 和 {{domxref("MouseEvent.clientY","clientY")}} 属性，还有其他鼠标事件的属性来确定鼠标的位置。</p>
 
 <p>最后，<code>{{event("dragleave")}}</code> 事件会在拖拽离开元素时在该元素上触发。这是移除插入标记或高亮的好时机。你不需要取消这个事件（译者注：即不需要使用 {{domxref("Event.preventDefault","preventDefault()")}} ）。使用 <code>-moz-drag-over</code> 伪类设置的高亮或其他视觉效果会被自动移除。即使拖拽被取消了，<code>{{event("dragleave")}}</code> 事件也会照常触发，所以你可以确保在这个事件中对任何插入标记的清除操作都一定可以完成。</p>
 
@@ -244,7 +244,7 @@ function doDragOver(event) {
 
 <p>在 <code>{{event("drop")}}</code> 事件中，你应该取回放置的数据并将其插入到放置的位置。你可以使用 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性来确定需要哪种拖拽操作。</p>
 
-<p>在所有拖拽操作相关的事件中，事件的 <code>domxref("DragEvent.dataTransfer","dataTransfer")}}</code> 属性会一直保存着拖拽数据。可使用 {{domxref("DataTransfer.getData","getData()")}} 方法来取回数据。</p>
+<p>在所有拖拽操作相关的事件中，事件的 <code>{{domxref("DragEvent.dataTransfer","dataTransfer")}}</code> 属性会一直保存着拖拽数据。可使用 {{domxref("DataTransfer.getData","getData()")}} 方法来取回数据。</p>
 
 <pre class="notranslate">function onDrop(event) {
   const data = event.dataTransfer.getData("text/plain");
@@ -305,7 +305,7 @@ function doDragOver(event) {
 
 <p>放置可发生在同一窗口或另一个应用程序中。两种情况都会触发 <code>{{event("dragend")}}</code> 事件。事件的 {{domxref("MouseEvent.screenX","screenX")}} 和 {{domxref("MouseEvent.screenY","screenY")}} 属性会被设置为放置发生时鼠标在屏幕上的坐标。</p>
 
-<p><code>{event("dragend")}}</code> 事件结束后，整个拖放操作就完成了。</p>
+<p><code>{{event("dragend")}}</code> 事件结束后，整个拖放操作就完成了。</p>
 
 <p>[1] 在 Gecko 内核中，如果源头节点在拖拽过程中（如放置或 {{event("dragover")}} 中）被移动或移除了，则不会触发 {{event("dragend")}} 事件。参见 <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=460801" title="New D&amp;D API: dragend is not dispatched if the source node was moved or removed during the drag session">bug 460801</a>。</p>
 

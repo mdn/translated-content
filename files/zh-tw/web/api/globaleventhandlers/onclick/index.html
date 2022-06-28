@@ -14,7 +14,7 @@ translation_of: Web/API/GlobalEventHandlers/onclick
 
 <div class="note"><strong>注意:</strong> 當使用 <code>click</code> 事件觸發動作時，同時考慮將此動作加到 <code>keydown</code> 事件中，讓沒使用滑鼠或使用觸控螢幕的使用者也可以進行此動作。</div>
 
-<h2 id="Syntax" name="Syntax">語法</h2>
+<h2 id="Syntax">語法</h2>
 
 <pre class="syntaxbox"><var>element</var>.onclick = <var>functionRef</var>;
 </pre>
@@ -23,7 +23,7 @@ translation_of: Web/API/GlobalEventHandlers/onclick
 
 <p>傳入事件處理函式（event handler function）的唯一引數為 {{domxref("MouseEvent")}} 物件。在這函式中，<code>this</code> 為觸發此事件的元件。</p>
 
-<h2 id="Example" name="Example">範例</h2>
+<h2 id="Example">範例</h2>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -60,7 +60,7 @@ translation_of: Web/API/GlobalEventHandlers/onclick
 <pre class="brush:js">p.onclick = function(event) { alert("moot!"); };
 </pre>
 
-<h2 id="Notes" name="Notes">備註</h2>
+<h2 id="Notes">備註</h2>
 
 <p>使用者點擊元件時會觸發 <code>click</code> 事件。<code>click</code> 事件發生在 <code>mousedown</code> 及 <code>mouseup</code> 事件之後。</p>
 

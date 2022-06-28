@@ -141,7 +141,7 @@ ctx.fillRect(0, 0, width, height);</pre>
 
 <p>如上文所讲，所有绘画操作都离不开 {{domxref("CanvasRenderingContext2D")}} 对象（这里叫做 <code>ctx</code>）。许多操作都需要提供坐标来指示绘图的确切位置。画布左上角的坐标是 (0, 0)，横坐标（x）轴向右延伸，纵坐标（y）轴向下延伸。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="canvas_default_grid.png"></p>
 
 <p>绘图操作可基于原始矩形模型实现，也可通过追踪一个特定路径后填充颜色实现。下面分别讲解。</p>
 
@@ -588,7 +588,7 @@ var posX = 0;</pre>
 
   <p>我们来解释一下“精灵图序列”（我们借鉴了麦克托马斯的 <a href="http://atomicrobotdesign.com/blog/htmlcss/create-a-sprite-sheet-walk-cycle-using-using-css-animation/">使用 CSS 动画创建人物行走的精灵图</a>）。图片如下：</p>
 
-  <p><img alt="" src="https://mdn.mozillademos.org/files/14847/walk-right.png" style="display: block; margin: 0 auto;"></p>
+  <p><img src="walk-right.png"></p>
 
   <p>图中包含六个精灵，它们组成了一趟完整的行走序列。每个精灵的尺寸为 102 × 148 像素。为了整齐的显示一个精灵，可以通过 <code>drawImage()</code> 来从序列中裁切出单独的精灵并隐藏其他部分，就像上文中操作 Firefox 图标的方法。切片的 X 坐标应为 102 的倍数，Y 坐标恒为 0。切片尺寸恒为 102 × 148 像素。</p>
  </li>

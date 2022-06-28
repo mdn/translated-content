@@ -7,15 +7,15 @@ translation_of: Web/API/Event/preventDefault
 
 <div> </div>
 
-<h2 id="Summary" name="Summary">概要</h2>
+<h2 id="Summary">概要</h2>
 
 <p>如果事件可以被取消，就取消事件（即取消事件的預設行為）。但不會影響事件的傳遞，事件仍會繼續傳遞。</p>
 
-<h2 id="Syntax" name="Syntax">語法</h2>
+<h2 id="Syntax">語法</h2>
 
 <pre class="syntaxbox"><em>event</em>.preventDefault();</pre>
 
-<h2 id="Example" name="Example">範例</h2>
+<h2 id="Example">範例</h2>
 
 <p>Toggling a checkbox is the default action of clicking on a checkbox. This example demonstrates how to prevent that from happening:</p>
 
@@ -87,7 +87,7 @@ function checkName(evt) {
 
 <p>{{ EmbedLiveSample('preventDefault_invalid_text', '', '', '') }}</p>
 
-<h2 id="Notes" name="Notes">備註</h2>
+<h2 id="Notes">備註</h2>
 
 <p>Calling <code>preventDefault</code> during any stage of event flow cancels the event, meaning that any default action normally taken by the implementation as a result of the event will not occur.</p>
 
@@ -99,6 +99,6 @@ function checkName(evt) {
 
 <p><code>preventDefault()</code> 方法不會停止事件傳遞。若要停止事件繼續傳遞，可以使用 {{domxref("Event.stopPropagation()")}} 方法。</p>
 
-<h2 id="Specifications" name="Specifications">規範</h2>
+<h2 id="Specifications">規範</h2>
 
 {{Specifications}}

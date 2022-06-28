@@ -15,7 +15,7 @@ translation_of: Web/API/Node/insertBefore
 
 <p>If the given child is a {{domxref("DocumentFragment")}}, the entire contents of the {{domxref("DocumentFragment")}} are moved into the child list of the specified parent node.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">var <em>insertedNode</em> = <em>parentNode</em>.insertBefore(<em>newNode</em>, <em>referenceNode</em>);
 </pre>
@@ -26,7 +26,7 @@ translation_of: Web/API/Node/insertBefore
 <p><em><code>referenceNode</code></em> <strong>並非</strong>可選擇的參數 -- 一定要傳入一個<code>節點</code>或是   <code>null</code>。若是傳入失敗或不正確的參數，可能會依不同的瀏覽器版本而有<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=119489">不同的</a><a href="https://code.google.com/p/chromium/issues/detail?id=419780">行為</a>。</p>
 </div>
 
-<h2 id="Returns" name="Returns">Returns</h2>
+<h2 id="Returns">Returns</h2>
 
 <p>會回傳新加入的子節點。若該值(<code>newNode</code>)是{{domxref("DocumentFragment")}}, 則回傳空的 {{domxref("DocumentFragment")}}。</p>
 
@@ -66,7 +66,7 @@ parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
  <li><code>referenceNode</code> 參考節點。The node before which <code>newNode</code> is inserted.</li>
 </ul>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush:html">&lt;div id="parentElement"&gt;
   &lt;span id="childElement"&gt;foo bar&lt;/span&gt;
@@ -94,7 +94,7 @@ parentDiv.insertBefore(sp1, sp2);
 
 <p>If <code>sp2</code> does not have a next sibling, then it must be the last child — <code>sp2.nextSibling</code> returns <code>null</code>, and <code>sp1</code> is inserted at the end of the child node list (immediately after <code>sp2</code>).</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>Insert an element before the first child element, using the <a href="/en-US/docs/DOM/Node.firstChild">firstChild</a> property.</p>
 
@@ -112,15 +112,15 @@ parentElement.insertBefore(newElement, theFirstChild);
 
 <p>When the element does not have a first child, then <code>firstChild</code> is <code>null</code>. The element is still appended to the parent, after the last child. Since the parent element did not have a first child, it did not have a last child either. Consequently, the new element is the only element, after insertion.</p>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
+<h2 id="Browser_Compatibility">Browser compatibility</h2>
 
 <p>{{Compat("api.Node.insertBefore")}}</p>
 
-<h2 id="Specifications" name="Specifications">Specifications</h2>
+<h2 id="Specifications">Specifications</h2>
 
 {{Specifications}}
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("Node.removeChild()")}}</li>

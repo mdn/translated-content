@@ -6,7 +6,7 @@ original_slug: Web/API/WindowEventHandlers/onpopstate
 ---
 <div>{{ApiRef}}</div>
 
-<h2 id="Summary" name="Summary">摘要</h2>
+<h2 id="Summary">摘要</h2>
 
 <p>視窗上 popstate 事件的事件處理器。</p>
 
@@ -16,7 +16,7 @@ original_slug: Web/API/WindowEventHandlers/onpopstate
 
 <p>在頁面載入時，不同瀏覽器具有不同的 <code>popstate</code> 行為。Chrome 與 Safari 會在頁面載入時觸發 <code>popstate</code> 事件，但 Firefox 則不會。</p>
 
-<h2 id="Syntax" name="Syntax">語法</h2>
+<h2 id="Syntax">語法</h2>
 
 <pre class="syntaxbox">window.onpopstate = <var>funcRef</var>;
 </pre>
@@ -25,7 +25,7 @@ original_slug: Web/API/WindowEventHandlers/onpopstate
  <li><var>funcRef</var> 是一個事件處理函數</li>
 </ul>
 
-<h2 id="The_popstate_event" name="The_popstate_event">popstate 事件</h2>
+<h2 id="The_popstate_event">popstate 事件</h2>
 
 <p>以下範例，位於 <code><var>http://example.com/example.html</var></code> 並執行下列程式的頁面，將會產生如標示的對話框：</p>
 
@@ -43,13 +43,13 @@ history.go(2);  // 跳出 "location: http://example.com/example.html?page=3, sta
 
 <p>請注意，雖然原始的歷史紀錄（<code><var>http://example.com/example.html</var></code>）沒有關聯的 state 物件，在我們第二次呼叫 <code style="font-size: 14px; line-height: inherit;">hitsory.back() 時仍然會觸發</code><code style="font-size: 14px; line-height: inherit;"> </code><code style="font-size: 14px; line-height: inherit;">popstate</code> 事件。</p>
 
-<h2 id="Specification" name="Specification">標準</h2>
+<h2 id="Specification">標準</h2>
 
 <ul>
  <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate">HTML5 popstate event</a></li>
 </ul>
 
-<h2 id="See_also" name="See_also">請參照</h2>
+<h2 id="See_also">請參照</h2>
 
 <ul>
  <li>{{domxref("window.history")}}</li>
