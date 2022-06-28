@@ -65,7 +65,7 @@ Le code JavaScript `main.js` est composé de trois méthodes.
 
 ### Initialisation du lecteur avec effet d'incrustation (_chroma-key_)
 
-La métode `doLoad()` est appelée quand le document XHTML se charge. Cette méthode sert à initialiser chaque variable nécessaire au code traitant l'incrustation (_chroma-key_), ainsi qu'à associer un écouteur d'évènement qui détectera le moment où l'utilisateur lancera la vidéo.
+La méthode `doLoad()` est appelée quand le document XHTML se charge. Cette méthode sert à initialiser chaque variable nécessaire au code traitant l'incrustation (_chroma-key_), ainsi qu'à associer un écouteur d'évènement qui détectera le moment où l'utilisateur lancera la vidéo.
 
 ```js
 var processor;
