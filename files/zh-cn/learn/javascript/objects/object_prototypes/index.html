@@ -166,11 +166,11 @@ doSomething.prototype.foo:  bar</pre>
 
 <p>在 JavaScript 控制台输入 "<code>person1.</code>"，你会看到，浏览器将根据这个对象的可用的成员名称进行自动补全：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13853/object-available-members.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="object-available-members.png"></p>
 
 <p>在这个列表中，你可以看到定义在 <code>person1</code> 的原型对象、即 <code>Person()</code> 构造器中的成员—— <code>name</code>、<code>age</code>、<code>gender</code>、<code>interests</code>、<code>bio</code>、<code>greeting</code>。同时也有一些其他成员—— <code>watch</code>、<code>valueOf</code> 等等——这些成员定义在 <code>Person()</code> 构造器的原型对象、即 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> 之上。下图展示了原型链的运作机制。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13891/MDN-Graphics-person-person-object-2.png" style="display: block; height: 150px; margin: 0px auto; width: 700px;"></p>
+<p><img src="mdn-graphics-person-person-object-2.png"></p>
 
 <p>那么，调用 <code>person1</code> 的“实际定义在 <code>Object</code> 上”的方法时，会发生什么？比如：</p>
 

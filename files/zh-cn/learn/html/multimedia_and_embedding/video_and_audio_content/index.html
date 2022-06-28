@@ -63,7 +63,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <p>已嵌入视频文件的网页样式如下：</p>
 
-<p><img alt="A simple video player showing a video of a small white rabbit" src="https://mdn.mozillademos.org/files/12794/simple-video.png" style="display: block; height: 592px; margin: 0px auto; width: 589px;"></p>
+<p><img alt="A simple video player showing a video of a small white rabbit" src="simple-video.png"></p>
 
 <p>你可以点击<a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html">这里</a>查看网页，或者点击<a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html">这里</a>查看源代码。</p>
 
@@ -77,7 +77,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <p>一个格式为 WebM 的电影包含视频轨道，音频轨道和文本轨道，其中视频轨道包含一个主视频轨道和一个可选的 Angle 轨道；音频轨道包含英语和西班牙语的音频轨道，还有一个英语评论的音频轨道；文字轨道包含英语和西班牙语的字幕轨道，如下图所示：</p>
 
-<p><img alt="Diagram conceptualizing the contents of a media file at the track level." src="https://mdn.mozillademos.org/files/16898/ContainersAndTracks.svg"></p>
+<p><img alt="Diagram conceptualizing the contents of a media file at the track level." src="containersandtracks.png"></p>
 
 <p>为了编解码器（codec）编码媒体，容器中的音频和视频轨道以适合的格式保存。音频轨道和视频轨道使用不同的格式。每个音频轨道都使用<a href="/zh-CN/docs/Web/Media/Formats/Audio_codecs">音频编解码器</a>进行编码，而视频轨道则使用（您可能已经猜到了）<a href="/zh-CN/docs/Web/Media/Formats/Video_codecs">视频编解码器</a>进行编码。如前所述，不同的浏览器支持不同的视频和音频格式，以及不同的容器格式（如 MP3、MP4 和 WebM，这些格式又可以包含不同类型的视频和音频）。</p>
 
@@ -142,7 +142,9 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <p>这串代码将会给我们呈现出如下页面：</p>
 
-<p><img alt="A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!" src="https://mdn.mozillademos.org/files/12796/extra-video-features.png" style="display: block; height: 731px; margin: 0px auto; width: 653px;">新的特性：</p>
+<p><img alt="A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!" src="poster_screenshot_updated.png"></p>
+  
+<p>新的特性：</p>
 
 <dl>
  <dt>{{htmlattrxref("width","video")}} 和 {{htmlattrxref("height","video")}}</dt>
@@ -181,7 +183,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <p>这串代码将会产生如下的效果：</p>
 
-<p><img alt="A simple audio player with a play button, timer, volume control, and progress bar" src="https://mdn.mozillademos.org/files/12798/audio-player.png" style="display: block; height: 413px; margin: 0px auto; width: 626px;"></p>
+<p><img alt="A simple audio player with a play button, timer, volume control, and progress bar" src="audio-player.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: 你可以点击这里<a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">查看</a>以上例子，或者点击<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">这里</a>查看源代码。</p>
@@ -274,7 +276,7 @@ mediaElem.audioTracks.onaddtrack = function(event) {
 
 <p>上面这串代码会显示一段带有字幕的视频，如下：</p>
 
-<p><img alt='Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="https://mdn.mozillademos.org/files/7887/video-player-with-captions.png" style="display: block; height: 365px; margin: 0px auto; width: 593px;"></p>
+<p><img alt='Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="video-player-with-captions.png"></p>
 
 <p>如果你想了解更多细节，你可以阅读 <a href="/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>。在 Github 上你可以找到与本文相关的样例，他们由 Ian Devlin 编写，点击<a href="https://iandevlin.github.io/mdn/video-player-with-captions/">这里</a>可以查看该样例，或者点击<a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">这里</a>查看源代码。这个样例使用了 JavaScript 代码，它使得用户可以选择不同的字幕。注意，若想要显示字幕，你需要点击 "CC" 按钮，并且选择一种语言 — English, Deutsch, 或 Español。</p>
 

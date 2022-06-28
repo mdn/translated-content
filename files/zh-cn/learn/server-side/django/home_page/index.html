@@ -35,7 +35,7 @@ original_slug: learn/Server-side/Django/主页构建
  <li><strong>Templates</strong> 在 View 视图中进行数据渲染的时候使用。</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13931/basic-django.png" style="display: block; margin: 0px auto;"></p>
+<p><img src="basic-django.png"></p>
 
 <p>正如你将在下一节中看到的，我们将要显示 5 个页面，这在一篇文章中是很重要的。因此，本文的大部分内容将重点介绍如何实现主页（我们将在随后的文章中介绍其他页面）。这应该让您对 URL 映射器，视图和模型在实践中如何工作有一个很好的端到端的了解。</p>
 
@@ -323,7 +323,7 @@ def index(request):
 
 <p>运行 (<code>python3 manage.py runserver</code>) 和在浏览器中打开 <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>. I 如果一切都正确设置，当当当当。</p>
 
-<p><img alt="Index page for LocalLibrary website" src="https://mdn.mozillademos.org/files/14045/index_page_ok.png" style="border-style: solid; border-width: 1px; display: block; height: 356px; margin: 0px auto; width: 874px;"></p>
+<p><img alt="Index page for LocalLibrary website" src="index_page_ok.png"></p>
 
 <div class="note">
 <p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意：</strong>由于尚未定义这些网页的网址，视图和模板，因此您将无法使用“ <strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>所有图书</strong>和<strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>所有作者”</strong>链接（目前我们刚刚在<code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: normal; font-weight: normal; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>base_generic.html</code>模板中插入了这些链接的占位符）</p>
