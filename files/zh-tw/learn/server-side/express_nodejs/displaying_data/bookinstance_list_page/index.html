@@ -5,7 +5,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_li
 ---
 <p>接下來，我們將實作圖書館中所有書本實例 (<code>BookInstance</code>) 的列表頁面。這個頁面需要包含與每個 <code>BookInstance</code> (鏈接到其詳細信息頁面) 關聯的書本 <code>Book</code> 標題，以及 <code>BookInstance</code>模型中的其他信息，包含每個副本的狀態，印記和唯一ID。唯一ID的文字，應該鏈接到 <code>BookInstance</code> 詳細信息頁面。</p>
 
-<h2 class="highlight-spanned" id="Controller_控制器">Controller 控制器</h2>
+<h2 id="Controller_控制器">Controller 控制器</h2>
 
 <p><code>BookInstance</code>列表控制器函數，需要獲取所有書本實例的列表，填充關聯的書本信息，然後將列表傳遞給模板以進行呈現。</p>
 
@@ -28,7 +28,7 @@ exports.bookinstance_list = function(req, res, next) {
 
 <p>成功時，傳遞給查詢的回調，會呈現 <strong>bookinstance_list</strong> (.pug)模板，並將標題<code>title</code>和書籍實例列表 <code>bookinstance_list</code>作為變量傳遞。</p>
 
-<h2 class="highlight-spanned" id="View_視圖">View 視圖</h2>
+<h2 id="View_視圖">View 視圖</h2>
 
 <p>創建 <strong>/views/bookinstance_list.pug </strong>，並複制貼上底下的文字。</p>
 
@@ -57,7 +57,7 @@ block content
 
 <p> </p>
 
-<h2 class="highlight-spanned" id="它看起來像是">它看起來像是?</h2>
+<h2 id="它看起來像是">它看起來像是?</h2>
 
 <p>運行本應用，打開瀏覽器訪問 <a href="http://localhost:3000/">http://localhost:3000/</a>，然後選擇 All book-instances 連結。假如每個東西都設定正確了，你的網站看起來應該像是底下的截圖。</p>
 

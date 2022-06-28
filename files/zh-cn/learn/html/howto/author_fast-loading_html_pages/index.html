@@ -14,9 +14,9 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>页面加载性能的优化不仅仅是针对那些带宽有限的拨号上网或移动设备用户需要看的内容，对于提供给宽带用户访问的内容同样重要并且可以导致巨大的提升，哪怕对于那些拥有最快网速的访客。</p>
 
-<h2 id="Tips" name="Tips">Tips</h2>
+<h2 id="Tips">Tips</h2>
 
-<h3 id=".E5.87.8F.E5.B0.8F.E9.A1.B5.E9.9D.A2.E7.9A.84.E5.A4.A7.E5.B0.8F" name=".E5.87.8F.E5.B0.8F.E9.A1.B5.E9.9D.A2.E7.9A.84.E5.A4.A7.E5.B0.8F">减小页面的大小</h3>
+<h3 id=".E5.87.8F.E5.B0.8F.E9.A1.B5.E9.9D.A2.E7.9A.84.E5.A4.A7.E5.B0.8F">减小页面的大小</h3>
 
 <p>直至今日，页面的大小仍是页面加载性能的最重要因素。</p>
 
@@ -24,7 +24,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>诸如 <a href="http://tidy.sourceforge.net/">HTML Tidy</a> 这类的工具可以从有效的 HTML 源文件中自动截去行首空格和额外的空行，其它工具则可以通过重新格式化源代码来压缩 JavaScript 或者通过混淆源码将长标识符替换为短标识符来减小文件大小。</p>
 
-<h3 id="Minimize_the_number_of_files" name="Minimize_the_number_of_files">最小化文件数量</h3>
+<h3 id="Minimize_the_number_of_files">最小化文件数量</h3>
 
 <p>减少一个页面引用的文件数量可以降低在下载一个页面的过程中需要的<a href="/en-US/docs/HTTP">HTTP</a>请求数量，从而减少这些请求的收发时间。</p>
 
@@ -44,7 +44,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
  <li><a href="https://www.incapsula.com/cdn-guide/what-is-cdn-how-it-works.html">Understanding CDNs</a></li>
 </ul>
 
-<h3 id="Reduce_domain_lookups" name="Reduce_domain_lookups">减少域名查找</h3>
+<h3 id="Reduce_domain_lookups">减少域名查找</h3>
 
 <p>每个独立的域名都会消耗 DNS 查找的时间，页面加载时间会随着独立域名数量、CSS 链接数量、JavaScript 还有图片资源的数量增加而增加。</p>
 
@@ -53,7 +53,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 <ul>
 </ul>
 
-<h3 id="Cache_reused_content" name="Cache_reused_content">缓存重用的内容</h3>
+<h3 id="Cache_reused_content">缓存重用的内容</h3>
 
 <p>确保任何内容可以被缓存，并且拥有一个合理的有效期。</p>
 
@@ -70,17 +70,17 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
  <li><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html">Caching in HTTP</a></li>
 </ol>
 
-<h3 id="Optimally_order_the_components_of_the_page" name="Optimally_order_the_components_of_the_page">高效地排列页面组件</h3>
+<h3 id="Optimally_order_the_components_of_the_page">高效地排列页面组件</h3>
 
 <p>在页面最初显示时，会首先下载页面内容以及所需的 CSS 和 JavaScript，这样在页面加载时用户可以最快获得外观的反馈。由于内容通常都是文本，有利于在传输过程中压缩，因此给用户以更快的响应。</p>
 
 <p>页面中任何具有动态特性的资源需要在页面被完全加载后才可以使用，所以最好在初始化时关闭动态特性（disable dynamic features），等页面加载完后再打开它。这样 JavaScript 就会在网页内容之后才加载，有助于提升页面加载的整体表现。</p>
 
-<h3 id="Reduce_the_number_of_inline_scripts" name="Reduce_the_number_of_inline_scripts">减少内联脚本的数量</h3>
+<h3 id="Reduce_the_number_of_inline_scripts">减少内联脚本的数量</h3>
 
 <p>内联脚本在页面加载过程中消耗很多资源，因为解析器认为内联脚本会改变页面结构。通常，尽量少的使用内联脚本和减少用<code>document.write()</code>来输出内容，在一定情况下可以加速整体页面的载入。现在浏览器中一般使用现代的 W3C DOM 方法操作页面内容，优于使用<code>document.write()</code>的传统方法。</p>
 
-<h3 id="Use_modern_CSS_and_valid_markup" name="Use_modern_CSS_and_valid_markup">使用现代 CSS 和合法标记</h3>
+<h3 id="Use_modern_CSS_and_valid_markup">使用现代 CSS 和合法标记</h3>
 
 <p>使用现代 CSS 减少标记（markup）的用量，可以减少对（spacer）图片的需求。在布局方面，图片通常可以用风格化的文本（text）来替代，这样会“节省”许多资源。</p>
 
@@ -88,7 +88,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>再者，合法标记可以让那些给你的网站做预处理的工具功能最大化。例如，<a href="http://tidy.sourceforge.net/">HTML Tidy</a> 可以移除空白（whitespace）和可选的末尾标记（ending tags）；然而，在有严重的错误标记的网页中这些工具便无法工作。</p>
 
-<h3 id="Chunk_your_content" name="Chunk_your_content">给内容分块</h3>
+<h3 id="Chunk_your_content">给内容分块</h3>
 
 <p>使用 table 布局是一种不应该再采用的传统方法，而应运用 <a href="/zh-CN/docs/Learn/CSS/CSS_layout/Floats">floats</a>, <a href="/zh-CN/docs/Learn/CSS/CSS_layout/Positioning">positioning</a>, <a href="/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox">flexbox</a>, 或 <a href="/zh-CN/docs/Learn/CSS/CSS_layout/Grids">grids</a> 来布局。</p>
 
@@ -120,7 +120,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>Large images cause your page to take more time to load. Consider compressing your images before adding them to your page, using compression features built into image-manipulation tools such as Photoshop, or using a specialized tool such as <a href="https://compressjpeg.com/">Compress Jpeg</a> or <a href="https://tinypng.com/">Tiny PNG</a>,.</p>
 
-<h3 id="Specify_sizes_for_images_and_tables" name="Specify_sizes_for_images_and_tables">指定图像和表格的大小</h3>
+<h3 id="Specify_sizes_for_images_and_tables">指定图像和表格的大小</h3>
 
 <p>如果浏览器可以即时决定你的照片（images）和表格（tables）宽高，它在展示网页时就不必进行内容重新排版。这不仅可以加速网页的显示，还能在网页完成加载的过程中防止恼人的布局改变。因此，图片的 <code>height</code> 和 <code>width</code> 应尽可能确定下来。</p>
 
@@ -130,7 +130,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>用 <code><a href="/en-US/docs/Web/HTML/Element/col">&lt;col&gt;</a></code> 和 <code><a href="/en-US/docs/Web/HTML/Element/colgroup">&lt;colgroup&gt;</a></code> 元素来指定列宽。</p>
 
-<h3 id="Choose_your_user_agent_requirements_wisely" name="Choose_your_user_agent_requirements_wisely">合理的选择 user-agent</h3>
+<h3 id="Choose_your_user_agent_requirements_wisely">合理的选择 user-agent</h3>
 
 <p>为使页面设计得到极大提升，应确保在工程中指定一个合理的 user-agent。不要奢求你的内容在所有浏览器中都完美的展现，特别是在那些低版本的浏览器中。</p>
 
@@ -146,7 +146,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>注意：这些特性在页面第一次加载时会有所帮助，你可以这样用但不能指靠它在所有的浏览器中起作用。如果你遵循指南（guidelines）写出了非常优秀的 JavaScript 代码，也不必要再去修改它了。</p>
 
-<h2 id="Example_page_structure" name="Example_page_structure">页面结构示例</h2>
+<h2 id="Example_page_structure">页面结构示例</h2>
 
 <p>· <code>{{htmlelement('html')}}</code></p>
 
@@ -189,7 +189,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
  </dd>
 </dl>
 
-<h2 id="Related_Links" name="Related_Links">相关链接</h2>
+<h2 id="Related_Links">相关链接</h2>
 
 <ul>
  <li>书籍： <a href="http://www.websiteoptimization.com/">"Speed Up Your Site" by Andy King</a></li>
@@ -199,7 +199,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 </ul>
 
 <div class="originaldocinfo">
-<h3 id=".E6.96.87.E7.AB.A0.E5.8E.9F.E5.A7.8B.E4.BF.A1.E6.81.AF" name=".E6.96.87.E7.AB.A0.E5.8E.9F.E5.A7.8B.E4.BF.A1.E6.81.AF">文章原始信息</h3>
+<h3 id=".E6.96.87.E7.AB.A0.E5.8E.9F.E5.A7.8B.E4.BF.A1.E6.81.AF">文章原始信息</h3>
 
 <ul>
  <li>作者：Bob Clary, Technology Evangelist, Netscape Communications</li>

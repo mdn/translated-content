@@ -120,7 +120,7 @@ Elles utilisent généralement un premier paramètre indiquant le nom de l'élé
     </tr>
     <tr>
       <td>
-        <code><a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a></code>
+        <code><a href="https://github.com/mdn/yari/blob/main/kumascript/macros/httpheader.ejs">HTTPHeader</a></code>
       </td>
       <td>
         <a href="/fr/docs/Web/HTTP/Headers">Référence des en-têtes HTTP</a> (/Web/HTTP/Headers).

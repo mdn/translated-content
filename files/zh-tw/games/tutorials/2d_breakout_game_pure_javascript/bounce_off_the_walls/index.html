@@ -25,7 +25,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_
 
 <pre class="brush: js">ctx.arc(x, y, ballRadius, 0, Math.PI*2);</pre>
 
-<h2 id="從頂部和底部反彈" style='margin: 0px 0px 12px; padding: 0px; border: 0px; word-wrap: break-word; font-family: "Open Sans", Arial, sans-serif; font-weight: 700; line-height: 1; font-size: 2.143rem; letter-spacing: -1px; color: rgb(77, 78, 83); font-style: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'>從頂部和底部反彈</h2>
+<h2 id="從頂部和底部反彈">從頂部和底部反彈</h2>
 
 <p>總共有四面牆壁會與球發生碰撞 — 首先處理上方的牆壁，我們在每個影格檢查球是否有接觸到 Canvas 上方壁面 —如果是的話，我們將扭轉球的運動，所以它將開始在相反的方向移動，並保持在可見邊界。記住坐標係從左上角開始，我們可以得到這樣的東西：</p>
 
@@ -50,7 +50,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_
 
 <p>如果兩個語句中的一個是真的，則反轉球的運動。</p>
 
-<h2 id="從左邊和右邊反彈" style='margin: 0px 0px 12px; padding: 0px; border: 0px; word-wrap: break-word; font-family: "Open Sans", Arial, sans-serif; font-weight: 700; line-height: 1; font-size: 2.143rem; letter-spacing: -1px; color: rgb(77, 78, 83); font-style: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'><strong style="border: 0px; margin: 0px; padding: 0px;">從左邊和右邊反彈</strong></h2>
+<h2 id="從左邊和右邊反彈"><strong style="border: 0px; margin: 0px; padding: 0px;">從左邊和右邊反彈</strong></h2>
 
 <p>我們有頂部和底部邊緣覆蓋，所以讓我們想想左，右的。它實際上是非常相似的，你所要做的就是重複X而不是Y的陳述：</p>
 
@@ -64,7 +64,7 @@ if(y + dy &gt; canvas.height || y + dy &lt; 0) {
 
 <p>在這一點上你應該插入上面的代碼塊到draw()功能，在關閉括號。</p>
 
-<h2 id="球不斷地消失在牆上！" style='margin: 0px 0px 12px; padding: 0px; border: 0px; word-wrap: break-word; font-family: "Open Sans", Arial, sans-serif; font-weight: 700; line-height: 1; font-size: 2.143rem; letter-spacing: -1px; color: rgb(77, 78, 83); font-style: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'>球不斷地消失在牆上！</h2>
+<h2 id="球不斷地消失在牆上！">球不斷地消失在牆上！</h2>
 
 <p>測試你的代碼在這一點上，你會留下深刻的印象-現在我們有一個球，反彈了所有四個邊緣的畫布！然而，我們有另一個問題-當球擊中每一個牆，它下沉到它略有改變方向：</p>
 

@@ -66,7 +66,7 @@ original_slug: Updating_extensions_for_Firefox_3
 
 <p>在进入主题之前，首先要提示一下：如果你的扩展所需要的唯一改变只是安装文件中的<code>maxVersion</code>信息，并且你的扩展所在的主机是<a href="https://addons.mozilla.org">addons.mozilla.org</a>，事实上你不需要上传你的新的版本的扩展！只需要在 AMO 中使用开发者控制面板调整<code>maxVersion</code>。通过这种方式你可以避免你的扩展被再次审核。</p>
 
-<h3 id=".E7.AC.AC.E4.B8.80.E6.AD.A5_.E5.8D.87.E7.BA.A7.E5.AE.89.E8.A3.85.E6.96.87.E4.BB.B6" name=".E7.AC.AC.E4.B8.80.E6.AD.A5:_.E5.8D.87.E7.BA.A7.E5.AE.89.E8.A3.85.E6.96.87.E4.BB.B6">第一步：升级安装文件</h3>
+<h3 id=".E7.AC.AC.E4.B8.80.E6.AD.A5_.E5.8D.87.E7.BA.A7.E5.AE.89.E8.A3.85.E6.96.87.E4.BB.B6">第一步：升级安装文件</h3>
 
 <p>第一步，当然，对于大多数的扩展也仅需要这一步——更新安装文件<code>install.rdf</code>，声明扩展兼容 Firefox 3。</p>
 
@@ -91,19 +91,19 @@ original_slug: Updating_extensions_for_Firefox_3
 
 <div class="blockIndicator note"><strong>Note:</strong> If your extension still uses an <code><a href=""cn/Install.js"">Install.js</a></code> script instead of an <a href=""cn/Install_Manifests"">install manifest</a>, you need to make the transition to an install manifest now. Firefox 3 no longer supports <code>install.js</code> scripts in XPI files.</div>
 
-<h4 id="Add_localizations_to_the_install_manifest" name="Add_localizations_to_the_install_manifest">Add localizations to the install manifest</h4>
+<h4 id="Add_localizations_to_the_install_manifest">Add localizations to the install manifest</h4>
 
 <p>Firefox 3 supports new properties in the install manifest to specify localized descriptions. The old methods still work however the new allow Firefox to pick up the localizations even when the add-on is disabled and pending install. See <a href="/cn/Localizing_extension_descriptions">Localizing extension descriptions</a> for more details.</p>
 
-<h3 id="Step_2_.E7.A1.AE.E4.BF.9D.E6.8F.90.E4.BE.9B.E5.AE.89.E5.85.A8.E7.9A.84.E6.9B.B4.E6.96.B0" name="Step_2:_.E7.A1.AE.E4.BF.9D.E6.8F.90.E4.BE.9B.E5.AE.89.E5.85.A8.E7.9A.84.E6.9B.B4.E6.96.B0">Step 2: 确保提供安全的更新</h3>
+<h3 id="Step_2_.E7.A1.AE.E4.BF.9D.E6.8F.90.E4.BE.9B.E5.AE.89.E5.85.A8.E7.9A.84.E6.9B.B4.E6.96.B0">Step 2: 确保提供安全的更新</h3>
 
 <p>If you are hosting addons yourself and not on a secure add-on hosting provider like <a href="https://addons.mozilla.org">addons.mozilla.org</a> then you must provide a secure method of updating your add-on. This will either involve hosting your updates on an SSL website, or using cryptographic keys to sign the update information. Read <a href="/cn/Extension_Versioning,_Update_and_Compatibility#Securing_Updates">Securing Updates</a> for more information.</p>
 
-<h3 id="Step_3_Deal_with_changed_APIs" name="Step_3:_Deal_with_changed_APIs">Step 3: Deal with changed APIs</h3>
+<h3 id="Step_3_Deal_with_changed_APIs">Step 3: Deal with changed APIs</h3>
 
 <p>Several APIs have been changed in significant ways. The most significant of these, which will likely affect a large number of extensions, are:</p>
 
-<h4 id="DOM" name="DOM">DOM</h4>
+<h4 id="DOM">DOM</h4>
 
 
 <p>将外部文档的节点插入当前文档之前，你必须使用 <a href="/zh-CN/docs/Web/API/Document/importNode"><code>document.importNode()</code></a> 从外部文档导入源节点，或者使用 <a href="/zh-CN/docs/Web/API/Document/adoptNode"><code>document.adoptNode()</code></a>导入源节点，
@@ -112,15 +112,15 @@ original_slug: Updating_extensions_for_Firefox_3
     <p>即使你不执行导入动作，就执行插入外部文档中的节点.Firefox 目前也不会报错 (如果严格按标准执行，很多已有的网站都无法正常运行).
     我们鼓励开发者严格按标准修改自己已有的不符合上述标准的代码。</p>
 
-<h4 id="Bookmarks__History" name="Bookmarks_&amp;_History">Bookmarks &amp; History</h4>
+<h4 id="Bookmarks__History">Bookmarks &amp; History</h4>
 
 <p>If your extension accesses bookmark or history data in any way, it will need substantial work to be compatible with Firefox 3. The old APIs for accessing this information have been replaced by the new <a href="/cn/Places">Places</a> architecture. See the <a href="/cn/Places_migration_guide">Places migration guide</a> for details on updating your existing extension to use the Places API.</p>
 
-<h4 id="Download_Manager" name="Download_Manager">Download Manager</h4>
+<h4 id="Download_Manager">Download Manager</h4>
 
 <p>The Download Manager API has changed slightly due to the transition from an RDF data store to using the <a href="/cn/Storage">Storage</a> API. This should be a pretty easy transition to make. In addition, the API for monitoring download progress has changed to support multiple download manager listeners. See <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager">nsIDownloadManager</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadProgressListener">nsIDownloadProgressListener</a></code>, and <a href="/cn/Monitoring_downloads">Monitoring downloads</a> for more information.</p>
 
-<h4 id="Password_Manager" name="Password_Manager">Password Manager</h4>
+<h4 id="Password_Manager">Password Manager</h4>
 
 <p>If your extension accesses user login information using the Password Manager, it will need to be updated to use the new Login Manager API.</p>
 
@@ -132,15 +132,15 @@ original_slug: Updating_extensions_for_Firefox_3
 
 <p>You can also override the built-in password manager storage if you want to provide your own password storage implementation in your extensions. See <a href="/cn/Creating_a_Login_Manager_storage_module">Creating a Login Manager storage module</a> for details.</p>
 
-<h4 id="Popups_.28Menus.2C_Context_Menus.2C_Tooltips_and_Panels.29" name="Popups_.28Menus.2C_Context_Menus.2C_Tooltips_and_Panels.29">Popups (Menus, Context Menus, Tooltips and Panels)</h4>
+<h4 id="Popups_.28Menus.2C_Context_Menus.2C_Tooltips_and_Panels.29">Popups (Menus, Context Menus, Tooltips and Panels)</h4>
 
 <p>The XUL Popup system was heavily modified in Firefox 3. The Popup system includes main menus, context menus and popup panels. A guide to <a href="/cn/XUL/PopupGuide">using Popups</a> has been created, detailing how the system works. One thing to note is that <code>popup.<code><a href="/zh-CN/docs/Mozilla/Tech/XUL/Method/showPopup">showPopup</a></code></code> has been deprecated in favor of new <code>popup.<code><a href="/zh-CN/docs/Mozilla/Tech/XUL/Method/openPopup">openPopup</a></code></code> and <code>popup.<code><a href="/zh-CN/docs/Mozilla/Tech/XUL/Method/openPopupAtScreen">openPopupAtScreen</a></code></code>.</p>
 
-<h4 id="Autocomplete" name="Autocomplete">Autocomplete</h4>
+<h4 id="Autocomplete">Autocomplete</h4>
 
 <p>The <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteController">nsIAutoCompleteController</a></code> interface's <code><a href="/cn/NsIAutoCompleteController#handleEnter.28.29">handleEnter()</a></code> method has been changed to accept an argument that indicates whether the text was selected from the autocomplete popup or by the user pressing enter after typing text.</p>
 
-<h4 id="DOMParser" name="DOMParser">DOMParser</h4>
+<h4 id="DOMParser">DOMParser</h4>
 
 <ul>
  <li>When a <code>DOMParser</code> is instantiated, it inherits the calling code's principal and the <code>documentURI</code> and <code>baseURI</code> of the window the constructor came from.</li>
@@ -154,7 +154,7 @@ original_slug: Updating_extensions_for_Firefox_3
  <li>If you initialize a <code>DOMParser</code> using a contract, such as by calling <code>createInstance()</code>, and you don't call the <code>DOMParser</code>'s <code>init()</code> method, attempting to initiate a parsing operation will automatically create and initialize the <code>DOMParser</code> with a null principal and <code>null</code> pointers for <code>documentURI</code> and <code>baseURI</code>.</li>
 </ul>
 
-<h4 id="Removed_interfaces" name="Removed_interfaces">Removed interfaces</h4>
+<h4 id="Removed_interfaces">Removed interfaces</h4>
 
 <p>The following interfaces were removed from Gecko 1.9, which drives Firefox 3. If your extension makes use of any of these, you'll need to update your code:</p>
 
@@ -166,7 +166,7 @@ original_slug: Updating_extensions_for_Firefox_3
  <li><code>nsICloseAllWindows</code> (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=386200">bug 386200</a>)</li>
 </ul>
 
-<h3 id="Step_4_Check_for_relevant_chrome_changes" name="Step_4:_Check_for_relevant_chrome_changes">Step 4: Check for relevant chrome changes</h3>
+<h3 id="Step_4_Check_for_relevant_chrome_changes">Step 4: Check for relevant chrome changes</h3>
 
 <p>There has been a minor change to the chrome that may require changes in your code. A new <code>vbox</code> has been added, called "browser-bottombox", which encloses the find bar and status bar at the bottom of the browser window. Although this doesn't affect the appearance of the display, it may affect your extension if it overlays chrome relative to these elements.</p>
 
@@ -195,7 +195,7 @@ original_slug: Updating_extensions_for_Firefox_3
 
 <div class="blockIndicator note"><strong>Note:</strong> This change is effective for Firefox 3 beta 4 and the pre-beta 4 nightlies.</div>
 
-<h3 id="Other_changes" name="Other_changes">其他方面的修改</h3>
+<h3 id="Other_changes">其他方面的修改</h3>
 
 <p><em>Add simple changes you had to make while updating your extension to work with Firefox 3 here.</em></p>
 

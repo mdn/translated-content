@@ -10,7 +10,7 @@ original_slug: WebSockets/WebSockets_reference/WebSocket
 
 <p><code>WebSocket</code> 物件提供了建立、管理 <a href="/zh_tw/WebSockets">WebSocket</a> 伺服器連線的 API，它也有在連線中傳送、接收資料的能力。</p>
 
-<h2 id="Method_overview" name="Method_overview">方法一覽</h2>
+<h2 id="Method_overview">方法一覽</h2>
 
 <table>
  <tbody>
@@ -23,7 +23,7 @@ original_slug: WebSockets/WebSockets_reference/WebSocket
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">屬性</h2>
+<h2 id="Attributes">屬性</h2>
 
 <table>
  <tbody>
@@ -85,7 +85,7 @@ original_slug: WebSockets/WebSockets_reference/WebSocket
  </tbody>
 </table>
 
-<h2 id="Constants" name="Constants">常數</h2>
+<h2 id="Constants">常數</h2>
 
 <h3 id="就緒狀態常數">就緒狀態常數</h3>
 
@@ -121,9 +121,9 @@ original_slug: WebSockets/WebSockets_reference/WebSocket
  </tbody>
 </table>
 
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
-<h3 id="close()" name="close()">close()</h3>
+<h3 id="close()">close()</h3>
 
 <p>關閉 WebSocket 連線／連線嘗試，若連線已為 <code>CLOSED</code>，此方法沒有作用。</p>
 
@@ -133,7 +133,7 @@ original_slug: WebSockets/WebSockets_reference/WebSocket
 );
 </pre>
 
-<h6 id="Parameters" name="Parameters">參數</h6>
+<h6 id="Parameters">參數</h6>
 
 <dl>
  <dt><code>code</code> {{ optional_inline() }}</dt>
@@ -151,7 +151,7 @@ original_slug: WebSockets/WebSockets_reference/WebSocket
  <dd><code>reason</code> 字串太長或是含有未配對的代理對。</dd>
 </dl>
 
-<h3 id="send()" name="send()">send()</h3>
+<h3 id="send()">send()</h3>
 
 <p>透過 WebSocket 連線傳輸資料至伺服器。</p>
 
@@ -168,7 +168,7 @@ void send(
 );
 </pre>
 
-<h6 id="Parameters" name="Parameters">參數</h6>
+<h6 id="Parameters">參數</h6>
 
 <dl>
  <dt><code>data</code></dt>
@@ -190,7 +190,7 @@ void send(
 <p>Gecko <code>send()</code> 方法的實作與 Gecko 6.0 的規範有差別。Gecko 回傳一個 <code>boolean</code> 以表示連線是否仍處於開啟狀態（且資料成功隊列／傳輸）。另外，此時此刻，Gecko 不支援 <code><a href="/zh_tw/JavaScript_typed_arrays/ArrayBuffer">ArrayBuffer</a></code> 或 {{ domxref("Blob") }} 作為資料形態。</p>
 </div>
 
-<h2 id="See_also" name="See_also">參見</h2>
+<h2 id="See_also">參見</h2>
 
 <ul>
  <li><a href="/zh_tw/WebSockets/Writing_WebSocket_client_applications">製作 WebSocket 客戶端應用程式</a></li>

@@ -16,7 +16,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Compositing
 <p>在<a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations">之前的例子</a>里面，我们总是将一个图形画在另一个之上，对于其他更多的情况，仅仅这样是远远不够的。比如，对合成的图形来说，绘制顺序会有限制。不过，我们可以利用 <code>globalCompositeOperation</code> 属性来改变这种状况。此外，<code>clip</code>属性允许我们隐藏不想看到的部分图形。</p>
 </div>
 
-<h2 id="globalCompositeOperation" name="globalCompositeOperation"><code>globalCompositeOperation</code></h2>
+<h2 id="globalCompositeOperation"><code>globalCompositeOperation</code></h2>
 
 <p>我们不仅可以在已有图形后面再画新图形，还可以用来遮盖指定区域，清除画布中的某些部分（清除区域不仅限于矩形，像{{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}方法做的那样）以及更多其他操作。</p>
 
@@ -29,7 +29,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Compositing
 
 <p>{{EmbedLiveSample("合成示例", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}</p>
 
-<h2 id="Clipping_paths" name="Clipping_paths">裁切路径</h2>
+<h2 id="Clipping_paths">裁切路径</h2>
 
 <p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png" style="float: right;">裁切路径和普通的 canvas 图形差不多，不同的是它的作用是遮罩，用来隐藏不需要的部分。如右图所示。红边五角星就是裁切路径，所有在路径以外的部分都不会在 canvas 上绘制出来。</p>
 
@@ -46,7 +46,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Compositing
 
 <p>默认情况下，canvas 有一个与它自身一样大的裁切路径（也就是没有裁切效果）。</p>
 
-<h3 id="A_clip_example" name="A_clip_example"><code>clip</code> 的例子</h3>
+<h3 id="A_clip_example"><code>clip</code> 的例子</h3>
 
 <p>这个例子，我会用一个圆形的裁切路径来限制随机星星的绘制区域。</p>
 

@@ -11,7 +11,7 @@ translation_of: Web/API/Document/adoptNode
 
 <p><strong>从 Gecko 1.9 (Firefox 3) 开始支持</strong></p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><var>node</var> = <em>document</em>.adoptNode(<var>externalNode</var>);
 </pre>
@@ -23,7 +23,7 @@ translation_of: Web/API/Document/adoptNode
  <dd>将要从外部文档导入的节点。</dd>
 </dl>
 
-<h2 id="Example" name="Example">例子</h2>
+<h2 id="Example">例子</h2>
 
 <pre class="brush: js">// 该函数用来从本文档的第一个 iframe 中获取第一个 element 元素，
 // 并插入到当前文档树中
@@ -66,7 +66,7 @@ document.getElementById("move").onclick = getEle
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<h2 id="Notes" name="Notes">笔记</h2>
+<h2 id="Notes">笔记</h2>
 
 <p>有时候调用 adopNode 可能会失败因为节点资源来自不同的源，但是这不应该是浏览器的实现问题。</p>
 
@@ -85,7 +85,7 @@ document.getElementById("move").onclick = getEle
     <p>即使你不执行导入动作，就执行插入外部文档中的节点.Firefox 目前也不会报错 (如果严格按标准执行，很多已有的网站都无法正常运行).
     我们鼓励开发者严格按标准修改自己已有的不符合上述标准的代码。</p>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 <ul>
  <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-adoptNode">DOM Level 3 Core: Document.adoptNode</a></li>

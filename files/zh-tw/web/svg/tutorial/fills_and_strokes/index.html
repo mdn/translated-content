@@ -7,9 +7,9 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 <p>现在你掌握的知识已经可以绘制任何图形，下一个目标是给它们上色。在SVG绘图中，可以使用若干方法上色，比如给图形对象增加指定的属性，使用行间CSS，使用CSS嵌入段落，或者使用外部引用的CSS文件。你会发现大部分web上的SVG使用的是行间CSS，但每种方法都有自身的优点和缺点，在不同情况下，应该酌情选择合适的方法。</p>
 
-<h2 id="Fill_and_Stroke_Attributes" name="Fill_and_Stroke_Attributes">fill（填充）和stroke（边框）属性</h2>
+<h2 id="Fill_and_Stroke_Attributes">fill（填充）和stroke（边框）属性</h2>
 
-<h3 id="Painting" name="Painting">上色</h3>
+<h3 id="Painting">上色</h3>
 
 <p>大多数基本的颜色可以使用<code>fill</code>和<code>stroke</code>两个属性来设置。<code>fill</code>设置的是对象的填充色，<code>stroke</code>设置的是对象的边框颜色，你可以使用在HTML中设置CSS颜色的方式定义它们的颜色，比如颜色名（<em>red</em>），<em>rgb</em>值，<em>hex</em>值，<em>rgba</em>值。</p>
 
@@ -23,7 +23,7 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 <div class="note style-wrap">注意，FireFox 3+支持rgba值，并且能够提供同样的效果，但是为了在其他浏览器中保持兼容，最好将它和边框/填充的透明度分开使用。如果同时定义了rgba值和透明度，它们将被一起调用。</div>
 
-<h3 id="Stroke" name="Stroke">边框</h3>
+<h3 id="Stroke">边框</h3>
 
 <p>除了颜色属性，还有其他一些属性用来控制绘制边框的方式。</p>
 
@@ -95,7 +95,7 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 <p>另外还有一些关于填充和边框的属性，包括<code>fill-rule</code>，用于定义如何给图形重叠的区域上色；<code>stroke-miterlimit</code>，定义什么情况下绘制或不绘制边框连接的<code>miter</code>效果；还有<code>stroke-dashoffset</code>，定义虚线开始的位置。</p>
 
-<h2 id="Using_CSS" name="Using_CSS">使用CSS</h2>
+<h2 id="Using_CSS">使用CSS</h2>
 
 <p>除了定义对象的属性外，你也可以通过CSS来定义<code>fill</code>和<code>stroke</code>。语法和在html里使用CSS一样，只不过你要把<code>background-color</code>、<code>border</code>改成<code>fill</code>和<code>stroke</code>。注意，不是所有的属性都能用CSS来设置。上色和填充的部分一般是可以用CSS来设置的，比如<code>fill</code>，<code>stroke</code>，<code>stroke-dasharray</code>等，但是不包括下面会提到的渐变和模式等功能。另外，宽、高，以及路径的d命令，都不能用css设置。判断它们能不能用CSS设置还是比较容易的。</p>
 

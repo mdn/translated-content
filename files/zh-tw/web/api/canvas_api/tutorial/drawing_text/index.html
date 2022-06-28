@@ -11,7 +11,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 
 <p>{{ fx_minversion_note("3.5", '在Firefox 3.5或之後的版本，當繪圖時，任何對於 <a href="/en/Canvas_tutorial/Applying_styles_and_colors#Shadows">shadow effects</a>（陰影效果）的處理可以使用在文字上。') }}</p>
 
-<h2 id="Method_overview" name="Method_overview">方法概述</h2>
+<h2 id="Method_overview">方法概述</h2>
 
 <table>
  <tbody>
@@ -41,7 +41,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 
 <p> </p>
 
-<h2 id="Attributes" name="Attributes">屬性</h2>
+<h2 id="Attributes">屬性</h2>
 
 <table>
  <tbody>
@@ -122,7 +122,7 @@ ctx.font = "20pt Arial";</pre>
 
 <p><img alt="top of em squre（字元區塊頂部）大致在字型中所有字母的最頂部位置，hanging basline（懸掛基線）則是在一些特殊（較小的,像是“आ”）字母頂部，middle則是在top of em squre（字元區塊頂部和bottom of em squre（字元區塊底部）的中間，alphabetic（拼音文字）的基線位置則是在一般拼音字母如Á，ÿ，f，Ω的底線位置。ideographic（表意文字）的基線在字元的底部位置，bottom of em squre（字元區塊底部）則大致是字型中所有字母的最底部位置。而top and bottom of the bounding box（上下的區域範圍線）則比這些基線都來得更遠，基於字母的高度可能超過字元區塊頂部和底部的範圍。" src="http://www.whatwg.org/specs/web-apps/current-work/images/baselines.png"></p>
 
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
 <h3 id="fillText()">fillText()</h3>
 
@@ -156,7 +156,7 @@ ctx.font = "20pt Arial";</pre>
 <pre class="brush: js">ctx.fillText("Sample String", 10, 50);
 </pre>
 
-<h3 id="mozMeasureText.28.29" name="mozMeasureText.28.29">measureText()</h3>
+<h3 id="mozMeasureText.28.29">measureText()</h3>
 
 <p>測量文字。返回一個物件包含了寬度，像素值，所指定的文字會以當前的文字樣式繪製。</p>
 
@@ -167,18 +167,18 @@ ctx.font = "20pt Arial";</pre>
 );
 </pre>
 
-<h6 id="Parameters_2" name="Parameters_2">參數</h6>
+<h6 id="Parameters_2">參數</h6>
 
 <dl>
  <dt><code>textToMeasure</code></dt>
  <dd>該字串的像素值。</dd>
 </dl>
 
-<h6 id="Return_value" name="Return_value">返回值</h6>
+<h6 id="Return_value">返回值</h6>
 
 <p><a href="/nsIDOMTextMetrics"><code>nsIDOMTextMetrics</code></a>物件的<code>width</code>屬性在繪製時會將數字設定給CSS 的像素值寬度。</p>
 
-<h3 id="mozDrawText.28.29" name="mozDrawText.28.29">mozDrawText()</h3>
+<h3 id="mozDrawText.28.29">mozDrawText()</h3>
 
 <p>{{ deprecated_header() }}</p>
 
@@ -191,14 +191,14 @@ ctx.font = "20pt Arial";</pre>
 );
 </pre>
 
-<h6 id="Parameters" name="Parameters">參數</h6>
+<h6 id="Parameters">參數</h6>
 
 <dl>
  <dt><code>textToDraw</code></dt>
  <dd>將文字繪製到文本。</dd>
 </dl>
 
-<h6 id="Example" name="Example">範例</h6>
+<h6 id="Example">範例</h6>
 
 <pre class="brush: js">ctx.translate(10, 50);
 ctx.fillStyle = "Red";
@@ -207,7 +207,7 @@ ctx.mozDrawText("Sample String");
 
 <p>這個範例將文字“Sample String”繪製到畫布（canvas）上。</p>
 
-<h3 id="mozMeasureText.28.29" name="mozMeasureText.28.29">mozMeasureText()</h3>
+<h3 id="mozMeasureText.28.29">mozMeasureText()</h3>
 
 <p>{{ deprecated_header() }}</p>
 
@@ -220,18 +220,18 @@ ctx.mozDrawText("Sample String");
 );
 </pre>
 
-<h6 id="Parameters_2" name="Parameters_2">參數</h6>
+<h6 id="Parameters_2">參數</h6>
 
 <dl>
  <dt><code>textToMeasure</code></dt>
  <dd>字串的寬度像素值</dd>
 </dl>
 
-<h6 id="Return_value" name="Return_value">返回值</h6>
+<h6 id="Return_value">返回值</h6>
 
 <p>文字的寬度像素值</p>
 
-<h6 id="Example_2" name="Example_2">範例</h6>
+<h6 id="Example_2">範例</h6>
 
 <pre class="brush: js">var text = "Sample String";
 var width = ctx.canvas.width;
@@ -242,7 +242,7 @@ ctx.mozDrawText(text);
 
 <p>這個範例測量了字串的寬度，接著使用這個資訊將它畫在畫布（canvas）的水平中心。</p>
 
-<h3 id="mozPathText.28.29" name="mozPathText.28.29">mozPathText()</h3>
+<h3 id="mozPathText.28.29">mozPathText()</h3>
 
 <p>給文字路徑加上外框線，如果你想要的話，它允許你替文字加上框線代替填充它。</p>
 
@@ -251,14 +251,14 @@ ctx.mozDrawText(text);
 );
 </pre>
 
-<h6 id="Parameters_3" name="Parameters_3">參數</h6>
+<h6 id="Parameters_3">參數</h6>
 
 <dl>
  <dt><code>textToPath</code></dt>
  <dd>為當前的文字路徑加上框線</dd>
 </dl>
 
-<h6 id="Example_3" name="Example_3">Example</h6>
+<h6 id="Example_3">Example</h6>
 
 <pre class="brush: js">ctx.fillStyle = "green";
 ctx.strokeStyle = "black";
@@ -269,7 +269,7 @@ ctx.stroke()
 
 <p>這個範例繪出文字“Sample String”，填充顏色是綠色，外框顏色是黑色。</p>
 
-<h3 id="mozTextAlongPath.28.29" name="mozTextAlongPath.28.29">mozTextAlongPath()</h3>
+<h3 id="mozTextAlongPath.28.29">mozTextAlongPath()</h3>
 
 <p>Adds (or draws) the specified text along the current path.</p>
 
@@ -279,7 +279,7 @@ ctx.stroke()
 );
 </pre>
 
-<h6 id="Parameters_4" name="Parameters_4">參數</h6>
+<h6 id="Parameters_4">參數</h6>
 
 <dl>
  <dt><code>textToDraw</code></dt>
@@ -288,7 +288,7 @@ ctx.stroke()
  <dd>如果參數是 <code>true</code>（真值），文字會沿著指定路徑繪製。如果 <code>false</code>（假值），這個文字則會加入到路徑之中，再沿著當前路徑繪製。</dd>
 </dl>
 
-<h6 id="Remarks" name="Remarks">備註</h6>
+<h6 id="Remarks">備註</h6>
 
 <p>字體不會沿著路徑曲線縮放或變形，反而在彎曲路徑下，字體每次計算都會當成是直線在處理。這可以用來建立一些特殊的效果。</p>
 
@@ -324,7 +324,7 @@ ctx.stroke()
 <pre class="brush: js">ctx.strokeText("Sample String", 10, 50);
 </pre>
 
-<h2 id="Remarks_2" name="Remarks_2">備註</h2>
+<h2 id="Remarks_2">備註</h2>
 
 <ul>
  <li>請見 <a href="http://www.whatwg.org/specs/web-apps/current-work/#text">WHATWG specification</a> 關於HTML 5 canvas text的說明。</li>

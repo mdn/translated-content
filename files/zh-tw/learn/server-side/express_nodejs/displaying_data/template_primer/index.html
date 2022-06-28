@@ -15,7 +15,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 <p><strong>Note:</strong> The downside of using <em>Pug</em> is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). However once you have your templates in place, they are very easy to read and maintain.</p>
 </div>
 
-<h2 class="highlight-spanned" id="Template_configuration">Template configuration</h2>
+<h2 id="Template_configuration">Template configuration</h2>
 
 <p>The <em>LocalLibrary</em> was configured to use <a href="https://pugjs.org/api/getting-started.html">Pug</a> when we <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">created the skeleton website</a>. You should see the pug module included as a dependency in the website's <strong>package.json</strong> file, and the following configuration settings in the <strong>app.js</strong> file. The settings tell us that we're using pug as the view engine, and that <em>Express</em> should search for templates in the <strong>/views</strong> subdirectory.</p>
 
@@ -32,7 +32,7 @@ app.set('view engine', 'pug');</code></pre>
     layout.pug</code>
 </pre>
 
-<h2 class="highlight-spanned" id="Template_syntax">Template syntax</h2>
+<h2 id="Template_syntax">Template syntax</h2>
 
 <p>The example template file below shows off many of Pug's most useful features.</p>
 
@@ -117,7 +117,7 @@ else
 
 <p>The syntax also supports comments (that can be rendered in the output—or not—as you choose), mixins to create reusable blocks of code, case statements, and many other features. For more detailed information see <a href="https://pugjs.org/api/getting-started.html">The Pug docs</a>.</p>
 
-<h2 class="highlight-spanned" id="Extending_templates">Extending templates</h2>
+<h2 id="Extending_templates">Extending templates</h2>
 
 <p>Across a site, it is usual for all pages to have a common structure, including standard HTML markup for the head, footer, navigation, etc. Rather than forcing developers to duplicate this "boilerplate" in every page, <em>Pug</em> allows you to declare a base template and then extend it, replacing just the bits that are different for each specific page.</p>
 

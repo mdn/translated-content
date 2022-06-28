@@ -5,7 +5,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 ---
 <p>本章节演示如何定义我们的页面，创建<code>Genre</code> 物件（这是一个很好的起点，因为类型只有一个字段，它的名称<code>name</code>，没有依赖项）。像任何其他页面一样，我们需要设置路由，控制器和视图。</p>
 
-<h2 class="highlight-spanned" id="引入验证与无害化方法">引入验证与无害化方法</h2>
+<h2 id="引入验证与无害化方法">引入验证与无害化方法</h2>
 
 <p>在我们的控制器中使用 <em>express-validator</em> 验证器，我們必須导入我们想要从 <strong>'express-validator/check</strong>' 和 <strong>'express-validator/filter</strong>' 模块中使用的函数。</p>
 
@@ -14,7 +14,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 <pre class="brush: js line-numbers  language-js"><code class="language-js">const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');</code></pre>
 
-<h2 class="highlight-spanned" id="控制器—get路由">控制器—get 路由</h2>
+<h2 id="控制器—get路由">控制器—get 路由</h2>
 
 <p>找到导出的<code>genre_create_get()</code> 控制器方法，并将其替换为以下代码。这只是渲染<strong>genre_form.pug</strong>视图，传递一个 title 变量。</p>
 
@@ -23,7 +23,7 @@ exports.genre_create_get = function(req, res, next) {
     res.render('genre_form', { title: 'Create Genre' });
 };</code></pre>
 
-<h2 class="highlight-spanned" id="控制器—post_路由">控制器—post 路由</h2>
+<h2 id="控制器—post_路由">控制器—post 路由</h2>
 
 <p>找到导出的<code>genre_create_post()</code>控制器方法，并将其替换为以下代码。</p>
 
@@ -152,7 +152,7 @@ Genre.findOne({ 'name': req.body.name })
 
 <p>在我们所有的 <code>POST</code>控制器中，都使用了相同的模式：我们运行验证器，然后运行消毒器，然后检查错误，并使用错误信息重新呈现表单，或保存数据。</p>
 
-<h2 class="highlight-spanned" id="视图">视图</h2>
+<h2 id="视图">视图</h2>
 
 <p>当我们创建一个新的种类<code>Genre</code>时，在<code>GET</code>和<code>POST</code>控制器/路由中，都会呈现相同的视图（稍后在我们更新种类<code>Genre</code>时也会使用它）。</p>
 
@@ -191,7 +191,7 @@ block content
 <p><strong>注意：</strong> 这只是呈现错误的一种方法。您还可以从错误变量中，获取受影响字段的名称，并使用这些，来控制错误消息的呈现位置，以及是否应用自定义 CSS 等。</p>
 </div>
 
-<h2 class="highlight-spanned" id="它看起來像是">它看起來像是？</h2>
+<h2 id="它看起來像是">它看起來像是？</h2>
 
 <p>运行应用程序，打开浏览器到<a href="http://localhost:3000/">http://localhost:3000/</a>，然后选择 Create new genre 链接。如果一切设置正确，您的网站应该类似于以下屏幕截图。输入值后，应保存该值，您将进入种类详细信息页面。</p>
 

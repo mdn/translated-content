@@ -7,7 +7,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <p>網格(Grid)</p>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="float: right; height: 220px; width: 220px;">在開始繪圖前，我們必須先了解畫布 (canvas) 網格，或著是說座標空間。在前一頁教學中的 HTML 範本有一個寬150 pixels (像素)、高150 pixels 的畫布。如右圖，你在畫布預設網格上繪圖，網格上 1 單位相當於畫布上 1 pixel，網格的原點 (座標 (0, 0) ) 坐落於左上角，所有元素定位皆相對於此左上角原點，所以藍色方塊的位置為從左往右推 x pixels、從上往下推 y pixels (亦即座標 (x, y) )。現在我們先專注在預設設定上，之後我們會看到如何轉換原點位置、旋轉網格以及縮放網格。</p>
+<p><img src="canvas_default_grid.png">在開始繪圖前，我們必須先了解畫布 (canvas) 網格，或著是說座標空間。在前一頁教學中的 HTML 範本有一個寬150 pixels (像素)、高150 pixels 的畫布。如右圖，你在畫布預設網格上繪圖，網格上 1 單位相當於畫布上 1 pixel，網格的原點 (座標 (0, 0) ) 坐落於左上角，所有元素定位皆相對於此左上角原點，所以藍色方塊的位置為從左往右推 x pixels、從上往下推 y pixels (亦即座標 (x, y) )。現在我們先專注在預設設定上，之後我們會看到如何轉換原點位置、旋轉網格以及縮放網格。</p>
 
 <h2 id="畫矩形">畫矩形</h2>
 
@@ -51,7 +51,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <p>本例結果如下:</p>
 
-<p>{{EmbedLiveSample("Rectangular_shape_example", 160, 160, "https://mdn.mozillademos.org/files/245/Canvas_rect.png")}}</p>
+<p>{{EmbedLiveSample("Rectangular_shape_example", 160, 160, "canvas_rect.png")}}</p>
 
 <p>fillRect()函數畫出一個寬高都100 pixels的矩形，clearRect()函數清除中央60 x 60 pixels大的正方形區域，接著strokeRect()在被清除區域內畫上一個50 x 50 pixels的矩形邊框。</p>
 
@@ -118,7 +118,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <p>結果如下:</p>
 
-<p>{{EmbedLiveSample("Drawing_a_triangle", 110, 110, "https://mdn.mozillademos.org/files/9847/triangle.png")}}</p>
+<p>{{EmbedLiveSample("Drawing_a_triangle", 110, 110, "triangle.png")}}</p>
 
 <h3 id="移動畫筆">移動畫筆</h3>
 
@@ -162,7 +162,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <p>結果如下:</p>
 
-<p>{{EmbedLiveSample("Moving_the_pen", 160, 160, "https://mdn.mozillademos.org/files/252/Canvas_smiley.png")}}</p>
+<p>{{EmbedLiveSample("Moving_the_pen", 160, 160, "canvas_smiley.png")}}</p>
 
 <p>移除moveTo()便可以看到線條連結起來。</p>
 
@@ -217,7 +217,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <p>從呼叫beginPath()起始一個新圖形路徑，然後用moveTo()移到我們想要的起始點，然後再畫兩條線形成三角形的兩邊。</p>
 
-<p>{{EmbedLiveSample("Lines", 160, 160, "https://mdn.mozillademos.org/files/238/Canvas_lineTo.png")}}</p>
+<p>{{EmbedLiveSample("Lines", 160, 160, "canvas_lineTo.png")}}</p>
 
 <p>我們可以看到填滿(fill)三角形和勾勒(stroke)三角形的區別；當填滿時，圖形會自動閉合，不過勾勒則不會，所以如果沒有呼叫closePaht()的話，只會畫出兩條線而非三角形。</p>
 
@@ -280,7 +280,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
   }
 }
 </pre>
-{{EmbedLiveSample("Arcs", 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png")}}
+{{EmbedLiveSample("Arcs", 160, 210, "canvas_arc.png")}}
 
 <h3 id="貝茲曲線(Bezier_curve)與二次曲線(quadratic_curve)">貝茲曲線(Bezier curve)與二次曲線(quadratic curve)</h3>
 
@@ -293,7 +293,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
  <dd>從目前起始點畫一條三次貝茲曲線到x, y指定的終點，控制點由(cp1x, cp1y)和(cp2x, cp2y)指定。</dd>
 </dl>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/223/Canvas_curves.png" style="float: right; height: 190px; width: 190px;">二次和三次的差別可以從右圖看出；貝茲曲線的起始和終點以藍點標示，其中二次貝茲曲線只有一個控制點(如紅點標示)而三次貝茲曲線有兩個控制點。</p>
+<p><img src="canvas_curves.png">二次和三次的差別可以從右圖看出；貝茲曲線的起始和終點以藍點標示，其中二次貝茲曲線只有一個控制點(如紅點標示)而三次貝茲曲線有兩個控制點。</p>
 
 <p>二次和三次貝茲曲線都用x, y參數定義終點座標，然後用cp1x, xp1y定義第一個控制點座標、cp2x, xp2y定義第二個控制點座標。</p>
 
@@ -331,7 +331,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 }
 </pre>
 
-<p>{{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "https://mdn.mozillademos.org/files/243/Canvas_quadratic.png")}}</p>
+<p>{{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "canvas_quadratic.png")}}</p>
 
 <h4 id="三次貝茲曲線">三次貝茲曲線</h4>
 
@@ -365,7 +365,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 }
 </pre>
 
-<p>{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "https://mdn.mozillademos.org/files/207/Canvas_bezier.png")}}</p>
+<p>{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "canvas_bezier.png")}}</p>
 
 <h3 id="矩形">矩形</h3>
 
@@ -530,7 +530,7 @@ new Path2D(d);    // 以傳入的 SVG 路徑建立 Path2D 物件</pre>
   }
 }</pre>
 
-<p>{{EmbedLiveSample("Path2D_example", 130, 110, "https://mdn.mozillademos.org/files/9851/path2d.png")}}</p>
+<p>{{EmbedLiveSample("Path2D_example", 130, 110, "path2d.png")}}</p>
 
 <h3 id="使用向量路徑_(SVG_paths)">使用向量路徑 (SVG paths)</h3>
 

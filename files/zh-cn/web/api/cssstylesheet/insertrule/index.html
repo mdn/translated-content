@@ -17,11 +17,11 @@ translation_of: Web/API/CSSStyleSheet/insertRule
 <p><strong>注意：</strong>尽管 <code>insertRule()</code> 是 {{domxref("CSSStyleSheet")}} 的一个方法，但它实际插入的地方是 <code>{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules</code> 的内部 {{domxref("CSSRuleList")}}。</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><var>stylesheet</var>.insertRule(<var>rule [</var>, <var>index]</var>)</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>rule</code></dt>
@@ -53,7 +53,7 @@ translation_of: Web/API/CSSStyleSheet/insertRule
  <li>如果 <code>rule</code> 是 {{cssxref("@namespace")}} 并且规则列表中有另外的 <code>@import</code> 和/或 <code>@namespace</code> 规则，该方法中止并返回一个 <code>InvalidStateError</code> 错误；</li>
 </ul>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <h3 id="在样式表顶部插入新的规则">在样式表顶部插入新的规则</h3>
 
@@ -62,7 +62,7 @@ translation_of: Web/API/CSSStyleSheet/insertRule
 <pre class="brush: js"> myStyle.insertRule("#blanc { color: white }", 0);
 </pre>
 
-<h3 id="Notes" name="Notes">实现一个添加样式表规则的函数</h3>
+<h3 id="Notes">实现一个添加样式表规则的函数</h3>
 
 <pre class="brush: js">/**
  * 在文档中添加一条样式表规则（这可能是动态改变 class 名的更好的实现方法，
@@ -108,7 +108,7 @@ function addStylesheetRules (decls) {
     }
 }</pre>
 
-<h2 id="Notes" name="Notes">兼容补丁</h2>
+<h2 id="Notes">兼容补丁</h2>
 
 <p>以下补丁将会在 IE 5-8 中纠正提供给 <code>insertRule()</code> 的参数，使其标准化。to standardize them in Internet Explorer 5–8. 它通过一个函数对 <code>insertRule()</code> 进行补充，使得在参数传递给原生的 <code>insertRule()</code> 函数之前将其中的选择器从规则中分离出来。</p>
 
@@ -153,7 +153,7 @@ function addStylesheetRules (decls) {
 })(CSSStyleSheet.prototype);</code>
 </pre>
 
-<h2 id="Notes" name="Notes">规范</h2>
+<h2 id="Notes">规范</h2>
 
 {{Specifications}}
 

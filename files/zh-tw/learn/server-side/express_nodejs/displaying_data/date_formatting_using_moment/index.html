@@ -11,7 +11,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting
 <p><strong>注意:</strong>  我們可以直接在 Pug 模板中，使用 moment 格式化字符串，或者可以在許多其它地方格式化字符串。使用虛擬屬性，可以使我們獲得格式化的日期，這與我們當前獲取 <code>due_date</code> 的方式完全相同。</p>
 </div>
 
-<h2 class="highlight-spanned" id="安裝_moment">安裝 moment</h2>
+<h2 id="安裝_moment">安裝 moment</h2>
 
 <p>在項目的根目錄，輸入下列命令</p>
 
@@ -19,7 +19,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting
 
 <pre class="brush: bash line-numbers  language-bash"><code class="language-bash">npm install moment</code></pre>
 
-<h2 class="highlight-spanned" id="創建虛擬屬性">創建虛擬屬性</h2>
+<h2 id="創建虛擬屬性">創建虛擬屬性</h2>
 
 <ol>
  <li>打開 <strong>./models/bookinstance.js</strong>.</li>
@@ -40,7 +40,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting
 <p><strong>注意:</strong>  格式化方法可以使用幾乎任何模式顯示日期。 <a href="http://momentjs.com/docs/#/displaying/">moment</a>文檔中，可以找到表示不同日期組件的語法。</p>
 </div>
 
-<h2 class="highlight-spanned" id="更新視圖">更新視圖</h2>
+<h2 id="更新視圖">更新視圖</h2>
 
 <p>打開 <strong>/views/bookinstance_list.pug</strong> ，然後用 <code>due_back_formatted</code> 取代 <code>due_back</code> 。</p>
 

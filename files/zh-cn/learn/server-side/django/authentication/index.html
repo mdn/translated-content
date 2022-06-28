@@ -83,12 +83,12 @@ user.save()
 
 <p>启动开发服务器，并到本地 Web 浏览器中的管理站点（<a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a>）。使用超级用户帐户的凭据，登录该站点。Admin 站点的最上级显示所有模型，按“django application”排序。在“身份验证和授权” <strong>Authentication and Authorisation </strong>部分，您可以单击用户 <strong>Users ，</strong>或分组 <strong>Groups </strong>链接，以查看其现有记录。</p>
 
-<p><img alt="Admin site - add groups or users" src="https://mdn.mozillademos.org/files/14091/admin_authentication_add.png" style="border-style: solid; border-width: 1px; display: block; height: 364px; margin: 0px auto; width: 661px;"></p>
+<p><img alt="Admin site - add groups or users" src="admin_authentication_add.png"></p>
 
 <p>首先，我们为图书馆成员，创建一个新的分组。</p>
 
 <ol>
- <li>单击“添加” <strong>Add </strong>按钮（“分组”Group 旁边）以创建新的分组；在分组的名称<strong> Name</strong> ，输入“Library Members”。<img alt="Admin site - add group" src="https://mdn.mozillademos.org/files/14093/admin_authentication_add_group.png" style="border-style: solid; border-width: 1px; display: block; height: 561px; margin: 0px auto; width: 800px;"></li>
+ <li>单击“添加” <strong>Add </strong>按钮（“分组”Group 旁边）以创建新的分组；在分组的名称<strong> Name</strong> ，输入“Library Members”。<img alt="Admin site - add group" src="admin_authentication_add_group.png"></li>
  <li>我们不需要该组的任何权限，因此只需按<strong>SAVE</strong>（您将进入分组列表）。</li>
 </ol>
 
@@ -96,14 +96,14 @@ user.save()
 
 <ol>
  <li>回到管理站点的主页</li>
- <li>单击“用户”旁边的“添加”按钮 <strong>Add</strong>，以打开“添加用户”对话框。<img alt="Admin site - add user pt1" src="https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png" style="border-style: solid; border-width: 1px; display: block; height: 409px; margin: 0px auto; width: 800px;"></li>
+ <li>单击“用户”旁边的“添加”按钮 <strong>Add</strong>，以打开“添加用户”对话框。<img alt="Admin site - add user pt1" src="admin_authentication_add_user_prt1.png"></li>
  <li>为测试用户输入适当的用户名（<strong>Username）</strong>和密码/密码确认<strong>（Password/Password confirmation</strong> ）</li>
  <li>按 <strong>SAVE</strong> 创建用户。
   <p> </p>
 
   <p>管理站点将创建新用户，并立即转到“更改用户”屏幕，您可以在其中更改用户名（<strong>username</strong>），并添加用户模型的可选字段的信息。这些字段包括名字，姓氏，电子邮件地址，用户状态和权限（仅应设置活动标志<strong> Active</strong>）。再往下，您可以指定用户的分组和权限，并查看与用户相关的重要日期（例如，他们的加入日期和上次登录日期）。</p>
-  <img alt="Admin site - add user pt2" src="https://mdn.mozillademos.org/files/14097/admin_authentication_add_user_prt2.png" style="border-style: solid; border-width: 1px; display: block; height: 635px; margin: 0px auto; width: 800px;"></li>
- <li>在“分组”（<em>Groups</em>）部分中，从“可用分组”（<em>Available groups</em>）列表中，选择“图书馆成员”分组 <strong>Library Member</strong>，然后点击这些框之间的<strong>右箭头</strong>，将其移动到“选择的分组”（<em>Chosen groups</em>）框中。<img alt="Admin site - add user to group" src="https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png" style="border-style: solid; border-width: 1px; display: block; height: 414px; margin: 0px auto; width: 933px;"></li>
+  <img alt="Admin site - add user pt2" src="admin_authentication_add_user_prt2.png"></li>
+ <li>在“分组”（<em>Groups</em>）部分中，从“可用分组”（<em>Available groups</em>）列表中，选择“图书馆成员”分组 <strong>Library Member</strong>，然后点击这些框之间的<strong>右箭头</strong>，将其移动到“选择的分组”（<em>Chosen groups</em>）框中。<img alt="Admin site - add user to group" src="admin_authentication_user_add_group.png"></li>
  <li>我们不需要在此处执行任何其他操作，因此只需再次选择<strong> SAVE</strong> ，即可转到用户列表。</li>
 </ol>
 
@@ -241,7 +241,7 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 
 <p>保存模板后，回到登录页面（<a href="http://127.0.0.1:8000/accounts/login/">http://127.0.0.1:8000/accounts/login/</a>），您应该看到如下内容：</p>
 
-<p><img alt="Library login page v1" src="https://mdn.mozillademos.org/files/14101/library_login.png" style="border-style: solid; border-width: 1px; display: block; height: 173px; margin: 0px auto; width: 441px;"></p>
+<p><img alt="Library login page v1" src="library_login.png"></p>
 
 <p>如果您尝试登录，将会成功，并且您将被重定向到另一个页面（默认情况下，这将是 <a href="http://127.0.0.1:8000/accounts/profile/">http://127.0.0.1:8000/accounts/profile/</a>）。这里的问题是，默认情况下，Django 希望在登录后，你可能会被带到个人资料页面，这可能是，也可能不是。由于您还没有定义此页面，您将收到另一个错误！</p>
 
@@ -267,7 +267,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>这个模板非常简单。它只显示一条消息，通知您已登出，并提供一个链接，您可以点击此按钮，返回登录屏幕。如果再次回到登出 URL，您应该看到此页面：</p>
 
-<p><img alt="Library logout page v1" src="https://mdn.mozillademos.org/files/14103/library_logout.png" style="border-style: solid; border-width: 1px; display: block; height: 169px; margin: 0px auto; width: 385px;"></p>
+<p><img alt="Library logout page v1" src="library_logout.png"></p>
 
 <h3 id="密码重置模板">密码重置模板</h3>
 
@@ -592,7 +592,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>当任何用户登录时，他们会在侧栏中看到 My Borrowed 链接，并显示如下所示的书本列表（第一本书没有截止日期，这是我们希望在以后的教程中修复的错误！） 。</p>
 
-<p><img alt="Library - borrowed books by user" src="https://mdn.mozillademos.org/files/14105/library_borrowed_by_user.png" style="border-style: solid; border-width: 1px; display: block; height: 215px; margin: 0px auto; width: 530px;"></p>
+<p><img alt="Library - borrowed books by user" src="library_borrowed_by_user.png"></p>
 
 <h2 id="权限">权限</h2>
 
@@ -664,7 +664,7 @@ class MyView(PermissionRequiredMixin, View):
 
 <p>完成后，您的页面应该类似于下面的屏幕截图。</p>
 
-<p><img alt="All borrowed books, restricted to librarian" src="https://mdn.mozillademos.org/files/14115/library_borrowed_all.png" style="border-style: solid; border-width: 1px; display: block; height: 283px; margin: 0px auto; width: 500px;"></p>
+<p><img alt="All borrowed books, restricted to librarian" src="library_borrowed_all.png"></p>
 
 <ul>
 </ul>

@@ -59,7 +59,7 @@
 /fr/docs/Accessibilité/Aperçu_d_applications_Web_et_de_composants_dynamiques_accessibles	/fr/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /fr/docs/Accessibilité/Checklist_accessibilite_mobile	/fr/docs/Web/Accessibility/Mobile_accessibility_checklist
 /fr/docs/Accessibilité/Communauté	/fr/docs/Web/Accessibility/Community
-/fr/docs/Accessibilité/Développement_Web	/fr/docs/conflicting/Web/Accessibility
+/fr/docs/Accessibilité/Développement_Web	/fr/docs/Web/Accessibility
 /fr/docs/Accessibilité:Communauté	/fr/docs/Web/Accessibility/Community
 /fr/docs/Accueil	/fr/docs/Web
 /fr/docs/Adaptation_des_applications_XUL_pour_Firefox_1.5	/fr/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
@@ -4019,8 +4019,9 @@
 /fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/fr/docs/Web/Accessibility/ARIA/Roles/alert_role
 /fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute	/fr/docs/Web/Accessibility/ARIA/Attributes/aria-required
 /fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_article_role	/fr/docs/Web/Accessibility/ARIA/Roles/article_role
-/fr/docs/Web/Accessibility/ARIA/widgets/overview	/fr/docs/conflicting/Web/Accessibility/ARIA/widgets
+/fr/docs/Web/Accessibility/ARIA/widgets/overview	/fr/docs/Web/Accessibility/ARIA/widgets
 /fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Contraste_de_la_couleur	/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
+/fr/docs/Web/Accessibility/Web_Development	/fr/docs/Web/Accessibility
 /fr/docs/Web/Apps/Build/Audio_and_video_delivery	/fr/docs/Web/Guide/Audio_and_video_delivery
 /fr/docs/Web/Apps/Build/Audio_and_video_delivery/Live_streaming_web_audio_and_video	/fr/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 /fr/docs/Web/Apps/Build/Audio_and_video_delivery/buffering_seeking_time_ranges	/fr/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
@@ -6113,6 +6114,8 @@
 /fr/docs/conflicting/Web/API/Web_Storage_API	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/conflicting/Web/API/XSLTProcessor_197eea6e529b0a946d29ce7cc292e7ef	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3	/fr/docs/Web/API
+/fr/docs/conflicting/Web/Accessibility	/fr/docs/Web/Accessibility
+/fr/docs/conflicting/Web/Accessibility/ARIA/widgets	/fr/docs/Web/Accessibility/ARIA/widgets
 /fr/docs/conflicting/Web/CSS	/fr/docs/Web/CSS
 /fr/docs/conflicting/Web/CSS/::placeholder	/fr/docs/Web/CSS/::placeholder
 /fr/docs/conflicting/Web/CSS/:is	/fr/docs/Web/CSS/:is

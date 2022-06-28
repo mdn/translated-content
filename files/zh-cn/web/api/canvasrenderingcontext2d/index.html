@@ -81,7 +81,7 @@ ctx.stroke();</pre>
 
 <p>{{EmbedLiveSample('Basic_example', 700, 330)}}</p>
 
-<h2 id="绘制矩形" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">绘制矩形</h2>
+<h2 id="绘制矩形">绘制矩形</h2>
 
 <p>以下是 3 个绘制矩形位图的方法。</p>
 
@@ -95,7 +95,7 @@ ctx.stroke();</pre>
  <dd>在 canvas 中，使用当前的笔触样式，描绘一个起点在 <em>(x, y)</em> 、宽度为<em> w</em> 、高度为 <em>h</em> 的矩形。</dd>
 </dl>
 
-<h2 id="绘制文本" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">绘制文本</h2>
+<h2 id="绘制文本">绘制文本</h2>
 
 <p>下面是绘制文本的方法。参见 {{domxref("TextMetrics")}} 对象获取文本属性。</p>
 
@@ -108,7 +108,7 @@ ctx.stroke();</pre>
  <dd>返回 {{domxref("TextMetrics")}} 对象。</dd>
 </dl>
 
-<h2 id="线型" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">线型</h2>
+<h2 id="线型">线型</h2>
 
 <p>下面的方法和属性控制如何绘制线。</p>
 
@@ -129,7 +129,7 @@ ctx.stroke();</pre>
  <dd>描述在哪里开始绘制线段。</dd>
 </dl>
 
-<h2 id="文本样式" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">文本样式</h2>
+<h2 id="文本样式">文本样式</h2>
 
 <p>下面的属性控制如何设计文本。</p>
 
@@ -144,7 +144,7 @@ ctx.stroke();</pre>
  <dd>文本的方向。 允许的值： <code>ltr, rtl</code>, <code>inherit</code> (默认).</dd>
 </dl>
 
-<h2 id="填充和描边样式" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">填充和描边样式</h2>
+<h2 id="填充和描边样式">填充和描边样式</h2>
 
 <p>填充设计用于图形内部的颜色和样式，描边设计用于图形的边线。</p>
 
@@ -155,7 +155,7 @@ ctx.stroke();</pre>
  <dd>图形边线的颜色和样式。 默认 <code>#000</code> (黑色).</dd>
 </dl>
 
-<h2 id="渐变和图案" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">渐变和图案</h2>
+<h2 id="渐变和图案">渐变和图案</h2>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.createLinearGradient()")}}</dt>
@@ -166,7 +166,7 @@ ctx.stroke();</pre>
  <dd>使用指定的图片 (a {{domxref("CanvasImageSource")}}) 创建图案。通过 repetition 变量指定的方向上重复源图片。此方法返回 {{domxref("CanvasPattern")}}对象。</dd>
 </dl>
 
-<h2 id="阴影" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">阴影</h2>
+<h2 id="阴影">阴影</h2>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.shadowBlur")}}</dt>
@@ -179,7 +179,7 @@ ctx.stroke();</pre>
  <dd>阴影垂直方向的偏移量。默认 0.</dd>
 </dl>
 
-<h2 id="路径" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">路径</h2>
+<h2 id="路径">路径</h2>
 
 <p>下面的方法用来操作对象的路径。</p>
 
@@ -206,7 +206,7 @@ ctx.stroke();</pre>
  <dd>创建一个矩形路径，矩形的起点位置是 <em>(x, y) </em>，尺寸为 <em>width</em> 和 <em>height</em>。</dd>
 </dl>
 
-<h2 id="绘制路径" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">绘制路径</h2>
+<h2 id="绘制路径">绘制路径</h2>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.fill()")}}</dt>
@@ -225,7 +225,7 @@ ctx.stroke();</pre>
  <dd>判断检测点是否在路径的描边线上。</dd>
 </dl>
 
-<h2 id="变换" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">变换</h2>
+<h2 id="变换">变换</h2>
 
 <p>在 <strong style="font-family: courier new,andale mono,monospace; font-weight: bold;">CanvasRenderingContext2D </strong>渲染背景中的对象会有一个当前的变换矩阵，一些方法可以对其进行控制。当创建当前的默认路径，绘制文本、图形和{{domxref("Path2D")}}对象的时候，会应用此变换矩阵。下面列出的方法保持历史和兼容性的原因，是为了{{domxref("SVGMatrix")}}对象现在能够应用于大部分 API ，将来会被替换。</p>
 
@@ -246,7 +246,7 @@ ctx.stroke();</pre>
  <dd>使用单位矩阵重新设置当前的变换。</dd>
 </dl>
 
-<h2 id="合成" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">合成</h2>
+<h2 id="合成">合成</h2>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.globalAlpha")}}</dt>
@@ -255,14 +255,14 @@ ctx.stroke();</pre>
  <dd>通过 <code>globalAlpha</code> 应用，设置如何在已经存在的位图上绘制图形和图像。</dd>
 </dl>
 
-<h2 id="绘制图像" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">绘制图像</h2>
+<h2 id="绘制图像">绘制图像</h2>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.drawImage()")}}</dt>
  <dd>绘制指定的图片。该方法有多种格式，提供了很大的使用灵活性。</dd>
 </dl>
 
-<h2 id="像素控制" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">像素控制</h2>
+<h2 id="像素控制">像素控制</h2>
 
 <p>参见 {{domxref("ImageData")}} 对象。</p>
 
@@ -275,14 +275,14 @@ ctx.stroke();</pre>
  <dd>将数据从已有的 {{domxref("ImageData")}} 绘制到位图上。 如果提供了脏矩形，只能绘制矩形的像素。 </dd>
 </dl>
 
-<h2 id="图像平滑" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">图像平滑</h2>
+<h2 id="图像平滑">图像平滑</h2>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} {{experimental_inline}}</dt>
  <dd>图像平滑的方式；如果禁用，缩放时，图像不会被平滑处理。</dd>
 </dl>
 
-<h2 id="canvas_状态" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">canvas 状态</h2>
+<h2 id="canvas_状态">canvas 状态</h2>
 
 <p><strong style="font-family: courier new,andale mono,monospace; font-weight: bold;">C</strong><strong style="font-family: courier new,andale mono,monospace; font-weight: bold;">anvasRenderingContext2D</strong>渲染环境包含了多种绘图的样式状态（属性有线的样式、填充样式、阴影样式、文本样式）。下面的方法会帮助你使用这些状态：</p>
 
@@ -295,7 +295,7 @@ ctx.stroke();</pre>
  <dd>对 {{domxref("HTMLCanvasElement")}} 只读的反向引用。如果和 {{HTMLElement("canvas")}} 元素没有联系，可能为{{jsxref("null")}}。</dd>
 </dl>
 
-<h2 id="点击区域" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">点击区域</h2>
+<h2 id="点击区域">点击区域</h2>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.addHitRegion()")}} {{experimental_inline}}</dt>
@@ -306,9 +306,9 @@ ctx.stroke();</pre>
  <dd>从 canvas 中删除所有的点击区域。</dd>
 </dl>
 
-<h2 id="不标准的_APIs" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">不标准的 APIs</h2>
+<h2 id="不标准的_APIs">不标准的 APIs</h2>
 
-<h3 id="临时的和_WebKit_内核" style="font-size: 1.71428571428571rem;">临时的和 WebKit 内核</h3>
+<h3 id="临时的和_WebKit_内核">临时的和 WebKit 内核</h3>
 
 <p>很多 APIs  <a href="https://code.google.com/p/chromium/issues/detail?id=363198">不赞成使用并且将来会被删除</a>。</p>
 
@@ -343,7 +343,7 @@ ctx.stroke();</pre>
  <dd>使用{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} 替代。</dd>
 </dl>
 
-<h3 id="仅是临时的" style="font-size: 1.71428571428571rem;">仅是临时的</h3>
+<h3 id="仅是临时的">仅是临时的</h3>
 
 <dl>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.getContextAttributes()</code></dt>
@@ -352,7 +352,7 @@ ctx.stroke();</pre>
  <dd>受 <code style="font-style: normal;">WebGLRenderingContext</code> 方法的启发，如果 Canvas 上下文丢失了，会返回 <code style="font-style: normal;">true</code> ，否则返回 <code style="font-style: normal;">false</code> 。</dd>
 </dl>
 
-<h3 id="WebKit_特有的" style="font-size: 1.71428571428571rem;">WebKit 特有的</h3>
+<h3 id="WebKit_特有的">WebKit 特有的</h3>
 
 <dl>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.webkitBackingStorePixelRatio</code></dt>
@@ -366,14 +366,14 @@ ctx.stroke();</pre>
 <dl>
 </dl>
 
-<h3 id="Gecko_特有的" style="font-size: 1.71428571428571rem;">Gecko 特有的</h3>
+<h3 id="Gecko_特有的">Gecko 特有的</h3>
 
 <dl>
  <dt>{{non-standard_inline}} {{domxref("CanvasRenderingContext2D.filter")}}</dt>
  <dd>CSS 和 SVG 滤镜 作为 Canvas APIs。 可能在新版本的规范中会标准化。</dd>
 </dl>
 
-<h4 id="有前缀的_APIs" style="font-size: 1.28571428571429rem;">有前缀的 APIs</h4>
+<h4 id="有前缀的_APIs">有前缀的 APIs</h4>
 
 <dl>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozCurrentTransform</code></dt>
@@ -400,7 +400,7 @@ ctx.stroke();</pre>
  <dd>这个方法在 Gecko 1.9 中引入，从 Gecko 7.0. 开始删除。</dd>
 </dl>
 
-<h4 id="内部的_APIs_chrome-context_特有的" style="font-size: 1.28571428571429rem;">内部的 APIs (chrome-context 特有的)</h4>
+<h4 id="内部的_APIs_chrome-context_特有的">内部的 APIs (chrome-context 特有的)</h4>
 
 <dl>
  <dt>{{non-standard_inline}} {{domxref("CanvasRenderingContext2D.asyncDrawXULElement()")}}</dt>
@@ -411,22 +411,22 @@ ctx.stroke();</pre>
  <dd>这个方法会引起当前的上下文使用后端的硬件加速作为软件的备选方案。所有的状态都会被保留。</dd>
 </dl>
 
-<h3 id="IE_浏览器" style="font-size: 1.71428571428571rem;">IE 浏览器</h3>
+<h3 id="IE_浏览器">IE 浏览器</h3>
 
 <dl>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.msFillRule</code></dt>
  <dd>应用的<a href="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t">填充规则</a> 。必须是 <code>evenodd</code> 或者 <code>nonzero</code> (默认)。</dd>
 </dl>
 
-<h2 id="规范" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">规范</h2>
+<h2 id="规范">规范</h2>
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("api.CanvasRenderingContext2D")}}</p>
 
-<h2 id="参见" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">参见</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li>{{domxref("HTMLCanvasElement")}}</li>

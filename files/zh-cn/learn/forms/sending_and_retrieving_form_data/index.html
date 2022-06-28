@@ -36,9 +36,9 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 
 <h3 id="客户端服务器体系结构">客户端/服务器体系结构</h3>
 
-<p>web基于非常基本的客户端/服务器体系结构，可以总结如下:客户端(通常是web浏览器)向服务器发送请求(大多数情况下是<a href="http://httpd.apache.org/">Apache</a>、<a href="http://nginx.com/">Nginx</a>、<a href="http://www.iis.net/">IIS</a>、<a href="http://tomcat.apache.org/">Tomcat</a>等 web 服务器)，使用<a href="/en-US/docs/HTTP">HTTP 协议</a>。服务器使用相同的协议来回答请求。</p>
+<p>web基于非常基本的客户端/服务器体系结构，可以总结如下:客户端(通常是web浏览器)向服务器发送请求(大多数情况下是<a href="https://httpd.apache.org/">Apache</a>、<a href="http://nginx.com/">Nginx</a>、<a href="http://www.iis.net/">IIS</a>、<a href="http://tomcat.apache.org/">Tomcat</a>等 web 服务器)，使用<a href="/en-US/docs/HTTP">HTTP 协议</a>。服务器使用相同的协议来回答请求。</p>
 
-<p><img alt="A basic schema of the Web client/server architecture" src="/files/4291/client-server.png" style="display: block; height: 141px; margin: 0px auto; width: 400px;"></p>
+<p><img alt="A basic schema of the Web client/server architecture" src="client-server.png"></p>
 
 <p>在客户端，HTML 表单只不过是一种方便的用户友好的方式，可以配置 HTTP 请求将数据发送到服务器。这使用户能够提供在 HTTP 请求中传递的信息。</p>
 
@@ -50,7 +50,7 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 
 <p>{{HTMLElement("form")}}元素定义了如何发送数据。它的所有属性都是为了让您配置当用户点击提交按钮时发送的请求。两个最重要的属性是{{htmlattrxref("action","form")}}和{{htmlattrxref("method","form")}}。</p>
 
-<h4 id="htmlattrxref(actionform)_属性"> {{htmlattrxref("action","form")}} 属性</h4>
+<h4 id="htmlattrxref(actionform)_属性">{{htmlattrxref("action","form")}} 属性</h4>
 
 <p>这个属性定义了发送数据要去的位置。它的值必须是一个有效的 URL。如果没有提供此属性，则数据将被发送到包含这个表单的页面的 URL。</p>
 
@@ -75,7 +75,7 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 <p><strong>注意：</strong>可以指定使用 HTTPS(安全 HTTP) 协议的 URL。当您这样做时，数据将与请求的其余部分一起加密，即使表单本身是托管在使用 HTTP 访问的不安全页面上。另一方面，如果表单是在安全页面上托管的，但是您指定了一个不安全的 HTTP URL，它带有{{htmlattrxref("action","form")}}属性，所有的浏览器都会在每次尝试发送数据时向用户显示一个安全警告，因为数据不会被加密。</p>
 </div>
 
-<h4 id="htmlattrxref(methodform)属性"> {{htmlattrxref("method","form")}}属性</h4>
+<h4 id="htmlattrxref(methodform)属性">{{htmlattrxref("method","form")}}属性</h4>
 
 <p>该属性定义了如何发送数据。<a href="/en-US/docs/HTTP">HTTP 协议</a>提供了几种执行请求的方法；HTML 表单数据可以通过许多不同的方法进行数据传输，其中最常见的是<code>GET</code>方法和<code>POST</code>方法。</p>
 
@@ -105,7 +105,7 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 
 <p>由于已经使用了<code>GET</code>方法，当你提交表单的时候，您将看到<code>www.foo.com/?say=Hi&amp;to=Mom</code>在浏览器地址栏里。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14685/url-parameters.png" style="display: block; margin: 0 auto;">数据作为一系列的名称/值对被附加到URL。在URL web 地址结束之后，我们得到一个问号 (<code>?</code>)，后面跟着由一个与符号 (<code>&amp;</code>) 互相分隔开的名称/值对。在本例中，我们将两个数据传递给服务器。</p>
+<p><img src="url-parameters.png">数据作为一系列的名称/值对被附加到URL。在URL web 地址结束之后，我们得到一个问号 (<code>?</code>)，后面跟着由一个与符号 (<code>&amp;</code>) 互相分隔开的名称/值对。在本例中，我们将两个数据传递给服务器。</p>
 
 <ul>
  <li><code>say</code>, 它有一个 <code>Hi</code>的值。</li>
@@ -170,7 +170,7 @@ say=Hi&amp;to=Mom</pre>
 
 <p>你可以获得表单数据，像下图显示的那样</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14691/network-monitor.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img src="network-monitor.png"></p>
 
 <p>唯一显示给用户的是被调用的 URL。正如我们上面提到的，使用<code>GET</code>请求用户将在他们的 URL 栏中看到数据，但是使用<code>POST</code>请求用户将不会看到。这一点很重要，有两个原因：</p>
 
@@ -198,7 +198,7 @@ say=Hi&amp;to=Mom</pre>
 
 <p>这个例子显示了一个带有我们发送的数据的页面。您可以在我们的示例<a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.html">php-example.html</a>中看到这一点——该文件包含与我们之前看到的相同的示例表单，它使用了<code>post</code>的<code>method</code>和<code>php-example.php</code>的<code>action</code>。当提交时，它将表单数据发送到<a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.php">php-example.php</a>，其中包含了上述代码块中所见的 php 代码。当执行此代码时，浏览器中的输出是<code>Hi Mom</code>。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14693/php-result.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="php-result.png"></p>
 
 <div class="note">
 <p><strong>注意：</strong>当您将本例加载到本地浏览器中时，这个示例将无法工作---浏览器无法解析 PHP 代码，因此当提交表单时，浏览器只会为您提供下载 PHP 文件。为了让它生效，您需要通过某种类型的 PHP 服务器运行这个示例。本地 PHP 测试的好选择有<a href="https://www.mamp.info/en/downloads/">MAMP</a>(Mac 和 Windows) 和<a href="http://ampps.com/download">AMPPS</a>(Mac、Windows、Linux)。</p>

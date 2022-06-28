@@ -9,7 +9,7 @@ translation_of: Web/API/Node/childNodes
 
 <p><code><strong>Node.childNodes</strong></code> 唯讀屬性會回傳一個<em>即時更新的動態集合（live collection）</em>，其包含了指定元素的子{{domxref("Node","節點")}}，而第一個子節點會被指派為索引 0。</p>
 
-<h2 id="Syntax" name="Syntax">語法</h2>
+<h2 id="Syntax">語法</h2>
 
 <pre class="syntaxbox">var <var>ndList</var> = elementNodeReference.childNodes;
 </pre>
@@ -39,7 +39,7 @@ while (box.firstChild) {
     box.removeChild(box.firstChild);
 }</pre>
 
-<h2 id="Notes" name="Notes">備註</h2>
+<h2 id="Notes">備註</h2>
 
 <p>The items in the collection of nodes are objects and not strings. To get data from node objects, use their properties (e.g. <code>elementNodeReference.childNodes[1].nodeName</code> to get the name, etc.).</p>
 
@@ -47,7 +47,7 @@ while (box.firstChild) {
 
 <p><code>childNodes</code> includes all child nodes, including non-element nodes like text and comment nodes. To get a collection of only elements, use {{ domxref("ParentNode.children") }} instead.</p>
 
-<h2 id="Specification" name="Specification">規範</h2>
+<h2 id="Specification">規範</h2>
 
 <ul>
  <li><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-1451460987">W3C DOM 2 Core: childNodes</a></li>
@@ -55,7 +55,7 @@ while (box.firstChild) {
  <li><a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-536297177">W3C DOM 3 NodeList interface</a></li>
 </ul>
 
-<h2 id="See_also" name="See_also">參見</h2>
+<h2 id="See_also">參見</h2>
 
 <ul>
  <li>{{ domxref("Node.firstChild") }}</li>

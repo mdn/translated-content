@@ -19,7 +19,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
  <li><code><a href="http://caolan.github.io/async/docs.html#waterfall">async.waterfall()</a></code> 用於必須序列運行的操作，每個操作取決於前面操作的結果。</li>
 </ul>
 
-<h2 class="highlight-spanned" id="為什麼需要這麼做">為什麼需要這麼做?</h2>
+<h2 id="為什麼需要這麼做">為什麼需要這麼做?</h2>
 
 <p>我們在 <em>Express</em> 中使用的大多數方法，都是異步的 - 您指定要執行的操作，傳遞回調。該方法立即返回，並在請求的操作完成時，調用回調。按照 <em>Express</em> 中的慣例，回調函數將<em>錯誤值</em>作為第一個參數傳遞（或成功時為 <code>null</code>），並將函數的結果（如果有的話）作為第二個參數傳遞。</p>
 
@@ -40,7 +40,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <p>一個更好的解決方案，是並行執行所有請求，然後在所有查詢完成後執行單個回調。這是 <em>Async</em> 模塊簡化的流操作！</p>
 
-<h2 class="highlight-spanned" id="Asynchronous_operations_in_parallel">Asynchronous operations in parallel</h2>
+<h2 id="Asynchronous_operations_in_parallel">Asynchronous operations in parallel</h2>
 
 <p>The method <code><a href="http://caolan.github.io/async/docs.html#parallel">async.parallel()</a></code> is used to run multiple asynchronous operations in parallel.</p>
 
@@ -64,7 +64,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <p>If you instead pass an array of functions as the first argument, the results will be an array (the array order results will match the original order that the functions were declared—not the order in which they completed).</p>
 
-<h2 class="highlight-spanned" id="Asynchronous_operations_in_series">Asynchronous operations in series</h2>
+<h2 id="Asynchronous_operations_in_series">Asynchronous operations in series</h2>
 
 <p>The method <code><a href="http://caolan.github.io/async/docs.html#series">async.series()</a></code> is used to run multiple asynchronous operations in sequence, when subsequent functions do not depend on the output of earlier functions. It is essentially declared and behaves in the same way as <code>async.parallel()</code>.</p>
 
@@ -100,7 +100,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
   }
 );</code></pre>
 
-<h2 class="highlight-spanned" id="Dependent_asynchronous_operations_in_series">Dependent asynchronous operations in series</h2>
+<h2 id="Dependent_asynchronous_operations_in_series">Dependent asynchronous operations in series</h2>
 
 <p>The method <code><a href="http://caolan.github.io/async/docs.html#waterfall">async.waterfall()</a></code> is used to run multiple asynchronous operations in sequence when each operation is dependent on the result of the previous operation.</p>
 
@@ -123,7 +123,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 }
 );</code></pre>
 
-<h2 class="highlight-spanned" id="Installing_async">Installing async</h2>
+<h2 id="Installing_async">Installing async</h2>
 
 <p>Install the async module using the NPM package manager so that we can use it in our code. You do this in the usual way, by opening a prompt in the root of the <em>LocalLibrary</em> project and enter the following command:</p>
 

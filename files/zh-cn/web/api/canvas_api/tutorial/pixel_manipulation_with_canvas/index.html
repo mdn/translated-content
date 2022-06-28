@@ -68,7 +68,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 
 <p>这个方法也会在文章<a href="/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas">用画布操作视频</a>中展示。</p>
 
-<h3 id="A_color_picker" name="A_color_picker"><strong>颜色选择器</strong></h3>
+<h3 id="A_color_picker"><strong>颜色选择器</strong></h3>
 
 <p>在这个例子里面，我们会使用<code style="font-style: normal;">getImageData()</code>去展示鼠标光标下的颜色。为此，我们要当前鼠标的位置，记为 layerX 和 layerY，然后我们去查询<code style="font-style: normal;">getImageData()</code>给我们提供的在那个位置的像数数组里面的像素数据。最后我们使用数组数据去设置背景颜色和&lt;div&gt;的文字去展示颜色值。</code></p>
 
@@ -151,7 +151,7 @@ canvas.addEventListener('click', function(event) {
 
 <h3 id="sect1"></h3>
 
-<h3 id="Grayscaling_and_inverting_colors" name="Grayscaling_and_inverting_colors">图片灰度和反相颜色</h3>
+<h3 id="Grayscaling_and_inverting_colors">图片灰度和反相颜色</h3>
 
 <p>在这个例子里，我们遍历所有像素以改变他们的数值。然后我们将被修改的像素数组通过 putImageData() 放回到画布中去。invert 函数仅仅是去减掉颜色的最大色值 255.grayscale 函数仅仅是用红绿和蓝的平均值。你也可以用加权平均，例如 x = 0.299r + 0.587g + 0.114b 这个公式。更多资料请参考维基百科的<a href="http://en.wikipedia.org/wiki/Grayscale">Grayscale</a>。</p>
 
@@ -274,7 +274,7 @@ for (const input of inputs) {
 
 <p>因为反锯齿默认是启用的，我们可能想要关闭它以看到清楚的像素。你可以通过切换勾选框来看到 imageSmoothingEnabled 属性的效果（不同浏览器需要不同前缀）。</p>
 
-<h6 class="hidden" id="Zoom_example">Zoom example</h6>
+<h6 id="Zoom_example">Zoom example</h6>
 
 <pre class="brush: html; notranslate">&lt;canvas id="canvas" width="300" height="227"&gt;&lt;/canvas&gt;
 &lt;canvas id="zoom" width="300" height="227"&gt;&lt;/canvas&gt;
