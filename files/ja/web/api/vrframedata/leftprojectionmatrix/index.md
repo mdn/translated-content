@@ -1,54 +1,50 @@
 ---
 title: VRFrameData.leftProjectionMatrix
 slug: Web/API/VRFrameData/leftProjectionMatrix
+page-type: web-api-instance-property
+tags:
+  - API
+  - Deprecated
+  - Property
+  - Reference
+  - VR
+  - VRFrameData
+  - Virtual Reality
+  - WebVR
+  - leftProjectionMatrix
+browser-compat: api.VRFrameData.leftProjectionMatrix
 translation_of: Web/API/VRFrameData/leftProjectionMatrix
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p><strong><code>leftProjectionMatrix</code></strong>は、{{domxref("VRFrameData")}}インタフェースの読み取り専用プロパティであり、4行4列の行列を表す{{domxref("Float32Array")}}を返します。この行列は、左目の描画に利用される射影を表します。</p>
+**`leftProjectionMatrix`** は {{domxref("VRFrameData")}} インタフェースの読み取り専用プロパティで、 4 行 4 列の行列を表す {{jsxref("Float32Array")}} を返します。この行列は、左目の描画に利用される射影を表します。
 
-<p>この値は、WebGLの{{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix4fv")}}関数へ直接渡されるでしょう。</p>
+> **Note:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
-<div class="warning">
-<p><strong>重要</strong>: アプリケーションは、この行列を改変せずに使用することを強く薦めます。描画時にこの射影行列の使用に失敗すると、表現されたフレームは歪んだり、正しく揃わなかったりし、その結果として、様々な度合いのユーザの不快感を生みます。</p>
-</div>
+この値は、 WebGL の {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix4fv")}} 関数へ直接渡されるでしょう。
 
-<h2 id="文法">文法</h2>
+> **Warning:** アプリケーションは、この行列を改変せずに使用することを強く薦めます。描画時にこの射影行列の使用に失敗すると、表現されたフレームは歪んだり、正しく揃わなかったりし、その結果として、様々な度合いのユーザの不快感を生みます。
 
-<pre class="brush: js">var myLPM = vrFrameDataInstance.leftProjectionMatrix;</pre>
+## 値
 
-<h3 id="値">値</h3>
+{{jsxref("Float32Array")}} オブジェクトです。
 
-<p>{{domxref("Float32Array")}}型のオブジェクトです。</p>
+## 例
 
-<h2 id="例">例</h2>
+例については [`VRDisplay.getFrameData()`](/ja/docs/Web/API/VRDisplay/getFrameData#例
+) を参照してください。
 
-<p>{{page("/Web/API/VRDisplay/getFrameData", "Examples")}}</p>
+## 仕様書
 
-<h2 id="仕様">仕様</h2>
+このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#dom-vrframedata-leftprojectionmatrix', 'leftProjectionMatrix')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.VRFrameData.leftProjectionMatrix")}}</p>
+{{Compat}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage (英語)</a></li>
- <li><a href="http://mozvr.com/">MozVr.com (英語)</a> — デモ、ダウンロード、Mozilla VRチームからのその他のリソース</li>
-</ul>
+- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
