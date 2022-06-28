@@ -1,64 +1,61 @@
 ---
 title: VRFrameData
 slug: Web/API/VRFrameData
+page-type: web-api-interface
+tags:
+  - API
+  - Deprecated
+  - Interface
+  - Reference
+  - VR
+  - VRFrameData
+  - Virtual Reality
+  - WebVR
+browser-compat: api.VRFrameData
 translation_of: Web/API/VRFrameData
 ---
-<p>{{APIRef("WebVR API")}}{{SeeCompatTable}}</p>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a>の<strong><code>VRFrameData</code></strong>インタフェースは、VRシーンの1つのフレームを描画するのに必要となる全ての情報を表現します。</p>
+**`VRFrameData`** は [WebVR API]("/ja/docs/Web/API/WebVR_API) のインターフェイスで、 VR シーンの 1 つのフレームを描画するのに必要となるすべての情報を表現します。 {{domxref("VRDisplay.getFrameData()")}} で構築します。
 
-<h2 id="コンストラクタ">コンストラクタ</h2>
+> **Note:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
-<dl>
- <dt>{{domxref("VRFrameData.VRFrameData()")}}</dt>
- <dd><code>VRFrameData</code> オブジェクトインスタンスを作成します。</dd>
-</dl>
+## コンストラクター
 
-<h2 id="プロパティ">プロパティ</h2>
+- {{domxref("VRFrameData.VRFrameData", "VRFrameData()")}} {{deprecated_inline}}
+  - : `VRFrameData` オブジェクトインスタンスを作成します。
 
-<dl>
- <dt>{{domxref("VRFrameData.leftProjectionMatrix")}} {{readonlyInline}}</dt>
- <dd>{{domxref("Float32Array")}}型の要素を持つ4行4列の行列であり、左目の描画に利用される射影を表します。</dd>
- <dt>{{domxref("VRFrameData.leftViewMatrix")}} {{readonlyInline}}</dt>
- <dd>{{domxref("Float32Array")}}型の要素を持つ4行4列の行列であり、左目の描画に利用されるビュー変換を表します。</dd>
- <dt>{{domxref("VRFrameData.pose")}} {{readonlyInline}}</dt>
- <dd>現在の{{domxref("VRFrameData.timestamp")}}の値が示す時刻での、{{domxref("VRDisplay")}}の{{domxref("VRPose")}}です。</dd>
- <dt>{{domxref("VRFrameData.rightProjectionMatrix")}} {{readonlyInline}}</dt>
- <dd>{{domxref("Float32Array")}}型の要素を持つ4行4列の行列であり、右目の描画に利用される射影を表します。</dd>
- <dt>{{domxref("VRFrameData.rightViewMatrix")}} {{readonlyInline}}</dt>
- <dd>{{domxref("Float32Array")}}型の要素を持つ4行4列の行列であり、右目の描画に利用されるビュー変換を表します。</dd>
- <dt>{{domxref("VRFrameData.timestamp")}} {{readonlyInline}}</dt>
- <dd>単調に増加するタイムスタンプ値であり、フレームが更新された時を表します。</dd>
-</dl>
+## プロパティ
 
-<h2 id="例">例</h2>
+- {{domxref("VRFrameData.leftProjectionMatrix")}} {{deprecated_inline}}{{readonlyInline}}
+  - : {{jsxref("Float32Array")}} 型で 4 行 4 列の行列であり、左目の描画に利用される射影を表します。
+- {{domxref("VRFrameData.leftViewMatrix")}} {{deprecated_inline}}{{readonlyInline}}
+  - : {{jsxref("Float32Array")}} 型で 4 行 4 列の行列であり、左目の描画に利用されるビュー変換を表します。
+- {{domxref("VRFrameData.pose")}} {{deprecated_inline}}{{readonlyInline}}
+  - : 現在の {{domxref("VRFrameData.timestamp")}} の値が示す時刻での、 {{domxref("VRDisplay")}} の {{domxref("VRPose")}} です。
+- {{domxref("VRFrameData.rightProjectionMatrix")}} {{deprecated_inline}}{{readonlyInline}}
+  - : {{jsxref("Float32Array")}} 型で 4 行 4 列の行列であり、右目の描画に利用される射影を表します。
+- {{domxref("VRFrameData.rightViewMatrix")}} {{deprecated_inline}}{{readonlyInline}}
+  - : {{jsxref("Float32Array")}} 型で 4 行 4 列の行列であり、右目の描画に利用されるビュー変換を表します。
+- {{domxref("VRFrameData.timestamp")}} {{deprecated_inline}}{{readonlyInline}}
+  - : 定常的に増加するタイムスタンプ値であり、フレームが更新された時を表します。
 
-<p>{{page("/Web/API/VRDisplay/getFrameData", "Examples")}}</p>
+## 例
 
-<h2 id="仕様">仕様</h2>
+例については [`VRDisplay.getFrameData()`](/ja/docs/Web/API/VRDisplay/getFrameData#例
+) を参照してください。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#interface-vrdisplayevent', 'VRDisplayEvent')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
 
-<p>{{Compat("api.VRFrameData")}}</p>
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
 
-<h2 id="関連項目">関連項目</h2>
+## ブラウザーの互換性
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage (英語)</a></li>
- <li><a href="http://mozvr.com/">MozVr.com (英語)</a> — デモ、ダウンロード、Mozilla VRチームからのその他のリソース</li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。

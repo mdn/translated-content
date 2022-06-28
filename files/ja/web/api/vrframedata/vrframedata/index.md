@@ -1,48 +1,51 @@
 ---
-title: VRFrameData.VRFrameData()
+title: VRFrameData()
 slug: Web/API/VRFrameData/VRFrameData
+page-type: web-api-constructor
+tags:
+  - API
+  - Constructor
+  - Deprecated
+  - Reference
+  - VR
+  - VRFrameData
+  - Virtual Reality
+  - WebVR
+browser-compat: api.VRFrameData.VRFrameData
 translation_of: Web/API/VRFrameData/VRFrameData
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>{{domxref("VRFrameData")}} コンストラクタは、 <code>VRFrameData</code> オブジェクトのインスタンスを作成します。</p>
+**`VRFrameData()`** コンストラクターは、 {{domxref("VRFrameData")}} オブジェクトのインスタンスを生成します。
 
-<h2 id="文法">文法</h2>
+> **Note:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
-<pre class="brush: js">var myFrameData = new VRFrameData();</pre>
+## 構文
 
-<h3 id="パラメータ">パラメータ</h3>
+```js
+new VRFrameData()
+```
 
-<p>なし。</p>
+### 引数
 
-<h2 id="例">例</h2>
+なし。
 
-<p>{{page("/Web/API/VRDisplay/getFrameData", "Examples")}}</p>
+## 例
 
-<h2 id="仕様">仕様</h2>
+例については [`VRDisplay.getFrameData()`](/ja/docs/Web/API/VRDisplay/getFrameData#例
+) を参照してください。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#dom-vrframedata-vrframedata', 'VRFrameData()')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) の一部でしたが、 [WebXR Device API](https://immersive-web.github.io/webxr/) に置き換えられました。標準化される予定はありません。
 
-<p>{{Compat("api.VRFrameData.VRFrameData")}}</p>
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、すべてのブラウザーで動作する WebXR アプリケーションを開発するには、[A-Frame](https://aframe.io/) や [Babylon.js](https://www.babylonjs.com/) や [Three.js](https://threejs.org/) などのフレームワークを利用したり、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を利用したりすると良いでしょう [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
 
-<h2 id="関連項目">関連項目</h2>
+## ブラウザーの互換性
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage (英語)</a></li>
- <li><a href="http://mozvr.com/">MozVr.com (英語)</a> — デモ、ダウンロード、Mozilla VRチームからのその他のリソース</li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
