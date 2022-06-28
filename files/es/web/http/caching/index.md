@@ -96,11 +96,11 @@ Se sabe heurísticamente que el contenido que no se ha actualizado durante un a�
 
 El almacenamiento en caché heurístico es una solución que surgió antes de que el soporte de `Cache-Control` se generalizara, y básicamente todas las respuestas deben especificar explícitamente un encabezado `Cache-Control`.
 
-## Fresh and stale según age
+## Estados fresh y stale según la edad
 
-Las respuestas HTTP tienen dos estados: **fresh** y **stale**. El estado _fresh_ indica, generalmente, que la respuesta sigue siendo válida y puede ser reusada, mientras que el estado _stale_ significa que la respuesta cacheada ya ha expirado.
+Las respuestas HTTP tienen dos estados: **fresh** (nuevo) y **stale** (viejo). El estado _fresh_ indica, generalmente, que la respuesta sigue siendo válida y puede ser reusada, mientras que el estado _stale_ significa que la respuesta cacheada ya ha expirado.
 
-El criterio para determinar cuando una respuesta es fresh y cuando es stale es **age**. En HTTP, age es el tiempo que ha pasado desde que la respuesta fue generada. Esto es similar al TTL en otros sistemas de caché
+El criterio para determinar cuando una respuesta es _fresh_ y cuando es _stale_ es el tiempo de vida. En HTTP, age es el tiempo que ha pasado desde que la respuesta fue generada. Esto es similar al TTL en otros sistemas de caché
 
 Aquí nos encontramos con el siguiente ejemplo (604800 segundos es una semana).
 
@@ -115,8 +115,7 @@ Cache-Control: max-age=604800
 ...
 ```
 
-La caché que almacenó esa respuesta cuenta el tiempo transcurrido desde que la respuesta fue generada. El significado de `max-age` es que si la respuesta se creó hace menos de una semana, entonces es fresh, y si se creó hace más de una semana, entonces es stale.
-esponse is stale.
+La caché que almacenó esa respuesta cuenta el tiempo transcurrido desde que la respuesta fue generada. El significado de `max-age` es que si la respuesta se creó hace menos de una semana, entonces es _fresh_, y si se creó hace más de una semana, entonces es  _stale_ .
 
 Si esa respuesta está almacenada en una caché privada, estará disponible para su reutilización en respuesta a las solicitudes de los clientes durante una semana después de que se almacene. Si la caché compartida lo guarda, es necesario informar al cliente del tiempo transcurrido desde que fue almacenada en la caché compartida hasta que sea reutilizada por el cliente. Si la respuesta ha sido almacenada en la caché compartida durante un día y luego el cliente la reutilizó, entonces la siguiente respuesta será enviada desde la caché compartida al cliente.
 
@@ -132,7 +131,7 @@ Age: 86400
 ...
 ```
 
-El cliente que recibe esa respuesta la encontrará fresh durante los 604800-86400 segundos restantes; es decir, por 518400 segundos más.
+El cliente que recibe esa respuesta la encontrará _fresh_ durante los 604800-86400 segundos restantes; es decir, por 518400 segundos más.
 
 ## Expires o max-age
 
@@ -172,13 +171,13 @@ Para aplicaciones que emplean cookies para evitar que otros reutilicen contenido
 
 ## Validación
 
-Las respuestas stale no se descartan inmediatamente. HTTP tiene un mecanismo para transformar una respuesta stale en una respuesta fresh preguntando al servidor origen. Esto se denomina **validacion** o **revalidación**.
+Las respuestas _stale_ no se descartan inmediatamente. HTTP tiene un mecanismo para transformar una respuesta _stale_ en una respuesta _fresh_ preguntando al servidor origen. Esto se denomina **validacion** o **revalidación**.
 
 La validación se realiza mediante una **solicitud condicional** que incluye un header de solicitud `If-Modified-Since` o `If-None-Match`.
 
 ### If-Modified-Since
 
-La siguiente respuesta se generó a las 22:22 y tiene `max-age` de 1 hora, por lo que se sabe que es fresh hasta las 23:22.
+La siguiente respuesta se generó a las 22:22 y tiene `max-age` de 1 hora, por lo que se sabe que es _fresh_ hasta las 23:22.
 
 ```http
 HTTP/1.1 200 OK
@@ -192,7 +191,7 @@ Cache-Control: max-age=3600
 ...
 ```
 
-A las 23:22, la respuesta se vuelve stale y la caché no puede ser reutilizada. Así que la caché realiza una petición con un header `If-Modified-Since`, para preguntar al servidor si han habido cambios desde el tiempo especificado.
+A las 23:22, la respuesta se vuelve _stale_ y la caché no puede ser reutilizada. Así que la caché realiza una petición con un header `If-Modified-Since`, para preguntar al servidor si han habido cambios desde el tiempo especificado.
 
 ```http
 GET /index.html HTTP/1.1
@@ -213,7 +212,7 @@ Last-Modified: Tue, 22 Feb 2022 22:00:00 GMT
 Cache-Control: max-age=3600
 ```
 
-Al recibir esta respuesta, el cliente revierte la respuesta stale en fresh y puede ser reutilizada durante 1 hora.
+Al recibir esta respuesta, el cliente revierte la respuesta _stale_ en _fresh_ y puede ser reutilizada durante 1 hora.
 
 El servidor puede obtener la fecha de modificación del sistema de archivos del sistema operativo, lo cual es relativamente fácil de hacer en el caso de servir archivos estáticos. Sin embargo, hay algunos problemas; por ejemplo, el formato de hora es complejo y difícil de analizar, y los servidores distribuidos tienen dificultades para sincronizar las horas de actualización de archivos.
 
@@ -237,7 +236,7 @@ Cache-Control: max-age=3600
 ...
 ```
 
-Si esa respuesta es stale, el cliente toma el valor del header de respuesta 'ETag' para la respuesta en caché y lo coloca en el header de solicitud 'If-None-Match', para preguntarle al servidor si el recurso ha sido modificado:
+Si esa respuesta es  _stale_ , el cliente toma el valor del header de respuesta 'ETag' para la respuesta en caché y lo coloca en el header de solicitud 'If-None-Match', para preguntarle al servidor si el recurso ha sido modificado:
 
 ```http
 GET /index.html HTTP/1.1
@@ -281,7 +280,7 @@ A menudo se afirma que la combinación de `max-age=0` y `must-revalidate` tiene 
 Cache-Control: max-age=0, must-revalidate
 ```
 
-`max-age=0` significa que la respuesta es stale de inmediato, y `must-revalidate` significa que no debe reutilizarse sin revalidación una vez que esté stale; por lo tanto, en combinación, la semántica parece ser la misma que `no-cache`.
+`max-age=0` significa que la respuesta es _stale_ de inmediato, y `must-revalidate` significa que no debe reutilizarse sin revalidación una vez que esté  _stale_ ; por lo tanto, en combinación, la semántica parece ser la misma que `no-cache`.
 
 Sin embargo, ese uso de `max-age=0` es un remanente del hecho de que muchas implementaciones anteriores a HTTP/1.1 no pudieron manejar la directiva `no-cache` y, por lo tanto, para lidiar con esa limitación, `max-age =0` se utilizó como solución alternativa.
 
@@ -416,7 +415,7 @@ fetch("/", { cache: "reload" });
 
 ### Evitar la revalidación
 
-Al contenido que nunca cambia se le debe dar una "max-age" larga mediante el uso de la prevención de caché, es decir, al incluir un número de versión, un valor hash, etc., en la URL de solicitud.
+Al contenido que nunca cambia se le debe dar un `max-age` largo mediante el uso de la prevención de caché, es decir, al incluir un número de versión, un valor hash, etc., en la URL de solicitud.
 
 Sin embargo, cuando el usuario recarga, se envía una solicitud de revalidación a pesar de que el servidor sabe que el contenido es inmutable.
 
@@ -432,7 +431,7 @@ Tenga en cuenta que, en lugar de implementar esa directiva, [Chrome ha cambiado 
 
 ## Eliminando respuestas almacenadas
 
-Básicamente, no hay forma de eliminar las respuestas que ya se han almacenado con una "max-age" larga.
+Básicamente, no hay forma de eliminar las respuestas que ya se han almacenado con un `max-age` largo.
 
 Imagine que se almacenó la siguiente respuesta de `https://example.com/`.
 
@@ -452,7 +451,7 @@ Uno de los métodos mencionados en la especificación es enviar una solicitud de
 
 También hay una especificación para un header y valor `Clear-Site-Data: cache`, pero [no todos los navegadores lo admiten] (https://groups.google.com/a/mozilla.org/g/dev-platform /c/I939w1yrTp4), e incluso cuando se usa, solo afecta los cachés del navegador, pero no tiene efecto en los cachés intermedios.
 
-Por lo tanto, se debe suponer que cualquier respuesta almacenada permanecerá durante su período de "max-age" a menos que el usuario realice manualmente una acción de recarga, recarga forzada o borrado del historial.
+Por lo tanto, se debe suponer que cualquier respuesta almacenada permanecerá durante su período de `max-age` a menos que el usuario realice manualmente una acción de recarga, recarga forzada o borrado del historial.
 
 El almacenamiento en caché reduce el acceso al servidor, lo que significa que el servidor pierde el control de esa URL. Si el servidor no quiere perder el control de una URL, por ejemplo, en el caso de un recurso que se actualiza con frecuencia, debe agregar `no-cache` para que el servidor siempre reciba solicitudes y envíe las respuestas deseadas.
 
