@@ -19,7 +19,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <h2 id="栅格">栅格</h2>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="float: right; height: 220px; width: 220px;"></p>
+<p><img src="canvas_default_grid.png"></p>
 
 <p>在我们开始画图之前，我们需要了解一下画布栅格（canvas grid）以及坐标空间。上一页中的 HTML 模板中有个宽 150px, 高 150px 的 canvas 元素。如右图所示，canvas 元素默认被网格所覆盖。通常来说网格中的一个单元相当于 canvas 元素中的一像素。栅格的起点为左上角（坐标为（0,0））。所有元素的位置都相对于原点定位。所以图中蓝色方形左上角的坐标为距离左边（X 轴）x 像素，距离上边（Y 轴）y 像素（坐标为（x,y））。在课程的最后我们会平移原点到不同的坐标上，旋转网格以及缩放。现在我们还是使用原来的设置。</p>
 
@@ -322,7 +322,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
  <dd>绘制三次贝塞尔曲线，<code>cp1x,cp1y</code>为控制点一，<code>cp2x,cp2y</code>为控制点二，<code>x,y</code>为结束点。</dd>
 </dl>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/223/Canvas_curves.png" style="float: right; height: 190px; width: 190px;">右边的图能够很好的描述两者的关系，二次贝塞尔曲线有一个开始点（蓝色）、一个结束点（蓝色）以及一个控制点（红色），而三次贝塞尔曲线有两个控制点。</p>
+<p><img src="canvas_curves.png">右边的图能够很好的描述两者的关系，二次贝塞尔曲线有一个开始点（蓝色）、一个结束点（蓝色）以及一个控制点（红色），而三次贝塞尔曲线有两个控制点。</p>
 
 <p>参数 x、y 在这两个方法中都是结束点坐标。<code>cp1x,cp1y</code>为坐标中的第一个控制点，<code>cp2x,cp2y</code>为坐标中的第二个控制点。</p>
 

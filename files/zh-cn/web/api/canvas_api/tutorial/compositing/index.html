@@ -31,7 +31,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Compositing
 
 <h2 id="Clipping_paths">裁切路径</h2>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png" style="float: right;">裁切路径和普通的 canvas 图形差不多，不同的是它的作用是遮罩，用来隐藏不需要的部分。如右图所示。红边五角星就是裁切路径，所有在路径以外的部分都不会在 canvas 上绘制出来。</p>
+<p><img src="canvas_clipping_path.png">裁切路径和普通的 canvas 图形差不多，不同的是它的作用是遮罩，用来隐藏不需要的部分。如右图所示。红边五角星就是裁切路径，所有在路径以外的部分都不会在 canvas 上绘制出来。</p>
 
 <p>如果和上面介绍的 <code>globalCompositeOperation</code> 属性作一比较，它可以实现与 <code>source-in</code> 和 <code>source-atop</code>差不多的效果。最重要的区别是裁切路径不会在 canvas 上绘制东西，而且它永远不受新图形的影响。这些特性使得它在特定区域里绘制图形时相当好用。</p>
 

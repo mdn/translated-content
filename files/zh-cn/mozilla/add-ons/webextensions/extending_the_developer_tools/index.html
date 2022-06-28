@@ -118,7 +118,7 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 
 <p>如果您需要在目标窗口中运行的内容脚本和 devtools 文档之间交换消息，则最好使用{{WebExtAPIRef("runtime.connect()")}}和{{WebExtAPIRef("runtime.onConnect()")}}，以在后台页面和 devtools 文档之间建立连接。然后，后台页面可以维护选项卡 ID 和{{WebExtAPIRef("runtime.Port")}}对象之间的映射，并使用此映射在两个作用域之间路由消息。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14923/devtools-content-scripts.png" style="display: block; height: 416px; margin-left: auto; margin-right: auto; width: 600px;"></p>
+<p><img src="devtools-content-scripts.png"></p>
 
 <h2 id="devtools_API的局限性">devtools API 的局限性</h2>
 

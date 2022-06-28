@@ -54,7 +54,7 @@ translation_of: Learn/Server-side/First_steps/Introduction
 
 <p>下面这张图展示了一个<em>静态网站</em>的基本架构。（静态网站是指无论何时当一个特定资源被请求的时候都返回相同的被硬编码的内容）当用户想要导航到某个页面时，浏览器会发送一个指定到这个页面的 URL 的 HTTP“GET”请求。服务器从它的文件系统中检索被请求的文件，然后返回一个 HTTP 回应，该回应包括被请求的文件和一个<a href="/en-US/docs/Web/HTTP/Status#Successful_responses">状态码</a>（通常 200 代表操作成功）。如果出于某些原因被请求的文件无法检索到，就会返回错误码。（具体可以参照<a href="/zh-CN/docs/Web/HTTP/Status#Client_error_responses">客户端错误回应</a>和<a href="/zh-CN/docs/Web/HTTP/Status#Server_error_responses">服务器错误回应</a>）</p>
 
-<p><img alt="A simplified diagram of a static web server." src="https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png" style="height: 223px; width: 800px;"></p>
+<p><img alt="A simplified diagram of a static web server." src="basic_static_app_server.png"></p>
 
 <h3 id="动态网站">动态网站</h3>
 
@@ -68,7 +68,7 @@ translation_of: Learn/Server-side/First_steps/Introduction
 
 <p>动态网站对于静态资源的请求的处理方式和静态网站是一样的（静态资源是指那些不会改变的文件——最典型的就是：CSS，Javascript，图片，预先生成的 PDF 文件等）。</p>
 
-<p><img alt="A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview." src="https://mdn.mozillademos.org/files/13839/Web%20Application%20with%20HTML%20and%20Steps.png"></p>
+<p><img alt="A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview." src="web_application_with_html_and_steps.png"></p>
 
 <p>对于动态资源的请求则会指向（2）服务器端代码 (在图中显示为 <em>Web Application</em>（Web 应用））。在处理“动态请求”时，服务器会首先解释请求，从数据库中读取被请求的信息，然后将这些被检索的信息组合到 HTML 模板中（4）,最后返回一个包含所生成的 HTML 页面的回应（5,6）。</p>
 
