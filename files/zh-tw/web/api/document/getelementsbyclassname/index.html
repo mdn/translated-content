@@ -9,7 +9,7 @@ translation_of: Web/API/Document/getElementsByClassName
 
 <p>針對所有給定的 class 子元素，回傳類似陣列的物件。當呼叫 document 物件時，它會搜尋整個文件，包括根節點在內。你也可以在所有元素呼叫 {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}}，那它就只會回傳含有給定 class 的特定根元素的後代元素。</p>
 
-<h2 id="Syntax" name="Syntax">表達式</h2>
+<h2 id="Syntax">表達式</h2>
 
 <pre class="syntaxbox"><var>var elements</var> = document.getElementsByClassName(<em>names</em>); // or:
 <var>var elements</var> = rootElement.getElementsByClassName(<em>names</em>);</pre>
@@ -20,7 +20,7 @@ translation_of: Web/API/Document/getElementsByClassName
  <li>getElementsByClassName 可以被任何不只在 document 的元素呼叫。呼叫這個方法的元素將會成為搜尋 class 的根元素。</li>
 </ul>
 
-<h2 id="Examples" name="Examples">範例</h2>
+<h2 id="Examples">範例</h2>
 
 <p>取得所有 class 為 “test” 的元素：</p>
 
@@ -74,7 +74,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 {{Compat("api.Document.getElementsByClassName")}}
 
-<h2 id="Specification" name="Specification">規範</h2>
+<h2 id="Specification">規範</h2>
 
 <ul>
  <li><a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-getelementsbyclassname">W3C: getElementsByClassName</a></li>

@@ -7,7 +7,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Compositing
 
 <p>在前述的範例中，新繪製的圖形總會覆蓋在之前的圖形上，對大多數情況來說這相當正常，不過它也限制了圖形繪製的順序。其實我們可以透過 globalCompositeOperation 屬性來改變這項預設行為。</p>
 
-<h2 id="globalCompositeOperation" name="globalCompositeOperation"><code>globalCompositeOperation</code></h2>
+<h2 id="globalCompositeOperation"><code>globalCompositeOperation</code></h2>
 
 <p>利用 globalCompositeOperation，我們可以將新圖形繪製在舊圖形之下、遮蓋部分區域、清除畫布部分區域 (不同於 clearRect() 函式只能清除矩形區域)。</p>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Compositing
 
 <p>{{EmbedLiveSample("Compositing_example", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}</p>
 
-<h2 id="Clipping_paths" name="Clipping_paths">裁剪路徑</h2>
+<h2 id="Clipping_paths">裁剪路徑</h2>
 
 <p><img alt="" class="internal" src="canvas_clipping_path.png" style="float: right;">裁剪路徑就像是一般畫布圖形繪圖，但就如同遮罩一樣，會蓋掉不需要的部分，如右圖所示。紅邊星星是我們的裁剪路徑，在路徑區域以外部分都不會出現在畫布上。</p>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Compositing
 
 <p> {{HTMLElement("canvas")}} 畫布預設有一個等同於本身大小的裁剪路徑，等同於無裁剪效果。</p>
 
-<h3 id="A_clip_example" name="A_clip_example"><code>clip</code> 範例</h3>
+<h3 id="A_clip_example"><code>clip</code> 範例</h3>
 
 <p>本範例使用了圓形的裁剪路徑，來限定畫星星時的繪圖區域。</p>
 

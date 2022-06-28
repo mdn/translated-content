@@ -9,7 +9,7 @@ translation_of: Web/API/Fullscreen_API
 
 <div class="note">目前並非所有瀏覽器均使用 API 的沒有前綴的版本。請查閱有關前綴以及名稱差異的表格（您也可以使用 Fscreen 來提供跨瀏覽器 API 存取）。</div>
 
-<h2 id="Specification" name="Specification">啟動全螢幕模式</h2>
+<h2 id="Specification">啟動全螢幕模式</h2>
 
 <p>如果您有一個元素打算以全螢幕模式展示（例如 {{ HTMLElement("video") }}），您可以呼叫該元素之 {{ domxref("Element.requestFullscreen()") }} 方法使之以全螢幕模式顯示。</p>
 
@@ -74,13 +74,13 @@ if (elem.requestFullscreen) {
  <dd><code>fullscreenEnabled</code> 屬性傳回文件是否容許您要求進入全螢幕訊息。</dd>
 </dl>
 
-<h2 id="Things_your_users_want_to_know" name="Things_your_users_want_to_know">使用者可能想了解的訊息</h2>
+<h2 id="Things_your_users_want_to_know">使用者可能想了解的訊息</h2>
 
 <p>您可能會讓使用者知道他們可以按 <kbd>ESC</kbd> 或 <kbd>F11</kbd> 鍵來離開全螢幕模式。</p>
 
 <p>此外，瀏覽其他頁面、切換分頁、或切換到其他應用程式（例如按 鍵）亦會離開全螢幕模式。</p>
 
-<h2 id="Specification" name="Specification">範例</h2>
+<h2 id="Specification">範例</h2>
 
 <p>In this example, a video is presented in a web page. Pressing the Return or Enter key lets the user toggle between windowed and fullscreen presentation of the video.</p>
 
@@ -131,7 +131,7 @@ if (elem.requestFullscreen) {
 
 <p>If fullscreen mode is already active (<code>fullscreenElement</code> is non-<code>null</code>), we call {{ domxref("document.mozCancelFullScreen()") }}, <code>msExitFullscreen</code> or <code>webkitExitFullscreen()</code>, again depending on which browser is in use.</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">瀏覽器兼容性</h2>
+<h2 id="Browser_compatibility">瀏覽器兼容性</h2>
 
 <h3>Document.fullscreen</h3>
 
@@ -154,7 +154,7 @@ if (elem.requestFullscreen) {
 {{Compat("api.Element.requestFullscreen")}}
 
 
-<h2 id="Specification" name="Specification">規範</h2>
+<h2 id="Specification">規範</h2>
 
 <p><a href="http://fullscreen.spec.whatwg.org/">Fullscreen API</a></p>
 

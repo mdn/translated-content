@@ -44,7 +44,7 @@ translation_of: Learn/Server-side/Express_Nodejs/routes
 
 <p>下面的第一部分，提供了關於如何使用<a href="http://expressjs.com/en/4x/api.html#router">Express Router</a>中間件的簡要“入門”。當我們設置LocalLibrary路由時，我們將在後面的章節中使用這些知識。</p>
 
-<h2 id="路由入門" style='font-style: normal; line-height: 1.2; margin: 103px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 2.5rem; position: relative; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>路由入門</h2>
+<h2 id="路由入門">路由入門</h2>
 
 <p>路由是Express代碼的一部分，它將HTTP動詞（<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>GET</code>, <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>POST</code>, <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>PUT</code>, <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>DELETE</code>等），URL路徑/模式和被調用來處理該模式的函數，相關聯起來。</p>
 
@@ -255,7 +255,7 @@ exports.author_update_post = function(req, res) {
 
 <p>所有函數都具有Express中間件函數的標準形式，如果方法沒有完成請求週期，則會調用請求，響應和<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>next</code>下一個函數的參數（在所有這些情況下，它都會執行！）。這些方法只返回一個字符串，表明尚未創建關聯的頁面。如果期望控制器函數接收路徑參數，則在消息字符串中，輸出這些參數（參見上面的<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>req.params.id</code>）。</p>
 
-<h4 id="書本實例控制器" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>書本實例控制器</h4>
+<h4 id="書本實例控制器">書本實例控制器</h4>
 
 <p>打開<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">/controllers/bookinstanceController.js</strong>文件，並將其複製到以下代碼中（它遵循與<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>Author</code>控制器模塊相同的模式）：</p>
 
@@ -302,7 +302,7 @@ exports.bookinstance_update_post = function(req, res) {
 };
 </pre>
 
-<h4 id="種類控制器" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>種類控制器</h4>
+<h4 id="種類控制器">種類控制器</h4>
 
 <p>打開<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">/controllers/genreController.js</strong>文件，並複制以下文本（這與<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>Author</code>和<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>BookInstance</code>文件的模式相同）：</p>
 
@@ -349,7 +349,7 @@ exports.genre_update_post = function(req, res) {
 };
 </pre>
 
-<h4 id="書本控制器" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>書本控制器</h4>
+<h4 id="書本控制器">書本控制器</h4>
 
 <p>打開<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">/controllers/bookController.js</strong>文件，並複制以下代碼。它遵循與其他控制器模塊相同的模式，但另外還有一個<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>index()</code>函數，用於顯示站點歡迎頁面：</p>
 

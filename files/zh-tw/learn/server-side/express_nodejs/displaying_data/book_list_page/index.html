@@ -5,7 +5,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 ---
 <p>接下做我們將實作書本列表頁面。這個頁面需要呈現數據庫中所有書本的列表，包含每本書的作者、標題，標題將成為一個超連結，連到書本詳細內容頁面。</p>
 
-<h2 class="highlight-spanned" id="控制器">控制器</h2>
+<h2 id="控制器">控制器</h2>
 
 <p>書本列表控制器函數，需要獲取數據庫中所有 <code>Book</code>對象的列表，然後將這些對像傳給模板進行呈現。</p>
 
@@ -28,7 +28,7 @@ exports.book_list = function(req, res, next) {
 
 <p>成功時，傳遞給查詢的回調，將呈現 <strong>book_list</strong>(.pug) 模板，將標題 <code>title </code>和<code>book_list</code>（包含作者的書本列表）作為變量傳遞。</p>
 
-<h2 class="highlight-spanned" id="View視圖">View視圖</h2>
+<h2 id="View視圖">View視圖</h2>
 
 <p>創建<strong> /views/book_list.pug</strong> 並複制底下的文字。</p>
 
@@ -56,7 +56,7 @@ block content
 
 <p>在這裡，我們感興趣的是，每本書被定義為兩行，第二行使用管道（上面高亮顯示）。這種方法是必要的，因為如果作者姓名位於上一行，那麼它將成為超鏈接的一部分。</p>
 
-<h2 class="highlight-spanned" id="它看起來像是">它看起來像是?</h2>
+<h2 id="它看起來像是">它看起來像是?</h2>
 
 <p>運行本應用 (參見 <a href="/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes">測試路由</a> 有相關的命令) ，並打開你的瀏覽器，訪問 <a href="http://localhost:3000/">http://localhost:3000/</a>。然後選擇所有書本連結 <em>All books</em>。如果每樣東西都設定正確了，你的網站看起來應該像底下的截圖。</p>
 

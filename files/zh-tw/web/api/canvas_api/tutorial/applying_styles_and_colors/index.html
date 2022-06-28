@@ -7,7 +7,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 
 <p>在<a href="/en-US/docs//zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes">繪畫圖形</a>章節中，我們只用了預設的線條與填滿樣式，而在本章，我們將進一步看看所有可用的樣式選項，畫出更吸引人的圖。</p>
 
-<h2 id="Colors" name="Colors">顏色</h2>
+<h2 id="Colors">顏色</h2>
 
 <p>U截至目前為止我們只有看到繪圖環境的方法(methods)，如果我們想要設定圖形的顏色，我們有兩個屬性能用: <code>fillStyle</code>與<code>storkeStyle.</code></p>
 
@@ -40,7 +40,7 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 <p><strong>Note:</strong> 目前Gecko引擎並不支援CSS3全部的顏色值，例如hsl(100%,25%,0)和rgb(0,100%,0)就不被支援.</p>
 </div>
 
-<h3 id="A_fillStyle_example" name="A_fillStyle_example"><code>fillStyle</code>範例</h3>
+<h3 id="A_fillStyle_example"><code>fillStyle</code>範例</h3>
 
 <p>這裡我們利用兩個for迴圈來畫出一個矩形陣列，而且陣列中每一個矩形的顏色都不相同。下面程式碼透過改變i和j兩個變數來分別變換RGB中的紅色值和綠色值，然後為每一個矩形產生自己專屬的顏色值。透過改變RGB的各顏色值，我們可以產生各式各樣的調色盤，像是逐步調整顏色值，你也可以做出像Photoshop內建一樣的調色盤。</p>
 
@@ -65,7 +65,7 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 
 <p>{{EmbedLiveSample("A_fillStyle_example", 160, 160, "canvas_fillstyle.png")}}</p>
 
-<h3 id="A_strokeStyle_example" name="A_strokeStyle_example"><code>strokeStyle</code>範例</h3>
+<h3 id="A_strokeStyle_example"><code>strokeStyle</code>範例</h3>
 
 <p>本例和前例相當類似，不同的是我們改用arc()方法畫圓形而不是矩形、改設定strokeStyle變換圖形輪廓顏色。</p>
 
@@ -93,7 +93,7 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 
 <p>{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}</p>
 
-<h2 id="Transparency" name="Transparency">透明度</h2>
+<h2 id="Transparency">透明度</h2>
 
 <p>透過設定globalAlpha屬性或是以半透明顏色值設定strokeStyle與fillStyle屬性，除了畫不透明的圖形，我們還可以畫半透明的圖形。</p>
 
@@ -114,7 +114,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>rgba()函數比rgb()函數多出一個不透明度參數，允許值介於0.0(全透明)到1.0(不透明).</p>
 
-<h3 id="A_globalAlpha_example" name="A_globalAlpha_example"><code>globalAlpha</code>範例</h3>
+<h3 id="A_globalAlpha_example"><code>globalAlpha</code>範例</h3>
 
 <p>下面我們將在四個方格色塊背景上畫一系列半透明圓形。對於所有圓形，我們藉由設置globalAlpha屬性值為0.2使得圓形變成半透明，然後for迴圈裡我們逐一增加圓形繪圖半徑，最終結果看起來便像是輻射狀漸層圖案，而且圓形相互疊加在彼此之上後，又加深了重疊區域的不透明度，只要我們不斷增加圓形數量，最後圖片中央將被完全遮蓋，看不到背後的背景。</p>
 
@@ -150,7 +150,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}</p>
 
-<h3 id="An_example_using_rgba()" name="An_example_using_rgba()"><code>rgba()</code>使用範例</h3>
+<h3 id="An_example_using_rgba()"><code>rgba()</code>使用範例</h3>
 
 <p>這個範例類似於上面的範例，但不同的是我們改畫半透明的矩形。rgba()在使用上會多一點彈性，因為我們可以分別設置勾勒和填滿圖形的不透明度。</p>
 
@@ -184,7 +184,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "canvas_rgba.png")}}</p>
 
-<h2 id="Line_styles" name="Line_styles">線條樣式</h2>
+<h2 id="Line_styles">線條樣式</h2>
 
 <p>有數種屬性可以讓我們設定線條樣式.</p>
 
@@ -201,7 +201,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>底下我們將一一示範這些屬性的用途。</p>
 
-<h3 id="A_lineWidth_example" name="A_lineWidth_example"><code>lineWidth</code>範例</h3>
+<h3 id="A_lineWidth_example"><code>lineWidth</code>範例</h3>
 
 <p>此屬性決定線條寬度，必須為正數，預設值為1.0單位。</p>
 
@@ -247,7 +247,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>雖然處裡2D繪圖縮放有些麻煩，但只要仔細計算像素格和繪圖路徑位置，縱使進行圖像縮放或變形，圖像輸出還是可以保持正確。一條寬1.0單位的直線，只要位置計算正確，放大兩倍後會變成一條2個像素寬的清晰直線，而且還是會保持正確位置。</p>
 
-<h3 id="A_lineCap_example" name="A_lineCap_example"><code>lineCap</code>範例</h3>
+<h3 id="A_lineCap_example"><code>lineCap</code>範例</h3>
 
 <p>這個屬性決定線條端點的樣式，總共有三種樣式可選:</p>
 
@@ -300,7 +300,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>{{EmbedLiveSample("A_lineCap_example", "180", "180", "canvas_linecap.png")}}</p>
 
-<h3 id="A_lineJoin_example" name="A_lineJoin_example"><code>lineJoin</code>範例</h3>
+<h3 id="A_lineJoin_example"><code>lineJoin</code>範例</h3>
 
 <p>lineJoin屬性決定兩個連接區端(如線條、弧形或曲線)如何連接(對於長度為零，亦即終點和控制點為同一點的圖形無效)。</p>
 
@@ -344,7 +344,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>{{EmbedLiveSample("A_lineJoin_example", "180", "180", "canvas_linejoin.png")}}</p>
 
-<h3 id="A_demo_of_the_miterLimit_property" name="A_demo_of_the_miterLimit_property"><code>miterLimit</code>屬性</h3>
+<h3 id="A_demo_of_the_miterLimit_property"><code>miterLimit</code>屬性</h3>
 
 <p>前面範例顯示出，當lineJoin值為miter時，兩條線的外緣會延伸相交，所以，當這兩條相交線的相交角度越小的話，他們的延伸交會點就會越遠離內緣連接點，而且隨著角度變小，距離呈指數型增長。</p>
 
@@ -420,7 +420,7 @@ draw();</pre>
 
 <p>{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "canvas_miterlimit.png")}}</p>
 
-<h2 id="Gradients" name="Gradients">漸層</h2>
+<h2 id="Gradients">漸層</h2>
 
 <p>如同其他繪圖軟體可以畫出線性和放射狀的漸層圖案，透過設定fillStyle和strokeStyle屬性為canvasGradient漸層物件，我們也可以在canvas上做到一樣的效果。要創造漸層物件，可以使用下面的方法:</p>
 
@@ -451,7 +451,7 @@ lineargradient.addColorStop(0, 'white');
 lineargradient.addColorStop(1, 'black');
 </pre>
 
-<h3 id="A_createLinearGradient_example" name="A_createLinearGradient_example"><code>createLinearGradient</code>範例</h3>
+<h3 id="A_createLinearGradient_example"><code>createLinearGradient</code>範例</h3>
 
 <p>本範例中，我們將建立兩種漸層，如範例所示，strokeStyle和fillSyle屬性都可以接受canvasGradient物件作為屬性值。</p>
 
@@ -492,7 +492,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "canvas_lineargradient.png")}}</p>
 
-<h3 id="A_createRadialGradient_example" name="A_createRadialGradient_example"><code>createRadialGradient</code>範例</h3>
+<h3 id="A_createRadialGradient_example"><code>createRadialGradient</code>範例</h3>
 
 <p>這邊我們定義了四種放射狀漸層，相較於一般在Photoshop看到的”經典”放射狀漸層圖案(漸層從一個圖案中心點向外呈圓心狀延伸)，因為我們可以控制漸層起始和終止點，我們可以做到更好的效果。</p>
 
@@ -544,7 +544,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}</p>
 
-<h2 id="Patterns" name="Patterns">樣式(Patterns)</h2>
+<h2 id="Patterns">樣式(Patterns)</h2>
 
 <p>先前的範例中，我們都是藉由迴圈來重複產生影像樣式，不過其實有一條更簡單的方法，那就是呼叫createPattern方法。</p>
 
@@ -584,7 +584,7 @@ var ptrn = ctx.createPattern(img,'repeat');
 <p><strong>Note:</strong> 不像drawImage()方法，呼叫createPattern()方法前影像必須要先載入完成，否則可能圖像的程生會有問題。</p>
 </div>
 
-<h3 id="A_createPattern_example" name="A_createPattern_example"><code>createPattern</code>範例</h3>
+<h3 id="A_createPattern_example"><code>createPattern</code>範例</h3>
 
 <p>這個範例中我們把fillStyle屬性值存為樣式物件，比較值得注意的是影像onload事件處理器，這是為了確保影像載入完成後再進行。</p>
 

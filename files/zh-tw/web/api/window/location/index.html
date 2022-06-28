@@ -4,9 +4,9 @@ slug: Web/API/Window/location
 translation_of: Web/API/Window/location
 ---
 <p>{{ ApiRef() }}</p>
-<h3 id="Summary" name="Summary">Summary</h3>
+<h3 id="Summary">Summary</h3>
 <p>Returns a <a href="#Location_object"> <code>Location</code> object</a>, which contains information about the URL of the document and provides methods for changing that URL. You can also assign to this property to load another URL.</p>
-<h3 id="Syntax" name="Syntax">語法</h3>
+<h3 id="Syntax">語法</h3>
 <pre class="eval">var <em>locationObj</em> = window.location;
 window.location = <em>newLocation</em>;
 </pre>
@@ -15,13 +15,13 @@ window.location = <em>newLocation</em>;
  <li><em>locationObj</em> is an object of type <code>Location</code>, providing information about the current URL and methods to change it. Its properties and methods are described below.</li>
  <li><em>newLocation</em> is a <code>Location</code> object or a string, specifying the URL to navigate to.</li>
 </ul>
-<h3 id="Location_object" name="Location_object"><code>Location</code> object</h3>
+<h3 id="Location_object"><code>Location</code> object</h3>
 <p>This section describes the properties and methods of the location object.</p>
-<h4 id="Use_as_a_string" name="Use_as_a_string">Use as a string</h4>
+<h4 id="Use_as_a_string">Use as a string</h4>
 <p><code>Location</code> objects have a <code>toString</code> method returning the current URL. You can also assign a string to <code>window.location</code>. This means that you can work with <code>window.location</code> as if it were a string in most cases. Sometimes, for example when you need to call a <a href="/En/Core_JavaScript_1.5_Reference/Global_Objects/String">String</a> method on it, you have to explicitly call <code>toString</code>:</p>
 <pre class="brush: js">alert(window.location.toString().charAt(17));
 </pre>
-<h4 id="Properties" name="Properties">Properties</h4>
+<h4 id="Properties">Properties</h4>
 <p>All of the following properties are strings. You can read them to get information about the current URL or set them to navigate to another URL.</p>
 <p>The "Example" column contains the values of the properties of the following URL:</p>
 <ul>
@@ -86,7 +86,7 @@ window.location = <em>newLocation</em>;
  <li>hash=#Fire fox</li>
  <li>search=?q=Fire%20fox</li>
 </ul>
-<h4 id="Methods" name="Methods">Methods</h4>
+<h4 id="Methods">Methods</h4>
 <table class="fullwidth-table">
  <tbody>
   <tr>
@@ -111,7 +111,7 @@ window.location = <em>newLocation</em>;
   </tr>
  </tbody>
 </table>
-<h3 id="Example" name="Example">Examples</h3>
+<h3 id="Example">Examples</h3>
 <p>Whenever a property of the location object is modified, a document will be loaded using the URL as if <code>window.location.assign()</code> had been called with the modified URL.</p>
 <h5 id="Replace_the_current_document_with_the_one_at_the_given_URL">Replace the current document with the one at the given URL:</h5>
 <pre class="brush: js">function goMoz() {
@@ -322,5 +322,5 @@ span.intLink {
 </pre>
 <h3 id="See_also">See also</h3>
 <p><a href="/en/DOM/Manipulating_the_browser_history">Manipulating the browser history</a></p>
-<h3 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h3>
+<h3 id="Browser_Compatibility">Browser compatibility</h3>
 {{Compat("api.Window.location")}}

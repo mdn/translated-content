@@ -5,14 +5,14 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
 ---
 <p><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_BookInstance_form">Edi</a>本章節演示如何定義一個頁面/表單，以創建 <code>BookInstance</code> 物件。這很像我們用來創建書本 <code>Book</code> 物件的表單。</p>
 
-<h2 class="highlight-spanned" id="導入驗證和清理方法">導入驗證和清理方法</h2>
+<h2 id="導入驗證和清理方法">導入驗證和清理方法</h2>
 
 <p>打開 <strong>/controllers/bookinstanceController.js</strong>，並在檔案最上方，加入以下幾行:</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');</code></pre>
 
-<h2 class="highlight-spanned" id="Controller—get_route">Controller—get route</h2>
+<h2 id="Controller—get_route">Controller—get route</h2>
 
 <p>At the top of the file, require the <em>Book</em> module (needed because each <code>BookInstance</code> is associated with a particular <code>Book</code>).</p>
 
@@ -34,7 +34,7 @@ exports.bookinstance_create_get = function(req, res, next) {
 
 <p>The controller gets a list of all books (<code>book_list</code>) and passes it to the view <code><strong>bookinstance_form.pug</strong></code> (along with the <code>title</code>)</p>
 
-<h2 class="highlight-spanned" id="Controller—post_route">Controller—post route</h2>
+<h2 id="Controller—post_route">Controller—post route</h2>
 
 <p>Find the exported <code>bookinstance_create_post()</code> controller method and replace it with the following code.</p>
 
@@ -89,7 +89,7 @@ exports.bookinstance_create_post = [
 
 <p>The structure and behaviour of this code is the same as for creating our other objects. First we validate and sanitize the data. If the data is invalid, we then re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid, we save the new <code>BookInstance</code> record and redirect the user to the detail page.</p>
 
-<h2 class="highlight-spanned" id="View">View</h2>
+<h2 id="View">View</h2>
 
 <p>Create <strong>/views/bookinstance_form.pug</strong> and copy in the text below.</p>
 
@@ -136,7 +136,7 @@ block content
 <p><strong>Note:</strong> The above template hard-codes the <em>Status</em> values (Maintenance, Available, etc.) and does not "remember" the user's entered values. Should you so wish, consider reimplementing the list, passing in option data from the controller and setting the selected value when the form is re-displayed.</p>
 </div>
 
-<h2 class="highlight-spanned" id="What_does_it_look_like">What does it look like?</h2>
+<h2 id="What_does_it_look_like">What does it look like?</h2>
 
 <p>Run the application and open your browser to <a href="http://localhost:3000/">http://localhost:3000/</a>. Then select the <em>Create new book instance (copy) </em>link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid <code>BookInstance</code>, it should be saved and you'll be taken to the detail page.</p>
 

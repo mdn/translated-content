@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 
 <p> </p>
 
-<h2 class="highlight-spanned" id="引入驗證與無害化方法">引入驗證與無害化方法</h2>
+<h2 id="引入驗證與無害化方法">引入驗證與無害化方法</h2>
 
 <p>在我們的控制器中使用 <em>express-validator</em> 驗證器，我們必須導入我們想要從 '<strong>express-validator/check</strong>' 和 '<strong>express-validator/filter</strong>' 模塊中使用的函數。</p>
 
@@ -16,7 +16,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 <pre class="brush: js line-numbers  language-js"><code class="language-js">const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');</code></pre>
 
-<h2 class="highlight-spanned" id="Controller—get_route">Controller—get route</h2>
+<h2 id="Controller—get_route">Controller—get route</h2>
 
 <p>Find the exported <code>genre_create_get()</code> controller method and replace it with the following code. This simply renders the <strong>genre_form.pug</strong> view, passing a title variable.</p>
 
@@ -25,7 +25,7 @@ exports.genre_create_get = function(req, res, next) {
     res.render('genre_form', { title: 'Create Genre' });
 };</code></pre>
 
-<h2 class="highlight-spanned" id="Controller—post_route">Controller—post route</h2>
+<h2 id="Controller—post_route">Controller—post route</h2>
 
 <p>Find the exported <code>genre_create_post()</code> controller method and replace it with the following code.</p>
 
@@ -150,7 +150,7 @@ Genre.findOne({ 'name': req.body.name })
 
 <p>This same pattern is used in all our post controllers: we run validators, then sanitisers,  then check for errors and either re-render the form with error information or save the data. </p>
 
-<h2 class="highlight-spanned" id="View">View</h2>
+<h2 id="View">View</h2>
 
 <p>The same view is rendered in both the <code>GET</code> and <code>POST</code> controllers/routes when we create a new <code>Genre</code> (and later on it is also used when we <em>update</em> a <code>Genre</code>). In the <code>GET</code> case the form is empty and we just pass a title variable. In the <code>POST</code> case the user has previously entered invalid data—in the <code>genre</code> variable we pass back a sanitized version of the entered data and in the <code>errors</code> variable we pass back an array of error messages.</p>
 
@@ -187,7 +187,7 @@ block content
 <p><strong>Note:</strong> This is just one way to render the errors. You can also get the names of the affected fields from the error variable, and use these to control where the error messages are rendered, whether to apply custom CSS, etc.</p>
 </div>
 
-<h2 class="highlight-spanned" id="What_does_it_look_like">What does it look like?</h2>
+<h2 id="What_does_it_look_like">What does it look like?</h2>
 
 <p>Run the application, open your browser to <a href="http://localhost:3000/">http://localhost:3000/</a>, then select the <em>Create new genre </em>link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.</p>
 
