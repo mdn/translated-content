@@ -34,7 +34,7 @@ alert(paragraphs[0].nodeName);
 
 <p>所有操作和创建 web 页面的属性，方法和事件都会被组织成对象的形式（例如， <code>document </code>对象表示文档本身， <code>table</code> 对象实现了特定的 <code>HTMLTableElement</code> DOM 接口来访问 HTML 表格等）。本文会介绍基于 Gecko 浏览器的 DOM 面向对象引用。</p>
 
-<h2 id="DOM_and_JavaScript" name="DOM_and_JavaScript">DOM 和 JavaScript</h2>
+<h2 id="DOM_and_JavaScript">DOM 和 JavaScript</h2>
 
 <p>上面简短的示例和这个参考文档中几乎所有的示例一样，都使用了<a href="/en-US/docs/JavaScript" title="JavaScript">JavaScript</a>。也就是说，它虽然是用 JavaScript 编写的， 却可以通过 DOM 来访问文档和其中的元素。DOM 并不是一个编程语言，但如果没有 DOM， JavaScript 语言也不会有任何网页，XML 页面以及涉及到的元素的概念或模型。在文档中的每个元素— 包括整个文档，文档头部， 文档中的表格，表头，表格中的文本 — 都是文档所属于的文档对象模型（DOM）的一部分，因此它们可以使用 DOM 和一个脚本语言如 JavaScript，来访问和处理。</p>
 
@@ -53,7 +53,7 @@ p_list = doc.getElementsByTagName("para");
 
 <p>要获取更多在网页上使用 JavaScript 的信息，可以参考 <a href="/en-US/docs/Web/JavaScript/JavaScript_technologies_overview">JavaScript technologies overview</a>.</p>
 
-<h2 id="How_Do_I_Access_the_DOM.3F" name="How_Do_I_Access_the_DOM.3F">如何访问 DOM?</h2>
+<h2 id="How_Do_I_Access_the_DOM.3F">如何访问 DOM?</h2>
 
 <p>在使用 DOM 时，您不需要做任何其他特殊的操作。不同的浏览器都有对 DOM 不同的实现， 这些实现对当前的 DOM 标准而言，都会呈现出不同程度的一致性，每个 web 浏览器都会使用一些文档对象模型，从而使页面可以被脚本语言访问。</p>
 
@@ -85,7 +85,7 @@ p_list = doc.getElementsByTagName("para");
 &lt;/html&gt;
 </pre>
 
-<h2 id="Important_Data_Types" name="Important_Data_Types">重要的数据类型</h2>
+<h2 id="Important_Data_Types">重要的数据类型</h2>
 
 <p>本参考文档会试图以尽可能简单的方式描述各种对象和类型。但在 API 中传入的不同的数据类型需要我们去注意。为简单起见，在 API 参考文档中的语法实例通常会使用 element(s) 指代节点，使用 nodeList（s）或<code> element(s)</code>来指代节点数组，使用<code> attribute(s)</code>来指代属性节点。</p>
 
@@ -121,13 +121,13 @@ p_list = doc.getElementsByTagName("para");
  </tbody>
 </table>
 
-<h2 id="DOM_interfaces" name="DOM_interfaces">DOM 接口</h2>
+<h2 id="DOM_interfaces">DOM 接口</h2>
 
 <p>本指南对你可以用来操作 DOM 层级的对象以及事物进行了介绍。例如， <code>HTML form</code> 元素从 <code>HTMLFormElement</code> 接口中获取它的 <strong><code>name</code></strong> 属性，从 <code>HTMLElement</code> 接口中获取 <strong><code>className</code></strong> 属性。在上面情况中，您要获取的属性都只在 form 对象中。</p>
 
 <p>但是由 DOM 实现的对象和接口间的关系是容易被混淆的，因此本节会尝试去对 DOM 标准中的一些常用的接口进行说明以及它们是怎样生效的。</p>
 
-<h3 id="Interfaces_and_Objects" name="Interfaces_and_Objects">接口及对象</h3>
+<h3 id="Interfaces_and_Objects">接口及对象</h3>
 
 <p>许多对象都实现了多个接口。例如，table 对象实现了 <a href="/en-US/docs/DOM/HTMLTableElement" title="DOM/table">HTML Table Element Interface</a>, 其中包括 <code>createCaption</code> 和 <code>insertRow</code> 方法。但由于 table 对象也是一个 HTML 元素， <code>table</code> 也实现了 <code>Element</code> 接口（在  <a href="/en-US/docs/DOM/element" title="DOM/element">DOM <code>element</code> Reference</a> 一章有对应描述）。最后，由于 HTML 元素对 DOM 来说也是组成 web 页面或 XML 页面节点树中的一个节点， table 元素也实现更基本的  <code>Node</code> 接口， <code>Element</code> 对象也继承这个接口。</p>
 
@@ -144,7 +144,7 @@ for (var i = 0; i &lt; tableAttrs.length; i++) {
 table.summary = "note: increased border";
 </pre>
 
-<h3 id="Core_Interfaces_in_the_DOM" name="Core_Interfaces_in_the_DOM">DOM 中核心接口</h3>
+<h3 id="Core_Interfaces_in_the_DOM">DOM 中核心接口</h3>
 
 <p>本节列出了在 DOM 中最常用的一些接口。此处并不会描述这些 API 在做什么，但是会让你了解当你使用 DOM 时常用的各种方法和属性。 这些常用的 API 在本文档最后的  <a href="/en-US/docs/Gecko_DOM_Reference/Examples" style="text-decoration: underline;" title="Gecko_DOM_Reference/Examples">DOM Examples</a> 章节中 (包含更长的实例) 中有使用。</p>
 
@@ -168,7 +168,7 @@ table.summary = "note: increased border";
  <li><code><a href="/en-US/docs/DOM/window.scrollTo" title="DOM/window.scrollTo">window.scrollTo</a>()</code></li>
 </ul>
 
-<h2 id="Testing_the_DOM_API" name="Testing_the_DOM_API">测试 DOM API</h2>
+<h2 id="Testing_the_DOM_API">测试 DOM API</h2>
 
 <p>本文档提供了每一个接口的样本示例，您可以在自身进行 web 开发时使用。在有些情况下， 样例是一个完整的 HTML 页面，通过使用 <code>&lt;script&gt;</code> 元素标签进行 DOM 访问，包含必须的接口 (如 buttons) 来触发表单中的脚本， 以及 DOM 所操作的 HTML 元素。 此时，您可以将实例进行剪切和复制到一个新的 HTML 文档中，保存完成后，在浏览器中运行该实例。</p>
 

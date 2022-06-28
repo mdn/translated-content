@@ -9,7 +9,7 @@ translation_of: Web/API/Element/removeAttributeNS
 
 <p>在 Firefox 3 及更高版本中，此方法会将 DOM 值重置为其默认值。</p>
 
-<h2 id="Syntax" name="Syntax">用法</h2>
+<h2 id="Syntax">用法</h2>
 
 <pre class="eval"><em>element</em>.removeAttributeNS(<em>namespace</em>,<em>attrName</em>);
 </pre>
@@ -19,7 +19,7 @@ translation_of: Web/API/Element/removeAttributeNS
  <li><code>attrName</code> 当前移除的属性名字符串</li>
 </ul>
 
-<h2 id="Example" name="Example">例子</h2>
+<h2 id="Example">例子</h2>
 
 <pre>// &lt;div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
 //      special:specialAlign="utterleft" width="200px" /&gt;
@@ -28,10 +28,10 @@ d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
 // now: &lt;div id="div1" width="200px" /&gt;
 </pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>{{ DOMAttributeMethods() }}</p>
 
-<h2 id="Specification" name="Specification">Specification</h2>
+<h2 id="Specification">Specification</h2>
 
 <p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS">DOM Level 2 Core: removeAttributeNS</a></p>

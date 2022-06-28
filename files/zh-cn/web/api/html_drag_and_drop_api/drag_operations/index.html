@@ -17,7 +17,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 <p>本文档中描述的拖动操作使用 {{domxref("DataTransfer")}} 接口。本文档不使用 {{domxref("DataTransferItem")}} 接口和 {{domxref("DataTransferItemList")}} 接口。</p>
 
-<h2 id="draggableattribute" name="draggableattribute">可拖拽（<code>draggable</code>）属性</h2>
+<h2 id="draggableattribute">可拖拽（<code>draggable</code>）属性</h2>
 
 <p>在一个网页中，有几种特定情况会使用默认拖拽行为，其中包括拖拽选中文本、拖拽图像和拖拽链接。当一个图像或链接被拖拽时，图像或链接的 URL 被设定为拖拽数据。对于其他元素，只当它们是被选中的一部分时，才会触发默认拖拽行为。如果想看看拖拽实际的样子，可以选中网页的一部分，然后按住鼠标，拖动选中的目标。选中的部分根据系统的不同会有不同的渲染效果，并在拖拽时跟随着鼠标指针。然而，这只是默认拖拽行为的效果，此时没有监听程序调整拖拽数据。</p>
 
@@ -45,7 +45,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 <p><strong>注意：</strong>当一个元素被设置成可拖拽时， 元素中的文本和其他子元素不能再以正常的方式（通过鼠标点击和拖拽）被选中。用户必须按住 <kbd>alt</kbd> 键，再用鼠标选择文本，或者使用键盘选择。</p>
 </div>
 
-<h2 id="dragstart" name="dragstart">开始拖拽操作</h2>
+<h2 id="dragstart">开始拖拽操作</h2>
 
 <p>这个例子使用 <code>{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}</code> 属性为 {{event("dragstart")}} 事件添加监听程序。</p>
 
@@ -59,7 +59,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 <p>在 {{event("dragstart")}} 事件中，你可以指定拖拽数据、反馈图像和拖拽效果，所有这些都将在下面描述。不过，我们只需要设置拖拽数据，因为在大多数情况下默认的图像和拖拽效果都是适用的。</p>
 
-<h2 id="dragdata" name="dragdata">拖拽数据</h2>
+<h2 id="dragdata">拖拽数据</h2>
 
 <p>所有 {{domxref("DragEvent","拖拽事件")}} 都有一个名为 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 的属性，它持有拖拽数据（<code>dataTransfer</code> 是一个 {{domxref("DataTransfer")}} 对象）。</p>
 
@@ -99,7 +99,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>{{domxref("DataTransfer.clearData","clearData()")}} 方法的 <code>type</code> 参数是可选的。如果没有声明 <code>type</code>，则所有类型的数据都会被删除。如果拖拽不包含拖拽数据项，或者所有的数据项都被清除，那么就不会出现拖拽行为。</p>
 
-<h2 id="dragfeedback" name="dragfeedback">设置拖拽反馈图像</h2>
+<h2 id="dragfeedback">设置拖拽反馈图像</h2>
 
 <p>当拖拽发生时，会生成拖拽目标的一个半透明图像（触发"{{event("dragstart")}}" 事件的元素），并在拖拽过程中跟踪鼠标指针。这个图像是自动创建的，所以你不需要自己创建它。但是，你可以使用 {{domxref("DataTransfer.setDragImage","setDragImage()")}} 方法来自定义拖拽反馈图像。</p>
 
@@ -130,7 +130,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>在这个例子中，我们做了一个是画布的拖拽图像。当画布宽 50 像素，高 50 像素时，我们使用一半的偏移量（25 和 25），这样鼠标指针即为图像中心。</p>
 
-<h2 id="drageffects" name="drageffects">拖拽效果</h2>
+<h2 id="drageffects">拖拽效果</h2>
 
 <p>拖拽过程中可能会执行一些操作。 <code>copy</code> 操作用来指示被拖拽的数据将从当前位置复制到放置位置。 <code>move</code> 操作指示被拖拽的数据会被移动，<code>link</code> 操作表示在源和放置位置之间将会创建某种形式的关系或连接。</p>
 
@@ -179,7 +179,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>在 <code>{{event("drop")}}</code> 和 <code>{{event("dragend")}}</code> 事件中，你可以检查 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性，以确定最终选择了哪种效果。如果所选的效果是 "move"，那么应该在 <code>{{event("dragend")}}</code> 事件中从拖拽源头删除拖拽数据。</p>
 
-<h2 id="droptargets" name="droptargets">指定放置目标</h2>
+<h2 id="droptargets">指定放置目标</h2>
 
 <p><code>{{event("dragenter")}}</code> 或 <code>{{event("dragover")}}</code> 事件的监听程序用于表示有效的放置目标，也就是被拖拽项目可能放置的地方。网页或应用程序的大多数区域都不是放置数据的有效位置。因此，这些事件的默认处理是不允许放置。</p>
 
@@ -213,7 +213,7 @@ function doDragOver(event) {
 
 <p>如果你希望更具体地限制操作类型，你可能还需要设置 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 或 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性，或者两者都设置。当然，如果你不取消这个事件，改变这两个属性不会有任何效果。</p>
 
-<h2 id="dropfeedback" name="dropfeedback">放置反馈</h2>
+<h2 id="dropfeedback">放置反馈</h2>
 
 <p>有几种方法可以向用户表明哪个位置允许放置。鼠标指针将根据 {{domxref("DataTransfer.dropEffect","dropEffect")}}  属性的值做必要的更新。鼠标指针具体的外观取决于用户平台，典型的如加号图标会出现在 '<code>copy</code>' 中，而不允许放置时，会出现禁止放置的图标。在许多情况下，鼠标指针反馈就足够了。</p>
 
@@ -236,7 +236,7 @@ function doDragOver(event) {
 
 <p>最后，<code>{{event("dragleave")}}</code> 事件会在拖拽离开元素时在该元素上触发。这是移除插入标记或高亮的好时机。你不需要取消这个事件（译者注：即不需要使用 {{domxref("Event.preventDefault","preventDefault()")}} ）。使用 <code>-moz-drag-over</code> 伪类设置的高亮或其他视觉效果会被自动移除。即使拖拽被取消了，<code>{{event("dragleave")}}</code> 事件也会照常触发，所以你可以确保在这个事件中对任何插入标记的清除操作都一定可以完成。</p>
 
-<h2 id="drop" name="drop">执行放置</h2>
+<h2 id="drop">执行放置</h2>
 
 <p>当用户放开鼠标，拖放操作就会结束。</p>
 
@@ -297,7 +297,7 @@ function doDragOver(event) {
 }
 </pre>
 
-<h2 id="dragend" name="dragend">完成拖拽</h2>
+<h2 id="dragend">完成拖拽</h2>
 
 <p>一旦拖拽完成，<code>{{event("dragend")}}</code> 事件会在拖拽源头（即触发 <code>{{event("dragstart")}}</code> 的元素）上发生。无论拖拽是成功还是被取消，这个事件都会被触发。然而，你可以使用 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性来决定执行什么放置操作。</p>
 
@@ -309,7 +309,7 @@ function doDragOver(event) {
 
 <p>[1] 在 Gecko 内核中，如果源头节点在拖拽过程中（如放置或 {{event("dragover")}} 中）被移动或移除了，则不会触发 {{event("dragend")}} 事件。参见 <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=460801" title="New D&amp;D API: dragend is not dispatched if the source node was moved or removed during the drag session">bug 460801</a>。</p>
 
-<h2 id="See_also" name="See_also">参见</h2>
+<h2 id="See_also">参见</h2>
 
 <ul>
  <li><a class="internal" href="/Web/API/HTML_Drag_and_Drop_API" title="HTML Drag and Drop API">HTML Drag and Drop API (Overview)</a></li>

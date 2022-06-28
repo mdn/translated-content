@@ -9,7 +9,7 @@ translation_of: Web/API/Element/setAttributeNodeNS
 
 <p>                                                                                                                               （如果对中文有疑惑，请直接阅读原文）</p>
 
-<h2 id="Syntax" name="Syntax">Syntax                                                                 </h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="eval"><em>replacedAttr</em> = element.setAttributeNodeNS(<em>attributeNode</em>)
 </pre>
@@ -19,7 +19,7 @@ translation_of: Web/API/Element/setAttributeNodeNS
  <li><code>attributeNode</code> 是一个属性节点。</li>
 </ul>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre>// &lt;div id="one" xmlns:myNS="http://www.mozilla.org/ns/specialspace"
             myNS:special-align="utterleft"&gt;one&lt;/div&gt;
@@ -34,7 +34,7 @@ d2.setAttributeNodeNS(a.cloneNode(true));
 alert(d2.attributes[1].value) // returns: `utterleft'
 </pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>如果指定的属性在元素上存在， 接着此属性被新的属性替换的话被替换的属性会被返回。</p>
 
@@ -42,6 +42,6 @@ alert(d2.attributes[1].value) // returns: `utterleft'
 
 <p>{{ DOMAttributeMethods() }}</p>
 
-<h2 id="Specification" name="Specification">Specification</h2>
+<h2 id="Specification">Specification</h2>
 
 <p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS">DOM Level 2 Core: setAttributeNodeNS</a></p>
