@@ -6,27 +6,21 @@ tags:
   - JavaScript
 translation_of: Glossary/Canvas
 ---
-<p>一個 {{Glossary("HTML")}} <em>{{HTMLElement("canvas")}}</em> 元素提供一個空的圖區使特定的  {{Glossary("JavaScript")}} {{Glossary("API","APIs")}} 可以在上面繪圖(像是 Canvas 2D 或 {{Glossary("WebGL")}}).</p>
+一個 {{Glossary("HTML")}} _{{HTMLElement("canvas")}}_ 元素提供一個空的圖區使特定的 {{Glossary("JavaScript")}} {{Glossary("API","APIs")}} 可以在上面繪圖(像是 Canvas 2D 或 {{Glossary("WebGL")}}).
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="常規知識">常規知識</h3>
+### 常規知識
 
-<ul>
- <li>{{Interwiki("wikipedia", "Canvas element", "Canvas")}} 維基百科</li>
-</ul>
+- {{Interwiki("wikipedia", "Canvas element", "Canvas")}} 維基百科
 
-<h3 id="學習資源">學習資源</h3>
+### 學習資源
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/Canvas_tutorial">The Canvas tutorial on MDN</a></li>
-</ul>
+- [The Canvas tutorial on MDN](/en-US/docs/Web/Guide/HTML/Canvas_tutorial)
 
-<h3 id="技術參考">技術參考</h3>
+### 技術參考
 
-<ul>
- <li>The HTML {{HTMLElement("canvas")}} element on MDN</li>
- <li><a href="/en-US/docs/HTML/Canvas">The Canvas general documentation on MDN</a></li>
- <li>{{domxref("CanvasRenderingContext2D")}}: The canvas 2D drawing API</li>
- <li><a href="http://www.w3.org/TR/2dcontext/">The Canvas 2D API specification</a></li>
-</ul>
+- The HTML {{HTMLElement("canvas")}} element on MDN
+- [The Canvas general documentation on MDN](/en-US/docs/HTML/Canvas)
+- {{domxref("CanvasRenderingContext2D")}}: The canvas 2D drawing API
+- [The Canvas 2D API specification](https://www.w3.org/TR/2dcontext/)

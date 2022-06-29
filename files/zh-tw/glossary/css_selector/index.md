@@ -7,16 +7,16 @@ tags:
   - 選擇器
 translation_of: Glossary/CSS_Selector
 ---
-<p><strong>CSS 選擇器</strong>是 CSS 規則的一部分。它能讓你選定要調整哪個（或哪些）元素的樣式。</p>
+**CSS 選擇器**是 CSS 規則的一部分。它能讓你選定要調整哪個（或哪些）元素的樣式。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: html">
-&lt;div&gt; I am inside of a div element. &lt;/div&gt;
-&lt;p&gt; I am inside of a paragraph element. &lt;/p&gt;
-</pre>
+```html
+<div> I am inside of a div element. </div>
+<p> I am inside of a paragraph element. </p>
+```
 
-<pre class="brush: css">
+```css
 div {
  color: green;
 }
@@ -24,39 +24,35 @@ div {
 p {
  color: red;
 }
-</pre>
+```
 
-<p>在第一個 CSS 規則，我選取了 <code>&lt;div&gt;</code> 元素、並將該元素的文字變成了綠色。在第二個 CSS 規則，我選取了 <code>&lt;p&gt;</code> 元素、並將該元素的文字變成了紅色。結果應該長成這個樣子：</p>
+在第一個 CSS 規則，我選取了 `<div>` 元素、並將該元素的文字變成了綠色。在第二個 CSS 規則，我選取了 `<p>` 元素、並將該元素的文字變成了紅色。結果應該長成這個樣子：
 
 {{EmbedLiveSample("範例", 640, 80)}}
 
-<h2 id="深入理解">深入理解</h2>
+## 深入理解
 
-<h3 id="基本知識">基本知識</h3>
+### 基本知識
 
-<ul>
- <li>基本選擇器
-  <ul>
-   <li><a href="/zh-TW/docs/Web/CSS/Type_selectors">類型選擇器</a> <code>elementname</code></li>
-   <li><a href="/zh-TW/docs/Web/CSS/Class_selectors">Class 選擇器</a> <code>.classname</code></li>
-   <li><a href="/zh-TW/docs/Web/CSS/ID_selectors">ID 選擇器</a> <code>#idname</code></li>
-   <li><a href="/zh-TW/docs/Web/CSS/Universal_selectors">通用選擇器</a><code> * ns|* *|*</code></li>
-   <li><a href="/zh-TW/docs/Web/CSS/Attribute_selectors">屬性選擇器</a><code> [attr=value]</code></li>
-   <li><a href="/zh-TW/docs/Web/CSS/Pseudo-classes">狀態選擇器</a> <code>a:active, a:visited</code></li>
-  </ul>
- </li>
- <li>複合選擇器
-  <ul>
-   <li><a href="/zh-TW/docs/Web/CSS/Adjacent_sibling_selectors">鄰接同層選擇器</a> <code>A + B</code></li>
-   <li><a href="/zh-TW/docs/Web/CSS/General_sibling_selectors">通用同層選擇器</a> <code>A ~ B</code></li>
-   <li><a href="/zh-TW/docs/Web/CSS/Child_selectors">直屬選擇器</a> <code>A &gt; B</code></li>
-   <li><a href="/zh-TW/docs/Web/CSS/Descendant_selectors">後代選擇器</a> <code>A B</code></li>
-  </ul>
- </li>
- <li><a href="/zh-TW/docs/Web/CSS/Pseudo-elements">虛擬元素</a></li>
- <li><a href="/zh-TW/docs/Web/CSS/Pseudo-classes">虛擬類別</a></li>
-</ul>
+- 基本選擇器
 
-<h3 id="技術指南">技術指南</h3>
+  - [類型選擇器](/zh-TW/docs/Web/CSS/Type_selectors) `elementname`
+  - [Class 選擇器](/zh-TW/docs/Web/CSS/Class_selectors) `.classname`
+  - [ID 選擇器](/zh-TW/docs/Web/CSS/ID_selectors) `#idname`
+  - [通用選擇器](/zh-TW/docs/Web/CSS/Universal_selectors)` * ns|* *|*`
+  - [屬性選擇器](/zh-TW/docs/Web/CSS/Attribute_selectors)` [attr=value]`
+  - [狀態選擇器](/zh-TW/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
 
-<p>{{SpecName("CSS3 Selectors")}}</p>
+- 複合選擇器
+
+  - [鄰接同層選擇器](/zh-TW/docs/Web/CSS/Adjacent_sibling_selectors) `A + B`
+  - [通用同層選擇器](/zh-TW/docs/Web/CSS/General_sibling_selectors) `A ~ B`
+  - [直屬選擇器](/zh-TW/docs/Web/CSS/Child_selectors) `A > B`
+  - [後代選擇器](/zh-TW/docs/Web/CSS/Descendant_selectors) `A B`
+
+- [虛擬元素](/zh-TW/docs/Web/CSS/Pseudo-elements)
+- [虛擬類別](/zh-TW/docs/Web/CSS/Pseudo-classes)
+
+### 技術指南
+
+{{SpecName("CSS3 Selectors")}}
