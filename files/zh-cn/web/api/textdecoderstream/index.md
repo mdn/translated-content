@@ -23,7 +23,7 @@ transition_of: Web/API/TextDecoderStream
 - {{DOMxRef("TextDecoderStream.encoding")}}{{ReadOnlyInline}}
   - : 一种编码。
 - {{DOMxRef("TextDecoderStream.fatal")}}{{ReadOnlyInline}}
-  - : 一个 {{jsxref("boolean")}}，表示错误方式是否是致命的。
+  - : 一个 {{jsxref("boolean")}}，表示错误是否是致命的。
 - {{DOMxRef("TextDecoderStream.ignoreBOM")}}{{ReadOnlyInline}}
   - : 一个 {{jsxref("boolean")}}，表示是否忽略字节顺序标记。
 - {{DOMxRef("TextDecoderStream.readable")}}{{ReadOnlyInline}}
@@ -33,8 +33,8 @@ transition_of: Web/API/TextDecoderStream
 
 ## 示例
 
-- [流式结构化数据和 HTML 示例](https://streams.spec.whatwg.org/demos/)
-- [一个使用 `TextDecoderStream` 上传数据获取请求流的示例](https://glitch.com/~fetch-request-stream)。
+- [流式传输结构化数据和 HTML 示例](https://streams.spec.whatwg.org/demos/)
+- [一个使用 `TextDecoderStream` 流式处理 fetch 请求的示例](https://glitch.com/~fetch-request-stream)。
 
 ## 规范
 
@@ -47,5 +47,5 @@ transition_of: Web/API/TextDecoderStream
 ## 参见
 
 - {{domxref("TextEncoderStream")}}
-- [Streams API Concepts](/zh-CN/docs/Web/API/Streams_API/Concepts)
+- [Streams API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)
 - [Experimenting with the Streams API](https://deanhume.com/experimenting-with-the-streams-api/)
