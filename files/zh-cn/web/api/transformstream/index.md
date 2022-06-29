@@ -67,6 +67,7 @@ const transformContent = {
   },
   flush() { /* do any destructor work here */ }
 }
+
 class AnyToU8Stream extends TransformStream {
   constructor() {
     super({...transformContent, textencoder: new TextEncoder()})
@@ -85,10 +86,12 @@ const tes = {
     controller.enqueue(this.encoder.encode(chunk))
   }
 }
+
 let _jstes_wm = new WeakMap(); /* info holder */
 class JSTextEncoderStream extends TransformStream {
   constructor() {
     let t = {...tes}
+
     super(t)
     _jstes_wm.set(this, t)
   }
@@ -107,10 +110,12 @@ const tds = {
     controller.enqueue(this.decoder.decode(chunk, { stream: true }))
   }
 }
+
 let _jstds_wm = new WeakMap(); /* info holder */
 class JSTextDecoderStream extends TransformStream {
   constructor(encoding = 'utf-8', {...options} = {}) {
     let t = {...tds, encoding, options}
+
     super(t)
     _jstds_wm.set(this, t)
   }
@@ -127,13 +132,14 @@ class JSTextDecoderStream extends TransformStream {
 ```js
 let responses = [ /* conjoined response tree */ ]
 let {readable, writable} = new TransformStream
+
 responses.reduce(
   (a, res, i, arr) => a.then(() => res.pipeTo(writable, {preventClose: (i+1) !== arr.length})),
   Promise.resolve()
 )
 ```
 
-注意这种影响是不可恢复的。
+注意，这种影响是不可恢复的。
 
 ## 规范
 
@@ -145,5 +151,5 @@ responses.reduce(
 
 ## 参见
 
-- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/),用于可读、可写和转换流的基本可视化。
+- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/)，用于可读、可写和转换流的基本可视化。
 - [Streams—The Definitive Guide](https://web.dev/streams/)
