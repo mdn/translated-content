@@ -31,7 +31,7 @@ transition_of: Web/API/TextEncoderStream
 ## 示例
 
 - [流式传输结构化数据和 HTML 示例](https://streams.spec.whatwg.org/demos/)
-- [一个使用 `TextEncoderStream` 流式处理 fetch 请求流的示例](https://glitch.com/~fetch-request-stream)。
+- [一个使用 `TextEncoderStream` 流式上传数据去处理 fetch 请求流的示例](https://glitch.com/~fetch-request-stream)。
 
 ## 规范
 
