@@ -34,6 +34,10 @@ En navegadores que no soportan entradas de tipo `number`, una entrada `number` r
    <td><code>list</code>, <code>value</code>, <code>valueAsNumber</code></td>
   </tr>
   <tr>
+      <td><strong>Interfaz DOM</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+  <tr>
     <td><strong>Interfaz DOM</strong></td>
     <td><p>{{domxref("HTMLInputElement")}}</p></td>
   </tr>
