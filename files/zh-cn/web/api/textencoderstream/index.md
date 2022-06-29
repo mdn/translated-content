@@ -14,10 +14,10 @@ transition_of: Web/API/TextEncoderStream
 
 {{domxref('Encoding API','','',' ')}} 的 **`TextEncoderStream`** 接口将一个字符串流转换为 UTF-8 编码的字节。它与 {{domxref("TextEncoder")}} 的流形式等价。
 
-## Constructor
+## 构造函数
 
 - {{domxref("TextEncoderStream.TextEncoderStream","TextEncoderStream()")}}
-  - : 创造一个新的 `TextEncoderStream` 对象。
+  - : 创建一个新的 `TextEncoderStream` 对象。
 
 ## 属性
 
