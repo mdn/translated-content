@@ -11,30 +11,30 @@ transition_of: Web/API/TextDecoderStream
 ---
 {{APIRef("Encoding API")}}
 
-{{domxref('Encoding API','','',' ')}}接口的 **`TextDecoderStream`** 接口将一个字符串流转换为 UTF-8 编码的字节。它与 {{domxref("TextDecoder")}} 的流形式等价。
+{{domxref('Encoding API','','',' ')}} 接口的 **`TextDecoderStream`** 方法将一个字符串流转换为 UTF-8 编码的字节。它与 {{domxref("TextDecoder")}} 的流形式等价。
 
 ## 构造函数
 
 - {{domxref("TextDecoderStream.TextDecoderStream","TextDecoderStream()")}}
-  - : 创建一个新的 `TextDecoderStream` 对象.
+  - : 创建一个新的 `TextDecoderStream` 对象。
 
 ## 属性
 
 - {{DOMxRef("TextDecoderStream.encoding")}}{{ReadOnlyInline}}
-  - : 一种编码.
+  - : 一种编码。
 - {{DOMxRef("TextDecoderStream.fatal")}}{{ReadOnlyInline}}
-  - : 一个 {{jsxref("boolean")}},表示错误方式是否是致命的.
+  - : 一个 {{jsxref("boolean")}}，表示错误方式是否是致命的。
 - {{DOMxRef("TextDecoderStream.ignoreBOM")}}{{ReadOnlyInline}}
-  - : 一个 {{jsxref("boolean")}},表示是否忽略字节顺序标记.
+  - : 一个 {{jsxref("boolean")}}，表示是否忽略字节顺序标记。
 - {{DOMxRef("TextDecoderStream.readable")}}{{ReadOnlyInline}}
-  - : 返回此对象控制的 {{domxref("ReadableStream")}} 实例.
+  - : 返回此对象控制的 {{domxref("ReadableStream")}} 实例。
 - {{DOMxRef("TextDecoderStream.writable")}}{{ReadOnlyInline}}
-  - : 返回此对象控制的 {{domxref("WritableStream")}} 实例.
+  - : 返回此对象控制的 {{domxref("WritableStream")}} 实例。
 
 ## 示例
 
 - [流式结构化数据和 HTML 示例](https://streams.spec.whatwg.org/demos/)
-- [一个使用 `TextDecoderStream` 上传数据获取请求流的示例](https://glitch.com/~fetch-request-stream).
+- [一个使用 `TextDecoderStream` 上传数据获取请求流的示例](https://glitch.com/~fetch-request-stream)。
 
 ## 规范
 
