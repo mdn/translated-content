@@ -30,8 +30,8 @@ transition_of: Web/API/TextEncoderStream
 
 ## 示例
 
-- [流式结构化数据和 HTML 示例](https://streams.spec.whatwg.org/demos/)
-- [一个使用 `TextEncoderStream` 上传数据获取请求流的示例](https://glitch.com/~fetch-request-stream)。
+- [流式传输结构化数据和 HTML 示例](https://streams.spec.whatwg.org/demos/)
+- [一个使用 `TextEncoderStream` 流式处理 fetch 请求流的示例](https://glitch.com/~fetch-request-stream)。
 
 ## 规范
 
@@ -44,5 +44,5 @@ transition_of: Web/API/TextEncoderStream
 ## 参见
 
 - {{domxref("TextDecoderStream")}}
-- [Streams API Concepts](/zh-CN/docs/Web/API/Streams_API/Concepts)
+- [Streams API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)
 - [Experimenting with the Streams API](https://deanhume.com/experimenting-with-the-streams-api/)
