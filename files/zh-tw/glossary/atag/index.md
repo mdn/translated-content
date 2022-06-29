@@ -6,19 +6,15 @@ tags:
   - 術語表
 translation_of: Glossary/ATAG
 ---
-<p>ATAG (編輯工具可訪問性{{glossary("Accessibility")}}指南)是一個{{Glossary("W3C")}} 為創建可訪問内容構建可訪問性編輯工具的建議。</p>
+ATAG (編輯工具可訪問性{{glossary("Accessibility")}}指南)是一個{{Glossary("W3C")}} 為創建可訪問内容構建可訪問性編輯工具的建議。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="基礎知識">基礎知識</h3>
+### 基礎知識
 
-<ul>
- <li>維基百科上的 <a href="http://en.wikipedia.org/wiki/Web_Accessibility_Initiative#Authoring_Tools_Accessibility_Guidelines_.28ATAG.29">ATAG 作爲無障礙網頁協議的一部分</a></li>
-</ul>
+- 維基百科上的  [ATAG 作爲無障礙網頁協議的一部分](http://en.wikipedia.org/wiki/Web_Accessibility_Initiative#Authoring_Tools_Accessibility_Guidelines_.28ATAG.29)
 
-<h3 id="技術參考">技術參考</h3>
+### 技術參考
 
-<ul>
- <li><a href="http://www.w3.org/WAI/intro/atag.php">編輯工具可訪問性指南 (ATAG) 概覽</a></li>
- <li><a href="http://www.w3.org/TR/ATAG20/">ATAG 2.0 建議</a></li>
-</ul>
+- [編輯工具可訪問性指南 (ATAG) 概覽](http://www.w3.org/WAI/intro/atag.php)
+- [ATAG 2.0 建議](http://www.w3.org/TR/ATAG20/)

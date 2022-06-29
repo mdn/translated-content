@@ -6,12 +6,10 @@ tags:
   - 術語表
 translation_of: Glossary/Engine
 ---
-<p>{{glossary("JavaScript")}} 引擎是解析和執行 JavaScript 程式的翻譯員。</p>
+{{glossary("JavaScript")}} 引擎是解析和執行 JavaScript 程式的翻譯員。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="基礎知識">基礎知識</h3>
+### 基礎知識
 
-<ul>
- <li>維基百科上的{{Interwiki("wikipedia", "JavaScript engine")}}</li>
-</ul>
+- 維基百科上的{{Interwiki("wikipedia", "JavaScript engine")}}

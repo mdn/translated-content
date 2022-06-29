@@ -7,14 +7,12 @@ tags:
   - 術語表
 translation_of: Glossary/Cryptography
 ---
-<p><strong>密碼學</strong>, 或者說隱語, 是研究如何安全地編碼和傳遞信息的科學。加密學設計和研究用於在不安全的環境中對消息進行編碼和解碼的算法和應用。密碼學不僅僅涉及數據保密性，它還包含了<strong>識別、認證</strong>、<strong>無依賴性和數據完整性。</strong>因此它同樣研究密碼學方法在上下文、<strong>密碼系統</strong>的用法。</p>
+**密碼學**, 或者說隱語, 是研究如何安全地編碼和傳遞信息的科學。加密學設計和研究用於在不安全的環境中對消息進行編碼和解碼的算法和應用。密碼學不僅僅涉及數據保密性，它還包含了**識別、認證**、**無依賴性和數據完整性。**因此它同樣研究密碼學方法在上下文、**密碼系統**的用法。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="基礎知識">基礎知識</h3>
+### 基礎知識
 
-<ul>
- <li>維基百科上的 {{Interwiki("wikipedia", "密碼學")}}</li>
- <li>{{glossary("cryptanalysis")}}</li>
- <li><a href="/en-US/Learn/tutorial/Information_Security_Basics">信息安全教程</a></li>
-</ul>
+- 維基百科上的 {{Interwiki("wikipedia", "密碼學")}}
+- {{glossary("cryptanalysis")}}
+- [信息安全教程](/en-US/Learn/tutorial/Information_Security_Basics)

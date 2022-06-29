@@ -3,27 +3,32 @@ title: PHP
 slug: Glossary/PHP
 translation_of: Glossary/PHP
 ---
-<p>PHP（PHP: Hypertext Preprocessor 的遞歸縮寫，意為「PHP：超文字預處理器」）是一個開源的伺服器端腳本語言，可用於建制網頁應用和動態網站。</p>
+PHP（PHP: Hypertext Preprocessor 的遞歸縮寫，意為「PHP：超文字預處理器」）是一個開源的伺服器端腳本語言，可用於建制網頁應用和動態網站。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="基本語法">基本語法</h3>
+### 基本語法
 
-<pre class="brush: php">  // PHP 程式開始
-&lt;?php
+```php
+  // PHP 程式開始
+<?php
      // PHP 程式在此執行
- ?&gt;
-// PHP 程式結束</pre>
+ ?>
+// PHP 程式結束
+```
 
-<h3 id="在螢幕上印東西">在螢幕上印東西</h3>
+### 在螢幕上印東西
 
-<pre class="brush: php">&lt;?php
+```php
+<?php
    echo "Hello World!";
-?&gt;</pre>
+?>
+```
 
-<h3 id="PHP_變數">PHP 變數</h3>
+### PHP 變數
 
-<pre class="brush: php">​​​​​​​​​​​​​​&lt;?php
+```php
+​​​​​​​​​​​​​​<?php
  // 變數
  $nome='Danilo';
  $sobrenome='Santos';
@@ -35,21 +40,18 @@ translation_of: Glossary/PHP
  echo $sobrenome;
  echo $pais;
  echo $email;
-?&gt;</pre>
+?>
+```
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="http://php.net/">PHP - 官方網站</a></li>
- <li>維基百科的 {{Interwiki("wikipedia", "PHP")}}</li>
- <li>維基教科書的 <a href="https://zh.wikibooks.org/wiki/PHP">PHP</a></li>
- <li><a href="https://twpug.net/">臺灣 php 聯盟</a></li>
- <li><a href="/zh-TW/docs/Glossary">MDN Web Docs 術語</a>
-  <ul>
-   <li>{{Glossary("Java")}}</li>
-   <li>{{Glossary("JavaScript")}}</li>
-   <li>{{Glossary("Python")}}</li>
-   <li>{{Glossary("Ruby")}}</li>
-  </ul>
- </li>
-</ul>
+- [PHP - 官方網站](http://php.net/)
+- 維基百科的 {{Interwiki("wikipedia", "PHP")}}
+- 維基教科書的 [PHP](https://zh.wikibooks.org/wiki/PHP)
+- [臺灣 php 聯盟](https://twpug.net/)
+- [MDN Web Docs 術語](/zh-TW/docs/Glossary)
+
+  - {{Glossary("Java")}}
+  - {{Glossary("JavaScript")}}
+  - {{Glossary("Python")}}
+  - {{Glossary("Ruby")}}

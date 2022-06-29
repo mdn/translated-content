@@ -3,40 +3,42 @@ title: jQuery
 slug: Glossary/jQuery
 translation_of: Glossary/jQuery
 ---
-<p>jQuery 是專精於簡化 {{Glossary("DOM")}}、{{Glossary("AJAX")}}、與 {{Glossary("Event")}} 操作的 {{Glossary("JavaScript")}} {{Glossary("函式庫")}}。</p>
+jQuery 是專精於簡化 {{Glossary("DOM")}}、{{Glossary("AJAX")}}、與 {{Glossary("Event")}} 操作的 {{Glossary("JavaScript")}} {{Glossary("函式庫")}}。
 
-<p>jQuery 用 <code>$(selector).action()</code> 格式，指派元素到指定的事件。詳細來說， <code>$(selector)</code> 會呼叫 jQuery 選取 <code>selector</code> 元素，並指派它到稱作 <code>.action()</code> 事件的 {{Glossary("API")}}。</p>
+jQuery 用 `$(selector).action()` 格式，指派元素到指定的事件。詳細來說， `$(selector)` 會呼叫 jQuery 選取 `selector` 元素，並指派它到稱作 `.action()` 事件的 {{Glossary("API")}}。
 
-<pre class="brush: js"><code class="language-js">$(document).ready(function(){
+```js
+$(document).ready(function(){
   alert("Hello World!");
   $("#blackBox").hide();
-});</code></pre>
+});
+```
 
-<p>上面這段 jQuery 程式碼，會執行與這段原生 JavaScript 程式碼相同的事情：</p>
+上面這段 jQuery 程式碼，會執行與這段原生 JavaScript 程式碼相同的事情：
 
-<pre class="brush: js">window.onload = function() {
+```js
+window.onload = function() {
   alert("Hello World!");
   document.getElementById("blackBox").style.display = "none";
-};</pre>
+};
+```
 
-<p>或這段：</p>
+或這段：
 
-<pre class="brush: js">window.addEventListener("load", () =&gt; {
+```js
+window.addEventListener("load", () => {
   alert("Hello World!");
   document.getElementById("blackBox").style.display = "none";
-});</pre>
+});
+```
 
-<h2 id="深入理解">深入理解</h2>
+## 深入理解
 
-<h3 id="基本知識">基本知識</h3>
+### 基本知識
 
-<ul>
- <li>維基百科的 {{Interwiki("wikipedia", "jQuery")}}</li>
- <li><a href="https://jquery.com/">jQuery 官方網站</a></li>
-</ul>
+- 維基百科的 {{Interwiki("wikipedia", "jQuery")}}
+- [jQuery 官方網站](https://jquery.com/)
 
-<h3 id="技術資訊">技術資訊</h3>
+### 技術資訊
 
-<ul>
- <li><a href="https://api.jquery.com/">API 參考文件</a></li>
-</ul>
+- [API 參考文件](https://api.jquery.com/)

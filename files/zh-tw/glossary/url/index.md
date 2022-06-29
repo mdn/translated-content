@@ -3,33 +3,27 @@ title: URL
 slug: Glossary/URL
 tags:
   - URL
-  - 'l10n:priority'
+  - l10n:priority
   - 術語表
   - 鏈接
 translation_of: Glossary/URL
 ---
-<p><strong>統一資源定位器</strong> (<strong>URL</strong>) 是一個在互聯網上查找指定資源(例如網頁，圖片或視頻)位置的文本字符串。 </p>
+**統一資源定位器** (**URL**) 是一個在互聯網上查找指定資源(例如網頁，圖片或視頻)位置的文本字符串。
 
-<p>在{{Glossary("HTTP")}}的文本中, URLs 通常被稱作網頁地址或鏈接。瀏覽器把 URLs 顯示在地址欄，如： <code>https://developer.mozilla.org</code> Some browsers display only the part of a URL after the "//", that is, the {{Glossary("Domain name")}}.</p>
+在{{Glossary("HTTP")}}的文本中, URLs 通常被稱作網頁地址或鏈接。瀏覽器把 URLs 顯示在地址欄，如： `https://developer.mozilla.org` Some browsers display only the part of a URL after the "//", that is, the {{Glossary("Domain name")}}.
 
-<p>URLs 同樣可以用於文件傳輸({{Glossary("FTP")}}) , 郵件 ({{Glossary("SMTP")}}), 以及其他應用程式.</p>
+URLs 同樣可以用於文件傳輸({{Glossary("FTP")}}) , 郵件 ({{Glossary("SMTP")}}), 以及其他應用程式.
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="基礎知識"><strong>基礎知識</strong></h3>
+### **基礎知識**
 
-<ul>
- <li>維基百科上的 {{Interwiki("wikipedia", "URL")}}</li>
-</ul>
+- 維基百科上的 {{Interwiki("wikipedia", "URL")}}
 
-<h3 id="學習其他">學習其他</h3>
+### 學習其他
 
-<ul>
- <li><a href="/en-US/Learn/Understanding_URLs">Understanding URLs and their structure</a></li>
-</ul>
+- [Understanding URLs and their structure](/en-US/Learn/Understanding_URLs)
 
-<h3 id="Specification">Specification</h3>
+### Specification
 
-<ul>
- <li><a href="/zh-TW/Learn/Understanding_URLs">Understanding URLs and their structure</a></li>
-</ul>
+- [Understanding URLs and their structure](/zh-TW/Learn/Understanding_URLs)
