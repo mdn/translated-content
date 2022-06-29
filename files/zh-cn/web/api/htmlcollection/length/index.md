@@ -25,12 +25,14 @@ translation_of: Web/API/HTMLCollection/length
 ```js
 // All the elements with the class ".test" in the document
 var items = document.getElementsByClassName("test");
+
 // For each test item in the list,
 // append the entire element as a string of HTML
 var gross = "";
 for (var i = 0; i < items.length; i++) {
   gross += items[i].innerHTML;
 }
+
 // gross is now all the HTML for the test elements
 ```
 
