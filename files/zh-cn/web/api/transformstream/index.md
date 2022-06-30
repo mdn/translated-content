@@ -13,7 +13,7 @@ translation_of: Web/api/TransformStream
 
 [Streams API](/zh-CN/docs/Web/API/Streams_API) 接口的 `TransformStream` 表示一组可转换的数据。
 
-`TransformStream` 是一个 {{glossary("Transferable objects","transferable object")}}。
+`TransformStream` 是一个{{glossary("Transferable objects","可转移对象")}}。
 
 ## 构造函数
 
@@ -33,9 +33,9 @@ translation_of: Web/api/TransformStream
 
 ## 示例
 
-### Anything-to-uint8array stream
+### 将任意对象转换为 uint8array 数组
 
-在下面的示例中，一个转换流通过它接受所有分块的 {{jsxref("Uint8Array")}} 值。
+在下面的示例中，一个转换流将其接收的所有分块转换为 {{jsxref("Uint8Array")}}。。
 
 ```js
 const transformContent = {
@@ -75,9 +75,9 @@ class AnyToU8Stream extends TransformStream {
 }
 ```
 
-### Polyfilling TextEncoderStream and TextDecoderStream
+### TextEncoderStream 和 TextDecoderStream 的 polyfill
 
-注意，通过原生构造函数的方式已被弃用。它旨在不受支持的平台作为一个 polyfill。
+注意，通过原生构造函数已弃用它。它旨在为不受支持的平台提供一个 polyfill。
 
 ```js
 const tes = {
@@ -125,9 +125,9 @@ class JSTextDecoderStream extends TransformStream {
 }
 ```
 
-### Chaining multiple ReadableStreams together
+### ReadableStreams 链
 
-这是有用的，可以连接多个流。示例包括构建一个渐进式加载和渐进式流的 PWA。
+这是一个连接多个流很有用的方法。示例包括构建一个渐进式加载和渐进式流的 PWA。
 
 ```js
 let responses = [ /* conjoined response tree */ ]
