@@ -9,7 +9,7 @@ translation_of: Web/API/Element/clientLeft
 
 <p>从 <a href="zh-CN/Gecko">Gecko</a> 1.9（<a href="zh-CN/Firefox_3">Firefox 3</a> {{ Bug(111207) }}）开始，基于 Gecko 的应用支持 <code>clientLeft</code> 属性。该属性在 Firefox 2 及更早的版本中不被支持。</p>
 
-<p>当 <a class="external" href="http://kb.mozillazine.org/Layout.scrollbar.side"><em>layout.scrollbar.side </em> preference</a> （译注：这个属性好像是只在火狐浏览器中才有）被设为 1 或 3，且文本方向被设为从右到左（RTL），则垂直滚动条位于左边，这会影响到 <code>clientLeft</code> 属性值的计算。</p>
+<p>当 <a href="http://kb.mozillazine.org/Layout.scrollbar.side"><em>layout.scrollbar.side </em> preference</a> （译注：这个属性好像是只在火狐浏览器中才有）被设为 1 或 3，且文本方向被设为从右到左（RTL），则垂直滚动条位于左边，这会影响到 <code>clientLeft</code> 属性值的计算。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -44,6 +44,6 @@ translation_of: Web/API/Element/clientLeft
 
 <p><code>clientLeft</code> 首次出现于 MS IE DHTML 对象模型中。</p>
 
-<p>元素的文本方向被设为从右到左后，其垂直滚动条的位置取决于 <a class="external" href="http://kb.mozillazine.org/Layout.scrollbar.side"><em>layout.scrollbar.side </em> preference</a></p>
+<p>元素的文本方向被设为从右到左后，其垂直滚动条的位置取决于 <a href="http://kb.mozillazine.org/Layout.scrollbar.side"><em>layout.scrollbar.side </em> preference</a></p>
 
 <p>当元素设置 <code>display: inline</code> 后，无论是否有边框，<code>clientLeft</code> 始终返回 <code>0</code> 。</p>
