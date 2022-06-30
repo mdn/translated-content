@@ -11,7 +11,7 @@ translation_of: Web/api/TextDecoderStream/TextDecoderStream
 ---
 {{APIRef("Encoding API")}}
 
-**`TextDecoderStream()`** 构造函数创建一个新的 {{domxref("TextDecoderStream")}} 对象，该对象用于将二进制编码的文本流转换为二进制字符串。
+**`TextDecoderStream()`** 构造函数创建一个新的 {{domxref("TextDecoderStream")}} 对象，该对象用于将二进制编码的文本流转换为字符串。
 
 ## 语法
 
@@ -23,10 +23,10 @@ new TextDecoderStream(label, options)
 ### 参数
 
 - `label`
-  - : 默认为 `utf-8` 的字符串。可能是 [任意有效的编码](/en-US/docs/Web/API/Encoding_API/Encodings)。
+  - : 默认为 `utf-8` 的字符串。可以是[任意有效的编码](/zh-CN/docs/Web/API/Encoding_API/Encodings)。
 - `options` {{optional_inline}}
 
-  - : 一个具有属性的 `TextDecoderOptions` 字典:
+  - : 一个具有属性的 `TextDecoderOptions` 对象：
 
     - `fatal`
       - : 一个布尔值，表示错误的模式。如果是 true，则在 decoder 遇到错误时抛出一个 {{domxref("DOMException")}}。默认值是 `false`。
