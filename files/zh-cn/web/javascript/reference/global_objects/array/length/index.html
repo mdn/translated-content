@@ -36,7 +36,7 @@ const listC = new Array(-100) // 负数
 
 <p>你可以设置 <code>length</code> 属性的值来截断任何数组。当通过改变 <code>length</code> 属性值来扩展数组时，实际元素的数目将会增加。例如：将一个拥有 2 个元素的数组的 <code>length</code> 属性值设为 3 时，那么这个数组将会包含 3 个元素，并且，第三个元素是不可迭代的空槽。</p>
 
-<pre class="brush: js"><code>const arr = [1, 2];
+<pre class="brush: js">const arr = [1, 2];
 console.log(arr);
 // [ 1, 2 ]
 
@@ -47,7 +47,7 @@ console.log(arr);
 arr.forEach(element => console.log(element));
 // 1
 // 2
-</code></pre>
+</pre>
 
 <p>但是，<code>length</code> 属性不一定表示数组中定义值的个数。了解更多：<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties">长度与数值下标属性之间的关系</a>。</p>
 
@@ -87,43 +87,11 @@ console.log(numbers.length); // 3</pre>
 
 <h2 id="规范">规范</h2>
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.5.2', 'Array.length')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-properties-of-array-instances-length', 'Array.length')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-properties-of-array-instances-length', 'Array.length')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
-
-
-<p>{{Compat("javascript.builtins.Array.length")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="相关链接">相关链接</h2>
 
