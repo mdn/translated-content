@@ -1,124 +1,106 @@
 ---
 title: 'HTMLMediaElement: stalled イベント'
 slug: Web/API/HTMLMediaElement/stalled_event
+page-type: web-api-event
 tags:
+  - API
   - Audio
+  - Event
   - HTMLMediaElement
   - Reference
   - Video
-  - events
+browser-compat: api.HTMLMediaElement.stalled_event
 translation_of: Web/API/HTMLMediaElement/stalled_event
 ---
 {{APIRef("HTMLMediaElement")}}
 
-<span class="seoSummary">`stalled` イベントは、ユーザーエージェントがメディアデータをフェッチしようとして、データが予期せずに来なかったときに発生します。</span>
+`stalled` イベントは、ユーザーエージェントがメディアデータをフェッチしようとして、データが予期せずに来なかったときに発生します。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">対象</th>
-   <td>要素</td>
-  </tr>
-  <tr>
-   <th scope="row">既定のアクション</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラプロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onstalled")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">仕様</th>
-   <td><a class="external" href="https://html.spec.whatwg.org/multipage/media.html#event-media-stalled">HTML5 メディア</a></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">対象</th>
+      <td>要素</td>
+    </tr>
+    <tr>
+      <th scope="row">既定のアクション</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>{{domxref("GlobalEventHandlers.onstalled")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
 これらの例では、`HTMLMediaElement` の `stalled` イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
 
-`AddEventListener()` を使用する場合
+`addEventListener()` を使用する場合
 
-<pre class="brush: js">const video = document.querySelector('video');
+```js
+const video = document.querySelector('video');
 
-video.addEventListener('stalled', (event) =&gt; {
+video.addEventListener('stalled', (event) => {
   console.log('データのフェッチに失敗しました。');
-});</pre>
+});
+```
 
-`onstalled` イベントハンドラプロパティを使用する場合
+`onstalled` イベントハンドラープロパティを使用する場合
 
-<pre class="brush: js">const video = document.querySelector('video');
+```js
+const video = document.querySelector('video');
 
-video.onstalled = (event) =&gt; {
+video.onstalled = (event) => {
   console.log('データのフェッチに失敗しました。');
-};</pre>
+};
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-stalled", "stalled media event")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-stalled", "stalled media event")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連イベント
 
-{{Compat("api.HTMLMediaElement.stalled_event")}}
+- HTMLMediaElement {{domxref("HTMLMediaElement.playing_event", 'playing')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.seeked_event", 'seeked')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.suspend_event", 'suspend')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.emptied_event", 'emptied')}} イベント
+- HTMLMediaElement {{domxref("HTMLMediaElement.stalled_event", 'stalled')}} イベント
 
-<h2 id="Related_Events" name="Related_Events">関連イベント</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("HTMLMediaElement.playing_event", 'HTMLMediaElement: playing イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.waiting_event", 'HTMLMediaElement: waiting イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.seeking_event", 'HTMLMediaElement: seeking イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.seeked_event", 'HTMLMediaElement: seeked イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.loadedmetadata_event", 'HTMLMediaElement: loadedmetadata イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.loadeddata_event", 'HTMLMediaElement: loadeddata イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.canplay_event", 'HTMLMediaElement: canplay イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.canplaythrough_event", 'HTMLMediaElement: canplaythrough イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.durationchange_event", 'HTMLMediaElement: durationchange イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.timeupdate_event", 'HTMLMediaElement: timeupdate イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.play_event", 'HTMLMediaElement: play イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.pause_event", 'HTMLMediaElement: pause イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.ratechange_event", 'HTMLMediaElement: ratechange イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.volumechange_event", 'HTMLMediaElement: volumechange イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.suspend_event", 'HTMLMediaElement: suspend イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.emptied_event", 'HTMLMediaElement: emptied イベント')}}</li>
- <li>{{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled イベント')}}</li>
-</ul>
-
-<h2 id="See_Also" name="See_Also">関連情報</h2>
-
-<ul>
- <li>{{domxref("HTMLAudioElement")}}</li>
- <li>{{domxref("HTMLVideoElement")}}</li>
- <li>{{HTMLElement("audio")}}</li>
- <li>{{HTMLElement("video")}}</li>
-</ul>
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}

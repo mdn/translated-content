@@ -1,62 +1,39 @@
 ---
 title: HTMLMediaElement.paused
 slug: Web/API/HTMLMediaElement/paused
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
   - HTMLMediaElement
   - Property
   - Read-only
+browser-compat: api.HTMLMediaElement.paused
 translation_of: Web/API/HTMLMediaElement/paused
 ---
 {{APIRef("HTML DOM")}}
 
-<span class="seoSummary">読み取り専用の **`HTMLMediaElement.paused`** プロパティは、メディア要素を一時停止しているかどうかを示します。</span>
+**`HTMLMediaElement.paused`** プロパティは読み取り専用で、メディア要素が一時停止しているかどうかを示します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox">var <em>isPaused</em> = <em>audioOrVideo</em>.paused</pre>
+論理値です。 `true` は一時停止中で、`false` は一時停止していません。
 
-<h3 id="Value" name="Value">値</h3>
+## 例
 
-{{jsxref("Boolean")}}。 `true` は一時停止中で、`false` は一時停止していません。
-
-<h2 id="Example" name="Example">例</h2>
-
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 console.log(obj.paused); // true
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#dom-media-paused", "HTMLMediaElement.paused")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.paused")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-{{Compat("api.HTMLMediaElement.paused")}}
-
-<h2 id="See_Also" name="See_Also">関連情報</h2>
-
-<ul>
- <li>これを定義するインターフェース、{{domxref("HTMLMediaElement")}}。</li>
-</ul>
+- 定義している {{domxref("HTMLMediaElement")}} インターフェイス

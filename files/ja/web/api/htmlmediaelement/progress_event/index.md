@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: progress イベント'
 slug: Web/API/HTMLMediaElement/progress_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -8,7 +9,7 @@ tags:
   - Reference
   - Web
   - progress
-  - イベント
+browser-compat: api.HTMLMediaElement.progress_event
 translation_of: Web/API/HTMLMediaElement/progress_event
 ---
 {{APIRef}}
@@ -16,48 +17,48 @@ translation_of: Web/API/HTMLMediaElement/progress_event
 **`progress`** イベントは、ブラウザーがリソースを読み込むときに定期的に発生します。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>いいえ</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>`onprogress`</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td><code>onprogress</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Live_example" name="Live_example">ライブデモ</h3>
+### ライブデモ
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="example"&gt;
+```html
+<div class="example">
 
-    &lt;button type="button"&gt;Load video&lt;/button&gt;
-    &lt;video controls width="250"&gt;&lt;/video&gt;
+    <button type="button">Load video</button>
+    <video controls width="250"></video>
 
-    &lt;div class="event-log"&gt;
-        &lt;label&gt;Event log:&lt;/label&gt;
-        &lt;textarea readonly class="event-log-contents"&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
+    <div class="event-log">
+        <label>Event log:</label>
+        <textarea readonly class="event-log-contents"></textarea>
+    </div>
 
-&lt;/div&gt;</pre>
+</div>
+```
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">.event-log-contents {
+```css hidden
+.event-log-contents {
   width: 18rem;
   height: 5rem;
   border: 1px solid black;
@@ -86,15 +87,15 @@ video {
   grid-area: log;
 }
 
-.event-log&gt;label {
+.event-log>label {
   display: block;
 }
-</pre>
-</div>
+```
 
-<h4 id="JS">JS</h4>
+#### JavaScript
 
-<pre class="brush: js">const loadVideo = document.querySelector('button');
+```js
+const loadVideo = document.querySelector('button');
 const video = document.querySelector('video');
 const eventLog = document.querySelector('.event-log-contents');
 let source = null;
@@ -108,54 +109,36 @@ video.addEventListener('progress', handleEvent);
 video.addEventListener('canplay', handleEvent);
 video.addEventListener('canplaythrough', handleEvent);
 
-loadVideo.addEventListener('click', () =&gt; {
+loadVideo.addEventListener('click', () => {
 
     if (source) {
         document.location.reload();
     } else {
         loadVideo.textContent = "Reset example";
         source = document.createElement('source');
-        source.setAttribute('src', 'https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm');
-        source.setAttribute('type', 'video/webm');
+        source.setAttribute('src', 'https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.mp4');
+        source.setAttribute('type', 'video/mp4');
 
         video.appendChild(source);
     }
-});</pre>
+});
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-{{ EmbedLiveSample('Live_example', '100%', '200px') }}
+{{ EmbedLiveSample('Live_example', '100%', '250px') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-progress", "progress media event")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-progress", "progress media event")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-{{Compat("api.HTMLMediaElement.progress_event")}}
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("HTMLAudioElement")}}</li>
- <li>{{domxref("HTMLVideoElement")}}</li>
- <li>{{HTMLElement("audio")}}</li>
- <li>{{HTMLElement("video")}}</li>
-</ul>
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}

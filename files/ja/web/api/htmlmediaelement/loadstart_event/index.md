@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: loadstart イベント'
 slug: Web/API/HTMLMediaElement/loadstart_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -8,7 +9,7 @@ tags:
   - Reference
   - Web
   - loadstart
-  - イベント
+browser-compat: api.HTMLMediaElement.loadstart_event
 translation_of: Web/API/HTMLMediaElement/loadstart_event
 ---
 {{APIRef}}
@@ -16,48 +17,50 @@ translation_of: Web/API/HTMLMediaElement/loadstart_event
 **`loadstart`** イベントは、ブラウザーがリソースの読み込みを開始したときに発生します。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>いいえ</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers/onloadstart", "onloadstart")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onloadstart", "onloadstart")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Live_example" name="Live_example">ライブデモ</h3>
+### ライブデモ
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="example"&gt;
+```html
+<div class="example">
 
-    &lt;button type="button"&gt;Load video&lt;/button&gt;
-    &lt;video controls width="250"&gt;&lt;/video&gt;
+    <button type="button">Load video</button>
+    <video controls width="250"></video>
 
-    &lt;div class="event-log"&gt;
-        &lt;label&gt;Event log:&lt;/label&gt;
-        &lt;textarea readonly class="event-log-contents"&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
+    <div class="event-log">
+        <label>Event log:</label>
+        <textarea readonly class="event-log-contents"></textarea>
+    </div>
 
-&lt;/div&gt;</pre>
+</div>
+```
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">.event-log-contents {
+```css hidden
+.event-log-contents {
   width: 18rem;
   height: 5rem;
   border: 1px solid black;
@@ -86,15 +89,15 @@ video {
   grid-area: log;
 }
 
-.event-log&gt;label {
+.event-log>label {
   display: block;
 }
-</pre>
-</div>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const loadVideo = document.querySelector('button');
+```js
+const loadVideo = document.querySelector('button');
 const video = document.querySelector('video');
 const eventLog = document.querySelector('.event-log-contents');
 let source = null;
@@ -108,7 +111,7 @@ video.addEventListener('progress', handleEvent);
 video.addEventListener('canplay', handleEvent);
 video.addEventListener('canplaythrough', handleEvent);
 
-loadVideo.addEventListener('click', () =&gt; {
+loadVideo.addEventListener('click', () => {
 
     if (source) {
         document.location.reload();
@@ -120,42 +123,24 @@ loadVideo.addEventListener('click', () =&gt; {
 
         video.appendChild(source);
     }
-});</pre>
+});
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
 {{ EmbedLiveSample('Live_example', '100%', '200px') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-loadstart", "loadstart media event")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-loadstart", "loadstart media event")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-{{Compat("api.HTMLMediaElement.loadstart_event")}}
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("HTMLAudioElement")}}</li>
- <li>{{domxref("HTMLVideoElement")}}</li>
- <li>{{HTMLElement("audio")}}</li>
- <li>{{HTMLElement("video")}}</li>
-</ul>
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}
