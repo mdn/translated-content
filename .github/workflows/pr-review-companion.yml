@@ -77,7 +77,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.local
-          key: dotlocal-${{ runner.os }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}-${{ steps.setup-python.outputs.python-version }}
+          # the trailing number is used to increase for getting
+          # a different cache key when this file changes
+          key: dotlocal-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-0
 
       - name: Install Python poetry
         uses: snok/install-poetry@v1.3
