@@ -105,7 +105,7 @@ console.log((o.a === {a}.a)); // true
 console.log(a); // {x: 2}
 </pre>
 
-<p>In ECMAScript 5 strict mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}.  With the introduction of computed property names making duplication possible at runtime, ECMAScript 2015 has removed this restriction.</p>
+<p>In ECMAScript 5 strict mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}.  With the introduction of computed property names making duplication possible at runtime, ECMAScript 2015 has removed this restriction.</p>
 
 <pre class="brush: js">function haveES2015DuplicatePropertySemantics() {
   'use strict';
@@ -138,7 +138,7 @@ var o = {
   *<var>generator</var>() {}
 };</pre>
 
-<p>In ECMAScript 2015 There is a way to concisely define properties whose values are generator functions:</p>
+<p>In ECMAScript 2015 There is a way to concisely define properties whose values are generator functions:</p>
 
 <pre class="brush: js">var o = {
   *<var>generator</var>() {
@@ -146,7 +146,7 @@ var o = {
   }
 };</pre>
 
-<p>Which is equivalent to this ES5-like notation (but note that ECMAScript 5 has no generators):</p>
+<p>Which is equivalent to this ES5-like notation (but note that ECMAScript 5 has no generators):</p>
 
 <pre class="brush: js">var o = {
   generator<var>: function* </var>() {
@@ -158,7 +158,7 @@ var o = {
 
 <h3 id="Computed_property_names">Computed property names</h3>
 
-<p>Starting with ECMAScript 2015, the object initializer syntax also supports computed property names. That allows you to put an expression in brackets <code>[]</code>, that will be computed as the property name. This is symmetrical to the bracket notation of the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessor</a> syntax, which you might have used to read and set properties already. Now you can use the same syntax in object literals, too:</p>
+<p>Starting with ECMAScript 2015, the object initializer syntax also supports computed property names. That allows you to put an expression in brackets <code>[]</code>, that will be computed as the property name. This is symmetrical to the bracket notation of the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessor</a> syntax, which you might have used to read and set properties already. Now you can use the same syntax in object literals, too:</p>
 
 <pre class="brush: js">// Computed property names (ES2015)
 var i = 0;
@@ -199,7 +199,7 @@ var mergedObj = { ...obj1, ...obj2 };
 
 <h3 id="Prototype_mutation">Prototype mutation</h3>
 
-<p>A property definition of the form <code>__proto__: value</code> or <code>"__proto__": value</code> does not create a property with the name <code>__proto__</code>.  Instead, if the provided value is an object or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>, it changes the <code>[[Prototype]]</code> of the created object to that value.  (If the value is not an object or null, the object is not changed.)</p>
+<p>A property definition of the form <code>__proto__: value</code> or <code>"__proto__": value</code> does not create a property with the name <code>__proto__</code>.  Instead, if the provided value is an object or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>, it changes the <code>[[Prototype]]</code> of the created object to that value.  (If the value is not an object or null, the object is not changed.)</p>
 
 <pre class="brush: js">var obj1 = {};
 assert(Object.getPrototypeOf(obj1) === Object.prototype);

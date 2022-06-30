@@ -3,11 +3,11 @@ title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
 translation_of: Web/API/CSSStyleSheet/insertRule
 ---
-<div>{{APIRef("CSSOM")}} </div>
+<div>{{APIRef("CSSOM")}} </div>
 
-<p><strong>CSSStyleSheet.insertRule() </strong>方法新增一個新的 CSS 規則，到當前的樣式表，他伴隨著一些<a href="#Restrictions">限制</a>.  </p>
+<p><strong>CSSStyleSheet.insertRule() </strong>方法新增一個新的 CSS 規則，到當前的樣式表，他伴隨著一些<a href="#Restrictions">限制</a>.  </p>
 
-<p>更明確的說，雖然 <strong>insertRule()</strong> 只是一個 {{domxref("CSSStyleSheet")}} 的方法， 他實際上插入這份規則到 {{domxref("CSSStyleSheet")}}.<em>cssRules</em>, 在 {{domxref("CSSRuleList")}} 之中。</p>
+<p>更明確的說，雖然 <strong>insertRule()</strong> 只是一個 {{domxref("CSSStyleSheet")}} 的方法， 他實際上插入這份規則到 {{domxref("CSSStyleSheet")}}.<em>cssRules</em>, 在 {{domxref("CSSRuleList")}} 之中。</p>
 
 <p>這份規則，必須包含的內容，取決於它的類型： 對於規則集 (rule-sets)，規則同時指定了選擇器和样式聲明。 對於規則 (at-rules)，規則同時指定 at 標識符（ at-identifier ）和規則內容。</p>
 
@@ -21,10 +21,10 @@ translation_of: Web/API/CSSStyleSheet/insertRule
 
 <dl>
  <dt><em><em>rule</em></em></dt>
- <dd><em><em>一個  {{domxref("DOMString")}} 包含要被插入的規則，這份規則同時指定了選擇器（ <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">selector</a> ）和样式聲明，或 at 標識符 (at-identifier ) 和規則內容。</em></em></dd>
+ <dd><em><em>一個  {{domxref("DOMString")}} 包含要被插入的規則，這份規則同時指定了選擇器（ <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">selector</a> ）和样式聲明，或 at 標識符 (at-identifier ) 和規則內容。</em></em></dd>
  <dt><em><em>index {{optional_inline}}</em></em></dt>
  <dd>
- <p><em><em>無符號整數，代表在 <em><em>{{domxref("CSSStyleSheet")}}<em>.</em>cssRules </em></em>中插入的位置，其中 index-0 是第一個規則，而 index-max 就是最後一個規則，並且與 CSSStyleSheet 的長度相同。cssRules 在舊的實現中是必需的。查詢「瀏覽器兼容」取得詳細信息。 默認值為 0。</em></em></p>
+ <p><em><em>無符號整數，代表在 <em><em>{{domxref("CSSStyleSheet")}}<em>.</em>cssRules </em></em>中插入的位置，其中 index-0 是第一個規則，而 index-max 就是最後一個規則，並且與 CSSStyleSheet 的長度相同。cssRules 在舊的實現中是必需的。查詢「瀏覽器兼容」取得詳細信息。 默認值為 0。</em></em></p>
  </dd>
 </dl>
 
@@ -32,7 +32,7 @@ translation_of: Web/API/CSSStyleSheet/insertRule
 
 <p><em><em><em><em>The index within the style sheet's rule-list of the newly inserted rule.</em></em></em></em></p>
 
-<h3 id="Restrictions_限制"><em><em><em><em>Restrictions  限制</em></em></em></em></h3>
+<h3 id="Restrictions_限制"><em><em><em><em>Restrictions  限制</em></em></em></em></h3>
 
 <p><em><em>CSS 樣式表規則列表，有一些直覺的、和不是那麼直覺的<a href="https://drafts.csswg.org/cssom/#insert-a-css-rule">限制</a> ，影響著規則的插入方式和位置。<br>
  違反這些可能會導致 DOM 異常 ({{domxref("DOMException")}}) 引發錯誤。</em></em></p>

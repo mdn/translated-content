@@ -14,19 +14,19 @@ translation_of: Web/API/Range/selectNodeContents
 
 <p>{{ domxref("Range") }} 的起始和结束节点的父节点即为引用节点。 <code>startOffset</code> 为 0,  <code>endOffset</code> 则是引用节点包含的字符数或子节点个数。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>range</em>.selectNodeContents(<em>referenceNode</em>);
 </pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><em>referenceNode</em></dt>
  <dd>此 {{ domxref("Node") }} 中的内容被包含在 {{ domxref("Range") }} 中。</dd>
 </dl>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <pre class="brush: js">range = document.createRange();
 referenceNode = document.getElementsByTagName("div")[0];
@@ -70,7 +70,7 @@ deselectButton.addEventListener('click', e =&gt; {
 
 <p>{{EmbedLiveSample("Live_sample")}}</p>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 <table class="standard-table">
  <tbody>

@@ -24,9 +24,9 @@ translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
  <dd>{{jsxref("Uint8ClampedArray")}} 代表一維陣列包含RGBA 格式。整數值介於0到255之間(包含255)。</dd>
 </dl>
 
-<p><code>data</code> 屬性返回一個{{jsxref("Uint8ClampedArray")}}，它可被當作為pixel的初始資料。每個pixel用4個1byte值做代表分別為<strong>紅</strong>，<strong>綠</strong>，<strong>藍</strong>，<strong>透明值</strong>(也就是<strong>RGBA</strong>格式)。每個顏色組成皆是介於整數值介於0到255之間。而每個組成在一個陣列中被分配為一個連續的索引。從左上角 pixel 的紅色組成中的陣列由<strong>索引 0</strong> 為始。Pixels 執行順序為從左到右,再由上到下,直到整個陣列。</p>
+<p><code>data</code> 屬性返回一個{{jsxref("Uint8ClampedArray")}}，它可被當作為pixel的初始資料。每個pixel用4個1byte值做代表分別為<strong>紅</strong>，<strong>綠</strong>，<strong>藍</strong>，<strong>透明值</strong>(也就是<strong>RGBA</strong>格式)。每個顏色組成皆是介於整數值介於0到255之間。而每個組成在一個陣列中被分配為一個連續的索引。從左上角 pixel 的紅色組成中的陣列由<strong>索引 0</strong> 為始。Pixels 執行順序為從左到右,再由上到下,直到整個陣列。</p>
 
-<p>{{jsxref("Uint8ClampedArray")}}  包含<code>height</code> × <code>width</code>× 4 bytes的資料,同索引值從0到 (<code>height</code>×<code>width</code>×4)-1</p>
+<p>{{jsxref("Uint8ClampedArray")}}  包含<code>height</code> × <code>width</code>× 4 bytes的資料,同索引值從0到 (<code>height</code>×<code>width</code>×4)-1</p>
 
 <p>例如,讀取影像的藍色組成的值。從pixel 的第200欄、第50行，你可以照著下面的步驟:</p>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 <pre class="brush: js">var numBytes = imageData.data.length;
 </pre>
 
-<h2 id="創造一個_ImageData物件">創造一個 <code>ImageData</code>物件</h2>
+<h2 id="創造一個_ImageData物件">創造一個 <code>ImageData</code>物件</h2>
 
 <p>可以使用{{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}}方法創造一個全新空白的<code>ImageData</code> 物件。</p>
 
@@ -47,17 +47,17 @@ translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 
 <p>這個方法是有規定大小尺寸.所有pixels預設是透明的黑色。</p>
 
-<p>下面的方法一樣是由<code>anotherImageData</code>參考尺寸大小，由<code>ImageData</code> 物件創造一個與新的一樣的大小。這些新的物件的pixel皆預設為透明的黑色。</p>
+<p>下面的方法一樣是由<code>anotherImageData</code>參考尺寸大小，由<code>ImageData</code> 物件創造一個與新的一樣的大小。這些新的物件的pixel皆預設為透明的黑色。</p>
 
 <pre class="brush: js">var myImageData = ctx.createImageData(anotherImageData);</pre>
 
 <h2 id="得到pixel資料的內容">得到pixel資料的內容</h2>
 
-<p>可以使用<code>getImageData()</code>這個方法，去取得canvas內容中<code>ImageData</code> 物件的資料含pixel 數據(data) </p>
+<p>可以使用<code>getImageData()</code>這個方法，去取得canvas內容中<code>ImageData</code> 物件的資料含pixel 數據(data) </p>
 
 <pre class="brush: js">var myImageData = ctx.getImageData(left, top, width, height);</pre>
 
-<p>這個方法會返回<code>ImageData</code>物件，它代表著在這canvas區域之中pixel 的數據(data) 。從各角落的點代表著 (<code>left</code>,<code>top</code>), (<code>left+width</code>, <code>top</code>), (<code>left</code>, <code>top+height</code>), and (<code>left+width</code>, <code>top+height</code>)。這些作標被設定為canvas 的空間座標單位。</p>
+<p>這個方法會返回<code>ImageData</code>物件，它代表著在這canvas區域之中pixel 的數據(data) 。從各角落的點代表著 (<code>left</code>,<code>top</code>), (<code>left+width</code>, <code>top</code>), (<code>left</code>, <code>top+height</code>), and (<code>left+width</code>, <code>top+height</code>)。這些作標被設定為canvas 的空間座標單位。</p>
 
 <div class="note">
 <p><strong>注釋</strong>: 在<code>ImageData</code> 物件中，任何超出canvas外的pixels皆會返回透明的黑色的形式。</p>
@@ -69,7 +69,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 
 <p>這個範例使用<a href="/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">getImageData() </a>方法去顯示在鼠標下的顏色。</p>
 
-<p>首先，需要一個正確的滑鼠點<code>layerX</code><em>​​​​​​​</em>和 <code>layerY</code>。在從<a href="/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">getImageData()</a> 提供pixel 陣列中(array)該點的pixel 數據(data) 。最後，使用陣列數據(array data)在<code>&lt;div&gt;</code>中設置背景色和文字去顯示該色。</p>
+<p>首先，需要一個正確的滑鼠點<code>layerX</code><em>​​​​​​​</em>和 <code>layerY</code>。在從<a href="/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">getImageData()</a> 提供pixel 陣列中(array)該點的pixel 數據(data) 。最後，使用陣列數據(array data)在<code>&lt;div&gt;</code>中設置背景色和文字去顯示該色。</p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" width="300" height="227" style="float:left"&gt;&lt;/canvas&gt;
@@ -108,7 +108,7 @@ canvas.addEventListener('mousemove', pick);
 <pre class="brush: js">ctx.putImageData(myImageData, dx, dy);
 </pre>
 
-<p><code>dx</code> 和 <code>dy</code>參數表示填入你所希望的座標，將它代入內容中左上角的pixel 數據(data)。</p>
+<p><code>dx</code> 和 <code>dy</code>參數表示填入你所希望的座標，將它代入內容中左上角的pixel 數據(data)。</p>
 
 <p>For example, to paint the entire image represented by <code>myImageData</code> to the top left corner of the context, you can simply do the following:</p>
 
@@ -189,8 +189,8 @@ function draw(img) {
 &lt;canvas id="zoom" width="300" height="227"&gt;&lt;/canvas&gt;
 &lt;div&gt;
 &lt;label for="smoothbtn"&gt;
-  &lt;input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn"&gt;
-  Enable image smoothing
+  &lt;input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn"&gt;
+  Enable image smoothing
 &lt;/label&gt;
 &lt;/div&gt;
 </pre>

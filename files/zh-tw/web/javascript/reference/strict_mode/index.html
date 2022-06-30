@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 ---
 <div>{{JsSidebar("More")}}</div>
 
-<p><a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 5</a> 提供開發者語法嚴格、語法受限的模式 (strict mode) ，會影響語法的使用但沒支援受限模式的瀏覽器一樣可以跑，只是行為有很大的可能會跟你想的不一樣。所以別太依賴受限模式，除非你做過功能性測試。另外這個模式可以混用在普通模式裡，你可以利用這個特性慢慢把舊的程式碼轉變成完全嚴謹和低變化性的狀態。</p>
+<p><a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 5</a> 提供開發者語法嚴格、語法受限的模式 (strict mode) ，會影響語法的使用但沒支援受限模式的瀏覽器一樣可以跑，只是行為有很大的可能會跟你想的不一樣。所以別太依賴受限模式，除非你做過功能性測試。另外這個模式可以混用在普通模式裡，你可以利用這個特性慢慢把舊的程式碼轉變成完全嚴謹和低變化性的狀態。</p>
 
 <p>這個模式裡做了些語意上的修正:</p>
 
@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Strict_mode
  <li>禁止使用一些有可能被未來版本 ECMAScript 定義的語法</li>
 </ol>
 
-<p>參考 <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode">過渡到嚴格模式</a>，如果你希望將你的程式碼在  JavaScript 語法嚴格、語法受限下執行。</p>
+<p>參考 <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode">過渡到嚴格模式</a>，如果你希望將你的程式碼在  JavaScript 語法嚴格、語法受限下執行。</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> Sometimes, you'll see the default, non-strict, mode referred to as "sloppy mode". This isn't an official term, but be aware of it, just in case.</p>
@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 
 <h2 id="用法">用法</h2>
 
-<p>嚴格模式可以用於整份腳本或個別函數中。不要在封閉的大括弧內 <code>{}</code> 這樣做； 這麼做在上下文中是沒有效果的。<code>eval</code> 程式、<code>Function</code>、事件處理參數、傳入  {{domxref("WindowTimers.setTimeout()")}} 函數的字串都是整個腳本，開啟嚴格模式他也會如預期般運作。</p>
+<p>嚴格模式可以用於整份腳本或個別函數中。不要在封閉的大括弧內 <code>{}</code> 這樣做； 這麼做在上下文中是沒有效果的。<code>eval</code> 程式、<code>Function</code>、事件處理參數、傳入  {{domxref("WindowTimers.setTimeout()")}} 函數的字串都是整個腳本，開啟嚴格模式他也會如預期般運作。</p>
 
 <h3 id="Strict_mode_for_scripts">Strict mode for scripts</h3>
 
@@ -114,7 +114,7 @@ var o = { p: 1, p: 2 }; // !!! syntax error
 }
 </pre>
 
-<p>Sixth, strict mode in ECMAScript 5 forbids octal syntax. Octal syntax isn't part of ECMAScript 5, but it's supported in all browsers by prefixing the octal number with a zero: <code>0644 === 420</code> and <code>"\045" === "%"</code>. In ECMAScript 2015 Octal number is supported by prefixing a number with "<code>0</code>o". i.e. </p>
+<p>Sixth, strict mode in ECMAScript 5 forbids octal syntax. Octal syntax isn't part of ECMAScript 5, but it's supported in all browsers by prefixing the octal number with a zero: <code>0644 === 420</code> and <code>"\045" === "%"</code>. In ECMAScript 2015 Octal number is supported by prefixing a number with "<code>0</code>o". i.e. </p>
 
 <pre class="brush: js">var a = 0o10; // ES2015: Octal</pre>
 
@@ -326,7 +326,7 @@ function baz() { // kosher
 
 <h2 id="Strict_mode_in_browsers">Strict mode in browsers</h2>
 
-<p>The major browsers now implement strict mode. However, don't blindly depend on it since there still are numerous <a href="http://caniuse.com/use-strict">Browser versions used in the wild that only have partial support for strict mode</a> or do not support it at all (e.g. Internet Explorer below version 10!). <em>Strict mode changes semantics.</em> Relying on those changes will cause mistakes and errors in browsers which don't implement strict mode. Exercise caution in using strict mode, and back up reliance on strict mode with feature tests that check whether relevant parts of strict mode are implemented. Finally, make sure to <em>test your code in browsers that do and don't support strict mode</em>. If you test only in browsers that don't support strict mode, you're very likely to have problems in browsers that do, and vice versa.</p>
+<p>The major browsers now implement strict mode. However, don't blindly depend on it since there still are numerous <a href="http://caniuse.com/use-strict">Browser versions used in the wild that only have partial support for strict mode</a> or do not support it at all (e.g. Internet Explorer below version 10!). <em>Strict mode changes semantics.</em> Relying on those changes will cause mistakes and errors in browsers which don't implement strict mode. Exercise caution in using strict mode, and back up reliance on strict mode with feature tests that check whether relevant parts of strict mode are implemented. Finally, make sure to <em>test your code in browsers that do and don't support strict mode</em>. If you test only in browsers that don't support strict mode, you're very likely to have problems in browsers that do, and vice versa.</p>
 
 <h2 id="See_also">See also</h2>
 

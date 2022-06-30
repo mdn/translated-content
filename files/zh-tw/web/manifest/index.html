@@ -7,7 +7,7 @@ translation_of: Web/Manifest
 
 <p>Web App manifest 是一個 JSON 格式的文件，它提供了應用程式相關的資訊（像是名稱、作者、圖示、描述）。 manifest 的功用是將 Web 應用程式安裝到設備的主畫面，為使用者提供更快速的訪問和更豐富的體驗。</p>
 
-<p>Web App manifests 是屬於 <a href="/en-US/docs/Web/Apps/Progressive">progressive web apps</a> 的 Web 技術系列的一部分， 這是一個能不透過 App 商店就能被安裝到設備主畫面的 Web 應用程式，伴隨著其他功能，比如離線使用和通知的接收發送。</p>
+<p>Web App manifests 是屬於 <a href="/en-US/docs/Web/Apps/Progressive">progressive web apps</a> 的 Web 技術系列的一部分， 這是一個能不透過 App 商店就能被安裝到設備主畫面的 Web 應用程式，伴隨著其他功能，比如離線使用和通知的接收發送。</p>
 
 <h2 id="部署_manifest">部署 manifest</h2>
 
@@ -79,7 +79,7 @@ translation_of: Web/Manifest
 
 <h3 id="dir"><code>dir</code></h3>
 
-<p>指定一個對於 <code>name</code>、<code>short_name、</code><code>description</code> 等成員的主要書寫方向。 包含 <code>lang</code> 成員，其能夠為右至左書寫的語言提供幫助。</p>
+<p>指定一個對於 <code>name</code>、<code>short_name、</code><code>description</code> 等成員的主要書寫方向。 包含 <code>lang</code> 成員，其能夠為右至左書寫的語言提供幫助。</p>
 
 <pre class="brush: json notranslate">"dir": "rtl",
 "lang": "ar",
@@ -90,16 +90,16 @@ translation_of: Web/Manifest
 <ul>
  <li><code>ltr</code>（左至右）</li>
  <li><code>rtl</code>（右至左）</li>
- <li><code>auto</code>（讓瀏覽器根據 Unicode 雙向演算法對書寫方向做出最佳的猜測）</li>
+ <li><code>auto</code>（讓瀏覽器根據 Unicode 雙向演算法對書寫方向做出最佳的猜測）</li>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: 當省略其值時，預設為 <code>auto</code>。</p>
+<p><strong>Note</strong>: 當省略其值時，預設為 <code>auto</code>。</p>
 </div>
 
 <h3 id="display"><code>display</code></h3>
 
-<p>定義開發者喜好的 Web 應用程式顯示模式。</p>
+<p>定義開發者喜好的 Web 應用程式顯示模式。</p>
 
 <pre class="brush: json notranslate">"display": "standalone"</pre>
 
@@ -131,14 +131,14 @@ translation_of: Web/Manifest
   </tr>
   <tr>
    <td><code>browser</code></td>
-   <td>預設值。 應用程式如常規般地被開啟於瀏覽器分頁或新視窗，依瀏覽器與平台而不同。</td>
+   <td>預設值。 應用程式如常規般地被開啟於瀏覽器分頁或新視窗，依瀏覽器與平台而不同。</td>
    <td>(None)</td>
   </tr>
  </tbody>
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: 您能根據顯示模式選擇性地將 CSS <a href="/docs/Web/CSS/@media/display-mode">display-mode</a> media 功能運用於您的應用程式，這可以提供一致的使用者體驗不管是由網址開啟網站或者由桌面圖示啟動。</p>
+<p><strong>Note</strong>: 您能根據顯示模式選擇性地將 CSS <a href="/docs/Web/CSS/@media/display-mode">display-mode</a> media 功能運用於您的應用程式，這可以提供一致的使用者體驗不管是由網址開啟網站或者由桌面圖示啟動。</p>
 </div>
 
 <h3 id="icons"><code>icons</code></h3>
@@ -177,11 +177,11 @@ translation_of: Web/Manifest
  <tbody>
   <tr>
    <td><code>sizes</code></td>
-   <td>以空白間隔各圖片尺吋的一個字串。 </td>
+   <td>以空白間隔各圖片尺吋的一個字串。 </td>
   </tr>
   <tr>
    <td><code>src</code></td>
-   <td>圖檔的路徑。 若 src 為相對路徑，則網址將以 manifest 的位置為基準。</td>
+   <td>圖檔的路徑。 若 src 為相對路徑，則網址將以 manifest 的位置為基準。</td>
   </tr>
   <tr>
    <td><code>type</code></td>
@@ -192,7 +192,7 @@ translation_of: Web/Manifest
 
 <h3 id="lang"><code>lang</code></h3>
 
-<p>指定一個對於 <code>name</code>、<code>short_name</code> 等成員的主要語言。 其值限單一種語言標籤的字串。</p>
+<p>指定一個對於 <code>name</code>、<code>short_name</code> 等成員的主要語言。 其值限單一種語言標籤的字串。</p>
 
 <pre class="brush: json notranslate">"lang": "en-US"</pre>
 
@@ -204,7 +204,7 @@ translation_of: Web/Manifest
 
 <h3 id="orientation"><code>orientation</code></h3>
 
-<p>定義預設的顯示方向，其將作用在 all the web application's top level {{Glossary("Browsing context", "browsing contexts")}}.</p>
+<p>定義預設的顯示方向，其將作用在 all the web application's top level {{Glossary("Browsing context", "browsing contexts")}}.</p>
 
 <pre class="brush: json notranslate">"orientation": "portrait-primary"</pre>
 
@@ -228,12 +228,12 @@ translation_of: Web/Manifest
 <pre class="brush: json notranslate">"prefer_related_applications": false</pre>
 
 <div class="note">
-<p><strong>Note</strong>: 當省略其值時，預設為 <code>false。</code></p>
+<p><strong>Note</strong>: 當省略其值時，預設為 <code>false。</code></p>
 </div>
 
 <h3 id="related_applications"><code>related_applications</code></h3>
 
-<p>指定一個包含「應用程式物件」的陣列，其物件用以表示一個能被底層平台安裝或訪問的原生應用程式 — 例如能由 Google Play 商店獲取的原生 Android 應用程式。 這是一個可選的替代方案，如同原生應用程式版的 Web 應用程式一般去提供相似或等同的功能。</p>
+<p>指定一個包含「應用程式物件」的陣列，其物件用以表示一個能被底層平台安裝或訪問的原生應用程式 — 例如能由 Google Play 商店獲取的原生 Android 應用程式。 這是一個可選的替代方案，如同原生應用程式版的 Web 應用程式一般去提供相似或等同的功能。</p>
 
 <pre class="brush: json notranslate">"related_applications": [
   {
@@ -272,7 +272,7 @@ translation_of: Web/Manifest
 
 <h3 id="scope"><code>scope</code></h3>
 
-<p>Defines the navigation scope of this web application's application context. This basically restricts what web pages can be viewed while the manifest is applied. If the user navigates the application outside the scope, it returns to being a normal web page.</p>
+<p>Defines the navigation scope of this web application's application context. This basically restricts what web pages can be viewed while the manifest is applied. If the user navigates the application outside the scope, it returns to being a normal web page.</p>
 
 <p>If the scope is a relative URL, the base URL will be the URL of the manifest.</p>
 
@@ -287,23 +287,23 @@ translation_of: Web/Manifest
 
 <h3 id="start_url"><code>start_url</code></h3>
 
-<p>指定一個當使用者由裝置上啟動應用程式時所開啟的網址。 若使用相對路徑，則網址將以 manifest 的位置為基準。</p>
+<p>指定一個當使用者由裝置上啟動應用程式時所開啟的網址。 若使用相對路徑，則網址將以 manifest 的位置為基準。</p>
 
 <pre class="brush: json notranslate">"start_url": "./?utm_source=web_app_manifest"</pre>
 
 <h3 id="theme_color"><code>theme_color</code></h3>
 
-<p>定義一個應用程式預設的主題顏色。 其值會被作業系統在某些時候運用來顯示應用程式（如： Android 的任務切換器 task switcher 就以主題顏色圍繞著應用程式）。  </p>
+<p>定義一個應用程式預設的主題顏色。 其值會被作業系統在某些時候運用來顯示應用程式（如： Android 的任務切換器 task switcher 就以主題顏色圍繞著應用程式）。  </p>
 
 <pre class="brush: json notranslate">"theme_color": "aliceblue"</pre>
 
 <h2 id="啟動畫面（Splash_screens）">啟動畫面（Splash screens）</h2>
 
-<p>在 Chrome 47 或較新版本，啟動畫面 splash screen 會被使用在當 Web 應用程式由主畫面開啟的時後。 這啟動畫面是依 Web App manifest 的屬性自動產生的，明確來說是由 <code>name</code>、<code>background_color</code> 、 <code>icons </code>陣列中較接近裝置的 128dpi 的圖示。</p>
+<p>在 Chrome 47 或較新版本，啟動畫面 splash screen 會被使用在當 Web 應用程式由主畫面開啟的時後。 這啟動畫面是依 Web App manifest 的屬性自動產生的，明確來說是由 <code>name</code>、<code>background_color</code> 、 <code>icons </code>陣列中較接近裝置的 128dpi 的圖示。</p>
 
 <h2 id="Mime_類型">Mime 類型</h2>
 
-<p>Manifests 應該被使用 <code>application/manifest+json</code> 的 MIME 類型。不過這是可選的。 </p>
+<p>Manifests 應該被使用 <code>application/manifest+json</code> 的 MIME 類型。不過這是可選的。 </p>
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 

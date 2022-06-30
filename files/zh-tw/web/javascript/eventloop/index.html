@@ -21,11 +21,11 @@ translation_of: Web/JavaScript/EventLoop
 
 <h3 id="堆疊（Stack）">堆疊（Stack）</h3>
 
-<p>呼叫函式（Function）會形成一個 <em>frame</em> 的堆疊。</p>
+<p>呼叫函式（Function）會形成一個 <em>frame</em> 的堆疊。</p>
 
 <pre class="brush: js">function foo(b) {
-  var a = 10;
-  return a + b + 11;
+  var a = 10;
+  return a + b + 11;
 }
 
 function bar(x) {
@@ -36,7 +36,7 @@ function bar(x) {
 console.log(bar(7));
 </pre>
 
-<p>當呼叫 <code>bar</code> 時，會產生一個含有 <code>bar</code> 的參數及區域變數的 frame，而在 <code>bar</code> 呼叫了 <code>foo</code> 時，含有 <code>foo</code> 參數及變數的第二個 frame 就會被置於堆疊的最上面。當 <code>foo</code> 回傳後，最上面的 frame 會被抽離堆疊（僅留下 <code>bar</code> 的呼叫 frame）。然後當 bar 返回之後，堆疊就會清空。</p>
+<p>當呼叫 <code>bar</code> 時，會產生一個含有 <code>bar</code> 的參數及區域變數的 frame，而在 <code>bar</code> 呼叫了 <code>foo</code> 時，含有 <code>foo</code> 參數及變數的第二個 frame 就會被置於堆疊的最上面。當 <code>foo</code> 回傳後，最上面的 frame 會被抽離堆疊（僅留下 <code>bar</code> 的呼叫 frame）。然後當 bar 返回之後，堆疊就會清空。</p>
 
 <h3 id="堆積（Heap）">堆積（Heap）</h3>
 
@@ -44,7 +44,7 @@ console.log(bar(7));
 
 <h3 id="佇列（Queue）">佇列（Queue）</h3>
 
-<p>JavaScript 執行環境包含一個訊息佇列，裡面是待處理的訊息，其中每個訊息都與一個 function 相關聯。當堆疊中有足夠空間時，會從訊息佇列拿取一個訊息進行處理，處理過程包含了呼叫相關聯的 function。只有當堆疊清空時，該訊息才算是完成處理。 </p>
+<p>JavaScript 執行環境包含一個訊息佇列，裡面是待處理的訊息，其中每個訊息都與一個 function 相關聯。當堆疊中有足夠空間時，會從訊息佇列拿取一個訊息進行處理，處理過程包含了呼叫相關聯的 function。只有當堆疊清空時，該訊息才算是完成處理。 </p>
 
 <h2 id="事件循環（Event_loop）">事件循環（Event loop）</h2>
 

@@ -11,13 +11,13 @@ translation_of: Web/API/Fullscreen_API
 
 <h2 id="Specification">啟動全螢幕模式</h2>
 
-<p>如果您有一個元素打算以全螢幕模式展示（例如 {{ HTMLElement("video") }}），您可以呼叫該元素之 {{ domxref("Element.requestFullscreen()") }} 方法使之以全螢幕模式顯示。</p>
+<p>如果您有一個元素打算以全螢幕模式展示（例如 {{ HTMLElement("video") }}），您可以呼叫該元素之 {{ domxref("Element.requestFullscreen()") }} 方法使之以全螢幕模式顯示。</p>
 
 <p>考慮此 {{ HTMLElement("video") }} 元素：</p>
 
 <pre class="brush: html">&lt;video controls id="myvideo"&gt;
-  &lt;source src="somevideo.webm"&gt;&lt;/source&gt;
-  &lt;source src="somevideo.mp4"&gt;&lt;/source&gt;
+  &lt;source src="somevideo.webm"&gt;&lt;/source&gt;
+  &lt;source src="somevideo.mp4"&gt;&lt;/source&gt;
 &lt;/video&gt;
 </pre>
 
@@ -27,11 +27,11 @@ translation_of: Web/API/Fullscreen_API
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 } else if (elem.msRequestFullscreen) {
-  elem.msRequestFullscreen();
+  elem.msRequestFullscreen();
 } else if (elem.mozRequestFullScreen) {
-  elem.mozRequestFullScreen();
+  elem.mozRequestFullScreen();
 } else if (elem.webkitRequestFullscreen) {
-  elem.webkitRequestFullscreen();
+  elem.webkitRequestFullscreen();
 }
 </pre>
 
@@ -40,8 +40,8 @@ if (elem.requestFullscreen) {
 <p>值得留意的是，Gecko 及 WebKit 的實作有關鍵分別：Gecko 會增加 CSS 規則讓全螢幕的元素展延至填滿整個螢幕："<code>width: 100%; height: 100%</code>"。WebKit 則不會執行此動作，取而代之的是把該元素置中，並以原先的大小顯示。要取得同樣的全螢幕行為，您需要為該元素自行添加 "<code>width: 100%; height: 100%;</code>" 的 CSS 規則：</p>
 
 <pre class="brush: css">#myvideo:-webkit-full-screen {
-  width: 100%;
-  height: 100%;
+  width: 100%;
+  height: 100%;
 }
 </pre>
 
@@ -49,7 +49,7 @@ if (elem.requestFullscreen) {
 
 <h3 id="通知">通知</h3>
 
-<p>如果成功進入全螢幕模式，包含該元素的文件將會接收到 {{ event("fullscreenchange") }} 事件。當離開全螢幕模式時，則會收到 {{ event("fullscreenchange") }} 事件。注意 {{ event("fullscreenchange") }} 事件並不提供任何資訊指示進入或離開全螢幕模式，但如果文件的 {{ domxref("document.fullscreenElement", "fullscreenElement") }} 屬性的值不為 null，則表示您正在處於全螢幕模式。</p>
+<p>如果成功進入全螢幕模式，包含該元素的文件將會接收到 {{ event("fullscreenchange") }} 事件。當離開全螢幕模式時，則會收到 {{ event("fullscreenchange") }} 事件。注意 {{ event("fullscreenchange") }} 事件並不提供任何資訊指示進入或離開全螢幕模式，但如果文件的 {{ domxref("document.fullscreenElement", "fullscreenElement") }} 屬性的值不為 null，則表示您正在處於全螢幕模式。</p>
 
 <h3 id="全螢幕要求失敗">全螢幕要求失敗</h3>
 
@@ -61,7 +61,7 @@ if (elem.requestFullscreen) {
 
 <h2 id="離開全螢幕模式">離開全螢幕模式</h2>
 
-<p>使用者永遠可以自行離開全螢幕模式，詳見 <a href="#things_your_users_want_to_know">Things your users want to know</a>。您也可以呼叫 {{domxref("Document.exitFullscreen()")}} 方法來達到相同效果。</p>
+<p>使用者永遠可以自行離開全螢幕模式，詳見 <a href="#things_your_users_want_to_know">Things your users want to know</a>。您也可以呼叫 {{domxref("Document.exitFullscreen()")}} 方法來達到相同效果。</p>
 
 <h2 id="其他資訊">其他資訊</h2>
 
@@ -69,7 +69,7 @@ if (elem.requestFullscreen) {
 
 <dl>
  <dt>{{ domxref("document.fullscreenElement", "fullscreenElement") }}</dt>
- <dd><code>fullscreenElement</code> 屬性傳回正在顯示為全螢幕模式的 {{ domxref("element") }}。如其為非 null 值，表示文件目前在全螢幕模式。如其為 null，表示文件目前不在全螢幕模式。</dd>
+ <dd><code>fullscreenElement</code> 屬性傳回正在顯示為全螢幕模式的 {{ domxref("element") }}。如其為非 null 值，表示文件目前在全螢幕模式。如其為 null，表示文件目前不在全螢幕模式。</dd>
  <dt>{{ domxref("document.fullscreenEnabled", "fullscreenEnabled") }}</dt>
  <dd><code>fullscreenEnabled</code> 屬性傳回文件是否容許您要求進入全螢幕訊息。</dd>
 </dl>
@@ -91,9 +91,9 @@ if (elem.requestFullscreen) {
 <p>When the page is loaded, this code is run to set up an event listener to watch for the 'enter' key.</p>
 
 <pre class="brush: js">document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
-    toggleFullScreen();
-  }
+  if (e.keyCode == 13) {
+    toggleFullScreen();
+  }
 }, false);
 </pre>
 
@@ -102,28 +102,28 @@ if (elem.requestFullscreen) {
 <p>This code is called when the user hits the Enter key, as seen above.</p>
 
 <pre class="brush: js">function toggleFullScreen() {
-  if (!document.fullscreenElement &amp;&amp;    // alternative standard method
-      !document.mozFullScreenElement &amp;&amp; !document.webkitFullscreenElement &amp;&amp; !document.msFullscreenElement ) {  // current working methods
-    if (document.documentElement.requestFullscreen) {
-      document.documentElement.requestFullscreen();
+  if (!document.fullscreenElement &amp;&amp;    // alternative standard method
+      !document.mozFullScreenElement &amp;&amp; !document.webkitFullscreenElement &amp;&amp; !document.msFullscreenElement ) {  // current working methods
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
     } else if (document.documentElement.msRequestFullscreen) {
-      document.documentElement.msRequestFullscreen();
+      document.documentElement.msRequestFullscreen();
     } else if (document.documentElement.mozRequestFullScreen) {
-      document.documentElement.mozRequestFullScreen();
+      document.documentElement.mozRequestFullScreen();
     } else if (document.documentElement.webkitRequestFullscreen) {
-      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
     }
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
     } else if (document.msExitFullscreen) {
-      document.msExitFullscreen();
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen();
-    }
-  }
+      document.msExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
 }
 </pre>
 

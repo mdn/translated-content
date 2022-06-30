@@ -11,10 +11,10 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 
 <p><strong>媒體類別(多用途網際網路郵件擴展</strong>或是<strong>MIME類別</strong>)是一種表示文件、檔案或各式位元組的標準。它被定義並規範在IETF的 {{RFC(6838)}}<strong>。</strong></p>
 
-<p><a href="https://www.iana.org/">國際網路號碼分配局(IANA)</a> 負責所有官方的MIME類別，你可以從他們的 <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">Media Types</a> 頁面找到最新且完整的類別清單。</p>
+<p><a href="https://www.iana.org/">國際網路號碼分配局(IANA)</a> 負責所有官方的MIME類別，你可以從他們的 <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">Media Types</a> 頁面找到最新且完整的類別清單。</p>
 
 <div class="warning">
-<p><strong>重要:</strong> 瀏覽器會採用MIME類別， <em>而非副檔名</em> ，來判定如何對URL進行處理。所以伺服器要在回應的{{HTTPHeader("Content-Type")}}裡放入正確的MIME類別，否則瀏覽器很有可能轉譯錯誤或是無法正常運作，造成下載的檔案無法被正常處理。</p>
+<p><strong>重要:</strong> 瀏覽器會採用MIME類別， <em>而非副檔名</em> ，來判定如何對URL進行處理。所以伺服器要在回應的{{HTTPHeader("Content-Type")}}裡放入正確的MIME類別，否則瀏覽器很有可能轉譯錯誤或是無法正常運作，造成下載的檔案無法被正常處理。</p>
 </div>
 
 <h2 id="MIME類別的結構">MIME類別的結構</h2>
@@ -23,7 +23,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 
 <pre class="syntaxbox notranslate"><var>type</var>/<var>subtype</var></pre>
 
-<p><em><strong>主類別(<var>type)</var></strong></em>代表廣泛性的分類，譬如<code>video </code>或 <code>text</code>。<strong><em>子類別</em></strong>(<strong><var>subtype)</var></strong> 則定義該資料精確的MIME類別。例如MIME 類別為<code>text</code>, 子類可能會是 <code>plain</code> (純文字), <code>html</code> ({{Glossary("HTML")}} 源碼), 或<code>calendar</code> (iCalendar/<code>.ics</code>) 檔案。</p>
+<p><em><strong>主類別(<var>type)</var></strong></em>代表廣泛性的分類，譬如<code>video </code>或 <code>text</code>。<strong><em>子類別</em></strong>(<strong><var>subtype)</var></strong> 則定義該資料精確的MIME類別。例如MIME 類別為<code>text</code>, 子類可能會是 <code>plain</code> (純文字), <code>html</code> ({{Glossary("HTML")}} 源碼), 或<code>calendar</code> (iCalendar/<code>.ics</code>) 檔案。</p>
 
 <p>每一種主類別都可能有一組自己的子類別，MIME類別永遠都有主類別和子類別，從來不會只有單一個。</p>
 
@@ -31,7 +31,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 
 <pre class="syntaxbox notranslate"><var>type</var>/<var>subtype</var>;<var>parameter</var>=<var>value</var></pre>
 
-<p>例如一個MIME類別的主類是 <code>text</code>, 選擇性的 <code>charset</code> 參數可以用來指明資料種所使用的字元集。如果沒有指明<code>charset</code> ，預設使用 {{Glossary("ASCII")}} (<code>US-ASCII</code>) ，除非被{{Glossary("user agent", "user agent's")}} 的設定覆蓋過去。 要指明一個UTF-8 的文字檔，可以使用 <code>text/plain;charset=UTF-8</code> 的MIME類別。</p>
+<p>例如一個MIME類別的主類是 <code>text</code>, 選擇性的 <code>charset</code> 參數可以用來指明資料種所使用的字元集。如果沒有指明<code>charset</code> ，預設使用 {{Glossary("ASCII")}} (<code>US-ASCII</code>) ，除非被{{Glossary("user agent", "user agent's")}} 的設定覆蓋過去。 要指明一個UTF-8 的文字檔，可以使用 <code>text/plain;charset=UTF-8</code> 的MIME類別。</p>
 
 <p>MIME 類別對大小寫不敏感，但通常都會使用小寫。</p>
 
@@ -68,7 +68,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 
 <p><strong>Multipart</strong> types indicate a category of document broken into pieces, often with different MIME types; they can also be used — especially in email scenarios — to represent multiple, separate files which are all part of the same transaction. They represent a <strong>composite document</strong>.</p>
 
-<p>With the exception of <code>multipart/form-data</code>, used in the {{HTTPMethod("POST")}} method of <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a>, and <code>multipart/byteranges</code>, used with {{HTTPStatus("206")}} <code>Partial Content</code> to send part of a document, HTTP doesn't handle multipart documents in a special way: the message is transmitted to the browser (which will likely show a "Save As" window if it doesn't know how to display the document).</p>
+<p>With the exception of <code>multipart/form-data</code>, used in the {{HTTPMethod("POST")}} method of <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a>, and <code>multipart/byteranges</code>, used with {{HTTPStatus("206")}} <code>Partial Content</code> to send part of a document, HTTP doesn't handle multipart documents in a special way: the message is transmitted to the browser (which will likely show a "Save As" window if it doesn't know how to display the document).</p>
 
 <p>There are two multipart types:</p>
 
@@ -90,12 +90,12 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 <p>文字檔案的預設類別。就算是未知的文字檔案，瀏覽器都先假設他們是可以被呈現於畫面的。</p>
 
 <div class="blockIndicator note">
-<p>注意 <code>text/plain</code> 不代表"任何一種文字檔案"。例如從用於表示CSS檔案的{{HTMLElement("link")}}元素載了一個 <code>text/plain</code> 檔案，瀏覽器不會識別該檔案為一個有效的CSS檔案。CSS的MIME類別必須要使用 <code>text/css</code>。</p>
+<p>注意 <code>text/plain</code> 不代表"任何一種文字檔案"。例如從用於表示CSS檔案的{{HTMLElement("link")}}元素載了一個 <code>text/plain</code> 檔案，瀏覽器不會識別該檔案為一個有效的CSS檔案。CSS的MIME類別必須要使用 <code>text/css</code>。</p>
 </div>
 
 <h3 id="textcss">text/css</h3>
 
-<p>用來套用在網頁的 CSS 檔案<strong>一定要</strong>配合 <code>text/css</code> 做傳輸。如果伺服器沒有將副檔名 <code>.css</code> 視為 CSS 檔案，伺服器有可能會使用 <code>text/plain</code> 或是 <code>application/octet-stream</code> 的 MIME 型態來傳輸檔案，而導致這些檔案不被大多數的瀏覽器當成 CSS 而被忽略。</p>
+<p>用來套用在網頁的 CSS 檔案<strong>一定要</strong>配合 <code>text/css</code> 做傳輸。如果伺服器沒有將副檔名 <code>.css</code> 視為 CSS 檔案，伺服器有可能會使用 <code>text/plain</code> 或是 <code>application/octet-stream</code> 的 MIME 型態來傳輸檔案，而導致這些檔案不被大多數的瀏覽器當成 CSS 而被忽略。</p>
 
 <h3 id="texthtml">text/html</h3>
 
@@ -114,20 +114,20 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 <ul>
  <li><code>application/javascript</code></li>
  <li><code>application/ecmascript</code></li>
- <li><code>application/x-ecmascript</code> {{Non-standard_Inline}}</li>
- <li><code>application/x-javascript</code> {{Non-standard_Inline}}</li>
+ <li><code>application/x-ecmascript</code> {{Non-standard_Inline}}</li>
+ <li><code>application/x-javascript</code> {{Non-standard_Inline}}</li>
  <li><code>text/javascript</code></li>
  <li><code>text/ecmascript</code></li>
- <li><code>text/javascript1.0</code> {{Non-standard_Inline}}</li>
- <li><code>text/javascript1.1</code> {{Non-standard_Inline}}</li>
- <li><code>text/javascript1.2</code> {{Non-standard_Inline}}</li>
- <li><code>text/javascript1.3</code> {{Non-standard_Inline}}</li>
- <li><code>text/javascript1.4</code> {{Non-standard_Inline}}</li>
- <li><code>text/javascript1.5</code> {{Non-standard_Inline}}</li>
- <li><code>text/jscript</code> {{Non-standard_Inline}}</li>
- <li><code>text/livescript</code> {{Non-standard_Inline}}</li>
- <li><code>text/x-ecmascript</code> {{Non-standard_Inline}}</li>
- <li><code>text/x-javascript</code> {{Non-standard_Inline}}</li>
+ <li><code>text/javascript1.0</code> {{Non-standard_Inline}}</li>
+ <li><code>text/javascript1.1</code> {{Non-standard_Inline}}</li>
+ <li><code>text/javascript1.2</code> {{Non-standard_Inline}}</li>
+ <li><code>text/javascript1.3</code> {{Non-standard_Inline}}</li>
+ <li><code>text/javascript1.4</code> {{Non-standard_Inline}}</li>
+ <li><code>text/javascript1.5</code> {{Non-standard_Inline}}</li>
+ <li><code>text/jscript</code> {{Non-standard_Inline}}</li>
+ <li><code>text/livescript</code> {{Non-standard_Inline}}</li>
+ <li><code>text/x-ecmascript</code> {{Non-standard_Inline}}</li>
+ <li><code>text/x-javascript</code> {{Non-standard_Inline}}</li>
 </ul>
 
 <div class="blockIndicator note">

@@ -43,7 +43,7 @@ translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 </div>
 
 <ol style="font-family: Microsoft jhenghei;">
- <li>首先，進入您測試網頁的資料夾中，並建立一個名為 <code>main.js</code> 的檔案，再將她存放於 <code>scripts</code> 資料夾內。</li>
+ <li>首先，進入您測試網頁的資料夾中，並建立一個名為 <code>main.js</code> 的檔案，再將她存放於 <code>scripts</code> 資料夾內。</li>
  <li>接著，開啟 <code>index.html</code> 檔案，並在 <code>&lt;/body&gt;</code> 這個結束標籤之前的位置，使用一行新的空間來輸入以下的元素：
   <pre class="brush: html">&lt;script src="scripts/main.js"&gt;&lt;/script&gt;</pre>
  </li>
@@ -135,7 +135,7 @@ myVariable = 'Steve';</pre>
   </tr>
   <tr>
    <th scope="row">{{Glossary("Boolean")}}</th>
-   <td>布林值，一個  True（真）/False（假）數值。<code>true</code>/<code>false</code> 是 JavaScript 內的特殊關鍵字，不需要用引號將她框住。</td>
+   <td>布林值，一個  True（真）/False（假）數值。<code>true</code>/<code>false</code> 是 JavaScript 內的特殊關鍵字，不需要用引號將她框住。</td>
    <td><code>let myVariable = true;</code></td>
   </tr>
   <tr>
@@ -209,14 +209,14 @@ Everything in between is a comment.
   </tr>
   <tr>
    <th scope="row">等價運算子</th>
-   <td>測試兩個數值是否相等，並且回傳一個 <code>true</code>/<code>false</code> 的結果。</td>
+   <td>測試兩個數值是否相等，並且回傳一個 <code>true</code>/<code>false</code> 的結果。</td>
    <td><code>===</code></td>
    <td><code>var myVariable = 3;<br>
     myVariable === 4;</code></td>
   </tr>
   <tr>
    <th scope="row">否定、不相等</th>
-   <td>通常會跟相等運算子搭配使用，否定運算子在 JavaScript 中代表邏輯非（NOT）—她可以將 <code>true </code>轉換為 <code>false</code> ……等。</td>
+   <td>通常會跟相等運算子搭配使用，否定運算子在 JavaScript 中代表邏輯非（NOT）—她可以將 <code>true </code>轉換為 <code>false</code> ……等。</td>
    <td><code>!</code>, <code>!==</code></td>
    <td>
     <p>第一個敘述句回傳的是 <code>true</code>，但我們使否定運算子，使得對照組的敘述句回傳了 <code>false</code>：</p>
@@ -236,12 +236,12 @@ Everything in between is a comment.
 <p>其實還有更多的運算子等的您去探索，但我們將在這裡先打住。您可以參照這篇<a href="/zh-TW/docs/Web/JavaScript/Reference/Operators">運算式與運算子</a>以取得完整的列表。</p>
 
 <div class="note">
-<p><strong>備註</strong>：混合使用多種資料型態的話，可能會在計算時產生一些奇怪的結果，所以您要謹慎地為變數選用正確的資料類型。舉個例子：在主控台中輸入  <code>"35" + "25"</code>。為什麼您沒有得到您所想要的結果？因為使用引號框住數字會將她轉換成字串，所以您其實是將兩個字串給連接起來，而不是將她們給相加。如果您輸入的是 <code>35 + 25</code>，您將會得到正確的結果。</p>
+<p><strong>備註</strong>：混合使用多種資料型態的話，可能會在計算時產生一些奇怪的結果，所以您要謹慎地為變數選用正確的資料類型。舉個例子：在主控台中輸入  <code>"35" + "25"</code>。為什麼您沒有得到您所想要的結果？因為使用引號框住數字會將她轉換成字串，所以您其實是將兩個字串給連接起來，而不是將她們給相加。如果您輸入的是 <code>35 + 25</code>，您將會得到正確的結果。</p>
 </div>
 
 <h3 id="條件（Conditionals）">條件（Conditionals）</h3>
 
-<p>條件是種程式碼結構，可以讓您測試某個陳述式會不會回傳真值，並根據不同的結果執行不同程式碼。最常見的形式是 <code>if ... else</code> 。以下是一個範例：</p>
+<p>條件是種程式碼結構，可以讓您測試某個陳述式會不會回傳真值，並根據不同的結果執行不同程式碼。最常見的形式是 <code>if ... else</code> 。以下是一個範例：</p>
 
 <pre class="brush: js">let iceCream = 'chocolate';
 if (iceCream === 'chocolate') {
@@ -250,7 +250,7 @@ if (iceCream === 'chocolate') {
   alert('Awwww, but chocolate is my favorite...');
 }</pre>
 
-<p>在 <code>if ( ... )</code> 裡面的陳述式就是一個測試—這將會使用到等價運算子（如先前所描述的）來比較變數 <code>iceCream</code> 和字串 <code>chocolate</code> 兩者是否相等，如果在比較之後回傳了 <code>true</code>，接著就執行第一個區塊內的程式碼。如果不是，就略過第一個區塊的程式碼並轉而執行寫在執行在 <code>else 之後、</code>第二個區塊內的程式碼。</p>
+<p>在 <code>if ( ... )</code> 裡面的陳述式就是一個測試—這將會使用到等價運算子（如先前所描述的）來比較變數 <code>iceCream</code> 和字串 <code>chocolate</code> 兩者是否相等，如果在比較之後回傳了 <code>true</code>，接著就執行第一個區塊內的程式碼。如果不是，就略過第一個區塊的程式碼並轉而執行寫在執行在 <code>else 之後、</code>第二個區塊內的程式碼。</p>
 
 <h3 id="函式（Functions）">函式（Functions）</h3>
 
@@ -290,7 +290,7 @@ multiply(0.5,3);</pre>
 
 <h3 id="事件（Events）">事件（Events）</h3>
 
-<p>如果要在網頁上創造真正的互動功能，您將會需要事件（Events） — 這是一種可以監聽瀏覽器發生了什麼事情的程式碼結構，接著她會允許您執行其他程式碼以回應這些事件。最明顯的事件就是 <a href="/zh-TW/docs/Web/Events/click">click event</a> 了，當瀏覽器裡的某個東西被滑鼠點選時，這個事件就會被觸發。如果要測試一下這個事件，請您把底下的程式碼輸入到主控台內，接著用滑鼠點選目前的網頁：</p>
+<p>如果要在網頁上創造真正的互動功能，您將會需要事件（Events） — 這是一種可以監聽瀏覽器發生了什麼事情的程式碼結構，接著她會允許您執行其他程式碼以回應這些事件。最明顯的事件就是 <a href="/zh-TW/docs/Web/Events/click">click event</a> 了，當瀏覽器裡的某個東西被滑鼠點選時，這個事件就會被觸發。如果要測試一下這個事件，請您把底下的程式碼輸入到主控台內，接著用滑鼠點選目前的網頁：</p>
 
 <pre class="brush: js">document.querySelector('html').onclick = function() {
     alert('Ouch! Stop poking me!');
@@ -320,7 +320,7 @@ myHTML.onclick = function() {};</pre>
 <ol>
  <li>首先，先去找張您可以為您的網頁增添光彩的圖片。請盡量找一張尺寸跟第一張圖相同的圖片、或至少是張相似尺寸的圖片。</li>
  <li>將圖片存放到 <code>images</code> 資料夾內。</li>
- <li>編輯您的 <code>main.js</code> 檔案，並且將以下的 JavaScript 輸入到檔案內（如果您還有看見那段 hello world 的 JavaScript，請把她們給刪除）：
+ <li>編輯您的 <code>main.js</code> 檔案，並且將以下的 JavaScript 輸入到檔案內（如果您還有看見那段 hello world 的 JavaScript，請把她們給刪除）：
   <pre class="brush: js">var myImage = document.querySelector('img');
 
 myImage.onclick = function() {
@@ -332,17 +332,17 @@ myImage.onclick = function() {
     }
 }</pre>
  </li>
- <li>請將全部檔案儲存，並用瀏覽器開啟 <code>index.html</code>。現在請您點選圖片，她應該會切換成另外一張！</li>
+ <li>請將全部檔案儲存，並用瀏覽器開啟 <code>index.html</code>。現在請您點選圖片，她應該會切換成另外一張！</li>
 </ol>
 
 <p>在這裡，我們把一個圖片元素的參考存進了 <code>myImage</code> 變數裡。接著，我們把這個變數的 <code>onclick</code> 事件處理器設定為一個匿名函式。現在，每當這個圖片被點選一次：</p>
 
 <ol>
  <li>我們會去取得圖片中 <code>src</code> 屬性的數值</li>
- <li>我們用一個條件判斷式，來檢查 <code>src</code> 的數值是否跟原始圖片的位址相同：
+ <li>我們用一個條件判斷式，來檢查 <code>src</code> 的數值是否跟原始圖片的位址相同：
   <ol>
-   <li>如果兩者相同，那我們就把 <code>src</code> 的數值更改為第二個圖片的位址，也就是在  {{htmlelement("image")}} 元素裡強迫讀取另外一張圖片。</li>
-   <li>如果兩者不同（也就是圖片已經被切換過了），我們就把 <code>src</code> 的數值更改為原始圖片的位址，圖片就會被切換回原來那張。</li>
+   <li>如果兩者相同，那我們就把 <code>src</code> 的數值更改為第二個圖片的位址，也就是在  {{htmlelement("image")}} 元素裡強迫讀取另外一張圖片。</li>
+   <li>如果兩者不同（也就是圖片已經被切換過了），我們就把 <code>src</code> 的數值更改為原始圖片的位址，圖片就會被切換回原來那張。</li>
   </ol>
  </li>
 </ol>
@@ -352,11 +352,11 @@ myImage.onclick = function() {
 <p>接著我們再來添加一些程式碼，在使用者瀏覽這個網頁的時候，將網頁標題改為客製化的歡迎訊息。這個歡迎訊息會一直保留著，直到使用者離開這個網頁為止。我們也會添加個切換使用者的選項，並且一併更改歡迎訊息。</p>
 
 <ol>
- <li>編輯 <code>index.html</code> 檔案，並將下列程式碼置於 {{htmlelement("script")}} 元素之前：
+ <li>編輯 <code>index.html</code> 檔案，並將下列程式碼置於 {{htmlelement("script")}} 元素之前：
 
   <pre class="brush: html">&lt;button&gt;Change user&lt;/button&gt;</pre>
  </li>
- <li>編輯 <code>main.js</code> 檔案，並將下列程式碼一字不漏地置於檔案的最末端 — 這些程式碼將會取得新按鈕、標題的參考，並把它們存在變數裡：
+ <li>編輯 <code>main.js</code> 檔案，並將下列程式碼一字不漏地置於檔案的最末端 — 這些程式碼將會取得新按鈕、標題的參考，並把它們存在變數裡：
   <pre class="brush: js">var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');</pre>
  </li>
@@ -366,7 +366,7 @@ var myHeading = document.querySelector('h1');</pre>
   localStorage.setItem('name', myName);
   myHeading.innerHTML = 'Mozilla is cool, ' + myName;
 }</pre>
-  這個函式包含了一個會產生一個對話視窗的 <a href="/zh-TW/docs/Web/API/Window.prompt"><code>prompt()</code></a> 函式，有點像 <code>alert()</code>，只是 <code>prompt()</code> 會要求使用者輸入一些資料，並在使用者點選<code>確認</code>之後，將內容儲存在一個變數裡面。接著，我們呼叫一個名稱為 <code>localStorage</code> 的 API，這個 API 可以讓使用者先將一些資料儲存在瀏覽器裡面，之後有需要的話再取出來使用。我們使用 localStorage 的 <code>setItem()</code> 函式來建立並且把資料儲存到一個名稱為 <code>'name'</code> 的變數裡，再把包含者用者名字的 <code>myName</code> 的值指定給她。最後，我們將一個字串跟使用者的名字指定給標題的 <code>innerHTML</code> 特性：</li>
+  這個函式包含了一個會產生一個對話視窗的 <a href="/zh-TW/docs/Web/API/Window.prompt"><code>prompt()</code></a> 函式，有點像 <code>alert()</code>，只是 <code>prompt()</code> 會要求使用者輸入一些資料，並在使用者點選<code>確認</code>之後，將內容儲存在一個變數裡面。接著，我們呼叫一個名稱為 <code>localStorage</code> 的 API，這個 API 可以讓使用者先將一些資料儲存在瀏覽器裡面，之後有需要的話再取出來使用。我們使用 localStorage 的 <code>setItem()</code> 函式來建立並且把資料儲存到一個名稱為 <code>'name'</code> 的變數裡，再把包含者用者名字的 <code>myName</code> 的值指定給她。最後，我們將一個字串跟使用者的名字指定給標題的 <code>innerHTML</code> 特性：</li>
  <li>接著，加入這個 <code>if ... else</code> 區塊 — 因為她會在程式一開始被讀取的時候就被啟用，我們稱她為初始化程式碼：
   <pre class="brush: js">if(!localStorage.getItem('name')) {
   setUserName();
@@ -374,20 +374,20 @@ var myHeading = document.querySelector('h1');</pre>
   let storedName = localStorage.getItem('name');
   myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
 }</pre>
-  這個區塊一開始使用了邏輯負運算子（邏輯非）來檢查 <code>name</code> 這個物件是否存在。如果沒有，那就執行 <code>setUserName()</code> 這個函式並且創造她。如果有了（例如：使用者已經在上一次造訪網頁時就設定過了），我們就使用 <code>getItem()</code> 函式來取得儲存的名字，並且將標題的 <code>innerHTML</code> 特性設定為一個字串加上使用者的名字，也就是我們在 <code>setUserName()</code> 函式裡做的事情。</li>
+  這個區塊一開始使用了邏輯負運算子（邏輯非）來檢查 <code>name</code> 這個物件是否存在。如果沒有，那就執行 <code>setUserName()</code> 這個函式並且創造她。如果有了（例如：使用者已經在上一次造訪網頁時就設定過了），我們就使用 <code>getItem()</code> 函式來取得儲存的名字，並且將標題的 <code>innerHTML</code> 特性設定為一個字串加上使用者的名字，也就是我們在 <code>setUserName()</code> 函式裡做的事情。</li>
  <li>最後，把以下的 <code>onclick</code> 事件處理器跟按鈕綁定，如此一來，每次點選按鈕時就會執行 <code>setUserName()</code>。這將允許使用者透過點選那個按鈕來重新設定一個新的名字：
   <pre class="brush: js">myButton.onclick = function() {
-  setUserName();
+  setUserName();
 }
 </pre>
  </li>
 </ol>
 
-<p>現在當您造訪這個網頁時，她會詢問您的名字，並且給您一個客製化過的歡迎訊息。在這之後，您也可以隨時透過點選那個按鈕來更改名字。順帶一提，因為這組客製化過的訊息是存在 localStorage 裡的，所以即使您將網頁關起來，她還是會保留著，所以當您下次開啟這個網頁時，這段客製化的訊息依然會出現！</p>
+<p>現在當您造訪這個網頁時，她會詢問您的名字，並且給您一個客製化過的歡迎訊息。在這之後，您也可以隨時透過點選那個按鈕來更改名字。順帶一提，因為這組客製化過的訊息是存在 localStorage 裡的，所以即使您將網頁關起來，她還是會保留著，所以當您下次開啟這個網頁時，這段客製化的訊息依然會出現！</p>
 
 <h3 id="用戶名稱是否為null">用戶名稱是否為null</h3>
 
-<p>當您運行範例並出現提示您輸入用戶名稱的對話框時，請嘗試按下<em>取消 </em>鈕。您會看到一個標題顯示著"Mozilla is cool, null"。這是因為當您取消提示時，該值將會被設為null。null在Javascript中的一個特殊值，基本上用來表示沒有任何值。</p>
+<p>當您運行範例並出現提示您輸入用戶名稱的對話框時，請嘗試按下<em>取消 </em>鈕。您會看到一個標題顯示著"Mozilla is cool, null"。這是因為當您取消提示時，該值將會被設為null。null在Javascript中的一個特殊值，基本上用來表示沒有任何值。</p>
 
 <p>再試試按下OK，但不輸入任何名字。您將會看到"Mozilla is cool,"，該結果的原因非常簡單的可以理解。</p>
 

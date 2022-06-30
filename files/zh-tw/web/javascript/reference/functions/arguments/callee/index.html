@@ -65,7 +65,7 @@ sillyFunction();</pre>
 <ul>
  <li>the function can be called like any other from inside your code</li>
  <li>it does not create a variable in the outer scope (<a href="http://kangax.github.io/nfe/#example_1_function_expression_identifier_leaks_into_an_enclosing_scope">except for IE 8 and below</a>)</li>
- <li>it has better performance than accessing the arguments object</li>
+ <li>it has better performance than accessing the arguments object</li>
 </ul>
 
 <p>Another feature that was deprecated was <code>arguments.callee.caller</code>, or more specifically <code>Function.caller</code>. Why is this? Well, at any point in time you can find the deepest caller of any function on the stack, and as I said above looking at the call stack has one single major effect: it makes a large number of optimizations impossible, or much much more difficult. For example, if you cannot guarantee that a function <code>f</code> will not call an unknown function, it is not possible to inline <code>f</code>. Basically it means that any call site that may have been trivially inlinable accumulates a large number of guards:</p>

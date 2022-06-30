@@ -50,14 +50,14 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 <p>使用 ORM 的好處是，程序員可以繼續用 JavaScript 對象而不是數據庫語義來思考 — 如果您需要使用不同數據庫（在相同或不同的網站上），那麼尤其如此。他們還提供了一個明顯的地方來執行數據驗證和檢查。</p>
 
 <div class="note">
-<p><strong>提示:</strong>  使用ODM / ORM通常可以降低開發和維護成本！除非您非常熟悉本地查詢語言，或者性能對您至關重要，否則您應該強烈考慮使用 ODM。</p>
+<p><strong>提示:</strong>  使用ODM / ORM通常可以降低開發和維護成本！除非您非常熟悉本地查詢語言，或者性能對您至關重要，否則您應該強烈考慮使用 ODM。</p>
 </div>
 
 <h3 id="我應該使用哪個_ORMODM">我應該使用哪個 ORM/ODM ?</h3>
 
-<p>NPM 套件管理器站點上，有許多ODM / ORM 解決方案（查看 <a href="https://www.npmjs.com/browse/keyword/odm">odm</a> 和 <a href="https://www.npmjs.com/browse/keyword/orm">orm</a> 標籤的子集合！）。</p>
+<p>NPM 套件管理器站點上，有許多ODM / ORM 解決方案（查看 <a href="https://www.npmjs.com/browse/keyword/odm">odm</a> 和 <a href="https://www.npmjs.com/browse/keyword/orm">orm</a> 標籤的子集合！）。</p>
 
-<p>在撰寫本文時，受歡迎的幾種解決方案是：   </p>
+<p>在撰寫本文時，受歡迎的幾種解決方案是：   </p>
 
 <ul>
  <li><a href="https://www.npmjs.com/package/mongoose">Mongoose</a>: Mongoose 是一個 <a href="https://www.mongodb.org/">MongoDB</a>對象建模工具，用於在異步環境中工作。</li>
@@ -106,7 +106,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 <p><img alt="Mongoose Library Model  with correct cardinality" src="library_website_-_mongoose_express.png"></p>
 
 <div class="note">
-<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意</strong> :下一節提供了一個基本的入門知識，解釋如何定義和使用模型。在您閱讀它時，請想想我們將如何構建上圖中的每個模型。</p>
+<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意</strong> :下一節提供了一個基本的入門知識，解釋如何定義和使用模型。在您閱讀它時，請想想我們將如何構建上圖中的每個模型。</p>
 </div>
 
 <h2 id="Mongoose入門">Mongoose入門</h2>
@@ -191,7 +191,7 @@ var Schema = mongoose.Schema;
 
 var SomeModelSchema = new Schema({
     a_string: String,
-    a_date: Date
+    a_date: Date
 });
 
 <strong>// Compile model from schema
@@ -224,15 +224,15 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
 <p>大多數綱要型態<a href="http://mongoosejs.com/docs/schematypes.html">SchemaTypes</a>（“type：”之後或字段名稱之後的描述符）都是自解釋的。例外情況是：</p>
 
 <ul style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>ObjectId</code>:表示數據庫中模型的特定實例。例如，一本書可能會使用它來表示其作者對象。這實際上將包含指定對象的唯一ID ( <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>_id</code>) 。我們可以使用<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>populate()</code>方法，在需要時提取相關訊息。</li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="http://mongoosejs.com/docs/schematypes.html#mixed">Mixed</a> :任意綱要型態。</li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">[] :一個數組的項目。您可以在這些模型上執行JavaScript數組操作（push，pop，unshift等）。上面的例子，顯示了一個沒有指定類型的對像數組，和一個String對像數組，但是你可以有任何類型的對像數組。</li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>ObjectId</code>:表示數據庫中模型的特定實例。例如，一本書可能會使用它來表示其作者對象。這實際上將包含指定對象的唯一ID ( <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>_id</code>) 。我們可以使用<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>populate()</code>方法，在需要時提取相關訊息。</li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="http://mongoosejs.com/docs/schematypes.html#mixed">Mixed</a> :任意綱要型態。</li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">[] :一個數組的項目。您可以在這些模型上執行JavaScript數組操作（push，pop，unshift等）。上面的例子，顯示了一個沒有指定類型的對像數組，和一個String對像數組，但是你可以有任何類型的對像數組。</li>
 </ul>
 
 <p>該代碼還顯示了聲明一個字段的兩種方式：</p>
 
 <ul style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">字段名稱和類型作為鍵值對（即是，像上面的<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>name</code>, <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>binary </code>and <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>living</code>）。</li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">字段名稱和類型作為鍵值對（即是，像上面的<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>name</code>, <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>binary </code>and <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>living</code>）。</li>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">字段名稱後跟一個定義類型<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>type</code>的對象，以及該字段的任何其他選項。選項包括如下內容：
   <ul style="font-style: normal !important; margin: 0px; padding: 6px 0px 0px 40px; border: 0px; max-width: 42rem;">
    <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">默認值。</li>
@@ -257,7 +257,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="http://mongoosejs.com/docs/api.html#schema-string-js">Strings</a>字符串有：
   <ul style="font-style: normal !important; margin: 0px; padding: 6px 0px 0px 40px; border: 0px; max-width: 42rem;">
    <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="http://mongoosejs.com/docs/api.html#schema_string_SchemaString-enum">enum</a>枚舉：指定該字段的允許值集合。</li>
-   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="http://mongoosejs.com/docs/api.html#schema_string_SchemaString-match">match</a> :指定字符串必須匹配的正則表達式。</li>
+   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="http://mongoosejs.com/docs/api.html#schema_string_SchemaString-match">match</a> :指定字符串必須匹配的正則表達式。</li>
    <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">字符串的最大長度<a href="http://mongoosejs.com/docs/api.html#schema_string_SchemaString-maxlength">maxlength</a>和最小長度<a href="http://mongoosejs.com/docs/api.html#schema_string_SchemaString-minlength">minlength</a></li>
   </ul>
  </li>
@@ -296,7 +296,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
 
 <h4 id="方法和查詢幫助">方法和查詢幫助</h4>
 
-<p>綱要schema也可以有<a href="http://mongoosejs.com/docs/guide.html#methods">實例方法</a>，<a href="http://mongoosejs.com/docs/guide.html#statics">靜態方法</a>和<a href="http://mongoosejs.com/docs/guide.html#query-helpers">查詢助手</a>。實例和靜態方法很相似，但有明顯的區別，即實例方法與特定記錄相關聯，並且可以訪問當前對象。查詢助手允許您擴展mongoose的<a href="http://mongoosejs.com/docs/queries.html">鍊式查詢構建器API</a>（例如，除了<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>find()</code>, <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>findOne()</code>和<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>findById()</code>方法外，還允許您添加一個“byName”查詢。</p>
+<p>綱要schema也可以有<a href="http://mongoosejs.com/docs/guide.html#methods">實例方法</a>，<a href="http://mongoosejs.com/docs/guide.html#statics">靜態方法</a>和<a href="http://mongoosejs.com/docs/guide.html#query-helpers">查詢助手</a>。實例和靜態方法很相似，但有明顯的區別，即實例方法與特定記錄相關聯，並且可以訪問當前對象。查詢助手允許您擴展mongoose的<a href="http://mongoosejs.com/docs/queries.html">鍊式查詢構建器API</a>（例如，除了<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>find()</code>, <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>findOne()</code>和<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>findById()</code>方法外，還允許您添加一個“byName”查詢。</p>
 
 <h3 id="使用模型">使用模型</h3>
 
@@ -337,8 +337,8 @@ console.log(<code>awesome_instance.name</code>); //should log '<code>also_awesom
 // Change record by modifying the fields, then calling save().
 <code>awesome_instance</code>.name="New cool name";
 <code>awesome_instance.save(function (err) {
-   if (err) return handleError(err); // saved!
-   });</code>
+   if (err) return handleError(err); // saved!
+   });</code>
 </pre>
 
 <h4 id="尋找紀錄">尋找紀錄</h4>
@@ -356,7 +356,7 @@ Athlete.find({ 'sport': 'Tennis' }, 'name age', function (err, athletes) {
 <p>如果您指定回調，如上所示，查詢將立即執行。搜索完成後將調用回調。</p>
 
 <div class="note">
-<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意:</strong> Mongoose中的所有回調，都使用此回調模式<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>callback(error, result)</code>。如果執行查詢時發生錯誤，錯誤參數<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>error</code>將包含錯誤文檔，並且結果<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>result</code>將為null。如果查詢成功，則<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>error</code>參數將為null，並且結果<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>result </code>將被填充到查詢結果。</p>
+<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意:</strong> Mongoose中的所有回調，都使用此回調模式<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>callback(error, result)</code>。如果執行查詢時發生錯誤，錯誤參數<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>error</code>將包含錯誤文檔，並且結果<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>result</code>將為null。如果查詢成功，則<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>error</code>參數將為null，並且結果<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>result </code>將被填充到查詢結果。</p>
 </div>
 
 <p>如果您未指定回調，則API將返回<a href="http://mongoosejs.com/docs/api.html#query-js">Query</a>類型的變量。您可以使用此查詢對象來構建查詢，然後稍後使用<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: medium; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>exec()</code>方法執行（使用回調）。</p>
@@ -392,12 +392,12 @@ query.exec(function (err, athletes) {
   select('name age').
   exec(callback); // where callback is the name of our callback function.</code></pre>
 
-<p><a href="http://mongoosejs.com/docs/api.html#query_Query-find">find()</a>  方法獲取所有匹配的記錄，但通常你只想獲得一個匹配。以下方法可以查詢單個記錄：</p>
+<p><a href="http://mongoosejs.com/docs/api.html#query_Query-find">find()</a>  方法獲取所有匹配的記錄，但通常你只想獲得一個匹配。以下方法可以查詢單個記錄：</p>
 
 <ul style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'><a href="http://mongoosejs.com/docs/api.html#model_Model.findById">findById()</a></code>:用指定的<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>id </code>查找文檔（每個文檔都有一個唯一的<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>id</code>）。</li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'><a href="http://mongoosejs.com/docs/api.html#model_Model.findById">findById()</a></code>:用指定的<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>id </code>查找文檔（每個文檔都有一個唯一的<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>id</code>）。</li>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'><a href="http://mongoosejs.com/docs/api.html#query_Query-findOne">findOne()</a></code>: 查找與指定條件匹配的單個文檔。</li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'><a href="http://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove">findByIdAndRemove()</a></code>, <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'><a href="http://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate">findByIdAndUpdate()</a></code>, <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'><a href="http://mongoosejs.com/docs/api.html#query_Query-findOneAndRemove">findOneAndRemove()</a></code>, <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'><a href="http://mongoosejs.com/docs/api.html#query_Query-findOneAndUpdate">findOneAndUpdate()</a></code>:通過<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>id </code>或條件查找單個文檔，並更新或刪除它。這些是用於更新和刪除記錄的有用便利功能。</li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'><a href="http://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove">findByIdAndRemove()</a></code>, <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'><a href="http://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate">findByIdAndUpdate()</a></code>, <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'><a href="http://mongoosejs.com/docs/api.html#query_Query-findOneAndRemove">findOneAndRemove()</a></code>, <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'><a href="http://mongoosejs.com/docs/api.html#query_Query-findOneAndUpdate">findOneAndUpdate()</a></code>:通過<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>id </code>或條件查找單個文檔，並更新或刪除它。這些是用於更新和刪除記錄的有用便利功能。</li>
 </ul>
 
 <div class="note">
@@ -506,7 +506,7 @@ SomeModel.find(callback_function);</code></pre>
 
 <p>現在我們了解了Mongoose能做什麼，以及我們想如何設計我們的模型，現在該開始在LocalLibrary網站上工作了。我們想要做的第一件事，就是設置一個MongoDb數據庫，我們可以使用它來儲存我們的圖書館數據。</p>
 
-<p>本教程，我們將使用<a href="https://mlab.com/welcome/">mLab</a>免費的雲託管的“ <a href="https://mlab.com/plans/pricing/">沙盒</a> ”數據庫。這個數據庫層不適合生產環境的網站，因為它沒有冗餘設計，但它對於開發和原型設計來說非常有用。我們在這裡使用它，是因為它免費且易於設置，並且因為作為數據庫服務供應商來說，mLab是流行的數據庫選擇之一，您可能會合理選擇您的生產環境數據庫（撰寫本文時，其他流行的選擇包括<a href="https://www.compose.com/">Compose</a>、<a href="https://scalegrid.io/pricing.html">ScaleGrid</a>和<a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a>）。</p>
+<p>本教程，我們將使用<a href="https://mlab.com/welcome/">mLab</a>免費的雲託管的“ <a href="https://mlab.com/plans/pricing/">沙盒</a> ”數據庫。這個數據庫層不適合生產環境的網站，因為它沒有冗餘設計，但它對於開發和原型設計來說非常有用。我們在這裡使用它，是因為它免費且易於設置，並且因為作為數據庫服務供應商來說，mLab是流行的數據庫選擇之一，您可能會合理選擇您的生產環境數據庫（撰寫本文時，其他流行的選擇包括<a href="https://www.compose.com/">Compose</a>、<a href="https://scalegrid.io/pricing.html">ScaleGrid</a>和<a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a>）。</p>
 
 <div class="note">
 <p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意:</strong>如果您願意，可以下載並安裝<a href="https://www.mongodb.com/download-center">與系統相對應的二進製文件</a>，在本地設置MongoDb數據庫。除了您在連接時指定的數據庫URL之外，本文中的其餘指令將很類似。</p>
@@ -523,21 +523,21 @@ SomeModel.find(callback_function);</code></pre>
 
   <ul>
    <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">從“計劃類型”Plan Type 部分中，選擇“SANDBOX（免費）”計劃。</li>
-   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">從“雲提供商” <em>Cloud Provider</em>部分，選擇任意提供商。不同的提供商，提供不同的地區（顯示在選定的計劃類型下面）。</li>
-   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">單擊“繼續” <strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">Continue</strong>按鈕。</li>
+   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">從“雲提供商” <em>Cloud Provider</em>部分，選擇任意提供商。不同的提供商，提供不同的地區（顯示在選定的計劃類型下面）。</li>
+   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">單擊“繼續” <strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">Continue</strong>按鈕。</li>
   </ul>
  </li>
- <li>這將打開“選擇區域” <em>Select Region </em>畫面。
+ <li>這將打開“選擇區域” <em>Select Region </em>畫面。
   <p><img alt="Select new region screen" src="https://mdn.mozillademos.org/files/15662/mLab_new_deployment_select_region_v2.png" style="height: 570px; width: 1293px;"></p>
 
   <ul>
    <li>
-    <p>選擇離您最近的地區，然後選擇繼續<strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: left; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>Continue</strong> .</p>
+    <p>選擇離您最近的地區，然後選擇繼續<strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: left; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>Continue</strong> .</p>
    </li>
   </ul>
  </li>
  <li>
-  <p>這將打開 Final Details 畫面。<br>
+  <p>這將打開 Final Details 畫面。<br>
    <img alt="New deployment database name" src="https://mdn.mozillademos.org/files/15663/mLab_new_deployment_final_details.png" style="height: 569px; width: 1293px;"></p>
 
   <ul>
@@ -552,14 +552,14 @@ SomeModel.find(callback_function);</code></pre>
 
   <ul>
    <li>
-    <p>單擊“提交訂單” <strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: left; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>Submit Order</strong>以創建數據庫。</p>
+    <p>單擊“提交訂單” <strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: left; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>Submit Order</strong>以創建數據庫。</p>
    </li>
   </ul>
  </li>
  <li>
   <p>您將返回到主畫面。單擊剛剛創建的新數據庫，以打開其詳細訊息畫面。正如你所看到的，數據庫沒有集合（數據）。<br>
    <img alt="mLab - Database details screen" src="https://mdn.mozillademos.org/files/15665/mLab_new_deployment_database_details.png" style="height: 700px; width: 1398px;"><br>
-    您需要用來訪問數據庫的URL，顯示在上面的表單中（如上圖所示）。為了使用它，您需要創建一個可以在URL中指定的數據庫用戶。</p>
+    您需要用來訪問數據庫的URL，顯示在上面的表單中（如上圖所示）。為了使用它，您需要創建一個可以在URL中指定的數據庫用戶。</p>
  </li>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">單擊用戶<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">Users</strong>選項卡，並選擇添加數據庫用戶按鈕<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">Add database user</strong>。</li>
  <li>輸入用戶名和密碼（兩次），然後按創建<strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: left; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>Create</strong>。不要選擇只讀<em>read-only</em>。<br>
@@ -767,12 +767,12 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
 <ul>
  <li><a href="https://expressjs.com/en/guide/database-integration.html">Database integration</a> (Express docs)</li>
  <li><a href="http://mongoosejs.com/">Mongoose website</a> (Mongoose docs)</li>
- <li><a href="http://mongoosejs.com/docs/guide.html">Mongoose Guide</a> (Mongoose docs)</li>
+ <li><a href="http://mongoosejs.com/docs/guide.html">Mongoose Guide</a> (Mongoose docs)</li>
  <li><a href="http://mongoosejs.com/docs/validation.html">Validation</a> (Mongoose docs)</li>
  <li><a href="http://mongoosejs.com/docs/schematypes.html">Schema Types</a> (Mongoose docs)</li>
  <li><a href="http://mongoosejs.com/docs/models.html">Models</a> (Mongoose docs)</li>
  <li><a href="http://mongoosejs.com/docs/queries.html">Queries</a> (Mongoose docs)</li>
- <li><a href="http://mongoosejs.com/docs/populate.html">Population</a> (Mongoose docs)</li>
+ <li><a href="http://mongoosejs.com/docs/populate.html">Population</a> (Mongoose docs)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}</p>

@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Functions/arguments
 </div>
 
 <div class="notecard note">
-<p><strong>備註：</strong>「類陣列 (Array-like)」 的意思是 <code>arguments</code> 一樣擁有 <code>length</code>這項屬性，以及從 0 開始的索引，但是它沒有陣列內建的方法像是 <code>forEach()</code> ，或是 <code>map()</code> 。</p>
+<p><strong>備註：</strong>「類陣列 (Array-like)」 的意思是 <code>arguments</code> 一樣擁有 <code>length</code>這項屬性，以及從 0 開始的索引，但是它沒有陣列內建的方法像是 <code>forEach()</code> ，或是 <code>map()</code> 。</p>
 </div>
 
 <p>The <code>arguments</code> object is a local variable available within all (non-arrow) functions. You can refer to a function's arguments within the function by using the <code>arguments</code> object. This object contains an entry for each argument passed to the function, the first entry's index starting at 0.</p>
@@ -41,7 +41,7 @@ arguments[2]
 
 <pre class="brush: js">arguments[1] = 'new value';</pre>
 
-<p><code>arguments</code> 物件不是陣列。它與陣列非常相似，但是它沒有除了 <code>length</code> 這個屬性以外的其他陣列屬性。舉例，它沒有 <code>pop</code> 這個陣列方法。</p>
+<p><code>arguments</code> 物件不是陣列。它與陣列非常相似，但是它沒有除了 <code>length</code> 這個屬性以外的其他陣列屬性。舉例，它沒有 <code>pop</code> 這個陣列方法。</p>
 
 <p>然而，它依然可以被轉換為真正的陣列(Array)。</p>
 
@@ -62,7 +62,7 @@ const args = Array.from(arguments);
 
 <h3 id="Using_typeof_with_Arguments">Using <code>typeof</code> with Arguments</h3>
 
-<p>The typeof arguments returns 'object'. </p>
+<p>The typeof arguments returns 'object'. </p>
 
 <pre>console.log(typeof arguments); // 'object' </pre>
 
@@ -138,7 +138,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');</pre>
 
 <h3 id="Rest_default_and_destructured_parameters">Rest, default, and destructured parameters</h3>
 
-<p>The <code>arguments</code> object can be used in conjunction with <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, and <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructured</a> parameters.</p>
+<p>The <code>arguments</code> object can be used in conjunction with <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, and <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructured</a> parameters.</p>
 
 <pre class="brush: js">function foo(...args) {
   return args;
@@ -146,9 +146,9 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');</pre>
 foo(1, 2, 3); // [1,2,3]
 </pre>
 
-<p>While the presence of <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructured</a> parameters does not alter the <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode#Making_eval_and_arguments_simpler">behavior of the <code>arguments</code> object in strict mode code</a>, there is a subtle difference for non-strict code.</p>
+<p>While the presence of <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructured</a> parameters does not alter the <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode#Making_eval_and_arguments_simpler">behavior of the <code>arguments</code> object in strict mode code</a>, there is a subtle difference for non-strict code.</p>
 
-<p>When a non-strict function <strong><strong>does </strong>not</strong> contain <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructured</a> parameters, then the values in the <code>arguments</code> object <strong>do</strong> track the values of the arguments (and vice versa). See the code below:</p>
+<p>When a non-strict function <strong><strong>does </strong>not</strong> contain <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructured</a> parameters, then the values in the <code>arguments</code> object <strong>do</strong> track the values of the arguments (and vice versa). See the code below:</p>
 
 <pre class="brush: js">function func(a) {
   arguments[0] = 99; // updating arguments[0] also updates a
@@ -166,7 +166,7 @@ func(10); // 99
 func(10); // 99
 </pre>
 
-<p>When a non-strict function <strong>does</strong> contain <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructured</a> parameters, then the values in the <code>arguments</code> object <strong>do not</strong> track the values of the arguments (and vice versa). Instead, they reflect the arguments provided at the time of invocation:</p>
+<p>When a non-strict function <strong>does</strong> contain <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructured</a> parameters, then the values in the <code>arguments</code> object <strong>do not</strong> track the values of the arguments (and vice versa). Instead, they reflect the arguments provided at the time of invocation:</p>
 
 <pre class="brush: js">function func(a = 55) {
   arguments[0] = 99; // updating arguments[0] does not also update a

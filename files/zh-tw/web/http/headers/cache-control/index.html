@@ -90,7 +90,7 @@ Cache-Control: stale-if-error=&lt;秒數&gt;
  <dt><code>no-cache</code></dt>
  <dd>此回應可以被<em>任何快取軟體</em>儲存起來，即使它本身通常是不可快取的。不過，在使用儲存起來的 HTTP 回應之前，<em>必須</em>必須向後端伺服器做驗證，因此你不能拿 <code>no-cache</code> 跟 <code>immutable</code> 一起使用。<strong>如果你真的不要任何快取軟體儲存你的回應，可以使用 <code>no-store</code> 。</strong><em>這個指令不是用來防止快取軟體儲存回應的。</em></dd>
  <dt><code>no-store</code></dt>
- <dd>此回應<strong>不能</strong>被<em>任何快取軟體</em>儲存起來。當然它無法防止 <em>先前儲存起來</em> 的回應被回傳。客戶端可以用 <code>max-age=0</code> 來清除快取，並強制向後端伺服器做驗證。（其他指令跟 <code>no-store</code> 一起使用都無效）</dd>
+ <dd>此回應<strong>不能</strong>被<em>任何快取軟體</em>儲存起來。當然它無法防止 <em>先前儲存起來</em> 的回應被回傳。客戶端可以用 <code>max-age=0</code> 來清除快取，並強制向後端伺服器做驗證。（其他指令跟 <code>no-store</code> 一起使用都無效）</dd>
 </dl>
 
 <h3 id="Expiration">過期</h3>
@@ -142,7 +142,7 @@ Cache-Control: stale-if-error=&lt;秒數&gt;
  <pre class="example-good brush: http no-line-numbers">Cache-Control: no-store</pre>
 
  <div class="notecard note">
- <p>這個 <code>no-store</code> 指令使得回應再也不會被儲存，但它無法防止使用先前儲存、而且仍有效的快取。多設定 <code>max-age=0</code> 可以強制執行驗證（也就會清除既有快取）。</p>
+ <p>這個 <code>no-store</code> 指令使得回應再也不會被儲存，但它無法防止使用先前儲存、而且仍有效的快取。多設定 <code>max-age=0</code> 可以強制執行驗證（也就會清除既有快取）。</p>
 
  <pre class="brush: html">Cache-Control: no-store, max-age=0
 </pre>

@@ -3,7 +3,7 @@ title: 使用 web 和 XML 開發來使用 DOM
 slug: Web/API/Document_Object_Model/Examples
 translation_of: Web/API/Document_Object_Model/Examples
 ---
-<p>本章介紹了使用 DOM 進行 Web 以及 XML 開發的一些長範例。只要可能，在例子就會使用通用的 JavaScript Web API 、技巧以及模式來操作文檔對象（the document object）。</p>
+<p>本章介紹了使用 DOM 進行 Web 以及 XML 開發的一些長範例。只要可能，在例子就會使用通用的 JavaScript Web API 、技巧以及模式來操作文檔對象（the document object）。</p>
 
 <h2 id="Example_1:_height_and_width">範例一：高度和寬度</h2>
 
@@ -95,7 +95,7 @@ function setBorderWidth(width) {
 
 <h2 id="Example_3:_Manipulating_Styles">範例三：改變樣式（style）</h2>
 
-<p>在下面這個簡單的例子中，透過取得的 DOM 元素中的 style 物件和 style 物件中的屬性，我們可以取得 HTML 段落中的一些基本樣式屬性。在本例中，你可以直接操控各別的樣式屬性。在下一個的例子裡（見例4），你可以使用 stylesheets 和它的規則來改變整個文檔的樣式。</p>
+<p>在下面這個簡單的例子中，透過取得的 DOM 元素中的 style 物件和 style 物件中的屬性，我們可以取得 HTML 段落中的一些基本樣式屬性。在本例中，你可以直接操控各別的樣式屬性。在下一個的例子裡（見例4），你可以使用 stylesheets 和它的規則來改變整個文檔的樣式。</p>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -153,7 +153,7 @@ P
 
 <p>本例以一種簡單的方法闡述了事件是如何觸發以及在 DOM 中是如何處理的。當這個 HTML 文檔 BODY 載入的時候，在表格的首行註冊了一個事件監聽器。事件監聽器透過執行函數 stopEvent 來處理事件，從而改變在該表格底部的值。</p>
 
-<p>然而，stopEvent 同時也會另外執行一個事件物件的方法{{domxref("event.stopPropagation")}}，這會使得該事件（點擊）無法在 DOM 中有進一步的冒泡行為。請注意，表格本身有一個 {{domxref("element.onclick","onclick")}} 事件，使得這個表格被點擊時的時候原本應該要會跳出一個訊息。但因為 stopEvent 方法已經阻止了冒泡，所以在表格中的數據更新後，該事件階段有效地結束，表格的點擊事件沒有被觸發，而是顯示一個警告框（event propagation halted）——證實了事件被有效結束而沒有進一步冒泡。</p>
+<p>然而，stopEvent 同時也會另外執行一個事件物件的方法{{domxref("event.stopPropagation")}}，這會使得該事件（點擊）無法在 DOM 中有進一步的冒泡行為。請注意，表格本身有一個 {{domxref("element.onclick","onclick")}} 事件，使得這個表格被點擊時的時候原本應該要會跳出一個訊息。但因為 stopEvent 方法已經阻止了冒泡，所以在表格中的數據更新後，該事件階段有效地結束，表格的點擊事件沒有被觸發，而是顯示一個警告框（event propagation halted）——證實了事件被有效結束而沒有進一步冒泡。</p>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -199,7 +199,7 @@ function load() {
 
 <h2 id="Example_6:_getComputedStyle">Example 6: getComputedStyle</h2>
 
-<p>這個例子演示了如何用 {{domxref("window.getComputedStyle")}} 方法來獲取一個尚未被透過樣式元素或 JavaScript 設定的元素樣式（例如，elt.style.backgroundColor="RGB(173，216，230)"）。列舉在 {{domxref("element.style", "elt.style")}} 後面的類型的樣式可以用更直接{{domxref("element.style", "elt.style")}} 屬性獲取。</p>
+<p>這個例子演示了如何用 {{domxref("window.getComputedStyle")}} 方法來獲取一個尚未被透過樣式元素或 JavaScript 設定的元素樣式（例如，elt.style.backgroundColor="RGB(173，216，230)"）。列舉在 {{domxref("element.style", "elt.style")}} 後面的類型的樣式可以用更直接{{domxref("element.style", "elt.style")}} 屬性獲取。</p>
 
 <p><code>getComputedStyle() 返回了一個 ComputedCSSStyleDeclaration 物件，其獨立的樣式屬性可以用該物件的 getPropertyValue() 方法引用，如同下面的例子一樣：</code></p>
 
@@ -261,7 +261,7 @@ function cStyles() {
 
 <p>這個例子使用 DOM 方法來顯示所有 {{domxref("window.onload")}} {{domxref("event")}} 物件的屬性及其在 table 中的值。這個方法也展示一個有用的技術，使用 for...in 迴圈來來遍歷一個物件的屬性，以得到它們的值。</p>
 
-<p>不同瀏覽器之間事件物件的屬性有很大不同，<a href="https://dom.spec.whatwg.org">WHATWG DOM Standard</a> 規範了事件的標準屬性，然而，許多瀏覽器都大大擴展了這些。</p>
+<p>不同瀏覽器之間事件物件的屬性有很大不同，<a href="https://dom.spec.whatwg.org">WHATWG DOM Standard</a> 規範了事件的標準屬性，然而，許多瀏覽器都大大擴展了這些。</p>
 
 <p>將下面的代碼放到一個空白的文本文件，並將其用各種瀏覽器開啟，你一定會對各種瀏覽器之間的不一致（事件屬性的名稱及其數量）感到驚訝。你可能還喜歡在這個頁面加入一些元素，並呼叫不同的事件處理函數（event handlers）。</p>
 
@@ -283,40 +283,40 @@ td { padding: 2px 10px 2px 10px; }
 &lt;script&gt;
 
 function showEventProperties(e) {
-  function addCell(row, text) {
-    var cell = row.insertCell(-1);
-    cell.appendChild(document.createTextNode(text));
-  }
+  function addCell(row, text) {
+    var cell = row.insertCell(-1);
+    cell.appendChild(document.createTextNode(text));
+  }
 
-  var e = e || window.event;
-  document.getElementById('eventType').innerHTML = e.type;
+  var e = e || window.event;
+  document.getElementById('eventType').innerHTML = e.type;
 
-  var table = document.createElement('table');
-  var thead = table.createTHead();
-  var row = thead.insertRow(-1);
-  var lableList = ['#', 'Property', 'Value'];
-  var len = lableList.length;
+  var table = document.createElement('table');
+  var thead = table.createTHead();
+  var row = thead.insertRow(-1);
+  var lableList = ['#', 'Property', 'Value'];
+  var len = lableList.length;
 
-  for (var i=0; i&lt;len; i++) {
-    addCell(row, lableList[i]);
-  }
+  for (var i=0; i&lt;len; i++) {
+    addCell(row, lableList[i]);
+  }
 
-  var tbody = document.createElement('tbody');
-  table.appendChild(tbody);
+  var tbody = document.createElement('tbody');
+  table.appendChild(tbody);
 
-  for (var p in e) {
-    row = tbody.insertRow(-1);
-    row.className = (row.rowIndex % 2)? 'odd':'even';
-    addCell(row, row.rowIndex);
-    addCell(row, p);
-    addCell(row, e[p]);
-  }
+  for (var p in e) {
+    row = tbody.insertRow(-1);
+    row.className = (row.rowIndex % 2)? 'odd':'even';
+    addCell(row, row.rowIndex);
+    addCell(row, p);
+    addCell(row, e[p]);
+  }
 
-  document.body.appendChild(table);
+  document.body.appendChild(table);
 }
 
 window.onload = function(event){
-  showEventProperties(event);
+  showEventProperties(event);
 }
 &lt;/script&gt;
 &lt;/head&gt;
@@ -359,7 +359,7 @@ for (var i = 0; i &lt; 2; i++) {
 
 <ul>
  <li>表格的{{domxref("element.innerHTML","innerHTML")}}屬性絕不應該被用來修改表，雖然你可以用它來寫一個完整的表格或細格中的內容。</li>
- <li>如果用 DOM 核心方法 {{domxref("document.createElement")}} 和 {{domxref("Node.appendChild")}} 來建立表格的行和細格，IE 會要求它們附加到一個 tbody 元素，而其它瀏覽器允許它們附加到一個 table 元素（行會被添加到最後的 tbody 元素）。</li>
+ <li>如果用 DOM 核心方法 {{domxref("document.createElement")}} 和 {{domxref("Node.appendChild")}} 來建立表格的行和細格，IE 會要求它們附加到一個 tbody 元素，而其它瀏覽器允許它們附加到一個 table 元素（行會被添加到最後的 tbody 元素）。</li>
  <li><a href="/en-US/docs/Web/API/HTMLTableElement#Methods">表格介面</a>還有一些可用於創建和修改的表格的便利方法。</li>
 </ul>
 

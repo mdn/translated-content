@@ -15,8 +15,8 @@ translation_of: Web/API/Document/getElementsByClassName
 <var>var elements</var> = rootElement.getElementsByClassName(<em>names</em>);</pre>
 
 <ul>
- <li><var>elements</var> 為符合 class 名稱的 {{ domxref("HTMLCollection") }}。</li>
- <li><var>names</var> 為符合 class 名稱的字串；class 名稱可以用空白分隔。</li>
+ <li><var>elements</var> 為符合 class 名稱的 {{ domxref("HTMLCollection") }}。</li>
+ <li><var>names</var> 為符合 class 名稱的字串；class 名稱可以用空白分隔。</li>
  <li>getElementsByClassName 可以被任何不只在 document 的元素呼叫。呼叫這個方法的元素將會成為搜尋 class 的根元素。</li>
 </ul>
 
@@ -30,11 +30,11 @@ translation_of: Web/API/Document/getElementsByClassName
 
 <pre class="brush: js">document.getElementsByClassName('red test');</pre>
 
-<p>取得所有在 id 為 '“main” 的元素裡 class 為 “test” 的元素：</p>
+<p>取得所有在 id 為 '“main” 的元素裡 class 為 “test” 的元素：</p>
 
 <pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
 
-<p>我們也可以藉由傳遞 {{ domxref("HTMLCollection") }} 為 <var>this </var>來使用 <code>Array.prototype</code> 的方法。下面的例子將會找到所有 class 為 “test” 的 div 元素：</p>
+<p>我們也可以藉由傳遞 {{ domxref("HTMLCollection") }} 為 <var>this </var>來使用 <code>Array.prototype</code> 的方法。下面的例子將會找到所有 class 為 “test” 的 div 元素：</p>
 
 <pre class="brush: js">var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){

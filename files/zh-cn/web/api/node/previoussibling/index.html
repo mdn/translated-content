@@ -5,23 +5,23 @@ translation_of: Web/API/Node/previousSibling
 ---
 <p>{{ APIRef() }}</p>
 
-<h3 id="Summary" name="Summary">概述</h3>
+<h3 id="Summary">概述</h3>
 
 <p>返回当前节点的前一个兄弟节点，没有则返回<code>null.</code></p>
 
-<h3 id="Syntax" name="Syntax">语法</h3>
+<h3 id="Syntax">语法</h3>
 
 <pre class="eval"><em>previousNode</em> = <em>node</em>.previousSibling
 </pre>
 
-<h3 id="Example" name="Example">例子</h3>
+<h3 id="Example">例子</h3>
 
 <pre class="eval">// &lt;a&gt;&lt;b1 id="b1"/&gt;&lt;b2 id="b2"/&gt;&lt;/a&gt;
 alert(document.getElementById("b1").previousSibling); // null
 alert(document.getElementById("b2").previousSibling.id); // "b1"
 </pre>
 
-<h3 id="Notes" name="Notes">备注</h3>
+<h3 id="Notes">备注</h3>
 
 
 
@@ -33,7 +33,7 @@ alert(document.getElementById("b2").previousSibling.id); // "b1"
 
 <p>获取后一个兄弟节点，请使用<a href="/zh-CN/docs/Web/API/Node/nextSibling">Node.nextSibling</a>.</p>
 
-<h3 id="Specification" name="Specification">规范</h3>
+<h3 id="Specification">规范</h3>
 
 <p><a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling">DOM Level 1 Core: previousSibling</a></p>
 

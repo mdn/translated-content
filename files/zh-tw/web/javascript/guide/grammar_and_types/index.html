@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Guide/Grammar_and_types
 
 <pre><code>var Früh = "foobar";</code></pre>
 
-<p>但變數 früh 並不等於 Früh，因為大小寫對 JavaScript 是有區別的。</p>
+<p>但變數 früh 並不等於 Früh，因為大小寫對 JavaScript 是有區別的。</p>
 
 <p>在 JavaScript 中，每行指令被稱為 {{Glossary("Statement", "Statements")}}，並用分號（;）分隔。空格、Tab 與換行符號皆被視為空白。JavaScript 的文件會從左到右進行掃描，並轉換成一系列的元素，像是令牌（Token）、控制字符（Control characters）、換行器（line terminators）、註解（Comments）或是空白（Withespace），ECMAScript 也定義了特定的保留字和字面值，並在每個沒有加分號的 Statement 自動加上分號。然而，推薦的作法還是在每個 Statement 的結尾自行加上分號，以防止一些潛在的副作用，如果需要更多資訊，可以參考<a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">這篇</a>。</p>
 
@@ -53,7 +53,7 @@ translation_of: Web/JavaScript/Guide/Grammar_and_types
 
 <p>在 JavaScript 中，變數必須使用字母（letter）、下底線（ _）、錢號（$）作為開頭；後面的字員組成可以包含數字（0-9）。JavaScript 是區分大小寫（case sensitive）的，大寫字母（'A' ~ 'Z'）和小寫字母（'a' ~ 'z'）皆可使用且不相等。</p>
 
-<p>You can use most of ISO 8859-1 or Unicode letters such as å and ü in identifiers (for more details see <a href="https://mathiasbynens.be/notes/javascript-identifiers-es6">this blog post</a>). You can also use the <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals">Unicode escape sequences</a> as characters in identifiers.</p>
+<p>You can use most of ISO 8859-1 or Unicode letters such as å and ü in identifiers (for more details see <a href="https://mathiasbynens.be/notes/javascript-identifiers-es6">this blog post</a>). You can also use the <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals">Unicode escape sequences</a> as characters in identifiers.</p>
 
 <p>Some examples of legal names are <code>Number_hits</code>, <code>temp99</code>, <code>$credit</code>, and <code>_name</code>.</p>
 
@@ -62,9 +62,9 @@ translation_of: Web/JavaScript/Guide/Grammar_and_types
 <p>你可以透過三種方式來定義變數：</p>
 
 <ul>
- <li>透過保留字 {{jsxref("Statements/var", "var")}} 來定義變數，舉例來說： <code>var x = 42</code>，這種方式可以用來定義區域以及全域變數。</li>
+ <li>透過保留字 {{jsxref("Statements/var", "var")}} 來定義變數，舉例來說： <code>var x = 42</code>，這種方式可以用來定義區域以及全域變數。</li>
  <li>直接指定一個值給該變數，例如：<code>x = 42</code>，這種方式只能定義全域變數，如果在方法外面使用該方法定義變數，嚴格模式裡會產生警告，該定義方式應該盡可能避免。</li>
- <li>透過保留字 {{jsxref("Statements/let", "let")}}，舉例來說：<code>let y = 13</code>，{{jsxref("Statements/let", "let")}} 可以用來定義區塊裡的區域變數。想瞭解更多，可以參考<a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">變數區域</a>的章節。</li>
+ <li>透過保留字 {{jsxref("Statements/let", "let")}}，舉例來說：<code>let y = 13</code>，{{jsxref("Statements/let", "let")}} 可以用來定義區塊裡的區域變數。想瞭解更多，可以參考<a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">變數區域</a>的章節。</li>
 </ul>
 
 <h3 id="變數取值">變數取值</h3>
@@ -114,7 +114,7 @@ console.log(n * 32); // Will log 0 to the console
 
 <h3 id="變數範圍">變數範圍</h3>
 
-<p>當我們在函式外宣告一個變數時，這個變數會是一個全域變數  (global variable), 因為在這份程式文件裡面的所有程式碼都可以使用到這個變數。但當我們只在函式內宣告變數時，這變數是區域變數 (local variable)，因為變數只會在函式內被使用到。</p>
+<p>當我們在函式外宣告一個變數時，這個變數會是一個全域變數  (global variable), 因為在這份程式文件裡面的所有程式碼都可以使用到這個變數。但當我們只在函式內宣告變數時，這變數是區域變數 (local variable)，因為變數只會在函式內被使用到。</p>
 
 <p><strong>請注意!!</strong> 在 ECMAScript 2015 以前的 JavaScript 版本裡，並沒有定義區塊描述 (<a href="/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Block_statement">block statement</a>) 的變數有效範圍。更精確的說，之前版本所定義的變數，其特性相當於全域變數；不只在宣告的區塊或函數裡面有效 ，其變數值還會超出宣告區塊而影響到全部的描述碼。</p>
 
@@ -126,7 +126,7 @@ console.log(n * 32); // Will log 0 to the console
 console.log(x);  // x is 5
 </pre>
 
-<p>接著舉一個 ECMAScript 2015 之後的宣告範例。當使用了 <code>let</code>  這個區域變數宣告方式，變數 y 的有效範圍只有在 if { } 的範圍內，因此輸出結果是 ReferenceError。</p>
+<p>接著舉一個 ECMAScript 2015 之後的宣告範例。當使用了 <code>let</code>  這個區域變數宣告方式，變數 y 的有效範圍只有在 if { } 的範圍內，因此輸出結果是 ReferenceError。</p>
 
 <pre class="brush: js">if (true) {
   let y = 5;
@@ -179,7 +179,7 @@ var myvar = 'my value';
 </pre>
 
 <p><br>
- 由於提升(hoisting)，全部在函數(function) 中的 var 陳述式應該盡可能地置放在接近函數(function)的頂部。這個最佳實踐增加了程式碼的清晰度。<br>
+ 由於提升(hoisting)，全部在函數(function) 中的 var 陳述式應該盡可能地置放在接近函數(function)的頂部。這個最佳實踐增加了程式碼的清晰度。<br>
  <br>
  在ECMAScript 2015 中，let（const）不會將變數提升到區塊（block）的頂部。但是，在變數宣告之前就引用塊中的變數，會導致 {{jsxref("ReferenceError")}}。變數從區塊（block）的開始到宣告被處理之前，就處於「暫時無效（temporal dead zone）」。</p>
 
@@ -210,13 +210,13 @@ var baz = function() {
 
 <h3 id="全域變數_Global_variables">全域變數 (Global variables)</h3>
 
-<p>全域變數事實上是全域物件的屬性值。在網頁中的全域物件是 {{domxref("window")}}，因此你可使用 <code>window.<em>variable</em></code> 的語法來設定及存取全域變數。</p>
+<p>全域變數事實上是全域物件的屬性值。在網頁中的全域物件是 {{domxref("window")}}，因此你可使用 <code>window.<em>variable</em></code> 的語法來設定及存取全域變數。</p>
 
-<p>Consequently, 你可以指定 window 或 frame 物件的名稱來存取在另一個在 window 物件或 frame 物件所宣告的全域變數。例如，如果在一個文檔中已宣告一個稱為 <code>phoneNumber</code> 的變數，你可以在 iframe 中使用 <code>parent.phoneNumber</code> 來存取該變數</p>
+<p>Consequently, 你可以指定 window 或 frame 物件的名稱來存取在另一個在 window 物件或 frame 物件所宣告的全域變數。例如，如果在一個文檔中已宣告一個稱為 <code>phoneNumber</code> 的變數，你可以在 iframe 中使用 <code>parent.phoneNumber</code> 來存取該變數</p>
 
 <h3 id="常數_Constants">常數 (Constants)</h3>
 
-<p>你可用 {{jsxref("Statements/const", "const")}} 關鍵字來建立一個唯讀、有名稱的常數。 常數識別子的命名語法與變數識別子的命名語法是一樣的: 必須由一個英文字母，底線或錢符號($)開始，之後可包含英文字母，數字及底線字元。</p>
+<p>你可用 {{jsxref("Statements/const", "const")}} 關鍵字來建立一個唯讀、有名稱的常數。 常數識別子的命名語法與變數識別子的命名語法是一樣的: 必須由一個英文字母，底線或錢符號($)開始，之後可包含英文字母，數字及底線字元。</p>
 
 <pre class="brush: js">const PI = 3.14;
 </pre>
@@ -252,7 +252,7 @@ MY_OBJECT.key = 'otherValue';</pre>
 <p>最新 ECMAScript 標準定義以下七種資料型別:</p>
 
 <ul>
- <li>六種基本({{Glossary("Primitive", "primitives")}})資料型別 :
+ <li>六種基本({{Glossary("Primitive", "primitives")}})資料型別 :
   <ul>
    <li>{{Glossary("Boolean")}}. <code>true</code> and <code>false</code>.</li>
    <li>{{Glossary("null")}}. A special keyword denoting a null value. Because JavaScript is case-sensitive, <code>null</code> is not the same as <code>Null</code>, <code>NULL</code>, or any other variant.</li>
@@ -265,9 +265,9 @@ MY_OBJECT.key = 'otherValue';</pre>
  <li>and {{Glossary("Object")}}</li>
 </ul>
 
-<p>儘管這些變數關聯性很小, 他們可以讓你在你的應用程式中, 產生出有意義的函數. </p>
+<p>儘管這些變數關聯性很小, 他們可以讓你在你的應用程式中, 產生出有意義的函數. </p>
 
-<p><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object">物件</a>與 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function">函數</a> 在語言中是其它的基本元素. 你可以把物件想成是一個被命名過且用來裝數值的容器,以及函數則為你的應用程式所執行的步驟.  </p>
+<p><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object">物件</a>與 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function">函數</a> 在語言中是其它的基本元素. 你可以把物件想成是一個被命名過且用來裝數值的容器,以及函數則為你的應用程式所執行的步驟.  </p>
 
 <h3 id="資料型別轉換">資料型別轉換</h3>
 
@@ -297,7 +297,7 @@ y = 42 + " is the answer" // "42 is the answer"
 
 <h3 id="字串轉數值">字串轉數值</h3>
 
-<p>當代表數字的值以字串形式存在記憶體中，有些方法可用來將這種字串轉換成整數或浮點數。 </p>
+<p>當代表數字的值以字串形式存在記憶體中，有些方法可用來將這種字串轉換成整數或浮點數。 </p>
 
 <ul>
  <li>{{jsxref("parseInt", "parseInt()")}}</li>
@@ -306,7 +306,7 @@ y = 42 + " is the answer" // "42 is the answer"
 
 <p><code>parseInt</code> 只會返回整數，因此減少了對小數的使用。此外，parseInt 的最佳實務是始終包含基數參數。基數參數用於指定使用的數值系統。</p>
 
-<p>另一個將字串轉成數字是使用單元 <code>+</code> (unary plus) 運算子:</p>
+<p>另一個將字串轉成數字是使用單元 <code>+</code> (unary plus) 運算子:</p>
 
 <pre class="brush: js">'1.1' + '1.1' = '1.11.1'
 (+'1.1') + (+'1.1') = 2.2
@@ -330,7 +330,7 @@ y = 42 + " is the answer" // "42 is the answer"
 
 <p>陣列字面值是零或多個表達式的列表，每個表達式代表一個數組元素，並用方括號（[]）括起來。使用陣列字面值創建陣列時，將使用指定的值作為其元素對其進行初始化，並將其長度設置為指定的參數值。</p>
 
-<p>以下範例創建了陣列 <code>coffees</code> ，長度為 3 並包含三個元素：</p>
+<p>以下範例創建了陣列 <code>coffees</code> ，長度為 3 並包含三個元素：</p>
 
 <pre class="brush: js">var coffees = ['French Roast', 'Colombian', 'Kona'];
 </pre>
@@ -375,18 +375,18 @@ y = 42 + " is the answer" // "42 is the answer"
 
 <h3 id="布林字面值_Boolean_literals">布林字面值 (Boolean literals)</h3>
 
-<p>布林型別有兩種字面值： <code>true</code> 跟 <code>false</code>.</p>
+<p>布林型別有兩種字面值： <code>true</code> 跟 <code>false</code>.</p>
 
 <p>Do not confuse the primitive Boolean values <code>true</code> and <code>false</code> with the true and false values of the Boolean object. The Boolean object is a wrapper around the primitive Boolean data type. See {{jsxref("Boolean")}} for more information.</p>
 
-<h3 id="整數字面值_Numerical_literals">整數字面值 (Numerical literals)</h3>
+<h3 id="整數字面值_Numerical_literals">整數字面值 (Numerical literals)</h3>
 
 <p>整數能表示為「十進制」、「十六進制」、「八進制」、「二進制」</p>
 
 <ul>
  <li>十進制整數字面值由「『不帶前導 0』的整數序列」組成</li>
  <li>八進制整數字面值由「『前導 0』」或『前導 0o』或『前導 0O』的整數序列」組成。八進制整數只能包含數字0-7</li>
- <li>十六進制整數字面值由「『前導 0x』」或『前導 0X』的整數序列」組成。十六進制整數只能包含數字 0-9 、字母 A-F 和 a-f</li>
+ <li>十六進制整數字面值由「『前導 0x』」或『前導 0X』的整數序列」組成。十六進制整數只能包含數字 0-9 、字母 A-F 和 a-f</li>
  <li>二進制整數字面值由「『前導 0b』」或『前導 0B』的整數序列」組成。二進制整數只能包含數字 0 跟 1</li>
 </ul>
 
@@ -398,7 +398,7 @@ y = 42 + " is the answer" // "42 is the answer"
 0b11, 0b0011 and -0b11 (binary, base 2)
 </pre>
 
-<p>更多資訊請參閱 <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_literals">Numeric literals in the Lexical grammar reference</a>.</p>
+<p>更多資訊請參閱 <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_literals">Numeric literals in the Lexical grammar reference</a>.</p>
 
 <h3 id="浮點數字面值_Floating-point_literals">浮點數字面值 (Floating-point literals)</h3>
 
@@ -411,7 +411,7 @@ y = 42 + " is the answer" // "42 is the answer"
  <li>指數部分</li>
 </ul>
 
-<p>指數部分由「"e" 或 "E" 後面跟整數」所組成，可帶符號 "+" 或 "-" 於整數前。浮點數字面值至少由「一位數字」與「一個小數點 "e" (或 "E")」組成。</p>
+<p>指數部分由「"e" 或 "E" 後面跟整數」所組成，可帶符號 "+" 或 "-" 於整數前。浮點數字面值至少由「一位數字」與「一個小數點 "e" (或 "E")」組成。</p>
 
 <p>簡言之，於法如下：</p>
 
@@ -434,8 +434,8 @@ y = 42 + " is the answer" // "42 is the answer"
 
 <ul>
  <li>第一個屬性 <code>myCar</code> 賦值為字串 '<code>Saturn</code>'</li>
- <li>第二個屬性 <code>getCar</code> 賦值為「調用函數<code>carTypes('Honda')</code>」的結果</li>
- <li>第三個屬性 <code>special </code>使用現有變量 <code>sales</code> 賦值</li>
+ <li>第二個屬性 <code>getCar</code> 賦值為「調用函數<code>carTypes('Honda')</code>」的結果</li>
+ <li>第三個屬性 <code>special </code>使用現有變量 <code>sales</code> 賦值</li>
 </ul>
 
 <pre class="brush: js">var sales = 'Toyota';
@@ -476,7 +476,7 @@ console.log(unusualPropertyNames['!']); // Bang!</pre>
 
 <h4 id="Enhanced_Object_literals">Enhanced Object literals</h4>
 
-<p>In ES2015, object literals are extended to support setting the prototype at construction, shorthand for <code>foo: foo</code> assignments, defining methods, making super calls, and computing property names with expressions. Together, these also bring object literals and class declarations closer together, and let object-based design benefit from some of the same conveniences.</p>
+<p>In ES2015, object literals are extended to support setting the prototype at construction, shorthand for <code>foo: foo</code> assignments, defining methods, making super calls, and computing property names with expressions. Together, these also bring object literals and class declarations closer together, and let object-based design benefit from some of the same conveniences.</p>
 
 <pre class="brush: js">var obj = {
     // __proto__
@@ -527,15 +527,15 @@ console.log(foo['2']); // two
 // In this case, 10.
 </pre>
 
-<p>In ES2015, template literals are also available. Template literals are enclosed by the back-tick (` `)  (<a href="http://en.wikipedia.org/wiki/Grave_accent">grave accent</a>) character instead of double or single quotes. Template strings provide syntactic sugar for constructing strings. This is similar to string interpolation features in Perl, Python and more. Optionally, a tag can be added to allow the string construction to be customized, avoiding injection attacks or constructing higher level data structures from string contents.</p>
+<p>In ES2015, template literals are also available. Template literals are enclosed by the back-tick (` `)  (<a href="http://en.wikipedia.org/wiki/Grave_accent">grave accent</a>) character instead of double or single quotes. Template strings provide syntactic sugar for constructing strings. This is similar to string interpolation features in Perl, Python and more. Optionally, a tag can be added to allow the string construction to be customized, avoiding injection attacks or constructing higher level data structures from string contents.</p>
 
 <pre class="brush: js">// Basic literal string creation
 `In JavaScript '\n' is a line-feed.`
 
 // Multiline strings
 `In JavaScript template strings can run
- over multiple lines, but double and single
- quoted strings cannot.`
+ over multiple lines, but double and single
+ quoted strings cannot.`
 
 // String interpolation
 var name = 'Bob', time = 'today';

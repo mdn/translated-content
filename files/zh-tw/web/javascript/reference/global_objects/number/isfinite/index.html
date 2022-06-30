@@ -53,7 +53,7 @@ Number.isFinite(null);      // false, would've been true with
 <h2 id="Polyfill">Polyfill</h2>
 
 <pre class="brush: js">Number.isFinite = Number.isFinite || function(value) {
-    return typeof value === 'number' &amp;&amp; isFinite(value);
+    return typeof value === 'number' &amp;&amp; isFinite(value);
 }
 </pre>
 

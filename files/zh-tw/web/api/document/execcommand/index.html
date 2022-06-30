@@ -16,7 +16,7 @@ translation_of: Web/API/Document/execCommand
 
 <h3 id="回傳值">回傳值</h3>
 
-<p>如果該指令不被支援或停用將回傳一個 <code>false</code> 的 {{jsxref('Boolean')}} 值。</p>
+<p>如果該指令不被支援或停用將回傳一個 <code>false</code> 的 {{jsxref('Boolean')}} 值。</p>
 
 <div class="note">
 <p><strong>備註</strong>：只有在使用者互動的部分回傳 <code>true</code> 。請不要嘗試在呼叫指令前使用回傳值來確認瀏覽器是否支援。</p>
@@ -30,7 +30,7 @@ translation_of: Web/API/Document/execCommand
  <dt><code>aShowDefaultUI</code></dt>
  <dd>一個 {{jsxref("Boolean")}} 作為指示是否顯示預設的使用者介面。 Mozilla 並未實作這項功能。</dd>
  <dt><code>aValueArgument</code></dt>
- <dd>針對需要提供輸入引數的指令，藉由 {{domxref("DOMString")}} 提供相關的資訊。譬如， <code>insertImage</code> 需要提供圖片的 URL 。若沒有引數的需求則可指定為 <code>null</code> 。</dd>
+ <dd>針對需要提供輸入引數的指令，藉由 {{domxref("DOMString")}} 提供相關的資訊。譬如， <code>insertImage</code> 需要提供圖片的 URL 。若沒有引數的需求則可指定為 <code>null</code> 。</dd>
 </dl>
 
 <h3 id="指令">指令</h3>
@@ -65,7 +65,7 @@ translation_of: Web/API/Document/execCommand
  <dt><code>fontName</code></dt>
  <dd>變更選取區域或插入點的字型名稱。此指令需要字型名稱字串（如「Arial」）作為引數值。</dd>
  <dt><code>fontSize</code></dt>
- <dd>變更選取區域或插入點的字型大小。此指令需要 <code>1</code>-<code>7</code> 的整數作為引數值。</dd>
+ <dd>變更選取區域或插入點的字型大小。此指令需要 <code>1</code>-<code>7</code> 的整數作為引數值。</dd>
  <dt><code>foreColor</code></dt>
  <dd>變更選取區域或插入點的字型色彩。此指令需要十六進位的色彩字串作為引數值。</dd>
  <dt><code>formatBlock</code></dt>
@@ -77,11 +77,11 @@ translation_of: Web/API/Document/execCommand
  <dt><code>hiliteColor</code></dt>
  <dd>變更選取區域或插入點的背景色彩。此指令需要一個色彩字串作為引數值。 <code>useCSS</code> 必須為 <code>true</code> 才能有作用（Internet Explorer 不支援）。</dd>
  <dt><code>increaseFontSize</code></dt>
- <dd>在選取區域或插入點前後加入一個 {{HTMLElement("big")}} 標題（Internet Explorer 不支援）。</dd>
+ <dd>在選取區域或插入點前後加入一個 {{HTMLElement("big")}} 標題（Internet Explorer 不支援）。</dd>
  <dt><code>indent</code></dt>
  <dd>縮排選取區域或插入點所包含的列。在 Firefox ，如果選取的範圍跨越多列且不同的縮排層級，只有選取中最淺層縮排列的才會被縮排。</dd>
  <dt><code>insertBrOnReturn</code></dt>
- <dd>控制 Enter 按鍵按下時在目前區塊元素中插入 {{HTMLElement("br")}} 元素或分割成為兩個元素（Internet Explorer 不支援）。</dd>
+ <dd>控制 Enter 按鍵按下時在目前區塊元素中插入 {{HTMLElement("br")}} 元素或分割成為兩個元素（Internet Explorer 不支援）。</dd>
  <dt><code>insertHorizontalRule</code></dt>
  <dd>在插入點插入一個 {{HTMLElement("hr")}} 元素或以它取代選取的內容。</dd>
  <dt><code>insertHTML</code></dt>
@@ -97,7 +97,7 @@ translation_of: Web/API/Document/execCommand
  <dt><code>insertText</code></dt>
  <dd>在插入點處插入給予的純文字（選取內容將被刪除）。</dd>
  <dt><code>italic</code></dt>
- <dd>切換選取區域或插入點的斜體開關（Internet Explorer 使用 {{HTMLElement("em")}} 元素而不是 {{HTMLElement("i")}} ）。</dd>
+ <dd>切換選取區域或插入點的斜體開關（Internet Explorer 使用 {{HTMLElement("em")}} 元素而不是 {{HTMLElement("i")}} ）。</dd>
  <dt><code>justifyCenter</code></dt>
  <dd>置中對齊選取區域或插入點的內容。</dd>
  <dt><code>justifyFull</code></dt>
@@ -119,9 +119,9 @@ translation_of: Web/API/Document/execCommand
  <dt><code>strikeThrough</code></dt>
  <dd>切換選取區域或插入點的刪除線開關。</dd>
  <dt><code>subscript</code></dt>
- <dd>切換選取區域或插入點的 <a href="/zh-TW/docs/Web/HTML/Element/sub">subscript</a> 開關。</dd>
+ <dd>切換選取區域或插入點的 <a href="/zh-TW/docs/Web/HTML/Element/sub">subscript</a> 開關。</dd>
  <dt><code>superscript</code></dt>
- <dd>切換選取區域或插入點的 <a href="/zh-TW/docs/Web/HTML/Element/sup">superscript</a> 開關。</dd>
+ <dd>切換選取區域或插入點的 <a href="/zh-TW/docs/Web/HTML/Element/sup">superscript</a> 開關。</dd>
  <dt><code>underline</code></dt>
  <dd>切換選取區域或插入點的<a href="/zh-TW/docs/Web/HTML/Element/u">底線</a>開關。</dd>
  <dt><code>undo</code></dt>
@@ -130,7 +130,7 @@ translation_of: Web/API/Document/execCommand
  <dd>從選取的超連結刪除<a href="/zh-TW/docs/Web/HTML/Element/a">錨點元素</a>。</dd>
  <dt><code>useCSS</code> {{Deprecated_inline}}</dt>
  <dd>針對產生的 markup 使用 HTML 標籤或 CSS。此指令需要一個布林值 true/false 作為引數值。</dd>
- <dd>注意：這個引述在邏輯上是反向的（舉例：使用 <code>false</code> 會使用 CSS ，反之使用 <code>true</code> 則使用 HTML 且 Internet Explorer 不支援。這個指令已經被棄用並由 <code>styleWithCSS</code> 取而代之。</dd>
+ <dd>注意：這個引述在邏輯上是反向的（舉例：使用 <code>false</code> 會使用 CSS ，反之使用 <code>true</code> 則使用 HTML 且 Internet Explorer 不支援。這個指令已經被棄用並由 <code>styleWithCSS</code> 取而代之。</dd>
  <dt><code>styleWithCSS</code></dt>
  <dd>取代 <code>useCSS</code> 的指令。 <code>true</code> 會在 markup 修改 / 產生 <code>style</code> 屬性， false 會產生展示用的元素。</dd>
 </dl>

@@ -5,7 +5,7 @@ translation_of: Web/Media/Formats/Containers
 ---
 <div>{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}</div>
 
-<p>視訊與音訊的檔案格式被定義成兩個部分（當然如果一個檔案同時擁有影、音的話，那就有三個）：一個是音訊或/和視訊的編解碼器(codecs，由 compress 和 decompress 所組成的詞語)，另一個是媒體封裝的格式(media container format，即檔案類型)。在本次導覽中，我們將會看到網路上最常見的封裝格式，並介紹它們的基本規格、優點、限制，以及理想的使用情形。</p>
+<p>視訊與音訊的檔案格式被定義成兩個部分（當然如果一個檔案同時擁有影、音的話，那就有三個）：一個是音訊或/和視訊的編解碼器(codecs，由 compress 和 decompress 所組成的詞語)，另一個是媒體封裝的格式(media container format，即檔案類型)。在本次導覽中，我們將會看到網路上最常見的封裝格式，並介紹它們的基本規格、優點、限制，以及理想的使用情形。</p>
 
 <p><a href="/en-US/docs/Web/API/WebRTC_API">網頁即時通訊(WebRTC)</a>並不採用容器(container)，而是以 {{domxref("MediaStreamTrack")}} 物件來表示編碼過的影軌和音軌(一個物件表示一種媒體軌)，直接從一端串流到另一端。你可以參閱 <a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">WebRTC 使用的編解碼器</a>來了解進行 WebRTC 時常用的編解碼器，以及瀏覽器對它們的相容性。</p>
 
@@ -51,12 +51,12 @@ translation_of: Web/Media/Formats/Containers
   <tr>
    <th scope="row"><a href="#mpeg-4_mp4">MPEG-4 (MP4)</a></th>
    <td>Moving Picture Experts Group 4</td>
-   <td>Chrome 3, Edge 12, Firefox, Internet Explorer 9, Opera 24, Safari 3.1</td>
+   <td>Chrome 3, Edge 12, Firefox, Internet Explorer 9, Opera 24, Safari 3.1</td>
   </tr>
   <tr>
    <th scope="row"><a href="#ogg">Ogg</a></th>
    <td>Ogg</td>
-   <td>Chrome 3, Firefox 3.5, Edge 17<sup><a href="#index-foot-3">3</a></sup> (desktop only), Internet Explorer 9, Opera 10.50</td>
+   <td>Chrome 3, Firefox 3.5, Edge 17<sup><a href="#index-foot-3">3</a></sup> (desktop only), Internet Explorer 9, Opera 10.50</td>
   </tr>
   <tr>
    <th scope="row"><a href="#quicktime">QuickTime (MOV)</a></th>
@@ -66,7 +66,7 @@ translation_of: Web/Media/Formats/Containers
   <tr>
    <th scope="row"><a href="#webm">WebM</a></th>
    <td>Web Media</td>
-   <td>Chrome 6, Edge 17<sup><a href="#index-foot-3">3</a></sup> (desktop only), Firefox 4, Opera 10.6, Safari (WebRTC only)</td>
+   <td>Chrome 6, Edge 17<sup><a href="#index-foot-3">3</a></sup> (desktop only), Firefox 4, Opera 10.6, Safari (WebRTC only)</td>
   </tr>
  </tbody>
 </table>
@@ -453,7 +453,7 @@ translation_of: Web/Media/Formats/Containers
 <p>上表是基本的 MPEG-4 媒體型態，依照使用的編解碼器的不同，可能還會有其他型態。此外，當指出 MPEG-4 媒體型態時 (<code>audio/mp4</code> 或 <code>video/mp4</code>)，你可以在媒體型態字串中<a href="/en-US/docs/Web/Media/Formats/codecs_parameter#ISO-BMFF">加上 <code>codecs</code> 參數</a>來指明你的音軌和/或影軌所採用的編解碼器，也可以提供組態(profile)、層級(level)等其他編解碼器的配置細節。</p>
 
 <table class="standard-table">
- <caption> MPEG-4 支援的視訊編解碼器</caption>
+ <caption> MPEG-4 支援的視訊編解碼器</caption>
  <thead>
   <tr>
    <th rowspan="2" scope="row" style="vertical-align: bottom;">編解碼器</th>
@@ -559,7 +559,7 @@ translation_of: Web/Media/Formats/Containers
 
 <h3 id="Ogg">Ogg</h3>
 
-<p>The <strong>{{interwiki("wikipedia", "Ogg")}}</strong> container format is a free and open format maintained by the <a href="https://www.xiph.org/">Xiph.org Foundation</a>. The Ogg framework also defines patent unencumbered media data formats, such as the Theora video codec and the Vorbis and Opus audio codecs. <a href="https://xiph.org/ogg/">Xiph.org documents about the Ogg format</a> are available on their web site.</p>
+<p>The <strong>{{interwiki("wikipedia", "Ogg")}}</strong> container format is a free and open format maintained by the <a href="https://www.xiph.org/">Xiph.org Foundation</a>. The Ogg framework also defines patent unencumbered media data formats, such as the Theora video codec and the Vorbis and Opus audio codecs. <a href="https://xiph.org/ogg/">Xiph.org documents about the Ogg format</a> are available on their web site.</p>
 
 <p>While Ogg has been around for a long time, it has never gained the wide support needed to make it a good first choice for a media container. You are typically better off using WebM, though there are times when Ogg is useful to offer, such as when you wish to support older versions of Firefox and Chrome which don't yet support WebM. For example, Firefox 3.5 and 3.6 support Ogg, but not WebM.</p>
 
@@ -581,7 +581,7 @@ translation_of: Web/Media/Formats/Containers
  </tbody>
 </table>
 
-<p>The <code>application/ogg</code> MIME type can be used when you don't necessarily know whether the media contains audio or video. If at all possible, you should use one of the specific types, but fall back to <code>application/ogg</code> if you don't know the content format or formats.</p>
+<p>The <code>application/ogg</code> MIME type can be used when you don't necessarily know whether the media contains audio or video. If at all possible, you should use one of the specific types, but fall back to <code>application/ogg</code> if you don't know the content format or formats.</p>
 
 <p>You can also <a href="/en-US/docs/Web/Media/Formats/codecs_parameter#Ogg">add the <code>codecs</code> parameter</a> to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally further describe the track media formats.</p>
 
@@ -667,7 +667,7 @@ translation_of: Web/Media/Formats/Containers
 
 <p>The <strong>QuickTime</strong> file format (<strong>QTFF</strong>, <strong>QT</strong>, or <strong>MOV</strong>) was created by Apple for use by its media framework of the same name. The extension for these files, <code>.mov</code>, comes from the fact that the format was initially used for movies and was usually called the "QuickTime movie" format. While QTFF served as the basis for the MPEG-4 file format, there are differences and the two are not quite interchangeable.</p>
 
-<p>QuickTime files support any sort of time-based data, including audio and video media, text tracks, and so forth. QuickTime files are primarily supported by macOS, but for a number of years, QuickTime for Windows was available to access them on Windows. However, QuickTime for Windows is no longer supported by Apple as of early 2016, and <em>should not be used</em>, as there are known security concerns. However, Windows Media Player now has integrated support for  QuickTime version 2.0 and earlier files; support for later versions of QuickTime requires third-party additions.</p>
+<p>QuickTime files support any sort of time-based data, including audio and video media, text tracks, and so forth. QuickTime files are primarily supported by macOS, but for a number of years, QuickTime for Windows was available to access them on Windows. However, QuickTime for Windows is no longer supported by Apple as of early 2016, and <em>should not be used</em>, as there are known security concerns. However, Windows Media Player now has integrated support for  QuickTime version 2.0 and earlier files; support for later versions of QuickTime requires third-party additions.</p>
 
 <p>On Mac OS, the QuickTime framework not only supported QuickTime format movie files and codecs, but supported a vast array of popular and specialty audio and video codecs, as well as still image formats. Through QuickTime, Mac applications (including web browsers, through the QuickTime plugin or direct QuickTime integration) were able to read and write audio formats including AAC, AIFF, MP3, PCM, and Qualcomm PureVoice; and video formats including AVI, DV, Pixlet, ProRes, FLAC, Cinepak, 3GP, H.261 through H.265, MJPEG, MPEG-1 and MPEG-4 Part 2, Sorenson, and many more.</p>
 
@@ -859,7 +859,7 @@ translation_of: Web/Media/Formats/Containers
 
 <p>The <strong>Waveform Audio File Format</strong> (<strong>WAVE</strong>), usually referred to simply as WAV due to its filename extension being <code>.wav</code>, is a format developed by Microsoft and IBM to store audio bitstream data.</p>
 
-<p>It is derived from the Resource Interchange File Format (RIFF), and as such is similar to other formats such as Apple's AIFF. The WAV codec registry can be found at {{RFC(2361)}}; however, because nearly all WAV files use linear PCM, support for the other codecs is sparse.</p>
+<p>It is derived from the Resource Interchange File Format (RIFF), and as such is similar to other formats such as Apple's AIFF. The WAV codec registry can be found at {{RFC(2361)}}; however, because nearly all WAV files use linear PCM, support for the other codecs is sparse.</p>
 
 <p>The WAVE format was first released in 1991.</p>
 
@@ -886,7 +886,7 @@ translation_of: Web/Media/Formats/Containers
  </tbody>
 </table>
 
-<p><a id="wave-foot-1" name="wave-foot-1">[1]</a> The <code>audio/wave</code> MIME type is the standard type, and is preferred; however, the others have been used by various products over the years and may be used as well in some environments. </p>
+<p><a id="wave-foot-1" name="wave-foot-1">[1]</a> The <code>audio/wave</code> MIME type is the standard type, and is preferred; however, the others have been used by various products over the years and may be used as well in some environments. </p>
 
 <table class="standard-table">
  <caption>Audio codecs supported by WAVE</caption>
@@ -945,7 +945,7 @@ translation_of: Web/Media/Formats/Containers
 
 <p><strong>{{interwiki("wikipedia", "WebM")}}</strong> (<strong>Web Media</strong>) is a format based on {{interwiki("wikipedia", "Matroska")}} which is designed specifically for use in modern web environments. It's based entirely on free and open technologies and primarily uses codecs that are in turn free and open, although some products support other codecs in WebM containers as well.</p>
 
-<p>WebM was first introduced in 2010 and is now widely supported. Compliant implementations of WebM are required to support the VP8 and VP8 video codecs and the Theora and Opus audio codecs. The WebM container format and its required codecs are all available under open licenses. Any other codecs may require a license to use.</p>
+<p>WebM was first introduced in 2010 and is now widely supported. Compliant implementations of WebM are required to support the VP8 and VP8 video codecs and the Theora and Opus audio codecs. The WebM container format and its required codecs are all available under open licenses. Any other codecs may require a license to use.</p>
 
 <table class="standard-table">
  <caption>WebM media MIME types</caption>
@@ -1315,7 +1315,7 @@ translation_of: Web/Media/Formats/Containers
  </tbody>
 </table>
 
-<h2 id="See_also"> See also</h2>
+<h2 id="See_also"> See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>

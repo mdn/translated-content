@@ -47,7 +47,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Using_images
 
 <p>有好幾種方法能夠取得影像用於畫布.</p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="使用同一份網頁上的影像">使用同一份網頁上的影像</h3>
 
@@ -103,7 +103,7 @@ img.src = 'myImage.png'; // Set source path
 
 <h3 id="Using_frames_from_a_video">Using frames from a video</h3>
 
-<p>我們還能夠使用{{HTMLElement("video")}}元素中的影片的影片畫格(縱使影片為隱藏)，例如，現在我們有一個ID為”myvideo” 的{{HTMLElement("video")}}元素:</p>
+<p>我們還能夠使用{{HTMLElement("video")}}元素中的影片的影片畫格(縱使影片為隱藏)，例如，現在我們有一個ID為”myvideo” 的{{HTMLElement("video")}}元素:</p>
 
 <pre class="brush: js">function getMyVideo() {
   var canvas = document.getElementById('canvas');
@@ -133,26 +133,26 @@ img.src = 'myImage.png'; // Set source path
 
 <div class="hidden">
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="180" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="180" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>
 
 <pre class="brush: js">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var img = new Image();
-  img.onload = function(){
-    ctx.drawImage(img,0,0);
-    ctx.beginPath();
-    ctx.moveTo(30,96);
-    ctx.lineTo(70,66);
-    ctx.lineTo(103,76);
-    ctx.lineTo(170,15);
-    ctx.stroke();
-  };
-  img.src = 'https://mdn.mozillademos.org/files/5395/backdrop.png';
+  var ctx = document.getElementById('canvas').getContext('2d');
+  var img = new Image();
+  img.onload = function(){
+    ctx.drawImage(img,0,0);
+    ctx.beginPath();
+    ctx.moveTo(30,96);
+    ctx.lineTo(70,66);
+    ctx.lineTo(103,76);
+    ctx.lineTo(170,15);
+    ctx.stroke();
+  };
+  img.src = 'https://mdn.mozillademos.org/files/5395/backdrop.png';
 }</pre>
 
 <p>結果如下:</p>
@@ -178,24 +178,24 @@ img.src = 'myImage.png'; // Set source path
 
 <div class="hidden">
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>
 
 <pre class="brush: js">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var img = new Image();
-  img.onload = function(){
-    for (var i=0;i&lt;4;i++){
-      for (var j=0;j&lt;3;j++){
-        ctx.drawImage(img,j*50,i*38,50,38);
-      }
-    }
-  };
-  img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+  var ctx = document.getElementById('canvas').getContext('2d');
+  var img = new Image();
+  img.onload = function(){
+    for (var i=0;i&lt;4;i++){
+      for (var j=0;j&lt;3;j++){
+        ctx.drawImage(img,j*50,i*38,50,38);
+      }
+    }
+  };
+  img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
 }</pre>
 
 <p>結果如下:</p>
@@ -215,22 +215,22 @@ img.src = 'myImage.png'; // Set source path
 
 <p>切割是一個很有用的工具，我們可以把所有影像放到一張影像上，然後利用切割來組成最終完整的影像，比如說，我們可以把所有需要用來組成一張圖表的文字放到一張PNG圖檔內，之後只需要單純地再依據資料來縮放圖表，另外，我們也不用多次載入多張影像，這樣對提升載入影像效能頗有幫助.</p>
 
-<p> </p>
+<p> </p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="範例_畫一個有畫框的影像">範例: 畫一個有畫框的影像</h3>
 
 <p>本例用和前一個範例一樣的犀牛圖，然後切出犀牛頭部影像部分再放入一個影像畫框，這個影像畫框是一個有陰影的24位元PNG圖檔，因為24位元PNG影像具備完整的8位元不透明色版(alpha channel)，所以不像GIF影像和8位元PNG影像，它能夠放任何背景之上而無須擔心產生消光色(matte color).</p>
 
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
    &lt;div style="display:none;"&gt;
      &lt;img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227"&gt;
      &lt;img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150"&gt;
    &lt;/div&gt;
- &lt;/body&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 
@@ -261,23 +261,23 @@ img.src = 'myImage.png'; // Set source path
 <p>從下方的程式碼範例可以很清楚看到，我們為{{domxref("document.images")}}容器內的影像，一張一張地新建畫布，其中，對於不熟悉文件物件模型 (DOM)的人來說，大慨比較值得注意之處在於使用到{{domxref("Node.insertBefore")}} 方法；insertBefore()是影像元素的父節點(亦即&lt;td&gt;元素)的一個方法，這個方法會把新畫布元素插入於影像元素之前.</p>
 
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-     &lt;table&gt;
-      &lt;tr&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5399/gallery_1.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5401/gallery_2.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5403/gallery_3.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5405/gallery_4.jpg"&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5407/gallery_5.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5409/gallery_6.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5411/gallery_7.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5413/gallery_8.jpg"&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-     &lt;/table&gt;
+ &lt;body onload="draw();"&gt;
+     &lt;table&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5399/gallery_1.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5401/gallery_2.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5403/gallery_3.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5405/gallery_4.jpg"&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5407/gallery_5.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5409/gallery_6.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5411/gallery_7.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5413/gallery_8.jpg"&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+     &lt;/table&gt;
      &lt;img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150"&gt;
- &lt;/body&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 

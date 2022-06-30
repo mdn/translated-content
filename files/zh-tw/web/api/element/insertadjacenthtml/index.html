@@ -5,7 +5,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><code>insertAdjacentHTML()</code> 把傳入的字串解析成 HTML 或 XML，並把該節點插入到 DOM 樹指定的位置。它不會重新解析被使用的元素，因此他不會破壞該元素裡面原有的元素。這避免了序列化的複雜步驟，使得它比直接操作  <code>innerHTML</code> 快上許多。</p>
+<p><code>insertAdjacentHTML()</code> 把傳入的字串解析成 HTML 或 XML，並把該節點插入到 DOM 樹指定的位置。它不會重新解析被使用的元素，因此他不會破壞該元素裡面原有的元素。這避免了序列化的複雜步驟，使得它比直接操作  <code>innerHTML</code> 快上許多。</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -17,14 +17,14 @@ translation_of: Web/API/Element/insertAdjacentHTML
  <dt>position</dt>
  <dd>A {{domxref("DOMString")}} representing the position relative to the <code>element</code>; must be one of the following strings:
  <ul>
-  <li><code style="color: red;">'beforebegin'</code>: 在 <code>element</code> 之前。</li>
-  <li><code style="color: green;">'afterbegin'</code>: 在 <code>element</code> 裡面，第一個子元素之前。</li>
-  <li><code style="color: blue;">'beforeend'</code>: 在 <code>element</code> 裡面，最後一個子元素之後。</li>
-  <li><code style="color: magenta;">'afterend'</code>: 在 <code>element</code> 之後。</li>
+  <li><code style="color: red;">'beforebegin'</code>: 在 <code>element</code> 之前。</li>
+  <li><code style="color: green;">'afterbegin'</code>: 在 <code>element</code> 裡面，第一個子元素之前。</li>
+  <li><code style="color: blue;">'beforeend'</code>: 在 <code>element</code> 裡面，最後一個子元素之後。</li>
+  <li><code style="color: magenta;">'afterend'</code>: 在 <code>element</code> 之後。</li>
  </ul>
  </dd>
  <dt>text</dt>
- <dd><code>text</code> 是即將被解析並插入到 DOM 樹裡的字串。</dd>
+ <dd><code>text</code> 是即將被解析並插入到 DOM 樹裡的字串。</dd>
 </dl>
 
 <h3 id="Visualization_of_position_names">Visualization of position names</h3>
@@ -37,7 +37,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 &lt;/p&gt;
 &lt;!-- afterend --&gt;</pre>
 
-<div class="note"><strong>Note: </strong> <code>beforebegin</code> 和 <code>afterend</code> 只在該節點位於 DOM 樹內、並且有母元素時有效。</div>
+<div class="note"><strong>Note: </strong> <code>beforebegin</code> 和 <code>afterend</code> 只在該節點位於 DOM 樹內、並且有母元素時有效。</div>
 
 <h2 id="Example">Example</h2>
 
