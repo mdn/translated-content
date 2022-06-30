@@ -12,13 +12,13 @@ translation_of: Web/Security/Same-origin_policy
 ---
 <p><strong>同源策略</strong>是一个重要的安全策略，它用于限制一个{{Glossary("origin")}}的文档或者它加载的脚本如何能与另一个源的资源进行交互。它能帮助阻隔恶意文档，减少可能被攻击的媒介。</p>
 
-<h2 id="同源的定义"><strong>同源</strong>的<strong>定义</strong></h2>
+<h2 id="同源的定义">同源的定义</h2>
 
 <p>如果两个 URL 的 {{Glossary("protocol")}}、{{Glossary("port")}} (如果有指定的话) 和 {{Glossary("host")}} 都相同的话，则这两个 URL 是<em>同源</em>。这个方案也被称为“协议/主机/端口元组”，或者直接是 “元组”。（“元组” 是指一组项目构成的整体，双重/三重/四重/五重/等的通用形式）。</p>
 
 <p>下表给出了与 URL <code>http://store.company.com/dir/page.html</code> 的源进行对比的示例：</p>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <th>URL</th>
@@ -58,7 +58,7 @@ translation_of: Web/Security/Same-origin_policy
 <p>在页面中通过 <code>about:blank</code> 或 <code>javascript:</code> URL 执行的脚本会继承打开该 URL 的文档的源，因为这些类型的 URLs 没有包含源服务器的相关信息。</p>
 
 <div class="blockIndicator note">
-<p>例如，<code>about:blank</code> 通常作为父脚本写入内容的新的空白弹出窗口的 URL（例如，通过  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open">Window.open()</a>  ）。 如果此弹出窗口也包含 JavaScript，则该脚本将从创建它的脚本那里继承对应的源。</p>
+<p>例如，<code>about:blank</code> 通常作为父脚本写入内容的新的空白弹出窗口的 URL（例如，通过  <a href="/zh-CN/docs/Web/API/Window/open">Window.open()</a>）。如果此弹出窗口也包含 JavaScript，则该脚本将从创建它的脚本那里继承对应的源。</p>
 </div>
 
 <div class="note">
@@ -114,19 +114,19 @@ translation_of: Web/Security/Same-origin_policy
  <li><code>&lt;link rel="stylesheet" href="..."&gt;</code> 标签嵌入 CSS。由于 CSS 的<a href="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html">松散的语法规则</a>，CSS 的跨域需要一个设置正确的 HTTP 头部 <code>Content-Type</code> 。不同浏览器有不同的限制： <a href="http://msdn.microsoft.com/zh-CN/library/ie/gg622939%28v=vs.85%29.aspx">IE</a>, <a href="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html" title="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html">Firefox</a>, <a href="http://code.google.com/p/chromium/issues/detail?id=9877" title="http://code.google.com/p/chromium/issues/detail?id=9877">Chrome</a>, <a href="http://support.apple.com/kb/HT4070">Safari</a> (跳至 CVE-2010-0051) 部分 和 <a href="http://www.opera.com/support/kb/view/943/">Opera</a>。</li>
  <li>通过 {{htmlelement("img")}} 展示的图片。支持的图片格式包括 PNG,JPEG,GIF,BMP,SVG,...</li>
  <li>通过 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 播放的多媒体资源。</li>
- <li>通过 <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/object" title="HTML/Element/object">&lt;object&gt;</a></code>、 <a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/embed" title="HTML/Element/embed"><code>&lt;embed&gt;</code></a> 和 <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/applet" title="HTML/Element/applet">&lt;applet&gt;</a></code> 嵌入的插件。</li>
- <li>通过 <code><a href="https://developer.mozilla.org/zh-CN/docs/CSS/@font-face" title="CSS/@font-face">@font-face</a></code> 引入的字体。一些浏览器允许跨域字体（cross-origin fonts），一些需要同源字体（same-origin fonts）。</li>
- <li>通过 <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/iframe" title="HTML/Element/iframe">&lt;iframe&gt;</a></code> 载入的任何资源。站点可以使用 <a href="https://developer.mozilla.org/zh-CN/docs/HTTP/X-Frame-Options" title="HTTP/X-Frame-Options">X-Frame-Options</a> 消息头来阻止这种形式的跨域交互。</li>
+ <li>通过 <code><a href="/zh-CN/docs/HTML/Element/object">&lt;object&gt;</a></code>、 <a href="/zh-CN/docs/HTML/Element/embed"><code>&lt;embed&gt;</code></a> 和 <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/applet" title="HTML/Element/applet">&lt;applet&gt;</a></code> 嵌入的插件。</li>
+ <li>通过 <code><a href="/zh-CN/docs/CSS/@font-face">@font-face</a></code> 引入的字体。一些浏览器允许跨域字体（cross-origin fonts），一些需要同源字体（same-origin fonts）。</li>
+ <li>通过 <code><a href="/zh-CN/docs/HTML/Element/iframe">&lt;iframe&gt;</a></code> 载入的任何资源。站点可以使用 <a href="/zh-CN/docs/HTTP/X-Frame-Options">X-Frame-Options</a> 消息头来阻止这种形式的跨域交互。</li>
 </ul>
 
-<h3 id="如何允许跨源访问"><strong>如何允许跨源访问</strong></h3>
+<h3 id="如何允许跨源访问">如何允许跨源访问</h3>
 
-<p>可以使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS">CORS</a> 来允许跨源访问。CORS 是 {{Glossary("HTTP")}} 的一部分，它允许服务端来指定哪些主机可以从这个服务端加载资源。</p>
+<p>可以使用 <a href="/zh-CN/docs/Web/HTTP/CORS">CORS</a> 来允许跨源访问。CORS 是 {{Glossary("HTTP")}} 的一部分，它允许服务端来指定哪些主机可以从这个服务端加载资源。</p>
 
-<h3 id="如何阻止跨源访问"><strong>如何阻止跨源访问</strong></h3>
+<h3 id="如何阻止跨源访问">如何阻止跨源访问</h3>
 
 <ul>
- <li>阻止跨域写操作，只要检测请求中的一个不可推测的标记 (CSRF token) 即可，这个标记被称为 <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29">Cross-Site Request Forgery (CSRF)</a> 标记。你必须使用这个标记来阻止页面的跨站读操作。</li>
+ <li>阻止跨域写操作，只要检测请求中的一个不可推测的标记 (CSRF token) 即可，这个标记被称为 <a href="https://owasp.org/www-community/attacks/csrf">Cross-Site Request Forgery (CSRF)</a> 标记。你必须使用这个标记来阻止页面的跨站读操作。</li>
  <li>阻止资源的跨站读取，需要保证该资源是不可嵌入的。阻止嵌入行为是必须的，因为嵌入资源通常向其暴露信息。</li>
  <li>阻止跨站嵌入，需要确保你的资源不能通过以上列出的可嵌入资源格式使用。浏览器可能不会遵守 <code>Content-Type</code> 头部定义的类型。例如，如果您在 HTML 文档中指定 <code>&lt;script&gt;</code> 标记，则浏览器将尝试将标签内部的 HTML 解析为 JavaScript。 当您的资源不是您网站的入口点时，您还可以使用 CSRF 令牌来防止嵌入。</li>
 </ul>
@@ -141,9 +141,9 @@ translation_of: Web/Security/Same-origin_policy
 
 <h3 id="Window">Window</h3>
 
-<p> 允许以下对 <code>Window</code> 属性的跨源访问：</p>
+<p>允许以下对 <code>Window</code> 属性的跨源访问：</p>
 
-<table class="fullwidth-table standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">方法</th>
@@ -165,7 +165,7 @@ translation_of: Web/Security/Same-origin_policy
  </tbody>
 </table>
 
-<table class="fullwidth-table standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">属性</th>
@@ -218,7 +218,7 @@ translation_of: Web/Security/Same-origin_policy
 
 <p>允许以下对 <code>Location</code> 属性的跨源访问：</p>
 
-<table class="fullwidth-table standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">方法</th>
@@ -231,7 +231,7 @@ translation_of: Web/Security/Same-origin_policy
  </tbody>
 </table>
 
-<table class="fullwidth-table standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">属性</th>
@@ -261,12 +261,8 @@ translation_of: Web/Security/Same-origin_policy
  <li><a href="http://web.dev/secure/same-origin-policy">http://web.dev/secure/same-origin-policy</a></li>
 </ul>
 
-<div class="originaldocinfo">
 <h2 id="Original_Document_Information" name="Original_Document_Information">原始文件资料</h2>
 
 <ul>
  <li>Author(s): Jesse Ruderman</li>
 </ul>
-</div>
-
-<div class="noinclude"></div>
