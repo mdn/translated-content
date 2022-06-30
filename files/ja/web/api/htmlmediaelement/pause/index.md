@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.pause()
 slug: Web/API/HTMLMediaElement/pause
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -8,52 +9,35 @@ tags:
   - Method
   - Reference
   - Video
+browser-compat: api.HTMLMediaElement.pause
 translation_of: Web/API/HTMLMediaElement/pause
 ---
 {{APIRef("HTML DOM")}}
 
-<span class="seoSummary">**`HTMLMediaElement.pause()`** メソッドはメディアの再生を一時停止します。 メディアがすでに一時停止状態にある場合、このメソッドは効果がありません。</span>
+**`HTMLMediaElement.pause()`** メソッドはメディアの再生を一時停止します。 メディアがすでに一時停止状態にある場合、このメソッドは効果がありません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>HTMLMediaElement</em>.pause()</pre>
+```js
+pause()
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### 引数
 
-無し。
+なし。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 返値
 
-無し。
+なし ({{jsxref("undefined")}})。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-無し。
+なし。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>仕様</th>
-   <th>状態</th>
-   <th>コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#dom-media-pause', 'pause()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義; リビング仕様</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C','embedded-content-0.html#dom-media-pause','pause()')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-{{Compat("api.HTMLMediaElement.pause")}}
+{{Compat}}

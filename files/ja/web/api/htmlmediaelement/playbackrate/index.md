@@ -1,12 +1,13 @@
 ---
 title: HTMLMediaElement.playbackRate
 slug: Web/API/HTMLMediaElement/playbackRate
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
   - HTMLMediaElement
   - Property
-  - プロパティ
+browser-compat: api.HTMLMediaElement.playbackRate
 translation_of: Web/API/HTMLMediaElement/playbackRate
 ---
 {{APIRef("HTML DOM")}}
@@ -15,57 +16,29 @@ translation_of: Web/API/HTMLMediaElement/playbackRate
 
 `playbackRate` が負の数であれば、メディアは逆方向に再生されます。
 
-音声は、逆方向の再生であったり、早送りやスロー再生が実用的な範囲を外れていた場合 (例えば、 Gecko は `0.25` から `5.0` の範囲であれば) ミュートされます。
+音声は、逆方向の再生であったり、早送りやスロー再生が実用的な範囲を外れていた場合（例えば、 Gecko では `0.25` から `4.0` の範囲であれば）ミュートされます。
 
-既定では音声の高さが修正され、どの速度でも同じになります。ブラウザーによっては、これを制御するために標準外の `preservespitch` プロパティを実装しています。
+既定の設定では、音声のピッチが補正されます。ピッチ補正は {{domxref("HTMLMediaElement.preservesPitch")}} プロパティで無効にすることができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="brush: js">// 動画
-<var>video</var>.playbackRate = 1.5;
-// 音声
-<var>audio</var>.playbackRate = 1.0;
-</pre>
+[`double`](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) 値です。 `1.0` は「通常の速度」で、 `1.0` より小さければ通常より遅く、大きければ通常より早く再生されます。（**既定値:** `1.0`）
 
-<h3 id="Value" name="Value">値</h3>
+## 例
 
-`[double](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)` 型。 `1.0` は「通常の速度」で、 `1.0` より小さければ通常より遅く、大きければ通常より早く再生されます。 (**既定値:** `1.0`)
+```js
+var obj = document.createElement('video');
+console.log(obj.playbackRate); // Expected Output: 1
+```
 
-<h2 id="Example" name="Example">例</h2>
+## 仕様書
 
-<pre class="brush: js">var obj = document.createElement('video');
-console.log(obj.playbackRate); // Expected Output: 1</pre>
+{{Specifications}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## ブラウザーの互換性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#dom-media-playbackrate", "HTMLMediaElement.playbackRate")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.playbackRate")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## 関連情報
 
-{{Compat("api.HTMLMediaElement.playbackRate")}}
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("HTMLMediaElement")}} で定義しています。</li>
-</ul>
+- 定義している {{domxref("HTMLMediaElement")}} インターフェイス

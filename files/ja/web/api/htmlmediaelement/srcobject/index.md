@@ -1,84 +1,97 @@
 ---
-title: HTMLMedia​Element​.src​Object
+title: HTMLMediaElement.srcObject
 slug: Web/API/HTMLMediaElement/srcObject
+page-type: web-api-instance-property
 tags:
   - API
-  - DOM
   - HTML
   - HTML DOM
   - HTMLMediaElement
   - Media
+  - Property
   - Reference
   - srcObject
+browser-compat: api.HTMLMediaElement.srcObject
 translation_of: Web/API/HTMLMediaElement/srcObject
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary">{{domxref("HTMLMediaElement")}} インターフェイスの <strong><code>srcObject</code></strong> プロパティは {{domxref("HTMLMediaElement")}} に関連付けられたメディアソースを提供するオブジェクトを設定または取得します。</span> このオブジェクトは {{domxref("MediaStream")}}、{{domxref("MediaSource")}}、{{domxref("Blob")}} や(Blobから派生している) {{domxref("File")}} です。</p>
+**`srcObject`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、 {{domxref("HTMLMediaElement")}} に関連付けられたメディアソースを提供するオブジェクトを設定または取得します。
 
-<div class="note">
-<p><strong>注</strong>: 2017年11月現在、ブラウザーは <code>MediaStream</code> のみをサポートしています。 <code>MediaSource</code>、<code>Blob</code>、および <code>File</code> の場合は、{{domxref("URL.createObjectURL()")}} を使用して URL を作成し、それを {{domxref("HTMLMediaElement.src")}} に割り当てる必要があります。 例として以下を参照してください。</p>
-</div>
+このオブジェクトは {{domxref("MediaStream")}}、{{domxref("MediaSource")}}、{{domxref("Blob")}} や（Blob から派生している） {{domxref("File")}} です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+> **Note:** 2020 年 3 月現在、 Safari のみが `MediaStream` 以外のオブジェクトを設定することに対応しています。他のブラウザーが追いつくまで、 `MediaSource`、`Blob`、および `File` の場合は、{{domxref("URL.createObjectURL()")}} を使用して URL を作成し、それを {{domxref("HTMLMediaElement.src")}} に割り当てる必要があります。以下の例を参照してください。
 
-<pre class="syntaxbox">var <em>sourceObject</em> = <em>HTMLMediaElement</em>.srcObject;
+## 値
 
-<em>HTMLMediaElement</em>.srcObject = <em>sourceObject</em>;
-</pre>
+{{domxref('MediaStream')}}、{{domxref('MediaSource')}}、{{domxref('Blob')}}、{{domxref('File')}} オブジェクト。（実際に何が対応されているのかは互換性一覧表を確認してください。)
 
-<h3 id="Value" name="Value">値</h3>
+## 使用上の注意
 
-<p>{{domxref('MediaStream')}}、{{domxref('MediaSource')}}、{{domxref('Blob')}}、{{domxref('File')}} オブジェクト。(実際に何がサポートされているのかは互換性テーブルを確認してください。)</p>
+メディアソース仕様書の古いバージョンでは、オブジェクト URL を作成するために {{domxref("URL.createObjectURL", "createObjectURL()")}} を使用してから、その URL を {{domxref("HTMLMediaElement.src", "src")}} に設定する必要がありました。 現在は、{{domxref("MediaStream")}} を `srcObject` に直接設定できます。
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+## 例
 
-<p>メディアソース仕様の古いバージョンでは、オブジェクト URL を作成するために {{domxref("URL.createObjectURL", "createObjectURL()")}} を使用してから、その URL を {{domxref("HTMLMediaElement.src", "src")}} に設定する必要がありました。 現在は、{{domxref("MediaStream")}} を <code>srcObject</code> に直接設定できます。</p>
+### 基本的な例
 
-<h2 id="Examples" name="Examples">例</h2>
+この例では、メディアソースを新しく作成した {{HTMLElement("video")}} 要素に割り当てています。
 
-<h3 id="Basic_example" name="Basic_example">基本的な例</h3>
-
-<p>この例では、メディアソースを新しく作成した {{HTMLElement("video")}} 要素に割り当てています。</p>
-
-<pre class="brush: js">const mediaSource = new MediaSource();
+```js
+const mediaStream = await navigator.mediaDevices.getUserMedia({video: true});
 const video = document.createElement('video');
-video.srcObject = mediaSource;</pre>
+video.srcObject = mediaStream;
+```
 
-<h3 id="Supporting_fallback_to_the_src_property" name="Supporting_fallback_to_the_src_property">src プロパティへの代替をサポート</h3>
+この例では、新しい {{domxref('MediaSource')}} が新しく作成された {{HTMLElement("video")}} に割り当てられます。
 
-<p>上記の例のこのバージョンは、古いバージョンのブラウザーをサポートしています。 それは <code>srcObject</code> をサポートしていない場合に、オブジェクト URL を作成して、それを <code>src</code> に割り当てる必要があります。</p>
-
-<pre class="brush:js">const mediaSource = new MediaSource();
+```js
+const mediaSource = new MediaSource();
 const video = document.createElement('video');
-// 古いブラウザーは srcObject を持っていないかもしれません。
+video.srcObject = mediaSource;
+```
+
+### src プロパティへの代替の対応
+
+以下の例では、 `srcObject` に対応していない場合、オブジェクト URL を作成して `src` に代入する必要がある古いバージョンのブラウザーに対応しています。
+
+最初に、カメラから取得した {{domxref("MediaStream")}} を新しく生成した {{HTMLElement("video")}} 要素に、古いブラウザーへの代替手段つきで割り当てます。
+
+```js
+const mediaStream = await navigator.mediaDevices.getUserMedia({video: true});
+const video = document.createElement('video');
 if ('srcObject' in video) {
-  video.srcObject = mediaSource;
+  video.srcObject = mediaStream;
 } else {
-  // これは消えつつあるので、新しいブラウザーで使用しないでください。
+  // この機能はなくなる予定であるため、新しいブラウザーでは使用を避けてください。
+  video.src = URL.createObjectURL(mediaStream);
+}
+```
+
+次に、新しく作成された {{HTMLElement("video")}} 要素に、古いブラウザーや {{domxref('MediaSource')}} の割り当てにまだ対応していないブラウザーのための代替手段を直接割り当てます。
+
+```js
+const mediaSource = new MediaSource();
+const video = document.createElement('video');
+// 古いブラウザーの場合、srcObject がない場合があります。
+if ('srcObject' in video) {
+  try {
+    video.srcObject = mediaSource;
+  } catch (err) {
+    if (err.name != "TypeError") {
+      throw err;
+    }
+    // 対応していても、 MediaStream にしか対応していない場合があります。
+    video.src = URL.createObjectURL(mediaSource);
+  }
+} else {
   video.src = URL.createObjectURL(mediaSource);
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#dom-media-srcobject', 'srcObject')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.HTMLMediaElement.srcObject")}}</p>
+{{Compat}}

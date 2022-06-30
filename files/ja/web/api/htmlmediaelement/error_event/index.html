@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: error イベント'
 slug: Web/API/HTMLMediaElement/error_event
+page-type: web-api-event
 tags:
   - API
   - Error
@@ -8,79 +9,60 @@ tags:
   - HTMLMediaElement
   - Reference
   - Web
-  - イベント
+browser-compat: api.HTMLMediaElement.error_event
 translation_of: Web/API/HTMLMediaElement/error_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>error</code></strong> イベントは、リソースがエラーのために読み込めなかったときに発生します (例えば、ネットワーク接続の問題など)。</p>
+**`error`** イベントは、リソースがエラーのために読み込めなかったときに発生します（例えば、ネットワーク接続の問題など）。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>いいえ</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers/onerror", "onerror")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onerror", "onerror")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">const video = document.querySelector('video');
+```js
+const video = document.querySelector('video');
 const videoSrc = 'https://path/to/video.webm';
 
-video.addEventListener('error', () =&gt; {
+video.addEventListener('error', () => {
   console.error(`Error loading: ${videoSrc}`);
 });
 
-const source = document.createElement('source');
-source.setAttribute('src', videoSrc);
-source.setAttribute('type', 'video/webm');
+video.setAttribute('src', videoSrc);
+```
 
-video.appendChild(source);</pre>
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-error")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-error")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{Compat}}
 
-<p>{{Compat("api.HTMLMediaElement.error_event")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("HTMLAudioElement")}}</li>
- <li>{{domxref("HTMLVideoElement")}}</li>
- <li>{{HTMLElement("audio")}}</li>
- <li>{{HTMLElement("video")}}</li>
-</ul>
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}

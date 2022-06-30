@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.onerror
 slug: Web/API/HTMLMediaElement/onerror
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -13,48 +14,28 @@ tags:
   - Reference
   - Video
   - onerror
+browser-compat: api.HTMLMediaElement.onerror
 translation_of: Web/API/HTMLMediaElement/onerror
 ---
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLMediaElement")}} インターフェースの **`onerror`** プロパティは、{{event("error")}} イベントを処理するための {{event("Event_handlers", "event handler")}} です。
+**`onerror`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、 {{domxref("HTMLMediaElement/error_event", "error")}} イベントを処理するための[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)です。
 
 `error` イベントは、メディアを読み込んだり実行しようとしたときに何らかのエラーが発生したときに発生します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox"><em>HTMLMediaElement</em>.onerror = <em>EventListener</em>;</pre>
+{{jsxref("function")}} で、 {{domxref("HTMLMediaElement/error_event", "error")}} イベントのイベントハンドラーとして機能するものです。エラーが発生すると、指定した関数が呼び出されます。 `null` の場合、エラーハンドラーは無効です。
 
-<h3 id="Value" name="Value">値</h3>
+## 仕様書
 
-{{event("error")}} イベントのイベントハンドラとして機能する {{jsxref("function")}}。 エラーが発生すると、指定した関数が呼び出されます。 `null` の場合、エラーハンドラは無効です。
+{{Specifications}}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## ブラウザーの互換性
 
-<table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onerror','onerror')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## 関連情報
 
-
-
-{{Compat("api.HTMLMediaElement.onerror")}}
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("HTMLMediaElement")}}</li>
- <li>{{HTMLElement("audio")}} と {{HTMLElement("video")}}</li>
-</ul>
+- {{domxref("HTMLMediaElement")}}
+- {{HTMLElement("audio")}} および {{HTMLElement("video")}}
