@@ -9,7 +9,7 @@ translation_of: Web/API/RTCPeerConnection/removeStream
 
 <p>当 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 的值为 <code>"closed"</code> 时，将抛出<code>InvalidStateError</code> 异常。当 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 值为 <code>"stable"</code> 时， 将触发 {{domxref("RTCPeerConnection")}} 的 {{event("negotiationneeded")}} 事件。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><em>pc</em>.removeStream(<em>mediaStream</em>);
 </code></pre>
@@ -18,14 +18,14 @@ translation_of: Web/API/RTCPeerConnection/removeStream
  <i>此方法没有返回值。</i>
 </p>
 
-<h3 id="Example" name="Example">参数</h3>
+<h3 id="Example">参数</h3>
 
 <dl>
  <dt><em>mediaStream</em></dt>
  <dd>是 {{domxref("MediaStream")}} 类型的表示要移除的媒体流</dd>
 </dl>
 
-<h2 id="Example" name="Example">例子</h2>
+<h2 id="Example">例子</h2>
 
 <pre class="brush: js">var pc, videoStream;
 navigator.getUserMedia({video: true}, function(stream) {
@@ -38,7 +38,7 @@ document.getElementById("closeButton").addEventListener("click", function(event)
   pc.close();
 }, false);</pre>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="Specifications">规范</h2>
 
 <table class="standard-table">
  <thead>

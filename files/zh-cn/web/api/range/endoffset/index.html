@@ -14,12 +14,12 @@ translation_of: Web/API/Range/endOffset
 
 <p>如果 <code>endContainer</code> 的 {{domxref("Node")}} 类型为 {{domxref("Text")}}, {{domxref("Comment")}}，或 {{domxref("CDATASection")}}，偏移值是 <code>endContainer</code> 节点开头到 {{domxref("Range")}} 末尾的总字符个数。对其他类型的 {{domxref("Node")}} ， <code>endOffset</code> 指 <code>endContainer</code> 开头到 {{domxref("Range")}} 末尾的总 {{domxref("Node")}} 个数。如需修改 <code>endOffset</code> 的值， 使用 {{domxref("Range.setEnd")}} 方法。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>endRangeOffset</em> = <em>range</em>.endOffset;
 </pre>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <pre class="brush:js">var range = document.createRange();
 
@@ -27,7 +27,7 @@ range.setStart(startNode,startOffset);
 range.setEnd(endNode,endOffset);
 endRangeOffset = range.endOffset;</pre>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 <table class="standard-table">
  <tbody>

@@ -22,7 +22,7 @@ translation_of: Web/API/KeyboardEvent/charCode
 <p>请使用 {{domxref("KeyboardEvent.key")}} 取代。</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>var value</em> = <em>event</em>.charCode;
 </pre>
@@ -31,7 +31,7 @@ translation_of: Web/API/KeyboardEvent/charCode
  <li><em><code>value</code></em> 被按下的字符键的字符 Unicode 值</li>
 </ul>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <pre class="brush: js">&lt;html&gt;
 &lt;head&gt;
@@ -54,7 +54,7 @@ alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
 &lt;/html&gt;
 </pre>
 
-<h2 id="Notes" name="Notes">注意</h2>
+<h2 id="Notes">注意</h2>
 
 <p>在{{ domxref("element.onkeypress", "keypress") }} 事件中，按键的 Unicode 值保存在 <code>{{ domxref("event.keyCode", "keyCode") }}</code> 或 <code>{{ domxref("event.charCode", "charCode") }}</code> 属性其中之一，不会二者同时都有。如果按下的是字符键 (例如 'a'), <code>charCode</code> 被设置为字符的代码值，并区分大小写。（即 <code>charCode</code> 会考虑 <code>Shift</code> 键是否被按下）。 否则，被按下的键的代码被存储在 <code>keyCode</code> 中。</p>
 
@@ -68,7 +68,7 @@ alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
 
 <p>要查看特定按键的 <code>charCode</code> 值的列表，运行这个示例页面 <a href="/en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants" title="en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants">Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants</a> ，然后查看 HTML 表格结果。</p>
 
-<h2 id="Specifications" name="Specifications">标准</h2>
+<h2 id="Specifications">标准</h2>
 
 <table class="standard-table">
  <thead>

@@ -12,7 +12,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 
 <p><code>WindowOrWorkerGlobalScope</code> 混合的 <strong><code>setTimeout()</code></strong>方法设置一个定时器，该定时器在定时器到期后执行一个函数或指定的一段代码。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox notranslate"><code>var<em> </em>timeoutID = <em>scope</em>.setTimeout(<em>function</em>[<em>,</em> <em>delay, arg1, arg2</em>, ...]);
 var timeoutID = <em>scope</em>.setTimeout(function[, <em>delay</em>]);
@@ -35,7 +35,7 @@ var<em> </em>timeoutID = <em>scope</em>.setTimeout(<em>code</em>[, <em>delay</em
 <p><strong>备注</strong>：需要注意的是，IE9 及更早的 IE 浏览器不支持向回调函数传递额外参数 (第一种语法)。如果你想要在 IE 中达到同样的功能，你必须使用一种兼容代码 (查看 <a href="#兼容旧环境（polyfill）">兼容旧环境（polyfill）</a> 一段).</p>
 </div>
 
-<h3 id="Examples" name="Examples">返回值</h3>
+<h3 id="Examples">返回值</h3>
 
 <p>返回值<code>timeoutID</code>是一个正整数，表示定时器的编号。这个值可以传递给{{domxref("clearTimeout()")}}来取消该定时器。</p>
 
@@ -47,7 +47,7 @@ var<em> </em>timeoutID = <em>scope</em>.setTimeout(<em>code</em>[, <em>delay</em
 
 <p>下文的例子在网页中设置了两个简单的按钮，以触发 <code>setTimeout()</code> 和 <code>clearTimeout()</code> 方法：按下第一个按钮会设置一个定时器，定时器在 2s 后显示一个警告对话框，并将此次 setTimeout 的定时器 ID 保存起来，按下第二个按钮可以取消定时器。</p>
 
-<h3 id="HTML" style="line-height: 24px; font-size: 1.71428571428571rem;">HTML</h3>
+<h3 id="HTML">HTML</h3>
 
 <pre class="brush: html notranslate">&lt;p&gt;Live Example&lt;/p&gt;
 &lt;button onclick="delayedAlert();"&gt;Show an alert box after two seconds&lt;/button&gt;
@@ -63,7 +63,7 @@ var<em> </em>timeoutID = <em>scope</em>.setTimeout(<em>code</em>[, <em>delay</em
 
 <div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 57px; background: 0px 0px;"></div>
 
-<h3 id="JavaScript" style="line-height: 24px; font-size: 1.71428571428571rem;">JavaScript</h3>
+<h3 id="JavaScript">JavaScript</h3>
 
 <pre class="brush: js notranslate">var timeoutID;
 

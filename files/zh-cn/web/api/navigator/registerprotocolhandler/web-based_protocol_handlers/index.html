@@ -3,7 +3,7 @@ title: Web-based protocol handlers
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
-<h2 id="Background" name="Background">背景</h2>
+<h2 id="Background">背景</h2>
 
 <p>利用非 HTTP 协议，从网页链接到一些别的资源，这种做法是相当普遍的。比如 <code>mailto:</code> 协议：</p>
 
@@ -15,7 +15,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 
 <p>基于网络的协议处理程序也允许基于 Web 的应用程序参与这一过程。随着越来越多的类型的应用程序迁移到 Web，这变得越来越重要。事实上，有许多基于 Web 的电子邮件处理的应用程序可以处理一个 mailto 链接。</p>
 
-<h2 id="Registering" name="Registering">注册</h2>
+<h2 id="Registering">注册</h2>
 
 <p>设置一个 Web 应用程序作为一个协议处理器不是一个很麻烦的过程。Web 应用程序可以使用 <a href="/en-US/docs/Web/API/navigator.registerProtocolHandler">registerProtocolHandler()</a> 注册到浏览器上，从而对于一个给定的协议来讲，作为一个潜在的处理程序。例如：</p>
 
@@ -40,7 +40,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 
 <p>多次注册相同的协议处理程序会弹出不同的通知，表明协议处理器已经注册。因此，发起一个注册协议处理程序的请求，之后检查是否注册是一个很好的方法。比如下面的例子：</p>
 
-<h3 id="Example" name="Example">例子</h3>
+<h3 id="Example">例子</h3>
 
 <pre class="brush: js">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
 &lt;html lang="en"&gt;
@@ -60,13 +60,13 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 &lt;/html&gt;
 </pre>
 
-<h2 id="Activating" name="Activating">激活</h2>
+<h2 id="Activating">激活</h2>
 
 <p>现在，只要用户点击链接，使用注册协议，浏览器将跳转到 Web 应用程序注册时提供的 URL。Firefox 在默认情况下，跳转前会提示用户操作。</p>
 
 <p><img alt="Image:wph-launch.png" src="/@api/deki/files/971/=Wph-launch.png"></p>
 
-<h3 id="Example_2" name="Example_2">Example</h3>
+<h3 id="Example_2">Example</h3>
 
 <pre class="brush: html">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
 &lt;html lang="en"&gt;
@@ -79,7 +79,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 &lt;/html&gt;
 </pre>
 
-<h2 id="Handling" name="Handling">处理</h2>
+<h2 id="Handling">处理</h2>
 
 <p>下一步是处理这个动作。浏览器在激活的链接中提取出 href 属性，之后与注册时提供的 URL 模板进行拼装，之后经由拼装好的 URL 发起一个 HTTP GET 请求。因此下面的例子中，浏览器会基于此 URL 发起一个 GET 请求：</p>
 
@@ -89,7 +89,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 
 <div class="note"><strong>Note:</strong> 服务端代码会接收到 href 的<strong>全部</strong>内容。这意味着服务端代码必须解析出数据中的协议。</div>
 
-<h3 id="Example_3" name="Example_3">Example</h3>
+<h3 id="Example_3">Example</h3>
 
 <pre class="brush: php">&lt;?php
 $value = "";
@@ -113,13 +113,13 @@ if ( isset ( $_GET["value"] ) ) {
 &lt;/html&gt;
 </pre>
 
-<h2 id="References" name="References">参考</h2>
+<h2 id="References">参考</h2>
 
 <ul>
  <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers">http://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers</a></li>
 </ul>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/DOM/window.navigator.registerContentHandler" title="DOM/window.navigator.registerContentHandler">window.navigator.registerContentHandler</a></li>

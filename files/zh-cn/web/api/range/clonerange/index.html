@@ -9,19 +9,19 @@ translation_of: Web/API/Range/cloneRange
 
 <p>克隆的对象是复制过来的，而非引用，所以这两个对象双方各自做出的改变，都不会影响另一方。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>clone</em> = range.cloneRange();
 </pre>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush: js">range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
 clone = range.cloneRange();
 </pre>
 
-<h2 id="Specification" name="Specification">Specifications</h2>
+<h2 id="Specification">Specifications</h2>
 
 <table class="standard-table">
  <tbody>

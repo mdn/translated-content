@@ -7,7 +7,7 @@ translation_of: Web/API/ImageData
 
 <p><code><strong>ImageData</strong></code> 接口描述 {{HTMLElement("canvas")}} 元素的一个隐含像素数据的区域。使用 {{domxref("ImageData.ImageData", "ImageData()")}} 构造函数创建或者使用和 canvas 在一起的 {{domxref("CanvasRenderingContext2D")}} 对象的创建方法： {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} 和 {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}。也可以使用 {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}} 设置 canvas 的一部分。</p>
 
-<h2 id="构造函数" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">构造函数</h2>
+<h2 id="构造函数">构造函数</h2>
 
 <dl>
  <dt>{{domxref("ImageData.ImageData", "ImageData()")}} {{experimental_inline}}</dt>
@@ -15,7 +15,7 @@ translation_of: Web/API/ImageData
  <dd>使用给定的{{jsxref("Uint8ClampedArray")}}创建一个 <code>ImageData</code> 对象，并包含图像的大小。如果不给定数组，会创建一个“完全透明”(因为透明度值为 0) 的黑色矩形图像。注意，这是最常见的方式去创建这样一个对象，在 {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} 不可用时。</dd>
 </dl>
 
-<h2 id="属性" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">属性</h2>
+<h2 id="属性">属性</h2>
 
 <dl>
  <dt>{{domxref("ImageData.data")}} {{readonlyInline}}</dt>
@@ -26,7 +26,7 @@ translation_of: Web/API/ImageData
  <dd>无符号长整型（<code style="font-style: normal;">unsigned</code> <code style="font-style: normal;">long</code>），使用像素描述 <strong style="font-family: courier new,andale mono,monospace;">ImageData</strong> 的实际宽度。</dd>
 </dl>
 
-<h2 id="Specifications" name="Specifications" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">规范描述</h2>
+<h2 id="Specifications">规范描述</h2>
 
 <table class="standard-table">
  <thead>
@@ -45,11 +45,11 @@ translation_of: Web/API/ImageData
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 {{Compat("api.ImageData")}}
 
-<h2 id="参见" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">参见</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li>{{domxref("CanvasRenderingContext2D")}}</li>
