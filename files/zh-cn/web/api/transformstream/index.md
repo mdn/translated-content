@@ -33,7 +33,7 @@ translation_of: Web/api/TransformStream
 
 ## 示例
 
-### 将任意对象转换为 uint8array 数组
+### 将任意对象转换为 uint8 数组
 
 在下面的示例中，一个转换流将其接收的所有分块转换为 {{jsxref("Uint8Array")}}。。
 
@@ -125,7 +125,7 @@ class JSTextDecoderStream extends TransformStream {
 }
 ```
 
-### ReadableStreams 链
+### ReadableStream 链
 
 这是一个连接多个流很有用的方法。示例包括构建一个渐进式加载和渐进式流的 PWA。
 
