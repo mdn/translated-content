@@ -3,12 +3,12 @@ title: Détournement de clic
 slug: Glossary/Clickjacking
 translation_of: Glossary/Clickjacking
 ---
-Le détournement de clic (ou clickjacking) est une attaque basée sur l'interface qui incite les utilisateurs de sites Web à cliquer involontairement sur des liens malveillants. Dans le détournement de clics, les attaquants intègrent leurs liens malveillants dans des boutons ou des pages légitimes d'un site Web. Dans un [site](/fr/docs/Glossary/Site) infecté, chaque fois qu'un utilisateur clique sur un lien légitime, l'attaquant obtient les informations confidentielles de cet utilisateur, ce qui compromet finalement la vie privée de l'utilisateur sur Internet.
+Le détournement de clic (ou <i lang="en">clickjacking</i>) est une attaque basée sur l'interface qui incite les utilisatrices et utilisateurs de sites web à cliquer involontairement sur des liens malveillants. Pour le détournement de clics, les attaquants intègrent leurs liens malveillants dans des boutons ou des pages légitimes d'un site web. Dans un [site](/fr/docs/Glossary/Site) infecté, chaque fois qu'une personne clique sur un lien légitime, l'attaquant obtient les informations confidentielles de cette personne, ce qui compromet en fin de compte sa vie privée sur Internet.
 
-Le détournement de clic peut être évité en implémentant une [politique de sécurité du contenu (frame-ancestors)](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) et en implémentant des [attributs Set-Cookie](/fr/docs/Web/HTTP/Headers/Set-Cookie#attributes).
+Le détournement de clic peut être évité en implémentant une [politique de sécurité du contenu avec la directive `frame-ancestors`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) et en implémentant des [attributs `Set-Cookie`](/fr/docs/Web/HTTP/Headers/Set-Cookie#attributs).
 
 ## En apprendre plus
 
-- [Web security: clickjacking protection](/fr/docs/Web/Security#clickjacking_protection)
-- Le [détournement de clic](https://fr.wikipedia.org/wiki/D%C3%A9tournement_de_clic) sur Wikipedia
-- Le [détournement de clic](https://owasp.org/www-community/attacks/Clickjacking) sur OWASP
+- [Sécurité sur le Web&nbsp;: protection contre le détournement de clic](/fr/docs/Web/Security#protection_contre_le_détournement_de_clic)
+- [Le détournement de clic](https://fr.wikipedia.org/wiki/D%C3%A9tournement_de_clic) sur Wikipédia
+- [Le détournement de clic](https://owasp.org/www-community/attacks/Clickjacking) sur OWASP (en anglais)
