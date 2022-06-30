@@ -106,7 +106,7 @@ translation_of: Web/API/Event
  <dd>A Boolean value indicating whether or not the event can bubble across the boundary between the shadow DOM and the regular DOM.</dd>
  <dt>{{domxref("Event.currentTarget")}} {{readonlyinline}}</dt>
  <dd>指向目前處理事件之監聽器所屬的 DOM 物件。</dd>
- <dt>{{domxref("Event.deepPath")}} {{non-standard_inline}}</dt>
+ <dt>{{domxref("Event.deepPath")}} {{non-standard_inline}}</dt>
  <dd>An {{jsxref("Array")}} of DOM {{domxref("Node")}}s through which the event has bubbled.</dd>
  <dt>{{domxref("Event.defaultPrevented")}} {{readonlyinline}}</dt>
  <dd>布林值，表示事件的預設行為是否被 {{domxref("event.preventDefault()", "preventDefault()")}} 方法所取消。</dd>
@@ -142,9 +142,9 @@ translation_of: Web/API/Event
 <h2 id="方法">方法</h2>
 
 <dl>
- <dt>{{domxref("Event.createEvent()")}} {{deprecated_inline}}</dt>
+ <dt>{{domxref("Event.createEvent()")}} {{deprecated_inline}}</dt>
  <dd>
- <p>Creates a new event, which must then be initialized by calling its <code>initEvent()</code> method.</p>
+ <p>Creates a new event, which must then be initialized by calling its <code>initEvent()</code> method.</p>
  </dd>
  <dt>{{domxref("Event.composedPath()")}}</dt>
  <dd>Returns the event’s path (objects on which listeners will be invoked). This does not include nodes in shadow trees if the shadow root was created with its {{domxref("ShadowRoot.mode")}} closed.</dd>

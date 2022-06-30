@@ -37,7 +37,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 
 <p>It may be helpful to be aware that <code>setInterval()</code> and {{domxref("setTimeout()")}} share the same pool of IDs, and that <code>clearInterval()</code> and {{domxref("clearTimeout()")}} can technically be used interchangeably. For clarity, however, you should try to always match them to avoid confusion when maintaining your code.</p>
 
-<div class="note"><strong>Note</strong>: The <code>delay</code> argument is converted to a signed 32-bit integer. This effectively limits <code>delay</code> to 2147483647 ms, since it's specified as a signed integer in the IDL.</div>
+<div class="note"><strong>Note</strong>: The <code>delay</code> argument is converted to a signed 32-bit integer. This effectively limits <code>delay</code> to 2147483647 ms, since it's specified as a signed integer in the IDL.</div>
 
 <h2 id="Examples">Examples</h2>
 
@@ -97,7 +97,7 @@ function myCallback(a, b)
 
 <h3 id="Example_3_Typewriter_simulation">Example 3: Typewriter simulation</h3>
 
-<p>The following example simulates typewriter by first clearing and then slowly typing content into the <a href="/en-US/docs/DOM/NodeList"><code>NodeList</code></a> that matches a specified group of selectors.</p>
+<p>The following example simulates typewriter by first clearing and then slowly typing content into the <a href="/en-US/docs/DOM/NodeList"><code>NodeList</code></a> that matches a specified group of selectors.</p>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -260,7 +260,7 @@ Vivamus blandit massa ut metus mattis in fringilla lectus imperdiet. Proin ac an
 
 <h2 id="Callback_arguments">Callback arguments</h2>
 
-<p>As previously discussed, Internet Explorer versions 9 and below do not support the passing of arguments to the callback function in either <code>setTimeout()</code> or <code>setInterval()</code>. The following <strong>IE-specific</strong> code demonstrates a method for overcoming this limitation.  To use, simply add the following code to the top of your script.</p>
+<p>As previously discussed, Internet Explorer versions 9 and below do not support the passing of arguments to the callback function in either <code>setTimeout()</code> or <code>setInterval()</code>. The following <strong>IE-specific</strong> code demonstrates a method for overcoming this limitation.  To use, simply add the following code to the top of your script.</p>
 
 <pre class="brush:js">/*\
 |*|
@@ -315,11 +315,11 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
 
 <h2 id="The_this_problem">The "<a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a>" problem</h2>
 
-<p>When you pass a method to <code>setInterval()</code> or any other function, it is invoked with the wrong <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> value. This problem is explained in detail in the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method">JavaScript reference</a>.</p>
+<p>When you pass a method to <code>setInterval()</code> or any other function, it is invoked with the wrong <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> value. This problem is explained in detail in the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method">JavaScript reference</a>.</p>
 
 <h3 id="Explanation">Explanation</h3>
 
-<p>Code executed by <code>setInterval()</code> runs in a separate execution context than the function from which it was called. As a consequence, the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> keyword for the called function is set to the <code>window</code> (or <code>global</code>) object, it is not the same as the <code>this</code> value for the function that called <code>setTimeout</code>. See the following example (which uses <code>setTimeout()</code> instead of <code>setInterval()</code> – the problem, in fact, is the same for both timers):</p>
+<p>Code executed by <code>setInterval()</code> runs in a separate execution context than the function from which it was called. As a consequence, the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> keyword for the called function is set to the <code>window</code> (or <code>global</code>) object, it is not the same as the <code>this</code> value for the function that called <code>setTimeout</code>. See the following example (which uses <code>setTimeout()</code> instead of <code>setInterval()</code> – the problem, in fact, is the same for both timers):</p>
 
 <pre class="brush:js">myArray = ['zero', 'one', 'two'];
 
@@ -363,7 +363,7 @@ window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentTo
   } : vCallback, nDelay);
 };</pre>
 
-<div class="note">These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as <em>non-standard-compliant</em> polyfills also. See the <a href="#Callback_arguments">callback arguments paragraph</a> for a <em>standard-compliant</em> polyfill.</div>
+<div class="note">These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as <em>non-standard-compliant</em> polyfills also. See the <a href="#Callback_arguments">callback arguments paragraph</a> for a <em>standard-compliant</em> polyfill.</div>
 
 <p>New feature test:</p>
 
@@ -380,13 +380,13 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
 
 <p>Another, more complex, solution for<strong> </strong>the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> problem<strong> </strong>is <a href="#MiniDaemon_-_A_framework_for_managing_timers">the following framework</a>.</p>
 
-<div class="note">JavaScript 1.8.5 introduces the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method, which lets you specify the value that should be used as <code>this</code> for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>, with lexical this allowing us to write setInterval( () =&gt; this.myMethod) if we're inside myArray method.</div>
+<div class="note">JavaScript 1.8.5 introduces the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method, which lets you specify the value that should be used as <code>this</code> for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>, with lexical this allowing us to write setInterval( () =&gt; this.myMethod) if we're inside myArray method.</div>
 
 <h2 id="MiniDaemon_-_A_framework_for_managing_timers">MiniDaemon - A framework for managing timers</h2>
 
-<p>In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> object to the callback function (see <a href="#The_.22this.22_problem">The "this" problem</a> for details). The following code is also <a href="https://github.com/madmurphy/minidaemon.js">available on GitHub</a>.</p>
+<p>In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> object to the callback function (see <a href="#The_.22this.22_problem">The "this" problem</a> for details). The following code is also <a href="https://github.com/madmurphy/minidaemon.js">available on GitHub</a>.</p>
 
-<div class="note">For a more complex but still modular version of it (<code><em>Daemon</em></code>) see <a href="/en-US/Add-ons/Code_snippets/Timers/Daemons">JavaScript Daemons Management</a>. This more complex version is nothing but a big and scalable collection of methods for the <code><em>Daemon</em></code> constructor. However, the <code><em>Daemon</em></code> constructor itself is nothing but a clone of <code><em>MiniDaemon</em></code> with an added support for <em>init</em> and <em>onstart</em> functions declarable during the instantiation of the <code><em>daemon</em></code>. <strong>So the <code><em>MiniDaemon</em></code> framework remains the recommended way for simple animations</strong>, because <code><em>Daemon</em></code> without its collection of methods is essentially a clone of it.</div>
+<div class="note">For a more complex but still modular version of it (<code><em>Daemon</em></code>) see <a href="/en-US/Add-ons/Code_snippets/Timers/Daemons">JavaScript Daemons Management</a>. This more complex version is nothing but a big and scalable collection of methods for the <code><em>Daemon</em></code> constructor. However, the <code><em>Daemon</em></code> constructor itself is nothing but a clone of <code><em>MiniDaemon</em></code> with an added support for <em>init</em> and <em>onstart</em> functions declarable during the instantiation of the <code><em>daemon</em></code>. <strong>So the <code><em>MiniDaemon</em></code> framework remains the recommended way for simple animations</strong>, because <code><em>Daemon</em></code> without its collection of methods is essentially a clone of it.</div>
 
 <h3 id="minidaemon.js">minidaemon.js</h3>
 
@@ -460,7 +460,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 };
 </pre>
 
-<div class="note">MiniDaemon passes arguments to the callback function. If you want to work on it with browsers that natively do not support this feature, use one of the methods proposed above.</div>
+<div class="note">MiniDaemon passes arguments to the callback function. If you want to work on it with browsers that natively do not support this feature, use one of the methods proposed above.</div>
 
 <h3 id="Syntax_2">Syntax</h3>
 
@@ -535,10 +535,10 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 &lt;body&gt;
   &lt;p&gt;
-    &lt;input type="button" onclick="fadeInOut.start(false /* optional */);" value="fade in" /&gt;
+    &lt;input type="button" onclick="fadeInOut.start(false /* optional */);" value="fade in" /&gt;
     &lt;input type="button" onclick="fadeInOut.start(true);" value="fade out"&gt;
-    &lt;input type="button" onclick="fadeInOut.pause();" value="pause" /&gt;
-  &lt;/p&gt;
+    &lt;input type="button" onclick="fadeInOut.pause();" value="pause" /&gt;
+  &lt;/p&gt;
 
   &lt;div id="sample_div"&gt;Some text here&lt;/div&gt;
 
@@ -573,7 +573,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <p>If there is a possibility that your logic could take longer to execute than the interval time, it is recommended that you recursively call a named function using {{domxref("setTimeout()")}}. For example, if using <code>setInterval()</code> to poll a remote server every 5 seconds, network latency, an unresponsive server, and a host of other issues could prevent the request from completing in its allotted time. As such, you may find yourself with queued up XHR requests that won't necessarily return in order.</p>
 
-<p>In these cases, a recursive <code>setTimeout()</code> pattern is preferred:</p>
+<p>In these cases, a recursive <code>setTimeout()</code> pattern is preferred:</p>
 
 <pre class="brush:js">(function loop(){
    setTimeout(function() {

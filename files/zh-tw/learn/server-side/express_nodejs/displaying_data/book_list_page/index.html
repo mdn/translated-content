@@ -48,10 +48,10 @@ block content
 
 <p>這個視圖擴展了<strong> layout.pug</strong> 基本模板，並覆蓋了名為 '<strong>content</strong>' 的 <code>block </code>區塊 。它顯示我們從控制器傳入的標題 <code>title</code>（通過 <code>render()</code>方法），然後使用 <code>each</code>-<code>in</code>-<code>else </code>語法，遍歷 <code>book_list</code>變量。為每本圖書創建一個列表項，以顯示書名，並作為書的詳細信息頁面的鏈接，後面跟著作者姓名。如果 <code>book_list</code>中沒有書，則執行 <code>else</code> 子句，並顯示文字 “沒有書本” 'There are no books'。</p>
 
-<p> </p>
+<p> </p>
 
 <div class="note">
-<p><strong>注意:</strong>   我們使用 <code>book.url</code>，為每本書提供詳細記錄鏈接（我們已經實現了此路由，但尚未實現此頁面）。這是 <code>Book</code> 模型的一個虛擬屬性，它使用模型實例的 <code>_id</code> 字段，生成唯一的 URL 路徑。</p>
+<p><strong>注意:</strong>   我們使用 <code>book.url</code>，為每本書提供詳細記錄鏈接（我們已經實現了此路由，但尚未實現此頁面）。這是 <code>Book</code> 模型的一個虛擬屬性，它使用模型實例的 <code>_id</code> 字段，生成唯一的 URL 路徑。</p>
 </div>
 
 <p>在這裡，我們感興趣的是，每本書被定義為兩行，第二行使用管道（上面高亮顯示）。這種方法是必要的，因為如果作者姓名位於上一行，那麼它將成為超鏈接的一部分。</p>

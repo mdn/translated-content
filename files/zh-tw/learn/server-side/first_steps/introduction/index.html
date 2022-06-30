@@ -25,13 +25,13 @@ original_slug: Learn/Server-side/First_steps/介紹
 
 <p>大多數的大型網站使用伺服器端程式（server-side code）來動態地顯示各種所需的資料，普遍的做法為從伺服端的資料庫中取出資料，並送至用戶端，再透過一些 code 來顯示它們（例如：HTML 與 JavaScript）。</p>
 
-<p>也許，使用伺服器端程式的最大好處是為不同的瀏覽者量身打造網頁內容。動態網站根據使用者的偏好設定及興趣提供更為相關的內容，也可以儲存個人設定及資訊讓網站更易於使用 — 例如重複使用已儲存的信用卡資料來使付款流程更為順暢。</p>
+<p>也許，使用伺服器端程式的最大好處是為不同的瀏覽者量身打造網頁內容。動態網站根據使用者的偏好設定及興趣提供更為相關的內容，也可以儲存個人設定及資訊讓網站更易於使用 — 例如重複使用已儲存的信用卡資料來使付款流程更為順暢。</p>
 
 <p>它也能讓網站透過信件或其他方式來和使用者互動，如發送通知與更新。這一切的一切都讓網站更能牢牢抓住使用者的心。</p>
 
 <h2 id="何謂伺服器端網站程式開發？">何謂伺服器端網站程式開發？</h2>
 
-<p>網頁瀏覽器使用超文本傳輸協定（<strong>H</strong>yper<strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol, {{glossary("HTTP")}}）與網頁伺服器（<a href="/zh-TW/docs/Learn/Common_questions/What_is_a_web_server">web servers</a>）溝通。當您點選網頁上的連結、送出表單，或者執行搜尋，一段<strong> HTTP 請求</strong>（<strong>request</strong>）會由您的瀏覽器送至目標伺服器。</p>
+<p>網頁瀏覽器使用超文本傳輸協定（<strong>H</strong>yper<strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol, {{glossary("HTTP")}}）與網頁伺服器（<a href="/zh-TW/docs/Learn/Common_questions/What_is_a_web_server">web servers</a>）溝通。當您點選網頁上的連結、送出表單，或者執行搜尋，一段<strong> HTTP 請求</strong>（<strong>request</strong>）會由您的瀏覽器送至目標伺服器。</p>
 
 <p>該請求（request）包含一個用來指定受影響資源的 URL、一個定義行為的請求方法（例如對資源進行get、delete或post）與當進行<a href="/zh-TW/docs/Web/HTTP/Methods/POST">HTTP POST方法</a>時可能包含編碼於URL參數中的額外資訊（經由一段<a href="https://en.wikipedia.org/wiki/Query_string">查詢字串</a>送出的各個鍵值對），或是在關聯的{{glossary("Cookie", "cookies")}}中。</p>
 
@@ -43,13 +43,13 @@ original_slug: Learn/Server-side/First_steps/介紹
 
 <p>以下的靜態網站（static site）圖展示一個基本的網頁伺服器架構，其中靜態網站意謂當無論何時有個特定資源的請求，伺服器始終回傳相同的硬編碼內容（hard-coded content）。當一個使用者想要引導到一個網頁時，瀏覽器送出的HTTP "GET" 請求指的就是該資源的URL。</p>
 
-<p>此伺服器從它的檔案系統取回被請求的文件，並回傳一個包含此文件以及<a href="/zh-TW/docs/Web/HTTP/Status#成功回應">成功狀態碼</a>（通常為200 OK）的HTTP回應。若檔案因某些原因無法被取回，則回傳一個錯誤狀態（參見 <a href="/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應">用戶端錯誤回應</a> 與 <a href="/zh-TW/docs/Web/HTTP/Status#伺服器端錯誤回應">伺服器端錯誤回應</a>）。</p>
+<p>此伺服器從它的檔案系統取回被請求的文件，並回傳一個包含此文件以及<a href="/zh-TW/docs/Web/HTTP/Status#成功回應">成功狀態碼</a>（通常為200 OK）的HTTP回應。若檔案因某些原因無法被取回，則回傳一個錯誤狀態（參見 <a href="/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應">用戶端錯誤回應</a> 與 <a href="/zh-TW/docs/Web/HTTP/Status#伺服器端錯誤回應">伺服器端錯誤回應</a>）。</p>
 
 <p><img alt="A simplified diagram of a static web server." src="basic_static_app_server.png"></p>
 
 <h3 id="動態網站">動態網站</h3>
 
-<p>一個動態網站的回應內容是當需要時<em>動態</em>產生的。在一個動態網站的HTML網頁通常是經由資料庫取得並插入資料至HTML範本的佔位符（placeholders）中而創造出來（相較於靜態網站，這對於儲存大量內容而言，這是一種相當有效率的做法）。 </p>
+<p>一個動態網站的回應內容是當需要時<em>動態</em>產生的。在一個動態網站的HTML網頁通常是經由資料庫取得並插入資料至HTML範本的佔位符（placeholders）中而創造出來（相較於靜態網站，這對於儲存大量內容而言，這是一種相當有效率的做法）。 </p>
 
 <p>一個動態網站可以根據使用者或已存偏好設定提供的URL資訊回傳不同的資料，也可以以其他的作用方式呈現回應（例如：發送通知）。</p>
 
@@ -57,7 +57,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 
 <p>下圖為<em>動態網站</em>（<em>dynamic website</em>）的基本架構。如同先前的圖說，瀏覽器發送HTTP請求至伺服器，接著伺服器處理請求後，回傳合適的HTTP回應。</p>
 
-<p>對於<em>靜態</em>資源的請求處理方式如同靜態網站的方式（靜態資源為任何不會改變的檔案 — 通常為CSS、JavaScript、圖片、預產生的PDF檔案等）。 </p>
+<p>對於<em>靜態</em>資源的請求處理方式如同靜態網站的方式（靜態資源為任何不會改變的檔案 — 通常為CSS、JavaScript、圖片、預產生的PDF檔案等）。 </p>
 
 <p><img alt="A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview." src="web_application_with_html_and_steps.png"></p>
 
@@ -81,7 +81,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 
 <p>網頁開發者不能控制使用者可能使用何種瀏覽器來檢視一個網站 — 瀏覽器與用戶端程式有著不同層度的相容性，並且用戶端程式的挑戰之一是如何妥善地處理瀏覽器支援的差異。</p>
 
-<p>伺服端程式碼可以為任何程式語言 — 例如有名的伺服端網頁語言包括PHP、Python、Ruby、C#與NodeJS(JavaScript)。該伺服端程式碼擁有完整的作業系統存取權限，而且開發者能夠選擇他們想要的程式語言（以及特定版本）。</p>
+<p>伺服端程式碼可以為任何程式語言 — 例如有名的伺服端網頁語言包括PHP、Python、Ruby、C#與NodeJS(JavaScript)。該伺服端程式碼擁有完整的作業系統存取權限，而且開發者能夠選擇他們想要的程式語言（以及特定版本）。</p>
 
 <p>開發者們通常使用<strong>網頁框架</strong>（<strong>web frameworks</strong>）撰寫程式碼。網頁框架為功能函式、物件、規則與其他程式碼的集合，旨在解決常見問題、加速開發並簡化在特定域中面臨到的不同類型的任務。</p>
 
@@ -119,12 +119,12 @@ original_slug: Learn/Server-side/First_steps/介紹
 <p><strong>Note</strong>: Your imagination doesn't have to work hard to see the benefit of server-side code for efficient storage and delivery of information:</p>
 
 <ol>
- <li>Go to <a href="https://www.amazon.com">Amazon</a> or some other e-commerce site.</li>
- <li>Search for a number of keywords and note how the page structure doesn't change, even though the results do. </li>
+ <li>Go to <a href="https://www.amazon.com">Amazon</a> or some other e-commerce site.</li>
+ <li>Search for a number of keywords and note how the page structure doesn't change, even though the results do. </li>
  <li>Open two or three different products. Note again how they have a common structure and layout, but the content for different products has been pulled from the database.</li>
 </ol>
 
-<p>For a common search term ("fish", say) you can see literally millions of returned values. Using a database allows these to be stored and shared efficiently, and it allows the presentation of the information to be controlled in just one place.</p>
+<p>For a common search term ("fish", say) you can see literally millions of returned values. Using a database allows these to be stored and shared efficiently, and it allows the presentation of the information to be controlled in just one place.</p>
 </div>
 
 <h3 id="客製化的使用者體驗">客製化的使用者體驗</h3>
@@ -139,9 +139,9 @@ original_slug: Learn/Server-side/First_steps/介紹
 <p>Google search results are optimized based on previous searches.</p>
 
 <ol>
- <li> Go to <a href="https:\\google.com">Google search</a>.</li>
- <li> Search for "football".</li>
- <li> Now try typing "favourite" in the search box and observe the autocomplete search predictions.</li>
+ <li> Go to <a href="https:\\google.com">Google search</a>.</li>
+ <li> Search for "football".</li>
+ <li> Now try typing "favourite" in the search box and observe the autocomplete search predictions.</li>
 </ol>
 
 <p>Coincidence? Nada!</p>
@@ -154,14 +154,14 @@ original_slug: Learn/Server-side/First_steps/介紹
 <p>真實世界案例包括：</p>
 
 <ul>
- <li>社交網路如Facebook允許使用者全權控制他們自己的資料，但是只有允許他們的朋友檢視或評論資料。該使用者決定誰能看到他們的資料，並推廣到他們的動態中會呈現誰的資料 —  授權是使用者體驗的核心部分！</li>
+ <li>社交網路如Facebook允許使用者全權控制他們自己的資料，但是只有允許他們的朋友檢視或評論資料。該使用者決定誰能看到他們的資料，並推廣到他們的動態中會呈現誰的資料 —  授權是使用者體驗的核心部分！</li>
  <li>
-  <p>你正所在的網站控制內容的存取：文章可被任何人看見，但是只有使用者登入才能編輯該內容。若要試試看，點擊本頁面上方的<strong>編輯</strong>按鈕 — 如果你已登入，你將會顯示編輯視窗；如果你沒有登入，你將會被導到註冊頁面。</p>
+  <p>你正所在的網站控制內容的存取：文章可被任何人看見，但是只有使用者登入才能編輯該內容。若要試試看，點擊本頁面上方的<strong>編輯</strong>按鈕 — 如果你已登入，你將會顯示編輯視窗；如果你沒有登入，你將會被導到註冊頁面。</p>
  </li>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Consider other real examples where access to content is controlled. For example, what can you see if you go to the online site for your bank? Log in to your account — what additional information can you see and modify? What information can you see that only the bank can change?</p>
+<p><strong>Note</strong>: Consider other real examples where access to content is controlled. For example, what can you see if you go to the online site for your bank? Log in to your account — what additional information can you see and modify? What information can you see that only the bank can change?</p>
 </div>
 
 <h3 id="儲存sessionstate資訊">儲存session/state資訊</h3>
@@ -171,7 +171,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 <p>例如，這允許網站了解一個使用者先前已登入過，以及將訂購歷史紀錄在他們的電子郵件中顯示連結，或者也許會儲存一個基本的遊戲狀態，讓使用者能再次回到網站的同時，拿回他們留在網站的資訊。</p>
 
 <div class="note">
-<p><strong>Note</strong>: Visit a newspaper site that has a subscription model and open a bunch of tabs (e.g. <a href="http://www.theage.com.au/">The Age</a>). Continue to visit the site over a few hours/days. Eventually, you will start to be redirected to pages explaining how to subscribe, and you will be unable to access articles. This information is an example of session information stored in cookies.</p>
+<p><strong>Note</strong>: Visit a newspaper site that has a subscription model and open a bunch of tabs (e.g. <a href="http://www.theage.com.au/">The Age</a>). Continue to visit the site over a few hours/days. Eventually, you will start to be redirected to pages explaining how to subscribe, and you will be unable to access articles. This information is an example of session information stored in cookies.</p>
 </div>
 
 <h3 id="提醒與溝通">提醒與溝通</h3>
@@ -204,13 +204,13 @@ original_slug: Learn/Server-side/First_steps/介紹
 
 <h2 id="總結">總結</h2>
 
-<p>恭喜，你已經到達關於伺服器端程式設計的第一篇文章的結尾。 </p>
+<p>恭喜，你已經到達關於伺服器端程式設計的第一篇文章的結尾。 </p>
 
 <p>現在你已經學到伺服器端程式碼運作於網頁伺服器，他的主要任務是控制<em>哪些</em>資訊要發送給使用者（而用戶端程式碼主要掌握資料的結構與呈現給使用者）。</p>
 
 <p>你也應該了解這是很有用的，當你身為伺服器端開發者時，因為它允許我們創建<em>有效</em>散播客製訊息與有些你可能會去做的好點子給單個使用者的網站。</p>
 
-<p>最後，你應該了解伺服器端程式碼可以用很多種程式語言來撰寫，以及你應該使用網頁框架來讓整個程序變得更簡便。 </p>
+<p>最後，你應該了解伺服器端程式碼可以用很多種程式語言來撰寫，以及你應該使用網頁框架來讓整個程序變得更簡便。 </p>
 
 <p>在未來的文章，我們將協助你選擇最佳的網頁框架，做為你的第一個網站；接著，我們將帶你更詳細了解主要的用戶端-伺服端的互動。</p>
 

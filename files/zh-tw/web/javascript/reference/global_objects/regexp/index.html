@@ -7,17 +7,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 
 
 
-<p><strong><code>RegExp</code></strong> 物件被用來比對符合自訂規則的文字。</p>
+<p><strong><code>RegExp</code></strong> 物件被用來比對符合自訂規則的文字。</p>
 
-<p>關於正規表達式(regular expressions)的介紹，可以閱讀 <a href="/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions">JavaScript 指南</a>中的 <a href="/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions">正規表達式章節</a>。</p>
+<p>關於正規表達式(regular expressions)的介紹，可以閱讀 <a href="/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions">JavaScript 指南</a>中的 <a href="/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions">正規表達式章節</a>。</p>
 
 <h2 id="說明">說明</h2>
 
-<p>建立 <code>RegExp</code> 物件有兩種方式：<em>文字表示法 (literal notation)</em> 和 <em>建構子 (constructor)。</em></p>
+<p>建立 <code>RegExp</code> 物件有兩種方式：<em>文字表示法 (literal notation)</em> 和 <em>建構子 (constructor)。</em></p>
 
 <ul>
- <li><strong>文字表示法</strong> 的參數，頭尾以斜線標註，且不使用引號標註。</li>
- <li><strong>建構子函式</strong> 的參數，頭尾不以斜線標註，但使用引號標註。</li>
+ <li><strong>文字表示法</strong> 的參數，頭尾以斜線標註，且不使用引號標註。</li>
+ <li><strong>建構子函式</strong> 的參數，頭尾不以斜線標註，但使用引號標註。</li>
 </ul>
 
 <p>以下的表達式會建立出相同的正規表達式:</p>
@@ -29,7 +29,7 @@ new RegExp('ab+c', 'i') // constructor
 
 <p>The literal notation provides a compilation of the regular expression when the expression is evaluated. Use literal notation when the regular expression will remain constant. For example, if you use literal notation to construct a regular expression used in a loop, the regular expression won't be recompiled on each iteration.</p>
 
-<p>The constructor of the regular expression object—for example, <code>new RegExp('ab+c')</code>—provides runtime compilation of the regular expression. Use the constructor function when you know the regular expression pattern will be changing, or you don't know the pattern and are getting it from another source, such as user input.</p>
+<p>The constructor of the regular expression object—for example, <code>new RegExp('ab+c')</code>—provides runtime compilation of the regular expression. Use the constructor function when you know the regular expression pattern will be changing, or you don't know the pattern and are getting it from another source, such as user input.</p>
 
 <p>Starting with ECMAScript 6, <code>new RegExp(/ab+c/, 'i')</code> no longer throws a {{jsxref("TypeError")}} ("can't supply flags when constructing one RegExp from another") when the first argument is a <code>RegExp</code> and the second <code><var>flags</var></code> argument is present. A new <code>RegExp</code> from the arguments is created instead.</p>
 
@@ -63,7 +63,7 @@ let re = new RegExp('\\w+')
 
 <h2 id="Methods">Methods</h2>
 
-<p>The global <code>RegExp</code> object has no methods of its own. However, it does inherit some methods through the prototype chain.</p>
+<p>The global <code>RegExp</code> object has no methods of its own. However, it does inherit some methods through the prototype chain.</p>
 
 <h2 id="RegExp_prototype_objects_and_instances"><code>RegExp</code> prototype objects and instances</h2>
 
@@ -176,7 +176,7 @@ regex.lastIndex      // 0 (reset after match failure)</pre>
 
 <h3 id="The_difference_between_the_sticky_flag_and_the_global_flag">The difference between the sticky flag and the global flag</h3>
 
-<p>With the sticky flag y, the next match has to happen at the lastIndex position, while with the global flag g, the match can happen at the lastIndex position or later:</p>
+<p>With the sticky flag y, the next match has to happen at the lastIndex position, while with the global flag g, the match can happen at the lastIndex position or later:</p>
 
 <pre class="brush: js">re = /\d/y;
 while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
@@ -190,9 +190,9 @@ while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
 
 <h3 id="Regular_expression_and_Unicode_characters">Regular expression and Unicode characters</h3>
 
-<p>As mentioned above, <code>\w</code> or <code>\W</code> only matches ASCII based characters; for example, <code>a</code> to <code>z</code>, <code>A</code> to <code>Z</code>, <code>0</code> to <code>9</code>, and <code>_</code>.</p>
+<p>As mentioned above, <code>\w</code> or <code>\W</code> only matches ASCII based characters; for example, <code>a</code> to <code>z</code>, <code>A</code> to <code>Z</code>, <code>0</code> to <code>9</code>, and <code>_</code>.</p>
 
-<p>To match characters from other languages such as Cyrillic or Hebrew, use <code>\u<var>hhhh</var></code>, where <code><var>hhhh</var></code> is the character's Unicode value in hexadecimal.</p>
+<p>To match characters from other languages such as Cyrillic or Hebrew, use <code>\u<var>hhhh</var></code>, where <code><var>hhhh</var></code> is the character's Unicode value in hexadecimal.</p>
 
 <p>This example demonstrates how one can separate out Unicode characters from a word.</p>
 
@@ -210,7 +210,7 @@ console.log(regex.lastIndex) // logs '15'
 // and so on
 </pre>
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode property escapes</a> feature introduces a solution, by allowing for a statement as simple as <code>\p{scx=Cyrl}</code>. One can also use an external resource for getting the complete Unicode block range for different scripts, such as <a href="http://kourge.net/projects/regexp-unicode-block">Regexp-Unicode-block</a>.</p>
+<p>The <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode property escapes</a> feature introduces a solution, by allowing for a statement as simple as <code>\p{scx=Cyrl}</code>. One can also use an external resource for getting the complete Unicode block range for different scripts, such as <a href="http://kourge.net/projects/regexp-unicode-block">Regexp-Unicode-block</a>.</p>
 
 <h3 id="Extracting_sub-domain_name_from_URL">Extracting sub-domain name from URL</h3>
 
@@ -247,7 +247,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
 // 'group:undefined'
 </pre>
 
-<p>Note that due to web compatibility, <code>RegExp.$N</code> will still return an empty string instead of <code>undefined</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1053944">bug 1053944</a>).</p>
+<p>Note that due to web compatibility, <code>RegExp.$N</code> will still return an empty string instead of <code>undefined</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1053944">bug 1053944</a>).</p>
 
 <h2 id="See_also">See also</h2>
 

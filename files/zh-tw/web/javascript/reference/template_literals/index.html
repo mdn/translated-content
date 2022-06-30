@@ -71,25 +71,25 @@ not ${2 * a + b}.`);
 
 <h3 id="巢狀樣板">巢狀樣板</h3>
 
-<p>In certain times, nesting a template is the easiest and perhaps more readable way to have configurable strings. Within a backticked template it is simple to allow inner backticks simply by using them inside a placeholder <code>${ }</code> within the template. For instance, if condition a is true: then return this templated literal.</p>
+<p>In certain times, nesting a template is the easiest and perhaps more readable way to have configurable strings. Within a backticked template it is simple to allow inner backticks simply by using them inside a placeholder <code>${ }</code> within the template. For instance, if condition a is true: then return this templated literal.</p>
 
 <p>In ES5:</p>
 
 <pre class="brush: js">var classes = 'header'
 classes += (isLargeScreen() ?
-   '' : item.isCollapsed ?
-     ' icon-expander' : ' icon-collapser');
+   '' : item.isCollapsed ?
+     ' icon-expander' : ' icon-collapser');
 </pre>
 
 <p>In ES2015 with template literals and without nesting:</p>
 
 <pre class="brush: js">const classes = `header ${ isLargeScreen() ? '' :
-    (item.isCollapsed ? 'icon-expander' : 'icon-collapser') }`;</pre>
+    (item.isCollapsed ? 'icon-expander' : 'icon-collapser') }`;</pre>
 
 <p>In ES2015 with nested template literals:</p>
 
 <pre class="brush: js">const classes = `header $<strong>{</strong> isLargeScreen() ? '' :
- `icon-${item.isCollapsed ? 'expander' : 'collapser'}`<strong> </strong><strong>}`</strong>;</pre>
+ `icon-${item.isCollapsed ? 'expander' : 'collapser'}`<strong> </strong><strong>}`</strong>;</pre>
 
 <h3 id="標籤樣板字面值">標籤樣板字面值</h3>
 
@@ -146,7 +146,7 @@ t2Closure('Hello', {foo: 'World'});  // "Hello World!"
 
 <h3 id="原始字串">原始字串</h3>
 
-<p>標籤函數的第一個參數，帶有一個特殊的屬性「 <code>raw</code> 」，允許你獲取原始輸入的、未處理任何<a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings">轉義序列</a>的字串值。</p>
+<p>標籤函數的第一個參數，帶有一個特殊的屬性「 <code>raw</code> 」，允許你獲取原始輸入的、未處理任何<a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings">轉義序列</a>的字串值。</p>
 
 <pre class="brush: js">function tag(strings) {
   console.log(strings.raw[0]);
@@ -157,7 +157,7 @@ tag`string text line 1 \n string text line 2`;
 // including the two characters '\' and 'n'
 </pre>
 
-<p>此外, 使用 {{jsxref("String.raw()")}} 方法建立的原始字串，也與預設的樣板函數和字串串接會建立的字串相同。 </p>
+<p>此外, 使用 {{jsxref("String.raw()")}} 方法建立的原始字串，也與預設的樣板函數和字串串接會建立的字串相同。 </p>
 
 <pre class="brush: js">var str = String.raw`Hi\n${2+3}!`;
 // "Hi\n5!"
@@ -174,9 +174,9 @@ str.split('').join(',');
 <p>在 ES2016 的規範中，標籤樣板字面值遵守下列跳脫序列（escape sequences）規則：</p>
 
 <ul>
- <li>萬國碼 (Unicode) 跳脫序列由 "\u" 作為開頭, 例： <code>\u00A9</code></li>
- <li>萬國碼位 (Unicode code point) 由 "\u{}" 作為開頭, 例： <code>\u{2F804}</code></li>
- <li>十六進位制碼由 "\x" 作為開頭, 例： <code>\xA9</code></li>
+ <li>萬國碼 (Unicode) 跳脫序列由 "\u" 作為開頭, 例： <code>\u00A9</code></li>
+ <li>萬國碼位 (Unicode code point) 由 "\u{}" 作為開頭, 例： <code>\u{2F804}</code></li>
+ <li>十六進位制碼由 "\x" 作為開頭, 例： <code>\xA9</code></li>
  <li>十進位制碼由 "\" 作為開頭, 例： \251</li>
 </ul>
 
@@ -192,7 +192,7 @@ str.split('').join(',');
 
 <p>l be represented in the "cooked" representation. They will show up as {{jsxref("undefined")}} element in the "cooked" array:</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">function latex(str) {
  return { "cooked": str[0], "raw": str.raw[0] }

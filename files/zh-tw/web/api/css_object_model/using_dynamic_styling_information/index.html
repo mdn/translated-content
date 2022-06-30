@@ -5,7 +5,7 @@ translation_of: Web/API/CSS_Object_Model/Using_dynamic_styling_information
 ---
 <p>The CSS Object Model (CSSOM), part of the DOM, exposes specific interfaces allowing manipulation of a wide amount of information regarding CSS. Initially defined in the <em>DOM Level 2 Style</em> recommendation, these interfaces forms now a specification, <em>CSS Object Model (CSSOM)</em> which aims at superseding it.</p>
 
-<p>In many cases, and where possible, it really is best practice to dynamically manipulate classes via the {{ domxref("element.className", "className") }} property since the ultimate appearance of all of the styling hooks can be controlled in a single stylesheet. One's JavaScript code also becomes cleaner since instead of being dedicated to styling details, it can focus on the overall semantics of each section it is creating or manipulating, leaving the precise style details to the stylesheet. However, there are cases where actually obtaining or manipulating the rules can be useful (whether for whole stylesheets or individual elements), and that is described in further detail below. Note also that, as with individual element's DOM styles, when speaking of manipulating the stylesheets, this is not actually manipulating the physical document(s), but merely the internal representation of the document.</p>
+<p>In many cases, and where possible, it really is best practice to dynamically manipulate classes via the {{ domxref("element.className", "className") }} property since the ultimate appearance of all of the styling hooks can be controlled in a single stylesheet. One's JavaScript code also becomes cleaner since instead of being dedicated to styling details, it can focus on the overall semantics of each section it is creating or manipulating, leaving the precise style details to the stylesheet. However, there are cases where actually obtaining or manipulating the rules can be useful (whether for whole stylesheets or individual elements), and that is described in further detail below. Note also that, as with individual element's DOM styles, when speaking of manipulating the stylesheets, this is not actually manipulating the physical document(s), but merely the internal representation of the document.</p>
 
 <p>The basic <code>style</code> object exposes the {{domxref("Stylesheet")}} and the {{domxref("CSSStylesheet")}} interfaces. Those interfaces contain members like <code>insertRule</code>, <code>selectorText</code>, and <code>parentStyleSheet</code> for accessing and manipulating the individual style rules that make up a CSS stylesheet.</p>
 
@@ -18,7 +18,7 @@ translation_of: Web/API/CSS_Object_Model/Using_dynamic_styling_information
 &lt;title&gt;Modifying a stylesheet rule with CSSOM&lt;/title&gt;
 &lt;style type="text/css"&gt;
 body {
- background-color: red;
+ background-color: red;
 }
 &lt;/style&gt;
 &lt;script type="text/javascript"&gt;
@@ -39,7 +39,7 @@ The stylesheet declaration for the body's background color is modified via JavaS
 
 <h2 id="Modify_an_element_style">修改元素的樣式</h2>
 
-<p>The element {{domxref("HTMLElement.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set <em>in-line</em> (e.g, <code>&lt;td style="background-color: lightblue"&gt;</code> returns the string "<code>background-color:lightblue</code>", or directly for that element using <code>element.style.propertyName</code>, even though there may be other styles on the element from a stylesheet).</p>
+<p>The element {{domxref("HTMLElement.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set <em>in-line</em> (e.g, <code>&lt;td style="background-color: lightblue"&gt;</code> returns the string "<code>background-color:lightblue</code>", or directly for that element using <code>element.style.propertyName</code>, even though there may be other styles on the element from a stylesheet).</p>
 
 <p>Also, when you set this property on an element, you override and erase any styles that have been set elsewhere for that element's particular property you are setting. Setting the border property, for example, will override settings made elsewhere for that element's border property in the head section, or external style sheets. However, this will not affect any other property declarations for that element's styles, such as padding or margin or font, for example.</p>
 
@@ -129,4 +129,4 @@ function resetStyle(elemId) {
 el.setAttribute('style', 'background-color:darkblue;');
 </pre>
 
-<p>Be aware, however, that <code>setAttribute</code> removes all other style properties that may already have been defined in the element's style object. If the <code><var>some-element</var></code> element above had an in–line style attribute of say <code>style="font-size: 18px"</code>, that value would be removed by the use of <code>setAttribute</code>.</p>
+<p>Be aware, however, that <code>setAttribute</code> removes all other style properties that may already have been defined in the element's style object. If the <code><var>some-element</var></code> element above had an in–line style attribute of say <code>style="font-size: 18px"</code>, that value would be removed by the use of <code>setAttribute</code>.</p>

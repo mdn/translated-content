@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 
 <pre>'string text' "string text" "中文 español deutsch English हिन्दी العربية português বাংলা русский 日本語 ਪੰਜਾਬੀ 한국어 தமிழ் עברית"</pre>
 
-<p>字串也可以被全域的 <code>String</code> 物件建立：</p>
+<p>字串也可以被全域的 <code>String</code> 物件建立：</p>
 
 <pre>String(thing)</pre>
 
@@ -92,7 +92,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
    <td>unicode 代碼</td>
   </tr>
   <tr>
-   <td><code>\u{X}</code> ... <code>\u{XXXXXX}</code></td>
+   <td><code>\u{X}</code> ... <code>\u{XXXXXX}</code></td>
    <td>unicode 代碼 {{experimental_inline}}</td>
   </tr>
   <tr>
@@ -116,7 +116,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 
 <p>有些時候，你的程式碼會包含非常長的字串。 為了不讓長字串無止盡地往下長，抑或是在你心血來潮的時候，你可能希望將這樣長的字串能夠斷成多行卻不影響到實際的內容。</p>
 
-<p>你可以用 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition_()">+</a> 運算子附加多個字串在一起，像是這樣：</p>
+<p>你可以用 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition_()">+</a> 運算子附加多個字串在一起，像是這樣：</p>
 
 <pre><code>let longString = "This is a very long string which needs " +
                  "to wrap across multiple lines because " +
@@ -132,11 +132,11 @@ otherwise my code is unreadable.";</code></pre>
 
 <h2 id="Description">說明</h2>
 
-<p>字串對於能保留以文字形式表達的資料這件事來說，是有用的。在字串上，一些最常被使用的運算即確認字串長度 {{jsxref("String.length", "length")}} ，用 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators">+ 或 += 字串運算元</a> 建造或者串接字串，用 {{jsxref("String.indexOf", "indexOf")}} 方法檢查?子字串是否存在或子字串的位置，或者是用 {{jsxref("String.substring", "substring")}} 方法將子字串抽取出來。</p>
+<p>字串對於能保留以文字形式表達的資料這件事來說，是有用的。在字串上，一些最常被使用的運算即確認字串長度 {{jsxref("String.length", "length")}} ，用 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators">+ 或 += 字串運算元</a> 建造或者串接字串，用 {{jsxref("String.indexOf", "indexOf")}} 方法檢查?子字串是否存在或子字串的位置，或者是用 {{jsxref("String.substring", "substring")}} 方法將子字串抽取出來。</p>
 
 <h3 id="Character_access">存取字元</h3>
 
-<p>有兩個方法可以存取字串中個別的字元。第一個是用 {{jsxref("String.charAt", "charAt")}} 方法：</p>
+<p>有兩個方法可以存取字串中個別的字元。第一個是用 {{jsxref("String.charAt", "charAt")}} 方法：</p>
 
 <pre class="brush: js">return 'cat'.charAt(1); // 回傳 "a"
 </pre>
@@ -150,7 +150,7 @@ otherwise my code is unreadable.";</code></pre>
 
 <h3 id="Comparing_strings">比較字串</h3>
 
-<p>C 語言的開發者有 <code>strcmp()</code> 函式可以用來比較字串。 在 JavaScript 中，你只能用<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">小於和大於運算子</a>：</p>
+<p>C 語言的開發者有 <code>strcmp()</code> 函式可以用來比較字串。 在 JavaScript 中，你只能用<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">小於和大於運算子</a>：</p>
 
 <pre class="brush: js">var a = "a";
 var b = "b";
@@ -162,11 +162,11 @@ else
   print(a + " 和 " + b + " 相等");
 </pre>
 
-<p>這樣類似的結果，也能使用繼承 <code>String</code> 實體的 {{jsxref("String.localeCompare", "localeCompare")}} 方法來實現。</p>
+<p>這樣類似的結果，也能使用繼承 <code>String</code> 實體的 {{jsxref("String.localeCompare", "localeCompare")}} 方法來實現。</p>
 
-<h3 id="分辨_string_原始型別和_String_物件">分辨 string 原始型別和 <code>String</code> 物件</h3>
+<h3 id="分辨_string_原始型別和_String_物件">分辨 string 原始型別和 <code>String</code> 物件</h3>
 
-<p>請注意，JavaScript 會區別 <code>String</code> 物件和原始字串({{jsxref("Global_Objects/Boolean", "Boolean")}} 和 {{jsxref("Global_Objects/Number", "Numbers")}} 也是如此)。</p>
+<p>請注意，JavaScript 會區別 <code>String</code> 物件和原始字串({{jsxref("Global_Objects/Boolean", "Boolean")}} 和 {{jsxref("Global_Objects/Number", "Numbers")}} 也是如此)。</p>
 
 <p>String literals (denoted by double or single quotes) and strings returned from <code>String</code> calls in a non-constructor context (i.e., without using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> keyword</a>) are primitive strings. JavaScript automatically converts primitives to <code>String</code> objects, so that it's possible to use <code>String</code> object methods for primitive strings. In contexts where a method is to be invoked on a primitive string or a property lookup occurs, JavaScript will automatically wrap the string primitive and call the method or perform the property lookup.</p>
 
@@ -177,7 +177,7 @@ console.log(typeof s_prim); // 印出 "string"
 console.log(typeof s_obj);  // 印出 "object"
 </pre>
 
-<p>字串原始型別和 <code>String</code> 物件也會在使用 {{jsxref("Global_Objects/eval", "eval")}} 時給出不同的結果。 原始型別傳進 <code>eval</code> 會被視為原始代碼；<code>String</code> 物件則會回傳，且被視作是其他物件。舉個例子：</p>
+<p>字串原始型別和 <code>String</code> 物件也會在使用 {{jsxref("Global_Objects/eval", "eval")}} 時給出不同的結果。 原始型別傳進 <code>eval</code> 會被視為原始代碼；<code>String</code> 物件則會回傳，且被視作是其他物件。舉個例子：</p>
 
 <pre class="brush: js">s1 = "2 + 2";               // 建立一個字串原始型別
 s2 = new String("2 + 2");   // 建立一個字串物件
@@ -185,9 +185,9 @@ console.log(eval(s1));      // 回傳數字 4
 console.log(eval(s2));      // 回傳字串 "2 + 2"
 </pre>
 
-<p>因為一些原因，程式碼也許在遇到 <code>String</code> 物件時，但需要的卻是字串原始型別；儘管如此，通常作者們不需要擔心它的差異。</p>
+<p>因為一些原因，程式碼也許在遇到 <code>String</code> 物件時，但需要的卻是字串原始型別；儘管如此，通常作者們不需要擔心它的差異。</p>
 
-<p>一個 <code>String</code> 物件總能夠使用 {{jsxref("String.valueOf", "valueOf")}} 方法被轉換成自身的原始副本。</p>
+<p>一個 <code>String</code> 物件總能夠使用 {{jsxref("String.valueOf", "valueOf")}} 方法被轉換成自身的原始副本。</p>
 
 <pre class="brush: js">console.log(eval(s2.valueOf())); // 回傳數字 4
 </pre>
@@ -222,7 +222,7 @@ console.log(eval(s2));      // 回傳字串 "2 + 2"
 alert(String.replace(num, /5/, '2'));
 </pre>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods">Generics</a> are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.</p>
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods">Generics</a> are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.</p>
 
 <p>The following is a shim to provide support to non-supporting browsers:</p>
 
@@ -289,6 +289,6 @@ for (let i = 0, n = inputValues.length; i &lt; n; ++i) {
 
 <ul>
  <li>{{domxref("DOMString")}}</li>
- <li><a href="/en-US/Add-ons/Code_snippets/StringView"><code>StringView</code> — a C-like representation of strings based on typed arrays</a></li>
+ <li><a href="/en-US/Add-ons/Code_snippets/StringView"><code>StringView</code> — a C-like representation of strings based on typed arrays</a></li>
  <li><a href="/en-US/docs/Web/API/DOMString/Binary">Binary strings</a></li>
 </ul>

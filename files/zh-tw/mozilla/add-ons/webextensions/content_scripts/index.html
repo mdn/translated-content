@@ -13,7 +13,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 <div>容）</div>
 
-<div> </div>
+<div> </div>
 
 <p><a href="/en-US/Add-ons/WebExtensions/Background_scripts">後端腳本</a>可以使用所有的 <a href="/en-US/Add-ons/WebExtensions/API">擴充套件JavaScript APIs</a>，但它們無法直接使用網頁中的內容。所以如果你的套件必須要透過 content scripts 才能使用它們。</p>
 
@@ -26,7 +26,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 </div>
 
 <div class="note">
-<p>由於錯誤 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1408996">1408996</a>，透過 <code>var foo</code> or <code>window.foo = "bar"</code> 加入 content script 的 global 作用域的值可能會消失。</p>
+<p>由於錯誤 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1408996">1408996</a>，透過 <code>var foo</code> or <code>window.foo = "bar"</code> 加入 content script 的 global 作用域的值可能會消失。</p>
 </div>
 
 <h2 id="讀入內容腳本">讀入內容腳本</h2>
@@ -174,7 +174,7 @@ window.confirm("Are you sure?"); // 呼叫原本的 window.confirm()</pre>
 <table class="fullwidth-table standard-table">
  <thead>
   <tr>
-   <th scope="row"> </th>
+   <th scope="row"> </th>
    <th scope="col">在內容腳本處</th>
    <th scope="col">在後端腳本處</th>
   </tr>
@@ -233,8 +233,8 @@ function notify(message) {
 <p>建立連線你需要：</p>
 
 <ul>
- <li>一邊透過 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code> 監聽連線</li>
- <li>另一邊呼叫 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect">tabs.connect()</a></code> （對內容腳本建立連線時）或 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect">runtime.connect()</a></code> （對後端腳本建立連線時）。這會回傳一個 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> 物件。</li>
+ <li>一邊透過 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code> 監聽連線</li>
+ <li>另一邊呼叫 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect">tabs.connect()</a></code> （對內容腳本建立連線時）或 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect">runtime.connect()</a></code> （對後端腳本建立連線時）。這會回傳一個 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> 物件。</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code> 監聽器傳送自己的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> 物件。</li>
 </ul>
 
@@ -245,7 +245,7 @@ function notify(message) {
 <ul>
  <li>連線至後端腳本，並將 <code>Port</code> 儲存在一個 <code>myPort</code> 變數</li>
  <li>監聽並記錄 <code>myPort</code> 的訊息</li>
- <li>當使用者點擊文件時，透過 <code>myPort</code> 傳送訊息給後端腳本</li>
+ <li>當使用者點擊文件時，透過 <code>myPort</code> 傳送訊息給後端腳本</li>
 </ul>
 
 <pre class="brush: js">// content-script.js
@@ -273,7 +273,7 @@ document.body.addEventListener("click", function() {
    <li>開始監聽並記錄端口上的訊息</li>
   </ul>
  </li>
- <li>當使用者點擊套件的工具列按鈕時，透過 <code>portFromCS</code> 傳送訊息給內容腳本</li>
+ <li>當使用者點擊套件的工具列按鈕時，透過 <code>portFromCS</code> 傳送訊息給內容腳本</li>
 </ul>
 
 <pre class="brush: js">// background-script.js
@@ -300,7 +300,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>如果你有多個內容腳本同時在溝通，你可能會想把這些連線儲存在陣列裡面。</p>
 
-<p> </p>
+<p> </p>
 
 <ul>
 </ul>
@@ -310,7 +310,7 @@ browser.browserAction.onClicked.addListener(function() {
 var ports = []
 
 function connected(p) {
-  ports[p.sender.tab.id]    = p
+  ports[p.sender.tab.id]    = p
   //...
 }
 
@@ -318,18 +318,18 @@ browser.runtime.onConnect.addListener(connected)
 
 browser.browserAction.onClicked.addListener(function() {
   ports.forEach(p =&gt; {
-        p.postMessage({greeting: "它們按了按鈕！"})
-    })
+        p.postMessage({greeting: "它們按了按鈕！"})
+    })
 });</pre>
 
-<p> </p>
+<p> </p>
 
 <ul>
 </ul>
 
 <h2 id="與網頁溝通">與網頁溝通</h2>
 
-<p>雖說內容腳本預設不能存取頁面腳本產生的物件，但它們可以透過DOM <code><a href="/en-US/docs/Web/API/Window/postMessage">window.postMessage</a></code> 和 <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">window.addEventListener</a></code> APIs與頁面腳本溝通。</p>
+<p>雖說內容腳本預設不能存取頁面腳本產生的物件，但它們可以透過DOM <code><a href="/en-US/docs/Web/API/Window/postMessage">window.postMessage</a></code> 和 <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">window.addEventListener</a></code> APIs與頁面腳本溝通。</p>
 
 <p>例如：</p>
 
@@ -400,7 +400,7 @@ window.postMessage({
   message: "check"
 }, "*");</pre>
 
-<p>這段程式碼透過 <code>window.eval()</code> 和 <code>eval()</code> 建立了些變數 x 和 y 、記錄下它們的值並且傳訊息給頁面。</p>
+<p>這段程式碼透過 <code>window.eval()</code> 和 <code>eval()</code> 建立了些變數 x 和 y 、記錄下它們的值並且傳訊息給頁面。</p>
 
 <p>接收訊息這邊，頁面腳本記錄下一樣的值：</p>
 
@@ -434,7 +434,7 @@ In page script, window.y: undefined</pre>
 var original = console.log;
 
 console.log = function() {
-  original(true);
+  original(true);
 }
 </pre>
 
