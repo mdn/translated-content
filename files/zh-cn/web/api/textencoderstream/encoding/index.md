@@ -17,7 +17,7 @@ translation_of: Web/API/TextEncoderStream/encoding
 
 ## 值
 
-一个包含 `utf-8` 编码数据的字符串。
+一个使用 `utf-8` 编码的字符串。
 
 ## 示例
 
