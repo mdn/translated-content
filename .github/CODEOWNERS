@@ -9,7 +9,7 @@
 # ----------------------------------------------------------------------------
 # DEFAULT OWNERS
 # ----------------------------------------------------------------------------
-*    @mdn/core-yari-dev
+*    @mdn/core-dev
 
 # ----------------------------------------------------------------------------
 # DEFAULT CONTENT OWNER(S)
@@ -59,6 +59,6 @@
 # tries to change any one or more of these files should be escalated to the
 # owners specified here.
 # ----------------------------------------------------------------------------
-/.github/     @mdn/core-yari-dev
-/*            @mdn/core-yari-dev
-/*.md         @mdn/core-yari-dev @mdn/core-yari-content
+/.github/     @mdn/core-dev
+/*            @mdn/core-dev
+/*.md         @mdn/core-dev @mdn/core-yari-content
