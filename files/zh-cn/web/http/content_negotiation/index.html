@@ -17,7 +17,7 @@ translation_of: Web/HTTP/Content_negotiation
 
 <p>一份特定的文件称为一项资源。当客户端获取资源的时候，会使用其对应的 URL 发送请求。服务器通过这个 URL 来选择它指向的资源的某一变体——每一个变体称为一种展现形式——然后将这个选定的展现形式返回给客户端。整个资源，连同它的各种展现形式，共享一个特定的 URL 。当一项资源被访问的时候，特定展现形式的选取是通过内容协商机制来决定的，并且客户端和服务器端之间存在多种协商方式。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13789/HTTPNego.png" style="height: 311px; width: 767px;"></p>
+<p><img src="httpnego.png"></p>
 
 <p>最佳展现形式的选取可以通过两种机制实现：</p>
 
@@ -32,7 +32,7 @@ translation_of: Web/HTTP/Content_negotiation
 
 <p>在服务端驱动型协商机制或者主动协商机制中，浏览器（或者其他任何类型的用户代理）会随同 URL 发送一系列的消息头。这些消息头描述了用户倾向的选择。服务器则以此为线索，通过内部算法来选择最佳方案提供给客户端。相关算法与具体的服务器相关，并没有在规范中进行规定。例如这里有一份 <a class="external" href="http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm">Apache 2.2 服务器的内容协商算法</a>。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13791/HTTPNegoServer.png" style="height: 380px; width: 767px;"></p>
+<p><img src="httpnegoserver.png"></p>
 
 <p>HTTP/1.1 规范指定了一系列的标准消息头用于启动服务端驱动型内容协商 （{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Charset")}}、 {{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Language")}}）。尽管严格来说  {{HTTPHeader("User-Agent")}} 并不在此列，有时候它还是会被用来确定给客户端发送的所请求资源的特定展现形式，不过这种做法不提倡使用。服务器会使用  {{HTTPHeader("Vary")}} 消息头来说明实际上哪些消息头被用作内容协商的参考依据（确切来说是与之相关的响应消息头），这样可以使<a href="/en-US/docs/Web/HTTP/Caching">缓存</a>的运作更有效。</p>
 
@@ -142,6 +142,6 @@ translation_of: Web/HTTP/Content_negotiation
 
 <p>从 HTTP 协议制定之初，该协议就准许另外一种协商机制：代理驱动型内容协商机制，或称为响应式协商机制。在这种协商机制中，当面临不明确的请求时，服务器会返回一个页面，其中包含了可供选择的资源的链接。资源呈现给用户，由用户做出选择。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13795/HTTPNego3.png"></p>
+<p><img src="httpnego3.png"></p>
 
 <p>不幸的是，HTTP 标准没有明确指定提供可选资源链接的页面的格式，这一点阻碍了将这一过程无痛自动化。除了退回至服务端驱动型内容协商机制外，这种自动化方法几乎无一例外都是通过脚本技术来完成的，尤其是 JavaScript 重定向技术：在检测了协商的条件之后，脚本会触发重定向动作。另外一个问题是，为了获得实际的资源，需要额外发送一次请求，减慢了将资源呈现给用户的速度。</p>

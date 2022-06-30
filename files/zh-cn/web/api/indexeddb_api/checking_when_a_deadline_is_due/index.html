@@ -7,7 +7,7 @@ translation_of: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 
 <p>在本文中，我们将看一个复杂的示例，该示例涉及根据 IndexedDB 存储的截止日期检查当前时间和日期。这里的主要复杂因素是检查存储的截止日期信息（月，小时，日等）与 Date 对象的当前时间和日期。</p>
 
-<p><img alt="A screenshot of the sample app. A red main title saying To do app, a test to-do item, and a red form for users to enter new tasks" src="https://mdn.mozillademos.org/files/6319/to-do-app.png" style="float: left; height: 569px; margin-bottom: 20px; margin-right: 20px; width: 320px;"></p>
+<p><img alt="A screenshot of the sample app. A red main title saying To do app, a test to-do item, and a red form for users to enter new tasks" src="to-do-app.png"></p>
 
 <p>The main example application we will be referring to in this article is <strong>To-do list notifications</strong>, a simple to-do list application that stores task titles and deadline times and dates via <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>, and then provides users with notifications when deadline dates are reached, via the <a href="/en-US/docs/Web/API/notification">Notification</a>, and <a href="/en-US/docs/Web/Guide/API/Vibration">Vibration</a> APIs. You can <a href="https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages">download the To-do list notifications app from github</a> and play around with the source code, or <a href="http://mdn.github.io/to-do-notifications/">view the app running live</a>.</p>
 
@@ -21,7 +21,7 @@ translation_of: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 
 <p>为了在移动设备上提供合理的用户体验，并减少歧义，我决定创建一个 HTML 表单：</p>
 
-<p><img alt="The form of the to-do app, containing fields to fill in a task title, and minute, hour, day, month and year values for the deadline." src="https://mdn.mozillademos.org/files/6321/to-do-app-form2.png" style="float: left; height: 311px; margin-bottom: 20px; margin-right: 40px; width: 288px;"></p>
+<p><img alt="The form of the to-do app, containing fields to fill in a task title, and minute, hour, day, month and year values for the deadline." src="to-do-app-form2.png"></p>
 
 <ul>
  <li>用于输入待办事项列表标题的文本输入。这是用户输入中最不可避免的一点。</li>
