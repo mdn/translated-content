@@ -15,11 +15,11 @@ translation_of: Web/API/Window/dump
 <p>{{Non-standard_header}}</p>
 </div>
 
-<h2 id="Summary" name="Summary">概要</h2>
+<h2 id="Summary">概要</h2>
 
 <p>将信息打印到 (本地) 控制台（console）.</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">window.dump(<em>message</em>);
 
@@ -30,7 +30,7 @@ dump(<em>message</em>);
  <li><code>message</code> 是要打印的字符串</li>
 </ul>
 
-<h2 id="Notes" name="Notes">注解</h2>
+<h2 id="Notes">注解</h2>
 
 <p><code>dump()</code>的常见用途是调试 JavaScript。<code>dump</code>如果使用<code>console</code>选项启动了 Firefox 进程，则将消息发送到系统控制台（本地控制台）。如果<code>console</code>未指定该选项，则输出到对应终端。dump() 的输出不会发送到<a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console">浏览器控制台</a>。输出可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.log">console.log（）</a>发送到<a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console">浏览器控制台</a>。特殊的代码还能将消息记录到<a href="https://developer.mozilla.org/en-US/docs/Error_Console" title="Error_Console">错误控制台</a> / <a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console">浏览器控制台</a>。<code><a href="https://developer.mozilla.org/en-US/docs/Components.utils.reportError" title="Components.utils.reportError">Components.utils.reportError</a></code><code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIConsoleService" title="nsIConsoleService">nsIConsoleService</a></code></p>
 
@@ -49,6 +49,6 @@ dump(<em>message</em>);
 <p>如果您希望控制台消息出现在用于启动应用程序的控制台中，则可以使用<a href="https://github.com/matthewkastor/Redirector">Gecko 控制台重定向器</a>。预编译的二进制文件可以在压缩的归档文件  <a href="https://github.com/matthewkastor/Redirector/archive/master.zip">https://github.com/matthewkastor/Redirector/archive/master.zip 中找到</a>，<code>Redirector-master\Gecko\Console Redirector\bin\Release</code>将所有 dll 和 exe 复制到任何你想要的地方。然后跑<code>Console Redirector.exe /?</code></p>
 </div>
 
-<h2 id="Specification" name="Specification">Specification</h2>
+<h2 id="Specification">Specification</h2>
 
 <p>这不是标准的一部分</p>

@@ -5,11 +5,11 @@ translation_of: Web/API/Window/prompt
 ---
 <p>{{ ApiRef() }}</p>
 
-<h3 id="Summary" name="Summary">概述</h3>
+<h3 id="Summary">概述</h3>
 
 <p>显示一个对话框，对话框中包含一条文字信息，用来提示用户输入文字。</p>
 
-<h3 id="Syntax" name="Syntax">语法</h3>
+<h3 id="Syntax">语法</h3>
 
 <pre class="brush: js">result = window.prompt(text, value);
 </pre>
@@ -20,7 +20,7 @@ translation_of: Web/API/Window/prompt
  <li><code>value</code> 文本输入框中的默认值，该参数也可以省略不写。不过在 Internet Explorer 7 和 8 中，省略该参数会导致输入框中显示默认值"undefined"。</li>
 </ul>
 
-<h3 id="Example" name="Example">例子</h3>
+<h3 id="Example">例子</h3>
 
 <pre class="brush: js">var sign = prompt("你是什么星座的？");
 if (sign == "天蝎座"){
@@ -35,7 +35,7 @@ var sign = window.prompt('你觉得很幸运吗？','是的'); // 打开显示�
 
 <p>当用户点击"确定"按钮后，文本输入框中的文字被返回。如果文本输入框中为空，则返回一个空字符串。如果用户点击"取消"按钮，则返回 null。</p>
 
-<h3 id="Notes" name="Notes">注意</h3>
+<h3 id="Notes">注意</h3>
 
 <div>一个 prompt 对话框，包含一个单行文本框，一个“取消”按钮，一个“确定”按钮，在对话框关闭时，返回用户输入到文本框内的值 (可能为空)。<br>
 <br>
@@ -51,6 +51,6 @@ prompt 和 alert 以及类似的对话框都是模态窗口，它们会阻止用
 
 {{Compat}}
 
-<h3 id="See_also" name="See_also">参见</h3>
+<h3 id="See_also">参见</h3>
 
 <p><a href="/zh-cn/DOM/window.alert" title="zh-cn/DOM/window.alert">alert</a>, <a href="/zh-cn/DOM/window.confirm" title="zh-cn/DOM/window.confirm">confirm</a></p>
