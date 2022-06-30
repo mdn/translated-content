@@ -1,30 +1,32 @@
 ---
-title: HTMLMediaElement.paused
-slug: Web/API/HTMLMediaElement/paused
+title: HTMLMediaElement.loop
+slug: Web/API/HTMLMediaElement/loop
 tags:
   - API
   - HTML DOM
   - HTMLMediaElement
   - Property
-  - Read-only
-translation_of: Web/API/HTMLMediaElement/paused
+  - Web
+translation_of: Web/API/HTMLMediaElement/loop
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary">読み取り専用の <strong><code>HTMLMediaElement.paused</code></strong> プロパティは、メディア要素を一時停止しているかどうかを示します。</span></p>
+<span class="seoSummary">**`HTMLMediaElement.loop`** プロパティは、{{htmlattrxref("loop", "video")}} HTML 属性を反映します。 これは、メディア要素が最後に到達したときに最初からやり直すかどうかを制御します。</span>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
-<pre class="syntaxbox">var <em>isPaused</em> = <em>audioOrVideo</em>.paused</pre>
+<pre class="brush: js">var <em>loop</em> = <em>video</em>.loop;
+<em>audio</em>.loop = true;
+</pre>
 
 <h3 id="Value" name="Value">値</h3>
 
-<p>{{jsxref("Boolean")}}。 <code>true</code> は一時停止中で、<code>false</code> は一時停止していません。</p>
+{{jsxref("Boolean")}}。
 
 <h2 id="Example" name="Example">例</h2>
 
 <pre class="brush: js">var obj = document.createElement('video');
-console.log(obj.paused); // true
+obj.loop = true; // true
 </pre>
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
@@ -37,12 +39,12 @@ console.log(obj.paused); // true
    <th scope="col">コメント</th>
   </tr>
   <tr>
-   <td>{{SpecName('HTML WHATWG', "#dom-media-paused", "HTMLMediaElement.paused")}}</td>
+   <td>{{SpecName('HTML WHATWG', "#dom-media-loop", "HTMLMediaElement.loop")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
    <td> </td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.paused")}}</td>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.loop")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
    <td> </td>
   </tr>
@@ -53,7 +55,7 @@ console.log(obj.paused); // true
 
 
 
-<p>{{Compat("api.HTMLMediaElement.paused")}}</p>
+{{Compat("api.HTMLMediaElement.loop")}}
 
 <h2 id="See_Also" name="See_Also">関連情報</h2>
 

@@ -1,22 +1,21 @@
 ---
-title: 'HTMLMediaElement: waiting イベント'
-slug: Web/API/HTMLMediaElement/waiting_event
+title: 'HTMLMediaElement: loadeddata イベント'
+slug: Web/API/HTMLMediaElement/loadeddata_event
 tags:
   - Audio
   - Event
   - HTMLMediaElement
   - Reference
   - Video
-  - Web
+  - loadeddata
   - イベント
-  - ウェブ
   - 動画
   - 音声
-translation_of: Web/API/HTMLMediaElement/waiting_event
+translation_of: Web/API/HTMLMediaElement/loadeddata_event
 ---
-<div>{{APIRef("HTMLMediaElement")}}</div>
+{{APIRef("HTMLMediaElement")}}
 
-<p><span class="seoSummary"><code>waiting</code> イベントは、一時的にデータが欠落しているために再生が停止したときに発生します。</span></p>
+<span class="seoSummary">**`loadeddata`** イベントは、メディアの現在の再生位置のフレームの読み込みが完了したときに発生します。ふつうは最初のフレームです。</span>
 
 <table class="properties">
  <tbody>
@@ -25,8 +24,8 @@ translation_of: Web/API/HTMLMediaElement/waiting_event
    <td>なし</td>
   </tr>
   <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>いいえ</td>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
   </tr>
   <tr>
    <th scope="row">インターフェイス</th>
@@ -42,7 +41,7 @@ translation_of: Web/API/HTMLMediaElement/waiting_event
   </tr>
   <tr>
    <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onwaiting")}}</td>
+   <td>{{domxref("GlobalEventHandlers.onloadeddata")}}</td>
   </tr>
   <tr>
    <th scope="row">仕様書</th>
@@ -51,24 +50,30 @@ translation_of: Web/API/HTMLMediaElement/waiting_event
  </tbody>
 </table>
 
+<div class="note">
+なお、このイベントはモバイルやタブレットにおいて、ブラウザーの設定でデータセーバーがオンになっていると発生しません。
+</div>
+
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>これらの例は、 HTMLMediaElement の <code>waiting</code> イベントのイベントリスナーを追加し、イベントの発生によりイベントハンドラーが動作したときにメッセージを登録します。</p>
+これらの例では、 HTMLMediaElement の `loadeddata` イベントにイベントリスナーを追加し、イベントが発生してイベントハンドラーが動作したときにメッセージを投稿します。
 
-<p><code>addEventListener()</code> の使用:</p>
+`addEventListener()` の使用:
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.addEventListener('waiting', (event) =&gt; {
-  console.log('Video is waiting for more data.');
+video.addEventListener('loadeddata', (event) =&gt; {
+  console.log('Yay! The readyState just increased to  ' +
+      'HAVE_CURRENT_DATA or greater for the first time.');
 });</pre>
 
-<p><code>onwaiting</code> イベントハンドラープロパティの使用:</p>
+`onloadeddata` イベントハンドラープロパティの使用:
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.onwaiting = (event) =&gt; {
-  console.log('Video is waiting for more data.');
+video.onloadeddata = (event) =&gt; {
+  console.log('Yay! The readyState just increased to  ' +
+      'HAVE_CURRENT_DATA or greater for the first time.');
 };</pre>
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
@@ -82,11 +87,11 @@ video.onwaiting = (event) =&gt; {
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-waiting", "waiting media event")}}</td>
+   <td>{{SpecName('HTML WHATWG', "media.html#event-media-loadeddata", "loadeddata media event")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-waiting", "waiting media event")}}</td>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-loadeddata", "loadeddata media event")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
   </tr>
  </tbody>
@@ -94,7 +99,7 @@ video.onwaiting = (event) =&gt; {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("api.HTMLMediaElement.waiting_event")}}</p>
+{{Compat("api.HTMLMediaElement.loadeddata_event")}}
 
 <h2 id="Related_Events" name="Related_Events">関連イベント</h2>
 

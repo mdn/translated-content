@@ -10,12 +10,12 @@ tags:
   - src
 translation_of: Web/API/HTMLMediaElement/src
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLMediaElement.src</code></strong> プロパティは、HTML メディア要素の <code>src</code> 属性の値を反映します。 これは、要素で使用するメディアリソースの URL を示します。</p>
+**`HTMLMediaElement.src`** プロパティは、HTML メディア要素の `src` 属性の値を反映します。 これは、要素で使用するメディアリソースの URL を示します。
 
 <div class="note">
-<p><strong>注</strong>: この要素が現在実際に使用しているメディアリソースの URL を知る最善の方法は、{{domxref("HTMLMediaElement.currentSrc", "currentSrc")}} 属性の値を調べることです。 これは、（{{HTMLElement("source")}} 要素を表す）{{domxref("HTMLSourceElement")}} で提供されるリストからの最良または優先メディアリソースの選択も考慮に入れます。</p>
+**注**: この要素が現在実際に使用しているメディアリソースの URL を知る最善の方法は、{{domxref("HTMLMediaElement.currentSrc", "currentSrc")}} 属性の値を調べることです。 これは、（{{HTMLElement("source")}} 要素を表す）{{domxref("HTMLSourceElement")}} で提供されるリストからの最良または優先メディアリソースの選択も考慮に入れます。
 </div>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
@@ -24,7 +24,7 @@ translation_of: Web/API/HTMLMediaElement/src
 
 <h3 id="Value" name="Value">値</h3>
 
-<p>要素で使用するメディアリソースの URL を含む {{domxref("USVString")}} オブジェクト。 このプロパティは HTML 要素の <code>src</code> 属性の値を反映します。</p>
+要素で使用するメディアリソースの URL を含む {{domxref("USVString")}} オブジェクト。 このプロパティは HTML 要素の `src` 属性の値を反映します。
 
 <h2 id="Example" name="Example">例</h2>
 
@@ -58,7 +58,7 @@ console.log(obj.src); // ""
 
 
 
-<p>{{Compat("api.HTMLMediaElement.src")}}</p>
+{{Compat("api.HTMLMediaElement.src")}}
 
 <h2 id="See_Also" name="See_Also">関連情報</h2>
 

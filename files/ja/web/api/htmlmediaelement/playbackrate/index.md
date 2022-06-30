@@ -9,15 +9,15 @@ tags:
   - プロパティ
 translation_of: Web/API/HTMLMediaElement/playbackRate
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLMediaElement.playbackRate</code></strong> プロパティは、メディアが再生されるレートを設定します。これはユーザーが早送りやスローモーションなどのユーザー制御を実装するために使用されます。通常の再生レートにこの値を掛けて現在のレートが求められるため、 1.0 の値が通常の速度です。</p>
+**`HTMLMediaElement.playbackRate`** プロパティは、メディアが再生されるレートを設定します。これはユーザーが早送りやスローモーションなどのユーザー制御を実装するために使用されます。通常の再生レートにこの値を掛けて現在のレートが求められるため、 1.0 の値が通常の速度です。
 
-<p><code>playbackRate</code> が負の数であれば、メディアは逆方向に再生されます。</p>
+`playbackRate` が負の数であれば、メディアは逆方向に再生されます。
 
-<p>音声は、逆方向の再生であったり、早送りやスロー再生が実用的な範囲を外れていた場合 (例えば、 Gecko は <code>0.25</code> から <code>5.0</code> の範囲であれば) ミュートされます。</p>
+音声は、逆方向の再生であったり、早送りやスロー再生が実用的な範囲を外れていた場合 (例えば、 Gecko は `0.25` から `5.0` の範囲であれば) ミュートされます。
 
-<p>既定では音声の高さが修正され、どの速度でも同じになります。ブラウザーによっては、これを制御するために標準外の <code>preservespitch</code> プロパティを実装しています。</p>
+既定では音声の高さが修正され、どの速度でも同じになります。ブラウザーによっては、これを制御するために標準外の `preservespitch` プロパティを実装しています。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -29,7 +29,7 @@ translation_of: Web/API/HTMLMediaElement/playbackRate
 
 <h3 id="Value" name="Value">値</h3>
 
-<p><code><a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">double</a></code> 型。 <code>1.0</code> は「通常の速度」で、 <code>1.0</code> より小さければ通常より遅く、大きければ通常より早く再生されます。 (<strong>既定値:</strong> <code>1.0</code>)</p>
+`[double](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)` 型。 `1.0` は「通常の速度」で、 `1.0` より小さければ通常より遅く、大きければ通常より早く再生されます。 (**既定値:** `1.0`)
 
 <h2 id="Example" name="Example">例</h2>
 
@@ -62,7 +62,7 @@ console.log(obj.playbackRate); // Expected Output: 1</pre>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-<p>{{Compat("api.HTMLMediaElement.playbackRate")}}</p>
+{{Compat("api.HTMLMediaElement.playbackRate")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

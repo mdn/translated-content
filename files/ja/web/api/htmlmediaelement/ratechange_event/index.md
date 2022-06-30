@@ -1,17 +1,17 @@
 ---
-title: 'HTMLMediaElement: seeked イベント'
-slug: Web/API/HTMLMediaElement/seeked_event
+title: 'HTMLMediaElement: ratechange イベント'
+slug: Web/API/HTMLMediaElement/ratechange_event
 tags:
   - Audio
   - HTMLMediaElement
   - Reference
   - Video
   - events
-translation_of: Web/API/HTMLMediaElement/seeked_event
+translation_of: Web/API/HTMLMediaElement/ratechange_event
 ---
-<p>{{APIRef("HTMLMediaElement")}}</p>
+{{APIRef("HTMLMediaElement")}}
 
-<p><span class="seoSummary"><code>seeked</code> イベントは、シーク操作が完了したことで、現在の再生位置が変更され、<code>Boolean</code> の <code>seeking</code> 属性が <code>false</code> に変更されたときに発生します。</span></p>
+<p class="summary"><span class="seoSummary">`ratechange` イベントは、再生レートが変更されたときに発生します。</span></p>
 
 <table class="properties">
  <tbody>
@@ -37,33 +37,33 @@ translation_of: Web/API/HTMLMediaElement/seeked_event
   </tr>
   <tr>
    <th scope="row">イベントハンドラプロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onseeked")}}</td>
+   <td>{{domxref("GlobalEventHandlers.onratechange")}}</td>
   </tr>
   <tr>
    <th scope="row">仕様</th>
-   <td><a class="external" href="https://html.spec.whatwg.org/multipage/media.html#event-media-seeked">HTML5 メディア</a></td>
+   <td><a class="external" href="https://html.spec.whatwg.org/multipage/media.html#event-media-ratechange">HTML5 メディア</a></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>これらの例では、<code>HTMLMediaElement</code> の <code>seeked</code> イベントにイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。</p>
+これらの例では、`HTMLMediaElement` の `ratechange` イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
 
-<p><code>AddEventListener()</code> を使用する場合</p>
+`AddEventListener()` を使用する場合
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.addEventListener('seeked', (event) =&gt; {
-  console.log('動画が探していた再生位置を見つけました。');
+video.addEventListener('ratechange', (event) =&gt; {
+  console.log('再生レートが変わりました。');
 });</pre>
 
-<p><code>onseeked</code> イベントハンドラプロパティを使用する場合</p>
+`onratechange` イベントハンドラプロパティを使用する場合
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.onseeked = (event) =&gt; {
-  console.log('動画が探していた再生位置を見つけました。');
+video.onratechange = (event) =&gt; {
+  console.log('再生レートが変わりました。');
 };</pre>
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
@@ -75,11 +75,11 @@ video.onseeked = (event) =&gt; {
    <th scope="col">状態</th>
   </tr>
   <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-seeked", "seeked media event")}}</td>
+   <td>{{SpecName('HTML WHATWG', "media.html#event-media-ratechange", "ratechange media event")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-seeked", "seeked media event")}}</td>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-ratechange", "ratechange media event")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
   </tr>
  </tbody>
@@ -89,7 +89,7 @@ video.onseeked = (event) =&gt; {
 
 
 
-<p>{{Compat("api.HTMLMediaElement.seeked_event")}}</p>
+{{Compat("api.HTMLMediaElement.ratechange_event")}}
 
 <h2 id="Related_Events" name="Related_Events">関連イベント</h2>
 

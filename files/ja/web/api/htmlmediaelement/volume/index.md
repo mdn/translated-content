@@ -10,9 +10,9 @@ tags:
   - Volume
 translation_of: Web/API/HTMLMediaElement/volume
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>HTMLMediaElement.volume</code></strong> プロパティは、メディアを再生する音量を設定します。</span></p>
+<span class="seoSummary">**`HTMLMediaElement.volume`** プロパティは、メディアを再生する音量を設定します。</span>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/HTMLMediaElement/volume
 
 <h3 id="Value" name="Value">値</h3>
 
-<p><code>double</code> 型で値は 0 から 1 の間でなければなりません。 ここで、0 は効果的にミュートされ、1 が最大の可能な値です。</p>
+`double` 型で値は 0 から 1 の間でなければなりません。 ここで、0 は効果的にミュートされ、1 が最大の可能な値です。
 
 <h2 id="Example" name="Example">例</h2>
 
@@ -54,7 +54,7 @@ obj.volume = 0.75;</pre>
 
 
 
-<p>{{Compat("api.HTMLMediaElement.volume")}}</p>
+{{Compat("api.HTMLMediaElement.volume")}}
 
 <h2 id="See_Also" name="See_Also">関連情報</h2>
 

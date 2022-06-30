@@ -1,17 +1,17 @@
 ---
-title: 'HTMLMediaElement: suspend イベント'
-slug: Web/API/HTMLMediaElement/suspend_event
+title: 'HTMLMediaElement: seeking イベント'
+slug: Web/API/HTMLMediaElement/seeking_event
 tags:
   - Audio
   - HTMLMediaElement
   - Reference
   - Video
   - events
-translation_of: Web/API/HTMLMediaElement/suspend_event
+translation_of: Web/API/HTMLMediaElement/seeking_event
 ---
-<p>{{APIRef("HTMLMediaElement")}}</p>
+{{APIRef("HTMLMediaElement")}}
 
-<p><span class="seoSummary"><code>suspend</code> イベントは、メディアデータの読み込みが中断されたときに発生します。</span></p>
+<span class="seoSummary">`seeking` イベントは、シーク操作が開始されると発生します。 つまり、`Boolean` の `seeking` 属性を `true` に変更し、メディアは新しい位置をシーク中です。</span>
 
 <table class="properties">
  <tbody>
@@ -37,33 +37,33 @@ translation_of: Web/API/HTMLMediaElement/suspend_event
   </tr>
   <tr>
    <th scope="row">イベントハンドラプロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onsuspend")}}</td>
+   <td>{{domxref("GlobalEventHandlers.onseeking")}}</td>
   </tr>
   <tr>
    <th scope="row">仕様</th>
-   <td><a class="external" href="https://html.spec.whatwg.org/multipage/media.html#event-media-suspend">HTML5 メディア</a></td>
+   <td><a class="external" href="https://html.spec.whatwg.org/multipage/media.html#event-media-seeking">HTML5 メディア</a></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>これらの例では、<code>HTMLMediaElement</code> の <code>suspend</code> イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。</p>
+これらの例では、`HTMLMediaElement` の `seeking` イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
 
-<p><code>AddEventListener()</code> を使用する場合</p>
+`AddEventListener()` を使用する場合
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.addEventListener('suspend', (event) =&gt; {
-  console.log('データの読み込みが中断されました。');
+video.addEventListener('seeking', (event) =&gt; {
+  console.log('動画は新しい位置をシーク中です。');
 });</pre>
 
-<p><code>onsuspend</code> イベントハンドラプロパティを使用する場合</p>
+`onseeking` イベントハンドラプロパティを使用する場合
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.onsuspend = (event) =&gt; {
-  console.log('データの読み込みが中断されました。');
+video.onseeking = (event) =&gt; {
+  console.log('動画は新しい位置をシーク中です。');
 };</pre>
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
@@ -75,11 +75,11 @@ video.onsuspend = (event) =&gt; {
    <th scope="col">状態</th>
   </tr>
   <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-suspend", "suspend media event")}}</td>
+   <td>{{SpecName('HTML WHATWG', "media.html#event-media-seeking", "seeking media event")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-suspend", "suspend media event")}}</td>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-seeking", "seeking media event")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
   </tr>
  </tbody>
@@ -89,7 +89,7 @@ video.onsuspend = (event) =&gt; {
 
 
 
-<p>{{Compat("api.HTMLMediaElement.suspend_event")}}</p>
+{{Compat("api.HTMLMediaElement.seeking_event")}}
 
 <h2 id="Related_Events" name="Related_Events">関連イベント</h2>
 
@@ -121,8 +121,4 @@ video.onsuspend = (event) =&gt; {
  <li>{{domxref("HTMLVideoElement")}}</li>
  <li>{{HTMLElement("audio")}}</li>
  <li>{{HTMLElement("video")}}</li>
-</ul>
-
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
 </ul>

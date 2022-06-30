@@ -1,20 +1,17 @@
 ---
-title: 'HTMLMediaElement: playing イベント'
-slug: Web/API/HTMLMediaElement/playing_event
+title: 'HTMLMedia​Element: play イベント'
+slug: Web/API/HTMLMediaElement/play_event
 tags:
-  - API
+  - Audio
   - Event
   - HTMLMediaElement
   - Reference
-  - Web
-  - events
-  - playing
-  - イベント
-translation_of: Web/API/HTMLMediaElement/playing_event
+  - Video
+translation_of: Web/API/HTMLMediaElement/play_event
 ---
-<div>{{APIRef("HTMLMediaElement")}}</div>
+{{APIRef("HTMLMediaElement")}}
 
-<p><span class="seoSummary"><code>playing</code> イベントは、データ不足のために一時停止または遅延した後に、再開する準備ができたときに発生します。</span></p>
+<p class="seoSummary">`play` メソッドまたは `autoplay` 属性の結果として、`paused` プロパティが `true` から `false` に変更されたときに `play` イベントが発生します。</p>
 
 <table class="properties">
  <tbody>
@@ -32,67 +29,69 @@ translation_of: Web/API/HTMLMediaElement/playing_event
   </tr>
   <tr>
    <th scope="row">対象</th>
-   <td>Element</td>
+   <td>要素</td>
   </tr>
   <tr>
    <th scope="row">既定のアクション</th>
    <td>なし</td>
   </tr>
   <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onplaying")}}</td>
+   <th scope="row">イベントハンドラプロパティ</th>
+   <td>{{domxref("GlobalEventHandlers.onplay")}}</td>
   </tr>
   <tr>
-   <th scope="row">仕様書</th>
-   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
+   <th scope="row">仕様</th>
+   <td>[HTML5 メディア](https://html.spec.whatwg.org/multipage/media.html#event-media-play)</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>これらの例は、 HTMLMediaElement の <code>playing</code> イベントにイベントリスナーを追加してから、イベントが発生したことでイベントハンドラーが動作したときにメッセージをポストします。</p>
+これらの例では、`HTMLMediaElement` の `play` イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
 
-<p><code>addEventListener()</code> を使用した例:</p>
+`addEventListener()` を使用する場合
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.addEventListener('playing', (event) =&gt; {
-  console.log('Video is no longer paused');
+video.addEventListener('play', (event) =&gt; {
+  console.log('Boolean の paused プロパティは false になりました。 ' +
+  'play() メソッドが呼び出されたか、autoplay 属性が切り替えられました。');
 });</pre>
 
-<p><code>onplaying</code> イベントハンドラープロパティを使用した例:</p>
+`onplay` イベントハンドラプロパティを使用する場合
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.onplaying = (event) =&gt; {
-  console.log('Video is no longer paused.');
+video.onplay = (event) =&gt; {
+  console.log('Boolean の paused プロパティは false になりました。 ' +
+  'play() メソッドが呼び出されたか、autoplay 属性が切り替えられました。');
 };</pre>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-playing", "playing media event")}}</td>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "media.html#event-media-play", "play media event")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-playing", "playing media event")}}</td>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-play", "play media event")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("api.HTMLMediaElement.playing_event")}}</p>
+
+
+{{Compat("api.HTMLMediaElement.play_event")}}
 
 <h2 id="Related_Events" name="Related_Events">関連イベント</h2>
 
@@ -117,7 +116,7 @@ video.onplaying = (event) =&gt; {
  <li>{{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled イベント')}}</li>
 </ul>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_Also" name="See_Also">関連情報</h2>
 
 <ul>
  <li>{{domxref("HTMLAudioElement")}}</li>
@@ -125,3 +124,5 @@ video.onplaying = (event) =&gt; {
  <li>{{HTMLElement("audio")}}</li>
  <li>{{HTMLElement("video")}}</li>
 </ul>
+
+ 

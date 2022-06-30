@@ -1,17 +1,30 @@
 ---
-title: 'HTMLMediaElement: ratechange イベント'
-slug: Web/API/HTMLMediaElement/ratechange_event
+title: 'HTMLMediaElement: pause イベント'
+slug: Web/API/HTMLMediaElement/pause_event
 tags:
   - Audio
+  - Event
+  - HTML
   - HTMLMediaElement
-  - Reference
+  - Media
+  - Media Events
+  - Pausing
+  - Pausing Media
+  - Pausing Speech
+  - Speech Events
   - Video
+  - Web Speech API
+  - Web Speech Events
   - events
-translation_of: Web/API/HTMLMediaElement/ratechange_event
+  - pause
+  - speech
+translation_of: Web/API/HTMLMediaElement/pause_event
 ---
-<p>{{APIRef("HTMLMediaElement")}}</p>
+{{APIRef("HTMLMediaElement")}}
 
-<p class="summary"><span class="seoSummary"><code>ratechange</code> イベントは、再生レートが変更されたときに発生します。</span></p>
+<span class="seoSummary">`pause` イベントは、動作の一時停止のリクエストが処理され、動作が一時状態に入ったときに送信されるものであり、メディアが要素の {{domxref("HTMLMediaElement.pause", "pause()")}} の呼び出しを通して一時停止した後が最も一般的です。</span>イベントは `pause()` メソッドから戻り、メディア要素の {{domxref("HTMLMediaElement.paused", "paused")}} プロパティが `true` に変化した後で一度送信されます。
+
+<h2 id="General_info" name="General_info">基本情報</h2>
 
 <table class="properties">
  <tbody>
@@ -20,8 +33,8 @@ translation_of: Web/API/HTMLMediaElement/ratechange_event
    <td>なし</td>
   </tr>
   <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
+   <th scope="row">キャンセル可能</th>
+   <td>いいえ</td>
   </tr>
   <tr>
    <th scope="row">インターフェイス</th>
@@ -29,67 +42,69 @@ translation_of: Web/API/HTMLMediaElement/ratechange_event
   </tr>
   <tr>
    <th scope="row">対象</th>
-   <td>要素</td>
+   <td>Element</td>
   </tr>
   <tr>
    <th scope="row">既定のアクション</th>
    <td>なし</td>
   </tr>
   <tr>
-   <th scope="row">イベントハンドラプロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onratechange")}}</td>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("GlobalEventHandlers.onpause")}}</td>
   </tr>
   <tr>
-   <th scope="row">仕様</th>
-   <td><a class="external" href="https://html.spec.whatwg.org/multipage/media.html#event-media-ratechange">HTML5 メディア</a></td>
+   <th scope="row">仕様書</th>
+   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>これらの例では、<code>HTMLMediaElement</code> の <code>ratechange</code> イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。</p>
+これらの例は、 HTMLMediaElement の `pause` イベントにイベントリスナーを追加してから、イベントが発生したことでイベントハンドラーが動作したときにメッセージをポストします。
 
-<p><code>AddEventListener()</code> を使用する場合</p>
+`addEventListener()` を使用した例:
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.addEventListener('ratechange', (event) =&gt; {
-  console.log('再生レートが変わりました。');
+video.addEventListener('pause', (event) =&gt; {
+  console.log('The Boolean paused property is now true. Either the ' +
+  'pause() method was called or the autoplay attribute was toggled.');
 });</pre>
 
-<p><code>onratechange</code> イベントハンドラプロパティを使用する場合</p>
+`onpause` イベントハンドラープロパティを使用した例:
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.onratechange = (event) =&gt; {
-  console.log('再生レートが変わりました。');
+video.onpause = (event) =&gt; {
+  console.log('The Boolean paused property is now true. Either the ' +
+  'pause() method was called or the autoplay attribute was toggled.');
 };</pre>
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
-   <th scope="col">仕様</th>
+   <th scope="col">仕様書</th>
    <th scope="col">状態</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-ratechange", "ratechange media event")}}</td>
+   <td>{{SpecName('HTML WHATWG', "media.html#event-media-pause", "pause media event")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-ratechange", "ratechange media event")}}</td>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-pause", "pause media event")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-
-
-<p>{{Compat("api.HTMLMediaElement.ratechange_event")}}</p>
+{{Compat("api.HTMLMediaElement.pause_event")}}
 
 <h2 id="Related_Events" name="Related_Events">関連イベント</h2>
 
@@ -114,11 +129,12 @@ video.onratechange = (event) =&gt; {
  <li>{{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled イベント')}}</li>
 </ul>
 
-<h2 id="See_Also" name="See_Also">関連情報</h2>
+<h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
  <li>{{domxref("HTMLAudioElement")}}</li>
  <li>{{domxref("HTMLVideoElement")}}</li>
  <li>{{HTMLElement("audio")}}</li>
  <li>{{HTMLElement("video")}}</li>
+ <li>{{domxref("SpeechSynthesisUtterance")}}</li>
 </ul>
