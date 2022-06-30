@@ -5,7 +5,7 @@ translation_of: Web/API/AbortController
 ---
 <div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
 
-<p><strong><code>AbortController</code></strong> 介面代表一個控制器物件，讓你可以在需要時中斷一個或多個 DOM 請求。</p>
+<p><strong><code>AbortController</code></strong> 介面代表一個控制器物件，讓你可以在需要時中斷一個或多個 DOM 請求。</p>
 
 <p>你可以使用 {{domxref("AbortController.AbortController()")}} 建立一個新的 <code>AbortController</code> 物件。與 DOM 請求溝通時則是使用 {{domxref("AbortSignal")}} 物件。</p>
 
@@ -56,8 +56,8 @@ function fetchVideo() {
   fetch(url, {signal}).then(function(response) {
     ...
   }).catch(function(e) {
-    reports.textContent = '下載錯誤: ' + e.message;
-  })
+    reports.textContent = '下載錯誤: ' + e.message;
+  })
 }</pre>
 
 <div class="note">

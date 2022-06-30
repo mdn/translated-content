@@ -15,11 +15,11 @@ translation_of: Web/API/Element/querySelectorAll
 
 <dl>
  <dt><code>elementList</code></dt>
- <dd>is a non-live node list [<code> NodeList[elements]</code> <code>] </code>of <a href="/en-US/docs/DOM/element">element</a> objects.</dd>
+ <dd>is a non-live node list [<code> NodeList[elements]</code> <code>] </code>of <a href="/en-US/docs/DOM/element">element</a> objects.</dd>
  <dt><code>baseElement</code></dt>
  <dd>is an <a href="/en-US/docs/DOM/element">element</a> object.</dd>
  <dt><code>selectors</code></dt>
- <dd>is a group of <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">selectors</a> to match on or elements of the DOM. </dd>
+ <dd>is a group of <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">selectors</a> to match on or elements of the DOM. </dd>
 </dl>
 
 <h2 id="Example">範例</h2>
@@ -42,7 +42,7 @@ let matches = el.querySelectorAll('div.highlighted &gt; p'); // return a NodeLis
 
 <h2 id="Notes">註</h2>
 
-<p>If the specified “selectors” are not found inside the DOM of the page, the method <code>queryselectorAll</code> returns an empty NodeList as specified below:</p>
+<p>If the specified “selectors” are not found inside the DOM of the page, the method <code>queryselectorAll</code> returns an empty NodeList as specified below:</p>
 
 <pre class="brush: js">&gt; let x = document.body.querySelectorAll('.highlighted'); //case: if the class highlighted doesn't exist in any attribute "class" of the DOM the result is
 &gt; [] //empty NodeList</pre>
@@ -58,13 +58,13 @@ x.length; //return the size of x
 x[i_item]; //where i_item has a value between 0 and x.length-1. The operator "[]" return as in an array the element at index "i_item"
 </pre>
 
-<p>We could iterate inside a NodeList with the construct <code>for(....) {...} </code>as in the following code:</p>
+<p>We could iterate inside a NodeList with the construct <code>for(....) {...} </code>as in the following code:</p>
 
-<pre class="brush: js"> let x = document.body.querySelectorAll('.highlighted');
- let index = 0;
- for( index=0; index &lt; x.length; index++ ) {
-       console.log(x[index]);
- }</pre>
+<pre class="brush: js"> let x = document.body.querySelectorAll('.highlighted');
+ let index = 0;
+ for( index=0; index &lt; x.length; index++ ) {
+       console.log(x[index]);
+ }</pre>
 
 <p>So in the above way, it is possible to manage and modify the behaviour of the page.</p>
 
@@ -104,7 +104,7 @@ inner.length; // 0
 
 <div>{{Compat("api.Element.querySelectorAll")}}</div>
 
-<p>[1] Supported in Opera 15+ by enabling the "<strong>Enable &lt;style scoped&gt;</strong>" or "<strong>Enable experimental Web Platform features</strong>" flag in <code>chrome://flags</code>.</p>
+<p>[1] Supported in Opera 15+ by enabling the "<strong>Enable &lt;style scoped&gt;</strong>" or "<strong>Enable experimental Web Platform features</strong>" flag in <code>chrome://flags</code>.</p>
 
 <h2 id="See_also">參見</h2>
 

@@ -58,21 +58,21 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    <td>
     <p>反斜線放在非特殊符號前面，使非特殊符號不會被逐字譯出，代表特殊作用。<br>
      例如：'b' 如果沒有 '\' 在前頭，功能是找出小寫 b；若改為 '\b' 則代表的是邊界功能，block 用意。<br>
-     /\bter\b/.test("interest")         //false<br>
-     /\bter\b/.test("in ter est")       //true<br>
+     /\bter\b/.test("interest")         //false<br>
+     /\bter\b/.test("in ter est")       //true<br>
      <br>
-     <code>/a*/</code> 找出0個或是1個以上的a；而 /a\*/ 找出 'a*' 這個字串<br>
-     /aaaa*/g.test("caaady")    //true<br>
-     /a\*/.test("caaady")           //false<br>
+     <code>/a*/</code> 找出0個或是1個以上的a；而 /a\*/ 找出 'a*' 這個字串<br>
+     /aaaa*/g.test("caaady")    //true<br>
+     /a\*/.test("caaady")           //false<br>
      <br>
      '\' 也能使自身表現出來，表現 '\' ，必須以 '\\' 表達。<br>
-     /[\\]/.test("&gt;\\&lt;")                 //true</p>
+     /[\\]/.test("&gt;\\&lt;")                 //true</p>
    </td>
   </tr>
   <tr>
    <td><a href="#special-caret"><code>^</code></a></td>
    <td>
-    <p>匹配輸入的開頭，如果 multiline flag 被設為 true，則會匹配換行字元後。</p>
+    <p>匹配輸入的開頭，如果 multiline flag 被設為 true，則會匹配換行字元後。</p>
 
     <p>例如：<code>/^A/</code> 不會匹配「an A」的 A，但會匹配「An E」中的 A。</p>
 
@@ -90,10 +90,10 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
   <tr>
    <td><a href="#special-asterisk"><code>*</code></a></td>
    <td>
-    <p>匹配前一字元 0 至多次。<br>
+    <p>匹配前一字元 0 至多次。<br>
      <br>
      下面舉例要求基本 'aaaa' ，'a*' 後面有0個或多個a的意思<br>
-     /aaaaa*/g.test("caaady")   //false</p>
+     /aaaaa*/g.test("caaady")   //false</p>
 
     <p>例如：<code>/bo*/</code> 匹配「A ghost booooed」中的 boooo、「A bird warbled」中的 b，但在「A goat grunted」中不會匹配任何字串。</p>
    </td>
@@ -134,9 +134,9 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
     <p>匹配 'x' 並記住此次的匹配，如下面的範例所示。</p>
 
-    <p>在 正則表達示 /(foo) (bar) \1 \2/ 中的 (foo) 與 (bar) 可匹配了 "foo bar foo bar" 這段文字中的前兩個字，而 \1 與 \2 則匹配了後面的兩個字。注意， \1, \2, ..., \n 代表的就是前面的pattern，以本範例來說，/(foo) (bar) \1 \2/  等同於  /(foo) (bar) (foo) (bar)/。</p>
+    <p>在 正則表達示 /(foo) (bar) \1 \2/ 中的 (foo) 與 (bar) 可匹配了 "foo bar foo bar" 這段文字中的前兩個字，而 \1 與 \2 則匹配了後面的兩個字。注意， \1, \2, ..., \n 代表的就是前面的pattern，以本範例來說，/(foo) (bar) \1 \2/  等同於  /(foo) (bar) (foo) (bar)/。</p>
 
-    <p>用於取代(replace)的話，則是用 $1, $2,...,$n。如 'bar boo'.replace(/(...) (...)/, '$2 $1').<br>
+    <p>用於取代(replace)的話，則是用 $1, $2,...,$n。如 'bar boo'.replace(/(...) (...)/, '$2 $1').<br>
      <code>$&amp;</code> 表示已匹配的字串</p>
    </td>
   </tr>
@@ -150,19 +150,19 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
      <code>?:</code> 代表只要 group 就好，不要 wrap</p>
 
     <p>有無 <code>()</code> 差別 ？<br>
-     <code>'foo'.match(/(foo)/)  </code><br>
+     <code>'foo'.match(/(foo)/)  </code><br>
      <code>// ['foo', 'foo', index: 0, input: 'foo' ]<br>
      'foo'.match(/foo/)<br>
      // [ 'foo', index: 0, input: 'foo' ]</code></p>
 
-    <p> 有無<code>?:</code>差別？<br>
+    <p> 有無<code>?:</code>差別？<br>
      <code>'foo'.match(/(foo){1,2}/)<br>
      // [ 'foo', 'foo', index: 0, input: 'foo' ]<br>
      'foo'.match(/(?:foo){1,2}/)<br>
      [ 'foo', index: 0, input: 'foo' ]</code><br>
      連<code>()</code>都沒有，則<code>{1,2}</code>只是適用在<code>foo</code>的第二個<code>o</code>的條件而已。</p>
 
-    <p>更多資訊詳見 <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_parentheses">Using parentheses</a> 。</p>
+    <p>更多資訊詳見 <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_parentheses">Using parentheses</a> 。</p>
    </td>
   </tr>
   <tr>
@@ -181,7 +181,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
      <br>
      例如： <code>/\d+(?!\.)/</code> ，要找一個或多個數字時，在後面接的不是「點」的情況下成立。<br>
      <br>
-     <code>var result = /\d+(?!\.)/.exec("3.141")</code> ，<br>
+     <code>var result = /\d+(?!\.)/.exec("3.141")</code> ，<br>
      result執行出來為[ '141', index: 2, input: '3.141']，<br>
      index:2，代表141從index = 2開始。</p>
    </td>
@@ -191,7 +191,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    <td>
     <p>符合「x」或「y」。</p>
 
-    <p>舉例來說，<code>/green|red/</code>  的話，會匹配 <code>"green apple"</code> 中的 <code>"green"</code> 以及 <code>"red apple."</code> 的 <code>"red"</code> 。</p>
+    <p>舉例來說，<code>/green|red/</code>  的話，會匹配 <code>"green apple"</code> 中的 <code>"green"</code> 以及 <code>"red apple."</code> 的 <code>"red"</code> 。</p>
    </td>
   </tr>
   <tr>
@@ -207,27 +207,27 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    <td>
     <p>搜尋條件：n為至少、m為至多，其n、m皆為正整數。若把m設定為0，則為Invalid regular expression。</p>
 
-    <p>例如：<code>/a{1,3}/ </code>無法在 "cndy" 匹配到；而在 "candy" 中的第1個"a"符合；在 "caaaaaaandy" 中的前3個 "aaa" 符合，雖然此串有許多a，但只認前面3個。</p>
+    <p>例如：<code>/a{1,3}/ </code>無法在 "cndy" 匹配到；而在 "candy" 中的第1個"a"符合；在 "caaaaaaandy" 中的前3個 "aaa" 符合，雖然此串有許多a，但只認前面3個。</p>
    </td>
   </tr>
   <tr>
    <td><a href="#special-character-set"><code>[xyz]</code></a></td>
-   <td>字元的集合。此格式會匹配中括號內所有字元, including <a href="/zh-TW/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences">escape sequences</a>。特殊字元，例如點（<code>.</code>） 和米字號（<code>*</code>），在字元集合中不具特殊意義，所以不需轉換。若要設一個字元範圍的集合，可以使用橫線 <code>"-"</code> ，如下例所示：<br>
+   <td>字元的集合。此格式會匹配中括號內所有字元, including <a href="/zh-TW/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences">escape sequences</a>。特殊字元，例如點（<code>.</code>） 和米字號（<code>*</code>），在字元集合中不具特殊意義，所以不需轉換。若要設一個字元範圍的集合，可以使用橫線 <code>"-"</code> ，如下例所示：<br>
     <br>
-    <code>[a-d] </code>等同於 <code>[abcd]。</code>會匹配 "brisket" 的 "b" 、"city" 的 'c' ……等。 而<code>/[a-z.]+/ </code>和 <code>/[\w.]+/</code> 均可匹配字串 "test.i.ng" 。</td>
+    <code>[a-d] </code>等同於 <code>[abcd]。</code>會匹配 "brisket" 的 "b" 、"city" 的 'c' ……等。 而<code>/[a-z.]+/ </code>和 <code>/[\w.]+/</code> 均可匹配字串 "test.i.ng" 。</td>
   </tr>
   <tr>
    <td><a href="#special-negated-character-set"><code>[^xyz]</code></a></td>
    <td>
     <p>bracket中寫入的字元將被否定，匹配非出現在bracket中的符號。<br>
-      可用 '-' 來界定字元的範圍。一般直接表達的符號都可以使用這種方式。</p>
+      可用 '-' 來界定字元的範圍。一般直接表達的符號都可以使用這種方式。</p>
 
     <p><code>[^abc]</code>可以寫作[^<code>a-c]</code>. "brisket" 中找到 'r' 、"chop."中找到 'h'。</p>
    </td>
   </tr>
   <tr>
    <td><a href="#special-backspace"><code>[\b]</code></a></td>
-   <td>吻合倒退字元 (U+0008). (不會跟 \b 混淆)</td>
+   <td>吻合倒退字元 (U+0008). (不會跟 \b 混淆)</td>
   </tr>
   <tr>
    <td><a href="#special-word-boundary"><code>\b</code></a></td>
@@ -240,7 +240,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
      <code>/oon\b/</code> matches the 'oon' in "moon", because 'oon' is the end of the string, thus not followed by a word character;<br>
      <code>/\w\b\w/</code> will never match anything, because a word character can never be followed by both a non-word and a word character.</p>
 
-    <p><strong>Note:</strong> JavaScript's regular expression engine defines a <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.10.2.6">specific set of characters</a> to be "word" characters. Any character not in that set is considered a word break. This set of characters is fairly limited: it consists solely of the Roman alphabet in both upper- and lower-case, decimal digits, and the underscore character. Accented characters, such as "é" or "ü" are, unfortunately, treated as word breaks.</p>
+    <p><strong>Note:</strong> JavaScript's regular expression engine defines a <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.10.2.6">specific set of characters</a> to be "word" characters. Any character not in that set is considered a word break. This set of characters is fairly limited: it consists solely of the Roman alphabet in both upper- and lower-case, decimal digits, and the underscore character. Accented characters, such as "é" or "ü" are, unfortunately, treated as word breaks.</p>
    </td>
   </tr>
   <tr>
@@ -262,17 +262,17 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
   <tr>
    <td><a href="#special-digit"><code>\d</code></a></td>
    <td>
-    <p>吻合數字，寫法等同於 <code>[0-9] 。</code></p>
+    <p>吻合數字，寫法等同於 <code>[0-9] 。</code></p>
 
-    <p>例如：<code>/\d/</code> 或 <code>/[0-9]/</code> 在 "B2 is the suite number." 中找到 '2'</p>
+    <p>例如：<code>/\d/</code> 或 <code>/[0-9]/</code> 在 "B2 is the suite number." 中找到 '2'</p>
    </td>
   </tr>
   <tr>
    <td><a href="#special-non-digit"><code>\D</code></a></td>
    <td>
-    <p>吻合非數字，寫法等同於 <code>[^0-9]。</code></p>
+    <p>吻合非數字，寫法等同於 <code>[^0-9]。</code></p>
 
-    <p>例如：<code>/\D/</code> 或<code>/[^0-9]/</code> 在 "B2 is the suite number." 中找到 'B' 。</p>
+    <p>例如：<code>/\D/</code> 或<code>/[^0-9]/</code> 在 "B2 is the suite number." 中找到 'B' 。</p>
    </td>
   </tr>
   <tr>
@@ -365,7 +365,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 <p>The g after the regular expression is an option or flag that performs a global search, looking in the whole string and returning all matches. It is explained in detail below in <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags">Advanced Searching With Flags</a>.</p>
 
-<h3 id="使用括號">使用括號 </h3>
+<h3 id="使用括號">使用括號 </h3>
 
 <p>Parentheses around any part of the regular expression pattern causes that part of the matched substring to be remembered. Once remembered, the substring can be recalled for other use, as described in <a href="#Using_parenthesized_substring_matches">Using Parenthesized Substring Matches</a>.</p>
 
@@ -550,7 +550,7 @@ console.log(newstr);
   </tr>
   <tr>
    <td>y</td>
-   <td>Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}}</td>
+   <td>Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}}</td>
   </tr>
  </tbody>
 </table>
@@ -589,7 +589,7 @@ console.log(myArray);
 
 <p>and get the same result.</p>
 
-<p>The behavior associated with the '<strong><code>g</code></strong>' flag is different when the <code>.exec()</code> method is used.  (The roles of "class" and "argument" get reversed: In the case of <code>.match()</code>, the string class (or data type) owns the method and the regular expression is just an argument, while in the case of <code>.exec()</code>, it is the regular expression that owns the method, with the string being the argument.  Contrast <em><code>str.match(re)</code></em> versus <em><code>re.exec(str)</code></em>.)  The '<code><strong>g</strong></code>' flag is used with the <strong><code>.exec()</code></strong> method to get iterative progression.</p>
+<p>The behavior associated with the '<strong><code>g</code></strong>' flag is different when the <code>.exec()</code> method is used.  (The roles of "class" and "argument" get reversed: In the case of <code>.match()</code>, the string class (or data type) owns the method and the regular expression is just an argument, while in the case of <code>.exec()</code>, it is the regular expression that owns the method, with the string being the argument.  Contrast <em><code>str.match(re)</code></em> versus <em><code>re.exec(str)</code></em>.)  The '<code><strong>g</strong></code>' flag is used with the <strong><code>.exec()</code></strong> method to get iterative progression.</p>
 
 <pre>var xArray; while(xArray = re.exec(str)) console.log(xArray);
 // produces:

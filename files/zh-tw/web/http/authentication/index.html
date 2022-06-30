@@ -5,11 +5,11 @@ translation_of: Web/HTTP/Authentication
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>HTTP 提供一個用來存取控制及身分驗證框架. 最普遍的 HTTP 身分驗證是基於"Basic" schema. 本頁將介紹HTTP framework for authentication 以及如何限制存取你的伺服器 and HTTP "Basic" schema.</p>
+<p>HTTP 提供一個用來存取控制及身分驗證框架. 最普遍的 HTTP 身分驗證是基於"Basic" schema. 本頁將介紹HTTP framework for authentication 以及如何限制存取你的伺服器 and HTTP "Basic" schema.</p>
 
 <h2 id="The_general_HTTP_authentication_framework">The general HTTP authentication framework</h2>
 
-<p>{{RFC("7235")}} 定義了HTTP 身分驗證框架，它可以被使用於server to {{glossary("challenge")}} a client request  以及 client 提供身分驗證資訊. The challenge and response flow works like this: The server responds to a client with a {{HTTPStatus("401")}} (Unauthorized) response status and provides information on how to authorize with a {{HTTPHeader("WWW-Authenticate")}} response header containing at least one challenge. A client that wants to authenticate itself with a server can then do so by including an {{HTTPHeader("Authorization")}} request header field with the credentials. Usually a client will present a password prompt to the user and will then issue the request including the correct <code>Authorization</code> header.</p>
+<p>{{RFC("7235")}} 定義了HTTP 身分驗證框架，它可以被使用於server to {{glossary("challenge")}} a client request  以及 client 提供身分驗證資訊. The challenge and response flow works like this: The server responds to a client with a {{HTTPStatus("401")}} (Unauthorized) response status and provides information on how to authorize with a {{HTTPHeader("WWW-Authenticate")}} response header containing at least one challenge. A client that wants to authenticate itself with a server can then do so by including an {{HTTPHeader("Authorization")}} request header field with the credentials. Usually a client will present a password prompt to the user and will then issue the request including the correct <code>Authorization</code> header.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14689/HTTPAuth.png" style="height: 335px; width: 710px;"></p>
 
@@ -21,9 +21,9 @@ translation_of: Web/HTTP/Authentication
 
 <h3 id="Access_forbidden">Access forbidden</h3>
 
-<p>If a (proxy) server receives valid credentials that are not adequate to gain access for a given resource, the server should respond with the {{HTTPStatus("403")}} <code>Forbidden</code> status code. Unlike {{HTTPStatus("401")}} <code>Unauthorized</code> or {{HTTPStatus("407")}} <code>Proxy Authentication Required</code>, authentication is impossible for this user.</p>
+<p>If a (proxy) server receives valid credentials that are not adequate to gain access for a given resource, the server should respond with the {{HTTPStatus("403")}} <code>Forbidden</code> status code. Unlike {{HTTPStatus("401")}} <code>Unauthorized</code> or {{HTTPStatus("407")}} <code>Proxy Authentication Required</code>, authentication is impossible for this user.</p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="Authentication_of_cross-origin_images">Authentication of cross-origin images</h3>
 
@@ -31,9 +31,9 @@ translation_of: Web/HTTP/Authentication
 
 <h3 id="Character_encoding_of_HTTP_authentication">Character encoding of HTTP authentication</h3>
 
-<p>Browsers use <code>utf-8</code> encoding for usernames and passwords. Firefox used to use  <code>ISO-8859-1</code>, but changed over to <code>utf-8</code> for parity with other browsers, and to avoid potential problems as described in {{bug(1419658)}}.</p>
+<p>Browsers use <code>utf-8</code> encoding for usernames and passwords. Firefox used to use  <code>ISO-8859-1</code>, but changed over to <code>utf-8</code> for parity with other browsers, and to avoid potential problems as described in {{bug(1419658)}}.</p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="WWW-Authenticate_and_Proxy-Authenticate_headers"><code>WWW-Authenticate</code> and <code>Proxy-Authenticate</code> headers</h3>
 
@@ -47,7 +47,7 @@ Proxy-Authenticate: &lt;type&gt; realm=&lt;realm&gt;
 
 <h3 id="Authorization_and_Proxy-Authorization_headers"><code>Authorization</code> and <code>Proxy-Authorization</code> headers</h3>
 
-<p>The {{HTTPHeader("Authorization")}} and {{HTTPHeader("Proxy-Authorization")}} request headers contain the credentials to authenticate a user agent with a (proxy) server. Here, the type is needed again followed by the credentials, which can be encoded or encrypted depending on which authentication scheme is used.</p>
+<p>The {{HTTPHeader("Authorization")}} and {{HTTPHeader("Proxy-Authorization")}} request headers contain the credentials to authenticate a user agent with a (proxy) server. Here, the type is needed again followed by the credentials, which can be encoded or encrypted depending on which authentication scheme is used.</p>
 
 <pre class="syntaxbox">Authorization: &lt;type&gt; &lt;credentials&gt;
 Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;
@@ -76,7 +76,7 @@ Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;
 
 <h3 id="Security_of_basic_authentication">Security of basic authentication</h3>
 
-<p>As the user ID and password are passed over the network as clear text (it is base64 encoded, but base64 is a reversible encoding), the basic authentication scheme is not secure. HTTPS / TLS should be used in conjunction with basic authentication. Without these additional security enhancements, basic authentication should not be used to protect sensitive or valuable information.</p>
+<p>As the user ID and password are passed over the network as clear text (it is base64 encoded, but base64 is a reversible encoding), the basic authentication scheme is not secure. HTTPS / TLS should be used in conjunction with basic authentication. Without these additional security enhancements, basic authentication should not be used to protect sensitive or valuable information.</p>
 
 <h3 id="Restricting_access_with_Apache_and_basic_authentication">Restricting access with Apache and basic authentication</h3>
 

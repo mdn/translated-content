@@ -45,7 +45,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
  <tbody>
   <tr>
    <td>首頁</td>
-   <td><code>/</code> 和 <code>/blog/</code></td>
+   <td><code>/</code> 和 <code>/blog/</code></td>
    <td>關於此站的說明。</td>
   </tr>
   <tr>
@@ -155,7 +155,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
 
 <ul>
  <li>所有的模型欄位都有正確的標示和長度。</li>
- <li>所有的模型都有期望的物件名稱(例如<code> __str__()</code> 回傳期望的值)。</li>
+ <li>所有的模型都有期望的物件名稱(例如<code> __str__()</code> 回傳期望的值)。</li>
  <li>模型有期望的URL給每篇文章與回覆。(例如<code>get_absolute_url()</code> 回傳期望的URL)。</li>
  <li>BlogListView (所有文章的頁面) 可以從期望的位址進入(例如/blog/blogs)。</li>
  <li>BlogListView (所有文章的頁面) 可以從期望的位址名稱進入(例如'blogs')。</li>
@@ -280,11 +280,11 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
     ...
 
     def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
-        context = super(SomeView, self).get_context_data(**kwargs)
-        # Get the blogger object from the "pk" URL parameter and add it to the context
-        context['blogger'] = get_object_or_404(BlogAuthor, pk = self.kwargs['pk'])
-        return context
+        # Call the base implementation first to get a context
+        context = super(SomeView, self).get_context_data(**kwargs)
+        # Get the blogger object from the "pk" URL parameter and add it to the context
+        context['blogger'] = get_object_or_404(BlogAuthor, pk = self.kwargs['pk'])
+        return context
 </pre>
 
 <h2 id="Assessment">Assessment</h2>

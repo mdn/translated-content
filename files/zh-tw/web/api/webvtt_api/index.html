@@ -10,7 +10,7 @@ original_slug: Web/API/Web_Video_Text_Tracks_Format
 
 <p>WebVTT 的 MIME Type 為 <code>text/vtt</code>。</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="WebVTT_文本">WebVTT 文本</h2>
 
@@ -62,7 +62,7 @@ original_slug: Web/API/Web_Video_Text_Tracks_Format
   - They won't get in your hair. They're after the bugs.
 </pre>
 
-<p> </p>
+<p> </p>
 
 <h2 id="WebVTT_註解">WebVTT 註解</h2>
 
@@ -118,7 +118,7 @@ original_slug: Web/API/Web_Video_Text_Tracks_Format
   -Ta en kopp.
 </pre>
 
-<p> </p>
+<p> </p>
 
 <h2 id="WebVTT_時間節點">WebVTT 時間節點</h2>
 
@@ -138,7 +138,7 @@ original_slug: Web/API/Web_Video_Text_Tracks_Format
 00:00:5.000 --&gt; 00:00:10.000 line:0 position:20% size:60% align:start
 Some time ago in a place rather distant....</pre>
 
-<p> </p>
+<p> </p>
 
 <h3 id="節點_ID">節點 ID</h3>
 
@@ -167,7 +167,7 @@ This is the second.
 Third
 </pre>
 
-<p> </p>
+<p> </p>
 
 <h3 id="時間資訊">時間資訊</h3>
 
@@ -243,7 +243,7 @@ Third
 00:01:00.581 --&gt; 00:02:00.100
 00:02:01.000 --&gt; 00:02:01.000</pre>
 
-<p> </p>
+<p> </p>
 
 <h3 id="Cue_Settings">Cue Settings</h3>
 
@@ -302,7 +302,7 @@ Third
    </thead>
    <tbody>
     <tr>
-     <th> </th>
+     <th> </th>
      <th><code>vertical</code> 省略時</th>
      <th><code>vertical:rl</code></th>
      <th><code>vertical:lr</code></th>
@@ -350,7 +350,7 @@ Third
    </thead>
    <tbody>
     <tr>
-     <th> </th>
+     <th> </th>
      <th><code>vertical</code> 省略時</th>
      <th><code>vertical:rl</code></th>
      <th><code>vertical:lr</code></th>
@@ -386,7 +386,7 @@ Third
    </thead>
    <tbody>
     <tr>
-     <th> </th>
+     <th> </th>
      <th><code>vertical</code> 省略時</th>
      <th><code>vertical:rl</code></th>
      <th><code>vertical:lr</code></th>
@@ -419,7 +419,7 @@ Third
    </thead>
    <tbody>
     <tr>
-     <th> </th>
+     <th> </th>
      <th><code>vertical</code> 省略時</th>
      <th><code>vertical:rl</code></th>
      <th><code>vertical:lr</code></th>
@@ -457,11 +457,11 @@ Third
 00:00:5.000 --&gt; 00:00:10.000 vertical:rt line:-1 align:end
 </pre>
 
-<p> </p>
+<p> </p>
 
 <h3 id="文字內容">文字內容</h3>
 
-<p>The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.</p>
+<p>The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.</p>
 
 <p>文字內容中不能包含「<code>--&gt;」字串、「</code>&amp;」符號或「&lt;」符號。如欲使用後兩者，可採跳脫字串「&amp;amp;」或「&amp;lt;」。此外雖規格上允許使用「&gt;」字元，仍然建議跳脫為「&amp;gt;」以避免混淆。若您使用 WebVTT 檔作為後設資料，則可不管這些限制。</p>
 
@@ -496,27 +496,27 @@ Third
   </tr>
   <tr>
    <td>左到右標記</td>
-   <td> </td>
+   <td> </td>
    <td><code>&amp;lrm;</code></td>
   </tr>
   <tr>
    <td>右到左標記</td>
-   <td> </td>
+   <td> </td>
    <td><code>&amp;rlm;</code></td>
   </tr>
   <tr>
    <td>不斷行空白</td>
-   <td><code> </code></td>
+   <td><code> </code></td>
    <td><code>&amp;nbsp;</code></td>
   </tr>
  </tbody>
 </table>
 
-<p> </p>
+<p> </p>
 
 <h3 id="文字內容中的標籤">文字內容中的標籤</h3>
 
-<p>有很多標籤（例如 <code>&lt;bold&gt;</code>）可以用在文字內容中，但若 {{ HTMLElement("track") }} 的 {{ htmlattrxref("kind") }} 設定為 <code>chapters</code> 時，其中所用的 WebVTT  檔案裡就不能使用標籤。</p>
+<p>有很多標籤（例如 <code>&lt;bold&gt;</code>）可以用在文字內容中，但若 {{ HTMLElement("track") }} 的 {{ htmlattrxref("kind") }} 設定為 <code>chapters</code> 時，其中所用的 WebVTT  檔案裡就不能使用標籤。</p>
 
 <ul>
  <li><strong>時間標籤</strong>
@@ -544,7 +544,7 @@ That's &lt;00:00:21.000&gt;amore
  </li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <p>以下則需要開頭標籤與結束標籤（例如 <code>&lt;b&gt;text&lt;/b&gt;</code>）。</p>
 
@@ -629,7 +629,7 @@ That's &lt;00:00:21.000&gt;amore
  </li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <h2 id="瀏覽器支援">瀏覽器支援</h2>
 

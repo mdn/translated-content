@@ -11,17 +11,17 @@ translation_of: Web/API/Web_Workers_API/Using_web_workers
 
 <p>透過 worker 建構子 (如 {{domxref("Worker.Worker", "Worker()")}}) 便可以產生 worker 物件，並且執行 JavaScript 檔案。在 worker 中的 JavaScript 運行在不同於 {{domxref("window")}} 的執行緒環境，所以在 worker 中存取全域物件應該要透過 {{domxref("window.self","self")}}，如果透過 {{domxref("window")}} 會導致錯誤發生。</p>
 
-<p>Dedicated worker (專有 worker) 是一般 worker，只能被產生它的檔案存取，{{domxref("DedicatedWorkerGlobalScope")}} 物件代表其執行環境；而Shared worker (共享 worker) 則能夠被不同檔案存取，{{domxref("SharedWorkerGlobalScope")}}) 物件代表其執行環境。</p>
+<p>Dedicated worker (專有 worker) 是一般 worker，只能被產生它的檔案存取，{{domxref("DedicatedWorkerGlobalScope")}} 物件代表其執行環境；而Shared worker (共享 worker) 則能夠被不同檔案存取，{{domxref("SharedWorkerGlobalScope")}}) 物件代表其執行環境。</p>
 
 <div class="note">
 <p><strong>Note</strong>: worker 其他文件說明請見 <a href="/en-US/docs/Web/API/Web_Workers_API">The Web Workers API landing page</a> 。</p>
 </div>
 
-<p>基本上 worker 能夠執行任何事情，比如說 <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>、<a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>、和 Firefox OS 特有的 <a href="/en-US/docs/Web/API/Data_Store_API">Data Store API</a> ，然而直接存取 DOM 或是 {{domxref("window")}} 物件的一些方法和屬性則不被允許，更多細節請見 <a href="/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">worker 可存取知函數和類別</a>。</p>
+<p>基本上 worker 能夠執行任何事情，比如說 <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>、<a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>、和 Firefox OS 特有的 <a href="/en-US/docs/Web/API/Data_Store_API">Data Store API</a> ，然而直接存取 DOM 或是 {{domxref("window")}} 物件的一些方法和屬性則不被允許，更多細節請見 <a href="/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">worker 可存取知函數和類別</a>。</p>
 
 <p>主執行緒和 worker 執行緒之間用 postMessage() 方法發送訊息，然後透過 <code>onmessage</code> 事件接受訊息 (訊息存在 {{event("Message")}} 事件的 data 屬性之中)，其中被傳送的資料並非共享而是複製一份後傳送。</p>
 
-<p>worker 可以產生新 worker，只要新 worker 的來源 (origin) 和父頁面相同，也可以利用 <a href="/en/nsIXMLHttpRequest">XMLHttpRequest</a> 執行輸出/輸入(但是responseXML 和channel這兩個屬性為null)。</p>
+<p>worker 可以產生新 worker，只要新 worker 的來源 (origin) 和父頁面相同，也可以利用 <a href="/en/nsIXMLHttpRequest">XMLHttpRequest</a> 執行輸出/輸入(但是responseXML 和channel這兩個屬性為null)。</p>
 
 <h2 id="Dedicated_workers">Dedicated workers</h2>
 
@@ -150,7 +150,7 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
 
 <h3 id="產生_shared_worker">產生 shared worker</h3>
 
-<p>和 dedicated worker 做法差不多，只是用另一個 SharedWorker 建構子來產生  shared worker，見 <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/index.html">index.html</a> 和 <a href="http://mdn.github.io/simple-shared-worker/index2.html">index2.html</a>:</p>
+<p>和 dedicated worker 做法差不多，只是用另一個 SharedWorker 建構子來產生  shared worker，見 <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/index.html">index.html</a> 和 <a href="http://mdn.github.io/simple-shared-worker/index2.html">index2.html</a>:</p>
 
 <pre class="brush: js">var myWorker = new SharedWorker("worker.js");</pre>
 
@@ -197,7 +197,7 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
   console.log('Message received from worker');
 }</pre>
 
-<p> </p>
+<p> </p>
 
 <h2 id="執行緒_(Thread)_安全">執行緒 (Thread) 安全</h2>
 
@@ -296,7 +296,7 @@ var asyncEval = (function () {
   };
 })();</pre>
 
-<p><a href="en-US/docs/Web/HTTP/data_URIs">data URL</a> 相當於網路請求，範例中的 data URL 會在 worker 執行下列程式碼回應訊息：</p>
+<p><a href="en-US/docs/Web/HTTP/data_URIs">data URL</a> 相當於網路請求，範例中的 data URL 會在 worker 執行下列程式碼回應訊息：</p>
 
 <pre class="brush: js">onmessage = function (oEvent) {
   postMessage({
@@ -448,7 +448,7 @@ onmessage = function (oEvent) {
 
 <h3 id="移轉資料所有權_-_可移轉物件_(transferable_objects)">移轉資料所有權 - 可移轉物件 (transferable objects)</h3>
 
-<p>Google Chrome 17+ 以及 Firefox 18+ 能夠和 worker 高效能地傳送另外一種特定型態物件 (可移轉物件, transferable objects，這種物件實作了 {{domxref("Transferable")}} 介面)，可移轉物件當被傳送到另一端時並不需要複製，因此可以大大提升傳送大型資料物件的效能；這好比像是 C/C++ 的 pass-by-reference，但是不同的是，一旦移轉後原先的環境便失去了持有資料，例如當主頁面傳送 {{domxref("ArrayBuffer")}} 後，主頁面便不再能夠使用這筆資料物件了，這筆資料物件的存取連結已經靜靜地移轉到 worker 端了。</p>
+<p>Google Chrome 17+ 以及 Firefox 18+ 能夠和 worker 高效能地傳送另外一種特定型態物件 (可移轉物件, transferable objects，這種物件實作了 {{domxref("Transferable")}} 介面)，可移轉物件當被傳送到另一端時並不需要複製，因此可以大大提升傳送大型資料物件的效能；這好比像是 C/C++ 的 pass-by-reference，但是不同的是，一旦移轉後原先的環境便失去了持有資料，例如當主頁面傳送 {{domxref("ArrayBuffer")}} 後，主頁面便不再能夠使用這筆資料物件了，這筆資料物件的存取連結已經靜靜地移轉到 worker 端了。</p>
 
 <pre class="brush: js">// Create a 32MB "file" and fill it.
 var uInt8Array = new Uint8Array(1024*1024*32); // 32MB
@@ -460,12 +460,12 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: 關於更多可移轉物件的資訊, 效能和功能偵測，請參考 HTML5 Rocks 上 <a href="http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">Transferable Objects: Lightning Fast!</a> 一文。</p>
+<p><strong>Note</strong>: 關於更多可移轉物件的資訊, 效能和功能偵測，請參考 HTML5 Rocks 上 <a href="http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">Transferable Objects: Lightning Fast!</a> 一文。</p>
 </div>
 
 <h2 id="Embedded_workers">Embedded workers</h2>
 
-<p>不像 {{HTMLElement("script")}}，並沒有一套正式標準的方法將 worker 的程式碼嵌入到頁面之中，不過沒有 src 屬性而且 mime-type 不屬於可執行程式碼的 {{HTMLElement("script")}} 元素會被視為 javascript 可以取用的資料區塊（data block），資料區塊是一項 HTML5 可用於攜帶文字資料的特色功能，利用資料區塊我們就有辦法嵌入 worker 的程式碼到頁面中：</p>
+<p>不像 {{HTMLElement("script")}}，並沒有一套正式標準的方法將 worker 的程式碼嵌入到頁面之中，不過沒有 src 屬性而且 mime-type 不屬於可執行程式碼的 {{HTMLElement("script")}} 元素會被視為 javascript 可以取用的資料區塊（data block），資料區塊是一項 HTML5 可用於攜帶文字資料的特色功能，利用資料區塊我們就有辦法嵌入 worker 的程式碼到頁面中：</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -516,7 +516,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 &lt;body&gt;&lt;div id="logDisplay"&gt;&lt;/div&gt;&lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>Embedded worker 在 <code>document.worker</code> 之中。</p>
+<p>Embedded worker 在 <code>document.worker</code> 之中。</p>
 
 <h2 id="其他範例">其他範例</h2>
 
@@ -524,7 +524,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 <h3 id="在背景中執行運算">在背景中執行運算</h3>
 
-<p>worker 主要的用處在避免重度 CPU 運算的任務阻礙到 UI 執行緒運行；這邊我們用 worker 來跑 Fibonacci 數列運算。</p>
+<p>worker 主要的用處在避免重度 CPU 運算的任務阻礙到 UI 執行緒運行；這邊我們用 worker 來跑 Fibonacci 數列運算。</p>
 
 <h4 id="JavaScript">JavaScript</h4>
 
@@ -559,7 +559,7 @@ onmessage = function(event) {
   }
  };</pre>
 
-<p>worker 程式碼中註冊了一個 <code>onmessage</code> 事件處理器用來接收另一端 <code>postMessage 過來的訊息</code> (請注意這並非定義一個全域變數或函數，<code>var onmessage</code> 或 <code>function onmessage</code> 會定義全域變數，但不會註冊事件處理器)，然後開始進行遞迴運算。</p>
+<p>worker 程式碼中註冊了一個 <code>onmessage</code> 事件處理器用來接收另一端 <code>postMessage 過來的訊息</code> (請注意這並非定義一個全域變數或函數，<code>var onmessage</code> 或 <code>function onmessage</code> 會定義全域變數，但不會註冊事件處理器)，然後開始進行遞迴運算。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -594,7 +594,7 @@ onmessage = function(event) {
 &lt;/html&gt;
 </pre>
 
-<p>onmessage 事件處理器會接收 worker 回傳的運算結果，然後顯示在頁面上，如果有問題， onerror 事件處理器會 <a href="/en-US/docs/Debugging_JavaScript#dump.28.29">輸出</a> 錯誤訊息。</p>
+<p>onmessage 事件處理器會接收 worker 回傳的運算結果，然後顯示在頁面上，如果有問題， onerror 事件處理器會 <a href="/en-US/docs/Debugging_JavaScript#dump.28.29">輸出</a> 錯誤訊息。</p>
 
 <p>和 worker 溝通則是利用 postMessage。</p>
 
@@ -602,7 +602,7 @@ onmessage = function(event) {
 
 <h3 id="在背景中執行_web_IO">在背景中執行 web I/O</h3>
 
-<p>範例請見 <a href="/en-US/docs/Using_workers_in_extensions">Using workers in extensions</a> 。</p>
+<p>範例請見 <a href="/en-US/docs/Using_workers_in_extensions">Using workers in extensions</a> 。</p>
 
 <h3 id="分割任務到多個_workers">分割任務到多個 workers</h3>
 
@@ -610,12 +610,12 @@ onmessage = function(event) {
 
 <h2 id="其他類型的_worker">其他類型的 worker</h2>
 
-<p>除了 dedicated 和 shared web workers，還有其他種類：</p>
+<p>除了 dedicated 和 shared web workers，還有其他種類：</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a> 基本上如同介於 web app 和瀏覽器以及網路之間的代理伺服器 (proxy server)，這類 worker 重點在實現離線服務，service worker 會攔截網路請求，然後依據網路連線和資源狀態做出反應，他們可以存取推播和背景同步 APIs。</li>
- <li>Chrome Workers 是 Firefox 唯一的 worker 類型，他們可以用在開發 add-ons，或是想要使用 <a href="/en/js-ctypes">js-ctypes</a>。詳情請見 {{domxref("ChromeWorker")}}。</li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API#Audio_Workers">Audio Workers</a> 主要用於音效處理部分。</li>
+ <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a> 基本上如同介於 web app 和瀏覽器以及網路之間的代理伺服器 (proxy server)，這類 worker 重點在實現離線服務，service worker 會攔截網路請求，然後依據網路連線和資源狀態做出反應，他們可以存取推播和背景同步 APIs。</li>
+ <li>Chrome Workers 是 Firefox 唯一的 worker 類型，他們可以用在開發 add-ons，或是想要使用 <a href="/en/js-ctypes">js-ctypes</a>。詳情請見 {{domxref("ChromeWorker")}}。</li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API#Audio_Workers">Audio Workers</a> 主要用於音效處理部分。</li>
 </ul>
 
 <h2 id="Worker_可存取之函數與介面">Worker 可存取之函數與介面</h2>
@@ -629,10 +629,10 @@ onmessage = function(event) {
  <li>{{domxref("Window.requestAnimationFrame")}}, {{domxref("WindowTimers.setTimeout")}}, 與 {{domxref("WindowTimers.setInterval")}}</li>
 </ul>
 
-<p>worker 無法操作主頁面的物件與 DOM，如有相關需求，必須要間接透過 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 通知主頁面，讓主頁面執行需求。</p>
+<p>worker 無法操作主頁面的物件與 DOM，如有相關需求，必須要間接透過 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 通知主頁面，讓主頁面執行需求。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 所有 worker 可存取功能一覽表，請見 <a href="/en-US/docs/Web/Reference/Functions_and_classes_available_to_workers">Functions and interfaces available to workers</a>.</p>
+<p><strong>Note</strong>: 所有 worker 可存取功能一覽表，請見 <a href="/en-US/docs/Web/Reference/Functions_and_classes_available_to_workers">Functions and interfaces available to workers</a>.</p>
 </div>
 
 <h2 id="標準規範">標準規範</h2>

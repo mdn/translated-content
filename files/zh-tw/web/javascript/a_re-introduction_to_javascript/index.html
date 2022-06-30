@@ -260,7 +260,7 @@ do {
 
 <p>JavaScript 也有三元運算子 (tertiary operator)，可以用來寫單行的條件陳述式：</p>
 
-<pre class="brush: js">var allowed = (age &gt; 18) ? "是" : "否";
+<pre class="brush: js">var allowed = (age &gt; 18) ? "是" : "否";
 </pre>
 
 <p>switch 陳述式可以根據一個數字或字串做不同決定：</p>
@@ -561,7 +561,7 @@ NaN // undefined 不能進行加法
 2
 </pre>
 
-<p>JavaScript 能讓你遞迴地呼叫函式。這在處理樹狀結構的時候特別有用，比如瀏覽器的 <a href="/zh_tw/DOM">DOM</a>。 </p>
+<p>JavaScript 能讓你遞迴地呼叫函式。這在處理樹狀結構的時候特別有用，比如瀏覽器的 <a href="/zh_tw/DOM">DOM</a>。 </p>
 
 <pre class="brush: js">function countChars(elm) {
     if (elm.nodeType == 3) { // TEXT_NODE
@@ -658,9 +658,9 @@ Willison, Simon
 undefined undefined
 </pre>
 
-<p>當我們呼叫<code>fullName()</code>，「<code>this</code>」被繫結到全域物件。 既然沒有叫做 <code>first</code> 或 <code>last</code> 的全域變數，我們取得的都是 <code>undefined</code> 。  </p>
+<p>當我們呼叫<code>fullName()</code>，「<code>this</code>」被繫結到全域物件。 既然沒有叫做 <code>first</code> 或 <code>last</code> 的全域變數，我們取得的都是 <code>undefined</code> 。  </p>
 
-<p>我們可以利用「<code>this</code>」關鍵字的好處來改進我們的 <code>makePerson</code> 函式：</p>
+<p>我們可以利用「<code>this</code>」關鍵字的好處來改進我們的 <code>makePerson</code> 函式：</p>
 
 <pre class="brush: js">function Person(first, last) {
     this.first = first;
@@ -675,7 +675,7 @@ undefined undefined
 var s = new Person("Simon", "Willison");
 </pre>
 
-<p>我們引入了另一個關鍵字：「<code><a href="/zh_tw/Core_JavaScript_1.5_Reference/Operators/Special_Operators/new_Operator">new</a></code>」。 「<code>new」</code>與「<code>this</code>」有強烈的關係。 他的作用是產生一個全新的空物件，然後呼叫指定的函式，使用新物件的作為函式的「<code>this</code>」。 被「new」呼叫的函式叫做「建構子函數」(constructor functions) 。 </p>
+<p>我們引入了另一個關鍵字：「<code><a href="/zh_tw/Core_JavaScript_1.5_Reference/Operators/Special_Operators/new_Operator">new</a></code>」。 「<code>new」</code>與「<code>this</code>」有強烈的關係。 他的作用是產生一個全新的空物件，然後呼叫指定的函式，使用新物件的作為函式的「<code>this</code>」。 被「new」呼叫的函式叫做「建構子函數」(constructor functions) 。 </p>
 
 <p>此時我們可以發現，每次產生一個新的 Person 物件都會在其內部重新產生兩個新的 function 物件。如果這兩個 function 物件只有一份而讓大家共用不是更好嗎？所以</p>
 
@@ -743,7 +743,7 @@ nomiS
 desrever eb won nac sihT
 </pre>
 
-<p>承接以前提過的，prototype 會是 chain 的一部分，是以很直觀的，根就是 Object.prototype 了。在 Object.prototype 提供的眾多函式中包含一個 toString() - 他在當你創建一個字串物件時被呼叫。因此我們可以利用他來對我們的 Person 物件 debug：</p>
+<p>承接以前提過的，prototype 會是 chain 的一部分，是以很直觀的，根就是 Object.prototype 了。在 Object.prototype 提供的眾多函式中包含一個 toString() - 他在當你創建一個字串物件時被呼叫。因此我們可以利用他來對我們的 Person 物件 debug：</p>
 
 <pre class="brush: js">&gt; var s = new Person("Simon", "Willison");
 &gt; s.toString()
@@ -829,7 +829,7 @@ y(7)
 <p>JavaScript 是具有垃圾回收特性的語言，物件的生滅都是由執行環境（如瀏覽器）所控制。</p>
 
 <ol>
- <li>記憶體配置：創造物件時 </li>
+ <li>記憶體配置：創造物件時 </li>
  <li>記憶體釋放：當沒有參照可以指向該物件時</li>
 </ol>
 
@@ -854,7 +854,7 @@ y(7)
  <li>迴圈中明顯地浪費記憶體</li>
 </ol>
 
-<p>閉包容易產生記憶體流失。如下舉例 : </p>
+<p>閉包容易產生記憶體流失。如下舉例 : </p>
 
 <pre class="brush: js">function addHandler() {
     var el = document.getElementById('el');
@@ -894,7 +894,7 @@ y(7)
 
 <p>在此例子中，隱藏了來自 clickHandler 產生的內容，因而消除了相互參照。</p>
 
-<p>避免閉包還有另外一種方法：利用 <code>window.onunload</code> 事件消除相互參照。許多事件函示庫都會自動這麼做。</p>
+<p>避免閉包還有另外一種方法：利用 <code>window.onunload</code> 事件消除相互參照。許多事件函示庫都會自動這麼做。</p>
 
 <div>
 <h2 id="原始文件資訊">原始文件資訊</h2>

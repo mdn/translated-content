@@ -59,21 +59,21 @@ translation_of: Web/HTML/Element/script
  <dt>{{htmlattrdef("crossorigin")}}</dt>
  <dd>針對沒有通過標準 <a href="/zh-TW/docs/HTTP_access_control">CORS</a> 的一般 <code>script</code> 元素，會把最少的資訊傳給 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}。若要允許另一個域名站點的靜態內容，列出錯誤訊息，請使用此屬性。請參見 <a href="/zh-TW/docs/Web/HTML/CORS_settings_attributes">CORS settings attributes</a> 以以取得對其有效參數的，更具描述性的解釋。</dd>
  <dt>{{htmlattrdef("defer")}}</dt>
- <dd>設置此 Boolean attribute 是為了指示瀏覽器， script 應在 document 解析後，但在 firing {{event("DOMContentLoaded")}} 之前被執行。</dd>
+ <dd>設置此 Boolean attribute 是為了指示瀏覽器， script 應在 document 解析後，但在 firing {{event("DOMContentLoaded")}} 之前被執行。</dd>
  <dd>具有 <code>defer</code> 屬性的 scripts 將阻止觸發<code>DOMContentLoaded</code> 事件，直到 scripts load 完成並且 finished evaluating。</dd>
 </dl>
 
 <div class="warning">
 <p>如果沒有 <code>src</code> 屬性的話，就不能用這個屬性（例如行內腳本）：在這種情況下，它將失去作用。</p>
 
-<p>The <code>defer</code> attribute has no effect on <a href="/zh-TW/docs/Web/JavaScript/Guide/Modules">module scripts </a>— they defer by default.</p>
+<p>The <code>defer</code> attribute has no effect on <a href="/zh-TW/docs/Web/JavaScript/Guide/Modules">module scripts </a>— they defer by default.</p>
 </div>
 
 <dl>
  <dd>
- <p>Scripts with the <code>defer</code> attribute will execute in the order in which they appear in the document.</p>
+ <p>Scripts with the <code>defer</code> attribute will execute in the order in which they appear in the document.</p>
 
- <p>This attribute allows the elimination of <strong>parser-blocking JavaScript</strong> where the browser would have to load and evaluate scripts before continuing to parse. <code>async</code> has a similar effect in this case.</p>
+ <p>This attribute allows the elimination of <strong>parser-blocking JavaScript</strong> where the browser would have to load and evaluate scripts before continuing to parse. <code>async</code> has a similar effect in this case.</p>
  </dd>
  <dt>{{htmlattrdef("integrity")}}</dt>
  <dd>This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See <a href="/zh-TW/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>.</dd>

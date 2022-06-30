@@ -64,14 +64,14 @@ translation_of: Mozilla/Firefox/Releases/8
 <h3 id="HTML">HTML</h3>
 
 <ul>
- <li>The <a href="/zh-TW/docs/Web/API/HTMLImageElement"> 元素的畫面佈局與外觀呈現。"><code>HTMLImageElement</code></a> <code>crossOrigin</code> property has been added and the <code><a href="/zh-TW/docs/Web/HTML/Element/img#attr-crossorigin">crossorigin</a></code> attribute has been added to the <a href="/zh-TW/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a> element. (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=664299">bug 664299</a>)</li>
- <li>The <a href="/zh-TW/docs/Web/API/HTMLSelectElement#add()"><code>HTMLSelectElement.add()</code></a> method now supports either an item or index of an item that the new item should be inserted before. Previously it only supported an item. (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=666200">bug 666200</a>)</li>
+ <li>The <a href="/zh-TW/docs/Web/API/HTMLImageElement"> 元素的畫面佈局與外觀呈現。"><code>HTMLImageElement</code></a> <code>crossOrigin</code> property has been added and the <code><a href="/zh-TW/docs/Web/HTML/Element/img#attr-crossorigin">crossorigin</a></code> attribute has been added to the <a href="/zh-TW/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a> element. (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=664299">bug 664299</a>)</li>
+ <li>The <a href="/zh-TW/docs/Web/API/HTMLSelectElement#add()"><code>HTMLSelectElement.add()</code></a> method now supports either an item or index of an item that the new item should be inserted before. Previously it only supported an item. (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=666200">bug 666200</a>)</li>
  <li>The <code>HTMLIsIndexElement</code> constructor has been removed. No elements have implemented this interface since before Firefox 4.</li>
- <li>The HTML5 "context menu" feature (<code>contextmenu</code> attribute), which lets you add custom element specific items to native context menu, is now supported (the implementation is still experimental awaiting changes in the specification; see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=617528">bug 617528</a>).</li>
+ <li>The HTML5 "context menu" feature (<code>contextmenu</code> attribute), which lets you add custom element specific items to native context menu, is now supported (the implementation is still experimental awaiting changes in the specification; see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=617528">bug 617528</a>).</li>
  <li>Support for the <a href="/en/HTML/Global_attributes#attr-accesskeylabel"><code>accesskeylabel</code></a> attribute has been added to all elements.</li>
  <li>The <a href="/zh-TW/docs/Web/HTML/Element/input"> element is used to create interactive controls for web-based forms in order to accept data from the user."><code>&lt;input&gt;</code></a> and <a href="/zh-TW/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> elements now support the <code>selectionDirection</code> attribute, and their <code>setSelectionRange()</code> methods have been updated to support optionally specifying a direction.</li>
  <li>Most elements now get a focus ring drawn around them if they've been made focusable by using the <code>tabindex</code> attribute and the user then focuses the element.</li>
- <li>In a set of nested <a href="/zh-TW/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a> elements click events do no longer trigger multiple <label> elements, which caused Firefox to stop responding in the past (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=646157">s">bug 646157</a>).</label></li>
+ <li>In a set of nested <a href="/zh-TW/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a> elements click events do no longer trigger multiple <label> elements, which caused Firefox to stop responding in the past (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=646157">s">bug 646157</a>).</label></li>
 </ul>
 
 <h3 id="DOM">DOM</h3>
@@ -81,7 +81,7 @@ translation_of: Mozilla/Firefox/Releases/8
  <li><a href="/zh-TW/docs/Web/API/BlobBuilder"><code>BlobBuilder</code></a> now has a <code>getFile()</code> method that returns the content of the blob as a file.</li>
  <li>The <a href="/zh-TW/docs/Web/API/FileReaderSync"><code>FileReaderSync</code></a> interface (part of the FileAPI) has been implemented.</li>
  <li>Event handling in nested <a href="/zh-TW/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a>s has been fixed.</li>
- <li>You can now use <a href="/zh-TW/docs/Web/API/Window/postMessage"><code>window.postMessage()</code></a> to pass <a href="/zh-TW/docs/Web/API/File"><code>File</code></a> and <a href="/zh-TW/docs/Web/API/FileList"> 元素 DOM 物件的 files 屬性（property）。你可以操作 FileList 物件來存取使用者透過 &amp;lt;input type="file"> 元素所選取的檔案，或由拖放操作所產生的檔案（請參考 DataTransfer 物件的更多使用細節）。'><code>FileList</code></a> objects between windows.</li>
+ <li>You can now use <a href="/zh-TW/docs/Web/API/Window/postMessage"><code>window.postMessage()</code></a> to pass <a href="/zh-TW/docs/Web/API/File"><code>File</code></a> and <a href="/zh-TW/docs/Web/API/FileList"> 元素 DOM 物件的 files 屬性（property）。你可以操作 FileList 物件來存取使用者透過 &amp;lt;input type="file"> 元素所選取的檔案，或由拖放操作所產生的檔案（請參考 DataTransfer 物件的更多使用細節）。'><code>FileList</code></a> objects between windows.</li>
  <li>When editing <a href="/zh-TW/docs/Web/API/Element/contenteditable"><code>element.contenteditable</code></a> areas, exiting a heading by pressing return, or exiting list editing mode by pressing return twice, now returns to paragraph entry mode (that is, paragraphs inside <a href="/zh-TW/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a> blocks) instead of separating lines by <a href="/zh-TW/docs/Web/HTML/Element/br"> 元素會產生文字的斷行（carriage-return、CR 或是確認鍵）。此元素主要用於寫詩或寫住址，這種斷行有所意義的時候。"><code>&lt;br&gt;</code></a> elements.</li>
  <li>Fixed a bug that prevents justification from taking effect properly when applied to the first line in a <a href="/zh-TW/docs/Web/API/Element/contenteditable"><code>element.contenteditable</code></a> area.</li>
  <li>Fixed a bug that caused pressing delete or backspace at the beginning of a <a href="/zh-TW/docs/Web/API/Element/contenteditable"><code>element.contenteditable</code></a> area to affect the previous <code>contenteditable</code> block if one is present.</li>
@@ -108,7 +108,7 @@ translation_of: Mozilla/Firefox/Releases/8
  <li>Hyphenation rules have been added for many new languages when using <a href="/zh-TW/docs/Web/CSS/hyphens"><code>hyphens</code></a>.</li>
  <li>Handling of <a href="/zh-TW/docs/Web/CSS/background-size"><code>background-size</code></a> has been revised to more closely match the specification.</li>
  <li>In the past, <a href="/zh-TW/docs/Web/CSS/text-decoration"><code>text-decoration</code></a> in quirks mode had line thickness and position adjusted on descendant text to match the descendant. Now standards mode and quirks mode rendering are more similar.</li>
- <li>Horizontal positioning for elements has been brought more in line with the specification in many cases. Documentation for this is forthcoming, but for now, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=682780">bug 682780</a>, comment 23 for details.</li>
+ <li>Horizontal positioning for elements has been brought more in line with the specification in many cases. Documentation for this is forthcoming, but for now, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=682780">bug 682780</a>, comment 23 for details.</li>
  <li><a href="/en/CSS/Scaling_of_SVG_backgrounds">SVG images are now scaled properly</a> when used as background images.</li>
 </ul>
 
@@ -130,7 +130,7 @@ translation_of: Mozilla/Firefox/Releases/8
  <li>The WebSocket constructor now supports an array of protocols as well as a single protocol string.</li>
  <li>Mixed content is not allowed with WebSockets; that is, you can no longer open a connection to a non-secure WebSocket server from secure content.</li>
  <li>Connection errors with WebSockets now trigger the <code>onerror</code> handler.</li>
- <li><a href="/en/WebSockets">WebSocket</a> API has been updated to the latest draft of the specification (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=674890">bug 674890</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=674527">bug 674527</a>, and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=674716">bug 674716</a>).</li>
+ <li><a href="/en/WebSockets">WebSocket</a> API has been updated to the latest draft of the specification (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=674890">bug 674890</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=674527">bug 674527</a>, and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=674716">bug 674716</a>).</li>
  <li>The deflate-stream extension to WebSockets has been disabled; it has been deprecated, and was breaking compatibility with some sites.</li>
 </ul>
 
@@ -176,7 +176,7 @@ translation_of: Mozilla/Firefox/Releases/8
 
 <h3 id="Workers">Workers</h3>
 
-<p>It is no longer possible to access XPCOM objects from ChromeWorkers. XPConnect has been disabled in worker contexts as of <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649537">bug 649537</a>.</p>
+<p>It is no longer possible to access XPCOM objects from ChromeWorkers. XPConnect has been disabled in worker contexts as of <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649537">bug 649537</a>.</p>
 
 <h3 id="XUL">XUL</h3>
 

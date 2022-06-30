@@ -31,24 +31,24 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 <p>本例會畫一連串矩形圖案來說明畫布狀態堆疊是如何運作。</p>
 
 <pre class="brush: js">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById('canvas').getContext('2d');
 
-  ctx.fillRect(0,0,150,150);   // Draw a rectangle with default settings
-  ctx.save();                  // Save the default state
+  ctx.fillRect(0,0,150,150);   // Draw a rectangle with default settings
+  ctx.save();                  // Save the default state
 
-  ctx.fillStyle = '#09F'       // Make changes to the settings
-  ctx.fillRect(15,15,120,120); // Draw a rectangle with new settings
+  ctx.fillStyle = '#09F'       // Make changes to the settings
+  ctx.fillRect(15,15,120,120); // Draw a rectangle with new settings
 
-  ctx.save();                  // Save the current state
-  ctx.fillStyle = '#FFF'       // Make changes to the settings
-  ctx.globalAlpha = 0.5;
-  ctx.fillRect(30,30,90,90);   // Draw a rectangle with new settings
+  ctx.save();                  // Save the current state
+  ctx.fillStyle = '#FFF'       // Make changes to the settings
+  ctx.globalAlpha = 0.5;
+  ctx.fillRect(30,30,90,90);   // Draw a rectangle with new settings
 
-  ctx.restore();               // Restore previous state
-  ctx.fillRect(45,45,60,60);   // Draw a rectangle with restored settings
+  ctx.restore();               // Restore previous state
+  ctx.fillRect(45,45,60,60);   // Draw a rectangle with restored settings
 
-  ctx.restore();               // Restore original state
-  ctx.fillRect(60,60,30,30);   // Draw a rectangle with restored settings
+  ctx.restore();               // Restore original state
+  ctx.fillRect(60,60,30,30);   // Draw a rectangle with restored settings
 }</pre>
 
 <div class="hidden">
@@ -57,21 +57,21 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p> </p>
+<p> </p>
 
 <p>* 預設用黑色填滿這個矩形</p>
 
 <p>* 每種狀態可以看成是一層層堆疊的步驟紀錄</p>
 
-<p>第一步：畫出黑色矩形　接著把第一個狀態儲存下來(用黑色填滿)</p>
+<p>第一步：畫出黑色矩形 接著把第一個狀態儲存下來(用黑色填滿)</p>
 
-<p>第二步：畫出藍色矩形　接著把第二個狀態儲存下來(用藍色填滿)</p>
+<p>第二步：畫出藍色矩形 接著把第二個狀態儲存下來(用藍色填滿)</p>
 
 <p>第三步：畫出半透明矩形</p>
 
-<p>第四步：再畫出矩形  這時候我們取用最新儲存過的藍色(第二狀態)</p>
+<p>第四步：再畫出矩形  這時候我們取用最新儲存過的藍色(第二狀態)</p>
 
-<p>第五步：再畫一個矩形　我們再取出更早之前儲存的黑色(第一狀態)</p>
+<p>第五步：再畫一個矩形 我們再取出更早之前儲存的黑色(第一狀態)</p>
 
 <p>{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "https://mdn.mozillademos.org/files/249/Canvas_savestate.png")}}</p>
 
@@ -196,74 +196,74 @@ function drawSpirograph(ctx,R,r,O){
 <p>本程式碼範例會畫出一系列不同縮放比例的萬花筒樣式圖案。</p>
 
 <pre class="brush: js">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.strokeStyle = "#fc0";
-  ctx.lineWidth = 1.5;
-  ctx.fillRect(0,0,300,300);
+  var ctx = document.getElementById('canvas').getContext('2d');
+  ctx.strokeStyle = "#fc0";
+  ctx.lineWidth = 1.5;
+  ctx.fillRect(0,0,300,300);
 
-  // Uniform scaling
-  ctx.save()
-  ctx.translate(50,50);
-  drawSpirograph(ctx,22,6,5);
+  // Uniform scaling
+  ctx.save()
+  ctx.translate(50,50);
+  drawSpirograph(ctx,22,6,5);
 
-  ctx.translate(100,0);
-  ctx.scale(0.75,0.75);
-  drawSpirograph(ctx,22,6,5);
+  ctx.translate(100,0);
+  ctx.scale(0.75,0.75);
+  drawSpirograph(ctx,22,6,5);
 
-  ctx.translate(133.333,0);
-  ctx.scale(0.75,0.75);
-  drawSpirograph(ctx,22,6,5);
-  ctx.restore();
+  ctx.translate(133.333,0);
+  ctx.scale(0.75,0.75);
+  drawSpirograph(ctx,22,6,5);
+  ctx.restore();
 
-  // Non uniform scaling (y direction)
-  ctx.strokeStyle = "#0cf";
-  ctx.save()
-  ctx.translate(50,150);
-  ctx.scale(1,0.75);
-  drawSpirograph(ctx,22,6,5);
+  // Non uniform scaling (y direction)
+  ctx.strokeStyle = "#0cf";
+  ctx.save()
+  ctx.translate(50,150);
+  ctx.scale(1,0.75);
+  drawSpirograph(ctx,22,6,5);
 
-  ctx.translate(100,0);
-  ctx.scale(1,0.75);
-  drawSpirograph(ctx,22,6,5);
+  ctx.translate(100,0);
+  ctx.scale(1,0.75);
+  drawSpirograph(ctx,22,6,5);
 
-  ctx.translate(100,0);
-  ctx.scale(1,0.75);
-  drawSpirograph(ctx,22,6,5);
-  ctx.restore();
+  ctx.translate(100,0);
+  ctx.scale(1,0.75);
+  drawSpirograph(ctx,22,6,5);
+  ctx.restore();
 
-  // Non uniform scaling (x direction)
-  ctx.strokeStyle = "#cf0";
-  ctx.save()
-  ctx.translate(50,250);
-  ctx.scale(0.75,1);
-  drawSpirograph(ctx,22,6,5);
+  // Non uniform scaling (x direction)
+  ctx.strokeStyle = "#cf0";
+  ctx.save()
+  ctx.translate(50,250);
+  ctx.scale(0.75,1);
+  drawSpirograph(ctx,22,6,5);
 
-  ctx.translate(133.333,0);
-  ctx.scale(0.75,1);
-  drawSpirograph(ctx,22,6,5);
+  ctx.translate(133.333,0);
+  ctx.scale(0.75,1);
+  drawSpirograph(ctx,22,6,5);
 
-  ctx.translate(177.777,0);
-  ctx.scale(0.75,1);
-  drawSpirograph(ctx,22,6,5);
-  ctx.restore();
+  ctx.translate(177.777,0);
+  ctx.scale(0.75,1);
+  drawSpirograph(ctx,22,6,5);
+  ctx.restore();
 
 }
 function drawSpirograph(ctx,R,r,O){
-  var x1 = R-O;
-  var y1 = 0;
-  var i  = 1;
-  ctx.beginPath();
-  ctx.moveTo(x1,y1);
-  do {
-    if (i&gt;20000) break;
-    var x2 = (R+r)*Math.cos(i*Math.PI/72) - (r+O)*Math.cos(((R+r)/r)*(i*Math.PI/72))
-    var y2 = (R+r)*Math.sin(i*Math.PI/72) - (r+O)*Math.sin(((R+r)/r)*(i*Math.PI/72))
-    ctx.lineTo(x2,y2);
-    x1 = x2;
-    y1 = y2;
-    i++;
-  } while (x2 != R-O &amp;&amp; y2 != 0 );
-  ctx.stroke();
+  var x1 = R-O;
+  var y1 = 0;
+  var i  = 1;
+  ctx.beginPath();
+  ctx.moveTo(x1,y1);
+  do {
+    if (i&gt;20000) break;
+    var x2 = (R+r)*Math.cos(i*Math.PI/72) - (r+O)*Math.cos(((R+r)/r)*(i*Math.PI/72))
+    var y2 = (R+r)*Math.sin(i*Math.PI/72) - (r+O)*Math.sin(((R+r)/r)*(i*Math.PI/72))
+    ctx.lineTo(x2,y2);
+    x1 = x2;
+    y1 = y2;
+    i++;
+  } while (x2 != R-O &amp;&amp; y2 != 0 );
+  ctx.stroke();
 }
 </pre>
 

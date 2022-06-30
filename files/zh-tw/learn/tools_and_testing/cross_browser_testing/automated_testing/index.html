@@ -204,23 +204,23 @@ var csslint = require('gulp-csslint');</pre>
 <ol>
  <li>輸入以下指令安裝：
   <pre class="editor editor-colors">npm install --save-dev gulp-babel babel-preset-es2015
-npm install jshint gulp-jshint --save-dev
+npm install jshint gulp-jshint --save-dev
 </pre>
  </li>
  <li>在 <code>gulpfile.js</code> 增加這個相依：
   <pre class="editor editor-colors">var babel = require('gulp-babel');
-var jshint = require('gulp-jshint');
+var jshint = require('gulp-jshint');
 </pre>
  </li>
  <li class="line">在 <code>gulpfile.js</code> 的底部加入以下測試：
   <pre class="brush: js">gulp.task('js', function() {
-    return gulp.src('src/main.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
-        .pipe(babel({
-            presets: ['es2015']
-        }))
-        .pipe(gulp.dest('build'));
+    return gulp.src('src/main.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(gulp.dest('build'));
 });</pre>
  </li>
  <li>在 <code>default</code> 任務的陣列裡面加入 <code>'js'</code> 項目。</li>
@@ -332,25 +332,25 @@ var myAccount = new SauceLabs({
 });
 
 myAccount.getAccountDetails(function (err, res) {
-  console.log(res);
+  console.log(res);
   myAccount.getServiceStatus(function (err, res) {
-    // Status of the Sauce Labs services
-    console.log(res);
-    myAccount.getJobs(function (err, jobs) {
-      // Get a list of all your jobs
-      for (var k in jobs) {
-        if ( jobs.hasOwnProperty( k )) {
-          myAccount.showJob(jobs[k].id, function (err, res) {
-            var str = res.id + ": Status: " + res.status;
-            if (res.error) {
-              str += "\033[31m Error: " + res.error + " \033[0m";
-            }
-            console.log(str);
-          });
-        }
-      }
-    });
-  });
+    // Status of the Sauce Labs services
+    console.log(res);
+    myAccount.getJobs(function (err, jobs) {
+      // Get a list of all your jobs
+      for (var k in jobs) {
+        if ( jobs.hasOwnProperty( k )) {
+          myAccount.showJob(jobs[k].id, function (err, res) {
+            var str = res.id + ": Status: " + res.status;
+            if (res.error) {
+              str += "\033[31m Error: " + res.error + " \033[0m";
+            }
+            console.log(str);
+          });
+        }
+      }
+    });
+  });
 });</pre>
  </li>
  <li>You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your <a href="https://saucelabs.com/beta/user-settings">User Settings</a> page. Fill these in now.</li>
