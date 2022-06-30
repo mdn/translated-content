@@ -32,10 +32,9 @@ The review teams for each locale are:
 - Brazilian Portuguese (`pt-BR`) content — the
 [@yari-content-pt-br](https://github.com/orgs/mdn/teams/yari-content-pt-br)
   team, which consists of:
-  - [@lumigueres](https://github.com/lumigueres)
   - [@josielrocha](https://github.com/josielrocha)
-  - [@juliosampaio](https://github.com/juliosampaio)
   - [@clovislima](https://github.com/clovislima)
+  - [@nathipg](https://github.com/nathipg)
 - French (`fr`) content — the
 [@yari-content-fr](https://github.com/orgs/mdn/teams/yari-content-fr)
   team, which consists of:
@@ -58,7 +57,6 @@ The review teams for each locale are:
   - [@yechoi42](https://github.com/yechoi42)
   - [@GwangYeol-Im](https://github.com/GwangYeol-Im)
   - [@pje1740](https://github.com/pje1740)
-  - [@nKiNk](https://github.com/nKiNk)
   - [@yujo11](https://github.com/yujo11)
   - [@hochan222](https://github.com/hochan222)
 - Russian (`ru`) content — the
@@ -74,17 +72,16 @@ The review teams for each locale are:
 [@yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh)
   team, which consists of:
   - [@t7yang](https://github.com/t7yang)
-  - [@dibery](https://github.com/dibery)
   - [@irvin](https://github.com/irvin)
+  - [@yin1999](https://github.com/yin1999)
 - Spanish (`es`) content - the [@yari-content-es](https://github.com/orgs/mdn/teams/yari-content-es)
   team, which consists of:
   - [@JuanVqz](https://github.com/JuanVqz)
-  - [@dacalderonp](https://github.com/dacalderonp)
-  - [@lasr21](https://github.com/lasr21)
-  - [@tuxxy](https://github.com/tuxxy)
   - [@Graywolf9](https://github.com/Graywolf9)
   - [@davbrito](https://github.com/davbrito)
   - [@Vallejoanderson](https://github.com/vallejoanderson)
+  - [@marcelozarate](https://github.com/marcelozarate)
+  - [@Jalkhov](https://github.com/Jalkhov)
 
 ---
 
