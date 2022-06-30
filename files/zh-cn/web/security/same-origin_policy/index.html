@@ -126,7 +126,7 @@ translation_of: Web/Security/Same-origin_policy
 <h3 id="如何阻止跨源访问"><strong>如何阻止跨源访问</strong></h3>
 
 <ul>
- <li>阻止跨域写操作，只要检测请求中的一个不可推测的标记 (CSRF token) 即可，这个标记被称为 <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29">Cross-Site Request Forgery (CSRF)</a> 标记。你必须使用这个标记来阻止页面的跨站读操作。</li>
+ <li>阻止跨域写操作，只要检测请求中的一个不可推测的标记 (CSRF token) 即可，这个标记被称为 <a href="https://owasp.org/www-community/attacks/csrf">Cross-Site Request Forgery (CSRF)</a> 标记。你必须使用这个标记来阻止页面的跨站读操作。</li>
  <li>阻止资源的跨站读取，需要保证该资源是不可嵌入的。阻止嵌入行为是必须的，因为嵌入资源通常向其暴露信息。</li>
  <li>阻止跨站嵌入，需要确保你的资源不能通过以上列出的可嵌入资源格式使用。浏览器可能不会遵守 <code>Content-Type</code> 头部定义的类型。例如，如果您在 HTML 文档中指定 <code>&lt;script&gt;</code> 标记，则浏览器将尝试将标签内部的 HTML 解析为 JavaScript。 当您的资源不是您网站的入口点时，您还可以使用 CSRF 令牌来防止嵌入。</li>
 </ul>
