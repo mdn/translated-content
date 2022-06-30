@@ -15,11 +15,11 @@ tags:
   - onerror
 translation_of: Web/API/HTMLMediaElement/onerror
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>{{domxref("HTMLMediaElement")}} インターフェースの <strong><code>onerror</code></strong> プロパティは、{{event("error")}} イベントを処理するための {{event("Event_handlers", "event handler")}} です。</p>
+{{domxref("HTMLMediaElement")}} インターフェースの **`onerror`** プロパティは、{{event("error")}} イベントを処理するための {{event("Event_handlers", "event handler")}} です。
 
-<p><code>error</code> イベントは、メディアを読み込んだり実行しようとしたときに何らかのエラーが発生したときに発生します。</p>
+`error` イベントは、メディアを読み込んだり実行しようとしたときに何らかのエラーが発生したときに発生します。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/HTMLMediaElement/onerror
 
 <h3 id="Value" name="Value">値</h3>
 
-<p>{{event("error")}} イベントのイベントハンドラとして機能する {{jsxref("function")}}。 エラーが発生すると、指定した関数が呼び出されます。 <code>null</code> の場合、エラーハンドラは無効です。</p>
+{{event("error")}} イベントのイベントハンドラとして機能する {{jsxref("function")}}。 エラーが発生すると、指定した関数が呼び出されます。 `null` の場合、エラーハンドラは無効です。
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
 
@@ -50,7 +50,7 @@ translation_of: Web/API/HTMLMediaElement/onerror
 
 
 
-<p>{{Compat("api.HTMLMediaElement.onerror")}}</p>
+{{Compat("api.HTMLMediaElement.onerror")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

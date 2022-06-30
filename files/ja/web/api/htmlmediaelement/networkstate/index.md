@@ -9,9 +9,9 @@ tags:
   - Web
 translation_of: Web/API/HTMLMediaElement/networkState
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>HTMLMediaElement.networkState</code></strong> プロパティは、ネットワークを介したメディアの現在の取得状況を示します。</span></p>
+<span class="seoSummary">**`HTMLMediaElement.networkState`** プロパティは、ネットワークを介したメディアの現在の取得状況を示します。</span>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -19,7 +19,7 @@ translation_of: Web/API/HTMLMediaElement/networkState
 
 <h3 id="Value" name="Value">値</h3>
 
-<p><code>unsigned short</code> 型。 可能な値は次のとおりです。</p>
+`unsigned short` 型。 可能な値は次のとおりです。
 
 <table class="standard-table">
  <thead>
@@ -31,31 +31,31 @@ translation_of: Web/API/HTMLMediaElement/networkState
  </thead>
  <tbody>
   <tr>
-   <td><code>NETWORK_EMPTY</code></td>
+   <td>`NETWORK_EMPTY`</td>
    <td>0</td>
-   <td>まだデータがありません。 また、<code>readyState</code> は <code>HAVE_NOTHING</code> です。</td>
+   <td>まだデータがありません。 また、`readyState` は `HAVE_NOTHING` です。</td>
   </tr>
   <tr>
-   <td><code>NETWORK_IDLE</code></td>
+   <td>`NETWORK_IDLE`</td>
    <td>1</td>
-   <td><code>HTMLMediaElement</code> はアクティブで、リソースを選択しましたが、ネットワークを使用していません。</td>
+   <td>`HTMLMediaElement` はアクティブで、リソースを選択しましたが、ネットワークを使用していません。</td>
   </tr>
   <tr>
-   <td><code>NETWORK_LOADING</code></td>
+   <td>`NETWORK_LOADING`</td>
    <td>2</td>
-   <td>ブラウザーは <code>HTMLMediaElement</code> のデータをダウンロードしています。</td>
+   <td>ブラウザーは `HTMLMediaElement` のデータをダウンロードしています。</td>
   </tr>
   <tr>
-   <td><code>NETWORK_NO_SOURCE</code></td>
+   <td>`NETWORK_NO_SOURCE`</td>
    <td>3</td>
-   <td><code>HTMLMediaElement</code> の <code>src</code> が見つかりません。</td>
+   <td>`HTMLMediaElement` の `src` が見つかりません。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>この例では、音声要素が再生を開始するのを待機してから、まだデータを読み込んでいるかどうかを確認します。</p>
+この例では、音声要素が再生を開始するのを待機してから、まだデータを読み込んでいるかどうかを確認します。
 
 <pre class="brush: html">&lt;audio id="example" preload="auto"&gt;
  &lt;source src="sound.ogg" type="audio/ogg" /&gt;
@@ -99,7 +99,7 @@ obj.addEventListener('playing', function() {
 
 
 
-<p>{{Compat("api.HTMLMediaElement.networkState")}}</p>
+{{Compat("api.HTMLMediaElement.networkState")}}
 
 <h2 id="See_Also" name="See_Also">関連情報</h2>
 

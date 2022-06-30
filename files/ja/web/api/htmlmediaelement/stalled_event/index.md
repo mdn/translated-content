@@ -1,21 +1,17 @@
 ---
-title: 'HTMLMediaElement: timeupdate イベント'
-slug: Web/API/HTMLMediaElement/timeupdate_event
+title: 'HTMLMediaElement: stalled イベント'
+slug: Web/API/HTMLMediaElement/stalled_event
 tags:
   - Audio
-  - Event
   - HTMLMediaElement
   - Reference
   - Video
-  - Web
-  - timeupdate
-translation_of: Web/API/HTMLMediaElement/timeupdate_event
+  - events
+translation_of: Web/API/HTMLMediaElement/stalled_event
 ---
-<div>{{APIRef("HTMLMediaElement")}}</div>
+{{APIRef("HTMLMediaElement")}}
 
-<p><span class="seoSummary"><code>timeupdate</code> イベントは、<code>currentTime</code> 属性で示される時刻が更新されたときに発生します。</span></p>
-
-<p>イベントの頻度はシステムの負荷に依存しますが、およそ 4Hz と 66Hz との間でスローされます (イベントハンドラーが実行するのに 250 ms 以上かかることはないと仮定します)。ユーザーエージェントはシステム負荷とその都度イベントを処理する平均コストに基づいて、イベントの頻度を変えることが推奨されているため、ユーザーエージェントがビデオのデコード中に快適に処理できるよりも頻繁に UI 更新が行われることはありません。</p>
+<span class="seoSummary">`stalled` イベントは、ユーザーエージェントがメディアデータをフェッチしようとして、データが予期せずに来なかったときに発生します。</span>
 
 <table class="properties">
  <tbody>
@@ -24,7 +20,7 @@ translation_of: Web/API/HTMLMediaElement/timeupdate_event
    <td>なし</td>
   </tr>
   <tr>
-   <th scope="row">キャンセル可能</th>
+   <th scope="row">キャンセル</th>
    <td>不可</td>
   </tr>
   <tr>
@@ -33,59 +29,57 @@ translation_of: Web/API/HTMLMediaElement/timeupdate_event
   </tr>
   <tr>
    <th scope="row">対象</th>
-   <td>Element</td>
+   <td>要素</td>
   </tr>
   <tr>
    <th scope="row">既定のアクション</th>
    <td>なし</td>
   </tr>
   <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.ontimeupdate")}}</td>
+   <th scope="row">イベントハンドラプロパティ</th>
+   <td>{{domxref("GlobalEventHandlers.onstalled")}}</td>
   </tr>
   <tr>
-   <th scope="row">仕様書</th>
-   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
+   <th scope="row">仕様</th>
+   <td><a class="external" href="https://html.spec.whatwg.org/multipage/media.html#event-media-stalled">HTML5 メディア</a></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>これらの例は、 HTMLMediaElement の <code>timeupdate</code> イベントのイベントリスナーを追加し、イベントが発生してイベントハンドラーが動作するときにメッセージを投稿します。なお、イベントの頻度はシステムの稼働状況に依存します。</p>
+これらの例では、`HTMLMediaElement` の `stalled` イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
 
-<p><code>addEventListener()</code> の使用:</p>
+`AddEventListener()` を使用する場合
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.addEventListener('timeupdate', (event) =&gt; {
-  console.log('The currentTime attribute has been updated. Again.');
+video.addEventListener('stalled', (event) =&gt; {
+  console.log('データのフェッチに失敗しました。');
 });</pre>
 
-<p><code>ontimeupdate</code> イベントハンドラープロパティの使用:</p>
+`onstalled` イベントハンドラプロパティを使用する場合
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.ontimeupdate = (event) =&gt; {
-  console.log('The currentTime attribute has been updated. Again.');
+video.onstalled = (event) =&gt; {
+  console.log('データのフェッチに失敗しました。');
 };</pre>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-timeupdate", "timeupdate media event")}}</td>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "media.html#event-media-stalled", "stalled media event")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-timeupdate", "timeupdate media event")}}</td>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-stalled", "stalled media event")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
   </tr>
  </tbody>
@@ -93,7 +87,9 @@ video.ontimeupdate = (event) =&gt; {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("api.HTMLMediaElement.timeupdate_event")}}</p>
+
+
+{{Compat("api.HTMLMediaElement.stalled_event")}}
 
 <h2 id="Related_Events" name="Related_Events">関連イベント</h2>
 
@@ -118,7 +114,7 @@ video.ontimeupdate = (event) =&gt; {
  <li>{{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled イベント')}}</li>
 </ul>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_Also" name="See_Also">関連情報</h2>
 
 <ul>
  <li>{{domxref("HTMLAudioElement")}}</li>

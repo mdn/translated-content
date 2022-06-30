@@ -1,21 +1,23 @@
 ---
-title: 'HTMLMediaElement: loadeddata イベント'
-slug: Web/API/HTMLMediaElement/loadeddata_event
+title: 'HTMLMediaElement: volumechange イベント'
+slug: Web/API/HTMLMediaElement/volumechange_event
 tags:
+  - API
   - Audio
   - Event
   - HTMLMediaElement
   - Reference
   - Video
-  - loadeddata
+  - Web
+  - events
   - イベント
   - 動画
   - 音声
-translation_of: Web/API/HTMLMediaElement/loadeddata_event
+translation_of: Web/API/HTMLMediaElement/volumechange_event
 ---
-<div>{{APIRef("HTMLMediaElement")}}</div>
+{{APIRef("HTMLMediaElement")}}
 
-<p><span class="seoSummary"><strong><code>loadeddata</code></strong> イベントは、メディアの現在の再生位置のフレームの読み込みが完了したときに発生します。ふつうは最初のフレームです。</span></p>
+<span class="seoSummary">`volumechange` イベントは、ボリュームが変更されたときに発生します。</span>
 
 <table class="properties">
  <tbody>
@@ -24,8 +26,8 @@ translation_of: Web/API/HTMLMediaElement/loadeddata_event
    <td>なし</td>
   </tr>
   <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
+   <th scope="row">キャンセル可能</th>
+   <td>いいえ</td>
   </tr>
   <tr>
    <th scope="row">インターフェイス</th>
@@ -41,39 +43,33 @@ translation_of: Web/API/HTMLMediaElement/loadeddata_event
   </tr>
   <tr>
    <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onloadeddata")}}</td>
+   <td>{{domxref("GlobalEventHandlers.onvolumechange")}}</td>
   </tr>
   <tr>
    <th scope="row">仕様書</th>
-   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
+   <td><a class="external" href="https://html.spec.whatwg.org/multipage/media.html#event-media-volumechange">HTML5 media</a></td>
   </tr>
  </tbody>
 </table>
 
-<div class="note">
-<p>なお、このイベントはモバイルやタブレットにおいて、ブラウザーの設定でデータセーバーがオンになっていると発生しません。</p>
-</div>
-
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>これらの例では、 HTMLMediaElement の <code>loadeddata</code> イベントにイベントリスナーを追加し、イベントが発生してイベントハンドラーが動作したときにメッセージを投稿します。</p>
+これらの例では HTMLMediaElement の `volumechange` イベントのイベントリスナーを追加し、イベントが発生してイベントハンドラーが反応したときにメッセージをポストします。
 
-<p><code>addEventListener()</code> の使用:</p>
+`addEventListener()` を使用した例:
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.addEventListener('loadeddata', (event) =&gt; {
-  console.log('Yay! The readyState just increased to  ' +
-      'HAVE_CURRENT_DATA or greater for the first time.');
+video.addEventListener('volumechange', (event) =&gt; {
+  console.log('The volume changed.');
 });</pre>
 
-<p><code>onloadeddata</code> イベントハンドラープロパティの使用:</p>
+`onvolumechange` イベントハンドラープロパティを使用した例:
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.onloadeddata = (event) =&gt; {
-  console.log('Yay! The readyState just increased to  ' +
-      'HAVE_CURRENT_DATA or greater for the first time.');
+video.onvolumechange = (event) =&gt; {
+  console.log('The volume changed.');
 };</pre>
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
@@ -87,19 +83,19 @@ video.onloadeddata = (event) =&gt; {
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-loadeddata", "loadeddata media event")}}</td>
+   <td>{{SpecName('HTML WHATWG', "media.html#event-media-volumechange", "volumechange media event")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-loadeddata", "loadeddata media event")}}</td>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-volumechange", "volumechange media event")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-<p>{{Compat("api.HTMLMediaElement.loadeddata_event")}}</p>
+{{Compat("api.HTMLMediaElement.volumechange_event")}}
 
 <h2 id="Related_Events" name="Related_Events">関連イベント</h2>
 

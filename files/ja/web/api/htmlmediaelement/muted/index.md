@@ -1,32 +1,31 @@
 ---
-title: HTMLMediaElement.loop
-slug: Web/API/HTMLMediaElement/loop
+title: HTMLMediaElement.muted
+slug: Web/API/HTMLMediaElement/muted
 tags:
   - API
   - HTML DOM
   - HTMLMediaElement
   - Property
   - Web
-translation_of: Web/API/HTMLMediaElement/loop
+translation_of: Web/API/HTMLMediaElement/muted
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>HTMLMediaElement.loop</code></strong> プロパティは、{{htmlattrxref("loop", "video")}} HTML 属性を反映します。 これは、メディア要素が最後に到達したときに最初からやり直すかどうかを制御します。</span></p>
+**`HTMLMediaElement.muted`** は、メディア要素がミュートしているかどうかを示します。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
-<pre class="brush: js">var <em>loop</em> = <em>video</em>.loop;
-<em>audio</em>.loop = true;
-</pre>
+<pre class="syntaxbox">var <em>isMuted</em> = <em>audioOrVideo</em>.muted
+<em>audio</em>.muted = true;</pre>
 
 <h3 id="Value" name="Value">値</h3>
 
-<p>{{jsxref("Boolean")}}。</p>
+{{jsxref("Boolean")}}。 `true` はミュートしていることを意味し、`false` はミュートしていないことを意味します。
 
 <h2 id="Example" name="Example">例</h2>
 
 <pre class="brush: js">var obj = document.createElement('video');
-obj.loop = true; // true
+console.log(obj.muted); // false
 </pre>
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
@@ -39,12 +38,12 @@ obj.loop = true; // true
    <th scope="col">コメント</th>
   </tr>
   <tr>
-   <td>{{SpecName('HTML WHATWG', "#dom-media-loop", "HTMLMediaElement.loop")}}</td>
+   <td>{{SpecName('HTML WHATWG', "#dom-media-muted", "HTMLMediaElement.muted")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
    <td> </td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.loop")}}</td>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.muted")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
    <td> </td>
   </tr>
@@ -55,10 +54,12 @@ obj.loop = true; // true
 
 
 
-<p>{{Compat("api.HTMLMediaElement.loop")}}</p>
+{{Compat("api.HTMLMediaElement.muted")}}
 
 <h2 id="See_Also" name="See_Also">関連情報</h2>
 
 <ul>
  <li>これを定義するインターフェース、{{domxref("HTMLMediaElement")}}。</li>
+ <li>{{domxref("HTMLMediaElement.defaultMuted")}}</li>
+ <li>{{domxref("HTMLMediaElement.volume")}}</li>
 </ul>

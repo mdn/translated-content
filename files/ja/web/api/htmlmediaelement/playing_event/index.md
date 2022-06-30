@@ -1,17 +1,20 @@
 ---
-title: 'HTMLMediaElement: stalled イベント'
-slug: Web/API/HTMLMediaElement/stalled_event
+title: 'HTMLMediaElement: playing イベント'
+slug: Web/API/HTMLMediaElement/playing_event
 tags:
-  - Audio
+  - API
+  - Event
   - HTMLMediaElement
   - Reference
-  - Video
+  - Web
   - events
-translation_of: Web/API/HTMLMediaElement/stalled_event
+  - playing
+  - イベント
+translation_of: Web/API/HTMLMediaElement/playing_event
 ---
-<p>{{APIRef("HTMLMediaElement")}}</p>
+{{APIRef("HTMLMediaElement")}}
 
-<p><span class="seoSummary"><code>stalled</code> イベントは、ユーザーエージェントがメディアデータをフェッチしようとして、データが予期せずに来なかったときに発生します。</span></p>
+<span class="seoSummary">`playing` イベントは、データ不足のために一時停止または遅延した後に、再開する準備ができたときに発生します。</span>
 
 <table class="properties">
  <tbody>
@@ -29,67 +32,67 @@ translation_of: Web/API/HTMLMediaElement/stalled_event
   </tr>
   <tr>
    <th scope="row">対象</th>
-   <td>要素</td>
+   <td>Element</td>
   </tr>
   <tr>
    <th scope="row">既定のアクション</th>
    <td>なし</td>
   </tr>
   <tr>
-   <th scope="row">イベントハンドラプロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onstalled")}}</td>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("GlobalEventHandlers.onplaying")}}</td>
   </tr>
   <tr>
-   <th scope="row">仕様</th>
-   <td><a class="external" href="https://html.spec.whatwg.org/multipage/media.html#event-media-stalled">HTML5 メディア</a></td>
+   <th scope="row">仕様書</th>
+   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>これらの例では、<code>HTMLMediaElement</code> の <code>stalled</code> イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。</p>
+これらの例は、 HTMLMediaElement の `playing` イベントにイベントリスナーを追加してから、イベントが発生したことでイベントハンドラーが動作したときにメッセージをポストします。
 
-<p><code>AddEventListener()</code> を使用する場合</p>
+`addEventListener()` を使用した例:
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.addEventListener('stalled', (event) =&gt; {
-  console.log('データのフェッチに失敗しました。');
+video.addEventListener('playing', (event) =&gt; {
+  console.log('Video is no longer paused');
 });</pre>
 
-<p><code>onstalled</code> イベントハンドラプロパティを使用する場合</p>
+`onplaying` イベントハンドラープロパティを使用した例:
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.onstalled = (event) =&gt; {
-  console.log('データのフェッチに失敗しました。');
+video.onplaying = (event) =&gt; {
+  console.log('Video is no longer paused.');
 };</pre>
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
-   <th scope="col">仕様</th>
+   <th scope="col">仕様書</th>
    <th scope="col">状態</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-stalled", "stalled media event")}}</td>
+   <td>{{SpecName('HTML WHATWG', "media.html#event-media-playing", "playing media event")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-stalled", "stalled media event")}}</td>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-playing", "playing media event")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-
-
-<p>{{Compat("api.HTMLMediaElement.stalled_event")}}</p>
+{{Compat("api.HTMLMediaElement.playing_event")}}
 
 <h2 id="Related_Events" name="Related_Events">関連イベント</h2>
 
@@ -114,7 +117,7 @@ video.onstalled = (event) =&gt; {
  <li>{{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled イベント')}}</li>
 </ul>
 
-<h2 id="See_Also" name="See_Also">関連情報</h2>
+<h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
  <li>{{domxref("HTMLAudioElement")}}</li>

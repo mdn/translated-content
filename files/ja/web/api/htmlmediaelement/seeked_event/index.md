@@ -1,30 +1,17 @@
 ---
-title: 'HTMLMediaElement: pause イベント'
-slug: Web/API/HTMLMediaElement/pause_event
+title: 'HTMLMediaElement: seeked イベント'
+slug: Web/API/HTMLMediaElement/seeked_event
 tags:
   - Audio
-  - Event
-  - HTML
   - HTMLMediaElement
-  - Media
-  - Media Events
-  - Pausing
-  - Pausing Media
-  - Pausing Speech
-  - Speech Events
+  - Reference
   - Video
-  - Web Speech API
-  - Web Speech Events
   - events
-  - pause
-  - speech
-translation_of: Web/API/HTMLMediaElement/pause_event
+translation_of: Web/API/HTMLMediaElement/seeked_event
 ---
-<div>{{APIRef("HTMLMediaElement")}}</div>
+{{APIRef("HTMLMediaElement")}}
 
-<p><span class="seoSummary"><code>pause</code> イベントは、動作の一時停止のリクエストが処理され、動作が一時状態に入ったときに送信されるものであり、メディアが要素の {{domxref("HTMLMediaElement.pause", "pause()")}} の呼び出しを通して一時停止した後が最も一般的です。</span>イベントは <code>pause()</code> メソッドから戻り、メディア要素の {{domxref("HTMLMediaElement.paused", "paused")}} プロパティが <code>true</code> に変化した後で一度送信されます。</p>
-
-<h2 id="General_info" name="General_info">基本情報</h2>
+<span class="seoSummary">`seeked` イベントは、シーク操作が完了したことで、現在の再生位置が変更され、`Boolean` の `seeking` 属性が `false` に変更されたときに発生します。</span>
 
 <table class="properties">
  <tbody>
@@ -33,8 +20,8 @@ translation_of: Web/API/HTMLMediaElement/pause_event
    <td>なし</td>
   </tr>
   <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>いいえ</td>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
   </tr>
   <tr>
    <th scope="row">インターフェイス</th>
@@ -42,69 +29,67 @@ translation_of: Web/API/HTMLMediaElement/pause_event
   </tr>
   <tr>
    <th scope="row">対象</th>
-   <td>Element</td>
+   <td>要素</td>
   </tr>
   <tr>
    <th scope="row">既定のアクション</th>
    <td>なし</td>
   </tr>
   <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onpause")}}</td>
+   <th scope="row">イベントハンドラプロパティ</th>
+   <td>{{domxref("GlobalEventHandlers.onseeked")}}</td>
   </tr>
   <tr>
-   <th scope="row">仕様書</th>
-   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
+   <th scope="row">仕様</th>
+   <td><a class="external" href="https://html.spec.whatwg.org/multipage/media.html#event-media-seeked">HTML5 メディア</a></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>これらの例は、 HTMLMediaElement の <code>pause</code> イベントにイベントリスナーを追加してから、イベントが発生したことでイベントハンドラーが動作したときにメッセージをポストします。</p>
+これらの例では、`HTMLMediaElement` の `seeked` イベントにイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
 
-<p><code>addEventListener()</code> を使用した例:</p>
+`AddEventListener()` を使用する場合
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.addEventListener('pause', (event) =&gt; {
-  console.log('The Boolean paused property is now true. Either the ' +
-  'pause() method was called or the autoplay attribute was toggled.');
+video.addEventListener('seeked', (event) =&gt; {
+  console.log('動画が探していた再生位置を見つけました。');
 });</pre>
 
-<p><code>onpause</code> イベントハンドラープロパティを使用した例:</p>
+`onseeked` イベントハンドラプロパティを使用する場合
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.onpause = (event) =&gt; {
-  console.log('The Boolean paused property is now true. Either the ' +
-  'pause() method was called or the autoplay attribute was toggled.');
+video.onseeked = (event) =&gt; {
+  console.log('動画が探していた再生位置を見つけました。');
 };</pre>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-pause", "pause media event")}}</td>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "media.html#event-media-seeked", "seeked media event")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-pause", "pause media event")}}</td>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-seeked", "seeked media event")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("api.HTMLMediaElement.pause_event")}}</p>
+
+
+{{Compat("api.HTMLMediaElement.seeked_event")}}
 
 <h2 id="Related_Events" name="Related_Events">関連イベント</h2>
 
@@ -129,12 +114,11 @@ video.onpause = (event) =&gt; {
  <li>{{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled イベント')}}</li>
 </ul>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_Also" name="See_Also">関連情報</h2>
 
 <ul>
  <li>{{domxref("HTMLAudioElement")}}</li>
  <li>{{domxref("HTMLVideoElement")}}</li>
  <li>{{HTMLElement("audio")}}</li>
  <li>{{HTMLElement("video")}}</li>
- <li>{{domxref("SpeechSynthesisUtterance")}}</li>
 </ul>

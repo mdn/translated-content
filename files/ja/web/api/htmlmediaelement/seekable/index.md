@@ -15,9 +15,9 @@ tags:
   - source
 translation_of: Web/API/HTMLMediaElement/seekable
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>{{domxref("HTMLMediaElement")}} の <strong><code>seekable</code></strong> 読み取り専用プロパティは、ユーザーがシークできる時間範囲があればそれを含む {{domxref('TimeRanges')}} オブジェクトを返します。</p>
+{{domxref("HTMLMediaElement")}} の **`seekable`** 読み取り専用プロパティは、ユーザーがシークできる時間範囲があればそれを含む {{domxref('TimeRanges')}} オブジェクトを返します。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -25,13 +25,13 @@ translation_of: Web/API/HTMLMediaElement/seekable
 
 <h3 id="Value" name="Value">値</h3>
 
-<p>{{domxref('TimeRanges')}} オブジェクト。</p>
+{{domxref('TimeRanges')}} オブジェクト。
 
 <h2 id="Examples" name="Examples">例</h2>
 
 <pre class="brush: html">// 未定</pre>
 
-<p> </p>
+ 
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
 
@@ -65,12 +65,12 @@ translation_of: Web/API/HTMLMediaElement/seekable
 <div>
 
 
-<p>{{Compat("api.HTMLMediaElement.seekable")}}</p>
+{{Compat("api.HTMLMediaElement.seekable")}}
 </div>
 
 <h2 id="See_Also" name="See_Also">関連情報</h2>
 
 <ul>
  <li>これを定義するインターフェース、{{domxref("HTMLMediaElement")}}。</li>
- <li><a href="/ja/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</a></li>
+ <li>[Media Source Extensions API](/ja/docs/Web/API/Media_Source_Extensions_API)</li>
 </ul>

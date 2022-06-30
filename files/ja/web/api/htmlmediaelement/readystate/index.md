@@ -10,9 +10,9 @@ tags:
   - Web
 translation_of: Web/API/HTMLMediaElement/readyState
 ---
-<div>値{{APIRef("HTML DOM")}}</div>
+値{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>HTMLMediaElement.readyState</code></strong> プロパティは、メディアの準備状態を示します。</span></p>
+<span class="seoSummary">**`HTMLMediaElement.readyState`** プロパティは、メディアの準備状態を示します。</span>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/HTMLMediaElement/readyState
 
 <h3 id="Value" name="Value">値</h3>
 
-<p><code>unsigned short</code> 型。 可能な値は次のとおりです。</p>
+`unsigned short` 型。 可能な値は次のとおりです。
 
 <table class="standard-table">
  <thead>
@@ -32,27 +32,27 @@ translation_of: Web/API/HTMLMediaElement/readyState
  </thead>
  <tbody>
   <tr>
-   <td><code>HAVE_NOTHING</code></td>
+   <td>`HAVE_NOTHING`</td>
    <td>0</td>
    <td>メディアリソースに関する情報はありません。</td>
   </tr>
   <tr>
-   <td><code>HAVE_METADATA</code></td>
+   <td>`HAVE_METADATA`</td>
    <td>1</td>
    <td>メタデータ属性を初期化するのに十分なメディアリソースが取得されました。 シークならば例外を発生させません。</td>
   </tr>
   <tr>
-   <td><code>HAVE_CURRENT_DATA</code></td>
+   <td>`HAVE_CURRENT_DATA`</td>
    <td>2</td>
    <td>現在の再生位置にデータがありますが、実際には複数のフレームを再生するのに十分ではありません。</td>
   </tr>
   <tr>
-   <td><code>HAVE_FUTURE_DATA</code></td>
+   <td>`HAVE_FUTURE_DATA`</td>
    <td>3</td>
    <td>現在の再生位置と将来までの少なくともほんの少しの時間のデータが利用可能です（つまり、例えば、少なくとも2フレームの動画）。</td>
   </tr>
   <tr>
-   <td><code>HAVE_ENOUGH_DATA</code></td>
+   <td>`HAVE_ENOUGH_DATA`</td>
    <td>4</td>
    <td>十分なデータが利用可能であり、ダウンロードレートが十分に高いため、メディアを中断することなく最後まで再生できます。</td>
   </tr>
@@ -61,7 +61,7 @@ translation_of: Web/API/HTMLMediaElement/readyState
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>この例では、要素 `example` に読み込まれる音声データをリッスンします。 その後、少なくとも現在の再生位置が読み込まれているかどうかを確認します。 もしあれば、音声を再生します。</p>
+この例では、要素 `example` に読み込まれる音声データをリッスンします。 その後、少なくとも現在の再生位置が読み込まれているかどうかを確認します。 もしあれば、音声を再生します。
 
 <pre class="brush: html">&lt;audio id="example" preload="auto"&gt;
  &lt;source src="sound.ogg" type="audio/ogg" /&gt;
@@ -107,7 +107,7 @@ obj.addEventListener('loadeddata', function() {
 
 
 
-<p>{{Compat("api.HTMLMediaElement.readyState")}}</p>
+{{Compat("api.HTMLMediaElement.readyState")}}
 
 <h2 id="See_Also" name="See_Also">関連情報</h2>
 

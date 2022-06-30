@@ -10,9 +10,9 @@ tags:
   - Video
 translation_of: Web/API/HTMLMediaElement/pause
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>HTMLMediaElement.pause()</code></strong> メソッドはメディアの再生を一時停止します。 メディアがすでに一時停止状態にある場合、このメソッドは効果がありません。</span></p>
+<span class="seoSummary">**`HTMLMediaElement.pause()`** メソッドはメディアの再生を一時停止します。 メディアがすでに一時停止状態にある場合、このメソッドは効果がありません。</span>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -20,15 +20,15 @@ translation_of: Web/API/HTMLMediaElement/pause
 
 <h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-<p>無し。</p>
+無し。
 
 <h3 id="Return_value" name="Return_value">戻り値</h3>
 
-<p>無し。</p>
+無し。
 
 <h3 id="Exceptions" name="Exceptions">例外</h3>
 
-<p>無し。</p>
+無し。
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
 
@@ -56,4 +56,4 @@ translation_of: Web/API/HTMLMediaElement/pause
 
 
 
-<p>{{Compat("api.HTMLMediaElement.pause")}}</p>
+{{Compat("api.HTMLMediaElement.pause")}}

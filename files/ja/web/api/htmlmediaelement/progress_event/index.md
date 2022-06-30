@@ -11,9 +11,9 @@ tags:
   - イベント
 translation_of: Web/API/HTMLMediaElement/progress_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>progress</code></strong> イベントは、ブラウザーがリソースを読み込むときに定期的に発生します。</p>
+**`progress`** イベントは、ブラウザーがリソースを読み込むときに定期的に発生します。
 
 <table class="properties">
  <tbody>
@@ -31,7 +31,7 @@ translation_of: Web/API/HTMLMediaElement/progress_event
   </tr>
   <tr>
    <th scope="row">イベントハンドラープロパティ</th>
-   <td><code>onprogress</code></td>
+   <td>`onprogress`</td>
   </tr>
  </tbody>
 </table>
@@ -124,7 +124,7 @@ loadVideo.addEventListener('click', () =&gt; {
 
 <h4 id="Result" name="Result">結果</h4>
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '200px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '200px') }}
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
 
@@ -149,7 +149,7 @@ loadVideo.addEventListener('click', () =&gt; {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-<p>{{Compat("api.HTMLMediaElement.progress_event")}}</p>
+{{Compat("api.HTMLMediaElement.progress_event")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

@@ -1,17 +1,21 @@
 ---
-title: 'HTMLMediaElement: seeking イベント'
-slug: Web/API/HTMLMediaElement/seeking_event
+title: 'HTMLMediaElement: timeupdate イベント'
+slug: Web/API/HTMLMediaElement/timeupdate_event
 tags:
   - Audio
+  - Event
   - HTMLMediaElement
   - Reference
   - Video
-  - events
-translation_of: Web/API/HTMLMediaElement/seeking_event
+  - Web
+  - timeupdate
+translation_of: Web/API/HTMLMediaElement/timeupdate_event
 ---
-<p>{{APIRef("HTMLMediaElement")}}</p>
+{{APIRef("HTMLMediaElement")}}
 
-<p><span class="seoSummary"><code>seeking</code> イベントは、シーク操作が開始されると発生します。 つまり、<code>Boolean</code> の <code>seeking</code> 属性を <code>true</code> に変更し、メディアは新しい位置をシーク中です。</span></p>
+<span class="seoSummary">`timeupdate` イベントは、`currentTime` 属性で示される時刻が更新されたときに発生します。</span>
+
+イベントの頻度はシステムの負荷に依存しますが、およそ 4Hz と 66Hz との間でスローされます (イベントハンドラーが実行するのに 250 ms 以上かかることはないと仮定します)。ユーザーエージェントはシステム負荷とその都度イベントを処理する平均コストに基づいて、イベントの頻度を変えることが推奨されているため、ユーザーエージェントがビデオのデコード中に快適に処理できるよりも頻繁に UI 更新が行われることはありません。
 
 <table class="properties">
  <tbody>
@@ -20,7 +24,7 @@ translation_of: Web/API/HTMLMediaElement/seeking_event
    <td>なし</td>
   </tr>
   <tr>
-   <th scope="row">キャンセル</th>
+   <th scope="row">キャンセル可能</th>
    <td>不可</td>
   </tr>
   <tr>
@@ -29,57 +33,59 @@ translation_of: Web/API/HTMLMediaElement/seeking_event
   </tr>
   <tr>
    <th scope="row">対象</th>
-   <td>要素</td>
+   <td>Element</td>
   </tr>
   <tr>
    <th scope="row">既定のアクション</th>
    <td>なし</td>
   </tr>
   <tr>
-   <th scope="row">イベントハンドラプロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onseeking")}}</td>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("GlobalEventHandlers.ontimeupdate")}}</td>
   </tr>
   <tr>
-   <th scope="row">仕様</th>
-   <td><a class="external" href="https://html.spec.whatwg.org/multipage/media.html#event-media-seeking">HTML5 メディア</a></td>
+   <th scope="row">仕様書</th>
+   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>これらの例では、<code>HTMLMediaElement</code> の <code>seeking</code> イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。</p>
+これらの例は、 HTMLMediaElement の `timeupdate` イベントのイベントリスナーを追加し、イベントが発生してイベントハンドラーが動作するときにメッセージを投稿します。なお、イベントの頻度はシステムの稼働状況に依存します。
 
-<p><code>AddEventListener()</code> を使用する場合</p>
+`addEventListener()` の使用:
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.addEventListener('seeking', (event) =&gt; {
-  console.log('動画は新しい位置をシーク中です。');
+video.addEventListener('timeupdate', (event) =&gt; {
+  console.log('The currentTime attribute has been updated. Again.');
 });</pre>
 
-<p><code>onseeking</code> イベントハンドラプロパティを使用する場合</p>
+`ontimeupdate` イベントハンドラープロパティの使用:
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.onseeking = (event) =&gt; {
-  console.log('動画は新しい位置をシーク中です。');
+video.ontimeupdate = (event) =&gt; {
+  console.log('The currentTime attribute has been updated. Again.');
 };</pre>
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
-   <th scope="col">仕様</th>
+   <th scope="col">仕様書</th>
    <th scope="col">状態</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-seeking", "seeking media event")}}</td>
+   <td>{{SpecName('HTML WHATWG', "media.html#event-media-timeupdate", "timeupdate media event")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-seeking", "seeking media event")}}</td>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-timeupdate", "timeupdate media event")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
   </tr>
  </tbody>
@@ -87,9 +93,7 @@ video.onseeking = (event) =&gt; {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-
-
-<p>{{Compat("api.HTMLMediaElement.seeking_event")}}</p>
+{{Compat("api.HTMLMediaElement.timeupdate_event")}}
 
 <h2 id="Related_Events" name="Related_Events">関連イベント</h2>
 
@@ -114,7 +118,7 @@ video.onseeking = (event) =&gt; {
  <li>{{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled イベント')}}</li>
 </ul>
 
-<h2 id="See_Also" name="See_Also">関連情報</h2>
+<h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
  <li>{{domxref("HTMLAudioElement")}}</li>

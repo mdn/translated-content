@@ -11,9 +11,9 @@ tags:
   - イベント
 translation_of: Web/API/HTMLMediaElement/loadstart_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>loadstart</code></strong> イベントは、ブラウザーがリソースの読み込みを開始したときに発生します。</p>
+**`loadstart`** イベントは、ブラウザーがリソースの読み込みを開始したときに発生します。
 
 <table class="properties">
  <tbody>
@@ -124,7 +124,7 @@ loadVideo.addEventListener('click', () =&gt; {
 
 <h4 id="Result" name="Result">結果</h4>
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '200px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '200px') }}
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
 
@@ -149,7 +149,7 @@ loadVideo.addEventListener('click', () =&gt; {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-<p>{{Compat("api.HTMLMediaElement.loadstart_event")}}</p>
+{{Compat("api.HTMLMediaElement.loadstart_event")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

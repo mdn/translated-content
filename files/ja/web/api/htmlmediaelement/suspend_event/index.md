@@ -1,23 +1,17 @@
 ---
-title: 'HTMLMediaElement: volumechange イベント'
-slug: Web/API/HTMLMediaElement/volumechange_event
+title: 'HTMLMediaElement: suspend イベント'
+slug: Web/API/HTMLMediaElement/suspend_event
 tags:
-  - API
   - Audio
-  - Event
   - HTMLMediaElement
   - Reference
   - Video
-  - Web
   - events
-  - イベント
-  - 動画
-  - 音声
-translation_of: Web/API/HTMLMediaElement/volumechange_event
+translation_of: Web/API/HTMLMediaElement/suspend_event
 ---
-<div>{{APIRef("HTMLMediaElement")}}</div>
+{{APIRef("HTMLMediaElement")}}
 
-<p><span class="seoSummary"><code>volumechange</code> イベントは、ボリュームが変更されたときに発生します。</span></p>
+<span class="seoSummary">`suspend` イベントは、メディアデータの読み込みが中断されたときに発生します。</span>
 
 <table class="properties">
  <tbody>
@@ -26,8 +20,8 @@ translation_of: Web/API/HTMLMediaElement/volumechange_event
    <td>なし</td>
   </tr>
   <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>いいえ</td>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
   </tr>
   <tr>
    <th scope="row">インターフェイス</th>
@@ -35,67 +29,67 @@ translation_of: Web/API/HTMLMediaElement/volumechange_event
   </tr>
   <tr>
    <th scope="row">対象</th>
-   <td>Element</td>
+   <td>要素</td>
   </tr>
   <tr>
    <th scope="row">既定のアクション</th>
    <td>なし</td>
   </tr>
   <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onvolumechange")}}</td>
+   <th scope="row">イベントハンドラプロパティ</th>
+   <td>{{domxref("GlobalEventHandlers.onsuspend")}}</td>
   </tr>
   <tr>
-   <th scope="row">仕様書</th>
-   <td><a class="external" href="https://html.spec.whatwg.org/multipage/media.html#event-media-volumechange">HTML5 media</a></td>
+   <th scope="row">仕様</th>
+   <td><a class="external" href="https://html.spec.whatwg.org/multipage/media.html#event-media-suspend">HTML5 メディア</a></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>これらの例では HTMLMediaElement の <code>volumechange</code> イベントのイベントリスナーを追加し、イベントが発生してイベントハンドラーが反応したときにメッセージをポストします。</p>
+これらの例では、`HTMLMediaElement` の `suspend` イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
 
-<p><code>addEventListener()</code> を使用した例:</p>
+`AddEventListener()` を使用する場合
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.addEventListener('volumechange', (event) =&gt; {
-  console.log('The volume changed.');
+video.addEventListener('suspend', (event) =&gt; {
+  console.log('データの読み込みが中断されました。');
 });</pre>
 
-<p><code>onvolumechange</code> イベントハンドラープロパティを使用した例:</p>
+`onsuspend` イベントハンドラプロパティを使用する場合
 
 <pre class="brush: js">const video = document.querySelector('video');
 
-video.onvolumechange = (event) =&gt; {
-  console.log('The volume changed.');
+video.onsuspend = (event) =&gt; {
+  console.log('データの読み込みが中断されました。');
 };</pre>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-volumechange", "volumechange media event")}}</td>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "media.html#event-media-suspend", "suspend media event")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-volumechange", "volumechange media event")}}</td>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-suspend", "suspend media event")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("api.HTMLMediaElement.volumechange_event")}}</p>
+
+
+{{Compat("api.HTMLMediaElement.suspend_event")}}
 
 <h2 id="Related_Events" name="Related_Events">関連イベント</h2>
 
@@ -120,11 +114,15 @@ video.onvolumechange = (event) =&gt; {
  <li>{{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled イベント')}}</li>
 </ul>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_Also" name="See_Also">関連情報</h2>
 
 <ul>
  <li>{{domxref("HTMLAudioElement")}}</li>
  <li>{{domxref("HTMLVideoElement")}}</li>
  <li>{{HTMLElement("audio")}}</li>
  <li>{{HTMLElement("video")}}</li>
+</ul>
+
+<ul>
+ <li>[Web Audio API](/ja/docs/Web/API/Web_Audio_API)</li>
 </ul>

@@ -9,9 +9,9 @@ tags:
   - events
 translation_of: Web/API/HTMLMediaElement/loadedmetadata_event
 ---
-<p>{{APIRef("HTMLMediaElement")}}</p>
+{{APIRef("HTMLMediaElement")}}
 
-<p><span class="seoSummary"><code>loadedmetadata</code> イベントは、メタデータが読み込まれたときに発生します。</span></p>
+<span class="seoSummary">`loadedmetadata` イベントは、メタデータが読み込まれたときに発生します。</span>
 
 <table class="properties">
  <tbody>
@@ -58,17 +58,17 @@ translation_of: Web/API/HTMLMediaElement/loadedmetadata_event
  </thead>
  <tbody>
   <tr>
-   <td><code>mozChannels</code> {{readonlyInline}}</td>
+   <td>`mozChannels` {{readonlyInline}}</td>
    <td>int</td>
    <td>チャンネル数。</td>
   </tr>
   <tr>
-   <td><code>mozSampleRate</code> {{readonlyInline}}</td>
+   <td>`mozSampleRate` {{readonlyInline}}</td>
    <td>int</td>
    <td>1秒あたりのサンプルレート。</td>
   </tr>
   <tr>
-   <td><code>mozFrameBufferLength</code> {{readonlyInline}}</td>
+   <td>`mozFrameBufferLength` {{readonlyInline}}</td>
    <td>int</td>
    <td>すべてのチャンネルで収集されたサンプルの数。</td>
   </tr>
@@ -77,9 +77,9 @@ translation_of: Web/API/HTMLMediaElement/loadedmetadata_event
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>これらの例では、<code>HTMLMediaElement</code> の <code>loadedmetadata</code> イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。</p>
+これらの例では、`HTMLMediaElement` の `loadedmetadata` イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
 
-<p><code>AddEventListener()</code> を使用する場合</p>
+`AddEventListener()` を使用する場合
 
 <pre class="brush: js">const video = document.querySelector('video');
 
@@ -88,7 +88,7 @@ video.addEventListener('loadedmetadata', (event) =&gt; {
       長さと寸法は現在わかっています。');
 });</pre>
 
-<p><code>onloadedmetadata</code> イベントハンドラプロパティを使用する場合</p>
+`onloadedmetadata` イベントハンドラプロパティを使用する場合
 
 <pre class="brush: js">const video = document.querySelector('video');
 
@@ -120,7 +120,7 @@ video.onloadedmetadata = (event) =&gt; {
 
 
 
-<p>{{Compat("api.HTMLMediaElement.loadedmetadata_event")}}</p>
+{{Compat("api.HTMLMediaElement.loadedmetadata_event")}}
 
 <h2 id="Related_Events" name="Related_Events">関連イベント</h2>
 
@@ -155,5 +155,5 @@ video.onloadedmetadata = (event) =&gt; {
 </ul>
 
 <ul>
- <li>このイベントは gecko の <a href="/ja/docs/Introducing_the_Audio_API_Extension">Audio API 拡張</a>の一部です。</li>
+ <li>このイベントは gecko の [Audio API 拡張](/ja/docs/Introducing_the_Audio_API_Extension)の一部です。</li>
 </ul>

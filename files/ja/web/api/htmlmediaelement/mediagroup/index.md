@@ -9,9 +9,9 @@ tags:
   - Web
 translation_of: Web/API/HTMLMediaElement/mediaGroup
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary">HTMLMediaElement.mediaGroup プロパティは、{{htmlattrxref("mediaGroup", "video")}} HTML 属性を反映します。 これは、それが属する要素のグループの名前を示します。 メディア要素のグループは、共通の <code>controller</code> を共有します。</span></p>
+<span class="seoSummary">HTMLMediaElement.mediaGroup プロパティは、{{htmlattrxref("mediaGroup", "video")}} HTML 属性を反映します。 これは、それが属する要素のグループの名前を示します。 メディア要素のグループは、共通の `controller` を共有します。</span>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -19,7 +19,7 @@ translation_of: Web/API/HTMLMediaElement/mediaGroup
 
 <h3 id="Value" name="Value">値</h3>
 
-<p>{{domxref("DOMString")}}。</p>
+{{domxref("DOMString")}}。
 
 <h2 id="Example" name="Example">例</h2>
 
@@ -47,7 +47,7 @@ translation_of: Web/API/HTMLMediaElement/mediaGroup
 
 
 
-<p>{{Compat("api.HTMLMediaElement.mediaGroup")}}</p>
+{{Compat("api.HTMLMediaElement.mediaGroup")}}
 
 <h2 id="See_Also" name="See_Also">関連情報</h2>
 
