@@ -21,7 +21,7 @@ translation_of: Web/API/TextEncoderStream/writable
 
 ## 示例
 
-以下示例演示如何从一个 `TextEncoderStream` 对象返回一个 `WritableStream`。
+以下示例演示了如何从一个 `TextEncoderStream` 对象返回一个 `WritableStream`。
 
 ```js
 stream = new TextEncoderStream();
