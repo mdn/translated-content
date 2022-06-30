@@ -20,7 +20,7 @@ translation_of: Web/api/TextDecoderStream/encoding
 
 ## 示例
 
-从一个 `TextDecoderStream` 返回 `encoding`。
+从一个 `TextDecoderStream` 返回 `encoding` 的值。
 
 ```js
 stream = new TextDecoderStream();
