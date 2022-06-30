@@ -537,6 +537,7 @@
 /zh-CN/docs/Glossary/Header	/zh-CN/docs/Glossary/HTTP_header
 /zh-CN/docs/Glossary/IP地址	/zh-CN/docs/Glossary/IP_Address
 /zh-CN/docs/Glossary/Serialize	/zh-CN/docs/Glossary/Serialization
+/zh-CN/docs/Glossary/Symbol	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
 /zh-CN/docs/Glossary/主轴	/zh-CN/docs/Glossary/Main_Axis
 /zh-CN/docs/Glossary/交叉轴	/zh-CN/docs/Glossary/Cross_Axis
 /zh-CN/docs/Glossary/代理服务器	/zh-CN/docs/Glossary/Proxy_server

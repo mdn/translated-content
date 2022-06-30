@@ -88,6 +88,7 @@
 /ru/docs/Glossary/502	/ru/docs/conflicting/Web/HTTP/Status/502
 /ru/docs/Glossary/Block/Скриптинг	/ru/docs/Glossary/Block/Scripting
 /ru/docs/Glossary/Bézier_curve	/ru/docs/Glossary/Bezier_curve
+/ru/docs/Glossary/Symbol	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
 /ru/docs/Glossary/пустой_элемент	/ru/docs/Glossary/Empty_element
 /ru/docs/HTML	/ru/docs/Web/HTML
 /ru/docs/HTML/Canvas	/ru/docs/Web/API/Canvas_API
@@ -953,7 +954,7 @@
 /ru/docs/Словарь/Simple_response_header	/ru/docs/Glossary/Simple_response_header
 /ru/docs/Словарь/Sloppy_mode	/ru/docs/Glossary/Sloppy_mode
 /ru/docs/Словарь/Specification	/ru/docs/Glossary/Specification
-/ru/docs/Словарь/Symbol	/ru/docs/Glossary/Symbol
+/ru/docs/Словарь/Symbol	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
 /ru/docs/Словарь/TCP	/ru/docs/Glossary/TCP
 /ru/docs/Словарь/TLS	/ru/docs/Glossary/TLS
 /ru/docs/Словарь/Time_to_interactive	/ru/docs/Glossary/Time_to_interactive

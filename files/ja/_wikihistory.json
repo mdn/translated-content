@@ -3031,17 +3031,6 @@
       "KNaka88"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2020-04-04T15:08:12.967Z",
-    "contributors": [
-      "mfuji09",
-      "technohippy",
-      "segayuu",
-      "kenji-yamasaki",
-      "chikoski",
-      "YuichiNukiyama"
-    ]
-  },
   "Glossary/Symmetric-key_cryptography": {
     "modified": "2020-01-04T00:39:30.382Z",
     "contributors": [
@@ -24789,12 +24778,6 @@
       "davidbrouillette"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role": {
-    "modified": "2019-03-18T21:10:44.737Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute": {
     "modified": "2019-03-18T21:23:20.561Z",
     "contributors": [
@@ -24851,60 +24834,6 @@
   },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute": {
     "modified": "2019-03-18T21:23:08.424Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role": {
-    "modified": "2019-03-18T20:45:37.577Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role": {
-    "modified": "2019-03-18T21:22:39.062Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role": {
-    "modified": "2019-03-18T20:45:38.179Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role": {
-    "modified": "2019-03-18T21:21:54.666Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role": {
-    "modified": "2019-03-18T21:22:34.124Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role": {
-    "modified": "2019-03-18T21:22:36.677Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role": {
-    "modified": "2019-03-18T20:49:47.634Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role": {
-    "modified": "2019-03-18T21:22:38.552Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role": {
-    "modified": "2019-03-18T21:21:58.604Z",
     "contributors": [
       "Wind1808"
     ]
@@ -25053,6 +24982,12 @@
       "Wind1808"
     ]
   },
+  "Web/Accessibility/ARIA/Roles/alertdialog_role": {
+    "modified": "2019-03-18T21:10:44.737Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
   "Web/Accessibility/ARIA/Roles/button_role": {
     "modified": "2019-03-18T21:45:11.836Z",
     "contributors": [
@@ -25073,8 +25008,20 @@
       "Wind1808"
     ]
   },
+  "Web/Accessibility/ARIA/Roles/group_role": {
+    "modified": "2019-03-18T20:45:37.577Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
   "Web/Accessibility/ARIA/Roles/heading_role": {
     "modified": "2019-03-18T21:22:47.301Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/link_role": {
+    "modified": "2019-03-18T21:22:39.062Z",
     "contributors": [
       "Wind1808"
     ]
@@ -25085,8 +25032,50 @@
       "Wind1808"
     ]
   },
+  "Web/Accessibility/ARIA/Roles/log_role": {
+    "modified": "2019-03-18T20:45:38.179Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/presentation_role": {
+    "modified": "2019-03-18T21:21:54.666Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/progressbar_role": {
+    "modified": "2019-03-18T21:22:34.124Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/radio_role": {
+    "modified": "2019-03-18T21:22:36.677Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/slider_role": {
+    "modified": "2019-03-18T20:49:47.634Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/status_role": {
+    "modified": "2019-03-18T21:22:38.552Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
   "Web/Accessibility/ARIA/Roles/textbox_role": {
     "modified": "2019-03-18T21:22:30.263Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/toolbar_role": {
+    "modified": "2019-03-18T21:21:58.604Z",
     "contributors": [
       "Wind1808"
     ]
@@ -42130,15 +42119,14 @@
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol": {
-    "modified": "2020-11-09T08:22:56.573Z",
+    "modified": "2020-04-04T15:08:12.967Z",
     "contributors": [
-      "mpcjazz",
-      "eltociear",
+      "mfuji09",
+      "technohippy",
       "segayuu",
-      "SphinxKnight",
-      "masami-dev",
-      "YuichiNukiyama",
-      "hrysd"
+      "kenji-yamasaki",
+      "chikoski",
+      "YuichiNukiyama"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive": {

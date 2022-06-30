@@ -1453,12 +1453,6 @@
       "Cleon"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2019-03-23T22:57:59.274Z",
-    "contributors": [
-      "Cleon"
-    ]
-  },
   "Glossary/Symmetric-key_cryptography": {
     "modified": "2019-03-18T21:18:28.720Z",
     "contributors": [
@@ -8968,12 +8962,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role": {
-    "modified": "2019-08-28T12:48:39.532Z",
-    "contributors": [
-      "IsraelFloresDGA"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
     "modified": "2020-12-02T07:09:06.472Z",
     "contributors": [
@@ -8997,6 +8985,12 @@
     "contributors": [
       "IsraelFloresDGA",
       "mayrars"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/alertdialog_role": {
+    "modified": "2019-08-28T12:48:39.532Z",
+    "contributors": [
+      "IsraelFloresDGA"
     ]
   },
   "Web/Accessibility/ARIA/forms": {
@@ -18881,17 +18875,9 @@
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol": {
-    "modified": "2019-06-24T09:01:16.062Z",
+    "modified": "2019-03-23T22:57:59.274Z",
     "contributors": [
-      "PCASME",
-      "AnaDallos",
-      "MateoVelilla",
-      "onit4ku",
-      "Lenninlasd",
-      "SphinxKnight",
-      "roberbnd",
-      "javiergarciagonzalez",
-      "joseanpg"
+      "Cleon"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol/for": {

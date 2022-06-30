@@ -1464,16 +1464,6 @@
       "arturparkhisenko"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2019-03-23T22:08:34.792Z",
-    "contributors": [
-      "4opper",
-      "yanakey",
-      "GRIDARK",
-      "animhotep",
-      "neutral"
-    ]
-  },
   "Glossary/Synchronous": {
     "modified": "2020-09-18T11:00:03.984Z",
     "contributors": [
@@ -24040,9 +24030,12 @@
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
-    "modified": "2019-03-23T22:50:51.135Z",
+    "modified": "2019-03-23T22:08:34.792Z",
     "contributors": [
-      "SphinxKnight",
+      "4opper",
+      "yanakey",
+      "GRIDARK",
+      "animhotep",
       "neutral"
     ]
   },

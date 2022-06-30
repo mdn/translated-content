@@ -2823,14 +2823,6 @@
       "xdelatour"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2019-03-23T22:39:08.053Z",
-    "contributors": [
-      "Nopias",
-      "loella16",
-      "xdelatour"
-    ]
-  },
   "Glossary/Synchronous": {
     "modified": "2019-03-23T22:40:33.779Z",
     "contributors": [
@@ -20850,17 +20842,6 @@
       "Fredchat"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role": {
-    "modified": "2019-03-23T23:14:00.888Z",
-    "contributors": [
-      "trouba",
-      "AdeLyneBD",
-      "hmore",
-      "goetsu",
-      "BenoitL",
-      "Fredchat"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute": {
     "modified": "2019-03-23T23:14:38.539Z",
     "contributors": [
@@ -20942,60 +20923,6 @@
       "Fredchat"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role": {
-    "modified": "2020-04-08T04:03:57.859Z",
-    "contributors": [
-      "olivierdupon",
-      "Goofy",
-      "Fredchat"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role": {
-    "modified": "2019-03-23T23:14:59.014Z",
-    "contributors": [
-      "Manuela",
-      "Goofy",
-      "Fredchat"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role": {
-    "modified": "2019-03-23T23:14:20.710Z",
-    "contributors": [
-      "J.DMB",
-      "Fredchat"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role": {
-    "modified": "2020-02-06T12:23:48.064Z",
-    "contributors": [
-      "GeoffreyC.",
-      "Fredchat"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role": {
-    "modified": "2019-03-29T05:52:02.630Z",
-    "contributors": [
-      "prsdta",
-      "Fredchat",
-      "Goofy"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role": {
-    "modified": "2019-03-23T23:14:53.364Z",
-    "contributors": [
-      "Gibus",
-      "KrySoar",
-      "Fredchat"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role": {
-    "modified": "2019-03-23T23:13:50.573Z",
-    "contributors": [
-      "J.DMB",
-      "@lucieLme",
-      "Fredchat"
-    ]
-  },
   "Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs": {
     "modified": "2019-03-23T22:43:55.753Z",
     "contributors": [
@@ -21026,6 +20953,17 @@
       "Fredchat"
     ]
   },
+  "Web/Accessibility/ARIA/Roles/alertdialog_role": {
+    "modified": "2019-03-23T23:14:00.888Z",
+    "contributors": [
+      "trouba",
+      "AdeLyneBD",
+      "hmore",
+      "goetsu",
+      "BenoitL",
+      "Fredchat"
+    ]
+  },
   "Web/Accessibility/ARIA/Roles/button_role": {
     "modified": "2019-03-23T23:16:24.067Z",
     "contributors": [
@@ -21052,11 +20990,65 @@
       "Fredchat"
     ]
   },
+  "Web/Accessibility/ARIA/Roles/group_role": {
+    "modified": "2020-04-08T04:03:57.859Z",
+    "contributors": [
+      "olivierdupon",
+      "Goofy",
+      "Fredchat"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/link_role": {
+    "modified": "2019-03-23T23:14:59.014Z",
+    "contributors": [
+      "Manuela",
+      "Goofy",
+      "Fredchat"
+    ]
+  },
   "Web/Accessibility/ARIA/Roles/listbox_role": {
     "modified": "2019-03-23T23:14:58.870Z",
     "contributors": [
       "stevenmouret",
       "Goofy",
+      "Fredchat"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/log_role": {
+    "modified": "2019-03-23T23:14:20.710Z",
+    "contributors": [
+      "J.DMB",
+      "Fredchat"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/presentation_role": {
+    "modified": "2020-02-06T12:23:48.064Z",
+    "contributors": [
+      "GeoffreyC.",
+      "Fredchat"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/progressbar_role": {
+    "modified": "2019-03-29T05:52:02.630Z",
+    "contributors": [
+      "prsdta",
+      "Fredchat",
+      "Goofy"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/slider_role": {
+    "modified": "2019-03-23T23:14:53.364Z",
+    "contributors": [
+      "Gibus",
+      "KrySoar",
+      "Fredchat"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/status_role": {
+    "modified": "2019-03-23T23:13:50.573Z",
+    "contributors": [
+      "J.DMB",
+      "@lucieLme",
       "Fredchat"
     ]
   },
@@ -41504,6 +41496,14 @@
     "modified": "2020-04-28T10:35:09.074Z",
     "contributors": [
       "tristantheb"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
+    "modified": "2019-03-23T22:39:08.053Z",
+    "contributors": [
+      "Nopias",
+      "loella16",
+      "xdelatour"
     ]
   },
   "conflicting/Web/MathML": {

@@ -1887,6 +1887,7 @@
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
 /ja/docs/Glossary/Signature/セキュリティ	/ja/docs/Glossary/Signature/Security
 /ja/docs/Glossary/Signature/関数	/ja/docs/Glossary/Signature/Function
+/ja/docs/Glossary/Symbol	/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /ja/docs/Glossary/XSS	/ja/docs/Glossary/Cross-site_scripting
 /ja/docs/Glossary/クロージャ	/ja/docs/Glossary/Closure
 /ja/docs/Glossary/スラグ	/ja/docs/Glossary/Slug
@@ -3771,9 +3772,19 @@
 /ja/docs/Web/API/window.updateCommands	/ja/docs/Web/API/Window/updateCommands
 /ja/docs/Web/API/window.window	/ja/docs/Web/API/Window/window
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/ja/docs/conflicting/Web/Accessibility/ARIA/Roles/alert_role
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/ja/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/ja/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/ja/docs/Web/Accessibility/ARIA/Roles/button_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role	/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role	/ja/docs/Web/Accessibility/ARIA/Roles/group_role
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role	/ja/docs/Web/Accessibility/ARIA/Roles/link_role
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role	/ja/docs/Web/Accessibility/ARIA/Roles/log_role
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role	/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role	/ja/docs/Web/Accessibility/ARIA/Roles/progressbar_role
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role	/ja/docs/Web/Accessibility/ARIA/Roles/radio_role
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role	/ja/docs/Web/Accessibility/ARIA/Roles/slider_role
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role	/ja/docs/Web/Accessibility/ARIA/Roles/status_role
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role	/ja/docs/Web/Accessibility/ARIA/Roles/toolbar_role
 /ja/docs/Web/Accessibility/ARIA/widgets/overview	/ja/docs/Web/Accessibility/ARIA/widgets
 /ja/docs/Web/Accessibility/Accessibility_FAQ	/ja/docs/Web/Accessibility/FAQ
 /ja/docs/Web/Accessibility/Index	/ja/docs/conflicting/Web/Accessibility

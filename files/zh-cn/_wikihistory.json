@@ -2043,20 +2043,6 @@
       "auntwei"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2020-10-15T23:14:01.224Z",
-    "contributors": [
-      "woshiqiang1",
-      "BobGreen",
-      "zhangchen",
-      "after1271349141",
-      "7anshuai",
-      "zhuangyin",
-      "ReggieLee",
-      "fengma",
-      "JoeyChen"
-    ]
-  },
   "Glossary/Synchronous": {
     "modified": "2020-02-12T10:47:09.690Z",
     "contributors": [
@@ -47084,10 +47070,17 @@
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
-    "modified": "2020-10-15T21:42:54.702Z",
+    "modified": "2020-10-15T23:14:01.224Z",
     "contributors": [
+      "woshiqiang1",
+      "BobGreen",
       "zhangchen",
-      "purple_force"
+      "after1271349141",
+      "7anshuai",
+      "zhuangyin",
+      "ReggieLee",
+      "fengma",
+      "JoeyChen"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/SyntaxError": {

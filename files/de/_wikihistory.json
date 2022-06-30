@@ -808,13 +808,6 @@
       "Shidigital"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2019-03-23T22:34:59.987Z",
-    "contributors": [
-      "schwemmer",
-      "wirmar"
-    ]
-  },
   "Glossary/TCP": {
     "modified": "2019-07-16T23:18:48.078Z",
     "contributors": [
@@ -12254,6 +12247,13 @@
     "contributors": [
       "teoli",
       "schlagi123"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Symbol": {
+    "modified": "2019-03-23T22:34:59.987Z",
+    "contributors": [
+      "schwemmer",
+      "wirmar"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/SyntaxError": {

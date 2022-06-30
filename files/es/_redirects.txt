@@ -503,6 +503,7 @@
 /es/docs/Glossary/Sentencias	/es/docs/Glossary/Statement
 /es/docs/Glossary/Sincronico	/es/docs/Glossary/Synchronous
 /es/docs/Glossary/Sistema_gestion_contenidos	/es/docs/Glossary/CMS
+/es/docs/Glossary/Symbol	/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /es/docs/Glossary/TextoCifrado	/es/docs/Glossary/Ciphertext
 /es/docs/Glossary/TextoSimple	/es/docs/Glossary/Plaintext
 /es/docs/Glossary/Tipado_dinámico	/es/docs/Glossary/Dynamic_typing
@@ -1676,8 +1677,9 @@
 /es/docs/Web/Accesibilidad/Understanding_WCAG/Perceivable/Color_contraste	/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 /es/docs/Web/Accesibilidad/Understanding_WCAG/Teclado	/es/docs/Web/Accessibility/Understanding_WCAG/Keyboard
 /es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_atributo_aria-required	/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
-/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_rol_alertdialog	/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
+/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_rol_alertdialog	/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
 /es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/es/docs/Web/Accessibility/ARIA/Roles/alert_role
+/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
 /es/docs/Web/Accessibility/ARIA/forms/Etiquetas_complejas	/es/docs/Web/Accessibility/ARIA/forms/Multipart_labels
 /es/docs/Web/Accessibility/ARIA/forms/alertas	/es/docs/Web/Accessibility/ARIA/forms/alerts
 /es/docs/Web/Accessibility/ARIA/forms/consejos_basicos_para_formularios	/es/docs/Web/Accessibility/ARIA/forms/Basic_form_hints

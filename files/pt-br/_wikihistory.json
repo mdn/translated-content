@@ -926,13 +926,6 @@
       "reuel.jonathan"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2019-03-18T21:36:11.562Z",
-    "contributors": [
-      "RafaelAdao",
-      "trestini"
-    ]
-  },
   "Glossary/Synchronous": {
     "modified": "2019-03-18T21:43:56.155Z",
     "contributors": [
@@ -6680,12 +6673,6 @@
       "ivanoliveira"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role": {
-    "modified": "2019-03-23T22:16:26.114Z",
-    "contributors": [
-      "rener_bz"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Test_Cases": {
     "modified": "2019-03-23T23:03:31.037Z",
     "contributors": [
@@ -6704,6 +6691,12 @@
     "contributors": [
       "Aschlla",
       "iCynthia"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/slider_role": {
+    "modified": "2019-03-23T22:16:26.114Z",
+    "contributors": [
+      "rener_bz"
     ]
   },
   "Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ": {
@@ -16245,6 +16238,13 @@
     "modified": "2019-03-23T22:03:59.387Z",
     "contributors": [
       "oirodolfo"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
+    "modified": "2019-03-18T21:36:11.562Z",
+    "contributors": [
+      "RafaelAdao",
+      "trestini"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/WeakMap": {
