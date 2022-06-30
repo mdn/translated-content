@@ -16,7 +16,7 @@ a::before {
 <p><strong>注意：</strong> 由<code>::before</code> 和<code>::after</code> 生成的伪元素 <a href="https://www.w3.org/TR/CSS2/generate.html#before-after-content">包含在元素格式框内</a>， 因此不能应用在<em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element">替换元素上</a>，</em> 比如{{htmlelement("img")}}或{{htmlelement("br")}} 元素。</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">/* CSS3 语法 */
 element::before { <em>样式</em> }
@@ -31,7 +31,7 @@ p::before { content: "Hello world!"; } </pre>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="Adding_quotation_marks" name="Adding_quotation_marks">加入引用标记</h3>
+<h3 id="Adding_quotation_marks">加入引用标记</h3>
 
 <p>使用 <code>::before </code>伪元素的一个简单示例就是用于加入引号。此处同时使用了 <code>::before</code> 和 <code>{{Cssxref("::after")}}</code>来插入引用性文本。</p>
 
@@ -54,7 +54,7 @@ q::after {
 
 <p>{{ EmbedLiveSample('Adding_quotation_marks', '500', '50', '') }}</p>
 
-<h3 id="Decorative_example" name="Decorative_example">修饰实例</h3>
+<h3 id="Decorative_example">修饰实例</h3>
 
 <p>我们可以用几乎任何方法定义 {{ cssxref("content") }} 中的文字和图片样式。</p>
 
@@ -79,7 +79,7 @@ q::after {
 
 <p>{{ EmbedLiveSample('Decorative_example', 450, 60) }}</p>
 
-<h3 id="To-do_list" name="To-do_list">待办列表</h3>
+<h3 id="To-do_list">待办列表</h3>
 
 <p>在本例中我们将使用伪元素来创建一个简单的待办列表。这个方法也可用于 UI 的小幅度更改和用户体验的提升。</p>
 
@@ -140,7 +140,7 @@ list.addEventListener('click', function(ev) {
 
 <p>{{ EmbedLiveSample('To-do_list', 400, 300) }}</p>
 
-<h2 id="Notes" name="Notes">注释</h2>
+<h2 id="Notes">注释</h2>
 
 <p>在 Firefox3.5 中，fixed 绝对定位的布局不被允许在元素前生成一个独立的元素（按照 CSS 规范，:after :before 伪类元素与其他盒模型元素是可以相互影响的，就像他们是真正的元素一样，不过是被插入到相关元素中罢了），他们可以被用来对非表格布局进行改善（例：实现元素在中心位置），只要置于中心的内容包含在元素中，那么内容的前后列不能够被添加前置或后置的兄弟元素。（i.e., it is perhaps more semantically correct to add an additional span as below, than it would to add an empty &lt;div/&gt; before and after）（记住，一定要给 float 元素添加 width 属性，否则它将不会浮动）</p>
 
@@ -179,7 +179,7 @@ line to flow under it.&lt;/span&gt;
 
 <p>{{EmbedLiveSample("Notes")}}</p>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="Specifications">规范</h2>
 
 <table class="standard-table">
  <thead>
@@ -218,7 +218,7 @@ line to flow under it.&lt;/span&gt;
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <p>{{Compat("css.selectors.before")}}</p>
 
@@ -231,7 +231,7 @@ line to flow under it.&lt;/span&gt;
 </table>
 </div>
 
-<h2 id="See_also" name="See_also">参见</h2>
+<h2 id="See_also">参见</h2>
 
 <ul>
  <li>{{ Cssxref("::after") }}, {{ cssxref("content") }}</li>

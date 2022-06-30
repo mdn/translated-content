@@ -10,11 +10,11 @@ translation_of: Web/API/Window/scrollY
 ---
 <div>{{APIRef}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p>返回文档在垂直方向已滚动的像素值。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">var y = window.scrollY;</pre>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/Window/scrollY
  <li><code>y</code> 是文档从顶部开始滚动过的像素值。</li>
 </ul>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <pre class="brush:js">// 保证刚好滚动到第二页
 if (window.scrollY) {
@@ -31,7 +31,7 @@ if (window.scrollY) {
 
 window.scrollByPages(1);</pre>
 
-<h2 id="Notes" name="Notes">备注</h2>
+<h2 id="Notes">备注</h2>
 
 <p>如果正在使用相对滚动函数，如 {{domxref("window.scrollBy")}}、{{domxref("window.scrollByLines")}} 或 {{domxref("window.scrollByPages")}}，则需要使用该属性来检测文档是否已被滚动了某段距离。</p>
 
@@ -47,7 +47,7 @@ var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
 var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
 var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;</pre>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 <table class="standard-table">
  <thead>
@@ -71,7 +71,7 @@ var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documen
 
 {{Compat("api.Window.scrollY")}}
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{domxref("window.scrollX")}}</li>
