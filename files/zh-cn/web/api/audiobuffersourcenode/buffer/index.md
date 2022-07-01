@@ -7,36 +7,30 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioBufferSourceNode/buffer
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>{{ domxref("AudioBufferSourceNode") }} 接口的 <code style=""><strong style="border-bottom-style: none; border-bottom-width: 0px; border-left-style: none; border-left-width: 0px; border-right-style: none; border-right-width: 0px; border-top-style: none; border-top-width: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">buffer</strong></code> 属性提供了重复播放音频的能力，该音频使用 {{domxref("AudioBuffer")}} 作为声音文件的来源。</p>
+{{ domxref("AudioBufferSourceNode") }} 接口的 **`buffer`** 属性提供了重复播放音频的能力，该音频使用 {{domxref("AudioBuffer")}} 作为声音文件的来源。
 
-<p>如果 <code>buffer</code> 属性的值为 <code>null</code>, 节点会自动生成一个单声道的无声文件（所有采样均为 0）。</p>
+如果 `buffer` 属性的值为 `null`，节点会自动生成一个单声道的无声文件（所有采样均为 0）。
 
-<h2 id="语法">语法</h2>
+## 值
 
-<pre class="syntaxbox"><em>AudioBufferSourceNode</em>.buffer = <em>soundBuffer</em>;
-</pre>
+一个 {{domxref("AudioBuffer")}}，包含了节点将要播放的声音数据。
 
-<h3 id="返回值">返回值</h3>
+## 示例
 
-<p>{{domxref("AudioBuffer")}}，包含了节点将要播放的声音数据。</p>
+> **备注：** 完整的示例请查看[演示示例](https://mdn.github.io/webaudio-examples/audio-buffer/)，或[查看源代码](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html)。
 
-<h2 id="示例">示例</h2>
-
-<div class="note">
-<p>完整的示例请查看 <a href="http://mdn.github.io/audio-buffer/"> this code running live</a>，或  <a href="https://github.com/mdn/audio-buffer">view the source。</a></p>
-</div>
-
-<pre class="brush: js;highlight[19]">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+```js
+const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
 button.onclick = function() {
   // Fill the buffer with white noise;
   //just random values between -1.0 and 1.0
-  for (var channel = 0; channel &lt; channels; channel++) {
+  for (let channel = 0; channel < channels; channel++) {
    // This gives us the actual ArrayBuffer that contains the data
-   var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i &lt; frameCount; i++) {
+   const nowBuffering = myArrayBuffer.getChannelData(channel);
+   for (let i = 0; i < frameCount; i++) {
      // Math.random() is in [0; 1.0]
      // audio needs to be in [-1.0; 1.0]
      nowBuffering[i] = Math.random() * 2 - 1;
@@ -45,22 +39,20 @@ button.onclick = function() {
 
   // Get an AudioBufferSourceNode.
   // This is the AudioNode to use when we want to play an AudioBuffer
-  var source = audioCtx.createBufferSource();
+  const source = audioCtx.createBufferSource();
   // set the buffer in the AudioBufferSourceNode
-  source.buffer = myArrayBuffer;</pre>
+  source.buffer = myArrayBuffer;
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat}}
 
+## 参见
 
-<p>{{Compat("api.AudioBufferSourceNode.buffer")}}</p>
-</div>
-
-<h2 id="相关链接">相关链接</h2>
-
-<p>{{page("/en-US/docs/Web/API/AudioBufferSourceNode","See_also")}}</p>
+- [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
