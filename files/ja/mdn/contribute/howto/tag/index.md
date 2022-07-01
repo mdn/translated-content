@@ -31,7 +31,7 @@ MDN ではタグがいくつかの用途で使われています。
 - [API の識別](#api_identification)
   - : API について記述するリファレンスページは、 API についての要素（どのインターフェイスの一部なのか、そのページで扱うプロパティもしくはメソッド）を特定することで分類されます。
 - [技術の状態](#technology_status)
-  - : その技術の状態は何か。標準外 (non-standard) か、非推奨 (deprecated) か、廃止 (obsolete) か、実験的 (experimental) か。
+  - : その技術の状態は何か。標準外 (non-standard) か、非推奨 (deprecated) か、実験的 (experimental) か。
 - [スキルレベル](#skill_level)
   - : チュートリアルとガイド向け、どれだけ記事で扱う題材が進んでいるのか?
 - [文書メタデータ](#document_metadata)
