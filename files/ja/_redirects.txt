@@ -3295,6 +3295,7 @@
 /ja/docs/Web/API/MediaStreamTrack/onunmute	/ja/docs/conflicting/Web/API/MediaStreamTrack/unmute_event
 /ja/docs/Web/API/MessagePort/onmessage	/ja/docs/Web/API/MessagePort/message_event
 /ja/docs/Web/API/MessagePort/onmessageerror	/ja/docs/Web/API/MessagePort/messageerror_event
+/ja/docs/Web/API/MouseEvent/region	/ja/docs/conflicting/Web/API/MouseEvent
 /ja/docs/Web/API/MouseEvent/which	/ja/docs/Web/API/UIEvent/which
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
 /ja/docs/Web/API/Navigator/Online_and_offline_events	/ja/docs/conflicting/Web/API/Navigator/onLine

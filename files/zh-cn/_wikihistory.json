@@ -16350,12 +16350,6 @@
       "shockw4ver"
     ]
   },
-  "Web/API/MouseEvent/region": {
-    "modified": "2020-10-15T22:11:39.427Z",
-    "contributors": [
-      "fengchunsgit"
-    ]
-  },
   "Web/API/MouseEvent/relatedTarget": {
     "modified": "2020-10-15T22:15:01.671Z",
     "contributors": [
@@ -46115,6 +46109,12 @@
     "modified": "2019-03-23T22:08:09.338Z",
     "contributors": [
       "qzn928"
+    ]
+  },
+  "conflicting/Web/API/MouseEvent": {
+    "modified": "2020-10-15T22:11:39.427Z",
+    "contributors": [
+      "fengchunsgit"
     ]
   },
   "conflicting/Web/API/MouseEvent/altKey": {
