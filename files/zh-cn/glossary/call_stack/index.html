@@ -16,7 +16,7 @@ translation_of: Glossary/Call_stack
  <li>当分配的调用栈空间被占满时，会引发“堆栈溢出”错误。</li>
 </ul>
 
-<pre class="notranslate"><code>function greeting() {
+<pre class="brush: js notranslate"><code>function greeting() {
    // [1] Some codes here
    sayHi();
    // [2] Some codes here
@@ -45,7 +45,7 @@ greeting();
  <li>把 <code>sayHi()</code> 添加进调用栈列表。</li>
  <li>执行 <code>sayHi()</code> 函数体中的代码，直到全部执行完毕。<br>
 
-  <pre class="notranslate"><code>调用栈列表:
+  <pre class="brush: plain notranslate"><code>调用栈列表:
 - sayHi
 - greeting
 </code></pre>
@@ -75,7 +75,3 @@ greeting();
   </ul>
  </li>
 </ul>
-
-<p>
- <audio class="hidden"></audio>
-</p>
