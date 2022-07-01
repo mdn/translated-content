@@ -3,26 +3,20 @@ title: MVC
 slug: Glossary/MVC
 translation_of: Glossary/MVC
 ---
-<p><strong>MVC</strong> (Model-View-Controller) 是一种软件设计模式。它强调分离软件的业务逻辑和显示。这种“分离”提供了更好的分工和改进的维护。一些其他的模式也是基于 MVC 来设计的，像 MVVM (Model-View-Viewmodel), MVP (Model-View-Presenter), 和 MVW (Model-View-Whatever).</p>
+**MVC** (Model-View-Controller) 是一种软件设计模式。它强调分离软件的业务逻辑和显示。这种“分离”提供了更好的分工和改进的维护。一些其他的模式也是基于 MVC 来设计的，像 MVVM (Model-View-Viewmodel), MVP (Model-View-Presenter), 和 MVW (Model-View-Whatever).
 
-<p>对 MVC 软件设计模式的三个部分可以被描述如下：</p>
+对 MVC 软件设计模式的三个部分可以被描述如下：
 
-<ol>
- <li>Model: 模型持有所有的数据、状态和程序逻辑。</li>
- <li>View: 负责界面的布局和显示。</li>
- <li>Controller: 负责模型和界面之间的交互。</li>
-</ol>
+1.  Model: 模型持有所有的数据、状态和程序逻辑。
+2.  View: 负责界面的布局和显示。
+3.  Controller: 负责模型和界面之间的交互。
 
-<h2 id="Learn_more">Learn more</h2>
+## Learn more
 
-<h3 id="General_knowledge">General knowledge</h3>
+### General knowledge
 
-<ul>
- <li>{{interwiki("wikipedia", "Model–view–controller")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Model–view–controller")}} on Wikipedia
 
-<h3 id="Learning_MVC">Learning MVC</h3>
+### Learning MVC
 
-<ul>
- <li><a href="/zh-CN/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">MVC architecture</a></li>
-</ul>
+- [MVC architecture](/zh-CN/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)

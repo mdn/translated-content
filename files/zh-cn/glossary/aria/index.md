@@ -6,12 +6,10 @@ tags:
   - Glossary
 translation_of: Glossary/ARIA
 ---
-<p><strong>ARIA</strong> (<em>Accessible Rich {{glossary("Internet")}} Applications</em>)  是向{{Glossary("HTML")}} 中添加语义和其他元数据的{{Glossary("W3C")}} 规范，以满足用户的辅助技术的需要。</p>
+**ARIA** (_Accessible Rich {{glossary("Internet")}} Applications_) 是向{{Glossary("HTML")}} 中添加语义和其他元数据的{{Glossary("W3C")}} 规范，以满足用户的辅助技术的需要。
 
-<p>例如，你可以将 <code>role="alert"</code>添加到{{HTMLElement("p")}} {{glossary("tag")}}以通知视力有问题的用户该信息是重要的（否则你可能通过文字颜色传达）。</p>
+例如，你可以将 `role="alert"`添加到{{HTMLElement("p")}} {{glossary("tag")}}以通知视力有问题的用户该信息是重要的（否则你可能通过文字颜色传达）。
 
-<h2 id="更多">更多</h2>
+## 更多
 
-<ul>
- <li><a href="/zh-CN/docs/Web/Accessibility/ARIA">ARIA </a></li>
-</ul>
+- [ARIA](/zh-CN/docs/Web/Accessibility/ARIA)

@@ -4,48 +4,29 @@ slug: Glossary/Localization
 translation_of: Glossary/Localization
 original_slug: Localization
 ---
-<p><strong>Localization</strong> (L10n) is the process of translating software user interfaces from one language to another and adapting it to suit a foreign culture. These resources are for anyone with an interest in the technical aspects involved in localization. They are for developers and all contributors.</p>
+**Localization** (L10n) is the process of translating software user interfaces from one language to another and adapting it to suit a foreign culture. These resources are for anyone with an interest in the technical aspects involved in localization. They are for developers and all contributors.
 
-<h2 id="Documentation">Documentation</h2>
-<dl>
-  <dt>
-    <a href="/zh-CN/docs/Localization_Quick_Start_Guide">Localization Quick Start Guide</a></dt>
-  <dd>
-    First read for volunteers wanting to start localizing.</dd>
-  <dt>
-    <a href="/zh-CN/docs/XUL_Tutorial/Localization">XUL Tutorial:Localization</a></dt>
-  <dd>
-    <a href="/zh-CN/docs/XUL_Tutorial">XUL Tutorial</a> section on localizing XUL applications.</dd>
-  <dt>
-    <a href="/zh-CN/docs/Writing_localizable_code">Writing localizable code</a></dt>
-  <dd>
-    Best practices and guidelines for programmers to play nicely with localization.</dd>
-  <dt>
-    <a href="http://wiki.babelzilla.org/index.php?title=Tutorials#How_to_localize_strings_from_the_help.html_file_of_an_extension">Localizing Help files</a></dt>
-  <dd>
-    How to separate content from HTML to make these files more easy to localize.</dd>
-  <dt>
-    <a href="http://wiki.babelzilla.org/index.php?title=Tutorials#How_to_resize_a_xul_pref_dialog_according_to_every_language">Custom dialog size</a></dt>
-  <dd>
-    How to adjust window sizes to fit specific localizations.</dd>
-  <dt>
-    <a href="/zh-CN/docs/Localizing_extension_descriptions">Localizing extension descriptions</a></dt>
-  <dd>
-    To localize the description of an extension (the string that shows up under extension's name in the Extensions window), you need to use a special preference key to override the description specified in your install.rdf file. This article contains instructions on how to modify this preference key.</dd>
-  <dt>
-    <a href="/zh-CN/docs/Frequently_Asked_Localization_Questions">Frequently Asked Localization Questions</a></dt>
-  <dd>
-    Frequently asked questions about localization.</dd>
-</dl>
+## Documentation
 
-<h2 id="Community">Community</h2>
+- [Localization Quick Start Guide](/zh-CN/docs/Localization_Quick_Start_Guide)
+  - : First read for volunteers wanting to start localizing.
+- [XUL Tutorial:Localization](/zh-CN/docs/XUL_Tutorial/Localization)
+  - : [XUL Tutorial](/zh-CN/docs/XUL_Tutorial) section on localizing XUL applications.
+- [Writing localizable code](/zh-CN/docs/Writing_localizable_code)
+  - : Best practices and guidelines for programmers to play nicely with localization.
+- [Localizing Help files](http://wiki.babelzilla.org/index.php?title=Tutorials#How_to_localize_strings_from_the_help.html_file_of_an_extension)
+  - : How to separate content from HTML to make these files more easy to localize.
+- [Custom dialog size](http://wiki.babelzilla.org/index.php?title=Tutorials#How_to_resize_a_xul_pref_dialog_according_to_every_language)
+  - : How to adjust window sizes to fit specific localizations.
+- [Localizing extension descriptions](/zh-CN/docs/Localizing_extension_descriptions)
+  - : To localize the description of an extension (the string that shows up under extension's name in the Extensions window), you need to use a special preference key to override the description specified in your install.rdf file. This article contains instructions on how to modify this preference key.
+- [Frequently Asked Localization Questions](/zh-CN/docs/Frequently_Asked_Localization_Questions)
+  - : Frequently asked questions about localization.
 
-<ul>
-  <li><a href="https://wiki.mozilla.org/L10n">Community</a></li>
-</ul>
+## Community
 
-<h2 id="Related_Topics">Related Topics</h2>
+- [Community](https://wiki.mozilla.org/L10n)
 
-<ul>
-  <li><a href="/zh-CN/docs/Extensions">Extensions</a>, <a href="/zh-CN/docs/XUL">XUL</a></li>
-</ul>
+## Related Topics
+
+- [Extensions](/zh-CN/docs/Extensions), [XUL](/zh-CN/docs/XUL)

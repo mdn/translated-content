@@ -7,20 +7,14 @@ tags:
   - 术语
 translation_of: Glossary/Argument
 ---
-<p> </p>
+**argument** 是一个作为函数输入的[值](/zh-CN/docs/Glossary/value)（[原始数据](/zh-CN/docs/Glossary/primitive)或[对象](/zh-CN/docs/Glossary/object)）。
 
-<p><strong>argument </strong>是一个作为函数输入的<a href="/zh-CN/docs/Glossary/value">值</a>（<a href="/zh-CN/docs/Glossary/primitive">原始数据</a>或<a href="/zh-CN/docs/Glossary/object">对象</a>）。</p>
+## 学到更多
 
-<h2 id="学到更多">学到更多</h2>
+### 基本知识
 
-<h3 id="基本知识">基本知识</h3>
+- [Parameter 和 Argument 之间的差异](<https://en.wikipedia.org/wiki/Parameter_(computer_programming)>) - 维基百科
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Parameter_(computer_programming)">Parameter 和 Argument 之间的差异</a> - 维基百科</li>
-</ul>
+### 技术参考
 
-<h3 id="技术参考">技术参考</h3>
-
-<ul>
- <li><a href="/zh-CN/docs/Glossary/JavaScript">JavaScript 中</a>的 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a></code> 对象</li>
-</ul>
+- [JavaScript 中](/zh-CN/docs/Glossary/JavaScript)的 [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象

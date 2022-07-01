@@ -3,15 +3,11 @@ title: Head
 slug: Glossary/Head
 translation_of: Glossary/Head
 ---
-<p> </p>
+**Head**是{{glossary("HTML")}}文档的一部分，包含了关于文档的{{glossary("metadata")}}，比如作者、描述以及应用于 HTML 的{{glossary("CSS")}} 或者 {{glossary("JavaScript")}} 文件的链接。
 
-<p><strong>Head</strong>是{{glossary("HTML")}}文档的一部分，包含了关于文档的{{glossary("metadata")}}，比如作者、描述以及应用于 HTML 的{{glossary("CSS")}} 或者 {{glossary("JavaScript")}} 文件的链接。</p>
+## 了解更多
 
-<h2 id="了解更多">了解更多</h2>
+### HTML head
 
-<h3 id="HTML_head">HTML head</h3>
-
-<ul>
- <li>MDN 里的{{htmlelement("head")}}元素引用 </li>
- <li>MDN 学习区域里的<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">The HTML &lt;head&gt;</a> </li>
-</ul>
+- MDN 里的{{htmlelement("head")}}元素引用
+- MDN 学习区域里的[The HTML \<head>](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)

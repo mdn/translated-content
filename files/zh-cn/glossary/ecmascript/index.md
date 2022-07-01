@@ -3,18 +3,14 @@ title: ECMAScript
 slug: Glossary/ECMAScript
 translation_of: Glossary/ECMAScript
 ---
-<p><strong>ECMAScript </strong>是 {{glossary("JavaScript")}} 所基于的脚本语言。<a href="https://www.ecma-international.org">Ecma 国际组织</a> 负责将 ECMAScript 标准化。</p>
+**ECMAScript** 是 {{glossary("JavaScript")}} 所基于的脚本语言。[Ecma 国际组织](https://www.ecma-international.org) 负责将 ECMAScript 标准化。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="常规知识">常规知识</h3>
+### 常规知识
 
-<ul>
- <li>维基百科上的 {{Interwiki("wikipedia", "ECMAScript")}}</li>
-</ul>
+- 维基百科上的 {{Interwiki("wikipedia", "ECMAScript")}}
 
-<h3 id="技术参考">技术参考</h3>
+### 技术参考
 
-<ul>
- <li><a href="http://www.ecmascript.org/">ECMAScript</a></li>
-</ul>
+- [ECMAScript](http://www.ecmascript.org/)

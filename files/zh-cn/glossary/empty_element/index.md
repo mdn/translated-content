@@ -8,34 +8,30 @@ tags:
 translation_of: Glossary/Empty_element
 original_slug: Glossary/空元素
 ---
-<p>一个<strong>空元素（empty element）</strong>可能是 HTML，SVG，或者 MathML 里的一个不能存在子节点（例如内嵌的元素或者元素内的文本）的{{Glossary("element")}}。</p>
+一个**空元素（empty element）**可能是 HTML，SVG，或者 MathML 里的一个不能存在子节点（例如内嵌的元素或者元素内的文本）的{{Glossary("element")}}。
 
-<p><a href="https://www.w3.org/html/wg/drafts/html/CR/">HTML</a>，<a href="https://www.w3.org/TR/SVG2/">SVG</a> 和 <a href="https://www.w3.org/Math/draft-spec/">MathML</a> 的规范都详细定义了每个元素能包含的具体内容（define very precisely what each element can contain）。许多组合是没有任何语义含义的，比如一个 {{HTMLElement("audio")}} 元素嵌套在一个 {{HTMLElement("hr")}} 元素里。</p>
+[HTML](https://www.w3.org/html/wg/drafts/html/CR/)，[SVG](https://www.w3.org/TR/SVG2/) 和 [MathML](https://www.w3.org/Math/draft-spec/) 的规范都详细定义了每个元素能包含的具体内容（define very precisely what each element can contain）。许多组合是没有任何语义含义的，比如一个 {{HTMLElement("audio")}} 元素嵌套在一个 {{HTMLElement("hr")}} 元素里。
 
-<p>在 HTML 中，通常在一个空元素上使用一个闭标签是无效的。例如， <code>&lt;input type="text"&gt;&lt;/input&gt;</code> 的闭标签是无效的 HTML。</p>
+在 HTML 中，通常在一个空元素上使用一个闭标签是无效的。例如， `<input type="text"></input>` 的闭标签是无效的 HTML。
 
-<p>在 HTML 中有以下这些空元素：</p>
+在 HTML 中有以下这些空元素：
 
-<ul>
- <li>{{HTMLElement("area")}}</li>
- <li>{{HTMLElement("base")}}</li>
- <li>{{HTMLElement("br")}}</li>
- <li>{{HTMLElement("col")}}</li>
- <li>{{HTMLElement("colgroup")}} when the {{htmlattrxref("span", "colgroup")}} is present</li>
- <li>{{HTMLElement("command")}}</li>
- <li>{{HTMLElement("embed")}}</li>
- <li>{{HTMLElement("hr")}}</li>
- <li>{{HTMLElement("img")}}</li>
- <li>{{HTMLElement("input")}}</li>
- <li>{{HTMLElement("keygen")}}</li>
- <li>{{HTMLElement("link")}}</li>
- <li>{{HTMLElement("meta")}}</li>
- <li>{{HTMLElement("param")}}</li>
- <li>{{HTMLElement("source")}}</li>
- <li>{{HTMLElement("track")}}</li>
- <li>{{HTMLElement("wbr")}}</li>
-</ul>
+- {{HTMLElement("area")}}
+- {{HTMLElement("base")}}
+- {{HTMLElement("br")}}
+- {{HTMLElement("col")}}
+- {{HTMLElement("colgroup")}} when the {{htmlattrxref("span", "colgroup")}} is present
+- {{HTMLElement("command")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("hr")}}
+- {{HTMLElement("img")}}
+- {{HTMLElement("input")}}
+- {{HTMLElement("keygen")}}
+- {{HTMLElement("link")}}
+- {{HTMLElement("meta")}}
+- {{HTMLElement("param")}}
+- {{HTMLElement("source")}}
+- {{HTMLElement("track")}}
+- {{HTMLElement("wbr")}}
 
-<div class="note">
-<p><strong>备注：</strong> 在极少数情况下，空元素被错误地称为“无效元素”(void elements)。</p>
-</div>
+> **备注：** 在极少数情况下，空元素被错误地称为“无效元素”(void elements)。

@@ -5,35 +5,31 @@ tags:
   - Simple response header
 translation_of: Glossary/Simple_response_header
 ---
-<p>一个简单的响应头（或 CORS 安全列表的响应头）是一个 <a href="/zh-CN/docs/Web/HTTP/Headers">HTTP 头 </a>，它是以下之一：</p>
+一个简单的响应头（或 CORS 安全列表的响应头）是一个 [HTTP 头 ](/zh-CN/docs/Web/HTTP/Headers)，它是以下之一：
 
-<ul>
- <li>{{HTTPHeader("Cache-Control")}}</li>
- <li>{{HTTPHeader("Content-Language")}}</li>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPHeader("Expires")}}</li>
- <li>{{HTTPHeader("Last-Modified")}}</li>
- <li>{{HTTPHeader("Pragma")}}</li>
-</ul>
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Content-Language")}}
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Expires")}}
+- {{HTTPHeader("Last-Modified")}}
+- {{HTTPHeader("Pragma")}}
 
-<p>These headers will not be filtered when the response is filtered by CORS, they are considered as <em>safe</em> (as the headers listed in {{HTTPHeader("Access-Control-Expose-Headers")}}.</p>
+These headers will not be filtered when the response is filtered by CORS, they are considered as _safe_ (as the headers listed in {{HTTPHeader("Access-Control-Expose-Headers")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Extending_the_safelist">Extending the safelist</h3>
+### Extending the safelist
 
-<p>You can extend the list of CORS-safelisted response headers by using the {{HTTPHeader("Access-Control-Expose-Headers")}} header:</p>
+You can extend the list of CORS-safelisted response headers by using the {{HTTPHeader("Access-Control-Expose-Headers")}} header:
 
-<pre>Access-Control-Expose-Headers: X-Custom-Header, Content-Length</pre>
+    Access-Control-Expose-Headers: X-Custom-Header, Content-Length
 
-<h2 id="Learn_more">Learn more</h2>
+## Learn more
 
-<ul>
- <li><a href="/zh-CN/docs/Web/HTTP">HTTP</a></li>
- <li><a href="/zh-CN/docs/Web/HTTP/Headers">HTTP headers</a></li>
- <li>{{HTTPHeader("Access-Control-Expose-Headers")}}</li>
- <li>{{Glossary("CORS")}}</li>
- <li>{{Glossary("Simple header")}}</li>
- <li>{{Glossary("Forbidden header name")}}</li>
- <li>{{Glossary("Request header")}}</li>
-</ul>
+- [HTTP](/zh-CN/docs/Web/HTTP)
+- [HTTP headers](/zh-CN/docs/Web/HTTP/Headers)
+- {{HTTPHeader("Access-Control-Expose-Headers")}}
+- {{Glossary("CORS")}}
+- {{Glossary("Simple header")}}
+- {{Glossary("Forbidden header name")}}
+- {{Glossary("Request header")}}

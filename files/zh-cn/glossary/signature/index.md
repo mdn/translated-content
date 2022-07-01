@@ -6,12 +6,10 @@ tags:
   - Glossary
 translation_of: Glossary/Signature
 ---
-<p>根据上下文，术语 <strong>签名</strong>可以有几个含义。可以参考：</p>
+根据上下文，术语 **签名**可以有几个含义。可以参考：
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<ul>
- <li>{{Interwiki("wikipedia", "Signature_(disambiguation)", "Signature")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Signature_(disambiguation)", "Signature")}} on Wikipedia

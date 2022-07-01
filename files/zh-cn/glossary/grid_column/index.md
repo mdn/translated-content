@@ -5,25 +5,21 @@ tags:
   - CSS Grids
 translation_of: Glossary/Grid_Column
 ---
-<p><strong>网格列</strong>是<a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">Grid 布局</a>中的垂直轨道，即两个垂直网格线之间的空间。它通过属性 {{cssxref("grid-template-columns")}} 或者简写属性 {{cssxref("grid")}}，{{cssxref("grid-template")}} 定义。</p>
+**网格列**是[Grid 布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)中的垂直轨道，即两个垂直网格线之间的空间。它通过属性 {{cssxref("grid-template-columns")}} 或者简写属性 {{cssxref("grid")}}，{{cssxref("grid-template")}} 定义。
 
-<p>另外，当项目被放置到显示网格中创建的列外面时，可以在隐式网格中创建网格列。默认情况这些列自动调整大小，也可以使用 {{cssxref("grid-auto-columns")}} 属性指定其大小。</p>
+另外，当项目被放置到显示网格中创建的列外面时，可以在隐式网格中创建网格列。默认情况这些列自动调整大小，也可以使用 {{cssxref("grid-auto-columns")}} 属性指定其大小。
 
-<p>在<a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">Grid 布局</a>中使用对齐方式时，网格列沿着纵轴运行。</p>
+在[Grid 布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)中使用对齐方式时，网格列沿着纵轴运行。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="属性参考">属性参考</h3>
+### 属性参考
 
-<ul>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-auto-columns")}}</li>
- <li>{{cssxref("grid")}}</li>
- <li>{{cssxref("grid-template")}}</li>
-</ul>
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid")}}
+- {{cssxref("grid-template")}}
 
-<h3 id="扩展阅读">扩展阅读</h3>
+### 扩展阅读
 
-<ul>
- <li>CSS Grid Layout Guide: <em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic concepts of grid layout</a></em></li>
-</ul>
+- CSS Grid Layout Guide: _[Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_

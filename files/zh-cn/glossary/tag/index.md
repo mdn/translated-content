@@ -3,19 +3,15 @@ title: Tag
 slug: Glossary/Tag
 translation_of: Glossary/Tag
 ---
-<p>在 {{Glossary("HTML")}} 中，tag 用来创建一个 {{Glossary("element")}}。HTML 元素的<strong>名称</strong>是在尖括号中使用的名称，例如 &lt;p&gt; 用于段落（paragraph）。注意，结束标记的名称前面有一个斜杠字符"&lt;/p&gt;"。在空元素中，结束标记既不需要也不允许。在任何情况下，如果没有提及 {{Glossary("Attribute", "attributes")}} ，那么将使用默认值。</p>
+在 {{Glossary("HTML")}} 中，tag 用来创建一个 {{Glossary("element")}}。HTML 元素的**名称**是在尖括号中使用的名称，例如 \<p> 用于段落（paragraph）。注意，结束标记的名称前面有一个斜杠字符"\</p>"。在空元素中，结束标记既不需要也不允许。在任何情况下，如果没有提及 {{Glossary("Attribute", "attributes")}} ，那么将使用默认值。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="基本信息">基本信息</h3>
+### 基本信息
 
-<ul>
- <li>维基百科上的{{Interwiki("wikipedia", "HTML element")}} </li>
- <li><a href="https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html">HTML Tags on W3 </a></li>
-</ul>
+- 维基百科上的{{Interwiki("wikipedia", "HTML element")}}
+- [HTML Tags on W3](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
 
-<h3 id="技术参考">技术参考</h3>
+### 技术参考
 
-<ul>
- <li><a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a></li>
-</ul>
+- [Introduction to HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)

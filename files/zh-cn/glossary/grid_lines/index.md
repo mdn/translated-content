@@ -5,11 +5,12 @@ tags:
   - CSS Grids
 translation_of: Glossary/Grid_Lines
 ---
-<p>使用<a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">Grid 布局</a>在显式网格中定义{{glossary("Grid tracks", "轨道")}}的同时会创建<strong>网格线</strong>。在下面的例子中，有一个三列两行的网格。它给了我们 4 条列线和 3 条行线。</p>
+使用[Grid 布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)在显式网格中定义{{glossary("Grid tracks", "轨道")}}的同时会创建**网格线**。在下面的例子中，有一个三列两行的网格。它给了我们 4 条列线和 3 条行线。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -20,44 +21,47 @@ translation_of: Glossary/Grid_Lines
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div&gt;One&lt;/div&gt;
-   &lt;div&gt;Two&lt;/div&gt;
-   &lt;div&gt;Three&lt;/div&gt;
-   &lt;div&gt;Four&lt;/div&gt;
-   &lt;div&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
+</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100px 100px;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('示例', '500', '250') }}</p>
+{{ EmbedLiveSample('示例', '500', '250') }}
 
-<p>网格线可以用它们的编号来寻址。在从左到右的语言比如英语中，列线 1 将位于网格的左侧，行线 1 将位于其顶部。线编号遵循文档的<a href="/zh-CN/docs/Web/CSS/CSS_Writing_Modes">写入模式</a>，因此在从右到左的语言中，列线 1 行将位于网格的右侧。下面的图片展示了该网格的线编号，假设语言是从左到右的。</p>
+网格线可以用它们的编号来寻址。在从左到右的语言比如英语中，列线 1 将位于网格的左侧，行线 1 将位于其顶部。线编号遵循文档的[写入模式](/zh-CN/docs/Web/CSS/CSS_Writing_Modes)，因此在从右到左的语言中，列线 1 行将位于网格的右侧。下面的图片展示了该网格的线编号，假设语言是从左到右的。
 
-<p><img alt="Diagram showing the grid with lines numbered." src="1_diagram_numbered_grid_lines.png"></p>
+![Diagram showing the grid with lines numbered.](1_diagram_numbered_grid_lines.png)
 
-<p>当创建隐式轨道去支持显式网格外的内容时，网格线也会在隐式网格中被创建，但是这些网格线不能通过编号来寻址。</p>
+当创建隐式轨道去支持显式网格外的内容时，网格线也会在隐式网格中被创建，但是这些网格线不能通过编号来寻址。
 
-<h2 id="按网格线编号将项目放置到网格上">按网格线编号将项目放置到网格上</h2>
+## 按网格线编号将项目放置到网格上
 
-<p>创建一个网格后，可以通过网格线编号将项目放置到该网格上。在下面的例子中，项目定位从列线 1 到列线 3，从行线 1 到行线 3。</p>
+创建一个网格后，可以通过网格线编号将项目放置到该网格上。在下面的例子中，项目定位从列线 1 到列线 3，从行线 1 到行线 3。
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -68,21 +72,23 @@ translation_of: Glossary/Grid_Lines
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="item"&gt;Item&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="item">Item</div>
+</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100px 100px;
@@ -93,15 +99,16 @@ translation_of: Glossary/Grid_Lines
   grid-row-start: 1;
   grid-row-end: 3;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('按网格线编号将项目放置到网格上', '500', '250') }}</p>
+{{ EmbedLiveSample('按网格线编号将项目放置到网格上', '500', '250') }}
 
-<h2 id="命名网格线">命名网格线</h2>
+## 命名网格线
 
-<p>在显式网格中创建的网格线可以被命名，在轨道大小信息之前或之后的方括号中命名。当放置一个项目时，你可以使用这些名称代替编号，如下所示。</p>
+在显式网格中创建的网格线可以被命名，在轨道大小信息之前或之后的方括号中命名。当放置一个项目时，你可以使用这些名称代替编号，如下所示。
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -112,21 +119,23 @@ translation_of: Glossary/Grid_Lines
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="item"&gt;Item&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="item">Item</div>
+</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: [col1-start] 1fr [col2-start] 1fr [col3-start] 1fr [cols-end];
   grid-template-rows: [row1-start] 100px [row2-start] 100px [rows-end];
@@ -137,31 +146,27 @@ translation_of: Glossary/Grid_Lines
   grid-row-start: row1-start;
   grid-row-end: rows-end;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('命名网格线', '500', '250') }}</p>
+{{ EmbedLiveSample('命名网格线', '500', '250') }}
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="属性参考">属性参考</h3>
+### 属性参考
 
-<ul>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid-column-start")}}</li>
- <li>{{cssxref("grid-column-end")}}</li>
- <li>{{cssxref("grid-column")}}</li>
- <li>{{cssxref("grid-row-start")}}</li>
- <li>{{cssxref("grid-row-end")}}</li>
- <li>{{cssxref("grid-row")}}</li>
-</ul>
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-column-end")}}
+- {{cssxref("grid-column")}}
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-row")}}
 
-<h3 id="扩展阅读">扩展阅读</h3>
+### 扩展阅读
 
-<ul>
- <li>CSS Grid Layout Guide: <em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic concepts of grid layout</a></em></li>
- <li>CSS Grid Layout Guide: <em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
- <li>CSS Grid Layout Guide: <em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></em></li>
- <li>CSS Grid Layout Guide: <em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes">CSS Grids, Logical Values and Writing Modes</a></em></li>
- <li><a href="https://drafts.csswg.org/css-grid/#grid-line-concept">Definition of Grid Lines in the CSS Grid Layout specification</a></li>
-</ul>
+- CSS Grid Layout Guide: _[Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- CSS Grid Layout Guide: _[Line-based placement with CSS Grid](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
+- CSS Grid Layout Guide: _[Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)_
+- CSS Grid Layout Guide: _[CSS Grids, Logical Values and Writing Modes](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)_
+- [Definition of Grid Lines in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-line-concept)

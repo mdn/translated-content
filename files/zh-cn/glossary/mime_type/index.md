@@ -5,20 +5,16 @@ tags:
   - Glossary
 translation_of: Glossary/MIME_type
 ---
-<p><strong>MIME type</strong> （现在称为“媒体类型 (media type)”，但有时也是“内容类型 (content type)”）是指示文件类型的字符串，与文件一起发送（例如，一个声音文件可能被标记为 <code>audio/ogg</code> ，一个图像文件可能是 <code>image/png</code> ）。它与传统 Windows 上的文件扩展名有相同目的。</p>
+**MIME type** （现在称为“媒体类型 (media type)”，但有时也是“内容类型 (content type)”）是指示文件类型的字符串，与文件一起发送（例如，一个声音文件可能被标记为 `audio/ogg` ，一个图像文件可能是 `image/png` ）。它与传统 Windows 上的文件扩展名有相同目的。
 
-<h2 id="学习更多">学习更多</h2>
+## 学习更多
 
-<h3 id="基础知识">基础知识</h3>
+### 基础知识
 
-<ul>
- <li>{{interwiki("wikipedia", "Internet media type", "Internet media type")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Internet media type", "Internet media type")}} on Wikipedia
 
-<h3 id="技术参考">技术参考</h3>
+### 技术参考
 
-<ul>
- <li><a href="https://www.iana.org/assignments/media-types/media-types.xhtml">MIME types 列表</a></li>
- <li><a href="/zh-CN/docs/Learn/Server-side/Configuring_server_MIME_types">正确配置服务器 MIME Types</a></li>
- <li>有关在 Web 环境中使用 <a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME Types</a> 的详细信息。</li>
-</ul>
+- [MIME types 列表](https://www.iana.org/assignments/media-types/media-types.xhtml)
+- [正确配置服务器 MIME Types](/zh-CN/docs/Learn/Server-side/Configuring_server_MIME_types)
+- 有关在 Web 环境中使用 [MIME Types](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 的详细信息。

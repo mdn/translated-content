@@ -10,12 +10,10 @@ tags:
   - WebMechanics
 translation_of: Glossary/IPv6
 ---
-<p><strong>IPv6</strong> 是当前版本的互联网（{{glossary("Internet")}}）通信协议（{{glossary("protocol")}}）。IPv6 正在慢慢地取代 {{Glossary("IPv4")}}，因为 IPv6 允许使用更多不同的 {{Glossary("IP address","IP 地址")}}。</p>
+**IPv6** 是当前版本的互联网（{{glossary("Internet")}}）通信协议（{{glossary("protocol")}}）。IPv6 正在慢慢地取代 {{Glossary("IPv4")}}，因为 IPv6 允许使用更多不同的 {{Glossary("IP address","IP 地址")}}。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="基本知识">基本知识</h3>
+### 基本知识
 
-<ul>
- <li>{{interwiki("wikipedia", "IPv6", "IPv6")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "IPv6", "IPv6")}} on Wikipedia

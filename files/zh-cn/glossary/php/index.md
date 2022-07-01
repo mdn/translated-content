@@ -3,12 +3,10 @@ title: PHP
 slug: Glossary/PHP
 translation_of: Glossary/PHP
 ---
-<p>PHP 是一个用于建造 WebAPP 和动态网站的服务器端脚本语言。</p>
+PHP 是一个用于建造 WebAPP 和动态网站的服务器端脚本语言。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<ul>
- <li><a href="https://php.net/">官方网站</a></li>
- <li>在维基百科上的 {{Interwiki("wikipedia", "PHP")}}</li>
- <li>在 Wikibooks 上的 <a href="https://en.wikibooks.org/wiki/PHP_Programming">PHP</a></li>
-</ul>
+- [官方网站](https://php.net/)
+- 在维基百科上的 {{Interwiki("wikipedia", "PHP")}}
+- 在 Wikibooks 上的 [PHP](https://en.wikibooks.org/wiki/PHP_Programming)

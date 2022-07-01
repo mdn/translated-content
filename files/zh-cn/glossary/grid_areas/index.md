@@ -5,17 +5,18 @@ tags:
   - CSS Grids
 translation_of: Glossary/Grid_Areas
 ---
-<p><strong>网格区域</strong>是网格中由一个或者多个{{glossary("grid cell", "网格单元格")}}组成的一个矩形区域。当你使用<a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">基于网格线位置</a>放置一个项目或者使用<a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">命名的网格区域</a>定义区域时，网格区域被创建。</p>
+**网格区域**是网格中由一个或者多个{{glossary("grid cell", "网格单元格")}}组成的一个矩形区域。当你使用[基于网格线位置](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)放置一个项目或者使用[命名的网格区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)定义区域时，网格区域被创建。
 
-<p><img alt="Image showing a highlighted grid area" src="1_grid_area.png"></p>
+![Image showing a highlighted grid area](1_grid_area.png)
 
-<p>本质上，网格区域一定是矩形的。例如，不可能创建 T 形或 L 形的网格区域。</p>
+本质上，网格区域一定是矩形的。例如，不可能创建 T 形或 L 形的网格区域。
 
-<p>在下面的例子中，有一个网格容器包含两个网格项目，我用 {{cssxref("grid-area")}} 属性命名它们，然后用 {{cssxref("grid-template-areas")}} 把它们放在网格上。这将创建两个网格区域，一个覆盖四个网格单元格，另外一个覆盖两个。</p>
+在下面的例子中，有一个网格容器包含两个网格项目，我用 {{cssxref("grid-area")}} 属性命名它们，然后用 {{cssxref("grid-template-areas")}} 把它们放在网格上。这将创建两个网格区域，一个覆盖四个网格单元格，另外一个覆盖两个。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -23,16 +24,17 @@ translation_of: Glossary/Grid_Areas
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: 100px 100px;
@@ -46,33 +48,30 @@ translation_of: Glossary/Grid_Areas
 .item2 {
   grid-area: b;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="item1"&gt;Item&lt;/div&gt;
-   &lt;div class="item2"&gt;Item&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="item1">Item</div>
+   <div class="item2">Item</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('示例', '300', '280') }}</p>
+{{ EmbedLiveSample('示例', '300', '280') }}
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="属性参考">属性参考</h3>
+### 属性参考
 
-<ul>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid-auto-rows")}}</li>
- <li>{{cssxref("grid-auto-columns")}}</li>
- <li>{{cssxref("grid-template-areas")}}</li>
- <li>{{cssxref("grid-area")}}</li>
-</ul>
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-area")}}
 
-<h3 id="扩展阅读">扩展阅读</h3>
+### 扩展阅读
 
-<ul>
- <li>CSS Grid Layout Guide: <em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic concepts of grid layout</a></em></li>
- <li>CSS Grid Layout Guide: <em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></em></li>
- <li><a href="https://drafts.csswg.org/css-grid/#grid-area-concept">Definition of Grid Areas in the CSS Grid Layout specification</a></li>
-</ul>
+- CSS Grid Layout Guide: _[Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- CSS Grid Layout Guide: _[Grid template areas](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
+- [Definition of Grid Areas in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-area-concept)

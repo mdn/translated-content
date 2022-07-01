@@ -5,14 +5,12 @@ tags:
   - 布局引擎
 translation_of: Glossary/Blink
 ---
-<p>Blink 是一个开源的浏览器布局引擎，由谷歌作为 Chromium 项目的一部分开发（因而也是 Chrome 的一部分）。具体而言，Blink 是一个派生自 {{glossary("WebKit")}} 项目中 WebCore 库的分支，用于处理布局、渲染以及 {{Glossary("DOM")}}。</p>
+Blink 是一个开源的浏览器布局引擎，由谷歌作为 Chromium 项目的一部分开发（因而也是 Chrome 的一部分）。具体而言，Blink 是一个派生自 {{glossary("WebKit")}} 项目中 WebCore 库的分支，用于处理布局、渲染以及 {{Glossary("DOM")}}。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="常识">常识</h3>
+### 常识
 
-<ul>
- <li>Blink 项目 <a href="https://www.chromium.org/blink">主页</a>（英文）</li>
- <li>Wikipedia 上的信息：<a href="https://en.wikipedia.org/wiki/Blink_%28layout_engine%29">Blink</a></li>
- <li>Blink 的 <a href="https://www.chromium.org/blink/developer-faq">FAQ</a> （英文）</li>
-</ul>
+- Blink 项目 [主页](https://www.chromium.org/blink)（英文）
+- Wikipedia 上的信息：[Blink](https://en.wikipedia.org/wiki/Blink_%28layout_engine%29)
+- Blink 的 [FAQ](https://www.chromium.org/blink/developer-faq) （英文）

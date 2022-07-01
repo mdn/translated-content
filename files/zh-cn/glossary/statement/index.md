@@ -3,21 +3,16 @@ title: Statement
 slug: Glossary/Statement
 translation_of: Glossary/Statement
 ---
-<p>在计算机编程语言中，<strong>语句</strong> 是一行任务指令的代码。每个程序都包含若干语句。</p>
+在计算机编程语言中，**语句** 是一行任务指令的代码。每个程序都包含若干语句。
 
-<h2 id="更多">更多</h2>
+## 更多
 
-<h3 id="一般知识">一般知识</h3>
+### 一般知识
 
-<ul>
- <li>{{Interwiki("wikipedia", "Statement (computer science)")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Statement (computer science)")}} on Wikipedia
 
-<h3 id="技术参考">技术参考</h3>
+### 技术参考
 
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements">JavaScript statements and declarations</a></li>
-</ul>
+- [JavaScript statements and declarations](/zh-CN/docs/Web/JavaScript/Reference/Statements)
 
-<ul>
-</ul>
+<!---->

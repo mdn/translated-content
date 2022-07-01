@@ -3,20 +3,16 @@ title: XPath
 slug: Glossary/XPath
 translation_of: Glossary/XPath
 ---
-<p><strong>XPath</strong> 是一种可以访问{{glossary("XML")}} 文件中的节和内容的查询语言 </p>
+**XPath** 是一种可以访问{{glossary("XML")}} 文件中的节和内容的查询语言
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="技术参考">技术参考</h3>
+### 技术参考
 
-<ul>
- <li><a href="/zh-CN/docs/Web/XPath">XPath documentation on MDN</a></li>
- <li><a href="https://www.w3.org/TR/xpath-30/">XPath specification</a></li>
-</ul>
+- [XPath documentation on MDN](/zh-CN/docs/Web/XPath)
+- [XPath specification](https://www.w3.org/TR/xpath-30/)
 
-<h3 id="基本信息">基本信息</h3>
+### 基本信息
 
-<ul>
- <li><a href="https://www.w3.org/standards/techs/xpath#w3c_all">Official website</a></li>
- <li>维基百科上的{{Interwiki("wikipedia", "XPath")}} </li>
-</ul>
+- [Official website](https://www.w3.org/standards/techs/xpath#w3c_all)
+- 维基百科上的{{Interwiki("wikipedia", "XPath")}}

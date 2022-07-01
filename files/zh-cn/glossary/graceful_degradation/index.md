@@ -8,26 +8,22 @@ tags:
 translation_of: Glossary/Graceful_degradation
 original_slug: Glossary/优雅降级
 ---
-<p><strong>优雅降级</strong>（Graceful degradation）是一种设计理念，其核心是尝试构建可在最新浏览器中运行的现代网站/应用程序，而作为降级体验，在低版本浏览器中仍然提供必要的内容和功能。</p>
+**优雅降级**（Graceful degradation）是一种设计理念，其核心是尝试构建可在最新浏览器中运行的现代网站/应用程序，而作为降级体验，在低版本浏览器中仍然提供必要的内容和功能。
 
-<p>{{Glossary("Polyfill","Polyfill")}}可用于使用 JavaScript 构建缺少的功能，但应尽可能提供样式和布局等功能的可接受替代方案，例如使用 CSS 级联或 HTML 回退行为。在<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">处理常见的 HTML 和 CSS 问题</a>中可以找到一些很好的例子。</p>
+{{Glossary("Polyfill","Polyfill")}}可用于使用 JavaScript 构建缺少的功能，但应尽可能提供样式和布局等功能的可接受替代方案，例如使用 CSS 级联或 HTML 回退行为。在[处理常见的 HTML 和 CSS 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)中可以找到一些很好的例子。
 
-<p>这个技术很有用，因为它让 Web 开发者，在专注开发最强大的网站同时，和某些未知的用户代理，在访问网站时发生的问题间达到权衡。{{Glossary("渐进增强")}}相关而不同—通常被看做优雅降级的相反行为。实际上，这两种方法都是有效的，并且通常可以相互补充。</p>
+这个技术很有用，因为它让 Web 开发者，在专注开发最强大的网站同时，和某些未知的用户代理，在访问网站时发生的问题间达到权衡。{{Glossary("渐进增强")}}相关而不同—通常被看做优雅降级的相反行为。实际上，这两种方法都是有效的，并且通常可以相互补充。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="基本知识">基本知识</h3>
+### 基本知识
 
-<ul>
- <li>维基百科的{{Interwiki("wikipedia", "优雅降级")}}</li>
- <li><a href="/zh-CN/docs/Glossary">MDN Web 文档词汇表</a>
+- 维基百科的{{Interwiki("wikipedia", "优雅降级")}}
+- [MDN Web 文档词汇表](/zh-CN/docs/Glossary)
 
-  <ul>
-   <li>{{Glossary("Graceful degradation")}}</li>
-   <li>{{Glossary("Polyfill")}}</li>
-   <li>{{Glossary("渐进增强")}}</li>
-  </ul>
- </li>
- <li><a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">处理常见的 HTML 和 CSS 问题</a></li>
- <li><a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">实现特性检测</a></li>
-</ul>
+  - {{Glossary("Graceful degradation")}}
+  - {{Glossary("Polyfill")}}
+  - {{Glossary("渐进增强")}}
+
+- [处理常见的 HTML 和 CSS 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
+- [实现特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)

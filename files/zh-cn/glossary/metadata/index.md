@@ -3,18 +3,14 @@ title: Metadata
 slug: Glossary/Metadata
 translation_of: Glossary/Metadata
 ---
-<p><strong>Metadata</strong>——元数据，简单的来说就是描述数据的数据。例如，一个 {{glossary("HTML")}} 文件是一种数据，但 HTML 文件也能在 {{htmlelement("head")}} 元素中包含描述该文档的元数据，比如该文件的作者和概要。</p>
+**Metadata**——元数据，简单的来说就是描述数据的数据。例如，一个 {{glossary("HTML")}} 文件是一种数据，但 HTML 文件也能在 {{htmlelement("head")}} 元素中包含描述该文档的元数据，比如该文件的作者和概要。
 
-<h2 id="更多相关内容">更多相关内容</h2>
+## 更多相关内容
 
-<h3 id="通俗释义">通俗释义</h3>
+### 通俗释义
 
-<ul>
- <li>{{interwiki("wikipedia", "metadata", "metadata")}} 来自维基百科</li>
-</ul>
+- {{interwiki("wikipedia", "metadata", "metadata")}} 来自维基百科
 
-<h3 id="HTML_中的_metadata_元素">HTML 中的 metadata 元素</h3>
+### HTML 中的 metadata 元素
 
-<ul>
- <li>{{htmlelement("meta")}} 来自 MDN</li>
-</ul>
+- {{htmlelement("meta")}} 来自 MDN

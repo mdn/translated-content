@@ -8,30 +8,25 @@ tags:
   - git
 translation_of: Glossary/Fork
 ---
-<p>“派生”（Fork）是在某一时刻对现有的软件项目进行复制，并在项目加上某人的修改。基本上，如果原软件的许可证允许，你就可以复制软件的代码，开发自己的版本，附加上自己的补充，这就是一个 Fork。</p>
+“派生”（Fork）是在某一时刻对现有的软件项目进行复制，并在项目加上某人的修改。基本上，如果原软件的许可证允许，你就可以复制软件的代码，开发自己的版本，附加上自己的补充，这就是一个 Fork。
 
-<p>Fork 在自由和开源软件的开发中很常见。因为使用 Git 或 Github 平台的贡献模式，Fork 是现在比较流行的术语。</p>
+Fork 在自由和开源软件的开发中很常见。因为使用 Git 或 Github 平台的贡献模式，Fork 是现在比较流行的术语。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="各种_知名的_forks">各种 "知名的" forks</h3>
+### 各种 "知名的" forks
 
-<ul>
- <li><a href="https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg">Linux distributions</a></li>
- <li><a href="https://nodejs.org/en/blog/announcements/foundation-v4-announce/">Node.js and io.js (which have been merged together back)</a></li>
- <li><a href="https://www.libreoffice.org/about-us/who-are-we/">LibreOffice, a fork of OpenOffice</a></li>
-</ul>
+- [Linux distributions](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)
+- [Node.js and io.js (which have been merged together back)](https://nodejs.org/en/blog/announcements/foundation-v4-announce/)
+- [LibreOffice, a fork of OpenOffice](https://www.libreoffice.org/about-us/who-are-we/)
 
-<ul>
- <li>基本知识
-  <ul>
-   <li>{{interwiki("wikipedia", "Fork_(software_development)","Fork")}} on Wikipedia</li>
-   <li><a href="https://help.github.com/articles/fork-a-repo/">How to fork a GitHub repo</a> (fork as in a Git context)</li>
-  </ul>
- </li>
- <li><a href="/zh-CN/docs/Glossary">MDN 术语表</a>
-  <ul>
-   <li>{{Glossary("Fork")}}</li>
-  </ul>
- </li>
-</ul>
+<!---->
+
+- 基本知识
+
+  - {{interwiki("wikipedia", "Fork_(software_development)","Fork")}} on Wikipedia
+  - [How to fork a GitHub repo](https://help.github.com/articles/fork-a-repo/) (fork as in a Git context)
+
+- [MDN 术语表](/zh-CN/docs/Glossary)
+
+  - {{Glossary("Fork")}}

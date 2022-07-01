@@ -3,24 +3,20 @@ title: undefined
 slug: Glossary/undefined
 translation_of: Glossary/undefined
 ---
-<p>一个声明未定义的变量的初始值，或没有实际参数的形式参数。</p>
+一个声明未定义的变量的初始值，或没有实际参数的形式参数。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre><code>var x; //创建一个变量，但并没有赋值
+    var x; //创建一个变量，但并没有赋值
 
-console.log("X的值是", x)  //返回X的值是undefined</code></pre>
+    console.log("X的值是", x)  //返回X的值是undefined
 
-<h2 id="更多">更多</h2>
+## 更多
 
-<h3 id="基本知识">基本知识</h3>
+### 基本知识
 
-<ul>
- <li>{{Interwiki("wikipedia", "Undefined value")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Undefined value")}} on Wikipedia
 
-<h3 id="技术参考">技术参考</h3>
+### 技术参考
 
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Data_structures">JavaScript data types and data structures</a></li>
-</ul>
+- [JavaScript data types and data structures](/zh-CN/docs/Web/JavaScript/Data_structures)

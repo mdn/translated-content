@@ -5,17 +5,18 @@ tags:
   - CSS Grids
 translation_of: Glossary/Grid_Tracks
 ---
-<p><strong>网格轨道 </strong>是两条{{glossary("grid lines","网格线")}}之间的空间。它们通过使用属性 {{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-rows")}} 或者简写属性 {{cssxref("grid")}} 和 {{cssxref("grid-template")}} 在显式网格中定义。网格轨道也可以在隐式网格中创建，通过将一个网格项目定位到显式网格中创建的轨道外面。</p>
+**网格轨道** 是两条{{glossary("grid lines","网格线")}}之间的空间。它们通过使用属性 {{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-rows")}} 或者简写属性 {{cssxref("grid")}} 和 {{cssxref("grid-template")}} 在显式网格中定义。网格轨道也可以在隐式网格中创建，通过将一个网格项目定位到显式网格中创建的轨道外面。
 
-<p>下图展示该网格中的第一个行轨道（上色部分的空间）。</p>
+下图展示该网格中的第一个行轨道（上色部分的空间）。
 
-<p><img alt="Diagram showing a grid track." src="1_grid_track.png"></p>
+![Diagram showing a grid track.](1_grid_track.png)
 
-<h2 id="显式网格中的轨道大小">显式网格中的轨道大小</h2>
+## 显式网格中的轨道大小
 
-<p>当使用 {{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-rows")}} 定义网格轨道时，你可以使用任何长度单位，也可以使用 flex 单位 <code>fr</code> 来表示网格容器中可用空间的一部分。下面的例子演示了一个三列轨道的网格，第一列 200px，第二列 1fr，第三列 3fr。网格容器中的可用空间减去 200px 后，剩余空间被分成 4 份，1 份给第二列，3 份给第三列。</p>
+当使用 {{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-rows")}} 定义网格轨道时，你可以使用任何长度单位，也可以使用 flex 单位 `fr` 来表示网格容器中可用空间的一部分。下面的例子演示了一个三列轨道的网格，第一列 200px，第二列 1fr，第三列 3fr。网格容器中的可用空间减去 200px 后，剩余空间被分成 4 份，1 份给第二列，3 份给第三列。
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -23,50 +24,48 @@ translation_of: Glossary/Grid_Tracks
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: 200px 1fr 3fr;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div&gt;One&lt;/div&gt;
-   &lt;div&gt;Two&lt;/div&gt;
-   &lt;div&gt;Three&lt;/div&gt;
-   &lt;div&gt;Four&lt;/div&gt;
-   &lt;div&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('显式网格中的轨道大小', '500', '230') }}</p>
+{{ EmbedLiveSample('显式网格中的轨道大小', '500', '230') }}
 
-<h2 id="隐式网格中的轨道大小">隐式网格中的轨道大小</h2>
+## 隐式网格中的轨道大小
 
-<p>隐式网格中创建的轨道默认为自动大小，但可以通过 {{cssxref("grid-auto-rows")}} 和 {{cssxref("grid-auto-columns")}} 属性来定义这些轨道的大小。</p>
+隐式网格中创建的轨道默认为自动大小，但可以通过 {{cssxref("grid-auto-rows")}} 和 {{cssxref("grid-auto-columns")}} 属性来定义这些轨道的大小。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="属性参考">属性参考</h3>
+### 属性参考
 
-<ul>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid-auto-rows")}}</li>
- <li>{{cssxref("grid-auto-columns")}}</li>
-</ul>
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-columns")}}
 
-<h3 id="扩展阅读">扩展阅读</h3>
+### 扩展阅读
 
-<ul>
- <li>CSS Grid Layout Guide: <a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic concepts of grid layout</a></li>
- <li><a href="https://drafts.csswg.org/css-grid/#grid-track-concept">Definition of Grid Tracks in the CSS Grid Layout specification</a></li>
-</ul>
+- CSS Grid Layout Guide: [Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [Definition of Grid Tracks in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-track-concept)

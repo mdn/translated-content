@@ -7,14 +7,12 @@ tags:
   - 词汇表
 translation_of: Glossary/Object
 ---
-<p><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object">对象</a> 指包含数据和用于处理数据的指令的数据结构. 对象有时也指现实世界中的一些事，例如在赛车游戏当中一辆车或者一幅地图都可以是一个对象. {{glossary("JavaScript")}}, Java, C++, Python, 还有 Ruby 这些例子都是{{glossary("OOP","面向对象的程序设计")}} 语言。</p>
+[对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object) 指包含数据和用于处理数据的指令的数据结构. 对象有时也指现实世界中的一些事，例如在赛车游戏当中一辆车或者一幅地图都可以是一个对象. {{glossary("JavaScript")}}, Java, C++, Python, 还有 Ruby 这些例子都是{{glossary("OOP","面向对象的程序设计")}} 语言。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="常用的知识点">常用的知识点</h3>
+### 常用的知识点
 
-<ul>
- <li>{{Interwiki("wikipedia", "Object-oriented programming")}} on Wikipedia</li>
- <li>{{jsxref("Object")}} in the <a href="/zh-CN/docs/Web/JavaScript/Reference">JavaScript reference</a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Data_structures#Objects">Object data structures in JavaScript</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Object-oriented programming")}} on Wikipedia
+- {{jsxref("Object")}} in the [JavaScript reference](/zh-CN/docs/Web/JavaScript/Reference)
+- [Object data structures in JavaScript](/zh-CN/docs/Web/JavaScript/Data_structures#Objects)

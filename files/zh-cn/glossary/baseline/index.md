@@ -4,22 +4,18 @@ slug: Glossary/baseline
 translation_of: Glossary/baseline
 original_slug: Glossary/基线
 ---
-<p><strong>基线</strong>是指欧洲和西亚文字排版中，用于在上面放置字符的一条假象的基准线。</p>
+**基线**是指欧洲和西亚文字排版中，用于在上面放置字符的一条假象的基准线。
 
-<p>字符的降部比如 g 和 p 会向下超出基线，带弧形的会向上和向下扩展的字形（ {{Glossary("glyph", "Glyphs")}} ），比如 C 或 3 会略微向下超出基线。</p>
+字符的降部比如 g 和 p 会向下超出基线，带弧形的会向上和向下扩展的字形（ {{Glossary("glyph", "Glyphs")}} ），比如 C 或 3 会略微向下超出基线。
 
-<p>东亚文字没有基线，他们的字形放置在方盒子，没有升部和降部。</p>
+东亚文字没有基线，他们的字形放置在方盒子，没有升部和降部。
 
-<h2 id="学习更多">学习更多</h2>
+## 学习更多
 
-<h3 id="基本知识">基本知识</h3>
+### 基本知识
 
-<ul>
- <li>维基百科上的基线 <a href="https://en.wikipedia.org/wiki/Baseline_(typography)">Baseline</a> </li>
-</ul>
+- 维基百科上的基线 [Baseline](<https://en.wikipedia.org/wiki/Baseline_(typography)>)
 
-<h3 id="技术参考">技术参考</h3>
+### 技术参考
 
-<ul>
- <li>MDN 上的 CSS 盒对齐 <a href="/zh-CN/docs/Web/CSS/CSS_Box_Alignment#Types_of_alignment">CSS Box Alignment</a> </li>
-</ul>
+- MDN 上的 CSS 盒对齐 [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment#Types_of_alignment)
