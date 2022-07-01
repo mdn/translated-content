@@ -11,7 +11,7 @@ translation_of: Web/api/ProgressEvent/loaded
 ---
 {{APIRef("XMLHttpRequest")}}
 
-**`ProgressEvent.loaded`** 只读属性是一个整数，表示表示底层的进程已经执行的工作量。可以使用该属性和 `ProgressEvent.total` 计算完成工作的比率。当使用一个 HTTP 下载资源，这个仅表示内容本身的一部分，不包含头和其他开销。
+**`ProgressEvent.loaded`** 只读属性是一个整数，表示底层的进程已经执行的工作量。可以使用该属性和 `ProgressEvent.total` 计算完成工作的比率。当使用 HTTP 下载一个资源，其值以字节（而不是位）为单位，且仅表示内容（body）部分，不包含标头和其它开销。
 
 ## 值
 
