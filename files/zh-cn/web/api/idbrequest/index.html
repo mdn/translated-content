@@ -9,8 +9,6 @@ translation_of: Web/API/IDBRequest
 
 <div>IndexedDB api 中的 IDBRequest 接口提供了根据绑定事件处理函数访问结果集的方法。其中结果集来自对数据库和数据库对象发起的异步查询。对数据库的读写操作都是通过 request 的方式来实现。</div>
 
-<div> </div>
-
 <p>该 request 对象初始时不包括任何关于操作结果的信息，当 request 上的事件触发时，可以通过 IDBRequest 实例上的事件处理函数访问相关信息。</p>
 
 <p>继承自：<a href="/en/DOM/EventTarget" style="line-height: inherit;" title="en/DOM/EventTarget">EventTarget</a></p>
@@ -49,7 +47,7 @@ request.onupgradeneeded= function(event) {
 
 <h2 id="Attributes">Attributes</h2>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Attribute</th>
@@ -127,7 +125,7 @@ request.onupgradeneeded= function(event) {
 <p>These constants are no longer available. You should use directly the string constants instead. ({{ bug(887524) }})</p>
 </div>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Constant</th>
@@ -151,7 +149,7 @@ request.onupgradeneeded= function(event) {
 
 <h2 id="Event_handlers">Event handlers</h2>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Event handler</th>
@@ -177,6 +175,10 @@ request.onupgradeneeded= function(event) {
  <li><code><a href="/en/IndexedDB/IDBOpenDBRequest" title="en/IndexedDB/IDBOpenDBRequest">IDBOpenDBRequest</a></code></li>
 </ul>
 
+<h2 id="规范">规范</h2>
+
+{{Specifications}}
+
 <h2 id="Browser_Compatibility">Browser compatibility</h2>
 
-{{Compat("api.IDBRequest")}}
+{{Compat}}

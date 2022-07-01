@@ -34,7 +34,7 @@ translation_of: Web/API/KeyboardEvent
 
 <p>下述常量用于识别产生按键事件的键盘位置，以类似 <code>KeyboardEvent.DOM_KEY_LOCATION_STANDARD</code> 的形式来访问。</p>
 
-<table class="standard-table">
+<table>
  <caption>键盘定位标识符</caption>
  <thead>
   <tr>
@@ -290,22 +290,7 @@ document.addEventListener('keyup', (event) =&gt; {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events', '#interface-keyboardevent', 'KeyboardEvent')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>The <code>KeyboardEvent</code> interface specification went through numerous draft versions, first under DOM Events Level 2 where it was dropped as no consensus arose, then under DOM Events Level 3. This led to the implementation of non-standard initialization methods, the early DOM Events Level 2 version, {{domxref("KeyboardEvent.initKeyEvent()")}} by Gecko browsers and the early DOM Events Level 3 version, {{domxref("KeyboardEvent.initKeyboardEvent()")}} by others. Both have been superseded by the modern usage of a constructor: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.</p>
 
