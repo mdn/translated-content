@@ -5,13 +5,13 @@ translation_of: Web/API/IDBCursor/direction
 ---
 <p>{{ APIRef("IDBCursor") }}</p>
 <div>
- <p> {{domxref("IDBCursor")}} 的方向属性是一个 {{domxref("DOMString")}} ，表示游标遍历的方向， (比如可以通过 {{domxref("IDBObjectStore.openCursor")}} 设置). 查看下文中<a href="#取值">取值</a>章节获取可取值。</p>
+ <p>{{domxref("IDBCursor")}} 的方向属性是一个 {{domxref("DOMString")}} ，表示游标遍历的方向， (比如可以通过 {{domxref("IDBObjectStore.openCursor")}} 设置). 查看下文中<a href="#取值">取值</a>章节获取可取值。</p>
 </div>
 <h2 id="语法">语法</h2>
 <pre class="brush: js" style="font-size: 14px;">cursor.direction;</pre>
 <h3 id="取值">取值</h3>
 <p>用一个字符串 (defined by the <a href="https://dvcs.w3.org/hg/IndexedDB/raw-file/default/Overview.html#idl-def-IDBCursorDirection"><code>IDBCursorDirection</code> enum</a>) 表示游标的遍历方向。相关取值如下表所示：</p>
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Value</th>
@@ -72,20 +72,9 @@ translation_of: Web/API/IDBCursor/direction
   };
 };</pre>
 <h2 id="Specifications">Specifications</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBCursor-direction', 'direction')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+
+{{Specifications}}
+
 <h2 id="Browser_compatibility">浏览器兼容性</h2>
 <div>
 {{Compat("api.IDBCursor.direction")}}
