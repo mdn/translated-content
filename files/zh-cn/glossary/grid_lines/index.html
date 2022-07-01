@@ -7,9 +7,9 @@ translation_of: Glossary/Grid_Lines
 ---
 <p>使用<a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">Grid 布局</a>在显式网格中定义{{glossary("Grid tracks", "轨道")}}的同时会创建<strong>网格线</strong>。在下面的例子中，有一个三列两行的网格。它给了我们 4 条列线和 3 条行线。</p>
 
-<div id="example_1">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<h2 id="示例">示例</h2>
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -28,7 +28,6 @@ translation_of: Glossary/Grid_Lines
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
@@ -46,12 +45,11 @@ translation_of: Glossary/Grid_Lines
 }
 </pre>
 
-<p>{{ EmbedLiveSample('example_1', '500', '250') }}</p>
+<p>{{ EmbedLiveSample('示例', '500', '250') }}</p>
 
 <p>网格线可以用它们的编号来寻址。在从左到右的语言比如英语中，列线 1 将位于网格的左侧，行线 1 将位于其顶部。线编号遵循文档的<a href="/zh-CN/docs/Web/CSS/CSS_Writing_Modes">写入模式</a>，因此在从右到左的语言中，列线 1 行将位于网格的右侧。下面的图片展示了该网格的线编号，假设语言是从左到右的。</p>
 
 <p><img alt="Diagram showing the grid with lines numbered." src="1_diagram_numbered_grid_lines.png"></p>
-</div>
 
 <p>当创建隐式轨道去支持显式网格外的内容时，网格线也会在隐式网格中被创建，但是这些网格线不能通过编号来寻址。</p>
 
@@ -59,9 +57,7 @@ translation_of: Glossary/Grid_Lines
 
 <p>创建一个网格后，可以通过网格线编号将项目放置到该网格上。在下面的例子中，项目定位从列线 1 到列线 3，从行线 1 到行线 3。</p>
 
-<div id="example_2">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -80,7 +76,6 @@ translation_of: Glossary/Grid_Lines
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="item"&gt;Item&lt;/div&gt;
@@ -100,16 +95,13 @@ translation_of: Glossary/Grid_Lines
 }
 </pre>
 
-<p>{{ EmbedLiveSample('example_2', '500', '250') }}</p>
-</div>
+<p>{{ EmbedLiveSample('按网格线编号将项目放置到网格上', '500', '250') }}</p>
 
 <h2 id="命名网格线">命名网格线</h2>
 
 <p>在显式网格中创建的网格线可以被命名，在轨道大小信息之前或之后的方括号中命名。当放置一个项目时，你可以使用这些名称代替编号，如下所示。</p>
 
-<div id="example_3">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -128,7 +120,6 @@ translation_of: Glossary/Grid_Lines
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="item"&gt;Item&lt;/div&gt;
@@ -148,8 +139,7 @@ translation_of: Glossary/Grid_Lines
 }
 </pre>
 
-<p>{{ EmbedLiveSample('example_3', '500', '250') }}</p>
-</div>
+<p>{{ EmbedLiveSample('命名网格线', '500', '250') }}</p>
 
 <h2 id="了解更多">了解更多</h2>
 

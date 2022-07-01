@@ -5,7 +5,7 @@ tags:
   - CSS Grids
 translation_of: Glossary/Grid_Tracks
 ---
-<p><strong>网格轨道 </strong>是两条{{glossary("grid lines","网格线")}}之间的空间。它们通过使用属性 {{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-rows")}} 或者简写属性 {{cssxref("grid")}} 和 {{cssxref("grid-template")}} 在显式网格中定义。网格轨道也可以在隐式网格中创建，通过将一个网格项目定位到显式网格中创建的轨道外面。</p>
+<p><strong>网格轨道 </strong>是两条{{glossary("grid lines","网格线")}}之间的空间。它们通过使用属性 {{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-rows")}} 或者简写属性 {{cssxref("grid")}} 和 {{cssxref("grid-template")}} 在显式网格中定义。网格轨道也可以在隐式网格中创建，通过将一个网格项目定位到显式网格中创建的轨道外面。</p>
 
 <p>下图展示该网格中的第一个行轨道（上色部分的空间）。</p>
 
@@ -13,11 +13,9 @@ translation_of: Glossary/Grid_Tracks
 
 <h2 id="显式网格中的轨道大小">显式网格中的轨道大小</h2>
 
-<p>当使用 {{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-rows")}} 定义网格轨道时，你可以使用任何长度单位，也可以使用 flex 单位 <code>fr</code> 来表示网格容器中可用空间的一部分。下面的例子演示了一个三列轨道的网格，第一列 200px，第二列 1fr，第三列 3fr。网格容器中的可用空间减去 200px 后，剩余空间被分成 4 份，1 份给第二列，3 份给第三列。</p>
+<p>当使用 {{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-rows")}} 定义网格轨道时，你可以使用任何长度单位，也可以使用 flex 单位 <code>fr</code> 来表示网格容器中可用空间的一部分。下面的例子演示了一个三列轨道的网格，第一列 200px，第二列 1fr，第三列 3fr。网格容器中的可用空间减去 200px 后，剩余空间被分成 4 份，1 份给第二列，3 份给第三列。</p>
 
-<div id="example_1">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -33,7 +31,6 @@ translation_of: Glossary/Grid_Tracks
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -50,12 +47,11 @@ translation_of: Glossary/Grid_Tracks
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('example_1', '500', '230') }}</p>
-</div>
+<p>{{ EmbedLiveSample('显式网格中的轨道大小', '500', '230') }}</p>
 
 <h2 id="隐式网格中的轨道大小">隐式网格中的轨道大小</h2>
 
-<p>隐式网格中创建的轨道默认为自动大小，但可以通过 {{cssxref("grid-auto-rows")}} 和 {{cssxref("grid-auto-columns")}} 属性来定义这些轨道的大小。</p>
+<p>隐式网格中创建的轨道默认为自动大小，但可以通过 {{cssxref("grid-auto-rows")}} 和 {{cssxref("grid-auto-columns")}} 属性来定义这些轨道的大小。</p>
 
 <h2 id="了解更多">了解更多</h2>
 
@@ -72,5 +68,5 @@ translation_of: Glossary/Grid_Tracks
 
 <ul>
  <li>CSS Grid Layout Guide: <a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic concepts of grid layout</a></li>
- <li><a href="https://drafts.csswg.org/css-grid/#grid-track-concept">Definition of Grid Tracks in the CSS Grid Layout specification</a></li>
+ <li><a href="https://drafts.csswg.org/css-grid/#grid-track-concept">Definition of Grid Tracks in the CSS Grid Layout specification</a></li>
 </ul>

@@ -5,13 +5,13 @@ tags:
   - CSS Grids
 translation_of: Glossary/Gutters
 ---
-<p><strong>网格间距</strong>是网格轨道之间的间距，可以通过 {{cssxref("grid-column-gap")}}，{{cssxref("grid-row-gap")}} 或者 {{cssxref("grid-gap")}} 在<a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">Grid 布局</a>中创建。</p>
+<p><strong>网格间距</strong>是网格轨道之间的间距，可以通过 {{cssxref("grid-column-gap")}}，{{cssxref("grid-row-gap")}} 或者 {{cssxref("grid-gap")}} 在<a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">Grid 布局</a>中创建。</p>
 
 <p>在下面的例子中，由一个三列两行的网格。它的列轨道之间有 20px 的间距，行轨道之间有 20px 的间距。</p>
 
-<div id="example_1">
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<h2 id="示例">示例</h2>
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -27,7 +27,6 @@ translation_of: Glossary/Gutters
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css notranslate">.wrapper {
   display: grid;
@@ -47,8 +46,7 @@ translation_of: Glossary/Gutters
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('example_1', '300', '280') }}</p>
-</div>
+<p>{{ EmbedLiveSample('示例', '300', '280') }}</p>
 
 <p>在网格大小上，网格间距参与计算就好像规则的网格轨道一样，但是没有任何东西可以被放置到网格间距上。网格间距也像网格线一样在那个位置会增加额外的大小，因此网格项目会被放置在网格间距末的那条网格线后。</p>
 
