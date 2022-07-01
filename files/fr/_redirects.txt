@@ -4363,8 +4363,8 @@
 /fr/docs/Web/CSS/calc()	/fr/docs/Web/CSS/calc
 /fr/docs/Web/CSS/clamp()	/fr/docs/Web/CSS/clamp
 /fr/docs/Web/CSS/color-adjust	/fr/docs/conflicting/Web/CSS/print-color-adjust
-/fr/docs/Web/CSS/conic-gradient	/fr/docs/orphaned/Web/CSS/conic-gradient()
-/fr/docs/Web/CSS/conic-gradient()	/fr/docs/orphaned/Web/CSS/conic-gradient()
+/fr/docs/Web/CSS/conic-gradient	/fr/docs/Web/CSS/gradient/conic-gradient
+/fr/docs/Web/CSS/conic-gradient()	/fr/docs/Web/CSS/gradient/conic-gradient
 /fr/docs/Web/CSS/counter()	/fr/docs/Web/CSS/counter
 /fr/docs/Web/CSS/counter_fonction	/fr/docs/Web/CSS/counter
 /fr/docs/Web/CSS/counters()	/fr/docs/Web/CSS/counters
@@ -6253,6 +6253,7 @@
 /fr/docs/orphaned/Web/API/SVGStylable	/fr/docs/Web/API/SVGElement
 /fr/docs/orphaned/Web/API/ServiceWorkerState	/fr/docs/Web/API/ServiceWorker/state
 /fr/docs/orphaned/Web/API/URLUtilsReadOnly	/fr/docs/Web/API/WorkerLocation
+/fr/docs/orphaned/Web/CSS/conic-gradient()	/fr/docs/Web/CSS/gradient/conic-gradient
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/orphaned/Web/CSS/transform-function/translateX	/fr/docs/Web/CSS/transform-function/translateX
 /fr/docs/orphaned/Web/Guide/Events	/fr/docs/Web/Events
