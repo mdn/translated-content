@@ -12,7 +12,7 @@ translation_of: Web/API/Node/cloneNode
 
 <p><strong><code>Node.cloneNode()</code></strong> 方法返回调用该方法的节点的一个副本。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">var <var>dupNode</var> = <var>node</var>.cloneNode(<var>deep</var>);
 </pre>
@@ -32,13 +32,13 @@ translation_of: Web/API/Node/cloneNode
 <p>在最新的规范里，该方法的行为已经改变了，其默认值变成了 false。虽然该参数仍旧是可选的，但是你必须要为该方法设置 deep 参数，无论是为了向前还是向后兼容考虑。假如开发者没设置参数的话，Gecko 28.0 {{geckoRelease(28)}}) 版本的控制台会发出警告。从 Gecko 29.0 {{geckoRelease(29)}}) 开始该方法默认为浅复制而不是深度复制。</p>
 </div>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <pre class="brush: js">var p = document.getElementById("para1"),
 var p_prime = p.cloneNode(true);
 </pre>
 
-<h2 id="Notes" name="Notes">附注</h2>
+<h2 id="Notes">附注</h2>
 
 <p>克隆一个元素节点会拷贝它所有的属性以及属性值，当然也就包括了属性上绑定的事件 (比如<code>onclick="alert(1)"</code>),但不会拷贝那些使用<a href="/zh-CN/docs/DOM/element.addEventListener" title="/zh-CN/docs/DOM/element.addEventListener"><code>addEventListener()</code></a>方法或者<code>node.onclick = fn</code>这种用 JavaScript 动态绑定的事件。</p>
 

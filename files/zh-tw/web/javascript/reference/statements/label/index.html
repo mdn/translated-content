@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Statements/label
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><strong>標記陳述式</strong>可以和 {{jsxref("Statements/break", "break")}} 或 {{jsxref("Statements/continue", "continue")}} 語句一起使用。標記就是在一條陳述式前面加個可以引用的識別符號。</p>
+<p><strong>標記陳述式</strong>可以和 {{jsxref("Statements/break", "break")}} 或 {{jsxref("Statements/continue", "continue")}} 語句一起使用。標記就是在一條陳述式前面加個可以引用的識別符號。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-label.html")}}</div>
 
@@ -34,15 +34,15 @@ translation_of: Web/JavaScript/Reference/Statements/label
 
 <h2 id="描述">描述</h2>
 
-<p>可使用一個標籤來唯一標記一個循環，然後使用 <code>break</code> 或 <code>continue</code> 陳述式來指示程式是否中斷循環或繼續執行。</p>
+<p>可使用一個標籤來唯一標記一個循環，然後使用 <code>break</code> 或 <code>continue</code> 陳述式來指示程式是否中斷循環或繼續執行。</p>
 
-<p>需要注意的是 JavaScript <strong>沒有</strong> <code>goto</code> 陳述式，標記只能和 <code>break</code> 或 <code>continue</code> 一起使用。</p>
+<p>需要注意的是 JavaScript <strong>沒有</strong> <code>goto</code> 陳述式，標記只能和 <code>break</code> 或 <code>continue</code> 一起使用。</p>
 
 <p>在<a href="/zh-TW/docs/Web/JavaScript/Reference/Strict_mode">嚴格模式</a>中，你不能使用 “<code>let</code>” 作為標籤名稱。它會拋出一個<a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError"><code>SyntaxError</code></a>（let 是一個保留的識別符號）。</p>
 
 <h2 id="範例">範例</h2>
 
-<h3 id="在_for_迴圈中使用帶標記的_continue">在 <code>for</code> 迴圈中使用帶標記的 <code>continue</code> </h3>
+<h3 id="在_for_迴圈中使用帶標記的_continue">在 <code>for</code> 迴圈中使用帶標記的 <code>continue</code> </h3>
 
 <pre class="brush: js">var i, j;
 
@@ -68,7 +68,7 @@ for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
 // Notice how it skips both "i = 1, j = 1" and "i = 1, j = 2"
 </pre>
 
-<h3 id="使用帶標記的_continue_陳述式">使用帶標記的 <code>continue</code> 陳述式</h3>
+<h3 id="使用帶標記的_continue_陳述式">使用帶標記的 <code>continue</code> 陳述式</h3>
 
 <p>給定一組資料和一組測試，下面的例子可以統計通過測試的資料。</p>
 
@@ -108,7 +108,7 @@ for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
 //   "i = 1, j = 0"
 // Notice the difference with the previous continue example</pre>
 
-<h3 id="使用帶標記_break_陳述式">使用帶標記 <code>break</code> 陳述式</h3>
+<h3 id="使用帶標記_break_陳述式">使用帶標記 <code>break</code> 陳述式</h3>
 
 <p>給定一組資料和一組測試，下面的例子判斷是否所有的資料均通過了測試。</p>
 
@@ -125,7 +125,7 @@ for (i = 0; items.length; i++)
 
 <h3 id="在標記的區塊中使用_break">在標記的區塊中使用 <code>break</code></h3>
 
-<p>你可以在程式碼區塊中使用標記，但只有 <code>break</code> 陳述式可以使用非迴圈的標記。</p>
+<p>你可以在程式碼區塊中使用標記，但只有 <code>break</code> 陳述式可以使用非迴圈的標記。</p>
 
 <pre class="brush: js">foo: {
   console.log('face');
@@ -141,11 +141,11 @@ console.log('swap');
 
 <h3 id="標記的函式宣告式">標記的函式宣告式</h3>
 
-<p>從 ECMAScript 2015 開始，標準的函式宣告式現在對規範的 <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations">Web 相容性附件</a>中的非嚴格程式碼進行了標準化。</p>
+<p>從 ECMAScript 2015 開始，標準的函式宣告式現在對規範的 <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations">Web 相容性附件</a>中的非嚴格程式碼進行了標準化。</p>
 
 <pre class="brush: js">L: function F() {}</pre>
 
-<p>在<a href="/zh-TW/docs/Web/JavaScript/Reference/Strict_mode">嚴格模式</a>中，這會拋出 {{jsxref("SyntaxError")}} 例外：</p>
+<p>在<a href="/zh-TW/docs/Web/JavaScript/Reference/Strict_mode">嚴格模式</a>中，這會拋出 {{jsxref("SyntaxError")}} 例外：</p>
 
 <pre class="brush: js">'use strict';
 L: function F() {}

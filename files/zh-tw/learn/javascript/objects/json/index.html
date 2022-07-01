@@ -9,7 +9,7 @@ translation_of: Learn/JavaScript/Objects/JSON
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}</div>
 
-<p>JavaScript Object Notation (JSON) 為將結構化資料 (structured data) 呈現為 JavaScript 物件的標準格式，常用於網站上的資料呈現、傳輸 (例如將資料從伺服器送至用戶端，以利顯示網頁)。你應該會常常遇到，因此本文將說明 JavaScript 搭配 JSON 時所應知道的觀念，包含如何在 JSON 物件中存取資料項目，並寫出你自己的 JSON。</p>
+<p>JavaScript Object Notation (JSON) 為將結構化資料 (structured data) 呈現為 JavaScript 物件的標準格式，常用於網站上的資料呈現、傳輸 (例如將資料從伺服器送至用戶端，以利顯示網頁)。你應該會常常遇到，因此本文將說明 JavaScript 搭配 JSON 時所應知道的觀念，包含如何在 JSON 物件中存取資料項目，並寫出你自己的 JSON。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -28,7 +28,7 @@ translation_of: Learn/JavaScript/Objects/JSON
 
 <p>{{glossary("JSON")}} 是依照 JavaScript 物件語法的資料格式，經 <a href="https://en.wikipedia.org/wiki/Douglas_Crockford">Douglas Crockford</a> 推廣普及。雖然 JSON 是以 JavaScript 語法為基礎，但可獨立使用，且許多程式設計環境亦可讀取 (剖析) 並產生 JSON。</p>
 
-<p>JSON 可能是物件或字串。當你想從 JSON中讀取資料時，JSON可作為物件；當要跨網路傳送 JSON 時，就會是字串。這不是什麼大問題 —  JavaScript 提供全域 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> 物件，其內的函式可進行切換。</p>
+<p>JSON 可能是物件或字串。當你想從 JSON中讀取資料時，JSON可作為物件；當要跨網路傳送 JSON 時，就會是字串。這不是什麼大問題 —  JavaScript 提供全域 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> 物件，其內的函式可進行切換。</p>
 
 <p>JSON 物件可儲存於其自有的檔案中，基本上就是副檔名為 <code>.json</code> 的文字檔案，以及 <code>application/json</code> 的 {{glossary("MIME type")}}。</p>
 
@@ -37,48 +37,48 @@ translation_of: Learn/JavaScript/Objects/JSON
 <p>我們剛提到「JSON 物件基本上就是 JavaScript 物件」，而這敘述在大多數情況下都對。如同標準的 JavaScript 物件，你當然可在 JSON 之內加入相同的基本資料類型，如字串、數字、陣列、布林值，以及其他物件，接著同樣能再建構出資料繼承，如：</p>
 
 <pre class="brush: json">{
-  "squadName" : "Super hero squad",
-  "homeTown" : "Metro City",
-  "formed" : 2016,
-  "secretBase" : "Super tower",
+  "squadName" : "Super hero squad",
+  "homeTown" : "Metro City",
+  "formed" : 2016,
+  "secretBase" : "Super tower",
   "active" : true,
-  "members" : [
-    {
-      "name" : "Molecule Man",
-      "age" : 29,
-      "secretIdentity" : "Dan Jukes",
-      "powers" : [
-        "Radiation resistance",
-        "Turning tiny",
-        "Radiation blast"
-      ]
-    },
-    {
-      "name" : "Madame Uppercut",
-      "age" : 39,
-      "secretIdentity" : "Jane Wilson",
-      "powers" : [
-        "Million tonne punch",
-        "Damage resistance",
-        "Superhuman reflexes"
-      ]
-    },
-    {
-      "name" : "Eternal Flame",
-      "age" : 1000000,
-      "secretIdentity" : "Unknown",
-      "powers" : [
-        "Immortality",
-        "Heat Immunity",
-        "Inferno",
-        "Teleportation",
-        "Interdimensional travel"
-      ]
-    }
-  ]
+  "members" : [
+    {
+      "name" : "Molecule Man",
+      "age" : 29,
+      "secretIdentity" : "Dan Jukes",
+      "powers" : [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
+    {
+      "name" : "Madame Uppercut",
+      "age" : 39,
+      "secretIdentity" : "Jane Wilson",
+      "powers" : [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name" : "Eternal Flame",
+      "age" : 1000000,
+      "secretIdentity" : "Unknown",
+      "powers" : [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
 }</pre>
 
-<p>舉例來說，如果將此物件載入至 JavaScript 程式並將之儲存為「<code>superHeroes</code>」變數，如同〈<a href="/en-US/docs/Learn/JavaScript/Objects/Basics">JavaScript 物件基本概念</a>〉一文中提過的，接著能以相同的  存取其內部的資料，如下：</p>
+<p>舉例來說，如果將此物件載入至 JavaScript 程式並將之儲存為「<code>superHeroes</code>」變數，如同〈<a href="/en-US/docs/Learn/JavaScript/Objects/Basics">JavaScript 物件基本概念</a>〉一文中提過的，接著能以相同的  存取其內部的資料，如下：</p>
 
 <pre class="brush: js">superHeroes.hometown
 superHeroes["active"]</pre>
@@ -115,15 +115,15 @@ superHeroes["active"]</pre>
     ]
   },
   {
-    "name" : "Madame Uppercut",
-    "age" : 39,
-    "secretIdentity" : "Jane Wilson",
-    "powers" : [
-      "Million tonne punch",
-      "Damage resistance",
-      "Superhuman reflexes"
-    ]
-  }
+    "name" : "Madame Uppercut",
+    "age" : 39,
+    "secretIdentity" : "Jane Wilson",
+    "powers" : [
+      "Million tonne punch",
+      "Damage resistance",
+      "Superhuman reflexes"
+    ]
+  }
 ]</pre>
 
 <p>上面程式碼絕對是有效的 JSON。你可用陣列指數為開頭來存取陣列項目，例如 <code>[0]["powers"][0]</code>。</p>
@@ -170,7 +170,7 @@ var section = document.querySelector('section');</pre>
  <li>一開始，我們先針對要在變數中檢索的 JSON 檔案，將其網址儲存起來。把下列程式碼加到你 JavaScript 程式碼的最下方：
   <pre class="brush: js">var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';</pre>
  </li>
- <li>為了建立請求，我們必須透過 <code>new</code> 關鍵字，先從 <code>XMLHttpRequest</code> 建構子建立新的請求物件實例。把下列加到最後一行：
+ <li>為了建立請求，我們必須透過 <code>new</code> 關鍵字，先從 <code>XMLHttpRequest</code> 建構子建立新的請求物件實例。把下列加到最後一行：
   <pre class="brush: js">var request = new XMLHttpRequest();</pre>
  </li>
  <li>現在用 <code><a href="/en-US/docs/Web/API/XMLHttpRequest/open">open()</a></code> 函式開啟新的請求。加入下列程式碼：
@@ -198,7 +198,7 @@ request.send();</pre>
 
 <p>在這裡，我們將所獲得的響應 (可到 <code><a href="/en-US/docs/Web/API/XMLHttpRequest/response">response</a></code> 屬性中找到) 儲存到 <code>superHeroes</code> 變數之中。此變數現在會納入我們的 JSON。接著再把此 JSON 檔案送到 2 個函式呼叫。第一個函式呼叫會將正確資料填入 &lt;<code>header&gt;</code>；第二個函式呼叫則會為團隊中的各個英文建立資訊卡，再插入至 <code>&lt;section&gt;</code> 內。</p>
 
-<p>當於請求物件上觸發載入事件時，會執行一個事件處理器。我們就將程式碼包裹至此處理器之中 (參閱 <code><a href="/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code>) — 只要成功回傳響應，就會觸發載入事件。之所以這樣做，是為了確保當我們要以 <code>request.response</code> 進行某件事時，此 <code>request.response</code> 絕對可用。</p>
+<p>當於請求物件上觸發載入事件時，會執行一個事件處理器。我們就將程式碼包裹至此處理器之中 (參閱 <code><a href="/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code>) — 只要成功回傳響應，就會觸發載入事件。之所以這樣做，是為了確保當我們要以 <code>request.response</code> 進行某件事時，此 <code>request.response</code> 絕對可用。</p>
 
 <h3 id="產生標頭">產生標頭</h3>
 
@@ -261,9 +261,9 @@ request.send();</pre>
  <li>建立數個新的元素：1 組 <code>&lt;article&gt;</code>、1 組 <code>&lt;h2&gt;、3 組</code> <code>&lt;p&gt;、1 組</code> <code>&lt;ul&gt;。</code></li>
  <li>讓 &lt;h2&gt; 納入目前超級英雄的 <code>name</code>。</li>
  <li>接著 3 個段落分別是英雄的 <code>secretIdentity</code>、<code>age、Superpowers</code>，在列表中帶出相關資訊。</li>
- <li>另以新變數 <code>superPowers</code> 儲存 <code>powers</code> 屬性 — 其中包含 1 組陣列以列出目前英雄的超能力。</li>
- <li>再用另一個 <code>for</code> 迴圈逐一巡過目前英雄的超能力。針對每一項超能力，我們再建立 1 組 <code>&lt;li&gt;</code> 元素，把超能力放進該元素之中，再透過 <code>appendChild()</code> 把 <code>listItem</code> 放入 <code>&lt;ul&gt;</code> 元素之內 (<code>myList</code>)。</li>
- <li>最後就是在 <code>&lt;article&gt;</code> (<code>myArticle</code>) 之內附加 <code>&lt;h2&gt;、</code><code>&lt;p&gt;、</code><code>&lt;ul&gt;</code>；再把 <code>&lt;article&gt;</code> 附加於 <code>&lt;section&gt;</code> 之內。這附加的順序極為重要，因為這也會是 HTML 中的顯示順序。</li>
+ <li>另以新變數 <code>superPowers</code> 儲存 <code>powers</code> 屬性 — 其中包含 1 組陣列以列出目前英雄的超能力。</li>
+ <li>再用另一個 <code>for</code> 迴圈逐一巡過目前英雄的超能力。針對每一項超能力，我們再建立 1 組 <code>&lt;li&gt;</code> 元素，把超能力放進該元素之中，再透過 <code>appendChild()</code> 把 <code>listItem</code> 放入 <code>&lt;ul&gt;</code> 元素之內 (<code>myList</code>)。</li>
+ <li>最後就是在 <code>&lt;article&gt;</code> (<code>myArticle</code>) 之內附加 <code>&lt;h2&gt;、</code><code>&lt;p&gt;、</code><code>&lt;ul&gt;</code>；再把 <code>&lt;article&gt;</code> 附加於 <code>&lt;section&gt;</code> 之內。這附加的順序極為重要，因為這也會是 HTML 中的顯示順序。</li>
 </ol>
 
 <div class="note">

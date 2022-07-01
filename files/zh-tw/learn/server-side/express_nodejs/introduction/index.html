@@ -74,7 +74,7 @@ console.log('Server running at http://127.0.0.1:8000/');</pre>
 
 <p>Node並不原生支持其他常見的web開發任務，如果你想為不同的HTTP方法(例如：<code>GET</code>, <code>POST</code>, <code>DELETE</code>等)增加特定的處理、替不同的URL路徑提供靜態檔案、使用樣板或動態性的產生response，你需要自己完成相關的程式<strong>或者是</strong>避免重新造輪子 - 使用web框架！</p>
 
-<p><a href="https://expressjs.com/">Express</a> 是最受歡迎的Node web框架，還是其他許多流行的<a href="https://expressjs.com/en/resources/frameworks.html">Node web框架</a>的底層庫，它提供：</p>
+<p><a href="https://expressjs.com/">Express</a> 是最受歡迎的Node web框架，還是其他許多流行的<a href="https://expressjs.com/en/resources/frameworks.html">Node web框架</a>的底層庫，它提供：</p>
 
 <ul>
  <li>替不同HTTP Method、不同URL路徑的requests編寫不同的處理方法</li>
@@ -86,12 +86,12 @@ console.log('Server running at http://127.0.0.1:8000/');</pre>
 <p>雖然Express本身非常簡單，但開發者們已經創造相容的中間層套件來解決大部份web開發的問題，這些套件能處理cookies, sessions，登入，URL參數，POST資料，安全標頭等等，你能在<a href="http://expressjs.com/en/resources/middleware.html">Express Middleware</a>中找到這些套件的列表（以及其他流行的第三方套件）</p>
 
 <div class="note">
-<p><strong>注意:</strong> 這種靈活性是一把雙刃劍。有一些中間層套件能解決大部份的問題或需求，但使用正確的套件有時會是一個問題。也沒有「正確的方法」來創建應用，你在網路上找到的範例也並非都是最佳解或是只有開發上所需要做的一小部份。</p>
+<p><strong>注意:</strong> 這種靈活性是一把雙刃劍。有一些中間層套件能解決大部份的問題或需求，但使用正確的套件有時會是一個問題。也沒有「正確的方法」來創建應用，你在網路上找到的範例也並非都是最佳解或是只有開發上所需要做的一小部份。</p>
 </div>
 
 <h2 id="歷史">歷史</h2>
 
-<p>2009年Node在Linux平台上初次發佈. 2010年NPM套件管利器發佈, 2012年增加Windows的原生支援. 現在的LTS版本為Node v8.11.2，最新版本為Node v10.1.0。這只是它深厚歷史的一小片斷，欲知更多詳情請洽 <a href="https://en.wikipedia.org/wiki/Node.js#History">Wikipedia</a>。</p>
+<p>2009年Node在Linux平台上初次發佈. 2010年NPM套件管利器發佈, 2012年增加Windows的原生支援. 現在的LTS版本為Node v8.11.2，最新版本為Node v10.1.0。這只是它深厚歷史的一小片斷，欲知更多詳情請洽 <a href="https://en.wikipedia.org/wiki/Node.js#History">Wikipedia</a>。</p>
 
 <p>2010年11月Express初次發佈，現在的API版本為 4.16。你可以查閱<a href="https://expressjs.com/en/changelog/4x.html">更新紀錄</a>來了解此版本做了甚麼更改或是從<a href="https://github.com/expressjs/express/blob/master/History.md">GitHub</a>中了解詳細的歷史紀錄。</p>
 
@@ -99,13 +99,13 @@ console.log('Server running at http://127.0.0.1:8000/');</pre>
 
 <p>對於web 框架而言流行度很重要，這代表他會不會被繼續更新、文件、附加套件和技術支援方面有多少資源</p>
 
-<p>現在沒有一個明確的指標來評斷伺服器端框架的流行度，雖然有 <a href="http://hotframeworks.com/">Hot Frameworks</a>透過計算GitHub的專案數量和StackOverflow的問題來衡量流行度。更好的問題是，Node和Express是否「夠流行」以避免成為不流行的平台。有沒有持續進步？需要時是否能得到幫助？能不能找到Express相關的工作？</p>
+<p>現在沒有一個明確的指標來評斷伺服器端框架的流行度，雖然有 <a href="http://hotframeworks.com/">Hot Frameworks</a>透過計算GitHub的專案數量和StackOverflow的問題來衡量流行度。更好的問題是，Node和Express是否「夠流行」以避免成為不流行的平台。有沒有持續進步？需要時是否能得到幫助？能不能找到Express相關的工作？</p>
 
 <p>從眾多使用Express的<a href="https://expressjs.com/en/resources/companies-using-express.html">公司</a>、貢獻程式碼的人數和那些提供免費/收費支援的人員來看，是的！Express是一個流行的框架。</p>
 
 <h2 id="Is_Express_opinionated">Is Express opinionated?</h2>
 
-<p>Web 框架通常自稱為 "opinionated" 或 "unopinionated".</p>
+<p>Web 框架通常自稱為 "opinionated" 或 "unopinionated".</p>
 
 <p>Opinionated指的是那些有「正確」方法解決特定問題的框架。在特定的需求上他們通常能快速開發，因為正確的方法通常易懂且有良好的文件，然而在面對其他問題時則會失去靈活性。這類型的框架通常傾向於提供較少的選擇和套件來解決問題。</p>
 
@@ -128,7 +128,7 @@ console.log('Server running at http://127.0.0.1:8000/');</pre>
 <p>First lets consider the standard Express <a href="https://expressjs.com/en/starter/hello-world.html">Hello World</a> example (we discuss each part of this below, and in the following sections).</p>
 
 <div class="note">
-<p><strong>Tip:</strong> If you have Node and Express already installed (or if you install them as shown in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">next article</a>), you can save this code in a text file called <strong>app.js</strong> and run it in a bash command prompt by calling:   </p>
+<p><strong>Tip:</strong> If you have Node and Express already installed (or if you install them as shown in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">next article</a>), you can save this code in a text file called <strong>app.js</strong> and run it in a bash command prompt by calling:   </p>
 
 <p><strong><code>./node ./app.js</code></strong></p>
 </div>
@@ -321,8 +321,8 @@ var app = express();
 
 // An example middleware function
 var a_middleware_function = function(req, res, <em>next</em>) {
-  // ... perform some operations
-  next(); // Call next() so Express will call the next middleware function in the chain.
+  // ... perform some operations
+  next(); // Call next() so Express will call the next middleware function in the chain.
 }
 
 // Function added with use() for all routes and verbs
@@ -431,12 +431,12 @@ let MongoClient = require('mongodb').MongoClient;
 MongoClient.connect('mongodb://localhost:27017/animals', function(err, client){
    if(err) throw err;
 
-   let db = client.db('animals');
-   db.collection('mammals').find().toArray(function(err, result){
+   let db = client.db('animals');
+   db.collection('mammals').find().toArray(function(err, result){
      if(err) throw err;
-     console.log(result);
-     client.close();
-   });
+     console.log(result);
+     client.close();
+   });
 }
 </pre>
 
@@ -501,7 +501,7 @@ app.set('view engine', 'some_template_engine_name');
  <li><a href="https://expressjs.com/en/guide/using-middleware.html">Using middleware</a> (Express docs)</li>
  <li><a href="http://expressjs.com/en/guide/writing-middleware.html">Writing middleware for use in Express apps</a> (Express docs)</li>
  <li><a href="https://expressjs.com/en/guide/database-integration.html">Database integration</a> (Express docs)</li>
- <li><a href="http://expressjs.com/en/starter/static-files.html">Serving static files in Express</a> (Express docs)</li>
+ <li><a href="http://expressjs.com/en/starter/static-files.html">Serving static files in Express</a> (Express docs)</li>
  <li><a href="http://expressjs.com/en/guide/error-handling.html">Error handling</a> (Express docs)</li>
 </ul>
 

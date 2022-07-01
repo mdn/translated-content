@@ -35,7 +35,7 @@ console.log(child_nodes.length); // should output "3"
 
 <dl>
  <dt>{{domxref("NodeList.item()")}}</dt>
- <dd>Returns an item in the list by its index, or <code>null</code> if the index is out-of-bounds; can be used as an alternative to simply accessing <code>nodeList[idx]</code> (which instead returns  <code>undefined</code> when <code>idx</code> is out-of-bounds).</dd>
+ <dd>Returns an item in the list by its index, or <code>null</code> if the index is out-of-bounds; can be used as an alternative to simply accessing <code>nodeList[idx]</code> (which instead returns  <code>undefined</code> when <code>idx</code> is out-of-bounds).</dd>
  <dt>{{domxref("NodeList.entries()")}}</dt>
  <dd>Returns an {{jsxref("Iteration_protocols","iterator")}} allowing to go through all key/value pairs contained in this object.</dd>
  <dt>{{domxref("NodeList.forEach()")}}</dt>
@@ -80,23 +80,23 @@ Array.prototype.forEach.call(list, function (item) {
 <pre class="brush: js">var elements = document.querySelectorAll(".suggestions");
 
 NodeList.prototype.addEventListener = function(event, func) {
-    this.forEach(function(content, item) {
-       content.addEventListener(event, func);
-    });
+    this.forEach(function(content, item) {
+       content.addEventListener(event, func);
+    });
 }
 
 function log() {
-    console.log(this, " was clicked");
+    console.log(this, " was clicked");
 }
 
 elements.addEventListener("click", log);
 //or
 elements.addEventListener("click", function() {
-    console.log(this, "  awas clicked");
+    console.log(this, "  awas clicked");
 });
 // output from both will be <em>element </em>was clicked the element would be HTML Element</pre>
 
-<p>For information about forEach see <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">Array.prototype.forEach()</a></p>
+<p>For information about forEach see <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">Array.prototype.forEach()</a></p>
 
 <h2 id="Specifications">規範</h2>
 

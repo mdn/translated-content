@@ -1,6 +1,6 @@
 ---
 title: MouseEvent.region
-slug: Web/API/MouseEvent/region
+slug: conflicting/Web/API/MouseEvent
 tags:
   - API
   - Canvas
@@ -9,6 +9,7 @@ tags:
   - プロパティ
   - 読み取り専用
   - リファレンス
+original_slug: Web/API/MouseEvent/region
 browser-compat: api.MouseEvent.region
 ---
 {{APIRef("DOM Events")}}

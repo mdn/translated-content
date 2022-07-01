@@ -34,7 +34,7 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 <p>循環通常具有以下一項或多項功能：</p>
 
 <ul>
- <li> 一個用一定值初始化的計數器-這是循環的起點（上面的“開始：我沒有食物”）。</li>
+ <li> 一個用一定值初始化的計數器-這是循環的起點（上面的“開始：我沒有食物”）。</li>
  <li>一種條件，它是對/錯測試，用於確定循環是繼續運行還是停止（通常在計數器達到某個值時）。 “我是否有足夠的食物？”對此進行了說明。 以上。 假設他需要10份食物來養家糊口的話。</li>
  <li>一個迭代器，通常在每個連續循環上使計數器增加一小部分，直到條件不再成立為止。 上面我們沒有明確說明這一點，但是我們可以考慮一下農民每小時可以收集2份食物。 每小時之後，他收集的食物數量增加了2，然後他檢查是否有足夠的食物。 如果他已達到10個部分（此時條件不再成立，則循環退出），他可以停止收集並回家。</li>
 </ul>
@@ -59,7 +59,7 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 
 <p>通常，代碼在每次循環的每次迭代中都會略有不同，這意味著您可以完成全部相似但略有不同的任務，一般情況，如果您要執行許多不同的計算，則需要不斷地執行不同的式子，而不能一遍又一遍重複！</p>
 
-<p>讓我們看一個示例，以完美地說明為什麼循環是如此便利。 Let's say we wanted to draw 100 random circles on a {{htmlelement("canvas")}} element (press the <em>Update</em> button to run the example again and again to see different random sets):</p>
+<p>讓我們看一個示例，以完美地說明為什麼循環是如此便利。 Let's say we wanted to draw 100 random circles on a {{htmlelement("canvas")}} element (press the <em>Update</em> button to run the example again and again to see different random sets):</p>
 
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
@@ -354,8 +354,8 @@ btn.addEventListener('click', function() {
           para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
           break;
         } else if (i === contacts.length-1)
-              para.textContent = 'Contact not found.';
-        }
+              para.textContent = 'Contact not found.';
+        }
     });
     &lt;/script&gt;
 
@@ -708,7 +708,7 @@ textarea.onkeyup = function(){
 <p>Specifically, we want you to:</p>
 
 <ul>
- <li>Write a loop that will iterate from 0 to the length of the <code>people</code> array. You'll need to start with an initializer of  <code>var i = 0;</code>, but what exit condition do you need?</li>
+ <li>Write a loop that will iterate from 0 to the length of the <code>people</code> array. You'll need to start with an initializer of  <code>var i = 0;</code>, but what exit condition do you need?</li>
  <li>During each loop iteration, check if the current array item is equal to "Phil" or "Lola" using a conditional statement:
   <ul>
    <li>If it is, concatenate the array item to the end of the <code>refused</code> paragraph's <code>textContent</code>, followed by a comma and a space.</li>
@@ -735,7 +735,7 @@ textarea.onkeyup = function(){
 <pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 100px;overflow: auto;"&gt;
   &lt;p class="admitted"&gt;Admit: &lt;/p&gt;
-  &lt;p class="refused"&gt;Refuse: &lt;/p&gt;
+  &lt;p class="refused"&gt;Refuse: &lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h2&gt;Editable code&lt;/h2&gt;

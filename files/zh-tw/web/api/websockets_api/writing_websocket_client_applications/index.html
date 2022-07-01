@@ -25,13 +25,13 @@ original_slug: WebSockets/Writing_WebSocket_client_applications
 <p>WebSocket 的建構方法有一個必要參數與一個選擇參數：</p>
 
 <pre>WebSocket WebSocket(
-  in DOMString url,
-  in optional DOMString protocols
+  in DOMString url,
+  in optional DOMString protocols
 );
 
 WebSocket WebSocket(
-  in DOMString url,
-  in optional DOMString[] protocols
+  in DOMString url,
+  in optional DOMString[] protocols
 );
 </pre>
 
@@ -85,15 +85,15 @@ WebSocket WebSocket(
 <pre class="brush: js">// 透過伺服器傳送文字給所有使用者
 
 function sendText() {
-  var msg = {
-    type: "message",
-    text: document.getElementById("text").value,
-    id: clientID,
-    date: Date.now()
-  };
+  var msg = {
+    type: "message",
+    text: document.getElementById("text").value,
+    id: clientID,
+    date: Date.now()
+  };
 
-  mySocket.send(JSON.stringify(msg));
-  document.getElementById("text").value = "";
+  mySocket.send(JSON.stringify(msg));
+  document.getElementById("text").value = "";
 }
 </pre>
 
@@ -103,8 +103,8 @@ function sendText() {
 
 <p>WebSockets 是一個事件驅動 API，當瀏覽器收到訊息時，一個「message」事件被傳入 <code>onmessage</code> 函數。使用以下方法開始傾聽傳入資料：</p>
 
-<pre class="brush: js">mySocket.onmessage = function(e) {
-  console.log(e.data);
+<pre class="brush: js">mySocket.onmessage = function(e) {
+  console.log(e.data);
 }
 </pre>
 
@@ -168,4 +168,4 @@ function sendText() {
 
 <h2 id="參考資料">參考資料</h2>
 
-<p><a href="https://tools.ietf.org/html/draft-abarth-thewebsocketprotocol-01">IETF: The WebSocket protocol draft-abarth-thewebsocketprotocol-01</a></p>
+<p><a href="https://tools.ietf.org/html/draft-abarth-thewebsocketprotocol-01">IETF: The WebSocket protocol draft-abarth-thewebsocketprotocol-01</a></p>

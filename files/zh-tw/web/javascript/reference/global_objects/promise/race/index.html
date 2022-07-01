@@ -20,17 +20,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 
 <h3 id="回傳值">回傳值</h3>
 
-<p>當傳入的 iterable 中有 promise 被實現或拒絕時，立刻回傳被實現或拒絕的 {{jsxref("Promise")}}。</p>
+<p>當傳入的 iterable 中有 promise 被實現或拒絕時，立刻回傳被實現或拒絕的 {{jsxref("Promise")}}。</p>
 
 <h2 id="描述">描述</h2>
 
-<p><code>race</code> 函式回傳一個與傳入的 iterable 之中第一個被解決（settled）的 promise 相同方式被解決（且以相同值）的 <code>Promise</code>。</p>
+<p><code>race</code> 函式回傳一個與傳入的 iterable 之中第一個被解決（settled）的 promise 相同方式被解決（且以相同值）的 <code>Promise</code>。</p>
 
 <h2 id="範例">範例</h2>
 
-<h3 id="Promise.race_的非同步性質"><code>Promise.race</code> 的非同步性質</h3>
+<h3 id="Promise.race_的非同步性質"><code>Promise.race</code> 的非同步性質</h3>
 
-<p>以下例子演示了 <code>Promise.race</code> <code>的非同步性質：</code></p>
+<p>以下例子演示了 <code>Promise.race</code> <code>的非同步性質：</code></p>
 
 <pre class="brush: js">// we are passing as argument an array of promises that are already resolved,
 // to trigger Promise.race as soon as possible
@@ -66,7 +66,7 @@ setTimeout(function(){
 // Promise { &lt;state&gt;: "pending" }
 </pre>
 
-<p>若 iterable 中有一個或多個非 promise 值且／或一個已經被實現／解決的 promise，<code>Promise.race</code> 將以陣列中第一個這樣的值解決：</p>
+<p>若 iterable 中有一個或多個非 promise 值且／或一個已經被實現／解決的 promise，<code>Promise.race</code> 將以陣列中第一個這樣的值解決：</p>
 
 <pre class="brush: js">var foreverPendingPromise = Promise.race([]);
 var alreadyResolvedProm = Promise.resolve(666);
@@ -79,8 +79,8 @@ var p2 = Promise.race(arr2);
 console.log(p);
 console.log(p2);
 setTimeout(function(){
-    console.log('the stack is now empty');
-    console.log(p);
+    console.log('the stack is now empty');
+    console.log(p);
     console.log(p2);
 });
 
@@ -92,7 +92,7 @@ setTimeout(function(){
 // Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: "non-Promise value" }
 </pre>
 
-<h3 id="使用_Promise.race_–_及_setTimeout_的範例">使用 <code>Promise.race</code> – 及 <code><a href="/en-US/docs/Web/API/setTimeout">setTimeout</a></code> 的範例</h3>
+<h3 id="使用_Promise.race_–_及_setTimeout_的範例">使用 <code>Promise.race</code> – 及 <code><a href="/en-US/docs/Web/API/setTimeout">setTimeout</a></code> 的範例</h3>
 
 <pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
     setTimeout(resolve, 500, 'one');

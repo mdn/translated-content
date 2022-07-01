@@ -20,11 +20,11 @@ translation_of: Web/API/Server-sent_events/Using_server-sent_events
 
 <h2 id="從伺服器端接收事件">從伺服器端接收事件</h2>
 
-<p>server-sent event API 包含在  {{domxref("EventSource")}} 介面；為了與伺服器端開啟連線並接收事件，需要建立帶有產生事件 script URL 的 {{domxref("EventSource")}} 物件。例如：</p>
+<p>server-sent event API 包含在  {{domxref("EventSource")}} 介面；為了與伺服器端開啟連線並接收事件，需要建立帶有產生事件 script URL 的 {{domxref("EventSource")}} 物件。例如：</p>
 
 <pre class="brush: js notranslate">const evtSource = new EventSource("ssedemo.php");</pre>
 
-<p>如果事件產生的 script 在不同源的伺服器上，在建立 {{domxref("EventSource")}} 物件時需要同時提供 URL 和第二個參數作為選項設定。假設客戶端的 script 伺服於 <code>example.com</code> ：</p>
+<p>如果事件產生的 script 在不同源的伺服器上，在建立 {{domxref("EventSource")}} 物件時需要同時提供 URL 和第二個參數作為選項設定。假設客戶端的 script 伺服於 <code>example.com</code> ：</p>
 
 <pre class="brush: js notranslate">const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );</pre>
 
@@ -59,7 +59,7 @@ translation_of: Web/API/Server-sent_events/Using_server-sent_events
 
 <h2 id="從伺服器發送事件">從伺服器發送事件</h2>
 
-<p>由伺服器端所發送的事件需要使用 <code>text/event-stream</code> 的 MIME 類型回應。每一個通知皆由一組文字組成並由一對換行結尾。如何處理事件串流的格式，請參考 <a href="#事件串流（event_stream）格式">Event stream format</a> 。</p>
+<p>由伺服器端所發送的事件需要使用 <code>text/event-stream</code> 的 MIME 類型回應。每一個通知皆由一組文字組成並由一對換行結尾。如何處理事件串流的格式，請參考 <a href="#事件串流（event_stream）格式">Event stream format</a> 。</p>
 
 <p>下面是一個 {{Glossary("PHP")}} 範例：</p>
 
@@ -120,7 +120,7 @@ while (true) {
 
 <h2 id="事件串流（Event_Stream）格式">事件串流（Event Stream）格式</h2>
 
-<p>事件串流是個簡易的文字資料串流，內容必須以 UTF-8 格式編碼。在事件串流中，不同的訊息以一對換行符號做區隔。若要撰寫註解，則要在該行的開頭加上冒號（:）。</p>
+<p>事件串流是個簡易的文字資料串流，內容必須以 UTF-8 格式編碼。在事件串流中，不同的訊息以一對換行符號做區隔。若要撰寫註解，則要在該行的開頭加上冒號（:）。</p>
 
 <div class="note"><strong>備註：</strong> 註解將有助於防止連線逾時；伺服器端可以定時發送註解以維持連線活著。</div>
 

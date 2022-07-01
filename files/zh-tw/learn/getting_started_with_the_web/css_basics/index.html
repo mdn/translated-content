@@ -8,7 +8,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 <div>{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}</div>
 
 <div>
-<p><strong>階層樣式表</strong> (Cascading Stylesheets；CSS) 可用以塑造網站的特殊風格。例如這段文字要用一般的黑色，或是改用紅色標明重點？某段重要內容應該置於畫面的何處？想用什麼背景圖片及顏色裝飾你的網站？〈<a href="/zh-TW/Learn/Getting_started_with_the_web/CSS_basics">CSS 基本概念</a>〉帶你入門。</p>
+<p><strong>階層樣式表</strong> (Cascading Stylesheets；CSS) 可用以塑造網站的特殊風格。例如這段文字要用一般的黑色，或是改用紅色標明重點？某段重要內容應該置於畫面的何處？想用什麼背景圖片及顏色裝飾你的網站？〈<a href="/zh-TW/Learn/Getting_started_with_the_web/CSS_basics">CSS 基本概念</a>〉帶你入門。</p>
 </div>
 
 <h2 id="CSS到底是什麼">CSS到底是什麼?</h2>
@@ -47,7 +47,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
  <dt>宣告（Declaration）</dt>
  <dd>單一個規則，例如 <code>color: red;</code> 指定了這個元素的呈現樣貌。</dd>
  <dt>屬性 (Properties)</dt>
- <dd>修改屬性是改變你HTML元素的一種方法 . (在這範例中, <code>color</code> 是段落（<code>p</code>）元素的一種屬性.) 在CSS中, 你可以選擇哪些屬性用來影響 rule.</dd>
+ <dd>修改屬性是改變你HTML元素的一種方法 . (在這範例中, <code>color</code> 是段落（<code>p</code>）元素的一種屬性.) 在CSS中, 你可以選擇哪些屬性用來影響 rule.</dd>
  <dt>屬性值 (Property value)</dt>
  <dd><strong>屬性值 </strong> 就是位於屬性右邊，在冒號（<code>:</code>）之後，從眾多的可能樣式選出一個給予屬性（範例中就是從眾多的 <code>color</code> 樣式中選出 <code>red</code>）</dd>
 </dl>
@@ -56,7 +56,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 
 <ul>
  <li>每一個規則當中，除了選擇器名稱以外，其他都必須被大括號（<code>{}</code>）給包住.</li>
- <li>在每一個宣告裡面，屬性跟屬性值之間必須用冒號(<code>:</code>) 做區分。</li>
+ <li>在每一個宣告裡面，屬性跟屬性值之間必須用冒號(<code>:</code>) 做區分。</li>
  <li>在每一個規則裡面可以包含有許多宣告，但不同的宣告之間必須使用分號 (<code>;</code>) 來區分。</li>
 </ul>
 
@@ -124,28 +124,28 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
  </tbody>
 </table>
 
-<p>還有很多值得探索的選擇器，你可以在我們的選擇器導引章節 <a href="/zh-TW/docs/Web/Guide/CSS/Getting_started/Selectors">Selectors guide</a> 看到更多介紹。</p>
+<p>還有很多值得探索的選擇器，你可以在我們的選擇器導引章節 <a href="/zh-TW/docs/Web/Guide/CSS/Getting_started/Selectors">Selectors guide</a> 看到更多介紹。</p>
 
 <h2 id="文字與字體">文字與字體</h2>
 
 <p>現在我們已經瀏覽過一些CCS的基礎，接下來我們開始增加更多的規則和資訊到我們的style.css檔案，讓我們範例中的字型和文字看起來更好.</p>
 
 <ol>
- <li>第一步, 我們回到 <a href="/zh-TW/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">output from Google Fonts</a> 找到你存的字體。 加上 <code>&lt;link ... &gt;</code> 這個元素在你的 <code>index.html</code>文件裡的head中（在 <code>&lt;head&gt;</code> 跟 <code>&lt;/head&gt;</code> 任何位置中）。<br>
-  這一段code將頁面連結到樣式表，將Open Sans字體系列與網頁一起下載，並讓你在HTML元素上使用自己的樣式表進行設置。 它看起來會像:
+ <li>第一步, 我們回到 <a href="/zh-TW/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">output from Google Fonts</a> 找到你存的字體。 加上 <code>&lt;link ... &gt;</code> 這個元素在你的 <code>index.html</code>文件裡的head中（在 <code>&lt;head&gt;</code> 跟 <code>&lt;/head&gt;</code> 任何位置中）。<br>
+  這一段code將頁面連結到樣式表，將Open Sans字體系列與網頁一起下載，並讓你在HTML元素上使用自己的樣式表進行設置。 它看起來會像:
   <pre class="brush: html notranslate">&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre>
  </li>
  <li>下一步, 刪除<code>style.css文件中</code>其他現有的字體。這是個很好的嘗試, 但紅色字體看起來真的有點醜。</li>
  <li>把下面這行加在這個地方, 取代 placeholder line with the actual <code>font-family</code> line you got from Google 字體. (<code>font-family</code> 是指你想在文件中使用的字體.)<br>
   這規則<br>
-  此規則首先為頁面設置整體的基本字體和字型(因 <code>&lt;html&gt;</code> 是整個頁面的父元素, 頁面中所有的元素會繼承同樣的字體和字型):
+  此規則首先為頁面設置整體的基本字體和字型(因 <code>&lt;html&gt;</code> 是整個頁面的父元素, 頁面中所有的元素會繼承同樣的字體和字型):
   <pre class="brush: css notranslate">html {
   font-size: 10px; /* px means 'pixels': the base font size is now 10 pixels high  */
   font-family: placeholder: this should be the rest of the output you got from Google fonts
 }</pre>
 
   <div class="note">
-  <p><strong>Note</strong>: 我已增加了對於 "px" 的說明在上面. 任何在 CSS document 中 <code>/*</code>  <code>*/</code> 內的文字是 <strong>CSS 說明</strong>, 瀏覽器在編譯時會忽略掉. 這是一個可以用來說明你做了什麼的幫助訊息.</p>
+  <p><strong>Note</strong>: 我已增加了對於 "px" 的說明在上面. 任何在 CSS document 中 <code>/*</code>  <code>*/</code> 內的文字是 <strong>CSS 說明</strong>, 瀏覽器在編譯時會忽略掉. 這是一個可以用來說明你做了什麼的幫助訊息.</p>
   </div>
  </li>
  <li>現在我們將會在HTML body中為包含文字的元素設置字體大小，<code>&lt;h1&gt;</code>,<code>&lt;li&gt;</code>,<code>&lt;p&gt;</code>。我們也設置標題居中，並在正文內容上設置一些行高和間距，使其更具可讀性</li>
@@ -156,14 +156,14 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 }
 
 p, li {
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: 1px;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
 }</pre>
  </li>
 </ol>
 
-<p>你可以依自己喜好修改 <code>px</code> 的值。你目前的工作成果可能如下圖所示：</p>
+<p>你可以依自己喜好修改 <code>px</code> 的值。你目前的工作成果可能如下圖所示：</p>
 
 <p><img alt="a mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered" src="website-screenshot-font-small.png"></p>
 
@@ -177,8 +177,8 @@ p, li {
 
 <ul>
  <li><code>padding:</code>內容周圍的空格（例如，段落文字周圍）</li>
- <li><code>border:</code> 位於矩形內容外部的實線</li>
- <li><code>margin:</code> 元素外部的空間</li>
+ <li><code>border:</code> 位於矩形內容外部的實線</li>
+ <li><code>margin:</code> 元素外部的空間</li>
 </ul>
 
 <p><img alt="three boxes sat inside one another. From outside to in they are labelled margin, border and padding" src="box-model.png"></p>
@@ -188,9 +188,9 @@ p, li {
 <ul>
  <li><code>width:</code>（元素的寬度）</li>
  <li><code>background-color:</code>元素內容和矩形內容後面的顏色</li>
- <li><code>color:</code> 元素內容的顏色（通常是文字）</li>
+ <li><code>color:</code> 元素內容的顏色（通常是文字）</li>
  <li><code>text-shadow:</code>在元素內的文字上設置陰影</li>
- <li><code>display:</code> 設置元素的顯示模式（後面會詳細介紹）</li>
+ <li><code>display:</code> 設置元素的顯示模式（後面會詳細介紹）</li>
 </ul>
 
 <p>所以，讓我們開始對我們的頁面添加更多 CSS！繼續將這些新規則添加到<code>style.css</code>頁面底部，不需要害怕多方嘗試去改值設定來了解結果。</p>
@@ -213,7 +213,7 @@ p, li {
   border: 5px solid black;
 }</pre>
 
-<p>接下來修改 <code>body</code> 元素。以下依序介紹一些常見的宣告：</p>
+<p>接下來修改 <code>body</code> 元素。以下依序介紹一些常見的宣告：</p>
 
 <ul>
  <li><code>width: 600px;</code> — 將 body 寬度固定為 600 像素</li>
@@ -242,7 +242,7 @@ p, li {
  <li>The first pixel value sets the <strong>horizontal offset</strong> of the shadow from the text — how far it moves across: a negative value should move it to the left.</li>
  <li>The second pixel value sets the <strong>vertical offset</strong> of the shadow from the text — how far it moves down, in this example; a negative value should move it up.</li>
  <li>The third pixel value sets the <strong>blur radius</strong> of the shadow — a bigger value will mean a more blurry shadow.</li>
- <li>The fourth value sets the base colour of the shadow.</li>
+ <li>The fourth value sets the base colour of the shadow.</li>
 </ul>
 
 <p>Again, try experimenting with different values to see what you can come up with.</p>
@@ -262,12 +262,12 @@ p, li {
 
 <h2 id="結論">結論</h2>
 
-<p>看完了以上的介紹並依照各個步驟實做，你應該能自己寫出這樣的網頁（如下， <a href="http://mdn.github.io/beginner-html-site-styled/">view it here</a>):</p>
+<p>看完了以上的介紹並依照各個步驟實做，你應該能自己寫出這樣的網頁（如下， <a href="http://mdn.github.io/beginner-html-site-styled/">view it here</a>):</p>
 
 <p><img alt="a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip." src="website-screenshot-final.png"></p>
 
-<p>如果哪裡卡關了，你可以隨時造訪 Github 上的 <a href="https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css">finished example code</a> ，看看裡面的 code 和你寫的哪裡不同。</p>
+<p>如果哪裡卡關了，你可以隨時造訪 Github 上的 <a href="https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css">finished example code</a> ，看看裡面的 code 和你寫的哪裡不同。</p>
 
-<p>這篇文章觸及的是非常基本的 CSS 介紹，若你有興趣想進一步了解，歡迎參考 <a href="/en-US/Learn/CSS">CSS Learning topic</a>。</p>
+<p>這篇文章觸及的是非常基本的 CSS 介紹，若你有興趣想進一步了解，歡迎參考 <a href="/en-US/Learn/CSS">CSS Learning topic</a>。</p>
 
 <p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}</p>

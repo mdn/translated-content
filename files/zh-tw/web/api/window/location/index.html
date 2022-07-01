@@ -72,7 +72,7 @@ window.location = <em>newLocation</em>;
   </tr>
   <tr>
    <td><code>search</code></td>
-   <td>the part of the URL that follows the ? symbol, including the ? symbol.</td>
+   <td>the part of the URL that follows the ? symbol, including the ? symbol.</td>
    <td>?q=devmo</td>
   </tr>
  </tbody>
@@ -122,7 +122,7 @@ window.location = <em>newLocation</em>;
 
 </pre>
 <div class="note">
- <strong>Note:</strong> The example above works in situations where <code>window.location.hash</code> does not need to be retained. However, in Gecko-based browsers, setting <code>window.location.pathname</code> in this manner will erase any information in <code>window.location.hash</code>, whereas in WebKit (and possibly other browsers), setting the pathname will not alter the the hash. If you need to change pathname but keep the hash as is, use the <code>replace()</code> method instead, which should work consistently across browsers.</div>
+ <strong>Note:</strong> The example above works in situations where <code>window.location.hash</code> does not need to be retained. However, in Gecko-based browsers, setting <code>window.location.pathname</code> in this manner will erase any information in <code>window.location.hash</code>, whereas in WebKit (and possibly other browsers), setting the pathname will not alter the the hash. If you need to change pathname but keep the hash as is, use the <code>replace()</code> method instead, which should work consistently across browsers.</div>
 <p><br>
  Consider the following example, which will reload the page by using the <code>replace()</code> method to insert the value of <code>window.location.pathname</code> into the hash (similar to Twitter's reload of <a href="http://twitter.com/username">http://twitter.com/username</a> to <a href="http://twitter.com/#!/username">http://twitter.com/#!/username</a>):</p>
 <pre class="brush: js">function reloadPageWithHash() {
@@ -132,11 +132,11 @@ window.location = <em>newLocation</em>;
 </pre>
 <h5 id="Display_the_properties_of_the_current_URL_in_an_alert_dialog">Display the properties of the current URL in an alert dialog:</h5>
 <pre class="brush: js">function showLoc() {
-  var oLocation = window.location, aLog = ["Property (Typeof): Value", "window.location (" + (typeof oLocation) + "): " + oLocation ];
-  for (var sProp in oLocation){
-    aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " +  (oLocation[sProp] || "n/a"));
-  }
-  alert(aLog.join("\n"));
+  var oLocation = window.location, aLog = ["Property (Typeof): Value", "window.location (" + (typeof oLocation) + "): " + oLocation ];
+  for (var sProp in oLocation){
+    aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " +  (oLocation[sProp] || "n/a"));
+  }
+  alert(aLog.join("\n"));
 }
 
 // in html: &lt;button onclick="showLoc();"&gt;Show location properties&lt;/button&gt;
@@ -161,22 +161,22 @@ alert(loadPageVar("name"));
 <pre class="brush: js">var oGetVars = {};
 
 if (window.location.search.length &gt; 1) {
-  for (var aItKey, nKeyId = 0, aCouples = window.location.search.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
-    aItKey = aCouples[nKeyId].split("=");
-    oGetVars[unescape(aItKey[0])] = aItKey.length &gt; 1 ? unescape(aItKey[1]) : "";
-  }
+  for (var aItKey, nKeyId = 0, aCouples = window.location.search.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
+    aItKey = aCouples[nKeyId].split("=");
+    oGetVars[unescape(aItKey[0])] = aItKey.length &gt; 1 ? unescape(aItKey[1]) : "";
+  }
 }
 
 // alert(oGetVars.yourVar);
 </pre>
 <p>…the same thing obtained by an anonymous constructor – useful for a global variable declaration:</p>
 <pre class="brush: js">var oGetVars = new (function (sSearch) {
-  if (sSearch.length &gt; 1) {
-    for (var aItKey, nKeyId = 0, aCouples = sSearch.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
-      aItKey = aCouples[nKeyId].split("=");
-      this[unescape(aItKey[0])] = aItKey.length &gt; 1 ? unescape(aItKey[1]) : "";
-    }
-  }
+  if (sSearch.length &gt; 1) {
+    for (var aItKey, nKeyId = 0, aCouples = sSearch.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
+      aItKey = aCouples[nKeyId].split("=");
+      this[unescape(aItKey[0])] = aItKey.length &gt; 1 ? unescape(aItKey[1]) : "";
+    }
+  }
 })(window.location.search);
 
 // alert(oGetVars.yourVar);
@@ -185,38 +185,38 @@ if (window.location.search.length &gt; 1) {
 <pre class="brush: js">var oGetVars = {};
 
 function buildValue(sValue) {
-  if (/^\s*$/.test(sValue)) { return null; }
-  if (/^(true|false)$/i.test(sValue)) { return sValue.toLowerCase() === "true"; }
-  if (isFinite(sValue)) { return parseFloat(sValue); }
-  if (isFinite(Date.parse(sValue))) { return new Date(sValue); }
-  return sValue;
+  if (/^\s*$/.test(sValue)) { return null; }
+  if (/^(true|false)$/i.test(sValue)) { return sValue.toLowerCase() === "true"; }
+  if (isFinite(sValue)) { return parseFloat(sValue); }
+  if (isFinite(Date.parse(sValue))) { return new Date(sValue); }
+  return sValue;
 }
 
 if (window.location.search.length &gt; 1) {
-  for (var aItKey, nKeyId = 0, aCouples = window.location.search.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
-    aItKey = aCouples[nKeyId].split("=");
-    oGetVars[unescape(aItKey[0])] = aItKey.length &gt; 1 ? buildValue(unescape(aItKey[1])) : null;
-  }
+  for (var aItKey, nKeyId = 0, aCouples = window.location.search.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
+    aItKey = aCouples[nKeyId].split("=");
+    oGetVars[unescape(aItKey[0])] = aItKey.length &gt; 1 ? buildValue(unescape(aItKey[1])) : null;
+  }
 }
 
 // alert(oGetVars.yourVar);
 </pre>
 <p>…the same thing obtained by an anonymous constructor – useful for a global variable declaration:</p>
 <pre class="brush: js">var oGetVars = new (function (sSearch) {
-  var rNull = /^\s*$/, rBool = /^(true|false)$/i;
-  function buildValue(sValue) {
-    if (rNull.test(sValue)) { return null; }
-    if (rBool.test(sValue)) { return sValue.toLowerCase() === "true"; }
-    if (isFinite(sValue)) { return parseFloat(sValue); }
-    if (isFinite(Date.parse(sValue))) { return new Date(sValue); }
-    return sValue;
-  }
-  if (sSearch.length &gt; 1) {
-    for (var aItKey, nKeyId = 0, aCouples = sSearch.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
-      aItKey = aCouples[nKeyId].split("=");
-      this[unescape(aItKey[0])] = aItKey.length &gt; 1 ? buildValue(unescape(aItKey[1])) : null;
-    }
-  }
+  var rNull = /^\s*$/, rBool = /^(true|false)$/i;
+  function buildValue(sValue) {
+    if (rNull.test(sValue)) { return null; }
+    if (rBool.test(sValue)) { return sValue.toLowerCase() === "true"; }
+    if (isFinite(sValue)) { return parseFloat(sValue); }
+    if (isFinite(Date.parse(sValue))) { return new Date(sValue); }
+    return sValue;
+  }
+  if (sSearch.length &gt; 1) {
+    for (var aItKey, nKeyId = 0, aCouples = sSearch.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
+      aItKey = aCouples[nKeyId].split("=");
+      this[unescape(aItKey[0])] = aItKey.length &gt; 1 ? buildValue(unescape(aItKey[1])) : null;
+    }
+  }
 })(window.location.search);
 
 // alert(oGetVars.yourVar);
@@ -229,23 +229,23 @@ if (window.location.search.length &gt; 1) {
 &lt;title&gt;MDN Example&lt;/title&gt;
 &lt;script type="text/javascript"&gt;
 function showNode (oNode) {
-  var nLeft = 0, nTop = 0;
-  for (var oItNode = oNode; oItNode; nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent);
-  document.documentElement.scrollTop = nTop;
-  document.documentElement.scrollLeft = nLeft;
+  var nLeft = 0, nTop = 0;
+  for (var oItNode = oNode; oItNode; nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent);
+  document.documentElement.scrollTop = nTop;
+  document.documentElement.scrollLeft = nLeft;
 }
 
 function showBookmark (sBookmark, bUseHash) {
-  if (arguments.length === 1 || bUseHash) { window.location.hash = sBookmark; return; }
-  var oBookmark = document.querySelector(sBookmark);
-  if (oBookmark) { showNode(oBookmark); }
+  if (arguments.length === 1 || bUseHash) { window.location.hash = sBookmark; return; }
+  var oBookmark = document.querySelector(sBookmark);
+  if (oBookmark) { showNode(oBookmark); }
 }
 &lt;/script&gt;
 &lt;style type="text/css"&gt;
 span.intLink {
-    cursor: pointer;
-    color: #0000ff;
-    text-decoration: underline;
+    cursor: pointer;
+    color: #0000ff;
+    text-decoration: underline;
 }
 &lt;/style&gt;
 &lt;/head&gt;
@@ -281,43 +281,43 @@ span.intLink {
  <strong>Note:</strong> The function <code>showNode</code> is also an example of the use of the <code><a href="/en/JavaScript/Reference/Statements/for">for</a></code> cycle without a <code>statement</code> section. In this case <strong>a semicolon is always put immediately after the declaration of the cycle</strong>.</div>
 <p>…the same thing but with a dynamic page scroll:</p>
 <pre class="brush: js">var showBookmark = (function () {
-  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
-       /*
-       * nDuration: the duration in milliseconds of each frame
-       * nFrames: number of frames for each scroll
-       */
-       nDuration = 200, nFrames = 10;
+  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
+       /*
+       * nDuration: the duration in milliseconds of each frame
+       * nFrames: number of frames for each scroll
+       */
+       nDuration = 200, nFrames = 10;
 
-  function _next () {
-    if (_itFrame &gt; nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }
-    _isBot = true;
-    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
-    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / nFrames);
-    if (_useHash &amp;&amp; _itFrame === nFrames) { location.hash = _bookMark; }
-    _itFrame++;
-  }
+  function _next () {
+    if (_itFrame &gt; nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }
+    _isBot = true;
+    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
+    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / nFrames);
+    if (_useHash &amp;&amp; _itFrame === nFrames) { location.hash = _bookMark; }
+    _itFrame++;
+  }
 
-  function _chkOwner () {
-    if (_isBot) { _isBot = false; return; }
-    if (_scrollId &gt; -1) { clearInterval(_scrollId); _scrollId = -1; }
-  }
+  function _chkOwner () {
+    if (_isBot) { _isBot = false; return; }
+    if (_scrollId &gt; -1) { clearInterval(_scrollId); _scrollId = -1; }
+  }
 
-  if (window.addEventListener) { window.addEventListener("scroll", _chkOwner, false); }
-  else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
+  if (window.addEventListener) { window.addEventListener("scroll", _chkOwner, false); }
+  else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
 
-  return function (sBookmark, bUseHash) {
-    _scrollY = document.documentElement.scrollTop;
-    _scrollX = document.documentElement.scrollLeft;
-    _bookMark = sBookmark;
-    _useHash = arguments.length === 1 || bUseHash;
-    for (
-      var nLeft = 0, nTop = 0, oNode = document.querySelector(sBookmark);
-      oNode;
-      nLeft += oNode.offsetLeft, nTop += oNode.offsetTop, oNode = oNode.offsetParent
-    );
-    _nodeX = nLeft, _nodeY = nTop, _itFrame = 1;
-    if (_scrollId === -1) { _scrollId = setInterval(_next, Math.round(nDuration / nFrames)); }
-  };
+  return function (sBookmark, bUseHash) {
+    _scrollY = document.documentElement.scrollTop;
+    _scrollX = document.documentElement.scrollLeft;
+    _bookMark = sBookmark;
+    _useHash = arguments.length === 1 || bUseHash;
+    for (
+      var nLeft = 0, nTop = 0, oNode = document.querySelector(sBookmark);
+      oNode;
+      nLeft += oNode.offsetLeft, nTop += oNode.offsetTop, oNode = oNode.offsetParent
+    );
+    _nodeX = nLeft, _nodeY = nTop, _itFrame = 1;
+    if (_scrollId === -1) { _scrollId = setInterval(_next, Math.round(nDuration / nFrames)); }
+  };
 })();
 </pre>
 <h3 id="See_also">See also</h3>

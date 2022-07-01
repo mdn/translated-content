@@ -21,10 +21,10 @@ translation_of: >-
 
 <div>我們被賦予做出一個React原型app的任務--這個app將允許使用者新增、編輯、刪除任務；且可以標記任務完成而不被刪除。</div>
 
-<div>文章將會與您一起完成一個基本 <code>App</code> component 的結構與畫面，以便稍後與其他 component 互動。</div>
+<div>文章將會與您一起完成一個基本 <code>App</code> component 的結構與畫面，以便稍後與其他 component 互動。</div>
 
 <div class="blockIndicator note">
-<p><strong>小提示：如果您需要檢查自己的程式碼與範例之間的差異，可以連到</strong> <a href="https://github.com/mdn/todo-react">todo-react repository</a>，這裡有我們完整的程式碼。 Todo list 作品示範：<a href="https://mdn.github.io/todo-react-build/">https://mdn.github.io/todo-react-build/</a>。</p>
+<p><strong>小提示：如果您需要檢查自己的程式碼與範例之間的差異，可以連到</strong> <a href="https://github.com/mdn/todo-react">todo-react repository</a>，這裡有我們完整的程式碼。 Todo list 作品示範：<a href="https://mdn.github.io/todo-react-build/">https://mdn.github.io/todo-react-build/</a>。</p>
 </div>
 
 <table class="learn-box standard-table">
@@ -32,7 +32,7 @@ translation_of: >-
   <tr>
    <th scope="row">預備知識：</th>
    <td>
-    <p>知道 <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>與<a href="/en-US/docs/Learn/JavaScript">JavaScript</a>的核心語法、操作基本終端機指令 <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
+    <p>知道 <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>與<a href="/en-US/docs/Learn/JavaScript">JavaScript</a>的核心語法、操作基本終端機指令 <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
    </td>
   </tr>
   <tr>
@@ -60,11 +60,11 @@ translation_of: >-
 
 <h2 id="專案開始前，先清理一下">專案開始前，先清理一下</h2>
 
-<p>終端機指令 <code>create-react-app</code> 會產生一些我們這個專案用不到的檔案，讓我們來清理一下。</p>
+<p>終端機指令 <code>create-react-app</code> 會產生一些我們這個專案用不到的檔案，讓我們來清理一下。</p>
 
 <ul>
  <li>我們不需要個別component的樣式表，所以首先請刪除<code>App.js</code>檔案上方的<code>import './App.css'</code></li>
- <li>我們也不需使用 <code>logo.svg</code>，請一並刪除這項import</li>
+ <li>我們也不需使用 <code>logo.svg</code>，請一並刪除這項import</li>
 </ul>
 
 <p>接著，請複製貼上以下終端機指令，以刪除專案中不需要的檔案；刪除前請確認您在專案的根目錄中！</p>
@@ -85,11 +85,11 @@ cd ..</pre>
 
 <h2 id="專案起點">專案起點</h2>
 
-<p>作為專案起始點 starting point ，我們會提供兩件事：一個新的 <code>App()</code> function 來取代原生預設，以及一些 CSS 美化我們的app。</p>
+<p>作為專案起始點 starting point ，我們會提供兩件事：一個新的 <code>App()</code> function 來取代原生預設，以及一些 CSS 美化我們的app。</p>
 
 <h3 id="The_JSX">The JSX</h3>
 
-<p>複製以下片段貼到 <code>App.js</code> 中取代原先的 <code>App()</code> function:</p>
+<p>複製以下片段貼到 <code>App.js</code> 中取代原先的 <code>App()</code> function:</p>
 
 <pre class="brush: js notranslate">function App(props) {
   return (
@@ -191,7 +191,7 @@ cd ..</pre>
 }
 </pre>
 
-<p>再來，請打開 <code>public/index.html</code> 改掉 <code><a href="/en-US/docs/Web/HTML/Element/title">&lt;title&gt;</a></code> 元素中的文字，將文字改為 <code>TodoMatic</code>，這樣才能對應到上述 <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> 的文字。</p>
+<p>再來，請打開 <code>public/index.html</code> 改掉 <code><a href="/en-US/docs/Web/HTML/Element/title">&lt;title&gt;</a></code> 元素中的文字，將文字改為 <code>TodoMatic</code>，這樣才能對應到上述 <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> 的文字。</p>
 
 <pre class="notranslate">&lt;title&gt;TodoMatic&lt;/title&gt;</pre>
 
@@ -204,13 +204,13 @@ cd ..</pre>
 <p>在此之前，回頭複習一下我們的JSX，以及它與用戶故事的對應關係：</p>
 
 <ul>
- <li>我們有一個 <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> 元素，其中包含可以寫入新任務的 <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> 以及一個button來送出表單。</li>
+ <li>我們有一個 <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> 元素，其中包含可以寫入新任務的 <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> 以及一個button來送出表單。</li>
  <li>我們還有一個<code>&lt;button&gt;</code>陣列，用以過濾不同任務狀態(全部、待辦、完成)。</li>
  <li>下方接著一個標題告訴我們擁有多少任務</li>
- <li>我們有3個預設任務寫在無序清單<code>&lt;ul&gt;</code>元素中，其中包含的各項單一任務都是使用<code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code>。 並且在各項任務下方增加 <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="checkbox"&gt;</a></code>來勾選此任務是否完成，以及編輯、刪除按鈕<code>&lt;button&gt;</code>。</li>
+ <li>我們有3個預設任務寫在無序清單<code>&lt;ul&gt;</code>元素中，其中包含的各項單一任務都是使用<code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code>。 並且在各項任務下方增加 <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="checkbox"&gt;</a></code>來勾選此任務是否完成，以及編輯、刪除按鈕<code>&lt;button&gt;</code>。</li>
 </ul>
 
-<p>這個表單<code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> 允許我們新增、管理任務， <code>&lt;button&gt;</code>幫助我們篩選任務狀態，<code>&lt;ul&gt;&lt;li&gt;</code> 則負責展示任務清單。接著由於缺乏編輯任務的UI，讓我們開始來處理畫面美化的部分吧。</p>
+<p>這個表單<code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> 允許我們新增、管理任務， <code>&lt;button&gt;</code>幫助我們篩選任務狀態，<code>&lt;ul&gt;&lt;li&gt;</code> 則負責展示任務清單。接著由於缺乏編輯任務的UI，讓我們開始來處理畫面美化的部分吧。</p>
 
 <h3 id="Accessibility_features_無障礙設定">Accessibility features 無障礙設定</h3>
 
@@ -222,11 +222,11 @@ cd ..</pre>
   &lt;span className="visually-hidden"&gt; tasks&lt;/span&gt;
 &lt;/button&gt;</pre>
 
-<p><code>aria-pressed</code> 元素可以跟輔助工具對話(像是螢幕閱讀器)，這個button 總是處於： <code>pressed</code> 或 <code>unpressed</code>其中之一的狀態。可以想像它們如同 <code>on</code> 與 <code>off</code>。設定 <code>true</code> 代表這個button預設開啟<code>pressed</code>。</p>
+<p><code>aria-pressed</code> 元素可以跟輔助工具對話(像是螢幕閱讀器)，這個button 總是處於： <code>pressed</code> 或 <code>unpressed</code>其中之一的狀態。可以想像它們如同 <code>on</code> 與 <code>off</code>。設定 <code>true</code> 代表這個button預設開啟<code>pressed</code>。</p>
 
-<p>class <code>visually-hidden</code> 在我們加入CSS前還不會有作用；當我們加入樣式後，這個class會對一般使用者隱藏，因為視覺使用者不需要這些文字；而仰賴閱讀器的使用者則可以聽到更多輔助文字來提高的讀取理解與體驗。</p>
+<p>class <code>visually-hidden</code> 在我們加入CSS前還不會有作用；當我們加入樣式後，這個class會對一般使用者隱藏，因為視覺使用者不需要這些文字；而仰賴閱讀器的使用者則可以聽到更多輔助文字來提高的讀取理解與體驗。</p>
 
-<p>您還可以發現 <code><a href="/en-US/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code> 元素中：</p>
+<p>您還可以發現 <code><a href="/en-US/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code> 元素中：</p>
 
 <pre class="brush: html notranslate">&lt;ul
   role="list"
@@ -234,7 +234,7 @@ cd ..</pre>
   aria-labelledby="list-heading"
 &gt;</pre>
 
-<p><code>role</code> 屬性會向科技輔具說明各種元素分別代表什麼用途。雖然瀏覽器預設<code>&lt;ul&gt;</code> 為清單，但是由於樣式表會破壞這個功能，因此需要使用<code>role</code> 屬性保留 "list" 清單這個意思。如果您想了解更多<code>role</code> 屬性的重要性，請參照<a href="https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html">Scott O'Hara’s article, “Fixing Lists”</a>。</p>
+<p><code>role</code> 屬性會向科技輔具說明各種元素分別代表什麼用途。雖然瀏覽器預設<code>&lt;ul&gt;</code> 為清單，但是由於樣式表會破壞這個功能，因此需要使用<code>role</code> 屬性保留 "list" 清單這個意思。如果您想了解更多<code>role</code> 屬性的重要性，請參照<a href="https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html">Scott O'Hara’s article, “Fixing Lists”</a>。</p>
 
 <p><code>aria-labelledby</code> 屬性告訴科技輔具，我們將清單標題list heading 設為label，以描述下方的程式碼片段；將這些關聯設定好會幫助使用科技輔具的朋友更好的理解前因後果。</p>
 
@@ -245,20 +245,20 @@ cd ..</pre>
   Eat
 &lt;/label&gt;</pre>
 
-<p><code>&lt;input/ &gt;</code>中的 <code>defaultChecked</code> 屬性會讓 React 預設勾選某項目。假如我們同一般寫HTML一樣使用 <code>checked</code>，React 會紀錄一些：handling events on the checkbox警告到瀏覽器console中，而這些是我們想避免的。不過先別擔心，我們在稍後討論事件的章節會教大家解決這個問題。</p>
+<p><code>&lt;input/ &gt;</code>中的 <code>defaultChecked</code> 屬性會讓 React 預設勾選某項目。假如我們同一般寫HTML一樣使用 <code>checked</code>，React 會紀錄一些：handling events on the checkbox警告到瀏覽器console中，而這些是我們想避免的。不過先別擔心，我們在稍後討論事件的章節會教大家解決這個問題。</p>
 
-<p><code>htmlFor</code> 屬性對應HTML中的 <code>for</code> 屬性 ，我們不能在JSX中使用<code>for</code> 屬性因為 <code>for</code> 是保留字，因此React 使用 <code>htmlFor</code> 取代 <code>for</code>。</p>
+<p><code>htmlFor</code> 屬性對應HTML中的 <code>for</code> 屬性 ，我們不能在JSX中使用<code>for</code> 屬性因為 <code>for</code> 是保留字，因此React 使用 <code>htmlFor</code> 取代 <code>for</code>。</p>
 
 <p>備註：</p>
 
 <ul>
- <li>在JSX屬性使用boolean值 ：<code>true</code> 與 <code>false</code>， 必須將之包在<code>{ }</code>中，如果只寫 <code>defaultChecked="true"</code>，這個值將是 <code>"true"</code> — 一個字串 string literal。 請記得 — 這是JavaScript，不是HTML!</li>
- <li><code>aria-pressed</code> 屬性在我們稍早寫的程式碼片段中有一個 <code>"true"</code> 的值，因為<code>aria-pressed</code> 不像<code>checked</code>真的是一個布林值屬性。</li>
+ <li>在JSX屬性使用boolean值 ：<code>true</code> 與 <code>false</code>， 必須將之包在<code>{ }</code>中，如果只寫 <code>defaultChecked="true"</code>，這個值將是 <code>"true"</code> — 一個字串 string literal。 請記得 — 這是JavaScript，不是HTML!</li>
+ <li><code>aria-pressed</code> 屬性在我們稍早寫的程式碼片段中有一個 <code>"true"</code> 的值，因為<code>aria-pressed</code> 不像<code>checked</code>真的是一個布林值屬性。</li>
 </ul>
 
 <h3 id="Implementing_our_styles_實作CSS美化">Implementing our styles 實作CSS美化</h3>
 
-<p>將以下的CSS貼進 <code>src/index.css</code> 取代原本的預設內容：</p>
+<p>將以下的CSS貼進 <code>src/index.css</code> 取代原本的預設內容：</p>
 
 <pre class="brush: css notranslate">/* RESETS */
 *,

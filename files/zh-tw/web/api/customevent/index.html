@@ -52,9 +52,9 @@ translation_of: Web/API/CustomEvent
 
 <h2 id="Firing_from_privileged_code_to_non-privileged_code">Firing from privileged code to non-privileged code</h2>
 
-<p>當要從 privileged code （像是插件）到非 privileged code （例如網頁）執行 CustomEvent ，你必須要考慮這之間的安全性。Firefox 和其他 Gecko 應用會對此有所限制。雖然這可以自動防止安全漏洞發生，但也可能導致您的程式碼沒辦法正常執行。</p>
+<p>當要從 privileged code （像是插件）到非 privileged code （例如網頁）執行 CustomEvent ，你必須要考慮這之間的安全性。Firefox 和其他 Gecko 應用會對此有所限制。雖然這可以自動防止安全漏洞發生，但也可能導致您的程式碼沒辦法正常執行。</p>
 
-<p>When creating a CustomEvent object, you must create the object from the same <a href="/en-US/docs/XUL/window">window</a> as you're going to fire against. The <code>detail</code> attribute of your CustomEvent will be subject to the same restrictions. String and Array values will be readable by the content without restrictions, but custom Objects will not. If using a custom Object, you will need to define the attributes of that object that are readable from the content script using <a href="/en-US/docs/">Components.utils.cloneInto()</a>.</p>
+<p>When creating a CustomEvent object, you must create the object from the same <a href="/en-US/docs/XUL/window">window</a> as you're going to fire against. The <code>detail</code> attribute of your CustomEvent will be subject to the same restrictions. String and Array values will be readable by the content without restrictions, but custom Objects will not. If using a custom Object, you will need to define the attributes of that object that are readable from the content script using <a href="/en-US/docs/">Components.utils.cloneInto()</a>.</p>
 
 <pre class="brush: js">// doc is a reference to the content document
 function dispatchCustomEvent(doc) {

@@ -5,7 +5,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Create_book_form
 ---
 <p><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_book_form">Edit</a>此章節展示如何定義頁面/表單以創建<code>Book</code>對象。這比相同的作者<code>Author</code>或種類<code>Genre</code>頁面稍微複雜一點，因為我們需要在我們的書本表單中，獲取並顯示可用的作者和種類記錄。</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="導入驗證和清理方法">導入驗證和清理方法</h2>
 
@@ -40,7 +40,7 @@ exports.book_create_get = function(req, res, next) {
 
 <h2 id="Controller—post_route">Controller—post route</h2>
 
-<p>Find the exported <code>book_create_post()</code> controller method and replace it with the following code.</p>
+<p>Find the exported <code>book_create_post()</code> controller method and replace it with the following code.</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">// Handle book create on POST.
 exports.book_create_post = [
@@ -114,13 +114,13 @@ exports.book_create_post = [
     }
 ];</code></pre>
 
-<p>The structure and behaviour of this code is almost exactly the same as for creating a <code>Genre</code> or <code>Author</code> object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid, we then save the new <code>Book</code> record and redirect the user to the book detail page.</p>
+<p>The structure and behaviour of this code is almost exactly the same as for creating a <code>Genre</code> or <code>Author</code> object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid, we then save the new <code>Book</code> record and redirect the user to the book detail page.</p>
 
 <p>The first main difference with respect to the other form handling code is that we use a wildcard to trim and escape all fields in one go (rather than sanitising them individually):</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">sanitizeBody('*').trim().escape(),</code></pre>
 
-<p>The next main difference with respect to the other form handling code is how we sanitize the genre information. The form returns an array of <code>Genre</code> items (while for other fields it returns a string). In order to validate the information we first convert the request to an array (required for the next step).</p>
+<p>The next main difference with respect to the other form handling code is how we sanitize the genre information. The form returns an array of <code>Genre</code> items (while for other fields it returns a string). In order to validate the information we first convert the request to an array (required for the next step).</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">// Convert the genre to an array.
 (req, res, next) =&gt; {
@@ -133,7 +133,7 @@ exports.book_create_post = [
     next();
 },</code></pre>
 
-<p>We then use a wildcard (<code>*</code>) in the sanitiser to individually validate each of the genre array entries. The code below shows how - this translates to "sanitise every item below key <code>genre</code>".</p>
+<p>We then use a wildcard (<code>*</code>) in the sanitiser to individually validate each of the genre array entries. The code below shows how - this translates to "sanitise every item below key <code>genre</code>".</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">sanitizeBody('genre.*').trim().escape(),</code></pre>
 
@@ -149,7 +149,7 @@ for (let i = 0; i &lt; results.genres.length; i++) {
 
 <h2 id="View">View</h2>
 
-<p>Create <strong>/views/book_form.pug</strong> and copy in the text below.</p>
+<p>Create <strong>/views/book_form.pug</strong> and copy in the text below.</p>
 
 <pre class="line-numbers  language-html"><code class="language-html">extends layout
 
@@ -196,7 +196,7 @@ block content
  <li>The set of genres are displayed as checkboxes, using the <code>checked</code> value we set in the controller to determine whether or not the box should be selected.</li>
  <li>The set of authors are displayed as a single-selection drop-down list. In this case we determine what author to display by comparing the id of the current author option with the value previously entered by the user (passed in as the <code>book</code> variable). This is highlighted above!
   <div class="note">
-  <p><strong>Note:</strong> If there is an error in the submitted form, then, when the form is to be re-rendered, the new book's author is identified only with a string (the value of the selected option in the list of authors). By contrast, the existing books' authors have <code>_id</code> properties that are not strings. So to compare the new with the existing we must cast each existing book's author's <code>_id</code> to a string, as shown above.</p>
+  <p><strong>Note:</strong> If there is an error in the submitted form, then, when the form is to be re-rendered, the new book's author is identified only with a string (the value of the selected option in the list of authors). By contrast, the existing books' authors have <code>_id</code> properties that are not strings. So to compare the new with the existing we must cast each existing book's author's <code>_id</code> to a string, as shown above.</p>
   </div>
  </li>
 </ul>

@@ -43,9 +43,9 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 <p>表單在HTML中，定義為 <code>&lt;form&gt;...&lt;/form&gt;</code>標記內的元素集合，包含至少一個<code>type="submit"</code>的 <code>input</code>輸入元素。</p>
 
 <pre class="brush: html">&lt;form action="/team_name_url/" method="post"&gt;
-    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
-    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
-    &lt;input type="submit" value="OK"&gt;
+    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
+    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
+    &lt;input type="submit" value="OK"&gt;
 &lt;/form&gt;</pre>
 
 <p>雖然這裡，我們只包含一個（文本）字段，用於輸入團隊名稱，但表單可能包含任意數量的其他輸入元素，及其相關標籤。字段的 <code>type</code> 屬性，定義將顯示哪種窗口小部件。該字段的名稱<code>name</code>和<code>id</code> ，用於標識JavaScript/CSS/HTML 中的字段，而 <code>value</code>定義字段首次顯示時的初始值。匹配團隊標籤使用 <code style="font-style: normal; font-weight: normal;">label </code>標籤，指定（請參閱上面的“輸入名稱” "Enter name"），其中 <code style="font-style: normal; font-weight: normal;">for</code> 字段，包含 <code style="font-style: normal; font-weight: normal;">input </code>相關輸入的 <code style="font-style: normal; font-weight: normal;">id</code>值。</p>
@@ -70,7 +70,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 <p><img src="web_server_form_handling.png"></p>
 
-<p>如上圖所示，構成處理代碼所需要做的主要是：  </p>
+<p>如上圖所示，構成處理代碼所需要做的主要是：  </p>
 
 <ol>
  <li>在用戶第一次請求時顯示默認表單。
@@ -112,9 +112,9 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 <div class="note">
 <p><strong>注意:</strong> Github上的 <a href="https://github.com/ctavan/express-validator#express-validator">express-validator</a> 指南，提供了API的良好概述。我們建議您閱讀該內容，以了解其所有功能（包括創建自定義驗證程序）。下面我們只介紹一個對 LocalLibrary 有用的子集。</p>
 
-<p> </p>
+<p> </p>
 
-<p> </p>
+<p> </p>
 </div>
 
 <p>要在我們的控制器中使用驗證器，我們必須從 'e<strong>xpress-validator/check</strong>'和'<strong>express-validator/filter</strong>'模塊中，導入我們想要使用的函數，如下所示：</p>
@@ -149,16 +149,16 @@ sanitizeBody('date').toDate(),</pre>
  </li>
  <li><code><a href="https://github.com/ctavan/express-validator#validationresultreq">validationResult(req)</a></code>: 運行驗證，以 <code>validation </code>驗證結果對象的形式，提供錯誤。這是在單獨的回調中調用的，如下所示：
   <pre class="brush: js">(req, res, next) =&gt; {
-    // Extract the validation errors from a request.
-    const errors = validationResult(req);
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
 
-    if (!errors.isEmpty()) {
-        // There are errors. Render form again with sanitized values/errors messages.
-        // Error messages can be returned in an array using `errors.array()`.
-        }
-    else {
-        // Data from form is valid.
-    }
+    if (!errors.isEmpty()) {
+        // There are errors. Render form again with sanitized values/errors messages.
+        // Error messages can be returned in an array using `errors.array()`.
+        }
+    else {
+        // Data from form is valid.
+    }
 }</pre>
   我們使用驗證結果的<code>isEmpty()</code>方法，來檢查是否存在錯誤，並使用其 <code>array()</code> 方法，來獲取錯誤消息集合。有關更多信息，請參閱驗證結果的 <a href="https://github.com/ctavan/express-validator#validation-result-api">Validation Result API</a>。</li>
 </ul>
@@ -173,7 +173,7 @@ sanitizeBody('date').toDate(),</pre>
 
 <ul>
  <li>在其相關對象尚不存在時，創建對象（例如，尚未定義作者對象的書）。<br>
-     </li>
+     </li>
  <li>刪除另一個對象仍在使用的對象（例如，刪除仍有書本 <code>Book </code>使用的種類 <code>Genre</code>）。</li>
 </ul>
 
@@ -271,4 +271,4 @@ router.post('/genre/create', genre_controller.genre_create_post);
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

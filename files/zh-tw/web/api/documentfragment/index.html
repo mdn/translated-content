@@ -5,13 +5,13 @@ translation_of: Web/API/DocumentFragment
 ---
 <p>{{ ApiRef("DOM") }}</p>
 
-<p><strong><code>DocumentFragment</code></strong> 介面表示了一個沒有父節點的最小化文件物件。<code>DocumentFragment</code> 被當作一種輕量化的 {{domxref("Document")}}，用如同標準文件一般的方式保存片段的文件結構（由節點組成）。關鍵的區別在於文件片段不是真實的 DOM 結構，文件片段的變動並不會影響目前的網頁文件，也不會導致回流（{{Glossary("reflow")}}）或引起任何影響效能的情況發生。</p>
+<p><strong><code>DocumentFragment</code></strong> 介面表示了一個沒有父節點的最小化文件物件。<code>DocumentFragment</code> 被當作一種輕量化的 {{domxref("Document")}}，用如同標準文件一般的方式保存片段的文件結構（由節點組成）。關鍵的區別在於文件片段不是真實的 DOM 結構，文件片段的變動並不會影響目前的網頁文件，也不會導致回流（{{Glossary("reflow")}}）或引起任何影響效能的情況發生。</p>
 
-<p>一般的用法是建立一個 <code>DocumentFragment</code> 物件，在此物件中組織一個 DOM 的子樹。再使用 {{domxref("Node")}} 介面定義的方法，如 {{domxref("Node.appendChild", "appendChild()")}} 或 {{domxref("Node.insertBefore", "insertBefore()")}} 將這個文件片段加入或插入目前頁面的 DOM 當中。執行這個將文件片段中的節點置入 DOM 的動作之後，會留下一個空的 <code>DocumentFragment</code> 物件（只會插入物件中的節點，<code>DocumentFragment</code> 物件本身不會被插入）。由於文件片段中的所有節點是一次性的被插入目前頁面文件當中，故回流及頁面渲染只會被觸發一次，所以可用插入 <code>DocumentFragment</code> 物件的方式取代傳統分別插入多個節點至 DOM（將節點一個一個分次進行插入）的操作方式。</p>
+<p>一般的用法是建立一個 <code>DocumentFragment</code> 物件，在此物件中組織一個 DOM 的子樹。再使用 {{domxref("Node")}} 介面定義的方法，如 {{domxref("Node.appendChild", "appendChild()")}} 或 {{domxref("Node.insertBefore", "insertBefore()")}} 將這個文件片段加入或插入目前頁面的 DOM 當中。執行這個將文件片段中的節點置入 DOM 的動作之後，會留下一個空的 <code>DocumentFragment</code> 物件（只會插入物件中的節點，<code>DocumentFragment</code> 物件本身不會被插入）。由於文件片段中的所有節點是一次性的被插入目前頁面文件當中，故回流及頁面渲染只會被觸發一次，所以可用插入 <code>DocumentFragment</code> 物件的方式取代傳統分別插入多個節點至 DOM（將節點一個一個分次進行插入）的操作方式。</p>
 
 <p>此介面也適合與 Web components 搭配使用：{{HTMLElement("template")}} 元素在其 {{domxref("HTMLTemplateElement.content")}} 屬性中便包含了一個 <code>DocumentFragment</code> 物件。</p>
 
-<p>可使用 {{domxref("document.createDocumentFragment()")}} 方法或 <code>DocumentFragment</code> 的建構式來建立一個空的 <code>DocumentFragment</code> 物件。</p>
+<p>可使用 {{domxref("document.createDocumentFragment()")}} 方法或 <code>DocumentFragment</code> 的建構式來建立一個空的 <code>DocumentFragment</code> 物件。</p>
 
 <h2 id="Specification">屬性</h2>
 
