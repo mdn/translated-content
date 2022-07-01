@@ -6,18 +6,14 @@ tags:
   - 术语表
 translation_of: Glossary/BiDi
 ---
-<p><strong>BiDi</strong> (BiDirectional) 是指一篇文档中同时包含了从左至右和从右至左阅读的文本。即使在同一段落中同时出现这两种类型，也必须保证每种语言文本都以正确的方式呈现。</p>
+**BiDi** (BiDirectional) 是指一篇文档中同时包含了从左至右和从右至左阅读的文本。即使在同一段落中同时出现这两种类型，也必须保证每种语言文本都以正确的方式呈现。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="常规知识">常规知识</h3>
+### 常规知识
 
-<ul>
- <li>维基百科的{{Interwiki("wikipedia", "Bi-directional text")}}</li>
-</ul>
+- 维基百科的{{Interwiki("wikipedia", "Bi-directional text")}}
 
-<h3 id="技术参考">技术参考</h3>
+### 技术参考
 
-<ul>
- <li><a href="/zh-CN/Apps/Build/Localization/Developing_Bidi_Apps">开发 Bidi 应用</a></li>
-</ul>
+- [开发 Bidi 应用](/zh-CN/Apps/Build/Localization/Developing_Bidi_Apps)

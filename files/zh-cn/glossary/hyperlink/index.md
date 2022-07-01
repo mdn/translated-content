@@ -7,27 +7,21 @@ tags:
   - 编程
 translation_of: Glossary/Hyperlink
 ---
-<p>超链接将网页或其他数据连接起来。在 HTML 中，{{HTMLElement("a")}} 标签定义了网页中的某处（例如一段文本或一张图片）到其他网页（也可能是本网页）的另一处的超链接。</p>
+超链接将网页或其他数据连接起来。在 HTML 中，{{HTMLElement("a")}} 标签定义了网页中的某处（例如一段文本或一张图片）到其他网页（也可能是本网页）的另一处的超链接。
 
-<h2 id="深入了解">深入了解</h2>
+## 深入了解
 
-<h3 id="基础知识">基础知识</h3>
+### 基础知识
 
-<ul>
- <li>{{interwiki("wikipedia", "Hyperlink", "Hyperlink")}} on Wikipedia</li>
- <li>The <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Hyperlink</a> guide on MDN</li>
-</ul>
+- {{interwiki("wikipedia", "Hyperlink", "Hyperlink")}} on Wikipedia
+- The [Hyperlink](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) guide on MDN
 
-<h3 id="技术资讯">技术资讯</h3>
+### 技术资讯
 
-<ul>
- <li><a href="https://www.w3.org/TR/1999/REC-html401-19991224/struct/links.html">Links in HTML Documents - W3C</a></li>
- <li><a href="https://w3c.github.io/html-reference/a.html">HTML5 a - hyperlink - W3C</a></li>
-</ul>
+- [Links in HTML Documents - W3C](https://www.w3.org/TR/1999/REC-html401-19991224/struct/links.html)
+- [HTML5 a - hyperlink - W3C](https://w3c.github.io/html-reference/a.html)
 
-<h3 id="学习更多">学习更多</h3>
+### 学习更多
 
-<ul>
- <li><a href="/zh-CN/docs/Web/HTML/Element/a">MDN 上的 <code>&lt;a&gt;</code></a></li>
- <li><a href="/zh-CN/docs/Web/HTML/Element/link">MDN 上的 <code>&lt;link&gt;</code> </a></li>
-</ul>
+- [MDN 上的 `<a>`](/zh-CN/docs/Web/HTML/Element/a)
+- [MDN 上的 `<link>`](/zh-CN/docs/Web/HTML/Element/link)

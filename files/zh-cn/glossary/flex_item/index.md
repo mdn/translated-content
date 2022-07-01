@@ -3,26 +3,22 @@ title: Flex Item
 slug: Glossary/Flex_Item
 translation_of: Glossary/Flex_Item
 ---
-<p>{{glossary("Flex Container")}}(弹性容器) 的一级子元素 (设置<code>display: flex</code> 或 <code>display: inline-flex</code>的子元素) 将成为弹性元素。</p>
+{{glossary("Flex Container")}}(弹性容器) 的一级子元素 (设置`display: flex` 或 `display: inline-flex`的子元素) 将成为弹性元素。
 
-<p>弹性容器内的连续文本，也将成为弹性元素。</p>
+弹性容器内的连续文本，也将成为弹性元素。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="属性参考">属性参考</h3>
+### 属性参考
 
-<ul>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("flex-basis")}}</li>
- <li>{{cssxref("flex-grow")}}</li>
- <li>{{cssxref("flex-shrink")}}</li>
- <li>{{cssxref("order")}}</li>
-</ul>
+- {{cssxref("align-self")}}
+- {{cssxref("flex-basis")}}
+- {{cssxref("flex-grow")}}
+- {{cssxref("flex-shrink")}}
+- {{cssxref("order")}}
 
-<h3 id="延伸阅读">延伸阅读</h3>
+### 延伸阅读
 
-<ul>
- <li>CSS 弹性布局指南：<em><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS 弹性布局指南：<em><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Ordering flex items</a></em></li>
- <li>CSS 弹性布局指南：<em><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of flex items along the main axis</a></em></li>
-</ul>
+- CSS 弹性布局指南：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS 弹性布局指南：_[Ordering flex items](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
+- CSS 弹性布局指南：_[Controlling Ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_

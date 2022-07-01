@@ -8,8 +8,8 @@ tags:
   - TopicStub
 translation_of: Glossary/Node
 ---
-<p>术语 <strong>node</strong> 根据不同的上下文，可以是多种不同的意思。他可能是：</p>
+术语 **node** 根据不同的上下文，可以是多种不同的意思。他可能是：
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}
 
-<p>这个词的另一个含义，我们将在 {{Glossary("Node.js")}} 中讨论。</p>
+这个词的另一个含义，我们将在 {{Glossary("Node.js")}} 中讨论。

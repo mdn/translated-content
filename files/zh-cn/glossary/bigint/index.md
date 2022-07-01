@@ -6,21 +6,15 @@ tags:
   - JavaScript
 translation_of: Glossary/BigInt
 ---
-<p>在{{Glossary("JavaScript")}}中，<strong>BigInt </strong>是一种数字类型的数据，它可以表示任意精度格式的整数。而在其他编程语言中，可以存在不同的数字类型，例如：整数、浮点数、双精度数或大斐波数。</p>
+在{{Glossary("JavaScript")}}中，**BigInt** 是一种数字类型的数据，它可以表示任意精度格式的整数。而在其他编程语言中，可以存在不同的数字类型，例如：整数、浮点数、双精度数或大斐波数。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="知识点">知识点</h3>
+### 知识点
 
-<ul>
- <li>
-  <p>维基百科：{{Interwiki("wikipedia", "Data type#Numeric_types", "Numeric types")}} </p>
- </li>
-</ul>
+- 维基百科：{{Interwiki("wikipedia", "Data type#Numeric_types", "Numeric types")}}
 
-<h3 id="参阅">参阅</h3>
+### 参阅
 
-<ul>
- <li>JavaScript 数据结构：<a href="/zh-CN/docs/Web/JavaScript/Data_structures#BigInt_type">BigInt</a></li>
- <li>JavaScript 全局对象 {{jsxref("BigInt")}}</li>
-</ul>
+- JavaScript 数据结构：[BigInt](/zh-CN/docs/Web/JavaScript/Data_structures#BigInt_type)
+- JavaScript 全局对象 {{jsxref("BigInt")}}

@@ -6,27 +6,21 @@ tags:
   - HTML5 画布
 translation_of: Glossary/Canvas
 ---
-<p>{{Glossary("HTML")}} 的 <em>{{HTMLElement("canvas")}} </em>元素提供了一个空白绘图区域，可以使用 {{Glossary("API","APIs")}} （比如 Canvas 2D 或 {{Glossary("WebGL")}}）来绘制图形。</p>
+{{Glossary("HTML")}} 的 _{{HTMLElement("canvas")}}_ 元素提供了一个空白绘图区域，可以使用 {{Glossary("API","APIs")}} （比如 Canvas 2D 或 {{Glossary("WebGL")}}）来绘制图形。
 
-<h2 id="更多信息">更多信息</h2>
+## 更多信息
 
-<h3 id="常规信息">常规信息</h3>
+### 常规信息
 
-<ul>
- <li><a href="https://zh.wikipedia.org/wiki/Canvas_(HTML%E5%85%83%E7%B4%A0)">在维基百科上查看 &lt;canvas&gt; 的解释</a></li>
-</ul>
+- [在维基百科上查看 \<canvas> 的解释](<https://zh.wikipedia.org/wiki/Canvas_(HTML%E5%85%83%E7%B4%A0)>)
 
-<h3 id="学习资源">学习资源</h3>
+### 学习资源
 
-<ul>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial">查看 MDN 上的 canvas 教程</a></li>
-</ul>
+- [查看 MDN 上的 canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)
 
-<h3 id="技术信息">技术信息</h3>
+### 技术信息
 
-<ul>
- <li>MDN 上关于 HTML5 {{HTMLElement("canvas")}} 元素的信息</li>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API">MDN 上关于 Canvas 的常规信息</a></li>
- <li>画布 2D 绘图 API：{{domxref("CanvasRenderingContext2D")}}</li>
- <li><a href="https://www.w3.org/TR/2dcontext/">Canvas 2D API 规格</a></li>
-</ul>
+- MDN 上关于 HTML5 {{HTMLElement("canvas")}} 元素的信息
+- [MDN 上关于 Canvas 的常规信息](/zh-CN/docs/Web/API/Canvas_API)
+- 画布 2D 绘图 API：{{domxref("CanvasRenderingContext2D")}}
+- [Canvas 2D API 规格](https://www.w3.org/TR/2dcontext/)

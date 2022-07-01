@@ -10,39 +10,29 @@ tags:
   - i18n
 translation_of: Glossary/I18N
 ---
-<p>i18n（取自 "internationalization", 共 20 个字母）是让产品或服务更容易适应各种文化的最佳实践。</p>
+i18n（取自 "internationalization", 共 20 个字母）是让产品或服务更容易适应各种文化的最佳实践。
 
-<blockquote>
-<p><strong>国际化</strong>是指在设计和开发产品、应用或文档内容时，为不同文化、地区或语言的目标受众提供方便的本地化服务。（{{Glossary("W3C")}} 定义）</p>
-</blockquote>
+> **国际化**是指在设计和开发产品、应用或文档内容时，为不同文化、地区或语言的目标受众提供方便的本地化服务。（{{Glossary("W3C")}} 定义）
 
-<p>在其他方面，i18n 仍然需要许多支持</p>
+在其他方面，i18n 仍然需要许多支持
 
-<ul>
- <li>字符集（通常使用 <a href="https://searchcio-midmarket.techtarget.com/definition/Unicode">Unicode</a>）</li>
- <li>计量单位（货币、°C/°F、km/miles 等）</li>
- <li>时间和日期格式</li>
- <li>键盘布局</li>
- <li>文字书写顺序</li>
-</ul>
+- 字符集（通常使用 [Unicode](https://searchcio-midmarket.techtarget.com/definition/Unicode)）
+- 计量单位（货币、°C/°F、km/miles 等）
+- 时间和日期格式
+- 键盘布局
+- 文字书写顺序
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="基本知识">基本知识</h3>
+### 基本知识
 
-<ul>
- <li>{{interwiki("wikipedia", "Internationalization and localization", "i18n")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Internationalization and localization", "i18n")}} on Wikipedia
 
-<h3 id="技术参考">技术参考</h3>
+### 技术参考
 
-<ul>
- <li><a href="https://www.w3.org/International/questions/qa-i18n.en#Internationalization">i18n on W3C</a></li>
- <li><a href="https://www.gala-global.org/what-internationalization">i18n on gala-global.org</a></li>
-</ul>
+- [i18n on W3C](https://www.w3.org/International/questions/qa-i18n.en#Internationalization)
+- [i18n on gala-global.org](https://www.gala-global.org/what-internationalization)
 
-<h3 id="学习_i18n">学习 i18n</h3>
+### 学习 i18n
 
-<ul>
- <li><a href="http://www.i18nguy.com/">i18n material on i18nguy.com </a></li>
-</ul>
+- [i18n material on i18nguy.com](http://www.i18nguy.com/)

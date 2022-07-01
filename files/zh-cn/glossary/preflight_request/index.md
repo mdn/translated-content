@@ -3,32 +3,29 @@ title: Preflight request
 slug: Glossary/Preflight_request
 translation_of: Glossary/Preflight_request
 ---
-<p>一个 CORS 预检请求是用于检查服务器是否支持 {{Glossary("CORS")}} 即跨域资源共享。</p>
+一个 CORS 预检请求是用于检查服务器是否支持 {{Glossary("CORS")}} 即跨域资源共享。
 
-<p>它一般是用了以下几个 HTTP 请求首部的 {{HTTPMethod("OPTIONS")}} 请求：{{HTTPHeader("Access-Control-Request-Method")}} 和 {{HTTPHeader("Access-Control-Request-Headers")}}，以及一个 {{HTTPHeader("Origin")}} 首部。</p>
+它一般是用了以下几个 HTTP 请求首部的 {{HTTPMethod("OPTIONS")}} 请求：{{HTTPHeader("Access-Control-Request-Method")}} 和 {{HTTPHeader("Access-Control-Request-Headers")}}，以及一个 {{HTTPHeader("Origin")}} 首部。
 
-<p>当有必要的时候，浏览器会自动发出一个预检请求；所以在正常情况下，前端开发者不需要自己去发这样的请求。</p>
+当有必要的时候，浏览器会自动发出一个预检请求；所以在正常情况下，前端开发者不需要自己去发这样的请求。
 
-<p>举个例子，一个客户端可能会在实际发送一个 <code>DELETE</code> 请求之前，先向服务器发起一个预检请求，用于询问是否可以向服务器发起一个 {{HTTPMethod("DELETE")}} 请求：</p>
+举个例子，一个客户端可能会在实际发送一个 `DELETE` 请求之前，先向服务器发起一个预检请求，用于询问是否可以向服务器发起一个 {{HTTPMethod("DELETE")}} 请求：
 
-<pre>OPTIONS /resource/foo
-Access-Control-Request-Method: DELETE
-Access-Control-Request-Headers: origin, x-requested-with
-Origin: https://foo.bar.org
-</pre>
+    OPTIONS /resource/foo
+    Access-Control-Request-Method: DELETE
+    Access-Control-Request-Headers: origin, x-requested-with
+    Origin: https://foo.bar.org
 
-<p>如果服务器允许，那么服务器就会响应这个预检请求。并且其响应首部 {{HTTPHeader("Access-Control-Allow-Methods")}} 会将 <code>DELETE</code> 包含在其中：</p>
+如果服务器允许，那么服务器就会响应这个预检请求。并且其响应首部 {{HTTPHeader("Access-Control-Allow-Methods")}} 会将 `DELETE` 包含在其中：
 
-<pre>HTTP/1.1 200 OK
-Content-Length: 0
-Connection: keep-alive
-Access-Control-Allow-Origin: https://foo.bar.org
-Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
-Access-Control-Max-Age: 86400</pre>
+    HTTP/1.1 200 OK
+    Content-Length: 0
+    Connection: keep-alive
+    Access-Control-Allow-Origin: https://foo.bar.org
+    Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+    Access-Control-Max-Age: 86400
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/zh-CN/docs/Glossary/CORS">CORS</a></li>
- <li>{{HTTPMethod("OPTIONS")}}</li>
-</ul>
+- [CORS](/zh-CN/docs/Glossary/CORS)
+- {{HTTPMethod("OPTIONS")}}

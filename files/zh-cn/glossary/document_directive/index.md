@@ -7,30 +7,22 @@ tags:
   - 安全
 translation_of: Glossary/Document_directive
 ---
-<p><strong>{{Glossary("CSP")}} 文档指令（document directives）</strong> 出现于 {{HTTPHeader("Content-Security-Policy")}} 首部，支配着应用安全策略的文档的属性或者 <a href="/zh-CN/docs/Web/API/Web_Workers_API">worker</a> 运行环境的特征。</p>
+**{{Glossary("CSP")}} 文档指令（document directives）** 出现于 {{HTTPHeader("Content-Security-Policy")}} 首部，支配着应用安全策略的文档的属性或者 [worker](/zh-CN/docs/Web/API/Web_Workers_API) 运行环境的特征。
 
-<p>文档指令不将 {{CSP("default-src")}} 指令作为回退机制。</p>
+文档指令不将 {{CSP("default-src")}} 指令作为回退机制。
 
-<p>以下 CSP 指令属于文档指令：</p>
+以下 CSP 指令属于文档指令：
 
-<ul>
- <li>{{CSP("base-uri")}}</li>
- <li>{{CSP("plugin-types")}}</li>
- <li>{{CSP("sandbox")}}</li>
- <li>{{CSP("disown-opener")}}</li>
-</ul>
+- {{CSP("base-uri")}}
+- {{CSP("plugin-types")}}
+- {{CSP("sandbox")}}
+- {{CSP("disown-opener")}}
 
-<div>
-<h2 id="更多内容">更多内容</h2>
+## 更多内容
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>其他类型的指令：
-  <ul>
-   <li>{{Glossary("Fetch directive")}}</li>
-   <li>{{Glossary("Navigation directive")}}</li>
-   <li>{{Glossary("Reporting directive")}}</li>
-  </ul>
- </li>
-</ul>
-</div>
+- {{HTTPHeader("Content-Security-Policy")}}
+- 其他类型的指令：
+
+  - {{Glossary("Fetch directive")}}
+  - {{Glossary("Navigation directive")}}
+  - {{Glossary("Reporting directive")}}

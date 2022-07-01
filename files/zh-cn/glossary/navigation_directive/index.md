@@ -7,29 +7,21 @@ tags:
   - 安全
 translation_of: Glossary/Navigation_directive
 ---
-<p><strong>{{Glossary("CSP")}} 浏览指令（navigation directives</strong>）出现于 {{HTTPHeader("Content-Security-Policy")}} 首部，支配着用户所能浏览的或者提交表单的资源位置。</p>
+**{{Glossary("CSP")}} 浏览指令（navigation directives**）出现于 {{HTTPHeader("Content-Security-Policy")}} 首部，支配着用户所能浏览的或者提交表单的资源位置。
 
-<p>浏览指令不将 {{CSP("default-src")}} 指令作为回退机制。</p>
+浏览指令不将 {{CSP("default-src")}} 指令作为回退机制。
 
-<p>以下 CSP 指令属于浏览指令：</p>
+以下 CSP 指令属于浏览指令：
 
-<ul>
- <li>{{CSP("form-action")}}</li>
- <li>{{CSP("frame-ancestors")}}</li>
- <li>{{CSP("navigation-to")}}</li>
-</ul>
+- {{CSP("form-action")}}
+- {{CSP("frame-ancestors")}}
+- {{CSP("navigation-to")}}
 
-<div>
-<h2 id="更多内容">更多内容</h2>
+## 更多内容
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>其他类型的指令：
-  <ul>
-   <li>{{Glossary("Fetch directive")}}</li>
-   <li>{{Glossary("Navigation directive")}}</li>
-   <li>{{Glossary("Reporting directive")}}</li>
-  </ul>
- </li>
-</ul>
-</div>
+- {{HTTPHeader("Content-Security-Policy")}}
+- 其他类型的指令：
+
+  - {{Glossary("Fetch directive")}}
+  - {{Glossary("Navigation directive")}}
+  - {{Glossary("Reporting directive")}}

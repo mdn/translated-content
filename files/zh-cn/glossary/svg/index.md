@@ -8,31 +8,25 @@ tags:
   - 术语
 translation_of: Glossary/SVG
 ---
-<p>可缩放矢量图形 (<strong>SVG</strong>) 是一个基于 {{Glossary("XML")}} 语法的 2D 矢量图形格式。</p>
+可缩放矢量图形 (**SVG**) 是一个基于 {{Glossary("XML")}} 语法的 2D 矢量图形格式。
 
-<p>{{Glossary("W3C")}} 于 20 世纪 90 年代末开始着手 SVG 的工作，但是当 {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 推出 SVG 支持时，SVG 才变得流行起来。现在所有主流 {{Glossary("browser","browsers")}} 都支持 SVG。</p>
+{{Glossary("W3C")}} 于 20 世纪 90 年代末开始着手 SVG 的工作，但是当 {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 推出 SVG 支持时，SVG 才变得流行起来。现在所有主流 {{Glossary("browser","browsers")}} 都支持 SVG。
 
-<p>基于 {{Glossary("XML")}} 语法，您可以使用 {{Glossary("CSS")}} 指定 SVG 的样式，并使用 {{Glossary("JavaScript")}} 进行交互。HTML5 现在允许将 SVG {{Glossary("Tag","tags")}} 直接嵌入到 {{Glossary("HTML")}} 文档中。</p>
+基于 {{Glossary("XML")}} 语法，您可以使用 {{Glossary("CSS")}} 指定 SVG 的样式，并使用 {{Glossary("JavaScript")}} 进行交互。HTML5 现在允许将 SVG {{Glossary("Tag","tags")}} 直接嵌入到 {{Glossary("HTML")}} 文档中。
 
-<p>作为一种<a href="https://en.wikipedia.org/wiki/Vector_graphics">矢量图像格式</a>，SVG 图形可以无限地扩展，这使其在 {{Glossary("responsive design")}} 中非常有用，因为您可以创建可缩放到任意屏幕大小的界面元素和图形。SVG 还提供了一组有用的工具，例如裁剪，遮罩，过滤器和动画。</p>
+作为一种[矢量图像格式](https://en.wikipedia.org/wiki/Vector_graphics)，SVG 图形可以无限地扩展，这使其在 {{Glossary("responsive design")}} 中非常有用，因为您可以创建可缩放到任意屏幕大小的界面元素和图形。SVG 还提供了一组有用的工具，例如裁剪，遮罩，过滤器和动画。
 
-<h2 id="深入了解">深入了解</h2>
+## 深入了解
 
-<h3 id="基础知识">基础知识</h3>
+### 基础知识
 
-<ul>
- <li>维基百科上的 {{Interwiki("wikipedia", "SVG")}}</li>
-</ul>
+- 维基百科上的 {{Interwiki("wikipedia", "SVG")}}
 
-<h3 id="学习_SVG">学习 SVG</h3>
+### 学习 SVG
 
-<ul>
- <li><a href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html">W3.org's SVG Primer</a></li>
-</ul>
+- [W3.org's SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)
 
-<h3 id="技术信息">技术信息</h3>
+### 技术信息
 
-<ul>
- <li><a href="/zh-CN/docs/Web/SVG">SVG documentation on MDN</a></li>
- <li><a href="https://www.w3.org/TR/SVG/">Latest SVG specification</a></li>
-</ul>
+- [SVG documentation on MDN](/zh-CN/docs/Web/SVG)
+- [Latest SVG specification](https://www.w3.org/TR/SVG/)

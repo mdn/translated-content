@@ -7,16 +7,15 @@ tags:
   - 调用栈
 translation_of: Glossary/Call_stack
 ---
-<p>调用栈是解释器（比如浏览器中的 JavaScript 解释器）追踪函数执行流的一种机制。当执行环境中调用了多个{{glossary("function","函数")}}时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体中又调用了哪个函数。</p>
+调用栈是解释器（比如浏览器中的 JavaScript 解释器）追踪函数执行流的一种机制。当执行环境中调用了多个{{glossary("function","函数")}}时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体中又调用了哪个函数。
 
-<ul>
- <li>每调用一个函数，解释器就会把该函数添加进调用栈并开始执行。</li>
- <li>正在调用栈中执行的函数还调用了其它函数，那么新函数也将会被添加进调用栈，一旦这个函数被调用，便会立即执行。</li>
- <li>当前函数执行完毕后，解释器将其清出调用栈，继续执行当前执行环境下的剩余的代码。</li>
- <li>当分配的调用栈空间被占满时，会引发“堆栈溢出”错误。</li>
-</ul>
+- 每调用一个函数，解释器就会把该函数添加进调用栈并开始执行。
+- 正在调用栈中执行的函数还调用了其它函数，那么新函数也将会被添加进调用栈，一旦这个函数被调用，便会立即执行。
+- 当前函数执行完毕后，解释器将其清出调用栈，继续执行当前执行环境下的剩余的代码。
+- 当分配的调用栈空间被占满时，会引发“堆栈溢出”错误。
 
-<pre class="brush: js notranslate"><code>function greeting() {
+```js
+function greeting() {
    // [1] Some codes here
    sayHi();
    // [2] Some codes here
@@ -28,50 +27,45 @@ function sayHi() {
 // 调用 `greeting` 函数
 greeting();
 
-// [3] Some codes here</code>
-</pre>
+// [3] Some codes here
+```
 
-<p>上面的代码会按照如下流程这样执行：</p>
+上面的代码会按照如下流程这样执行：
 
-<ol>
- <li>忽略前面所有函数，直到 <code>greeting()</code> 函数被调用。</li>
- <li>把 <code>greeting()</code> 添加进调用栈列表。</li>
- <li>执行 <code>greeting()</code> 函数体中的所有代码。<br>
+1.  忽略前面所有函数，直到 `greeting()` 函数被调用。
+2.  把 `greeting()` 添加进调用栈列表。
+3.  执行 `greeting()` 函数体中的所有代码。
 
-  <pre class="notranslate"><code>调用栈列表:
-- greeting</code></pre>
- </li>
- <li>代码执行到 <code>sayHi()</code> 时，该函数被调用。</li>
- <li>把 <code>sayHi()</code> 添加进调用栈列表。</li>
- <li>执行 <code>sayHi()</code> 函数体中的代码，直到全部执行完毕。<br>
+        调用栈列表:
+        - greeting
 
-  <pre class="brush: plain notranslate"><code>调用栈列表:
-- sayHi
-- greeting
-</code></pre>
- </li>
- <li>返回来继续执行 <code>greeting()</code> 函数体中 <code>sayHi()</code> 后面的代码。</li>
- <li>删除调用栈列表中的 <code>sayHi()</code> 函数。</li>
- <li>当 <code>greeting()</code> 函数体中的代码全部执行完毕，返回到调用 <code>greeting()</code> 的代码行，继续执行剩下的 JS 代码。<br>
+4.  代码执行到 `sayHi()` 时，该函数被调用。
+5.  把 `sayHi()` 添加进调用栈列表。
+6.  执行 `sayHi()` 函数体中的代码，直到全部执行完毕。
 
-  <pre class="notranslate"><code>调用栈列表:
-- greeting</code></pre>
- </li>
- <li>删除调用栈列表中的 <code>greeting()</code> 函数。</li>
-</ol>
+    ```plain
+    调用栈列表:
+    - sayHi
+    - greeting
+    ```
 
-<p>一开始，我们得到一个空空如也的调用栈。随后，每当有函数被调用都会自动地添加进调用栈，执行完函数体中的代码后，调用栈又会自动地移除这个函数。最后，我们又得到了一个空空如也的调用栈。</p>
+7.  返回来继续执行 `greeting()` 函数体中 `sayHi()` 后面的代码。
+8.  删除调用栈列表中的 `sayHi()` 函数。
+9.  当 `greeting()` 函数体中的代码全部执行完毕，返回到调用 `greeting()` 的代码行，继续执行剩下的 JS 代码。
 
-<h2 id="了解更多">了解更多</h2>
+        调用栈列表:
+        - greeting
 
-<h3 id="基础知识">基础知识</h3>
+10. 删除调用栈列表中的 `greeting()` 函数。
 
-<ul>
- <li>Wikipedia 上的 {{Interwiki("wikipedia", "调用栈")}}</li>
- <li><a href="/zh-CN/docs/Glossary">MDN Web 文档中的术语</a>
-  <ul>
-   <li>{{Glossary("Call stack")}}</li>
-   <li>{{Glossary("Function")}}</li>
-  </ul>
- </li>
-</ul>
+一开始，我们得到一个空空如也的调用栈。随后，每当有函数被调用都会自动地添加进调用栈，执行完函数体中的代码后，调用栈又会自动地移除这个函数。最后，我们又得到了一个空空如也的调用栈。
+
+## 了解更多
+
+### 基础知识
+
+- Wikipedia 上的 {{Interwiki("wikipedia", "调用栈")}}
+- [MDN Web 文档中的术语](/zh-CN/docs/Glossary)
+
+  - {{Glossary("Call stack")}}
+  - {{Glossary("Function")}}

@@ -6,27 +6,21 @@ tags:
   - 术语
 translation_of: Glossary/Accessibility
 ---
-<p><em>无障碍网页（Web Accessibility</em> ，缩写：<strong>A11Y</strong><em>）</em>指在物理条件和技术条件限制下，保证网站达到最佳可用性的实践 。Web accessibility 正式定义与论述，在 {{Glossary("W3C")}} 上的 {{Glossary("WAI","Web Accessibility Initiative")}} (WAI).</p>
+_无障碍网页_（Web Accessibility ，缩写：**A11Y**）指在物理条件和技术条件限制下，保证网站达到最佳可用性的实践 。Web accessibility 正式定义与论述，在 {{Glossary("W3C")}} 上的 {{Glossary("WAI","Web Accessibility Initiative")}} (WAI).
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="常规知识">常规知识</h3>
+### 常规知识
 
-<ul>
- <li><a href="/zh-CN/docs/Web/Accessibility">Accessibility resources at MDN</a></li>
- <li>{{Interwiki("wikipedia", "Web accessibility")}} on Wikipedia</li>
-</ul>
+- [Accessibility resources at MDN](/zh-CN/docs/Web/Accessibility)
+- {{Interwiki("wikipedia", "Web accessibility")}} on Wikipedia
 
-<h3 id="学习_web_accessibility">学习 web accessibility</h3>
+### 学习 web accessibility
 
-<ul>
- <li><a href="https://webaim.org/">Web Accessibility In Mind</a></li>
-</ul>
+- [Web Accessibility In Mind](https://webaim.org/)
 
-<h3 id="技术参考">技术参考</h3>
+### 技术参考
 
-<ul>
- <li><a href="/zh-CN/docs/Web/Accessibility/ARIA">The ARIA documentation on MDN</a></li>
- <li><a href="https://www.w3.org/WAI/">The Web Accessibility Initiative homepage</a></li>
- <li><a href="https://www.w3.org/TR/wai-aria/">The WAI-ARIA recommendation</a></li>
-</ul>
+- [The ARIA documentation on MDN](/zh-CN/docs/Web/Accessibility/ARIA)
+- [The Web Accessibility Initiative homepage](https://www.w3.org/WAI/)
+- [The WAI-ARIA recommendation](https://www.w3.org/TR/wai-aria/)

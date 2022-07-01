@@ -6,10 +6,10 @@ tags:
   - 术语表
 translation_of: Glossary/ASCII
 ---
-<p><strong>ASCII</strong> (<em>American Standard Code for Information Interchange，美国信息交换标准码</em>) 是计算机中最常用的编码方式，用于将字母，数字，标点符号和控制字符转换为计算机可以理解的数字形式。 从 2007 年开始逐渐被{{Glossary("UTF-8")}} 代替。</p>
+**ASCII** (_American Standard Code for Information Interchange，美国信息交换标准码_) 是计算机中最常用的编码方式，用于将字母，数字，标点符号和控制字符转换为计算机可以理解的数字形式。 从 2007 年开始逐渐被{{Glossary("UTF-8")}} 代替。
 
-<h2 id="更多：">更多：</h2>
+## 更多：
 
-<h3 id="基本知识">基本知识</h3>
+### 基本知识
 
-<p>{{Interwiki("wikipedia", "ASCII")}} on Wikipedia</p>
+{{Interwiki("wikipedia", "ASCII")}} on Wikipedia

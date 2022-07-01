@@ -8,19 +8,20 @@ tags:
   - grid
 translation_of: Glossary/Grid
 ---
-<p>通过设置 CSS 属性 <code>display: grid;</code>  可以定义一个 CSS 网格。接着可以使用 {{cssxref("grid-template-rows")}} 和 {{cssxref("grid-template-columns")}} 属性定义网格的列属性 (columns) 和行属性 (rows)。</p>
+通过设置 CSS 属性 `display: grid;` 可以定义一个 CSS 网格。接着可以使用 {{cssxref("grid-template-rows")}} 和 {{cssxref("grid-template-columns")}} 属性定义网格的列属性 (columns) 和行属性 (rows)。
 
-<p>使用这些属性定义的网格被称为 <em>显式网格 (explicit grid)。</em></p>
+使用这些属性定义的网格被称为 _显式网格 (explicit grid)。_
 
-<p>如果开发者将内容放置在显式网格之外 ，或者依赖自动布局的话，网格法 (grid algorithm) 将需要创建额外的 row 或者 column、  {{glossary("grid tracks", "tracks")}} 来包含显示网格之外的内容 {{glossary("grid item", "grid items")}}，为此将在隐式网格 (implicit grid) 中创建额外的轨道 (tracks)。<em>当内容添加到了已定义的 tracks 之外的时候，隐式网格 (implicit grid) 会被自动创建。</em></p>
+如果开发者将内容放置在显式网格之外 ，或者依赖自动布局的话，网格法 (grid algorithm) 将需要创建额外的 row 或者 column、 {{glossary("grid tracks", "tracks")}} 来包含显示网格之外的内容 {{glossary("grid item", "grid items")}}，为此将在隐式网格 (implicit grid) 中创建额外的轨道 (tracks)。_当内容添加到了已定义的 tracks 之外的时候，隐式网格 (implicit grid) 会被自动创建。_
 
-<p>下面的例子创建了一个有两行三列的显式网格<em>。</em>由于超过显式网格可容纳的六个条目，<em>此网格中的第三行将是一个隐式网格行轨道 (implicit grid </em>row track)</p>
+下面的例子创建了一个有两行三列的显式网格*。*由于超过显式网格可容纳的六个条目，_此网格中的第三行将是一个隐式网格行轨道 (implicit grid_ row track)
 
-<p><em>（注：在容器 div 上用 row 和 column 定义的网格总数，等于 行数乘以列数 个。比如一个容器 div 定义了 2 行*3 列=6 个网格，这 6 个就是显式网格，但是假如里面有 8 个 子 div，多出来那 2 个就叫做隐式网格。）</em></p>
+_（注：在容器 div 上用 row 和 column 定义的网格总数，等于 行数乘以列数 个。比如一个容器 div 定义了 2 行 \* 3 列 = 6 个网格，这 6 个就是显式网格，但是假如里面有 8 个 子 div，多出来那 2 个就叫做隐式网格。）_
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -28,49 +29,47 @@ translation_of: Glossary/Grid
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 100px 100px;
 }
-</pre>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-   &lt;div&gt;One&lt;/div&gt;
-   &lt;div&gt;Two&lt;/div&gt;
-   &lt;div&gt;Three&lt;/div&gt;
-   &lt;div&gt;Four&lt;/div&gt;
-   &lt;div&gt;Five&lt;/div&gt;
-   &lt;div&gt;Six&lt;/div&gt;
-   &lt;div&gt;Seven&lt;/div&gt;
-   &lt;div&gt;Eight&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
+   <div>Six</div>
+   <div>Seven</div>
+   <div>Eight</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('示例', '500', '330') }}</p>
+{{ EmbedLiveSample('示例', '500', '330') }}
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="属性参考">属性参考</h3>
+### 属性参考
 
-<ul>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid")}}</li>
- <li>{{cssxref("grid-template")}}</li>
-</ul>
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid")}}
+- {{cssxref("grid-template")}}
 
-<h3 id="扩展阅读">扩展阅读</h3>
+### 扩展阅读
 
-<ul>
- <li>CSS Grid Layout Guide: <em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">布局的基本概念</a></em></li>
-</ul>
+- CSS Grid Layout Guide: _[布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_

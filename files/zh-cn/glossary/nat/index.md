@@ -9,13 +9,11 @@ tags:
   - 网络运作
 translation_of: Glossary/NAT
 ---
-<p><strong>NAT </strong>(网络地址翻译) 是一个能够让多台主机共享一个 IP 地址的技术。NAT 会给局域网内每台主机分配一个唯一的地址同时调整输入和输出的网络流量，使之能够发送到正确的位置。</p>
+**NAT** (网络地址翻译) 是一个能够让多台主机共享一个 IP 地址的技术。NAT 会给局域网内每台主机分配一个唯一的地址同时调整输入和输出的网络流量，使之能够发送到正确的位置。
 
-<h2 id="学习更多">学习更多</h2>
+## 学习更多
 
-<h3 id="通用知识">通用知识</h3>
+### 通用知识
 
-<ul>
- <li><a href="/zh-CN/docs/Web/API/WebRTC_API/Protocols">WebRTC 协议</a></li>
- <li>{{interwiki("wikipedia", "NAT")}} 在 Wikipedia</li>
-</ul>
+- [WebRTC 协议](/zh-CN/docs/Web/API/WebRTC_API/Protocols)
+- {{interwiki("wikipedia", "NAT")}} 在 Wikipedia

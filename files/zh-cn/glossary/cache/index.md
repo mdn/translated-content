@@ -3,12 +3,10 @@ title: Cache
 slug: Glossary/Cache
 translation_of: Glossary/Cache
 ---
-<p><strong>cache </strong>(web cache 或者 HTTP cache) 是临时存储 HTTP 响应的组件，只要它符合一定条件，就可以用于后续的 HTTP 请求。</p>
+**cache** (web cache 或者 HTTP cache) 是临时存储 HTTP 响应的组件，只要它符合一定条件，就可以用于后续的 HTTP 请求。
 
-<h2 id="深入了解">深入了解</h2>
+## 深入了解
 
-<h3 id="基础知识">基础知识</h3>
+### 基础知识
 
-<ul>
- <li>维基百科上的{{interwiki("wikipedia", "Web cache")}} </li>
-</ul>
+- 维基百科上的{{interwiki("wikipedia", "Web cache")}}

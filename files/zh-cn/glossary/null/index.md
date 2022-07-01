@@ -7,21 +7,17 @@ tags:
   - 空指针
 translation_of: Glossary/Null
 ---
-<p>在计算机学科，<strong><code>null</code></strong> 值一直是一个被讨论点，通常来说，表示一个不存在或者无效{{glossary("object")}}或者地址引用。语言实现中空引用的含义各不相同。</p>
+在计算机学科，**`null`** 值一直是一个被讨论点，通常来说，表示一个不存在或者无效{{glossary("object")}}或者地址引用。语言实现中空引用的含义各不相同。
 
-<p>在 {{Glossary("JavaScript")}}，null 是{{Glossary("Primitive", "原始值")}}之一</p>
+在 {{Glossary("JavaScript")}}，null 是{{Glossary("Primitive", "原始值")}}之一
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="一般知识">一般知识</h3>
+### 一般知识
 
-<ul>
- <li>维基百科{{Interwiki("wikipedia", "空指针")}} </li>
-</ul>
+- 维基百科{{Interwiki("wikipedia", "空指针")}}
 
-<h3 id="技术参考">技术参考</h3>
+### 技术参考
 
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Data_structures">JavaScript 数据类型和数据结构</a></li>
- <li>JavaScript 全局对象：{{jsxref("null")}}</li>
-</ul>
+- [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
+- JavaScript 全局对象：{{jsxref("null")}}

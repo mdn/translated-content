@@ -8,32 +8,26 @@ tags:
 translation_of: Glossary/Simple_header
 original_slug: Glossary/简单头部
 ---
-<p>以下的 <a href="/zh-CN/docs/Web/HTTP/Headers">HTTP headers</a>都可以被认为是简单头部：</p>
+以下的 [HTTP headers](/zh-CN/docs/Web/HTTP/Headers)都可以被认为是简单头部：
 
-<ul>
- <li>{{HTTPHeader("Accept")}},</li>
- <li>{{HTTPHeader("Accept-Language")}},</li>
- <li>{{HTTPHeader("Content-Language")}},</li>
- <li>{{HTTPHeader("Content-Type")}}并且值是 <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code>, 或者 <code>text/plain之一的（忽略参数）</code>.</li>
-</ul>
+- {{HTTPHeader("Accept")}},
+- {{HTTPHeader("Accept-Language")}},
+- {{HTTPHeader("Content-Language")}},
+- {{HTTPHeader("Content-Type")}}并且值是 `application/x-www-form-urlencoded`, `multipart/form-data`, 或者 `text/plain之一的（忽略参数）`.
 
-<p>或者以下客户端头部之一的也可以被认为是简单头部：</p>
+或者以下客户端头部之一的也可以被认为是简单头部：
 
-<ul>
- <li>{{HTTPHeader("DPR")}}</li>
- <li>{{HTTPHeader("Downlink")}}</li>
- <li>{{HTTPHeader("Save-Data")}}</li>
- <li>{{HTTPHeader("Viewport-Width")}}</li>
- <li>{{HTTPHeader("Width")}}</li>
-</ul>
+- {{HTTPHeader("DPR")}}
+- {{HTTPHeader("Downlink")}}
+- {{HTTPHeader("Save-Data")}}
+- {{HTTPHeader("Viewport-Width")}}
+- {{HTTPHeader("Width")}}
 
-<p>当只包含简单头部时，一个请求则被视为简单请求并且在<a href="/zh-CN/docs/Glossary/CORS">CORS</a>中不需要发送{{glossary("preflight request")}}。</p>
+当只包含简单头部时，一个请求则被视为简单请求并且在[CORS](/zh-CN/docs/Glossary/CORS)中不需要发送{{glossary("preflight request")}}。
 
-<h2 id="Learn_more">Learn more</h2>
+## Learn more
 
-<ul>
- <li><a href="/zh-CN/docs/Web/HTTP/Headers">HTTP 头部</a></li>
- <li>{{Glossary("Simple response header")}}</li>
- <li>{{Glossary("Forbidden header name")}}</li>
- <li>{{Glossary("Request header")}}</li>
-</ul>
+- [HTTP 头部](/zh-CN/docs/Web/HTTP/Headers)
+- {{Glossary("Simple response header")}}
+- {{Glossary("Forbidden header name")}}
+- {{Glossary("Request header")}}

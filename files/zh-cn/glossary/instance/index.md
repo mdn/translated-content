@@ -5,12 +5,10 @@ tags:
   - 术语
 translation_of: Glossary/Instance
 ---
-<p>一个<a href="/zh-CN/docs/Glossary/Object">对象</a>，由<a href="/zh-CN/docs/Glossary/Constructor">构造函数</a>所创建的实例</p>
+一个[对象](/zh-CN/docs/Glossary/Object)，由[构造函数](/zh-CN/docs/Glossary/Constructor)所创建的实例
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="知识">知识</h3>
+### 知识
 
-<ul>
- <li>{{interwiki("wikipedia", "Instance (computer science)", "实例")}} - 维基百科</li>
-</ul>
+- {{interwiki("wikipedia", "Instance (computer science)", "实例")}} - 维基百科
