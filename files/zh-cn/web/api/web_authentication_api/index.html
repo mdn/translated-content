@@ -59,7 +59,7 @@ translation_of: Web/API/Web_Authentication_API
 
 <p>用户在 WebAuthn 中注册完成之后就可以使用 WebAuthn 进行身份验证（或者说登录）。验证流程与注册相似，图 2 所示的验证流程也与图 1 相似。不过，注册和验证之间的主要区别在于：1) 验证不需要用户或信赖方信息；2) 验证使用之前生成的密钥对创建一个断言，而不是使用在认证器在制造过程中烧录的密钥对创建证明。和上文一样，下面的验证流程图只是一个概况，并非详细描述。验证所需的数据可以在 {{domxref("PublicKeyCredentialRequestOptions")}} 字典中找到；返回的数据可以在 {{domxref("PublicKeyCredential")}} 接口（其中 {{domxref("PublicKeyCredential.response")}} 是 {{domxref("AuthenticatorAssertionResponse")}} 的接口）中找到。</p>
 
-<p><img alt="WebAuthn authentication component and dataflow diagram" src="https://mdn.mozillademos.org/files/15802/MDN%20Webauthn%20Authentication%20(r1).png" style="height: 527px; width: 1067px;"></p>
+<p><img alt="WebAuthn authentication component and dataflow diagram" src="mdn_webauthn_authentication_(r1).png"></p>
 
 <p><em>图 2 - WebAuthn 验证流程及与各个步骤相关的重要数据。</em></p>
 

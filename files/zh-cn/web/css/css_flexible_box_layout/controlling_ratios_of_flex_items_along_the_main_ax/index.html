@@ -52,7 +52,7 @@ translation_of: >-
 
 <p>如果你的浏览器不支持这些属性，那这两段会在块流中被渲染为正常流; 下面的截图展示了预期的渲染。</p>
 
-<p><img alt="The first paragraph is wrapped to the longest word, the second stretched out so as to cause overflow." src="https://mdn.mozillademos.org/files/15658/ratios-size.png" style="display: block; height: 558px; margin: 0px auto; width: 1520px;"></p>
+<p><img alt="The first paragraph is wrapped to the longest word, the second stretched out so as to cause overflow." src="ratios-size.png"></p>
 
 <p>记住这种行为，以及 <code>min-content</code> 和<code>max-content</code> 对我们本文后探索 <code>flex-grow</code> 和<code>flex-shrink</code> 的影响。</p>
 
@@ -68,11 +68,11 @@ translation_of: >-
 
 <p>去谈论这些属性之前我们需要理解 positive free space 和 negative free space 的概念。当一个 flex 容器有 positive free space 时，它就有更多的空间用于在 flex 容器内显示 flex 子元素。比如说，如果我有 500px 宽的 flex 容器，{{cssxref("flex-direction")}} 属性值为 row, 三个 100px 宽的 flex 子元素， 而且我还有 200px 的 positive free space, 那么如果我想让它们（positive free space）填充 flex 容器，它们就可以填充在 flex 子元素之间。</p>
 
-<p><img alt="Image showing space left over after items have been displayed." src="https://mdn.mozillademos.org/files/15654/Basics7.png" style="display: block; height: 198px; margin: 0px auto; width: 528px;"></p>
+<p><img alt="Image showing space left over after items have been displayed." src="basics7.png"></p>
 
 <p>当 flex 子元素的自然尺寸加起来比 flex 容器内的可用空间大时，我们产生了 negative free space. 如果我有一个像上面 500px 宽的 flex 容器，但是三个 flex 子元素每个都为 200px 宽，我就一共需要 600px 宽，因此我就有了 100px 的 negative free space. 这可以从 flex 子元素中删除以使其能适应 flex 容器。</p>
 
-<p><img alt="The items overflow the container" src="https://mdn.mozillademos.org/files/15655/ratios1.png" style="display: block; height: 198px; margin: 0px auto; width: 634px;"></p>
+<p><img alt="The items overflow the container" src="ratios1.png"></p>
 
 <p>我们需要理解 positive free space 的分配和 negative free space 的移除，这样才能理解 flex 属性。</p>
 
@@ -106,11 +106,11 @@ translation_of: >-
 
 <p>这个例子中设置<code>flex-basis</code>的值为<code>auto</code>且没有设置它们的宽，因此它们是自动调整大小的。这意味着 flexbox 的大小决定于全部 flex 子元素内容的<code>max-content</code> 大小。在布局完 flex 子元素 之后在 flex 容器中还有一些 positive free space，展示在这幅图片的阴影区域中：</p>
 
-<p><img alt="Images shows the positive free space as a hatched area" src="https://mdn.mozillademos.org/files/15656/ratios2.png" style="display: block; height: 100px; margin: 0px auto; width: 634px;"></p>
+<p><img alt="Images shows the positive free space as a hatched area" src="ratios2.png"></p>
 
 <p>我们使用与内容大小相等的<code>flex-basis</code>，以便从总可用空间（flex 容器的宽度）中减去可用分配空间，然后剩余空间在每个 flex 子元素之间平均分配。我们比较大的 flex 子元素最终会变得更大，因为它一开始就有一个比较大的尺寸，即使它与其他 flex 子元素具有相同数量的分配空间：</p>
 
-<p><img alt="The positive space is distributed between items" src="https://mdn.mozillademos.org/files/15657/ratios3.png" style="display: block; height: 100px; margin: 0px auto; width: 634px;"></p>
+<p><img alt="The positive space is distributed between items" src="ratios3.png"></p>
 
 <p>如果你真正想要的是三个同样尺寸的 flex 子元素，即使它们开始是不同的尺寸，你应该使用这个：</p>
 
