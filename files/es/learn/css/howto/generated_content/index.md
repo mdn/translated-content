@@ -1,6 +1,8 @@
 ---
 title: Uso de contenido generado por CSS
 slug: Learn/CSS/Howto/Generated_content
+translation_of: Learn/CSS/Howto/Generated_content
+original_slug: Learn/CSS/Howto/Generated_content
 ---
 {{LearnSidebar}}
 
