@@ -4390,8 +4390,8 @@
 /fr/docs/Web/CSS/grid-row-gap	/fr/docs/Web/CSS/row-gap
 /fr/docs/Web/CSS/hidden	/fr/docs/Web/CSS/visibility
 /fr/docs/Web/CSS/image()	/fr/docs/orphaned/Web/CSS/image()
-/fr/docs/Web/CSS/image-set	/fr/docs/orphaned/Web/CSS/image-set()
-/fr/docs/Web/CSS/image-set()	/fr/docs/orphaned/Web/CSS/image-set()
+/fr/docs/Web/CSS/image-set	/fr/docs/Web/CSS/image/image-set
+/fr/docs/Web/CSS/image-set()	/fr/docs/Web/CSS/image/image-set
 /fr/docs/Web/CSS/imagefunction	/fr/docs/orphaned/Web/CSS/image()
 /fr/docs/Web/CSS/linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
@@ -6254,6 +6254,7 @@
 /fr/docs/orphaned/Web/API/ServiceWorkerState	/fr/docs/Web/API/ServiceWorker/state
 /fr/docs/orphaned/Web/API/URLUtilsReadOnly	/fr/docs/Web/API/WorkerLocation
 /fr/docs/orphaned/Web/CSS/conic-gradient()	/fr/docs/Web/CSS/gradient/conic-gradient
+/fr/docs/orphaned/Web/CSS/image-set()	/fr/docs/Web/CSS/image/image-set
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/orphaned/Web/CSS/transform-function/translateX	/fr/docs/Web/CSS/transform-function/translateX
 /fr/docs/orphaned/Web/Guide/Events	/fr/docs/Web/Events
