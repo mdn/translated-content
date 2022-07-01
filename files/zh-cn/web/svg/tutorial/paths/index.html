@@ -15,7 +15,7 @@ translation_of: Web/SVG/Tutorial/Paths
 
 <p><code>因为属性 d</code>采用的是用户坐标系统，所以<strong>不需标明单位</strong>。在后面的教程中，我们会学到如何让变换路径，以满足更多需求。</p>
 
-<h2 id="Line_commands" name="Line_commands">直线命令</h2>
+<h2 id="Line_commands">直线命令</h2>
 
 <p><code>&lt;path&gt;</code>元素里有 5 个画直线的命令，顾名思义，直线命令就是在两个点之间画直线。首先是“Move to”命令，M，前面已经提到过，它需要两个参数，分别是需要移动到的点的 x 轴和 y 轴的坐标。假设，你的画笔当前位于一个点，在使用 M 命令移动画笔后，只会移动画笔，但不会在两点之间画线。因为 M 命令仅仅是移动画笔，但不画线。所以 M 命令经常出现在路径的开始处，用来指明从何处开始画。</p>
 
@@ -85,11 +85,11 @@ translation_of: Web/SVG/Tutorial/Paths
 
 <p>你可能会问这些命令有什么用，因为 <code>&lt;polygon&gt;</code> 和 <code>&lt;polyline&gt;</code> 可以做到画出一样的图形。答案是，这些命令可以做得更多。如果你只是画直线，那么其他元素可能会更好用，但是，path 却是众多开发者在 SVG 绘制中经常用到的。据我所知，它们之间不存在性能上的优劣。但是通过脚本生成 path 可能有所不同，因为另外两种方法只需要指明点，而 path 在这方面的语法会更复杂一些。</p>
 
-<h2 id="Curve_commands" name="Curve_commands">曲线命令</h2>
+<h2 id="Curve_commands">曲线命令</h2>
 
 <p>绘制平滑曲线的命令有三个，其中两个用来绘制贝塞尔曲线，另外一个用来绘制弧形或者说是圆的一部分。如果你在 Inkscape、Illustrator 或者 Photoshop 中用过路径工具，可能对贝塞尔曲线有一定程度的了解。欲了解贝塞尔曲线的完整数学讲解，请阅读这份<a class="external" href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">Wikipedia 的文档</a>。在这里不用讲得太多。贝塞尔曲线的类型有很多，但是在 path 元素里，只存在两种贝塞尔曲线：三次贝塞尔曲线 C，和二次贝塞尔曲线 Q。</p>
 
-<h3 id="Bezier_Curves" name="Bezier_Curves">贝塞尔曲线</h3>
+<h3 id="Bezier_Curves">贝塞尔曲线</h3>
 
 <p>我们从稍微复杂一点的三次贝塞尔曲线 C 入手，三次贝塞尔曲线需要定义一个点和两个控制点，所以用 C 命令创建三次贝塞尔曲线，需要设置三组坐标参数：</p>
 
@@ -159,7 +159,7 @@ translation_of: Web/SVG/Tutorial/Paths
 
 <p>虽然三次贝塞尔曲线拥有更大的自由度，但是两种曲线能达到的效果总是差不多的。具体使用哪种曲线，通常取决于需求，以及对曲线对称性的依赖程度。</p>
 
-<h3 id="Arcs" name="Arcs">弧形</h3>
+<h3 id="Arcs">弧形</h3>
 
 <p>弧形命令 A 是另一个创建 SVG 曲线的命令。基本上，弧形可以视为圆形或椭圆形的一部分。假设，已知椭圆形的长轴半径和短轴半径，并且已知两个点（在椭圆上），根据半径和两点，可以画出两个椭圆，在每个椭圆上根据两点都可以画出两种弧形。所以，仅仅根据半径和两点，可以画出四种弧形。为了保证创建的弧形唯一，A 命令需要用到比较多的参数：</p>
 
