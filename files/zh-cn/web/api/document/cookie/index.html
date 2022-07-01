@@ -12,7 +12,7 @@ translation_of: Web/API/Document/cookie
 
 <p>获取并设置与当前文档相关联的 <a href="/en-US/docs/Web/HTTP/Cookies">cookie</a>。可以把它当成一个 <code>getter and setter</code>。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <h5 id="读取所有可从此位置访问的Cookie">读取所有可从此位置访问的 Cookie</h5>
 
@@ -47,7 +47,7 @@ translation_of: Web/API/Document/cookie
 <p><strong>备注：</strong> 在{{Gecko("6.0")}}前，被引号括起的路径的引号会被当做路径的一部分，而不是被当做定界符。现在已被修复。</p>
 </div>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <h3 id="示例1_简单用法">示例 1: 简单用法</h3>
 
@@ -263,7 +263,7 @@ alert(docCookies.getItem("unexistingCookie"));
 alert(docCookies.getItem());
 alert(docCookies.getItem("test1;="));</pre>
 
-<h2 id="Notes" name="Notes">安全</h2>
+<h2 id="Notes">安全</h2>
 
 <p>路径限制并<strong>不能</strong>阻止从其他路径访问 cookie. 使用简单的 DOM 即可轻易地绕过限制 (比如创建一个指向限制路径的，隐藏的<a href="/zh-CN/docs/Web/HTML/Element/iframe">iframe</a>, 然后访问其 <code>contentDocument.cookie</code> 属性). 保护 cookie 不被非法访问的唯一方法是将它放在另一个域名/子域名之下，利用<a href="/zh-CN/docs/Web/Security/Same-origin_policy">同源策略</a>保护其不被读取。</p>
 
@@ -273,7 +273,7 @@ alert(docCookies.getItem("test1;="));</pre>
 
 <p><code>HttpOnly</code> 属性可以阻止通过 javascript 访问 cookie，从而一定程度上遏制这类攻击。参见 <a class="external" href="http://www.nczonline.net/blog/2009/05/12/cookies-and-security/" title="http://www.nczonline.net/blog/2009/05/12/cookies-and-security/">Cookies and Security</a>.</p>
 
-<h2 id="Specification" name="Specification">备注</h2>
+<h2 id="Specification">备注</h2>
 
 <ul>
  <li>从 Firefox 2 起，有更好的客户端存储机制用以替代 cookie - <a href="/en-US/docs/DOM/Storage" title="DOM/Storage">WHATWG DOM Storage</a>.</li>
@@ -281,7 +281,7 @@ alert(docCookies.getItem("test1;="));</pre>
  <li>请注意，更多/更大的 cookies 意味着每个请求都要包含更繁重的数据传输。如果您只是需要存储些 "client-only" 的数据，那么郑重建议您使用 <a href="/en-US/docs/DOM/Storage" title="DOM/Storage">WHATWG DOM Storage</a>.</li>
 </ul>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 <p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-8747038">DOM Level 2: HTMLDocument.cookie</a></p>
 

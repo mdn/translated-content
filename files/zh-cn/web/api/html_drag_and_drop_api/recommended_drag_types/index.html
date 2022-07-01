@@ -14,7 +14,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
  本文档中包含一个<strong>moz</strong>前缀的所有方法和属性 (如<strong>mozSetDataAt()</strong>) 是 Gecko 的具体接口。 这些接口仅适用于基于 Gecko 的浏览器。</p>
 </div>
 
-<h2 id="text" name="text">拖动文字</h2>
+<h2 id="text">拖动文字</h2>
 
 <p>拖动文字时请使用 <code>text/plain</code> 类型，那么数据必须是字符串，例如：</p>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 
 <p>注：在旧代码中，可能会使用 <code>text/unicode</code> 或者 <code>Text</code> 类型， 这两个与 <code>text/plain</code> 是一样的，并且应该被替换用于存储和提取数据。</p>
 
-<h2 id="link" name="link">拖动链接</h2>
+<h2 id="link">拖动链接</h2>
 
 <p>Links should include data of two types; the first should be the URL using the type <code>text/uri-list</code>, and the second is the URL using the <code>text/plain</code> type. Both types should use the same data, the URL of the link. For example:</p>
 
@@ -64,7 +64,7 @@ http://www.example.com
 Example
 </pre>
 
-<h2 id="html" name="html">拖动 HTML 和 XML</h2>
+<h2 id="html">拖动 HTML 和 XML</h2>
 
 <p>HTML content may use the <code>text/html</code> type. The data for this type should be the serialized HTML to drag. For instance, it would be suitable to set the data value for this type to the value of the <code>{{domxref("Element.innerHTML","innerHTML")}}</code> property of an element.</p>
 
@@ -77,7 +77,7 @@ dt.setData("text/html", "Hello there, &lt;strong&gt;stranger&lt;/strong&gt;");
 dt.setData("text/plain", "Hello there, stranger");
 </pre>
 
-<h2 id="file" name="file">拖动文件</h2>
+<h2 id="file">拖动文件</h2>
 
 <p>A local file is dragged using the <code>application/x-moz-file</code> type with a data value that is an <a href="/en/XPCOM_Interface_Reference/nsIFile" title="nsIFile">nsIFile</a> object. Non-privileged web pages are not able to retrieve or modify data of this type. Because a file is not a string, you must use the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method to assign the data. Similarly, when retrieving the data, you must use the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method.</p>
 
@@ -123,7 +123,7 @@ function doDrop(event)
 
 <p>You could always use some feature detection to determine which method is supported on <code>types</code>, and run code as appropriate.</p>
 
-<h2 id="image" name="image">拖动图像</h2>
+<h2 id="image">拖动图像</h2>
 
 <p>Direct image dragging is not commonly done. In fact, Mozilla does not support direct image dragging on Mac or Linux platforms. Instead, images are usually dragged only by their URLs. To do this, use the <code>text/uri-list</code> type as with other URL links. The data should be the URL of the image or a data URL if the image is not stored on a web site or disk. For more information about data URLs, see <a class="internal" href="/en/data_URIs" title="en/The data URL scheme">the data URL scheme</a>.</p>
 
@@ -144,17 +144,17 @@ dt.setData("text/plain", imageurl);
 
 <p>Note the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method is used for non-text data. As some contexts may only include some of these types, it is important to check which type is made available when receiving dropped images.</p>
 
-<h2 id="node" name="node">拖动节点</h2>
+<h2 id="node">拖动节点</h2>
 
 <p>Nodes and elements in a document may be dragged using the <code>application/x-moz-node</code> type. The data for the type should be a DOM node. This allows the drop target to receive the actual node where the drag was started from. Note that callers from a different domain will not be able to access the node even when it has been dropped.</p>
 
 <p>You should always include a plain text alternative for the node.</p>
 
-<h2 id="custom" name="custom">拖动自定义数据</h2>
+<h2 id="custom">拖动自定义数据</h2>
 
 <p>You can also use other types that you make up for custom purposes. You should strive to always include a plain text alternative unless that object being dragged is specific to a particular site or application. In this case, the custom type ensures that the data cannot be dropped elsewhere.</p>
 
-<h2 id="filestoos" name="filestoos">将文件拖动到一个操作系统文件夹</h2>
+<h2 id="filestoos">将文件拖动到一个操作系统文件夹</h2>
 
 <p>There are cases in which you may want to add a file to an existing drag event session, and you may also want to write the file to disk when the drop operation happens over a folder in the operating system when your code receives notification of the target folder's location. This only works in extensions (or other privileged code) and the data type "application/moz-file-promise" should be used. The following sample offers an overview of this advanced case:</p>
 

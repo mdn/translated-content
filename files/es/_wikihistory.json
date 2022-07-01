@@ -1453,12 +1453,6 @@
       "Cleon"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2019-03-23T22:57:59.274Z",
-    "contributors": [
-      "Cleon"
-    ]
-  },
   "Glossary/Symmetric-key_cryptography": {
     "modified": "2019-03-18T21:18:28.720Z",
     "contributors": [
@@ -6413,12 +6407,6 @@
       "fscholz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onblur": {
-    "modified": "2019-03-23T22:33:17.308Z",
-    "contributors": [
-      "Grijander81"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onchange": {
     "modified": "2019-03-23T22:18:11.571Z",
     "contributors": [
@@ -6444,12 +6432,6 @@
     "contributors": [
       "wbamberg",
       "galegosimpatico"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onfocus": {
-    "modified": "2019-03-18T21:31:41.059Z",
-    "contributors": [
-      "ANDRUS74"
     ]
   },
   "Web/API/GlobalEventHandlers/ongotpointercapture": {
@@ -7137,6 +7119,13 @@
     "modified": "2019-03-23T23:26:56.897Z",
     "contributors": [
       "palfrei",
+      "maedca"
+    ]
+  },
+  "Web/API/Media_Streams_API/Taking_still_photos": {
+    "modified": "2019-03-23T23:26:57.758Z",
+    "contributors": [
+      "robertoasq",
       "maedca"
     ]
   },
@@ -8180,13 +8169,6 @@
       "voylinux"
     ]
   },
-  "Web/API/WebRTC_API/Taking_still_photos": {
-    "modified": "2019-03-23T23:26:57.758Z",
-    "contributors": [
-      "robertoasq",
-      "maedca"
-    ]
-  },
   "Web/API/WebSocket": {
     "modified": "2019-03-18T20:53:48.099Z",
     "contributors": [
@@ -8392,6 +8374,12 @@
       "Bant89"
     ]
   },
+  "Web/API/Window/blur_event": {
+    "modified": "2019-03-23T22:33:17.308Z",
+    "contributors": [
+      "Grijander81"
+    ]
+  },
   "Web/API/Window/cancelAnimationFrame": {
     "modified": "2019-03-23T22:30:46.211Z",
     "contributors": [
@@ -8435,6 +8423,12 @@
     "modified": "2019-03-18T21:17:09.045Z",
     "contributors": [
       "Grijander81"
+    ]
+  },
+  "Web/API/Window/focus_event": {
+    "modified": "2019-03-18T21:31:41.059Z",
+    "contributors": [
+      "ANDRUS74"
     ]
   },
   "Web/API/Window/frameElement": {
@@ -8968,12 +8962,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role": {
-    "modified": "2019-08-28T12:48:39.532Z",
-    "contributors": [
-      "IsraelFloresDGA"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
     "modified": "2020-12-02T07:09:06.472Z",
     "contributors": [
@@ -8997,6 +8985,12 @@
     "contributors": [
       "IsraelFloresDGA",
       "mayrars"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/alertdialog_role": {
+    "modified": "2019-08-28T12:48:39.532Z",
+    "contributors": [
+      "IsraelFloresDGA"
     ]
   },
   "Web/Accessibility/ARIA/forms": {
@@ -18881,17 +18875,9 @@
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol": {
-    "modified": "2019-06-24T09:01:16.062Z",
+    "modified": "2019-03-23T22:57:59.274Z",
     "contributors": [
-      "PCASME",
-      "AnaDallos",
-      "MateoVelilla",
-      "onit4ku",
-      "Lenninlasd",
-      "SphinxKnight",
-      "roberbnd",
-      "javiergarciagonzalez",
-      "joseanpg"
+      "Cleon"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol/for": {
@@ -19322,6 +19308,12 @@
       "daniel.duarte"
     ]
   },
+  "Web/JavaScript/Reference/Operators/import.meta": {
+    "modified": "2020-10-15T22:29:50.934Z",
+    "contributors": [
+      "cinthylli"
+    ]
+  },
   "Web/JavaScript/Reference/Operators/in": {
     "modified": "2020-10-15T21:19:59.064Z",
     "contributors": [
@@ -19636,12 +19628,6 @@
       "javiernunez",
       "Siro_Diaz",
       "jepumares"
-    ]
-  },
-  "Web/JavaScript/Reference/Statements/import.meta": {
-    "modified": "2020-10-15T22:29:50.934Z",
-    "contributors": [
-      "cinthylli"
     ]
   },
   "Web/JavaScript/Reference/Statements/label": {

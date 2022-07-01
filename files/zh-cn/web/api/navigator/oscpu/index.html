@@ -5,11 +5,11 @@ translation_of: Web/API/Navigator/oscpu
 ---
 <p>{{ ApiRef("HTML DOM") }}</p>
 
-<h3 id="Summary" name="Summary">概述</h3>
+<h3 id="Summary">概述</h3>
 
 <p>返回一个字符串，代表当前所使用的操作系统类型。</p>
 
-<h3 id="Syntax" name="Syntax">语法</h3>
+<h3 id="Syntax">语法</h3>
 
 <pre class="eval"><em>oscpuInfo</em> = window.navigator.oscpu
 </pre>
@@ -65,7 +65,7 @@ translation_of: Web/API/Navigator/oscpu
 
 <p><sup>1</sup>x.y 表示操作系统的版本号</p>
 
-<h3 id="Example" name="Example">例子</h3>
+<h3 id="Example">例子</h3>
 
 <pre class="brush: js">function osInfo() {
   alert(window.navigator.oscpu);
@@ -73,7 +73,7 @@ translation_of: Web/API/Navigator/oscpu
 // 可能返回:"Windows NT 6.1",表示 windows 7
 </pre>
 
-<h3 id="Notes" name="Notes">备注</h3>
+<h3 id="Notes">备注</h3>
 
 <p>在普通网页中，如果 about:config 中存在<code>general.oscpu.override</code> 项，则该属性的值会返回 about:config 中 <code>general.oscpu.override</code> 项的值。在特权代码中 (Chrome 上下文或者拥有 "UniversalBrowserRead" 特权的网页中)，返回的还是真实的操作系统类型。(译者注：语句：netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead") 用来激活所在网页的 UniversalBrowserRead 特权。)</p>
 

@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Guide/Numbers_and_dates
 
 <h3 id="二進制數值">二進制數值</h3>
 
-<p>二進制數值以 0 為開頭並跟著一個大寫或小寫的英文字母 「B」 (<code>0b</code> 或 <code>0B</code>)。如果 <code>0b</code> 後面接著的數字不是 0 或 1，那會丟出 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError(語法錯誤)</a></code>: "Missing binary digits after 0b"。</p>
+<p>二進制數值以 0 為開頭並跟著一個大寫或小寫的英文字母 「B」 (<code>0b</code> 或 <code>0B</code>)。如果 <code>0b</code> 後面接著的數字不是 0 或 1，那會丟出 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError(語法錯誤)</a></code>: "Missing binary digits after 0b"。</p>
 
 <pre class="brush: js">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
@@ -48,14 +48,14 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 var m = 0644; // 420
 </pre>
 
-<p>Strict mode in ECMAScript 5 forbids octal syntax. Octal syntax isn't part of ECMAScript 5, but it's supported in all browsers by prefixing the octal number with a zero: <code>0644 === 420</code> and<code>"\045" === "%"</code>. In ECMAScript 2015, octal numbers are supported if they are prefixed with <code>0o</code>, e.g.: </p>
+<p>Strict mode in ECMAScript 5 forbids octal syntax. Octal syntax isn't part of ECMAScript 5, but it's supported in all browsers by prefixing the octal number with a zero: <code>0644 === 420</code> and<code>"\045" === "%"</code>. In ECMAScript 2015, octal numbers are supported if they are prefixed with <code>0o</code>, e.g.: </p>
 
 <pre class="brush: js">var a = 0o10; // ES2015: 8
 </pre>
 
 <h3 id="十六進制數值">十六進制數值</h3>
 
-<p>十六進制數值以 0 為開頭並跟著一個大寫或小寫的英文字母 「X」(<code>0x</code> 或 <code>0X</code>)。如果 <code>0b</code> 後面接著的值超出範圍 (0123456789ABCDEF)，那會丟出 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError(語法錯誤)</a></code>:"Identifier starts immediately after numeric literal"。</p>
+<p>十六進制數值以 0 為開頭並跟著一個大寫或小寫的英文字母 「X」(<code>0x</code> 或 <code>0X</code>)。如果 <code>0b</code> 後面接著的值超出範圍 (0123456789ABCDEF)，那會丟出 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError(語法錯誤)</a></code>:"Identifier starts immediately after numeric literal"。</p>
 
 <pre class="brush: js">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
@@ -81,9 +81,9 @@ var notANum = Number.NaN;
 
 <p>You always refer to a property of the predefined <code>Number</code> object as shown above, and not as a property of a <code>Number</code> object you create yourself.</p>
 
-<p>下面這張表格整理了 <code>Number</code> 物件的屬性</p>
+<p>下面這張表格整理了 <code>Number</code> 物件的屬性</p>
 
-<p><code>Number</code><strong> 的屬性</strong></p>
+<p><code>Number</code><strong> 的屬性</strong></p>
 
 <table>
  <thead>
@@ -129,7 +129,7 @@ var notANum = Number.NaN;
 </table>
 
 <table>
- <caption><code>Number</code> 的方法</caption>
+ <caption><code>Number</code> 的方法</caption>
  <thead>
   <tr>
    <th>方法</th>
@@ -169,7 +169,7 @@ var notANum = Number.NaN;
 <p>The <code>Number</code> prototype provides methods for retrieving information from <code>Number</code> objects in various formats. The following table summarizes the methods of <code>Number.prototype</code>.</p>
 
 <table>
- <caption><code>Number.prototype</code> 的方法</caption>
+ <caption><code>Number.prototype</code> 的方法</caption>
  <thead>
   <tr>
    <th scope="col">方法</th>
@@ -209,7 +209,7 @@ var notANum = Number.NaN;
 <p>The following table summarizes the <code>Math</code> object's methods.</p>
 
 <table>
- <caption><code>Math</code> 的方法</caption>
+ <caption><code>Math</code> 的方法</caption>
  <thead>
   <tr>
    <th scope="col">方法</th>
@@ -239,7 +239,7 @@ var notANum = Number.NaN;
   </tr>
   <tr>
    <td>
-    <p>{{jsxref("Math.pow", "pow()")}}, {{jsxref("Math.exp", "exp()")}}, {{jsxref("Math.expm1", "expm1()")}}, {{jsxref("Math.log10", "log10()")}}, {{jsxref("Math.log1p", "log1p()")}}, {{jsxref("Math.log2", "log2()")}}</p>
+    <p>{{jsxref("Math.pow", "pow()")}}, {{jsxref("Math.exp", "exp()")}}, {{jsxref("Math.expm1", "expm1()")}}, {{jsxref("Math.log10", "log10()")}}, {{jsxref("Math.log1p", "log1p()")}}, {{jsxref("Math.log2", "log2()")}}</p>
    </td>
    <td>指數及對數函式</td>
   </tr>
@@ -304,7 +304,7 @@ var notANum = Number.NaN;
  <li>A set of integer values for year, month, day, hour, minute, and seconds. For example, <code>var Xmas95 = new Date(1995, 11, 25, 9, 30, 0);</code>.</li>
 </ul>
 
-<h3 id="Date_的方法"> <code>Date</code> 的方法</h3>
+<h3 id="Date_的方法"> <code>Date</code> 的方法</h3>
 
 <p>The <code>Date</code> object methods for handling dates and times fall into these broad categories:</p>
 
@@ -318,10 +318,10 @@ var notANum = Number.NaN;
 <p>With the "get" and "set" methods you can get and set seconds, minutes, hours, day of the month, day of the week, months, and years separately. There is a <code>getDay</code> method that returns the day of the week, but no corresponding <code>setDay</code> method, because the day of the week is set automatically. These methods use integers to represent these values as follows:</p>
 
 <ul>
- <li>Seconds and minutes: 0 到 59</li>
- <li>Hours: 0 到 23</li>
- <li>Day: 0 (星期日) 到 6 (星期六)</li>
- <li>Date: 1 到 31 (這個月的第幾天)</li>
+ <li>Seconds and minutes: 0 到 59</li>
+ <li>Hours: 0 到 23</li>
+ <li>Day: 0 (星期日) 到 6 (星期六)</li>
+ <li>Date: 1 到 31 (這個月的第幾天)</li>
  <li>Months: 0 (一月) 到 11 (十二月)</li>
  <li>Year: years since 1900</li>
 </ul>
@@ -331,9 +331,9 @@ var notANum = Number.NaN;
 <pre class="brush: js">var Xmas95 = new Date('December 25, 1995');
 </pre>
 
-<p>那 <code>Xmas95.getMonth()</code> 將會回傳 11， <code>Xmas95.getFullYear()</code> 會回傳 1995。</p>
+<p>那 <code>Xmas95.getMonth()</code> 將會回傳 11， <code>Xmas95.getFullYear()</code> 會回傳 1995。</p>
 
-<p><code>getTime</code> 及 <code>setTime</code> 這兩個方法對於比較日期有幫助。 The <code>getTime</code> method returns the number of milliseconds since January 1, 1970, 00:00:00 for a <code>Date</code> object.</p>
+<p><code>getTime</code> 及 <code>setTime</code> 這兩個方法對於比較日期有幫助。 The <code>getTime</code> method returns the number of milliseconds since January 1, 1970, 00:00:00 for a <code>Date</code> object.</p>
 
 <p>For example, the following code displays the number of days left in the current year:</p>
 
@@ -355,7 +355,7 @@ IPOdate.setTime(Date.parse('Aug 9, 1995'));
 
 <h3 id="範例">範例</h3>
 
-<p>下面這個範例，<code>JSClock()</code> 這個函式將會以數位時鐘的格式回傳時間。</p>
+<p>下面這個範例，<code>JSClock()</code> 這個函式將會以數位時鐘的格式回傳時間。</p>
 
 <pre class="brush: js">function JSClock() {
   var time = new Date();
@@ -372,12 +372,12 @@ IPOdate.setTime(Date.parse('Aug 9, 1995'));
 }
 </pre>
 
-<p> <code>JSClock</code> 這個函式會先建立一個名為 <code>time</code> 的 <code>Date</code> 物件; 因為沒有提供任何引數，所以會放入目前的日期及時間。接著呼叫 <code>getHours</code> 、 <code>getMinutes</code> 以及 <code>getSeconds</code> 這三個方法將現在的時、分以及秒分別指定給 <code>hour</code> 、 <code>minute</code> 以及 <code>second</code> 這三個變數。</p>
+<p> <code>JSClock</code> 這個函式會先建立一個名為 <code>time</code> 的 <code>Date</code> 物件; 因為沒有提供任何引數，所以會放入目前的日期及時間。接著呼叫 <code>getHours</code> 、 <code>getMinutes</code> 以及 <code>getSeconds</code> 這三個方法將現在的時、分以及秒分別指定給 <code>hour</code> 、 <code>minute</code> 以及 <code>second</code> 這三個變數。</p>
 
-<p>接著的四行指令將會建立一個時間的字串。第一行的指令建立了一個變數 <code>temp</code>，以條件運算式指定值; 如果 <code>hour</code> 大於 12，那就指定 (<code>hour - 12</code>)，不然會直接指定 <code>hour</code>， 但如果 <code>hour</code> 等於 0 ， 則改為 12。</p>
+<p>接著的四行指令將會建立一個時間的字串。第一行的指令建立了一個變數 <code>temp</code>，以條件運算式指定值; 如果 <code>hour</code> 大於 12，那就指定 (<code>hour - 12</code>)，不然會直接指定 <code>hour</code>， 但如果 <code>hour</code> 等於 0 ， 則改為 12。</p>
 
-<p>接著下一行將 <code>minute</code> 加到 <code>temp</code> 中。如果 <code>minute</code> 小於 10, 則會在附加時補上一個零; 不然的話會直接加上冒號及分鐘數。秒數也是以同樣的作法附加到 <code>temp</code> 上。</p>
+<p>接著下一行將 <code>minute</code> 加到 <code>temp</code> 中。如果 <code>minute</code> 小於 10, 則會在附加時補上一個零; 不然的話會直接加上冒號及分鐘數。秒數也是以同樣的作法附加到 <code>temp</code> 上。</p>
 
-<p>最後，判斷 <code>hour</code> 是不是大於等於 12 ，如果是就在 <code>temp</code> 加上 "P.M." ，不然就加上 "A.M."。</p>
+<p>最後，判斷 <code>hour</code> 是不是大於等於 12 ，如果是就在 <code>temp</code> 加上 "P.M." ，不然就加上 "A.M."。</p>
 
 <p>{{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}</p>

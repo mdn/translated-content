@@ -30,7 +30,7 @@ translation_of: Web/API/Element/removeAttribute
 <p><strong>注意：</strong>因为 <code>removeAttribute()</code> 不会返回任何有效值，你不能使用链式方法（连续使用方法，例如 <code>document.body.removeAttribute("first").removeAttribute("second")…</code>）连续移除多个属性。</p>
 </div>
 
-<h2 id="Notes" name="Notes">使用说明</h2>
+<h2 id="Notes">使用说明</h2>
 
 <p>若要彻底移除一个属性的效果，应当使用  <code>removeAttribute()</code>，而不是使用 {{domxref("Element.setAttribute", "setAttribute()")}} 将属性值设置为  <code>null</code>。对于许多属性，如果仅将其值设为 <code>null</code>，这不会造达成和预期一样的效果。</p>
 

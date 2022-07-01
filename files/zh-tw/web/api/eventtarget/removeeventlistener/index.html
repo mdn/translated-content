@@ -5,7 +5,7 @@ translation_of: Web/API/EventTarget/removeEventListener
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p><strong><code>EventTarget.removeEventListener()</code></strong> 方法可以移除先前由 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 所註冊的事件監聽器。</p>
+<p><strong><code>EventTarget.removeEventListener()</code></strong> 方法可以移除先前由 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 所註冊的事件監聽器。</p>
 
 <h2 id="語法">語法</h2>
 
@@ -23,7 +23,7 @@ translation_of: Web/API/EventTarget/removeEventListener
  <dt>options {{optional_inline}}</dt>
  <dd>An options object that specifies characteristics about the event listener. The available options are:
  <ul>
-  <li><code>capture</code>: A {{jsxref("Boolean")}} that indicates that events of this type will be dispatched to the registered <code>listener</code> before being dispatched to any <code>EventTarget</code> beneath it in the DOM tree.  </li>
+  <li><code>capture</code>: A {{jsxref("Boolean")}} that indicates that events of this type will be dispatched to the registered <code>listener</code> before being dispatched to any <code>EventTarget</code> beneath it in the DOM tree.  </li>
   <li><code>passive</code>: A {{jsxref("Boolean")}} indicating that the <code>listener</code> will never call <code>preventDefault()</code>. If it does, the user agent should ignore it and generate a console warning.</li>
   <li>{{non-standard_inline}}<code> mozSystemGroup</code>: Available only in code running in XBL or in Firefox' chrome, it is a {{jsxref("Boolean")}} defining if the listener is added to the system group.</li>
  </ul>
@@ -50,37 +50,37 @@ translation_of: Web/API/EventTarget/removeEventListener
 <p>This example shows how to add a <code>click</code>-based event listener and remove a <code>mouseover</code>-based event listener.</p>
 
 <pre class="brush: js">var body =
-        document.querySelector('body'),
-    clickTarget =
-        document.getElementById('click-target'),
-    mouseOverTarget =
-        document.getElementById('mouse-over-target'),
-    toggle = false;
+        document.querySelector('body'),
+    clickTarget =
+        document.getElementById('click-target'),
+    mouseOverTarget =
+        document.getElementById('mouse-over-target'),
+    toggle = false;
 
 function makeBackgroundYellow() {
-    'use strict';
+    'use strict';
 
-    if (toggle) {
-        body.style.backgroundColor = 'white';
-    } else {
-        body.style.backgroundColor = 'yellow';
-    }
+    if (toggle) {
+        body.style.backgroundColor = 'white';
+    } else {
+        body.style.backgroundColor = 'yellow';
+    }
 
-    toggle = !toggle;
+    toggle = !toggle;
 }
 
 clickTarget.addEventListener('click',
-    makeBackgroundYellow,
-    false
+    makeBackgroundYellow,
+    false
 );
 
 mouseOverTarget.addEventListener('mouseover', function () {
-    'use strict';
+    'use strict';
 
-    clickTarget.removeEventListener('click',
-        makeBackgroundYellow,
-        false
-    );
+    clickTarget.removeEventListener('click',
+        makeBackgroundYellow,
+        false
+    );
 });
 </pre>
 

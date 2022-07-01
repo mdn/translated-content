@@ -29,13 +29,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
  <li>a <code>sendResponse</code> function that can be used to send a response back to the sender.</li>
 </ul>
 
-<p>You can send a synchronous response to the message by calling the <code>sendResponse</code> function inside your listener. <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Sending_a_synchronous_response">See an example</a>.</p>
+<p>You can send a synchronous response to the message by calling the <code>sendResponse</code> function inside your listener. <a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Sending_a_synchronous_response">See an example</a>.</p>
 
 <p>To send an asynchronous response, there are two options:</p>
 
 <ul>
- <li>return <code>true</code> from the event listener. This keeps the <code>sendResponse</code> function valid after the listener returns, so you can call it later. <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_sendResponse">See an example</a>.</li>
- <li>return a <code>Promise</code> from the event listener, and resolve when you have the response (or reject it in case of an error). <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_a_Promise">See an example</a>.</li>
+ <li>return <code>true</code> from the event listener. This keeps the <code>sendResponse</code> function valid after the listener returns, so you can call it later. <a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_sendResponse">See an example</a>.</li>
+ <li>return a <code>Promise</code> from the event listener, and resolve when you have the response (or reject it in case of an error). <a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_a_Promise">See an example</a>.</li>
 </ul>
 
 <div class="warning">
@@ -143,7 +143,7 @@ function notifyExtension(e) {
 }</code>
 </pre>
 
-<p>The background script listens for these messages and displays a notification using the <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code> API:</p>
+<p>The background script listens for these messages and displays a notification using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code> API:</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">// background-script.js
 

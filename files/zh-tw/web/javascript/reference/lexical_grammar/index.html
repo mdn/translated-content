@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
    <td>位元組順序記號</td>
    <td>&lt;BOM&gt;</td>
    <td>出現在腳本的開頭，用來標記此腳本是否為Unicode還有文本的位元組順序<br>
-     (<a href="http://en.wikipedia.org/wiki/Byte_order_mark">Wikipedia</a>)</td>
+     (<a href="http://en.wikipedia.org/wiki/Byte_order_mark">Wikipedia</a>)</td>
   </tr>
  </tbody>
 </table>
@@ -83,21 +83,21 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
    <td>空格</td>
    <td>&lt;SP&gt;</td>
    <td>一般的空白字元</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>U+00A0</td>
    <td>不中斷空格</td>
    <td>&lt;NBSP&gt;</td>
    <td>一般的空白字元，但禁止自動換行或合併多個空白 (<a href="https://en.wikipedia.org/wiki/Non-breaking_space">Wikipedia</a>)</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>其他</td>
    <td>其他Unicode空白字元</td>
    <td>&lt;USP&gt;</td>
    <td><a href="http://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode">Wikipedia</a></td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -106,7 +106,7 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
 
 <p>除了空白字元之外，行終止字元也用來提升源碼可讀性。然而，在某些情況下行終止字元會影響 Javascript 程式的執行，所以有些地方是被禁止使用的。行終止字元同時也會影響<a href="#Automatic_semicolon_insertion">自動插入分號</a>的運作。在<a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">正規表達式</a>中，行終止字元屬於 <strong>\s</strong> 的類別。</p>
 
-<p>在 ECMAScript 中，只有以下的Unicode碼位被視為行終止字元，其他如 Next Line, NEL, U+0085 等的行終止字元被視為空白字元。</p>
+<p>在 ECMAScript 中，只有以下的Unicode碼位被視為行終止字元，其他如 Next Line, NEL, U+0085 等的行終止字元被視為空白字元。</p>
 
 <table>
  <caption>行終止字元</caption>
@@ -137,14 +137,14 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
    <td>行分隔字元</td>
    <td>&lt;LS&gt;</td>
    <td><a href="http://en.wikipedia.org/wiki/Newline">Wikipedia</a></td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>U+2029</td>
    <td>段分隔字元</td>
    <td>&lt;PS&gt;</td>
    <td><a href="http://en.wikipedia.org/wiki/Newline">Wikipedia</a></td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -155,49 +155,49 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
 
 <p>Javascript 有兩種方式寫註解。</p>
 
-<p>第一種是 <code>//</code>; 它將在它之後的文本變成註解。例如：</p>
+<p>第一種是 <code>//</code>; 它將在它之後的文本變成註解。例如：</p>
 
 <pre class="brush: js">function comment() {
-  // 這是一行 Javascript 註解
-  console.log('Hello world!');
+  // 這是一行 Javascript 註解
+  console.log('Hello world!');
 }
 comment();
 </pre>
 
-<p>第二種更有彈性的方式是 <code>/* */</code> 。</p>
+<p>第二種更有彈性的方式是 <code>/* */</code> 。</p>
 
 <p>例如，你可以將它用在單行上：</p>
 
 <pre class="brush: js">function comment() {
-  /* 這是一行 Javascript 註解 */
-  console.log('Hello world!');
+  /* 這是一行 Javascript 註解 */
+  console.log('Hello world!');
 }
 comment();</pre>
 
 <p>你也可以將它用來寫多行註解：</p>
 
 <pre class="brush: js">function comment() {
-  /* 這個註解可以跨越多行。注意只有當我們要結束註解時才寫
-     多行註解的終止符號 */
-  console.log('Hello world!');
+  /* 這個註解可以跨越多行。注意只有當我們要結束註解時才寫
+     多行註解的終止符號 */
+  console.log('Hello world!');
 }
 comment();</pre>
 
 <p>如果你想要你也可以把它插在一行的中央，雖然它會讓你的程式變得難讀所以請謹慎使用：</p>
 
 <pre class="brush: js">function comment(x) {
-  console.log('Hello ' + x /* 插入 x 的值 */ + ' !');
+  console.log('Hello ' + x /* 插入 x 的值 */ + ' !');
 }
 comment('world');</pre>
 
 <p>此外，你也可以把一段程式用註解包起來讓它不被執行：</p>
 
 <pre class="brush: js">function comment() {
-  /* console.log('Hello world!'); */
+  /* console.log('Hello world!'); */
 }
 comment();</pre>
 
-<p>在這個情況， <code>console.log()</code> 永遠不會被呼叫因為它在註解裡面。任意行數的程式碼都可以用這個方法來使之失去作用。</p>
+<p>在這個情況， <code>console.log()</code> 永遠不會被呼叫因為它在註解裡面。任意行數的程式碼都可以用這個方法來使之失去作用。</p>
 
 <h2 id="保留字">保留字</h2>
 
@@ -291,18 +291,18 @@ comment();</pre>
  <li><code>volatile</code></li>
 </ul>
 
-<p>此外，如 <code>null</code>, <code>true</code> 與 <code>false</code> 等實體語法 (literal) 在 ECMAScript 中不能被用作識別字。</p>
+<p>此外，如 <code>null</code>, <code>true</code> 與 <code>false</code> 等實體語法 (literal) 在 ECMAScript 中不能被用作識別字。</p>
 
 <h3 id="保留字的使用">保留字的使用</h3>
 
-<p>只有當用在識別字的時候保留關鍵字才會被保留 (相對於 <code>IdentifierNames</code>) 。如 <a href="http://es5.github.com/#A.1">es5.github.com/#A.1</a> 所述，以下保留關鍵字的用法都屬於<code>IdentifierNames</code> 因此是合法的。</p>
+<p>只有當用在識別字的時候保留關鍵字才會被保留 (相對於 <code>IdentifierNames</code>) 。如 <a href="http://es5.github.com/#A.1">es5.github.com/#A.1</a> 所述，以下保留關鍵字的用法都屬於<code>IdentifierNames</code> 因此是合法的。</p>
 
 <pre class="brush: js">a.import
 a['import']
 a = { import: 'test' }.
 </pre>
 
-<p>反之，以下用法不合法因為用在識別字上，識別字屬於 <code>IdentifierName</code> 但不包含保留字。識別字用在 <code>FunctionDeclaration, FunctionExpression, VariableDeclaration</code> 等等?。而 <code>IdentifierName</code> 被用在 <code>MemberExpression, CallExpression</code> 等等。</p>
+<p>反之，以下用法不合法因為用在識別字上，識別字屬於 <code>IdentifierName</code> 但不包含保留字。識別字用在 <code>FunctionDeclaration, FunctionExpression, VariableDeclaration</code> 等等?。而 <code>IdentifierName</code> 被用在 <code>MemberExpression, CallExpression</code> 等等。</p>
 
 <pre class="brush: js">function import() {} // 不合法.</pre>
 
@@ -310,13 +310,13 @@ a = { import: 'test' }.
 
 <h3 id="Null">Null</h3>
 
-<p>更多說明請參閱 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> 。</p>
+<p>更多說明請參閱 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> 。</p>
 
 <pre class="brush: js">null</pre>
 
 <h3 id="布林值">布林值</h3>
 
-<p>更多說明請參閱 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a> 。</p>
+<p>更多說明請參閱 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a> 。</p>
 
 <pre class="brush: js">true
 false</pre>
@@ -333,11 +333,11 @@ false</pre>
 0777 // 被解析成八進制, 十進制值為 511
 </pre>
 
-<p>數值的實體語法可以可以以零 (<code>0</code>) 為首再街上其他十進制數字。然而一但零後面的的數字都小於8時，這個數值會被解讀成八進制數字，這個行為不會丟出例外，請參閱 {{bug(957513)}}。也請參閱 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix"><code>parseInt()</code></a>。</p>
+<p>數值的實體語法可以可以以零 (<code>0</code>) 為首再街上其他十進制數字。然而一但零後面的的數字都小於8時，這個數值會被解讀成八進制數字，這個行為不會丟出例外，請參閱 {{bug(957513)}}。也請參閱 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix"><code>parseInt()</code></a>。</p>
 
 <h4 id="二進制">二進制</h4>
 
-<p>二進制數字的語法為一個起首零加上小寫或大小的拉丁字元"B"  (<code>0b</code> 或 <code>0B</code>)。因為這個語法是在 ECMAScript 2015 才新增的，請參閱底下的瀏覽器相容表。如果 <code>0b</code> 之後的數字不是0或1，"0b之後找不到二進制數字"的 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code> 會被丟出。</p>
+<p>二進制數字的語法為一個起首零加上小寫或大小的拉丁字元"B"  (<code>0b</code> 或 <code>0B</code>)。因為這個語法是在 ECMAScript 2015 才新增的，請參閱底下的瀏覽器相容表。如果 <code>0b</code> 之後的數字不是0或1，"0b之後找不到二進制數字"的 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code> 會被丟出。</p>
 
 <pre class="brush: js">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
@@ -345,7 +345,7 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
 <h4 id="八進制">八進制</h4>
 
-<p>八進制數字的語法為一個起首零加上小寫或大小的拉丁字元"O"  (<code>0o</code> 或 <code>0B</code>)。因為這個語法是在 ECMAScript 2015 才新增的，請參閱底下的瀏覽器相容表。如果 <code>0o</code> 之後的數字不是 (01234567) 其中之一，"0o之後找不到八進制數字"的 SyntaxError 會被丟出。</p>
+<p>八進制數字的語法為一個起首零加上小寫或大小的拉丁字元"O"  (<code>0o</code> 或 <code>0B</code>)。因為這個語法是在 ECMAScript 2015 才新增的，請參閱底下的瀏覽器相容表。如果 <code>0o</code> 之後的數字不是 (01234567) 其中之一，"0o之後找不到八進制數字"的 SyntaxError 會被丟出。</p>
 
 <pre class="brush: js">var n = 0O755; // 493
 var m = 0o644; // 420
@@ -357,7 +357,7 @@ var m = 0o644; // 420
 
 <h4 id="十六進制">十六進制</h4>
 
-<p>十六進制數字的語法為一個起首零加上小寫或大小的拉丁字元"X"  (<code>0x</code> 或 <code>0X</code>)。如果 <code>0x</code> 之後的數字不是 (0123456789ABCDEF) 其中之一，"識別字緊接在數值實體語法後"的 SyntaxError 會被丟出。</p>
+<p>十六進制數字的語法為一個起首零加上小寫或大小的拉丁字元"X"  (<code>0x</code> 或 <code>0X</code>)。如果 <code>0x</code> 之後的數字不是 (0123456789ABCDEF) 其中之一，"識別字緊接在數值實體語法後"的 SyntaxError 會被丟出。</p>
 
 <pre class="brush: js">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
@@ -366,7 +366,7 @@ var m = 0o644; // 420
 
 <h3 id="物件">物件</h3>
 
-<p>更多說明請參閱 {{jsxref("Object")}} 及 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">Object initializer</a>。</p>
+<p>更多說明請參閱 {{jsxref("Object")}} 及 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">Object initializer</a>。</p>
 
 <pre class="brush: js">var o = { a: 'foo', b: 'bar', c: 42 };
 
@@ -396,7 +396,7 @@ var o = { a: a, b: b, c: c };
 
 <h4 id="Unicode_跳脫序列">Unicode 跳脫序列</h4>
 
-<p>一個Unicode跳脫序列由 <code>\u</code> 接上4個十六進制的數值所組成。每一個十六進制的數值表示一個UTF-16編碼的2位元組字元。對於編碼位置在0~FFFF之間的字元，其Unicode表示法與編碼位置相同。而更高的編碼位置需要兩個跳脫序列來表示，又稱為代理對(surrogate pair)，代理對表示的數值與編碼位置不同 (<a href="https://en.wikipedia.org/wiki/UTF-16">代理對計算規則wiki</a>)。</p>
+<p>一個Unicode跳脫序列由 <code>\u</code> 接上4個十六進制的數值所組成。每一個十六進制的數值表示一個UTF-16編碼的2位元組字元。對於編碼位置在0~FFFF之間的字元，其Unicode表示法與編碼位置相同。而更高的編碼位置需要兩個跳脫序列來表示，又稱為代理對(surrogate pair)，代理對表示的數值與編碼位置不同 (<a href="https://en.wikipedia.org/wiki/UTF-16">代理對計算規則wiki</a>)。</p>
 
 <pre class="brush: js">'\u00A9' // "©"
 </pre>
@@ -405,7 +405,7 @@ var o = { a: a, b: b, c: c };
 
 <p>ECMAScript 2015 新增。使用Unicode跳脫編碼位置表示法，即可使用與編碼位置完全相同的表示法 (最高到 <code>0x10FFFF</code>) 而不受編碼位置高於FFFF需用代理對表示的限制。</p>
 
-<p>更多說明請參閱 {{jsxref("String.fromCodePoint()")}} 或 {{jsxref("String.prototype.codePointAt()")}}。</p>
+<p>更多說明請參閱 {{jsxref("String.fromCodePoint()")}} 或 {{jsxref("String.prototype.codePointAt()")}}。</p>
 
 <pre class="brush: js">'\u{2F804}'
 
@@ -414,7 +414,7 @@ var o = { a: a, b: b, c: c };
 
 <h3 id="正規表達式">正規表達式</h3>
 
-<p>更多說明請參閱  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp"><code>RegExp</code></a> 。</p>
+<p>更多說明請參閱  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp"><code>RegExp</code></a> 。</p>
 
 <pre class="brush: js">/ab+c/g
 
@@ -424,7 +424,7 @@ var o = { a: a, b: b, c: c };
 
 <h3 id="範本字串">範本字串</h3>
 
-<p>更多說明請參閱  <a href="/en-US/docs/Web/JavaScript/Reference/template_strings">template strings</a> 。</p>
+<p>更多說明請參閱  <a href="/en-US/docs/Web/JavaScript/Reference/template_strings">template strings</a> 。</p>
 
 <pre class="brush: js">`string text`
 
@@ -437,7 +437,7 @@ tag `string text ${expression} string text`</pre>
 
 <h2 id="自動插入分號">自動插入分號</h2>
 
-<p>否些 <a href="/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript statements</a> 必須以分號作結，因此會受到自動插入分號 (ASI) 規則影響。</p>
+<p>否些 <a href="/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript statements</a> 必須以分號作結，因此會受到自動插入分號 (ASI) 規則影響。</p>
 
 <ul>
  <li>空運算式</li>
@@ -449,9 +449,9 @@ tag `string text ${expression} string text`</pre>
  <li><code>return</code></li>
 </ul>
 
-<p>ECMAScript 規格闡明<a href="https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion"> 自動插入分號的三個規則</a>。</p>
+<p>ECMAScript 規格闡明<a href="https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion"> 自動插入分號的三個規則</a>。</p>
 
-<p>1.  如果 <a href="#Line_terminators">行終止字元</a> 或 "}" 出現在不符文法的地方，一個分號會被自動插入在其之前。</p>
+<p>1.  如果 <a href="#Line_terminators">行終止字元</a> 或 "}" 出現在不符文法的地方，一個分號會被自動插入在其之前。</p>
 
 <pre class="brush: js">{ 1 2 } 3
 
@@ -459,9 +459,9 @@ tag `string text ${expression} string text`</pre>
 
 { 1 2 ;} 3;</pre>
 
-<p>2.  當一個token輸入流到了結尾而解析器仍然無法將其解析為一個完整的程式，一個分號會被自動插入於其後。</p>
+<p>2.  當一個token輸入流到了結尾而解析器仍然無法將其解析為一個完整的程式，一個分號會被自動插入於其後。</p>
 
-<p>在這裡 <code>++</code> 並不會被當作作用於變數<code>b</code>的 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment">後綴運算元</a>，因為行終止字元出現在<code>b</code> 和 <code>++</code>之間。</p>
+<p>在這裡 <code>++</code> 並不會被當作作用於變數<code>b</code>的 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment">後綴運算元</a>，因為行終止字元出現在<code>b</code> 和 <code>++</code>之間。</p>
 
 <pre class="brush: js">a = b
 ++c

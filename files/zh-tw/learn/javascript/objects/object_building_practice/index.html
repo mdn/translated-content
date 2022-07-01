@@ -105,7 +105,7 @@ var height = canvas.height = window.innerHeight;</pre>
   ctx.fill();
 }</pre>
 
-<p>透過此函式，再呼叫我們之前定義在 2D canvas 內文(ctx)中的物件成員，就能讓球體自己在螢幕上畫出自己。此內文就像是白紙一樣，接著就用筆在紙上畫出點東西：</p>
+<p>透過此函式，再呼叫我們之前定義在 2D canvas 內文(ctx)中的物件成員，就能讓球體自己在螢幕上畫出自己。此內文就像是白紙一樣，接著就用筆在紙上畫出點東西：</p>
 
 <ul>
  <li>首先以 <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath">beginPath()</a></code> 聲明我們要在紙上畫出來的形狀。</li>
@@ -173,9 +173,9 @@ testBall.draw()</pre>
  <li>檢查 <code>y</code> 座標是否小於 0 (球體抵達頂部邊緣)。</li>
 </ul>
 
-<p>在各情境中，因為 <code>x</code>/<code>y</code> 座標為球體的中心，所以我們把球體的 <code>size</code> 納入計算，但我們不要球體在回彈之前在半路上就跳出畫面之外。</p>
+<p>在各情境中，因為 <code>x</code>/<code>y</code> 座標為球體的中心，所以我們把球體的 <code>size</code> 納入計算，但我們不要球體在回彈之前在半路上就跳出畫面之外。</p>
 
-<p>最後 2 行則是將 <code>velX</code> 與 <code>velY</code> 值分別加入 <code>x＼y</code> 座標之中；每次只要呼叫此函式，球體就會依照應有的效果移動。</p>
+<p>最後 2 行則是將 <code>velX</code> 與 <code>velY</code> 值分別加入 <code>x＼y</code> 座標之中；每次只要呼叫此函式，球體就會依照應有的效果移動。</p>
 
 <p>到這裡沒有問題的話，就開始弄動畫吧！</p>
 

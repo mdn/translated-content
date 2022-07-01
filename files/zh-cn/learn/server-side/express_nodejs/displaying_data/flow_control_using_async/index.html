@@ -17,7 +17,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
  <li><code><a href="http://caolan.github.io/async/docs.html#waterfall">async.waterfall()</a></code> 用于必须序列运行的操作，每个操作取决于前面操作的结果。</li>
 </ul>
 
-<h2 class="highlight-spanned" id="为什么需要这么做">为什么需要这么做？</h2>
+<h2 id="为什么需要这么做">为什么需要这么做？</h2>
 
 <p>我们在 Express 中使用的大多数方法，都是异步的 - 您指定要执行的操作，传递回调。该方法立即返回，并在请求的操作完成时，调用回调。按照 Express 中的惯例，回调函数将错误值作为第一个参数传递（或成功时为 <code>null</code>），并将函数的结果（如果有的话）作为第二个参数传递。</p>
 
@@ -38,7 +38,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <p>一个更好的解决方案，是并行执行所有请求，然后在所有查询完成后执行单个回调。这是 Async 模块简化的流操作！</p>
 
-<h2 class="highlight-spanned" id="平行的非同步操作">平行的非同步操作</h2>
+<h2 id="平行的非同步操作">平行的非同步操作</h2>
 
 <p>方法<code><a href="http://caolan.github.io/async/docs.html#parallel">async.parallel()</a></code>用于并行运行多个异步操作。</p>
 
@@ -62,7 +62,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <p>如果您将一组函数，作为第一个参数传递，则结果将是一个数组（数组顺序结果，将与声明函数的原始顺序匹配 - 而不是它们完成的顺序）。</p>
 
-<h2 class="highlight-spanned" id="序列的非同步操作">序列的非同步操作</h2>
+<h2 id="序列的非同步操作">序列的非同步操作</h2>
 
 <p><code><a href="http://caolan.github.io/async/docs.html#series">async.series()</a></code>方法用于按顺序运行多个异步操作，后续函数不依赖于先前函数的输出。它本质上是声明的，并且行为与<code>async.parallel()</code>.相同。</p>
 
@@ -98,7 +98,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
   }
 );</code></pre>
 
-<h2 class="highlight-spanned" id="依赖序列的非同步操作">依赖序列的非同步操作</h2>
+<h2 id="依赖序列的非同步操作">依赖序列的非同步操作</h2>
 
 <p>方法<code><a href="http://caolan.github.io/async/docs.html#waterfall">async.waterfall()</a></code>用于在每个操作依赖于前一个操作的结果时，依次运行多个异步操作。</p>
 
@@ -123,7 +123,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 }
 );</code></pre>
 
-<h2 class="highlight-spanned" id="安装_async">安装 async</h2>
+<h2 id="安装_async">安装 async</h2>
 
 <p>使用 NPM 包管理器安装 async 模块，以便我们可以在代码中使用它。您可以常规方式执行此操作，在 LocalLibrary 项目的根目录中，打开命令提示并输入以下命令：</p>
 

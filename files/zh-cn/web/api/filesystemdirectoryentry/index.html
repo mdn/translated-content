@@ -11,11 +11,11 @@ translation_of: Web/API/FileSystemDirectoryEntry
 <p>由于这是个非标准的 API，它的规范当前并没有在标准进程中，重要的是要记住，并不是所有浏览器都实现了他，并且实现它的浏览器可能仅仅实现了一小部分。更多细节请查看 <a href="#browser_compatibility">Browser compatibility</a> 。</p>
 </div>
 
-<h2 id="basic_concepts" name="basic_concepts">基本概念</h2>
+<h2 id="basic_concepts">基本概念</h2>
 
 <p>你可以通过调用 {{domxref("FileSystemDirectoryEntry.getDirectory", "getDirectory()")}} 创建新的目录。如果你打算创建子目录，按需创建每个子目录。如果你尝试使用完整路径创建目录，包含不存在的父目录，会返回错误。所以需要在创建父目录之后，递归添加新的路径来创建层次。</p>
 
-<h3 id="example" name="example">示例</h3>
+<h3 id="example">示例</h3>
 
 <p>下面的代码中，我们创建了一个叫做 "Documents" 的目录。</p>
 
@@ -69,7 +69,7 @@ window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, onFs, onError);</pre>
 
 <p>这个 API 没有官方的 W3C 或者 WHATWG 规范。</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 {{Compat("api.FileSystemDirectoryEntry")}}
 

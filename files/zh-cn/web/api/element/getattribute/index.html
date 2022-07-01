@@ -7,11 +7,11 @@ translation_of: Web/API/Element/getAttribute
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<h2 id="Summary" name="Summary">概要</h2>
+<h2 id="Summary">概要</h2>
 
 <p><strong><code>getAttribute()</code></strong> 返回元素上一个指定的属性值。如果指定的属性不存在，则返回  <code>null</code> 或 <code>""</code> （空字符串）；具体细节，请参阅  <a href="#notes">Notes</a> 部分。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>let attribute</em> = element.getAttribute(<em>attributeName</em>);
 </pre>
@@ -23,7 +23,7 @@ translation_of: Web/API/Element/getAttribute
  <li><code><em>attributeName</em></code> 是你想要获取的属性值的属性名称。</li>
 </ul>
 
-<h2 id="Example" name="Example">例子</h2>
+<h2 id="Example">例子</h2>
 
 <pre class="brush:js">let div1 = document.getElementById("div1");
 let align = div1.getAttribute("align");
@@ -31,7 +31,7 @@ let align = div1.getAttribute("align");
 alert(align);
 // shows the value of align for the element with id="div1"</pre>
 
-<h2 id="Notes" name="Notes">备注</h2>
+<h2 id="Notes">备注</h2>
 
 <p>当在被标记为 HTML 文档中的一个 HTML 元素上调用此方法时，<code>getAttribute()</code> 会先将其参数转换为小写形式。</p>
 
@@ -41,7 +41,7 @@ alert(align);
 
 {{Compat("api.Element.getAttribute")}}
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-666EE0F9">DOM Level 2 Core: getAttribute</a> (introduced in <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute">DOM Level 1 Core</a>)</li>

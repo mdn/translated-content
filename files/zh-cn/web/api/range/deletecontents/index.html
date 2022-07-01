@@ -14,19 +14,19 @@ translation_of: Web/API/Range/deleteContents
 
 <p>不像{{ domxref("Range.extractContents") }}一样，本方法不会返回一个包含删除内容的文本片段{{domxref("DocumentFragment")}} 。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>range</em>.deleteContents()
 </pre>
 
-<h2 id="Example" name="Example">例子</h2>
+<h2 id="Example">例子</h2>
 
 <pre class="brush: js">range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
 range.deleteContents();
 </pre>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 <table class="standard-table">
  <tbody>

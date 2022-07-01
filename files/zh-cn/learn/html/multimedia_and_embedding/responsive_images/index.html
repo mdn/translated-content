@@ -117,22 +117,6 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 <p><strong>注意</strong>: 在 HTML 文件中的 {{htmlelement("head")}} 标签里，你将会找到这一行代码 <code>&lt;meta name="viewport" content="width=device-width"&gt;</code>: 这行代码会强制地让手机浏览器采用它们真实可视窗口的宽度来加载网页（有些手机浏览器会提供不真实的可视窗口宽度，然后加载比浏览器真实可视窗口的宽度大的宽度的网页，然后再缩小加载的页面，这样的做法对响应式图片或其他设计，没有任何帮助。我们会在未来的模块教给你更多关于这方面的知识）。</p>
 </div>
 
-<h3 id="一些有用的开发工具">一些有用的开发工具</h3>
-
-<p>这里有一些在浏览器中的非常实用的<a href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">开发者工具</a>用来帮助制定重要的槽宽度，以及其他你可能会用到的场景。当我在设置槽宽度的时候，我先加载了示例中的无响应的版本（<code>not-responsive.html</code>），然后进入 <a href="/zh-CN/docs/Tools/Responsive_Design_Mode">响应设计视图</a> （<em>Tools &gt; Web Developer &gt; Responsive Design View），</em>这个工具允许你在不同设备的屏幕宽度场景下查看网页的布局。</p>
-
-<p>我设置我的视图宽度为 320px，然后再改为 480px；每一次宽度的改变我就进入 <a href="/zh-CN/docs/Tools/Page_Inspector">DOM 检查 </a>，点击我们感兴趣的 {{htmlelement("img")}} 元素，然后在显示屏右侧的 Box Model 视图选项卡中查看它的大小。你应该会看到，这种无响应式的做法会让你的图片在不同屏幕宽度下有着固定的宽度。</p>
-
-<p><img alt="A screenshot of the firefox devtools with an image element highlighted in the dom, showing its dimensions as 440 by 293 pixels." src="https://mdn.mozillademos.org/files/12932/box-model-devtools.png"></p>
-
-<p>接着，你可以检查 <code>srcset</code> 是否正常工作，你需要将视图的宽度设置为你想要的，(比如，把宽度设置的比较小，让页面看起来比较狭窄），打开网络检查（<em>Tools &gt; Web Developer &gt; Network），</em>然后重新加载页面。网络检查工具会给你一个列表，里面的文件都是已经被下载来构造网页的。然后你可以在这里看到哪个图像文件被下载了。</p>
-
-<div class="note">
-<p><strong>注意</strong>: 在 Chrome 中测试时，通过如下方式禁用缓存：打开 DevTools，并选中 Settings &gt; Preferences &gt; Network 下 Disable cache 的选择框。否则，Chrome 会优先选择缓存图片而不是恰好适配的那个。</p>
-</div>
-
-<p><img alt="a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images" src="https://mdn.mozillademos.org/files/12934/network-devtools.png"></p>
-
 <h3 id="分辨率切换_相同的尺寸_不同的分辨率">分辨率切换：相同的尺寸，不同的分辨率</h3>
 
 <p>如果你支持多种分辨率显示，但希望每个人在屏幕上看到的图片的实际尺寸是相同的，你可以让浏览器通过<code>srcset</code>和 x 语法结合——一种更简单的语法——而不用<code>sizes</code>，来选择适当分辨率的图片。你可以看一个例子 <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html">srcset-resolutions.html</a>（或 <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html">the source code</a>）：</p>
@@ -143,7 +127,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
      src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy"&gt;
 </pre>
 
-<p><img alt="A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image" src="https://mdn.mozillademos.org/files/12942/resolution-example.png">在这个例子中，下面的 CSS 会应用在图片上，所以它的宽度在屏幕上是 320 像素（也称作 CSS 像素）：</p>
+<p><img alt="A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image" src="resolution-example.png">在这个例子中，下面的 CSS 会应用在图片上，所以它的宽度在屏幕上是 320 像素（也称作 CSS 像素）：</p>
 
 <pre class="brush: css notranslate">img {
   width: 320px;

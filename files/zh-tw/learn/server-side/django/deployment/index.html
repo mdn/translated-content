@@ -261,14 +261,14 @@ with open('/etc/secret_key.txt') as f:
 On branch master
 Your branch is up-to-date with 'origin/master'.
 Changes to be committed:
-  (use "git reset HEAD &lt;file&gt;..." to unstage)
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
 
-        modified:   .gitignore
-        new file:   catalog/__init__.py
+        modified:   .gitignore
+        new file:   catalog/__init__.py
         ...
-        new file:   catalog/migrations/0001_initial.py
+        new file:   catalog/migrations/0001_initial.py
         ...
-        new file:   templates/registration/password_reset_form.html</pre>
+        new file:   templates/registration/password_reset_form.html</pre>
  </li>
  <li>When you're satisfied commit the files to your local repository:
   <pre class="brush: bash">git commit -m "First version of application moved into github"</pre>
@@ -298,7 +298,7 @@ Changes to be committed:
 
 <pre>web: gunicorn locallibrary.wsgi --log-file -</pre>
 
-<p>The "<code>web:</code>" tells Heroku that this is a web dyno and can be sent HTTP traffic. The process to start in this dyno is <em>gunicorn</em>, which is a popular web application server that Heroku recommends. We start Gunicorn using the configuration information in the module <code>locallibrary.wsgi</code> (created with our application skeleton: <strong>/locallibrary/wsgi.py</strong>).</p>
+<p>The "<code>web:</code>" tells Heroku that this is a web dyno and can be sent HTTP traffic. The process to start in this dyno is <em>gunicorn</em>, which is a popular web application server that Heroku recommends. We start Gunicorn using the configuration information in the module <code>locallibrary.wsgi</code> (created with our application skeleton: <strong>/locallibrary/wsgi.py</strong>).</p>
 
 <h4 id="Gunicorn">Gunicorn</h4>
 
@@ -340,15 +340,15 @@ DATABASES['default'].update(db_from_env)</pre>
 
 <ul>
  <li>We'll still be using SQLite during development because the <code>DATABASE_URL</code> environment variable will not be set on our development computer.</li>
- <li>The value <code>conn_max_age=500</code> makes the connection persistent, which is far more efficient than recreating the connection on every request cycle. However, this is optional and can be removed if needed.</li>
+ <li>The value <code>conn_max_age=500</code> makes the connection persistent, which is far more efficient than recreating the connection on every request cycle. However, this is optional and can be removed if needed.</li>
 </ul>
 </div>
 
 <h5 id="psycopg2_(Python_Postgres_database_support)">psycopg2 (Python Postgres database support)</h5>
 
-<p>Django needs <em>psycopg2</em> to work with Postgres databases and you will need to add this to the <a href="#requirements">requirements.txt</a> for Heroku to set this up on the remote server (as discussed in the requirements section below).</p>
+<p>Django needs <em>psycopg2</em> to work with Postgres databases and you will need to add this to the <a href="#requirements">requirements.txt</a> for Heroku to set this up on the remote server (as discussed in the requirements section below).</p>
 
-<p>Django will use our SQLite database locally by default, because the <code>DATABASE_URL</code> environment variable isn't set in our local environment. If you want to switch to Postgres completely and use our Heroku free tier database for both development and production then you can. For example, to install psycopg2 and its dependencies locally on a Linux-based system you would use the following bash/terminal commands:</p>
+<p>Django will use our SQLite database locally by default, because the <code>DATABASE_URL</code> environment variable isn't set in our local environment. If you want to switch to Postgres completely and use our Heroku free tier database for both development and production then you can. For example, to install psycopg2 and its dependencies locally on a Linux-based system you would use the following bash/terminal commands:</p>
 
 <pre class="brush: bash"><code>sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib</code>
 pip3 install psycopg2
@@ -360,13 +360,13 @@ pip3 install psycopg2
 
 <h4 id="Serving_static_files_in_production">Serving static files in production</h4>
 
-<p>During development we used Django and the Django development web server to serve our static files (CSS, JavaScript, etc.). In a production environment we instead typically serve static files from a content delivery network (CDN) or the web server.</p>
+<p>During development we used Django and the Django development web server to serve our static files (CSS, JavaScript, etc.). In a production environment we instead typically serve static files from a content delivery network (CDN) or the web server.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Serving static files via Django/web application is inefficient because the requests have to pass through unnecessary additional code (Django) rather than being handled directly by the web server or a completely separate CDN. While this doesn't matter for local use during development, it would have a significant performance impact if we were to use the same approach in production. </p>
+<p><strong>Note:</strong> Serving static files via Django/web application is inefficient because the requests have to pass through unnecessary additional code (Django) rather than being handled directly by the web server or a completely separate CDN. While this doesn't matter for local use during development, it would have a significant performance impact if we were to use the same approach in production. </p>
 </div>
 
-<p>To make it easy to host static files separately from the Django web application, Django provides the <em>collectstatic</em> tool to collect these files for deployment (there is a settings variable that defines where the files should be collected when <em>collectstatic</em> is run). Django templates refer to the hosting location of the static files relative to a settings variable (<code>STATIC_URL</code>), so that this can be changed if the static files are moved to another host/server.</p>
+<p>To make it easy to host static files separately from the Django web application, Django provides the <em>collectstatic</em> tool to collect these files for deployment (there is a settings variable that defines where the files should be collected when <em>collectstatic</em> is run). Django templates refer to the hosting location of the static files relative to a settings variable (<code>STATIC_URL</code>), so that this can be changed if the static files are moved to another host/server.</p>
 
 <p>The relevant setting variables are:</p>
 
@@ -399,7 +399,7 @@ STATIC_URL = '/static/'
 <p>There are many ways to serve static files in production (we saw the relevant Django settings in the previous sections). Heroku recommends using the <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> project for serving of static assets directly from Gunicorn in production.</p>
 
 <div class="note">
-<p><strong>Note: </strong>Heroku automatically calls <em>collectstatic</em> and prepares your static files for use by WhiteNoise after it uploads your application. Check out <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.</p>
+<p><strong>Note: </strong>Heroku automatically calls <em>collectstatic</em> and prepares your static files for use by WhiteNoise after it uploads your application. Check out <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.</p>
 </div>
 
 <p>The steps to set up <em>WhiteNoise</em> to use with the project are:</p>
@@ -413,21 +413,21 @@ STATIC_URL = '/static/'
 
 <h5 id="settings.py_3">settings.py</h5>
 
-<p>To install <em>WhiteNoise</em> into your Django application, open <strong>/locallibrary/settings.py</strong>, find the <code>MIDDLEWARE</code> setting and add the <code>WhiteNoiseMiddleware</code> near the top of the list, just below the <code>SecurityMiddleware</code>:</p>
+<p>To install <em>WhiteNoise</em> into your Django application, open <strong>/locallibrary/settings.py</strong>, find the <code>MIDDLEWARE</code> setting and add the <code>WhiteNoiseMiddleware</code> near the top of the list, just below the <code>SecurityMiddleware</code>:</p>
 
 <pre>MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     <strong>'whitenoise.middleware.WhiteNoiseMiddleware',</strong>
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 </pre>
 
-<p>Optionally, you can reduce the size of the static files when they are served (this is more efficient). Just add the following to the bottom of <strong>/locallibrary/settings.py</strong>:</p>
+<p>Optionally, you can reduce the size of the static files when they are served (this is more efficient). Just add the following to the bottom of <strong>/locallibrary/settings.py</strong>:</p>
 
 <pre># Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
@@ -460,7 +460,7 @@ whitenoise==3.2.2
 <pre>python-3.6.4</pre>
 
 <div class="note">
-<p><strong>Note:</strong> Heroku only supports a small number of <a href="https://devcenter.heroku.com/articles/python-support#supported-python-runtimes">Python runtimes</a> (at time of writing, this includes the one above). Heroku will use a supported runtime irrespective of the value specified in this file.</p>
+<p><strong>Note:</strong> Heroku only supports a small number of <a href="https://devcenter.heroku.com/articles/python-support#supported-python-runtimes">Python runtimes</a> (at time of writing, this includes the one above). Heroku will use a supported runtime irrespective of the value specified in this file.</p>
 </div>
 
 <h4 id="Save_changes_to_Github_and_re-test">Save changes to Github and re-test</h4>
@@ -650,7 +650,7 @@ heroku ps   #Display dyno status
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="In_this_module">In this module</h2>
 
@@ -672,4 +672,4 @@ heroku ps   #Display dyno status
  <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

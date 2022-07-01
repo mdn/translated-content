@@ -241,6 +241,7 @@
 /de/docs/Glossary/Leeres_Element	/de/docs/Glossary/Empty_element
 /de/docs/Glossary/Objekt	/de/docs/Glossary/Object
 /de/docs/Glossary/Protokoll	/de/docs/Glossary/Protocol
+/de/docs/Glossary/Symbol	/de/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /de/docs/Glossary/Typ	/de/docs/Glossary/Type
 /de/docs/Glossary/einfache_datenelemente	/de/docs/Glossary/Primitive
 /de/docs/Glossary/verbotener_header_name	/de/docs/Glossary/Forbidden_header_name

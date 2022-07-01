@@ -384,12 +384,12 @@
 /zh-CN/docs/DOM/element.mozmatchesselector	/zh-CN/docs/Web/API/Element/matches
 /zh-CN/docs/DOM/element.onafterscriptexecute	/zh-CN/docs/Web/API/Document/afterscriptexecute_event
 /zh-CN/docs/DOM/element.onbeforescriptexecute	/zh-CN/docs/Web/API/Document/beforescriptexecute_event
-/zh-CN/docs/DOM/element.onblur	/zh-CN/docs/Web/API/GlobalEventHandlers/onblur
+/zh-CN/docs/DOM/element.onblur	/zh-CN/docs/conflicting/Web/API/Window/blur_event
 /zh-CN/docs/DOM/element.onchange	/zh-CN/docs/Web/API/GlobalEventHandlers/onchange
 /zh-CN/docs/DOM/element.oncopy	/zh-CN/docs/Web/API/HTMLElement/copy_event
 /zh-CN/docs/DOM/element.oncut	/zh-CN/docs/Web/API/HTMLElement/cut_event
 /zh-CN/docs/DOM/element.ondblclick	/zh-CN/docs/Web/API/GlobalEventHandlers/ondblclick
-/zh-CN/docs/DOM/element.onfocus	/zh-CN/docs/Web/API/GlobalEventHandlers/onfocus
+/zh-CN/docs/DOM/element.onfocus	/zh-CN/docs/conflicting/Web/API/Window/focus_event
 /zh-CN/docs/DOM/element.onkeydown	/zh-CN/docs/Web/API/GlobalEventHandlers/onkeydown
 /zh-CN/docs/DOM/element.onkeypress	/zh-CN/docs/Web/API/GlobalEventHandlers/onkeypress
 /zh-CN/docs/DOM/element.onkeyup	/zh-CN/docs/Web/API/GlobalEventHandlers/onkeyup
@@ -501,7 +501,7 @@
 /zh-CN/docs/DOM:element.hasChildNodes	/zh-CN/docs/Web/API/Node/hasChildNodes
 /zh-CN/docs/DOM:element.id	/zh-CN/docs/Web/API/Element/id
 /zh-CN/docs/DOM:element.innerHTML	/zh-CN/docs/Web/API/Element/innerHTML
-/zh-CN/docs/DOM:element.onblur	/zh-CN/docs/Web/API/GlobalEventHandlers/onblur
+/zh-CN/docs/DOM:element.onblur	/zh-CN/docs/conflicting/Web/API/Window/blur_event
 /zh-CN/docs/DOM:element.removeAttribute	/zh-CN/docs/Web/API/Element/removeAttribute
 /zh-CN/docs/DOM:event	/zh-CN/docs/Web/API/Event
 /zh-CN/docs/DOM:range	/zh-CN/docs/Web/API/range
@@ -537,6 +537,7 @@
 /zh-CN/docs/Glossary/Header	/zh-CN/docs/Glossary/HTTP_header
 /zh-CN/docs/Glossary/IP地址	/zh-CN/docs/Glossary/IP_Address
 /zh-CN/docs/Glossary/Serialize	/zh-CN/docs/Glossary/Serialization
+/zh-CN/docs/Glossary/Symbol	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
 /zh-CN/docs/Glossary/主轴	/zh-CN/docs/Glossary/Main_Axis
 /zh-CN/docs/Glossary/交叉轴	/zh-CN/docs/Glossary/Cross_Axis
 /zh-CN/docs/Glossary/代理服务器	/zh-CN/docs/Glossary/Proxy_server
@@ -1438,11 +1439,11 @@
 /zh-CN/docs/Web/API/Fullscreen_API/指南	/zh-CN/docs/Web/API/Fullscreen_API/Guide
 /zh-CN/docs/Web/API/Geolocation/Using_geolocation	/zh-CN/docs/Web/API/Geolocation_API
 /zh-CN/docs/Web/API/GeolocationPosition/获取该位置时的时间戳	/zh-CN/docs/Web/API/GeolocationPosition/timestamp
-/zh-CN/docs/Web/API/GlobalEventHandlers.onblur	/zh-CN/docs/Web/API/GlobalEventHandlers/onblur
+/zh-CN/docs/Web/API/GlobalEventHandlers.onblur	/zh-CN/docs/conflicting/Web/API/Window/blur_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onchange	/zh-CN/docs/Web/API/GlobalEventHandlers/onchange
 /zh-CN/docs/Web/API/GlobalEventHandlers.oncontextmenu	/zh-CN/docs/Web/API/GlobalEventHandlers/oncontextmenu
 /zh-CN/docs/Web/API/GlobalEventHandlers.ondblclick	/zh-CN/docs/Web/API/GlobalEventHandlers/ondblclick
-/zh-CN/docs/Web/API/GlobalEventHandlers.onfocus	/zh-CN/docs/Web/API/GlobalEventHandlers/onfocus
+/zh-CN/docs/Web/API/GlobalEventHandlers.onfocus	/zh-CN/docs/conflicting/Web/API/Window/focus_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.oninput	/zh-CN/docs/Web/API/GlobalEventHandlers/oninput
 /zh-CN/docs/Web/API/GlobalEventHandlers.onkeydown	/zh-CN/docs/Web/API/GlobalEventHandlers/onkeydown
 /zh-CN/docs/Web/API/GlobalEventHandlers.onkeypress	/zh-CN/docs/Web/API/GlobalEventHandlers/onkeypress
@@ -1457,10 +1458,12 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers.onselect	/zh-CN/docs/Web/API/GlobalEventHandlers/onselect
 /zh-CN/docs/Web/API/GlobalEventHandlers.onsubmit	/zh-CN/docs/Web/API/GlobalEventHandlers/onsubmit
 /zh-CN/docs/Web/API/GlobalEventHandlers/onabort	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/abort_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onblur	/zh-CN/docs/conflicting/Web/API/Window/blur_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncanplay	/zh-CN/docs/Web/API/HTMLMediaElement/canplay_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncanplaythrough	/zh-CN/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncuechange	/zh-CN/docs/Web/API/TextTrack/cuechange_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/ondurationchange	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/durationchange_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onfocus	/zh-CN/docs/conflicting/Web/API/Window/focus_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/动画效果	/zh-CN/docs/Web/API/GlobalEventHandlers/onanimationend
 /zh-CN/docs/Web/API/GlobalEventHandlers/时长改变	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/durationchange_event
 /zh-CN/docs/Web/API/GlobalFetch/fetch	/zh-CN/docs/Web/API/fetch
@@ -1509,6 +1512,7 @@
 /zh-CN/docs/Web/API/MediaRecorder/ondataavailable	/zh-CN/docs/Web/API/MediaRecorder/dataavailable_event
 /zh-CN/docs/Web/API/MediaStream.addTrack	/zh-CN/docs/Web/API/MediaStream/addTrack
 /zh-CN/docs/Web/API/MessagePort/onmessage	/zh-CN/docs/Web/API/MessagePort/message_event
+/zh-CN/docs/Web/API/MouseEvent/region	/zh-CN/docs/conflicting/Web/API/MouseEvent
 /zh-CN/docs/Web/API/MouseEvent/which	/zh-CN/docs/conflicting/Web/API/UIEvent/which
 /zh-CN/docs/Web/API/MouseWheelEvent	/zh-CN/docs/conflicting/Web/API/WheelEvent
 /zh-CN/docs/Web/API/MutationObserverInit	/zh-CN/docs/conflicting/Web/API/MutationObserver/observe_2f2addbfa1019c23a6255648d6526387
@@ -1644,6 +1648,7 @@
 /zh-CN/docs/Web/API/WebGLRenderingContext/多边形偏移(polygonOffset)	/zh-CN/docs/Web/API/WebGLRenderingContext/polygonOffset
 /zh-CN/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /zh-CN/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
+/zh-CN/docs/Web/API/WebRTC_API/Taking_still_photos	/zh-CN/docs/Web/API/Media_Streams_API/Taking_still_photos
 /zh-CN/docs/Web/API/WebSocket/onclose	/zh-CN/docs/Web/API/WebSocket/close_event
 /zh-CN/docs/Web/API/WebSocket/onerror	/zh-CN/docs/conflicting/Web/API/WebSocket/error_event
 /zh-CN/docs/Web/API/WebSocket/onmessage	/zh-CN/docs/conflicting/Web/API/WebSocket/message_event
@@ -2341,6 +2346,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/RegExp/lastIndex	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 /zh-CN/docs/Web/JavaScript/Reference/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource
 /zh-CN/docs/Web/JavaScript/Reference/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+/zh-CN/docs/Web/JavaScript/Reference/Statements/import.meta	/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta
 /zh-CN/docs/Web/JavaScript/Reference/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
 /zh-CN/docs/Web/JavaScript/Reference/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 /zh-CN/docs/Web/JavaScript/Reference/String/TrimLeft	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart

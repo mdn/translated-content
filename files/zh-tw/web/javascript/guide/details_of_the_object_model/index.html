@@ -441,7 +441,7 @@ jane.machine == "belau"
  <li><code>new</code> 操作符將該新對象作為 <code>this</code> 關鍵字的值傳遞給 <code>Engineer</code> 建構函數。</li>
  <li>建構函數為該新物件創建了一個名為 <code>base</code> 的新屬性，並將 <code>WorkerBee</code> 的建構函數指定為 <code>base</code> 屬性的值。這使得 <code>WorkerBee</code> 建構函數成為 <code>Engineer</code> 物件的一個方法。<code>base</code> 屬性的名字沒有特殊性。可以使用任何合法的屬性名稱；<code>base</code> 僅僅是為了貼近它的用意。</li>
  <li>
-  <p>建構函數調用 <code>base</code> 方法，將傳遞給該建構函數的參數中的兩個，作為參數傳遞給 <code>base</code> 方法，同時還傳遞一個字串參數  <code>"engineering"。顯式地在建構函數中使用</code> <code>"engineering"</code> 表明所有 <code>Engineer</code> 物件繼承的 <code>dept</code> 屬性具有相同的值，且該值重載了繼承自 <code>Employee</code> 的值。</p>
+  <p>建構函數調用 <code>base</code> 方法，將傳遞給該建構函數的參數中的兩個，作為參數傳遞給 <code>base</code> 方法，同時還傳遞一個字串參數  <code>"engineering"。顯式地在建構函數中使用</code> <code>"engineering"</code> 表明所有 <code>Engineer</code> 物件繼承的 <code>dept</code> 屬性具有相同的值，且該值重載了繼承自 <code>Employee</code> 的值。</p>
  </li>
  <li>因為 <code>base</code> 是 <code>Engineer</code> 的一個方法，在調用 <code>base</code> 時，JavaScript 將在步驟 1 中創建的對象綁定給 <code>this</code> 關鍵字。這樣，<code>WorkerBee</code> 函數接著將 <code>"Doe, Jane"</code> 和 <code>"engineering"</code> 參數傳遞給 <code>Employee</code> 建構函數。當從 <code>Employee</code> 建構函數返回時，<code>WorkerBee</code> 函數用剩下的參數設置 <code>projects</code> 屬性。</li>
  <li>當從 <code>base</code> 方法返回時，<code>Engineer</code> 建構函數將物件的 <code>machine</code> 屬性初始化為 <code>"belau"</code>。</li>

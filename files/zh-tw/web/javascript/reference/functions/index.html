@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <p>Functions are not the same as procedures. A function always returns a value, but a procedure may or may not return any value.</p>
 
-<p>To return a specific value other than the default, a function must have a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code> statement that specifies the value to return. A function without a return statement will return a default value. In the case of a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor">constructor</a> called with the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a></code> keyword, the default value is the value of its <code>this</code> parameter. For all other functions, the default return value is <code>undefined</code>.</p>
+<p>To return a specific value other than the default, a function must have a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code> statement that specifies the value to return. A function without a return statement will return a default value. In the case of a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor">constructor</a> called with the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a></code> keyword, the default value is the value of its <code>this</code> parameter. For all other functions, the default return value is <code>undefined</code>.</p>
 
 <p>The parameters of a function call are the function's <em>arguments</em>. Arguments are passed to functions <em>by value</em>. If the function changes the value of an argument, this change is not reflected globally or in the calling function. However, object references are values, too, and they are special: if the function changes the referred object's properties, that change is visible outside the function, as shown in the following example:</p>
 
@@ -58,7 +58,7 @@ function myFunc(theObject) {
 
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code> keyword</a> does not refer to the currently executing function, so you must refer to <code>Function</code> objects by name, even within the function body.</p>
 
-<h2 id="定義函式_Defining_functions">定義函式 Defining functions</h2>
+<h2 id="定義函式_Defining_functions">定義函式 Defining functions</h2>
 
 <p>以下幾個方法去定義函式 (function)</p>
 
@@ -160,7 +160,7 @@ param =&gt; expression
 
 <dl>
  <dt><code>param</code></dt>
- <dd>The name of an argument. Zero arguments need to be indicated with <code>()</code>.  For only one argument the parentheses are not required. (like <code>foo =&gt; 1</code>)</dd>
+ <dd>The name of an argument. Zero arguments need to be indicated with <code>()</code>.  For only one argument the parentheses are not required. (like <code>foo =&gt; 1</code>)</dd>
  <dt><code>statements or expression</code></dt>
  <dd>Multiple statements need to be enclosed in brackets. A single expression requires no brackets. The expression is also the implicit return value of that function.</dd>
 </dl>
@@ -263,7 +263,7 @@ param =&gt; expression
 
 <pre class="brush: js">var obj = {
   foo() {},
-  bar() {}
+  bar() {}
 };</pre>
 
 <h2 id="Function_constructor_vs._function_declaration_vs._function_expression"><code>Function</code> constructor vs. function declaration vs. function expression</h2>

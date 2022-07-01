@@ -2823,14 +2823,6 @@
       "xdelatour"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2019-03-23T22:39:08.053Z",
-    "contributors": [
-      "Nopias",
-      "loella16",
-      "xdelatour"
-    ]
-  },
   "Glossary/Synchronous": {
     "modified": "2019-03-23T22:40:33.779Z",
     "contributors": [
@@ -14986,17 +14978,6 @@
       "Voulto"
     ]
   },
-  "Web/API/GlobalEventHandlers/onblur": {
-    "modified": "2019-03-23T23:46:41.843Z",
-    "contributors": [
-      "OpenStark",
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "BenoitL",
-      "Pitoutompoilu"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onchange": {
     "modified": "2019-03-23T23:47:11.218Z",
     "contributors": [
@@ -15047,15 +15028,6 @@
       "Hell_Carlito",
       "FGM",
       "ylerjen"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onfocus": {
-    "modified": "2019-03-23T23:47:18.451Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "AshfaqHossain",
-      "BenoitL"
     ]
   },
   "Web/API/GlobalEventHandlers/ongotpointercapture": {
@@ -16840,6 +16812,15 @@
       "GenjoMoz",
       "JonathanMM",
       "AbrahamT"
+    ]
+  },
+  "Web/API/Media_Streams_API/Taking_still_photos": {
+    "modified": "2019-03-23T23:34:23.933Z",
+    "contributors": [
+      "teoli",
+      "yluom",
+      "peb85",
+      "Hub"
     ]
   },
   "Web/API/MessageEvent": {
@@ -19108,15 +19089,6 @@
       "wordsbybird"
     ]
   },
-  "Web/API/WebRTC_API/Taking_still_photos": {
-    "modified": "2019-03-23T23:34:23.933Z",
-    "contributors": [
-      "teoli",
-      "yluom",
-      "peb85",
-      "Hub"
-    ]
-  },
   "Web/API/WebSocket": {
     "modified": "2019-03-23T23:02:45.010Z",
     "contributors": [
@@ -19453,6 +19425,17 @@
       "Voulto"
     ]
   },
+  "Web/API/Window/blur_event": {
+    "modified": "2019-03-23T23:46:41.843Z",
+    "contributors": [
+      "OpenStark",
+      "fscholz",
+      "teoli",
+      "khalid32",
+      "BenoitL",
+      "Pitoutompoilu"
+    ]
+  },
   "Web/API/Window/cancelAnimationFrame": {
     "modified": "2020-10-15T22:25:28.586Z",
     "contributors": [
@@ -19620,6 +19603,15 @@
     "modified": "2019-03-23T22:47:01.519Z",
     "contributors": [
       "mmerian"
+    ]
+  },
+  "Web/API/Window/focus_event": {
+    "modified": "2019-03-23T23:47:18.451Z",
+    "contributors": [
+      "fscholz",
+      "teoli",
+      "AshfaqHossain",
+      "BenoitL"
     ]
   },
   "Web/API/Window/frameElement": {
@@ -20850,17 +20842,6 @@
       "Fredchat"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role": {
-    "modified": "2019-03-23T23:14:00.888Z",
-    "contributors": [
-      "trouba",
-      "AdeLyneBD",
-      "hmore",
-      "goetsu",
-      "BenoitL",
-      "Fredchat"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute": {
     "modified": "2019-03-23T23:14:38.539Z",
     "contributors": [
@@ -20942,60 +20923,6 @@
       "Fredchat"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role": {
-    "modified": "2020-04-08T04:03:57.859Z",
-    "contributors": [
-      "olivierdupon",
-      "Goofy",
-      "Fredchat"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role": {
-    "modified": "2019-03-23T23:14:59.014Z",
-    "contributors": [
-      "Manuela",
-      "Goofy",
-      "Fredchat"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role": {
-    "modified": "2019-03-23T23:14:20.710Z",
-    "contributors": [
-      "J.DMB",
-      "Fredchat"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role": {
-    "modified": "2020-02-06T12:23:48.064Z",
-    "contributors": [
-      "GeoffreyC.",
-      "Fredchat"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role": {
-    "modified": "2019-03-29T05:52:02.630Z",
-    "contributors": [
-      "prsdta",
-      "Fredchat",
-      "Goofy"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role": {
-    "modified": "2019-03-23T23:14:53.364Z",
-    "contributors": [
-      "Gibus",
-      "KrySoar",
-      "Fredchat"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role": {
-    "modified": "2019-03-23T23:13:50.573Z",
-    "contributors": [
-      "J.DMB",
-      "@lucieLme",
-      "Fredchat"
-    ]
-  },
   "Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs": {
     "modified": "2019-03-23T22:43:55.753Z",
     "contributors": [
@@ -21026,6 +20953,17 @@
       "Fredchat"
     ]
   },
+  "Web/Accessibility/ARIA/Roles/alertdialog_role": {
+    "modified": "2019-03-23T23:14:00.888Z",
+    "contributors": [
+      "trouba",
+      "AdeLyneBD",
+      "hmore",
+      "goetsu",
+      "BenoitL",
+      "Fredchat"
+    ]
+  },
   "Web/Accessibility/ARIA/Roles/button_role": {
     "modified": "2019-03-23T23:16:24.067Z",
     "contributors": [
@@ -21052,11 +20990,65 @@
       "Fredchat"
     ]
   },
+  "Web/Accessibility/ARIA/Roles/group_role": {
+    "modified": "2020-04-08T04:03:57.859Z",
+    "contributors": [
+      "olivierdupon",
+      "Goofy",
+      "Fredchat"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/link_role": {
+    "modified": "2019-03-23T23:14:59.014Z",
+    "contributors": [
+      "Manuela",
+      "Goofy",
+      "Fredchat"
+    ]
+  },
   "Web/Accessibility/ARIA/Roles/listbox_role": {
     "modified": "2019-03-23T23:14:58.870Z",
     "contributors": [
       "stevenmouret",
       "Goofy",
+      "Fredchat"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/log_role": {
+    "modified": "2019-03-23T23:14:20.710Z",
+    "contributors": [
+      "J.DMB",
+      "Fredchat"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/presentation_role": {
+    "modified": "2020-02-06T12:23:48.064Z",
+    "contributors": [
+      "GeoffreyC.",
+      "Fredchat"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/progressbar_role": {
+    "modified": "2019-03-29T05:52:02.630Z",
+    "contributors": [
+      "prsdta",
+      "Fredchat",
+      "Goofy"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/slider_role": {
+    "modified": "2019-03-23T23:14:53.364Z",
+    "contributors": [
+      "Gibus",
+      "KrySoar",
+      "Fredchat"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/status_role": {
+    "modified": "2019-03-23T23:13:50.573Z",
+    "contributors": [
+      "J.DMB",
+      "@lucieLme",
       "Fredchat"
     ]
   },
@@ -38155,6 +38147,12 @@
       "SphinxKnight"
     ]
   },
+  "Web/JavaScript/Reference/Operators/import.meta": {
+    "modified": "2020-10-15T22:06:37.821Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
   "Web/JavaScript/Reference/Operators/in": {
     "modified": "2020-10-15T21:18:03.771Z",
     "contributors": [
@@ -38440,12 +38438,6 @@
       "Yukulele.",
       "ylerjen",
       "teoli"
-    ]
-  },
-  "Web/JavaScript/Reference/Statements/import.meta": {
-    "modified": "2020-10-15T22:06:37.821Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   },
   "Web/JavaScript/Reference/Statements/label": {
@@ -40990,110 +40982,6 @@
       "BenoitL"
     ]
   },
-  "conflicting/Web/API/Document/createEvent": {
-    "modified": "2020-10-15T21:37:47.725Z",
-    "contributors": [
-      "loella16",
-      "Alexgruissan"
-    ]
-  },
-  "conflicting/Web/API/Document/createNodeIterator": {
-    "modified": "2020-10-15T22:02:05.206Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "conflicting/Web/API/Document/createNodeIterator_313cb22e529a804ace2f1dbb1e813ada": {
-    "modified": "2020-10-15T22:02:05.638Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "conflicting/Web/API/Document/fullscreenchange_event": {
-    "modified": "2019-03-23T22:29:20.848Z",
-    "contributors": [
-      "Dwaaren"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model": {
-    "modified": "2019-03-23T23:53:23.967Z",
-    "contributors": [
-      "Delapouite",
-      "Mgjbot",
-      "BenoitL",
-      "Jorolo"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model_656f0e51418b39c498011268be9b3a10": {
-    "modified": "2020-08-30T07:19:22.993Z",
-    "contributors": [
-      "Voulto",
-      "tregagnon",
-      "Sheppy"
-    ]
-  },
-  "conflicting/Web/API/Element/getBoundingClientRect": {
-    "modified": "2019-03-18T21:39:17.387Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "conflicting/Web/API/EventTarget/addEventListener": {
-    "modified": "2019-03-23T22:25:52.637Z",
-    "contributors": [
-      "loella16",
-      "Copen"
-    ]
-  },
-  "conflicting/Web/API/File_and_Directory_Entries_API": {
-    "modified": "2020-11-02T04:24:20.566Z",
-    "contributors": [
-      "SphinxKnight",
-      "roxaneprovost"
-    ]
-  },
-  "conflicting/Web/API/FormData/Using_FormData_Objects": {
-    "modified": "2019-03-23T23:02:24.025Z",
-    "contributors": [
-      "pierreadrienbuisson",
-      "jean-pierre.gay"
-    ]
-  },
-  "conflicting/Web/API/Geolocation/getCurrentPosition": {
-    "modified": "2019-03-18T21:37:11.224Z",
-    "contributors": [
-      "JeanLucB"
-    ]
-  },
-  "conflicting/Web/API/Geolocation/getCurrentPosition_058087067b28ad25fff974fd59827fb6": {
-    "modified": "2020-10-15T22:03:34.783Z",
-    "contributors": [
-      "Arzak656",
-      "JeanLucB"
-    ]
-  },
-  "conflicting/Web/API/Geolocation/getCurrentPosition_5852407122355d2ab39863042583c266": {
-    "modified": "2019-08-26T09:46:33.509Z",
-    "contributors": [
-      "ReinWired",
-      "guizmo51",
-      "JeanLucB"
-    ]
-  },
-  "conflicting/Web/API/Geolocation/getCurrentPosition_c2c285f72be001586cb95d7989ba1b54": {
-    "modified": "2019-03-18T21:37:16.913Z",
-    "contributors": [
-      "JeanLucB"
-    ]
-  },
-  "conflicting/Web/API/GlobalEventHandlers/onresize": {
-    "modified": "2019-03-23T23:03:02.343Z",
-    "contributors": [
-      "loella16",
-      "fscholz",
-      "mikadev"
-    ]
-  },
   "conflicting/Web/API/HTMLMediaElement/abort_event": {
     "modified": "2019-03-23T22:29:18.151Z",
     "contributors": [
@@ -41316,24 +41204,6 @@
       "Fredchat"
     ]
   },
-  "conflicting/Web/API/btoa": {
-    "modified": "2019-03-18T21:41:36.649Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "conflicting/Web/Accessibility": {
-    "modified": "2019-03-23T23:16:51.023Z",
-    "contributors": [
-      "Fredchat"
-    ]
-  },
-  "conflicting/Web/Accessibility/ARIA/widgets": {
-    "modified": "2019-03-23T22:43:55.361Z",
-    "contributors": [
-      "paul.bignier"
-    ]
-  },
   "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox": {
     "modified": "2019-04-06T12:38:31.267Z",
     "contributors": [
@@ -41516,6 +41386,14 @@
     "modified": "2020-04-28T10:35:09.074Z",
     "contributors": [
       "tristantheb"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
+    "modified": "2019-03-23T22:39:08.053Z",
+    "contributors": [
+      "Nopias",
+      "loella16",
+      "xdelatour"
     ]
   },
   "conflicting/Web/MathML": {

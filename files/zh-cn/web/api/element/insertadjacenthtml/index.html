@@ -46,7 +46,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 
 <div class="note"><strong>注意：</strong> beforebegin 和 afterend 位置，仅在节点在树中且节点具有一个 parent 元素时工作。</div>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <pre class="brush: js">// 原为 &lt;div id="one"&gt;one&lt;/div&gt;
 var d1 = document.getElementById('one');
@@ -56,7 +56,7 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 // &lt;div id="one"&gt;one&lt;/div&gt;&lt;div id="two"&gt;two&lt;/div&gt;
 </pre>
 
-<h2 id="Specification" name="Specification">注意</h2>
+<h2 id="Specification">注意</h2>
 
 <h3 id="安全问题">安全问题</h3>
 
@@ -64,11 +64,11 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 
 <p>如果只是为了插入文本内容（而不是 HTML 节点），不建议使用这个方法，建议使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent" title="The Node.textContent property represents the text content of a node and its descendants."><code>node.textContent</code></a> 或者 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/insertAdjacentText" title="The insertAdjacentText() method inserts a given text node at a given position relative to the element it is invoked upon."><code>node.insertAdjacentText()</code></a>。因为这样不需要经过 HTML 解释器的转换，性能会好一点。</p>
 
-<h2 id="Specification" name="Specification" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">规范</h2>
+<h2 id="Specification">规范</h2>
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">浏览器兼容性</h2>
+<h2 id="Browser_Compatibility">浏览器兼容性</h2>
 
 <div>
 <p>{{Compat("api.Element.insertAdjacentHTML")}}</p>

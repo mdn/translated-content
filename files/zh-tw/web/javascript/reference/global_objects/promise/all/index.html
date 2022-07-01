@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Promise.all()</strong></code> 方法回傳一個 {{jsxref("Promise")}} 物件，當引數 <code>iterable</code> 中所有的 promises 都被實現（resolved），或引數 iterable 不含任何 promise 時，被實現。或以第一個被拒絕的 promise 的原因被拒絕。</p>
+<p><code><strong>Promise.all()</strong></code> 方法回傳一個 {{jsxref("Promise")}} 物件，當引數 <code>iterable</code> 中所有的 promises 都被實現（resolved），或引數 iterable 不含任何 promise 時，被實現。或以第一個被拒絕的 promise 的原因被拒絕。</p>
 
 <h2 id="語法">語法</h2>
 
@@ -13,15 +13,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 
 <dl>
  <dt>iterable</dt>
- <dd>一個 <a href="/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable</a> 物件像是 {{jsxref("Array")}} 或 {{jsxref("String")}}。</dd>
+ <dd>一個 <a href="/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable</a> 物件像是 {{jsxref("Array")}} 或 {{jsxref("String")}}。</dd>
 </dl>
 
 <h3 id="回傳值">回傳值</h3>
 
 <ul>
- <li>一個<strong>已被實現（already resolved）</strong>的 {{jsxref("Promise")}}，若傳入的 iterable 為空。</li>
- <li>一個<strong>非同步地被實現（asynchronously resolved）</strong>的 {{jsxref("Promise")}} 若傳入的 iterable 不含 promise。注意，Google Chrome 58 對此情形回傳一個<strong>已被解決</strong>的 promise。</li>
- <li>一個<strong>擱置（pending）</strong>的 {{jsxref("Promise")}}，對所有剩餘情形。此 promise 接著被<strong>非同步地</strong>被 resolved/rejected（只要堆疊為空）當 iterable 中所有的 promises 都被實現，或其中一個被拒絕。參見下方關於"Promise.all 的非同步與同步性質"的例子。</li>
+ <li>一個<strong>已被實現（already resolved）</strong>的 {{jsxref("Promise")}}，若傳入的 iterable 為空。</li>
+ <li>一個<strong>非同步地被實現（asynchronously resolved）</strong>的 {{jsxref("Promise")}} 若傳入的 iterable 不含 promise。注意，Google Chrome 58 對此情形回傳一個<strong>已被解決</strong>的 promise。</li>
+ <li>一個<strong>擱置（pending）</strong>的 {{jsxref("Promise")}}，對所有剩餘情形。此 promise 接著被<strong>非同步地</strong>被 resolved/rejected（只要堆疊為空）當 iterable 中所有的 promises 都被實現，或其中一個被拒絕。參見下方關於"Promise.all 的非同步與同步性質"的例子。</li>
 </ul>
 
 <h2 id="描述">描述</h2>
@@ -29,17 +29,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 <p>此方法在聚集（aggregating）多個 promises 的結果時很有幫助。</p>
 
 <p>實現（Fulfillment）：<br>
- 若傳入空的 iterable，此方法（同步地）回傳一個已被解決的 promise。若所有傳入的 promises 都被實現，或都不是 promise，<code>Promise.all</code> 回傳的 promise 被非同步地實現。無論是哪個情形，回傳一個以 iterable 其內<strong>所有</strong>值（包含非 promise 值）作為引數的陣列被實現。<br>
-  </p>
+ 若傳入空的 iterable，此方法（同步地）回傳一個已被解決的 promise。若所有傳入的 promises 都被實現，或都不是 promise，<code>Promise.all</code> 回傳的 promise 被非同步地實現。無論是哪個情形，回傳一個以 iterable 其內<strong>所有</strong>值（包含非 promise 值）作為引數的陣列被實現。<br>
+  </p>
 
 <p>拒絕（Rejection）：<br>
  若任一個傳入的 promise 被拒絕，Promise.all 非同步地以其值被拒絕，無論其他 promises 是否被解決。</p>
 
 <h2 id="範例">範例</h2>
 
-<h3 id="使用_Promise.all">使用 <code>Promise.all</code></h3>
+<h3 id="使用_Promise.all">使用 <code>Promise.all</code></h3>
 
-<p><code>Promise.all</code> 等到全部實現（或一個拒絕）。</p>
+<p><code>Promise.all</code> 等到全部實現（或一個拒絕）。</p>
 
 <pre class="brush: js">var p1 = Promise.resolve(3);
 var p2 = 1337;
@@ -72,7 +72,7 @@ setTimeout(function(){
 // Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: Array[4] }
 // Promise { &lt;state&gt;: "rejected", &lt;reason&gt;: 555 }</pre>
 
-<h3 id="Promise.all_的非同步與同步性質"><code>Promise.all</code> 的非同步與同步性質</h3>
+<h3 id="Promise.all_的非同步與同步性質"><code>Promise.all</code> 的非同步與同步性質</h3>
 
 <p>以下例子驗證了 <code>Promise.all</code> 的非同步性質（asynchronicity）（或同步性質（synchronicity），若傳入的 iterable 是空的）：</p>
 
@@ -96,7 +96,7 @@ setTimeout(function(){
 // Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: Array[2] }
 </pre>
 
-<p><code>當</code> <code>Promise.all</code> 被拒絕時發生一樣的事情：</p>
+<p><code>當</code> <code>Promise.all</code> 被拒絕時發生一樣的事情：</p>
 
 <pre class="brush: js">var mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
 var p = Promise.all(mixedPromisesArray);
@@ -112,7 +112,7 @@ setTimeout(function(){
 // Promise { &lt;state&gt;: "rejected", &lt;reason&gt;: 44 }
 </pre>
 
-<p>注意！<code>Promise.all</code> 同步地被解決<strong>若且唯若</strong>傳入的 iterable 為空：</p>
+<p>注意！<code>Promise.all</code> 同步地被解決<strong>若且唯若</strong>傳入的 iterable 為空：</p>
 
 <pre class="brush: js">var p = Promise.all([]); // will be immediately resolved
 var p2 = Promise.all([1337, "hi"]); // non-promise values will be ignored, but the evaluation will be done asynchronously
@@ -130,9 +130,9 @@ setTimeout(function(){
 // Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: Array[2] }
 </pre>
 
-<h3 id="Promise.all_的失敗優先（fail-fast）行為"><code>Promise.all</code> 的失敗優先（fail-fast）行為</h3>
+<h3 id="Promise.all_的失敗優先（fail-fast）行為"><code>Promise.all</code> 的失敗優先（fail-fast）行為</h3>
 
-<p><code>當任一個陣列成員被拒絕則</code> <code>Promise.all</code> 被拒絕。例如，若傳入四個將在一段時間後被解決的 promises，而其中一個立刻被拒絕，則 <code>Promise.all</code> 將立刻被拒絕。</p>
+<p><code>當任一個陣列成員被拒絕則</code> <code>Promise.all</code> 被拒絕。例如，若傳入四個將在一段時間後被解決的 promises，而其中一個立刻被拒絕，則 <code>Promise.all</code> 將立刻被拒絕。</p>
 
 <pre class="brush: js">var p1 = new Promise((resolve, reject) =&gt; {
   setTimeout(resolve, 1000, 'one');

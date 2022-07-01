@@ -210,7 +210,7 @@ Content-Length: 0
 
 <p>让我们回顾一下在上一篇文章中看到的静态网站架构图，看看它是如何工作的。</p>
 
-<p><img alt="A simplified diagram of a static web server." src="https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png"></p>
+<p><img alt="A simplified diagram of a static web server." src="basic_static_app_server.png"></p>
 
 <p>当用户想要导航到页面时，浏览器会发送一个指定 HTML 页面的 URL 的 HTTP 的<code>GET</code>请求。<br>
  服务器从它的文件系统中检索所请求的文档，并返回包含文档和 HTTP 响应状态码“<code>200 OK</code>”(表示成功) 的 HTTP 响应。服务器可能会返回一个不同的状态码，例如，"<code>404 Not Found</code>"表明文件不在服务器上，或者"<code>301 Moved Permanently</code>"表明如果文件存在，则被重定向到另一个位置。</p>
@@ -233,7 +233,7 @@ Content-Length: 0
 
 <p>下面的图表显示了“球队教练”网站的主要元素，以及当教练访问他们的“最佳团队”列表时，操作序列的编号。使其动态的站点的部分是 <em>Web 应用程序</em>（这就是我们将如何引用处理 HTTP 请求并返回 HTTP 响应的服务器端代码）数据库，该数据库包含关于球员、球队、教练及其关系以及 HTML 模板的信息。</p>
 
-<p><img alt="This is a diagram of a simple web server with step numbers for each of step of the client-server interaction." src="https://mdn.mozillademos.org/files/13829/Web%20Application%20with%20HTML%20and%20Steps.png" style="height: 584px; width: 1226px;"></p>
+<p><img alt="This is a diagram of a simple web server with step numbers for each of step of the client-server interaction." src="web_application_with_html_and_steps.png"></p>
 
 <p>在教练提交球员名单和球员人数后，其操作顺序为：</p>
 

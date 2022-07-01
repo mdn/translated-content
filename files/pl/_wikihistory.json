@@ -2467,13 +2467,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/GlobalEventHandlers/onblur": {
-    "modified": "2020-10-15T22:17:26.802Z",
-    "contributors": [
-      "mateuszpigula",
-      "bartosz-bieniek"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onclick": {
     "modified": "2019-03-24T00:04:00.144Z",
     "contributors": [
@@ -2482,12 +2475,6 @@
       "fscholz",
       "Bedi",
       "Jan Dudek"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onfocus": {
-    "modified": "2020-10-15T22:17:27.888Z",
-    "contributors": [
-      "bartosz-bieniek"
     ]
   },
   "Web/API/GlobalEventHandlers/onkeydown": {
@@ -3622,6 +3609,13 @@
       "Rafal2228"
     ]
   },
+  "Web/API/Window/blur_event": {
+    "modified": "2020-10-15T22:17:26.802Z",
+    "contributors": [
+      "mateuszpigula",
+      "bartosz-bieniek"
+    ]
+  },
   "Web/API/Window/closed": {
     "modified": "2019-03-23T23:49:15.119Z",
     "contributors": [
@@ -3691,6 +3685,12 @@
       "Mgjbot",
       "Ptak82",
       "Robson"
+    ]
+  },
+  "Web/API/Window/focus_event": {
+    "modified": "2020-10-15T22:17:27.888Z",
+    "contributors": [
+      "bartosz-bieniek"
     ]
   },
   "Web/API/Window/frameElement": {

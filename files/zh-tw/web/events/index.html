@@ -15,7 +15,7 @@ translation_of: Web/Events
 
 <h2 id="標準事件">標準事件</h2>
 
-<p>以下事件是由官方的 Web 標準規範中所定義，且應適用於所有的瀏覽器。下面的清單將列出事件和其所有傳送給事件的物件的 interface （所以你可以看到每個事件需要提供哪些資料）以及事件的定義規範。</p>
+<p>以下事件是由官方的 Web 標準規範中所定義，且應適用於所有的瀏覽器。下面的清單將列出事件和其所有傳送給事件的物件的 interface （所以你可以看到每個事件需要提供哪些資料）以及事件的定義規範。</p>
 
 <table class="standard-table" style="width: 100%;">
  <tbody>
@@ -401,7 +401,7 @@ translation_of: Web/Events
    <td>{{event("emptied")}}</td>
    <td>{{domxref("Event")}}</td>
    <td style="white-space: nowrap;"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-emptied">HTML5 media</a></td>
-   <td>The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the <a href="/zh-TW/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement"><code>load()</code></a> method is called to reload it.</td>
+   <td>The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the <a href="/zh-TW/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement"><code>load()</code></a> method is called to reload it.</td>
   </tr>
   <tr>
    <td>{{event("ended")}}</td>
@@ -1782,31 +1782,31 @@ translation_of: Web/Events
 
 <h3 id="CSS_事件">CSS 事件</h3>
 
-<p><a href="/zh-TW/docs/Web/Reference/Events/CssRuleViewRefreshed">CssRuleViewRefreshed</a>, <a href="/zh-TW/docs/Web/Reference/Events/CssRuleViewChanged">CssRuleViewChanged</a>, <a href="/zh-TW/docs/Web/Reference/Events/CssRuleViewCSSLinkClicked">CssRuleViewCSSLinkClicked</a>, {{event("transitionend")}}</p>
+<p><a href="/zh-TW/docs/Web/Reference/Events/CssRuleViewRefreshed">CssRuleViewRefreshed</a>, <a href="/zh-TW/docs/Web/Reference/Events/CssRuleViewChanged">CssRuleViewChanged</a>, <a href="/zh-TW/docs/Web/Reference/Events/CssRuleViewCSSLinkClicked">CssRuleViewCSSLinkClicked</a>, {{event("transitionend")}}</p>
 
 <h3 id="資料庫事件">資料庫事件</h3>
 
-<p><code><a href="/zh-TW/docs/Web/Reference/Events/abort_indexedDB">abort</a></code>, <code><a href="/zh-TW/docs/Web/Reference/Events/blocked_indexedDB">blocked</a></code>, <code><a href="/zh-TW/docs/Web/Reference/Events/complete_indexedDB">complete</a></code>, {{event("error")}} (<a href="/zh-TW/docs/Web/Reference/Events/error">link</a>), <code><a href="/zh-TW/docs/Web/Reference/Events/success_indexedDB">success</a></code>, <code><a href="/zh-TW/docs/Web/Reference/Events/upgradeneeded_indexedDB">upgradeneeded</a></code>, <code><a href="/zh-TW/docs/Web/Reference/Events/versionchange_indexedDB">versionchange</a></code></p>
+<p><code><a href="/zh-TW/docs/Web/Reference/Events/abort_indexedDB">abort</a></code>, <code><a href="/zh-TW/docs/Web/Reference/Events/blocked_indexedDB">blocked</a></code>, <code><a href="/zh-TW/docs/Web/Reference/Events/complete_indexedDB">complete</a></code>, {{event("error")}} (<a href="/zh-TW/docs/Web/Reference/Events/error">link</a>), <code><a href="/zh-TW/docs/Web/Reference/Events/success_indexedDB">success</a></code>, <code><a href="/zh-TW/docs/Web/Reference/Events/upgradeneeded_indexedDB">upgradeneeded</a></code>, <code><a href="/zh-TW/docs/Web/Reference/Events/versionchange_indexedDB">versionchange</a></code></p>
 
 <h3 id="Document_事件">Document 事件</h3>
 
-<p><a href="/zh-TW/docs/Web/Reference/Events/DOMLinkAdded">DOMLinkAdded</a>, <a href="/zh-TW/docs/Web/Reference/Events/DOMLinkRemoved">DOMLinkRemoved</a>, <a href="/zh-TW/docs/Web/Reference/Events/DOMMetaAdded">DOMMetaAdded</a>, <a href="/zh-TW/docs/Web/Reference/Events/DOMMetaRemoved">DOMMetaRemoved</a>,<a href="/zh-TW/docs/Web/Reference/Events/DOMWillOpenModalDialog">DOMWillOpenModalDialog</a>, <a href="/zh-TW/docs/Web/Reference/Events/DOMModalDialogClosed">DOMModalDialogClosed</a>, {{event("unload")}}</p>
+<p><a href="/zh-TW/docs/Web/Reference/Events/DOMLinkAdded">DOMLinkAdded</a>, <a href="/zh-TW/docs/Web/Reference/Events/DOMLinkRemoved">DOMLinkRemoved</a>, <a href="/zh-TW/docs/Web/Reference/Events/DOMMetaAdded">DOMMetaAdded</a>, <a href="/zh-TW/docs/Web/Reference/Events/DOMMetaRemoved">DOMMetaRemoved</a>,<a href="/zh-TW/docs/Web/Reference/Events/DOMWillOpenModalDialog">DOMWillOpenModalDialog</a>, <a href="/zh-TW/docs/Web/Reference/Events/DOMModalDialogClosed">DOMModalDialogClosed</a>, {{event("unload")}}</p>
 
 <h3 id="DOM_mutation_events">DOM mutation events</h3>
 
-<p><code><a href="/zh-TW/docs/DOM/Mutation_events">DOMAttributeNameChanged</a></code>, <code><a href="/zh-TW/docs/DOM/Mutation_events">DOMAttrModified</a></code>, <code><a href="/zh-TW/docs/DOM/Mutation_events">DOMCharacterDataModified</a></code>, {{event("DOMContentLoaded")}}, <code><a href="/zh-TW/docs/DOM/Mutation_events">DOMElementNameChanged</a></code>, <code><a href="/zh-TW/docs/DOM/Mutation_events">DOMNodeInserted</a></code>,<code><a href="/zh-TW/docs/DOM/Mutation_events">DOMNodeInsertedIntoDocument</a></code>, <code><a href="/zh-TW/docs/DOM/Mutation_events">DOMNodeRemoved</a></code>, <code><a href="/zh-TW/docs/DOM/Mutation_events">DOMNodeRemovedFromDocument</a></code>,<code><a href="/zh-TW/docs/DOM/Mutation_events">DOMSubtreeModified</a></code></p>
+<p><code><a href="/zh-TW/docs/DOM/Mutation_events">DOMAttributeNameChanged</a></code>, <code><a href="/zh-TW/docs/DOM/Mutation_events">DOMAttrModified</a></code>, <code><a href="/zh-TW/docs/DOM/Mutation_events">DOMCharacterDataModified</a></code>, {{event("DOMContentLoaded")}}, <code><a href="/zh-TW/docs/DOM/Mutation_events">DOMElementNameChanged</a></code>, <code><a href="/zh-TW/docs/DOM/Mutation_events">DOMNodeInserted</a></code>,<code><a href="/zh-TW/docs/DOM/Mutation_events">DOMNodeInsertedIntoDocument</a></code>, <code><a href="/zh-TW/docs/DOM/Mutation_events">DOMNodeRemoved</a></code>, <code><a href="/zh-TW/docs/DOM/Mutation_events">DOMNodeRemovedFromDocument</a></code>,<code><a href="/zh-TW/docs/DOM/Mutation_events">DOMSubtreeModified</a></code></p>
 
 <h3 id="拖曳事件">拖曳事件</h3>
 
-<p>{{event("drag")}}, <code>dragdrop</code>, {{event("dragend")}}, {{event("dragenter")}}, <code>dragexit</code>, <code>draggesture</code>, {{event("dragleave")}}, {{event("dragover")}}, {{event("dragstart")}}, {{event("drop")}}</p>
+<p>{{event("drag")}}, <code>dragdrop</code>, {{event("dragend")}}, {{event("dragenter")}}, <code>dragexit</code>, <code>draggesture</code>, {{event("dragleave")}}, {{event("dragover")}}, {{event("dragstart")}}, {{event("drop")}}</p>
 
 <h3 id="元素相關事件">元素相關事件</h3>
 
-<p>{{event("invalid")}}, {{event("overflow")}}, {{event("underflow")}}, <a href="/zh-TW/docs/Web/Reference/Events/DOMAutoComplete">DOMAutoComplete</a>, {{event("command")}}, {{event("commandupdate")}}</p>
+<p>{{event("invalid")}}, {{event("overflow")}}, {{event("underflow")}}, <a href="/zh-TW/docs/Web/Reference/Events/DOMAutoComplete">DOMAutoComplete</a>, {{event("command")}}, {{event("commandupdate")}}</p>
 
 <h3 id="Focus_events">Focus events</h3>
 
-<p>{{event("blur")}}, {{event("change")}}, <code>DOMFocusIn</code>, <code>DOMFocusOut</code>, {{event("focus")}}, {{event("focusin")}}, {{event("focusout")}}</p>
+<p>{{event("blur")}}, {{event("change")}}, <code>DOMFocusIn</code>, <code>DOMFocusOut</code>, {{event("focus")}}, {{event("focusin")}}, {{event("focusout")}}</p>
 
 <h3 id="表單相關事件">表單相關事件</h3>
 
@@ -1814,7 +1814,7 @@ translation_of: Web/Events
 
 <h3 id="Frame_相關事件">Frame 相關事件</h3>
 
-<p>{{event("mozbrowserclose")}}, {{event("mozbrowsercontextmenu")}}, {{event("mozbrowsererror")}}, {{event("mozbrowsericonchange")}}, {{event("mozbrowserlocationchange")}}, {{event("mozbrowserloadend")}}, {{event("mozbrowserloadstart")}}, {{event("mozbrowseropenwindow")}}, {{event("mozbrowsersecuritychange")}}, {{event("mozbrowsershowmodalprompt")}} (<a href="/zh-TW/docs/Web/Reference/Events/mozbrowsershowmodalprompt">link</a>), {{event("mozbrowsertitlechange")}}, <a href="/zh-TW/docs/Web/Reference/Events/DOMFrameContentLoaded">DOMFrameContentLoaded</a></p>
+<p>{{event("mozbrowserclose")}}, {{event("mozbrowsercontextmenu")}}, {{event("mozbrowsererror")}}, {{event("mozbrowsericonchange")}}, {{event("mozbrowserlocationchange")}}, {{event("mozbrowserloadend")}}, {{event("mozbrowserloadstart")}}, {{event("mozbrowseropenwindow")}}, {{event("mozbrowsersecuritychange")}}, {{event("mozbrowsershowmodalprompt")}} (<a href="/zh-TW/docs/Web/Reference/Events/mozbrowsershowmodalprompt">link</a>), {{event("mozbrowsertitlechange")}}, <a href="/zh-TW/docs/Web/Reference/Events/DOMFrameContentLoaded">DOMFrameContentLoaded</a></p>
 
 <h3 id="Input_device_events">Input device events</h3>
 
@@ -1834,7 +1834,7 @@ translation_of: Web/Events
 
 <h3 id="Notification_events">Notification events</h3>
 
-<p><a href="/zh-TW/docs/Web/Reference/Events/AlertActive">AlertActive</a>, <a href="/zh-TW/docs/Web/Reference/Events/AlertClose">AlertClose</a></p>
+<p><a href="/zh-TW/docs/Web/Reference/Events/AlertActive">AlertActive</a>, <a href="/zh-TW/docs/Web/Reference/Events/AlertClose">AlertClose</a></p>
 
 <h3 id="Pointer_events">Pointer events</h3>
 
@@ -1842,7 +1842,7 @@ translation_of: Web/Events
 
 <h3 id="Popup_events">Popup events</h3>
 
-<p>{{event("popuphidden")}}, {{event("popuphiding")}}, {{event("popupshowing")}}, {{event("popupshown")}}, <a href="/zh-TW/docs/Web/Reference/Events/DOMPopupBlocked">DOMPopupBlocked</a></p>
+<p>{{event("popuphidden")}}, {{event("popuphiding")}}, {{event("popupshowing")}}, {{event("popupshown")}}, <a href="/zh-TW/docs/Web/Reference/Events/DOMPopupBlocked">DOMPopupBlocked</a></p>
 
 <h3 id="列印相關事件">列印相關事件</h3>
 
@@ -1850,7 +1850,7 @@ translation_of: Web/Events
 
 <h3 id="Progress_events">Progress events</h3>
 
-<p><code><a href="/zh-TW/docs/Web/Reference/Events/abort_(ProgressEvent)">abort</a></code>, {{event("error")}}, <code><a href="/zh-TW/docs/Web/Reference/Events/load_(ProgressEvent)">load</a></code>, {{event("loadend")}}, {{event("loadstart")}}, {{event("progress")}},<code><a href="/zh-TW/docs/Web/Reference/Events/progress_(appcache_event)">progress</a></code>, {{event("timeout")}}, <code>uploadprogress</code></p>
+<p><code><a href="/zh-TW/docs/Web/Reference/Events/abort_(ProgressEvent)">abort</a></code>, {{event("error")}}, <code><a href="/zh-TW/docs/Web/Reference/Events/load_(ProgressEvent)">load</a></code>, {{event("loadend")}}, {{event("loadstart")}}, {{event("progress")}},<code><a href="/zh-TW/docs/Web/Reference/Events/progress_(appcache_event)">progress</a></code>, {{event("timeout")}}, <code>uploadprogress</code></p>
 
 <h3 id="Resource_events">Resource events</h3>
 
@@ -1886,15 +1886,15 @@ translation_of: Web/Events
 
 <h3 id="Tab_events">Tab events</h3>
 
-<p><a href="/zh-TW/docs/Web/Reference/Events/tabviewsearchenabled">tabviewsearchenabled</a>, <a href="/zh-TW/docs/Web/Reference/Events/tabviewsearchdisabled">tabviewsearchdisabled</a>, <a href="/zh-TW/docs/Web/Reference/Events/tabviewframeinitialized">tabviewframeinitialized</a>, <a href="/zh-TW/docs/Web/Reference/Events/tabviewshown">tabviewshown</a>,<a href="/zh-TW/docs/Web/Reference/Events/tabviewhidden">tabviewhidden</a>, <a href="/zh-TW/docs/Web/Reference/Events/TabOpen">TabOpen</a>, <a href="/zh-TW/docs/Web/Reference/Events/TabClose">TabClose</a>, <a href="/zh-TW/docs/Web/Reference/Events/TabSelect">TabSelect</a>, <a href="/zh-TW/docs/Web/Reference/Events/TabShow">TabShow</a>, <a href="/zh-TW/docs/Web/Reference/Events/TabHide">TabHide</a>, <a href="/zh-TW/docs/Web/Reference/Events/TabPinned">TabPinned</a>, <a href="/zh-TW/docs/Web/Reference/Events/TabUnpinned">TabUnpinned</a>,<a href="/zh-TW/docs/Web/Reference/Events/SSTabClosing">SSTabClosing</a>, <a href="/zh-TW/docs/Web/Reference/Events/SSTabRestoring">SSTabRestoring</a>, <a href="/zh-TW/docs/Web/Reference/Events/SSTabRestored">SSTabRestored</a>, {{event("visibilitychange")}}</p>
+<p><a href="/zh-TW/docs/Web/Reference/Events/tabviewsearchenabled">tabviewsearchenabled</a>, <a href="/zh-TW/docs/Web/Reference/Events/tabviewsearchdisabled">tabviewsearchdisabled</a>, <a href="/zh-TW/docs/Web/Reference/Events/tabviewframeinitialized">tabviewframeinitialized</a>, <a href="/zh-TW/docs/Web/Reference/Events/tabviewshown">tabviewshown</a>,<a href="/zh-TW/docs/Web/Reference/Events/tabviewhidden">tabviewhidden</a>, <a href="/zh-TW/docs/Web/Reference/Events/TabOpen">TabOpen</a>, <a href="/zh-TW/docs/Web/Reference/Events/TabClose">TabClose</a>, <a href="/zh-TW/docs/Web/Reference/Events/TabSelect">TabSelect</a>, <a href="/zh-TW/docs/Web/Reference/Events/TabShow">TabShow</a>, <a href="/zh-TW/docs/Web/Reference/Events/TabHide">TabHide</a>, <a href="/zh-TW/docs/Web/Reference/Events/TabPinned">TabPinned</a>, <a href="/zh-TW/docs/Web/Reference/Events/TabUnpinned">TabUnpinned</a>,<a href="/zh-TW/docs/Web/Reference/Events/SSTabClosing">SSTabClosing</a>, <a href="/zh-TW/docs/Web/Reference/Events/SSTabRestoring">SSTabRestoring</a>, <a href="/zh-TW/docs/Web/Reference/Events/SSTabRestored">SSTabRestored</a>, {{event("visibilitychange")}}</p>
 
 <h3 id="Text_events">Text events</h3>
 
-<p>{{event("compositionend")}}, {{event("compositionstart")}}, {{event("compositionupdate")}}, {{event("copy")}}, {{event("cut")}}, {{event("paste")}}, {{event("select")}}, <code>text</code></p>
+<p>{{event("compositionend")}}, {{event("compositionstart")}}, {{event("compositionupdate")}}, {{event("copy")}}, {{event("cut")}}, {{event("paste")}}, {{event("select")}}, <code>text</code></p>
 
 <h3 id="Touch_events">Touch events</h3>
 
-<p><a href="/zh-TW/docs/Web/Reference/Events/MozEdgeUIGesture">MozEdgeUIGesture</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozMagnifyGesture">MozMagnifyGesture</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozMagnifyGestureStart">MozMagnifyGestureStart</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozMagnifyGestureUpdate">MozMagnifyGestureUpdate</a>,<a href="/zh-TW/docs/Web/Reference/Events/MozPressTapGesture">MozPressTapGesture</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozRotateGesture">MozRotateGesture</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozRotateGestureStart">MozRotateGestureStart</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozRotateGestureUpdate">MozRotateGestureUpdate</a>,<a href="/zh-TW/docs/Web/Reference/Events/MozSwipeGesture">MozSwipeGesture</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozTapGesture">MozTapGesture</a>, <a href="/zh-TW/DOM/Touch_events_(Mozilla_experimental)">MozTouchDown</a>, <a href="/zh-TW/DOM/Touch_events_(Mozilla_experimental)">MozTouchMove</a>, <a href="/zh-TW/DOM/Touch_events_(Mozilla_experimental)">MozTouchUp</a>, {{event("touchcancel")}}, {{event("touchend")}}, {{event("touchenter")}}, {{event("touchleave")}}, {{event("touchmove")}}, {{event("touchstart")}}</p>
+<p><a href="/zh-TW/docs/Web/Reference/Events/MozEdgeUIGesture">MozEdgeUIGesture</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozMagnifyGesture">MozMagnifyGesture</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozMagnifyGestureStart">MozMagnifyGestureStart</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozMagnifyGestureUpdate">MozMagnifyGestureUpdate</a>,<a href="/zh-TW/docs/Web/Reference/Events/MozPressTapGesture">MozPressTapGesture</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozRotateGesture">MozRotateGesture</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozRotateGestureStart">MozRotateGestureStart</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozRotateGestureUpdate">MozRotateGestureUpdate</a>,<a href="/zh-TW/docs/Web/Reference/Events/MozSwipeGesture">MozSwipeGesture</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozTapGesture">MozTapGesture</a>, <a href="/zh-TW/DOM/Touch_events_(Mozilla_experimental)">MozTouchDown</a>, <a href="/zh-TW/DOM/Touch_events_(Mozilla_experimental)">MozTouchMove</a>, <a href="/zh-TW/DOM/Touch_events_(Mozilla_experimental)">MozTouchUp</a>, {{event("touchcancel")}}, {{event("touchend")}}, {{event("touchenter")}}, {{event("touchleave")}}, {{event("touchmove")}}, {{event("touchstart")}}</p>
 
 <h3 id="Update_events">Update events</h3>
 
@@ -1906,19 +1906,19 @@ translation_of: Web/Events
 
 <h3 id="View_events">View events</h3>
 
-<p><a href="/zh-TW/docs/Web/Reference/Events/fullscreen">fullscreen</a>, {{event("fullscreenchange")}}, {{event("fullscreenerror")}}, <a href="/zh-TW/docs/Web/Reference/Events/MozEnteredDomFullscreen">MozEnteredDomFullscreen</a>, {{event("MozScrolledAreaChanged")}}, {{event("resize")}}, {{event("scroll")}}, <a href="/zh-TW/docs/Web/Reference/Events/sizemodechange">sizemodechange</a></p>
+<p><a href="/zh-TW/docs/Web/Reference/Events/fullscreen">fullscreen</a>, {{event("fullscreenchange")}}, {{event("fullscreenerror")}}, <a href="/zh-TW/docs/Web/Reference/Events/MozEnteredDomFullscreen">MozEnteredDomFullscreen</a>, {{event("MozScrolledAreaChanged")}}, {{event("resize")}}, {{event("scroll")}}, <a href="/zh-TW/docs/Web/Reference/Events/sizemodechange">sizemodechange</a></p>
 
 <h3 id="Websocket_事件">Websocket 事件</h3>
 
-<p><code><a href="/zh-TW/docs/Web/Reference/Events/close_websocket">close</a></code>, {{event("error")}}, <code><a href="/zh-TW/docs/Web/Reference/Events/message_websocket">message</a></code>, <code><a href="/zh-TW/docs/Web/Reference/Events/open_websocket">open</a></code></p>
+<p><code><a href="/zh-TW/docs/Web/Reference/Events/close_websocket">close</a></code>, {{event("error")}}, <code><a href="/zh-TW/docs/Web/Reference/Events/message_websocket">message</a></code>, <code><a href="/zh-TW/docs/Web/Reference/Events/open_websocket">open</a></code></p>
 
 <h3 id="Window_events">Window events</h3>
 
-<p><a href="/zh-TW/docs/Web/Reference/Events/DOMWindowCreated">DOMWindowCreated</a>, <a href="/zh-TW/docs/Web/Reference/Events/DOMWindowClose">DOMWindowClose</a>, <a href="/zh-TW/docs/Web/Reference/Events/DOMTitleChanged">DOMTitleChanged</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozBeforeResize">MozBeforeResize</a> {{obsolete_inline}},<a href="/zh-TW/docs/Web/Reference/Events/SSWindowClosing">SSWindowClosing</a>, <a href="/zh-TW/docs/Web/Reference/Events/SSWindowStateReady">SSWindowStateReady</a>, <a href="/zh-TW/docs/Web/Reference/Events/SSWindowStateBusy">SSWindowStateBusy</a>, <a href="/zh-TW/docs/Web/Reference/Events/close_event">close</a></p>
+<p><a href="/zh-TW/docs/Web/Reference/Events/DOMWindowCreated">DOMWindowCreated</a>, <a href="/zh-TW/docs/Web/Reference/Events/DOMWindowClose">DOMWindowClose</a>, <a href="/zh-TW/docs/Web/Reference/Events/DOMTitleChanged">DOMTitleChanged</a>, <a href="/zh-TW/docs/Web/Reference/Events/MozBeforeResize">MozBeforeResize</a> {{obsolete_inline}},<a href="/zh-TW/docs/Web/Reference/Events/SSWindowClosing">SSWindowClosing</a>, <a href="/zh-TW/docs/Web/Reference/Events/SSWindowStateReady">SSWindowStateReady</a>, <a href="/zh-TW/docs/Web/Reference/Events/SSWindowStateBusy">SSWindowStateBusy</a>, <a href="/zh-TW/docs/Web/Reference/Events/close_event">close</a></p>
 
 <h3 id="尚未分類的事件">尚未分類的事件</h3>
 
-<p>{{event("beforeunload")}}, {{event("localized")}}, <code><a href="/zh-TW/docs/Web/Reference/Events/message_webworker">message</a></code>, <code><a href="/zh-TW/docs/Web/Reference/Events/message_webmessaging">message</a></code>, <code><a href="/zh-TW/docs/Web/Reference/Events/message_serversentevents">message</a></code>, <a href="/zh-TW/docs/Web/Reference/Events/MozAfterPaint">MozAfterPaint</a>, {{event("moztimechange")}}, <code><a href="/zh-TW/docs/Web/Reference/Events/open_serversentevents">open</a></code>, {{event("show")}}</p>
+<p>{{event("beforeunload")}}, {{event("localized")}}, <code><a href="/zh-TW/docs/Web/Reference/Events/message_webworker">message</a></code>, <code><a href="/zh-TW/docs/Web/Reference/Events/message_webmessaging">message</a></code>, <code><a href="/zh-TW/docs/Web/Reference/Events/message_serversentevents">message</a></code>, <a href="/zh-TW/docs/Web/Reference/Events/MozAfterPaint">MozAfterPaint</a>, {{event("moztimechange")}}, <code><a href="/zh-TW/docs/Web/Reference/Events/open_serversentevents">open</a></code>, {{event("show")}}</p>
 
 <h2 id="規範">規範</h2>
 

@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><em>TypedArray</em></strong> 物件表示了一個底層 <code><a href="/zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer">ArrayBuffer</a></code> 的類陣列（array-like）視圖，它能以限定的型別解讀、修改 <code>ArrayBuffer</code>。但並沒有名為 <code>TypedArray</code> 的內建物件，<code>TypedArray</code> 也不存在可直接呼叫的建構式。真正能夠使用的是幾個原型繼承自 <code>TypedArray</code> 的內建物件，它們可以建立限定成員型別的物件實體來操作 <code>ArrayBuffer</code>。這些 <code>TypedArray</code> 型別的物件僅為視圖，並不會存放資料，所有的資料皆實際儲存於 <code>ArrayBuffer</code> 物件當中。以下將說明每種限定成員型別之 <code>TypedArray</code> 的共同屬性與方法。</p>
+<p><strong><em>TypedArray</em></strong> 物件表示了一個底層 <code><a href="/zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer">ArrayBuffer</a></code> 的類陣列（array-like）視圖，它能以限定的型別解讀、修改 <code>ArrayBuffer</code>。但並沒有名為 <code>TypedArray</code> 的內建物件，<code>TypedArray</code> 也不存在可直接呼叫的建構式。真正能夠使用的是幾個原型繼承自 <code>TypedArray</code> 的內建物件，它們可以建立限定成員型別的物件實體來操作 <code>ArrayBuffer</code>。這些 <code>TypedArray</code> 型別的物件僅為視圖，並不會存放資料，所有的資料皆實際儲存於 <code>ArrayBuffer</code> 物件當中。以下將說明每種限定成員型別之 <code>TypedArray</code> 的共同屬性與方法。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}</div>
 
@@ -45,16 +45,16 @@ Float64Array();
  <dt>object</dt>
  <dd>When called with an <code>object</code> argument, a new typed array is created as if by the <code><em>TypedArray</em>.from()</code> method.</dd>
  <dt>buffer, byteOffset, length</dt>
- <dd>When called with a <code>buffer</code>, and optionally a <code>byteOffset</code> and a <code>length</code> argument, a new typed array view is created that views the specified {{jsxref("ArrayBuffer")}}. The <code>byteOffset</code> and <code>length</code> parameters specify the memory range that will be exposed by the typed array view.  If both are omitted, all of <code>buffer</code> is viewed; if only <code>length</code> is omitted, the remainder of <code>buffer</code> is viewed.</dd>
+ <dd>When called with a <code>buffer</code>, and optionally a <code>byteOffset</code> and a <code>length</code> argument, a new typed array view is created that views the specified {{jsxref("ArrayBuffer")}}. The <code>byteOffset</code> and <code>length</code> parameters specify the memory range that will be exposed by the typed array view.  If both are omitted, all of <code>buffer</code> is viewed; if only <code>length</code> is omitted, the remainder of <code>buffer</code> is viewed.</dd>
 </dl>
 
 <h2 id="說明">說明</h2>
 
-<p>ECMAScript 2015 defines a <em>TypedArray</em> constructor that serves as the <code>[[Prototype]]</code> of all <em>TypedArray</em> constructors.  This constructor is not directly exposed: there is no global <code>%TypedArray%</code> or <code>TypedArray</code> property.  It is only directly accessible through <code>Object.getPrototypeOf(Int8Array)</code> and similar.  All <em>TypedArray</em>s constructors inherit common properties from the <code>%TypedArray%</code> constructor function.  Additionally, all typed array prototypes (<em>TypedArray</em><code>.prototype</code>) have <code>%TypedArray%.prototype</code> as their <code>[[Prototype]]</code>.</p>
+<p>ECMAScript 2015 defines a <em>TypedArray</em> constructor that serves as the <code>[[Prototype]]</code> of all <em>TypedArray</em> constructors.  This constructor is not directly exposed: there is no global <code>%TypedArray%</code> or <code>TypedArray</code> property.  It is only directly accessible through <code>Object.getPrototypeOf(Int8Array)</code> and similar.  All <em>TypedArray</em>s constructors inherit common properties from the <code>%TypedArray%</code> constructor function.  Additionally, all typed array prototypes (<em>TypedArray</em><code>.prototype</code>) have <code>%TypedArray%.prototype</code> as their <code>[[Prototype]]</code>.</p>
 
-<p>The <code>%TypedArray%</code> constructor on its own is not particularly useful.  Calling it or using it in a <code>new</code> expression will throw a <code>TypeError</code>, except when used during object creation in JS engines that support subclassing.  There are at present no such engines, so <code>%TypedArray%</code> is only useful to polyfill functions or properties onto all <em>TypedArray</em> constructors.</p>
+<p>The <code>%TypedArray%</code> constructor on its own is not particularly useful.  Calling it or using it in a <code>new</code> expression will throw a <code>TypeError</code>, except when used during object creation in JS engines that support subclassing.  There are at present no such engines, so <code>%TypedArray%</code> is only useful to polyfill functions or properties onto all <em>TypedArray</em> constructors.</p>
 
-<p>When creating an instance of a <em>TypedArray</em> (e.g. <code>Int8Array</code>), an array buffer is created internally in memory or, if an <code>ArrayBuffer</code> object is given as constructor argument, then this is used instead.  The buffer address is saved as an internal property of the instance and all the methods of %<code>TypedArray</code>%.<code>prototype</code>, i.e. set value and get value etc., operate on that array buffer address.</p>
+<p>When creating an instance of a <em>TypedArray</em> (e.g. <code>Int8Array</code>), an array buffer is created internally in memory or, if an <code>ArrayBuffer</code> object is given as constructor argument, then this is used instead.  The buffer address is saved as an internal property of the instance and all the methods of %<code>TypedArray</code>%.<code>prototype</code>, i.e. set value and get value etc., operate on that array buffer address.</p>
 
 <h3 id="Property_access">Property access</h3>
 
@@ -151,7 +151,7 @@ Int8Array.prototype.foo = 'bar';
    <td>{{jsxref("Float32Array")}}</td>
    <td>1.2x10^-38 to 3.4x10^38</td>
    <td>4</td>
-   <td>32-bit IEEE floating point number ( 7 significant digits e.g. 1.1234567)</td>
+   <td>32-bit IEEE floating point number ( 7 significant digits e.g. 1.1234567)</td>
    <td><code>unrestricted float</code></td>
    <td><code>float</code></td>
   </tr>
@@ -204,16 +204,16 @@ Int8Array.prototype.foo = 'bar';
 
 <h3 id="Methods_Polyfill">Methods Polyfill</h3>
 
-<p>Many of the methods used in Typed Arrays can be polyfilled using the methods present in regular Javascript Arrays. The following snippet of JavaScript demonstrates how you might polyfill any missing Typed Array methods.</p>
+<p>Many of the methods used in Typed Arrays can be polyfilled using the methods present in regular Javascript Arrays. The following snippet of JavaScript demonstrates how you might polyfill any missing Typed Array methods.</p>
 
 <pre class="brush: js example-bad">var typedArrayTypes = [<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array">Int8Array</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray">Uint8ClampedArray</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array">Int16Array</a>,
-</code>          <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array">Uint16Array</a>, ​​​<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array">Int32Array</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array">Uint32Array</a>, ​​​<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array">Float32Array</a>, </code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array"><code>Float64Array</code></a>];
+</code>          <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array">Uint16Array</a>, ​​​<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array">Int32Array</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array">Uint32Array</a>, ​​​<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array">Float32Array</a>, </code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array"><code>Float64Array</code></a>];
 
 for (var k in typedArrayTypes)
-    for (var v in Array.prototype)
-        if (Array.prototype.hasOwnProperty(v) &amp;&amp;
-          !typedArrayTypes[k].prototype.hasOwnProperty(v))
-            typedArrayTypes[k].prototype[v] = Array.prototype[v];
+    for (var v in Array.prototype)
+        if (Array.prototype.hasOwnProperty(v) &amp;&amp;
+          !typedArrayTypes[k].prototype.hasOwnProperty(v))
+            typedArrayTypes[k].prototype[v] = Array.prototype[v];
 </pre>
 
 <h2 id="規範">規範</h2>

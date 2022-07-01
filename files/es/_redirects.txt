@@ -503,6 +503,7 @@
 /es/docs/Glossary/Sentencias	/es/docs/Glossary/Statement
 /es/docs/Glossary/Sincronico	/es/docs/Glossary/Synchronous
 /es/docs/Glossary/Sistema_gestion_contenidos	/es/docs/Glossary/CMS
+/es/docs/Glossary/Symbol	/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /es/docs/Glossary/TextoCifrado	/es/docs/Glossary/Ciphertext
 /es/docs/Glossary/TextoSimple	/es/docs/Glossary/Plaintext
 /es/docs/Glossary/Tipado_dinámico	/es/docs/Glossary/Dynamic_typing
@@ -1600,6 +1601,8 @@
 /es/docs/Web/API/Geolocation.clearWatch	/es/docs/Web/API/Geolocation/clearWatch
 /es/docs/Web/API/Geolocation.getCurrentPosition	/es/docs/Web/API/Geolocation/getCurrentPosition
 /es/docs/Web/API/Geolocation.watchPosition	/es/docs/Web/API/Geolocation/watchPosition
+/es/docs/Web/API/GlobalEventHandlers/onblur	/es/docs/Web/API/Window/blur_event
+/es/docs/Web/API/GlobalEventHandlers/onfocus	/es/docs/Web/API/Window/focus_event
 /es/docs/Web/API/HTMLElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /es/docs/Web/API/HTMLElement/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
 /es/docs/Web/API/HTMLOrForeignElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
@@ -1632,6 +1635,7 @@
 /es/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /es/docs/Web/API/WebGL_API/Tutorial/Objetos_3D_utilizando_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /es/docs/Web/API/WebGL_API/Tutorial/Wtilizando_texturas_en_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+/es/docs/Web/API/WebRTC_API/Taking_still_photos	/es/docs/Web/API/Media_Streams_API/Taking_still_photos
 /es/docs/Web/API/WebSocket/onerror	/es/docs/Web/API/WebSocket/error_event
 /es/docs/Web/API/WebSockets_API/Escribiendo_servidor_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_server
 /es/docs/Web/API/WebSockets_API/Escribiendo_servidores_con_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
@@ -1673,8 +1677,9 @@
 /es/docs/Web/Accesibilidad/Understanding_WCAG/Perceivable/Color_contraste	/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 /es/docs/Web/Accesibilidad/Understanding_WCAG/Teclado	/es/docs/Web/Accessibility/Understanding_WCAG/Keyboard
 /es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_atributo_aria-required	/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
-/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_rol_alertdialog	/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
+/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_rol_alertdialog	/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
 /es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/es/docs/Web/Accessibility/ARIA/Roles/alert_role
+/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
 /es/docs/Web/Accessibility/ARIA/forms/Etiquetas_complejas	/es/docs/Web/Accessibility/ARIA/forms/Multipart_labels
 /es/docs/Web/Accessibility/ARIA/forms/alertas	/es/docs/Web/Accessibility/ARIA/forms/alerts
 /es/docs/Web/Accessibility/ARIA/forms/consejos_basicos_para_formularios	/es/docs/Web/Accessibility/ARIA/forms/Basic_form_hints
@@ -2143,6 +2148,7 @@
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 /es/docs/Web/JavaScript/Reference/Global_Objects/null	/es/docs/Web/JavaScript/Reference/Operators/null
+/es/docs/Web/JavaScript/Reference/Statements/import.meta	/es/docs/Web/JavaScript/Reference/Operators/import.meta
 /es/docs/Web/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference
 /es/docs/Web/JavaScript/Referencia/Acerca_de	/es/docs/Web/JavaScript/Reference/About
 /es/docs/Web/JavaScript/Referencia/Características_Desaprobadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
@@ -2551,7 +2557,7 @@
 /es/docs/Web/JavaScript/Referencia/Sentencias/function*	/es/docs/Web/JavaScript/Reference/Statements/function*
 /es/docs/Web/JavaScript/Referencia/Sentencias/if...else	/es/docs/Web/JavaScript/Reference/Statements/if...else
 /es/docs/Web/JavaScript/Referencia/Sentencias/import	/es/docs/Web/JavaScript/Reference/Statements/import
-/es/docs/Web/JavaScript/Referencia/Sentencias/import.meta	/es/docs/Web/JavaScript/Reference/Statements/import.meta
+/es/docs/Web/JavaScript/Referencia/Sentencias/import.meta	/es/docs/Web/JavaScript/Reference/Operators/import.meta
 /es/docs/Web/JavaScript/Referencia/Sentencias/label	/es/docs/Web/JavaScript/Reference/Statements/label
 /es/docs/Web/JavaScript/Referencia/Sentencias/let	/es/docs/Web/JavaScript/Reference/Statements/let
 /es/docs/Web/JavaScript/Referencia/Sentencias/return	/es/docs/Web/JavaScript/Reference/Statements/return
@@ -2648,7 +2654,7 @@
 /es/docs/WebRTC/Introduction	/es/docs/Web/API/WebRTC_API/Session_lifetime
 /es/docs/WebRTC/MediaStream_API	/es/docs/Web/API/Media_Streams_API
 /es/docs/WebRTC/Peer-to-peer_communications_with_WebRTC	/es/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
-/es/docs/WebRTC/Taking_webcam_photos	/es/docs/Web/API/WebRTC_API/Taking_still_photos
+/es/docs/WebRTC/Taking_webcam_photos	/es/docs/Web/API/Media_Streams_API/Taking_still_photos
 /es/docs/WebSockets-840092-dup	/es/docs/Web/API/WebSockets_API
 /es/docs/WebSockets-840092-dup/Escribiendo_servidor_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_server
 /es/docs/WebSockets-840092-dup/Escribiendo_servidores_con_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_servers

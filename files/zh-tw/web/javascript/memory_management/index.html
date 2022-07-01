@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Memory_Management
 
 <h2 id="介紹">介紹</h2>
 
-<p>像 C 語言一樣低階的語言，都有著如 malloc() 跟 free() 的低階函式記憶體控管權限。另一方面，當 JavaScript 建立事物(如物件、字串等)時會分配空間給值且自動釋放不再使用的值。後者的流程稱作為回收機制。這個自動化的回收流程是一個混亂的根源，它會使 JavaScript 的開發者 (或者其他高階語言的開發者) 產生可以不須理會「記憶體管理」的錯誤認知。</p>
+<p>像 C 語言一樣低階的語言，都有著如 malloc() 跟 free() 的低階函式記憶體控管權限。另一方面，當 JavaScript 建立事物(如物件、字串等)時會分配空間給值且自動釋放不再使用的值。後者的流程稱作為回收機制。這個自動化的回收流程是一個混亂的根源，它會使 JavaScript 的開發者 (或者其他高階語言的開發者) 產生可以不須理會「記憶體管理」的錯誤認知。</p>
 
 <h2 id="記憶體生命週期">記憶體生命週期</h2>
 
@@ -187,11 +187,11 @@ window.onload = function() {
 
 <h4 id="V8_Engine_Flags">V8 Engine Flags</h4>
 
-<p>The max amount of available heap memory can be increased with a flag:</p>
+<p>The max amount of available heap memory can be increased with a flag:</p>
 
-<p><code>node --<em>max-old-space-size=6000</em> index.js</code></p>
+<p><code>node --<em>max-old-space-size=6000</em> index.js</code></p>
 
-<p>We can also expose the garbage collector for debugging memory issues using a flag and the <a href="https://nodejs.org/en/docs/guides/debugging-getting-started/">Chrome Debugger</a>:</p>
+<p>We can also expose the garbage collector for debugging memory issues using a flag and the <a href="https://nodejs.org/en/docs/guides/debugging-getting-started/">Chrome Debugger</a>:</p>
 
 <pre>node --expose-gc --inspect index.js</pre>
 

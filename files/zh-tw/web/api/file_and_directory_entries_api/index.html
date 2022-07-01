@@ -127,7 +127,7 @@ objectStore.add(myFile, myKey).onsuccess = function(event) {
   <dt>
     readAsText(size [, encoding])</dt>
   <dd>
-    針對既有 <code>size</code> 的字串，以既定的<code> encoding</code> 回傳 <a href="/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface">FileRequest</a>。此作業均從 <code>location</code> 開始，另根據讀取位元組的數目，移動 <code>location</code>。<a href="/en-US/docs/DOM/FileReader">FileReader</a> API 中的對等函式，也以相同方式運作。
+    針對既有 <code>size</code> 的字串，以既定的<code> encoding</code> 回傳 <a href="/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface">FileRequest</a>。此作業均從 <code>location</code> 開始，另根據讀取位元組的數目，移動 <code>location</code>。<a href="/en-US/docs/DOM/FileReader">FileReader</a> API 中的對等函式，也以相同方式運作。
     <pre class="brush: js">var lockedFile = myFile.open();
 var request = lockedFile.readAsText(3);
 request.onsuccess = function(event) {
@@ -179,7 +179,7 @@ request.onsuccess = function(event) {
 };</pre>
 <dl>
   <dt>
-     </dt>
+     </dt>
 </dl>
 <h2 id="說明">說明</h2>
 <h3 id="API_與_FileWriter_的差異？">API 與 FileWriter 的差異？</h3>

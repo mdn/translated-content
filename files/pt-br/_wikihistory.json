@@ -926,13 +926,6 @@
       "reuel.jonathan"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2019-03-18T21:36:11.562Z",
-    "contributors": [
-      "RafaelAdao",
-      "trestini"
-    ]
-  },
   "Glossary/Synchronous": {
     "modified": "2019-03-18T21:43:56.155Z",
     "contributors": [
@@ -4964,12 +4957,6 @@
       "teoli"
     ]
   },
-  "Web/API/GlobalEventHandlers/onblur": {
-    "modified": "2019-03-23T22:28:57.111Z",
-    "contributors": [
-      "cezaraugusto"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onchange": {
     "modified": "2019-03-23T22:28:49.180Z",
     "contributors": [
@@ -4993,12 +4980,6 @@
     "modified": "2019-03-23T22:31:39.576Z",
     "contributors": [
       "mantovani"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onfocus": {
-    "modified": "2019-03-23T22:26:20.214Z",
-    "contributors": [
-      "tmoraes"
     ]
   },
   "Web/API/GlobalEventHandlers/onkeyup": {
@@ -6233,6 +6214,12 @@
       "LeoNicolas"
     ]
   },
+  "Web/API/Window/blur_event": {
+    "modified": "2019-03-23T22:28:57.111Z",
+    "contributors": [
+      "cezaraugusto"
+    ]
+  },
   "Web/API/Window/closed": {
     "modified": "2019-03-18T20:58:51.070Z",
     "contributors": [
@@ -6259,6 +6246,12 @@
     "modified": "2019-03-23T22:34:58.265Z",
     "contributors": [
       "macalha"
+    ]
+  },
+  "Web/API/Window/focus_event": {
+    "modified": "2019-03-23T22:26:20.214Z",
+    "contributors": [
+      "tmoraes"
     ]
   },
   "Web/API/Window/fullScreen": {
@@ -6680,12 +6673,6 @@
       "ivanoliveira"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role": {
-    "modified": "2019-03-23T22:16:26.114Z",
-    "contributors": [
-      "rener_bz"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Test_Cases": {
     "modified": "2019-03-23T23:03:31.037Z",
     "contributors": [
@@ -6704,6 +6691,12 @@
     "contributors": [
       "Aschlla",
       "iCynthia"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/slider_role": {
+    "modified": "2019-03-23T22:16:26.114Z",
+    "contributors": [
+      "rener_bz"
     ]
   },
   "Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ": {
@@ -14727,6 +14720,12 @@
       "alefesouza"
     ]
   },
+  "Web/JavaScript/Reference/Operators/import.meta": {
+    "modified": "2020-10-15T22:30:56.248Z",
+    "contributors": [
+      "joaopclima"
+    ]
+  },
   "Web/JavaScript/Reference/Operators/in": {
     "modified": "2020-10-15T22:00:04.247Z",
     "contributors": [
@@ -14998,12 +14997,6 @@
       "cezaraugusto",
       "PauloNevesF",
       "tamorim"
-    ]
-  },
-  "Web/JavaScript/Reference/Statements/import.meta": {
-    "modified": "2020-10-15T22:30:56.248Z",
-    "contributors": [
-      "joaopclima"
     ]
   },
   "Web/JavaScript/Reference/Statements/label": {
@@ -16245,6 +16238,13 @@
     "modified": "2019-03-23T22:03:59.387Z",
     "contributors": [
       "oirodolfo"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
+    "modified": "2019-03-18T21:36:11.562Z",
+    "contributors": [
+      "RafaelAdao",
+      "trestini"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/WeakMap": {

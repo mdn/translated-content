@@ -17,7 +17,7 @@ translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 
 <p><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> 引入新的事件在 {{ domxref("Window") }} 对象中，来读取手柄和控制器（以下称“控制器”）的状态。除此之外，API 还添加了一个 {{ domxref("Gamepad") }} 对象，你可以用它来查询已连接控制器的状态；还有一个 {{ domxref("navigator.getGamepads()") }} 方法，你可以使用它来获取页面已知的控制器列表。</p>
 
-<h2 id="conntecting" name="conntecting">连接控制器</h2>
+<h2 id="conntecting">连接控制器</h2>
 
 <p>当一个新的手柄连接到计算机时，焦点页面 (当前页面) 首先接收一个 {{ event("gamepadconnected") }} 事件。 如果在加载页面时已经连接了手柄，则会在用户按下某个按钮或移动坐标方向 (axes) 时触发焦点页面的 {{ event("gamepadconnected") }} 事件。</p>
 
@@ -36,7 +36,7 @@ translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 
 <p>每个控制器都有一个与之关联的唯一 ID，其在事件的 {{domxref("GamepadEvent.gamepad", "gamepad")}} 属性上可用。</p>
 
-<h2 id="disconnecting" name="disconnecting">断开控制器连接</h2>
+<h2 id="disconnecting">断开控制器连接</h2>
 
 <p>当控制器断开连接时，如果页面以前接收过该手柄的数据 (例如 {{ event("gamepadconnected") }})，那么第二个事件 {{ event("gamepaddisconnected") }} 将会分配至焦点页面：</p>
 
@@ -67,7 +67,7 @@ window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, f
 
 <p>上面的示例同时演示了在事件完成后如何保存 <code>gamepad</code> 属性，并在之后使用其查询设备状态。</p>
 
-<h2 id="querying" name="querying">查询 Gamepad 对象</h2>
+<h2 id="querying">查询 Gamepad 对象</h2>
 
 <p>正如你看到的，上面讨论的 <strong>gamepad</strong> 事件，包括事件对象上的 <code>gamepad</code> 属性，会返回一个 {{ domxref("Gamepad") }} 对象。因为可能同时连接不止一个控制器，所以我们可以使用它来确定是哪个控制器 (或者说 ID) 触发了事件。我们可以使用 {{ domxref("Gamepad") }} 对象做很多事，比如保留对象的引用并用其查询，以找出哪些按钮和摇杆在什么时候被按下了。相较于在下次触发，现在立即就可以获取控制器的状态对于游戏或其他交互式网页来说是一般是可取的。</p>
 
@@ -118,7 +118,7 @@ var a = 0;
 var b = 0;
 </pre>
 
-<p>接下来我们使用 {{ event("gamepadconnected") }} 世界来检查控制器是否连接。当有一个控制连接时，我们就使用 {{ domxref("Navigator.getGamepads()") }}<code>[0]</code> 来抓取，输出控制器信息到我们“控制器信息”的 <code>div</code> 里，并开始 <code>gameLoop()</code> 函数来启动球的运动进程。</p>
+<p>接下来我们使用 {{ event("gamepadconnected") }} 事件来检查控制器是否连接。当有一个控制连接时，我们就使用 {{ domxref("Navigator.getGamepads()") }}<code>[0]</code> 来抓取，输出控制器信息到我们“控制器信息”的 <code>div</code> 里，并开始 <code>gameLoop()</code> 函数来启动球的运动进程。</p>
 
 <pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
   var gp = navigator.getGamepads()[e.gamepad.index];
@@ -135,7 +135,7 @@ var b = 0;
   cancelRequestAnimationFrame(start);
 });</pre>
 
-<p>Chrome 在这里有些区别。它没有在变量内不断的更新存储控制器的最后状态，而存储只是当时的一个快照，所以你要在 Chrome 中做到同样的事情的话，就需要不断地轮询，然后在可用的时候只能在代码中使用 {{ domxref("Gamepad") }} 对象来达到目的。我们下面用 {{ domxref("Window.setInterval()") }}实现了 7；一旦控制器的可以输出了，游戏循环就会开始，可以使用 {{ domxref("Window.clearInterval()") }} 清除定时循环。请注意在较旧版本的 Chrome 中实现 {{ domxref("Navigator.getGamepads()") }} 需要加上  <code>webkit</code> 前缀。我们尝试对两种前缀版本都进行监测和处理，以向后兼容。</p>
+<p>Chrome 在这里有些区别。它没有在变量内不断的更新存储控制器的最后状态，而存储只是当时的一个快照，所以你要在 Chrome 中做到同样的事情的话，就需要不断地轮询，然后在可用的时候只能在代码中使用 {{ domxref("Gamepad") }} 对象来达到目的。我们下面用 {{ domxref("Window.setInterval()") }}实现了; 一旦对象可用，控制器信息就会被输出，游戏循环就会开始，可以使用 {{ domxref("Window.clearInterval()") }} 清除定时循环。请注意在较旧版本的 Chrome 中实现 {{ domxref("Navigator.getGamepads()") }} 需要加上  <code>webkit</code> 前缀。我们尝试对两种前缀版本都进行监测和处理，以向后兼容。</p>
 
 <pre class="brush: js">var interval;
 

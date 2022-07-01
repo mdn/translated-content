@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Statements/const
 
 <p>宣告 <strong><code>const</code></strong> 會對於它的值建立一個唯讀的參考。並不是說這個值不可變更，而是這個變數不能再一次指定值。例如，假設常數的內容(值)是個物件，那麼此物件的內容(物件的參數)是可以更改的。</p>
 
-<p>所有關於 "<a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let">temporal dead zone</a>" 的狀況，都適用於 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/let">let</a></code> and <code>const</code> 。</p>
+<p>所有關於 "<a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let">temporal dead zone</a>" 的狀況，都適用於 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/let">let</a></code> and <code>const</code> 。</p>
 
 <p>在相同的可視範圍內，常數不能和函數，變數具有相同名稱。</p>
 
@@ -83,7 +83,7 @@ MY_OBJECT = {'OTHER_KEY': 'value'};
 
 // 然而, 物件的屬性並沒有被保護,
 // 所以，以下敘述式沒有問題。
-MY_OBJECT.key = 'otherValue'; // Use Object.freeze() to make object immutable
+MY_OBJECT.key = 'otherValue'; // Use Object.freeze() to make object immutable
 
 // 對陣列來說也是一樣
 const MY_ARRAY = [];

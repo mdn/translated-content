@@ -904,14 +904,6 @@
       "enfroze"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2019-09-22T21:56:04.399Z",
-    "contributors": [
-      "Hongsun",
-      "dolmoon",
-      "limkukhyun"
-    ]
-  },
   "Glossary/TCP": {
     "modified": "2020-07-18T05:44:12.957Z",
     "contributors": [
@@ -14737,12 +14729,11 @@
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol": {
-    "modified": "2020-10-15T21:40:09.882Z",
+    "modified": "2019-09-22T21:56:04.399Z",
     "contributors": [
+      "Hongsun",
       "dolmoon",
-      "SphinxKnight",
-      "HyunSeob",
-      "maytree"
+      "limkukhyun"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol/for": {

@@ -62,7 +62,7 @@ translation_of: Web/HTML/Attributes/rel
 
   - : 現在の文書の代替表現を示します。 {{htmlelement('link')}}、{{htmlelement('a')}}、{{htmlelement('area')}} で有効であり、意味は他の属性の値に依存します。
 
-    - `{{anch('stylesheet')}}` キーワードと共に `<link>` で使用された場合は、代替スタイルシートを生成します。
+    - [`stylesheet`](#stylesheet) キーワードと共に `<link>` で使用された場合は、代替スタイルシートを生成します。
 
       ```html
       <!-- 常設スタイルシート -->

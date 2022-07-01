@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Guide/Indexed_collections
 
 <h2 id="Array_object"><code>Array</code> object</h2>
 
-<p>An <em>array</em> is an ordered set of values that you refer to with a name and an index. For example, you could have an array called <code>emp</code> that contains employees' names indexed by their numerical employee number. So <code>emp[1]</code> would be employee number one, <code>emp[2]</code> employee number two, and so on.</p>
+<p>An <em>array</em> is an ordered set of values that you refer to with a name and an index. For example, you could have an array called <code>emp</code> that contains employees' names indexed by their numerical employee number. So <code>emp[1]</code> would be employee number one, <code>emp[2]</code> employee number two, and so on.</p>
 
 <p>JavaScript does not have an explicit array data type. However, you can use the predefined <code>Array</code> object and its methods to work with arrays in your applications. The <code>Array</code> object has methods for manipulating arrays in various ways, such as joining, reversing, and sorting them. It has a property for determining the array length and other properties for use with regular expressions.</p>
 
@@ -209,7 +209,7 @@ array.forEach(function(element) {
 
 <h3 id="Array_methods">Array methods</h3>
 
-<p>The {{jsxref("Array")}} object has the following methods:</p>
+<p>The {{jsxref("Array")}} object has the following methods:</p>
 
 <p>{{jsxref("Array.concat", "concat()")}} joins two arrays and returns a new array.</p>
 
@@ -433,7 +433,7 @@ Row 3: [3, 0] [3, 1] [3, 2] [3, 3]
 
 <p>To achieve maximum flexibility and efficiency, JavaScript typed arrays split the implementation into <strong>buffers</strong> and <strong>views</strong>. A buffer (implemented by the {{jsxref("ArrayBuffer")}} object) is an object representing a chunk of data; it has no format to speak of, and offers no mechanism for accessing its contents. In order to access the memory contained in a buffer, you need to use a view. A view provides a context — that is, a data type, starting offset, and number of elements — that turns the data into an actual typed array.</p>
 
-<p><img alt="Typed arrays in an ArrayBuffer" src="https://mdn.mozillademos.org/files/8629/typed_arrays.png"></p>
+<p><img alt="Typed arrays in an ArrayBuffer" src="typed_arrays.png"></p>
 
 <h3 id="ArrayBuffer">ArrayBuffer</h3>
 

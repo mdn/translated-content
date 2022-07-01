@@ -5,7 +5,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_pa
 ---
 <p>種類<em>細節</em>頁面，需要利用<code>_id</code> 字段值 (自動生成) ，以呈現特定種類實例的信息。此頁面應該呈現種類名稱，各個種類的所有書本列表(每本書都連結到書本的細節頁面)。</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Controller_控制器">Controller 控制器</h2>
 
@@ -20,27 +20,27 @@ var async = require('async');
 <pre class="brush: js">// Display detail page for a specific Genre.
 exports.genre_detail = function(req, res, next) {
 
-<strong>    async.parallel({
-        genre: function(callback) {
-            Genre.findById(req.params.id)
-              .exec(callback);
-        },
+<strong>    async.parallel({
+        genre: function(callback) {
+            Genre.findById(req.params.id)
+              .exec(callback);
+        },
 
-        genre_books: function(callback) {
-          Book.find({ 'genre': req.params.id })
-          .exec(callback);
-        },
+        genre_books: function(callback) {
+          Book.find({ 'genre': req.params.id })
+          .exec(callback);
+        },
 
-    }, function(err, results) {
-        if (err) { return next(err); }
-        if (results.genre==null) { // No results.
-            var err = new Error('Genre not found');
-            err.status = 404;
-            return next(err);
-        }
-        // Successful, so render
-        res.render('genre_detail', { title: 'Genre Detail', genre: results.genre, genre_books: results.genre_books } );
-    });</strong>
+    }, function(err, results) {
+        if (err) { return next(err); }
+        if (results.genre==null) { // No results.
+            var err = new Error('Genre not found');
+            err.status = 404;
+            return next(err);
+        }
+        // Successful, so render
+        res.render('genre_detail', { title: 'Genre Detail', genre: results.genre, genre_books: results.genre_books } );
+    });</strong>
 
 };
 </pre>
@@ -50,7 +50,7 @@ exports.genre_detail = function(req, res, next) {
 <p>The ID of the required genre record is encoded at the end of the URL and extracted automatically based on the route definition (<strong>/genre/:id</strong>). The ID is accessed within the controller via the request parameters: <code style="font-style: normal; font-weight: normal;">req.params.id</code>. It is used in <code style="font-style: normal; font-weight: normal;">Genre.findById()</code> to get the current genre. It is also used to get all <code>Book</code> objects that have the genre ID in their <code>genre</code> field: <code>Book.find({ 'genre': req.params.id })</code>.</p>
 
 <div class="note">
-<p><strong>Note:</strong> If the genre does not exist in the database (i.e. it may have been deleted) then <code>findById()</code>  will return successfully with no results. In this case we want to display a "not found" page, so we create an <code>Error</code> object and pass it to the <code>next</code> middleware function in the chain. </p>
+<p><strong>Note:</strong> If the genre does not exist in the database (i.e. it may have been deleted) then <code>findById()</code>  will return successfully with no results. In this case we want to display a "not found" page, so we create an <code>Error</code> object and pass it to the <code>next</code> middleware function in the chain. </p>
 
 <pre class="brush: js"><strong>if (results.genre==null) { // No results.
     var err = new Error('Genre not found');
@@ -59,7 +59,7 @@ exports.genre_detail = function(req, res, next) {
 }</strong>
 </pre>
 
-<p>The message will then propagate through to our error handling code (this was set up when we <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website#error_handling">generated the app skeleton</a> - for more information see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Handling_errors">Handling Errors</a>).</p>
+<p>The message will then propagate through to our error handling code (this was set up when we <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website#error_handling">generated the app skeleton</a> - for more information see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Handling_errors">Handling Errors</a>).</p>
 </div>
 
 <p>The rendered view is <strong>genre_detail</strong> and it is passed variables for the <code>title</code>, <code>genre</code> and the list of books in this genre (<code>genre_books</code>).</p>
@@ -72,23 +72,23 @@ exports.genre_detail = function(req, res, next) {
 
 block content
 
-  <strong>h1 Genre: #{genre.name}</strong>
+  <strong>h1 Genre: #{genre.name}</strong>
 
-  div(style='margin-left:20px;margin-top:20px')
+  div(style='margin-left:20px;margin-top:20px')
 
-    h4 Books
+    h4 Books
 
-    dl
-    each book in genre_books
-      dt
-        a(href=book.url) #{book.title}
-      dd #{book.summary}
+    dl
+    each book in genre_books
+      dt
+        a(href=book.url) #{book.title}
+      dd #{book.summary}
 
-    else
-      p This genre has no books
+    else
+      p This genre has no books
 </pre>
 
-<p>The view is very similar to all our other templates. The main difference is that we don't use the <code>title</code> passed in for the first heading (though it is used in the underlying <strong>layout.pug</strong> template to set the page title).</p>
+<p>The view is very similar to all our other templates. The main difference is that we don't use the <code>title</code> passed in for the first heading (though it is used in the underlying <strong>layout.pug</strong> template to set the page title).</p>
 
 <h2 id="What_does_it_look_like">What does it look like?</h2>
 
@@ -107,7 +107,7 @@ block content
 <pre class="brush: js"> var mongoose = require('mongoose');
 </pre>
 
-<p>Then use <strong>mongoose.Types.ObjectId() </strong>to convert the id to a that can be used. For example:</p>
+<p>Then use <strong>mongoose.Types.ObjectId() </strong>to convert the id to a that can be used. For example:</p>
 
 <pre class="brush: js">exports.genre_detail = function(req, res, next) {
     var id = mongoose.Types.ObjectId(req.params.id);
@@ -118,6 +118,6 @@ block content
 <h2 id="Next_steps">Next steps</h2>
 
 <ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
+ <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
  <li>Proceed to the next subarticle of part 5: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page">Book detail page</a>.</li>
 </ul>

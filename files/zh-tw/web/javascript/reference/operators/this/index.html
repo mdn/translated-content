@@ -153,7 +153,7 @@ console.log(foo.call(obj) === globalObject); // true
 foo = foo.bind(obj);
 console.log(foo() === globalObject); // true</pre>
 
-<p>無論以上哪種，<code>foo</code> 的 <code>this</code> 在建立的時候，都會設為原本的樣子（以上面的例子來說，就是全域物件）。這同樣適用於在其他函式內創建的箭頭函式：它們的 <code>this</code> 是設置為外部執行上下文。</p>
+<p>無論以上哪種，<code>foo</code> 的 <code>this</code> 在建立的時候，都會設為原本的樣子（以上面的例子來說，就是全域物件）。這同樣適用於在其他函式內創建的箭頭函式：它們的 <code>this</code> 是設置為外部執行上下文。</p>
 
 <pre class="brush: js">// 建立一個物件，其方法 bar 含有回傳自己的 this 函式。回傳函式作為箭頭函數而建立，
 // 因此該函式的 this 將永遠與外圍函式（enclosing function）的 this 綁定。
@@ -224,11 +224,11 @@ p.b = 4;
 console.log(p.f()); // 5
 </pre>
 
-<p>在這個示例中，分配給變數<code>p</code> 的物件沒有自己的 <code>f</code> 屬性， 它(p)繼承了它(o)的原型。但是查找 <code>f</code> 最終在 <code>o</code>上找到它的成員名為 f 並不重要。查找開始作為 <code>p.f</code>的引用，所以 <code>this</code> 在函式內部物件的值被當作是<code>p</code>的引用。也就是說，<code>f</code> 作為 <code>p</code>的調用方法以來， 它的 <code>this</code> 指的就是 <code>p</code>. 這是一個非常有趣的JavaScript's 原型繼承特性。</p>
+<p>在這個示例中，分配給變數<code>p</code> 的物件沒有自己的 <code>f</code> 屬性， 它(p)繼承了它(o)的原型。但是查找 <code>f</code> 最終在 <code>o</code>上找到它的成員名為 f 並不重要。查找開始作為 <code>p.f</code>的引用，所以 <code>this</code> 在函式內部物件的值被當作是<code>p</code>的引用。也就是說，<code>f</code> 作為 <code>p</code>的調用方法以來， 它的 <code>this</code> 指的就是 <code>p</code>. 這是一個非常有趣的JavaScript's 原型繼承特性。</p>
 
 <h4 id="帶著_getter_或_setter_的_this">帶著 getter 或 setter 的 <code>this</code></h4>
 
-<p>當函式從 getter 或 setter被調用的時候，同樣的概念也成立。用作 getter 或setter 的函式將自己的 <code>this</code> 綁定到從中設置或獲取的物件上。</p>
+<p>當函式從 getter 或 setter被調用的時候，同樣的概念也成立。用作 getter 或setter 的函式將自己的 <code>this</code> 綁定到從中設置或獲取的物件上。</p>
 
 <pre class="brush:js">function sum(){
   return this.a + this.b + this.c;

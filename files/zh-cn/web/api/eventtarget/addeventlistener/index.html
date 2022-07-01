@@ -18,7 +18,7 @@ translation_of: Web/API/EventTarget/addEventListener
 
 <p><code>addEventListener()</code>的工作原理是将实现{{domxref("EventListener")}}的函数或对象添加到调用它的{{domxref("EventTarget")}}上的指定事件类型的事件侦听器列表中。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox notranslate">target.addEventListener(type, listener, options);
 <em>target</em>.addEventListener(<em>type</em>, <em>listener</em>, <em>useCapture</em>);
@@ -116,7 +116,7 @@ try {
 
 <p>你可以在 <a href="https://wicg.github.io/admin/charter.html">Web Incubator Community Group</a> 里关于<code><a href="https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection">EventListenerOptions</a></code> 的文章中了解更多。</p>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <h3 id="添加一个简单的监听器">添加一个简单的监听器</h3>
 
@@ -323,7 +323,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
 
 <h2 id="备注">备注</h2>
 
-<h3 id="Why_use_addEventListener.3F" name="Why_use_addEventListener.3F">为什么要使用 <code>addEventListener</code>?</h3>
+<h3 id="Why_use_addEventListener.3F">为什么要使用 <code>addEventListener</code>?</h3>
 
 <p><code>addEventListener()</code> 是 W3C DOM 规范中提供的注册事件监听器的方法。它的优点包括：</p>
 
@@ -335,15 +335,15 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
 
 <p>除了这种方法以外，后文会简单阐述一些<a href="#注册 listener 的旧方法">注册事件监听器的旧方法 </a>。</p>
 
-<h3 id="Adding_a_listener_during_event_dispatch" name="Adding_a_listener_during_event_dispatch">在事件分派时添加事件处理器</h3>
+<h3 id="Adding_a_listener_during_event_dispatch">在事件分派时添加事件处理器</h3>
 
 <p>当一个 <code>EventListener </code>在 <code>EventTarget </code>正在处理事件的时候被注册到 <code>EventTarget </code>上，它不会被立即触发，但可能在事件流后面的事件触发阶段被触发，例如可能在捕获阶段添加，然后在冒泡阶段被触发。</p>
 
-<h3 id="Multiple_identical_event_listeners" name="Multiple_identical_event_listeners">多个相同的事件处理器</h3>
+<h3 id="Multiple_identical_event_listeners">多个相同的事件处理器</h3>
 
 <p>同一个 <code>EventTarget 注册了多个相同的 EventListener</code>，那么重复的实例会被抛弃。所以这么做不会使得 <code>EventListener</code> 被调用两次，也不需要用 <a href="/zh-CN/docs/Web/API/EventTarget/removeEventListener" title="zh-cn/DOM/element.removeEventListener">removeEventListener</a> 手动清除多余的<code>EventListener</code> ，因为重复的都被自动抛弃了，前提是<code>options</code>中的<code>capture</code>的参数值一致，如果<code>capture</code>的值不一致，此时就算重复定义，也不会被抛弃掉。</p>
 
-<h3 id="The_value_of_this_within_the_handler" name="The_value_of_this_within_the_handler">处理过程中 <code>this</code> 的值的问题</h3>
+<h3 id="The_value_of_this_within_the_handler">处理过程中 <code>this</code> 的值的问题</h3>
 
 <p>通常来说 this 的值是触发事件的元素的引用，这种特性在多个相似的元素使用同一个通用事件监听器时非常让人满意。</p>
 
@@ -435,7 +435,7 @@ var myObject = new SomeClass();
 myObject.register();
 </pre>
 
-<h3 id="Compatibility" name="Compatibility">传统的 Internet Explorer 及其 attachEvent 方法</h3>
+<h3 id="Compatibility">传统的 Internet Explorer 及其 attachEvent 方法</h3>
 
 <p>对于 Internet Explorer 来说，在 IE 9 之前，你必须使用 <code><a class="external" href="http://msdn.microsoft.com/en-us/library/ms536343(VS.85).aspx">attachEvent</a></code> 而不是使用标准方<code>法 addEventListener</code>。为了支持 IE，前面的例子需要改成这样：</p>
 
@@ -529,7 +529,7 @@ myObject.register();
   }
 })();</pre>
 
-<h3 id="Older_way_to_register_event_listeners" name="Older_way_to_register_event_listeners">注册 <code>listener </code>的旧方法</h3>
+<h3 id="Older_way_to_register_event_listeners">注册 <code>listener </code>的旧方法</h3>
 
 <p><code>addEventListener()</code> 在 DOM 2 <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events">Events</a> 规范中引入。在这之前，事件监听器应该用以下的方法注册：</p>
 
@@ -546,7 +546,7 @@ element.onclick = function() {
 
 <p>由于这是 DOM 0 规范的基本内容，几乎所有浏览器都支持这个，而且不需要特殊的跨浏览器兼容代码。因此通常这个方法被用于动态地注册事件处理器，除非必须使用 <code>addEventListener()</code> 才能提供的特殊特性。</p>
 
-<h3 id="Memory_issues" name="Memory_issues">内存问题</h3>
+<h3 id="Memory_issues">内存问题</h3>
 
 <pre class="brush: js notranslate">var i;
 var els = document.getElementsByTagName('*');
@@ -627,13 +627,13 @@ window.addEventListener('scroll', function(event) {
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
+<h2 id="Browser_Compatibility">浏览器兼容性</h2>
 
 <div id="compat-desktop">
 <p>{{Compat("api.EventTarget.addEventListener", 3)}}</p>
 </div>
 
-<h2 id="Specification" name="Specification">相关链接</h2>
+<h2 id="Specification">相关链接</h2>
 
 <ul>
  <li>{{domxref("EventTarget.removeEventListener()")}}</li>

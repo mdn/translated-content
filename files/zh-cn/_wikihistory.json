@@ -2043,20 +2043,6 @@
       "auntwei"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2020-10-15T23:14:01.224Z",
-    "contributors": [
-      "woshiqiang1",
-      "BobGreen",
-      "zhangchen",
-      "after1271349141",
-      "7anshuai",
-      "zhuangyin",
-      "ReggieLee",
-      "fengma",
-      "JoeyChen"
-    ]
-  },
   "Glossary/Synchronous": {
     "modified": "2020-02-12T10:47:09.690Z",
     "contributors": [
@@ -13210,15 +13196,6 @@
       "maicss"
     ]
   },
-  "Web/API/GlobalEventHandlers/onblur": {
-    "modified": "2019-03-24T00:16:18.088Z",
-    "contributors": [
-      "teoli",
-      "Hasilt",
-      "ziyunfei",
-      "Bingdian3721"
-    ]
-  },
   "Web/API/GlobalEventHandlers/oncancel": {
     "modified": "2020-10-15T22:14:52.164Z",
     "contributors": [
@@ -13303,14 +13280,6 @@
       "coolguy",
       "xgqfrms-GitHub",
       "KingMario"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onfocus": {
-    "modified": "2019-03-24T00:18:09.356Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "ziyunfei"
     ]
   },
   "Web/API/GlobalEventHandlers/onformdata": {
@@ -16173,6 +16142,14 @@
       "w05163"
     ]
   },
+  "Web/API/Media_Streams_API/Taking_still_photos": {
+    "modified": "2020-03-10T16:08:27.768Z",
+    "contributors": [
+      "lxuewu",
+      "崮生",
+      "Move"
+    ]
+  },
   "Web/API/MessageChannel": {
     "modified": "2020-10-15T21:53:04.720Z",
     "contributors": [
@@ -16371,12 +16348,6 @@
     "modified": "2019-03-23T22:05:15.893Z",
     "contributors": [
       "shockw4ver"
-    ]
-  },
-  "Web/API/MouseEvent/region": {
-    "modified": "2020-10-15T22:11:39.427Z",
-    "contributors": [
-      "fengchunsgit"
     ]
   },
   "Web/API/MouseEvent/relatedTarget": {
@@ -21255,14 +21226,6 @@
       "chen4w",
       "bigfat",
       "yxxgoogle"
-    ]
-  },
-  "Web/API/WebRTC_API/Taking_still_photos": {
-    "modified": "2020-03-10T16:08:27.768Z",
-    "contributors": [
-      "lxuewu",
-      "崮生",
-      "Move"
     ]
   },
   "Web/API/WebRTC_API/adapter.js": {
@@ -42381,6 +42344,13 @@
       "lunix01"
     ]
   },
+  "Web/JavaScript/Reference/Operators/import.meta": {
+    "modified": "2020-10-15T22:07:59.455Z",
+    "contributors": [
+      "gitHber",
+      "JonathanLee-LX"
+    ]
+  },
   "Web/JavaScript/Reference/Operators/in": {
     "modified": "2020-10-15T21:21:37.099Z",
     "contributors": [
@@ -42921,13 +42891,6 @@
       "wengeezhang",
       "sartrey",
       "WangZishi"
-    ]
-  },
-  "Web/JavaScript/Reference/Statements/import.meta": {
-    "modified": "2020-10-15T22:07:59.455Z",
-    "contributors": [
-      "gitHber",
-      "JonathanLee-LX"
     ]
   },
   "Web/JavaScript/Reference/Statements/label": {
@@ -46148,6 +46111,12 @@
       "qzn928"
     ]
   },
+  "conflicting/Web/API/MouseEvent": {
+    "modified": "2020-10-15T22:11:39.427Z",
+    "contributors": [
+      "fengchunsgit"
+    ]
+  },
   "conflicting/Web/API/MouseEvent/altKey": {
     "modified": "2019-03-24T00:16:10.184Z",
     "contributors": [
@@ -46399,10 +46368,27 @@
       "WenbingZheng"
     ]
   },
+  "conflicting/Web/API/Window/blur_event": {
+    "modified": "2019-03-24T00:16:18.088Z",
+    "contributors": [
+      "teoli",
+      "Hasilt",
+      "ziyunfei",
+      "Bingdian3721"
+    ]
+  },
   "conflicting/Web/API/Window/deviceorientation_event": {
     "modified": "2019-03-18T21:38:06.143Z",
     "contributors": [
       "Aaron_Zhung"
+    ]
+  },
+  "conflicting/Web/API/Window/focus_event": {
+    "modified": "2019-03-24T00:18:09.356Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "ziyunfei"
     ]
   },
   "conflicting/Web/API/Window/gamepadconnected_event": {
@@ -47084,10 +47070,17 @@
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
-    "modified": "2020-10-15T21:42:54.702Z",
+    "modified": "2020-10-15T23:14:01.224Z",
     "contributors": [
+      "woshiqiang1",
+      "BobGreen",
       "zhangchen",
-      "purple_force"
+      "after1271349141",
+      "7anshuai",
+      "zhuangyin",
+      "ReggieLee",
+      "fengma",
+      "JoeyChen"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/SyntaxError": {
