@@ -16,8 +16,8 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
   <tbody>
     <tr>
       <th scope="row">预备知识：</th>
-      <td>基本的计算机知识、<a href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software">安装基础软件</a>、<a
-          href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a>的基本知识、熟悉 HTML 基础知识（阅读
+      <td>基本的计算机知识、<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software">安装基础软件</a>、<a
+          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a>的基本知识、熟悉 HTML 基础知识（阅读
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started">开始学习 HTML</a>）以及本模块中以前的文章。
       </td>
     </tr>
@@ -145,13 +145,13 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 </div>
 
 <p>一个快速的例子——尝试在浏览器中加载上面的例子——你也可以<a
-    href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">在
+    href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">在
     Github 上找到它</a>（<a
     href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">参见源代码</a>）。你将不会看到任何内容，但如果你点击<a
     href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">浏览器开发者工具</a>中的<em>控制台</em>，你会看到一条消息，告诉你为什么没有显示内容。在
   Firefox 中，你会<em>被告知：“X-Frame-Options 拒绝加载 https://developer.mozilla.org/zh-CN/docs/Glossary”</em>。这是因为构建 MDN
   的开发人员已经在网站页面的服务器上设置了一个不允许被嵌入到<code>&lt;iframe&gt;</code>的设置（请参阅<a
-    href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#配置CSP指令">配置 CSP 指令</a>）这是有必要的——整个
+    href="#配置_csp_指令">配置 CSP 指令</a>）这是有必要的——整个
   MDN 页面被嵌入在其它页面中没有多大意义，除非你想要将其嵌入到你的网站上并将其声称为自己的内容，或尝试通过单击劫持来窃取数据，这都是非常糟糕的事情。此外，如果每个人都这样做，所有额外的带宽将花费 Mozilla
   很多资金。</p>
 
@@ -205,12 +205,12 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
       href="/zh-CN/docs/Glossary/domain">域</a>向你的主站点提供的。</p>
 </div>
 
-<h4 id="配置CSP指令">配置 CSP 指令</h4>
+<h4 id="配置_csp_指令">配置 CSP 指令</h4>
 
 <p><a href="/zh-CN/docs/Glossary/CSP">CSP</a>代表<strong><a href="/zh-CN/docs/Web/Security/CSP">内容安全策略</a></strong>，它提供<a
     href="/zh-CN/docs/Web/Security/CSP/CSP_policy_directives">一组 HTTP 标头</a>（由 web 服务器发送时与元数据一起发送的元数据），旨在提高 HTML
   文档的安全性。在<code>&lt;iframe&gt;</code>的安全性方面，你可以<em><a
-      href="/zh-CN/docs/Web/HTTP/X-Frame-Options">将服务器配置为发送适当的<code>X-Frame-Options</code>
+      href="/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options">将服务器配置为发送适当的<code>X-Frame-Options</code>
       标题。</a></em>这样做可以防止其他网站在其网页中嵌入你的内容（这将导致<a
     href="https://en.wikipedia.org/wiki/clickjacking">点击</a>和一系列其他攻击），正如我们之前看到的那样，MDN 开发人员已经做了这些工作。</p>
 
@@ -280,13 +280,13 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 <div class="note">
   <p><strong>备注：</strong> <code>&lt;object&gt;</code>需要<code>data</code>属性，<code>type</code>属性或两者。如果你同时使用这两个，你也可以使用该<code><a href="/zh-CN/docs/Web/HTML/Element/object#attr-typemustmatch">typemustmatch</a></code>属性（仅在 Firefox
     中实现，在本文中）。<code>typemustmatch</code>保持嵌入文件不运行，除非<code>type</code>属性提供正确的媒体类型。<code>typemustmatch</code>因此，当你嵌入来自不同<a
-      href="/zh-CN/docs/Glossary/origin">来源的</a>内容（可以防止攻击者通过插件运行任意脚本）时，可以赋予重要的安全优势。
+      href="/zh-CN/docs/Glossary/Origin">来源的</a>内容（可以防止攻击者通过插件运行任意脚本）时，可以赋予重要的安全优势。
   </p>
 </div>
 
 <p>下面是一个使用该<a href="/zh-CN/docs/Web/HTML/Element/embed"><code>&lt;embed&gt;</code></a>元素嵌入
   Flash 影片的示例（请参阅此处的<a
-    href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">Github</a>，并<a
+    href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">Github</a>，并<a
     href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">检查源代码</a>）：
 </p>
 
@@ -301,7 +301,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
   视频的备用内容，但是这种情况越来越被认为是不必要的。</p>
 
 <p>现在来看一个<code>&lt;object&gt;</code>将 PDF 嵌入一个页面的例子（参见<a
-    href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">实例</a>和<a
+    href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">实例</a>和<a
     href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">源代码</a>）：
 </p>
 
@@ -310,8 +310,8 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
   &lt;p&gt;You don't have a PDF plugin, but you can &lt;a href="myfile.pdf"&gt;download the PDF file.&lt;/a&gt;&lt;/p&gt;
 &lt;/object&gt;</pre>
 
-<p>PDF 是纸与数据之间重要的阶梯，但它们<a href="http://webaim.org/techniques/acrobat/acrobat">在可访问性上有些问题</a><a
-    href="http://webaim.org/techniques/acrobat/acrobat">，</a>并且可能难以在小屏幕上阅读。它们在一些圈子中仍然受欢迎，我们最好是用链接指向它们，而不是将其嵌入到网页中，以便它们可以在单独的页面上被下载或被阅读。
+<p>PDF 是纸与数据之间重要的阶梯，但它们<a href="https://webaim.org/techniques/acrobat/acrobat">在可访问性上有些问题</a><a
+    href="https://webaim.org/techniques/acrobat/acrobat">，</a>并且可能难以在小屏幕上阅读。它们在一些圈子中仍然受欢迎，我们最好是用链接指向它们，而不是将其嵌入到网页中，以便它们可以在单独的页面上被下载或被阅读。
 </p>
 
 <h3 id="针对插件的情况">针对插件的情况</h3>
@@ -321,7 +321,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 
 <ul>
   <li><strong>扩大你对大家的影响力</strong>。每个人都有一个浏览器，但插件越来越少，特别是在移动用户中。由于 Web 在很大程度上不需要依赖插件而运行，所以人们宁愿只是去竞争对手的网站而不是安装插件。</li>
-  <li><strong>从 Flash 和其他插件附带的<a href="http://webaim.org/techniques/flash/">额外的可访问性问题</a>中摆脱</strong>。</li>
+  <li><strong>从 Flash 和其他插件附带的<a href="https://webaim.org/techniques/flash/">额外的可访问性问题</a>中摆脱</strong>。</li>
   <li><strong>避免额外的安全隐患</strong>。即使经过无数次补丁<a
       href="http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53">，</a> Adobe Flash 也是<a
       href="http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53">非常不安全的</a>。2015
