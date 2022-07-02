@@ -37,9 +37,9 @@ yarn md h2m *your_path* --locale=*your_locale* --mode=*your_mode*
 
 ### 参数说明
 
-- `your_path` ：指 HTML 文件所存放的文件夹的相对路径，相对于  `files/locale` 。例如你需要转换[这个文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus)，参数值即为 `web/css/_colon_focus` 。这个参数只能是文件夹的路径，会转换该文件夹及其子文件夹下的所有 HTML 文件。
+- `your_path`：指 HTML 文件所存放的文件夹的相对路径，相对于  `files/locale` 。例如你需要转换[这个文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus)，参数值即为 `web/css/_colon_focus` 。这个参数只能是文件夹的路径，会转换该文件夹及其子文件夹下的所有 HTML 文件。
 
-- `your_locale` ：即语言代号，参数值有：
+- `your_locale`：即语言代号，参数值有：
 
   ```
   de、en-US、es、fr、ja、ko、pl、pt-BR、ru、zh-CN、zh-TW、all
@@ -47,9 +47,9 @@ yarn md h2m *your_path* --locale=*your_locale* --mode=*your_mode*
 
   转换时根据你的情况选择即可。
 
-- `your_mode` ：主要是 `dry` 和 `replace`。
+- `your_mode`：主要是 `dry` 和 `replace`。
   - `dry`：检测是否有不能转换的元素，并将不能转换的信息列在 Yari 目录下生成的 Markdown 报告文件中。如所有文件都可以转换则不生成任何文件。
-  - `replace` ：将 HTML 文件重命名为 Markdown 文件，并将其内容更新为 Markdown 格式。
+  - `replace`：将 HTML 文件重命名为 Markdown 文件，并将其内容更新为 Markdown 格式。
 
 ### 转换流程
 
@@ -81,7 +81,7 @@ yarn md h2m web/css/_colon_focus --locale=zh-CN --mode=replace
 
 - 移除所有的 `<notranslate>`、`<cite>`、`<sub>`、`<sup>` 标签。
 - 除了 `<pre>` 标签和卡片以外，所有标签的 `class` 属性都应被移除。
-- 移除所有的 `style` 、`blockIndicator` 属性。
+- 移除所有的 `style`、`blockIndicator` 属性。
 - `id` 属性只能出现在标题标签里。
 - `<a>` 标签的 `title` 属性应被移除。
 - 非 ASCII 编码的 Unicode 空格会影响转换，需要将它们替换为 ASCII 编码的空格。
