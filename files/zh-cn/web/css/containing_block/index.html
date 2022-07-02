@@ -32,13 +32,13 @@ original_slug: Web/CSS/All_About_The_Containing_Block
 
 <p>许多开发者认为一个元素的包含块就是他的父元素的内容区。但事实并非如此。接下来让我们来看看，确定元素包含块的因素都有哪些。</p>
 
-<h2 dir="ltr" id="包含块的影响">包含块的影响</h2>
+<h2 id="包含块的影响">包含块的影响</h2>
 
 <p>在学习如何确定元素包含块之前，先了解一下它的重要性。</p>
 
 <p>元素的尺寸及位置，常常会受它的包含块所影响。对于一些属性，例如 {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}，绝对定位元素的偏移值（比如 {{cssxref("position")}} 被设置为 <code>absolute</code> 或 <code>fixed</code>），当我们对其赋予百分比值时，这些值的计算值，就是通过元素的包含块计算得来。</p>
 
-<h2 dir="ltr" id="确定包含块">确定包含块</h2>
+<h2 id="确定包含块">确定包含块</h2>
 
 <p>确定一个元素的包含块的过程完全依赖于这个元素的 {{cssxref("position")}} 属性：</p>
 
@@ -60,7 +60,7 @@ original_slug: Web/CSS/All_About_The_Containing_Block
 <p><strong>注意：</strong>根元素 (&lt;html&gt;) 所在的包含块是一个被称为<strong>初始包含块</strong>的矩形。他的尺寸是视口 viewport (for continuous media) 或分页媒体 page media (for paged media).</p>
 </div>
 
-<h2 dir="ltr" id="根据包含块计算百分值">根据包含块计算百分值</h2>
+<h2 id="根据包含块计算百分值">根据包含块计算百分值</h2>
 
 <p>如上所述，如果某些属性被赋予一个百分值的话，它的计算值是由这个元素的包含块计算而来的。这些属性包括盒模型属性和偏移属性：</p>
 
@@ -69,7 +69,7 @@ original_slug: Web/CSS/All_About_The_Containing_Block
  <li>要计算 {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, {{cssxref("margin")}} 这些属性由包含块的 <code>width</code> 属性的值来计算它的百分值。</li>
 </ol>
 
-<h2 dir="ltr" id="示例">示例</h2>
+<h2 id="示例">示例</h2>
 
 <p>接下来的示例，都使用如下 HTML 代码：</p>
 
