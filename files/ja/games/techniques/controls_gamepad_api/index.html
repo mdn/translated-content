@@ -182,7 +182,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code></p
   return newPress;
 },</code></pre>
 
-<p><span id="result_box" lang="ja"><span>ボタンには、1回の押下と1回の押下の2種類のアクションがあります。</span> </span><code>newPress </code><span lang="ja"><span>ブール変数は、ボタンの新規押下があるかどうかを示します。</span> <span>次に、押されたボタンの配列をループします。指定されたボタンが探しているボタンと同じ場合、</span></span><code>newPress </code><span lang="ja"><span>変数は </span></span><code>true</code><span lang="ja"><span> に設定されます。</span> <span>プレスが新しいものかどうかを確認するために、プレイヤーがキーを保持していないので、ゲームループの前のフレームからのボタンのキャッシュ状態をループします。</span> <span>ボタンが見つかった場合、ボタンが押されていることを意味するので、新しいプレスはありません。</span> <span>最後に、</span></span><code>newPress </code><span lang="ja"><span>変数が返されます。</span> </span><code>buttonPressed</code><span lang="ja"> <span>関数は、このようなゲームの更新ループで使用されます：</span></span></p>
+<p><span id="result_box" lang="ja"><span>ボタンには、1回の押下と長押しの2種類のアクションがあります。</span> </span><code>newPress </code><span lang="ja"><span>ブール変数は、ボタンの新規押下があるかどうかを示します。</span> <span>次に、押されたボタンの配列をループします。指定されたボタンが探しているボタンと同じ場合、</span></span><code>newPress </code><span lang="ja"><span>変数は </span></span><code>true</code><span lang="ja"><span> に設定されます。</span> <span>プレスが新しいものかどうかを確認するために、プレイヤーがキーを保持していないので、ゲームループの前のフレームからのボタンのキャッシュ状態をループします。</span> <span>ボタンが見つかった場合、ボタンが押されていることを意味するので、新しいプレスはありません。</span> <span>最後に、</span></span><code>newPress </code><span lang="ja"><span>変数が返されます。</span> </span><code>buttonPressed</code><span lang="ja"> <span>関数は、このようなゲームの更新ループで使用されます：</span></span></p>
 
 <pre class="brush: js"><code>if(gamepadAPI.turbo) {
   if(gamepadAPI.buttonPressed('A','hold')) {

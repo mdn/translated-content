@@ -13,13 +13,13 @@ translation_of: Web/API/XMLHttpRequest
 ---
 <div>{{DefaultAPISidebar("XMLHttpRequest")}}</div>
 
-<p><span class="seoSummary"><code>XMLHttpRequest</code>（XHR）对象用于与服务器交互。通过 XMLHttpRequest 可以在不刷新页面的情况下请求特定 URL，获取数据。这允许网页在不影响用户操作的情况下，更新页面的局部内容。</span><code>XMLHttpRequest</code> 在 {{Glossary("AJAX")}} 编程中被大量使用。</p>
+<p><code>XMLHttpRequest</code>（XHR）对象用于与服务器交互。通过 XMLHttpRequest 可以在不刷新页面的情况下请求特定 URL，获取数据。这允许网页在不影响用户操作的情况下，更新页面的局部内容。<code>XMLHttpRequest</code> 在 {{Glossary("AJAX")}} 编程中被大量使用。</p>
 
 <p>{{InheritanceDiagram(650, 150)}}</p>
 
 <p>尽管名称如此，<code>XMLHttpRequest</code> 可以用于获取任何类型的数据，而不仅仅是 XML。它甚至支持 <a href="/en-US/docs/Web/HTTP">HTTP</a> 以外的协议（包括 file:// 和 FTP），尽管可能受到更多出于安全等原因的限制。</p>
 
-<p>如果您的通信流程需要从服务器端接收事件或消息数据，请考虑通过 {{domxref("EventSource")}} 接口使用 <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a>。对于<span class="op_dict_text2">全双工的</span>通信， <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> 可能是更好的选择。</p>
+<p>如果您的通信流程需要从服务器端接收事件或消息数据，请考虑通过 {{domxref("EventSource")}} 接口使用 <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a>。对于全双工的通信， <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> 可能是更好的选择。</p>
 
 <h2 id="构造函数">构造函数</h2>
 
@@ -46,7 +46,7 @@ translation_of: Web/API/XMLHttpRequest
  <dt>{{domxref("XMLHttpRequest.responseURL")}} {{readonlyinline}}</dt>
  <dd>返回经过序列化（serialized）的响应 URL，如果该 URL 为空，则返回空字符串。</dd>
  <dt>{{domxref("XMLHttpRequest.responseXML")}} {{readonlyinline}}</dt>
- <dd>返回一个 {{domxref("Document")}}，其中包含该请求的响应，如果请求未成功、尚未发送或时不能被解析为 XML 或 HTML，则返回 <code>null</code>。</dd>
+ <dd>返回一个 {{domxref("Document")}}，其中包含该请求的响应，如果请求未成功、尚未发送或是不能被解析为 XML 或 HTML，则返回 <code>null</code>。</dd>
  <dt>{{domxref("XMLHttpRequest.status")}} {{readonlyinline}}</dt>
  <dd>返回一个无符号短整型（<code>unsigned short</code>）数字，代表请求的响应状态。</dd>
  <dt>{{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}</dt>
@@ -61,7 +61,7 @@ translation_of: Web/API/XMLHttpRequest
  <dt>{{domxref("XMLHttpRequest.timeout")}}</dt>
  <dd>一个无符号长整型（<code>unsigned long</code>）数字，表示该请求的最大请求时间（毫秒），若超出该时间，请求会自动终止。</dd>
  <dt>{{domxref("XMLHttpRequestEventTarget.ontimeout")}}</dt>
- <dd>当请求超时调用的 {{event("Event_handlers", "event handler")}}。{{ gecko_minversion_inline(" 12.0 ")}}</dd>
+ <dd>当请求超时调用的 {{event("Event_handlers", "event handler")}}。</dd>
  <dt>{{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}</dt>
  <dd>{{domxref("XMLHttpRequestUpload")}}，代表上传进度。</dd>
  <dt>{{domxref("XMLHttpRequest.withCredentials")}}</dt>
@@ -72,14 +72,14 @@ translation_of: Web/API/XMLHttpRequest
 
 <dl>
  <dt>{{domxref("XMLHttpRequest.channel")}}{{ReadOnlyInline}}</dt>
- <dd>一个 {{Interface("nsIChannel")}}，对象在执行请求时使用的通道。</dd>
+ <dd>一个 <code>nsIChannel</code>，对象在执行请求时使用的通道。</dd>
  <dt>{{domxref("XMLHttpRequest.mozAnon")}}{{ReadOnlyInline}}</dt>
  <dd>一个布尔值，如果为真，请求将在没有 cookie 和身份验证 header 头的情况下发送。</dd>
  <dt>{{domxref("XMLHttpRequest.mozSystem")}}{{ReadOnlyInline}}</dt>
  <dd>一个布尔值，如果为真，则在请求时不会强制执行同源策略。</dd>
  <dt>{{domxref("XMLHttpRequest.mozBackgroundRequest")}}</dt>
  <dd>一个布尔值，它指示对象是否是后台服务器端的请求。</dd>
- <dt>{{domxref("XMLHttpRequest.mozResponseArrayBuffer")}}{{gecko_minversion_inline("2.0")}} {{obsolete_inline("6")}} {{ReadOnlyInline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{obsolete_inline("6")}} {{ReadOnlyInline}}</dt>
  <dd>一个 {{jsxref("ArrayBuffer")}}，把请求的响应作为一个 JavaScript TypedArray。</dd>
  <dt>{{domxref("XMLHttpRequest.multipart")}}{{obsolete_inline("22")}}</dt>
  <dd><strong>这是一个 Gecko 专有属性，是一个布尔值，已在 Firefox/Gecko 22 中被删除。</strong>请考虑使用 <a href="/en-US/docs/Web/API/Server-sent_events">Server-Sent Event</a>、<a href="/en-US/docs/Web/API/WebSockets_API">Web Socket</a>、或来自进度事件的 <code>responseText</code> 代替。</dd>
@@ -136,9 +136,9 @@ translation_of: Web/API/XMLHttpRequest
  也可以使用 {{domxref("XMLHttpRequestEventTarget/onerror", "onerror")}} 属性</dd>
  <dt>{{domxref("XMLHttpRequest/load_event", "load")}}</dt>
  <dd>{{domxref("XMLHttpRequest")}}请求成功完成时触发。<br>
- 也可以使用 {{domxref("XMLHttpRequestEventTarget/onload", "onload")}} 属性.</dd>
+ 也可以使用 {{domxref("XMLHttpRequestEventTarget/onload", "onload")}} 属性。</dd>
  <dt>{{domxref("XMLHttpRequest/loadend_event", "loadend")}}</dt>
- <dd>当请求结束时触发, 无论请求成功 ( {{domxref("XMLHttpRequest/load_event", "load")}}) 还是失败 ({{domxref("XMLHttpRequest/abort_event", "abort")}} 或 {{domxref("XMLHttpRequest/error_event", "error")}})。<br>
+ <dd>当请求结束时触发，无论请求成功 ( {{domxref("XMLHttpRequest/load_event", "load")}}) 还是失败 ({{domxref("XMLHttpRequest/abort_event", "abort")}} 或 {{domxref("XMLHttpRequest/error_event", "error")}})。<br>
  也可以使用 {{domxref("XMLHttpRequestEventTarget/onloadend", "onloadend")}} 属性。</dd>
  <dt>{{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}</dt>
  <dd>接收到响应数据时触发。<br>

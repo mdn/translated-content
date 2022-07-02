@@ -10,18 +10,18 @@ translation_of: Web/CSS/@namespace
 
 <h2 id="概述">概述</h2>
 
-<p><span class="seoSummary"><strong><code>@namespace</code></strong> </span>是用来定义使用在CSS样式表中的XML命名空间的@规则。定义的命名空间可以把通配、元素和属性选择器限制在指定命名空间里的元素。<strong>@namespace</strong>规则通常在处理包含多个namespaces的文档时才有用，比如HTML5里内联的SVG、MathML或者混合多个词汇表的XML。</p>
+<p><strong><code>@namespace</code></strong> 是用来定义使用在 CSS 样式表中的 XML 命名空间的 @规则。定义的命名空间可以把通配、元素和属性选择器限制在指定命名空间里的元素。<strong>@namespace</strong>规则通常在处理包含多个 namespaces 的文档时才有用，比如 HTML5 里内联的 SVG、MathML 或者混合多个词汇表的 XML。</p>
 
-<p>任何 <code>@namespace</code> 规则都必须在所有的 <a href="/en-US/docs/Web/CSS/%40charset">@charset</a> 和 <a href="/en-US/docs/Web/CSS/%40import">@import</a> 规则之后, 并且在样式表中，位于其他任何 <a href="/en-US/docs/Web/API/CSSStyleDeclaration">style declarations</a> 之前。</p>
+<p>任何 <code>@namespace</code> 规则都必须在所有的 <a href="/en-US/docs/Web/CSS/%40charset">@charset</a> 和 <a href="/en-US/docs/Web/CSS/%40import">@import</a> 规则之后，并且在样式表中，位于其他任何 <a href="/en-US/docs/Web/API/CSSStyleDeclaration">style declarations</a> 之前。</p>
 
-<p><code>@namespace</code> 可以用来定义默认命名空间。当定义过默认命名空间后, 所有的通配选择器和类型选择器（但不包括属性选择器，详情看下面的note）都只应用在这个命名空间的元素中。</p>
+<p><code>@namespace</code> 可以用来定义默认命名空间。当定义过默认命名空间后，所有的通配选择器和类型选择器（但不包括属性选择器，详情看下面的 note）都只应用在这个命名空间的元素中。</p>
 
 <p><code>@namespace</code> 规则也可以用于定义<strong>命名空间前缀。</strong>当一个通配、类型、属性选择器前面有命名空间前缀修饰时，这个选择器将只匹配那些命名空间与 元素名或属性匹配 的元素。</p>
 
-<p>在 <a href="/en-US/docs/Glossary/HTML5">HTML5</a> 中，已知的 <a href="https://html.spec.whatwg.org/#foreign-elements">foreign elements</a>(“外语元素，比如SVG和math命名空间中的元素”)将被自动加上命名空间。这意味着即使文档中没有任何xmlns属性，HTML元素也将表现的如同他们在XHTML命名空间内 (<code>http://www.w3.org/1999/xhtml</code>)一样，而 <a href="/en-US/docs/Web/SVG/Element/svg">&lt;svg&gt;</a> 和 <a href="/en-US/docs/Web/MathML/Element/math">&lt;math&gt;</a> 元素则将被加上对应的命名空间 (<code>http://www.w3.org/2000/svg</code> 和<code>http://www.w3.org/1998/Math/MathML</code>).</p>
+<p>在 <a href="/en-US/docs/Glossary/HTML5">HTML5</a> 中，已知的 <a href="https://html.spec.whatwg.org/#foreign-elements">foreign elements</a>(“外语元素，比如 SVG 和 math 命名空间中的元素”) 将被自动加上命名空间。这意味着即使文档中没有任何 xmlns 属性，HTML 元素也将表现的如同他们在 XHTML 命名空间内 (<code>http://www.w3.org/1999/xhtml</code>) 一样，而 <a href="/en-US/docs/Web/SVG/Element/svg">&lt;svg&gt;</a> 和 <a href="/en-US/docs/Web/MathML/Element/math">&lt;math&gt;</a> 元素则将被加上对应的命名空间 (<code>http://www.w3.org/2000/svg</code> 和<code>http://www.w3.org/1998/Math/MathML</code>).</p>
 
 <div class="note">
-<p><strong>Note:</strong> 在 XML中，除非前缀直接定义在了一个属性上（例如：xlink:href），这个属性就不会有命名空间。换句话说，属性将不会继承其所在元素的命名空间，为了符合这个行为，CSS中的默认命名空间不会加到属性选择器中</p>
+<p><strong>Note:</strong> 在 XML 中，除非前缀直接定义在了一个属性上（例如：xlink:href），这个属性就不会有命名空间。换句话说，属性将不会继承其所在元素的命名空间，为了符合这个行为，CSS 中的默认命名空间不会加到属性选择器中</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -43,7 +43,7 @@ translation_of: Web/CSS/@namespace
 <pre class="brush: css">@namespace url(http://www.w3.org/1999/xhtml);
 @namespace svg url(http://www.w3.org/2000/svg);
 
-/* 匹配所有的XHTML &lt;a&gt; 元素, 因为 XHTML 是默认无前缀命名空间 */
+/* 匹配所有的 XHTML &lt;a&gt; 元素，因为 XHTML 是默认无前缀命名空间 */
 a {}
 
 /* 匹配所有的 SVG &lt;a&gt; 元素 */
@@ -74,60 +74,4 @@ svg|a {}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>{{CompatChrome(1.0)}}</td>
-   <td>{{ CompatGeckoDesktop(1.0) }}</td>
-   <td>9.0</td>
-   <td>8.0</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td>命名空间选择器 (|)</td>
-   <td>{{CompatChrome(1.0)}}</td>
-   <td>{{ CompatGeckoDesktop(1.0) }}</td>
-   <td>9.0</td>
-   <td>8.0</td>
-   <td>3.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.at-rules.namespace")}}

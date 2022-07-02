@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Operators/yield
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox language-html notranslate"> [<em>rv</em>] = <strong>yield</strong> [[выражение]];</pre>
+<pre class="syntaxbox language-html"> [<em>rv</em>] = <strong>yield</strong> [[выражение]];</pre>
 
 <dl>
  <dt><code>выражение</code></dt>
@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Operators/yield
 
 <p>Следующий фрагмент кода содержит определение функции-генератора и вспомогательной функции:</p>
 
-<pre class="brush: js notranslate">function* foo(){
+<pre class="brush: js">function* foo(){
   var index = 0;
   while(index &lt;= 2) // при достижении 2, done в yield станет true, а value undefined;
     yield index++;
@@ -47,7 +47,7 @@ translation_of: Web/JavaScript/Reference/Operators/yield
 
 <p>После того как тело функции-генератора определено, оно может использоваться для получения итератора:</p>
 
-<pre class="brush: js notranslate">var iterator = foo();
+<pre class="brush: js">var iterator = foo();
 console.log(iterator.next()); // { value:0, done:false }
 console.log(iterator.next()); // { value:1, done:false }
 console.log(iterator.next()); // { value:2, done:false }
@@ -56,31 +56,11 @@ console.log(iterator.next()); // { value:undefined, done:true }
 
 <h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES2015', '#prod-YieldExpression', 'Yield')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#prod-YieldExpression', 'Yield')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.operators.yield")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">Смотрите также</h2>
 

@@ -11,7 +11,7 @@ translation_of: Web/API/TouchEvent/touches
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">var <em>touches</em> = <em>touchEvent</em>.touches;
+<pre class="syntaxbox">var <em>touches</em> = <em>touchEvent</em>.touches;
 </pre>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
@@ -27,7 +27,7 @@ translation_of: Web/API/TouchEvent/touches
 
 <p>В следующем фрагменте кода обработчик события {{event("touchstart")}} проверяет длину списка {{domxref("TouchEvent.touches")}} для определения количества точек касаний, которые были активированы, а затем вызывает разные обработчики в зависимости от количества таких точек.</p>
 
-<pre class="brush: js notranslate">someElement.addEventListener('touchstart', function(e) {
+<pre class="brush: js">someElement.addEventListener('touchstart', function(e) {
    // Вызов определённого обработчика, в зависимости от
    // количества точек касания
    switch (e.touches.length) {
@@ -41,28 +41,10 @@ translation_of: Web/API/TouchEvent/touches
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Touch Events 2','#dom-touchevent-touches')}}</td>
-   <td>{{Spec2('Touch Events 2')}}</td>
-   <td>Non-stable version.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Touch Events','#widl-TouchEvent-touches')}}</td>
-   <td>{{Spec2('Touch Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
 
 
-<p>{{Compat("api.TouchEvent.touches")}}</p>
+<p>{{Compat}}</p>

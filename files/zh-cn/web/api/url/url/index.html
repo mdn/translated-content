@@ -26,7 +26,7 @@ translation_of: Web/API/URL/URL
 
 <dl class="syntaxbox">
  <dt><code><var>url</var></code></dt>
- <dd>是一个表示绝对或相对 URL 的 {{domxref("DOMString")}}。如果<code><var>url</var></code> 是相对 URL，则会将 <code><var>base</var></code> 用作基准 URL。如果 <code><var>url</var></code> 是绝对URL，则无论参数<code><var>base</var></code>是否存在，都将被忽略。</dd>
+ <dd>是一个表示绝对或相对 URL 的 {{domxref("DOMString")}}。如果<code><var>url</var></code> 是相对 URL，则会将 <code><var>base</var></code> 用作基准 URL。如果 <code><var>url</var></code> 是绝对 URL，则无论参数<code><var>base</var></code>是否存在，都将被忽略。</dd>
  <dt><code><var>base</var></code> {{optional_inline}}</dt>
  <dd>是一个表示基准 URL 的 {{domxref("DOMString")}}，在 <em>url</em> 是相对 URL 时，它才会起效。如果未指定，则默认为 <code>''</code>。</dd>
 </dl>
@@ -43,7 +43,7 @@ translation_of: Web/API/URL/URL
  <tbody>
   <tr>
    <td>{{jsxref("TypeError")}}</td>
-   <td><code><var>url</var></code>若为绝对 URL）或 <code><var>base</var></code> + <code><var>url</var></code>（若为相对 URL）是一个无效的 URL 链接。</td>
+   <td><code><var>url</var></code>（若为绝对 URL）或 <code><var>base</var></code> + <code><var>url</var></code>（若为相对 URL）是一个无效的 URL 链接。</td>
   </tr>
  </tbody>
 </table>

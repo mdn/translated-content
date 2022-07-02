@@ -8,11 +8,11 @@ translation_of: Web/CSS/inheritance
 ---
 <div>{{cssref}}</div>
 
-<p>在css中，每个<a href="/zh-CN/docs/CSS/CSS_Reference">CSS 属性定义</a>的概述都指出了这个属性是默认继承的("Inherited: Yes") 还是默认不继承的("Inherited: no")。这决定了当你没有为元素的属性指定值时该如何计算值。</p>
+<p>在 css 中，每个<a href="/zh-CN/docs/CSS/CSS_Reference">CSS 属性定义</a>的概述都指出了这个属性是默认继承的 ("Inherited: Yes") 还是默认不继承的 ("Inherited: no")。这决定了当你没有为元素的属性指定值时该如何计算值。</p>
 
 <h2 id="继承属性">继承属性</h2>
 
-<p>当元素的一个<strong>继承属性 （inherited property</strong><strong>）</strong>没有指定值时，则取父元素的同属性的<a href="/zh-CN/docs/CSS/computed_value">计算值 computed value</a>。只有文档根元素取该属性的概述中给定的<a href="/zh-CN/docs/CSS/initial_value">初始值</a>（<a href="/zh-CN/docs/CSS/initial_value">initial value</a>）（这里的意思应该是在该属性本身的定义中的默认值）。</p>
+<p>当元素的一个<strong>继承属性（inherited property</strong><strong>）</strong>没有指定值时，则取父元素的同属性的<a href="/zh-CN/docs/CSS/computed_value">计算值 computed value</a>。只有文档根元素取该属性的概述中给定的<a href="/zh-CN/docs/CSS/initial_value">初始值</a>（<a href="/zh-CN/docs/CSS/initial_value">initial value</a>）（这里的意思应该是在该属性本身的定义中的默认值）。</p>
 
 <p>继承属性的一个典型例子就是 {{ Cssxref("color") }} 属性。给出以下样式规则：</p>
 
@@ -26,7 +26,7 @@ translation_of: Web/CSS/inheritance
 
 <h2 id="非继承属性">非继承属性</h2>
 
-<p>当元素的一个<strong>非继承属性</strong>(在Mozilla code 里有时称之为<strong>reset property</strong> )没有指定值时，则取属性的<a href="/zh-CN/docs/CSS/initial_value">初始值 initial value</a>（该值在该属性的概述里被指定）。</p>
+<p>当元素的一个<strong>非继承属性</strong>(在 Mozilla code 里有时称之为<strong>reset property</strong> ) 没有指定值时，则取属性的<a href="/zh-CN/docs/CSS/initial_value">初始值 initial value</a>（该值在该属性的概述里被指定）。</p>
 
 <p>非继承属性的一个典型例子就是 {{ Cssxref("border") }} 属性。给出以下样式规则：</p>
 
@@ -38,23 +38,11 @@ translation_of: Web/CSS/inheritance
 
 <p>…文本 "emphasized text" 就没有边框，因为 {{ Cssxref("border-style") }} 属性的初始值为<code>none</code>。</p>
 
-<p> {{ Cssxref("inherit") }} 关键字允许显式的声明继承性，它对继承和非继承属性都生效。</p>
-
-<p>可以使用 {{cssxref("all")}} 简写属性一次控制所有属性的继承，该属性将其值应用于所有属性，例如:</p>
-
-<pre class="brush: css">font {
-  all: revert;
-  font-size: 200%;
-  font-weight: bold;
-}</pre>
-
-<p>这会将 {{cssxref("font")}} 属性的样式恢复为用户代理（浏览器）的默认值，除非存在用户样式表，在这种情况下使用该样式表。然后它将字体大小加倍并应用 {{cssxref("font-weight")}} 属性 为<code>"bold"</code></p>
-
 <h2 id="注意">注意</h2>
 
 <p>{{ Cssxref("inherit") }} 关键字允许显式的声明继承性，它对继承和非继承属性都生效。</p>
 
-<p>可以使用 {{cssxref("all")}} 简写属性一次控制所有属性的继承，该属性将其值应用于所有属性，例如:</p>
+<p>可以使用 {{cssxref("all")}} 简写属性一次控制所有属性的继承，该属性将其值应用于所有属性，例如：</p>
 
 <pre>font {
   all: revert;

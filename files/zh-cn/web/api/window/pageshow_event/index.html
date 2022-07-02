@@ -4,23 +4,23 @@ slug: Web/API/Window/pageshow_event
 translation_of: Web/API/Window/pageshow_event
 original_slug: Web/Events/pageshow
 ---
-<p>当一条会话历史记录被执行的时候将会触发页面显示(pageshow)事件。(这包括了后退/前进按钮操作，同时也会在onload 事件触发后初始化页面时触发)</p>
+<p>当一条会话历史记录被执行的时候将会触发页面显示 (pageshow) 事件。(这包括了后退/前进按钮操作，同时也会在 onload 事件触发后初始化页面时触发)</p>
 
 <h2 id="基本信息">基本信息</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">规范</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pageshow">HTML5</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">接口</dt>
- <dd style="margin: 0 0 0 120px;"><a href="/en-US/docs/Web/API/PageTransitionEvent">PageTransitionEvent</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">事件冒泡</dt>
- <dd style="margin: 0 0 0 120px;">No</dd>
- <dt style="float: left; text-align: right; width: 120px;">事件取消</dt>
- <dd style="margin: 0 0 0 120px;">No</dd>
- <dt style="float: left; text-align: right; width: 120px;">事件源</dt>
- <dd style="margin: 0 0 0 120px;">Document (dispatched on Window)</dd>
- <dt style="float: left; text-align: right; width: 120px;">默认操作</dt>
- <dd style="margin: 0 0 0 120px;">None</dd>
+ <dt>规范</dt>
+ <dd><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pageshow">HTML5</a></dd>
+ <dt>接口</dt>
+ <dd><a href="/en-US/docs/Web/API/PageTransitionEvent">PageTransitionEvent</a></dd>
+ <dt>事件冒泡</dt>
+ <dd>No</dd>
+ <dt>事件取消</dt>
+ <dd>No</dd>
+ <dt>事件源</dt>
+ <dd>Document (dispatched on Window)</dd>
+ <dt>默认操作</dt>
+ <dd>None</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -57,14 +57,14 @@ original_slug: Web/Events/pageshow
   <tr>
    <td><code>persisted</code> {{readonlyInline}}</td>
    <td>{{jsxref("boolean")}}</td>
-   <td>表示网页是否是来自缓存.</td>
+   <td>表示网页是否是来自缓存。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="示例">示例</h2>
 
-<p>以下示例将会在控制台打印由前进/后退按钮以及load事件触发后引起的pageshow事件：</p>
+<p>以下示例将会在控制台打印由前进/后退按钮以及 load 事件触发后引起的 pageshow 事件：</p>
 
 <pre>window.addEventListener('pageshow', function(event) {
     console.log('after , pageshow :',event);
@@ -80,61 +80,13 @@ window.addEventListener('load', function() {
 
 
 
-<p>不规范的写法，你同样可以将这个事件当做一个属性添加到body标签，类似于onload</p>
+<p>不规范的写法，你同样可以将这个事件当做一个属性添加到 body 标签，类似于 onload</p>
 
 <pre>&lt;body onload="myonload()" onpageshow="mypageshowcode()"&gt;</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable()}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("4")}}</td>
-   <td>{{CompatGeckoDesktop("1.8")}}</td>
-   <td>11</td>
-   <td>15</td>
-   <td>5</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.3</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>11</td>
-   <td>35</td>
-   <td>5.1</td>
-  </tr>
- </tbody>
-</table>
-
-
-</div>
+{{Compat("api.Window.pageshow_event")}}
 
 <h2 id="相关事件">相关事件</h2>
 

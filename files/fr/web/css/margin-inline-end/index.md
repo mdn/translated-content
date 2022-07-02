@@ -10,7 +10,7 @@ translation_of: Web/CSS/margin-inline-end
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété **`margin-inline-end`** définit la marge logique appliquée à la fin des éléments en ligne, selon le mode d'écriture, la directionalité et l'orientation du texte. Selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}, elle peut correspondre à {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} ou {{cssxref("margin-left")}}.
+La propriété **`margin-inline-end`** définit la marge logique appliquée à la fin des éléments en ligne, selon le mode d'écriture, la directionalité et l'orientation du texte. Selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}, elle peut correspondre à {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} ou {{cssxref("margin-left")}}.
 
 {{EmbedInteractiveExample("pages/css/margin-inline-end.html")}}
 

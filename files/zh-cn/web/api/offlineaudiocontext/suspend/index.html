@@ -17,7 +17,7 @@ translation_of: Web/API/OfflineAudioContext/suspend
 
 <dl>
  <dt>暂停时间</dt>
- <dd>A {{jsxref("double")}} 指定暂停的时间.</dd>
+ <dd>A {{jsxref("double")}} 指定暂停的时间。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -26,16 +26,19 @@ translation_of: Web/API/OfflineAudioContext/suspend
 
 <h3 id="异常">异常</h3>
 
-<p>发生任何异常，promise就会拒绝.</p>
+<p>发生任何异常，promise 就会拒绝。</p>
 
-<p>如果帧数出现下列情况，就会抛出错误{{exception("InvalidStateError")}}:</p>
-
-<ul>
- <li>一个负值</li>
- <li>小于或等于当前时间</li>
- <li>大于或等于渲染的总渲染时间</li>
- <li>is scheduled by another suspend for the same time</li>
-</ul>
+<dl>
+ <dt><code>InvalidStateError</code> {{domxref("DOMException")}}</dt>
+ <dd>如果帧数出现下列情况，则抛出该异常：
+  <ul>
+   <li>一个负值</li>
+   <li>小于或等于当前时间</li>
+   <li>大于或等于渲染的总渲染时间</li>
+   <li>is scheduled by another suspend for the same time</li>
+  </ul>
+ </dd>
+</dl>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -56,56 +59,4 @@ translation_of: Web/API/OfflineAudioContext/suspend
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(49.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(49.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatChrome(49.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.OfflineAudioContext.suspend")}}

@@ -10,7 +10,7 @@ translation_of: Web/API/BeforeInstallPromptEvent
 ---
 <p>{{ ApiRef() }} {{ Non-standard_header }}</p>
 
-<p>在一个用户被提示”安装“一个网站到移动设备的一个主屏幕之前,  <code><strong>BeforeInstallPromptEvent </strong></code> 被{{domxref("Window.onbeforeinstallprompt")}} 处理程序触发。</p>
+<p>在一个用户被提示”安装“一个网站到移动设备的一个主屏幕之前，<code><strong>BeforeInstallPromptEvent</strong></code> 被 {{domxref("Window.onbeforeinstallprompt")}} 处理程序触发。</p>
 
 <p>该接口继承自{{domxref("Event")}}接口。</p>
 
@@ -29,9 +29,9 @@ translation_of: Web/API/BeforeInstallPromptEvent
 
 <dl>
  <dt>{{domxref("BeforeInstallPromptEvent.platform")}} {{readonlyinline}}</dt>
- <dd>返回一个包含了调度事件的平台（s）的 {{domxref("DOMString")}} 数组。这是为希望向用户提供版本选择的user agent提供的，例如，“web”或“play”允许用户在web版本或Android版本之间进行选择。</dd>
+ <dd>返回一个包含了调度事件的平台（s）的 {{domxref("DOMString")}} 数组。这是为希望向用户提供版本选择的 user agent 提供的，例如，“web”或“play”允许用户在 web 版本或 Android 版本之间进行选择。</dd>
  <dt>{{domxref("BeforeInstallPromptEvent.userChoice")}} {{readonlyinline}}</dt>
- <dd>返回一个可以解析为 {{domxref("DOMString")}} 的 {{jsxref("Promise")}} ，其值为 'installed' 或 'dismissed'，用以判断用户是否选择安装该PWA。</dd>
+ <dd>返回一个可以解析为 {{domxref("DOMString")}} 的 {{jsxref("Promise")}} ，其值为 'installed' 或 'dismissed'，用以判断用户是否选择安装该 PWA。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -54,76 +54,4 @@ translation_of: Web/API/BeforeInstallPromptEvent
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>
-    <p>{{CompatChrome(44.0)}} [1]</p>
-   </td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td><code>prompt()</code> method.</td>
-   <td>{{CompatChrome(45.0)}} [1]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>
-    <p>{{CompatChrome(44.0)}} [1]</p>
-   </td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>
-    <p>{{CompatChrome(44.0)}} [1]</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>prompt()</code> method.</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatChrome(45.0)}} [1]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatChrome(45.0)}} [1]</td>
-  </tr>
- </tbody>
-</table>
-
-<p>[1] <font face="Consolas, Liberation Mono, Courier, monospace">B</font>ehind the flag<em>chrome://flags/#bypass-app-banner-engagement-checks</em></p>
+{{Compat("api.BeforeInstallPromptEvent")}}

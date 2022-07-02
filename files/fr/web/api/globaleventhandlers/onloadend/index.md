@@ -15,11 +15,13 @@ La propriété **`onloadend`** du "mixin" {{domxref("GlobalEventHandlers")}} est
 
 ## Syntaxe
 
-    img.onloadend = funcRef;
+```js
+img.onloadend = funcRef;
+```
 
 ### Valeur
 
-`funcRef` est la fonction du gestionnaire à appeler quand l'évènement `loadend `de la ressource est déclenché.
+`funcRef` est la fonction du gestionnaire à appeler quand l'évènement `loadend` de la ressource est déclenché.
 
 ## Exemples
 

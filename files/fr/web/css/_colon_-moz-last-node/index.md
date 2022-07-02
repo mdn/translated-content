@@ -16,7 +16,9 @@ La pseudo-classe **`:-moz-last-node`** correspond à un élément si celui-ci es
 
 ## Syntaxe
 
-    span:-moz-last-node { propriétés de mise en forme }
+```
+span:-moz-last-node { propriétés de mise en forme }
+```
 
 ## Exemples
 
@@ -36,7 +38,7 @@ span:-moz-last-node {
   <span>:-moz-last-node</span>
 </p>
 <p>
-  <span>Cet élément n'est pas ciblé car il est suivi par du texte.</span>
+  <span>Cet élément n'est pas ciblé car il est suivi par du texte.</span>
   Bip bop bip bop.
 </p>
 ```

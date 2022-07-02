@@ -1,0 +1,55 @@
+---
+title: XMLHttpRequestEventTarget.onload
+slug: conflicting/Web/API/XMLHttpRequest/load_event
+translation_of: Web/API/XMLHttpRequestEventTarget/onload
+original_slug: Web/API/XMLHttpRequestEventTarget/onload
+---
+<div>{{APIRef("XMLHttpRequest")}}</div>
+
+<p><strong><code>XMLHttpRequestEventTarget.onload</code></strong> 是 {{domxref("XMLHttpRequest")}} 请求成功完成时调用的函数。</p>
+
+<h2 id="Syntax" name="Syntax">语法</h2>
+
+<pre class="syntaxbox"><em>XMLHttpRequest</em>.onload = <em>callback</em>;</pre>
+
+<h3 id="值">值</h3>
+
+<ul>
+ <li><code><em>callback</em></code> 是请求成功完成时要执行的函数。它接收一个 {{domxref("ProgressEvent")}} 对象作为它的第一个参数。<em>this</em> 的值(即上下文)与此回调的 {{domxref("XMLHttpRequest")}} 相同。</li>
+</ul>
+
+<h2 id="Example" name="Example">示例</h2>
+
+<pre class="brush: js">var xmlhttp = new XMLHttpRequest(),
+  method = 'GET',
+  url = 'https://developer.mozilla.org/';
+
+xmlhttp.open(<em>method</em>, <em>url</em>, true);
+xmlhttp.onload = function () {
+  // 处理取回的数据(在 xmlhttp.response 中找到)
+};
+xmlhttp.send();
+</pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('XMLHttpRequest', '#handler-xhr-onload')}}</td>
+   <td>{{Spec2('XMLHttpRequest')}}</td>
+   <td>WHATWG living standard</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+
+
+<p>{{Compat("api.XMLHttpRequestEventTarget.onload")}}</p>

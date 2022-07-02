@@ -10,13 +10,15 @@ original_slug: Web/JavaScript/Reference/Instructions/return
 ---
 {{jsSidebar("Statements")}}
 
-L'instruction **`return` **met fin à l'exécution d'une fonction et définit une valeur à renvoyer à la fonction appelante.
+L'instruction **`return`** met fin à l'exécution d'une fonction et définit une valeur à renvoyer à la fonction appelante.
 
 {{EmbedInteractiveExample("pages/js/statement-return.html")}}
 
 ## Syntaxe
 
-    return [[expression]];
+```js
+return [expression];
+```
 
 - `expression`
   - : L'expression dont on souhaite renvoyer la valeur. Si elle est absente, la valeur renvoyée par défaut sera {{jsxref("undefined")}}.
@@ -131,9 +133,9 @@ réponse(1337); // 56154
 | Spécification                                                                                | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES1')}}                                                                     | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-12.9', 'Return statement')}}                     | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-return-statement', 'Return statement')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-return-statement', 'Return statement')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES5.1', '#sec-12.9', 'Return statement')}}                     | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-return-statement', 'Return statement')}}         | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-return-statement', 'Return statement')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -9,7 +9,7 @@ translation_of: Web/API/SVGRect
 
 `SVGRect` représente la géométrie rectangulaire. Les rectangles consistent en une paire de coordonnées (x,y) correspondant à une valeur X minimale, une valeur Y minimale, et une largeur et hauteur, lesquelles sont habituellement positives.
 
-Un objet `SVGRect `peut être marqué en lecture-seule, ce qui signifie que les tentatives de modification sur cet objet entraîneront un lancement d'exception.
+Un objet `SVGRect` peut être marqué en lecture seule, ce qui signifie que les tentatives de modification sur cet objet entraîneront un lancement d'exception.
 
 ### Vue d'ensemble de l'interface
 

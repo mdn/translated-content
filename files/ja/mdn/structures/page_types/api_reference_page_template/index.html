@@ -20,11 +20,10 @@ translation_of: MDN/Structures/Page_types/API_reference_page_template
 
 <h3 id="Top_macros">先頭で使用するマクロ</h3>
 
-<p>既定では、テンプレートの先頭に 5 つのマクロ呼び出しがあります。以下のアドバイスに従って、更新や削除をしてください。</p>
+<p>既定では、テンプレートの先頭に 4 つのマクロ呼び出しがあります。以下のアドバイスに従って、更新や削除をしてください。</p>
 
 <ul>
  <li>\{{APIRef("<em>グループデータ名</em>")}} — これは左端にあるサイドバーを生成し、現在のページに関連するクイックリファレンスのリンクを表示します。例えば、 <a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> の中の各ページは同じサイドバーを持ち、この API 内の他のページを指します。 API で正しいサイドバーを生成するには、 KumaScript の GitHub リポジトリにグループデータの項目を追加し、マクロ呼び出しの中で<em>グループデータ名</em>のところに項目名を入れる必要があります。これを行う方法についてのガイドは <a href="/ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars">API リファレンスサイドバー</a>を参照してください。</li>
- <li>\{{Draft}} — これは、 <strong>Draft</strong> バナーを生成してページがまだ完成していないことを示すもので、ページの最初の草稿が完全に完成した場合にのみ削除するべきものです。公開できる状態になったら、これを削除することができます。</li>
  <li>\{{SeeCompatTable}} — これは、 <strong>This is an experimental technology</strong> バナーを生成して、技術が<a href="/ja/docs/MDN/Guidelines/Conventions_definitions#experimental">実験的</a>であることを示します。文書化しようとしている技術が実験的でない場合は、これを削除することができます。実験的な技術であり、その技術が Firefox のプレハブに隠されている場合は、 <a href="/ja/docs/Mozilla/Firefox/Experimental_features">Firefox における試験的機能</a>のページにそのための項目を記入する必要があります。</li>
  <li>\{{SecureContext_Header}} — これは <strong>Secure context</strong> バナーを生成し、その技術が<a href="/ja/docs/Web/Security/Secure_Contexts">安全なコンテキスト</a>でのみ利用可能であることを示します。そうでない場合、マクロ呼び出しを削除することができます。存在する場合は、<a href="/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">安全なコンテキストに制限されている機能</a>ページにも項目を記入してください。</li>
  <li>\{{Deprecated_Header}} — これは <strong>Deprecated</strong> バナーを生成し、その技術が<a href="/ja/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">非推奨</a>であることを示します。そうでない場合は、このマクロを削除することができます。</li>
@@ -44,7 +43,7 @@ translation_of: MDN/Structures/Page_types/API_reference_page_template
 <p>Once that is done, you can show the compat data for the interface with a \{{Compat(…)}} macro call.</p>
 </div>
 
-<p>{{APIRef("GroupDataName")}}{{Draft}}{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}</p>
+<p>{{APIRef("GroupDataName")}}{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}</p>
 
 <p class="summary">The summary paragraph — start by naming the interface, saying what API it is part of, and saying what it does. This should ideally be 1 or 2 short sentences. You could copy most of this from the Interface's summary on the corresponding API landing page.</p>
 

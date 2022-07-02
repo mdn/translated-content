@@ -7,7 +7,7 @@ translation_of: Web/CSS/all
 ---
 <p>{{CSSRef}}</p>
 
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <code><strong>all</strong></code> <a href="/zh-CN/docs/Web/CSS/Shorthand_properties">简写属性</a> 将除却 {{cssxref("unicode-bidi")}} 与 {{cssxref("direction")}} 之外的所有属性重设至其初始值，或继承值。</p>
+<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <code><strong>all</strong></code> <a href="/zh-CN/docs/Web/CSS/Shorthand_properties">简写属性</a> 将除了 {{cssxref("unicode-bidi")}} 与 {{cssxref("direction")}} 之外的所有属性重设至其初始值，或继承值。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/all.html")}}</div>
 
@@ -24,7 +24,7 @@ all: unset
 all: revert;
 </pre>
 
-<p><code>all</code> 属性is specified as one of the CSS 全局 keyword values. Note that none of these values affect the {{cssxref("unicode-bidi")}} 与 {{cssxref("direction")}} 这两个属性。</p>
+<p><code>all</code> 属性被作为 CSS 全局关键词的其中之一。不过需要注意的是，{{cssxref("unicode-bidi")}} 与 {{cssxref("direction")}} 这两个属性是不受 <code>all</code> 影响的</p>
 
 <h3 id="取值">取值</h3>
 
@@ -76,7 +76,7 @@ blockquote {
 }
 </pre>
 
-<p id="Results">结果</p>
+<p>结果</p>
 
 <div id="ex0" style="display: inline-block; width: 225px; vertical-align: top;">
 <h4 id="没有_all_属性">没有 <code>all</code> 属性</h4>
@@ -84,7 +84,7 @@ blockquote {
 <pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.
 </pre>
 
-<pre class="brush: css hidden">body { font-size: small; background-color: <span class="st">#F0F0F0</span>; color:blue; }
+<pre class="brush: css hidden">body { font-size: small; background-color: #F0F0F0; color:blue; }
 blockquote { background-color: skyblue;  color: red; }
 </pre>
 {{EmbedLiveSample("ex0", "200", "125")}}
@@ -97,13 +97,13 @@ blockquote { background-color: skyblue;  color: red; }
 
 <pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.</pre>
 
-<pre class="brush: css hidden">body { font-size: small; background-color: <span class="st">#F0F0F0</span>; color:blue; }
+<pre class="brush: css hidden">body { font-size: small; background-color: #F0F0F0; color:blue; }
 blockquote { background-color: skyblue;  color: red; }
 blockquote { all: unset; }
 </pre>
 {{EmbedLiveSample("ex1", "200", "125")}}
 
-<p>{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 inline 元素(初始值)，其 {{cssxref("background-color")}} 为 <code>transparent</code> (初始值)，但其 {{cssxref("font-size")}} 仍为 <code>small</code> (继承值) ，其 {{cssxref("color")}} 为 <code>blue</code> (继承值)。</p>
+<p>{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 inline 元素 (初始值)，其 {{cssxref("background-color")}} 为 <code>transparent</code> (初始值)，但其 {{cssxref("font-size")}} 仍为 <code>small</code> (继承值) ，其 {{cssxref("color")}} 为 <code>blue</code> (继承值)。</p>
 </div>
 
 <div id="ex2" style="display: inline-block; width: 225px; vertical-align: top;">
@@ -112,13 +112,13 @@ blockquote { all: unset; }
 <pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.
 </pre>
 
-<pre class="brush: css hidden">body { font-size: small; background-color: <span class="st">#F0F0F0</span>; color:blue; }
+<pre class="brush: css hidden">body { font-size: small; background-color: #F0F0F0; color:blue; }
 blockquote { background-color: skyblue;  color: red; }
 blockquote { all: initial; }
 </pre>
 {{EmbedLiveSample("ex2", "200", "125")}}
 
-<p>{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 inline 元素(初始值)，其 {{cssxref("background-color")}} 为 <code>transparent</code> (初始值)，其 {{cssxref("font-size")}} 为 <code>normal</code> (初始值)，其 {{cssxref("color")}} 为 <code>black</code>(初始值)。</p>
+<p>{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 inline 元素 (初始值)，其 {{cssxref("background-color")}} 为 <code>transparent</code> (初始值)，其 {{cssxref("font-size")}} 为 <code>normal</code> (初始值)，其 {{cssxref("color")}} 为 <code>black</code>(初始值)。</p>
 </div>
 
 <div id="ex3" style="display: inline-block; width: 225px; vertical-align: top;">

@@ -10,7 +10,7 @@ translation_of: Web/API/Window/setImmediate
 
 <p>该方法用来把一些需要长时间运行的操作放在一个回调函数里，在浏览器完成后面的其他语句后，就立刻执行这个回调函数。</p>
 
-<div class="note"><strong>注意:</strong> 该方法可能不会被批准成为标准，目前只有最新版本的 Internet Explorer 和Node.js 0.10+实现了该方法。<span style="font-size: 1rem; letter-spacing: -0.00278rem;">它遇到了 </span><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=686201" style="font-size: 1rem; letter-spacing: -0.00278rem;" title="https://bugzilla.mozilla.org/show_bug.cgi?id=686201">Gecko</a><span style="font-size: 1rem; letter-spacing: -0.00278rem;">(Firefox) 和</span><a href="http://code.google.com/p/chromium/issues/detail?id=146172" style="font-size: 1rem; letter-spacing: -0.00278rem;" title="http://code.google.com/p/chromium/issues/detail?id=146172">Webkit</a><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> (Google/Apple) 的阻力.</span></div>
+<div class="note"><strong>注意：</strong> 该方法可能不会被批准成为标准，目前只有最新版本的 Internet Explorer 和 Node.js 0.10+ 实现了该方法。它遇到了 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=686201" style="font-size: 1rem; letter-spacing: -0.00278rem;" title="https://bugzilla.mozilla.org/show_bug.cgi?id=686201">Gecko</a>(Firefox) 和<a href="http://code.google.com/p/chromium/issues/detail?id=146172" style="font-size: 1rem; letter-spacing: -0.00278rem;" title="http://code.google.com/p/chromium/issues/detail?id=146172">Webkit</a> (Google/Apple) 的阻力。</div>
 
 <h2 id="语法">语法</h2>
 
@@ -19,7 +19,7 @@ var immediateID = setImmediate(func);
 </pre>
 
 <ul>
- <li><code>immediateID</code> 是这次setImmediate方法设置的唯一ID,可以作为 {{ domxref("window.clearImmediate") }} 的参数.</li>
+ <li><code>immediateID</code> 是这次 setImmediate 方法设置的唯一 ID，可以作为 {{ domxref("window.clearImmediate") }} 的参数。</li>
  <li><code>func</code> 是将要执行的回调函数</li>
 </ul>
 
@@ -27,19 +27,19 @@ var immediateID = setImmediate(func);
 
 <h2 id="备注">备注</h2>
 
-<p>{{ domxref("window.clearImmediate") }} 方法可以用来取消通过setImmediate设置的将要执行的语句, 就像 {{ domxref("window.clearTimeout") }} 对应于 {{ domxref("window.setTimeout") }}一样.</p>
+<p>{{ domxref("window.clearImmediate") }} 方法可以用来取消通过 setImmediate 设置的将要执行的语句，就像 {{ domxref("window.clearTimeout") }} 对应于 {{ domxref("window.setTimeout") }}一样。</p>
 
 <p>该方法可以用来替代 <code>setTimeout(fn, 0)</code> 去执行<a href="http://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-javascript/">繁重的操作</a>(<a href="http://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-javascript/" title="http://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-javascript/">heavy operations</a>) </p>
 
-<p>可以通过以下几种方式来模仿该功能:</p>
+<p>可以通过以下几种方式来模仿该功能：</p>
 
 <ul>
- <li>{{ domxref("window.postMessage") }} 可以被用来触发一个 immediate 但会产生回调. 请注意, Internet Explorer 8包含postMessage的同步版本, 这意味着它不能被用来作为代替品.</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/web-messaging.html#channel-messaging">MessageChannel</a> 可以在Web Workers 内部很好的被使用, 而postMessage 的语义意味着它不能在那使用.</li>
- <li><code>setTimeout(fn, 0)</code><em>可以使用</em>, 然而按照<a href="https://html.spec.whatwg.org/multipage/webappapis.html#timers" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dom-windowtimers-settimeout">HTML规范</a>, 嵌套深度超过5级的定时器, 会被限制在4ms , 他没有为setImmediate的天然及时性提供合适的polyfill.</li>
+ <li>{{ domxref("window.postMessage") }} 可以被用来触发一个 immediate 但会产生回调。请注意， Internet Explorer 8 包含 postMessage 的同步版本，这意味着它不能被用来作为代替品。</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/web-messaging.html#channel-messaging">MessageChannel</a> 可以在 Web Workers 内部很好的被使用，而 postMessage 的语义意味着它不能在那使用。</li>
+ <li><code>setTimeout(fn, 0)</code><em>可以使用</em>, 然而按照<a href="https://html.spec.whatwg.org/multipage/webappapis.html#timers" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dom-windowtimers-settimeout">HTML 规范</a>, 嵌套深度超过 5 级的定时器，会被限制在 4ms , 他没有为 setImmediate 的天然及时性提供合适的 polyfill.</li>
 </ul>
 
-<p>所有这些技术都被纳入 <a href="https://github.com/NobleJS/setImmediate" title="https://github.com/NobleJS/setImmediate">robust setImmediate polyfill</a> 中.</p>
+<p>所有这些技术都被纳入 <a href="https://github.com/NobleJS/setImmediate" title="https://github.com/NobleJS/setImmediate">robust setImmediate polyfill</a> 中。</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

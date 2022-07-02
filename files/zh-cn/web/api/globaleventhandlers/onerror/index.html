@@ -11,13 +11,13 @@ translation_of: Web/API/GlobalEventHandlers/onerror
 
 <div>混合事件 {{domxref("GlobalEventHandlers")}} 的 onerror 属性是用于处理 {{event("error")}} 的事件</div>
 
-<div></div>
+
 
 <p><code><a href="/en-US/docs/Web/Events/error">Error</a></code>事件的<a href="/zh-CN/docs/Web/Guide/Events/Event_handlers">事件处理程序</a>，在各种目标对象的不同类型错误被触发：</p>
 
 <ul>
- <li>当<strong>JavaScript运行时错误</strong>（包括语法错误）发生时，{{domxref("window")}}会触发一个{{domxref("ErrorEvent")}}接口的<code><a href="/en-US/docs/Web/Events/error">error</a></code>事件，并执行<code>window.onerror()</code>。</li>
- <li>当一项资源（如{{HTMLElement("img")}}或{{HTMLElement("script")}}）<strong>加载失败</strong>，加载资源的元素会触发一个{{domxref("Event")}}接口的<code><a href="/en-US/docs/Web/Events/error">error</a></code>事件，并执行该元素上的<code>onerror()</code>处理函数。这些error事件不会向上冒泡到window，不过（至少在Firefox中）能被单一的{{domxref("window.addEventListener")}}捕获。</li>
+ <li>当<strong>JavaScript 运行时错误</strong>（包括语法错误）发生时，{{domxref("window")}}会触发一个{{domxref("ErrorEvent")}}接口的<code><a href="/en-US/docs/Web/Events/error">error</a></code>事件，并执行<code>window.onerror()</code>。</li>
+ <li>当一项资源（如{{HTMLElement("img")}}或{{HTMLElement("script")}}）<strong>加载失败</strong>，加载资源的元素会触发一个{{domxref("Event")}}接口的<code><a href="/en-US/docs/Web/Events/error">error</a></code>事件，并执行该元素上的<code>onerror()</code>处理函数。这些 error 事件不会向上冒泡到 window，不过（至少在 Firefox 中）能被单一的{{domxref("window.addEventListener")}}捕获。</li>
 </ul>
 
 <p>加载一个全局的<code>error</code>事件处理函数可用于自动收集错误报告。</p>
@@ -34,11 +34,11 @@ translation_of: Web/API/GlobalEventHandlers/onerror
 <p>函数参数：</p>
 
 <ul>
- <li><code>message</code>：错误信息（字符串）。可用于HTML <code>onerror=""</code>处理程序中的<code>event</code>。</li>
- <li><code>source</code>：发生错误的脚本URL（字符串）</li>
+ <li><code>message</code>：错误信息（字符串）。可用于 HTML <code>onerror=""</code>处理程序中的<code>event</code>。</li>
+ <li><code>source</code>：发生错误的脚本 URL（字符串）</li>
  <li><code>lineno</code>：发生错误的行号（数字）</li>
- <li><code>colno</code>：发生错误的列号（数字）{{gecko_minversion_inline("31.0")}}</li>
- <li><code>error</code>：<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error对象</a>（对象）{{gecko_minversion_inline("31.0")}}</li>
+ <li><code>colno</code>：发生错误的列号（数字）</li>
+ <li><code>error</code>：<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error 对象</a>（对象）</li>
 </ul>
 
 <p>若该函数返回<code>true</code>，则阻止执行默认事件处理函数。</p>
@@ -59,7 +59,7 @@ translation_of: Web/API/GlobalEventHandlers/onerror
 
 <h2 id="注意事项">注意事项</h2>
 
-<p>当加载自<a href="/en-US/docs/Web/Security/Same-origin_policy">不同域</a>的脚本中发生语法错误时，为避免信息泄露（参见{{bug("363897")}}），语法错误的细节将不会报告，而代之简单的<code><strong>"Script error."</strong></code>。在某些浏览器中，通过在{{HTMLElement("script")}}使用<code>{{htmlattrxref("crossorigin","script")}}</code>属性并要求服务器发送适当的 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> HTTP 响应头，该行为可被覆盖。一个变通方案是单独处理"Script error."，告知错误详情仅能通过浏览器控制台查看，无法通过JavaScript访问。</p>
+<p>当加载自<a href="/en-US/docs/Web/Security/Same-origin_policy">不同域</a>的脚本中发生语法错误时，为避免信息泄露（参见{{bug("363897")}}），语法错误的细节将不会报告，而代之简单的<code><strong>"Script error."</strong></code>。在某些浏览器中，通过在{{HTMLElement("script")}}使用<code>{{htmlattrxref("crossorigin","script")}}</code>属性并要求服务器发送适当的 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> HTTP 响应头，该行为可被覆盖。一个变通方案是单独处理"Script error."，告知错误详情仅能通过浏览器控制台查看，无法通过 JavaScript 访问。</p>
 
 <pre class="brush: js">window.onerror = function (msg, url, lineNo, columnNo, error) {
     var string = msg.toLowerCase();
@@ -81,7 +81,7 @@ translation_of: Web/API/GlobalEventHandlers/onerror
     return false;
 };</pre>
 
-<p>当使用行内HTML标签（<code>&lt;body onerror="alert('an error occurred')"&gt;</code>）时，HTML规范要求传递给<code>onerror</code>的参数命名为<code>event</code>、<code>source</code>、<code>lineno</code>、<code>colno</code>、<code>error</code>。针对不满足此要求的浏览器，传递的参数仍可使用<code>arguments[0]</code>到<code>arguments[2]</code>来获取。</p>
+<p>当使用行内 HTML 标签（<code>&lt;body onerror="alert('an error occurred')"&gt;</code>）时，HTML 规范要求传递给<code>onerror</code>的参数命名为<code>event</code>、<code>source</code>、<code>lineno</code>、<code>colno</code>、<code>error</code>。针对不满足此要求的浏览器，传递的参数仍可使用<code>arguments[0]</code>到<code>arguments[2]</code>来获取。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -102,9 +102,9 @@ translation_of: Web/API/GlobalEventHandlers/onerror
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>在Firefox 14之前，当{{HTMLElement("script")}}加载失败时，<code>window.onerror</code>被传入<strong>"Error loading script"</strong>信息。该bug已在{{bug("737087")}}修复，取而代之，在这种情况下，<code>scriptElement.onerror</code>将被触发。</p>
+<p>在 Firefox 14 之前，当{{HTMLElement("script")}}加载失败时，<code>window.onerror</code>被传入<strong>"Error loading script"</strong>信息。该 bug 已在{{bug("737087")}}修复，取而代之，在这种情况下，<code>scriptElement.onerror</code>将被触发。</p>
 
-<p>自Firefox 31始加入最后两个参数（<code>colno</code> and <code>error</code>），意味着通过提供的<code>Error</code>对象，你可以从<code>window.onerror</code>访问脚本错误的stack trace（{{bug("355430")}}。）</p>
+<p>自 Firefox 31 始加入最后两个参数（<code>colno</code> and <code>error</code>），意味着通过提供的<code>Error</code>对象，你可以从<code>window.onerror</code>访问脚本错误的 stack trace（{{bug("355430")}}。）</p>
 
 <h2 id="参见">参见</h2>
 

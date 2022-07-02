@@ -13,7 +13,7 @@ translation_of: Web/API/Push_API
 ---
 {{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}
 
-L' **API Push**  donne aux applications web la possibilité de recevoir des messages qui leur sont poussés depuis un serveur, qu'il s'agisse ou non d'une application active au premier plan, ou même actuellement chargée, sur un agent utilisateur. Ceci permet aux développeurs de délivrer des notifications asynchrones et des mises-à-jour aux utilisateurs qui le choisissent, entrainant un meilleur engagement \[de l'utilisateur] avec du nouveau contenu au moment opportun.
+L' **API Push**  donne aux applications web la possibilité de recevoir des messages qui leur sont poussés depuis un serveur, qu'il s'agisse ou non d'une application active au premier plan, ou même actuellement chargée, sur un agent utilisateur. Ceci permet aux développeurs de délivrer des notifications asynchrones et des mises-à-jour aux utilisateurs qui le choisissent, entrainant un meilleur engagement \[de l'utilisateur] avec du nouveau contenu au moment opportun.
 
 > **Note :** Cette documentation couvre les spécifications W3C de l'API Push; si vous recherchez la documentation du système propriétaire de Push de Firefox OS, merci de vous reporter à [Simple Push](/fr/docs/Web/API/Simple_Push_API).
 
@@ -36,7 +36,7 @@ Activer un service worker pour délivrer un message Push peut accroître l'utili
 
 > **Note :** Comme pour Gecko 44, le quota de messages Push par application n'est pas incrémenté quand une nouvelle notification se lance et qu'une autre est déjà visible, pendant une période de 3 secondes. Cela permet de gèrer le cas où une rafale de messages Push est reçue et qu'ils n'afficheraient pas tous une notification.
 
-> **Note :**: Chrome nécessite actuellement de configurer un projet sur [Google Cloud Messaging](https://developers.google.com/cloud-messaging/) pour envoyer des messages Push et utilise le numero du projet associé ainsi que la clé durant l'envoi des messages Push. Il requiert aussi un manifeste applicatif avec des paramètres spéciaux pour utiliser ce service. Nous espérons que cette restriction sera supprimée dans le futur..
+> **Note :** Chrome nécessite actuellement de configurer un projet sur [Google Cloud Messaging](https://developers.google.com/cloud-messaging/) pour envoyer des messages Push et utilise le numero du projet associé ainsi que la clé durant l'envoi des messages Push. Il requiert aussi un manifeste applicatif avec des paramètres spéciaux pour utiliser ce service. Nous espérons que cette restriction sera supprimée dans le futur..
 
 ## Interfaces
 
@@ -51,7 +51,7 @@ Activer un service worker pour délivrer un message Push peut accroître l'utili
 
 ## Complément au Service worker
 
-Les ajouts à [l'API Service Worker ](/fr/docs/Web/API/Service_Worker_API)suivants ont été spécifiés dans l'API Push, pour fournir un point d'entrée à l'utilisation de messages Push pour surveiller et répondre aux événements de changement liés aux messages push et aux souscriptions.
+Les ajouts à [l'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_Worker_API) suivants ont été spécifiés dans l'API <i lang="en">Push</i>, pour fournir un point d'entrée à l'utilisation de messages `Push` pour surveiller et répondre aux évènements de changement liés aux messages `Push` et aux souscriptions.
 
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
   - : Retourne une référence de l'interface {{domxref("PushManager")}} pour gèrer les souscriptions push incluant la souscription, récupèrer une souscription existante, et accèder au statut des permissions push. C'est le point d'entrée dans l'utilisation de la communication push.

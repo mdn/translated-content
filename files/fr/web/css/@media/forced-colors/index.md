@@ -1,13 +1,9 @@
 ---
 title: forced-colors
 slug: Web/CSS/@media/forced-colors
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/forced-colors
 ---
-{{CSSRef}}{{SeeCompatTable}}{{draft}}
+{{CSSRef}}{{SeeCompatTable}}
 
 La [caractéristique média](</fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Caractéristiques_média_(media_features)>) **`forced-colors`** est utilisée afin de détecter si l'utilisateur a choisi une palette de couleur restreinte via le navigateur ou l'agent utilisateur.
 
@@ -30,21 +26,25 @@ Dans cet exemple, les couleurs utilisées par défaut sont exotiques voire illis
 
 ### HTML
 
-    <div class="colors">quelques couleurs étranges</div>
+```html
+<div class="colors">quelques couleurs étranges</div>
+```
 
 ### CSS
 
-    .colors {
-      background-color: red;
-      color: grey;
-    }
+```css
+.colors {
+  background-color: red;
+  color: grey;
+}
 
-    @media (forced-colors: active) {
-      .colors {
-        background-color: white;
-        color: black;
-      }
-    }
+@media (forced-colors: active) {
+  .colors {
+    background-color: white;
+    color: black;
+  }
+}
+```
 
 ### Résultat
 

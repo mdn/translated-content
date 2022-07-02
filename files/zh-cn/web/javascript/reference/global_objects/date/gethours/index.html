@@ -13,28 +13,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getHours
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox language-html" style="margin-bottom: 0px; padding: 1em; border-left-width: 6px; border-left-style: solid; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; text-shadow: none; direction: ltr; white-space: normal; background-color: rgba(212, 221, 228, 0.498039);"><var>dateObj</var>.getHours()</pre>
+<pre class="brush: js"><var>dateObj</var>.getHours()</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <p>无</p>
 
-<h3 id="Description" name="Description">返回值</h3>
+<h3 id="Description">返回值</h3>
 
-<p><code>getHours</code>返回一个0 到 23之间的整数值。</p>
+<p><code>getHours</code> 返回一个 0 到 23 之间的整数值。</p>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
-<h3 id="Example:_Using_getHours" name="Example:_Using_getHours">例子:使用<code>getHours</code>方法</h3>
+<h3 id="Example:_Using_getHours">例子：使用<code>getHours</code>方法</h3>
 
 <p>下面第二条语句，基于日期对象 <code>Xmas95 </code>的值，把 23 赋值给了变量 <code>hours。</code></p>
 
-<pre class="brush:js  language-js" style="padding: 1em 0px 1em 30px; border-left-width: 6px; border-left-style: solid; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; text-shadow: none; direction: ltr; white-space: normal; background-color: rgba(234, 239, 242, 0.247059);"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> Xmas95 <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="keyword token" style="color: #0077aa;">new</span> <span class="class-name token">Date</span><span class="punctuation token" style="color: #999999;">(</span><span class="string token" style="color: #669900;">"December 25, 1995 23:15:00"</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
-<span class="keyword token" style="color: #0077aa;">var</span> hours <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> Xmas95<span class="punctuation token" style="color: #999999;">.</span><span class="function token">getHours<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<pre class="brush:js">var Xmas95 = new Date("December 25, 1995 23:15:00");
+var hours = Xmas95.getHours();
 
-<span class="function token">alert<span class="punctuation token" style="color: #999999;">(</span></span>hours<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span><span class="comment token" style="color: #708090; display: inherit;"> // 23</span></code></pre>
+alert(hours); // 23</pre>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -61,11 +61,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getHours
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("javascript.builtins.Date.getHours")}}</p>
 
-<h2 id="See_Also" name="See_Also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_Also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Date.prototype.getUTCHours()")}}</li>

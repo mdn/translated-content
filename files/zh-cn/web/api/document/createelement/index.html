@@ -11,7 +11,7 @@ translation_of: Web/API/Document/createElement
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">在 <a href="/zh-CN/docs/Web/HTML">HTML</a> 文档中，<strong><code>Document.createElement()</code></strong> 方法用于创建一个由标签名称 <var>tagName</var> 指定的 HTML 元素。如果用户代理无法识别 <var>tagName</var>，则会生成一个未知 HTML 元素 {{domxref("HTMLUnknownElement")}}。</span></p>
+<p>在 <a href="/zh-CN/docs/Web/HTML">HTML</a> 文档中，<strong><code>Document.createElement()</code></strong> 方法用于创建一个由标签名称 <var>tagName</var> 指定的 HTML 元素。如果用户代理无法识别 <var>tagName</var>，则会生成一个未知 HTML 元素 {{domxref("HTMLUnknownElement")}}。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -22,9 +22,9 @@ translation_of: Web/API/Document/createElement
 
 <dl>
  <dt><var>tagName</var></dt>
- <dd>指定要创建元素类型的字符串,创建元素时的 {{domxref("Node.nodeName", "nodeName")}} 使用 <code>tagName</code> 的值为初始化，该方法不允许使用限定名称(如:"html:a")，在 HTML 文档上调用 <code>createElement()</code> 方法创建元素之前会将<code>tagName</code> 转化成小写，在 Firefox、Opera 和 Chrome 内核中，<code>createElement(null)</code> 等同于 <code>createElement("null")</code></dd>
+ <dd>指定要创建元素类型的字符串，创建元素时的 {{domxref("Node.nodeName", "nodeName")}} 使用 <code>tagName</code> 的值为初始化，该方法不允许使用限定名称 (如:"html:a")，在 HTML 文档上调用 <code>createElement()</code> 方法创建元素之前会将<code>tagName</code> 转化成小写，在 Firefox、Opera 和 Chrome 内核中，<code>createElement(null)</code> 等同于 <code>createElement("null")</code></dd>
  <dt><var>options</var>{{optional_inline}}</dt>
- <dd>一个可选的参数 <code>ElementCreationOptions</code> 是包含一个属性名为 <code>is</code> 的对象，该对象的值是用 <code>customElements.define()</code> 方法定义过的一个自定义元素的标签名。为了向前兼容较老版本的 <a href="https://www.w3.org/TR/custom-elements/">Custom Elements specification</a>, 有一些浏览器会允许你传一个值为自定义元素的标签名的字符串作为该参数的值。可以参考本页下方的 {{anch("Web component example")}} Google 的 <a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a> 文档仔细了解如何使用该参数。</dd>
+ <dd>一个可选的参数 <code>ElementCreationOptions</code> 是包含一个属性名为 <code>is</code> 的对象，该对象的值是用 <code>customElements.define()</code> 方法定义过的一个自定义元素的标签名。为了向前兼容较老版本的 <a href="https://www.w3.org/TR/custom-elements/">Custom Elements specification</a>, 有一些浏览器会允许你传一个值为自定义元素的标签名的字符串作为该参数的值。可以参考本页下方的 <a href="#web_component_示例">Web component 示例</a> Google 的 <a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a> 文档仔细了解如何使用该参数。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -33,11 +33,13 @@ translation_of: Web/API/Document/createElement
 
 <h2 id="示例">示例</h2>
 
-<h3 id="HTML">HTML</h3>
+<h3 id="基础示例">基础示例</h3>
 
-<p>创建一个新的 <code>&lt;div&gt;</code> 并且插入到ID为“<code>div1</code>”的元素前。</p>
+<h4 id="HTML">HTML</h3>
 
-<pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
+<p>创建一个新的 <code>&lt;div&gt;</code> 并且插入到 ID 为“<code>div1</code>”的元素前。</p>
+
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;||Working with elements||&lt;/title&gt;
@@ -48,9 +50,9 @@ translation_of: Web/API/Document/createElement
 &lt;/html&gt;
 </pre>
 
-<h3 id="JavaScript">JavaScript</h3>
+<h4 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">document.body.onload = addElement;
+<pre class="brush: js">document.body.onload = addElement;
 
 function addElement () {
   // 创建一个新的 div 元素
@@ -66,11 +68,11 @@ function addElement () {
 }
 </pre>
 
-<p>{{EmbedLiveSample("Basic_example", 500, 50)}}</p>
+<p>{{EmbedLiveSample("基础示例", 500, 50)}}</p>
 
 <h3 id="Web_component_示例">Web component 示例</h3>
 
-<p>以下示例片段取自我们的 expanding-list-web-component 示例(实时查看)。 在这个案例中， 我们的自定义元素继承了以 {{htmlelement("ul")}} 元素为代表的 {{domxref("HTMLUListElement")}}.</p>
+<p>以下示例片段取自我们的 expanding-list-web-component 示例 (实时查看)。 在这个案例中， 我们的自定义元素继承了以 {{htmlelement("ul")}} 元素为代表的 {{domxref("HTMLUListElement")}}.</p>
 
 <pre class="brush: js notranslate">// 为新元素创建一个类
 class ExpandingList extends HTMLUListElement {
@@ -102,32 +104,17 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 <ul>
  <li>在一个 <a href="/zh-CN/docs/Mozilla/Tech/XUL">XUL</a> 文档中，该方法创建指定的 XUL 元素。在其他文档中，它创建一个命名空间 URI 为 null 的元素，这时，新元素会继承文档的命名空间。</li>
  <li>若要显式指定元素的命名空间 URI，请使用 <a href="/zh-CN/docs/Web/API/Document/createElementNS"><code>document.createElementNS()</code></a>。</li>
- <li>当在一个被标记为HTML文档的文档对象上执行时，createElement()优先将参数转换为小写。</li>
+ <li>当在一个被标记为 HTML 文档的文档对象上执行时，createElement() 优先将参数转换为小写。</li>
  <li>当创建一个带限制条件的元素时，请使用{{ domxref("document.createElementNS()") }}。</li>
- <li>Gecko 2.0{{ geckoRelease("2.0") }}之前,quirks模式下tagName可以包含尖括号(&lt;和&gt;)；从Gecko2.0开始，该方法在quirks模式和标准模式下表现一致。</li>
- <li>从Gecko19.0{{ geckoRelease("19.0") }}开始， <code>createElement(null)</code> 和 <code>createElement("null")</code> 相同。Opera 也会将 null 字符串化，但是 Chrome 和 IE 都会抛出错误。</li>
- <li>从Gecko22.0{{geckoRelease("22.0")}}开始，当参数为"bgsounds", "multicol", 或"image"时， <code>createElement()</code> 不再使用 {{domxref("HTMLSpanElement")}} 接口， 参数为 "bgsound" 和 "multicol" 时，使用 <code>HTMLUnknownElement</code> ，为“image”时使用{{domxref("HTMLElement")}} <code>HTMLElement</code>。</li>
- <li><code>createElement</code> 的Gecko实现不遵循XUL和XHTML的DOM说明文档: 创建元素的<code>localName</code>和<code>namespaceURI不会被设置为null</code>. 更多细节详见 {{Bug(280692)}}。</li>
+ <li>Gecko 2.0{{ geckoRelease("2.0") }}之前，quirks 模式下 tagName 可以包含尖括号 (&lt;和&gt;)；从 Gecko2.0 开始，该方法在 quirks 模式和标准模式下表现一致。</li>
+ <li>从 Gecko19.0{{ geckoRelease("19.0") }}开始， <code>createElement(null)</code> 和 <code>createElement("null")</code> 相同。Opera 也会将 null 字符串化，但是 Chrome 和 IE 都会抛出错误。</li>
+ <li>从 Gecko22.0{{geckoRelease("22.0")}}开始，当参数为"bgsounds", "multicol", 或"image"时， <code>createElement()</code> 不再使用 {{domxref("HTMLSpanElement")}} 接口， 参数为 "bgsound" 和 "multicol" 时，使用 <code>HTMLUnknownElement</code> ，为“image”时使用{{domxref("HTMLElement")}} <code>HTMLElement</code>。</li>
+ <li><code>createElement</code> 的 Gecko 实现不遵循 XUL 和 XHTML 的 DOM 说明文档：创建元素的<code>localName</code>和<code>namespaceURI 不会被设置为 null</code>. 更多细节详见 {{Bug(280692)}}。</li>
 </ul>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', "#dom-document-createelement", "Document.createElement")}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

@@ -4,19 +4,17 @@ slug: Web/JavaScript/The_performance_hazards_of_prototype_mutation
 translation_of: Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation
 original_slug: Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation
 ---
-<p>{{draft}}</p>
+<p>{{jsSidebar("Advanced")}}</p>
 
-<p><span>{{jsSidebar("Advanced")}}</span></p>
+<p>每个 JavaScript 对象都拥有一个<code>[[Prototype]]</code>对象。  获取一个对象的属性时首先会搜索其自身，然后就是它的 <code>[[Prototype]]</code>对象，之后再搜索此<code>[[Prototype]]</code>对象的 <code>[[Prototype]]</code>对象，直到找到这个属性或者搜索链条达到终点。这个类似链条的查找过程被称为原型链。  原型链在<a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">对象继承</a>中非常重要。</p>
 
-<p>每个JavaScript对象都拥有一个<code>[[Prototype]]</code>对象。  获取一个对象的属性时首先会搜索其自身, 然后就是它的 <code>[[Prototype]]</code>对象, 之后再搜索此<code>[[Prototype]]</code>对象的 <code>[[Prototype]]</code>对象, 直到找到这个属性或者搜索链条达到终点. 这个类似链条的查找过程被称为原型链。  原型链在<a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">对象继承</a>中非常重要。</p>
+<p>ECMAScript 6 引入了一种方式来修改 <code>[[Prototype]]</code>对象。 提升了灵活性的代价是降低了性能。 <strong>修改<code>[[Prototype]]</code> 对象会损害降低所有现代 JavaScrip 引擎的性能</strong>。这篇文章解释了修改 <code>[[Prototype]]</code> 对象在<em>所有</em>浏览器中都很慢的原因并给出了替代方案。</p>
 
-<p>ECMAScript 6 引入了一种方式来修改 <code>[[Prototype]]</code>对象。 提升了灵活性的代价是降低了性能。 <strong>修改<code>[[Prototype]]</code> 对象会损害降低所有现代 JavaScrip引擎的性能</strong>。这篇文章解释了修改 <code>[[Prototype]]</code> 对象在<em>所有</em>浏览器中都很慢的原因并给出了替代方案。</p>
+<h2 id="JavaScript引擎是如何提升访问对象属性的性能的">JavaScript 引擎是如何提升访问对象属性的性能的</h2>
 
-<h2 id="JavaScript引擎是如何提升访问对象属性的性能的">JavaScript引擎是如何提升访问对象属性的性能的</h2>
+<p>Objects are hashes，所以理论上来说 (实际上也是如此) 访问属性所花费的时间是恒定不变的.  但是 "恒定不变" 的背后也可能有成千上万的机器指令.  幸运的是，大多数情况下对象和属性是"可预测的", 在这些情况下它们的底层结构也是可预测的.  即时编译器可以据此来减少对象属性的访问所花费时间。</p>
 
-<p>Objects are hashes, 所以理论上来说 (实际上也是如此) 访问属性所花费的时间是恒定不变的.  但是 "恒定不变" 的背后也可能有成千上万的机器指令.  幸运的是, 大多数情况下对象和属性是"可预测的", 在这些情况下它们的底层结构也是可预测的.  即时编译器可以据此来减少对象属性的访问所花费时间。</p>
-
-<p>引擎根据添加到对象的顺序属性进行优化。大多数属性都是按照非常相似的顺序添加到对象中的。(经常使用obj[val]风格的随机访问访问对象是一个明显的例外。)</p>
+<p>引擎根据添加到对象的顺序属性进行优化。大多数属性都是按照非常相似的顺序添加到对象中的。(经常使用 obj[val] 风格的随机访问访问对象是一个明显的例外。)</p>
 
 <pre class="brush: js">function Landmark(lat, lon, desc) {
   this.location = { lat: lat, long: lon };
@@ -25,7 +23,7 @@ original_slug: Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation
 var lm1 = new Landmark(-90, 0, "South Pole");
 var lm2 = new Landmark(-24.3756466, -128.311018, "Pitcairn Islands");</pre>
 
-<p>在上面的例子中，每生成一个 <code>Landmark</code> 对象时都将按照 <code>location</code> 和 <code>description</code> 两个属性顺序加载，而存储“经度/纬度”信息的 location 也具有 lat 到 long 的顺序。随后的代码可以删除一个属性。但这是不可能的，因为引擎在这种情况下会生成一段不太理想的代码。在 SpiderMonkey （火狐的 JavaScript 引擎）里，属性的特定顺序（以及属性的其他一些方面，但不包括值）我们称之为“形状”（shape）（谷歌 V8 引擎里，这个概念名为“结构ID”(structure ID))。如果两个对象共享同一个 shape，那么他们属性的存储也相同。</p>
+<p>在上面的例子中，每生成一个 <code>Landmark</code> 对象时都将按照 <code>location</code> 和 <code>description</code> 两个属性顺序加载，而存储“经度/纬度”信息的 location 也具有 lat 到 long 的顺序。随后的代码可以删除一个属性。但这是不可能的，因为引擎在这种情况下会生成一段不太理想的代码。在 SpiderMonkey（火狐的 JavaScript 引擎）里，属性的特定顺序（以及属性的其他一些方面，但不包括值）我们称之为“形状”（shape）（谷歌 V8 引擎里，这个概念名为“结构 ID”(structure ID))。如果两个对象共享同一个 shape，那么他们属性的存储也相同。</p>
 
 <p><code>Landmark</code> 对象在引擎内部的（简化）版本如同下面的 C++：</p>
 
@@ -41,7 +39,7 @@ struct Object {
   Object* prototype;
 };</pre>
 
-<p>例子中的JS表达式对应下面的 C++:</p>
+<p>例子中的 JS 表达式对应下面的 C++:</p>
 
 <pre class="brush: cpp">lm1-&gt;properties[0]; // loc1.location
 lm1-&gt;properties[1]; // loc1.description
@@ -70,8 +68,7 @@ p.sum(); // Pair.prototype.sum</pre>
 
 <dl>
  <dt>The shape of the <em>ultimate</em> object containing the inherited can be checked.</dt>
- <dd>In this case, a shape match must imply that no intervening object's <code>[[Prototype]]</code> has been modified.  Therefore, when an object's <code>[[Prototype]]</code> is mutated, every object along its <code>[[Prototype]]</code> chain must also have its shape changed.</dd>
- <dd>
+ <dd>In this case, a shape match must imply that no intervening object's <code>[[Prototype]]</code> has been modified.  Therefore, when an object's <code>[[Prototype]]</code> is mutated, every object along its <code>[[Prototype]]</code> chain must also have its shape changed.
  <pre class="brush: js">var obj1 = {};
 var obj2 = Object.create(obj1);
 var obj3 = Object.create(obj2);
@@ -80,8 +77,7 @@ var obj3 = Object.create(obj2);
 obj3.__proto__ = {};</pre>
  </dd>
  <dt>The shape of the object initially accessed can be checked.</dt>
- <dd>Every object that might inherit through a changed-<code>[[Prototype]]</code> object must change, reflecting the <code>[[Prototype]]</code> mutation having happened</dd>
- <dd>
+ <dd>Every object that might inherit through a changed-<code>[[Prototype]]</code> object must change, reflecting the <code>[[Prototype]]</code> mutation having happened
  <pre class="brush: js">var obj1 = {};
 var obj2 = Object.create(obj1);
 var obj3 = Object.create(obj2);

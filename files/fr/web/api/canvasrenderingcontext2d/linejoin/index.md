@@ -1,26 +1,21 @@
 ---
 title: CanvasRenderingContext2D.lineJoin
 slug: Web/API/CanvasRenderingContext2D/lineJoin
-tags:
-  - API
-  - Canvas
-  - Propriété
-  - arrondit
-  - coin
-  - stroke
 translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 ---
 {{APIRef}}
 
-La propriété **`CanvasRenderingContext2D`\*\***`.lineJoin`\*\* de l'API Canvas 2D détermine la forme à utiliser pour joindre deux segments de ligne à leur intersection.
+La propriété **`CanvasRenderingContext2D.lineJoin`** de l'API Canvas 2D détermine la forme à utiliser pour joindre deux segments de ligne à leur intersection.
 
 Cette propriété n'a aucun effet quand deux segments connectés ont la même direction, car aucune zone de jonction ne sera ajoutée dans ce cas. Les segments dégénérés d'une longueur de zéro (c'est à dire avec les extrémités à la même position) seront ignorés.
 
-> **Note :** Les lignes peuvent être dessinées aves les méthodes  {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}} et {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.
+> **Note :** Les lignes peuvent être dessinées aves les méthodes  {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}} et {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.
 
 ## Syntaxe
 
-    ctx.lineJoin = "bevel" || "round" || "miter";
+```js
+ctx.lineJoin = "bevel" || "round" || "miter";
+```
 
 ### Options
 
@@ -33,7 +28,7 @@ Il y a trois valeurs possibles pour cette propriété: `"round"`, `"bevel"` et `
 - `"bevel"` (biseau)
   - : Remplit une zone triangulaire supplémentaire entre les extrémités des segments connectés.
 - `"miter"` (onglet)
-  - : Les segments raccordés  sont reliés entre eux en prolongeant leurs bors extérieurs en un seul point, ce qui a pour effet de remplir uen zone supplémentaire en forme de losange. Ce paramètre est affecté par la proriété {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}. Valeur par dafaut.
+  - : Les segments raccordés sont reliés entre eux en prolongeant leurs bors extérieurs en un seul point, ce qui a pour effet de remplir uen zone supplémentaire en forme de losange. Ce paramètre est affecté par la proriété {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}. Valeur par dafaut.
 
 ## Exemples
 
@@ -65,7 +60,7 @@ ctx.stroke();
 
 #### Résultat
 
-{{ EmbedLiveSample('Changing_the_joins_in_a_path', 700, 180) }}
+{{ EmbedLiveSample('Modifier_les_jointures_d\'un_tracé', 700, 180) }}
 
 ### Comparaison des jointures de lignes
 
@@ -92,7 +87,7 @@ for (let i = 0; i < lineJoin.length; i++) {
 }
 ```
 
-{{EmbedLiveSample("Comparison_of_line_joins", "180", "180", "canvas_linejoin.png")}}
+{{EmbedLiveSample("Comparaison_des_jointures_de_lignes", "180", "180", "canvas_linejoin.png")}}
 
 ## Spécifications
 

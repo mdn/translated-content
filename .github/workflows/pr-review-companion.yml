@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - name: 'Download artifact'
-        uses: actions/github-script@v5
+        uses: actions/github-script@v6
         with:
           script: |
             var artifacts = await github.rest.actions.listWorkflowRunArtifacts({
@@ -59,34 +59,37 @@ jobs:
 
       - name: Unzip what was downloaded
         run: |
-          unzip build.zip -d build
+          7z x build.zip -obuild -bb1
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
-           repository: mdn/yari
-           path: yari
+          repository: mdn/yari
+          path: yari
 
       - name: Install Python
-        uses: actions/setup-python@v2.2.2
+        id: setup-python
+        uses: actions/setup-python@v4
         with:
           python-version: "3.8"
 
       # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
       - name: Load cached ~/.local
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v3
         with:
           path: ~/.local
-          key: dotlocal-${{ runner.os }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
+          # the trailing number is used to increase for getting
+          # a different cache key when this file changes
+          key: dotlocal-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-0
 
       - name: Install Python poetry
-        uses: snok/install-poetry@v1.1.8
+        uses: snok/install-poetry@v1.3
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true
 
       - name: Load cached venv
         id: cached-poetry-dependencies
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v3
         with:
           path: yari/deployer/.venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
@@ -121,7 +124,6 @@ jobs:
 
           poetry run deployer upload \
             --prefix="pr$PR_NUMBER" \
-            --no-redirects \
             --default-cache-control 0 \
             "$BUILD_OUT_ROOT"
 

@@ -16,7 +16,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope
 
 The **`ServiceWorkerGlobalScope`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) represents the global execution context of a service worker.
 
-Developers should keep in mind that the ServiceWorker state is not persisted across the termination/restart cycle, so each event handler should assume it's being invoked with a bare, default global state.
+Developers should keep in mind that the ServiceWorker state is not persisted across the termination/restart cycle, so each event handler should assume it's being invoked with a bare, default global state.
 
 Once successfully registered, a service worker can and will be terminated when idle to conserve memory and processor power. An active service worker is automatically restarted to respond to events, such as {{domxref("ServiceWorkerGlobalScope.onfetch")}} or {{domxref("ServiceWorkerGlobalScope.onmessage")}}.
 
@@ -73,7 +73,7 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 - {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}}
   - : Allows the current service worker registration to progress from waiting to active state while service worker clients are using it.
 
-`ServiceWorkerGlobalScope` implements {{domxref("WorkerGlobalScope")}} — which implements {{domxref("WindowOrWorkerGlobalScope")}}. Therefore it also has the following property available to it:
+`ServiceWorkerGlobalScope` implements {{domxref("WorkerGlobalScope")}}. Therefore it also has the following property available to it:
 
 - {{domxref("GlobalFetch.fetch()")}}
   - : Starts the process of fetching a resource. This returns a promise that resolves to the {{domxref("Response")}} object representing the response to your request. This algorithm is the entry point for the fetch handling handed to the service worker context.

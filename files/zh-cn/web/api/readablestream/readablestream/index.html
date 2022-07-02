@@ -3,9 +3,9 @@ title: ReadableStream.ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
 translation_of: Web/API/ReadableStream/ReadableStream
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-<p class="summary"><strong><code>ReadableStream()</code></strong> 构造器创建并返回包含处理函数的可读流实例.</p>
+<p><strong><code>ReadableStream()</code></strong> 构造器创建并返回包含处理函数的可读流实例。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -15,18 +15,18 @@ translation_of: Web/API/ReadableStream/ReadableStream
 
 <dl>
  <dt>underlyingSource</dt>
- <dd>一个包含定义了构造流行为方法和属性的对象.<code>underlyingSource</code> 包括:
+ <dd>一个包含定义了构造流行为方法和属性的对象。<code>underlyingSource</code> 包括：
  <dl>
   <dt>start(controller)</dt>
-  <dd>这是一个当对象被构造时立刻调用的方法.此方法的内容由开发人员定义，并应着眼于访问流,并执行其他任何必需的设置流功能.如果这个过程是异步完成的，它可以返回一个promise，表明成功或失败.传递给这个方法的<code>controller</code>是一个{{domxref("ReadableStreamDefaultController")}}或{{domxref("ReadableByteStreamController")}},具体取决于<code>type</code>属性的值。开发人员可以使用此方法在设立期间控制流.</dd>
+  <dd>这是一个当对象被构造时立刻调用的方法。此方法的内容由开发人员定义，并应着眼于访问流，并执行其他任何必需的设置流功能。如果这个过程是异步完成的，它可以返回一个 promise，表明成功或失败。传递给这个方法的<code>controller</code>是一个{{domxref("ReadableStreamDefaultController")}}或{{domxref("ReadableByteStreamController")}},具体取决于<code>type</code>属性的值。开发人员可以使用此方法在设立期间控制流。</dd>
   <dt>pull(controller) {{optional_inline}}</dt>
-  <dd>这个方法，也是由开发人员定义的，当流的内部队列不满时，会重复调用这个方法，直到队列补满。如果<code>pull()</code>返回一个promise，那么它将不会再被调用，直到promise完成;如果promise失败，该流将会出现错误.传递给此方法的<code>controller</code>参数是{{domxref("ReadableStreamDefaultController")}}或{{domxref("ReadableByteStreamController")}},具体取决于<code>type</code>属性的值。由于更多的块被获取,这个方法可以被开发人员用来控制流.</dd>
+  <dd>这个方法，也是由开发人员定义的，当流的内部队列不满时，会重复调用这个方法，直到队列补满。如果<code>pull()</code>返回一个 promise，那么它将不会再被调用，直到 promise 完成;如果 promise 失败，该流将会出现错误。传递给此方法的<code>controller</code>参数是{{domxref("ReadableStreamDefaultController")}}或{{domxref("ReadableByteStreamController")}},具体取决于<code>type</code>属性的值。由于更多的块被获取，这个方法可以被开发人员用来控制流。</dd>
   <dt>cancel(reason) {{optional_inline}}</dt>
-  <dd>如果应用程序表示该流将被取消（例如,调用了{{domxref("ReadableStream.cancel()")}}，则将调用此方法，该方法也由开发人员定义。 该方法应该做任何必要的事情来释放对流的访问。 如果这个过程是异步的，它可以返回一个promise,表明成功或失败.原因参数包含一个{{domxref("DOMString")}},它描述了流被取消的原因.</dd>
+  <dd>如果应用程序表示该流将被取消（例如，调用了{{domxref("ReadableStream.cancel()")}}，则将调用此方法，该方法也由开发人员定义。 该方法应该做任何必要的事情来释放对流的访问。 如果这个过程是异步的，它可以返回一个 promise，表明成功或失败。原因参数包含一个{{domxref("DOMString")}},它描述了流被取消的原因。</dd>
   <dt>type {{optional_inline}}</dt>
-  <dd>该属性控制正在处理的可读类型的流。如果它包含一个设置为<code>bytes</code>的值，则传递的控制器对象将是一个{{domxref("ReadableByteStreamController")}}，能够处理BYOB（带您自己的缓冲区）/字节流。如果未包含，则传递的控制器将为{{domxref("ReadableStreamDefaultController")}}。</dd>
+  <dd>该属性控制正在处理的可读类型的流。如果它包含一个设置为<code>bytes</code>的值，则传递的控制器对象将是一个{{domxref("ReadableByteStreamController")}}，能够处理 BYOB（带您自己的缓冲区）/字节流。如果未包含，则传递的控制器将为{{domxref("ReadableStreamDefaultController")}}。</dd>
   <dt>autoAllocateChunkSize {{optional_inline}}</dt>
-  <dd>对于字节流，开发人员可以使用正整数值设置<code>autoAllocateChunkSize</code> 以打开流的自动分配功能。启用此功能后，流实现将自动分配一个具有给定整数大小的{{domxref("ArrayBuffer")}}，并调用底层源代码，就好像消费者正在使用BYOB阅读器一样。</dd>
+  <dd>对于字节流，开发人员可以使用正整数值设置<code>autoAllocateChunkSize</code> 以打开流的自动分配功能。启用此功能后，流实现将自动分配一个具有给定整数大小的{{domxref("ArrayBuffer")}}，并调用底层源代码，就好像消费者正在使用 BYOB 阅读器一样。</dd>
  </dl>
  </dd>
  <dt>queueingStrategy {{optional_inline}}</dt>
@@ -46,7 +46,7 @@ translation_of: Web/API/ReadableStream/ReadableStream
 
 <h3 id="返回值">返回值</h3>
 
-<p>{{domxref("ReadableStream")}}对象的实例.</p>
+<p>{{domxref("ReadableStream")}}对象的实例。</p>
 
 <h3 id="错误">错误</h3>
 

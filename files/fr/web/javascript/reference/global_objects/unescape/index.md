@@ -20,7 +20,9 @@ La fonction dépréciée **`unescape()`** calcule une nouvelle chaîne de caract
 
 ## Syntaxe
 
-    unescape(str)
+```js
+unescape(str)
+```
 
 ### Paramètres
 

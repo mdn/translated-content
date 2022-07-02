@@ -5,9 +5,9 @@ translation_of: Web/API/URLSearchParams/forEach
 ---
 <div>{{APIRef("URL API")}}</div>
 
-<div></div>
 
-<p>   URLSearchParams的实例对象上的方法forEach允许通过回调函数来遍历URLSearchParams实例对象上的键值对</p>
+
+<p>URLSearchParams 的实例对象上的方法 forEach 允许通过回调函数来遍历 URLSearchParams 实例对象上的键值对</p>
 
 <p>{{availableinworkers}}</p>
 
@@ -19,13 +19,13 @@ translation_of: Web/API/URLSearchParams/forEach
 
 <dl>
  <dt>回调函数</dt>
- <dd>    该回调函数可以接收到3个参数value,key,searchParams，我们可以在回调函数中对接收到的参数进行处理。而三个参数的含义如下：</dd>
+ <dd>    该回调函数可以接收到 3 个参数 value,key,searchParams，我们可以在回调函数中对接收到的参数进行处理。而三个参数的含义如下：</dd>
  <dt>    1.  value</dt>
  <dd>     当前遍历到的键值</dd>
  <dt>    2.  key</dt>
  <dd>     当前遍历到的键名</dd>
  <dt>    3.  searchParams</dt>
- <dd>     当前调用forEach方法的实例对象</dd>
+ <dd>     当前调用 forEach 方法的实例对象</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -34,7 +34,7 @@ translation_of: Web/API/URLSearchParams/forEach
 
 <h2 id="例子">例子</h2>
 
-<pre class="brush: js;highlight:[5]">// 创建URLSearchParams对象的实例对象，用于测试
+<pre class="brush: js">// 创建 URLSearchParams 对象的实例对象，用于测试
 var searchParams = new URLSearchParams("key1=value1&amp;key2=value2");
 
 let returnValue = searchParams.forEach(function(value, key,searchParams) {
@@ -46,10 +46,10 @@ let returnValue = searchParams.forEach(function(value, key,searchParams) {
 console.log(returnValue)
 </pre>
 
-<p>结果是:</p>
+<p>结果是：</p>
 
-<pre>value1 key1 当前调用forEach方法的实例对象(也就是searchParams)
-value2 key2 当前调用forEach方法的实例对象(也就是searchParams)
+<pre>value1 key1 当前调用 forEach 方法的实例对象 (也就是 searchParams)
+value2 key2 当前调用 forEach 方法的实例对象 (也就是 searchParams)
 undefined  // 即没有返回值
 </pre>
 

@@ -19,7 +19,9 @@ Tous les objets {{domxref("IDBRequest")}} créés pendant cette transaction verr
 
 ## Syntaxe
 
-    transaction.abort();
+```js
+transaction.abort();
+```
 
 ### Valeur de retour
 
@@ -89,7 +91,7 @@ function addData() {
 
 | Spécification                                                                                | État                         | Commentaires |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBTransaction-abort-void', 'abort')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBTransaction-abort-void', 'abort')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

@@ -139,7 +139,7 @@ screen.addEventListener("orientationchange", function () {
 
 Toute application web peut verrouiller l'écran dans une orientation pour répondre à ses besoins. L'écran est verrouillé en utilisant la méthode {{domxref("Screen.lockOrientation()")}} et dévérouillé en utilisant {{domxref("Screen.unlockOrientation()")}}.
 
-{{domxref("Screen.lockOrientation()")}} accepte une chaîne de caractères (ou une série de chaînes de caractères) pour définir le type de verrouillage à appliquer. Les valeurs acceptées sont: `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, `landscape` (Voir {{domxref("Screen.lockOrientation")}}  pour en savoir plus sur ces valeurs).
+{{domxref("Screen.lockOrientation()")}} accepte une chaîne de caractères (ou une série de chaînes de caractères) pour définir le type de verrouillage à appliquer. Les valeurs acceptées sont: `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, `landscape` (Voir {{domxref("Screen.lockOrientation")}}  pour en savoir plus sur ces valeurs).
 
 ```js
 screen.lockOrientation('landscape');

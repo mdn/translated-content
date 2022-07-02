@@ -47,7 +47,7 @@ class ClassWithPublicInstanceMethod {
 
 <p>Публичные статические поля объявляются при помощи ключевого слова <code>static</code>. Они добавляются в конструктор класса во время его создания с помощью {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Доступ также осуществляется через конструктор класса.</p>
 
-<pre class="brush: js notranslate">class ClassWithStaticField {
+<pre class="brush: js">class ClassWithStaticField {
   static staticField = 'static field';
 }
 
@@ -55,9 +55,9 @@ console.log(ClassWithStaticField.staticField);
 // Ожидаемый вывод: "static field"
 </pre>
 
-<p>Поля без инициализации имеют значение <code>undefined</code>.</p>
+<p>Поля без инициализации имеют значение <code>("javascript.classes")</code>.</p>
 
-<pre class="brush: js notranslate">class ClassWithStaticField {
+<pre class="brush: js">class ClassWithStaticField {
   static staticField;
 }
 
@@ -67,7 +67,7 @@ console.log(ClassWithStaticField.staticField);
 
 <p>Публичные статические поля не переопределяются в наследниках класса, а могут быть доступны через иерархию прототипов.</p>
 
-<pre class="brush: js notranslate">class ClassWithStaticField {
+<pre class="brush: js">class ClassWithStaticField {
   static baseStaticField = 'base field';
 }
 
@@ -83,7 +83,7 @@ console.log(SubClassWithStaticField.baseStaticField);
 
 <p>При определении полей <code>this</code> ссылается на конструктор класса. Также можно обратиться к нему по имени и использовать <code>super</code> для получения конструктора базового класса, если он существует.</p>
 
-<pre class="brush: js notranslate">class ClassWithStaticField {
+<pre class="brush: js">class ClassWithStaticField {
   static baseStaticField = 'base static field';
   static anotherBaseStaticField = this.baseStaticField;
 
@@ -108,7 +108,7 @@ console.log(SubClassWithStaticField.subStaticField);
 <p>Публичные поля экземпляра добавляются через {{jsxref("Global_Objects/Object/defineProperty",
   "Object.defineProperty()")}} либо перед тем, как будет исполнено тело конструктора в базовом классе, либо после того, как завершится <code>super()</code> в классе наследнике.</p>
 
-<pre class="brush: js notranslate">class ClassWithInstanceField {
+<pre class="brush: js">class ClassWithInstanceField {
   instanceField = 'instance field';
 }
 
@@ -118,7 +118,7 @@ console.log(instance.instanceField);
 
 <p>Поля без инициализации имеют значение <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">class ClassWithInstanceField {
+<pre class="brush: js">class ClassWithInstanceField {
   instanceField;
 }
 
@@ -129,7 +129,7 @@ console.log(instance.instanceField);
 
 <p>Как и свойства, названия полей могут вычисляться.</p>
 
-<pre class="brush: js notranslate">const PREFIX = 'prefix';
+<pre class="brush: js">const PREFIX = 'prefix';
 
 class ClassWithComputedFieldName {
     [`${PREFIX}Field`] = 'prefixed field';
@@ -141,7 +141,7 @@ console.log(instance.prefixField);
 
 <p>При определении полей <code>this</code> ссылается на создающийся экземпляр класса. Как и в публичных методах экземпляра, получить доступ к прототипу базового класса можно с помощью <code>super</code>.</p>
 
-<pre class="brush: js notranslate">class ClassWithInstanceField {
+<pre class="brush: js">class ClassWithInstanceField {
   baseInstanceField = 'base field';
   anotherBaseInstanceField = this.baseInstanceField;
   baseInstanceMethod() { return 'base method output'; }
@@ -166,7 +166,7 @@ console.log(sub.subInstanceField);
 
 <p>Ключевое слово <code><strong>static</strong></code> объявляет статический метод класса. Статические методы не вызываются из экземпляра, вместо этого они вызывается из самого класса. Чаще всего это какие-либо служебные функции, такие как функции создания или копирования объектов.</p>
 
-<pre class="brush: js notranslate">class ClassWithStaticMethod {
+<pre class="brush: js">class ClassWithStaticMethod {
   static staticMethod() {
     return 'static method has been called.';
   }
@@ -182,7 +182,7 @@ console.log(ClassWithStaticMethod.staticMethod());
 
 <p>Как и следует из названия, публичные методы экземпляра это методы, доступные для вызова из экземпляров.</p>
 
-<pre class="brush: js notranslate">class ClassWithPublicInstanceMethod {
+<pre class="brush: js">class ClassWithPublicInstanceMethod {
   publicMethod() {
     return 'hello world';
   }
@@ -196,7 +196,7 @@ console.log(instance.publicMethod());
 
 <p>Вы можете использовать генераторы, асинхронные функции и асинхронные генераторы.</p>
 
-<pre class="brush: js notranslate">class ClassWithFancyMethods {
+<pre class="brush: js">class ClassWithFancyMethods {
   *generatorMethod() { }
   async asyncMethod() { }
   async *asyncGeneratorMethod() { }
@@ -205,7 +205,7 @@ console.log(instance.publicMethod());
 <p>Внутри методов экземпляра, <code>this</code> ссылается на сам экземпляр.<br>
  В классах наследниках, <code>super</code> даёт доступ к прототипу базового класса, позволяя вызывать его методы.</p>
 
-<pre class="brush: js notranslate">class BaseClass {
+<pre class="brush: js">class BaseClass {
   msg = 'hello world';
   basePublicMethod() {
     return this.msg;
@@ -225,7 +225,7 @@ console.log(instance.subPublicMethod());
 
 <p>Геттеры и сеттеры это специальные методы, которые привязаны к свойствам класса и которые вызываются, когда к свойству обращаются или записывают. Используйте <a href="/ru/docs/Web/JavaScript/Reference/Functions/get">get</a> и <a href="/ru/docs/Web/JavaScript/Reference/Functions/set">set</a> для объявления публичных геттеров и сеттеров экземпляра.</p>
 
-<pre class="brush: js notranslate">class ClassWithGetSet {
+<pre class="brush: js">class ClassWithGetSet {
   #msg = 'hello world';
   get msg() {
     return this.#msg;
@@ -246,11 +246,12 @@ console.log(instance.msg);
 
 <h2 id="Specifications">Спецификации</h2>
 
-{{Specifications}}
+
+<p>{{Specifications("javascript.classes")}}</p>
 
 <h2 id="Browser_compatibility">Браузерная совместимость</h2>
 
-<p>{{Compat}}</p>
+<p>{{Compat("javascript.classes")}}</p>
 
 <h2 id="See_also">Смотрите также</h2>
 

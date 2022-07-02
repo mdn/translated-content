@@ -1,5 +1,5 @@
 ---
-title: 屏幕捕捉API
+title: 屏幕捕捉 API
 slug: Web/API/Screen_Capture_API
 tags:
   - API
@@ -22,13 +22,13 @@ tags:
   - screen
 translation_of: Web/API/Screen_Capture_API
 ---
-<div>{{DefaultAPISidebar("屏幕捕获API")}}</div>
+<div>{{DefaultAPISidebar("Screen Capture API")}}</div>
 
-<p><span class="seoSummary">屏幕捕获API对现有的媒体捕获和流API进行了补充，让用户选择一个屏幕或屏幕的一部分（如一个窗口）作为媒体流进行捕获。然后，该流可以被记录或通过网络与他人共享。</span></p>
+<p>屏幕捕获 API 对现有的媒体捕获和流 API 进行了补充，让用户选择一个屏幕或屏幕的一部分（如一个窗口）作为媒体流进行捕获。然后，该流可以被记录或通过网络与他人共享。</p>
 
-<h2 id="屏幕捕捉API的概念和用法">屏幕捕捉API的概念和用法</h2>
+<h2 id="屏幕捕捉API的概念和用法">屏幕捕捉 API 的概念和用法</h2>
 
-<p>屏幕捕捉API使用起来相对简单。其唯一的方法是{{domxref("MediaDevices.getDisplayMedia()")}}，它的任务是以捕获的形式要求用户选择一个屏幕或屏幕的一部分的{{domxref("MediaStream")}}。</p>
+<p>屏幕捕捉 API 使用起来相对简单。其唯一的方法是{{domxref("MediaDevices.getDisplayMedia()")}}，它的任务是以捕获的形式要求用户选择一个屏幕或屏幕的一部分的{{domxref("MediaStream")}}。</p>
 
 <p>要开始从屏幕上捕捉视频，你需要在 <code>getDisplayMedia()</code> 的实例上调用 <code>Media</code> <code>navigator.mediaDevices</code>：</p>
 
@@ -40,7 +40,7 @@ translation_of: Web/API/Screen_Capture_API
 
 <h2 id="增加现有接口">增加现有接口</h2>
 
-<p>屏幕捕捉API没有自己的任何接口，而是在现有的 {{domxref("MediaDevices")}} 接口上添加了一个方法。</p>
+<p>屏幕捕捉 API 没有自己的任何接口，而是在现有的 {{domxref("MediaDevices")}} 接口上添加了一个方法。</p>
 
 <h3 id="MediaDevices_接口">MediaDevices 接口</h3>
 
@@ -107,7 +107,7 @@ translation_of: Web/API/Screen_Capture_API
 
 <p>See <a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a> for a more in-depth explanation of how Feature Policy is used.</p>
 
-<p><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 37.33327865600586px;"><strong>规范</strong></span></font></p>
+<p><strong>规范</strong></p>
 
 <p>
  </p><table class="standard-table">
@@ -134,7 +134,7 @@ translation_of: Web/API/Screen_Capture_API
 <p>{{Compat("api.MediaDevices.getDisplayMedia")}}</p>
 </div>
 
-<p><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 37.33327865600586px;"><strong>相关链接</strong></span></font></p>
+<p><strong>相关链接</strong></p>
 
 <p>
  </p><ul>

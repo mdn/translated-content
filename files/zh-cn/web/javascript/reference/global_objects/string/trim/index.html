@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 </div>
 </div>
 
-<p><strong><code>trim()</code> </strong>方法会从一个字符串的两端删除空白字符。在这个上下文中的空白字符是所有的空白字符 (space, tab, no-break space 等) 以及所有行终止符字符（如 LF，CR等）。</p>
+<p><strong><code>trim()</code> </strong>方法会从一个字符串的两端删除空白字符。在这个上下文中的空白字符是所有的空白字符 (space, tab, no-break space 等) 以及所有行终止符字符（如 LF，CR 等）。</p>
 
 <p>{{EmbedInteractiveExample("pages/js/string-trim.html")}}</p>
 
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.trim()</code></pre>
+<pre class="syntaxbox"><code><var>str</var>.trim()</code></pre>
 
 <h3 id="返回值">返回值</h3>
 
@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 
 <p>下面的例子中将显示小写的字符串 'foo':</p>
 
-<pre class="brush: js notranslate">var orig = '   foo  ';
+<pre class="brush: js">var orig = '   foo  ';
 console.log(orig.trim()); // 'foo'
 
 // 另一个 .trim() 例子，只从一边删除
@@ -55,7 +55,7 @@ console.log(orig.trim()); // 'foo'
 
 <p>如果 <code>trim()</code> 不存在，可以在所有代码前执行下面代码</p>
 
-<pre class="brush: js notranslate">if (!String.prototype.trim) {
+<pre class="brush: js">if (!String.prototype.trim) {
   String.prototype.trim = function () {
     return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
   };

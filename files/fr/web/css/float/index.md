@@ -34,7 +34,7 @@ Un **élément flottant** est un élément pour lequel [la valeur calculée](/fr
 | `inline-grid`                                        | `grid`                                             |
 | _autre_                                              | _inchangée_                                        |
 
-> **Note :**Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet {{domxref("HTMLElement.style")}}, la plupart des navigateurs récents permettra d'utiliser `float` mais il faudra utiliser `cssFloat` (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée `styleFloat`. Le terme `float` étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version [CamelCase](https://fr.wikipedia.org/wiki/CamelCase) de la propriété CSS construite avec des tirets. De même, `class` sera échappée en `className` et le `for` des éléments \<label> sera converti en `htmlFor`).
+> **Note :** Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet {{domxref("HTMLElement.style")}}, la plupart des navigateurs récents permettra d'utiliser `float` mais il faudra utiliser `cssFloat` (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée `styleFloat`. Le terme `float` étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version [CamelCase](https://fr.wikipedia.org/wiki/CamelCase) de la propriété CSS construite avec des tirets. De même, `class` sera échappée en `className` et le `for` des éléments \<label> sera converti en `htmlFor`).
 
 ## Syntaxe
 
@@ -56,7 +56,7 @@ float: unset;
 - `left`
   - : Un mot-clé indiquant que l'élément doit flotter du côté gauche du bloc qui le contient.
 - `right`
-  - : Un mot-clé indiquant que l'élément doit flotter du côté droit du bloc qui le contient.
+  - : Un mot-clé indiquant que l'élément doit flotter du côté droit du bloc qui le contient.
 - `none`
   - : Un mot-clé indiquant que l'élément ne doit pas flotter
 - `inline-start`
@@ -126,7 +126,7 @@ Aussi, si on ne peut pas dégager un élément, on peut limiter le formatage en 
 p.avecBoitesRouges { overflow: hidden; height: auto; }
 ```
 
-> **Note :** En utilisant `overflow`: `scroll` on contiendra également les éléments fils flottants mais cela affichera des barres de défilement quelle que soit la hauteur du contenu. Ici, nous utilisons `auto` pour `height` afin d'indiquer que le conteneur doit s'agrandir si nécessaire.
+> **Note :** En utilisant `overflow`: `scroll` on contiendra également les éléments fils flottants mais cela affichera des barres de défilement quelle que soit la hauteur du contenu. Ici, nous utilisons `auto` pour `height` afin d'indiquer que le conteneur doit s'agrandir si nécessaire.
 
 ## Spécifications
 

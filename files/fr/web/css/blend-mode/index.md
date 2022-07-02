@@ -72,7 +72,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('normal', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### multiply
 
@@ -90,7 +90,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('multiply', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### screen
 
@@ -108,7 +108,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('screen', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### overlay
 
@@ -126,7 +126,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('overlay', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### darken
 
@@ -144,7 +144,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('darken', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### lighten
 
@@ -162,7 +162,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('lighten', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### color-dodge
 
@@ -180,7 +180,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('color-dodge', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### color-burn
 
@@ -198,7 +198,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('color-burn', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### hard-light
 
@@ -216,7 +216,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('hard-light', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### soft-light
 
@@ -234,7 +234,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('soft-light', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### difference
 
@@ -252,7 +252,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('difference', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### exclusion
 
@@ -270,7 +270,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('exclusion', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### hue
 
@@ -288,7 +288,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('hue', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### saturation
 
@@ -306,7 +306,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('saturation', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### color
 
@@ -324,7 +324,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('color', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### luminosity
 
@@ -342,7 +342,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 }
 ```
 
-{{ EmbedLiveSample('luminosity', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ## L'interpolation des modes de fusion
 

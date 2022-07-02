@@ -11,9 +11,9 @@ tags:
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
-<p><strong><code>@property</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> {{cssxref("at-rule")}}是<a href="/en-US/docs/Web/Houdini">CSS Houdini</a> API的一部分, 它允许开发者显式地定义他们的{{cssxref('--*', 'CSS自定义属性')}}, 允许进行属性类型检查、设定默认值以及定义该自定义属性是否可以被继承。</p>
+<p><strong><code>@property</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> {{cssxref("at-rule")}}是<a href="/en-US/docs/Web/Houdini">CSS Houdini</a> API 的一部分，它允许开发者显式地定义他们的{{cssxref('--*', 'CSS 自定义属性')}}, 允许进行属性类型检查、设定默认值以及定义该自定义属性是否可以被继承。</p>
 
-<p><code>@property</code> 规则提供了一个直接在样式表中注册自定义属性的方式，而无需运行任何JS代码。有效的 <code>@property</code> 规则会注册一个自定义属性, 就像 {{domxref('CSS.registerProperty')}} 函数被使用同样的参数调用了一样。</p>
+<p><code>@property</code> 规则提供了一个直接在样式表中注册自定义属性的方式，而无需运行任何 JS 代码。有效的 <code>@property</code> 规则会注册一个自定义属性，就像 {{domxref('CSS.registerProperty')}} 函数被使用同样的参数调用了一样。</p>
 
 <h2 id="Syntax">Syntax(语法描述符)</h2>
 
@@ -23,9 +23,9 @@ tags:
   initial-value: #c0ffee;
 }</pre>
 
-<p>一个有效的 <code>@property</code> 规则代表一项自定义属性的注册,使用自定义属性名作为规则内代码序列的序部。</p>
+<p>一个有效的 <code>@property</code> 规则代表一项自定义属性的注册，使用自定义属性名作为规则内代码序列的序部。</p>
 
-<p><code>@property</code> 规则中 <strong>syntax</strong> 和 <strong>inherits</strong> 描述符是必需的; 如果其中任何一项缺失, 整条规则都将失效并且会被忽略。 <strong>initial-value</strong> 描述符仅在syntax描述符为通用syntax定义时是可选的，否则<strong>initial-value</strong>也是必需的——如果此时该描述符缺失,整条规则都将失效且被忽略。</p>
+<p><code>@property</code> 规则中 <strong>syntax</strong> 和 <strong>inherits</strong> 描述符是必需的; 如果其中任何一项缺失，整条规则都将失效并且会被忽略。 <strong>initial-value</strong> 描述符仅在 syntax 描述符为通用 syntax 定义时是可选的，否则<strong>initial-value</strong>也是必需的——如果此时该描述符缺失，整条规则都将失效且被忽略。</p>
 
 <p>未知的描述符自身都是无效的，且会被忽略。但是不会造成整条<code>@property</code>规则的失效。</p>
 
@@ -42,7 +42,7 @@ tags:
 }
 </pre>
 
-<p>使用 <a href="/en-US/docs/Web/JavaScript">JavaScript中的</a> {{domxref('CSS.registerProperty')}}函数:</p>
+<p>使用 <a href="/en-US/docs/Web/JavaScript">JavaScript 中的</a> {{domxref('CSS.registerProperty')}}函数：</p>
 
 <pre class="brush: js">window.CSS.registerProperty({
   name: '--my-color',
@@ -68,7 +68,7 @@ tags:
   <tr>
    <td>{{SpecName('CSS Properties and Values API', '#at-property-rule')}}</td>
    <td>{{Spec2('CSS Properties and Values API')}}</td>
-   <td>初始定义.</td>
+   <td>初始定义。</td>
   </tr>
  </tbody>
 </table>
@@ -80,7 +80,7 @@ tags:
 <h2 id="See_also">另见</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/Web/API/CSS_Properties_and_Values_API">CSS属性与值 API</a></li>
+ <li><a href="/zh-CN/docs/Web/API/CSS_Properties_and_Values_API">CSS 属性与值 API</a></li>
  <li><a href="/zh-CN/docs/Web/API/CSS_Painting_API">CSS 绘图 API</a></li>
     <li><a href="/zh-CN/docs/Web/API/CSS_Typed_OM_API">CSS 类型对象模型</a></li>
  <li><a href="/zh-CN/docs/Web/Houdini">CSS Houdini</a></li>

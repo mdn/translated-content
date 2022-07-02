@@ -19,9 +19,11 @@ Le mot-clé **`function`** permet de définir une fonction à l'intérieur d'une
 
 ## Syntaxe
 
-    function [nom]([param1[, param2[, ..., paramN]]]) {
-       instructions
-    }
+```js
+function [nom]([param1[, param2[, …, paramN]]]) {
+  instructions
+}
+```
 
 ### Paramètres
 
@@ -107,9 +109,9 @@ var b = "monde";
 
 | Spécification                                                                                        | État                         | Commentaires                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES6', '#sec-function-definitions', 'Définitions de fonction')}} | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ES5.1', '#sec-13', 'Définitions de fonction')}}                     | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES6', '#sec-function-definitions', 'Définitions de fonction')}} | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ES5.1', '#sec-13', 'Définitions de fonction')}}                     | {{Spec2('ES5.1')}}     |                                                       |
 | {{SpecName('ES3', '#sec-13', 'Définitions de fonction')}}                         | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.5. |
 
 ## Compatibilité des navigateurs

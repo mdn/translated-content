@@ -15,12 +15,12 @@ translation_of: Web/JavaScript/Reference/Operators/await
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">[<font face="Consolas, Liberation Mono, Courier, monospace">返回值</font>] = await <font face="Consolas, Liberation Mono, Courier, monospace">表达式</font>;</pre>
+<pre class="syntaxbox">[返回值] = await 表达式;</pre>
 
 <dl>
- <dt><font face="Consolas, Liberation Mono, Courier, monospace">表达式</font></dt>
+ <dt>表达式</dt>
  <dd>一个 {{jsxref("Promise")}} 对象或者任何要等待的值。</dd>
- <dt><font face="Consolas, Liberation Mono, Courier, monospace">返回值</font></dt>
+ <dt>返回值</dt>
  <dd>
  <p>返回 Promise 对象的处理结果。如果等待的不是 Promise 对象，则返回该值本身。</p>
  </dd>
@@ -28,9 +28,9 @@ translation_of: Web/JavaScript/Reference/Operators/await
 
 <h2 id="描述">描述</h2>
 
-<p>await 表达式会暂停当前 {{jsxref("Statements/async_function", "async function")}} 的执行，等待 Promise 处理完成。若 Promise 正常处理(fulfilled)，其回调的resolve函数参数作为 await 表达式的值，继续执行 {{jsxref("Statements/async_function", "async function")}}。</p>
+<p>await 表达式会暂停当前 {{jsxref("Statements/async_function", "async function")}} 的执行，等待 Promise 处理完成。若 Promise 正常处理 (fulfilled)，其回调的 resolve 函数参数作为 await 表达式的值，继续执行 {{jsxref("Statements/async_function", "async function")}}。</p>
 
-<p>若 Promise 处理异常(rejected)，await 表达式会把 Promise 的异常原因抛出。</p>
+<p>若 Promise 处理异常 (rejected)，await 表达式会把 Promise 的异常原因抛出。</p>
 
 <p>另外，如果 await 操作符后的表达式的值不是一个 Promise，则返回该值本身。</p>
 
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Operators/await
 
 <p>如果一个 Promise 被传递给一个 await 操作符，await 将等待 Promise 正常处理完成并返回其处理结果。</p>
 
-<pre class="brush: js notranslate">function resolveAfter2Seconds(x) {
+<pre class="brush: js">function resolveAfter2Seconds(x) {
   return new Promise(resolve =&gt; {
     setTimeout(() =&gt; {
       resolve(x);
@@ -54,9 +54,9 @@ f1();
 
 </pre>
 
-<p>如果该值不是一个 Promise，await 会把该值转换为已正常处理的Promise，然后等待其处理结果。</p>
+<p>如果该值不是一个 Promise，await 会把该值转换为已正常处理的 Promise，然后等待其处理结果。</p>
 
-<pre class="brush: js notranslate">async function f2() {
+<pre class="brush: js">async function f2() {
   var y = await 20;
   console.log(y); // 20
 }
@@ -65,7 +65,7 @@ f2();
 
 <p>如果 Promise 处理异常，则异常值被抛出。</p>
 
-<pre class="brush: js notranslate">async function f3() {
+<pre class="brush: js">async function f3() {
   try {
     var z = await Promise.reject(30);
   } catch (e) {
@@ -95,59 +95,7 @@ f3();</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Edge</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatChrome(55)}}</td>
-   <td>{{CompatGeckoDesktop("52.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(42)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td> 基本支持</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("52.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(42)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(55)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="查看更多">查看更多</h2>
 

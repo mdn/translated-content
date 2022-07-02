@@ -70,7 +70,7 @@ config({}); // { duration: 100, speed: 25 }
 
 ## See also
 
-- [Noll 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 - {{Glossary("Nullish")}}
 - {{Glossary("Truthy", "真値")}}
 - {{Glossary("Falsy", "偽値")}}

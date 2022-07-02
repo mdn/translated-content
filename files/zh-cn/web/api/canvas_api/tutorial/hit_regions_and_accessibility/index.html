@@ -5,11 +5,11 @@ translation_of: Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 ---
 <div>{{CanvasSidebar}} {{ PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Optimizing_canvas") }}</div>
 
-<div class="summary">{{HTMLElement("canvas")}} 标签只是一个位图，它并不提供任何已经绘制在上面的对象的信息。 canvas的内容不能像语义化的HTML一样暴露给一些协助工具。一般来说，你应该避免在交互型的网站或者App上使用canvas。接下来的内容能帮助你让canvas更加容易交互。</div>
+<div>{{HTMLElement("canvas")}} 标签只是一个位图，它并不提供任何已经绘制在上面的对象的信息。canvas 的内容不能像语义化的 HTML 一样暴露给一些协助工具。一般来说，你应该避免在交互型的网站或者 App 上使用 canvas。接下来的内容能帮助你让 canvas 更加容易交互。</div>
 
 <h2 id="内容兼容">内容兼容</h2>
 
-<p>&lt;canvas&gt; ... &lt;/canvas&gt;标签里的内容被可以对一些不支持canvas的浏览器提供兼容。这对残疾用户设备也很有用（比如屏幕阅读器），这样它们就可以读取并解释DOM里的子节点。在<a href="http://www.html5accessibility.com/tests/canvas.html">html5accessibility.com</a>有个很好的例子来演示它如何运作。</p>
+<p>&lt;canvas&gt; ... &lt;/canvas&gt;标签里的内容被可以对一些不支持 canvas 的浏览器提供兼容。这对残疾用户设备也很有用（比如屏幕阅读器），这样它们就可以读取并解释 DOM 里的子节点。在<a href="http://www.html5accessibility.com/tests/canvas.html">html5accessibility.com</a>有个很好的例子来演示它如何运作。</p>
 
 <pre class="brush: html">&lt;canvas&gt;
   &lt;h2&gt;Shapes&lt;/h2&gt;
@@ -26,22 +26,22 @@ translation_of: Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 
 <h2 id="ARIA_规则">ARIA 规则</h2>
 
-<p>Accessible Rich Internet Applications <strong>(<a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a>)</strong> 定义了让Web内容和Web应用更容易被有身体缺陷的人获取的办法。你可以用ARIA属性来描述canvas元素的行为和存在目的。详情见<a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a>和 <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">ARIA 技术</a>。</p>
+<p>Accessible Rich Internet Applications <strong>(<a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a>)</strong> 定义了让 Web 内容和 Web 应用更容易被有身体缺陷的人获取的办法。你可以用 ARIA 属性来描述 canvas 元素的行为和存在目的。详情见<a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a>和 <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">ARIA 技术</a>。</p>
 
 <pre class="brush: html">&lt;canvas id="button" tabindex="0" role="button" aria-pressed="false" aria-label="Start game"&gt;&lt;/canvas&gt;
 </pre>
 
 <h2 id="点击区域（hit_region）">点击区域（hit region）</h2>
 
-<p>判断鼠标坐标是否在canvas上一个特定区域里一直是个有待解决的问题。hit region API让你可以在canvas上定义一个区域，这让无障碍工具获取canvas上的交互内容成为可能。它能让你更容易地进行点击检测并把事件转发到DOM元素去。这个API有以下三个方法（都是实验性特性，请先在浏览器兼容表上确认再使用）。</p>
+<p>判断鼠标坐标是否在 canvas 上一个特定区域里一直是个有待解决的问题。hit region API 让你可以在 canvas 上定义一个区域，这让无障碍工具获取 canvas 上的交互内容成为可能。它能让你更容易地进行点击检测并把事件转发到 DOM 元素去。这个 API 有以下三个方法（都是实验性特性，请先在浏览器兼容表上确认再使用）。</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.addHitRegion()")}} {{experimental_inline}}</dt>
- <dd>在canvas上添加一个点击区域。</dd>
+ <dd>在 canvas 上添加一个点击区域。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.removeHitRegion()")}} {{experimental_inline}}</dt>
- <dd>从canvas上移除指定id的点击区域。</dd>
+ <dd>从 canvas 上移除指定 id 的点击区域。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.clearHitRegions()")}} {{experimental_inline}}</dt>
- <dd>移除canvas上的所有点击区域。</dd>
+ <dd>移除 canvas 上的所有点击区域。</dd>
 </dl>
 
 <p>你可以把一个点击区域添加到路径里并检测{{domxref("MouseEvent.region")}}属性来测试你的鼠标有没有点击这个区域，例：</p>
@@ -67,11 +67,11 @@ canvas.addEventListener("mousemove", function(event){
 
 <pre class="brush: js">ctx.addHitRegion({control: element});</pre>
 
-<p>把这个特性用在{{HTMLElement("input")}}元素上会很有用。 看看这个例子：<a href="http://codepen.io/peterj35/pen/PEdLKx">codepen demo</a>.</p>
+<p>把这个特性用在{{HTMLElement("input")}}元素上会很有用。看看这个例子：<a href="http://codepen.io/peterj35/pen/PEdLKx">codepen demo</a>.</p>
 
 <h2 id="焦点圈">焦点圈</h2>
 
-<p>当用键盘控制时，焦点圈是一个能帮我们在页面上快速导航的标记。要在canvas上绘制焦点圈，可以使用<code>drawFocusIfNeeded</code> 属性。</p>
+<p>当用键盘控制时，焦点圈是一个能帮我们在页面上快速导航的标记。要在 canvas 上绘制焦点圈，可以使用<code>drawFocusIfNeeded</code> 属性。</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} {{experimental_inline}}</dt>

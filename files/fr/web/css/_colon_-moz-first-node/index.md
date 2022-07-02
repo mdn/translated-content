@@ -16,7 +16,9 @@ La pseudo-classe **`:-moz-first-node`** correspond à un élément si celui-ci e
 
 ## Syntaxe
 
-    span:-moz-first-node { propriétés de mise en forme }
+```
+span:-moz-first-node { propriétés de mise en forme }
+```
 
 ## Exemples
 
@@ -37,7 +39,7 @@ span:-moz-first-node {
 </p>
 <p>
   Bip bop bip bop
-  <span>Cet élément n'est pas ciblé car il y a du texte avant.</span>
+  <span>Cet élément n'est pas ciblé car il y a du texte avant.</span>
 </p>
 ```
 

@@ -16,7 +16,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/input
 ---
-<div>{{draft}}{{HTMLRef}}</div>
+<div>{{HTMLRef}}</div>
 
 <p>The <strong>HTML <code>&lt;input&gt;</code> element</strong> is used to create interactive controls for web-based forms in order to accept data from the user.</p>
 
@@ -30,7 +30,7 @@ translation_of: Web/HTML/Element/input
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, listed, submittable, resettable, form-associated element, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>. If the {{htmlattrxref("type", "input")}} is not <code>hidden</code>, then labellable element, palpable content.</td>
+   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, listed, submittable, resettable, form-associated element, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>. If the {{htmlattrxref("type", "input")}} is not <code>hidden</code>, then labellable element, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -79,7 +79,7 @@ translation_of: Web/HTML/Element/input
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">datetime-local</a></code>: {{HTMLVersionInline("5")}} A control for entering a date and time, with no time zone.</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/email">email</a></code>: {{HTMLVersionInline("5")}} A field for editing an e-mail address.</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/file">file</a></code>: A control that lets the user select a file. Use the <strong>accept</strong> attribute to define the types of files that the control can select.</li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/hidden">hidden</a></code>: A control that is not displayed but whose value is submitted to the server.</li>
+ <li><code><a href="/en-US/docs/Web/HTML/Element/input/hidden">hidden</a></code>: A control that is not displayed but whose value is submitted to the server.</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/image">image</a></code>: A graphical submit button. You must use the <strong>src</strong> attribute to define the source of the image and the <strong>alt</strong> attribute to define alternative text. You can use the <strong>height</strong> and <strong>width</strong> attributes to define the size of the image in pixels.</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/month">month</a></code>: {{HTMLVersionInline("5")}} A control for entering a month and year, with no time zone.</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/number">number</a></code>: {{HTMLVersionInline("5")}} A control for entering a number.</li>
@@ -116,11 +116,11 @@ translation_of: Web/HTML/Element/input
 
 <dl>
  <dt>{{htmlattrdef("type")}}</dt>
- <dd>The type of control to render. See {{anch("Form &lt;input&gt; types")}} for the individual types, with links to more information about each.</dd>
+ <dd>The type of control to render. See <a href="#form_&lt;input>_types">Form &lt;input&gt; types</a> for the individual types, with links to more information about each.</dd>
  <dt>{{htmlattrdef("accept")}}</dt>
- <dd>If the value of the <strong>type</strong> attribute is <code>file</code>, then this attribute will indicate the types of files that the server accepts, otherwise it will be ignored. The value must be a comma-separated list of unique content type specifiers:
+ <dd>If the value of the <strong>type</strong> attribute is <code>file</code>, then this attribute will indicate the types of files that the server accepts, otherwise it will be ignored. The value must be a comma-separated list of unique content type specifiers:
  <ul>
-  <li>A file extension starting with the STOP character (U+002E). (e.g. .jpg, .png, .doc).</li>
+  <li>A file extension starting with the STOP character (U+002E). (e.g. .jpg, .png, .doc).</li>
   <li>A valid MIME type with no extensions.</li>
   <li><code>audio/*</code> representing sound files. {{HTMLVersionInline("5")}}</li>
   <li><code>video/*</code> representing video files. {{HTMLVersionInline("5")}}</li>
@@ -135,56 +135,56 @@ translation_of: Web/HTML/Element/input
  <ul>
   <li><code>off</code>: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method. The browser does not automatically complete the entry.</li>
   <li><code>on</code>: The browser is allowed to automatically complete the value based on values that the user has entered during previous uses, however <code>on</code> does not provide any further information about what kind of data the user might be expected to enter.</li>
-  <li><code>name</code>: Full name.</li>
-  <li><code>honorific-prefix: </code>Prefix or title (e.g. "Mr.", "Ms.", "Dr.", "Mlle").</li>
-  <li><code>given-name</code>: First name.</li>
+  <li><code>name</code>: Full name.</li>
+  <li><code>honorific-prefix: </code>Prefix or title (e.g. "Mr.", "Ms.", "Dr.", "Mlle").</li>
+  <li><code>given-name</code>: First name.</li>
   <li><code>additional-name</code>: Middle name.</li>
   <li><code>family-name</code>: Last name.</li>
-  <li><code>honorific-suffix</code>: Suffix (e.g. "Jr.", "B.Sc.", "MBASW", "II").</li>
+  <li><code>honorific-suffix</code>: Suffix (e.g. "Jr.", "B.Sc.", "MBASW", "II").</li>
   <li><code>nickname</code></li>
   <li><code>email</code></li>
   <li><code>username</code></li>
-  <li><code>new-password</code>: A new password (e.g. when creating an account or changing a password).</li>
+  <li><code>new-password</code>: A new password (e.g. when creating an account or changing a password).</li>
   <li><code>current-password</code></li>
-  <li><code>organization-title</code>: Job title (e.g. "Software Engineer", "Senior Vice President", "Deputy Managing Director").</li>
+  <li><code>organization-title</code>: Job title (e.g. "Software Engineer", "Senior Vice President", "Deputy Managing Director").</li>
   <li><code>organization</code></li>
   <li><code>street-address</code></li>
-  <li><code>address-line1</code>, <code>address-line2</code>, <code>address-line3</code>, <code>address-level4</code>, <code>address-level3</code>, <code>address-level2</code>, <code>address-level1</code></li>
+  <li><code>address-line1</code>, <code>address-line2</code>, <code>address-line3</code>, <code>address-level4</code>, <code>address-level3</code>, <code>address-level2</code>, <code>address-level1</code></li>
   <li><code>country</code></li>
   <li><code>country-name</code></li>
   <li><code>postal-code</code></li>
-  <li><code>cc-name</code>: Full name as given on the payment instrument.</li>
+  <li><code>cc-name</code>: Full name as given on the payment instrument.</li>
   <li><code>cc-given-name</code></li>
   <li><code>cc-additional-name</code></li>
   <li><code>cc-family-name</code></li>
-  <li><code>cc-number</code>: Code identifying the payment instrument (e.g. the credit card number).</li>
-  <li><code>cc-exp:</code> Expiration date of the payment instrument.</li>
+  <li><code>cc-number</code>: Code identifying the payment instrument (e.g. the credit card number).</li>
+  <li><code>cc-exp:</code> Expiration date of the payment instrument.</li>
   <li><code>cc-exp-month</code></li>
   <li><code>cc-exp-year</code></li>
-  <li><code>cc-csc</code>: Security code for the payment instrument.</li>
-  <li><code>cc-type</code>: Type of payment instrument (e.g. Visa).</li>
+  <li><code>cc-csc</code>: Security code for the payment instrument.</li>
+  <li><code>cc-type</code>: Type of payment instrument (e.g. Visa).</li>
   <li><code>transaction-currency</code></li>
   <li><code>transaction-amount</code></li>
-  <li><code>language</code>: Preferred language; a valid <a href="https://en.wikipedia.org/wiki/IETF_language_tag">BCP 47 language tag</a>.</li>
+  <li><code>language</code>: Preferred language; a valid <a href="https://en.wikipedia.org/wiki/IETF_language_tag">BCP 47 language tag</a>.</li>
   <li><code>bday</code>: birthday</li>
   <li><code>bday-day</code></li>
   <li><code>bday-month</code></li>
   <li><code>bday-year</code></li>
-  <li><code>sex</code>: Gender identity (e.g. Female, Fa'afafine), free-form text, no newlines.</li>
+  <li><code>sex</code>: Gender identity (e.g. Female, Fa'afafine), free-form text, no newlines.</li>
   <li><code>tel</code>: full telephone number, including country code
    <ul>
     <li>additional <code>tel</code> variants: <code>tel-country-code</code>, <code>tel-national</code>, <code>tel-area-code</code>, <code>tel-local</code>, <code>tel-local-prefix</code>, <code>tel-local-suffix</code>, <code>tel-extension</code></li>
    </ul>
   </li>
-  <li><code>url</code>: Home page or other Web page corresponding to the company, person, address, or contact information in the other fields associated with this field.</li>
-  <li><code>photo</code>: Photograph, icon, or other image corresponding to the company, person, address, or contact information in the other fields associated with this field.</li>
+  <li><code>url</code>: Home page or other Web page corresponding to the company, person, address, or contact information in the other fields associated with this field.</li>
+  <li><code>photo</code>: Photograph, icon, or other image corresponding to the company, person, address, or contact information in the other fields associated with this field.</li>
  </ul>
 
  <p>See the <a href="https://html.spec.whatwg.org/multipage/forms.html#autofill">WHATWG Standard</a> for more detailed information.</p>
 
- <p>If the <strong>autocomplete</strong> attribute is not specified on an input element then the browser uses the <strong>autocomplete</strong> attribute value of the <code>&lt;input&gt;</code> element's form owner. The form owner is either the <code>form</code> element that this <code>&lt;input&gt;</code> element is a descendant of or the form element whose <strong>id</strong> is specified by the <strong>form</strong> attribute of the input element. For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.</p>
+ <p>If the <strong>autocomplete</strong> attribute is not specified on an input element then the browser uses the <strong>autocomplete</strong> attribute value of the <code>&lt;input&gt;</code> element's form owner. The form owner is either the <code>form</code> element that this <code>&lt;input&gt;</code> element is a descendant of or the form element whose <strong>id</strong> is specified by the <strong>form</strong> attribute of the input element. For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.</p>
 
- <p>The <strong>autocomplete</strong> attribute also controls whether Firefox will, unlike other browsers, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state and (if applicable) dynamic checkedness</a> of an <code>&lt;input&gt;</code> across page loads. The persistence feature is enabled by default. Setting the value of the <strong>autocomplete</strong> attribute to <code>off</code> disables this feature. This works even when the <strong>autocomplete</strong> attribute would normally not apply to the <code>&lt;input&gt;</code> by virtue of its <strong>type</strong>. See {{bug(654072)}}.</p>
+ <p>The <strong>autocomplete</strong> attribute also controls whether Firefox will, unlike other browsers, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state and (if applicable) dynamic checkedness</a> of an <code>&lt;input&gt;</code> across page loads. The persistence feature is enabled by default. Setting the value of the <strong>autocomplete</strong> attribute to <code>off</code> disables this feature. This works even when the <strong>autocomplete</strong> attribute would normally not apply to the <code>&lt;input&gt;</code> by virtue of its <strong>type</strong>. See {{bug(654072)}}.</p>
 
  <p>For most modern browsers (including Firefox 38+, Google Chrome 34+, IE 11+), setting the <strong>autocomplete</strong> attribute will <em>not</em> prevent a browser's password manager from asking the user if they want to store login (username and password) fields and, if they agree, from autofilling the login the next time the user visits the page. See <a href="/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields">the autocomplete attribute and login fields</a>.</p>
  </dd>
@@ -196,13 +196,13 @@ translation_of: Web/HTML/Element/input
  </dd>
  <dt>{{htmlattrdef("checked")}}</dt>
  <dd>
- <p>When the value of the <strong>type</strong> attribute is <code>radio</code> or <code>checkbox</code>, the presence of this Boolean attribute indicates that the control is selected by default, otherwise it is ignored.</p>
+ <p>When the value of the <strong>type</strong> attribute is <code>radio</code> or <code>checkbox</code>, the presence of this Boolean attribute indicates that the control is selected by default, otherwise it is ignored.</p>
 
  <p>Unlike other browsers, Firefox will by default <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic checked state</a> of an <code>&lt;input&gt;</code> across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.</p>
  </dd>
  <dt>{{htmlattrdef("disabled")}}</dt>
  <dd>
- <p>This Boolean attribute indicates that the form control is not available for interaction. In particular, the <code>click</code> event <a class="external" href="https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute">will not be dispatched</a> on disabled controls. Also, a disabled control's value isn't submitted with the form.</p>
+ <p>This Boolean attribute indicates that the form control is not available for interaction. In particular, the <code>click</code> event <a href="https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute">will not be dispatched</a> on disabled controls. Also, a disabled control's value isn't submitted with the form.</p>
 
  <p>Unlike other browsers, Firefox will by default <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state</a> of an <code>&lt;input&gt;</code> across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.</p>
  </dd>
@@ -237,7 +237,7 @@ translation_of: Web/HTML/Element/input
   <li>_<code>self</code>: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.</li>
   <li><code>_blank</code>: Load the response into a new unnamed browsing context.</li>
   <li><code>_parent</code>: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as <code>_self</code>.</li>
-  <li><code>_top</code>: Load the response into the top-level browsing context (i.e. the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as <code>_self</code>.</li>
+  <li><code>_top</code>: Load the response into the top-level browsing context (i.e. the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as <code>_self</code>.</li>
  </ul>
  </dd>
  <dt>{{htmlattrdef("height")}} {{HTMLVersionInline("5")}}</dt>
@@ -263,23 +263,23 @@ translation_of: Web/HTML/Element/input
  <dt>{{htmlattrdef("max")}} {{HTMLVersionInline("5")}}</dt>
  <dd>The maximum (numeric or date-time) value for this item, which must not be less than its minimum (<strong>min</strong> attribute) value.</dd>
  <dt>{{htmlattrdef("maxlength")}}</dt>
- <dd>If the value of the <strong>type</strong> attribute is <code>text</code>, <code>email</code>,<code> search</code>, <code>password</code>, <code>tel</code>, or <code>url</code>, this attribute specifies the maximum number of characters (in UTF-16 code units) that the user can enter. For other control types, it is ignored. It can exceed the value of the <strong>size</strong> attribute. If it is not specified, the user can enter an unlimited number of characters. Specifying a negative number results in the default behavior (i.e. the user can enter an unlimited number of characters). The constraint is evaluated only when the value of the attribute has been changed.</dd>
+ <dd>If the value of the <strong>type</strong> attribute is <code>text</code>, <code>email</code>,<code> search</code>, <code>password</code>, <code>tel</code>, or <code>url</code>, this attribute specifies the maximum number of characters (in UTF-16 code units) that the user can enter. For other control types, it is ignored. It can exceed the value of the <strong>size</strong> attribute. If it is not specified, the user can enter an unlimited number of characters. Specifying a negative number results in the default behavior (i.e. the user can enter an unlimited number of characters). The constraint is evaluated only when the value of the attribute has been changed.</dd>
  <dt>{{htmlattrdef("min")}} {{HTMLVersionInline("5")}}</dt>
  <dd>The minimum (numeric or date-time) value for this item, which must not be greater than its maximum (<strong>max</strong> attribute) value.</dd>
  <dt>{{htmlattrdef("minlength")}} {{HTMLVersionInline("5")}}</dt>
- <dd>If the value of the <strong>type</strong> attribute is <code>text</code>, <code>email</code>,<code> search</code>, <code>password</code>, <code>tel</code>, or <code>url</code>, this attribute specifies the minimum number of characters (in Unicode code points) that the user can enter. For other control types, it is ignored.</dd>
+ <dd>If the value of the <strong>type</strong> attribute is <code>text</code>, <code>email</code>,<code> search</code>, <code>password</code>, <code>tel</code>, or <code>url</code>, this attribute specifies the minimum number of characters (in Unicode code points) that the user can enter. For other control types, it is ignored.</dd>
  <dt>{{htmlattrdef("multiple")}} {{HTMLVersionInline("5")}}</dt>
- <dd>This Boolean attribute indicates whether the user can enter more than one value. This attribute applies when the <strong>type</strong> attribute is set to <code>email</code> or <code>file</code>, otherwise it is ignored.</dd>
+ <dd>This Boolean attribute indicates whether the user can enter more than one value. This attribute applies when the <strong>type</strong> attribute is set to <code>email</code> or <code>file</code>, otherwise it is ignored.</dd>
  <dt>{{htmlattrdef("name")}}</dt>
  <dd>The name of the control, which is submitted with the form data.</dd>
  <dt>{{htmlattrdef("pattern")}} {{HTMLVersionInline("5")}}</dt>
- <dd>A regular expression that the control's value is checked against. The pattern must match the entire value, not just some subset. Use the <strong>title</strong> attribute to describe the pattern to help the user. This attribute applies when the value of the <strong>type</strong> attribute is <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code>, <code>email</code>, or <code>password</code>, otherwise it is ignored. The regular expression language is the same as JavaScript {{jsxref("RegExp")}} algorithm, with the <code>'u'</code> parameter that makes it treat the pattern as a sequence of unicode code points. The pattern is not surrounded by forward slashes.</dd>
+ <dd>A regular expression that the control's value is checked against. The pattern must match the entire value, not just some subset. Use the <strong>title</strong> attribute to describe the pattern to help the user. This attribute applies when the value of the <strong>type</strong> attribute is <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code>, <code>email</code>, or <code>password</code>, otherwise it is ignored. The regular expression language is the same as JavaScript {{jsxref("RegExp")}} algorithm, with the <code>'u'</code> parameter that makes it treat the pattern as a sequence of unicode code points. The pattern is not surrounded by forward slashes.</dd>
  <dt>{{htmlattrdef("placeholder")}} {{HTMLVersionInline("5")}}</dt>
  <dd>A hint to the user of what can be entered in the control . The placeholder text must not contain carriage returns or line-feeds.
- <div class="note"><strong>Note:</strong> Do not use the <code>placeholder</code> attribute instead of a {{HTMLElement("label")}} element, their purposes are different. The {{HTMLElement("label")}} attribute describes the role of the form element (i.e. it indicates what kind of information is expected), and the <code>placeholder</code> attribute is a hint about the format that the content should take. There are cases in which the <code>placeholder</code> attribute is never displayed to the user, so the form must be understandable without it.</div>
+ <div class="note"><strong>Note:</strong> Do not use the <code>placeholder</code> attribute instead of a {{HTMLElement("label")}} element, their purposes are different. The {{HTMLElement("label")}} attribute describes the role of the form element (i.e. it indicates what kind of information is expected), and the <code>placeholder</code> attribute is a hint about the format that the content should take. There are cases in which the <code>placeholder</code> attribute is never displayed to the user, so the form must be understandable without it.</div>
  </dd>
  <dt>{{htmlattrdef("readonly")}} {{HTMLVersionInline("5")}}</dt>
- <dd>This attribute indicates that the user cannot modify the value of the control. The value of the attribute is irrelevant. If you need read-write access to the input value, <em>do not</em> add the "<strong>readonly</strong>" attribute. It is ignored if the value of the <strong>type</strong> attribute is <code>hidden</code>, <code>range</code>, <code>color</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or a button type (such as <code>button</code> or <code>submit</code>).</dd>
+ <dd>This attribute indicates that the user cannot modify the value of the control. The value of the attribute is irrelevant. If you need read-write access to the input value, <em>do not</em> add the "<strong>readonly</strong>" attribute. It is ignored if the value of the <strong>type</strong> attribute is <code>hidden</code>, <code>range</code>, <code>color</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or a button type (such as <code>button</code> or <code>submit</code>).</dd>
  <dt>{{htmlattrdef("required")}} {{HTMLVersionInline("5")}}</dt>
  <dd>This attribute specifies that the user must fill in a value before submitting a form. It cannot be used when the <strong>type</strong> attribute is <code>hidden</code>, <code>image</code>, or a button type (<code>submit</code>, <code>reset</code>, or <code>button</code>). The {{cssxref(":optional")}} and {{cssxref(":required")}} CSS pseudo-classes will be applied to the field as appropriate.</dd>
  <dt>{{htmlattrdef("selectionDirection")}} {{HTMLVersionInline("5")}}</dt>
@@ -289,11 +289,11 @@ translation_of: Web/HTML/Element/input
  <dt>{{htmlattrdef("selectionStart")}}</dt>
  <dd>The offset into the element's text content of the first selected character. If there's no selection, this value indicates the offset to the character following the current text input cursor position (that is, the position the next character typed would occupy).</dd>
  <dt>{{htmlattrdef("size")}}</dt>
- <dd>The initial size of the control. This value is in pixels unless the value of the <strong>type</strong> attribute is <code>text</code> or <code>password</code>, in which case it is an integer number of characters. Starting in HTML5, this attribute applies only when the <strong>type</strong> attribute is set to <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code>, <code>email</code>, or <code>password</code>, otherwise it is ignored. In addition, the size must be greater than zero. If you do not specify a size, a default value of 20 is used. HTML5 simply states "the user agent should ensure that at least that many characters are visible", but different characters can have different widths in certain fonts. In some browsers, a certain string with <em>x</em> characters will not be entirely visible even if size is defined to at least <em>x</em>.</dd>
+ <dd>The initial size of the control. This value is in pixels unless the value of the <strong>type</strong> attribute is <code>text</code> or <code>password</code>, in which case it is an integer number of characters. Starting in HTML5, this attribute applies only when the <strong>type</strong> attribute is set to <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code>, <code>email</code>, or <code>password</code>, otherwise it is ignored. In addition, the size must be greater than zero. If you do not specify a size, a default value of 20 is used. HTML5 simply states "the user agent should ensure that at least that many characters are visible", but different characters can have different widths in certain fonts. In some browsers, a certain string with <em>x</em> characters will not be entirely visible even if size is defined to at least <em>x</em>.</dd>
  <dt>{{htmlattrdef("spellcheck")}} {{HTMLVersionInline("5")}}</dt>
  <dd>Setting the value of this attribute to <code>true</code> indicates that the element needs to have its spelling and grammar checked. The value <code>default</code> indicates that the element is to act according to a default behavior, possibly based on the parent element's own <code>spellcheck</code> value. The value <code>false</code> indicates that the element should not be checked.</dd>
  <dt>{{htmlattrdef("src")}}</dt>
- <dd>If the value of the <strong>type</strong> attribute is <code>image</code>, this attribute specifies a URI for the location of an image to display on the graphical submit button, otherwise it is ignored.</dd>
+ <dd>If the value of the <strong>type</strong> attribute is <code>image</code>, this attribute specifies a URI for the location of an image to display on the graphical submit button, otherwise it is ignored.</dd>
  <dt>{{htmlattrdef("step")}} {{HTMLVersionInline("5")}}</dt>
  <dd>Works with the <strong>min</strong> and <strong>max</strong> attributes to limit the increments at which a numeric or date-time value can be set. It can be the string <code>any</code> or a positive floating point number. If this attribute is not set to <code>any</code>, the control accepts only values at multiples of the step value greater than the minimum.</dd>
  <dt>{{htmlattrdef("tabindex")}} element-specific in {{HTMLVersionInline(4)}}, global in {{HTMLVersionInline("5")}}</dt>
@@ -302,7 +302,7 @@ translation_of: Web/HTML/Element/input
  <dd>The name of a {{HTMLElement("map")}} element to be used as an image map.</dd>
  <dt>{{htmlattrdef("value")}}</dt>
  <dd>The initial value of the control. This attribute is optional except when the value of the <strong>type</strong> attribute is <code>radio</code> or <code>checkbox</code>.<br>
- Note that when reloading the page, Gecko and IE <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">will ignore the value specified in the HTML source</a>, if the value was changed before the reload.</dd>
+ Note that when reloading the page, Gecko and IE <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">will ignore the value specified in the HTML source</a>, if the value was changed before the reload.</dd>
  <dt>{{htmlattrdef("width")}} {{HTMLVersionInline("5")}}</dt>
  <dd>If the value of the <strong>type</strong> attribute is <code>image</code>, this attribute defines the width of the image displayed for the button.</dd>
 </dl>
@@ -334,7 +334,7 @@ translation_of: Web/HTML/Element/input
  <dd>Specifies an "action hint" used to determine how to label the enter key on mobile devices with virtual keyboards. Supported values are <code>go</code>, <code>done</code>, <code>next</code>, <code>search</code>, and <code>send</code>. These automatically get mapped to the appropriate string and are case-insensitive.</dd>
  <dt>{{htmlattrdef("results")}} {{non-standard_inline}}</dt>
  <dd>This is a nonstandard attribute supported by Safari that only applies when the <strong>type</strong> is <code>search</code>. It is used to control the maximum number of entries that should be displayed in the <code>&lt;input&gt;</code>'s native dropdown list of past search queries. Its value should be a nonnegative decimal integer.</dd>
- <dt>{{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}</dt>
+ <dt>{{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}</dt>
  <dd>This Boolean attribute indicates if the selector used when the <strong>type</strong> attribute is <code>file</code> has to allow for the selection of directories only.</dd>
  <dt>{{htmlattrdef("x-moz-errormessage")}} {{non-standard_inline}}</dt>
  <dd>This Mozilla extension allows you to specify the error message to display when a field doesn't successfully validate.</dd>
@@ -342,352 +342,18 @@ translation_of: Web/HTML/Element/input
 
 <h2 id="Examples">Examples</h2>
 
-<p>You can find multiple examples of <code>&lt;input&gt;</code> element usage on the pages covering each individual type — see {{anch("Form &lt;input&gt; types")}}, and also see the {{anch("Live example")}} at the top of the article.</p>
+<p>You can find multiple examples of <code>&lt;input&gt;</code> element usage on the pages covering each individual type — see <a href="#form_&lt;input>_types">Form &lt;input&gt; types</a>, and also see the <a href="#live_example">Live example</a> at the top of the article.</p>
 
 <ul>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-input-element', '&lt;input&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Media Capture', '#the-capture-attribute','&lt;input capture&gt;')}}</td>
-   <td>{{Spec2('HTML Media Capture')}}</td>
-   <td>Adds the <code>capture</code> element</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#the-input-element', '&lt;input&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.4', '&lt;form&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.7")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>1.0</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td><code>type="color"</code></td>
-   <td>21.0</td>
-   <td>{{CompatGeckoDesktop("29.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>11.01</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>type="email"</code>, <code>type="number"</code>, <code>type="range"</code>, <code>type="search"</code>, <code>type="tel"</code>, <code>type="url"</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>type="datetime-local"</code>, <code>type="month"</code>, <code>type="week"</code></td>
-   <td>20</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>10.62</td>
-   <td>{{CompatVersionUnknown}}<sup>[2]</sup></td>
-  </tr>
-  <tr>
-   <td><code>type="date"</code>, <code>type="time"</code></td>
-   <td>20</td>
-   <td>{{CompatNo}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>10.62</td>
-   <td>{{CompatVersionUnknown}}<sup>[2]</sup></td>
-  </tr>
-  <tr>
-   <td><code>type="datetime"</code></td>
-   <td>{{CompatNo}}<sup>[5]</sup></td>
-   <td>{{CompatNo}}<sup>[5]</sup></td>
-   <td>{{CompatNo}}[5]</td>
-   <td>{{CompatNo}}[5]</td>
-   <td>{{CompatNo}}[5]</td>
-  </tr>
-  <tr>
-   <td><code>accept</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>mozactionhint</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>autocapitalize</code></td>
-   <td>43</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup> [4]</sup></td>
-  </tr>
-  <tr>
-   <td><code>autofocus</code>, <code>max</code>, <code>min</code>, <code>pattern</code>, <code>placeholder</code>, <code>required</code>, <code>step</code>, <code>list</code>, <code>multiple</code></td>
-   <td>5.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10</td>
-   <td>9.6</td>
-   <td>5.0</td>
-  </tr>
-  <tr>
-   <td>capture</td>
-   <td>Chrome for Android (0.16)</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><a href="https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly">fakepath</a> added to file input values</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("53")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>form</code>, <code>formaction</code>, <code>formenctype</code>, <code>formmethod</code>, <code>formnovalidate</code>, <code>formtarget</code></td>
-   <td>9.0</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>10</td>
-   <td>10.62</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>incremental</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>inputmode</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>minlength</code></td>
-   <td>40.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>readonly</code></td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.7")}}</td>
-   <td>6<sup>[3] </sup></td>
-   <td>1.0</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td><code>spellcheck</code></td>
-   <td>10.0</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
-   <td>10</td>
-   <td>11.0</td>
-   <td>4.0</td>
-  </tr>
-  <tr>
-   <td><code>webkitdirectory</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("49.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>type="color"</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("27.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>type="email"</code>, <code>type="number"</code>, <code>type="range"</code>, <code>type="search"</code>, <code>type="tel"</code>, <code>type="url"</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>type="date"</code>, <code>type="datetime-local"</code>, <code>type="month"</code>, <code>type="time"</code>, <code>type="week'</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>type="datetime"</code></td>
-   <td>{{CompatNo}}<sup>[5]</sup></td>
-   <td>{{CompatNo}}<sup>[5]</sup></td>
-   <td>{{CompatNo}}<sup>[5]</sup></td>
-   <td>{{CompatNo}}<sup>[5]</sup></td>
-   <td>{{CompatNo}}<sup>[5]</sup></td>
-  </tr>
-  <tr>
-   <td><code>accept</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>autocapitalize</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}[4]</td>
-  </tr>
-  <tr>
-   <td><code>autofocus</code>, <code>max</code>, <code>min</code>, <code>pattern</code>, <code>placeholder</code>, <code>required</code>, <code>step</code>, <code>list</code>, <code>multiple</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>capture</code></td>
-   <td>3.0</td>
-   <td>{{CompatGeckoMobile("10.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>6.0</td>
-  </tr>
-  <tr>
-   <td><a href="https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly">fakepath</a> added to file input values</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("53")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>form</code>, <code>formaction</code>, <code>formenctype</code>, <code>formmethod</code>, <code>formnovalidate</code>, <code>formtarget</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>minlength</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>27.0</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>spellcheck</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>11.0</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>webkitdirectory</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("49.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] This feature is implemented behind the preference <code>dom.forms.datetime</code> since Gecko 51 {{geckoRelease(51)}}, defaulting to <code>false</code>. Since Gecko 55 it is enabled by default on Firefox Nightly (see {{bug(1366188)}}). See also {{bug("888320")}} and <a href="https://wiki.mozilla.org/TPE_DOM/Date_time_input_types">TPE DOM/Date time input types</a>.</p>
-
-<p>[2] It is recognized but there is no UI.</p>
-
-<p>[3] Missing for <code>type="checkbox"</code> and <code>type="radio"</code>.</p>
-
-<p>[4] In Safari <code>autocapitalize="words"</code> capitalizes every word's second character.</p>
-
-<p>[5] <code>datetime</code> has been removed from the spec and browsers in favour of <code>datetime-local</code>.</p>
+{{Compat("html.elements.input")}}
 
 <h2 id="Notes">Notes</h2>
 
@@ -746,5 +412,5 @@ e.value = "foo";
 
 <ul>
  <li>Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.</li>
- <li><a class="external" href="http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text">Cross-browser HTML5 placeholder text</a></li>
+ <li><a href="http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text">Cross-browser HTML5 placeholder text</a></li>
 </ul>

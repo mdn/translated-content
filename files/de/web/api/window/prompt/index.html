@@ -46,7 +46,7 @@ var sign = window.prompt('Are you feeling lucky', 'sure'); // <span class="short
 
 <p>Beachte, dass ein String zurückgegeben wird. Das heißt, die Eingabe muss manchmal gecasted werden. Beispiel: Falls eine Zahl eingegeben werden soll, sollte der String zu einer Zahl gecasted werden. <code>var aNumber = Number(window.prompt("Gib eine Zahl ein", ""));</code></p>
 
-<p><a href="/en-US/Chrome" title="Chrome">Mozilla Chrome</a>-Nutzer (z.B. Firefox-Erweiterungen) sollten stattdessen {{interface("nsIPromptService")}} verwenden.</p>
+<p><a href="/en-US/Chrome" title="Chrome">Mozilla Chrome</a>-Nutzer (z.B. Firefox-Erweiterungen) sollten stattdessen <code>nsIPromptService</code> verwenden.</p>
 
 <p>Seit Chrome {{CompatChrome(46.0)}} wird diese Funktion innerhalb eines {{htmlelement("iframe")}}s blockiert, es sei denn, dessen sandbox-Attribut hat den Wert <code>allow-modal</code>.</p>
 

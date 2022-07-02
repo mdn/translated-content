@@ -22,7 +22,9 @@ Voir également la méthode {{jsxref("Array.find", "find()")}} qui renvoie la **
 
 ## Syntaxe
 
-    arr.findIndex(callback(element[, index[, tableau]])[, thisArg])
+```js
+arr.findIndex(callback(element[, index[, tableau]])[, thisArg])
+```
 
 ### Paramètres
 
@@ -149,7 +151,7 @@ S'il est vraiment nécessaire de prendre en charge les moteurs JavaScript qui ne
 | Spécification                                                                                                        | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-array.prototype.findindex', 'Array.prototype.findIndex')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype.findIndex', 'Array.prototype.findIndex')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-array.prototype.findIndex', 'Array.prototype.findIndex')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -1,11 +1,6 @@
 ---
 title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/Node/isSameNode
 ---
 {{APIRef("DOM")}}
@@ -14,7 +9,9 @@ La méthode **`Node.isSameNode()`** teste si deux noeuds sont identiques, c'est-
 
 ## Syntaxe
 
-    var isSameNode = node.isSameNode(other);
+```js
+var isSameNode = node.isSameNode(other);
+```
 
 ### Paramètres
 
@@ -36,12 +33,12 @@ Dans cet exemple, nous créons 3 blocs {{HTMLElement("div")}}. Le premier et le 
 
 ```css hidden
 #output {
-  width: 440px;
-  border: 2px solid black;
-  border-radius: 5px;
-  padding: 10px;
-  margin-top: 20px;
-  display: block;
+  width: 440px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  display: block;
 }
 ```
 
@@ -58,7 +55,7 @@ output.innerHTML += "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) 
 
 ### Résultats
 
-{{ EmbedLiveSample('Example', 480) }}
+{{ EmbedLiveSample('Exemple', 480) }}
 
 ## Spécifications
 

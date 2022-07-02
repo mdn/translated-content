@@ -5,13 +5,13 @@ translation_of: Web/API/ResizeObserverEntry
 ---
 <div>{{APIRef("Resize Observer API")}}{{SeeCompatTable}}</div>
 
-<p class="summary"><strong><code>ResizeObserverEntry</code></strong> 接口是传递给{{domxref('ResizeObserver.ResizeObserver','ResizeObserver()')}} 构造器回调函数中的参数对象。</p>
+<p><strong><code>ResizeObserverEntry</code></strong> 接口是传递给{{domxref('ResizeObserver.ResizeObserver','ResizeObserver()')}} 构造器回调函数中的参数对象。</p>
 
 <h2 id="属性">属性</h2>
 
 <dl>
  <dt>{{domxref('ResizeObserverEntry.contentRect')}} {{experimental_inline}} {{readonlyinline}}</dt>
- <dd>对改变尺寸大小的元素的 {{domxref('DOMRectReadOnly')}}引用（包含x,y,width,height,top,right,bottom,left属性）。</dd>
+ <dd>对改变尺寸大小的元素的 {{domxref('DOMRectReadOnly')}}引用（包含 x,y,width,height,top,right,bottom,left 属性）。</dd>
  <dt>{{domxref('ResizeObserverEntry.target')}} {{experimental_inline}} {{readonlyinline}}</dt>
  <dd>当前改变尺寸大小的元素的 {{domxref('Element')}} 引用</dd>
  <dt> </dt>
@@ -23,13 +23,13 @@ translation_of: Web/API/ResizeObserverEntry
 
 <h2 id="方法">方法</h2>
 
-<p>无.</p>
+<p>无。</p>
 
 <h2 id="示例">示例</h2>
 
-<p>以下示例通过观察box的宽度变化从而改变其边框圆角半径。</p>
+<p>以下示例通过观察 box 的宽度变化从而改变其边框圆角半径。</p>
 
-<pre class="brush: js">const resizeOserver = new ResizeObserver(entries =&gt; {
+<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
   for (let entry of entries) {
     entry.target.style.borderRadius = Math.max(0, 250 - entry.contentRect.width) + 'px';
   }

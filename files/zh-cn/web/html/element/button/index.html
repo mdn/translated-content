@@ -3,7 +3,7 @@ title: <button>
 slug: Web/HTML/Element/button
 translation_of: Web/HTML/Element/button
 ---
-<p><span class="seoSummary"><strong>HTML <code>&lt;button&gt;</code> 元素</strong>表示一个可点击的按钮，可以用在<a href="/en-US/docs/Learn/HTML/Forms">表单</a>或文档其它需要使用简单标准按钮的地方。</span> 默认情况下，HTML按钮的显示样式接近于 {{Glossary("user agent")}} 所在的宿主系统平台（用户操作系统）的按钮， 但你可以使用 <a href="/en-US/docs/Web/CSS">CSS</a> 来改变按钮的样貌。</p>
+<p><strong>HTML <code>&lt;button&gt;</code> 元素</strong>表示一个可点击的按钮，可以用在<a href="/en-US/docs/Learn/HTML/Forms">表单</a>或文档其它需要使用简单标准按钮的地方。 默认情况下，HTML 按钮的显示样式接近于 {{Glossary("user agent")}} 所在的宿主系统平台（用户操作系统）的按钮， 但你可以使用 <a href="/en-US/docs/Web/CSS">CSS</a> 来改变按钮的样貌。</p>
 
 <table class="properties">
  <tbody>
@@ -36,57 +36,57 @@ translation_of: Web/HTML/Element/button
 
 <h2 id="属性">属性</h2>
 
-<p><span style="line-height: 21px;">该元素包含</span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">全局属性</a><span style="line-height: 21px;">.</span></p>
+<p>该元素包含<a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">全局属性</a>.</p>
 
 <dl>
  <dt>{{htmlattrdef("autofocus")}} {{HTMLVersionInline(5)}}</dt>
  <dd>一个布尔属性，用于指定当页面加载时按钮必须有输入焦点，除非用户重写，例如通过不同控件键入。只有一个表单关联元素可以指定该属性。</dd>
  <dt>{{htmlattrdef("autocomplete")}} {{non-standard_inline}}</dt>
- <dd>该属性在 {{HTMLElement("button")}}上的使用并未标准化，只有Firefox允许。不像其它浏览器，Firefox默认在页面加载时持续禁用Button的动态状态（<a href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox persists the dynamic disabled state</a> ）。将此属性设置为<code style="font-style: normal;">off</code> (i.e. <code style="font-style: normal;">autocomplete="off"</code>)关闭此特性。参见 {{bug(654072)}}。</dd>
+ <dd>该属性在 {{HTMLElement("button")}}上的使用并未标准化，只有 Firefox 允许。不像其它浏览器，Firefox 默认在页面加载时持续禁用 Button 的动态状态（<a href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox persists the dynamic disabled state</a> ）。将此属性设置为<code style="font-style: normal;">off</code> (i.e. <code style="font-style: normal;">autocomplete="off"</code>) 关闭此特性。参见 {{bug(654072)}}。</dd>
  <dt>{{htmlattrdef("disabled")}}</dt>
  <dd>
- <p>此布尔属性表示用户不能与button交互。如果属性值未指定，button继承包含元素，例如{{HTMLElement("fieldset")}}；如果没有设置<strong>disabled</strong>属性的包含元素，button将可交互。</p>
+ <p>此布尔属性表示用户不能与 button 交互。如果属性值未指定，button 继承包含元素，例如{{HTMLElement("fieldset")}}；如果没有设置<strong>disabled</strong>属性的包含元素，button 将可交互。</p>
 
- <p>不像其它浏览器，Firefox默认在页面加载时持续禁用Button的动态状态。使用{{htmlattrxref("autocomplete","button")}}属性可控制此特性。</p>
+ <p>不像其它浏览器，Firefox 默认在页面加载时持续禁用 Button 的动态状态。使用{{htmlattrxref("autocomplete","button")}}属性可控制此特性。</p>
  </dd>
  <dt>{{htmlattrdef("form")}} {{HTMLVersionInline(5)}}</dt>
- <dd>表示button元素关联的form元素（它的表单拥有者）。此属性值必须为同一文档中的一个{{HTMLElement("form")}}元素的<strong>id</strong>属性。如果此属性未指定，&lt;button&gt;元素必须是form元素的后代。利用此属性，你可以将&lt;button&gt;元素放置在文档内的任何位置，而不仅仅是作为他们form元素的后代。</dd>
+ <dd>表示 button 元素关联的 form 元素（它的表单拥有者）。此属性值必须为同一文档中的一个{{HTMLElement("form")}}元素的<strong>id</strong>属性。如果此属性未指定，&lt;button&gt;元素必须是 form 元素的后代。利用此属性，你可以将&lt;button&gt;元素放置在文档内的任何位置，而不仅仅是作为他们 form 元素的后代。</dd>
  <dt>{{htmlattrdef("formaction")}} {{HTMLVersionInline(5)}}</dt>
- <dd>表示程序处理button提交信息的URI。如果指定了，将重写button表单拥有者的{{htmlattrxref("action","form")}}属性。</dd>
+ <dd>表示程序处理 button 提交信息的 URI。如果指定了，将重写 button 表单拥有者的{{htmlattrxref("action","form")}}属性。</dd>
  <dt>{{htmlattrdef("formenctype")}} {{HTMLVersionInline(5)}}</dt>
- <dd>如果button是submit类型，此属性值指定提交表单到服务器的内容类型。可选值：
+ <dd>如果 button 是 submit 类型，此属性值指定提交表单到服务器的内容类型。可选值：
  <ul>
   <li><code>application/x-www-form-urlencoded</code>: 未指定时的默认值。</li>
   <li><code>multipart/form-data</code>: 如果使用{{htmlattrxref("type","input")}}属性的{{HTMLElement("input")}}元素设置文件，使用此值。</li>
   <li><code>text/plain</code></li>
  </ul>
 
- <p>如果指定此属性，它将重写button的表单拥有者的{{htmlattrxref("enctype","form")}}属性。</p>
+ <p>如果指定此属性，它将重写 button 的表单拥有者的{{htmlattrxref("enctype","form")}}属性。</p>
  </dd>
  <dt>{{htmlattrdef("formmethod")}} {{HTMLVersionInline(5)}}</dt>
- <dd>如果button是submit类型，此属性指定浏览器提交表单使用的HTTP方法。可选值:
+ <dd>如果 button 是 submit 类型，此属性指定浏览器提交表单使用的 HTTP 方法。可选值：
  <ul>
   <li><code>post</code>: 来自表单的数据被包含在表单内容中，被发送到服务器。</li>
-  <li><code>get</code>:  来自表单的数据以'?'作为分隔符被附加到form的<strong>URI</strong>属性中，得到的URI被发送到服务器。当表单没有副作用，且仅包含ASCII字符时使用这种方法。</li>
+  <li><code>get</code>:  来自表单的数据以'?'作为分隔符被附加到 form 的<strong>URI</strong>属性中，得到的 URI 被发送到服务器。当表单没有副作用，且仅包含 ASCII 字符时使用这种方法。</li>
  </ul>
 
- <p>如果指定了，此属性会重写button拥有者的{{htmlattrxref("method","form")}}属性。</p>
+ <p>如果指定了，此属性会重写 button 拥有者的{{htmlattrxref("method","form")}}属性。</p>
  </dd>
  <dt>{{htmlattrdef("formnovalidate")}} {{HTMLVersionInline(5)}}</dt>
- <dd>如果button是submit类型，此布尔属性指定当表单被提交时不需要验证。如果指定了，它会重写button拥有者的{{htmlattrxref("novalidate","form")}}属性。</dd>
+ <dd>如果 button 是 submit 类型，此布尔属性指定当表单被提交时不需要验证。如果指定了，它会重写 button 拥有者的{{htmlattrxref("novalidate","form")}}属性。</dd>
  <dt>{{htmlattrdef("formtarget")}} {{HTMLVersionInline(5)}}</dt>
- <dd>如果button是submit类型，此属性指定一个名称或关键字，表示接收提交的表单后在哪里显示响应。这是一个浏览上下文（例如tab，window或内联框架）的名称或关键字。如果指定了，它会重写button拥有者的{{htmlattrxref("target", "form")}} 属性。关键字如下：
+ <dd>如果 button 是 submit 类型，此属性指定一个名称或关键字，表示接收提交的表单后在哪里显示响应。这是一个浏览上下文（例如 tab，window 或内联框架）的名称或关键字。如果指定了，它会重写 button 拥有者的{{htmlattrxref("target", "form")}} 属性。关键字如下：
  <ul>
   <li><code>_self</code>: 在同一个浏览上下文中加载响应作为当前的。未指定时此值为默认值。</li>
   <li><code>_blank</code>:  在一个新的不知名浏览上下文中加载响应。</li>
-  <li><code>_parent</code>: 在当前浏览上下文父级中加载响应。如果没有父级的，此选项将按<span style="font-family: Consolas,Monaco,'Andale Mono',monospace;">_self执行。</span></li>
-  <li><code>_top</code>:  在顶级浏览上下文（即当前浏览上下文的祖先，且没有父级）中架加载响应。如果没有顶级的，此选项将按<span style="font-family: Consolas,Monaco,'Andale Mono',monospace;">_self执行。</span></li>
+  <li><code>_parent</code>: 在当前浏览上下文父级中加载响应。如果没有父级的，此选项将按_self 执行。</li>
+  <li><code>_top</code>:  在顶级浏览上下文（即当前浏览上下文的祖先，且没有父级）中架加载响应。如果没有顶级的，此选项将按_self 执行。</li>
  </ul>
  </dd>
  <dt>{{htmlattrdef("name")}}</dt>
- <dd>button的名称，与表单数据一起提交。</dd>
+ <dd>button 的名称，与表单数据一起提交。</dd>
  <dt>{{htmlattrdef("type")}}</dt>
- <dd>button的类型。可选值：
+ <dd>button 的类型。可选值：
  <ul>
   <li><code>submit</code>:  此按钮将表单数据提交给服务器。如果未指定属性，或者属性动态更改为空值或无效值，则此值为默认值。</li>
   <li><code>reset</code>:  此按钮重置所有组件为初始值。</li>
@@ -95,17 +95,17 @@ translation_of: Web/HTML/Element/button
  </ul>
  </dd>
  <dt>{{htmlattrdef("value")}}</dt>
- <dd>button的初始值。它定义的值与表单数据的提交按钮相关联。当表单中的数据被提交时，这个值便以参数的形式被递送至服务器。</dd>
+ <dd>button 的初始值。它定义的值与表单数据的提交按钮相关联。当表单中的数据被提交时，这个值便以参数的形式被递送至服务器。</dd>
 </dl>
 
 <h2 id="注意">注意</h2>
 
-<p><code>&lt;button&gt;</code> 元素比 {{HTMLElement("input")}} 元素更容易使用样式。你可以在元素内添加HTML内容（像 <code>&lt;em&gt;</code>、<code>&lt;strong&gt;</code> 甚至 <code>&lt;img&gt;</code>），以及 {{Cssxref("::after")}} 和 {{Cssxref("::before")}} 伪元素来实现复杂的效果，而 {{HTMLElement("input")}} 只支持文本内容。</p>
+<p><code>&lt;button&gt;</code> 元素比 {{HTMLElement("input")}} 元素更容易使用样式。你可以在元素内添加 HTML 内容（像 <code>&lt;em&gt;</code>、<code>&lt;strong&gt;</code> 甚至 <code>&lt;img&gt;</code>），以及 {{Cssxref("::after")}} 和 {{Cssxref("::before")}} 伪元素来实现复杂的效果，而 {{HTMLElement("input")}} 只支持文本内容。</p>
 
 <p>如果你的按钮不是用于向服务器提交数据，请确保这些按钮的 <code>type</code> 属性设置成 <code>button</code>。否则它们被按下后将会向服务器发送数据并加载（可能并不存在的）响应内容，因而可能会破坏当前文档的状态。</p>
 
-<p>IE7 在使用 <code>&lt;button type="submit" name="myButton" value="foo"&gt;Click me&lt;/button&gt;</code> 提交表单时存在一个BUG，<code>POST</code> 提交的数据将是 <code>myButton=Click me</code> 而不是 <code>myButton=foo</code>（没有把 <code>value</code> 属性的值 <code>foo</code> 提交上去）。<br>
- IE6 的BUG更糟糕，在提交表单的时候会把表单内所有的按钮都提交上去，同时还有和 IE7 一样的BUG。<br>
+<p>IE7 在使用 <code>&lt;button type="submit" name="myButton" value="foo"&gt;Click me&lt;/button&gt;</code> 提交表单时存在一个 BUG，<code>POST</code> 提交的数据将是 <code>myButton=Click me</code> 而不是 <code>myButton=foo</code>（没有把 <code>value</code> 属性的值 <code>foo</code> 提交上去）。<br>
+ IE6 的 BUG 更糟糕，在提交表单的时候会把表单内所有的按钮都提交上去，同时还有和 IE7 一样的 BUG。<br>
  IE8 已经修复了这个问题。</p>
 
 <p>Firefox 出于使用方便的目的，会在获得焦点的按钮上添加一个细小的虚线框。 这个边框由浏览器内部的样式表中的 CSS 定义，但如果有必要的话，你可以用 <code>button{{cssxref("::-moz-focus-inner")}} { }</code> 重写这个样式。</p>
@@ -155,7 +155,7 @@ translation_of: Web/HTML/Element/button
 </table>
 
 <table>
- <caption>轻点（tapping） {{HTMLElement("button")}} 会让其获得焦点吗？</caption>
+ <caption>轻点（tapping）{{HTMLElement("button")}} 会让其获得焦点吗？</caption>
  <tbody>
   <tr>
    <td>移动浏览器</td>

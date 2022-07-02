@@ -11,16 +11,16 @@ translation_of: Web/JavaScript/Reference/Errors/Invalid_date
 
 <h2 id="消息">消息</h2>
 
-<pre class="syntaxbox">范围错误: 非法数据(Firefox)
-范围错误: 非法时间值 (Chrome)
-范围错误: 提供的数据不是有效的 (Chrome)
+<pre class="syntaxbox">范围错误：非法数据 (Firefox)
+范围错误：非法时间值 (Chrome)
+范围错误：提供的数据不是有效的 (Chrome)
 </pre>
 
 <h2 id="错误类型">错误类型</h2>
 
 <p>{{jsxref("RangeError")}}</p>
 
-<h2 id="哪里出错了">哪里出错了?</h2>
+<h2 id="哪里出错了">哪里出错了？</h2>
 
 <p>为 {{jsxref("Date")}} 或 {{jsxref("Date.parse()")}} 提供了一个会导致无效日期的字符串。</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Errors/Invalid_date
 
 <h3 id="错误示例">错误示例</h3>
 
-<p>ISO格式化字符串中不可识别的字符串或者包含非法元素值的日期一般会返回 {{jsxref("NaN")}}。然而，根据实现的不同，不符合ISO格式的字符串可能也会抛出<code> RangeError: invalid date</code>，比如在火狐浏览器中有以下情形：</p>
+<p>ISO 格式化字符串中不可识别的字符串或者包含非法元素值的日期一般会返回 {{jsxref("NaN")}}。然而，根据实现的不同，不符合 ISO 格式的字符串可能也会抛出<code> RangeError: invalid date</code>，比如在火狐浏览器中有以下情形：</p>
 
 <pre class="brush: js example-bad">new Date('foo-bar 2014');
 new Date('2014-25-23').toISOString();

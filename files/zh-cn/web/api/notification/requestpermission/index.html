@@ -11,19 +11,19 @@ translation_of: Web/API/Notification/requestPermission
 
 <h2 id="语法">语法</h2>
 
-<p>最新的规范已将此方法更新为基于promise的语法，工作原理如下：</p>
+<p>最新的规范已将此方法更新为基于 promise 的语法，工作原理如下：</p>
 
 <pre class="brush: js">Notification.requestPermission().then(function(permission) { ... });</pre>
 
 <p>以前，语法是基于一个简单的回调；此版本现<s style="color: red;">已弃用</s>：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">Notification<span class="punctuation token">.</span><span class="function token">requestPermission</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">Notification.requestPermission(callback);</code></pre>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt><code>callback</code> {{optional_inline}} {{deprecated_inline("gecko46")}}</dt>
- <dd>一个可选的参数为权限请求的结果的回调函数。此参数已废弃，请使用Promise的语法。</dd>
+ <dd>一个可选的参数为权限请求的结果的回调函数。此参数已废弃，请使用 Promise 的语法。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -65,110 +65,10 @@ translation_of: Web/API/Notification/requestPermission
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>5{{property_prefix("webkit")}}<sup>[1]</sup><br>
-    22</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}{{property_prefix("moz")}}<sup>[2]</sup><br>
-    {{CompatGeckoDesktop("22.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>6<sup>[3]</sup></td>
-  </tr>
-  <tr>
-   <td>promise-based version</td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("47.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(40)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}{{property_prefix("moz")}}<sup>[2]</sup><br>
-    {{CompatGeckoMobile("22.0")}}</td>
-   <td>1.0.1{{property_prefix("moz")}}<sup>[2]</sup><br>
-    1.2</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>promise-based version</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("47.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在 Chrome 22 之前，对于通知的支持请参考 <a href="http://www.chromium.org/developers/design-documents/desktop-notifications/api-specification">old prefixed version of the specification</a> 它使用 {{domxref("window.navigator.webkitNotifications","navigator.webkitNotifications")}} 对象去实例化一个新的通知。</p>
-
-<p>在 Chrome 32 之前，不支持 {{domxref("Notification.permission")}} 。</p>
-
-<p>在 Chrome 42 之前，不支持在 service worker 中使用这个API。</p>
-
-<p>[2] 对于 Firefox 22 之前的版本 (Firefox OS &lt;1.2)，实例化一个新的通知必须使用 {{domxref("window.navigator.mozNotification", "navigator.mozNotification")}} 对象中的 <code>createNotification</code> 方法.</p>
-
-<p>对于 Firefox 22 之前的版本 (Firefox OS &lt;1.2)，通知只会在 <code>show</code> 方法被调用后显示，而且只支持 <code>click</code> 和 <code>close</code> 事件。</p>
-
-<p>Nick Desaulniers 写了一个 <a href="https://github.com/nickdesaulniers/fxos-irc/blob/master/js/notification.js">Notification shim</a> 来同时兼容新旧两种写法。</p>
-
-<p>在 Firefox OS 上有一个特殊的问题是：虽然你可以在通知中使用 <a href="https://github.com/nickdesaulniers/fxos-irc/blob/0160cf6c3a2b5c9fe33822aaf6bcba3b7e846da9/my.js#L171">包含路径的图标</a> ，但是如果应用被打包了，你就不能使用形如 <code>/my_icon.png</code> 这样的相对路径。当然你也不能使用<code>window.location.origin + "/my_icon.png"</code> ，因为 <code>window.location.origin</code> 在打包的应用中的值是<code>null</code>。<a href="https://developer.mozilla.org/en-US/Apps/Developing/Manifest#origin">manifest origin field</a> 修复了这个问题，但是它只能在 Firefox OS 1.1+ 中使用。一个潜在的支持 Firefox OS &lt;1.1 的解决方案是 <a href="https://github.com/nickdesaulniers/fxos-irc/blob/0160cf6c3a2b5c9fe33822aaf6bcba3b7e846da9/my.js#L168">传递一个指向外部部署的图标的绝对路径的URL</a>。这并不是一个理想的解决方案，因为这将导致通知以无图标的形式出现，然后图标才会被获取，但是这个方法适用于所有版本的 Firefox OS.</p>
-
-<p>在 Firefox OS app 中使用通知的时候，确保添加 <code>desktop-notification</code> 权限到你的 manifest 文件中。通知即可在任何权限等级，外部部署或者像下面这样 <code>"permissions": { "desktop-notification": {} }</code> 的情况下使用。</p>
-
-<p>[3] Safari 在 Safari 6 之后支持通知，但是只能在 Mac OSX 10.8+ (Mountain Lion) 中使用。</p>
+{{Compat("api.Notification.requestPermission")}}
 
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/Web/API/notification/Using_Web_Notifications">使用Web Notifications</a></li>
+ <li><a href="/zh-CN/docs/Web/API/notification/Using_Web_Notifications">使用 Web Notifications</a></li>
 </ul>

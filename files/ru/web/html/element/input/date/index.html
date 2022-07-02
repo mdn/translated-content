@@ -7,7 +7,7 @@ translation_of: Web/HTML/Element/input/date
 
 <p>Элементы {{htmlelement("input")}} типа <strong><code>date</code></strong> создают поля ввода и позволяют пользователю ввести дату, либо использовать <em>text box</em> для автоматической проверки контента или использовать специальный интерфейс <em>date picker</em>. Возвращаемое значение включает год, месяц, день, но <em>не</em> время. Используйте поля ввода {{HTMLElement("input/time", "time")}} или {{HTMLElement("input/datetime-local", "datetime-local")}}, чтобы вводить время или дату+время соответственно.</p>
 
-<p>Отображение <strong><code>date</code></strong> различается в зависимости от браузера, кроме того не все браузеры поддерживают <strong><code>date</code></strong>. Подробнее см. {{anch("Browser compatibility")}}. В неподдерживаемых браузерах элемент будет отображаться как обычный <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
+<p>Отображение <strong><code>date</code></strong> различается в зависимости от браузера, кроме того не все браузеры поддерживают <strong><code>date</code></strong>. Подробнее см. <a href="#browser_compatibility">Browser compatibility</a>. В неподдерживаемых браузерах элемент будет отображаться как обычный <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-standard")}}</div>
 
@@ -28,7 +28,7 @@ translation_of: Web/HTML/Element/input/date
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#value">Value</a></strong></td>
    <td>Возвращает {{domxref("DOMString")}}, с датой в формате <strong>гггг-мм-дд</strong>,<strong> </strong>или <strong>пустую строку</strong></td>
   </tr>
   <tr>
@@ -54,7 +54,7 @@ translation_of: Web/HTML/Element/input/date
 
 <p>Возвращает {{domxref("DOMString")}}, представляющий значение даты введённой в input. Вы можете установить значение по умолчанию для элемента с помощью добавления атрибута в {{htmlattrxref("value", "input")}}, например:</p>
 
-<pre class="brush: html notranslate">&lt;input id="date" type="date" value="2017-06-01"&gt;</pre>
+<pre class="brush: html">&lt;input id="date" type="date" value="2017-06-01"&gt;</pre>
 
 <p>{{EmbedLiveSample('Значение', 600, 40)}}</p>
 
@@ -64,7 +64,7 @@ translation_of: Web/HTML/Element/input/date
 
 <p>Вы также можете получить или установить значение даты в JavaScript с помощью свойств {{domxref("HTMLInputElement.value", "value")}} и {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}} элемента input. Например:</p>
 
-<pre class="brush: js notranslate">var dateControl = document.querySelector('input[type="date"]');
+<pre class="brush: js">var dateControl = document.querySelector('input[type="date"]');
 dateControl.value = '2017-06-01';
 console.log(dateControl.value); // prints "2017-06-01"
 console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript timestamp (ms)
@@ -85,15 +85,15 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("max")}}</code></td>
+   <td><code><a href="#max">max</a></code></td>
    <td>Максимально возможная дата для установки</td>
   </tr>
   <tr>
-   <td><code>{{anch("min")}}</code></td>
+   <td><code><a href="#min">min</a></code></td>
    <td>Минимально возможная дата для установки</td>
   </tr>
   <tr>
-   <td><code>{{anch("step")}}</code></td>
+   <td><code><a href="#step">step</a></code></td>
    <td>Шаг (в днях), с которым будет изменяться дата при нажатии кнопок вниз или вверх данного элемента</td>
   </tr>
  </tbody>
@@ -101,13 +101,13 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
 
-<p>Максимально возможная дата для установки. Если {{htmlattrxref("value", "input")}} является более поздней датой, чем дата, указанная в атрибуте <code>{{anch("max")}}</code>, элемент отобразит ошибку при помощи <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. Если в атрибуте <code>max</code> указано значение, не удовлетворяющее формату <code>yyyy-MM-dd</code>, значит элемент не будет иметь максимальной даты.</p>
+<p>Максимально возможная дата для установки. Если {{htmlattrxref("value", "input")}} является более поздней датой, чем дата, указанная в атрибуте <code><a href="#max">max</a></code>, элемент отобразит ошибку при помощи <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. Если в атрибуте <code>max</code> указано значение, не удовлетворяющее формату <code>yyyy-MM-dd</code>, значит элемент не будет иметь максимальной даты.</p>
 
 <p>В атрибуте <code>max</code> должна быть указана строка с датой, которая больше или равна дате, указанной в атрибуте <code>min</code>.</p>
 
 <h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
 
-<p>Минимально возможная дата для установки. Если {{htmlattrxref("value", "input")}} является более ранней датой, чем дата, указанная в атрибуте <code>{{anch("min")}}</code>, элемент отобразит ошибку при помощи <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. Если в атрибуте <code>min</code> указано значение, не удовлетворяющее формату <code>yyyy-MM-dd</code>, значит элемент не будет иметь минимальной даты.</p>
+<p>Минимально возможная дата для установки. Если {{htmlattrxref("value", "input")}} является более ранней датой, чем дата, указанная в атрибуте <code><a href="#min">min</a></code>, элемент отобразит ошибку при помощи <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. Если в атрибуте <code>min</code> указано значение, не удовлетворяющее формату <code>yyyy-MM-dd</code>, значит элемент не будет иметь минимальной даты.</p>
 
 <p>В атрибуте <code>min</code> должна быть указана строка с датой, которая меньше или равна дате, указанной в атрибуте <code>max</code>.</p>
 
@@ -125,7 +125,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <p>На первый взгляд, элемент <code>&lt;input type="date"&gt;</code> выглядит заманчиво — он предоставляет лёгкий графический интерфейс для выбора даты, нормализует формат даты, отправляемой на сервер независимо от локальных настроек пользователя. Тем не менее, есть проблемы с <code>&lt;input type="date"&gt;</code> в связи с ограниченной поддержкой браузеров.</p>
 
-<p>В этом разделе мы посмотрим на простые, а затем и более сложные способы использования <code>&lt;input type="date"&gt;</code>, и позже дадим советы по уменьшению влияния поддержки браузерами (смотрите {{anch("Handling browser support")}}).</p>
+<p>В этом разделе мы посмотрим на простые, а затем и более сложные способы использования <code>&lt;input type="date"&gt;</code>, и позже дадим советы по уменьшению влияния поддержки браузерами (смотрите <a href="#handling_browser_support">Handling browser support</a>).</p>
 
 <div class="blockIndicator note">
 <p>Надеемся, со временем поддержка браузерами станет повсеместной, и эта проблема исчезнет.</p>
@@ -135,7 +135,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <p>Самый простой способ использовать <code>&lt;input type="date"&gt;</code> - это использовать его с элементами <code>&lt;input&gt;</code> и <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">label</span></font>, как показано ниже:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="bday"&gt;Введите дату вашего рождения:&lt;/label&gt;
     &lt;input type="date" id="bday" name="bday"&gt;
@@ -148,7 +148,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <p>Вы можете использовать атрибуты {{htmlattrxref("min", "input")}} и {{htmlattrxref("max", "input")}}, чтобы ограничить дату, которую может выбрать пользователь. В следующем примере мы устанавливаем минимальную дату <code>2017-04-01</code> и максимальную дату <code>2017-04-30</code>. Пользователь сможет выбрать дату только из этого диапазона:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="party"&gt;Укажите предпочтительную дату события:&lt;/label&gt;
     &lt;input type="date" id="party" name="party" min="2017-04-01" max="2017-04-30"&gt;
@@ -171,13 +171,13 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <p>By default, <code>&lt;input type="date"&gt;</code> does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a date — which is helpful — but you can still leave the field empty or  (in browsers where the input falls back to type <code>text</code>) enter an invalid date (e.g. the 32nd of April).</p>
 
-<p>If you use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see {{anch("Setting maximum and minimum dates")}}), supporting browsers will display an error if you try to submit a date that is outside the set bounds. However, you'll have to check the results to be sure the value is within these dates, since they're only enforced if the date picker is fully supported on the user's device.</p>
+<p>If you use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see <a href="#setting_maximum_and_minimum_dates">Setting maximum and minimum dates</a>), supporting browsers will display an error if you try to submit a date that is outside the set bounds. However, you'll have to check the results to be sure the value is within these dates, since they're only enforced if the date picker is fully supported on the user's device.</p>
 
 <p>In addition, you can use the {{htmlattrxref("required", "input")}} attribute to make filling in the date mandatory — again, an error will be displayed if you try to submit an empty date field. This, at least, should work in most browsers.</p>
 
 <p>Let's look at an example — here we've set minimum and maximum dates, and also made the field required:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="party"&gt;Choose your preferred party date (required, April 1st to 20th):&lt;/label&gt;
     &lt;input type="date" id="party" name="party" min="2017-04-01" max="2017-04-20" required&gt;
@@ -198,7 +198,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <p>Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.</p>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -225,7 +225,7 @@ input:valid+span:after {
 
 <h2 id="Handling_browser_support">Handling browser support</h2>
 
-<p>As mentioned above, the major problem with using date inputs at the time of writing is {{anch("Browser compatibility", "browser support")}}. As an example, the date picker on Firefox for Android looks like this:</p>
+<p>As mentioned above, the major problem with using date inputs at the time of writing is <a href="#browser_compatibility">browser support</a>. As an example, the date picker on Firefox for Android looks like this:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14915/date-picker-fxa.png" style="display: block; margin: 0 auto;"></p>
 
@@ -244,7 +244,7 @@ input:valid+span:after {
 
 <p>One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your date input. Even though the date input doesn't use it, the text input fallback will. For example, try viewing the following example in a non-supporting browser:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="bday"&gt;Enter your birthday:&lt;/label&gt;
     &lt;input type="date" id="bday" name="bday" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"&gt;
@@ -260,7 +260,7 @@ input:valid+span:after {
 <p>If you try submitting it, you'll see that the browser now displays an error message (and highlights the input as invalid) if your entry doesn't match the pattern <code>nnnn-nn-nn</code>, where <code>n</code> is a number from 0 to 9. Of course, this doesn't stop people from entering invalid dates, or incorrectly formatted dates, such as <code>yyyy-dd-mm</code> (whereas we want <code>yyyy-mm-dd</code>). So we still have a problem.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
 }
 
@@ -297,7 +297,7 @@ input:valid + span:after {
 
 <p>The HTML looks like so:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
     &lt;div class="nativeDatePicker"&gt;
       &lt;label for="bday"&gt;Enter your birthday:&lt;/label&gt;
       &lt;input type="date" id="bday" name="bday"&gt;
@@ -338,7 +338,7 @@ input:valid + span:after {
 <p>The months are hardcoded (as they are always the same), while the day and year values are dynamically generated depending on the currently selected month and year, and the current year (see the code comments below for detailed explanations of how these functions work.)</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">input:invalid+span:after {
+<pre class="brush: css">input:invalid+span:after {
   content: '✖';
   padding-left: 5px;
 }
@@ -353,7 +353,7 @@ input:valid+span:after {
 
 <p>The other part of the code that may be of interest is the feature detection code — to detect whether the browser supports <code>&lt;input type="date"&gt;</code>, we create a new {{htmlelement("input")}} element, set its <code>type</code> to <code>date</code>, then immediately check what its type is set to — non-supporting browsers will return <code>text</code>, because the <code>date</code> type falls back to type <code>text</code>. If <code>&lt;input type="date"&gt;</code> is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}) instead.</p>
 
-<pre class="brush: js notranslate">// define variables
+<pre class="brush: js">// define variables
 var nativePicker = document.querySelector('.nativeDatePicker');
 var fallbackPicker = document.querySelector('.fallbackDatePicker');
 var fallbackLabel = document.querySelector('.fallbackLabel');
@@ -500,7 +500,7 @@ daySelect.onchange = function() {
 
 
 
-<p>{{Compat("html.elements.input.input-date")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

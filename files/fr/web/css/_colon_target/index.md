@@ -9,7 +9,7 @@ translation_of: Web/CSS/:target
 ---
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:target`** permet de cibler l'unique élément (s'il existe) dont l'attribut {{htmlattrxref("id")}} correspond au fragment d'identifiant de l'URI du document.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:target`** permet de cibler l'unique élément (s'il existe) dont l'attribut {{htmlattrxref("id")}} correspond au fragment d'identifiant de l'URI du document.
 
 ```css
 /* Cible un élément dont l'identifiant      */
@@ -21,7 +21,9 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:target`** permet de cibl
 
 Les URI comportant des fragments d'identifiant peuvent être utilisées pour créer des liens vers un élément donné d'un document qu'on appellera l'élément cible (_target element_). Voici un exemple d'URI qui pointe vers une _ancre_ intitulée `section2` :
 
-    http://exemple.com/chemin/document.html#section2
+```
+http://exemple.com/chemin/document.html#section2
+```
 
 L'élément suivant sera donc ciblé par le sélecteur `:target` avec l'URL précédente :
 
@@ -82,9 +84,9 @@ La pseudo-classe `:target` s'accommode également des éléments qui ne sont pas
 ```html
 <p><a href="#newcomment">Ajouter un commentaire</a></p>
 <div id="newcomment">
-  <form>
-  <p>Saisir un commentaire :<br />
-  <textarea></textarea></p>
+  <form>
+  <p>Saisir un commentaire :<br />
+  <textarea></textarea></p>
   </form>
 </div>
 ```

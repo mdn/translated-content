@@ -11,15 +11,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>flatMap()</strong></code> 方法首先使用映射函数映射每个元素，然后将结果压缩成一个新数组。它与 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> 连着深度值为1的 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat">flat</a> 几乎相同，但 <code>flatMap</code> 通常在合并成一种方法的效率稍微高一些。</p>
+<p><code><strong>flatMap()</strong></code> 方法首先使用映射函数映射每个元素，然后将结果压缩成一个新数组。它与 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> 连着深度值为 1 的 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat">flat</a> 几乎相同，但 <code>flatMap</code> 通常在合并成一种方法的效率稍微高一些。</p>
 
-<p class="hidden">\{{EmbedInteractiveExample("pages/js/array-flatmap.html")}}</p>
-
-<p class="hidden">此交互式示例的源代码存储在GitHub存储库中。如果您想要为交互式示例项目做出贡献，请复制https：//github.com/mdn/interactive-examples，并向我们发送 pull request。</p>
+<p>\{{EmbedInteractiveExample("pages/js/array-flatmap.html")}}</p>
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>var new_array = arr</var>.flatMap(function <var>callback(currentValue[, index[, array]]) {
+<pre class="syntaxbox"><var>var new_array = arr</var>.flatMap(function <var>callback(currentValue[, index[, array]]) {
     // return element for new_array
 }</var>[, <var>thisArg</var>])</pre>
 
@@ -29,7 +27,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
  <dt><code>callback</code></dt>
  <dd>可以生成一个新数组中的元素的函数，可以传入三个参数：
  <dl>
-  <dt></dt>
   <dt><code>currentValue</code></dt>
   <dd>当前正在数组中处理的元素</dd>
   <dt><code>index</code>{{optional_inline}}</dt>
@@ -44,23 +41,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 
 <h3 id="返回值">返回值</h3>
 
-<p> 一个新的数组，其中每个元素都是回调函数的结果，并且结构深度 <code>depth</code> 值为1。</p>
+<p> 一个新的数组，其中每个元素都是回调函数的结果，并且结构深度 <code>depth</code> 值为 1。</p>
 
 <h2 id="描述">描述</h2>
 
-<p>有关回调函数的详细描述，请参见 {{jsxref("Array.prototype.map()")}} 。 <code>flatMap</code> 方法与 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a></code> 方法和深度depth为1的 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat">flat</a></code> 几乎相同.</p>
+<p>有关回调函数的详细描述，请参见 {{jsxref("Array.prototype.map()")}} 。 <code>flatMap</code> 方法与 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a></code> 方法和深度 depth 为 1 的 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat">flat</a></code> 几乎相同。</p>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="map_与_flatMap"><code>map()</code> 与 <code>flatMap()</code></h3>
 
-<pre class="brush: js notranslate">var arr1 = <span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>[</span></span><span class="constant decimal js numeric"><span>1</span></span><span class="comma delimiter js meta object"><span>,</span></span><span> </span><span class="brace js meta square"><span>2, 3, 4];
+<pre class="brush: js">var arr1 = [1, 2, 3, 4];
 
-arr1.map(</span></span></span></span></span>x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);</span></span></span></span></span>
+arr1.map(x =&gt; [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);
-// [2, 4, 6, 8]</span></span></span></span></span>
+arr1.flatMap(x =&gt; [x * 2]);
+// [2, 4, 6, 8]
 
 // <code>only one level is flatt</code><code>ened</code>
 arr1.flatMap(x =&gt; [[x * 2]]);
@@ -70,7 +67,7 @@ arr1.flatMap(x =&gt; [[x * 2]]);
 
 <p>所以，为了更好的展示 flatMap 的作用，下面我们将包含几句话的数组拆分成单个词组成的新数组。</p>
 
-<pre class="notranslate"><code>let arr1 = ["it's Sunny in", "", "California"];
+<pre><code>let arr1 = ["it's Sunny in", "", "California"];
 
 arr1.map(x =&gt; x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
@@ -82,9 +79,9 @@ arr1.flatMap(x =&gt; x.split(" "));
 
 <h3 id="在一个_map_期间增加或去除一些项">在一个 <code>map()</code> 期间增加或去除一些项</h3>
 
-<p><code>flatMap</code> 能用于在map期间增删项目（也就是修改items的数量）。换句话说，它允许你遍历很多项使之成为另一些项（靠分别把它们放进去来处理），而不是总是一对一。 从这个意义上讲，它的作用类似于 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter</a>的对立面。只需返回一个1项元素数组以保留该项，返回一个多元素数组以添加项，或返回一个0项元素数组以删除该项。</p>
+<p><code>flatMap</code> 能用于在 map 期间增删项目（也就是修改 items 的数量）。换句话说，它允许你遍历很多项使之成为另一些项（靠分别把它们放进去来处理），而不是总是一对一。 从这个意义上讲，它的作用类似于 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter</a>的对立面。只需返回一个 1 项元素数组以保留该项，返回一个多元素数组以添加项，或返回一个 0 项元素数组以删除该项。</p>
 
-<pre class="notranslate"><code>// Let's say we want to remove all the negative numbers and split the odd numbers into an even number and a 1
+<pre><code>// Let's say we want to remove all the negative numbers and split the odd numbers into an even number and a 1
 let a = [5, 4, -3, 20, 17, -33, -4, 18]
 //       |\  \  x   |  | \   x   x   |
 //      [4,1, 4,   20, 16, 1,       18]
@@ -101,7 +98,7 @@ a.flatMap( (n) =&gt;
 
 <h3 id="reduce_与_concat"><code>reduce()</code> 与 <code>concat()</code></h3>
 
-<pre class="notranslate"><code>var arr = [1, 2, 3, 4];
+<pre><code>var arr = [1, 2, 3, 4];
 
 arr.flatMap(x =&gt; [x, x * 2]);
 // is equivalent to
@@ -109,10 +106,6 @@ arr.reduce((acc, x) =&gt; acc.concat([x, x * 2]), []);
 // [1, 2, 2, 4, 3, 6, 4, 8]</code></pre>
 
 <p>请注意，这是低效的，并且应该避免大型阵列：在每次迭代中，它创建一个必须被垃圾收集的新临时数组，并且它将元素从当前的累加器数组复制到一个新的数组中，而不是将新的元素添加到现有的数组中。</p>
-
-<div class="hidden">
-<p>Please do not add polyfills on this article. For reference, please check: <a href="https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500">https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500</a></p>
-</div>
 
 <h2 id="规范">规范</h2>
 

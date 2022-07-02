@@ -5,7 +5,7 @@ translation_of: Web/API/InstallEvent
 ---
 <div>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</div>
 
-<p>该参数传递到 {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} 事件处理程序，<code>InstallEvent接口表示一个 </code>{{domxref("ServiceWorker")}}<code> </code>的 {{domxref("ServiceWorkerGlobalScope")}} 上分派的安装操作。作为 {{domxref("ExtendableEvent")}} 的一个子类，它确保在安装期间不调度诸如 {{domxref("FetchEvent")}} 之类的功能事件。</p>
+<p>该参数传递到 {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} 事件处理程序，<code>InstallEvent</code> 接口表示一个 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 上分派的安装操作。作为 {{domxref("ExtendableEvent")}} 的一个子类，它确保在安装期间不调度诸如 {{domxref("FetchEvent")}} 之类的功能事件。</p>
 
 <p>该接口继承自 {{domxref("ExtendableEvent")}} 接口。</p>
 
@@ -15,7 +15,7 @@ translation_of: Web/API/InstallEvent
 
 <dl>
  <dt>{{domxref("InstallEvent.InstallEvent()")}}</dt>
- <dd>创建一个新的<code>InstallEvent对象。</code></dd>
+ <dd>创建一个新的 <code>InstallEvent</code> 对象。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -33,12 +33,12 @@ translation_of: Web/API/InstallEvent
 
 <h2 id="示例">示例</h2>
 
-<p>该代码片段来自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker prefetch sample</a> (请参阅 <a href="https://googlechrome.github.io/samples/service-worker/prefetch/">prefetch running live</a>)。代码在{{domxref("ServiceWorkerGlobalScope.oninstall")}}中调用{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil(any value)")}}，并延迟将{{domxref("ServiceWorkerRegistration.installing")}} worker视为已安装的，直到传递的promise被成功地resolve。当所有资源已经获取并缓存，或者有任何异常发生时，promise才会resolve。</p>
+<p>该代码片段来自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker prefetch sample</a> (请参阅 <a href="https://googlechrome.github.io/samples/service-worker/prefetch/">prefetch running live</a>)。代码在{{domxref("ServiceWorkerGlobalScope.oninstall")}}中调用{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil(any value)")}}，并延迟将{{domxref("ServiceWorkerRegistration.installing")}} worker 视为已安装的，直到传递的 promise 被成功地 resolve。当所有资源已经获取并缓存，或者有任何异常发生时，promise 才会 resolve。</p>
 
 <p>该代码片段也展示了服务工作线程使用的缓存版本控制的最佳实践。虽然此示例只有一个缓存，但您可以将此方法用于多个缓存。 代码将缓存的速记标识映射到特定的版本化缓存名称。</p>
 
 <div class="note">
-<p><strong>注意</strong>: service worker的注册日志记录在Chrome浏览器中可以通过访问chrome://serviceworker-internals查看。</p>
+<p><strong>注意</strong>: service worker 的注册日志记录在 Chrome 浏览器中可以通过访问 chrome://serviceworker-internals 查看。</p>
 </div>
 
 <pre class="brush: js">var CACHE_VERSION = 1;
@@ -87,59 +87,7 @@ console.log('Handling install event. Resources to pre-fetch:', urlsToPrefetch);
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{CompatGeckoDesktop("44.0")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>24</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("44.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 and 52 Extended Support Releases</a> (ESR.)</p>
+{{Compat("api.InstallEvent")}}
 
 <h2 id="参见">参见</h2>
 

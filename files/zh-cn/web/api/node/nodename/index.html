@@ -8,22 +8,22 @@ translation_of: Web/API/Node/nodeName
 <div>
   </div>
 <div>
- <span style="font-size: 2.14285714285714rem; font-weight: 700; letter-spacing: -1px; line-height: 30px;">概述</span></div>
+ 概述</div>
 <p>返回当前节点的节点名称</p>
 <h2 id="语法">语法</h2>
 <pre class="syntaxbox">var <em>str</em> = <em>node</em>.nodeName;
 </pre>
 <ul>
- <li><code>str</code> 是一个存储了当前节点的节点名称的字符串.</li>
+ <li><code>str</code> 是一个存储了当前节点的节点名称的字符串。</li>
  <li><code>nodeName 是一个只读属性</code>.</li>
 </ul>
 <h2 id="附注">附注</h2>
-<p>下表列出了所有类型的节点的<code>nodeName</code>属性的值.</p>
+<p>下表列出了所有类型的节点的<code>nodeName</code>属性的值。</p>
 <table class="standard-table">
  <tbody>
   <tr>
    <th>接口</th>
-   <th>nodeName属性值</th>
+   <th>nodeName 属性值</th>
   </tr>
   <tr>
    <td><a href="/zh-CN/docs/DOM/Attr" title="DOM/Attr">Attr</a></td>
@@ -67,7 +67,7 @@ translation_of: Web/API/Node/nodeName
   </tr>
   <tr>
    <td><a href="/zh-CN/docs/DOM/Notation" title="DOM/Notation">Notation</a></td>
-   <td>Notation名称</td>
+   <td>Notation 名称</td>
   </tr>
   <tr>
    <td><a href="/zh-CN/docs/DOM/ProcessingInstruction" title="DOM/ProcessingInstruction">ProcessingInstruction</a></td>
@@ -82,18 +82,18 @@ translation_of: Web/API/Node/nodeName
  </tbody>
 </table>
 <h2 id="示例">示例</h2>
-<p>假设已经存在下面的HTML:</p>
+<p>假设已经存在下面的 HTML:</p>
 <pre class="brush:html">&lt;div id="d1"&gt;hello world&lt;/div&gt;
 &lt;input type="text" id="t"/&gt;
 </pre>
-<p>以及下面的JavaScript:</p>
+<p>以及下面的 JavaScript:</p>
 <pre class="brush:js">var div1 = document.getElementById("d1");
 var text_field = document.getElementById("t");
 
 text_field.value = div1.nodeName;
 </pre>
-<p>在XHTML(以及属于XML类型的文档)中,<code>变量text_field</code>包含的值会是小写的"div".还在HTML中,<code>变量text_field</code>包含的值会是大写的"DIV",<code>nodeName</code>和<code>tagName</code>属性都有这种表现.查看<a href="http://ejohn.org/blog/nodename-case-sensitivity/" title="http://ejohn.org/blog/nodename-case-sensitivity/">details on nodeName case sensitivity in different browsers</a>一文深入了解.</p>
-<p>如果是元素节点,<code>nodeName</code>属性和<code>tagName</code>属性返回相同的值,但如果是文本节点,<code>nodeName</code>属性会返回<code>"#text"</code>,而<code>tagName</code>属性会返回<code>undefined</code>.</p>
+<p>在 XHTML(以及属于 XML 类型的文档) 中，<code>变量 text_field</code>包含的值会是小写的"div".还在 HTML 中，<code>变量 text_field</code>包含的值会是大写的"DIV",<code>nodeName</code>和<code>tagName</code>属性都有这种表现。查看<a href="http://ejohn.org/blog/nodename-case-sensitivity/" title="http://ejohn.org/blog/nodename-case-sensitivity/">details on nodeName case sensitivity in different browsers</a>一文深入了解。</p>
+<p>如果是元素节点，<code>nodeName</code> 属性和 <code>tagName</code> 属性返回相同的值，但如果是文本节点，<code>nodeName</code>属性会返回 <code>"#text"</code>，而 <code>tagName</code> 属性会返回 <code>undefined</code>。</p>
 <h2 id="规范">规范</h2>
 <ul>
  <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D095">DOM Level 2 Core: Node.nodeName</a></li>

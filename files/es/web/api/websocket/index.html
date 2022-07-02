@@ -76,7 +76,7 @@ WebSocket WebSocket(
    <td><code>bufferedAmount</code></td>
    <td><code>unsigned long</code></td>
    <td>
-    <p>La cantidad de bytes de data que pueden ser almacenadas en cola utilizando llamadas a {{manch("send")}} pero que aún no se han transmitido a la red. Este valor se reestablece a cero una vez que toda la información ha sido enviada. Este valor no vuelve a cero cuando la conexión es cerrada; si mantientes llamando {{manch("send")}}, continuará acumulandose. <strong>Solo de lectura.</strong></p>
+    <p>La cantidad de bytes de data que pueden ser almacenadas en cola utilizando llamadas a <a href="#send">send</a> pero que aún no se han transmitido a la red. Este valor se reestablece a cero una vez que toda la información ha sido enviada. Este valor no vuelve a cero cuando la conexión es cerrada; si mantientes llamando <a href="#send">send</a>, continuará acumulandose. <strong>Solo de lectura.</strong></p>
    </td>
   </tr>
   <tr>
@@ -120,7 +120,7 @@ WebSocket WebSocket(
   <tr>
    <td><code>readyState</code></td>
    <td><code>unsigned short</code></td>
-   <td>El estado actual de la conexión. Este es uno de {{anch("Ready state constants")}}. <strong>Solo lectura.</strong></td>
+   <td>El estado actual de la conexión. Este es uno de <a href="#ready_state_constants">Ready state constants</a>. <strong>Solo lectura.</strong></td>
   </tr>
   <tr>
    <td><code>url</code></td>
@@ -273,81 +273,7 @@ socket.addEventListener('message', function (event) {
 
 <h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Sub-protocol support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("6.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("7.0")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Sub-protocol support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("7.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Starting in Gecko 6.0 {{geckoRelease("6.0")}}, the constructor is prefixed; you will need to use <code>MozWebSocket()</code>: <code>var mySocket = new MozWebSocket("http://www.example.com/socketserver");</code></p>
-
-<p>The <code>extensions</code> attribute was not supported in Gecko until Gecko 8.0.</p>
-
-<p>Prior to Gecko 11.0 {{geckoRelease("11.0")}}, outbound messages sent using the <a href="#send()">send()</a> method were limited to 16 MB. They can now be up to 2 GB in size.</p>
+{{Compat("api.WebSocket")}}
 
 <h2 id="Referencias_adicionales">Referencias adicionales</h2>
 

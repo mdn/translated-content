@@ -27,7 +27,9 @@ La valeur retournée est un masque de bits avec les valeurs suivantes :
 
 ## Syntaxe
 
-    node.compareDocumentPosition( otherNode )
+```js
+node.compareDocumentPosition( otherNode )
+```
 
 ## Exemple
 
@@ -41,7 +43,7 @@ if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWI
 }
 ```
 
-> **Note :** Parce que le résultat renvoyé par\* \*`compareDocumentPosition` est un masque de bits, des [opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_binaires) doivent être utilisés pour des résultats significatifs.
+> **Note :** Parce que le résultat renvoyé par `compareDocumentPosition` est un masque de bits, des [opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_binaires) doivent être utilisés pour des résultats significatifs.
 
 > **Note :** La première instruction utilise l' `item(0)` de la méthode [NodeList](/en-US/docs/Web/API/NodeList/item) , qui est l'équivalent de `getElementsByTagName('head')[0].`
 
@@ -49,7 +51,7 @@ if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWI
 
 | Spécification                                                                                                                        | Statut                           | Commentaire         |
 | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#dom-node-comparedocumentposition','Node.compareDocumentPosition()')}}     | {{Spec2('DOM WHATWG')}} |                     |
+| {{SpecName('DOM WHATWG','#dom-node-comparedocumentposition','Node.compareDocumentPosition()')}}     | {{Spec2('DOM WHATWG')}} |                     |
 | {{SpecName('DOM3 Core','core.html#Node3-compareDocumentPosition','Node.compareDocumentPosition()')}} | {{Spec2('DOM3 Core')}}     | Définition initiale |
 
 ## Compatibilité des navigateurs

@@ -18,7 +18,9 @@ La méthode statique **`Reflect.get()`** est une fonction qui permet d'obtenir u
 
 ## Syntaxe
 
-    Reflect.get(cible, cléPropriété[, récepteur])
+```js
+Reflect.get(cible, cléPropriété[, récepteur])
+```
 
 ### Paramètres
 
@@ -64,7 +66,7 @@ Reflect.get(obj, "toto"); // "tototruc"
 | Spécification                                                                | État                         | Commentaires        |
 | ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-reflect.get', 'Reflect.get')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-reflect.get', 'Reflect.get')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-reflect.get', 'Reflect.get')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilité des navigateurs
 

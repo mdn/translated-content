@@ -7,13 +7,13 @@ translation_of: Web/API/XMLHttpRequest/responseXML
 ---
 <p>{{APIRef('XMLHttpRequest')}}</p>
 
-<p><strong>XMLHttpRequest.responseXML </strong>属性是一个只读值，它返回一个包含请求检索的HTML或XML的{{domxref("Document")}}，如果请求未成功，尚未发送，或者检索的数据无法正确解析为 XML 或 HTML，则为 null。默认是当作“text / xml” 来解析。当 {{domxref("XMLHttpRequest.responseType", "responseType")}} 设置为 “document” 并且请求已异步执行时，响应将被当作 “text / html” 来解析。<code>responseXML</code> 对于任何其他类型的数据以及 <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URLs</a> 为 null。</p>
+<p><strong>XMLHttpRequest.responseXML </strong>属性是一个只读值，它返回一个包含请求检索的 HTML 或 XML 的{{domxref("Document")}}，如果请求未成功，尚未发送，或者检索的数据无法正确解析为 XML 或 HTML，则为 null。默认是当作“text / xml” 来解析。当 {{domxref("XMLHttpRequest.responseType", "responseType")}} 设置为 “document” 并且请求已异步执行时，响应将被当作 “text / html” 来解析。<code>responseXML</code> 对于任何其他类型的数据以及 <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URLs</a> 为 null。</p>
 
 <div class="note">
 <p><code>responseXML</code> 在这个属性的历史堪称神器，它可以同时在 HTML 和 XML 中工作</p>
 </div>
 
-<p>如果服务器没有明确指出 {{HTTPHeader("Content-Type")}} 头是 <code>"text/xml"</code> 还是 <code>"application/xml"</code>, 你可以使用{{domxref("XMLHttpRequest.overrideMimeType()")}} 强制 <code>XMLHttpRequest</code> 解析为 XML.</p>
+<p>如果服务器没有明确指出 {{HTTPHeader("Content-Type")}} 头是 <code>"text/xml"</code> 还是 <code>"application/xml"</code>, 你可以使用{{domxref("XMLHttpRequest.overrideMimeType()")}} 强制 <code>XMLHttpRequest</code> 解析为 XML。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -22,13 +22,13 @@ translation_of: Web/API/XMLHttpRequest/responseXML
 
 <h3 id="值">值</h3>
 
-<p> {{domxref("Document")}} 中包含从 {{domxref("XMLHttpRequest")}} 中收到的 HTML 节点或解析后的 XML 节点，也可能是在没有收到任何数据或数据类型错误的情况下返回的 null.</p>
+<p> {{domxref("Document")}} 中包含从 {{domxref("XMLHttpRequest")}} 中收到的 HTML 节点或解析后的 XML 节点，也可能是在没有收到任何数据或数据类型错误的情况下返回的 null。</p>
 
 <h3 id="例外">例外</h3>
 
 <dl>
  <dt><code>InvalidStateError</code></dt>
- <dd>{{domxref("XMLHttpRequest.responseType", "responseType")}} 既不是 <code>"document"</code> 也不是空字符串 (接收的数据应是XML 或 HTML).</dd>
+ <dd>{{domxref("XMLHttpRequest.responseType", "responseType")}} 既不是 <code>"document"</code> 也不是空字符串 (接收的数据应是 XML 或 HTML)。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -72,59 +72,7 @@ xhr.send(null);</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)<sup>[1]</sup></th>
-   <th>Microsoft Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在 Firefox 51 之前, 解析收到数据的错误会在 {{domxref("Document")}} 的顶部添加一个 <code>&lt;parsererror&gt;</code> 节点，并且在任何状态下返回 Document 。这是不符合规范的。从 Firefox 51开始，这种情况可以正确的返回 null。</p>
+{{Compat("api.XMLHttpRequest.responseXML")}}
 
 <h2 id="了解更多">了解更多</h2>
 

@@ -21,8 +21,10 @@ La méthode `put()` permet d'ajouter ou de mettre à jour. Si on souhaite unique
 
 ## Syntaxe
 
-    var request = objectStore.put(monElement);
-    var request = objectStore.put(monElement, cleOptionnelle);
+```js
+var request = objectStore.put(monElement);
+var request = objectStore.put(monElement, cleOptionnelle);
+```
 
 ### Paramètres
 
@@ -75,12 +77,12 @@ Cette méthode peut lever une de ces exceptions {{domxref("DOMException")}} :
           </li>
           <li>
             Le magasin d'objet utilise des clés en ligne (<em>in-line keys</em
-            >), ne  dispose pas d'un générateur de clés et le paramètre pour la
+            >), ne dispose pas d'un générateur de clés et le paramètre pour la
             clé n'a pas été utilisé.
           </li>
           <li>
             Le magasin d'objet utilise des clés en ligne (<em>in-line keys</em
-            >), ne  dispose pas d'un générateur de clés et le chemin de clé du
+            >), ne dispose pas d'un générateur de clés et le chemin de clé du
             magasin d'objet ne déclenche pas une clé valide.
           </li>
           <li>
@@ -148,7 +150,7 @@ objectStoreTitleRequest.onsuccess = function() {
 
 | Spécification                                                                                                            | État                         | Commentaires |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-put-IDBRequest-any-value-any-key', 'put()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-put-IDBRequest-any-value-any-key', 'put()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

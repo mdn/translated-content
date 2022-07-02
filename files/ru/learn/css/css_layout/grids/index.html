@@ -60,7 +60,7 @@ translation_of: Learn/CSS/CSS_layout/Grids
 
 <p>Начните с создания локальной копии нашего образца <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid.html">simple-grid.html</a> файла, который содержит следующую разметку в своём теле.</p>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="row"&gt;
     &lt;div class="col"&gt;1&lt;/div&gt;
     &lt;div class="col"&gt;2&lt;/div&gt;
@@ -89,7 +89,7 @@ translation_of: Learn/CSS/CSS_layout/Grids
 
 <p>В элементе {{htmlelement ("style")}} добавьте следующий код, который даёт контейнеру ширину 980 пикселей с отступом с правой стороны 20 пикселей. Это даёт нам 960 пикселей для нашей общей ширины столбца/желоба - в этом случае отступы вычитаются из общей ширины содержимого, потому что мы установили {{cssxref ("box-sizing")}} в рамку по всем элементам на сайте (см. <a href="/en-US/docs/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely">Changing the box model completely</a> для большего объяснения).</p>
 
-<pre class="brush: css notranslate">* {
+<pre class="brush: css">* {
   box-sizing: border-box;
 }
 
@@ -105,7 +105,7 @@ body {
 
 <p>Теперь используйте контейнер строк, который обёрнут вокруг каждой строки сетки, чтобы очистить одну строку от другой. Добавьте следующее правило ниже предыдущего:</p>
 
-<pre class="brush: css notranslate">.row {
+<pre class="brush: css">.row {
   clear: both;
 }</pre>
 
@@ -115,7 +115,7 @@ body {
 
 <p>Нам нужно вычесть это из нашей общей ширины 960 пикселей, что даёт нам 720 пикселей для наших столбцов. Если мы разделим это на 12, мы знаем, что каждый столбец должен быть 60 пикселей в ширину. Наш следующий шаг - создать правило для класса <code>.col</code>, плавающее влево, предоставив ему {{cssxref ("margin-left")}} из 20 пикселей для формирования желоба и {{cssxref ("width" )}} из 60 пикселей. Добавьте нижеследующее правило в CSS:</p>
 
-<pre class="brush: css notranslate">.col {
+<pre class="brush: css">.col {
   float: left;
   margin-left: 20px;
   width: 60px;
@@ -132,7 +132,7 @@ body {
 
 <p>Добавьте нижеследующую часть вашего CSS:</p>
 
-<pre class="brush: css notranslate">/ * Ширина двух колонок (120 пикселей) плюс одна ширина желоба (20 пикселей) */
+<pre class="brush: css">/ * Ширина двух колонок (120 пикселей) плюс одна ширина желоба (20 пикселей) */
 .col.span2 { width: 140px; }
 / * Три ширины столбца (180 пикселей) плюс две ширины желоба (40 пикселей) * /
 .col.span3 { width: 220px; }
@@ -155,7 +155,7 @@ body {
 
 <p>Попробуйте изменить классы на своих элементах или даже добавить и удалить некоторые контейнеры, чтобы увидеть, как вы можете изменять макет. Например, вы можете сделать вторую строку следующим образом:</p>
 
-<pre class="brush: css notranslate">&lt;div class="row"&gt;
+<pre class="brush: css">&lt;div class="row"&gt;
   &lt;div class="col span8"&gt;13&lt;/div&gt;
   &lt;div class="col span4"&gt;14&lt;/div&gt;
 &lt;/div&gt;</pre>
@@ -168,17 +168,17 @@ body {
 
 <p>Уравнение, которое превращает фиксированную ширину в гибкую, основанную на процентах, выглядит следующим образом.</p>
 
-<pre class="notranslate">target / context = result</pre>
+<pre>target / context = result</pre>
 
 <p>Для нашей ширины столбца наша <strong>целевая ширина</strong> составляет 60 пикселей, а наш <strong>контекст</strong>  960 пикселей. Для расчёта процента мы можем использовать следующее.</p>
 
-<pre class="notranslate">60 / 960 = 0.0625</pre>
+<pre>60 / 960 = 0.0625</pre>
 
 <p>Затем мы перемещаем десятичные точки на 2 места, давая нам процент от 6,25%. Таким образом, в нашем CSS мы можем заменить ширину столбца 60 пикселей на 6,25%.</p>
 
 <p>Мы должны сделать то же самое с нашей шириной желоба:</p>
 
-<pre class="notranslate">20 / 960 = 0.02083333333</pre>
+<pre>20 / 960 = 0.02083333333</pre>
 
 <p>Поэтому нам нужно заменить 20 пикселей {{cssxref ("margin-left")}} на наше правило <code>.col</code>  20 пикселей {{cssxref ("padding-right")}} на <code>.wrapper </code>с 2.08333333%.</p>
 
@@ -188,7 +188,7 @@ body {
 
 <p>Обновите второе правило CSS (с помощью селектора <code>.wrapper</code>) следующим образом:</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 980px;
   margin: 0 auto;
@@ -202,7 +202,7 @@ body {
 
 <p>Затем обновите четвёртое правило CSS (с селектором <code>.col</code>) следующим образом:</p>
 
-<pre class="brush: css notranslate">.col {
+<pre class="brush: css">.col {
   float: left;
   margin-left: 2.08333333%;
   width: 6.25%;
@@ -213,7 +213,7 @@ body {
 
 <p>Обновите нижний блок правил CSS следующим образом:</p>
 
-<pre class="brush: css notranslate">/* Two column widths (12.5%) plus one gutter width (2.08333333%) */
+<pre class="brush: css">/* Two column widths (12.5%) plus one gutter width (2.08333333%) */
 .col.span2 { width: 14.58333333%; }
 /* Three column widths (18.75%) plus two gutter widths (4.1666666) */
 .col.span3 { width: 22.91666666%; }
@@ -240,13 +240,13 @@ body {
 
 <p>В любом случае, вернёмся к нашим сетям! Любой столбец, который охватывает более одного столбца нашей сетки, имеет общую ширину 6,25%, умноженную на количество столбцов, спаренных плюс 2.08333333%, умноженное на количество желобов (которые всегда будут числом столбцов минус 1). Функция <code>calc () </code>позволяет нам делать это вычисление прямо внутри значения ширины, поэтому для любого элемента, охватывающего 4 столбца, мы можем это сделать, например:</p>
 
-<pre class="brush: css notranslate">.col.span4 {
+<pre class="brush: css">.col.span4 {
   width: calc((6.25%*4) + (2.08333333%*3));
 }</pre>
 
 <p>Попробуйте заменить нижний блок правил следующим, а затем перезагрузите его в браузере, чтобы узнать, получаете ли вы тот же результат:</p>
 
-<pre class="brush: css notranslate">.col.span2 { width: calc((6.25%*2) + 2.08333333%); }
+<pre class="brush: css">.col.span2 { width: calc((6.25%*2) + 2.08333333%); }
 .col.span3 { width: calc((6.25%*3) + (2.08333333%*2)); }
 .col.span4 { width: calc((6.25%*4) + (2.08333333%*3)); }
 .col.span5 { width: calc((6.25%*5) + (2.08333333%*4)); }
@@ -272,7 +272,7 @@ body {
 
 <p>Это не единственный подход. Вместо этого вы можете выбрать свою сетку, а затем добавить информацию о размерах в правила для существующих семантических классов. Например, если у вас есть {{htmlelement ("div")}} с классом <code>content</code> в нем, который вы хотите разбить на 8 столбцов, вы можете скопировать по ширине из класса <code>span8</code>, предоставив вам следующее правило:</p>
 
-<pre class="brush: css notranslate">.content {
+<pre class="brush: css">.content {
   width: calc((6.25%*8) + (2.08333333%*7));
 }</pre>
 
@@ -290,23 +290,23 @@ body {
 
 <p>Давайте создадим класс в нашем CSS, который будет смещать элемент контейнера на одну ширину столбца. Добавьте нижеследующую часть вашего CSS:</p>
 
-<pre class="brush: css notranslate">.offset-by-one {
+<pre class="brush: css">.offset-by-one {
   margin-left: calc(6.25% + (2.08333333%*2));
 }</pre>
 
 <p>Или если вы предпочитаете самостоятельно рассчитать проценты, используйте это:</p>
 
-<pre class="brush: css notranslate">.offset-by-one {
+<pre class="brush: css">.offset-by-one {
   margin-left: 10.41666666%;
 }</pre>
 
 <p>Теперь вы можете добавить этот класс в любой контейнер, в котором вы хотите оставить пустое пространство с одним столбцом в левой части окна. Например, если у вас есть это в вашем HTML:</p>
 
-<pre class="brush: html notranslate">&lt;div class="col span6"&gt;14&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div class="col span6"&gt;14&lt;/div&gt;</pre>
 
 <p>Попробуйте заменить его на</p>
 
-<pre class="brush: html notranslate">&lt;div class="col span5 offset-by-one"&gt;14&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div class="col span5 offset-by-one"&gt;14&lt;/div&gt;</pre>
 
 <div class="note">
 <p><strong>Примечание</strong>: Обратите внимание, что вам необходимо уменьшить количество столбцов, чтобы освободить место для смещения!</p>
@@ -334,7 +334,7 @@ body {
 
 <p>Однако flexbox никогда не разрабатывался как сетчатая система и создаёт новый набор проблем при использовании в качестве одного. В качестве простого примера мы можем использовать тот же пример разметки, который мы использовали выше, и использовать следующий CSS для стилей классов-оболочек (<code>wrapper</code>), <code>row</code> и <code>col</code> классов:</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 980px;
   margin: 0 auto;
@@ -387,7 +387,7 @@ body {
 
 <p>Включите скелет и нормализуйте CSS на странице HTML, добавив следующее в голову:</p>
 
-<pre class="brush: html notranslate">&lt;link href="normalize.css" rel="stylesheet"&gt;
+<pre class="brush: html">&lt;link href="normalize.css" rel="stylesheet"&gt;
 &lt;link href="skeleton.css" rel="stylesheet"&gt;</pre>
 
 <p>Скелет включает в себя больше, чем сетку - он также содержит CSS для типографики и других элементов страницы, которые вы можете использовать в качестве отправной точки. На данный момент мы оставим их по умолчанию, но именно эта сетка нас действительно интересует.</p>
@@ -398,7 +398,7 @@ body {
 
 <p>Мы будем использовать аналогичный HTML для нашего предыдущего примера. Добавьте в свой HTML-код следующее:</p>
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
   &lt;div class="row"&gt;
     &lt;div class="col"&gt;1&lt;/div&gt;
     &lt;div class="col"&gt;2&lt;/div&gt;
@@ -426,7 +426,7 @@ body {
 
 <p>Вы можете посмотреть в файле skeleton.css, чтобы увидеть CSS, который используется, когда мы применяем этот класс. <code>&lt;div&gt;</code> центрируется с использованием <code>auto</code> левого и правого полей, а отступы в 20 пикселей применяются слева и справа. Скелет также устанавливает свойство {{cssxref ("box-sizing")}} в <code>border-box</code>, как мы делали это раньше, поэтому дополнение и границы этого элемента будут включены в общую ширину.</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   position: relative;
   width: 100%;
   max-width: 960px;
@@ -441,7 +441,7 @@ body {
 
 <p>Добавьте их сейчас, как показано в следующем фрагменте:</p>
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
   &lt;div class="row"&gt;
     &lt;div class="one column"&gt;1&lt;/div&gt;
     &lt;div class="one column"&gt;2&lt;/div&gt;
@@ -452,7 +452,7 @@ body {
 
 <p>Затем дайте контейнеры во втором классе классов, объясняющие количество столбцов, которые они должны охватывать, например:</p>
 
-<pre class="brush: html notranslate">&lt;div class="row"&gt;
+<pre class="brush: html">&lt;div class="row"&gt;
   &lt;div class="one column"&gt;13&lt;/div&gt;
   &lt;div class="six columns"&gt;14&lt;/div&gt;
   &lt;div class="three columns"&gt;15&lt;/div&gt;
@@ -467,7 +467,7 @@ body {
 
 <p>Если вы посмотрите в файле skeleton.css, вы увидите, как это работает. Например, у Skeleton определены следующие элементы стиля с добавленными к ним классами «три столбца».</p>
 
-<pre class="brush: css notranslate">.three.columns { width: 22%; }</pre>
+<pre class="brush: css">.three.columns { width: 22%; }</pre>
 
 <p>Весь Skeleton (или любая другая структура сетки) выполняет настройку предопределённых классов, которые вы можете использовать, добавив их в свою разметку. Это точно так же, как если бы вы сами делали расчёт этих процентов.</p>
 
@@ -491,7 +491,7 @@ body {
 
 <p>Сначала начните с создания локальной копии файла <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/css-grid.html">css-grid.html</a>. Он содержит следующую разметку:</p>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="col"&gt;1&lt;/div&gt;
   &lt;div class="col"&gt;2&lt;/div&gt;
   &lt;div class="col"&gt;3&lt;/div&gt;
@@ -514,7 +514,7 @@ body {
 
 <p>Теперь добавьте следующее в элемент {{htmlelement ("style")}}:</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   width: 90%;
   max-width: 960px;
   margin: 0 auto;
@@ -539,13 +539,13 @@ body {
 
 <p>Чтобы создать контейнеры, которые охватывают несколько треков столбцов в сетке, мы можем использовать свойство {{cssxref ("grid-column")}}. Чтобы охватить 6 столбцов, например:</p>
 
-<pre class="brush: css notranslate">.span6 {
+<pre class="brush: css">.span6 {
   grid-column: auto / span 6;
 }</pre>
 
 <p>И для span 3:</p>
 
-<pre class="brush: css notranslate">.span3 {
+<pre class="brush: css">.span3 {
   grid-column: auto / span 3;
 }</pre>
 
@@ -553,7 +553,7 @@ body {
 
 <p>Добавьте нижеследующую часть вашего CSS:</p>
 
-<pre class="brush: css notranslate">.span2 { grid-column: auto / span 2;}
+<pre class="brush: css">.span2 { grid-column: auto / span 2;}
 .span3 { grid-column: auto / span 3;}
 .span4 { grid-column: auto / span 4;}
 .span5 { grid-column: auto / span 5;}
@@ -571,7 +571,7 @@ body {
 
 <p>Вы можете проверить это, заменив последние 4 col <code>&lt;div&gt;</code> s следующим:</p>
 
-<pre class="brush: css notranslate">&lt;div class="col"&gt;13some&lt;br&gt;content&lt;/div&gt;
+<pre class="brush: css">&lt;div class="col"&gt;13some&lt;br&gt;content&lt;/div&gt;
 &lt;div class="col span6"&gt;14this&lt;br&gt;is&lt;br&gt;more&lt;br&gt;content&lt;/div&gt;
 &lt;div class="col span3"&gt;15this&lt;br&gt;is&lt;br&gt;less&lt;/div&gt;
 &lt;div class="col span2"&gt;16&lt;/div&gt;</pre>
@@ -590,17 +590,17 @@ body {
 
 <p>С сетками CSS нам не нужно толкать вещи вдоль полей, чтобы их компенсировать. Попробуйте внести эти изменения в свой CSS:</p>
 
-<pre class="brush: css notranslate">.content {
+<pre class="brush: css">.content {
   grid-column: 2 / 8;
 }</pre>
 
-<pre class="brush: html notranslate">&lt;div class="col span2 content"&gt;16&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div class="col span2 content"&gt;16&lt;/div&gt;</pre>
 
 <p>Контейнер 16 теперь будет охватывать столбцы с 2 по 8, в следующей доступной строке, где он может поместиться.</p>
 
 <p>Мы можем так же легко группировать строки так же, как и столбцы:</p>
 
-<pre class="brush: css notranslate">.content {
+<pre class="brush: css">.content {
   grid-column: 2 / 8;
   grid-row: 3 / 5;
 }</pre>

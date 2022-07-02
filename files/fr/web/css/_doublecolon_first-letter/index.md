@@ -9,7 +9,7 @@ translation_of: Web/CSS/::first-letter
 ---
 {{CSSRef}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::first-letter`** sélectionne la première lettre de la première ligne d'un bloc, si elle n'est pas précédée par un quelconque autre contenu (comme une image ou un tableau en ligne) sur sa ligne.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::first-letter`** sélectionne la première lettre de la première ligne d'un bloc, si elle n'est pas précédée par un quelconque autre contenu (comme une image ou un tableau en ligne) sur sa ligne.
 
 ```css
 /* Sélectionne la première lettre */
@@ -47,7 +47,7 @@ La première lettre d'un élément n'est pas forcément évidente à identifier 
 - D'autre part, certaines langues possèdent des digraphes qui sont mis en majuscule ensemble, comme le `IJ` en néerlandais. Dans ces rares cas, les deux lettres du digraphes doivent être sélectionnées par le pseudo-élément `::first-letter`. (Ceci est mal supporté par les navigateurs, reportez vous au [tableau de compatibilité des navigateurs](/fr/docs/Web/CSS/::first-letter#compatibilit%c3%a9_des_navigateurs)).
 - Enfin, une combinaison du pseudo-élément {{cssxref("::before")}} et de la propriété {{cssxref("content")}} peut injecter du texte au début de l'élément. Dans ce cas, `::first-letter` sélectionnera la première lettre du contenu inséré.
 
-Une première ligne n'a de signification que dans une [boîte englobante](/fr/docs/Web/Guide/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes), ainsi le pseudo-élément `::first-letter` n'a un effet que sur les éléments ayant une valeur {{cssxref("display")}} correspondant à `block`, `inline-block`, `table-cell`, `list-item` ou `table-caption`. Dans tous les autres cas, `::first-letter` n'a pas d'effet.
+Une première lettre n'a de signification que dans une [boîte englobante](/fr/docs/Web/CSS/Visual_formatting_model#les_%C3%A9l%C3%A9ments_de_bloc_et_les_bo%C3%AEtes_de_bloc), ainsi le pseudo-élément `::first-letter` n'a un effet que sur les éléments ayant une valeur {{cssxref("display")}} correspondant à `block`, `inline-block`, `table-cell`, `list-item` ou `table-caption`. Dans tous les autres cas, `::first-letter` n'a pas d'effet.
 
 ## Propriétés utilisables
 
@@ -59,7 +59,7 @@ Seul un petit sous-groupe de propriétés CSS peuvent être utilisées dans un b
 - Toutes les propriétés liées à `padding` : {{cssxref("padding")}}, {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.
 - Toutes les propriétés liées aux bordures : les raccourcis {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-radius")}}, {{cssxref("border-image")}}, et les propriétés détaillées.
 - La propriété {{cssxref("color")}} .
-- Les propriétés  {{cssxref("text-decoration")}}, {{cssxref("text-shadow")}}, {{cssxref("text-transform")}}, {{cssxref("letter-spacing")}}, {{cssxref("word-spacing")}} (lorsqu'approprié), {{cssxref("line-height")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{cssxref("float")}}, {{cssxref("vertical-align")}} (seulement si `float` vaut `none`).
+- Les propriétés  {{cssxref("text-decoration")}}, {{cssxref("text-shadow")}}, {{cssxref("text-transform")}}, {{cssxref("letter-spacing")}}, {{cssxref("word-spacing")}} (lorsqu'approprié), {{cssxref("line-height")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{cssxref("float")}}, {{cssxref("vertical-align")}} (seulement si `float` vaut `none`).
 
 Puisque cette liste sera complétée dans l'avenir, il est recommandé de ne pas utiliser d'autres propriétés dans un bloc de déclaration, de manière à concevoir un CSS pérenne.
 

@@ -18,7 +18,9 @@ La méthode **`Object.values()`** renvoie un tableau contenant les valeurs des p
 
 ## Syntaxe
 
-    Object.values(obj)
+```js
+Object.values(obj)
+```
 
 ### Paramètres
 
@@ -69,7 +71,7 @@ Afin d'ajouter le support pour `Object.values` dans des environnements plus anci
 
 | Spécification                                                                        | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-object.values', 'Object.values')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-object.values', 'Object.values')}} | {{Spec2('ESDraft')}} |                      |
 | {{SpecName('ES8', '#sec-object.values', 'Object.values')}}         | {{Spec2('ES8')}}         | Définition initiale. |
 
 ## Compatibilité des navigateurs

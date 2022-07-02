@@ -76,10 +76,8 @@ function use_PerformanceEntry_methods() {
 
 | Spécification                                                                                                                        | Statut                                                   | Commentaire          |
 | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performance-getentries',
-        'getEntries()')}} | {{Spec2('Performance Timeline Level 2')}} |                      |
-| {{SpecName('Performance Timeline', '#dom-performance-getentries',
-        'getEntries()')}}             | {{Spec2('Performance Timeline')}}             | Définition initiale. |
+| {{SpecName('Performance Timeline Level 2', '#dom-performance-getentries', 'getEntries()')}} | {{Spec2('Performance Timeline Level 2')}} |                      |
+| {{SpecName('Performance Timeline', '#dom-performance-getentries', 'getEntries()')}}             | {{Spec2('Performance Timeline')}}             | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

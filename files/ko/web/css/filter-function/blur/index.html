@@ -1,0 +1,41 @@
+---
+title: blur()
+slug: Web/CSS/filter-function/blur
+tags:
+  - CSS
+  - CSS Function
+  - Filter Effects
+  - Reference
+translation_of: Web/CSS/filter-function/blur()
+original_slug: Web/CSS/filter-function/blur()
+---
+<div>{{cssref}}</div>
+
+<p><span class="seoSummary"><strong><code>blur()</code></strong> <a href="/ko/docs/Web/CSS">CSS</a> 함수는 주어진 이미지에 <a href="https://en.wikipedia.org/wiki/Gaussian_blur">가우시안 블러</a>를 적용합니다</span>. 반환 값은 {{cssxref("&lt;filter-function&gt;")}}입니다.</p>
+
+<div>{{EmbedInteractiveExample("pages/css/function-blur.html")}}</div>
+
+
+
+<h2 id="구문">구문</h2>
+
+<pre class="syntaxbox">blur(<em>radius</em>)</pre>
+
+<h3 id="매개변수">매개변수</h3>
+
+<dl>
+ <dt><code>radius</code></dt>
+ <dd>{{cssxref("&lt;length&gt;")}}로 지정한 블러 효과의 지름. 가우시안 함수의 표준 편차, 즉 화면에 보이는 픽셀의 색상이 어느 범위까지 섞일지를 지정합니다. 따라서 큰 값은 이미지를 더 흐리게 만듭니다. <code>0</code>은 주어진 입력 결과를 그대로 반환합니다. 보간 시, 누락 값은 0입니다.</dd>
+</dl>
+
+<h2 id="예제">예제</h2>
+
+<pre class="brush: css">blur(0)        /* 변화 없음 */
+blur(8px)      /* 8px 블러 */
+blur(1.17rem)  /* 1.17rem 블러 */</pre>
+
+<h2 id="같이_보기">같이 보기</h2>
+
+<ul>
+ <li>{{cssxref("&lt;filter-function&gt;")}}</li>
+</ul>

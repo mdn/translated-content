@@ -11,11 +11,13 @@ translation_of: Web/API/DedicatedWorkerGlobalScope/name
 ---
 {{APIRef("Web Workers API")}}
 
-La propriété en lecture seule **`name`** de l'interface {{domxref("DedicatedWorkerGlobalScope")}} renvoie le nom qui a été (facultativement) donné au  {{domxref("Worker")}} lors de sa création. C'est le nom que le constructeur {{domxref("Worker.Worker", "Worker()")}} peut transmettre pour obtenir une référence à {{domxref("DedicatedWorkerGlobalScope")}}.
+La propriété en lecture seule **`name`** de l'interface {{domxref("DedicatedWorkerGlobalScope")}} renvoie le nom qui a été (facultativement) donné au  {{domxref("Worker")}} lors de sa création. C'est le nom que le constructeur {{domxref("Worker.Worker", "Worker()")}} peut transmettre pour obtenir une référence à {{domxref("DedicatedWorkerGlobalScope")}}.
 
 ## Syntaxe
 
-    var nameObj = self.name;
+```js
+var nameObj = self.name;
+```
 
 ### Valeur
 
@@ -41,7 +43,7 @@ self.name
 
 | Spécification                                                                                        | Statut                           | Commentaire |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', '#dom-dedicatedworkerglobalscope-name', 'name')}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', '#dom-dedicatedworkerglobalscope-name', 'name')}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

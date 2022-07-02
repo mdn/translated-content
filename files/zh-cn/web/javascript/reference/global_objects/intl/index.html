@@ -8,13 +8,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 ---
 <div>{{JSRef}}</div>
 
-<p class="summary"><strong><code>Intl</code></strong> 对象是 ECMAScript 国际化 API 的一个命名空间，它提供了精确的字符串对比、数字格式化，和日期时间格式化。{{jsxref("Collator")}}，{{jsxref("NumberFormat")}} 和 {{jsxref("DateTimeFormat")}} 对象的构造函数是 <code>Intl</code> 对象的属性。本页文档内容包括了这些属性，以及国际化使用的构造器和其他语言的方法等常见的功能。</p>
+<p><strong><code>Intl</code></strong> 对象是 ECMAScript 国际化 API 的一个命名空间，它提供了精确的字符串对比、数字格式化，和日期时间格式化。{{jsxref("Collator")}}，{{jsxref("NumberFormat")}} 和 {{jsxref("DateTimeFormat")}} 对象的构造函数是 <code>Intl</code> 对象的属性。本页文档内容包括了这些属性，以及国际化使用的构造器和其他语言的方法等常见的功能。</p>
 
 <h2 id="属性">属性</h2>
 
 <dl>
  <dt>{{jsxref("Global_Objects/Collator", "Intl.Collator")}}</dt>
- <dd>collators的构造函数，用于启用对语言敏感的字符串比较的对象。</dd>
+ <dd>collators 的构造函数，用于启用对语言敏感的字符串比较的对象。</dd>
  <dt>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</dt>
  <dd>用于启用语言敏感的日期和时间格式的对象的构造函数。</dd>
  <dt>{{jsxref("Global_Objects/ListFormat", "Intl.ListFormat")}}</dt>
@@ -36,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 
 <h2 id="语言区域识别和判定">语言区域识别和判定</h2>
 
-<p>国际化的构造函数和其他构造函数的几个语言敏感的方法（可参考下方的{{anch("See_also", "参见")}}）一样，使用同样的模式来识别语言区域和确定使用哪一种语言格式：他们都接收 <code>locales</code> 和 <code>options</code> 参数，使用 <code>options.localeMatcher</code> 属性指定的一个算法来对比应用请求的和支持的语言区域，来确定使用哪一个语言区域。</p>
+<p>国际化的构造函数和其他构造函数的几个语言敏感的方法（可参考下方的<a href="#参见">参见</a>）一样，使用同样的模式来识别语言区域和确定使用哪一种语言格式：他们都接收 <code>locales</code> 和 <code>options</code> 参数，使用 <code>options.localeMatcher</code> 属性指定的一个算法来对比应用请求的和支持的语言区域，来确定使用哪一个语言区域。</p>
 
 <h3 id="locales_参数"><code>locales</code> 参数</h3>
 

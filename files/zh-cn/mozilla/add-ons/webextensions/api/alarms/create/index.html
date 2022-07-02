@@ -15,13 +15,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/create
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>创建一个新的alarm.</p>
+<p>创建一个新的 alarm.</p>
 
 <h2 id="使用语法">使用语法</h2>
 
 <pre class="syntaxbox brush:js">browser.alarms.create(
-  name,              // 可选的字符串(string)类型
-  alarmInfo          // 可选的对象(object)类型
+  name,              // 可选的字符串 (string) 类型
+  alarmInfo          // 可选的对象 (object) 类型
 )
 </pre>
 
@@ -29,25 +29,25 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/create
 
 <dl>
  <dt><code>name</code>{{optional_inline}}</dt>
- <dd><code>字符串(string)类型。</code>alarm的名称。默认为空的字符串。</dd>
- <dd>alarm的名称可以在{{WebExtAPIRef('alarms.get()')}}方法和{{WebExtAPIRef('alarms.clear()')}}方法中引用。同时它也可以通过{{WebExtAPIRef('alarms.onAlarm')}}监听方法传入的参数对象{{WebExtAPIRef('alarms.Alarm')}}的name属性访问到。</dd>
- <dd>Alarm的名称是唯一的 (在单个附件范围内). 如果传入了已经在这个附件存在的名称， 原来的同名alarm会被移除并且没有警告。</dd>
+ <dd>字符串类型。alarm 的名称。默认为空的字符串。</dd>
+ <dd>alarm 的名称可以在{{WebExtAPIRef('alarms.get()')}}方法和{{WebExtAPIRef('alarms.clear()')}}方法中引用。同时它也可以通过{{WebExtAPIRef('alarms.onAlarm')}}监听方法传入的参数对象{{WebExtAPIRef('alarms.Alarm')}}的 name 属性访问到。</dd>
+ <dd>Alarm 的名称是唯一的 (在单个附件范围内). 如果传入了已经在这个附件存在的名称， 原来的同名 alarm 会被移除并且没有警告。</dd>
  <dt><code>alarmInfo</code>{{optional_inline}}</dt>
  <dd>
- <p><code>对象(object)类型</code>. 你可以对过它来指定什么时间alarm会开始触发，其值可以是一个具体的时间值或者是一个延时（从alarm设置开始）。为了让alarm能复现，需要指定<code>periodInMinutes。</code></p>
+ <p><code>对象(object)类型</code>. 你可以对过它来指定什么时间 alarm 会开始触发，其值可以是一个具体的时间值或者是一个延时（从 alarm 设置开始）。为了让 alarm 能复现，需要指定 <code>periodInMinutes</code>。</p>
 
- <p>在Chrome浏览器上，除非附件以非打包(unpackaged)方式加载，alarm的创建每分钟不允许超过一次。如果附件尝试设置<code>delayInMinutes</code><code>为小于1的值，alarm只能在到达1分钟之后才会触发，并且会变成每分钟触发一次。</code></p>
+ <p>在 Chrome 浏览器上，除非附件以非打包 (unpackaged) 方式加载，alarm 的创建每分钟不允许超过一次。如果附件尝试设置 <code>delayInMinutes</code> 为小于1的值，alarm 只能在到达1分钟之后才会触发，并且会变成每分钟触发一次。</p>
 
- <p><code>alarmInfo对象</code>可以设置以下属性:</p>
+ <p><code>alarmInfo</code> 对象可以设置以下属性：</p>
  </dd>
  <dd>
  <dl class="reference-values">
   <dt><code>when</code>{{optional_inline}}</dt>
-  <dd><code>double类型</code>. alarm第一次触发的时间，值为自1970-01-01 00:00:00 UTC过去的毫秒数。请使用<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now">Date.now()</a>来获取</code>1970-01-01 00:00:00 UTC到<code>当前时间过去的毫秒数。如果你设置了when属性，请不要设置delayInMinutes属性。</code></dd>
+  <dd><code>double类型</code>。alarm 第一次触发的时间，值为自 1970-01-01 00:00:00 UTC 过去的毫秒数。请使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now">Date.now()</a></code> 来获取 <code>1970-01-01 00:00:00 UTC</code> 到当前时间过去的毫秒数。如果你设置了when属性，请不要设置 delayInMinutes 属性。</dd>
   <dt><code>delayInMinutes</code>{{optional_inline}}</dt>
-  <dd><code>double类型</code>. alarm设置好到第一次触发之间的分钟数。如果你设置了<code>delayInMinutes属性，请不要设置when属性。</code></dd>
+  <dd><code>double类型</code>. alarm 设置好到第一次触发之间的分钟数。如果你设置了 <code>delayInMinutes</code> 属性，请不要设置 when 属性。</dd>
   <dt><code>periodInMinutes</code>{{optional_inline}}</dt>
-  <dd><code>double类型</code>. 如果设置此属性，alarm会从第一次触发开始每隔<code>periodInMinutes分钟再次触发。如果你没有设置when及delayInMinutes属性，alarm会在alarm设置好之后periodInMinutes分钟第一次触发。如果periodInMinutes属性没有设置，则alarm只会触发一次。</code></dd>
+  <dd><code>double类型</code>. 如果设置此属性，alarm 会从第一次触发开始每隔 <code>periodInMinutes</code> 分钟再次触发。如果你没有设置when及delayInMinutes属性，alarm会在alarm设置好之后periodInMinutes分钟第一次触发。如果periodInMinutes属性没有设置，则alarm只会触发一次。</dd>
  </dl>
  </dd>
 </dl>
@@ -62,7 +62,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/create
 
 <pre class="brush: js">const delayInMinutes = 5;
 
-<span class="pl-smi">browser</span>.<span class="pl-smi">alarms</span>.<span class="pl-en">create</span>({
+browser.alarms.create({
   delayInMinutes
 });</pre>
 

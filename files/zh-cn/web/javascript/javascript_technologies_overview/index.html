@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 
 <p>The major 6th Edition of ECMAScript was officially approved and published as a standard on June 17, 2015 by the ECMA General Assembly. Since then ECMAScript Editions are published on a yearly basis.</p>
 
-<p>ECMA-262（<strong>ECMAScript 4</strong> 或者 <strong>ES4</strong>）第4版的提议本应成为自1999年第3版发布以来的一次重要更新，但是在2008年8月份，ECMAScript第4版被回退到一个代号为<a class="external" href="http://en.wikipedia.org/wiki/ECMAScript#ECMAScript_Harmony">ECMAScript Harmony</a>的项目，像<code>const</code>关键字以及对象代理等内容都被涵盖其中。你可以在<a href="http://wiki.ecmascript.org/doku.php">这里</a>跟踪这个项目的进展。ECMA 委员会已经在 2015年6月17号，正式发布了第6版标准。</p>
+<p>ECMA-262（<strong>ECMAScript 4</strong> 或者 <strong>ES4</strong>）第 4 版的提议本应成为自 1999 年第 3 版发布以来的一次重要更新，但是在 2008 年 8 月份，ECMAScript 第 4 版被回退到一个代号为<a class="external" href="http://en.wikipedia.org/wiki/ECMAScript#ECMAScript_Harmony">ECMAScript Harmony</a>的项目，像<code>const</code>关键字以及对象代理等内容都被涵盖其中。你可以在<a href="http://wiki.ecmascript.org/doku.php">这里</a>跟踪这个项目的进展。ECMA 委员会已经在 2015 年 6 月 17 号，正式发布了第 6 版标准。</p>
 
 <h2 id="国际化_API">国际化 API</h2>
 
@@ -60,11 +60,11 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 
 <h3 id="DOM_的核心">DOM 的核心</h3>
 
-<p>文档对象模型（DOM）是用来表达 HTML、XHTML 及 XML 文档中的对象或与其进行交互的<strong>约定</strong>，它是跨平台的，并且与<strong>编程语言无关</strong>。通过调用<strong>DOM树</strong>上对象的方法可以操纵这些对象。文档对象模型核心是由  {{glossary("W3C")}} 进行标准化的，它将 HTML 和 XML 文档抽象成对象，并在其上定义接口以及操纵这些对象的机制，DOM 定义的元素有：</p>
+<p>文档对象模型（DOM）是用来表达 HTML、XHTML 及 XML 文档中的对象或与其进行交互的<strong>约定</strong>，它是跨平台的，并且与<strong>编程语言无关</strong>。通过调用<strong>DOM 树</strong>上对象的方法可以操纵这些对象。文档对象模型核心是由  {{glossary("W3C")}} 进行标准化的，它将 HTML 和 XML 文档抽象成对象，并在其上定义接口以及操纵这些对象的机制，DOM 定义的元素有：</p>
 
 <ul>
- <li><a href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">DOM核心</a>中定义了文档结构，树模型，以及DOM事件架构，包括： {{domxref("Node")}}、{{domxref("Element")}}、{{domxref("DocumentFragment")}}、{{domxref("Document")}}、{{domxref("DOMImplementation")}}、{{domxref("Event")}}、{{domxref("EventTarget")}} 等等…</li>
- <li><a href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html">DOM事件</a>中包括对于 DOM 事件架构的一个不太严格的定义，以及一些特殊事件。</li>
+ <li><a href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">DOM 核心</a>中定义了文档结构，树模型，以及 DOM 事件架构，包括： {{domxref("Node")}}、{{domxref("Element")}}、{{domxref("DocumentFragment")}}、{{domxref("Document")}}、{{domxref("DOMImplementation")}}、{{domxref("Event")}}、{{domxref("EventTarget")}} 等等…</li>
+ <li><a href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html">DOM 事件</a>中包括对于 DOM 事件架构的一个不太严格的定义，以及一些特殊事件。</li>
  <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html">DOM 元素遍历</a>以及 <a class="external" href="http://html5.org/specs/dom-range.html" title="http://html5.org/specs/dom-range.html">DOM 范围</a>对象等其它内容。</li>
 </ul>
 
@@ -74,9 +74,9 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 
 <p><a href="http://www.whatwg.org/html">HTML</a>，Web 的标记语言，是根据 DOM 定义的。位于 DOM 核心抽象概念之上，HTML 还定义了元素的意义。比如元素的 <code>className</code> 属性以及例如 {{domxref("document.body")}} 这样的 API。</p>
 
-<p>HTML规范同时还约束了元素之间的关系，例如无序列表 {{htmlelement("ul")}} 元素中，只能以 {{htmlelement("li")}} 元素作为子元素来表达列表项。还有就是禁止使用标准中未定义的元素和属性。</p>
+<p>HTML 规范同时还约束了元素之间的关系，例如无序列表 {{htmlelement("ul")}} 元素中，只能以 {{htmlelement("li")}} 元素作为子元素来表达列表项。还有就是禁止使用标准中未定义的元素和属性。</p>
 
-<p>想了解更多关于 {{domxref("Document")}} 对象、{{domxref("Window")}} 对象以及其他DOM元素的信息？请访问 MDN 的 <a href="/zh-CN/docs/Web/API/Document_Object_Model">DOM 文档</a>。</p>
+<p>想了解更多关于 {{domxref("Document")}} 对象、{{domxref("Window")}} 对象以及其他 DOM 元素的信息？请访问 MDN 的 <a href="/zh-CN/docs/Web/API/Document_Object_Model">DOM 文档</a>。</p>
 
 <h2 id="其他值得关注的_API">其他值得关注的 API</h2>
 
@@ -91,6 +91,6 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 
 <h2 id="DOM_浏览器支持">DOM 浏览器支持</h2>
 
-<div>相信每个 Web 开发人员都曾经有过“<a href="http://ejohn.org/blog/the-dom-is-a-mess/">DOM就是一团糟</a>”的体验，因为浏览器对 DOM 的支持千差万别。造成这种局面的主要原因是DOM 规范并未清晰定义很多重要的 DOM 特性。另外，一些浏览器也增加了不兼容的特性（例如 Intenet Explorer 的事件模型）。自 2011 年 6 月以来，W3C，特别是 WHATWG 都在对旧特性进行细节定义，以提高互通性。浏览器也在基于这些更加详细的规范改善它们的实现方式。</div>
+<div>相信每个 Web 开发人员都曾经有过“<a href="http://ejohn.org/blog/the-dom-is-a-mess/">DOM 就是一团糟</a>”的体验，因为浏览器对 DOM 的支持千差万别。造成这种局面的主要原因是 DOM 规范并未清晰定义很多重要的 DOM 特性。另外，一些浏览器也增加了不兼容的特性（例如 Intenet Explorer 的事件模型）。自 2011 年 6 月以来，W3C，特别是 WHATWG 都在对旧特性进行细节定义，以提高互通性。浏览器也在基于这些更加详细的规范改善它们的实现方式。</div>
 
-<p>要实现跨浏览器的兼容性，一个常见的但可能不是最可靠的方式就是使用 JavaScript 库。这些库对于 DOM 特性进行抽象，以确保它们所提供的 API 在不同的浏览器上行为一致。被广泛采用的框架有 <a class="external" href="http://jquery.com/" style="line-height: inherit;">jQuery</a>，<a class="external" href="http://www.prototypejs.org/">prototype</a> 和 <a class="external" href="http://developer.yahoo.com/yui/">YUI</a>。</p>
+<p>要实现跨浏览器的兼容性，一个常见的但可能不是最可靠的方式就是使用 JavaScript 库。这些库对于 DOM 特性进行抽象，以确保它们所提供的 API 在不同的浏览器上行为一致。被广泛采用的框架有 <a class="external" href="http://jquery.com/">jQuery</a>，<a class="external" href="http://www.prototypejs.org/">prototype</a> 和 <a class="external" href="http://developer.yahoo.com/yui/">YUI</a>。</p>

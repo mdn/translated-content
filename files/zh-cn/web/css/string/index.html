@@ -5,20 +5,20 @@ translation_of: Web/CSS/string
 ---
 <div>{{CSSRef}}</div>
 
-<div>在CSS中，<strong><code>&lt;string&gt;</code></strong> 是用来表示一串字符的数据类型，它被用在众多CSS属性中，例如{{cssxref("content")}}、{{cssxref("font-family")}}、和{{cssxref("quotes")}}。</div>
+<div>在 CSS 中，<strong><code>&lt;string&gt;</code></strong> 是用来表示一串字符的数据类型，它被用在众多 CSS 属性中，例如{{cssxref("content")}}、{{cssxref("font-family")}}、和{{cssxref("quotes")}}。</div>
 
 <h2 id="使用规则">使用规则</h2>
 
-<p><strong><code>&lt;string&gt;</code></strong> 数据类型是由包含在英文双引号（<strong><code>"</code></strong>）或英文单引号（<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"><strong>'</strong></span></font>）中的任意数量的Unicode字符组成。</p>
+<p><strong><code>&lt;string&gt;</code></strong> 数据类型是由包含在英文双引号（<strong><code>"</code></strong>）或英文单引号（<strong>'</strong>）中的任意数量的 Unicode 字符组成。</p>
 
-<p>大多数字符都可以写成字面量的形式，并且所有字符都可以写成以反斜线（<code><strong>\</strong></code>）开头的十六进制Unicode码点的形式。比如说：<code><strong>\22</strong></code>表示一个双引号，<code><strong>\27</strong></code>表示一个单引号，<code><strong>\A9</strong></code>表示版权声明符号（<code><strong>©</strong></code>）。</p>
+<p>大多数字符都可以写成字面量的形式，并且所有字符都可以写成以反斜线（<code><strong>\</strong></code>）开头的十六进制 Unicode 码点的形式。比如说：<code><strong>\22</strong></code>表示一个双引号，<code><strong>\27</strong></code>表示一个单引号，<code><strong>\A9</strong></code>表示版权声明符号（<code><strong>©</strong></code>）。</p>
 
 <p>需要注意的是，在使用某些特殊字符时需要在前面加上反斜线来转义，包括但不限于在双引号字符串中使用双引号字符，在单引号字符串中使用单引号字符，以及反斜线字符，比如<code><strong>\\</strong></code>表示一个反斜线字符。</p>
 
 <p>当你想换行的时候，必须使用像<code><strong>\A</strong></code>或者<code><strong>\00000A</strong></code>这样的换行符。不过在你的代码中，可以通过在每行末尾增加一个反斜线（<code><strong>\</strong></code>）的方式来创建一个多行的字符串。</p>
 
 <div class="note">
-<p><strong>注意:</strong> CSS<code><strong>&lt;string&gt;</strong></code>中不能使用像<code><strong>&amp;nbsp;</strong></code>或者<code><strong>&amp;#8212;</strong></code>这样的实体。</p>
+<p><strong>注意：</strong> CSS<code><strong>&lt;string&gt;</strong></code>中不能使用像<code><strong>&amp;nbsp;</strong></code>或者<code><strong>&amp;#8212;</strong></code>这样的实体。</p>
 </div>
 
 <h2 id="例子">例子</h2>
@@ -74,69 +74,4 @@ awesome string"
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>1.0 (1.0)</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{compatVersionUnknown}}</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td>\xx</td>
-   <td>1.0</td>
-   <td>1.0 (1.0)</td>
-   <td>6.0</td>
-   <td>{{compatVersionUnknown}}</td>
-   <td>1.0 (85)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{compatVersionUnknown}}</td>
-   <td>{{compatVersionUnknown}}</td>
-   <td>{{compatVersionUnknown}}</td>
-   <td>{{compatVersionUnknown}}</td>
-   <td>{{compatVersionUnknown}}</td>
-   <td>{{compatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>\xx</td>
-   <td>{{compatVersionUnknown}}</td>
-   <td>{{compatVersionUnknown}}</td>
-   <td>{{compatVersionUnknown}}</td>
-   <td>{{compatVersionUnknown}}</td>
-   <td>{{compatVersionUnknown}}</td>
-   <td>{{compatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.types.string")}}

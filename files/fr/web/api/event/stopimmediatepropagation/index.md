@@ -16,13 +16,15 @@ Si plusieurs gestionnaires d'évènement sont attachés à un élément pour le 
 
 ## Syntaxe
 
-    event.stopImmediatePropagation();
+```js
+event.stopImmediatePropagation();
+```
 
 ## Spécifications
 
 | Spécification                                                                                                                            | État                             | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('DOM WHATWG', '#dom-event-stopimmediatepropagation', 'Event.stopImmediatePropagation()')}} | {{Spec2('DOM WHATWG')}} |              |
+| {{SpecName('DOM WHATWG', '#dom-event-stopimmediatepropagation', 'Event.stopImmediatePropagation()')}} | {{Spec2('DOM WHATWG')}} |              |
 
 ## Compatibilité des navigateurs
 

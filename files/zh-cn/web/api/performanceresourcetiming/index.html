@@ -5,13 +5,13 @@ translation_of: Web/API/PerformanceResourceTiming
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<div>PerformanceResourceTiming接口可以检索和分析有关加载应用程序资源的详细网络计时数据。 应用程序可以使用timing指标来确定获取特定资源所需的时间长度，例如<span class="seoSummary">{{domxref("XMLHttpRequest")}}</span>，<span class="seoSummary">{{SVGElement("SVG","SVG element")}}</span>，image或script。</div>
+<div>PerformanceResourceTiming 接口可以检索和分析有关加载应用程序资源的详细网络计时数据。 应用程序可以使用 timing 指标来确定获取特定资源所需的时间长度，例如{{domxref("XMLHttpRequest")}}，{{SVGElement("SVG","SVG element")}}，image 或 script。</div>
 
-<div></div>
 
-<div>这个接口使用{{domxref("DOMHighResTimeStamp","high-resolution timestamps")}} 属性创建加载资源时间轴，用于网络事件，例如重定向开始( redirect start )和结束时间，获取开始( fetch start )，DNS查找开始( DNS lookup start )和结束时间，响应开始( response start )和结束时间等。此外，接口扩展{{domxref("PerformanceEntry")}}与其他属性，这些属性提供有关获取资源大小的数据以及初始化时获取的资源类型。</div>
 
-<div></div>
+<div>这个接口使用{{domxref("DOMHighResTimeStamp","high-resolution timestamps")}} 属性创建加载资源时间轴，用于网络事件，例如重定向开始 ( redirect start ) 和结束时间，获取开始 ( fetch start )，DNS 查找开始 ( DNS lookup start ) 和结束时间，响应开始 ( response start ) 和结束时间等。此外，接口扩展{{domxref("PerformanceEntry")}}与其他属性，这些属性提供有关获取资源大小的数据以及初始化时获取的资源类型。</div>
+
+
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -40,7 +40,7 @@ translation_of: Web/API/PerformanceResourceTiming
  <dt>{{domxref('PerformanceResourceTiming.nextHopProtocol')}}{{readonlyInline}}</dt>
  <dd>返回{{domxref("DOMString","string")}} ，表示用于获取资源的网络协议，由<a href="https://tools.ietf.org/html/rfc7301">ALPN Protocol ID (RFC7301)</a>标识。</dd>
  <dt>{{domxref('PerformanceResourceTiming.workerStart')}}{{readonlyInline}}</dt>
- <dd>如果Service Worker线程已在运行，则在调用{{domxref("FetchEvent")}}之前立即返回{{domxref("DOMHighResTimeStamp")}}，如果尚未运行，则在启动Service Worker线程之前立即返回{{domxref("DOMHighResTimeStamp")}}。 如果资源未被Service Worker拦截，则该属性将始终返回0。</dd>
+ <dd>如果 Service Worker 线程已在运行，则在调用{{domxref("FetchEvent")}}之前立即返回{{domxref("DOMHighResTimeStamp")}}，如果尚未运行，则在启动 Service Worker 线程之前立即返回{{domxref("DOMHighResTimeStamp")}}。 如果资源未被 Service Worker 拦截，则该属性将始终返回 0。</dd>
  <dt>{{domxref('PerformanceResourceTiming.redirectStart')}}{{readonlyInline}}</dt>
  <dd>返回{{domxref("DOMHighResTimeStamp")}}， 表示初始重定向的开始获取时间。</dd>
  <dt>{{domxref('PerformanceResourceTiming.redirectEnd')}}{{readonlyInline}}</dt>
@@ -64,20 +64,20 @@ translation_of: Web/API/PerformanceResourceTiming
  <dt>{{domxref('PerformanceResourceTiming.responseEnd')}}{{readonlyInline}}</dt>
  <dd>返回{{domxref("DOMHighResTimeStamp")}} ，紧接在浏览器收到资源的最后一个字节之后或紧接在传输连接关闭之前，以先到者为准。</dd>
  <dt>{{domxref('PerformanceResourceTiming.transferSize')}}{{readonlyInline}}</dt>
- <dd>表示获取资源的大小（以八位字节为单位）的<code>数字</code>。 包括响应头字段和响应payload body的大小。</dd>
+ <dd>表示获取资源的大小（以八位字节为单位）的<code>数字</code>。 包括响应头字段和响应 payload body 的大小。</dd>
  <dt>{{domxref('PerformanceResourceTiming.encodedBodySize')}}{{readonlyInline}}</dt>
- <dd>在删除任何应用的内容编码之前，从payload body的提取（HTTP或高速缓存）接收的大小（以八位字节为单位）的<code>数字</code>。</dd>
+ <dd>在删除任何应用的内容编码之前，从 payload body 的提取（HTTP 或高速缓存）接收的大小（以八位字节为单位）的<code>数字</code>。</dd>
  <dt>{{domxref('PerformanceResourceTiming.decodedBodySize')}}{{readonlyInline}}</dt>
- <dd>在删除任何应用的内容编码之后，从消息正文( message body )的提取（HTTP或缓存）接收的大小（以八位字节为单位）的<code>数字</code>。</dd>
+ <dd>在删除任何应用的内容编码之后，从消息正文 ( message body ) 的提取（HTTP 或缓存）接收的大小（以八位字节为单位）的<code>数字</code>。</dd>
  <dt>{{domxref('PerformanceResourceTiming.serverTiming')}}{{readonlyInline}}</dt>
- <dd>包含服务器时序度量( timing metrics )的{{domxref("PerformanceServerTiming")}} 条目数组。</dd>
+ <dd>包含服务器时序度量 ( timing metrics ) 的{{domxref("PerformanceServerTiming")}} 条目数组。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
 
 <dl>
  <dt>{{domxref("PerformanceResourceTiming.toJSON()")}}</dt>
- <dd>返回{{domxref("DOMString")}}， 它是 {{domxref("PerformanceResourceTiming")}} 对象的JSON表示形式。</dd>
+ <dd>返回{{domxref("DOMString")}}， 它是 {{domxref("PerformanceResourceTiming")}} 对象的 JSON 表示形式。</dd>
 </dl>
 
 <h2 id="Example">Example</h2>

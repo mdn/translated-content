@@ -15,7 +15,7 @@ La propriété **onclick** représente le gestionnaire d'évènement onClick de 
 
 où _functionRef_ est une fonction ou une expression de type _function._ Consulter la [référence des fonctions](/en-US/docs/JavaScript/Reference/Functions_and_function_scope) pour plus de détails.
 
-Le paramètre fourni au gestionnaire d'évènement _functionRef_ lors du déclenchement de l'évènement est un objet qui représente l'évènement de click, de type {{ domxref("MouseEvent") }}.
+Le paramètre fourni au gestionnaire d'évènement _functionRef_ lors du déclenchement de l'évènement est un objet qui représente l'évènement de click, de type {{ domxref("MouseEvent") }}.
 
 ### Exemple
 

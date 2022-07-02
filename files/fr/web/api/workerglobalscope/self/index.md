@@ -5,7 +5,7 @@ translation_of: Web/API/WorkerGlobalScope/self
 ---
 {{APIRef("Web Workers API")}}
 
-La propriété en lecture seule **`self`** de l'interface {{domxref("WorkerGlobalScope")}} retourne une référence au `WorkerGlobalScope` lui-même. La plupart du temps il s'agit d'un contexte spécifique comme {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}}, ou {{domxref("ServiceWorkerGlobalScope")}}.
+La propriété en lecture seule **`self`** de l'interface {{domxref("WorkerGlobalScope")}} retourne une référence au `WorkerGlobalScope` lui-même. La plupart du temps il s'agit d'un contexte spécifique comme {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}}, ou {{domxref("ServiceWorkerGlobalScope")}}.
 
 ## Syntaxe
 
@@ -30,8 +30,8 @@ au sein d'un worker, vous obtiendrez un worker global scope du même type que l'
 ```js
 DedicatedWorkerGlobalScope {
 undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl: Object…}
-    Infinity: Infinity
-    Array: function Array() { [native code] }
+    Infinity: Infinity
+    Array: function Array() { [native code] }
       arguments: null
       caller: null
       isArray: function isArray() { [native code] }
@@ -42,7 +42,7 @@ undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl:
       unobserve: function unobserve() { [native code] }
       __proto__: function Empty() {}
       <function scope>
-    ArrayBuffer: function ArrayBuffer() { [native code] }
+    ArrayBuffer: function ArrayBuffer() { [native code] }
     Blob: function Blob() { [native code] }
     Boolean: function Boolean() { [native code] }
     DataView: function DataView() { [native code] }

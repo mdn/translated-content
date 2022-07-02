@@ -10,15 +10,17 @@ translation_of: Web/CSS/@font-face/font-variation-settings
 ---
 {{CSSRef}}
 
-Le descripteur **`font-variation-settings`**, associé à la règle @ {{cssxref("@font-face")}} permet d'indiquer les variations de police de bas niveau pour les polices OpenType ou TrueType.
+Le descripteur **`font-variation-settings`**, associé à la règle @ {{cssxref("@font-face")}} permet d'indiquer les variations de police de bas niveau pour les polices OpenType ou TrueType.
 
 ## Syntaxe
 
-    /* On utilise les paramètres par défaut */
-    font-variation-settings: normal;
+```css
+/* On utilise les paramètres par défaut */
+font-variation-settings: normal;
 
-    /* On indique les valeurs pour les noms des axes OpenType */
-    font-variation-settings: "xhgt" 0.7;
+/* On indique les valeurs pour les noms des axes OpenType */
+font-variation-settings: "xhgt" 0.7;
+```
 
 ### Valeurs
 

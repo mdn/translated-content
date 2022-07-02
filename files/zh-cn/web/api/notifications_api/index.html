@@ -7,11 +7,11 @@ translation_of: Web/API/Notifications_API
 ---
 <p>{{DefaultAPISidebar("Web Notifications")}}</p>
 
-<p class="summary"><strong>Notifications API</strong> 允许网页控制向最终用户显示系统通知 —这些都在顶级浏览上下文视口之外，因此即使用户已经切换标签页或移动到不同的应用程序，也可以显示。该API被设计成与不同平台上的现有通知系统兼容。</p>
+<p><strong>Notifications API</strong> 允许网页控制向最终用户显示系统通知 —这些都在顶级浏览上下文视口之外，因此即使用户已经切换标签页或移动到不同的应用程序，也可以显示。该 API 被设计成与不同平台上的现有通知系统兼容。</p>
 
 <h2 id="概念和用法">概念和用法</h2>
 
-<p>在支持该接口的平台上，显示一个系统通知通常涉及两件事。首先，用户需要授予当前源的权限以显示系统通知，这通常在应用或站点初始化时, 使用{{domxref("Notification.requestPermission()")}} 方法来完成。</p>
+<p>在支持该接口的平台上，显示一个系统通知通常涉及两件事。首先，用户需要授予当前源的权限以显示系统通知，这通常在应用或站点初始化时，使用{{domxref("Notification.requestPermission()")}} 方法来完成。</p>
 
 <p>这将产生一个请求对话框，沿着以下几行：</p>
 
@@ -21,14 +21,14 @@ translation_of: Web/API/Notifications_API
 <p>从这里，用户可以选择允许来自此来源的通知，阻止来自此来源的通知，或不选择此点。一旦做出选择，该设置通常将持续用于当前会话。</p>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注</strong></span>：从Firefox 44开始， 通知（Notifications） 和推送（<a href="/en-US/docs/Web/API/Push_API">Push</a>）的权限已合并。如果为通知授予权限，推送也将启用。</p>
+<p><strong>注</strong>：从 Firefox 44 开始， 通知（Notifications）和推送（<a href="/en-US/docs/Web/API/Push_API">Push</a>）的权限已合并。如果为通知授予权限，推送也将启用。</p>
 </div>
 
-<p>接下来，使用 {{domxref("Notification.Notification","Notification()")}} 构造函数创建一个新通知。这个方法可以传入两个参数。这必须传递一个标题参数，并可以选择性地传递一个选项对象来指定选项，如文本方向，正文，显示图标，通知声音播放, 等等。</p>
+<p>接下来，使用 {{domxref("Notification.Notification","Notification()")}} 构造函数创建一个新通知。这个方法可以传入两个参数。这必须传递一个标题参数，并可以选择性地传递一个选项对象来指定选项，如文本方向，正文，显示图标，通知声音播放，等等。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
-<p>此外， <strong>Notifications API</strong> 规范对  <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a>指定了多个添加，以允许 service workers发送通知。</p>
+<p>此外， <strong>Notifications API</strong> 规范对  <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a>指定了多个添加，以允许 service workers 发送通知。</p>
 
 <div class="note">
 <p><strong>注</strong>：想了解怎么在你的应用里使用通知接口，请阅读  <a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a>。</p>
@@ -71,119 +71,11 @@ translation_of: Web/API/Notifications_API
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>5{{property_prefix("webkit")}}<sup>[1]</sup><br>
-    22</td>
-   <td>{{CompatGeckoDesktop("2.0")}}{{property_prefix("moz")}}<sup>[2]</sup><br>
-    {{CompatGeckoDesktop("22.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>6<sup>[3]</sup></td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("41.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Service worker additions</td>
-   <td>
-    <p>{{CompatChrome(42.0)}}</p>
-   </td>
-   <td>{{CompatGeckoDesktop("42.0")}}<sup>[4]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}</p>
-   </td>
-   <td>{{CompatGeckoMobile(2.0)}}{{property_prefix("moz")}}<sup>[2]</sup><br>
-    {{CompatGeckoMobile(22.0)}}</td>
-   <td>1.0.1{{property_prefix("moz")}}<sup>[2]</sup><br>
-    1.2</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(41.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Service worker additions</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(42.0)}}<sup>[4]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在 Chrome 22 之前, 通知接口遵守一个旧版本的提案（an <a href="http://www.chromium.org/developers/design-documents/desktop-notifications/api-specification">old prefixed version of the specification</a> ）使用一个包含前缀符的{{domxref("window.navigator.webkitNotifications","navigator.webkitNotifications")}} 对象来实例化一个通知对象。 在 Chrome 32之前， {{domxref("Notification.permission")}}属性不支持。</p>
-
-<p>[2] 在 Firefox 22 (Firefox OS &lt;1.2)之前，通知对象的实例化需要使用{{domxref("window.navigator.mozNotification", "navigator.mozNotification")}} 对象的 <code style="font-style: normal; font-weight: normal;">createNotification()</code> 方法。另外，通知对象需要使用 <code style="font-style: normal; font-weight: normal;">show()</code> 方法来显示，并且仅支持 <code style="font-style: normal; font-weight: normal;">click</code> 和 <code style="font-style: normal; font-weight: normal;">close</code> 事件 (Nick Desaulniers 写了一个通知的兼容解决方法（ a <a href="https://github.com/nickdesaulniers/fxos-irc/blob/master/js/notification.js">Notification shim</a> ）来覆盖旧浏览器和现代浏览器。)</p>
-
-<p>[3] Safari 从Safari 6开始支持通知，但只在 Mac OSX 10.8+ (Mountain Lion)上。</p>
-
-<p>[4] Firefox 42 has shipped with web notifications from Service Workers disabled.</p>
+{{Compat("api.Notification")}}
 
 <h2 id="Firefox_OS_permissions">Firefox OS permissions</h2>
 
-<p>当你在 Firefox OS app中使用通知时，请确保在manifest文件中添加了<code>desktop-notification</code> 权限 。 Notifications can be used at any permission level, hosted or above:</p>
+<p>当你在 Firefox OS app 中使用通知时，请确保在 manifest 文件中添加了<code>desktop-notification</code> 权限 。 Notifications can be used at any permission level, hosted or above:</p>
 
 <pre class="brush: json">"permissions": {
   "desktop-notification": {}

@@ -15,7 +15,9 @@ La propriété en lecture seule **TextMetrics.width** contient en pixels CSS la 
 
 ## Syntaxe
 
-    readonly metrics.width;
+```js
+readonly metrics.width;
+```
 
 ## Exemples
 
@@ -25,7 +27,7 @@ La propriété en lecture seule **TextMetrics.width** contient en pixels CSS la 
 <canvas id="canevas"></canvas>
 ```
 
-vous pouvez obtenir un objet {{domxref("TextMetrics")}} en utilisant le code suivant :
+vous pouvez obtenir un objet {{domxref("TextMetrics")}} en utilisant le code suivant :
 
 ```js
 var canvas = document.getElementById("canevas");
@@ -39,7 +41,7 @@ texte.width; // 16;
 
 | Spécification                                                                                                        | Statut                           | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-textmetrics-width", "TextMetrics.width")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-textmetrics-width", "TextMetrics.width")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

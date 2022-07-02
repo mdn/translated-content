@@ -11,23 +11,23 @@ tags:
   - 应用程序接口
   - 指南
   - 支付
-  - 支付请求API
+  - 支付请求 API
   - 收款方
   - 贸易
 translation_of: Web/API/Payment_Request_API/Concepts
 original_slug: Web/API/支付_请求_接口/Concepts
 ---
-<p>{{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}{{draft}}</p>
+<p>{{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}</p>
 
-<p><a href="zh-CN/docs/Web/API/%E6%94%AF%E4%BB%98_%E8%AF%B7%E6%B1%82_%E6%8E%A5%E5%8F%A3">交易请求API</a>使在网站或应用上进行的交易变得更便捷。<span class="seoSummary">在这篇文档中，我们将了解此接口如何运作，以及各个组件的功能。</span></p>
+<p><a href="/zh-CN/docs/Web/API/Payment_Request_API">交易请求 API</a>使在网站或应用上进行的交易变得更便捷。在这篇文档中，我们将了解此接口如何运作，以及各个组件的功能。</p>
 
 <h2 id="术语">术语</h2>
 
-<p>在深入了解此API的工作方式前，你应该了解以下术语。</p>
+<p>在深入了解此 API 的工作方式前，你应该了解以下术语。</p>
 
 <dl>
  <dt>收款方（或商家）</dt>
- <dd>商家可以是个人，也可以是一个组织。商家扮演的角色是在自己的网站或应用上通过支付请求API收款。</dd>
+ <dd>商家可以是个人，也可以是一个组织。商家扮演的角色是在自己的网站或应用上通过支付请求 API 收款。</dd>
  <dt>付款方</dt>
  <dd>付款方可以是个人，也可以是一个组织。付款方扮演的角色是，在网站或应用上购买物品。支付流程要求付款方先自证身份，然后授权付款。</dd>
  <dt>支付方式</dt>
@@ -42,35 +42,35 @@ original_slug: Web/API/支付_请求_接口/Concepts
 
 <h2 id="支付方式识别码">支付方式识别码</h2>
 
-<p>交易处理机是通过<strong>支付方式识别码</strong>识别的。交易方式识别码是一个指向唯一交易处理机的字符串，它可以是一套已成标准的识别码，也可以是一个URL。后者被交易处理服务同时用于两种用途：自证身份和处理交易。</p>
+<p>交易处理机是通过<strong>支付方式识别码</strong>识别的。交易方式识别码是一个指向唯一交易处理机的字符串，它可以是一套已成标准的识别码，也可以是一个 URL。后者被交易处理服务同时用于两种用途：自证身份和处理交易。</p>
 
 <h3 id="标准化的交易方式识别码">标准化的交易方式识别码</h3>
 
 <p>目前注册在案的只有一套<a href="https://www.w3.org/TR/payment-method-id/#registry">标准化交易方式识别码</a>。（未来可能会添加更多。）</p>
 
 <dl>
- <dt><code>基本卡（basic-card, 输入一次银行卡信息后即可多次消费的支付方式）</code></dt>
+ <dt><code>基本卡（basic-card，输入一次银行卡信息后即可多次消费的支付方式）</code></dt>
  <dd>?根据基本卡规范进行交易处理。?详细说明请参见{{domxref("BasicCardRequest")}}。<em><strong>此处应该有对基本卡规范和使用方法进行说明的文档。</strong></em></dd>
 </dl>
 
-<h3 id="基于URL的交易方式识别码">基于URL的交易方式识别码</h3>
+<h3 id="基于URL的交易方式识别码">基于 URL 的交易方式识别码</h3>
 
-<p>这种识别方式的具体使用将会极大程度地依赖不同服务各自的规范。比如，某种服务可能使用多个URL链接，不同URL的使用依赖于API的版本和通信方式等。</p>
+<p>这种识别方式的具体使用将会极大程度地依赖不同服务各自的规范。比如，某种服务可能使用多个 URL 链接，不同 URL 的使用依赖于 API 的版本和通信方式等。</p>
 
 <dl>
  <dt><code>https://apple.com/apple-pay</code></dt>
- <dd>交易使用<a href="https://www.apple.com/apple-pay/">Apple Pay</a>服务。目前，只有Safari浏览器支持这种交易方式。</dd>
+ <dd>交易使用<a href="https://www.apple.com/apple-pay/">Apple Pay</a>服务。目前，只有 Safari 浏览器支持这种交易方式。</dd>
  <dt><code>https://google.com/pay</code></dt>
- <dd>交易使用<a href="https://pay.google.com/">Google Pay</a>. 目前，只有Chrome及Chrome内核的浏览器支持这种交易方式。</dd>
+ <dd>交易使用<a href="https://pay.google.com/">Google Pay</a>. 目前，只有 Chrome 及 Chrome 内核的浏览器支持这种交易方式。</dd>
 </dl>
 
 <h2 id="交易处理机的功能">交易处理机的功能</h2>
 
-<p>{{Glossary("user agent")}}内部机制支持不同类型的交易。另外，你还可以调用<a href="https://w3c.github.io/payment-handler/">交易处理API</a>来支持更多相应的支付方式提供方（前提是你使用的浏览器支持这些API的使用）。不论使用哪种方式，交易处理机的功能都是如下几条：</p>
+<p>{{Glossary("user agent")}}内部机制支持不同类型的交易。另外，你还可以调用<a href="https://w3c.github.io/payment-handler/">交易处理 API</a>来支持更多相应的支付方式提供方（前提是你使用的浏览器支持这些 API 的使用）。不论使用哪种方式，交易处理机的功能都是如下几条：</p>
 
 <ol>
  <li><strong>确保交易正确进行。</strong> 交易正确进行的条件取决于不同的支付类型和用户的支付请求；例如，如果用户选择了信用卡支付，而收款方并不支持这种方式，交易就无法正确进行。</li>
- <li><strong>响应用户代理发起的对商家进行认证的请求（在处理机支持商家认证的前提下）。</strong> 详细说明请参考{{anch("Merchant validation")}}。</li>
+ <li><strong>响应用户代理发起的对商家进行认证的请求（在处理机支持商家认证的前提下）。</strong> 详细说明请参考<a href="#商家认证">商家认证</a>。</li>
  <li><strong>验证用户提交的信息有资格发起一次有效交易。</strong>这一步骤会创建并返回一个基于具体支付方式的对象，此对象包含处理交易所需要的信息。</li>
 </ol>
 
@@ -85,11 +85,11 @@ original_slug: Web/API/支付_请求_接口/Concepts
 }
 </pre>
 
-<p>在这个例子中，由<code>fetchValidationData()</code>方法加载由<code>validationURL</code>提供的认证信息。要注意到的是，这个方法必须由商家服务器转发，因为通常情况下，客户端不会主动访问用于认证的URL。</p>
+<p>在这个例子中，由<code>fetchValidationData()</code>方法加载由<code>validationURL</code>提供的认证信息。要注意到的是，这个方法必须由商家服务器转发，因为通常情况下，客户端不会主动访问用于认证的 URL。</p>
 
 <p>然后，该数据（或用来解析该数据的{{jsxref("Promise")}}）被传送给交易处理机的<code>complete()</code>方法。交易处理机可以用该数据获取更多信息或是进行更多重的算法解析，以认证商家对处理机的使用权。</p>
 
-<p>因此，注意到如下事实很重要：{{Glossary("user agent")}}永远不会发送{{event("merchantvalidation")}}事件，除非用户代理自身装载了交易处理机。例如，Safari浏览器本身即支持Apple Pay，而Apple Pay的交易处理机可据此向客户端发送<code>merchantvalidation</code>、指示客户端获取服务器上的认证信息，并将其传送给交易处理机的<code>complete()</code>，来为商品进行支付。</p>
+<p>因此，注意到如下事实很重要：{{Glossary("user agent")}}永远不会发送{{event("merchantvalidation")}}事件，除非用户代理自身装载了交易处理机。例如，Safari 浏览器本身即支持 Apple Pay，而 Apple Pay 的交易处理机可据此向客户端发送<code>merchantvalidation</code>、指示客户端获取服务器上的认证信息，并将其传送给交易处理机的<code>complete()</code>，来为商品进行支付。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -113,7 +113,7 @@ original_slug: Web/API/支付_请求_接口/Concepts
   <tr>
    <td>{{SpecName('Payment Method Identifiers')}}</td>
    <td>{{Spec2('Payment Method Identifiers')}}</td>
-   <td>定义了支付方式识别码和认证方式，并在适用的情况下铸币或在W3C规范中进行登记。</td>
+   <td>定义了支付方式识别码和认证方式，并在适用的情况下铸币或在 W3C 规范中进行登记。</td>
   </tr>
  </tbody>
 </table>
@@ -121,7 +121,7 @@ original_slug: Web/API/支付_请求_接口/Concepts
 <h2 id="相关文档">相关文档</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/Web/API/%E6%94%AF%E4%BB%98_%E8%AF%B7%E6%B1%82_%E6%8E%A5%E5%8F%A3">支付请求API</a></li>
+ <li><a href="/zh-CN/docs/Web/API/Payment_Request_API">支付请求 API</a></li>
  <li><a href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</a></li>
  <li><a href="/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</a></li>
  <li><a href="https://webkit.org/blog/8182/introducing-the-payment-request-api-for-apple-pay/">Introducing the Payment Request API for Apple Pay</a></li>

@@ -16,7 +16,9 @@ Si aucun élement n'est donné en paramètre `nomCle`, cette méthode ne fait ri
 
 ## Syntaxe
 
-    storage.removeItem(nomCle);
+```js
+storage.removeItem(nomCle);
+```
 
 ### Paramètres
 
@@ -45,11 +47,11 @@ Nous pouvons également faire ceci avec le stockage de session.
 
 ```js
 function populateStorage() {
-  sessionStorage.setItem('bgcolor', 'red');
-  sessionStorage.setItem('font', 'Helvetica');
+  sessionStorage.setItem('bgcolor', 'red');
+  sessionStorage.setItem('font', 'Helvetica');
   sessionStorage.setItem('image', 'myCat.png');
 
-  sessionStorage.removeItem('image');
+  sessionStorage.removeItem('image');
 }
 ```
 
@@ -67,4 +69,4 @@ function populateStorage() {
 
 ## Voir aussi
 
-[Utilisation de l'API de stockage Web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[Utilisation de l'API de stockage Web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

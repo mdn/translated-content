@@ -5,9 +5,9 @@ translation_of: Web/API/ResizeObserver
 ---
 <div>{{APIRef("Resize Observer API")}}{{SeeCompatTable}}</div>
 
-<p class="summary"><strong><code>ResizeObserver</code></strong> 接口可以监听到 {{domxref('Element')}} 的内容区域或 {{domxref('SVGElement')}}的边界框改变。内容区域则需要减去内边距padding。（有关内容区域、内边距资料见<a href="https://developer.mozilla.org/docs/Learn/CSS/Introduction_to_CSS/Box_model">盒子模型</a> ）</p>
+<p><strong><code>ResizeObserver</code></strong> 接口可以监听到 {{domxref('Element')}} 的内容区域或 {{domxref('SVGElement')}}的边界框改变。内容区域则需要减去内边距 padding。（有关内容区域、内边距资料见<a href="https://developer.mozilla.org/docs/Learn/CSS/Introduction_to_CSS/Box_model">盒子模型</a> ）</p>
 
-<p>ResizeObserver避免了在自身回调中调整大小，从而触发的无限回调和循环依赖。它仅通过在后续帧中处理DOM中更深层次的元素来实现这一点。如果（浏览器）遵循规范，只会在绘制前或布局后触发调用。</p>
+<p>ResizeObserver 避免了在自身回调中调整大小，从而触发的无限回调和循环依赖。它仅通过在后续帧中处理 DOM 中更深层次的元素来实现这一点。如果（浏览器）遵循规范，只会在绘制前或布局后触发调用。</p>
 
 <h2 id="构造器">构造器</h2>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/ResizeObserver
 
 <h2 id="示例">示例</h2>
 
-<p>以下示例通过观察box的宽度变化从而改变其边框圆角半径。</p>
+<p>以下示例通过观察 box 的宽度变化从而改变其边框圆角半径。</p>
 
 <pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
   for (let entry of entries) {

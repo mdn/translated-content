@@ -1,15 +1,6 @@
 ---
 title: DOMTokenList.keys()
 slug: Web/API/DOMTokenList/keys
-tags:
-  - API
-  - Boucle
-  - Clés
-  - DOM
-  - Itérateur
-  - Listes
-  - Méthodes
-  - for of
 translation_of: Web/API/DOMTokenList/keys
 ---
 {{APIRef("DOM")}}
@@ -18,7 +9,9 @@ La méthode **`keys()`** de l'interface {{domxref("DOMTokenList")}} renvoie un {
 
 ## Syntaxe
 
-    tokenList.keys();
+```js
+tokenList.keys();
+```
 
 ### Paramètres
 
@@ -52,7 +45,7 @@ for(var value of iterator) {
 
 La sortie ressemble à ceci :
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Exemples', '100%', 60) }}
 
 ## Spécifications
 

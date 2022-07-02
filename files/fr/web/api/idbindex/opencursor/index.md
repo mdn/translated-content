@@ -26,7 +26,9 @@ La méthode la positionne le curseur de façon approprié, selon la direction in
 
 ## Syntaxe
 
-    var request = myIndex.openCursor(keyRange,direction);
+```js
+var request = myIndex.openCursor(keyRange,direction);
+```
 
 ### Paramètres
 
@@ -120,7 +122,7 @@ function displayDataByIndex() {
 
 | Spécification                                                                                                                                                    | État                         | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-openCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openCursor()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBIndex-openCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openCursor()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

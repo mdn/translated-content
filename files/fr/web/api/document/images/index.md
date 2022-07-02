@@ -32,5 +32,5 @@ for(var i = 0; i < listeimg.length; i++) {
 
 ## Spécification
 
-- Spécification DOM Level 2 HTML : [HTMLDocument.images](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)
-- Traduction en français (non normative) : [HTMLDocument.images](http://www.yoyodesign.org/doc/w3c/dom2/html/html.html#ID-90379117)
+- Spécification DOM Level 2 HTML&nbsp;: [HTMLDocument.images](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)
+- Traduction en français (non normative)&nbsp;: [HTMLDocument.images](http://www.yoyodesign.org/doc/w3c/dom2/html/html.html#ID-90379117)

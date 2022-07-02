@@ -1,12 +1,6 @@
 ---
 title: ':-moz-only-whitespace'
 slug: Web/CSS/:-moz-only-whitespace
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
-  - Sélecteur
 translation_of: Web/CSS/:-moz-only-whitespace
 ---
 {{CSSRef}}{{SeeCompatTable}}
@@ -57,7 +51,7 @@ div {
 
 ### Résultat
 
-{{EmbedLiveSample("Exemple", "100%", "50")}}
+{{EmbedLiveSample("Exemples", "100%", "50")}}
 
 ## Spécifications
 
@@ -69,5 +63,5 @@ Cette pseudo-classe a été renommée en `:blank` dans {{SpecName("CSS4 Selector
 
 ## Voir aussi
 
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":blank")}} {{Experimental_Inline}}
 - {{CSSxRef(":empty")}}

@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">const <var>p</var> = new Proxy(<var>target</var>, <var>handler</var>)</pre>
+<pre class="syntaxbox">const <var>p</var> = new Proxy(<var>target</var>, <var>handler</var>)</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -85,7 +85,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 
 <p>在以下简单的例子中，当对象中不存在属性名时，默认返回值为 <code>37</code>。下面的代码以此展示了 {{jsxref("Global_Objects/Proxy/handler/get", "get")}} handler 的使用场景。</p>
 
-<pre class="brush: js notranslate">const handler = {
+<pre class="brush: js">const handler = {
     get: function(obj, prop) {
         return prop in obj ? obj[prop] : 37;
     }
@@ -103,7 +103,7 @@ console.log('c' in p, p.c); // false, 37
 
 <p>在以下例子中，我们使用了一个原生 JavaScript 对象，代理会将所有应用到它的操作转发到这个对象上。</p>
 
-<pre class="brush: js notranslate">let target = {};
+<pre class="brush: js">let target = {};
 let p = new Proxy(target, {});
 
 p.a = 37;   // 操作转发到目标
@@ -115,7 +115,7 @@ console.log(target.a);    // 37. 操作已经被正确地转发
 
 <p>通过代理，你可以轻松地验证向一个对象的传值。下面的代码借此展示了 {{jsxref("Global_Objects/Proxy/handler/set", "set")}} handler 的作用。</p>
 
-<pre class="brush: js notranslate">let validator = {
+<pre class="brush: js">let validator = {
   set: function(obj, prop, value) {
     if (prop === 'age') {
       if (!Number.isInteger(value)) {
@@ -152,7 +152,7 @@ person.age = 300;
 
 <p>方法代理可以轻松地通过一个新构造函数来扩展一个已有的构造函数。这个例子使用了<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct"><code>construct</code></a>和<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply">apply</a></code>。</p>
 
-<pre class="brush: js notranslate">function extend(sup, base) {
+<pre class="brush: js">function extend(sup, base) {
   var descriptor = Object.getOwnPropertyDescriptor(
     base.prototype, "constructor"
   );
@@ -193,7 +193,7 @@ console.log(Peter.age);  // 13</pre>
 
 <p>有时，我们可能需要互换两个不同的元素的属性或类名。下面的代码以此为目标，展示了 {{jsxref("Global_Objects/Proxy/handler/set", "set")}} handler 的使用场景。</p>
 
-<pre class="brush: js notranslate">let view = new Proxy({
+<pre class="brush: js">let view = new Proxy({
   selected: null
 }, {
   set: function(obj, prop, newval) {
@@ -228,7 +228,7 @@ console.log(i2.getAttribute('aria-selected')); // 'true'
 
 <p>以下<code>products</code>代理会计算传值并根据需要转换为数组。这个代理对象同时支持一个叫做 <code>latestBrowser</code>的附加属性，这个属性可以同时作为 getter 和 setter。</p>
 
-<pre class="brush: js notranslate">let products = new Proxy({
+<pre class="brush: js">let products = new Proxy({
   browsers: ['Internet Explorer', 'Netscape']
 }, {
   get: function(obj, prop) {
@@ -262,7 +262,7 @@ console.log(i2.getAttribute('aria-selected')); // 'true'
 
 console.log(products.browsers); // ['Internet Explorer', 'Netscape']
 products.browsers = 'Firefox';  // 如果不小心传入了一个字符串
-console.log(products.browsers); // ['Firefox'] &lt;- 也没问题, 得到的依旧是一个数组
+console.log(products.browsers); // ['Firefox'] &lt;- 也没问题，得到的依旧是一个数组
 
 products.latestBrowser = 'Chrome';
 console.log(products.browsers);      // ['Firefox', 'Chrome']
@@ -273,7 +273,7 @@ console.log(products.latestBrowser); // 'Chrome'
 
 <p>以下代理为数组扩展了一些实用工具。如你所见，通过 Proxy，我们可以灵活地“定义”属性，而不需要使用 {{jsxref("Object.defineProperties")}} 方法。以下例子可以用于通过单元格来查找表格中的一行。在这种情况下，target 是 <code><a href="/zh-CN/docs/DOM/table.rows">table.rows</a></code>。</p>
 
-<pre class="brush: js notranslate">let products = new Proxy([
+<pre class="brush: js">let products = new Proxy([
   { name: 'Firefox'    , type: 'browser' },
   { name: 'SeaMonkey'  , type: 'browser' },
   { name: 'Thunderbird', type: 'mailer' }
@@ -331,9 +331,9 @@ console.log(products.number); // 3
 
 <h3 id="一个完整的_traps_列表示例">一个完整的 <code>traps</code> 列表示例</h3>
 
-<p>出于教学目的，这里为了创建一个完整的 traps 列表示例，我们将尝试代理化一个非原生对象，这特别适用于这类操作：由 <a href="/zh-CN/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support">发布在 document.cookie页面上的“小型框架”</a>创建的<code>docCookies</code>全局对象。</p>
+<p>出于教学目的，这里为了创建一个完整的 traps 列表示例，我们将尝试代理化一个非原生对象，这特别适用于这类操作：由 <a href="/zh-CN/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support">发布在 document.cookie 页面上的“小型框架”</a>创建的<code>docCookies</code>全局对象。</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
   var docCookies = ... get the "docCookies" object here:
   https://developer.mozilla.org/zh-CN/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
 */

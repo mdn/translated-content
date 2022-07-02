@@ -11,21 +11,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 ---
 <p>{{JSRef}}</p>
 
-<p><code>Promise.any()</code> 接收一个{{JSxRef("Promise")}}可迭代对象，只要其中的一个 <code>promise</code> 成功，就返回那个已经成功的 <code>promise</code> 。如果可迭代对象中没有一个 <code>promise</code> 成功（即所有的 <code>promises</code> 都失败/拒绝），就返回一个失败的 <code>promise </code>和{{JSxRef("Global_Objects/AggregateError", "AggregateError")}}类型的实例，它是 {{JSxRef("Error")}} 的一个子类，用于把单一的错误集合在一起。本质上，这个方法和{{JSxRef("Promise.all()")}}是相反的。</p>
+<p><code>Promise.any()</code> 接收一个{{JSxRef("Promise")}}可迭代对象，只要其中的一个 <code>promise</code> 成功，就返回那个已经成功的 <code>promise</code> 。如果可迭代对象中没有一个 <code>promise</code> 成功（即所有的 <code>promises</code> 都失败/拒绝），就返回一个失败的 <code>promise </code>和{{JSxRef("Global_Objects/AggregateError", "AggregateError")}}类型的实例，它是 {{JSxRef("Error")}} 的一个子类，用于把单一的错误集合在一起。本质上，这个方法和 {{JSxRef("Promise.all()")}} 是相反的。</p>
 
-<div class="blockIndicator warning">
-<p><strong>注意！</strong> <code>Promise.any()</code> 方法依然是实验性的，尚未被所有的浏览器完全支持。它当前处于 <a href="https://github.com/tc39/proposal-promise-any">TC39 第四阶段草案（Stage 4）</a></p>
+<div class="warning">
+<p><strong>警告：</strong><code>Promise.any()</code> 方法依然是实验性的，尚未被所有的浏览器完全支持。它当前处于 <a href="https://github.com/tc39/proposal-promise-any">TC39 第四阶段草案（Stage 4）</a></p>
 </div>
 
 <h2 id="语法">语法</h2>
 
-<pre class="notranslate">Promise.any(<var>iterable</var>);</pre>
+<pre>Promise.any(<var>iterable</var>);</pre>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt><code>iterable</code></dt>
- <dd>一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">可迭代</a>的对象, 例如 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>。</dd>
+ <dd>一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">可迭代</a>的对象，例如 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -42,20 +42,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 <p>不像 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a> 会返回一组完成值那样（resolved values），我们只能得到一个成功值（假设至少有一个 <code>promise</code> 完成）。当我们只需要一个 <code>promise</code> 成功，而不关心是哪一个成功时此方法很有用的。</p>
 
-<p>同时, 也不像 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/race">Promise.race()</a> 总是返回第一个结果值（resolved/reject）那样，这个方法返回的是第一个<em> 成功的</em> 值。这个方法将会忽略掉所有被拒绝的 <code>promise</code>，直到第一个 <code>promise</code> 成功。</p>
+<p>同时，也不像 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/race">Promise.race()</a> 总是返回第一个结果值（resolved/reject）那样，这个方法返回的是第一个<em> 成功的</em> 值。这个方法将会忽略掉所有被拒绝的 <code>promise</code>，直到第一个 <code>promise</code> 成功。</p>
 
-<h3 id="成功（Fulfillment）：">成功（Fulfillment）：</h3>
+<h3 id="成功（fulfillment）">成功（Fulfillment）</h3>
 
-<p>当任何一个被传入的 <code>promise</code> 成功的时候, 无论其他的 <code>promises</code> 成功还是失败，此函数会将那个成功的 <code>promise</code> 作为返回值 。</p>
+<p>当任何一个被传入的 <code>promise</code> 成功的时候，无论其他的 <code>promises</code> 成功还是失败，此函数会将那个成功的 <code>promise</code> 作为返回值 。</p>
 
 <ul>
- <li>如果传入的参数是一个空的可迭代对象, 这个方法将会同步返回一个已经完成的 <code>promise</code>。</li>
- <li>如果传入的任何一个 <code>promise</code> 已成功, 或者传入的参数不包括任何 <code>promise</code>, 那么 <code>Promise.any</code> 返回一个异步成功的 <code>promise</code>。</li>
+ <li>如果传入的参数是一个空的可迭代对象，这个方法将会同步返回一个已经完成的 <code>promise</code>。</li>
+ <li>如果传入的任何一个 <code>promise</code> 已成功，或者传入的参数不包括任何 <code>promise</code>, 那么 <code>Promise.any</code> 返回一个异步成功的 <code>promise</code>。</li>
 </ul>
 
-<h3 id="失败拒绝（Rejection）：">失败/拒绝（Rejection）：</h3>
+<h3 id="失败拒绝（rejection）">失败/拒绝（Rejection）</h3>
 
-<p>如果所有传入的 <code>promises</code> 都失败, <code>Promise.any</code> 将返回异步失败，和一个 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError">AggregateError</a> 对象，它继承自 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>，有一个 <code>error</code> 属性，属性值是由所有失败值填充的数组。</p>
+<p>如果所有传入的 <code>promises</code> 都失败，<code>Promise.any</code> 将返回异步失败，和一个 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AggregateError">AggregateError</a> 对象，它继承自 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>，有一个 <code>errors</code> 属性，属性值是由所有失败值填充的数组。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -63,7 +63,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 <p>即使第一个返回的 promise 是失败的，<code>Promise.any()</code> 依然使用第一个成功状态的 promise 来返回。这与使用首个（无论 rejected 还是 fullfiled）promise 来返回的 {{jsxref("Promise.race()")}} 相反。</p>
 
-<pre class="brush: js notranslate">const pErr = new Promise((resolve, reject) =&gt; {
+<pre class="brush: js">const pErr = new Promise((resolve, reject) =&gt; {
   reject("总是失败");
 });
 
@@ -86,7 +86,7 @@ Promise.any([pErr, pSlow, pFast]).then((value) =&gt; {
 
 <p>如果没有 fulfilled (成功的) promise，<code>Promise.any()</code> 返回 {{jsxref("AggregateError")}} 错误。</p>
 
-<pre class="brush: js notranslate">const pErr = new Promise((resolve, reject) =&gt; {
+<pre class="brush: js">const pErr = new Promise((resolve, reject) =&gt; {
   reject('总是失败');
 });
 
@@ -100,7 +100,7 @@ Promise.any([pErr]).catch((err) =&gt; {
 
 <p>在这个例子，我们有一个获取图片并返回 blob 的函数，我们使用 <code>Promise.any()</code> 来获取一些图片并显示第一张有效的图片（即最先 resolved 的那个 promise）。</p>
 
-<pre class="brush: js notranslate">function fetchAndDecode(url) {
+<pre class="brush: js">function fetchAndDecode(url) {
   return fetch(url).then(response =&gt; {
     if(!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);

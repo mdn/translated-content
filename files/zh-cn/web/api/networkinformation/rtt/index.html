@@ -5,7 +5,7 @@ translation_of: Web/API/NetworkInformation/rtt
 ---
 <p>{{apiref("Network Information API")}}{{SeeCompatTable}}</p>
 
-<p><strong>NetworkInformation.rtt </strong>是一个只读属性，返回了当前连接下评估的往返时延（RTT, round-trip time ），并保留该值为25千分秒的最接近的整数倍。该值基于最近使用中被监测的最近保持活跃连接的应用层上的RTT测量值。它排除了到私有地址空间的连接。如果没有最近的测量数据，该值就基于底层连接技术的属性。</p>
+<p><strong>NetworkInformation.rtt </strong>是一个只读属性，返回了当前连接下评估的往返时延（RTT, round-trip time ），并保留该值为 25 千分秒的最接近的整数倍。该值基于最近使用中被监测的最近保持活跃连接的应用层上的 RTT 测量值。它排除了到私有地址空间的连接。如果没有最近的测量数据，该值就基于底层连接技术的属性。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -38,69 +38,4 @@ translation_of: Web/API/NetworkInformation/rtt
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(61)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(48)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatChrome(61)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(48)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(50)}}</td>
-   <td>{{CompatChrome(38)}}</td>
-   <td>{{CompatGeckoMobile("31")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOperaMobile(37)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatChrome(50)}}</td>
-   <td>{{CompatChrome(38)}}</td>
-   <td>{{CompatGeckoMobile("53")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOperaMobile(37)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.NetworkInformation.rtt")}}

@@ -1,25 +1,21 @@
 ---
 title: CanvasRenderingContext2D.fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Propriété
-  - Reference
 translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
 {{APIRef}}
 
-La propriété **`CanvasRenderingContext2D`\*\***`.fillStyle`\*\* de l'API Canvas 2D spécifie la couleur ou style à utiliser à l'intérieur des formes. La valeur par défaut est `#000` (black).
+La propriété **`CanvasRenderingContext2D.fillStyle`** de l'API Canvas 2D spécifie la couleur ou style à utiliser à l'intérieur des formes. La valeur par défaut est `#000` (black).
 
 Voir également le chapitre [Ajout de styles et de couleurs](/fr/docs/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs) dans le [Tutoriel canvas](/fr/docs/Tutoriel_canvas).
 
 ## Syntaxe
 
-    ctx.fillStyle = color;
-    ctx.fillStyle = gradient;
-    ctx.fillStyle = pattern;
+```js
+ctx.fillStyle = color;
+ctx.fillStyle = gradient;
+ctx.fillStyle = pattern;
+```
 
 ### Options
 
@@ -59,8 +55,8 @@ ctx.fillRect(10, 10, 100, 100);
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = 'blue';
@@ -93,7 +89,7 @@ textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ### Un exemple `fillStyle` avec les boucles `for`
 
@@ -116,13 +112,13 @@ for (var i = 0; i < 6; i++){
 
 Le résultat devrait ressembler à ça:
 
-{{EmbedLiveSample("A_fillStyle_example_with_for_loops", 160, 160, "canvas_fillstyle.png")}}
+{{EmbedLiveSample("Un_exemple_fillStyle_avec_les_boucles_for", 160, 160, "canvas_fillstyle.png")}}
 
 ## Spécifications
 
 | Specification                                                                                                                                    | Status                           | Comment |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillstyle", "CanvasRenderingContext2D.fillStyle")}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillstyle", "CanvasRenderingContext2D.fillStyle")}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## Compatibilité des navigateurs
 

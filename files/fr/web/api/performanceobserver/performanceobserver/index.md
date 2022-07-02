@@ -51,8 +51,7 @@ observer2.observe({entryTypes: ["measure"]});
 
 | Spécification                                                                                                                                                | Statut                                                   | Commentaire                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------ |
-| {{SpecName('Performance Timeline Level 2',
-        '#idl-def-performanceobservercallback', 'PerformanceObserver()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale du constructeur `PerformanceObserver()`. |
+| {{SpecName('Performance Timeline Level 2', '#idl-def-performanceobservercallback', 'PerformanceObserver()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale du constructeur `PerformanceObserver()`. |
 
 ## Compatibilité des navigateurs
 

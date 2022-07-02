@@ -1,12 +1,6 @@
 ---
 title: DOMTokenList.replace()
 slug: Web/API/DOMTokenList/replace
-tags:
-  - API
-  - DOM
-  - Listes
-  - Méthodes
-  - Remplacement
 translation_of: Web/API/DOMTokenList/replace
 ---
 {{APIRef("DOM")}}
@@ -15,7 +9,9 @@ La méthode **`replace()`** de l'interface {{domxref("DOMTokenList")}} remplace 
 
 ## Syntaxe
 
-    tokenList.replace(oldToken,newToken);
+```js
+tokenList.replace(oldToken,newToken);
+```
 
 ### Paramètres
 
@@ -53,7 +49,7 @@ try {
 
 La sortie ressemble à ceci :
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Exemples', '100%', 60) }}
 
 ## Spécifications
 

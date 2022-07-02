@@ -10,7 +10,7 @@ translation_of: Web/CSS/place-content
 ---
 {{CSSRef}}
 
-La propriété raccourcie **`place`\*\***`-content`\*\* permet de définir les valeurs des propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}. Elle peut être utilisée pour n'importe quelle méthode de disposition (boîtes flexibles, grilles, etc;) qui prend en charge ces deux propriétés d'alignement.
+La propriété raccourcie **`place-content`** permet de définir les valeurs des propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}. Elle peut être utilisée pour n'importe quelle méthode de disposition (boîtes flexibles, grilles, etc;) qui prend en charge ces deux propriétés d'alignement.
 
 {{EmbedInteractiveExample("pages/css/place-content.html")}}Syntaxe
 
@@ -115,12 +115,12 @@ div > div {
 
 ```html
 <div id="container">
-  <div class="small">Lorem</div>
-  <div class="small">Lorem<br/>ipsum</div>
-  <div class="large">Lorem</div>
-  <div class="large">Lorem<br/>impsum</div>
-  <div class="large"></div>
-  <div class="large"></div>
+  <div class="small">Lorem</div>
+  <div class="small">Lorem<br/>ipsum</div>
+  <div class="large">Lorem</div>
+  <div class="large">Lorem<br/>impsum</div>
+  <div class="large"></div>
+  <div class="large"></div>
 </div>
 ```
 
@@ -151,7 +151,7 @@ div > div {
   <option value="flex-start">flex-start</option>
   <option value="flex-end">flex-end</option>
 </select>
-﻿<select id="justifyContentAlignment">
+<select id="justifyContentAlignment">
   <option value="normal">normal</option>
   <option value="space-between">space-between</option>
   <option value="space-around">space-around</option>

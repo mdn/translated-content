@@ -10,7 +10,7 @@ translation_of: Web/CSS/margin-block-start
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété **`margin-block-start`** définit la marge logique appliquée au début des éléments en bloc, selon le mode d'écriture, la directionalité et l'orientation du texte. Selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}, elle peut correspondre à {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} ou {{cssxref("margin-left")}}.
+La propriété **`margin-block-start`** définit la marge logique appliquée au début des éléments en bloc, selon le mode d'écriture, la directionalité et l'orientation du texte. Selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}, elle peut correspondre à {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} ou {{cssxref("margin-left")}}.
 
 {{EmbedInteractiveExample("pages/css/margin-block-start.html")}}
 

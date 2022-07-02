@@ -1,0 +1,5 @@
+* Bievenido a la localización de MDN en español 
+
+Puedes comenzar en la siguiente [[https://developer.mozilla.org/es/docs/MDN/Contribute][guía de contribución]]
+
+Más información [[https://github.com/mdn/translated-content/discussions/4029][aquí]]

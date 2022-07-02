@@ -5,7 +5,7 @@ translation_of: Web/API/OffscreenCanvas/transferToImageBitmap
 ---
 <div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
 
-<p><strong><code>OffscreenCanvas.transferToImageBitmap()</code></strong> 方法使用<code>offscreenCanvas</code>最近渲染得到的图片创建一个{{domxref("ImageBitmap")}} 对象.</p>
+<p><strong><code>OffscreenCanvas.transferToImageBitmap()</code></strong> 方法使用<code>offscreenCanvas</code>最近渲染得到的图片创建一个{{domxref("ImageBitmap")}} 对象。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -13,14 +13,14 @@ translation_of: Web/API/OffscreenCanvas/transferToImageBitmap
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个{{domxref("ImageBitmap")}}对象.</p>
+<p>一个{{domxref("ImageBitmap")}}对象。</p>
 
 <h2 id="例子">例子</h2>
 
 <pre class="brush: js">var offscreen = new OffscreenCanvas(256, 256);
 var gl = offscreen.getContext("webgl");
 
-//一些绘制要使用gl前后文
+//一些绘制要使用 gl 前后文
 
 offscreen.transferToImageBitmap();
 // ImageBitmap { width: 256, height: 256 }</pre>

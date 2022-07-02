@@ -8,18 +8,18 @@ translation_of: Web/API/XMLHttpRequest/withCredentials
 ---
 <p>{{APIRef('XMLHttpRequest')}}</p>
 
-<p><strong>XMLHttpRequest.withCredentials  </strong>属性是一个{{jsxref("Boolean")}}类型，它指示了是否该使用类似cookies,authorization headers(头部授权)或者TLS客户端证书这一类资格证书来创建一个跨站点访问控制（cross-site <code>Access-Control</code>）请求。在同一个站点下使用<code>withCredentials属性是无效的。</code></p>
+<p><strong>XMLHttpRequest.withCredentials</strong> 属性是一个 {{jsxref("Boolean")}} 类型，它指示了是否该使用类似 Cookies、Authorization Headers (头部授权) 或者 TLS 客户端证书这一类资格证书来创建一个跨站点访问控制（cross-site <code>Access-Control</code>）请求。在同一个站点下使用 <code>withCredentials</code> 属性是无效的。</p>
 
-<p><code>此外，这个指示</code>也会被用做<code>响应中</code>cookies 被忽视的标示。默认值是false。</p>
+<p><code>此外，这个指示</code>也会被用做<code>响应中</code> Cookies 被忽视的标示。默认值是 false。</p>
 
-<p>如果在发送来自其他域的XMLHttpRequest请求之前，未设置<code>withCredentials</code> 为true，那么就不能为它自己的域设置cookie值。而通过设置<code>withCredentials</code> 为true获得的第三方cookies，将会依旧享受同源策略，因此不能被通过<a href="/en-US/docs/Web/API/Document/cookie">document.cookie</a>或者从头部相应请求的脚本等访问。</p>
+<p>如果在发送来自其他域的 XMLHttpRequest 请求之前，未设置<code>withCredentials</code> 为 true，那么就不能为它自己的域设置 Cookie 值。而通过设置 <code>withCredentials</code> 为 true 获得的第三方 Cookies，将会依旧享受同源策略，因此不能被通过 <a href="/en-US/docs/Web/API/Document/cookie">document.cookie</a> 或者从头部相应请求的脚本等访问。</p>
 
 <div class="note">
-<p><strong>注:</strong> 永远不会影响到同源请求</p>
+<p><strong>注：</strong>永远不会影响到同源请求</p>
 </div>
 
 <div class="note">
-<p><strong>Note:</strong><strong> </strong>不同域下的<code>XmlHttpRequest</code> 响应，不论其<code>Access-Control-</code> header 设置什么值，都无法为它自身站点设置cookie值，除非它在请求之前将<code>withCredentials</code> 设为true。</p>
+<p><strong>Note:</strong>不同域下的 <code>XmlHttpRequest</code> 响应，不论其 <code>Access-Control-</code> Header 设置什么值，都无法为它自身站点设置 Cookie 值，除非它在请求之前将 <code>withCredentials</code> 设为 true。</p>
 </div>
 
 <h2 id="实例">实例</h2>
@@ -48,56 +48,4 @@ xhr.send(null);</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(3)}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}<sup>[2]</sup></td>
-   <td>{{CompatIe(10)}}<sup>[1]</sup></td>
-   <td>{{CompatOpera(12)}}</td>
-   <td>{{CompatSafari("4")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]IE8 和IE9通过使用  <a href="https://msdn.microsoft.com/en-us/library/cc288060%28VS.85%29.aspx">XDomainRequest</a> 支持跨域请求</p>
-
-<p>[2] 从 Gecko 11.0 (Firefox 11.0 / Thunderbird 11.0 / SeaMonkey 2.8)开始, Gecko 不允许在同步请求下使用<code>withCredentials</code> 属性.尝试这么做将会导致浏览器抛出 <code>NS_ERROR_DOM_INVALID_ACCESS_ERR</code> exception的错误.</p>
+{{Compat("api.XMLHttpRequest.withCredentials")}}

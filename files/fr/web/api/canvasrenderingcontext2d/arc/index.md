@@ -1,39 +1,36 @@
 ---
 title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
-tags:
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.arc()`\*_ de l'API Canvas 2D permet d'ajouter un arc de cercle  au tracé, en le centrant aux positions _(x, y)* et avec un rayon *r* qui démarre à *angleDépart* et qui finit à *angleFin*, dans la direction de *sensAntiHoraire\* (par défaut en sens horaire).
+La méthode **`CanvasRenderingContext2D.arc()`** de l'API Canvas 2D permet d'ajouter un arc de cercle au tracé, en le centrant aux positions _(x, y)* et avec un rayon *r* qui démarre à *angleDépart* et qui finit à *angleFin*, dans la direction de *sensAntiHoraire* (par défaut en sens horaire).
 
 ## Syntaxe
 
-    void ctx.arc(x, y, rayon, angleDépart, angleFin, sensAntiHoraire);
+```js
+void ctx.arc(x, y, rayon, angleDépart, angleFin, sensAntiHoraire);
+```
 
 ### Paramètres
 
 - `x`
   - : La position en x du centre de l'arc.
 - `y`
-  - : La position en y du centre de l'arc.
+  - : La position en y du centre de l'arc.
 - `radius` _(rayon)_
   - : Le rayon de l'arc.
 - `startAngle` _(angle départ)_
-  - : La valeur de l'angle avec laquelle démarre l'arc de cercle, mesurée dans le sens horaire à partir de l'axe x positif et exprimé en radians.
+  - : La valeur de l'angle avec laquelle démarre l'arc de cercle, mesurée dans le sens horaire à partir de l'axe x positif et exprimé en radians.
 - `endAngle` _(angle fin)_
-  - : La valeur de l'angle avec laquelle se finit l'arc de cercle, mesurée dans le sens horaire à partir de l'axe x positif et exprimé en radians.
+  - : La valeur de l'angle avec laquelle se finit l'arc de cercle, mesurée dans le sens horaire à partir de l'axe x positif et exprimé en radians.
 - `anticlockwise` _(sens anti-horaire)_ {{optional_inline}}
-  - : Un {{jsxref("Booléen")}} facultatif qui, si à `true`_(vrai),_ indique que l'arc sera dessiné dans le sens inverse des aiguilles d'une montre entre les deux angles. Par défaut, la valeur est le sens des aiguilles d'une montre.
+  - : Un {{jsxref("Booléen")}} facultatif qui, si à `true`_(vrai),_ indique que l'arc sera dessiné dans le sens inverse des aiguilles d'une montre entre les deux angles. Par défaut, la valeur est le sens des aiguilles d'une montre.
 
 ## Exemples
 
-### En utilisant la méthode `arc` 
+### En utilisant la méthode `arc`
 
 Voici un code simple permettant de dessiner un cercle .
 
@@ -61,8 +58,8 @@ Modifiez le code ci-dessous et voyez les changements en direct sur le canvas :
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.beginPath();
@@ -96,11 +93,11 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ### Exemple avec différentes formes
 
-Dans cet exemple, plusieurs formes différentes sont dessinées, afin de montrer les possibilités offertes par `arc()`.
+Dans cet exemple, plusieurs formes différentes sont dessinées, afin de montrer les possibilités offertes par `arc()`.
 
 ```html hidden
 <canvas id="canvas" width="150" height="200"></canvas>
@@ -132,13 +129,13 @@ for (var i = 0; i < 4; i++) {
 }
 ```
 
-{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "canvas_arc.png") }}
+{{ EmbedLiveSample('Exemple_avec_différentes_formes', 160, 210, "canvas_arc.png") }}
 
 ## Spécifications
 
 | Spécification                                                                                                                    | Statut                           | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arc", "CanvasRenderingContext2D.arc")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arc", "CanvasRenderingContext2D.arc")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 
@@ -146,11 +143,11 @@ for (var i = 0; i < 4; i++) {
 
 ## Notes spécifiques à Gecko
 
-Avec Gecko 2.0 {{geckoRelease("2.0")}}:
+Avec Gecko 2.0 {{geckoRelease("2.0")}}:
 
 - Le paramètre `anticlockwise` est optionnel,
-- Une valeur négative pour le rayon lance une erreur de type {{domxref("DOMError", "IndexSizeError")}} ( "L'index ou la taille est négatif ou supérieur à la valeur autorisée" ).
+- Une valeur négative pour le rayon lance une erreur de type {{domxref("DOMError", "IndexSizeError")}} ( "L'index ou la taille est négatif ou supérieur à la valeur autorisée" ).
 
 ## Voir aussi
 
-- L'Interface JavaScript à laquelle appartient la méthode : {{domxref("CanvasRenderingContext2D")}}
+- L'Interface JavaScript à laquelle appartient la méthode : {{domxref("CanvasRenderingContext2D")}}

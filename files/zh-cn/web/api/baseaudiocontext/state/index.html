@@ -20,14 +20,14 @@ var myState = audioCtx.state;</pre>
 <p>{{domxref("DOMString")}}，可能的值如下：</p>
 
 <ul>
- <li><code>suspended</code>: audio context被阻塞了(用{{domxref("AudioContext.suspend()")}} 方法)</li>
- <li><code>running</code>: audio context正常运行</li>
- <li><code>closed</code>: audio context被关闭了(用{{domxref("AudioContext.close()")}}方法)</li>
+ <li><code>suspended</code>: audio context 被阻塞了 (用{{domxref("AudioContext.suspend()")}} 方法)</li>
+ <li><code>running</code>: audio context 正常运行</li>
+ <li><code>closed</code>: audio context 被关闭了 (用{{domxref("AudioContext.close()")}}方法)</li>
 </ul>
 
 <h2 id="例子">例子</h2>
 
-<p>下面这段代码是<a href="https://github.com/mdn/audiocontext-states/settings">AudioContext states demo</a> (直接运行)中的，其中{{domxref("AudioContext.onstatechange")}}处理器会在每次当前状态发生变化时把它输出到控制台。</p>
+<p>下面这段代码是<a href="https://github.com/mdn/audiocontext-states/settings">AudioContext states demo</a> (直接运行) 中的，其中{{domxref("AudioContext.onstatechange")}}处理器会在每次当前状态发生变化时把它输出到控制台。</p>
 
 <pre class="brush: js">audioCtx.onstatechange = function() {
   console.log(audioCtx.state);
@@ -36,74 +36,11 @@ var myState = audioCtx.state;</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-state', 'state')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(43.0)}}</td>
-   <td>{{CompatGeckoDesktop(40.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.BaseAudioContext.state")}}
 
 <h2 id="另见">另见</h2>
 

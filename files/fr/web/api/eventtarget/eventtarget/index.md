@@ -15,7 +15,9 @@ Le constructeur **`EventTarget()`** crée une nouvelle instance d'objet {{domxre
 
 ## Syntaxe
 
-    var myEventTarget = new EventTarget();
+```js
+var myEventTarget = new EventTarget();
+```
 
 ### Paramètres
 
@@ -30,7 +32,7 @@ Une instance d'objet {{domxref("EventTarget")}}.
 ```js
 class MyEventTarget extends EventTarget {
   constructor(mySecret) {
-    super();
+    super();
     this._secret = mySecret;
   }
 
@@ -52,7 +54,7 @@ let newValue = myEventTarget.secret; // == 7
 
 | Spécification                                                                                                        | Statut                           | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-eventtarget-eventtarget', 'EventTarget() constructor')}} | {{Spec2('DOM WHATWG')}} |             |
+| {{SpecName('DOM WHATWG', '#dom-eventtarget-eventtarget', 'EventTarget() constructor')}} | {{Spec2('DOM WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

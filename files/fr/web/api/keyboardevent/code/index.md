@@ -1,13 +1,6 @@
 ---
 title: KeyboardEvent.code
 slug: Web/API/KeyboardEvent/code
-tags:
-  - API
-  - Code
-  - DOM Events
-  - KeyboardEvent
-  - Propriété
-  - Reference
 translation_of: Web/API/KeyboardEvent/code
 ---
 {{APIRef("DOM Events")}}
@@ -18,7 +11,7 @@ Si le clavier n'est pas physique, la valeur retournée sera définie par le navi
 
 Cette propriété est utile quand vous souhaitez manipuler les clés en fonction de leur position physique sur le clavier et non les caractères associés au clés (par exemple pour les touches de déplacement d'un jeu vidéo). Attention toutefois, on ne pourra pas utiliser la valeur fournie par `KeyboardEvent.code` afin de déterminer le caractère utilisé sur le clavier.
 
-Par exemple, le `code` retourné est `"KeyQ"` pour le caractère "<kbd>q</kbd>" sur un clavier QWERTY, mais le même `code` représente le caractère "<kbd>'</kbd>"  sur un clavier Dvorak, et le caractère "<kbd>a</kbd>" sur un clavier AZERTY. Cela rend impossible l'utilisation du `code` pour déterminer le code d'une clé destiné aux utilisateurs s'ils n'utilisent pas une disposition de clavier anticipé.
+Par exemple, le `code` retourné est `"KeyQ"` pour le caractère "<kbd>q</kbd>" sur un clavier QWERTY, mais le même `code` représente le caractère "<kbd>'</kbd>"  sur un clavier Dvorak, et le caractère "<kbd>a</kbd>" sur un clavier AZERTY. Cela rend impossible l'utilisation du `code` pour déterminer le code d'une clé destiné aux utilisateurs s'ils n'utilisent pas une disposition de clavier anticipé.
 
 Pour déterminer quel caractère correspond à un `key event`, utilisez plutôt la propriété {{domxref("KeyboardEvent.key")}}.
 
@@ -71,14 +64,14 @@ Pour essayer ce code, cliquez sur le lien ci-dessous:
 
 ### Gérer les événements de clavier dans un jeu
 
-Cet exemple établit un écouteur d'événements pour l'événement {{event("keydown")}}  qui gère la saisie au clavier pour un jeu qui utilise la disposition de clavier typique "ZQSD" pour se déplacer en avant, à gauche, en arrière et à droite. Cela utilisera les quatre mêmes touches physiquement, quels que soient les caractères correspondants, par exemple si l'utilisateur utilise un clavier QWERTY.
+Cet exemple établit un écouteur d'événements pour l'événement {{event("keydown")}}  qui gère la saisie au clavier pour un jeu qui utilise la disposition de clavier typique "ZQSD" pour se déplacer en avant, à gauche, en arrière et à droite. Cela utilisera les quatre mêmes touches physiquement, quels que soient les caractères correspondants, par exemple si l'utilisateur utilise un clavier QWERTY.
 
 #### HTML
 
 ```html
 <p>Appuyez sur les touches ZQSD (WASP sur QWERTY) pour bouger et pour vous diriger</p>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world">
-  <polygon id="spaceship" points="15,0 0,30 30,30"/>
+  <polygon id="spaceship" points="15,0 0,30 30,30"/>
 </svg>
 <script>refresh();</script>
 ```
@@ -200,7 +193,7 @@ window.addEventListener("keydown", function(event) {
 
 Pour essayer le code ci-dessus, cliquez sur le bouton ci-dessous:
 
-{{EmbedLiveSample("Handle_keyboard_events_in_a_game", 420, 460)}}
+{{EmbedLiveSample("Gérer_les_événements_de_clavier_dans_un_jeu", 420, 460)}}
 
 Ce code peut être amélioré de plusieurs manières. La plupart des jeux réels surveillent les événements {{event("keydown")}}, démarrent le mouvement lorsque cela se produit et stoppent le mouvement lorsque l'événement {{event("keyup")}} se produit, au lieu de compter sur des répétitions de touches. Cela permettrait des mouvements plus fluides et plus rapides, mais permettrait également au joueur de bouger et de diriger en même temps. Des transitions ou des animations peuvent également être utilisées pour rendre le mouvement du navire plus fluide. Pour permettre cela, il ne faudrait pas utiliser de `switch`, ni de `else if`.ff
 

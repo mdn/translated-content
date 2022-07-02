@@ -6,7 +6,7 @@ original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 ---
 <div>{{SeeCompatTable}}{{APIRef("Shadow DOM")}}</div>
 
-<p><span class="seoSummary"><strong><code>styleSheets是</code></strong>{{domxref("DocumentOrShadowRoot")}}接口定义的只读属性，它会返回一个{{domxref('StyleSheetList')}} / {{domxref('CSSStyleSheet')}} 对象，这个对象对应的是通过引入或者嵌入文档中的样式表。</span></p>
+<p><strong><code>styleSheets</code> 是</strong> {{domxref("DocumentOrShadowRoot")}} 接口定义的只读属性，它会返回一个 {{domxref('StyleSheetList')}} / {{domxref('CSSStyleSheet')}} 对象，这个对象对应的是通过引入或者嵌入文档中的样式表。</p>
 
 <h2 id="示例代码">示例代码</h2>
 
@@ -25,29 +25,14 @@ original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 <p>返回的列表中，排序规则如下：</p>
 
 <ul>
- <li>header标签中通过link标签引入的样式优先，多个link样式表以出现顺序排序</li>
+ <li>header 标签中通过 link 标签引入的样式优先，多个 link 样式表以出现顺序排序</li>
  <li>接着是在文档中定义的样式表，存在多个这样的样式表时，以<a href="https://dom.spec.whatwg.org/#concept-tree-order">tree order</a>（译注：先序深度优先遍历树）规则进行排序</li>
 </ul>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">说明</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shadow DOM','#extensions-to-the-documentorshadowroot-mixin','DocumentOrShadowRoot')}}</td>
-   <td>{{Spec2('Shadow DOM')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-
-
-<p>{{Compat("api.DocumentOrShadowRoot.styleSheets")}}</p>
+{{Compat}}

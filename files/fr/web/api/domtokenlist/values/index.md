@@ -1,13 +1,6 @@
 ---
 title: DOMTokenList.values()
 slug: Web/API/DOMTokenList/values
-tags:
-  - API
-  - DOM
-  - Itérateurs
-  - Listes
-  - Méthodes
-  - Valeurs
 translation_of: Web/API/DOMTokenList/values
 ---
 {{APIRef("DOM")}}
@@ -16,7 +9,9 @@ La méthode **`values()`** (_valeurs_) de l'interface {{domxref("DOMTokenList")}
 
 ## Syntaxe
 
-    tokenList.values();
+```js
+tokenList.values();
+```
 
 ### Paramètres
 
@@ -50,7 +45,7 @@ for(var value of iterator) {
 
 La sortie ressemble à ceci :
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Exemples', '100%', 60) }}
 
 ## Spécifications
 

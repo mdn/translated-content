@@ -1,11 +1,6 @@
 ---
 title: DOMTokenList.value
 slug: Web/API/DOMTokenList/value
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Valeur
 translation_of: Web/API/DOMTokenList/value
 ---
 {{APIRef("DOM")}}
@@ -14,7 +9,9 @@ La propriété **`value`** (_valeur_) de l'interface {{domxref("DOMTokenList")}}
 
 ## Syntaxe
 
-    tokenList.value;
+```js
+tokenList.value;
+```
 
 ### Valeur
 
@@ -40,7 +37,7 @@ span.textContent = classes.value;
 
 La sortie ressemble à ceci :
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Exemples', '100%', 60) }}
 
 ## Spécifications
 

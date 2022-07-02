@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/has
 
 <dl>
  <dt><code>target</code></dt>
- <dd>目标对象.</dd>
+ <dd>目标对象。</dd>
  <dt><code>propertyKey</code></dt>
  <dd>属性名，需要检查目标对象是否存在此属性。</dd>
 </dl>
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/has
 <pre class="brush: js">Reflect.has({x: 0}, "x"); // true
 Reflect.has({x: 0}, "y"); // false
 
-// 如果该属性存在于原型链中，返回true
+// 如果该属性存在于原型链中，返回 true
 Reflect.has({x: 0}, "toString");
 
 // Proxy 对象的 .has() 句柄方法
@@ -75,55 +75,7 @@ Reflect.has(obj, "dormitory"); // false
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>49</td>
-   <td>{{CompatGeckoDesktop(42)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(42)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关连接">相关连接</h2>
 

@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 <p><code><strong>isPrototypeOf()</strong></code> 方法用于测试一个对象是否存在于另一个对象的原型链上。</p>
 
 <div class="note">
-<p><code>isPrototypeOf()</code> 与 {{jsxref("Operators/instanceof", "instanceof")}} 运算符不同。在表达式 "<code>object instanceof AFunction</code>"中，<code>object</code> 的原型链是针对 <code>AFunction.prototype</code> 进行检查的，而不是针对 <code>AFunction</code> 本身。</p>
+<p><strong>备注：</strong><code>isPrototypeOf()</code> 与 {{jsxref("Operators/instanceof", "instanceof")}} 运算符不同。在表达式 "<code>object instanceof AFunction</code>"中，<code>object</code> 的原型链是针对 <code>AFunction.prototype</code> 进行检查的，而不是针对 <code>AFunction</code> 本身。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -107,57 +107,7 @@ console.log(Object.prototype.isPrototypeOf(baz)); // true
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

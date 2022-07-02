@@ -9,11 +9,9 @@ translation_of: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-logical-nullish-assignment.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><em>expr1</em> ??= <em>expr2</em>
+<pre class="syntaxbox"><em>expr1</em> ??= <em>expr2</em>
 </pre>
 
 <h2 id="描述">描述</h2>
@@ -28,18 +26,18 @@ translation_of: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
 
 <p>逻辑空赋值的语法短路也意味着 <code>x ??= y</code> 等价于：</p>
 
-<pre class="brush: js notranslate">x ?? (x = y);</pre>
+<pre class="brush: js">x ?? (x = y);</pre>
 
 <p>而不等价于如下的表达式，因为其一定会发生赋值：</p>
 
-<pre class="brush: js notranslate example-bad">x = x ?? y;
+<pre class="brush: js example-bad">x = x ?? y;
 </pre>
 
 <h2 id="例子">例子</h2>
 
 <h3 id="使用逻辑空赋值">使用逻辑空赋值</h3>
 
-<pre class="brush: js notranslate">function config(options) {
+<pre class="brush: js">function config(options) {
   options.duration ??= 100;
   options.speed ??= 25;
   return options;

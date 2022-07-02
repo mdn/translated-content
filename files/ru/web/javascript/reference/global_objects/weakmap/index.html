@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code>new WeakMap([iterable])
+<pre class="syntaxbox"><code>new WeakMap([iterable])
 </code></pre>
 
 <h3 id="Parameters">Параметры</h3>
@@ -60,7 +60,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 <h3 id="Использование_объекта_WeakMap">Использование объекта <code>WeakMap</code></h3>
 
-<pre class="brush: js notranslate">const wm1 = new WeakMap(),
+<pre class="brush: js">const wm1 = new WeakMap(),
     wm2 = new WeakMap(),
     wm3 = new WeakMap();
 const o1 = {},
@@ -92,7 +92,7 @@ wm1.has(o1);     // false
 
 <h3 id="Пример_Реализация_класса_WeakMap-like_классов_с_методом_.clear">Пример: Реализация класса WeakMap-like классов с методом .clear()</h3>
 
-<pre class="brush: js notranslate">class ClearableWeakMap {
+<pre class="brush: js">class ClearableWeakMap {
     constructor(init) {
         this._wm = new WeakMap(init)
     }
@@ -143,7 +143,7 @@ wm1.has(o1);     // false
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.WeakMap")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

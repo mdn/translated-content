@@ -10,18 +10,18 @@ translation_of: Web/API/Performance/mark
 
 <p><strong><code>mark()</code></strong> 方法在浏览器的性能缓冲区中使用给定名称添加一个{{domxref("DOMHighResTimeStamp","timestamp(时间戳)")}} <em>。</em></p>
 
-<p><em>应用</em>定义的时间戳可以通过 {{domxref("Performance")}} 接口的一个 <code>getEntries*()</code> 方法({{domxref("Performance.getEntries","getEntries()")}}, {{domxref("Performance.getEntriesByName","getEntriesByName()")}} 或者 {{domxref("Performance.getEntriesByType","getEntriesByType()")}})检索到。</p>
+<p><em>应用</em>定义的时间戳可以通过 {{domxref("Performance")}} 接口的一个 <code>getEntries*()</code> 方法 ({{domxref("Performance.getEntries","getEntries()")}}, {{domxref("Performance.getEntriesByName","getEntriesByName()")}} 或者 {{domxref("Performance.getEntriesByType","getEntriesByType()")}}) 检索到。</p>
 
-<p><code>标记</code> 的 {{domxref("PerformanceEntry","performance entry")}}将具有以下属性值:</p>
+<p><code>标记</code> 的 {{domxref("PerformanceEntry","performance entry")}}将具有以下属性值：</p>
 
 <ul>
  <li>{{domxref("PerformanceEntry.entryType","entryType")}} - 设置为 "<code>mark</code>".</li>
- <li>{{domxref("PerformanceEntry.name","name")}} - 设置为mark被创建时给出的 "<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">name</span></font>"。</li>
+ <li>{{domxref("PerformanceEntry.name","name")}} - 设置为 mark 被创建时给出的 "name"。</li>
  <li>{{domxref("PerformanceEntry.startTime","startTime")}} - 设置为 <code>mark()</code> 方法被调用时的 {{domxref("DOMHighResTimeStamp","timestamp")}} 。</li>
  <li>{{domxref("PerformanceEntry.duration","duration")}} - 设置为 "<code>0</code>" (标记没有持续时间).</li>
 </ul>
 
-<p>如果这个方法被指定的 <code>name</code> 已经存在于{{domxref("PerformanceTiming")}} 接口, 会抛出一个{{jsxref("SyntaxError")}}错误。</p>
+<p>如果这个方法被指定的 <code>name</code> 已经存在于{{domxref("PerformanceTiming")}} 接口，会抛出一个{{jsxref("SyntaxError")}}错误。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -95,60 +95,4 @@ performance.clearMarks();</pre>
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic Support</td>
-   <td>{{CompatChrome(43.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>41</td>
-   <td>10</td>
-   <td>33</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic Support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>42</td>
-   <td>42</td>
-   <td>10</td>
-   <td>33</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Performance.mark")}}

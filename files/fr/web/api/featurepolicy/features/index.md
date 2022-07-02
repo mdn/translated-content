@@ -14,7 +14,9 @@ La méthode **`features()`** de l'interface {{DOMxRef("FeaturePolicy")}} retourn
 
 ## Syntaxe
 
-    const fonctionnalitésSupportées = FeaturePolicy.features()
+```js
+const fonctionnalitésSupportées = FeaturePolicy.features()
+```
 
 ### Paramètres
 
@@ -37,7 +39,7 @@ const fonctionnalitésSupportées = featurePolicy.features()
 
 // Affiche chaque directive dans la console
 for (const directive of fonctionnalitésSupportées)
-  console.log(directive)
+  console.log(directive)
 ```
 
 ## Spécification

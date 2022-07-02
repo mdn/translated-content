@@ -5,11 +5,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 ---
 <div>
  {{JSRef("Global_Objects", "Number")}}</div>
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 <p><code><strong>Number.NEGATIVE_INFINITY</strong></code> 属性表示负无穷大。</p>
 <p>不用创建一个 {{jsxref("Global_Objects/Number", "Number")}} 实例，使用 <code>Number.NEGATIVE_INFINITY</code> 来访问该静态属性。</p>
 <p>{{js_property_attributes(0,0,0)}}</p>
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 <p><code>Number.NEGATIVE_INFINITY</code> 的值和全局对象的 {{jsxref("Global_Objects/Infinity", "Infinity")}} 属性的负值相同。</p>
 <p>该值的行为同数学上的无穷大（infinity）有一点儿不同：</p>
 <ul>
@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
  <li>任何数除以 <code>NEGATIVE_INFINITY</code> 为 0。</li>
 </ul>
 <p>为了成功返回一个有限值，你可能会使用 <code>Number.NEGATIVE_INFINITY</code> 属性来判断是否显示一个条件错误 。然而 {{jsxref("Global_Objects/isFinite", "isFinite")}} 方法更适合这种情况。</p>
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 <p>下例中，赋值给变量 <code>smallNumber</code> 一个明显小于 JavaScript 中的最小值的值。当 <code>if</code> 语句执行时，<code>smallNumber</code> 值为 "<code>-Infinity</code>"，因此在继续执行代码前，<code>smallNumber</code> 被设为一个更容易管理的值。</p>
 <pre class="brush:js">var smallNumber = (-Number.MAX_VALUE) * 2
 
@@ -56,55 +56,12 @@ if (smallNumber == Number.NEGATIVE_INFINITY) {
   </tr>
  </tbody>
 </table>
-<h2 id="浏览器规范">浏览器规范</h2>
-<p>{{ CompatibilityTable() }}</p>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Android</th>
-    <th>Chrome for Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Mobile</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<h2 id="See_also" name="See_also">相关链接</h2>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+{{Compat}}
+
+<h2 id="See_also">相关链接</h2>
 <ul>
  <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
  <li>{{jsxref("Global_Objects/Infinity", "Infinity")}}</li>

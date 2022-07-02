@@ -1,12 +1,6 @@
 ---
 title: keypress
 slug: Web/API/Document/keypress_event
-tags:
-  - DOM
-  - Déprécié
-  - Evènement
-  - KeyboardEvent
-  - Reference
 translation_of: Web/API/Document/keypress_event
 ---
 {{APIRef}} {{deprecated_header}}
@@ -70,7 +64,7 @@ function logKey(e) {
 }
 ```
 
-{{EmbedLiveSample("addEventListener_keypress_example")}}
+{{EmbedLiveSample("Exemples")}}
 
 ### Équivalent `onkeypress`
 

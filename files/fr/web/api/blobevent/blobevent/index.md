@@ -15,7 +15,9 @@ Le constructeur **`BlobEvent()`** renvoie un nouvel objet {{domxref("BlobEvent")
 
 ## Syntaxe
 
-    blobEvent = new BlobEvent({data: aSpecificBlob}[, timecode]);
+```js
+blobEvent = new BlobEvent({data: aSpecificBlob}[, timecode]);
+```
 
 ### Arguments
 
@@ -23,7 +25,7 @@ _Le constructeur `BlobEvent()`_ _hérite des arguments de {{domxref("Event.Event
 
 - `data`
   - : est un {{domxref("Blob")}} associé à l'évènement.
-- `timecode` {{optional_inline}}
+- `timecode` {{optional_inline}}
   - : un {{domxref("DOMHighResTimeStamp")}} à utiliser pour initialiser l'événement blob.
 
 ## Spécifications

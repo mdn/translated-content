@@ -21,7 +21,7 @@ Le contexte du _worker_ est représenté par un objet {{domxref("DedicatedWorker
 
 > **Note :** Voir [la page d'entrée pour l'API Web Workers](/fr/docs/Web/API/Web_Workers_API) pour consulter la documentation de référence sur les _workers_ et d'autres guides.
 
-Il est possible d'exécuter n'importe quel code JavaScript dans le _thread_ du _worker_, à l'exception des méthodes de manipulation du DOM ou de certaines propriétés et méthodes rattachées à {{domxref("window")}}. On notera cependant qu'on peut tout à fait utiliser certaines API rendues disponibles via `window` comme les [WebSockets](/fr/docs/Web/API/WebSockets_API), les API de stockage de données telles que [IndexedDB](/fr/docs/Web/API/API_IndexedDB). Pour plus de détails, voir [les fonctions et classes disponibles au sein des _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
+Il est possible d'exécuter n'importe quel code JavaScript dans le _thread_ du _worker_, à l'exception des méthodes de manipulation du DOM ou de certaines propriétés et méthodes rattachées à {{domxref("window")}}. On notera cependant qu'on peut tout à fait utiliser certaines API rendues disponibles via `window` comme les [WebSockets](/fr/docs/Web/API/WebSockets_API), les API de stockage de données telles que [IndexedDB](/fr/docs/Web/API/API_IndexedDB). Pour plus de détails, voir [les fonctions et classes disponibles au sein des _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
 
 Les données sont échangées entre le _thread_ du _worker_ et le _thread_ principal par l'intermédiaire de messages. Chaque partie peut envoyer des messages à l'aide de la méthode `postMessage()` et réagir aux messages reçus grâce au gestionnaire d'évènement `onmessage` (le message sera contenu dans l'attribut `data` de l'évènement {{event("Message")}} associé). Les données sont copiées dans le message, elles ne sont pas partagées.
 
@@ -124,7 +124,7 @@ L'évènement décrivant l'erreur possède notamment trois propriétés intéres
 
 ### Initier des _workers_ fils
 
-Les _workers_ peuvent également engendrer d'autres _workers_. Ces _workers_-fils doivent être hébergés sur la même origine que la page initiale. De plus, les URI des *workers-*fils sont résolues relativement à l'emplacement du _worker_ père (plutôt que par rapport à la page parente). Ces contraintes permettent de simplifier le suivi des dépendances.
+Les _workers_ peuvent également engendrer d'autres _workers_. Ces _workers_-fils doivent être hébergés sur la même origine que la page initiale. De plus, les URI des workers-fils sont résolues relativement à l'emplacement du _worker_ père (plutôt que par rapport à la page parente). Ces contraintes permettent de simplifier le suivi des dépendances.
 
 ### Importer des scripts et des bibliothèques
 
@@ -216,7 +216,9 @@ Toutefois, la communication entre les _web workers_ est contrôlée explicitemen
 
 Les _workers_ disposent de leur propre contexte d'exécution, distinct de celui du document qui les a créés. Aussi, en général, les _workers_ ne sont pas gérés par la [politique de sécurité de contenu](/fr/docs/Web/HTTP/CSP) du document (ou du _worker_ parent) responsable de leur création. Ainsi, si un document est servi avec l'en-tête suivant :
 
-    Content-Security-Policy: script-src 'self'
+```
+Content-Security-Policy: script-src 'self'
+```
 
 Cette règle empêchera n'importe quel script inclus dans le document d'utiliser [`eval()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/eval). Toutefois, si le script génère un _worker_, le code exécuté par ce _worker_ pourra utiliser `eval()`.
 
@@ -298,7 +300,7 @@ L'[algorithme de clonage structurel](/fr/docs/Web/API/Web_Workers_API/algorithme
 
 ### Les objets transférables - échanger des données avec transfert de la propriété
 
-Chrome 17+ et Firefox 18+ permettent également d'échanger certains types d'objet (qualifiés de transférables et qui implémentent l'interface {{domxref("Transferable")}}) avec des _workers_ et à haute performance. Les objets transférables sont passés d'un contexte à l'autre avec une opération *[zero-copy](https://en.wikipedia.org/wiki/Zero-copy) *qui permet d'obtenir des améliorations sensibles lors de l'échange de données volumineuses. On peut voir cela comme un passage de référence du monde C/C++ mais les données qui sont transférées depuis le contexte appelant ne sont plus disponibles dans ce contexte après le transfert. La propriété des données est transférée au nouveau contexte. Ainsi, lorsqu'on transfère un objet {{domxref("ArrayBuffer")}} depuis l'application principale vers le _worker_, l'objet {{domxref("ArrayBuffer")}} de départ est nettoyé et ne peut plus être utilisé, son contenu est (littéralement) transféré au contexte du _worker_.
+Chrome 17+ et Firefox 18+ permettent également d'échanger certains types d'objet (qualifiés de transférables et qui implémentent l'interface {{domxref("Transferable")}}) avec des _workers_ et à haute performance. Les objets transférables sont passés d'un contexte à l'autre avec une opération [zero-copy](https://en.wikipedia.org/wiki/Zero-copy) qui permet d'obtenir des améliorations sensibles lors de l'échange de données volumineuses. On peut voir cela comme un passage de référence du monde C/C++ mais les données qui sont transférées depuis le contexte appelant ne sont plus disponibles dans ce contexte après le transfert. La propriété des données est transférée au nouveau contexte. Ainsi, lorsqu'on transfère un objet {{domxref("ArrayBuffer")}} depuis l'application principale vers le _worker_, l'objet {{domxref("ArrayBuffer")}} de départ est nettoyé et ne peut plus être utilisé, son contenu est (littéralement) transféré au contexte du _worker_.
 
 ```js
 // Créer un fichier de 32MB et le remplir.
@@ -387,7 +389,7 @@ Dans cette section nous voyons d'autres exemples d'application.
 
 ### Effectuer des calculs en arrière-plan
 
-Les _workers_ sont notamment utiles pour réaliser des opérations de traitement intensives sans bloquer pour autant le _thread_ responsable de l'interface utilisateur. Dans cet exemple, on utilise un* \*\*worker* afin de calculer la suite de Fibonacci.
+Les _workers_ sont notamment utiles pour réaliser des opérations de traitement intensives sans bloquer pour autant le _thread_ responsable de l'interface utilisateur. Dans cet exemple, on utilise un *worker* afin de calculer la suite de Fibonacci.
 
 #### JavaScript
 
@@ -490,7 +492,7 @@ La plupart des fonctionnalités JavaScript standard peuvent être utilisées dan
 
 En revanche, un _worker_ ne pourra pas directement manipuler la page parente et notamment le DOM et les objets de la page. Il faudra effectuer ce traitement indirectement, via des messages.
 
-> **Note :** Pour avoir une liste exhaustive des fonctionnalités disponibles pour les _workers_, voir  [les fonctions et interfaces disponibles pour les _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
+> **Note :** Pour avoir une liste exhaustive des fonctionnalités disponibles pour les _workers_, voir  [les fonctions et interfaces disponibles pour les _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
 
 ## Spécifications
 

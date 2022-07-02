@@ -15,12 +15,14 @@ La méthode **`WebGLRenderingContext.useProgram()`** de l'[API WebGL](/fr-FR/doc
 
 ## Syntaxe
 
-    void gl.useProgram(programme);
+```js
+void gl.useProgram(programme);
+```
 
 ### Paramètres
 
 - programme
-  - : Un {{domxref("WebGLProgram")}} à utiliser.
+  - : Un {{domxref("WebGLProgram")}} à utiliser.
 
 ### Valeur retournée
 

@@ -15,14 +15,14 @@ translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 
 
 
-<h2 id="语法" name="语法">语法</h2>
+<h2 id="语法">语法</h2>
 
 <pre class="syntaxbox">function [<em>name</em>]([<em>param1</em>[ = defaultValue1 ][, ..., <em>paramN</em>[ = defaultValueN ]]]) {
 <em>    statements</em>
 }
 </pre>
 
-<h2 id="描述" name="描述">描述</h2>
+<h2 id="描述">描述</h2>
 
 <p>JavaScript 中函数的参数默认是<code>{{jsxref("undefined")}}</code>。然而，在某些情况下可能需要设置一个不同的默认值。这是默认参数可以帮助的地方。</p>
 
@@ -58,7 +58,7 @@ multiply(5);    // 5</pre>
 multiply(5, 2); // 10
 multiply(5);    // 5</pre>
 
-<h2 id="示例" name="示例">示例</h2>
+<h2 id="示例">示例</h2>
 
 <h3 id="传入_undefined_vs_其他假值">传入 <code>undefined</code> vs 其他假值</h3>
 
@@ -77,7 +77,7 @@ test(null);      // 'object' (num is set to null)</pre>
 
 <h3 id="调用时解析">调用时解析</h3>
 
-<p>在函数被调用时，参数默认值会被解析，所以不像Python中的例子，每次函数调用时都会创建一个新的参数对象。</p>
+<p>在函数被调用时，参数默认值会被解析，所以不像 Python 中的例子，每次函数调用时都会创建一个新的参数对象。</p>
 
 <pre class="brush: js">function append(value, array = []) {
   array.push(value);
@@ -164,7 +164,7 @@ function f(a = go()) {
 
 <h3 id="位于默认参数之后非默认参数">位于默认参数之后非默认参数</h3>
 
-<p>在Gecko 26 {{geckoRelease(26)}}之前，以下代码会造成{{jsxref("SyntaxError")}}错误。这已经在{{bug(1022967)}}中修复，并在以后的版本中按预期方式工作。参数仍然设置为从左到右，覆盖默认参数，即使后面的参数没有默认值。</p>
+<p>在 Gecko 26 {{geckoRelease(26)}}之前，以下代码会造成{{jsxref("SyntaxError")}}错误。这已经在{{bug(1022967)}}中修复，并在以后的版本中按预期方式工作。参数仍然设置为从左到右，覆盖默认参数，即使后面的参数没有默认值。</p>
 
 <pre class="brush: js">function f(x = 1, y) {
   return [x, y];
@@ -205,11 +205,11 @@ f(); // 6</pre>
  </tbody>
 </table>
 
-<h2 id="浏览器兼容" name="浏览器兼容">浏览器兼容</h2>
+<h2 id="浏览器兼容">浏览器兼容</h2>
 
 <p>{{Compat("javascript.functions.default_parameters")}}</p>
 
-<h2 id="相关链接" name="相关链接">相关链接</h2>
+<h2 id="相关链接">相关链接</h2>
 
 <ul>
  <li><a class="external external-icon" href="http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values" rel="external" title="http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values">Original proposal at ecmascript.org</a></li>

@@ -1,0 +1,268 @@
+---
+title: 适合初学者的JavaScript面向对象
+slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
+translation_of: Learn/JavaScript/Objects/Object-oriented_JS
+original_slug: Learn/JavaScript/Objects/Object-oriented_JS
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}</div>
+
+<p class="summary">学完基础后, 现在我们集中于面向对象的 JavaScript (OOJS) — 本文首先提出了面向对象编程(OOP) 理论的基本观点,然后探索如何通过构造函数模拟对象类,以及如何创建对象.</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">预备知识:</th>
+   <td>计算机基础知识, 了解 HTML 和 CSS, 熟悉 JavaScrpit 基础知识 (查看 <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> 和 <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>) 和 OOJS 基础 (查看 <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>).</td>
+  </tr>
+  <tr>
+   <th scope="row">目标:</th>
+   <td>掌握面向对象程序的基本理论, 这涉及到 JavaScript  的("万物皆对象"), 以及如何创建构造器和对象.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="从零开始面向对象的程序设计">从零开始面向对象的程序设计</h2>
+
+<p>首先，我们从高维度且简化的角度看看 面向对象的程序（Object-oriented programming ，OOP）是什么。我们将简单描述OOP，因为OOP该概念已变得很复杂，如果完整地描述OOP将使读者难以理解。OOP 的基本思想是：在程序里，我们通过使用对象去构建现实世界的模型，把原本很难（或不可能）被使用的功能，简单化并提供出来，以供访问。</p>
+
+<p>对象可以包含相关的数据和代码，这些数据和代码用于表示 你所建造的模型是什么样子，以及拥有什么样的行为或功能。<span>对象包（</span>object package<span>，或者叫命名空间 </span>namespace<span>）存储（官方用语：</span><strong>封装</strong><span>）着对象的数据（常常还包括函数），使数据的组织和访问变得更容易了；对象也常用作 数据存储体（</span>data stores<span>），用于在网络上运输数据，十分便捷。</span></p>
+
+<h3 id="定义一个对象模板">定义一个对象模板</h3>
+
+<p>让我们来考虑一个简单的程序,它可以显示一个学校的学生和老师的信息.在这里我们不讨论任何程序语言,我们只讨论 OOP 思想.</p>
+
+<p>首先，我们可以回到上一节拿到定义好属性和方法的Person对象。对于一个人（person）来说，我们能在他们身上获取到很多信息（他们的住址，身高，鞋码，基因图谱，护照信息，显著的性格特征等等），然而，我们仅仅需要他们的名字，年龄，性别，兴趣 这些信息，然后，我们会基于他们的这些信息写一个简短的介绍关于他们自己，在最后我们还需要教会他们打招呼。以上的方式被称为抽象-为了我们编程的目标而利用事物的一些重要特性去把复杂的事物简单化</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13889/person-diagram.png" style="display: block; height: 219px; margin: 0px auto; width: 610px;"></p>
+
+<p>在一些面向对象的语言中，我们用类（class）的概念去描述一个对象（您在下面就能看到JavaScript使用了一个完全不同的术语）-类并不完全是一个对象，它更像是一个定义对象特质的模板。</p>
+
+<h3 id="创造一个真正的对象">创造一个真正的对象</h3>
+
+<p>从上面我们创建的class中， 我们能够基于它创建出一些对象 - 一些拥有class中属性及方法的对象。基于我们的Person类，我们可以创建出许许多多的真实的人：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13883/MDN-Graphics-instantiation-2.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
+
+<p>当一个对象需要从类中创建出来时，类的构造函数就会运行来创建这个实例。这种创建对象的过程我们称之为实例化-实例对象被类实例化。</p>
+
+<h3 id="具体的对象">具体的对象</h3>
+
+<p>在这个例子里，我们不想要泛指的人，我们想要像老师和学生这样类型更为具体的人。在 OOP 里，我们可以创建基于其它类的新类，这些新的子类可以继承它们父类的数据和功能。比起复制来说这样能够使用父对象共有的功能。如果类之间的功能不同，你可以根据需要定义专用的特征。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
+
+<p>这是非常有用的，老师和学生具有一些相同的特征比如姓名、性别、年龄，因此只需要定义这些特征一次就可以了。您可以在不同的类里分开定义这些相同的特征，这样该特征会有一个不同的命名空间。比如，一个学生的 greeting 可以是 "Yo, I'm [firstName]" (例子 <em>Yo, I'm Sam</em>)，老师的可能会正式一些，比如"Hello, my name is [Prefix] [lastName]" (例子 <em>Hello, My name is Mr Griffiths</em>)。</p>
+
+<div class="note">
+<p><strong>注：</strong><strong>多态</strong>——这个高大上的词正是用来描述多个对象拥有实现共同方法的能力。</p>
+</div>
+
+<p>现在可以根据子类创建对象。如：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13885/MDN-Graphics-instantiation-teacher-3.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;">下面我们来看看 OOP 理论如何应用到 JavaScript 实践中去的。</p>
+
+<h2 id="构建函数和对象">构建函数和对象</h2>
+
+<p>有些人认为 JavaScript 不是真正的面向对象的语言，比如它没有像许多面向对象的语言一样有用于创建class类的声明。JavaScript 用一种称为<strong>构建函数</strong>的特殊函数来定义对象和它们的特征。构建函数非常有用，因为很多情况下您不知道实际需要多少个对象（实例）。<strong>构建函数</strong>提供了创建您所需对象（实例）的有效方法，将对象的数据和特征函数按需联结至相应对象。</p>
+
+<p>不像“经典”的面向对象的语言，从构建函数创建的新实例的特征并非全盘复制，而是通过一个叫做原形链的参考链链接过去的。（参见 <a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a>），所以这并非真正的实例，严格的讲， JavaScript 在对象间使用和其它语言的共享机制不同。</p>
+
+<div class="note">
+<p><strong>注：</strong> “经典”的面向对象的语言并非好事，就像上面提到的，OOP 可能很快就变得非常复杂，JavaScript 找到了在不变的特别复杂的情况下利用面向对象的优点的方法。</p>
+</div>
+
+<p>让我们来看看 JavaScript 如何通过构建函数对象来创建类。首先，请先复制一个新的前文提到的<a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html">oojs.html</a> 。</p>
+
+<h3 id="一个简单的例子">一个简单的例子</h3>
+
+<ol>
+ <li>让我们看看如何通过一个普通的函数定义一个”人“。在您的文件中添加以下代码:
+  <pre class="brush: js notranslate">function createNewPerson(name) {
+  var obj = {};
+  obj.name = name;
+  obj.greeting = function () {
+    alert('Hi! I\'m ' + this.name + '.');
+  }
+  return obj;
+}</pre>
+ </li>
+ <li>您现在可以通过调用这个函数创建一个新的叫 salva 的人，在您浏览器的JavaScript console 试试 ：
+  <pre class="brush: js notranslate">var salva = createNewPerson('salva');
+salva.name;
+salva.greeting();</pre>
+  上述代码运行良好，但是有点冗长；如果我们知道如何创建一个对象，就没有必要创建一个新的空对象并且返回它。幸好 JavaScript 通过构建函数提供了一个便捷的方法，方法如下：</li>
+ <li>将之前的代码用如下代码代替：
+  <pre class="brush: js notranslate">function Person(name) {
+  this.name = name;
+  this.greeting = function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  };
+}</pre>
+ </li>
+</ol>
+
+<p>这个构建函数是 JavaScript 版本的类。您会发现，它只定义了对象的属性和方法，除了没有明确创建一个对象和返回任何值和之外，它有了您期待的函数所拥有的全部功能。这里使用了<code>this</code>关键词，即无论是该对象的哪个实例被这个构建函数创建，它的 <code>name</code> 属性就是传递到构建函数形参<code>name</code>的值，它的 <code>greeting()</code> 方法中也将使用相同的传递到构建函数形参<code>name</code>的值。</p>
+
+<div class="note">
+<p><strong>注：</strong> 一个构建函数通常是大写字母开头，这样便于区分构建函数和普通函数。</p>
+</div>
+
+<p>那如何调用构建函数创建新的实例呢？</p>
+
+<ol>
+ <li>将下面的代码加在您之前的代码下面：
+  <pre class="brush: js notranslate">var person1 = new Person('Bob');
+var person2 = new Person('Sarah');</pre>
+ </li>
+ <li>保存并刷新浏览器，在 console 里输入如下代码：
+  <pre class="brush: js notranslate">person1.name
+person1.greeting()
+person2.name
+person2.greeting()</pre>
+ </li>
+</ol>
+
+<p>酷！您现在看到页面上有两个对象，每一个保存在不同的命名空间里，当您访问它们的属性和方法时，您需要使用<code>person1</code>或者<code>person2</code>来调用它们。尽管它们有着相同的<code>name</code>属性和 <code>greeting()</code>方法它们是各自独立的，所以相互的功能不会冲突。注意它们使用的是自己的 name 值，这也是使用 this 关键字的原因，它们使用的从实参传入形参的自己的值，而不是其它的什么值。</p>
+
+<p>再看看这个构造对象的语法：</p>
+
+<pre class="brush: js notranslate">var person1 = new Person('Bob');
+var person2 = new Person('Sarah');</pre>
+
+<p>上述代码中，关键字 <code>new</code> 跟着一个含参函数，用于告知浏览器我们想要创建一个对象，非常类似函数调用，并把结果保存到变量中。每个示例类都是根据下面的方式定义的。</p>
+
+<pre class="brush: js notranslate">function Person(name) {
+  this.name = name;
+  this.greeting = function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  };
+}
+</pre>
+
+<p>当新的对象被创立, 变量<code>person1</code>与<code>person2</code>有效地包含了以下值：</p>
+
+<pre class="brush: js notranslate">{
+  name : 'Bob',
+  greeting : function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  }
+}
+
+{
+  name : 'Sarah',
+  greeting : function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  }
+}</pre>
+
+<p>值得注意的是每次当我们调用构造函数时，我们都会重新定义一遍 greeting()，这不是个理想的方法。为了避免这样，我们可以在原型里定义函数，接下来我们会讲到。</p>
+
+<h3 id="创建我们最终的构造函数">创建我们最终的构造函数</h3>
+
+<p>上面的例子仅仅是简单地介绍如何开始。让我们现在开始创建<code>Person()</code>构造函数。</p>
+
+<ol>
+ <li>移除掉您之前写的所有代码， 用如下构造函数替代 —— 实现原理上，这与我们之前的例子并无二致， 只是变得稍稍复杂了些：
+  <pre class="brush: js notranslate">function Person(first, last, age, gender, interests) {
+  this.name = {
+    'first': first,
+    'last': last
+  };
+  this.age = age;
+  this.gender = gender;
+  this.interests = interests;
+  this.bio = function() {
+    alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+  };
+  this.greeting = function() {
+    alert('Hi! I\'m ' + this.name.first + '.');
+  };
+};</pre>
+ </li>
+ <li>接下来加上这样一行代码， 用来创建它的一个对象：
+  <pre class="brush: js notranslate">var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);</pre>
+ </li>
+</ol>
+
+<p>这样，您就可以像我们定义第一个对象一样访问它的属性和方法了：</p>
+
+<pre class="brush: js notranslate">person1['age']
+person1.interests[1]
+person1.bio()
+// etc.</pre>
+
+<div class="note">
+<p><strong>注：</strong> 如果您对这一部分有疑问， 尝试将您的代码与我们的版本做比较 —— 戳链接： <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html">oojs-class-finished.html</a> (或者： <a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">查看它的实现</a>).</p>
+</div>
+
+<h3 id="进一步的练习">进一步的练习</h3>
+
+<p>首先， 尝试着写几行代码创建您自己的对象， 接着，尝试getting与setting对象中的成员。</p>
+
+<p>此外， 我们的<code>bio()</code>方法里仍有一些问题 —— 尽管您创建的Person是女性，或者是些别的性别类型，输出里的代词都总是 "He"。 而且， 纵然您有更多的兴趣列举在<code>interests</code>数组中， bio只会展示您的两个兴趣。 您能想出如何在类型定义（构造函数）中解决这个问题吗？ 您可以按照您喜欢的方式编写构造函数（您可能需要一些条件判断和循环）。 考虑下语句如何根据性别、兴趣列表中兴趣的数目异构。</p>
+
+<div class="note">
+<p><strong>注：</strong>如果您觉得困难， 我们在我们的<a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html">GitHub仓库</a>里作了回答(<a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">查看它的实现</a>) ——但首先请您尝试着自己写出来。</p>
+</div>
+
+<h2 id="创建对象的其他方式">创建对象的其他方式</h2>
+
+<p>到现在为止，我们了解到了两种不同的创建对象的方式 —— <a href="/en-US/docs/Learn/JavaScript/Objects/Basics#Object_basics">声明一个对象的语法</a>， 与使用构造函数(回顾上面)。</p>
+
+<p>这些方法都是很有用的， 但仍有其他的方法 —— 我们希望您能熟悉这些，以免您在Web世界的旅行中碰到它们。</p>
+
+<h3 id="Object构造函数">Object()构造函数</h3>
+
+<p>首先, 您能使用<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object()</a></code>构造函数来创建一个新对象。 是的， 一般对象都有构造函数，它创建了一个空的对象。</p>
+
+<ol>
+ <li>尝试在您浏览器中的Javascript控制台中输入以下代码：
+  <pre class="brush: js notranslate">var person1 = new Object();</pre>
+ </li>
+ <li>这样就在<code>person1</code>变量中存储了一个空对象。然后, 可以根据需要, 使用点或括号表示法向此对象添加属性和方法；试试这个例子：
+  <pre class="brush: js notranslate">person1.name = 'Chris';
+person1['age'] = 38;
+person1.greeting = function() {
+  alert('Hi! I\'m ' + this.name + '.');
+}</pre>
+ </li>
+ <li>还可以将对象文本传递给Object() 构造函数作为参数， 以便用属性/方法填充它。请尝试以下操作：
+  <pre class="brush: js notranslate">var person1 = new Object({
+  name : 'Chris',
+  age : 38,
+  greeting : function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  }
+});</pre>
+ </li>
+</ol>
+
+<h3 id="使用create方法">使用create()方法</h3>
+
+<p>JavaScript有个内嵌的方法<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code>, 它允许您基于现有对象创建新的对象。</p>
+
+<ol>
+ <li>在 JavaScript 控制台中尝试此操作：
+  <pre class="brush: js notranslate">var person2 = Object.create(person1);</pre>
+ </li>
+ <li>现在尝试这个：
+  <pre class="brush: js notranslate">person2.name
+person2.greeting()</pre>
+ </li>
+</ol>
+
+<p>您可以看到，<code>person2</code>是基于<code>person1</code>创建的， 它们具有相同的属性和方法。这非常有用， 因为它允许您创建新的对象而无需定义构造函数。缺点是比起构造函数，浏览器在更晚的时候才支持create()方法（IE9,  IE8 或甚至以前相比）， 加上一些人认为构造函数让您的代码看上去更整洁 —— 您可以在一个地方创建您的构造函数， 然后根据需要创建实例， 这让您能很清楚地知道它们来自哪里。</p>
+
+<p>但是, 如果您不太担心对旧浏览器的支持， 并且您只需要一个对象的一些副本， 那么创建一个构造函数可能会让您的代码显得过度繁杂。这取决于您的个人爱好。有些人发现create() 更容易理解和使用。</p>
+
+<p>稍后我们将更详细地探讨create() 的效果。</p>
+
+<h2 id="总结">总结</h2>
+
+<p>这篇文章简单地介绍了一些面向对象原理 —— 这些描述还不够完整， 但它让您知道我们在这里处理什么。此外， 我们已经开始研究 javascript与 "经典 OOP"的关联与区别， 如何使用构造函数实现 javascript 中的类， 以及生成对象的不同方法。</p>
+
+<p>在下一篇文章中， 我们将探讨 JavaScript 对象原型。</p>
+
+<p>{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}</p>

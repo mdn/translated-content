@@ -12,27 +12,27 @@ translation_of: Web/CSS/Attribute_selectors
 
 <p>CSS <strong>属性选择器</strong>通过已经存在的属性名或属性值匹配元素。</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* 存在title属性的&lt;a&gt; 元素 */
+<pre class="brush: css">/* 存在 title 属性的&lt;a&gt; 元素 */
 a[title] {
   color: purple;
 }
 
-/* 存在href属性并且属性值匹配"https://example.org"的&lt;a&gt; 元素 */
+/* 存在 href 属性并且属性值匹配"https://example.org"的&lt;a&gt; 元素 */
 a[href="https://example.org"] {
   color: green;
 }
 
-/* 存在href属性并且属性值包含"example"的&lt;a&gt; 元素 */
+/* 存在 href 属性并且属性值包含"example"的&lt;a&gt; 元素 */
 a[href*="example"] {
   font-size: 2em;
 }
 
-/* 存在href属性并且属性值结尾是".org"的&lt;a&gt; 元素 */
+/* 存在 href 属性并且属性值结尾是".org"的&lt;a&gt; 元素 */
 a[href$=".org"] {
   font-style: italic;
 }
 
-/* 存在class属性并且属性值包含以空格分隔的"logo"的&lt;a&gt;元素 */
+/* 存在 class 属性并且属性值包含以空格分隔的"logo"的&lt;a&gt;元素 */
 a[class~="logo"] {
   padding: 2px;
 }</pre>
@@ -54,9 +54,9 @@ a[class~="logo"] {
  <dd>表示带有以 <var>attr</var> 命名的属性，且属性值是以 <var>value </var>结尾的元素。</dd>
  <dt><code>[<var>attr</var>*=<var>value</var>]</code></dt>
  <dd>表示带有以 <var>attr</var> 命名的属性，且属性值至少包含一个 <var>value </var>值的元素。</dd>
- <dt id="case-insensitive"><code>[<em>attr</em> <em>operator</em> <em>value</em> i]</code></dt>
+ <dt><code>[<em>attr</em> <em>operator</em> <em>value</em> i]</code></dt>
  <dd>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>i</code>（或 <code>I</code>），可以在匹配属性值时忽略大小写（支持 ASCII 字符范围之内的字母）。</dd>
- <dt id="case-sensitive"><code>[<em>attr</em> <em>operator</em> <em>value</em> s]</code> {{Experimental_Inline}}</dt>
+ <dt><code>[<em>attr</em> <em>operator</em> <em>value</em> s]</code> {{Experimental_Inline}}</dt>
  <dd>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>s</code>（或 <code>S</code>），可以在匹配属性值时区分大小写（支持 ASCII 字符范围之内的字母）。</dd>
 </dl>
 
@@ -80,7 +80,7 @@ a[href*="example"] {
   background-color: silver;
 }
 
-/* 包含 "insensitive" 的链接,不区分大小写 */
+/* 包含 "insensitive" 的链接，不区分大小写 */
 a[href*="insensitive" i] {
   color: cyan;
 }
@@ -122,19 +122,19 @@ div[lang~="en-us"] {
   color: blue;
 }
 
-/* 将所有语言为<span class="op_dict_text2">葡萄牙语</span>的 &lt;div&gt; 元素的文本颜色设为绿色 */
+/* 将所有语言为葡萄牙语的 &lt;div&gt; 元素的文本颜色设为绿色 */
 div[lang="pt"] {
   color: green;
 }
 
-/* 将所有语言为<span class="op_dict_text2">中文</span>的 &lt;div&gt; 元素的文本颜色设为红色
+/* 将所有语言为中文的 &lt;div&gt; 元素的文本颜色设为红色
    无论是简体中文（zh-CN）还是繁体中文（zh-TW） */
 div[lang|="zh"] {
   color: red;
 }
 
 /* 将所有 `data-lang` 属性的值为 "zh-TW" 的 &lt;div&gt; 元素的文本颜色设为紫色 */
-/* 备注: 和 JS 不同，CSS 可以在不使用双引号的情况下直接使用带连字符的属性名 */
+/* 备注：和 JS 不同，CSS 可以在不使用双引号的情况下直接使用带连字符的属性名 */
 div[data-lang="zh-TW"] {
   color: purple;
 }

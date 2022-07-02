@@ -12,9 +12,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNam
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Object.getOwnPropertyNames()</code></strong>方法返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括Symbol值作为名称的属性）组成的数组。</p>
+<p><strong><code>Object.getOwnPropertyNames()</code></strong>方法返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括 Symbol 值作为名称的属性）组成的数组。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">Object.getOwnPropertyNames(<em>obj</em>)</pre>
 
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNam
 
 <p>在给定对象上找到的自身属性对应的字符串数组。</p>
 
-<h2 id="Description" name="Description" style="margin-bottom: 20px; line-height: 30px;">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>Object.getOwnPropertyNames()</code> 返回一个数组，该数组对元素是 <code>obj</code>自身拥有的枚举或不可枚举属性名称字符串。 数组中枚举属性的顺序与通过 {{jsxref("Statements/for...in", "for...in")}} 循环（或 {{jsxref("Object.keys")}}）迭代该对象属性时一致。数组中不可枚举属性的顺序未定义。</p>
 
@@ -44,7 +44,7 @@ console.log(Object.getOwnPropertyNames(arr).sort()); // ["0", "1", "2", "length"
 var obj = { 0: "a", 1: "b", 2: "c"};
 console.log(Object.getOwnPropertyNames(obj).sort()); // ["0", "1", "2"]
 
-// 使用Array.forEach输出属性名和属性值
+// 使用 Array.forEach 输出属性名和属性值
 Object.getOwnPropertyNames(obj).forEach(function(val, idx, array) {
   console.log(val + " -&gt; " + obj[val]);
 });
@@ -97,8 +97,8 @@ var enum_only = Object.keys(target);
 var nonenum_only = enum_and_nonenum.filter(function(key) {
     var indexInEnum = enum_only.indexOf(key);
     if (indexInEnum == -1) {
-        // 没有发现在enum_only健集中意味着这个健是不可枚举的,
-        // 因此返回true 以便让它保持在过滤结果中
+        // 没有发现在 enum_only 健集中意味着这个健是不可枚举的，
+        // 因此返回 true 以便让它保持在过滤结果中
         return true;
     } else {
         return false;
@@ -107,9 +107,9 @@ var nonenum_only = enum_and_nonenum.filter(function(key) {
 
 console.log(nonenum_only);</pre>
 
-<pre>注：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Array.filter(filt_func)方法</a>创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。</pre>
+<pre>注：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Array.filter(filt_func) 方法</a>创建一个新数组，其包含通过所提供函数实现的测试的所有元素。</pre>
 
-<h2 id="Notes" name="Notes">提示</h2>
+<h2 id="Notes">提示</h2>
 
 <p>在 ES5 中，如果参数不是一个原始对象类型，将抛出一个 {{jsxref("TypeError")}}  异常。在 ES2015 中，非对象参数被强制转换为对象 <strong>。</strong></p>
 
@@ -155,7 +155,7 @@ Object.getOwnPropertyNames('foo');
 
 <p>Firefox 28 {{geckoRelease("28")}}之前，<code>Object.getOwnPropertyNames</code> 不会获取到 {{jsxref("Error")}} 对象的属性。该 bug 在后面的版本修复了 ({{bug("724768")}})。</p>
 
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/docs/Enumerability_and_ownership_of_properties" title="Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>

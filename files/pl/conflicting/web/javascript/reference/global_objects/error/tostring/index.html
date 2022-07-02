@@ -1,0 +1,61 @@
+---
+title: Error.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
+tags:
+  - JavaScript
+  - Metodă
+  - Niestandardowy
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Error/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Error/toSource
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<p>Metoda <code><strong>toSource()</strong></code> zwraca kod, który możemethod returns code that could eval to the same error.</p>
+
+<h2 id="Składnia">Składnia</h2>
+
+<pre class="syntaxbox notranslate"><var>e</var>.toSource()</pre>
+
+<h3 id="Zwracana_wartość">Zwracana wartość</h3>
+
+<p>Łańcuch znaków (<em>string</em>) zawierający kod źródłowy błędu.</p>
+
+<h2 id="Przykłady">Przykłady</h2>
+
+<h3 id="Użycie_toSource">Użycie toSource</h3>
+
+<p>Wywołanie metody <code>toSource</code> instancji {{jsxref("Error")}} (w tym <em><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types">NativeErrors</a></em>) zwróci łańcuch znaków zawierający kod źródłowy błędu. Zwrócony <em>string</em> może być ewaluowany do utworzenia (w przybliżeniu) takiego samego obiektu. Oczywiście ciąg znaków zawierający kod źródłowy jest zgodny ze strukturą konstruktora {{jsxref("Error")}}. Przykładowo:</p>
+
+<pre class="brush: js notranslate">(<em>newname</em>(<em>message</em>, <em>nazwaPliku</em>, <em>numerLinii</em>))
+</pre>
+
+<p>gdzie wymienione atrybuty odpowiadają właściwym własnościom instancji błędu.</p>
+
+<div class="note">
+<p><strong>Uwaga:</strong> należy pamiętać, że własności używanen przez metodę <code>toSource</code> podczas tworzenia tego ciągu znaków są modyfikowalne i mogą nie odzwierciedlać dokładnie funkcji użytej do stworzenia instancji błędu lub nazwy pliku czy numeru linii gdzie wystąpił dany błąd.</p>
+</div>
+
+<h2 id="Specyfikacje">Specyfikacje</h2>
+
+<p>Nie należy do żadnego standardu.</p>
+
+<h2 id="Wsparcie_przeglądarek">Wsparcie przeglądarek</h2>
+
+<div>
+<div>
+
+
+<p>{{Compat("javascript.builtins.Error.toSource")}}</p>
+</div>
+</div>
+
+<h2 id="Zobacz_też">Zobacz też</h2>
+
+<ul>
+ <li>{{jsxref("Error.prototype.fileName")}}</li>
+ <li>{{jsxref("Error.prototype.lineNumber")}}</li>
+ <li>{{jsxref("Error.prototype.message")}}</li>
+ <li>{{jsxref("Error.prototype.name")}}</li>
+ <li>{{jsxref("Object.prototype.toSource()")}}</li>
+</ul>

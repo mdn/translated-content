@@ -18,17 +18,17 @@ var gl = canvas.getContext('webgl');
 
 <p>当你获取到 canvas 元素的 WebGL 绘图上下文，你便可以在里面绘图。</p>
 
-<p>点击 <a href="/en-US/docs/Web/API/WebGL_API/Tutorial" title="WebGL tutorial">WebGL tutorial</a> 获取更多资料，例子，和关于如何开始WebGL编程的知识。</p>
+<p>点击 <a href="/en-US/docs/Web/API/WebGL_API/Tutorial" title="WebGL tutorial">WebGL tutorial</a> 获取更多资料，例子，和关于如何开始 WebGL 编程的知识。</p>
 
 <blockquote>
-<p>补充：以下内容很多函数都没有提供参数，所以最好还是参见具体API。</p>
+<p>补充：以下内容很多函数都没有提供参数，所以最好还是参见具体 API。</p>
 </blockquote>
 
 <h2 id="常量">常量</h2>
 
 <p>请参考 <a href="/en-US/docs/Web/API/WebGL_API/Constants">WebGL constants</a> 。</p>
 
-<h2 id="WebGL上下文">WebGL上下文</h2>
+<h2 id="WebGL上下文">WebGL 上下文</h2>
 
 <p>以下的属性和方法提供只读的关于上下文的信息：</p>
 
@@ -37,7 +37,7 @@ var gl = canvas.getContext('webgl');
  <dd>只读属性，对 {{domxref("HTMLCanvasElement")}} 的向后引用。如果上下文没有相联系的 {{HTMLElement("canvas")}} 元素，值将会为 {{jsxref("null")}}。</dd>
  <dt>{{domxref("WebGLRenderingContext.commit()")}} {{experimental_inline}}</dt>
  <dd>
- <p>如果上下文没有指定的canvas，把帧交给原始的{{domxref("HTMLCanvasElement")}}元素。</p>
+ <p>如果上下文没有指定的 canvas，把帧交给原始的{{domxref("HTMLCanvasElement")}}元素。</p>
  </dd>
  <dt>{{domxref("WebGLRenderingContext.drawingBufferWidth")}}</dt>
  <dd>只读属性，当前绘图缓冲区的宽度，等于和该上下文相联系的 canvas 元素的宽度。</dd>
@@ -46,7 +46,7 @@ var gl = canvas.getContext('webgl');
  <dt>{{domxref("WebGLRenderingContext.getContextAttributes()")}}</dt>
  <dd>返回 <code>WebGLContextAttributes 对象，该对象包含真实的上下文参数。如果上下文丢失，将会返回</code> {{jsxref("null")}}。</dd>
  <dt>{{domxref("WebGLRenderingContext.isContextLost()")}}</dt>
- <dd>如果上下文丢失，返回true；否则，返回 false。</dd>
+ <dd>如果上下文丢失，返回 true；否则，返回 false。</dd>
 </dl>
 
 <h2 id="视野和裁剪">视野和裁剪</h2>
@@ -72,7 +72,7 @@ var gl = canvas.getContext('webgl');
  <dt>{{domxref("WebGLRenderingContext.blendFunc()")}}</dt>
  <dd>定义用于像素混合算法的函数。</dd>
  <dt>{{domxref("WebGLRenderingContext.blendFuncSeparate()")}}</dt>
- <dd>分别定义混合像素RGB通道和透明通道的函数。</dd>
+ <dd>分别定义混合像素 RGB 通道和透明通道的函数。</dd>
  <dt>{{domxref("WebGLRenderingContext.clearColor()")}}</dt>
  <dd>设置用于清空用的颜色。</dd>
  <dt>{{domxref("WebGLRenderingContext.clearDepth()")}}</dt>
@@ -90,9 +90,9 @@ var gl = canvas.getContext('webgl');
  <dt>{{domxref("WebGLRenderingContext.depthRange()")}}</dt>
  <dd>设置从规范化设备坐标映射到窗口或视口坐标时的深度范围。</dd>
  <dt>{{domxref("WebGLRenderingContext.disable()")}}</dt>
- <dd>禁用这个上下文的WebGL功能。</dd>
+ <dd>禁用这个上下文的 WebGL 功能。</dd>
  <dt>{{domxref("WebGLRenderingContext.enable()")}}</dt>
- <dd>启用这个上下文的WebGL功能。</dd>
+ <dd>启用这个上下文的 WebGL 功能。</dd>
  <dt>{{domxref("WebGLRenderingContext.frontFace()")}}</dt>
  <dd>设置多边形的正面使用顺时针还是逆时针绘制表示。</dd>
  <dt>{{domxref("WebGLRenderingContext.getParameter()")}}</dt>
@@ -102,7 +102,7 @@ var gl = canvas.getContext('webgl');
  <dt>{{domxref("WebGLRenderingContext.hint()")}}</dt>
  <dd>给某些行为设置建议使用的模式。具体建议需要看执行的情况。</dd>
  <dt>{{domxref("WebGLRenderingContext.isEnabled()")}}</dt>
- <dd>测试这个上下文的WebGL功能是否开启。</dd>
+ <dd>测试这个上下文的 WebGL 功能是否开启。</dd>
  <dt>{{domxref("WebGLRenderingContext.lineWidth()")}}</dt>
  <dd>设置线宽。</dd>
  <dt>{{domxref("WebGLRenderingContext.pixelStorei()")}}</dt>
@@ -190,13 +190,13 @@ var gl = canvas.getContext('webgl');
  <dt>{{domxref("WebGLRenderingContext.bindTexture()")}}</dt>
  <dd>把 <code>WebGLTexture</code> 对象绑定到指定对象上。</dd>
  <dt>{{domxref("WebGLRenderingContext.compressedTexImage2D()")}}</dt>
- <dd>指定一个为压缩格式的2D纹理图片。</dd>
+ <dd>指定一个为压缩格式的 2D 纹理图片。</dd>
  <dt>{{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}</dt>
- <dd>指定一个为压缩格式的2D纹理子图片。</dd>
+ <dd>指定一个为压缩格式的 2D 纹理子图片。</dd>
  <dt>{{domxref("WebGLRenderingContext.copyTexImage2D()")}}</dt>
- <dd>复制2D纹理图片。</dd>
+ <dd>复制 2D 纹理图片。</dd>
  <dt>{{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}</dt>
- <dd>复制2D纹理子图片。</dd>
+ <dd>复制 2D 纹理子图片。</dd>
  <dt>{{domxref("WebGLRenderingContext.createTexture()")}}</dt>
  <dd>创建 <code>WebGLTexture</code> 对象。</dd>
  <dt>{{domxref("WebGLRenderingContext.deleteTexture()")}}</dt>
@@ -208,7 +208,7 @@ var gl = canvas.getContext('webgl');
  <dt>{{domxref("WebGLRenderingContext.isTexture()")}}</dt>
  <dd>返回 Boolean 值，表示给入的 <code>WebGLTexture</code> 是否有效。</dd>
  <dt>{{domxref("WebGLRenderingContext.texImage2D()")}}</dt>
- <dd>指定2D纹理图片。</dd>
+ <dd>指定 2D 纹理图片。</dd>
  <dt>{{domxref("WebGLRenderingContext.texSubImage2D()")}}</dt>
  <dd>更新当前 <code>WebGLTexture 的子矩形。</code></dd>
  <dt>{{domxref("WebGLRenderingContext.texParameterf()")}}</dt>
@@ -223,7 +223,7 @@ var gl = canvas.getContext('webgl');
  <dt>{{domxref("WebGLRenderingContext.attachShader()")}}</dt>
  <dd>把 <code>WebGLShader</code> 添加到 <code>WebGLProgram。</code></dd>
  <dt>{{domxref("WebGLRenderingContext.bindAttribLocation()")}}</dt>
- <dd>绑定一个普通顶点索引到一个命名的attribute 变量</dd>
+ <dd>绑定一个普通顶点索引到一个命名的 attribute 变量</dd>
  <dt>{{domxref("WebGLRenderingContext.compileShader()")}}</dt>
  <dd>编译 <code>WebGLShader。</code></dd>
  <dt>{{domxref("WebGLRenderingContext.createProgram()")}}</dt>
@@ -268,31 +268,31 @@ var gl = canvas.getContext('webgl');
 
 <dl>
  <dt>{{domxref("WebGLRenderingContext.disableVertexAttribArray()")}}</dt>
- <dd>在给定的位置，禁用顶点attribute数组。</dd>
+ <dd>在给定的位置，禁用顶点 attribute 数组。</dd>
  <dt>{{domxref("WebGLRenderingContext.enableVertexAttribArray()")}}</dt>
- <dd>在给定的位置，启用顶点attribute数组。</dd>
+ <dd>在给定的位置，启用顶点 attribute 数组。</dd>
  <dt>{{domxref("WebGLRenderingContext.getActiveAttrib()")}}</dt>
- <dd>返回激活状态的attribute变量信息。</dd>
+ <dd>返回激活状态的 attribute 变量信息。</dd>
  <dt>{{domxref("WebGLRenderingContext.getActiveUniform()")}}</dt>
- <dd>返回激活状态的uniform 变量信息。</dd>
+ <dd>返回激活状态的 uniform 变量信息。</dd>
  <dt>{{domxref("WebGLRenderingContext.getAttribLocation()")}}</dt>
- <dd>返回attribute变量的指针位置。</dd>
+ <dd>返回 attribute 变量的指针位置。</dd>
  <dt>{{domxref("WebGLRenderingContext.getUniform()")}}</dt>
- <dd>返回指定位置的uniform 变量。</dd>
+ <dd>返回指定位置的 uniform 变量。</dd>
  <dt>{{domxref("WebGLRenderingContext.getUniformLocation()")}}</dt>
- <dd>返回uniform 变量的指针位置。</dd>
+ <dd>返回 uniform 变量的指针位置。</dd>
  <dt>{{domxref("WebGLRenderingContext.getVertexAttrib()")}}</dt>
- <dd>返回指定位置的顶点attribute变量。</dd>
+ <dd>返回指定位置的顶点 attribute 变量。</dd>
  <dt>{{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}</dt>
- <dd>获取给定索引的顶点attribute位置。</dd>
+ <dd>获取给定索引的顶点 attribute 位置。</dd>
  <dt>{{domxref("WebGLRenderingContext.uniform()", "WebGLRenderingContext.uniform[1234][fi][v]()")}}</dt>
- <dd>指定一个uniform变量。</dd>
+ <dd>指定一个 uniform 变量。</dd>
  <dt>{{domxref("WebGLRenderingContext.uniformMatrix()", "WebGLRenderingContext.uniformMatrix[234]fv()")}}</dt>
- <dd>指定一个uniform矩阵变量。</dd>
+ <dd>指定一个 uniform 矩阵变量。</dd>
  <dt>{{domxref("WebGLRenderingContext.vertexAttrib()", "WebGLRenderingContext.vertexAttrib[1234]f[v]()")}}</dt>
- <dd>指定一个普通顶点attribute的值。</dd>
+ <dd>指定一个普通顶点 attribute 的值。</dd>
  <dt>{{domxref("WebGLRenderingContext.vertexAttribPointer()")}}</dt>
- <dd>指定一个顶点attributes 数组中，顶点attributes 变量的数据格式和位置。</dd>
+ <dd>指定一个顶点 attributes 数组中，顶点 attributes 变量的数据格式和位置。</dd>
 </dl>
 
 <h2 id="绘制缓冲区">绘制缓冲区</h2>
@@ -316,7 +316,7 @@ var gl = canvas.getContext('webgl');
 
 <dl>
  <dt>{{domxref("WebGLRenderingContext.getSupportedExtensions()")}}</dt>
- <dd>返回一个包含 {{domxref("DOMString")}} 的 {{jsxref("Array")}} ，每个元素都为支持的WebGL扩展。</dd>
+ <dd>返回一个包含 {{domxref("DOMString")}} 的 {{jsxref("Array")}} ，每个元素都为支持的 WebGL 扩展。</dd>
  <dt>{{domxref("WebGLRenderingContext.getExtension()")}}</dt>
  <dd>返回一个扩展对象。</dd>
 </dl>

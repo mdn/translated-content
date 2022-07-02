@@ -1,11 +1,6 @@
 ---
 title: Dessin de texte avec canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-tags:
-  - Canvas
-  - Graphismes
-  - HTML
-  - Tutoriels
 translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Dessin_de_texte_avec_canvas
 ---
@@ -42,7 +37,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_fillText_example", 310, 110)}}
+{{EmbedLiveSample("Un_exemple_fillText", 310, 110)}}
 
 ### Un exemple de strokeText
 
@@ -64,7 +59,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_strokeText_example", 310, 110)}}
+{{EmbedLiveSample("Un_exemple_de_strokeText", 310, 110)}}
 
 ## Style de texte
 
@@ -73,9 +68,9 @@ Dans les exemples ci-dessus, nous utilisons déjà la propriété de police pour
 - {{domxref("CanvasRenderingContext2D.font", "font = value")}}
   - : Le style de texte actuel utilisé lors du dessin du texte. Cette chaîne utilise la même syntaxe que la propriété CSS {{cssxref ("font")}}. La police par défaut est 10px sans-serif.
 - {{domxref("CanvasRenderingContext2D.textAlign", "textAlign = value")}}
-  - : Paramètre d'alignement du texte. Valeurs possibles : `start` _(\*\*début)_, `end` _(\*\*fin)_, `left` _(\*\*gauche)_, `right` _(\*\*droite)_ ou `center` _(\*\*centre)_. La valeur par défaut est `start`.
+  - : Paramètre d'alignement du texte. Valeurs possibles : `start` _(début)_, `end` _(fin)_, `left` _(gauche)_, `right` _(droite)_ ou `center` _(centre)_. La valeur par défaut est `start`.
 - {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline = value")}}
-  - : Paramètre d'alignement de base. Valeurs possibles : `top` _(\*\*haut)_, `hanging` _(\*\*suspendu)_, `middle` _(\*\*moyen)_, `alphabetic` _(\*\*alphabétique)_, `ideographic` _(\*\*idéographique)_, `bottom` _(\*\*en bas)_. La valeur par défaut est `alphabetic`.
+  - : Paramètre d'alignement de base. Valeurs possibles : `top` _(haut)_, `hanging` _(suspendu)_, `middle` _(moyen)_, `alphabetic` _(alphabétique)_, `ideographic` _(idéographique)_, `bottom` _(en bas)_. La valeur par défaut est `alphabetic`.
 - {{domxref("CanvasRenderingContext2D.direction", "direction = value")}}
   - : Directionnalité. Valeurs possibles: `ltr` _(de gauche à droite)_, `rtl` _(de droite à gauche)_, `inherit` _(hérité)_. La valeur par défaut est `inherit`.
 
@@ -104,7 +99,7 @@ ctx.textBaseline = 'hanging';
 ctx.strokeText('Hello world', 0, 100);
 ```
 
-#### Playable code
+#### Code jouable
 
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
@@ -144,7 +139,7 @@ textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ## Mesures de texte avancées
 

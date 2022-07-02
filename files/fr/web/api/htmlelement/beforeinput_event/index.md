@@ -68,7 +68,7 @@ function updateValue(e) {
 
 ### Résultat
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -82,4 +82,4 @@ function updateValue(e) {
 
 ## Voir aussi
 
-- Évènement associé : [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
+- Évènement associé&nbsp;: [`input`](/en-US/docs/Web/API/HTMLElement/input_event)

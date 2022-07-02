@@ -59,7 +59,7 @@ Si on prend le code HTML suivant, mis en forme avec les règles par défaut (`di
 ```
 
 On aura deux boîtes de bloc anonymes qui seront créées : une pour le texte avant le paragraphe et une pour le texte après. On aura alors la structure suivante :
-  ![anonymous_block-level_boxes.png](anonymous_block-level_boxes.png)
+  ![anonymous_block-level_boxes.png](anonymous_block-level_boxes.png)
 
 À la différence de la boîte des éléments {{HTMLElement("p")}}, les développeurs ne peuvent pas contrôler la mise en forme des boîtes anonymes. Les propriétés qui héritent des éléments parents récupèreront la valeur obtenue pour l'élément {{HTMLElement("div")}} et les autres propriétés auront la valeur `initial`.
 

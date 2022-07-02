@@ -15,7 +15,7 @@ translation_of: Web/API/History_API/Working_with_the_History_API
 
 <p>Предположим, на странице <code>http://mozilla.org/foo.html</code> выполняется следующий JavaScript-код:</p>
 
-<pre class="brush: js notranslate">let stateObj = {
+<pre class="brush: js">let stateObj = {
     foo: "bar",
 }
 
@@ -90,7 +90,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 <p>Предположим, на странице <code><span class="nowiki">http://mozilla.org/foo.html</span></code> выполняется следующий JavaScript-код:</p>
 
-<pre class="brush: js notranslate">let stateObj = { foo: "bar" }
+<pre class="brush: js">let stateObj = { foo: "bar" }
 history.pushState(stateObj, "page 2", "bar.html")
 </pre>
 
@@ -98,7 +98,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 <p>Далее, предположим, на странице <code><span class="nowiki">http://mozilla.org/bar.html</span></code><span class="nowiki"> выполняется JavaScript-код:</span></p>
 
-<pre class="brush: js notranslate">history.replaceState(stateObj, "page 3", "bar2.html")
+<pre class="brush: js">history.replaceState(stateObj, "page 3", "bar2.html")
 </pre>
 
 <p>Это приведёт к тому, что в URL-строке отобразится адрес <code><span class="nowiki">http://mozilla.org/bar2.html</span></code><span class="nowiki">, но браузер не станет сразу загружать </span><code>bar2.html</code> и даже не станет проверять наличие этой страницы <code>bar2.html</code>.</p>
@@ -117,7 +117,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 <p>С помощью свойства {{DOMxRef("History.state","history.state")}} можно прочитать состояние текущей записи в истории, не дожидаясь события <code>popstate</code>, например:</p>
 
-<pre class="brush: js notranslate">let currentState = history.state
+<pre class="brush: js">let currentState = history.state
 </pre>
 
 <h2 id="Смотрите_также">Смотрите также</h2>

@@ -7,59 +7,60 @@ tags:
   - Experimental
   - Interface
   - Reference
+browser-compat: api.OffscreenCanvas
 translation_of: Web/API/OffscreenCanvas
 ---
 <div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
 
-<p><strong><code>OffscreenCanvas提供了一个可以脱离屏幕渲染的canvas对象。它在窗口环境和<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Workers_API">web worker</a>环境均有效。</code></strong></p>
+<p><strong><code>OffscreenCanvas</code></strong> 提供了一个可以脱离屏幕渲染的 canvas 对象。它在窗口环境和<a href="/zh-CN/docs/Web/API/Web_Workers_API">web worker</a>环境均有效。</p>
 
 <h2 id="构造函数">构造函数</h2>
 
 <dl>
  <dt>{{domxref("OffscreenCanvas.OffscreenCanvas", "OffscreenCanvas()")}}</dt>
- <dd><code>OffscreenCanvas构造函数。创建一个新的</code><code>OffscreenCanvas对象。</code></dd>
+ <dd><code>OffscreenCanvas</code> 构造函数。创建一个新的 <code>OffscreenCanvas</code> 对象。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
 
 <dl>
  <dt>{{domxref("OffscreenCanvas.height")}}</dt>
- <dd>offscreen canvas对象的高度。</dd>
+ <dd>offscreen canvas 对象的高度。</dd>
  <dt>{{domxref("OffscreenCanvas.width")}}</dt>
- <dd>offscreen canvas对象的宽度。</dd>
+ <dd>offscreen canvas 对象的宽度。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
 
 <dl>
  <dt>{{domxref("OffscreenCanvas.getContext()")}}</dt>
- <dd>为offscreen canvas对象返回一个渲染画布。</dd>
+ <dd>为 offscreen canvas 对象返回一个渲染画布。</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("OffscreenCanvas.toBlob()")}}</dt>
- <dd>创建一个代表canvas中的图像的{{domxref("Blob")}}对象。</dd>
+ <dd>创建一个代表 canvas 中的图像的{{domxref("Blob")}}对象。</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("OffscreenCanvas.transferToImageBitmap()")}}</dt>
- <dd>从<code>OffscreenCanvas最近渲染的图像</code>创建一个 {{domxref("ImageBitmap")}} 对象。</dd>
+ <dd>从 <code>OffscreenCanvas</code> 最近渲染的图像创建一个 {{domxref("ImageBitmap")}} 对象。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
 
-<h3 id="同步显示OffscreenCanvas中的帧">同步显示<code>OffscreenCanvas中的帧</code></h3>
+<h3 id="同步显示OffscreenCanvas中的帧">同步显示 <code>OffscreenCanvas</code> 中的帧</h3>
 
-<p>一种方式是使用<code>OffscreenCanvas</code> API，也就是用已经包含<code>OffscreenCanvas</code>对象的{{domxref("RenderingContext")}} 来生成新的帧。 每次一个新的帧在画布中完成渲染，{{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}} 方法都会被调用来保存最近渲染的图像。该方法返回一个{{domxref("ImageBitmap")}}对象，该对象可以被用在各种Web APIs中，也可以用在下一个canvas中，并且不需要转换备份。</p>
+<p>一种方式是使用<code>OffscreenCanvas</code> API，也就是用已经包含<code>OffscreenCanvas</code>对象的{{domxref("RenderingContext")}} 来生成新的帧。 每次一个新的帧在画布中完成渲染，{{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}} 方法都会被调用来保存最近渲染的图像。该方法返回一个{{domxref("ImageBitmap")}}对象，该对象可以被用在各种 Web APIs 中，也可以用在下一个 canvas 中，并且不需要转换备份。</p>
 
-<p>为了显示<code>ImageBitmap</code>，你可以用{{domxref("ImageBitmapRenderingContext")}}上下文，通过一个canvas（可见的）元素调用<code>canvas.getContext("bitmaprenderer")</code>方法来创建它。该上下文只提供用<code>ImageBitmap</code>替换canvas的内容的功能。调用{{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}} 以前的渲染结果并且通过OffscreenCanvas保存<code>ImageBitmap</code>，会在canvas里显示<code>ImageBitmap</code>并且转换其所有权到canvas。 一个单独的OffscreenCanvas可以将帧转换到任意数量的其他<code>ImageBitmapRenderingContext</code>对象。</p>
+<p>为了显示<code>ImageBitmap</code>，你可以用{{domxref("ImageBitmapRenderingContext")}}上下文，通过一个 canvas（可见的）元素调用<code>canvas.getContext("bitmaprenderer")</code>方法来创建它。该上下文只提供用<code>ImageBitmap</code>替换 canvas 的内容的功能。调用{{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}} 以前的渲染结果并且通过 OffscreenCanvas 保存<code>ImageBitmap</code>，会在 canvas 里显示<code>ImageBitmap</code>并且转换其所有权到 canvas。 一个单独的 OffscreenCanvas 可以将帧转换到任意数量的其他<code>ImageBitmapRenderingContext</code>对象。</p>
 
 <p>提供两个 {{HTMLElement("canvas")}} 元素</p>
 
 <pre class="brush: html notranslate">&lt;canvas id="one"&gt;&lt;/canvas&gt;
 &lt;canvas id="two"&gt;&lt;/canvas&gt;</pre>
 
-<p>下面的代码会用<code>OffscreenCanva提供渲染结果，就像上面描述的一样。</code></p>
+<p>下面的代码会用 <code>OffscreenCanvas</code> 提供渲染结果，就像上面描述的一样。</p>
 
 <pre class="brush: js notranslate">var one = document.getElementById("one").getContext("bitmaprenderer");
 var two = document.getElementById("two").getContext("bitmaprenderer");
@@ -80,9 +81,9 @@ var bitmapTwo = offscreen.transferToImageBitmap();
 two.transferFromImageBitmap(bitmapTwo);
 </pre>
 
-<h3 id="异步显示OffscreenCanvas生成的帧"> 异步显示<code>OffscreenCanvas生成的帧</code></h3>
+<h3 id="异步显示OffscreenCanvas生成的帧"> 异步显示 <code>OffscreenCanvas</code> 生成的帧</h3>
 
-<p><code>另一种使用 OffscreenCanvas</code> API的方式, 是在一个{{HTMLElement("canvas")}}元素上调用{{domxref("HTMLCanvasElement.transferControlToOffscreen", "transferControlToOffscreen()")}}， 也可以在<a href="/en-US/docs/Web/API/Web_Workers_API">worker</a>或主线程,上调用，这将从主线程的{{domxref("HTMLCanvasElement")}}对象返回一个<code>OffscreenCanvas对象。调用</code>{{domxref("OffscreenCanvas.getContext", "getContext()")}} 会从这个<code>OffscreenCanvas获取一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/RenderingContext">RenderingContext </a>。</code></p>
+<p>另一种使用 <code>OffscreenCanvas</code> API 的方式，是在一个{{HTMLElement("canvas")}}元素上调用{{domxref("HTMLCanvasElement.transferControlToOffscreen", "transferControlToOffscreen()")}}， 也可以在<a href="/en-US/docs/Web/API/Web_Workers_API">worker</a>或主线程，上调用，这将从主线程的{{domxref("HTMLCanvasElement")}}对象返回一个<code>OffscreenCanvas</code> 对象。调用{{domxref("OffscreenCanvas.getContext", "getContext()")}} 会从这个 <code>OffscreenCanvas</code> 获取一个<a href="/zh-CN/docs/Web/API/RenderingContext">RenderingContext</a>。</p>
 
 <p>main.js (主线程代码):</p>
 
@@ -93,7 +94,7 @@ var worker = new Worker("offscreencanvas.js");
 worker.postMessage({canvas: offscreen}, [offscreen]);
 </pre>
 
-<p>offscreencanvas.js (web work代码):</p>
+<p>offscreencanvas.js (web work 代码):</p>
 
 <pre class="brush: js notranslate">onmessage = function(evt) {
   var canvas = evt.data.canvas.
@@ -121,20 +122,7 @@ worker.postMessage({canvas: offscreen}, [offscreen]);
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#the-offscreencanvas-interface", "OffscreenCanvas")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

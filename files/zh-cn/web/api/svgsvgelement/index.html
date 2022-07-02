@@ -3,61 +3,61 @@ title: SVGSVGElement
 slug: Web/API/SVGSVGElement
 translation_of: Web/API/SVGSVGElement
 ---
-<div><font><font>{{APIRef("SVG")}}</font></font></div>
+<div>{{APIRef("SVG")}}</div>
 
-<p><font><font>该</font></font><strong><code>SVGSVGElement</code></strong><font><font>接口提供对{{SVGElement("svg")}}元素的属性的访问，以及操作它们的方法。</font><font>此接口还包含各种常用的实用方法，例如矩阵操作和控制可视渲染设备上重绘时间的功能。</font></font></p>
+<p>该<strong><code>SVGSVGElement</code></strong>接口提供对{{SVGElement("svg")}}元素的属性的访问，以及操作它们的方法。此接口还包含各种常用的实用方法，例如矩阵操作和控制可视渲染设备上重绘时间的功能。</p>
 
-<p><font><font>{{InheritanceDiagram(600,140)}}</font></font></p>
+<p>{{InheritanceDiagram(600,140)}}</p>
 
-<h2 id="属性"><font><font>属性</font></font></h2>
+<h2 id="属性">属性</h2>
 
-<p><em><font><font>此接口还从其父</font></font></em> <em>{{domxref("SVGGraphicsElement")}}</em> <em><font><font>继承属性，并且还实现</font></font></em> <em>{{domxref("SVGZoomAndPan")}}</em> <em><font><font>，</font></font></em> <em>{{domxref("SVGFitToViewBox")}}</em> <em><font><font>和</font></font></em> <em> {{domxref("WindowEventHandlers")}}</em> <em><font><font>中的属性。</font></font></em></p>
+<p><em>此接口还从其父</em> <em>{{domxref("SVGGraphicsElement")}}</em> <em>继承属性，并且还实现</em> <em>{{domxref("SVGZoomAndPan")}}</em> <em>，</em> <em>{{domxref("SVGFitToViewBox")}}</em> <em>和</em> <em> {{domxref("WindowEventHandlers")}}</em> <em>中的属性。</em></p>
 
 <dl>
  <dt>{{domxref("SVGSVGElement.x")}} {{ReadOnlyInline}}</dt>
  <dd>  {{domxref("SVGAnimatedLength")}} 对应于给定 {{SVGElement("svg")}} 元素的 {{SVGAttr("x")}} 属性</dd>
- <dt><font>{{domxref("SVGSVGElement.y")}} {{ReadOnlyInline}}</font></dt>
- <dd><font><font>{{domxref("SVGAnimatedLength")}}对应于给定{{SVGElement("svg")}}元素的{{SVGAttr("y")}}属性。</font></font></dd>
- <dt><font><font>{{domxref("SVGSVGElement.width")}} {{ReadOnlyInline}}</font></font></dt>
- <dd><font><font>{{domxref("SVGAnimatedLength")}}对应于给定{{SVGElement("svg")}}元素的{{SVGAttr("width")}}属性。</font></font></dd>
- <dt><font><font>{{domxref("SVGSVGElement.height")}} {{ReadOnlyInline}}</font></font></dt>
- <dd><font><font>{{domxref("SVGAnimatedLength")}}对应于给定{{SVGElement("svg")}}元素的{{SVGAttr("height")}}属性。</font></font></dd>
- <dt><font><font>{{domxref("SVGSVGElement.contentScriptType")}}</font></font></dt>
- <dd><font><font>{{domxref("SVGAnimatedLength")}}对应于给定{{SVGElement("svg")}}元素的{{SVGAttr("contentScriptType")}}属性。</font></font></dd>
- <dt><font><font>{{domxref("SVGSVGElement.contentStyleType")}}</font></font></dt>
- <dd><font><font>{{domxref("SVGAnimatedLength")}}对应于给定{{SVGElement("svg")}}元素的{{SVGAttr("contentStyleType")}}属性。</font></font></dd>
- <dt><font><font>{{domxref("SVGSVGElement.viewport")}}</font></font></dt>
- <dd><font><font>一个{{domxref("SVGRect")}}，包含与给定{{SVGElement("svg")}}元素对应的视口（隐式或显式）的位置和大小。</font><font>当浏览器实际呈现内容时，位置和大小值表示呈现时的实际值。</font><font>位置和大小值是父元素坐标系中的无单位值。</font><font>如果不存在父元素（即{{SVGElement("svg")}}元素表示文档树的根），如果此SVG文档作为另一文档的一部分嵌入（例如，通过HTML {{HTMLElement(" object")}} element），然后位置和大小是父文档坐标系中的无单位值。</font><font>（如果父级使用CSS或XSL布局，</font></font></dd>
- <dt><font><font>{{domxref("SVGSVGElement.pixelUnitToMillimeterX")}} {{deprecated_inline}}</font></font></dt>
- <dd><font><font>一个浮点数，表示沿视口x轴的像素单位（由CSS2定义）的大小，表示70dpi到120dpi范围内的某个单位，并且在支持此功能的系统上，可能实际上与特征匹配目标媒体。</font><font>在不可能知道像素大小的系统上，提供合适的默认像素大小。</font></font></dd>
- <dt><font><font>{{domxref("SVGSVGElement.pixelUnitToMillimeterY")}} {{deprecated_inline}}</font></font></dt>
- <dd><font><font>浮点数，表示沿视口y轴的像素单位大小。</font></font></dd>
- <dt><font><font>{{domxref("SVGSVGElement.screenPixelToMillimeterX")}} {{deprecated_inline}}</font></font></dt>
- <dd><font><font>DOM级别2中的用户界面（UI）事件指示给定UI事件发生的屏幕位置。</font><font>当浏览器实际知道“屏幕单元”的物理尺寸时，此浮动属性将表示该信息; </font><font>否则，用户代理将提供合适的默认值，例如.28mm。</font></font></dd>
- <dt><font><font>{{domxref("SVGSVGElement.screenPixelToMillimeterY")}} {{deprecated_inline}}</font></font></dt>
- <dd><font><font>沿着视口的y轴的屏幕像素的对应大小。</font></font></dd>
- <dt><font><font>{{domxref("SVGSVGElement.useCurrentView")}}</font></font></dt>
- <dd><font><font>当前最内层SVG文档片段的初始视图（即放大和平移之前）可以是“标准”视图，即基于{{SVGElement("svg")}}元素的属性，例如{{SVGAttr ("viewBox")}}）或“自定义”视图（即指向特定{{SVGElement("view")}}或其他元素的超链接）。</font><font>如果初始视图是“标准”视图，则此属性为</font></font><code>false</code><font><font>。</font><font>如果初始视图是“自定义”视图，则此属性为</font></font><code>true</code><font><font>。</font></font></dd>
- <dt><font><font>{{domxref("SVGSVGElement.currentView")}}</font></font></dt>
- <dd><font><font>{{domxref("SVGViewSpec")}}定义当前最里面的SVG文档片段的初始视图（即，放大和平移之前）。</font><font>意义取决于具体情况：如果初始视图是“标准”视图，则：</font></font>
+ <dt>{{domxref("SVGSVGElement.y")}} {{ReadOnlyInline}}</dt>
+ <dd>{{domxref("SVGAnimatedLength")}}对应于给定{{SVGElement("svg")}}元素的{{SVGAttr("y")}}属性。</dd>
+ <dt>{{domxref("SVGSVGElement.width")}} {{ReadOnlyInline}}</dt>
+ <dd>{{domxref("SVGAnimatedLength")}}对应于给定{{SVGElement("svg")}}元素的{{SVGAttr("width")}}属性。</dd>
+ <dt>{{domxref("SVGSVGElement.height")}} {{ReadOnlyInline}}</dt>
+ <dd>{{domxref("SVGAnimatedLength")}}对应于给定{{SVGElement("svg")}}元素的{{SVGAttr("height")}}属性。</dd>
+ <dt>{{domxref("SVGSVGElement.contentScriptType")}}</dt>
+ <dd>{{domxref("SVGAnimatedLength")}}对应于给定{{SVGElement("svg")}}元素的{{SVGAttr("contentScriptType")}}属性。</dd>
+ <dt>{{domxref("SVGSVGElement.contentStyleType")}}</dt>
+ <dd>{{domxref("SVGAnimatedLength")}}对应于给定{{SVGElement("svg")}}元素的{{SVGAttr("contentStyleType")}}属性。</dd>
+ <dt>{{domxref("SVGSVGElement.viewport")}}</dt>
+ <dd>一个{{domxref("SVGRect")}}，包含与给定{{SVGElement("svg")}}元素对应的视口（隐式或显式）的位置和大小。当浏览器实际呈现内容时，位置和大小值表示呈现时的实际值。位置和大小值是父元素坐标系中的无单位值。如果不存在父元素（即{{SVGElement("svg")}}元素表示文档树的根），如果此SVG文档作为另一文档的一部分嵌入（例如，通过HTML {{HTMLElement(" object")}} element），然后位置和大小是父文档坐标系中的无单位值。（如果父级使用CSS或XSL布局，</dd>
+ <dt>{{domxref("SVGSVGElement.pixelUnitToMillimeterX")}} {{deprecated_inline}}</dt>
+ <dd>一个浮点数，表示沿视口x轴的像素单位（由CSS2定义）的大小，表示70dpi到120dpi范围内的某个单位，并且在支持此功能的系统上，可能实际上与特征匹配目标媒体。在不可能知道像素大小的系统上，提供合适的默认像素大小。</dd>
+ <dt>{{domxref("SVGSVGElement.pixelUnitToMillimeterY")}} {{deprecated_inline}}</dt>
+ <dd>浮点数，表示沿视口y轴的像素单位大小。</dd>
+ <dt>{{domxref("SVGSVGElement.screenPixelToMillimeterX")}} {{deprecated_inline}}</dt>
+ <dd>DOM级别2中的用户界面（UI）事件指示给定UI事件发生的屏幕位置。当浏览器实际知道“屏幕单元”的物理尺寸时，此浮动属性将表示该信息; 否则，用户代理将提供合适的默认值，例如.28mm。</dd>
+ <dt>{{domxref("SVGSVGElement.screenPixelToMillimeterY")}} {{deprecated_inline}}</dt>
+ <dd>沿着视口的y轴的屏幕像素的对应大小。</dd>
+ <dt>{{domxref("SVGSVGElement.useCurrentView")}}</dt>
+ <dd>当前最内层SVG文档片段的初始视图（即放大和平移之前）可以是“标准”视图，即基于{{SVGElement("svg")}}元素的属性，例如{{SVGAttr ("viewBox")}}）或“自定义”视图（即指向特定{{SVGElement("view")}}或其他元素的超链接）。如果初始视图是“标准”视图，则此属性为<code>false</code>。如果初始视图是“自定义”视图，则此属性为<code>true</code>。</dd>
+ <dt>{{domxref("SVGSVGElement.currentView")}}</dt>
+ <dd>{{domxref("SVGViewSpec")}}定义当前最里面的SVG文档片段的初始视图（即，放大和平移之前）。意义取决于具体情况：如果初始视图是“标准”视图，则：
  <ul>
-  <li><font><font>{{SVGAttr("viewBox")}}，{{SVGAttr("preserveAspectRatio")}}和{{SVGAttr("currentView")}}中的{{SVGAttr("zoomAndPan")}}的值将与值匹配对于</font></font><code>SVGSVGElement</code><font><font>直接</font><font>打开的相应DOM属性</font></font></li>
-  <li><font><font>} {{SVGAttr("currentView")}}中的{{SVGAttr("transform")}}和{{SVGAttr("viewTarget")}}的值将为null</font></font></li>
+  <li>{{SVGAttr("viewBox")}}，{{SVGAttr("preserveAspectRatio")}}和{{SVGAttr("currentView")}}中的{{SVGAttr("zoomAndPan")}}的值将与值匹配对于<code>SVGSVGElement</code>直接打开的相应DOM属性</li>
+  <li>} {{SVGAttr("currentView")}}中的{{SVGAttr("transform")}}和{{SVGAttr("viewTarget")}}的值将为null</li>
  </ul>
- <font><font> 如果初始视图是{{SVGElement("view")}}元素的链接，那么：</font></font>
+  如果初始视图是{{SVGElement("view")}}元素的链接，那么：
 
  <ul>
-  <li><font><font>在{{SVGAttr("currentView")}}中{{SVGAttr("viewBox")}}，{{SVGAttr("preserveAspectRatio")}}和{{SVGAttr("zoomAndPan")}}的值将对应于给定{{SVGElement("view")}}元素的相应属性</font></font></li>
-  <li><font><font>} {{SVGAttr("currentView")}}中的{{SVGAttr("transform")}}和{{SVGAttr("viewTarget")}}的值将为null</font></font></li>
+  <li>在{{SVGAttr("currentView")}}中{{SVGAttr("viewBox")}}，{{SVGAttr("preserveAspectRatio")}}和{{SVGAttr("zoomAndPan")}}的值将对应于给定{{SVGElement("view")}}元素的相应属性</li>
+  <li>} {{SVGAttr("currentView")}}中的{{SVGAttr("transform")}}和{{SVGAttr("viewTarget")}}的值将为null</li>
  </ul>
- <font><font> 如果初始视图是指向另一个元素的链接（即，除了{{SVGElement("view")}}}之外的其他元素，则：</font></font>
+  如果初始视图是指向另一个元素的链接（即，除了{{SVGElement("view")}}}之外的其他元素，则：
 
  <ul>
-  <li><font><font>{{SVGAttr("viewBox")}}，{{SVGAttr("preserveAspectRatio")}}和{{SVGAttr("currentView")}}中的{{SVGAttr("zoomAndPan")}}的值将与值匹配对于</font></font><code>SVGSVGElement</code><font><font>直接用于最近祖先{{SVGElement("svg")}}元素</font><font>的相应DOM属性</font></font></li>
-  <li><font><font>{{SVGAttr("currentView")}}中{{SVGAttr("transform")}}的值将为null</font></font></li>
-  <li><font><font>{{SVGAttr("currentView")}}中的{{SVGAttr("viewTarget")}}将代表链接的目标</font></font></li>
+  <li>{{SVGAttr("viewBox")}}，{{SVGAttr("preserveAspectRatio")}}和{{SVGAttr("currentView")}}中的{{SVGAttr("zoomAndPan")}}的值将与值匹配对于<code>SVGSVGElement</code>直接用于最近祖先{{SVGElement("svg")}}元素的相应DOM属性</li>
+  <li>{{SVGAttr("currentView")}}中{{SVGAttr("transform")}}的值将为null</li>
+  <li>{{SVGAttr("currentView")}}中的{{SVGAttr("viewTarget")}}将代表链接的目标</li>
  </ul>
- <font><font> 如果初始视图是使用SVG视图规范片段标识符（即#svgView（...））链接到SVG文档片段，则：</font></font>
+  如果初始视图是使用SVG视图规范片段标识符（即#svgView（...））链接到SVG文档片段，则：
 
  <ul>
   <li>the values for {{SVGAttr("viewBox")}}, {{SVGAttr("preserveAspectRatio")}}, {{SVGAttr("zoomAndPan")}}, {{SVGAttr("transform")}} and {{SVGAttr("viewTarget")}} within {{SVGAttr("currentView")}} will correspond to the values from the SVG view specification fragment identifier</li>
@@ -161,9 +161,9 @@ translation_of: Web/API/SVGSVGElement
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p><font><font>{{COMPAT("api.SVGSVGElement")}}</font></font></p>
+<p>{{COMPAT("api.SVGSVGElement")}}</p>
 
-<h2 id="也可以看看"><font><font>也可以看看</font></font></h2>
+<h2 id="也可以看看">也可以看看</h2>
 
 <ul>
  <li>{{SVGElement("circle")}}</li>

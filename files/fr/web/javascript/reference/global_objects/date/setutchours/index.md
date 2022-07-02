@@ -18,7 +18,9 @@ La méthode **`setUTCHours()`** définit les heures pour la date, selon UTC, et 
 
 ## Syntaxe
 
-    dateObj.setUTCHours(valeurHeures[, valeurMinutes[, valeurSecondes[, valeurMs]]])
+```js
+dateObj.setUTCHours(valeurHeures[, valeurMinutes[, valeurSecondes[, valeurMs]]])
+```
 
 ### Paramètres
 
@@ -55,9 +57,9 @@ leGrandJour.setUTCHours(8);
 | Spécification                                                                                                        | État                         | Commentaires                                          |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.35', 'Date.prototype.setUTCHours')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.setutchours', 'Date.prototype.setUTCHours')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.setutchours', 'Date.prototype.setUTCHours')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.9.5.35', 'Date.prototype.setUTCHours')}}                         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-date.prototype.setutchours', 'Date.prototype.setUTCHours')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-date.prototype.setutchours', 'Date.prototype.setUTCHours')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

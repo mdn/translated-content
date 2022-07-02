@@ -1,21 +1,17 @@
 ---
 title: CanvasRenderingContext2D.textBaseline
 slug: Web/API/CanvasRenderingContext2D/textBaseline
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Propriété
-  - Reference
 translation_of: Web/API/CanvasRenderingContext2D/textBaseline
 ---
 {{APIRef}}
 
-La propriété **`CanvasRenderingContext2D`\*\***`.textBaseline`\*\* de l'API Canvas 2D spécifie la ligne de base de texte à utiliser lors du dessin d'un texte.
+La propriété **`CanvasRenderingContext2D.textBaseline`** de l'API Canvas 2D spécifie la ligne de base de texte à utiliser lors du dessin d'un texte.
 
 ## Syntaxe
 
-    ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
+```js
+ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
+```
 
 ### Options
 
@@ -26,21 +22,21 @@ Valeurs possibles :
 - hanging
   - : La ligne de base du texte est la ligne de base supérieure.
 - middle
-  - : La ligne de base du texte est le milieu du cadratin.
+  - : La ligne de base du texte est le milieu du cadratin.
 - alphabetic
-  - : La ligne de base du texte est la ligne de base normale alphabétique.
+  - : La ligne de base du texte est la ligne de base normale alphabétique.
 - ideographic
-  - : La ligne de base du texte est la ligne de base idéographique ; c'est le bas du corps des caractères, si le corps principal des caractères fait saillie en dessous de la ligne de base alphabétique.
+  - : La ligne de base du texte est la ligne de base idéographique ; c'est le bas du corps des caractères, si le corps principal des caractères fait saillie en dessous de la ligne de base alphabétique.
 - bottom
-  - : La ligne de base du texte est le bas du cadre. Cela diffère de ligne de base idéographique en ce que la ligne de base idéographique ne prend pas en considération les jambages.
+  - : La ligne de base du texte est le bas du cadre. Cela diffère de ligne de base idéographique en ce que la ligne de base idéographique ne prend pas en considération les jambages.
 
-La valeur par défaut est `alphabetic`.
+La valeur par défaut est `alphabetic`.
 
 ## Exemples
 
 ### Utilisation de la propritété `textBaseline`
 
-Ceci est seulement un fragment de code simple utilisant la propriété `textBaseline` pour définir un réglage différent de ligne de base de texte.
+Ceci est seulement un fragment de code simple utilisant la propriété `textBaseline` pour définir un réglage différent de ligne de base de texte.
 
 #### HTML
 
@@ -59,15 +55,15 @@ ctx.textBaseline = 'hanging';
 ctx.strokeText('Hello world', 0, 100);
 ```
 
-Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :
+Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :
 
 #### Code jouable
 
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.font = '48px serif';
@@ -101,13 +97,13 @@ textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ## Spécifications
 
 | Spécification                                                                                                                                            | Statut                           | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-textbaseline", "CanvasRenderingContext2D.textBaseline")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-textbaseline", "CanvasRenderingContext2D.textBaseline")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

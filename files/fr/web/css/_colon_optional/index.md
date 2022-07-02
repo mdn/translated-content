@@ -9,7 +9,7 @@ translation_of: Web/CSS/:optional
 ---
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:optional`** permet de cibler les éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}  pour lesquels l'attribut {{htmlattrxref("required","input")}} n'est pas activé. Cela permet ainsi d'indiquer et de mettre en forme les champs facultatifs d'un formulaire.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:optional`** permet de cibler les éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}  pour lesquels l'attribut {{htmlattrxref("required","input")}} n'est pas activé. Cela permet ainsi d'indiquer et de mettre en forme les champs facultatifs d'un formulaire.
 
 ```css
 /* Cible les élméents <input> qui sont optionnels */

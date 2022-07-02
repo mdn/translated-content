@@ -134,7 +134,7 @@ L'événement **dragenter** est déclenché lorsqu'un élément glissé ou une s
 
 | Spécification                                                                                | Statut                           | Commentaire         |
 | -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "interaction.html#dndevents", "dragenter")}} | {{Spec2("HTML WHATWG")}} |                     |
+| {{SpecName("HTML WHATWG", "interaction.html#dndevents", "dragenter")}} | {{Spec2("HTML WHATWG")}} |                     |
 | {{SpecName("HTML5.1", "editing.html#dndevents", "dragenter")}}         | {{Spec2("HTML5.1")}}     | Définition initiale |
 
 ## Compatiblités navigateurs

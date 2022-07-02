@@ -12,7 +12,7 @@ Ce code de statut est généralement obtenu comme résultat suite à une requêt
 
 ## Statut
 
-```html
+```
 201 Created
 ```
 

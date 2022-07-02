@@ -1,175 +1,219 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-tags:
-  - Error
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Error
 original_slug: Web/JavaScript/Reference/Objets_globaux/Error
+browser-compat: javascript.builtins.Error
 ---
 {{JSRef}}
 
-Le constructeur **`Error`** crée un objet d'erreur. Des instances d'objets `Error` sont déclenchées lorsque des erreurs d'exécution surviennent. L'objet `Error` peut aussi être utilisé comme objet de base pour des exceptions définies par l'utilisateur. Voir ci-dessous pour les types d'erreur natifs standard.
-
-## Syntaxe
-
-    new Error([message[, fileName[, lineNumber]]])
-
-### Paramètres
-
-- `message` {{optional_inline}}
-  - : Description de l'erreur sous une forme lisible par un humain.
-- `fileName` {{optional_inline}}{{Non-standard_inline}}
-  - : Argument qui sera utilisé pour la valeur de la propriété `fileName` dans l'objet `Error` créé. Par défaut, ce sera le nom du fichier contenant le code qui a appelé le constructeur `Error()`.
-- `lineNumber` {{optional_inline}}{{Non-standard_inline}}
-  - : Argument qui sera utilisé pour la valeur de la propriété `lineNumber` dans l'objet `Error` créé. Par défaut, ce sera le numéro de la ligne contenant l'invocation du constructeur `Error()`.
+Les objets `Error` sont déclenchés lorsque des erreurs d'exécution surviennent. L'objet `Error` peut aussi être utilisé comme objet de base pour des exceptions spécifiques. Voir ci-dessous pour les types d'erreur natifs standards.
 
 ## Description
 
-Les erreurs d'exécution ont pour résultat la création et le déclenchement d'objets `Error`.
-
-Cette page documente l'utilisation de l'objet `Error` lui-même et son utilisation comme fonction constructeur. Pour une liste des propriétés et des méthodes héritées par les instances d'`Error`,  voir {{jsxref("Error.prototype")}}.
-
-### Utilisation de `Error` comme fonction
-
-Lorsqu'`Error` est utilisée comme fonction sans utiliser l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}, cet appel renverra un objet `Error`. Aussi, un simple appel à `Error` produira le même résultat qu'une invocation avec `new`.
-
-```js
-// Cette instruction :
-const x = Error("J'ai été créée sans new");
-
-// Aura le même effet que
-const y = new Error("J'ai été créée avec new");
-```
+Les erreurs d'exécution ont pour résultat la création et le déclenchement d'objets `Error`.
 
 ### Types d'erreur
 
-En plus du constructeur `Error` générique, il existe sept autres constructeurs d'erreur de base en JavaScript. Pour les exceptions côté client, voir [Contrôle du flux d'instructions et gestion des erreurs](/fr/docs/Web/JavaScript/Guide/Contr%C3%B4le_du_flux_Gestion_des_erreurs).
+En plus du constructeur `Error` générique, il existe d'autres constructeurs d'erreur natifs en JavaScript. Pour les exceptions côté client, voir [Contrôle du flux d'instructions et gestion des erreurs](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling).
 
-- {{jsxref("EvalError")}}
-  - : Crée une instance représentant une erreur se produisant en relation avec la fonction globale {{jsxref("eval","eval()")}}.
-- {{jsxref("RangeError")}}
+- [`EvalError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/EvalError)
+  - : Crée une instance représentant une erreur se produisant en relation avec la fonction globale [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval).
+- [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError)
   - : Crée une instance représentant une erreur se produisant quand une variable numérique ou un paramètre est en dehors de sa plage de validité.
-- {{jsxref("ReferenceError")}}
-  - : Crée une instance représentant une erreur se produisant lors du déréférencement d'une référence invalide.
-- {{jsxref("SyntaxError")}}
-  - : Crée une instance représentant une erreur de syntaxe se produisant lors d'une analyse de code dans {{jsxref("eval", "eval()")}}.
-- {{jsxref("TypeError")}}
+- [`ReferenceError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)
+  - : Crée une instance représentant une erreur se produisant lors du déréférencement d'une référence invalide.
+- [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
+  - : Crée une instance représentant une erreur de syntaxe.
+- [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
   - : Crée une instance représentant une erreur se produisant quand une variable ou un paramètre n'est pas d'un type valide.
-- {{jsxref("URIError")}}
-  - : Crée une instance représentant une erreur se produisant quand des paramètres invalides sont passés à {{jsxref("encodeURI", "encodeURI()")}} ou à {{jsxref("decodeURI", "decodeURI()")}}.
-- {{JSxRef("AggregateError")}}
-  - : Crée une instance représentant différentes erreurs agrégées en une seule lorsque plusieurs erreurs sont rapportées par une opération, par exemple avec {{JSxRef("Promise.any()")}}.
-- {{jsxref("InternalError")}} {{non-standard_inline}}
-  - : Crée une instance représentant une erreur se produisant quand une erreur interne dans le moteur JavaScript est déclenchée. Par ex., "too much recursion".
+- [`URIError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/URIError)
+  - : Crée une instance représentant une erreur se produisant quand des paramètres invalides sont passés à [`encodeURI()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) ou à [`decodeURI()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/decodeURI).
+- [`AggregateError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AggregateError)
+  - : Crée une instance représentant différentes erreurs agrégées en une seule lorsque plusieurs erreurs sont rapportées par une opération, par exemple avec [`Promise.any()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/any).
+- [`InternalError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/InternalError) {{non-standard_inline}}
+  - : Crée une instance représentant une erreur se produisant quand une erreur interne dans le moteur JavaScript est déclenchée. Par exemple, «&nbsp;<i lang="en">too much recursion</i>&nbsp;».
 
-## Propriétés
+## Constructeur
 
-- {{jsxref("Error.prototype")}}
-  - : Permet l'ajout de propriétés aux instances `Error`.
+- [`Error()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Error)
+  - : Crée un nouvel objet `Error`.
 
-## Méthodes
+## Méthodes statiques methods
 
-L'objet global `Error` ne contient pas de méthodes en propre, toutefois, il hérite de certaines méthodes via la chaine de prototype.
+- [`Error.captureStackTrace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/captureStackTrace)
+  - : Une fonction non-standard implémentée par le moteur V8 qui crée la propriété [`stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack) d'une instance de `Error`.
 
-## Instances d'`Error`
+## Propriétés des instances
 
-{{page('fr/docs/JavaScript/Reference/Objets_globaux/Error/prototype', 'Description')}}
+- [`Error.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message)
+  - : Le message de l'erreur.
+- [`Error.prototype.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
+  - : Le nom de l'erreur.
+- [`Error.prototype.description`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/description) {{non-standard_inline}}
+  - : Une propriété non-standard, implémentée par Microsoft, qui décrit l'erreur. Analogue à [`message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message).
+- [`Error.prototype.number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/number) {{non-standard_inline}}
+  - : Une propriété non-standard, implémentée par Microsoft, qui fournit un nombre pour chaque erreur.
+- [`Error.prototype.fileName`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName) {{non-standard_inline}}
+  - : Une propriété non-standard, implémentée par Mozilla, qui indique le chemin du fichier à l'origine de l'erreur.
+- [`Error.prototype.lineNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber) {{non-standard_inline}}
+  - : Une propriété non-standard, implémentée par Mozilla, qui indique le numéro de la ligne du fichier à l'origine de l'erreur.
+- [`Error.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber) {{non-standard_inline}}
+  - : Une propriété non-standard, implémentée par Mozilla, qui indique le numéro de la colonne de la ligne du fichier à l'origine de l'erreur.
+- [`Error.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack) {{non-standard_inline}}
+  - : Une propriété non-standard, implémentée par Mozilla, pour fournir une trace de la pile d'appels.
 
-### Propriétés
+## Méthodes des instances
 
-{{page('fr/docs/JavaScript/Reference/Objets_globaux/Error/prototype', 'Propriétés')}}
-
-### Méthodes
-
-{{page('fr/docs/JavaScript/Reference/Objets_globaux/Error/prototype', 'Méthodes')}}
+- [`Error.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toString)
+  - : Renvoie une chaîne de caractères qui représente l'objet courant. Surcharge la méthode [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
 
 ## Exemples
 
 ### Déclenchement d'une erreur générique
 
-Vous créez habituellement un objet `Error` dans l'intention de le déclencher en utilisant le mot-clé {{jsxref("Instructions/throw", "throw")}}. Vous pouvez gérer l'erreur en utilisant la construction {{jsxref("Instructions/try...catch", "try...catch")}} :
+On crée habituellement un objet `Error` dans l'intention de le déclencher en utilisant le mot-clé [`throw`](/fr/docs/Web/JavaScript/Reference/Statements/throw). L'erreur peut ensuite être interceptée et gérée en utilisant la construction [`try…catch`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch)&nbsp;:
 
 ```js
 try {
-    throw new Error("Ouups !");
+  throw new Error("Oups !");
 } catch (e) {
-    console.log(e.name + ": " + e.message);
+  console.log(e.name + " : " + e.message);
 }
 ```
 
 ### Gestion d'une erreur spécifique
 
-Vous pouvez choisir de ne gérer que des types d'erreur particuliers en testant le type de l'erreur via la propriété {{jsxref("Object.prototype.constructor", "constructor")}} de l'erreur ou, si vous écrivez pour des interpréteurs JavaScript modernes, le mot-clé {{jsxref("Opérateurs/instanceof", "instanceof")}} :
+Il est possible de ne gérer que certains types d'erreur particuliers en testant le type de l'erreur via la propriété [`constructor`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) ou grâce au mot-clé [`instanceof`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof)&nbsp;:
 
 ```js
 try {
-    machin.truc();
+  toto.truc()
 } catch (e) {
-    if (e instanceof EvalError) {
-        console.log(e.name + ": " + e.message);
-    } else if (e instanceof RangeError) {
-        console.log(e.name + ": " + e.message);
-    }
-    // ... etc
+  if (e instanceof EvalError) {
+    console.error(e.name + ' : ' + e.message)
+  } else if (e instanceof RangeError) {
+    console.error(e.name + ' : ' + e.message)
+  }
+  // ... etc
+
+  else {
+    // Si aucun cas ne correspond, on laisse l'erreur
+    // non-gérée
+    throw e;
+  }
+}
+```
+
+### Distinguer des erreurs semblables
+
+Il arrive parfois que des erreurs semblables (type et message identiques) nécessitent des traitements différents.
+
+Si vous ne maîtrisez pas l'origine des erreurs, vous pouvez les intercepter et renvoyer de nouveaux objets `Error` avec des messages plus spécifiques.
+
+L'erreur d'origine peut être passée au constructeur `Error` avec le paramètre `option` (qui correspond à la propriété `cause`), cela permettra que l'erreur d'origine et la pile d'appels seront disponibles pour les blocs `try/catch` de plus haut niveau.
+
+Dans l'exemple qui suit, on illustre ceci pour deux méthodes qui échoueraient avec des erreurs similaires (`echecUneFacon()` et `echecAutreFacon()`):
+
+```js
+function faireTruc() {
+  try {
+    echecUneFacon();
+  } catch (err) {
+    throw new Error("Echoue d'une certaine façon", { cause: err });
+  }
+  try {
+    echecAutreFacon();
+  } catch (err) {
+    throw new Error("Echoue d'une autre façon", { cause: err });
+  }
+}
+
+try {
+  faireTruc();
+} catch (err) {
+  switch(err.message) {
+    case "Echoue d'une certaine façon":
+      gererUneFacon(err.cause);
+      break;
+    case "Echoue d'une autre façon":
+      gererUneAutreFacon(err.cause);
+      break;
+  }
+}
+```
+
+Il est aussi possible d'utiliser la propriété `cause` des [types d'erreur personnalisés](#types_derreur_personnalisés), si celle-ci est fournie via le paramètre `options` du constructeur de la sous-classe lors de l'appel à `super()`&nbsp;:
+
+```js
+class MonErreur extends Error {
+  constructor(/* des arguments */) {
+    // Il faut passer les paramètres `message` et `options`
+    // pour que la propriété "cause" soit initialisée. 
+    super(message, options);
+  }
 }
 ```
 
 ### Types d'erreur personnalisés
 
-Vous pouvez vouloir définir vos propres types d'erreur dérivants d'`Error` pour pouvoir écrire `throw new MonErreur()` et utiliser `instanceof MonErreur` afin de vérifier le type d'erreur dans le gestionnaire d'exceptions. Cela a pour résultat un code de gestion d'erreur plus propre et plus cohérent. Voir [_What's a good way to extend Error in JavaScript?_](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) sur StackOverflow pour une discussion en profondeur.
+Il est possible de définir ses propres types d'erreur dérivés de `Error` et d'utiliser alors `throw new MonErreur()` et `instanceof MonErreur` pour vérifier le type d'erreur lors du traitement. Cela permet d'avoir un code plus concis et cohérent pour le traitement des erreurs.
 
-#### Classes d'erreur personnalisées avec ECMAScript 2015 / ES6
+Voir [cette question (en anglais) sur StackOverflow](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) pour une discussion détaillée.
 
-> **Attention :** Babel, dans les versions antérieures à Babel 7, ainsi que d'autres transpileurs ne géreront pas correctement le code suivant sans [configuration supplémentaire](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend). Les versions de Babel antérieures à la version 7 peuvent uniquement gérer les classes d'erreur personnalisées lorsque celles-ci sont créées avec [`Object.defineProperty()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/defineProperty).
+#### En utilisant les classes ES2015
 
-> **Note :** Certains navigateurs incluent le constructeur `CustomError` (Erreur Personnalisée) dans la pile d'appels lors de l'utilisation de classes ES6.
+> **Attention :** Les versions de Babel antérieures à la version 7 peuvent gérer les méthodes de classes des erreurs personnalisées uniquement lorsqu'elles sont déclarées avec [Object.defineProperty()](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Dans le cas contraire, la transpilation du code qui suit ne sera pas gérée correctement sans [configuration supplémentaire](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
+
+> **Note :** Certains navigateurs incluent le constructeur `CustomError` dans la pile d'appel lorsque les classes ES2015 sont utilisées.
 
 ```js
-class CustomError extends Error {
-  constructor(machin = 'truc', ...params) {
-    // Passer les arguments restants (incluant ceux spécifiques au vendeur) au constructeur parent
+class ErreurSpecifique extends Error {
+  constructor(toto = 'truc', ...params) {
+    // On passe les arguments restants (y compris ceux
+    // de l'éditeur tiers) au constructeur parent
     super(...params);
 
-    // Maintenir dans la pile une trace adéquate de l'endroit où l'erreur a été déclenchée (disponible seulement en V8)
-    if(Error.captureStackTrace) {
-      Error.captureStackTrace(this, CustomError);
+    // On garde la pile d'appels de l'erreur
+    // Uniquement disponible pour V8
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(this, ErreurSpecifique);
     }
-    this.name = 'CustomError';
-    // Informations de déboguage personnalisées
-    this.machin = machin;
+
+    this.name = 'ErreurSpecifique';
+    // Les informations de débogage spécifiques
+    this.toto = toto;
     this.date = new Date();
   }
 }
 
 try {
-  throw new CustomError('bidule', 'messageBidule');
-} catch(e){
-  console.log(e.name);    // CustomError
-  console.log(e.machin);  // bidule
-  console.log(e.message); // messageBidule
-  console.log(e.stack);   // stacktrace
+  throw new ErreurSpecifique('truc', 'trucMessage');
+} catch(e) {
+  console.error(e.name);    // ErreurSpecifique
+  console.error(e.toto);    // truc
+  console.error(e.message); // trucMessage
+  console.error(e.stack);   // stacktrace
 }
 ```
 
-#### Objet d'erreur personnalisé ES5
+#### En utilisant des objets ES5
 
-> **Attention :** Tous les navigateurs incluent le constructeur `CustomError` dans la pile  d'appel lorsqu'une déclaration prototypale est utilisée.
+> **Attention :** Tous les navigateurs incluent le constructeur du type spécifique dans la pile d'appel lorsque la déclaration prototypale est utilisée.
 
 ```js
-function CustomError(machin, message, nomFichier, numeroLigne) {
-  var instance = new Error(message, nomFichier, numeroLigne);
-  instance.name = 'CustomError';
-  instance.machin = machin;
+function ErreurSpecifique(toto, message, fileName, lineNumber) {
+  var instance = new Error(message, fileName, lineNumber);
+  instance.name = 'ErreurSpecifique';
+  instance.toto = toto;
   Object.setPrototypeOf(instance, Object.getPrototypeOf(this));
-  if(Error.captureStackTrace) {
-    Error.captureStackTrace(instance, CustomError);
+  if (Error.captureStackTrace) {
+    Error.captureStackTrace(instance, ErreurSpecifique);
   }
   return instance;
 }
 
-CustomError.prototype = Object.create(Error.prototype, {
+ErreurSpecifique.prototype = Object.create(Error.prototype, {
   constructor: {
     value: Error,
     enumerable: false,
@@ -179,37 +223,30 @@ CustomError.prototype = Object.create(Error.prototype, {
 });
 
 if (Object.setPrototypeOf){
-  Object.setPrototypeOf(CustomError, Error);
+  Object.setPrototypeOf(ErreurSpecifique, Error);
 } else {
-  CustomError.__proto__ = Error;
+  ErreurSpecifique.__proto__ = Error;
 }
 
-
 try {
-  throw new CustomError('bidule', 'messageBidule');
+  throw new ErreurSpecifique('truc', 'trucMessage');
 } catch(e){
-  console.log(e.name);       // CustomError
-  console.log(e.toto);       // bidule
-  console.log(e.message);    // messageBidule
-  console.log(e.lineNumber); // 29
+  console.error(e.name); // ErreurSpecifique
+  console.error(e.toto); // truc
+  console.error(e.message); // trucMessage
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error-objects', 'Error')}} | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES2015', '#sec-error-objects', 'Error')}} | {{Spec2('ES2015')}}     |                                                       |
-| {{SpecName('ES5.1', '#sec-15.11', 'Error')}}             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Error")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("Error.prototype")}}
-- {{jsxref("Instructions/throw", "throw")}}
-- {{jsxref("Instructions/try...catch", "try...catch")}}
+- [Une prothèse d'émulation pour `Error`](https://github.com/zloirock/core-js#ecmascript-error) qui inclut la prise en charge de `cause`, disponible avec [`core-js`](https://github.com/zloirock/core-js)
+- [`throw`](/fr/docs/Web/JavaScript/Reference/Statements/throw)
+- [`try…catch`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch)

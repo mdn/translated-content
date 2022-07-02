@@ -11,7 +11,7 @@ translation_of: Web/API/WebGLRenderingContext/enableVertexAttribArray
 <p>你可以通过以下方法关闭顶点属性数组 {{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}.</p>
 </div>
 
-<p>在WebGL中，作用于顶点的数据会先储存在<a href="/en-US/docs/Web/API/WebGL_API/Data#Attributes">attributes</a>。这些数据仅对JavaScript代码和顶点着色器可用。属性由索引号引用到GPU维护的属性列表中。在不同的平台或GPU上，某些顶点属性索引可能具有预定义的值。创建属性时，WebGL层会分配其他属性。</p>
+<p>在 WebGL 中，作用于顶点的数据会先储存在<a href="/en-US/docs/Web/API/WebGL_API/Data#Attributes">attributes</a>。这些数据仅对 JavaScript 代码和顶点着色器可用。属性由索引号引用到 GPU 维护的属性列表中。在不同的平台或 GPU 上，某些顶点属性索引可能具有预定义的值。创建属性时，WebGL 层会分配其他属性。</p>
 
 <p>无论怎样，都需要你使用<code>enableVertexAttribArray()</code>方法，来激活每一个属性以便使用，不被激活的属性是不会被使用的。一旦激活，以下其他方法就可以获取到属性的值了，包括{{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}}，{{domxref("WebGLRenderingContext.vertexAttrib", "vertexAttrib*()")}}，和 {{domxref("WebGLRenderingContext.getVertexAttrib", "getVertexAttrib()")}}。</p>
 
@@ -43,7 +43,7 @@ translation_of: Web/API/WebGLRenderingContext/enableVertexAttribArray
 
 <h2 id="例子">例子</h2>
 
-<p>该例子是 <a href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example">A basic 2D WebGL animation example</a> 中的一部分，用以说明 <code>enableVertexArray()</code> 是如何激活顶点属性，并将顶点数据传输到shader函数的。</p>
+<p>该例子是 <a href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example">A basic 2D WebGL animation example</a> 中的一部分，用以说明 <code>enableVertexArray()</code> 是如何激活顶点属性，并将顶点数据传输到 shader 函数的。</p>
 
 <pre class="brush: js highlight[6]">gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 
@@ -58,11 +58,11 @@ gl.drawArrays(gl.TRIANGLES, 0, vertexCount);</pre>
 
 <div class="callout-box">该段代码来自于 "A basic 2D WebGL animation example." 中的 <a href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene">the function <code>animateScene()</code></a> 。 通过连接来查看全文，您可以查看产生的动画效果。</div>
 
-<p>以上代码中，使用了{{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}来设置将用于绘图的顶点数据的缓存。然后使用{{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}来获取顶点数据在shader函数中的索引。</p>
+<p>以上代码中，使用了{{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}来设置将用于绘图的顶点数据的缓存。然后使用{{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}来获取顶点数据在 shader 函数中的索引。</p>
 
 <p>我们用 <code>enableVertexAttribArray()</code> 函数来激活 <code>aVertexPosition</code>中记录的索引位置，以便在后面对该顶点属性进行数据绑定。</p>
 
-<p>使用{{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}} 将缓存数据绑定到shader函数中的顶点属性。于是，我们可以通过{{domxref("WebGLRenderingContext.drawArrays", "drawArrays()")}}函数将顶点一一绘制。</p>
+<p>使用{{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}} 将缓存数据绑定到 shader 函数中的顶点属性。于是，我们可以通过{{domxref("WebGLRenderingContext.drawArrays", "drawArrays()")}}函数将顶点一一绘制。</p>
 
 <h2 id="Specifications">Specifications</h2>
 

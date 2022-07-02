@@ -54,7 +54,7 @@ f1() === window; // objeto global
 
 <div><span class="hps" style="line-height: 1.5;">En</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">este caso</span><span style="line-height: 1.5;">,</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">el valor de <strong>this</strong></span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">no está establecido</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">por</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">la llamada</span><span style="line-height: 1.5;">.</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">Dado que el código</span><span style="line-height: 1.5;"> </span><span class="alt-edited hps" style="line-height: 1.5;">no está</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">en modo estricto</span><span style="line-height: 1.5;">, </span><span class="hps" style="line-height: 1.5;">el valor de this</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">debe ser siempre</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">un objeto</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">por lo que</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">por defecto es el</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">objeto global</span><span style="line-height: 1.5;">.</span></div>
 
-<div></div>
+
 
 <div>
 <pre class="brush:js" style="font-size: 14px;">function f2(){
@@ -67,7 +67,7 @@ f2() === undefined;</pre>
 
 <div><span style="line-height: 1.5;">En modo estricto, el valor de <strong>this</strong> se mantiene en lo que está establecida al entrar en el contexto de ejecución. Si no está definido, permanece undefined. También se puede ajustar a cualquier valor, tales como <strong>null</strong> o <strong>42</strong> o "<strong>Yo no soy this</strong>".</span></div>
 
-<div></div>
+
 
 <div class="note">
 <p><strong>Nota:</strong> En el segundo ejemplo, <strong><code>this</code></strong> debería ser {{jsxref("undefined")}}, porque <code>f2</code> fue llamado sin proporcionar ninguna base (ej. <code>window.f2()</code>). Esta característica no fue implementada en algunos navegadores cuando se comenzó a dar soporte al <a href="/es/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto" title="Strict mode">modo estricto</a>. Como resultado, retorna incorrectamente el objeto window.</p>

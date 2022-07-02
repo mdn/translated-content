@@ -11,19 +11,23 @@ translation_of: Web/API/Element/attributes
 ---
 {{ APIRef("DOM") }}
 
-La propriété **`Element.attributes`** renvoie une collection des noeuds d'attribut enregistrés dans le noeud spécifié. Il est une {{domxref("NamedNodeMap")}}, pas un tableau (_Array_), aussi il n'a pas de méthodes  {{jsxref("Array")}} et l'index de noeud {{domxref("Attr")}} peuvent différer entre les navigateurs. Pour être plus précis, les `attributs` sont une paire clé / valeur de chaînes représentant toutes les informations concernant cet attribut.
+La propriété **`Element.attributes`** renvoie une collection des noeuds d'attribut enregistrés dans le noeud spécifié. Il est une {{domxref("NamedNodeMap")}}, pas un tableau (_Array_), aussi il n'a pas de méthodes  {{jsxref("Array")}} et l'index de noeud {{domxref("Attr")}} peuvent différer entre les navigateurs. Pour être plus précis, les `attributs` sont une paire clé / valeur de chaînes représentant toutes les informations concernant cet attribut.
 
 ## Syntaxe
 
-    var attr = element.attributes;
+```js
+var attr = element.attributes;
+```
 
 ## Exemple
 
 ### Exemples basiques
 
-    // récupère le premier élément <p> du document
-    var para = document.getElementsByTagName("p")[0];
-    var attr = para.attributes;
+```js
+// récupère le premier élément <p> du document
+var para = document.getElementsByTagName("p")[0];
+var attr = para.attributes;
+```
 
 ### Énumération des attributs d'éléments
 
@@ -69,8 +73,6 @@ L'exemple suivant parcourt les nœuds d'attribut de l'élément du document avec
 </body>
 </html>
 ```
-
-
 
 ## Spécifications
 

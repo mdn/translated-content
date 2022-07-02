@@ -28,14 +28,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 
 <p>在以下程式碼片段內，{{WebExtAPIRef("cookies.getAllCookieStores()")}} 用來查找瀏覽器內，所有目前能用 cookie 存放空間，並列出每個 cookie 存放空間的 ID、還有分享此 cookie 存放空間的頁籤。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">logStores</span><span class="punctuation token">(</span>cookieStores<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">for</span><span class="punctuation token">(</span>store <span class="keyword token">of</span> cookieStores<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`Cookie store: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>store<span class="punctuation token">.</span>id<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">\n Tab IDs: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>store<span class="punctuation token">.</span>tabIds<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function logStores(cookieStores) {
+  for(store of cookieStores) {
+    console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
+  }
+}
 
-<span class="keyword token">var</span> getting <span class="operator token">=</span> browser<span class="punctuation token">.</span>cookies<span class="punctuation token">.</span><span class="function token">getAllCookieStores</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-getting<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>logStores<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+var getting = browser.cookies.getAllCookieStores();
+getting.then(logStores);</code></pre>
 
 <p>{{WebExtExamples}}</p>
 

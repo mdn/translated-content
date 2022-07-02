@@ -37,57 +37,57 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
 - {{domxref("ServiceWorkerRegistration.navigationPreload")}} {{readonlyinline}}
   - : Returns the instance of {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
-  - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.
-- {{domxref("ServiceWorkerRegistration.sync")}} **{{non-standard_inline}}** {{readonlyinline}}
-  - : Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.
+  - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.
+- {{domxref("ServiceWorkerRegistration.sync")}} **{{non-standard_inline}}** {{readonlyinline}}
+  - : Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.
 
 ### Unimplemented properties
 
 - {{domxref("serviceWorkerRegistration.periodicSync")}} {{non-standard_inline}} {{readonlyinline}}
-  - : Returns a reference to the {{domxref("PeriodicSyncManager")}} interface, which manages periodic background synchronization processes. This was mentioned as an idea in the SW explainer at some point, but as yet has not been implemented anywhere.
+  - : Returns a reference to the {{domxref("PeriodicSyncManager")}} interface, which manages periodic background synchronization processes. This was mentioned as an idea in the SW explainer at some point, but as yet has not been implemented anywhere.
 
 ### Event handlers
 
 - {{domxref("ServiceWorkerRegistration.onupdatefound")}} {{readonlyinline}}
-  - : An [`EventListener`](/en-US/docs/Web/API/EventListener) property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
+  - : An [`EventListener`](/en-US/docs/Web/API/EventListener) property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
 
 ## Methods
 
 _Also implements methods from its parent interface,_ {{domxref("EventTarget")}}.
 
 - {{domxref("ServiceWorkerRegistration.getNotifications()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("Notification")}} objects.
+  - : Returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("Notification")}} objects.
 - {{domxref("ServiceWorkerRegistration.showNotification()")}}
   - : Displays the notification with the requested title.
 - {{domxref("ServiceWorkerRegistration.update()")}}
   - : Checks the server for an updated version of the service worker without consulting caches.
 - {{domxref("ServiceWorkerRegistration.unregister()")}}
-  - : Unregisters the service worker registration and returns a {{jsxref("Promise")}}. The service worker will finish any ongoing operations before it is unregistered.
+  - : Unregisters the service worker registration and returns a {{jsxref("Promise")}}. The service worker will finish any ongoing operations before it is unregistered.
 
 ## Examples
 
-In this example, the code first checks whether the browser supports service workers and if so registers one. Next, it adds and `updatefound` event in which it uses the service worker registration to listen for further changes to the service worker's state. If the service worker hasn't changed since the last time it was registered, than the `updatefound` event will not be fired.
+In this example, the code first checks whether the browser supports service workers and if so registers one. Next, it adds and `updatefound` event in which it uses the service worker registration to listen for further changes to the service worker's state. If the service worker hasn't changed since the last time it was registered, than the `updatefound` event will not be fired.
 
 ```js
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
-  .then(function(registration) {
+  navigator.serviceWorker.register('/sw.js')
+  .then(function(registration) {
     registration.addEventListener('updatefound', function() {
-      // If updatefound is fired, it means that there's
-      // a new service worker being installed.
-      var installingWorker = registration.installing;
-      console.log('A new service worker is being installed:',
-        installingWorker);
+      // If updatefound is fired, it means that there's
+      // a new service worker being installed.
+      var installingWorker = registration.installing;
+      console.log('A new service worker is being installed:',
+        installingWorker);
 
-      // You can listen for changes to the installing service worker's
-      // state via installingWorker.onstatechange
-    });
-  })
-  .catch(function(error) {
-    console.log('Service worker registration failed:', error);
-  });
+      // You can listen for changes to the installing service worker's
+      // state via installingWorker.onstatechange
+    });
+  })
+  .catch(function(error) {
+    console.log('Service worker registration failed:', error);
+  });
 } else {
-  console.log('Service workers are not supported.');
+  console.log('Service workers are not supported.');
 }
 ```
 
@@ -97,8 +97,8 @@ if ('serviceWorker' in navigator) {
 | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('Service Workers', '#service-worker-registration-obj', 'ServiceWorkerRegistration')}} | {{Spec2('Service Workers')}}     | Initial definition.                                                                                                                                                                                                                                       |
 | {{SpecName('Push API', '#widl-ServiceWorkerRegistration-pushManager', 'PushManager')}}             | {{Spec2('Push API')}}             | Adds the {{domxref("PushManager","pushManager")}} property.                                                                                                                                                                                   |
-| {{SpecName('Web Notifications')}}                                                                                     | {{Spec2('Web Notifications')}} | Adds the {{domxref("ServiceWorkerRegistration.showNotification()","showNotification()")}} method and the {{domxref("ServiceWorkerRegistration.getNotifications()","getNotifications()")}} method. |
-| {{SpecName('Background Sync')}}                                                                                         | {{Spec2('Background Sync')}}     | Adds the {{domxref("ServiceWorkerRegistration.sync","sync")}} property.                                                                                                                                                                   |
+| {{SpecName('Web Notifications')}}                                                                                     | {{Spec2('Web Notifications')}} | Adds the {{domxref("ServiceWorkerRegistration.showNotification()","showNotification()")}} method and the {{domxref("ServiceWorkerRegistration.getNotifications()","getNotifications()")}} method. |
+| {{SpecName('Background Sync')}}                                                                                         | {{Spec2('Background Sync')}}     | Adds the {{domxref("ServiceWorkerRegistration.sync","sync")}} property.                                                                                                                                                                   |
 
 ## Browser compatibility
 

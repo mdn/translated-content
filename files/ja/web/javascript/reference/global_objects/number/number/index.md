@@ -5,8 +5,8 @@ tags:
   - コンストラクター
   - JavaScript
   - Number
-  - Reference
-  - Polyfill
+  - リファレンス
+  - ポリフィル
 browser-compat: javascript.builtins.Number.Number
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/Number
 ---

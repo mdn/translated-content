@@ -17,7 +17,9 @@ translation_of: Web/API/Window/onpaint
 
 ## Syntaxe
 
-    window.onpaint = funcRef;
+```js
+window.onpaint = funcRef;
+```
 
 - `funcRef` est une fonction de gestionnaire.
 

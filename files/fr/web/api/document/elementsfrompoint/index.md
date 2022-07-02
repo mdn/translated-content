@@ -16,11 +16,13 @@ original_slug: Web/API/DocumentOrShadowRoot/elementsFromPoint
 ---
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-La propriété **`elementsFromPoint()`** de l'interface {{domxref("DocumentOrShadowRoot")}}  renvoie un tableau (_array_) de tous les éléments présents sous le point fourni en paramètre (relatif au _viewport_).
+La propriété **`elementsFromPoint()`** de l'interface {{domxref("DocumentOrShadowRoot")}}  renvoie un tableau (_array_) de tous les éléments présents sous le point fourni en paramètre (relatif au _viewport_).
 
 ## Syntaxe
 
-    var elements = document.elementsFromPoint(x, y);
+```js
+var elements = document.elementsFromPoint(x, y);
+```
 
 ### Paramètres
 
@@ -66,7 +68,7 @@ if (document.elementsFromPoint) {
 
 ### Résultat
 
-{{EmbedLiveSample('Example', '420', '120')}}
+{{EmbedLiveSample('Exemples', '420', '120')}}
 
 ## Spécifications
 
@@ -82,4 +84,4 @@ if (document.elementsFromPoint) {
 ## Voir aussi
 
 - {{DOMxRef("DocumentOrShadowRoot.elementFromPoint()")}}
-- {{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()")}} {{Non-standard_Inline}}
+- {{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()")}} {{Non-standard_Inline}}
