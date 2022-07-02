@@ -23,10 +23,9 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
     </tr>
     <tr>
       <th scope="row">学习目标：</th>
-      <td>要了解如何使用<a href="/zh-CN/docs/Web/HTML/Element/object"><code>&lt;object&gt;</code></a>、
-        <a href="/zh-CN/docs/Web/HTML/Element/embed"><code>&lt;embed&gt;</code></a>以及
-        <a href="/zh-CN/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>元素，在网页中嵌入部件，例如 PDF
-        文档和其它外部网页。
+      <td>要了解如何使用 <a href="/zh-CN/docs/Web/HTML/Element/object"><code>&lt;object&gt;</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/embed"><code>&lt;embed&gt;</code></a>
+        以及 <a href="/zh-CN/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>
+        元素，在网页中嵌入部件，例如 PDF 文档和其它外部网页。
       </td>
     </tr>
   </tbody>
@@ -39,16 +38,16 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
   年代后期被认为是比较酷的，有证据表明，将网页分解成较小的块，这样有利于下载速度——尤其是在那时网络连接速度太慢的情况下更为明显。然而，这些技术有很多问题，随着网络速度越来越快，这些技术带来的问题远超过它们带来的积极因素，所以你再也看不到它们被使用了。
 </p>
 
-<p>一小段时间之后（20 世纪 90 年代末，21 世纪初），插件技术变得非常受欢迎，例如<a href="/zh-CN/docs/Glossary/Java">Java Applet</a>和<a
-    href="/zh-CN/docs/Glossary/Adobe_Flash">Flash</a> — 这些技术允许网络开发者将丰富的内容嵌入到网页中，例如视频和动画等，这些内容不能通过 HTML
-  单独实现。嵌入这些技术是通过诸如<a href="/zh-CN/docs/Web/HTML/Element/object"><code>&lt;object&gt;</code></a>和较少使用的<a
-    href="/zh-CN/docs/Web/HTML/Element/embed"><code>&lt;embed&gt;</code></a>元素来实现的，当时它们非常有用。由于许多问题，包括可访问性、安全性、文件大小等，它们已经过时了; 如今，大多数移动设备不再支持这些插件，桌面端也逐渐不再支持。
+<p>一小段时间之后（20 世纪 90 年代末，21 世纪初），插件技术变得非常受欢迎，例如 <a href="/zh-CN/docs/Glossary/Java">Java Applet</a> 和
+  <a href="/zh-CN/docs/Glossary/Adobe_Flash">Flash</a>——这些技术允许网络开发者将丰富的内容嵌入到网页中，例如视频和动画等，这些内容不能通过 HTML
+  单独实现。嵌入这些技术是通过诸如 <a href="/zh-CN/docs/Web/HTML/Element/object"><code>&lt;object&gt;</code></a> 和较少使用的 <a
+    href="/zh-CN/docs/Web/HTML/Element/embed"><code>&lt;embed&gt;</code></a> 元素来实现的，当时它们非常有用。由于许多问题，包括可访问性、安全性、文件大小等，它们已经过时了; 如今，大多数移动设备不再支持这些插件，桌面端也逐渐不再支持。
 </p>
 
-<p>最后，<a href="/zh-CN/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>元素出现了（连同其他嵌入内容的方式，如<a
-    href="/zh-CN/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a>，<a
-    href="/zh-CN/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>等），它提供了一种将整个 web
-  页嵌入到另一个网页的方法，看起来就像那个 web 页是另一个网页的一个{{htmlelement("img")}}或其他元素一样。{{htmlelement("iframe")}}现在经常被使用。</p>
+<p>最后，<a href="/zh-CN/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 元素出现了（连同其他嵌入内容的方式，如
+  <a href="/zh-CN/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a>、<a
+    href="/zh-CN/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a> 等），它提供了一种将整个 web
+  页嵌入到另一个网页的方法，看起来就像那个 web 页是另一个网页的一个 {{htmlelement("img")}} 或其它元素一样。{{htmlelement("iframe")}} 现在经常被使用。</p>
 
 <p>了解完历史之后，让我们继续往下看以了解如何使用它们。</p>
 
@@ -60,11 +59,11 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 <ol>
   <li>首先，去 Youtube 找一个喜欢的视频。</li>
   <li>在视频下方，你会看到一个<em>共享</em>按钮 - 点击查看共享选项。</li>
-  <li>选择“ <em>嵌入”</em>选项卡，你将得到一些<code>&lt;iframe&gt;</code>代码 - 复制一下。</li>
+  <li>选择“ <em>嵌入”</em>选项卡，你将得到一些 <code>&lt;iframe&gt;</code> 代码——复制一下。</li>
   <li>粘贴到下面的<em>输入</em>框里，看看<em>输出</em>结果是什么。</li>
 </ol>
 
-<p>此外，你还可以试试在示例中嵌入<a href="https://www.google.com/maps/">Google 地图</a>：</p>
+<p>此外，你还可以试试在示例中嵌入 <a href="https://www.google.com/maps/">Google 地图</a>：</p>
 
 <ol>
   <li>去 Google 地图找一个喜欢的地图。</li>
@@ -82,12 +81,12 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 
 <h2 id="Iframe详解">Iframe 详解</h2>
 
-<p>是不是很简单又有趣呢？<a href="/zh-CN/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>元素旨在允许你将其他 Web
-  文档嵌入到当前文档中。这很适合将第三方内容嵌入你的网站，你可能无法直接控制，也不希望实现自己的版本 - 例如来自在线视频提供商的视频，<a
-    href="https://disqus.com/">Disqus</a>等评论系统，在线地图提供商，广告横幅等。你通过本课程使用的实时可编辑示例就是使用<code>&lt;iframe&gt;</code> 实现的。
+<p>是不是很简单又有趣呢？<a href="/zh-CN/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 元素旨在允许你将其他 Web
+  文档嵌入到当前文档中。这很适合将第三方内容嵌入你的网站，你可能无法直接控制，也不希望实现自己的版本——例如来自在线视频提供商的视频，<a
+    href="https://disqus.com/">Disqus</a> 等评论系统，在线地图提供商，广告横幅等。你通过本课程使用的实时可编辑示例就是使用 <code>&lt;iframe&gt;</code> 实现的。
 </p>
 
-<p>我们会在后面提到，关于<code>&lt;iframe&gt;</code>有一些严重的<a
+<p>我们会在后面提到，关于 <code>&lt;iframe&gt;</code> 有一些严重的<a
     href="#安全隐患">安全隐患</a>需要考虑，但这并不意味着你不应该在你的网站上使用它们——它只需要一些知识和仔细地思考。让我们更详细地探索这些代码。假设你想在其中一个网页上加入 MDN 词汇表，你可以尝试以下方式：</p>
 
 <pre class="brush: html">&lt;iframe src="https://developer.mozilla.org/zh-CN/docs/Glossary"
@@ -99,29 +98,30 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 &lt;/iframe&gt;
 </pre>
 
-<p>此示例包括使用以下所需的<code>&lt;iframe&gt;</code>基本要素：</p>
+<p>此示例包括使用以下所需的 <code>&lt;iframe&gt;</code> 基本要素：</p>
 
 <dl>
   <dt><code><a href="/zh-CN/docs/Web/HTML/Element/iframe#attr-allowfullscreen">allowfullscreen</a></code></dt>
-  <dd>如果设置，<code>&lt;iframe&gt;</code>则可以通过<a href="/zh-CN/docs/Web/API/Fullscreen_API">全屏 API</a>设置为全屏模式（稍微超出本文的范围）。
+  <dd>如果设置，<code>&lt;iframe&gt;</code>则可以通过<a href="/zh-CN/docs/Web/API/Fullscreen_API">全屏 API</a> 设置为全屏模式（稍微超出本文的范围）。
   </dd>
   <dt><code><a href="/zh-CN/docs/Web/HTML/Element/iframe#attr-frameborder">frameborder</a></code></dt>
-  <dd>如果设置为 1，则会告诉浏览器在此框架和其他框架之间绘制边框，这是默认行为。0 删除边框。不推荐这样设置，因为在<a href="/zh-CN/docs/Glossary/CSS">CSS
+  <dd>如果设置为 1，则会告诉浏览器在此框架和其他框架之间绘制边框，这是默认行为。0 删除边框。不推荐这样设置，因为在 <a href="/zh-CN/docs/Glossary/CSS">CSS
       中</a>可以更好地实现相同的效果。<a href="/zh-CN/docs/Web/CSS/border"><code>border</code></a><code>: none;</code></dd>
   <dt><code><a href="/zh-CN/docs/Web/HTML/Element/iframe#attr-src">src</a></code></dt>
-  <dd>该属性与<a
-      href="/zh-CN/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>/<code><a href="/zh-CN/docs/Web/HTML/Element/img">元素表示文档中的图像。">&lt;img&gt;</a></code>一样包含指向要嵌入文档的
+  <dd>该属性与 <a
+      href="/zh-CN/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>/<code><a href="/zh-CN/docs/Web/HTML/Element/img"> 元素表示文档中的图像。">&lt;img&gt;</a></code>一样包含指向要嵌入文档的
     URL 路径。</dd>
   <dt>
     <code><a href="/zh-CN/docs/Web/HTML/Element/iframe#attr-width">width</a></code> 和 <code><a href="/zh-CN/docs/Web/HTML/Element/iframe#attr-height">height</a></code>
   </dt>
   <dd>这些属性指定你想要的 iframe 的宽度和高度。</dd>
   <dt>备选内容</dt>
-  <dd>与<a
-      href="/zh-CN/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>等其他类似元素相同，你可以在<code>&lt;iframe&gt;&lt;/iframe&gt;</code>标签之间包含备选内容，如果浏览器不支持<code>&lt;iframe&gt;</code>，将会显示备选内容，这种情况下，我们已经添加了一个到该页面的链接。现在你几乎不可能遇到任何不支持<code>&lt;iframe&gt;</code>的浏览器。
+  <dd>与 <a href="/zh-CN/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a> 等其它类似元素相同，你可以在
+    <code>&lt;iframe&gt;&lt;/iframe&gt;</code> 标签之间包含备选内容，如果浏览器不支持 <code>&lt;iframe&gt;</code>，将会显示备选内容，这种情况下，我们已经添加了一个到该页面的链接。现在你几乎不可能遇到任何不支持
+    <code>&lt;iframe&gt;</code> 的浏览器。
   </dd>
   <dt><code><a href="/zh-CN/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox</a></code></dt>
-  <dd>该属性需要在已经支持其他<code>&lt;iframe&gt;</code>功能（例如 IE 10 及更高版本）但稍微更现代的浏览器上才能工作，该属性可以提高安全性设置; 我们将在下一节中更加详细地谈到。</dd>
+  <dd>该属性需要在已经支持其它 <code>&lt;iframe&gt;</code> 功能（例如 IE 10 及更高版本）但稍微更现代的浏览器上才能工作，该属性可以提高安全性设置；我们将在下一节中更加详细地谈到。</dd>
 </dl>
 
 <div class="note">
@@ -132,7 +132,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 <h3 id="安全隐患">安全隐患</h3>
 
 <p>以上我们提到了安全问题——现在我们来详细介绍一下这一点。我们并不期望你第一次就能完全理解所有内容;
-  我们只想让你意识到这一问题，在你更有经验并开始考虑在你的实验和工作中使用<code>&lt;iframe&gt;</code>时为你提供参考。此外，没有必要害怕和不使用<code>&lt;iframe&gt;</code>—你只需要谨慎一点。继续看下去吧...
+  我们只想让你意识到这一问题，在你更有经验并开始考虑在你的实验和工作中使用 <code>&lt;iframe&gt;</code> 时为你提供参考。此外，没有必要害怕和不使用<code>&lt;iframe&gt;</code>—你只需要谨慎一点。继续看下去吧...
 </p>
 
 <p>浏览器制造商和 Web 开发人员了解到网络上的坏人（通常被称为<strong>黑客</strong>，或更准确地说是<strong>破解者</strong>），如果他们试图恶意修改你的网页或欺骗人们进行不想做的事情时常把 iframe
@@ -152,7 +152,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
   Firefox 中，你会<em>被告知：“X-Frame-Options 拒绝加载 https://developer.mozilla.org/zh-CN/docs/Glossary”</em>。这是因为构建 MDN
   的开发人员已经在网站页面的服务器上设置了一个不允许被嵌入到<code>&lt;iframe&gt;</code>的设置（请参阅<a
     href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#配置CSP指令">配置 CSP 指令</a>）这是有必要的——整个
-  MDN 页面被嵌入在其他页面中没有多大意义，除非你想要将其嵌入到你的网站上并将其声称为自己的内容，或尝试通过单击劫持来窃取数据，这都是非常糟糕的事情。此外，如果每个人都这样做，所有额外的带宽将花费 Mozilla
+  MDN 页面被嵌入在其它页面中没有多大意义，除非你想要将其嵌入到你的网站上并将其声称为自己的内容，或尝试通过单击劫持来窃取数据，这都是非常糟糕的事情。此外，如果每个人都这样做，所有额外的带宽将花费 Mozilla
   很多资金。</p>
 
 <h4 id="只有在必要时嵌入">只有在必要时嵌入</h4>
@@ -165,7 +165,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
     href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia
     Commons</a>上的大多数图片）。不要在网页上展示一些不属于你的内容，除非你是所有者或所有者给了你明确的、书面的许可。对于侵犯版权的惩罚是严厉的。再说一次，你再小心也不为过。</p>
 
-<p>如果内容获得许可，你必须遵守许可条款。例如，MDN 上的内容是<a href="/zh-CN/docs/MDN/About#%E7%89%88%E6%9D%83%E5%92%8C%E8%AE%B8%E5%8F%AF">在
+<p>如果内容获得许可，你必须遵守许可条款。例如，MDN 上的内容是<a href="/zh-CN/docs/MDN/About#版权和许可">在
     CC-BY-SA 下许可的</a>，这意味着，如果你要引用我们的内容，就必须<a
     href="https://wiki.creativecommons.org/wiki/Best_practices_for_attribution">用适当的方式注明来源</a>，即使你对内容做了实质性的修改。
 </p>
@@ -195,10 +195,10 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 <p>想尽可能减少攻击者在你的网站上做坏事的机会，那么你应该给嵌入的内容仅能完成自己工作的权限。当然，这也适用于你自己的内容。一个允许包含在其里的代码以适当的方式执行或者用于测试，但不能对其他代码库（意外或恶意）造成任何损害的容器称为<a
     href="https://en.wikipedia.org/wiki/Sandbox_(computer_security)">沙盒</a>。</p>
 
-<p>未沙盒化（Unsandboxed）内容可以做得太多（执行 JavaScript，提交表单，弹出窗口等）默认情况下，你应该使用没有参数的<code>sandbox</code>属性来强制执行所有可用的限制，如我们前面的示例所示。
+<p>未沙盒化（Unsandboxed）内容可以做得太多（执行 JavaScript，提交表单，弹出窗口等）默认情况下，你应该使用没有参数的 <code>sandbox</code> 属性来强制执行所有可用的限制，如我们前面的示例所示。
 </p>
 
-<p>如果绝对需要，你可以逐个添加权限（<code>sandbox=""</code>属性值内）——请参阅<code><a href="/zh-CN/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox</a></code>所有可用选项的参考条目。其中重要的一点是，你<em>永远不</em>应该同时添加<code>allow-scripts</code>和<code>allow-same-origin</code>到你的<code>sandbox</code>属性中——在这种情况下，嵌入式内容可以绕过阻止站点执行脚本的同源安全策略，并使用 JavaScript 完全关闭沙盒。</p>
+<p>如果绝对需要，你可以逐个添加权限（<code>sandbox=""</code>属性值内）——请参阅 <code><a href="/zh-CN/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox</a></code> 所有可用选项的参考条目。其中重要的一点是，你<em>永远不</em>应该同时添加<code>allow-scripts</code>和<code>allow-same-origin</code>到你的<code>sandbox</code>属性中——在这种情况下，嵌入式内容可以绕过阻止站点执行脚本的同源安全策略，并使用 JavaScript 完全关闭沙盒。</p>
 
 <div class="note">
   <p><strong>备注：</strong> 如果攻击者可以欺骗人们直接访问恶意内容（在 iframe 之外），则沙盒无法提供保护。如果某些内容可能是恶意的（例如，用户生成的内容），请保证其是从不同的<a
@@ -220,7 +220,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
       X-Frame-Options 安全性头上</a>来获取有关此主题的更多背景信息。显然，在这篇文章中已经解释得很清楚了。</p>
 </div>
 
-<h2 id="&lt;embed>和&lt;object>元素">&lt;embed&gt;和&lt;object&gt;元素</h2>
+<h2 id="&lt;embed>和&lt;object>元素">&lt;embed&gt; 和 &lt;object&gt; 元素</h2>
 
 <p><a
     href="/zh-CN/docs/Web/HTML/Element/embed"><code>&lt;embed&gt;</code></a>和<code><a href="/zh-CN/docs/Web/HTML/Element/object">&lt;object&gt;</a></code>元素的功能不同于<code><a href="/zh-CN/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>—— 这些元素是用来嵌入多种类型的外部内容的通用嵌入工具，其中包括像
@@ -230,8 +230,8 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
   <p><strong>备注：</strong> <strong>插件</strong>是一种对浏览器原生无法读取的内容提供访问权限的软件。</p>
 </div>
 
-<p>然而，你不太可能使用这些元素 - Applet 几年来一直没有被使用；由于许多原因，Flash 不再受欢迎（见下面的<a
-    href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#The_case_against_plugins">插件案例</a>）；PDF
+<p>然而，你不太可能使用这些元素——Applet 几年来一直没有被使用；由于许多原因，Flash 不再受欢迎（见下面的<a
+    href="#针对插件的情况">插件案例</a>）；PDF
   更倾向于被链接而不是被嵌入；其他内容，如图像和视频都有更优秀、更容易元素来处理。插件和这些嵌入方法真的是一种传统技术，我们提及它们主要是为了以防你在某些情况下遇到问题，比如内部网或企业项目等。</p>
 
 <p>如果你发现自己需要嵌入插件内容，那么你至少需要一些这样的信息：</p>
