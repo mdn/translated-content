@@ -46602,13 +46602,6 @@
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Transforming_XML_with_XSLT/Resources": {
-    "modified": "2019-03-18T20:50:34.704Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto"
-    ]
-  },
   "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference": {
     "modified": "2019-03-18T20:50:35.595Z",
     "contributors": [
@@ -47450,6 +47443,13 @@
   },
   "conflicting/Web/XSLT": {
     "modified": "2019-03-18T20:50:34.547Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto"
+    ]
+  },
+  "conflicting/Web/XSLT/Transforming_XML_with_XSLT": {
+    "modified": "2019-03-18T20:50:34.704Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"

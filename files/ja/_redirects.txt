@@ -4693,6 +4693,7 @@
 /ja/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/JavaScript_XSLT_Bindings	/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
 /ja/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Resources	/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 /ja/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Setting_Parameters	/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
+/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/Resources	/ja/docs/conflicting/Web/XSLT/Transforming_XML_with_XSLT
 /ja/docs/Web2/Reference/Events/compositionend	/ja/docs/Web/API/Element/compositionend_event
 /ja/docs/Web2/Reference/Events/compositionstart	/ja/docs/Web/API/Element/compositionstart_event
 /ja/docs/Web2/Reference/Events/input	/ja/docs/Web/API/HTMLElement/input_event
@@ -4883,7 +4884,7 @@
 /ja/docs/XSLT/Transforming_XML_with_XSLT	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT
 /ja/docs/XSLT/Transforming_XML_with_XSLT/An_Overview	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/An_Overview
 /ja/docs/XSLT/Transforming_XML_with_XSLT/For_Further_Reading	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
-/ja/docs/XSLT/Transforming_XML_with_XSLT/Resources	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/Resources
+/ja/docs/XSLT/Transforming_XML_with_XSLT/Resources	/ja/docs/conflicting/Web/XSLT/Transforming_XML_with_XSLT
 /ja/docs/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
 /ja/docs/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ja/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 /ja/docs/XSLT/value-of	/ja/docs/Web/XSLT/Element/value-of
