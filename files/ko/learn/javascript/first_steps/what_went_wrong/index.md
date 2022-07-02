@@ -24,7 +24,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
     <tr>
       <th scope="row">필요한 사전 지식:</th>
       <td>
-        기본적인 컴퓨터 능력, HTML과 CSS 기초, JavaScript 기본 개념.
+        기본적인 컴퓨터 이해 능력, HTML과 CSS 기초, JavaScript 기본 개념.
       </td>
     </tr>
     <tr>
@@ -58,7 +58,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 ## 구문 오류 고치기
 
-앞선 과정에서 [JavaScript 개발자 도구 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)에 간단한 JavaScript 명령을 입력해 봤었습니다. (콘솔을 여는 방법이 기억나지 않으면 링크에서 알아보세요) 하지만 콘솔은 단순히 명령을 입력하는 기능보다 유용한데, 브라우저의 JavaScript 엔진이 읽은 JavaScript 안에 구문 오류가 존재하면 콘솔에 그 오류가 기록되기 때문입니다. 오류를 사냥해 봅시다.
+앞선 과정에서 [JavaScript 개발자 도구 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)에 간단한 JavaScript 명령을 입력해 봤었습니다. (콘솔을 여는 방법이 기억나지 않으면 링크에서 알아보세요) 하지만 콘솔은 단순히 명령을 입력하는 기능보다 유용한데, 브라우저의 JavaScript 엔진이 읽은 JavaScript 안에 구문 오류가 존재하면 콘솔에 그 오류가 기록되기 때문입니다. 오류를 잡아 봅시다.
 
 1. `number-game-errors.html`을 연 탭으로 이동해서 JavaScript 콘솔을 여세요. 스크린샷과 비슷한 내용의 오류 메시지를 볼 수 있어야 합니다. ![](not-a-function.png)
 2. 이 오류는 찾기 쉬운 편이고, 브라우저도 도움이 될 다양한 정보를 제공합니다. (위의 스크린샷은 Firefox에서 촬영했지만 다른 브라우저도 비슷한 정보를 제공합니다) 우리가 알 수 있는 사실은, 왼쪽에서 오른쪽으로...
