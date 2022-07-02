@@ -19,7 +19,7 @@ JavaScript에 관한 약간의 이론과, JavaScript가 할 수 있는 일을 �
     <tr>
       <th scope="row">필요한 사전 지식:</th>
       <td>
-        기본적인 컴퓨터 능력, HTML과 CSS 기초, JavaScript 기본 개념.
+        기본적인 컴퓨터 이해 능력, HTML과 CSS 기초, JavaScript 기본 개념.
       </td>
     </tr>
     <tr>

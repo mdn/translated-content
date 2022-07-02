@@ -47,7 +47,7 @@ translation_of: Learn/JavaScript/First_steps
   - : MDN의 JavaScript 초급자 과정에 오신 걸 환영합니다! 첫 글은 JavaScript를 넓게 보면서 "뭔가요?", "뭘 하나요?"와 같은 질문을 답변하고, 여러분이 JavaScript에 친숙해지도록 도와드립니다.
 - [JavaScript에 발 담그기](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
   - : JavaScript에 관한 이론과 용도를 약간 배우셨으니, 실용적인 따라해보기와 함께 하는 기초과정 단기 특강을 제공해드리겠습니다. 여기서는 간단한 "숫자 알아맞히기" 게임을 단계별로 차근차근 만들어봅니다.
-- [어떤게 잘못됐나요? JavaScript 문제해결](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [뭐가 잘못됐을까요? JavaScript 문제 해결](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
   - : 이전 글에서 "숫자 알아맞히기" 게임을 만든 뒤에, 프로그램이 돌아가지 않는다는 것을 발견하실 겁니다. 두려워하지 마세요. 세 번째 글에서 JavaScript 프로그램의 오류를 찾고 고치는 팁을 배울 수 있습니다.
 - [필요한 정보 저장하기 — 변수](/ko/docs/Learn/JavaScript/First_steps/Variables)
   - : 앞선 글을 모두 읽으셨으면 이제 JavaScript가 뭔지, 뭘 할 수 있는지, 다른 웹 기술과 함께 어떻게 사용하는지, 주요 기능이 어떻게 생겼는지 등 넓은 윤곽을 그리실 수 있을겁니다. 이제 진짜 기초로 돌아가, JavaScript의 제일 기본적인 구성 요소를 어떻게 사용하는지 알아보겠습니다. 바로 변수입니다.
