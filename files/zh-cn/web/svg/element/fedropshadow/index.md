@@ -54,7 +54,7 @@ html,body,svg { height:100% }
 - {{SVGAttr("dx")}}
   - : 此属性定义了投影的 x 轴偏移量。*值类型*：[**\<number>**](/zh-CN/docs/Web/SVG/Content_type#数字)；*默认值*：`2`；*可用于动画*：**是**
 - {{SVGAttr("dy")}}
-  - : 此属性定义了投影的 y 轴偏移量。*值类型*：[**\<number>**](/zh-CN/docs/Web/SVG/Content_type#数字；*默认值*：`2`；*可用于动画*：**是**
+  - : 此属性定义了投影的 y 轴偏移量。*值类型*：[**\<number>**](/zh-CN/docs/Web/SVG/Content_type#数字)；*默认值*：`2`；*可用于动画*：**是**
 - {{SVGAttr("stdDeviation")}}
   - : 此属性定义了投影的模糊操作的标准差。*值类型*：[**\<number>**](/zh-CN/docs/Web/SVG/Content_type#数字)；*默认值*：`2`；*可用于动画*：**是**
 
