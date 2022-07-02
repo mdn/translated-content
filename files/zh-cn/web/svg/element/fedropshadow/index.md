@@ -52,25 +52,22 @@ html,body,svg { height:100% }
 ## 属性
 
 - {{SVGAttr("dx")}}
-  - : This attribute defines the x offset of the drop shadow.
-    *值类型*：[**\<number>**](/en-US/docs/Web/SVG/Content_type#number); *默认值*：`2`; *可动性*：**是**
+  - : 此属性定义了投影的 x 轴偏移量。*值类型*：[**\<number>**](/zh-CN/docs/Web/SVG/Content_type#数字)；*默认值*：`2`；*可用于动画*：**是**
 - {{SVGAttr("dy")}}
-  - : This attribute defines the y offset of the drop shadow.
-    *值类型*：[**\<number>**](/en-US/docs/Web/SVG/Content_type#number); *默认值*：`2`; *可动性*：**是**
+  - : 此属性定义了投影的 y 轴偏移量。*值类型*：[**\<number>**](/zh-CN/docs/Web/SVG/Content_type#数字；*默认值*：`2`；*可用于动画*：**是**
 - {{SVGAttr("stdDeviation")}}
-  - : This attribute defines the standard deviation for the blur operation in the drop shadow.
-    *值类型*：[**\<number>**](/en-US/docs/Web/SVG/Content_type#number); *默认值*：`2`; *可动性*：**是**
+  - : 此属性定义了投影的模糊操作的标准差。*值类型*：[**\<number>**](/zh-CN/docs/Web/SVG/Content_type#数字)；*默认值*：`2`；*可用于动画*：**是**
 
 ### 全局属性
 
 - [核心属性](/zh-CN/docs/Web/SVG/Attribute/Core)
   - : 最应注意：{{SVGAttr('id')}}
 - [样式属性](/zh-CN/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+  - : {{SVGAttr('class')}}、{{SVGAttr('style')}}
 - [滤镜原始属性](/zh-CN/docs/Web/SVG/Attribute#滤镜属性)
-  - : {{SVGAttr('height')}}, {{SVGAttr('in')}}, {{SVGAttr('result')}}, {{SVGAttr('x')}}, {{SVGAttr('y')}}, {{SVGAttr('width')}}
+  - : {{SVGAttr('height')}}、{{SVGAttr('in')}}、{{SVGAttr('result')}}、{{SVGAttr('x')}}、{{SVGAttr('y')}}、{{SVGAttr('width')}}
 - [表现属性](/zh-CN/docs/Web/SVG/Attribute/Presentation)
-  - : 最应注意：{{SVGAttr('flood-color')}}, {{SVGAttr('flood-opacity')}}
+  - : 最应注意：{{SVGAttr('flood-color')}}、{{SVGAttr('flood-opacity')}}
 
 ## 用法
 
