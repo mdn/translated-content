@@ -7,9 +7,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}</p>
 
-<div>
-<p>這是 <a href="/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>中的第三步 你可以在以下的連結中查看原始碼<a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html">Gamedev-Canvas-workshop/lesson3.html</a>.</p>
-</div>
+<p>這是 <a href="/zh-TW/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>中的第三步 你可以在以下的連結中查看原始碼<a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html">Gamedev-Canvas-workshop/lesson3.html</a>.</p>
 
 <p>很好我們現在可以讓球移動了, 但目前他會在移動到邊緣後消失, 這使我們少了點樂趣! 為了解決這個問題我們稍後會加入一些碰撞處理 ( <a href="/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection">later</a> ) 使球可以再碰到邊緣時反彈.</p>
 
@@ -50,7 +48,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_
 
 <p>如果兩個語句中的一個是真的，則反轉球的運動。</p>
 
-<h2 id="從左邊和右邊反彈"><strong style="border: 0px; margin: 0px; padding: 0px;">從左邊和右邊反彈</strong></h2>
+<h2 id="從左邊和右邊反彈">從左邊和右邊反彈</h2>
 
 <p>我們有頂部和底部邊緣覆蓋，所以讓我們想想左，右的。它實際上是非常相似的，你所要做的就是重複X而不是Y的陳述：</p>
 
@@ -88,7 +86,7 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
 <p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","370")}}</p>
 
 <div class="note">
-<p><strong>Exercise</strong>: 每次球撞到牆上時嘗試改變球的顏色為隨機的顏色。</p>
+<p><strong>備註：</strong> 每次球撞到牆上時嘗試改變球的顏色為隨機的顏色。</p>
 </div>
 
 <h2 id="下一步">下一步</h2>
