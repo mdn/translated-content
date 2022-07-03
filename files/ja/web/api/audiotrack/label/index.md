@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.label
 slug: Web/API/AudioTrack/label
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -14,28 +15,26 @@ tags:
   - label
   - metadata
   - track
+browser-compat: api.AudioTrack.label
 translation_of: Web/API/AudioTrack/label
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary">読み取り専用の <strong>{{domxref("AudioTrack")}}</strong> の <strong><code>label</code></strong> プロパティは、音声トラックの判読可能なラベルがあればそれを指定する文字列を返します。 それ以外の場合は、空の文字列を返します。</span></p>
+**{{domxref("AudioTrack")}}** の **`label`** プロパティは読み取り専用で、音声トラックの判読可能なラベルがあればそれを指定する文字列を返します。 それ以外の場合は、空の文字列を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox">var <em>audioTrackLabel</em> = <em>AudioTrack</em>.label;</pre>
+トラックのメタデータで利用可能な場合は、トラックの人間が読めるラベルを指定する文字列です。。 それ以外の場合は、空の文字列 (`""`) が返されます。
 
-<h3 id="Value" name="Value">値</h3>
+例えば、 {{domxref("AudioTrack.kind", "kind")}} が `"commentary"` のトラックには、`"Mark Markmarkimark 監督とスター Donna Donnalidon による解説"` のような `label` が付けられます。
 
-<p>トラックのメタデータで利用可能な場合は、トラックの判読可能なラベルを指定する {{domxref("DOMString")}}。 それ以外の場合は、空の文字列（<code>""</code>）が返されます。</p>
+## 例
 
-<p>例えば、{{domxref("AudioTrack.kind", "kind")}} が <code>"commentary"</code> のトラックには、<code>"監督 Mark Markmarkimark とスター Donna Donnalidon の解説"</code> のような <code>label</code> が付けられます。</p>
+この例では、指定されたメディア要素の音声トラックを選択するためにユーザーインターフェイスで使用される可能性のあるトラックの種別とラベルの配列を返します。 リストは特定の種別のトラックのみを通過させるようにフィルタリングされます。
 
-<h2 id="Example" name="Example">例</h2>
-
-<p>この例では、指定されたメディア要素の音声トラックを選択するためにユーザーインターフェイスで使用される可能性のあるトラックの kind とラベルの配列を返します。 リストは特定の kind のトラックのみを通過させるようにフィルタされます。</p>
-
-<pre class="brush: js">function getTrackList(el) {
-  var trackList = [];
+```js
+function getTrackList(el) {
+  const trackList = [];
   const wantedKinds = [
     "main", "alternative", "main-desc", "translation", "commentary"
   ];
@@ -50,36 +49,15 @@ translation_of: Web/API/AudioTrack/label
     }
   });
   return trackList;
-}</pre>
+}
+```
 
-<p>結果の <code>trackList</code> には、<code>wantKinds</code> 配列のいずれかの <code>kind</code> の音声トラックの配列が含まれ、各エントリにはトラックの {{domxref("AudioTrack.id", "id")}}、{{domxref("AudioTrack.kind", "kind")}}、{{domxref("AudioTrack.label", "label")}} が含まれます。</p>
+結果の `trackList` には、`wantedKinds` 配列のいずれかの `kind` の音声トラックの配列が含まれ、各エントリーにはトラックの {{domxref("AudioTrack.id", "id")}}、{{domxref("AudioTrack.kind", "kind")}}、{{domxref("AudioTrack.label", "label")}} が含まれます。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'media.html#dom-audiotrack-label', 'AudioTrack.label')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'embedded-content-0.html#dom-audiotrack-label', 'AudioTrack.label')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.AudioTrack.label")}}</p>
+{{Compat}}
