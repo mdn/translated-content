@@ -39,7 +39,7 @@ translation_of: Web/HTML/Element/script
 <p>此元素包含了<a href="/zh-TW/docs/Web/HTML/Global_attributes">全域屬性</a>。</p>
 
 <dl>
- <dt>{{htmlattrdef("async")}} {{HTMLVersionInline(5)}}</dt>
+ <dt>{{htmlattrdef("async")}}</dt>
  <dd>這個布林屬性告訴瀏覽器說：如果可以，就以非同步的方法執行腳本。</dd>
 </dl>
 
@@ -101,7 +101,7 @@ translation_of: Web/HTML/Element/script
 
  <ul>
   <li><strong>省略或 JavaScript MIME 類型</strong>：針對相容 HTML5 的瀏覽器來說，元素內會執行 JavaScript。HTML5 規範敦促作者省略此屬性，不需要寫冗長的 MIME 類型。在早期的瀏覽器中，這確定了嵌入或引入（透過 <code>src</code> 屬性）腳本的語言。JavaScript MIME 類型<a href="/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types">有列在規範內</a>。</li>
-  <li><strong><code>module</code></strong>：{{HTMLVersionInline(5)}} {{experimental_inline}} 針對相容 HTML5 的瀏覽器來說，這段程式碼會當成 JavaScript 模組（module）。腳本內容的處理不受 <code>charset</code> 與 <code>defer</code> 屬性影響。針對 <code>module</code> 的資訊，請參閱 <a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a>。在使用 <code>module</code> 關鍵字時，程式碼的行為會有所不同。</li>
+  <li><strong><code>module</code></strong>：針對相容 HTML5 的瀏覽器來說，這段程式碼會當成 JavaScript 模組（module）。腳本內容的處理不受 <code>charset</code> 與 <code>defer</code> 屬性影響。針對 <code>module</code> 的資訊，請參閱 <a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a>。在使用 <code>module</code> 關鍵字時，程式碼的行為會有所不同。</li>
   <li><strong>其他值</strong>：嵌入的內容會被當成一段不給瀏覽器執行的資料塊（data block）。開發者應當使用非 JavaScript 的有效 MIME 類型，以標明資料塊。<code>src</code> 屬性也將被忽略。</li>
  </ul>
 
