@@ -39,7 +39,7 @@ translation_of: Web/HTML/Element/a
 <p>本元素包含<a href="/zh-TW/docs/HTML/Global_attributes">全域屬性</a>。</p>
 
 <dl>
- <dt>{{htmlattrdef("download")}} {{HTMLVersionInline(5)}}</dt>
+ <dt>{{htmlattrdef("download")}}</dt>
  <dd>This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want). There are no restrictions on allowed values, though <code>/</code> and <code>\</code> are converted to underscores. Most file systems limit some punctuation in file names, and browsers will adjust the suggested name accordingly.
  <div class="note"><strong>Notes:</strong>
  <ul>
@@ -100,17 +100,17 @@ translation_of: Web/HTML/Element/a
  <p><strong>Usage note:</strong> This attribute is obsolete in HTML5 and <strong>should not be used by authors</strong>. To achieve its effect, use the HTTP <a href="/en-US/docs/Web/HTTP/Headers/Content-Type"><code>Content-Type:</code></a> header on the linked URL.</p>
  </div>
  </dd>
- <dt>{{htmlattrdef("coords")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
+ <dt>{{htmlattrdef("coords")}} {{Deprecated_Inline}}</dt>
  <dd>For use with the below <code>shape</code> attribute, this attribute used a comma-separated list of numbers to define the coordinates of the link on the page.</dd>
- <dt>{{htmlattrdef("name")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
+ <dt>{{htmlattrdef("name")}} {{Deprecated_Inline}}</dt>
  <dd>This attribute was required for anchors defining a possible target location within a page. In HTML 4.01, <code>id</code> and <code>name</code> could be used simultaneously on a <code>&lt;a&gt;</code> element as long as they have identical values.
  <div class="note">
  <p><strong>Usage note:</strong> This attribute is obsolete in HTML5, use the <a href="/en-US/docs/HTML/Global_attributes#attr-id">global attribute <code>id</code></a> instead.</p>
  </div>
  </dd>
- <dt>{{htmlattrdef("rev")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
+ <dt>{{htmlattrdef("rev")}} {{Deprecated_Inline}}</dt>
  <dd>This attribute specified a reverse link, the inverse relationship of the <strong>rel</strong> attribute. It was deprecated for being very confusing.</dd>
- <dt>{{htmlattrdef("shape")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
+ <dt>{{htmlattrdef("shape")}} {{Deprecated_Inline}}</dt>
  <dd>This attribute was used to define a region for hyperlinks to create an image map. The values are <code>circle</code>, <code>default</code>, <code>polygon</code>, and <code>rect</code>. The format of the <strong>coords</strong> attribute depends on the value of shape. For <code>circle</code>, the value is <code>x,y,r</code> where <code>x</code> and <code>y</code> are the pixel coordinates for the center of the circle and <code>r</code> is the radius value in pixels. For <code>rect</code>, the <strong>coords</strong> attribute should be <code>x,y,w,h</code>. The <code>x,y</code> values define the upper-left-hand corner of the rectangle, while <code>w</code> and <code>h</code> define the width and height respectively. A value of <code>polygon</code> for <strong>shape</strong> requires <code>x1,y1,x2,y2,...</code> values for <strong>coords</strong>. Each of the <code>x,y</code> pairs defines a point in the polygon, with successive points being joined by straight lines and the last point joined to the first. The value <code>default</code> for shape requires that the entire enclosed area, typically an image, be used.
  <div class="note"><strong>Note:</strong> Use the <a href="/en-US/docs/Web/HTML/Element/img#attr-usemap"><code>usemap</code> attribute</a> for the {{HTMLElement("img")}} element and the associated {{HTMLElement("map")}} element to define hotspots instead of the <code>shape</code> attribute.</div>
  </dd>
