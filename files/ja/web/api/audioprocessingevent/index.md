@@ -1,96 +1,53 @@
 ---
 title: AudioProcessingEvent
 slug: Web/API/AudioProcessingEvent
+page-type: web-api-interface
+tags:
+  - API
+  - Deprecated
+  - Interface
+  - Internationalization
+  - Reference
+  - Web Audio API
+browser-compat: api.AudioProcessingEvent
 translation_of: Web/API/AudioProcessingEvent
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<div>
-<p>The <a href="/ja/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">Web Audio API</a> <code>AudioProcessingEvent</code> represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.</p>
+[ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) の `AudioProcessingEvent` は {{domxref("ScriptProcessorNode")}} 入力バッファーが処理可能な状態になったときに発生するイベントを表します。
 
-<div class="note">
-<p><strong>Note</strong>: As of the August 29 2014 Web Audio API spec publication, this feature has been marked as deprecated, and is soon to be replaced by <a href="/ja/docs/Web/API/Web_Audio_API#Audio_Workers">Audio Workers</a>.</p>
-</div>
-</div>
+> **Note:** 2014 年 8 月 29 日のウェブ音声 API 仕様書公開時点で、この機能は非推奨とされ、まもなく [AudioWorklet](https://webaudio.github.io/web-audio-api/#audioworklet) に置き換わる予定です。
 
-<h2 id="プロパティ">プロパティ</h2>
+{{InheritanceDiagram}}
 
-<p><em>The list below includes the properties inherited from its parent, {{domxref("Event")}}</em>.</p>
+## コンストラクター
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">プロパティ</th>
-   <th scope="col">型</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{ReadOnlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{ReadOnlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{ReadOnlyInline}}</td>
-   <td><code>boolean</code></td>
-   <td>Does the event normally bubble?</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{ReadOnlyInline}}</td>
-   <td><code>boolean</code></td>
-   <td>Is it possible to cancel the event?</td>
-  </tr>
-  <tr>
-   <td><code>playbackTime</code> {{ReadOnlyInline}}</td>
-   <td><code>double</code></td>
-   <td>The time when the audio will be played, as defined by the time of {{domxref("AudioContext.currentTime")}}</td>
-  </tr>
-  <tr>
-   <td><code>inputBuffer</code> {{ReadOnlyInline}}</td>
-   <td>{{domxref("AudioBuffer")}}</td>
-   <td>The buffer containing the input audio data to be processed. The number of channels is defined as a parameter, <code>numberOfInputChannels</code>, of the factory method {{domxref("AudioContext.createScriptProcessor()")}}. Note the the returned <code>AudioBuffer</code> is only valid in the scope of the <code>onaudioprocess</code> function.</td>
-  </tr>
-  <tr>
-   <td><code>outputBuffer</code> {{ReadOnlyInline}}</td>
-   <td>{{domxref("AudioBuffer")}}</td>
-   <td>The buffer where the output audio data should be written. The number of channels is defined as a parameter, <code>numberOfOutputChannels</code>, of the factory method {{domxref("AudioContext.createScriptProcessor()")}}. Note the the returned <code>AudioBuffer</code> is only valid in the scope of the <code>onaudioprocess</code> function.</td>
-  </tr>
- </tbody>
-</table>
+- `AudioProcessingEvent()`
+  - : 新しい `AudioProcessingEvent` オブジェクトを生成します。
 
-<h2 id="Example">Example</h2>
+## プロパティ
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createScriptProcessor","Example")}}</p>
+_親プロパティである {{domxref("Event")}} から継承されたプロパティも実装しています_。
 
-<h2 id="Specifications">Specifications</h2>
+- `playbackTime` {{ReadOnlyInline}}
+  - : double 型で、音声が再生される時間を表します。 {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}} の時刻で定義されます。
+- `inputBuffer` {{ReadOnlyInline}}
+  - : 処理する入力音声データを含むバッファーである {{domxref("AudioBuffer")}} を指定します。
+    チャンネル数はファクトリーメソッド {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}} の引数 `numberOfInputChannels` として定義されています。
+    なお、返された <code>AudioBuffer</code> は、イベントハンドラーのスコープ内のみで有効であることに注意してください。
+- `outputBuffer` {{ReadOnlyInline}}
+  - : 出力する音声データを書き込むバッファーである {{domxref("AudioBuffer")}} を指定します。
+    チャンネル数はファクトリーメソッド {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}} の引数 <code>numberOutputChannels</code> として定義されています。
+    なお、返された <code>AudioBuffer</code> は、イベントハンドラーのスコープ内のみで有効であることに注意してください。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#the-audioprocessingevent-interface---deprecated', 'AudioProcessingEvent')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## 例
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+`AudioProcessingEvent` を使用したコード例は [`BaseAudioContext.createScriptProcessor()`](/ja/docs/Web/API/BaseAudioContext/createScriptProcessor#例) を参照してください。
 
-<p>{{Compat("api.AudioProcessingEvent")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+## 関連情報
+
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
