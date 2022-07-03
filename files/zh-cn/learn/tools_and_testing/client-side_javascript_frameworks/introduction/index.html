@@ -79,7 +79,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 
 <h2 id="冗长的DOM操作">冗长的 DOM 操作</h2>
 
-<p>Building HTML elements and rendering them in the browser at the appropriate time takes a surprising amount of code. Let's say that our state is an array of objects structured like this:</p>
+<p>构建 HTML 元素并适时在浏览器中呈现它们需要大量的 JavaScript 代码。假设我们的状态————底层数据，是一个结构如下的对象数组：</p>
 
 <pre class="brush: js notranslate">const state = [
   {
@@ -141,7 +141,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 
 <p>If you want to see code samples from this section in action, you can check out a <a href="https://codepen.io/dengeist/pen/XWbPNmw">working version of the app on CodePen</a>, which also allows users to add and delete new tasks.</p>
 
-<p>Read more about the JavaScript used in this section:</p>
+<p>有关本节中使用的 JavaScript 的更多信息：</p>
 
 <ul>
  <li><code><a href="/en-US/docs/Web/API/Document/createElement">document.createElement()</a></code></li>
@@ -152,11 +152,11 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
  <li><code><a href="/en-US/docs/Web/API/Node/removeChild">node.removeChild()</a></code></li>
 </ul>
 
-<h2 id="另一种打造UIs的方式">另一种打造 UIs 的方式</h2>
+<h2 id="另一种打造_ui_的方式">另一种打造 UI 的方式</h2>
 
-<p>Every JavaScript framework offers a way to write user interfaces more <em>declaratively</em>. That is, they allow you to write code that describes how your UI should look, and the framework makes it happen in the DOM behind the scenes.</p>
+<p>JavaScript 框架都提供了一种更具 <em>声明性</em> 的编写用户界面的方法。也就是说，它们允许你编写描述 UI 的代码 ，然后框架将你编写的描述 UI 的代码通过幕后的 DOM 显现出来。</p>
 
-<p>The vanilla JavaScript approach to building out new DOM elements in repetition was difficult to understand at a glance.  By contrast, the following block of code illustrates the way you might use Vue to describe our list of tasks:</p>
+<p>原生 JavaScript 使用循环来构建新 DOM 元素的方法乍一看很难理解。相比之下，以下代码说明了使用 Vue 来呈现任务清单的方式：</p>
 
 <pre class="brush: html notranslate">&lt;ul&gt;
   &lt;li v-for="task in tasks" v-bind:key="task.id"&gt;
@@ -165,7 +165,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
   &lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<p>That's it. This snippet reduces approximately thirty-two lines of code down to six lines. If the curly braces and <code>v-</code> attributes here are unfamiliar to you, that's okay; you’ll learn about Vue-specific syntax later on in the module. The thing to take away here is that this code looks like the UI it represents, whereas the vanilla JavaScript code does not.</p>
+<p>你没看错。以上用了 JavaScript 框架的代码用了 6 行就实现了刚刚需要 32 行代码才能实现的功能。如果你对这里的大括号和 <code>v-</code> 属性不熟悉，没关系；你会在后面的模块中学习到 Vue 特有的语法。这里要指出的是，这段 vue 代码看起来很像它所代表的 UI，而原生 JavaScript 代码则不然。</p>
 
 <p>Thanks to Vue, we didn't have to write our own functions for building the UI; the framework will handle that for us in an optimized, efficient way. Our only role here was to describe to Vue what each item should look like. Developers who are familiar with Vue can join our project and quickly work out what is going on. Vue is not alone in this: using a framework improves team as well as individual efficiency.</p>
 
