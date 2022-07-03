@@ -5,9 +5,9 @@ translation_of: Web/API/HTMLFieldSetElement
 ---
 <p>{{ ApiRef() }}</p>
 <h2 id="HTML_Field_Set_Element">HTML Field Set Element</h2>
-<p>DOM <code>fieldset</code> elements expose the <a class="external" href="http://dev.w3.org/html5/spec/forms.html#htmlfieldsetelement">HTMLFieldSetElement</a>  ({{ HTMLVersionInline(4) }} <a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7365882">HTMLFieldSetElement</a>) interface, which provides special properties and methods (beyond the regular <a href="../../../../zh-CN/DOM/element" rel="internal">element</a> object interface they also have available to them by inheritance) for manipulating the layout and presentation of field-set elements.</p>
+<p>DOM <code>fieldset</code> elements expose the <a class="external" href="http://dev.w3.org/html5/spec/forms.html#htmlfieldsetelement">HTMLFieldSetElement</a> (<a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7365882">HTMLFieldSetElement</a>) interface, which provides special properties and methods (beyond the regular <a href="/zh-CN/docs/Web/API/element">element</a> object interface they also have available to them by inheritance) for manipulating the layout and presentation of field-set elements.</p>
 <h2 id="属性">属性</h2>
-<p>以下属性除了 <strong>form</strong> 都是在 {{ HTMLVersionInline(5) }} 中新添加的.</p>
+<p>属性继承自其父级 {{domxref("HTMLElement")}}。</p>
 <table>
  <thead>
   <tr>
@@ -28,9 +28,9 @@ translation_of: Web/API/HTMLFieldSetElement
    <td>The elements belonging to this field set.</td>
   </tr>
   <tr>
-   <td><code>form</code></td>
-   <td><code>readonly <a href="/zh-CN/DOM/HTMLFormElement" title="zh-CN/DOM/HTMLFormElement">HTMLFormElement</a></code></td>
-   <td>The containing form element, if this element is in a form. Otherwise, the element the <a href="/zh-CN/HTML/Element/fieldset#attr-name" title="zh-CN/HTML/Element/fieldset#attr-name">name content attribute</a> points to {{ HTMLVersionInline(5) }}. (<code>null</code> in {{ HTMLVersionInline(4) }}.)</td>
+   <td><code>form</code> {{ReadOnlyInline}}</td>
+   <td>An {{domxref("HTMLFormControlsCollection")}} or {{domxref("HTMLCollection")}} referencing the containing form element, if this element is in a form.
+    If the field set is not a descendant of a form element, then the attribute can be the ID of any form element in the same document it is related to, or the <code>null</code> value if none matches.</td>
   </tr>
   <tr>
    <td><code>name</code></td>

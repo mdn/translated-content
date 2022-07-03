@@ -46,7 +46,7 @@ translation_of: Web/HTML/Element/iframe
  <dt>{{htmlattrdef("csp")}} {{experimental_inline}}</dt>
  <dd>对嵌入的资源配置<a href="/zh-CN/docs/Web/HTTP/CSP">内容安全策略</a>。 查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。</dd>
  <dt>{{htmlattrdef("height")}}</dt>
- <dd>以 CSS 像素格式{{HTMLVersionInline(5)}}，或像素格式{{HTMLVersionInline(4.01)}}，或百分比格式指定 frame 的高度。默认值为<code>150</code>。</dd>
+ <dd>以 CSS 像素格式，或像素格式，或百分比格式指定 frame 的高度。默认值为<code>150</code>。</dd>
  <dt>{{htmlattrdef("importance")}} {{experimental_inline}}</dt>
  <dd>表示 <code>&lt;iframe&gt; </code>的 <code>src</code> 属性指定的资源的加载优先级。允许的值有：
  <dl>
@@ -103,10 +103,10 @@ translation_of: Web/HTML/Element/iframe
  </dd>
  <dt>{{htmlattrdef("src")}}</dt>
  <dd>被嵌套的页面的 URL 地址。使用 <code>about:blank</code> 值可以嵌入一个遵从<a href="/zh-CN/docs/Web/Security/Same-origin_policy">同源策略</a>的空白页。在 Firefox（version 65 及更高版本）、基于 Chromium 的浏览器、Safari/iOS 中使用代码移除 <code>iframe</code> 的 <code>src</code> 属性（例如通过 {{domxref("Element.removeAttribute()")}} ）会导致 <code>about:blank</code> 被载入 frame。</dd>
- <dt>{{htmlattrdef("srcdoc")}} {{HTMLVersionInline(5)}} only</dt>
+ <dt>{{htmlattrdef("srcdoc")}}</dt>
  <dd>该属性是一段 HTML 代码，这些代码会被渲染到 iframe 中。如果浏览器不支持 <code>srcdoc</code> 属性，则会渲染 <code>src</code> 属性表示的内容。</dd>
  <dt>{{htmlattrdef("width")}}</dt>
- <dd>以 CSS 像素格式{{HTMLVersionInline(5)}}，或以像素格式{{HTMLVersionInline(4.01)}}，或以百分比格式指定的 frame 的宽度。默认值是<code>300</code>。</dd>
+ <dd>以 CSS 像素格式，或以像素格式，或以百分比格式指定的 frame 的宽度。默认值是<code>300</code>。</dd>
 </dl>
 
 <h3 id="不赞成使用的属性">不赞成使用的属性</h3>
@@ -114,17 +114,17 @@ translation_of: Web/HTML/Element/iframe
 <p>下面这些属性已不赞成使用，并且可能不再被所有的浏览器支持。你应避免在新项目里面使用它们，也应尽量从旧项目中移除它们。</p>
 
 <dl>
- <dt>{{htmlattrdef("align")}} {{deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
+ <dt>{{htmlattrdef("align")}} {{Deprecated_Inline}}</dt>
  <dd>此元素相对于周围元素的对齐方式。</dd>
- <dt>{{htmlattrdef("frameborder")}} {{obsolete_inline("html5")}}</dt>
+ <dt>{{htmlattrdef("frameborder")}} {{Deprecated_Inline}}</dt>
  <dd>值为<code>1</code>（默认值）时，显示此框架的边框。值为<code>0</code>时移除边框。此属性已不赞成使用，请使用 CSS 属性 {{cssxref("border")}} 代替。</dd>
- <dt>{{htmlattrdef("longdesc")}} {{obsolete_inline("html5")}}</dt>
+ <dt>{{htmlattrdef("longdesc")}} {{Deprecated_Inline}}</dt>
  <dd>表示框架内容的长描述的 URL。由于广泛的误用，该属性对于无图形界面的浏览器不起作用。</dd>
- <dt>{{htmlattrdef("marginheight")}} {{obsolete_inline("html5")}}</dt>
+ <dt>{{htmlattrdef("marginheight")}} {{Deprecated_Inline}}</dt>
  <dd>这个属性定义了框架的内容距其上边框与下边框的距离，单位是像素。</dd>
- <dt>{{htmlattrdef("marginwidth")}} {{obsolete_inline("html5")}}</dt>
+ <dt>{{htmlattrdef("marginwidth")}} {{Deprecated_Inline}}</dt>
  <dd>这个属性定义了框架的内容距其左边框和右边框的距离，单位是像素。</dd>
- <dt>{{htmlattrdef("scrolling")}} {{obsolete_inline("html5")}}</dt>
+ <dt>{{htmlattrdef("scrolling")}} {{Deprecated_Inline}}</dt>
  <dd>这个属性控制是否要在框架内显示滚动条，允许的值包括：
  <ul>
   <li><code>auto</code>: 仅当框架的内容超出框架的范围时显示滚动条。</li>
@@ -134,10 +134,10 @@ translation_of: Web/HTML/Element/iframe
  </dd>
 </dl>
 
-<h3 id="非标准属性_non-standard_inline">非标准属性 {{non-standard_inline}}  </h3>
+<h3 id="非标准属性_non-standard_inline">非标准属性 {{non-standard_inline}}</h3>
 
 <dl>
- <dt><strong>{{htmlattrdef("mozbrowser")}} {{non-standard_inline}} </strong>  </dt>
+ <dt><strong>{{htmlattrdef("mozbrowser")}} {{non-standard_inline}} </strong></dt>
 </dl>
 
 <div class="blockIndicator note">

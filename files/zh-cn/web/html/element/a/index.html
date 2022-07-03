@@ -52,7 +52,7 @@ translation_of: Web/HTML/Element/a
 <p>该元素的属性包含<a href="/zh-CN/docs/HTML/Global_attributes">全局属性</a>。</p>
 
 <dl>
- <dt>{{htmlattrdef("download")}} {{HTMLVersionInline(5)}}</dt>
+ <dt>{{htmlattrdef("download")}}</dt>
  <dd>此属性指示浏览器下载 URL 而不是导航到它，因此将提示用户将其保存为本地文件。如果属性有一个值，那么此值将在下载保存过程中作为预填充的文件名（如果用户需要，仍然可以更改文件名）。此属性对允许的值没有限制，但是 <code>/</code> 和 <code>\</code> 会被转换为下划线。大多数文件系统限制了文件名中的标点符号，故此，浏览器将相应地调整建议的文件名。
  <div class="note"><strong>注意：</strong>
  <ul>
@@ -117,26 +117,26 @@ translation_of: Web/HTML/Element/a
  <dt>
  <h3 id="过时的">过时的</h3>
  </dt>
- <dt>{{htmlattrdef("charset")}} {{obsoleteGeneric("inline","HTML5")}}</dt>
+ <dt>{{htmlattrdef("charset")}} {{Deprecated_Inline}}</dt>
  <dd>此属性定义链接资源的字符编码。该值是一个空格- 和/或逗号分隔的<a class="external" href="http://tools.ietf.org/html/rfc2045" style="color: rgb(102, 153, 204); text-decoration: none; padding-right: 16px; background-color: rgb(255, 255, 255); font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', Lucida, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 22px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;">RFC 2045</a>中定义的字符集列表。默认值是 ISO-8859-1。
  <div class="note">
  <p><strong>使用说明：</strong>在 HTML5 中该属性已作废，不应使用。 为了实现其效果，使用 HTTP content - type header 的链接资源。</p>
  </div>
  </dd>
- <dt>{{htmlattrdef("coords")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
+ <dt>{{htmlattrdef("coords")}} {{Deprecated_Inline}}</dt>
  <dd>对于使用对象的形状，此属性使用逗号分隔的数字列表来定义对象在页面上的坐标。</dd>
- <dt>{{htmlattrdef("name")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
+ <dt>{{htmlattrdef("name")}} {{Deprecated_Inline}}</dt>
  <dd>该属性在页面中定义锚点的目标位置时是必须的。 <strong>name</strong> 的值类似于 ID 核心属性值，该属性值在文档中是唯一的且由数字字母标示符所组成的。在 HTML 4.01 规范中，<strong>id</strong> 和 <strong>name</strong> 都可以使用 &lt;a&gt; 元素，只要他们有相同的值。
  <div class="note">
  <p><strong>使用说明：</strong> 该属性在 HTML5 中是过时的，使用 <a href="/zh-CN/docs/HTML/Global_attributes#attr-id" title="HTML/Global attributes#id">全局属性 <strong>id</strong></a> 来代替。</p>
  </div>
  </dd>
- <dt>{{htmlattrdef("rev")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
+ <dt>{{htmlattrdef("rev")}} {{Deprecated_Inline}}</dt>
  <dd>该属性用于指定当前文档与被链接文档的关系。用于 &lt;a&gt; 标签的可选属性 rel 和 rev 分别表示源文档与目标文档之间正式的关系和方向。rel 属性指定从源文档到目标文档的关系，而 rev 属性则指定从目标文档到源文档的关系。这两种属性可以在 &lt;a&gt; 标签中同时使用。对于网页编者来说，这个属性很有用，可以通过它来查看外链的来源。</dd>
 </dl>
 
 <dl>
- <dt>{{htmlattrdef("shape")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
+ <dt>{{htmlattrdef("shape")}} {{Deprecated_Inline}}</dt>
  <dd>此属性用于定义一个可选的超链接相关的一个数字来创建图像映射区域，该属性的值是圆，默认情况下，多边形，矩形。 所述的<strong>coords</strong> 属性的格式取决于形状的值。对于圆，该值的 x，y，r 其中 x 和 y 为圆心像素坐标，r 是像素值半径。对于矩形，该<strong>coords</strong> 属性应该是 x，y，w，h。x，y 值定义的矩形的左上角的位置，而 w 和 h 分别定义宽度和高度。多边形形状的值需要 x1，y1，x2，y2，......值来定义 coords。每对 x，y 定义多边形的一个点，连续点由直线接合和，最后一个点连接到第一个点。默认为形状的值需要将整个封闭区域，典型的图像，可以使用。
  <div class="note"><strong>说明：</strong>建议使用 <a href="/zh-CN/docs/Web/HTML/Element/img#attr-usemap">使用 map 属性</a>在 {{HTMLElement("img")}} 元素和相关的{{HTMLElement("map")}}元素中来定义热点而不是用形状属性。</div>
  </dd>

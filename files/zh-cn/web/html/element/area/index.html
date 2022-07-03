@@ -26,7 +26,7 @@ translation_of: Web/HTML/Element/area
 <p>该元素包括全局属性。</p>
 
 <dl>
- <dt>{{htmlattrdef("accesskey")}} {{HTMLVersionInline("4")}} only, {{obsolete_inline("5.0")}}</dt>
+ <dt>{{htmlattrdef("accesskey")}} {{Deprecated_Inline}}</dt>
  <dd>为元素指定一个获取焦点的快捷键。在与指定字符关联的情况下，按 ALT 或类似键选择与该键序列相关联的表单控件。页面设计人员避免使用已经绑定到浏览器的快捷键。这个属性自 HTML5 以来是全局性的。</dd>
 </dl>
 
@@ -38,7 +38,7 @@ translation_of: Web/HTML/Element/area
 <dl>
  <dt>{{htmlattrdef("coords")}}</dt>
  <dd>给热点区域设定具体的坐标值。这个值的数值和意义取决于这个值所描述的<strong>形状</strong>属性.。对于矩形或长方形，这个<strong>coords </strong>值为两个 X,Y 对：左上、右下。 对于圆形，这个值是 <code>x,y,r</code> ，这里的 <code>x,y</code> 是一对确定圆的中心的坐标而 <code>r</code> 则表示的是半径值.。对于多边和多边形，这个值是用 x,y 对表示的多边形的每一个点：<code>x1,y1,x2,y2,x3,y3,</code>等等。HTML4 里， 值可能是像素数量或者百分比，区别是不是有%出现; HTML5 里，只可能是像素的数量。</dd>
- <dt>{{htmlattrdef("download")}} {{HTMLVersionInline("5")}}</dt>
+ <dt>{{htmlattrdef("download")}}</dt>
  <dd>这个属性如果存在的话，表明作者想把超链接用于下载一个资源。请查看{{HTMLElement("a")}} 获得关于 {{htmlattrxref("download", "a")}}属性的完整描述。</dd>
 </dl>
 
@@ -48,22 +48,22 @@ translation_of: Web/HTML/Element/area
 </dl>
 
 <dl>
- <dt>{{htmlattrdef("hreflang")}} {{HTMLVersionInline("5")}}</dt>
+ <dt>{{htmlattrdef("hreflang")}}</dt>
  <dd>指明链接资源的语言类型，值的范围参考<a class="external" href="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP47</a>. 这个属性只能在指明 href 属性之后使用。</dd>
 </dl>
 
 <dl>
- <dt>{{htmlattrdef("name")}} {{HTMLVersionInline("4")}} only, {{obsolete_inline("5.0")}}</dt>
+ <dt>{{htmlattrdef("name")}} {{Deprecated_Inline}}</dt>
  <dd>为可点击区域定义一个名字以使旧浏览器解析。</dd>
 </dl>
 
 <dl>
- <dt>{{htmlattrdef("media")}} {{HTMLVersionInline("5")}}</dt>
+ <dt>{{htmlattrdef("media")}}</dt>
  <dd>指明链接资源的媒体类型，例：print and screen。如果此属性省略，默认全部。仅在 href 属性存在情况下使用。</dd>
 </dl>
 
 <dl>
- <dt>{{htmlattrdef("nohref")}} {{HTMLVersionInline("4")}} only, {{obsolete_inline("5.0")}}</dt>
+ <dt>{{htmlattrdef("nohref")}} {{Deprecated_Inline}}</dt>
  <dd>指明此区域没有超链接。在&lt;area&gt;中必须存在 nohref 或者 href。
  <div class="note">
  <p><strong>用法提示：</strong>此属性在 html5 中是废弃的，而忽略 href 属性就足够了。</p>
@@ -71,21 +71,15 @@ translation_of: Web/HTML/Element/area
  </dd>
 </dl>
 
-<p> </p>
-
 <dl>
- <dt> </dt>
-</dl>
-
-<dl>
- <dt>{{htmlattrdef("rel")}} {{HTMLVersionInline("5")}}</dt>
+ <dt>{{htmlattrdef("rel")}}</dt>
  <dd>对于包含 href 属性的锚，该属性指定目标对象与链接对象的关系。该值是一个逗号分隔的链接类型值列表。这些值及其语义将由一些可能对文档作者有意义的权威进行注册。如果没有其他的关系，默认的关系是无效的。只有当 href 属性是 presen 时才使用该属性</dd>
  <dt>{{htmlattrdef("shape")}}</dt>
  <dd>相关联的热点的形状。HTML 5 和 HTML 4 的规范定义了值 rect，它定义了一个矩形区域;圆圈，它定义了一个圆形区域;多边形，它定义了一个多边形;默认情况下，这表示整个区域超出了任何定义的形状。许多浏览器，特别是 Internet Explorer 4 和更高版本，支持弧形、多边形和矩形作为形状的有效值;这些值{ { Non-standard_inline } }。</dd>
 </dl>
 
 <dl>
- <dt>{{htmlattrdef("tabindex")}} {{HTMLVersionInline("4")}} only, {{obsolete_inline("5.0")}}</dt>
+ <dt>{{htmlattrdef("tabindex")}} {{Deprecated_Inline}}</dt>
  <dd>用于指定浏览器 tab 键获取焦点的顺序。在 html5 中是全局属性。</dd>
 </dl>
 
