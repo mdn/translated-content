@@ -1,6 +1,7 @@
 ---
 title: AudioTrack
 slug: Web/API/AudioTrack
+page-type: web-api-interface
 tags:
   - Audio
   - AudioTrack
@@ -10,86 +11,69 @@ tags:
   - Media
   - Reference
   - track
+browser-compat: api.AudioTrack
 translation_of: Web/API/AudioTrack
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>AudioTrack</code></strong> インターフェイスは、HTML のメディア要素（{{HTMLElement("audio")}} または {{HTMLElement("video")}}）の1つからの単一の音声トラックを表します。</span> <code>AudioTrack</code> オブジェクトにアクセスする最も一般的な用途は、トラックをミュートおよびミュート解除するためにその {{domxref("AudioTrack.enabled", "enabled")}} プロパティを切り替えることです。</p>
+**`AudioTrack`** インターフェイスは、 HTML のメディア要素（{{HTMLElement("audio")}} または {{HTMLElement("video")}}）のいずれかにある単一の音声トラックを表します。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+`AudioTrack` オブジェクトにアクセスする最も一般的な用途は、トラックをミュートおよびミュート解除するためにその {{domxref("AudioTrack.enabled", "enabled")}} プロパティを切り替えることです。
 
-<dl>
- <dt>{{domxref("AudioTrack.enabled", "enabled")}}</dt>
- <dd>音声トラックの音を有効にするかどうかを制御する <code>Boolean</code> の値。この値を <code>false</code> に設定すると、トラックの音声がミュートになります。</dd>
- <dt>{{domxref("AudioTrack.id", "id")}} {{ReadOnlyInline}}</dt>
- <dd>メディア内のトラックを一意に識別する {{domxref("DOMString")}}。 この ID は、{{domxref("AudioTrackList.getTrackById()")}} を呼び出すことによって、音声トラックリスト内の特定のトラックを見つけるために使用できます。 メディアが <a href="https://www.w3.org/TR/media-frags/">Media Fragments URI 仕様</a>（<a href="http://www.asahi-net.or.jp/~ax2s-kmtn/internet/media/REC-media-frags-10-20120925.html">その日本語訳</a>）に従ってメディアフラグメントによるシークをサポートしている場合は、ID を URL のフラグメント部分として使用することもできます。</dd>
- <dt>{{domxref("AudioTrack.kind", "kind")}} {{ReadOnlyInline}}</dt>
- <dd>トラックが属するカテゴリを指定する {{domxref("DOMString")}}。 例えば、メイン音声トラックは <code>kind</code> に <code>"main"</code> を持ちます。</dd>
- <dt>{{domxref("AudioTrack.label", "label")}} {{ReadOnlyInline}}</dt>
- <dd>トラックに人間が読めるラベルを提供する {{domxref("DOMString")}}。 例えば、映画の音声解説トラックには、<code>"監督 John Q. Public と俳優 John Doe と Jane Eod による解説"</code> という <code>label</code> が付いています。 ラベルが指定されていない場合、この文字列は空です。</dd>
- <dt>{{domxref("AudioTrack.language", "language")}} {{ReadOnlyInline}}</dt>
- <dd>音声トラックの主要言語を指定する {{domxref("DOMString")}}、または不明の場合は空の文字列。 言語は、<code>"en-US"</code> や <code>"pt-BR"</code> などの BCP 47（{{RFC(5646)}}）言語コードで指定されています。</dd>
- <dt>{{domxref("AudioTrack.sourceBuffer", "sourceBuffer")}} {{ReadOnlyInline}}</dt>
- <dd>トラックを作成した {{domxref("SourceBuffer")}}。 トラックが {{domxref("SourceBuffer")}} によって作成されなかった場合、または {{domxref("SourceBuffer")}} がその親メディアソースの {{domxref("MediaSource.sourceBuffers")}} 属性から取り除かれた場合は、null を返します。</dd>
-</dl>
+## プロパティ
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+- {{domxref("AudioTrack.enabled", "enabled")}}
+  - : 音声トラックの音を有効にするかどうかを制御する論理値です。この値を `false` に設定すると、トラックの音声がミュートになります。
+- {{domxref("AudioTrack.id", "id")}} {{ReadOnlyInline}}
+  - : メディア内のトラックを一意に識別する文字列です。 この ID は、{{domxref("AudioTrackList.getTrackById()")}} を呼び出すことによって、音声トラックリスト内の特定のトラックを見つけるために使用できます。 メディアが[メディアフラグメント仕様書](https://www.w3.org/TR/media-frags/)（[その日本語訳](http://www.asahi-net.or.jp/~ax2s-kmtn/internet/media/REC-media-frags-10-20120925.html)）従ってメディアフラグメントによるシークをサポートしている場合は、ID を URL のフラグメント部分として使用することもできます。
+- {{domxref("AudioTrack.kind", "kind")}} {{ReadOnlyInline}}
+  - : トラックが属するカテゴリーを指定する文字列です。 例えば、メイン音声トラックは `kind` に `"main"` を持ちます。
+- {{domxref("AudioTrack.label", "label")}} {{ReadOnlyInline}}
+  - : トラックに人間が読めるラベルを提供する文字列です。 例えば、映画の音声解説トラックには、`"John Q. Public 監督と俳優 John Doe と Jane Eod による解説"` という `label` が付いています。 ラベルが指定されていない場合、この文字列は空です。
+- {{domxref("AudioTrack.language", "language")}} {{ReadOnlyInline}}
+  - : 音声トラックの主要言語を指定する文字列で、または不明の場合は空の文字列。 言語は、`"en-US"` や `"pt-BR"` などの BCP 47（{{RFC(5646)}}）言語コードで指定されています。
+- {{domxref("AudioTrack.sourceBuffer", "sourceBuffer")}} {{ReadOnlyInline}}
+  - : トラックを作成した {{domxref("SourceBuffer")}}。 トラックが {{domxref("SourceBuffer")}} によって作成されなかった場合、または {{domxref("SourceBuffer")}} がその親メディアソースの {{domxref("MediaSource.sourceBuffers")}} 属性から取り除かれた場合は、null を返します。
 
-<p>特定のメディア要素の <code>AudioTrack</code> を取得するには、その要素の {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} プロパティを使用します。 このプロパティは、メディアに含まれる個々のトラックを取得できる {{domxref("AudioTrackList")}} オブジェクトを返します。</p>
+## 使用上の注意
 
-<pre class="brush: js">var el = document.querySelector("video");
+特定のメディア要素の `AudioTrack` を取得するには、その要素の {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} プロパティを使用します。 このプロパティは、メディアに含まれる個々のトラックを取得できる {{domxref("AudioTrackList")}} オブジェクトを返します。
+
+```js
+var el = document.querySelector("video");
 var tracks = el.audioTracks;
-</pre>
+```
 
-<p>その後、配列の構文または {{jsxref("Array.forEach", "forEach()")}} などの関数を使用して、メディアの個々のトラックにアクセスできます。</p>
+その後、配列の構文または {{jsxref("Array.forEach", "forEach()")}} などの関数を使用して、メディアの個々のトラックにアクセスできます。
 
-<p>この最初の例は、メディア上の最初の音声トラックを取得します。</p>
+この最初の例は、メディア上の最初の音声トラックを取得します。
 
-<pre class="brush: js">var firstTrack = tracks[0];</pre>
+```js
+var firstTrack = tracks[0];
+```
 
-<p>次の例では、メディアのすべての音声トラックをスキャンして、（変数 <code>userLanguage</code> から取得した）ユーザーの優先言語のものを有効にし、それ以外を無効にします。</p>
+次の例では、メディアのすべての音声トラックをスキャンして、（変数 `userLanguage` から取得した）ユーザーの優先言語のものを有効にし、それ以外を無効にします。
 
-<pre class="brush: js">tracks.forEach(function(track) {
+```js
+tracks.forEach(function(track) {
   if (track.language === userLanguage) {
     track.enabled = true;
   } else {
     track.enabled = false;
   }
 });
-</pre>
+```
 
-<p>{{domxref("AudioTrack.language", "language")}} は標準（{{RFC(5646)}}）形式です。 例えば、アメリカ英語の場合、これは <code>"en-US"</code> になります。</p>
+{{domxref("AudioTrack.language", "language")}} は標準（{{RFC(5646)}}）形式です。 例えば、アメリカ英語の場合、これは `"en-US"` になります。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>{{page("/ja/docs/Web/API/AudioTrack/label", "Example")}}</p>
+指定されたメディア要素のトラックの種類とラベルの配列を、種類でフィルタリングして取得する方法を示す簡単な例については、 [`AudioTrack.label`](/ja/docs/Web/API/AudioTrack/label#例) を参照してください。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'media.html#audiotrack', 'AudioTrack')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'embedded-content-0.html#audiotrack', 'AudioTrack')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.AudioTrack")}}</p>
+{{Compat}}
