@@ -7,7 +7,9 @@ Dans les navigateurs, cette propriété renvoie l'objet [window](/en-US/docs/DOM
 
 ## Syntaxe
 
-    var win = document.defaultView;
+```js
+var win = document.defaultView;
+```
 
 Cette propriété est en lecture seule.
 

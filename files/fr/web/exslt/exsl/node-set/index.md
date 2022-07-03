@@ -15,7 +15,9 @@ Vous pouvez également utiliser `exsl:node-set()` pour transformer des chaînes 
 
 ### Syntaxe
 
-    exsl:node-set(objet)
+```
+exsl:node-set(objet)
+```
 
 ### Arguments
 
@@ -33,5 +35,3 @@ L'ensemble de nœuds correspondant à l'`objet` spécifié.
 ### Support par Gecko
 
 Supporté par Gecko 1.9 et ultérieur.
-
-{{ languages( { "en": "en/EXSLT/exsl/node-set", "es": "es/EXSLT/exsl/node-set", "ja": "ja/EXSLT/exsl/node-set" } ) }}

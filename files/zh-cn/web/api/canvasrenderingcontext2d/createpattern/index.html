@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/createPattern
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.createPattern() </code></strong>是 Canvas 2D API 使用指定的图像 ({{domxref("CanvasImageSource")}})创建模式的方法。 它通过repetition参数在指定的方向上重复元图像。此方法返回一个{{domxref("CanvasPattern")}}对象。</p>
+<p><strong><code>CanvasRenderingContext2D.createPattern()</code></strong> 是 Canvas 2D API 使用指定的图像 ({{domxref("CanvasImageSource")}}) 创建模式的方法。它通过 repetition 参数在指定的方向上重复元图像。此方法返回一个{{domxref("CanvasPattern")}}对象。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -35,7 +35,7 @@ translation_of: Web/API/CanvasRenderingContext2D/createPattern
   <li><code>"repeat-y"</code> (vertical only), </li>
   <li><code>"no-repeat"</code> (neither).</li>
  </ul>
- 如果为空字符串 (<code>''</code>) 或 {{jsxref("null")}} (但不是 {{jsxref("undefined")}})，repetition将被当作"repeat"。</dd>
+ 如果为空字符串 (<code>''</code>) 或 {{jsxref("null")}} (但不是 {{jsxref("undefined")}})，repetition 将被当作"repeat"。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -49,7 +49,7 @@ translation_of: Web/API/CanvasRenderingContext2D/createPattern
 
 <h3 id="使用createPattern方法">使用<code>createPattern</code>方法</h3>
 
-<p>这是一段简单的代码片段，使用 <span style="font-family: consolas,monaco,andale mono,monospace;">createPattern 方法创建一个指定图像和重复的</span>{{domxref("CanvasPattern")}} 对象。创建完成后，可以使用{{domxref("CanvasPattern.setTransform()")}}方法对图案进行变形。如示例所示，你可以把此模式赋值给当前的{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}，当你使用{{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时，会在 canvas 上绘制出效果。</p>
+<p>这是一段简单的代码片段，使用 createPattern 方法创建一个指定图像和重复的{{domxref("CanvasPattern")}} 对象。创建完成后，可以使用{{domxref("CanvasPattern.setTransform()")}}方法对图案进行变形。如示例所示，你可以把此模式赋值给当前的{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}，当你使用{{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时，会在 canvas 上绘制出效果。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -70,7 +70,7 @@ img.onload = function() {
 };
 </pre>
 
-<p>编辑以下代码并在线查看canvas变化：</p>
+<p>编辑以下代码并在线查看 canvas 变化：</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
@@ -120,77 +120,11 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-createpattern", "CanvasRenderingContext2D.createPattern")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Canvas 2D Context W3C', "#dom-context-2d-createpattern", "CanvasRenderingContext2D.createPattern")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.CanvasRenderingContext2D.createPattern")}}
 
 <h2 id="参见">参见</h2>
 

@@ -9,19 +9,19 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>匹配模式是一种指定网址组的方法：: 一个匹配模式匹配特定的一组URL。 它们由WebExtensions 在几个地方使用，最明显的是指定要将<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">内容脚本</a>加载到哪些文档中，并指定要向其中添加 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest </a>侦听器的URL。</p>
+<p>匹配模式是一种指定网址组的方法：: 一个匹配模式匹配特定的一组 URL。 它们由 WebExtensions 在几个地方使用，最明显的是指定要将<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">内容脚本</a>加载到哪些文档中，并指定要向其中添加 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest </a>侦听器的 URL。</p>
 
-<p>使用匹配模板的API通常接收一个匹配模板的列表，当URL匹配任何模式时会恰当的运行. 看个例子 在manifest.json中的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> 关键字。</p>
+<p>使用匹配模板的 API 通常接收一个匹配模板的列表，当 URL 匹配任何模式时会恰当的运行。看个例子 在 manifest.json 中的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> 关键字。</p>
 
 <h2 id="匹配模式结构">匹配模式结构</h2>
 
-<p>所有的匹配模式用一个字符串来定义，而且都是<a href="/en-US/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E">"&lt;all_urls&gt;"</a> 模板的一部份， 匹配模板包含三个部分: <em>scheme</em>, <em>host</em>, 和 <em>path</em>.  scheme  host 用 "://" 分隔。</p>
+<p>所有的匹配模式用一个字符串来定义，而且都是<a href="/en-US/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E">"&lt;all_urls&gt;"</a> 模板的一部份，匹配模板包含三个部分：<em>scheme</em>, <em>host</em>, 和 <em>path</em>.  scheme  host 用 "://" 分隔。</p>
 
 <pre>&lt;scheme&gt;://&lt;host&gt;&lt;path&gt;</pre>
 
 <h3 id="方案">方案</h3>
 
-<p> <em>scheme</em>  可能以下两种格式之一:</p>
+<p> <em>scheme</em>  可能以下两种格式之一：</p>
 
 <table class="fullwidth-table standard-table">
  <thead>
@@ -77,11 +77,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 <p><em>path </em>组件必须以“/”开头。</p>
 
-<p>之后，它可能随后包含“*”通配符和网址路径中允许的任何字符的任意组合。 与 <em>host </em>不同， <em>path </em>组件可能在中间或末尾包含“*”通配符，并且“*”通配符可以多次出现。</p>
+<p>之后，它可能随后包含“*”通配符和网址路径中允许的任何字符的任意组合。与 <em>host </em>不同， <em>path </em>组件可能在中间或末尾包含“*”通配符，并且“*”通配符可以多次出现。</p>
 
 <h3 id="&lt;all_urls>">&lt;all_urls&gt;</h3>
 
-<p>特殊值“&lt;all_urls&gt;”匹配任何受支持方案下的所有URL：即, "http", "https", "file", "ftp", "app"。</p>
+<p>特殊值“&lt;all_urls&gt;”匹配任何受支持方案下的所有 URL：即，"http", "https", "file", "ftp", "app"。</p>
 
 <h2 id="范例">范例</h2>
 
@@ -343,9 +343,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 <h2 id="测试匹配模式">测试匹配模式</h2>
 
-<p>当制作扩展时你通常不会跟直接使用匹配模板: 通常你讲一个匹配模式传递给API，然后API构造一个匹配模式并且使用他来测试url。不过如果你正在尝试哪一种匹配模式可以被使用，或者调试一个匹配问题，那么直接创建和测试匹配模板的能力将变得有用，这个模块将解释如何做到这点。</p>
+<p>当制作扩展时你通常不会跟直接使用匹配模板：通常你讲一个匹配模式传递给 API，然后 API 构造一个匹配模式并且使用他来测试 url。不过如果你正在尝试哪一种匹配模式可以被使用，或者调试一个匹配问题，那么直接创建和测试匹配模板的能力将变得有用，这个模块将解释如何做到这点。</p>
 
-<p>首先，打开开发者工具设置，并且检查 "Enable browser chrome and add-on debugging toolboxes" 被打开:</p>
+<p>首先，打开开发者工具设置，并且检查 "Enable browser chrome and add-on debugging toolboxes" 被打开：</p>
 
 <p>{{EmbedYouTube("JDEe2fyFpHE")}}</p>
 
@@ -353,7 +353,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 <p>{{EmbedYouTube("mfuBMje6dA4")}}</p>
 
-<p>它给了你一个命令行以使你可以执行一些特权javascript代码。</p>
+<p>它给了你一个命令行以使你可以执行一些特权 javascript 代码。</p>
 
 <div class="warning">
 <p>因为运行在浏览器控制台的代码拥有系统特权，在任何时候都请你小心理解你的代码做了什么</p>
@@ -364,14 +364,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 <pre class="brush: js">Cu.import("resource://gre/modules/MatchPattern.jsm");
 Cu.import("resource://gre/modules/BrowserUtils.jsm");</pre>
 
-<p>这做了两件事:</p>
+<p>这做了两件事：</p>
 
 <ul>
- <li>导入 "MatchPattern.jsm": 这是实现了匹配模板的系统模块，特别的，这个模块包含了 <code>MatchPattern</code> 对象. <code>MatchPattern</code> 对象定义了一个 <code>matches()</code> 方法, 他需要一个URL然后返回 <code>true</code> 或者 <code>false</code>.</li>
- <li>导入 "BrowserUtils.jsm": 包含了一个方法 <code>makeURI()</code>, 他转换一个字符串为一个 <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI">nsIURI</a></code> 对象. <code>nsIURI</code> 是 <code>matches()</code> 方法需要接受的一个参数。</li>
+ <li>导入 "MatchPattern.jsm": 这是实现了匹配模板的系统模块，特别的，这个模块包含了 <code>MatchPattern</code> 对象. <code>MatchPattern</code> 对象定义了一个 <code>matches()</code> 方法，他需要一个 URL 然后返回 <code>true</code> 或者 <code>false</code>.</li>
+ <li>导入 "BrowserUtils.jsm": 包含了一个方法 <code>makeURI()</code>, 他转换一个字符串为一个 <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI">nsIURI</a></code> 对象。<code>nsIURI</code> 是 <code>matches()</code> 方法需要接受的一个参数。</li>
 </ul>
 
-<p>现在你可以构造MatchPattern对象，构造URIs，并检查URIs 是否匹配：</p>
+<p>现在你可以构造 MatchPattern 对象，构造 URIs，并检查 URIs 是否匹配：</p>
 
 <pre class="brush: js">var match = new MatchPattern("*://mozilla.org/");
 

@@ -14,8 +14,10 @@ La propriété **`Document.dir`** est une chaîne de caractères {{domxref("DOMS
 
 ## Syntaxe
 
-    dirStr = document.dir;
-    document.dir = dirStr;
+```js
+dirStr = document.dir;
+document.dir = dirStr;
+```
 
 ## Spécifications
 

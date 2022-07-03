@@ -21,7 +21,9 @@ Pour plus de détails sur les tampons audio, consultez la page de référence {{
 
 ## Syntaxe
 
-    var tampon = baseAudioContext.createBuffer(nbDeCanaux, longueur, frequenceDEchantillonnage);
+```js
+var tampon = baseAudioContext.createBuffer(nbDeCanaux, longueur, frequenceDEchantillonnage);
+```
 
 ### Paramètres
 
@@ -94,7 +96,7 @@ source.start();
 
 | Spécification                                                                                                    | Statut                               | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createbuffer', 'createBuffer()')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createbuffer', 'createBuffer()')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité des navigateurs
 

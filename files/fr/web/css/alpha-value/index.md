@@ -7,7 +7,7 @@ tags:
   - Type de donnée
 translation_of: Web/CSS/alpha-value
 ---
-{{CSSRef}}{{draft()}}
+{{CSSRef}}
 
 Le [type de donnée](/fr/docs/Web/CSS/Types_CSS) CSS **`<alpha-value>`** représente une valeur qui peut être un nombre ({{cssxref("&lt;number&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}) et qui indique le [canal alpha](https://fr.wikipedia.org/wiki/Canal_alpha) ou _l'opacité_ d'une couleur.
 

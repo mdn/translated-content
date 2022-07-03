@@ -11,15 +11,17 @@ translation_of: Web/API/URL/URL
 ---
 {{APIRef("URL API")}}
 
-Le constructeur **`URL()`** renvoie un nouvel objet {{domxref("URL")}} représentant l'URL définie par les paramètres.
+Le constructeur **`URL()`** renvoie un nouvel objet {{domxref("URL")}} représentant l'URL définie par les paramètres.
 
-Si l'URL de base donnée ou l'URL résultante ne sont pas des URL valides, une {{domxref("DOMException")}} de type `SYNTAX_ERROR` est levée.
+Si l'URL de base donnée ou l'URL résultante ne sont pas des URL valides, une {{domxref("DOMException")}} de type `SYNTAX_ERROR` est levée.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Syntaxe
 
-    url = new URL(url, [base])
+```
+url = new URL(url, [base])
+```
 
 ### Paramètres
 

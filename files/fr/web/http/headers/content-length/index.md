@@ -26,7 +26,9 @@ L'en-tête (_header_) **`Content-Length`** indique la taille en octets (exprimé
 
 ## Syntaxe
 
-    Content-Length: <longueur>
+```
+Content-Length: <longueur>
+```
 
 ## Directives
 

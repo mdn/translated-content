@@ -51,7 +51,7 @@ L'attribut `media` de l'élément {{HTMLElement("source")}} permet de rédiger u
 L'attribut `type` d'un élément {{HTMLElement("source")}} permet d'indiquer le type MIME du fichier fourni via l'attribut `srcset`. Si l'agent utilisateur ne prend pas en charge ce type de fichier, l'élément {{HTMLElement("source")}} est ignoré.
 
 ```html
-​<picture>
+<picture>
  <source srcset="mdn-logo.svg" type="image/svg+xml">
  <img src="mdn-logo.png" alt="MDN">
 </picture>

@@ -27,7 +27,9 @@ La valeur retournée est un masque de bits avec les valeurs suivantes :
 
 ## Syntaxe
 
-    node.compareDocumentPosition( otherNode )
+```js
+node.compareDocumentPosition( otherNode )
+```
 
 ## Exemple
 
@@ -49,7 +51,7 @@ if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWI
 
 | Spécification                                                                                                                        | Statut                           | Commentaire         |
 | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#dom-node-comparedocumentposition','Node.compareDocumentPosition()')}}     | {{Spec2('DOM WHATWG')}} |                     |
+| {{SpecName('DOM WHATWG','#dom-node-comparedocumentposition','Node.compareDocumentPosition()')}}     | {{Spec2('DOM WHATWG')}} |                     |
 | {{SpecName('DOM3 Core','core.html#Node3-compareDocumentPosition','Node.compareDocumentPosition()')}} | {{Spec2('DOM3 Core')}}     | Définition initiale |
 
 ## Compatibilité des navigateurs

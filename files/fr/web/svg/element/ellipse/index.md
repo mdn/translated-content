@@ -25,16 +25,16 @@ L'élément `ellipse` est une forme basique SVG,utilisé pour créer des ellipse
 
 - {{ SVGAttr("cx") }}
   - : La position x de l'ellipse.
-    Type de valeur : **[\<longueur>](/fr/docs/Web/SVG/Content_type#Length)**|[\<pourcentage>](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut : `0`; Animable : **oui**.
+    Type de valeur : [**`<longueur>`**](/fr/docs/Web/SVG/Content_type#Length)|[**`<pourcentage>`**](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut :`0`; Animable : **oui**.
 - {{ SVGAttr("cy") }}
   - : La position y de l'ellipse.
-    Type de valeur : **[\<longueur>](/fr/docs/Web/SVG/Content_type#Length)**|[\<pourcentage>](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut : `0`; Animable : **oui**.
+    Type de valeur : [**`<longueur>`**](/fr/docs/Web/SVG/Content_type#Length)|[**`<pourcentage>`**](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut :`0`; Animable :**oui**.
 - {{ SVGAttr("rx") }}
   - : Le rayon de l'ellipse sur l'axe x.
-    Type de valeur : `auto`|**[\<longueur>](/fr/docs/Web/SVG/Content_type#Length)**|[\<pourcentage>](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut : `auto`; Animable : **oui**.
+    Type de valeur : `auto`|[**`<longueur>`**](/fr/docs/Web/SVG/Content_type#Length)|[**`<pourcentage>`**](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut :`auto`; Animable : **oui**.
 - {{ SVGAttr("ry") }}
   - : Le rayon de l'ellipse sur l'axe y.
-    Type de valeur : `auto`|**[\<longueur>](/fr/docs/Web/SVG/Content_type#Length)**|[\<pourcentage>](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut : `auto`; Animable : **oui**.
+    Type de valeur : `auto`|[**`<longueur>`**](/fr/docs/Web/SVG/Content_type#Length)|[**`<pourcentage>`**](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut :`auto`; Animable : **oui**.
 - {{ SVGAttr("pathLength") }}
   - : Cet attribut permet de spécifier la longueur totale du tracé, en unités de l'utilisateur.
     Type de valeur : **[\<number>](/fr/docs/Web/SVG/Content_type#Number)**; Valeur par défaut : `auto`; Animable : **oui**.
@@ -50,7 +50,7 @@ L'élément `ellipse` est une forme basique SVG,utilisé pour créer des ellipse
 - [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute/Conditional_Processing)
   - : Plus notamment : {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - Attributs d'événements
-  - : [Attributs d'événément globaux](/fr/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Attributs d'événément graphiques](/fr/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
+  - : [Attributs d'évènement globaux](/fr/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Attributs d'évènement graphiques](/fr/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
 - [Attributs de présentation](/fr/docs/Web/SVG/Attribute/Presentation)
   - : Plus notamment : {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - Attributs ARIA
@@ -64,7 +64,7 @@ L'élément `ellipse` est une forme basique SVG,utilisé pour créer des ellipse
 
 | Spécification                                                                                    | Statut                   | Commentaire                                 |
 | ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------- |
-| {{SpecName('SVG2', 'shapes.html#EllipseElement', '&lt;ellipse&gt;')}}     | {{Spec2('SVG2')}} | Ajout de la valeur `auto` pour `rx` et `ry` |
+| {{SpecName('SVG2', 'shapes.html#EllipseElement', '&lt;ellipse&gt;')}}     | {{Spec2('SVG2')}} | Ajout de la valeur `auto` pour `rx` et `ry` |
 | {{SpecName('SVG1.1', 'shapes.html#EllipseElement', '&lt;ellipse&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale                         |
 
 ## Interface DOM

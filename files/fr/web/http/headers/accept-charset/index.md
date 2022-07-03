@@ -24,12 +24,14 @@ Si le serveur ne peut servir aucun jeu de caractères correspondant, il peut th�
   </tbody>
 </table>
 
-## Syntax
+## Syntaxe
 
-    Accept-Charset: <charset>
+```
+Accept-Charset: <charset>
 
-    // Multiple types, weighted with the {{glossary("quality values", "quality value")}} syntax:
-    Accept-Charset: utf-8, iso-8859-1;q=0.5
+// Multiple types, weighted with the {{glossary("quality values", "quality value")}} syntax:
+Accept-Charset: utf-8, iso-8859-1;q=0.5
+```
 
 ## Les directives
 
@@ -38,15 +40,17 @@ Si le serveur ne peut servir aucun jeu de caractères correspondant, il peut th�
 - `*`
   - : Tout jeu de caractères non mentionné ailleurs dans l'en-tête; '\*' utilisé comme un joker.
 - `;q=` (q-factor weighting)
-  - : Toute valeur est placée dans un ordre de préférence exprimé à l'aide d'une valeur de qualité relative appelée  _weight_.
+  - : Toute valeur est placée dans un ordre de préférence exprimé à l'aide d'une valeur de qualité relative appelée _weight_.
 
 ## Examples
 
-    Accept-Charset: iso-8859-1
+```
+Accept-Charset: iso-8859-1
 
-    Accept-Charset: utf-8, iso-8859-1;q=0.5
+Accept-Charset: utf-8, iso-8859-1;q=0.5
 
-    Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
+Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
+```
 
 ## Specifications
 
@@ -62,4 +66,4 @@ Si le serveur ne peut servir aucun jeu de caractères correspondant, il peut th�
 
 - HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
 - Header avec le résultat de la négociation de contenu : {{HTTPHeader("Content-Type")}}
-- Autres Header similaires : {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}
+- Autres Header similaires : {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}

@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNam
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Object.getOwnPropertyNames()</code></strong>方法返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括Symbol值作为名称的属性）组成的数组。</p>
+<p><strong><code>Object.getOwnPropertyNames()</code></strong>方法返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括 Symbol 值作为名称的属性）组成的数组。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -44,7 +44,7 @@ console.log(Object.getOwnPropertyNames(arr).sort()); // ["0", "1", "2", "length"
 var obj = { 0: "a", 1: "b", 2: "c"};
 console.log(Object.getOwnPropertyNames(obj).sort()); // ["0", "1", "2"]
 
-// 使用Array.forEach输出属性名和属性值
+// 使用 Array.forEach 输出属性名和属性值
 Object.getOwnPropertyNames(obj).forEach(function(val, idx, array) {
   console.log(val + " -&gt; " + obj[val]);
 });
@@ -97,8 +97,8 @@ var enum_only = Object.keys(target);
 var nonenum_only = enum_and_nonenum.filter(function(key) {
     var indexInEnum = enum_only.indexOf(key);
     if (indexInEnum == -1) {
-        // 没有发现在enum_only健集中意味着这个健是不可枚举的,
-        // 因此返回true 以便让它保持在过滤结果中
+        // 没有发现在 enum_only 健集中意味着这个健是不可枚举的，
+        // 因此返回 true 以便让它保持在过滤结果中
         return true;
     } else {
         return false;
@@ -107,7 +107,7 @@ var nonenum_only = enum_and_nonenum.filter(function(key) {
 
 console.log(nonenum_only);</pre>
 
-<pre>注：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Array.filter(filt_func)方法</a>创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。</pre>
+<pre>注：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Array.filter(filt_func) 方法</a>创建一个新数组，其包含通过所提供函数实现的测试的所有元素。</pre>
 
 <h2 id="Notes">提示</h2>
 

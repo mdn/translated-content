@@ -20,7 +20,9 @@ La méthode **`includes()`** détermine si un tableau typé possède un certain 
 
 ## Syntaxe
 
-    typedarray.includes(élémentRecherché[, indiceDébut]);
+```js
+typedarray.includes(élémentRecherché[, indiceDébut]);
+```
 
 ### Paramètres
 
@@ -52,7 +54,7 @@ new Float64Array([NaN]).includes(NaN); // true;
 | Spécification                                                                                                                    | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES7', '#sec-%typedarray%.prototype.includes', 'TypedArray.prototype.includes')}}     | {{Spec2('ES7')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.includes', 'TypedArray.prototype.includes')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.includes', 'TypedArray.prototype.includes')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

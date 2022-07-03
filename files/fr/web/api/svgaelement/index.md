@@ -11,7 +11,7 @@ translation_of: Web/API/SVGAElement
 ---
 ## SVG a DOM interface
 
-L'interface `SVGAElement `fournit un accès aux propriétés des éléments {{ SVGElement("a") }} ainsi qu'aux méthodes pour les manipuler.
+L'interface `SVGAElement` fournit un accès aux propriétés des éléments [`<a>`](/fr/docs/Web/SVG/Element/a) ainsi qu'aux méthodes pour les manipuler.
 
 ### Interface overview
 

@@ -7,7 +7,7 @@ tags:
   - 高级
 translation_of: Web/Guide/HTML/Content_categories
 ---
-<p><span class="seoSummary">每一个HTML元素都必须遵循定义了它可以包含哪一类内容的规则。 这些规则被归类为几个常见的元素内容模型（content model）。每个HTML元素都属于0个、1 个或多个内容模型，每个模型都有一些规则使得元素中的内容必须遵循一个HTML规范文档( HTML-conformant document)。</span></p>
+<p>每一个 HTML 元素都必须遵循定义了它可以包含哪一类内容的规则。 这些规则被归类为几个常见的元素内容模型（content model）。每个 HTML 元素都属于 0 个、1 个或多个内容模型，每个模型都有一些规则使得元素中的内容必须遵循一个 HTML 规范文档 ( HTML-conformant document)。</p>
 
 <p>以下是三种类型的内容分类：</p>
 
@@ -62,11 +62,11 @@ translation_of: Web/Guide/HTML/Content_categories
 
 <h3 id="短语元素（Phrasing_content）">短语元素（Phrasing content）</h3>
 
-<p>短语元素（Phrasing content） 规定文本和它包含的标记。 一些Phrasing content就构成了段落.</p>
+<p>短语元素（Phrasing content）规定文本和它包含的标记。 一些 Phrasing content 就构成了段落。</p>
 
 <p>属于此类的元素有： {{HTMLElement("abbr")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{ Obsolete_inline() }}{{HTMLElement("command")}}, {{HTMLElement("datalist")}}, {{HTMLElement("dfn")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("kbd")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("meter")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{SVGElement("svg")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, {{HTMLElement("wbr")}} 和 plain text (仅当所包含的内容不完全为空字符的时候).</p>
 
-<p>一些其他的元素也属于这个分类，但是只有当如下特殊情况时才会实现:</p>
+<p>一些其他的元素也属于这个分类，但是只有当如下特殊情况时才会实现：</p>
 
 <ul>
  <li>{{HTMLElement("a")}}, 当它仅包含 phrasing content 时</li>
@@ -80,7 +80,7 @@ translation_of: Web/Guide/HTML/Content_categories
 
 <h3 id="嵌入元素（Embedded_content）">嵌入元素（Embedded content）</h3>
 
-<p>Embedded content输入另一个资源或者将来自另一种标记语言或命名空间的内容插入到文档中。</p>
+<p>Embedded content 输入另一个资源或者将来自另一种标记语言或命名空间的内容插入到文档中。</p>
 
 <p>属于此类的元素有：{{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, {{HTMLElement("video")}}.</p>
 
@@ -88,9 +88,9 @@ translation_of: Web/Guide/HTML/Content_categories
 
 <p>交互式内容包含为用户交互而特别设计的元素。 </p>
 
-<p><span style="line-height: 1.5;">属于此类的元素有：{{HTMLElement("a")}}，{{HTMLElement("button")}}，{{HTMLElement("details")}}，{{HTMLElement("embed")}}，{{HTMLElement("iframe")}}，</span> {{deprecated_inline()}}<span style="line-height: 1.5;">{{HTMLElement("keygen")}}，{{HTMLElement("label")}}，{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。</span></p>
+<p>属于此类的元素有：{{HTMLElement("a")}}，{{HTMLElement("button")}}，{{HTMLElement("details")}}，{{HTMLElement("embed")}}，{{HTMLElement("iframe")}}， {{deprecated_inline()}}{{HTMLElement("keygen")}}，{{HTMLElement("label")}}，{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。</p>
 
-<p>仅在特殊情形下才会属于此类的元素有:</p>
+<p>仅在特殊情形下才会属于此类的元素有：</p>
 
 <ul>
  <li>{{HTMLElement("audio")}}, 若{{htmlattrxref("controls", "audio")}}属性存在</li>
@@ -103,7 +103,7 @@ translation_of: Web/Guide/HTML/Content_categories
 
 <h3 id="表单相关内容（Form-associated_content）">表单相关内容（Form-associated content）</h3>
 
-<p>表单相关的内容 包含 拥有表单父节点（exposed by a <strong>form</strong> attribute）的元素，一个表单父节点可以是{{HTMLElement("form")}}元素，也可以是其id在表单属性中被指定了的元素。（Form-associated content comprises elements that have a form owner, exposed by a <strong>form</strong> attribute. A form owner is either the containing {{HTMLElement("form")}} element or the element whose id is specified in the <strong>form</strong> attribute.）</p>
+<p>表单相关的内容 包含 拥有表单父节点（exposed by a <strong>form</strong> attribute）的元素，一个表单父节点可以是{{HTMLElement("form")}}元素，也可以是其 id 在表单属性中被指定了的元素。（Form-associated content comprises elements that have a form owner, exposed by a <strong>form</strong> attribute. A form owner is either the containing {{HTMLElement("form")}} element or the element whose id is specified in the <strong>form</strong> attribute.）</p>
 
 <ul>
  <li>{{HTMLElement("button")}}</li>
@@ -123,7 +123,7 @@ translation_of: Web/Guide/HTML/Content_categories
 
 <dl>
  <dt><a name="Form_listed">可列举的元素（listed）</a></dt>
- <dd>在 <a href="/en-US/docs/DOM/form.elements" title="DOM/form.elements">form.elements</a> 和 fieldset.elements IDL collections中列举出的元素. 包括 {{HTMLElement("button")}}，{{HTMLElement("fieldset")}}，{{HTMLElement("input")}}， {{deprecated_inline()}}{{HTMLElement("keygen")}}，{{HTMLElement("object")}}，{{HTMLElement("output")}}，{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。</dd>
+ <dd>在 <a href="/en-US/docs/DOM/form.elements" title="DOM/form.elements">form.elements</a> 和 fieldset.elements IDL collections 中列举出的元素。包括 {{HTMLElement("button")}}，{{HTMLElement("fieldset")}}，{{HTMLElement("input")}}， {{deprecated_inline()}}{{HTMLElement("keygen")}}，{{HTMLElement("object")}}，{{HTMLElement("output")}}，{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。</dd>
  <dt><a name="Form_labelable">可标签的元素（labelable）</a></dt>
  <dd>和 {{HTMLElement("label")}} 相关联的元素。包括 {{HTMLElement("button")}}，{{HTMLElement("input")}}， {{deprecated_inline()}}{{HTMLElement("keygen")}}，{{HTMLElement("meter")}}，{{HTMLElement("output")}}，{{HTMLElement("progress")}}，{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。</dd>
  <dt><a name="Form_submittable">可提交的元素（submittable）</a></dt>
@@ -139,13 +139,13 @@ translation_of: Web/Guide/HTML/Content_categories
 
  <p>支持脚本的元素不会直接渲染输出在页面文档中。当然，他们被用来存放脚本代码，脚本代码所要用到的数据。</p>
 
- <p>这些支持脚本的元素有:</p>
+ <p>这些支持脚本的元素有：</p>
  {{HTMLElement("script")}} {{HTMLElement("template")}}</dt>
 </dl>
 
 <h2 id="透明内容模型（Transparent_content_model）">透明内容模型（Transparent content model）</h2>
 
-<p>如果一个元素拥有 transparent content mode， 即使将透明内容更换为子元素，其内容必须由合法的HTML5元素组成。</p>
+<p>如果一个元素拥有 transparent content mode， 即使将透明内容更换为子元素，其内容必须由合法的 HTML5 元素组成。</p>
 
 <p>例如，{{HTMLElement("del")}} 和 {{HTMLELement("ins")}} 是透明的：</p>
 

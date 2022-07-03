@@ -49,7 +49,7 @@ Les **documents** en question sont des fichiers texte structurés avec un langag
 
 **Présenter** un document à l'utilisateur signifie convertir ce document dans une forme utilisable par le public visé. Les [navigateurs](/fr/docs/Glossary/Browser), tels [Firefox](/fr/docs/Glossary/Mozilla_Firefox), [Chrome](/fr/docs/Glossary/Google_Chrome), [Safari](/fr/docs/Glossary/Apple_Safari) ou [Edge](/fr/docs/Glossary/Microsoft_Edge) sont conçus pour présenter visuellement des documents, que ce soit sur l'écran d'un ordinateur, un vidéo-projecteur ou une imprimante.
 
-> **Note :** Un navigateur est parfois appelé [agent utilisateur](/fr/docs/Glossary/User_agent). On entend par là un programme informatique qui agit pour un utilisateur au sein d'un système informatique. Pour CSS, les premiers agents utilisateur qui nous viennent à l'esprit sont les navigateurs. Ce ne sont pourtant pas les seuls. Il existe d'autres agents utilisateurs comme les programmes qui convertissent des documents  HTML et CSS en documents PDF imprimables.
+> **Note :** Un navigateur est parfois appelé [agent utilisateur](/fr/docs/Glossary/User_agent). On entend par là un programme informatique qui agit pour un utilisateur au sein d'un système informatique. Pour CSS, les premiers agents utilisateur qui nous viennent à l'esprit sont les navigateurs. Ce ne sont pourtant pas les seuls. Il existe d'autres agents utilisateurs comme les programmes qui convertissent des documents HTML et CSS en documents PDF imprimables.
 
 CSS peut être utilisé pour une mise en forme élémentaire des documents — par exemple, changer [la couleur](/fr/docs/Web/CSS/color_value) et [la taille](/fr/docs/Web/CSS/font-size) des titres et des liens. Il peut être utilisé pour concevoir une maquette — par exemple, [transformer un texte affiché sur une colonne en une composition](/fr/docs/Web/CSS/Layout_cookbook/Column_layouts) avec un cadre principal et une barre latérale pour les informations reliées. Avec CSS, on peut aussi produire des [animations](/fr/docs/Web/CSS/CSS_Animations). N'hésitez pas à cliquer sur les liens de ce paragraphe pour observer différents exemples.
 
@@ -123,8 +123,8 @@ Maintenant que vous avez compris ce qu'est CSS, vous pourrez commencer à écrir
 
 ## Dans ce module
 
-1.  [Qu'est-ce que CSS&nbsp;?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3.  [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [CSS, comment ça marche&nbsp;?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Mettre en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [Qu'est-ce que CSS&nbsp;?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
+3. [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS, comment ça marche&nbsp;?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Mettre en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

@@ -27,11 +27,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
 
 <h2 id="示例">示例</h2>
 
-<p><code>species</code> 属性返回默认构造函数, 它用于 <code>Array</code> 对象的构造函数 <code>Array</code>:</p>
+<p><code>species</code> 属性返回默认构造函数，它用于 <code>Array</code> 对象的构造函数 <code>Array</code>:</p>
 
 <pre class="brush: js">Array[Symbol.species]; // function Array()</pre>
 
-<p>在继承类的对象中（例如你自定义的数组 <code>MyArray</code>），<code>MyArray</code> 的 <code>species</code> 属性返回的是 <code>MyArray</code> 这个构造函数. 然而你可能想要覆盖它，以便在你继承的对象 <code>MyArray</code> 中返回父类的构造函数 <code>Array</code> :</p>
+<p>在继承类的对象中（例如你自定义的数组 <code>MyArray</code>），<code>MyArray</code> 的 <code>species</code> 属性返回的是 <code>MyArray</code> 这个构造函数。然而你可能想要覆盖它，以便在你继承的对象 <code>MyArray</code> 中返回父类的构造函数 <code>Array</code> :</p>
 
 <pre class="brush: js">class MyArray extends Array {
   // 重写 MyArray 的 species 属性到父类 Array 的构造函数

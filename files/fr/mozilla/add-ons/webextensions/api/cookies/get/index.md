@@ -15,9 +15,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/get
 ---
 {{AddonSidebar()}}
 
-La méthode **`get()`** de l'API {{WebExtAPIRef("cookies")}} récupère les informations d'un seul cookie, par son nom et son URL.
+La méthode **`get()`** de l'API {{WebExtAPIRef("cookies")}} récupère les informations d'un seul cookie, par son nom et son URL.
 
-Si plus d'un cookie portant le même nom existent pour une URL donnée, celui contenant le chemin le plus long sera retourné. Pour les cookies ayant la même longueur de chemin, le plus ancien cookie sera retourné. Si aucun cookie ne correspond alors `null` est retourné.
+Si plus d'un cookie portant le même nom existent pour une URL donnée, celui contenant le chemin le plus long sera retourné. Pour les cookies ayant la même longueur de chemin, le plus ancien cookie sera retourné. Si aucun cookie ne correspond alors `null` est retourné.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -33,16 +33,16 @@ var getting = browser.cookies.get(
 
 - `details`
 
-  - : Un `objet` contenant les informations pouvant être utilisées pour récupérer un cookie. Il peut inclure les propriétés suivantes :
+  - : Un `objet` contenant les informations pouvant être utilisées pour récupérer un cookie. Il peut inclure les propriétés suivantes :
 
     - `firstPartyDomain`{{optional_inline}}
       - : Une `chaîne` représentant le domaine de première partie avec lequel le cookie à récupérer est associé. Cette propriété doit être fournie si l'isolation de la première partie est activée sur le navigateur. Voir [Isolement de la première partie](/fr/Add-ons/WebExtensions/API/cookies#Isolement_de_la_première_partie).
     - `name`
-      - : Une `chaîne` représentant le nom du cookie à récupérer.
+      - : Une `chaîne` représentant le nom du cookie à récupérer.
     - `storeId`{{optional_inline}}
-      - : Une `chaîne` représentant l'ID du {{WebExtAPIRef("cookies.CookieStore", "cookie store")}} dans lequel rechercher le cookie (tel que renvoyé par  {{WebExtAPIRef("cookies.getAllCookieStores()")}}). Par défault, le cookie store du contexte d'exécution actuel sera utilisé.
+      - : Une `chaîne` représentant l'ID du {{WebExtAPIRef("cookies.CookieStore", "cookie store")}} dans lequel rechercher le cookie (tel que renvoyé par  {{WebExtAPIRef("cookies.getAllCookieStores()")}}). Par défault, le cookie store du contexte d'exécution actuel sera utilisé.
     - `url`
-      - : Une `chaîne` représentant l'URL avec laquelle le cookie à récupérer est associé. Cet argument peut être une URL complète, auquel cas toute donnée suivant le chemin d'URL (par exemple la chaîne de requête) est simplement ignorée. Si les  [ permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions) pour cette URL ne sont pas spécifiées dans le [fichier manifeste](/fr/Add-ons/WebExtensions/manifest.json) de l'extension, l'appel de l'API échouera.
+      - : Une `chaîne` représentant l'URL avec laquelle le cookie à récupérer est associé. Cet argument peut être une URL complète, auquel cas toute donnée suivant le chemin d'URL (par exemple la chaîne de requête) est simplement ignorée. Si les [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions) pour cette URL ne sont pas spécifiées dans le [fichier manifeste](/fr/Add-ons/WebExtensions/manifest.json) de l'extension, l'appel de l'API échouera.
 
 ### Valeur retournée
 
@@ -54,7 +54,7 @@ Une [`Promise`](fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui ser
 
 ## Exemples
 
-Cet exemple tente d'obtenir le cookie nommé "favourite-colour", associé à l'URL de l'onglet actuellement actif :
+Cet exemple tente d'obtenir le cookie nommé "favourite-colour", associé à l'URL de l'onglet actuellement actif :
 
 ```js
 function logCookie(cookie) {

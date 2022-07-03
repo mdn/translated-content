@@ -35,9 +35,9 @@ translation_of: Web/JavaScript/Reference/Operators/new
 <p><strong><code>new</code></strong> 关键字会进行如下的操作：</p>
 
 <ol>
- <li>创建一个空的简单JavaScript对象（即<code><strong>{}</strong></code>）；</li>
- <li>为步骤1新创建的对象添加属性<code><strong>__proto__</strong></code>，将该属性链接至构造函数的原型对象 ；</li>
- <li>将步骤1新创建的对象作为<code><strong>this</strong></code>的上下文 ；</li>
+ <li>创建一个空的简单 JavaScript 对象（即<code><strong>{}</strong></code>）；</li>
+ <li>为步骤 1 新创建的对象添加属性<code><strong>__proto__</strong></code>，将该属性链接至构造函数的原型对象 ；</li>
+ <li>将步骤 1 新创建的对象作为<code><strong>this</strong></code>的上下文 ；</li>
  <li>如果该函数没有返回对象，则返回<code><strong>this</strong></code>。</li>
 </ol>
 
@@ -57,7 +57,7 @@ translation_of: Web/JavaScript/Reference/Operators/new
 <ol>
  <li>一个继承自 <code><em>Foo</em>.prototype</code> 的新对象被创建。</li>
  <li>使用指定的参数调用构造函数 <em><code>Foo</code></em>，并将 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a></code> 绑定到新创建的对象。<code>new <em>Foo</em></code> 等同于 <em><code>new Foo</code></em><code>()</code>，也就是没有指定参数列表，<em><code>Foo</code></em> 不带任何参数调用的情况。</li>
- <li>由构造函数返回的对象就是 <code>new</code> 表达式的结果。如果构造函数没有显式返回一个对象，则使用步骤1创建的对象。（一般情况下，构造函数不返回值，但是用户可以选择主动返回对象，来覆盖正常的对象创建步骤）</li>
+ <li>由构造函数返回的对象就是 <code>new</code> 表达式的结果。如果构造函数没有显式返回一个对象，则使用步骤 1 创建的对象。（一般情况下，构造函数不返回值，但是用户可以选择主动返回对象，来覆盖正常的对象创建步骤）</li>
 </ol>
 
 <p>你始终可以对已定义的对象添加新的属性。例如，<code>car1.color = "black"</code> 语句给 <code>car1</code> 添加了一个新的属性 <code>color</code>，并给这个属性赋值 "<code>black</code>"。但是，这不会影响任何其他对象。要将新属性添加到相同类型的所有对象，你必须将该属性添加到 <code>Car</code> 对象类型的定义中。</p>
@@ -90,7 +90,7 @@ console.log(car2.color) // original color
 
 <h3 id="对象类型和对象实例">对象类型和对象实例</h3>
 
-<p>假设你要创建一个汽车的对象类型。你希望这个类型叫做car，这个类型具备make, model, year等属性，要做到这些，你需要写这样一个函数：</p>
+<p>假设你要创建一个汽车的对象类型。你希望这个类型叫做 car，这个类型具备 make, model, year 等属性，要做到这些，你需要写这样一个函数：</p>
 
 <pre class="brush: js">function Car(make, model, year) {
    this.make = make;
@@ -103,7 +103,7 @@ console.log(car2.color) // original color
 
 <pre class="brush: js">var mycar = new Car("Eagle", "Talon TSi", 1993);</pre>
 
-<p>这段代码创建了 <code>mycar</code> 并给他的属性指定值，于是 <code>mycar.make</code> 的值为"<code>Eagle</code>"， <code>mycar.year</code> 的值为1993，以此类推。</p>
+<p>这段代码创建了 <code>mycar</code> 并给他的属性指定值，于是 <code>mycar.make</code> 的值为"<code>Eagle</code>"， <code>mycar.year</code> 的值为 1993，以此类推。</p>
 
 <p>你可以通过调用 <code>new</code> 来创建任意个汽车对象。例如：</p>
 
@@ -142,7 +142,7 @@ var ken = new Person("Ken Jones", 39, "M");
 var car2 = new Car("Nissan", "300ZX", 1992, ken);
 </pre>
 
-<p>创建对象时，并没有传字符串或数字给owner，而是传了对象 <code>rand</code> 和 <code>ken</code> 。这个时候，你可以这样来获取 <code>car2</code> 的owner的name：</p>
+<p>创建对象时，并没有传字符串或数字给 owner，而是传了对象 <code>rand</code> 和 <code>ken</code> 。这个时候，你可以这样来获取 <code>car2</code> 的 owner 的 name：</p>
 
 <pre class="brush: js">car2.owner.name</pre>
 
@@ -178,7 +178,7 @@ var car2 = new Car("Nissan", "300ZX", 1992, ken);
   <tr>
    <td>{{SpecName('ES1', '#sec-11.2.2', 'The new Operator')}}</td>
    <td>{{Spec2('ES1')}}</td>
-   <td>初始定义。JavaScript 1.0实现。</td>
+   <td>初始定义。JavaScript 1.0 实现。</td>
   </tr>
  </tbody>
 </table>

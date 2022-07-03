@@ -9,8 +9,6 @@ tags:
 translation_of: Web/Performance/Performance_budgets
 original_slug: Web/Performance/Budgets_de_performance
 ---
-{{draft}}
-
 Un budget de performance est une limite pour éviter les régressions. Il peut s'appliquer à un fichier, un type de fichier, tous les fichiers chargés sur une page, une métrique spécifique (par exemple, [Time to Interactive](/fr/docs/Glossaire/Time_to_interactive)), une métrique personnalisée (par exemple, Time to Hero Element), ou un seuil sur une période de temps.
 
 ## Pourquoi ai-je besoin d'un budget de performance?
@@ -46,7 +44,7 @@ Pour un site contenant beaucoup de texte, tel qu'un blog ou un site d'actualité
 
 La valeur ultime d'un budget de performance est de corréler l'impact de la performance sur les objectifs commerciaux ou produits. Lors de la définition des mesures, vous devez vous concentrer sur l'[expérience utilisateur](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/), qui dictera non seulement le taux de rebond ou de conversion, mais aussi la probabilité de retour de l'utilisateur.
 
-## Comment mettre en œuvre un budget de performance?
+## Comment mettre en œuvre un budget de performance?
 
 Pendant le développement, il existe quelques outils pour effectuer des vérifications sur les actifs nouveaux ou modifiés:
 

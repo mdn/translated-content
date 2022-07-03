@@ -17,7 +17,9 @@ La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque �
 
 ## Syntaxe
 
-    tableauTypé.forEach(callback[, thisArg])
+```js
+tableauTypé.forEach(callback[, thisArg])
+```
 
 ### Paramètres
 
@@ -79,7 +81,7 @@ new Uint8Array([0, 1, 2, 3]).forEach(affichageContenuTableau);
 | Spécification                                                                                                                    | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.foreach', '%TypedArray%.prototype.forEach')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.foreach', '%TypedArray%.prototype.forEach')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.foreach', '%TypedArray%.prototype.forEach')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

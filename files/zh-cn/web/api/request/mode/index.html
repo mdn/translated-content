@@ -26,9 +26,9 @@ translation_of: Web/API/Request/mode
 
 <ul>
  <li><code>same-origin</code> — 如果使用此模式向另外一个源发送请求，显而易见，结果会是一个错误。你可以设置该模式以确保请求总是向当前的源发起的。</li>
- <li><code>no-cors</code> — 保证请求对应的 method 只有 <code>HEAD</code>，<code>GET</code> 或 <code>POST</code> 方法，并且请求的 headers 只能有简单请求头 (<a href="https://fetch.spec.whatwg.org/#simple-header">simple headers</a>)。如果 ServiceWorker 劫持了此类请求，除了 <a href="https://fetch.spec.whatwg.org/#simple-header">simple header</a> 之外，不能添加或修改其他 header。另外 JavaScript 不会读取 {{domxref("Response")}} 的任何属性。这样将会确保 ServiceWorker 不会影响 Web 语义(semantics of the Web)，同时保证了在跨域时不会发生安全和隐私泄露的问题。</li>
+ <li><code>no-cors</code> — 保证请求对应的 method 只有 <code>HEAD</code>，<code>GET</code> 或 <code>POST</code> 方法，并且请求的 headers 只能有简单请求头 (<a href="https://fetch.spec.whatwg.org/#simple-header">simple headers</a>)。如果 ServiceWorker 劫持了此类请求，除了 <a href="https://fetch.spec.whatwg.org/#simple-header">simple header</a> 之外，不能添加或修改其他 header。另外 JavaScript 不会读取 {{domxref("Response")}} 的任何属性。这样将会确保 ServiceWorker 不会影响 Web 语义 (semantics of the Web)，同时保证了在跨域时不会发生安全和隐私泄露的问题。</li>
  <li><code>cors</code> — 允许跨域请求，例如访问第三方供应商提供的各种 API。预期将会遵守 <a href="/zh-CN/docs/Web/HTTP/Access_control_CORS">CORS protocol</a>  。仅有<a href="https://fetch.spec.whatwg.org/#concept-filtered-response-cors">有限部分</a>的头部暴露在 {{domxref("Response")}} ，但是 body 部分是可读的。</li>
- <li><code>navigate</code> — 表示这是一个浏览器的页面切换请求(request)。 navigate请求仅在浏览器切换页面时创建，该请求应该返回HTML。</li>
+ <li><code>navigate</code> — 表示这是一个浏览器的页面切换请求 (request)。 navigate 请求仅在浏览器切换页面时创建，该请求应该返回 HTML。</li>
 </ul>
 
 <h4 id="默认模式">默认模式</h4>
@@ -37,7 +37,7 @@ translation_of: Web/API/Request/mode
 
 <p>例如，当一个 <code>Request</code> 对象以 {{domxref("Request.Request")}} 方式创建，该<code>Request</code> 的 <code>mode</code> 的值为 <code>cors</code> 。</p>
 
-<p>然而，除了以 {{domxref("Request.Request")}} 创建的请求，模式通常为 <code>no-cors</code> 。例如，对与嵌入资源发起的请求，除非存在 <code><a href="/zh-CN/docs/Web/HTML/CORS_settings_attributes">crossorigin</a></code> 属性，即对于<span> {{HTMLElement("link")}} 、 {{HTMLElement("script")}} （除了和模块一起使用之外）、 {{HTMLElement("img")}}、 {{HTMLElement("audio")}}、 {{HTMLElement("video")}}、 {{HTMLElement("object")}}、 {{HTMLElement("embed")}}还有 {{HTMLElement("iframe")}} 元素，</span>在大多数情况下是使用 <code>no-cors</code> 模式<span>。</span></p>
+<p>然而，除了以 {{domxref("Request.Request")}} 创建的请求，模式通常为 <code>no-cors</code> 。例如，对与嵌入资源发起的请求，除非存在 <code><a href="/zh-CN/docs/Web/HTML/CORS_settings_attributes">crossorigin</a></code> 属性，即对于 {{HTMLElement("link")}} 、 {{HTMLElement("script")}}（除了和模块一起使用之外）、 {{HTMLElement("img")}}、 {{HTMLElement("audio")}}、 {{HTMLElement("video")}}、 {{HTMLElement("object")}}、 {{HTMLElement("embed")}}还有 {{HTMLElement("iframe")}} 元素，在大多数情况下是使用 <code>no-cors</code> 模式。</p>
 
 <h2 id="示例">示例</h2>
 

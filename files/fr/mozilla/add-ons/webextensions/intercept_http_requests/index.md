@@ -58,7 +58,7 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-Ici, nous utilisons l’écouteur {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} pour appeler la fonction `logURL()` juste avant de démarrer la requête. La fonction `logURL()` récupère l’URL de la requête dans l’objet d’évènement et la journalise dans la console du navigateur. Le [modèle](/fr/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]} `permet d’intercepter les requêtes HTTP vers toutes les URL.
+Ici, nous utilisons l’écouteur {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} pour appeler la fonction `logURL()` juste avant de démarrer la requête. La fonction `logURL()` récupère l’URL de la requête dans l’objet d’évènement et la journalise dans la console du navigateur. Le [modèle](/fr/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` permet d’intercepter les requêtes HTTP vers toutes les URL.
 
 Pour tester ce module, [installez l'extension](/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), [ouvrez la console du navigateur](/fr/docs/Tools/Browser_Console) et accédez à quelques pages web. Dans la console du navigateur, les URL de toutes les ressources ayant fait l’objet d’une requête de navigateur devraient s’afficher :
 
@@ -92,7 +92,7 @@ Utilisons maintenant `webRequest` pour rediriger les requêtes HTTP. Commençons
 
 Ici, il s’agit simplement d’ajouter la [`permission`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"webRequestBlocking"`. Cette permission supplémentaire est requise lors de toute modification active d’une requête.
 
-Modifions ensuite le fichier « background.js » comme suit :
+Modifions ensuite le fichier « background.js » comme suit :
 
 ```js
 var pattern = "https://mdn.mozillademos.org/*";
@@ -111,11 +111,11 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-Encore une fois, nous utilisons l’écouteur d’évènement {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} pour exécuter une fonction juste avant le démarrage de chaque requête. Cette fonction remplace l’URL cible par l’URL de redirection `redirectUrl` spécifiée dans la fonction.
+Encore une fois, nous utilisons l’écouteur d’évènement {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} pour exécuter une fonction juste avant le démarrage de chaque requête. Cette fonction remplace l’URL cible par l’URL de redirection `redirectUrl` spécifiée dans la fonction.
 
-Cette fois-ci, toutes les requêtes ne sont pas interceptées. L’option `{urls:[pattern], types:["image"]}` indique qu’il ne faut intercepter que les requêtes (1) vers des URL résidant sous "https\://mdn.mozillademos.org/" (2) pour les ressources d’images. Consultez la documentation {{WebExtAPIRef("webRequest.RequestFilter")}} pour en savoir plus.
+Cette fois-ci, toutes les requêtes ne sont pas interceptées. L’option `{urls:[pattern], types:["image"]}` indique qu’il ne faut intercepter que les requêtes (1) vers des URL résidant sous "https\://mdn.mozillademos.org/" (2) pour les ressources d’images. Consultez la documentation {{WebExtAPIRef("webRequest.RequestFilter")}} pour en savoir plus.
 
-À noter également le passage de l’option `"blocking"`: passez cette option dès que vous souhaitez modifier la requête. La fonction d’écouteur bloque la requête réseau. Le navigateur attend alors que l’écouteur renvoie un résultat avant de continuer. Consultez la documentation {{WebExtAPIRef("webRequest.onBeforeRequest")}} pour en savoir plus sur l’option `"blocking"`.
+À noter également le passage de l’option `"blocking"`: passez cette option dès que vous souhaitez modifier la requête. La fonction d’écouteur bloque la requête réseau. Le navigateur attend alors que l’écouteur renvoie un résultat avant de continuer. Consultez la documentation {{WebExtAPIRef("webRequest.onBeforeRequest")}} pour en savoir plus sur l’option `"blocking"`.
 
 Pour tester ce module, ouvrez une page MDN contenant beaucoup d’images (par exemple [https://developer.mozilla.org/fr/docs/Tools/Network_Monitor](/fr/docs/Tools/Network_Monitor)), [rechargez l'extension](/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), puis rechargez la page MDN :
 
@@ -156,7 +156,7 @@ La fonction d’écouteur n’est appelée qu’en cas de requête vers des URL 
 
 La fonction d’écouteur recherche l’en-tête "User-Agent" dans la liste, remplace sa valeur par celle de la variable `ua` et renvoie la liste modifiée. Cette dernière est ensuite envoyée au serveur.
 
-Pour tester ce module, accédez à [useragentstring.com](http://useragentstring.com/) et vérifiez que le navigateur identifié est Firefox. Rechargez ensuite l'extension, rechargez [useragentstring.com](http://useragentstring.com/) et vérifiez que Firefox a été remplacé par Opera :
+Pour tester ce module, accédez à [useragentstring.com](http://useragentstring.com/) et vérifiez que le navigateur identifié est Firefox. Rechargez ensuite l'extension, rechargez [useragentstring.com](http://useragentstring.com/) et vérifiez que Firefox a été remplacé par Opera :
 
 {{EmbedYouTube("SrSNS1-FIx0")}}
 

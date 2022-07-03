@@ -52,7 +52,7 @@ rotate: 1 1 1 90deg;
 
 ```html
 <div>
-  <p class="rotate">Rotation</p>
+  <p class="rotate">Rotation</p>
 </div>
 ```
 

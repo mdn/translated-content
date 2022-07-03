@@ -5,7 +5,7 @@ translation_of: Web/API/MimeType
 ---
 <p>{{SeeCompatTable}}{{APIRef("HTML DOM")}}</p>
 
-<p>这 <strong><code>MimeType</code></strong> 接口提供了包含以下信息MIME 与特定插件关联的类型。. {{domxref("NavigatorPlugins.mimeTypes")}} 返回此对象的数组.</p>
+<p>这 <strong><code>MimeType</code></strong> 接口提供了包含以下信息 MIME 与特定插件关联的类型。{{domxref("NavigatorPlugins.mimeTypes")}} 返回此对象的数组。</p>
 
 <h2 id="属性">属性</h2>
 
@@ -17,7 +17,7 @@ translation_of: Web/API/MimeType
  <dt>{{domxref("MimeType.suffixes")}}</dt>
  <dd>包含插件，所显示的数据的有效文件扩展名的字符串或空字符串，如果扩展名为特定的模块无效。例如，浏览器内容解密模块可能出现在插件列表中，但支持更多文件 extenions 比可以预期。因此，它可能会返回一个空字符串。</dd>
  <dt>{{domxref("MimeType.enabledPlugin")}}</dt>
- <dd>返回{ { domxref实例（“插件”）} }包含插件本身的信息。</dd>
+ <dd>返回一个 {{domxref("Plugin")}} 实例，其包含插件本身的信息。</dd>
 </dl>
 
 <h2 id="详述">详述</h2>
@@ -39,54 +39,4 @@ translation_of: Web/API/MimeType
 
 <h2 id="浏览器的兼容性">浏览器的兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特征</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特征</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.MimeType")}}

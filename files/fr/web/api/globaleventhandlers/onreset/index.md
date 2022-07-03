@@ -15,7 +15,9 @@ La propriété **`GlobalEventHandlers.onreset`** contient un {{event("Event_hand
 
 ## Syntaxe
 
-    window.onreset = funcRef;
+```js
+window.onreset = funcRef;
+```
 
 ### Paramètres
 
@@ -40,7 +42,7 @@ function hit() {
  <form>
    <input type="reset" value="reset" />
  </form>
- <div id="d"> </div>
+ <div id="d"> </div>
 </body>
 </html>
 ```
@@ -53,7 +55,7 @@ L'évènement `reset` est déclenché quand l'utilisateur clique sur le bouton d
 
 | Spécification                                                                                    | Statut                           | Commentaire |
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onreset','onreset')}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onreset','onreset')}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

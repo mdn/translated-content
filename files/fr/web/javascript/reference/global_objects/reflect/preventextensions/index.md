@@ -18,7 +18,9 @@ La méthode statique **`Reflect.preventExtensions()`** permet d'empêcher d'ajou
 
 ## Syntaxe
 
-    Reflect.preventExtensions(cible)
+```js
+Reflect.preventExtensions(cible)
+```
 
 ### Paramètres
 

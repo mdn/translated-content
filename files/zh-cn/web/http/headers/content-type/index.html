@@ -13,9 +13,9 @@ translation_of: Web/HTTP/Headers/Content-Type
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong><code>Content-Type</code></strong> 实体头部用于指示资源的MIME类型 {{Glossary("MIME type","media type")}} 。</p>
+<p><strong><code>Content-Type</code></strong> 实体头部用于指示资源的 MIME 类型 {{Glossary("MIME type","media type")}} 。</p>
 
-<p>在响应中，Content-Type标头告诉客户端实际返回的内容的内容类型。浏览器会在某些情况下进行MIME查找，并不一定遵循此标题的值; 为了防止这种行为，可以将标题 {{HTTPHeader("X-Content-Type-Options")}} 设置为 <strong>nosniff</strong>。</p>
+<p>在响应中，Content-Type 标头告诉客户端实际返回的内容的内容类型。浏览器会在某些情况下进行 MIME 查找，并不一定遵循此标题的值; 为了防止这种行为，可以将标题 {{HTTPHeader("X-Content-Type-Options")}} 设置为 <strong>nosniff</strong>。</p>
 
 <p>在请求中 (如{{HTTPMethod("POST")}} 或 {{HTTPMethod("PUT")}})，客户端告诉服务器实际发送的数据类型。</p>
 
@@ -50,14 +50,14 @@ Content-Type: multipart/form-data; boundary=something
  <dt>charset</dt>
  <dd>字符编码标准。</dd>
  <dt>boundary</dt>
- <dd>对于多部分实体，boundary 是必需的，其包括来自一组字符的1到70个字符，已知通过电子邮件网关是非常健壮的，而不是以空白结尾。它用于封装消息的多个部分的边界。</dd>
+ <dd>对于多部分实体，boundary 是必需的，其包括来自一组字符的 1 到 70 个字符，已知通过电子邮件网关是非常健壮的，而不是以空白结尾。它用于封装消息的多个部分的边界。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
 
-<h3 id="Content-Type_在HTML表单中"><code>Content-Type</code> 在HTML表单中</h3>
+<h3 id="Content-Type_在HTML表单中"><code>Content-Type</code> 在 HTML 表单中</h3>
 
-<p>在通过HTML form提交生成的{{HTTPMethod("POST")}}请求中，请求头的Content-Type由{{HTMLElement("form")}}元素上的enctype属性指定</p>
+<p>在通过 HTML form 提交生成的{{HTTPMethod("POST")}}请求中，请求头的 Content-Type 由{{HTMLElement("form")}}元素上的 enctype 属性指定</p>
 
 <pre class="brush: html">&lt;form action="/" method="post" enctype="multipart/form-data"&gt;
   &lt;input type="text" name="description" value="some text"&gt;

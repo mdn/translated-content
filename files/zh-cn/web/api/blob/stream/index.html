@@ -10,7 +10,7 @@ translation_of: Web/API/Blob/stream
 ---
 <p>{{APIRef("File API")}}</p>
 
-<p><span class="seoSummary">{{domxref("Blob")}}接口的<code><strong>stream()</strong></code> 方法返回一个{{domxref("ReadableStream")}}对象，读取它将返回包含在<code>Blob</code>中的数据。</span></p>
+<p>{{domxref("Blob")}}接口的<code><strong>stream()</strong></code> 方法返回一个{{domxref("ReadableStream")}}对象，读取它将返回包含在<code>Blob</code>中的数据。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -29,28 +29,15 @@ translation_of: Web/API/Blob/stream
 <p>使用 <code>stream()</code> 函数与其返回的{{domxref("ReadableStream")}}对象，你将得到一些有趣的能力：</p>
 
 <ul>
- <li>调用方法{{domxref("ReadableStream.getReader", "getReader()")}}，在返回的stream上获取一个对象，通过{{domxref("ReadableStreamDefaultReader")}}接口提供的{{domxref("ReadableStreamDefaultReader.read", "read()")}}方法读取blob对象的方法。</li>
- <li>调用返回stream对象的{{domxref("ReadableStream.pipeTo", "pipeTo()")}}方法将blob对象的数据传输到可写流。</li>
- <li>调用返回stream对象的{{domxref("ReadableStream.tee", "tee()")}}方法以准备可读流。该方法会返回一个数组，该数组包含两个新的 <code>ReadableStream</code> 对象，每个对象都会返回 <code>Blob</code>的内容。</li>
- <li>调用返回stream对象的{{domxref("ReadableStream.pipeThrough", "pipeThrough()")}}方法，通过一个{{domxref("TransformStream")}}对象或其它任意可读可写对传输流对象。</li>
+ <li>调用方法{{domxref("ReadableStream.getReader", "getReader()")}}，在返回的 stream 上获取一个对象，通过{{domxref("ReadableStreamDefaultReader")}}接口提供的{{domxref("ReadableStreamDefaultReader.read", "read()")}}方法读取 blob 对象的方法。</li>
+ <li>调用返回 stream 对象的{{domxref("ReadableStream.pipeTo", "pipeTo()")}}方法将 blob 对象的数据传输到可写流。</li>
+ <li>调用返回 stream 对象的{{domxref("ReadableStream.tee", "tee()")}}方法以准备可读流。该方法会返回一个数组，该数组包含两个新的 <code>ReadableStream</code> 对象，每个对象都会返回 <code>Blob</code>的内容。</li>
+ <li>调用返回 stream 对象的{{domxref("ReadableStream.pipeThrough", "pipeThrough()")}}方法，通过一个{{domxref("TransformStream")}}对象或其它任意可读可写对传输流对象。</li>
 </ul>
 
 <h2 id="标准">标准</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">标准</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("File API", "#dom-blob-stream", "Blob.stream()")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

@@ -86,8 +86,6 @@ Ce code sera maintenant exécuté chaque fois que l'événement "click" se décl
 
 Vous pourrez voir cet exemple s'afficher sur toute la page en cliquant sur [ce lien.](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)
 
-
-
 ### Ce ne sont pas que des pages web
 
 Une autre chose qui mérite d'être mentionnée à ce stade est que les événements ne sont pas particuliers à JavaScript - la plupart des langages de programmation ont un certain type de modèle d'événement, et la façon dont cela fonctionne diffère souvent de celle de JavaScript. En fait, le modèle d'événement en JavaScript pour les pages Web diffère du modèle d'événement pour JavaScript tel qu'il est utilisé dans d'autres environnements.
@@ -156,7 +154,7 @@ function bgChange() {
 }
 ```
 
-> **Note :** Vous trouverez le [code source complet ](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html)de cet exemple sur GitHub (également [le voir s'exécuter](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)).
+> **Note :** Vous trouverez le [code source complet](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html) de cet exemple sur GitHub (également [le voir s'exécuter](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)).
 
 La première méthode d'enregistrement des gestionnaires d'événements trouvés sur le Web impliquait des **attributs HTML du gestionnaire d'événement** (c'est-à-dire **les gestionnaires d'événements en ligne**) comme celui présenté ci-dessus — la valeur de l'attribut est littéralement le code JavaScript que vous souhaitez exécuter lorsque l'événement survient. L'exemple ci-dessus appelle une fonction définie dans un élément {{htmlelement("script")}} sur la même page, mais vous pouvez également insérer du JavaScript directement dans l'attribut comme par exemple :
 
@@ -195,7 +193,7 @@ function bgChange() {
 btn.addEventListener('click', bgChange);
 ```
 
-> **Note :** Vous trouverez le [code source complet ](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html)de cet exemple sur GitHub (également [le voir s'exécuter](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
+> **Note :** Vous trouverez le [code source complet](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) de cet exemple sur GitHub (également [le voir s'exécuter](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
 
 Dans la fonction [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) , nous spécifions deux paramètres - le nom de l'événement pour lequel nous voulons enregistrer ce gestionnaire, et le code qui comprend la fonction du gestionnaire que nous voulons exécuter en réponse. Notez qu'il est parfaitement approprié de placer tout le code dans la fonction [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), dans une fonction anonyme, comme ceci:
 
@@ -238,8 +236,6 @@ Parmi les trois mécanismes, vous ne devriez certainement pas utiliser les attri
 
 Les deux autres sont relativement interchangeables, au moins pour des utilisations simples:
 
-
-
 - Les propriétés du gestionnaire d'événement ont moins de puissance et d'options, mais une meilleure compatibilité entre les navigateurs (prise en charge depuis Internet Explorer 8). Vous devriez probablement commencer par ceux-ci pendant votre apprentissage.
 - Les événements du DOM Niveau 2 (`addEventListener()`, etc.) sont plus puissants, mais peuvent aussi devenir plus complexes et moins bien supportés (supportés depuis Internet Explorer 9). Vous devriez également vous entraîner avec, et tenter de les utiliser si possible.
 
@@ -271,7 +267,7 @@ function bgChange(e) {
 btn.addEventListener('click', bgChange);
 ```
 
-> **Note :** Vous trouverez le [code source complet ](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html)de cet exemple sur GitHub (également [le voir s'exécuter](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
+> **Note :** Vous trouverez le [code source complet](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) de cet exemple sur GitHub (également [le voir s'exécuter](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
 
 Ici, vous pouvez voir que nous incluons un objet événement, **e**, dans la fonction, et dans la fonction définissant un style de couleur d'arrière-plan sur `e.target` - qui est le bouton lui-même. La propriété `target` de l'objet événement est toujours une référence à l'élément sur lequel l'événement vient de se produire. Donc, dans cet exemple, nous définissons une couleur d'arrière-plan aléatoire sur le bouton, pas sur la page.
 
@@ -396,7 +392,7 @@ form.onsubmit = function(e) {
 
 ### Le bouillonnement et la capture
 
-Le dernier sujet à aborder ici est quelque chose que vous ne rencontrerez pas souvent, mais cela peut être une vraie difficulté si vous ne le comprenez pas. Le bouillonnement et la capture d'événements sont deux mécanismes qui décrivent ce qui se passe lorsque deux gestionnaires du même type d'événement sont activés sur un même élément. Regardons un exemple pour faciliter cela - ouvrez l'exemple [show-video-box.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html) dans un nouvel onglet (et le [code source ](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html)dans un autre). C'est également disponible en live ci-dessous.
+Le dernier sujet à aborder ici est quelque chose que vous ne rencontrerez pas souvent, mais cela peut être une vraie difficulté si vous ne le comprenez pas. Le bouillonnement et la capture d'événements sont deux mécanismes qui décrivent ce qui se passe lorsque deux gestionnaires du même type d'événement sont activés sur un même élément. Regardons un exemple pour faciliter cela - ouvrez l'exemple [show-video-box.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html) dans un nouvel onglet (et le [code source](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) dans un autre). C'est également disponible en live ci-dessous.
 
 ```html hidden
 <!DOCTYPE html>
@@ -498,13 +494,15 @@ btn.onclick = function() {
 
 Nous ajoutons ensuite quelques gestionnaires d'événements `onclick` supplémentaires - le premier à `<div>` et le second à `<video>`. L'idée est que lorsque l'on clique sur la zone du `<div>` en dehors de la vidéo, la boîte doit être masquée à nouveau; Lorsque la vidéo elle-même est cliquée, la vidéo devrait commencer à jouer.
 
-    videoBox.onclick = function() {
-      videoBox.setAttribute('class', 'hidden');
-    };
+```js
+videoBox.onclick = function() {
+  videoBox.setAttribute('class', 'hidden');
+};
 
-    video.onclick = function() {
-      video.play();
-    };
+video.onclick = function() {
+  video.play();
+};
+```
 
 Mais il y a un problème - actuellement, lorsque vous cliquez sur la vidéo, elle commence à jouer, mais cela entraîne le fait que `<div>` est également caché en même temps. C'est parce que la vidéo est dans le `<div>` - elle en fait partie - alors que cliquer sur la vidéo lance les _deux_ gestionnaires d'événements ci-dessus.
 
@@ -543,7 +541,7 @@ video.onclick = function(e) {
 };
 ```
 
-Vous pouvez faire une copie locale du [code source show-video-box.html ](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html)et le modifier vous-même ou regarder le résultat ici : [show-video-box-fixed.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html) (ou voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html)).
+Vous pouvez faire une copie locale du [code source show-video-box.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) et le modifier vous-même ou regarder le résultat ici : [show-video-box-fixed.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html) (ou voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html)).
 
 > **Note :** Pourquoi s'embêter à capturer et bouillonner ? Eh bien, aux heures sombres où les navigateurs étaien peu compatibles entre eux qu'ils ne le sont aujourd'hui, Netscape n'utilisait que la capture d'événements, et Internet Explorer n'utilisait que les bouillonnements. Quand le W3C a décidé d'essayer de normaliser le comportement et de parvenir à un consensus, ils en sont arrivés à ce système qui inclue les deux, qui est celui implémenté dans les navigateurs modernes.
 

@@ -12,10 +12,12 @@ original_slug: Web/JavaScript/Reference/Erreurs/Deprecated_caller_or_arguments_u
 
 ## Message
 
-    TypeError: 'arguments', 'callee' and 'caller' are restricted function properties and cannot be accessed in this context (Edge)
-    Warning: ReferenceError: deprecated caller usage (Firefox)
-    Warning: ReferenceError: deprecated arguments usage (Firefox)
-    TypeError: 'callee' and 'caller' cannot be accessed in strict mode. (Safari)
+```
+TypeError: 'arguments', 'callee' and 'caller' are restricted function properties and cannot be accessed in this context (Edge)
+Warning: ReferenceError: deprecated caller usage (Firefox)
+Warning: ReferenceError: deprecated arguments usage (Firefox)
+TypeError: 'callee' and 'caller' cannot be accessed in strict mode. (Safari)
+```
 
 ## Type d'erreur
 
@@ -35,11 +37,11 @@ Un avertissement uniquement affiché en mode strict qui prend la forme d'une {{j
 "use strict";
 
 function myFunc() {
-  if (myFunc.caller == null) {
-    return 'La fonction a été appelée depuis la portée globale !';
-  } else {
-    return 'L\'appelant est ' + myFunc.caller;
-  }
+  if (myFunc.caller == null) {
+    return 'La fonction a été appelée depuis la portée globale !';
+     } else {
+    return 'L\'appelant est ' + myFunc.caller;
+  }
 }
 
 myFunc();

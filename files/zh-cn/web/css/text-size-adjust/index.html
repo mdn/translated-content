@@ -28,14 +28,14 @@ text-size-adjust: unset;
 
 <p>因为缩放适配小屏幕而导致文字会变得很小，许多手机浏览器会使用文本溢出算法放大文本，改善可读性。当一个包含文本的元素使用了 100% 的屏幕宽度，该算法会增加文本大小，但是不会修改布局。<code>text-size-adjust</code> 这个属性允许开发者去除或者修改浏览器的这种行为，比如，当网页已经适配了小屏幕之后，就不需要这么做了。</p>
 
-<div class="note"><strong>注意:</strong>
+<div class="note"><strong>注意：</strong>
 
 <ul>
  <li>这个属性并不是标准。 你必须为每个你想要应用的浏览器加上属性前缀。</li>
  <li>不同浏览器，这个属性有不同的行为和语法。更多的信息，请查看下面的浏览器兼容性部分。</li>
  <li><strong>这个属性只在一些智能手机和平板电脑上使用。</strong>桌面浏览器和一些平板电脑浏览器并没有一些溢出算法。</li>
- <li>如果 <code>-webkit-text-size-adjust</code> 显式设置为 <code>none</code>, 老的基于桌面的 WebKit 和平板电脑浏览器，像 Chrome≤26 或者 Safari≤5, 不会忽略这个属性, 反而会阻止用户在 web 界面放大或缩小。<a href="https://bugs.webkit.org/show_bug.cgi?id=56543">#</a></li>
- <li>不是所有的浏览器都支持这个属性使用百分比值(例如 Webkit 和 Trident , 但是 Gecko不支持). 检查下面浏览器兼容的部分查看更多的信息。</li>
+ <li>如果 <code>-webkit-text-size-adjust</code> 显式设置为 <code>none</code>, 老的基于桌面的 WebKit 和平板电脑浏览器，像 Chrome≤26 或者 Safari≤5，不会忽略这个属性，反而会阻止用户在 web 界面放大或缩小。<a href="https://bugs.webkit.org/show_bug.cgi?id=56543">#</a></li>
+ <li>不是所有的浏览器都支持这个属性使用百分比值 (例如 Webkit 和 Trident , 但是 Gecko 不支持). 检查下面浏览器兼容的部分查看更多的信息。</li>
 </ul>
 </div>
 

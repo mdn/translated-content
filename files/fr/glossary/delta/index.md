@@ -31,4 +31,4 @@ let newX = oldX + deltaX;
 
 ### Référence technique
 
-- Les événements de la molette de la souris ({{domxref("WheelEvent")}} offrent la quantité de déplacement de la roue depuis le dernier événement dans son {{domxref("WheelEvent.deltaX", "deltaX")}}, {{domxref("WheelEvent.deltaY", "deltaY")}}, et {{domxref("WheelEvent.deltaZ", "deltaZ")}}, par exemple.
+- Les événements de la molette de la souris ({{domxref("WheelEvent")}} offrent la quantité de déplacement de la roue depuis le dernier événement dans son {{domxref("WheelEvent.deltaX", "deltaX")}}, {{domxref("WheelEvent.deltaY", "deltaY")}}, et {{domxref("WheelEvent.deltaZ", "deltaZ")}}, par exemple.

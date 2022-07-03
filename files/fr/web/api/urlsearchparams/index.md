@@ -7,7 +7,7 @@ translation_of: Web/API/URLSearchParams
 
 L’interface **`URLSearchParams`** définit des méthodes utilitaires pour travailler avec la _chaîne de requête_ (les paramètres `GET`) d’une URL.
 
-Un objet implémentant `URLSearchParams` peut être directement utilisé dans une structure {{jsxref("Statements/for...of", "for...of")}}, au lieu de {{domxref('URLSearchParams.entries()', 'entries()')}} : `for (var p of mySearchParams)` ou son équivalent `for (var p of mySearchParams.entries())`.
+Un objet implémentant `URLSearchParams` peut être directement utilisé dans une structure {{jsxref("Statements/for...of", "for...of")}}, au lieu de {{domxref('URLSearchParams.entries()', 'entries()')}}&nbsp;: `for (var p of mySearchParams)` ou son équivalent `for (var p of mySearchParams.entries())`.
 
 ## Constructeur
 
@@ -80,5 +80,5 @@ searchParams.toString(); // "q=URLUtils.searchParams"
 
 ## Voir aussi
 
-- Autres interfaces liées aux URL : {{domxref("URL")}}, {{domxref("URLUtils")}}.
+- Autres interfaces liées aux URL&nbsp;: {{domxref("URL")}}, {{domxref("URLUtils")}}.
 - [Google Developers: Easy URL manipulation with URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)

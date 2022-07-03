@@ -5,17 +5,17 @@ translation_of: Web/API/Response/type
 ---
 <div>{{APIRef("Fetch")}}{{SeeCompatTable}}</div>
 
-<p><strong><code>type</code></strong> 是{{domxref("Response")}} 接口包含的一种响应类型，是只读属性.它可以是以下某一种值:</p>
+<p><strong><code>type</code></strong> 是{{domxref("Response")}} 接口包含的一种响应类型，是只读属性。它可以是以下某一种值：</p>
 
 <ul>
- <li><code>basic</code>: 标准值, 同源响应, 带有所有的头部信息除了“Set-Cookie” 和 “Set-Cookie2″.</li>
- <li><code>cors</code>: Response 接收到一个有效的跨域请求. <a href="https://fetch.spec.whatwg.org/#concept-filtered-response-cors">部分headers和body</a>可以被访问.</li>
- <li><code>error</code>: 网络错误. 没有有用的描述错误的信息。响应的状态为0，header为空且不可变。从 <code>Response.error()</code>中获得的响应的类型.</li>
- <li><code>opaque</code>: 响应 “no-cors” 的跨域请求. <a href="https://fetch.spec.whatwg.org/#concept-filtered-response-opaque">严重受限</a>.</li>
+ <li><code>basic</code>: 标准值，同源响应，带有所有的头部信息除了“Set-Cookie” 和 “Set-Cookie2″.</li>
+ <li><code>cors</code>: Response 接收到一个有效的跨域请求。<a href="https://fetch.spec.whatwg.org/#concept-filtered-response-cors">部分 headers 和 body</a>可以被访问。</li>
+ <li><code>error</code>: 网络错误。没有有用的描述错误的信息。响应的状态为 0，header 为空且不可变。从 <code>Response.error()</code>中获得的响应的类型。</li>
+ <li><code>opaque</code>: 响应 “no-cors” 的跨域请求。<a href="https://fetch.spec.whatwg.org/#concept-filtered-response-opaque">严重受限</a>.</li>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: “错误”响应从来没有真正暴露于脚本: 这种响应 {{domxref("GlobalFetch.fetch","fetch()")}} 将被promise拒绝.</p>
+<p><strong>Note</strong>: “错误”响应从来没有真正暴露于脚本：这种响应 {{domxref("GlobalFetch.fetch","fetch()")}} 将被 promise 拒绝。</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -24,7 +24,7 @@ translation_of: Web/API/Response/type
 
 <h3 id="Value">Value</h3>
 
-<p><code>ResponseType</code>说明响应类型.</p>
+<p><code>ResponseType</code>说明响应类型。</p>
 
 <h2 id="Example">Example</h2>
 
@@ -63,70 +63,7 @@ fetch(myRequest).then(function(response) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(42)}}<br>
-    {{CompatChrome(41)}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(39)}}<br>
-    34<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>
-    <p>29<br>
-     28<sup>[1]</sup></p>
-   </td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] The implementation of this feature is behind the "Experimental Web Platform Features" preference in <code>chrome://flags</code>.</p>
-
-<p>[2] The implementation of this feature is behind the preference <code>dom.fetch.enabled</code> in <code>about:config</code>, defaulting to <code>false</code>.</p>
+{{Compat("api.Response.type")}}
 
 <h2 id="See_also">See also</h2>
 

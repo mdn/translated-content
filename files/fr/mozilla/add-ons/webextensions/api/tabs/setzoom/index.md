@@ -52,7 +52,7 @@ var setting = browser.tabs.setZoom(2);
 setting.then(null, onError);
 ```
 
-Set the zoom factor for the tab whose ID is 16 tab to 0.5:
+Set the zoom factor for the tab whose ID is 16 tab to 0.5:
 
 ```js
 function onError(error) {

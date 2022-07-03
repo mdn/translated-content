@@ -29,7 +29,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
  <dt><code>codigo</code></dt>
  <dd>Una sintaxis opcional que le permite incluir una cadena en lugar de una función, la cual es compilada y ejecutada cuando el temporizador expira. Esta sintaxis <strong>no se recomienda</strong> por las mismas razones que hacen del uso de {{jsxref("Global_Objects/eval", "eval()")}} un riesgo de seguridad.</dd>
  <dt><code>retraso</code> {{optional_inline}}</dt>
- <dd>Tiempo, en milisegundos  (milésimas de segundo), que el temporizador debe esperar antes de ejecutar la función o el código. Si se omite este parámetro se usa el valor 0. Tenga en cuenta que el retraso real puede ser más prolongado; ver más abajo {{anch("Reasons for delays longer than specified")}}.</dd>
+ <dd>Tiempo, en milisegundos  (milésimas de segundo), que el temporizador debe esperar antes de ejecutar la función o el código. Si se omite este parámetro se usa el valor 0. Tenga en cuenta que el retraso real puede ser más prolongado; ver más abajo <a href="#reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</a>.</dd>
  <dt><code>param1, ..., paramN</code> {{optional_inline}}</dt>
  <dd>Parámetros adicionales que se pasan a la función especificada por  <em>func</em> una vez el temporizador expira.</dd>
 </dl>
@@ -257,74 +257,7 @@ window.setTimeout("alert(\"Hello World!\");", 500);
 
 <h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop("1") }}</td>
-   <td>4.0</td>
-   <td>4.0</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td>Soporta parámetros para callback*1</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>10.0</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatUnknown }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>1.0</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoMobile("1") }}</td>
-   <td>6.0</td>
-   <td>6.0</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td>Soporta parámetros para callback*1</td>
-   <td>{{ CompatUnknown }}</td>
-   <td>{{ CompatUnknown }}</td>
-   <td>{{ CompatUnknown }}</td>
-   <td>{{ CompatUnknown }}</td>
-   <td>{{ CompatUnknown }}</td>
-   <td>{{ CompatUnknown }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>*1 Whether it supports the optional parameters when in its first form or not.</p>
+{{Compat("api.setTimeout")}}
 
 <h2 id="Specification" name="Specification">Especificación</h2>
 

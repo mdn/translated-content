@@ -17,7 +17,9 @@ La méthode **`set()`**, rattachée au prototype de {{jsxref("WebAssembly.Table"
 
 ## Syntaxe
 
-    table.set(index, valeur);
+```js
+table.set(index, valeur);
+```
 
 ### Paramètres
 

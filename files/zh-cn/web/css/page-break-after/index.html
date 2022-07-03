@@ -35,7 +35,7 @@ page-break-after: unset;</code></pre>
 <div class="note">
 <p><strong>Note:</strong> 这个属性正在被更通用的 {{ cssxref("break-after")}} 取代。这个新的属性也处理列和区域中断，并在语法上兼容 <code>page-break-after</code>。</p>
 
-<p>在使用 <code>page-break-after</code> 之前，请检查是否可以使用 <code>break-after</code> 代替。 在将来， <code>page-break-after</code> 将只是它的一些值的别名。</p>
+<p>在使用 <code>page-break-after</code> 之前，请检查是否可以使用 <code>break-after</code> 代替。在将来， <code>page-break-after</code> 将只是它的一些值的别名。</p>
 </div>
 
 
@@ -63,7 +63,7 @@ page-break-after: unset;
 
 <dl>
  <dt><code>auto</code></dt>
- <dd>初始值。 自动分页符（既不强制也不禁止）。</dd>
+ <dd>初始值。自动分页符（既不强制也不禁止）。</dd>
  <dt><code>always</code></dt>
  <dd>始终在元素后强制分页。</dd>
  <dt><code>avoid</code></dt>
@@ -119,77 +119,9 @@ div.footnotes {
  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
+<h2 id="Browser_Compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support (<code>auto</code>, <code>always</code>)</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("1.0") }}</td>
-   <td>4.0</td>
-   <td>7.0</td>
-   <td>1.2 (125)</td>
-  </tr>
-  <tr>
-   <td><code>avoid</code>, <code>left</code>, <code>right</code></td>
-   <td>1.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatNo() }} ({{ bug("132035") }})</td>
-   <td>4.0</td>
-   <td>7.0</td>
-   <td>1.2 (125)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>avoid</code>, <code>left</code>, <code>right</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatNo() }} ({{ bug("132035") }})</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.page-break-after")}}
 
 <h2 id="See_also">See also</h2>
 

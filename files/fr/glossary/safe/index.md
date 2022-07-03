@@ -18,15 +18,21 @@ Il est de la responsabilité de l'application sur le serveur d'implémenter la s
 
 Un appel à une méthode sécurisée ne modifiant pas l'état du serveur :
 
-    GET /pageX.html HTTP/1.1
+```
+GET /pageX.html HTTP/1.1
+```
 
 Un appel à une méthode non sécurisée, susceptible de modifier l'état du serveur :
 
-    POST /pageX.html HTTP/1.1
+```
+POST /pageX.html HTTP/1.1
+```
 
 Un appel à une méthode idempotente mais non sûre :
 
-    DELETE /idX/delete HTTP/1.1
+```
+DELETE /idX/delete HTTP/1.1
+```
 
 ## En apprendre plus
 

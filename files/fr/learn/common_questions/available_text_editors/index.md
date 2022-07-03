@@ -10,14 +10,12 @@ tags:
 translation_of: Learn/Common_questions/Available_text_editors
 original_slug: Apprendre/Choisir_installer_paramétrer_un_éditeur_de_texte
 ---
-{{IncludeSubnav("/fr/Apprendre")}}
-
 Dans cet article, nous présentons les éléments principaux à connaître pour installer un éditeur de texte utilisé pour du développement web.
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez déjà connaître
         <a href="/fr/Learn/What_software_do_I_need"
@@ -360,7 +358,7 @@ Voici un tableau de quelques éditeurs de texte connus :
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Débuter_sur_MDN)._
+_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Débuter_sur_MDN)._
 
 ## Aller plus loin
 
@@ -416,8 +414,8 @@ Si vous appréciez avoir de _nombreuses_ fonctionnalités et que tout ces plugin
 
 Il est toujours bon de savoir s'il est possible d'avoir de l'aide lorsqu'on utilise un logiciel. En ce qui concerne les éditeurs de texte, ces deux points seront relativement importants :
 
-1.  Est-ce qu'il existe des documents à destination des utilisateurs ? (FAQ, manuel, aide en ligne)
-2.  Existe-t-il des ressources pour discuter avec les développeurs ou d'autres utilisateurs ? (forum, e-mail, IRC)
+1. Est-ce qu'il existe des documents à destination des utilisateurs ? (FAQ, manuel, aide en ligne)
+2. Existe-t-il des ressources pour discuter avec les développeurs ou d'autres utilisateurs ? (forum, e-mail, IRC)
 
 N'hésitez pas à utiliser la documentation écrite disponible lorsque vous démarrez avec un éditeur. Vous pouvez également échanger avec les autres utilisateurs sur des forums ou listes de diffusion pour diagnostiquer les éventuels problèmes que vous rencontrez lors de l'installation ou de l'utilisation de l'éditeur.
 

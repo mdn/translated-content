@@ -41,22 +41,22 @@ La méthode **`clear()`** de l'accès au magasin d'objet fait une {{domxref("IDB
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-	note.innerHTML += '<li>Connexion établie.</li>';
+  note.innerHTML += '<li>Connexion établie.</li>';
 
-	//Affecte la connexion à la variable db.
-	db = DBOpenRequest.result;
+  //Affecte la connexion à la variable db.
+  db = DBOpenRequest.result;
 
   // Exécutez la fonction clearData () pour vider les données dans le magasin d'objet
   clearData();
 };
 
 function clearData() {
-  // ouvre une transaction de lecture / écriture  prête pour le nettoyage
+  // ouvre une transaction de lecture / écriture prête pour le nettoyage
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // en cas de succès de l'ouverture de la transaction
   transaction.oncomplete = function(event) {
-	note.innerHTML += '<li>Transaction complété : modification de la base de données terminée.</li>';
+  note.innerHTML += '<li>Transaction complété : modification de la base de données terminée.</li>';
   };
 
   // en cas d'échec de l'ouverture de la transaction
@@ -83,7 +83,7 @@ function clearData() {
 
 | Spécification                                                                                            | Statut                       | Commentaire |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-clear-IDBRequest', 'clear()')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-clear-IDBRequest', 'clear()')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité avec les navigateurs
 

@@ -21,13 +21,13 @@ Il y a plusieurs types de modules complémentaires _(add-ons)_, mais le plus cou
 
 ## Développer des modules complémentaires
 
-Par le passé, il a existé différents outils et formats pour développer des modules complémentaires pour Firefox. Cependant,depuis Novembre 2017, les [WebExtensions](/fr/Add-ons/WebExtensions) sont devenues le format standard. Les autres outils (le SDK Add-On par exemple) sont maintenant dépréciés.
+Par le passé, il a existé différents outils et formats pour développer des modules complémentaires pour Firefox. Cependant,depuis Novembre 2017, les [WebExtensions](/fr/Add-ons/WebExtensions) sont devenues le format standard. Les autres outils (le SDK Add-On par exemple) sont maintenant dépréciés.
 
 [En savoir plus à propos des WebExtensions](/fr/Add-ons/WebExtensions)
 
 Si vous développez un nouveau module complémentaire, nous vous recommandons d'utiliser WebExtension.
 
-Les extensions qui respectent le format WebExtensions de Firefox sont conçues pour pouvoir être utilisées sur différents navigateurs. Les extensions WebExtensions écrites pour Firefox fonctionneront pour la plupart dans Chrome, Edge et Opera, nécessitant peu, si ce n'est aucun changements. Elles sont également compatibles avec le mode multi-processus de Firefox.
+Les extensions qui respectent le format WebExtensions de Firefox sont conçues pour pouvoir être utilisées sur différents navigateurs. Les extensions WebExtensions écrites pour Firefox fonctionneront pour la plupart dans Chrome, Edge et Opera, nécessitant peu, si ce n'est aucun changements. Elles sont également compatibles avec le mode multi-processus de Firefox.
 
 [Voici la liste des API actuellement prises en charge par Firefox et les autres navigateurs](/fr/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs). Nous continuons à concevoir et à implémenter de nouvelles API afin de répondre aux besoins des développeurs.
 
@@ -35,11 +35,11 @@ La plupart des API utilisées pour WebExtension sont également disponibles pour
 
 ### L'atelier des extensions Firefox _(Extension Workshop)_
 
-L'[atelier des extensions firefox _(Extension Workshop)_](https://extensionworkshop.com/) est utile pour aider à développer une extension pour Firefox en offrant à l'utilisateur une façon simple et efficace de personnaliser sa navigatrion sur internet. On peut notamment y trouver :
+L'[atelier des extensions firefox _(Extension Workshop)_](https://extensionworkshop.com/) est utile pour aider à développer une extension pour Firefox en offrant à l'utilisateur une façon simple et efficace de personnaliser sa navigatrion sur internet. On peut notamment y trouver&nbsp;:
 
 - [Une vue d'ensemble des fonctionnalités des extensions Firefox](https://extensionworkshop.com/#about)
 - [Les outils et les procédés pour développer et tester son application](https://extensionworkshop.com/documentation/develop/)
-- [Comment publier son extensions sur addons.mozilla.org et la distribuer](https://extensionworkshop.com/documentation/publish/)
+- [Comment publier son extensions sur addons.mozilla.org et la distribuer](https://extensionworkshop.com/documentation/publish/)
 - [Comment gérer son extension, une fois celle-ci publiée](https://extensionworkshop.com/documentation/manage/)
 - [Guide pour développer et utiliser une extension pour les entreprises](https://extensionworkshop.com/documentation/enterprise/)
 - [Comment développer un thème pour Firefox](https://extensionworkshop.com/documentation/themes/)
@@ -53,7 +53,7 @@ En 2020, Mozilla sortira une nouvelle expérience Firefox pour Android. Le nouve
 
 Si vous maintenez un module complémentaire historique utilisant XUL ou le SDK Add-on, nous vous recommandons de le porter vers une extension WebExtensions. [Voici quelques ressources MDN à propos du portage d'extension](/fr/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on).
 
-Nous avons rassemblé [un ensemble de ressources](https://wiki.mozilla.org/Add-ons/developer/communication) sur un page wiki afin d'aider les développeurs pendant cette phase de transition. Pour commencer, vous pouvez utiliser l'outil [Lookup ](https://compatibility-lookup.services.mozilla.com/)afin de détecter si votre module complémentaire est impacté.
+Nous avons rassemblé [un ensemble de ressources](https://wiki.mozilla.org/Add-ons/developer/communication) sur un page wiki afin d'aider les développeurs pendant cette phase de transition. Pour commencer, vous pouvez utiliser l'outil [Lookup](https://compatibility-lookup.services.mozilla.com/) afin de détecter si votre module complémentaire est impacté.
 
 ## Publier des modules
 

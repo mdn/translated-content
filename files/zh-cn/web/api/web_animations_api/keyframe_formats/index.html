@@ -1,5 +1,5 @@
 ---
-title: 关键帧(Keyframe)格式
+title: 关键帧 (Keyframe) 格式
 slug: Web/API/Web_Animations_API/Keyframe_Formats
 tags:
   - Animation
@@ -54,9 +54,9 @@ translation_of: Web/API/Web_Animations_API/Keyframe_Formats
                 2000);
 </pre>
 
-  <p>在这个例子中，指定的easing仅适用于指定它的关键帧到下一帧之间。 但是在<code>options</code>中指定的 <code>easing</code> 值都将应用在一个动画的整个持续时间里。</p>
+  <p>在这个例子中，指定的 easing 仅适用于指定它的关键帧到下一帧之间。 但是在<code>options</code>中指定的 <code>easing</code> 值都将应用在一个动画的整个持续时间里。</p>
  </li>
- <li>一个包含key-value键值的<code>对象</code>需要包含动画的属性和要循环变化的值<code>数组</code>。
+ <li>一个包含 key-value 键值的<code>对象</code>需要包含动画的属性和要循环变化的值<code>数组</code>。
   <pre class="brush: js"><em>element.</em>animate(<strong>{
   opacity: [ 0, 1 ],          // [ from, to ]
   color:   [ "#fff", "#000" ] // [ from, to ]
@@ -80,7 +80,7 @@ translation_of: Web/API/Web_Animations_API/Keyframe_Formats
 }</strong>, 2000);
 </pre>
 
-  <p>从属性值列表生成一组合适的关键帧后，每个提供的偏移量将应用于相应的关键帧。如果值不足或者列表包含空值<code>null</code>，则以没有指定处理（即和上面第1种数组格式的一样均匀间隔）.</p>
+  <p>从属性值列表生成一组合适的关键帧后，每个提供的偏移量将应用于相应的关键帧。如果值不足或者列表包含空值<code>null</code>，则以没有指定处理（即和上面第 1 种数组格式的一样均匀间隔）.</p>
 
   <p>如果<code>easing</code> 或<code>composite</code> 值太少，将根据需要，重复相应的列表。</p>
  </li>
@@ -88,12 +88,12 @@ translation_of: Web/API/Web_Animations_API/Keyframe_Formats
 
 <h2 id="属性">属性</h2>
 
-<p>关键帧可以为任何的css动画属性指定 property-value 。 使用 camel-case 的属性名将变为 camelCase 格式，例如 {{cssxref("background-color")}} 变成 <code>backgroundColor</code> ，再如 {{cssxref("background-position-x")}} 变成 <code>backgroundPositionX</code>.。速记词，例如 {{cssxref("margin")}} 也是可以用的。.</p>
+<p>关键帧可以为任何的 css 动画属性指定 property-value 。 使用 camel-case 的属性名将变为 camelCase 格式，例如 {{cssxref("background-color")}} 变成 <code>backgroundColor</code> ，再如 {{cssxref("background-position-x")}} 变成 <code>backgroundPositionX</code>.。速记词，例如 {{cssxref("margin")}} 也是可以用的。.</p>
 
-<p>两个特色的css属性：</p>
+<p>两个特色的 css 属性：</p>
 
 <ul>
- <li>{{cssxref("float")}}, 必须写成 <code>cssFloat</code> ，因为"float" 是 JavaScript的保留关键字</li>
+ <li>{{cssxref("float")}}, 必须写成 <code>cssFloat</code> ，因为"float" 是 JavaScript 的保留关键字</li>
  <li>{{cssxref("offset")}}, 必须写成 <code>cssOffset</code> ，因为"offset" 表示如下的关键帧 offset</li>
 </ul>
 
@@ -102,7 +102,7 @@ translation_of: Web/API/Web_Animations_API/Keyframe_Formats
 <dl>
  <dt>offset</dt>
  <dd>
- <p>关键帧的 offset 偏移量指定为介于<code>0.0</code>和<code>1.0</code>之间的数字或为<code>null</code>。 这相当于使用<code>@keyframes</code>在CSS样式表中以百分比指定开始和结束状态。 如果此值为<code>null</code>或缺失，则关键帧将在相邻关键帧之间均匀分布。</p>
+ <p>关键帧的 offset 偏移量指定为介于<code>0.0</code>和<code>1.0</code>之间的数字或为<code>null</code>。 这相当于使用<code>@keyframes</code>在 CSS 样式表中以百分比指定开始和结束状态。 如果此值为<code>null</code>或缺失，则关键帧将在相邻关键帧之间均匀分布。</p>
  </dd>
  <dt>easing</dt>
  <dd>
@@ -134,57 +134,7 @@ translation_of: Web/API/Web_Animations_API/Keyframe_Formats
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Element.animate")}}
 
 <h2 id="相关推荐">相关推荐</h2>
 

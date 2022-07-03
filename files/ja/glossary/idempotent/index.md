@@ -14,22 +14,28 @@ translation_of: Glossary/Idempotent
 
 例えば、 `GET /pageX HTTP/1.1` はべき等です。連続して何度か呼び出しても、クライアントは同じ結果を得ます。
 
-    GET /pageX HTTP/1.1
-    GET /pageX HTTP/1.1
-    GET /pageX HTTP/1.1
-    GET /pageX HTTP/1.1
+```
+GET /pageX HTTP/1.1
+GET /pageX HTTP/1.1
+GET /pageX HTTP/1.1
+GET /pageX HTTP/1.1
+```
 
 `POST /add_row HTTP/1.1` はべき等ではありません。 何度か呼び出すと、その回数だけ列に追加されていきます。
 
-    POST /add_row HTTP/1.1
-    POST /add_row HTTP/1.1   -> Adds a 2nd row
-    POST /add_row HTTP/1.1   -> Adds a 3rd row
+```
+POST /add_row HTTP/1.1
+POST /add_row HTTP/1.1   -> Adds a 2nd row
+POST /add_row HTTP/1.1   -> Adds a 3rd row
+```
 
 `DELETE /idX/delete HTTP/1.1` はべき等ですが、状態コードは数回のリクエストの間に変化することがあります。
 
-    DELETE /idX/delete HTTP/1.1   -> idX が存在する場合は 200 を返却
-    DELETE /idX/delete HTTP/1.1   -> ちょうど削除されたので 404 を返却
-    DELETE /idX/delete HTTP/1.1   -> 404 を返却
+```
+DELETE /idX/delete HTTP/1.1   -> idX が存在する場合は 200 を返却
+DELETE /idX/delete HTTP/1.1   -> ちょうど削除されたので 404 を返却
+DELETE /idX/delete HTTP/1.1   -> 404 を返却
+```
 
 ## 関連情報
 

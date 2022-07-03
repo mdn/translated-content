@@ -15,7 +15,7 @@ translation_of: Web/HTML/Element/input/submit
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong><code>submit</code></strong> 类型的 {{HTMLElement("input")}}  元素被渲染成按钮。当 {{event("click")}} 事件发生时 (用户点击按钮是一个典型的点击事件),  {{Glossary("用户代理")}} 试图提交表单到服务器。</span></p>
+<p><strong><code>submit</code></strong> 类型的 {{HTMLElement("input")}}  元素被渲染成按钮。当 {{event("click")}} 事件发生时 (用户点击按钮是一个典型的点击事件),  {{Glossary("用户代理")}} 试图提交表单到服务器。</p>
 
 <div id="summary-example2">
 <pre class="brush: html">&lt;input type="submit" value="发送请求"&gt;</pre>
@@ -26,7 +26,7 @@ translation_of: Web/HTML/Element/input/submit
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("值")}}</strong></td>
+   <td><strong><a href="#值">值</a></strong></td>
    <td>{{domxref("DOMString")}} 展示在按钮的标签内</td>
   </tr>
   <tr>
@@ -48,7 +48,7 @@ translation_of: Web/HTML/Element/input/submit
  </tbody>
 </table>
 
-<h2 id="Value">Value</h2>
+<h2 id="值">值</h2>
 
 <p><code>&lt;input type="submit"&gt;</code> 元素的 {{htmlattrxref("value", "input")}} 属性 包含一个展示在按钮标签上的 {{domxref("DOMString")}}，否则按钮没有正确的 value 值。</p>
 
@@ -79,35 +79,35 @@ translation_of: Web/HTML/Element/input/submit
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("formaction")}}</code></td>
+   <td><code><a href="#formaction">formaction</a></code></td>
    <td>提交表单数据的 URL； 覆盖表单的{{htmlattrxref("action", "form")}} 属性（如果有）</td>
   </tr>
   <tr>
-   <td><code>{{anch("formenctype")}}</code></td>
+   <td><code><a href="#formenctype">formenctype</a></code></td>
    <td>一个字符串，指定用于表单数据的编码类型</td>
   </tr>
   <tr>
-   <td><code>{{anch("formmethod")}}</code></td>
+   <td><code><a href="#formmethod">formmethod</a></code></td>
    <td>提交表单时使用的 HTTP 方法 ({{HTTPMethod("get")}} 或 {{HTTPMethod("post")}}) </td>
   </tr>
   <tr>
-   <td><code>{{anch("formnovalidate")}}</code></td>
+   <td><code><a href="#formnovalidate">formnovalidate</a></code></td>
    <td>一个布尔值，如果存在，则意味着在将数据提交给服务器之前，表单的字段将不受约束验证（<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>）</td>
   </tr>
   <tr>
-   <td><code>{{anch("formtarget")}}</code></td>
+   <td><code><a href="#formtarget">formtarget</a></code></td>
    <td>提交表单后，将服务器返回的响应加载到 {{Glossary("browsing context")}} 中</td>
   </tr>
  </tbody>
 </table>
 
-<h3 id="htmlattrdefformaction">{{htmlattrdef("formaction")}}</h3>
+<h3 id="formaction">formaction</h3>
 
 <p>一个字符串，指示要将数据提交到的 URL。 这优先于拥有 {{HTMLElement("input")}} 的 {{HTMLElement("form")}} 元素上的 {{htmlattrxref("action", "form")}} 属性。</p>
 
 <p>此属性在 <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素和{{HTMLElement("button")}} 元素上也可用。</p>
 
-<h3 id="htmlattrdefformenctype">{{htmlattrdef("formenctype")}}</h3>
+<h3 id="formenctype">formenctype</h3>
 
 <p>一个字符串，标识在将表单数据提交到服务器时要使用的编码方法。 有三个允许的值：</p>
 
@@ -124,7 +124,7 @@ translation_of: Web/HTML/Element/input/submit
 
 <p>此属性在 <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素和{{HTMLElement("button")}} 元素上也可用。</p>
 
-<h3 id="htmlattrdefformmethod">{{htmlattrdef("formmethod")}}</h3>
+<h3 id="formmethod">formmethod</h3>
 
 <p>一个字符串，指示提交表单数据时要使用的 HTTP 方法； 此值将覆盖拥有表单上给出的任何 {{htmlattrxref("method", "form")}} 属性。 允许的值为：</p>
 
@@ -139,13 +139,13 @@ translation_of: Web/HTML/Element/input/submit
 
 <p>此属性在 <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素和{{HTMLElement("button")}} 元素上也可用。</p>
 
-<h3 id="htmlattrdefformnovalidate">{{htmlattrdef("formnovalidate")}}</h3>
+<h3 id="formnovalidate">formnovalidate</h3>
 
 <p>布尔属性，如果存在，则指定在提交给服务器之前不应对表单进行验证。 这将覆盖元素拥有表单上的 {{htmlattrxref("novalidate", "form")}} 属性的值。</p>
 
 <p>此属性在 <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素和{{HTMLElement("button")}} 元素上也可用。</p>
 
-<h3 id="htmlattrdefformtarget">{{htmlattrdef("formtarget")}}</h3>
+<h3 id="formtarget">formtarget</h3>
 
 <p>一个字符串，它指定一个名称或关键字，该名称或关键字指示提交表单后在何处显示收到的响应。 该字符串必须是<strong>浏览上下文</strong>的名称 (即选项卡，窗口或 {{HTMLElement("iframe")}}。 此处指定的值将覆盖 {{HTMLElement("form")}} 上拥有此输入的 {{htmlattrxref("target", "form")}} 属性。</p>
 
@@ -197,7 +197,7 @@ translation_of: Web/HTML/Element/input/submit
 
 <p>键盘快捷键就是使用键盘上的按键，让用户使用按键或组合按键来触发按钮。 为了在提交按钮上添加键盘快捷键— 就像使用任何有实际意义的 {{HTMLElement("input")}} 一样，您可以使用 {{htmlattrxref("accesskey")}} 全局属性。</p>
 
-<p>在此示例中，将 <kbd>s</kbd> 指定为访问键 (指定为访问键 <kbd>s</kbd> p键加上浏览器/操作系统组合的特定修饰键。为了避免与用户代理自身的键盘快捷键冲突，请使用不同的修饰键 而不是主机上其他快捷方式的访问键。有关更多详细信息，请参见 {{htmlattrxref("accesskey")}}。</p>
+<p>在此示例中，将 <kbd>s</kbd> 指定为访问键 (指定为访问键 <kbd>s</kbd> p 键加上浏览器/操作系统组合的特定修饰键。为了避免与用户代理自身的键盘快捷键冲突，请使用不同的修饰键 而不是主机上其他快捷方式的访问键。有关更多详细信息，请参见 {{htmlattrxref("accesskey")}}。</p>
 
 <p>这是添加了 <kbd>s</kbd> 访问密钥的上一个示例：</p>
 

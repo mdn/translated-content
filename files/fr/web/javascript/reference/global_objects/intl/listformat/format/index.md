@@ -1,5 +1,5 @@
 ---
-title: Intl​.ListFormat.prototype​.format()
+title: Intl.ListFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
 tags:
   - Internationalisation
@@ -24,7 +24,9 @@ La méthode **`format()`** renvoie une chaîne de caractères qui a été format
 
 ## Syntaxe
 
-    listFormat.format([list]);
+```js
+listFormat.format([list]);
+```
 
 ### Paramètres
 

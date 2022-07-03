@@ -7,7 +7,7 @@ translation_of: Web/API/Document/DOMContentLoaded_event
 ---
 <div>{{APIRef}}</div>
 
-<p>当纯HTML被完全加载以及解析时，<strong><code>DOMContentLoaded</code> </strong>事件会被触发，而不必等待样式表，图片或者子框架完成加载。</p>
+<p>当纯 HTML 被完全加载以及解析时，<strong><code>DOMContentLoaded</code> </strong>事件会被触发，而不必等待样式表，图片或者子框架完成加载。</p>
 
 <table class="properties">
  <tbody>
@@ -32,14 +32,14 @@ translation_of: Web/API/Document/DOMContentLoaded_event
 
 <p>一个易混用但不同的事件是，<code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code>,这个事件仅仅应该在探测到整个页面完全加载完成时被使用。一个常见的错误就是在该使用<code>DOMContentLoaded</code>的地方使用了<code>load</code> 。</p>
 
-<p>JavaScript的同步模式会导致DOM解析暂停。如果你想在用户请求页面时，首先尽可能先解析DOM，此时你可以使用<a href="/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">JavaScript异步模式</a>，并且<a href="https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery">优化样式表的加载</a>。在通常模式的加载过程中，样式表的加载会与DOM解析并行，从而迟缓主要HTMl文档的加载。</p>
+<p>JavaScript 的同步模式会导致 DOM 解析暂停。如果你想在用户请求页面时，首先尽可能先解析 DOM，此时你可以使用<a href="/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">JavaScript 异步模式</a>，并且<a href="https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery">优化样式表的加载</a>。在通常模式的加载过程中，样式表的加载会与 DOM 解析并行，从而迟缓主要 HTMl 文档的加载。</p>
 
 <h2 id="例子"><strong>例子</strong></h2>
 
 <h3 id="基本用法">基本用法</h3>
 
 <pre class="brush: js">document.addEventListener('DOMContentLoaded', (event) =&gt; {
-    console.log('DOM fully loaded and parsed'); // 译者注："DOM完全加载以及解析"
+    console.log('DOM fully loaded and parsed'); // 译者注："DOM 完全加载以及解析"
 });
 </pre>
 
@@ -51,8 +51,8 @@ translation_of: Web/API/Document/DOMContentLoaded_event
   });
 
 for( let i = 0; i &lt; 1000000000; i++)
-{} // 这段同步脚本将会延迟DOM解析,
-   // 所以DOMContentLoaded事件将会延迟执行.
+{} // 这段同步脚本将会延迟 DOM 解析，
+   // 所以 DOMContentLoaded 事件将会延迟执行。
 &lt;/script&gt;
 </pre>
 
@@ -148,27 +148,9 @@ document.addEventListener('DOMContentLoaded', (event) =&gt; {
 
 <p>{{ EmbedLiveSample('实例', '100%', '160px') }}</p>
 
-<h2 id="规范"><strong>规范</strong></h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'parsing.html#the-end:event-domcontentloaded', 'DOMContentLoaded')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'parsing.html#the-end:event-domcontentloaded', 'DOMContentLoaded')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -179,6 +161,6 @@ document.addEventListener('DOMContentLoaded', (event) =&gt; {
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>有关事件: <code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code>, <code><a href="/en-US/docs/Web/API/Document/readystatechange_event">readystatechange</a></code>, <code><a href="/en-US/docs/Web/API/Window/beforeunload_event">beforeunload</a></code>, <code><a href="/en-US/docs/Web/API/Window/unload_event">unload</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Window">Window</a></code> 对象中的此事件: <code><a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event">DOMContentLoaded</a></code></li>
+ <li>有关事件：<code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code>, <code><a href="/en-US/docs/Web/API/Document/readystatechange_event">readystatechange</a></code>, <code><a href="/en-US/docs/Web/API/Window/beforeunload_event">beforeunload</a></code>, <code><a href="/en-US/docs/Web/API/Window/unload_event">unload</a></code></li>
+ <li><code><a href="/en-US/docs/Web/API/Window">Window</a></code> 对象中的此事件：<code><a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event">DOMContentLoaded</a></code></li>
 </ul>

@@ -9,17 +9,17 @@ translation_of: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 
 <h2 id="原因">原因</h2>
 
-<pre class="syntaxbox">在CORS中，Credential不接受http响应首部中的‘Access-Control-Allow-Origin’设置为通配符‘*’</pre>
+<pre class="syntaxbox">在 CORS 中，Credential 不接受 http 响应首部中的‘Access-Control-Allow-Origin’设置为通配符‘*’</pre>
 
 <h2 id="出了什么问题？">出了什么问题？</h2>
 
-<p>{{Glossary("CORS")}} 请求发出时，已经设定了credentials，但服务端配置了http响应首部 {{HTTPHeader("Access-Control-Allow-Origin")}} 的值为通配符 (<code>"*"</code>) ，而这与使用credentials相悖。</p>
+<p>{{Glossary("CORS")}} 请求发出时，已经设定了 credentials，但服务端配置了 http 响应首部 {{HTTPHeader("Access-Control-Allow-Origin")}} 的值为通配符 (<code>"*"</code>) ，而这与使用 credentials 相悖。</p>
 
-<p>要在客户端改正这个问题，只需要确保发出 CORS 请求时将credential设置为false。</p>
+<p>要在客户端改正这个问题，只需要确保发出 CORS 请求时将 credential 设置为 false。</p>
 
 <ul>
  <li>如果使用 {{domxref("XMLHttpRequest")}} 发出请求，确保未将 {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} 设置为 <code>true。</code></li>
- <li>如果使用 <a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>, 确保 {{domxref("EventSource.withCredentials")}} 的值为 <code>false</code> (false为默认值)。</li>
+ <li>如果使用 <a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>, 确保 {{domxref("EventSource.withCredentials")}} 的值为 <code>false</code> (false 为默认值)。</li>
  <li>如果使用 <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>，确保 {{domxref("Request.credentials")}} 的值为 <code>"omit"</code>.</li>
 </ul>
 

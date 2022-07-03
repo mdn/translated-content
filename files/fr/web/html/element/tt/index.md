@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/tt
 ---
-{{obsolete_header}}{{HTMLRef}}
+{{deprecated_header}}{{HTMLRef}}
 
 L'élément HTML **`<tt>`** (pour _Teletype Text_) crée un élément en ligne, écrit dans la police à chasse fixe par défaut du navigateur. Cet élément a été conçu pour mettre en forme du texte comme s'il apparaissait sur un affichage à largeur fixe tel qu'un téléscripteur.
 

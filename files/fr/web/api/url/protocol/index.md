@@ -11,14 +11,16 @@ translation_of: Web/API/URL/protocol
 ---
 {{ApiRef("URL API")}}
 
-La propriété **`protocol`** de l'interface {{domxref("URL")}} est une {{domxref("USVString")}} représentant le schéma protocolaire de URL, incluant `':'` à la fin.
+La propriété **`protocol`** de l'interface {{domxref("URL")}} est une {{domxref("USVString")}} représentant le schéma protocolaire de URL, incluant `':'` à la fin.
 
 {{AvailableInWorkers}}
 
 ## Syntaxe
 
-    string = object.protocol;
-    object.protocol = string;
+```js
+string = object.protocol;
+object.protocol = string;
+```
 
 ### Valeur
 

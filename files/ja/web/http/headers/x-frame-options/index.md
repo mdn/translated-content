@@ -19,7 +19,6 @@ translation_of: Web/HTTP/Headers/X-Frame-Options
 
 **Note:** {{HTTPHeader("Content-Security-Policy")}} ヘッダーに {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブがあり、対応しているブラウザーにおいてこのヘッダーを<a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">置き換えて</a>います。
 
-
 <table class="properties">
   <tbody>
     <tr>
@@ -49,7 +48,7 @@ X-Frame-Options: SAMEORIGIN
 - `DENY`
   - : ページをフレーム内に表示することは、それを試みているサイトが何であろうとできません。
 - `SAMEORIGIN`
-  - : ページは、ページ自体と同じオリジンのフレーム内でのみ表示されます。仕様書ではこのオプションを最上位、親、チェーン全体のどれに適用するかをブラウザーベンダーに任せていますが、すべての祖先が同じオリジンでない限り、利用価値がないと議論されています。 ({{bug(725490)}} を参照)。対応の詳細は{{anch("ブラウザーの互換性")}}もご覧ください。
+  - : ページは、ページ自体と同じオリジンのフレーム内でのみ表示されます。仕様書ではこのオプションを最上位、親、チェーン全体のどれに適用するかをブラウザーベンダーに任せていますが、すべての祖先が同じオリジンでない限り、利用価値がないと議論されています。 ({{bug(725490)}} を参照)。対応の詳細は[ブラウザーの互換性](#ブラウザーの互換性)もご覧ください。
 - `ALLOW-FROM uri` {{deprecated_inline}}
   - : これは廃止されたディレクティブであり、最近のブラウザーでは動作しません。使用しないでください。対応している古いブラウザーでは、ページは指定されたオリジン _uri_ のフレーム内でのみ表示されます。なお、以前の Firefox では `SAMEORIGIN` と同じ問題がありました。 — フレームの祖先が同じオリジンであるかどうかをチェックしません。 {{HTTPHeader("Content-Security-Policy")}} ヘッダーには `frame-ancestors` ディレクティブがあり、代わりにこれを使用することができます。
 

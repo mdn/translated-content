@@ -8,7 +8,7 @@ translation_of: Web/API/DataTransferItem/getAsFile
 ---
 <div>{{APIRef("HTML Drag and Drop API")}}</div>
 
-<p>如果<strong><code>DataTransferItem</code></strong>是一个文件, 那 <strong><code>DataTransferItem.getAsFile()</code></strong>  方法将返回拖拽项数据的 {{domxref("File")}} 对象. 如果拖拽项的数据不是一个文件，则返回 <code>null</code>.</p>
+<p>如果<strong><code>DataTransferItem</code></strong>是一个文件，那 <strong><code>DataTransferItem.getAsFile()</code></strong>  方法将返回拖拽项数据的 {{domxref("File")}} 对象。如果拖拽项的数据不是一个文件，则返回 <code>null</code>.</p>
 
 <h2 id="语法">语法</h2>
 
@@ -17,18 +17,18 @@ translation_of: Web/API/DataTransferItem/getAsFile
 
 <h3 id="参数">参数</h3>
 
-<p><em>无.</em></p>
+<p><em>无。</em></p>
 
 <h3 id="返回值">返回值</h3>
 
 <dl>
  <dt>{{domxref("File")}}</dt>
- <dd>如果拖拽项的对象是一个文件, 则返回 {{domxref("File")}} 对象; 否则返回 <code>null</code> .</dd>
+ <dd>如果拖拽项的对象是一个文件，则返回 {{domxref("File")}} 对象; 否则返回 <code>null</code> .</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
 
-<p>下面这个例子中使用 <code>getAsFile()</code> 。放在 {{event("drop")}} 事件处理里面.</p>
+<p>下面这个例子中使用 <code>getAsFile()</code> 。放在 {{event("drop")}} 事件处理里面。</p>
 
 <pre class="brush: js">function drop_handler(ev) {
  console.log("Drop");
@@ -47,7 +47,7 @@ translation_of: Web/API/DataTransferItem/getAsFile
      console.log("... Drop: HTML");
    } else if ((data[i].kind == 'string') &amp;&amp;
               (data[i].type.match('^text/uri-list'))) {
-     // 拖拽项的数据是URI
+     // 拖拽项的数据是 URI
      console.log("... Drop: URI");
    } else if ((data[i].kind == 'file') &amp;&amp;
               (data[i].type.match('^image/'))) {
@@ -61,25 +61,7 @@ translation_of: Web/API/DataTransferItem/getAsFile
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-datatransferitem-getasfile','getAsFile()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial value</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#dom-datatransferitem-getasfile','getAsFile()')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot of the HTML WHATWG document</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 

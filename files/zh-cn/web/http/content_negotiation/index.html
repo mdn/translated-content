@@ -7,17 +7,17 @@ translation_of: Web/HTTP/Content_negotiation
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary">在 <a href="/en-US/docs/Glossary/HTTP">HTTP</a> 协议中，内容协商是这样一种机制，通过为同一 URI 指向的资源提供不同的展现形式，可以使用户代理选择与用户需求相适应的最佳匹配（例如，文档使用的自然语言，图片的格式，或者内容编码形式）。</p>
+<p>在 <a href="/en-US/docs/Glossary/HTTP">HTTP</a> 协议中，内容协商是这样一种机制，通过为同一 URI 指向的资源提供不同的展现形式，可以使用户代理选择与用户需求相适应的最佳匹配（例如，文档使用的自然语言，图片的格式，或者内容编码形式）。</p>
 
 <div class="note">
-<p>注意：HTTP内容协商的一些不好的地方在这篇文章中有介绍<a href="https://wiki.whatwg.org/wiki/Why_not_conneg">a wiki page from WHATWG</a>，HTML5提供其他的选择来进行内容协商，如<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code> element</a>。</p>
+<p>注意：HTTP 内容协商的一些不好的地方在这篇文章中有介绍<a href="https://wiki.whatwg.org/wiki/Why_not_conneg">a wiki page from WHATWG</a>，HTML5 提供其他的选择来进行内容协商，如<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code> element</a>。</p>
 </div>
 
 <h2 id="内容协商的基本原则">内容协商的基本原则</h2>
 
 <p>一份特定的文件称为一项资源。当客户端获取资源的时候，会使用其对应的 URL 发送请求。服务器通过这个 URL 来选择它指向的资源的某一变体——每一个变体称为一种展现形式——然后将这个选定的展现形式返回给客户端。整个资源，连同它的各种展现形式，共享一个特定的 URL 。当一项资源被访问的时候，特定展现形式的选取是通过内容协商机制来决定的，并且客户端和服务器端之间存在多种协商方式。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13789/HTTPNego.png" style="height: 311px; width: 767px;"></p>
+<p><img src="httpnego.png"></p>
 
 <p>最佳展现形式的选取可以通过两种机制实现：</p>
 
@@ -32,7 +32,7 @@ translation_of: Web/HTTP/Content_negotiation
 
 <p>在服务端驱动型协商机制或者主动协商机制中，浏览器（或者其他任何类型的用户代理）会随同 URL 发送一系列的消息头。这些消息头描述了用户倾向的选择。服务器则以此为线索，通过内部算法来选择最佳方案提供给客户端。相关算法与具体的服务器相关，并没有在规范中进行规定。例如这里有一份 <a class="external" href="http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm">Apache 2.2 服务器的内容协商算法</a>。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13791/HTTPNegoServer.png" style="height: 380px; width: 767px;"></p>
+<p><img src="httpnegoserver.png"></p>
 
 <p>HTTP/1.1 规范指定了一系列的标准消息头用于启动服务端驱动型内容协商 （{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Charset")}}、 {{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Language")}}）。尽管严格来说  {{HTTPHeader("User-Agent")}} 并不在此列，有时候它还是会被用来确定给客户端发送的所请求资源的特定展现形式，不过这种做法不提倡使用。服务器会使用  {{HTTPHeader("Vary")}} 消息头来说明实际上哪些消息头被用作内容协商的参考依据（确切来说是与之相关的响应消息头），这样可以使<a href="/en-US/docs/Web/HTTP/Caching">缓存</a>的运作更有效。</p>
 
@@ -70,7 +70,7 @@ translation_of: Web/HTTP/Content_negotiation
  <tbody>
   <tr>
    <td><code>Device-Memory</code></td>
-   <td>标明客户端设备的 RAM 内存大小。该值是个估计值，设备的实际内存值会向2的次方取整，且除以1024。比如512MB的内存对应的值为0.5。</td>
+   <td>标明客户端设备的 RAM 内存大小。该值是个估计值，设备的实际内存值会向 2 的次方取整，且除以 1024。比如 512MB 的内存对应的值为 0.5。</td>
   </tr>
   <tr>
    <td><code>DPR</code></td>
@@ -103,13 +103,13 @@ translation_of: Web/HTTP/Content_negotiation
 
 <h3 id="Accept-Encoding_首部"><code>Accept-Encoding</code> 首部</h3>
 
-<p>{{HTTPHeader("Accept-Encoding")}} 首部明确说明了（接收端）可以接受的内容编码形式（所支持的压缩算法）。该首部的值是一个Q因子清单（例如 br, gzip;q=0.8），用来提示不同编码类型值的优先级顺序。默认值 identity 则优先级最低（除非声明为其他优先级）。</p>
+<p>{{HTTPHeader("Accept-Encoding")}} 首部明确说明了（接收端）可以接受的内容编码形式（所支持的压缩算法）。该首部的值是一个 Q 因子清单（例如 br, gzip;q=0.8），用来提示不同编码类型值的优先级顺序。默认值 identity 则优先级最低（除非声明为其他优先级）。</p>
 
 <p>将 HTTP 消息进行压缩是一种最重要的提升 Web 站点性能的方法。该方法会减小所要传输的数据量的大小，节省可用带宽。浏览器总是会发送该首部，服务器则应该配置为接受它，并且采用一定的压缩方案。</p>
 
 <h3 id="Accept-Language_首部"><code>Accept-Language</code> 首部</h3>
 
-<p>{{HTTPHeader("Accept-Language")}} 首部用来提示用户期望获得的自然语言的优先顺序。该首部的值是一个Q因子清单（例如 "de, en;q=0.7"）。用户代理的图形界面上所采用的语言通常可以用来设置为默认值，但是大多数浏览器允许设置不同优先级的语言选项。</p>
+<p>{{HTTPHeader("Accept-Language")}} 首部用来提示用户期望获得的自然语言的优先顺序。该首部的值是一个 Q 因子清单（例如 "de, en;q=0.7"）。用户代理的图形界面上所采用的语言通常可以用来设置为默认值，但是大多数浏览器允许设置不同优先级的语言选项。</p>
 
 <p>由于<a href="https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy">基于配置信息的信息熵</a>的增加，修改后的值可以用作识别用户的指纹，所以不建议对其进行修改，不过这样的话 Web 站点也就不能依赖该值来揭示用户的真实期望。站点设计者不能过度热衷于通过这个首部来进行语言检测，因为它可能会导致糟糕的用户体验：</p>
 
@@ -142,6 +142,6 @@ translation_of: Web/HTTP/Content_negotiation
 
 <p>从 HTTP 协议制定之初，该协议就准许另外一种协商机制：代理驱动型内容协商机制，或称为响应式协商机制。在这种协商机制中，当面临不明确的请求时，服务器会返回一个页面，其中包含了可供选择的资源的链接。资源呈现给用户，由用户做出选择。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13795/HTTPNego3.png"></p>
+<p><img src="httpnego3.png"></p>
 
 <p>不幸的是，HTTP 标准没有明确指定提供可选资源链接的页面的格式，这一点阻碍了将这一过程无痛自动化。除了退回至服务端驱动型内容协商机制外，这种自动化方法几乎无一例外都是通过脚本技术来完成的，尤其是 JavaScript 重定向技术：在检测了协商的条件之后，脚本会触发重定向动作。另外一个问题是，为了获得实际的资源，需要额外发送一次请求，减慢了将资源呈现给用户的速度。</p>

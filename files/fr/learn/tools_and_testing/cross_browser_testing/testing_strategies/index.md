@@ -45,9 +45,9 @@ Par coder de manière défensive, nous voulons dire essayer de construire une so
 
 L'objectif est de mettre en place une liste des navigateurs/appareils sur laquelle vous pouvez vous appuyer lors de vos tests. Vous pouvez la faire aussi simple ou compliquée que vous le souhaitez — par exemple, une approche répandue est d'établir différents grades de niveau de support, quelque chose comme :
 
-1.  Grade A : Navigateurs communs/modernes — Connu pour leur capacité. Tester complètement et fournir un support complet.
-2.  Grade B : Navigateurs plus vieux/ayant moins de capacité — connu pour leur incapacité. Tester, et fournir une expérience plus basique qui donne un accès total au principal de l'information et des services.
-3.  Grade C : Navigateurs rares/inconnus — ne pas tester, mais supposer qu'ils sont capables. Fournir le site complet, qui devrait marcher, au moins avec les solutions de replis disponibles grâce à notre code défensif.
+1. Grade A : Navigateurs communs/modernes — Connu pour leur capacité. Tester complètement et fournir un support complet.
+2. Grade B : Navigateurs plus vieux/ayant moins de capacité — connu pour leur incapacité. Tester, et fournir une expérience plus basique qui donne un accès total au principal de l'information et des services.
+3. Grade C : Navigateurs rares/inconnus — ne pas tester, mais supposer qu'ils sont capables. Fournir le site complet, qui devrait marcher, au moins avec les solutions de replis disponibles grâce à notre code défensif.
 
 Tout au long des sections à venir, nous allons mettre en place une liste de support dans ce format.
 
@@ -59,7 +59,7 @@ Vous pouvez les appeler "hypothèses" ou "intuitions". Ce n'est pas une approche
 
 Par exemple, si vous habitez en Europe de l'Ouest ou en Amérique du Nord, vous devez savoir que la plupart des gens utilisent des ordinateurs de bureau/portable Windows et Mac, et que les navigateurs principaux sont Chrome, Firefox, Safari, IE, et Edge. Vous n'aurez sûrement besoin que de tester uniquement les dernières versions des trois premiers, étant donné que ces navigateurs reçoivent des mises à jour régulières. Pour Edge et IE vous n'aurez que besoin de tester les deux dernières versions ; ils doivent tous aller dans le niveau de grade A.
 
-> **Note :** Vous ne pouvez avoir qu'une seule version d'IE ou d'Edge installée sur une machine à la fois, vous aurez donc probablement besoin d'utiliser une machine virtuelle, ou une autre stratégie pour faire les tests nécessaires. Voir {{anch("Virtual machines")}} plus tard.
+> **Note :** Vous ne pouvez avoir qu'une seule version d'IE ou d'Edge installée sur une machine à la fois, vous aurez donc probablement besoin d'utiliser une machine virtuelle, ou une autre stratégie pour faire les tests nécessaires. Voir [Les machines virtuelles](#les_machines_virtuelles) plus tard.
 
 Beaucoup de personnes utilisent iOS et Android, vous aurez donc aussi besoin de tester les dernières versions d'iOS Safari, les deux dernières versions de l'ancien Android stock browser, et Chrome et Firefox pour iOS et Android. Idéalement, vous devriez tester sur un téléphone et une tablette de chaque système d'exploitation, afin de vous assurer que les designs responsives fonctionnent bien.
 
@@ -67,9 +67,9 @@ Vous savez aussi peut-être qu'un certain nombre de personnes continue d'utilise
 
 Ce qui nous donne pour l'instant la liste de support suivante :
 
-1.  Grade A : Chrome et Firefox pour Windows/Mac, Safari pour Mac, Edge et IE pour Windows (les deux dernières versions de chacun), iOS Safari pour iPhone/iPad, Android stock browser (les deux dernières versions) sur téléphone/tablette, Chrome et Firefox pour Android (les deux dernières versions) sur téléphone/tablette.
-2.  Grade B : IE 9 pour Windows
-3.  Grade C : n/a
+1. Grade A : Chrome et Firefox pour Windows/Mac, Safari pour Mac, Edge et IE pour Windows (les deux dernières versions de chacun), iOS Safari pour iPhone/iPad, Android stock browser (les deux dernières versions) sur téléphone/tablette, Chrome et Firefox pour Android (les deux dernières versions) sur téléphone/tablette.
+2. Grade B : IE 9 pour Windows
+3. Grade C : n/a
 
 Si vous vivez autre part, ou travaillez sur un site qui va être livré autre part (par ex. dans un pays ou un endroit en particulier), alors vous aurez sûrement des navigateurs communs différents à tester.
 
@@ -96,12 +96,12 @@ Mais une analyse historique peut être utile pour trouver des statistiques de su
 
 #### Configurer Google analytics
 
-1.  En premier lieu, vous avez besoin d'un compte Google. Utilisez ce compte afin de vous inscrire sur [Google Analytics](https://www.google.com/analytics/).
-2.  Choisissez l'option [Google Analytics](https://analytics.google.com/analytics/web/) (web), et cliquez sur le bouton _S'inscrire_.
-3.  Entrez les détails sur votre site/appli dans la page d'inscription. C'est très intuitif à configurer ; le champ le plus important où il ne faut pas se tromper est l'URL du site web. Cela doit être l'URL racine de votre site/appli.
-4.  Une fois que vous avez terminé de tout remplir, appuyer sur le bouton _Get Tracking ID_, ensuite acceptez les modalités de services qui apparaissent.
-5.  La prochaine page vous fournit quelques extraits de code et d'autres instructions. Pour un site web basique, ce que vous avez besoin de faire, c'est de copier le bloc de code _Website tracking_ et de le coller sur toutes les différentes pages que vous voulez suivre en utilisant Google Analytics sur votre site. Vous pouvez le placer en-dessous de la balise fermante `</body>`, ou n'importe où d'approprié qui le garderait de se mélanger avec le code de votre application.
-6.  Téléchargez vos modifications sur le serveur de développement, ou autre part où vous avez besoin de votre code.
+1. En premier lieu, vous avez besoin d'un compte Google. Utilisez ce compte afin de vous inscrire sur [Google Analytics](https://www.google.com/analytics/).
+2. Choisissez l'option [Google Analytics](https://analytics.google.com/analytics/web/) (web), et cliquez sur le bouton _S'inscrire_.
+3. Entrez les détails sur votre site/appli dans la page d'inscription. C'est très intuitif à configurer ; le champ le plus important où il ne faut pas se tromper est l'URL du site web. Cela doit être l'URL racine de votre site/appli.
+4. Une fois que vous avez terminé de tout remplir, appuyer sur le bouton _Get Tracking ID_, ensuite acceptez les modalités de services qui apparaissent.
+5. La prochaine page vous fournit quelques extraits de code et d'autres instructions. Pour un site web basique, ce que vous avez besoin de faire, c'est de copier le bloc de code _Website tracking_ et de le coller sur toutes les différentes pages que vous voulez suivre en utilisant Google Analytics sur votre site. Vous pouvez le placer en-dessous de la balise fermante `</body>`, ou n'importe où d'approprié qui le garderait de se mélanger avec le code de votre application.
+6. Téléchargez vos modifications sur le serveur de développement, ou autre part où vous avez besoin de votre code.
 
 C'est bon ! Votre site devrait maintenant être prêt à commencer à reporter l'analyse de données.
 
@@ -129,9 +129,9 @@ Vous pouvez avoir à prendre d'autres considérations supplémentaires. Si vous 
 
 Donc, notre liste de support finale devrait finir par ressemble à ça :
 
-1.  Grade A : Chrome et Firefox pour Windows/Mac, Safari pour Mac, Edge et IE pour Windows (les deux dernières versions de chaque), iOS Safari pour iPhone/iPad, Android stock browser (les deux dernières versions) pour téléphone/tablette, Chrome et Firefox pour Android (les deux dernières versions) sur téléphone/tablette. L'accessibilité qui passe les tests courants.
-2.  Grade B : IE 8 et 9 pour Windows, Opera Mini.
-3.  Grade C : Opera, d'autres bons navigateurs modernes.
+1. Grade A : Chrome et Firefox pour Windows/Mac, Safari pour Mac, Edge et IE pour Windows (les deux dernières versions de chaque), iOS Safari pour iPhone/iPad, Android stock browser (les deux dernières versions) pour téléphone/tablette, Chrome et Firefox pour Android (les deux dernières versions) sur téléphone/tablette. L'accessibilité qui passe les tests courants.
+2. Grade B : IE 8 et 9 pour Windows, Opera Mini.
+3. Grade C : Opera, d'autres bons navigateurs modernes.
 
 ## Qu'est-ce que vous allez tester ?
 
@@ -162,7 +162,7 @@ Vous avez aussi dû remarquer que le bouton n'est pas utilisable en se servant d
 Ces critères de test sont utiles, parce que :
 
 - Ils vous donnent une série d'étapes à suivre lorsque vous jouer des tests.
-- Ils peuvent être facilement transformés en listes d'instructions à suivre pour les groupes d'utilisateurs lorsqu'ils effectuent des tests (par ex. "essayer d'activer les bouton en utilisant votre souris, et ensuite le clavier...") — voir {{anch("User testing")}}, voir plus bas.
+- Ils peuvent être facilement transformés en listes d'instructions à suivre pour les groupes d'utilisateurs lorsqu'ils effectuent des tests (par ex. "essayer d'activer les bouton en utilisant votre souris, et ensuite le clavier...") — voir [Les tests utilisateurs](#les_tests_utilisateurs), voir plus bas.
 - Ils peuvent aussi apporter une base pour rédiger les tests automatiques. C'est plus simple d'écrire de tels tests si vous savez exactement ce que vous voulez tester, et quelles sont les conditions de succès (voir Utiliser un outil d'automatisation pour les tests automatiques de navigateurs, plus tard dans cette série).
 
 ## Mettre en place ensemble un labo de test
@@ -197,7 +197,7 @@ Nous couvrirons chacune des autres options plus bas.
 
 Les émulateurs sont essentiellement des programmes qui s'exécutent à l'intérieur de votre ordinateur et simulent des appareils ou des conditions particulières d'appareil d'un certain type, ils vous permettent de faire certains tests plus aisément qu'en ayant à trouver une combinaison de matériels/logiciels à tester.
 
-Un émulateur peut être aussi simple à tester qu'une condition d'appareil. Par exemple, si vous voulez faire quelques tests rapides et sales de la largeur/hauteur de vos media queries pour le responsive design, vous pouvez utiliser le[ Mode Design Responsive](/fr/docs/Tools/Responsive_Design_Mode) de Firefox. Safari possède également un mode similaire, qui peut être activé en allant dans _Safari_ > _Préférences_, et en cochant _Show Develop menu_, puis en choisissant _Develop > Enter Responsive Design Mode_. Chrome propose également quelque chose de similaire : Device mode (voir [Simuler un Appareil Mobile avec le Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/)).
+Un émulateur peut être aussi simple à tester qu'une condition d'appareil. Par exemple, si vous voulez faire quelques tests rapides et sales de la largeur/hauteur de vos media queries pour le responsive design, vous pouvez utiliser le [Mode Design Responsive](/fr/docs/Tools/Responsive_Design_Mode) de Firefox. Safari possède également un mode similaire, qui peut être activé en allant dans _Safari_ > _Préférences_, et en cochant _Show Develop menu_, puis en choisissant _Develop > Enter Responsive Design Mode_. Chrome propose également quelque chose de similaire : Device mode (voir [Simuler un Appareil Mobile avec le Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/)).
 
 Le plus souvent, vous allez devoir installer un émulateur. Les appareils/navigateurs les plus courants que vous allez devoir tester sont les suivants :
 
@@ -220,17 +220,17 @@ Les machines virtuelles sont des applications qui s'exécutent sur le bureau de 
 
 Pour utiliser Virtual Box, vous avez besoin de :
 
-1.  Procurez-vous un disque d'installation ou une image (par ex. un ISO) du système d'exploitation que vous voulez émuler. Virtual Box est en mesure de vous les fournir ; la plupart, comme les OSs de Windows, sont des produits commerciaux qui ne peuvent être distribués gratuitement.
-2.  [Téléchargez l'installeur approprié](https://www.virtualbox.org/wiki/Downloads) pour votre système d'exploitation et installez-le.
-3.  Ouvrez l'appli ; vous verrez une vue ressemblant à ceci : ![](virtualbox.png)
-4.  Pour créer une nouvelle machine virtuelle, appuyer sur le bouton _Nouveau_ dans le coin en haut à gauche.
-5.  Suivez les instructions et remplissez les boîtes de dialogues suivantes comme il se doit. Vous allez :
+1. Procurez-vous un disque d'installation ou une image (par ex. un ISO) du système d'exploitation que vous voulez émuler. Virtual Box est en mesure de vous les fournir ; la plupart, comme les OSs de Windows, sont des produits commerciaux qui ne peuvent être distribués gratuitement.
+2. [Téléchargez l'installeur approprié](https://www.virtualbox.org/wiki/Downloads) pour votre système d'exploitation et installez-le.
+3. Ouvrez l'appli ; vous verrez une vue ressemblant à ceci : ![](virtualbox.png)
+4. Pour créer une nouvelle machine virtuelle, appuyer sur le bouton _Nouveau_ dans le coin en haut à gauche.
+5. Suivez les instructions et remplissez les boîtes de dialogues suivantes comme il se doit. Vous allez :
 
-    1.  Donner un nom à votre machine virtuelle
-    2.  Choisir un système d'exploitation et une version que vous allez installer dessus
-    3.  Préciser combien de RAM doit être allouée (nous vous recommandons quelque chose comme 2048Mo, ou 2Go)
-    4.  Créer un disque dur virtuel (choisissez les options pas défaut à travers les trois boîtes de dialogues contenant _Créer un disque dur virtuel maintenant_, _IDV (image disque virtuelle)_, _Allocation dynamique_)
-    5.  Choisissez l'emplacement du fichier et la taille du disque dur virtuel (choisir un nom sensé et un emplacement facile à garder, et pour la dimension préciser quelque chose autour de 50Go, ou autant que vous pensez que c'est nécessaire)
+    1. Donner un nom à votre machine virtuelle
+    2. Choisir un système d'exploitation et une version que vous allez installer dessus
+    3. Préciser combien de RAM doit être allouée (nous vous recommandons quelque chose comme 2048Mo, ou 2Go)
+    4. Créer un disque dur virtuel (choisissez les options pas défaut à travers les trois boîtes de dialogues contenant _Créer un disque dur virtuel maintenant_, _IDV (image disque virtuelle)_, _Allocation dynamique_)
+    5. Choisissez l'emplacement du fichier et la taille du disque dur virtuel (choisir un nom sensé et un emplacement facile à garder, et pour la dimension préciser quelque chose autour de 50Go, ou autant que vous pensez que c'est nécessaire)
 
 Maintenant la nouvelle virtual box devrait apparaître dans le menu gauche de la fenêtre de l'interface principale de Virtual Box. A ce stade, vous pouvez double-cliquer dessus pour ouvrir la virtual box — cela commencera à démarrer la machine virtuelle, mais il n'y aura pas encore le système d'exploitation d'installé. A cet instant vous devez préciser à la boîte de dialogue l'image de votre programme d'installation, et les étapes s'exécuteront une par une dans la machine virtuelle, exactement comme si c'était un vrai ordinateur.
 
@@ -269,7 +269,7 @@ Nous aborderons comment utiliser de tels outils plus tard dans ce module.
 
 Avant de poursuivre, nous finirons cet article en abordant les tests utilisateurs — cela peut être une bonne option si vous avez un groupe d'utilisateurs volontaires pour tester votre nouvelle fonctionnalité. Ne perdez pas de vue que cela peut être aussi peu ou beaucoup sophistiqué que vous le désirez — votre groupe d'utilisateurs peut être un groupe d'amis, un groupe de collègues, ou un groupe de volontaires bénévoles ou rémunérés, cela dépend si vous avez de l'argent à dépenser en test.
 
-La plupart du temps vous permettrez à vos utilisateurs de regarder la page ou la vue contenant la nouvelle fonctionnalité sur un serveur de développement, de cette manière vous n'exposez pas le site final ou les modifications en direct avant qu'il ne soit terminé. Vous devez leur recommander de suivre certaines étapes et de rapporter les résultats qu'ils ont obtenu. Il est important d'établir une liste d'étapes (parfois appelé script) vous aurez ainsi plus de résultats fiables se rapportant à ce que vous essayez de tester. Nous avons mentionné cela dans la section {{anch("What are you going to test")}} plus haut — c'est facile de transformer les critères de test détaillés ici en étapes à suivre. Par exemple, ce qui suit devrait fonctionner pour un utilisateur voyant :
+La plupart du temps vous permettrez à vos utilisateurs de regarder la page ou la vue contenant la nouvelle fonctionnalité sur un serveur de développement, de cette manière vous n'exposez pas le site final ou les modifications en direct avant qu'il ne soit terminé. Vous devez leur recommander de suivre certaines étapes et de rapporter les résultats qu'ils ont obtenu. Il est important d'établir une liste d'étapes (parfois appelé script) vous aurez ainsi plus de résultats fiables se rapportant à ce que vous essayez de tester. Nous avons mentionné cela dans la section [Qu'est-ce que vous allez tester&nbsp;?](#quest-ce_que_vous_allez_tester_) plus haut — c'est facile de transformer les critères de test détaillés ici en étapes à suivre. Par exemple, ce qui suit devrait fonctionner pour un utilisateur voyant :
 
 - Cliquez plusieurs fois sur le bouton en point d'interrogation en utilisant votre souris sur votre ordinateur de bureau. Rafraîchir la fenêtre du navigateur.
 - Sélectionnez et activer plusieurs fois le bouton en point d'interrogation en utilisant votre clavier sur votre ordinateur de bureau.
@@ -280,7 +280,7 @@ La plupart du temps vous permettrez à vos utilisateurs de regarder la page ou l
 
 Lorsque vous exécutez les tests, cela peut aussi être une bonne idée de :
 
-- Configurer si possible un profil navigateur séparé, avec les extensions et ces autres types de choses des navigateurs désactivées, et exécuter vos tests sur ce profile (voir [Utiliser le Profile Manager pour créer et retirer des profiles Firefox](https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles) et [Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824), par exemple).
+- Configurer si possible un profil navigateur séparé, avec les extensions et ces autres types de choses des navigateurs désactivées, et exécuter vos tests sur ce profile (voir [Utiliser le Profile Manager pour créer et retirer des profiles Firefox](https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles) et [Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824), par exemple).
 - Utiliser le mode navigation privée sur votre navigateur lorsque vous exécutez vos tests, quand il est disponible (par ex. [Private Browsing](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history) sur Firefox, [Incognito Mode](https://support.google.com/chrome/answer/95464) sur Chrome) grâce à cela les cookies et les fichiers temporaires ne seront pas sauvegardés.
 
 Ces étapes sont conçues pour s'assurer que le navigateur que vous êtes en train de tester est aussi "pure" que possible. C-à-d qu'il n'y a rien d'installé qui pourrait affecter les résultats des tests.
@@ -291,13 +291,11 @@ Ces étapes sont conçues pour s'assurer que le navigateur que vous êtes en tra
 
 ## Résumé
 
-Après avoir lu cet article vous devriez maintenant avoir une bonne idée de ce que vous pouvez faire pour identifier votre liste de public cible/navigateur cible, et ensuite efficacement mener à bien vos tests en navigateur croisé en se basant sur cette liste.
+Après avoir lu cet article vous devriez maintenant avoir une bonne idée de ce que vous pouvez faire pour identifier votre liste de public cible/navigateur cible, et ensuite efficacement mener à bien vos tests en navigateur croisé en se basant sur cette liste.
 
 La prochaine fois nous tournerons notre attention sur les problèmes concrets de votre code que vos tests peuvent révéler, en commençant avec le HTML et le CSS.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-
 
 ## Dans ce module
 

@@ -12,7 +12,7 @@ La grille CSS est une méthode de mise en page bidimensionnelle permettant une p
 
 C'est sur ces axes que les items peuvent être alignés et justifiés en utilisant les propriétés définies dans [les spécifications de l'alignement des boîtes](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_bo%C3%AEtes_avec_les_grilles_CSS).
 
-En CSS l'axe des colonnes (ou des blocs) est l'axe utilisé lors de la disposition des blocs de texte . Si vous avez 2 paragraphes et travaillez de droite à gauche, du haut vers le bas, ils s'alignent les uns au-dessus des autres, sur l'axe du bloc.
+En CSS l'axe des colonnes (ou des blocs) est l'axe utilisé lors de la disposition des blocs de texte . Si vous avez 2 paragraphes et travaillez de droite à gauche, du haut vers le bas, ils s'alignent les uns au-dessus des autres, sur l'axe du bloc.
 
 ![Diagram showing the block axis in CSS Grid Layout.](7_block_axis.png)
 

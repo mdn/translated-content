@@ -12,7 +12,7 @@ translation_of: Web/API/HTMLMediaElement/abort_event
 ---
 {{APIRef}}
 
-L'événement **`abort`** se déclenche si l'élément écouté ne s'est pas chargé complétement. Il est désactivé si le résultat obtenu est une erreur.
+L'événement **`abort`** se déclenche si l'élément écouté ne s'est pas chargé complétement. Il est désactivé si le résultat obtenu est une erreur.
 
 <table class="properties">
   <tbody>

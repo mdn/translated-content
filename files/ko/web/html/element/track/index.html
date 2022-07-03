@@ -107,11 +107,15 @@ translation_of: Web/HTML/Element/track
 
 <p>미디어 요소는 동일한 <code>kind</code>, <code>srclang</code>, <code>label</code>을 가진 <code>&lt;track&gt;</code>을 하나보다 많이 포함할 수 없습니다.</p>
 
-<div class="hidden">
-<h3 id="Detecting_cue_changes">Detecting cue changes</h3>
+<h3 id="detecting_cue_changes">Detecting cue changes</h3>
+<p>The underlying {{domxref("TextTrack")}}, indicated by the {{domxref("HTMLTrackElement.track", "track")}} property, receives a <code>cuechange</code> event every time the currently-presented cue is changed. This happens even if the track isn't associated with a media element.</p>
+<p>If the track <em>is</em> associated with a media element, using the {{HTMLElement("track")}} element as a child of the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, the <code>cuechange</code> event is also sent to the {{domxref("HTMLTrackElement")}}.</p>
+<pre class="brush: js">let textTrackElem = document.getElementById("texttrack");
 
-<p>{{page("/en-US/docs/Web/API/TextTrack/cuechange_event", "On the track element")}}</p>
-</div>
+textTrackElem.addEventListener("cuechange", event => {
+  let cues = event.target.track.activeCues;
+});
+</pre>
 
 <h2 id="예제">예제</h2>
 

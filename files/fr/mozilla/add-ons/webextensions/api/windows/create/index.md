@@ -43,7 +43,7 @@ var creating = browser.windows.create(
 
     - `allowScriptsToClose` {{optional_inline}}
 
-      - : `boolean`. Lorsque la fenêtre est ouverte, elle contiendra un seul onglet, ou plus d'un onglet si `url` est donnée et comprendra un tableau contenant plus d'une URL. Par défaut, les scripts s'exécutant dans ces pages ne sont pas autorisés à fermer leur onglet en utilisant [`window.close()`](/fr/docs/Web/API/Window/close). Si vous incluez `allowScriptsToClose` et le mettez à `true` ,  alors ce comportement par défaut est modifié, de sorte que les scripts peuvent fermer leurs onglets. Notez cela :
+      - : `boolean`. Lorsque la fenêtre est ouverte, elle contiendra un seul onglet, ou plus d'un onglet si `url` est donnée et comprendra un tableau contenant plus d'une URL. Par défaut, les scripts s'exécutant dans ces pages ne sont pas autorisés à fermer leur onglet en utilisant [`window.close()`](/fr/docs/Web/API/Window/close). Si vous incluez `allowScriptsToClose` et le mettez à `true` ,  alors ce comportement par défaut est modifié, de sorte que les scripts peuvent fermer leurs onglets. Notez cela :
 
         - Ceci ne s'applique qu'aux onglets qui ont été ouverts lors de la création de la fenêtre. Si l'utilisateur ouvre plus d'onglets dans cette fenêtre, les scripts ne pourront pas fermer ces nouveaux onglets.
         - Si la ou les url(s) donnée(s) dans `url` pointent vers les [pages d'extension](/fr/Add-ons/WebExtensions/user_interface/Bundled_web_pages) (c'est-à-dire qu'il s'agit de pages incluses avec cette extension et chargées avec le protocole "moz-extension:") alors les scripts _sont_ par défaut autorisés à fermer ces onglets.
@@ -57,15 +57,15 @@ var creating = browser.windows.create(
     - `incognito` {{optional_inline}}
       - : `boolean`. Que la nouvelle fenêtre soit une fenêtre privée. Notez que si vous spécifiez `incognito` et `tabId`, c'est-à-dire, vous ne pouvez pas déplacer un onglet privé dans une fenêtre privée.
     - `left` {{optional_inline}}
-      - : `integer`. Nombre de pixels pour positionner la nouvelle fenêtre à partir du bord gauche de l'écran. Si elle n'est pas spécifiée, la nouvelle fenêtre est décalée naturellement à partir de la dernière fenêtre ciblée. Cette valeur est ignorée pour les panneaux. (Dans Firefox, cette valeur est actuellement ignorée pour les popups  (bug 1271047) mais peut être définie en utilisant browser.windows.update().)
+      - : `integer`. Nombre de pixels pour positionner la nouvelle fenêtre à partir du bord gauche de l'écran. Si elle n'est pas spécifiée, la nouvelle fenêtre est décalée naturellement à partir de la dernière fenêtre ciblée. Cette valeur est ignorée pour les panneaux. (Dans Firefox, cette valeur est actuellement ignorée pour les popups  (bug 1271047) mais peut être définie en utilisant browser.windows.update().)
     - `state` {{optional_inline}}
       - : Une valeur {{WebExtAPIRef('windows.WindowState')}}. L'état initial de la fenêtre. Les états minimisés, maximisés et plein écran ne peuvent pas être combinés avec la gauche, le haut, la largeur ou la hauteur.
     - `tabId` {{optional_inline}}
       - : `integer`. Si inclus, déplace un onglet de l'ID spécifié d'une fenêtre existante dans la nouvelle fenêtre.
     - `titlePreface` {{optional_inline}}
-      - : `string`. Utilisez ceci pour ajouter une chaîne au début du titre de la fenêtre du navigateur. Selon le système d'exploitation sous-jacent, cela pourrait ne pas fonctionner sur les fenêtres du navigateur qui n'ont pas de titre (comme  about:blank dans Firefox).
+      - : `string`. Utilisez ceci pour ajouter une chaîne au début du titre de la fenêtre du navigateur. Selon le système d'exploitation sous-jacent, cela pourrait ne pas fonctionner sur les fenêtres du navigateur qui n'ont pas de titre (comme about:blank dans Firefox).
     - `top` {{optional_inline}}
-      - : `integer`. Le nombre de pixels pour positionner la nouvelle fenêtre à partir du bord supérieur de l'écran. Si elle n'est pas spécifiée, la nouvelle fenêtre est naturellement décalée à partir de la dernière fenêtre ciblée. Cette valeur est ignorée pour les panneaux. (Dans Firefox, cette valeur est actuellement ignorée pour les popups  (bug 1271047) mais peut être définie en utilisant browser.windows.update().)
+      - : `integer`. Le nombre de pixels pour positionner la nouvelle fenêtre à partir du bord supérieur de l'écran. Si elle n'est pas spécifiée, la nouvelle fenêtre est naturellement décalée à partir de la dernière fenêtre ciblée. Cette valeur est ignorée pour les panneaux. (Dans Firefox, cette valeur est actuellement ignorée pour les popups  (bug 1271047) mais peut être définie en utilisant browser.windows.update().)
     - `type` {{optional_inline}}
       - : Une valeur {{WebExtAPIRef('windows.CreateType')}} spécifie le type de fenêtre du navigateur à créer. Spécifié le `panneau` ou la `fenêtre contextuelle` ici pour ouvrir une fenêtre sans l'interface utilisateur (barre d'adresse, barre d'outils, etc).
     - `url` {{optional_inline}}

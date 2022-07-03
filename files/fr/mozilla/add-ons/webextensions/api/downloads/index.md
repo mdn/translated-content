@@ -46,7 +46,7 @@ Pour utiliser cette API, vous devez disposer de l' [API permission](/fr/Add-ons/
 - {{WebExtAPIRef("downloads.download()")}}
   - : Télécharge un fichier, compte tenu de son URL et d'autres préférences optionnelles.
 - {{WebExtAPIRef("downloads.search()")}}
-  - : Interroge le {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} disponible dans le gestionnaire de téléchargements du navigateur et renvoie ceux qui correspondent aux critères de recherche spécifiés.
+  - : Interroge le {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} disponible dans le gestionnaire de téléchargements du navigateur et renvoie ceux qui correspondent aux critères de recherche spécifiés.
 - {{WebExtAPIRef("downloads.pause()")}}
   - : Suspend un téléchargement.
 - {{WebExtAPIRef("downloads.resume()")}}

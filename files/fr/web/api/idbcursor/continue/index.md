@@ -27,7 +27,7 @@ curseur.continue(cléOptionnelle);
 
 ### Exceptions
 
-Cette méthode peut déclencher des exceptions  {{domxref("DOMException")}} de type :
+Cette méthode peut déclencher des exceptions  {{domxref("DOMException")}} de type :
 
 <table class="standard-table">
   <thead>
@@ -95,7 +95,7 @@ function afficheDonnee() {
 
 | Spécification                                                                                                | État                         | Commentaires |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBCursor-continue-void-any-key', 'continue()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBCursor-continue-void-any-key', 'continue()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

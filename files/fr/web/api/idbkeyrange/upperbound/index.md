@@ -11,7 +11,7 @@ translation_of: Web/API/IDBKeyRange/upperBound
 ---
 {{APIRef("IndexedDB")}}
 
-La méthode **`upperBound()`**, rattachée à l'interface  {{domxref("IDBKeyRange")}}, crée un intervalle de clé avec une borne supérieure.
+La méthode **`upperBound()`**, rattachée à l'interface  {{domxref("IDBKeyRange")}}, crée un intervalle de clé avec une borne supérieure.
 
 Par défaut, la borne est inclue dans l'intervalle (autrement dit, il est fermé à droite).
 
@@ -73,7 +73,7 @@ function displayData() {
 
 | Spécification                                                                                                                                    | État                         | Commentaires |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBKeyRange-upperBound-IDBKeyRange-any-upper-boolean-open', 'upperBound()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBKeyRange-upperBound-IDBKeyRange-any-upper-boolean-open', 'upperBound()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

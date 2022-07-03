@@ -96,36 +96,36 @@ Les personnes utilisant des lecteurs d'écran utilisent fréquemment les niveaux
 
 Les niveaux de titres peuvent être imbriqués afin de créer des sous-sections qui reflètent l'organisation de la page. La plupart des lecteurs d'écran peuvent également générer une liste ordonnée des titres de la page afin d'aider les visiteurs à connaître la hiérarchie du contenu :
 
-1.  `h1` Les abeilles
+1. `h1` Les abeilles
 
-    1.  `h2` Étymologie
-    2.  `h2` Répartition
-    3.  `h2` Évolution
+    1. `h2` Étymologie
+    2. `h2` Répartition
+    3. `h2` Évolution
 
-        1.  `h3` Paléozoïque ancien
-        2.  `h3` Jurassique
-        3.  `h3` Crétacée
+        1. `h3` Paléozoïque ancien
+        2. `h3` Jurassique
+        3. `h3` Crétacée
 
-    4.  `h2` Morphologie externe
+    4. `h2` Morphologie externe
 
-        1.  `h3`Tête
+        1. `h3`Tête
 
-            1.  `h4` Mandibules
+            1. `h4` Mandibules
 
-        2.  `h3` Thorax
+        2. `h3` Thorax
 
-            1.  `h4` Prothorax
-            2.  `h4` Ptérothorax
+            1. `h4` Prothorax
+            2. `h4` Ptérothorax
 
-        3.  `h3` Pattes
-        4.  `h3` Ailes
-        5.  `h3` Abdomen
+        3. `h3` Pattes
+        4. `h3` Ailes
+        5. `h3` Abdomen
 
 Lorsque les niveaux sont imbriqués, il est possible de sauter un niveau lorsqu'on **ferme** une sous-section
 
 - [Les titres et la structure d'une page - Tutoriels WAI pour l'accessibilité web (en anglais)](https://www.w3.org/WAI/tutorials/page-structure/headings/)
 - [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_—_Create_content_that_can_be_presented_in_different_ways)
-- [ Comprendre les règles WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Comprendre les règles WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [_Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 - [_Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 - [_Understanding Success Criterion 2.4.6 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)

@@ -33,13 +33,13 @@ translation_of: Web/API/HTMLDetailsElement/toggle_event
  </tbody>
 </table>
 
-<h2 id="例子">例子</h2>
+<h2 id="示例">示例</h2>
 
 <p>此示例记录打开的章节。 当章节关闭时，它们将从日志中删除。</p>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="notranslate">&lt;aside id="log"&gt;
+<pre class="brush: html">&lt;aside id="log"&gt;
   &lt;b&gt;Open chapters:&lt;/b&gt;
   &lt;div data-id="ch1" hidden&gt;I&lt;/div&gt;
   &lt;div data-id="ch2" hidden&gt;II&lt;/div&gt;
@@ -63,7 +63,7 @@ translation_of: Web/API/HTMLDetailsElement/toggle_event
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="notranslate">body {
+<pre class="brush: css">body {
   display: flex;
   flex-direction: row-reverse;
 }
@@ -79,7 +79,7 @@ translation_of: Web/API/HTMLDetailsElement/toggle_event
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="notranslate">function logItem(e) {
+<pre class="brush: js">function logItem(e) {
   const item = document.querySelector(`[data-id=${e.target.id}]`);
   item.toggleAttribute('hidden');
 }
@@ -89,9 +89,9 @@ chapters.forEach((chapter) =&gt; {
   chapter.addEventListener('toggle', logItem);
 });</pre>
 
-<h3 id="Result">Result</h3>
+<h3 id="结果">结果</h3>
 
-<p>{{EmbedLiveSample("Examples", 700, 200)}}</p>
+<p>{{EmbedLiveSample("示例", 700, 200)}}</p>
 
 <h2 id="规范">规范</h2>
 

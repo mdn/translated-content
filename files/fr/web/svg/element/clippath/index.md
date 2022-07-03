@@ -8,7 +8,7 @@ translation_of: Web/SVG/Element/clipPath
 ---
 {{SVGRef}}
 
-L'élément [SVG](/fr/docs/Web/SVG) **`<clipPath>`** définit un détourage. Ce détourage peut par la suite être appliqué sur une forme en utilisant la propriété {{SVGAttr("clip-path")}}.
+L'élément [SVG](/fr/docs/Web/SVG) **`<clipPath>`** définit un détourage. Ce détourage peut par la suite être appliqué sur une forme en utilisant la propriété {{SVGAttr("clip-path")}}.
 
 Le détourage limite la zone dans laquelle l'élément sur lequel il est appliqué sera dessiné. Autrement dit, les parties de l'élément en dehors de la forme créée par le détourage ne seront pas affichées.
 
@@ -20,19 +20,19 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 100 100">
-  <clipPath id="myClip">
+  <clipPath id="myClip">
     <!-- La forme créée par le détourage est un simple cercle. -->
-    <circle cx="40" cy="35" r="35" />
-  </clipPath>
+    <circle cx="40" cy="35" r="35" />
+  </clipPath>
 
   <!-- Le coeur sans détourage, pour référence -->
-  <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
+  <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
 
   <!--
     Le coeur avec détourage.
     Seule la partie à l'intérieur du cercle est visible.
   -->
-  <use clip-path="url(#myClip)" xlink:href="#heart" fill="red" />
+  <use clip-path="url(#myClip)" xlink:href="#heart" fill="red" />
 </svg>
 ```
 
@@ -59,7 +59,7 @@ Par défaut, les événements de pointeur ne sont pas déclenchés sur les régi
 
 - {{SVGAttr("clipPathUnits")}}
   - : Cet attribut définit le système de coordonnées pour le contenu de l'élément `<clipPath>`.
-    _Valeur_: `userSpaceOnUse`|`objectBoundingBox` ; _Valeur par défaut_: `userSpaceOnUse`; _Animation_: **oui**
+    _Valeur_: `userSpaceOnUse`|`objectBoundingBox` ; _Valeur par défaut_: `userSpaceOnUse`; _Animation_: **oui**
 
 ### Attributs globaux
 
@@ -80,7 +80,7 @@ Par défaut, les événements de pointeur ne sont pas déclenchés sur les régi
 
 | Spécification                                                                                                        | Statut                       | Commentaire         |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("CSS Masks", "#ClipPathElement", "&lt;clipPath&gt;")}}                             | {{Spec2("CSS Masks")}} |                     |
+| {{SpecName("CSS Masks", "#ClipPathElement", "&lt;clipPath&gt;")}}                             | {{Spec2("CSS Masks")}} |                     |
 | {{SpecName("SVG1.1", "masking.html#EstablishingANewClippingPath", "&lt;clipPath&gt;")}} | {{Spec2("SVG1.1")}}     | Définition initiale |
 
 ## Compatibilité des navigateurs

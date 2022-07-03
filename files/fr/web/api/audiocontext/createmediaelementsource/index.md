@@ -70,13 +70,13 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 ```
 
-> **Note :** Du fait de l’appel à `createMediaElementSource()`, la lecture de l’audio du {{ domxref("HTMLMediaElement") }} est redirigée dans le graphe de traitement de l’AudioContext. Ainsi, jouer / mettre en pause le média est toujours possible via l’API des éléments média ou via les contrôles du lecteur.
+> **Note :** Du fait de l’appel à `createMediaElementSource()`, la lecture de l’audio du {{ domxref("HTMLMediaElement") }} est redirigée dans le graphe de traitement de l’AudioContext. Ainsi, jouer / mettre en pause le média est toujours possible via l’API des éléments média ou via les contrôles du lecteur.
 
 ## Spécifications
 
 | Spécification                                                                                                                                                                                                                | Statut                               | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioContext-createMediaElementSource-MediaElementAudioSourceNode-HTMLMediaElement-mediaElement', 'createMediaElementSource()')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AudioContext-createMediaElementSource-MediaElementAudioSourceNode-HTMLMediaElement-mediaElement', 'createMediaElementSource()')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité des navigateurs
 

@@ -21,7 +21,9 @@ La fonction **`Math.log1p()`** renvoie le logarithme népérien (en base {{jsxre
 
 ## Syntaxe
 
-    Math.log1p(x)
+```js
+Math.log1p(x)
+```
 
 ### Paramètres
 
@@ -64,7 +66,7 @@ Math.log1p = Math.log1p || function(x) {
 | Spécification                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-math.log1p', 'Math.log1p')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.log1p', 'Math.log1p')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-math.log1p', 'Math.log1p')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

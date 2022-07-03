@@ -11,9 +11,11 @@ translation_of: Web/API/Storage/getItem
 {{APIRef("Web Storage API")}}
 La méthode `getItem()` de l'interface {{domxref("Storage")}} renvoie la valeur associée à la clé passée en paramètre.
 
-## Syntax
+## Syntaxe
 
-    var aValue = storage.getItem(keyName);
+```js
+var aValue = storage.getItem(keyName);
+```
 
 ### Paramètre
 
@@ -58,4 +60,4 @@ function setStyles() {
 
 ## Voir aussi
 
-[Utilisation de l'API de stockage web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[Utilisation de l'API de stockage web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

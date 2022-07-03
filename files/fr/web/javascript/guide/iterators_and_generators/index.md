@@ -175,7 +175,7 @@ Il est possible de forcer un générateur à lever une exception en utilisant la
 
 Si le mot-clé `yield` n'est pas trouvé lors de la levée de l'exception, l'exception sera propagée jusqu'à l'appel de `throw()`, les appels à `next()` qui suivent renverront une valeur dont la propriété `done` sera `true`.
 
-Si l'exception n'est pas interceptée dans le générateur, elle se propagera jusqu'à l'appel de `throw()` et les appels suivants de `next()` renverront un objet dont la propriété `done `vaut `true`.
+Si l'exception n'est pas interceptée dans le générateur, elle se propagera jusqu'à l'appel de `throw()` et les appels suivants de `next()` renverront un objet dont la propriété `done` vaut `true`.
 
 Les générateurs possèdent une méthode `return(valeur)` qui permet de renvoyer une valeur donnée et de terminer le générateur.
 

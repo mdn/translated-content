@@ -21,7 +21,7 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-var  withgoingBack = browser.tabs.goBack(
+var withgoingBack = browser.tabs.goBack(
   tabId,                  // optional integer
   callback                  // optional function
 )

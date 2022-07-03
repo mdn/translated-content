@@ -69,7 +69,7 @@ translation_of: Web/API/XMLHttpRequest
   </tr>
   <tr>
    <td><code>channel</code></td>
-   <td>{{ Interface("nsIChannel") }}</td>
+   <td><code>nsIChannel</code></td>
    <td>El canal es usado por el objeto cuando se produce el pedido. Esto da <code>null</code> si el canal aún no fue creado. En el caso de un pedido de múltiples partes, este es el canal inicial, no las diferentes partes del pedido múltiple. <strong>Es necesario tener privilegios elevados para acceder; sólo lectura.</strong> {{ Non-standard_inline() }}</td>
   </tr>
   <tr>
@@ -101,7 +101,7 @@ translation_of: Web/API/XMLHttpRequest
    <td>
     <p><code>onreadystatechange</code></p>
    </td>
-   <td>{{ Interface("nsIDOMEventListener") }}</td>
+   <td><code>nsIDOMEventListener</code></td>
    <td>
     <p>Una función del objeto JavaScript que se llama cuando el atributo <code>readyState</code> cambia. El callback se llama desde la interfaz del usuario.</p>
 
@@ -176,7 +176,7 @@ translation_of: Web/API/XMLHttpRequest
   </tr>
   <tr>
    <td><code>upload</code></td>
-   <td>{{ Interface("nsIXMLHttpRequestUpload") }}</td>
+   <td><code>nsIXMLHttpRequestUpload</code></td>
    <td>El proceso de subida puede ser rastreado al agregar un registro de evento a <code>upload</code>.</td>
   </tr>
   <tr>
@@ -410,7 +410,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <h2 id="Implementation_notes">Implementation notes</h2>
 
-<p><code>XMLHttpRequest</code> is implemented in Gecko using the {{ interface("nsIJSXMLHttpRequest") }} and {{ interface("nsIXMLHttpRequest") }} interfaces.</p>
+<p><code>XMLHttpRequest</code> is implemented in Gecko using the <code>nsIJSXMLHttpRequest</code> and <code>nsIXMLHttpRequest</code> interfaces.</p>
 
 <h2 id="See_also">See also</h2>
 

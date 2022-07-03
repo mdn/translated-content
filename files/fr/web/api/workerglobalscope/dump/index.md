@@ -25,7 +25,7 @@ Rien.
 
 ## Exemple
 
-Pour écrire quelque chose depuis votre _worker_ vers votre terminal, vous devez d'abord ouvrir une instance de Firefox depuis votre invité de commande ou terminal. Par exemple, sous Mac OS X vous le lancer en utilisant quelque chose comme (en supposant que vous êtes dans le répertoire de l'application):
+Pour écrire quelque chose depuis votre _worker_ vers votre terminal, vous devez d'abord ouvrir une instance de Firefox depuis votre invité de commande ou terminal. Par exemple, sous Mac OS X vous le lancer en utilisant quelque chose comme (en supposant que vous êtes dans le répertoire de l'application):
 
 ```bash
 ./Firefox.app/Contents/MacOS/firefox-bin -profile /tmp -no-remote

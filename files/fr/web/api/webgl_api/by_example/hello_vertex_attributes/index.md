@@ -11,8 +11,6 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Hello_vertex_attributes
 original_slug: Web/API/WebGL_API/By_example/Introduction_aux_attributs_vertex
 ---
-{{IncludeSubnav("/fr/Apprendre")}}
-
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Hello_GLSL","Apprendre/WebGL/Par_exemple/Générer_des_textures_avec_du_code")}}
 
 Avec cet exemple, on voit comment combiner la programmation des _shaders_ et les interactions utilisateurs grâce aux attributs des _vertex_.

@@ -34,7 +34,7 @@ Le code suivant renverra une exception {{jsxref("TypeError")}} :
 // et que Symbol.match n'a pas été modifié.
 ```
 
-Cependant, si `Symbol.match` vaut `false`, cette vérification `isRegExp` indiquera que l'objet à prendre en compte n'est pas une expression rationnelle. Les méthodes `startsWith` et `endsWith` ne déclencheront donc pas d'exception `TypeError`.
+Cependant, si `Symbol.match` vaut `false`, cette vérification `isRegExp` indiquera que l'objet à prendre en compte n'est pas une expression rationnelle. Les méthodes `startsWith` et `endsWith` ne déclencheront donc pas d'exception `TypeError`.
 
 ```js
 var re = /toto/;
@@ -48,7 +48,7 @@ re[Symbol.match] = false;
 | Spécification                                                                    | État                         | Commentaires         |
 | -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-symbol.match', 'Symbol.match')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.match', 'Symbol.match')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-symbol.match', 'Symbol.match')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -9,7 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLBaseFontElement
 ---
-{{APIRef("HTML DOM")}}{{obsolete_header}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 L'interface **`HTMLBaseFontElement`** fournit des propriétés spéciales (au-delà de l'interface classique {{domxref("HTMLElement")}} dont elle dispose également par héritage) pour manipuler les éléments {{HTMLElement("basefont")}}.
 

@@ -34,7 +34,7 @@ mask-border-slice: unset;
 
 <ul>
  <li>当<strong>一个</strong>被指定的位置，它在从它们各自的两侧是相同的距离创建所有四片。</li>
- <li>当<strong>2点</strong>被指定的位置，所述第一值创建一个从测量的层<strong>的顶部和底部</strong>，所述第二创建从所测量的片<strong>左右</strong>。</li>
+ <li>当<strong>2 点</strong>被指定的位置，所述第一值创建一个从测量的层<strong>的顶部和底部</strong>，所述第二创建从所测量的片<strong>左右</strong>。</li>
  <li>当指定了<strong>三个</strong>位置时，第一个值创建从<strong>顶部开始</strong>测量的切片，第二个值创建从<strong>左侧和右侧开始</strong>测量的切片，第三个值创建从<strong>底部开始</strong>测量的切片。</li>
  <li>当指定了<strong>四个</strong>位置时，它们创建从<strong>上</strong>，<strong>右</strong>，<strong>下</strong>和<strong>左</strong>按该顺序（顺时针）测量的切片。</li>
 </ul>
@@ -61,9 +61,9 @@ mask-border-slice: unset;
 <p>上图说明了每个区域的位置。</p>
 
 <ul>
- <li>1-4区是<a id="corner-regions" name="corner-regions">拐角区域</a>。每个图像都使用一次以形成最终边框图像的角。</li>
- <li>5-8区是<a id="edge-regions" name="edge-regions">边缘区域</a>。在最终的边框图像中对这些元素进行<a href="/en-US/docs/Web/CSS/mask-border-repeat">重复，缩放或其他方式的修改</a>，以匹配元素的尺寸。</li>
- <li>9区是<a id="middle-region" name="middle-region">中间区域</a>。默认情况下将其丢弃，但如果<code>fill</code>设置了关键字，则它会用作背景图像。</li>
+ <li>1-4 区是<a id="corner-regions" name="corner-regions">拐角区域</a>。每个图像都使用一次以形成最终边框图像的角。</li>
+ <li>5-8 区是<a id="edge-regions" name="edge-regions">边缘区域</a>。在最终的边框图像中对这些元素进行<a href="/en-US/docs/Web/CSS/mask-border-repeat">重复，缩放或其他方式的修改</a>，以匹配元素的尺寸。</li>
+ <li>9 区是<a id="middle-region" name="middle-region">中间区域</a>。默认情况下将其丢弃，但如果<code>fill</code>设置了关键字，则它会用作背景图像。</li>
 </ul>
 
 <p>{{cssxref("mask-border-repeat")}}，{{cssxref("mask-border-width")}}和{{cssxref("mask-border-outset")}}属性决定了这些区域用于形成最终的蒙版边框。</p>
@@ -84,16 +84,16 @@ mask-border-slice: unset;
 
 <pre class="brush: css notranslate">mask-border-slice: 30 fill;</pre>
 
-<p>基于Chromium的浏览器支持此属性的过时版本<code>mask-box-image-slice</code>-带前缀：</p>
+<p>基于 Chromium 的浏览器支持此属性的过时版本<code>mask-box-image-slice</code>-带前缀：</p>
 
 <pre class="brush: css notranslate">-webkit-mask-box-image-slice: 30 fill;</pre>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>：该<code><a href="/en-US/docs/Web/CSS/mask-border">mask-border</a></code>页面提供了一个有效的示例（使用Chromium支持的过期前缀边框蒙版属性），因此您可以大致了解效果。</p>
+<p><strong>注意</strong>：该<code><a href="/en-US/docs/Web/CSS/mask-border">mask-border</a></code>页面提供了一个有效的示例（使用 Chromium 支持的过期前缀边框蒙版属性），因此您可以大致了解效果。</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>：如果希望元素的内容可见，则必须包含fill关键字。</p>
+<p><strong>注意</strong>：如果希望元素的内容可见，则必须包含 fill 关键字。</p>
 </div>
 
 <h2 id="技术指标">技术指标</h2>
@@ -122,5 +122,5 @@ mask-border-slice: unset;
 <h2 id="也可以看看">也可以看看</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/Shorthand_properties#Tricky_edge_cases">1到4值语法的图解说明</a></li>
+ <li><a href="/en-US/docs/Web/CSS/Shorthand_properties#Tricky_edge_cases">1 到 4 值语法的图解说明</a></li>
 </ul>

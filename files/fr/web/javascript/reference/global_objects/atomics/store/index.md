@@ -18,7 +18,9 @@ La méthode statique **`Atomics.store()`** enregistre une valeur donnée à un e
 
 ## Syntaxe
 
-    Atomics.store(typedArray, index, valeur)
+```js
+Atomics.store(typedArray, index, valeur)
+```
 
 ### Paramètres
 
@@ -35,7 +37,7 @@ La valeur qui a été enregistrée.
 
 ### Exceptions
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
+- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
 - Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
 - Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
 

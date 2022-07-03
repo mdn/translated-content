@@ -8,22 +8,24 @@ translation_of: Web/API/WebGLRenderingContext/attachShader
 ---
 {{APIRef("WebGL")}}
 
-La méthode **WebGLRenderingContext.attachShader()** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) attache un {{domxref("WebGLShader")}} de fragment ou de sommet à un {{domxref("WebGLProgram")}}.
+La méthode **WebGLRenderingContext.attachShader()** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) attache un {{domxref("WebGLShader")}} de fragment ou de sommet à un {{domxref("WebGLProgram")}}.
 
 ## Syntaxe
 
-    void gl.attachShader(programme, shader);
+```js
+void gl.attachShader(programme, shader);
+```
 
 ### Paramètres
 
 - `programme`
   - : Un {{domxref("WebGLProgram")}}.
 - `shader`
-  - : Un {{domxref("WebGLShader")}} de fragment ou de sommet.
+  - : Un {{domxref("WebGLShader")}} de fragment ou de sommet.
 
 ## Exemples
 
-Le code suivant attache des shaders pré-existants à un {{domxref("WebGLProgram")}}.
+Le code suivant attache des shaders pré-existants à un {{domxref("WebGLProgram")}}.
 
 ```js
 var programme = gl.createProgram();

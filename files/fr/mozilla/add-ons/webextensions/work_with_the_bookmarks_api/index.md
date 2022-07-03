@@ -21,7 +21,7 @@ Pour utiliser l'API Bookmarks, vous devez demander la permission `"bookmarks"` d
 
 ```json
 "permissions": [
-  "bookmarks"
+  "bookmarks"
 ],
 ```
 
@@ -41,7 +41,7 @@ L'API Bookmarks permet à votre extension de faire ce que les utilisateurs peuve
 - Obtention d'une liste de signets récemment ajoutés ({{WebExtAPIRef("bookmarks.getRecent")}}).
 - Signet la manipulation de l'arborescence des dossiers pour :
 
-  - Obtenir des informations sur l'arborescence  ({{WebExtAPIRef("bookmarks.getTree")}}, {{WebExtAPIRef("bookmarks.getChildren")}}, and {{WebExtAPIRef("bookmarks.getSubTree")}}).
+  - Obtenir des informations sur l'arborescence  ({{WebExtAPIRef("bookmarks.getTree")}}, {{WebExtAPIRef("bookmarks.getChildren")}}, and {{WebExtAPIRef("bookmarks.getSubTree")}}).
   - Ajouter des branches ({{WebExtAPIRef("bookmarks.create")}}).
   - Supprimer des noeuds ({{WebExtAPIRef("bookmarks.removeTree")}}).
   - Déplacer des nœuds ({{WebExtAPIRef("bookmarks.move")}}).
@@ -61,7 +61,7 @@ L'API Bookmarks permet à votre extension de faire ce que les utilisateurs peuve
 
 ## Exemple de procédure pas à pas
 
-Pour comprendre comment utiliser l'API Bookmarks, jetons un coup d'œil à l'exemple  [bookmark-it](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it). Cet exemple ajoute une icône de barre d'outils  ({{WebExtAPIRef("browserAction")}}) lorsqu'on clique dessus, ajoute ou supprime la page en cours des signets. Si la page est mise en signet (ou supprimée des signets) d'une autre manière, l'icône est mise à jour pour montrer l'état du signet de la page.
+Pour comprendre comment utiliser l'API Bookmarks, jetons un coup d'œil à l'exemple  [bookmark-it](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it). Cet exemple ajoute une icône de barre d'outils  ({{WebExtAPIRef("browserAction")}}) lorsqu'on clique dessus, ajoute ou supprime la page en cours des signets. Si la page est mise en signet (ou supprimée des signets) d'une autre manière, l'icône est mise à jour pour montrer l'état du signet de la page.
 
 Cette vidéo montre l'extension en action :
 
@@ -73,46 +73,46 @@ Le [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/boo
 
 ```json
 {
-  "manifest_version": 2,
-  "name": "Bookmark it!",
-  "version": "1.1",
-  "description": "A simple bookmark button",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/bookmark-it",
+  "manifest_version": 2,
+  "name": "Bookmark it!",
+  "version": "1.1",
+  "description": "A simple bookmark button",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/bookmark-it",
 ```
 
 Définit les icônes qui seront utilisées pour représenter l'extension, dans des endroits tels que le gestionnaire de modules complémentaires.
 
 ```json
-  "icons": {
-    "48": "icons/bookmark-it.png",
-    "96": "icons/bookmark-it@2x.png"
-  },
+  "icons": {
+    "48": "icons/bookmark-it.png",
+    "96": "icons/bookmark-it@2x.png"
+  },
 ```
 
 Demande des permissions. `"bookmarks"` est demandé pour permettre l'utilisation de l'API Bookmarks. Des `"onglets"` sont demandés afin que l'URL et le titre de l'onglet actif puissent être lus et utilisés pour créer ou rechercher le signet de la page. Le besoin de l'API Tabs pour accéder à ces détails signifie que vous ne pouvez pas utiliser l'API Bookmark sans l'API Tabs.
 
 ```json
-  "permissions": [
-    "bookmarks",
-    "tabs"
-  ],
+  "permissions": [
+    "bookmarks",
+    "tabs"
+  ],
 ```
 
 Définit les détails du bouton de la barre d'outils de base. La plupart des fonctionnalités du bouton seront configurées dans le code une fois que le statut du signet de la page sera connu.
 
 ```json
-  "browser_action": {
-    "default_icon": "icons/star-empty-38.png",
-    "default_title": "Bookmark it!"
-  },
+  "browser_action": {
+    "default_icon": "icons/star-empty-38.png",
+    "default_title": "Bookmark it!"
+  },
 ```
 
 Définit le script d'arrière-plan qui ajoutera et supprimera le signet de la page et définira les caractéristiques du bouton de la barre d'outils.
 
 ```json
-  "background": {
-    "scripts": ["background.js"]
-  }
+  "background": {
+    "scripts": ["background.js"]
+  }
 
 }
 ```
@@ -122,58 +122,58 @@ Définit le script d'arrière-plan qui ajoutera et supprimera le signet de la pa
 Comme pour tout script d'arrière-plan, [background.js](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js)est exécuté dès que l'extension est démarrée. Initialement, le script appelle `updateActiveTab()` qui commence par obtenir l'objet `Tabs` pour l'onglet en cours, en utilisant {{WebExtAPIRef("tabs.query")}}, et en passant l'objet à `updatetab()` avec ce code :
 
 ```js
-  var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
-  gettingActiveTab.then(updateTab);
+  var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
+  gettingActiveTab.then(updateTab);
 ```
 
 `updatetab()` passe d'abord l'URL de l'onglet actif à `isSupportedProtocol()`:
 
 ```js
-  function updateTab(tabs) {
-    if (tabs[0]) {
-      currentTab = tabs[0];
-      if (isSupportedProtocol(currentTab.url)) {
+  function updateTab(tabs) {
+    if (tabs[0]) {
+      currentTab = tabs[0];
+      if (isSupportedProtocol(currentTab.url)) {
 ```
 
 `isSupportedProtocol()` determines if the URL displayed in the active tab is one that can be bookmarked. To extract the protocol from the tab’s URL, the extension takes advantage of the [HTMLHyperlinkElementUtils](/fr/docs/Web/API/HTMLHyperlinkElementUtils) by adding the tab’s URL to an `<a>` element and then getting the protocol using the `protocol` property.
 
 ```js
-  function isSupportedProtocol(urlString) {
-    var supportedProtocols = ["https:", "http:", "ftp:", "file:"];
-    var url = document.createElement('a');
-    url.href = urlString;
-    return supportedProtocols.indexOf(url.protocol) != -1;
-  }
+  function isSupportedProtocol(urlString) {
+    var supportedProtocols = ["https:", "http:", "ftp:", "file:"];
+    var url = document.createElement('a');
+    url.href = urlString;
+    return supportedProtocols.indexOf(url.protocol) != -1;
+  }
 ```
 
 Si le protocole est pris en charge par les signets, l'extension détermine si l'URL de l'onglet est déjà référencée et si c'est le cas, appelle `updateIcon()`:
 
 ```js
-      var searching = browser.bookmarks.search({url: currentTab.url});
-      searching.then((bookmarks) => {
-        currentBookmark = bookmarks[0];
-        updateIcon();
+      var searching = browser.bookmarks.search({url: currentTab.url});
+      searching.then((bookmarks) => {
+        currentBookmark = bookmarks[0];
+        updateIcon();
 ```
 
 `updateIcon()` définit l'icône et le titre du bouton de la barre d'outils, selon que l'URL est mise en signet ou non.
 
 ```js
 function updateIcon() {
-  browser.browserAction.setIcon({
-    path: currentBookmark ? {
-      19: "icons/star-filled-19.png",
-      38: "icons/star-filled-38.png"
-    } : {
-      19: "icons/star-empty-19.png",
-      38: "icons/star-empty-38.png"
-    },
-    tabId: currentTab.id
-  });
-  browser.browserAction.setTitle({
-    // Screen readers can see the title
-    title: currentBookmark ? 'Unbookmark it!' : 'Bookmark it!',
-    tabId: currentTab.id
-  });
+  browser.browserAction.setIcon({
+    path: currentBookmark ? {
+      19: "icons/star-filled-19.png",
+      38: "icons/star-filled-38.png"
+      : {
+       19: "icons/star-empty-19.png",
+      38: "icons/star-empty-38.png"
+    },
+    tabId: currentTab.id
+  });
+  browser.browserAction.setTitle({
+    // Screen readers can see the title
+    title: currentBookmark ? 'Unbookmark it!' : 'Bookmark it!',
+    tabId: currentTab.id
+  });
 }
 ```
 
@@ -187,11 +187,11 @@ browser.browserAction.onClicked.addListener(toggleBookmark);
 
 ```js
 function toggleBookmark() {
-  if (currentBookmark) {
-    browser.bookmarks.remove(currentBookmark.id);
-  } else {
-    browser.bookmarks.create({title: currentTab.title, url: currentTab.url});
-  }
+  if (currentBookmark) {
+    browser.bookmarks.remove(currentBookmark.id);
+     else {
+    browser.bookmarks.create({title: currentTab.title, url: currentTab.url});
+  }
 }
 ```
 

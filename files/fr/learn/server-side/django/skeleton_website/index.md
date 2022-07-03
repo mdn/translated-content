@@ -47,20 +47,20 @@ Cet article décrit comment créer le squelette du site web du projet. Ensuite, 
 
 La création est aisée:
 
-1.  Utilisez la commande `django-admin` pour créer le dossier du projet ainsi que les sous-dossiers et fichiers de base ainsi que le script de gestion du projet (**manage.py**).
-2.  Utilisez **manage.py** pour créer une ou plusieurs _applications_ du projet.
+1. Utilisez la commande `django-admin` pour créer le dossier du projet ainsi que les sous-dossiers et fichiers de base ainsi que le script de gestion du projet (**manage.py**).
+2. Utilisez **manage.py** pour créer une ou plusieurs _applications_ du projet.
 
     > **Note :** Un site web consiste en une ou plusieurs sections, par exemple un site principal, un blog, un wiki,... La bonne pratique avec Django est de réaliser chacun des composants comme des applications séparées qui pourront éventuellement être réutilisées dans d'autres projets.
 
-3.  Enregistrez la nouvelle application dans le projet.
-4.  Liez les urls et chemins pour chaque application.
+3. Enregistrez la nouvelle application dans le projet.
+4. Liez les urls et chemins pour chaque application.
 
 Pour [le site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website), le dossier du site web et celui du projet auront le même nom _locallibrary_. Une seule application _catalog_ sera utilisée. La hiérachie de dossier du projet à la forme ci-dessous :
 
 ```bash
 locallibrary/         # Website folder
-    manage.py         # Script to run Django tools for this project (created using django-admin)
-    locallibrary/     # Website/project folder (created using django-admin)
+    manage.py         # Script to run Django tools for this project (created using django-admin)
+    locallibrary/     # Website/project folder (created using django-admin)
     catalog/          # Application folder (created using manage.py)
 ```
 
@@ -77,7 +77,7 @@ mkdir django_projects
 cd django_projects
 ```
 
-Pour créer un nouveau projet avec le quadriciel Django, il suffit d'utiliser la commande  `django-admin startproject`. Le résultat de cette commande sera un sous-dossier du nom du projet dans lequel il suffit de s'y déplacer comme indiqué ci-dessous :
+Pour créer un nouveau projet avec le quadriciel Django, il suffit d'utiliser la commande  `django-admin startproject`. Le résultat de cette commande sera un sous-dossier du nom du projet dans lequel il suffit de s'y déplacer comme indiqué ci-dessous :
 
 ```bash
 django-admin startproject locallibrary
@@ -88,17 +88,19 @@ La commande `django-admin` crée une arboresence contenant des fichiers et un so
 
 ```bash
 locallibrary/
-    manage.py
-    locallibrary/
+    manage.py
+    locallibrary/
         __init__.py
-        settings.py
-        urls.py
-        wsgi.py
+        settings.py
+        urls.py
+        wsgi.py
 ```
 
 Votre répertoire de travail est de la forme :
 
-    ../django_projects/locallibrary/
+```
+../django_projects/locallibrary/
+```
 
 Le sous-dossier _locallibrary_ permettra de gérer les requêtes web, il contient :
 
@@ -117,11 +119,11 @@ La commande ci-dessous va créer l'application _catalog_. Vous devez être dans 
 python3 manage.py startapp catalog
 ```
 
-> **Note :** La commande ci-dessus est exécutée dans un environnement Linux/macOS X. Sous Windows, il se peut que la commande soit : `py -3 manage.py startapp catalog`
+> **Note :** La commande ci-dessus est exécutée dans un environnement Linux/macOS X. Sous Windows, il se peut que la commande soit : `py -3 manage.py startapp catalog`
 >
 > Si vous travaillez dans un environnement Windows, l'ensemble de la série didactique est écrite pour un environnement Linux/MacOS. Pensez, alors, à remplacer les commandes `python3` par `py -3`.
 >
-> Si vous utilisez une version postérieure à la version 3.7.0, la commande devrait désormais être  `py manage.py startapp catalog`
+> Si vous utilisez une version postérieure à la version 3.7.0, la commande devrait désormais être  `py manage.py startapp catalog`
 
 Cet outil crée un nouveau dossier, du nom de l'application, et le peuple de fichiers essentiels. La plupart des fichiers ont des noms caractéristiques de leur fonction dans le fonctionnement de Django (par exemple, les vues sont traitées dans **views.py**, le modèle de données dans **models.py**, etc.). Ces fichiers contiennent les éléments minimaux nécessaires à leur utilisation dans le projet.
 
@@ -129,16 +131,16 @@ Le dossier projet _locallibrary_ est agrémenté d'un nouveau sous-dossier _cata
 
 ```bash
 locallibrary/
-    manage.py
-    locallibrary/
-    catalog/
-        admin.py
-        apps.py
-        models.py
-        tests.py
-        views.py
-        __init__.py
-        migrations/
+    manage.py
+    locallibrary/
+    catalog/
+        admin.py
+        apps.py
+        models.py
+        tests.py
+        views.py
+        __init__.py
+        migrations/
 ```
 
 A ceci s'ajoute :
@@ -174,7 +176,7 @@ Le nouvel enregistrement défini l'objet pour cette nouvelle application avec le
 
 Dès à présent, la base de données doit être décrite. Il est souvent recommandé pour minimiser une transition délicate d'utiliser la même base de données en développement et en production. La documentation concernant les [bases de données](https://docs.djangoproject.com/fr/2.2/ref/settings/#databases) prises en charge sont bien décrites sur le site du projet Django.
 
-Le système de gestion de base de données (SGBD) SQLite sera utilisé dans le projet de cette série didactique ; nous n'aurons pas d'accès concurents massifs et ce système ne requiert pas  de paramétrages complémentaires. Ci-dessous la définition dans **settings.py** est nécessaire pour utiliser ce SGBD :
+Le système de gestion de base de données (SGBD) SQLite sera utilisé dans le projet de cette série didactique ; nous n'aurons pas d'accès concurents massifs et ce système ne requiert pas de paramétrages complémentaires. Ci-dessous la définition dans **settings.py** est nécessaire pour utiliser ce SGBD :
 
 ```python
 DATABASES = {
@@ -202,29 +204,29 @@ Il y a deux paramètres à connaître, même s'il ne seront pas modifiés pour l
 
 La création du site web s'appuie sur un routage d'URL et une gestion de la cartographie des URLs dans le fichier **urls.py**) présent dans le dossier du projet. Même si vous pouvez directement utiliser ce fichier pour gérer le routage des URLs, il est recommandé d'utiliser un mécanisme de subsidiarité avec une gestion d'URLs par application. En outre cette méthode de délégation permet une meilleure poratbilité de vos développements dans vos différents projets.
 
-A l'ouverture du fichier **locallibrary/locallibrary/urls.py**,  vous pouvez remarquer les premières instructions sur la manière de gérer la cartographie des URLs.
+A l'ouverture du fichier **locallibrary/locallibrary/urls.py**,  vous pouvez remarquer les premières instructions sur la manière de gérer la cartographie des URLs.
 
 ```python
 """locallibrary URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.1/topics/http/urls/
+    https://docs.djangoproject.com/en/2.1/topics/http/urls/
 Examples:
 Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
 Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
 Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
 ]
 ```
 
@@ -232,7 +234,7 @@ Le routage des URLs est géré à l'aide de la variable `urlpatterns`. Elle cons
 
 > **Note :** Dans la fonction `path()`, une route est une chaîne de caractères définissant une URL ou un motif d'URL. Cette chaîne peut inclure des variables nommées (entre < et >, par exemple `'catalog/<id>/'`). Ce motif correspondra à une URL du type **/catalog/*des_caractères*/**. La chaîne *des_caractères* sera transmis à la vue comme une chaîne de caractère associée à une variable nommée `id`. Ce point sera vu en détails plus loin dans la série didactique.
 
-Ajoutez les lignes ci-dessous à la fin du fichier de manière à ajouter dans la variable `urlpatterns` une nouvelle entrée à la liste des routes. Cette nouvelle entrée permet une nouvelle route pour `catalog/` dont la gestion est déléguée au fichier **urls.py** du module **catalog** (c'est-à-dire le fichier **catalog/urls.py**).
+Ajoutez les lignes ci-dessous à la fin du fichier de manière à ajouter dans la variable `urlpatterns` une nouvelle entrée à la liste des routes. Cette nouvelle entrée permet une nouvelle route pour `catalog/` dont la gestion est déléguée au fichier **urls.py** du module **catalog** (c'est-à-dire le fichier **catalog/urls.py**).
 
 ```python
 # Use include() to add paths from the catalog application
@@ -240,7 +242,7 @@ from django.urls import include
 from django.urls import path
 
 urlpatterns += [
-    path('catalog/', include('catalog.urls')),
+    path('catalog/', include('catalog.urls')),
 ]
 ```
 
@@ -252,7 +254,7 @@ Ajoutez les lignes ci-dessous au bas du fichier **urls.py** :
 #Add URL maps to redirect the base URL to our application
 from django.views.generic import RedirectView
 urlpatterns += [
-    path('', RedirectView.as_view(url='/catalog/', permanent=True)),
+    path('', RedirectView.as_view(url='/catalog/', permanent=True)),
 ]
 ```
 
@@ -271,18 +273,20 @@ Django ne s'occupe pas nativement de fichiers statiques tels que des fichiers CS
 
 Ajoutez les lignes ci-dessous au bas du fichier **urls.py** :
 
-    # Use static() to add url mapping to serve static files during development (only)
-    from django.conf import settings
-    from django.conf.urls.static import static
+```python
+# Use static() to add url mapping to serve static files during development (only)
+from django.conf import settings
+from django.conf.urls.static import static
 
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+```
 
 > **Note :** Il y a plusieurs manière pour ajouter des routes à la variable `urlpatterns` (dans les étapes décrites ci-dessus nous avons ajouté petit à patir en utilisant l'opérateur `+=` pour bien séparer les étapes). Il est en réalité tout à fait possible de tout regrouper dans une seule étape :
 >
 > ```python
 > urlpatterns = [
->     path('admin/', admin.site.urls),
->     path('catalog/', include('catalog.urls')),
+>     path('admin/', admin.site.urls),
+>     path('catalog/', include('catalog.urls')),
 >     path('', RedirectView.as_view(url='/catalog/')),
 > ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 > ```
@@ -329,7 +333,7 @@ L'option `migrate` applique les modifications sur la base de données (Django tr
 
 Pendant la phase de développement, vous pouvez tester votre serveur sur un mode local et le consulter avec votre navigateur.
 
-> **Note :** Le serveur local n'est ni robuste ni performant, il n'est donc pas fait pour être utilisé en production, mais il permet d'être autonome pour les travaux de développement. La configuration par défaut de ce serveur est telle que votre site est accessible à l'URL `http://127.0.0.1:8000/`. Cependant, vous pouvez modifier ces paramètres et pour plus d'information vous pouvez consulter la documentation sur le site Django des commandes [django-admin and manage.py: runserver](https://docs.djangoproject.com/fr/2.2/ref/django-admin/#runserver).
+> **Note :** Le serveur local n'est ni robuste ni performant, il n'est donc pas fait pour être utilisé en production, mais il permet d'être autonome pour les travaux de développement. La configuration par défaut de ce serveur est telle que votre site est accessible à l'URL `http://127.0.0.1:8000/`. Cependant, vous pouvez modifier ces paramètres et pour plus d'information vous pouvez consulter la documentation sur le site Django des commandes [django-admin and manage.py: runserver](https://docs.djangoproject.com/fr/2.2/ref/django-admin/#runserver).
 
 Pour démarrer le serveur local, il suffit d'exécuter la commande ci-dessous dans le répertoire du projet (dossier où se trouver **manage.py**) :
 
@@ -371,7 +375,7 @@ Maintenant que ceci est fait, [le site web Local Library](/fr/docs/Learn/Server-
 
 ## A voir aussi...
 
-- [Écriture de votre première application Django, 1ère partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial01/)  (Django docs)
+- [Écriture de votre première application Django, 1ère partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial01/)  (Django docs)
 - [Applications](https://docs.djangoproject.com/fr/2.2/ref/applications/#configuring-applications) (Django Docs). Contains information on configuring applications.
 
 {{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}

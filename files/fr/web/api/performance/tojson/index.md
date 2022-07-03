@@ -42,8 +42,7 @@ console.log("json = " + JSON.stringify(js));
 
 | Spécification                                                                                                                | Statut                                       | Commentaire               |
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------- |
-| {{SpecName('Highres Time Level 2', '#dom-performance-tojson', 'toJSON()
-        serializer')}} | {{Spec2('Highres Time Level 2')}} | Définition de `toJson()`. |
+| {{SpecName('Highres Time Level 2', '#dom-performance-tojson', 'toJSON() serializer')}} | {{Spec2('Highres Time Level 2')}} | Définition de `toJson()`. |
 
 ## Compatibilité des navigateurs
 

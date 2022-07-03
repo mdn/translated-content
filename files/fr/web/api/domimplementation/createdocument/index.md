@@ -15,7 +15,9 @@ La méthode **`DOMImplementation.createDocument()`** crée et retourne un {{domx
 
 ## Syntaxe
 
-    doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, documentType);
+```js
+doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, documentType);
+```
 
 ### Paramètres
 
@@ -30,7 +32,7 @@ La méthode **`DOMImplementation.createDocument()`** crée et retourne un {{domx
 <!---->
 
 - _documentType_ {{optional_inline}}
-  - : Est le [`DocumentType`](/fr/docs/Web/API/DocumentType) du document à créer. Vaut `null `par défaut.
+  - : Est le [`DocumentType`](/fr/docs/Web/API/DocumentType) du document à créer. Vaut `null` par défaut.
 
 <!---->
 

@@ -19,7 +19,9 @@ La méthode **`set()`** ajoute un nouvel élément avec une `clé` et une `valeu
 
 ## Syntaxe
 
-    maMap.set(clé, valeur);
+```js
+maMap.set(clé, valeur);
+```
 
 ### Paramètres
 
@@ -64,7 +66,7 @@ maMap.set('truc', 'toto')
 | Spécification                                                                                | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-map.prototype.set', 'Map.prototype.set')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.set', 'Map.prototype.set')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-map.prototype.set', 'Map.prototype.set')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

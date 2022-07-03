@@ -21,7 +21,9 @@ La fonction **`Math.hypot()`** renvoie la racine carrée de la somme des carrés
 
 ## Syntaxe
 
-    Math.hypot([valeur1[,valeur2, ...]])
+```js
+Math.hypot([valeur1[,valeur2, ...]])
+```
 
 ### Paramètres
 
@@ -97,7 +99,7 @@ Math.hypot = function (x, y) {
 | Spécification                                                                | État                         | Commentaires        |
 | ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-math.hypot', 'Math.hypot')}}     | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-math.hypot', 'Math.hypot')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-math.hypot', 'Math.hypot')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilité des navigateurs
 

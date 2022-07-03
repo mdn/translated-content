@@ -19,9 +19,9 @@ L'attribut {{htmlattrxref("value", "input")}} contient une chaîne de caractère
 
 > **Note :**
 >
-> 1.  Si plusieurs fichiers sont sélectionnés, la chaîne de caractères représente le chemin du premier fichier sélectionné. Il est possible d'accéder aux autres fichiers en JavaScript [grâce à la propriété `FileList`](</en-US/docs/Using_files_from_web_applications#Getting_information_about_selected_file(s)>).
-> 2.  Si aucun fichier n'est sélectionné, la chaîne de caractères sera vide (`""`).
-> 3.  La chaîne de caractères [est préfixée avec `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly) afin d'éviter la fuite d'informations sensibles concernant la structure des fichiers de l'utilisateur.
+> 1. Si plusieurs fichiers sont sélectionnés, la chaîne de caractères représente le chemin du premier fichier sélectionné. Il est possible d'accéder aux autres fichiers en JavaScript [grâce à la propriété `FileList`](</en-US/docs/Using_files_from_web_applications#Getting_information_about_selected_file(s)>).
+> 2. Si aucun fichier n'est sélectionné, la chaîne de caractères sera vide (`""`).
+> 3. La chaîne de caractères [est préfixée avec `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly) afin d'éviter la fuite d'informations sensibles concernant la structure des fichiers de l'utilisateur.
 
 ## Attributs supplémentaires
 
@@ -29,10 +29,10 @@ En complément des attributs partagés par l'ensemble des éléments {{HTMLEleme
 
 | Attribut                       | Description                                                                                               |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| `{{anch("accept")}}`     | Un ou plusieurs identifiants de type de fichier décrivants les types de fichier autorisés.                |
-| `{{anch("capture")}}`     | La source à utiliser pour capturer des images ou des vidéos.                                              |
-| `{{anch("files")}}`     | Un objet {{domxref("FileList")}} qui liste les fichiers choisis                                  |
-| `{{anch("multiple")}}` | Un attribut booléen qui, lorsqu'il est présent, indique que plusieurs fichiers peuvent être sélectionnés. |
+| [`accept`](#accept)     | Un ou plusieurs identifiants de type de fichier décrivants les types de fichier autorisés.                |
+| [`capture`](#capture)     | La source à utiliser pour capturer des images ou des vidéos.                                              |
+| [`files`](#files)     | Un objet {{domxref("FileList")}} qui liste les fichiers choisis                                  |
+| [`multiple`](#multiple) | Un attribut booléen qui, lorsqu'il est présent, indique que plusieurs fichiers peuvent être sélectionnés. |
 
 ### {{htmlattrdef("accept")}}
 
@@ -65,7 +65,7 @@ En complément des attributs précédents, les éléments `<input type="file">` 
 
 | Attribut                               | Description                                                                                                                               |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("webkitdirectory")}}` | Un attribut booléen qui indique si l'utilisateur peut choisir un répertoire (ou plusieurs si `{{anch("multiple")}}` est présent). |
+| [`webkitdirectory`](#webkitdirectory) | Un attribut booléen qui indique si l'utilisateur peut choisir un répertoire (ou plusieurs si [`multiple`](#multiple) est présent). |
 
 ### {{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}
 
@@ -80,7 +80,7 @@ Un identifiant de type de fichier est une chaîne de caractères qui décrit le 
 - Une extension de fichier valide, sensible à la casse et qui commence par un point (« . »). Par exemple : `.jpg`, `.pdf` ou `.doc`.
 - Un type MIME valide, sans extension.
 - La chaîne de caractères `audio/*` qui indique « n'importe quel fichier audio »
-- La chaîne de caractères `video/*` qui indique « n'importe quel fichier vidéo »
+- La chaîne de caractères `video/*` qui indique « n'importe quel fichier vidéo&nbsp;»
 - La chaîne de caractères `image/*` qui indique « n'importe quel fichier image ».
 
 L'attribut `accept` prend comme valeur une chaîne de caractères composée d'un ou plusieurs identifiants de type, séparés par des virgules. Ainsi, si un sélecteur de fichier doit permettre de sélectionner des images ou des documents PDF, on pourra écrire :
@@ -125,7 +125,7 @@ Lorsqu'on envoie le formulaire de l'exemple, le nom de chaque fichier sera ajout
 
 ### Obtenir des informations sur les fichiers sélectionnés
 
-Les fichiers sélectionnés peuvent être obtenus sous la forme d'un objet {{domxref("FileList")}} renvoyé par la propriété `HTMLInputElement.files` de l'élement du DOM. Cet objet est une liste d'objets {{domxref("File")}}. Un objet `FileList` se comporte comme un tableau et on peut donc consulter sa longueur (la propriété `length`) afin de connaître le nombre de fichiers sélectionnés.
+Les fichiers sélectionnés peuvent être obtenus sous la forme d'un objet {{domxref("FileList")}} renvoyé par la propriété `HTMLInputElement.files` de l'élement du DOM. Cet objet est une liste d'objets {{domxref("File")}}. Un objet `FileList` se comporte comme un tableau et on peut donc consulter sa longueur (la propriété `length`) afin de connaître le nombre de fichiers sélectionnés.
 
 Chaque objet `File` contient les informations suivantes :
 
@@ -184,15 +184,15 @@ Dans tous les cas (et comme pour les autres éléments envoyés au serveur), il 
 
 ### Notes
 
-1.  À partir de {{Gecko("2.0")}}, appeler la méthode `click()` sur un élément de type `file` ouvre le sélecteur de fichier et permet à un utilisateur de sélectionner les fichiers sur son système d'opération. Pour plus d'exemples, voir Utiliser des fichiers avec des applications web.
-2.  Il n'est pas possible de définir la valeur du sélecteur de fichier via un script. Le code suivant n'aura aucun effet :
+1. À partir de {{Gecko("2.0")}}, appeler la méthode `click()` sur un élément de type `file` ouvre le sélecteur de fichier et permet à un utilisateur de sélectionner les fichiers sur son système d'opération. Pour plus d'exemples, voir Utiliser des fichiers avec des applications web.
+2. Il n'est pas possible de définir la valeur du sélecteur de fichier via un script. Le code suivant n'aura aucun effet :
 
     ```js
     const input = document.querySelector("input[type=file]");
     input.value = "toto";
     ```
 
-3.  Lorsqu'on choisit un fichier via `<input type="file">`, le chemin réel du fichier source n'est pas transmis dans la valeur de l'attribut `value` pour des raisons de sécurité. À la place, on a le nom du fichier précédé du chemin `C:\fakepath\`. Cela provient de raisons historiques, est pris en charge par la plupart des navigateurs modernes. Cela a même été [inscrit dans la spécification](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
+3. Lorsqu'on choisit un fichier via `<input type="file">`, le chemin réel du fichier source n'est pas transmis dans la valeur de l'attribut `value` pour des raisons de sécurité. À la place, on a le nom du fichier précédé du chemin `C:\fakepath\`. Cela provient de raisons historiques, est pris en charge par la plupart des navigateurs modernes. Cela a même été [inscrit dans la spécification](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
 
 ## Exemples
 
@@ -389,7 +389,7 @@ Et voici le résultat :
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères ({{domxref("DOMString")}}) qui
         représente le chemin du fichier sélectionné.

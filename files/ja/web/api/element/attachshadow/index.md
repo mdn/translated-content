@@ -85,7 +85,7 @@ attachShadow(init)
 
 ## 例
 
-以下の例は [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) のデモを使用しています([実行例](https://mdn.github.io/web-components-examples/word-count-web-component/))。 
+以下の例は [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) のデモを使用しています([実行例](https://mdn.github.io/web-components-examples/word-count-web-component/))。
 コードの途中で `attachShadow()` を使ってシャドウルートを作成し、そこにカスタム要素の中身を取り付けているのがわかると思います。
 
 ```js

@@ -74,7 +74,7 @@ L'attribut `title` est très problématique pour :
 Cela est dû à une prise en charge hétérogène de la part des navigateurs. Si on souhaite avoir une bulle d'information, mieux vaudra [utiliser une technique plus accessible](https://inclusive-components.design/tooltips-toggletips/).
 
 - [Utiliser l'attribut HTML `title` - The Paciello Group (en anglais)](https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/)
-- _[Tooltips & Toggletips - Inclusive Components](https://inclusive-components.design/tooltips-toggletips/)_[ (en anglais)](https://inclusive-components.design/tooltips-toggletips/)
+- [_Tooltips & Toggletips - Inclusive Components_ (en anglais)](https://inclusive-components.design/tooltips-toggletips/)
 - [_The Trials and Tribulations of the Title Attribute_ (en anglais) - 24 Accessibility](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/)
 
 ## Spécifications

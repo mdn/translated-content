@@ -18,7 +18,7 @@ Exécute JavaScript dans la fenêtre à laquelle les devtools sont attachés.
 
 C'est un peu comme utiliser {{WebExtAPIRef("tabs.executeScript()")}} pour joindre un script de contenu, mais avec deux différences principales:
 
-Tout d'abord, le JavaScript peut utiliser un ensemble de [commandes spéciales que les navigateurs fournissent généralement dans leur implémentation de console devtools ](#Helpers): par exemple, en utilisant "$0" pour designer l'élément actuellement sélectionné dans l'inspecteur.
+Tout d'abord, le JavaScript peut utiliser un ensemble de [commandes spéciales que les navigateurs fournissent généralement dans leur implémentation de console devtools](#Helpers)&nbsp;: par exemple, en utilisant "$0" pour designer l'élément actuellement sélectionné dans l'inspecteur.
 
 Deuxièmement, le JavaScript que vous exécutez peut voir les modifications apportées à la page par des scripts que la page a chargés. Cela contraste avec les scripts de contenu, qui voient la page [telle qu'elle existerait si aucun script de page n'était pas chargé](/fr/Add-ons/WebExtensions/Content_scripts#DOM_access). Cependant, notez que l'isolement fourni par les scripts de contenu est une fonction de sécurité délibérée, destinée à rendre plus difficile la confusion ou la subversion des WebExtensions par des pages web malveillantes ou simplement non coopératives en redéfinissant les fonctions et les propriétés du DOM. Cela signifie que vous devez être très prudent si vous renoncez à cette protection en utilisant eval(), et devrait utiliser les scripts de contenu, sauf si vous devez utiliser eval().
 
@@ -56,7 +56,7 @@ var evaluating = browser.devtools.inspectedWindow.eval(
   - : `string`. L'expression JavaScript à évaluer. La chaîne doit évaluer un objet qui peut être représenté comme JSON, ou une exception sera lancée. Par exemple, l'expression ne doit pas évaluer une fonction.
 - `options`{{optional_inline}}
 
-  - : `object`. Options pour la fonction  (Notez que Firefox ne supporte pas encore cette option), comme suit :
+  - : `object`. Options pour la fonction (Notez que Firefox ne supporte pas encore cette option), comme suit :
 
     - `frameURL`{{optional_inline}}
       - : `string`. L'URL du cadre dans lequel à évaluer l'expression. Si cela est supprimé, l'expression est évaluée dans la trame principale de la fenêtre.

@@ -19,7 +19,7 @@ Vous pouvez utiliser cette fonction pour rechercher des pages Web HTTP(S) normal
 
 Vous pouvez rendre la recherche sensible à la casse et la faire correspondre uniquement à des mots entiers.
 
-Par défaut, la fonction renvoie juste le nombre de correspondances trouvées. En transmettant les options `includeRangeData` et  `includeRectData`, vous pouvez obtenir plus d'informations sur l'emplacement des correspondances dans l'onglet cible.
+Par défaut, la fonction renvoie juste le nombre de correspondances trouvées. En transmettant les options `includeRangeData` et  `includeRectData`, vous pouvez obtenir plus d'informations sur l'emplacement des correspondances dans l'onglet cible.
 
 Cette fonction stocke les résultats en interne, donc la prochaine fois qu'une extension appelle {{WebExtAPIRef("find.highlightResults()")}}, alors les résultats de cet appel _find_ seront mis en surbrillance, jusqu'à ce que quelqu'un appelle `find()`.
 
@@ -45,7 +45,7 @@ browser.find.find(
     - `tabId`
       - : `integer`. ID de l'onglet à rechercher. Par défaut à l'onglet actif
     - `caseSensitive`
-      - : `boolean`. Si true, la recherche est sensible à la casse. Par défault à  `false`.
+      - : `boolean`. Si true, la recherche est sensible à la casse. Par défault à  `false`.
     - `entireWord`
       - : `boolean`. Comparaison seulement entre les mots entiers : ainsi "Tok" ne sera pas comparé dans "Tokyo". Par défaut à `false`.
     - `includeRangeData`
@@ -61,14 +61,14 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
   - : `integer`. Le nombre de résultat trouvés.
 - `rangeData`{{optional_inline}}
 
-  - : `array`. Si `includeRangeData` a été donné dans le paramètre  `options`, cette propriété sera incluse. Il est fourni sous la forme d'un tableau d'objets `RangeData`, un pour chaque correspondance. Chaque objet `RangeData` décrit où la correspondance a été trouvée dans l'arborescence DOM. Cela permettrait, par exemple, une extension pour obtenir le texte entourant chaque correspondance, afin d'afficher le contexte pour les correspondances.
+  - : `array`. Si `includeRangeData` a été donné dans le paramètre  `options`, cette propriété sera incluse. Il est fourni sous la forme d'un tableau d'objets `RangeData`, un pour chaque correspondance. Chaque objet `RangeData` décrit où la correspondance a été trouvée dans l'arborescence DOM. Cela permettrait, par exemple, une extension pour obtenir le texte entourant chaque correspondance, afin d'afficher le contexte pour les correspondances.
 
-    Les élements correspondent aux éléments données dans `rectData`, donc `rangeData[i]` décrit la même correspondance que  `rectData[i]`.
+    Les élements correspondent aux éléments données dans `rectData`, donc `rangeData[i]` décrit la même correspondance que  `rectData[i]`.
 
     Chaque `RangeData` contient les propriétés suivantes :
 
     - `framePos`
-      - : L'index de l'image contenant la correspondance. 0 correspond à une fenêtre parente. Notez que l'ordre des objets dans un tableau  `rangeData` s'alignera séquentiellement avec l'ordre des index d'images : par exemple, `framePos` pour la première séquence d'objets `rangeData` sera 0, `framePos` pour la séquence suivante sera 1, et ainsi de suite.
+      - : L'index de l'image contenant la correspondance. 0 correspond à une fenêtre parente. Notez que l'ordre des objets dans un tableau  `rangeData` s'alignera séquentiellement avec l'ordre des index d'images : par exemple, `framePos` pour la première séquence d'objets `rangeData` sera 0, `framePos` pour la séquence suivante sera 1, et ainsi de suite.
     - `startTextNodePos`
       - : La position ordinale du noeud de texte dans lequel la correspondance a démarrée.
     - `endTextNodePos`
@@ -89,7 +89,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
       - : Un objet contenant deux propriétés, les deux tableaux :
 
         - `rectList`: un tableau d'objets ayant chacun quatre propriétés entières : `top`, `left`, `bottom`, `right`. Ceux-ci décrivent un rectangle par rapport à la partie supérieure gauche de la fenêtre.
-        - `textList`:  un tableau de chaînes, correspondant au tableau  `rectList`. L'entrée de `textList[i]` contient la partie du match délimitée par le rectangle de `rectList[i]`.
+        - `textList`:  un tableau de chaînes, correspondant au tableau  `rectList`. L'entrée de `textList[i]` contient la partie du match délimitée par le rectangle de `rectList[i]`.
 
         Par exemple, considérons une partie d'une page Web qui ressemble à ceci :
 
@@ -124,7 +124,7 @@ function found(results) {
 browser.find.find("banana").then(found);
 ```
 
-Rechercher "banana" dans tous les onglets (notez que cela nécessite la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabs", car il accède à `tab.url`):
+Rechercher "banana" dans tous les onglets (notez que cela nécessite la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabs", car il accède à `tab.url`):
 
 ```js
 async function findInAllTabs(allTabs) {
@@ -139,7 +139,7 @@ browser.tabs.query({}).then(findInAllTabs);
 
 ### Utilisation de rangeData
 
-Dans cet exemple, l'extension utilise `rangeData` pour obtenir le contexte dans lequel la correspondance a été trouvée. Le contexte est le  `textContent` complet du noeud dans lequel la correspondance a été trouvée. Si la correspondance s'étend sur des noeuds, le contexte est la concaténation du `textContent` de tous les noeuds étendus.
+Dans cet exemple, l'extension utilise `rangeData` pour obtenir le contexte dans lequel la correspondance a été trouvée. Le contexte est le  `textContent` complet du noeud dans lequel la correspondance a été trouvée. Si la correspondance s'étend sur des noeuds, le contexte est la concaténation du `textContent` de tous les noeuds étendus.
 
 Notez que pour des raisons de simplicité, cet exemple ne gère pas les pages contenant des cadres. Pour cela, vous devez divisez `rangeData` en groupes, un par frame, et executer le script dans chaque image.
 

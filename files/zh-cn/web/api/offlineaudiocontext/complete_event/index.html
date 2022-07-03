@@ -4,40 +4,40 @@ slug: Web/API/OfflineAudioContext/complete_event
 translation_of: Web/API/OfflineAudioContext/complete_event
 original_slug: Web/API/OfflineAudioContext/complete
 ---
-<p><font><font>{{DefaultAPISidebar("Web Audio API")}}</font></font></p>
+<p>{{DefaultAPISidebar("Web Audio API")}}</p>
 
-<p><code>complete</code><font><font>当离线音频上下文的呈现完成时，将触发{{domxref("OfflineAudioContext")}}接口</font><font>的</font><font>事件。</font></font></p>
+<p><code>complete</code>当离线音频上下文的呈现完成时，将触发{{domxref("OfflineAudioContext")}}接口的事件。</p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><font><font>泡泡</font></font></th>
-   <td><font><font>没有</font></font></td>
+   <th scope="row">泡泡</th>
+   <td>没有</td>
   </tr>
   <tr>
-   <th scope="row"><font><font>取消</font></font></th>
-   <td><font><font>没有</font></font></td>
+   <th scope="row">取消</th>
+   <td>没有</td>
   </tr>
   <tr>
-   <th scope="row"><font><font>默认操作</font></font></th>
-   <td><font><font>没有</font></font></td>
+   <th scope="row">默认操作</th>
+   <td>没有</td>
   </tr>
   <tr>
-   <th scope="row"><font><font>接口</font></font></th>
-   <td><font><font>{{domxref( "OfflineAudioCompletionEvent")}}</font></font></td>
+   <th scope="row">接口</th>
+   <td>{{domxref( "OfflineAudioCompletionEvent")}}</td>
   </tr>
   <tr>
-   <th scope="row"><font><font>事件处理程序属性</font></font></th>
-   <td><font><font>{{domxref( "OfflineAudioContext.oncomplete")}}</font></font></td>
+   <th scope="row">事件处理程序属性</th>
+   <td>{{domxref( "OfflineAudioContext.oncomplete")}}</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="例子"><font><font>例子</font></font></h2>
+<h2 id="例子">例子</h2>
 
-<p><font><font>处理完成后，您可能希望使用</font></font><code>oncomplete</code><font><font>处理程序提示用户现在可以播放音频，并启用播放按钮：</font></font></p>
+<p>处理完成后，您可能希望使用<code>oncomplete</code>处理程序提示用户现在可以播放音频，并启用播放按钮：</p>
 
-<pre class="brush: js"><font><font>offlineAudioCtx.addEventListener('complete',()=&gt; {</font></font>
+<pre class="brush: js">offlineAudioCtx.addEventListener('complete',()=&gt; {
   console.log('Offline audio processing now complete');
   showModalDialog('Song processed and ready to play');
   playBtn.disabled = false;
@@ -77,6 +77,6 @@ original_slug: Web/API/OfflineAudioContext/complete
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><font><font>{{domxref( "离线音频上下文.oncomplete")}}</font></font></li>
- <li><a href="/en-US/docs/Web_Audio_API" title="/en-US/docs/CSS/Using_CSS_animations"><font><font>Web Audio API</font></font></a></li>
+ <li>{{domxref( "离线音频上下文.oncomplete")}}</li>
+ <li><a href="/en-US/docs/Web_Audio_API" title="/en-US/docs/CSS/Using_CSS_animations">Web Audio API</a></li>
 </ul>

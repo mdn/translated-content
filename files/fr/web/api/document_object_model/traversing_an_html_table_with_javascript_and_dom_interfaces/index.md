@@ -61,48 +61,60 @@ function generate_table() {
 
 {{ EmbedLiveSample('Création_d\'un_tableau_HTML_dynamiquement') }}
 
-Remarquez l'ordre dans lequel les éléments et le nœud texte sont créés :
+Remarquez l'ordre dans lequel les éléments et le nœud texte sont créés&nbsp;:
 
-1.  On crée d'abord l'élément \<table>.
-2.  Ensuite, l'élément \<tbody> qui est un enfant de l'élément \<table>.
-3.  Puis, grâce à une boucle, on crée les éléments \<tr>, qui sont des enfants de l'élément \<tbody>.
-4.  Pour chaque élément \<tr>, on emploie une boucle pour créer les éléments enfants \<td>.
-5.  Enfin pour chaque élément \<td>, on crée le nœud texte contenant le texte de la cellule du tableau.
+1. On crée d'abord l'élément \<table>.
+2. Ensuite, l'élément \<tbody> qui est un enfant de l'élément \<table>.
+3. Puis, grâce à une boucle, on crée les éléments \<tr>, qui sont des enfants de l'élément \<tbody>.
+4. Pour chaque élément \<tr>, on emploie une boucle pour créer les éléments enfants \<td>.
+5. Enfin pour chaque élément \<td>, on crée le nœud texte contenant le texte de la cellule du tableau.
 
-Après avoir créé les éléments \<table>, \<tbody>, \<tr>, \<td> et le nœud texte, on ajoute chaque objet à son parent dans l'ordre inverse :
+Après avoir créé les éléments \<table>, \<tbody>, \<tr>, \<td> et le nœud texte, on ajoute chaque objet à son parent dans l'ordre inverse&nbsp;:
 
-1.  On attache d'abord chaque nœud texte à son élément parent \<td> en utilisant
+1. On attache d'abord chaque nœud texte à son élément parent \<td> en utilisant
 
-        cell.appendChild(texte);
+    ```js
+    cell.appendChild(texte);
+    ```
 
-2.  Ensuite, on lie chaque élément \<td> à son élément \<tr> parent avec
+2. Ensuite, on lie chaque élément \<td> à son élément \<tr> parent avec
 
-        row.appendChild(cell);
+    ```js
+    row.appendChild(cell);
+    ```
 
-3.  Puis chaque \<tr> à son parent \<tbody> avec
+3. Puis chaque \<tr> à son parent \<tbody> avec
 
-        tablebody.appendChild(row);
+    ```js
+    tablebody.appendChild(row);
+    ```
 
-4.  Puis l'élément \<tbody> est attaché à son élément parent \<table> grace à
+4. Puis l'élément \<tbody> est attaché à son élément parent \<table> grace à
 
-        table.appendChild(tablebody);
+    ```js
+    table.appendChild(tablebody);
+    ```
 
-5.  Enfin, \<table> est rattaché à \<body> avec
+5. Enfin, \<table> est rattaché à \<body> avec
 
-        body.appendChild(table);
+    ```js
+    body.appendChild(table);
+    ```
 
 Souvenez-vous de cette technique, vous l'utiliserez souvent en programmant pour le DOM W3C. On crée d'abord les éléments du haut vers le bas, puis on attache les enfants aux parents dans l'ordre inverse.
 
-Voici l'HTML généré par ce code JavaScript :
+Voici l'HTML généré par ce code JavaScript&nbsp;:
 
-    ...
-    <table border="2">
-    <tr><td>la cellule est ligne 0 colonne 0</td><td>la cellule est ligne 0 colonne 1</td></tr>
-    <tr><td>la cellule est ligne 1 colonne 0</td><td>la cellule est ligne 1 colonne 1</td></tr>
-    </table>
-    ...
+```html
+...
+<table border="2">
+<tr><td>la cellule est ligne 0 colonne 0</td><td>la cellule est ligne 0 colonne 1</td></tr>
+<tr><td>la cellule est ligne 1 colonne 0</td><td>la cellule est ligne 1 colonne 1</td></tr>
+</table>
+...
+```
 
-Voici l'arborescence objet DOM créée par le code, pour l'élément TABLE et ses enfants :
+Voici l'arborescence objet DOM créée par le code, pour l'élément TABLE et ses enfants&nbsp;:
 
 ![](sample1-tabledom.jpg)
 
@@ -143,7 +155,7 @@ function set_background() {
 
 Dans cet exemple, on assigne à la variable `myP` l'objet DOM du second élément `p` du corps (body).
 
-1.  On récupère d'abord une liste de tous les éléments body avec
+1. On récupère d'abord une liste de tous les éléments body avec
 
     ```js
     myBody = document.getElementsByTagName("body")[0]
@@ -151,13 +163,13 @@ Dans cet exemple, on assigne à la variable `myP` l'objet DOM du second élémen
 
     Puisqu'il n'existe qu'un seul élément body dans un document HTML valide, cette liste ne comporte qu'un élément, que l'on récupère en sélectionnant le premier élément de la liste grace à `{{mediawiki.external(0)}}`.
 
-2.  Ensuite, on récupère tous les éléments p qui sont des enfants de body en utilisant
+2. Ensuite, on récupère tous les éléments p qui sont des enfants de body en utilisant
 
     ```js
     myBodyElements = myBody.getElementsByTagName("p");
     ```
 
-3.  Pour finir on prend le deuxième élément de la liste des éléments p avec
+3. Pour finir on prend le deuxième élément de la liste des éléments p avec
 
     ```js
     myP = myBodyElements[1];
@@ -165,10 +177,12 @@ Dans cet exemple, on assigne à la variable `myP` l'objet DOM du second élémen
 
 ![](sample2a2.jpg)
 
-Une fois que vous avez l'objet DOM pour un élément HTML, vous pouvez modifier ses propriétés. Si par exemple vous voulez définir la propriété couleur d'arrière-plan du style, ajoutez simplement :
+Une fois que vous avez l'objet DOM pour un élément HTML, vous pouvez modifier ses propriétés. Si par exemple vous voulez définir la propriété couleur d'arrière-plan du style, ajoutez simplement&nbsp;:
 
-    myP.style.background = "rgb(255,0,0)";
-    // ajoute une propriété de style inline
+```js
+myP.style.background = "rgb(255,0,0)";
+// ajoute une propriété de style inline
+```
 
 ### Création de nœuds texte avec `document.createTextNode("..")`
 
@@ -184,34 +198,42 @@ Ce morceau de code crée un nœud de type TEXT_NODE qui contient la donnée text
 
 En invoquant `myP.appendChild` ({{mediawiki.external('node_element')}}) , vous définissez `element_nœud` comme un nouvel enfant du second élément `p` (`myP` a été défini plus haut comme étant le second élément p).
 
-    myP.appendChild(noeudTexte);
+```js
+myP.appendChild(noeudTexte);
+```
 
-En exécutant cet exemple, vous pouvez remarquer que les mots « hello » et « world » ne sont pas séparés : `helloworld`. Quand vous parcourez la page HTML les deux nœuds semblent donc n'en former qu'un seul, rappelez-vous cependant qu'ils sont bien distincts dans le modèle de document. Le second nœud est de type TEXT_NODE, et est le second enfant de la seconde balise \<p>. Le schéma suivant situe ce nouvel objet dans l'arborescence du document :
+En exécutant cet exemple, vous pouvez remarquer que les mots «&nbsp;hello&nbsp;» et «&nbsp;world&nbsp;» ne sont pas séparés&nbsp;: `helloworld`. Quand vous parcourez la page HTML les deux nœuds semblent donc n'en former qu'un seul, rappelez-vous cependant qu'ils sont bien distincts dans le modèle de document. Le second nœud est de type TEXT_NODE, et est le second enfant de la seconde balise \<p>. Le schéma suivant situe ce nouvel objet dans l'arborescence du document&nbsp;:
 
 ![](sample2b2.jpg)
 
-> **Note :** L'utilisation de `createTextNode` et de `appendChild` permet aisément d'ajouter un espace entre ces deux mots. Notez cependant que la méthode `appendChild` ajoute le nouvel enfant à la suite de ceux déjà présents, à la manière de « world » placé après « hello ». Pour ajouter un nœud texte entre « hello » et « world » (par exemple un espace), utilisez `insertBefore` à la place de `appendChild`.
+> **Note :** L'utilisation de `createTextNode` et de `appendChild` permet aisément d'ajouter un espace entre ces deux mots. Notez cependant que la méthode `appendChild` ajoute le nouvel enfant à la suite de ceux déjà présents, à la manière de «&nbsp;world&nbsp;» placé après «&nbsp;hello&nbsp;». Pour ajouter un nœud texte entre «&nbsp;hello&nbsp;» et «&nbsp;world&nbsp;» (par exemple un espace), utilisez `insertBefore` à la place de `appendChild`.
 
 ### Création de nouveaux éléments avec l'objet document et la méthode `createElement(...)`
 
-Vous pouvez créer de nouveaux éléments, dont des éléments HTML, avec `createElement`. Pour créer un élément \<p> enfant de l'élément \<body>, vous pouvez vous servir de `body` défini dans l'exemple précédent et lui greffer un nouvel élément nœud. Pour ce faire, invoquez `document.createElement("nombalise")`. Voici un exemple :
+Vous pouvez créer de nouveaux éléments, dont des éléments HTML, avec `createElement`. Pour créer un élément \<p> enfant de l'élément \<body>, vous pouvez vous servir de `body` défini dans l'exemple précédent et lui greffer un nouvel élément nœud. Pour ce faire, invoquez `document.createElement("nombalise")`. Voici un exemple&nbsp;:
 
-    nouveauNoeudBALISEP = document.createElement("p");
-    body.appendChild(nouveauNoeudBALISEP);
+```js
+nouveauNoeudBALISEP = document.createElement("p");
+body.appendChild(nouveauNoeudBALISEP);
+```
 
 ![](sample2c.jpg)
 
 ### Suppression de nœuds avec la méthode `removeChild(...)`
 
-Tous les nœuds peuvent être supprimés. La ligne ci-dessous supprime de `myP` (deuxième élément \<p>) le nœud texte contenant le mot « world » :
+Tous les nœuds peuvent être supprimés. La ligne ci-dessous supprime de `myP` (deuxième élément \<p>) le nœud texte contenant le mot «&nbsp;world&nbsp;»&nbsp;:
 
-    myP.removeChild(noeudTexte);
+```js
+myP.removeChild(noeudTexte);
+```
 
-Vous pouvez ensuite ajouter `monNoeudTexte` (contenant `"world"`) dans l'élément \<p> récemment créé :
+Vous pouvez ensuite ajouter `monNoeudTexte` (contenant `"world"`) dans l'élément \<p> récemment créé&nbsp;:
 
-    nouveauNoeudBALISEP.appendChild(noeudTexte);
+```js
+nouveauNoeudBALISEP.appendChild(noeudTexte);
+```
 
-L'arborescence des objets se présente désormais comme ceci :
+L'arborescence des objets se présente désormais comme ceci&nbsp;:
 
 ![](sample2d.jpg)
 
@@ -225,7 +247,7 @@ Jusqu'à la fin de cet article, nous travaillons de nouveau sur Exemple1.html. L
 
 ### Création et insertion des éléments dans l'arborescence
 
-On peut décomposer la création du tableau de Exemple1.html en trois étapes :
+On peut décomposer la création du tableau de Exemple1.html en trois étapes&nbsp;:
 
 - Récupérer l'objet body (c'est le premier élément de l'objet document).
 - Créer tous les éléments.
@@ -233,7 +255,7 @@ On peut décomposer la création du tableau de Exemple1.html en trois étapes :
 
 Le code source qui suit est un exemple commenté qui crée le tableau de Exemple1.
 
-> **Note :** Il y a une ligne de code supplémentaire à la fin de la fonction `start()`, qui définit la propriété bordure du tableau en employant la méthode `setAttribute`. `setAttribute` utilise deux arguments : le nom de l'attribut et sa valeur, et permet de définir n'importe quelle propriété de n'importe quel élément.
+> **Note :** Il y a une ligne de code supplémentaire à la fin de la fonction `start()`, qui définit la propriété bordure du tableau en employant la méthode `setAttribute`. `setAttribute` utilise deux arguments&nbsp;: le nom de l'attribut et sa valeur, et permet de définir n'importe quelle propriété de n'importe quel élément.
 
 ```html
 <head>
@@ -305,7 +327,7 @@ mybody.appendChild(currenttext);
 
 ### Récupérer la valeur d'un attribut
 
-A la fin d'Exemple1, l'appel à `setAttribute` sur l'objet `table` définit la propriété `border` du tableau. Si vous désirez simplement récupérez la valeur de cet attribut, vous pouvez employer la méthode `getAttribute` :
+A la fin d'Exemple1, l'appel à `setAttribute` sur l'objet `table` définit la propriété `border` du tableau. Si vous désirez simplement récupérez la valeur de cet attribut, vous pouvez employer la méthode `getAttribute`&nbsp;:
 
 ```html
 mytable.getAttribute("border");
@@ -315,37 +337,39 @@ mytable.getAttribute("border");
 
 Une fois que vous avez l'objet dans une variable JavaScript, vous pouvez définir les propriétés directement. Le code qui suit est une version modifiée de Exemple1.html où les cellules de la seconde colonne sont cachées, et le fond de celles de la première colonne est rouge. Remarquez que la propriété de style y est définie directement.
 
-    <html>
-    <body onload="start()">
-    </body>
-    <script>
-        function start() {
-           var body  = document.getElementsByTagName("body")[0];
-           table     = document.createElement("table");
-           tablebody = document.createElement("tbody");
+```html
+<html>
+<body onload="start()">
+</body>
+<script>
+    function start() {
+        var body  = document.getElementsByTagName("body")[0];
+        table     = document.createElement("table");
+        tablebody = document.createElement("tbody");
 
-           for(var j = 0; j < 2; j++) {
-               row = document.createElement("tr");
-               for(var i = 0; i < 2; i++) {
-                   cell = document.createElement("td");
-                   text = document.createTextNode("la cellule est :" + i + j);
-                   cell.appendChild(text);
-                   row.appendChild(cell);
-                   // change la couleur de fond de la cellule
-                   // si la colonne est 0. Si la colonne est 1, cache la cellule
-                   if (i == 0) {
-                       cell.style.background = "rgb(255,0,0)";
-                   } else {
-                       cell.style.display = "none";
-                   }
-               }
-               tablebody.appendChild(row);
-           }
-           table.appendChild(tablebody);
-           body.appendChild(table);
+        for(var j = 0; j < 2; j++) {
+            row = document.createElement("tr");
+            for(var i = 0; i < 2; i++) {
+                cell = document.createElement("td");
+                text = document.createTextNode("la cellule est&nbsp;:" + i + j);
+                cell.appendChild(text);
+                row.appendChild(cell);
+                // change la couleur de fond de la cellule
+                // si la colonne est 0. Si la colonne est 1, cache la cellule
+                if (i == 0) {
+                    cell.style.background = "rgb(255,0,0)";
+                } else {
+                    cell.style.display = "none";
+                }
+            }
+            tablebody.appendChild(row);
         }
-    </script>
-    </html>
+        table.appendChild(tablebody);
+        body.appendChild(table);
+    }
+</script>
+</html>
+```
 
 #### Original Document Information
 

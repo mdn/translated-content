@@ -19,7 +19,9 @@ La méthode **`setBigInt64()`** permet d'enregister un entier signé sur 64 bits
 
 ## Syntaxe
 
-    dataview.setBigInt64(positionOctet, value [, littleEndian])
+```js
+dataview.setBigInt64(positionOctet, value [, littleEndian])
+```
 
 ### Paramètres
 

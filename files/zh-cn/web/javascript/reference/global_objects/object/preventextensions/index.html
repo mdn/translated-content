@@ -41,25 +41,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 
 <h2 id="Examples">例子</h2>
 
-<pre class="brush: js">// Object.preventExtensions将原对象变的不可扩展,并且返回原对象.
+<pre class="brush: js">// Object.preventExtensions 将原对象变的不可扩展，并且返回原对象。
 var obj = {};
 var obj2 = Object.preventExtensions(obj);
 obj === obj2;  // true
 
-// 字面量方式定义的对象默认是可扩展的.
+// 字面量方式定义的对象默认是可扩展的。
 var empty = {};
 Object.isExtensible(empty) //=== true
 
-// ...但可以改变.
+// ...但可以改变。
 Object.preventExtensions(empty);
 Object.isExtensible(empty) //=== false
 
-// 使用Object.defineProperty方法为一个不可扩展的对象添加新属性会抛出异常.
+// 使用 Object.defineProperty 方法为一个不可扩展的对象添加新属性会抛出异常。
 var nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
-Object.defineProperty(nonExtensible, "new", { value: 8675309 }); // 抛出TypeError异常
+Object.defineProperty(nonExtensible, "new", { value: 8675309 }); // 抛出 TypeError 异常
 
-// 在严格模式中,为一个不可扩展对象的新属性赋值会抛出TypeError异常.
+// 在严格模式中，为一个不可扩展对象的新属性赋值会抛出 TypeError 异常。
 function fail()
 {
   "use strict";

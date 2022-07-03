@@ -12,7 +12,7 @@ Parmi le plus important, cette interface expose la méthode {{domxref("ServiceWo
 ## Propriétés
 
 - {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
-  - : Retourne un objet {{domxref("ServiceWorker")}} si son état est `activated` (le même objet retourné par {{domxref("ServiceWorkerRegistration.active")}}). Cette propriété retourne `null` si la requête est un rechargement forcé (*Majuscule* + rechargement) ou si il n'y a pas de worker actif.
+  - : Retourne un objet {{domxref("ServiceWorker")}} si son état est `activated` (le même objet retourné par {{domxref("ServiceWorkerRegistration.active")}}). Cette propriété retourne `null` si la requête est un rechargement forcé (*Majuscule* + rechargement) ou si il n'y a pas de worker actif.
 
 <!---->
 
@@ -33,9 +33,9 @@ Parmi le plus important, cette interface expose la méthode {{domxref("ServiceWo
 - {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}}
   - : Crée ou met à jour un {{domxref("ServiceWorkerRegistration")}} pour un `scriptURL` donné.
 - {{domxref("ServiceWorkerContainer.getRegistration()")}}
-  - : Récupère un objet {{domxref("ServiceWorkerRegistration")}} dont l’URL de la portée correspond à l’URL du document fourni.  Si la méthode ne peut retourner un {{domxref("ServiceWorkerRegistration")}}, elle retourne une [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+  - : Récupère un objet {{domxref("ServiceWorkerRegistration")}} dont l’URL de la portée correspond à l’URL du document fourni.  Si la méthode ne peut retourner un {{domxref("ServiceWorkerRegistration")}}, elle retourne une [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 - {{domxref("ServiceWorkerContainer.getRegistrations()")}}
-  - : Retourne tous les  {{domxref("ServiceWorkerRegistration")}} associés à un `ServiceWorkerContainer` dans un tableau. Si la méthode ne peut retourner les {{domxref("ServiceWorkerRegistration")}}, elle retourne une [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+  - : Retourne tous les  {{domxref("ServiceWorkerRegistration")}} associés à un `ServiceWorkerContainer` dans un tableau. Si la méthode ne peut retourner les {{domxref("ServiceWorkerRegistration")}}, elle retourne une [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Exemples
 
@@ -75,6 +75,6 @@ if ('serviceWorker' in navigator) {
 
 - [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers : exemple basique](https://github.com/mdn/sw-test)
-- [Le ServiceWorker est-il prêt ?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Le ServiceWorker est-il prêt&nbsp;?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Utiliser les web workers](/fr/docs/Web/Guide/Performance/Using_web_workers)

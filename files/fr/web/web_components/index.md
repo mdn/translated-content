@@ -13,17 +13,17 @@ On essaie tant que possible de réutiliser du code. Cette réutilisation n'a pas
 
 Les composants web (<i lang="en">Web Components</i> en anglais) visent à résoudre ces problèmes. Il s'agit de trois technologies qui peuvent être combinées ensemble pour créer des éléments sur mesure avec des fonctionnalités encapsulées et qu'on peut réutiliser à volonté, sans risque de collisions.
 
-- **Les éléments personnalisés (<i lang="en">custom elements</i>)**&nbsp;: un ensemble d'API JavaScript qui permettent de définir des éléments personnalisés ainsi que leur comportement 
+- **Les éléments personnalisés (<i lang="en">custom elements</i>)**&nbsp;: un ensemble d'API JavaScript qui permettent de définir des éléments personnalisés ainsi que leur comportement.
 - **Le <i lang="en">Shadow DOM</i>**&nbsp;: un ensemble d'API JavaScript qui permettent d'attacher un DOM «&nbsp;sombre&nbsp;» encapsulé à un élément, qui est rendu séparément du DOM du document principal et de contrôler les fonctionnalités associées. Ainsi, les fonctionnalités d'un élément peuvent être gardées privées pour que la mise en forme et le script puissent être appliqués sans risque de collision avec les autres parties du document.
 - **Les gabarits HTML**&nbsp;: les éléments [`<template>`](/fr/docs/Web/HTML/Element/template) et [`<slot>`](/fr/docs/Web/HTML/Element/slot) permettent d'écrire des gabarits de balisage qui ne sont pas affichés sur la page et qui peuvent être réutilisés comme base de la structure d'un élément personnalisé.
 
 L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
 
-1.  La création d'une classe pour définir les fonctionnalités du composant web (par exemple avec l'utilisation de la syntaxe de [classe ECMAScript 2015](/fr/docs/Web/JavaScript/Reference/Classes)).
-2.  L'enregistrement du nouvel élément personnalisé avec la méthode [`CustomElementRegistry.define()`](/fr/docs/Web/API/CustomElementRegistry/define), à laquelle on passe le nom de l'élément à définir, la classe ou la fonction contenant les fonctionnalités et, optionnellement, l'élément duquel il hérite.
-3.  Si c'est nécessaire, l'attache d'un DOM sombre à l'élément personnalisé avec la méthode [`Element.attachShadow()`](/fr/docs/Web/API/Element/attachShadow). L'ajout d'éléments fils, de gestionnaires d'évènement, etc. au DOM sombre à l'aide des méthodes usuelles pour le DOM.
-4.  Si c'est nécessaire, la définition d'un gabarit HTML avec [`<template>`](/fr/docs/Web/HTML/Element/template) et [`<slot>`](/fr/docs/Web/HTML/Element/slot). Là encore, on utilisera des méthodes DOM usuelles pour cloner le gabarit et l'attacher au DOM sombre.
-5.  L'utilisation de l'élément personnalisé où on veut sur la page, comme pour tout autre élément HTML.
+1. La création d'une classe pour définir les fonctionnalités du composant web (par exemple avec l'utilisation de la syntaxe de [classe ECMAScript 2015](/fr/docs/Web/JavaScript/Reference/Classes)).
+2. L'enregistrement du nouvel élément personnalisé avec la méthode [`CustomElementRegistry.define()`](/fr/docs/Web/API/CustomElementRegistry/define), à laquelle on passe le nom de l'élément à définir, la classe ou la fonction contenant les fonctionnalités et, optionnellement, l'élément duquel il hérite.
+3. Si c'est nécessaire, l'attache d'un DOM sombre à l'élément personnalisé avec la méthode [`Element.attachShadow()`](/fr/docs/Web/API/Element/attachShadow). L'ajout d'éléments fils, de gestionnaires d'évènement, etc. au DOM sombre à l'aide des méthodes usuelles pour le DOM.
+4. Si c'est nécessaire, la définition d'un gabarit HTML avec [`<template>`](/fr/docs/Web/HTML/Element/template) et [`<slot>`](/fr/docs/Web/HTML/Element/slot). Là encore, on utilisera des méthodes DOM usuelles pour cloner le gabarit et l'attacher au DOM sombre.
+5. L'utilisation de l'élément personnalisé où on veut sur la page, comme pour tout autre élément HTML.
 
 ## Tutoriels
 

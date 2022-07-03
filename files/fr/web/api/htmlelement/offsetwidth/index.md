@@ -11,7 +11,9 @@ Renvoie la largeur totale d'un élément.
 
 ### Syntaxe
 
-    var offsetWidth = element.offsetWidth;
+```js
+var offsetWidth = element.offsetWidth;
+```
 
 `offsetWidth` est une propriété en lecture seule.
 
@@ -29,7 +31,7 @@ Typiquement, l'attribut `offsetWidth` est une mesure qui comprend les bordures d
 
 ### Notes
 
-`offsetWidth` est une propriété du modèle objet DHTML provenant de Microsoft Internet Explorer. On l'appelle parfois la largeur physique ou graphique d'un élément, ou sa largeur « border-box » (bordure et boîte).
+`offsetWidth` est une propriété du modèle objet DHTML provenant de Microsoft Internet Explorer. On l'appelle parfois la largeur physique ou graphique d'un élément, ou sa largeur «&nbsp;border-box&nbsp;» (bordure et boîte).
 
 ### Références
 

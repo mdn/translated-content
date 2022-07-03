@@ -5,11 +5,11 @@ translation_of: Web/HTTP/Headers/Expires
 ---
 {{HTTPSidebar}}
 
-Le header **`Expires`** contient la date/heure après laquelle la réponse est considérée comme dépréciée.
+Le header **`Expires`** contient la date/heure après laquelle la réponse est considérée comme dépréciée.
 
-Les dates invalides, telles que la valeur 0, représentent une date dans le passé et signifient que la ressource est expirée.
+Les dates invalides, telles que la valeur 0, représentent une date dans le passé et signifient que la ressource est expirée.
 
-Si un header {{HTTPHeader("Cache-Control")}} contient une directive "max-age" ou "s-max-age" dans la réponse, le header `Expires` sera ignoré.
+Si un header {{HTTPHeader("Cache-Control")}} contient une directive "max-age" ou "s-max-age" dans la réponse, le header `Expires` sera ignoré.
 
 <table class="properties">
   <tbody>
@@ -32,7 +32,9 @@ Si un header {{HTTPHeader("Cache-Control")}} contient une directive "max-age" o
 
 ## Syntaxe
 
-    Expires: <http-date>
+```
+Expires: <http-date>
+```
 
 ## Directives
 
@@ -41,7 +43,9 @@ Si un header {{HTTPHeader("Cache-Control")}} contient une directive "max-age" o
 
 ## Exemples
 
-    Expires: Wed, 21 Oct 2015 07:28:00 GMT
+```
+Expires: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Spécifications
 

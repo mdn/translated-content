@@ -19,7 +19,9 @@ document.designMode = "off";
 
 Rendre un document {{HTMLElement("iframe")}} éditable
 
-    iframe_node.contentDocument.designMode = "on";
+```js
+iframe_node.contentDocument.designMode = "on";
+```
 
 ## Spécifications
 

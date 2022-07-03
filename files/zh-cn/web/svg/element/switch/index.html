@@ -3,7 +3,7 @@ title: switch
 slug: Web/SVG/Element/switch
 tags:
   - SVG
-  - SVG容器
+  - SVG 容器
   - 元素
   - 需要示例
 translation_of: Web/SVG/Element/switch
@@ -12,7 +12,7 @@ translation_of: Web/SVG/Element/switch
 
 <p><code>switch</code>元素对它的直接子元素上的属性{{ SVGAttr("requiredFeatures") }}、属性{{ SVGAttr("requiredExtensions") }} 和 属性{{ SVGAttr("systemLanguage") }}按照顺序进行评估，然后处理和呈现第一个评估为<code>true</code>的子元素。 其他子元素会被绕过不会被呈现。如果某个子元素是容器元素比如说是一个{{ SVGElement("g") }}元素，那么整个子树会被处理呈现或者全部绕过不呈现。</p>
 
-<p>注意：属性<code>display</code>和属性<code>visibility</code>的值对<code>switch元素处理是不起作用的。</code>特别是， 在<code>switch元素的子元素上</code>设置<code style="font-style: normal;">display</code>为none，对<code>switch</code> 元素的true/false测试处理不起作用。</p>
+<p>注意：属性<code>display</code>和属性<code>visibility</code>的值对<code>switch 元素处理是不起作用的。</code>特别是， 在<code>switch 元素的子元素上</code>设置<code style="font-style: normal;">display</code>为 none，对<code>switch</code> 元素的 true/false 测试处理不起作用。</p>
 
 <h2 id="用法">用法</h2>
 
@@ -47,54 +47,4 @@ translation_of: Web/SVG/Element/switch
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>1.8</td>
-   <td>9.0</td>
-   <td>8.0</td>
-   <td>3.0.4</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>3.0</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>1.8</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>3.0.4</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>该表格基于<a href="/en-US/docs/SVG/Compatibility_sources" title="en/SVG/Compatibility sources">这些资源</a>。</p>
+{{Compat("svg.elements.switch")}}
