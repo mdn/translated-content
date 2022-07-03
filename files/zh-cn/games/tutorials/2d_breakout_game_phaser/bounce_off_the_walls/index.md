@@ -12,38 +12,38 @@ tags:
   - bouncing
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Physics", "Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Physics", "Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls")}}
 
-<div>
-<p>这是<a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a>的<strong>第</strong> 6 <strong>步</strong>。在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson06.html">Gamedev-Phaser-Content-Kit / demos / lesson06.html</a>完成本课后，您可以找到源代码。</p>
-</div>
+这是[Gamedev Phaser 教程](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser)的**第** 6 **步**。在[Gamedev-Phaser-Content-Kit / demos / lesson06.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson06.html)完成本课后，您可以找到源代码。
 
-<p>现在已经介绍了物理引擎，我们可以开始在游戏中实现碰撞检测 - 首先我们来看看墙壁。</p>
+现在已经介绍了物理引擎，我们可以开始在游戏中实现碰撞检测 - 首先我们来看看墙壁。
 
-<h2 id="反弹边界">反弹边界</h2>
+## 反弹边界
 
-<p>让我们的球从墙壁上弹起的最简单的方法是告诉框架，我们想要将<a href="/en-US/docs/Web/HTML/Element/canvas">元素可用于通过脚本（通常为JavaScript）绘制图形。 例如，它可以用于绘制图形，制作照片，甚至执行动画。 您可以（并且应该）在&lt;canvas>块内提供备用内容。 该内容将在不支持画布的旧浏览器和禁用JavaScript的浏览器中呈现。"><code>&lt;canvas&gt;</code></a>元素的边界视为墙壁，而不是让球移过它们。在 Phaser 中，可以使用该<code>collideWorldsBound</code>属性轻松实现。在现有<code>game.physics.enable()</code>方法调用之后添加此行：</p>
+让我们的球从墙壁上弹起的最简单的方法是告诉框架，我们想要将[元素可用于通过脚本（通常为 JavaScript）绘制图形。 例如，它可以用于绘制图形，制作照片，甚至执行动画。 您可以（并且应该）在\<canvas>块内提供备用内容。 该内容将在不支持画布的旧浏览器和禁用 JavaScript 的浏览器中呈现。">`<canvas>`](/en-US/docs/Web/HTML/Element/canvas)元素的边界视为墙壁，而不是让球移过它们。在 Phaser 中，可以使用该`collideWorldsBound`属性轻松实现。在现有`game.physics.enable()`方法调用之后添加此行：
 
-<pre class="brush: js">ball.body.collideWorldBounds = true;
-</pre>
+```js
+ball.body.collideWorldBounds = true;
+```
 
-<p>现在球将停在屏幕的边缘，而不是消失，但它不会弹起。为了使这种情况发生，我们必须设置它的 bounciness。在上一行下面添加以下行：</p>
+现在球将停在屏幕的边缘，而不是消失，但它不会弹起。为了使这种情况发生，我们必须设置它的 bounciness。在上一行下面添加以下行：
 
-<pre class="brush: js">ball.body.bounce.set(1);
-</pre>
+```js
+ball.body.bounce.set(1);
+```
 
-<p>再次尝试重新加载 index.html - 现在您应该看到球从墙壁上弹起并在画布区域内移动。</p>
+再次尝试重新加载 index.html - 现在您应该看到球从墙壁上弹起并在画布区域内移动。
 
-<h2 id="比较你的代码">比较你的代码</h2>
+## 比较你的代码
 
-<p>您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：</p>
+您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/dcw36opz/","","400")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/dcw36opz/","","400")}}
 
-<h2 id="下一步">下一步</h2>
+## 下一步
 
-<p>现在开始看起来更像是一个游戏，但是我们无法以任何方式控制它 - 现在是介绍<a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls">玩家挡板和控制的时候了</a>。</p>
+现在开始看起来更像是一个游戏，但是我们无法以任何方式控制它 - 现在是介绍[玩家挡板和控制的时候了](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls)。
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Physics", "Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Physics", "Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls")}}

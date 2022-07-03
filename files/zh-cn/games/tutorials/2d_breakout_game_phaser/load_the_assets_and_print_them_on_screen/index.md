@@ -14,58 +14,57 @@ tags:
 translation_of: >-
   Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Scaling", "Games/Workflows/2D_Breakout_game_Phaser/Move the ball")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Scaling", "Games/Workflows/2D_Breakout_game_Phaser/Move the ball")}}
 
-<div>
-<p>这是<a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第三步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson03.html">Gamedev-Phaser-Content-Kit / demos / lesson03.html</a>完成本课程后找到源代码</p>
-</div>
+这是[Gamedev Phaser 教程](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第三步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson03.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson03.html)完成本课程后找到源代码
 
-<p>我们的游戏将围绕屏幕滚动，弹出一个桨，摧毁砖块赚取积分 - 熟悉吗？在本文中，我们将介绍如何将 sprite 添加到我们的 gameworld 中。</p>
+我们的游戏将围绕屏幕滚动，弹出一个桨，摧毁砖块赚取积分 - 熟悉吗？在本文中，我们将介绍如何将 sprite 添加到我们的 gameworld 中。
 
-<h2 id="有一个球">有一个球</h2>
+## 有一个球
 
-<p>我们开始创建一个 JavaScript 变量来表示我们的球 - 在游戏初始化代码（我们的<code>var game...</code>块）和<code>preload()</code>函数之间添加以下行：</p>
+我们开始创建一个 JavaScript 变量来表示我们的球 - 在游戏初始化代码（我们的`var game...`块）和`preload()`函数之间添加以下行：
 
-<pre class="brush: js">var ball;
-</pre>
+```js
+var ball;
+```
 
-<div class="note">
-<p><strong>备注：</strong> 为了本教程，我们将使用全局变量。<strong>本教程的目的是教导 Phaser 特定的游戏开发方法，而不是主观的最佳方法。</strong></p>
-</div>
+> **备注：** 为了本教程，我们将使用全局变量。**本教程的目的是教导 Phaser 特定的游戏开发方法，而不是主观的最佳方法。**
 
-<h2 id="加载球精灵">加载球精灵</h2>
+## 加载球精灵
 
-<p>使用 Phaser 加载图像并将其打印在我们的画布上比使用纯 JavaScript 容易得多。要加载资产，我们将使用<code>game</code>由 Phaser 创建的对象，执行其<code>load.image()</code>方法。在<code>preload()</code>函数的底部添加以下新行：</p>
+使用 Phaser 加载图像并将其打印在我们的画布上比使用纯 JavaScript 容易得多。要加载资产，我们将使用`game`由 Phaser 创建的对象，执行其`load.image()`方法。在`preload()`函数的底部添加以下新行：
 
-<pre class="brush: js">function preload() {
+```js
+function preload() {
     // ...
     game.load.image('ball', 'img/ball.png');
 }
-</pre>
+```
 
-<p>第一个参数是我们要提供资产的名称 - 这将在我们的游戏代码中使用，例如我们的<code>ball</code>变量名称，所以我们需要确保它是一样的。第二个参数是图形资源的相对路径。在我们的情况下，我们将加载我们的球的图像（请注意，文件名不一定是一致的，但我们建议，因为它使一切更容易遵循。）</p>
+第一个参数是我们要提供资产的名称 - 这将在我们的游戏代码中使用，例如我们的`ball`变量名称，所以我们需要确保它是一样的。第二个参数是图形资源的相对路径。在我们的情况下，我们将加载我们的球的图像（请注意，文件名不一定是一致的，但我们建议，因为它使一切更容易遵循。）
 
-<p>当然，要加载图像，它需要在我们的代码目录中可用。<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/ball.png">从 Github 抓住球图像</a>，并将其保存<code>/img</code>在与<code>index.html</code>文件相同位置的目录中。</p>
+当然，要加载图像，它需要在我们的代码目录中可用。[从 Github 抓住球图像](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/ball.png)，并将其保存`/img`在与`index.html`文件相同位置的目录中。
 
-<p>现在，要在屏幕上显示，我们将使用另一种 Phaser 方法<code>add.sprite()</code>：在<code>create()</code>函数内添加以下新的代码行，如图所示：</p>
+现在，要在屏幕上显示，我们将使用另一种 Phaser 方法`add.sprite()`：在`create()`函数内添加以下新的代码行，如图所示：
 
-<pre class="brush: js">function create() {
+```js
+function create() {
     ball = game.add.sprite(50, 50, 'ball');
 }
-</pre>
+```
 
-<p>这将添加球到游戏，并将其呈现在屏幕上。前两个参数是要添加的画布的 x 和 y 坐标，第三个是我们之前定义的资产的名称。就是这样 - 如果你加载你的<code>index.html</code>文件，你会看到已经加载并在画布上渲染的图像！</p>
+这将添加球到游戏，并将其呈现在屏幕上。前两个参数是要添加的画布的 x 和 y 坐标，第三个是我们之前定义的资产的名称。就是这样 - 如果你加载你的`index.html`文件，你会看到已经加载并在画布上渲染的图像！
 
-<h2 id="比较你的代码">比较你的代码</h2>
+## 比较你的代码
 
-<p>您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：</p>
+您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/98xrv9x5/","","400")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/98xrv9x5/","","400")}}
 
-<h2 id="下一步">下一步</h2>
+## 下一步
 
-<p>打出球很容易; 接下来我们将尝试在屏幕上<a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball">移动球</a>。</p>
+打出球很容易; 接下来我们将尝试在屏幕上[移动球](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball)。
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Scaling", "Games/Workflows/2D_Breakout_game_Phaser/Move the ball")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Scaling", "Games/Workflows/2D_Breakout_game_Phaser/Move the ball")}}

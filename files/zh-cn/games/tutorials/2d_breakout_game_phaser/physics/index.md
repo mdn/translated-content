@@ -12,52 +12,55 @@ tags:
   - physics
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Physics
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
 
-<div>
-<p>这是<a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 5 步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html">Gamedev-Phaser-Content-Kit / demos / lesson05.html</a>完成本课程后找到源代码</p>
-</div>
+这是[Gamedev Phaser 教程](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 5 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson05.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html)完成本课程后找到源代码
 
-<p>为了在我们的游戏中的对象之间进行正确的碰撞检测，我们将需要物理学; 本文将向您介绍 Phaser 中的可用内容，以及演示典型的简单设置。</p>
+为了在我们的游戏中的对象之间进行正确的碰撞检测，我们将需要物理学; 本文将向您介绍 Phaser 中的可用内容，以及演示典型的简单设置。
 
-<h2 id="添加物理效果">添加物理效果</h2>
+## 添加物理效果
 
-<p>Phaser 与三个不同的物理引擎（Arcade Physics，P2 和 Ninja Physics）捆绑在一起，第四个选项 Box2D 可作为商业插件使用。对于像我们这样的简单游戏，我们可以使用 Arcade Physics 引擎。我们不需要任何重的几何计算 - 毕竟只是一个球从墙壁和砖块弹起来。</p>
+Phaser 与三个不同的物理引擎（Arcade Physics，P2 和 Ninja Physics）捆绑在一起，第四个选项 Box2D 可作为商业插件使用。对于像我们这样的简单游戏，我们可以使用 Arcade Physics 引擎。我们不需要任何重的几何计算 - 毕竟只是一个球从墙壁和砖块弹起来。
 
-<p>首先，让我们在游戏中初始化 Arcade Physics 引擎。<code>physics.startSystem()</code>在<code>create</code>函数开头添加方法（使其成为函数内的第一行），如下所示：</p>
+首先，让我们在游戏中初始化 Arcade Physics 引擎。`physics.startSystem()`在`create`函数开头添加方法（使其成为函数内的第一行），如下所示：
 
-<pre class="brush: js">game.physics.startSystem(Phaser.Physics.ARCADE);
-</pre>
+```js
+game.physics.startSystem(Phaser.Physics.ARCADE);
+```
 
-<p>接下来，我们需要为物理系统启用我们的球 - 默认情况下，Phaser 对象物理不启用。在<code>create()</code>函数底部添加以下行：</p>
+接下来，我们需要为物理系统启用我们的球 - 默认情况下，Phaser 对象物理不启用。在`create()`函数底部添加以下行：
 
-<pre class="brush: js">game.physics.enable(ball, Phaser.Physics.ARCADE);
-</pre>
+```js
+game.physics.enable(ball, Phaser.Physics.ARCADE);
+```
 
-<p>接下来，如果我们要在屏幕上移动我们的球，我们可以设置<code>velocity</code>它<code>body</code>。再次添加以下行<code>create()</code>：</p>
+接下来，如果我们要在屏幕上移动我们的球，我们可以设置`velocity`它`body`。再次添加以下行`create()`：
 
-<pre class="brush: js">ball.body.velocity.set(150, 150);
-</pre>
+```js
+ball.body.velocity.set(150, 150);
+```
 
-<h2 id="删除我们以前的更新说明">删除我们以前的更新说明</h2>
+## 删除我们以前的更新说明
 
-<p>记得删除添加值的我们的老方法<code>x</code>，并<code>y</code>从<code>update()</code>功能：</p>
+记得删除添加值的我们的老方法`x`，并`y`从`update()`功能：
 
-<pre class="brush: js">function update() {
-<s>    ball.x += 1;</s>
-<s>    ball.y += 1;</s>
+```js
+function update() {
+    ball.x += 1;
+    ball.y += 1;
 }
-</pre>
+```
 
-<p>我们正在使用物理引擎正确处理。</p>
+我们正在使用物理引擎正确处理。
 
-<h2 id="最终代码检查">最终代码检查</h2>
+## 最终代码检查
 
-<p>最新的代码应该如下所示：</p>
+最新的代码应该如下所示：
 
-<pre class="brush: js">var ball;
+```js
+var ball;
 
 function preload() {
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -76,24 +79,24 @@ function create() {
 
 function update() {
 }
-</pre>
+```
 
-<p>尝试重新加载<code>index.html</code>- 球应该在给定的方向上不断移动。目前，物理引擎的重力和摩擦力设定为零。增加重力将导致球落下，同时摩擦力最终会停止球。</p>
+尝试重新加载`index.html`- 球应该在给定的方向上不断移动。目前，物理引擎的重力和摩擦力设定为零。增加重力将导致球落下，同时摩擦力最终会停止球。
 
-<h2 id="物理效果趣味">物理效果趣味</h2>
+## 物理效果趣味
 
-<p>你可以用物理学来做更多的事情，例如添加<code>ball.body.gravity.y = 100;</code>你将设置球的垂直重力。因此，它将向上发射，但是由于重力的作用而下降。</p>
+你可以用物理学来做更多的事情，例如添加`ball.body.gravity.y = 100;`你将设置球的垂直重力。因此，它将向上发射，但是由于重力的作用而下降。
 
-<p>这种功能只是冰山一角 - 有各种功能和变量可以帮助您操纵物理对象。查看官方<a href="http://phaser.io/docs#physics">物理文档，</a>并使用<a href="http://phaser.io/examples/v2/category/arcade-physics">Arcade</a>和<a href="http://phaser.io/examples/v2/category/p2-physics">P2</a>物理系统查看大量示例。</p>
+这种功能只是冰山一角 - 有各种功能和变量可以帮助您操纵物理对象。查看官方[物理文档，](http://phaser.io/docs#physics)并使用[Arcade](http://phaser.io/examples/v2/category/arcade-physics)和[P2](http://phaser.io/examples/v2/category/p2-physics)物理系统查看大量示例。
 
-<h2 id="比较你的代码">比较你的代码</h2>
+## 比较你的代码
 
-<p>您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：</p>
+您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/bjto9nj8/","","400")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/bjto9nj8/","","400")}}
 
-<h2 id="下一步">下一步</h2>
+## 下一步
 
-<p>现在我们可以转到下一课，看看如何让球<a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls">从墙上弹起</a>。</p>
+现在我们可以转到下一课，看看如何让球[从墙上弹起](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls)。
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
