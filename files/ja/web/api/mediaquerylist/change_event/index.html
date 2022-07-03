@@ -1,5 +1,5 @@
 ---
-title: MediaQueryList.onchange
+title: 'MediaQueryList: change event'
 slug: Web/API/MediaQueryList/change_event
 tags:
   - API
@@ -11,32 +11,49 @@ tags:
   - onchange
   - イベントハンドラー
   - プロパティ
-  - メディアクエリ
-translation_of: Web/API/MediaQueryList/onchange
-original_slug: Web/API/MediaQueryList/onchange
+  - メディアクエリー
+translation_of: Web/API/MediaQueryList/change_event
+original_slug: Web/API/MediaQueryList/change_event
 ---
 <p>{{APIRef("CSSOM")}}</p>
-
-<p><code><strong>onchange</strong></code> は {{DOMxRef("MediaQueryList")}} インターフェイスのプロパティで、 {{domxref("MediaQueryList/change_event", "change")}} イベントが発行されたとき、すなわちメディアクエリの対応の状態が変化したときに呼び出される関数を表します。イベントオブジェクトは {{DOMxRef("MediaQueryListEvent")}} のインスタンスであり、古いブラウザーからは後方互換性のために <code>MediaListQuery</code> のインスタンスと解釈されます。</p>
+<p>{{DOMxRef("MediaQueryList")}} インターフェイスの <code><strong>change</strong></code> イベントは、メディアクエリーの状態が変化した時に発生します。</p>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
-<pre class="syntaxbox notranslate"><var>MediaQueryList</var>.onchange = function() { ... };</pre>
+<p>{{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドでイベント名を利用するか、イベントハンドラプロパティを設定します。</p>
+
+<pre class="brush: js notranslate">
+addEventListener('change', event => { });
+
+onchange = event => { };
+</pre>
+
+<h2 id="Event_type" name="Event_type">イベントタイプ</h2>
+<p>{{domxref("MediaQueryListEvent")}} です。 {{domxref("Event")}} から継承します。</p>
+
+<h2 id="Event_properties" name="Event_properties">イベントプロパティ</h2>
+<p><em><code>MediaQueryListEvent</code> インタフェースは、親インタフェースである {{domxref("Event")}} からプロパティを継承します。</em></p>
+
+<dl>
+ <dt>{{DOMxRef("MediaQueryList.matches", "MediaQueryListEvent.matches")}}{{ReadOnlyInline}}</dt>
+ <dd>{{DOMxRef("Boolean")}}。 {{DOMxRef("document")}} が現在メディアクエリーのリストに一致していれば <code>true</code> を返し、そうでなければ <code>false</code> を返します。</dd>
+ <dt>{{DOMxRef("MediaQueryList.media", "MediaQueryListEvent.media")}}{{ReadOnlyInline}}</dt>
+ <dd>{{DOMxRef("DOMString")}} で、シリアライズされたメディアクエリーを表します。</dd>
+</dl>
 
 <h2 id="Example" name="Example">例</h2>
 
 <pre class="brush: js notranslate">var mql = window.matchMedia('(max-width: 600px)');
 
-mql.addEventListener( "change", (e) =&gt; {
+mql.onchange = (e) =&gt; {
     if (e.matches) {
-    /* ビューポートが 600 ピクセル幅以下 */
+      /* ビューポートが 600 ピクセル幅以下 */
     console.log('This is a narrow screen — less than 600px wide.')
   } else {
     /* ビューポートが 600 ピクセル幅より広い */
     console.log('This is a wide screen — more than 600px wide.')
   }
-})
-
+}
 </pre>
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
@@ -60,13 +77,13 @@ mql.addEventListener( "change", (e) =&gt; {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("api.MediaQueryList.onchange")}}</p>
+<p>{{Compat("api.MediaQueryList.change_event")}}</p>
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
- <li><a href="/ja/docs/CSS/Media_queries">メディアクエリ</a></li>
- <li><a href="/ja/docs/CSS/Using_media_queries_from_code">コードからのメディアクエリの使用</a></li>
+ <li><a href="/ja/docs/CSS/Media_queries">メディアクエリー</a></li>
+ <li><a href="/ja/docs/CSS/Using_media_queries_from_code">コードからのメディアクエリーの使用</a></li>
  <li>{{DOMxRef("window.matchMedia()")}}</li>
  <li>{{DOMxRef("MediaQueryList")}}</li>
  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
