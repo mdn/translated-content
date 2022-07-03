@@ -14,7 +14,7 @@ browser-compat: api.KeyboardEvent.key
 
 {{APIRef("UI Events")}}
 
-The {{domxref("KeyboardEvent")}} 인터페이스의 읽기 전용 속성인 **`key`** 는 키보드 로케일과 레이아웃뿐만 아니라 <kbd>Shift</kbd>와 같은 보조 키의 상태까지 고려하여, 사용자가 누른 키의 값을 반환합니다.
+{{domxref("KeyboardEvent")}} 인터페이스의 읽기 전용 속성인 **`key`** 는 키보드 로케일과 레이아웃뿐만 아니라 <kbd>Shift</kbd>와 같은 보조 키의 상태까지 고려하여, 사용자가 누른 키의 값을 반환합니다.
 
 ## 값
 
