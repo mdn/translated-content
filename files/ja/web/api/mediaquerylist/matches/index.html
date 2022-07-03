@@ -14,12 +14,12 @@ tags:
   - matches
   - アダプティブデザイン
   - プロパティ
-  - メディアクエリ
+  - メディアクエリー
 translation_of: Web/API/MediaQueryList/matches
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
-<p><strong><code>matches</code></strong> は {{DOMxRef("MediaQueryList")}} インターフェイスの読み取り専用プロパティで、 {{jsxref("Boolean")}} であり、文書が現在メディアクエリリストと一致している場合は <code>true</code> を返し、一致していない場合は <code>false</code> を返します。</p>
+<p><strong><code>matches</code></strong> は {{DOMxRef("MediaQueryList")}} インターフェイスの読み取り専用プロパティで、 {{jsxref("Boolean")}} であり、文書が現在メディアクエリーリストと一致している場合は <code>true</code> を返し、一致していない場合は <code>false</code> を返します。</p>
 
 <p><code>matches</code> の値が変化した場合は、 <code>MediaQueryList</code> で発生する {{domxref("MediaQueryList.change_event", "change")}} イベントを監視することで通知を受けることができます。</p>
 
@@ -33,7 +33,7 @@ translation_of: Web/API/MediaQueryList/matches
 
 <h2 id="Example" name="Example">例</h2>
 
-<p>この例では <code><a href="/ja/docs/Web/CSS/@media/orientation">orientation</a></code> メディア特性を使用したメディアクエリを作成することにより、ビューポートの向きの変化を検出します。</p>
+<p>この例では <code><a href="/ja/docs/Web/CSS/@media/orientation">orientation</a></code> メディア特性を使用したメディアクエリーを作成することにより、ビューポートの向きの変化を検出します。</p>
 
 <pre class="brush: js notranslate">function addMQListener(mq, callback) {
   if (mq.addEventListener) {
@@ -80,8 +80,8 @@ addMQListener(window.matchMedia("(orientation:landscape)"),
 <h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
- <li><a href="/ja/docs/CSS/Media_queries">メディアクエリ</a></li>
- <li><a href="/ja/docs/CSS/Using_media_queries_from_code">コードからのメディアクエリの使用</a></li>
+ <li><a href="/ja/docs/CSS/Media_queries">メディアクエリー</a></li>
+ <li><a href="/ja/docs/CSS/Using_media_queries_from_code">コードからのメディアクエリーの使用</a></li>
  <li>{{DOMxRef("window.matchMedia()")}}</li>
  <li>{{DOMxRef("MediaQueryList")}}</li>
  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
