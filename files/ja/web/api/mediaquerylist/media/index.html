@@ -11,12 +11,12 @@ tags:
   - Reference
   - プロパティ
   - メディア
-  - メディアクエリ
+  - メディアクエリー
 translation_of: Web/API/MediaQueryList/media
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
-<p><code><strong>media</strong></code> は {{DOMxRef("MediaQueryList")}} インターフェイスの読取専用プロパティであり、 {{DOMxRef("DOMString")}} でシリアライズされたメディアクエリを表します。</p>
+<p><code><strong>media</strong></code> は {{DOMxRef("MediaQueryList")}} インターフェイスの読取専用プロパティであり、 {{DOMxRef("DOMString")}} でシリアライズされたメディアクエリーを表します。</p>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -28,7 +28,7 @@ translation_of: Web/API/MediaQueryList/media
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>この例では、 <code>(max-width: 600px)</code> のメディアクエリを実行し、 <code>MediaQueryList</code> の <code>media</code> プロパティの結果の値を {{HTMLElement("span")}} の中に表示します。</p>
+<p>この例では、 <code>(max-width: 600px)</code> のメディアクエリーを実行し、 <code>MediaQueryList</code> の <code>media</code> プロパティの結果の値を {{HTMLElement("span")}} の中に表示します。</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/MediaQueryList/media
 document.querySelector(".mq-value").innerText = mql.media;
 </pre>
 
-<p>この JavaScript コードは一致させるメディアクエリを単に {{DOMxRef("Window.matchMedia", "matchMedia()")}} に渡してコンパイルし、それから <code>&lt;span&gt;</code> の {{DOMxRef("HTMLElement.innerText", "innerText")}} に {{DOMxRef("MediaQueryList.media", "media")}} プロパティの結果の値を設定します。</p>
+<p>この JavaScript コードは一致させるメディアクエリーを単に {{DOMxRef("Window.matchMedia", "matchMedia()")}} に渡してコンパイルし、それから <code>&lt;span&gt;</code> の {{DOMxRef("HTMLElement.innerText", "innerText")}} に {{DOMxRef("MediaQueryList.media", "media")}} プロパティの結果の値を設定します。</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -88,8 +88,8 @@ document.querySelector(".mq-value").innerText = mql.media;
 <h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
- <li><a href="/ja/docs/CSS/Media_queries">メディアクエリ</a></li>
- <li><a href="/ja/docs/CSS/Using_media_queries_from_code">コードからのメディアクエリの使用</a></li>
+ <li><a href="/ja/docs/CSS/Media_queries">メディアクエリー</a></li>
+ <li><a href="/ja/docs/CSS/Using_media_queries_from_code">コードからのメディアクエリーの使用</a></li>
  <li>{{DOMxRef("window.matchMedia()")}}</li>
  <li>{{DOMxRef("MediaQueryList")}}</li>
  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
