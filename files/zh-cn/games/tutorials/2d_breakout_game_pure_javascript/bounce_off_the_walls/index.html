@@ -8,7 +8,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}</p>
 
 <div>
-<p>本篇是 <a href="/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a> 10 节教程中的第三节。如果你完成了本篇教程之后，你可以从 <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html">Gamedev-Canvas-workshop/lesson3.html</a> 看到源码。</p>
+<p>本篇是 <a href="/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a> 10 节教程中的第三节。如果你完成了本篇教程之后，你可以从 <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html">Gamedev-Canvas-workshop/lesson3.html</a> 看到源码。</p>
 </div>
 
 <p>看到我们的球动起来很惊讶吧，但是它很快就从屏幕上消失了，当然我们是可以控制它的。我们会实现一些非常简单的碰撞检测 (详细后面解释),使球在画布的四周反弹回来。</p>
@@ -21,7 +21,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_
 
 <pre class="brush: js">var ballRadius = 10;</pre>
 
-<p>现在更新绘制球的 drawBall() 函数：</p>
+<p>现在更新绘制球的 drawBall() 函数：</p>
 
 <pre class="brush: js">ctx.arc(x, y, ballRadius, 0, Math.PI*2);</pre>
 
@@ -49,7 +49,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_
     dy = -dy;
 }</pre>
 
-<p>如果其中一个判断为 <code>true</code>, 则反转球的运动。</p>
+<p>如果其中一个判断为 <code>true</code>, 则反转球的运动。</p>
 
 <h3 id="从左边和右边反弹">从左边和右边反弹</h3>
 
@@ -89,7 +89,7 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
 <p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","370")}}</p>
 
 <div class="note">
-<p><strong>练习</strong>: 尝试修改你的代码，在每次碰到墙壁时都要把球的颜色改成随机的颜色。</p>
+<p><strong>备注：</strong> 尝试修改你的代码，在每次碰到墙壁时都要把球的颜色改成随机的颜色。</p>
 </div>
 
 <h2 id="下一步">下一步</h2>

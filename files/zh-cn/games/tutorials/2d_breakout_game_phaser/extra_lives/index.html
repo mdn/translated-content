@@ -17,7 +17,7 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}</p>
 
 <div>
-<p>这是<a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 13 步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson13.html">Gamedev-Phaser-Content-Kit / demos / lesson13.html</a>完成本课程后找到源代码。</p>
+<p>这是<a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 13 步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson13.html">Gamedev-Phaser-Content-Kit / demos / lesson13.html</a>完成本课程后找到源代码。</p>
 </div>
 
 <p>我们可以通过增加生活使游戏更愉快。在这篇文章中，我们将实施一个生活系统，以便玩家可以继续玩，直到他们失去了三个生命，而不仅仅是一个人。</p>
@@ -77,7 +77,7 @@ lifeLostText.visible = false;
 }, this);</s>
 </pre>
 
-<p>我们将分配一个所谓的新功能<code>ballLeaveScreen</code>; 删除以前的事件处理程序（如上所示），并将其替换为以下行：</p>
+<p>我们将分配一个所谓的新功能<code>ballLeaveScreen</code>; 删除以前的事件处理程序（如上所示），并将其替换为以下行：</p>
 
 <pre class="brush: js">ball.events.onOutOfBounds.add(ballLeaveScreen, this);
 </pre>

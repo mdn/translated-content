@@ -18,20 +18,20 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p><img alt="Coordinate system" src="mdn-games-3d-coordinate-system.png"></p>
 
-<p>WebGL 使用右手坐标系统 — <code>x</code> 轴向右，<code>y</code> 轴向上 <code>z</code> 轴指向屏幕外，在上图可以看到。</p>
+<p>WebGL 使用右手坐标系统 — <code>x</code> 轴向右，<code>y</code> 轴向上 <code>z</code> 轴指向屏幕外，在上图可以看到。</p>
 
 <h2 id="物体">物体</h2>
 
-<p>使用顶点建立不同类型的物体。 <strong>一个顶点</strong>是在 3D 坐标系中拥有坐标位置的一个点以及一些额外可以定义它的信息。 每个点都包含这些属性：</p>
+<p>使用顶点建立不同类型的物体。 <strong>一个顶点</strong>是在 3D 坐标系中拥有坐标位置的一个点以及一些额外可以定义它的信息。 每个点都包含这些属性：</p>
 
 <ul>
- <li><strong>位置</strong>: 在 3D 空间用来辨认 (<code>x</code>, <code>y</code>, <code>z</code>).</li>
- <li><strong>颜色</strong>: 包含 RGBA (R, G 和 B 分别是红，绿，蓝和 alpha 通道，alpha 通道控制透明度 — 所有通道值的范围都是 <code>0.0</code> 到 <code>1.0</code>).</li>
- <li><strong>法线：</strong> 描述顶点朝向。</li>
+ <li><strong>位置</strong>: 在 3D 空间用来辨认 (<code>x</code>, <code>y</code>, <code>z</code>).</li>
+ <li><strong>颜色</strong>: 包含 RGBA (R, G 和 B 分别是红，绿，蓝和 alpha 通道，alpha 通道控制透明度 — 所有通道值的范围都是 <code>0.0</code> 到 <code>1.0</code>).</li>
+ <li><strong>法线：</strong> 描述顶点朝向。</li>
  <li><strong>纹理</strong>: 顶点用来装饰模型表面的一张 2D 图片，它是代替简单颜色的选择之一。</li>
 </ul>
 
-<p>你可以使用这些信息建立几何体 — 这是一个立方体的例子：</p>
+<p>你可以使用这些信息建立几何体 — 这是一个立方体的例子：</p>
 
 <p><img alt="Cube" src="mdn-games-3d-cube.png"></p>
 
@@ -51,7 +51,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
  <li><strong>像素</strong>: 屏幕上的 2D 网格中的点布置的点，包含 RGBA.</li>
 </ul>
 
-<p>顶点和片段处理是可编程的 — 你可以<a href="/zh-CN/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders">编写自己的着色器</a> 来控制输出。</p>
+<p>顶点和片段处理是可编程的 — 你可以<a href="/zh-CN/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders">编写自己的着色器</a> 来控制输出。</p>
 
 <h2 id="顶点处理">顶点处理</h2>
 
@@ -59,7 +59,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p><img alt="Vertex processing" src="mdn-games-3d-vertex-processing.png"></p>
 
-<p>这个过程分为四步：第一步是筹备世界坐标中的物体，也被称为<strong>模型转换 (model transformation)</strong>. 然后是<strong>视图转换 (view transformation)</strong> , 这一步只关心位置和 3D 空间中摄像机的朝向设置。摄像机有三个参数 (位置，方向和朝向), 在新创建的场景中必须定义这三个参数。</p>
+<p>这个过程分为四步：第一步是筹备世界坐标中的物体，也被称为<strong>模型转换 (model transformation)</strong>. 然后是<strong>视图转换 (view transformation)</strong> , 这一步只关心位置和 3D 空间中摄像机的朝向设置。摄像机有三个参数 (位置，方向和朝向), 在新创建的场景中必须定义这三个参数。</p>
 
 <p><img alt="Camera" src="mdn-games-3d-camera.png"></p>
 
@@ -79,7 +79,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <h2 id="片段合成">片段合成</h2>
 
-<p>片段合成关注关注的是纹理和光照 — 它会基于给定参数计算最终的颜色。</p>
+<p>片段合成关注关注的是纹理和光照 — 它会基于给定参数计算最终的颜色。</p>
 
 <p><img alt="Fragment processing" src="mdn-games-3d-fragment-processing.png"></p>
 
@@ -91,7 +91,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <h3 id="光照">光照</h3>
 
-<p>我们在屏幕上看到的颜色是光照和模型颜色，材质进行交互之后的最终结果。灯光会被吸收和反射，在 WebGL 中实现的标准<strong>Phong 光照模型</strong> 有一下四种光照参数：</p>
+<p>我们在屏幕上看到的颜色是光照和模型颜色，材质进行交互之后的最终结果。灯光会被吸收和反射，在 WebGL 中实现的标准<strong>Phong 光照模型</strong> 有一下四种光照参数：</p>
 
 <ul>
  <li><strong>漫反射</strong>: 遥远的直接光照，就像太阳。</li>
@@ -108,9 +108,6 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p>在输出合成阶段同样可以忽略不必要的信息，例如在屏幕外的模型参数或者被其他模型遮挡的模型，因为是不可见的所以不会被计算。</p>
 
-<ul>
-</ul>
-
 <h2 id="总结">总结</h2>
 
 <p>现在你知道了 3D 操作背后的基本原理。如果你想去练习或者看学习 demo, 看看下面的教程：</p>
@@ -123,5 +120,3 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 </ul>
 
 <p>继续，去创建一些炫酷 3D 实验吧！</p>
-
-<div class="grammarly-disable-indicator"> </div>

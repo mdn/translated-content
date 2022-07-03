@@ -50,7 +50,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detec
     }
 }</pre>
 
-<p>将上面的块添加到代码中，在 <code>keyUpHandler()</code> 函数下面。</p>
+<p>将上面的块添加到代码中，在 <code>keyUpHandler()</code> 函数下面。</p>
 
 <h2 id="让砖块在被撞击之后消失">让砖块在被撞击之后消失</h2>
 
@@ -64,7 +64,7 @@ for(c=0; c&lt;brickColumnCount; c++) {
     }
 }</pre>
 
-<p>接下来，我们将在绘制之前在 <code>drawBricks()</code> 中检查每个砖块的 <code>status</code>属性的值 - 如果 <code>status</code>是 <code>1</code>，然后画它，但是如果它是 <code>0</code>，那么它被球击中，我们不再希望它在屏幕上。更新您的 <code>drawBricks()</code> 函数如下：</p>
+<p>接下来，我们将在绘制之前在 <code>drawBricks()</code> 中检查每个砖块的 <code>status</code>属性的值 - 如果 <code>status</code>是 <code>1</code>，然后画它，但是如果它是 <code>0</code>，那么它被球击中，我们不再希望它在屏幕上。更新您的 <code>drawBricks()</code> 函数如下：</p>
 
 <pre class="brush: js; highlight:[4,5,6,7,8,9,10,11,12,13,14]">function drawBricks() {
     for(c=0; c&lt;brickColumnCount; c++) {
@@ -86,7 +86,7 @@ for(c=0; c&lt;brickColumnCount; c++) {
 
 <h2 id="跟踪并更新在撞击侦测函数中的状态">跟踪并更新在撞击侦测函数中的状态</h2>
 
-<p>现在我们需要将砖块 <code>status</code> 属性包含在 <code>collisionDetection()</code>函数中：如果砖块是活动的（它的状态是 <code>1</code>），我们将检查碰撞是否发生；如果发生碰撞，我们将给定砖块的状态设置为 <code>0</code>，这样它就不会被绘制在屏幕上。更新您的 <code>collisionDetection()</code> 函数，如下所示：</p>
+<p>现在我们需要将砖块 <code>status</code> 属性包含在 <code>collisionDetection()</code>函数中：如果砖块是活动的（它的状态是 <code>1</code>），我们将检查碰撞是否发生；如果发生碰撞，我们将给定砖块的状态设置为 <code>0</code>，这样它就不会被绘制在屏幕上。更新您的 <code>collisionDetection()</code> 函数，如下所示：</p>
 
 <pre class="brush: js; highlight:[5,6,7,8,9,10]">function collisionDetection() {
     for(c=0; c&lt;brickColumnCount; c++) {
@@ -104,7 +104,7 @@ for(c=0; c&lt;brickColumnCount; c++) {
 
 <h2 id="调用我们的撞击侦测函数">调用我们的撞击侦测函数</h2>
 
-<p>最后要做的是向 <code>collisionDetection()</code> 函数添加一个调用到我们的主要<code>draw()</code> 函数。将下面的行添加到 <code>draw()</code> 函数中，就在<code>drawPaddle()</code> 调用的下面：</p>
+<p>最后要做的是向 <code>collisionDetection()</code> 函数添加一个调用到我们的主要<code>draw()</code> 函数。将下面的行添加到 <code>draw()</code> 函数中，就在<code>drawPaddle()</code> 调用的下面：</p>
 
 <pre class="brush: js">collisionDetection();
 </pre>
@@ -116,7 +116,7 @@ for(c=0; c&lt;brickColumnCount; c++) {
 <p>{{JSFiddleEmbed("https://jsfiddle.net/kundan333/myd4vbwg/5/","","320")}}</p>
 
 <div class="note">
-<p>练习：当球碰到砖头时，改变球的颜色。</p>
+<p><strong>备注：</strong> 练习：当球碰到砖头时，改变球的颜色。</p>
 </div>
 
 <h2 id="下一节">下一节</h2>

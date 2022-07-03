@@ -16,7 +16,7 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Game_over", "Games/Workflows/2D_Breakout_game_Phaser/Collision_detection")}}</p>
 
 <div>
-<p>这是<a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 9 步</strong>。在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson09.html">Gamedev-Phaser-Content-Kit / demos / lesson09.html</a>完成本课后，您可以找到源代码。</p>
+<p>这是<a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 9 步</strong>。在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson09.html">Gamedev-Phaser-Content-Kit / demos / lesson09.html</a>完成本课后，您可以找到源代码。</p>
 </div>
 
 <p>建立砖块比将单个对象添加到屏幕要复杂一点，尽管使用 Phaser 还是比纯 JavaScript 更容易。我们来探讨如何创建一组砖块，并使用循环在屏幕上打印。</p>
@@ -34,7 +34,7 @@ var brickInfo;
 
 <h2 id="渲染砖图像">渲染砖图像</h2>
 
-<p>接下来，我们加载砖的图像 - <code>load.image()</code>在其他地方添加以下调用：</p>
+<p>接下来，我们加载砖的图像 - <code>load.image()</code>在其他地方添加以下调用：</p>
 
 <pre class="brush: js">function preload() {
     // ...
@@ -54,7 +54,7 @@ var brickInfo;
 }
 </pre>
 
-<p>现在到函数本身。<code>initBricks()</code>在我们的游戏代码末尾添加功能，就在关闭&lt;/ script&gt;标签之前，如下所示。首先我们已经包括了这个  <code>brickInfo</code>对象，因为这很快就会派上用场：</p>
+<p>现在到函数本身。<code>initBricks()</code>在我们的游戏代码末尾添加功能，就在关闭&lt;/ script&gt;标签之前，如下所示。首先我们已经包括了这个  <code>brickInfo</code>对象，因为这很快就会派上用场：</p>
 
 <pre class="brush: js">function initBricks() {
     brickInfo = {
@@ -112,7 +112,7 @@ var brickInfo;
 var brickY = (c*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
 </pre>
 
-<p>每个<code>brickX</code>位置都是<code>brickInfo.width</code>加<code>brickInfo.padding</code>号乘以行号<code>r</code>，加上<code>brickInfo.offset.left</code>; 用于所述逻辑<code>brickY</code>是不同之处在于它使用的值列号相同<code>c</code>，<code>brickInfo.height</code>和<code>brickInfo.offset.top</code>。现在每个砖都可以放置在正确的位置，每个砖块之间填充，并从左侧和顶部画布边缘偏移绘制。</p>
+<p>每个<code>brickX</code>位置都是<code>brickInfo.width</code>加<code>brickInfo.padding</code>号乘以行号<code>r</code>，加上<code>brickInfo.offset.left</code>; 用于所述逻辑<code>brickY</code>是不同之处在于它使用的值列号相同<code>c</code>，<code>brickInfo.height</code>和<code>brickInfo.offset.top</code>。现在每个砖都可以放置在正确的位置，每个砖块之间填充，并从左侧和顶部画布边缘偏移绘制。</p>
 
 <h2 id="检查initbricks_代码">检查 initBricks() 代码</h2>
 
@@ -153,12 +153,12 @@ var brickY = (c*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
 
 <p>您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：</p>
 
-<p> </p>
+<p> </p>
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/cck2b9e8/","","400")}}</p>
 
 <h2 id="下一步">下一步</h2>
 
-<p>有些东西丢失了 球不经停，经过砖块 - 我们需要适当的<a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Collision_detection">碰撞检测</a>。</p>
+<p>有些东西丢失了 球不经停，经过砖块 - 我们需要适当的<a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Collision_detection">碰撞检测</a>。</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Game_over", "Games/Workflows/2D_Breakout_game_Phaser/Collision_detection")}}</p>
