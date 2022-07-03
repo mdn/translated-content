@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.id
 slug: Web/API/AudioTrack/id
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -14,52 +15,23 @@ tags:
   - Reference
   - id
   - track
+browser-compat: api.AudioTrack.id
 translation_of: Web/API/AudioTrack/id
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>id</code></strong> プロパティには、<strong>{{domxref("AudioTrack")}}</strong> によって表されるトラックを一意に識別する文字列が含まれています。</span> この ID を {{domxref("AudioTrackList.getTrackById()")}} メソッドと共に使用して、メディア要素に関連付けられているメディア内の特定のトラックを見つけることができます。</p>
+**`id`** プロパティには、**{{domxref("AudioTrack")}}** によって表されるトラックを一意に識別する文字列が含まれています。
 
-<p>トラック ID は、特定のトラックを読み込むための URL のフラグメントとしても使用できます（メディアがメディアフラグメントをサポートしている場合）。</p>
+この ID を {{domxref("AudioTrackList.getTrackById()")}} メソッドと共に使用して、メディア要素に関連付けられているメディア内の特定のトラックを見つけることができます。トラック ID は、特定のトラックを読み込むための URL のフラグメントとしても使用できます（メディアがメディアフラグメントに対応している場合）。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox">var <em>trackID</em> = <em>AudioTrack</em>.id;</pre>
+トラックを識別する文字列です。 メディア要素の {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} プロパティで指定されたものなどの {{domxref("AudioTrackList")}} で {{domxref("AudioTrackList.getTrackById", "getTrackById()")}} を呼び出すときに使用するのに適しています。
 
-<h3 id="Value" name="Value">値</h3>
+## 仕様書
 
-<p>トラックを識別する {{domxref("DOMString")}} です。 メディア要素の {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} プロパティで指定されたものなどの {{domxref("AudioTrackList")}} で {{domxref("AudioTrackList.getTrackById", "getTrackById()")}} を呼び出すときに使用するのに適しています。</p>
+{{Specifications}}
 
-<p> </p>
+## ブラウザーの互換性
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'media.html#dom-audiotrack-id', 'AudioTrack.id')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'embedded-content-0.html#dom-audiotrack-id', 'AudioTrack.id')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-
-
-<p>{{Compat("api.AudioTrack.id")}}</p>
-
-<p> </p>
+{{Compat}}
