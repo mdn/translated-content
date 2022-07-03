@@ -90,7 +90,7 @@ fetch('./lorem-ipsum.txt').then((response) =>
 
 ### 创建一个恒等变换流
 
-如果没有提供 `transformer` 参数,那么结果将是一个恒等流，它将所有写入可写端的分块转发到可读端，并且不做任何改变。在以下示例中，一个恒等转换流被用于向一个管道添加缓冲。
+如果没有提供 `transformer` 参数，那么结果将是一个恒等流，它将所有写入可写端的分块转发到可读端，并且不做任何改变。在以下示例中，一个恒等转换流被用于向一个管道添加缓冲。
 
 ```js
 const writableStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1024 * 1024 });
