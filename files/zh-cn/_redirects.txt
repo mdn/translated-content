@@ -1335,7 +1335,7 @@
 /zh-CN/docs/Web/API/DOMImplementation.createHTMLDocument	/zh-CN/docs/Web/API/DOMImplementation/createHTMLDocument
 /zh-CN/docs/Web/API/DOMImplementation.hasFeature	/zh-CN/docs/Web/API/DOMImplementation/hasFeature
 /zh-CN/docs/Web/API/DOMString	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
-/zh-CN/docs/Web/API/DOMString/Binary	/zh-CN/docs/conflicting/Web/API/btoa
+/zh-CN/docs/Web/API/DOMString/Binary	/zh-CN/docs/Web/API/btoa
 /zh-CN/docs/Web/API/DeviceAcceleration	/zh-CN/docs/Web/API/DeviceMotionEventAcceleration
 /zh-CN/docs/Web/API/Document.querySelectorAll	/zh-CN/docs/Web/API/Document/querySelectorAll
 /zh-CN/docs/Web/API/Document.releaseCapture	/zh-CN/docs/Web/API/Document/releaseCapture
