@@ -363,9 +363,9 @@ setTimeout(cb, 0);</code></pre>
 
 <p>在 Chrome 和 Firefox 中， 定时器的第 5 次调用被阻塞了；在 Safari 是在第 6 次；Edge 是在第 3 次。Gecko 从这个版本 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/56">version 56</a>开始对 <code>setInterval()</code> 开始采用这样的机制（<code>setTimeout()</code>已经实现，具体请参考以下内容)。</p>
 
-<p>一直以来，不同浏览器中出现这种最小延迟的情况有所不同（例如 Firefox）- 从其他地方调用了 setInterval( )，或者在嵌套函数调用 setTimeout( ) 时（嵌套级别达到特定深度时），都会出现超时延迟。</p>
+<p>一直以来，不同浏览器中出现这种最小延迟的情况有所不同（例如 Firefox）- 从其他地方调用了 setInterval()，或者在嵌套函数调用 setTimeout() 时（嵌套级别达到特定深度时），都会出现超时延迟。</p>
 
-<p>如果想在浏览器中实现 0ms 延时的定时器，你可以参考<a href="http://dbaron.org/log/20100309-faster-timeouts">这里</a>所说的{domxref("window.postMessage()")}}</p>
+<p>如果想在浏览器中实现 0ms 延时的定时器，你可以参考<a href="http://dbaron.org/log/20100309-faster-timeouts">这里</a>所说的 {{domxref("window.postMessage()")}}</p>
 
 <div class="note">
 <p><strong>Note</strong>: 最小延时， <code>DOM_MIN_TIMEOUT_VALUE</code>, 是 4ms  (但在 Firefox 中通常是是存储在 <code>dom.min_timeout_value </code>这个变量中), <code>DOM_CLAMP_TIMEOUT_NESTING_LEVEL</code> 的第 5 层。</p>
