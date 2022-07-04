@@ -79,7 +79,7 @@ const greeting = "I will get syntax highlighting";
 
 - `example-good`：将其标注为一个好的例子（可被参考）
 - `example-bad`：将其标注为一个不好的例子（应避免使用）
-- `hidden`：不在网页中展示此代码块，用于 Live Sample。
+- `hidden`：不在网页中展示此代码块，用于运行实例。
 
 例如：
 
@@ -121,11 +121,11 @@ const greeting = "I'm a bad example";
 
 块引用中的多行由空的块引用生成，就像普通的段落一样。此外，没有空格的多行会像常规 Markdown 行一样被处理和连接。
 
-块引用可以包含代码块和其他块级元素。
+块引用可以包含代码块和其它块级元素。
 
 因为文本 **备注：** 或 **警告：** 也会出现在渲染输出中，因此必须考虑到翻译问题。实际上，这意味这 MDN 支持的每一种语言环境都必须提供这些字符串的翻译，平台必须认识到它们表明了这些结构需要特殊处理。
 
-#### 例子
+#### 示例
 
 ##### 备注
 
@@ -203,7 +203,7 @@ const greeting = "I'm a bad example";
 例如，如果我们想在德语中使用“Warnung”来表示“警告”，那么我们在德语页面应该写：
 
 ```plain
-> Warnung: So schreibt man eine Warnung.
+> **Warnung:** So schreibt man eine Warnung.
 ```
 
 ...这会产生：
@@ -272,11 +272,11 @@ const greeting = "I'm a bad example";
 例如，这是一个 `<dl>`：
 
 ````plain
-* term1
-    * : My description of term1
+- term1
+    - : My description of term1
 
-* `term2`
-    * : My description of term2
+- `term2`
+    - : My description of term2
 
       It can have multiple paragraphs, and code blocks too:
 
@@ -442,19 +442,19 @@ GFM 表格语法的主要限制是：
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
+      <th scope="row">是否冒泡</th>
+      <td>否</td>
     </tr>
     <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
+      <th scope="row">是否可取消</th>
+      <td>否</td>
     </tr>
     <tr>
-      <th scope="row">Interface</th>
+      <th scope="row">接口</th>
       <td>{{domxref("ProgressEvent")}}</td>
     </tr>
     <tr>
-      <th scope="row">Event handler property</th>
+      <th scope="row">事件处理器属性</th>
       <td>
         {{domxref("XMLHttpRequestEventTarget/onprogress", "onprogress")}}
       </td>
@@ -462,7 +462,7 @@ GFM 表格语法的主要限制是：
   </tbody>
 </table>
 
-因为它们有一个标题列，GFM 无法实现这些页面。因此，应该使用 HTML。为了获得特殊的样式，还需要将`"properties"`类应用于表格：
+因为它们有一个标题列，GFM 无法实现这些页面。因此，应该使用 HTML。为了获得特殊的样式，还需要将 `"properties"` 类应用于表格：
 
 ```html
 <table class="properties">
@@ -491,7 +491,7 @@ GFM 表格语法的主要限制是：
 
 ## 网页摘要
 
-*网页摘要*是应用于文章的开头段落——出现在页面元数据（front matter）以及任何 [侧边栏和网页横幅宏](#kumascript) 之后的第一个文本内容。
+*网页摘要*是应用于文章的开头段落——出现在页面元数据（front matter）以及任何[侧边栏和网页横幅宏](#kumascript)之后的第一个文本内容。
 
 此摘要用于搜索引擎优化（SEO），也被一些宏自动包含在网页列表旁。因此，第一段应即简洁又翔实。
 
