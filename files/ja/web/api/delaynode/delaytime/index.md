@@ -1,58 +1,41 @@
 ---
 title: DelayNode.delayTime
 slug: Web/API/DelayNode/delayTime
+page-type: web-api-instance-property
+tags:
+  - API
+  - DelayNode
+  - Property
+  - Reference
+  - Web Audio API
+  - delayTime
+browser-compat: api.DelayNode.delayTime
 translation_of: Web/API/DelayNode/delayTime
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p><code>delayTime</code> は {{ domxref("DelayNode") }} の持つ属性で、遅延させる時間を表します。<a href="/ja/docs/Web/API/AudioParam#a-rate">a-rate</a> の{{domxref("AudioParam")}} です。</p>
+`delayTime` は {{ domxref("DelayNode") }} インターフェイスのプロパティで、適用する遅延量を表す [a-rate](/ja/docs/Web/API/AudioParam#a-rate) の {{domxref("AudioParam")}} です。
 
-<p><code>delayTime</code> の単位は秒で、その最小値は 0 です。最大値は {{ domxref("DelayNode") }}  作成時に、{{domxref("AudioContext.createDelay()")}} の引数で指定できます。</p>
-</div>
+`delayTime` は秒単位で表し、その最小値は `0` です。最大値は作成時に、 {{domxref("BaseAudioContext.createDelay")}} メソッドの `maxDelayTime` 引数で定義されます。
 
-<h2 id="文法">文法</h2>
+> **Note:** 返される {{domxref("AudioParam")}} は読み取り専用ですが、表している値はそうではありません。
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var myDelay = audioCtx.createDelay(5.0);
-myDelay.delayTime.value = 3.0;
-</pre>
+## 値
 
-<div class="note">
-<p><strong>注意</strong>: {{domxref("AudioParam")}} は読み取り専用ですが、そのr value 属性へは代入が可能です。</p>
-</div>
+{{domxref("AudioParam")}} です。
 
-<h3 id="値">値</h3>
+## 例
 
-<p>{{domxref("AudioParam")}}。</p>
+コード例については [`BaseAudioContext.createDelay()`](/ja/docs/Web/API/BaseAudioContext/createDelay#例) を参照してください。
 
-<h2 id="使用例">使用例</h2>
+## 仕様書
 
-<p>{{page("/ja/docs/Web/API/AudioContext.createDelay","Example")}}</p>
+{{Specifications}}
 
-<h2 id="仕様">仕様</h2>
+## ブラウザーの互換性
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', 'http://webaudio.github.io/web-audio-api/#widl-DelayNode-delayTime', 'delayTime')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## 関連情報
 
-<p>{{Compat("api.DelayNode.delayTime")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
