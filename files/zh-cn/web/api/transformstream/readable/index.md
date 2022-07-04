@@ -20,7 +20,7 @@ translation_of: Web/api/TransformStream/readable
 
 ## 示例
 
-一下实例创建了一个新的 {{domxref("TransformStream")}} 并且作为一个 `textEncoderStream`，并将 `readable` 的值打印输出到控制台上。
+以下示例创建了一个新的 {{domxref("TransformStream")}} 并将其赋值给 `textEncoderStream`，然后将 `readable` 的值打印到控制台上。
 
 ```js
 const textEncoderStream = new TransformStream();
