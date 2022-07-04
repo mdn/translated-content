@@ -10,137 +10,117 @@ tags:
   - 数据
   - 方法
 translation_of: Web/API/btoa
-original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>btoa()</code> </strong> 从 {{jsxref("String")}} 对象中创建一个 base-64 编码的 ASCII 字符串，其中字符串中的每个字符都被视为一个二进制数据字节。</p>
+**`btoa()`** 方法可以将一个*二进制字符串*（例如，将字符串中的每一个字节都视为一个二进制数据字节）编码为 {{glossary("Base64")}} 编码的 ASCII 字符串。
 
-<div class="note">
-<p><strong>Note</strong>: 由于这个函数将每个字符视为二进制数据的字节，而不管实际组成字符的字节数是多少，所以如果任何字符的{{Glossary("code point", "码位")}}超出 <code>0x00</code> ~ <code>0xFF</code> 这个范围，则会引发 <code>InvalidCharacterError</code> 异常。请参阅 <a href="#unicode_字符串">Unicode_字符串</a> ，该示例演示如何编码含有码位超出 <code>0x00</code> ~ <code>0xFF</code> 范围的字符的字符串。</p>
-</div>
+你可以使用这个方法来对可能遇到通信问题的数据进行编码，然后使用 {{domxref("atob", "atob()")}} 方法来对数据进行解码。例如，你可以对 ASCII 中的控制字符（值为 0 到 31 的字符）进行编码。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">let encodedData = window.btoa(<var>stringToEncode</var>);
-</pre>
+```js
+btoa(stringToEncode)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>stringToEncode</code></dt>
- <dd>一个字符串，其字符分别表示要编码为 ASCII 的二进制数据的单个字节。</dd>
-</dl>
+- `stringToEncode`
+  - : 一个需要编码的*二进制字符串*。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个包含 <code>stringToEncode</code> 的 Base64 表示的字符串。</p>
+一个包含 `stringToEncode` 的 Base64 表示的 ASCII 字符串。
 
-<h2 id="示例">示例</h2>
+### 异常
 
-<pre class="brush: js">let encodedData = window.btoa("Hello, world"); // 编码
-let decodedData = window.atob(encodedData);    // 解码
-</pre>
+- `InvalidCharacterError` {{domxref("DOMException")}}
+  - : 该字符串包含非单字节的字符。参见下方的“Unicode 字符串”。
 
-<h2 id="备注">备注</h2>
+## 示例
 
-<p>你可以使用此方法对可能导致通信问题的数据进行编码，传输，然后使用 {{domxref("atob()")}} 方法再次解码数据。例如，可以编码控制字符，包括 ASCII 值为 0 到 31 的字符。</p>
+```js
+const encodedData = btoa('Hello, world'); // 编码字符串
+const decodedData = atob(encodedData); // 解码字符串
+```
 
-<p>在用 JavaScript 编写 XPCOM 组件时，<code>btoa()</code> 方法也是可用的，虽然全局对象已经不是 {{domxref("Window")}} 了。</p>
+## Unicode 字符串
 
-<h2 id="Unicode_字符串">Unicode 字符串</h2>
+`btoa()` 函数将一个 JavaScript 字符串作为其参数。而 JavaScript 字符串使用 UTF-16 字符编码表示：在这种编码中，字符串使用一串 16 比特（2 字节）的单元来表示。每一个 ASCII 字符会被填充到每个单元的第一个字节中，而很多其它的字符则不然。
 
-<p>在多数浏览器中，使用 <code>btoa()</code> 对 Unicode 字符串进行编码都会触发 <code>InvalidCharacterError</code> 异常。</p>
+根据设计，Base64 仅将二进制数据作为其输入。而在 JavaScript 字符串中，这意味着每个字符只能使用一个字节表示。所以，如果你将一个字符串传递给 `btoa()`，而其中包含了需要使用超过一个字节才能表示的字符，你就会得到一个错误，因为这个字符串不能被看作是二进制数据：
 
-<p>一种选择是转义任何扩展字符，以便实际编码的字符串是原始字符的 ASCII 表示形式。考虑这个例子，代码来自 <a href="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html">Johan Sundström</a>：</p>
+```js
+const ok = "a";
+console.log(ok.codePointAt(0).toString(16)); //   61：占用 < 1 byte
 
-<pre class="brush: js" id="txt">// ucs-2 string to base64 encoded ascii
-function utoa(str) {
-    return window.btoa(unescape(encodeURIComponent(str)));
+const notOK = "✓"
+console.log(notOK.codePointAt(0).toString(16)); // 2713：占用 > 1 byte
+
+console.log(btoa(ok));    // YQ==
+console.log(btoa(notOK)); // error
+```
+
+如果你需要使用 `btoa()` 将 Unicode 文本编码为 ASCII，一种选择是将字符串中的每一个 16 比特的单元都转换为使用一个字节的单元。例如：
+
+```js
+// convert a Unicode string to a string in which
+// each 16-bit unit occupies only one byte
+function toBinary(string) {
+  const codeUnits = new Uint16Array(string.length);
+  for (let i = 0; i < codeUnits.length; i++) {
+    codeUnits[i] = string.charCodeAt(i);
+  }
+  const charCodes = new Uint8Array(codeUnits.buffer);
+  let result = '';
+  for (let i = 0; i < charCodes.byteLength; i++) {
+    result += String.fromCharCode(charCodes[i]);
+  }
+  return result;
 }
-// base64 encoded ascii to ucs-2 string
-function atou(str) {
-    return decodeURIComponent(escape(window.atob(str)));
+
+// a string that contains characters occupying > 1 byte
+const myString = "☸☹☺☻☼☾☿";
+
+const converted = toBinary(myString);
+const encoded = btoa(converted);
+console.log(encoded);                 // OCY5JjomOyY8Jj4mPyY=
+```
+
+如果你按上述的方法进行了编码，你当然需要一种方法来进行解码：
+
+```js
+function fromBinary(binary) {
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < bytes.length; i++) {
+    bytes[i] = binary.charCodeAt(i);
+  }
+  const charCodes = new Uint16Array(bytes.buffer);
+  let result = '';
+  for (let i = 0; i < charCodes.length; i++) {
+    result += String.fromCharCode(charCodes[i]);
+  }
+  return result;
 }
-// Usage:
-utoa('✓ à la mode'); // 4pyTIMOgIGxhIG1vZGU=
-atou('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
 
-utoa('I \u2661 Unicode!'); // SSDimaEgVW5pY29kZSE=
-atou('SSDimaEgVW5pY29kZSE='); // "I ♡ Unicode!"
-</pre>
+const decoded = atob(encoded);
+const original = fromBinary(decoded);
+console.log(original);                // ☸☹☺☻☼☾☿
+```
 
-<p>更好、更可靠、性能更优异的解决方案是使用类型化数组进行转换。</p>
+参见 {{Glossary("Base64")}} 术语的 [Solution #1 – escaping the string before encoding it](/zh-CN/docs/Glossary/Base64#solution_1_–_javascripts_utf-16__base64) 示例中的 `utf8_to_b64` 和 `b64_to_utf8` 函数。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Polyfill">Polyfill</h2>
+## 浏览器兼容性
 
-<pre class="brush: js">// Polyfill from  <a href="https://github.com/MaxArt2501/base64-js/blob/master/base64.js">https://github.com/MaxArt2501/base64-js/blob/master/base64.js
-</a>(function() {
-    // base64 character set, plus padding character (=)
-    var b64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+{{Compat}}
 
-        // Regular expression to check formal correctness of base64 encoded strings
-        b64re = /^(?:[A-Za-z\d+\/]{4})*?(?:[A-Za-z\d+\/]{2}(?:==)?|[A-Za-z\d+\/]{3}=?)?$/;
+## 参见
 
-    window.btoa = window.btoa || function(string) {
-        string = String(string);
-        var bitmap, a, b, c,
-            result = "",
-            i = 0,
-            rest = string.length % 3; // To determine the final padding
-
-        for (; i &lt; string.length;) {
-            if ((a = string.charCodeAt(i++)) &gt; 255 ||
-                (b = string.charCodeAt(i++)) &gt; 255 ||
-                (c = string.charCodeAt(i++)) &gt; 255)
-                throw new TypeError("Failed to execute 'btoa' on 'Window': The string to be encoded contains characters outside of the Latin1 range.");
-
-            bitmap = (a &lt;&lt; 16) | (b &lt;&lt; 8) | c;
-            result += b64.charAt(bitmap &gt;&gt; 18 &amp; 63) + b64.charAt(bitmap &gt;&gt; 12 &amp; 63) +
-                b64.charAt(bitmap &gt;&gt; 6 &amp; 63) + b64.charAt(bitmap &amp; 63);
-        }
-
-        // If there's need of padding, replace the last 'A's with equal signs
-        return rest ? result.slice(0, rest - 3) + "===".substring(rest) : result;
-    };
-
-    window.atob = window.atob || function(string) {
-        // atob can work with strings with whitespaces, even inside the encoded part,
-        // but only \t, \n, \f, \r and ' ', which can be stripped.
-        string = String(string).replace(/[\t\n\f\r ]+/g, "");
-        if (!b64re.test(string))
-            throw new TypeError("Failed to execute 'atob' on 'Window': The string to be decoded is not correctly encoded.");
-
-        // Adding the padding if missing, for semplicity
-        string += "==".slice(2 - (string.length &amp; 3));
-        var bitmap, result = "",
-            r1, r2, i = 0;
-        for (; i &lt; string.length;) {
-            bitmap = b64.indexOf(string.charAt(i++)) &lt;&lt; 18 | b64.indexOf(string.charAt(i++)) &lt;&lt; 12 |
-                (r1 = b64.indexOf(string.charAt(i++))) &lt;&lt; 6 | (r2 = b64.indexOf(string.charAt(i++)));
-
-            result += r1 === 64 ? String.fromCharCode(bitmap &gt;&gt; 16 &amp; 255) :
-                r2 === 64 ? String.fromCharCode(bitmap &gt;&gt; 16 &amp; 255, bitmap &gt;&gt; 8 &amp; 255) :
-                String.fromCharCode(bitmap &gt;&gt; 16 &amp; 255, bitmap &gt;&gt; 8 &amp; 255, bitmap &amp; 255);
-        }
-        return result;
-    };
-})()
-</pre>
-
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{domxref("WindowBase64/Base64_encoding_and_decoding", "Base64 encoding and decoding")}}</li>
- <li><a href="/zh-CN/docs/data_URIs"><code>data</code> URI</a></li>
- <li>{{domxref("atob()")}}</li>
- <li><a href="/zh-CN/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
-</ul>
+- [`core-js`](https://github.com/zloirock/core-js) 中有对 [`btoa` 的 polyfill](https://github.com/zloirock/core-js#base64-utility-methods)
+- [`data` URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+- {{domxref("atob", "atob()")}}
+- {{Glossary("Base64")}}
