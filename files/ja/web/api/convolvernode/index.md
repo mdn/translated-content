@@ -1,82 +1,104 @@
 ---
 title: ConvolverNode
 slug: Web/API/ConvolverNode
+page-type: web-api-interface
+tags:
+  - API
+  - ConvolverNode
+  - Interface
+  - Reference
+  - Web Audio API
+browser-compat: api.ConvolverNode
 translation_of: Web/API/ConvolverNode
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{APIRef("Web Audio API")}}
 
-<p><code>ConvolverNode</code> は {{domxref("AudioNode")}} の一種で、与えられた {{domxref("AudioBuffer")}} を用いて線形畳み込みを行います。リバーブの実装によく用いられます。<code>ConvolverNode</code> は常に 1 つの入力と、1 つの出力を持ちます。</p>
+`ConvolverNode` は {{domxref("AudioNode")}} の一種で、与えられた {{domxref("AudioBuffer")}} を用いて線形畳み込みを行います。リバーブの実装によく用いられます。 `ConvolverNode` は常に 1 つの入力と、1 つの出力を持ちます。
 
-<div class="note">
-<p><strong>付記</strong>: 線形畳み込みの理論的な側面については、 W3C Web Audio API の仕様中の <a href="http://webaudio.github.io/web-audio-api/#linear-effects-using-convolution">Linear Effects Using Convolution</a> をごらんください。また <a href="https://ja.wikipedia.org/wiki/%E7%95%B3%E3%81%BF%E8%BE%BC%E3%81%BF">Wikipedia の「畳み込み」</a>にも解説があります。</p>
-</div>
+> **Note:** 線形畳み込みの理論的な側面については、[Wikipedia の「畳み込み」](https://ja.wikipedia.org/wiki/%E7%95%B3%E3%81%BF%E8%BE%BC%E3%81%BF)を参照してください。
+
+{{InheritanceDiagram}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">入力数</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">出力数</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">チャンネルカウントモード</th>
-   <td><code>"clamped-max"</code></td>
-  </tr>
-  <tr>
-   <th scope="row">チャンネルカウント</th>
-   <td><code>2</code></td>
-  </tr>
-  <tr>
-   <th scope="row">チャンネルの意味</th>
-   <td><code>"speakers"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">入力数</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">出力数</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">チャンネルカウントモード</th>
+      <td><code>"clamped-max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">チャンネル数</th>
+      <td><code>1</code>, <code>2</code>, <code>4</code></td>
+    </tr>
+    <tr>
+      <th scope="row">チャンネルの解釈</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## コンストラクター
 
-<p><em> </em><em>{{domxref("AudioNode")}}</em> の属性を継承しています。</p>
+- {{domxref("ConvolverNode.ConvolverNode()", "ConvolverNode()")}}
+  - : `ConvolverNode` オブジェクトの新しいインスタンスを生成します。
 
-<dl>
- <dt>{{domxref("ConvolverNode.buffer")}}</dt>
- <dd><span>畳み込みに用いる </span><em>{{domxref("AudioBuffer")}}</em><span> です。モノラル、ステレオ、4 チャンネルのバッファを使用できます。</span>{{domxref("ConvolverNode.normalize")}}</dd>
- <dd><span>ブール値。出力の強さを、バッファと同じになるよう正規化するかどうかをコントロールできます。</span></dd>
-</dl>
+## プロパティ
 
-<h2 id="メソッド">メソッド</h2>
+_親である {{domxref("AudioNode")}} からプロパティを継承しています_。
 
-<p><em>固有のメソッドはありません。継承しているメソッドは </em><em>{{domxref("AudioNode")}}</em> をご覧ください。</p>
+- {{domxref("ConvolverNode.buffer")}}
+  - : モノラル、ステレオ、 4 チャンネルの _{{domxref("AudioBuffer")}}_ で、 `ConvolververNode` がリバーブ効果を生成するために使用する（おそらくマルチチャンネルの）インパルス応答を含みます。
+- {{domxref("ConvolverNode.normalize")}}
+  - : 論理値で、 `buffer` 属性が設定されているときに、バッファーからのインパルス応答を等力正規化でスケーリングするかどうかを制御します。
 
-<h2 id="使用例">使用例</h2>
+## メソッド
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createConvolver","Example")}}</p>
+_固有のメソッドはありません。親である {{domxref("AudioNode")}} からメソッドを継承しています_。
 
-<h2 id="仕様">仕様</h2>
+## ConvolverNode の例
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#the-convolvernode-interface', 'ConvolverNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+次の例は、コンボルバーノードを作成するための AudioContext の基本的な使い方を示しています。
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+> **Note:** 以下の例を完成させるために、インパルス応答を求める必要があります。応用例はこちらの [Codepen](https://codepen.io/DonKarlssonSan/pen/doVKRE) をご覧ください。
 
-<p>{{Compat("api.ConvolverNode")}}</p>
+```js
+let audioCtx = new window.AudioContext();
 
-<h2 id="関連情報">関連情報</h2>
+async function createReverb() {
+    let convolver = audioCtx.createConvolver();
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+    // load impulse response from file
+    let response     = await fetch("path/to/impulse-response.wav");
+    let arraybuffer  = await response.arrayBuffer();
+    convolver.buffer = await audioCtx.decodeAudioData(arraybuffer);
+
+    return convolver;
+}
+
+...
+
+let reverb = await createReverb();
+
+// someOtherAudioNode -> reverb -> destination
+someOtherAudioNode.connect(reverb);
+reverb.connect(audioCtx.destination);
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
