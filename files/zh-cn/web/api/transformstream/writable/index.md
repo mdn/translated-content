@@ -20,7 +20,7 @@ translation_of: Web/api/TransformStream/writable
 
 ## 示例
 
-以下示例创建了一个新的 {{domxref("TransformStream")}} 并且作为一个 `textEncoderStream`，并将 `writable` 的值打印输出到控制台上。
+以下示例创建了一个新的 {{domxref("TransformStream")}} 并将其赋值给 `textEncoderStream`，然后将 `writable` 的值打印到控制台上。
 
 ```js
 const textEncoderStream = new TransformStream();
