@@ -6,7 +6,7 @@ translation_of: Web/API/IDBObjectStore/put
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
-<p> {{domxref("IDBObjectStore")}} 接口的  <strong><code>put()</code></strong> 方法更新一条给定的数据库记录，如果给出的值不存在，则插入一个新的记录</p>
+<p>{{domxref("IDBObjectStore")}} 接口的 <strong><code>put()</code></strong> 方法更新一条给定的数据库记录，如果给出的值不存在，则插入一个新的记录</p>
 
 <p>它返回一个 {{domxref("IDBRequest")}} 对象，并且在一个单独的线程 ,创建一个值的 <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> ,并且把它的值储存在对象仓库 (object store) 中. 当事务的模式是<code>readwrite 时，</code>这个方法用来添加新的记录，或者更新一条对象仓库 (object store) 中已存在的记录 . 如果记录被成功储存，then a success event is fired on the returned request object with the <code>result</code> set to the key for the stored record, and the <code>transaction</code> set to the transaction in which this object store is opened.</p>
 </div>
@@ -122,33 +122,11 @@ objectStoreTitleRequest.onsuccess = function() {
 
 <h2 id="Specification">Specification</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBObjectStore-put-IDBRequest-any-value-any-key', 'put()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-put", "put()")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-
-<p>{{Compat("api.IDBObjectStore.put")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
