@@ -1679,6 +1679,7 @@
 /fr/docs/Glossaire/WAI	/fr/docs/Glossary/WAI
 /fr/docs/Glossaire/WCAG	/fr/docs/Glossary/WCAG
 /fr/docs/Glossaire/WHATWG	/fr/docs/Glossary/WHATWG
+/fr/docs/Glossaire/WebAssembly	/fr/docs/Glossary/WebAssembly
 /fr/docs/Glossaire/WebDAV	/fr/docs/Glossary/WebDAV
 /fr/docs/Glossaire/WebExtensions	/fr/docs/Glossary/WebExtensions
 /fr/docs/Glossaire/WebGL	/fr/docs/Glossary/WebGL
