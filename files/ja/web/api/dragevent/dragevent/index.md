@@ -1,67 +1,48 @@
 ---
 title: DragEvent()
 slug: Web/API/DragEvent/DragEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
   - DOM
   - Reference
   - drag and drop
+browser-compat: api.DragEvent.DragEvent
 translation_of: Web/API/DragEvent/DragEvent
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>このコンストラクタを使用して、合成 {{domxref("DragEvent")}} オブジェクトを作成します。</p>
+このコンストラクターは、合成した {{domxref("DragEvent")}} オブジェクトを作成するために使用します。
 
-<p class="note">このインターフェイスにはコンストラクタがありますが、{{domxref("DataTransfer")}} オブジェクトは、ドラッグ&amp;ドロップ時にブラウザが調整する処理モデルとセキュリティモデルを持っているため、スクリプトから有用な {{domxref("DataTransfer")}} オブジェクトを作成することはできません。</p>
+このインターフェイスにはコンストラクターがありますが、有用な {{domxref("DataTransfer")}} オブジェクトは、ドラッグ＆ドロップの際にブラウザーが調整する処理とセキュリティモデルを持っているので、スクリプトから作成することはできません。
 
-<p class="note">このインターフェイスは、{{domxref("MouseEvent")}} および {{domxref("Event")}} のプロパティを継承します。</p>
+このインターフェイスは、 {{domxref("MouseEvent")}} および {{domxref("Event")}} のプロパティを継承しています。
 
-<h2 id="シンタックス">シンタックス</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><em>event</em> = new DragEvent(<em>type</em>, <em>DragEventInit</em>);</pre>
+```js
+new DragEvent(type)
+new DragEvent(type, dragEventInit)
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><em>type</em></dt>
- <dd>イベントの名前を表す <code>{{domxref("DOMString")}}</code> です (<a href="/ja/docs/Web/API/DragEvent#Event_types">DragEvent イベントの種類</a>を参照)。</dd>
- <dt><em>DragEventInit</em>{{optional_inline}}</dt>
-</dl>
+- `type`
+  - : イベント名を表す文字列です（[DragEvent のイベントの種類](/ja/docs/Web/API/DragEvent#イベントの種類)を参照）。
 
-<dl>
- <dd>以下のフィールドを持つ <code>DragEventInit</code> ディクショナリです。
+- `dragEventInit` {{optional_inline}}
 
- <ul>
-  <li><code>"dataTransfer"</code>、オプションで、デフォルトは <code>"null"</code> です。型は <code>{{domxref("DataTransfer")}}</code> です。</li>
- </ul>
- </dd>
-</dl>
+  - : `DragEventInit` 辞書で、以下のフィールドがあります。
 
-<p class="note"><code>DragEventInit</code> ディクショナリは、{{domxref("MouseEvent.MouseEvent", "MouseEventInit ディクショナリ")}} を継承しています。</p>
+    - `"dataTransfer"`: オプションで既定値は `"null"` です。型は {{domxref("DataTransfer")}} です。
 
-<h2 id="仕様">仕様</h2>
+`DragEventInit` 辞書は {{domxref("MouseEvent.MouseEvent","MouseEventInit 辞書", "", 1)}}から継承しています。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "interaction.html#the-dragevent-interface", "DragEvent")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "editing.html#the-dragevent-interface", "DragEvent")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+{{Specifications}}
 
-<p>{{Compat("api.DragEvent.DragEvent")}}</p>
+## ブラウザーの互換性
+
+{{Compat}}
