@@ -46480,14 +46480,6 @@
       "holynewbie"
     ]
   },
-  "conflicting/Web/API/btoa": {
-    "modified": "2019-07-07T10:35:50.508Z",
-    "contributors": [
-      "zhangchen",
-      "imgss",
-      "ArtemisZ"
-    ]
-  },
   "conflicting/Web/API/caches": {
     "modified": "2020-10-28T03:25:10.149Z",
     "contributors": [
