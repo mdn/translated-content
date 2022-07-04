@@ -3,85 +3,67 @@ title: <munder>
 slug: Web/MathML/Element/munder
 tags:
   - MathML
+  - MathML Reference
+  - MathML:Element
+  - MathML:Script and Limit Schemata
+browser-compat: mathml.elements.munder
 translation_of: Web/MathML/Element/munder
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p class="summary">The MathML <code>&lt;munder&gt;</code> element is used to attach an accent or a limit under an expression. It uses the following syntax: <code>&lt;munder&gt; <em>数式表現 下付き文字</em> &lt;/munder&gt;</code></p>
+MathML の `<munder>` 要素は式の下にアクセントや範囲を付けるために使用します。これは `<munder> base underscript </munder>` のように使用します。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt id="attr-accentunder">accentunder</dt>
- <dd>If <code>true</code>, the element is an <em>accent</em>, which is drawn closer to the base expression.<br>
- If <code>false</code> (default value), the element is a <em>limit</em> under the base expression.</dd>
- <dt id="attr-align">align {{deprecated_inline}}</dt>
- <dd><code>left</code>、 <code>center</code>あるいは<code>right</code>を指定することによって下付き文字をどの位置に表示するかを決めることができます。ただ、この属性は非推奨で近日中に廃止されます。代わりにCSSプロパティ<code><a href="/ja/docs/Web/MathML/Element/ja/docs/Web/CSS/text-align">text-align</a></code>を使用してください。</dd>
- <dt id="attr-class-id-style">class, id, style</dt>
- <dd>CSSで装飾を行なう際に使われます。</dd>
- <dt id="attr-href">href</dt>
- <dd>ハイパーリンクを設定する際に使われます。</dd>
- <dt id="attr-mathbackground">mathbackground</dt>
- <dd>背景色を指定します。 <code>#rgb</code>や<code>#rrggbb</code>のような16進表現や<a href="/ja/docs/CSS/color_value#Color_Keywords">HTML color names</a>を用いることができます。</dd>
- <dt id="attr-mathcolor">mathcolor</dt>
- <dd>文字の色を指定します。 <code>#rgb</code>や<code>#rrggbb</code>のような16進表現や<a href="/ja/docs/CSS/color_value#Color_Keywords">HTML color names</a>を用いることができます。</dd>
-</dl>
+- accentunder
+  - : `true` の場合、その要素は*アクセント*となり、ベース式により近く描画されます。
+    `false` （既定値）の場合、この要素はベース式の下の*範囲*になります。
+- align {{deprecated_inline}}
+  - : 下に付ける文字の配置です。指定可能な値は `left`, `center`, `right` です。
+    この属性は非推奨であり、将来削除される予定です。代わりに CSS の [`text-align`](/ja/docs/Web/CSS/text-align) を使用してください。
+- class, id, style
+  - : [スタイルシート](/ja/docs/Web/CSS)を使用するために提供されています。
+- `displaystyle`
+  - : 論理値で、表示される数式にもっと縦の空間を使うかどうかを指定します。 `false` に設定すると、よりコンパクトなレイアウトで数式が表示されます。主な効果は、 `displaystyle` が `true` に設定されている場合、演算子をより大きく表示することです。 {{ MathMLElement("mo") }} の `movablelimits` も参照してください。
+- href
+  - : 指定された URI へのハイパーリンクを設定するために使用します。
+- mathbackground
+  - : 背景色です。 `#rgb` や `#rrggbb`、 [HTML 色名](/ja/docs/Web/CSS/color_value#色キーワード)を使用することができます。
+- mathcolor
+  - : テキスト色です。 `#rgb` や `#rrggbb`、 [HTML 色名](/ja/docs/Web/CSS/color_value#色キーワード)を使用することができます。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>レンダリングのサンプル(画像): <img alt="x+y+z" src="/files/3197/munder.png" style="margin-left: 10px; vertical-align: middle;"></p>
+レンダリング例: ![x+y+z](munder.png)
 
-<p>ブラウザのレンダリング結果: <math> <munder accentunder="true"> <mrow> <mi> x </mi> <mo> + </mo> <mi> y </mi> <mo> + </mo> <mi> z </mi> </mrow> <mo> ⏟ </mo> </munder> </math></p>
+このブラウザーでのレンダリング: <math><munder accentunder="true"><mrow><mi>x </mi><mo>+ </mo><mi>y </mi><mo>+ </mo><mi>z </mi></mrow><mo>⏟</mo></munder></math>
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
-&lt;munder accentunder="true"&gt;
-  &lt;mrow&gt;
-    &lt;mi&gt; x &lt;/mi&gt;
-    &lt;mo&gt; + &lt;/mo&gt;
-    &lt;mi&gt; y &lt;/mi&gt;
-    &lt;mo&gt; + &lt;/mo&gt;
-    &lt;mi&gt; z &lt;/mi&gt;
-  &lt;/mrow&gt;
-  &lt;mo&gt; &amp;#x23DF; &lt;!--BOTTOM CURLY BRACKET--&gt; &lt;/mo&gt;
-&lt;/munder&gt;
+<munder accentunder="true">
+  <mrow>
+    <mi> x </mi>
+    <mo> + </mo>
+    <mi> y </mi>
+    <mo> + </mo>
+    <mi> z </mi>
+  </mrow>
+  <mo> &#x23DF; <!--BOTTOM CURLY BRACKET--> </mo>
+</munder>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('MathML3', 'chapter3.html#presm.munder', 'munder') }}</td>
-   <td>{{ Spec2('MathML3') }}</td>
-   <td>Current specification</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('MathML2', 'chapter3.html#presm.munder', 'munder') }}</td>
-   <td>{{ Spec2('MathML2') }}</td>
-   <td>Initial specification</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザごとの互換性">ブラウザごとの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("mathml.elements.munder")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li>{{ MathMLElement("mover") }} (上付き文字)</li>
- <li>{{ MathMLElement("munderover") }} (Underscript-overscript pair)</li>
-</ul>
+- {{ MathMLElement("mover") }} (上の表記)
+- {{ MathMLElement("munderover") }} (下の表記と上の表記の組)
