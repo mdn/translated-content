@@ -13,7 +13,6 @@ La clase **`Object`** representa uno de los [tipos de datos en Javascript](/es/d
 
 Casi todos los objetos en JavaScript son instancias de {{jsxref("Object")}}; un objeto típico hereda propiedades (incluyendo los métodos) de `Object.prototype`, a pesar de que esas propiedas puedan ser sobreescritas. Aun así, un `Object` puede ser deliberadamente creado para que esto no se cumpla (por ejemplo con {{jsxref("Object.create", "Object.create(null)")}}), o puede alterarse para que esto no sea más verdad (por ejemplo con {{jsxref("Object.setPrototypeOf")}}).
 
-Casi todos los objetos en JavaScript son instancias de {{jsxref("Object")}}; un objeto típico hereda propiedades (incluyendo los métodos) de `Object.prototype`, a pesar de que esas propiedas puedan ser sobreescritas. Aun así, un `Object` puede ser deliberadamente creado para que esto no se cumpla (por ejemplo con {{jsxref("Object.create", "Object.create(null)")}}), o puede alterarse para que esto no sea más verdad (por ejemplo con {{jsxref("Object.setPrototypeOf")}}).
 Los cambios realizados en el `Object` prototipo son vistos por todos los objetos de la cadena de prototipos, a no ser que las propiedas y métodos sujetos a esos cambios hayan sido sobreescritos más abajo en la cadena. Sobreescribir o extender el comportamiento de un objeto es un mecanismo muy poderoso, aunque potencialmente peligroso.
 
 El constructor `Objeto` crea un envoltorio de objeto para el valor dado.
