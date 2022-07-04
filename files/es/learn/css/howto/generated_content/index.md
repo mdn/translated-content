@@ -38,7 +38,7 @@ Un texto donde necesito <span class="ref">algo</span>
 }
 ```
 
-#### Produce
+#### Resultado
 
 {{ EmbedLiveSample('Contenido_de_texto', 600, 30) }}
 
@@ -67,3 +67,4 @@ a.glossary::after {
 ```
 
 {{ EmbedLiveSample('Contenido_de_imagen', 600, 40) }}
+
