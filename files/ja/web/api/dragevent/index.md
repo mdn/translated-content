@@ -1,109 +1,85 @@
 ---
 title: DragEvent
 slug: Web/API/DragEvent
+page-type: web-api-interface
 tags:
   - API
   - DragEvent
   - Reference
   - drag and drop
+browser-compat: api.DragEvent
 translation_of: Web/API/DragEvent
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p><strong><code>DragEvent</code></strong> インターフェイスは、ドラッグアンドドロップの対話を表す {{domxref("Event","DOM イベント")}}です。ユーザーはタッチ面でポインティングデバイス (マウスなど) を置くことによりドラッグを開始して、ポインタを新たな場所 (別の DOM 要素など) にドラッグします。アプリケーションは独自の方法で、ドラッグアンドドロップの操作を自由に解釈できます。</p>
+**`DragEvent`** インターフェイスは、ドラッグ＆ドロップ操作を表す {{domxref("Event","DOM イベント", "", 1)}}です。ユーザーはタッチ面でポインティングデバイス（マウスなど）を置くことによりドラッグを開始して、ポインタを新たな場所（別の DOM 要素など）にドラッグします。アプリケーションは独自の方法で、ドラッグ＆ドロップの操作を自由に解釈できます。
 
-<p class="note">このインターフェイスは、{{domxref("MouseEvent")}} および {{domxref("Event")}} のプロパティを継承します。</p>
+このインターフェイスは、{{domxref("MouseEvent")}} および {{domxref("Event")}} からプロパティを継承しています。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+{{InheritanceDiagram}}
 
-<dl>
- <dt>{{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}</dt>
- <dd>ドラッグアンドドロップの操作で動かされているデータです。</dd>
-</dl>
+## プロパティ
 
-<h2 id="Constructors" name="Constructors">コンストラクター</h2>
+- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
+  - : ドラッグ＆ドロップ操作で動かされているデータです。
 
-<p class="note">このインターフェイスにはコンストラクターがありますが、役に立つ DataTransfer オブジェクトをスクリプトから作成することはできません。これは {{domxref("DataTransfer")}} オブジェクトに、ドラッグアンドドロップ中にブラウザーによって調整される処理やセキュリティのモデルがあるためです。</p>
+## コンストラクター
 
-<dl>
- <dt>{{domxref("DragEvent.DragEvent", "DragEvent()")}}</dt>
- <dd>本物ではなく、また信頼されていない DragEvent を作成します。</dd>
-</dl>
+このインターフェイスにはコンストラクターがありますが、役に立つ DataTransfer オブジェクトをスクリプトから作成することはできません。これは {{domxref("DataTransfer")}} オブジェクトに、ドラッグ＆ドロップ中にブラウザーによって調整される処理やセキュリティのモデルがあるためです。
 
-<h2 id="Event_types" name="Event_types">イベントタイプ</h2>
+- {{domxref("DragEvent.DragEvent", "DragEvent()")}}
+  - : 合成された信頼されてない DragEvent を作成します。
 
-<dl>
- <dt>{{event('drag')}}</dt>
- <dd>このイベントは、要素や選択テキストがドラッグされているときに発生します。</dd>
- <dt>{{event('dragend')}}</dt>
- <dd>このイベントは、(マウスボタンを離したり、Esc キーを押下して) ドラッグ操作が終了したときに発生します。</dd>
- <dt>{{event('dragenter')}}</dt>
- <dd>このイベントは、ドラッグされた要素や選択テキストが有効なドロップ先に入ったときに発生します。</dd>
- <dt>{{event('dragexit')}}</dt>
- <dd>このイベントは、要素がドラッグ操作の直接的な選択対象ではなくなったときに発生します。</dd>
- <dt>{{event('dragleave')}}</dt>
- <dd>このイベントは、ドラッグされた要素や選択テキストが有効なドロップ先から出たときに発生します。</dd>
- <dt>{{event('dragover')}}</dt>
- <dd>このイベントは、要素や選択テキストが有効なドロップ先の上をドラッグされたときに (マウスが動いていない場合は 50 ミリ秒ごとに、それ以外は 5 ミリ秒ごと (遅い動作) か 1 ミリ秒ごと (速い動作) の間隔です。この発生パターンは {{Event("mouseover")}} とは異なります) 発生します。</dd>
- <dt>{{event('dragstart')}}</dt>
- <dd>このイベントは、ユーザーが要素や選択テキストのドラッグを開始したときに発生します。</dd>
- <dt>{{event('drop')}}</dt>
- <dd>このイベントは、要素や選択テキストが有効なドロップ先にドロップされたときに発生します。</dd>
-</dl>
+## イベントの種類
 
-<h2 id="GlobalEventHandlers" name="GlobalEventHandlers">GlobalEventHandlers</h2>
+- {{domxref("HTMLElement/drag_event", "drag")}}
+  - : このイベントは、要素や選択テキストのドラッグが開始されているときに発生します。
+- {{domxref("HTMLElement/dragend_event", "dragend")}}
+  - : このイベントは、（マウスボタンを離したり、Esc キーを押下したりして）ドラッグ操作が終了したときに発生します。
+- {{domxref("HTMLElement/dragenter_event", "dragenter")}}
+  - : このイベントは、ドラッグされた要素や選択テキストが有効なドロップ先に入ったときに発生します。
+- {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+  - : このイベントは、ドラッグされた要素や選択テキストが有効なドロップ先から出たときに発生します。
+- {{domxref("HTMLElement/dragover_event", "dragover")}}
+  - : このイベントは、要素や選択テキストが有効なドロップ先の上をドラッグされたときに発生します（マウスが動いていない場合は 50 ミリ秒ごとに、それ以外は 5 ミリ秒ごと（遅い動作）か 1 ミリ秒ごと（速い動作）の間隔です。この発生パターンは {{domxref("Element/mouseover_event", "mouseover")}} とは異なります）。
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
+  - : このイベントは、ユーザーが要素や選択テキストのドラッグを開始したときに発生します。
+- {{domxref("HTMLElement/drop_event", "drop")}}
+  - : このイベントは、要素や選択テキストが有効なドロップ先にドロップされたときに発生します。
 
-<dl>
- <dt>{{domxref('GlobalEventHandlers.ondrag')}}</dt>
- <dd>{{event('drag')}} イベントの {{domxref('GlobalEventHandlers','グローバルイベントハンドラー')}}。</dd>
- <dt>{{domxref('GlobalEventHandlers.ondragend')}}</dt>
- <dd>{{event('dragend')}} イベントの {{domxref('GlobalEventHandlers','グローバルイベントハンドラー')}}。</dd>
- <dt>{{domxref('GlobalEventHandlers.ondragenter')}}</dt>
- <dd>{{event('dragenter')}} イベントの {{domxref('GlobalEventHandlers','グローバルイベントハンドラー')}}。</dd>
- <dt>{{domxref('GlobalEventHandlers.ondragexit')}}</dt>
- <dd>{{event('dragexit')}} イベントの {{domxref('GlobalEventHandlers','グローバルイベントハンドラー')}}。</dd>
- <dt>{{domxref('GlobalEventHandlers.ondragleave')}}</dt>
- <dd>{{event('dragleave')}} イベントの {{domxref('GlobalEventHandlers','グローバルイベントハンドラー')}}。</dd>
- <dt>{{domxref('GlobalEventHandlers.ondragover')}}</dt>
- <dd>{{event('dragover')}} イベントの {{domxref('GlobalEventHandlers','グローバルイベントハンドラー')}}。</dd>
- <dt>{{domxref('GlobalEventHandlers.ondragstart')}}</dt>
- <dd>{{event('dragstart')}} イベントの {{domxref('GlobalEventHandlers','グローバルイベントハンドラー')}}。</dd>
- <dt>{{domxref('GlobalEventHandlers.ondrop')}}</dt>
- <dd>{{event('drop')}} イベントの {{domxref('GlobalEventHandlers','グローバルイベントハンドラ')}}。</dd>
-</dl>
+## GlobalEventHandlers
 
-<h2 id="Example" name="Example">例</h2>
+- {{domxref('GlobalEventHandlers.ondrag')}}
+  - : {{domxref("HTMLElement/drag_event", "drag")}} イベントの{{domxref('GlobalEventHandlers','グローバルイベントハンドラー', "", 1)}}です。
+- {{domxref('GlobalEventHandlers.ondragend')}}
+  - : {{domxref("HTMLElement/dragend_event", "dragend")}} イベントの{{domxref('GlobalEventHandlers','グローバルイベントハンドラー', "", 1)}}です。
+- {{domxref('GlobalEventHandlers.ondragenter')}}
+  - : {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントの{{domxref('GlobalEventHandlers','グローバルイベントハンドラー', "", 1)}}です。
+- {{domxref('GlobalEventHandlers.ondragleave')}}
+  - : {{domxref("HTMLElement/dragleave_event", "dragleave")}} イベントの{{domxref('GlobalEventHandlers','グローバルイベントハンドラー', "", 1)}}です。
+- {{domxref('GlobalEventHandlers.ondragover')}}
+  - : {{domxref("HTMLElement/dragover_event", "dragover")}} イベントの{{domxref('GlobalEventHandlers','グローバルイベントハンドラー', "", 1)}}です。
+- {{domxref('GlobalEventHandlers.ondragstart')}}
+  - : {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントの{{domxref('GlobalEventHandlers','グローバルイベントハンドラー', "", 1)}}です。
+- {{domxref('GlobalEventHandlers.ondrop')}}
+  - : {{domxref("HTMLElement/drop_event", "drop")}} イベントの{{domxref('GlobalEventHandlers','グローバルイベントハンドラー', "", 1)}}です。
 
-<p>各プロパティ、コンストラクター、イベントタイプおよびグローバルイベントハンドラーの例は、それぞれのリファレンスページに掲載しています。</p>
+## 例
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+各プロパティ、コンストラクター、イベントタイプおよびグローバルイベントハンドラーの例は、それぞれのリファレンスページに掲載しています。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dragevent", "DragEvent")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "editing.html#the-dragevent-interface", "DragEvent")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>最初の定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+{{Specifications}}
 
+## ブラウザーの互換性
 
+{{Compat}}
 
-<p>{{Compat("api.DragEvent")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<p>{{page("/ja/docs/Web/API/DataTransfer", "See also")}}</p>
+- [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
+- [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推奨されるドラッグの種類](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [複数のアイテムのドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
