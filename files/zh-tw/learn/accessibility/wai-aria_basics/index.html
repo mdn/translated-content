@@ -60,7 +60,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 <p>有關WAI-ARIA屬性的重要觀點是他們不會影響網頁的任何內容，除了透過瀏覽器無障礙API揭露資訊之外(螢幕報讀器即從中獲得資訊)。儘管WAI-ARIA屬性對CSS選擇元素很有用，但不會影響網頁結構、DOM等。</p>
 
 <div class="note">
-<p><strong>注意：</strong>你可以在WAI-ARIA規格中找到所有ARIA的角色及其用法的很有用清單，請參見 <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions">Definition of Roles</a>連結以獲得更進一步的資訊。</p>
+<p><strong>備註：</strong> 你可以在WAI-ARIA規格中找到所有ARIA的角色及其用法的很有用清單，請參見 <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions">Definition of Roles</a>連結以獲得更進一步的資訊。</p>
 
 <p>本規格也涵括所有屬性與狀態的清單，請參見 <a href="https://www.w3.org/TR/wai-aria-1.1/#state_prop_def">Definitions of States and Properties (all aria-* attributes)</a>連結以獲得更進一步的資訊。</p>
 </div>
@@ -86,7 +86,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 <p>在本文中，我們未試圖涵蓋每一個WAI-ARIA特徵及其確切的支援細節。相反地，我們將涵蓋最關鍵的WAI-ARIA特徵讓你知道；如果我們沒有提到任何支援細節，你可認定該特徵得到很好的支援。我們會明確地提到這個例外情況。</p>
 
 <div class="note">
-<p><strong>注意</strong>:某些JavaScript儲存庫支援WAI-ARIA，亦即當他們產生UI特徵如複雜的表單控制措施，他們添加ARIA屬性來增進這些特徵的無障礙。如果你在尋找第三方的JavaScript解決方案來快速的開發UI，你應該謹慎地考量其UI插件的無障礙作為你決定使用的重要因素。jQuery UI(參見<a href="https://jqueryui.com/about/#deep-accessibility-support">About jQuery UI: Deep accessibility support</a>)、 <a href="https://www.sencha.com/products/extjs/">ExtJS</a>與 <a href="https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html">Dojo/Dijit</a>是良好範例。</p>
+<p><strong>備註：</strong> 某些JavaScript儲存庫支援WAI-ARIA，亦即當他們產生UI特徵如複雜的表單控制措施，他們添加ARIA屬性來增進這些特徵的無障礙。如果你在尋找第三方的JavaScript解決方案來快速的開發UI，你應該謹慎地考量其UI插件的無障礙作為你決定使用的重要因素。jQuery UI(參見<a href="https://jqueryui.com/about/#deep-accessibility-support">About jQuery UI: Deep accessibility support</a>)、 <a href="https://www.sencha.com/products/extjs/">ExtJS</a>與 <a href="https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html">Dojo/Dijit</a>是良好範例。</p>
 </div>
 
 <h3 id="何時應該使用WAI-ARIA"><strong>何時應該使用WAI-ARIA?</strong></h3>
@@ -94,18 +94,18 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 <p>我們討論了促使WAI-ARIA早期建立的一些問題，但基本上WAI-ARIA在4個主要領域很有用：</p>
 
 <ol>
- <li><strong>路標/地標：</strong>ARIA的角色屬性值可作為地標，不是複製HTML5元素的語意(如{{htmlelement("nav")}})，就是超越HTML5語意而對不同的功能區域提供路標，如搜尋、頁籤群組、頁籤、清單框等。</li>
- <li><strong>動態內容更新：</strong>螢幕報讀器往往難以報讀不斷改變的內容；當某個內容區域更新時，我們可以使用aria-live通知螢幕報讀器的使用者，例如透過 <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>或<a href="/en-US/docs/Web/API/Document_Object_Model">DOM APIs</a>。</li>
+ <li><strong>路標/地標</strong>：ARIA的角色屬性值可作為地標，不是複製HTML5元素的語意(如{{htmlelement("nav")}})，就是超越HTML5語意而對不同的功能區域提供路標，如搜尋、頁籤群組、頁籤、清單框等。</li>
+ <li><strong>動態內容更新</strong>：螢幕報讀器往往難以報讀不斷改變的內容；當某個內容區域更新時，我們可以使用aria-live通知螢幕報讀器的使用者，例如透過 <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>或<a href="/en-US/docs/Web/API/Document_Object_Model">DOM APIs</a>。</li>
  <li><strong>增強鍵盤無障礙</strong>：內建的HTML元素具有原生的鍵盤無障礙；當其他元素伴隨使用JavaScript模擬相似的互動時，鍵盤無障礙操作與螢幕報讀器報讀會遭遇問題。如果這是不可避免的，WAI-ARIA提供讓其他元素獲得焦點的一種方法(使用 <code>tabindex</code>)。</li>
  <li><strong>非語意控制措施的無障礙</strong>：當一系列巢狀的<code>&lt;div&gt;</code>搭配CSS/JavaScript用於創建一個複雜的UI特徵，或者一個透過JavaScript大幅增強/改變的原生控制措施，無障礙會遭遇到困難—如果沒有語意或其他線索，螢幕報讀器使用者將發覺難以理解該特徵的作用。在這種情況下，ARIA可以幫助提供缺失的部分使用如按鈕、清單框或頁籤群組等角色組合，以及aria-required 或aria-posinset等屬性對功能性提供進一步的線索。</li>
 </ol>
 
-<p>記住一件事 — <strong>僅在必需時才使用WAI-ARIA! </strong>理想情況下，你應該總是使用<a>原生HTML特徵</a>提供螢幕報讀器所需要的語意來告訴其使用者接下來將發生甚麼事情。有時候這是不可能的情形，不是因為你受限於控制該程式碼，就是因為你創建一些複雜而無法用簡易的HTML元素來開發。在這種情況下，WAI-ARIA可作為有價值的無障礙增強工作。</p>
+<p>記住一件事 — <strong>僅在必需時才使用WAI-ARIA</strong>! 理想情況下，你應該總是使用原生HTML特徵提供螢幕報讀器所需要的語意來告訴其使用者接下來將發生甚麼事情。有時候這是不可能的情形，不是因為你受限於控制該程式碼，就是因為你創建一些複雜而無法用簡易的HTML元素來開發。在這種情況下，WAI-ARIA可作為有價值的無障礙增強工作。</p>
 
 <p>再說一次，只有需要的時候才使用它！</p>
 
 <div class="note">
-<p><strong>注意</strong>: 請確保有各類實際的使用者來測試你的網站 — 非身障者、使用螢幕報讀器者、使用鍵盤導覽者等。他們將比你更能了解它運作的效果。</p>
+<p><strong>備註：</strong> 請確保有各類實際的使用者來測試你的網站 — 非身障者、使用螢幕報讀器者、使用鍵盤導覽者等。他們將比你更能了解它運作的效果。</p>
 </div>
 
 <h2 id="實作WAI-ARIA開發">實作WAI-ARIA開發</h2>
@@ -225,7 +225,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 <p>這將使螢幕報讀器在內容更新時讀出更新的內容。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 如果你嘗試從 <code>XMLHttpRequest</code> 執行 <code>file://</code> URL<code>，</code>大部分的瀏覽器會拋出安全異常，例如你直接上傳該檔案到瀏覽器(透過雙擊滑鼠鍵等)。為了這項可以執行，你需要將檔案上傳到一個網站伺服器如<a href="/en-US/docs/Learn/Common_questions/Using_Github_pages"> GitHub</a>，或本機網站伺服器如 <a href="http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/">Python's SimpleHTTPServer</a>。</p>
+<p><strong>備註：</strong> 如果你嘗試從 <code>XMLHttpRequest</code> 執行 <code>file://</code> URL<code>，</code>大部分的瀏覽器會拋出安全異常，例如你直接上傳該檔案到瀏覽器(透過雙擊滑鼠鍵等)。為了這項可以執行，你需要將檔案上傳到一個網站伺服器如<a href="/en-US/docs/Learn/Common_questions/Using_Github_pages"> GitHub</a>，或本機網站伺服器如 <a href="http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/">Python's SimpleHTTPServer</a>。</p>
 </div>
 
 <p>這裡有一項額外的考量—只有文字更新才讀出。如果我們也總是讀出標題，那將很好，以讓使用者記住讀出的內容。為做到這樣，我們可以添加 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-atomic">aria-atomic</a></code> 屬性到這個部分，再次更新您的 <code>&lt;section&gt;</code> 標籤如下所示：</p>
@@ -235,11 +235,11 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 <p><code>aria-atomic="true"</code>屬性告訴螢幕報讀器以一個原子單位方式讀出完整的元素內容，而不僅只讀出更新的部分。</p>
 
 <div class="note">
-<p><strong>注意</strong>:你可以查看完成的範例 <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html">aria-live.html</a> (<a href="http://mdn.github.io/learning-area/accessibility/aria/aria-live.html">看實際頁面</a>)。</p>
+<p><strong>備註：</strong> 你可以查看完成的範例 <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html">aria-live.html</a> (<a href="http://mdn.github.io/learning-area/accessibility/aria/aria-live.html">看實際頁面</a>)。</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>: <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-relevant">aria-relevant</a></code> 屬性在即時區塊更新時對於控制讀出甚麼內容也相當有用，例如你可以僅獲得讀出新增或移除的內容。</p>
+<p><strong>備註：</strong> <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-relevant">aria-relevant</a></code> 屬性在即時區塊更新時對於控制讀出甚麼內容也相當有用，例如你可以僅獲得讀出新增或移除的內容。</p>
 </div>
 
 <h3 id="增強鍵盤無障礙"><strong>增強鍵盤無障礙</strong></h3>
@@ -295,7 +295,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>：你可以查看完成的範例 <a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html">form-validation-updated.html</a>。</p>
+<p><strong>備註：</strong> 你可以查看完成的範例 <a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html">form-validation-updated.html</a>。</p>
 </div>
 
 <p>除了傳統的 {{htmlelement("label")}} 元素之外，WAI-ARIA也能賦予一些進階的表單標籤技術。我們已經談論過使用 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> 屬性在我們不希望標籤讓有視覺的使用者看見的地方來提供標籤(參見上述 <a href="#路標地標">路標/地標</a> 章節。如果你想要指定一個非<code>&lt;label&gt;</code> 元素當作標籤或具有相同標籤多重的表單輸入標籤，這裡有使用其他屬性如 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a></code> 的其他標籤技術，如果你想要其他的訊息與表單輸入關聯並且報讀出來，使用 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby">aria-describedby</a></code>。更多細節請參見 <a href="http://webaim.org/techniques/forms/advanced">WebAIM's Advanced Form Labeling article</a> 。</p>
@@ -337,7 +337,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 <p>現在當你使用螢幕報讀器測試它時，按鈕將會用句子如"Click me!, button" 讀出—這樣好多了。</p>
 
 <div class="note">
-<p>注意：記住最好盡可能使用正確的語意元素，如果你希望創建一個按鈕，並且可使用 {{htmlelement("button")}} 元素，就應該使用 {{htmlelement("button")}} 元素！</p>
+<p><strong>備註：</strong> 記住最好盡可能使用正確的語意元素，如果你希望創建一個按鈕，並且可使用 {{htmlelement("button")}} 元素，就應該使用 {{htmlelement("button")}} 元素！</p>
 </div>
 
 <h4 id="透過複雜的插件引導使用者">透過複雜的插件引導使用者</h4>
@@ -368,7 +368,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 &lt;/div&gt;</pre>
 
 <div class="note">
-<p><strong>注意</strong>: 這裡最引人注目的是我們移除在原來範例中的連結，並且只使用清單項目作為頁籤—這樣做是因為對螢幕報讀器使用者比較少困擾(連結並非真正地帶妳到哪個地方；他們只是改變視窗)，並且可讓組件大小/位置在組件特徵中有很好的運作—當這些是放在連結上的時候，瀏覽器將維持報讀"1 of 1"，而非"1 of 3"、"2 of 3"等。</p>
+<p><strong>備註：</strong> 這裡最引人注目的是我們移除在原來範例中的連結，並且只使用清單項目作為頁籤—這樣做是因為對螢幕報讀器使用者比較少困擾(連結並非真正地帶妳到哪個地方；他們只是改變視窗)，並且可讓組件大小/位置在組件特徵中有很好的運作—當這些是放在連結上的時候，瀏覽器將維持報讀"1 of 1"，而非"1 of 3"、"2 of 3"等。</p>
 </div>
 
 <p>新的特徵如下：</p>
@@ -385,7 +385,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 <p>在我們的測試中，這些新的結構確實提供整體的改善。頁籤現在被認定為頁籤(如螢幕報讀器讀出"索引標籤")，被選取的頁籤以”已選取”指出並讀出頁籤的名稱，螢幕報讀器也告訴你目前所在的頁籤數目。此外，因為設置 <code>aria-hidden</code> (只有非隱藏的頁籤才設定<code>aria-hidden="false"</code> )，非隱藏的頁籤是唯一你可以向下導覽的內容，意即所選取的內容很容易找到。</p>
 
 <div class="note">
-<p>注意：如果有任何你很明確地不希望螢幕報讀器讀出的內容，你可賦予它們 <code>aria-hidden="true"</code> 屬性。</p>
+<p><strong>備註：</strong> 如果有任何你很明確地不希望螢幕報讀器讀出的內容，你可賦予它們 <code>aria-hidden="true"</code> 屬性。</p>
 </div>
 
 <h2 id="總結">總結</h2>
