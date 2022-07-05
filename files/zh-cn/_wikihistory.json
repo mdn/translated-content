@@ -46275,12 +46275,6 @@
       "Bingdian3721"
     ]
   },
-  "conflicting/Web/API/Window/deviceorientation_event": {
-    "modified": "2019-03-18T21:38:06.143Z",
-    "contributors": [
-      "Aaron_Zhung"
-    ]
-  },
   "conflicting/Web/API/Window/focus_event": {
     "modified": "2019-03-24T00:18:09.356Z",
     "contributors": [
