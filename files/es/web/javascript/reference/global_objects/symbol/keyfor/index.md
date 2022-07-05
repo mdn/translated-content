@@ -5,7 +5,7 @@ browser-compat: javascript.builtins.Symbol.keyFor
 ---
 {{JSRef}}
 
-El método **`Symbol.keyFor(sym)`** recupera la llave de símbolo compartida del símbolo pasado como argumento desde el registro global de símbolos.
+El método **`Symbol.keyFor(sym)`** recupera la clave de símbolo compartida del símbolo pasado como argumento desde el registro global de símbolos.
 
 {{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}
 
