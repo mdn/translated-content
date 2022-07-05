@@ -1,62 +1,47 @@
 ---
 title: FileReaderSync
 slug: Web/API/FileReaderSync
+page-type: web-api-interface
 tags:
   - API
   - NeedsMarkupWork
+browser-compat: api.FileReaderSync
 translation_of: Web/API/FileReaderSync
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p><span class="seoSummary"><code>FileReaderSync</code> インターフェイスは、{{DOMxRef("File")}} または {{DOMxRef("Blob")}} オブジェクトを同期的に読み込むことを可能にします。</span></p>
+`FileReaderSync` インターフェイスで、 {{DOMxRef("File")}} または {{DOMxRef("Blob")}} オブジェクトを同期的に読み込むことができます。
 
-<p>このインターフェイスは、ブロックする可能性のある同期 I/O を可能にするため、<a href="/ja/docs/Web/API/Worker">Worker</a> で<a href="/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">のみ利用可能</a>です。</p>
+{{AvailableInWorkers}}
 
-<h2 id="Method_overview" name="Method_overview">プロパティ</h2>
+> **Warning:** このインターフェイスは、ブロックが発生する可能性がある同期 I/O を使用するため、[ワーカー](/ja/docs/Web/API/Worker)**でのみ**利用できます。
 
-<p>このインターフェイスにはプロパティはありません。</p>
+## プロパティ
 
-<h2 id="Method_overview" name="Method_overview">メソッド</h2>
+このインターフェイスにはプロパティはありません。
 
-<dl>
- <dt>{{DOMxRef("FileReaderSync.readAsArrayBuffer","FileReaderSync.readAsArrayBuffer()")}}</dt>
- <dd>指定された {{DOMxRef("Blob")}} または {{DOMxRef("File")}} を、入力データをバイナリ文字列として表す {{DOMxRef("ArrayBuffer")}} に変換します。</dd>
- <dt>{{DOMxRef("FileReaderSync.readAsBinaryString","FileReaderSync.readAsBinaryString()")}} {{deprecated_inline()}}</dt>
- <dd>このメソッドは、指定された {{DOMxRef("Blob")}} または {{DOMxRef("File")}} を、入力データをバイナリ文字列として表す {{DOMxRef("DOMString")}} に変換します。このメソッドは非推奨ですので、代わりに <code>readAsArrayBuffer()</code> を使用することを検討してください。</dd>
- <dt>{{DOMxRef("FileReaderSync.readAsText","FileReaderSync.readAsText()")}}</dt>
- <dd>このメソッドは、指定された {{DOMxRef("Blob")}} または {{DOMxRef("File")}} を、入力データをテキスト文字列として表す {{DOMxRef("DOMString")}} に変換します。オプションの <strong><code>encoding</code></strong> パラメータは、使用するエンコーディングを示します (例: iso-8859-1 または UTF-8)。これがない場合、このメソッドはそれに対する検出アルゴリズムを適用します。</dd>
- <dt>{{DOMxRef("FileReaderSync.readAsDataURL","FileReaderSync.readAsDataURL()")}}</dt>
- <dd>指定された {{DOMxRef("Blob")}} または {{DOMxRef("File")}} を、入力データをデータ URL として表す {{DOMxRef("DOMString")}} に変換します。</dd>
-</dl>
+## メソッド
 
-<h2 id="仕様">仕様</h2>
+- {{DOMxRef("FileReaderSync.readAsArrayBuffer","FileReaderSync.readAsArrayBuffer()")}}
+  - : このメソッドは、指定された {{DOMxRef("Blob")}} または {{DOMxRef("File")}} を、入力データをバイナリー文字列として表す {{jsxref("ArrayBuffer")}} に変換します。
+- {{DOMxRef("FileReaderSync.readAsBinaryString","FileReaderSync.readAsBinaryString()")}} {{deprecated_inline}}
+  - : このメソッドは、指定された {{DOMxRef("Blob")}} または {{DOMxRef("File")}} を、入力データをバイナリー文字列として表す文字列に変換します。このメソッドは非推奨であり、代わりに `readAsArrayBuffer()` を使用することを検討してください。
+- {{DOMxRef("FileReaderSync.readAsText","FileReaderSync.readAsText()")}}
+  - : このメソッドは、指定された {{DOMxRef("Blob")}} または {{DOMxRef("File")}} を、入力データをテキスト文字列として表す文字列に変換します。オプションの **`encoding`** 引数は、使用するエンコーディングを示します（例: iso-8859-1 や UTF-8）。これがない場合、このメソッドはエンコーディングの検出アルゴリズムを適用します。
+- {{DOMxRef("FileReaderSync.readAsDataURL","FileReaderSync.readAsDataURL()")}}
+  - : 指定された {{DOMxRef("Blob")}} または {{DOMxRef("File")}} を、入力データをデータ URL として表す文字列に変換します。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("File API","#FileReaderSync","FileReaderSync")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+{{Specifications}}
 
-<div>
-<p>{{Compat("api.FileReaderSync")}}</p>
-</div>
+## ブラウザーの互換性
 
-<h2 id="あわせて参照">あわせて参照</h2>
+{{Compat}}
 
-<ul>
- <li>{{DOMxRef("FileReader")}}</li>
- <li>{{DOMxRef("BlobBuilder")}}, {{DOMxRef("Blob")}}</li>
- <li>{{DOMxRef("File")}}</li>
- <li>{{DOMxRef("FileReader")}}</li>
-</ul>
+## 関連情報
+
+- {{DOMxRef("FileReader")}}
+- {{DOMxRef("BlobBuilder")}}, {{DOMxRef("Blob")}}
+- {{DOMxRef("File")}}
+- {{DOMxRef("FileReader")}}

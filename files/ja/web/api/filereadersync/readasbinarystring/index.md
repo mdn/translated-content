@@ -1,66 +1,61 @@
 ---
 title: FileReaderSync.readAsBinaryString()
 slug: Web/API/FileReaderSync/readAsBinaryString
+page-type: web-api-instance-method
+tags:
+  - Reference
+  - Deprecated
+browser-compat: api.FileReaderSync.readAsBinaryString
 translation_of: Web/API/FileReaderSync/readAsBinaryString
 ---
-<div>{{APIRef("File API")}}{{deprecated_header}}</div>
+{{APIRef("File API")}}{{deprecated_header}}
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> このメソッドは非推奨であり、{{DOMxRef("FileReaderSync.readAsArrayBuffer", "readAsArrayBuffer()")}}が推奨です。</p>
-</div>
+> **Note:** このメソッドは非推奨であり、 {{DOMxRef("FileReaderSync.readAsArrayBuffer", "readAsArrayBuffer()")}} に取って代わられました。
 
-<p><span class="seoSummary">{{DOMxRef("FileReaderSync")}} インターフェイスの <code>readAsBinaryString()</code> メソッドは、{{DOMxRef("File")}} または {{DOMxRef("Blob")}} オブジェクトを同期的に{{DOMxRef("DOMString")}} に読み込むことを可能にします。このインターフェイスは、ブロックする可能性のある同期 I/O を可能にするため、<a href="/ja/docs/Web/API/Worker">Worker</a> で<a href="/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">のみ利用可能</a>です。</span></p>
+`readAsBinaryString()` は {{DOMxRef("FileReaderSync")}} インターフェイスのメソッドで、 {{DOMxRef("File")}} または {{DOMxRef("Blob")}} オブジェクトを同期的に文字列に読み込むことを可能にします。このインターフェイスは、ブロックが発生する可能性のある同期 I/O を可能にするため、[ワーカー](/ja/docs/Web/API/Worker)で[のみ利用可能](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)です。
 
-<h2 id="シンタックス">シンタックス</h2>
+## 構文
 
-<pre class="eval notranslate">readAsBinaryString(<em>File</em>);
-readAsBinaryString(<em>Blob</em>);
-</pre>
+```js
+readAsBinaryString(File);
+readAsBinaryString(Blob);
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### 引数
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>読み込み対象の DOM {{DOMxRef("File")}} または {{DOMxRef("Blob")}}。</dd>
-</dl>
+- `blob`
+  - : 読み取る {{DOMxRef("File")}} または {{DOMxRef("Blob")}} です。
 
-<h3 id="戻り値">戻り値</h3>
+### 返値
 
-<p>入力データを表す {{DOMxRef("DOMString")}}。</p>
+入力データを表す文字列です。
 
-<h2 id="例外">例外</h2>
+## 例外
 
-<p>{{page("Web/API/FileReaderSync/readAsArrayBuffer","Exceptions")}}</p>
+- `NotFoundError` {{domxref("DOMException")}}
+  - : DOM の {{DOMxRef("File")}} または {{DOMxRef("Blob")}} で表されるリソースが、消去されたなどの理由で見つからない場合に発生します。
+- `SecurityError` {{domxref("DOMException")}}
+  - : 以下の問題のある状況のいずれかが検出された場合に発生します。
+    - リソースが第三者によって変更されている
+    - 同時に行われる読み取りが多すぎる
+    - リソースが指しているファイルがウェブから利用するには安全ではない（システムファイルなど）
+- `NotReadableError` {{domxref("DOMException")}}
+  - : 同時実行ロックなどの権限の問題でリソースを読み込めない場合に発生します。
+- `EncodingError` {{domxref("DOMException")}}
+  - : リソースがデータ URL であり、ブラウザーごとに定義された制限長を超えた場合に発生します。
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("File API","#dfn-readAsBinaryStringSync","readAsBinaryStringSync")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.FileReaderSync.readAsBinaryString")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/File">File API</a></li>
- <li>{{DOMxRef("File")}}</li>
- <li>{{DOMxRef("FileReaderSync")}}</li>
- <li>{{DOMxRef("FileReader")}}</li>
- <li>{{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}</li>
-</ul>
+- [ファイル API](/ja/docs/Web/API/File_API)
+- {{DOMxRef("File")}}
+- {{DOMxRef("FileReaderSync")}}
+- {{DOMxRef("FileReader")}}
+- {{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}
