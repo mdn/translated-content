@@ -5,55 +5,39 @@ tags:
   - 客户端错误
 translation_of: Web/HTTP/Status/404
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>状态码 <code><strong>404</strong></code><strong><code> Not Found</code></strong> 代表客户端错误，指的是服务器端无法找到所请求的资源。返回该响应的链接通常称为坏链（broken link）或死链（dead link），它们会导向链接出错处理 (<a href="https://en.wikipedia.org/wiki/Link_rot">link rot</a>) 页面。</p>
+HTTP 响应状态码 **`404 Not Found`** 指的是服务器无法找到所请求的资源。返回该响应的链接通常称为坏链（broken link）或死链（dead link），它们会导向链接出错处理（<a href="https://zh.wikipedia.org/wiki/失效連結">link rot</a>）页面。
 
-<p>404 状态码并不能说明请求的资源是临时还是永久丢失。如果服务器知道该资源是永久丢失，那么应该返回 {{HTTPStatus(410)}} (Gone) 而不是 404 。</p>
+404 状态码并不能说明请求的资源是临时还是永久丢失。如果服务器知道该资源是永久丢失，那么应该返回 {{HTTPStatus(410)}}（Gone）而不是 404 。
 
-<h2 id="状态">状态</h2>
+## 状态
 
-<pre class="syntaxbox notranslate">404 Not Found</pre>
+```
+404 Not Found
+```
 
-<h2 id="自定义错误页面">自定义错误页面</h2>
+## 自定义错误页面
 
-<p>许多网站会将 404 页面的外观进行定制，使其对用户更友好，以及提供一些引导。例如，Apache 服务器可以在 <code>.htaccess</code> 文件中进行配置，代码片段如下：</p>
+你可以自定义 404 页面，使其对用户更友好，以及提供一些引导。例如，Apache 服务器可以在 `.htaccess` 文件中指定自定义 404 页面的路径，代码片段如下：
 
-<pre class="brush: bash notranslate">ErrorDocument 404 /notfound.html</pre>
+```
+ErrorDocument 404 /notfound.html
+```
 
-<p>你可以访问一下 <a href="https://developer.mozilla.org/en-US/404">MDN 的 404 页面</a>获取一些启发。</p>
+这里有一个自定义 404 页面的示例，参见 [404 页面](https://konmari.com/404)。
 
-<div class="note">
-<p>自定义的 404 页面应该是对用户友好且可读性高的，不能使用户产生困惑。</p>
-</div>
+> **备注：** 适度的自定义是有益的。尽管构建一个幽默、人性化而不会使得用户感到困惑的 404 页面。
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "404 Not Found" , "6.5.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("http.status.404")}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 参见
 
-<ul>
- <li>{{HTTPStatus(410)}}</li>
- <li>
-  <p>{{interwiki("wikipedia", "HTTP_404", "Wikipedia: HTTP 404")}}</p>
- </li>
- <li>
-  <p><a href="https://www.exai.com/blog/404-http-error">404 error</a></p>
- </li>
-</ul>
+- {{HTTPStatus("410")}}
+- {{interwiki("wikipedia", "HTTP_404", "维基百科：HTTP 404")}}
