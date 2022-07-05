@@ -904,14 +904,6 @@
       "enfroze"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2019-09-22T21:56:04.399Z",
-    "contributors": [
-      "Hongsun",
-      "dolmoon",
-      "limkukhyun"
-    ]
-  },
   "Glossary/TCP": {
     "modified": "2020-07-18T05:44:12.957Z",
     "contributors": [
@@ -3225,12 +3217,6 @@
       "alattalatta"
     ]
   },
-  "Web/API/CSSOMString": {
-    "modified": "2019-03-18T21:23:46.366Z",
-    "contributors": [
-      "cs09g"
-    ]
-  },
   "Web/API/CSSStyleSheet": {
     "modified": "2020-10-15T21:52:17.278Z",
     "contributors": [
@@ -3625,13 +3611,6 @@
     "modified": "2020-10-15T22:30:25.978Z",
     "contributors": [
       "composite"
-    ]
-  },
-  "Web/API/DOMString": {
-    "modified": "2020-08-23T06:55:37.415Z",
-    "contributors": [
-      "alattalatta",
-      "cs09g"
     ]
   },
   "Web/API/DOMTokenList": {
@@ -6412,14 +6391,6 @@
     "modified": "2020-10-15T22:26:21.105Z",
     "contributors": [
       "LeeJunyeol"
-    ]
-  },
-  "Web/API/USVString": {
-    "modified": "2020-02-19T12:36:27.811Z",
-    "contributors": [
-      "alattalatta",
-      "cs09g",
-      "DeadIntegral"
     ]
   },
   "Web/API/VREyeParameters": {
@@ -14758,12 +14729,11 @@
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol": {
-    "modified": "2020-10-15T21:40:09.882Z",
+    "modified": "2019-09-22T21:56:04.399Z",
     "contributors": [
+      "Hongsun",
       "dolmoon",
-      "SphinxKnight",
-      "HyunSeob",
-      "maytree"
+      "limkukhyun"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol/for": {
@@ -15082,13 +15052,6 @@
       "Netaras"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-10-15T21:40:32.117Z",
-    "contributors": [
-      "alattalatta",
-      "nicesh"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/parseFloat": {
     "modified": "2020-10-15T21:58:14.258Z",
     "contributors": [
@@ -15332,6 +15295,13 @@
     "contributors": [
       "alattalatta",
       "Netaras"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-10-15T21:40:32.117Z",
+    "contributors": [
+      "alattalatta",
+      "nicesh"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {
@@ -17385,15 +17355,6 @@
     "modified": "2020-10-15T22:15:02.439Z",
     "contributors": [
       "cs09g"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
-    "modified": "2019-09-19T03:24:36.691Z",
-    "contributors": [
-      "dbs6339",
-      "pusanbear",
-      "teoli",
-      "MoGi"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/SyntaxError": {

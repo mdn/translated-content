@@ -24,9 +24,9 @@ translation_of: Learn/JavaScript/Objects/Basics
 
 <h2 id="物件基礎概念">物件基礎概念</h2>
 
-<p>物件是一批相關的數據以及/或者功能（通常包含了幾個變數及函式 — 當它們包含在物件中時被稱做「屬性」（properties）或「函式」（methods）），讓我們用一個範例來看看物件的長相。</p>
+<p>物件是一批相關的數據以及/或者功能（通常包含了幾個變數及函式 — 當它們包含在物件中時被稱做「屬性」（properties）或「函式」（methods）），讓我們用一個範例來看看物件的長相。</p>
 
-<p>在開始之前，請先複製一份 <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html">oojs.html</a> 檔案到你自己的本端硬碟中。此檔案內容物不多，就 1 組 {{HTMLElement("script")}} 元素可寫入我們的原始碼；在繪製頁面時，1 組元素可輸入簡易指令；幾個變數定義；1 組函式可針對輸入至 input 的程式碼，將之輸出到 {{HTMLElement("p")}} 元素。我們將透過此檔案說明基礎的物件語法。</p>
+<p>在開始之前，請先複製一份 <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html">oojs.html</a> 檔案到你自己的本端硬碟中。此檔案內容物不多，就 1 組 {{HTMLElement("script")}} 元素可寫入我們的原始碼；在繪製頁面時，1 組元素可輸入簡易指令；幾個變數定義；1 組函式可針對輸入至 input 的程式碼，將之輸出到 {{HTMLElement("p")}} 元素。我們將透過此檔案說明基礎的物件語法。</p>
 
 <p>JavaScript 內的大多數東西，均是透過定義並初始設定變數來建立物件。</p>
 
@@ -34,7 +34,7 @@ translation_of: Learn/JavaScript/Objects/Basics
 
 <pre class="brush: js">var person = {};</pre>
 
-<p>然後在瀏覽器中開啟 oojs.html, 再打開瀏覽器的開發者工具, 在 JavaScript 的控制台下, 輸入<code>person</code>, 並按下 Enter 鈕，就會得到下列結果：</p>
+<p>然後在瀏覽器中開啟 oojs.html, 再打開瀏覽器的開發者工具, 在 JavaScript 的控制台下, 輸入<code>person</code>, 並按下 Enter 鈕，就會得到下列結果：</p>
 
 <pre class="brush: js">[object Object]</pre>
 
@@ -65,7 +65,7 @@ person.greeting()</pre>
 <p>現在你的物件裡面已經有了某些資料與功能，而且能透過某些簡易語法存取之。</p>
 
 <div class="note">
-<p><strong>注意：</strong>如果你無法完成上述步驟，可先和我們的版本比較一下。參閱 <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html">oojs-finished.html</a> (或觀看 <a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html">實際執行</a>)。你最容易犯下的錯誤是在物件中的最後一個成員 (member)末端加上逗號，如此就會造成錯誤。</p>
+<p><strong>注意：</strong>如果你無法完成上述步驟，可先和我們的版本比較一下。參閱 <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html">oojs-finished.html</a> (或觀看 <a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html">實際執行</a>)。你最容易犯下的錯誤是在物件中的最後一個成員 (member)末端加上逗號，如此就會造成錯誤。</p>
 </div>
 
 <p>目前為止發生了什麼事呢？現在這個物件是由多個成員所構成，各個成員均有 1 個名稱 (如上述的 <code>name</code> 與 <code>age</code>) 以及 1 組數值 (如 <code>['Bob', 'Smith']</code> 與 <code>32</code>)。由名稱與數值構成的組合均以逗號區隔，而名稱與數值之間則以冒號隔開。語法應如下所示：</p>
@@ -132,7 +132,7 @@ person.name.first</pre>
 <pre class="brush: js">person['age']
 person['name']['first']</pre>
 
-<p>這很像在陣列中存取項目的方法。其實基本上是一樣的東西 ─ 但前者是透過指數  (index number) 選擇項目；括弧記法則是透過各成員數值相關的名稱來選擇項目。因此物件有時亦稱作<strong>「相聯陣列 (Associative array)」</strong>；也就是說，其「將字串對應到數值」的方式，與陣列「將數字對應到數值」的方式相同。</p>
+<p>這很像在陣列中存取項目的方法。其實基本上是一樣的東西 ─ 但前者是透過指數  (index number) 選擇項目；括弧記法則是透過各成員數值相關的名稱來選擇項目。因此物件有時亦稱作<strong>「相聯陣列 (Associative array)」</strong>；也就是說，其「將字串對應到數值」的方式，與陣列「將數字對應到數值」的方式相同。</p>
 
 <h2 id="設定物件成員">設定物件成員</h2>
 
@@ -213,7 +213,7 @@ var person2 = {
 
 <pre class="brush: js">myString.split(',');</pre>
 
-<p>你就是在使用 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> 類別實例可用的方法。每次只要你在程式碼中建立字串，該字串就會自動建立成為 <code>String</code> 的實例，並具備有多個常見的方法與屬性。</p>
+<p>你就是在使用 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> 類別實例可用的方法。每次只要你在程式碼中建立字串，該字串就會自動建立成為 <code>String</code> 的實例，並具備有多個常見的方法與屬性。</p>
 
 <p>若你透過下列程式碼存取文件物件模型 (DOM)：</p>
 
@@ -224,7 +224,7 @@ var myVideo = document.querySelector('video');</pre>
 
 <p>同理可證，目前你在使用的許多物件＼API (如 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><code>、<a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math">Math</a></code> 等) 也都是類似情形。</p>
 
-<p>另該注意的是，內建的物件＼API 不見得會自動建立物件實例。像以 <a href="/zh-TW/docs/Web/API/Notifications_API">Notifications API</a>  (它可以幫助你使用現代瀏覽器向使用者發送通知 ) 為例，就需要你針對想要觸發的通知，使用建構子逐一建立新的物件實例。試著將下列程式碼丟進你的 JavaScript 主控台：</p>
+<p>另該注意的是，內建的物件＼API 不見得會自動建立物件實例。像以 <a href="/zh-TW/docs/Web/API/Notifications_API">Notifications API</a>  (它可以幫助你使用現代瀏覽器向使用者發送通知 ) 為例，就需要你針對想要觸發的通知，使用建構子逐一建立新的物件實例。試著將下列程式碼丟進你的 JavaScript 主控台：</p>
 
 <pre class="brush: js">var myNotification = new Notification('Hello!');</pre>
 

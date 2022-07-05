@@ -15,13 +15,13 @@ translation_of: Web/API/WebVTT_API
 ---
 <div>{{DefaultAPISidebar("WebVTT")}}</div>
 
-<p><strong>Web视频文本跟踪格式 </strong>(<strong>WebVTT</strong>) 是一种使用{{HTMLElement("track")}}元素显示定时文本轨道（如字幕或标题）的格式。 WebVTT文件的主要用途是将文本叠加添加到{{HTMLElement("video")}}。 WebVTT是一种基于文本的格式，必须使用{{Glossary("UTF-8")}}进行编码。 在可以使用空格的地方，您也可以使用制表符。 还有一个小的API可用于表示和管理这些轨道以及在正确的时间执行文本回放所需的数据。</p>
+<p><strong>Web 视频文本跟踪格式 </strong>(<strong>WebVTT</strong>) 是一种使用{{HTMLElement("track")}}元素显示定时文本轨道（如字幕或标题）的格式。 WebVTT 文件的主要用途是将文本叠加添加到{{HTMLElement("video")}}。 WebVTT 是一种基于文本的格式，必须使用{{Glossary("UTF-8")}}进行编码。 在可以使用空格的地方，您也可以使用制表符。 还有一个小的 API 可用于表示和管理这些轨道以及在正确的时间执行文本回放所需的数据。</p>
 
 <h2 id="WebVTT_文件">WebVTT 文件</h2>
 
 <p>WebVTT 文件的 MIME 类型为 <code>text/vtt</code>。</p>
 
-<p>一个 WebVTT 文件（<code>.vtt</code>） 包含任意条<u>带时间的提示性内容</u>（<u>cue</u>）（可理解为一条或多条字幕），可以是单行或多行，如下所示：</p>
+<p>一个 WebVTT 文件（<code>.vtt</code>）包含任意条<u>带时间的提示性内容</u>（<u>cue</u>）（可理解为一条或多条字幕），可以是单行或多行，如下所示：</p>
 
 <pre>WEBVTT
 
@@ -104,12 +104,12 @@ NOTE This is the last line in the file</pre>
  <li>第一行以时间开始，时间是显示下面出现的文本的开始时间。</li>
  <li>在同一行，我们有一个字符串<code>--&gt;</code>。</li>
  <li>我们用第二次结束第一行，这是显示关联文本的结束时间。</li>
- <li>然后，我们可以有一个或多个以连字符(-)开头的行，每个行包含要显示的文本跟踪的一部分。</li>
+ <li>然后，我们可以有一个或多个以连字符 (-) 开头的行，每个行包含要显示的文本跟踪的一部分。</li>
 </ul>
 
-<p>我们还可以在.vtt文件中放置注释，以帮助我们记住关于文件各部分的重要信息。这些应该在单独的行上，从字符串NOTE开始。您将在下一节中找到更多关于这些的信息。</p>
+<p>我们还可以在.vtt 文件中放置注释，以帮助我们记住关于文件各部分的重要信息。这些应该在单独的行上，从字符串 NOTE 开始。您将在下一节中找到更多关于这些的信息。</p>
 
-<p>重要的是不要在提示中使用“额外的”空白行，例如在计时行和提示有效负载之间。WebVTT是基于行;空白行将关闭提示。</p>
+<p>重要的是不要在提示中使用“额外的”空白行，例如在计时行和提示有效负载之间。WebVTT 是基于行;空白行将关闭提示。</p>
 
 <h2 id="WebVTT_注释">WebVTT 注释</h2>
 

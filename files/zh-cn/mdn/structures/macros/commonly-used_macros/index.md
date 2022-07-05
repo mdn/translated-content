@@ -94,7 +94,7 @@ original_slug: MDN/Structures/Macros/Custom_macros
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/httpheader.ejs">HTTPHeader</a>
       </td>
       <td><a href="/zh-CN/docs/Web/HTTP/Headers">HTTP 消息头</a>（/Web/HTTP/Headers）</td>
       <td><code>\{{HTTPHeader("ACCEPT")}}</code> 会指向 {{HTTPHeader("ACCEPT")}}。</td>
@@ -163,7 +163,7 @@ original_slug: MDN/Structures/Macros/Custom_macros
 
 [`optional_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/optional_inline.ejs) 和 [`ReadOnlyInline`](https://github.com/mdn/yari/blob/main/kumascript/macros/ReadOnlyInline.ejs) 被用于 API 文档，通常可以用来描述一个对象的属性是只读的或一个函数的参数是可省略的。
 
-用法: `\{{optional_inline}}` 或 `\{{ReadOnlyInline}}`。示例：
+用法：`\{{optional_inline}}` 或 `\{{ReadOnlyInline}}`。示例：
 
 - `isCustomObject` {{ReadOnlyInline}}
   - 如果此项值为 `true`，表明该对象是一个自定义对象。

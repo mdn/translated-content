@@ -1,39 +1,96 @@
 ---
-title: element.onmousemove
+title: GlobalEventHandlers.onmousemove
 slug: Web/API/GlobalEventHandlers/onmousemove
-tags:
-  - DOM
-  - DOM_0
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/GlobalEventHandlers/onmousemove
+browser-compat: api.GlobalEventHandlers.onmousemove
 ---
-{{ ApiRef() }}
+{{ApiRef("HTML DOM")}}
 
-### Résumé
+La propriété **`onmousemove`**, rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`mousemove`](/fr/docs/Web/API/Element/mousemove_event).
 
-La propriété **onmousemove** renvoie le code de gestion de l'évènement `mousemove` pour l'élément courant.
+Un évènement `mousemove` est déclenché lorsqu'on déplace la souris.
 
-### Syntax
-
-`element.onmousemove = functionRef`
-
-où _functionRef_ est une fonction ou une expression de type _function._ Consulter la [référence des fonctions](/en-US/docs/JavaScript/Reference/Functions_and_function_scope) pour plus de détails.
-
-Le paramètre fournit au gestionnaire d'évènement _functionRef_ lors du déclenchement de l'évènement est objet qui représente l'évènement de déplacment de souris, de type {{ domxref("MouseEvent") }}.
-
-### Exemple
+## Syntaxe
 
 ```js
-document.body.onmousemove = event => {
-  // Suivi de la position de la souris dans la console
-  console.log(`Position de la souris : X = ${event.clientX} | Y = ${event.clientY}`);
+cible.onmousemove = refFonction;
+```
+
+### Valeur
+
+`refFonction`est un nom de fonction ou une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet [`MouseEvent`](/fr/docs/Web/API/MouseEvent) comme unique argument.
+
+## Exemples
+
+### Bulles d'information
+
+Cet exemple crée des bulles d'information qui suivent la souris. Il utilise les gestionnaires d'évènements `onmousemove`, [`onmouseover`](/fr/docs/Web/API/GlobalEventHandlers/onmouseover), et [`onmouseout`](/fr/docs/Web/API/GlobalEventHandlers/onmouseout).
+
+#### HTML
+
+```html
+<p><a href="#" data-tooltip="Premier lien">Voir une bulle d'information ici&hellip;</a></p>
+<p><a href="#" data-tooltip="Deuxième lien">&hellip; ou ici !</a></p>
+```
+
+#### CSS
+
+```css
+.tooltip {
+  position: absolute;
+  z-index: 9999;
+  padding: 6px;
+  background: #ffd;
+  border: 1px #886 solid;
+  border-radius: 5px;
 }
 ```
 
-### Notes
+#### JavaScript
 
-L'évènement `mousemove` se déclenche lorsque l'utilisateur déplace la souris.
+```js
+const tooltip = new (function() {
+  const node = document.createElement('div');
+  node.className = 'tooltip';
+  node.setAttribute('hidden', '');
+  document.body.appendChild(node);
 
-### Spécification
+  this.follow = function(event) {
+    node.style.left = event.clientX + 20 + 'px';
+    node.style.top = event.clientY + 10 + 'px';
+  };
 
-{{ DOM0() }}
+  this.show = function(event) {
+    node.textContent = event.target.dataset.tooltip;
+    node.removeAttribute('hidden');
+  };
+
+  this.hide = function() {
+    node.setAttribute('hidden', '');
+  };
+})();
+
+const links = document.querySelectorAll('a');
+
+links.forEach(link => {
+  link.onmouseover = tooltip.show;
+  link.onmousemove = tooltip.follow;
+  link.onmouseout = tooltip.hide;
+});
+```
+
+#### Résultat
+
+{{EmbedLiveSample("")}}
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- L'évènement [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)

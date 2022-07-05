@@ -48,7 +48,7 @@ translation_of: Web/API/HTML_DOM_API
 
 <p>For example, consider a document with two elements, one of which has two more elements nested inside it:</p>
 
-<p><img alt="Structure of a document with elements inside a document in a window" src="https://mdn.mozillademos.org/files/16587/dom-structure.svg" style="display: block; height: 379px; margin: 0 auto; width: 291px;"></p>
+<p><img alt="Structure of a document with elements inside a document in a window" src="dom-structure.svg"></p>
 
 <p>While the {{domxref("Document")}} interface is defined as part of the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> specification, the HTML specification significantly enhances it to add information specific to using the DOM in the context of a web browser, as well as to using it to represent HTML documents specifically.</p>
 
@@ -74,7 +74,7 @@ translation_of: Web/API/HTML_DOM_API
 
 <p>The overall inheritance for HTML element classes looks like this:</p>
 
-<p><img alt="Hierarchy of interfaces for HTML elements" src="https://mdn.mozillademos.org/files/16596/html-dom-hierarchy.svg" style="display: block; height: 565px; margin: 0 auto; width: 661px;"></p>
+<p><img alt="Hierarchy of interfaces for HTML elements" src="html-dom-hierarchy.svg"></p>
 
 <p>As such, an element inherits the properties and methods of all of its ancestors. For example, consider a {{HTMLElement("a")}} element, which is represented in the DOM by an object of type {{domxref("HTMLAnchorElement")}}. The element, then, includes the anchor-specific properties and methods described in that class's documentation, but also those defined by {{domxref("HTMLElement")}} and {{domxref("Element")}}, as well as from {{domxref("Node")}} and, finally, {{domxref("EventTarget")}}.</p>
 
@@ -410,35 +410,7 @@ nameField.addEventListener("input", event =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>WHATWG HTML Specification</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>No change from {{SpecName("DOM2 HTML")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>No change from {{SpecName("DOM1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

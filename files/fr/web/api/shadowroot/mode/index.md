@@ -18,7 +18,9 @@ Lorsque le mode d'une racine _shadow_ vaut `closed`, les détails d'implémentat
 
 ## Syntaxe
 
-    var mode = shadowRoot.mode
+```js
+var mode = shadowRoot.mode
+```
 
 ### Valeur
 

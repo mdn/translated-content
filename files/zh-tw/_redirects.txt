@@ -141,8 +141,6 @@
 /zh-TW/docs/Firefox_3_supports_Cross-site_XMLHttpRequest	/zh-TW/docs/orphaned/Cross-site_XMLHttpRequest
 /zh-TW/docs/Firefox_3_技術文件	/zh-TW/docs/Mozilla/Firefox/Releases/3
 /zh-TW/docs/Firefox_4_for_developers	/zh-TW/docs/Mozilla/Firefox/Releases/4
-/zh-TW/docs/Firefox_4_for_developers/Firefox_4_開發者新功能概覽	/zh-TW/docs/orphaned/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽
-/zh-TW/docs/Firefox_4_開發者新功能概覽	/zh-TW/docs/orphaned/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽
 /zh-TW/docs/Firefox_7_for_developers	/zh-TW/docs/Mozilla/Firefox/Releases/7
 /zh-TW/docs/Games/Workflows	/zh-TW/docs/Games/Tutorials
 /zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
@@ -487,7 +485,6 @@
 /zh-TW/docs/Mozilla/Firefox/Releases/2/Firefox_2_的安全功能	/zh-TW/docs/Mozilla/Firefox/Releases/2/Security_changes
 /zh-TW/docs/Mozilla/Firefox/Releases/2/新增消息來源閱讀工具	/zh-TW/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /zh-TW/docs/Mozilla/Firefox/Releases/3/Firefox_3_Dom_Improvements	/zh-TW/docs/Mozilla/Firefox/Releases/3/DOM_improvements
-/zh-TW/docs/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽	/zh-TW/docs/orphaned/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽
 /zh-TW/docs/Mozilla_event_reference	/zh-TW/docs/Web/Events
 /zh-TW/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
 /zh-TW/docs/Python	/zh-TW/docs/conflicting/Learn/Server-side/Django
@@ -554,6 +551,7 @@
 /zh-TW/docs/Web/API/Coordinates/latitude	/zh-TW/docs/Web/API/GeolocationCoordinates/latitude
 /zh-TW/docs/Web/API/Coordinates/longitude	/zh-TW/docs/Web/API/GeolocationCoordinates/longitude
 /zh-TW/docs/Web/API/Coordinates/speed	/zh-TW/docs/Web/API/GeolocationCoordinates/speed
+/zh-TW/docs/Web/API/DOMString	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
 /zh-TW/docs/Web/API/Detecting_device_orientation	/zh-TW/docs/orphaned/Web/API/Detecting_device_orientation
 /zh-TW/docs/Web/API/DocumentTemp	/zh-TW/docs/Web/API/Document
 /zh-TW/docs/Web/API/DocumentTemp/createElement	/zh-TW/docs/Web/API/Document/createElement
@@ -605,12 +603,10 @@
 /zh-TW/docs/Web/API/Window.onpopstate	/zh-TW/docs/Web/API/Window/popstate_event
 /zh-TW/docs/Web/API/Window.requestAnimationFrame	/zh-TW/docs/Web/API/window/requestAnimationFrame
 /zh-TW/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/zh-TW/docs/conflicting/Web/OpenSearch
-/zh-TW/docs/Web/API/WindowBase64	/zh-TW/docs/conflicting/Web/API/WindowOrWorkerGlobalScope
 /zh-TW/docs/Web/API/WindowEventHandlers/onbeforeunload	/zh-TW/docs/Web/API/Window/beforeunload_event
 /zh-TW/docs/Web/API/WindowEventHandlers/onpopstate	/zh-TW/docs/Web/API/Window/popstate_event
 /zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/zh-TW/docs/Web/API/btoa
 /zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-TW/docs/Web/API/setInterval
-/zh-TW/docs/Web/API/WindowTimers	/zh-TW/docs/conflicting/Web/API/WindowOrWorkerGlobalScope_e2691f7ad05781a30c5fc5bb3b3f633a
 /zh-TW/docs/Web/API/XMLHttpRequest/FormData	/zh-TW/docs/Web/API/FormData
 /zh-TW/docs/Web/API/XMLHttpRequest/onreadystatechange	/zh-TW/docs/Web/API/XMLHttpRequest/readystatechange_event
 /zh-TW/docs/Web/API/document.createTreeWalker	/zh-TW/docs/Web/API/Document/createTreeWalker
@@ -832,6 +828,7 @@
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/prototype	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Promise
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/prototype	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
+/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/null	/zh-TW/docs/Web/JavaScript/Reference/Operators/null
 /zh-TW/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Operators
 /zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Operators_7c8eb9475d97a4a734c5991857698560
 /zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Operators_310dc67549939233c3d18a8fa2cdbb23

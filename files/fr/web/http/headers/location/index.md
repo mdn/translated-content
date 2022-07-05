@@ -33,7 +33,9 @@ En cas de création de ressource, il indique l'URL de la ressource nouvellement 
 
 ## Syntaxe
 
-    Location: <url>
+```
+Location: <url>
+```
 
 ## Directives
 
@@ -42,7 +44,9 @@ En cas de création de ressource, il indique l'URL de la ressource nouvellement 
 
 ## Exemples
 
-    Location: /index.html
+```
+Location: /index.html
+```
 
 ## Spécifications
 

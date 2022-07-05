@@ -161,7 +161,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
   list-style-type: square;
 }</pre>
 
-<h3 id="Notes" name="Notes">Simplifying section selectors</h3>
+<h3 id="Notes">Simplifying section selectors</h3>
 
 <p><code>:is</code> 伪类在处理 HTML5 <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">sections and headings</a>特别有用。 由于 {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}},  {{HTMLElement("nav")}} 经常嵌套在一起，没有 <code>:is()</code>的话匹配其他元素将会很棘手。</p>
 
@@ -226,7 +226,7 @@ h1 {
 
 <h2 id="Notes_2">Notes</h2>
 
-<h3 id="Issues_with_performance_and_specificity" name="Issues_with_performance_and_specificity">any(): — Issues with performance and specificity</h3>
+<h3 id="Issues_with_performance_and_specificity">any(): — Issues with performance and specificity</h3>
 
 <p><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=561154">Bug 561154</a> tracks an issue with Gecko where the specificity of <code>:-moz-any()</code> is incorrect. The current (as of Firefox 12) implementation puts <code>:-moz-any()</code> in the category of universal rules, meaning using it as the rightmost selector will be slower than using an ID, class, or tag as the rightmost selector.</p>
 
@@ -265,7 +265,7 @@ h1 {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 

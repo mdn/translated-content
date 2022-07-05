@@ -20,7 +20,9 @@ Cette propriété indique la vitesse de rotation autour de l'axe X -- en degrés
 
 ## Syntaxe
 
-    var beta = deviceRotationRate.beta;
+```js
+var beta = deviceRotationRate.beta;
+```
 
 Cette propriété est en lecture seule.
 

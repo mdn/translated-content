@@ -25,7 +25,7 @@ translation_of: Web/API/EventTarget
  <dd>创建一个新的 <code>EventTarget</code> 对象实例。</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
 <dl>
  <dt>{{domxref("EventTarget.addEventListener()")}}</dt>
@@ -38,7 +38,7 @@ translation_of: Web/API/EventTarget
 
 <h3 id="Mozilla_chrome_代码的其他方法">Mozilla chrome 代码的其他方法</h3>
 
-<p>Mozilla 扩展，供 JS 实现的事件目标使用以 实现 on* 属性。另见 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/WebIDL_bindings">WebIDL bindings</a> 绑定。</p>
+<p>Mozilla 扩展，供 JS 实现的事件目标使用以 实现 on* 属性。另见 <a href="/en-US/docs/Mozilla/WebIDL_bindings">WebIDL bindings</a> 绑定。</p>
 
 <ul>
  <li>void <strong>setEventHandler</strong>(DOMString type, EventHandler handler) {{non-standard_inline}}</li>
@@ -86,34 +86,11 @@ EventTarget.prototype.dispatchEvent = function(event) {
 };
 </pre>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-eventtarget', 'EventTarget')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', 'DOM3-Events.html#interface-EventTarget', 'EventTarget')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>A few parameters are now optional (<code>listener</code>), or accepts the <code>null</code> value (<code>useCapture</code>).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', 'events.html#Events-EventTarget', 'EventTarget')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
+<h2 id="Browser_Compatibility">浏览器兼容性</h2>
 
 
 
@@ -122,7 +99,7 @@ EventTarget.prototype.dispatchEvent = function(event) {
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events">Event reference</a> - the events available in the platform.</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/Events">Event developer guide</a></li>
+ <li><a href="/en-US/docs/Web/Reference/Events">Event reference</a> - the events available in the platform.</li>
+ <li><a href="/en-US/docs/Web/Guide/DOM/Events">Event developer guide</a></li>
  <li>{{domxref("Event")}} interface</li>
 </ul>

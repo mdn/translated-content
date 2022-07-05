@@ -13,20 +13,20 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 <div>容）</div>
 
-<div> </div>
+<div> </div>
 
 <p><a href="/en-US/Add-ons/WebExtensions/Background_scripts">後端腳本</a>可以使用所有的 <a href="/en-US/Add-ons/WebExtensions/API">擴充套件JavaScript APIs</a>，但它們無法直接使用網頁中的內容。所以如果你的套件必須要透過 content scripts 才能使用它們。</p>
 
 <p>就像一般網頁裡的 scripts 一樣，content scripts 可以透過 standard DOM APIs 存取並修改頁面內容。</p>
 
-<p>Content scripts 只能使用can only access <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs">一小部分的擴充套件APIs</a>，但它們可以透過一個訊息系統<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">來與後端腳本溝通</a>，從而間接地使用擴充套件APIs。</p>
+<p>Content scripts 只能使用can only access <a href="/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs">一小部分的擴充套件APIs</a>，但它們可以透過一個訊息系統<a href="/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">來與後端腳本溝通</a>，從而間接地使用擴充套件APIs。</p>
 
 <div class="note">
 <p>留意到 content scripts 目前會在 addons.mozilla.org 和 testpilot.firefox.com 中被阻擋。如果你嘗試在這些網域下的頁面注入一段 content script 會失敗並且在日誌裡記下一個 <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> 錯誤。</p>
 </div>
 
 <div class="note">
-<p>由於錯誤 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1408996">1408996</a>，透過 <code>var foo</code> or <code>window.foo = "bar"</code> 加入 content script 的 global 作用域的值可能會消失。</p>
+<p>由於錯誤 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1408996">1408996</a>，透過 <code>var foo</code> or <code>window.foo = "bar"</code> 加入 content script 的 global 作用域的值可能會消失。</p>
 </div>
 
 <h2 id="讀入內容腳本">讀入內容腳本</h2>
@@ -34,8 +34,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 <p>你可以透過下列三種方式將內容腳本讀入頁面：</p>
 
 <ol>
- <li><strong>在安裝時讀入至符合URL模式的頁面：</strong>透過你的 manifest.json 中的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> 鍵，你可以要求瀏覽器在每次讀取URL<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns">符合給定模式</a>的頁面時讀入內容腳本。</li>
- <li><strong>在執行時讀入至符合URL模式的頁面：</strong>透過 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> API，你可以要求瀏覽器在每次讀取URL<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns">符合給定模式</a>的頁面時讀入內容腳本。這就像第一種方法，不同的是你可以在執行時增加或移除內容腳本。</li>
+ <li><strong>在安裝時讀入至符合URL模式的頁面：</strong>透過你的 manifest.json 中的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> 鍵，你可以要求瀏覽器在每次讀取URL<a href="/en-US/Add-ons/WebExtensions/Match_patterns">符合給定模式</a>的頁面時讀入內容腳本。</li>
+ <li><strong>在執行時讀入至符合URL模式的頁面：</strong>透過 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> API，你可以要求瀏覽器在每次讀取URL<a href="/en-US/Add-ons/WebExtensions/Match_patterns">符合給定模式</a>的頁面時讀入內容腳本。這就像第一種方法，不同的是你可以在執行時增加或移除內容腳本。</li>
  <li><strong>在執行時讀入至特定的頁籤：透過</strong> <code><a href="/en-US/Add-ons/WebExtensions/API/Tabs/executeScript">tabs.executeScript()</a></code> API，你可以在任何時候將內容腳本讀入特定的頁籤：舉例來說可以在使用者點擊<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action">工具列按鈕</a>時給予回應。</li>
 </ol>
 
@@ -157,7 +157,7 @@ window.confirm("Are you sure?"); // 呼叫原本的 window.confirm()</pre>
 
 <p>內容腳本可以透過一般的 <code><a href="/en-US/docs/Web/API/XMLHttpRequest">window.XMLHttpRequest</a></code> 與 <code><a href="/en-US/docs/Web/API/Fetch_API">window.fetch()</a></code> APIs 來發出請求。</p>
 
-<p>內容腳本跟套件的其他部分擁有相同的跨網域權限： 所以如果套件在 manifest.json 中透過 <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> 鍵要求了某一網域的使用，那麼它的內容腳本也能使用同樣的網域。</p>
+<p>內容腳本跟套件的其他部分擁有相同的跨網域權限： 所以如果套件在 manifest.json 中透過 <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> 鍵要求了某一網域的使用，那麼它的內容腳本也能使用同樣的網域。</p>
 
 <p>這是透過公開更多內容腳本中授權的XHR以及fetch實例來達成的。這件事情會導致標頭中不會設置 <code><a href="/en-US/docs/Web/HTTP/Headers/Origin">Origin</a></code> 與 <code><a href="/en-US/docs/Web/HTTP/Headers/Referer">Referer</a></code>的副作用，就像頁面請求自己一樣，一般會避免請求將跨來源泄露出去。從58版本號以後套件要傳送一些彷彿是頁面內容自己傳送的請求時可以改用 <code>content.XMLHttpRequest</code> 與 <code>content.fetch()</code>。對跨瀏覽器套件來說，這些事情的存在必須要能被做特徵檢測。</p>
 
@@ -174,7 +174,7 @@ window.confirm("Are you sure?"); // 呼叫原本的 window.confirm()</pre>
 <table class="fullwidth-table standard-table">
  <thead>
   <tr>
-   <th scope="row"> </th>
+   <th scope="row"> </th>
    <th scope="col">在內容腳本處</th>
    <th scope="col">在後端腳本處</th>
   </tr>
@@ -233,8 +233,8 @@ function notify(message) {
 <p>建立連線你需要：</p>
 
 <ul>
- <li>一邊透過 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code> 監聽連線</li>
- <li>另一邊呼叫 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect">tabs.connect()</a></code> （對內容腳本建立連線時）或 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect">runtime.connect()</a></code> （對後端腳本建立連線時）。這會回傳一個 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> 物件。</li>
+ <li>一邊透過 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code> 監聽連線</li>
+ <li>另一邊呼叫 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect">tabs.connect()</a></code> （對內容腳本建立連線時）或 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect">runtime.connect()</a></code> （對後端腳本建立連線時）。這會回傳一個 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> 物件。</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code> 監聽器傳送自己的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> 物件。</li>
 </ul>
 
@@ -245,7 +245,7 @@ function notify(message) {
 <ul>
  <li>連線至後端腳本，並將 <code>Port</code> 儲存在一個 <code>myPort</code> 變數</li>
  <li>監聽並記錄 <code>myPort</code> 的訊息</li>
- <li>當使用者點擊文件時，透過 <code>myPort</code> 傳送訊息給後端腳本</li>
+ <li>當使用者點擊文件時，透過 <code>myPort</code> 傳送訊息給後端腳本</li>
 </ul>
 
 <pre class="brush: js">// content-script.js
@@ -273,7 +273,7 @@ document.body.addEventListener("click", function() {
    <li>開始監聽並記錄端口上的訊息</li>
   </ul>
  </li>
- <li>當使用者點擊套件的工具列按鈕時，透過 <code>portFromCS</code> 傳送訊息給內容腳本</li>
+ <li>當使用者點擊套件的工具列按鈕時，透過 <code>portFromCS</code> 傳送訊息給內容腳本</li>
 </ul>
 
 <pre class="brush: js">// background-script.js
@@ -300,7 +300,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>如果你有多個內容腳本同時在溝通，你可能會想把這些連線儲存在陣列裡面。</p>
 
-<p> </p>
+<p> </p>
 
 <ul>
 </ul>
@@ -310,7 +310,7 @@ browser.browserAction.onClicked.addListener(function() {
 var ports = []
 
 function connected(p) {
-  ports[p.sender.tab.id]    = p
+  ports[p.sender.tab.id]    = p
   //...
 }
 
@@ -318,18 +318,18 @@ browser.runtime.onConnect.addListener(connected)
 
 browser.browserAction.onClicked.addListener(function() {
   ports.forEach(p =&gt; {
-        p.postMessage({greeting: "它們按了按鈕！"})
-    })
+        p.postMessage({greeting: "它們按了按鈕！"})
+    })
 });</pre>
 
-<p> </p>
+<p> </p>
 
 <ul>
 </ul>
 
 <h2 id="與網頁溝通">與網頁溝通</h2>
 
-<p>雖說內容腳本預設不能存取頁面腳本產生的物件，但它們可以透過DOM <code><a href="/en-US/docs/Web/API/Window/postMessage">window.postMessage</a></code> 和 <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">window.addEventListener</a></code> APIs與頁面腳本溝通。</p>
+<p>雖說內容腳本預設不能存取頁面腳本產生的物件，但它們可以透過DOM <code><a href="/en-US/docs/Web/API/Window/postMessage">window.postMessage</a></code> 和 <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">window.addEventListener</a></code> APIs與頁面腳本溝通。</p>
 
 <p>例如：</p>
 
@@ -400,7 +400,7 @@ window.postMessage({
   message: "check"
 }, "*");</pre>
 
-<p>這段程式碼透過 <code>window.eval()</code> 和 <code>eval()</code> 建立了些變數 x 和 y 、記錄下它們的值並且傳訊息給頁面。</p>
+<p>這段程式碼透過 <code>window.eval()</code> 和 <code>eval()</code> 建立了些變數 x 和 y 、記錄下它們的值並且傳訊息給頁面。</p>
 
 <p>接收訊息這邊，頁面腳本記錄下一樣的值：</p>
 
@@ -425,7 +425,7 @@ In content script, window.y: 2
 In page script, window.x: 1
 In page script, window.y: undefined</pre>
 
-<p>這些也適用於 <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code>、 <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code>、與 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code>。</p>
+<p>這些也適用於 <code><a href="/en-US/docs/Web/API/setTimeout">setTimeout()</a></code>、<code><a href="/en-US/docs/Web/API/setInterval">setInterval()</a></code>、與 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code>。</p>
 
 <p>當在頁面執行程式碼時一定要小一萬個心，頁面的環境有可能被惡意的網頁所控制，它們可以重新定義與你互動的物件來作出一些出乎意料的行爲：</p>
 
@@ -434,7 +434,7 @@ In page script, window.y: undefined</pre>
 var original = console.log;
 
 console.log = function() {
-  original(true);
+  original(true);
 }
 </pre>
 

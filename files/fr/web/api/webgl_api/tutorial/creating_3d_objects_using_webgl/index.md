@@ -59,21 +59,23 @@ Tout d'abord, construisons le tampon des sommets du cube en mettant à jour le c
 
 Du fait que nous avons ajouté une composante z à nos sommets, nous avons besoin de changer en 3 le `numComponents` de notre attribut `vertexPosition`.
 
-    // Indiquer à WebGL comment extraire les positions du tampon des
-    // positions dans l'attribut vertexPosition
-    {
-      const numComponents = 3;
-      ...
-      gl.vertexAttribPointer(
-          programInfo.attribLocations.vertexPosition,
-          numComponents,
-          type,
-          normalize,
-          stride,
-          offset);
-      gl.enableVertexAttribArray(
-          programInfo.attribLocations.vertexPosition);
-    }
+```js
+// Indiquer à WebGL comment extraire les positions du tampon des
+// positions dans l'attribut vertexPosition
+{
+  const numComponents = 3;
+  ...
+  gl.vertexAttribPointer(
+    programInfo.attribLocations.vertexPosition,
+    numComponents,
+    type,
+    normalize,
+    stride,
+    offset);
+  gl.enableVertexAttribArray(
+    programInfo.attribLocations.vertexPosition);
+}
+```
 
 ## Définir les couleurs des sommets
 
@@ -145,23 +147,27 @@ Le tableau `indices` définit chaque face comme étant une paire de triangles, e
 
 Ensuite, nous devons ajouter du code à notre fonction `drawScene()` pour dessiner le tampon des indices du cube, en ajoutant de nouveaux appels à {{domxref("WebGLRenderingContext.bindBuffer()", "gl.bindBuffer()")}} et {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} :
 
-      // Indiquer à WebGL quels indices utiliser pour indexer les sommets
-      gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, tampons.indices);
+```js
+// Indiquer à WebGL quels indices utiliser pour indexer les sommets
+gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, tampons.indices);
 
-    ...
+...
 
-      {
-        const vertexCount = 36;
-        const type = gl.UNSIGNED_SHORT;
-        const offset = 0;
-        gl.drawElements(gl.TRIANGLES, vertexCount, type, offset);
-      }
+{
+  const vertexCount = 36;
+  const type = gl.UNSIGNED_SHORT;
+  const offset = 0;
+  gl.drawElements(gl.TRIANGLES, vertexCount, type, offset);
+}
+```
 
 Du fait que chaque face de notre cube est composée de deux triangles, il y a 6 sommets par côté, soit 36 sommets au total dans le cube, même si beaucoup d'entre eux sont des doublons.
 
 Finalement, remplaçons notre variable `squareRotation` par `cubeRotation` et ajoutons une seconde rotation autour de l'axe des x :
 
-    mat4.rotate(modelViewMatrix, modelViewMatrix, cubeRotation * .7, [0, 1, 0]);
+```js
+mat4.rotate(modelViewMatrix, modelViewMatrix, cubeRotation * .7, [0, 1, 0]);
+```
 
 À ce stade, nous avons un cube animé en rotation, ses six faces ayant des couleurs assez vives.
 

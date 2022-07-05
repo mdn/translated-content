@@ -221,7 +221,7 @@ import './App.css';</pre>
 
 <p>The first statement imports the React library itself. Because React turns the JSX we write into <code>React.createElement()</code>, all React components must import the <code>React</code> module. If you skip this step, your application will produce an error.</p>
 
-<p>The second statement imports a logo from <code>'./logo.svg'</code>. Note the use of <code>./</code> at the beginning of the path, and the <code>.svg</code> extension at the end — these tell us that the file is local and that it is not a JavaScript file. Indeed, the <code>logo.svg</code> file lives in our source directory.</p>
+<p>The second statement imports a logo from <code>'./logo.svg'</code>. Note the use of <code>./</code> at the beginning of the path, and the <code>.svg</code> extension at the end — these tell us that the file is local and that it is not a JavaScript file. Indeed, the <code>logo.svg</code> file lives in our source directory.</p>
 
 <p>We don't write a path or extension when importing the <code>React</code> module — this is not a local file; instead, it is listed as a dependency in our <code>package.json</code> file. Be careful of this distinction as you work through this lesson!</p>
 
@@ -256,7 +256,7 @@ import './App.css';</pre>
 
 <p>The <code>App</code> function returns a JSX expression. This expression defines what your browser ultimately renders to the DOM.</p>
 
-<p>Some elements in the expression have attributes, which are written just like in HTML, following a pattern of <code>attribute="value"</code>. On line 3, the opening <code><a href="/en-US/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> tag has a <code>className</code> attribute. This is the same as the <code><a href="/en-US/docs/Web/HTML/Global_attributes/class">class</a></code> attribute in HTML, but because JSX is JavaScript, we can't use the word <code>class</code> — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.</p>
+<p>Some elements in the expression have attributes, which are written just like in HTML, following a pattern of <code>attribute="value"</code>. On line 3, the opening <code><a href="/en-US/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> tag has a <code>className</code> attribute. This is the same as the <code><a href="/en-US/docs/Web/HTML/Global_attributes/class">class</a></code> attribute in HTML, but because JSX is JavaScript, we can't use the word <code>class</code> — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.</p>
 
 <p>Take a moment to change the <code><a href="/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a></code> tag on line 6 so that it reads "Hello, world!", then save your file. You'll notice that this change is immediately rendered in the development server running at <code>http://localhost:3000</code> in your browser. Now delete the <code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> tag and save; the "Learn React" link will be gone.</p>
 
@@ -377,7 +377,7 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 
 <h3 id="Component_props">Component props</h3>
 
-<p>A <strong>prop</strong> is any data passed into a React component. React props are comparable to HTML attributes. Where HTML elements have attributes, React components have props. Props are written inside component calls, and use the same syntax as HTML attributes — <code>prop="value"</code>.  In React, dataflow is unidirectional: props can only be passed from Parent components down to Child components; and props are read-only. </p>
+<p>A <strong>prop</strong> is any data passed into a React component. React props are comparable to HTML attributes. Where HTML elements have attributes, React components have props. Props are written inside component calls, and use the same syntax as HTML attributes — <code>prop="value"</code>.  In React, dataflow is unidirectional: props can only be passed from Parent components down to Child components; and props are read-only. </p>
 
 <p>Let’s open <code>index.js</code> and give our <code>&lt;App/&gt;</code> call its first prop.</p>
 

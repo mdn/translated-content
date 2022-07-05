@@ -808,13 +808,6 @@
       "Shidigital"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2019-03-23T22:34:59.987Z",
-    "contributors": [
-      "schwemmer",
-      "wirmar"
-    ]
-  },
   "Glossary/TCP": {
     "modified": "2019-07-16T23:18:48.078Z",
     "contributors": [
@@ -2537,13 +2530,6 @@
       "pinguin0815"
     ]
   },
-  "Web/API/DOMString": {
-    "modified": "2019-06-02T12:14:00.624Z",
-    "contributors": [
-      "RAnders00",
-      "rkeller1"
-    ]
-  },
   "Web/API/DOMTokenList": {
     "modified": "2019-03-18T20:54:26.903Z",
     "contributors": [
@@ -3732,12 +3718,6 @@
     "contributors": [
       "Stefie",
       "bendlas"
-    ]
-  },
-  "Web/API/USVString": {
-    "modified": "2019-03-18T21:30:46.256Z",
-    "contributors": [
-      "Keviddle"
     ]
   },
   "Web/API/WebGLActiveInfo": {
@@ -12269,6 +12249,13 @@
       "schlagi123"
     ]
   },
+  "Web/JavaScript/Reference/Global_Objects/Symbol": {
+    "modified": "2019-03-23T22:34:59.987Z",
+    "contributors": [
+      "schwemmer",
+      "wirmar"
+    ]
+  },
   "Web/JavaScript/Reference/Global_Objects/SyntaxError": {
     "modified": "2020-10-15T21:46:23.938Z",
     "contributors": [
@@ -12349,14 +12336,6 @@
       "SerkanSipahi",
       "mazilema",
       "zf2timo"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-10-15T21:32:16.691Z",
-    "contributors": [
-      "schlagi123",
-      "HolgerJeromin",
-      "cuatro"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/parseFloat": {
@@ -12613,6 +12592,14 @@
     "contributors": [
       "hporten",
       "schlagi123"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-10-15T21:32:16.691Z",
+    "contributors": [
+      "schlagi123",
+      "HolgerJeromin",
+      "cuatro"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {
@@ -13775,9 +13762,16 @@
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
-    "modified": "2020-10-15T22:24:44.810Z",
+    "modified": "2019-06-02T12:14:00.624Z",
     "contributors": [
-      "Symtex99"
+      "RAnders00",
+      "rkeller1"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb": {
+    "modified": "2019-03-18T21:30:46.256Z",
+    "contributors": [
+      "Keviddle"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/SyntaxError": {

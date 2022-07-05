@@ -15,7 +15,7 @@ translation_of: Web/SVG/Namespaces_Crash_Course
 
 <p>问题的真正答案是，XML 内容通过给明确的标签显示“命名空间声明”来告诉使用者哪个方言标签名称属于哪个。</p>
 
-<h3 id="Declaring_namespaces" name="Declaring_namespaces">声明命名空间</h3>
+<h3 id="Declaring_namespaces">声明命名空间</h3>
 
 <p>所以这些命名空间声明是什么样的呢，并且在什么地方用他们，如下的例子所示：</p>
 
@@ -29,7 +29,7 @@ translation_of: Web/SVG/Namespaces_Crash_Course
 
 <p>请注意，命名空间仅仅只是一些字符串，所以 SVG 上那些看起来像 URI 的命名空间并不重要。因为 URIs 的唯一性从而被广泛使用，它的本意并不是要 “链接” 到某个地址。（实际上 URIs 被如此频繁地使用是 “命名空间 URI"普遍使用而不是” 命名空间的名字“被使用。）</p>
 
-<h4 id="Redeclaring_the_default_namespace" name="Redeclaring_the_default_namespace">重新定义默认命名空间</h4>
+<h4 id="Redeclaring_the_default_namespace">重新定义默认命名空间</h4>
 
 <p>如果根节点的所有子节点也被定义为默认命名空间，那么你如何混合使用另一种命名空间呢？很简单，你仅仅只需重新定义默认命名空间即可。这里是一个简单的例子。</p>
 
@@ -47,7 +47,7 @@ translation_of: Web/SVG/Namespaces_Crash_Course
 
 <p>看到没，命名空间其实没有那么难以理解。</p>
 
-<h4 id="Declaring_namespace_prefixes" name="Declaring_namespace_prefixes">Declaring namespace prefixes</h4>
+<h4 id="Declaring_namespace_prefixes">Declaring namespace prefixes</h4>
 
 <p>XML dialects not only define their own tags, but also their own attributes. By default, attributes don't have a namespace at all, and are only known to be unique because they appear on an element that itself has a unique name. However, sometimes it is necessary to define attributes so that they can be reused on many different elements and still be considered to be the same attribute, independently of the element with which they are used. A very good example of this is the <code>href</code> attribute defined by the XLink specification. This attribute is commonly used by other XML dialects as a means to link to external resources. But how do you tell the user agent which dialect the attribute belongs to, in this case XLink? Consider the following example.</p>
 
@@ -78,7 +78,7 @@ translation_of: Web/SVG/Namespaces_Crash_Course
 
 <p>Note that because a namespace prefix is used for the <code>&lt;svg:svg&gt;</code> tag and its child <code>&lt;svg:circle&gt;</code>, it wasn't necessary to redeclare the default namespace. In general though it is better to redeclare the default namespace rather than prefix lots of tags in this way.</p>
 
-<h3 id="Scripting_in_namespaced_XML" name="Scripting_in_namespaced_XML">Scripting in namespaced XML</h3>
+<h3 id="Scripting_in_namespaced_XML">Scripting in namespaced XML</h3>
 
 <p>Namespaces affect not only markup, but also scripting. If you write scripts for namespaced XML such as SVG, read on.</p>
 
@@ -171,7 +171,7 @@ image.setAttributeNS(null, 'height', '100');
 image.setAttributeNS(XLink_NS, 'xlink:href', 'flower.png');
 </pre>
 
-<h3 id="Conclusion" name="Conclusion">Conclusion</h3>
+<h3 id="Conclusion">Conclusion</h3>
 
 <p>Make sure you always declare the namespaces you use in your XML files. If you don't, user agents such as Firefox won't recognize your content and will simply show the XML markup or inform the user that there's an error in the XML. It's a good idea to use a template that includes all the commonly used namespace declarations when creating new SVG files. If you don't already have one, make one up starting with the following code:</p>
 
@@ -185,6 +185,6 @@ image.setAttributeNS(XLink_NS, 'xlink:href', 'flower.png');
 
 <p>Even if you don't use all those namespaces in a particular document, there's no harm in including the namespace declarations. It may save you from some annoying errors if you end up adding content from one of the unused namespaces at a later date.</p>
 
-<h3 id="A_full_example" name="A_full_example">A full example</h3>
+<h3 id="A_full_example">A full example</h3>
 
 <p>For a full example see <a href="/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example">SVG: Namespaces Crash Course: Example</a>.</p>

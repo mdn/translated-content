@@ -25,8 +25,8 @@ translation_of: Web/API/CSSStyleSheet
  <dt>{{domxref("CSSStyleSheet.cssRules")}}</dt>
  <dd>Returns a live {{domxref("CSSRuleList")}}, listing the {{domxref("CSSRule")}} objects in the style sheet.<br>
  This is normally used to access individual rules like this:<br>
- <code>   styleSheet.cssRules[i] // where i = 0..cssRules.length-1</code><br>
- To add or remove items in <code>cssRules</code>, use the <code>CSSStyleSheet</code>'s <code>deleteRule()</code> and <code>insertRule()</code> methods, described below.</dd>
+ <code>   styleSheet.cssRules[i] // where i = 0..cssRules.length-1</code><br>
+ To add or remove items in <code>cssRules</code>, use the <code>CSSStyleSheet</code>'s <code>deleteRule()</code> and <code>insertRule()</code> methods, described below.</dd>
  <dt>{{domxref("CSSStyleSheet.ownerRule")}}</dt>
  <dd>If this style sheet is imported into the document using an {{cssxref("@import")}} rule, the <code>ownerRule</code> property will return that {{domxref("CSSImportRule")}}, otherwise it returns <code>null</code>.</dd>
 </dl>
@@ -52,7 +52,7 @@ translation_of: Web/API/CSSStyleSheet
 
 <p>A (possibly incomplete) list of ways a style sheet can be associated with a document follows:</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Reason for the style sheet to be associated with the document</th>
@@ -74,7 +74,7 @@ translation_of: Web/API/CSSStyleSheet
    <td>{{domxref("LinkStyle.sheet", ".sheet")}}</td>
   </tr>
   <tr>
-   <td>CSS {{cssxref("@import")}} rule in other style sheets applied to the document</td>
+   <td>CSS {{cssxref("@import")}} rule in other style sheets applied to the document</td>
    <td>Yes</td>
    <td>{{domxref("CSSStyleSheet.ownerRule", ".ownerRule")}}</td>
    <td>{{domxref("CSSImportRule")}}</td>
@@ -106,25 +106,7 @@ translation_of: Web/API/CSSStyleSheet
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM", "#cssstylesheet", 'CSSStyleSheet')}}</td>
-   <td>{{Spec2("CSSOM")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Style", "css.html#CSS-CSSStyleSheet", "CSSStyleSheet")}}</td>
-   <td>{{Spec2("DOM2 Style")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

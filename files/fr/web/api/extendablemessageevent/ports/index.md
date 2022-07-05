@@ -17,7 +17,9 @@ La propriété en lecture seule **ports** de l'interface {{domxref("ExtendableMe
 
 ## Syntaxe
 
-    var myPorts = ExtendableMessageEventInstance.ports;
+```js
+var myPorts = ExtendableMessageEventInstance.ports;
+```
 
 ### Value
 

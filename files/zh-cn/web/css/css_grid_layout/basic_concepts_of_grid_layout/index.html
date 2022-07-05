@@ -87,7 +87,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>所有直系子元素现在都是网格项了。在浏览器中，元素转为网格前看不出什么差异，因为网格给这些元素创建了一个单列网格。此刻，Firefox 开发人员版（Developer Edition）可能会助你一臂之力。网格检查器（<a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a>）为其开发工具的一部分。如果你在 Firefox 中查看此示例并检查网格，则会在值 <code>grid</code> 旁边看到一个小图标。单击此图标后，此元素上的网格会覆盖在浏览器窗口中。</p>
 
-<p><img alt="Using the Grid Highlighter in DevTools to view a grid" src="https://mdn.mozillademos.org/files/14631/1-grid-inspector.png" style="height: 753px; width: 900px;"></p>
+<p><img alt="Using the Grid Highlighter in DevTools to view a grid" src="1-grid-inspector.png"></p>
 
 <p>当你学习并且使用 CSS 网格布局时，这个工具能让你更好地了解到你的网格在视觉上发生了哪些变化。</p>
 
@@ -97,7 +97,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>我们通过 <strong>grid-template-columns</strong> 和 <strong>grid-template-rows</strong> 属性来定义网格中的行和列。这些属性定义了网格的轨道。一个网格轨道就是网格中任意两条线之间的空间。在下图中你可以看到一个高亮的轨道——网格的第一个行轨道。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14637/1_Grid_Track.png" style="height: 261px; width: 392px;"></p>
+<p><img src="1_grid_track.png"></p>
 
 <p>我可以通过添加 <code>grid-template-columns</code> 属性将列轨道添加到之前的例子，然后定义列轨道的大小。</p>
 
@@ -356,7 +356,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>应该注意的是，当我们定义网格时，我们定义的是网格轨道，而不是网格线。Grid 会为我们创建编号的网格线来让我们来定位每一个网格元素。例如下面这个三列两行的网格中，就拥有四条纵向的网格线。</p>
 
-<p><img alt="Diagram showing numbered grid lines." src="https://mdn.mozillademos.org/files/14761/1_diagram_numbered_grid_lines.png" style="height: 456px; width: 764px;"></p>
+<p><img alt="Diagram showing numbered grid lines." src="1_diagram_numbered_grid_lines.png"></p>
 
 <p>网格线的编号顺序取决于文章的书写模式。在从左至右书写的语言中，编号为 1 的网格线位于最左边。在从右至左书写的语言中，编号为 1 的网格线位于最右边。 网格线也可以被命名，我们将在稍后的教程中看到如何完成这一操作。</p>
 
@@ -426,13 +426,13 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>一个网格单元是在一个网格元素中最小的单位， 从概念上来讲其实它和表格的一个单元格很像。现在再看回我们前面的一个例子，一旦一个网格元素被定义在一个父级元素当中，那么他的子级元素将会排列在每个事先定义好的网格单元中。在下面的图中，我会将第一个网格单元作高亮处理。</p>
 
-<p><img alt="The first cell of the grid highlighted" src="https://mdn.mozillademos.org/files/14643/1_Grid_Cell.png" style="height: 233px; width: 350px;"></p>
+<p><img alt="The first cell of the grid highlighted" src="1_grid_cell.png"></p>
 
 <h2 id="网格区域">网格区域</h2>
 
 <p>网格元素可以向行或着列的方向扩展一个或多个单元，并且会创建一个网格区域。网格区域的形状应该是一个矩形 - 也就是说你不可能创建出一个类似于“L”形的网格区域。下图高亮的网格区域扩展了 2 列以及 2 行。</p>
 
-<p><img alt="A grid area" src="https://mdn.mozillademos.org/files/14645/1_Grid_Area.png" style="height: 238px; width: 357px;"></p>
+<p><img alt="A grid area" src="1_grid_area.png"></p>
 
 <h2 id="网格间距">网格间距</h2>
 
@@ -500,7 +500,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<p><img alt="Nested grid in flow" src="https://mdn.mozillademos.org/files/14641/1_Nested_Grids_in_flow.png" style="height: 512px; width: 900px;"></p>
+<p><img alt="Nested grid in flow" src="1_nested_grids_in_flow.png"></p>
 
 <p>如果把 <code>box1</code> 设置成 <code>display: grid</code> 你可以给它定义轨道然后它也会变成一个网格元素，它的子级元素也会排列在这个新网格元素中。</p>
 

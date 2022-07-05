@@ -1464,6 +1464,8 @@
 /pl/docs/Web/API/Event/screenY	/pl/docs/Web/API/MouseEvent/screenY
 /pl/docs/Web/API/Event/shiftKey	/pl/docs/Web/API/MouseEvent/shiftKey
 /pl/docs/Web/API/Event/view	/pl/docs/Web/API/UIEvent/view
+/pl/docs/Web/API/GlobalEventHandlers/onblur	/pl/docs/Web/API/Window/blur_event
+/pl/docs/Web/API/GlobalEventHandlers/onfocus	/pl/docs/Web/API/Window/focus_event
 /pl/docs/Web/API/HTMLOrForeignElement/blur	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /pl/docs/Web/API/HTMLOrForeignElement/focus	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /pl/docs/Web/API/Navigator/appCodeName	/pl/docs/orphaned/Web/API/NavigatorID/appCodeName
@@ -1847,6 +1849,7 @@
 /pl/docs/Web/JavaScript/Reference/Functions/Funkcje_strzalkowe	/pl/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /pl/docs/Web/JavaScript/Reference/Functions/Parametry_domyślne	/pl/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /pl/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/pl/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
+/pl/docs/Web/JavaScript/Reference/Global_Objects/null	/pl/docs/Web/JavaScript/Reference/Operators/null
 /pl/docs/Web/JavaScript/Referencje	/pl/docs/Web/JavaScript/Reference
 /pl/docs/Web/JavaScript/Referencje/Funkcje	/pl/docs/Web/JavaScript/Reference/Global_Objects
 /pl/docs/Web/JavaScript/Referencje/Funkcje/Boolean	/pl/docs/Web/JavaScript/Reference/Global_Objects/Boolean
@@ -2097,7 +2100,7 @@
 /pl/docs/Web/JavaScript/Referencje/Obiekty/encodeURIComponent	/pl/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 /pl/docs/Web/JavaScript/Referencje/Obiekty/isFinite	/pl/docs/Web/JavaScript/Reference/Global_Objects/isFinite
 /pl/docs/Web/JavaScript/Referencje/Obiekty/isNaN	/pl/docs/Web/JavaScript/Reference/Global_Objects/isNaN
-/pl/docs/Web/JavaScript/Referencje/Obiekty/null	/pl/docs/Web/JavaScript/Reference/Global_Objects/null
+/pl/docs/Web/JavaScript/Referencje/Obiekty/null	/pl/docs/Web/JavaScript/Reference/Operators/null
 /pl/docs/Web/JavaScript/Referencje/Obiekty/parseFloat	/pl/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
 /pl/docs/Web/JavaScript/Referencje/Obiekty/parseInt	/pl/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 /pl/docs/Web/JavaScript/Referencje/Obiekty/undefined	/pl/docs/Web/JavaScript/Reference/Global_Objects/undefined

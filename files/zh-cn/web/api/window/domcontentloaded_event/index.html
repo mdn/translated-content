@@ -27,9 +27,13 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <p>如果将 link 置于 script 之后，就会立即打印。</p>
 
-<p>{{Note("同步 JavaScript 会暂停 DOM 的解析。")}}</p>
+<div class="note">
+ <p><strong>备注：</strong>同步 JavaScript 会暂停 DOM 的解析。</p>
+</div>
 
-<p>{{Note("还有许多通用和独立的库提供跨浏览器方法来检测 DOM 是否已准备就绪")}}</p>
+<div class="note">
+ <p><strong>备注：</strong>还有许多通用和独立的库提供跨浏览器方法来检测 DOM 是否已准备就绪</p>
+</div>
 
 <h2 id="加速中">加速中</h2>
 
@@ -38,18 +42,18 @@ document.addEventListener('DOMContentLoaded',function(){
 <h2 id="常规信息">常规信息</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">规范</dt>
- <dd style="margin: 0pt 0pt 0pt 120px;"><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#the-end">HTML5</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">接口</dt>
- <dd style="margin: 0pt 0pt 0pt 120px;">Event</dd>
- <dt style="float: left; text-align: right; width: 120px;">是否冒泡</dt>
- <dd style="margin: 0pt 0pt 0pt 120px;">是</dd>
- <dt style="float: left; text-align: right; width: 120px;">能否取消</dt>
- <dd style="margin: 0pt 0pt 0pt 120px;">能 (尽管一个简单的事件被指定为不可取消)</dd>
- <dt style="float: left; text-align: right; width: 120px;">目标</dt>
- <dd style="margin: 0pt 0pt 0pt 120px;">Document</dd>
- <dt style="float: left; text-align: right; width: 120px;">默认行为</dt>
- <dd style="margin: 0pt 0pt 0pt 120px;">无。</dd>
+ <dt>规范</dt>
+ <dd><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#the-end">HTML5</a></dd>
+ <dt>接口</dt>
+ <dd>Event</dd>
+ <dt>是否冒泡</dt>
+ <dd>是</dd>
+ <dt>能否取消</dt>
+ <dd>能 (尽管一个简单的事件被指定为不可取消)</dd>
+ <dt>目标</dt>
+ <dd>Document</dd>
+ <dt>默认行为</dt>
+ <dd>无。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -86,7 +90,7 @@ document.addEventListener('DOMContentLoaded',function(){
  </tbody>
 </table>
 
-<h2 id="示例" style="margin-bottom: 20px; font-size: 28px; line-height: 28px;">示例</h2>
+<h2 id="示例">示例</h2>
 
 <pre class="notranslate"><code>&lt;script&gt;
   document.addEventListener("DOMContentLoaded", function(event) {

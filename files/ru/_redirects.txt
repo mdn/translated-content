@@ -88,6 +88,7 @@
 /ru/docs/Glossary/502	/ru/docs/conflicting/Web/HTTP/Status/502
 /ru/docs/Glossary/Block/Скриптинг	/ru/docs/Glossary/Block/Scripting
 /ru/docs/Glossary/Bézier_curve	/ru/docs/Glossary/Bezier_curve
+/ru/docs/Glossary/Symbol	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
 /ru/docs/Glossary/пустой_элемент	/ru/docs/Glossary/Empty_element
 /ru/docs/HTML	/ru/docs/Web/HTML
 /ru/docs/HTML/Canvas	/ru/docs/Web/API/Canvas_API
@@ -373,6 +374,7 @@
 /ru/docs/Web/API/Canvas_API/Tutorial/Рисование_фигур	/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /ru/docs/Web/API/Canvas_API/Рисование_графики_с_помощью_Canvas	/ru/docs/Web/API/Canvas_API/Tutorial
 /ru/docs/Web/API/Coordinates	/ru/docs/Web/API/GeolocationCoordinates
+/ru/docs/Web/API/DOMString	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
 /ru/docs/Web/API/Document.querySelectorAll	/ru/docs/Web/API/Document/querySelectorAll
 /ru/docs/Web/API/Document/async	/ru/docs/Web/API/XMLDocument/async
 /ru/docs/Web/API/Document/defaultView/popstate_event	/ru/docs/Web/API/Window/popstate_event
@@ -393,6 +395,9 @@
 /ru/docs/Web/API/File_and_Directory_Entries_API/Введение	/ru/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /ru/docs/Web/API/Geolocation/Using_geolocation	/ru/docs/Web/API/Geolocation_API
 /ru/docs/Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API	/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
+/ru/docs/Web/API/GlobalEventHandlers/onabort	/ru/docs/conflicting/Web/API/HTMLMediaElement/abort_event
+/ru/docs/Web/API/GlobalEventHandlers/onblur	/ru/docs/Web/API/Window/blur_event
+/ru/docs/Web/API/GlobalEventHandlers/onfocus	/ru/docs/Web/API/Window/focus_event
 /ru/docs/Web/API/HTMLAudioElement/Audio()	/ru/docs/Web/API/HTMLAudioElement/Audio
 /ru/docs/Web/API/HTMLElement/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/hash	/ru/docs/Web/API/HTMLAnchorElement/hash
@@ -435,11 +440,13 @@
 /ru/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ru/docs/conflicting/Web/API/Pointer_events
 /ru/docs/Web/API/USB/onconnect	/ru/docs/Web/API/USB/connect_event
 /ru/docs/Web/API/USB/ondisconnect	/ru/docs/Web/API/USB/disconnect_event
+/ru/docs/Web/API/USVString	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb
 /ru/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ru/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ru/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /ru/docs/Web/API/WebGL_API/Tutorial/Создание_3D_объектов_с_помощью_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /ru/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
+/ru/docs/Web/API/WebRTC_API/Taking_still_photos	/ru/docs/Web/API/Media_Streams_API/Taking_still_photos
 /ru/docs/Web/API/WebRTC_API/протоколы	/ru/docs/Web/API/WebRTC_API/Protocols
 /ru/docs/Web/API/WebRTC_API/связь	/ru/docs/Web/API/WebRTC_API/Connectivity
 /ru/docs/Web/API/Window/crypto	/ru/docs/Web/API/crypto_property
@@ -691,6 +698,7 @@
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/contains	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+/ru/docs/Web/JavaScript/Reference/Global_Objects/null	/ru/docs/Web/JavaScript/Reference/Operators/null
 /ru/docs/Web/JavaScript/Reference/Methods_Index	/ru/docs/Web/JavaScript/Reference
 /ru/docs/Web/JavaScript/Reference/Operators/Spread_operator	/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /ru/docs/Web/JavaScript/Reference/Operators/Группировка	/ru/docs/Web/JavaScript/Reference/Operators/Grouping
@@ -698,6 +706,7 @@
 /ru/docs/Web/JavaScript/Reference/Operators/Присваивание	/ru/docs/Web/JavaScript/Reference/Operators/Assignment
 /ru/docs/Web/JavaScript/Reference/Operators/Условный_оператор	/ru/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 /ru/docs/Web/JavaScript/Reference/Properties_Index	/ru/docs/Web/JavaScript/Reference
+/ru/docs/Web/JavaScript/Reference/Statements/import.meta	/ru/docs/Web/JavaScript/Reference/Operators/import.meta
 /ru/docs/Web/JavaScript/Reference/Statements/Блок	/ru/docs/Web/JavaScript/Reference/Statements/block
 /ru/docs/Web/JavaScript/Reference/template_strings	/ru/docs/Web/JavaScript/Reference/Template_literals
 /ru/docs/Web/JavaScript/Reference/Об	/ru/docs/Web/JavaScript/Reference/About
@@ -945,7 +954,7 @@
 /ru/docs/Словарь/Simple_response_header	/ru/docs/Glossary/Simple_response_header
 /ru/docs/Словарь/Sloppy_mode	/ru/docs/Glossary/Sloppy_mode
 /ru/docs/Словарь/Specification	/ru/docs/Glossary/Specification
-/ru/docs/Словарь/Symbol	/ru/docs/Glossary/Symbol
+/ru/docs/Словарь/Symbol	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
 /ru/docs/Словарь/TCP	/ru/docs/Glossary/TCP
 /ru/docs/Словарь/TLS	/ru/docs/Glossary/TLS
 /ru/docs/Словарь/Time_to_interactive	/ru/docs/Glossary/Time_to_interactive

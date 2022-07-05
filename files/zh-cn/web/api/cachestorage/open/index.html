@@ -14,7 +14,7 @@ translation_of: Web/API/CacheStorage/open
 <h2 id="语法">语法</h2>
 
 <pre class="brush: js">// "caches" is a global read-only variable, which is an instance of CacheStorage,
-// For more info, refer to: https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches
+// For more info, refer to: https://developer.mozilla.org/en-US/docs/Web/API/caches
 
 caches.open(<em>cacheName</em>).then(function(<em>cache</em>) {
   // Do something with your cache
@@ -32,7 +32,7 @@ caches.open(<em>cacheName</em>).then(function(<em>cache</em>) {
 
 <p>一个 resolve 为请求的 {{domxref("Cache")}} 对象的 {{jsxref("Promise")}} .</p>
 
-<h2 id="示例" style="line-height: 30px; font-size: 2.14285714285714rem;">示例</h2>
+<h2 id="示例">示例</h2>
 
 <p>此示例来自于 MDN <a href="https://github.com/mdn/sw-test/">sw-test example</a> （请参阅 <a href="https://mdn.github.io/sw-test/">sw-test running live</a>）。这里，等待 {{domxref("FetchEvent")}} 事件触发。我们构建自定义响应，像这样：</p>
 
@@ -66,7 +66,7 @@ caches.open(<em>cacheName</em>).then(function(<em>cache</em>) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
+ <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
  <li>{{domxref("Cache")}}</li>
  <li>{{domxref("WorkerGlobalScope.caches")}}</li>
 </ul>

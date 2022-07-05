@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.toLocaleDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
-tags:
-  - Fecha
-  - Formato de zona horaria IANA
-  - Internacionalización
-  - JavaScript
-  - Método
-  - Prototipo
-  - Referencia
 browser-compat: javascript.builtins.Date.toLocaleDateString
 ---
 {{JSRef}}

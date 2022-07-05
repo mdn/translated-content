@@ -12,8 +12,6 @@ Utiliser la valeur `grid` ou `inline-grid` sur un élément le transforme en un 
 
 Quand un élément devient un conteneur de grille il établit un **contexte** **de** **formatage** **de grille** (grid formatting context). Les enfants directs peuvent dorénavent se placer sur une grille explicite définie utilisant {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}}, ou sur une grille implicite créée quand un élément est placé en dehors de la grille explicite.
 
-
-
 ## En apprendre plus
 
 ### Référence de la propriété

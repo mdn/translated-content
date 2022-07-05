@@ -24,9 +24,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 <dl>
  <dt><code>arrayLike</code></dt>
  <dd>將類陣列或可迭代物件轉換成陣列</dd>
- <dt><code>mapFn {{Optional_inline}}</code></dt>
+ <dt><code>mapFn {{Optional_inline}}</code></dt>
  <dd>Map 函式走訪陣列中的每一個元素。</dd>
- <dt><code>thisArg {{Optional_inline}}</code></dt>
+ <dt><code>thisArg {{Optional_inline}}</code></dt>
  <dd><code>mapFn</code> 函式執行時的 <code>this</code> 對象。</dd>
 </dl>
 
@@ -78,7 +78,7 @@ f(1, 2, 3);
 
 // [1, 2, 3]</pre>
 
-<h3 id="使用箭頭函式及_Array.from">使用箭頭函式及 <code>Array.from</code></h3>
+<h3 id="使用箭頭函式及_Array.from">使用箭頭函式及 <code>Array.from</code></h3>
 
 <pre class="brush: js">// 使用箭頭函式作為 map 函式來
 // 操作元素
@@ -104,16 +104,16 @@ if (!Array.from) {
       return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
     };
     var toInteger = function (value) {
-      var number = Number(value);
-      if (isNaN(number)) { return 0; }
-      if (number === 0 || !isFinite(number)) { return number; }
-      return (number &gt; 0 ? 1 : -1) * Math.floor(Math.abs(number));
-    };
+      var number = Number(value);
+      if (isNaN(number)) { return 0; }
+      if (number === 0 || !isFinite(number)) { return number; }
+      return (number &gt; 0 ? 1 : -1) * Math.floor(Math.abs(number));
+    };
     var maxSafeInteger = Math.pow(2, 53) - 1;
     var toLength = function (value) {
-      var len = toInteger(value);
+      var len = toInteger(value);
       return Math.min(Math.max(len, 0), maxSafeInteger);
-    };
+    };
 
     // The length property of the from method is 1.
     return function from(arrayLike/*, mapFn, thisArg */) {
@@ -139,7 +139,7 @@ if (!Array.from) {
         }
 
         // 5. b. If thisArg was supplied, let T be thisArg; else let T be undefined.
-        if (arguments.length &gt; 2) {
+        if (arguments.length &gt; 2) {
           T = arguments[2];
         }
       }

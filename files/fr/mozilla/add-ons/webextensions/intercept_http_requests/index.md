@@ -58,7 +58,7 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-Ici, nous utilisons l’écouteur {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} pour appeler la fonction `logURL()` juste avant de démarrer la requête. La fonction `logURL()` récupère l’URL de la requête dans l’objet d’évènement et la journalise dans la console du navigateur. Le [modèle](/fr/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]} `permet d’intercepter les requêtes HTTP vers toutes les URL.
+Ici, nous utilisons l’écouteur {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} pour appeler la fonction `logURL()` juste avant de démarrer la requête. La fonction `logURL()` récupère l’URL de la requête dans l’objet d’évènement et la journalise dans la console du navigateur. Le [modèle](/fr/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` permet d’intercepter les requêtes HTTP vers toutes les URL.
 
 Pour tester ce module, [installez l'extension](/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), [ouvrez la console du navigateur](/fr/docs/Tools/Browser_Console) et accédez à quelques pages web. Dans la console du navigateur, les URL de toutes les ressources ayant fait l’objet d’une requête de navigateur devraient s’afficher :
 

@@ -17,7 +17,7 @@ translation_of: >-
    <th scope="row">先决条件：</th>
    <td>
     <p>熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解 <a href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools /Command_line">终端/命令行</a>。</p>
-    <p>Vue 组件被编写为管理应用程序数据的 JavaScript 对象和映射到底层 DOM 结构的基于 HTML 的模板语法的组合。 对于安装，以及使用 Vue 的一些更高级的功能（如单文件组件或渲染功能），你需要一个安装了 node + npm 的终端。</p>
+    <p>Vue 组件被编写为管理应用程序数据的 JavaScript 对象和映射到底层 DOM 结构的基于 HTML 的模板语法的组合。对于安装，以及使用 Vue 的一些更高级的功能（如单文件组件或渲染功能），你需要一个安装了 node + npm 的终端。</p>
     </td>
   </tr>
   <tr>
@@ -31,7 +31,7 @@ translation_of: >-
 
 <p>我们的 app 可以展示待办事项列表，但是我们不能更新该列表，除非手动更改代码。让我们新建一个组件来允许我们添加新的待办项。</p>
 
-<p>在components目录下, 新建文件 <code>ToDoForm.vue</code>.</p>
+<p>在 components 目录下，新建文件 <code>ToDoForm.vue</code>.</p>
 
 <ol>
  <li>
@@ -44,7 +44,7 @@ translation_of: >-
 &lt;/script&gt;</pre>
  </li>
  <li>
-  <p>新建一个 HTML 表单来允许我们输入新的待办项并把它提交到app。我们需要一个 <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> ，它里面包含 <code><a href="/en-US/docs/Web/HTML/Element/label">&lt;label&gt;</a></code>，一个 <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code>，一个 <code><a href="/en-US/docs/Web/HTML/Element/button">&lt;button&gt;</a></code>。更新后的模版如下：</p>
+  <p>新建一个 HTML 表单来允许我们输入新的待办项并把它提交到 app。我们需要一个 <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> ，它里面包含 <code><a href="/en-US/docs/Web/HTML/Element/label">&lt;label&gt;</a></code>，一个 <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code>，一个 <code><a href="/en-US/docs/Web/HTML/Element/button">&lt;button&gt;</a></code>。更新后的模版如下：</p>
 
   <pre class="brush: html notranslate">&lt;template&gt;
   &lt;form&gt;
@@ -63,15 +63,15 @@ translation_of: >-
   &lt;/form&gt;
 &lt;/template&gt;</pre>
 
-  <p>现在我们有一个可以form组件可以用来输入新的待办项的标题，它最终会渲染成<code>ToDoItem</code>的label。</p>
+  <p>现在我们有一个可以 form 组件可以用来输入新的待办项的标题，它最终会渲染成<code>ToDoItem</code>的 label。</p>
  </li>
  <li>
-  <p>我们把这个组件添加到app中，返回 <code>App.vue</code> 然后在 <code>&lt;script&gt;</code> 添加下面的语句：</p>
+  <p>我们把这个组件添加到 app 中，返回 <code>App.vue</code> 然后在 <code>&lt;script&gt;</code> 添加下面的语句：</p>
 
   <pre class="brush: js notranslate">import ToDoForm from './components/ToDoForm';</pre>
  </li>
  <li>
-  <p>在你的App组件中注册它</p>
+  <p>在你的 App 组件中注册它</p>
 
   <pre class="brush: js">components: {
   ToDoItem,
@@ -79,7 +79,7 @@ translation_of: >-
 }</pre>
  </li>
  <li>
-  <p>最后将 <code>ToDoForm</code> 组件添加到App中的<code>&lt;template&gt;</code> 中，像下面这样：</p>
+  <p>最后将 <code>ToDoForm</code> 组件添加到 App 中的<code>&lt;template&gt;</code> 中，像下面这样：</p>
 
   <pre class="brush: html notranslate">&lt;template&gt;
   &lt;div id="app"&gt;
@@ -107,7 +107,7 @@ translation_of: >-
 
 <ol>
  <li>
-  <p>在这个组件中，我们需要在 <code>ToDoForm</code> 组件对象内的 <code>methods</code> 属性中添加一个 <code>onSubmit()</code> 方法。 我们将使用它来处理提交操作。就像这样：</p>
+  <p>在这个组件中，我们需要在 <code>ToDoForm</code> 组件对象内的 <code>methods</code> 属性中添加一个 <code>onSubmit()</code> 方法。我们将使用它来处理提交操作。就像这样：</p>
 
   <pre class="brush: js notranslate">export default {
    methods: {
@@ -118,7 +118,7 @@ translation_of: >-
 }</pre>
  </li>
  <li>
-  <p>接下来我们需要将该方法绑定到我们的 <code>&lt;form&gt;</code> 元素的 <code>submit</code> 事件处理程序。 就像 Vue 如何使用 <code><a href="https://vuejs.org/v2/api/#v-bind">v-bind</a></code> 语法来绑定属性，Vue 有 用于事件处理的特殊指令：<code><a href="https://vuejs.org/v2/api/#v-on">v-on</a></code>。 <code>v-on</code> 指令通过 <code>v-on:event="method"</code> 语法工作。 和 <code>v-bind</code> 很像，还有一个简写语法：<code>@event="method"</code>。为了保持一致性，我们将在此处使用简写语法。 将 <code>submit</code> 处理程序添加到你的 <code>&lt;form&gt;</code> 元素，如下所示：</p>
+  <p>接下来我们需要将该方法绑定到我们的 <code>&lt;form&gt;</code> 元素的 <code>submit</code> 事件处理程序。就像 Vue 如何使用 <code><a href="https://vuejs.org/v2/api/#v-bind">v-bind</a></code> 语法来绑定属性，Vue 有 用于事件处理的特殊指令：<code><a href="https://vuejs.org/v2/api/#v-on">v-on</a></code>。 <code>v-on</code> 指令通过 <code>v-on:event="method"</code> 语法工作。和 <code>v-bind</code> 很像，还有一个简写语法：<code>@event="method"</code>。为了保持一致性，我们将在此处使用简写语法。将 <code>submit</code> 处理程序添加到你的 <code>&lt;form&gt;</code> 元素，如下所示：</p>
    
   <pre class="brush: html notranslate">&lt;form @submit="onSubmit"&gt;
 </pre>
@@ -127,8 +127,8 @@ translation_of: >-
   <p>当你运行此程序时，应用程序仍会将数据发布到服务器，从而导致刷新。由于我们在客户端上进行所有处理，因此没有服务器来处理回发。我们还会在页面刷新时丢失所有本地状态。为了防止浏览器发布到服务器，我们需要阻止事件的默认操作通过页面冒泡（<code><a href="/zh-CN/docs/Web/API/Event/preventDefault">Event .preventDefault()</a></code>，在原生 JavaScript 中）。Vue 有一个特殊的语法叫做 <strong>event modifiers</strong> 可以在我们的模板中为我们处理这个问题。修饰符被附加到事件的末尾，带有一个点，如下所示：<code>@event.modifier</code>。以下是事件修饰符列表：</p>
   
    <ul>
-   <li><code>.stop</code>：停止传播事件。 等效于常规 JavaScript 事件中的 <code><a href="/en-US/docs/Web/API/Event/stopPropagation">Event.stopPropagation()</a></code>。</li>
-   <li><code>.prevent</code>：阻止事件的默认行为。 等效于 <code><a href="/en-US/docs/Web/API/Event/preventDefault">Event.preventDefault()</a></code>。</li>
+   <li><code>.stop</code>：停止传播事件。等效于常规 JavaScript 事件中的 <code><a href="/en-US/docs/Web/API/Event/stopPropagation">Event.stopPropagation()</a></code>。</li>
+   <li><code>.prevent</code>：阻止事件的默认行为。等效于 <code><a href="/en-US/docs/Web/API/Event/preventDefault">Event.preventDefault()</a></code>。</li>
    <li><code>.self</code>：仅当事件是从该确切元素分派时触发处理程序。</li>
    <li><code>{.key}</code>：仅通过指定键触发事件处理程序。 <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values">MDN 有一个有效键值列表</a>; 多词键只需转换为 kebab 大小写（例如 <code>page-down</code>）。</li>
    <li><code>.native</code>：监听组件根（最外层的包装）元素上的原生事件。</li>
@@ -139,7 +139,7 @@ translation_of: >-
    <li><code>.passive</code>：等效于在 vanilla JavaScript 中使用 <code><a href="/zh-CN/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> 创建事件监听器时传入 <code>{ passive: true }</code> 参数。</li>
    </ul>
 
-  <p>在这种情况下，我们需要使用 <code>.prevent</code> 处理程序来停止浏览器的默认提交操作。 将 <code>.prevent</code> 添加到模板中的 <code>@submit</code> 处理程序中，如下所示：</p>
+  <p>在这种情况下，我们需要使用 <code>.prevent</code> 处理程序来停止浏览器的默认提交操作。将 <code>.prevent</code> 添加到模板中的 <code>@submit</code> 处理程序中，如下所示：</p>
    
   <pre class="brush: js">&lt;form @submit.prevent="onSubmit"&gt;</pre>
  </li>
@@ -154,7 +154,7 @@ translation_of: >-
 <p>我们首先需要的是表单中的 <code>data</code> 属性来跟踪待办事项的值。</p>
 <ol>
  <li>
-  <p>向我们的 <code>ToDoForm</code> 组件对象添加一个 <code>data()</code> 方法，该方法返回一个 <code>label</code> 字段。 我们可以将<code>label</code>的初始值设置为空字符串。</p>
+  <p>向我们的 <code>ToDoForm</code> 组件对象添加一个 <code>data()</code> 方法，该方法返回一个 <code>label</code> 字段。我们可以将<code>label</code>的初始值设置为空字符串。</p>
    
   <p>你的组件对象现在应该如下所示：</p>
    
@@ -189,7 +189,7 @@ translation_of: >-
    </div>
  </li>
  <li>
-  <p>让我们通过记录在我们的 <code>onSubmit()</code> 方法中提交的数据的值来测试我们对 <code>v-model</code> 的使用。 在组件中，使用 <code>this</code> 关键字访问数据属性。 所以我们使用 <code>this.label</code> 访问我们的 <code>label</code> 字段。</p>
+  <p>让我们通过记录在我们的 <code>onSubmit()</code> 方法中提交的数据的值来测试我们对 <code>v-model</code> 的使用。在组件中，使用 <code>this</code> 关键字访问数据属性。所以我们使用 <code>this.label</code> 访问我们的 <code>label</code> 字段。</p>
    
   <p>更新你的 <code>onSubmit()</code> 方法，使其如下所示：</p>
    
@@ -200,7 +200,7 @@ translation_of: >-
 },</pre>
  </li>
  <li>
-  <p>现在回到你正在运行的应用程序，在 <code>&lt;input&gt;</code> 字段中添加一些文本，然后单击“添加”按钮。 你应该会看到你输入的值已记录到控制台，例如：</p>
+  <p>现在回到你正在运行的应用程序，在 <code>&lt;input&gt;</code> 字段中添加一些文本，然后单击“添加”按钮。你应该会看到你输入的值已记录到控制台，例如：</p>
    
   <pre class="notranslate">Label value: My value</pre>
  </li>
@@ -210,17 +210,17 @@ translation_of: >-
 
 <p>与事件修饰符类似，我们也可以添加修饰符来改变 <code>v-model</code> 的行为。在我们的案例中，有两个值得考虑。第一个，<code>.trim</code>，将删除输入之前或之后的空格。我们可以将修饰符添加到我们的 <code>v-model</code> 语句中，如下所示：<code>v-model.trim="label"</code>。</p>
 
-<p>我们应该考虑的第二个修饰符称为 <code>.lazy</code>。当 <code>v-model</code> 同步文本输入的值时，此修饰符会发生变化。如前所述，<code>v-model</code> 同步通过使用事件更新变量来工作。对于文本输入，此同步使用 <a href="/en-US/docs/Web/API/HTMLElement/input_event"><code>input</code> 事件</a>进行。 通常，这意味着 Vue 在每次击键后都会同步数据。<code>.lazy</code> 修饰符导致 <code>v-model</code> 使用 <a href="/zh-CN/docs/Web/API/HTMLElement/change_event"><code>change</code> 事件</a> 代替。这意味着 Vue 只会在输入失去焦点或提交表单时同步数据。 就我们的目的而言，这更合理，因为我们只需要最终数据。</p>
+<p>我们应该考虑的第二个修饰符称为 <code>.lazy</code>。当 <code>v-model</code> 同步文本输入的值时，此修饰符会发生变化。如前所述，<code>v-model</code> 同步通过使用事件更新变量来工作。对于文本输入，此同步使用 <a href="/en-US/docs/Web/API/HTMLElement/input_event"><code>input</code> 事件</a>进行。通常，这意味着 Vue 在每次击键后都会同步数据。<code>.lazy</code> 修饰符导致 <code>v-model</code> 使用 <a href="/zh-CN/docs/Web/API/HTMLElement/change_event"><code>change</code> 事件</a> 代替。这意味着 Vue 只会在输入失去焦点或提交表单时同步数据。就我们的目的而言，这更合理，因为我们只需要最终数据。</p>
 
 <p>要同时使用 <code>.lazy</code> 修饰符和 <code>.trim</code> 修饰符，我们可以将它们链接起来，例如 <code>v-model.lazy.trim="label"</code>。</p>
 
-<p>如上所示更新你的 <code>v-model</code> 属性以链接 <code>lazy</code> 和 <code>trim</code>，然后再次测试你的应用。 例如，尝试提交一个两端都有空格的值。</p>
+<p>如上所示更新你的 <code>v-model</code> 属性以链接 <code>lazy</code> 和 <code>trim</code>，然后再次测试你的应用。例如，尝试提交一个两端都有空格的值。</p>
 
 <h2 id="Passing_data_to_parents_with_custom_events">使用自定义事件将数据传递给父母</h2>
 
-<p>我们现在非常接近能够将新的待办事项添加到我们的列表中。 接下来我们需要做的是将新创建的待办事项传递给我们的 <code>App</code> 组件。 为此，我们可以让我们的 <code>ToDoForm</code> 发出一个传递数据的自定义事件，并让 <code>App</code> 监听它。 这与 HTML 元素上的原生事件非常相似：子组件可以发出可以通过 <code>v-on</code> 监听的事件。</p>
+<p>我们现在非常接近能够将新的待办事项添加到我们的列表中。接下来我们需要做的是将新创建的待办事项传递给我们的 <code>App</code> 组件。为此，我们可以让我们的 <code>ToDoForm</code> 发出一个传递数据的自定义事件，并让 <code>App</code> 监听它。这与 HTML 元素上的原生事件非常相似：子组件可以发出可以通过 <code>v-on</code> 监听的事件。</p>
 
-<p>在 <code>ToDoForm</code> 的 <code>onSubmit</code> 事件中，我们添加一个 <code>todo-added</code> 事件。 自定义事件的发射方式如下：<code>this.$emit("event-name")</code>。 重要的是要知道事件处理程序区分大小写并且不能包含空格。 Vue 模板也被转换为小写，这意味着 Vue 模板无法监听以大写字母命名的事件。</p>
+<p>在 <code>ToDoForm</code> 的 <code>onSubmit</code> 事件中，我们添加一个 <code>todo-added</code> 事件。自定义事件的发射方式如下：<code>this.$emit("event-name")</code>。重要的是要知道事件处理程序区分大小写并且不能包含空格。Vue 模板也被转换为小写，这意味着 Vue 模板无法监听以大写字母命名的事件。</p>
 <ol>
  <li>
   <p>将 <code>onSubmit()</code> 方法中的 <code>console.log()</code> 替换为以下内容：</p>
@@ -228,7 +228,7 @@ translation_of: >-
   <pre class="brush: js notranslate">this.$emit("todo-added");</pre>
  </li>
  <li>
-  <p>接下来，回到 <code>App.vue</code> 并添加一个 <code>methods</code> 属性到包含 <code>addToDo()</code> 方法的组件对象，如图所示 以下。 目前，此方法只需将 <code>To-do added</code> 记录到控制台即可。</p>
+  <p>接下来，回到 <code>App.vue</code> 并添加一个 <code>methods</code> 属性到包含 <code>addToDo()</code> 方法的组件对象，如图所示 以下。目前，此方法只需将 <code>To-do added</code> 记录到控制台即可。</p>
   <pre class="brush: js notranslate">export default {
   name: 'app',
   components: {
@@ -253,14 +253,14 @@ translation_of: >-
 };</pre>
  </li>
  <li>
-  <p>接下来，将 <code>todo-added</code> 事件的事件监听器添加到 <code>&lt;to-do-form&gt;&lt;/to-do-form&gt;</code>，它 事件触发时调用 <code>addToDo()</code> 方法。 使用 <code>@</code> 简写，监听器看起来像这样：<code>@todo-added="addToDo"</code>:</p>
+  <p>接下来，将 <code>todo-added</code> 事件的事件监听器添加到 <code>&lt;to-do-form&gt;&lt;/to-do-form&gt;</code>，它 事件触发时调用 <code>addToDo()</code> 方法。使用 <code>@</code> 简写，监听器看起来像这样：<code>@todo-added="addToDo"</code>:</p>
    
   <pre class="brush: html notranslate">&lt;to-do-form @todo-added="addToDo"&gt;&lt;/to-do-form&gt;</pre>
  </li>
  <li>
-  <p>当你提交 <code>ToDoForm</code> 时，你应该会看到来自 <code>addToDo()</code> 方法的控制台日志。 这很好，但我们仍然没有将任何数据传递回 <code>App.vue</code> 组件。 我们可以通过将额外的参数传递给 <code>ToDoForm</code> 组件中的 <code>this.$emit()</code> 函数来做到这一点。</p>
+  <p>当你提交 <code>ToDoForm</code> 时，你应该会看到来自 <code>addToDo()</code> 方法的控制台日志。这很好，但我们仍然没有将任何数据传递回 <code>App.vue</code> 组件。我们可以通过将额外的参数传递给 <code>ToDoForm</code> 组件中的 <code>this.$emit()</code> 函数来做到这一点。</p>
    
-  <p>在这种情况下，当我们触发事件时，我们希望将 <code>label</code> 数据连同它一起传递。 这是通过在 <code>$emit()</code> 方法中包含你要作为另一个参数传递的数据来完成的：<code>this.$emit("todo-added", this.label)</code>。 这类似于原生 JavaScript 事件如何包含数据，除了自定义 Vue 事件默认不包含事件对象。 这意味着发出的事件将直接匹配你提交的任何对象。 所以在我们的例子中，我们的事件对象只是一个字符串。</p>
+  <p>在这种情况下，当我们触发事件时，我们希望将 <code>label</code> 数据连同它一起传递。这是通过在 <code>$emit()</code> 方法中包含你要作为另一个参数传递的数据来完成的：<code>this.$emit("todo-added", this.label)</code>。这类似于原生 JavaScript 事件如何包含数据，除了自定义 Vue 事件默认不包含事件对象。这意味着发出的事件将直接匹配你提交的任何对象。所以在我们的例子中，我们的事件对象只是一个字符串。</p>
    
   <p>像这样更新你的 <code>onSubmit()</code> 方法：</p>
    
@@ -309,7 +309,7 @@ translation_of: >-
 }</pre>
  </li>
  <li>
- <p>再次尝试你的表单。 现在你将无法将空项目添加到待办事项列表中。</p> </li>
+ <p>再次尝试你的表单。现在你将无法将空项目添加到待办事项列表中。</p> </li>
 </ol>
 
 <p><img alt="我们的待办事项列表应用程序使用文本输入呈现以输入新待办事项" src="rendered-form-with-new-items.png"></p>
@@ -332,7 +332,7 @@ translation_of: >-
 
 <h2 id="Summary">总结</h2>
 
-<p>非常好。 我们现在可以将待办事项添加到我们的表单中！ 我们的应用程序现在开始感觉具有交互性，但一个问题是到目前为止我们完全忽略了它的外观和感觉。 在下一篇文章中，我们将集中精力解决这个问题，看看 Vue 为组件样式提供的不同方式。</p>
+<p>非常好。我们现在可以将待办事项添加到我们的表单中！我们的应用程序现在开始感觉具有交互性，但一个问题是到目前为止我们完全忽略了它的外观和感觉。在下一篇文章中，我们将集中精力解决这个问题，看看 Vue 为组件样式提供的不同方式。</p>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
 

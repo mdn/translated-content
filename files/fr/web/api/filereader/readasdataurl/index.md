@@ -100,7 +100,7 @@ function previewFiles() {
 ```
 
 > **Note :** Le constructeur [`FileReader()`](/fr/docs/Web/API/FileReader) n'était pas pris en charge pour les versions d'Internet Explorer antérieures à IE 10. Voir aussi [cet autre exemple](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
- 
+
 ## Spécifications
 
 {{Specifications}}

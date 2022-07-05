@@ -1,0 +1,62 @@
+---
+title: Symbol
+slug: Web/JavaScript/Reference/Global_Objects/Symbol
+tags:
+  - ECMAScript 2015
+  - NeedsMarkupWork
+  - 공유
+  - 용어집
+  - 자바스크립트
+translation_of: Glossary/Symbol
+original_slug: Glossary/Symbol
+---
+<p>이 용어집 페이지에서는 "<strong>심볼(symbol)</strong>"이라는 데이터 형식과 <strong>심볼</strong> 데이터 형식의 인스턴스를 생성하는 클래스와 유사한(class-like) "{{jsxref ("Symbol ")}}<code>()</code>"이라는 함수를 설명합니다.</p>
+
+<p>"<strong>심볼</strong>" 데이터 형식은 값으로 익명의 객체 속성(object property)을 만들 수 있는 특성을 가진 원시 데이터 형식(primitive data type)입니다. 이 데이터 형식은 클래스나 객체 형식(object type)의 내부에서만 접근할 수 있도록 전용(private) 객체 속성의 키(key)로 사용됩니다. 예를 들어, <strong>심볼</strong> 형식으로 된 키는 자바스크립트의 다양한 내장(built-in) 객체 안에 존재합니다. 사용자 지정 클래스(custom classes) 역시 이러한 방식으로 전용 멤버를 만들 수 있습니다. <strong>심볼</strong> 데이터 형식은 고도로 특화된 용도로 쓰이며, 범용성은 현저히 떨어집니다; <strong>심볼</strong>의 인스턴스에 L값(L-value)을 할당할 수 있고 식별자로 이용할 수 있습니다. 그게 전부입니다; 적용할 수 있는 연산자도 없습니다. (이를 "Number" 형식의 인스턴스, 예를 들어 정수 "42"와 대조해보십시오. 숫자 형식의 인스턴스에는 같은 형식의 다른 값과 비교하거나 조합할 수 있는 다양한 연산자 집합이 제공됩니다.)</p>
+
+<p>"<strong>심볼</strong>" 데이터 형식의 값은 "심볼 값(symbol value)"라고도 합니다. 자바스크립트 런타임 환경 내에서 심볼 값은 <code>Symbol()</code> 함수를 호출하여 생성할 수 있는데, 이 함수는 동적으로 익명의 고유한 값을 만들어냅니다. 심볼은 객체 속성(object property)로 사용될 수 있습니다.</p>
+
+<pre class="brush: js">var  myPrivateMethod  = Symbol();
+this[myPrivateMethod] = function() {...};</pre>
+
+<p>심볼 값은 (심볼처럼)익명인 속성에 할당(property assignment)할 때 식별자(identifier)로 사용되며, 비열거형입니다. 자신이 가리키는 속성이 비열거형이기 때문에 "<code>for( ... in ...)</code>"로 구성되는 반복문 내에서 멤버로 사용될 수 없으며, 그 속성이 익명이기 때문에 "<code>Object.getOwnPropertyNames()</code>"가 반환하는 배열에 들어갈 수도 없습니다. 해당 속성은 그 속성을 만든 원래 심볼 값을 이용하거나 "<code>Object.getOwnPropertySymbols()</code>"가 반환하는 배열을 반복(iterating)함으로써 접근할 수 있습니다. 앞의 예제 코드에서는 <code>myPrivateMethod</code> 변수에 저장된 값을 통해 해당 속성에 접근하였습니다.</p>
+
+<p>내장 함수인 "{{jsxref("Symbol")}}<code>()</code>"는 함수로써 호출되면 심볼 값을 반환하나, "<code>new Symbol()</code>"와 같은 문법으로 생성자로 사용하려 하면 에러를 발생시키는 불완전한 클래스(incomplete class)입니다. "{{jsxref("Symbol")}}<code>()</code>"는 자바스크립트의 전역 심볼 테이블(global symbol table)에 접근할 수 있는 정적 메서드와 공용으로(commonly) 사용되는 객체를 가리키는 특정 심볼의 주소를 값으로 가지는 정적 속성을 가집니다. <code>Symbol()</code> 함수에 의해 생성되는 심볼 값은 앞서 설명한 바와 같습니다. <code>Symbol()</code>를 생성자로 사용할 경우 발생하는 오류는 혼동을 유발할 수 있는 의도치 않은 객체의 생성을 막기 위한 예방책이라 할 수 있습니다. 전역 심볼 레지스트리(the global symbol registry)에 접근하기 위한 메서드는 "<code>Symbol.for()</code>"와 "<code>Symbol.keyFor()</code>"입니다; 이 메서드들은 전역 심볼 테이블(또는 "레지스트리")과 런타임 환경 사이를 중재합니다. 심볼 레지스트리는 대부분 자바스크립트의 컴파일러 인프라스트럭쳐에 의해 구축되며, 심볼 레지스트리의 컨텐츠는 이러한 리플렉티브 메서드를 통하지 않고서는 자바스크립트의 런타임 인프라스트럭쳐가 접근할 수 없습니다.  <em><code>Symbol.for("tokenString")</code></em>는 레지스트리로부터 심볼 값을 반환하고 <em><code>Symbol.keyFor(symbolValue)</code></em>는 레지스트리로부터 토큰 문자열(token string)을 반환합니다; 서로에게 정반대이므로 다음 코드는 참입니다:</p>
+
+<pre class="brush: js">Symbol.keyFor(Symbol.for("tokenString")) == "tokenString"; // true
+</pre>
+
+<p><strong>Symbol</strong> 클래스는 익명에 이름을 부여하는 역설적인 효과를 가진 몇 가지 정적 속성을 가지고 있습니다. 흔히 "잘 알려진" 심볼이라 불리는 몇 가지 심볼이 존재합니다. 이 심볼들은 특정 내장 객체에 존재하는 몇 개의 선택된 메서드 속성을 가리키는 심볼입니다. 이들 심볼을 노출시킴으로써 이들 메서드에 직접 접근할 수 있게됩니다(이런 접근은 사용자 지정 클래스를 정의할 때 유용합니다). 잘 알려진 심볼의 예로는 배열과 유사한 객체에 대한 "<code>Symbol.iterator</code>"와 문자열 객체에 대한 "<code>Symbol.search</code>"가 있습니다. </p>
+
+<p><code>Symbol()</code> 함수와 이 함수가 생성하는 심볼 값은 프로그래머가 사용자 지정 클래스(custom class)를 설계할 때 유용합니다. 심볼 값은 사용자 지정 클래스가 전용 멤버를 만들고 바로 그 클래스와 관련된 심볼 레지스트리를 유지 관리하는 방법을 제공합니다. 사용자 지정 클래스는 심볼 값을 이용하여 의도하지 않은 노출로부터 보호할 수 있는 "자신만의" 속성을 만들 수 있습니다. 클래스 정의 내에서 동적으로 생성된 심볼 값은 클래스 정의 내에서 전용으로만 사용할 수 있는 범위(scoped) 변수에 저장됩니다. 토큰 문자열은 없습니다. 범위 변수는 토큰과 동일한 역할을 합니다.</p>
+
+<p>어떤 프로그래밍 언어에서는 심볼 데이터 형식을 "atom(원자)"라고 합니다. </p>
+
+<p>자바스크립트({{Glossary("JavaScript")}})에서 심볼은 원시 데이터 값({{Glossary("Primitive", "primitive value")}})입니다.</p>
+
+<p>심볼은 선택적으로 설명으로 가질 수 있지만, 디버깅 용도로만 사용할 수 있습니다.</p>
+
+<p>심볼 형식은 ECMAScript 2015에 추가된 특성이며 ECMAScript 5에는 심볼과 동등한 형식이 존재하지 않습니다.</p>
+
+<pre class="brush: js">Symbol("foo") !== Symbol("foo")
+const foo = Symbol()
+const bar = Symbol()
+typeof foo === "symbol"
+typeof bar === "symbol"
+let obj = {}
+obj[foo] = "foo"
+obj[bar] = "bar"
+JSON.stringify(obj) // {}
+Object.keys(obj) // []
+Object.getOwnPropertyNames(obj) // []
+Object.getOwnPropertySymbols(obj) // [ Symbol(), Symbol() ]</pre>
+
+<h2 id="Learn_more">Learn more</h2>
+
+<h3 id="General_knowledge">General knowledge</h3>
+
+<ul>
+ <li>{{Interwiki("wikipedia", "Symbol (programming)")}} on Wikipedia</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures">JavaScript data types and data structures</a></li>
+ <li><a href="http://2ality.com/2014/12/es6-symbols.html">Symbols in ECMAScript 6</a></li>
+</ul>

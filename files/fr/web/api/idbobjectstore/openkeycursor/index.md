@@ -17,7 +17,9 @@ Afin de déterminer si le curseur a bien été ajouté, on pourra écouter l'év
 
 ## Syntaxe
 
-    var requete = objectStore.openKeyCursor(optionalKeyRange, optionalDirection);
+```js
+var requete = objectStore.openKeyCursor(optionalKeyRange, optionalDirection);
+```
 
 ### Paramètres
 

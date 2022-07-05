@@ -25,9 +25,11 @@ Des cas inappropriés d'utilisation comprennent :
 
 ## Syntaxe
 
-    estCaché = HTMLElement.hidden;
+```js
+estCaché = HTMLElement.hidden;
 
-    HTMLElement.hidden = true | false;
+HTMLElement.hidden = true | false;
+```
 
 ### Valeur
 

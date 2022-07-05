@@ -17,7 +17,9 @@ La propriété **`indexNames`**, rattachée à l'interface {{domxref("IDBObjectS
 
 ## Syntaxe
 
-    var myindexNames = objectStore.indexNames;
+```js
+var myindexNames = objectStore.indexNames;
+```
 
 ### Valeur
 

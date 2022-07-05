@@ -1464,16 +1464,6 @@
       "arturparkhisenko"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2019-03-23T22:08:34.792Z",
-    "contributors": [
-      "4opper",
-      "yanakey",
-      "GRIDARK",
-      "animhotep",
-      "neutral"
-    ]
-  },
   "Glossary/Synchronous": {
     "modified": "2020-09-18T11:00:03.984Z",
     "contributors": [
@@ -6070,14 +6060,6 @@
       "Ihewaz"
     ]
   },
-  "Web/API/DOMString": {
-    "modified": "2019-03-23T22:53:48.183Z",
-    "contributors": [
-      "WispProxy",
-      "mxxn",
-      "AlexAlex"
-    ]
-  },
   "Web/API/DOMStringList": {
     "modified": "2019-03-23T22:43:35.765Z",
     "contributors": [
@@ -7779,13 +7761,6 @@
       "fscholz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onabort": {
-    "modified": "2019-03-23T22:08:50.066Z",
-    "contributors": [
-      "12kb",
-      "FlowerDeLuce"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onanimationcancel": {
     "modified": "2019-03-23T22:08:48.963Z",
     "contributors": [
@@ -7797,12 +7772,6 @@
     "contributors": [
       "arturparkhisenko",
       "FlowerDeLuce"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onblur": {
-    "modified": "2020-10-15T22:13:59.597Z",
-    "contributors": [
-      "AliaksandrZahorski"
     ]
   },
   "Web/API/GlobalEventHandlers/onchange": {
@@ -7842,13 +7811,6 @@
       "wbamberg",
       "roman-dudin",
       "xercool"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onfocus": {
-    "modified": "2019-03-23T22:08:49.378Z",
-    "contributors": [
-      "goodleby",
-      "FlowerDeLuce"
     ]
   },
   "Web/API/GlobalEventHandlers/oninput": {
@@ -8840,6 +8802,14 @@
     "modified": "2020-10-15T22:31:42.491Z",
     "contributors": [
       "sh7dm"
+    ]
+  },
+  "Web/API/Media_Streams_API/Taking_still_photos": {
+    "modified": "2020-02-17T09:19:46.393Z",
+    "contributors": [
+      "mechtool",
+      "lolyanepizdi",
+      "tifund"
     ]
   },
   "Web/API/MouseEvent": {
@@ -9999,12 +9969,6 @@
       "sh7dm"
     ]
   },
-  "Web/API/USVString": {
-    "modified": "2020-10-02T07:35:43.794Z",
-    "contributors": [
-      "beltimor"
-    ]
-  },
   "Web/API/VRDisplay": {
     "modified": "2020-10-15T22:16:06.226Z",
     "contributors": [
@@ -10305,14 +10269,6 @@
       "mechtool"
     ]
   },
-  "Web/API/WebRTC_API/Taking_still_photos": {
-    "modified": "2020-02-17T09:19:46.393Z",
-    "contributors": [
-      "mechtool",
-      "lolyanepizdi",
-      "tifund"
-    ]
-  },
   "Web/API/WebRTC_API/Using_data_channels": {
     "modified": "2020-02-18T04:33:19.219Z",
     "contributors": [
@@ -10591,6 +10547,12 @@
       "horpia"
     ]
   },
+  "Web/API/Window/blur_event": {
+    "modified": "2020-10-15T22:13:59.597Z",
+    "contributors": [
+      "AliaksandrZahorski"
+    ]
+  },
   "Web/API/Window/cancelAnimationFrame": {
     "modified": "2020-10-15T22:22:40.555Z",
     "contributors": [
@@ -10654,6 +10616,13 @@
     "contributors": [
       "CODER591",
       "WaveMeUp"
+    ]
+  },
+  "Web/API/Window/focus_event": {
+    "modified": "2019-03-23T22:08:49.378Z",
+    "contributors": [
+      "goodleby",
+      "FlowerDeLuce"
     ]
   },
   "Web/API/Window/frameElement": {
@@ -21229,16 +21198,6 @@
       "Sheppy"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-10-15T21:29:52.036Z",
-    "contributors": [
-      "yar85",
-      "YozhEzhi",
-      "boxa6",
-      "SphinxKnight",
-      "Mingun"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/parseFloat": {
     "modified": "2020-10-15T21:31:40.524Z",
     "contributors": [
@@ -21543,6 +21502,12 @@
       "nurbek-ab"
     ]
   },
+  "Web/JavaScript/Reference/Operators/import.meta": {
+    "modified": "2020-10-15T22:22:14.576Z",
+    "contributors": [
+      "Luanre"
+    ]
+  },
   "Web/JavaScript/Reference/Operators/in": {
     "modified": "2020-10-15T21:34:23.027Z",
     "contributors": [
@@ -21584,6 +21549,16 @@
       "vitaliylag",
       "Isk1n",
       "uleming"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-10-15T21:29:52.036Z",
+    "contributors": [
+      "yar85",
+      "YozhEzhi",
+      "boxa6",
+      "SphinxKnight",
+      "Mingun"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {
@@ -21887,12 +21862,6 @@
       "vvalgis",
       "sutangu",
       "kurzgame"
-    ]
-  },
-  "Web/JavaScript/Reference/Statements/import.meta": {
-    "modified": "2020-10-15T22:22:14.576Z",
-    "contributors": [
-      "Luanre"
     ]
   },
   "Web/JavaScript/Reference/Statements/label": {
@@ -23603,12 +23572,10 @@
     ]
   },
   "conflicting/Web/API/HTMLMediaElement/abort_event": {
-    "modified": "2019-04-30T14:17:57.211Z",
+    "modified": "2019-03-23T22:08:50.066Z",
     "contributors": [
-      "wbamberg",
-      "Corba",
-      "fscholz",
-      "e-omo"
+      "12kb",
+      "FlowerDeLuce"
     ]
   },
   "conflicting/Web/API/Node": {
@@ -24048,10 +24015,27 @@
       "opereverzeva"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
-    "modified": "2019-03-23T22:50:51.135Z",
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab": {
+    "modified": "2019-03-23T22:53:48.183Z",
     "contributors": [
-      "SphinxKnight",
+      "WispProxy",
+      "mxxn",
+      "AlexAlex"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb": {
+    "modified": "2020-10-02T07:35:43.794Z",
+    "contributors": [
+      "beltimor"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
+    "modified": "2019-03-23T22:08:34.792Z",
+    "contributors": [
+      "4opper",
+      "yanakey",
+      "GRIDARK",
+      "animhotep",
       "neutral"
     ]
   },

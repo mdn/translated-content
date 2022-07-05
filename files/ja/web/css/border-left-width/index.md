@@ -97,5 +97,5 @@ div:nth-child(2) {
 
 ## 関連情報
 
- - 他の境界の太さに関する CSS プロパティ: {{Cssxref("border-top-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, {{Cssxref("border-width")}}
- - 他の左の境界に関する CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-left")}}, {{Cssxref("border-left-style")}}, {{Cssxref("border-left-color")}}
+- 他の境界の太さに関する CSS プロパティ: {{Cssxref("border-top-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, {{Cssxref("border-width")}}
+- 他の左の境界に関する CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-left")}}, {{Cssxref("border-left-style")}}, {{Cssxref("border-left-color")}}

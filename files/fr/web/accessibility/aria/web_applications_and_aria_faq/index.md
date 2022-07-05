@@ -210,8 +210,8 @@ Il existe plusieurs lecteurs d’écran gratuits voire libre qui peuvent être u
 
 Lorsque vous effectuez des tests avec un lecteur d’écran, gardez deux points importants en tête&nbsp;:
 
-1.  Les tests occasionnels avec un lecteur d’écran ne pourront jamais remplacer les retours d’expérience, les tests ou l’aide de véritables utilisateurs au quotidien.
-2.  L’accessibilité est plus vaste que la simple prise en charge des lecteurs d’écran. Essayez de mener des tests avec divers cas d’utilisation et techniques d’accessibilité.
+1. Les tests occasionnels avec un lecteur d’écran ne pourront jamais remplacer les retours d’expérience, les tests ou l’aide de véritables utilisateurs au quotidien.
+2. L’accessibilité est plus vaste que la simple prise en charge des lecteurs d’écran. Essayez de mener des tests avec divers cas d’utilisation et techniques d’accessibilité.
 
 Autres techniques et outils de tests pratiques pour les applications et les composants intégrant ARIA&nbsp;:
 
