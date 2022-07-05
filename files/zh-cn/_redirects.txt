@@ -1720,7 +1720,7 @@
 /zh-CN/docs/Web/API/Window/onbeforeinstallprompt	/zh-CN/docs/Web/API/Window/beforeinstallprompt_event
 /zh-CN/docs/Web/API/Window/onbeforeunload	/zh-CN/docs/conflicting/Web/API/Window/beforeunload_event
 /zh-CN/docs/Web/API/Window/ondevicemotion	/zh-CN/docs/Web/API/Window/devicemotion_event
-/zh-CN/docs/Web/API/Window/ondeviceorientation	/zh-CN/docs/conflicting/Web/API/Window/deviceorientation_event
+/zh-CN/docs/Web/API/Window/ondeviceorientation	/zh-CN/docs/Web/API/Window/deviceorientation_event
 /zh-CN/docs/Web/API/Window/ondeviceorientationabsolute	/zh-CN/docs/Web/API/Window/deviceorientationabsolute_event
 /zh-CN/docs/Web/API/Window/ongamepadconnected	/zh-CN/docs/conflicting/Web/API/Window/gamepadconnected_event
 /zh-CN/docs/Web/API/Window/ongamepaddisconnected	/zh-CN/docs/Web/API/Window/gamepaddisconnected_event
