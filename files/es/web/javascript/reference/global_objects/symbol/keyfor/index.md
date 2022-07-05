@@ -18,7 +18,7 @@ Symbol.keyFor(sym);
 ### Parámetros
 
 - `sym`
-  - : Symbol, obligatoria. El símbolo del que se desea encontrar la llave.
+  - : Symbol, obligatoria. El símbolo del que se desea encontrar la clave.
 
 ### Valor de retorno
 
