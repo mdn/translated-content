@@ -22,7 +22,7 @@ Symbol.keyFor(sym);
 
 ### Valor de retorno
 
-Un string que representa la llave del símbolo pasado como parámetro si es encontrado en el registro global de símbolos; En caso contrario, {{jsxref("undefined")}}.
+Una cadena que representa la clave del símbolo pasado como parámetro si es encontrado en el registro global de símbolos; En caso contrario, {{jsxref("undefined")}}.
 
 ## Ejemplos
 
