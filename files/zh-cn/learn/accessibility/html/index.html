@@ -14,7 +14,7 @@ original_slug: learn/Accessibility/HTML:为可访问性提供一个良好的基�
  <tbody>
   <tr>
    <th scope="row">前提：</th>
-   <td>有一定的 HTML 基础 (可参阅 <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a>)，理解<a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">什么是可访问性</a>。</td>
+   <td>有一定的 HTML 基础 (可参阅 <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a>)，理解<a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">什么是可访问性</a>。</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -27,7 +27,7 @@ original_slug: learn/Accessibility/HTML:为可访问性提供一个良好的基�
 
 <p>在学习 HTML 的过程当中，经常可以看到这样一个主题：HTML 语义化的重要性。意思是指我们应尽可能地用正确的 HTML 标签来表达正确的意图。</p>
 
-<p>你可能在想，为什么语义化对于一个网页来说如此重要。总的来说，正确的语义化可使 CSS 和  JavaScript 更为便利地操作网页的样式和行为。例如，一个用来操作视频播放的按钮可以写成这样一种形式：</p>
+<p>你可能在想，为什么语义化对于一个网页来说如此重要。总的来说，正确的语义化可使 CSS 和  JavaScript 更为便利地操作网页的样式和行为。例如，一个用来操作视频播放的按钮可以写成这样一种形式：</p>
 
 <pre>&lt;div&gt;Play video&lt;/div&gt;</pre>
 
@@ -40,15 +40,15 @@ original_slug: learn/Accessibility/HTML:为可访问性提供一个良好的基�
 <p>如果你在项目的一开始就使用 HTML 语义化，不仅不会花更多的时间，而且又有以下的可访问性优点：</p>
 
 <ol>
- <li><strong>更便于开发</strong> — 如上所述，你可以使 HTML 更易于理解，并且可以毫不费力的获得一些功能。</li>
- <li><strong>更适配移动端</strong> — 语义化的 HTML 文件比非语义化的 HTML 文件更加轻便，并且更易于响应式开发。</li>
- <li><strong>更便于 SEO 优化</strong> — 比起使用非语义化的&lt;div&gt;标签，搜索引擎更加重视在“标题、链接等”里面的关键字，使用语义化可使网页更容易被用户搜索到。</li>
+ <li><strong>更便于开发</strong> — 如上所述，你可以使 HTML 更易于理解，并且可以毫不费力的获得一些功能。</li>
+ <li><strong>更适配移动端</strong> — 语义化的 HTML 文件比非语义化的 HTML 文件更加轻便，并且更易于响应式开发。</li>
+ <li><strong>更便于 SEO 优化</strong> — 比起使用非语义化的&lt;div&gt;标签，搜索引擎更加重视在“标题、链接等”里面的关键字，使用语义化可使网页更容易被用户搜索到。</li>
 </ol>
 
 <p>让我们来继续学习 HTML 语义化实现细则。</p>
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong>在本地计算机上设置屏幕阅读器是一个不错的主意，因此您可以对下面显示的示例进行一些测试。更多内容请查阅 <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">Screenreaders guide</a>。</p>
+<div class="note">
+<p><strong>注意：</strong>在本地计算机上设置屏幕阅读器是一个不错的主意，因此您可以对下面显示的示例进行一些测试。更多内容请查阅 <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">Screenreaders guide</a>。</p>
 </div>
 
 <h2 id="良好的语义">良好的语义</h2>
@@ -85,7 +85,7 @@ original_slug: learn/Accessibility/HTML:为可访问性提供一个良好的基�
 
 &lt;p&gt;This is the second subsection of my content. I think is more interesting than the last one.&lt;/p&gt;</code></pre>
 
-<p>我们已经准备了一个更长的文本版本，供您试用于屏幕阅读器（请查看 <a href="http://mdn.github.io/learning-area/accessibility/html/good-semantics.html">good-semantics.html</a>）。如果您尝试在此过程中导航，您将看到这非常容易导航：</p>
+<p>我们已经准备了一个更长的文本版本，供您试用于屏幕阅读器（请查看 <a href="http://mdn.github.io/learning-area/accessibility/html/good-semantics.html">good-semantics.html</a>）。如果您尝试在此过程中导航，您将看到这非常容易导航：</p>
 
 <ol>
  <li>屏幕阅读器会在您浏览内容时读取每个标题，通知您标题是什么，段落是什么等。</li>
@@ -116,7 +116,7 @@ This is the first subsection of my document. I'd love people to be able to find 
 &lt;br&gt;&lt;br&gt;
 This is the second subsection of my content. I think is more interesting than the last one.</code></pre>
 
-<p>如果你使用屏幕阅读器试用更长内容的版本（请查阅 <a href="http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a>），你不会有一个很好的经验 — 屏幕阅读器没有任何东西可以用作路标，所以你无法检索有用的目录，整个页面被看作一个巨大的块，所以它只是一次读出所有的内容。</p>
+<p>如果你使用屏幕阅读器试用更长内容的版本（请查阅 <a href="http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a>），你不会有一个很好的经验 — 屏幕阅读器没有任何东西可以用作路标，所以你无法检索有用的目录，整个页面被看作一个巨大的块，所以它只是一次读出所有的内容。</p>
 
 <p>除了可访问性之外，还有其他一些问题 - 使用 CSS 设计内容的风格更难，或者使用 JavaScript 来操作它比较困难，因为没有可用作选择器的元素。</p>
 
@@ -125,8 +125,8 @@ This is the second subsection of my content. I think is more interesting than th
 <p>你使用的语言也会影响可访问性。一般来说，你应该使用不太复杂的清晰语言，不要使用不必要的行话或俚语。这不仅有利于有认知或其他残疾的人；它有利于那些没有用母语写作的读者，年轻人...事实上是每个人！除此之外，你应该尽量避免使用没有被屏幕阅读器清楚读出的语言和字符。例如：</p>
 
 <ul>
- <li>如果可以避免的话，不要用破折号。写 5 到 7，来替代 5-7。</li>
- <li>展开缩写 — 写 January，来替代 Jan 。</li>
+ <li>如果可以避免的话，不要用破折号。写 5 到 7，来替代 5-7。</li>
+ <li>展开缩写 — 写 January，来替代 Jan 。</li>
  <li>展开首字母缩略词，至少一次或两次。例如写明“超文本标记语言”（Hypertext Markup Language），而不是直接用缩写 HTML。</li>
 </ul>
 
@@ -243,7 +243,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>如果您使用屏幕阅读器阅读更现代的结构示例，则会看到布局标记不再会妨碍内容的读取。它在代码大小方面也更加精简和小巧，这意味着代码更容易维护，并且用户下载的带宽更少（特别适合慢速连接的用户）。</p>
 
-<p>创建布局时的另一个考虑因素是使用 HTML5 语义元素，如上例所示（请参阅 <a href="/en-US/docs/Web/HTML/Element#Content_sectioning">此内容部分</a>） - 您只能使用嵌套的 <code>{{htmlelement("div")}}</code> 元素创建布局，但最好使用适当的分段元素包裹您的主导航（<code>{{htmlelement("nav")}}</code>），<code>footer</code> (<code>{{htmlelement("footer")}}</code>），重复内容单元  (<code>{{htmlelement("article")}}</code>) 等。这些为屏幕阅读器（和其他工具）提供额外的语义，为用户提供有关他们正在浏览的内容的额外信息（请参阅 <a href="http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/">屏幕阅读器支持的新的 HTML5 章节元素</a> ，了解屏幕阅读器的支持是什么样的原理）。</p>
+<p>创建布局时的另一个考虑因素是使用 HTML5 语义元素，如上例所示（请参阅 <a href="/en-US/docs/Web/HTML/Element#Content_sectioning">此内容部分</a>） - 您只能使用嵌套的 <code>{{htmlelement("div")}}</code> 元素创建布局，但最好使用适当的分段元素包裹您的主导航（<code>{{htmlelement("nav")}}</code>），<code>footer</code> (<code>{{htmlelement("footer")}}</code>），重复内容单元  (<code>{{htmlelement("article")}}</code>) 等。这些为屏幕阅读器（和其他工具）提供额外的语义，为用户提供有关他们正在浏览的内容的额外信息（请参阅 <a href="http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/">屏幕阅读器支持的新的 HTML5 章节元素</a> ，了解屏幕阅读器的支持是什么样的原理）。</p>
 
 <div class="note">
 <p><strong>注意</strong>：除了您的内容具有良好的语义和有吸引力的布局之外，它的源代码顺序应该是合理的 - 您可以随时将它放在您想要使用 CSS 的位置，但是您应该先从源代码开始，如此这样，屏幕阅读器读取给他们的内容将会非常便于理解。</p>
@@ -282,23 +282,23 @@ This is the second subsection of my content. I think is more interesting than th
 &lt;h2&gt;Form&lt;/h2&gt;
 
 &lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="name"&gt;Fill in your name:&lt;/label&gt;
-    &lt;input type="text" id="name" name="name"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="age"&gt;Enter your age:&lt;/label&gt;
-    &lt;input type="text" id="age" name="age"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="mood"&gt;Choose your mood:&lt;/label&gt;
-    &lt;select id="mood" name="mood"&gt;
-      &lt;option&gt;Happy&lt;/option&gt;
-      &lt;option&gt;Sad&lt;/option&gt;
-      &lt;option&gt;Angry&lt;/option&gt;
-      &lt;option&gt;Worried&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="name"&gt;Fill in your name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="age"&gt;Enter your age:&lt;/label&gt;
+    &lt;input type="text" id="age" name="age"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="mood"&gt;Choose your mood:&lt;/label&gt;
+    &lt;select id="mood" name="mood"&gt;
+      &lt;option&gt;Happy&lt;/option&gt;
+      &lt;option&gt;Sad&lt;/option&gt;
+      &lt;option&gt;Angry&lt;/option&gt;
+      &lt;option&gt;Worried&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
 &lt;/form&gt;</pre>
 
 
@@ -311,9 +311,9 @@ This is the second subsection of my content. I think is more interesting than th
 &lt;div data-message="This is from the second button"&gt;Click me too!&lt;/div&gt;
 &lt;div data-message="This is from the third button"&gt;And me!&lt;/div&gt;</pre>
 
-<p>但是不建议使用这样的代码 - 你会立即失去本机键盘的可访问性。但如果你使用了<code>{{htmlelement("button")}}</code> 元素，你将可以通过键盘控制。 此外你也将不会获得任何的按钮默认拥有的 CSS 样式。</p>
+<p>但是不建议使用这样的代码 - 你会立即失去本机键盘的可访问性。但如果你使用了<code>{{htmlelement("button")}}</code> 元素，你将可以通过键盘控制。 此外你也将不会获得任何的按钮默认拥有的 CSS 样式。</p>
 
-<h4 id="重新建立键盘的可访问性"><strong>重新建立键盘的可访问性</strong></h4>
+<h4 id="重新建立键盘的可访问性">重新建立键盘的可访问性</h4>
 
 <p>重新添加这些优点需要一些工作（您可以在我们的 <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> 示例中使用示例代码 - 另请参阅 <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">源代码</a> ）。在这里，我们通过赋予每个 <code>&lt;div&gt;</code> 按钮属性<code>tabindex =“0”</code> 来使它能够被聚焦（包括通过选项卡）：</p>
 
@@ -321,14 +321,14 @@ This is the second subsection of my content. I think is more interesting than th
 &lt;div data-message="This is from the second button" tabindex="0"&gt;Click me too!&lt;/div&gt;
 &lt;div data-message="This is from the third button" tabindex="0"&gt;And me!&lt;/div&gt;</pre>
 
-<p>基本上，<code>{{htmlattrxref("tabindex")}}</code> 属性主要用于允许 tabbable 元素具有自定义 Tab 键顺序（以正数顺序指定），而不是仅按其默认源顺序进行标记。这几乎总是一个糟糕的主意，因为它可能会造成重大混乱。例如，如果布局以与源代码非常不同的视觉顺序显示事物，而且你想让事情更符合逻辑。 这里 <code>tabindex</code> 有另外两个选项：</p>
+<p>基本上，<code>{{htmlattrxref("tabindex")}}</code> 属性主要用于允许 tabbable 元素具有自定义 Tab 键顺序（以正数顺序指定），而不是仅按其默认源顺序进行标记。这几乎总是一个糟糕的主意，因为它可能会造成重大混乱。例如，如果布局以与源代码非常不同的视觉顺序显示事物，而且你想让事情更符合逻辑。 这里 <code>tabindex</code> 有另外两个选项：</p>
 
 <ul>
  <li><code>tabindex="0"</code> — 如上所述，该值允许 通常不可放置的元素（tabbable elements）变为可放置的。这是 tabindex 最有用的的地方。</li>
  <li><code>tabindex="-1"</code> — 这允许 通常不可放置的元素（tabbable elements）以编程的方式接收焦点，例如，通过 JavaScript，或作为链接的目标。</li>
 </ul>
 
-<p>虽然上面的添加允许我们用 <code>tab</code> 选择按钮，但它不允许我们通过 <code>Enter / Return</code> 键来激活它们。要做到这一点，我们必须添加下面的 JS 小绝招（JavaScript trickery）：</p>
+<p>虽然上面的添加允许我们用 <code>tab</code> 选择按钮，但它不允许我们通过 <code>Enter / Return</code> 键来激活它们。要做到这一点，我们必须添加下面的 JS 小绝招（JavaScript trickery）：</p>
 
 <pre><code>document.onkeydown = function(e) {
   if(e.keyCode === 13) { // The Enter/Return key
@@ -336,7 +336,7 @@ This is the second subsection of my content. I think is more interesting than th
   }
 };</code></pre>
 
-<p>在这里，我们向文档对象 <code>document</code> 添加一个侦听器，以检测什么时候键盘上按下按钮 我们通过事件对象 <code>event object</code> 的 <code>keyCode </code>属性，检查用户按下了哪个按钮; 如果它是与 <code>Return / Enter</code> 匹配的关键代码，我们通过按钮的 onclick 函数，即 <code>document.activeElement.onclick()</code> 。<code>activeElement</code> 提供给我们页面当前被 focused 的元素。</p>
+<p>在这里，我们向文档对象 <code>document</code> 添加一个侦听器，以检测什么时候键盘上按下按钮 我们通过事件对象 <code>event object</code> 的 <code>keyCode </code>属性，检查用户按下了哪个按钮; 如果它是与 <code>Return / Enter</code> 匹配的关键代码，我们通过按钮的 onclick 函数，即 <code>document.activeElement.onclick()</code> 。<code>activeElement</code> 提供给我们页面当前被 focused 的元素。</p>
 
 <p>我们使用<code>document.activeElement.onclick（）</code>运行存储在按钮的 onclick 处理函数中的函数。 <code>activeElement</code> 为我们提供了当前关注页面的元素。</p>
 
@@ -344,9 +344,9 @@ This is the second subsection of my content. I think is more interesting than th
 <p><strong>注意</strong>：您应该记住，只有通过事件处理程序属性（例如 onclick）设置原始事件处理程序，此技巧才会起作用。 <code>addEventListener</code> 将不起作用。</p>
 </div>
 
-<p>这对于重新构建功能而言是一个额外的麻烦。而且这肯定会带来其他问题。 使用正确的元素处理正确的工作是非常重要的。（<strong>Better to just use the right element for the right job in the first place.</strong>）</p>
+<p>这对于重新构建功能而言是一个额外的麻烦。而且这肯定会带来其他问题。 使用正确的元素处理正确的工作是非常重要的。（<strong>Better to just use the right element for the right job in the first place.</strong>）</p>
 
-<h4 id="有意义的文字标签"><strong>有意义的文字标签</strong></h4>
+<h4 id="有意义的文字标签">有意义的文字标签</h4>
 
 <p>用户界面控件的 文本标签 对所有用户都非常有用，但是对于残疾用户来说，让他们正确使用尤其重要。</p>
 
@@ -379,17 +379,17 @@ This is the second subsection of my content. I think is more interesting than th
   &lt;input type="text" id="name" name="name"&gt;
 &lt;/div&gt;</pre>
 
-<p>通过这样的代码，标签将清晰地与输入相关联;  描述将更像如下这种形式：“填写你的姓名：编辑文本”。</p>
+<p>通过这样的代码，标签将清晰地与输入相关联;  描述将更像如下这种形式：“填写你的姓名：编辑文本”。</p>
 
 <p><img src="voiceover-good-form-label.png"></p>
 
 <p>作为额外的好处，在大多数将标签与表单输入相关联的浏览器中，您可以单击标签来 选择/激活 表单元素。这给输入一个更大的可选中区域，使其更容易选择。</p>
 
 <div class="note">
-<p>注意：您可以在 <a href="http://mdn.github.io/learning-area/accessibility/html/good-form.html">good-form.html</a> 和 <a href="http://mdn.github.io/learning-area/accessibility/html/bad-form.html">bad-form.html</a> 中看到一些好的和不好的表单示例。</p>
+<p><strong>备注：</strong> 您可以在 <a href="http://mdn.github.io/learning-area/accessibility/html/good-form.html">good-form.html</a> 和 <a href="http://mdn.github.io/learning-area/accessibility/html/bad-form.html">bad-form.html</a> 中看到一些好的和不好的表单示例。</p>
 </div>
 
-<h2 id="可访问的表格"><strong>可访问的表格</strong></h2>
+<h2 id="可访问的表格">可访问的表格</h2>
 
 <p>基本的表格（译者注：“data table”被翻译成“表格”）可以用非常简单的标记来编写，例如：</p>
 
@@ -418,18 +418,18 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>但是这有问题 - 屏幕阅读器用户无法将行或列作为数据分组关联在一起。要做到这一点，你需要知道标题行是什么，以及它们是否在行，列等标题上。这只能在上面的表中以可视化方式完成（参见 <a href="http://mdn.github.io/learning-area/accessibility/html/bad-table.html">bad-table.html</a> ，并自己尝试这个例子）。</p>
 
-<p>现在看看我们的 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html">punk bands table example</a>  - 您可以在这里看到一些辅助工具（accessibility aids）：</p>
+<p>现在看看我们的 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html">punk bands table example</a>  - 您可以在这里看到一些辅助工具（accessibility aids）：</p>
 
 <ul>
- <li>表头使用 <code>{{htmlelement("th")}}</code> 元素定义 - 您还可以使用 <code>scope</code> 属性指定它们是行还是列的标题。这提供给了屏幕阅读器可以理解的完整数据组。</li>
- <li> <code>{{htmlelement("caption")}}</code> 元素和 <code>&lt;table&gt;</code>  <code>summary</code> 属性都执行类似的工作 - 它们充当表格的替代文本，为屏幕阅读器用户提供有用的表格内容快速摘要。 <code>&lt;caption&gt;</code> 通常是首选，因为它使内容可供视力良好的用户访问，而且他们也可能会发现它很有用。你并不需要两者都使用！。</li>
+ <li>表头使用 <code>{{htmlelement("th")}}</code> 元素定义 - 您还可以使用 <code>scope</code> 属性指定它们是行还是列的标题。这提供给了屏幕阅读器可以理解的完整数据组。</li>
+ <li> <code>{{htmlelement("caption")}}</code> 元素和 <code>&lt;table&gt;</code>  <code>summary</code> 属性都执行类似的工作 - 它们充当表格的替代文本，为屏幕阅读器用户提供有用的表格内容快速摘要。 <code>&lt;caption&gt;</code> 通常是首选，因为它使内容可供视力良好的用户访问，而且他们也可能会发现它很有用。你并不需要两者都使用！。</li>
 </ul>
 
 <div class="note">
-<p>注意：有关可访问数据表的更多详细信息，请参阅我们的 <a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML 表格高级功能和可访问性</a> 文章。</p>
+<p><strong>备注：</strong> 有关可访问数据表的更多详细信息，请参阅我们的 <a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML 表格高级功能和可访问性</a> 文章。</p>
 </div>
 
-<h2 id="文本替代品"><strong>文本替代品</strong></h2>
+<h2 id="文本替代品">文本替代品</h2>
 
 <p>尽管文本内容本身是可访问的，但对于多媒体内容而言也不一定是这样 - 图像/视频内容不能被视觉障碍人士看到，并且听觉障碍人士不能听到音频内容。稍后我们将在可访问多媒体文章中详细介绍视频和音频内容，但对于本文，我们将探讨低微（humble）的 <code>{{htmlelement("img")}}</code> 元素的可访问性。</p>
 
@@ -453,24 +453,20 @@ This is the second subsection of my content. I think is more interesting than th
 <p>第一张图片，当用屏幕阅读器查看时，并不真正为用户提供很多帮助 - 例如 VoiceOver 会读出“/dinosaur.png，image” 。它读出文件名以尝试提供一些帮助。在这个例子中，用户至少知道它是某种恐龙，但通常文件可以用机器生成的文件名（例如来自数码相机）上传，这些文件名可能不会提供图像内容的信息。</p>
 
 <div class="note">
-<p>注意：这就是为什么你不应该在图像中包含文本内容 - 屏幕阅读器根本无法访问它。还有其他的缺点 - 你不能选择它并复制/粘贴它。不要这样做！</p>
+<p><strong>备注：</strong> 这就是为什么你不应该在图像中包含文本内容 - 屏幕阅读器根本无法访问它。还有其他的缺点 - 你不能选择它并复制/粘贴它。不要这样做！</p>
 </div>
 
 <p>当屏幕阅读器遇到第二张图像时，它会读出完整的 <code>alt</code> 属性 - “红色霸王龙雷克斯：一只像人一样直立的双腿恐龙，手臂小，头部大而锋利。”</p>
 
-<p>这突出了不仅在所谓的替代文本不可用的情况下使用有意义的文件名的重要性，而且还确保尽可能地在替换属性 <code>alt</code> 中提供替代文本。请注意，<code>alt</code> 属性的内容应始终提供图像的直接表示以及它在视觉上传达的内容。任何个人知识或额外描述都不应该包含在这里，因为它对以前没有碰到过这个图像的人没有用处。</p>
+<p>这突出了不仅在所谓的替代文本不可用的情况下使用有意义的文件名的重要性，而且还确保尽可能地在替换属性 <code>alt</code> 中提供替代文本。请注意，<code>alt</code> 属性的内容应始终提供图像的直接表示以及它在视觉上传达的内容。任何个人知识或额外描述都不应该包含在这里，因为它对以前没有碰到过这个图像的人没有用处。</p>
 
 <p>需要考虑的一件事是，你的图片是否在你的内容中有意义，或者它们纯粹是为了视觉装饰，所以没有意义。如果它们是装饰性的，最好将它们包含在页面中作为 CSS 背景图像。</p>
 
 <div class="note">
-<p>注意：请阅读 <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">HTML 中的图片</a> 和 <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">响应式图片</a> 以获得更多关于图片实施和最佳做法的信息。</p>
+<p><strong>备注：</strong> 请阅读 <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">HTML 中的图片</a> 和 <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">响应式图片</a> 以获得更多关于图片实施和最佳做法的信息。</p>
 </div>
 
-<p>如果您确实想要提供额外的上下文信息，则应该将其放在图像周围的文本中，或放置在“标题” <code>title</code> 属性中，如上所示。在这种情况下，大多数屏幕阅读器会读出替代文本，标题属性和文件名。 此外，鼠标滑过时，浏览器会将 <code>title</code> 的内容作为工具提示的形式显示出来。</p>
-
-
-
-
+<p>如果您确实想要提供额外的上下文信息，则应该将其放在图像周围的文本中，或放置在“标题” <code>title</code> 属性中，如上所示。在这种情况下，大多数屏幕阅读器会读出替代文本，标题属性和文件名。 此外，鼠标滑过时，浏览器会将 <code>title</code> 的内容作为工具提示的形式显示出来。</p>
 
 <p><img src="title-attribute.png"></p>
 
@@ -480,10 +476,10 @@ This is the second subsection of my content. I think is more interesting than th
 
 &lt;p id="dino-label"&gt;The Mozilla red Tyrannosaurus ... &lt;/p&gt;</pre>
 
-<p>在这种情况下，我们不使用“alt”属性 —— 相反，我们已经将图像的描述作为常规文本段落给出，并给出它的“id”，然后使用“<code>aria-labelledby</code>”属性并链接到对应“<code>id</code>”，它使屏幕阅读器将该段落用作该图像的替代文本/标签。如果您想将相同的文本用作多个图像的标签，这是特别有用的 - 这是使用“<code>alt</code>”不可能实现的。</p>
+<p>在这种情况下，我们不使用“alt”属性 —— 相反，我们已经将图像的描述作为常规文本段落给出，并给出它的“id”，然后使用“<code>aria-labelledby</code>”属性并链接到对应“<code>id</code>”，它使屏幕阅读器将该段落用作该图像的替代文本/标签。如果您想将相同的文本用作多个图像的标签，这是特别有用的 - 这是使用“<code>alt</code>”不可能实现的。</p>
 
 <div class="note">
-<p>注意：“<code>aria-labelledby</code>”是 <a href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA</a> 规范的一部分，它允许开发人员在其标记中添加额外的语义，以提高屏幕阅读器的可访问性。要了解更多关于它是如何工作的，请阅读我们的 <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA Basics</a> 文章。</p>
+<p><strong>备注：</strong> “<code>aria-labelledby</code>”是 <a href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA</a> 规范的一部分，它允许开发人员在其标记中添加额外的语义，以提高屏幕阅读器的可访问性。要了解更多关于它是如何工作的，请阅读我们的 <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA Basics</a> 文章。</p>
 </div>
 
 
@@ -496,7 +492,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>这听起来像个好主意，尤其是对于像大图表这样的信息图，其中有很多信息可能可以表示为可访问的数据表（请参阅上一部分）。但是，屏幕阅读器不支持<code>longdesc</code>，非屏幕阅读器用户完全无法访问内容。将长描述包含在与图像相同的页面中，或者通过常规链接链接到它可能会更好。</p>
 
-<p>HTML5 包含两个新元素 -  <code>{{htmlelement("figure")}}</code> 和<code>{{htmlelement("figcaption")}}</code> ，它们应该将某种形象（可以是任何东西，不一定是图像）与数字标题相关联：</p>
+<p>HTML5 包含两个新元素 -  <code>{{htmlelement("figure")}}</code> 和<code>{{htmlelement("figcaption")}}</code> ，它们应该将某种形象（可以是任何东西，不一定是图像）与数字标题相关联：</p>
 
 <pre>&lt;figure&gt;
   &lt;img src="dinosaur.png" alt="The Mozilla Tyrannosaurus"&gt;
@@ -512,12 +508,12 @@ This is the second subsection of my content. I think is more interesting than th
   Tyrannosaurus Rex: the king of the dinosaurs
 &lt;/h3&gt;</pre>
 
-<p>可能有时候图像被包含在页面的设计中，但其主要目的是用于视觉装饰。在上面的代码示例中，您会注意到图像的“alt”属性为空 - 这是为了让屏幕阅读器识别图像，但不试图描述图像（阅读器只是说“图像” 等类似的语句）。</p>
+<p>可能有时候图像被包含在页面的设计中，但其主要目的是用于视觉装饰。在上面的代码示例中，您会注意到图像的“alt”属性为空 - 这是为了让屏幕阅读器识别图像，但不试图描述图像（阅读器只是说“图像” 等类似的语句）。</p>
 
 <p>使用空白“alt”而不包含它的原因是因为如果没有提供“alt”，许多屏幕阅读器会公布整个图像 URL。在上面的示例中，图像充当与其关联的标题的视觉装饰。在这种情况下，以及在图像只是装饰并且没有内容值的情况下，您应该在图像上放置一个空白的“alt”。另一种选择是使用 aria role 属性 <code>role =“presentation”</code> - 这也会阻止屏幕阅读器读出替代文本。</p>
 
 <div class="note">
-<p>注意：如果可能的话，你应该使用 CSS 来显示只有装饰的图像。</p>
+<p><strong>备注：</strong> 如果可能的话，你应该使用 CSS 来显示只有装饰的图像。</p>
 </div>
 
 <h2 id="总结">总结</h2>
@@ -535,7 +531,7 @@ This is the second subsection of my content. I think is more interesting than th
 <ul>
  <li><a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">什么是可访问性 (What is accessibility?)</a></li>
  <li><a href="/en-US/docs/Learn/Accessibility/HTML">可访问性的良好的基础 (HTML: A good basis for accessibility)</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript">CSS 和 JavaScript 可访问性的最好练习 (CSS and JavaScript accessibility best practices)</a></li>
+ <li><a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript">CSS 和 JavaScript 可访问性的最好练习 (CSS and JavaScript accessibility best practices)</a></li>
  <li><a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI_ARIA 基础 (WAI-ARIA basics)</a></li>
  <li><a href="/en-US/docs/Learn/Accessibility/Multimedia">多媒体的可访问性 (Accessible multimedia)</a></li>
  <li><a href="/en-US/docs/Learn/Accessibility/Mobile">移动端的可访问性 (Mobile accessibility)</a></li>

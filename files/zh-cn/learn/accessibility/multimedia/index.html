@@ -8,13 +8,13 @@ original_slug: learn/Accessibility/多媒体
 
 <div>{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}</div>
 
-<p>可能导致可访问性问题（accessibility problems ）的另一类内容是多媒体 ——视频，音频和图像内容需要提供适当的文本替代方式，以便辅助技术及其用户能够理解它们。本文展示了具体内容。</p>
+<p>可能导致可访问性问题（accessibility problems ）的另一类内容是多媒体 ——视频，音频和图像内容需要提供适当的文本替代方式，以便辅助技术及其用户能够理解它们。本文展示了具体内容。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">先决条件：</th>
-   <td>基本的计算机素养，对 HTML，CSS 和 JavaScript 的基本理解，<a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">对可访问性</a> 的理解。</td>
+   <td>基本的计算机素养，对 HTML，CSS 和 JavaScript 的基本理解，<a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">对可访问性</a> 的理解。</td>
   </tr>
   <tr>
    <th scope="row">目的：</th>
@@ -33,7 +33,7 @@ original_slug: learn/Accessibility/多媒体
 
 <h2 id="简单图像">简单图像</h2>
 
-<p>我们已经介绍了 HTML 图像的简单文本替代<a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a> –– 您可以参考其中了解详细信息。简而言之，应确保在可能的情况下，视觉内容具有替代文本，供屏幕阅读器拾取和读取给其用户。</p>
+<p>我们已经介绍了 HTML 图像的简单文本替代<a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a> –– 您可以参考其中了解详细信息。简而言之，应确保在可能的情况下，视觉内容具有替代文本，供屏幕阅读器拾取和读取给其用户。</p>
 
 <p>示例：</p>
 
@@ -45,7 +45,7 @@ original_slug: learn/Accessibility/多媒体
 
 <p>基于 Web 的音频/视频执行控件不应该成为问题,对吗?让我们来调查一下。</p>
 
-<h3 id="本地_HTML5_控件的问题">本地 HTML5 控件的问题</h3>
+<h3 id="本地_HTML5_控件的问题">本地 HTML5 控件的问题</h3>
 
 <p>HTML5 视频和音频实例甚至附带一组内置控件，允许您直接在盒子控制媒体。例如 (请参阅<a href="om/mdn/learning-area/blob/master/accessibility/multimedia/native-controls.html">本地控件.html</a> 源代码和<a href="http://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html">实时演示</a>):</p>
 
@@ -63,7 +63,7 @@ original_slug: learn/Accessibility/多媒体
   &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="rabbit320.mp4"&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
 &lt;/video&gt;</pre>
 
-<p>控件属性提供播放/暂停按钮、搜索栏等 - 您期望从媒体播放器获得的基本控件。它看起来像在 Firefox 和 Chrome:</p>
+<p>控件属性提供播放/暂停按钮、搜索栏等 - 您期望从媒体播放器获得的基本控件。它看起来像在 Firefox 和 Chrome:</p>
 
 <p><img alt="Screenshot of Video Controls in Firefox" src="native-controls-firefox.png"></p>
 
@@ -220,7 +220,7 @@ fwdBtn.onclick = function() {
 <p>在实际创建脚本方面，您的选项包括：</p>
 
 <ul>
- <li>商业服务––您可以向专业人士支付报酬进行转录，例如 <a href="https://scribie.com/">Scribie</a>、<a href="https://castingwords.com/">Casting Words</a>或<a href="https://www.rev.com/">Rev</a>公司。询问并征求意见，以确保您找到一家信誉良好的公司，您可以有效地合作。</li>
+ <li>商业服务––您可以向专业人士支付报酬进行转录，例如 <a href="https://scribie.com/">Scribie</a>、<a href="https://castingwords.com/">Casting Words</a>或<a href="https://www.rev.com/">Rev</a>公司。询问并征求意见，以确保您找到一家信誉良好的公司，您可以有效地合作。</li>
  <li>社区/草根/自我转录 – 如果您是工作场所中活跃社区或团队的一员，您可以请求他们帮助翻译。你甚至可以自己去做。</li>
  <li>自动服务 – 提供自动服务，例如，当您将视频上传到 YouTube 时，您可以选择生成自动字幕/脚本。根据语音音频的清晰程度，生成的脚本质量将有很大差异。</li>
 </ul>
@@ -244,7 +244,7 @@ fwdBtn.onclick = function() {
 <p>但是，有一些边缘情况。例如，您可能有一个会议的音频录制，该录音引用了附带的资源，如电子表格或图表。在这种情况下，应确保资源与音频和脚本一起提供，并在成绩单中提及它们的位置专门链接到这些资源。这当然会帮助所有用户，而不仅仅是聋人。</p>
 
 <div class="note">
-<p><strong>注意</strong>:音频脚本通常有助于多个用户组。除了让聋人用户访问音频中包含的信息外，还考虑一个带宽连接较低的用户，他们会发现下载音频不方便。还要考虑在嘈杂的环境中 (如酒吧或酒吧) 中的用户，他们试图访问信息，但无法通过噪音听到信息。</p>
+<p><strong>备注：</strong> 音频脚本通常有助于多个用户组。除了让聋人用户访问音频中包含的信息外，还考虑一个带宽连接较低的用户，他们会发现下载音频不方便。还要考虑在嘈杂的环境中 (如酒吧或酒吧) 中的用户，他们试图访问信息，但无法通过噪音听到信息。</p>
 </div>
 
 <h2 id="视频文本轨道">视频文本轨道</h2>
@@ -252,7 +252,7 @@ fwdBtn.onclick = function() {
 <p>要使聋人、盲人甚至其他用户组 (如低带宽用户或不理解视频录制的语言的用户) 可以访问视频，您需要在视频内容中包括文本轨道。</p>
 
 <div class="note">
-<p><strong>注意</strong>:文本轨道对于潜在的任何用户也很有用，而不仅仅是那些残障用户。例如，有些用户可能无法听到音频，因为他们处于嘈杂的环境中 (如显示体育游戏时的拥挤的酒吧),或者如果其他人在安静的地方 (如图书馆),则可能不想打扰其他人。</p>
+<p><strong>备注：</strong> 文本轨道对于潜在的任何用户也很有用，而不仅仅是那些残障用户。例如，有些用户可能无法听到音频，因为他们处于嘈杂的环境中 (如显示体育游戏时的拥挤的酒吧),或者如果其他人在安静的地方 (如图书馆),则可能不想打扰其他人。</p>
 </div>
 
 <p>这不是一个新概念 ––电视服务已经关闭了字幕相当长的时间了：</p>
@@ -312,7 +312,7 @@ This is the second.
 <p>有关详细信息，请阅读<a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>。您可以找到与本文一起使用本文的<a href="http://iandevlin.github.io/mdn/video-player-with-captions/">the example</a>,本文由 Ian Devlin 编写 (请参阅<a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source code</a>)。此示例使用一些 JavaScript 允许用户在不同的字幕之间进行选择。请注意，要打开字幕，您需要按"CC"按钮并选择一个选项 - 英语、德语或西班牙语。</p>
 
 <div class="note">
-<p><strong>注意</strong>:文本轨道和转录也可以帮助您使用{{glossary("SEO")}},因为搜索引擎在文本上尤其繁荣。文本轨道甚至允许搜索引擎通过视频直接链接到一个点部分。</p>
+<p><strong>备注：</strong> 文本轨道和转录也可以帮助您使用{{glossary("SEO")}},因为搜索引擎在文本上尤其繁荣。文本轨道甚至允许搜索引擎通过视频直接链接到一个点部分。</p>
 </div>
 
 <h2 id="其他多媒体内容">其他多媒体内容</h2>
@@ -329,7 +329,7 @@ This is the second.
 
 <ul>
  <li>如果您使用 Flash 或 Silverlight 等插件技术嵌入音频内容，您可能只需以与上面在<a href="#脚本示例">脚本示例</a>部分中所示的相同方式提供音频脚本。</li>
- <li>如果您使用 Flash 或 Silverlight 等插件技术嵌入视频内容，则可以利用这些技术可用的字幕/字幕技术。例如，参考 <a href="http://www.adobe.com/accessibility/products/flash/captions.html">Flash captions</a>, <a href="https://support.brightcove.com/en/video-cloud/docs/using-flash-only-player-api-closed-captioning">Using the Flash-Only Player API for Closed Captioning</a>, or <a href="https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/">Playing Subtitles with Videos in Silverlight</a>.</li>
+ <li>如果您使用 Flash 或 Silverlight 等插件技术嵌入视频内容，则可以利用这些技术可用的字幕/字幕技术。例如，参考 <a href="http://www.adobe.com/accessibility/products/flash/captions.html">Flash captions</a>, <a href="https://support.brightcove.com/en/video-cloud/docs/using-flash-only-player-api-closed-captioning">Using the Flash-Only Player API for Closed Captioning</a>, or <a href="https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/">Playing Subtitles with Videos in Silverlight</a>.</li>
 </ul>
 
 <p>然而，其他多媒体不是那么容易使访问。例如，如果您正在处理沉浸式 3D 游戏或虚拟现实应用，那么为此类体验提供文本替代方案确实非常困难，您可能会认为盲人用户实际上并不在此类应用的目标受众范围内。</p>

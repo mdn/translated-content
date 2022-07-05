@@ -16,7 +16,7 @@ translation_of: Learn/Common_questions/What_is_a_domain_name
  <tbody>
   <tr>
    <th scope="row">前提：</th>
-   <td>首先你得知道 <a href="/zh-CN/docs/learn/How_the_Internet_works">互联网是怎么工作的</a> 并理解 <a href="/zh-CN/docs/learn/常见问题/What_is_a_URL">什么是 URL</a>。</td>
+   <td>首先你得知道 <a href="/zh-CN/docs/learn/How_the_Internet_works">互联网是怎么工作的</a> 并理解 <a href="/zh-CN/docs/learn/常见问题/What_is_a_URL">什么是 URL</a>。</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -61,21 +61,21 @@ translation_of: Learn/Common_questions/What_is_a_domain_name
 
 <dl>
  <dt>标签 (或者说是组件)</dt>
- <dd>标签都是紧随着 TLD 的。标签由 1 到 63 个大小写不敏感的字符组成，这些字符包含字母 A-z，数字 0-9，甚至“-”这个符号（当然，“-”不应该出现在标签开头或者标签的结尾）。举几个例子，<code>a</code>，<code>97</code>，或者 <code>hello-strange-person-16-how-are-you</code>  都是合法的标签。</dd>
+ <dd>标签都是紧随着 TLD 的。标签由 1 到 63 个大小写不敏感的字符组成，这些字符包含字母 A-z，数字 0-9，甚至“-”这个符号（当然，“-”不应该出现在标签开头或者标签的结尾）。举几个例子，<code>a</code>，<code>97</code>，或者 <code>hello-strange-person-16-how-are-you</code>  都是合法的标签。</dd>
  <dt>Secondary Level Domain, 二级域名</dt>
- <dd>刚好位于 TLD 前面的标签也被称为二级域名 (SLD)。一个域名可以有多个标签（或者说是组件），没有强制规定必须要 3 个标签来构成域名。例如，www.inf.ed.ac.uk 是一个正确的域名。当拥有了“上级”部分 (例如 <a href="https://mozilla.org">mozilla.org</a>)，你还可以创建另外的域名 (有时被称为 "子域名") (例如 <a href="https://developer.mozilla.org">developer.mozilla.org</a>).</dd>
+ <dd>刚好位于 TLD 前面的标签也被称为二级域名 (SLD)。一个域名可以有多个标签（或者说是组件），没有强制规定必须要 3 个标签来构成域名。例如，www.inf.ed.ac.uk 是一个正确的域名。当拥有了“上级”部分 (例如 <a href="https://mozilla.org">mozilla.org</a>)，你还可以创建另外的域名 (有时被称为 "子域名") (例如 <a href="https://developer.mozilla.org">developer.mozilla.org</a>).</dd>
 </dl>
 
 <h3 id="购买域名">购买域名</h3>
 
 <h4 id="谁拥有域名？">谁拥有域名？</h4>
 
-<p>你不能真正地 “购买一个域名”，你只能花钱获得一个域名在一年或多年内的使用权。不过你可以延长你的使用权，同时你的续期将优先于其他人的使用申请。但你从来都没有拥有过域名。</p>
+<p>你不能真正地 “购买一个域名”，你只能花钱获得一个域名在一年或多年内的使用权。不过你可以延长你的使用权，同时你的续期将优先于其他人的使用申请。但你从来都没有拥有过域名。</p>
 
 <p>被称为域名注册商的公司通过域名登记来记录连接你和你的域名的技术与管理信息。</p>
 
 <div class="note">
-<p><strong>提示 : </strong>对于一些域名，它可能不归属于某个域名注册商来负责记录。比如说，每个在.fire 下的域名由 Amazon 管理。</p>
+<p><strong>备注：</strong> 对于一些域名，它可能不归属于某个域名注册商来负责记录。比如说，每个在.fire 下的域名由 Amazon 管理。</p>
 </div>
 
 <h4 id="找个可用的域名">找个可用的域名</h4>
@@ -133,7 +133,7 @@ NOT FOUND
 </ol>
 
 <div class="note">
-<p><strong>注意：</strong> 在这个过程中注册商会要求你的真实住址。请保证你正确地填写了，因为在一些国家，如果你没有提供合法的地址，注册商会关闭你的域名。</p>
+<p><strong>备注：</strong> 在这个过程中注册商会要求你的真实住址。请保证你正确地填写了，因为在一些国家，如果你没有提供合法的地址，注册商会关闭你的域名。</p>
 </div>
 
 <h4 id="DNS_刷新">DNS 刷新</h4>
@@ -141,7 +141,7 @@ NOT FOUND
 <p>DNS 数据库存储在全球每个 DNS 服务器上，所有这些服务器都源于 (refer to) 几个被称为“权威名称服务器”或“顶级 DNS 服务器”。只要您的注册商创建或更新给定域名的任何信息，信息就必须在每个 DNS 数据库中刷新。知道给定域名的每个 DNS 服务器都会存储一段时间的信息，然后再次刷新（DNS 服务器再次查询权威服务器）。因此，知道此域名的 DNS 服务器需要一些时间才能获取最新信息。</p>
 
 <div class="note">
-<p><strong>注意 :</strong> 这个时间一般被称为 <strong>传播时间 </strong>。然而这个术语是不精准的，因为更新本身没有传播 (top → down)。被你电脑 (down) 查询的 DNS 服务器只在他需要的时候才从权威服务器 (top) 中获取信息。</p>
+<p><strong>备注：</strong> 这个时间一般被称为<strong>传播时间</strong>。然而这个术语是不精准的，因为更新本身没有传播 (top → down)。被你电脑 (down) 查询的 DNS 服务器只在他需要的时候才从权威服务器 (top) 中获取信息。</p>
 </div>
 
 <h3 id="DNS请求如何工作？">DNS 请求如何工作？</h3>
@@ -151,7 +151,7 @@ NOT FOUND
 <ol>
  <li>在你的浏览器地址栏输入<code>mozilla.org</code>。</li>
  <li>您的浏览器询问您的计算机是否已经识别此域名所确定的 IP 地址（使用本地 DNS 缓存）。如果是的话，这个域名被转换为 IP 地址，然后浏览器与网络服务器交换内容。结束。</li>
- <li>如果你的电脑不知道 <code>mozilla.org</code> 域名背后的 IP, 它会询问一个 DNS 服务器，这个服务器的工作就是告诉你的电脑已经注册的域名所匹配的 IP。</li>
+ <li>如果你的电脑不知道 <code>mozilla.org</code> 域名背后的 IP, 它会询问一个 DNS 服务器，这个服务器的工作就是告诉你的电脑已经注册的域名所匹配的 IP。</li>
  <li>现在电脑知道了要请求的 IP 地址，你的浏览器能够与网络服务器交换内容。</li>
 </ol>
 

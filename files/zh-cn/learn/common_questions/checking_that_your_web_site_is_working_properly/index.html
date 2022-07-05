@@ -23,15 +23,15 @@ translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_pr
  </tbody>
 </table>
 
-<p>所以你已经发布你的网站了对吗 ? 非常棒！ 但是你确定它能够正常运行吗？</p>
+<p>所以你已经发布你的网站了对吗 ? 非常棒！ 但是你确定它能够正常运行吗？</p>
 
-<p>远程 web 服务器与本地服务器的运行表现通常有很大差别，因此在你的网站上线之时对它进行测试是个不错的主意。你可能会对为数众多的问题表示惊讶：图片无法显示，页面无法加载或者加载缓慢，等等。大多数时候这个问题不严重，只是一个小小的错误或者你的 web 主机配置问题。 </p>
+<p>远程 web 服务器与本地服务器的运行表现通常有很大差别，因此在你的网站上线之时对它进行测试是个不错的主意。你可能会对为数众多的问题表示惊讶：图片无法显示，页面无法加载或者加载缓慢，等等。大多数时候这个问题不严重，只是一个小小的错误或者你的 web 主机配置问题。 </p>
 
 <p>让我们看下如何诊断并解决那些问题。</p>
 
 <h2 id="主动学习">主动学习</h2>
 
-<p><em>当前没有主动学习的相关页面。<a href="/zh-CN/docs/MDN/Getting_started">请考虑作出你的贡献</a>  。</em></p>
+<p><em>当前没有主动学习的相关页面。<a href="/zh-CN/docs/MDN/Getting_started">请考虑作出你的贡献</a>  。</em></p>
 
 <h2 id="深入探索">深入探索</h2>
 
@@ -41,7 +41,7 @@ translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_pr
 
 <h4 id="噢哦，图片去哪里了？"><strong>噢哦，图片去哪里了？</strong></h4>
 
-<p>让我们看下我们的个人网站， <code>http://demozilla.examplehostingprovider.net/</code>.。没有出现我们预期的图片！</p>
+<p>让我们看下我们的个人网站， <code>http://demozilla.examplehostingprovider.net/</code>.。没有出现我们预期的图片！</p>
 
 <p><img alt="Oops, the ‘unicorn’ image is missing" src="image-missing.png"></p>
 
@@ -56,7 +56,7 @@ translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_pr
 <p>服务器在收到请求时会以一条状态信息作出响应。以下是最常见的状态：</p>
 
 <dl>
- <dt><strong> 200: OK</strong></dt>
+ <dt><strong> 200: OK</strong></dt>
  <dd>你请求的资源已递送。</dd>
  <dt><strong>301: Moved permanently</strong></dt>
  <dd>资源已被移到新的位置。你将无法在浏览器中看到，但了解"301"是件好事，因为搜索引擎利用这条信息更新它们的索引。</dd>
@@ -83,7 +83,7 @@ translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_pr
 
 <p><img alt="Le list of images in our project" src="demozilla-images-list.png"></p>
 
-<p>乍一看，我们请求的图片似乎在正确的位置... 但是网络工具却出现了"404"的报错.。事实证明我们的 HTML 代码中出现了错别字： <code>unicorn_pics.png</code> 而不是<code>unicorn_pic.png</code>.。所以，通过在你的代码编辑器中改变图片的<code>src</code> 属性来纠正错别字。</p>
+<p>乍一看，我们请求的图片似乎在正确的位置... 但是网络工具却出现了"404"的报错.。事实证明我们的 HTML 代码中出现了错别字： <code>unicorn_pics.png</code> 而不是<code>unicorn_pic.png</code>.。所以，通过在你的代码编辑器中改变图片的<code>src</code> 属性来纠正错别字。</p>
 
 <p><img alt="Deleting the ‘s’" src="code-correct.png"></p>
 
@@ -91,11 +91,11 @@ translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_pr
 
 <p><img alt="The image loads corectly in the browser" src="image-corrected.png"></p>
 
-<p>搞定！让我们再看一遍 {{Glossary("HTTP")}} 状态：</p>
+<p>搞定！让我们再看一遍 {{Glossary("HTTP")}} 状态：</p>
 
 <ul>
- <li> <code>/</code> 和 <code>unicorn_pic.png</code> 的状态码为<strong>200</strong>，意味着我们成功加载了页面和图片。</li>
- <li> <code>basic.css</code> 的状态码为<strong>304</strong>，意味着这个文件在上次请求后就没有再变动，因此浏览器可以在其缓存中使用该文件，而不是接收新的副本。</li>
+ <li> <code>/</code> 和 <code>unicorn_pic.png</code> 的状态码为<strong>200</strong>，意味着我们成功加载了页面和图片。</li>
+ <li> <code>basic.css</code> 的状态码为<strong>304</strong>，意味着这个文件在上次请求后就没有再变动，因此浏览器可以在其缓存中使用该文件，而不是接收新的副本。</li>
 </ul>
 
 <p>因此，我们修复了错误并且沿途了解了一些 HTTP 状态！</p>
@@ -106,7 +106,7 @@ translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_pr
 
 <h4 id="地址中的错别字">地址中的错别字</h4>
 
-<p>我们想要输入 <code>http://demozilla.examplehostingprovider.net/</code> 但输入得太快而遗漏了一个“l”：</p>
+<p>我们想要输入 <code>http://demozilla.examplehostingprovider.net/</code> 但输入得太快而遗漏了一个“l”：</p>
 
 <p><img alt="Address unreachable" src="cannot-find-server.png"></p>
 
@@ -124,19 +124,19 @@ translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_pr
 
 <p><img alt="A Javascript error is shown in the Console" src="js-error.png"></p>
 
-<p>在这个例子中，我们清楚（相当清楚）错误所在，可以马上进行修复 (我们将在 <a href="/en-US/Learn/JavaScript">另一个系列 </a>的文章中提到 JavaScript )。</p>
+<p>在这个例子中，我们清楚（相当清楚）错误所在，可以马上进行修复 (我们将在 <a href="/en-US/Learn/JavaScript">另一个系列 </a>的文章中提到 JavaScript )。</p>
 
 <h3 id="更多需要检查的地方">更多需要检查的地方</h3>
 
-<p>我们列举了一些简单的方法来检查你的网站是否运行正常，以及你可能遇到的最常见的错误和修复方法。 你还可以测试你的页面是否符合这些标准：</p>
+<p>我们列举了一些简单的方法来检查你的网站是否运行正常，以及你可能遇到的最常见的错误和修复方法。 你还可以测试你的页面是否符合这些标准：</p>
 
 <h4 id="性能如何？">性能如何？</h4>
 
-<p>页面加载足够快吗？类似 <a href="http://www.webpagetest.org/">WebPagetest.org</a> 的网站或者类似 <a href="https://addons.mozilla.org/en-US/firefox/addon/yslow/">YSlow</a> 的浏览器附加组件可以告诉你一些有趣的事情。</p>
+<p>页面加载足够快吗？类似 <a href="http://www.webpagetest.org/">WebPagetest.org</a> 的网站或者类似 <a href="https://addons.mozilla.org/en-US/firefox/addon/yslow/">YSlow</a> 的浏览器附加组件可以告诉你一些有趣的事情。</p>
 
 <p><img alt="Yslow diagnostics" src="yslow-diagnostics.png"></p>
 
-<p>等级从 A 到 F。我们的页面较小，符合大部分的标准。但是我们可以注意到如果使用 {{Glossary("CDN")}} 将会更好。 当我们只提供一张图片的时候，这无关紧要，但对于提供数千张图片的高带宽网站来说，这一点至关重要。</p>
+<p>等级从 A 到 F。我们的页面较小，符合大部分的标准。但是我们可以注意到如果使用 {{Glossary("CDN")}} 将会更好。 当我们只提供一张图片的时候，这无关紧要，但对于提供数千张图片的高带宽网站来说，这一点至关重要。</p>
 
 <h4 id="服务器响应是否足够快？">服务器响应是否足够快？</h4>
 
@@ -153,7 +153,7 @@ PING mozilla.org (63.245.215.20): 56 data bytes
 4 packets transmitted, 4 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms</pre>
 
-<p>记住一个方便的键盘快捷键：<strong>Ctrl+C </strong>。 Ctrl+C 给运行发送了一个“中断”信号并令其中止。如果你不中止运行， <code>ping</code> 将会不断地 ping 服务器。</p>
+<p>记住一个方便的键盘快捷键：<strong>Ctrl+C </strong>。 Ctrl+C 给运行发送了一个“中断”信号并令其中止。如果你不中止运行， <code>ping</code> 将会不断地 ping 服务器。</p>
 
 <h3 id="一份简易清单">一份简易清单</h3>
 
@@ -168,6 +168,6 @@ round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms</pre>
 <p>恭喜，你的网站已经成功运作，任何人都可以访问。这是一项巨大的成就。现在，你可以开始深入探索各种主题。</p>
 
 <ul>
- <li>来自世界各地的人会进入你的网站，你应该考虑 <a href="/en-US/docs/Learn/What_is_accessibility">让每个人都可以访问网站</a> 。</li>
- <li>你的网站是否设计的得太粗糙了？是时候<a href="/zh-CN/docs/Learn/CSS/Using_CSS_in_a_web_page">了解更多 CSS</a> 了。</li>
+ <li>来自世界各地的人会进入你的网站，你应该考虑 <a href="/en-US/docs/Learn/What_is_accessibility">让每个人都可以访问网站</a> 。</li>
+ <li>你的网站是否设计的得太粗糙了？是时候<a href="/zh-CN/docs/Learn/CSS/Using_CSS_in_a_web_page">了解更多 CSS</a> 了。</li>
 </ul>
