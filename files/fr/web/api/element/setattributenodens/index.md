@@ -32,7 +32,7 @@ translation_of: Web/API/Element/setAttributeNodeNS
     var a = d1.getAttributeNodeNS(myns, "special-align");
     d2.setAttributeNodeNS(a);
 
-    alert(d2.attributes[1].value) // renvoie : "utterleft"
+    alert(d2.attributes[1].value) // renvoie&nbsp;: "utterleft"
 
 ## Notes
 

@@ -70,7 +70,7 @@ Les événements ont trois fonctions :
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
 
     - `"blocking"` pour rendre la requête synchrone, de sorte que vous pouvez modifier les en-têtes de requête et réponse.
-    - `"responseHeaders"` pour inclure les en-têtes de réponse dans l'objet  `détails` transmis à l'auditeur
+    - `"responseHeaders"` pour inclure les en-têtes de réponse dans l'objet  `détails` transmis à l'auditeur
 
 ## objets supplémentaires
 

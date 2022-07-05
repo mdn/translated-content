@@ -11,7 +11,7 @@ Chaque propriété utilisée en CSS possède un type de valeur qui définit l'en
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Maîtrise élémentaire de l'informatique,
         <a
@@ -31,7 +31,7 @@ Chaque propriété utilisée en CSS possède un type de valeur qui définit l'en
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Apprendre les différents types de valeurs et d'unités utilisés dans les
         propriétés CSS.
@@ -40,7 +40,7 @@ Chaque propriété utilisée en CSS possède un type de valeur qui définit l'en
   </tbody>
 </table>
 
-## Qu'est-ce qu'une valeur CSS ?
+## Qu'est-ce qu'une valeur CSS&nbsp;?
 
 Dans les spécifications CSS et sur les pages de propriétés présentes sur MDN, vous pourrez identifier les types de valeurs, car ils sont entourés par des chevrons, tel que [`<color>`](/fr/docs/Web/CSS/color_value) ou [`<length>`](/fr/docs/Web/CSS/length). Quand vous voyez le type de valeur `<color>`, valide pour une propriété particulière, cela signifie que vous pouvez utiliser n'importe quelle couleur valide comme valeur pour cette propriété, comme énoncé dans la page de référence de [`<color>`](/fr/docs/Web/CSS/color_value).
 
@@ -48,7 +48,7 @@ Dans les spécifications CSS et sur les pages de propriétés présentes sur MDN
 
 > **Note :** Oui, les types de valeurs CSS tendent à être indiqués par des chevrons, pour les différencier des propriétés CSS (ex : la propriété [`color`](/fr/docs/Web/CSS/color), comparée au type de données [\<color>](/fr/docs/Web/CSS/color_value)). Vous pourriez aussi être désorienté entre les types de données CSS et les éléments HTML, car ils utilisent tous deux les chevrons, mais c'est peu probable — ils sont utilisés dans des contextes très différents.
 
-Dans l'exemple suivant, nous avons défini la couleur de notre titre en utilisant un mot-clé, et la couleur de fond en utilisant la fonction `rgb()` :
+Dans l'exemple suivant, nous avons défini la couleur de notre titre en utilisant un mot-clé, et la couleur de fond en utilisant la fonction `rgb()`&nbsp;:
 
 ```css
 h1 {
@@ -74,7 +74,7 @@ Il existe plusieurs types de valeur numérique que vous pourrez utiliser en CSS.
 
 ### Longueurs
 
-Le type numérique que vous rencontrerez le plus souvent est le type `<length>`. Par exemple : `10px` (pixels) ou `30em`. Il existe deux types de longueurs en CSS : les longueurs relatives et les longueurs absolues. Connaître la différence entre les deux est important pour comprendre la taille que les éléments obtiendront.
+Le type numérique que vous rencontrerez le plus souvent est le type `<length>`. Par exemple : `10px` (pixels) ou `30em`. Il existe deux types de longueurs en CSS&nbsp;: les longueurs relatives et les longueurs absolues. Connaître la différence entre les deux est important pour comprendre la taille que les éléments obtiendront.
 
 #### Unités de longueur absolue
 
@@ -124,13 +124,13 @@ Après avoir suivi ces instructions, n'hésitez pas à modifier les valeurs autr
 
 `em` et `rem` sont deux unités de longueur relative que vous rencontrerez fréquemment dès que vous dimensionnerez des boîtes ou du texte. Aussi, il est intéressant de comprendre leur fonctionnement, les différences entre ces deux unités, surtout avant d'aborder des sujets plus complexes comme [la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text) ou [les dispositions CSS](/fr/docs/Learn/CSS/CSS_layout). L'exemple qui suit fournit une démonstration.
 
-Le HTML utilisé ci-après est un ensemble de listes imbriquées : il y a trois listes au total et les exemples partagent tous le même code HTML. La seule différence est que le premier utilise une classe _ems_ et que le second utilise une classe _rems_.
+Le HTML utilisé ci-après est un ensemble de listes imbriquées&nbsp;: il y a trois listes au total et les exemples partagent tous le même code HTML. La seule différence est que le premier utilise une classe _ems_ et que le second utilise une classe _rems_.
 
 Pour commencer, on définit la taille de la police à 16px sur l'élément `<html>`.
 
-**Pour récapituler, l'unité `em` signifie « la taille de police de l'élément parent »** pour ce qui concerne la typographie. Les éléments [`<li>`](/fr/docs/Web/HTML/Element/li) à l'intérieur de [`<ul>`](/fr/docs/Web/HTML/Element/ul) et qui ont un attribut `class` avec `ems` prendront donc leur taille en fonction de celle de leur parent. Aussi, chaque niveau plus grand que le précédent, car chacun a une taille de police de `1.3em` soit 1,3 fois plus grand que la taille de police pour l'élément parent.
+**Pour récapituler, l'unité `em` signifie «&nbsp;la taille de police de l'élément parent&nbsp;»** pour ce qui concerne la typographie. Les éléments [`<li>`](/fr/docs/Web/HTML/Element/li) à l'intérieur de [`<ul>`](/fr/docs/Web/HTML/Element/ul) et qui ont un attribut `class` avec `ems` prendront donc leur taille en fonction de celle de leur parent. Aussi, chaque niveau plus grand que le précédent, car chacun a une taille de police de `1.3em` soit 1,3 fois plus grand que la taille de police pour l'élément parent.
 
-**Pour récapituler, l'unité `rem` signifie « la taille de police de l'élément racine »** (rem est l'acronyme anglais de « <i lang="en">root em</i> » qu'on pourrait traduire par « em racine ».) Les éléments [`<li>`](/fr/docs/Web/HTML/Element/li) à l'intérieur de [`<ul>`](/fr/docs/Web/HTML/Element/ul) et qui ont un attribut `class` avec `rems` prendront leur taille à partir de l'élément racine (`<html>`). Cela signifie que les niveaux successifs ne gagneront pas en largeur.
+**Pour récapituler, l'unité `rem` signifie «&nbsp;la taille de police de l'élément racine&nbsp;»** (rem est l'acronyme anglais de «&nbsp;<i lang="en">root em</i>&nbsp;» qu'on pourrait traduire par «&nbsp;em racine&nbsp;».) Les éléments [`<li>`](/fr/docs/Web/HTML/Element/li) à l'intérieur de [`<ul>`](/fr/docs/Web/HTML/Element/ul) et qui ont un attribut `class` avec `rems` prendront leur taille à partir de l'élément racine (`<html>`). Cela signifie que les niveaux successifs ne gagneront pas en largeur.
 
 Toutefois, si vous modifier la taille de la police avec `font-size` pour `<html>` dans la feuille CSS, vous pourrez voir que toutes les tailles varient en fonction de celle-ci, tant celles qui utilisent `rem` que celles qui utilisent `em`.
 
@@ -142,7 +142,7 @@ Dans la plupart des cas, un pourcentage est traité comme une longueur. Un pourc
 
 Dans l'exemple qui suit, on a deux boîtes dimensionnées avec des pourcentages et deux boîtes dimensionnées en pixels, elles partagent les mêmes noms de classes. Chaque ensemble est dimensionné respectivement avec 40% et 200px.
 
-La différence est que le deuxième ensemble avec les deux boîtes se situe dans un contenant large de 400 pixels. La boîte dimensionnée avec 200px a la même largeur que dans le premier ensemble, en revanche, la boîte dimensionnée avec 40% a une largeur de 40% de 400px ce qui est beaucoup plus étroit que l'autre !
+La différence est que le deuxième ensemble avec les deux boîtes se situe dans un contenant large de 400 pixels. La boîte dimensionnée avec 200px a la même largeur que dans le premier ensemble, en revanche, la boîte dimensionnée avec 40% a une largeur de 40% de 400px ce qui est beaucoup plus étroit que l'autre&nbsp;!
 
 **Essayez de modifier la largeur du bloc englobant ou la valeur du pourcentage pour voir comment cela fonctionne.**
 
@@ -168,7 +168,7 @@ Certains types de valeur acceptent des nombres, sans unité. Une telle propriét
 
 Il existe de nombreuses façons d'utiliser des couleurs en CSS, certaines ayant été plus récemment implémentées que d'autres. Les mêmes valeurs de couleur peuvent être utilisées n'importe où en CSS, qu'il s'agisse d'une couleur pour du texte, d'une couleur d'arrière-plan ou de toute autre couleur.
 
-Le système standard de couleurs disponible pour les ordinateurs modernes utilise 24 bits, ce qui permet d'afficher 16,7 millions de couleurs différentes par des combinaisons de canaux rouge, vert et bleu dont chacun peut avoir 256 valeurs distinctes (256 x 256 x 256 = 16 777 216). Voyons quelques façons d'indiquer des couleurs en CSS.
+Le système standard de couleurs disponible pour les ordinateurs modernes utilise 24 bits, ce qui permet d'afficher 16,7 millions de couleurs différentes par des combinaisons de canaux rouge, vert et bleu dont chacun peut avoir 256 valeurs distinctes (256 x 256 x 256 = 16 777 216). Voyons quelques façons d'indiquer des couleurs en CSS.
 
 > **Note :** Dans ce tutoriel, nous verrons les méthodes communément utilisées pour définir les couleurs et qui disposent d'une bonne prise en charge des navigateurs. Il en existe d'autres, mais elles sont moins bien prises en charge et sont moins fréquentes.
 
@@ -180,7 +180,7 @@ Dans la plupart des exemples de cette section d'apprentissage ou à d'autres end
 
 ### Valeurs RGB hexadécimales
 
-Les autres valeurs de couleur que vous rencontrerez assez souvent sont celles représentées avec des codes hexadécimaux. Chaque valeur hexadécimale se compose d'un croisillon (#) suivi de six chiffres hexadécimaux dont chacun peut prendre une valeur parmi 16 : de 0 à f (la lettre utilisée pour représentée 15) (les chiffres hexadécimaux sont : `0123456789abcdef`). Dans ces six chiffres, chaque paire de chiffre représente la valeur pour l'un des canaux de couleurs (rouge, vert et bleu) et permet d'indiquer l'une des 256 valeurs disponibles.
+Les autres valeurs de couleur que vous rencontrerez assez souvent sont celles représentées avec des codes hexadécimaux. Chaque valeur hexadécimale se compose d'un croisillon (#) suivi de six chiffres hexadécimaux dont chacun peut prendre une valeur parmi 16 : de 0 à f (la lettre utilisée pour représentée 15) (les chiffres hexadécimaux sont&nbsp;: `0123456789abcdef`). Dans ces six chiffres, chaque paire de chiffre représente la valeur pour l'un des canaux de couleurs (rouge, vert et bleu) et permet d'indiquer l'une des 256 valeurs disponibles.
 
 Ces valeurs sont un peu plus complexes et moins faciles à comprendre, mais elles permettent d'exprimer beaucoup plus de couleurs que les mots-clés. Vous pouvez utiliser les valeurs hexadécimales pour représenter n'importe quelle couleur dans votre palette.
 
@@ -190,17 +190,17 @@ Ces valeurs sont un peu plus complexes et moins faciles à comprendre, mais elle
 
 ### Les valeurs RGB et RGBA
 
-La troisième façon que nous aborderons ici est RGB (pour « <i lang="en">Red, Green, Blue</i> » soit : rouge, vert, bleu en français). Une valeur RGB est une fonction `rgb()` à laquelle on passe trois paramètres qui représentent respectivement les valeurs des canaux rouge, vert, bleu (de la même façon que pour les valeurs hexadécimales). Contrairement aux valeurs hexadécimales, les valeurs des composantes ne sont pas exprimées en hexadécimal (avec des chiffres de 0 à f) mais avec un nombre décimal compris entre 0 et 255. Cela rend la compréhension de la valeur plus simple.
+La troisième façon que nous aborderons ici est RGB (pour «&nbsp;<i lang="en">Red, Green, Blue</i>&nbsp;» soit&nbsp;: rouge, vert, bleu en français). Une valeur RGB est une fonction `rgb()` à laquelle on passe trois paramètres qui représentent respectivement les valeurs des canaux rouge, vert, bleu (de la même façon que pour les valeurs hexadécimales). Contrairement aux valeurs hexadécimales, les valeurs des composantes ne sont pas exprimées en hexadécimal (avec des chiffres de 0 à f) mais avec un nombre décimal compris entre 0 et 255. Cela rend la compréhension de la valeur plus simple.
 
-Réécrivons notre dernier exemple afin d'utiliser les couleurs RGB :
+Réécrivons notre dernier exemple afin d'utiliser les couleurs RGB&nbsp;:
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 700)}}
 
-Il est aussi possible d'utiliser des couleurs RGBA : celles-ci fonctionnent exactement comme les couleurs RGB (et il est donc possible d'utiliser n'importe quelle valeur RGB pour une valeur RGBA). Toutefois, les valeurs RGBA utilisent une quatrième valeur qui représente le canal alpha de la couleur qui contrôle son opacité. Avec une valeur de `0` pour le canal alpha, la couleur sera complètement transparente tandis qu'avec `1`, elle sera complètement opaque. Les valeurs intermédiaires fourniront des niveaux progressifs d'opacité.
+Il est aussi possible d'utiliser des couleurs RGBA&nbsp;: celles-ci fonctionnent exactement comme les couleurs RGB (et il est donc possible d'utiliser n'importe quelle valeur RGB pour une valeur RGBA). Toutefois, les valeurs RGBA utilisent une quatrième valeur qui représente le canal alpha de la couleur qui contrôle son opacité. Avec une valeur de `0` pour le canal alpha, la couleur sera complètement transparente tandis qu'avec `1`, elle sera complètement opaque. Les valeurs intermédiaires fourniront des niveaux progressifs d'opacité.
 
 > **Note :** Définir un canal alpha sur une couleur n'est pas exactement la même chose qu'utiliser la propriété [`opacity`](/fr/docs/Web/CSS/opacity) dont nous avons parlé auparavant. Lorsqu'on utilise `opacity`, c'est tout l'élément et ce qu'il contient qui devient plus ou moins opaque/transparent alors que lorsqu'on définit une couleur RGBA, seule la couleur est plus ou moins opaque.
 
-Dans l'exemple qui suit, on a ajouté une image d'arrière-plan au bloc englobant les boîtes colorées. On a ensuite réglé différentes valeurs d'opacité pour les différentes boîtes : vous pouvez voir comment l'arrière-plan est de plus en plus visible au fur et à mesure que la valeur du canal alpha est faible.
+Dans l'exemple qui suit, on a ajouté une image d'arrière-plan au bloc englobant les boîtes colorées. On a ensuite réglé différentes valeurs d'opacité pour les différentes boîtes&nbsp;: vous pouvez voir comment l'arrière-plan est de plus en plus visible au fur et à mesure que la valeur du canal alpha est faible.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-rgba.html", '100%', 770)}}
 
@@ -210,13 +210,13 @@ Dans l'exemple qui suit, on a ajouté une image d'arrière-plan au bloc engloban
 
 ### Valeurs HSL et HSLA
 
-Avec une prise en charge légèrement plus faible que RGB, on a le modèle de couleurs HSL (non pris en charge pour d'anciennes versions d'Internet Explorer) qui a été implémentée après un intérêt marqué de la part des designers. Plutôt que d'indiquer des valeurs pour les canaux rouge, vert, bleu, la fonction `hsl()` prend des paramètres pour la teinte (<i lang="en">hue</i> en anglais), la saturation et la luminosité. Cela permet aussi d'obtenir 16,7 millions de couleurs mais différemment :
+Avec une prise en charge légèrement plus faible que RGB, on a le modèle de couleurs HSL (non pris en charge pour d'anciennes versions d'Internet Explorer) qui a été implémentée après un intérêt marqué de la part des designers. Plutôt que d'indiquer des valeurs pour les canaux rouge, vert, bleu, la fonction `hsl()` prend des paramètres pour la teinte (<i lang="en">hue</i> en anglais), la saturation et la luminosité. Cela permet aussi d'obtenir 16,7 millions de couleurs mais différemment&nbsp;:
 
-- **Teinte (<i lang="en">hue</i>)** : La couleur de base. La valeur utilisée est comprise entre 0 et 360 et représente l'angle sur une roue de couleurs.
-- **Saturation** : La saturation de la couleur. La valeur est comprise entre 0 et 100% où 0 indique qu'il n'y a pas de couleur (ce sera une nuance de gris) et où 100% indique une saturation en couleur complète.
-- **Luminosité** : La clarté ou la luminosité de la couleur. La valeur est comprise entre 0 et 100%, où 0 indique qu'il n'y a pas de luminosité (la couleur sera complètement noire) et où 100% indique une lumière pure (la couleur sera complètement blanche).
+- **Teinte (<i lang="en">hue</i>)**&nbsp;: La couleur de base. La valeur utilisée est comprise entre 0 et 360 et représente l'angle sur une roue de couleurs.
+- **Saturation**&nbsp;: La saturation de la couleur. La valeur est comprise entre 0 et 100% où 0 indique qu'il n'y a pas de couleur (ce sera une nuance de gris) et où 100% indique une saturation en couleur complète.
+- **Luminosité**&nbsp;: La clarté ou la luminosité de la couleur. La valeur est comprise entre 0 et 100%, où 0 indique qu'il n'y a pas de luminosité (la couleur sera complètement noire) et où 100% indique une lumière pure (la couleur sera complètement blanche).
 
-On peut mettre à jour notre exemple RGB afin d'utiliser les couleurs HSL :
+On peut mettre à jour notre exemple RGB afin d'utiliser les couleurs HSL&nbsp;:
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 700)}}
 
@@ -224,7 +224,7 @@ On peut mettre à jour notre exemple RGB afin d'utiliser les couleurs HSL :
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 770)}}
 
-Vous pouvez utiliser n'importe laquelle de ces couleurs dans vos projets et il est probable que, pour la plupart des projets, vous décidiez d'une palette de couleurs pour vous limiter à elles dans un souci de cohérence, de même pour la méthode utilisée pour définir les couleurs. Vous pouvez bien entendu mélanger les différents modèles de définition des couleurs, mais il est souvent mieux d'être cohérent et d'en fixer un seul pour un même projet !
+Vous pouvez utiliser n'importe laquelle de ces couleurs dans vos projets et il est probable que, pour la plupart des projets, vous décidiez d'une palette de couleurs pour vous limiter à elles dans un souci de cohérence, de même pour la méthode utilisée pour définir les couleurs. Vous pouvez bien entendu mélanger les différents modèles de définition des couleurs, mais il est souvent mieux d'être cohérent et d'en fixer un seul pour un même projet&nbsp;!
 
 ## Images
 
@@ -240,7 +240,7 @@ Voici un exemple où on utilise une image et un dégradé pour la propriété CS
 
 Le type de valeur [`<position>`](/fr/docs/Web/CSS/position_value) représente un ensemble de coordonnées sur deux dimensions, utilisé pour positionner un objet comme une image d'arrière-plan (via [`background-position`](/fr/docs/Web/CSS/background-position)). Ces valeurs peuvent être indiquées avec des mots-clés comme `top`, `left`, `bottom`, `right`, et `center` afin d'aligner les objets sur les bords d'une boîte en deux dimensions et avec des longueurs qui représentent les décalages par rapport au coin supérieur gauche de la boîte.
 
-Une position se compose généralement de deux valeurs : la première indiquant la position horizontale et la seconde indiquant la position verticale. Si une seule valeur est fournie, l'autre valeur sera `center` par défaut.
+Une position se compose généralement de deux valeurs&nbsp;: la première indiquant la position horizontale et la seconde indiquant la position verticale. Si une seule valeur est fournie, l'autre valeur sera `center` par défaut.
 
 Dans l'exemple suivant, on a positionné une image d'arrière-plan à 40px du bord haut et vers la droite du conteneur en utilisant un mot-clé.
 
@@ -250,7 +250,7 @@ Dans l'exemple suivant, on a positionné une image d'arrière-plan à 40px du bo
 
 ## Chaînes de caractères et identifiants
 
-Dans les différents exemples qui précèdent, on a vu des endroits où les mots-clés sont utilisés comme valeur (par exemple `<color>` qui peut utiliser des mots-clés comme `red`, `black`, `rebeccapurple`, et `goldenrod`). Si on veut être plus précis, on dira que ces mots-clés sont des _identifiants_, une valeur spéciale comprise par le moteur CSS. Ces identifiants n'ont pas besoin d'être délimités par des guillemets/quotes : ce ne sont pas des chaînes de caractères.
+Dans les différents exemples qui précèdent, on a vu des endroits où les mots-clés sont utilisés comme valeur (par exemple `<color>` qui peut utiliser des mots-clés comme `red`, `black`, `rebeccapurple`, et `goldenrod`). Si on veut être plus précis, on dira que ces mots-clés sont des _identifiants_, une valeur spéciale comprise par le moteur CSS. Ces identifiants n'ont pas besoin d'être délimités par des guillemets/quotes&nbsp;: ce ne sont pas des chaînes de caractères.
 
 À d'autres endroits en CSS, on utilise des chaînes de caractères, comme [lorsqu'on définit du contenu généré](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). Dans ces cas, la valeur est délimitée par des quotes (" ou ') pour indiquer qu'il s'agit bien d'une chaîne de caractères. Dans l'exemple qui suit, on utilise des mots-clés de couleur (des identifiants sans quote) ainsi qu'une chaîne de caractères pour du contenu généré.
 
@@ -258,17 +258,17 @@ Dans les différents exemples qui précèdent, on a vu des endroits où les mots
 
 ## Functions
 
-Les dernières valeurs que nous verrons ici sont les fonctions. En programmation, une fonction est une section de code réutilisable qui peut être exécutée plusieurs fois afin de réaliser une tâche de façon répétitive avec le minimum effort de la part du développeur ou de l'ordinateur. Les fonctions sont généralement associées à des langages comme JavaScript, Python ou C++ mais elles existent en CSS également pour être utilisées comme valeurs de propriétés. En fait, nous avons déjà vu des fonctions dans la section à propos des couleurs : `rgb()`, `hsl()`, etc. La valeur utilisée pour récupérer une image à partir d'un fichier, `url()` est également une fonction.
+Les dernières valeurs que nous verrons ici sont les fonctions. En programmation, une fonction est une section de code réutilisable qui peut être exécutée plusieurs fois afin de réaliser une tâche de façon répétitive avec le minimum effort de la part du développeur ou de l'ordinateur. Les fonctions sont généralement associées à des langages comme JavaScript, Python ou C++ mais elles existent en CSS également pour être utilisées comme valeurs de propriétés. En fait, nous avons déjà vu des fonctions dans la section à propos des couleurs&nbsp;: `rgb()`, `hsl()`, etc. La valeur utilisée pour récupérer une image à partir d'un fichier, `url()` est également une fonction.
 
 Une fonction qui est peut-être plus proche des langages de programmation traditionnels est la fonction CSS `calc()`. Cette fonction permet de réaliser des calculs simples à l'intérieur du code CSS. Elle s'avère particulièrement utile pour déterminer des valeurs qui ne sont pas connues d'avance lorsqu'on écrit la feuille de style CSS et pour lesquelles ce sera le navigateur qui pourra les déterminer lors de l'exécution.
 
-Dans le prochain exemple, on utilise `calc()` afin que la boîte soit large de `20% + 100px`. Les 20% sont calculés à partir de la largeur du conteneur parent : `.wrapper` et changeront donc lorsque la largeur du parent changera. Ce calcul ne peut pas être effectué au préalable, car on ne peut pas savoir à l'avance ce que représenteront ces 20%. Aussi, on utilise `calc()` pour indiquer au navigateur de réaliser ce calcul.
+Dans le prochain exemple, on utilise `calc()` afin que la boîte soit large de `20% + 100px`. Les 20% sont calculés à partir de la largeur du conteneur parent&nbsp;: `.wrapper` et changeront donc lorsque la largeur du parent changera. Ce calcul ne peut pas être effectué au préalable, car on ne peut pas savoir à l'avance ce que représenteront ces 20%. Aussi, on utilise `calc()` pour indiquer au navigateur de réaliser ce calcul.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/calc.html", '100%', 450)}}
 
-## Testez vos compétences !
+## Testez vos compétences&nbsp;!
 
-Nous avons abordé de nombreuses notions dans cet article. Avez-vous retenu les informations essentielles ? Vous pourrez trouver différents exercices pour vérifier que vous avez retenu les bonnes informations avant de poursuivre : rendez-vous sur [Testez vos compétences : valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_tasks).
+Nous avons abordé de nombreuses notions dans cet article. Avez-vous retenu les informations essentielles&nbsp;? Vous pourrez trouver différents exercices pour vérifier que vous avez retenu les bonnes informations avant de poursuivre&nbsp;: rendez-vous sur [Testez vos compétences&nbsp;: valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_tasks).
 
 ## Résumé
 

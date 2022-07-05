@@ -84,7 +84,7 @@ var a3 = a.concat(a2);
 
 <p>當我們談論到記憶體管理，問題通常出現在這個階段。最困難的工作是尋找「已不再被使用的記憶體配置空間」。</p>
 
-<p>Low-level languages require the developer to manually determine at which point in the program the allocated memory is no longer needed and to release it.</p>
+<p>低階語言需要開發者自己決定，當程序執行道某個地方時，是否有已被分配的記憶體不再需要。並手動將其釋放。</p>
 
 <p>高階的語言 (e.g. JavaScript) 有一個叫作垃圾回收器(garbage collector) 的系統，他的工作是追蹤記憶體分配的使用情況，以便自動釋放一些不再使用的記憶體空間。但這個垃圾回收器只是「儘量」做到自動釋放記憶體空間，因為判斷記憶體空間是否要繼續使用，這件事是「不可判定(<a href="https://en.wikipedia.org/wiki/Decidability_%28logic%29">undecidable</a>)」的（不能用演算法來解決）。</p>
 

@@ -19,7 +19,7 @@ L'architecture du processeur de la machine.
 
 ## Type
 
-Les valeurs de ce type sont des chaînes. Les valeurs possible sont  :
+Les valeurs de ce type sont des chaînes. Les valeurs possible sont  :
 
 - `"arm"`
   - : La plateforme est basée sur l'architecture des bras.

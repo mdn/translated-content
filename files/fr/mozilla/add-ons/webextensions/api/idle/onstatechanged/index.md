@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/idle/onStateChanged
 Lancé lorsque le système change passe à l'état actif, inactif ou vérouillé. L'écouteur d'événement reçoit une chaîne qui a l'une des trois valeurs suivantes :
 
 - "vérouillé" si l'écran est vérouillé ou si l'économisateur d'écran s'active
-- "inactif" si le système est vérouillé ou si l'économisateur n'a généré aucune entrée pendant un nombre de secondes spécifié. Ce nombre est défini par défaut sur 60, mais peut-être défini à l'aide de  {{WebExtAPIRef("idle.setDetectionInterval()")}}.
+- "inactif" si le système est vérouillé ou si l'économisateur n'a généré aucune entrée pendant un nombre de secondes spécifié. Ce nombre est défini par défaut sur 60, mais peut-être défini à l'aide de  {{WebExtAPIRef("idle.setDetectionInterval()")}}.
 - "actif" quand l'utilisateur génère une entrée sur un système inactif.
 
 ## Syntaxe

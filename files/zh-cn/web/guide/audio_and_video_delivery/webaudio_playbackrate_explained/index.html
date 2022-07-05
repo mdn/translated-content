@@ -3,8 +3,8 @@ title: Web Audio playbackRate explained
 slug: Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
 translation_of: Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
 ---
-<div class="summary">
-<p><span class="seoSummary">html元素“audio”和“video”的<code>playbackRate</code> 属性允许我们改变一段正在播放的网页音频或者视频的速度，或速率。本文详细解释了</span> <code>playbackRate</code> 。</p>
+<div>
+<p>html 元素“audio”和“video”的<code>playbackRate</code> 属性允许我们改变一段正在播放的网页音频或者视频的速度，或速率。本文详细解释了 <code>playbackRate</code> 。</p>
 </div>
 
 <h2 id="playbackRate_基础">playbackRate 基础</h2>
@@ -15,11 +15,11 @@ translation_of: Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explain
 myAudio.setAttribute('src','audiofile.mp3');
 myAudio.playbackRate = 0.5;</pre>
 
-<p>在此我们创建了一个html元素“audio”，以我们选择的一个文件设置它的 <code>src</code> 。然后我们把 <code>playbackRate</code> 设为 0.5，这代表一半的正常播放速度（ <code>playbackRate</code> 是对原始速率的一个乘数）。</p>
+<p>在此我们创建了一个 html 元素“audio”，以我们选择的一个文件设置它的 <code>src</code> 。然后我们把 <code>playbackRate</code> 设为 0.5，这代表一半的正常播放速度（ <code>playbackRate</code> 是对原始速率的一个乘数）。</p>
 
 <h2 id="一个完整示例">一个完整示例</h2>
 
-<p>让我们首先创建一个html元素“video”，在HTML中设置视频和播放速率控制：</p>
+<p>让我们首先创建一个 html 元素“video”，在 HTML 中设置视频和播放速率控制：</p>
 
 <pre class="brush: html">&lt;video id="myVideo" controls&gt;
   &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type='video/mp4' /&gt;
@@ -31,7 +31,7 @@ myAudio.playbackRate = 0.5;</pre>
   &lt;p&gt;Playback Rate &lt;span id="currentPbr"&gt;1&lt;/span&gt;&lt;/p&gt;
 &lt;/form&gt;</pre>
 
-<p>对它运用一些JavaScript代码：</p>
+<p>对它运用一些 JavaScript 代码：</p>
 
 <pre class="brush: js">window.onload = function () {
 
@@ -46,15 +46,15 @@ myAudio.playbackRate = 0.5;</pre>
 
 };</pre>
 
-<p>最后，我们监听指向html元素“input”的 <code>input</code> 事件，这允许我们对被改变的播放速率控制产生影响 。</p>
+<p>最后，我们监听指向 html 元素“input”的 <code>input</code> 事件，这允许我们对被改变的播放速率控制产生影响 。</p>
 
 <div class="note">
-<p><strong>注意</strong>: <a href="http://jsbin.com/UGIxoJis/1/edit">在线试用示例</a>, 尝试调整播放速率控制看看效果.</p>
+<p><strong>注意</strong>: <a href="http://jsbin.com/UGIxoJis/1/edit">在线试用示例</a>, 尝试调整播放速率控制看看效果。</p>
 </div>
 
 <h2 id="defaultPlaybackRate_和_ratechange">defaultPlaybackRate 和 ratechange</h2>
 
-<p>除了 <code>playbackRate,</code> 我们也有一个可用的 <code>defaultPlaybackRate</code> 属性, 这让我们能设置默认的播放速率：对媒体文件重设置的播放速率；例如，如果我们改变视频的来源，或（在一些浏览器中）当产生一个<code>ended</code>事件。<br>
+<p>除了 <code>playbackRate,</code> 我们也有一个可用的 <code>defaultPlaybackRate</code> 属性，这让我们能设置默认的播放速率：对媒体文件重设置的播放速率；例如，如果我们改变视频的来源，或（在一些浏览器中）当产生一个<code>ended</code>事件。<br>
  <br>
  所以 <code>defaultPlaybackRate</code> 允许我们在播放媒体文件之前设置播放速率，而<code>playbackRate</code> 只允许我们在媒体播放阶段改变它。<br>
  <br>
@@ -78,11 +78,11 @@ myAudio.playbackRate = 0.5;</pre>
 <h3 id="注意">注意</h3>
 
 <ul>
- <li>大多数浏览器对0.5至4之外的<code>playbackRate</code>值会停止播放音频，而视频会静音播放。对大多数应用，推荐限制值的范围在0.5至4之间。</li>
+ <li>大多数浏览器对 0.5 至 4 之外的<code>playbackRate</code>值会停止播放音频，而视频会静音播放。对大多数应用，推荐限制值的范围在 0.5 至 4 之间。</li>
  <li>当  <code>playBackRate</code> 改变的时候音频的进度条不会变化。  </li>
  <li>负数不会引起媒体文件反向播放。</li>
- <li>当<code>ended</code>事件触发时IE9+会转换到默认播放速率。</li>
- <li>当媒体源文件被替换时，Firefox会触发  <code>ratechange</code> 事件。</li>
+ <li>当<code>ended</code>事件触发时 IE9+ 会转换到默认播放速率。</li>
+ <li>当媒体源文件被替换时，Firefox 会触发  <code>ratechange</code> 事件。</li>
  <li>在 iOS 7 中你只能在媒体暂停的时候影响<code>playbackRate</code>值（不是它播放的时候）。</li>
 </ul>
 

@@ -12,7 +12,7 @@ translation_of: Web/API/Selection/collapse
 ---
 {{ApiRef("DOM")}}{{SeeCompatTable}}
 
-La méthode **`Selection.collapse()`** positionne la sélection en cours en un seul point. Le document n'est pas modifié. Si le focus est sur le contenu et est modifiable, le curseur d'édition s'y positionnera et sera visible.
+La méthode **`Selection.collapse()`** positionne la sélection en cours en un seul point. Le document n'est pas modifié. Si le focus est sur le contenu et est modifiable, le curseur d'édition s'y positionnera et sera visible.
 
 ## Syntaxe
 
@@ -26,7 +26,7 @@ La méthode **`Selection.collapse()`** positionne la sélection en cours en un
 <!---->
 
 - _`offset`_
-  - : Indique la position du curseur d'édition dans `parentNode`.
+  - : Indique la position du curseur d'édition dans `parentNode`.
 
 ## Exemples
 
@@ -40,7 +40,7 @@ window.getSelection().collapse(body,0);
 
 | Spécification                                                                                                                                                | Statut                               | Commentaires        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Selection API', '#widl-Selection-collapse-void-Node-node-unsigned-long-offset', 'Selection.collapse()')}} | {{Spec2('Selection API')}} |                     |
+| {{SpecName('Selection API', '#widl-Selection-collapse-void-Node-node-unsigned-long-offset', 'Selection.collapse()')}} | {{Spec2('Selection API')}} |                     |
 | {{SpecName('HTML Editing', '#dom-selection-collapse', 'Selection.collapse()')}}                                                     | {{Spec2('HTML Editing')}}     | Définition initiale |
 
 ## Compatibilité des navigateurs

@@ -24,13 +24,13 @@ L'auditeur peut répondre de l'une des quatre façons suivantes :
 **Annuler la demande** : l'auditeur peut annuler la demande. S'ils le font, l'authentification échouera et l'utilisateur ne sera pas invité à se connecter. Les prolongations peuvent annuler les demandes comme suit :
 
 - dans addListener, passez `"blocking"` dans le paramètre `extraInfoSpec`
-- dans l'écouteur lui-même, retourne un objet avec une propriété `cancel` définie à  `true`
+- dans l'écouteur lui-même, retourne un objet avec une propriété `cancel` définie à  `true`
 
 **Fournir des informations d'identification de manière synchrone** : si les informations d'identification sont disponibles de manière synchrone, l'extension peut les fournir de manière synchrone. Si l'extension fait cela, le navigateur tentera de se connecter avec les informations d'identification données.
 L'auditeur peut fournir des informations d'identification de manière synchrone comme suit :
 
 - dans addListener, passez `"blocking"` dans le paramètre `extraInfoSpec`
-- dans l'auditeur, retourner un objet avec une propriété `authCredentials` définie sur les informations d'identification à fournir
+- dans l'auditeur, retourner un objet avec une propriété `authCredentials` définie sur les informations d'identification à fournir
 
 **Fournir les informations d'identification de manière asynchrone** : l'extension peut avoir besoin de récupérer les informations d'identification de manière asynchrone. Par exemple, l'extension peut avoir besoin d'extraire les informations d'identification du stockage ou de demander à l'utilisateur. Dans ce cas, l'auditeur peut fournir des informations d'identification de manière asynchrone comme suit :
 
@@ -47,7 +47,7 @@ Si votre poste fournit de mauvaises informations d'identification, l'auditeur se
 
 En général, Firefox ne déclenche pas d'événements `webRequest` pour les requêtes système, telles que les mises à jour de navigateur ou d'extension, ou les requêtes des moteurs de recherche. Pour permettre à l'autorisation de proxy de fonctionner sans problème pour les requêtes système, à partir de la version 57 Firefox implémente une exception à cette règle.
 
-Si une extension a les permissions "webRequest", "webRequestBlocking", "proxy", et "\<all_urls>", alors elle pourra utiliser `onAuthRequired` pour fournir des informations d'identification pour l'autorisation de proxy (mais pas pour l'autorisation web normale).  L'auditeur ne sera pas en mesure d'annuler les demandes du système ou d'apporter d'autres modifications aux demandes du système.
+Si une extension a les permissions "webRequest", "webRequestBlocking", "proxy", et "\<all_urls>", alors elle pourra utiliser `onAuthRequired` pour fournir des informations d'identification pour l'autorisation de proxy (mais pas pour l'autorisation web normale).  L'auditeur ne sera pas en mesure d'annuler les demandes du système ou d'apporter d'autres modifications aux demandes du système.
 
 ## Syntaxe
 
@@ -83,8 +83,8 @@ Les événements ont trois fonctions :
 
     Retourne : {{WebExtAPIRef('webRequest.BlockingResponse')}} ou une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-    - Pour traiter la requête de manière synchrone, inclure`"blocking"` dans le paramètre `extraInfoSpec` et retourner un objet `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
-    - Pour traiter la requête de manière asynchrone, inclure `"blocking"` dans le paramètre `extraInfoSpec` et retourner une `Promise` qui est résolue avec un objet  `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
+    - Pour traiter la requête de manière synchrone, inclure`"blocking"` dans le paramètre `extraInfoSpec` et retourner un objet `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
+    - Pour traiter la requête de manière asynchrone, inclure `"blocking"` dans le paramètre `extraInfoSpec` et retourner une `Promise` qui est résolue avec un objet  `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.

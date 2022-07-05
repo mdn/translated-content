@@ -23,11 +23,11 @@ La méthode **`WebGLRenderingContext.isBuffer()`** de l'[API WebGL](/fr-FR/docs/
 
 ### Valeur retournée
 
-Un {{domxref("GLboolean")}} indiquant si le tampon est ou non valide.
+Un {{domxref("GLboolean")}} indiquant si le tampon est ou non valide.
 
 ## Exemples
 
-### Création d'un tampon
+### Création d'un tampon
 
 ```js
 var canevas = document.getElementById('canevas');

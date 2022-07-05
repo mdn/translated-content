@@ -16,7 +16,7 @@ Avant de commencer, vous devriez être déjà avoir des bases de l'API WebVR. Si
 
 ## L'API Gamepad
 
-L'[API Gamepad](/en-US/docs/Web/API/Gamepad_API) est une API assez bien compatible, qui donne aux développeur·euse·s l'accès aux manettes de jeu, connectés à leur ordinateur et de les utilisé dans dans applications web. Les contrôleurs peuvent basiquement être accessible comme des objets {{domxref("Gamepad")}}, avec lesquels nous pouvons faire des requêtes pour savoir quels boutons sont appuyés ou quels joystick sont actionnés, etc..
+L'[API Gamepad](/en-US/docs/Web/API/Gamepad_API) est une API assez bien compatible, qui donne aux développeur·euse·s l'accès aux manettes de jeu, connectés à leur ordinateur et de les utilisé dans dans applications web. Les contrôleurs peuvent basiquement être accessible comme des objets {{domxref("Gamepad")}}, avec lesquels nous pouvons faire des requêtes pour savoir quels boutons sont appuyés ou quels joystick sont actionnés, etc..
 
 Vous pouvez avoir plus d'information sur l'usage de API de base des Gamepad avec l'article [Utilisez l'API Gamepad](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API), et [Implementer des contrôles en utilisant l'API Gamepad](/en-US/docs/Games/Techniques/Controls_Gamepad_API).
 

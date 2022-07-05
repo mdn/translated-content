@@ -30,9 +30,9 @@ La méthode **`getAll()`** de l'interface {{domxref("IDBObjectStore")}} fait une
 - `TransactionInactiveError`
   - : Cette {{domxref("DOMException","exception")}} est levée si la {{domxref("IDBTransaction","transaction")}} est inactive.
 - `DataError`
-  - : Cette {{domxref("DOMException","exception")}} est levée si la clé où l'{{domxref("IDBKeyRange","intervalle de clé")}} est invalide.
+  - : Cette {{domxref("DOMException","exception")}} est levée si la clé où l'{{domxref("IDBKeyRange","intervalle de clé")}} est invalide.
 - `InvalidStateError`
-  - : Cette {{domxref("DOMException","exception")}} est levée si le magasin d'objets a été supprimé.
+  - : Cette {{domxref("DOMException","exception")}} est levée si le magasin d'objets a été supprimé.
 - `TypeError`
   - : Cette {{domxref("DOMException","exception")}} est levée si le compteur n'est pas un nombre positif.
 
@@ -40,7 +40,7 @@ La méthode **`getAll()`** de l'interface {{domxref("IDBObjectStore")}} fait une
 
 | Spécification                                                                                | Statut                       | Commentaire |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB2', '#dom-idbobjectstore-getall', 'getAll()')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB2', '#dom-idbobjectstore-getall', 'getAll()')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité des navigateurs
 
@@ -50,7 +50,7 @@ La méthode **`getAll()`** de l'interface {{domxref("IDBObjectStore")}} fait une
 
 - {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
 - {{domxref("IDBDatabase","Débuter une connexion")}}
-- {{domxref("IDBTransaction","Utiliser les transactions")}}
+- {{domxref("IDBTransaction","Utiliser les transactions")}}
 - {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
 - {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
 - {{domxref("IDBCursor","Utiliser les curseurs")}}

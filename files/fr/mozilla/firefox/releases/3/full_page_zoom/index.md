@@ -6,8 +6,6 @@ original_slug: Zoom_pleine_page
 ---
 {{FirefoxSidebar}}
 
-{{ Gecko_minversion_header(1.9) }}
-
 Le zoom pleine page (ou fullZoom) est une nouvelle fonctionnalité qui sera probablement disponible dans [Firefox 3](fr/Firefox_3_pour_les_d%c3%a9veloppeurs). Elle peut être utilisée dans les compilations courantes du tronc depuis la version 1.9a7. Bien qu'il n'y ait actuellement aucune interface utilisateur visible, il est possible d'utiliser JavaScript et l'interface [XPCOM](fr/XPCOM) [nsIMarkupDocumentViewer](http://www.xulplanet.com/references/xpcomref/ifaces/nsIMarkupDocumentViewer.html).
 
 ### Exemple (xul:browser)
@@ -20,7 +18,7 @@ L'exemple qui suit montre l'utilisation du zoom pour la fenêtre de navigation a
 
 ### Exemple (xul:iframe)
 
-Il est également possible d'utiliser la fonction fullZoom pour un xul:iframe. Cependant, comme un iframe n'a pas de propriété `markupDocumentViewer`, il faut d'abord obtenir cette valeur :
+Il est également possible d'utiliser la fonction fullZoom pour un xul:iframe. Cependant, comme un iframe n'a pas de propriété `markupDocumentViewer`, il faut d'abord obtenir cette valeur&nbsp;:
 
     var zoom = 1.5;
     var iframe = document.getElementById("authorFrame");

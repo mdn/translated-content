@@ -34,8 +34,8 @@ L'attribut `itemref` peut uniquement être défini sur des éléments pour lesqu
 <p id="a">Name: <span itemprop="name">Amanda</span> </p>
 <div id="b" itemprop="band" itemscope itemref="c"></div>
 <div id="c">
-    <p>Band: <span itemprop="name">Jazz Band</span> </p>
-    <p>Size: <span itemprop="size">12</span> players</p>
+    <p>Band: <span itemprop="name">Jazz Band</span> </p>
+    <p>Size: <span itemprop="size">12</span> players</p>
 </div>
 ```
 
@@ -59,8 +59,8 @@ Au format [JSON-LD](https://json-ld.org/) :
 
 | Spécification                                                                                | État                                 | Commentaires |
 | -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('HTML Microdata', "#dfn-itemref", "itemref")}}                 | {{Spec2('HTML Microdata')}} |              |
-| {{SpecName('HTML WHATWG', "microdata.html#attr-itemref", "itemref")}} | {{Spec2('HTML WHATWG')}}     |              |
+| {{SpecName('HTML Microdata', "#dfn-itemref", "itemref")}}                 | {{Spec2('HTML Microdata')}} |              |
+| {{SpecName('HTML WHATWG', "microdata.html#attr-itemref", "itemref")}} | {{Spec2('HTML WHATWG')}}     |              |
 
 ## Compatibilité des navigateurs
 

@@ -18,7 +18,7 @@ En plus de l'ensemble des fonctions standard [JavaScript](/en-US/docs/Web/JavaSc
       <td class="header">Workers partagés</td>
       <td class="header">Service workers</td>
       <td class="header">Chrome workers {{Non-standard_inline}}</td>
-      <td class="header">En dehors des  workers</td>
+      <td class="header">En dehors des workers</td>
     </tr>
     <tr>
       <td>{{domxref("WindowBase64.atob", "atob()")}}</td>

@@ -61,7 +61,7 @@ Autour de 2006-2007, Mozilla a commencé à travailler sur une implémentation e
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
 
-Cet article se concentrera principalement sur les canvas 2D, car le code WebGL brut est très complexe. Nous montrerons cependant comment utiliser une bibliothèque WebGL pour créer une scène 3D plus facilement, et vous pourrez  par la suite suivre le tutoriel [WebGL](/fr/Apprendre/WebGL), qui couvre le code WebGL brut.
+Cet article se concentrera principalement sur les canvas 2D, car le code WebGL brut est très complexe. Nous montrerons cependant comment utiliser une bibliothèque WebGL pour créer une scène 3D plus facilement, et vous pourrez par la suite suivre le tutoriel [WebGL](/fr/Apprendre/WebGL), qui couvre le code WebGL brut.
 
 > **Note :** Canvas est très bien pris en charge parmi les différents navigateurs, à l'exception de IE 8 (et inférieur) pour les canvas 2D, et IE 11 (et inférieur) pour WebGL.
 
@@ -185,7 +185,7 @@ Commençons avec quelques rectangles simples.
 
     Sauvegardez et rafraichissez, et vous verrez un nouveau rectangle. Cela soulève un point important: les opérations graphiques comme dessiner des rectangles, lignes, et autres, sont executées dans l'ordre dans lequel elle apparaissent dans le code. Pensez-y comme peindre un mur, chaque couche de peinture s'ajoute par dessus les anciennes et peuvent même mettre cacher ce qu'il y a en dessous. Vous ne pouvez rien y faire, il faut donc réfléchir soigneusement à l'ordre dans lequel vous allez dessiner les éléments graphiques.
 
-4.  Notez que vous pouvez dessiner des éléments graphiques semi-transparents en spécifiant une couleur semi-transparente, par exemple en utilisant `rgba()`. La valeur `a` définit ce qu'on appelle le "canal alpha", ou la quantité de transparence de la couleur. Plus la valeur de `a` est élevée, plus la couleur est opaque. Ajoutez ce qui suit à votre code:
+4.  Notez que vous pouvez dessiner des éléments graphiques semi-transparents en spécifiant une couleur semi-transparente, par exemple en utilisant `rgba()`. La valeur `a` définit ce qu'on appelle le "canal alpha", ou la quantité de transparence de la couleur. Plus la valeur de `a` est élevée, plus la couleur est opaque. Ajoutez ce qui suit à votre code:
 
     ```js
     ctx.fillStyle = 'rgba(255, 0, 255, 0.75)';
@@ -330,7 +330,7 @@ Maintenant, voyons comment dessiner un cercle sur le canvas. Pour ce faire, on u
 
     Le motif ici est très similaire, a deux différences près:
 
-    - Nous avons mis le dernier paramètre de `arc()` à `true`, ce qui signifie que l'arc est tracé dans le sens inverse des aiguilles d'une montre.  Donc si notre arc commence à -45 degrés et fini à 45 degrés, nous dessinons un arc de 270 degrés. Si vous changez `true` à `false` et ré-exécutez le code, seule une portion de 90 degrés sera dessinée.
+    - Nous avons mis le dernier paramètre de `arc()` à `true`, ce qui signifie que l'arc est tracé dans le sens inverse des aiguilles d'une montre.  Donc si notre arc commence à -45 degrés et fini à 45 degrés, nous dessinons un arc de 270 degrés. Si vous changez `true` à `false` et ré-exécutez le code, seule une portion de 90 degrés sera dessinée.
     - Avant d'appeler `fill()`, nous ajoutons une ligne vers le centre du cercle. Nous obtenons une découpe de style Pac-Man plutôt sympa. Si vous supprimiez cette ligne (essayez!) et ré-exécutiez le code, vous auriez juste un cercle dont le bout a été coupé — entre le début et la fin de l'arc. Cela illuste un autre point important du canvas: si vous essayez de remplir une forme incomplète (qui n'est pas fermée), le navigateur ajoute une ligne droite entre le début et la fin du path et le remplit.
 
 C'est tout pour le moment; votre exemple final devrait ressembler à ceci:
@@ -352,7 +352,7 @@ Le texte peut être avec deux méthodes:
 
 Ces deux méthodes prennent trois paramètres: la chaîne de caractères à écrire et les coordonnées X et Y du coin supérieur gauche de la zone de texte (**text box**) — littéralement, la zone entourant le texte que vous écrivez.
 
-Il existe également un certain nombre de proprétés pour contrôler le rendu du texte, comme {{domxref("CanvasRenderingContext2D.font", "font")}}, qui permer de spécifier la police d'écriture, la taille, etc — elle accepte la même syntaxe que la propriété CSS {{cssxref("font")}}.
+Il existe également un certain nombre de proprétés pour contrôler le rendu du texte, comme {{domxref("CanvasRenderingContext2D.font", "font")}}, qui permer de spécifier la police d'écriture, la taille, etc — elle accepte la même syntaxe que la propriété CSS {{cssxref("font")}}.
 
 Essayez d'ajouter le bloc suivant au bas de votre javaScript:
 
@@ -390,7 +390,7 @@ Il est possible d'afficher des images externes sur le canvas. Ce peut être des 
     image.src = 'firefox.png';
     ```
 
-    Ici, nous créons un nouvel objet {{domxref("HTMLImageElement")}} en utilisant le constructeur {{domxref("HTMLImageElement.Image()", "Image()")}}. (L'objet retourné est le même type que celui retourné lorsque vous récupérez une référence vers un élément {{htmlelement("img")}} existant). Nous définissons son attribut  {{htmlattrxref("src", "img")}} à notre image du logo Firefox. À ce stade, le navigateur commence à charger l'image.
+    Ici, nous créons un nouvel objet {{domxref("HTMLImageElement")}} en utilisant le constructeur {{domxref("HTMLImageElement.Image()", "Image()")}}. (L'objet retourné est le même type que celui retourné lorsque vous récupérez une référence vers un élément {{htmlelement("img")}} existant). Nous définissons son attribut  {{htmlattrxref("src", "img")}} à notre image du logo Firefox. À ce stade, le navigateur commence à charger l'image.
 
 3.  Nous pourrions essayer maintenant d'inclure l'image en utilisant `drawImage()`, mais nous devons nous assurer que le fichier image ait été chargé en premier, faute de quoi le code échouera. Nous pouvons y parvenir en utilisant le gestionnaire d'événement `onload`, qui ne sera appelé que lorsque l'image aura fini de charger. Ajoutez le bloc suivant à la suite du précédent:
 
@@ -506,7 +506,7 @@ C'est tout! L'exemple final devrait ressemble à ça:
 
 - Dessinez des rectangles ou des arcs au lieu des triangles, ou même des images externes.
 - Jouez avec les valeurs de `length` et `moveOffset`.
-- Utilisez des nombres aléatoires — grâce à la fonction `rand()` que nous avons inclue mais que nous n'avons pas utilisée.
+- Utilisez des nombres aléatoires — grâce à la fonction `rand()` que nous avons inclue mais que nous n'avons pas utilisée.
 
 > **Note :** Le code terminé est disponible sur GitHub, [6_canvas_for_loop.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop.html).
 
@@ -546,7 +546,7 @@ loop();
 
 Nous lançons la fonction `loop()` une fois pour commencer le cycle et dessiner la première image de l'animation. La fonction `loop()` s'occupe ensuite d'appeler `requestAnimationFrame(loop)` pour afficher la prochaine image de l'animation, et ce continuellement.
 
-Notez que sur chaque image, nous effaçons complètement le canvas et redessinons tout. Nous créons de nouvelles balles pour chaque image — au maximum 25 — puis, pour chaque balle, la dessinons, mettons à jour sa position, et vérifions si elle est en collision avec une autre balle. Une fois que vous avez dessiné quelque chose sur un canvas, il n'y a aucun moyen pour manipuler cet élément graphique individuellement comme vous pouvez le faire avec les élément DOM. Vous ne pouvez pas déplacer les balles sur le canvas parce qu'une fois dessinée, une balle n'est plus une balle mais juste des pixels sur un canvas. Au lieu de ça, vous devez effacer et redessiner, soit en effaçant et redessinant absolutement tout le canvas, soit en ayant du code qui sait exactement quelles parties doivent être effacées, et qui efface et redessine uniquement la zone minimale nécessaire.
+Notez que sur chaque image, nous effaçons complètement le canvas et redessinons tout. Nous créons de nouvelles balles pour chaque image — au maximum 25 — puis, pour chaque balle, la dessinons, mettons à jour sa position, et vérifions si elle est en collision avec une autre balle. Une fois que vous avez dessiné quelque chose sur un canvas, il n'y a aucun moyen pour manipuler cet élément graphique individuellement comme vous pouvez le faire avec les élément DOM. Vous ne pouvez pas déplacer les balles sur le canvas parce qu'une fois dessinée, une balle n'est plus une balle mais juste des pixels sur un canvas. Au lieu de ça, vous devez effacer et redessiner, soit en effaçant et redessinant absolutement tout le canvas, soit en ayant du code qui sait exactement quelles parties doivent être effacées, et qui efface et redessine uniquement la zone minimale nécessaire.
 
 Optimiser l'animation graphique est une spécialité entière de programmation, avec beaucoup de techniques ingénieuses disponibles. Mais celles-ci sont au-delà de ce dont nous avons besoin pour notre exemple!
 
@@ -764,7 +764,7 @@ Regardons un exemple simple pour créer quelque chose avec une bibliothèque Web
 
     Nous définissons également la position de la caméra à 5 unités de distance de l'axe Z, qui, comme en CSS, est hors de l'écran vers vous, le spectateur.
 
-6.  Le troisième ingrédient essentiel est un moteur de rendu. C'est un objet qui restitue une scène donnée, vu à travers une caméra donnée. Nous allons en créer dès à présent en utilisant le constructeur [`WebGLRenderer()`](https://threejs.org/docs/index.html#api/renderers/WebGLRenderer) — mais nous ne l'utiliserons que plus tard. Ajoutez les lignes suivantes à la suite de votre JavaScript:
+6.  Le troisième ingrédient essentiel est un moteur de rendu. C'est un objet qui restitue une scène donnée, vu à travers une caméra donnée. Nous allons en créer dès à présent en utilisant le constructeur [`WebGLRenderer()`](https://threejs.org/docs/index.html#api/renderers/WebGLRenderer) — mais nous ne l'utiliserons que plus tard. Ajoutez les lignes suivantes à la suite de votre JavaScript:
 
     ```js
     var renderer = new THREE.WebGLRenderer();

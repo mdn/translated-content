@@ -10,7 +10,7 @@ translation_of: Web/CSS/border-inline-end-style
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété **`border-inline-end-style`** définit le style de la bordure utilisé pour le côté de la fin de l'élément dans l'axe de lecture. Cette propriété logique correspondra à une propriété physique selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}} ou à {{cssxref("border-left-style")}} selon les valeurs de {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+La propriété **`border-inline-end-style`** définit le style de la bordure utilisé pour le côté de la fin de l'élément dans l'axe de lecture. Cette propriété logique correspondra à une propriété physique selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}} ou à {{cssxref("border-left-style")}} selon les valeurs de {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
 {{EmbedInteractiveExample("pages/css/border-inline-end-style.html")}}
 

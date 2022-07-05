@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 
 Lancé lorsqu'un onglet est créé.
 
-Notez que l'URL de l'onglet peut ne pas avoir sa valeur finale au moment où cet événement a été déclenché. En particulier, Firefox ouvre un nouvel onglet avec l'URL  "about:blank" avant de charger la nouvelle page. Vous pouvez écouter les événements  {{WebExtAPIRef("tabs.onUpdated")}} pour être averti lorsqu'une URL est définie.
+Notez que l'URL de l'onglet peut ne pas avoir sa valeur finale au moment où cet événement a été déclenché. En particulier, Firefox ouvre un nouvel onglet avec l'URL  "about:blank" avant de charger la nouvelle page. Vous pouvez écouter les événements  {{WebExtAPIRef("tabs.onUpdated")}} pour être averti lorsqu'une URL est définie.
 
 ## Syntaxe
 

@@ -23,7 +23,7 @@ original_slug: Web/JavaScript/Reference/Erreurs/Cant_access_lexical_declaration_
 
 ## Quel est le problème ?
 
-Il y a eu un accès à une variable déclarée avec `let` ou `const` avant que celle-ci ait été initialisée. Cela peut se produire dans n'importe quelle instruction de bloc avec une variable déclarée avec `let` ou `const` et qui est utilisée avant son initialisation.
+Il y a eu un accès à une variable déclarée avec `let` ou `const` avant que celle-ci ait été initialisée. Cela peut se produire dans n'importe quelle instruction de bloc avec une variable déclarée avec `let` ou `const` et qui est utilisée avant son initialisation.
 
 ## Exemple
 

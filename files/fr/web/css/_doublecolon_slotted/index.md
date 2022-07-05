@@ -17,12 +17,12 @@ Cela ne fonctionne que pour du CSS placé à l'intérieur d'un élément {{htmle
 ```css
 /* Cible n'importe quel élément placé dans un emplacement */
 ::slotted(*) {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 /* Cible n'importe quel élément <span> placé dans un emplacement */
 ::slotted(span) {
-  font-weight: bold;
+  font-weight: bold;
 }
 ```
 

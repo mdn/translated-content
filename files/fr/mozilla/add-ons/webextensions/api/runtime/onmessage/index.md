@@ -20,24 +20,24 @@ Utilisez cet événement pour écouter les messages d’une autre partie de votr
 Voici quelques exemples de cas d'utilisation :
 
 - **dans un [script de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts)**, pour écouter les messages d’un [script d’arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) ;
-- **dans un script d’arrière-plan**, pour écouter les messages d’un script de contenu ;
-- **dans une [page d’options](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages) ou un script de [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/User_interface_components#popups)**, pour écouter les messages d’un script d’arrière-plan ;
+- **dans un script d’arrière-plan**, pour écouter les messages d’un script de contenu&nbsp;;
+- **dans une [page d’options](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages) ou un script de [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/User_interface_components#popups)**, pour écouter les messages d’un script d’arrière-plan&nbsp;;
 - **dans un script d’arrière-plan**, pour écouter les messages d’une page d’options ou d’un script de popup.
 
 Pour envoyer un message reçu par l'écouteur `onMessage`, utilisez {{WebExtAPIRef("runtime.sendMessage()")}} ou (pour envoyer un message à un script de contenu) {{WebExtAPIRef("tabs.sendMessage()")}}.
 
-> **Note :** Évitez de créer plusieurs écouteurs `onMessage` pour le même type de message, car l'ordre de déclenchement des différents écouteurs ne sera pas garanti.
+> **Note :** Évitez de créer plusieurs écouteurs `onMessage` pour le même type de message, car l'ordre de déclenchement des différents écouteurs ne sera pas garanti.
 >
 > Lorsque vous voulez garantir la livraison d'un message à une terminaison spécifique, utilisez l'[approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#les_messages_en_flux_continu).
 
-En plus du message, l’écouteur reçoit en paramètres :
+En plus du message, l’écouteur reçoit en paramètres&nbsp;:
 
-- Un objet `sender` donnant les détails sur l’expéditeur du message ;
+- Un objet `sender` donnant les détails sur l’expéditeur du message&nbsp;;
 - Une fonction `sendResponse()` qui peut être utilisée pour renvoyer une réponse à l'expéditeur.
 
 Vous pouvez envoyer une réponse synchrone au message en appelant la fonction `sendResponse()` dans votre écouteur. [Voir un exemple](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_a_synchronous_response).
 
-Pour envoyer une réponse asynchrone, il existe deux options :
+Pour envoyer une réponse asynchrone, il existe deux options&nbsp;:
 
 - Renvoyer `true` à partir de l’écouteur d’événement. Cela permet de conserver la fonction `sendResponse()` après le retour de l’écouteur pour éventuellement l'appeler plus tard. [Voir un exemple](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse).
 - Renvoyer une `Promise` depuis l’écouteur d’événement, et la résoudre lorsque vous avez la réponse (ou la rejeter en cas d’erreur). [Voir un exemple](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_a_promise).
@@ -56,7 +56,7 @@ browser.runtime.onMessage.removeListener(listener)
 browser.runtime.onMessage.hasListener(listener)
 ```
 
-Les événements ont trois fonctions :
+Les événements ont trois fonctions&nbsp;:
 
 - `addListener(listener)`
   - : Ajoute un écouteur à cet événement.
@@ -71,7 +71,7 @@ Les événements ont trois fonctions :
 
 - _`listener`_
 
-  - : Une fonction d’écoute qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :
+  - : Une fonction d’écoute qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants&nbsp;:
 
     - _`message`_
       - : Un objet qui est le message lui-même. C’est un objet sérialisable (voir [l'algorithme de clonage de données](/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
@@ -131,7 +131,7 @@ Les événements ont trois fonctions :
 
 ### Exemple simple
 
-Ce script de contenu écoute les événements clic dans la page web. Si le clic a eu lieu sur un lien, il envoie un message à la page d’arrière-plan avec l’URL cible :
+Ce script de contenu écoute les événements clic dans la page web. Si le clic a eu lieu sur un lien, il envoie un message à la page d’arrière-plan avec l’URL cible&nbsp;:
 
 ```js
 // content-script.js
@@ -165,7 +165,7 @@ function notify(message) {
 
 ### Envoyer une réponse synchrone
 
-Le script de contenu suivant envoie un message au script d’arrière-plan lorsque l’utilisateur ou l’utilisatrice clique sur la page. Il enregistre également toute réponse envoyée par le script d’arrière-plan :
+Le script de contenu suivant envoie un message au script d’arrière-plan lorsque l’utilisateur ou l’utilisatrice clique sur la page. Il enregistre également toute réponse envoyée par le script d’arrière-plan&nbsp;:
 
 ```js
 // content-script.js
@@ -186,7 +186,7 @@ function sendMessage(e) {
 window.addEventListener("click", sendMessage);
 ```
 
-Voici une version du script d’arrière-plan correspondant, qui envoie une réponse de manière synchrone depuis l’intérieur de l’écouteur :
+Voici une version du script d’arrière-plan correspondant, qui envoie une réponse de manière synchrone depuis l’intérieur de l’écouteur&nbsp;:
 
 ```js
 // background-script.js
@@ -199,7 +199,7 @@ function handleMessage(request, sender, sendResponse) {
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
-Et voici une autre version, qui utilise {{jsxref("Promise.resolve()")}} :
+Et voici une autre version, qui utilise {{jsxref("Promise.resolve()")}}&nbsp;:
 
 ```js
 // background-script.js
@@ -214,7 +214,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 ### Envoi d’une réponse asynchrone à l’aide de sendResponse
 
-Voici une autre version du script d’arrière-plan de l’exemple précédent. Il envoie une réponse de manière asynchrone, après le retour de l’écouteur. Remarquez le `return true;` dans l’écouteur : cela indique au navigateur que vous avez l’intention d’utiliser l’argument `sendResponse()` après le retour de l’écouteur.
+Voici une autre version du script d’arrière-plan de l’exemple précédent. Il envoie une réponse de manière asynchrone, après le retour de l’écouteur. Remarquez le `return true;` dans l’écouteur&nbsp;: cela indique au navigateur que vous avez l’intention d’utiliser l’argument `sendResponse()` après le retour de l’écouteur.
 
 ```js
 // background-script.js
@@ -232,7 +232,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 ### Envoi d’une réponse asynchrone à l’aide d’une promesse
 
-Ce script de contenu reçoit le premier lien `<a>` dans la page, et envoie un message demandant si l’emplacement du lien fait partie des marque-pages. Il attend comme réponse un {{jsxref("Boolean", "booléen")}} : `true` si l’emplacement est dans les marque-pages, `false` sinon.
+Ce script de contenu reçoit le premier lien `<a>` dans la page, et envoie un message demandant si l’emplacement du lien fait partie des marque-pages. Il attend comme réponse un {{jsxref("Boolean", "booléen")}}&nbsp;: `true` si l’emplacement est dans les marque-pages, `false` sinon.
 
 ```js
 // content-script.js
@@ -250,7 +250,7 @@ browser.runtime.sendMessage({
 }).then(handleResponse);
 ```
 
-Voici le script d’arrière-plan. Il utilise `{{WebExtAPIRef("bookmarks.search()")}}` pour voir si le lien est dans les marque-pages, ce qui renvoie une {{jsxref("Promise", "promesse")}} :
+Voici le script d’arrière-plan. Il utilise `{{WebExtAPIRef("bookmarks.search()")}}` pour voir si le lien est dans les marque-pages, ce qui renvoie une {{jsxref("Promise", "promesse")}}&nbsp;:
 
 ```js
 // background-script.js
@@ -266,7 +266,7 @@ function isBookmarked(message, sender, response) {
 browser.runtime.onMessage.addListener(isBookmarked);
 ```
 
-Si le gestionnaire asynchrone ne renvoie pas de promesse, vous pouvez explicitement construire une promesse. Cet exemple plutôt artificiel envoie une réponse après un délai d’une seconde, en utilisant [`Window.setTimeout()`](/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) :
+Si le gestionnaire asynchrone ne renvoie pas de promesse, vous pouvez explicitement construire une promesse. Cet exemple plutôt artificiel envoie une réponse après un délai d’une seconde, en utilisant [`Window.setTimeout()`](/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)&nbsp;:
 
 ```js
 // background-script.js

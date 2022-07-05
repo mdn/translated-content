@@ -76,7 +76,7 @@ rtf.format(1, "day");
 
 | Spécification                                                                                                                            | État                    | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.RelativeTime`](https://tc39.github.io/proposal-intl-relative-time/#sec-Intl.RelativeTimeFormat.prototype.format) | Proposition de niveau 3 |              |
+| [Proposition pour `Intl.RelativeTime`](https://tc39.github.io/proposal-intl-relative-time/#sec-Intl.RelativeTimeFormat.prototype.format) | Proposition de niveau 3 |              |
 
 ## Compatibilité des navigateurs
 

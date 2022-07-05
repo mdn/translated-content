@@ -81,7 +81,7 @@ Jusqu'à ce que le CSSWG publie son propre brouillon, la spécification est cons
 
 | Spécification                                                                                                                | État                                             | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------ |
-| {{SpecName('CSS Overscroll Behavior', '#propdef-overscroll-behavior', 'overscroll-behavior')}} | {{Spec2('CSS Overscroll Behavior')}} |              |
+| {{SpecName('CSS Overscroll Behavior', '#propdef-overscroll-behavior', 'overscroll-behavior')}} | {{Spec2('CSS Overscroll Behavior')}} |              |
 
 {{cssinfo}}
 

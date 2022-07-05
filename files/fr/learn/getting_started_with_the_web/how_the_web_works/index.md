@@ -24,7 +24,7 @@ Ces éléments théoriques ne sont pas strictement nécessaires pour commencer �
 
 ## Des clients et des serveurs
 
-Les ordinateurs qui se connectent au Web sont appelés des **clients** et des **serveurs**. Voici un diagramme simplifié qui illustre comment ils interagissent :
+Les ordinateurs qui se connectent au Web sont appelés des **clients** et des **serveurs**. Voici un diagramme simplifié qui illustre comment ils interagissent&nbsp;:
 
 ![](Client-server.jpg)
 
@@ -35,11 +35,11 @@ Les ordinateurs qui se connectent au Web sont appelés des **clients** et des **
 
 Le client et le serveur ne sont pas les seuls éléments qui interviennent. Il y a beaucoup d'autres composants que nous allons décrire dans la suite de cet article.
 
-Faisons un parallèle entre le Web et une rue. D'un côté de la rue, il y a une maison qui correspond au client. De l'autre côté,  un magasin correspondant au serveur, et dans lequel vous souhaitez acheter quelque chose.
+Faisons un parallèle entre le Web et une rue. D'un côté de la rue, il y a une maison qui correspond au client. De l'autre côté,  un magasin correspondant au serveur, et dans lequel vous souhaitez acheter quelque chose.
 
 ![](road.jpg)
 
-En plus du client et du serveur, nous devons aussi mentionner :
+En plus du client et du serveur, nous devons aussi mentionner :
 
 - **la connexion Internet** : elle permet l'envoi et la réception de données sur le web. Dans notre comparaison, elle correspond à la rue entre la maison et le magasin.
 - **TCP/IP** : **T**ransmission **C**ontrol **P**rotocol / **I**nternet **P**rotocol (en français : protocole de contrôle de transmission et protocole Internet) sont des protocoles définissant comment les données voyagent sur le web. C'est comme les mécanismes de transport qui vous permettent de passer une commande, d'aller au magasin et d'acheter vos marchandises. Dans notre exemple, ce serait une voiture ou un vélo (ou quoi que ce soit d'autre que vous trouveriez).
@@ -56,14 +56,14 @@ Lorsque vous saisissez une adresse web dans votre navigateur (dans notre compara
 
 1.  le navigateur demande au DNS l'adresse réelle du serveur contenant le site web (vous trouvez l'adresse du magasin).
 2.  le navigateur envoie une requête HTTP au serveur pour lui demander d'envoyer une copie du site web au client (vous allez au magasin et vous passez commande). Ce message, et les autres données envoyées entre le client et le serveur, sont échangés par l'intermédiaire de la connexion internet en utilisant TCP/IP.
-3.  si le serveur accepte la requête émise par le client, le serveur envoie un message « 200 OK » au client qui signifie : « Pas de problème, tu peux consulter ce site web, le voici ». Ensuite le serveur commence à envoyer les fichiers du site web au navigateur sous forme d'une série de petits morceaux nommés "paquet" (le magasin vous livre les produits et vous les ramenez chez vous).
-4.  le navigateur assemble les différents morceaux pour recomposer le site web en entier puis l'affiche sur votre écran (les produits sont à votre porte —  des nouveaux trucs tout neufs, génial !).
+3.  si le serveur accepte la requête émise par le client, le serveur envoie un message «&nbsp;200 OK&nbsp;» au client qui signifie : « Pas de problème, tu peux consulter ce site web, le voici ». Ensuite le serveur commence à envoyer les fichiers du site web au navigateur sous forme d'une série de petits morceaux nommés "paquet" (le magasin vous livre les produits et vous les ramenez chez vous).
+4.  le navigateur assemble les différents morceaux pour recomposer le site web en entier puis l'affiche sur votre écran (les produits sont à votre porte —  des nouveaux trucs tout neufs, génial !).
 
 ## Des explications sur le DNS
 
-Les vraies adresses Web ne sont pas les chaînes agréables et mémorisables que vous tapez dans votre barre d'adresse pour trouver vos sites Web favoris, mais des suites de chiffres. Ces suites de chiffre sont des nombres spéciaux qui ressemblent à ceci : 63.245.208.195.
+Les vraies adresses Web ne sont pas les chaînes agréables et mémorisables que vous tapez dans votre barre d'adresse pour trouver vos sites Web favoris, mais des suites de chiffres. Ces suites de chiffre sont des nombres spéciaux qui ressemblent à ceci : 63.245.208.195.
 
-Ce sont des {{Glossary("IP Address", "adresses IP")}} ; elles représentent un endroit unique sur le Web. Par contre, elles ne sont pas très faciles à retenir (n'est‑ce pas ?). C'est pour cela que le système des noms de domaine (DNS) a été conçu. Les serveurs DNS sont des serveurs spéciaux qui font correspondre une adresse web saisie dans le navigateur (par exemple « mozilla.org ») avec l'adresse réelle (IP) du serveur du site.
+Ce sont des {{Glossary("IP Address", "adresses IP")}} ; elles représentent un endroit unique sur le Web. Par contre, elles ne sont pas très faciles à retenir (n'est‑ce pas ?). C'est pour cela que le système des noms de domaine (DNS) a été conçu. Les serveurs DNS sont des serveurs spéciaux qui font correspondre une adresse web saisie dans le navigateur (par exemple « mozilla.org ») avec l'adresse réelle (IP) du serveur du site.
 
 Il est possible d'atteindre directement les sites web en utilisant leurs adresses IP. Pour aller sur le site de Mozilla, vous pouvez saisir `63.245.215.20` dans la barre d'adresse d'un nouvel onglet de votre navigateur.
 

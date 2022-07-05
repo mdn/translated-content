@@ -62,9 +62,9 @@ La propriété `outline-color` est définie avec une des valeurs listées ci-apr
 
 ```css
 .exemple {
-  /* Tout d'abord on utiliser outline */
+  /* Tout d'abord on utiliser outline */
   /* pour définir le contour          */
-  outline: 2px solid;
+  outline: 2px solid;
 
   /* Ensuite on précise sa couleur avec */
   /* outline-color                      */

@@ -20,7 +20,7 @@ Comme toutes les APIs de devtools, cette API est uniquement disponible pour le c
 ## Fonctions
 
 - [devtools.network.getHAR()](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR)
-  - : Obtenez le  [journal HAR](http://www.softwareishard.com/blog/har-12-spec/#log) pour la page chargée dans l'onglet en cours..
+  - : Obtenez le  [journal HAR](http://www.softwareishard.com/blog/har-12-spec/#log) pour la page chargée dans l'onglet en cours..
 
 ## Evénements
 

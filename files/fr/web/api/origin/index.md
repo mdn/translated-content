@@ -6,7 +6,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/origin
 ---
 {{APIRef()}}{{SeeCompatTable}}
 
-La propriété **`origin`** de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne l'origine du scope global, serialisé en chaîne de caractères.
+La propriété **`origin`** de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne l'origine du scope global, serialisé en chaîne de caractères.
 
 ## Syntaxe
 
@@ -18,7 +18,7 @@ Une {{domxref("USVString")}}.
 
 ## Exemples
 
-Exécuté depuis un worker, le code suivant permet d'afficher en console le scope global de ce worker à chaque message reçu.
+Exécuté depuis un worker, le code suivant permet d'afficher en console le scope global de ce worker à chaque message reçu.
 
 ```js
 onmessage = function() {
@@ -26,7 +26,7 @@ onmessage = function() {
 };
 ```
 
-Si l'origine n'est pas sous la forme scheme/host/port (par exemple, si vous exécutez le code en local, via `file://`), `origin` retournera la chaîne de caractère `"null"`.
+Si l'origine n'est pas sous la forme scheme/host/port (par exemple, si vous exécutez le code en local, via `file://`), `origin` retournera la chaîne de caractère `"null"`.
 
 ## Spécifications
 

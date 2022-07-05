@@ -20,7 +20,9 @@ La méthode **`keys()`** renvoie un nouvel objet **`Array Iterator`** qui contie
 
 ## Syntaxe
 
-    arr.keys()
+```js
+arr.keys()
+```
 
 ### Valeur de retour
 
@@ -55,7 +57,7 @@ console.log(clésDenses);  // [0, 1, 2]
 | Spécification                                                                                        | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-array.prototype.keys', 'Array.prototype.keys')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype.keys', 'Array.prototype.keys')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-array.prototype.keys', 'Array.prototype.keys')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

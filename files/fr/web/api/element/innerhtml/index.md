@@ -26,7 +26,7 @@ Pour insérer le HTML dans le document, plutôt que de remplacer le contenu d'un
 
 ### Valeur
 
-Une  {{domxref("DOMString")}} contenant la sérialisation HTML des descendants de l'élément. Définir la valeur de `innerHTML` supprime tous les descendants et les remplace par les noeuds construits en analysant le HTML donné dans la chaîne `htmlString`.
+Une  {{domxref("DOMString")}} contenant la sérialisation HTML des descendants de l'élément. Définir la valeur de `innerHTML` supprime tous les descendants et les remplace par les noeuds construits en analysant le HTML donné dans la chaîne `htmlString`.
 
 ### Exceptions
 
@@ -71,7 +71,7 @@ document.documentElement.innerHTML = "<pre>" +
 
 #### Détails opérationnels
 
-Qu'arrive-t-il exactement quand vous définissez la valeur de `innerHTML` ?  Cela entraîne l'agent utilisateur à suivre ces étapes :
+Qu'arrive-t-il exactement quand vous définissez la valeur de `innerHTML` ?  Cela entraîne l'agent utilisateur à suivre ces étapes :
 
 1.  La valeur spécifiée est analysée en HTML ou XML (en fonction du type de document), ce qui donne un objet {{domxref ("DocumentFragment")}} représentant le nouvel ensemble de nœuds DOM pour les nouveaux éléments.
 2.  Si l'élément dont le contenu est remplacé est un élément {{HTMLElement ("template")}}, l'attribut {{domxref ("HTMLTemplateElement.content", "content")}} de l'élément `<template>` est remplacé par le nouveau `DocumentFragment` créé à l'étape 1.

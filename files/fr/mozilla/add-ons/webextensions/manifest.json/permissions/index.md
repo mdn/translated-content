@@ -50,7 +50,7 @@ La clé peut contenir trois types d'autorisations:
 
 ## Les permissions d'hôte
 
-Les permissions d'hôte sont spécifiées comme [modèles de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), et chaque modèle identifie un groupe d'URL pour lequel l'extension demande des privilèges supplémentaires. Par exemple, une autorisation d'hôte pourrait être `"*://developer.mozilla.org/*"`.
+Les permissions d'hôte sont spécifiées comme [modèles de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), et chaque modèle identifie un groupe d'URL pour lequel l'extension demande des privilèges supplémentaires. Par exemple, une autorisation d'hôte pourrait être `"*://developer.mozilla.org/*"`.
 
 Les privilèges supplémentaires incluent :
 
@@ -121,7 +121,7 @@ Les mots clés suivants sont actuellement disponibles:
 
 Dans la plupart des cas, la permission accorde uniquement l'accès à l'API, avec les exceptions suivantes :
 
-- `tabs` vous permet d'accéder aux [parties privilégiées des API de l'onglet ](/fr/Add-ons/WebExtensions/API/tabs): `Tab.url`, `Tab.title`, et `Tab.faviconUrl`. Dans Firefox, vous avez également besoin de  `tabs` si vous souhaitez inclure `url` dans le paramètre `queryInfo` dans [`tabs.query()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query). Le reste de l'API `tabs` peut être utilisé sans demander aucune permission.
+- `tabs` vous permet d'accéder aux [parties privilégiées des API de l'onglet ](/fr/Add-ons/WebExtensions/API/tabs): `Tab.url`, `Tab.title`, et `Tab.faviconUrl`. Dans Firefox, vous avez également besoin de  `tabs` si vous souhaitez inclure `url` dans le paramètre `queryInfo` dans [`tabs.query()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query). Le reste de l'API `tabs` peut être utilisé sans demander aucune permission.
 - `webRequestBlocking` vous permet d'utiliser l'argument "blocage", afin que vous puissiez [modifier et annuler les requêtes](/fr/Add-ons/WebExtensions/API/WebRequest).
 - `downloads.open` vous permet d'utiliser l'API {{WebExtAPIRef("downloads.open()")}}.
 - `tabHide` vous permet d'utiliser l'API {{WebExtAPIRef("tabs.hide()")}}.
@@ -138,21 +138,21 @@ Cette autorisation est spécifiée comme " `activeTab` " (_onglet actif_). Si un
 
 Les privilèges supplémentaires sont les suivants :
 
-- La capacité d'injecter du JavaScript ou du CSS dans l'onglet par programme, en utilisant [`browser.tabs.executeScript`](/fr/Add-ons/WebExtensions/API/tabs/executeScript) et  [`browser.tabs.insertCSS`](/fr/Add-ons/WebExtensions/API/tabs/insertCSS)
+- La capacité d'injecter du JavaScript ou du CSS dans l'onglet par programme, en utilisant [`browser.tabs.executeScript`](/fr/Add-ons/WebExtensions/API/tabs/executeScript) et  [`browser.tabs.insertCSS`](/fr/Add-ons/WebExtensions/API/tabs/insertCSS)
 - L'accès aux parties privilégiées des onglets de l'API pour l'onglet actuel : Tab.url, Tab.title et Tab.faviconUrl.
 
-L'objectif de cette permission est de permettre aux extensions de réaliser une utilisation courante, sans avoir à leur accorder de permissions très puissantes. Beaucoup d'extensions veulent "faire quelque chose à la page courante quand l'utilisateur le demande". Par exemple, considérez une extension qui veut exécuter un script dans la page courante quand l'utilisateur clique sur une action de navigateur. Si la permission `activeTab` n'existait pas, l'extension devrait demander une permission d'hôte \<all_urls>. Mais cela donnerait à l'extension plus de puissance que nécessaire : elle pourrait désormais exécuter des scripts dans n'importe quel onglet, à tout moment, plutôt que simplement dans l'onglet actif et juste en réponse à une action de l'utilisateur.
+L'objectif de cette permission est de permettre aux extensions de réaliser une utilisation courante, sans avoir à leur accorder de permissions très puissantes. Beaucoup d'extensions veulent "faire quelque chose à la page courante quand l'utilisateur le demande". Par exemple, considérez une extension qui veut exécuter un script dans la page courante quand l'utilisateur clique sur une action de navigateur. Si la permission `activeTab` n'existait pas, l'extension devrait demander une permission d'hôte \<all_urls>. Mais cela donnerait à l'extension plus de puissance que nécessaire : elle pourrait désormais exécuter des scripts dans n'importe quel onglet, à tout moment, plutôt que simplement dans l'onglet actif et juste en réponse à une action de l'utilisateur.
 
 Notez que vous ne pouvez accéder qu'à l'onglet ou aux données qui s'y trouvaient au moment de l'interaction de l'utilisateur (par exemple le clic). Lorsque l'onglet actif s'éloigne, par exemple en raison d'un chargement terminé ou d'un autre événement, l'autorisation ne vous donne plus accès à l'onglet.
 
-Habituellement, l'onglet qui est accordé à `activeTab` est juste l'onglet actuellement actif, sauf dans un cas. L'API [`menus`](/fr/Add-ons/WebExtensions/API/menus)  permet à une extension de créer un élément de menu qui s'affiche lorsque le contexte utilisateur clique sur un onglet (c'est-à-dire sur l'élément de l'onglet qui permet à l'utilisateur de passer d'un onglet à un autre). Si l'utilisateur clique sur un tel élément, la permission `activeTab` est accordée pour l'onglet sur lequel l'utilisateur a cliqué, même s'il ne s'agit pas de l'onglet actuellement actif (A partir de Firefox 63, {{bug(1446956)}}).
+Habituellement, l'onglet qui est accordé à `activeTab` est juste l'onglet actuellement actif, sauf dans un cas. L'API [`menus`](/fr/Add-ons/WebExtensions/API/menus)  permet à une extension de créer un élément de menu qui s'affiche lorsque le contexte utilisateur clique sur un onglet (c'est-à-dire sur l'élément de l'onglet qui permet à l'utilisateur de passer d'un onglet à un autre). Si l'utilisateur clique sur un tel élément, la permission `activeTab` est accordée pour l'onglet sur lequel l'utilisateur a cliqué, même s'il ne s'agit pas de l'onglet actuellement actif (A partir de Firefox 63, {{bug(1446956)}}).
 
 ## Accès au presse-papiers
 
 Il existe deux permissions qui permettent aux extensions d'interagir avec le Presse-papiers :
 
 - `clipboardWrite`: écrivez dans le presse-papiers à l'aide de {{DOMxRef("Clipboard.write()")}}, {{DOMxRef("Clipboard.writeText()")}}, `document.execCommand("copy")` ou `document.execCommand("cut")`
-- `clipboardRead`: lisez le presse-papiers à l'aide de  {{DOMxRef("Clipboard.read()")}}, {{DOMxRef("Clipboard.readText()")}} ou `document.execCommand("paste")`
+- `clipboardRead`: lisez le presse-papiers à l'aide de  {{DOMxRef("Clipboard.read()")}}, {{DOMxRef("Clipboard.readText()")}} ou `document.execCommand("paste")`
 
 Voir [Intérargir avec le presse-papiers ](/fr/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)pour tous les détails de ce sujet.
 
@@ -160,7 +160,7 @@ Voir [Intérargir avec le presse-papiers ](/fr/docs/Mozilla/Add-ons/WebExtension
 
 La permission `unlimitedStorage` :
 
-- permet aux extensions de dépasser tout quota imposé par l'API  {{WebExtAPIRef("storage.local")}}
+- permet aux extensions de dépasser tout quota imposé par l'API  {{WebExtAPIRef("storage.local")}}
 - dans Firefox, permet aux extensions de créer une base de données [bases de données Indexed DB "persistante"](/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria#Les_différents_types_de_stockage_des_données), sans que le navigateur ne demande à l'utilisateur la permission au moment de la création de la base.
 
 ## Exemple

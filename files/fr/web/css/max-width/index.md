@@ -66,10 +66,10 @@ max-width: unset;
 
 ```html
 <div> Lorem ipsum tralala sit amet, consectetur adipisicing
-  <p>
+  <p>
      Ut enim ad minim veniam, quis nostrud exercitation
      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </p>
+  </p>
 </div>
 ```
 

@@ -10,7 +10,7 @@ translation_of: Web/API/Node/textContent
 ---
 {{APIRef("DOM")}}
 
-La propriété **`Node.textContent`**  représente le contenu textuel d'un nœud et de ses descendants.
+La propriété **`Node.textContent`**  représente le contenu textuel d'un nœud et de ses descendants.
 
 ## Syntaxe
 
@@ -39,14 +39,14 @@ Internet Explorer a introduit une propriété {{domxref("node.innerText")}}. L'i
 
 ## Exemple
 
-    // Étant donné le fragment de HTML suivant :
+    // Étant donné le fragment de HTML suivant&nbsp;:
     //   <div id="divA">Ceci est un <span>exemple de</span> texte</div>
 
-    // On obtient le contenu textuel :
+    // On obtient le contenu textuel&nbsp;:
     var text = document.getElementById("divA").textContent;
     // |text| vaut "Ceci est un exemple de texte".
 
-    // On définit le contenu textuel :
+    // On définit le contenu textuel&nbsp;:
     document.getElementById("divA").textContent = "Ceci est un exemple de texte";
     // Le HTML pour divA est à présent <div id="divA">Ceci est un exemple de texte</div>
 
@@ -85,7 +85,7 @@ if (Object.defineProperty
 | Spécification                                                                                        | Statut                           | Commentaire               |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------- |
 | {{SpecName('DOM WHATWG','#dom-node-textcontent','Node.textContent')}}         | {{Spec2('DOM WHATWG')}} | Pas de changement de DOM4 |
-| {{SpecName('DOM4','#dom-node-textcontent','Node.textContent')}}                 | {{Spec2('DOM4')}}         |                           |
+| {{SpecName('DOM4','#dom-node-textcontent','Node.textContent')}}                 | {{Spec2('DOM4')}}         |                           |
 | {{SpecName('DOM3 Core','core.html#Node3-textContent','Node.textContent')}} | {{Spec2('DOM3 Core')}}     | Définition initiale.      |
 
 ## Voir aussi

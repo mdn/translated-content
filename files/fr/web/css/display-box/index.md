@@ -9,7 +9,7 @@ Ces mots-clés définissent si un élément génère des boîtes d'affichage ou 
 
 ## Syntaxe
 
-- `contents` {{Experimental_Inline}}
+- `contents` {{Experimental_Inline}}
 
   - : L'élément ne produit pas de boîte qui lui soit spécifique. Il est remplacé par sa pseudo-boîte et les boîtes de ses enfants. On notera que le module de spécification CSS Display de niveau 3 définit la façon dont la valeur `contents` affecte les éléments « inhabituels » tels que les éléments remplacés. Voir [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) pour plus de détails.
 

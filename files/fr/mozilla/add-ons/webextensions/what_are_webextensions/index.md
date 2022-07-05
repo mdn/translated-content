@@ -16,7 +16,7 @@ Une extension ajoute des fonctionnalités et des fonctions à un navigateur. Ell
 
 Exemples: [Amazon Assistant for Firefox](https://addons.mozilla.org/en-US/firefox/addon/amazon-browser-bar/), [OneNote Web Clipper](https://addons.mozilla.org/en-US/firefox/addon/onenote-clipper/), and [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/)
 
-**Laissez les utilisateurs montrer leur personnalité** : Les extensions navigateur peuvent manipuler le contenu des pages web, par exemple en permettant aux utilisateurs d'ajouter leur logo ou leur image préférée en arrière-plan à chaque page qu'ils visitent.  Les extensions peuvent également permettre aux utilisateurs de mettre à jour l'apparence de l'interface utilisatrice Firefox, de la même manière que les [add-ons de thème](/fr/Add-ons/Themes/Theme_concepts).
+**Laissez les utilisateurs montrer leur personnalité** : Les extensions navigateur peuvent manipuler le contenu des pages web, par exemple en permettant aux utilisateurs d'ajouter leur logo ou leur image préférée en arrière-plan à chaque page qu'ils visitent.  Les extensions peuvent également permettre aux utilisateurs de mettre à jour l'apparence de l'interface utilisatrice Firefox, de la même manière que les [add-ons de thème](/fr/Add-ons/Themes/Theme_concepts).
 
 ![](myweb_new_tab_add_on.png)
 
@@ -48,9 +48,9 @@ Exemples: [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-dev
 
 Les Extensions pour Firefox sont construites à l'aide d'[APIs WebExtensions](/fr/Add-ons/WebExtensions), un système multi-navigateur pour développer des extensions. De manière générale, L'API est compatible avec l' [API d'extension](https://developer.chrome.com/extensions) de Google Chrome et Opera. Les extensions écrites pour ces navigateurs fonctionneraient dans la plupart des cas dans Firefox ou Microsoft Edge avec seulement quelques [changements](/fr/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension). L'API est également entièrement compatible avec [Firefox multi-processus](/fr/Firefox/Multiprocess_Firefox).
 
-Si vous avez des idées ou des questions, ou si vous avez besoin d'aide pour [migrer un module complémentaire hérité vers les API WebExtensions](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/), vous pouvez nous contacter via la  [la mailing-liste dev-addons](https://mail.mozilla.org/listinfo/dev-addons) ou dans le [room des add-ons ](https://chat.mozilla.org/#/room/#addons:mozilla.org)sur [Matrix](https://wiki.mozilla.org/Matrix).
+Si vous avez des idées ou des questions, ou si vous avez besoin d'aide pour [migrer un module complémentaire hérité vers les API WebExtensions](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/), vous pouvez nous contacter via la  [la mailing-liste dev-addons](https://mail.mozilla.org/listinfo/dev-addons) ou dans le [room des add-ons ](https://chat.mozilla.org/#/room/#addons:mozilla.org)sur [Matrix](https://wiki.mozilla.org/Matrix).
 
-##  Pour aller plus loin?
+##  Pour aller plus loin?
 
 - Parcourez le développement d'une extension simple dans [votre première extension](/fr/Add-ons/WebExtensions/Your_first_WebExtension).
 - En savoir plus sur la structure d'une extensions en consultant [Architecture d'une extension](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).

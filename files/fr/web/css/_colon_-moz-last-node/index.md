@@ -36,7 +36,7 @@ span:-moz-last-node {
   <span>:-moz-last-node</span>
 </p>
 <p>
-  <span>Cet élément n'est pas ciblé car il est suivi par du texte.</span>
+  <span>Cet élément n'est pas ciblé car il est suivi par du texte.</span>
   Bip bop bip bop.
 </p>
 ```

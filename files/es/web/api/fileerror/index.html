@@ -2,6 +2,7 @@
 title: FileError
 slug: Web/API/FileError
 translation_of: Web/API/FileError
+browser-compat: api.FileError
 ---
 <p>{{APIRef("File System API")}}{{obsolete_header()}}</p>
 
@@ -45,7 +46,7 @@ translation_of: Web/API/FileError
   <tr>
    <td><a name="attr_code"><code>code</code></a></td>
    <td><code>unsigned short</code></td>
-   <td>The most appropriate error code for the condition. See {{anch("Error codes")}} for possible values.</td>
+   <td>The most appropriate error code for the condition. See <a href="#error_codes">Error codes</a> for possible values.</td>
   </tr>
  </tbody>
 </table>
@@ -124,63 +125,13 @@ translation_of: Web/API/FileError
  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
+<h2 id="Especificaciones">Especificaciones</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Specifications}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>13{{ property_prefix("webkit") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>0.16{{ property_prefix("webkit") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Gecko_notes">Gecko notes</h3>
-
-<ul>
- <li>The <code>FileError</code> interface has been removed starting with Gecko 13 {{ geckoRelease("13.0") }}. Instead the more general {{ domxref("DOMError") }} interface is used and returned by {{ domxref("FileReader", "FileReader.error") }}.</li>
-</ul>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

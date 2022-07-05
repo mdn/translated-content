@@ -113,7 +113,7 @@ Lorsque vous restructurez des sites Web, les URL des ressources changent. Même 
 
 Les requêtes {{Glossary("safe", "Unsafe")}} modifient l'état du serveur et l'utilisateur ne devrait pas les rejouer par inadvertance. Typiquement, vous ne voulez pas que vos utilisateurs renvoient des requêtes {{HTTPMethod("PUT")}}, {{HTTPMethod("POST")}} ou {{HTTPMethod("DELETE")}}. Si vous ne vous contentez que d'envoyer la réponse à la suite de cette requête, un simple clic sur le bouton de rechargement (éventuellement après un message de confirmation), renvoie la demande.
 
-Dans ce cas, le serveur peut renvoyer une réponse {{HTTPStatus("303")}} (See Other) qui contiendra les bonnes informations, mais si le bouton de rechargement est pressé, seule cette page est réaffichée, sans rejouer les demandes non sécurisées.
+Dans ce cas, le serveur peut renvoyer une réponse {{HTTPStatus("303")}} (See Other) qui contiendra les bonnes informations, mais si le bouton de rechargement est pressé, seule cette page est réaffichée, sans rejouer les demandes non sécurisées.
 
 ### Réponses temporaires aux longues requêtes
 

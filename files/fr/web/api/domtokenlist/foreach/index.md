@@ -34,7 +34,7 @@ La méthode **`forEach()`** de l'interface {{domxref("DOMTokenList")}} appelle l
 
 ## Exemple
 
-Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous récupérons un itérateur contenant les valeurs avec `forEach()` et écrivons chacune d'elles dans le  {{domxref("Node.textContent")}} du `<span>` pendant l'exécution de la fonction interne `forEach()`.
+Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous récupérons un itérateur contenant les valeurs avec `forEach()` et écrivons chacune d'elles dans le  {{domxref("Node.textContent")}} du `<span>` pendant l'exécution de la fonction interne `forEach()`.
 
 ### HTML
 

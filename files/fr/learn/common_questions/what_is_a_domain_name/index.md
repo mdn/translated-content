@@ -15,7 +15,7 @@ Dans cet article, nous discutons des noms de domaine : ce qu'ils sont, comment i
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Pour commencer, vous devez comprendre
         <a href="/fr/Apprendre/Fonctionnement_Internet"
@@ -25,7 +25,7 @@ Dans cet article, nous discutons des noms de domaine : ce qu'ils sont, comment i
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Apprendre ce qu'est un nom de domaine, son fonctionnement et son
         importance.

@@ -16,7 +16,9 @@ La fonction **`encodeURIComponent()`** permet d'encoder un composant d'un Unifor
 
 ## Syntaxe
 
-    encodeURIComponent(str);
+```js
+encodeURIComponent(str);
+```
 
 ### Paramètres
 
@@ -121,9 +123,9 @@ function encodeRFC5987ValueChars2(str) {
 | Spécification                                                                                                    | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.3.4', 'encodeURIComponent')}}                                 | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES5.1', '#sec-15.1.3.4', 'encodeURIComponent')}}                                 | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}}     | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

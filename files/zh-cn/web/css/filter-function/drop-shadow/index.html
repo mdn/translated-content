@@ -1,0 +1,66 @@
+---
+title: drop-shadow()
+slug: Web/CSS/filter-function/drop-shadow
+translation_of: Web/CSS/filter-function/drop-shadow()
+original_slug: Web/CSS/filter-function/drop-shadow()
+---
+<div>{{cssref}}</div>
+
+<p>The <strong><code>drop-shadow()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> function applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.</p>
+
+<div>{{EmbedInteractiveExample("pages/css/function-drop-shadow.html")}}</div>
+
+<p class="hidden">这个交互式示例的源代码存储在GitHub存储库中。如果您想对交互式示例项目作出贡献，请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并向我们发送拉取请求。</p>
+
+<p>投影实际上是输入图像的alpha蒙版的一个模糊的、偏移的版本，用特定的颜色绘制并合成在图像下面。</p>
+
+<div class="note">
+<p><strong>注意:</strong> 这个函数有点类似于 {{Cssxref("box-shadow")}} 属性.  <code>box-shadow</code> 属性在元素的整个框后面创建一个矩形阴影, 而 <code>drop-shadow()</code> 过滤器则是创建一个符合图像本身形状(alpha通道)的阴影。</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">drop-shadow(<em>offset-x</em> <em>offset-y</em> <em>blur-radius</em> <em>spread-radius</em> <em>color</em>)</pre>
+
+<p>The <code>drop-shadow()</code> function accepts a parameter of type <code>&lt;shadow&gt;</code> (defined in the {{cssxref("box-shadow")}} property), with the exception that the <code>inset</code> keyword is not allowed.</p>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>offset-x</code> <code>offset-y</code> <small>(required)</small></dt>
+ <dd><code>offset-x</code>指定水平距离，其中负值将阴影放置到元素的左侧。<code>offset-y</code>指定垂直距离，其中负值将阴影置于元素之上。如果两个值都为 <code>0</code>，则阴影直接放置在元素后面。</dd>
+ <dt><code>blur-radius</code> <small>(optional)</small></dt>
+ <dd>阴影的模糊半径，指定为 {{cssxref("&lt;length&gt;")}}。值越大，阴影就越大，也越模糊。如果未指定，则默认为 <code>0</code>，从而产生清晰、不模糊的边缘。不允许有负值。</dd>
+ <dt><code>spread-radius</code> <small>(optional)</small></dt>
+ <dd>阴影的扩展半径，指定为 {{cssxref("&lt;length&gt;")}}. 正的值会导致阴影扩大和变大，而负的值会导致阴影缩小。如果未指定，则默认为0，阴影的大小将与输入图像相同。</dd>
+ <dd>
+ <div class="warning">大多数浏览器不支持这个参数;如果使用，效果将不会呈现。截止2020年10,14日,Chrome  v.85.0.4183.121（正式版本）,Microsoft Edge Beta  v85.0.564.63(64位), Firefox v.85.0.564.63 暂未支持</div>
+ </dd>
+ <dt><code>color</code> <small>(optional)</small></dt>
+ <dd>阴影的颜色，指定为 {{cssxref("&lt;color&gt;")}}。如果未指定，则使用 {{cssxref("color")}} 属性的值。</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: css notranslate">/* Black shadow with 10px blur */
+drop-shadow(16px 16px 10px black)
+
+/* Reddish shadow with 1rem blur and .3rem spread */
+/* WARNING: not generally supported by browsers */
+drop-shadow(.5rem .5rem 1rem .3rem #e23)</pre>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{cssxref("&lt;filter-function&gt;")}}</li>
+ <li>CSS {{cssxref("box-shadow")}} property</li>
+ <li>{{cssxref("filter-function/blur", "blur()")}}</li>
+ <li>{{cssxref("filter-function/brightness", "brightness()")}}</li>
+ <li>{{cssxref("filter-function/contrast", "contrast()")}}</li>
+ <li>{{cssxref("filter-function/grayscale", "grayscale()")}}</li>
+ <li>{{cssxref("filter-function/hue-rotate", "hue-rotate()")}}</li>
+ <li>{{cssxref("filter-function/invert", "invert()")}}</li>
+ <li>{{cssxref("filter-function/opacity", "opacity()")}}</li>
+ <li>{{cssxref("filter-function/saturate", "saturate()")}}</li>
+ <li>{{cssxref("filter-function/sepia", "sepia()")}}</li>
+</ul>

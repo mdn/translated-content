@@ -245,9 +245,9 @@ textarea.onkeyup = function(){
 
 ### Pourquoi a-t-on besoin de sémantique ?
 
-La sémantique est utilisée partout autour de nous — on se fie à nos précédentes experiences pour savoir à quoi servent les objets du quotidien; quand on voit quelque chose, on sait à quoi cela sert. Par exemple, on s'attend à ce qu'un feu rouge de signalisation signifie « Stop » et qu'un feu vert signifie « Avancez ». Les choses peuvent vite devenir plus compliquées si de mauvaises sémantiques sont appliquées (existe-t-il un pays dans lequel un feu rouge signifie que l'on peut passer ? Je ne l'espère pas.)
+La sémantique est utilisée partout autour de nous — on se fie à nos précédentes experiences pour savoir à quoi servent les objets du quotidien; quand on voit quelque chose, on sait à quoi cela sert. Par exemple, on s'attend à ce qu'un feu rouge de signalisation signifie «&nbsp;Stop&nbsp;» et qu'un feu vert signifie «&nbsp;Avancez ». Les choses peuvent vite devenir plus compliquées si de mauvaises sémantiques sont appliquées (existe-t-il un pays dans lequel un feu rouge signifie que l'on peut passer ? Je ne l'espère pas.)
 
-Dans la même optique, il faut s'assurer que l'on utilise les bons élements et que l'on donne la bonne signification, la bonne fonction et la bonne apparence à notre contenu. Dans ce contexte, l'élément {{htmlelement("h1")}} est aussi un élement sémantique. Il donne au texte auquel il s'applique la fonction (ou la signification) de « titre principal de la page ».
+Dans la même optique, il faut s'assurer que l'on utilise les bons élements et que l'on donne la bonne signification, la bonne fonction et la bonne apparence à notre contenu. Dans ce contexte, l'élément {{htmlelement("h1")}} est aussi un élement sémantique. Il donne au texte auquel il s'applique la fonction (ou la signification) de «&nbsp;titre principal de la page ».
 
 ```html
 <h1>Ceci est un titre principal</h1>
@@ -265,7 +265,7 @@ C'est un élément {{htmlelement("span")}}. Il n'a pas de valeur sémantique. Il
 
 ## Listes
 
-Intéressons-nous maintenant aux listes. Il y a des listes partout dans la vie — de la liste de courses à la liste de directions que vous suivez inconsciemment pour rentrer chez vous tous les jours, sans oublier la liste des instructions que vous suivez dans ce tutoriel ! Les listes sont aussi très répandues sur le Web, nous allons nous intéresser aux trois différents types de liste.
+Intéressons-nous maintenant aux listes. Il y a des listes partout dans la vie — de la liste de courses à la liste de directions que vous suivez inconsciemment pour rentrer chez vous tous les jours, sans oublier la liste des instructions que vous suivez dans ce tutoriel&nbsp;! Les listes sont aussi très répandues sur le Web, nous allons nous intéresser aux trois différents types de liste.
 
 ### Listes non-ordonnées
 
@@ -600,7 +600,7 @@ Si vous êtes arrivé jusqu'ici dans l'article, vous avez toutes les connaissanc
 
   Ingrédients
 
-  1 boîte (400 g) de pois chiches (garbanzos)
+  1 boîte (400 g) de pois chiches (garbanzos)
   175g de crème de sésame
   6 tomates séchées
   un demi poivron rouge
@@ -620,7 +620,7 @@ Si vous êtes arrivé jusqu'ici dans l'article, vous avez toutes les connaissanc
 
   Mettez l'houmous fini au réfrigérateur dans un récipient fermé. Vous le garderez ainsi pendant environ une semaine. S'il se met à fermenter, jettez‑le sans hésiter.
 
-  L'houmous peut être congelé ; consommez‑le dans les deux mois qui suivent sa congélation.</textarea>
+  L'houmous peut être congelé&nbsp;; consommez‑le dans les deux mois qui suivent sa congélation.</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Réinitialiser">
@@ -749,7 +749,7 @@ Il est parfaitement possible d'imbriquer une liste dans une autre. Il se peut qu
 </ol>
 ```
 
-Comme les deux dernières puces de la liste sont très liées à celle qui les précède (elles semblent être des sous-instructions ou des choix correspondant à cette puce), il peut être judicieux de les regrouper dans une même liste non-ordonnée, et placer cette liste dans le quatrième item. Cela ressemblerait alors à ceci :
+Comme les deux dernières puces de la liste sont très liées à celle qui les précède (elles semblent être des sous-instructions ou des choix correspondant à cette puce), il peut être judicieux de les regrouper dans une même liste non-ordonnée, et placer cette liste dans le quatrième item. Cela ressemblerait alors à ceci&nbsp;:
 
 ```html
 <ol>
@@ -774,9 +774,9 @@ Dans le langage, nous mettons souvent l'accent sur certains mots pour modifier l
 
 Dans le langage parlé, pour accentuer, nous insistons sur certains mots, modifiant subtilement le sens de ce que nous disons. De même, dans le langage écrit, nous avons tendance à mettre un certain accent sur des mots en les écrivant en italique. Par exemple, les deux phrases suivantes ont des significations différentes.
 
-« Je suis content que vous n'ayez pas été en retard. »
+«&nbsp;Je suis content que vous n'ayez pas été en retard. »
 
-« Je suis _content_ que vous n'ayez pas été _en retard_. »
+«&nbsp;Je suis _content_ que vous n'ayez pas été _en retard_.&nbsp;»
 
 La première phrase semble indiquer que le locuteur est vraiment soulagé que la personne n'aie pas été en retard. En revanche, la seconde a une tonalité sarcastique ou passive-agressive, exprimant la gêne que la personne soit arrivée un peu en retard.
 
@@ -799,7 +799,7 @@ En HTML, nous utilisons l'élément {{htmlelement("strong")}} (forte importance)
 ```html
 <p>Ce liquide est <strong>hautement toxique</strong>.</p>
 
-<p>Je compte sur vous. <strong>Ne soyez pas en retard</strong> !</p>
+<p>Je compte sur vous. <strong>Ne soyez pas en retard</strong>&nbsp;!</p>
 ```
 
 Il est possible d'imbriquer `strong` et `em` :
@@ -809,7 +809,7 @@ Il est possible d'imbriquer `strong` et `em` :
 si vous en buvez, <strong>vous pourriez en <em>mourir</em></strong>.</p>
 ```
 
-### Apprentissage actif : soulignez l'important
+### Apprentissage actif&nbsp;: soulignez l'important
 
 Dans ce paragraphe d'apprentissage actif, nous avons donné un exemple modifiable. À l'intérieur, nous aimerions que vous essayiez d'ajouter de l'emphase et de l'importance aux mots quand vous pensez qu'ils en ont besoin, juste pour une bonne pratique.
 
@@ -950,8 +950,8 @@ HTML5 a redéfini `<b>`, `<i>` et `<u>` avec de nouveaux rôles sémantiques que
 Voici la meilleure règle d'or : il est probablement approprié d'utiliser `<b>`, `<i>`, ou `<u>` pour communiquer le sens traditionnellement associé aux caractères gras, italiques ou soulignés, à condition qu'il n'y ait pas d'élément plus approprié. Toutefois, il demeure toujours essentiel de garder présent à l'esprit le concept d'accessibilité. L'écriture en italique n'est pas très utile aux personnes utilisant des lecteurs d'écran ou un système d'écriture autre que l'alphabet latin.
 
 - {{HTMLElement('i')}} s'utilise pour transmettre un sens traditionnellement véhiculé avec l'italique : des mots étrangers, une désignation taxonomique, des termes techniques, une pensée…
-- {{HTMLElement('b')}} s'utilise pour transmettre un sens traditionnellement véhiculé avec les caractères en gras : des mots‑clés, des noms de produits, une phrase liminaire…
-- {{HTMLElement('u')}} s'utilise pour transmettre un sens traditionnellement véhiculé avec le soulignement : noms propres, mauvaise orthographe...
+- {{HTMLElement('b')}} s'utilise pour transmettre un sens traditionnellement véhiculé avec les caractères en gras&nbsp;: des mots‑clés, des noms de produits, une phrase liminaire…
+- {{HTMLElement('u')}} s'utilise pour transmettre un sens traditionnellement véhiculé avec le soulignement&nbsp;: noms propres, mauvaise orthographe...
 
 > **Note :** Un petit avertissement à propos du soulignement : **les gens associent fortement soulignement et hyperliens**. Par conséquent, sur le Web, il est préférable de ne souligner que les liens. N'utilisez l'élément `<u>` que s'il est sémantiquement approprié, mais envisagez d'utiliser les CSS pour remplacer le soulignement par défaut par quelque chose de plus approprié sur le Web. L'exemple ci-dessous illustre comment cela peut être fait.
 
@@ -987,7 +987,7 @@ Voici la meilleure règle d'or : il est probablement approprié d'utiliser `<b>`
 
 ## Résumé
 
-C'est tout pour l'instant ! Cet article doit vous avoir donné une bonne idée de la façon de commencer à baliser le texte en HTML et présenté les éléments les plus importants dans ce domaine. Il existe énormément d'autres éléments sémantiques à connaître dans ce domaine ; nous en verrons beaucoup plus dans notre article « More Semantic Elements », plus loin dans ce cours. Dans le prochain article, nous examinerons en détail comment [créer des hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), qui est peut-être l'élément le plus important sur le Web.
+C'est tout pour l'instant ! Cet article doit vous avoir donné une bonne idée de la façon de commencer à baliser le texte en HTML et présenté les éléments les plus importants dans ce domaine. Il existe énormément d'autres éléments sémantiques à connaître dans ce domaine&nbsp;; nous en verrons beaucoup plus dans notre article «&nbsp;More Semantic Elements&nbsp;», plus loin dans ce cours. Dans le prochain article, nous examinerons en détail comment [créer des hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), qui est peut-être l'élément le plus important sur le Web.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 

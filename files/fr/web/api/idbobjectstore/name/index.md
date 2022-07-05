@@ -90,7 +90,7 @@ function addData() {
 
 | Spécification                                                                        | État                         | Commentaires |
 | ------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-name', 'name')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-name', 'name')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

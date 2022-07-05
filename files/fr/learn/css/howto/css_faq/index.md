@@ -11,7 +11,7 @@ original_slug: Web/CSS/CSS_questions_frequentes
 ---
 ## Pourquoi mon CSS, pourtant valide, ne fournit pas un rendu correct ?
 
-Pour afficher un document, les navigateurs utilisent le `DOCTYPE` - contraction de l'anglais _document type_, littéralement « type de document ». Ils utilisent un mode qui est compatible avec les standards du Web et avec les bugs des vieux navigateurs. Utiliser un `DOCTYPE` correct et moderne dès le début de votre code HTML améliorera la conformité aux standards du navigateur.
+Pour afficher un document, les navigateurs utilisent le `DOCTYPE` - contraction de l'anglais _document type_, littéralement «&nbsp;type de document&nbsp;». Ils utilisent un mode qui est compatible avec les standards du Web et avec les bugs des vieux navigateurs. Utiliser un `DOCTYPE` correct et moderne dès le début de votre code HTML améliorera la conformité aux standards du navigateur.
 
 Les navigateurs modernes ont deux modes de rendu :
 
@@ -52,7 +52,7 @@ Quand vous voulez appliquer un style à un bloc ou un élément spécifique, uti
 
 Quand vous voulez appliquer un style à plusieurs blocs ou éléments dans la même page, utilisez un attribut `class`.
 
-Les feuilles de style avec le moins de règles sont les plus performantes. Par conséquent, il est recommandé d'utiliser le plus possible les classes et de réserver les id à des usages spécifiques - comme connecter des éléments de type `label` et `form` ou pour décorer des éléments qui doivent être sémantiquement uniques.
+Les feuilles de style avec le moins de règles sont les plus performantes. Par conséquent, il est recommandé d'utiliser le plus possible les classes et de réserver les id à des usages spécifiques - comme connecter des éléments de type `label` et `form` ou pour décorer des éléments qui doivent être sémantiquement uniques.
 
 Voire [Les sélecteurs CSS](/fr/docs/CSS/Premiers_pas/Les_sélecteurs "Les sélecteurs CSS").
 
@@ -66,7 +66,7 @@ Ce comportement est différent depuis CSS2. Une propriété CSS peut maintenant 
 
 CSS ne permet de faire dériver un style d'un autre. Voire [l'article d'Eric Meyer à propos de la position du groupe de travail](http://archivist.incutio.com/viewlist/css-discuss/2685). Par contre, assigner plusieurs classes à un seul élément peut produire le même effet.
 
-## Comment  assigner de multiples classes à un élément?
+## Comment assigner de multiples classes à un élément?
 
 Il est possible d'assigner aux éléments HTML de multiples classes en les listant dans l'attribut `class` en séparant chaque classe d'un espace.
 

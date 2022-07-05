@@ -47,8 +47,8 @@ p.then(value =&gt; {
  <li>返回了一个值，那么 <code>then</code> 返回的 Promise 将会成为接受状态，并且将返回的值作为接受状态的回调函数的参数值。</li>
  <li>没有返回任何值，那么 <code>then</code> 返回的 Promise 将会成为接受状态，并且该接受状态的回调函数的参数值为 <code>undefined</code>。</li>
  <li>抛出一个错误，那么 <code>then</code> 返回的 Promise 将会成为拒绝状态，并且将抛出的错误作为拒绝状态的回调函数的参数值。</li>
- <li>返回一个已经是接受状态的 Promise，那么 <code>then</code> 返回的 Promise 也会成为接受状态，并且将那个 Promise 的接受状态的回调函数的参数值作为该被返回的Promise的接受状态回调函数的参数值。</li>
- <li>返回一个已经是拒绝状态的 Promise，那么 <code>then</code> 返回的 Promise 也会成为拒绝状态，并且将那个 Promise 的拒绝状态的回调函数的参数值作为该被返回的Promise的拒绝状态回调函数的参数值。</li>
+ <li>返回一个已经是接受状态的 Promise，那么 <code>then</code> 返回的 Promise 也会成为接受状态，并且将那个 Promise 的接受状态的回调函数的参数值作为该被返回的 Promise 的接受状态回调函数的参数值。</li>
+ <li>返回一个已经是拒绝状态的 Promise，那么 <code>then</code> 返回的 Promise 也会成为拒绝状态，并且将那个 Promise 的拒绝状态的回调函数的参数值作为该被返回的 Promise 的拒绝状态回调函数的参数值。</li>
  <li>返回一个未定状态（<code>pending</code>）的 Promise，那么 <code>then</code> 返回 Promise 的状态也是未定的，并且它的终态与那个 Promise 的终态相同；同时，它变为终态时调用的回调函数参数与那个 Promise 变为终态时的回调函数的参数是相同的。</li>
 </ul>
 
@@ -114,7 +114,7 @@ p1.then(value =&gt; {
     });
   })
   // 2. 接收 "foobar", 放入一个异步函数中处理该字符串
-  // 并将其打印到控制台中, 但是不将处理后的字符串返回到下一个。
+  // 并将其打印到控制台中，但是不将处理后的字符串返回到下一个。
   .then(function(string) {
     setTimeout(function() {
       string += 'baz';
@@ -130,7 +130,7 @@ p1.then(value =&gt; {
                 "surprising");
 
     // 注意 `string` 这时不会存在 'baz'。
-    // 因为这是发生在我们通过setTimeout模拟的异步函数中。
+    // 因为这是发生在我们通过 setTimeout 模拟的异步函数中。
     console.log(string);
   });
 
@@ -157,7 +157,7 @@ p2.then(function(value) {
 });
 </pre>
 
-<p>如果函数抛出错误或返回一个拒绝的Promise，则 <code>then</code> 将返回一个拒绝的Promise。</p>
+<p>如果函数抛出错误或返回一个拒绝的 Promise，则 <code>then</code> 将返回一个拒绝的 Promise。</p>
 
 <pre class="brush: js">Promise.resolve()
   .then(() =&gt; {
@@ -194,7 +194,7 @@ p2.then(function(value) {
 
 <pre class="brush: js">function fetch_current_data() {
   // fetch() API 返回了一个 Promise.
-  // 这个函数提供了类似的API，
+  // 这个函数提供了类似的 API，
   // 这个函数除了实现 Promise，它还能够完成更多的工作。
   return fetch('current-data.json').then(response =&gt; {
     if (response.headers.get('content-type') != 'application/json') {

@@ -15,7 +15,7 @@ tags:
 
 > **备注：** 可在下文的互动编辑器中尝试完成评估，也可借助 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) 等在线编程实用工具完成任务。
 >
-> 可访问本页最后一节来 {{anch("了解更多")}}。
+> 可访问本页最后一节来 [了解更多](#了解更多)。
 
 > **备注：** 以下示例中，如果代码存在错误，将在互动编译器的输出框中显示提示信息来帮助你完成，（如果使用下载版本，则在浏览器的 JavaScript 控制台显示）
 
@@ -67,7 +67,6 @@ tags:
 
 > **标注：** [下载 任务1 的起始版本](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables1-download.html)，然后使用你自选的编辑器完成任务。
 
-
 ## 变量 2
 
 本任务中我们希望你将代码中 `myName` 当前保存的值修改为你自己的名字。
@@ -109,7 +108,6 @@ section.appendChild(para);
 {{ EmbedLiveSample('变量 2', '100%', 360, '', '', 'hide-codepen-jsfiddle') }}
 
 > **标注：** [下载 任务2 的起始版本](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables2-download.html)，然后使用你自选的编辑器完成任务。
-
 
 ## 变量 3
 
@@ -153,6 +151,7 @@ section.appendChild(para2);
   <script class="editable"></script>
   <script src="https://roy-tian.github.io/learning-area/javascript/introduction-to-js-1/tasks/playable.js"></script>
 ```
+
 {{ EmbedLiveSample('变量 3', '100%', 420, '', '', 'hide-codepen-jsfiddle') }}
 
 > **标注：** [下载 任务3 的起始版本](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables3-download.html)，然后使用你自选的编辑器完成任务。

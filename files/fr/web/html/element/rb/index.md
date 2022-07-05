@@ -126,7 +126,7 @@ body {
 
 | Spécification                                                                                                    | État                         | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rb-element', '&lt;rb&gt;')}} | {{Spec2('HTML5 W3C')}} |              |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rb-element', '&lt;rb&gt;')}} | {{Spec2('HTML5 W3C')}} |              |
 
 ## Compatibilité des navigateurs
 

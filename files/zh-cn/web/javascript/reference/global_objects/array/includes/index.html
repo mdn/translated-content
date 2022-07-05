@@ -33,12 +33,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
  </div>
  </dd>
  <dt><code>fromIndex</code> {{optional_inline}}</dt>
- <dd>从<code>fromIndex</code> 索引处开始查找 <code>valueToFind</code>。如果为负值，则按升序从 <code>array.length + fromIndex</code> 的索引开始搜 （即使从末尾开始往前跳 <code>fromIndex</code> 的绝对值个索引，然后往后搜寻）。默认为 0。</dd>
+ <dd>从<code>fromIndex</code> 索引处开始查找 <code>valueToFind</code>。如果为负值，则按升序从 <code>array.length + fromIndex</code> 的索引开始搜（即使从末尾开始往前跳 <code>fromIndex</code> 的绝对值个索引，然后往后搜寻）。默认为 0。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>返回一个布尔值 {{jsxref("Boolean")}} 。<br>]如果在数组中（或 <code>fromIndex</code> 指定的范围中）找到了 <code>valueToFind</code>，则返回 <code>true</code>，否则返回 <code>false</code>。</p>
+<p>返回一个布尔值 {{jsxref("Boolean")}} 。<br>如果在数组中（或 <code>fromIndex</code> 指定的范围中）找到了 <code>valueToFind</code>，则返回 <code>true</code>，否则返回 <code>false</code>。</p>
 
 <p>0 的值将全部视为相等，与符号无关（即 -0 与 0 和 +0 相等），但 <code>false</code> 不被认为与 0 相等。</p>
 
@@ -144,7 +144,7 @@ if (!Array.prototype.includes) {
 
 </pre>
 
-<p>如果你需要支持那些不支持<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的废弃JavaScript 引擎，你最好不要 polyfill <code>Array.prototype</code> 方法，因为你不能使它们不可枚举。</p>
+<p>如果你需要支持那些不支持<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的废弃 JavaScript 引擎，你最好不要 polyfill <code>Array.prototype</code> 方法，因为你不能使它们不可枚举。</p>
 
 <h2 id="规范">规范</h2>
 

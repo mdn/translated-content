@@ -11,7 +11,7 @@ translation_of: Web/API/HTMLElement/offsetParent
 
 ### Résumé
 
-Renvoie une référence à l'objet qui est l'élément conteneur positionné le plus proche (dans la hiérarchie de positionnement). Si l'élément n'est pas positionné, c'est l'élément racine (html en mode de respect des standards ; body en mode de rendu quirks) qui est l'**offsetParent**.
+Renvoie une référence à l'objet qui est l'élément conteneur positionné le plus proche (dans la hiérarchie de positionnement). Si l'élément n'est pas positionné, c'est l'élément racine (html en mode de respect des standards&nbsp;; body en mode de rendu quirks) qui est l'**offsetParent**.
 
 ### Syntaxe
 

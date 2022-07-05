@@ -11,7 +11,7 @@ En CSS, tout élément est inclus dans une boîte ("_box_" en anglais). Comprend
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Compétences informatique basiques,
         <a
@@ -28,7 +28,7 @@ En CSS, tout élément est inclus dans une boîte ("_box_" en anglais). Comprend
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Apprendre les principes du Modèle de Boîte en CSS, ce qui constitue le
         Modèle de Boîte et comment passer au modèle alternatif.
@@ -120,20 +120,20 @@ Le modèle de boîte que nous allons voir s'applique totalement aux boîtes en b
 
 Lorsque l'on crée une boîte en bloc, on se retrouve avec les composants suivant :
 
-- **La boîte de contenu** : Il s'agit de la zone où sont affichés les éléments contenus par notre boîte, qui peut être dimensionnée en utilisant les propriétés CSS [`width`](/fr/docs/Web/CSS/width) et [`height`](/fr/docs/Web/CSS/height).
-- **La boîte de <i lang="en">padding</i>** **(marge intérieure)** : Le
+- **La boîte de contenu**&nbsp;: Il s'agit de la zone où sont affichés les éléments contenus par notre boîte, qui peut être dimensionnée en utilisant les propriétés CSS [`width`](/fr/docs/Web/CSS/width) et [`height`](/fr/docs/Web/CSS/height).
+- **La boîte de <i lang="en">padding</i>** **(marge intérieure)**&nbsp;: Le
 
   <i lang="en">padding</i>
 
   (ou remplissage en français) est une zone vierge qui se présente comme un espacement encadrant le contenu; sa taille peut être contrôlée sur chaque côté en utilisant la propriété [`padding`](/fr/docs/Web/CSS/padding) et ses autres propriétés connexes.
 
-- **La boîte de bordure** : La bordure englobe le contenu et le
+- **La boîte de bordure**&nbsp;: La bordure englobe le contenu et le
 
   <i lang="en">padding</i>
 
   pour former une bordure. Sa taille et son style sont paramétrés par la propriété [`border`](/fr/docs/Web/CSS/border) et ses propriétés sous-jacentes.
 
-- **La boîte de marge** : La marge est la couche la plus à l'extérieur, englobant le contenu, le
+- **La boîte de marge**&nbsp;: La marge est la couche la plus à l'extérieur, englobant le contenu, le
 
   <i lang="en">padding</i>
 

@@ -73,8 +73,8 @@ Dans Firefox, vous pouvez aussi activer `privacy.resistFingerprinting`, la préc
 
 | Spécification                                                                                    | Statut                               | Commentaire          |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-timestamp', 'Event.timeStamp')}}     | {{ Spec2('DOM WHATWG') }}     |                      |
-| {{SpecName('DOM4', '#dom-event-timestamp', 'Event.timeStamp')}}             | {{ Spec2('DOM4') }}             |                      |
+| {{SpecName('DOM WHATWG', '#dom-event-timestamp', 'Event.timeStamp')}}     | {{ Spec2('DOM WHATWG') }}     |                      |
+| {{SpecName('DOM4', '#dom-event-timestamp', 'Event.timeStamp')}}             | {{ Spec2('DOM4') }}             |                      |
 | {{SpecName('DOM2 Events', '#Events-Event-timeStamp', 'Event.timeStamp')}} | {{ Spec2('DOM2 Events') }} | Définition initiale. |
 
 ## Compatibilité des navigateurs

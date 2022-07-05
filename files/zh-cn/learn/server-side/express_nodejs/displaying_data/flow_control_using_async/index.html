@@ -38,7 +38,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <p>一个更好的解决方案，是并行执行所有请求，然后在所有查询完成后执行单个回调。这是 Async 模块简化的流操作！</p>
 
-<h2 class="highlight-spanned" id="平行的非同步操作"><span class="highlight-span">平行的非同步操作</span></h2>
+<h2 class="highlight-spanned" id="平行的非同步操作">平行的非同步操作</h2>
 
 <p>方法<code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#parallel" rel="noopener">async.parallel()</a></code>用于并行运行多个异步操作。</p>
 
@@ -48,55 +48,55 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <p>下面的示例，显示了当我们将对象作为第一个参数传递时它是如何工作的。如您所见，结果将返回到一个对象中，该对象具有与传入的原始函数相同的属性名称。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">parallel</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  one<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  two<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  something_else<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="comment token">// optional callback</span>
-  <span class="keyword token">function</span><span class="punctuation token">(</span>err<span class="punctuation token">,</span> results<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// 'results' is now equal to: {one: 1, two: 2, ..., something_else: some_value}</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">async.parallel({
+  one: function(callback) { ... },
+  two: function(callback) { ... },
+  ...
+  something_else: function(callback) { ... }
+  },
+  // optional callback
+  function(err, results) {
+    // 'results' is now equal to: {one: 1, two: 2, ..., something_else: some_value}
+  }
+);</code></pre>
 
 <p>如果您将一组函数，作为第一个参数传递，则结果将是一个数组（数组顺序结果，将与声明函数的原始顺序匹配 - 而不是它们完成的顺序）。</p>
 
-<h2 class="highlight-spanned" id="序列的非同步操作"><span class="highlight-span">序列的非同步操作</span></h2>
+<h2 class="highlight-spanned" id="序列的非同步操作">序列的非同步操作</h2>
 
 <p><code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#series" rel="noopener">async.series()</a></code>方法用于按顺序运行多个异步操作，后续函数不依赖于先前函数的输出。它本质上是声明的，并且行为与<code>async.parallel()</code>.相同。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">series</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  one<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  two<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  something_else<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="comment token">// optional callback after the last asynchronous function completes.</span>
-  <span class="keyword token">function</span><span class="punctuation token">(</span>err<span class="punctuation token">,</span> results<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// 'results' is now equals to: {one: 1, two: 2, ..., something_else: some_value} </span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">async.series({
+  one: function(callback) { ... },
+  two: function(callback) { ... },
+  ...
+  something_else: function(callback) { ... }
+  },
+  // optional callback after the last asynchronous function completes.
+  function(err, results) {
+    // 'results' is now equals to: {one: 1, two: 2, ..., something_else: some_value} 
+  }
+);</code></pre>
 
 <div class="note">
 <p><strong>注意:</strong> ECMAScript（JavaScript）语言规范指出，对象的枚举顺序是未定义的，因此可能不会按照在所有平台上指定它们的顺序，调用这些函数。如果顺序真的很重要，那么你应该传递一个数组而不是一个对象，如下所示。</p>
 </div>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">series</span><span class="punctuation token">(</span><span class="punctuation token">[</span>
-  <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// do some stuff ...</span>
-    <span class="function token">callback</span><span class="punctuation token">(</span><span class="keyword token">null</span><span class="punctuation token">,</span> <span class="string token">'one'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// do some more stuff ... </span>
-    <span class="function token">callback</span><span class="punctuation token">(</span><span class="keyword token">null</span><span class="punctuation token">,</span> <span class="string token">'two'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
- <span class="punctuation token">]</span><span class="punctuation token">,</span>
-  <span class="comment token">// optional callback</span>
-  <span class="keyword token">function</span><span class="punctuation token">(</span>err<span class="punctuation token">,</span> results<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// results is now equal to ['one', 'two'] </span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">async.series([
+  function(callback) {
+    // do some stuff ...
+    callback(null, 'one');
+  },
+  function(callback) {
+    // do some more stuff ... 
+    callback(null, 'two');
+  }
+ ],
+  // optional callback
+  function(err, results) {
+  // results is now equal to ['one', 'two'] 
+  }
+);</code></pre>
 
 <h2 class="highlight-spanned" id="依赖序列的非同步操作">依赖序列的非同步操作</h2>
 
@@ -106,24 +106,24 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <p>完成所有操作后，将使用上一操作的结果，调用最终回调。当您参考下面的代码片段时，这种工作方式会更加明确（此示例来自 <em>async</em> 文档）：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">waterfall</span><span class="punctuation token">(</span><span class="punctuation token">[</span>
-  <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="function token">callback</span><span class="punctuation token">(</span><span class="keyword token">null</span><span class="punctuation token">,</span> <span class="string token">'one'</span><span class="punctuation token">,</span> <span class="string token">'two'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="keyword token">function</span><span class="punctuation token">(</span>arg1<span class="punctuation token">,</span> arg2<span class="punctuation token">,</span> callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// arg1 now equals 'one' and arg2 now equals 'two' </span>
-    <span class="function token">callback</span><span class="punctuation token">(</span><span class="keyword token">null</span><span class="punctuation token">,</span> <span class="string token">'three'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="keyword token">function</span><span class="punctuation token">(</span>arg1<span class="punctuation token">,</span> callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// arg1 now equals 'three'</span>
-    <span class="function token">callback</span><span class="punctuation token">(</span><span class="keyword token">null</span><span class="punctuation token">,</span> <span class="string token">'done'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">]</span><span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">,</span> result<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// result now equals 'done'</span>
-<span class="punctuation token">}</span>
-<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">async.waterfall([
+  function(callback) {
+    callback(null, 'one', 'two');
+  },
+  function(arg1, arg2, callback) {
+    // arg1 now equals 'one' and arg2 now equals 'two' 
+    callback(null, 'three');
+  },
+  function(arg1, callback) {
+    // arg1 now equals 'three'
+    callback(null, 'done');
+  }
+], function (err, result) {
+  // result now equals 'done'
+}
+);</code></pre>
 
-<h2 class="highlight-spanned" id="安装_async">安装<span class="highlight-span"> async</span></h2>
+<h2 class="highlight-spanned" id="安装_async">安装 async</h2>
 
 <p>使用 NPM 包管理器安装 async 模块，以便我们可以在代码中使用它。您可以常规方式执行此操作，在 LocalLibrary 项目的根目录中，打开命令提示并输入以下命令：</p>
 

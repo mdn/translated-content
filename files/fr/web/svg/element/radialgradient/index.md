@@ -39,7 +39,7 @@ L'élément [SVG](/fr/docs/Web/SVG) **`<radialGradient>`** permet de définir un
 - {{SVGAttr("spreadMethod")}}
 - {{SVGAttr("xlink:href")}}
 
-## DOM Interface
+## DOM Interface
 
 Cet élément implémente l'interface {{domxref("SVGRadialGradientElement")}}.
 

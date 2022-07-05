@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/connect
 
 Appelez cette fonction pour configurer une connexion entre les scripts d'arrière-plan de l'extension (ou d'autres scripts privilégiés, tels que les scripts d'arrière-plan de l'extrension (ou d'autres scripts privilégiés, tels que les scripts de pages d'options) et les [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) appartenant à cette extension et s'exécutant dans l'onglet spécifié. Cette fonction renvoie un objet {{WebExtAPIRef("runtime.Port")}}.
 
-Lorsque cela est appelée, l'événement {{WebExtAPIRef('runtime.onConnect')}} est déclenché dans tout script de contenu appartenant à cette extension qui s'exécute dans l'onglet spécifié. L'écouteur d'événement recevra un autre objet  {{WebExtAPIRef("runtime.Port")}}. Les deux parties peuvent ensuite utiliser les objets `Port` pour échanger des messages.
+Lorsque cela est appelée, l'événement {{WebExtAPIRef('runtime.onConnect')}} est déclenché dans tout script de contenu appartenant à cette extension qui s'exécute dans l'onglet spécifié. L'écouteur d'événement recevra un autre objet  {{WebExtAPIRef("runtime.Port")}}. Les deux parties peuvent ensuite utiliser les objets `Port` pour échanger des messages.
 
 Pour plus de détails, voir [connection-based messaging](/fr/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging).
 

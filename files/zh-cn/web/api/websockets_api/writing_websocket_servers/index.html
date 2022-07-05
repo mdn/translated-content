@@ -68,7 +68,7 @@ Connection: Upgrade
 
 </strong></pre>
 
-<p>另外，服务器可以在这时候决定插件或子协议，详情参见<a href="/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#Miscellaneous">杂项</a>。  <code>Sec-WebSocket-Accept</code> 参数很有趣，它需要服务器通过客户端发送的<code>Sec-WebSocket-Key</code> 计算出来。 怎样计算呢， 把客户发送的<span style="line-height: 1.5em;"> </span><code style="font-size: 14px;">Sec-WebSocket-Key</code><span style="line-height: 1.5em;"> 和 "</span><code style="font-size: 14px;">258EAFA5-E914-47DA-95CA-C5AB0DC85B11</code><span style="line-height: 1.5em;">" (这个叫做 "</span><a href="https://en.wikipedia.org/wiki/Magic_string" style="line-height: 1.5em;">魔法值</a><span style="line-height: 1.5em;">")连接起来，把结果用<a href="https://zh.wikipedia.org/wiki/SHA-1">SHA-1</a>编码，再用<a href="https://zh.wikipedia.org/wiki/Base64">base64</a>编码一次，就可以了。 </span></p>
+<p>另外，服务器可以在这时候决定插件或子协议，详情参见<a href="/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#Miscellaneous">杂项</a>。  <code>Sec-WebSocket-Accept</code> 参数很有趣，它需要服务器通过客户端发送的<code>Sec-WebSocket-Key</code> 计算出来。 怎样计算呢， 把客户发送的 <code style="font-size: 14px;">Sec-WebSocket-Key</code> 和 "<code style="font-size: 14px;">258EAFA5-E914-47DA-95CA-C5AB0DC85B11</code>" (这个叫做 "<a href="https://en.wikipedia.org/wiki/Magic_string" style="line-height: 1.5em;">魔法值</a>")连接起来，把结果用<a href="https://zh.wikipedia.org/wiki/SHA-1">SHA-1</a>编码，再用<a href="https://zh.wikipedia.org/wiki/Base64">base64</a>编码一次，就可以了。 </p>
 
 <div class="note">
 <p><strong>参考：</strong>这看起来繁复的处理使得客户端明确服务端是否支持WebSocket。这是十分重要的，如果服务端接收到一个WebSocket连接但是把数据作为HTTP请求理解可能会导致安全问题。</p>
@@ -138,7 +138,7 @@ Connection: Upgrade
 <pre>var DECODED = "";
 for (var i = 0; i &lt; ENCODED.length; i++) {
     DECODED[i] = ENCODED[i] ^ MASK[i % 4];
-<span style="line-height: 1.5;">}</span></pre>
+}</pre>
 
 <p>现在，您可以根据应用程序了解解码意味着什么。</p>
 

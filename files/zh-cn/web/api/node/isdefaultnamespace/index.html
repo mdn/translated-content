@@ -5,13 +5,13 @@ translation_of: Web/API/Node/isDefaultNamespace
 ---
 <p>{{ ApiRef() }}</p>
 <h3 id="Summary" name="Summary">概述</h3>
-<p><code>isDefaultNamespace</code> 接受一个命名空间URI作为参数,如果该命名空间是当前节点的默认命名空间,则返回<code>true</code>,否则返回<code>false</code>.</p>
+<p><code>isDefaultNamespace</code> 接受一个命名空间 URI 作为参数，如果该命名空间是当前节点的默认命名空间，则返回<code>true</code>,否则返回<code>false</code>.</p>
 <h3 id="Syntax" name="Syntax">语法</h3>
 <pre class="eval"><em>result</em> = <em>node</em>.isDefaultNamespace(<em>namespaceURI</em>)
 </pre>
 <ul>
  <li><code>result</code> 为 <code>true</code> 或 <code>false</code>.</li>
- <li><code>namespaceURI</code> 为一个命名空间URI.</li>
+ <li><code>namespaceURI</code> 为一个命名空间 URI.</li>
 </ul>
 <h3 id="Example" name="Example">例子</h3>
 <pre>var XULNS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
@@ -23,4 +23,3 @@ alert(el.isDefaultNamespace(XULNS)); // true
  <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isDefaultNamespace">DOM Level 3 Core: isDefaultNamespace</a></li>
  <li><a href="/zh-cn/Code_snippets/IsDefaultNamespace" title="zh-cn/Code_snippets/IsDefaultNamespace">Code snippets: isDefaultNamespace</a></li>
 </ul>
-<p>{{ languages( {"en": "en/DOM/Node.isDefaultNamespace" } ) }}</p>

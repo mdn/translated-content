@@ -46,7 +46,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Ajoutez un élément de menu contextuel qui enregistre l'URL contextuelle de l'onglet en cours. Notez que vous aurez besoin de la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `contextMenus` dans votre [manifest](/fr/Add-ons/WebExtensions/manifest.json) pour créer des éléments de menu contextuel.
+Ajoutez un élément de menu contextuel qui enregistre l'URL contextuelle de l'onglet en cours. Notez que vous aurez besoin de la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `contextMenus` dans votre [manifest](/fr/Add-ons/WebExtensions/manifest.json) pour créer des éléments de menu contextuel.
 
 ```js
 function gotPopup(popupURL) {

@@ -264,7 +264,7 @@ On notera que les deux composantes pour l'année et pour la semaine sont complé
 
 ## Représentation des mois
 
-Une chaîne de caractères pour un mois représente un mois d'une année donnée (plutôt qu'un mois « générique »). Aussi, on ne représentera pas simplement le mois de janvier mais le mois de janvier de l'année 1972.
+Une chaîne de caractères pour un mois représente un mois d'une année donnée (plutôt qu'un mois «&nbsp;générique&nbsp;»). Aussi, on ne représentera pas simplement le mois de janvier mais le mois de janvier de l'année 1972.
 
 Une chaîne de caractères représentant un mois est valide si elle commence par un numéro d'année valide (une chaîne de caractères composée de quatre chiffres), suivie d'un tiret ("`-`", ou U+002D), suivi d'un nombre sur deux chiffres où `01` représente janvier et où `12` représente décembre.
 

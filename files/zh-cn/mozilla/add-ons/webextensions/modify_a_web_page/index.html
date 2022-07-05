@@ -46,11 +46,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 <p>"content_scripts"指出符合 URL 格式的页面地址，然后让浏览器加载脚本(“ page-eater.js“)到匹配的URL页面(<a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a> )。</p>
 
 <div class="note">
-<p><span id="result_box" lang="zh-CN"><span>由于</span></span> <code>content_scripts</code> <span lang="zh-CN"><span>的</span></span> <code>"js"</code> <span lang="zh-CN"><span>属性是一个数组，因此可以使用它将多个脚本注入匹配的页面。</span> <span>如果这样做，页面将按照数组中列出的顺序加载多个脚本。</span></span></p>
+<p>由于 <code>content_scripts</code> 的 <code>"js"</code> 属性是一个数组，因此可以使用它将多个脚本注入匹配的页面。 如果这样做，页面将按照数组中列出的顺序加载多个脚本。</p>
 </div>
 
 <div class="note">
-<p><code>content_scripts</code> <span class="short_text" lang="zh-CN"><span>键还具有一个</span></span> <code>"css"</code> <span class="short_text" lang="zh-CN"><span>属性，可以使用它来注入CSS样式表。</span></span></p>
+<p><code>content_scripts</code> 键还具有一个 <code>"css"</code> 属性，可以使用它来注入CSS样式表。</p>
 </div>
 
 <p>在 "modify-page" 文件夹下创建“ page-eater.js ”文件，内容如下：</p>
@@ -66,7 +66,7 @@ document.body.appendChild(header);</pre>
 <p>{{EmbedYouTube("lxf2Tkg6U1M")}}</p>
 
 <div class="note">
-<p><span id="result_box" lang="zh-CN"><span>请注意，虽然此视频显示在</span></span> <a href="https://addons.mozilla.org/en-US/firefox/">addons.mozilla.org</a> <span lang="zh-CN"><span>工作的</span></span> content scripts <span lang="zh-CN"><span>，但目前该网站已禁止</span></span> content scripts <span lang="zh-CN"><span>。</span></span></p>
+<p>请注意，虽然此视频显示在 <a href="https://addons.mozilla.org/en-US/firefox/">addons.mozilla.org</a> 工作的 content scripts ，但目前该网站已禁止 content scripts 。</p>
 </div>
 
 <h2 id="通过程序修改页面">通过程序修改页面</h2>
@@ -129,7 +129,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 <p>{{EmbedYouTube("zX4Bcv8VctA")}}</p>
 
 <div class="note">
-<p><span id="result_box" lang="zh-CN"><span>请注意，虽然此视频显示在</span></span> <a href="https://addons.mozilla.org/en-US/firefox/">addons.mozilla.org</a> <span lang="zh-CN"><span>工作的</span></span> content scripts <span lang="zh-CN"><span>，但目前该网站已禁止</span></span> content scripts <span lang="zh-CN"><span>。</span></span></p>
+<p>请注意，虽然此视频显示在 <a href="https://addons.mozilla.org/en-US/firefox/">addons.mozilla.org</a> 工作的 content scripts ，但目前该网站已禁止 content scripts 。</p>
 </div>
 
 <h2 id="消息">消息</h2>
@@ -206,7 +206,7 @@ browser.runtime.onMessage.addListener(eatPage);
 <p>如果我们想将消息从内容脚本发送到后台页面，除了在内容脚本中使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> ，其他与上面的过程相反。</p>
 
 <div class="note">
-<p><span id="result_box" lang="zh-CN"><span>这些例子注入的都是JavaScript;</span> 想</span><span lang="zh-CN"><span>注入CSS可以使用</span></span> <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS()</a></code> <span lang="zh-CN"><span>函数。</span></span></p>
+<p>这些例子注入的都是JavaScript; 想注入CSS可以使用 <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS()</a></code> 函数。</p>
 </div>
 
 <h2 id="了解更多">了解更多</h2>

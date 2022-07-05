@@ -36,7 +36,7 @@ translation_of: Learn/JavaScript/Asynchronous/Promises
 
 <p><code>getUserMedia()</code> 는 브라우저의 main thread에서 실행되므로 <code>getUserMedia()</code> 결과가 반환되기 전 까지 후행 작업이 모두 차단됩니다. 이러한 blocking은 우리가 바라는게 아닙니다. Promise가 없으면 이러한 결정이 내려지기 전 까지 브라우저의 모든 것을 사용할 수 없게됩니다. 따라서 사용자가 선택한 장치를 활성화하고 소스에서 선택된 스트림에 대해{{domxref("MediaStream")}} 직접 반환하는 대신 <code>getUserMedia()</code> 는 모든 장치가 사용 가능한 상태가 되면 {{domxref("MediaStream")}}이 포함된 {{jsxref("promise")}}를 반환합니다.</p>
 
-<p>비디오 채팅 애플리케이션의 코드는 아래처럼 작성할 수 있습입니다. :</p>
+<p>비디오 채팅 애플리케이션의 코드는 아래처럼 작성할 수 있습니다.</p>
 
 <pre class="brush: js notranslate">function handleCallButton(evt) {
   setStatusMessage("Calling...");

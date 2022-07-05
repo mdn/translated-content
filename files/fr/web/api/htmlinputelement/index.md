@@ -571,7 +571,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
         <code><em>string</em></code
         ><em>:</em> <strong>Returns / Sets</strong> the element's
         {{ htmlattrxref("step", "input") }} attribute, which works
-        with<strong> </strong>{{htmlattrxref("min","input")}} and
+        with {{htmlattrxref("min","input")}} and
         {{htmlattrxref("max","input")}} to limit the increments at
         which a numeric or date-time value can be set. It can be the string
         <code>any</code> or a positive floating point number. If this is not set
@@ -618,9 +618,9 @@ The **`HTMLInputElement`** interface provides special properties and methods for
   </tbody>
 </table>
 
-- {{domxref("HTMLInputElement.align")}} {{obsolete_inline}}
+- {{domxref("HTMLInputElement.align")}} {{deprecated_inline}}
   - : `string`_:_ **Represents** the alignment of the element. _Use CSS instead._
-- {{domxref("HTMLInputElement.useMap")}} {{ obsolete_inline }}
+- {{domxref("HTMLInputElement.useMap")}} {{deprecated_inline}}
   - : `string`_:_ **Represents** a client-side image map.
 
 ## Methods

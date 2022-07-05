@@ -10,7 +10,7 @@ original_slug: Server-sent_events/EventSource
 ---
 <p>{{APIRef("Websockets API")}}</p>
 
-<p class="summary"><code><strong>EventSource</strong></code> 是服务器推送的一个网络事件接口。一个EventSource实例会对HTTP服务开启一个持久化的连接，以<code>text/event-stream</code> 格式发送事件, 会一直保持开启直到被要求关闭。</p>
+<p><code><strong>EventSource</strong></code> 是服务器推送的一个网络事件接口。一个EventSource实例会对HTTP服务开启一个持久化的连接，以<code>text/event-stream</code> 格式发送事件, 会一直保持开启直到被要求关闭。</p>
 
 <p>一旦连接开启，来自服务端传入的消息会以事件的形式分发至你代码中。如果接收消息中有一个事件字段，触发的事件与事件字段的值相同。如果没有事件字段存在，则将触发通用事件。</p>
 

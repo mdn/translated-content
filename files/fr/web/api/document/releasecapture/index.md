@@ -10,7 +10,7 @@ tags:
   - Souris
 translation_of: Web/API/Document/releaseCapture
 ---
-{{ ApiRef("DOM") }} {{gecko_minversion_header("2.0")}}
+{{ ApiRef("DOM") }}
 
 Libère la capture de la souris si elle est actuellement activée (_bouton gauche enfoncé_) sur un élément de ce document. L'activation de la capture de la souris sur un élément se fait en appelant {{domxref("element.setCapture()")}}.
 

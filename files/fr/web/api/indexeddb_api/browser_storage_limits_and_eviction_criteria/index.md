@@ -23,14 +23,14 @@ Même dans le même navigateur, en utilisant la même méthode de stockage, il e
 
 Généralement, les deux principaux types de stockage sont les suivants :
 
-- Persistant : ce sont des données qui doivent être conservées pendant une longue période. Elles ne seront évincéés que si l'utilisateur le choisit (par exemple, dans Firefox, il existe un bouton "nettoyer stockage" dans la boîte de dialogue d'informations sur la page pour chaque page).
-- Temporaire : il s'agit de données qui n'ont pas besoin de persister très longtemps. Elles seront évacuées en-dessous d'un minimum d'utilisation ({{anch("LRU policy")}}) lorsque les limites de stockage sont atteintes.
+- Persistant : ce sont des données qui doivent être conservées pendant une longue période. Elles ne seront évincéés que si l'utilisateur le choisit (par exemple, dans Firefox, il existe un bouton "nettoyer stockage" dans la boîte de dialogue d'informations sur la page pour chaque page).
+- Temporaire : il s'agit de données qui n'ont pas besoin de persister très longtemps. Elles seront évacuées en-dessous d'un minimum d'utilisation (voir la [politique LRU](#politique_lru)) lorsque les limites de stockage sont atteintes.
 
 Par défaut, le stockage temporaire sera utilisé dans la plupart des contextes d'utilisation (par exemple, des applications Web standard) et le persistant pour les applications installées (par exemple, les applications Firefox installées sur le système d'exploitation Firefox OS / Firefox de bureau, les applications Chrome).
 
 ### Spécificités de Firefox
 
-Dans Firefox, vous pouvez choisir le type de stockage que vous souhaitez utiliser en incluant une option propriétaire — `storage` — lorsque vous créez une base de données IndexedDB en utilisant {{domxref ("IDBFactory.open ()", "open ()")}} :
+Dans Firefox, vous pouvez choisir le type de stockage que vous souhaitez utiliser en incluant une option propriétaire — `storage` — lorsque vous créez une base de données IndexedDB en utilisant {{domxref ("IDBFactory.open ()", "open ()")}} :
 
 - ```js
   var request = indexedDB.open("myDatabase", { version: 1, storage: "persistent" });
@@ -41,18 +41,18 @@ Dans Firefox, vous pouvez choisir le type de stockage que vous souhaitez utilis
 
 Dans Firefox, quand le stockage persistant est choisi, l'utilisateur reçoit une fenêtre de dialogue d'interface utilisateur pour l'avertir que ces données persisteront et lui demander s'il en est satisfait.
 
-Les données de stockage temporaire ne provoquent aucune fenêtre de dialogue vers l'utilisateur, mais il y a des {{anch("Limites de stockage")}}.
+Les données de stockage temporaire ne provoquent aucune fenêtre de dialogue vers l'utilisateur, mais il y a des [limites de stockage](#limites_de_stockage).
 
 ### "Default storage" dans Firefox _(stockage par défaut)_
 
-C'est le troisième type de stockage à envisager dans Firefox — "Default storage" _(stockage par défaut)_.  C'est une option par défaut, utilisée quand vous ne spécifiez pas le paramètre `storage`  vu ci-dessus. Les données du stockage par défaut se comportent différemment selon les circonstances : assimilées aux données d'un stockage persistant pour les applications installées de Firefox OS, ou d'un stockage temporaire pour tout autre type d'utilisation.
+C'est le troisième type de stockage à envisager dans Firefox — "Default storage" _(stockage par défaut)_.  C'est une option par défaut, utilisée quand vous ne spécifiez pas le paramètre `storage`  vu ci-dessus. Les données du stockage par défaut se comportent différemment selon les circonstances : assimilées aux données d'un stockage persistant pour les applications installées de Firefox OS, ou d'un stockage temporaire pour tout autre type d'utilisation.
 
 ## Où sont stockées les données ?
 
 Chaque type de stockage représente un référentiel distinct, voici la cartographie réelle des répertoires sous le profil Firefox d'un utilisateur (d'autres navigateurs peuvent différer légèrement) :
 
 - `<profile>/storage` — le principal, le plus haut niveau de répertoire pour le stockage maintenu par le " quota manager " _(manager de quotas)_ (voir ci-dessous).
-- `<profile>/storage/permanent` — répertoire de stockage des données persistantes.
+- `<profile>/storage/permanent` — répertoire de stockage des données persistantes.
 - `<profile>/storage/temporary` — répertoire de stockage des données temporaires.
 - `<profile>/storage/default` — répertoire de stockage des données par défaut.
 
@@ -66,11 +66,11 @@ Chaque type de stockage représente un référentiel distinct, voici la cartogra
 
 ## Limites de stockage
 
-L'espace de stockage maximal du navigateur est dynamique  — il est basé sur la taille de votre disque dur. La limite globale est calculée sur la base de 50% de l'espace disque libre. Dans Firefox, un outil interne du navigateur appelé " Quota Manager " _(gestionnaire de quotas)_ surveille la quantité d'espace disque utilisée par chaque origine et supprime les données si nécessaire.
+L'espace de stockage maximal du navigateur est dynamique  — il est basé sur la taille de votre disque dur. La limite globale est calculée sur la base de 50% de l'espace disque libre. Dans Firefox, un outil interne du navigateur appelé " Quota Manager " _(gestionnaire de quotas)_ surveille la quantité d'espace disque utilisée par chaque origine et supprime les données si nécessaire.
 
 Donc, si votre disque dur est de 500 Go, le stockage total d'un navigateur est de 250 Go. S'il est dépassé, une procédure appelée **"origin eviction"** _(éviction d'origine)_ entre en jeu, en supprimant la valeur totale de l'origine jusqu'à ramener le niveau de stockage en-dessous de la limite. La suppression d'une base de données d'origine peut entraîner des problèmes d'incohérence.
 
-Il y a aussi une autre limite appelée **group limit** — ceci est défini comme 20% de la limite globale. Chaque origine fait partie d'un groupe (groupe d'origines). Il existe un groupe pour chaque domaine eTLD + 1.
+Il y a aussi une autre limite appelée **group limit** — ceci est défini comme 20% de la limite globale. Chaque origine fait partie d'un groupe (groupe d'origines). Il existe un groupe pour chaque domaine eTLD + 1.
 
 Par exemple :
 
@@ -86,7 +86,7 @@ Les deux limites reagissent différemment quand la limite est atteinte :
 - La limite de groupe est également appelée «limite dure»: elle ne déclenche pas l'éviction d'origine.
 - La limite globale est une «limite douce» car il est possible que certains espaces soient libérés et que l'opération puisse se poursuivre.
 
-> **Note :** Si la limite de groupe est dépassée, ou si l'éviction d'origine ne crée pas assez d'espace libre, le navigateur lance  `QuotaExceededError`.
+> **Note :** Si la limite de groupe est dépassée, ou si l'éviction d'origine ne crée pas assez d'espace libre, le navigateur lance  `QuotaExceededError`.
 
 ## Politique LRU
 

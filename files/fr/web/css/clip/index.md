@@ -99,7 +99,7 @@ clip: unset;
 
 | Spécification                                                                    | État                                     | Commentaires                                                                                                |
 | -------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS Masks', '#clip-property', 'clip')}}             | {{Spec2('CSS Masks')}}             | Dépréciation de la propriété `clip` et proposition de  {{cssxref("clip-path")}} comme remplacement. |
+| {{SpecName('CSS Masks', '#clip-property', 'clip')}}             | {{Spec2('CSS Masks')}}             | Dépréciation de la propriété `clip` et proposition de  {{cssxref("clip-path")}} comme remplacement. |
 | {{SpecName('CSS3 Transitions', '#animatable-css', 'clip')}} | {{Spec2('CSS3 Transitions')}} | `clip` peut être animée.                                                                                    |
 | {{SpecName('CSS2.1', 'visufx.html#clipping', 'clip')}}         | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                        |
 

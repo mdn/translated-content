@@ -23,7 +23,7 @@ translation_of: Web/EXSLT/exsl/object-type
 
 ### Retourne
 
-Le type de l'`objet`, qui sera un des types suivants :
+Le type de l'`objet`, qui sera un des types suivants&nbsp;:
 
 - `string` (chaîne)
 - `number` (nombre)

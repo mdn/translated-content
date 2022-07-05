@@ -16,9 +16,9 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
 {{APIRef("Fetch")}}
 
-La méthode **`fetch()`** du mixin {{domxref("WindowOrWorkerGlobalScope")}} démarre le chargement d'une ressource sur le réseau et retourne une promesse qui est résolue dès que la réponse est disponible. La promesse résoud l'objet {{domxref("Response")}} représentant la réponse de votre requête. Cette promesse n'échoue pas en cas d'erreur HTTP, elle n'échoue que sur les problèmes de réseau. Vous devez utiliser un gestionnaire `then` pour identifier les erreurs HTTP.
+La méthode **`fetch()`** du mixin {{domxref("WindowOrWorkerGlobalScope")}} démarre le chargement d'une ressource sur le réseau et retourne une promesse qui est résolue dès que la réponse est disponible. La promesse résoud l'objet {{domxref("Response")}} représentant la réponse de votre requête. Cette promesse n'échoue pas en cas d'erreur HTTP, elle n'échoue que sur les problèmes de réseau. Vous devez utiliser un gestionnaire `then` pour identifier les erreurs HTTP.
 
-`WindowOrWorkerGlobalScope` est aussi bien implémenté par {{domxref("Window")}} que par {{domxref("WorkerGlobalScope")}}, ce qui signifie que la méthode `fetch()` est disponible dans la plupart des cas où vous pourriez en avoir besoin.
+`WindowOrWorkerGlobalScope` est aussi bien implémenté par {{domxref("Window")}} que par {{domxref("WorkerGlobalScope")}}, ce qui signifie que la méthode `fetch()` est disponible dans la plupart des cas où vous pourriez en avoir besoin.
 
 Une promesse {{domxref("GlobalFetch.fetch","fetch()")}} n'est rejetée que quand un problème de réseau est rencontré, même si en réalité cela signifie généralement qu'il y a un problème de permissions ou quelque chose de similaire. La promesse ne sera pas rejetée en cas d'erreur HTTP (`404`, etc.) Pour cela, un gestionnaire `then()` doit vérifier que la propriété {{domxref("Response.ok")}} ait bien pour valeur `true` et/ou la valeur de la propriété {{domxref("Response.status")}}.
 
@@ -58,7 +58,7 @@ La méthode `fetch()` est contrôlée par la directive `connect-src` de l'entêt
     - `redirect`
       - : Le mode de redirection à adopter pour cette requête : `follow` (suivre les redirections automatiquement), `error` (abandonner avec une erreur si une redirection a lieu), ou `manual` (gérer les redirections manuellement). Dans Chrome, la valeur par défaut était `follow` avant Chrome 47, mais à partir de cette version, c'est `manual`.
     - `referrer`
-      - : Un USVString qui vaut `no-referrer`, `client`, ou qui contient une URL. La valeur par défaut est `client`.
+      - : Un USVString qui vaut `no-referrer`, `client`, ou qui contient une URL. La valeur par défaut est `client`.
     - `referrerPolicy`
       - : Spécifie la valeur de l'entête HTTP referer. Cela peut être `no-referrer`, `no-referrer-when-downgrade`, `origin`, `origin-when-cross-origin` ou `unsafe-url`.
     - `integrity`

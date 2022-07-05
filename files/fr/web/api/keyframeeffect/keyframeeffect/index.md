@@ -15,7 +15,7 @@ original_slug: Web/API/EffectTiming/delay
 
 La propriété **`delay`** est un dictionnaire pour {{domxref("AnimationEffectTimingProperties")}} qui représente le nombre de millisecondes à attendre avant de démarrer une animation.
 
-> **Note :** {{domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly", "KeyframeEffectReadOnly()")}} et {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} acceptent toutes un objet avec des propriétés de minutage, y compris `delay`. La valeur de `delay` correspond directement à {{domxref("AnimationEffectTimingReadOnly.delay")}} dans les objets  {{domxref("AnimationEffectReadOnly.timing")}} renvoyés par {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}} et {{domxref("KeyframeEffect")}}.
+> **Note :** {{domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly", "KeyframeEffectReadOnly()")}} et {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} acceptent toutes un objet avec des propriétés de minutage, y compris `delay`. La valeur de `delay` correspond directement à {{domxref("AnimationEffectTimingReadOnly.delay")}} dans les objets  {{domxref("AnimationEffectReadOnly.timing")}} renvoyés par {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}} et {{domxref("KeyframeEffect")}}.
 
 ## Syntaxe
 

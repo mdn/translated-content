@@ -12,7 +12,7 @@ Cet article décrit comment utiliser l'API [DOM Core (en)](https://www.w3.org/TR
 
 ### Créer dynamiquement un arbre DOM
 
-Considérons le document XML suivant :
+Considérons le document XML suivant&nbsp;:
 
     <?xml version="1.0"?>
     <people>
@@ -28,7 +28,7 @@ Considérons le document XML suivant :
       </person>
     </people>
 
-L'API DOM du W3C, supportée par Mozilla, peut être utilisée pour créer une représentation en mémoire de ce document comme cela :
+L'API DOM du W3C, supportée par Mozilla, peut être utilisée pour créer une représentation en mémoire de ce document comme cela&nbsp;:
 
     var doc = document.implementation.createDocument("", "", null);
     var peopleElem = doc.createElement("people");
@@ -129,7 +129,7 @@ Vous pouvez automatiser la création de l'arbre DOM en utilisant un algorithme i
 
 ### Et après ?
 
-Les arbres DOM peuvent être interrogés en utilisant des [expressions XPath](/fr/docs/Introduction_%C3%A0_l'utilisation_de_XPath_avec_JavaScript), convertis en chaîne de caractères ou écris dans un fichier local ou distant en utilisant [XMLSerializer](/fr/docs/Web/Guide/Parsing_and_serializing_XML) (sans avoir à le convertir en chaîne de caractères auparavant), [envoyés à un serveur Web](/fr/docs/Web/API/XMLHttpRequest) (via XMLHttpRequest), transformés en utilisant [XSLT](/fr/docs/XSLT), [XLink](/fr/docs/Glossaire/XLink),  convertis en un objet JavaScript à travers un [algorithme JXON](/fr/docs/Archive/JXON), etc.
+Les arbres DOM peuvent être interrogés en utilisant des [expressions XPath](/fr/docs/Introduction_%C3%A0_l'utilisation_de_XPath_avec_JavaScript), convertis en chaîne de caractères ou écris dans un fichier local ou distant en utilisant [XMLSerializer](/fr/docs/Web/Guide/Parsing_and_serializing_XML) (sans avoir à le convertir en chaîne de caractères auparavant), [envoyés à un serveur Web](/fr/docs/Web/API/XMLHttpRequest) (via XMLHttpRequest), transformés en utilisant [XSLT](/fr/docs/XSLT), [XLink](/fr/docs/Glossaire/XLink),  convertis en un objet JavaScript à travers un [algorithme JXON](/fr/docs/Archive/JXON), etc.
 
 Vous pouvez utiliser des arbres DOM pour modéliser des données qui ne peuvent pas être traitées avec RDF (ou si vous n'aimez pas RDF). Un autre champ d'action est que, comme XUL est du XML, l'UI de votre application peut être manipulée dynamiquement, téléchargée, enregistrée, chargée, convertie ou transformée relativement facilement.
 

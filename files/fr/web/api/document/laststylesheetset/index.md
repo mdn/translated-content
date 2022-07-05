@@ -8,7 +8,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Document/lastStyleSheetSet
 ---
-{{ APIRef("DOM") }}{{ gecko_minversion_header("1.9") }}
+{{ APIRef("DOM") }}
 
 Renvoie le dernier jeu de feuilles de styles activé ; cette valeur de la propriété change chaque fois que la propriété {{ domxref("document.selectedStyleSheetSet") }} est modifiée.
 
@@ -27,7 +27,7 @@ var lastSheetSet = document.lastStyleSheetSet;
 if (!lastSheetSet) {
   lastSheetSet = "Sheet not yet changed";
 }
-console.log("The last sheet set is: " + lastSheetSet);
+console.log("The last sheet set is: " + lastSheetSet);
 ```
 
 ## Voir aussi
@@ -39,4 +39,4 @@ console.log("The last sheet set is: " + lastSheetSet);
 
 ## Spécifications
 
-- [HTML5: Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+- [HTML5: Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)

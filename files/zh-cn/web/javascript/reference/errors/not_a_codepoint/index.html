@@ -17,11 +17,11 @@ RangeError: Invalid code point {0} (Chrome)
 
 <h2 id="什么地方出错了？">什么地方出错了？</h2>
 
-<p> {{jsxref("String.fromCodePoint()")}} 这个方法只能接受有效的码位（code point） 。</p>
+<p> {{jsxref("String.fromCodePoint()")}} 这个方法只能接受有效的码位（code point）。</p>
 
 <p>码位（ <a href="https://en.wikipedia.org/wiki/Code_point">code point</a>）是组成码空间（或代码页）的数值，范围是 0 到 0x10FFFF。</p>
 
-<p> {{jsxref("NaN")}}，负整数（-1），非整数（3.14），或编号大于0x10FFFF (1114111) 的字符，无法使用该方法。</p>
+<p> {{jsxref("NaN")}}，负整数（-1），非整数（3.14），或编号大于 0x10FFFF (1114111) 的字符，无法使用该方法。</p>
 
 <h2 id="范例">范例</h2>
 

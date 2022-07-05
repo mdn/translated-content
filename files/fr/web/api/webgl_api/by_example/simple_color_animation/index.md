@@ -11,8 +11,6 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Simple_color_animation
 original_slug: Web/API/WebGL_API/By_example/Créer_une_animation_colorée
 ---
-{{IncludeSubnav("/fr/Apprendre")}}
-
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris","Apprendre/WebGL/Par_exemple/Masque_de_couleur")}}
 
 Dans cet exemple, on crée une animation avec des couleurs en appliquant chaque seconde une couleur aléatoire dans le contexte de rendu {{Glossary("WebGL")}}.

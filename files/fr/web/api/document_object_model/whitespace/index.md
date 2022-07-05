@@ -7,12 +7,12 @@ translation_of: Web/API/Document_Object_Model/Whitespace
 ---
 ## Le problème
 
-La présence d'espaces et de blancs dans le [DOM](fr/DOM) peut rendre la manipulation de l'arbre de contenu difficile dans des aspects qu'on ne prévoit pas forcément. Dans Mozilla, tous les espaces et blancs dans le contenu texte du document original sont représentés dans le DOM (cela ne concerne pas les blancs à l'intérieur des balises). (C'est nécessaire en interne afin que l'éditeur puisse conserver le formatage des documents et que l'instruction `white-space: pre` en [CSS](fr/CSS) fonctionne.) Cela signifie que :
+La présence d'espaces et de blancs dans le [DOM](fr/DOM) peut rendre la manipulation de l'arbre de contenu difficile dans des aspects qu'on ne prévoit pas forcément. Dans Mozilla, tous les espaces et blancs dans le contenu texte du document original sont représentés dans le DOM (cela ne concerne pas les blancs à l'intérieur des balises). (C'est nécessaire en interne afin que l'éditeur puisse conserver le formatage des documents et que l'instruction `white-space: pre` en [CSS](fr/CSS) fonctionne.) Cela signifie que&nbsp;:
 
 - il y aura certains nœuds texte qui ne contiendront que du vide, et
 - certains nœuds texte commenceront ou se termineront par des blancs.
 
-En d'autres termes, l'arbre DOM pour le document qui suit ressemblera à l'image ci-dessous (où « \n » représente un retour à la ligne) :
+En d'autres termes, l'arbre DOM pour le document qui suit ressemblera à l'image ci-dessous (où «&nbsp;\n&nbsp;» représente un retour à la ligne)&nbsp;:
 
     <!-- My document -->
     <html>
@@ -58,7 +58,7 @@ On peut formater leur code comme indiqué ci-dessous pour contourner le problèm
 ></div>
 ```
 
-Le code JavaScript ci-dessous définit plusieurs fonctions facilitant la manipulation d'espaces dans le DOM :
+Le code JavaScript ci-dessous définit plusieurs fonctions facilitant la manipulation d'espaces dans le DOM&nbsp;:
 
 ```js
 /**
@@ -76,7 +76,7 @@ Le code JavaScript ci-dessous définit plusieurs fonctions facilitant la manipul
 /**
  * Détermine si le contenu du texte d'un nœud est entièrement blanc.
  *
- * @param nod  Un nœud implémentant l'interface |CharacterData| (c'est-à-dire,
+ * @param nod Un nœud implémentant l'interface |CharacterData| (c'est-à-dire,
  *             un nœud |Text|, |Comment| ou |CDATASection|
  * @return     True (vrai) Si tout le contenu du texte du |nod| est un espace,
  *             sinon false (faux).
@@ -91,7 +91,7 @@ function is_all_ws( nod )
 /**
  * Détermine si le nœud doit être ignoré par les fonctions d'itération.
  *
- * @param nod  Un objet implémentant l'interface DOM1 |Node|.
+ * @param nod Un objet implémentant l'interface DOM1 |Node|.
  * @return     true (vrai) si le nœud est :
  *                1) un nœud |Text| qui est tout en espace
  *                2) un nœud |Comment|
@@ -111,7 +111,7 @@ function is_ignorable( nod )
  * un enfant du même parent, qui se produit immédiatement avant le
  * nœud référence.)
  *
- * @param sib  Le nœud référence .
+ * @param sib Le nœud référence .
  * @return     soit :
  *               1) le frère précédent le plus proche de |sib| qui ne peut
  *                  être ignoré du fait de la fonction |is_ignorable|, ou
@@ -129,7 +129,7 @@ function node_before( sib )
  * Version de |nextSibling| qui ignore les nœuds qui sont entièrement
  * espace ou commentaire.
  *
- * @param sib  Le nœud référence .
+ * @param sib Le nœud référence .
  * @return     soit :
  *               1) le frère précédent le plus proche de |sib| qui ne peut
  *                  être ignoré du fait de la fonction |is_ignorable|, ou
@@ -149,7 +149,7 @@ function node_after( sib )
  * de tous les nœuds DOM qui donnent le dernier des nœuds contenus
  * directement dans le nœud de référence.)
  *
- * @param sib  Le nœud référence.
+ * @param sib Le nœud référence.
  * @return     soit :
  *               1) Le dernier enfant de |sib| qui ne peut
  *                  être ignoré du fait de la fonction |is_ignorable|, ou
@@ -169,7 +169,7 @@ function last_child( par )
  * Version de |firstChild| qui ignore les nœuds qui sont entièrement
  * espace ou commentaire..
  *
- * @param sib  le nœud référence.
+ * @param sib le nœud référence.
  * @return     soit:
  *               1) le nœud premier enfant de |sib| qui ne peut
  *                  être ignoré du fait de la fonction |is_ignorable|, ou
@@ -190,7 +190,7 @@ function first_child( par )
  * et termine et normalise tous les espaces dans un seul espace. (Normalement
  * |data | est une propriété des nœuds de texte qui donne le texte du nœud.)
  *
- * @param txt  Le nœud de texte dont les données doivent être renvoyées
+ * @param txt Le nœud de texte dont les données doivent être renvoyées
  * @return     Une chaîne donnant le contenu du nœud de texte avec
  *             espace blanc s'est effondré.
  */

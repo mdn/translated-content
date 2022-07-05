@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/closePath
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D.closePath()`** de l'API Canvas 2D provoque le retour du stylo au point de départ du sous-traçé courant. Il le fait en ajoutant une ligne droite entre le point courant et le point rejoint. Si la figure a déjà été fermée ou n'est constituée que d'un seul point, cette méthode ne provoque rien.
+La méthode **`CanvasRenderingContext2D.closePath()`** de l'API Canvas 2D provoque le retour du stylo au point de départ du sous-traçé courant. Il le fait en ajoutant une ligne droite entre le point courant et le point rejoint. Si la figure a déjà été fermée ou n'est constituée que d'un seul point, cette méthode ne provoque rien.
 
 ## Syntax
 
@@ -44,8 +44,8 @@ Editez le code ci-dessous et observez les répercutions dans le canvas:
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code" style="height:140px;">
 ctx.beginPath();
@@ -88,7 +88,7 @@ window.addEventListener("load", drawCanvas);
 
 | Spécification                                                                                                                                    | Statut                           | Commentaire |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-closepath", "CanvasRenderingContext2D.closePath")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-closepath", "CanvasRenderingContext2D.closePath")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité navigateurs
 

@@ -7,7 +7,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/readyState
 ---
-<div>{{APIRef("DOM")}} {{ gecko_minversion_header("1.9.2") }}</div>
+<div>{{APIRef("DOM")}}</div>
 
 <h2 id="Summary" name="Summary">總覽</h2>
 
@@ -33,11 +33,11 @@ translation_of: Web/API/Document/readyState
 <pre class="brush: js"><em>var string</em> = document.readyState;
 </pre>
 
-<h2 id="範例"><span>範例</span></h2>
+<h2 id="範例">範例</h2>
 
 <h3 id="不同的狀態">不同的狀態</h3>
 
-<pre class="brush: js"><span>switch (document.readyState) {
+<pre class="brush: js">switch (document.readyState) {
   case "loading":
     // 文件讀取中。
     break;
@@ -51,7 +51,7 @@ translation_of: Web/API/Document/readyState
     // 頁面已經完成讀取。
     console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
     break;
-}</span>
+}
 </pre>
 
 <h3 id="readystatechange_替代_DOMContentLoaded">readystatechange 替代 DOMContentLoaded</h3>

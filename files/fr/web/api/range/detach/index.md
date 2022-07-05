@@ -5,7 +5,7 @@ translation_of: Web/API/Range/detach
 ---
 {{ApiRef("DOM")}}
 
-La méthode **`Range.detach()`** n'a aucun effet. Elle permet de désactiver l'objet {{domxref("Range")}} et de libérer les ressources associées. Cette méthode a été conservée pour des raisons de compatibilités.
+La méthode **`Range.detach()`** n'a aucun effet. Elle permet de désactiver l'objet {{domxref("Range")}} et de libérer les ressources associées. Cette méthode a été conservée pour des raisons de compatibilités.
 
 ## Syntaxe
 

@@ -75,7 +75,7 @@ Ceci est le troisième exemple expliquant comment [construire des widgets de for
 }
 
 /* ------------ */
-/* Style  chic  */
+/* Style chic  */
 /* ------------ */
 
 .select {

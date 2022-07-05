@@ -22,7 +22,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 - {{htmlattrdef("abbr")}}
   - : Cet attribut contient une description courte et abrégée du contenu de la cellule. Certains outils utilisateurs, comme la synthèse vocale, peuvent décrire cette information avant le contenu lui-même.
 - {{htmlattrdef("colspan")}}
-  - : Cet attribut contient un entier positif indiquant le nombre de colonnes sur lesquelles s'étend la cellule. La valeur par défaut est 1. Si cet attribut vaut 0, la cellule s'étend jusqu'à la fin du  {{HTMLElement("colgroup")}} auquel appartient la cellule, même si celui-ci est défini implicitement. Des valeurs supérieures à 1000 peuvent être considérées comme incorrectes et seront écrétées à 1000.
+  - : Cet attribut contient un entier positif indiquant le nombre de colonnes sur lesquelles s'étend la cellule. La valeur par défaut est 1. Si cet attribut vaut 0, la cellule s'étend jusqu'à la fin du  {{HTMLElement("colgroup")}} auquel appartient la cellule, même si celui-ci est défini implicitement. Des valeurs supérieures à 1000 peuvent être considérées comme incorrectes et seront écrétées à 1000.
 - {{htmlattrdef("headers")}}
   - : Cet attribut est une liste de chaînes de caractères séparées par des espace. Chacune correspond à l'attribut `id` de l'élément {{HTMLElement("th")}} qui s'applique à cet élément.
 - {{htmlattrdef("rowspan")}}
@@ -39,7 +39,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ### Attributs dépréciés ou obsolètes
 
-- {{htmlattrdef("align")}} {{obsolete_inline}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("align")}} {{deprecated_inline}} {{HTMLVersionInline("5")}}
 
   - : Cet attribut à valeurs définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont :
 
@@ -47,7 +47,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     - `center` : le contenu de la cellule est centré horizontalement
     - `right` : le contenu de la cellule est aligné à droite de la cellule
     - `justify` : insert des espaces dans le contenu textuel afin que le contenu de la cellule soit justifié
-    - `char` : aligne le contenu textuel de la cellule selon un caractère spécial avec un décalage minimum définis par les attributs  {{htmlattrxref("char", "th")}} et {{htmlattrxref("charoff", "th")}} {{unimplemented_inline(2212)}}.
+    - `char` : aligne le contenu textuel de la cellule selon un caractère spécial avec un décalage minimum définis par les attributs  {{htmlattrxref("char", "th")}} et {{htmlattrxref("charoff", "th")}} {{unimplemented_inline(2212)}}.
 
     Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
 
@@ -56,7 +56,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     > - Pour réaliser les mêmes effets que les valeurs `left`, `center`, `right` ou `justify`, il faut utiliser la propriété CSS {{cssxref("text-align")}} sur l'élément
     > - Pour réaliser le même effet qu'avec la valeur `char`. Il est possible, en CSS3, d'utiliser la valeur de l'attribut {{htmlattrxref("char", "th")}} comme valeur de la propriété {{cssxref("text-align")}}. {{unimplemented_inline}}.
 
-- {{htmlattrdef("axis")}} {{obsolete_inline}} en {{HTMLVersionInline("5")}}
+- {{htmlattrdef("axis")}} {{deprecated_inline}} en {{HTMLVersionInline("5")}}
 
   - : Cet attribut contient une liste de chaîne de caractères (séparées par des espaces). Chaque chaîne de caractère est l'identifiant d'un groupe de cellule auquel cet en-tête s'applique.
 
@@ -68,19 +68,19 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
     > **Note :** Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci n'est pas un attribut standard et n'a été implémentée que sous certaines versions d'Internet Explorer. L'élément {{HTMLElement("th")}} doit être mis en forme grâce au [CSS](/fr/docs/CSS). Pour fournir un effet semblable à celui achevé par l'attribut **`bgcolor`**, il est possible d'utiliser la propriété CSS {{cssxref("background-color")}}.
 
-- {{htmlattrdef("char")}} {{obsolete_inline}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("char")}} {{deprecated_inline}} {{HTMLVersionInline("5")}}
 
   - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut {{htmlattrxref("align", "th")}} ne vaut pas `char`, l'attribut est ignoré.
 
     > **Note :** Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec {{htmlattrxref("char", "th")}}, on peut utiliser CSS3 en attribuant la même valeur à la propriété {{cssxref("text-align")}}.{{unimplemented_inline}}.
 
-- {{htmlattrdef("charoff")}} {{obsolete_inline}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("charoff")}} {{deprecated_inline}} {{HTMLVersionInline("5")}}
 
   - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut **char** à appliquer au contenu des cellules.
 
     > **Note :** Cet attribut ne doit plus être utilisé car il est maintenant obsolète et n'est plus supporté dans le dernier standard.
 
-- {{htmlattrdef("valign")}} {{Deprecated_inline}} en {{HTMLVersionInline("4")}}, {{obsolete_inline}} en {{HTMLVersionInline("5")}}
+- {{htmlattrdef("valign")}} {{Deprecated_inline}} en {{HTMLVersionInline("4")}}, {{deprecated_inline}} en {{HTMLVersionInline("5")}}
 
   - : Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles de cet attribut sont :
 
@@ -176,8 +176,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 | Spécification                                                                                    | État                             | Commentaires |
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG','tables.html#the-th-element','th element')}}     | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C','tabular-data.html#the-th-element','th element')}} | {{Spec2('HTML5 W3C')}}     |              |
+| {{SpecName('HTML WHATWG','tables.html#the-th-element','th element')}}     | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C','tabular-data.html#the-th-element','th element')}} | {{Spec2('HTML5 W3C')}}     |              |
 
 ## Compatibilité des navigateurs
 

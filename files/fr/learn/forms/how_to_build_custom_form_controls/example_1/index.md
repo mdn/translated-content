@@ -9,7 +9,7 @@ translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_1
 original_slug: >-
   Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1
 ---
-C'est le premier exemple de code qui explique [comment construire un widget de formulaire personnalisé](/fr/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets).
+C'est le premier exemple de code qui explique [comment construire un widget de formulaire personnalisé](/fr/docs/Learn/Forms/How_to_build_custom_form_controls).
 
 ## État initial
 
@@ -58,7 +58,7 @@ C'est le premier exemple de code qui explique [comment construire un widget de f
 }
 
 /* ------------ */
-/* Style  Chic  */
+/* Style Chic  */
 /* ------------ */
 
 .select {
@@ -198,7 +198,7 @@ C'est le premier exemple de code qui explique [comment construire un widget de f
 }
 
 /* ------------ */
-/* Style  Chic  */
+/* Style Chic  */
 /* ------------ */
 
 .select {
@@ -338,7 +338,7 @@ C'est le premier exemple de code qui explique [comment construire un widget de f
 }
 
 /* ------------ */
-/* Style  Chic  */
+/* Style Chic  */
 /* ------------ */
 
 .select {

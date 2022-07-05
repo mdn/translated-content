@@ -12,7 +12,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_group
 
 Cette technique présente l’utilisation du rôle [group](http://www.w3.org/TR/wai-aria/roles#group) et décrit les effets produits sur les navigateurs et les technologies d’assistance.
 
-Le rôle `group` est utilisé pour identifier un ensemble d’objets de l’interface utilisateur qui, contrairement à une [`region`](http://www.w3.org/TR/wai-aria/roles#region), ne sont pas destinés à être intégrés dans une table de contenus ou une page récapitulative (telles que des structures dynamiquement créées par des scripts ou par les technologies d’assistance) ; un groupe ne devrait pas être considéré comme une partie perceptible majeure d’une page. Lorsque le rôle `group` est ajouté à un élément, , le navigateur émettra un événement `group` accessible aux produits de technologie d’assistance qui pourront alors le notifier à l’utilisateur.
+Le rôle `group` est utilisé pour identifier un ensemble d’objets de l’interface utilisateur qui, contrairement à une [`region`](http://www.w3.org/TR/wai-aria/roles#region), ne sont pas destinés à être intégrés dans une table de contenus ou une page récapitulative (telles que des structures dynamiquement créées par des scripts ou par les technologies d’assistance)&nbsp;; un groupe ne devrait pas être considéré comme une partie perceptible majeure d’une page. Lorsque le rôle `group` est ajouté à un élément, , le navigateur émettra un événement `group` accessible aux produits de technologie d’assistance qui pourront alors le notifier à l’utilisateur.
 
 Un groupe devrait utilisé pour former un ensemble logique d’éléments avec des fonctions connexes, tels que les enfants dans un composant d’arborescence formant un ensemble apparenté dans une hiérarchie, ou une collection d’éléments ayant le même conteneur dans un répertoire. Cependant, lorsqu’on utilise un groupe pour former une liste, les développeurs doivent limiter ses enfants aux éléments [listitem](http://www.w3.org/TR/wai-aria/roles#listitem). Les éléments de groupe devraient être imbriqués.
 
@@ -22,12 +22,12 @@ Si un auteur pense qu’une section est suffisamment importante pour faire parti
 
 ### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
-Lorsque le rôle `group` est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes :
+Lorsque le rôle `group` est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes&nbsp;:
 
-- Présenter l’élément ayant un rôle de groupe à l’API d’accessibilité du système d’exploitation ;
+- Présenter l’élément ayant un rôle de groupe à l’API d’accessibilité du système d’exploitation&nbsp;;
 - Déclencher un événement groupe accessible à l’aide l’API d’accessibilité du système d’exploitation si elle le prend en charge.
 
-Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence :
+Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence&nbsp;:
 
 - Les lecteurs d’écran devraient annoncer le groupe lorsque le focus atteint l’un des contrôles appartenant au groupe, et si [aria-describedby](http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby) a été défini, la description peut être lue. Après cela seulement le contrôle focalisé devrait être annoncé.
 - Les loupes d’écran devraient agrandir le groupe.
@@ -36,7 +36,7 @@ Les technologies d’assistance devraient être à l’écoute de tels événeme
 
 ### Exemples
 
-#### Exemple 1 : Utiliser le rôle `group` avec une arborescence HTML
+#### Exemple 1&nbsp;: Utiliser le rôle `group` avec une arborescence HTML
 
 L’extrait de code ci-dessous montre comment le rôle `group` est ajouté directement dans le code source HTML.
 
@@ -69,7 +69,7 @@ L’extrait de code ci-dessous montre comment le rôle `group` est ajouté direc
 </div>
 ```
 
-#### Exemple 2 : Utiliser le rôle `group` avec un menu déroulant HTML
+#### Exemple 2&nbsp;: Utiliser le rôle `group` avec un menu déroulant HTML
 
 L’extrait de code ci-dessous montre comment le rôle `group` est ajouté directement au code source HTML.
 
@@ -92,7 +92,7 @@ L’extrait de code ci-dessous montre comment le rôle `group` est ajouté direc
 </div>
 ```
 
-#### Exemples concrets :
+#### Exemples concrets&nbsp;:
 
 - <http://test.cita.illinois.edu/aria/tree/tree2.php>
 
@@ -110,4 +110,4 @@ L’extrait de code ci-dessous montre comment le rôle `group` est ajouté direc
 
 ### Autres ressources
 
-- Bonnes pratiques ARIA – Répertoires, groupes et zones : [Directories, Groups, and Regions (en)](http://www.w3.org/TR/wai-aria-practices/#kbd_layout_groupheading)
+- Bonnes pratiques ARIA – Répertoires, groupes et zones&nbsp;: [Directories, Groups, and Regions (en)](http://www.w3.org/TR/wai-aria-practices/#kbd_layout_groupheading)

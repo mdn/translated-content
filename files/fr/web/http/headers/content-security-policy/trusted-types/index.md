@@ -26,7 +26,7 @@ Conjointement à la directive [`require-trusted-types-for`](/en-US/docs/Web/HTTP
     Content-Security-Policy: trusted-types <policyName> <policyName> 'allow-duplicates';
 
 - \<nomRègle>
-  - : Un nom de règle est composé de caractères alphanumériques ou d'un ou plusieurs "`-#=_/@.%`".  Une astérisque (`*`) comme nom de règle informe l'agent utilisateur d'autoriser tout nom de règle unique (quoique la valeur `'allow-duplicates'` pourrait permettre d'être plus laxiste à l'avenir).
+  - : Un nom de règle est composé de caractères alphanumériques ou d'un ou plusieurs "`-#=_/@.%`".  Une astérisque (`*`) comme nom de règle informe l'agent utilisateur d'autoriser tout nom de règle unique (quoique la valeur `'allow-duplicates'` pourrait permettre d'être plus laxiste à l'avenir).
 - `'none'`
   - : Interdit la création de toute règle de Trusted Type (identique au fait de ne renseigner aucun nom de règle).
 - `'allow-duplicates'`
@@ -42,9 +42,9 @@ Ce code génèrera une erreur car une des règles créées a un nom non autoris�
 
 ```js
 if (typeof trustedTypes !== 'undefined') {
-  const policyFoo = trustedTypes.createPolicy('foo', {});
-  const policyFoo2 = trustedTypes.createPolicy('foo', {});
-  const policyBaz = trustedTypes.createPolicy('baz', {}); // Throws and dispatches a SecurityPolicyViolationEvent.
+  const policyFoo = trustedTypes.createPolicy('foo', {});
+  const policyFoo2 = trustedTypes.createPolicy('foo', {});
+  const policyBaz = trustedTypes.createPolicy('baz', {}); // Throws and dispatches a SecurityPolicyViolationEvent.
 }
 ```
 

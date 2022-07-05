@@ -17,9 +17,9 @@ Renvoie une {{domxref ("HTMLCollection")}} des éléments avec le nom de balise 
     var elements = document.getElementsByTagName(name);
 
 - `elements` est une liste de nœuds (`NodeList`) des éléments trouvés dans l'ordre dans lequel ils apparaissent dans l'arbre.
-- `nom` est une chaîne représentant le nom des éléments. La chaîne spéciale `"*"` représente « tous les éléments ».
+- `nom` est une chaîne représentant le nom des éléments. La chaîne spéciale `"*"` représente «&nbsp;tous les éléments&nbsp;».
 
-> **Note :** [La dernière spécification W3C](https://dom.spec.whatwg.org/) dit que  `elements` est une   `HTMLCollection` ; cependant cette méthode renvoie une  {{domxref("NodeList")}} dans les navigateurs WebKit. Voir  {{bug(14869)}} pour plus de détails.
+> **Note :** [La dernière spécification W3C](https://dom.spec.whatwg.org/) dit que  `elements` est une   `HTMLCollection` ; cependant cette méthode renvoie une  {{domxref("NodeList")}} dans les navigateurs WebKit. Voir  {{bug(14869)}} pour plus de détails.
 
 ## Exemple
 
@@ -94,7 +94,7 @@ Lorsqu'elle est appelée sur un document HTML, `getElementsByTagName()` classe s
 
 ## Spécifications
 
-- [DOM Level 2 Core : getElementsByTagName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-A6C9094) (non normative)
+- [DOM Level 2 Core&nbsp;: getElementsByTagName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-A6C9094) (non normative)
 - [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
 
 ## Voir aussi

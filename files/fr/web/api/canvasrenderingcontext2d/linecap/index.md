@@ -5,9 +5,9 @@ translation_of: Web/API/CanvasRenderingContext2D/lineCap
 ---
 {{APIRef}}
 
-La propriété **CanvasRenderingContext2D.lineCap** de l'API Canvas 2D détermine la façon dont les extrémités de chaque ligne sont dessinées. Il y a trois valeurs possibles pour cette propriété, qui sont : `butt`, `round` et `square`. Par défaut, cette propriété est définie comme `butt`.
+La propriété **CanvasRenderingContext2D.lineCap** de l'API Canvas 2D détermine la façon dont les extrémités de chaque ligne sont dessinées. Il y a trois valeurs possibles pour cette propriété, qui sont : `butt`, `round` et `square`. Par défaut, cette propriété est définie comme `butt`.
 
-Voir aussi le chapitre [Ajout de styles et de couleurs](/fr-FR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) dans le [Tutoriel canvas](/fr-FR/docs/Web/API/Canvas_API/Tutorial).
+Voir aussi le chapitre [Ajout de styles et de couleurs](/fr-FR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) dans le [Tutoriel canvas](/fr-FR/docs/Web/API/Canvas_API/Tutorial).
 
 ## Syntaxe
 
@@ -18,17 +18,17 @@ Voir aussi le chapitre [Ajout de styles et de couleurs](/fr-FR/docs/Web/API/Can
 ### Options
 
 - `butt`
-  - : Les extrémités de ligne sont coupées à angle droit.
+  - : Les extrémités de ligne sont coupées à angle droit.
 - `round`
-  - : Les extrémités de ligne sont arrondies.
+  - : Les extrémités de ligne sont arrondies.
 - `square`
-  - : Les extrémités de ligne sont coupées à angle droit en ajoutant un rectangle d'une longueur égale à celle de l'épaisseur de la ligne et de largeur moitié.
+  - : Les extrémités de ligne sont coupées à angle droit en ajoutant un rectangle d'une longueur égale à celle de l'épaisseur de la ligne et de largeur moitié.
 
 ## Exemples
 
 ### Utilisation de la propriété `lineCap`
 
-Il ne s'agit que d'un fragment de code simple utilisant la propriété lineCap pour dessiner des lignes avec des extrémités arrondies.
+Il ne s'agit que d'un fragment de code simple utilisant la propriété lineCap pour dessiner des lignes avec des extrémités arrondies.
 
 #### HTML
 
@@ -57,8 +57,8 @@ Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct d
 ```html hidden
 <canvas id="canevas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="modifier" type="button" value="Modifier" />
-  <input id="effacer" type="button" value="Effacer" />
+  <input id="modifier" type="button" value="Modifier" />
+  <input id="effacer" type="button" value="Effacer" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.beginPath();
@@ -97,11 +97,11 @@ window.addEventListener('load', dessinerCanevas);
 
 {{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
-### Un exemple de `lineCap`
+### Un exemple de `lineCap`
 
 Dans cet exemple, trois lignes sont dessinées, chacune avec une valeur différente pour la propriété `lineCap`. Deux guides pour voir les différences exactes entre les trois ont été ajoutés. Chacune de ces lignes commence et se termine exactement sur ces guides.
 
-La ligne à gauche utilise l'option par défaut `butt`. Elle est dessinée complètement au raz des guides. La seconde est paramétrée pour utiliser l'option `round`. Cela ajoute à l'extrémité un demi-cercle d'un rayon égal à la moitié de la largeur de la ligne. La ligne de droite utilise l'option `square`. Cela ajoute un rectangle de longueur égale à l'épaisseur de la ligne et de largeur moitié.
+La ligne à gauche utilise l'option par défaut `butt`. Elle est dessinée complètement au raz des guides. La seconde est paramétrée pour utiliser l'option `round`. Cela ajoute à l'extrémité un demi-cercle d'un rayon égal à la moitié de la largeur de la ligne. La ligne de droite utilise l'option `square`. Cela ajoute un rectangle de longueur égale à l'épaisseur de la ligne et de largeur moitié.
 
 ```js
 var ctx = document.getElementById('canevas').getContext('2d');
@@ -138,7 +138,7 @@ for (var i = 0; i < lineCap.length; i++) {
 
 | Spécification                                                                                                                                | Statut                           | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linecap", "CanvasRenderingContext2D.lineCap")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linecap", "CanvasRenderingContext2D.lineCap")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 
@@ -146,7 +146,7 @@ for (var i = 0; i < lineCap.length; i++) {
 
 ## Notes spécifiques à WebKit/Blink
 
-- Dans les navigateurs basés sur WebKit et Blink, une méthode non-standard et désapprouvée `ctx.setLineCap()` est implémentée en plus de cette propriété.
+- Dans les navigateurs basés sur WebKit et Blink, une méthode non-standard et désapprouvée `ctx.setLineCap()` est implémentée en plus de cette propriété.
 
 ## Voir aussi
 

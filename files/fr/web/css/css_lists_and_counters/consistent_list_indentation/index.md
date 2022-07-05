@@ -34,13 +34,13 @@ On ajoute maintenant les puces aux éléments de la liste. Puisqu'il s'agit d'un
 
 ![](consistent-list-indentation-figure4.gif)
 
-Visuellement, ces marqueurs apparaissent en dehors de la zone de contenu de l'élément `ul`, mais ce n'est pas ce qui est le plus important ici. Ce qui compte, c'est que ces marqueurs prennent place en dehors de la « boîte principale » des éléments `li`. Ils apparaissent comme des sortes d'appendices aux items de liste, qui se tiennent en dehors de la zone de contenu de chaque item, tout en étant attaché à chaque `li`.
+Visuellement, ces marqueurs apparaissent en dehors de la zone de contenu de l'élément `ul`, mais ce n'est pas ce qui est le plus important ici. Ce qui compte, c'est que ces marqueurs prennent place en dehors de la «&nbsp;boîte principale&nbsp;» des éléments `li`. Ils apparaissent comme des sortes d'appendices aux items de liste, qui se tiennent en dehors de la zone de contenu de chaque item, tout en étant attaché à chaque `li`.
 
-C'est pourquoi, dans tous les navigateurs sauf Internet Explorer Windows, les marqueurs sont placés à l'extérieur des bordures de l'élément `li`, dès lors que la propriété {{cssxref("list-style-position")}} vaut `outside`. Si cette valeur est changée en `inside`, les marqueurs seront alors déplacés à l'intérieur du contenu des éléments `li`, comme s'il s'agissait d'une boîte en ligne placée au tout début de ceux-ci.
+C'est pourquoi, dans tous les navigateurs sauf Internet Explorer Windows, les marqueurs sont placés à l'extérieur des bordures de l'élément `li`, dès lors que la propriété {{cssxref("list-style-position")}} vaut `outside`. Si cette valeur est changée en `inside`, les marqueurs seront alors déplacés à l'intérieur du contenu des éléments `li`, comme s'il s'agissait d'une boîte en ligne placée au tout début de ceux-ci.
 
 ### Obtenir une double indentation
 
-Comment cela va-t-il être rendu dans un document ? Pour le moment, nous avons un résultat équivalent à ces styles :
+Comment cela va-t-il être rendu dans un document&nbsp;? Pour le moment, nous avons un résultat équivalent à ces styles&nbsp;:
 
 ```css
 ul, li {
@@ -53,8 +53,8 @@ Si nous plaçons cette liste en l'état dans un document, elle n'aura aucune ind
 
 Afin d'éviter ça et d'imposer une indentation, le navigateur pourra implémenter l'une des trois approches suivantes :
 
-1.  Doter chaque élément `li` d'une marge gauche ;
-2.  Doter chaque élément `ul` d'une marge gauche ;
+1.  Doter chaque élément `li` d'une marge gauche&nbsp;;
+2.  Doter chaque élément `ul` d'une marge gauche&nbsp;;
 3.  Doter chaque élément `ul` d'un padding gauche quelconque.
 
 Telles que les choses se sont faites, aucun navigateur ne semble avoir choisi la première solution. Internet Explorer pour Windows et Macintosh, ainsi qu'Opera, ont adopté la seconde solution. La troisième a été choisie par Gecko et donc par tous les navigateurs embarquant celui-ci.
@@ -71,7 +71,7 @@ Comme nous pouvons le voir, les marqueurs restent attachés aux éléments `li`,
 
 ## Obtenir un rendu homogène
 
-Après ces observations, nous obtenons la conclusion suivante : si on souhaite obtenir un rendu de liste homogène entre Gecko, Internet Explorer et Opera, il est nécessaire de spécifier _à la fois_ la marge gauche et le _padding_ gauche de l'élément `ul`. L'élément `li` peut être ignoré ici. Si vous voulez reproduire le rendu par défaut de Netscape 6.x, vous écrirez :
+Après ces observations, nous obtenons la conclusion suivante : si on souhaite obtenir un rendu de liste homogène entre Gecko, Internet Explorer et Opera, il est nécessaire de spécifier _à la fois_ la marge gauche et le _padding_ gauche de l'élément `ul`. L'élément `li` peut être ignoré ici. Si vous voulez reproduire le rendu par défaut de Netscape 6.x, vous écrirez&nbsp;:
 
 ```css
 ul {
@@ -80,7 +80,7 @@ ul {
 }
 ```
 
-Si vous préférez suivre le modèle Internet Explorer/Opera, vous écrirez alors :
+Si vous préférez suivre le modèle Internet Explorer/Opera, vous écrirez alors&nbsp;:
 
 ```css
 ul {
@@ -89,7 +89,7 @@ ul {
 }
 ```
 
-Naturellement, vous pouvez utiliser les valeurs de votre choix. Les fixer toutes deux à `1.25em` si vous en avez envie - il n'y a aucune raison de s'en tenir uniquement à des valeurs en pixels. Et si vous voulez obtenir des listes sans indentation, vous devrez alors, là encore, spécifier à la fois un _padding_ et une marge nuls :
+Naturellement, vous pouvez utiliser les valeurs de votre choix. Les fixer toutes deux à `1.25em` si vous en avez envie - il n'y a aucune raison de s'en tenir uniquement à des valeurs en pixels. Et si vous voulez obtenir des listes sans indentation, vous devrez alors, là encore, spécifier à la fois un _padding_ et une marge nuls&nbsp;:
 
 ```css
 ul {

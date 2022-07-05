@@ -27,9 +27,9 @@ L'utilisation de {{domxref("FileReader.readAsArrayBuffer()")}} est recomandée.
 ```js
 var canvas = document.createElement('canvas');
 var height = 200;
-var width  = 200;
+var width  = 200;
 
-canvas.width  = width;
+canvas.width  = width;
 canvas.height = height;
 
 var ctx = canvas.getContext('2d');
@@ -46,7 +46,7 @@ canvas.toBlob(function (blob) {
     console.log(reader.result);
   }
 
-  reader.readAsBinaryString(blob);
+  reader.readAsBinaryString(blob);
 });
 ```
 

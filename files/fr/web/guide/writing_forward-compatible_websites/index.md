@@ -13,7 +13,7 @@ C'est d'autant plus important pour les intranets et autres sites non-publics; s'
 
 ## JavaScript
 
-### Préfixez tous les accès à des variables globales dans les attributs `onfoo` par “`window.`”
+### Préfixez tous les accès à des variables globales dans les attributs `onfoo` par “`window.`”
 
 Quand un attribut de gestion d'évenement (`onclick`, `onmouseover`, etc) est utilisé sur un élément HTML, toutes les résolutions de variable dans l'attribut sont d'abord résolues sur l'élément lui-même, puis sur le formulaire contenant l'élément (si c'est un élément de formulaire), puis sur `document`, puis finalement sur `window` (là où se trouvent les variables globales que vous avez définies).Par exemple, si vous avez le balisage suivant :
 
@@ -45,9 +45,9 @@ Suggérez aux développeurs de vos bibliothèques favorites de suivre ces recomm
 
 ### Détecter des fonctionnalités particulières
 
-Si vous avez l'intention d'utiliser une fonctionnalité en particulier, utilisez autant que possible la détection d'objet pour détecter cette fonctionnalité particulière. Par exemple, ne considérez pas que si dans un navigateur `"filter" in body.style` s'évalue à `true`, alors forcément ce navigateur doit être Internet Explorer et que donc cela signifie qu'il possède un objet `window.event` disponible dans les gestionnaires d'évenement.
+Si vous avez l'intention d'utiliser une fonctionnalité en particulier, utilisez autant que possible la détection d'objet pour détecter cette fonctionnalité particulière. Par exemple, ne considérez pas que si dans un navigateur `"filter" in body.style` s'évalue à `true`, alors forcément ce navigateur doit être Internet Explorer et que donc cela signifie qu'il possède un objet `window.event` disponible dans les gestionnaires d'évenement.
 
-De manière générale, ne considérez pas que si un navigateur supporte une certaine fonctionnalité DOM, alors il doit forcément en supporter une autre, particulièrement si elle est non standard. Ou, à l'inverse, que s'il ne supporte *pas* une autre fonctionnalité, alors il n'en supportera pas non plus une autre. Par exemple, ce n'est pas parce qu'un navigateur supporte `onload` sur les éléments scripts alors cela signifie qu'il ne supportera jamais `onreadystatechange` sur ces mêmes éléments.
+De manière générale, ne considérez pas que si un navigateur supporte une certaine fonctionnalité DOM, alors il doit forcément en supporter une autre, particulièrement si elle est non standard. Ou, à l'inverse, que s'il ne supporte *pas* une autre fonctionnalité, alors il n'en supportera pas non plus une autre. Par exemple, ce n'est pas parce qu'un navigateur supporte `onload` sur les éléments scripts alors cela signifie qu'il ne supportera jamais `onreadystatechange` sur ces mêmes éléments.
 
 Les comportement des navigateurs convergent de plus en plus: des fonctionnalités sont ajoutées, supprimées, des bugs sont corrigés. Tout ceci arrive regulièrement et arrivera encore.
 
@@ -92,7 +92,7 @@ Même si la fonctionnalitée est préfixée, l'utiliser peut être dangereux : a
 
 Les fonctionnalités non standard, prefixées, sont fournies par les développeurs de navigateurs pour vous permettre de les expérimenter et d'offrir vos remarques en retour. Elles ne sont pas censées être déployées. Si vous choisissez de les utiliser, préparez-vous à faire des mises à jour régulières de votre site pour rester à flot avec les changements.
 
-Lorsque vous utilisez des fonctionnalités ultra récentes (même standards) qui ne sont pas encore implémentées partout, assurez-vous de tester les solutions de secours. Assurez-vous de tester ce qu'il se passe dans un navigateur qui n'implémente pas la fonctionnalité que vous utilisez, plus particulierement si vous ne l'utilisez pas régulièrement lors de l'élaboration de votre site.
+Lorsque vous utilisez des fonctionnalités ultra récentes (même standards) qui ne sont pas encore implémentées partout, assurez-vous de tester les solutions de secours. Assurez-vous de tester ce qu'il se passe dans un navigateur qui n'implémente pas la fonctionnalité que vous utilisez, plus particulierement si vous ne l'utilisez pas régulièrement lors de l'élaboration de votre site.
 
 ### N'utilisez pas les versions préfixées des fonctionnalités, à moins de cibler les anciennes versions
 

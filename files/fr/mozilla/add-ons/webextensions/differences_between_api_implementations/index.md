@@ -37,7 +37,7 @@ Firefox est le seul navigateur majeur à avoir implémenté des promises pour le
 Les différences dans l'implémentation des fonctions de l'API d'extension entre les navigateurs se répartissent en trois grandes catégories :
 
 - Manque de soutien pour l'ensemble d'une fonction. Par exemple, au moment d'écrire ces lignes, Edge ne prend pas en charge la fonction de [`vide privée`](/fra/Add-ons/WebExtensions/API/privacy).
-- Variations dans la prise en charge des fonctions au sein d'une fonction. Par exemple, au moment d'écrire ces lignes, Firefox ne supporte pas la fonction de [`notification`](/fr/Add-ons/WebExtensions/API/notifications)  [onButtonClicked](/fr/Add-ons/WebExtensions/API/notifications/onButtonClicked) alors que Firefox est le seul navigateur qui supporte [onShown](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown).
+- Variations dans la prise en charge des fonctions au sein d'une fonction. Par exemple, au moment d'écrire ces lignes, Firefox ne supporte pas la fonction de [`notification`](/fr/Add-ons/WebExtensions/API/notifications)  [onButtonClicked](/fr/Add-ons/WebExtensions/API/notifications/onButtonClicked) alors que Firefox est le seul navigateur qui supporte [onShown](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown).
 - Fonctions propriétaires, supportant des fonctions spécifiques au navigateur. Par exemple, au moment d'écrire ces lignes, containers est une fonctionnalité spécifique à Firefox supportée par la fonction [contextualIdentities](/fr/Add-ons/WebExtensions/API/contextualIdentities).
 
 ## Touches Manifest

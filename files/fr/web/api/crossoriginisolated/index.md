@@ -6,9 +6,9 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated
 ---
 {{APIRef()}}{{SeeCompatTable}}
 
-La propriéte en lecture seule **`crossOriginIsolated`** de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne une valeur booléenne qui indique si un {{jsxref("SharedArrayBuffer")}} peut être envoyé via un appel à {{domxref("Window.postMessage()")}}.
+La propriéte en lecture seule **`crossOriginIsolated`** de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne une valeur booléenne qui indique si un {{jsxref("SharedArrayBuffer")}} peut être envoyé via un appel à {{domxref("Window.postMessage()")}}.
 
-Cette valeur est dépendante de toute entête {{httpheader("Cross-Origin-Opener-Policy")}} et {{httpheader("Cross-Origin-Embedder-Policy")}} présente dans la réponse.
+Cette valeur est dépendante de toute entête {{httpheader("Cross-Origin-Opener-Policy")}} et {{httpheader("Cross-Origin-Embedder-Policy")}} présente dans la réponse.
 
 ## Syntaxe
 

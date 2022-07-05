@@ -87,9 +87,9 @@ Enfin, on charge et on instancie un module WebAssembly (table2.wasm) grâce à l
 ```js
 WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 .then(function(obj) {
-  console.log(tbl.length);   // "2"
-  console.log(tbl.get(0)()); // "42"
-  console.log(tbl.get(1)()); // "83"
+  console.log(tbl.length);   // "2"
+  console.log(tbl.get(0)()); // "42"
+  console.log(tbl.get(1)()); // "83"
 });
 ```
 

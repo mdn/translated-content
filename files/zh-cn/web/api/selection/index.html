@@ -55,7 +55,7 @@ window.alert(selObj); </pre>
 
 <dl>
  <dt>{{domxref("Selection/anchorNode","anchorNode")}}{{ReadOnlyInline}}</dt>
- <dd>返回该选区起点所在的<span style="line-height: 1.5;">节点</span><span style="line-height: 1.5;">（{{domxref("Node")}}</span><span style="line-height: 1.5;">）。</span></dd>
+ <dd>返回该选区起点所在的节点（{{domxref("Node")}}）。</dd>
  <dt>{{domxref("Selection/anchorOffset","anchorOffset")}}{{ReadOnlyInline}}</dt>
  <dd>返回一个数字，其表示的是选区起点在 {{domxref("Selection/anchorNode","anchorNode")}} 中的位置偏移量。
  <ol>
@@ -87,7 +87,7 @@ window.alert(selObj); </pre>
  <dd>将当前的选区折叠为一个点。</dd>
  <dt>{{domxref("Selection/extend","extend")}}</dt>
  <dd>将选区的焦点移动到一个特定的位置。</dd>
- <dt>{{domxref("Selection/modify","modify")}} {{gecko_minversion_inline("2.0")}}</dt>
+ <dt>{{domxref("Selection/modify","modify")}}</dt>
  <dd>修改当前的选区。</dd>
  <dt>{{domxref("Selection/collapseToStart","collapseToStart")}}</dt>
  <dd>将当前的选区折叠到起始点。</dd>
@@ -194,7 +194,7 @@ var range  = selObj.getRangeAt(0);</code></pre>
 <h3 id="Gecko_备注">Gecko 备注</h3>
 
 <ul>
- <li>Gecko/Firefox 提供了其他功能，仅适用于Chrome（内置及插件）代码。 这些定义在 {{Interface("nsISelectionPrivate")}} 中。</li>
+ <li>Gecko/Firefox 提供了其他功能，仅适用于Chrome（内置及插件）代码。 这些定义在 <code>nsISelectionPrivate</code> 中。</li>
  <li>Mozilla 实现源代码：{{Source("dom/webidl/Selection.webidl")}}</li>
  <li>在Firefox 29之前，{{domxref("Selection.selectionLanguageChange()")}}{{Obsolete_Inline("gecko29")}} 都会暴露在Web内容中。</li>
 </ul>

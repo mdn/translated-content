@@ -245,11 +245,11 @@ Cela nous donne la sortie suivante :
 Cela montre une boucle utilisée pour itérer sur les éléments d'un tableau et faire quelque chose avec chacun d'eux — un schéma très commun en JavaScript. Ici :
 
 1.  L'itérateur, `i`, commence à `0` (`let i = 0`).
-2.  On lui a demandé de s'exécuter jusqu'à ce que sa valeur ne soit plus inférieure à la longueur du tableau chats. C'est important  — la condition de sortie montre la condition à laquelle la boucle continue de s'exécuter. C'est à dire dans ce cas, tant que `i < chats.length` est vrai, la boucle continuera à s'exécuter.
-3.  Au sein de la boucle, on concatène les élèments présents dans cette boucle (`cats[i]` est `cats[quelque soit la valeur de i lors de l'iteration]`) avec une virgule et un espace, à la fin de la variable `info`. Donc :
+2.  On lui a demandé de s'exécuter jusqu'à ce que sa valeur ne soit plus inférieure à la longueur du tableau chats. C'est important  — la condition de sortie montre la condition à laquelle la boucle continue de s'exécuter. C'est à dire dans ce cas, tant que `i < chats.length` est vrai, la boucle continuera à s'exécuter.
+3.  Au sein de la boucle, on concatène les élèments présents dans cette boucle (`cats[i]` est `cats[quelque soit la valeur de i lors de l'iteration]`) avec une virgule et un espace, à la fin de la variable `info`. Donc :
 
     1.  Pendant le premier lancement, `i = 0`, donc `cats[0] + ', '` sera concaténé à ("Bill, ")
-    2.  Au second lancement, `i = 1`, donc `cats[1] + ', '` et sera concaténé à  ("Jeff, ")
+    2.  Au second lancement, `i = 1`, donc `cats[1] + ', '` et sera concaténé à  ("Jeff, ")
     3.  Et ainsi de suite. Aprés chaque tour de boucle, 1 est ajouté à `i` (`i++`), et alors le processus recommence encore.
 
 4.  Quand `i` devient égal à `cats.length`, la boucle s'arrête, et le navigateur va bouger au prochain bout de code aprés la boucle.
@@ -276,13 +276,13 @@ for (let i = 0; i < cats.length; i++) {
 
 > **Note :** Vous pouvez trouver cet exemple de code sur [GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html) (et aussi le [voir en ligne](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
 
-> **Attention :** Avec for — comme avec toutes les boucles  — vous devez vous assurer que l'initialiseur est itéré de sorte qu'il finisse par atteindre la condition de sortie. Si ce n'est pas le cas, la boucle continuera indéfiniment, et soit le navigateur l'arrêtera, soit il se bloquera. C'est ce qu'on appelle une **boucle infinie.**
+> **Attention :** Avec for — comme avec toutes les boucles  — vous devez vous assurer que l'initialiseur est itéré de sorte qu'il finisse par atteindre la condition de sortie. Si ce n'est pas le cas, la boucle continuera indéfiniment, et soit le navigateur l'arrêtera, soit il se bloquera. C'est ce qu'on appelle une **boucle infinie.**
 
 ## Quitter une boucle avec break
 
 Si vous voulez quitter une boucle avant que toutes les itérations aient été terminées, vous pouvez utiliser l'instruction [break](/fr/docs/Web/JavaScript/Reference/Instructions/break). Nous l'avons déjà rencontré dans l'article précédent lorsque nous examinions les [instructions switch](/fr/Apprendre/JavaScript/Building_blocks/conditionals#Instruction_switch)&nbsp;: lorsqu'un argument est rencontré dans une instruction switch qui correspond à l'expression d'entrée, l'instruction break quitte immédiatement l'instruction switch et passe au code après elle.
 
-C'est la même chose avec les boucles – un `break` quittera immédiatement la boucle et fera passer le navigateur sur n'importe quel code qui le suit.
+C'est la même chose avec les boucles – un `break` quittera immédiatement la boucle et fera passer le navigateur sur n'importe quel code qui le suit.
 
 Supposons que nous voulions effectuer une recherche parmi une liste de contacts et de numéros de téléphone et que nous ne renvoyions que le nombre que nous voulions trouver. Tout d'abord, du HTML simple - un texte {{htmlelement ("input")}} nous permettant d'entrer un nom à rechercher, un élément {{htmlelement ("button")}} pour soumettre une recherche, et un {{htmlelement ("p")}} élément pour afficher les résultats dans :
 
@@ -364,7 +364,7 @@ bouton.addEventListener('click', function() {
 {{EmbedLiveSample('', '100%', 100)}}
 
 1.  Tout d'abord, nous avons quelques définitions de variables — nous avons un tableau d'informations de contact, avec chaque élément étant une chaîne contenant un nom et un numéro de téléphone séparés par deux points.
-2.  Ensuite, nous attachons un écouteur d'événement au bouton (`bouton`), de sorte que quand il est pressé, du code est exécuté pour effectuer la recherche et renvoyer les résultats.
+2.  Ensuite, nous attachons un écouteur d'événement au bouton (`bouton`), de sorte que quand il est pressé, du code est exécuté pour effectuer la recherche et renvoyer les résultats.
 3.  Nous stockons la valeur saisie dans l'input dans une variable appelée `searchName`, , avant de vider l'input et le recentrer, prêt pour la recherche suivante.
 4.  Maintenant sur la partie intéressante, la boucle for :
 
@@ -510,7 +510,7 @@ do {
 } while (i < cats.length);
 ```
 
-> **Note :** Encore, cela fonctionne toujours comme prévu — regardez le ici [GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) ([Voir en ligne](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html) le code complet).
+> **Note :** Encore, cela fonctionne toujours comme prévu — regardez le ici [GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) ([Voir en ligne](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html) le code complet).
 
 > **Attention :** Avec while et do ... while – comme avec toutes les boucles – vous devez vous assurer que l'initialiseur est itéré pour qu'il atteigne finalement la condition de sortie. Si ce n'est pas le cas, la boucle continuera indéfiniment, et soit le navigateur l'arrêtera, soit il se bloquera. C'est ce qu'on appelle une **boucle infinie.**
 
@@ -588,7 +588,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-let jsSolution = 'let output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nlet i = 10;\n\nwhile(i >= 0) {\n let para = document.createElement(\'p\');\n if(i === 10) {\n para.textContent = \'Countdown \' + i;\n } else if(i === 0) {\n  para.textContent = \'Blast off!\';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}';
+let jsSolution = 'let output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nlet i = 10;\n\nwhile(i >= 0) {\n let para = document.createElement(\'p\');\n if(i === 10) {\n para.textContent = \'Countdown \' + i;\n } else if(i === 0) {\n para.textContent = \'Blast off!\';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}';
 let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -645,11 +645,11 @@ Dans cet exercice, nous vous proposons de prendre une liste d'invités stockée 
 
 Plus précisément, nous attendons de vous :
 
-- Que vous écriviez une boucle qui créé une itération de 0 jusqu'à la fin du tableau `people`. Vous aurez besoin de commencer avec un initialiseur type `let i = 0;` , mais quelle sera la condition de sortie
+- Que vous écriviez une boucle qui créé une itération de 0 jusqu'à la fin du tableau `people`. Vous aurez besoin de commencer avec un initialiseur type `let i = 0;` , mais quelle sera la condition de sortie
 - Au cours de chaque itération, vérifiez si l'élément actuel du tableau est "Phil" ou "Lola" en utilisant une déclaration conditionnelle.
 
-  - Si tel est le cas, concaténez l'élément à la fin du paragraphe `refused` du `textContent`, suivi d'une virgule et d'un espace.
-  - Dans le cas contraire, concaténez l'élément à la fin du paragraphe `admitted`  du `textContent` suivi d'une virgule et d'un espace.
+  - Si tel est le cas, concaténez l'élément à la fin du paragraphe `refused` du `textContent`, suivi d'une virgule et d'un espace.
+  - Dans le cas contraire, concaténez l'élément à la fin du paragraphe `admitted`  du `textContent` suivi d'une virgule et d'un espace.
 
 Nous vous avons déjà fourni les éléments suivants :
 
@@ -796,7 +796,7 @@ textarea.onkeyup = function(){
 
 ## Quel type de boucle utiliser ?
 
-Pour des usages basiques les boucles `for`, `while`, et `do...while` sont largement interchangeables. Elles résolvent toutes le même problème et celle que vous utiliserez dépendra de vos préférences personnelles — celle que vous trouverez le plus facile à mémoriser ou la plus intuitive. Jetons-y un coup d'oeil à nouveau.
+Pour des usages basiques les boucles `for`, `while`, et `do...while` sont largement interchangeables. Elles résolvent toutes le même problème et celle que vous utiliserez dépendra de vos préférences personnelles — celle que vous trouverez le plus facile à mémoriser ou la plus intuitive. Jetons-y un coup d'oeil à nouveau.
 
 Premièrement `for`:
 

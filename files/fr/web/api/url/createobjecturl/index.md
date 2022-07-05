@@ -35,11 +35,11 @@ Voir [Utilisation de l’objet URLs pour afficher des images](/fr/docs/Web/API/F
 
 À chaque fois que vous appelez `createObjectURL()`, une nouvelle URL d’objet est créée, même si vous en avez déjà créée une pour le même objet. Chacune d’elles doit être libérée en appelant {{domxref("URL.revokeObjectURL()")}} lorsque vous n’en avez plus besoin.
 
-Les navigateurs libèrent automatiquement les URL d’objet lorsque le document est déchargé (_unload_) ; cependant, pour une performance et une utilisation de la mémoire optimales, si vous avez la possiblité de les libérer explictement sans danger, vous devriez le faire.
+Les navigateurs libèrent automatiquement les URL d’objet lorsque le document est déchargé (_unload_)&nbsp;; cependant, pour une performance et une utilisation de la mémoire optimales, si vous avez la possiblité de les libérer explictement sans danger, vous devriez le faire.
 
 ### Utiliser les URL d’objet pour les flux de média
 
-Dans d’anciennes versions de la spécification de Media Source, attacher un flux à un élément {{HTMLElement("video")}} requiérait de créer une URL d’objet pour le {{domxref("MediaStream")}}. Cela n’est plus nécessaire, et les navigateurs cessent progressivement de supporter cette pratique.
+Dans d’anciennes versions de la spécification de Media Source, attacher un flux à un élément {{HTMLElement("video")}} requérait de créer une URL d’objet pour le {{domxref("MediaStream")}}. Cela n’est plus nécessaire, et les navigateurs cessent progressivement de supporter cette pratique.
 
 > **Attention :** si vous avez toujours du code qui repose sur {{domxref("URL.createObjectURL")}} pour attacher des flux à des éléments média, vous devez mettre à jour votre code pour attacher simplement {{domxref("HTMLMediaElement.srcObject", "srcObject")}} directement au `MediaStream`.
 
@@ -68,7 +68,7 @@ Dans d’anciennes versions de la spécification de Media Source, attacher un fl
         <p>
           Extension MediaSource.<br />Les anciennes versions de cette
           spécification utilisaient <code>createObjectURL()</code> pour les
-          objets {{domxref("MediaStream")}} ; ce n’est plus supporté.
+          objets {{domxref("MediaStream")}}&nbsp;; ce n’est plus supporté.
         </p>
       </td>
     </tr>

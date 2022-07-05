@@ -35,7 +35,7 @@ La fonction suivante parcours les éléments présents dans le local storage.
 function forEachKey(callback) {
   for (var i = 0; i < localStorage.length; i++) {
     callback(localStorage.key(i));
-  }
+  }
 }
 ```
 
@@ -43,11 +43,11 @@ function forEachKey(callback) {
 
 ## Autre exemple
 
-La fonction suivante parcourt chaque clé présente dans le localStorage et affiche les valeurs correspondantes.
+La fonction suivante parcourt chaque clé présente dans le localStorage et affiche les valeurs correspondantes.
 
 ```js
 for (var i = 0; i < localStorage.length; i++) {
-   console.log(localStorage.getItem(localStorage.key(i)));
+   console.log(localStorage.getItem(localStorage.key(i)));
 }
 ```
 
@@ -55,7 +55,7 @@ for (var i = 0; i < localStorage.length; i++) {
 
 | Specification                                                                                            | Status                           | Comment |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-key', 'Storage.key')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-key', 'Storage.key')}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## Compatibilité des navigateurs
 

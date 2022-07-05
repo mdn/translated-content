@@ -19,7 +19,9 @@ La méthode **`setInt8()`** permet d'enregister un entier signé sur 8 bits à l
 
 ## Syntaxe
 
-    dataview.setInt8(positionOctet, valeur)
+```js
+dataview.setInt8(positionOctet, valeur)
+```
 
 ### Paramètres
 
@@ -54,7 +56,7 @@ dataview.getInt8(1); // 3
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
 | {{SpecName('Typed Array')}}                                                                                 | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
 | {{SpecName('ES2015', '#sec-dataview.prototype.setint8', 'DataView.prototype.setInt8')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setint8', 'DataView.prototype.setInt8')}} | {{Spec2('ESDraft')}}     |                                                 |
+| {{SpecName('ESDraft', '#sec-dataview.prototype.setint8', 'DataView.prototype.setInt8')}} | {{Spec2('ESDraft')}}     |                                                 |
 
 ## Compatibilité des navigateurs
 

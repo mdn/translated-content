@@ -6,7 +6,7 @@ original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
 <div>{{APIRef("Shadow DOM")}}</div>
 
-<p><span class="seoSummary">{{domxref("Document")}} 和 {{domxref("ShadowRoot")}} 接口的 <strong><code>activeElement</code></strong> 只读属性，用来返回当前在DOM或者shadow DOM树中处于聚焦状态的{{domxref("Element")}}。</span></p>
+<p>{{domxref("Document")}} 和 {{domxref("ShadowRoot")}} 接口的 <strong><code>activeElement</code></strong> 只读属性，用来返回当前在DOM或者shadow DOM树中处于聚焦状态的{{domxref("Element")}}。</p>
 
 <p>通常情况下，如果 {{domxref("HTMLInputElement")}} 或者 {{domxref("HTMLTextAreaElement")}}元素中有文字被选中时， <code>activeElement</code>属性就会返回该元素 。这时，你可以调用该元素的{{domxref("Document.selectionStart", "selectionStart")}} 和 {{domxref("Document.selectionEnd", "selectionEnd")}} 属性获取更多选中文字的信息. 其他情况下，焦点元素也可能是{{HTMLElement("select")}}元素 (menu) 或者一个别的 {{HTMLElement("input")}} 元素, 比如 <code>"button"</code>, <code>"checkbox"</code>, 或者 <code>"radio"</code>.</p>
 

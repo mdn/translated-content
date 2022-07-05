@@ -14,13 +14,13 @@ Dans une page Web, certains cas nécessitent l'usage du Glisser Déposer. Il peu
 
 En HTML, excepté le comportement par défaut des images, des liens et des sélections, aucun autre élément ne peut être glissé. Tous les éléments XUL peuvent être glissés.
 
-Pour rendre un autre élément HTML glissable, deux choses doivent être faites :
+Pour rendre un autre élément HTML glissable, deux choses doivent être faites&nbsp;:
 
 - Définissez l'attribut `{{htmlattrxref("draggable")}}` à `true` sur l'élément que vous voulez rendre glissable.
 - Ajoutez un scrutateur sur l'événement `{{event("dragstart")}}` et définissez les données du glissement dans ce scrutateur.
 - {{domxref("DataTransfer.setData","Définir la donnée de glissement")}} au sein du scrutateur ajouté précédemment.
 
-Voici un exemple qui permet à une section de contenu d'être glissée :
+Voici un exemple qui permet à une section de contenu d'être glissée&nbsp;:
 
     <div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
       Ce texte <strong>peut</strong> être glissé.
@@ -44,7 +44,7 @@ Dans cet exemple, un scrutateur est ajouté à l'événement dragstart en utilis
       Ce texte <strong>peut</strong> être glissé.
     </div>
 
-Lorsqu'un utilisateur commence un glissement, l'événement dragstart est déclenché. Dans cet exemple, le scrutateur dragstart a été ajouté à l'élément à déplacer lui-même. Vous pouvez toutefois mettre le scrutateur sur un ancètre plus élevé car l'événement drag diffuse comme le font les autres événements. À l'intérieur de l'événement dragstart, vous devez spécifier la donnée de glissement, l'image filligrane et les effets du glissement tels que décrits ci-dessous. Cependant, seule la donnée de glissement est nécessaire ; l'image et les effets du glissement par défaut sont suffisants pour la majorité des cas.
+Lorsqu'un utilisateur commence un glissement, l'événement dragstart est déclenché. Dans cet exemple, le scrutateur dragstart a été ajouté à l'élément à déplacer lui-même. Vous pouvez toutefois mettre le scrutateur sur un ancètre plus élevé car l'événement drag diffuse comme le font les autres événements. À l'intérieur de l'événement dragstart, vous devez spécifier la donnée de glissement, l'image filligrane et les effets du glissement tels que décrits ci-dessous. Cependant, seule la donnée de glissement est nécessaire&nbsp;; l'image et les effets du glissement par défaut sont suffisants pour la majorité des cas.
 
 ## Donnée de glissement
 
@@ -52,13 +52,13 @@ Tous les événements de glissement ont une propriété appelée [dataTransfer](
 
 Lorsqu'un glissement a lieu, une donnée doit être associée au glissement pour identifier ce qui est en train de glisser. Par exemple, lors du glissement d'un texte sélectionné dans un champs de texte, la donnée associée au glissement est le texte lui-même. De même, lors du glissement d'un lien, la donnée associée est l'URL du lien.
 
-La donnée de glissement contient deux informations : son type ou format et sa valeur. Le format est une chaîne de caractère (telle que [text/plain](/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text) pour un texte), et la valeur est un texte. Lorsqu'un glissement démarre, vous devez lui ajouter en fournissant un type et la donnée. Dans les scrutateurs des événements `dragenter` et `dragover` au cours d'un glissement, vous pouvez vérifier les types de données et indiquer si un dépôt est permis ou non. Par exemple, une cible de dépôt qui accepte que des liens testera les types lien [text/uri-list](/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#link). Pendant un évément de dépôt, un scrutateur récupèrera la donnée glissée et l'insèrera dans la zone de dépôt.
+La donnée de glissement contient deux informations&nbsp;: son type ou format et sa valeur. Le format est une chaîne de caractère (telle que [text/plain](/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text) pour un texte), et la valeur est un texte. Lorsqu'un glissement démarre, vous devez lui ajouter en fournissant un type et la donnée. Dans les scrutateurs des événements `dragenter` et `dragover` au cours d'un glissement, vous pouvez vérifier les types de données et indiquer si un dépôt est permis ou non. Par exemple, une cible de dépôt qui accepte que des liens testera les types lien [text/uri-list](/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#link). Pendant un évément de dépôt, un scrutateur récupèrera la donnée glissée et l'insèrera dans la zone de dépôt.
 
 Les types MIME habituels sont [text/plain](/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text) ou [image/jpeg](/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#image), mais vous pouvez créer vos propres types. La liste des types les plus utilisés est disponible sur [cette page](/Fr/GlisserD%C3%A9poser/Types_de_glissement).
 
 Un glissement peut fournir une donnée dans différents types. Ceci permet à une donnée d'être disponible dans des types spécifiques, souvent personnalisés, toujours en fournissant un format pour les cibles ne supportant pas ces types spécifiques. Habituellement, il s'agit toujours d'une version textuelle de type [text/plain](/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text). La donnée n'en sera qu'une représentation sous la forme d'un texte.
 
-Pour définir une donnée dans un dataTransfer, utilisez la méthode [setData](/Fr/GlisserD%C3%A9poser/DataTransfer#setData). Elle prend deux arguments qui sont le type de la donnée et sa valeur. Par exemple :
+Pour définir une donnée dans un dataTransfer, utilisez la méthode [setData](/Fr/GlisserD%C3%A9poser/DataTransfer#setData). Elle prend deux arguments qui sont le type de la donnée et sa valeur. Par exemple&nbsp;:
 
     event.dataTransfer.setData("text/plain", "Texte à glisser");
 
@@ -89,7 +89,7 @@ Lorsqu'un glissement a lieu, une image translucide est générée à partir de l
 
     event.dataTransfer.setDragImage(image, xOffset, yOffset);
 
-Trois arguments sont nécessaires. Le premier est la référence à une image. Cette référence pointera en gérénal vers un élément image, mais elle peut pointer aussi vers un canvas ou vers tous autres éléments. L'image filigrane sera simplement générée telle qu'elle ressemble à l'écran, et dessinée à sa taille d'origine. Il est également possible d'utiliser des images et des canvas qui ne sont pas dans un document, comme le montre cet exemple :
+Trois arguments sont nécessaires. Le premier est la référence à une image. Cette référence pointera en gérénal vers un élément image, mais elle peut pointer aussi vers un canvas ou vers tous autres éléments. L'image filigrane sera simplement générée telle qu'elle ressemble à l'écran, et dessinée à sa taille d'origine. Il est également possible d'utiliser des images et des canvas qui ne sont pas dans un document, comme le montre cet exemple&nbsp;:
 
     function dragWithCustomImage(event)
     {
@@ -121,7 +121,7 @@ Vous pouvez spécifier laquelle de ces trois opérations sera autorisée au nive
 
     event.dataTransfer.effectAllowed = "copy";
 
-Dans cet exemple, seule une copie n'est autorisée. Vous pouvez combiner les valeurs de plusieurs façons :
+Dans cet exemple, seule une copie n'est autorisée. Vous pouvez combiner les valeurs de plusieurs façons&nbsp;:
 
 - none
   - : Aucune opération permise
@@ -183,15 +183,15 @@ Vous pouvez également définir une propriété [effectAllowed](/fr/GlisserD%C3%
 
 ## Retour d'information du dépôt
 
-Il y a de nombreuses manières d'indiquer à l'utilisateur que le dépot est autorisé dans une certaine zone. Le pointeur de la souris va être mis à jour en fonction de la valeur de la propriété [dropEffect](/En/DragDrop/DataTransfer#dropEffect.28.29). L'apparence exacte dépend de la plateforme de l'utilisateur, généralement il s'agit d'un icone représentant un signe plus qui apparaît pour une copie par exemple, et un 'impossible de déposer ici' peut apparaître quand le dépôt n'est pas autorisé. Cette information contextuelle est suffisante dans la plupart des cas.
+Il y a de nombreuses manières d'indiquer à l'utilisateur que le dépot est autorisé dans une certaine zone. Le pointeur de la souris va être mis à jour en fonction de la valeur de la propriété [dropEffect](/En/DragDrop/DataTransfer#dropEffect.28.29). L'apparence exacte dépend de la plateforme de l'utilisateur, généralement il s'agit d'un icone représentant un signe plus qui apparaît pour une copie par exemple, et un 'impossible de déposer ici' peut apparaître quand le dépôt n'est pas autorisé. Cette information contextuelle est suffisante dans la plupart des cas.
 
-De plus, vous pouvez aussi mettre à jour l'interface utilisateur en surlignant au besoin. Pour un simple surlignage, vous pouvez utiliser la pseudo-classe `-moz-drag-over`sur la cible du dépôt.
+De plus, vous pouvez aussi mettre à jour l'interface utilisateur en surlignant au besoin. Pour un simple surlignage, vous pouvez utiliser la pseudo-classe `-moz-drag-over`sur la cible du dépôt.
 
     .droparea:-moz-drag-over {
       border: 1px solid black;
     }
 
-Dans cet example, l'élement comportant la classe `droparea` va recevoir un bord noir de un pixel tant que la cible sera valide, ce qui est le cas, si la méthode [event.preventDefault](/en/DOM/event.preventDefault) est appelé durant l'évenement `dragenter`. Il est à noter que vous devez annuler l'évenement `dragenter` de cette pseudo-classe tant que l'état n'est pas verifié par l'évenement `dragover`.
+Dans cet example, l'élement comportant la classe `droparea` va recevoir un bord noir de un pixel tant que la cible sera valide, ce qui est le cas, si la méthode [event.preventDefault](/en/DOM/event.preventDefault) est appelé durant l'évenement `dragenter`. Il est à noter que vous devez annuler l'évenement `dragenter` de cette pseudo-classe tant que l'état n'est pas verifié par l'évenement `dragover`.
 
 For more complex visual effects, you can also perform other operations during the `dragenter` event, for example, by inserting an element at the location where the drop will occur. For example, this might be an insertion marker or an element that represents the dragged element in its new location. To do this, you could create an [image](/en/XUL/image) or [separator](/en/XUL/separator) element for example, and simply insert it into the document during the `dragenter` event.
 

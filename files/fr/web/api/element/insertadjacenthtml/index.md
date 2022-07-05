@@ -10,7 +10,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 ---
 {{APIRef("DOM")}}
 
-`insertAdjacentHTML()` analyse le texte spécifié en tant que HTML ou XML et insère les noeuds résultants dans le DOM à la position spécifiée. L'élement qui est utilisé n'est pas réanalysé et les élements qu'il contient ne sont donc pas corrompus. Ceci, et le fait d'éviter la sérialisation supplémentaire, rend la fonction plus rapide et directe que **innerHTML**.
+`insertAdjacentHTML()` analyse le texte spécifié en tant que HTML ou XML et insère les noeuds résultants dans le DOM à la position spécifiée. L'élement qui est utilisé n'est pas réanalysé et les élements qu'il contient ne sont donc pas corrompus. Ceci, et le fait d'éviter la sérialisation supplémentaire, rend la fonction plus rapide et directe que **innerHTML**.
 
 ## Syntaxe
 
@@ -21,11 +21,11 @@ element.insertAdjacentHTML(position, text);
 ### Paramètres
 
 - `position`
-  - : une {{domxref("DOMString")}}  représentant la position relative à l'`element`, et doit être une des chaînes de caractères suivantes :
+  - : une {{domxref("DOMString")}}  représentant la position relative à l'`element`, et doit être une des chaînes de caractères suivantes :
 
 <!---->
 
-- `'beforebegin'` : Avant l'`element`  lui-même.
+- `'beforebegin'` : Avant l'`element`  lui-même.
 - `'afterbegin'` : Juste à l'intérieur de l'`element` , avant son premier enfant.
 - `'beforeend'` : Juste à l'intérieur de l'`element` , après son dernier enfant.
 - `'afterend'` : Après `element` lui-même.
@@ -33,7 +33,7 @@ element.insertAdjacentHTML(position, text);
 <!---->
 
 - `text`
-  - :  est la chaîne de caractères qui doit être analysée en tant qu'HTML ou XML et insérée dans l'arbre du DOM.
+  - :  est la chaîne de caractères qui doit être analysée en tant qu'HTML ou XML et insérée dans l'arbre du DOM.
 
 ### Visualisation des noms de position
 
@@ -45,7 +45,7 @@ element.insertAdjacentHTML(position, text);
     </p>
     <!-- afterend -->
 
-> **Note :** Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est un arbre et a un élément parent.
+> **Note :** Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est un arbre et a un élément parent.
 
 ## Exemple
 

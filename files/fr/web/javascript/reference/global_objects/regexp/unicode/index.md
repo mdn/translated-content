@@ -37,7 +37,7 @@ console.log(regex.unicode); // true
 | Spécification                                                                                                        | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-get-regexp.prototype.unicode', 'RegExp.prototype.unicode')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.unicode', 'RegExp.prototype.unicode')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-get-regexp.prototype.unicode', 'RegExp.prototype.unicode')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

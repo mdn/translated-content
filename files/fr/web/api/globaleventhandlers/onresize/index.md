@@ -59,7 +59,7 @@ window.onresize = sayHi;
 
 ### Notes
 
-Un attribut onresize peut être placé sur n'importe quel élément, mais seul l'objet `window` possède un évènement sur le redimensionnement. Le rédimensionnement d'autres éléments (par exemple, la modification de la largeur ou de la hauteur d'un élément img par un script) ne lancera aucun évènement de redimensionnement.
+Un attribut onresize peut être placé sur n'importe quel élément, mais seul l'objet `window` possède un évènement sur le redimensionnement. Le rédimensionnement d'autres éléments (par exemple, la modification de la largeur ou de la hauteur d'un élément img par un script) ne lancera aucun évènement de redimensionnement.
 
 ### Spécification
 

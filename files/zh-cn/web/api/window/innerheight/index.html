@@ -9,7 +9,7 @@ translation_of: Web/API/Window/innerHeight
 
 <p>浏览器窗口的视口（viewport）高度（以像素为单位）；如果有水平滚动条，也包括滚动条高度。</p>
 
-<div class="note"><strong>Note:</strong> If you use {{ifmethod("nsIDOMWindowUtils", "setCSSViewport")}} to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.</div>
+<div class="note"><strong>Note:</strong> If you use <code>nsIDOMWindowUtils.setCSSViewport()</code> to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.</div>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -23,7 +23,7 @@ translation_of: Web/API/Window/innerHeight
 
 <h2 id="Notes" name="Notes">备注</h2>
 
-<p>任何窗口对象，如<font face="Courier New, Andale Mono, monospace"> </font>{{domxref("window")}}、frame、frameset 或 secondary window 都支持 <code>innerHeight</code> 属性。</p>
+<p>任何窗口对象，如 {{domxref("window")}}、frame、frameset 或 secondary window 都支持 <code>innerHeight</code> 属性。</p>
 
 <p>有一个<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7" title="https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7">算法</a>用来获取不包括水平滚动条的视口高度。</p>
 

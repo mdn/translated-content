@@ -13,7 +13,7 @@ translation_of: >-
 
 <p>{{CSSRef}}</p>
 
-<p class="summary">在这篇指南中我们将探索应用于flex子元素的三个属性, 它们能使我们在主轴方向上控制flex子元素的尺寸和伸缩性— {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}, 和 {{cssxref("flex-basis")}}. 充分了解这些属性如何与增长和缩小的flex 子元素一起工作是掌握Flex 布局的关键所在.</p>
+<p>在这篇指南中我们将探索应用于flex子元素的三个属性, 它们能使我们在主轴方向上控制flex子元素的尺寸和伸缩性— {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}, 和 {{cssxref("flex-basis")}}. 充分了解这些属性如何与增长和缩小的flex 子元素一起工作是掌握Flex 布局的关键所在.</p>
 
 <h2 id="预览">预览</h2>
 
@@ -46,7 +46,7 @@ translation_of: >-
 
 <p>例如下面的例子， 我有两段包含一个文本字符串的段落. 第一段设置了<code>min-content</code>的宽度. 在支持这个关键字的浏览器你可以看见文本已尽可能抓住机会来自动换行, 变得尽可能小且没有溢出. 此之后就是那个字符串的 min-content 大小. 本质上讲, 字符串中最长的单词决定了大小.</p>
 
-<p>第二段设置了 <code>max-content</code>值, 且它和min-content想反. 它会变得尽可能大, 没有自动换行的机会. 如果flex容器太窄， 它就会溢出其自身的盒子.</p>
+<p>第二段设置了 <code>max-content</code>值, 且它和min-content相反. 它会变得尽可能大, 没有自动换行的机会. 如果flex容器太窄， 它就会溢出其自身的盒子.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/min-max-content.html", '100%', 750)}}</p>
 
@@ -98,7 +98,7 @@ translation_of: >-
 
 <p>如果你所有的flex子元素 设置了相同的<code>flex-grow</code>属性值，那么空间将会在flex子元素 之间平均分配. 如果你想要这种情形，通常你需要使用<code>1</code>作为值，而且如果你喜欢你还可以将它们的<code>flex-grow</code>都 设置为<code>88</code>， 或<code>100</code>， 或<code>1.2</code>  —这只是个比例. 如果flex-grow的值全部相同， 并且在flex容器 中还有positive free space , 那么它（positive free space）就会平均的分配给所有的flex子元素</p>
 
-<h3 id="结合flex-grow_和flex-basis"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="background-color: #333333;">结合</span></font><code>flex-grow</code> 和<code>flex-basis</code></h3>
+<h3 id="结合flex-grow_和flex-basis">结合<code>flex-grow</code> 和<code>flex-basis</code></h3>
 
 <p>根据<code>flex-grow</code>和<code>flex-basis</code>的相互影响， 有些东西会变得迷惑起来. 让我们考虑三个不同内容大小的flex子元素的例子， 应用于下列flex规则:</p>
 
@@ -164,7 +164,7 @@ translation_of: >-
 
 <p>第二个原因是在negative free space消除期间flexbox会阻止小的flex子元素缩小到0. 这些flex子元素会以<code>min-content</code>的大小进行铺设  —这个大小是它们利用任何可以利用的自动断行机会后所变成的.</p>
 
-<p>在下面的例子中，在 <code>flex-basis</code> 解析为内容大小的位置你会看到 <code>min-content</code> 的铺设,. 如果你改变flex容器的宽度 — 比如增加到700px 宽 — 再减少flex子元素的宽度, 你会看到前两个flex子元素 将换行, 但是它们绝不会小于<code>min-content</code>的大小. 随着盒子变得越来越小，空间随后从第三个flex子元素 中移除.</p>
+<p>在下面的例子中，在 <code>flex-basis</code> 解析为内容大小的位置你会看到 <code>min-content</code> 的铺设。如果你改变 flex 容器的宽度——比如增加到 700px 宽，再减少 flex 子元素的宽度，你会看到前两个 flex 子元素将换行，但是它们绝不会小于 <code>min-content</code> 的大小。随着盒子变得越来越小，第三个 flex 子元素随后从空间中溢出。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink-min-content.html", '100%', 500)}}</p>
 

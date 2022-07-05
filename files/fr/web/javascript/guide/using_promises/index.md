@@ -239,13 +239,13 @@ window.addEventListener("unhandledrejection", event => {
 
 ## Envelopper les _callbacks_ des API
 
-Il est possible de créer un objet  {{jsxref("Promise")}} grâce à son constructeur. Et même si, idéalement, cela ne devrait pas être nécessaire, certaines API fonctionnent toujours avec des _callbacks_ passés en arguments. C'est notamment le cas de la méthode  {{domxref("WindowTimers.setTimeout", "setTimeout()")}} :
+Il est possible de créer un objet  {{jsxref("Promise")}} grâce à son constructeur. Et même si, idéalement, cela ne devrait pas être nécessaire, certaines API fonctionnent toujours avec des _callbacks_ passés en arguments. C'est notamment le cas de la méthode  {{domxref("WindowTimers.setTimeout", "setTimeout()")}} :
 
 ```js
 setTimeout(() => saySomething("10 seconds passed"), 10 * 1000);
 ```
 
-Si on mélange des _callbacks_ et des promesses, cela sera problématique. Si  `saySomething` échoue ou contient des erreurs, rien n'interceptera l'erreur.
+Si on mélange des _callbacks_ et des promesses, cela sera problématique. Si  `saySomething` échoue ou contient des erreurs, rien n'interceptera l'erreur.
 
 Pour ces fonctions, la meilleure pratique consiste à les _envelopper_ dans des promesses au plus bas niveau possible et de ne plus les appeler directement :
 
@@ -278,7 +278,7 @@ Il est possible de construire une composition séquentielle de la façon suivant
 
 Dans ce fragment de code, on réduit un tableau de fonctions asynchrones en une chaîne de promesse équivalente à : `Promise.resolve().then(func1).then(func2);`
 
-On peut également accomplir cela avec une fonction de composition réutilisable  :
+On peut également accomplir cela avec une fonction de composition réutilisable  :
 
 ```js
 const applyAsync = (acc, val) => acc.then(val);
@@ -297,7 +297,7 @@ Avec ECMAScript 2017, on peut obtenir une composition séquentielle plus simplem
 ```js
 let result;
 for(const f of [func1, func2, func3]) {
-  result = await f(result);
+  result = await f(result);
 } 
 ```
 

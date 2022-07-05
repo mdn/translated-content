@@ -10,7 +10,7 @@ translation_of: Web/CSS/Child_combinator
 
 <h2 id="Summary" name="Summary">概述</h2>
 
-<p>当使用  <code>&gt;</code> 选择符分隔两个元素时,它只会匹配那些作为第一个元素的<strong>直接后代<span style="line-height: 21px;">(</span></strong><span style="line-height: inherit;">子元素)的第二元素. 与之相比, 当两个元素由 </span><a href="/en/CSS/Descendant_selectors" style="line-height: inherit;" title="https://developer.mozilla.org/en/CSS/Descendant_selectors">后代选择器 </a>相连时<span style="line-height: inherit;">, 它表示匹配存在的所有由第一个元素作为祖先元素(但不一定是父元素)的第二个元素, 无论它在 DOM 中"跳跃" 多少次.</span></p>
+<p>当使用  <code>&gt;</code> 选择符分隔两个元素时,它只会匹配那些作为第一个元素的<strong>直接后代(</strong>子元素)的第二元素. 与之相比, 当两个元素由 <a href="/en/CSS/Descendant_selectors" style="line-height: inherit;" title="https://developer.mozilla.org/en/CSS/Descendant_selectors">后代选择器 </a>相连时, 它表示匹配存在的所有由第一个元素作为祖先元素(但不一定是父元素)的第二个元素, 无论它在 DOM 中"跳跃" 多少次.</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -37,8 +37,8 @@ div &gt; span {
 
 <p>会得到下面的效果:</p>
 
-<p style="margin-left: 40px;"><span style="background-color: DodgerBlue;">Span 1. In the div.</span> <span>Span 2. In the span that's in the div.</span><br>
- <span>Span 3. Not in a div at all.</span></p>
+<p style="margin-left: 40px;">Span 1. In the div. Span 2. In the span that's in the div.<br>
+ Span 3. Not in a div at all.</p>
 
 <h2 id="Specifications" name="Specifications">规范</h2>
 

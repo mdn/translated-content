@@ -15,7 +15,7 @@ Cet article aborde les _Uniform Resource Locators_ (URL) en expliquant leur rôl
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devez au préalable savoir
         <a href="/fr/Apprendre/Fonctionnement_Internet"
@@ -31,13 +31,13 @@ Cet article aborde les _Uniform Resource Locators_ (URL) en expliquant leur rôl
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>Savoir ce qu'est une URL et comprendre son rôle sur le Web.</td>
     </tr>
   </tbody>
 </table>
 
-Avec les concepts d'{{Glossary("hypertexte")}} et de {{Glossary("HTTP")}}, les **_URL_** sont une autre pierre angulaire du Web.  Celles-ci sont utilisées par les navigateurs pour accéder aux différentes ressources publiées sur le Web.
+Avec les concepts d'{{Glossary("hypertexte")}} et de {{Glossary("HTTP")}}, les **_URL_** sont une autre pierre angulaire du Web.  Celles-ci sont utilisées par les navigateurs pour accéder aux différentes ressources publiées sur le Web.
 
 **URL** signifie _Uniform Resource Locator_ (ou, en français, « localisateur uniforme de ressource »). Une URL est simplement l'adresse d'une ressource donnée, unique sur le Web. En théorie, chaque URL valide pointe vers une ressource unique. Ces ressources peuvent être des pages HTML, des documents CSS, des images, etc. En pratique, il y a quelques exceptions : les URL peuvent pointer vers une ressource qui n'existe plus ou qui a été déplacée. La ressource représentée par l'URL et l'URL elle-même sont gérées par le serveur web. C'est donc au gestionnaire de ce serveur que de gérer soigneusement la ressource et l'URL associée.
 
@@ -129,7 +129,7 @@ Prenons quelques exemples concrets pour illustrer le concept.
 
 #### Exemples d'URL relatives
 
-Pour mieux comprendre les exemples qui suivent, nous nous placerons dans le contexte où les URL suivantes sont appelées depuis un document situé à l'URL suivante  `https://developer.mozilla.org/fr/docs/Apprendre`
+Pour mieux comprendre les exemples qui suivent, nous nous placerons dans le contexte où les URL suivantes sont appelées depuis un document situé à l'URL suivante  `https://developer.mozilla.org/fr/docs/Apprendre`
 
 - Sous-ressources
 
@@ -137,7 +137,7 @@ Pour mieux comprendre les exemples qui suivent, nous nous placerons dans le cont
 
         Compétences/Infrastructure/Comprendre_les_URL
 
-    L'URL ne commence pas pas `/`, le navigateur essaiera de trouver le document visé dans un sous-répertoire de la ressource actuelle. Dans cet exemple, l'URL absolue correspondante du document auquel on souhaite accéder est : `https://developer.mozilla.org/fr/docs/Apprendre/Compétences/Infrastructure/Comprendre_les_URL`
+    L'URL ne commence pas par `/`, le navigateur essaiera de trouver le document visé dans un sous-répertoire de la ressource actuelle. Dans cet exemple, l'URL absolue correspondante du document auquel on souhaite accéder est : `https://developer.mozilla.org/fr/docs/Apprendre/Compétences/Infrastructure/Comprendre_les_URL`
 
 - Remonter dans l'arborescence des dossiers
 
@@ -145,11 +145,11 @@ Pour mieux comprendre les exemples qui suivent, nous nous placerons dans le cont
 
         ../CSS/display
 
-    Dans ce cas, on utilise la convention, héritée du monde UNIX :  `../` indique au navigateur de remonter d'un répertoire dans l'arborescence. L'URL absolue correspodante à la ressource visée est ici `https://developer.mozilla.org/fr/docs/Apprendre/../CSS/display`, qui peut être simplifiée en : `https://developer.mozilla.org/fr/docs/CSS/display`
+    Dans ce cas, on utilise la convention, héritée du monde UNIX :  `../` indique au navigateur de remonter d'un répertoire dans l'arborescence. L'URL absolue correspodante à la ressource visée est ici `https://developer.mozilla.org/fr/docs/Apprendre/../CSS/display`, qui peut être simplifiée en : `https://developer.mozilla.org/fr/docs/CSS/display`
 
 ### Les URL sémantiques
 
-Bien qu'utiles sur le plan technique, les URL représentent également un point d'entrée vers un site web, compréhensible par un lecteur humain. Une URL peut être mémorisée et n'importe qui peut en saisir une dans la barre d'adresse d'un navigateur. Une bonne pratique, préconisée par les concepteurs du web, est de construire des [_URL sémantiques_](http://en.wikipedia.org/wiki/Semantic_URL).  Les URL sémantiques utilisent des termes qui peuvent être compris par n'importe quel lecteur, quel que soit son niveau de connaissance.
+Bien qu'utiles sur le plan technique, les URL représentent également un point d'entrée vers un site web, compréhensible par un lecteur humain. Une URL peut être mémorisée et n'importe qui peut en saisir une dans la barre d'adresse d'un navigateur. Une bonne pratique, préconisée par les concepteurs du web, est de construire des [_URL sémantiques_](http://en.wikipedia.org/wiki/Semantic_URL).  Les URL sémantiques utilisent des termes qui peuvent être compris par n'importe quel lecteur, quel que soit son niveau de connaissance.
 
 Les ordinateurs n'ont pas strictement besoin d'utiliser des URL sémantiques et vous avez déjà sûrement rencontré des URL pleines de charabia et de caractères aléatoires, URL qui fonctionnaient parfaitement. Cela dit, il y a plusieurs avantages à créer des URL compréhensibles par les humains :
 

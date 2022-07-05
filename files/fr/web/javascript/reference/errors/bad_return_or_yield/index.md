@@ -40,7 +40,7 @@ var encouragement = function(score) {
 // SyntaxError: return not in function
 ```
 
-À première vue, les accolades semblent correctes mais en regardant de plus près, on voit qu'il manque une accolade ouvrante ("{") après la première instruction `if`. La version correcte serait :
+À première vue, les accolades semblent correctes mais en regardant de plus près, on voit qu'il manque une accolade ouvrante ("{") après la première instruction `if`. La version correcte serait :
 
 ```js example-good
 var encouragement = function(score) {

@@ -121,7 +121,7 @@ Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnal
       </td>
       <td>
         <p>
-          Correspond à un caractère de contrôle représenté par sa <a href="https://fr.wikipedia.org/wiki/Notation_caret">notation caret</a>, où "X" est une lettre de  A à Z (correspondant respectivement aux points de code <code>U+0001</code><em> à </em><code>U+001F</code>). Ainsi, <code>/\cM/</code> correspondra à "\r" dans "\r\n".
+          Correspond à un caractère de contrôle représenté par sa <a href="https://fr.wikipedia.org/wiki/Notation_caret">notation caret</a>, où "X" est une lettre de A à Z (correspondant respectivement aux points de code <code>U+0001</code><em> à </em><code>U+001F</code>). Ainsi, <code>/\cM/</code> correspondra à "\r" dans "\r\n".
         </p>
       </td>
     </tr>

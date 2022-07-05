@@ -14,7 +14,7 @@ translation_of: Web/API/NodeIterator/expandEntityReferences
 
 La propriété en lecture seule **`NodeIterator.expandEntityReferences`** renvoie un {{domxref("Boolean")}} (_booléen_) indiquant si les enfants des noeuds de référence d'entité sont visibles ou non pour le {{domxref("NodeIterator")}}.
 
-Si cette valeur est `false` (_faux_), les enfants des nœuds de référence d'entité (ainsi que tous leurs descendants) sont rejetés. Cela a préséance sur la valeur de la méthode  {{domxref("NodeIterator.whatToShow")}} et le filtre associé.
+Si cette valeur est `false` (_faux_), les enfants des nœuds de référence d'entité (ainsi que tous leurs descendants) sont rejetés. Cela a préséance sur la valeur de la méthode  {{domxref("NodeIterator.whatToShow")}} et le filtre associé.
 
 ## Syntaxe
 

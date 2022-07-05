@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 
 <h2 id="Summary">概述</h2>
 
-<p><code><strong>Symbol.keyFor(sym)</strong></code> 方法用来获取全局symbol 注册表中与某个 symbol 关联的键。</p>
+<p><code><strong>Symbol.keyFor(sym)</strong></code> 方法用来获取全局 symbol 注册表中与某个 symbol 关联的键。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 
 <h3 id="返回值">返回值</h3>
 
-<p>如果全局注册表中查找到该symbol，则返回该symbol的key值，返回值为字符串类型。否则返回undefined</p>
+<p>如果全局注册表中查找到该 symbol，则返回该 symbol 的 key 值，返回值为字符串类型。否则返回 undefined</p>
 
 <h2 id="示例">示例</h2>
 
@@ -33,7 +33,7 @@ Symbol.keyFor(globalSym); // "foo"
 var localSym = Symbol();
 Symbol.keyFor(localSym); // undefined，
 
-// 以下Symbol不是保存在全局Symbol注册表中
+// 以下 Symbol 不是保存在全局 Symbol 注册表中
 Symbol.keyFor(Symbol.iterator) // undefined
 </pre>
 

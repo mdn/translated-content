@@ -32,15 +32,15 @@ translation_of: Web/API/Beacon_API
 
 <h2 id="全局环境">全局环境</h2>
 
-<p><code>Beacon</code> <span class="tlid-translation translation" lang="zh-CN"><span title="">API 的 </span></span> {{domxref("Navigator.sendBeacon()")}} <span class="tlid-translation translation" lang="zh-CN"><span title="">方法用于在<em>全局浏览上下文</em>中向服务器发送<em>数据信标</em>。该方法有两个参数，URL和要在请求中发送的数据data。</span><span title="">data参数是可选的，其类型可以是 </span></span>{{domxref("ArrayBufferView")}}、{{domxref("Blob")}}<span class="tlid-translation translation" lang="zh-CN"><span title="">、</span></span>{{domxref("DOMString")}} <span class="tlid-translation translation" lang="zh-CN"><span title="">或</span></span>{{domxref("FormData")}}<span class="tlid-translation translation" lang="zh-CN"><span title="">。</span><span title="">如果浏览器成功的以队列形式排列了用于传递的请求，则该方法返回“</span></span><code>true</code><span class="tlid-translation translation" lang="zh-CN"><span title="">”，否则返回“</span></span><code>false</code><span class="tlid-translation translation" lang="zh-CN"><span title="">”。</span></span></p>
+<p><code>Beacon</code> API 的  {{domxref("Navigator.sendBeacon()")}} 方法用于在<em>全局浏览上下文</em>中向服务器发送<em>数据信标</em>。该方法有两个参数，URL和要在请求中发送的数据data。data参数是可选的，其类型可以是 {{domxref("ArrayBufferView")}}、{{domxref("Blob")}}、{{domxref("DOMString")}} 或{{domxref("FormData")}}。如果浏览器成功的以队列形式排列了用于传递的请求，则该方法返回“<code>true</code>”，否则返回“<code>false</code>”。</p>
 
 <h2 id="生产环境">生产环境</h2>
 
-<p><code>Beacon</code><span class="tlid-translation translation" lang="zh-CN"><span title=""> API的</span></span> {{domxref("WorkerNavigator.sendBeacon()")}} <span class="tlid-translation translation" lang="zh-CN"><span title=""> 方法用于从</span></span> <em>{{domxref("WorkerGlobalScope","worker global scope")}}</em> <span class="tlid-translation translation" lang="zh-CN"><span title="">向服务器发送<em>数据信标</em>。该方法有两个参数，URL和要在请求中发送的数据data。</span><span title="">data参数是可选的，其类型可以是</span></span> {{domxref("ArrayBufferView")}}、{{domxref("Blob")}}、{{domxref("DOMString")}} 或 {{domxref("FormData")}}<span class="tlid-translation translation" lang="zh-CN"><span title="">。如果浏览器成功的以队列形式排列了用于传递的请求，则该方法返回“</span></span><code>true</code><span class="tlid-translation translation" lang="zh-CN"><span title="">”，否则返回“</span></span><code>false</code><span class="tlid-translation translation" lang="zh-CN"><span title="">”。</span></span></p>
+<p><code>Beacon</code> API的 {{domxref("WorkerNavigator.sendBeacon()")}}  方法用于从 <em>{{domxref("WorkerGlobalScope","worker global scope")}}</em> 向服务器发送<em>数据信标</em>。该方法有两个参数，URL和要在请求中发送的数据data。data参数是可选的，其类型可以是 {{domxref("ArrayBufferView")}}、{{domxref("Blob")}}、{{domxref("DOMString")}} 或 {{domxref("FormData")}}。如果浏览器成功的以队列形式排列了用于传递的请求，则该方法返回“<code>true</code>”，否则返回“<code>false</code>”。</p>
 
-<h2 id="浏览器兼容性"><span class="tlid-translation translation" lang="zh-CN"><span title="">浏览器兼容性</span></span></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{domxref("Navigator.sendBeacon","Navigator.sendBeacon()","Browser_compatibility")}}<span class="tlid-translation translation" lang="zh-CN"><span title="">表说明了该方法具有相对广泛地实现。但是，</span></span>{{domxref("WorkerNavigator.sendBeacon","WorkerNavigator.sendBeacon()","Browser_compatibility")}}<span class="tlid-translation translation" lang="zh-CN"><span title="">数据显示该方法没有被实现。</span></span></p>
+<p>{{domxref("Navigator.sendBeacon","Navigator.sendBeacon()","Browser_compatibility")}}表说明了该方法具有相对广泛地实现。但是，{{domxref("WorkerNavigator.sendBeacon","WorkerNavigator.sendBeacon()","Browser_compatibility")}}数据显示该方法没有被实现。</p>
 
 <h2 id="相关知识">相关知识</h2>
 

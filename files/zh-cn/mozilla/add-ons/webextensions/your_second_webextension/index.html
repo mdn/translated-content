@@ -121,10 +121,10 @@ cd beastify</pre>
 
 <ol>
  <li>
-  <pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
-  <span class="key token">"48":</span> <span class="string token">"icons/beasts-48.png"</span><span class="punctuation token">,</span>
-  <span class="key token">"96":</span> <span class="string token">"icons/beasts-96.png"</span>
-<span class="punctuation token">}</span></code></pre>
+  <pre class="brush: json line-numbers  language-json"><code class="language-json">"icons": {
+  "48": "icons/beasts-48.png",
+  "96": "icons/beasts-96.png"
+}</code></pre>
  </li>
 </ol>
 
@@ -136,7 +136,7 @@ cd beastify</pre>
 
 <p>将一个图标命名为为 "beasts-32.png"并保存到"icons"文件夹。你可以使用例子中的<a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png">图片</a>，它是取自 <a href="http://www.iconbeast.com/free">IconBeast Lite 图标集</a>并按其<a href="http://www.iconbeast.com/faq/">许可协议</a>授权使用。</p>
 
-<p>如果你没有弹出窗，用户点击的事件会直接分派到你的插件中。<span style="line-height: 1.5;">如果你制作了弹出窗，用户点击会直接打开这个弹出窗，而不会被分派给插件。</span><span style="line-height: 1.5;">本例中我们需要弹出窗，因此我们现在开始写它。</span></p>
+<p>如果你没有弹出窗，用户点击的事件会直接分派到你的插件中。如果你制作了弹出窗，用户点击会直接打开这个弹出窗，而不会被分派给插件。本例中我们需要弹出窗，因此我们现在开始写它。</p>
 
 <h3 id="弹出窗">弹出窗</h3>
 
@@ -150,9 +150,9 @@ cd beastify</pre>
  <li><strong><code>choose_beast.js</code></strong> 通过在当前活跃的标签页中运行内容脚本（content script）处理用户的选择</li>
 </ul>
 
-<pre class="brush: bash line-numbers language-bash"><code class="language-bash"><span class="function token">mkdir</span> popup
-<span class="function token">cd</span> popup
-<span class="function token">touch</span> choose_beast.html choose_beast.css choose_beast.js</code></pre>
+<pre class="brush: bash line-numbers language-bash"><code class="language-bash">mkdir popup
+cd popup
+touch choose_beast.html choose_beast.css choose_beast.js</code></pre>
 
 <h4 id="choose_beast.html">choose_beast.html</h4>
 

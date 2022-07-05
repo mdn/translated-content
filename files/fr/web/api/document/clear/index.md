@@ -17,7 +17,7 @@ translation_of: Web/API/Document/clear
 
 Cette méthode est utilisée pour effacer entièrement le document visé dans les anciennes versions (pre-1.0) de Mozilla.
 
-Dans les versions récentes des applications basées sur Mozilla ainsi que sur Internet Explorer et Netscape 4, cette méthode ne fait rien.
+Dans les versions récentes des applications basées sur Mozilla ainsi que sur Internet Explorer et Netscape 4, cette méthode ne fait rien.
 
 ## Syntaxe
 

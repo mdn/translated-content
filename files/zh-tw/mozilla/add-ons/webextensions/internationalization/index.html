@@ -104,7 +104,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
   }
 }</pre>
 
-<p>This file is standard JSON — each one of its members is an object with a name, which contains a <code>message</code> and a <code>description</code>. All of these items are strings; <code>$URL$</code> is a placeholder, which is replaced with a substring at the time the <code>notificationContent</code> member is called by the extension. You'll learn how to do this in the {{anch("Retrieving message strings from JavaScript")}} section.</p>
+<p>This file is standard JSON — each one of its members is an object with a name, which contains a <code>message</code> and a <code>description</code>. All of these items are strings; <code>$URL$</code> is a placeholder, which is replaced with a substring at the time the <code>notificationContent</code> member is called by the extension. You'll learn how to do this in the <a href="#retrieving_message_strings_from_javascript">Retrieving message strings from JavaScript</a> section.</p>
 
 <div class="note">
 <p><strong>Note</strong>: You can find much more information about the contents of <code>messages.json</code> files in our <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference">Locale-Specific Message reference</a>.</p>
@@ -143,7 +143,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 
 <pre class="brush: json">"default_locale": "en"</pre>
 
-<p>This specifies a default locale to use if the extension doesn't include a localized string for the browser's current locale. Any message strings that are not available in the browser locale are taken from the default locale instead. There are some more details to be aware of in terms of how the browser selects strings — see {{anch("Localized string selection")}}.</p>
+<p>This specifies a default locale to use if the extension doesn't include a localized string for the browser's current locale. Any message strings that are not available in the browser locale are taken from the default locale instead. There are some more details to be aware of in terms of how the browser selects strings — see <a href="#localized_string_selection">Localized string selection</a>.</p>
 
 <h2 id="Locale-dependent_CSS">Locale-dependent CSS</h2>
 
@@ -153,7 +153,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
   background-image: url(../images/__MSG_extensionName__/header.png);
 }</pre>
 
-<p>This is useful, although you might be better off handling such a situation using {{anch("Predefined messages")}}.</p>
+<p>This is useful, although you might be better off handling such a situation using <a href="#predefined_messages">Predefined messages</a>.</p>
 
 <h2 id="Retrieving_message_strings_from_JavaScript">Retrieving message strings from JavaScript</h2>
 
@@ -263,7 +263,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
       <ul>
        <li>messages.json
         <ul>
-         <li><code>{ "colorLocalised": { "message": "<span lang="fr">couleur</span>", "description": "Color." }, ...}</code></li>
+         <li><code>{ "colorLocalised": { "message": "couleur", "description": "Color." }, ...}</code></li>
         </ul>
        </li>
       </ul>
@@ -283,7 +283,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <h2 id="Predefined_messages">Predefined messages</h2>
 
-<p>The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in {{anch("Calling message strings from manifests and extension CSS")}}. For example:</p>
+<p>The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in <a href="#retrieving_localized_strings_in_manifests">Calling message strings from manifests and extension CSS</a>. For example:</p>
 
 <pre>__MSG_extensionName__</pre>
 

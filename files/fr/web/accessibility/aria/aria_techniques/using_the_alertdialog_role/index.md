@@ -13,7 +13,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_alertdialog
 
 Cette technique présente l’utilisation du rôle [`alertdialog`](http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#alertdialog) role.
 
-Le rôle `alertdialog` est utilisé pour notifier à l’utilisateur des informations urgentes qui requièrent son attention immédiate. Comme le nom l’indique, `alertdialog` est un type de boîte de dialogue. Cela signifie que la plupart des instructions fournies à propos de l’[utilisation du rôle `dialog`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog_role) s’appliquent également au rôle `alertdialog` :
+Le rôle `alertdialog` est utilisé pour notifier à l’utilisateur des informations urgentes qui requièrent son attention immédiate. Comme le nom l’indique, `alertdialog` est un type de boîte de dialogue. Cela signifie que la plupart des instructions fournies à propos de l’[utilisation du rôle `dialog`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog_role) s’appliquent également au rôle `alertdialog`&nbsp;:
 
 - La boîte de dialogue d’alerte doit toujours avoir un nom accessible (attribué à l’aide de `aria-labelledby` ou de `aria-label`) et, dans la plupart des cas, le texte d’alerte sera marqué comme étant la description accessible de la boîte de dialogue d’alerte (définie avec de l’attribut `aria-describedby`).
 - Contrairement aux alertes classiques, une boîte de dialogue d’alerte doit avoir au moins un contrôle pouvant recevoir le focus et ce dernier doit s’y placer lors de l’affichage de la boîte de dialogue. Généralement les boîtes de dialogues d’alertes ont au moins un bouton de confirmation, de fermeture ou d’annulation qui peut être utilisé pour recevoir le focus. De plus, les boîtes de dialogues d’alerte peuvent avoir d’autres contrôles interactifs tels que des champs de saisie, des onglets ou des cases à cocher. Le contrôle sur lequel placer le focus dépendra de l’objet de la boîte de dialogue.
@@ -27,7 +27,7 @@ Du fait de sa nature urgente, les boîtes de dialogues d’alertes doivent toujo
 
 ### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
-Lorsque le rôle `alertdialog` est utilisé, l’agent utilisateur devrait suivre les étapes suivantes :
+Lorsque le rôle `alertdialog` est utilisé, l’agent utilisateur devrait suivre les étapes suivantes&nbsp;:
 
 - Présenter l’élément comme une boîte de dialogue à l’API d’accessibilité du système d’exploitation.
 - Déclencher un évènement d’alerte accessible à l’aide l’API d’accessibilité du système d’exploitation si elle le prend en charge.
@@ -40,7 +40,7 @@ Lorsque la boîte de dialogue est correctement labélisée et que le focus se pl
 
 ### Exemples
 
-#### Exemple 1 : Une boîte de dialogue d’alerte
+#### Exemple 1&nbsp;: Une boîte de dialogue d’alerte
 
 L’extrait de code ci-dessous présente la façon de baliser une boîte de dialogue d’alerte qui ne contient qu’un message et un bouton `OK`.
 
@@ -54,7 +54,7 @@ L’extrait de code ci-dessous présente la façon de baliser une boîte de dial
 </div>
 ```
 
-#### Exemples concrets :
+#### Exemples concrets&nbsp;:
 
 À définir
 
@@ -62,11 +62,11 @@ L’extrait de code ci-dessous présente la façon de baliser une boîte de dial
 
 ### Attributs ARIA utilisés
 
-- [alertdialog](http://www.w3.org/TR/wai-aria/roles#dialog) ;
-- [aria-labelledby](http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby) ;
+- [alertdialog](http://www.w3.org/TR/wai-aria/roles#dialog)&nbsp;;
+- [aria-labelledby](http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby)&nbsp;;
 - [aria-describedby](http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby).
 
 ### Techniques ARIA connexes
 
-- [Utiliser le rôle `dialog`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog) ;
+- [Utiliser le rôle `dialog`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog)&nbsp;;
 - [Utiliser le rôle `alert`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alert).

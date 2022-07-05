@@ -7,7 +7,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 <div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}</div>
 
-<p class="summary">超連結(Hyperlinks)真的超級重要 — 它造就了我們現今所熟知的網路。這篇文章將會介紹超連結的使用語法，並且探討建立它們的最佳實踐方法。</p>
+<p>超連結(Hyperlinks)真的超級重要 — 它造就了我們現今所熟知的網路。這篇文章將會介紹超連結的使用語法，並且探討建立它們的最佳實踐方法。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -36,7 +36,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 <h2 id="解析連結">解析連結</h2>
 
-<p>一個基本的連結由 {{htmlelement("a")}} 元素包裹一段文字而成(當然也不一定要是文字，見下方的{{anch("區塊級連結")}})，同時，你需要將網路位址填入 {{htmlattrxref("href", "a")}} 屬性中，這個屬性有時也被叫做<strong>超文字參考(Hypertext Reference)</strong>或<strong>目標(target)</strong>。</p>
+<p>一個基本的連結由 {{htmlelement("a")}} 元素包裹一段文字而成(當然也不一定要是文字，見下方的<a href="#區塊級連結block-level_links">區塊級連結</a>)，同時，你需要將網路位址填入 {{htmlattrxref("href", "a")}} 屬性中，這個屬性有時也被叫做<strong>超文字參考(Hypertext Reference)</strong>或<strong>目標(target)</strong>。</p>
 
 <pre class="brush: html">&lt;p&gt;I'm creating a link to
 &lt;a href="https://www.mozilla.org/en-US/"&gt;the Mozilla homepage&lt;/a&gt;.
@@ -288,7 +288,7 @@ Find details on our &lt;a href="contacts.html"&gt;contacts page&lt;/a&gt;.&lt;/p
 &lt;/a&gt;</pre>
 
 <div class="note">
-<p><strong>Note:</strong> 每一個欄位的值必須以 URL 編碼，也就是將空白及不可印字元(不可見的字元如縮排(tabs)、回車<span lang="en">(carriage return</span>)、換頁(page breaks)等等)轉換成<a href="http://en.wikipedia.org/wiki/Percent-encoding">百分號編碼</a>。也請注意這裡使用問號(<code>?</code>)來分隔主要 URL 和其他欄位；以 &amp; 來分隔 <code>mailto:</code> URL 中的不同的欄位，這是標準的 URL 查詢記號(query notation)。你可以閱讀 <a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method">GET 方法</a>來得知有那些常用的查詢記號。</p>
+<p><strong>Note:</strong> 每一個欄位的值必須以 URL 編碼，也就是將空白及不可印字元(不可見的字元如縮排(tabs)、回車(carriage return)、換頁(page breaks)等等)轉換成<a href="http://en.wikipedia.org/wiki/Percent-encoding">百分號編碼</a>。也請注意這裡使用問號(<code>?</code>)來分隔主要 URL 和其他欄位；以 &amp; 來分隔 <code>mailto:</code> URL 中的不同的欄位，這是標準的 URL 查詢記號(query notation)。你可以閱讀 <a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method">GET 方法</a>來得知有那些常用的查詢記號。</p>
 </div>
 
 <p>以下是 <code>mailto</code> URL 的其他例子：</p>

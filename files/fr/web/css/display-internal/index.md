@@ -31,13 +31,13 @@ Sauf mention contraire, le type d'affichage intérieur et extérieur sont défin
   - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("col")}}.
 - `table-caption`
   - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("caption")}}.
-- `ruby-base` {{Experimental_Inline}}
+- `ruby-base` {{Experimental_Inline}}
   - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("rb")}}.
-- `ruby-text` {{Experimental_Inline}}
+- `ruby-text` {{Experimental_Inline}}
   - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("rt")}}.
-- `ruby-base-container` {{Experimental_Inline}}
+- `ruby-base-container` {{Experimental_Inline}}
   - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("rbc")}} générés comme des boîtes anonymes.
-- `ruby-text-container` {{Experimental_Inline}}
+- `ruby-text-container` {{Experimental_Inline}}
   - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("rtc")}}.
 
 ## Compatibilité des navigateurs

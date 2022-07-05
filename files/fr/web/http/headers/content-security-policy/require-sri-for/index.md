@@ -13,7 +13,7 @@ tags:
   - require-sri-for
 translation_of: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
 ---
-{{Obsolete_header}}
+{{deprecated_header}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} **`require-sri-for`** informe l'agent utilisateur de requérir la vérification [d'intégrité des sous-ressources](/en-US/docs/Web/Security/Subresource_Integrity) pour les scripts et styles de la page.
 

@@ -5,7 +5,7 @@ translation_of: Web/CSS/Viewport_concepts
 ---
 <p>{{CSSRef}}</p>
 
-<p class="summary">这篇文章阐述了<strong>视口 (viewport) </strong>的概念，对 视觉视口 (visual viewport) 和 布局视口 (layout viewport) 进行区分，并让你了解 viewport 的意义是什么，以及它对 CSS, SVG 和移动设备方面的影响。</p>
+<p>这篇文章阐述了<strong>视口 (viewport) </strong>的概念，对 视觉视口 (visual viewport) 和 布局视口 (layout viewport) 进行区分，并让你了解 viewport 的意义是什么，以及它对 CSS, SVG 和移动设备方面的影响。</p>
 
 <h2 id="什么是_viewport">什么是 viewport ?</h2>
 
@@ -77,7 +77,7 @@ body &gt; footer {
 
 <p>我们上面说到的固定的头部和尾部，固定在 layout viewport 的底部和顶部，所以当 visual viewport 缩小的时候,头部和尾部仍保留在视觉中。当你缩放页面时，布局视口可能不能被全部看到。如果你放大布局视口的中间部分，内容将在四个方向上扩展。如果你有一个固定的头部和底部，它们依然固定在布局视口的顶部和底部，因此它们可能会在设备屏幕的底部和顶部不可见-视觉视口。视觉视口是布局视口当前的可见部分如果你向下滚动，视觉视口的内容就会改变，并布局视口的底部就会滚动到可视区域。</p>
 
-<p>视觉视口是屏幕的可视部分，不包括屏幕键盘，缩放外的区域。视觉视口比布局视口相同或者更小</p>
+<p>视觉视口是屏幕的可视部分，不包括屏幕键盘，缩放外的区域。视觉视口要么跟布局视口相同，要么更小</p>
 
 <p>对于一个包含框架，objects 或外部 svg 的页面，两者都有它们自己的 window 对象，只有最外层的 window 的视觉视口不同于布局视口。对于包含的文档，视觉视口与布局视口是相同的。</p>
 
@@ -118,7 +118,7 @@ body &gt; footer {
 
 <pre class="brush: html">&lt;svg height="300" width="400"&gt;&lt;/svg&gt;</pre>
 
-<p>在这个示例中，这个 SVG 的视口长宽比被设置为了 3:4，默认情况下长为 400 像素，高为 300 像素。</p>
+<p>在这个示例中，这个 SVG 的视口长宽比被设置为了 3:4，默认情况下宽为 400 像素，高为 300 像素。</p>
 
 <p>SVG 参照 <a href="/en-US/docs/Web/SVG/Attribute/viewBox">viewbox</a> 属性，内置了一个与视口无关的坐标系。</p>
 
@@ -148,7 +148,7 @@ body &gt; footer {
 
 <pre class="brush: html">&lt;meta name="viewport" content="width=device-width"&gt;</pre>
 
-<p>这里 <code>width</code> 属性指的是视口宽度，现在视口的宽度被设置为了设备的屏幕宽度，即文档视口宽度大小与设备宽度大小 100% 对应（转换为 CSS 像素值相同）。除了 <code>width</code> 属性外，还有<code>initial-scale<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">、</span></font></code><code>maximum-scale<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">、</span></font>minimum-scale</code>，以及 <code>user-scalable</code> 属性可供设置。这些属性分别设置了文档的初始缩放比例、最大缩放比例、最小缩放比例以及是否允许用户进行缩放操作。但这些属性的默认值已经很好了，开发时可以忽略掉这些属性。</p>
+<p>这里 <code>width</code> 属性指的是视口宽度，现在视口的宽度被设置为了设备的屏幕宽度，即文档视口宽度大小与设备宽度大小 100% 对应（转换为 CSS 像素值相同）。除了 <code>width</code> 属性外，还有<code>initial-scale、</code><code>maximum-scale、minimum-scale</code>，以及 <code>user-scalable</code> 属性可供设置。这些属性分别设置了文档的初始缩放比例、最大缩放比例、最小缩放比例以及是否允许用户进行缩放操作。但这些属性的默认值已经很好了，开发时可以忽略掉这些属性。</p>
 
 <h2 id="参照">参照</h2>
 

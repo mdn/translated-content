@@ -75,7 +75,7 @@ install Firefox Developer Edition</a> Firefox 41 was released on September 22, 2
 <ul>
  <li>剪切、复制和粘贴命令处理已经被重新编码，并且现在允许JS编程实现网页内容复制和剪切。
   <ul>
-   <li>使用 <code>'paste'</code>名利作为参数, {{domxref("Document.queryCommandSupported()")}}现在会返回<span style="font-family: courier,andale mono,monospace;">false如果不充分的权限被执行</span>({{bug(1161721)}}).</li>
+   <li>使用 <code>'paste'</code>名利作为参数, {{domxref("Document.queryCommandSupported()")}}现在会返回false如果不充分的权限被执行({{bug(1161721)}}).</li>
    <li>使用<code>'cut'</code> 或 <code>'copy'</code> 命令作为参数, {{domxref("Document.queryCommandSupported()")}} 现在返回<code style="font-style: normal;">true</code> 如果调用的上下文中包括用户发起的或特权代码({{bug(1162952)}}).</li>
    <li>使用 <code>'cut'</code> 或<code>'copy' 命令作为参数</code>, {{domxref("Document.execCommand()")}} 将会执行, 但是仅仅在用户发起的或特权代码的上下文下({{bug(1012662)}}).</li>
   </ul>
@@ -150,7 +150,7 @@ install Firefox Developer Edition</a> Firefox 41 was released on September 22, 2
 
 <h4 id="新的默认、支持字体处理">新的默认、支持字体处理</h4>
 
-<p>数学公式需要特殊的字体. 到目前为止, 这些字体被硬编码在用户默认样式 <code>mathml.css</code> (使用{{MathMLElement("math")}} 标志设置字体组) 和偏好选项<code>font.mathfont-family</code> (为拉伸和大操作数设置支持字体). Firefox 41 引入一个能够自动设置<span style="font-family: courier,andale mono,monospace;">&lt;math&gt;标志和相应偏好选项的</span>内置<code>x-math</code> 语言 (例如<code>font.name.serif.x-math</code>). 用户默认样式现在将<span style="font-family: courier,andale mono,monospace;">&lt;math&gt;标志字体</span>设置为serif 并且<code>font.mathfont-family</code> 被替换为 <code>font.name.serif.x-math</code>.  所有平台现在基本使用相同列表的支持字体, "Latin Modern Math" 是首选.在标准的 per-language字体偏好菜单中，默认支持字体能够被设置. 更多细节，请参照{{bug(947654)}} 和 {{bug(1160456)}}.</p>
+<p>数学公式需要特殊的字体. 到目前为止, 这些字体被硬编码在用户默认样式 <code>mathml.css</code> (使用{{MathMLElement("math")}} 标志设置字体组) 和偏好选项<code>font.mathfont-family</code> (为拉伸和大操作数设置支持字体). Firefox 41 引入一个能够自动设置&lt;math&gt;标志和相应偏好选项的内置<code>x-math</code> 语言 (例如<code>font.name.serif.x-math</code>). 用户默认样式现在将&lt;math&gt;标志字体设置为serif 并且<code>font.mathfont-family</code> 被替换为 <code>font.name.serif.x-math</code>.  所有平台现在基本使用相同列表的支持字体, "Latin Modern Math" 是首选.在标准的 per-language字体偏好菜单中，默认支持字体能够被设置. 更多细节，请参照{{bug(947654)}} 和 {{bug(1160456)}}.</p>
 
 <h3 id="SVG">SVG</h3>
 

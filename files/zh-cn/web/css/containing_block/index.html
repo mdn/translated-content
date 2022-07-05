@@ -17,7 +17,7 @@ original_slug: Web/CSS/All_About_The_Containing_Block
 ---
 <p>{{cssref}}</p>
 
-<p class="summary" dir="ltr">一个元素的尺寸和位置经常受其<strong>包含块(containing block)</strong>的影响。大多数情况下，包含块就是这个元素最近的祖先<a href="/zh-CN/docs/Web/HTML/Block-level_elements">块元素</a>的<a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">内容区</a>，但也不是总是这样。在本文中，我们来过一遍确定包含块的所有因素。</p>
+<p dir="ltr">一个元素的尺寸和位置经常受其<strong>包含块(containing block)</strong>的影响。大多数情况下，包含块就是这个元素最近的祖先<a href="/zh-CN/docs/Web/HTML/Block-level_elements">块元素</a>的<a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">内容区</a>，但也不是总是这样。在本文中，我们来过一遍确定包含块的所有因素。</p>
 
 <p dir="ltr">当一个客户端代理（比如说浏览器）展示一个文档的时候，对于每一个元素，它都产生了一个盒子。每一个盒子都被划分为四个区域：</p>
 
@@ -65,7 +65,7 @@ original_slug: Web/CSS/All_About_The_Containing_Block
 <p dir="ltr">如上所述，如果某些属性被赋予一个百分值的话，它的计算值是由这个元素的包含块计算而来的。这些属性包括盒模型属性和偏移属性：</p>
 
 <ol dir="ltr" start="1">
- <li>要计算 {{cssxref("height")}} {{cssxref("top")}} 及 {{cssxref("bottom")}} 中的百分值，是通过包含块的 <code>height</code><strong> </strong>的值。如果包含块的 <code>height</code> 值会根据它的内容变化，而且包含块的 <code>position</code> 属性的值被赋予 <code>relative</code> 或 <code>static</code> ，那么，这些值的计算值为 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">auto</span></font>。</li>
+ <li>要计算 {{cssxref("height")}} {{cssxref("top")}} 及 {{cssxref("bottom")}} 中的百分值，是通过包含块的 <code>height</code><strong> </strong>的值。如果包含块的 <code>height</code> 值会根据它的内容变化，而且包含块的 <code>position</code> 属性的值被赋予 <code>relative</code> 或 <code>static</code> ，那么，这些值的计算值为 auto。</li>
  <li>要计算 {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, {{cssxref("margin")}} 这些属性由包含块的 <code>width</code> 属性的值来计算它的百分值。</li>
 </ol>
 
@@ -225,7 +225,7 @@ p {
 
 <h3 id="Example_5">Example 5</h3>
 
-<p>这个示例中，P 元素的 <code>position</code> 为 <code>absolute</code>，所以它的包含块是 <code>&lt;section&gt;</code>，也就是距离它最近的一个 <code>transform</code> 值不为 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">none</span></font> 的父元素。</p>
+<p>这个示例中，P 元素的 <code>position</code> 为 <code>absolute</code>，所以它的包含块是 <code>&lt;section&gt;</code>，也就是距离它最近的一个 <code>transform</code> 值不为 none 的父元素。</p>
 
 <div class="hidden">
 <pre class="brush: html notranslate" dir="ltr">&lt;body&gt;

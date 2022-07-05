@@ -423,7 +423,7 @@ Cache-Control: no-cache
 La mayoría de las cachés HTTP/1.0 no son compatibles con las directivas `no-cache`, por lo que históricamente se usaba `max-age=0` como solución alternativa. Pero usar solo `max-age=0` podría hacer que se reutilice una respuesta obsoleta cuando los cachés se desconecten del servidor de origen. `must-revalidate` aborda eso. Es por eso que el siguiente ejemplo es equivalente a `no-cache`.
 
 ```
-Cache-Control: max-age=0, debe revalidar
+Cache-Control: max-age=0, must-revalidate
 ```
 
 Pero por ahora, simplemente puedes usar `no-cache` en su lugar.

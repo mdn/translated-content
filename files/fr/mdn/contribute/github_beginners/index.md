@@ -336,7 +336,7 @@ Envoyons notre changement local à la branche distante. Vous pouvez le faire en 
     Total 3 (delta 2), reused 0 (delta 0)
     remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
     To github.com:chrisdavidmills/content.git
-        77215e31e..44b207ef6  test-branch -> test-branch
+        77215e31e..44b207ef6 test-branch -> test-branch
 
 ## Création d'une demande de triage
 

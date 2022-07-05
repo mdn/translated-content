@@ -24,12 +24,12 @@ où immediateID est un ID retourné par {{DOMxRef("window.setImmediate")}}.
 
 ```js
 let immediateID = setImmediate(() => {
-  // Exécute du code
+  // Exécute du code
 }
 
 document.getElementById("bouton")
   .addEventListener(() => {
-  clearImmediate(immediateID);
+  clearImmediate(immediateID);
 });
 ```
 

@@ -23,7 +23,7 @@ translation_of: Web/API/Document/createProcessingInstruction
 ### Paramètres
 
 - `Processing Instruction node` est un noeud {{domxref("ProcessingInstruction")}}.
-- `target` fait référence à la partie cible du noeud d'instructions de traitement (par exemple, \<?_target_ ... ?>).
+- `target` fait référence à la partie cible du noeud d'instructions de traitement (par exemple, \<?_target_ ...&nbsp;?>).
 - `data` est une string (_chaîne de caractères_) contenant les données à ajouter aux données du noeud.
 
 ### Exceptions

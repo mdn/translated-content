@@ -9,9 +9,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 
 Native messaging permet à une extension d'échanger des messages avec une application native installée sur l'ordinateur de l'utilisateur. Ceci permet que des applications natives puissent fournir un service à des extensions sans avoir besoin d'être atteignables via internet. Un exemple typique est le gestionnaire de mots de passe : l'application native s'occupe du stockage et du chiffrement des mots de passe et communique avec l'extension afin de remplir les formulaires web. Native messaging permet aussi aux extensions d'accéder à des ressources qui ne sont pas accessibles via les API WebExtension, par exemple le matériel hardware particulier.
 
-L'application native n'est pas installée ou gérée par le navigateur : elle est installée à l'aide du système d'installation du système d'exploitation sous‐jacent. En plus de l'application native elle‐même, vous devrez fournir un fichier JSON appelé « manifest hôte » (host manifest) ou « manifest d'application » (app manifest) et l'installer dans un emplacement défini sur l'ordinateur de l'utilisateur. Le fichier manifest de l'application décrit comment le navigateur peut se connecter à l'application native.
+L'application native n'est pas installée ou gérée par le navigateur : elle est installée à l'aide du système d'installation du système d'exploitation sous‐jacent. En plus de l'application native elle‐même, vous devrez fournir un fichier JSON appelé «&nbsp;manifest hôte&nbsp;» (host manifest) ou «&nbsp;manifest d'application&nbsp;» (app manifest) et l'installer dans un emplacement défini sur l'ordinateur de l'utilisateur. Le fichier manifest de l'application décrit comment le navigateur peut se connecter à l'application native.
 
-L'extension doit demander l'[autorisation](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) « nativeMessaging » dans son fichier manifest.json. À l'inverse, l'application native doit accorder l'autorisation à l'extension en incluant son ID dans le champ « allowed_extensions » (extensions autorisées) du manifest de l'application.
+L'extension doit demander l'[autorisation](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) «&nbsp;nativeMessaging&nbsp;» dans son fichier manifest.json. À l'inverse, l'application native doit accorder l'autorisation à l'extension en incluant son ID dans le champ «&nbsp;allowed_extensions&nbsp;» (extensions autorisées) du manifest de l'application.
 
 Par la suite, l'extension pourra échanger des messages en JSON avec l'application native en utilisant une série de fonctions de l'API {{WebExtAPIRef("runtime")}}. Du côté de l'application native, les messages seront reçus en utilisant l'entrée standard (stdin, standard input) et envoyés en utilisant la sortie standard (stdout, standard output).
 
@@ -22,7 +22,7 @@ Le support de native messaging dans les extensions est généralement compatible
 - La liste `allowed_extensions` du manifest de l'application est un tableau d'ID d'applications, tandis que Chrome liste `allowed_origins`, sous la forme d'un tableau d'URL "chrome-extension".
 - Le manifeste de l'application est stocké dans un emplacement différent [comparé à Chrome](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location).
 
-Il y a un exemple complet (en anglais) dans le répertoire « [native‐messaging](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) » du dépôt « webextensions‐examples » sur GitHub. La plus grande partie du code de cet article est repris de cet exemple.
+Il y a un exemple complet (en anglais) dans le répertoire « [native‐messaging](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) » du dépôt «&nbsp;webextensions‐examples&nbsp;» sur GitHub. La plus grande partie du code de cet article est repris de cet exemple.
 
 ## Mise en œuvre
 
@@ -33,7 +33,7 @@ Si vous souhaitez que votre extension puisse communiquer avec une application na
 - Vous devez ajouter la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) dans son fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 - Vous devriez probablement spécifier explicitement l'id de votre add‐on, en utilisant la clé de manifest des [applications](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) ( Parce que le manifest de l'application identifiera le jeu d'extensions qui sont autorisées à se connecter à celle-ci via la liste de leur ID).
 
-Voici un exemple de fichier « manifest.json » :
+Voici un exemple de fichier «&nbsp;manifest.json&nbsp;» :
 
 ```json
 {
@@ -136,7 +136,7 @@ L'aplication continue de fonctionner jusqu'à ce que l'extension invoque `Port.d
 
 Pour envoyer des messages en utilisant `Port`, utilisez sa fonction `postMessage()`, en passant le message JSON à envoyer. Pour écouter les messages en utilisant `Port`, ajouter un écouteur (_listener_) en utilisant sa fonction `onMessage.addListener()`.
 
-Voici un exemple de script « _background_ » qui établit une connection avec l'application « ping_pong », qui écoute à l'attente de messages de celle‐ci et qui lui envoie un message « ping » à chaque fois que l'utilisateur clique sur l'action du navigateur (_browser action_) :
+Voici un exemple de script « _background_ » qui établit une connection avec l'application «&nbsp;ping_pong », qui écoute à l'attente de messages de celle‐ci et qui lui envoie un message « ping&nbsp;» à chaque fois que l'utilisateur clique sur l'action du navigateur (_browser action_) :
 
 ```js
 /*
@@ -314,8 +314,8 @@ Si vous n'avez pas réussi à démarrer l'application, vous devriez voir un mess
     "No such native application <name>"
 
 - Vérifiez que le nom passé comme argument à la fonction `runtime.connectNative()` correspond au nom dans le manifest de l'application
-- OS X / Linux : vérifiez que le nom du fichier de manifest de l'application est \<name>.json.
-- Windows : vérifiez que la clé de registre est dans l'endroit correcte, et que son nom correspond au « name » dans le manifest de l'application.
+- OS X / Linux : vérifiez que le nom du fichier de manifest de l'application est \<name>.json.
+- Windows : vérifiez que la clé de registre est dans l'endroit correcte, et que son nom correspond au «&nbsp;name&nbsp;» dans le manifest de l'application.
 - Windows : vérifiez que le chemin donné dans la clé de registre pointe vers le manifest de l'application.
 
 <!---->
@@ -335,16 +335,16 @@ Si vous n'avez pas réussi à démarrer l'application, vous devriez voir un mess
     "File at path <path> does not exist, or is not executable"
 
 - Si vous voyez ce message, alors le fichier de manifest de l'application a été trouvé.
-- Vérifier que le « chemin » dans le manifest de l'application est correct.
-- Windows : vérifiez que vous avez « échappé » les séparateurs du chemin ("c:\\\path\\\to\\\file").
-- Vérifiez que l'application se trouve bien à l'endroit indiqué par la propriété « path » dans le manifest de l'application.
+- Vérifier que le «&nbsp;chemin&nbsp;» dans le manifest de l'application est correct.
+- Windows : vérifiez que vous avez «&nbsp;échappé&nbsp;» les séparateurs du chemin ("c:\\\path\\\to\\\file").
+- Vérifiez que l'application se trouve bien à l'endroit indiqué par la propriété «&nbsp;path&nbsp;» dans le manifest de l'application.
 - Vérifiez que l'application est exécutable.
 
 <!---->
 
     "This extension does not have permission to use native application <name>"
 
-- Vérifier que le tableau « allowed_extensions » dans le manifest de l'application contient l'ID de l'add‐on.
+- Vérifier que le tableau «&nbsp;allowed_extensions&nbsp;» dans le manifest de l'application contient l'ID de l'add‐on.
 
 <!---->
 

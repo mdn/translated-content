@@ -7,7 +7,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute
 original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-relevant
 ---
-L’attribut [aria-relevant](http://www.w3.org/TR/wai-aria/states_and_properties#aria-relevant) est une valeur optionnelle utilisée pour décrire quels types de modifications ont été apportés à une région [`aria-live`](/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), ainsi que ceux qui sont pertinents et doivent être annoncés. Toute modification jugée comme non pertinente se comporte de la même manière que si l’attribut `aria-live` n’était pas activé.
+L’attribut [aria-relevant](http://www.w3.org/TR/wai-aria/states_and_properties#aria-relevant) est une valeur optionnelle utilisée pour décrire quels types de modifications ont été apportés à une région [`aria-live`](/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), ainsi que ceux qui sont pertinents et doivent être annoncés. Toute modification jugée comme non pertinente se comporte de la même manière que si l’attribut `aria-live` n’était pas activé.
 
 L’attribut aria-relevant est habituellement utilisé lorsque le contenu d’une page web peut être mis à jour alors que la page est affichée.
 

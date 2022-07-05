@@ -20,7 +20,7 @@ La méthode **`showNotification()`** de l'interface {{domxref("ServiceWorkerRegi
 
 ## Syntaxe
 
-    ​serviceWorkerRegistration.showNotification(title, [options])
+    serviceWorkerRegistration.showNotification(title, [options])
 
 ### Paramètres
 
@@ -32,7 +32,7 @@ La méthode **`showNotification()`** de l'interface {{domxref("ServiceWorkerRegi
 
     - `actions`: Un tableau de {{domxref ("NotificationAction")}} représentant les actions disponibles pour l'utilisateur lorsque la notification est présentée. Ce sont des options parmi lesquelles l'utilisateur peut choisir pour agir sur l'action dans le contexte de la notification elle-même. Le nom de l'action est envoyé au gestionnaire de notifications du service worker pour lui faire savoir que l'action a été sélectionnée par l'utilisateur. Les membres du tableau doivent être un objet. Il peut contenir les valeurs suivantes:
 
-      - action: Une {{domxref("DOMString")}}  représentant une action utilisateur à afficher sur la notification.
+      - action: Une {{domxref("DOMString")}}  représentant une action utilisateur à afficher sur la notification.
       - title: Une {{domxref("DOMString")}} contenant le texte d'action à montrer à l'utilisateur.
       - icon: Une {{domxref("USVString")}} contenant l'URL d'une icône à afficher avec l'action.
 
@@ -49,7 +49,7 @@ La méthode **`showNotification()`** de l'interface {{domxref("ServiceWorkerRegi
     - `requireInteraction`: Un {{domxref ("Boolean", "Booléen")}} indiquant qu'une notification doit rester active jusqu'à ce que l'utilisateur clique dessus ou la rejette, plutôt que de se fermer automatiquement. La valeur par défaut est `false`.
     - `silent`: Un {{domxref ("Boolean", "Booléen")}} spécifiant si la notification est silencieuse (aucun son ni vibration émis), quels que soient les paramètres de l'appareil. La valeur par défaut est `false`, ce qui signifie qu'il ne sera pas silencieux.
     - `tag`: Un {{domxref ("DOMString")}} représentant un tag d'identification pour la notification.
-    - `timestamp`: Un {{domxref ("DOMTimeStamp")}} représentant l'heure à laquelle la notification a été créée. Il peut être utilisé pour indiquer l'heure à laquelle une notification est réelle. Par exemple, cela peut se produire dans le passé lorsqu'une notification est utilisée pour un message qui n'a pas pu être envoyé immédiatement parce que l'appareil était hors ligne, ou dans le futur pour une réunion sur le point de commencer.
+    - `timestamp`: Un {{domxref ("DOMTimeStamp")}} représentant l'heure à laquelle la notification a été créée. Il peut être utilisé pour indiquer l'heure à laquelle une notification est réelle. Par exemple, cela peut se produire dans le passé lorsqu'une notification est utilisée pour un message qui n'a pas pu être envoyé immédiatement parce que l'appareil était hors ligne, ou dans le futur pour une réunion sur le point de commencer.
     - `vibrate`: Un [modèle de vibration](/fr/docs/Web/Guide/API/Vibration#Vibration_patterns) que le matériel de vibration de l'appareil émet avec la notification. Un modèle de vibration peut être un réseau avec aussi peu qu'un membre. Les valeurs sont des temps en millisecondes où les indices pairs (0, 2, 4, etc.) indiquent la durée de vibration et les indices impairs indiquent la durée de la pause. Par exemple, \[300, 100, 400] vibrerait 300 ms, mettrait en pause 100 ms, puis vibrerait 400 ms.
 
 ### Valeur de retour

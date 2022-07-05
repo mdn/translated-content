@@ -15,11 +15,11 @@ Cet article aborde les concepts de base qui forment l'accessibilité pour le Web
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>Aucun.</td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         Comprendre ce qu'est l'accessibilité et pourquoi elle est importante.
       </td>
@@ -31,7 +31,7 @@ Que ce soit en raison de limitations physiques ou techniques, il peut arriver qu
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/D%C3%A9buter_sur_MDN)._
+_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/D%C3%A9buter_sur_MDN)._
 
 ## Aller plus loin
 

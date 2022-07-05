@@ -36,7 +36,7 @@ La propriété **`HTMLElement.title`** représente le titre de l'élément, le t
 | Spécification                                                                        | Statut                           | Commentaire                                                          |
 | ------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------- |
 | {{SpecName('HTML WHATWG', '#dom-title', 'title')}}                 | {{Spec2('HTML WHATWG')}} | Pas de changement par rapport à la {{SpecName('DOM2 HTML')}}. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-78276800', 'title')}}     | {{Spec2('DOM2 HTML')}}     | Pas de changement par rapport à la {{SpecName('DOM1')}}.     |
+| {{SpecName('DOM2 HTML', 'html.html#ID-78276800', 'title')}}     | {{Spec2('DOM2 HTML')}}     | Pas de changement par rapport à la {{SpecName('DOM1')}}.     |
 | {{SpecName('DOM1', 'level-one-html.html#ID-78276800', 'title')}} | {{Spec2('DOM1')}}         | Définition initiale.                                                 |
 
 ## Compatibilité des navigateurs
@@ -45,4 +45,4 @@ La propriété **`HTMLElement.title`** représente le titre de l'élément, le t
 
 ## Voir aussi
 
-- L'attribut HTML global [**title**](/fr/docs/Web/HTML/Attributs_universels/title).
+- L'attribut HTML global [**title**](/fr/docs/Web/HTML/Attributs_universels/title).

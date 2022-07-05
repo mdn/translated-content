@@ -24,7 +24,7 @@ Une liste {{domxref("DOMStringList")}} contenant les noms des magasins d'objets 
 
 | Spécification                                                                                    | État                         | Commentaires |
 | ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB2', '#dom-idbtransaction-objectstorenames', 'db')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB2', '#dom-idbtransaction-objectstorenames', 'db')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

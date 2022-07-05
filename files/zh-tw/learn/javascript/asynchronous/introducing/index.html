@@ -18,7 +18,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}</div>
 
-<p class="summary">在本篇文章中我們會先簡短回顧在同步的 JavaScript 中所遭遇到的問題，並預先看看往後將會使用哪些非同步的 JavaScript 技巧來解決此問題。</p>
+<p>在本篇文章中我們會先簡短回顧在同步的 JavaScript 中所遭遇到的問題，並預先看看往後將會使用哪些非同步的 JavaScript 技巧來解決此問題。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -68,7 +68,7 @@ btn.addEventListener('click', () =&gt; {
 <p>所以在上面的範例中，直到警告視窗的確認按鈕被按下為止之前，文字段落都不會出現。你可以試試看底下的範例：</p>
 
 <div class="hidden">
-<pre class="brush: html">&lt;<span class="pl-ent">button</span>&gt;點擊我&lt;/<span class="pl-ent">button</span>&gt;</pre>
+<pre class="brush: html">&lt;button&gt;點擊我&lt;/button&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample('Synchronous_JavaScript', '100%', '70px')}}</p>
@@ -247,7 +247,7 @@ console.log("all done");</pre>
 
 <p>你應該會在控制台收到一個錯誤的訊息：</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">TypeError: image is undefined; can't access its "src" property</span></span></span></pre>
+<pre>TypeError: image is undefined; can't access its "src" property</pre>
 
 <p>這是因為在這個時間點瀏覽器試著去執行最後的 <code>console.log()</code> 時 <code>fetch()</code> 還沒有完成執行，所以 <code>image</code> 變數尚未賦予值因而導致錯誤。</p>
 

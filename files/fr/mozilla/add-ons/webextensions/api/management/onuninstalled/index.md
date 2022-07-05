@@ -55,7 +55,7 @@ Enregistrez les noms des extensions lorsqu'ils sont désinstallés :
 
 ```js
 browser.management.onUninstalled.addListener((info) => {
-  console.log(info.name + " was uninstalled");
+  console.log(info.name + " was uninstalled");
 });
 ```
 

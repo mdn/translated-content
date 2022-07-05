@@ -23,7 +23,7 @@ La propriété **`source`** est une propriété en lecture seule, rattachée à 
 
 ### Valeur
 
-Un objet qui représente la source de la requête. Ce peut être un objet {{domxref("IDBIndex")}}, {{domxref("IDBObjectStore")}} ou un objet  {{domxref("IDBCursor")}}.
+Un objet qui représente la source de la requête. Ce peut être un objet {{domxref("IDBIndex")}}, {{domxref("IDBObjectStore")}} ou un objet  {{domxref("IDBCursor")}}.
 
 ## Exemples
 
@@ -67,8 +67,8 @@ objectStoreTitleRequest.onsuccess = function() {
 
 | Spécification                                                                        | État                             | Commentaires |
 | ------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBRequest-source', 'source')}} | {{Spec2('IndexedDB')}}     |              |
-| {{SpecName("IndexedDB 2", "#dom-idbrequest-source", "source")}} | {{Spec2("IndexedDB 2")}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBRequest-source', 'source')}} | {{Spec2('IndexedDB')}}     |              |
+| {{SpecName("IndexedDB 2", "#dom-idbrequest-source", "source")}} | {{Spec2("IndexedDB 2")}} |              |
 
 ## Compatibilité des navigateurs
 

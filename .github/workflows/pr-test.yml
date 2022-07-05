@@ -30,10 +30,10 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "12"
+          node-version: "16"
 
       - name: Cache node_modules
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v3.0.2
         id: cached-node_modules
         with:
           path: |
@@ -159,7 +159,7 @@ jobs:
           # to debug JS or CSS.
           find $BUILD_OUT_ROOT/static -type f -name "*.map" | xargs rm
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: ${{ env.GIT_DIFF_CONTENT }}
         env:
           # This must match what we set in the "Build changed content" step above

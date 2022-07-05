@@ -24,11 +24,11 @@ Les évènements initialisés par ce moyen ont été créés par la méthode {{d
     event.initEvent(type, bubbles, cancelable)
 
 - `type`
-  - : est une {{domxref("DOMString")}}  qui définit le type d'évènement.
+  - : est une {{domxref("DOMString")}}  qui définit le type d'évènement.
 - `bubbles`
-  - : est un {{jsxref("Boolean")}} indiquant si l'évènement doit se propager vers le haut dans la chaîne des évènements ou non. Une fois déterminé, la propriété en lecture seule  {{domxref("Event.bubbles")}} donnera sa valeur.
+  - : est un {{jsxref("Boolean")}} indiquant si l'évènement doit se propager vers le haut dans la chaîne des évènements ou non. Une fois déterminé, la propriété en lecture seule  {{domxref("Event.bubbles")}} donnera sa valeur.
 - `cancelable`
-  - : Une valeur booléenne définissant si l'évènement peut être annulé. Une fois déterminé, la propriété en lecture seule  {{ domxref("Event.cancelable") }}  donnera sa valeur.
+  - : Une valeur booléenne définissant si l'évènement peut être annulé. Une fois déterminé, la propriété en lecture seule  {{ domxref("Event.cancelable") }}  donnera sa valeur.
 
 ## Exemple
 

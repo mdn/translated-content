@@ -21,7 +21,7 @@ tags:
 ---
 <div>{{MDNSidebar}}</div>
 
-<p><span class="seoSummary">為了讓文件更加組織化、標準化而易於閱讀，MDN 風格指南描述了文件的組織方式、拼寫、格式等問題。</span>這些規則只是指導方針而非強制規定。與格式相比，我們對內容更感興趣，因此不用覺得在開始貢獻之前有被迫要學習這些指南的壓力。若之後有其他支援者修改了你的內容以便讓它符合這些指南，你也不需要因此而感到沮喪或驚訝。</p>
+<p>為了讓文件更加組織化、標準化而易於閱讀，MDN 風格指南描述了文件的組織方式、拼寫、格式等問題。這些規則只是指導方針而非強制規定。與格式相比，我們對內容更感興趣，因此不用覺得在開始貢獻之前有被迫要學習這些指南的壓力。若之後有其他支援者修改了你的內容以便讓它符合這些指南，你也不需要因此而感到沮喪或驚訝。</p>
 
 <p>在語言方面，本指南主要適用於英語文件，其它語言可擁有（且歡迎建立）自己的風格指南。它們會以當地語系團隊頁面的子頁面發佈。</p>
 
@@ -38,8 +38,8 @@ tags:
 <p>頁面標題與章節標題應使用一般句子的大小寫形式（只對句首字母和專有名詞大寫），而非新聞式標題：</p>
 
 <ul>
-  <li><span class="correct"><strong>正確</strong></span>：“A new method for creating JavaScript rollovers”</li>
-  <li><span class="incorrect"><strong>錯誤</strong></span>：“A New Method for Creating JavaScript Rollovers”</li>
+  <li><strong>正確</strong>：“A new method for creating JavaScript rollovers”</li>
+  <li><strong>錯誤</strong>：“A New Method for Creating JavaScript Rollovers”</li>
  </ul>
 
  <p>有些舊的頁面編寫於本樣式規則定版之前。若你願意，可隨時更新它們。我們會逐漸完善它們。</p>
@@ -257,11 +257,11 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <dl>
  <dt>元素名稱</dt>
- <dd>使用 {{TemplateLink("HTMLElement")}} 巨集，這會建立連向該元素頁面的連結。譬如，撰寫 \{{HTMLElement("title")}} 會產生 "{{HTMLElement("title")}}" 。如果不想要建立連結，<strong>就把元素名稱置於角括號中</strong>並使用「行內程式碼樣式」（舉例， <code>&lt;title&gt;</code> ）。</dd>
+ <dd>使用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs"><code>HTMLElement</code></a> 巨集，這會建立連向該元素頁面的連結。譬如，撰寫 \{{HTMLElement("title")}} 會產生 "{{HTMLElement("title")}}" 。如果不想要建立連結，<strong>就把元素名稱置於角括號中</strong>並使用「行內程式碼樣式」（舉例， <code>&lt;title&gt;</code> ）。</dd>
  <dt>屬性名稱</dt>
  <dd>使用「行內程式碼」樣式讓它以<code>程式碼字型</code>顯示。此外，當屬性在解釋其為何的相關說明或其在文章中首次出現時要把它們加上<strong><em>粗體</em></strong>。</dd>
  <dt>屬性定義</dt>
- <dd>對定義的術語使用 {{TemplateLink("htmlattrdef")}} 巨集（舉例， \{{htmlattrdef("type")}} ） ，以便它們可以用 {{TemplateLink("htmlattrxref")}} 巨集（舉例， \{{htmlattrxref("type","element")}} ）的方式被其他頁面連結來參照屬性定義。</dd>
+ <dd>對定義的術語使用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs"><code>htmlattrdef</code></a> 巨集（舉例， \{{htmlattrdef("type")}} ） ，以便它們可以用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs"><code>htmlattrxref</code></a> 巨集（舉例，\{{htmlattrxref("type","element")}} ）的方式被其他頁面連結來參照屬性定義。</dd>
  <dt>屬性值</dt>
  <dd>使用「行內程式碼」樣式來套用 <code>&lt;code&gt;</code> 屬性值，而且不要使用引述標示環繞字串值，除非程式碼範例有此需要。</dd>
  <dd><strong>譬如：</strong>「當 <code>&lt;input&gt;</code> 的 <code>type</code> 屬性被設定為 <code>email</code> 或 <code>tel</code> ……」</dd>
@@ -274,10 +274,10 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <ul>
  <li>常見的拉丁縮寫（ etc. 、 i.e. 、 e.g. ）可以在括號表達、或備註內使用。這些縮寫都要用半形句號（.）並緊隨著逗號或其他恰當的標點符號。
   <ul>
-   <li><span class="correct"><strong>正確</strong></span>：Web browsers (e.g., Firefox) can be used ...</li>
-   <li><span class="incorrect"><strong>不正確</strong></span>：Web browsers e.g. Firefox can be used ...</li>
-   <li><span class="incorrect"><strong>不正確</strong></span>：Web browsers, e.g. Firefox, can be used ...</li>
-   <li><span class="incorrect"><strong>不正確</strong></span>：Web browsers, (eg: Firefox) can be used ...</li>
+   <li><strong>正確</strong>：Web browsers (e.g., Firefox) can be used ...</li>
+   <li><strong>不正確</strong>：Web browsers e.g. Firefox can be used ...</li>
+   <li><strong>不正確</strong>：Web browsers, e.g. Firefox, can be used ...</li>
+   <li><strong>不正確</strong>：Web browsers, (eg: Firefox) can be used ...</li>
   </ul>
  </li>
 </ul>
@@ -287,10 +287,10 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <ul>
  <li>在普通行文中（也就是備註與括號以外的文字）請使用與該縮寫相等的文字表達。
   <ul>
-   <li><span class="correct"><strong>正確</strong></span>: ... web browsers, and so on.</li>
-   <li><span class="incorrect"><strong>不正確</strong></span>: ... web browsers, etc.</li>
-   <li><span class="correct"><strong>正確</strong></span>: Web browsers such as Firefox can be used ...</li>
-   <li><span class="incorrect"><strong>不正確</strong></span>: Web browsers e.g. Firefox can be used ...</li>
+   <li><strong>正確</strong>: ... web browsers, and so on.</li>
+   <li><strong>不正確</strong>: ... web browsers, etc.</li>
+   <li><strong>正確</strong>: Web browsers such as Firefox can be used ...</li>
+   <li><strong>不正確</strong>: Web browsers e.g. Firefox can be used ...</li>
   </ul>
  </li>
 </ul>
@@ -365,8 +365,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>所有的縮寫與簡稱都要大寫、並把半形句號刪除，就算是「 US 」與「 UN 」之類的組織也一樣。</p>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>： XUL</li>
- <li><span class="incorrect"><strong>不正確</strong></span>： X.U.L. ； Xul</li>
+ <li><strong>正確</strong>： XUL</li>
+ <li><strong>不正確</strong>： X.U.L. ； Xul</li>
 </ul>
 
 <h4 id="Expansion">Expansion</h4>
@@ -374,8 +374,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>當在頁面中首次提及某個術語時，最好把那些使用者不熟悉的縮寫展開。如果不確定是否有必要，那就展開吧——如果可以連結到它的文章或是<a href="/zh-TW/docs/Glossary">術語表</a>中的條目來說明此技術更好。</p>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>:「XUL （ XML User Interface Language ）是 Mozilla 的類 XML 語言……」</li>
- <li><span class="incorrect"><strong>不正確</strong></span>:「XUL 是 Mozilla 的類 XML 語言……」</li>
+ <li><strong>正確</strong>:「XUL （ XML User Interface Language ）是 Mozilla 的類 XML 語言……」</li>
+ <li><strong>不正確</strong>:「XUL 是 Mozilla 的類 XML 語言……」</li>
 </ul>
 
 <h4 id="Plurals_of_acronyms_and_abbreviations">簡寫與縮寫的複數形式</h4>
@@ -385,8 +385,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>不要加上撇號。真的不要。</p>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>： CD-ROMs</li>
- <li><span class="incorrect"><strong>不正確</strong></span>： CD-ROM's</li>
+ <li><strong>正確</strong>： CD-ROMs</li>
+ <li><strong>不正確</strong>： CD-ROM's</li>
 </ul>
 
 <h4 id="Versus_vs._and_v.">「 Versus 」、「 vs. 」、「 v. 」</h4>
@@ -394,9 +394,9 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>偏好使用縮短的「 vs. 」。</p>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>： this vs. that</li>
- <li><span class="incorrect"><strong>不正確</strong></span>： this v. that</li>
- <li><span class="incorrect"><strong>不正確</strong></span>： this versus that</li>
+ <li><strong>正確</strong>： this vs. that</li>
+ <li><strong>不正確</strong>： this v. that</li>
+ <li><strong>不正確</strong>： this versus that</li>
 </ul>
 
 <h3 id="Capitalization">大小寫</h3>
@@ -428,8 +428,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>使用英文式的複數，而非拉丁文或希臘文的格式。</p>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>： syllabuses 、 octopuses</li>
- <li><span class="incorrect"><strong>不正確</strong></span>： syllabi 、 octopi</li>
+ <li><strong>正確</strong>： syllabuses 、 octopuses</li>
+ <li><strong>不正確</strong>： syllabi 、 octopi</li>
 </ul>
 
 <h3 id="Hyphenation">連字號</h3>
@@ -437,8 +437,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>當前綴的最後一個字母是元音且與字根的第一個字母相同時，應使用連字號串聯。</p>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>： email 、 re-elect 、 co-op</li>
- <li><span class="incorrect"><strong>不正確</strong></span>： e-mail 、 reelect 、 coop</li>
+ <li><strong>正確</strong>： email 、 re-elect 、 co-op</li>
+ <li><strong>不正確</strong>： e-mail 、 reelect 、 coop</li>
 </ul>
 
 <h3 id="Gender-neutral_language">性別中立語言</h3>
@@ -482,15 +482,15 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>日期格式使用「 January 1, 1990 」（不包含程式碼範例中的日期）。</p>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>： February 24, 2006</li>
- <li><span class="incorrect"><strong>不正確</strong></span>： February 24th, 2006; 24 February, 2006; 24/02/2006</li>
+ <li><strong>正確</strong>： February 24, 2006</li>
+ <li><strong>不正確</strong>： February 24th, 2006; 24 February, 2006; 24/02/2006</li>
 </ul>
 
 <p>作為替代，也可以使用 YYYY/MM/DD 格式。</p>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>： 2006/02/24</li>
- <li><span class="incorrect"><strong>不正確</strong></span>： 02/24/2006; 24/02/2006; 02/24/06</li>
+ <li><strong>正確</strong>： 2006/02/24</li>
+ <li><strong>不正確</strong>： 02/24/2006; 24/02/2006; 02/24/06</li>
 </ul>
 
 <h4 id="Decades">年代</h4>
@@ -498,8 +498,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>年代使用「 1990s 」。不要用撇號。</p>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>： 1990s</li>
- <li><span class="incorrect"><strong>不正確</strong></span>： 1990's</li>
+ <li><strong>正確</strong>： 1990s</li>
+ <li><strong>不正確</strong>： 1990's</li>
 </ul>
 
 <h4 id="Plurals_of_numerals">數字的複數</h4>
@@ -507,8 +507,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>複數數字加上「 s 」不要用撇號。</p>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>： 486s</li>
- <li><span class="incorrect"><strong>不正確</strong></span>： 486's</li>
+ <li><strong>正確</strong>： 486s</li>
+ <li><strong>不正確</strong>： 486's</li>
 </ul>
 
 <h4 id="Commas">逗號</h4>
@@ -516,8 +516,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>在行文中使用逗號的條件是五個字元或以上的大數。</p>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>： 4000; 54,000</li>
- <li><span class="incorrect"><strong>不正確</strong></span>： 4,000; 54000</li>
+ <li><strong>正確</strong>： 4000; 54,000</li>
+ <li><strong>不正確</strong>： 4,000; 54000</li>
 </ul>
 
 <h3 id="Punctuation">標點符號</h3>
@@ -529,8 +529,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p><strong>須使用連續逗號（譯註：中文為頓號）</strong>。連續逗號（　serial/Oxford comma ）是指在連續出現三個或以上的項目時須使用的逗號。</p>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>： I will travel on trains, planes, and automobiles.</li>
- <li><span class="incorrect"><strong>不正確</strong></span>： I will travel on trains, planes and automobiles.</li>
+ <li><strong>正確</strong>： I will travel on trains, planes, and automobiles.</li>
+ <li><strong>不正確</strong>： I will travel on trains, planes and automobiles.</li>
 </ul>
 
 <h4 id="Apostrophes_and_quotation_marks">撇號和引用標示</h4>
@@ -547,8 +547,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 </ol>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>： Please don't use "curly quotes."</li>
- <li><span class="incorrect"><strong>不正確</strong></span>： Please don’t use “curly quotes.”</li>
+ <li><strong>正確</strong>： Please don't use "curly quotes."</li>
+ <li><strong>不正確</strong>： Please don’t use “curly quotes.”</li>
 </ul>
 
 <h3 id="Spelling">拼寫</h3>
@@ -560,8 +560,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>一般上使用 <a href="https://www.dictionary.com/">Dictionary.com</a> 上的第一個條目，除非該條目被列為異體字或主要用於非美國的英語。例如，如果檢視「 <a href="https://www.dictionary.com/browse/behaviour">behaviour</a> 」，會發現在「 Chiefly British 」之後緊跟著一個連向美國標準格式的連結「 <a href="https://dictionary.reference.com/browse/behavior">behavior</a> 」。不要用異體字。</p>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>： localize, behavior</li>
- <li><span class="incorrect"><strong>不正確</strong></span>： localise, behaviour</li>
+ <li><strong>正確</strong>： localize, behavior</li>
+ <li><strong>不正確</strong>： localise, behaviour</li>
 </ul>
 
 <h3 id="Terminology">術語</h3>
@@ -570,11 +570,11 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <p>使用「元素」（ elements ）來指稱 HTML 和 XML 元素，而非「標籤」（ tags ）。此外，還需要把它們用「 &lt;&gt; 」包裹並以 {{HTMLElement("code")}} 樣式呈現。</p>
 
-<p>當第一次在章節中參照了某個元素，應使用 {{TemplateLink("HTMLElement")}} 巨集來建立指向該元素的文件（除非就在撰寫該元素的參考文件）。</p>
+<p>當第一次在章節中參照了某個元素，應使用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs"><code>HTMLElement</code></a> 巨集來建立指向該元素的文件（除非就在撰寫該元素的參考文件）。</p>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>： {{HTMLElement("span")}} 元素</li>
- <li><span class="incorrect"><strong>不正確</strong></span>： span 標籤</li>
+ <li><strong>正確</strong>： {{HTMLElement("span")}} 元素</li>
+ <li><strong>不正確</strong>： span 標籤</li>
 </ul>
 
 <h4 id="Parameters_vs._arguments">參數或引數</h4>
@@ -586,8 +586,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>在連續的操作指南中，使用祈使語氣進行描述使用者介面動作。透過它的標籤及類別指明使用者介面的元素。</p>
 
 <ul>
- <li><span class="correct"><strong>正確</strong></span>：點選編輯按鈕。</li>
- <li><span class="incorrect"><strong>不正確</strong></span>：點選編輯。</li>
+ <li><strong>正確</strong>：點選編輯按鈕。</li>
+ <li><strong>不正確</strong>：點選編輯。</li>
 </ul>
 
 <h3 id="Voice">語態</h3>

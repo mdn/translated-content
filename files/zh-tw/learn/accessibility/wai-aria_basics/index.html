@@ -7,7 +7,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 <div>{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}</div>
 
-<p class="summary">接續之前的文章，有時在涉及非語意HTML與動態 JavaScript更新的內容製作複雜的UI控制措施將是個難題。WAI-ARIA即是一個能藉由添加進一步的語意幫助處理這種問題的技術 ，讓瀏覽器與輔助科技可以辨識及用以讓使用者知道發生甚麼事情。這裡我們將展示如何以基本水準的運用來增進無障礙使用。</p>
+<p>接續之前的文章，有時在涉及非語意HTML與動態 JavaScript更新的內容製作複雜的UI控制措施將是個難題。WAI-ARIA即是一個能藉由添加進一步的語意幫助處理這種問題的技術 ，讓瀏覽器與輔助科技可以辨識及用以讓使用者知道發生甚麼事情。這裡我們將展示如何以基本水準的運用來增進無障礙使用。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -184,7 +184,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 <p>除此之外，該網站對舊瀏覽器如IE8的使用者更可能無障礙；為了這個目的，包含ARIA角色是值得的。如果為了某些原因，你的網站僅使用 <code>&lt;div&gt;</code>建置，那麼肯定你應該包含ARIA角色來提供這些非常需要的語意！</p>
 
-<p>當ARIA超越從HTML5所能獲得的語意時，搜尋表單的改進語意已經顯示實現的可能性。你將會在下面看到更多關於這些語意與ARIA屬性的能力，尤其在{{anch("Accessibility of non-semantic controls")}}章節。現在，我們先來看看ARIA如何幫助動態內容更新。</p>
+<p>當ARIA超越從HTML5所能獲得的語意時，搜尋表單的改進語意已經顯示實現的可能性。你將會在下面看到更多關於這些語意與ARIA屬性的能力，尤其在<a href="#非語意控制措施的無障礙">Accessibility of non-semantic controls</a>章節。現在，我們先來看看ARIA如何幫助動態內容更新。</p>
 
 <h3 id="動態內容更新">動態內容更新</h3>
 
@@ -265,10 +265,10 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 <p>首先，讓我們再看一次在我們的CSS與JavaScript無障礙文章中第一次看的表單範例(請閱讀 <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive">Keeping it unobtrusive</a>完整回顧)。在本章節文末我們展示當你試著送出表單而驗證錯誤時，出現我們包含一些在錯誤訊息框的ARIA屬性。</p>
 
-<pre class="brush: html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>errors<span class="punctuation token">"</span></span> <span class="attr-name token">role</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>alert<span class="punctuation token">"</span></span> <span class="attr-name token">aria-relevant</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>all<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>ul</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>ul</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html"><code class="language-html">&lt;div class="errors" role="alert" aria-relevant="all"&gt;
+  &lt;ul&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
 
 <ul>
  <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#alert">role="alert"</a></code> 自動地將其應用的該元素轉換為即時區塊，以利讀出它的改變；它也將語意地辨識其為警告訊息(重要時間/內容脈絡敏感資訊)，而呈現以更好、更無障礙的方式向使用者傳遞警告(模態對話框如 <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code> 具有許多無障礙的問題；請參見WebAIM的 <a href="http://webaim.org/techniques/javascript/other#popups">Popup Windows</a>)。</li>
@@ -298,11 +298,11 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 <p><strong>注意</strong>：你可以查看完成的範例 <a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html">form-validation-updated.html</a>。</p>
 </div>
 
-<p>除了傳統的 {{htmlelement("label")}} 元素之外，WAI-ARIA也能賦予一些進階的表單標籤技術。我們已經談論過使用 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> 屬性在我們不希望標籤讓有視覺的使用者看見的地方來提供標籤(參見上述 {{anch("Signposts/Landmarks")}} 章節。如果你想要指定一個非<code>&lt;label&gt;</code> 元素當作標籤或具有相同標籤多重的表單輸入標籤，這裡有使用其他屬性如 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a></code> 的其他標籤技術，如果你想要其他的訊息與表單輸入關聯並且報讀出來，使用 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby">aria-describedby</a></code>。更多細節請參見 <a href="http://webaim.org/techniques/forms/advanced">WebAIM's Advanced Form Labeling article</a><span class="subtitle"> 。</span></p>
+<p>除了傳統的 {{htmlelement("label")}} 元素之外，WAI-ARIA也能賦予一些進階的表單標籤技術。我們已經談論過使用 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> 屬性在我們不希望標籤讓有視覺的使用者看見的地方來提供標籤(參見上述 <a href="#路標地標">路標/地標</a> 章節。如果你想要指定一個非<code>&lt;label&gt;</code> 元素當作標籤或具有相同標籤多重的表單輸入標籤，這裡有使用其他屬性如 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a></code> 的其他標籤技術，如果你想要其他的訊息與表單輸入關聯並且報讀出來，使用 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby">aria-describedby</a></code>。更多細節請參見 <a href="http://webaim.org/techniques/forms/advanced">WebAIM's Advanced Form Labeling article</a> 。</p>
 
-<p>還有許多其他有用的屬性與狀態，用來指出表單元素的狀態。例如，<span class="subtitle"> <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-disabled">aria-disabled</a>="true"</code> </span>可用於指出表單區域是處於停用的狀態。許多瀏覽器只會跳過停用的表單區塊，並且甚至不會被螢幕報讀器讀出，但在某些情況下，他們可被感知，所以最好包含此屬性讓螢幕報讀器知道停用的輸入事實上即是停用的狀態。</p>
+<p>還有許多其他有用的屬性與狀態，用來指出表單元素的狀態。例如， <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-disabled">aria-disabled</a>="true"</code> 可用於指出表單區域是處於停用的狀態。許多瀏覽器只會跳過停用的表單區塊，並且甚至不會被螢幕報讀器讀出，但在某些情況下，他們可被感知，所以最好包含此屬性讓螢幕報讀器知道停用的輸入事實上即是停用的狀態。</p>
 
-<p>如果輸入的停用狀態可能產生改變，也最好在發生時指出，以及其結果為何。例如，在我們的<span class="subtitle"> <a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html">form-validation-checkbox-disabled.html</a> </span>展示中，當核取框被核取時，可以讓另一個表單輸入允許輸入更進一步的資訊。我們已經設置一個隱藏的即時區塊：</p>
+<p>如果輸入的停用狀態可能產生改變，也最好在發生時指出，以及其結果為何。例如，在我們的 <a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html">form-validation-checkbox-disabled.html</a> 展示中，當核取框被核取時，可以讓另一個表單輸入允許輸入更進一步的資訊。我們已經設置一個隱藏的即時區塊：</p>
 
 <pre class="brush: html">&lt;p class="hidden-alert" aria-live="assertive"&gt;&lt;/p&gt;</pre>
 
@@ -326,7 +326,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 <h4 id="描述非語意按鈕為按鈕">描述非語意按鈕為按鈕</h4>
 
-<p>本課程我們已經談過幾次按鈕、連結或表單元素(參見HTML無障礙文章的 <a href="/en-US/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a> ，以及前述{{anch("Enhancing keyboard accessibility")}}的原生無障礙(以及在使用其他元素偽造背後的無障礙議題)。基本上，使用 <code>tabindex</code> 與一些 JavaScript，在很多情況下，你可以在沒有太多困難下增加鍵盤無障礙支援功能。</p>
+<p>本課程我們已經談過幾次按鈕、連結或表單元素(參見HTML無障礙文章的 <a href="/en-US/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a> ，以及前述<a href="#增強鍵盤無障礙">增強鍵盤無障礙</a>的原生無障礙(以及在使用其他元素偽造背後的無障礙議題)。基本上，使用 <code>tabindex</code> 與一些 JavaScript，在很多情況下，你可以在沒有太多困難下增加鍵盤無障礙支援功能。</p>
 
 <p>但螢幕報讀器的情況如何呢？他們仍然無法將這些元素視為按鈕。如果我們用螢幕報讀器測試我們的 <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> 範例，我們偽造的按鈕將會用句子如 "Click me!, group"讀出，很顯然地令人困惑。</p>
 

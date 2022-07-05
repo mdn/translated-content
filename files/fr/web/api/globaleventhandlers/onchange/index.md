@@ -19,7 +19,7 @@ La propriété `onchange` définit et renvoie le gestionnaire d'évènement `onC
 
 ### Notes
 
-Le pseudo code suivant illustre la manière dont le gestionnaire d'évènement `change` est implémenté dans Mozilla :
+Le pseudo code suivant illustre la manière dont le gestionnaire d'évènement `change` est implémenté dans Mozilla&nbsp;:
 
       control.onfocus = focus;
       control.onblur = blur;
@@ -28,7 +28,7 @@ Le pseudo code suivant illustre la manière dont le gestionnaire d'évènement `
       }
 
       function blur () {
-          if (control.value != original_value)
+          if (control.value&nbsp;!= original_value)
             control.onchange();
       }
 
@@ -40,4 +40,4 @@ Par conséquent, vous pouvez rencontrer des comportements inattendus dans l'év�
 
 ### Voir aussi
 
-- [DOM Level 2: HTML event types](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-eventgroupings-htmlevents) — traduction en français (non normative) : [DOM Niveau 2 Events : Les types d'événements HTML](http://www.yoyodesign.org/doc/w3c/dom2-events/events.html#Events-eventgroupings-htmlevents)
+- [DOM Level 2: HTML event types](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-eventgroupings-htmlevents) — traduction en français (non normative)&nbsp;: [DOM Niveau 2 Events&nbsp;: Les types d'événements HTML](http://www.yoyodesign.org/doc/w3c/dom2-events/events.html#Events-eventgroupings-htmlevents)

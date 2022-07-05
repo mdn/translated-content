@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLFormElement/action
 ---
 {{APIRef("HTML DOM")}}
 
-La propriété **`HTMLFormElement.action`** représente l'action associée à l'élément {{HTMLElement("form")}}.
+La propriété **`HTMLFormElement.action`** représente l'action associée à l'élément {{HTMLElement("form")}}.
 
 L'action d'un formulaire est le programme exécuté sur le serveur lorsque le formulaire est soumis. Cette propriété peut être récupérée ou définie.
 

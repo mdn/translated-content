@@ -46,9 +46,9 @@ C'est la partie difficile, puisque les différentes sections de la chaîne User-
 
 ### Nom du navigateur
 
-Souvent ceux qui disent vouloir détecter le navigateur veulent en fait détecter le moteur de rendu. Souhaitez-vous détecter Firefox et non Seamonkey, ou Chrome et non Chromium ? Ou seulement savoir si le navigateur utilise le moteur de rendu Gecko ou Webkit ? Dans ce dernier cas, réferrez vous plus bas dans cette page.
+Souvent ceux qui disent vouloir détecter le navigateur veulent en fait détecter le moteur de rendu. Souhaitez-vous détecter Firefox et non Seamonkey, ou Chrome et non Chromium&nbsp;? Ou seulement savoir si le navigateur utilise le moteur de rendu Gecko ou Webkit&nbsp;? Dans ce dernier cas, réferrez vous plus bas dans cette page.
 
-La plupart des navigateurs notent leur nom et version suivant le format _NomDuNavigateur/NuméroDeVersion_, à l'exception notable d'Internet Explorer. Le nom n'est cependant pas la seule information du User-Agent qui respecte ce format, il n'est donc pas possible d'y trouver directement le nom du navigateur, seulement de vérifier si le nom recherché est présent ou non. Attention certains navigateurs mentent : par exemple, Chrome mentionne à la fois Chrome et Safari dans le User-Agent. Pour détecter Safari il faut donc vérifier que la chaîne "Safari" est présente et "Chrome" est absent. De la même façon, Chromium se présente souvent comme Chrome et Seamonkey comme Firefox.
+La plupart des navigateurs notent leur nom et version suivant le format _NomDuNavigateur/NuméroDeVersion_, à l'exception notable d'Internet Explorer. Le nom n'est cependant pas la seule information du User-Agent qui respecte ce format, il n'est donc pas possible d'y trouver directement le nom du navigateur, seulement de vérifier si le nom recherché est présent ou non. Attention certains navigateurs mentent&nbsp;: par exemple, Chrome mentionne à la fois Chrome et Safari dans le User-Agent. Pour détecter Safari il faut donc vérifier que la chaîne "Safari" est présente et "Chrome" est absent. De la même façon, Chromium se présente souvent comme Chrome et Seamonkey comme Firefox.
 
 Faites aussi attention à ne pas utiliser une expression régulière trop simple sur le nom du navigateur car le User-Agent contient d'autres chaînes de caractères ne respectant pas le format clé/valeur. Par exemple, le User-Agent de Safari et Chrome contient une chaîne "like Gecko".
 
@@ -66,25 +66,25 @@ Faites aussi attention à ne pas utiliser une expression régulière trop simple
       <td>Firefox</td>
       <td>Firefox/xyz</td>
       <td>Seamonkey/xyz</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>Seamonkey</td>
       <td>Seamonkey/xyz</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <td>Chrome</td>
       <td>Chrome/xyz</td>
       <td>Chromium/xyz</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>Chromium</td>
       <td>Chromium/xyz</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <td>Safari</td>
@@ -101,7 +101,7 @@ Faites aussi attention à ne pas utiliser une expression régulière trop simple
         <p>OPR/xyz></p>
         <p>Opera/xyz</p>
       </td>
-      <td> </td>
+      <td></td>
       <td>
         <p>Opera 15+ (moteur de rendu Blink)</p>
         <p>Opera 12- (moteur de rendu Presto)</p>
@@ -110,7 +110,7 @@ Faites aussi attention à ne pas utiliser une expression régulière trop simple
     <tr>
       <td>Internet Explorer</td>
       <td>;MSIE xyz;</td>
-      <td> </td>
+      <td></td>
       <td>
         Internet Explorer n'utilise pas le format
         <em>NomDuNavigateur/NuméroDeVersion</em>
@@ -129,17 +129,17 @@ Encore une fois, assurez vous de regarder au bon endroit selon le navigateur vis
 
 ### Moteur de rendu
 
-Comme indiqué plus haut, chercher le nom du moteur de recherche est la plupart du temps la meilleure solution. Cela permet de ne pas exclure des navigateurs peu connus basés sur le même moteur de rendu qu'un autre plus connu. Les navigateurs qui utilisent le même moteur de rendu affichent les pages de la même façon : on peut partir du principe que ce qui va fonctionner avec l'un fonctionnera avec l'autre.
+Comme indiqué plus haut, chercher le nom du moteur de recherche est la plupart du temps la meilleure solution. Cela permet de ne pas exclure des navigateurs peu connus basés sur le même moteur de rendu qu'un autre plus connu. Les navigateurs qui utilisent le même moteur de rendu affichent les pages de la même façon&nbsp;: on peut partir du principe que ce qui va fonctionner avec l'un fonctionnera avec l'autre.
 
-Il y a cinq principaux moteurs de rendu : Trident, Gecko, Presto, Blink et Webkit. Puisque détecter le nom du moteur de rendu est courant, d'autres noms sont ajoutés dans beaucoup d'autres User-Agents. Il est donc important de faire attention aux faux positifs lorsqu'on cherche à détecter le moteur de rendu.
+Il y a cinq principaux moteurs de rendu&nbsp;: Trident, Gecko, Presto, Blink et Webkit. Puisque détecter le nom du moteur de rendu est courant, d'autres noms sont ajoutés dans beaucoup d'autres User-Agents. Il est donc important de faire attention aux faux positifs lorsqu'on cherche à détecter le moteur de rendu.
 
 | Moteur  | Doit contenir   | Ne doit pas contenir                                                                                            |
 | ------- | --------------- | --------------------------------------------------------------------------------------------------------------- |
-| Gecko   | Gecko/xyz       |                                                                                                                 |
-| WebKit  | AppleWebKit/xyz | Attention : les navigateurs qui utilisent Webkit ajoutent "like Gecko", ce qui peut déclencher de faux positifs |
-| Presto  | Opera/xyz       | **Note :** Presto n'est plus utilisé par Opera pour les versions >= 15 (voir "Blink")                           |
+| Gecko   | Gecko/xyz       |                                                                                                                 |
+| WebKit  | AppleWebKit/xyz | Attention&nbsp;: les navigateurs qui utilisent Webkit ajoutent "like Gecko", ce qui peut déclencher de faux positifs |
+| Presto  | Opera/xyz       | **Note&nbsp;:** Presto n'est plus utilisé par Opera pour les versions >= 15 (voir "Blink")                           |
 | Trident | Trident/xyz     | Internet Explorer place cette chaîne dans la partie _commentaire_ du User-Agent                                 |
-| Blink   | Chrome/xyz      |                                                                                                                 |
+| Blink   | Chrome/xyz      |                                                                                                                 |
 
 ## Version du moteur de rendu
 
@@ -158,7 +158,7 @@ La raison la plus courante de détecter le User-Agent et de déterminer sur quel
 - Ne partez jamais du principe qu'un navigateur ne fonctionne que sur un seul type d'appareil. En particulier, ne pas définir de paramètre par défaut selon le navigateur.
 - N'utilisez jamais la chaîne dédiée au système d'exploitation pour déterminer si le navigateur est sur un mobile, une tablette ou un ordinateur. Le même système d'exploitation peut fonctionner sur plusieurs types d'appareil (par exemple, Android fonctionne aussi bien sur des tablettes que sur des téléphones).
 
-Le tableau suivant résume de quelle façon les principaux navigateurs indiquent qu'ils fonctionnent sur un appareil mobile :
+Le tableau suivant résume de quelle façon les principaux navigateurs indiquent qu'ils fonctionnent sur un appareil mobile&nbsp;:
 
 <table>
   <caption>

@@ -17,7 +17,7 @@ translation_of: Web/Progressive_web_apps/Offline_Service_workers
 
 <h3 id="安全">安全</h3>
 
-<p>因为它们非常强大，所以 Service Worker 只能在安全的上下文中执行（即 HTTPS）。如果您想在将代码推送到生产环境之前先进行实验，则可以始终在本地主机上进行测试或设置 GitHub Pages，这两者都支持HTTPS。</p>
+<p>因为它们非常强大，所以 Service Worker 只能在安全的上下文中执行（即 HTTPS）。如果您想在将代码推送到生产环境之前先进行实验，则可以始终在本地主机上进行测试或设置 GitHub Pages，这两者都支持 HTTPS。</p>
 
 <h2 id="离线优先">离线优先</h2>
 
@@ -27,11 +27,11 @@ translation_of: Web/Progressive_web_apps/Offline_Service_workers
 
 <p>Service Worker 当正确地作为渐进功能实装时，可以为支持其 API 的现代浏览器用户提供离线支持使其受益，但也不会使用旧版浏览器的用户造成负面影响。</p>
 
-<h2 id="js13kPWA应用程序中的_Service_worker"><span class="tlid-translation translation" lang="zh-CN"><span title="">js13kPWA应用程序中的 </span></span>Service worker</h2>
+<h2 id="js13kPWA应用程序中的_Service_worker">js13kPWA 应用程序中的 Service worker</h2>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span class="alt-edited">理论看够了，让我们看一些源代码！</span></span></p>
+<p>理论看够了，让我们看一些源代码！</p>
 
-<h3 class="highlight-spanned" id="注册_Service_Worker"><span class="highlight-span">注册 Service Worker</span></h3>
+<h3 class="highlight-spanned" id="注册_Service_Worker">注册 Service Worker</h3>
 
 <p>首先让我们看看在 app.js 文件中注册新 Service Worker 的代码：</p>
 
@@ -41,7 +41,7 @@ translation_of: Web/Progressive_web_apps/Offline_Service_workers
 
 <p>如果浏览器支持 Service Workers API，则使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/ServiceWorkerContainer/register" title="ServiceWorkerContainer 接口的 register() 方法创建或更新一个给定scriptURL的ServiceWorkerRegistration 。"><code>ServiceWorkerContainer.register()</code></a> 方法在该站点注册。其内容在 sw.js 文件中，可以在注册成功后执行。它是 app.js 文件中唯一与 Service Worker 有关的代码; 其他关于 Service Worker 的内容都写在 sw.js 文件中。</p>
 
-<h3 class="highlight-spanned" id="Service_Worker_的生命周期"><span class="highlight-span">Service Worker 的生命周期</span></h3>
+<h3 class="highlight-spanned" id="Service_Worker_的生命周期">Service Worker 的生命周期</h3>
 
 <p>注册完成后，sw.js 文件会自动下载、安装，然后激活。</p>
 
@@ -53,7 +53,7 @@ translation_of: Web/Progressive_web_apps/Offline_Service_workers
     console.log('[Service Worker] Install');
 });</pre>
 
-<p>在 <code>install</code> 的监听函数中, 我们可以初始化缓存并添加离线应用时所需的文件，js13kPWA 应用确实也是这么做的。</p>
+<p>在 <code>install</code> 的监听函数中，我们可以初始化缓存并添加离线应用时所需的文件，js13kPWA 应用确实也是这么做的。</p>
 
 <p>首先，创建一个存储缓存名字的变量，App Shell 所需的文件也被记录在一个数组上：</p>
 
@@ -190,7 +190,7 @@ self.addEventListener('install', function(e) {
 
 <h2 id="总结">总结</h2>
 
-<p>在这篇文章中我们简单的了解了如何使用 Service Worker 让你的PWA实现离线功能。如果你想要学习更多关于 <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> 的概念，以及使用 Service Worker 方面的相关细节，你可以进一步查阅我们的文档。</p>
+<p>在这篇文章中我们简单的了解了如何使用 Service Worker 让你的 PWA 实现离线功能。如果你想要学习更多关于 <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> 的概念，以及使用 Service Worker 方面的相关细节，你可以进一步查阅我们的文档。</p>
 
 <p>Service Worker 在处理<a href="/en-US/docs/Web/API/Push_API">消息推送</a>的时候也会经常被用到，这一部分我们将会在后面的章节进行讨论。</p>
 

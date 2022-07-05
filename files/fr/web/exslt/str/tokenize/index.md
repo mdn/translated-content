@@ -25,11 +25,11 @@ translation_of: Web/EXSLT/str/tokenize
 
 Un ensemble de nœuds d'éléments `token`, contenant chacun un `token` provenant de `chaîne`.
 
-Par exemple :
+Par exemple&nbsp;:
 
     str:tokenize('2007-09-14-03T11:40:23', '-T:')
 
-Retourne l'ensemble de nœuds suivant :
+Retourne l'ensemble de nœuds suivant&nbsp;:
 
     <token>2007</token>
     <token>09</token>

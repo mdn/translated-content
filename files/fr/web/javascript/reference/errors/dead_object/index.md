@@ -39,7 +39,7 @@ try {
   String(window);
 }
 catch (e) {
-  console.log("window est problablement mort ");
+  console.log("window est probablement mort ");
 }
 ```
 

@@ -271,7 +271,7 @@ Mais pas à :
       <th colspan="4">Combinateurs</th>
     </tr>
     <tr>
-      <td> </td>
+      <td></td>
       <td>Juxtaposition</td>
       <td>
         Les composants sont obligatoires et doivent apparaître dans cet ordre.
@@ -317,7 +317,7 @@ Mais pas à :
       <th colspan="4">Multiplicateurs</th>
     </tr>
     <tr>
-      <td> </td>
+      <td></td>
       <td>Aucun multiplicateur</td>
       <td>Exactement 1 fois.</td>
       <td><code>solid</code></td>

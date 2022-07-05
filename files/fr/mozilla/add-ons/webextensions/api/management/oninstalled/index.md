@@ -55,7 +55,7 @@ Enregistrez les noms des extensions lorsqu'ils sont installés :
 
 ```js
 browser.management.onInstalled.addListener((info) => {
-  console.log(info.name + " was installed");
+  console.log(info.name + " was installed");
 });
 ```
 

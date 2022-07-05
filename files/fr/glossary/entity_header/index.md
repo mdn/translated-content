@@ -11,7 +11,7 @@ Un en-tête d'entité est un {{glossary("header","en-tête HTTP")}} décrivant l
 
 Même si les en-têtes d'entité ne sont ni des en-têtes de requête, ni des en-têtes de réponse, ils sont souvent inclus avec ces modalités.
 
-Dans l'exemple suivant, {{HTTPHeader("Content-Length")}} est un en-tête d'entité, tandis que {{HTTPHeader("Host")}} et {{HTTPHeader("User-Agent")}} sont des {{glossary("Request header","en-têtes de requête")}} :
+Dans l'exemple suivant, {{HTTPHeader("Content-Length")}} est un en-tête d'entité, tandis que {{HTTPHeader("Host")}} et {{HTTPHeader("User-Agent")}} sont des {{glossary("Request header","en-têtes de requête")}}&nbsp;:
 
     POST /myform.html HTTP/1.1
     Host: developer.mozilla.org

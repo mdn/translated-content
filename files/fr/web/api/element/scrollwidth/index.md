@@ -30,7 +30,7 @@ _xScrollWidth_ est la largeur du contenu d'_element_ en pixels.
 
 Il n'y a pas de spécification du W3C pour **scrollWidth**.
 
-Un brouillon de l'éditeur existe cependant : [Cascading Style Sheets Object Model (CSSOM)](http://dev.w3.org/cvsweb/~checkout~/csswg/cssom/Overview.src.html)
+Un brouillon de l'éditeur existe cependant&nbsp;: [Cascading Style Sheets Object Model (CSSOM)](http://dev.w3.org/cvsweb/~checkout~/csswg/cssom/Overview.src.html)
 
 ### Références
 

@@ -48,14 +48,14 @@ Firefox 8, basé sur Gecko 8.0, est sorti le 8 novembre 2011. Cet article fourni
 
 ### HTML
 
-- La propriété `crossOrigin` a été ajouté à [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) et l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/img#attr-crossorigin) a été ajouté à l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) (voir [bug 664299](https://bugzilla.mozilla.org/show_bug.cgi?id=664299)).
-- La méthode [`HTMLSelectElement.add()`](</fr/docs/Web/API/HTMLSelectElement#add()>) supporte désormais supporte désormais soit un élément ou soit l'index d'un élément auquel un nouvel élément doit être inséré avant. Auparavant, seulement un élément était supporté (voir [bug 666200](https://bugzilla.mozilla.org/show_bug.cgi?id=666200)).
+- La propriété `crossOrigin` a été ajouté à [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) et l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/img#attr-crossorigin) a été ajouté à l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) (voir [bug 664299](https://bugzilla.mozilla.org/show_bug.cgi?id=664299)).
+- La méthode [`HTMLSelectElement.add()`](</fr/docs/Web/API/HTMLSelectElement#add()>) supporte désormais supporte désormais soit un élément ou soit l'index d'un élément auquel un nouvel élément doit être inséré avant. Auparavant, seulement un élément était supporté (voir [bug 666200](https://bugzilla.mozilla.org/show_bug.cgi?id=666200)).
 - Le constructeur `HTMLIsIndexElement` a été retiré. Aucun éléments n'a implémenté cette interface depuis Firefox 4.
-- la fonctionnalité HTML5 "menu contextuel" (attribut `contextmenu`), qui vous permet d'ajouter des éléments personnalisés particuliers au menu contextuel d'origine, est désormais supportée (l'implémentation est encore expérimentale en attendant des changements dans la spécification (voir [bug 617528](https://bugzilla.mozilla.org/show_bug.cgi?id=617528 'FIXED: implement the HTML5 "context menu" feature (contextmenu attribute)')).
+- la fonctionnalité HTML5 "menu contextuel" (attribut `contextmenu`), qui vous permet d'ajouter des éléments personnalisés particuliers au menu contextuel d'origine, est désormais supportée (l'implémentation est encore expérimentale en attendant des changements dans la spécification (voir [bug 617528](https://bugzilla.mozilla.org/show_bug.cgi?id=617528 'FIXED: implement the HTML5 "context menu" feature (contextmenu attribute)')).
 - Le support de l'attribut [`accesskeylabel`](/fr/docs/HTML/Global_attributes#accesskey) a été ajouté à tous les éléments.
 - les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) supportent désormais l'attribut `selectionDirection`, et leurs méthodes `setSelectionRange()` ont été mises à jour pour supporter éventuellement la spécification d'une direction.
 - La plupart des éléments peuvent désormais obtenir une bague de focalisation établie autour d'eux s'ils ont été faits pouvant recevoir le focus via l'attribut `tabindex` et que l'utilisateur se concentre ensuite sur l'élément.
-- Dans un ensemble d'éléments [`<label>`](/fr/docs/Web/HTML/Element/label) imbriqués, cliquer sur les événements ne déclencheront plus plusieurs éléments, qui, avant, provoquaient un blocage de Firefox (voir [bug 646157](https://bugzilla.mozilla.org/show_bug.cgi?id=646157)).
+- Dans un ensemble d'éléments [`<label>`](/fr/docs/Web/HTML/Element/label) imbriqués, cliquer sur les événements ne déclencheront plus plusieurs éléments, qui, avant, provoquaient un blocage de Firefox (voir [bug 646157](https://bugzilla.mozilla.org/show_bug.cgi?id=646157)).
 
 ### DOM
 
@@ -86,7 +86,7 @@ Firefox 8, basé sur Gecko 8.0, est sorti le 8 novembre 2011. Cet article fourni
 - Les règles de césure ont été ajoutées pour de nombreuses nouvelles langues lors de l'utilisation de [`hyphens`](/fr/docs/Web/CSS/hyphens).
 - Le traitement de [`background-size`](/fr/docs/Web/CSS/background-size) a été revu pour mieux correspondre à la spécification.
 - Dans le passé, [`text-decoration`](/fr/docs/Web/CSS/text-decoration) en mode quirks avait l'épaisseur de ligne et la position ajustée sur le texte descendant pour correspondre à la descendance. Désormais le mode standard et le mode quirks ont un rendu plus proche.
-- Le positionnement horizontal des éléments est davantage conforme à la spécification dans beaucoup de cas. La documentation est à venir, mais pour l'instant, pour plus de détails voir le commentaire 23 du [bug 682780](https://bugzilla.mozilla.org/show_bug.cgi?id=682780).
+- Le positionnement horizontal des éléments est davantage conforme à la spécification dans beaucoup de cas. La documentation est à venir, mais pour l'instant, pour plus de détails voir le commentaire 23 du [bug 682780](https://bugzilla.mozilla.org/show_bug.cgi?id=682780).
 - [Les images SVG sont désormais correctement mise à l'échelle](/fr/docs/CSS/Scaling_of_SVG_backgrounds) lorsqu'elles sont utilisées comme images de fond.
 
 ### Réseau
@@ -104,7 +104,7 @@ Firefox 8, basé sur Gecko 8.0, est sorti le 8 novembre 2011. Cet article fourni
 - Le constructeur WebSocket supporte désormais un ensemble de protocoles ainsi que la chaîne d'un seul protocole.
 - Le contenu mixte n'est pas autorisé avec WebSockets, vous ne pouvez plus établir une connexion vers un serveur WebSocket non sécurisé à partir d'un contenu sécurisé.
 - Les erreurs de connexion avec WebSockets déclenchent à présent le gestionnaire `onerror`.
-- L'API [WebSocket](/fr/docs/WebSockets) a été mise à jour suivant la dernière version de la spécification (voir [bug 674890](https://bugzilla.mozilla.org/show_bug.cgi?id=674890), [bug 674527](https://bugzilla.mozilla.org/show_bug.cgi?id=674527) et [bug 674716](https://bugzilla.mozilla.org/show_bug.cgi?id=674716)).
+- L'API [WebSocket](/fr/docs/WebSockets) a été mise à jour suivant la dernière version de la spécification (voir [bug 674890](https://bugzilla.mozilla.org/show_bug.cgi?id=674890), [bug 674527](https://bugzilla.mozilla.org/show_bug.cgi?id=674527) et [bug 674716](https://bugzilla.mozilla.org/show_bug.cgi?id=674716)).
 - L'extension deflate-stream pour WebSockets a été désactivée, elle est obsolète et a cassée la compatibilité avec quelques sites.
 
 ### WebGL
@@ -139,7 +139,7 @@ Voir [Updating add-ons for Firefox 8](/fr/docs/Firefox/Updating_add-ons_for_Fire
 
 ### Workers
 
-Il n'est plus possible d'accéder à des objets XPCOM depuis ChromeWorkers. XPConnect a été désactivé dans le contexte des travailleurs comme indiqué par le [bug 649537](https://bugzilla.mozilla.org/show_bug.cgi?id=649537).
+Il n'est plus possible d'accéder à des objets XPCOM depuis ChromeWorkers. XPConnect a été désactivé dans le contexte des travailleurs comme indiqué par le [bug 649537](https://bugzilla.mozilla.org/show_bug.cgi?id=649537).
 
 ### XUL
 

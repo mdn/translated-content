@@ -21,9 +21,9 @@ Renvoie la fenêtre elle-même, qui est semblable à un objet de type Array, lis
 
     frameList = window.frames;
 
-- `frameList` est une liste d'objets frame, semblable à un tableau grâce à la propriété `length` . Ses éléments sont accessibles en utilisant la notation  `{{ mediawiki.external('i') }}`.
+- `frameList` est une liste d'objets frame, semblable à un tableau grâce à la propriété `length` . Ses éléments sont accessibles en utilisant la notation  `{{ mediawiki.external('i') }}`.
 - `frameList === window` est évalué à `true`.
-- Chaque élément de `window.frames` est un pseudo tableau représentant l'objet [window](/en/DOM/window) correspondant au contenu de la  [\<frame>](/en/HTML/Element/frame) ou [\<iframe>](/en/HTML/Element/iframe) , et non au DOM element (i)frame (ex., `window.frames[ 0 ]` équivaut à `document.getElementsByTagName( "iframe" )[ 0 ].contentWindow`).
+- Chaque élément de `window.frames` est un pseudo tableau représentant l'objet [window](/en/DOM/window) correspondant au contenu de la  [\<frame>](/en/HTML/Element/frame) ou [\<iframe>](/en/HTML/Element/iframe) , et non au DOM element (i)frame (ex., `window.frames[ 0 ]` équivaut à `document.getElementsByTagName( "iframe" )[ 0 ].contentWindow`).
 - pour plus de détails sur la valeur retournée, se référer au [fil de discussion sur mozilla.dev.platform](http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/5628c6f346859d4f/169aa7004565066?hl=en&ie=UTF-8&oe=utf-8&q=window.frames&pli=1).
 
 ## Exemple

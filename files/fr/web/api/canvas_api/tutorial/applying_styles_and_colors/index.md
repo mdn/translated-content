@@ -6,7 +6,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs
 ---
 {{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Formes_géométriques", "Dessin_de_texte_avec_canvas")}}
 
-Dans le chapitre sur [les formes géométriques](/fr/docs/Tutoriel_canvas/Formes_g%C3%A9om%C3%A9triques), nous avons utilisé les styles de lignes et de remplissage par défaut. Ici, nous allons explorer les options de canvas à notre disposition pour rendre nos dessins un peu plus attrayants. Vous apprendrez comment ajouter des couleurs différentes, des styles de ligne, des dégradés, des motifs et des ombres à vos dessins.
+Dans le chapitre sur [les formes géométriques](/fr/docs/Tutoriel_canvas/Formes_g%C3%A9om%C3%A9triques), nous avons utilisé les styles de lignes et de remplissage par défaut. Ici, nous allons explorer les options de canvas à notre disposition pour rendre nos dessins un peu plus attrayants. Vous apprendrez comment ajouter des couleurs différentes, des styles de ligne, des dégradés, des motifs et des ombres à vos dessins.
 
 ## Les couleurs
 
@@ -19,7 +19,7 @@ Jusqu'à présent, nous avons seulement vu des méthodes sur le contexte de dess
 
 `color` est une chaîne représentant un CSS {{cssxref("&lt;color&gt;")}}, d'un objet gradient ou d'un objet motif. Nous allons examiner le gradient et la structure des objets plus tard. Par défaut, l'encadrement et la couleur de remplissage sont fixés sur noir (valeur `#000000` de CSS `color`).
 
-> **Note :** Lorsque vous définissez `strokeStyle` et `fillStyle`, la nouvelle valeur devient la valeur par défaut pour toutes les formes en cours d'élaboration à partir de là. Pour chaque forme que vous voulez dans une couleur différente, vous aurez besoin de réaffecter `fillStyle` ou `strokeStyle`.
+> **Note :** Lorsque vous définissez `strokeStyle` et `fillStyle`, la nouvelle valeur devient la valeur par défaut pour toutes les formes en cours d'élaboration à partir de là. Pour chaque forme que vous voulez dans une couleur différente, vous aurez besoin de réaffecter `fillStyle` ou `strokeStyle`.
 
 Les chaînes pour être valides, doivent être conforme à la spécification CSS {{cssxref("&lt;color&gt;")}}. Chacun des exemples suivants décrit la même couleur.
 
@@ -250,7 +250,7 @@ Si vous considérez un tracé de (3,1) à (3,5) avec une épaisseur de ligne de 
 
 Pour résoudre ce problème, vous devez être très précis dans la création de votre tracé. Sachant qu'une largeur de `1.0` s'étendra d'une demi-unité de chaque côté du tracé, créer le tracé de (3.5,1) à (3.5,5) aboutit à l'exemple trois pour une largeur de `1.0` et au remplissage d'un seul pixel de ligne verticale.
 
-> **Note :** Sachez que dans notre exemple de ligne verticale, la position Y fait toujours référence à une position de grille entière — sinon, vous verrez des pixels à moitié colorés à gauche et à droite (mais notez aussi que ce comportement dépend de l'actuel style `lineCap`, dont la valeur par défaut est `butt`. Vous pouvez essayer de tracer des traits consistants avec des coordonnées non-entières pour les lignes et avec une largeur particulière, en définissant le style `lineCap` à `square`, pour que le bord extérieur du trait autour du point final soit automatiquement étendu pour couvrir le pixel entier).
+> **Note :** Sachez que dans notre exemple de ligne verticale, la position Y fait toujours référence à une position de grille entière — sinon, vous verrez des pixels à moitié colorés à gauche et à droite (mais notez aussi que ce comportement dépend de l'actuel style `lineCap`, dont la valeur par défaut est `butt`. Vous pouvez essayer de tracer des traits consistants avec des coordonnées non-entières pour les lignes et avec une largeur particulière, en définissant le style `lineCap` à `square`, pour que le bord extérieur du trait autour du point final soit automatiquement étendu pour couvrir le pixel entier).
 >
 > Notez également que seuls les points de début et de fin d'un chemin sont affectés : si un chemin est fermé avec `closePath ()`, il n'y a pas de point de départ ni de point final ; à la place, tous les points d'extrémité du chemin sont connectés à leurs segments joints précédent et suivant, en utilisant le paramètre courant du style `lineJoin`, dont la valeur par défaut est `miter`, avec pour effet d'étendre automatiquement les bordures extérieures des segments connectés à leur point d'intersection. Ainsi, le trait de rendu couvrira exactement les pixels pleins centrés à chaque extrémité si ces segments connectés sont horizontaux et / ou verticaux. Voir les deux sections suivantes pour les démonstrations de ces styles de lignes supplémentaires.
 
@@ -258,20 +258,20 @@ Pour les lignes de largeur paire, chaque moitié finit par être un nombre entie
 
 Bien que légèrement ennuyeux quand on travaille avec des graphismes 2D évolutifs, en accordant une attention à la grille de pixels et à la position des tracés, vous vous assurez du comportement correct de vos dessins, et ce, indépendamment de la mise à l'échelle ou d'autres transformations. Une ligne verticale de largeur 1,0 à la bonne position deviendra une ligne de 2 pixels nette à l'échelle 2.
 
-### Un exemple de `lineCap`
+### Un exemple de `lineCap`
 
-La propriété `lineCap` détermine comment les extrêmités de chaque ligne sont dessinées. Il y a trois valeurs possibles pour la propriété : `butt`, `round` et `square`. Par défaut, la propriété est définie à `butt`.
+La propriété `lineCap` détermine comment les extrêmités de chaque ligne sont dessinées. Il y a trois valeurs possibles pour la propriété : `butt`, `round` et `square`. Par défaut, la propriété est définie à `butt`.
 
 - `butt` _(bout)_
   - : L'extrémité des lignes est en angle droit.
 - `round` _(rond)_
   - : Les extrémités sont arrondies.
 - `square` _(carré)_
-  - : Les extrémités sont en angle droit en ajoutant une extension d'une largeur égale à la ligne et une hauteur égale à la moitié de la largeur de la ligne.
+  - : Les extrémités sont en angle droit en ajoutant une extension d'une largeur égale à la ligne et une hauteur égale à la moitié de la largeur de la ligne.
 
-Dans cet exemple, nous avons tracé trois lignes, chacune avec une valeur différente pour la propriété `lineCap`. Nous avons par ailleurs ajouté deux guides pour voir exactement les différences entre les trois lignes. Chacune de ces trois lignes est identique entre les deux traits bleus.
+Dans cet exemple, nous avons tracé trois lignes, chacune avec une valeur différente pour la propriété `lineCap`. Nous avons par ailleurs ajouté deux guides pour voir exactement les différences entre les trois lignes. Chacune de ces trois lignes est identique entre les deux traits bleus.
 
-La ligne de gauche utilise l'option par défaut `butt`. Vous pourrez noter qu'elle est entièrement dessinée entre les deux guides. La deuxième utilise l'option `round`. Elle ajoute un demi-cercle à chaque extrémité d'un rayon valant la moitié de la largeur de la ligne. La ligne de droite utilise l'option `square`. Elle ajoute une extension avec une largeur égale à la ligne et une hauteur équivalante à la moitié de la largeur de la ligne.
+La ligne de gauche utilise l'option par défaut `butt`. Vous pourrez noter qu'elle est entièrement dessinée entre les deux guides. La deuxième utilise l'option `round`. Elle ajoute un demi-cercle à chaque extrémité d'un rayon valant la moitié de la largeur de la ligne. La ligne de droite utilise l'option `square`. Elle ajoute une extension avec une largeur égale à la ligne et une hauteur équivalante à la moitié de la largeur de la ligne.
 
 ```js
 function draw() {
@@ -310,16 +310,16 @@ draw();
 
 {{EmbedLiveSample("Un_exemple_de_lineCap", "180", "180", "canvas_linecap.png")}}
 
-### Un exemple de `lineJoin`
+### Un exemple de `lineJoin`
 
-La propriété `lineJoin` détermine comment deux segments (lignes, arcs ou courbes), de largeur non nulle se connectant dans une forme, sont joints ensemble (les segments de longueur nulle, dont les coordonnées de départ et de fin sont exactement les mêmes, sont ignorés).
+La propriété `lineJoin` détermine comment deux segments (lignes, arcs ou courbes), de largeur non nulle se connectant dans une forme, sont joints ensemble (les segments de longueur nulle, dont les coordonnées de départ et de fin sont exactement les mêmes, sont ignorés).
 
-Il existe trois valeurs possibles pour cette propriété : `round`, `bevel` et `miter`. Par défaut, cette propriété est définie à `miter`. Notez que le paramètre `lineJoin` n'a pas d'effet si les deux segments connectés ont la même direction, parce qu'aucune zone de jointure ne sera ajoutée dans ce cas.
+Il existe trois valeurs possibles pour cette propriété : `round`, `bevel` et `miter`. Par défaut, cette propriété est définie à `miter`. Notez que le paramètre `lineJoin` n'a pas d'effet si les deux segments connectés ont la même direction, parce qu'aucune zone de jointure ne sera ajoutée dans ce cas.
 
 - `round` _(rond)_
-  - : Arrondit les angles des segments en ajoutant un arc de cercle centré à l'extrémité commune des segments connectés. Le rayon de ces angles arrondis est égal à la moitié de la largeur du trait.
+  - : Arrondit les angles des segments en ajoutant un arc de cercle centré à l'extrémité commune des segments connectés. Le rayon de ces angles arrondis est égal à la moitié de la largeur du trait.
 - `bevel` _(biseau)_
-  - : Ajoute un triangle à l'extrémité commune des segments connectés.
+  - : Ajoute un triangle à l'extrémité commune des segments connectés.
 - `miter` _(onglet)_
   - : Les segments connectés sont reliés en prolongeant leurs bords extérieurs pour se connecter en un seul point, avec pour effet de remplir une zone supplémentaire en forme de losange. Ce paramètre est effectué par la propriété miterLimit qui est expliquée ci-dessous.
 
@@ -596,7 +596,7 @@ Le dernier arrêt de couleur dans chacun des quatre dégradés utilise une coule
 Dans l'un des exemples de la page précédente, nous avons utilisé une série de boucles pour créer un motif d'images. Il existe cependant une méthode beaucoup plus simple : la méthode `createPattern ()`.
 
 - {{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}
-  - : Crée et renvoie un nouvel objet de canvas. `image` est un {{domxref ("CanvasImageSource")}} (c'est-à-dire un {{domxref ("HTMLImageElement")}} ; un autre élément canvas,  `type` est une chaîne indiquant comment utiliser l'image.
+  - : Crée et renvoie un nouvel objet de canvas. `image` est un {{domxref ("CanvasImageSource")}} (c'est-à-dire un {{domxref ("HTMLImageElement")}} ; un autre élément canvas,  `type` est une chaîne indiquant comment utiliser l'image.
 
 Le type spécifie comment utiliser l'image pour créer le motif et doit avoir l'une des valeurs de chaîne suivantes :
 
@@ -707,7 +707,7 @@ Nous allons regarder la propriété de la `font` _(police de caratères)_ et la 
 
 ## Règles de remplissage Canvas
 
-Lors de l'utilisation de `fill` (ou {{domxref ("CanvasRenderingContext2D.clip", "clip")}} et {{domxref("CanvasRenderingContext2D.isPointInPath", "isPointinPath")}}) , déterminez si un point est à l'intérieur ou à l'extérieur d'un chemin et ainsi, s'il est rempli ou non. Ceci est utile lorsqu'un chemin en croise  un autre ou est imbriqué.
+Lors de l'utilisation de `fill` (ou {{domxref ("CanvasRenderingContext2D.clip", "clip")}} et {{domxref("CanvasRenderingContext2D.isPointInPath", "isPointinPath")}}) , déterminez si un point est à l'intérieur ou à l'extérieur d'un chemin et ainsi, s'il est rempli ou non. Ceci est utile lorsqu'un chemin en croise un autre ou est imbriqué.
 
 Deux valeurs sont possibles :
 

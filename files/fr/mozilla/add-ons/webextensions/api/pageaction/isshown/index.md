@@ -49,14 +49,14 @@ Vérifiez l'état de l'onglet actuellement actif :
 
 ```js
 async function shownInActiveTab() {
-  let tabs = await browser.tabs.query({
+  let tabs = await browser.tabs.query({
     currentWindow:true,
     active: true
   });
-  let shown = await browser.pageAction.isShown({
+  let shown = await browser.pageAction.isShown({
     tabId: tabs[0].id
   });
-  console.log(shown);
+  console.log(shown);
 }
 ```
 

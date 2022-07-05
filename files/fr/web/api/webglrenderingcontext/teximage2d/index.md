@@ -40,24 +40,24 @@ La méthode **`WebGLRenderingContext.texImage2D()`** de l'[API WebGL](/fr-FR/doc
   - : Un {{domxref ("GLenum")}} indiquant le point de liaison (cible) de la texture active. Valeurs possibles :
 
     - `gl.TEXTURE_2D` : une texture bidimensionnelle ;
-    - `gl.TEXTURE_CUBE_MAP_POSITIVE_X` : face X positive pour une texture mappée sur un cube ;
-    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_X` : face X négative pour une texture mappée sur un cube ;
-    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Y` : face Y positive pour une texture mappée sur un cube ;
-    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Y` : face Y négative pour une texture mappée sur un cube ;
+    - `gl.TEXTURE_CUBE_MAP_POSITIVE_X` : face X positive pour une texture mappée sur un cube ;
+    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_X`&nbsp;: face X négative pour une texture mappée sur un cube ;
+    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Y` : face Y positive pour une texture mappée sur un cube ;
+    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Y` : face Y négative pour une texture mappée sur un cube ;
     - `gl.TEXTURE_CUBE_MAP_POSITIVE_Z` : face Z positive pour une texture mappée sur un cube ;
     - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Z` : face Z négative pour une texture mappée sur un cube.
 
 - `niveau`
-  - : Un {{domxref ("GLint")}} indiquant le niveau de détail. Le niveau 0 est le niveau de l'image de base et le niveau n est le n-ième niveau de réduction du mipmap.
+  - : Un {{domxref ("GLint")}} indiquant le niveau de détail. Le niveau 0 est le niveau de l'image de base et le niveau n est le n-ième niveau de réduction du mipmap.
 - `formatinterne`
 
   - : Un {{domxref ("GLint")}} indiquant les composantes de couleur dans la texture. Valeurs possibles :
 
-    - `gl.ALPHA` : ignore les composantes rouge, vert et bleu, et lit la composante alpha ;
-    - `gl.RGB` : ignore la composante alpha et lit les composantes rouge, vert et bleu ;
-    - `gl.RGBA` : les composantes rouge, vert, bleu et alpha sont lues à partir du tampon des couleurs ;
-    - `gl.LUMINANCE` : chaque composante de couleur est une composante de luminance, alpha vaut 1,0 ;
-    - `gl.LUMINANCE_ALPHA` : chaque composante est une composante de luminance/alpha ;
+    - `gl.ALPHA` : ignore les composantes rouge, vert et bleu, et lit la composante alpha ;
+    - `gl.RGB`&nbsp;: ignore la composante alpha et lit les composantes rouge, vert et bleu ;
+    - `gl.RGBA`&nbsp;: les composantes rouge, vert, bleu et alpha sont lues à partir du tampon des couleurs ;
+    - `gl.LUMINANCE`&nbsp;: chaque composante de couleur est une composante de luminance, alpha vaut 1,0 ;
+    - `gl.LUMINANCE_ALPHA`&nbsp;: chaque composante est une composante de luminance/alpha ;
     - lors de l'utilisation de l'extension {{domxref("WEBGL_depth_texture")}} :
 
       - `gl.DEPTH_COMPONENT`
@@ -109,10 +109,10 @@ La méthode **`WebGLRenderingContext.texImage2D()`** de l'[API WebGL](/fr-FR/doc
 
   - : Un {{domxref("GLenum")}} indiquant le type de données des données de texel. Valeurs possibles :
 
-    - `gl.UNSIGNED_BYTE` : 8 bits par canal pour `gl.RGBA` ;
-    - `gl.UNSIGNED_SHORT_5_6_5` : 5 bits de rouge, 6 bits de vert, 5 bits de bleu ;
-    - `gl.UNSIGNED_SHORT_4_4_4_4` : 4 bits de rouge, 4 bits de vert, 4 bits de bleu, 4 bits d'alpha ;
-    - `gl.UNSIGNED_SHORT_5_5_5_1` : 5 bits de rouge, 5 bits de vert, 5 bits de bleu, 1 bit d'alpha ;
+    - `gl.UNSIGNED_BYTE`&nbsp;: 8 bits par canal pour `gl.RGBA` ;
+    - `gl.UNSIGNED_SHORT_5_6_5`&nbsp;: 5 bits de rouge, 6 bits de vert, 5 bits de bleu ;
+    - `gl.UNSIGNED_SHORT_4_4_4_4`&nbsp;: 4 bits de rouge, 4 bits de vert, 4 bits de bleu, 4 bits d'alpha ;
+    - `gl.UNSIGNED_SHORT_5_5_5_1`&nbsp;: 5 bits de rouge, 5 bits de vert, 5 bits de bleu, 1 bit d'alpha ;
     - lors de l'utilisation de l'extension {{domxref ("WEBGL_depth_texture")}} :
 
       - `gl.UNSIGNED_SHORT`
@@ -140,7 +140,7 @@ La méthode **`WebGLRenderingContext.texImage2D()`** de l'[API WebGL](/fr-FR/doc
       - `gl.UNSIGNED_INT_10F_11F_11F_REV`
       - `gl.UNSIGNED_INT_5_9_9_9_REV`
       - `gl.UNSIGNED_INT_24_8`
-      - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (les pixels doivent être {{jsxref("null")}})
+      - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (les pixels doivent être {{jsxref("null")}})
 
 - `pixels`
 
@@ -148,10 +148,10 @@ La méthode **`WebGLRenderingContext.texImage2D()`** de l'[API WebGL](/fr-FR/doc
 
     - {{domxref("ArrayBufferView")}},
 
-      - un {{jsxref("Uint8Array")}} doit être utilisé si `type` est `gl.UNSIGNED_BYTE` ;
-      - un {{jsxref("Uint16Array")}} doit être utilisé si `type` est `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`, `gl.UNSIGNED_SHORT_5_5_5_1`, `gl.UNSIGNED_SHORT` ou `ext.HALF_FLOAT_OES` ;
-      - un {{jsxref("Uint32Array")}} doit être utilisé si `type` est `gl.UNSIGNED_INT` ou `ext.UNSIGNED_INT_24_8_WEBGL` ;
-      - un {{jsxref("Float32Array")}} doit être utilisé si `type` est `gl.FLOAT` ;
+      - un {{jsxref("Uint8Array")}} doit être utilisé si `type` est `gl.UNSIGNED_BYTE` ;
+      - un {{jsxref("Uint16Array")}} doit être utilisé si `type` est `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`, `gl.UNSIGNED_SHORT_5_5_5_1`, `gl.UNSIGNED_SHORT` ou `ext.HALF_FLOAT_OES` ;
+      - un {{jsxref("Uint32Array")}} doit être utilisé si `type` est `gl.UNSIGNED_INT` ou `ext.UNSIGNED_INT_24_8_WEBGL` ;
+      - un {{jsxref("Float32Array")}} doit être utilisé si `type` est `gl.FLOAT` ;
 
     - {{domxref("ImageData")}},
     - {{domxref("HTMLImageElement")}},
@@ -160,7 +160,7 @@ La méthode **`WebGLRenderingContext.texImage2D()`** de l'[API WebGL](/fr-FR/doc
     - {{domxref("ImageBitmap")}}.
 
 - **`decalage`**
-  - : (WebGL 2 seulement) Un décalage en octets {{domxref("GLintptr")}} dans le magasin de données du {{domxref("WebGLBuffer")}}. Utilisé pour télécharger des données vers la {{domxref ("WebGLTexture")}} liée, depuis le `WebGLBuffer` lié à la cible `PIXEL_UNPACK_BUFFER`.
+  - : (WebGL 2 seulement) Un décalage en octets {{domxref("GLintptr")}} dans le magasin de données du {{domxref("WebGLBuffer")}}. Utilisé pour télécharger des données vers la {{domxref ("WebGLTexture")}} liée, depuis le `WebGLBuffer` lié à la cible `PIXEL_UNPACK_BUFFER`.
 
 ### Valeur retournée
 
@@ -184,14 +184,14 @@ gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
     <tr>
       <td>{{SpecName('WebGL', "#5.14.8", "texImage2D")}}</td>
       <td>{{Spec2('WebGL')}}</td>
-      <td><p>Définition initiale pour WebGL.</p></td>
+      <td><p>Définition initiale pour WebGL.</p></td>
     </tr>
     <tr>
       <td>
         {{SpecName('OpenGL ES 2.0', "glTexImage2D.xml", "glTexImage2D")}}
       </td>
       <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td><p>Page man de l’API OpenGL ES 2.0 (similaire).</p></td>
+      <td><p>Page man de l’API OpenGL ES 2.0 (similaire).</p></td>
     </tr>
     <tr>
       <td>{{SpecName('WebGL2', "#3.7.6", "texImage2D")}}</td>
@@ -203,7 +203,7 @@ gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
         {{SpecName('OpenGL ES 3.0', "glTexImage2D.xhtml", "glTexImage2D")}}
       </td>
       <td>{{Spec2('OpenGL ES 3.0')}}</td>
-      <td>Page man de l’API OpenGL ES 3.0 (similaire).</td>
+      <td>Page man de l’API OpenGL ES 3.0 (similaire).</td>
     </tr>
   </tbody>
 </table>

@@ -5,14 +5,14 @@ translation_of: Web/API/WaveShaperNode/curve
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>{{ domxref("WaveShaperNode") }} 接口的 <code>curve</code> 属性是一个描述要被应用的畸变的{{domxref("Float32Array")}} 数组.</p>
+<p>{{ domxref("WaveShaperNode") }} 接口的 <code>curve</code> 属性是一个描述要被应用的畸变的{{domxref("Float32Array")}} 数组。</p>
 
 <p>数组的中间元素被应用于每个信号数值 <code>0</code>， 第一个应用于信号数值 <code>-1</code>，最后一个应用于信号数值 <code>1</code>； 小于 <code>-1</code> 或者大于 <code>1</code> 的数值分别按照 <code>-1</code> 和 <code>1</code> 来处理。</p>
 
 <p>如有必要， 使用线性插值计算畸变曲线的中间值。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 数组的值可以是 <code>null</code> : 在这个情况下, 不会有畸变被应用到输入的信号上。</p>
+<p><strong>注意</strong>: 数组的值可以是 <code>null</code> : 在这个情况下，不会有畸变被应用到输入的信号上。</p>
 </div>
 
 <h2 id="语法">语法</h2>

@@ -49,18 +49,18 @@ L'exemple suivant utilise la valeur par défaut de la portée (en l'omettant). L
 
 ```js
 if ('serviceWorker' in navigator) {
-  // Register a service worker hosted at the root of the
-  // site using the default scope.
-  navigator.serviceWorker.register('/sw.js').then(
-    (registration) => {
-      console.log('Service worker registration succeeded:', registration)
-    },
-    /*catch*/ (error) => {
-      console.log('Service worker registration failed:', error)
-    }
-  )
+  // Register a service worker hosted at the root of the
+  // site using the default scope.
+  navigator.serviceWorker.register('/sw.js').then(
+    (registration) => {
+      console.log('Service worker registration succeeded:', registration)
+    },
+      /*catch*/ (error) => {
+         console.log('Service worker registration failed:', error)
+    }
+  )
 } else {
-  console.log('Service workers are not supported.')
+  console.log('Service workers are not supported.')
 }
 ```
 
@@ -70,37 +70,37 @@ Sinon, si ce code était inclus dans une page à `example.com/product/descriptio
 
 ```js
 if ('serviceWorker' in navigator) {
-  // declaring scope manually
-  navigator.serviceWorker.register('/sw.js', { scope: './' }).then(
-    (registration) => {
-      console.log('Service worker registration succeeded:', registration)
-    },
-    /*catch*/ (error) => {
-      console.log('Service worker registration failed:', error)
-    }
-  )
+  // declaring scope manually
+  navigator.serviceWorker.register('/sw.js', { scope: './' }).then(
+    (registration) => {
+      console.log('Service worker registration succeeded:', registration)
+    },
+    /*catch*/ (error) => {
+      console.log('Service worker registration failed:', error)
+    }
+  )
 } else {
-  console.log('Service workers are not supported.')
+  console.log('Service workers are not supported.')
 }
 ```
 
 Il y a une confusion fréquente autour de la signification et de l'utilisation de la portée. Puisque qu'un `ServiceWorker` ne peut pas avoir une portée plus large que son propre emplacement, utilisez uniquement l'option de la portée lorsque vous avez besoin d'une portée plus étroite que la valeur par défaut.
 
-Le code suivant, s'il est inclus dans `example.com/index.html`, à la racine d'un site, ne s'appliquerait qu'aux ressources sous `example.com/product`.
+Le code suivant, s'il est inclus dans `example.com/index.html`, à la racine d'un site, ne s'appliquerait qu'aux ressources sous `example.com/product`.
 
 ```js
 if ('serviceWorker' in navigator) {
-  // declaring scope manually
-  navigator.serviceWorker.register('/sw.js', { scope: '/product/' }).then(
-    (registration) => {
-      console.log('Service worker registration succeeded:', registration)
-    },
-    /*catch*/ (error) => {
-      console.log('Service worker registration failed:', error)
-    }
-  )
+  // declaring scope manually
+  navigator.serviceWorker.register('/sw.js', { scope: '/product/' }).then(
+    (registration) => {
+      console.log('Service worker registration succeeded:', registration)
+    },
+    /*catch*/ (error) => {
+      console.log('Service worker registration failed:', error)
+    }
+  )
 } else {
-  console.log('Service workers are not supported.')
+  console.log('Service workers are not supported.')
 }
 ```
 

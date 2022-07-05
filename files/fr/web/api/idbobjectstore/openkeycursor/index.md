@@ -64,7 +64,7 @@ request.onsuccess = function(event) {
 
 | Spécification                                                                                                | État                         | Commentaires |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB2', '#dom-idbobjectstore-openkeycursor', 'openKeyCursor')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB2', '#dom-idbobjectstore-openkeycursor', 'openKeyCursor')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

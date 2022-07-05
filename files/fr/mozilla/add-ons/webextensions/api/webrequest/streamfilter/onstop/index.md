@@ -21,7 +21,7 @@ Un gestionnaire d'événements qui sera appelé lorsque le flux n'a plus de donn
 
 ## Exemples
 
-Cet exemple ajoutera des "extra stuff" à la réponse  :
+Cet exemple ajoutera des "extra stuff" à la réponse  :
 
 ```js
 function listener(details) {

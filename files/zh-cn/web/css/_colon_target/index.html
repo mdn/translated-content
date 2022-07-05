@@ -8,18 +8,18 @@ translation_of: 'Web/CSS/:target'
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong><code>:target</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">伪类</a> 代表一个唯一的页面元素(目标元素)，其{{htmlattrxref("id")}} 与当前URL片段匹配 .</p>
+<p><strong><code>:target</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">伪类</a> 代表一个唯一的页面元素 (目标元素)，其{{htmlattrxref("id")}} 与当前 URL 片段匹配。</p>
 
-<pre class="brush: css no-line-numbers">/* 选择一个ID与当前URL片段匹配的元素*/
+<pre class="brush: css">/* 选择一个 ID 与当前 URL 片段匹配的元素*/
 :target {
   border: 2px solid black;
 }</pre>
 
-<p>例如, 以下URL拥有一个片段 (以#标识的) ，该片段指向一个ID为section2的页面元素:</p>
+<p>例如，以下 URL 拥有一个片段 (以#标识的) ，该片段指向一个 ID 为 section2 的页面元素：</p>
 
 <pre>http://www.example.com/index.html#section2</pre>
 
-<p>若当前URL等于上面的URL，下面的元素可以通过 :target选择器被选中：</p>
+<p>若当前 URL 等于上面的 URL，下面的元素可以通过 :target 选择器被选中：</p>
 
 <pre class="brush: html">&lt;section id="section2"&gt;Example&lt;/section&gt;</pre>
 
@@ -64,7 +64,7 @@ p:target::before {
   margin-right: .25em;
 }
 
-/*在目标元素中使用italic样式*/
+/*在目标元素中使用 italic 样式*/
 p:target i {
   color: red;
 }</pre>
@@ -73,11 +73,11 @@ p:target i {
 
 <p>{{EmbedLiveSample('一个内容列表', 500, 300)}}</p>
 
-<h3 id="纯CSS高亮">纯CSS高亮</h3>
+<h3 id="纯_css_高亮">纯 CSS 高亮</h3>
 
-<p>你可以不使用任何Javascript代码，只使用<code>:target</code>伪类创建一个加亮框。该技术依赖于初始化时就隐藏在页面中的链接到指定元素的锚。一旦定位，CSS就会更改其<code>display</code> 以便显示它们。</p>
+<p>你可以不使用任何 Javascript 代码，只使用<code>:target</code>伪类创建一个加亮框。该技术依赖于初始化时就隐藏在页面中的链接到指定元素的锚。一旦定位，CSS 就会更改其<code>display</code> 以便显示它们。</p>
 
-<div class="note"><strong>注意:一个基于<code>:target</code>伪类的更为完善的纯-CSS加亮框可以在</strong><a href="https://github.com/madmurphy/takefive.css/">GitHub</a> (<a href="https://madmurphy.github.io/takefive.css/">demo</a>)上找到。</div>
+<div class="note"><strong>注意：一个基于<code>:target</code>伪类的更为完善的纯-CSS 加亮框可以在</strong><a href="https://github.com/madmurphy/takefive.css/">GitHub</a> (<a href="https://madmurphy.github.io/takefive.css/">demo</a>) 上找到。</div>
 
 <h4 id="HTML_2">HTML</h4>
 
@@ -167,7 +167,7 @@ p:target i {
 
 <h4 id="结果_2">结果</h4>
 
-<p>{{EmbedLiveSample('纯CSS高亮', 500, 220)}}</p>
+<p>{{EmbedLiveSample('纯 CSS 高亮', 500, 220)}}</p>
 
 <h2 id="规范">规范</h2>
 

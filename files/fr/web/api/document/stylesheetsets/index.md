@@ -9,7 +9,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Document/styleSheetSets
 ---
-{{APIRef("DOM")}}{{gecko_minversion_header("1.9")}}
+{{APIRef("DOM")}}
 
 Renvoie une liste active de tous les jeux de feuilles de styles actuellement disponibles.
 

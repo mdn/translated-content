@@ -135,7 +135,7 @@ Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils 
 
 - **`bgcolor`** {{deprecated_inline}}
 
-  - : La couleur de fond du tableau. Il s'agit d'un [code RVB hexadécimal à 6 chiffres](/fr/docs/Web/CSS/color_value#rgb_colors), préfixé par un « `#` ». L'un des [mots-clés de couleur](/fr/docs/Web/CSS/color_value#color_keywords) prédéfinis peut également être utilisé.
+  - : La couleur de fond du tableau. Il s'agit d'un [code RVB hexadécimal à 6 chiffres](/fr/docs/Web/CSS/color_value#rgb_colors), préfixé par un «&nbsp;`#`&nbsp;». L'un des [mots-clés de couleur](/fr/docs/Web/CSS/color_value#color_keywords) prédéfinis peut également être utilisé.
 
     Pour obtenir un effet similaire, utilisez la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
 

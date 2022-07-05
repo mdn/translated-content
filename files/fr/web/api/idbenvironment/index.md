@@ -39,7 +39,7 @@ function openDB() {
 
 | Spécification                                                                                | État                         | Commentaires |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#idl-def-IDBEnvironment', 'IDBEnvironment')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#idl-def-IDBEnvironment', 'IDBEnvironment')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

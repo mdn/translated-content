@@ -26,7 +26,7 @@ La constante `MAX_SAFE_INTEGER` a une valeur de `9007199254740991`. Cette valeur
 
 Dans ce contexte, « sûr » fait référence à la capacité à représenter exactement les entiers et à les comparer entre eux. Par exemple, `Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2` vaudra `true` ce qui est mathématiquement incorrect. Pour plus d'informations, voir également {{jsxref("Number.isSafeInteger()")}}.
 
-`MAX_SAFE_INTEGER` est une propriété statique de {{jsxref("Number")}}, elle doit toujours être utilisée comme `Number.MAX_SAFE_INTEGER` et non pas comme la propriété d'un objet `Number` qui aurait été instancié.
+`MAX_SAFE_INTEGER` est une propriété statique de {{jsxref("Number")}}, elle doit toujours être utilisée comme `Number.MAX_SAFE_INTEGER` et non pas comme la propriété d'un objet `Number` qui aurait été instancié.
 
 ## Exemples
 

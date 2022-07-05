@@ -16,7 +16,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `alwaysOnTop`
   - : `boolean`. Que la fenêtre soit configurée pour toujours être sur le dessus.
 - `focused`
-  - : `boolean`.  Que la fenêtre soit actuellement la fenêtre ciblée.
+  - : `boolean`.  Que la fenêtre soit actuellement la fenêtre ciblée.
 - `height`{{optional_inline}}
   - : `integer`. La hauteur de la fenêtre, y compris le cadre, en pixels.
 

@@ -44,5 +44,5 @@ Les nœuds `Attr` héritent de `Node`, mais ne sont pas considérés comme faisa
 
 ## Spécification
 
-- [DOM Level 2 Core : getAttributeNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-217A91B8) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-217A91B8) (non normative)
+- [DOM Level 2 Core&nbsp;: getAttributeNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-217A91B8) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-217A91B8) (non normative)
 - [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)

@@ -23,7 +23,7 @@ Cette méthode peut également émettre les évènements `upgradeneeded`, `block
 
 ## Syntaxe
 
-La syntaxe standard est la suivante :
+La syntaxe standard est la suivante&nbsp;:
 
     var IDBOpenDBRequest = indexedDB.open(nom);
     var IDBOpenDBRequest = indexedDB.open(nom, version);
@@ -51,7 +51,7 @@ Un objet {{domxref("IDBOpenDBRequest")}} sur lequel sont déclenchés les diffé
 
 ### Exceptions
 
-Cette méthode peut lever une {{domxref("DOMException")}} de type suivant :
+Cette méthode peut lever une {{domxref("DOMException")}} de type suivant&nbsp;:
 
 | Exception   | Description                                                                |
 | ----------- | -------------------------------------------------------------------------- |
@@ -59,7 +59,7 @@ Cette méthode peut lever une {{domxref("DOMException")}} de type suivant :
 
 ## Exemples
 
-Voici un exemple d'ouverture de la base de données `toDoList` en utilisant la syntaxe standard et le paramètre `version` :
+Voici un exemple d'ouverture de la base de données `toDoList` en utilisant la syntaxe standard et le paramètre `version`&nbsp;:
 
 ```js
 var request = window.indexedDB.open("toDoList", 4);
@@ -101,8 +101,8 @@ DBOpenRequest.onsuccess = function(event) {
 
 | Spécification                                                                                                                                                    | État                             | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBFactory-open-IDBOpenDBRequest-DOMString-name-unsigned-long-long-version', 'open()')}} | {{Spec2('IndexedDB')}}     |              |
-| {{SpecName("IndexedDB 2", "#dom-idbfactory-open", "open()")}}                                                                                 | {{Spec2("IndexedDB 2")}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBFactory-open-IDBOpenDBRequest-DOMString-name-unsigned-long-long-version', 'open()')}} | {{Spec2('IndexedDB')}}     |              |
+| {{SpecName("IndexedDB 2", "#dom-idbfactory-open", "open()")}}                                                                                 | {{Spec2("IndexedDB 2")}} |              |
 
 ## Compatibilité des navigateurs
 
@@ -111,9 +111,9 @@ DBOpenRequest.onsuccess = function(event) {
 ## Voir aussi
 
 - [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
-- Démarrer des transactions : {{domxref("IDBDatabase")}}
-- Manipuler des transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Démarrer des transactions&nbsp;: {{domxref("IDBDatabase")}}
+- Manipuler des transactions&nbsp;: {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés&nbsp;: {{domxref("IDBKeyRange")}}
+- Récupérer des données et les modifier&nbsp;: {{domxref("IDBObjectStore")}}
+- Manipuler des curseurs&nbsp;: {{domxref("IDBCursor")}}
+- Exemple de référence pour IndexedDB&nbsp;: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)

@@ -25,11 +25,11 @@ domRect = element.getBoundingClientRect();
 
 <p>返回值是一个 {{domxref("DOMRect")}} 对象，这个对象是由该元素的 {{domxref("Element.getClientRects", "getClientRects()")}} 方法返回的一组矩形的集合，就是该元素的 CSS 边框大小。返回的结果是包含完整元素的最小矩形，并且拥有<code>left</code>, <code>top</code>, <code>right</code>, <code>bottom</code>, <code>x</code>, <code>y</code>, <code>width</code>, 和 <code>height</code>这几个以像素为单位的只读属性用于描述整个边框。除了<code>width</code> 和 <code>height</code> 以外的属性是相对于视图窗口的左上角来计算的。</p>
 
-<p><img alt="DOMRect 示例图" src="https://mdn.mozillademos.org/files/15087/rect.png" style="float: right; height: 300px; width: 300px;"><span>空边框盒（译者注：没有内容的边框）会被忽略。如果所有的元素边框都是空边框，那么这个矩形给该元素返回的 </span><code>width</code><span>、</span><code>height</code><span> 值为 0，</span><code>left</code><span>、</span><code>top</code><span> 值为第一个 CSS 盒子（按内容顺序）的 top-left 值。</span></p>
+<p><img alt="DOMRect 示例图" src="https://mdn.mozillademos.org/files/15087/rect.png" style="float: right; height: 300px; width: 300px;">空边框盒（译者注：没有内容的边框）会被忽略。如果所有的元素边框都是空边框，那么这个矩形给该元素返回的 <code>width</code>、<code>height</code> 值为 0，<code>left</code>、<code>top</code> 值为第一个 CSS 盒子（按内容顺序）的 top-left 值。</p>
 
 <p>当计算边界矩形时，会考虑视口区域（或其他可滚动元素）内的滚动操作，也就是说，当滚动位置发生了改变，top和left属性值就会随之立即发生变化（因此，它们的值是相对于视口的，而不是绝对的）。如果你需要获得相对于整个网页左上角定位的属性值，那么只要给top、left属性值加上当前的滚动位置（通过 window.scrollX 和 window.scrollY），这样就可以获取与当前的滚动位置无关的值。</p>
 
-<h3 id="跨浏览器兼容">跨浏览器兼容</h3>
+### 跨浏览器兼容
 
 <p>如果需要更好的跨浏览器兼容性，请使用 {{domxref("window.pageXOffset")}} 和 {{domxref("window.pageYOffset")}} 代替 <code>window.scrollX</code> 和 <code>window.scrollY</code>。不能访问这些属性的脚本可以使用下面的代码：</p>
 
@@ -70,7 +70,7 @@ for (var key in rect) {
 
 {{EmbedLiveSample('Basic', '100%', 640)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 <table class="standard-table">
  <thead>
@@ -89,7 +89,7 @@ for (var key in rect) {
  </tbody>
 </table>
 
-<h3 id="备注">备注</h3>
+### 备注
 
 <p>该API返回的 <code>DOMRect</code> 对象在现代浏览器中可以被修改。而对于返回值为 <code>DOMRectReadOnly</code> 的旧版本，返回值并不能被修改。在IE和Edge浏览器中，无法向他们返回的 <a href="https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx"><code>ClientRect</code></a> 对象添加缺失的属性，对象可以防止 <code>x</code> 和 <code>y</code> 的回填。</p>
 
@@ -106,13 +106,11 @@ emptyObj = { ...rect }
 
 <p><code>DOMRect</code> 中的 <code>top</code>, <code>left</code>, <code>right</code>, <code>bottom</code> 属性是使用对象的其他属性的值来计算获得的。</p>
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-
+## 浏览器兼容性
 
 <div>{{Compat("api.Element.getBoundingClientRect")}}</div>
 
-<h2 id="参考资料">参考资料</h2>
+## 参考资料
 
 <ul>
  <li>{{domxref("Element.getClientRects", "getClientRects()")}}</li>

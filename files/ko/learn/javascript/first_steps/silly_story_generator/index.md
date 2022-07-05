@@ -34,7 +34,7 @@ translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 
 위 방법 대신에, 여러분은 테스트에 [JSBin](http://jsbin.com/) 또는 [Glitch](https://glitch.com/) 같은 사이트를 이용할 수 있습니다. 이 온라인 에디터들 내부에 HTML, CSS 그리고 JavaScript를 붙여넣을 수 있습니다. 만약 당신이 사용하는 온라인 에디터가 Javascript 패널(또는 탭)을 갖고 있지 않다면, 자유롭게 HTML 페이지 내부에 `<script>` 엘리멘트를 넣을 수 있습니다.
 
-<div class="note"><p><strong>Note</strong>: 만약 평가가 막힌다면, 우리에게 도움을 요청하세요— 이 페이지 밑에 {{anch("Assessment or further help")}} 섹션을 보세요.</p></div>
+<div class="note"><p><strong>Note</strong>: 만약 평가가 막힌다면, 우리에게 도움을 요청하세요— 이 페이지 밑에 [Assessment or further help](#assessment_or_further_help) 섹션을 보세요.</p></div>
 
 ## 프로젝트에 대한 간략한 설명
 

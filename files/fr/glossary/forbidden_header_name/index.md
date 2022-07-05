@@ -14,7 +14,7 @@ original_slug: Glossaire/Forbidden_header_name
 
 Les modifications de ces en-têtes sont interdites pour que l'agent utilisateur garde un total contrôle sur eux. Les noms commençant par \``Sec-`\` sont réservés à la création de nouveaux en-têtes à l'abri des {{glossary("API","API")}} utilisant [Fetch](/fr/docs/Web/API/Fetch_API) qui accordent aux développeurs le contrôle des en-têtes, tels que {{domxref("XMLHttpRequest")}}.
 
-Les noms d'en-tête interdits commencent avec `Proxy-` ou `Sec-`, ou se composent de l'un d'eux :
+Les noms d'en-tête interdits commencent avec `Proxy-` ou `Sec-`, ou se composent de l'un d'eux :
 
 - `Accept-Charset`
 - `Accept-Encoding`

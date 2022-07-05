@@ -15,7 +15,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 <p>1989年， 当时在 CERN 工作的 Tim Berners-Lee 博士写了一份关于建立一个通过网络传输超文本系统的报告。这个系统起初被命名为 <em>Mesh</em>，在随后的1990年项目实施期间被更名为万维网（<em>World Wide Web）。</em>它在现有的TCP和IP协议基础之上建立，由四个部分组成：</p>
 
 <ul>
- <li>一个用来表示超文本文档的文本格式，<em><a href="/en-US/docs/Web/HTML">超文本标记语言</a></em>（HTML）。</li>
+ <li>一个用来表示超文本文档的文本格式，<em><a href="/zh-CN/docs/Web/HTML">超文本标记语言</a></em>（HTML）。</li>
  <li>一个用来交换超文本文档的简单协议，超文本传输协议（HTTP）。</li>
  <li>一个显示（以及编辑）超文本文档的客户端，即网络浏览器。第一个网络浏览器被称为 <em>WorldWideWeb。</em></li>
  <li>一个服务器用于提供可访问的文档，即 <em>httpd </em>的前身。</li>
@@ -47,7 +47,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
  <li>协议版本信息现在会随着每个请求发送（<code>HTTP/1.0</code>被追加到了<code>GET</code>行）。</li>
  <li>状态码会在响应开始时发送，使浏览器能了解请求执行成功或失败，并相应调整行为（如更新或使用本地缓存）。</li>
  <li>引入了HTTP头的概念，无论是对于请求还是响应，允许传输元数据，使协议变得非常灵活，更具扩展性。</li>
- <li>在新HTTP头的帮助下，具备了传输除纯文本HTML文件以外其他类型文档的能力（感谢{{HTTPHeader("Content-Type")}}头）。</li>
+ <li>在新HTTP头的帮助下，具备了传输除纯文本HTML文件以外其他类型文档的能力（凭借{{HTTPHeader("Content-Type")}}头）。</li>
 </ul>
 
 <p>一个典型的请求看起来就像这样：</p>
@@ -89,7 +89,7 @@ Content-Type: text/gif
  <li>支持响应分块。</li>
  <li>引入额外的缓存控制机制。</li>
  <li>引入内容协商机制，包括语言，编码，类型等，并允许客户端和服务器之间约定以最合适的内容进行交换。</li>
- <li>感谢{{HTTPHeader("Host")}}头，能够使不同域名配置在同一个IP地址的服务器上。</li>
+ <li>凭借{{HTTPHeader("Host")}}头，能够使不同域名配置在同一个IP地址的服务器上。</li>
 </ul>
 
 <p>一个典型的请求流程， 所有请求都通过一个连接实现，看起来就像这样：</p>
@@ -137,11 +137,11 @@ Server: Apache
 
 <em>(image content of 3077 bytes)</em></pre>
 
-<p>HTTP/1.1 在1997年1月以 {{rfc(2068)}} 文件发布。</p>
+<p>HTTP/1.1 在1997年1月以 {{rfc(2068)}} 文件发布。</p>
 
 <h2 id="超过15年的扩展">超过15年的扩展</h2>
 
-<p>由于HTTP协议的可扩展性 – 创建新的头部和方法是很容易的 – 即使HTTP/1.1协议进行过两次修订，{{RFC("2616")}} 发布于1999年6月，而另外两个文档 {{RFC("7230")}}-{{RFC("7235")}} 发布于2014年6月，作为HTTP/2的预览版本。HTTP协议已经稳定使用超过15年了。</p>
+<p>由于HTTP协议的可扩展性 – 创建新的头部和方法是很容易的 – 即使 HTTP/1.1 协议进行过两次修订，{{RFC("2616")}} 发布于 1999 年 6 月，而另外两个文档 {{RFC("7230")}}-{{RFC("7235")}} 发布于 2014 年 6 月（在 HTTP/2 发布之前）。HTTP/1.1 协议已经稳定使用超过 15 年了。</p>
 
 <h3 id="HTTP_用于安全传输">HTTP 用于安全传输</h3>
 
@@ -153,18 +153,18 @@ Server: Apache
 
 <p>Tim Berners-Lee 对于 Web 的最初设想不是一个只读媒体。 他设想一个 Web 是可以远程添加或移动文档，是一种分布式文件系统。 大约 1996 年，HTTP 被扩展到允许创作，并且创建了一个名为 WebDAV 的标准。 它进一步扩展了某些特定的应用程序，如 CardDAV 用来处理地址簿条目，CalDAV 用来处理日历。 但所有这些 *DAV 扩展有一个缺陷：它们必须由要使用的服务器来实现，这是非常复杂的。并且他们在网络领域的使用必须保密。</p>
 
-<p>在 2000 年，一种新的使用 HTTP 的模式被设计出来：{{glossary("REST", "representational state transfer")}} (或者说 REST)。 由 API 发起的操作不再通过新的 HTTP 方法传达，而只能通过使用基本的 HTTP / 1.1 方法访问特定的 URI。 这允许任何 Web 应用程序通过提供 API 以允许查看和修改其数据，而无需更新浏览器或服务器：all what is needed was embedded in the files served by the Web sites through standard HTTP/1.1。  REST 模型的缺点在于每个网站都定义了自己的非标准 RESTful API，并对其进行了全面的控制；不同于 *DAV 扩展，客户端和服务器是可互操作的。 RESTful API 在 2010 年变得非常流行。</p>
+<p>在 2000 年，一种新的使用 HTTP 的模式被设计出来：{{glossary("REST", "representational state transfer")}} (或者说 REST)。 由 API 发起的操作不再通过新的 HTTP 方法传达，而只能通过使用基本的 HTTP / 1.1 方法访问特定的 URI。 这允许任何 Web 应用程序通过提供 API 以允许查看和修改其数据，而无需更新浏览器或服务器：所有需要的内容都被嵌入到由网站通过标准HTTP/1.1提供的文件中。  REST 模型的缺点在于每个网站都定义了自己的非标准 RESTful API，并对其进行了全面的控制；不同于 *DAV 扩展，客户端和服务器是可互操作的。 RESTful API 在 2010 年变得非常流行。</p>
 
 <p>自 2005 年以来，可用于 Web 页面的 API 大大增加，其中几个 API 为特定目的扩展了 HTTP 协议，大部分是新的特定 HTTP 头：</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>，服务器可以偶尔推送消息到浏览器。</li>
- <li><a href="/en-US/docs/Web/API/WebSocket_API">WebSocket</a>，一个新协议，可以通过升级现有 HTTP 协议来建立。</li>
+ <li><a href="/zh-CN/docs/Web/API/Server-sent_events">Server-sent events</a>，服务器可以偶尔推送消息到浏览器。</li>
+ <li><a href="/zh-CN/docs/Web/API/WebSockets_API">WebSocket</a>，一个新协议，可以通过升级现有 HTTP 协议来建立。</li>
 </ul>
 
-<h3 id="放松Web的安全模型">放松Web的安全模型</h3>
+<h3 id="放松安全措施-基于当前的Web模型">放松安全措施-基于当前的Web模型</h3>
 
-<p>HTTP和Web安全模型--<a href="/en-US/docs/Web/Security/Same-origin_policy">同源策略</a>是互不相关的。事实上，当前的Web安全模型是在HTTP被创造出来后才被发展的！这些年来，已经证实了它如果能通过在特定的约束下移除一些这个策略的限制来管的宽松些的话，将会更有用。这些策略导致大量的成本和时间被花费在通过转交到服务端来添加一些新的HTTP头来发送。这些被定义在了<a href="/en-US/docs/Glossary/CORS">Cross-Origin Resource Sharing</a> (CORS) or the <a href="/en-US/docs/Web/Security/CSP">Content Security Policy</a> (CSP)规范里。</p>
+<p>HTTP和Web安全模型--<a href="/zh-CN/docs/Web/Security/Same-origin_policy">同源策略</a>是互不相关的。事实上，当前的Web安全模型是在HTTP被创造出来后才被发展的！这些年来，已经证实了它如果能通过在特定的约束下移除一些这个策略的限制来管的宽松些的话，将会更有用。这些策略导致大量的成本和时间被花费在通过转交到服务端来添加一些新的HTTP头来发送。这些被定义在了<a href="/zh-CN/docs/Glossary/CORS">Cross-Origin Resource Sharing</a> (CORS) or the <a href="/zh-CN/docs/Web/HTTP/CSP">Content Security Policy</a> (CSP)规范里。</p>
 
 <p>不只是这大量的扩展，很多的其他的头也被加了进来，有些只是实验性的。比较著名的有Do Not Track ({{HTTPHeader("DNT")}}) 来控制隐私，{{HTTPHeader("X-Frame-Options")}}, 还有很多。</p>
 

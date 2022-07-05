@@ -10,11 +10,11 @@ translation_of: 'Web/CSS/::-webkit-slider-thumb'
 
 <p> <strong><code>::-webkit-slider-thumb</code></strong></p>
 
-<p>这是type为range的input标签内的一种伪类样式,用于设置range的滑块的具体样式,该伪类只在内核为webkit/blink的浏览器中有效</p>
+<p>这是 type 为 range 的 input 标签内的一种伪类样式，用于设置 range 的滑块的具体样式，该伪类只在内核为 webkit/blink 的浏览器中有效</p>
 
 <h2 id="使用方式">使用方式</h2>
 
-<p>该伪类需要配和<strong>::-webkit-slider-runnable-track</strong>使用,否则会没有效果.......</p>
+<p>该伪类需要配和<strong>::-webkit-slider-runnable-track</strong>使用，否则会没有效果.......</p>
 
 <p>input[type=range]::-webkit-slider-thumb{<br>
      -webkit-appearance: none;/*清除默认样式*/<br>
@@ -22,7 +22,7 @@ translation_of: 'Web/CSS/::-webkit-slider-thumb'
      width:5vw;/*设置滑块宽度*/<br>
      background:#000;/*设置背景色*/<br>
      border-radius:10vw 10vw;/*加个圆角边*/<br>
-     margin-top:-1vw;/*使用position的话会导致滑块不滑动,但是绑定的value是改变的,所以这里使用margin-top去做定位*/<br>
+     margin-top:-1vw;/*使用 position 的话会导致滑块不滑动，但是绑定的 value 是改变的，所以这里使用 margin-top 去做定位*/<br>
  }<br>
  input[type=range]::-webkit-slider-runnable-track{<br>
      border-radius: 30px; <br>
@@ -32,7 +32,7 @@ translation_of: 'Web/CSS/::-webkit-slider-thumb'
 
 <h2 id="规范">规范</h2>
 
-<p>这不是任何规范中的一部分,这是webkit/bink内核特有的(chrome/safari)</p>
+<p>这不是任何规范中的一部分，这是 webkit/bink 内核特有的 (chrome/safari)</p>
 
 <h2 id="另请参阅">另请参阅</h2>
 

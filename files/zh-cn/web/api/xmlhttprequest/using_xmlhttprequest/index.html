@@ -14,7 +14,7 @@ translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
 <div> {{APIRef("XMLHttpRequest")}}</div>
 
-<p>在该教程中，我们将使用<span class="seoSummary">{{domxref("XMLHttpRequest")}} 来发送 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a> 请求以实现网站和服务器之间的数据交换。</span><code>XMLHttpRequest</code><span class="seoSummary">常见和晦涩的使用情况都将包含在例子中。</span></p>
+<p>在该教程中，我们将使用{{domxref("XMLHttpRequest")}} 来发送 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a> 请求以实现网站和服务器之间的数据交换。<code>XMLHttpRequest</code>常见和晦涩的使用情况都将包含在例子中。</p>
 
 <p>发送一个 HTTP 请求，需要创建一个 <code>XMLHttpRequest</code> 对象，打开一个 URL，最后发送请求。当所有这些事务完成后，该对象将会包含一些诸如响应主体或 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP status</a> 的有用信息。</p>
 
@@ -33,13 +33,13 @@ oReq.send();</pre>
 
 <div class="note"><strong>注意：</strong>由于对用户体验的负面影响，从 Gecko 30.0{{geckoRelease("30.0")}}版本开始，在主线程上的同步请求已经被弃用。</div>
 
-<div class="note"><strong>注意：</strong><code>XMLHttpRequest</code> 构造函数并不仅限于 XML 文档。它之所以使用“XML”开头是因为在它诞生之时，原先用于异步数据交换的主要格式便是XML。</div>
+<div class="note"><strong>注意：</strong><code>XMLHttpRequest</code> 构造函数并不仅限于 XML 文档。它之所以使用“XML”开头是因为在它诞生之时，原先用于异步数据交换的主要格式便是 XML。</div>
 
 <h2 id="处理响应">处理响应</h2>
 
-<p>W3C规范定义了 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}} 对象的几种类型的<a class="external" href="https://xhr.spec.whatwg.org/">响应属性</a>。这些属性告诉客户端关于 <code>XMLHttpRequest</code> 返回状态的重要信息。一些处理非文本返回类型的用例，可能包含下面章节所描述的一些操作和分析。</p>
+<p>W3C 规范定义了 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}} 对象的几种类型的<a class="external" href="https://xhr.spec.whatwg.org/">响应属性</a>。这些属性告诉客户端关于 <code>XMLHttpRequest</code> 返回状态的重要信息。一些处理非文本返回类型的用例，可能包含下面章节所描述的一些操作和分析。</p>
 
-<h3 id="分析并操作_responseXML属性">分析并操作 responseXML属性</h3>
+<h3 id="分析并操作_responseXML属性">分析并操作 responseXML 属性</h3>
 
 <p>如果你使用 <code>XMLHttpRequest</code> 来获得一个远程的 XML 文档的内容，{{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性将会是一个由 XML 文档解析而来的 DOM 对象，这很难被操作和分析。这里有五种主要的分析 XML 文档的方式：</p>
 
@@ -50,15 +50,15 @@ oReq.send();</pre>
  <li>如果你预先知道 XML 文档的内容，你可以使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a>。如果你用 <code>RegExp</code> 扫描时受到换行符的影响，你也许想要删除所有的换行符。然而，这种方法是"最后手段"，因为如果 XML 代码发生轻微变化，该方法将可能失败。</li>
 </ol>
 
-<div class="note"><strong>注意:</strong> 在 W3C <a class="external" href="http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html">XMLHttpRequest</a> 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 <a href="/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a> 。本条注意已在英文原文中更新。</div>
+<div class="note"><strong>注意：</strong> 在 W3C <a class="external" href="http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html">XMLHttpRequest</a> 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 <a href="/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a> 。本条注意已在英文原文中更新。</div>
 
 <div class="note">
-<p><strong>注意:</strong> <code>XMLHttpRequest</code> 现在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性解释 HTML。请阅读 <a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a> 这篇文章了解相关用法。</p>
+<p><strong>注意：</strong> <code>XMLHttpRequest</code> 现在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性解释 HTML。请阅读 <a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a> 这篇文章了解相关用法。</p>
 </div>
 
 <h3 id="解析和操作包含_HTML_文档的_responseText_属性">解析和操作包含 HTML 文档的 responseText 属性</h3>
 
-<p>如果使用 <code>XMLHttpRequest</code> 从远端获取一个 HTML 页面，则所有 HTML 标记会以字符串的形式存放在responseText 属性里，这样就使得操作和解析这些标记变得困难。解析这些HTML标记主要有三种方式：</p>
+<p>如果使用 <code>XMLHttpRequest</code> 从远端获取一个 HTML 页面，则所有 HTML 标记会以字符串的形式存放在 responseText 属性里，这样就使得操作和解析这些标记变得困难。解析这些 HTML 标记主要有三种方式：</p>
 
 <ol>
  <li>使用 <code>XMLHttpRequest.responseXML</code> 属性。</li>
@@ -68,7 +68,7 @@ oReq.send();</pre>
 
 <h2 id="处理二进制数据">处理二进制数据</h2>
 
-<p>尽管 {{domxref("XMLHttpRequest")}} 一般用来发送和接收文本数据，但其实也可以发送和接收二进制内容。有许多经过良好测试的方法来强制使用 <code>XMLHttpRequest</code> <span style="line-height: 1.5;">发送二进制数据。利用 </span> <code>XMLHttpRequest</code> 对象<span style="line-height: 1.5;">的 <span style="line-height: 1.5;"> </span></span> {{domxref("XMLHttpRequest.overrideMimeType", "overrideMimeType()")}} <span style="line-height: 1.5;"> 方法是一个解决方案，虽然它并不是一个标准方法。</span></p>
+<p>尽管 {{domxref("XMLHttpRequest")}} 一般用来发送和接收文本数据，但其实也可以发送和接收二进制内容。有许多经过良好测试的方法来强制使用 <code>XMLHttpRequest</code> 发送二进制数据。利用  <code>XMLHttpRequest</code> 对象的   {{domxref("XMLHttpRequest.overrideMimeType", "overrideMimeType()")}}  方法是一个解决方案，虽然它并不是一个标准方法。</p>
 
 <pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
 oReq.open("GET", url);
@@ -539,15 +539,15 @@ print_r($_FILES);</pre>
 
 <pre class="syntaxbox notranslate">AJAXSubmit(myForm);</pre>
 
-<div class="note"><strong>注意:</strong> 该框架使用 {{domxref("FileReader")}} API 进行文件的上传。这是一个较新的 API 并且还未在 IE9 及以下版本的浏览器中实现。因此，使用 AJAX 上传仍是一项<strong>实验性的技术</strong>。如果你不需要上传 二进制文件，该框架在大多数浏览器中运行良好。</div>
+<div class="note"><strong>注意：</strong> 该框架使用 {{domxref("FileReader")}} API 进行文件的上传。这是一个较新的 API 并且还未在 IE9 及以下版本的浏览器中实现。因此，使用 AJAX 上传仍是一项<strong>实验性的技术</strong>。如果你不需要上传 二进制文件，该框架在大多数浏览器中运行良好。</div>
 
-<div class="note"><strong>注意:</strong> 发送二进制内容的最佳途径是通过 {{jsxref("ArrayBuffer", "ArrayBuffers")}} 或 {{domxref("Blob", "Blobs")}} 结合 {{domxref("XMLHttpRequest.send()", "send()")}} 方法甚至 <code>FileReader</code> API 的 {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} 方法。但是，自从该脚本的目的变成处理 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">可字符串化</a> 的原始数据以来，我们使用 {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} 方法结合 <code>FileReader</code> API 的 {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} 方法。同样地，上述脚本仅当你处理小文件时行之有效。如果不打算上传二进制内容，就考虑使用 <code>FormData</code> API 来替代。</div>
+<div class="note"><strong>注意：</strong> 发送二进制内容的最佳途径是通过 {{jsxref("ArrayBuffer", "ArrayBuffers")}} 或 {{domxref("Blob", "Blobs")}} 结合 {{domxref("XMLHttpRequest.send()", "send()")}} 方法甚至 <code>FileReader</code> API 的 {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} 方法。但是，自从该脚本的目的变成处理 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">可字符串化</a> 的原始数据以来，我们使用 {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} 方法结合 <code>FileReader</code> API 的 {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} 方法。同样地，上述脚本仅当你处理小文件时行之有效。如果不打算上传二进制内容，就考虑使用 <code>FormData</code> API 来替代。</div>
 
-<div class="note"><strong>注意:</strong> 非标准的 <code>sendAsBinary</code> 方法从 Gecko 31 {{geckoRelease(31)}} 开始将会废弃并且会很快被移除。标准方法 <code>send(Blob data)</code> 将会取而代之。</div>
+<div class="note"><strong>注意：</strong> 非标准的 <code>sendAsBinary</code> 方法从 Gecko 31 {{geckoRelease(31)}} 开始将会废弃并且会很快被移除。标准方法 <code>send(Blob data)</code> 将会取而代之。</div>
 
 <h3 id="使用_FormData_对象">使用 FormData 对象</h3>
 
-<p>{{domxref("XMLHttpRequest.FormData", "FormData")}} 构造函数能使你编译一个键/值对的集合，然后使用 <code>XMLHttpRequest</code> 发送出去。其主要用于发送表格数据，但是也能被单独用来传输表格中用户指定的数据。传输的数据格式与表格使用 <code>submit()</code> 方法发送数据的格式一致，如果该表格的编码类型被设为 "multipart/form-data". FormData 对象可以被结合 <code>XMLHttpRequest</code> 的多种方法利用。例如，想了解如何利用 FormData 与 XMLHttpRequests, 请转到 <a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects">Using FormData Objects</a> 页面。为了说教的目的，这里有一个早期的<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest$edit#A_little_vanilla_framework">例子</a>，被转译成了使用<strong> <code>FormData</code> API </strong>的形式。注意以下代码片段：</p>
+<p>{{domxref("XMLHttpRequest.FormData", "FormData")}} 构造函数能使你编译一个键/值对的集合，然后使用 <code>XMLHttpRequest</code> 发送出去。其主要用于发送表格数据，但是也能被单独用来传输表格中用户指定的数据。传输的数据格式与表格使用 <code>submit()</code> 方法发送数据的格式一致，如果该表格的编码类型被设为 "multipart/form-data". FormData 对象可以被结合 <code>XMLHttpRequest</code> 的多种方法利用。例如，想了解如何利用 FormData 与 XMLHttpRequests，请转到 <a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects">Using FormData Objects</a> 页面。为了说教的目的，这里有一个早期的<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest$edit#A_little_vanilla_framework">例子</a>，被转译成了使用<strong> <code>FormData</code> API </strong>的形式。注意以下代码片段：</p>
 
 <div style="height: 400px; margin-bottom: 12px; overflow: auto;">
 <pre class="brush: html notranslate">&lt;!doctype html&gt;
@@ -673,7 +673,7 @@ function AJAXSubmit (oFormElement) {
 &lt;/html&gt;</pre>
 </div>
 
-<div class="note"><strong>注意:</strong> 如之前所述，<strong>{{domxref("FormData")}} 对象并不是 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">可字符串化(stringifiable)</a> 的对象。</strong>如果你想要字符串化一个提交数据，请使用这个 <a href="#A_little_vanilla_framework">早期的纯 AJAX 例子</a>. 同时也要注意，尽管这个例子中有一些 <code>file</code> {{ HTMLElement("input") }} 字段，<strong>但当你通过</strong><strong> <code>FormData</code> API 提交一个表格时，也无须使用 {{domxref("FileReader")}} API</strong>: 文件被自动加载并上传。</div>
+<div class="note"><strong>注意：</strong> 如之前所述，<strong>{{domxref("FormData")}} 对象并不是 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">可字符串化 (stringifiable)</a> 的对象。</strong>如果你想要字符串化一个提交数据，请使用这个 <a href="#A_little_vanilla_framework">早期的纯 AJAX 例子</a>. 同时也要注意，尽管这个例子中有一些 <code>file</code> {{ HTMLElement("input") }} 字段，<strong>但当你通过</strong><strong> <code>FormData</code> API 提交一个表格时，也无须使用 {{domxref("FileReader")}} API</strong>: 文件被自动加载并上传。</div>
 
 <h2 id="获取最后修改日期">获取最后修改日期</h2>
 
@@ -682,7 +682,7 @@ function AJAXSubmit (oFormElement) {
 }
 
 var oReq = new XMLHttpRequest();
-oReq.open("HEAD" /* 仅需要头部信息(headers)时请使用 HEAD! */, "yourpage.html");
+oReq.open("HEAD" /* 仅需要头部信息 (headers) 时请使用 HEAD! */, "yourpage.html");
 oReq.onload = getHeaderTime;
 oReq.send();</pre>
 
@@ -702,7 +702,7 @@ oReq.send();</pre>
 
 function ifHasChanged(sURL, fCallback) {
   var oReq = new XMLHttpRequest();
-  oReq.open("HEAD" /* 使用 HEAD - 我们仅需要头部信息(headers)! */, sURL);
+  oReq.open("HEAD" /* 使用 HEAD - 我们仅需要头部信息 (headers)! */, sURL);
   oReq.callback = fCallback;
   oReq.filepath = sURL;
   oReq.onload = getHeaderTime;
@@ -732,7 +732,7 @@ req.open('GET', url, false);
 <strong>req.channel.loadFlags |= Components.interfaces.nsIRequest.LOAD_BYPASS_CACHE;</strong>
 req.send(null);</pre>
 
-<div class="note"><strong>Note:</strong> 这个方法只工作于基于 Gecko内核的软件, 也就是通道属性是 Gecko-specific.</div>
+<div class="note"><strong>Note:</strong> 这个方法只工作于基于 Gecko 内核的软件，也就是通道属性是 Gecko-specific.</div>
 
 <p>还有一个跨浏览器兼容的方法，就是给 URL 添加时间戳。请确保你酌情地添加了 "?" or "&amp;" 。例如，将：</p>
 
@@ -759,7 +759,7 @@ oReq.send(null);</pre>
 
 <h3 id="XMLHttpRequests_被停止">XMLHttpRequests 被停止</h3>
 
-<p>如果你的 XMLHttpRequest 收到 <code>status=0</code> 和 <code>statusText=null</code> 的返回，这意味着请求无法执行。 就是<a href="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent">无法发送</a>. 一个可能导致的原因是当 <a href="http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin"><code>XMLHttpRequest</code> origin</a> (创建的 XMLHttpRequest) 改变时，XMLHttpRequest 执行 <code>open()</code>.。这种情况是可能发生的，举个例子，我们在一个窗口的<code>onunload</code>事件中关闭XMLHttpRequest，但实际上在即将关闭窗口时，之前创建的XMLHttpRequest仍然在那里，最后当这个窗口失去焦点、另一个窗口获得焦点时，它还是发送了请求（也就是<code>open()</code>）。最有效的避免这个问题的方法是为新窗口的{{event("activate")}}事件设置一个监听器，一旦窗口关闭，它的{{event("unload")}}事件便触发。</p>
+<p>如果你的 XMLHttpRequest 收到 <code>status=0</code> 和 <code>statusText=null</code> 的返回，这意味着请求无法执行。 就是<a href="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent">无法发送</a>. 一个可能导致的原因是当 <a href="http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin"><code>XMLHttpRequest</code> origin</a> (创建的 XMLHttpRequest) 改变时，XMLHttpRequest 执行 <code>open()</code>.。这种情况是可能发生的，举个例子，我们在一个窗口的<code>onunload</code>事件中关闭 XMLHttpRequest，但实际上在即将关闭窗口时，之前创建的 XMLHttpRequest 仍然在那里，最后当这个窗口失去焦点、另一个窗口获得焦点时，它还是发送了请求（也就是<code>open()</code>）。最有效的避免这个问题的方法是为新窗口的{{event("activate")}}事件设置一个监听器，一旦窗口关闭，它的{{event("unload")}}事件便触发。</p>
 
 <h2 id="Worker">Worker</h2>
 

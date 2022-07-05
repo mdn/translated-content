@@ -183,7 +183,7 @@ reportPerimeter(square1.length, reportList);
 <pre class="brush: js">import {default as randomSquare} from './modules/square.js';</pre>
 
 <div class="blockIndicator note">
-<p><strong>주의</strong>: export한 항목의 이름을 바꾸는 구문은 {{anch("Renaming imports and exports")}} 섹션에서 설명합니다.</p>
+<p><strong>주의</strong>: export한 항목의 이름을 바꾸는 구문은 <a href="#renaming_imports_and_exports">Renaming imports and exports</a> 섹션에서 설명합니다.</p>
 </div>
 
 <h2 id="Avoiding_naming_conflicts">Avoiding naming conflicts</h2>
@@ -374,7 +374,7 @@ import { Triangle } from './modules/triangle.js';</pre>
 
 <p>브라우저에서 사용할 수 있는 자바스크립트 모듈 기능의 최신 부분은 동적 모듈 로딩 입니다. 이렇게 하면 모든 것을 최상위에서 불러오지 않고, 필요할 때만 모듈을 동적으로 불러올 수 있습니다. 이것은 몇 가지 분명한 성능 이점이 있습니다. 계속 읽어보고 어떻게 작동하는지 살펴봅시다.</p>
 
-<p>이 새로운 기능을 통해 <code>import()</code> 를 함수로 호출하여 모듈 경로를 매개 변수(parameter)로 전달할 수 있습니다. 모듈 객체({{anch("Creating a module object")}} 참조)를 사용하여 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a>를 반환하면 해당 객체의 export에 접근할 수 있습니다. </p>
+<p>이 새로운 기능을 통해 <code>import()</code> 를 함수로 호출하여 모듈 경로를 매개 변수(parameter)로 전달할 수 있습니다. 모듈 객체(<a href="#creating_a_module_object">Creating a module object</a> 참조)를 사용하여 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a>를 반환하면 해당 객체의 export에 접근할 수 있습니다. </p>
 
 <pre class="brush: js">import('/modules/myModule.js')
   .then((module) =&gt; {

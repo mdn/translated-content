@@ -521,28 +521,28 @@ window.wrappedJSObject.messenger = cloneInto(
 
 <p>比如，有一个content script如下:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// content-script.js</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// content-script.js
 
-window<span class="punctuation token">.</span><span class="function token">eval</span><span class="punctuation token">(</span><span class="string token">'window.x = 1;'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="function token">eval</span><span class="punctuation token">(</span><span class="string token">'window.y = 2'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+window.eval('window.x = 1;');
+eval('window.y = 2');
 
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`In content script, window.x: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>window<span class="punctuation token">.</span>x<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`In content script, window.y: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>window<span class="punctuation token">.</span>y<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+console.log(`In content script, window.x: ${window.x}`);
+console.log(`In content script, window.y: ${window.y}`);
 
-window<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  message<span class="punctuation token">:</span> <span class="string token">"check"</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="string token">"*"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+window.postMessage({
+  message: "check"
+}, "*");</code></pre>
 
 <p>这段代码仅仅通过调用<code>window.eval()</code> 和 <code>eval()</code>创建了变量x和y。然后记录它们的值并通知页面更新.</p>
 
 <p>接收到消息后页面的脚本记录下这些变量:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">window<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"message"</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>event<span class="punctuation token">.</span>source <span class="operator token">===</span> window <span class="operator token">&amp;&amp;</span> event<span class="punctuation token">.</span>data <span class="operator token">&amp;&amp;</span> event<span class="punctuation token">.</span>data<span class="punctuation token">.</span>message <span class="operator token">===</span> <span class="string token">"check"</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`In page script, window.x: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>window<span class="punctuation token">.</span>x<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`In page script, window.y: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>window<span class="punctuation token">.</span>y<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">window.addEventListener("message", function(event) {
+  if (event.source === window &amp;&amp; event.data &amp;&amp; event.data.message === "check") {
+    console.log(`In page script, window.x: ${window.x}`);
+    console.log(`In page script, window.y: ${window.y}`);
+  }
+});</code></pre>
 
 <p>在Chrome中，输出类似下面所示：</p>
 
@@ -562,14 +562,14 @@ In page script, window.y: undefined</code></pre>
 
 <p>当在页面的上下文中运行代码时, 适用于上面所提到的"<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#Sharing_objects_with_page_scripts">Sharing content script objects with page scripts</a>" 这一部分的警告: 页面的环境可能会被恶意的网页所控制，这可能会导致你所交互的对象会有意想不到的行为：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// page.js redefines console.log</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// page.js redefines console.log
 
-<span class="keyword token">var</span> original <span class="operator token">=</span> console<span class="punctuation token">.</span>log<span class="punctuation token">;</span>
+var original = console.log;
 
-console<span class="punctuation token">.</span>log <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="function token">original</span><span class="punctuation token">(</span><span class="keyword token">true</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+console.log = function() {
+  original(true);
+}</code></pre>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// content-script.js calls the redefined version</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// content-script.js calls the redefined version
 
-window<span class="punctuation token">.</span><span class="function token">eval</span><span class="punctuation token">(</span><span class="string token">'console.log(false)'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+window.eval('console.log(false)');</code></pre>

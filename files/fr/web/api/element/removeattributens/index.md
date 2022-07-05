@@ -27,7 +27,7 @@ Dans Firefox 3 et postérieurs, cette méthode réinitialise les valeurs DOM à 
     //      special:specialAlign="utterleft" width="200px" />
     d = document.getElementById("div1");
     d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
-    // l'élément est devenu : <div id="div1" width="200px" />
+    // l'élément est devenu&nbsp;: <div id="div1" width="200px" />
 
 ## Notes
 

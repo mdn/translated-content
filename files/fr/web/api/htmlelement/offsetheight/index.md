@@ -35,7 +35,7 @@ L'exemple d'image ci-avant montre une barre de défilement et un décalage `offs
 
 ### Notes
 
-`offsetHeight` est une propriété du modèle objet DHTML introduite par Microsoft Internet Explorer. On l'appelle parfois la hauteur physique ou graphique d'un élément, ou sa hauteur « border-box » (bordure et boîte).
+`offsetHeight` est une propriété du modèle objet DHTML introduite par Microsoft Internet Explorer. On l'appelle parfois la hauteur physique ou graphique d'un élément, ou sa hauteur «&nbsp;border-box&nbsp;» (bordure et boîte).
 
 ### Références
 

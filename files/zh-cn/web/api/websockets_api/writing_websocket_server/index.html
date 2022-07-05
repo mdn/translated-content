@@ -10,7 +10,7 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_server
 ---
 <h2 id="介绍">介绍</h2>
 
-<p>如果你想学习如何使用 WebSocket API，那么有一台服务器将会是非常有用的。在本文中，我将向你展示如何使用C#来写后端。你可以使用任何可用于后端开发的语言来做这个事<span style="line-height: 1.5;">, 但是,要为了使例子简明易懂，我选择微软的C#。</span></p>
+<p>如果你想学习如何使用 WebSocket API，那么有一台服务器将会是非常有用的。在本文中，我将向你展示如何使用C#来写后端。你可以使用任何可用于后端开发的语言来做这个事, 但是,要为了使例子简明易懂，我选择微软的C#。</p>
 
 <p>此服务器符合 <a href="http://tools.ietf.org/html/rfc6455" title="http://tools.ietf.org/html/rfc6455">RFC 6455</a> 因此，因此它只处理来自 Chrome16，Firefox 11，IE 10 及更高版本的连接。</p>
 
@@ -19,7 +19,7 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_server
 <p>WebSockets 通过 <a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" title="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP (传输控制协议)</a> 连接进行通信.。幸运的是, C# 中有一个 <a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx">TcpListener </a>类。 它位于 <em>System.Net.Sockets</em> 的命名空间。</p>
 
 <div class="note">
-<p><span style="line-height: 1.572;">最好使用 <code>using</code></span><span style="line-height: 1.572;"> 关键字来包含命名空间，这样在你写代码的时候就不需要指定详细的命名空间。</span></p>
+<p>最好使用 <code>using</code> 关键字来包含命名空间，这样在你写代码的时候就不需要指定详细的命名空间。</p>
 </div>
 
 <h3 id="TcpListener">TcpListener</h3>
@@ -34,15 +34,15 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_server
 <p><em>如果字符串创建 <code>IPAddress</code> 对象，请使用 Parse静态方法。</em></p>
 </div>
 
-<p><span style="line-height: 1.572;">方法</span><span style="line-height: 1.572;">:</span></p>
+<p>方法:</p>
 
 <ul>
- <li><code><span style="line-height: 1.572;">Start()</span></code></li>
- <li><span style="line-height: 1.572;"><code>System.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx">TcpClient</a> AcceptTcpClient()</code><br>
-  等一个Tcp 连接， 并接受一个返回的TcpClient对象。</span></li>
+ <li><code>Start()</code></li>
+ <li><code>System.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx">TcpClient</a> AcceptTcpClient()</code><br>
+  等一个Tcp 连接， 并接受一个返回的TcpClient对象。</li>
 </ul>
 
-<p><span style="line-height: 1.572;">下面是基于服务端的实现：</span></p>
+<p>下面是基于服务端的实现：</p>
 
 <pre class="brush: cpp">​using System.Net.Sockets;
 using System.Net;
@@ -62,7 +62,7 @@ class Server {
 }
 </pre>
 
-<h3 id="TcpClient"><span style="line-height: 1.572;">TcpClient</span></h3>
+<h3 id="TcpClient">TcpClient</h3>
 
 <p>方法:</p>
 
@@ -85,7 +85,7 @@ class Server {
 <ul>
  <li><code>Write(Byte[] buffer, int offset, int size)</code><br>
   根据buffer数组写入字节流，offset与size参数决定了消息的长度。</li>
- <li><code><span class="brush: cpp" style="line-height: 1.572;">Read(Byte[] buffer, int offset, int size)</span></code><br>
+ <li><code>Read(Byte[] buffer, int offset, int size)</code><br>
   将字节流读取到 <code>buffer</code> 中。 <code>offset</code> 和 <code>size</code> 参数决定了消息的长度。</li>
 </ul>
 
@@ -215,7 +215,7 @@ if (Regex.IsMatch(data, "^GET")) {
 <ul>
  <li>FIN 位：这个位表明是否整个消息都已经从客户端被发送出去。消息可能以多个帧的形式发送，但现在我们将情景考虑得简单一些。</li>
  <li>RSV1, RSV2, RSV3：除非规定的扩展协议支持将它们赋为非0值，否则这些位必须为0。</li>
- <li><span style="line-height: 1.572;">Opcode：</span><span style="line-height: 1.572;">这些位描述了接收的消息的类型。Opcode 0x1 意味着这是一条文本消息。</span><a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;" title="http://tools.ietf.org/html/rfc6455#section-5.2">Opcodes值的完整罗列</a></li>
+ <li>Opcode：这些位描述了接收的消息的类型。Opcode 0x1 意味着这是一条文本消息。<a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;" title="http://tools.ietf.org/html/rfc6455#section-5.2">Opcodes值的完整罗列</a></li>
 </ul>
 
 <p>第二个字节，当前值是131，是另一个按位组成的部分，分解如下：</p>

@@ -28,7 +28,7 @@ Avec cette évaluation, vous obtiendrez une meilleure pratique dans la création
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Tester votre compréhension du modèle de boîte CSS et toutes les
         fonctionnalités associées comme les encadrements et les arrière‑plans.
@@ -39,11 +39,11 @@ Avec cette évaluation, vous obtiendrez une meilleure pratique dans la création
 
 ## Départ
 
-Pour débuter, vous devez :
+Pour débuter, vous devez&nbsp;:
 
 - faire des copies locales de ces [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/index.html) et [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/style.css) — enregistrez‑les sous les noms `index.html` et `style.css` dans un nouveau répertoire.
 
-> **Note :** Autrement, vous pouvez utiliser un site comme  [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire cet exercice. Collez le HTML et complétez la CSS dans un des éditeurs en ligne. Si l'éditeur en ligne que vous utilisez ne dispose pas d'un panneau séparé pour la CSS, vous pouvez le mettre dans un élément `<style>` dans l'élément `head` du document.
+> **Note :** Autrement, vous pouvez utiliser un site comme  [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire cet exercice. Collez le HTML et complétez la CSS dans un des éditeurs en ligne. Si l'éditeur en ligne que vous utilisez ne dispose pas d'un panneau séparé pour la CSS, vous pouvez le mettre dans un élément `<style>` dans l'élément `head` du document.
 
 ## Résumé du projet
 
@@ -55,7 +55,7 @@ Votre tâche consiste à créer une boîte élégante et rafraîchissante tout e
 
 ### Composition de la boîte
 
-Vous devez appliquer un style à l'élément {{htmlelement("p")}} en lui donnant :
+Vous devez appliquer un style à l'élément {{htmlelement("p")}} en lui donnant&nbsp;:
 
 - une largeur raisonnable pour un gros bouton, disons autout de 200 pixels,
 - une hauteur raisonnable pour un gros bouton en centrant le texte verticalement dans ce processus,
@@ -70,13 +70,13 @@ Vous devez appliquer un style à l'élément {{htmlelement("p")}} en lui donnant
 
 ## Exemple
 
-Cette capture d'écran montre un exemple de ce à quoi l'aspect final pourrait ressembler :
+Cette capture d'écran montre un exemple de ce à quoi l'aspect final pourrait ressembler&nbsp;:
 
 ![](fancy-box.png)
 
 ## Évaluation
 
-Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur  [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abord, il n'y rien à gagner en trichant !
+Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur  [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abord, il n'y rien à gagner en trichant !
 
 {{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 
@@ -84,7 +84,7 @@ Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvo
 
 ## Dans ce module
 
-- [Le modèle de boîte : récapitulatif](/fr/Apprendre/CSS/styliser_boites/Box_model_recap)
+- [Le modèle de boîte&nbsp;: récapitulatif](/fr/Apprendre/CSS/styliser_boites/Box_model_recap)
 - [Arrière-plans](/fr/Apprendre/CSS/styliser_boites/Backgrounds)
 - [Encadrements](/fr/docs/Apprendre/CSS/styliser_boites/Borders)
 - [Mise en page des tableaux](/fr/Apprendre/CSS/styliser_boites/Styling_tables)

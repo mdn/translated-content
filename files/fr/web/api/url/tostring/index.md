@@ -11,7 +11,7 @@ translation_of: Web/API/URL/toString
 ---
 {{ApiRef("URL API")}}
 
-La méthode **`URL.toString()`** retourne un {{domxref("USVString")}} contenant tout l'URL. C'est en effet, une version de {{domxref("URL.href")}} en lecture seule.
+La méthode **`URL.toString()`** retourne un {{domxref("USVString")}} contenant tout l'URL. C'est en effet, une version de {{domxref("URL.href")}} en lecture seule.
 
 {{AvailableInWorkers}}
 
@@ -46,4 +46,4 @@ url.toString() // doit retourner l'URL en tant que chaîne
 
 ## Voir aussi
 
-- L'interface {{domxref("URL")}} à laquelle elle appartient.
+- L'interface {{domxref("URL")}} à laquelle elle appartient.

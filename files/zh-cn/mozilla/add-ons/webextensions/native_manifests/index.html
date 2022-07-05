@@ -163,22 +163,22 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 
 <p>举个例子：</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="punctuation token">{</span>
-  <span class="key token">"name":</span> <span class="string token">"favourite-colour-examples@mozilla.org"</span><span class="punctuation token">,</span>
-  <span class="key token">"description":</span> <span class="string token">"ignored"</span><span class="punctuation token">,</span>
-  <span class="key token">"type":</span> <span class="string token">"storage"</span><span class="punctuation token">,</span>
-  <span class="key token">"data":</span>
-  <span class="punctuation token">{</span>
-    <span class="key token">"colour":</span> <span class="string token">"management thinks it should be blue!"</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">{
+  "name": "favourite-colour-examples@mozilla.org",
+  "description": "ignored",
+  "type": "storage",
+  "data":
+  {
+    "colour": "management thinks it should be blue!"
+  }
+}</code></pre>
 
 <p>在给出的清单文件中，ID 为 favourite-colour-examples@mozilla.org 的 extension 有权限使用清单中的 data 字段中的数据，代码如下：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> storageItem <span class="operator token">=</span> browser<span class="punctuation token">.</span>storage<span class="punctuation token">.</span>managed<span class="punctuation token">.</span><span class="keyword token">get</span><span class="punctuation token">(</span><span class="string token">'colour'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-storageItem<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="punctuation token">(</span>res<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`Managed colour is: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>res<span class="punctuation token">.</span>colour<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var storageItem = browser.storage.managed.get('colour');
+storageItem.then((res) =&gt; {
+  console.log(`Managed colour is: ${res.colour}`);
+});</code></pre>
 
 <h2 id="PKCS_11_清单">PKCS #11 清单<a id="PKCS #11 清单" name="PKCS #11 清单"></a></h2>
 

@@ -335,7 +335,7 @@ Content-Range: bytes 300-400/1270
 
 <ul>
  <li>
-  <p>RAR编码文件。在这种情况，理想状态是，设置真实的编码文件类型；但这通常不可能（可能是服务器所未知的类型或者这个文件包含许多其他的不同的文件类型）。这这种情况服务器将发送 <code>application/x-rar-compressed</code> 作为MIME类型，用户不会将其定义为有用的默认操作。</p>
+  <p>RAR编码文件。在这种情况，理想状态是，设置真实的编码文件类型；但这通常不可能（可能是服务器所未知的类型或者这个文件包含许多其他的不同的文件类型）。这种情况服务器将发送 <code>application/x-rar-compressed</code> 作为MIME类型，用户不会将其定义为有用的默认操作。</p>
  </li>
  <li>
   <p>音频或视频文件。只有正确设置了MIME类型的文件才能被 {{ HTMLElement("video") }} 或{{ HTMLElement("audio") }} 识别和播放。 可参照  <a href="https://developer.mozilla.org/En/Media_formats_supported_by_the_audio_and_video_elements">use the correct type for audio and video</a>。</p>

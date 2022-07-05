@@ -10,7 +10,7 @@ Un objet **`WeakRef`** permet de tenir une référence faible vers un autre obje
 
 ## Description
 
-Un objet `WeakRef` contient une référence faible vers un objet, appelé _cible_ ou _référent_. Une _référence faible_ vers un objet est une référence qui n'empêche pas l'objet d'être récupéré par le ramasse-miettes. À l'inverse, une référence normale (aussi qualifiée de  _forte_) implique de conserver un objet en mémoire. Lorsqu'un objet n'a plus de référence forte envers lui, le ramasse-miettes du moteur JavaScript peut détruire l'objet et récupérer la mémoire correspondante. Une fois que cela est fait, on ne peut plus accéder à l'objet depuis une référence faible.
+Un objet `WeakRef` contient une référence faible vers un objet, appelé _cible_ ou _référent_. Une _référence faible_ vers un objet est une référence qui n'empêche pas l'objet d'être récupéré par le ramasse-miettes. À l'inverse, une référence normale (aussi qualifiée de _forte_) implique de conserver un objet en mémoire. Lorsqu'un objet n'a plus de référence forte envers lui, le ramasse-miettes du moteur JavaScript peut détruire l'objet et récupérer la mémoire correspondante. Une fois que cela est fait, on ne peut plus accéder à l'objet depuis une référence faible.
 
 > **Note :** Voir la section [À éviter si possible](#à_éviter_si_possible) ci-après. Une utilisation correcte et pertinente de `WeakRef` nécessite une réflexion appuyée. C'est un objet qu'il conviendra d'éviter si possible.
 

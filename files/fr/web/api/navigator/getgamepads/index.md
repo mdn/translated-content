@@ -5,7 +5,7 @@ translation_of: Web/API/Navigator/getGamepads
 ---
 {{ APIRef("Navigator") }}{{SeeCompatTable}}
 
-La méthode **`Navigator.getGamepads()`** renvoie un tableau d'objets {{ domxref("Gamepad") }}, un par contrôleur connecté à la machine.
+La méthode **`Navigator.getGamepads()`** renvoie un tableau d'objets {{ domxref("Gamepad") }}, un par contrôleur connecté à la machine.
 
 Des éléments dans le tableau peuvent être `null` si un contrôleur est déconnecté durant la session, ainsi les autres restants gardent le même indice.
 

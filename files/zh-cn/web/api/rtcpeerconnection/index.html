@@ -112,7 +112,7 @@ navigator.getUserMedia({video: true}, function(stream) {
   pc.<a href="#addStream()">addStream</a>(stream);
 
   pc.<a href="#createOffer()">createOffer</a>(function(offer) {
-    pc.<a href="#setLocalDescription()">setLocalDescription</a>(new <span class="nx">RTCSessionDescription</span>(offer), function() {
+    pc.<a href="#setLocalDescription()">setLocalDescription</a>(new RTCSessionDescription(offer), function() {
       // send the offer to a server to be forwarded to the friend you're calling.
     }, error);
   }, error);
@@ -129,10 +129,10 @@ navigator.getUserMedia({video: true}, function(stream) {
   pc.onaddstream({stream: stream});
   pc.<a href="#addStream()">addStream</a>(stream);
 
-  pc.setRemoteDescription(new <span class="nx">RTCSessionDescription</span>(offer), function() {
+  pc.setRemoteDescription(new RTCSessionDescription(offer), function() {
     pc.<a href="#createAnswer()">createAnswer</a>(function(answer) {
-      pc.<a href="#setLocalDescription()">setLocalDescription</a>(new <span class="nx">RTCSessionDescription</span>(answer), function() {
-        // <span style="font-size: 1rem;">send the answer to a server to be forwarded back to the caller (you)</span>
+      pc.<a href="#setLocalDescription()">setLocalDescription</a>(new RTCSessionDescription(answer), function() {
+        // send the answer to a server to be forwarded back to the caller (you)
       }, error);
     }, error);
   }, error);
@@ -148,10 +148,10 @@ navigator.getUserMedia({video: true}, function(stream) {
 
 <pre>// pc was set up earlier when we made the original offer
 var offer = getResponseFromFriend();
-pc.<a href="#createAnswer()">setRemoteDescription</a>(new <span class="nx">RTCSessionDescription</span>(offer), function() { }, error);
+pc.<a href="#createAnswer()">setRemoteDescription</a>(new RTCSessionDescription(offer), function() { }, error);
 </pre>
 
-<h2 id="属性_2"><span class="short_text" id="result_box" lang="zh-CN"><span>属性</span></span></h2>
+<h2 id="属性_2">属性</h2>
 
 <p><em>这个接口从它的父元素中继承属性, {{domxref("EventTarget")}}.</em></p>
 

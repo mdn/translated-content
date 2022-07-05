@@ -14,7 +14,7 @@ Dans cet article, nous verrons ce que sont les liens et en quoi ils sont importa
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez, au préalable, comprendre
         <a href="/fr/Learn/How_the_Internet_works"

@@ -127,7 +127,7 @@ To explore various features of Vue, we will be building up a sample todo list ap
 
 The CLI will now begin scaffolding out your project, and installing all of your dependencies.
 
-If you've never run the Vue CLI before, you'll get one more question — you'll be asked to choose a package manager. You can use the arrow keys to select which one you prefer. The Vue CLI will default to this package manager from now on. If you need to use a different package manager after this, you can pass in a flag , when you run .  So if you wanted to create the project with npm and you'd previously chosen yarn, you’d run .` --packageManager=<package-manager>``vue create``moz-todo-vue``vue create moz-todo-vue --packageManager=npm `
+If you've never run the Vue CLI before, you'll get one more question — you'll be asked to choose a package manager. You can use the arrow keys to select which one you prefer. The Vue CLI will default to this package manager from now on. If you need to use a different package manager after this, you can pass in a flag , when you run .  So if you wanted to create the project with npm and you'd previously chosen yarn, you’d run .` --packageManager=<package-manager>``vue create``moz-todo-vue``vue create moz-todo-vue --packageManager=npm `
 
 > **Note :** We've not gone over all of the options here, but you can [find more information on the CLI](https://cli.vuejs.org) in the Vue docs.
 
@@ -200,10 +200,10 @@ The Vue CLI comes with a built-in development server. This allows you to run you
 
 In your terminal, try running (or if you prefer yarn). Your terminal should output something like the following:` npm run serve``yarn serve `
 
-    INFO  Starting development server...
+    INFO Starting development server...
     98% after emitting CopyPlugin
 
-     DONE  Compiled successfully in 18121ms
+     DONE Compiled successfully in 18121ms
 
       App running at:
       - Local:   <http://localhost:8080/>

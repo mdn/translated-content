@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/globalAlpha
 ---
 {{APIRef}}La propriété **CanvasRenderingContext2D.globalAlpha** de l'API Canvas 2D spécifie la valeur alpha qui sera appliquée aux formes et aux images avant qu'elles ne soient dessinées sur le canevas. La valeur est comprise entre 0,0 (entièrement transparente) et 1,0 (entièrement opaque).
 
-Voir aussi le chapitre [Ajout de styles et de couleurs](/fr-FR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) dans le [Tutoriel canvas](/fr-FR/docs/Web/API/Canvas_API/Tutorial).
+Voir aussi le chapitre [Ajout de styles et de couleurs](/fr-FR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) dans le [Tutoriel canvas](/fr-FR/docs/Web/API/Canvas_API/Tutorial).
 
 ## Syntaxe
 
@@ -18,9 +18,9 @@ Voir aussi le chapitre [Ajout de styles et de couleurs](/fr-FR/docs/Web/API/Canv
 
 ## Exemples
 
-### Utilisation de la propriété `globalAlpha`
+### Utilisation de la propriété `globalAlpha`
 
-Il s'agit seulement d'un simple fragment de code utilisant la propriété `globalAlpha` pour dessiner deux rectangles semi-transparents.
+Il s'agit seulement d'un simple fragment de code utilisant la propriété `globalAlpha` pour dessiner deux rectangles semi-transparents.
 
 #### HTML
 
@@ -50,8 +50,8 @@ Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct d
 ```html hidden
 <canvas id="canevas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="modifier" type="button" value="Modifier" />
-  <input id="effacement" type="button" value="Effacement" />
+  <input id="modifier" type="button" value="Modifier" />
+  <input id="effacement" type="button" value="Effacement" />
 </div>
 <textarea id="code" class="playable-code" style="height:120px;">
 ctx.globalAlpha = 0.5;
@@ -91,9 +91,9 @@ window.addEventListener('load', dessinerCanevas);
 
 {{ EmbedLiveSample('Code_jouable', 700, 380) }}
 
-### Un exemple de `globalAlpha`
+### Un exemple de `globalAlpha`
 
-Dans cet exemple, un arrière-plan de quatre carrés de différentes couleurs est dessiné. Au dessus, se trouve un ensemble de cercles semi-transparents. La propriété globalAlpha est définie à 0,2, valeur qui sera utilisée pour toutes les formes à partir de ce point. Chaque étape de la boucle `for` dessine un ensemble de cercles de rayons croissants. Le résultat final est un dégradé radial. En superposant toujours plus de cercles les uns sur les autres, la transparence des cercles déjà dessinés est réduite. En augmentant le nombre d'étapes et, concrètement, en dessinant davantage de cercles, l'arrière-plan disparaitra complètement du centre de l'image.
+Dans cet exemple, un arrière-plan de quatre carrés de différentes couleurs est dessiné. Au dessus, se trouve un ensemble de cercles semi-transparents. La propriété globalAlpha est définie à 0,2, valeur qui sera utilisée pour toutes les formes à partir de ce point. Chaque étape de la boucle `for` dessine un ensemble de cercles de rayons croissants. Le résultat final est un dégradé radial. En superposant toujours plus de cercles les uns sur les autres, la transparence des cercles déjà dessinés est réduite. En augmentant le nombre d'étapes et, concrètement, en dessinant davantage de cercles, l'arrière-plan disparaitra complètement du centre de l'image.
 
 ```js
 var ctx = document.getElementById('canevas').getContext('2d');
@@ -130,7 +130,7 @@ for (i = 0; i < 7; i++){
 
 | Spécification                                                                                                                                        | Statut                           | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-globalalpha", "CanvasRenderingContext2D.globalAlpha")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-globalalpha", "CanvasRenderingContext2D.globalAlpha")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 
@@ -138,7 +138,7 @@ for (i = 0; i < 7; i++){
 
 ## Notes spécifiques à Gecko
 
-- À partir de Gecko 5.0, la spécification de valeurs invalides pour globalAlpha ne génère plus une exception SYNTAX_ERR ; celles-ci sont silencieusement et correctement ignorées.
+- À partir de Gecko 5.0, la spécification de valeurs invalides pour globalAlpha ne génère plus une exception SYNTAX_ERR ; celles-ci sont silencieusement et correctement ignorées.
 
 ## Notes spécifiques à WebKit/Blink
 

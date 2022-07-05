@@ -101,7 +101,7 @@ Les service workers sont aussi destinés à être utilisés pour des choses tell
 - {{domxref("NotificationEvent") }}
   - : Le paramètre passé au gestionnaire {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}}, l'interface `NotificationEvent` représente un événement de notification au clic qui est envoyé au {{domxref("ServiceWorkerGlobalScope")}} d'un {{domxref("ServiceWorker")}}.
 - {{domxref("PeriodicSyncEvent")}} {{non-standard_inline}}
-  - : Le paramètre passé au gestionnaire sync, l'interface SyncEvent représente une action de synchronisation périodique qui est envoyée au  {{domxref("ServiceWorkerGlobalScope")}} d'un ServiceWorker.
+  - : Le paramètre passé au gestionnaire sync, l'interface SyncEvent représente une action de synchronisation périodique qui est envoyée au  {{domxref("ServiceWorkerGlobalScope")}} d'un ServiceWorker.
 - {{domxref("PeriodicSyncManager")}} {{non-standard_inline}}
   - : Fournit une interface pour l'enregistrement et la récupération des objets {{domxref("PeriodicSyncRegistration")}}.
 - {{domxref("PeriodicSyncRegistration")}} {{non-standard_inline}}

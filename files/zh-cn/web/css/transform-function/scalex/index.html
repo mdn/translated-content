@@ -1,0 +1,110 @@
+---
+title: scaleX()
+slug: Web/CSS/transform-function/scaleX
+tags:
+  - axial symmetry
+  - scaleX()
+  - scaleX(-1)
+translation_of: Web/CSS/transform-function/scaleX()
+original_slug: Web/CSS/transform-function/scaleX()
+---
+<div>{{CSSRef}}</div>
+
+<p><strong><code>scaleX()</code></strong> CSS 函数将每个元素点的横坐标修改为一个常数因子，除了该比例因子为1，在这种情况下，函数是身份变换。 缩放不是各向同性的，并且元素的角度不保守。</p>
+
+<p><img src="https://mdn.mozillademos.org/files/12117/scaleX.png" style="height: 315px; width: 372px;"></p>
+
+<p><code>scaleX(sx)</code> 是 <code>scale(sx, 1)</code> 或 <code>scale3d(sx, 1, 1) </code>的一个速记/缩写。</p>
+
+<div class="note">
+<p>Note:</p>
+
+<p><strong><code>scaleX(-1)</code> </strong>定义一个 <a class="external" href="http://en.wikipedia.org/wiki/Axial_symmetry">轴向对称性(axial symmetry)</a> ，它具有一个垂直轴通过原点 (由 {{cssxref("transform-origin")}} 属性规定)。</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">scaleX(<em>s</em>)
+</pre>
+
+<h2 id="Values">Values</h2>
+
+<dl>
+ <dt><em>s</em></dt>
+ <dd>Is a {{cssxref("&lt;number&gt;")}} representing the scaling factor to apply on the abscissa of each point of the element.</dd>
+</dl>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
+   <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
+   <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
+   <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="1" rowspan="2"><math> <mfenced> <mtable> <mtr><mtd>s</mtd><mtd>0</mtd></mtr> <mtr><mtd>0</mtd><mtd>1</mtd></mtr> </mtable> </mfenced> </math></td>
+   <td><math> <mfenced><mtable><mtr>s<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
+   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>s<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
+   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>s<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
+  </tr>
+  <tr>
+   <td><code>[s 0 0 1 0 0]</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Without_changing_the_origin">Without changing the origin</h3>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html">&lt;p&gt;foo&lt;/p&gt;
+&lt;p class="transformed"&gt;bar&lt;/p&gt;</pre>
+
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css">p {
+  width: 50px;
+  height: 50px;
+  background-color: teal;
+}
+
+.transformed {
+  transform: scaleX(2);
+  background-color: blue;
+}
+</pre>
+
+<h4 id="Result">Result</h4>
+
+<p>{{EmbedLiveSample("Without_changing_the_origin","100%","200")}}</p>
+
+<h3 id="Translating_the_origin_of_the_transformation">Translating the origin of the transformation</h3>
+
+<h4 id="HTML_2">HTML</h4>
+
+<pre class="brush: html">&lt;p&gt;foo&lt;/p&gt;
+&lt;p class="transformed"&gt;bar&lt;/p&gt;</pre>
+
+<h4 id="CSS_2">CSS</h4>
+
+<pre class="brush: css">p {
+  width: 50px;
+  height: 50px;
+  background-color: teal;
+}
+
+.transformed {
+  transform: scaleX(2);
+  transform-origin: left;
+  background-color: blue;
+}
+</pre>
+
+<h4 id="Result_2">Result</h4>
+
+<p>{{EmbedLiveSample("Translating_the_origin_of_the_transformation","100%","200")}}</p>

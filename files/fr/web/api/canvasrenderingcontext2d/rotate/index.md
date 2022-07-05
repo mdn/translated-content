@@ -16,15 +16,15 @@ La méthode **`CanvasRenderingContext2D.rotate()`** de l'API Canvas 2D ajoute un
 ### Paramètres
 
 - `angle`
-  - : L'angle de rotation horaire en radians. Vous pouvez utiliser `degrés * Math.PI / 180` si vous voulez faire la conversion à partir d'une valeur en degrés.
+  - : L'angle de rotation horaire en radians. Vous pouvez utiliser `degrés * Math.PI / 180` si vous voulez faire la conversion à partir d'une valeur en degrés.
 
-Le centre de la rotation est toujours l'origine du canevas. Pour changer le centre, il faudra déplacer le canevas en utilisant la méthode {{domxref("CanvasRenderingContext2D.translate", "translate()")}}.
+Le centre de la rotation est toujours l'origine du canevas. Pour changer le centre, il faudra déplacer le canevas en utilisant la méthode {{domxref("CanvasRenderingContext2D.translate", "translate()")}}.
 
 ## Exemples
 
 ### Utilisation de la méthode `rotate`
 
-Ceci est seulement un fragment de code simple qui utilise la méthode `rotate`.
+Ceci est seulement un fragment de code simple qui utilise la méthode `rotate`.
 
 #### HTML
 
@@ -45,15 +45,15 @@ ctx.fillRect(70, 0, 100, 30);
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 ```
 
-Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas:
+Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas:
 
 #### Code jouable
 
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.rotate(45 * Math.PI / 180);
@@ -93,7 +93,7 @@ window.addEventListener("load", drawCanvas);
 
 | Spécification                                                                                                                            | Statut                           | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-rotate", "CanvasRenderingContext2D.rotate")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-rotate", "CanvasRenderingContext2D.rotate")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité navigateurs
 

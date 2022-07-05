@@ -25,7 +25,7 @@ Il peut être utile, si vous avez un élément de menu contextuel que vous souha
     var isSynthetic = document.mozSyntheticDocument;
 
     if (isSynthetic) {
-      /* insert your menu item here */
+      /* insert your menu item here */
     }
 
 ## Spécifications

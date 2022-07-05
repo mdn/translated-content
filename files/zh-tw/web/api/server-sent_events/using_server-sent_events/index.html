@@ -14,7 +14,7 @@ translation_of: Web/API/Server-sent_events/Using_server-sent_events
 ---
 <p>{{DefaultAPISidebar("Server Sent Events")}}</p>
 
-<div class="summary">
+<div>
 <p>開發一個使用 server-sent 事件的網頁應用程式很簡單。在伺服器端只需要一些的程式碼與網頁串流事件，而客戶端這邊的處理進入事件的部分幾乎跟 <a href="/zh-TW/docs/Web/API/WebSockets_API">websockets</a> 一樣。這是一種單向的連線，所以你無法從客戶端向伺服器傳送事件。</p>
 </div>
 
@@ -59,7 +59,7 @@ translation_of: Web/API/Server-sent_events/Using_server-sent_events
 
 <h2 id="從伺服器發送事件">從伺服器發送事件</h2>
 
-<p>由伺服器端所發送的事件需要使用 <code>text/event-stream</code> 的 MIME 類型回應。每一個通知皆由一組文字組成並由一對換行結尾。如何處理事件串流的格式，請參考 {{ anch("Event stream format") }} 。</p>
+<p>由伺服器端所發送的事件需要使用 <code>text/event-stream</code> 的 MIME 類型回應。每一個通知皆由一組文字組成並由一對換行結尾。如何處理事件串流的格式，請參考 <a href="#事件串流（event_stream）格式">Event stream format</a> 。</p>
 
 <p>下面是一個 {{Glossary("PHP")}} 範例：</p>
 

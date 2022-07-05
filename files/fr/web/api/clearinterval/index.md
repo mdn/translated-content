@@ -38,7 +38,7 @@ Voir [l'exemple `setInterval()`](/fr/docs/Web/API/WindowTimers/setInterval#Exemp
 | Spécification                                                                                                                                    | État                             | Commentaires                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------ |
 | {{SpecName('HTML WHATWG', 'webappapis.html#dom-clearinterval', 'WindowOrWorkerGlobalScope.clearInterval()')}} | {{Spec2("HTML WHATWG")}} | Cette méthode a été déplacée sur le _mixin_ `WindowOrWorkerGlobalScope`. |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-clearinterval', 'clearInterval()')}}                                 | {{Spec2('HTML WHATWG')}} |                                                                          |
+| {{SpecName('HTML WHATWG', 'webappapis.html#dom-clearinterval', 'clearInterval()')}}                                 | {{Spec2('HTML WHATWG')}} |                                                                          |
 
 ## Compatibilité des navigateurs
 

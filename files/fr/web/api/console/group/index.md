@@ -26,11 +26,9 @@ Création d'un nouveau groupe en ligne dans la [console Web](/en-US/docs/Tools/W
 - `label`
   - : donne une étiquette au groupe. Facultatif. (Chrome 59 testé). Ne fonctionne pas avec` ``console.groupEnd()`.
 
-{{h3_gecko_minversion("Using groups in the console", "9.0")}}
+## Exemples
 
 Vous pouvez utiliser des groupes imbriqués pour organiser votre sortie en associant visuellement les messages correspondants. Pour créer un nouveau bloc imbriqué, appelez `console.group ()`. La méthode `console.groupCollapsed ()` est similaire, mais le nouveau bloc est réduit et nécessite de cliquer sur un bouton de divulgation pour le lire.
-
-> **Note :** De Gecko 9 jusqu'à Gecko 51, la méthode `groupCollapsed()` n'était pas identique à `group()`. Les groupes réduits sont entièrement pris en charge depuis Gecko 52. Voir {{bug("1088360")}}.
 
 Pour sortir du groupe courant, appeler `console.groupEnd()`. Par exemple, étant donné ce code :
 

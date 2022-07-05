@@ -15,7 +15,7 @@ Le type de données "symbol" est un type de données primitif dont la qualité e
 Une valeur ayant le type de données "symbole" peut être appelée "valeur de symbole". Dans l'environnement d'exécution JavaScript, une valeur de symbole est créée en appelant la fonction Symbol (), qui produit de façon dynamique une valeur unique anonyme. La seule utilisation judicieuse est de stocker le symbole, puis d'utiliser la valeur stockée pour créer une propriété d'objet. L'exemple suivant stocke le symbole dans un "var".
 
 ```js
-var  myPrivateMethod  = Symbol();
+var myPrivateMethod  = Symbol();
 this[myPrivateMethod] = function() {...};
 ```
 

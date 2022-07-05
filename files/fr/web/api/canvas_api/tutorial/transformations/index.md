@@ -190,7 +190,7 @@ Par défaut, une unité sur la toile est exactement un pixel. Si nous appliquons
 
 ### Un exemple `scale`
 
-Dans ce dernier exemple, nous allons dessiner des  formes avec différents facteurs d'échelle.
+Dans ce dernier exemple, nous allons dessiner des formes avec différents facteurs d'échelle.
 
 ```js
 function draw() {

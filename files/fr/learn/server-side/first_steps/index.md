@@ -12,11 +12,11 @@ original_slug: Learn/Server-side/Premiers_pas
 ---
 {{LearnSidebar}}
 
-Dans ce module nous répondrons à quelques questions fondamentales sur la programmation côté serveur — "Qu'est-ce que c'est ?", "En quoi diffère-t-elle de la programmation côté client ?" et "Pourquoi est-ce si utile ?". Nous fournirons ensuite un aperçu de certaines infrastructures d'applications web (aussi appelé frameworks) côté serveurs parmi les plus populaires, ainsi que des conseils pour sélectionner la plus approprié pour créer votre premier site. Enfin un article vous présentera les questions de sécurité pour un serveur web.
+Dans ce module nous répondrons à quelques questions fondamentales sur la programmation côté serveur — "Qu'est-ce que c'est ?", "En quoi diffère-t-elle de la programmation côté client ?" et "Pourquoi est-ce si utile ?". Nous fournirons ensuite un aperçu de certaines infrastructures d'applications web (aussi appelé frameworks) côté serveurs parmi les plus populaires, ainsi que des conseils pour sélectionner la plus approprié pour créer votre premier site. Enfin un article vous présentera les questions de sécurité pour un serveur web.
 
 ## Prérequis
 
-Pour suivre ce module, aucune connaissance en programmation web côté serveur ou tout autre type de programmation n'est nécessaire.
+Pour suivre ce module, aucune connaissance en programmation web côté serveur ou tout autre type de programmation n'est nécessaire.
 
 Vous aurez besoin de comprendre "comment fonctionne le web". Nous vous recommandons de lire d'abord les sujets suivants :
 
@@ -33,9 +33,9 @@ Avec cette compréhension de base, vous serez prêts à parcourir les modules de
 - [Présentation client-serveur](/fr/docs/Learn/Server-side/Premiers_pas/Client-Serveur)
   - : Maintenant que vous connaissez le but et les avantages potentiels de la programmation côté serveur, nous allons examiner en détail ce qui se passe lorsqu'un serveur reçoit une "requête dynamique" d'un navigateur. Comme la plupart des codes côté serveur traitent les demandes et les réponses de la même manière, cela vous aidera à comprendre ce que vous devez faire lorsque vous écrivez votre propre code.
 - [Frameworks web côté serveur](/fr/docs/Learn/Server-side/Premiers_pas/Web_frameworks)
-  - : Le dernier article vous a montré ce qu'une application web côté serveur doit faire pour répondre aux demandes d'un navigateur web. Nous allons maintenant vous montrer comment les frameworks web peuvent simplifier ces tâches ; nous vous aiderons à choisir le bon framework pour coder votre première application web côté serveur.
+  - : Le dernier article vous a montré ce qu'une application web côté serveur doit faire pour répondre aux demandes d'un navigateur web. Nous allons maintenant vous montrer comment les frameworks web peuvent simplifier ces tâches ; nous vous aiderons à choisir le bon framework pour coder votre première application web côté serveur.
 - [Sécurité de votre site web](/fr/docs/Learn/Server-side/First_steps/Website_security)
-  - : La sécurité de votre site web requiert une vigilance dans tous les aspects de sa conception et de son utilisation. Cet article d'introduction ne fera pas de vous un gourou de la sécurité des sites web, mais il vous aidera à comprendre les premières mesures importantes à prendre pour mettre votre application web à l'abri des menaces les plus courantes.
+  - : La sécurité de votre site web requiert une vigilance dans tous les aspects de sa conception et de son utilisation. Cet article d'introduction ne fera pas de vous un gourou de la sécurité des sites web, mais il vous aidera à comprendre les premières mesures importantes à prendre pour mettre votre application web à l'abri des menaces les plus courantes.
 
 ## Évaluations
 

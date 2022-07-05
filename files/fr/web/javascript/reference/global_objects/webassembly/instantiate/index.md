@@ -36,7 +36,7 @@ La fonction **`WebAssembly.instantiate()`** permet de compiler et d'instancier d
 
 Une promesse qui est résoluee en un objet qui contient deux champs :
 
-- `module` : un objet {{jsxref("WebAssembly.Module")}} qui représente le module WebAssembly compilé. Ce module peut être instancié à nouveau grâce à  {{domxref("Worker.postMessage", "postMessage()")}} ou via [un cache IndexedDB](/fr/docs/WebAssembly/Caching_modules).
+- `module` : un objet {{jsxref("WebAssembly.Module")}} qui représente le module WebAssembly compilé. Ce module peut être instancié à nouveau grâce à  {{domxref("Worker.postMessage", "postMessage()")}} ou via [un cache IndexedDB](/fr/docs/WebAssembly/Caching_modules).
 - `instance` : un objet {{jsxref("WebAssembly.Instance")}} qui contient l'ensemble [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Exported_functions).
 
 #### Exceptions
@@ -70,7 +70,7 @@ Une promesse qui est résolue en un objet {{jsxref("WebAssembly.Instance")}}.
 
 ### Première forme
 
-Après avoir récupéré le _bytecode_ WebAssembly grâce à `fetch()`, on compile et on instancie le module grâce à la fonction  {{jsxref("WebAssembly.instantiate()")}} et on importe une fonction JavaScript dans le module lors de cette étape. Ensuite, on invoque [une fonction WebAssembly exportée](/fr/docs/WebAssembly/Exported_functions) via l'instance.
+Après avoir récupéré le _bytecode_ WebAssembly grâce à `fetch()`, on compile et on instancie le module grâce à la fonction  {{jsxref("WebAssembly.instantiate()")}} et on importe une fonction JavaScript dans le module lors de cette étape. Ensuite, on invoque [une fonction WebAssembly exportée](/fr/docs/WebAssembly/Exported_functions) via l'instance.
 
 ```js
 var importObject = {

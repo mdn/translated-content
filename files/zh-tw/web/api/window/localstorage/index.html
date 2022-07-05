@@ -5,7 +5,7 @@ translation_of: Web/API/Window/localStorage
 ---
 <p>{{APIRef("Web Storage API")}}</p>
 
-<p><span class="seoSummary"><strong><code>localStorage</code></strong> 為一唯讀屬性, 此屬性允許您存取目前文件({{DOMxRef("Document")}})隸屬網域來源的 {{DOMxRef("Storage")}} 物件; 與 sessionStorage 不同的是其儲存資料的可存取範圍為跨瀏覽頁狀態(Browser Sessions).</span> <code>localStorage</code> 的應用與 {{DOMxRef("Window.sessionStorage", "sessionStorage")}} 相似, 除了 <code>localStorage</code> 的儲存資料並無到期的限制, 而 <code>sessionStorage</code> 的儲存資料於目前瀏覽頁狀態結束的同時將一併被清除 — 也就是目前瀏覽器頁面被關閉的同時.</p>
+<p><strong><code>localStorage</code></strong> 為一唯讀屬性, 此屬性允許您存取目前文件({{DOMxRef("Document")}})隸屬網域來源的 {{DOMxRef("Storage")}} 物件; 與 sessionStorage 不同的是其儲存資料的可存取範圍為跨瀏覽頁狀態(Browser Sessions). <code>localStorage</code> 的應用與 {{DOMxRef("Window.sessionStorage", "sessionStorage")}} 相似, 除了 <code>localStorage</code> 的儲存資料並無到期的限制, 而 <code>sessionStorage</code> 的儲存資料於目前瀏覽頁狀態結束的同時將一併被清除 — 也就是目前瀏覽器頁面被關閉的同時.</p>
 
 <p>值得注意的是不論 <code>localStorage</code> 或者 <code>sessionStorage</code> <strong>皆為專屬於目前瀏覽器頁面的通訊協定(Protocol)</strong>.</p>
 
@@ -52,20 +52,7 @@ localStorage.clear();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "webstorage.html#dom-localstorage", "localStorage")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
@@ -78,5 +65,5 @@ localStorage.clear();
 <ul>
  <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Storage_API/Local_storage">Local storage with Window.localStorage</a></li>
- <li><span>{{DOMxRef("Window.sessionStorage")}}</span></li>
+ <li>{{DOMxRef("Window.sessionStorage")}}</li>
 </ul>

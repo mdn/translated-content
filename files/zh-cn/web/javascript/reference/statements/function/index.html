@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Statements/function
 
 <p>函数也可以被表达式创建（ <a href="/en/JavaScript/Reference/Operators/function">function expression</a> ）</p>
 
-<p>函数可以被有条件来声明，这意味着，在一个 if 语句里，函数声明是可以嵌套的。有的浏览器会将这种有条件的声明看成是无条件的声明，无论这里的条件是true还是false，浏览器都会创建函数。因此，它们不应该被使用。</p>
+<p>函数可以被有条件来声明，这意味着，在一个 if 语句里，函数声明是可以嵌套的。有的浏览器会将这种有条件的声明看成是无条件的声明，无论这里的条件是 true 还是 false，浏览器都会创建函数。因此，它们不应该被使用。</p>
 
 <p>默认情况下，函数是返回 undefined 的。想要返回一个其他的值，函数必须通过一个 <a href="/en/JavaScript/Reference/Statements/return">return</a> 语句指定返回值。</p>
 
@@ -53,17 +53,17 @@ if (false) {
   function foo(){ return 1; }
 }
 
-// 在Chrome里:
+// 在 Chrome 里：
 // 'foo' 变量名被提升，但是 typeof foo 为 undefined
 //
-// 在Firefox里:
-// 'foo' 变量名被提升. 但是 typeof foo 为 undefined
+// 在 Firefox 里：
+// 'foo' 变量名被提升。但是 typeof foo 为 undefined
 //
-// 在Edge里:
-// 'foo' 变量名未被提升. 而且 typeof foo 为 undefined
+// 在 Edge 里：
+// 'foo' 变量名未被提升。而且 typeof foo 为 undefined
 //
-// 在Safari里:
-// 'foo' 变量名被提升. 而且 typeof foo 为 function</code></pre>
+// 在 Safari 里：
+// 'foo' 变量名被提升。而且 typeof foo 为 function</code></pre>
 
 <p>注意，即使把上面代码中的 if(false) 改为 if(true)，结果也是一样的</p>
 
@@ -73,22 +73,22 @@ if (true) {
   function foo(){ return 1; }
 }
 
-// 在Chrome里:
+// 在 Chrome 里：
 // 'foo' 变量名被提升，但是 typeof foo 为 undefined
 //
-// 在Firefox里:
-// 'foo' 变量名被提升. 但是 typeof foo 为 undefined
+// 在 Firefox 里：
+// 'foo' 变量名被提升。但是 typeof foo 为 undefined
 //
-// 在Edge里:
-// 'foo' 变量名未被提升. 而且 typeof foo 为 undefined
+// 在 Edge 里：
+// 'foo' 变量名未被提升。而且 typeof foo 为 undefined
 //
-// 在Safari里:
-// 'foo' 变量名被提升. 而且 typeof foo 为 function</code>
+// 在 Safari 里：
+// 'foo' 变量名被提升。而且 typeof foo 为 function</code>
 </pre>
 
 <h3 id="函数声明提升">函数声明提升</h3>
 
-<p>JavaScript 中的<strong>函数声明</strong>被提升到了<strong>函数定义</strong>。你可以在函数声明之前使用该函数:</p>
+<p>JavaScript 中的<strong>函数声明</strong>被提升到了<strong>函数定义</strong>。你可以在函数声明之前使用该函数：</p>
 
 <pre class="brush: js">hoisted(); // logs "foo"
 
@@ -98,7 +98,7 @@ function hoisted() {
 </pre>
 
 <div class="note">
-<p><strong>备注：</strong><strong>函数表达式</strong>{{jsxref("Operators/function", "function expressions")}} 不会被提升:</p>
+<p><strong>备注：</strong><strong>函数表达式</strong>{{jsxref("Operators/function", "function expressions")}} 不会被提升：</p>
 </div>
 
 <pre class="brush: js">notHoisted(); // TypeError: notHoisted is not a function
@@ -112,7 +112,7 @@ var notHoisted = function() {
 
 <h3 id="Example_Using_function">使用函数</h3>
 
-<p>下面的代码声明了一个函数,该函数返回了销售的总金额, 参数是产品a,b,c分别的销售的数量.</p>
+<p>下面的代码声明了一个函数，该函数返回了销售的总金额，参数是产品 a,b,c 分别的销售的数量。</p>
 
 <pre class="brush: js">function calc_sales(units_a, units_b, units_c) {functionfunctionfunctionfunctionfunctionfunctionfunctionfunctionfunctionfunctionfunction
    return units_a*79 + units_b * 129 + units_c * 699;

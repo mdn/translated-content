@@ -19,7 +19,7 @@ Firefox prend [en charge de nombreuses fonctionnalités de ECMAScript 2015](/Web
 
 Attention, tout ce qui se trouve en dessous de cette ligne est obsolète et a été retiré de Babel 6.
 
-Babel fournit des transformations pour la grande majorité des fonctionnalités ES2015 et les active par défaut. Puisque Firefox supporte déjà la plupart d'entre eux, il est préférable de configurer Babel pour les ignorer. Nous vous suggérons de créer un fichier `.babelrc`, ou une section `babel` dans le fichier `package.json` de votre projet contenant les éléments suivants :
+Babel fournit des transformations pour la grande majorité des fonctionnalités ES2015 et les active par défaut. Puisque Firefox supporte déjà la plupart d'entre eux, il est préférable de configurer Babel pour les ignorer. Nous vous suggérons de créer un fichier `.babelrc`, ou une section `babel` dans le fichier `package.json` de votre projet contenant les éléments suivants :
 
 ```js
 {

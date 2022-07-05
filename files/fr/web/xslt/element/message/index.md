@@ -12,9 +12,11 @@ L'élément `<xsl:message>` écrit un message de sortie (dans la console JavaScr
 
 ### Syntaxe
 
-    <xsl:message terminate="yes" | "no" >
-    	MODÈLE
-    </xsl:message>
+```xml
+<xsl:message terminate="yes" | "no" >
+  MODÈLE
+</xsl:message>
+```
 
 ### Attributs obligatoires
 
@@ -23,7 +25,7 @@ Aucun.
 ### Attributs optionnels
 
 - `terminate`
-  - : Défini à `yes`, il indique que l'exécution doit être interrompue. La valeur par défaut est `no` : dans ce cas, le message est envoyé et l'exécution se poursuit.
+  - : Défini à `yes`, il indique que l'exécution doit être interrompue. La valeur par défaut est `no`&nbsp;: dans ce cas, le message est envoyé et l'exécution se poursuit.
 
 ### Type
 

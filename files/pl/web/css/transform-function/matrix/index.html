@@ -1,0 +1,59 @@
+---
+title: matrix()
+slug: Web/CSS/transform-function/matrix
+tags:
+  - CSS
+  - Funkcje CSS
+  - Referencje
+  - Transformacje CSS
+  - wymagaPrzykładu
+translation_of: Web/CSS/transform-function/matrix()
+original_slug: Web/CSS/transform-function/matrix()
+---
+<div>{{CSSRef}}</div>
+
+<p>CSS-owa funkcja <code>matrix() </code>określa jednolitą macierz (matrix) transformacji 2D i składa się z sześciu określonych wartości. Wartości stałe tych macierzy są implementowane oraz nie działają jak parametry; pozostałe parametry są opisywane w porządku głównej kolumny.</p>
+
+<p><code>matrix(a, b, c, d, tx, ty)</code> to shorthand dla <code>matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)</code>.</p>
+
+<div class="note"><strong>Adnotacja</strong>: Od Firefoxa 16, Gecko akceptuje wartośc {{cssxref("&lt;length&gt;")}} dla <strong>tx </strong>oraz <strong>ty</strong>.</div>
+
+<h2 id="Składnia">Składnia</h2>
+
+<pre class="syntaxbox">matrix(<em>a</em>, <em>b</em>, <em>c</em>, <em>d</em>, <em>tx</em>, <em>ty</em>)
+</pre>
+
+<h2 id="Wartości">Wartości</h2>
+
+<dl>
+ <dt><em>a</em> <em>b</em> <em>c</em> <em>d</em></dt>
+ <dd>{{cssxref("&lt;number&gt;")}} opisują transformacje linearne.</dd>
+ <dt><em>tx</em> <em>ty</em></dt>
+ <dd>{{cssxref("&lt;number&gt;")}} opisują transformacje do zastosowania.</dd>
+</dl>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Współrzędne kartezjańskie na ℝ<sup>2</sup></th>
+   <th scope="col">Współrzędne jednorodne na ℝℙ<sup>2</sup></th>
+   <th scope="col">Współrzędne kartezjańskie na ℝ<sup>3</sup></th>
+   <th scope="col">Współrzędne jednorodne na ℝℙ<sup>3</sup></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="1" rowspan="2"><math> <mfenced> <mtable> <mtr><mtd>a</mtd><mtd>c</mtd></mtr> <mtr><mtd>b</mtd><mtd>d</mtd></mtr> </mtable> </mfenced> </math></td>
+   <td><math> <mfenced> <mtable> <mtr><mtd>a</mtd><mtd>c</mtd><mtd>tx</mtd></mtr><mtr><mtd>b</mtd><mtd>d</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
+   <td colspan="1" rowspan="2"><math> <mfenced> <mtable> <mtr><mtd>a</mtd><mtd>c</mtd><mtd>tx</mtd></mtr><mtr><mtd>b</mtd><mtd>d</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
+   <td colspan="1" rowspan="2"><math> <mfenced> <mtable> <mtr><mtd>a</mtd><mtd>c</mtd><mtd>0</mtd><mtd>tx</mtd></mtr><mtr><mtd>b</mtd><mtd>d</mtd><mtd>0</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
+  </tr>
+  <tr>
+   <td><code>[a b c d tx ty]</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Przykłady">Przykłady</h2>
+
+<p>TBD</p>

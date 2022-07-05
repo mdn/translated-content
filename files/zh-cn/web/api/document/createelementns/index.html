@@ -27,7 +27,7 @@ translation_of: Web/API/Document/createElementNS
  <dd>指定与元素相关联的<a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI">命名空间URI</a>的字符串。创建的元素的<a href="/zh-CN/docs/Web/API/Node/namespaceURI">namespaceURI</a>属性使用namespaceURI的值进行初始化。 参见<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElementNS#Valid_Namespace_URI's">有效的命名空间URL</a>。</dd>
  <dt><code>qualifiedName</code></dt>
  <dd>指定要创建的元素的类型的字符串。 创建的元素的<a href="/zh-CN/docs/DOM/element.nodeName">nodeName</a>属性使用qualifiedName的值进行初始化。</dd>
- <dt><code>options</code><span class="inlineIndicator optional optionalInline">可选的</span></dt>
+ <dt><code>options</code>可选的</dt>
  <dd>一个可选的包含单个属性的ElementCreationOptions对象，其值是预先使用customElements.define()定义的自定义元素的标签名称。为了向后兼容<a href="https://www.w3.org/TR/custom-elements/">自定义元素规范</a>的早期版本，一些浏览器允许您在此使用字符串替代对象，其中字符串的值是自定义元素的标签名称。有关如何使用此参数的详情，请参阅<a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">原生HTML元素</a>。</dd>
  <dd>新元素将被赋予一个属性，其值是自定义元素的标签名称。 自定义元素是实验中的功能，目前仅在某些浏览器中可用。</dd>
 </dl>

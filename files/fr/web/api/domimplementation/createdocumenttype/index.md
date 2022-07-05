@@ -11,7 +11,7 @@ translation_of: Web/API/DOMImplementation/createDocumentType
 ---
 {{ ApiRef("DOM")}}
 
-La méthode **`DOMImplementation.createDocumentType()`** renvoie un objet {{domxref("DocumentType")}}  qui peut être utilisé avec {{domxref("DOMImplementation.createDocument")}} lors de la création du document ou peut être intégré au document existant avec des méthodes comme {{domxref("Node.insertBefore()")}} ou {{domxref("Node.replaceChild()")}}.
+La méthode **`DOMImplementation.createDocumentType()`** renvoie un objet {{domxref("DocumentType")}}  qui peut être utilisé avec {{domxref("DOMImplementation.createDocument")}} lors de la création du document ou peut être intégré au document existant avec des méthodes comme {{domxref("Node.insertBefore()")}} ou {{domxref("Node.replaceChild()")}}.
 
 ## Syntaxe
 
@@ -40,7 +40,7 @@ var d = document.implementation.createDocument('http://www.w3.org/2000/svg', 'sv
 alert(d.doctype.publicId); // -//W3C//DTD SVG 1.1//EN
 ```
 
-##  Spécifications
+##  Spécifications
 
 | Spécification                                                                                                                                        | Statut                           | Commentaire                                             |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------- |

@@ -27,7 +27,7 @@ Le mode Lecteur, également connu sous le nom de Reader View, est une fonction d
 
 Le mode Lecteur est utile spécifiquement pour les articles: c'est-à-dire, les pages qui ont un corps de texte comme caractéristique principale. Les pages qui n'ont pas d'article identifiable ne peuvent pas être affichées en mode Lecteur. Pour savoir si une page est un article, vérifiez la propriété `isArticle` de {{WebExtAPIRef("tabs.Tab")}}.
 
-Pour savoir si un onglet est déjà en mode Lecteur, vérifiez la propriété  `isInReaderMode` de {{WebExtAPIRef("tabs.Tab")}}. Pour suivre les onglets entrant ou sortant du mode Lecteur, vous devez suivre l'état actuel de tous les onglets et vérifier quand `isInReaderMode` change :
+Pour savoir si un onglet est déjà en mode Lecteur, vérifiez la propriété  `isInReaderMode` de {{WebExtAPIRef("tabs.Tab")}}. Pour suivre les onglets entrant ou sortant du mode Lecteur, vous devez suivre l'état actuel de tous les onglets et vérifier quand `isInReaderMode` change :
 
 ```js
 function handleUpdated(tabId, changeInfo, tabInfo) {

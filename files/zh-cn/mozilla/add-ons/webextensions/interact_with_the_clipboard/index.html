@@ -79,21 +79,21 @@ browser.alarms.onAlarm.addListener(copy);</pre>
 
 <p>对于页面脚本, 需要权限 API 的 <code>clipboard-write</code> 权限. 你可通过 {{domxref("Permissions.query", "navigator.permissions.query()")}} 来检查这个权限:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">navigator<span class="punctuation token">.</span>permissions<span class="punctuation token">.</span><span class="function token">query</span><span class="punctuation token">(</span><span class="punctuation token">{</span>name<span class="punctuation token">:</span> <span class="string token">"clipboard-write"</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>result <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>result<span class="punctuation token">.</span>state <span class="operator token">==</span> <span class="string token">"granted"</span> <span class="operator token">||</span> result<span class="punctuation token">.</span>state <span class="operator token">==</span> <span class="string token">"prompt"</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">/* write to the clipboard now */</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">navigator.permissions.query({name: "clipboard-write"}).then(result =&gt; {
+  if (result.state == "granted" || result.state == "prompt") {
+    /* write to the clipboard now */
+  }
+});</code></pre>
 
 <p>这个函数使用一个字符串作为输入并且用它更新剪贴板:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">updateClipboard</span><span class="punctuation token">(</span>newClip<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  navigator<span class="punctuation token">.</span>clipboard<span class="punctuation token">.</span><span class="function token">writeText</span><span class="punctuation token">(</span>newClip<span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">/* clipboard successfully set */</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">/* clipboard write failed */</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">function updateClipboard(newClip) {
+  navigator.clipboard.writeText(newClip).then(function() {
+    /* clipboard successfully set */
+  }, function() {
+    /* clipboard write failed */
+  });
+}</code></pre>
 
 <h3 id="特定浏览器注意事项">特定浏览器注意事项</h3>
 
@@ -132,14 +132,14 @@ browser.alarms.onAlarm.addListener(copy);</pre>
 
 <p>要在用户单机 id 为 <code>"paste"</code> 的 {{HTMLElement("button")}} 时从剪贴板设置 id 为 <code>"output"</code> 的 {{HTMLElement("textarea")}} 的内容，可以使用这样的代码:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">paste</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> pasteText <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">"#output"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  pasteText<span class="punctuation token">.</span><span class="function token">focus</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  document<span class="punctuation token">.</span><span class="function token">execCommand</span><span class="punctuation token">(</span><span class="string token">"paste"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>pasteText<span class="punctuation token">.</span>textContent<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers language-js"><code class="language-js">function paste() {
+  var pasteText = document.querySelector("#output");
+  pasteText.focus();
+  document.execCommand("paste");
+  console.log(pasteText.textContent);
+}
 
-document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">"#paste"</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"click"</span><span class="punctuation token">,</span> paste<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+document.querySelector("#paste").addEventListener("click", paste);</code></pre>
 
 <h3 id="使用_Clipboard_API_2">使用 Clipboard API</h3>
 
@@ -147,8 +147,8 @@ document<span class="punctuation token">.</span><span class="function token">que
 
 <p>一旦你通过 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</a> 获取了 <code>"clipboard-read"</code> 权限，你就可以轻松读取剪贴板:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">navigator<span class="punctuation token">.</span>clipboard<span class="punctuation token">.</span><span class="function token">readText</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>clipText <span class="operator token">=&gt;</span>
-  document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"outbox"</span><span class="punctuation token">)</span><span class="punctuation token">.</span>innerText <span class="operator token">=</span> clipText<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">navigator.clipboard.readText().then(clipText =&gt;
+  document.getElementById("outbox").innerText = clipText);</code></pre>
 
 <p>这个代码片段从剪贴板提取文本并且用该文本替换 ID 为 <code>"outbox"</code> 的元素的当前内容。</p>
 

@@ -12,7 +12,7 @@ original_slug: Web/CSS/Type_color
 
 Le type de données CSS **`<color>`** permet de représenter des couleurs dans [l'espace de couleurs sRGB](https://fr.wikipedia.org/wiki/SRGB). Une couleur pourra être décrite de trois façons :
 
-- grâce à un mot-clé (comme `blue` ou  `transparent` par exemple)
+- grâce à un mot-clé (comme `blue` ou  `transparent` par exemple)
 - en utilisant [le système de coordonnées cubiques RGB](https://fr.wikipedia.org/wiki/Couleur_du_Web#Triplet_hexad.C3.A9cimal) (grâce à la notation #-hexadecimal ou aux notations fonctionnelles `rgb()` et `rgba()`)
 - en utilisant [le système de coordonnées cylindriques HSL](https://fr.wikipedia.org/wiki/Teinte_saturation_lumi%C3%A8re) (grâce aux notations fonctionnelles `hsl()` et `hsla()`)
 

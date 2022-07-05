@@ -18,12 +18,12 @@ L’attribut [tabindex](http://www.w3.org/TR/wai-aria-practices/#focus_tabindex)
 
 ### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
-Lorsque le rôle `link` est ajouté à un élément, ou qu’un élément possédant ce rôle devient visible, l’agent utilisateur devrait suivre les étapes suivantes :
+Lorsque le rôle `link` est ajouté à un élément, ou qu’un élément possédant ce rôle devient visible, l’agent utilisateur devrait suivre les étapes suivantes&nbsp;:
 
 - Présenter l’élément comme un lien à l’API accessibilité du système d’exploitation.
 - Déclencher un événement lien accessible à l’aide de l’API d’accessibilité du système d’exploitation si elle le prend en charge.
 
-Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence :
+Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence&nbsp;:
 
 - Les lecteurs d'écran devraient annoncer le texte du lien ou son label lorsque l'élément avec le rôle `link`reçoit le focus, en plus du fait ce que c'est un lien. Les liens ARIA devraient être intégré dans la fonction « lister les liens » (_List Links_) des lecteurs d'écran de la même façon que les liens ordinaires, et les actions dans cette liste de dialogue, tels que « Activer le lien » ou « Déplacer le lien », devraient se comporter de la meme façon qu'avec des liens ordinaires.
 - Les loupes d’écran devraient agrandir le lien.
@@ -32,7 +32,7 @@ Les technologies d’assistance devraient être à l’écoute de tels événeme
 
 ### Exemples
 
-#### Exemple 1 : **Ajoute le rôle dans le code HTML**
+#### Exemple 1&nbsp;: **Ajoute le rôle dans le code HTML**
 
 L’extrait de code ci-dessous montre comment le rôle `link` est ajouté dans le code source HTML.
 
@@ -40,7 +40,7 @@ L’extrait de code ci-dessous montre comment le rôle `link` est ajouté dans l
 <div role=”link”>Un lien</div>
 ```
 
-#### **Exemple 2 : Lien accessible créé depuis une application à l'aide d'un \<span>**
+#### **Exemple 2&nbsp;: Lien accessible créé depuis une application à l'aide d'un \<span>**
 
 ```html
 <script type="text/javascript">
@@ -65,7 +65,7 @@ function navigateLink(evt) {
 </body>
 ```
 
-#### Exemples concrets :
+#### Exemples concrets&nbsp;:
 
 - <http://codetalks.org/source/widgets/link/link.html>
 - <http://codetalks.org/source/widgets/link/link.sample.html>
@@ -84,4 +84,4 @@ Si l'activation du lien déclenche une action mais ne déplace pas le focus du n
 
 ### Autres ressources
 
-- Bonnes pratiques ARIA - Rôle `Link` : [#link](http://www.w3.org/TR/wai-aria-practices/#link)
+- Bonnes pratiques ARIA - Rôle `Link`&nbsp;: [#link](http://www.w3.org/TR/wai-aria-practices/#link)

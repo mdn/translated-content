@@ -24,10 +24,10 @@ original_slug: Web/HTTP/CORS/Errors/CORSNAPasRéussi
 
 ## Qu'est ce qui ne s'est pas bien passé ?
 
-La requête {{Glossary("HTTP")}} qui utilise le CORS a échoué à cause de la connection HTTP qui n'a pas aboutie soit au niveau du réseau, soit du protocole. L'erreur n'est pas directement lié au CORS, mais est une quelconque erreur réseau de base.
+La requête {{Glossary("HTTP")}} qui utilise le CORS a échoué à cause de la connection HTTP qui n'a pas aboutie soit au niveau du réseau, soit du protocole. L'erreur n'est pas directement lié au CORS, mais est une quelconque erreur réseau de base.
 
 ## Voir aussi
 
-- [Erreurs CORS](/en-US/docs/Web/HTTP/CORS/Errors)
+- [Erreurs CORS](/en-US/docs/Web/HTTP/CORS/Errors)
 - Grammaire: {{Glossary("CORS")}}
 - [Introduction CORS](/en-US/docs/Web/HTTP/CORS)

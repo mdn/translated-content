@@ -39,7 +39,7 @@ Une position peut être ajoutée avec les valeurs x et y après {{cssxref("url()
 }
 ```
 
-L'élément avec l'ID « btn1 » bouge vers la gauche de 20 pixels et l'élément avec l'ID « btn2 » vers la gauche de 40 pixels (en présumant que ces deux éléments aient aussi la classe `toolbtn`).
+L'élément avec l'ID « btn1 » bouge vers la gauche de 20 pixels et l'élément avec l'ID « btn2 » vers la gauche de 40 pixels (en présumant que ces deux éléments aient aussi la classe `toolbtn`).
 
 De la même manière, vous pouvez faire un effet de transition au survol :
 

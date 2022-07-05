@@ -5,26 +5,25 @@ translation_of: Web/API/NodeList/item
 ---
 <p>{{ ApiRef() }}</p>
 <h3 id="Summary" name="Summary">概述</h3>
-<p>根据给定的索引,返回一个 <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-536297177"><code>NodeList</code></a>对象中包含的Node对象.</p>
+<p>根据给定的索引，返回一个 <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-536297177"><code>NodeList</code></a>对象中包含的 Node 对象。</p>
 <h3 id="Syntax" name="Syntax">语法</h3>
 <pre class="eval"><em>nodeItem</em> = <em>nodeList</em>.item(<em>index</em>)
 </pre>
 <ul>
- <li><code>nodeList</code>是一个<code>NodeList</code>对象.通常是由某个DOM属性或方法返回的,比如<a href="/zh-cn/DOM/Node.childNodes" title="zh-cn/DOM/Node.childNodes">childNodes</a>.</li>
- <li><code>index</code> 是给定的索引. 从0开始.</li>
- <li><code>nodeItem</code> 是根据索引<code>index由</code><code>item</code>方法从<code>nodeList</code>中获取到的节点.</li>
+ <li><code>nodeList</code>是一个<code>NodeList</code>对象。通常是由某个 DOM 属性或方法返回的，比如<a href="/zh-cn/DOM/Node.childNodes" title="zh-cn/DOM/Node.childNodes">childNodes</a>.</li>
+ <li><code>index</code> 是给定的索引。从 0 开始。</li>
+ <li><code>nodeItem</code> 是根据索引<code>index</code> 由 <code>item</code> 方法从 <code>nodeList</code> 中获取到的节点。</li>
 </ul>
-<p>JavaScript有更简单的语法来从一个NodeList对象中获取指定索引的节点:</p>
+<p>JavaScript 有更简单的语法来从一个 NodeList 对象中获取指定索引的节点：</p>
 <pre class="eval"><em>nodeItem</em> = <em>nodeList</em>[<em>index</em>]
 </pre>
 <h3 id="Example" name="Example">例子</h3>
 <pre class="eval">var tables = document.getElementsByTagName("table");
-var firstTable = tables.item(1); // 或者简写为tables[1],返回一个文档中的第二个table元素.
+var firstTable = tables.item(1); // 或者简写为 tables[1]，返回一个文档中的第二个 table 元素。
 </pre>
 <h3 id="Notes" name="Notes">备注</h3>
-<p>如果索引越界,该方法不会抛出异常,只会返回<code>null</code>.</p>
-<p><code>item()不是</code>DOM<a href="/zh-cn/DOM/element" title="zh-cn/DOM/element">元素</a>或者DOM节点的方法,而是NodeList对象的方法.</p>
+<p>如果索引越界，该方法不会抛出异常，只会返回 <code>null</code>。</p>
+<p><code>item()</code> 不是 DOM <a href="/zh-cn/DOM/element" title="zh-cn/DOM/element">元素</a>或者 DOM 节点的方法，而是 NodeList 对象的方法。</p>
 <h3 id="Specification" name="Specification">规范</h3>
 <p><a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-item">DOM Level 1 Core: NodeList.item()</a></p>
 <p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-844377136">DOM Level 2 Core: NodeList.item()</a></p>
-<p>{{ languages( {"en": "en/DOM/NodeList.item" } ) }}</p>

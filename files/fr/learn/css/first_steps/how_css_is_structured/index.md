@@ -10,7 +10,7 @@ Vous avez maintenant une idée plus claire de CSS. Vous connaissez les bases de 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Maîtrise élémentaire de l'informatique,
         <a
@@ -29,7 +29,7 @@ Vous avez maintenant une idée plus claire de CSS. Vous connaissez les bases de 
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>Approfondir les structures syntaxiques fondamentales de CSS</td>
     </tr>
   </tbody>

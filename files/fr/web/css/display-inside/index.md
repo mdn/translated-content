@@ -15,7 +15,7 @@ Ces mots-clés définissent le type d'affichage ({{CSSxRef("display")}}) pour l'
 
 Une valeur `<display-inside>` est définie avec l'un des mots-clés suivants :
 
-- `flow` {{Experimental_Inline}}
+- `flow` {{Experimental_Inline}}
 
   - : L'élément organise son contenu en utilisant la disposition en flux (disposition bloc/en ligne ou « _block and inline layout_ » en anglais).
 
@@ -23,7 +23,7 @@ Une valeur `<display-inside>` est définie avec l'un des mots-clés suivants :
 
     Selon la valeur d'autres propriétés (telles que {{CSSxRef("position")}}, {{CSSxRef("float")}}, ou {{CSSxRef("overflow")}}) et selon que l'élément partcipe à un contexte de mise en forme de bloc ou en ligne, l'élément crée un nouveau [contexte de formatage de bloc](/fr/docs/Web/Guide/CSS/Block_formatting_context) (BFC) pour son contenu ou intègre son contenu dans le contexte parent.
 
-- `flow-root` {{Experimental_Inline}}
+- `flow-root` {{Experimental_Inline}}
   - : L'élément génère un bloc qui établit un nouveau [contexte de formatage de bloc](/fr/docs/Web/Guide/CSS/Block_formatting_context), définissant ainsi une nouvelle racine pour le formatage.
 - `table`
   - : L'élément se comporte comme un élément HTML {{HTMLElement("table")}}. Il définit une boîte de bloc.
@@ -31,7 +31,7 @@ Une valeur `<display-inside>` est définie avec l'un des mots-clés suivants :
   - : L'élément se comporte comme un élément de bloc et dispose son contenu selon [le modèle des boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout).
 - `grid`
   - : L'élément se comporte comme un élément de bloc et dispose son contenu selon [le modèle des grilles](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout).
-- `ruby` {{Experimental_Inline}}
+- `ruby` {{Experimental_Inline}}
   - : L'élément se comporte comme un élément en ligne et dispose son contenu selon le modèle de formatage ruby. Il se comporte comme un élément HTML {{HTMLElement("ruby")}}.
 
 > **Note :** Les navigateurs qui prennent en charge la syntaxe avec deux valeurs peuvent n'utiliser que `<display-inside>` lorsque c'est cohérent. Ainsi, avec `display: flex` ou `display: grid`, la valeur utilisée de `<display-outside>` sera nécessairement `block`. On a ainsi le résultat attendu car on doit avoir `display: grid` avec un conteneur qui soit un bloc.

@@ -13,7 +13,7 @@ translation_of: Web/API/Notification/data
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-La propriété en lecture seule **`data`** de l'interface {{domxref ("Notification")}} renvoie un clone structuré des données de la notification, comme définis à l'aide de l'option `data`  lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification() ")}}.
+La propriété en lecture seule **`data`** de l'interface {{domxref ("Notification")}} renvoie un clone structuré des données de la notification, comme définis à l'aide de l'option `data`  lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification() ")}}.
 
 Les données de la notification peuvent être des données arbitraires, sans restriction de format que vous souhaitez associer à la notification.
 

@@ -25,14 +25,14 @@ Dans cet article, nous allons regarder :
 
 Nous concluons ensuite en examinant d'autres fonctionnalités diverses offertes par l'API.
 
-> **Note :** Certaines fonctionnalités de l'API d'onglet sont couvert ailleurs. Voici les méthodes que vous pouvez utiliser pour manipuler le contenu de l'onglet avec des scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, et  {{WebExtAPIRef("tabs.executeScript")}}). Si vous voulez plus d'informations sur ces méthodes, reportez-vous à l'article [scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts) et le guide pratique [modifier une page web](/fr/Add-ons/WebExtensions/Modify_a_web_page).
+> **Note :** Certaines fonctionnalités de l'API d'onglet sont couvert ailleurs. Voici les méthodes que vous pouvez utiliser pour manipuler le contenu de l'onglet avec des scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, et  {{WebExtAPIRef("tabs.executeScript")}}). Si vous voulez plus d'informations sur ces méthodes, reportez-vous à l'article [scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts) et le guide pratique [modifier une page web](/fr/Add-ons/WebExtensions/Modify_a_web_page).
 
 ## Permissions et l'API Tabs
 
 Pour la majorité des fonctions de l'API Tabs, vous n'avez besoin d'aucune autorisation. Cependant, il y a certaines exceptions :
 
-- permission `"tabs`" est nécessaire pour accéder aux propriétés de  `Tab.url`, `Tab.title`, et `Tab.favIconUrl` de l'objet Tab. Dans Firefox, vous avez également besoin de `"tabs"` pour effectuer une  [requête](/fr/Add-ons/WebExtensions/API/tabs/query) par URL.
-- [persmission de l'hote](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) est nécessaire pour  {{WebExtAPIRef("tabs.executeScript")}} ou {{WebExtAPIRef("tabs.insertCSS")}}.
+- permission `"tabs`" est nécessaire pour accéder aux propriétés de  `Tab.url`, `Tab.title`, et `Tab.favIconUrl` de l'objet Tab. Dans Firefox, vous avez également besoin de `"tabs"` pour effectuer une  [requête](/fr/Add-ons/WebExtensions/API/tabs/query) par URL.
+- [persmission de l'hote](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) est nécessaire pour  {{WebExtAPIRef("tabs.executeScript")}} ou {{WebExtAPIRef("tabs.insertCSS")}}.
 
 Vous pouvez demander la permission `"tabs"` dans le fichier manifest.json de votre extension :
 
@@ -43,7 +43,7 @@ Vous pouvez demander la permission `"tabs"` dans le fichier manifest.json de vot
 ],
 ```
 
-Cette requête vous permet d'utiliser toutes les fonctionnalités de l'API Tabs sur tous les sites Web que vos utilisateurs visitent. Il existe également une autre méthode pour demander la permission d'utiliser {{WebExtAPIRef("tabs.executeScript")}} ou {{WebExtAPIRef("tabs.insertCSS")}} où vous n'avez pas besoin de la permission de l'hôte, sous la forme [`"activeTab"`](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission). Cette permission fournit les mêmes droits que les  `"onglets"` avec `<all_urls>`, mais avec deux restrictions:
+Cette requête vous permet d'utiliser toutes les fonctionnalités de l'API Tabs sur tous les sites Web que vos utilisateurs visitent. Il existe également une autre méthode pour demander la permission d'utiliser {{WebExtAPIRef("tabs.executeScript")}} ou {{WebExtAPIRef("tabs.insertCSS")}} où vous n'avez pas besoin de la permission de l'hôte, sous la forme [`"activeTab"`](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission). Cette permission fournit les mêmes droits que les  `"onglets"` avec `<all_urls>`, mais avec deux restrictions:
 
 - l'utilisateur doit interagir avec l'extension via son navigateur ou l'action de la page, le menu contextuel ou la touche de raccourci.
 - il accorde uniquement la permission dans l'onglet actif..
@@ -56,11 +56,11 @@ Il y aura des occasions où vous voulez obtenir une liste de tous les onglets da
 
 C'est ici qu'intervient {{WebExtAPIRef("tabs.query")}}. Utilisé seul pour obtenir tous les onglets ou prendre l'objet `queryInfo` — pour spécifier des critères de requête tels que l'activation de l'onglet, dans la fenêtre en cours ou plus de 17 critères — {{WebExtAPIRef("tabs.query")}} renvoie un tableau d'objets {{WebExtAPIRef("tabs.Tab")}} objects contenant des informations sur les onglets.
 
-Lorsque vous souhaitez uniquement obtenir des informations sur l'onglet en cours, vous pouvez obtenir un objet {{WebExtAPIRef("tabs.Tab")}} pour cet onglet à l'aide de  {{WebExtAPIRef("tabs.getCurrent")}}. Si vous avez un ID d'onglet, vous pouvez obtenir son objet {{WebExtAPIRef("tabs.Tab")}} en utilisant {{WebExtAPIRef("tabs.get")}}.
+Lorsque vous souhaitez uniquement obtenir des informations sur l'onglet en cours, vous pouvez obtenir un objet {{WebExtAPIRef("tabs.Tab")}} pour cet onglet à l'aide de  {{WebExtAPIRef("tabs.getCurrent")}}. Si vous avez un ID d'onglet, vous pouvez obtenir son objet {{WebExtAPIRef("tabs.Tab")}} en utilisant {{WebExtAPIRef("tabs.get")}}.
 
 ### Par exemple
 
-Pour voir comment {{WebExtAPIRef("tabs.query")}} et {{WebExtAPIRef("tabs.Tab")}} sont utilisés, voyons comment l'exemple [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) ajoute la liste de  “passer aux onglets” à son popup bouton de barre d'outils.
+Pour voir comment {{WebExtAPIRef("tabs.query")}} et {{WebExtAPIRef("tabs.Tab")}} sont utilisés, voyons comment l'exemple [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) ajoute la liste de  “passer aux onglets” à son popup bouton de barre d'outils.
 
 ![](switch_to_tab.png)
 
@@ -158,7 +158,7 @@ Tout d'abord, un gestionnaire d'événements est ajouté pour exécuter `listTab
 document.addEventListener("DOMContentLoaded", listTabs);
 ```
 
-La première chose que fait `listTabs()` est d'appeler `getCurrentWindowTabs()`, où {{WebExtAPIRef("tabs.query")}} est utilisé pour obtenur un objet  {{WebExtAPIRef("tabs.Tab")}} pour le onglets dans la fenêtre courante :
+La première chose que fait `listTabs()` est d'appeler `getCurrentWindowTabs()`, où {{WebExtAPIRef("tabs.query")}} est utilisé pour obtenur un objet  {{WebExtAPIRef("tabs.Tab")}} pour le onglets dans la fenêtre courante :
 
 ```js
 function getCurrentWindowTabs() {
@@ -173,7 +173,7 @@ Pour commencer :
 1.  Récupérer les `tabs-list` `div`.
 2.  Créer un fragment de document (dans lequel la liste sera construite).
 3.  Mettre les compteurs.
-4.  Effacer le contenu de `tabs-list` `div`.
+4.  Effacer le contenu de `tabs-list` `div`.
 
 ```js
 function listTabs() {
@@ -191,7 +191,7 @@ Ensuite, nous allons créer les liens pour chaque onglet :
 1.  Boucle les 5 premiers éléments de l'objet {{WebExtAPIRef("tabs.Tab")}}.
 2.  Pour chaque poste, ajoutez un hyperlien vers le fragment de document.
 
-    - L'étiquette du lien, c'est-à-dire son texte, est définie à l'aide du titre de l'onglet (ou de l'ID, s'il n'a pas de titre).
+    - L'étiquette du lien, c'est-à-dire son texte, est définie à l'aide du titre de l'onglet (ou de l'ID, s'il n'a pas de titre).
     - L'adresse du lien est définie à l'aide de l'ID de l'onglet.
 
 ```js
@@ -340,7 +340,7 @@ Il est intéressant de noter l'utilisation de console.log. Cela vous permet de g
 
 ![](console.png)
 
-Le code de déplacement appelle d'abord `callOnActiveTab()` qui à son tour appelle  `getCurrentWindowTabs()` pour obtenir un objet {{WebExtAPIRef("tabs.Tab")}} contenant les onglets de la fenêtre active. Il parcourt ensuite l'objet pour rechercher et renvoyer l'objet onglet actif :
+Le code de déplacement appelle d'abord `callOnActiveTab()` qui à son tour appelle  `getCurrentWindowTabs()` pour obtenir un objet {{WebExtAPIRef("tabs.Tab")}} contenant les onglets de la fenêtre active. Il parcourt ensuite l'objet pour rechercher et renvoyer l'objet onglet actif :
 
 ```js
  function callOnActiveTab(callback) {
@@ -378,7 +378,7 @@ Les fonctions restantes à dupliquer, recharger, créer et supprimer des onglets
 
 ## Manipulation du niveau du zoom d'un onglet
 
-Le prochain ensemble de fonctions vous permet d'obtenir  ({{WebExtAPIRef("tabs.getZoom")}}) et de définir ({{WebExtAPIRef("tabs.setZoom")}}) le niveau de zoom dans un onglet. Vous pouvez également récupérer les paramètres de zoom  ({{WebExtAPIRef("tabs.getZoomSettings")}}) mais, au moment de l'écriture, la possibilité de définir les paramètres ({{WebExtAPIRef("tabs.setZoomSettings")}}) n'était pas disponible dans Firefox.
+Le prochain ensemble de fonctions vous permet d'obtenir  ({{WebExtAPIRef("tabs.getZoom")}}) et de définir ({{WebExtAPIRef("tabs.setZoom")}}) le niveau de zoom dans un onglet. Vous pouvez également récupérer les paramètres de zoom  ({{WebExtAPIRef("tabs.getZoomSettings")}}) mais, au moment de l'écriture, la possibilité de définir les paramètres ({{WebExtAPIRef("tabs.setZoomSettings")}}) n'était pas disponible dans Firefox.
 
 Le niveau de zoom peut être compris entre 30% et 300% (représenté par des décimales de 0.3 à 3).
 
@@ -439,11 +439,11 @@ Pour la fonction zoom, ceci s'exécute :
  }
 ```
 
-Ce code utilise `callOnActiveTab()` pour obtenir les détails de l'onglet actif, puis  {{WebExtAPIRef("tabs.getZoom")}} obtient le facteur de zoom actuel de l'onglet. Le zoom actuel est comparé au maximum défini (`MAX_ZOOM`) et une alerte est émise si l'onglet est déjà au zoom maximum. Sinon, le niveau de zoom est incrémenté mais limité au zoom maximum, puis le zoom est défini avec {{WebExtAPIRef("tabs.getZoom")}}.
+Ce code utilise `callOnActiveTab()` pour obtenir les détails de l'onglet actif, puis  {{WebExtAPIRef("tabs.getZoom")}} obtient le facteur de zoom actuel de l'onglet. Le zoom actuel est comparé au maximum défini (`MAX_ZOOM`) et une alerte est émise si l'onglet est déjà au zoom maximum. Sinon, le niveau de zoom est incrémenté mais limité au zoom maximum, puis le zoom est défini avec {{WebExtAPIRef("tabs.getZoom")}}.
 
 ## Manipuler le CSS d'un onglet
 
-Une autre fonctionnalité importante offerte par l'API Tabs est la possibilité de manipuler le CSS dans un onglet — ajouter un nouveau CSS dans un onglet ({{WebExtAPIRef("tabs.insertCSS")}}) ou supprimer CSS d'un onglet  ({{WebExtAPIRef("tabs.removeCSS")}}).
+Une autre fonctionnalité importante offerte par l'API Tabs est la possibilité de manipuler le CSS dans un onglet — ajouter un nouveau CSS dans un onglet ({{WebExtAPIRef("tabs.insertCSS")}}) ou supprimer CSS d'un onglet  ({{WebExtAPIRef("tabs.removeCSS")}}).
 
 Cela peut être utile si vous voulez, par exemple, mettre en évidence certains éléments de la page ou modifier la disposition par défaut de la page (liste courte des cas d'utilisation).
 
@@ -459,10 +459,10 @@ Voyons comment cela se passe.
 
 Pour utiliser les fonctionnalités CSS dont vous avez besoin :
 
-- Permission `"tabs"`  et [permission hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) ou
+- Permission `"tabs"`  et [permission hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) ou
 - Permission `"activeTab"`.
 
-Ce dernier est le plus utile, car il permet à une extension d'utiliser  {{WebExtAPIRef("tabs.insertCSS")}} et {{WebExtAPIRef("tabs.removeCSS")}} dans l'onglet actif lorsqu'il est exécuté depuis le navigateur de l'extension ou action de la page, menu contextuel ou un raccourci.
+Ce dernier est le plus utile, car il permet à une extension d'utiliser  {{WebExtAPIRef("tabs.insertCSS")}} et {{WebExtAPIRef("tabs.removeCSS")}} dans l'onglet actif lorsqu'il est exécuté depuis le navigateur de l'extension ou action de la page, menu contextuel ou un raccourci.
 
 ```json
 {
@@ -522,7 +522,7 @@ gettingAllTabs.then((tabs) => {
 });
 ```
 
-`initializePageAction` utilise `protocolIsApplicable()` pour déterminer si l'URL de l'onglet actif est celle à laquelle le CSS peut être appliqué :
+`initializePageAction` utilise `protocolIsApplicable()` pour déterminer si l'URL de l'onglet actif est celle à laquelle le CSS peut être appliqué :
 
 ```js
 function protocolIsApplicable(url) {
@@ -532,7 +532,7 @@ function protocolIsApplicable(url) {
 }
 ```
 
-Ensuite, si l'exemple peut agir sur l'onglet, `initializePageAction()` définit l'icône  `pageAction` (barre de navigation) et le titre de l'onglet pour utiliser les versions ‘off’ avant de rendre la `pageAction` visible :
+Ensuite, si l'exemple peut agir sur l'onglet, `initializePageAction()` définit l'icône  `pageAction` (barre de navigation) et le titre de l'onglet pour utiliser les versions ‘off’ avant de rendre la `pageAction` visible :
 
 ```js
 function initializePageAction(tab) {
@@ -551,7 +551,7 @@ Maintenant, un écouteur sur `geAction.onClicked` attend que l'icône pageAction
 browser.pageAction.onClicked.addListener(toggleCSS);
 ```
 
-`toggleCSS()` obtient le titre de la `pageAction`  puis prend l'action décrite :
+`toggleCSS()` obtient le titre de la `pageAction`  puis prend l'action décrite :
 
 - **Pour "Appliquer CSS”:**
 
@@ -586,7 +586,7 @@ function toggleCSS(tab) {
 }
 ```
 
-Enfin, pour s'assurer que `pageAction` est valide après chaque mise à jour de l'onglet, un écouteur sur {{WebExtAPIRef("tabs.onUpdated")}} appelle  `initializePageAction()` chaque fois que l'onglet est mis à jour pour vérifier que l'onglet utilise toujours un protocole auquel le CSS peut être appliqué.
+Enfin, pour s'assurer que `pageAction` est valide après chaque mise à jour de l'onglet, un écouteur sur {{WebExtAPIRef("tabs.onUpdated")}} appelle  `initializePageAction()` chaque fois que l'onglet est mis à jour pour vérifier que l'onglet utilise toujours un protocole auquel le CSS peut être appliqué.
 
 ```js
 browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
@@ -600,7 +600,7 @@ browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
 Il existe deux autres fonctionnalités de l'API Tabs qui ne rentrent pas dans l'une des sections précédentes :
 
 - capturez le contenu de l'onglet visible avec {{WebExtAPIRef("tabs.captureVisibleTab")}}.
-- détecter la langue principale du contenu dans un onglet en utilisant  {{WebExtAPIRef("tabs.detectLanguage")}}, que vous pourriez utiliser, par exemple, pour faire correspondre la langue de l'interface utilisateur de votre extension avec celle de la page dans laquelle elle s'exécute.
+- détecter la langue principale du contenu dans un onglet en utilisant  {{WebExtAPIRef("tabs.detectLanguage")}}, que vous pourriez utiliser, par exemple, pour faire correspondre la langue de l'interface utilisateur de votre extension avec celle de la page dans laquelle elle s'exécute.
 
 ## Apprendre encore plus
 

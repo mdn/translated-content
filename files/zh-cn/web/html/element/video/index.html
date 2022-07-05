@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/video
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong>HTML <code>&lt;video&gt;</code> 元素</strong> 用于在 HTML 或者 XHTML 文档中嵌入媒体播放器，用于支持文档内的视频播放。</span>你也可以将 <code>&lt;video&gt;</code>  标签用于音频内容，但是 {{HTMLElement("audio")}} 元素可能在用户体验上更合适。</p>
+<p><strong>HTML <code>&lt;video&gt;</code> 元素</strong> 用于在 HTML 或者 XHTML 文档中嵌入媒体播放器，用于支持文档内的视频播放。你也可以将 <code>&lt;video&gt;</code>  标签用于音频内容，但是 {{HTMLElement("audio")}} 元素可能在用户体验上更合适。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/video.html", "tabbed-standard")}}</div>
 
@@ -98,7 +98,7 @@ translation_of: Web/HTML/Element/video
  <p>允许接受的 value 有<code>nodownload</code>,<code>nofullscreen</code>和<code>noremoteplayback</code></p>
 
  <div class="blockIndicator note">
- <p><span>如果要禁用图片模式 (和控件)，请使用<code>disablePictureInPicture</code>属性。</span></p>
+ <p>如果要禁用图片模式 (和控件)，请使用<code>disablePictureInPicture</code>属性。</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
@@ -148,13 +148,13 @@ translation_of: Web/HTML/Element/video
  <dt>{{htmlattrdef("preload")}}</dt>
  <dd>该枚举属性旨在告诉浏览器作者认为达到最佳的用户体验的方式是什么。可能是下列值之一：
  <ul>
-  <li><span style="font-family: courier new;">none: </span>提示作者认为用户不需要查看该视频，服务器也想要最小化访问流量；换句话说就是提示浏览器该视频不需要缓存。</li>
-  <li><span style="font-family: courier new;">metadata</span>: 提示尽管作者认为用户不需要查看该视频，不过抓取元数据（比如：长度）还是很合理的。</li>
-  <li><span style="font-family: courier new;">auto</span>: 用户需要这个视频优先加载；换句话说就是提示：如果需要的话，可以下载整个视频，即使用户并不一定会用它。</li>
-  <li><em>空字符串</em>：也就代指 <span style="font-family: courier new;">auto </span>值。</li>
+  <li>none: 提示作者认为用户不需要查看该视频，服务器也想要最小化访问流量；换句话说就是提示浏览器该视频不需要缓存。</li>
+  <li>metadata: 提示尽管作者认为用户不需要查看该视频，不过抓取元数据（比如：长度）还是很合理的。</li>
+  <li>auto: 用户需要这个视频优先加载；换句话说就是提示：如果需要的话，可以下载整个视频，即使用户并不一定会用它。</li>
+  <li><em>空字符串</em>：也就代指 auto 值。</li>
  </ul>
 
- <p>假如不设置，默认值就是浏览器定义的了（即，不同浏览器会选择自己的默认值），即使规范建议设置为 <span style="font-family: courier new;">metadata</span>。</p>
+ <p>假如不设置，默认值就是浏览器定义的了（即，不同浏览器会选择自己的默认值），即使规范建议设置为 metadata。</p>
 
  <div class="note"><strong>使用备注：</strong>
 

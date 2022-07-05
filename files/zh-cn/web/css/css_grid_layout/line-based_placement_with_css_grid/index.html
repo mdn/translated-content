@@ -512,7 +512,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 
 <h3 id="网格间距缩写">网格间距缩写</h3>
 
-<p>这两个属性可以用{{cssxref("grid-gap")}}简写。如果你只给出一个值，那这个值会同时应用于行间距和列间距。如果你给了两个值，第一个会被用于<code>grid-row-gap<font face="Open Sans, arial, x-locale-body, sans-serif">，第二个则会被用于</font></code><code>grid-column-gap</code>.</p>
+<p>这两个属性可以用{{cssxref("grid-gap")}}简写。如果你只给出一个值，那这个值会同时应用于行间距和列间距。如果你给了两个值，第一个会被用于<code>grid-row-gap，第二个则会被用于</code><code>grid-column-gap</code>.</p>
 
 <pre class="brush: css">.wrapper {
      display: grid;
@@ -524,7 +524,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 
 <p>从基于线定位的角度来说，间距的行为就像是使基线变得特别宽。所有从这条线开始的东西会从间距结束的地方开始，你并不能定位也不能放任何东西到这个间距的空间中。如果你希望得到行为和轨道行为相似的间距，你当然可以定义轨道来作为间距。</p>
 
-<h2 id="使用_span_关键字"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif">使用 </font><code>span</code> 关键字</h2>
+<h2 id="使用_span_关键字">使用 <code>span</code> 关键字</h2>
 
 <div id="using_the_span_keyword">
 <p>除了”起始线与结束线“的定位方法，你还可以使用”起始线与跨越轨道数量“的定位方法</p>
@@ -580,7 +580,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 
 <p>{{ EmbedLiveSample('using_the_span_keyword', '300', '330') }}</p>
 
-<p>你也可以在 <code>grid-row-start</code>/<code>grid-row-end</code> <font face="Open Sans, arial, x-locale-body, sans-serif">和 </font><code>grid-column-start</code>/<code>grid-column-end</code> 属性中使用 <code>span</code> 关键字。接下来两个例子会创建同样的网格。第一个例子中我们设定了起始行，然后说我们想结束线在跨越3个线之后。那这个元素就会从1号线开始，跨越3个线，到4号线结束。</p>
+<p>你也可以在 <code>grid-row-start</code>/<code>grid-row-end</code> 和 <code>grid-column-start</code>/<code>grid-column-end</code> 属性中使用 <code>span</code> 关键字。接下来两个例子会创建同样的网格。第一个例子中我们设定了起始行，然后说我们想结束线在跨越3个线之后。那这个元素就会从1号线开始，跨越3个线，到4号线结束。</p>
 
 <pre class="brush: css">.box1 {
     grid-column: 1;

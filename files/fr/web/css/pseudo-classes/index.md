@@ -92,7 +92,7 @@ Les pseudo-classes permettent d'appliquer un style à un élément non seulement
 - {{CSSxRef(":user-invalid")}} {{Experimental_Inline}}
 - {{CSSxRef(":valid")}}
 - {{CSSxRef(":visited")}}
-- {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}}
+- {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}}
 
 ## Exemples
 
@@ -113,19 +113,19 @@ p:nth-child(2n+1) {
 ```html
 <div>
   <p class="survol">
-    La Reine devint pourpre de colère ; et après
+    La Reine devint pourpre de colère&nbsp;; et après
     l’avoir considérée un moment avec des yeux
     flamboyants comme ceux d’une bête fauve, elle
-    se mit à crier : « Qu’on lui coupe la tête ! »
+    se mit à crier&nbsp;: «&nbsp;Qu’on lui coupe la tête&nbsp;!&nbsp;»
   </p>
   <p>
-    « Quelle idée ! » dit Alice très-haut et d’un
+    «&nbsp;Quelle idée&nbsp;!&nbsp;» dit Alice très-haut et d’un
     ton décidé. La Reine se tut.
   </p>
   <p>
     Le Roi lui posa la main sur le bras, et lui
-    dit timidement : « Considérez donc, ma chère
-    amie, que ce n’est qu’une enfant. »
+    dit timidement&nbsp;: «&nbsp;Considérez donc, ma chère
+    amie, que ce n’est qu’une enfant.&nbsp;»
   </p>
 </div>
 ```
@@ -174,7 +174,7 @@ p:nth-child(2n+1) {
         </p>
         <p>
           Changement afin que <code>:empty</code> se comporte comme
-          {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}}.
+          {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}}.
         </p>
         <p>
           Aucune modification significative pour les pseudo-classes définies
@@ -222,7 +222,7 @@ p:nth-child(2n+1) {
       <td>
         Définition de <code>:lang()</code>, <code>:first-child</code>,
         <code>:hover</code> et <code>:focus</code>.<br />Aucune modification
-        significative pour les pseudo-classes définies avec 
+        significative pour les pseudo-classes définies avec
         {{SpecName('CSS1')}}.
       </td>
     </tr>

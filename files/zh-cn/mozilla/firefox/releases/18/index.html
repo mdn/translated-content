@@ -46,21 +46,21 @@ translation_of: Mozilla/Firefox/Releases/18
 <h3 id="接口变更">接口变更</h3>
 <dl>
   <dt>
-    {{ interface("nsIStreamListener") }}</dt>
+    <code>nsIStreamListener</code></dt>
   <dd>
     <code>onDataAvailable()</code>方法的第四个参数(aOffset)类型改为无符号长整型. ({{bug("784912")}})</dd>
   <dt>
-    {{ interface("nsIUploadChannel") }}</dt>
+    <code>nsIUploadChannel</code></dt>
   <dd>
     <code>setUploadStream()支持了超过</code>2GB大小的content-length ({{bug("790617")}})</dd>
   <dt>
-    {{ interface("nsIEditor") }}</dt>
+    <code>nsIEditor</code></dt>
   <dd>
-    <code>删除了addEditorObserver()</code>,使用<code>setEditorObserver()</code>来替代, <code>removeEditorObserver()</code>不再需要一个{{ interface("nsIEditorObserver") }}参数({{bug("785091")}})</dd>
+    <code>删除了addEditorObserver()</code>,使用<code>setEditorObserver()</code>来替代, <code>removeEditorObserver()</code>不再需要一个<code>nsIEditorObserver</code>参数({{bug("785091")}})</dd>
 </dl>
 <dl>
   <dt>
-    {{ interface("nsIHttpProtocolHandler") }}</dt>
+    <code>nsIHttpProtocolHandler</code></dt>
   <dd>
     <code>http-on-modify-request</code> observers are no longer guaranteed to be called synchronously during<br>
     <code>nsIChannel.asyncOpen(). </code>For observers that need to be called during <code>asyncOpen</code>(), the new <code>http-on-opening-request</code> observer topic has been added. ({{bug("800799")}})</dd>
@@ -69,7 +69,7 @@ translation_of: Mozilla/Firefox/Releases/18
 <h4 id="移除接口">移除接口</h4>
 <p>下面的接口已经被移除.</p>
 <ul>
-  <li>{{ interface("nsIEditorObserver") }}</li>
+  <li><code>nsIEditorObserver</code></li>
 </ul>
 <h2 id="相关链接">相关链接</h2>
 <ul>

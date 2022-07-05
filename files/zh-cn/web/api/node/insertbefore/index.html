@@ -27,7 +27,7 @@ translation_of: Web/API/Node/insertBefore
 </pre>
 
 <ul>
- <li><code>insertedNode</code> 被插入节点(newNode)</li>
+ <li><code>insertedNode</code> 被插入节点 (newNode)</li>
  <li><code>parentNode</code> 新插入节点的父节点</li>
  <li><code>newNode</code> 用于插入的节点</li>
  <li><code>referenceNode</code> <code>newNode</code> 将要插在这个节点之前</li>
@@ -69,7 +69,7 @@ parentDiv.insertBefore(newNode, sp2); //隐式转换到节点类型
 //实验二结束
 
 //实验三：<em>referenceNode 为字符类型的 </em>"undefined"
-var sp2 = "undefined"; //不存在id为"childElement"的<em>referenceNode</em>
+var sp2 = "undefined"; //不存在 id 为"childElement"的<em>referenceNode</em>
 parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
 //实验三结束
 &lt;/script&gt;
@@ -90,7 +90,7 @@ var sp2 = document.getElementById("childElement");
 //获得父节点的引用
 var parentDiv = sp2.parentNode;
 
-//在DOM中在sp2之前插入一个新元素
+//在 DOM 中在 sp2 之前插入一个新元素
 parentDiv.insertBefore(sp1, sp2);
 &lt;/script&gt;
 </pre>

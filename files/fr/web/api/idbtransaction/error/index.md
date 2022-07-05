@@ -30,7 +30,7 @@ Cette propriété vaut `null` si la transaction n'est pas terminée ou qu'elle e
 
 ## Exemples
 
-Dans le fragment de code suivant, on ouvre une {{domxref("IDBDatabase","connexion","",1)}} à la base de donnée. Sur cette connexion on démarre une {{domxref("IDBTransaction","transaction","",1)}} en lecture/écriture pour {{domxref("IDBObjectStore","accéder au magasin d'objet","",1)}}  `"toDoList"` et y {{domxref("IDBObjectStore.add","ajouter","",1)}} un enregistrement. Notez également les gestionnaires d'événements {{domxref("IDBTransaction.oncomplete","oncomplete")}} et {{domxref("IDBTransaction.onerror","onerror")}} de la transaction qui affichent sur la page le résultat de la transaction.
+Dans le fragment de code suivant, on ouvre une {{domxref("IDBDatabase","connexion","",1)}} à la base de donnée. Sur cette connexion on démarre une {{domxref("IDBTransaction","transaction","",1)}} en lecture/écriture pour {{domxref("IDBObjectStore","accéder au magasin d'objet","",1)}}  `"toDoList"` et y {{domxref("IDBObjectStore.add","ajouter","",1)}} un enregistrement. Notez également les gestionnaires d'événements {{domxref("IDBTransaction.oncomplete","oncomplete")}} et {{domxref("IDBTransaction.onerror","onerror")}} de la transaction qui affichent sur la page le résultat de la transaction.
 
 La propriété **`error`** sert dans le bloc `transaction.onerror = function(event) {...}` afin d'afficher le type d'erreur qui est survenue.
 
@@ -61,7 +61,7 @@ function addData() {
   transaction.oncomplete = function(event) {
     note.innerHTML += '<li>Transaction terminée : modification de la base de données terminée.</li>';
   };
-  // En  cas d'échec de l'ouverture de la transaction
+  // En cas d'échec de l'ouverture de la transaction
   transaction.onerror = function(event) {
     note.innerHTML += '<li>L\'erreur: "' + transaction.error +'" s\'est produite, échec de la transaction.</li>';
   };
@@ -85,7 +85,7 @@ function addData() {
 
 | Spécification                                                                    | État                         | Commentaires |
 | -------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#transaction', 'IDBTransaction')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#transaction', 'IDBTransaction')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

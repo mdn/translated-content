@@ -97,7 +97,7 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 ### MathML
 
 - La valeur non-standard `restyle` pour les attributs `actiontype` des éléments [`<maction>`](/fr/docs/Web/MathML/Element/maction) a été retirée.
-- Alors qu'il n'était pas encore supporté, l'utilisation de l'élément [`<mlabeledtr>`](/fr/docs/Web/MathML/Element/mlabeledtr) ne casse plus complètement le rendu. Voir le [bug 689641](https://bugzilla.mozilla.org/show_bug.cgi?id=689641) pour l'avancement du support de cet élément.
+- Alors qu'il n'était pas encore supporté, l'utilisation de l'élément [`<mlabeledtr>`](/fr/docs/Web/MathML/Element/mlabeledtr) ne casse plus complètement le rendu. Voir le [bug 689641](https://bugzilla.mozilla.org/show_bug.cgi?id=689641) pour l'avancement du support de cet élément.
 
 ### Réseau
 
@@ -130,7 +130,7 @@ Voir [Updating add-ons for Firefox 9](/fr/docs/Firefox/Updating_add-ons_for_Fire
 
 ### Changement dans le service
 
-- Le service de préférence du contenu gère désormais [le mode de navigation privée](/fr/docs/Using_content_preferences#private-browsing) (voir [bug 679784](https://bugzilla.mozilla.org/show_bug.cgi?id=679784)).
+- Le service de préférence du contenu gère désormais [le mode de navigation privée](/fr/docs/Using_content_preferences#private-browsing) (voir [bug 679784](https://bugzilla.mozilla.org/show_bug.cgi?id=679784)).
 
 ### NSPR
 

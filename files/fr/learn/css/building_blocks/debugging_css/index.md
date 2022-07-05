@@ -128,7 +128,7 @@ Above that in the stylesheet however is a rule with a `.special` selector:
 }
 ```
 
-As you will recall from the lesson on [cascade and inheritance](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) where we discussed specificity, class selectors are more specific than element selectors, and so this is the value that applies. DevTools can help you find such issues, especially if the information is buried somewhere in a huge stylesheet.
+As you will recall from the lesson on [cascade and inheritance](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) where we discussed specificity, class selectors are more specific than element selectors, and so this is the value that applies. DevTools can help you find such issues, especially if the information is buried somewhere in a huge stylesheet.
 
 **Inspect the `<em>` with the class of `.special` and DevTools will show you that orange is the color that applies, and also shows you the `color` property applied to the em crossed out. You can now see that the class is overriding the element selector.**
 

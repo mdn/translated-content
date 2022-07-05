@@ -70,7 +70,7 @@ Une **expression de fonction invoquée immédiatement** (IIFE) est une fonction 
 ```js
 // Erreur (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 /*
-​function foo() {
+function foo() {
     console.log('Hello Foo');
 }();
 */

@@ -19,7 +19,7 @@ Un argument `<translation-value>` peut être une valeur de type {{cssxref("&lt;l
 
 | Spécification                                                                                                | Statut                               | Commentaires |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------ |
-| {{SpecName('CSS3 Transforms', '#transform-functions', 'The Transform Functions')}} | {{Spec2('CSS3 Transforms')}} |              |
+| {{SpecName('CSS3 Transforms', '#transform-functions', 'The Transform Functions')}} | {{Spec2('CSS3 Transforms')}} |              |
 
 ## Voir aussi
 

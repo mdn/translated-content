@@ -94,7 +94,7 @@ source.start();
 
 | Spécification                                                                                                    | Statut                               | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createbuffer', 'createBuffer()')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createbuffer', 'createBuffer()')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité des navigateurs
 

@@ -49,7 +49,7 @@ API références : [HTML input element](/fr/docs/Web/HTML/Element/input/file) | 
 
 ## Ouverture de fichiers dans une extension avec glisser-déposer
 
-L'API Web Drag and Drop offre une alternative à l'utilisation d'un sélecteur de fichiers. Pour utiliser cette méthode, établissez une zone de stockage qui correspond à votre interface utilisateur, puis ajoutez les récepteurs pour les évènements[ dragenter](/fr/docs/Web/Events/dragenter) _(entrer)_,[ dragover](/fr/docs/Web/Events/dragover) _(glisser)_, et[ drop](/fr/docs/Web/Events/drop)  _(déposer)_. Dans le gestionnaire de l'événement "déposer", votre code peut accéder à tout fichier déposé par l'utilisateur à partir de l'objet offert par la propriété dataTransfer en utilisant [DataTransfer.files](/fr/docs/Web/API/DataTransfer/files). Votre code peut alors accéder aux fichiers et les traiter en utilisant le [DOM File API](/fr/docs/Web/API/File).
+L'API Web Drag and Drop offre une alternative à l'utilisation d'un sélecteur de fichiers. Pour utiliser cette méthode, établissez une zone de stockage qui correspond à votre interface utilisateur, puis ajoutez les récepteurs pour les évènements[ dragenter](/fr/docs/Web/Events/dragenter) _(entrer)_,[ dragover](/fr/docs/Web/Events/dragover) _(glisser)_, et[ drop](/fr/docs/Web/Events/drop)  _(déposer)_. Dans le gestionnaire de l'événement "déposer", votre code peut accéder à tout fichier déposé par l'utilisateur à partir de l'objet offert par la propriété dataTransfer en utilisant [DataTransfer.files](/fr/docs/Web/API/DataTransfer/files). Votre code peut alors accéder aux fichiers et les traiter en utilisant le [DOM File API](/fr/docs/Web/API/File).
 
 Exemple : [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
 Guides : [Using files from web applications](/fr/docs/Using_files_from_web_applications) | [File drag and drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop)
@@ -59,7 +59,7 @@ API référence : [DOM File API](/fr/docs/Web/API/File)
 
 Si votre extension doit enregistrer des fichiers localement, [idb-file-storage library](https://www.npmjs.com/package/idb-file-storage) fournit une simple enveloppe de [IndexedDB API](/fr/docs/Web/API/API_IndexedDB) pour faciliter le stockage et la récupération des fichiers et des blobs .
 
-Sur Firefox, cette bibliothèque fournit également un " Promise-based API wrapper"   pour l'API IDBMutableFile non standard. (L'API IDBMutableFile permet aux extensions de créer et de maintenir un fichier objet de base de données IndexedDB qui fournit une API pour lire et modifier le contenu du fichier sans charger tout le fichier dans la mémoire.)
+Sur Firefox, cette bibliothèque fournit également un " Promise-based API wrapper"   pour l'API IDBMutableFile non standard. (L'API IDBMutableFile permet aux extensions de créer et de maintenir un fichier objet de base de données IndexedDB qui fournit une API pour lire et modifier le contenu du fichier sans charger tout le fichier dans la mémoire.)
 
 Les principales caractéristiques de la bibliothèque sont les suivantes :
 
@@ -95,15 +95,15 @@ async function saveCollectedBlobs(collectionName, collectedBlobs) {
 
 ```js
 export async function loadStoredImages(filter) {
- const imagesStore = await getFileStorage({name: "stored-images"});
- let listOptions = filter ? {includes: filter} : undefined;
- const imagesList = await imagesStore.list(listOptions);
- let storedImages = [];
- for (const storedName of imagesList) {
-    const blob = await imagesStore.get(storedName);
-    storedImages.push({storedName, blobUrl: URL.createObjectURL(blob)});
- }
- return storedImages;
+ const imagesStore = await getFileStorage({name: "stored-images"});
+ let listOptions = filter ? {includes: filter} : undefined;
+ const imagesList = await imagesStore.list(listOptions);
+ let storedImages = [];
+ for (const storedName of imagesList) {
+    const blob = await imagesStore.get(storedName);
+    storedImages.push({storedName, blobUrl: URL.createObjectURL(blob)});
+ }
+ return storedImages;
 }
 ```
 
@@ -115,22 +115,22 @@ Notez l'utilisation de [URL.createObjectURL(blob)](/fr/docs/Web/API/URL/createOb
 
 ```js
 async function removeStoredImages(storedImages) {
- const imagesStore = await getFileStorage({name: "stored-images"});
- for (const storedImage of storedImages) {
-    URL.revokeObjectURL(storedImage.blobUrl);
-    await imagesStore.remove(storedImage.storedName);
- }
+ const imagesStore = await getFileStorage({name: "stored-images"});
+ for (const storedImage of storedImages) {
+    URL.revokeObjectURL(storedImage.blobUrl);
+    await imagesStore.remove(storedImage.storedName);
+ }
 }
 ```
 
-`removeStoredImages` est appelé lorsque l'utilisateur clique sur "Delete" _(supprimer)_ dans la page de navigation de la collection. À nouveau, `getFileStorage`ouvre la base de données “stored-images”  et `imagesStore.remove` supprime chaque image à partir de la liste filtrée des images.
+`removeStoredImages` est appelé lorsque l'utilisateur clique sur "Delete" _(supprimer)_ dans la page de navigation de la collection. À nouveau, `getFileStorage`ouvre la base de données “stored-images”  et `imagesStore.remove` supprime chaque image à partir de la liste filtrée des images.
 
 Notez l'utilisation de [URL.revokeObjectURL()](/fr/docs/Web/API/URL/revokeObjectURL) pour révoquer explicitement l'URL du blob. Cela permet de libérer la mémoire allouée à l'URL. Si cela n'est pas fait, la mémoire n'est pas libérée jusqu'à ce que la page sur laquelle l'URL a été créée soit fermée. Si l'URL a été créée dans la page d'arrière-plan d'une extension, celle-ci n'est pas déchargée jusqu'à ce que l'extension soit désactivée, désinstallée ou rechargée, ce qui risque d'affecter inutilement les performances du navigateur. Si l'URL est créée dans la page d'une extension (nouvel onglet, fenêtre contextuelle ou barre latérale), la mémoire est libérée lorsque la page est fermée, mais il demeure de bonne pratique de révoquer l'URL lorsqu'elle n'est plus nécessaire.
 
 Une fois que l'URL du blob a été révoquée, toute tentative de la charger entraînera une erreur. Par exemple, si l'URL du blob était utilisée comme attribut `SRC` d'un `IMG` tag, l'image ne sera pas chargée et ne sera pas visible. Il est donc recommandé de supprimer les URL de blobs révoquées des éléments HTML générés après leur révocation.
 
 Exemple : [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain)
-API Référence :  [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
+API Référence :  [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
 
 > **Note :** Vous pouvez également utiliser l' [IndexedDB API](/fr/docs/Web/API/API_IndexedDB) pour stocker des données de votre extension. Cela peut être utile lorsque vous devez stocker des données qui ne sont pas bien gérées par les paires de clés / valeurs simples offertes par le DOM [Storage API](/fr/Add-ons/WebExtensions/API/Storage).
 

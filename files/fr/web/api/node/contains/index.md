@@ -17,7 +17,7 @@ translation_of: Web/API/Node/contains
 
 ## Exemple
 
-Cette fonction vérifie si un élément est dans le corps de la page. Comme `contains` est inclusif, déterminer si le corps est contenu en lui-même n'est pas le but de `isInPage,` donc ce cas renvoie `false`.
+Cette fonction vérifie si un élément est dans le corps de la page. Comme `contains` est inclusif, déterminer si le corps est contenu en lui-même n'est pas le but de `isInPage,` donc ce cas renvoie `false`.
 
 ```js
 function isInPage(node) {

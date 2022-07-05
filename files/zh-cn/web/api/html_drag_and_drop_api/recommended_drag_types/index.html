@@ -162,7 +162,7 @@ dt.setData("text/plain", imageurl);
 
 currentEvent.dataTransfer.setData("text/x-moz-url", URL);
 currentEvent.dataTransfer.setData("application/x-moz-file-promise-url", URL);
-currentEvent.dataTransfer.setData("<span class="p">application/x-moz-file-promise-dest-filename</span>", leafName);
+currentEvent.dataTransfer.setData("application/x-moz-file-promise-dest-filename", leafName);
 currentEvent.dataTransfer.mozSetDataAt('application/x-moz-file-promise',
                   new dataProvider(success,error),
                   0, Components.interfaces.nsISupports);
@@ -187,7 +187,7 @@ dataProvider.prototype = {
        console.log("URL file orignal is = " + url);
 
        var namePrimitive = {};
-       aTransferable.getTransferData('<span class="p">application/x-moz-file-promise-dest-filename</span>', namePrimitive, dataSize);
+       aTransferable.getTransferData('application/x-moz-file-promise-dest-filename', namePrimitive, dataSize);
        var name = namePrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
 
        console.log("target filename is = " + name);
@@ -218,5 +218,3 @@ dataProvider.prototype = {
  <li><a class="internal" href="/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a></li>
  <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd" title="Drag and Drop Standard">HTML5 Living Standard: Drag and Drop</a></li>
 </ul>
-
-<p>{{ languages( { "ja": "Ja/DragDrop/Recommended_Drag_Types" } ) }}</p>

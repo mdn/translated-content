@@ -7,7 +7,7 @@ translation_of: Learn/JavaScript/First_steps/Arrays
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">在本單元的最後一篇文章中，我們將介紹陣列——一種在單個變數名下儲存資料項列表的簡潔方法。在這裡，我們看看為什麼這很有用，然後探討如何建立陣列，檢索、增加和刪除儲存在陣列中的項目等等。</p>
+<p>在本單元的最後一篇文章中，我們將介紹陣列——一種在單個變數名下儲存資料項列表的簡潔方法。在這裡，我們看看為什麼這很有用，然後探討如何建立陣列，檢索、增加和刪除儲存在陣列中的項目等等。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -180,7 +180,7 @@ removedItem;</pre>
 <ol>
  <li>Below the <code>// number 1</code> comment are a number of strings, each one containing a product name and price separated by a colon. We'd like you to turn this into an array and store it in an array called <code>products</code>.</li>
  <li>On the same line as the <code>// number 2</code> comment is the beginning of a for loop. In this line we currently have <code>i &lt;= 0</code>, which is a conditional test that causes the <a href="/en-US/Learn/JavaScript/First_steps/A_first_splash#Loops">for loop</a> to stop immediately, because it is saying "stop when <code>i</code> is no longer less than or equal to 0", and <code>i</code> starts at 0. We'd like you to replace this with a conditional test that stops the loop when <code>i</code> is no longer less than the <code>products</code> array's length.</li>
- <li>Just below the <code>// number 3</code> comment we want you to write a line of code that splits the current array item (<code>name:price</code>) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the <a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a> article for some help, or even better, look at the {{anch("Converting between strings and arrays")}} section of this article.</li>
+ <li>Just below the <code>// number 3</code> comment we want you to write a line of code that splits the current array item (<code>name:price</code>) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the <a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a> article for some help, or even better, look at the <a href="#在字串與陣列之間轉換">Converting between strings and arrays</a> section of this article.</li>
  <li>As part of the above line of code, you'll also want to convert the price from a string to a number. If you can't remember how to do this, check out the <a href="/en-US/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings">first strings article</a>.</li>
  <li>There is a variable called <code>total</code> that is created and given a value of 0 at the top of the code. Inside the loop (below <code>// number 4</code>) we want you to add a line that adds the current item price to that total in each iteration of the loop, so that at the end of the code the correct total is printed onto the invoice. You might need an <a href="/en-US/Learn/JavaScript/First_steps/Math#Assignment_operators">assignment operator</a> to do this.</li>
  <li>We want you to change the line just below <code>// number 5</code> so that the <code>itemText</code> variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.</li>

@@ -15,7 +15,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout
 
 ## Exemple
 
-Dans l'exemple qui suit, on utilise `display: flex` pour un conteneur. Cela signifie que les trois éléments fils deviennent des éléments flexibles. La propriété `justify-content` a été paramétrée avec la valeur `space-between` afin d'espacer les éléments de façon égale le long de l'axe principal. Ainsi, on a le même espace à droite et à gauche de chaque élément et, aux extrêmités du conteneur, les bords des éléments fils qui sont alignés avec les bords du conteneur. On peut également voir que les éléments sont étirés le long de l'axe orthogonal (_cross axis_) car la valeur par défaut de la propriété `align-items` est `stretch`. Ainsi, les éléments flexibles s'étirent pour occuper toute la hauteur du conteneur flexible, ils sont donc aussi grands que le plus grand des éléments.
+Dans l'exemple qui suit, on utilise `display: flex` pour un conteneur. Cela signifie que les trois éléments fils deviennent des éléments flexibles. La propriété `justify-content` a été paramétrée avec la valeur `space-between` afin d'espacer les éléments de façon égale le long de l'axe principal. Ainsi, on a le même espace à droite et à gauche de chaque élément et, aux extrêmités du conteneur, les bords des éléments fils qui sont alignés avec les bords du conteneur. On peut également voir que les éléments sont étirés le long de l'axe orthogonal (_cross axis_) car la valeur par défaut de la propriété `align-items` est `stretch`. Ainsi, les éléments flexibles s'étirent pour occuper toute la hauteur du conteneur flexible, ils sont donc aussi grands que le plus grand des éléments.
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/simple-example.html", '100%', 500)}}
 

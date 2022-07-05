@@ -15,7 +15,7 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}</div>
 
-<p class="summary">了解了 OOJS 的大多数细节之后，本文将介绍如何创建“子”对象类别（构造器）并从“父”类别中继承功能。此外，我们还会针对何时何处使用 OOJS 给出建议。</p>
+<p>了解了 OOJS 的大多数细节之后，本文将介绍如何创建“子”对象类别（构造器）并从“父”类别中继承功能。此外，我们还会针对何时何处使用 OOJS 给出建议。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -34,7 +34,7 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 
 <p>到目前为止我们已经了解了一些关于原型链的实现方式以及成员变量是如何通过它来实现继承，但是之前涉及到的大部分都是浏览器内置函数（比如 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>、<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>、<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> 和 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>），那么我们如何创建一个继承自另一对象的JavaScript对象呢？</p>
 
-<p>正如前面课程所提到的，有些人认为JavaScript并不是真正的面向对象语言，在经典的面向对象语言中，您可能倾向于定义类对象,然后您可以简单地定义哪些类继承哪些类（参考<a href="http://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm">C++ inheritance</a>里的一些简单的例子），JavaScript使用了另一套实现方式，继承的对象函数并不是通过复制而来，而是通过原型链继承（通常被称为 <strong>原型式继承 —— </strong><strong>prototypal inheritance<font face="Consolas, Liberation Mono, Courier, monospace">）</font></strong>。</p>
+<p>正如前面课程所提到的，有些人认为JavaScript并不是真正的面向对象语言，在经典的面向对象语言中，您可能倾向于定义类对象,然后您可以简单地定义哪些类继承哪些类（参考<a href="http://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm">C++ inheritance</a>里的一些简单的例子），JavaScript使用了另一套实现方式，继承的对象函数并不是通过复制而来，而是通过原型链继承（通常被称为 <strong>原型式继承 —— </strong><strong>prototypal inheritance）</strong>。</p>
 
 <p>让我们通过具体的例子来解释上述概念</p>
 
@@ -130,20 +130,20 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 
 <h2 id="Setting_Teachers_prototype_and_constructor_reference">设置 Teacher() 的原型和构造器引用</h2>
 
-<p>All is good so far, but we have a problem. We have defined a new constructor, and it has a <code>prototype</code> property, which by default just contains an object with a reference to the constructor function itself. It does not contain the methods of the Person constructor's <code>prototype</code> property. To see this, enter <code>Object.getOwnPropertyNames(Teacher.prototype)</code> into either the text input field or your JavaScript console. Then enter it again, replacing <code>Teacher</code> with <code>Person</code>. Nor does the new constructor <em>inherit</em> those methods. To see this, compare the outputs of <code>Person.prototype.greeting</code> and <code>Teacher.prototype.greeting</code>. We need to get <code>Teacher()</code> to inherit the methods defined on <code>Person()</code>'s prototype. So how do we do that?</p>
+<p>到目前为止，一切都很好，但我们遇到了一个问题。我们已经定义了一个新的构造器，并且它具有一个<code>prototype</code>属性，默认情况下，该属性仅包含一个引用构造函数本身的对象。它不包含 Person 构造器的<code>prototype</code>属性的属性。要查看此，请在文本输入字段或 JavaScript 控制台中输入<code>Object.getOwnPropertyNames(Teacher.prototype)</code>。然后再次输入它，将<code>Teacher</code> 替换为<code>Person</code>。新构造器也不会<em>继承</em>这些方法。要查看此，请比较 <code>Person.prototype.greeting</code> 和 <code>Teacher.prototype.greeting</code>的输出。我们需要让<code>Teacher()</code>继承<code>Person()</code> 的原型上定义的方法。那么我们该怎么做呢？</p>
 
 <ol>
-	<li>Add the following line below your previous addition:
+	<li>在你之前添加的内容下面添加以下行：
 	<pre class="brush: js">Teacher.prototype = Object.create(Person.prototype);</pre>
-	Here our friend <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> comes to the rescue again. In this case we are using it to create a new object and make it the value of <code>Teacher.prototype</code>. The new object has <code>Person.prototype</code> as its prototype and will therefore inherit, if and when needed, all the methods available on <code>Person.prototype</code>.</li>
-	<li>We need to do one more thing before we move on. After adding the last line, <code>Teacher.</code><code>prototype</code>'s <code>constructor</code> property is now equal to <code>Person()</code>, because we just set <code>Teacher.prototype</code> to reference an object that inherits its properties from <code>Person.prototype</code>! Try saving your code, loading the page in a browser, and entering <code>Teacher.prototype.constructor</code> into the console to verify.</li>
-	<li>This can become a problem, so we need to set this right. You can do so by going back to your source code and adding the following line at the bottom:
+	在这里，我们的朋友<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> 再次来救援。在本例中，我们使用它来创建一个新对象，并使其成为 <code>Teacher.prototype</code> 的值。新对象将<code>Person.prototype</code>作为其原型，并将因此继承，当需要的情况下，<code>Person.prototype</code>上的所有方法都是可提供的。</li>
+	<li>在我们继续前进之前，我们需要再做一件事。添加最后一行<code>Teacher.</code><code>prototype</code> 的<code>constructor</code>属性现在等于<code>Person()</code>，因为我们只需设置<code>Teacher.prototype</code>来引用从<code>Person.prototype</code>继承其属性的对象！尝试保存代码，在浏览器中加载页面，然后在控制台中输入<code>Teacher.prototype.constructor</code>进行验证。</li>
+	<li>这可能会成为一个问题，因此我们需要设置此权利。为此，你可以返回到源代码并在底部添加以下行：
 	<pre class="brush: js">Object.defineProperty(Teacher.prototype, 'constructor', {
     value: Teacher,
     enumerable: false, // so that it does not appear in 'for in' loop
     writable: true });</pre>
 	</li>
-	<li>Now if you save and refresh, entering <code>Teacher.prototype.constructor</code> should return <code>Teacher()</code>, as desired, plus we are now inheriting from <code>Person()</code>!</li>
+	<li>现在，如果你保存并刷新，输入<code>Teacher.prototype.constructor</code>应该会根据需要返回<code>Teacher()</code>，此外，我们现在在继承<code>Person()</code>！</li>
 </ol>
 
 <h2 id="向_Teacher_添加一个新的greeting函数">向 Teacher() 添加一个新的greeting()函数</h2>
@@ -208,20 +208,20 @@ teacher1.greeting();</pre>
  <li>那些定义在构造器函数中，用于给予对象实例的属性或方法。它们都很容易发现——在您自己的代码中，它们是构造函数中使用<code>this.x = x</code>类型的行；在浏览器内已经构建好的代码中，它们是可用于对象实例的成员（这些对象实例通常使用<code>new</code>关键字调用构造函数来创建，例如<code>var myInstance = new myConstructor()</code>）。</li>
  <li>那些直接在构造函数上定义，仅在构造函数上可用的属性或方法。它们通常仅在浏览器的内置对象中可用，并通过被直接链接到构造函数来识别，而不是实例。例如<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>。<strong>它们一般被称作静态属性或静态方法</strong>。</li>
  <li>那些在构造函数原型上定义，由所有实例和对象类继承的属性或方法。它们包括在构造函数的原型属性上定义的任何成员，如<code>myConstructor.prototype.x()</code>。</li>
- <li>Those available on an object instance, which can either be an object created when a constructor is instantiated like we saw above (so for example <code>let teacher1 = new Teacher( 'Chris' );</code> and then <code>teacher1.name</code>), or an object literal (<code>let teacher1 = { name : 'Chris' }</code> and then <code>teacher1.name</code>).</li>
+ <li>那些在对象实例上可用的对象，它可以是像我们上面看到的构造函数实例化时创建的对象（例如 <code>let teacher1 = new Teacher( 'Chris' );</code> 以及其属性 <code>teacher1.name</code>），也可以是一个对象字面量（<code>let teacher1 = { name : 'Chris' }</code> 以及其属性 <code>teacher1.name</code>）。</li>
 </ol>
 
 <p>如果您现在觉得一团浆糊，别担心——您现在还处于学习阶段，不断练习才会慢慢熟悉这些知识。</p>
 
-<h2 id="ECMAScript_2015_Classes">ECMAScript 2015 Classes</h2>
+<h2 id="ECMAScript_2015_Classes">ECMAScript 2015 类</h2>
 
-<p>ECMAScript 2015 introduces <a href="/en-US/docs/Web/JavaScript/Reference/Classes">class syntax</a> to JavaScript as a way to write reusable classes using easier, cleaner syntax, which is more similar to classes in C++ or Java. In this section we'll convert the Person and Teacher examples from prototypal inheritance to classes, to show you how it's done.</p>
-
+<p>ECMAScript 2015 引入了<a href="/zh-CN/docs/Web/JavaScript/Reference/Classes">class syntax</a> 到 JavaScript，作为使用更简单、更简洁的语法编写可重用类的一种方式，这更类似于 C++ 或 Java 中的类。在本节中，我们将个人和教师示例从原型继承转换为类，以向你展示它是如何完成的。</p>
 <div class="note">
-<p><strong>Note</strong>: This modern way of writing classes is supported in all modern browsers, but it is still worth knowing about the underlying prototypal inheritance in case you work on a project that requires supporting a browser that doesn't support this syntax (most notably Internet Explorer).</p>
+  
+<p><strong>注意</strong>：所有现代浏览器都支持这种现代的编写类的方式，但是如果你处理的项目需要支持不支持此语法的浏览器（最明显的是 Internet Explorer），那么仍然值得了解底层原型继承。</p>
 </div>
 
-<p>Let's look at a rewritten version of the Person example, class-style:</p>
+<p>让我们看一下 Person 示例的重写版本，类样式：</p>
 
 <pre class="brush: js">class Person {
   constructor(first, last, age, gender, interests) {
@@ -244,14 +244,14 @@ teacher1.greeting();</pre>
 }
 </pre>
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">class</a> statement indicates that we are creating a new class. Inside this block, we define all the features of the class:</p>
+<p><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/class">类（class）</a>语句表示我们正在创建一个新类。在此块中，我们定义了该类的所有功能：</p>
 
 <ul>
-	<li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/constructor">constructor()</a></code> method defines the constructor function that represents our <code>Person</code> class.</li>
-	<li><code>greeting()</code> and <code>farewell()</code> are class methods. Any methods you want associated with the class are defined inside it, after the constructor. In this example, we've used <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a> rather than string concatenation to make the code easier to read.</li>
+	<li><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor">constructor()</a></code> 方法定义了一个构造函数来表示我们的 <code>Person</code> 类。</li>
+	<li><code>greeting()</code> 和 <code>farewell()</code> 是类方法。任何你想要和这个类联系的方法都被定义在其中，在构造器之后。在这个例子里，我们使用了<a href="/zh-CN/docs/Web/JavaScript/Reference/Template_literals">模板字符串（template literals）</a>而不是字符串拼接以使代码更易读。</li>
 </ul>
 
-<p>We can now instantiate object instances using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a>, in just the same way as we did before:</p>
+<p>我们现在可以使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> 运算符</a>来实例化对象实例，就像我们之前使用过的方式一样：</p>
 
 <pre class="brush: js">let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);
 han.greeting();
@@ -263,14 +263,14 @@ leia.farewell();
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Under the hood, your classes are being converted into Prototypal Inheritance models — this is just syntactic sugar. But I'm sure you'll agree that it's easier to write.</p>
+<p><strong>注意</strong>：在 JS 引擎下，类会被转换为原型继承模型——这只是语法糖。但我相信你会觉得这是一种更容易的写法。</p>
 </div>
 
-<h3 id="Inheritance_with_class_syntax">Inheritance with class syntax</h3>
+<h3 id="Inheritance_with_class_syntax">类语法继承</h3>
 
-<p>Above we created a class to represent a person. They have a series of attributes that are common to all people; in this section we'll create our specialized <code>Teacher</code> class, making it inherit from <code>Person</code> using modern class syntax. This is called creating a subclass or subclassing.</p>
+<p>上面我们创建了一个类来代表一个人。 它们具有一系列所有人共有的属性； 在本节中，我们将创建我们的专用 <code>Teacher</code> 类，使其使用现代类语法从 <code>Person</code> 继承。 这称为创建子类或子类化。</p>
 
-<p>To create a subclass we use the <a href="/en-US/docs/Web/JavaScript/Reference/Classes/extends">extends keyword</a> to tell JavaScript the class we want to base our class on,</p>
+<p>要创建一个子类，我们使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Classes/extends">extends 关键字</a>来告诉 JavaScript 我们想要的在我们的类的基础上的类。</p>
 
 <pre class="brush: js">class Teacher extends Person {
   constructor(subject, grade) {
@@ -279,20 +279,20 @@ leia.farewell();
   }
 }</pre>
 
-<p>but there's a little catch.</p>
+<p>但这里有一个小问题。</p>
 
-<p>Unlike old-school constructor functions where the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a> does the initialization of <code>this</code> to a newly-allocated object, this isn't automatically initialized for a class defined by the <a href="/en-US/docs/Web/JavaScript/Reference/Classes/extends">extends</a> keyword, i.e the sub-classes.</p>
+<p>不同于老式的构造函数，其中 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> 运算符</a>进行初始化 <code>this</code> 到一个新分配的对象。这里不会为由 <a href="/zh-CN/docs/Web/JavaScript/Reference/Classes/extends" >extends</a> 关键字定义的类自动初始化 ，例如，子类。</p>
 
-<p>Therefore running the above code will give an error:</p>
+<p>因此运行上面的代码会报错：</p>
 
 <pre class="brush: js">Uncaught ReferenceError: Must call super constructor in derived class before
 accessing 'this' or returning from derived constructor</pre>
 
-<p>For sub-classes, the <code>this</code> initialization to a newly allocated object is always dependant on the parent class constructor, i.e the constructor function of the class from which you're extending.</p>
+<p>对于子类，对新分配对象的 <code>this</code> 初始化始终依赖于父类构造函数，例如，你要扩展的类的构造函数。</p>
 
-<p>Here we are extending the <code>Person</code> class — the <code>Teacher</code> sub-class is an extension of the <code>Person</code> class. So for <code>Teacher</code>, the <code>this</code> initialization is done by the <code>Person</code> constructor.</p>
+<p>这里我们扩展了 <code>Person</code> 类——<code>Teacher</code> 子类是 <code>Person</code> 类的扩展。 所以对于<code>Teacher</code>来说，<code>this</code>的初始化是由<code>Person</code>构造函数完成的。</p>
 
-<p>To call the parent constructor we have to use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/super"><code>super()</code> operator</a>, like so:</p>
+<p>要调用父构造函数，我们必须使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/super"><code>super()</code> 运算符</a >，像这样：</p>
 
 <pre class="brush: js">class Teacher extends Person {
   constructor(subject, grade) {
@@ -302,10 +302,10 @@ accessing 'this' or returning from derived constructor</pre>
   }
 }</pre>
 
-<p>There is no point having a sub-class if it doesn't inherit properties from the parent class.<br>
-It is good then, that the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/super"><code>super()</code> operator</a> also accepts arguments for the parent constructor.</p>
+<p>如果子类不继承父类的属性，则没有任何意义。<br>
+那么，<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/super"><code>super()</code> operator</a> 也接受父构造函数的参数。</p>
 
-<p>Looking back to our <code>Person</code> constructor, we can see it has the following block of code in its constructor method:</p>
+<p>回顾我们的<code>Person</code>构造函数，我们可以看到它的构造方法中有如下代码块：</p>
 
 <pre class="brush: js"> constructor(first, last, age, gender, interests) {
    this.name = {
@@ -317,7 +317,7 @@ It is good then, that the <a href="/en-US/docs/Web/JavaScript/Reference/Operator
    this.interests = interests;
 } </pre>
 
-<p>Since the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super()</a></code> operator is actually the parent class constructor, passing it the necessary arguments of the <code>Parent</code> class constructor will also initialize the parent class properties in our sub-class, thereby inheriting it:</p>
+<p>由于 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/super">super()</a></code> 运算符实际上是父类构造函数，将 <code>Parent</code> 类构造函数的必要参数传递给它也会初始化我们子类中的父类属性，从而继承它：</p>
 
 <pre class="brush: js">class Teacher extends Person {
   constructor(first, last, age, gender, interests, subject, grade) {
@@ -330,7 +330,7 @@ It is good then, that the <a href="/en-US/docs/Web/JavaScript/Reference/Operator
 }
 </pre>
 
-<p>Now when we instantiate <code>Teacher</code> object instances, we can call methods and properties defined on both <code>Teacher</code>and <code>Person</code> as we'd expect:</p>
+<p>现在，当我们实例化 <code>Teacher</code> 对象实例时，我们可以按照我们的预期调用定义在 <code>Teacher</code> 和 <code>Person</code> 上的方法和属性： </p>
 
 <pre class="brush: js">let snape = new Teacher('Severus', 'Snape', 58, 'male', ['Potions'], 'Dark arts', 5);
 snape.greeting(); // Hi! I'm Severus.
@@ -339,10 +339,10 @@ snape.age // 58
 snape.subject; // Dark arts
 </pre>
 
-<p>Like we did with Teachers, we could create other subclasses of <code>Person</code> to make them more specialized without modifying the base class.</p>
+<p>就像我们对 Teacher 所做的那样，我们可以创建 <code>Person</code> 的其他子类，以使它们更加专业，而无需修改基类。</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find this example on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html">es2015-class-inheritance.html</a> (<a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-class-inheritance.html">see it live also</a>).</p>
+<p><strong>注意</strong>：你可以在 GitHub 上找到这个例子 <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html">es2015-class-inheritance.html</a>（你也可以直接看<a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-class-inheritance.html">预览版</a>）。</p>
 </div>
 
 <h2 id="Getters_and_Setters">Getters and Setters</h2>

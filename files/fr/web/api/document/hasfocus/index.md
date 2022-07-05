@@ -11,7 +11,7 @@ translation_of: Web/API/Document/hasFocus
 ---
 {{ ApiRef() }}
 
-La méthode **`Document.hasFocus()`** retourne une valeur  {{jsxref("Boolean")}} `true` _(vrai)_ indiquant si le document ou tout élément à l'intérieur du document a le focus. Cette méthode peut être utilisée pour déterminer si l'élément actif d'un document a le focus.
+La méthode **`Document.hasFocus()`** retourne une valeur  {{jsxref("Boolean")}} `true` _(vrai)_ indiquant si le document ou tout élément à l'intérieur du document a le focus. Cette méthode peut être utilisée pour déterminer si l'élément actif d'un document a le focus.
 
 > **Note :** Lors de la visualisation d'un document, un élément avec focus est toujours l'élément actif dans le document, mais un élément actif n'a pas nécessairement le focus. Par exemple, un élément actif dans une fenêtre contextuelle qui n'est pas le premier plan n'a pas de focus.
 

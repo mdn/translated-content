@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Language_Resources
         >,
         <a href="http://ecma-international.org/ecma-262/9.0/index.html#Title"
           >HTML</a
-        >, <br /><a href="https://tc39.github.io/ecma262/"
+        >, <br /><a href="https://tc39.github.io/ecma262/"
           >Brouillon de travail</a
         >, <a href="https://github.com/tc39/ecma262">dépôt</a>
       </td>

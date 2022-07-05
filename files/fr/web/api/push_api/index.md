@@ -13,7 +13,7 @@ translation_of: Web/API/Push_API
 ---
 {{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}
 
-L' **API Push**  donne aux applications web la possibilité de recevoir des messages qui leur sont poussés depuis un serveur, qu'il s'agisse ou non d'une application active au premier plan, ou même actuellement chargée, sur un agent utilisateur. Ceci permet aux développeurs de délivrer des notifications asynchrones et des mises-à-jour aux utilisateurs qui le choisissent, entrainant un meilleur engagement \[de l'utilisateur] avec du nouveau contenu au moment opportun.
+L' **API Push**  donne aux applications web la possibilité de recevoir des messages qui leur sont poussés depuis un serveur, qu'il s'agisse ou non d'une application active au premier plan, ou même actuellement chargée, sur un agent utilisateur. Ceci permet aux développeurs de délivrer des notifications asynchrones et des mises-à-jour aux utilisateurs qui le choisissent, entrainant un meilleur engagement \[de l'utilisateur] avec du nouveau contenu au moment opportun.
 
 > **Note :** Cette documentation couvre les spécifications W3C de l'API Push; si vous recherchez la documentation du système propriétaire de Push de Firefox OS, merci de vous reporter à [Simple Push](/fr/docs/Web/API/Simple_Push_API).
 

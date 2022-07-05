@@ -20,9 +20,11 @@ Il est aussi possible de définir une classe avec une {{jsxref("Opérateurs/clas
 
 ## Syntaxe
 
-    class nom [extends]{
-      // corps de la classe
-    }
+```js
+class nom [extends autreNom] {
+  // corps de la classe
+}
+```
 
 ## Description
 
@@ -70,9 +72,9 @@ class Carré extends Polygone {
 | Spécification                                                                                        | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-class-definitions', 'Définitions de classe')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}}         | {{Spec2('ES2016')}}     |                      |
-| {{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}}         | {{Spec2('ES2017')}}     |                      |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Définitions de classe')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}}         | {{Spec2('ES2016')}}     |                      |
+| {{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}}         | {{Spec2('ES2017')}}     |                      |
+| {{SpecName('ESDraft', '#sec-class-definitions', 'Définitions de classe')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

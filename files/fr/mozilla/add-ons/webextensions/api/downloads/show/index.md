@@ -46,7 +46,7 @@ Cet exemple montre l'élément le plus récemment téléchargé :
 
 ```js
 function onShowing(success) {
-  console.log(`Showing download item: ${success}`);
+  console.log(`Showing download item: ${success}`);
 }
 
 function onError(error) {
