@@ -4357,7 +4357,7 @@
 /fr/docs/Web/CSS/Valeur_spécifiée	/fr/docs/Web/CSS/specified_value
 /fr/docs/Web/CSS/Valeur_utilisée	/fr/docs/Web/CSS/used_value
 /fr/docs/Web/CSS/Valeurs_et_unités_CSS	/fr/docs/Web/CSS/CSS_Values_and_Units
-/fr/docs/Web/CSS/_image	/fr/docs/orphaned/Web/CSS/image()
+/fr/docs/Web/CSS/_image	/fr/docs/Web/CSS/image/image
 /fr/docs/Web/CSS/attr()	/fr/docs/Web/CSS/attr
 /fr/docs/Web/CSS/auto	/fr/docs/conflicting/Web/CSS/width
 /fr/docs/Web/CSS/calc()	/fr/docs/Web/CSS/calc
@@ -4389,10 +4389,10 @@
 /fr/docs/Web/CSS/grid-gap	/fr/docs/Web/CSS/gap
 /fr/docs/Web/CSS/grid-row-gap	/fr/docs/Web/CSS/row-gap
 /fr/docs/Web/CSS/hidden	/fr/docs/Web/CSS/visibility
-/fr/docs/Web/CSS/image()	/fr/docs/orphaned/Web/CSS/image()
+/fr/docs/Web/CSS/image()	/fr/docs/Web/CSS/image/image
 /fr/docs/Web/CSS/image-set	/fr/docs/Web/CSS/image/image-set
 /fr/docs/Web/CSS/image-set()	/fr/docs/Web/CSS/image/image-set
-/fr/docs/Web/CSS/imagefunction	/fr/docs/orphaned/Web/CSS/image()
+/fr/docs/Web/CSS/imagefunction	/fr/docs/Web/CSS/image/image
 /fr/docs/Web/CSS/linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/Web/CSS/longueur	/fr/docs/Web/CSS/length
@@ -6254,6 +6254,7 @@
 /fr/docs/orphaned/Web/API/ServiceWorkerState	/fr/docs/Web/API/ServiceWorker/state
 /fr/docs/orphaned/Web/API/URLUtilsReadOnly	/fr/docs/Web/API/WorkerLocation
 /fr/docs/orphaned/Web/CSS/conic-gradient()	/fr/docs/Web/CSS/gradient/conic-gradient
+/fr/docs/orphaned/Web/CSS/image()	/fr/docs/Web/CSS/image/image
 /fr/docs/orphaned/Web/CSS/image-set()	/fr/docs/Web/CSS/image/image-set
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/orphaned/Web/CSS/transform-function/translateX	/fr/docs/Web/CSS/transform-function/translateX
