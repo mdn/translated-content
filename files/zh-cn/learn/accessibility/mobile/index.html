@@ -58,7 +58,7 @@ translation_of: Learn/Accessibility/Mobile
 
 <p>TalkBack 是运行在 Android 系统上的。</p>
 
-<p>在菜单中选择 设置 &gt; 无障碍 &gt; TalkBack，打开开关即可打开 TalkBack。按照屏幕提示操作即可。</p>
+<p>在菜单中选择 设置 &gt; 无障碍 &gt; TalkBack，打开开关即可打开 TalkBack。按照屏幕提示操作即可。</p>
 
 <p><strong>注意</strong>: 旧版本的 TalkBack 的打开方式有<a href="https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback">一点不同</a>。</p>
 
@@ -67,7 +67,7 @@ translation_of: Learn/Accessibility/Mobile
 <ol>
  <li>点击一个应用将会选择它，同时，你的设备将会告诉你这个 APP 是什么。</li>
  <li>如果你按在功能键上向左右滑动，将会在应用、按钮或控件之间切换。设备将会读出每一项。</li>
- <li>双击任何地方将会打开某个应用或者选择某个选项。 </li>
+ <li>双击任何地方将会打开某个应用或者选择某个选项。 </li>
  <li>你也可以“通过触摸来探索” - 将手指按在屏幕上并拖拽，然后你的设备将会读出你移动经过的不同的应用或项目。</li>
 </ol>
 
@@ -75,7 +75,7 @@ translation_of: Learn/Accessibility/Mobile
 
 <ol>
  <li>通过上面的手势导航到“设置”</li>
- <li>导航到 无障碍 &gt; TalkBack</li>
+ <li>导航到 无障碍 &gt; TalkBack</li>
  <li>导航到滑动的开关，并激活它将其关闭。</li>
 </ol>
 
@@ -135,7 +135,7 @@ translation_of: Learn/Accessibility/Mobile
 
 <p>它是在 iOS 系统上的一个移动端 VoiceOver。</p>
 
-<p>要打开它，请在设置中选择 常规 &gt; 无障碍 &gt; VoiceOver。按下 VoiceOver 的开关去启动它（你还会在页面中看到很多和 VoiceOver 相关的其他选项）。</p>
+<p>要打开它，请在设置中选择 常规 &gt; 无障碍 &gt; VoiceOver。按下 VoiceOver 的开关去启动它（你还会在页面中看到很多和 VoiceOver 相关的其他选项）。</p>
 
 <p>一旦开启 VoiceOver，iOS 的基本操作手势将有所不同：</p>
 
@@ -147,7 +147,7 @@ translation_of: Learn/Accessibility/Mobile
  <li>用两个手指点击来执行上下文相关的操作，例如在相机里拍摄照片。</li>
 </ol>
 
-<p>要再次将其关闭，你必须使用上述手势导航到 设置 &gt; 常规 &gt; 无障碍 &gt;  VoiceOver，然后将 VoiceOver 切换回关闭状态。</p>
+<p>要再次将其关闭，你必须使用上述手势导航到 设置 &gt; 常规 &gt; 无障碍 &gt;  VoiceOver，然后将 VoiceOver 切换回关闭状态。</p>
 
 <h4 id="解锁手机_2">解锁手机</h4>
 
@@ -221,15 +221,15 @@ document.onmouseup = stopMove;</pre>
 <p>为了能其他表单空间起作用，你需要使用其他同等的事件代替，比如在触屏设备上用 touch 事件：</p>
 
 <pre>div.ontouchstart = function(e) {
-  initialBoxX = div.offsetLeft;
-  initialBoxY = div.offsetTop;
-  positionHandler(e);
-  movePanel();
+  initialBoxX = div.offsetLeft;
+  initialBoxY = div.offsetTop;
+  positionHandler(e);
+  movePanel();
 }
 
 panel.ontouchend = stopMove;</pre>
 
-<p>我们提供了一个简单的例子来展示如何使用鼠标和触摸事件 - <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html">multi-control-box-drag.html </a>(<a href="https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html">查看在线例子</a>)</p>
+<p>我们提供了一个简单的例子来展示如何使用鼠标和触摸事件 - <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html">multi-control-box-drag.html </a>(<a href="https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html">查看在线例子</a>)</p>
 
 <p><strong>注意</strong>: 你可以看到一个功能完善的例子，展示如何在实现<a href="/en-US/docs/Games/Techniques/Control_mechanisms">游戏控制机制</a>中实现不同的控制机制。</p>
 
@@ -289,13 +289,13 @@ panel.ontouchend = stopMove;</pre>
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="https://www.smashingmagazine.com/guidelines-for-mobile-web-development/">移动 Web 开发指南</a> —  “Smashing”杂志的文章列表，涵盖移动网页设计的不同技术。</li>
- <li><a href="http://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644">使您的网站在触摸设备上工作</a> — 有关使用触摸事件来获得在移动设备上进行交互的有用文章。</li>
+ <li><a href="https://www.smashingmagazine.com/guidelines-for-mobile-web-development/">移动 Web 开发指南</a> —  “Smashing”杂志的文章列表，涵盖移动网页设计的不同技术。</li>
+ <li><a href="http://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644">使您的网站在触摸设备上工作</a> — 有关使用触摸事件来获得在移动设备上进行交互的有用文章。</li>
 </ul>
 
 <div>{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}</div>
 
-<div> </div>
+<div> </div>
 
 <div>
 <div>
