@@ -3,88 +3,78 @@ title: 何为可访问性？
 slug: Learn/Common_questions/What_is_accessibility
 translation_of: Learn/Common_questions/What_is_accessibility
 ---
-<div>
-<p>本文介绍了 Web 可访问性背后的一些基本概念。</p>
-</div>
+本文介绍了 Web 可访问性背后的一些基本概念。
 
 <table class="learn-box nostripe standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提：</th>
-   <td>无</td>
-  </tr>
-  <tr>
-   <th scope="row">目标：</th>
-   <td>学习可访问性，了解其重要性</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">前提：</th>
+      <td>无</td>
+    </tr>
+    <tr>
+      <th scope="row">目标：</th>
+      <td>学习可访问性，了解其重要性</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p>由于身体或技术上的限制，你的访客也许无法以像你期望的方式体验网站。本文中，我们给出了可访问性的一般原则，并解释了其中的一些规则。</p>
+由于身体或技术上的限制，你的访客也许无法以像你期望的方式体验网站。本文中，我们给出了可访问性的一般原则，并解释了其中的一些规则。
 
-<h2 id="自主学习">自主学习</h2>
+## 自主学习
 
-<p><em>还没有可用的资料。 <a href="/en-US/docs/MDN/Getting_started">Please, consider contributing</a>.</em></p>
+_还没有可用的资料。 [Please, consider contributing](/en-US/docs/MDN/Getting_started)._
 
-<h2 id="深入探索">深入探索</h2>
+## 深入探索
 
-<h3 id="可访问性_一般原则">可访问性：一般原则</h3>
+### 可访问性：一般原则
 
-<p>We might associate accessibility at first with negative limitations. This building has to be accessible, so it must follow these regulations for door width and toilet size and elevator placement.</p>
+We might associate accessibility at first with negative limitations. This building has to be accessible, so it must follow these regulations for door width and toilet size and elevator placement.
 
-<p>That's a narrow way to think of accessibility. Think of it as a wonderful way to empower people and serve more customers. What can the people in Brazil do with your English website? Can the people with smartphones browse a heavy, cluttered website designed for a large desktop monitor and unlimited bandwidth? They'll go somewhere else. In general, <em>we must think about our product from the viewpoints of all our target customers, and adapt accordingly. </em>Hence accessibility.</p>
+That's a narrow way to think of accessibility. Think of it as a wonderful way to empower people and serve more customers. What can the people in Brazil do with your English website? Can the people with smartphones browse a heavy, cluttered website designed for a large desktop monitor and unlimited bandwidth? They'll go somewhere else. In general, _we must think about our product from the viewpoints of all our target customers, and adapt accordingly._ Hence accessibility.
 
-<h3 id="Web可访问性">Web 可访问性</h3>
+### Web 可访问性
 
-<p>In the specific context of the web, accessibility means that anyone can benefit from your content, regardless of disability, location, technical limitations, or other circumstances.</p>
+In the specific context of the web, accessibility means that anyone can benefit from your content, regardless of disability, location, technical limitations, or other circumstances.
 
-<p>Let's consider video:</p>
+Let's consider video:
 
-<dl>
- <dt>听力障碍</dt>
- <dd>How does a hearing-impaired person benefit from a video? You have to provide subtitles —or even better, a full text transcript.
-  Also, make sure people can adjust the volume to accommodate their unique needs.</dd>
- <dt>视觉障碍</dt>
- <dd>Again, provide a text transcript that a user can consult without needing to play the video, and an audio-description (an off-screen voice that describes what is happening in the video).</dd>
- <dt>暂停功能</dt>
- <dd>Users may have trouble understanding someone in a video. Let them pause the video to read the subtitles or process the information.</dd>
- <dt>键盘功能</dt>
- <dd>Let the user tab into/out of a video, play it, and pause it without being trapped in it.</dd>
-</dl>
+- 听力障碍
+  - : How does a hearing-impaired person benefit from a video? You have to provide subtitles —or even better, a full text transcript.
+    Also, make sure people can adjust the volume to accommodate their unique needs.
+- 视觉障碍
+  - : Again, provide a text transcript that a user can consult without needing to play the video, and an audio-description (an off-screen voice that describes what is happening in the video).
+- 暂停功能
+  - : Users may have trouble understanding someone in a video. Let them pause the video to read the subtitles or process the information.
+- 键盘功能
+  - : Let the user tab into/out of a video, play it, and pause it without being trapped in it.
 
-<h4 id="Web可访问性基础">Web 可访问性基础</h4>
+#### Web 可访问性基础
 
-<p>A few necessities for basic Web accessibility include:</p>
+A few necessities for basic Web accessibility include:
 
-<ul>
- <li>Whenever your site needs an image to convey meaning, include text as an alternative for visually-challenged users or those with slow connections.</li>
- <li>Make sure all users can operate graphical interfaces (like unfolding menus) solely with a keyboard (e.g., with Tab and the Return key).</li>
- <li>Provide an attribute explicitly specifying your content's language, so that screen readers read your text properly.</li>
- <li>Make sure that a user can navigate to all widgets on a page solely with the keyboard, without getting trapped. (At least let them Tab in and out.)</li>
-</ul>
+- Whenever your site needs an image to convey meaning, include text as an alternative for visually-challenged users or those with slow connections.
+- Make sure all users can operate graphical interfaces (like unfolding menus) solely with a keyboard (e.g., with Tab and the Return key).
+- Provide an attribute explicitly specifying your content's language, so that screen readers read your text properly.
+- Make sure that a user can navigate to all widgets on a page solely with the keyboard, without getting trapped. (At least let them Tab in and out.)
 
-<p>而这只是个开始。</p>
+而这只是个开始。
 
-<h3 id="可访问性的拥护者">可访问性的拥护者</h3>
+### 可访问性的拥护者
 
-<p>Since 1999, the {{Glossary("W3C")}} has operated a working group called the {{Glossary("WAI","Web Accessibility Initiative")}} (WAI) promoting accessibility through guidelines, support material, and international resources.</p>
+Since 1999, the {{Glossary("W3C")}} has operated a working group called the {{Glossary("WAI","Web Accessibility Initiative")}} (WAI) promoting accessibility through guidelines, support material, and international resources.
 
-<h2 id="更多细节">更多细节</h2>
+## 更多细节
 
-<p>请参阅</p>
+请参阅
 
-<ul>
- <li>关于可访问性的 <a href="https://en.wikipedia.org/wiki/Accessibility">维基百科文章</a></li>
- <li><a href="http://www.w3.org/WAI/">WAI (W3C's Web Accessibility Initiative)</a></li>
-</ul>
+- 关于可访问性的[维基百科文章](https://en.wikipedia.org/wiki/Accessibility)
+- [WAI (W3C's Web Accessibility Initiative)](http://www.w3.org/WAI/)
 
-<h2 id="下一步">下一步</h2>
+## 下一步
 
-<p>Accessibility can impact both a website's design and technical structure.</p>
+Accessibility can impact both a website's design and technical structure.
 
-<ul>
- <li>From a design point of view, we suggest learning about <a href="/en-US/docs/Learn/Design_for_all_types_of_users_101">designing for all types of users</a>.</li>
- <li>If the technical side interests you more, you could learn how to <a href="/en-US/docs/Learn/Using_images">embed images in webpages</a>.</li>
-</ul>
+- From a design point of view, we suggest learning about [designing for all types of users](/en-US/docs/Learn/Design_for_all_types_of_users_101).
+- If the technical side interests you more, you could learn how to [embed images in webpages](/en-US/docs/Learn/Using_images).

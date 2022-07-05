@@ -6,143 +6,139 @@ tags:
   - 部分用词需要改善
 translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 ---
-<div>
-<p>在这篇文章中我们将重温针对网站的各种故障排除步骤以及解决这些问题的基本措施。</p>
-</div>
+在这篇文章中我们将重温针对网站的各种故障排除步骤以及解决这些问题的基本措施。
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提 :</th>
-   <td>你需要知道怎么<a href="/en-US/docs/Learn/Upload_files_to_a_web_server">上传文件到 web 服务器</a>。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的 :</th>
-   <td>你将学习如何诊断并解决你的网站可能遇到的一些基本问题。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">前提 :</th>
+      <td>
+        你需要知道怎么<a href="/en-US/docs/Learn/Upload_files_to_a_web_server"
+          >上传文件到 web 服务器</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的 :</th>
+      <td>你将学习如何诊断并解决你的网站可能遇到的一些基本问题。</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>所以你已经发布你的网站了对吗 ? 非常棒！ 但是你确定它能够正常运行吗？</p>
+所以你已经发布你的网站了对吗 ? 非常棒！ 但是你确定它能够正常运行吗？
 
-<p>远程 web 服务器与本地服务器的运行表现通常有很大差别，因此在你的网站上线之时对它进行测试是个不错的主意。你可能会对为数众多的问题表示惊讶：图片无法显示，页面无法加载或者加载缓慢，等等。大多数时候这个问题不严重，只是一个小小的错误或者你的 web 主机配置问题。 </p>
+远程 web 服务器与本地服务器的运行表现通常有很大差别，因此在你的网站上线之时对它进行测试是个不错的主意。你可能会对为数众多的问题表示惊讶：图片无法显示，页面无法加载或者加载缓慢，等等。大多数时候这个问题不严重，只是一个小小的错误或者你的 web 主机配置问题。
 
-<p>让我们看下如何诊断并解决那些问题。</p>
+让我们看下如何诊断并解决那些问题。
 
-<h2 id="主动学习">主动学习</h2>
+## 主动学习
 
-<p><em>当前没有主动学习的相关页面。<a href="/zh-CN/docs/MDN/Getting_started">请考虑作出你的贡献</a>  。</em></p>
+_当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/docs/MDN/Getting_started) 。_
 
-<h2 id="深入探索">深入探索</h2>
+## 深入探索
 
-<h3 id="在你的浏览器中测试">在你的浏览器中测试</h3>
+### 在你的浏览器中测试
 
-<p>如果你想知道你的网站是否正常运行，第一件要做的事就是打开你的浏览器并前往你想要测试的页面。</p>
+如果你想知道你的网站是否正常运行，第一件要做的事就是打开你的浏览器并前往你想要测试的页面。
 
-<h4 id="噢哦，图片去哪里了？"><strong>噢哦，图片去哪里了？</strong></h4>
+#### **噢哦，图片去哪里了？**
 
-<p>让我们看下我们的个人网站， <code>http://demozilla.examplehostingprovider.net/</code>.。没有出现我们预期的图片！</p>
+让我们看下我们的个人网站， `http://demozilla.examplehostingprovider.net/`.。没有出现我们预期的图片！
 
-<p><img alt="Oops, the ‘unicorn’ image is missing" src="image-missing.png"></p>
+![Oops, the ‘unicorn’ image is missing](image-missing.png)
 
-<p>打开 Firefox 的 Network tool (<strong>Tools ➤ Web Developer ➤ Network</strong>) 并重新加载页面：</p>
+打开 Firefox 的 Network tool (**Tools ➤ Web Developer ➤ Network**) 并重新加载页面：
 
-<p><img alt="The image has a 404 error" src="error404.png"></p>
+![The image has a 404 error](error404.png)
 
-<p>这就是问题所在，位于底部的"404" 。 "404" 意味着 "资源未找到", 也就是我们无法看到图片的原因。</p>
+这就是问题所在，位于底部的"404" 。 "404" 意味着 "资源未找到", 也就是我们无法看到图片的原因。
 
-<h4 id="HTTP_状态">HTTP 状态</h4>
+#### HTTP 状态
 
-<p>服务器在收到请求时会以一条状态信息作出响应。以下是最常见的状态：</p>
+服务器在收到请求时会以一条状态信息作出响应。以下是最常见的状态：
 
-<dl>
- <dt><strong> 200: OK</strong></dt>
- <dd>你请求的资源已递送。</dd>
- <dt><strong>301: Moved permanently</strong></dt>
- <dd>资源已被移到新的位置。你将无法在浏览器中看到，但了解"301"是件好事，因为搜索引擎利用这条信息更新它们的索引。</dd>
- <dt><strong>304: Not modified</strong></dt>
- <dd>文档在上次请求后没有再改动，因此你的浏览器可以从缓存中将其显示，从而缩短响应时间并提高带宽使用效率。</dd>
- <dt><strong>403: Forbidden</strong></dt>
- <dd>禁止向你显示资源。这通常与配置错误有关 (e.g. 你的托管服务提供商忘记授予你对目录的访问权限).</dd>
- <dt><strong>404: Not found</strong></dt>
- <dd>不言自明。我们接下来将会讨论如何解决这个问题。</dd>
- <dt><strong>500: Internal server error</strong></dt>
- <dd>服务器出了点问题。比如，也许是服务器端语言 ({{Glossary("PHP")}}, .Net, etc.) 停止工作，或者 web 服务器本身出现配置问题。通常，最好的方法是诉诸你的托管服务提供商的支持团队。</dd>
- <dt><strong>503: Service unavailable</strong></dt>
- <dd>通常是由于短期的系统过载造成的。服务器有一些问题，稍后重试。</dd>
-</dl>
+- **200: OK**
+  - : 你请求的资源已递送。
+- **301: Moved permanently**
+  - : 资源已被移到新的位置。你将无法在浏览器中看到，但了解"301"是件好事，因为搜索引擎利用这条信息更新它们的索引。
+- **304: Not modified**
+  - : 文档在上次请求后没有再改动，因此你的浏览器可以从缓存中将其显示，从而缩短响应时间并提高带宽使用效率。
+- **403: Forbidden**
+  - : 禁止向你显示资源。这通常与配置错误有关 (e.g. 你的托管服务提供商忘记授予你对目录的访问权限).
+- **404: Not found**
+  - : 不言自明。我们接下来将会讨论如何解决这个问题。
+- **500: Internal server error**
+  - : 服务器出了点问题。比如，也许是服务器端语言 ({{Glossary("PHP")}}, .Net, etc.) 停止工作，或者 web 服务器本身出现配置问题。通常，最好的方法是诉诸你的托管服务提供商的支持团队。
+- **503: Service unavailable**
+  - : 通常是由于短期的系统过载造成的。服务器有一些问题，稍后重试。
 
-<ul>
-</ul>
+作为初学者检查我们的 (简易) 网站，我们通常会处理 200,304,403 和 404。
 
-<p>作为初学者检查我们的 (简易) 网站，我们通常会处理 200,304,403 和 404。</p>
+#### 修复 404
 
-<h4 id="修复_404">修复 404</h4>
+所以是哪里出错了？
 
-<p>所以是哪里出错了？</p>
+![Le list of images in our project](demozilla-images-list.png)
 
-<p><img alt="Le list of images in our project" src="demozilla-images-list.png"></p>
+乍一看，我们请求的图片似乎在正确的位置... 但是网络工具却出现了"404"的报错.。事实证明我们的 HTML 代码中出现了错别字： `unicorn_pics.png` 而不是`unicorn_pic.png`.。所以，通过在你的代码编辑器中改变图片的`src` 属性来纠正错别字。
 
-<p>乍一看，我们请求的图片似乎在正确的位置... 但是网络工具却出现了"404"的报错.。事实证明我们的 HTML 代码中出现了错别字： <code>unicorn_pics.png</code> 而不是<code>unicorn_pic.png</code>.。所以，通过在你的代码编辑器中改变图片的<code>src</code> 属性来纠正错别字。</p>
+![Deleting the ‘s’](code-correct.png)
 
-<p><img alt="Deleting the ‘s’" src="code-correct.png"></p>
+保存，[推送到服务器](/en-US/Learn/Upload_files_to_a_web_server)，并在你的浏览器中重现加载网页。
 
-<p>保存，<a href="/en-US/Learn/Upload_files_to_a_web_server">推送到服务器</a>，并在你的浏览器中重现加载网页。</p>
+![The image loads corectly in the browser](image-corrected.png)
 
-<p><img alt="The image loads corectly in the browser" src="image-corrected.png"></p>
+搞定！让我们再看一遍 {{Glossary("HTTP")}} 状态：
 
-<p>搞定！让我们再看一遍 {{Glossary("HTTP")}} 状态：</p>
+- `/` 和 `unicorn_pic.png` 的状态码为**200**，意味着我们成功加载了页面和图片。
+- `basic.css` 的状态码为**304**，意味着这个文件在上次请求后就没有再变动，因此浏览器可以在其缓存中使用该文件，而不是接收新的副本。
 
-<ul>
- <li> <code>/</code> 和 <code>unicorn_pic.png</code> 的状态码为<strong>200</strong>，意味着我们成功加载了页面和图片。</li>
- <li> <code>basic.css</code> 的状态码为<strong>304</strong>，意味着这个文件在上次请求后就没有再变动，因此浏览器可以在其缓存中使用该文件，而不是接收新的副本。</li>
-</ul>
+因此，我们修复了错误并且沿途了解了一些 HTTP 状态！
 
-<p>因此，我们修复了错误并且沿途了解了一些 HTTP 状态！</p>
+### 频繁的错误
 
-<h3 id="频繁的错误">频繁的错误</h3>
+我们发现的最频繁的错误是这些：
 
-<p>我们发现的最频繁的错误是这些：</p>
+#### 地址中的错别字
 
-<h4 id="地址中的错别字">地址中的错别字</h4>
+我们想要输入 `http://demozilla.examplehostingprovider.net/` 但输入得太快而遗漏了一个“l”：
 
-<p>我们想要输入 <code>http://demozilla.examplehostingprovider.net/</code> 但输入得太快而遗漏了一个“l”：</p>
+![Address unreachable](cannot-find-server.png)
 
-<p><img alt="Address unreachable" src="cannot-find-server.png"></p>
+这个地址显然无法找到。
 
-<p>这个地址显然无法找到。</p>
+#### 404 错误
 
-<h4 id="404_错误">404 错误</h4>
+很多时候错误只是由一个错别字导致的，但有时候也许是你忘记上传资源或者在上传资源时网络连接中断。首先检查文件路径的拼写和准确性，如果仍然存在问题，重新上传你的文件。这也许可以解决问题。
 
-<p>很多时候错误只是由一个错别字导致的，但有时候也许是你忘记上传资源或者在上传资源时网络连接中断。首先检查文件路径的拼写和准确性，如果仍然存在问题，重新上传你的文件。这也许可以解决问题。</p>
+#### JavaScript 错误
 
-<h4 id="JavaScript_错误">JavaScript 错误</h4>
+有人 (也许是你) 给页面添加了脚本并且出了差错。页面仍然可以加载，但是你会觉得有点问题。
 
-<p>有人 (也许是你) 给页面添加了脚本并且出了差错。页面仍然可以加载，但是你会觉得有点问题。</p>
+打开控制台 (**Tools ➤ Web developer ➤ Web Console**) 并重新加载页面：
 
-<p>打开控制台 (<strong>Tools ➤ Web developer ➤ Web Console</strong>) 并重新加载页面：</p>
+![A Javascript error is shown in the Console](js-error.png)
 
-<p><img alt="A Javascript error is shown in the Console" src="js-error.png"></p>
+在这个例子中，我们清楚（相当清楚）错误所在，可以马上进行修复 (我们将在 [另一个系列 ](/en-US/Learn/JavaScript)的文章中提到 JavaScript )。
 
-<p>在这个例子中，我们清楚（相当清楚）错误所在，可以马上进行修复 (我们将在 <a href="/en-US/Learn/JavaScript">另一个系列 </a>的文章中提到 JavaScript )。</p>
+### 更多需要检查的地方
 
-<h3 id="更多需要检查的地方">更多需要检查的地方</h3>
+我们列举了一些简单的方法来检查你的网站是否运行正常，以及你可能遇到的最常见的错误和修复方法。 你还可以测试你的页面是否符合这些标准：
 
-<p>我们列举了一些简单的方法来检查你的网站是否运行正常，以及你可能遇到的最常见的错误和修复方法。 你还可以测试你的页面是否符合这些标准：</p>
+#### 性能如何？
 
-<h4 id="性能如何？">性能如何？</h4>
+页面加载足够快吗？类似 [WebPagetest.org](http://www.webpagetest.org/) 的网站或者类似 [YSlow](https://addons.mozilla.org/en-US/firefox/addon/yslow/) 的浏览器附加组件可以告诉你一些有趣的事情。
 
-<p>页面加载足够快吗？类似 <a href="http://www.webpagetest.org/">WebPagetest.org</a> 的网站或者类似 <a href="https://addons.mozilla.org/en-US/firefox/addon/yslow/">YSlow</a> 的浏览器附加组件可以告诉你一些有趣的事情。</p>
+![Yslow diagnostics](yslow-diagnostics.png)
 
-<p><img alt="Yslow diagnostics" src="yslow-diagnostics.png"></p>
+等级从 A 到 F。我们的页面较小，符合大部分的标准。但是我们可以注意到如果使用 {{Glossary("CDN")}} 将会更好。 当我们只提供一张图片的时候，这无关紧要，但对于提供数千张图片的高带宽网站来说，这一点至关重要。
 
-<p>等级从 A 到 F。我们的页面较小，符合大部分的标准。但是我们可以注意到如果使用 {{Glossary("CDN")}} 将会更好。 当我们只提供一张图片的时候，这无关紧要，但对于提供数千张图片的高带宽网站来说，这一点至关重要。</p>
+#### 服务器响应是否足够快？
 
-<h4 id="服务器响应是否足够快？">服务器响应是否足够快？</h4>
+`ping` 是一个很管用的 shell 工具，用以测试你提供的域名并告诉你服务器是否响应：
 
-<p><code>ping</code> 是一个很管用的 shell 工具，用以测试你提供的域名并告诉你服务器是否响应：</p>
-
-<pre class="notranslate">$ ping mozilla.org
+```bash
+$ ping mozilla.org
 PING mozilla.org (63.245.215.20): 56 data bytes
 64 bytes from 63.245.215.20: icmp_seq=0 ttl=44 time=148.741 ms
 64 bytes from 63.245.215.20: icmp_seq=1 ttl=44 time=148.541 ms
@@ -151,23 +147,20 @@ PING mozilla.org (63.245.215.20): 56 data bytes
 ^C
 --- mozilla.org ping statistics ---
 4 packets transmitted, 4 packets received, 0.0% packet loss
-round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms</pre>
+round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
+```
 
-<p>记住一个方便的键盘快捷键：<strong>Ctrl+C </strong>。 Ctrl+C 给运行发送了一个“中断”信号并令其中止。如果你不中止运行， <code>ping</code> 将会不断地 ping 服务器。</p>
+记住一个方便的键盘快捷键：**Ctrl+C** 。 Ctrl+C 给运行发送了一个“中断”信号并令其中止。如果你不中止运行， `ping` 将会不断地 ping 服务器。
 
-<h3 id="一份简易清单">一份简易清单</h3>
+### 一份简易清单
 
-<ul>
- <li>检查 404</li>
- <li>确保所有的网页都按预期运行</li>
- <li>在多个浏览器中查看你的网站，以确保它的运行表现一致</li>
-</ul>
+- 检查 404
+- 确保所有的网页都按预期运行
+- 在多个浏览器中查看你的网站，以确保它的运行表现一致
 
-<h2 id="下一步">下一步</h2>
+## 下一步
 
-<p>恭喜，你的网站已经成功运作，任何人都可以访问。这是一项巨大的成就。现在，你可以开始深入探索各种主题。</p>
+恭喜，你的网站已经成功运作，任何人都可以访问。这是一项巨大的成就。现在，你可以开始深入探索各种主题。
 
-<ul>
- <li>来自世界各地的人会进入你的网站，你应该考虑 <a href="/en-US/docs/Learn/What_is_accessibility">让每个人都可以访问网站</a> 。</li>
- <li>你的网站是否设计的得太粗糙了？是时候<a href="/zh-CN/docs/Learn/CSS/Using_CSS_in_a_web_page">了解更多 CSS</a> 了。</li>
-</ul>
+- 来自世界各地的人会进入你的网站，你应该考虑 [让每个人都可以访问网站](/en-US/docs/Learn/What_is_accessibility) 。
+- 你的网站是否设计的得太粗糙了？是时候[了解更多 CSS](/zh-CN/docs/Learn/CSS/Using_CSS_in_a_web_page) 了。
