@@ -56,8 +56,8 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 
 <p>Холст изначально пустой и прозрачный. Первым делом скрипт получает доступ к контексту и отрисовывает его. Элемент {{HTMLElement("canvas")}} имеет <a href="/en-US/docs/Web/API/HTMLCanvasElement#Method">метод</a> <code>getContext()</code>, используется для получения контекста визуализации и её функции рисования. <code>getContext()</code> принимает один параметр, тип контекста. Для 2D графики, которая охвачена этим руководством будем использовать метку "2d".</p>
 
-<pre class="brush: js">var canvas = document.getElementById('tutorial');
-var ctx = canvas.getContext('2d');
+<pre class="brush: js">const canvas = document.getElementById('tutorial');
+const ctx = canvas.getContext('2d');
 </pre>
 
 <p>В первой строке скрипта мы получаем узел нашего холста {{HTMLElement("canvas")}}, далее с помощью  {{domxref("document.getContext()")}} метода мы присваиваем ему контекст. Имея узел элемента , вы всегда можете получить для рисования контекст при помощи метода <code>getContext()</code>.</p>
@@ -67,10 +67,10 @@ var ctx = canvas.getContext('2d');
 
 <p>Ранее уже упоминалось, что в браузерах, которые не поддерживают {{HTMLElement("canvas")}} отображается запасное содержимое. Но помимо этого, определить, поддерживает ли браузер <code>canvas</code>, можно прямо из кода, проверив наличие метода <code>getContext()</code>. Код с запасным содержимым, который мы приводили Выше, становится следующим:</p>
 
-<pre class="brush: js">var canvas = document.getElementById('tutorial');
+<pre class="brush: js">const canvas = document.getElementById('tutorial');
 
 if (canvas.getContext){
-  var ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext('2d');
   // drawing code here
 } else {
   // canvas-unsupported code here
@@ -93,9 +93,9 @@ if (canvas.getContext){
     &lt;title&gt;Canvas tutorial&lt;/title&gt;
     &lt;script type="text/javascript"&gt;
       function draw(){
-        var canvas = document.getElementById('tutorial');
+        const canvas = document.getElementById('tutorial');
         if (canvas.getContext){
-          var ctx = canvas.getContext('2d');
+          const ctx = canvas.getContext('2d');
         }
       }
     &lt;/script&gt;
@@ -124,9 +124,9 @@ if (canvas.getContext){
  &lt;head&gt;
   &lt;script type="application/javascript"&gt;
     function draw() {
-      var canvas = document.getElementById("canvas");
+      const canvas = document.getElementById("canvas");
       if (canvas.getContext) {
-        var ctx = canvas.getContext("2d");
+        const ctx = canvas.getContext("2d");
 
         ctx.fillStyle = "rgb(200,0,0)";
         ctx.fillRect (10, 10, 55, 50);
