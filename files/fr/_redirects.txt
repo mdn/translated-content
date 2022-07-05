@@ -4410,8 +4410,8 @@
 /fr/docs/Web/CSS/offset-inline-end	/fr/docs/Web/CSS/inset-inline-end
 /fr/docs/Web/CSS/offset-inline-start	/fr/docs/Web/CSS/inset-inline-start
 /fr/docs/Web/CSS/overflow-anchor/Guide_ancrage_défilement	/fr/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
-/fr/docs/Web/CSS/paint	/fr/docs/orphaned/Web/CSS/paint()
-/fr/docs/Web/CSS/paint()	/fr/docs/orphaned/Web/CSS/paint()
+/fr/docs/Web/CSS/paint	/fr/docs/Web/CSS/image/paint
+/fr/docs/Web/CSS/paint()	/fr/docs/Web/CSS/image/paint
 /fr/docs/Web/CSS/path()	/fr/docs/Web/CSS/path
 /fr/docs/Web/CSS/proprietes_css_animees	/fr/docs/Web/CSS/CSS_animated_properties
 /fr/docs/Web/CSS/radial-gradient	/fr/docs/orphaned/Web/CSS/radial-gradient()
@@ -6257,6 +6257,7 @@
 /fr/docs/orphaned/Web/CSS/image()	/fr/docs/Web/CSS/image/image
 /fr/docs/orphaned/Web/CSS/image-set()	/fr/docs/Web/CSS/image/image-set
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
+/fr/docs/orphaned/Web/CSS/paint()	/fr/docs/Web/CSS/image/paint
 /fr/docs/orphaned/Web/CSS/transform-function/translateX	/fr/docs/Web/CSS/transform-function/translateX
 /fr/docs/orphaned/Web/Guide/Events	/fr/docs/Web/Events
 /fr/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
