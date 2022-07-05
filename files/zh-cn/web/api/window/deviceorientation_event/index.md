@@ -1,117 +1,78 @@
 ---
-title: deviceorientation
+title: 'Window：deviceorientation 事件'
 slug: Web/API/Window/deviceorientation_event
 translation_of: Web/API/Window/deviceorientation_event
 ---
-<p><code>deviceorientation</code> 事件在方向传感器输出新数据的时候触发。其数据系传感器与地球坐标系相比较所得，也就是说在设备上可能会采用设备地磁计的数据。详情参考<a href="/en-US/docs/DOM/Orientation_and_motion_data_explained">有关方向与运动信息的说明（Orientation and motion data explained）</a>。</p>
+{{APIRef}}
 
-<h2 id="常规信息">常规信息</h2>
+**`deviceorientation`** 事件在方向传感器输出新数据的时候触发。其数据系传感器与地球坐标系相比较所得，也就是说在设备上可能会采用设备地磁计的数据。
 
-<dl>
- <dt>标准</dt>
- <dd><a class="external" href="http://www.w3.org/TR/orientation-event/#deviceorientation">Orientation</a></dd>
- <dt>接口</dt>
- <dd>DeviceOrientationEvent</dd>
- <dt>冒泡</dt>
- <dd>否</dd>
- <dt>可取消</dt>
- <dd>否</dd>
- <dt>Target</dt>
- <dd>DefaultView (<code>window</code>)</dd>
- <dt>默认操作</dt>
- <dd>无</dd>
-</dl>
+参见[有关方向与运动信息的说明](/zh-CN/docs/Web/Events/Orientation_and_motion_data_explained)。
 
-<h2 id="属性">属性</h2>
+该事件不可取消也不会冒泡。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not?</td>
-  </tr>
-  <tr>
-   <td><code>alpha</code> {{readonlyInline}}</td>
-   <td>double (float)</td>
-   <td>The current orientation of the device around the Z axis; that is, how far the device is rotated around a line perpendicular to the device.</td>
-  </tr>
-  <tr>
-   <td><code>beta</code> {{readonlyInline}}</td>
-   <td>double (float)</td>
-   <td>The current orientation of the device around the X axis; that is, how far the device is tipped forward or backward.</td>
-  </tr>
-  <tr>
-   <td><code>gamma</code> {{readonlyInline}}</td>
-   <td>double (float)</td>
-   <td>The current orientation of the device around the Y axis; that is, how far the device is turned left or right.</td>
-  </tr>
-  <tr>
-   <td><code>absolute</code> {{readonlyInline}}</td>
-   <td>{{jsxref("boolean")}}</td>
-   <td>This value is <code>true</code> if the orientation is provided as a difference between the device coordinate frame and the Earth coordinate frame; if the device can't detect the Earth coordinate frame, this value is <code>false</code>.</td>
-  </tr>
- </tbody>
-</table>
+## 语法
 
-<h2 id="例子">例子</h2>
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法中使用事件名称，或使用事件处理器属性。
 
-<pre class="pass: js">if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function(event) {
-        // alpha: 在 Z 轴上的角度
-        var rotateDegrees = event.alpha;
-        // gamma: 从左到右
-        var leftToRight = event.gamma;
-        // beta: 从前到后的运动
-        var frontToBack = event.beta;
+```js
+addEventListener('deviceorientation', event => { });
 
-        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-    }, true);
+ondeviceorientation = event => { };
+```
+
+## 事件类型
+
+一个 {{domxref("DeviceOrientationEvent")}}。继承了 {{domxref("Event")}}。
+
+{{InheritanceDiagram("DeviceOrientationEvent")}}
+
+## 事件属性
+
+- {{domxref("DeviceOrientationEvent.absolute")}} {{readonlyinline}}
+  - : 一个布尔值，表示设备是否提供了方向数据。
+- {{domxref("DeviceOrientationEvent.alpha")}} {{readonlyinline}}
+  - : 一个数字，表示设备围绕 z 轴的转动度数，范围为 0（含）到 360（不含）。
+- {{domxref("DeviceOrientationEvent.beta")}} {{readonlyinline}}
+  - : 一个数字，表示设备围绕 x 轴的转动度数，范围为 -180（含）到 180（不含）。表示设备的前后运动。
+- {{domxref("DeviceOrientationEvent.gamma")}} {{readonlyinline}}
+  - : 一个数字，表示设备围绕 y 轴的转动度数，范围为 -90（含）到 90（不含）。表示设备的左右运动。
+- `DeviceOrientationEvent.webkitCompassHeading` {{Non-Standard_Inline}} {{readonlyinline}}
+  - : 一个数字，表示设备所得到的世界坐标系的 z 轴与正北方向的角度，范围为 0 到 360。
+- `DeviceOrientationEvent.webkitCompassAccuracy` {{Non-Standard_Inline}} {{readonlyinline}}
+  - : 指南针的精准度，以正/负偏差的形式给出。通常是 10。
+
+## 示例
+
+```js
+if (window.DeviceOrientationEvent) {
+    window.addEventListener("deviceorientation", function(event) {
+        // alpha: rotation around z-axis
+        var rotateDegrees = event.alpha;
+        // gamma: left to right
+        var leftToRight = event.gamma;
+        // beta: front back motion
+        var frontToBack = event.beta;
+
+        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+    }, true);
 }
 
 var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
-    // 弹奏一曲夏威夷吉他
+    // do something amazing
 };
-</pre>
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 规范
 
-{{Compat("api.Window.deviceorientation_event")}}
+{{Specifications}}
 
-<h2 id="相关事件">相关事件</h2>
+## 浏览器兼容性
 
-<ul>
- <li><a href="/en-US/docs/Web/Events/devicemotion"><code>devicemotion</code></a></li>
-</ul>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("DeviceMotionEvent")}}</li>
- <li>{{domxref("window.ondeviceorientation")}}</li>
- <li><a href="/en-US/docs/Web/API/Detecting_device_orientation">检测设备朝向</a></li>
- <li><a href="/en-US/docs/DOM/Orientation_and_motion_data_explained">有关方向与运动信息的说明</a></li>
- <li>在桌面浏览器中模拟 orientation 事件，基于 <a href="http://louisremi.github.com/orientation-devtool/">orientation-devtool</a></li>
-</ul>
+- [`devicemotion`](/zh-CN/docs/Web/API/Window/devicemotion_event)
+- [检测设备朝向](/zh-CN/docs/Web/Events/Detecting_device_orientation)
+- [有关方向与运动信息的说明](/zh-CN/docs/Web/Events/Orientation_and_motion_data_explained)
