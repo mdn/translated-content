@@ -46714,13 +46714,6 @@
       "ziyunfei"
     ]
   },
-  "conflicting/Web/HTTP/Status/502": {
-    "modified": "2019-03-23T22:26:50.896Z",
-    "contributors": [
-      "zhangchen",
-      "cissoid"
-    ]
-  },
   "conflicting/Web/JavaScript/Guide/Introduction": {
     "modified": "2019-03-23T23:36:14.591Z",
     "contributors": [
