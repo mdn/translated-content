@@ -15,7 +15,7 @@ El método **`Symbol.keyFor(sym)`** recupera la llave de símbolo compartida del
 Symbol.keyFor(sym);
 ```
 
-### parámetros
+### Parámetros
 
 - `sym`
   - : Symbol, obligatoria. El símbolo del que se desea encontrar la llave.
