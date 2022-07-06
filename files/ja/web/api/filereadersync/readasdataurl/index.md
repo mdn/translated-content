@@ -1,61 +1,58 @@
 ---
 title: FileReaderSync.readAsDataURL()
 slug: Web/API/FileReaderSync/readAsDataURL
+page-type: web-api-instance-method
+browser-compat: api.FileReaderSync.readAsDataURL
 translation_of: Web/API/FileReaderSync/readAsDataURL
 ---
-<div>{{APIRef("File API")}}<br>
-<span class="seoSummary">{{DOMxRef("FileReaderSync")}} インターフェイスの <code>readAsDataURL()</code> メソッドにより、{{DOMxRef("File")}} または {{DOMxRef("Blob")}} オブジェクトを同期的にデータ URL を表す {{DOMxRef("DOMString")}} に読み込むことができます。このインターフェイスは、ブロックする可能性のある同期 I/O を可能にするため、<a href="/ja/docs/Web/API/Worker">Worker</a> で<a href="/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">のみ利用可能</a>です。</span></div>
+{{APIRef("File API")}}
 
-<h2 id="シンタックス">シンタックス</h2>
+`readAsDataURL()` は {{DOMxRef("FileReaderSync")}} インターフェイスのメソッドで、{{DOMxRef("File")}} または {{DOMxRef("Blob")}} オブジェクトを同期的にデータ URL を表す文字列に読み込むことができます。このインターフェイスは、ブロックが発生する可能性のある同期 I/O を可能にするため、[ワーカー](/ja/docs/Web/API/Worker)で[のみ利用可能](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)です。
 
-<pre class="eval notranslate">readAsDataURL(<em>File</em>);
-readAsDataURL(<em>Blob</em>);
-</pre>
+## 構文
 
-<h3 id="パラメータ">パラメータ</h3>
+```js
+readAsDataURL(File);
+readAsDataURL(Blob);
+```
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>読み込み対象の DOM {{DOMxRef("File")}} または {{DOMxRef("Blob")}}。</dd>
-</dl>
+### 引数
 
-<h3 id="戻り値">戻り値</h3>
+- `blob`
+  - : 読み込み対象の {{DOMxRef("File")}} または {{DOMxRef("Blob")}} です。
 
-<p>入力データをデータ URL として表す {{DOMxRef("DOMString")}}。</p>
+### 返値
 
-<h2 id="例外">例外</h2>
+入力データをデータ URL として表す文字列です。
 
-<p>{{page("Web/API/FileReaderSync/readAsArrayBuffer","Exceptions")}}</p>
+## 例外
 
-<h2 id="仕様">仕様</h2>
+このメソッドでは以下の例外が発生する可能性があります。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("File API","#dfn-readAsDataURLSync","readAsDataURL")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+- `NotFoundError` {{domxref("DOMException")}}
+  - : DOM の {{DOMxRef("File")}} または {{DOMxRef("Blob")}} で表されるリソースが、消去されたなどの理由で見つからない場合に発生します。
+- `SecurityError` {{domxref("DOMException")}}
+  - : 以下の問題のある状況のいずれかが検出された場合に発生します。
+    - リソースが第三者によって変更されている
+    - 同時に行われる読み取りが多すぎる
+    - リソースが指しているファイルがウェブから利用するには安全ではない（システムファイルなど）
+- `NotReadableError` {{domxref("DOMException")}}
+  - : 同時実行ロックなどの権限の問題でリソースを読み込めない場合に発生します。
+- `EncodingError` {{domxref("DOMException")}}
+  - : リソースがデータ URL であり、ブラウザーごとに定義された制限長を超えた場合に発生します。
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## 仕様書
 
-<div>
-<p>{{Compat("api.FileReaderSync.readAsDataURL")}}</p>
-</div>
+{{Specifications}}
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## ブラウザーの互換性
 
-<ul>
- <li><a href="/ja/docs/Web/API/File">File API</a></li>
- <li>{{DOMxRef("File")}}</li>
- <li>{{DOMxRef("FileReaderSync")}}</li>
- <li>{{DOMxRef("FileReader")}}</li>
- <li>{{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}</li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- [ファイル API](/ja/docs/Web/API/File_API)
+- {{DOMxRef("File")}}
+- {{DOMxRef("FileReaderSync")}}
+- {{DOMxRef("FileReader")}}
+- {{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}
