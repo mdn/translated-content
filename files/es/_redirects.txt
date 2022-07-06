@@ -988,7 +988,7 @@
 /es/docs/JavaScript/Referencia/Objetos_globales/Array/reduce	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /es/docs/JavaScript/Referencia/Objetos_globales/Array/reduceRight	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 /es/docs/JavaScript/Referencia/Objetos_globales/Boolean	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean
-/es/docs/JavaScript/Referencia/Objetos_globales/Boolean/toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource
+/es/docs/JavaScript/Referencia/Objetos_globales/Boolean/toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /es/docs/JavaScript/Referencia/Objetos_globales/Date	/es/docs/Web/JavaScript/Reference/Global_Objects/Date
 /es/docs/JavaScript/Referencia/Objetos_globales/Date/UTC	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC
 /es/docs/JavaScript/Referencia/Objetos_globales/Date/now	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/now
@@ -1285,7 +1285,7 @@
 /es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Array/reduce	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Array/reduceRight	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 /es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Boolean	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean
-/es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Boolean/toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource
+/es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Boolean/toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Date	/es/docs/Web/JavaScript/Reference/Global_Objects/Date
 /es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Date/UTC	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC
 /es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Date/now	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/now
@@ -1407,7 +1407,7 @@
 /es/docs/Referencia_de_JavaScript_1.5:Objetos_globales:Array:reduce	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /es/docs/Referencia_de_JavaScript_1.5:Objetos_globales:Array:reduceRight	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 /es/docs/Referencia_de_JavaScript_1.5:Objetos_globales:Boolean	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean
-/es/docs/Referencia_de_JavaScript_1.5:Objetos_globales:Boolean:toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource
+/es/docs/Referencia_de_JavaScript_1.5:Objetos_globales:Boolean:toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /es/docs/Referencia_de_JavaScript_1.5:Objetos_globales:Date	/es/docs/Web/JavaScript/Reference/Global_Objects/Date
 /es/docs/Referencia_de_JavaScript_1.5:Objetos_globales:Date:UTC	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC
 /es/docs/Referencia_de_JavaScript_1.5:Objetos_globales:Date:now	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/now
@@ -2130,7 +2130,8 @@
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Clases_de_caracteres	/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Cuantificadores	/es/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Escapes_de_propiedades_Unicode	/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
-/es/docs/Web/JavaScript/Guide/Regular_Expressions/Grupos_y_rangos	/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
+/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges	/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
+/es/docs/Web/JavaScript/Guide/Regular_Expressions/Grupos_y_rangos	/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Hoja_de_referencia	/es/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
 /es/docs/Web/JavaScript/Guide/Trabajando_con_objectos	/es/docs/Web/JavaScript/Guide/Working_with_Objects
 /es/docs/Web/JavaScript/Guide/Usar_promesas	/es/docs/Web/JavaScript/Guide/Using_promises
@@ -2143,10 +2144,15 @@
 /es/docs/Web/JavaScript/Reference/Errors/Indicador_regexp_no-val	/es/docs/Web/JavaScript/Reference/Errors/Bad_regexp_flag
 /es/docs/Web/JavaScript/Reference/Errors/Strict_y_parámetros_complejos	/es/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 /es/docs/Web/JavaScript/Reference/Errors/caracter_ilegal	/es/docs/Web/JavaScript/Reference/Errors/Illegal_character
+/es/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
+/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /es/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
+/es/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
+/es/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
+/es/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
 /es/docs/Web/JavaScript/Reference/Global_Objects/null	/es/docs/Web/JavaScript/Reference/Operators/null
 /es/docs/Web/JavaScript/Reference/Statements/import.meta	/es/docs/Web/JavaScript/Reference/Operators/import.meta
 /es/docs/Web/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference
@@ -2224,7 +2230,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/splice	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/toLocaleString	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/toString	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/unshift	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/values	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/values
@@ -2233,7 +2239,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer/byteLength	/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Boolean	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Boolean/Boolean	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/Boolean/toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Boolean/toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Date	/es/docs/Web/JavaScript/Reference/Global_Objects/Date
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/UTC	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/getDate	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate
@@ -2277,7 +2283,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/displayName	/es/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/length	/es/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/name	/es/docs/Web/JavaScript/Reference/Global_Objects/Function/name
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/toString	/es/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Generador	/es/docs/Web/JavaScript/Reference/Global_Objects/Generator
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Generador/next	/es/docs/Web/JavaScript/Reference/Global_Objects/Generator/next
@@ -2380,7 +2386,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/seal	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/setPrototypeOf	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/toLocaleString	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/toString	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/valueOf	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/values	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/values
@@ -2458,7 +2464,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/toLocaleLowerCase	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/toLocaleUpperCase	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/toLowerCase	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toSource
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/toString	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/toUpperCase	/es/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/trimEnd	/es/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd

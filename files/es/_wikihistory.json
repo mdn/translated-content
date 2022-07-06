@@ -15955,7 +15955,7 @@
       "Nachec"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges": {
+  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences": {
     "modified": "2020-09-17T10:14:04.470Z",
     "contributors": [
       "Nachec"
@@ -16929,13 +16929,6 @@
       "estebanpanelli"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/toSource": {
-    "modified": "2019-03-23T22:08:25.338Z",
-    "contributors": [
-      "teoli",
-      "pedro-otero"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2020-10-15T21:37:53.754Z",
     "contributors": [
@@ -17010,7 +17003,7 @@
       "Nachec"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Boolean/toSource": {
+  "Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
     "modified": "2019-09-14T17:25:31.875Z",
     "contributors": [
       "teoli",
@@ -17329,13 +17322,6 @@
       "pedro-otero",
       "kdex",
       "jorgecasar"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Function/toSource": {
-    "modified": "2019-03-23T22:42:12.644Z",
-    "contributors": [
-      "teoli",
-      "gpdiaz"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Function/toString": {
@@ -18143,12 +18129,6 @@
       "JotaCé"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Object/toSource": {
-    "modified": "2020-10-15T21:59:52.415Z",
-    "contributors": [
-      "taniaReyesM"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Object/toString": {
     "modified": "2019-03-23T23:48:33.504Z",
     "contributors": [
@@ -18835,12 +18815,6 @@
       "teoli",
       "Talisker",
       "Mgjbot"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/String/toSource": {
-    "modified": "2020-10-15T22:22:52.809Z",
-    "contributors": [
-      "SoyZatarain"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/String/toString": {
@@ -21258,6 +21232,13 @@
       "pekechis"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
+    "modified": "2019-03-23T22:08:25.338Z",
+    "contributors": [
+      "teoli",
+      "pedro-otero"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer": {
     "modified": "2020-10-15T21:51:49.315Z",
     "contributors": [
@@ -21294,6 +21275,13 @@
       "Sheppy"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString": {
+    "modified": "2019-03-23T22:42:12.644Z",
+    "contributors": [
+      "teoli",
+      "gpdiaz"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Map": {
     "modified": "2019-03-23T22:06:29.334Z",
     "contributors": [
@@ -21320,6 +21308,12 @@
       "diegogaysaez"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString": {
+    "modified": "2020-10-15T21:59:52.415Z",
+    "contributors": [
+      "taniaReyesM"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Promise": {
     "modified": "2020-10-15T21:52:03.650Z",
     "contributors": [
@@ -21336,6 +21330,12 @@
     "modified": "2019-03-18T21:41:05.316Z",
     "contributors": [
       "jagomf"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String/toString": {
+    "modified": "2020-10-15T22:22:52.809Z",
+    "contributors": [
+      "SoyZatarain"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/SyntaxError": {

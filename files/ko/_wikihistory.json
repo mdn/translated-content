@@ -12030,7 +12030,7 @@
       "limkukhyun"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges": {
+  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences": {
     "modified": "2020-03-12T19:49:33.624Z",
     "contributors": [
       "limkukhyun"
@@ -12997,15 +12997,6 @@
       "Netaras"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/toSource": {
-    "modified": "2020-10-15T22:00:47.617Z",
-    "contributors": [
-      "alattalatta",
-      "teoli",
-      "KisukPark",
-      "sonjh02"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2020-10-15T21:47:38.270Z",
     "contributors": [
@@ -13522,7 +13513,7 @@
       "bsidesoft"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Function/toSource": {
+  "Web/JavaScript/Reference/Global_Objects/Function/toString": {
     "modified": "2020-10-15T22:15:36.685Z",
     "contributors": [
       "cs09g"
@@ -14701,13 +14692,6 @@
       "swtpumpkin"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/toSource": {
-    "modified": "2020-10-15T22:02:06.022Z",
-    "contributors": [
-      "teoli",
-      "ejay0811"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/toString": {
     "modified": "2020-10-15T22:27:29.788Z",
     "contributors": [
@@ -15072,14 +15056,6 @@
     "contributors": [
       "alattalatta",
       "nicesh"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/uneval": {
-    "modified": "2020-10-15T21:52:46.647Z",
-    "contributors": [
-      "alattalatta",
-      "teoli",
-      "Perlmint"
     ]
   },
   "Web/JavaScript/Reference/Iteration_protocols": {
@@ -17273,6 +17249,23 @@
       "Sebuls"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects": {
+    "modified": "2020-10-15T21:52:46.647Z",
+    "contributors": [
+      "alattalatta",
+      "teoli",
+      "Perlmint"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
+    "modified": "2020-10-15T22:00:47.617Z",
+    "contributors": [
+      "alattalatta",
+      "teoli",
+      "KisukPark",
+      "sonjh02"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean": {
     "modified": "2020-10-15T21:43:28.882Z",
     "contributors": [
@@ -17355,6 +17348,13 @@
     "modified": "2020-10-15T22:15:02.439Z",
     "contributors": [
       "cs09g"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String/toString": {
+    "modified": "2020-10-15T22:02:06.022Z",
+    "contributors": [
+      "teoli",
+      "ejay0811"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/SyntaxError": {

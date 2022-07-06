@@ -32523,7 +32523,7 @@
       "SphinxKnight"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges": {
+  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences": {
     "modified": "2020-03-12T19:49:07.623Z",
     "contributors": [
       "SphinxKnight"
@@ -33768,16 +33768,6 @@
       "tregagnon"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/toSource": {
-    "modified": "2020-10-15T21:17:29.057Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "tregagnon",
-      "Jeremie",
-      "BenoitL"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2020-10-15T21:17:20.067Z",
     "contributors": [
@@ -33988,14 +33978,6 @@
       "Jeremie",
       "LaBoumerde",
       "daniel35310"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Boolean/toSource": {
-    "modified": "2020-10-15T21:27:16.458Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "tregagnon"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
@@ -34578,14 +34560,6 @@
       "tregagnon"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Date/toSource": {
-    "modified": "2020-10-15T21:27:17.217Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "tregagnon"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Date/toString": {
     "modified": "2020-10-15T21:27:18.466Z",
     "contributors": [
@@ -34817,16 +34791,6 @@
     "contributors": [
       "SphinxKnight",
       "teoli"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Function/toSource": {
-    "modified": "2020-10-15T21:15:30.131Z",
-    "contributors": [
-      "fvignals",
-      "SphinxKnight",
-      "teoli",
-      "Jeremie",
-      "BenoitL"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Function/toString": {
@@ -35859,13 +35823,6 @@
       "edspeedy"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Number/toSource": {
-    "modified": "2020-10-15T21:28:29.727Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Number/toString": {
     "modified": "2020-10-15T21:28:31.793Z",
     "contributors": [
@@ -36146,16 +36103,6 @@
       "SphinxKnight",
       "teoli",
       "moust"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Object/toSource": {
-    "modified": "2020-10-15T21:15:26.141Z",
-    "contributors": [
-      "SphinxKnight",
-      "P45QU10U",
-      "teoli",
-      "tregagnon",
-      "BenoitL"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Object/toString": {
@@ -36660,12 +36607,6 @@
       "Tolokoban"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/toSource": {
-    "modified": "2020-10-15T21:30:50.470Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/RegExp/toString": {
     "modified": "2020-10-15T21:30:46.894Z",
     "contributors": [
@@ -37146,13 +37087,6 @@
       "ilaborie"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/toSource": {
-    "modified": "2020-10-15T21:31:02.897Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/toString": {
     "modified": "2020-10-15T21:30:34.655Z",
     "contributors": [
@@ -37288,13 +37222,6 @@
     "modified": "2020-10-15T21:39:22.081Z",
     "contributors": [
       "SphinxKnight"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Symbol/toSource": {
-    "modified": "2020-10-15T21:29:09.350Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol/toString": {
@@ -37938,12 +37865,6 @@
     "contributors": [
       "SphinxKnight",
       "ea1000"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/uneval": {
-    "modified": "2020-10-15T21:31:15.431Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   },
   "Web/JavaScript/Reference/Iteration_protocols": {
@@ -41373,6 +41294,71 @@
       "xdelatour"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects": {
+    "modified": "2020-10-15T21:31:15.431Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
+    "modified": "2020-10-15T21:17:29.057Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "tregagnon",
+      "Jeremie",
+      "BenoitL"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
+    "modified": "2020-10-15T21:27:16.458Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "tregagnon"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString": {
+    "modified": "2020-10-15T21:27:17.217Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "tregagnon"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString": {
+    "modified": "2020-10-15T21:15:30.131Z",
+    "contributors": [
+      "fvignals",
+      "SphinxKnight",
+      "teoli",
+      "Jeremie",
+      "BenoitL"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString": {
+    "modified": "2020-10-15T21:28:29.727Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString": {
+    "modified": "2020-10-15T21:15:26.141Z",
+    "contributors": [
+      "SphinxKnight",
+      "P45QU10U",
+      "teoli",
+      "tregagnon",
+      "BenoitL"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString": {
+    "modified": "2020-10-15T21:30:50.470Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
     "modified": "2019-03-23T23:30:27.295Z",
     "contributors": [
@@ -41380,6 +41366,13 @@
       "Puxarnal",
       "FredB",
       "tregagnon"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String/toString": {
+    "modified": "2020-10-15T21:31:02.897Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb": {
@@ -41394,6 +41387,13 @@
       "Nopias",
       "loella16",
       "xdelatour"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol/toString": {
+    "modified": "2020-10-15T21:29:09.350Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
     ]
   },
   "conflicting/Web/MathML": {

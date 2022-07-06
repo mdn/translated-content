@@ -6633,15 +6633,6 @@
       "kwarpechowski"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/toSource": {
-    "modified": "2019-03-23T23:49:50.954Z",
-    "contributors": [
-      "teoli",
-      "Diablownik",
-      "Mgjbot",
-      "Ptak82"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2019-03-23T23:47:24.621Z",
     "contributors": [
@@ -6715,18 +6706,6 @@
       "Internauta1024A",
       "Ptak82",
       "Mgjbot",
-      "Marcoos"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Boolean/toSource": {
-    "modified": "2019-03-23T23:58:05.520Z",
-    "contributors": [
-      "teoli",
-      "Witia",
-      "Mgjbot",
-      "Ptak82",
-      "telendt",
-      "Takenbot",
       "Marcoos"
     ]
   },
@@ -7121,13 +7100,6 @@
   },
   "Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString": {
     "modified": "2019-03-23T23:43:29.100Z",
-    "contributors": [
-      "teoli",
-      "Ptak82"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Date/toSource": {
-    "modified": "2019-03-23T23:43:26.646Z",
     "contributors": [
       "teoli",
       "Ptak82"
@@ -7781,16 +7753,6 @@
       "Ptak82"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Object/toSource": {
-    "modified": "2019-03-23T23:53:51.317Z",
-    "contributors": [
-      "teoli",
-      "Mgjbot",
-      "Ptak82",
-      "Takenbot",
-      "Marcoos"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Object/toString": {
     "modified": "2019-03-23T23:48:38.071Z",
     "contributors": [
@@ -7914,14 +7876,6 @@
       "Chrisraven",
       "Ptak82",
       "Nux",
-      "Mgjbot"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/toSource": {
-    "modified": "2019-03-23T23:47:09.941Z",
-    "contributors": [
-      "teoli",
-      "Ptak82",
       "Mgjbot"
     ]
   },
@@ -8149,15 +8103,6 @@
       "Mgjbot",
       "Diablownik",
       "Ptak82"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/String/toSource": {
-    "modified": "2019-03-23T23:45:16.121Z",
-    "contributors": [
-      "teoli",
-      "Mgjbot",
-      "Ptak82",
-      "Diablownik"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/String/toString": {
@@ -10129,6 +10074,15 @@
       "gandalf"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
+    "modified": "2019-03-23T23:49:50.954Z",
+    "contributors": [
+      "teoli",
+      "Diablownik",
+      "Mgjbot",
+      "Ptak82"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean": {
     "modified": "2019-03-23T23:58:08.032Z",
     "contributors": [
@@ -10140,6 +10094,18 @@
       "Marcoos"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
+    "modified": "2019-03-23T23:58:05.520Z",
+    "contributors": [
+      "teoli",
+      "Witia",
+      "Mgjbot",
+      "Ptak82",
+      "telendt",
+      "Takenbot",
+      "Marcoos"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Date": {
     "modified": "2019-01-16T14:55:06.466Z",
     "contributors": [
@@ -10147,6 +10113,13 @@
       "Witia",
       "Marcoos",
       "Mgjbot",
+      "Ptak82"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString": {
+    "modified": "2019-03-23T23:43:26.646Z",
+    "contributors": [
+      "teoli",
       "Ptak82"
     ]
   },
@@ -10194,6 +10167,16 @@
       "Marcoos"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString": {
+    "modified": "2019-03-23T23:53:51.317Z",
+    "contributors": [
+      "teoli",
+      "Mgjbot",
+      "Ptak82",
+      "Takenbot",
+      "Marcoos"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/RangeError": {
     "modified": "2019-03-23T22:51:15.660Z",
     "contributors": [
@@ -10208,6 +10191,14 @@
       "Ptak82"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString": {
+    "modified": "2019-03-23T23:47:09.941Z",
+    "contributors": [
+      "teoli",
+      "Ptak82",
+      "Mgjbot"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
     "modified": "2019-03-18T20:37:36.182Z",
     "contributors": [
@@ -10215,6 +10206,15 @@
       "teoli",
       "Mgjbot",
       "Ptak82"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String/toString": {
+    "modified": "2019-03-23T23:45:16.121Z",
+    "contributors": [
+      "teoli",
+      "Mgjbot",
+      "Ptak82",
+      "Diablownik"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Lexical_grammar": {
