@@ -115,8 +115,8 @@ translation_of: Web/MathML/Element/math
 
 &lt;/body&gt;
 &lt;/html&gt;</pre>
-<p><strong>Notes</strong>: XHTML documents with MathML must be served as <code>application/xhtml+xml</code>. You can achieve that easily by adding the <code>.xhtml</code> extension to your local files. For Apache servers you can <a class="external" href="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype" title="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype">configure your <code>.htaccess</code> file</a> to map extensions to the correct Mime type. Since you notate your MathML in an XML document, also be sure you write a well-formed XML document.</p>
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<p><strong>Notes</strong>: XHTML documents with MathML must be served as <code>application/xhtml+xml</code>. You can achieve that easily by adding the <code>.xhtml</code> extension to your local files. For Apache servers you can <a class="external" href="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype">configure your <code>.htaccess</code> file</a> to map extensions to the correct Mime type. Since you notate your MathML in an XML document, also be sure you write a well-formed XML document.</p>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 <p>{{ CompatibilityTable() }}</p>
 <div id="compat-desktop">
  <table class="compat-table">
@@ -267,7 +267,7 @@ translation_of: Web/MathML/Element/math
  </table>
 </div>
 <h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
-<p>Gecko 7.0 {{ geckoRelease("7.0") }} introduced support for accepting all MathML attributes on the top-level math element (i.e. the same behavior as a {{ MathMLElement("mstyle") }} element). However, the <code>displaystyle</code> attribute was not taken into account and <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=669719" title="https://bugzilla.mozilla.org/show_bug.cgi?id=669719">has been added</a> in Gecko 8.0 {{ geckoRelease("8.0") }}.</p>
+<p>Gecko 7.0 {{ geckoRelease("7.0") }} introduced support for accepting all MathML attributes on the top-level math element (i.e. the same behavior as a {{ MathMLElement("mstyle") }} element). However, the <code>displaystyle</code> attribute was not taken into account and <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=669719">has been added</a> in Gecko 8.0 {{ geckoRelease("8.0") }}.</p>
 <p>A textual fall-back (<code>alttext</code>) or referring to an alternative image using the attributes <code>altimg</code>, <code>altimg-width</code>, <code>altimg-height</code> or <code>altimg-valign</code> is currently not implemented in Gecko.</p>
 <h2 id="Specifications" name="Specifications">Specifications</h2>
 <table class="standard-table">

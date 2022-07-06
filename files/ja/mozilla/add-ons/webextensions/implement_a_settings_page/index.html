@@ -50,7 +50,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 
 <p>これは単にページに青い枠をつけます。</p>
 
-<p><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">この拡張機能をインストール</a>してテストします — お好みのあらゆるウェブページを開きます:</p>
+<p><a href="/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">この拡張機能をインストール</a>してテストします — お好みのあらゆるウェブページを開きます:</p>
 
 <p>{{EmbedYouTube("E-WUhihF8fw")}}</p>
 
@@ -151,7 +151,7 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 
 <ul>
  <li>文書が読み込まれた時、"color" の値を <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get">storage.sync.get()</a></code> を使ってストレージから取り出します。値が未設定なら、既定の "blue" を用います。これで値を <code>sync</code> ストレージ領域から取得できます。</li>
- <li>ユーザーが "Save" を押して送信した時、テキストボックスの値を <code><a href="https://wiki.developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set">storage.sync.set()</a></code> を用いて保存します。これで値を <code>sync</code> ストレージ領域に保存できます。</li>
+ <li>ユーザーが "Save" を押して送信した時、テキストボックスの値を <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set">storage.sync.set()</a></code> を用いて保存します。これで値を <code>sync</code> ストレージ領域に保存できます。</li>
 </ul>
 
 <div class="blockIndicator note">
@@ -161,7 +161,7 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 <p>ローカルストレージがふさわしいと感じる場合、代わりにローカルストレージに設定値を保存できます。</p>
 
 <div class="note">
-<p>Firefox の <code>storage.sync</code> の実装はアドオン ID に依存しているのに注意します。<code>storage.sync</code> を使う場合、上記manifest にあるように、manifest.json の <code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> キーに拡張機能の ID をセットしておく必要があります。</p>
+<p>Firefox の <code>storage.sync</code> の実装はアドオン ID に依存しているのに注意します。<code>storage.sync</code> を使う場合、上記manifest にあるように、manifest.json の <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> キーに拡張機能の ID をセットしておく必要があります。</p>
 </div>
 
 <p>最後に、ストレージから枠の色を読むのに "borderify.js" を更新します:</p>
@@ -197,7 +197,7 @@ getting.then(onGot, onError);
 <p>いま、次を行ってみます:</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on">拡張機能を再読み込み</a></li>
+ <li><a href="/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on">拡張機能を再読み込み</a></li>
  <li>ウェブページを読み込む</li>
  <li>設定ページを開いて枠の色を変える</li>
  <li>ウェブページを再読み込みして違いを見る</li>

@@ -6,31 +6,25 @@ tags:
   - Extensions
 original_slug: Code_snippets/Toolbar
 ---
-<p> </p>
-<p> </p>
-<p>{{ 英語版章題("Adding a toolbar button") }}</p>
-<h3 id=".E3.83.84.E3.83.BC.E3.83.AB.E3.83.90.E3.83.BC.E3.83.9C.E3.82.BF.E3.83.B3.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E3.83.84.E3.83.BC.E3.83.AB.E3.83.90.E3.83.BC.E3.83.9C.E3.82.BF.E3.83.B3.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B">ツールバーボタンを追加する</h3>
+<h3 id="Adding_a_toolbar_button">ツールバーボタンを追加する</h3>
 <p>二つのチュートリアルが参照可能です。</p>
 <ul>
  <li>初心者向けの詳細な説明のある順を追ったチュートリアル : <a href="ja/Custom_Toolbar_Button">Custom Toolbar Button</a></li>
  <li>すでに拡張を作成しており開発の基本は知っている人向けの、ツールバーボタン追加に必要な手順を述べたチュートリアル : <a href="ja/Creating_toolbar_buttons">Creating toolbar buttons</a></li>
 </ul>
-<p>{{ 英語版章題("Adding button by default") }}</p>
-<h3 id="Adding_button_by_default" name="Adding_button_by_default">Adding button by default</h3>
+<h3 id="Adding_button_by_default">Adding button by default</h3>
 <p>スタマイズされたツールバーパレット用のツールバーボタンを入れて、あなたの拡張を開発・配布したとしても、デフォルトではボタンは有効になりません。ユーザはボタンをツールバーへドラッグする必要があります。下のコードを利用することで、あなたのボタンが最初のインストールおよび XPI の再起動後にデフォルトで表示されるようにできます。</p>
 <div class="note">
  <p>ボタンをデフォルトで追加するのは、正しく行うのが非常に難しいという点で、ほぼ間違いなく悪習慣です。ユーザはあなたがボタンを追加したツールバーを非表示にしているかもしれませんし、追加したコードが正常に動作しないようにツールバーをカスタマイズしているかもしれません。</p>
  <p>Firefox がこの目的に API を提供することに対しては、バグが立てられています。<span class="comment">need the bug #</span></p>
 </div>
-<p>{{ 英語版章題("Notes") }}</p>
-<h4 id=".E3.83.A1.E3.83.A2" name=".E3.83.A1.E3.83.A2">メモ</h4>
+<h4 id="Notes">メモ</h4>
 <ol>
  <li>このサンプルは、Firefox 独自のものですが、Thunderbird でも正しいノードをターゲットに変更することで動作します。</li>
  <li>デフォルトでボタンを追加するのは、正しい値とともに追加可能で、あなたの拡張のよく利用される機能に対してである場合だけにしてください。ユーザに限られた UI スペースしかないかもしれないことを考慮し、本当に必要かどうか検討してください。</li>
  <li>このコードは browser.xul のオーバーレイに含められる必要があります。</li>
 </ol>
-<p>{{ 英語版章題("Example") }}</p>
-<h4 id=".E3.82.B5.E3.83.B3.E3.83.97.E3.83.AB" name=".E3.82.B5.E3.83.B3.E3.83.97.E3.83.AB">サンプル</h4>
+<h4 id="Example">サンプル</h4>
 <pre class="eval"> try {
    var firefoxnav = document.getElementById("nav-bar");
    var curSet = firefoxnav.currentSet;

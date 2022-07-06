@@ -4,30 +4,32 @@ slug: Web/API/Element/blur_event
 translation_of: Web/API/Element/blur_event
 original_slug: Web/Events/blur
 ---
-<p>当一个元素失去焦点的时候 blur 事件被触发。它和 <a href="/en-US/docs/Mozilla_event_reference/focusout"><code>focusout</code></a> 事件的主要区别是 focusout 支持冒泡。</p>
+<p>当一个元素失去焦点的时候 blur 事件被触发。它和 <a href="/zh-CN/docs/Mozilla_event_reference/focusout"><code>focusout</code></a> 事件的主要区别是 focusout 支持冒泡。</p>
 
 <h2 id="常规信息">常规信息</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">规范</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur">DOM L3</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">接口</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("FocusEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">是否冒泡</dt>
- <dd style="margin: 0 0 0 120px;">否</dd>
- <dt style="float: left; text-align: right; width: 120px;">可取消默认行为</dt>
- <dd style="margin: 0 0 0 120px;">否</dd>
- <dt style="float: left; text-align: right; width: 120px;">目标对象</dt>
- <dd style="margin: 0 0 0 120px;">元素（Element）</dd>
- <dt style="float: left; text-align: right; width: 120px;">默认行为</dt>
- <dd style="margin: 0 0 0 120px;">无</dd>
+ <dt>规范</dt>
+ <dd><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur">DOM L3</a></dd>
+ <dt>接口</dt>
+ <dd>{{domxref("FocusEvent")}}</dd>
+ <dt>是否冒泡</dt>
+ <dd>否</dd>
+ <dt>可取消默认行为</dt>
+ <dd>否</dd>
+ <dt>目标对象</dt>
+ <dd>元素（Element）</dd>
+ <dt>默认行为</dt>
+ <dd>无</dd>
 </dl>
 
-<p>{{NoteStart}}{{domxref("Document.activeElement")}} 的值随浏览器的不同而不同 ({{bug(452307)}}): IE10把值设为焦点将要移向的对象 , 而Firefox和Chrome 往往把值设为<code>body</code> .{{NoteEnd}}</p>
+<div class="note">
+ <p><strong>备注：</strong>{{domxref("Document.activeElement")}} 的值随浏览器的不同而不同（{{bug(452307)}}）：IE10 把值设为焦点将要移向的对象，而 Firefox 和 Chrome 往往把值设为 <code>body</code>。</p>
+</div>
 
 <h2 id="属性">属性</h2>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">属性</th>
@@ -39,22 +41,22 @@ original_slug: Web/Events/blur
   <tr>
    <td><code>target</code> {{readonlyInline}}</td>
    <td>{{domxref("EventTarget")}}</td>
-   <td>产生该事件的对象(DOM树中最顶级的那个对象).</td>
+   <td>产生该事件的对象 (DOM 树中最顶级的那个对象).</td>
   </tr>
   <tr>
    <td><code>type</code> {{readonlyInline}}</td>
    <td>{{domxref("DOMString")}}</td>
-   <td>事件类型.</td>
+   <td>事件类型。</td>
   </tr>
   <tr>
    <td><code>bubbles</code> {{readonlyInline}}</td>
    <td>{{jsxref("Boolean")}}</td>
-   <td>该事件是否冒泡.</td>
+   <td>该事件是否冒泡。</td>
   </tr>
   <tr>
    <td><code>cancelable</code> {{readonlyInline}}</td>
    <td>{{jsxref("Boolean")}}</td>
-   <td>该事件是否可取消默认行为.</td>
+   <td>该事件是否可取消默认行为。</td>
   </tr>
   <tr>
    <td><code>relatedTarget</code> {{readonlyInline}}</td>
@@ -87,59 +89,13 @@ form.addEventListener("blur", function( event ) {
 
 <p>{{EmbedLiveSample('Event_delegation')}}</p>
 
+<h2 id="规范">规范</h2>
+
+{{Specifications}}
+
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>5</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>6</td>
-   <td>12.1</td>
-   <td>5.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.0</td>
-   <td>53</td>
-   <td>{{CompatUnknown}}</td>
-   <td>10.0</td>
-   <td>12.1</td>
-   <td>5.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在 Gecko 24 {{geckoRelease(24)}} 之前，事件的接口为 {{domxref("Event")}}，而不是 {{domxref("FocusEvent")}}。参考 ({{bug(855741)}}).</p>
+{{Compat("api.Element.blur_event")}}
 
 <h2 id="相关的事件">相关的事件</h2>
 

@@ -9,13 +9,15 @@ translation_of: Web/CSS/transform-origin
 ---
 <p>{{ CSSRef }}</p>
 
-<p><strong><code>transform-origin</code></strong> CSS属性让你更改一个元素变形的原点。</p>
+<p><strong><code>transform-origin</code></strong> CSS 属性让你更改一个元素变形的原点。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/transform-origin.html")}}</div>
 
 
 
 <p>转换起点是应用转换的点。例如，<code style="font-style: normal;">rotate()</code>函数的转换原点是旋转中心。（这个属性的应用原理是先用这个属性的赋值转换该元素，进行变形，然后再用这个属性的值把元素转换回去）</p>
+
+<p>默认的转换原点是 <code>center</code></p>
 
 <h2 id="语法">语法</h2>
 
@@ -53,7 +55,7 @@ transform-origin: initial;
 transform-origin: unset;
 </pre>
 
-<p><code>transform-origin</code>属性可以使用一个，两个或三个值来指定，其中每个值都表示一个偏移量。 没有明确定义的偏移将重置为其对应的<a href="/zh-CN/docs/Web/CSS/initial_value">初始值</a>。</p>
+<p><code>transform-origin</code>属性可以使用一个，两个或三个值来指定，其中每个值都表示一个偏移量。没有明确定义的偏移将重置为其对应的<a href="/zh-CN/docs/Web/CSS/initial_value">初始值</a>。</p>
 
 <p>如果定义了两个或更多值并且没有值的关键字，或者唯一使用的关键字是<code>center</code>，则第一个值表示水平偏移量，第二个值表示垂直偏移量。</p>
 
@@ -72,7 +74,7 @@ transform-origin: unset;
  <li>三个值：
   <ul>
    <li>前两个值和只有两个值时的用法相同。</li>
-   <li>第三个值必须是{{cssxref("&lt;length&gt;")}}。它始终代表Z轴偏移量。</li>
+   <li>第三个值必须是{{cssxref("&lt;length&gt;")}}。它始终代表 Z 轴偏移量。</li>
   </ul>
  </li>
 </ul>
@@ -83,15 +85,15 @@ transform-origin: unset;
  <dt><em>x-offset</em></dt>
  <dd>定义变形中心距离盒模型的左侧的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;percentage&gt;")}}偏移值。</dd>
  <dt><em>offset-keyword</em></dt>
- <dd><code>left<font face="Open Sans, sans-serif">，</font></code><code>right，</code><code>top<font face="Open Sans, sans-serif">，</font></code><code>bottom<font face="Open Sans, sans-serif">或</font></code><code>center中之一，定义相对应的变形中心偏移。</code></dd>
+ <dd><code>left，</code><code>right，</code><code>top，</code><code>bottom或</code><code>center中之一，定义相对应的变形中心偏移。</code></dd>
  <dt><em>y-offset</em></dt>
  <dd>定义变形中心距离盒模型的顶的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;percentage&gt;")}}偏移值。</dd>
  <dt><em>x-offset-keyword</em></dt>
- <dd><code>left<font face="Open Sans, sans-serif">，</font></code><code>right</code><code><font face="Open Sans, sans-serif">或</font></code><code>center中之一，定义相对应的变形中心偏移。</code></dd>
+ <dd><code>left，</code><code>right</code><code>或</code><code>center中之一，定义相对应的变形中心偏移。</code></dd>
  <dt><em>y-offset-keyword</em></dt>
- <dd><code>top<font face="Open Sans, sans-serif">，</font></code><code>bottom<font face="Open Sans, sans-serif">或</font></code><code>center中之一，定义相对应的变形中心偏移。</code></dd>
+ <dd><code>top，</code><code>bottom或</code><code>center中之一，定义相对应的变形中心偏移。</code></dd>
  <dt><em>z-offset</em></dt>
- <dd>定义变形中心距离用户视线（z=0处）的{{cssxref("&lt;length&gt;")}}（不能是{{cssxref("&lt;percentage&gt;")}}）偏移值。</dd>
+ <dd>定义变形中心距离用户视线（z=0 处）的{{cssxref("&lt;length&gt;")}}（不能是{{cssxref("&lt;percentage&gt;")}}）偏移值。</dd>
 </dl>
 
 <p>关键字是方便的简写方法，等同于以下{{cssxref("&lt;percentage&gt;")}}值：</p>
@@ -444,7 +446,7 @@ transform-origin: 100% -30%;
 
 <p>{{Cssinfo}}</p>
 
-<h2 id="浏览器兼容"><span style='font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 2.33333rem; letter-spacing: -0.00278rem;'>浏览器兼容</span></h2>
+<h2 id="浏览器兼容">浏览器兼容</h2>
 
 
 
@@ -453,5 +455,5 @@ transform-origin: 100% -30%;
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transforms" title="/en-US/docs/CSS/Using_CSS_transforms">使用CSS变形</a></li>
+ <li><a href="/en-US/docs/CSS/Using_CSS_transforms" title="/en-US/docs/CSS/Using_CSS_transforms">使用 CSS 变形</a></li>
 </ul>

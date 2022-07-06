@@ -7,7 +7,7 @@ translation_of: Web/CSS/overscroll-behavior
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>overscroll-behavior</code></strong> CSS property is shorthand for the {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}} properties, which allow you to control the browser's scroll overflow behavior — what happens when the boundary of a scrolling area is reached.</span></p>
+<p><span class="seoSummary">CSS-свойство <strong><code>overscroll-behavior</code></strong> — это сокращение для свойств {{cssxref("overscroll-behavior-x")}} и {{cssxref("overscroll-behavior-y")}}, которые позволяют управлять поведением прокрутки при достижении границы области прокрутки.</span></p>
 
 <pre class="brush:css no-line-numbers">/* Значения-ключевые слова */
 overscroll-behavior: auto; /* по умолчанию */
@@ -23,40 +23,40 @@ overflow: initial;
 overflow: unset;
 </pre>
 
-<p>По умолчанию, мобильные браузеры как правило обеспечивают эффект "отскока" или даже обновляют страницу при достижение её верхней или нижней части (или другой области прокрутки). You may also have noticed that when you have a dialog box with scrolling content on top of a page of scrolling content, once the dialog box's scroll boundary is reached, the underlying page will then start to scroll — this is called <strong>scroll chaining</strong>.</p>
+<p>По умолчанию мобильные браузеры, как правило, обеспечивают эффект «отскока» или даже обновляют страницу при достижении её верхней или нижней части (или другой области прокрутки). Возможно, вы также замечали, что когда поверх страницы с прокруткой расположено диалоговое окно с прокруткой, то при достижении границы прокрутки диалогового окна нижележащая страница начинает прокручиваться. Это называется цепочкой прокрутки (scroll chaining, англ.)</p>
 
-<p>In some cases these behaviors are not desirable. you can use <code>overscroll-behavior</code> to get rid of unwanted scroll chaining and the browser's Facebook/Twitter app-inspired "pull to refresh"-type behavior.</p>
+<p>В некоторых случаях такое поведение нежелательно. Вы можете использовать <code>overscroll-behavior</code>, чтобы избавиться от нежелательных цепочек прокрутки и поведения страниц браузера по принципу «потяните, чтобы обновить» (pull to refresh, англ.), характерного, например, для приложений Facebook и Twitter.</p>
 
 <p>{{cssinfo}}</p>
 
-<h2 id="Syntax">Syntax</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<p>The <code>overscroll-behavior</code> property is specified as one or two keywords chosen from the list of values below.</p>
+<p>Свойство <code>overscroll-behavior</code> задаётся в виде одного или двух ключевых слов, выбранных из списка значений ниже.</p>
 
-<p>Two keywords specifies the <code>overscroll-behavior</code> value on the <code>x</code> and <code>y</code> axes respectively. If only one value is specified, both x and y are assumed to have the same value.</p>
+<p>Два ключевых слова определяют значение <code>overscroll-behavior</code> по осям <code>x</code> и <code>y</code> соответственно. Если задано только одно значение, то предполагается, что и <code>x</code>, и <code>y</code> одинаковы.</p>
 
-<h3 id="Values">Values</h3>
+<h3 id="Values">Значения</h3>
 
 <dl>
  <dt><code>auto</code></dt>
- <dd>The default scroll overflow behavior occurs as normal.</dd>
+ <dd>Поведение по умолчанию.</dd>
  <dt><code>contain</code></dt>
- <dd>Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighbouring scrolling areas, e.g. underlying elements will not scroll.</dd>
+ <dd>Поведение для <code>overscroll-behavior</code> применяется внутри элемента, для которого установлено это значение (например, эффекты «отскока» или обновления), но не возникают цепочки прокрутки для соседних областей прокрутки, например, нижележащие элементы не будут прокручиваться.</dd>
  <dt><code>none</code></dt>
- <dd>No scroll chaining occurs to neighbouring scrolling areas, and default scroll overflow behavior is prevented.</dd>
+ <dd>Не происходит цепочки прокрутки в соседних областях прокрутки, и по умолчанию предотвращается достижение границы области прокрутки.</dd>
 </dl>
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+<h3 id="Formal_syntax">Формальный синтаксис</h3>
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+<h2 id="Examples">Примеры</h2>
 
-<p>In our <a href="https://mdn.github.io/css-examples/overscroll-behavior/">overscroll-behavior example</a> (see the <a href="https://github.com/mdn/css-examples/tree/master/overscroll-behavior">source code</a> also), we present a full-page list of fake contacts, and a dialog box containing a chat window. </p>
+<p>В нашем примере <a href="https://mdn.github.io/css-examples/overscroll-behavior/">overscroll-поведения</a> (см. также код по ссылке <a href="https://github.com/mdn/css-examples/tree/master/overscroll-behavior"></a>) представлен полностраничный список поддельных контактов и диалоговое окно с чатом.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15778/example.png" style="border-style: solid; border-width: 1px; display: block; height: 622px; margin: 0px auto; width: 350px;"></p>
 
-<p>Both of these areas scroll; normally if you scrolled the chat window until you hit a scroll boundary, the underlying contacts window would start to scroll too, which is not desirable. This can be stopped using <code>overscroll-behavior-y</code> (<code>overscroll-behavior</code> would also work) on the chat window, like this:</p>
+<p>Обе эти области прокручиваются; обычно, если вы прокручиваете окно чата до тех пор, пока не достигнете границы прокрутки, нижележащее окно контактов тоже начнёт прокручиваться, что нежелательно. Предотвратить такое поведение можно, используя <code>overscroll-behavior-y</code> (<code>overscroll-behavior</code> также подойдет) для окна чата, как показано ниже: </p>
 
 <pre class="brush: css">.messages {
   height: 220px;
@@ -64,16 +64,16 @@ overflow: unset;
   overscroll-behavior-y: contain;
 } </pre>
 
-<p>We also wanted to get rid of the standard overscroll effects when the contacts are scrolled to the top or bottom (e.g. Chrome on Android refreshes the page when you scroll past the top boundary). This can be prevented by setting <code>overscroll-behavior: none</code> on the {{htmlelement("body")}} element:</p>
+<p>Мы также хотим избавиться от стандартного overscroll-эффекта при прокрутке контактов вверх или вниз (например, Chrome на Android обновляет страницу при прокрутке за пределы верхней границы). Это можно предотвратить, установив для элемента {{htmlelement("body")}} значение <code>overscroll-behavior: none</code>:</p>
 
 <pre class="brush: css">body {
   margin: 0;
   overscroll-behavior: none;
 }</pre>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<p>Until the CSSWG publishes their own draft, the specification can only be found in its <a href="https://wicg.github.io/overscroll-behavior/">WICG Github Repository</a>.</p>
+<p>Пока CSSWG не опубликует свой собственный вариант, спецификация может быть найдена только<a href="https://wicg.github.io/overscroll-behavior/">на Github в репозитории WICG</a>.</p>
 
 <table class="standard-table">
  <thead>
@@ -96,9 +96,9 @@ overflow: unset;
 
 
 
-<p>{{Compat("css.properties.overscroll-behavior")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="See_also">См. также</h2>
 
 <ul>
  <li><a href="https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo">Take control of your scroll: customizing pull-to-refresh and overflow effects</a></li>

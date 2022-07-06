@@ -26,7 +26,7 @@ original_slug: Web/HTTP/Заголовки/Set-Cookie
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="notranslate">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;
+<pre>Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;
 Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Expires=&lt;date&gt;
 Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Max-Age=&lt;non-zero-digit&gt;
 Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt;
@@ -120,26 +120,26 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
 
 <p>Сессионные cookies будут удалены после отключения клиента. В них не указываются директивы <code>Expires</code> или <code>Max-Age</code>. Учитывайте, что часто в браузере включено восстановление сессии.</p>
 
-<pre class="notranslate">Set-Cookie: sessionid=38afes7a8; HttpOnly; Path=/</pre>
+<pre>Set-Cookie: sessionid=38afes7a8; HttpOnly; Path=/</pre>
 
 <h3 id="Постоянный_cookie">Постоянный cookie</h3>
 
 <p>Вместо истечения срока действия, когда клиент закрыт, срок действия постоянных файлов cookie истекает в определённую дату (<code>Expires</code>) или по истечении определённого промежутка времени (<code>Max-Age</code>).</p>
 
-<pre class="notranslate">Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
+<pre>Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
 </pre>
 
 <h3 id="Неверные_домены">Неверные домены</h3>
 
 <p>Файл cookie, принадлежащий домену, который не включает исходный сервер, <a href="https://tools.ietf.org/html/rfc6265#section-4.1.2.3">должен быть отклонён пользовательским</a>. Следующий cookie будет отклонён, если он был установлен сервером, размещённым на originalcompany.com.</p>
 
-<pre class="notranslate">Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk; Path=/; Expires=Wed, 30 Aug 2019 00:00:00 GMT</pre>
+<pre>Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk; Path=/; Expires=Wed, 30 Aug 2019 00:00:00 GMT</pre>
 
 <h3 id="Cookie_prefixes">Cookie prefixes</h3>
 
 <p>Cookies names with the prefixes <code>__Secure-</code> and <code>__Host-</code> can be used only if they are set with the <code>secure</code> directive from a secure (HTTPS) origin. In addition, cookies with the <code>__Host-</code> prefix must have a path of "/" (the entire host) and must not have a domain attribute. For clients that don't implement cookie prefixes, you cannot count on having these additional assurances and the cookies will always be accepted.</p>
 
-<pre class="notranslate">// Both accepted when from a secure origin (HTTPS)
+<pre>// Both accepted when from a secure origin (HTTPS)
 Set-Cookie: __Secure-ID=123; Secure; Domain=example.com
 Set-Cookie: __Host-ID=123; Secure; Path=/
 
@@ -174,9 +174,7 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("http.headers.Set-Cookie")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Compatibility_notes">Compatibility notes</h2>
 

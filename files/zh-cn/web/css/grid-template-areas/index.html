@@ -3,12 +3,12 @@ title: grid-template-areas
 slug: Web/CSS/grid-template-areas
 tags:
   - CSS
-  - CSS属性
-  - CSS布局
-  - CSS网格
+  - CSS 属性
+  - CSS 布局
+  - CSS 网格
 translation_of: Web/CSS/grid-template-areas
 ---
-<p><strong><code>grid-template-areas</code></strong> CSS 属性是网格区域 {{glossary("grid areas")}} 在CSS中的特定命名。</p>
+<p><strong><code>grid-template-areas</code></strong> CSS 属性是网格区域 {{glossary("grid areas")}} 在 CSS 中的特定命名。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/grid-template-areas.html")}}</div>
 
@@ -18,7 +18,7 @@ translation_of: Web/CSS/grid-template-areas
 <p>Those areas are not associated with any particular grid item, but can be referenced from the grid-placement properties {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, and their shorthands {{cssxref("grid-row")}}, {{cssxref("grid-column")}}, and {{cssxref("grid-area")}}.</p>
 </div>
 
-<p>网格区块(grid areas)和网格项(grid item)沒有关联，但是它们可以和一些网格定位属性(grid-placement properties)关联起来，比如{{cssxref("grid-row-start")}}， {{cssxref("grid-row-end")}}， {{cssxref("grid-column-start")}}和{{cssxref("grid-column-end")}}；也可以和一些速记(shorthands)属性关联起来，比如{{cssxref("grid-row")}}，{{cssxref("grid-column")}} 和 {{cssxref("grid-area")}}。</p>
+<p>网格区块 (grid areas) 和网格项 (grid item) 沒有关联，但是它们可以和一些网格定位属性 (grid-placement properties) 关联起来，比如{{cssxref("grid-row-start")}}， {{cssxref("grid-row-end")}}， {{cssxref("grid-column-start")}}和{{cssxref("grid-column-end")}}；也可以和一些速记 (shorthands) 属性关联起来，比如{{cssxref("grid-row")}}，{{cssxref("grid-column")}} 和 {{cssxref("grid-area")}}。</p>
 
 <h2 id="Syntax语法">Syntax[语法]</h2>
 
@@ -40,9 +40,9 @@ grid-template-areas: unset; /* 未设置 */
 
 <dl>
  <dt><code>none</code></dt>
- <dd>网格容器没有定义任何的网格区块(grid areas)。</dd>
+ <dd>网格容器没有定义任何的网格区块 (grid areas)。</dd>
  <dt><code>{{cssxref("&lt;string&gt;")}}+</code></dt>
- <dd>每一个给定的字符串会生成一行，一个字符串中用空格分隔的每一个单元(cell)会生成一列。多个同名的，跨越相邻行或列的单元称为网格区块(grid area)。非矩形的网格区块是无效的。</dd>
+ <dd>每一个给定的字符串会生成一行，一个字符串中用空格分隔的每一个单元 (cell) 会生成一列。多个同名的，跨越相邻行或列的单元称为网格区块 (grid area)。非矩形的网格区块是无效的。</dd>
 </dl>
 
 <h3 id="形式化语法">形式化语法</h3>
@@ -63,7 +63,7 @@ grid-template-areas: unset; /* 未设置 */
 <h3 id="CSS">CSS</h3>
 
 <pre class="brush:css; highlight[5-7]">#page {
-  display: grid; /* 1.设置display为grid */
+  display: grid; /* 1.设置 display 为 grid */
   width: 100%;
   height: 250px;
   grid-template-areas: "head head"
@@ -74,7 +74,7 @@ grid-template-areas: unset; /* 未设置 */
 }
 
 #page &gt; header {
-  grid-area: head; /* 4. 指定当前元素所在的区域位置, 从grid-template-areas选取值 */
+  grid-area: head; /* 4. 指定当前元素所在的区域位置，从 grid-template-areas 选取值 */
   background-color: #8ca0ff;
 }
 
@@ -125,13 +125,13 @@ grid-template-areas: unset; /* 未设置 */
 
 <p>{{Compat("css.properties.grid-template-areas")}}</p>
 
-<p>[1] 从Chrome 29.0 开始支持，在 <code>chrome://flags</code> 中打开<em>"开启实验性网络平台特性"(experimental Web Platform features)</em>。从 Chrome {{CompatChrome("57.0")}} 开始默认开启。</p>
+<p>[1] 从 Chrome 29.0 开始支持，在 <code>chrome://flags</code> 中打开<em>"开启实验性网络平台特性"(experimental Web Platform features)</em>。从 Chrome {{CompatChrome("57.0")}} 开始默认开启。</p>
 
-<p>[2] 从Gecko 40.0 {{geckoRelease("40.0")}} 开始支持, 在设置中打开<code>layout.css.grid.enabled</code>，默认是 <code>false</code>。从Gecko 52.0 {{geckoRelease("52.0")}}开始默认开启。</p>
+<p>[2] 从 Gecko 40.0 {{geckoRelease("40.0")}} 开始支持，在设置中打开<code>layout.css.grid.enabled</code>，默认是 <code>false</code>。从 Gecko 52.0 {{geckoRelease("52.0")}}开始默认开启。</p>
 
-<p>[3] EdgeHTML 16已支持。Internet Explorer 和 Edge 实现了一个<a href="https://www.w3.org/TR/2011/WD-css3-grid-layout-20110407/">旧版本的规范</a>，旧的规范中没有定义这个属性。</p>
+<p>[3] EdgeHTML 16 已支持。Internet Explorer 和 Edge 实现了一个<a href="https://www.w3.org/TR/2011/WD-css3-grid-layout-20110407/">旧版本的规范</a>，旧的规范中没有定义这个属性。</p>
 
-<p>[4] 从 Opera 28.0开始支持，在 <code>chrome://flags</code>中打开<em>"开启实验性网络平台特性"(experimental Web Platform features)</em>。从Opera {{CompatOpera(44)}}开始默认开启。</p>
+<p>[4] 从 Opera 28.0 开始支持，在 <code>chrome://flags</code>中打开<em>"开启实验性网络平台特性"(experimental Web Platform features)</em>。从 Opera {{CompatOpera(44)}}开始默认开启。</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -141,7 +141,7 @@ grid-template-areas: unset; /* 未设置 */
  <li>视频教程<em>：<a href="http://gridbyexample.com/video/grid-template-areas/">Grid Template Areas</a></em></li>
 </ul>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
  <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>

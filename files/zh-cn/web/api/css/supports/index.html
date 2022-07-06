@@ -9,7 +9,7 @@ translation_of: Web/API/CSS/supports
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
-<p><code><strong>CSS.supports()</strong></code> 静态方法返回一个{{domxref("Boolean")}}值，用来校验浏览器是否支持一个给定的CSS特性。</p>
+<p><code><strong>CSS.supports()</strong></code> 静态方法返回一个{{domxref("Boolean")}}值，用来校验浏览器是否支持一个给定的 CSS 特性。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -19,13 +19,13 @@ translation_of: Web/API/CSS/supports
 
 <h3 id="参数">参数</h3>
 
-<p>有两种不同的传值形式。第一种用来检验浏览器对于一对“属性-属性值”的支持：</p>
+<p>有两种不同的传值形式。第一种用来检验浏览器对于一对“属性 - 属性值”的支持：</p>
 
 <dl>
  <dt><em>propertyName</em></dt>
- <dd>一个包含要检查的CSS属性名称的{{domxref("DOMString")}}。</dd>
+ <dd>一个包含要检查的 CSS 属性名称的{{domxref("DOMString")}}。</dd>
  <dt><em>value</em></dt>
- <dd>一个包含要检查的CSS属性值的{{domxref("DOMString")}}。</dd>
+ <dd>一个包含要检查的 CSS 属性值的{{domxref("DOMString")}}。</dd>
 </dl>
 
 <p>第二种语法需要一个匹配{{cssxref("@supports")}}条件的参数：</p>
@@ -41,86 +41,19 @@ translation_of: Web/API/CSS/supports
 result = CSS.supports("display", "flex");
 result = CSS.supports('--foo', 'red');
 result = CSS.supports('(--foo: red)');
-result = CSS.supports("<code class="language-css">( <span class="property token">transform-origin</span><span class="punctuation token">:</span> 5% 5% )");
-result = <code class="language-css">CSS.supports("( <span class="property token">transform-style</span><span class="punctuation token">:</span> preserve ) or ( <span class="property token">-moz-transform-style</span><span class="punctuation token">:</span> preserve ) or " +
-                      "( <span class="property token">-o-transform-style</span><span class="punctuation token">:</span> preserve ) or ( <span class="property token">-webkit-transform-style</span><span class="punctuation token">:</span> preserve )" );</code></code>
+result = CSS.supports("<code class="language-css">( transform-origin: 5% 5% )");
+result = <code class="language-css">CSS.supports("( transform-style: preserve ) or ( -moz-transform-style: preserve ) or " +
+                      "( -o-transform-style: preserve ) or ( -webkit-transform-style: preserve )" );</code></code>
 //result is true or false
 </pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Conditional', '#the-css-interface', 'CSS.supports()') }}</td>
-   <td>{{ Spec2('CSS3 Conditional') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>28.0 [2]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("22") }} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>12.1</td>
-   <td>9 [2]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("22") }} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>12.1</td>
-   <td>9</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]只有在用户设置<code>layout.css.supports-rule.enabled=true</code>时，Gecko 20和21才会支持这一特性。</p>
-
-<p>[2] 在Chrome ≤ 51 (bug 584683) 和 Safari (bug 154669)中, 即使支持自定义属性，<code>CSS.supports('--foo', 'red')</code> 也会返回false。 您可以使用<code>CSS.supports('(--foo: red)')</code>，作为一种解决方案。</p>
+{{Compat("api.CSS.supports")}}
 
 <h2 id="参见">参见</h2>
 

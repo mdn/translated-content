@@ -9,17 +9,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 ---
 <p>{{JSRef}}</p>
 
-<p>该<code><strong>Promise.allSettled()</strong></code>方法返回一个在所有给定的promise都已经<code>fulfilled</code>或<code>rejected</code>后的promise，并带有一个对象数组，每个对象表示对应的promise结果。</p>
+<p>该<code><strong>Promise.allSettled()</strong></code>方法返回一个在所有给定的 promise 都已经<code>fulfilled</code>或<code>rejected</code>后的 promise，并带有一个对象数组，每个对象表示对应的 promise 结果。</p>
 
 <p>当您有多个彼此不依赖的异步任务成功完成时，或者您总是想知道每个<code>promise</code>的结果时，通常使用它。</p>
 
-<p><font><font>相比之下，</font></font><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a></code><font><font> 更适合彼此相互依赖或者在其中任何一个<code>reject</code>时立即结束。</font></font></p>
+<p>相比之下，<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a></code> 更适合彼此相互依赖或者在其中任何一个<code>reject</code>时立即结束。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}</div>
 
 <h2 id="句法">句法</h2>
 
-<pre class="notranslate"><em>Promise</em>.allSettled(<em>iterable</em>);</pre>
+<pre><em>Promise</em>.allSettled(<em>iterable</em>);</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
    <th scope="col">评论</th>
   </tr>
   <tr>
-   <td><a href="https://tc39.es/proposal-promise-allSettled/"><code>Promise.allSettled()</code> （TC39第4阶段草案）</a></td>
+   <td><a href="https://tc39.es/proposal-promise-allSettled/"><code>Promise.allSettled()</code> （TC39 第 4 阶段草案）</a></td>
    <td>{{SPEC2("ESDraft")}}</td>
    <td></td>
   </tr>
@@ -59,11 +59,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 
 <ul>
  <li>
-<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Archive/Add-ons/Techniques/Promises">Promises</a></li>
+<a href="/zh-CN/docs/Archive/Add-ons/Techniques/Promises">Promises</a></li>
  <li>
-<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a></li>
+<a href="/zh-CN/docs/Web/JavaScript/Guide/Using_promises">Using promises</a></li>
  <li>
-<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with promises</a></li>
+<a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with promises</a></li>
  <li>{{jsxref("Promise")}}</li>
  <li>{{jsxref("Promise.all()")}}</li>
 </ul>

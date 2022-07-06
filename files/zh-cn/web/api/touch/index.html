@@ -15,13 +15,13 @@ translation_of: Web/API/Touch
 
 <p>对象属性 {{ domxref("Touch.radiusX") }}, {{ domxref("Touch.radiusY") }}, 和 {{ domxref("Touch.rotationAngle") }} 表示用户触摸操作所作用的区域，即<em>触摸区域</em>。这些属性对于处理类似于手指触摸之类的不精确操作很有帮助。这些属性可以表示出一个尽可能匹配触控区域的椭圆形（例如用户的指尖触控）。 {{experimental_inline}}</p>
 
-<div class="note"><strong>注意:</strong> 以下很多属性的值需要依赖硬件设备去获取，例如，如果设备本身不支持侦测压感，那么 <code>force</code> 属性的值将始终是0，对于 <code>radiusX</code> 和 <code>radiusY</code> 来说同样可能有这种情况，如果设备认为触点只是一个点而不是一个面, 它们始终为1。 </div>
+<div class="note"><strong>注意：</strong> 以下很多属性的值需要依赖硬件设备去获取，例如，如果设备本身不支持侦测压感，那么 <code>force</code> 属性的值将始终是 0，对于 <code>radiusX</code> 和 <code>radiusY</code> 来说同样可能有这种情况，如果设备认为触点只是一个点而不是一个面，它们始终为 1。 </div>
 
 <h2 id="构造函数">构造函数</h2>
 
 <dl>
  <dt>{{domxref("Touch.Touch", "Touch()")}} {{experimental_inline}}</dt>
- <dd>创建一个Touch对象。</dd>
+ <dd>创建一个 Touch 对象。</dd>
  <dt></dt>
 </dl>
 
@@ -33,21 +33,21 @@ translation_of: Web/API/Touch
 
 <dl>
  <dt>{{ domxref("Touch.identifier") }}{{readonlyInline}}</dt>
- <dd>此 <code>Touch</code> 对象的唯一标识符。 一次触摸动作(例如手指触摸)在平面上移动的整个过程中, 该标识符不变。可以根据它来判断跟踪的是否是同一次触摸过程。</dd>
+ <dd>此 <code>Touch</code> 对象的唯一标识符。 一次触摸动作 (例如手指触摸) 在平面上移动的整个过程中，该标识符不变。可以根据它来判断跟踪的是否是同一次触摸过程。</dd>
  <dt><strong>{{ domxref("Touch.screenX") }}</strong>{{readonlyInline}}</dt>
- <dd>触点相对于屏幕左边缘的X坐标。</dd>
+ <dd>触点相对于屏幕左边缘的 X 坐标。</dd>
  <dt><strong>{{ domxref("Touch.screenY") }}</strong>{{readonlyInline}}</dt>
- <dd>触点相对于屏幕上边缘的Y坐标。</dd>
+ <dd>触点相对于屏幕上边缘的 Y 坐标。</dd>
  <dt><strong>{{ domxref("Touch.clientX") }}</strong>{{readonlyInline}}</dt>
- <dd>触点相对于可见视区(<a href="http://www.quirksmode.org/mobile/viewports2.html" title="http://www.quirksmode.org/mobile/viewports2.html">visual viewport</a>)左边缘的X坐标。不包括任何滚动偏移。</dd>
+ <dd>触点相对于可见视区 (<a href="http://www.quirksmode.org/mobile/viewports2.html">visual viewport</a>) 左边缘的 X 坐标。不包括任何滚动偏移。</dd>
  <dt><strong>{{ domxref("Touch.clientY") }}</strong>{{readonlyInline}}</dt>
- <dd>触点相对于可见视区(<a href="http://www.quirksmode.org/mobile/viewports2.html" title="http://www.quirksmode.org/mobile/viewports2.html">visual viewport</a>)上边缘的Y坐标。不包括任何滚动偏移。</dd>
+ <dd>触点相对于可见视区 (<a href="http://www.quirksmode.org/mobile/viewports2.html">visual viewport</a>) 上边缘的 Y 坐标。不包括任何滚动偏移。</dd>
  <dt>{{ domxref("Touch.pageX") }}{{readonlyInline}}</dt>
- <dd>触点相对于HTML文档左边缘的X坐标。当存在水平滚动的偏移时, 这个值包含了水平滚动的偏移。</dd>
+ <dd>触点相对于 HTML 文档左边缘的 X 坐标。当存在水平滚动的偏移时，这个值包含了水平滚动的偏移。</dd>
  <dt>{{ domxref("Touch.pageY") }}{{readonlyInline}}</dt>
- <dd>触点相对于HTML文档上边缘的Y坐标。当存在垂直滚动的偏移时, 这个值包含了垂直滚动的偏移。</dd>
+ <dd>触点相对于 HTML 文档上边缘的 Y 坐标。当存在垂直滚动的偏移时，这个值包含了垂直滚动的偏移。</dd>
  <dt>{{ domxref("Touch.target") }}{{readonlyInline}}</dt>
- <dd>返回触摸点最初接触的 {{ domxref("Element")}}，即使这个触摸点已经移出那个元素的交互区域。需要注意的是, 如果这个元素在触摸过程中被移除, 这个事件仍然会指向它, 因此这个事件也不会冒泡到 <code>window</code> 或 <code>document</code> 对象。因此, 如果有元素在触摸过程中可能被移除, 最佳实践是将触摸事件的监听器绑定到这个元素本身, 防止元素被移除后, 无法再从它的上一级元素上侦测到从该元素冒泡的事件。</dd>
+ <dd>返回触摸点最初接触的 {{ domxref("Element")}}，即使这个触摸点已经移出那个元素的交互区域。需要注意的是，如果这个元素在触摸过程中被移除，这个事件仍然会指向它，因此这个事件也不会冒泡到 <code>window</code> 或 <code>document</code> 对象。因此，如果有元素在触摸过程中可能被移除，最佳实践是将触摸事件的监听器绑定到这个元素本身，防止元素被移除后，无法再从它的上一级元素上侦测到从该元素冒泡的事件。</dd>
 </dl>
 
 <h3 id="触摸区域">触摸区域</h3>
@@ -56,13 +56,13 @@ translation_of: Web/API/Touch
 
 <dl>
  <dt>{{ domxref("Touch.radiusX") }}{{readonlyInline}}{{experimental_inline}}</dt>
- <dd>返回能够包围接触区域的最小椭圆的水平轴(X轴)半径。这个值的单位和 <code>screenX</code> 相同<strong>。</strong></dd>
+ <dd>返回能够包围接触区域的最小椭圆的水平轴 (X 轴) 半径。这个值的单位和 <code>screenX</code> 相同<strong>。</strong></dd>
  <dt>{{ domxref("Touch.radiusY") }}{{readonlyInline}}{{experimental_inline}}</dt>
- <dd>返回能够包围接触区域的最小椭圆的垂直轴(Y轴)半径。这个值的单位和 <code>screenY</code> 相同。</dd>
+ <dd>返回能够包围接触区域的最小椭圆的垂直轴 (Y 轴) 半径。这个值的单位和 <code>screenY</code> 相同。</dd>
  <dt>{{ domxref("Touch.rotationAngle") }}{{readonlyInline}}{{experimental_inline}}</dt>
  <dd>返回一个角度值，表示上述由<code>radiusX</code> 和 <code>radiusY</code> 描述的椭圆为了尽可能精确地覆盖用户与平面之间的接触区域而需要顺时针旋转的角度。</dd>
  <dt>{{ domxref("Touch.force") }}{{readonlyInline}}{{experimental_inline}}</dt>
- <dd>返回用户对触摸平面的压力大小，是一个从0.0(没有压力)到1.0(最大压力)的浮点数。</dd>
+ <dd>返回用户对触摸平面的压力大小，是一个从 0.0(没有压力) 到 1.0(最大压力) 的浮点数。</dd>
 </dl>
 
 <dl>

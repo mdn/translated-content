@@ -3,7 +3,7 @@ title: 使用媒体查询
 slug: Web/CSS/Media_Queries/Using_media_queries
 tags:
   - CSS
-  - CSS媒体查询
+  - CSS 媒体查询
   - Media
   - Web
   - 媒体
@@ -20,7 +20,7 @@ original_slug: Web/Guide/CSS/Media_queries
 
 <ul>
  <li>有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} <a href="/zh-CN/docs/Web/CSS/At-rule">at-rules</a> 用<a href="/en-US/docs/Web/CSS">CSS</a> 装饰样式。</li>
- <li>用<code>media=</code> 属性为{{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}和其他<a href="/zh-CN/docs/Web/HTML">HTML</a>元素指定特定的媒体类型。如:</li>
+ <li>用<code>media=</code> 属性为{{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}和其他<a href="/zh-CN/docs/Web/HTML">HTML</a>元素指定特定的媒体类型。如：</li>
 </ul>
 
 <pre><code>&lt;link rel="stylesheet" src="styles.css" media="screen" /&gt;
@@ -32,17 +32,17 @@ original_slug: Web/Guide/CSS/Media_queries
 </ul>
 
 <div class="note">
-<p><strong>注意：</strong>本页的例子使用CSS <code>@media</code> 的方式来说明目的，但是对于所有类型的媒体查询，基本语法均相同。</p>
+<p><strong>注意：</strong>本页的例子使用 CSS <code>@media</code> 的方式来说明目的，但是对于所有类型的媒体查询，基本语法均相同。</p>
 </div>
 
 <h2 id="语法">语法</h2>
 
 <p>每条媒体查询语句都由一个可选的<em>媒体类型</em>和任意数量的<em>媒体特性</em>表达式构成。可以使用多种<em>逻辑操作符</em>合并多条媒体查询语句。媒体查询语句不区分大小写。</p>
 
-<p>当媒体类型（如果指定）与在其上显示文档的设备匹配并且所有媒体功能表达式都计算为true时，媒体查询将计算为true。 涉及未知媒体类型的查询始终为false。</p>
+<p>当媒体类型（如果指定）与在其上显示文档的设备匹配并且所有媒体功能表达式都计算为 true 时，媒体查询将计算为 true。涉及未知媒体类型的查询始终为 false。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 即使媒体查询返回false，带有媒体查询附加到其{{HTMLElement("link")}}标记的样式表<a href="http://scottjehl.github.com/CSS-Download-Tests/">仍将下载</a>。 但是，除非查询结果变为true，否则其内容将不适用。</p>
+<p><strong>注意：</strong> 即使媒体查询返回 false，带有媒体查询附加到其{{HTMLElement("link")}}标记的样式表<a href="http://scottjehl.github.com/CSS-Download-Tests/">仍将下载</a>。但是，除非查询结果变为 true，否则其内容将不适用。</p>
 </div>
 
 <h3 id="媒体类型">媒体类型</h3>
@@ -60,7 +60,7 @@ original_slug: Web/Guide/CSS/Media_queries
  <dd>主要用于语音合成器。</dd>
 </dl>
 
-<div class="note"><strong>被废弃的媒体类型：</strong> CSS2.1 和  <a href="https://drafts.csswg.org/mediaqueries-3/#background">Media Queries 3</a> 定义了一些额外的媒体类型(<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, 以及 <code>aural</code>)，但是他们在<a href="http://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a> 中已经被废弃，并且不应该被使用。<code>aural</code>类型被替换为具有相似效果的<code>speech</code>。</div>
+<div class="note"><strong>被废弃的媒体类型：</strong> CSS2.1 和  <a href="https://drafts.csswg.org/mediaqueries-3/#background">Media Queries 3</a> 定义了一些额外的媒体类型 (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, 以及 <code>aural</code>)，但是他们在<a href="http://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a> 中已经被废弃，并且不应该被使用。<code>aural</code>类型被替换为具有相似效果的<code>speech</code>。</div>
 
 <h3 id="媒体特性">媒体特性</h3>
 
@@ -123,13 +123,13 @@ original_slug: Web/Guide/CSS/Media_queries
   <tr>
    <td>{{cssxref("@media/display-mode", "display-mode")}}</td>
    <td>
-    <p>应用程序的显示模式，如web app的manifest中的<a href="/zh-CN/docs/Web/Manifest#display"><code>display</code></a> 成员所指定</p>
+    <p>应用程序的显示模式，如 web app 的 manifest 中的<a href="/zh-CN/docs/Web/Manifest#display"><code>display</code></a> 成员所指定</p>
    </td>
-   <td>在 <a href="http://w3c.github.io/manifest/#the-display-mode-media-feature">Web App Manifest spec</a>被定义.</td>
+   <td>在 <a href="http://w3c.github.io/manifest/#the-display-mode-media-feature">Web App Manifest spec</a>被定义。</td>
   </tr>
   <tr>
    <td>{{cssxref("@media/forced-colors", "forced-colors")}}</td>
-   <td>检测是user agent否限制调色板</td>
+   <td>检测是 user agent 否限制调色板</td>
    <td>在 Media Queries Level 5 中被添加。</td>
   </tr>
   <tr>
@@ -151,7 +151,7 @@ original_slug: Web/Guide/CSS/Media_queries
   </tr>
   <tr>
    <td>{{cssxref("@media/inverted-colors", "inverted-colors")}}</td>
-   <td>user agent或者底层操作系统是否反转了颜色</td>
+   <td>user agent 或者底层操作系统是否反转了颜色</td>
    <td>在 Media Queries Level 5 中被添加。</td>
   </tr>
   <tr>
@@ -174,14 +174,14 @@ original_slug: Web/Guide/CSS/Media_queries
   <tr>
    <td>{{cssxref("@media/overflow-block", "overflow-block")}}</td>
    <td>
-    <p>输出设备如何处理沿块轴溢出视窗(viewport)的内容</p>
+    <p>输出设备如何处理沿块轴溢出视窗 (viewport) 的内容</p>
    </td>
    <td>在 Media Queries Level 4 中被添加。</td>
   </tr>
   <tr>
    <td>{{cssxref("@media/overflow-inline", "overflow-inline")}}</td>
    <td>
-    <p>沿内联轴溢出视窗(viewport)的内容是否可以滚动？</p>
+    <p>沿内联轴溢出视窗 (viewport) 的内容是否可以滚动？</p>
    </td>
    <td>在 Media Queries Level 4 中被添加。</td>
   </tr>
@@ -250,52 +250,52 @@ original_slug: Web/Guide/CSS/Media_queries
 
 <h4 id="not"><code>not</code></h4>
 
-<p><code>not</code>运算符用于否定媒体查询，如果不满足这个条件则返回true，否则返回false。 如果出现在以逗号分隔的查询列表中，它将仅否定应用了该查询的特定查询。 如果使用not运算符，则还必须指定媒体类型。</p>
+<p><code>not</code>运算符用于否定媒体查询，如果不满足这个条件则返回 true，否则返回 false。如果出现在以逗号分隔的查询列表中，它将仅否定应用了该查询的特定查询。如果使用 not 运算符，则还必须指定媒体类型。</p>
 
 <div class="note">
-<p><strong>注意：</strong>在Level 3中，<code>not</code>关键字不能用于否定单个媒体功能表达式，而只能用于否定整个媒体查询。</p>
+<p><strong>注意：</strong>在 Level 3 中，<code>not</code>关键字不能用于否定单个媒体功能表达式，而只能用于否定整个媒体查询。</p>
 </div>
 
 <h4 id="only"><code>only</code></h4>
 
-<p><code>only</code>运算符仅在整个查询匹配时才用于应用样式，并且对于防止较早的浏览器应用所选样式很有用。 当不使用<code>only</code>时，旧版本的浏览器会将<code>screen and (max-width: 500px)</code>简单地解释为<code>screen</code>，忽略查询的其余部分，并将其样式应用于所有屏幕。 如果使用<code>only</code>运算符，则<em>还必须指定</em>媒体类型。</p>
+<p><code>only</code>运算符仅在整个查询匹配时才用于应用样式，并且对于防止较早的浏览器应用所选样式很有用。当不使用<code>only</code>时，旧版本的浏览器会将<code>screen and (max-width: 500px)</code>简单地解释为<code>screen</code>，忽略查询的其余部分，并将其样式应用于所有屏幕。如果使用<code>only</code>运算符，则<em>还必须指定</em>媒体类型。</p>
 
 <h4 id="逗号"><code>,</code> (逗号)</h4>
 
-<p>逗号用于将多个媒体查询合并为一个规则。 逗号分隔列表中的每个查询都与其他查询分开处理。 因此，如果列表中的任何查询为true，则整个media语句均返回true。 换句话说，列表的行为类似于逻辑或<code>or</code>运算符。</p>
+<p>逗号用于将多个媒体查询合并为一个规则。逗号分隔列表中的每个查询都与其他查询分开处理。因此，如果列表中的任何查询为 true，则整个 media 语句均返回 true。换句话说，列表的行为类似于逻辑或<code>or</code>运算符。</p>
 
 <h2 id="定位媒体类型">定位媒体类型</h2>
 
-<p>媒体类型描述了给定设备的一般类别。 尽管通常在设计网站时会考虑屏幕，但您可能希望创建针对特殊设备（例如打印机或基于音频的屏幕阅读器）的样式。 例如，此CSS针对打印机：</p>
+<p>媒体类型描述了给定设备的一般类别。尽管通常在设计网站时会考虑屏幕，但您可能希望创建针对特殊设备（例如打印机或基于音频的屏幕阅读器）的样式。例如，此 CSS 针对打印机：</p>
 
 <pre class="brush: css">@media print { ... }
 </pre>
 
-<p>您还可以定位多个设备。 例如，此<code>@media</code>规则使用两个媒体查询来同时定位屏幕和打印设备</p>
+<p>您还可以定位多个设备。例如，此<code>@media</code>规则使用两个媒体查询来同时定位屏幕和打印设备</p>
 
 <pre class="brush: css">@media screen, print { ... }
 </pre>
 
-<p>有关所有媒体类型的列表，请参见<a class="internal" href="#Media_types">Media types</a>。 由于它们仅以非常广泛的术语描述设备，因此只有少数几种可用。 要定位更具体的属性，请改用<em>媒体功能</em>。</p>
+<p>有关所有媒体类型的列表，请参见<a class="internal" href="#Media_types">Media types</a>。由于它们仅以非常广泛的术语描述设备，因此只有少数几种可用。要定位更具体的属性，请改用<em>媒体功能</em>。</p>
 
 <h2 id="定位媒体特性">定位媒体特性</h2>
 
-<p>媒体功能描述了给定的{{glossary("user agent")}}的输出设备或环境的特定特征。 例如，您可以将特定样式应用于宽屏显示器，使用鼠标的计算机，或应用于在弱光条件下使用的设备。 当用户的主要输入机制（例如鼠标）可以悬停在元素上时，如下为一个示例：</p>
+<p>媒体功能描述了给定的{{glossary("user agent")}}的输出设备或环境的特定特征。例如，您可以将特定样式应用于宽屏显示器，使用鼠标的计算机，或应用于在弱光条件下使用的设备。当用户的主要输入机制（例如鼠标）可以悬停在元素上时，如下为一个示例：</p>
 
 <pre class="brush: css">@media (hover: hover) { ... }
 </pre>
 
-<p>许多媒体功能都是<em>范围功能</em>，这意味着可以在它们前面加上“最小”或“最大”来表示“最小条件”或“最大条件”约束。 例如，仅当您的浏览器的{{glossary("viewport")}}宽度等于或小于12450px时，此CSS才会应用样式：</p>
+<p>许多媒体功能都是<em>范围功能</em>，这意味着可以在它们前面加上“最小”或“最大”来表示“最小条件”或“最大条件”约束。例如，仅当您的浏览器的{{glossary("viewport")}}宽度等于或小于 12450px 时，此 CSS 才会应用样式：</p>
 
 <pre class="brush: css">@media (max-width: 12450px) { ... }
 </pre>
 
-<p>如果您在未指定值的情况下创建媒体功能查询，则该样式将全部被应用，只要该查询的值不为零（或在Level 4中为<code>none</code>）即可。 例如，此CSS将适用于任何带有彩色屏幕的设备：</p>
+<p>如果您在未指定值的情况下创建媒体功能查询，则该样式将全部被应用，只要该查询的值不为零（或在 Level 4 中为<code>none</code>）即可。例如，此 CSS 将适用于任何带有彩色屏幕的设备：</p>
 
 <pre class="brush: css">@media (color) { ... }
 </pre>
 
-<p>如果某个功能不适用于运行浏览器的设备，则涉及该媒体功能的表达式始终为false。 例如，将不会使用嵌套在以下查询中的样式，因为没有语音专用设备具有屏幕长宽比：</p>
+<p>如果某个功能不适用于运行浏览器的设备，则涉及该媒体功能的表达式始终为 false。例如，将不会使用嵌套在以下查询中的样式，因为没有语音专用设备具有屏幕长宽比：</p>
 
 <pre class="brush: css">@media speech and (aspect-ratio: 11/5) { ... }
 </pre>
@@ -304,17 +304,17 @@ original_slug: Web/Guide/CSS/Media_queries
 
 <h2 id="创建复杂查询">创建复杂查询</h2>
 
-<p>有时您可能想创建一个取决于多个条件的媒体查询。 这就是<em>逻辑运算符</em>使用的场景：<code>not</code>，<code>and</code>，和 <code>only</code>。 此外，您可以将多个媒体查询合并到一个<em>逗号分隔的列表</em>中。 这使您可以在不同情况下应用相同的样式。</p>
+<p>有时您可能想创建一个取决于多个条件的媒体查询。这就是<em>逻辑运算符</em>使用的场景：<code>not</code>，<code>and</code>，和 <code>only</code>。此外，您可以将多个媒体查询合并到一个<em>逗号分隔的列表</em>中。这使您可以在不同情况下应用相同的样式。</p>
 
-<p>在前面的示例中，我们已经看到<code>and</code>运算符用于将媒体类型与媒体功能分组。 and运算符还可以将多个媒体功能组合到单个媒体查询中。 同时，<code>not</code>运算符会否定媒体查询，从而基本上颠倒了它的正常含义。 唯一的运算符可防止较早的浏览器应用样式。</p>
+<p>在前面的示例中，我们已经看到<code>and</code>运算符用于将媒体类型与媒体功能分组。and 运算符还可以将多个媒体功能组合到单个媒体查询中。同时，<code>not</code>运算符会否定媒体查询，从而基本上颠倒了它的正常含义。唯一的运算符可防止较早的浏览器应用样式。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 在大多数情况下，默认情况下，如果未指定其他类型，则使用<code>all</code>媒体类型。 但是，如果使用<code>not</code>或<code>only</code>运算符，则必须显式指定媒体类型。</p>
+<p><strong>注意：</strong> 在大多数情况下，默认情况下，如果未指定其他类型，则使用<code>all</code>媒体类型。但是，如果使用<code>not</code>或<code>only</code>运算符，则必须显式指定媒体类型。</p>
 </div>
 
 <h3 id="结合多种类型和特性">结合多种类型和特性</h3>
 
-<p><code>and</code>关键字将媒体功能与媒体类型或其他媒体功能组合在一起。 此示例结合了两种媒体功能，以将样式限制为宽度至少为30 em的横向的设备：</p>
+<p><code>and</code>关键字将媒体功能与媒体类型或其他媒体功能组合在一起。此示例结合了两种媒体功能，以将样式限制为宽度至少为 30 em 的横向的设备：</p>
 
 <pre class="brush: css">@media (min-width: 30em) and (orientation: landscape) { ... }
 </pre>
@@ -325,16 +325,16 @@ original_slug: Web/Guide/CSS/Media_queries
 
 <h3 id="测试多重查询">测试多重查询</h3>
 
-<p>当用户的设备与各种媒体类型，功能或状态中的任何一种匹配时，可以使用逗号分隔的列表来应用样式。 例如，如果用户设备的最小高度为680px或为纵向模式的屏幕设备，则以下规则将应用其样式：</p>
+<p>当用户的设备与各种媒体类型，功能或状态中的任何一种匹配时，可以使用逗号分隔的列表来应用样式。例如，如果用户设备的最小高度为 680px 或为纵向模式的屏幕设备，则以下规则将应用其样式：</p>
 
 <pre class="brush: css">@media (min-height: 680px), screen and (orientation: portrait) { ... }
 </pre>
 
-<p>以上面的示例为例，如果用户使用的打印机的页面高度为800像素，则media语句将返回true，因为将应用第一个查询。 同样，如果用户使用的是纵向模式的智能手机，并且视口高度为480px，则将应用第二个查询，并且media语句仍将返回true。</p>
+<p>以上面的示例为例，如果用户使用的打印机的页面高度为 800 像素，则 media 语句将返回 true，因为将应用第一个查询。同样，如果用户使用的是纵向模式的智能手机，并且视口高度为 480px，则将应用第二个查询，并且 media 语句仍将返回 true。</p>
 
 <h3 id="反转查询的含义">反转查询的含义</h3>
 
-<p><code>not</code>关键字会反转整个媒体查询的含义。 它只会否定要应用的特定媒体查询。 （因此，它不会应用于以逗号分隔的媒体查询列表中的每个媒体查询。）<code>not</code>关键字不能用于否定单个功能查询，只能用于否定整个媒体查询。 看看以下<code>not</code>关键字的例子：</p>
+<p><code>not</code>关键字会反转整个媒体查询的含义。它只会否定要应用的特定媒体查询。 （因此，它不会应用于以逗号分隔的媒体查询列表中的每个媒体查询。）<code>not</code>关键字不能用于否定单个功能查询，只能用于否定整个媒体查询。看看以下<code>not</code>关键字的例子：</p>
 
 <pre class="brush: css">@media not all and (monochrome) { ... }
 </pre>
@@ -366,15 +366,15 @@ original_slug: Web/Guide/CSS/Media_queries
 
 <h2 id="版本_4_中的语法改进">版本 4 中的语法改进</h2>
 
-<p>媒体查询4级规范对语法进行了一些改进，以使用具有“范围”类型（例如宽度或高度，减少冗余）的功能进行媒体查询。 级别4添加了用于编写此类的查询范围上下文。 例如，使用最大宽度<code>max-</code> 功能，我们可以编写以下代码：</p>
+<p>媒体查询 4 级规范对语法进行了一些改进，以使用具有“范围”类型（例如宽度或高度，减少冗余）的功能进行媒体查询。级别 4 添加了用于编写此类的查询范围上下文。例如，使用最大宽度<code>max-</code> 功能，我们可以编写以下代码：</p>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> 媒体查询4级规范在现代浏览器中具有合理的支持，但某些媒体功能并未得到很好的支持。 有关更多详细信息，请参见 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/@media#Browser_compatibility"><code>@media</code> browser compatibility table</a>。</p>
+<p><strong>Note:</strong> 媒体查询 4 级规范在现代浏览器中具有合理的支持，但某些媒体功能并未得到很好的支持。有关更多详细信息，请参见 <a href="/zh-CN/docs/Web/CSS/@media#Browser_compatibility"><code>@media</code> browser compatibility table</a>。</p>
 </div>
 
 <pre class="brush: css">@media (max-width: 30em) { ... }</pre>
 
-<p>在媒体查询4级规范可以这样写：</p>
+<p>在媒体查询 4 级规范可以这样写：</p>
 
 <pre class="brush: css">@media (width &lt;= 30em) { ... }
 </pre>
@@ -383,23 +383,23 @@ original_slug: Web/Guide/CSS/Media_queries
 
 <pre class="brush: css">@media (min-width: 30em) and (max-width: 50em) { ... }</pre>
 
-<p>用4级语法书写如下</p>
+<p>用 4 级语法书写如下</p>
 
 <pre class="brush: css">@media (30em &lt;= width &lt;= 50em ) { ... }
 
 </pre>
 
-<p>媒体查询4级规范还添加了用<strong>and</strong>, <strong>not</strong>, 和 <strong>or</strong>实现的完整的布尔运算来合并媒体查询的方法。</p>
+<p>媒体查询 4 级规范还添加了用<strong>and</strong>, <strong>not</strong>, 和 <strong>or</strong>实现的完整的布尔运算来合并媒体查询的方法。</p>
 
 <h3 id="使用_not否定一个特性">使用 <code>not</code>否定一个特性</h3>
 
-<p>在媒体功能周围使用<code>not()</code>会否定查询中的该特性。 例如，如果设备没有悬停功能，则<code>not(hover)</code>将被匹配：</p>
+<p>在媒体功能周围使用<code>not()</code>会否定查询中的该特性。例如，如果设备没有悬停功能，则<code>not(hover)</code>将被匹配：</p>
 
 <pre class="brush: css">@media (not(hover)) { ... }</pre>
 
 <h3 id="用_or测试多个特性">用 <code>or</code>测试多个特性</h3>
 
-<p>您可以使用<code>or</code>测试多个功能之间的匹配，如果任何功能为true，则解析为true。 例如，以下查询测试具有单色显示或悬停功能的设备：</p>
+<p>您可以使用<code>or</code>测试多个功能之间的匹配，如果任何功能为 true，则解析为 true。例如，以下查询测试具有单色显示或悬停功能的设备：</p>
 
 <pre class="brush: css">@media (not (color)) or (hover) { ... }</pre>
 

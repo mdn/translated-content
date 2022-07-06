@@ -11,24 +11,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<h2 id="Summary" name="Summary">Аннотация</h2>
+<h2 id="Summary">Аннотация</h2>
 
 <p>Функция <code><strong>isNaN()</strong></code> определяет является ли литерал или переменная нечисловым значением ({{jsxref("Global_Objects/NaN", "NaN")}}) или нет. При работе с функцией необходимо проявлять осторожность так как она <a href="#Description">имеет свои особенности</a>. В качестве альтернативы можно использовать метод {{jsxref("Number.isNaN()")}} из ECMAScript 6, или дополнительно проверять литерал или переменную на нечисловое значение при помощи <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code>.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>isNaN(<em>значение</em>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>Значение</code></dt>
  <dd>Литерал или переменная которые будут проверяться на нечисловое значение.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
-<h3 id="The_necessity_of_an_isNaN_function" name="The_necessity_of_an_isNaN_function">Для чего нужна функция <code>isNaN</code>?</h3>
+<h3 id="The_necessity_of_an_isNaN_function">Для чего нужна функция <code>isNaN</code>?</h3>
 
 <p>В отличие от других возможных значениях в JavaScript, при работе с значением данного типа невозможно полагаться на == и === для определения, является ли переменная или литерал нечисловым значением ({{jsxref("Global_Objects/NaN", "NaN")}}) или нет, так как проверки <code>NaN == NaN</code> и <code>NaN === NaN</code> <em>в качестве значения вернут </em><code>false</code>. Следовательно, для проверки нужна функция <code>isNaN</code>.</p>
 
@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 <code>x !== x // true</code>
 </pre>
 
-<h3 id="Origin_of_NaN_values" name="Origin_of_NaN_values">Генерация значения <code>NaN</code></h3>
+<h3 id="Origin_of_NaN_values">Генерация значения <code>NaN</code></h3>
 
 <p>Значение <code>NaN</code> генерируются арифметическими операциями, результатом которых является <em>undefined</em> или <em>unrepresentable</em>. Такие условия не обязательно обозначают переполнение стека.<code> NaN</code> также может являться результатом попытки преобразования числа в строку, или значения, не имеющего эквивалента в простых числовых примитивах.</p>
 
@@ -56,11 +56,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 
 <h3 id="Особенности_поведения"><em>Особенности поведения</em></h3>
 
-<p>С самых ранних версий функции <code>isNaN</code> её поведение для не числовых переменных или литералов было довольно-таки запутанным. Когда аргументом функции <code>isNaN</code> является переменная, тип которой не <a href="http://es5.github.com/#x8.5" title="http://es5.github.com/#x8.5">Number</a>, она преобразуется к типу <code>Number</code>. Полученное значение затем проверяется, является ли оно {{jsxref("Global_Objects/NaN", "NaN")}}. Таким образом для не числовых значений, которые можно преобразовать в числовой тип без не-NaN значения (в частности, пустая строка или логические примитивы, которые преобразуются в 0 или 1), возвращаемое значение "false" может быть полной неожиданностью; пустая строка преобразуется в  "not a number." Путаница связана с тем, что "not a number" имеет определённое значение, описанное в стандарте IEEE-794 чисел с плавающей точкой. Функцию стоит воспринимать в качестве ответа на вопрос, "Является ли это значение корректным числом по стандарту IEEE-794?"</p>
+<p>С самых ранних версий функции <code>isNaN</code> её поведение для не числовых переменных или литералов было довольно-таки запутанным. Когда аргументом функции <code>isNaN</code> является переменная, тип которой не <a href="http://es5.github.com/#x8.5">Number</a>, она преобразуется к типу <code>Number</code>. Полученное значение затем проверяется, является ли оно {{jsxref("Global_Objects/NaN", "NaN")}}. Таким образом для не числовых значений, которые можно преобразовать в числовой тип без не-NaN значения (в частности, пустая строка или логические примитивы, которые преобразуются в 0 или 1), возвращаемое значение "false" может быть полной неожиданностью; пустая строка преобразуется в  "not a number." Путаница связана с тем, что "not a number" имеет определённое значение, описанное в стандарте IEEE-794 чисел с плавающей точкой. Функцию стоит воспринимать в качестве ответа на вопрос, "Является ли это значение корректным числом по стандарту IEEE-794?"</p>
 
 <p>В следующей версии ECMAScript (ES6) функция {{jsxref("Number.isNaN()")}} также присутствует. <code>Number.isNaN(x)</code> будет надёжным методом для проверки, содержит ли <code>x</code> значение <code>NaN</code> или нет. Даже с <code>Number.isNaN</code>, однако, результатом <code>NaN</code> остаётся точное числовое значение, а не просто "not a number".</p>
 
-<h2 id="Examples" name="Examples">Пример</h2>
+<h2 id="Examples">Пример</h2>
 
 <pre class="brush: js">isNaN(NaN);       // true
 isNaN(undefined); // true
@@ -88,44 +88,17 @@ isNaN("blabla")   // true: "blabla" преобразовано в число.
 
 <h2 id="Спецификация">Спецификация</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.2.4', 'isNaN')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-isnan-number', 'isNaN')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
 <p> </p>
 
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
-
-<p>{{Compat("javascript.builtins.isNaN")}}</p>
+<p>{{Compat}}</p>
 
 <p> </p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/NaN", "NaN")}}</li>

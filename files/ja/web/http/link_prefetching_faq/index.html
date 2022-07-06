@@ -38,7 +38,7 @@ translation_of: Web/HTTP/Link_prefetching_FAQ
 <pre class="eval">&lt;meta http-equiv="Link" content="&lt;/images/big.jpeg&gt;; rel=prefetch"&gt;
 </pre>
 
-<p><code>Link:</code> ヘッダーの書式は、 <a class="external" href="http://tools.ietf.org/html/rfc2068" title="http://tools.ietf.org/html/rfc2068">RFC 2068</a> の 19.6.2.4 節で説明されています。</p>
+<p><code>Link:</code> ヘッダーの書式は、 <a class="external" href="http://tools.ietf.org/html/rfc2068">RFC 2068</a> の 19.6.2.4 節で説明されています。</p>
 
 <p>ブラウザーはこれらのヒント全てを元に、ブラウザーが使われていない時に先読みするための各リクエストを待ち行列に入れます。1ページに複数のヒントがあれば、複数の文書に対して先読みを行います。例えば、次の文書としていくつかの大きな画像を指定することもあります。</p>
 
@@ -56,11 +56,11 @@ translation_of: Web/HTTP/Link_prefetching_FAQ
 
 <p>はい。ここで述べているリンクの先読み機能は、既存のウェブ標準に違反していません。実際、HTML 4.01 仕様書では新たなリンク形式の定義が明確に許されています(<a class="external" href="http://www.w3.org/TR/html4/types.html#type-links">Section 6.12: Link types を参照</a>)。しかし、Mozilla で採用した手法自体はまだ標準化されていません。 Internet Draft を現在準備中です。</p>
 
-<p>この手法の標準化は HTML5 の範囲の一部です。現在のワーキングドラフトの <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch" rel="external nofollow" title="http://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch">section §5.11.3.13. Link type "prefetch"</a> を参照してください。</p>
+<p>この手法の標準化は HTML5 の範囲の一部です。現在のワーキングドラフトの <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch" rel="external nofollow">section §5.11.3.13. Link type "prefetch"</a> を参照してください。</p>
 
 <h3 id="How_is_browser_idle_time_determined.3F" name="How_is_browser_idle_time_determined.3F">ブラウザーのアイドル時間はどのように判定されますか?</h3>
 
-<p>現在の実装（Mozilla 1.2）では、アイドル時間は <code>nsIWebProgressListener</code> API を用いて判定されます。トップレベルの <code>nsIWebProgress</code> オブジェクトにリスナーを追加しました（"@<a class="linkification-ext external" href="http://mozilla.org/docloaderservice;1" title="Linkification: http://mozilla.org/docloaderservice;1">mozilla.org/docloaderservice;1</a>"）。このリスナーから、文書の開始と停止の通知を受け取って、前の文書の停止と次の文書の開始の間の時間をアイドル時間として概算します。前の文書の停止通知は、大まかに言って、トップレベル文書の onLoad ハンドラが起動した時に行われます。この時が先読みリクエストを行う時になります。サブフレームが先読みのヒントを含む場合にも、先読みは最上位のフレームとその「子」フレームの読み込みが終了するまで始まりません。</p>
+<p>現在の実装（Mozilla 1.2）では、アイドル時間は <code>nsIWebProgressListener</code> API を用いて判定されます。トップレベルの <code>nsIWebProgress</code> オブジェクトにリスナーを追加しました（"@<a class="linkification-ext external" href="http://mozilla.org/docloaderservice;1">mozilla.org/docloaderservice;1</a>"）。このリスナーから、文書の開始と停止の通知を受け取って、前の文書の停止と次の文書の開始の間の時間をアイドル時間として概算します。前の文書の停止通知は、大まかに言って、トップレベル文書の onLoad ハンドラが起動した時に行われます。この時が先読みリクエストを行う時になります。サブフレームが先読みのヒントを含む場合にも、先読みは最上位のフレームとその「子」フレームの読み込みが終了するまで始まりません。</p>
 
 <h3 id="What_happens_if_I_click_on_a_link_while_something_is_being_prefetched.3F" name="What_happens_if_I_click_on_a_link_while_something_is_being_prefetched.3F">先読みの取得中に別のリンクをクリックするとどうなりますか?</h3>
 
@@ -109,11 +109,11 @@ translation_of: Web/HTTP/Link_prefetching_FAQ
 
 <h3 id="Which_browsers_support_link_prefetching.3F" name="Which_browsers_support_link_prefetching.3F">どのブラウザーがリンクの先読み機能に対応していますか?</h3>
 
-<p>Mozilla 1.2 以降ベースおよび Mozilla 1.0.2 以降ベースのブラウザーが先読み機能に対応しています。これには Netscape 7.01 以降と Phoenix ビルドも含まれます。 2003年3月現在の Chimera ビルドは Mozilla 1.0.1 ベースですので、先読み機能に対応していません。あなたのブラウザーがリンクの先読みに対応しているかどうか<a class="external" href="http://gemal.dk/browserspy/prefetch.php" title="http://gemal.dk/browserspy/prefetch.php">テスト</a>できます。</p>
+<p>Mozilla 1.2 以降ベースおよび Mozilla 1.0.2 以降ベースのブラウザーが先読み機能に対応しています。これには Netscape 7.01 以降と Phoenix ビルドも含まれます。 2003年3月現在の Chimera ビルドは Mozilla 1.0.1 ベースですので、先読み機能に対応していません。あなたのブラウザーがリンクの先読みに対応しているかどうか<a class="external" href="http://gemal.dk/browserspy/prefetch.php">テスト</a>できます。</p>
 
 <h3 id="Privacy_implications" name="Privacy_implications">プライバシーとの関わり</h3>
 
-<p>参照元と URL の追跡との関係はすでに上記で説明されているとおりであり、先読みは一般的に先読みサイトの Cookie へのアクセスを引き起こします。（例えば、 amazon を Google で検索するとき、 Google の結果ページは www.amazon.com google.co.jp で検索した場合は www.amazon.co.jp を先読みし、ブラウザーに Cookie が送られてきます。 Firefox で サードパーティの Cookie をブロックするには、<a class="external" href="http://support.mozilla.com/kb/Disabling+third+party+cookies" rel="external" title="http://support.mozilla.com/kb/Disabling+third+party+cookies">Disabling third party cookies</a> を参照してください。）</p>
+<p>参照元と URL の追跡との関係はすでに上記で説明されているとおりであり、先読みは一般的に先読みサイトの Cookie へのアクセスを引き起こします。（例えば、 amazon を Google で検索するとき、 Google の結果ページは www.amazon.com google.co.jp で検索した場合は www.amazon.co.jp を先読みし、ブラウザーに Cookie が送られてきます。 Firefox で サードパーティの Cookie をブロックするには、<a class="external" href="http://support.mozilla.com/kb/Disabling+third+party+cookies" rel="external">Disabling third party cookies</a> を参照してください。）</p>
 
 <h3 id="What_about....3F" name="What_about....3F">他には...?</h3>
 

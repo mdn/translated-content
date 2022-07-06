@@ -1,0 +1,74 @@
+---
+title: Body.json()
+slug: orphaned/Web/API/Body/json
+translation_of: Web/API/Body/json
+original_slug: Web/API/Body/json
+---
+<div>{{APIRef("Fetch")}}</div>
+
+<p>{{domxref("Body")}} mixin 的 <strong><code>json()</code></strong> 會拿 {{domxref("Response")}} stream 並完整地讀取他。它會回傳一個能夠實現 (resolve) 把回傳的結果的 body text 解析成 {{jsxref("JSON")}} 型別的 Promise。</p>
+
+<h2 id="語法">語法</h2>
+
+<pre class="brush: js notranslate">response.json().then(function(data) {
+  // do something with your data
+});</pre>
+
+<h3 id="參數">參數</h3>
+
+<p>None.</p>
+
+<h3 id="回傳">回傳</h3>
+
+<p>一個能夠實現 (resolve) 把回傳的結果的 body text 解析成 JSON 型別的 Promise。這可以是任何能夠被 JSON 呈現的資料型別 — 物件 (object), 陣列 (array), 字串 (string), 數字 (number)...</p>
+
+<h2 id="範例">範例</h2>
+
+<p>在我們的範例 <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-json">fetch json example</a> (run <a href="http://mdn.github.io/fetch-examples/fetch-json/">fetch json live</a>) 中，我們用 constructor {{domxref("Request.Request")}} 產生一個新的請求，並且用它去取回 <code>.json</code> 檔案。 當成功取回 (fetch) 時，我們使用 <code>json()</code> 去讀取跟解析資料，然後依照我們期待的把回傳的結果物件 (resulting objects) 裡讀取到的數值存入 list 中藉以顯示我們的產品資料。</p>
+
+<pre class="brush: js notranslate">var myList = document.querySelector('ul');
+
+var myRequest = new Request('products.json');
+
+fetch(myRequest)
+  .then(function(response) { return response.json(); })
+  .then(function(data) {
+    for (var i = 0; i &lt; data.products.length; i++) {
+      var listItem = document.createElement('li');
+      listItem.innerHTML = '&lt;strong&gt;' + data.products[i].Name + '&lt;/strong&gt; can be found in ' +
+                           data.products[i].Location +
+                           '. Cost: &lt;strong&gt;£' + data.products[i].Price + '&lt;/strong&gt;';
+      myList.appendChild(listItem);
+    }
+  });</pre>
+
+<h2 id="規範">規範</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Fetch','#dom-body-json','json()')}}</td>
+   <td>{{Spec2('Fetch')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+
+
+
+<p>{{Compat("api.Body.json")}}</p>
+
+<h2 id="參見">參見</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+ <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
+ <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+</ul>

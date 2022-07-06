@@ -8,7 +8,7 @@ translation_of: Web/HTML/Element/keygen
 ---
 <p>{{deprecated_header}}</p>
 
-<p>HTML <code>&lt;keygen&gt;</code> 元素是为了方便生成密钥材料和提交作为 <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms">HTML form</a> 的一部分的公钥.这种机制被用于设计基于 Web 的证书管理系统。按照预想，<code>&lt;keygen&gt;</code> 元素将用于 HTML 表单与其他的所需信息一起构造一个证书请求，该处理的结果将是一个带有签名的证书。</p>
+<p>HTML <code>&lt;keygen&gt;</code> 元素是为了方便生成密钥材料和提交作为 <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms">HTML form</a> 的一部分的公钥。这种机制被用于设计基于 Web 的证书管理系统。按照预想，<code>&lt;keygen&gt;</code> 元素将用于 HTML 表单与其他的所需信息一起构造一个证书请求，该处理的结果将是一个带有签名的证书。</p>
 
 <div class="note">
 <p>There is currently discussion among Web browser makers whether to keep this feature or not. Until a decision is reached, it is better to continue to consider this feature as deprecated and going away.</p>
@@ -41,7 +41,7 @@ translation_of: Web/HTML/Element/keygen
 
 <h2 id="Attributes">Attributes</h2>
 
-<p><span style="line-height: 21px;">This element includes the </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">global attributes</a><span style="line-height: 21px;">.</span></p>
+<p>This element includes the <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">global attributes</a>.</p>
 
 <dl>
  <dt>{{htmlattrdef("autofocus")}}</dt>
@@ -68,7 +68,7 @@ translation_of: Web/HTML/Element/keygen
 
 <p>For DSA keys, the <code>keyparams</code> parameter specifies the DSA PQG parameters which are to be used in the keygen process. The value of the <code>pqg</code> parameter is the the BASE64 encoded, DER encoded Dss-Parms as specified in IETF <a class="link-ftp" href="ftp://ftp.rfc-editor.org/in-notes/rfc3279.txt">RFC 3279</a>. The user may be given a choice of DSA key sizes, allowing the user to choose one of the sizes defined in the DSA standard.</p>
 
-<p>For EC keys, the <code>keyparams</code> parameter specifies the name of the elliptic curve on which the key will be generated. It is normally a string from the table in <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/security/manager/ssl/src/nsKeygenHandler.cpp?mark=179-185,187-206,208-227,229-256#177" title="http://mxr.mozilla.org/mozilla-central/source/security/manager/ssl/src/nsKeygenHandler.cpp?mark=179-185,187-206,208-227,229-256#177">nsKeygenHandler.cpp</a>. (Note that only a subset of the curves named there may actually be supported in any particular browser.) If the <code>keyparams</code> parameter string is not a recognized curve name string, then a curve is chosen according to the user's chosen key strength (low, medium, high), using the curve named "<code>secp384r1</code>" for high, and the curve named "<code>secp256r1</code>" for medium keys. (Note: choice of the number of key strengths, default values for each strength, and the UI by which the user is offered a choice, are outside of the scope of this specification.)</p>
+<p>For EC keys, the <code>keyparams</code> parameter specifies the name of the elliptic curve on which the key will be generated. It is normally a string from the table in <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/security/manager/ssl/src/nsKeygenHandler.cpp?mark=179-185,187-206,208-227,229-256#177">nsKeygenHandler.cpp</a>. (Note that only a subset of the curves named there may actually be supported in any particular browser.) If the <code>keyparams</code> parameter string is not a recognized curve name string, then a curve is chosen according to the user's chosen key strength (low, medium, high), using the curve named "<code>secp384r1</code>" for high, and the curve named "<code>secp256r1</code>" for medium keys. (Note: choice of the number of key strengths, default values for each strength, and the UI by which the user is offered a choice, are outside of the scope of this specification.)</p>
 
 <p>The <code>&lt;keygen&gt;</code> element is only valid within an HTML form. It will cause some sort of selection to be presented to the user for selecting key size. The UI for the selection may be a menu, radio buttons, or possibly something else. The browser presents several possible key strengths. Currently, two strengths are offered, high and medium. If the user's browser is configured to support cryptographic hardware (e.g. "smart cards") the user may also be given a choice of where to generate the key, i.e., in a smart card or in software and stored on disk.</p>
 
@@ -95,10 +95,10 @@ translation_of: Web/HTML/Element/keygen
 <h2 id="Examples">Examples</h2>
 
 <ul>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380749" title="https://bugzilla.mozilla.org/attachment.cgi?id=380749">Sample form with RSA KEYGEN element</a></li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380750" title="https://bugzilla.mozilla.org/attachment.cgi?id=380750">Sample form with DSA KEYGEN element and PQG Parameters</a></li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380751" title="https://bugzilla.mozilla.org/attachment.cgi?id=380751">Sample form with DSA KEYGEN element but no PQG Parameters</a></li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380752" title="https://bugzilla.mozilla.org/attachment.cgi?id=380752">Sample form with EC KEYGEN element</a></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380749">Sample form with RSA KEYGEN element</a></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380750">Sample form with DSA KEYGEN element and PQG Parameters</a></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380751">Sample form with DSA KEYGEN element but no PQG Parameters</a></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380752">Sample form with EC KEYGEN element</a></li>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>
@@ -127,58 +127,4 @@ translation_of: Web/HTML/Element/keygen
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{compatChrome(1.0)}} [1]</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>3.0</td>
-   <td>1.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.3</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Deprecated in Chrome 49.</p>
-
-<p>{{HTMLRef}}</p>
+{{Compat("html.elements.keygen")}}

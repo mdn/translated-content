@@ -10,7 +10,7 @@ translation_of: Web/CSS/justify-content
 ---
 <div>{{CSSRef}}</div>
 
-<p><a href="/zh-CN/docs/CSS" title="CSS">CSS</a> <strong><code>justify-content</code></strong> 属性定义了浏览器之间，如何分配顺着弹性容器主轴(或者网格行轴) 的元素之间及其周围的空间。</p>
+<p><a href="/zh-CN/docs/CSS" title="CSS">CSS</a> <strong><code>justify-content</code></strong> 属性定义了浏览器之间，如何分配顺着弹性容器主轴 (或者网格行轴) 的元素之间及其周围的空间。</p>
 
 <pre class="brush: css notranslate"><code>/* Positional alignment */
 justify-content: center;     </code>/* 居中排列 */<code>
@@ -49,7 +49,7 @@ justify-content: unset;</pre>
 
 <div>{{cssinfo}}</div>
 
-<div></div>
+
 
 <p>可以参考 <a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" title="CSS/Using_CSS_flexible_boxes"> 使用 CSS 弹性框</a>获取更多信息。</p>
 
@@ -72,7 +72,7 @@ justify-content: unset;</pre>
  <dt><code>left</code></dt>
  <dd>伸缩元素一个挨一个在对齐容器得左边缘，如果属性的轴与内联轴不平行，则<code>left</code>的行为类似于<code>start</code>。</dd>
  <dt><code>right</code></dt>
- <dd>元素以容器右边缘为基准，一个挨着一个对齐,如果属性轴与内联轴不平行，则<code>right</code>的行为类似于<code>end</code>。</dd>
+ <dd>元素以容器右边缘为基准，一个挨着一个对齐，如果属性轴与内联轴不平行，则<code>right</code>的行为类似于<code>end</code>。</dd>
  <dt><code>baseline<br>
  first baseline</code><br>
  <code>last baseline</code></dt>
@@ -83,7 +83,7 @@ justify-content: unset;</pre>
  <dt><code>space-around</code></dt>
  <dd>在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素到行首的距离和每行最后一个元素到行尾的距离将会是相邻元素之间距离的一半。</dd>
  <dt><code>space-evenly</code></dt>
- <dd>flex项都沿着主轴均匀分布在指定的对齐容器中。相邻flex项之间的间距，主轴起始位置到第一个flex项的间距,，主轴结束位置到最后一个flex项的间距，都完全一样。</dd>
+ <dd>flex 项都沿着主轴均匀分布在指定的对齐容器中。相邻 flex 项之间的间距，主轴起始位置到第一个 flex 项的间距，主轴结束位置到最后一个 flex 项的间距，都完全一样。</dd>
  <dt><code>stretch</code></dt>
  <dd>If the combined size of the items is less than the size of the alignment container, any <code>auto</code>-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.</dd>
  <dt><code>safe</code></dt>
@@ -177,182 +177,10 @@ justifyContent.addEventListener("change", function (evt) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(21.0)}} {{property_prefix("-webkit")}}<br>
-    {{CompatChrome(29.0)}}<sup>[3]</sup></td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
-    {{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("18.0")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("20.0")}}<sup>[2]</sup></td>
-   <td>11</td>
-   <td>12.10</td>
-   <td>9</td>
-  </tr>
-  <tr>
-   <td><code>space-evenly</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("52.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>start</code>, <code>end</code></td>
-   <td>{{CompatNo}}<sup>[4]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}<sup>[4]</sup></td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>left</code>, <code>right</code></td>
-   <td>{{CompatNo}}<sup>[4]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("52.0")}}<sup>[5]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}<sup>[4]</sup></td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>baseline</code></td>
-   <td>{{CompatChrome("57.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera("44.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>first baseline</code>, <code>last baseline</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("52.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>stretch</code></td>
-   <td>{{CompatChrome("57.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("52.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera("44.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[3]</sup></td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
-    {{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>12.10</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[3]</sup></td>
-  </tr>
-  <tr>
-   <td><code>space-evenly</code></td>
-   <td>{{CompatGeckoMobile("52.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>start</code>, <code>end</code></td>
-   <td>{{CompatNo}}<sup>[4]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}<sup>[4]</sup></td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>left</code>, <code>right</code></td>
-   <td>{{CompatNo}}<sup>[4]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("52.0")}}<sup>[5]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}<sup>[4]</sup></td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>baseline</code></td>
-   <td>{{CompatChrome("57.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera("44.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>first baseline</code>, <code>last baseline</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("52.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>stretch</code></td>
-   <td>{{CompatChrome("57.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("52.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera("44.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 直到Firefox 28，Firefox都只支持单行弹性框。用户需要修改about:config，将“layout.css.flexbox.enabled”设置为“<code>true</code>”来在Firefox 18和19应用弹性框。</p>
-
-<p>[2] 比较旧的版本规范将绝对定位子项认为0 x 0 flex项。 后面的规范版本将它们从流程中取出并根据对齐和对齐属性设置它们的位置。 Chrome从Chrome 52开始的实施新行为。</p>
+{{Compat("css.properties.justify-content")}}
 
 <h2 id="参考">参考</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" title="CSS/Using_CSS_flexible_boxes">使用CSS弹性元素</a></li>
+ <li><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" title="CSS/Using_CSS_flexible_boxes">使用 CSS 弹性元素</a></li>
 </ul>

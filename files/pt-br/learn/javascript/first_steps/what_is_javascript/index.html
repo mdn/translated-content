@@ -39,11 +39,11 @@ original_slug: Learn/JavaScript/First_steps/O_que_e_JavaScript
  </tbody>
 </table>
 
-<h2 id="Definição_de_alto_nível">Definição de alto nível</h2>
+<h2 id="A_high-level_definition">Definição de alto nível</h2>
 
 <p>JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas web — toda vez que uma página da web faz mais do que simplesmente mostrar a você informação estática — mostrando conteúdo que se atualiza em um intervalo de tempo, mapas interativos ou gráficos 2D/3D animados, etc. — você pode apostar que o JavaScript provavelmente está envolvido. É a terceira camada do bolo das tecnologias padrões da web, duas das quais (<a href="/en-US/docs/Learn/HTML">HTML</a> e <a href="/en-US/docs/Learn/CSS">CSS</a>) nós falamos com muito mais detalhes em outras partes da Área de Aprendizado.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13502/cake.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="cake.png" style="display: block; margin: 0 auto;"></p>
 
 <ul>
  <li>{{glossary("HTML")}} é a linguagem de marcação que nós usamos para estruturar e dar significado para o nosso conteúdo web. Por exemplo, definindo parágrafos, cabeçalhos, tabelas de conteúdo, ou inserindo imagens e vídeos na página.</li>
@@ -55,11 +55,11 @@ original_slug: Learn/JavaScript/First_steps/O_que_e_JavaScript
 
 <pre class="brush: html notranslate">&lt;p&gt;Jogador 1: Chris&lt;/p&gt;</pre>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15586/so-html.png" style="height: 28px; width: 118px;"></p>
+<p><img alt="" src="just-html.png"></p>
 
 <p>Nós podemos adicionar um pouco de CSS na mistura, para deixar nosso parágrafo um pouco mais atraente:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-family: 'helvetica neue', helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -74,7 +74,7 @@ original_slug: Learn/JavaScript/First_steps/O_que_e_JavaScript
   cursor:pointer;
 }</pre>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15587/html-e-css.png" style="height: 48px; width: 208px;"></p>
+<p><img alt="" src="html-and-css.png"></p>
 
 <p>E finalmente, nós podemos adicionar JavaScript para implementar um comportamento dinâmico:</p>
 
@@ -88,7 +88,7 @@ function atualizarNome() {
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Definição_de_alto_nível', '100%', 80) }}</p>
+<p>{{ EmbedLiveSample('A_high-level_definition', '100%', 80, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <p>Experimente clicar no botão acima para ver o que acontece (note também que você pode encontrar essa demonstração no GitHub — veja o <a href="https://github.com/mdn/learning-area-pt-br/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-rotulo.html">código fonte</a> ou <a href="https://mdn.github.io/learning-area-pt-br/javascript/introduction-to-js-1/what-is-js/javascript-rotulo.html">veja funcionar</a>)!</p>
 
@@ -99,7 +99,7 @@ function atualizarNome() {
 <p>O núcleo da linguagem JavaScript consiste em alguns benefícios comuns da programação que permite a você fazer coisas como:</p>
 
 <ul>
- <li>Armazenar conteúdo útil em variáveis. No exemplo acima, a propósito, nós pedimos que um novo nome seja inserido e armazenamos o nome em uma variável chamada <code>nome</code>.</li>
+ <li>Armazenar conteúdo útil em variáveis. No exemplo acima, a propósito, nós pedimos que um novo nome seja inserido e armazenamos o nome em uma variável chamada <code>nome</code>.</li>
  <li>Operações com pedaços de texto (conhecidos como "strings" em programação). No exemplo acima, nós pegamos a string "Jogador 1: " e concatenamos (juntamos) com a variável <code>nome</code> para criar o texto completo "Jogador 1: Chris".</li>
  <li>Executar o código em resposta a determinados eventos que ocorrem em uma página da Web. Nós usamos o {{Event("click")}} no nosso exemplo acima para que quando clicassem no botão, rodasse o código que atualiza o texto.</li>
  <li>E muito mais!</li>
@@ -109,32 +109,32 @@ function atualizarNome() {
 
 <p>APIs são conjuntos prontos de blocos de construção de código que permitem que um desenvolvedor implemente programas que seriam difíceis ou impossíveis de implementar. Eles fazem o mesmo para a programação que os kits de móveis prontos para a construção de casas - é muito mais fácil pegar os painéis prontos e parafusá-los para formar uma estante de livros do que para elaborar o design, sair e encontrar a madeira, cortar todos os painéis no tamanho e formato certos, encontrar os parafusos de tamanho correto e <em> depois </em> montá-los para formar uma estante de livros.</p>
 
-<p>Elas geralmente se dividem em duas categorias.</p>
+<p>Elas geralmente se dividem em duas categorias.</p>
 
-<p><img alt="APIs de terceiros e APIs do navegador" src="https://mdn.mozillademos.org/files/14721/browser.png" style="display: block; height: 511px; margin: 0px auto; width: 815px;"></p>
+<p><img alt="APIs de terceiros e APIs do navegador" src="browser.png" style="display: block; margin: 0px auto;"></p>
 
-<p><strong>APIs de navegadores</strong> já vem implementadas no navegador, e são capazes de expor dados do ambiente do computador, ou fazer coisas complexas e úteis. Por exemplo:</p>
+<p><strong>APIs de navegadores</strong> já vem implementadas no navegador, e são capazes de expor dados do ambiente do computador, ou fazer coisas complexas e úteis. Por exemplo:</p>
 
 <ul>
- <li>A  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">API DOM (Document Object Model)</a> permite a você manipular HTML e CSS, criando, removendo e mudando HTML, aplicando dinamicamente novos estilos para a sua página, etc. Toda vez que você vê uma janela pop-up aparecer em uma página, ou vê algum novo conteúdo sendo exibido (como nós vimos acima na nossa simples demonstração), isso é o DOM em ação.</li>
- <li>A <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation">API de Geolocalização</a> recupera informações geográficas. É assim que o <a href="https://www.google.com/maps">Google Maps</a> consegue encontrar sua localização e colocar em um mapa.</li>
- <li>As APIs <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas</a> e <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a> permite a você criar gráficos 2D e 3D animados. Há pessoas fazendo algumas coisas fantásticas usando essas tecnologias web — veja <a href="https://www.chromeexperiments.com/webgl">Chrome Experiments</a> e <a href="http://webglsamples.org/">webglsamples</a>.</li>
- <li><a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery">APIs de áudio e vídeo</a> como {{domxref("HTMLMediaElement")}} e <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> permitem a você fazer coisas realmente interessantes com multimídia, tanto tocar música e vídeo em uma página da web, como capturar vídeos com a sua câmera e exibir no computador de outra pessoa (veja <a href="http://chrisdavidmills.github.io/snapshot/">Snapshot demo</a> para ter uma ideia).</li>
+ <li>A <a href="/en-US/docs/Web/API/Document_Object_Model">API DOM (Document Object Model)</a> permite a você manipular HTML e CSS, criando, removendo e mudando HTML, aplicando dinamicamente novos estilos para a sua página, etc. Toda vez que você vê uma janela pop-up aparecer em uma página, ou vê algum novo conteúdo sendo exibido (como nós vimos acima na nossa simples demonstração), isso é o DOM em ação.</li>
+ <li>A <a href="/en-US/docs/Web/API/Geolocation">API de Geolocalização</a> recupera informações geográficas. É assim que o <a href="https://www.google.com/maps">Google Maps</a> consegue encontrar sua localização e colocar em um mapa.</li>
+ <li>As APIs <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> e <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> permite a você criar gráficos 2D e 3D animados. Há pessoas fazendo algumas coisas fantásticas usando essas tecnologias web — veja <a href="https://www.chromeexperiments.com/webgl">Chrome Experiments</a> e <a href="https://webglsamples.org/">webglsamples</a>.</li>
+ <li><a href="/en-US/docs/Web/Guide/Audio_and_video_delivery">APIs de áudio e vídeo</a> como {{domxref("HTMLMediaElement")}} e <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> permitem a você fazer coisas realmente interessantes com multimídia, tanto tocar música e vídeo em uma página da web, como capturar vídeos com a sua câmera e exibir no computador de outra pessoa (veja <a href="http://chrisdavidmills.github.io/snapshot/">Snapshot demo</a> para ter uma ideia).</li>
 </ul>
 
 <div class="note">
-<p><strong>Nota</strong>: Muitas demonstrações acima não vão funcionar em navegadores antigos — quando você for experimentar, é uma boa ideia usar browsers modernos como Firefox, Edge ou Opera para ver o código funcionar. Você vai precisar estudar <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">testes cross browser</a> com mais detalhes quando você estiver chegando perto de produzir código (código real que as pessoas vão usar).</p>
+<p><strong>Nota</strong>: Muitas demonstrações acima não vão funcionar em navegadores antigos — quando você for experimentar, é uma boa ideia usar browsers modernos como Firefox, Edge ou Opera para ver o código funcionar. Você vai precisar estudar <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">testes cross browser</a> com mais detalhes quando você estiver chegando perto de produzir código (código real que as pessoas vão usar).</p>
 </div>
 
-<p><strong>APIs de terceiros</strong> não estão implementados no navegador automaticamente, e você geralmente tem que pegar seu código e informações em algum lugar da Web. Por exemplo:</p>
+<p><strong>APIs de terceiros</strong> não estão implementados no navegador automaticamente, e você geralmente tem que pegar seu código e informações em algum lugar da Web. Por exemplo:</p>
 
 <ul>
- <li>A <a href="https://dev.twitter.com/overview/documentation">API do Twitter</a> permite a você fazer coisas como exibir seus últimos tweets no seu website.</li>
- <li>A <a href="https://developers.google.com/maps/">API do Google Maps</a> permite a você inserir mapas customizados no seu site e outras diversas funcionalidades.</li>
+ <li>A <a href="https://dev.twitter.com/overview/documentation">API do Twitter</a> permite a você fazer coisas como exibir seus últimos tweets no seu website.</li>
+ <li>A <a href="https://developers.google.com/maps/">API do Google Maps</a> permite a você inserir mapas customizados no seu site e outras diversas funcionalidades.</li>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Essas APIs são avançadas e nós não vamos falar sobre nenhuma delas nesse módulo.Vo cê pode achar muito mais sobre elas em nosso módulo <a href="/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs">APIs web no lado cliente</a>.</p>
+<p><strong>Note</strong>: Essas APIs são avançadas e nós não vamos falar sobre nenhuma delas nesse módulo.Vo cê pode achar muito mais sobre elas em nosso módulo <a href="/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs">APIs web no lado cliente</a>.</p>
 </div>
 
 <p>Tem muito mais coisas disponíveis! Contudo, não fique animado ainda. Você não estará pronto para desenvolver o próximo Facebook, Google Maps ou Instagram depois de estudar JavaScript por 24 horas — há um monte de coisas básicas para estudar primeiro. E é por isso que você está aqui — vamos começar! </p>
@@ -143,11 +143,11 @@ function atualizarNome() {
 
 <p>Aqui nós vamos realmente começar a ver algum código, e enquanto fazemos isso vamos explorar o que realmente acontece quando você roda algum código JavaScript na sua página.</p>
 
-<p>Vamos recaptular brevemente a história do que acontece quando você carrega uma página web em um navegador (falamos sobre isso no nosso artigo <a href="/en-US/Learn/CSS/Introduction_to_CSS/How_CSS_works#How_does_CSS_actually_work">Como o CSS funciona</a>). Quando você carrega uma página web no seu navegador, você está executando seu código (o HTML, CSS e JavaScript) dentro de um ambiente de execução (a guia do navegador). Isso é como uma fábrica que pega a matéria prima (o código) e transforma em um produto (a página web).</p>
+<p>Vamos recaptular brevemente a história do que acontece quando você carrega uma página web em um navegador (falamos sobre isso no nosso artigo <a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works#how_does_css_actually_work">Como o CSS funciona</a>). Quando você carrega uma página web no seu navegador, você está executando seu código (o HTML, CSS e JavaScript) dentro de um ambiente de execução (a guia do navegador). Isso é como uma fábrica que pega a matéria prima (o código) e transforma em um produto (a página web).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13504/execution.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="execution.png" style="display: block; margin: 0 auto;"></p>
 
-<p>Um uso muito comum do JavaScript é modificar dinamicamente HTML e CSS para atualizar uma interface do usuário, por meio da API do Document Object Model (conforme mencionado acima). Observe que o código em seus documentos web geralmente é carregado e executado na ordem em que aparece na página. Se o JavaScript carregar e tentar executar antes do carregamento do HTML e CSS afetado, poderão ocorrer erros. Você aprenderá maneiras de contornar isso mais adiante neste artigo, na seção <a href="/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies"> Estratégias de carregamento de scripts </a>.</p>
+<p>Um uso muito comum do JavaScript é modificar dinamicamente HTML e CSS para atualizar uma interface do usuário, por meio da API do Document Object Model (conforme mencionado acima). Observe que o código em seus documentos web geralmente é carregado e executado na ordem em que aparece na página. Se o JavaScript carregar e tentar executar antes do carregamento do HTML e CSS afetado, poderão ocorrer erros. Você aprenderá maneiras de contornar isso mais adiante neste artigo, na seção <a href="#script_loading_strategies"> Estratégias de carregamento de scripts </a>.</p>
 
 <h3 id="Segurança_do_navegador">Segurança do navegador</h3>
 
@@ -216,7 +216,7 @@ function atualizarNome() {
 
 &lt;/script&gt;</pre>
  </li>
- <li>Agora nós vamos adicionar um pouco de JavaScript dentro do nosso elemento {{htmlelement("script")}} para que a página faça algo mais interessante — adicione o seguinte código abaixo da linha "// O JavaScript fica aqui":
+ <li>Agora nós vamos adicionar um pouco de JavaScript dentro do nosso elemento {{htmlelement("script")}} para que a página faça algo mais interessante — adicione o seguinte código abaixo da linha "// O JavaScript fica aqui":
   <pre class="brush: js notranslate">function criarParagrafo() {
   let para = document.createElement('p');
   para.textContent = 'Você clicou no botão!';
@@ -274,19 +274,18 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 <p>Note que às vezes você vai encontrar código JavaScript escrito dentro do HTML. Isso deve ser algo como:</p>
 
 <div id="inline_js_example">
-<pre class="brush: js example-bad notranslate">function criarParagrafo() {
+<pre class="brush: js example-bad">function criarParagrafo() {
   let para = document.createElement('p');
   para.textContent = 'Você clicou o botao!';
   document.body.appendChild(para);
 }</pre>
 
-<div id="inline_js_example">
-<pre class="brush: js example-bad notranslate">&lt;button onclick="criarParagrafo()"&gt;Me clique!&lt;/button&gt;</pre>
+<pre class="brush: html example-bad">&lt;button onclick="criarParagrafo()"&gt;Me clique!&lt;/button&gt;</pre>
 </div>
 
 <p>Você pode tentar essa versão na nossa demonstração abaixo.</p>
 
-<p><iframe class="live-sample-frame hide-codepen-jsfiddle" frameborder="0" height="150" id="frame_inline_js_example" src="https://mdn.mozillademos.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript$samples/inline_js_example?revision=1640817" width="100%"></iframe></p>
+<p>{{ EmbedLiveSample('inline_js_example', '100%', 150, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <p>Essa demonstração tem exatamente a mesma funcionalidade que vimos nas primeiras duas seções, exceto que o elemento {{htmlelement("button")}} inclui um manipulador <em>inline</em> <code>onclick</code> para fazer a função ser executada quando o botão é clicado.</p>
 
@@ -308,13 +307,13 @@ for(var i = 0; i &lt; botoes.length ; i++) {
 
 <h3 id="Estratégias_para_o_carregamento_de_scripts">Estratégias para o carregamento de scripts</h3>
 
-<p>Há um considerável número de problemas envolvendo o carregamento de scripts na ordem correta. Infelizmente, nada é tão simples quanto parece ser! Um problema comum é que todo o HTML de uma página é carregado na ordem em que ele aparece. Se você estiver usando Javascript para manipular alguns elementos da página (sendo mais preciso, manipular o <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model">Document Object Model</a>), seu código não irá funcionar caso o JavaScript for carregado e executado antes mesmo dos elementos HTML estarem disponíveis.</p>
+<p>Há um considerável número de problemas envolvendo o carregamento de scripts na ordem correta. Infelizmente, nada é tão simples quanto parece ser! Um problema comum é que todo o HTML de uma página é carregado na ordem em que ele aparece. Se você estiver usando Javascript para manipular alguns elementos da página (sendo mais preciso, manipular o <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#the_document_object_model">Document Object Model</a>), seu código não irá funcionar caso o JavaScript for carregado e executado antes mesmo dos elementos HTML estarem disponíveis.</p>
 
 <p>Nos exemplos acima, tanto nos scripts internos ou externos, o JavaScript é carregado e acionado dentro do cabeçalho do documento, antes do corpo da página ser completamente carregado. Isso poderá causar algum erro. Assim, temos algumas soluções para isso.</p>
 
 <p>No exemplo interno, você pode ver essa estrutura em volta do código:</p>
 
-<pre class="brush: js notranslate">document.addEventListener("DOMContentLoaded", function() {
+<pre class="brush: js">document.addEventListener("DOMContentLoaded", function() {
   ...
 });</pre>
 
@@ -322,7 +321,7 @@ for(var i = 0; i &lt; botoes.length ; i++) {
 
 <p>No exemplo externo, nós usamos um recurso moderno do JavaScript para resolver esse problema: Trata-se do atributo <code>defer</code>, que informa ao <em>browser</em> para continuar renderizando o conteúdo HTML uma vez que a tag <code>&lt;script&gt;</code> foi atingida.</p>
 
-<pre class="brush: js notranslate">&lt;script src="script.js" defer&gt;&lt;/script&gt;</pre>
+<pre class="brush: js">&lt;script src="script.js" defer&gt;&lt;/script&gt;</pre>
 
 <p>Neste caso, ambos script e HTML irão carregar de forma simultânea e o código irá funcionar.</p>
 
@@ -340,7 +339,7 @@ for(var i = 0; i &lt; botoes.length ; i++) {
 
 <p>Por exemplo, se você tiver os seguintes elementos script:</p>
 
-<pre class="brush: html notranslate">&lt;script async src="js/vendor/jquery.js"&gt;&lt;/script&gt;
+<pre class="brush: html">&lt;script async src="js/vendor/jquery.js"&gt;&lt;/script&gt;
 
 &lt;script async src="js/script2.js"&gt;&lt;/script&gt;
 
@@ -352,7 +351,7 @@ for(var i = 0; i &lt; botoes.length ; i++) {
 
 <p>Scripts que são carregados utilizando o atributo <code>defer</code> (veja abaixo) irão rodar exatamente na ordem em que aparecem na página e serão executados assim que o script e o conteúdo for baixado.</p>
 
-<pre class="brush: html notranslate">&lt;script defer src="js/vendor/jquery.js"&gt;&lt;/script&gt;
+<pre class="brush: html">&lt;script defer src="js/vendor/jquery.js"&gt;&lt;/script&gt;
 
 &lt;script defer src="js/script2.js"&gt;&lt;/script&gt;
 
@@ -363,7 +362,7 @@ for(var i = 0; i &lt; botoes.length ; i++) {
 <p>Resumindo:</p>
 
 <ul>
- <li><code>async</code> e <code>defer</code> istruem o <em>browser</em> a baixar os scripts numa <em>thread </em>(processo)<em> </em>á parte, enquanto o resto da página (o DOM, etc.) está sendo baixado e disponibilizado de forma não bloqueante.</li>
+ <li><code>async</code> e <code>defer</code> istruem o <em>browser</em> a baixar os scripts numa <em>thread </em>(processo)<em> </em>à parte, enquanto o resto da página (o DOM, etc.) está sendo baixado e disponibilizado de forma não bloqueante.</li>
  <li>Se os seus scripts precisam rodar imediatamente, sem que dependam de outros para serem executados, use <code>async</code>.</li>
  <li>Se seus scripts dependem de outros scripts ou do DOM completamente disponível em tela, carregue-os usando <code>defer</code> e coloque os elementos <code>&lt;script&gt;</code> na ordem exata que deseja que sejam carregados.</li>
 </ul>
@@ -416,7 +415,7 @@ for(var i = 0; i &lt; botoes.length ; i++) {
 
 <p>Então, esse foi o seu primeiro passo no mundo do JavaScript. Nós iniciamos apenas com teoria, então te ensinamos porque usar JavaScript e que tipo de coisa você pode fazer com ele. Pelo caminho você viu alguns códigos de exemplo e aprendeu como JavaScript se encaixa com o resto do código do seu site, entre outras coisas.</p>
 
-<p>O JavaScript talvez pareça um pouco assustador agora, mas não se preocupe — nesse curso você será guiado passo a passo, e tudo vai começar a fazer sentido. No próximo artigo vamos <a href="/en-US/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash">mergulhar direto para a prática</a>, levando você a construir seu próprio código JavaScript.</p>
+<p>O JavaScript talvez pareça um pouco assustador agora, mas não se preocupe — nesse curso você será guiado passo a passo, e tudo vai começar a fazer sentido. No próximo artigo vamos <a href="/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">mergulhar direto para a prática</a>, levando você a construir seu próprio código JavaScript.</p>
 
 <p>{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}</p>
 
@@ -431,6 +430,5 @@ for(var i = 0; i &lt; botoes.length ; i++) {
  <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Strings">Trabalhando com texto — strings em JavaScript</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Métodos úteis para strings</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a></li>
- <li><a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Gerador_de_historias_bobas">Avaliação: Gerador de histórias bobas</a></li>
+ <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/Silly_story_generator">Avaliação: Gerador de histórias bobas</a></li>
 </ul>
-</div>

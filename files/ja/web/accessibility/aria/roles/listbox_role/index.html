@@ -7,75 +7,79 @@ tags:
   - Accessibility
 translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 ---
-<p>\{{ariaref}}</p>
-
-<ul class="ul1">
-</ul>
-
-<ul class="ul1">
-</ul>
-
-<p><span class="seoSummary"><code>listbox</code> ロールは、ユーザーが静的な1つ以上の項目を選択するリストに使用され、HTML の <code>&lt;select&gt;</code> 要素とは異なり、画像を含むことがあります。</span></p>
+<p><span class="seoSummary">リストボックス (<code>listbox</code>) ロールは、HTML の <code>&lt;select&gt;</code> 要素とは異なり、画像を含むことができる、1つまたは複数の静的な項目をユーザーが選択できるリストに使用します。</span></p>
 
 <h2 id="Description" name="Description">説明</h2>
 
-<p><code>listbox</code> ロールは、HTML の {{htmlelement("select")}} 要素と同様に、ユーザーが1つまたは複数の静的項目を選択できるリストを作成する要素を識別するために使用されます。 <code>&lt;select&gt;</code> とは異なり、リストボックス（listbox）は画像を含むことができます。 リストボックスのそれぞれの子は、<code><a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option">option</a></code> ロールを持つべきです。</p>
+<p>リストボックス (<code>listbox</code>) ロールは、HTML の選択 ({{htmlelement("select")}}) 要素と同様に、ユーザーが1つまたは複数の静的な項目を選択できるリストを作成する要素を識別するために使用します。 <code>&lt;select&gt;</code> とは異なり、リストボックスは画像を含むことができます。 リストボックスのそれぞれの子は、オプション (<code><a href="https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option">option</a></code>) ロールを持つべきです。</p>
 
-<p>HTML の <code>&lt;select&gt;</code> 要素または、1項目のみを選択する場合はラジオボタンのグループ、複数項目を選択する場合はチェックボックスのグループを使用することを強くお勧めします。 なぜなら、全ての子孫のフォーカスを管理するためのキーボードのインタラクティビティがたくさんあり、ネイティブな HTML 要素がこの機能を無料で提供するためです。</p>
+<p>HTML の選択要素や、1項目しか選択できない場合はラジオボタンのグループ、複数項目を選択できる場合はチェックボックスのグループを使用することを強くお勧めします。 なぜなら、全ての子孫に対するフォーカスを管理するためには、キーボードでのインタラクティビティがたくさん必要であり、ネイティブの HTML 要素はこの機能を無料で提供してくれるからです。</p>
 
-<p><code>listbox</code> ロールを持つ要素は、暗黙の <code>aria-orientation</code> の値に <code>vertical</code> を持ちます。</p>
+<p>リストボックス (<code>listbox</code>) ロールを持つ要素は、暗黙的な <code>aria-orientation</code> の値として垂直 (<code>vertical</code>) を持ちます。</p>
 
-<p class="p1">リストに<kbd>タブ</kbd>で移動した場合、他に何も選択されていない場合はリスト内の最初の項目が選択されます。 <kbd>上/下矢印</kbd>はリストをナビゲートし、<kbd>Shift + 上/下矢印</kbd>を押すと選択範囲が移動して拡張されます。 1つ以上の文字を入力すると、リスト項目をナビゲートします（同じ文字はその文字から始まる各項目に移動し、異なる文字はその文字列全体で始まる最初の項目に移動します）。 現在の項目に関連するコンテキストメニューがある場合、<kbd>Shift + F10</kbd> でそのメニューが起動します。 リスト項目がチェック可能である場合、<kbd>スペース</kbd>を使用して<a href="http://www.w3.org/TR/wai-aria-practices/#checkbox">チェックボックス</a>をトグルできます。 選択可能なリスト項目の場合、<kbd>スペース</kbd>は選択をトグルし、<kbd>Shift + スペース</kbd>を使用して連続項目を選択し、<kbd>Ctrl + 矢印</kbd>で選択せず​​に移動し、<kbd>Ctrl + スペース</kbd>を使用して不連続項目を選択できます。 全ての項目を選択するには、チェックボックス、リンクまたは他の方法を使用することをお勧めします。 <kbd>Ctrl + A</kbd> は、このためのショートカットキーとして使用できます。</p>
+<p class="p1">リストに <kbd>Tab</kbd> で移動すると、他に何も選択されていない場合はリストの最初の項目が選択されます。 <kbd>上/下矢印</kbd>でリストをナビゲートし、<kbd>Shift + 上/下矢印</kbd>を押すと選択範囲が移動して拡張されます。 1文字以上をタイプ入力すると、リスト項目をナビゲートします (同じ文字はその文字から始まる各項目に移動し、異なる文字はその文字列全体で始まる最初の項目に移動します) 。 現在の項目に関連付けられたコンテキストメニューがある場合、<kbd>Shift + F10</kbd> でそのメニューが起動します。 リスト項目がチェック可能である場合、<kbd>スペース</kbd>を使用してチェックボックス (<a href="https://www.w3.org/TR/wai-aria-practices/#checkbox">checkbox</a>) をトグルできます。 選択可能なリスト項目の場合、<kbd>スペース</kbd>を使用して選択をトグルし、<kbd>Shift + スペース</kbd>を使用して連続する項目を選択し、<kbd>Ctrl + 矢印</kbd>を使用して選択せずに移動し、<kbd>Ctrl + スペース</kbd>を使用して連続しない項目を選択できます。 全ての項目を選択するには、チェックボックス、リンクまたは他の方法を使用することをお勧めします。 <kbd>Ctrl + A</kbd> は、このためのショートカットキーとして使用できます。 (訳注: 推奨モデルと説明の無い代替モデルの操作方法が混じっているし、それ以外にもキーボードインタラクションに無い説明や異なった説明もあります。)</p>
 
-<p class="li2"><code>listbox</code> ロールが要素に追加されるか、そのような要素が可視になると、スクリーンリーダーは、フォーカスを得たときにリストボックスのラベルとロールをアナウンスします。 オプションや項目がリスト内でフォーカスされている場合は、次にそれがアナウンスされ、その後、スクリーンリーダーがサポートしている場合は、リストでの項目の位置が示されます。 リスト内でフォーカスが移動すると、スクリーンリーダーは関連する項目をアナウンスします。</p>
+<p class="li2">リストボックスロールが要素に追加されるか、そのような要素が可視になると、スクリーンリーダーは、リストボックスがフォーカスを得たときにリストボックスのラベルとロールをアナウンスします。 オプションや項目がリスト内でフォーカスされると、次にそれがアナウンスされ、スクリーンリーダーがサポートしていれば、続いてリストでの項目の位置が示されます。 リスト内でフォーカスが移動すると、スクリーンリーダーは関連する項目をアナウンスします。</p>
 
 <h3 id="Associated_ARIA_roles_states_and_properties" name="Associated_ARIA_roles_states_and_properties">関連する ARIA のロール、ステート、プロパティ</h3>
 
 <h4 id="Associated_Roles" name="Associated_Roles">関連するロール</h4>
 
 <dl>
- <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Option_Role">option</a></dt>
- <dd>1つ以上のネストされたオプションが必要です。 選択された全てのオプションは、<code>aria-selected</code> が <code>true</code> に設定されています。 選択されていない全てのオプションは、<code>aria-selected</code> が <code>false</code> に設定されています。 オプションを選択できない場合は、<code>aria-selected</code> を省略します。</dd>
+ <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></dt>
+ <dd>1つ以上のネストされたオプションが必要です。 選択された全てのオプションでは、<code>aria-selected</code> が <code>true</code> に設定されています。 選択されていない全てのオプションでは、<code>aria-selected</code> が (訳注: 省略されるか) <code>false</code> に設定されています。 オプションが選択可能でない場合は、<code>aria-selected</code> を省略します (訳注: オプションでは、aria-selected のデフォルトは、false であり、変更できないことを示すなら、aria-disabled や aria-readonly があります) 。</dd>
  <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></dt>
- <dd><code>listitem</code> 要素を含むセクション。</dd>
+ <dd>リスト項目 (<code>listitem</code>) 要素を含むセクション。</dd>
 </dl>
 
 <h4 id="States_and_Properties" name="States_and_Properties">ステートとプロパティ</h4>
 
 <dl>
- <dt>aria-multiselectable</dt>
- <dd>ユーザーが複数のオプションを選択できるようにするには、これを含めて <code>true</code> を設定します。 <code>true</code> に設定するならば、全てのオプションに <code>aria-selected</code> 属性を含めるべきです。 <code>false</code> または省略すると、現在選択されているオプションのみが選択され、いずれかのオプションが選択されている場合は、<code>aria-selected</code> 属性が必要で、<code>true</code> に設定する必要があります。</dd>
  <dt>aria-activedescendant</dt>
- <dd>そのオプションの <code>aria-selected</code> の値が <code>true</code> や <code>false</code> を持っているかどうかに関わらず、最も最近にオプションと対話したことを意味する、現在アクティブなオプションの <code>id</code> を値として取ります。 複数選択であっても、1つの <code>id</code> の値をとります。</dd>
+ <dd>リストボックス内で現在アクティブな要素の <code>id</code> 文字列を保持します。 それがオプション要素である場合、そのオプションの <code>aria-selected</code> の値が <code>true</code> であるかどうかに関係なく、それは最後にインタラクトされたオプションの <code>id</code> になります。 複数選択可能なリストボックス内であっても、1つの <code>id</code> の値のみを取ります。 <code>id</code> がリストボックスの DOM 子孫を参照していない場合、その <code>id</code> は <code>aria-owns</code> 属性の IDs の中に含まれている必要があります。</dd>
+ <dt>aria-owns</dt>
+ <dd>これは、リストボックスの DOM 子要素ではない要素 IDs のスペース区切りのリストです。 ここにリストされている IDs は、他の要素の <code>aria-owns</code> 属性にもリストできません。</dd>
+ <dt>aria-multiselectable</dt>
+ <dd>ユーザーが複数のオプションを選択できる場合は、これを含めて <code>true</code> に設定します。 <code>true</code> に設定されている場合、選択可能な<em>全ての</em>オプションには、<code>aria-selected</code> 属性が含まれ、<code>true</code> または <code>false</code> に設定されているべきです。 選択可能<em>でない</em>オプションは、<code>aria-selected</code> 属性を持つ<em>べきではありません</em>。</dd>
+ <dd><code>false</code> または省略されている場合、いずれかのオプションが選択されているならば、現在選択されているオプションのみが <code>aria-selected</code> 属性を必要とし、<code>true</code> に設定されている必要があります (訳注: 仕様では、単一選択コンテナーに関する説明が複数選択コンテナーに比べて具体的ではなく曖昧なので、aria-selected を使わない「選択がフォーカスに従う」単一選択コンテナーと aria-selected を使う「選択がフォーカスに従わない」単一選択コンテナーが混ざっているようです) 。</dd>
  <dt>aria-required</dt>
- <dd>選択が必要であることを示します。</dd>
+ <dd>空でない文字列値を持つオプションを選択する必要があることを示す論理属性。</dd>
  <dt>aria-readonly</dt>
- <dd>リストボックスは編集可能ではありません。 ユーザーはオプションの選択や非選択を変更することはできませんが、それ以外の操作は可能です。</dd>
+ <dd>ユーザーは、オプションが選択されているかいないかを変更することはできませんが、リストボックスはそれ以外の操作が可能です。</dd>
+ <dt>aria-label</dt>
+ <dd>リストボックスを識別する、人間が読むことができる文字列値。 可視のラベルがある場合は、代わりに <code>aria-labelledby</code> を使用してそのラベルを参照するべきです。</dd>
+ <dt>aria-labelledby</dt>
+ <dd>リストボックスを識別する、要素 IDs のスペースで区切られたリストで、1つ以上の可視の要素を識別します。 可視のラベルがない場合は、代わりに <code>aria-label</code> を使用してラベルを含めるべきです。 (注: 2つの L が付いた「labelled」は、アクセシビリティ API の規約に基づく正しいスペルです。)</dd>
+ <dt>aria-roledescription</dt>
+ <dd>リストボックスのロールをより明確に識別する、人間が読むことができる文字列値。 スクリーンリーダーは、ラベル (ある場合) を読んだ後に、「リストボックス」と言う代わりに、この値をユーザーに読み上げることがよくあります。</dd>
 </dl>
+
+<p>(詳細および ARIA のステートとプロパティの完全なリストについては、<a href="https://www.w3.org/TR/wai-aria-1.1/#listbox">ARIA の <code>listbox</code> (role)</a> の文書を参照してください。)</p>
 
 <h3 id="Keyboard_interactions" name="Keyboard_interactions">キーボードインタラクション</h3>
 
 <ul>
  <li>単一選択リストボックスがフォーカスを受け取ったとき、
   <ul>
-   <li>リストボックスがフォーカスを受け取る前にオプションが選択されていない場合、最初のオプションがフォーカスを受け取ります。 必要に応じて、最初のオプションを自動的に選択してもよい。</li>
-   <li>リストボックスがフォーカスを受け取る前にオプションが選択されている場合、フォーカスは選択されたオプションに設定されます。</li>
+   <li>リストボックスがフォーカスを受け取る前にどのオプションも選択されていなかった場合、最初のオプションがフォーカスを受け取ります。 任意で、最初のオプションを自動選択することもできます。</li>
+   <li>リストボックスがフォーカスを受け取る前にオプションが選択されていた場合、フォーカスは選択されているオプションに設定されます。</li>
   </ul>
  </li>
  <li>複数選択リストボックスがフォーカスを受け取ったとき、
   <ul>
-   <li>リストボックスがフォーカスを受け取る前にどのオプションも選択されていない場合、フォーカスは最初のオプションに設定され、選択状態には自動的な変更はありません。</li>
-   <li>リストボックスがフォーカスを受け取る前に1つ以上のオプションが選択されている場合、フォーカスは選択されているリストの最初のオプションに設定されます。</li>
+   <li>リストボックスがフォーカスを受け取る前にどのオプションも選択されていなかった場合、フォーカスは最初のオプションに設定され、選択状態の自動変更は行われません。
+</li>
+   <li>リストボックスがフォーカスを受け取る前に1つ以上のオプションが選択されていた場合、フォーカスはリストの中で最初に選択されているオプションに設定されます。</li>
   </ul>
  </li>
- <li><kbd>↓（下矢印）</kbd>: 次のオプションにフォーカスを移動します。 必要に応じて、単一選択リストボックスでは、選択もフォーカスと共に移動することがあります。</li>
- <li><kbd>↑（上矢印）</kbd>: 前のオプションにフォーカスを移動します。 必要に応じて、単一選択リストボックスでは、選択もフォーカスと共に移動することがあります。</li>
- <li><kbd>Home</kbd>（オプション）: 最初のオプションにフォーカスを移動します。 必要に応じて、単一選択リストボックスでは、選択もフォーカスと共に移動することがあります。 5つ以上のオプションを持つリストでは、このキーをサポートすることを強くお勧めします。</li>
- <li><kbd>End</kbd>（オプション）: 最後のオプションにフォーカスを移動します。 必要に応じて、単一選択リストボックスでは、選択もフォーカスと共に移動することがあります。 5つ以上のオプションを持つリストでは、このキーをサポートすることを強くお勧めします。</li>
- <li>先行入力は、全てのリストボックス、特に7つ以上のオプションを持つリストボックスに対してお勧めします。
+ <li><kbd>↓ (下矢印)</kbd>: 次のオプションにフォーカスを移動します。 任意で、単一選択リストボックスでは、選択もフォーカスと共に移動することがあります。</li>
+ <li><kbd>↑ (上矢印)</kbd>: 前のオプションにフォーカスを移動します。 任意で、単一選択リストボックスでは、選択もフォーカスと共に移動することがあります。</li>
+ <li><kbd>Home</kbd> (任意): 最初のオプションにフォーカスを移動します。 任意で、単一選択リストボックスでは、選択もフォーカスと共に移動することがあります。 5つ以上のオプションがあるリストでは、このキーをサポートすることを強くお勧めします。</li>
+ <li><kbd>End</kbd> (任意): 最後のオプションにフォーカスを移動します。 任意で、単一選択リストボックスでは、選択もフォーカスと共に移動することがあります。 5つ以上のオプションがあるリストでは、このキーをサポートすることを強くお勧めします。</li>
+ <li>先行入力は、全てのリストボックス、特に7つ以上のオプションがあるリストボックスに対してお勧めします。
   <ul>
    <li> 文字を入力: フォーカスは、入力された文字で始まる名前を持つ次の項目に移動します。</li>
-   <li>複数の文字を連続して入力: フォーカスは、入力された文字列で始まる名前を持つ次の項目に移動します。</li>
+   <li>複数の文字をすばやく続けて入力: フォーカスは、入力された文字列で始まる名前を持つ次の項目に移動します。</li>
   </ul>
  </li>
  <li><strong>複数選択</strong>: 作成者は、複数選択をサポートするために2つのインタラクションモデルのいずれかを実装することができます。 ユーザーがリストをナビゲートしながら <kbd>Shift</kbd> や <kbd>Ctrl</kbd> などの修飾キーを押し続けなくてもよい推奨モデルや、選択状態が失われるのを避けるためにナビゲート中に修飾キーを押し続ける必要のある代替モデルがあります。
@@ -83,12 +87,12 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
    <li>推奨選択モデル — 修飾キーを押し続ける必要はありません。
     <ul>
      <li><kbd>スペース</kbd>: フォーカスされたオプションの選択状態を変更します。</li>
-     <li><kbd>Shift + ↓（下矢印）</kbd>（オプション）: 次のオプションにフォーカスを移動し、選択状態をトグルします。</li>
-     <li><kbd>Shift + ↑（上矢印）</kbd>（オプション）: 前のオプションにフォーカスを移動し、選択状態をトグルします。</li>
-     <li><kbd>Shift + スペース</kbd>（オプション）: 直前に選択した項目からフォーカスされた項目までの連続した項目を選択します。</li>
-     <li><kbd>Ctrl + Shift + Home</kbd>（オプション）: フォーカスされたオプションから最初のオプションまでの全てのオプションを選択します。 必要に応じて、フォーカスを最初のオプションに移動します。</li>
-     <li><kbd>Ctrl + Shift + End</kbd> （オプション）: フォーカスされたオプションから最後のオプションまでの全てのオプションを選択します。 必要に応じて、フォーカスを最後のオプションに移動します。</li>
-     <li><kbd>Ctrl + A</kbd>（オプション）: リスト内の全てのオプションを選択します。 必要に応じて、全てのオプションが選択されている場合は、全てのオプションを非選択にすることもできます。</li>
+     <li><kbd>Shift + ↓ (下矢印)</kbd> (任意): 次のオプションにフォーカスを移動し、選択状態をトグルします。</li>
+     <li><kbd>Shift + ↑ (上矢印)</kbd> (任意): 前のオプションにフォーカスを移動し、選択状態をトグルします。</li>
+     <li><kbd>Shift + スペース</kbd> (任意): 直前に選択した項目からフォーカスされた項目までの連続した項目を選択します。</li>
+     <li><kbd>Ctrl + Shift + Home</kbd> (任意): フォーカスされたオプションから最初のオプションまでの全てのオプションを選択します。 任意で、フォーカスを最初のオプションに移動します。</li>
+     <li><kbd>Ctrl + Shift + End</kbd> (任意): フォーカスされたオプションから最後のオプションまでの全てのオプションを選択します。 任意で、フォーカスを最後のオプションに移動します。</li>
+     <li><kbd>Ctrl + A</kbd> (任意): リスト内の全てのオプションを選択します。 任意で、全てのオプションが選択されている場合は、全てのオプションの選択を解除することもできます。</li>
     </ul>
    </li>
   </ul>
@@ -102,31 +106,31 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 <p>ユーザーがオプションを選択すると、以下が起こる必要があります。</p>
 
 <ol>
- <li>前に選択したオプションを非選択にし、<code>aria-selected</code> を <code>false</code> に設定するか、属性を完全に削除して、新しく選択されなくなったオプションの外観を選択されていないように変更する。</li>
- <li>新しく選択したオプションを選択し、オプションで <code>aria-selected="true"</code> と設定し、新しく選択されたオプションの外観を選択されているように変更する。</li>
- <li>リストボックスの <code>aria-activedescendant</code> の値を、新しく選択したオプションの <code>id</code> に更新する。</li>
- <li>オプションのぼかし、フォーカス、選択状態を視覚的に処理する。</li>
+ <li>前に選択したオプションの選択を解除し、<code>aria-selected</code> を <code>false</code> に設定するか、属性を完全に削除して、新しく選択を解除したオプションの外観を選択されていないように変更します。</li>
+ <li>新しく選択したオプションを選択し、オプションに <code>aria-selected="true"</code> を設定し、新しく選択したオプションの外観を選択されているように変更します。</li>
+ <li>リストボックスの <code>aria-activedescendant</code> の値を、新しく選択したオプションの <code>id</code> に更新します。</li>
+ <li>オプションのブラー (blur) 、フォーカス、選択状態を視覚的に処理します。</li>
 </ol>
 
 <h4 id="Toggling_the_state_of_an_option_in_a_multi_select_listbox" name="Toggling_the_state_of_an_option_in_a_multi_select_listbox">複数選択リストボックスでオプションの状態をトグルする</h4>
 
-<p>ユーザーがオプションをクリックするか、オプションにフォーカスを当てたときに<kbd>スペース</kbd>を押すか、その他でオプションの状態をトグルすると、以下が起こる必要があります。</p>
+<p>ユーザーがオプションをクリックしたり、オプションにフォーカスしているときに<kbd>スペース</kbd>を押すなどして、オプションの状態をトグルすると、以下が起こる必要があります。</p>
 
 <ol>
- <li>現在選択されているオプションの <code>aria-selected</code> ステート（状態）をトグルし、選択されている <code>aria-selected</code> の状態を <code>false</code> なら <code>true</code> に、<code>true</code> なら <code>false</code> に変更する。</li>
- <li>選択状態を反映するようにオプションの外観を変更する。</li>
- <li>リストボックスの <code>aria-activedescendant</code> の値を、オプションが非選択へトグルされている場合でも、ユーザーが直前に対話したオプションの <code>id</code> に更新します。</li>
+ <li>現在フォーカスされているオプションの <code>aria-selected</code> ステート (状態) をトグルし、<code>aria-selected</code> の状態を <code>false</code> なら <code>true</code> に、<code>true</code> なら <code>false</code> に変更します。</li>
+ <li>選択状態を反映するようにオプションの外観を変更します。</li>
+ <li>オプションを選択の解除へトグルしている場合でも、リストボックスの <code>aria-activedescendant</code> の値を、ユーザーが直前にインタラクトしたオプションの <code>id</code> に更新します。</li>
 </ol>
 
 <div class="note">
-<p> ARIA の最初のルールは、要素を再定義し、ARIA のロール、ステート、プロパティを追加してアクセス可能にするのではなく、すでに組み込まれている意味論と挙動を持つネイティブな機能を使用できることです。 <code>&lt;option&gt;</code> 要素を子孫に持つ <code>&lt;select&gt;</code> 要素は、必要な全てのインタラクションをネイティブに処理します。</p>
+<p>ARIA の使用の第一のルールは、要素を転用して ARIA のロール、ステート、プロパティを追加することでアクセス可能にするのではなく、必要としている意味論と振る舞いがすでに組み込まれているネイティブな機能を使用できることです。 <code>&lt;option&gt;</code> 要素を子孫に持つ <code>&lt;select&gt;</code> 要素は、必要な全てのインタラクションをネイティブに処理します。</p>
 </div>
 
 <h2 id="Examples" name="Examples">例</h2>
 
 <h4 class="p1" id="Example_1_A_single_select_listbox_that_uses_aria-activedescendant" name="Example_1_A_single_select_listbox_that_uses_aria-activedescendant">例 1: aria-activedescendant を使用する単一選択リストボックス</h4>
 
-<p class="p2">以下のスニペットは、<code>listbox</code> ロールが HTML ソースコードに直接どのように追加されるかを示しています。</p>
+<p class="p2">以下のスニペットは、リストボックスロールが HTML ソースコードに直接どのように追加されるかを示しています。</p>
 
 <pre class="brush: html">&lt;p id="listbox1label" role="label"&gt;色を選択:&lt;/p&gt;
 &lt;div role="listbox" tabindex="0" id="listbox1" aria-labelledby="listbox1label"
@@ -158,19 +162,19 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 <h4 id="More_examples" name="More_examples">より多くの例</h4>
 
 <ul>
- <li><a href="https://w3c.github.io/aria-practices/examples/listbox/listbox-scrollable.html">スクロール可能なリストボックスの例</a>: 1より大きい <code>size</code> 属性を持つ HTML の <code>&lt;select&gt;</code> と同様な、スクロールしてより多くのオプションを表示する単一選択リストボックス。（英語）</li>
- <li><a href="https://w3c.github.io/aria-practices/examples/listbox/listbox-collapsible.html">折りたたみ可能なドロップダウンリストボックスの例</a>: 属性 <code>size="1"</code> を持つ HTML の <code>&lt;select&gt;</code> と同様な、アクティブにすると展開される単一選択の折りたたみ可能なリストボックス。（英語）</li>
- <li><a href="https://w3c.github.io/aria-practices/examples/listbox/listbox-rearrangeable.html">並べ替え可能なオプションを持つリストボックスの例</a>: オプションの追加、移動、および削除が可能なツールバーが付属する、単一選択リストボックスと複数選択リストボックスの両方の例。（英語）</li>
+ <li><a href="https://w3c.github.io/aria-practices/examples/listbox/listbox-scrollable.html">スクロール可能なリストボックスの例</a>: 1より大きい <code>size</code> 属性を持つ HTML の <code>&lt;select&gt;</code> と同様な、スクロールしてより多くのオプションを表示する単一選択リストボックス。 (英語)</li>
+ <li><a href="https://w3c.github.io/aria-practices/examples/listbox/listbox-collapsible.html">折りたたみ可能なドロップダウンリストボックスの例</a>: 属性 <code>size="1"</code> を持つ HTML の <code>&lt;select&gt;</code> と同様な、アクティブにすると展開される単一選択の折りたたみ可能なリストボックス。 (英語)</li>
+ <li><a href="https://w3c.github.io/aria-practices/examples/listbox/listbox-rearrangeable.html">並べ替え可能なオプションを持つリストボックスの例</a>: オプションの追加、移動、および削除が可能なツールバーが付属する、単一選択リストボックスと複数選択リストボックスの両方の例。 (英語)</li>
 </ul>
 
 <h2 id="Best_practices" name="Best_practices">ベストプラクティス</h2>
 
 <ul class="ul1">
- <li class="li3">キーボードからアクセス可能にするには、作成者はこのロールの全ての子孫の<a href="https://www.w3.org/TR/wai-aria-1.1/#managingfocus">フォーカスを管理</a>する必要があります。</li>
- <li class="li3">リストにフォーカスが当てられていない場合、作成者は選択に異なるスタイリングを使用することが推奨されます。 例えば、非アクティブな選択が、より明るい背景色で表示されることが多い。</li>
- <li class="li3">リストボックスが別のウィジェットの一部でない場合は、<code>aria-labelledby</code> プロパティが設定されている必要があります。</li>
- <li class="li3">1つ以上のエントリがリストボックスの DOM の子でない場合、追加の <code>aria-*</code> プロパティを設定する必要があります（<a href="http://www.w3.org/TR/wai-aria-practices/#listbox_div">ARIA のベストプラクティス</a>（英語）を参照）。</li>
- <li class="li3">リストボックスを<a href="https://www.w3.org/TR/wai-aria-1.1/#aria-expanded">展開</a>する正当な理由がある場合、<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Combobox_Role">combobox</a></code> ロールがより適切かもしれません。</li>
+ <li class="li3">キーボードからアクセス可能にするために、作成者はこのロールの全ての子孫のフォーカスを管理 (<a href="https://www.w3.org/TR/wai-aria-1.1/#managingfocus">Managing Focus</a>) するべきです。</li>
+ <li class="li3">リストがフォーカスされていない場合、作成者は選択に異なるスタイリングを使用することをお勧めします。 例えば、アクティブでない選択は、より明るい背景色で表示されることが多いです。</li>
+ <li class="li3">リストボックスが別のウィジェットの一部でない場合は、<code>aria-labelledby</code> プロパティが設定されているべきです。</li>
+ <li class="li3">1つ以上のエントリーがリストボックスの DOM の子でない場合、追加の <code>aria-*</code> プロパティを設定する必要があります (<a href="https://www.w3.org/TR/wai-aria-practices/#listbox_div">ARIA のベストプラクティス</a> (英語) を参照) 。</li>
+ <li class="li3">リストボックスを展開 (<a href="https://www.w3.org/TR/wai-aria-1.1/#aria-expanded">expand</a>) する正当な理由がある場合は、コンボボックス (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>) ロールの方がより適切かもしれません。</li>
 </ul>
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
@@ -199,13 +203,19 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 <h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
- <li>HTML {{htmlelement("select")}} 要素</li>
- <li>HTML {{htmlelement("label")}} 要素</li>
- <li>HTML {{htmlelement("option")}} 要素</li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Combobox_Role">ARIA: <code>combobox</code> ロール</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Option_Role">ARIA: <code>option</code> ロール</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/list_Role">ARIA: <code>list</code> ロール</a></li>
+ <li><a href="/ja/docs/Web/HTML/Element/select">HTML <code>&lt;select&gt;</code> 要素</a></li>
+ <li><a href="/ja/docs/Web/HTML/Element/label">HTML <code>&lt;label&gt;</code> 要素</a></li>
+ <li><a href="/ja/docs/Web/HTML/Element/option">HTML <code>&lt;option&gt;</code> 要素</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">ARIA: <code>combobox</code> ロール</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role">ARIA: <code>option</code> ロール</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">ARIA: <code>list</code> ロール</a></li>
  <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Listitem_role">ARIA: <code>listitem</code> ロール</a></li>
- <li class="li2"><a href="https://www.w3.org/TR/wai-aria-practices/#Listbox">ARIA のベストプラクティス — リストボックス</a>（英語）</li>
- <li class="li2"><a href="https://www.w3.org/TR/wai-aria-1.1/#listbox">ARIA のロールモデル — リストボックス</a>（英語）</li>
+ <li class="li2"><a href="https://www.w3.org/TR/wai-aria-practices/#Listbox">ARIA のベストプラクティス — リストボックス</a> (英語)</li>
+ <li class="li2"><a href="https://www.w3.org/TR/wai-aria-1.1/#listbox">ARIA のロールモデル — リストボックス</a> (英語)</li>
 </ul>
+
+<section id="Quick_links">
+    <ol>
+        <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA ロール</strong></a>{{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}</li>
+    </ol>
+</section>

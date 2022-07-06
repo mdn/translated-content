@@ -11,25 +11,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>Date.now()</code></strong> возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>var timeInMs = Date.now();</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <p>Нет.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>now()</code> возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC по текущий момент времени в качестве {{jsxref("Global_Objects/Number", "числа", "", 1)}}.</p>
 
 <p>Поскольку метод <code>now()</code> является статическим методом объекта {{jsxref("Global_Objects/Date", "Date")}}, вы всегда должны использовать его как <code>Date.now()</code>.</p>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Этот метод был стандартизирован в ECMA-262 5-го издания. Отсутствие этого метода в движках, которые не были обновлены для его поддержки, можно обойти следующей прокладкой:</p>
 
@@ -40,37 +40,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.4.4', 'Date.now')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.now', 'Date.now')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div>
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("javascript.builtins.Date.now")}}</p>
+<p>{{Compat}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("Performance.now()")}} — предоставляет временные метки с разрешением в доли миллисекунд для использования при измерении производительности веб-страницы</li>

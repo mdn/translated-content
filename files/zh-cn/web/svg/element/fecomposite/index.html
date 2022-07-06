@@ -3,7 +3,7 @@ title: feComposite
 slug: Web/SVG/Element/feComposite
 tags:
   - SVG
-  - SVG滤镜
+  - SVG 滤镜
   - 元素
   - 需要兼容性表
   - 需要示例
@@ -11,9 +11,9 @@ translation_of: Web/SVG/Element/feComposite
 ---
 <div>{{SVGRef}}</div>
 
-<p>该滤镜执行两个输入图像的智能像素组合，在图像空间中使用以下Porter-Duff合成操作之一：over、in、atop、xor。另外，还可以应用一个智能组件<code>arithmetic操作（结果被压到[0,1]范围内）。</code></p>
+<p>该滤镜执行两个输入图像的智能像素组合，在图像空间中使用以下 Porter-Duff 合成操作之一：over、in、atop、xor。另外，还可以应用一个智能组件<code>arithmetic 操作（结果被压到 [0,1] 范围内）。</code></p>
 
-<p><code><font face="Open Sans, Arial, sans-serif">该</font>arithmetic操作对组合来自</code>{{SVGElement("feDiffuseLighting")}}滤镜和来自{{SVGElement("feSpecularLighting")}} 滤镜的<code>输出以及组合纹理数据很有用</code>。如果选择了<code>arithmetic</code>操作，每个结果像素都要经过下面的方程式的计算：</p>
+<p><code>该 arithmetic 操作对组合来自</code>{{SVGElement("feDiffuseLighting")}}滤镜和来自{{SVGElement("feSpecularLighting")}} 滤镜的<code>输出以及组合纹理数据很有用</code>。如果选择了<code>arithmetic</code>操作，每个结果像素都要经过下面的方程式的计算：</p>
 
 <pre>result = k1*i1*i2 + k2*i1 + k3*i2 + k4
 </pre>
@@ -21,8 +21,8 @@ translation_of: Web/SVG/Element/feComposite
 <p>在这里：</p>
 
 <ul>
- <li><code>i1</code>和<code>i2标</code>示了输入图像相应的像素通道值，分别映射到{{SVGAttr("in")}}和{{SVGAttr("in2")}}。</li>
- <li><code>k1、k2、k3</code>和<code>k4标示了同名的属性值。</code></li>
+ <li><code>i1</code>和<code>i2 标</code>示了输入图像相应的像素通道值，分别映射到{{SVGAttr("in")}}和{{SVGAttr("in2")}}。</li>
+ <li><code>k1、k2、k3</code>和<code>k4 标示了同名的属性值。</code></li>
 </ul>
 
 <h2 id="用法">用法</h2>
@@ -80,5 +80,5 @@ translation_of: Web/SVG/Element/feComposite
  <li>{{ SVGElement("feSpecularLighting") }}</li>
  <li>{{ SVGElement("feTile") }}</li>
  <li>{{ SVGElement("feTurbulence") }}</li>
- <li><a href="/en/SVG/Tutorial/Filter_effects" title="en/SVG/Tutorial/Filter_effects">SVG教程：滤镜效果</a></li>
+ <li><a href="/en/SVG/Tutorial/Filter_effects" title="en/SVG/Tutorial/Filter_effects">SVG 教程：滤镜效果</a></li>
 </ul>

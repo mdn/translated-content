@@ -7,7 +7,7 @@ translation_of: Web/CSS/scroll-snap-destination
 
 <h2 id="摘要">摘要</h2>
 
-<p><strong><code>scroll-snap-destination</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a>属性定义滚动容器的可视化{{Glossary("viewport")}} 中元素snap点的x和y坐标位置。</p>
+<p><strong><code>scroll-snap-destination</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a>属性定义滚动容器的可视化{{Glossary("viewport")}} 中元素 snap 点的 x 和 y 坐标位置。</p>
 
 <p>{{cssinfo}}</p>
 
@@ -26,7 +26,7 @@ scroll-snap-destination: unset;
 
 <dl>
  <dt><code>&lt;position&gt;</code></dt>
- <dd>定义从滚动容器的可视视图边缘开始偏移的snap坐标。第一个值给定了snap坐标的x坐标，第二个值为它的y坐标。</dd>
+ <dd>定义从滚动容器的可视视图边缘开始偏移的 snap 坐标。第一个值给定了 snap 坐标的 x 坐标，第二个值为它的 y 坐标。</dd>
 </dl>
 
 <h3 id="正式语法">正式语法</h3>
@@ -35,7 +35,7 @@ scroll-snap-destination: unset;
 
 <h2 id="示例">示例</h2>
 
-<h3 id="HTML内容">HTML内容</h3>
+<h3 id="HTML内容">HTML 内容</h3>
 
 <pre class="brush: html">&lt;div id="container"&gt;
   &lt;div&gt;
@@ -67,7 +67,7 @@ scroll-snap-destination: unset;
 &lt;/div&gt;
 </pre>
 
-<h3 id="CSS内容">CSS内容</h3>
+<h3 id="CSS内容">CSS 内容</h3>
 
 <pre class="brush: css">#container {
   display: flex;
@@ -139,54 +139,4 @@ scroll-snap-destination: unset;
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>支持度</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("39.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>支持度</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("39.0") }}<sup>[1]</sup></td>
-   <td>{{CompatGeckoMobile("39.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在Firefox移动版上，从内核Gecko 39开始可用，但是低于 <code>layout.css.vertical-text.enabled</code>优先级，默认不可用。</p>
+{{Compat("css.properties.scroll-snap-destination")}}

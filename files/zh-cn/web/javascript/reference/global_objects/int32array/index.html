@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Int32Array
 ---
 <div>{{JSRef}}</div>
 
-<p>该 <strong><code>Int32Array</code></strong> 类型表示在平台顺序字节中一个双补码32位有符号的整型数组。如果需要控制字节顺序，请改用{{jsxref("DataView")}} 。此内容的初始化为<code>0</code>。一旦创建，你可以使用对象的方法或者标准数组索引的语法(即使用括号表示法)。</p>
+<p>该 <strong><code>Int32Array</code></strong> 类型表示在平台顺序字节中一个双补码 32 位有符号的整型数组。如果需要控制字节顺序，请改用 {{jsxref("DataView")}}。此内容的初始化为 <code>0</code>。一旦创建，你可以使用对象的方法或者标准数组索引的语法 (即使用括号表示法)。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -20,7 +20,7 @@ new Int32Array(buffer [, byteOffset [, length]]);</pre>
 
 <dl>
  <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int32Array.BYTES_PER_ELEMENT")}}</dt>
- <dd>Returns a number value of the element size. <code>4</code> in the case of an <code>Int32Array</code>.   </dd>
+ <dd>Returns a number value of the element size. <code>4</code> in the case of an <code>Int32Array</code>.</dd>
  <dt>Int32Array.length</dt>
  <dd>Static length property whose value is 3. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}}.</dd>
  <dt>{{jsxref("TypedArray.name", "Int32Array.name")}}</dt>
@@ -33,31 +33,28 @@ new Int32Array(buffer [, byteOffset [, length]]);</pre>
 
 <dl>
  <dt>{{jsxref("TypedArray.from", "Int32Array.from()")}}</dt>
- <dd>从类似数组或者可迭代对象中创建一个新的<code>Int32Array</code>。另见{{jsxref("Array.from()")}}.</dd>
+ <dd>从类似数组或者可迭代对象中创建一个新的 <code>Int32Array</code>。另见 {{jsxref("Array.from()")}}.</dd>
  <dt>{{jsxref("TypedArray.of", "Int32Array.of()")}}</dt>
- <dd>创建一个新的具有可变数量参数的<code>Int32Array</code>。另见{{jsxref("Array.of()")}}。</dd>
+ <dd>创建一个新的具有可变数量参数的 <code>Int32Array</code>。另见 {{jsxref("Array.of()")}}。</dd>
 </dl>
 
 <h2 id="Int32Array_属性"><code>Int32Array</code> 属性</h2>
 
-<p>所有的<code>Int32Array</code>对象都继承自{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}。</p>
+<p>所有的<code>Int32Array</code>对象都继承自 {jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}。</p>
 
 <h3 id="属性_2">属性</h3>
 
 <dl>
  <dt><code>Int32Array.prototype.constructor</code></dt>
- <dd>返回创建实例原型的函数。默认情况下,它是<code>Int32Array</code>的构造函数。</dd>
+ <dd>返回创建实例原型的函数。默认情况下，它是 <code>Int32Array</code> 的构造函数。</dd>
  <dt>{{jsxref("TypedArray.prototype.buffer", "Int32Array.prototype.buffer")}} {{readonlyInline}}</dt>
- <dd>返回在构造时被固定的<code>Int32Array</code>引用的{{jsxref("ArrayBuffer")}}，因此只读。</dd>
+ <dd>返回在构造时被固定的 <code>Int32Array</code> 引用的 {{jsxref("ArrayBuffer")}}，因此只读。</dd>
  <dt>{{jsxref("TypedArray.prototype.byteLength", "Int32Array.prototype.byteLength")}} {{readonlyInline}}</dt>
- <dd>返回从其{{jsxref("ArrayBuffer")}}开始的<code>Int32Array</code>长度的(以字节为单位)。在构造时被固定，因此只读。</dd>
+ <dd>返回从其 {{jsxref("ArrayBuffer")}} 开始的 <code>Int32Array</code> 长度的 (以字节为单位)。在构造时被固定，因此只读。</dd>
  <dt>{{jsxref("TypedArray.prototype.byteOffset", "Int32Array.prototype.byteOffset")}} {{readonlyInline}}</dt>
- <dd>返回从其{{jsxref("ArrayBuffer")}}开始的偏移量(以字节为单位)。在构造时被固定,因此只读。</dd>
-</dl>
-
-<dl>
+ <dd>返回从其 {{jsxref("ArrayBuffer")}} 开始的偏移量 (以字节为单位)。在构造时被固定，因此只读。</dd>
  <dt>{{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}} {{readonlyInline}}</dt>
- <dd>     返回<code>Int32ArrayInt32Array</code>包含的元素个数。在构造时被固定,因此只读。</dd>
+ <dd>返回 <code>Int32ArrayInt32Array</code> 包含的元素个数。在构造时被固定，因此只读。</dd>
 </dl>
 
 <h3 id="方法_2">方法</h3>
@@ -102,9 +99,9 @@ new Int32Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.set", "Int32Array.prototype.set()")}}</dt>
  <dd>在类型化数组中存储多个值，从指定数组中读取输入值。</dd>
  <dt>{{jsxref("TypedArray.slice", "Int32Array.prototype.slice()")}}</dt>
- <dd>提取数组中的一部分，并返回一个新的数组.更多请见{{jsxref("Array.prototype.slice()")}}。</dd>
+ <dd>提取数组中的一部分，并返回一个新的数组。更多请见{{jsxref("Array.prototype.slice()")}}。</dd>
  <dt>{{jsxref("TypedArray.some", "Int32Array.prototype.some()")}}</dt>
- <dd>如果数组中至少有一个元素满足所提供的测试函数，则返回true。更多请见{{jsxref("Array.prototype.some()")}}。</dd>
+ <dd>如果数组中至少有一个元素满足所提供的测试函数，则返回 true。更多请见{{jsxref("Array.prototype.some()")}}。</dd>
  <dt>{{jsxref("TypedArray.sort", "Int32Array.prototype.sort()")}}</dt>
  <dd>Sorts the elements of an array in place and returns the array. See also {{jsxref("Array.prototype.sort()")}}.</dd>
  <dt>{{jsxref("TypedArray.subarray", "Int32Array.prototype.subarray()")}}</dt>
@@ -134,12 +131,12 @@ console.log(int32.BYTES_PER_ELEMENT); // 4
 var arr = new Int32Array([21,31]);
 console.log(arr[1]); // 31
 
-// 从一个其他TypedArray
+// 从一个其他 TypedArray
 var x = new Int32Array([21, 31]);
 var y = new Int32Array(x);
 console.log(y[0]); // 21
 
-// 从一个ArrayBuffer
+// 从一个 ArrayBuffer
 var buffer = new ArrayBuffer(16);
 var z = new Int32Array(buffer, 0, 4);
 </pre>
@@ -156,12 +153,12 @@ var z = new Int32Array(buffer, 0, 4);
   <tr>
    <td>{{SpecName('Typed Array')}}</td>
    <td>{{Spec2('Typed Array')}}</td>
-   <td>已被ECMAScript 6取代.</td>
+   <td>已被 ECMAScript 6 取代。</td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#table-49', 'TypedArray constructors')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td>ECMA标准中的初始定义，指定需要新建。</td>
+   <td>ECMA 标准中的初始定义，指定需要新建。</td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}}</td>
@@ -173,72 +170,7 @@ var z = new Int32Array(buffer, 0, 4);
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>7.0</td>
-   <td>{{ CompatGeckoDesktop(2) }}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">新</span></font> 的特性</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(44) }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>4.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile(2) }}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>4.2</td>
-  </tr>
-  <tr>
-   <td><code>新</code>的特性</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile(44) }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="兼容性说明">兼容性说明</h2>
 

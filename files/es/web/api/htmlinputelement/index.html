@@ -373,23 +373,23 @@ translation_of: Web/API/HTMLInputElement
 
 <h2 id="Eventos">Eventos</h2>
 
-<p>Responde a este elemento usando <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> o asignando una respuesta a la propiedad <code>on<em>eventname</em></code> de esta interface:</p>
+<p>Responde a este elemento usando <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> o asignando una respuesta a la propiedad <code>on<em>eventname</em></code> de esta interface:</p>
 
 <dl>
- <dt><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event"><code>input</code></a></dt>
+ <dt><a href="/en-US/docs/Web/API/HTMLElement/input_event"><code>input</code></a></dt>
  <dd>Se activa cuando el <code>value</code> de un elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} ha sido modificado.</dd>
  <dd>
- <p><strong>Nota:</strong> Esto es actualmente gatillado en la interface {{domxref("HTMLElement")}} y también aplica a los elementos <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code>, pero lo hemos listado acá porque es más utilizado con los elementos de entrada de formularios.</p>
+ <p><strong>Nota:</strong> Esto es actualmente gatillado en la interface {{domxref("HTMLElement")}} y también aplica a los elementos <code><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code>, pero lo hemos listado acá porque es más utilizado con los elementos de entrada de formularios.</p>
  </dd>
  <dd>
- <p>También disponible por la propiedad manipuladora <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninput">oninput</a></code>.</p>
+ <p>También disponible por la propiedad manipuladora <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/oninput">oninput</a></code>.</p>
  </dd>
- <dt><code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/HTMLElement/invalid_event">invalid</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/API/HTMLElement/invalid_event">invalid</a></code></dt>
  <dd>Fired when an element does not satisfy its constraints during constraint validation.</dd>
- <dd>Also available via the <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninvalid">oninvalid</a></code> event handler property.</dd>
- <dt><code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/search_event">search</a></code></dt>
+ <dd>Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/oninvalid">oninvalid</a></code> event handler property.</dd>
+ <dt><code><a href="/en-US/docs/Web/API/HTMLInputElement/search_event">search</a></code></dt>
  <dd>Fired when a search is initiated on an {{HTMLElement("input")}} of <code>type="search"</code>.</dd>
- <dd>Also available via the <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onsearch">onsearch</a></code> event handler property.</dd>
+ <dd>Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onsearch">onsearch</a></code> event handler property.</dd>
 </dl>
 
 <h2 id="Especificaciones">Especificaciones</h2>
@@ -429,242 +429,7 @@ translation_of: Web/API/HTMLInputElement
 
 <h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(1.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>autocomplete &amp; autofocus properties</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>files property</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(1.9)}}<sup>[2]</sup></td>
-   <td>10</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>multiple property</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>indeterminate property</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>list property</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>formAction, formEncType, formMethod, formTarget properties</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(2)}}<sup>[3]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>formNoValidate, validationMessage, validity, willValidate properties and setCustomValidity() and checkValidity() methods.</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(2)}}</td>
-   <td>10</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>pattern, placeholder, required properties</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(2)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>height and weight properties</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(16)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>labels</code> property</td>
-   <td>{{CompatChrome(14.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("56")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>min, max, and step for &lt;input type="number"&gt;</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>Experimental, and without specific UI, since {{CompatGeckoDesktop(16)}}: behind the pref dom.experimental_forms</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>stepUp and stepDown methods</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>Experimental since {{CompatGeckoDesktop(16)}}: behind the pref dom.experimental_forms<br>
-    <br>
-    There are still differences with the latest spec: {{bug(835773)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>min, max, and step properties for &lt;input type="range"&gt;</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(23)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>min, max, and step properties for &lt;input type="date"&gt;</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>Experimental, and without specific UI, since {{CompatGeckoDesktop(20)}}: behind the pref dom.experimental_forms</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>min, max, and step properties for other date-related type values</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>mozGetFileNameArray() and mozSetFileNameArray() methods {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>mozSetFileArray() method {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("38")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>autocapitalize</td>
-   <td>{{CompatChrome(43.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(1.0)}}<sup>[3]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>autocapitalize</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(43.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td><span style="font-size: 12px; line-height: 16.3636360168457px;">{{CompatUnknown}}</span></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(43.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Implemented in {{bug("556743")}}.</p>
-
-<p>[2] The <code>files</code> property was made settable in Firefox 57 ({{bug(1384030)}}).</p>
-
-<p>[3] In Firefox 56, the implementation has been updated so that the <code>formAction</code> property returns the correct form submission URL, as per spec, when the associated <code>&lt;input&gt;</code> is being used to submit a form ({{bug(1366361)}}).</p>
+{{Compat("api.HTMLInputElement")}}
 
 <h2 id="Vea_también">Vea también</h2>
 

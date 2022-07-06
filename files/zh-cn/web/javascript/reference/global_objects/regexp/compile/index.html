@@ -31,18 +31,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/compile
   <dt><code>m</code></dt>
   <dd>多行;让开始和结束字符（^ 和 $）工作在多行模式工作（例如，^ 和 $ 可以匹配字符串中每一行的开始和结束（行是由 \n 或 \r 分割的），而不只是整个输入字符串的最开始和最末尾处。</dd>
   <dt><code>y</code></dt>
-  <dd>黏度; 在目标字符串中，只从正则表达式的lastIndex属性指定的显示位置开始匹配（并且不试图从任何之后的索引匹配）。</dd>
+  <dd>黏度; 在目标字符串中，只从正则表达式的 lastIndex 属性指定的显示位置开始匹配（并且不试图从任何之后的索引匹配）。</dd>
  </dl>
  </dd>
 </dl>
 
 <h2 id="描述">描述</h2>
 
-<p><code>不推荐compile方法。你可以使用</code> <code>RegExp</code> 构造函数来得到相同效果。</p>
+<p><code>不推荐 compile 方法。你可以使用</code> <code>RegExp</code> 构造函数来得到相同效果。</p>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用compile()"><code>使用compile()</code></h3>
+<h3 id="使用_compile"><code>使用 compile()</code></h3>
 
 <p>以下展示如何用新模式和新标志来重新编译正则表达式。</p>
 
@@ -74,55 +74,7 @@ regexObj.compile("new foo", "g");
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

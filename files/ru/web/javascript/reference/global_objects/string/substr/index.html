@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 <div>
 <div>{{JSRef}}</div>
 
-<div></div>
+
 
 <div class="warning">Внимание: так как <code>String.prototype.substr(…)</code> не полностью упразднена (а лишь "удалена из стандартов по вебу"), она считается <strong>унаследованной функцией</strong>, использование которой лучше избегать там, где это возможно. Она не является частью ядра языка JavaScript и может быть удалена в будущем. Если есть возможность, используйте метод <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/String/substring">substring()</a></code>.</div>
 
@@ -22,11 +22,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 
 
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>str</var>.substr(<var>start</var>[, <var>length</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>start</code></dt>
@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 
 <p>Новая строка, содержащая часть исходной, обрезанной по переданным параметрам.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Параметр <code>start</code> является индексом символа. Индекс первого символа равен 0, а последнего символа — на один меньше длины строки. Метод <code>substr()</code> начинает извлекать символы начиная с позиции <code>start</code> и собирая <code>length</code> символов (если он не достигнет раньше конца строки, в этом случае будет возвращено меньшее количество символов).</p>
 
@@ -49,9 +49,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 
 <p>Если параметр <code>length</code> равен нулю или отрицателен, метод <code>substr()</code> вернёт пустую строку. Если параметр <code>length</code> опущен, метод <code>substr()</code> извлечёт все символы до конца строки.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_substr" name="Example:_Using_substr">Использование метода <code>substr()</code></h3>
+<h3 id="Example_Using_substr">Использование метода <code>substr()</code></h3>
 
 <pre class="brush: js">var str = 'абвгдеёжзи';
 
@@ -63,7 +63,7 @@ console.log('(-20, 2): ' + str.substr(-20, 2)); // '(-20, 2): аб'
 console.log('(20, 2): '  + str.substr(20, 2));  // '(20, 2): '
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>JScript от Microsoft не поддерживает отрицательные значения для начального индекса. Если вы хотите использовать эту возможность, вы можете использовать следующий код совместимости для обхода этой ошибки:</p>
 
@@ -88,26 +88,14 @@ if ('ab'.substr(-1) != 'b') {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.substr', 'String.prototype.substr')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+<p>{{Compat}}</p>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("javascript.builtins.String.substr")}}</p>
-
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.slice()")}}</li>

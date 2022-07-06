@@ -41,10 +41,10 @@ translation_of: Web/API/Request/Request
   <li><code>body</code>: リクエストに追加する本文で、 {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, {{domxref("ReadableStream")}} オブジェクトが使用できます。なお、リクエストが <code>GET</code> 又は <code>HEAD</code> メソッドを使用している場合、本文を持てません。</li>
   <li><code>mode</code>: リクエストで使用するモード。例えば、 <code>cors</code>, <code>no-cors</code>, <code>same-origin</code>, <code>navigate</code> です。既定値は <code>cors</code> です。 Chrome では、既定値は 47 以前は <code>no-cors</code> でしたが、 47 から <code>same-origin</code> になりました。</li>
   <li><code>credentials</code>: リクエストで使用するリクエストの資格情報です。 <code>omit</code>, <code>same-origin</code>, <code>include</code> の何れかです。既定値は <code>omit</code> です。 Chrome では、既定値は 47 以前は <code>same-origin</code> でしたが、 47 から <code>include</code> になりました。</li>
-  <li><code>cache</code>: リクエストで使用する <a href="/docs/Web/API/Request/cache">cache モード</a>です。</li>
+  <li><code>cache</code>: リクエストで使用する <a href="/ja/docs/Web/API/Request/cache">cache モード</a>です。</li>
   <li><code>redirect</code>: 使用するリダイレクトモードです。 <code>follow</code>, <code>error</code>, <code>manual</code> の何れかです。 Chrome では、既定値は 47 以前は <code>follow</code> でしたが、 47 から <code>manual</code> になりました。</li>
   <li><code>referrer</code>: <code>no-referrer</code>, <code>client</code> 又は URL を示す {{domxref("USVString")}} です。既定値は <code>client</code> です。</li>
-  <li><code>integrity</code>: リクエストの <a href="/docs/Web/Security/Subresource_Integrity">subresource integrity</a> の値です (例えば、 <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>)。</li>
+  <li><code>integrity</code>: リクエストの <a href="/ja/docs/Web/Security/Subresource_Integrity">subresource integrity</a> の値です (例えば、 <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>)。</li>
  </ul>
  </dd>
 </dl>
@@ -149,14 +149,12 @@ var myRequest = new Request('flowers.jpg', myInit);
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-<p class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力したいのであれば、 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</p>
-
 <p>{{Compat("api.Request.Request")}}</p>
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
- <li><a href="/docs/Web/API/ServiceWorker_API">サービスワーカー API</a></li>
- <li><a href="/docs/Web/HTTP/Access_control_CORS">HTTP アクセス制御 (CORS)</a></li>
- <li><a href="/docs/Web/HTTP">HTTP</a></li>
+ <li><a href="/ja/docs/Web/API/ServiceWorker_API">サービスワーカー API</a></li>
+ <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP アクセス制御 (CORS)</a></li>
+ <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
 </ul>

@@ -3,11 +3,11 @@ title: result
 slug: Web/SVG/Attribute/result
 tags:
   - SVG
-  - SVG属性
+  - SVG 属性
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/result
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG属性参考主页</a></p>
+<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG 属性参考主页</a></p>
 
 <p>属性<code>result</code>定义了滤镜的分配名。如果提供了它，则经过滤镜处理的结果即图形可以再次滤镜处理，在后继滤镜（即另一个{{ SVGElement("filter") }}元素）上通过一个{{ SVGAttr("in") }}属性引用之前的结果。如果没有提供<code>result</code>值，而且如果下一个滤镜也没有提供{{ SVGAttr("in") }}属性值，则输出只可作为下一个滤镜的隐式输入。</p>
 
@@ -29,12 +29,12 @@ translation_of: Web/SVG/Attribute/result
   </tr>
   <tr>
    <th scope="row">规范文档</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/filters.html#FilterPrimitiveResultAttribute" title="http://www.w3.org/TR/SVG/filters.html#FilterPrimitiveResultAttribute">SVG 1.1 (2nd Edition)</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/SVG/filters.html#FilterPrimitiveResultAttribute">SVG 1.1 (2nd Edition)</a></td>
   </tr>
  </tbody>
 </table>
 
-<p>注意<code>&lt;filter-primitive-reference&gt;</code>不是一个XML ID，换句话说，<code>&lt;filter-primitive-reference&gt;</code>只在给定的{{ SVGElement("filter") }}元素内部有意义，因此只有局部范围。在同一个{{ SVGElement("filter") }}元素内部，同一个<code>&lt;filter-primitive-reference&gt;</code>出现多次也是合法的。如果引用了，<code>&lt;filter-primitive-reference&gt;</code>将使用在给定结果前面、离给定结果最近的滤镜。</p>
+<p>注意<code>&lt;filter-primitive-reference&gt;</code>不是一个 XML ID，换句话说，<code>&lt;filter-primitive-reference&gt;</code>只在给定的{{ SVGElement("filter") }}元素内部有意义，因此只有局部范围。在同一个{{ SVGElement("filter") }}元素内部，同一个<code>&lt;filter-primitive-reference&gt;</code>出现多次也是合法的。如果引用了，<code>&lt;filter-primitive-reference&gt;</code>将使用在给定结果前面、离给定结果最近的滤镜。</p>
 
 <h2 id="元素">元素</h2>
 

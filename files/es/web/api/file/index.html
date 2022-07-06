@@ -13,11 +13,11 @@ translation_of: Web/API/File
 
 <p>La interfaz <strong><code>File</code></strong> provee información acerca de los archivos y permite que el código JavaScript en una página web tenga acceso a su contenido.</p>
 
-<p>Los objetos <code>File</code> son generalmente recuperados a través de un objeto {{domxref("FileList")}} retornado como resultado de un usuario seleccionado archivos por medio de un elemento {{ HTMLElement("input") }} , desde las operaciones drag y drop de un objeto  {{domxref("DataTransfer")}} ,<span style="line-height: 1.5;"> o desde la API </span><code style="font-size: 14px;">mozGetAsFile()</code><span style="line-height: 1.5;"> en un {{ domxref("HTMLCanvasElement") }}. En Gecko, desde código con privilegios es posible crear objetos <code>File</code> representando cualquier archivo local sin esperar la interacción del usuario </span> (ver {{anch("Implementation notes")}} para más información.)</p>
+<p>Los objetos <code>File</code> son generalmente recuperados a través de un objeto {{domxref("FileList")}} retornado como resultado de un usuario seleccionado archivos por medio de un elemento {{ HTMLElement("input") }} , desde las operaciones drag y drop de un objeto  {{domxref("DataTransfer")}} ,<span style="line-height: 1.5;"> o desde la API </span><code style="font-size: 14px;">mozGetAsFile()</code><span style="line-height: 1.5;"> en un {{ domxref("HTMLCanvasElement") }}. En Gecko, desde código con privilegios es posible crear objetos <code>File</code> representando cualquier archivo local sin esperar la interacción del usuario </span> (ver <a href="#implementation_notes">Implementation notes</a> para más información.)</p>
 
 <p>Un objeto <code>File</code> es una especie específica de {{DOMxRef("Blob")}}, y puede ser utilizada en cualquier contexto que un Blob puede ser usado. En particular, {{DOMxRef("FileReader")}}, {{DOMxRef("URL.createObjectURL()")}}, {{DOMxRef("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, y {{DOMxRef("XMLHttpRequest", "", "send()")}} aceptan tanto <code>Blob</code>s y <code>File</code>s.</p>
 
-<p>Ver <a href="https://wiki.developer.mozilla.org/en-US/docs/Using_files_from_web_applications">Utilizando archivos desde aplicaciones web (Using files from web applications)</a> para más información y ejemplos.</p>
+<p>Ver <a href="/en-US/docs/Using_files_from_web_applications">Utilizando archivos desde aplicaciones web (Using files from web applications)</a> para más información y ejemplos.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -34,7 +34,7 @@ translation_of: Web/API/File
  <dt>{{DOMxRef("File.lastModified")}}{{ReadOnlyInline}}</dt>
  <dd>Retorna el último tiempo que el archivo se modifico, en milisegundos desde la época de UNIX (1 de enero de 1970 a medianoche).</dd>
  <dt>{{DOMxRef("File.lastModifiedDate")}} {{Deprecated_Inline}}{{ReadOnlyInline}} {{Gecko_MinVersion_Inline("15.0")}}</dt>
- <dd>Retorna la última fecha (en un objeto {{JSxRef("Date")}}<code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>) de modificación del archivo referenciada por el objeto <code>File</code>.</dd>
+ <dd>Retorna la última fecha (en un objeto {{JSxRef("Date")}}<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>) de modificación del archivo referenciada por el objeto <code>File</code>.</dd>
  <dt>{{DOMxRef("File.name")}}{{ReadOnlyInline}}</dt>
  <dd>Retorna el nombre del archivo referenciada por el objeto <code>File</code>.</dd>
  <dt>{{DOMxRef("File.webkitRelativePath")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
@@ -45,7 +45,7 @@ translation_of: Web/API/File
  <dt>{{DOMxRef("File.size")}}{{ReadOnlyInline}}</dt>
  <dd>Retorna el tamaño del archivo en bytes.</dd>
  <dt>{{DOMxRef("File.type")}}{{ReadOnlyInline}}</dt>
- <dd>Retorna el tipo <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME </a>del archivo.</dd>
+ <dd>Retorna el tipo <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME </a>del archivo.</dd>
 </dl>
 
 <h2 id="Métodos">Métodos</h2>
@@ -92,8 +92,8 @@ translation_of: Web/API/File
 
 <ul>
  <li>En Gecko, puedes hacer uso de esta API desde código chrome. Vea <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code" title="Using the DOM File API in chrome code">Utilizando la API DOM File en código chrome (Using the DOM File API in chrome code)</a> para más detalles.</li>
- <li>Empezando desde Gecko 6.0 {{geckoRelease("6.0")}}, código privilegiado (como las extensiones por ejemplo) puede pasar un objeto {{interface("nsIFile")}} al constructor  DOM <code>File</code> para especificar el archivo a referenciar.</li>
- <li>Empezando desde Gecko 8.0 {{geckoRelease("8.0")}}, usted puede usar <code>new File</code> para la creación de objetos <code>File</code> a partir de código de componentes XPCOM en lugar de tener que instanciar el objeto {{interface("nsIDOMFile")}} directamente. El constructor toma, en contraste a Blob, un segundo argumento como nombre de archivo. El nombre de archivo puede ser cualquier String.
+ <li>Empezando desde Gecko 6.0 {{geckoRelease("6.0")}}, código privilegiado (como las extensiones por ejemplo) puede pasar un objeto <code>nsIFile</code> al constructor  DOM <code>File</code> para especificar el archivo a referenciar.</li>
+ <li>Empezando desde Gecko 8.0 {{geckoRelease("8.0")}}, usted puede usar <code>new File</code> para la creación de objetos <code>File</code> a partir de código de componentes XPCOM en lugar de tener que instanciar el objeto <code>nsIDOMFile</code> directamente. El constructor toma, en contraste a Blob, un segundo argumento como nombre de archivo. El nombre de archivo puede ser cualquier String.
   <pre class="syntaxbox">File File(
   Array parts,
   String filename,

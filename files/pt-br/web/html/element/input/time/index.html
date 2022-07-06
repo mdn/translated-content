@@ -40,7 +40,7 @@ translation_of: Web/HTML/Element/input/time
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#value">Value</a></strong></td>
    <td>Uma {{domxref("DOMString")}} representando um horário, ou vazia.</td>
   </tr>
   <tr>
@@ -80,7 +80,7 @@ campoHora.value = '15:30';</pre>
 
 <h3 id="Formato_do_valor_do_horário">Formato do valor do horário</h3>
 
-<p>O  <code>value</code> do campo de <code>time</code> está sempre no formato 24 horas: <code>"hh:mm"</code>, não importa o formato usado na inserção. Esse formato muitas vezes é escolhido baseado no idioma/local do usuário (ou mesmo pelo agente de usuário). Se o horário incluir segundos (veja {{anch("Usando o atributo step")}}), o formato sempre é <code>"hh:mm:ss"</code>.</p>
+<p>O  <code>value</code> do campo de <code>time</code> está sempre no formato 24 horas: <code>"hh:mm"</code>, não importa o formato usado na inserção. Esse formato muitas vezes é escolhido baseado no idioma/local do usuário (ou mesmo pelo agente de usuário). Se o horário incluir segundos (veja <a href="#usando_o_atributo_step">Usando o atributo step</a>), o formato sempre é <code>"hh:mm:ss"</code>.</p>
 
 <p>No próximo exemplo, você pode ver o modo como o valor do campo de horário varia entre o que foi digitado e o que ele retorna.</p>
 
@@ -106,13 +106,13 @@ startTime.addEventListener("input", function() {
 
 <p>{{EmbedLiveSample("Time_value_format", 600, 80)}}</p>
 
-<p>Quando um formulário que inclui um campo de <code>time</code> é enviado, o valor é codificado antes de ser incluído nos dados do formulário. Nesse caso, o valor correspondente ao campo de horário sempre estará no formato <code>"name=hh%3Amm"</code>, ou <code>"name=hh%3Amm%3ass"</code> caso ele conte com segundos (veja {{anch("Usando o atributo step")}}).</p>
+<p>Quando um formulário que inclui um campo de <code>time</code> é enviado, o valor é codificado antes de ser incluído nos dados do formulário. Nesse caso, o valor correspondente ao campo de horário sempre estará no formato <code>"name=hh%3Amm"</code>, ou <code>"name=hh%3Amm%3ass"</code> caso ele conte com segundos (veja <a href="#usando_o_atributo_step">Usando o atributo step</a>).</p>
 
 <h2 id="Usando_campos_de_horário">Usando campos de horário</h2>
 
 <p>Apesar de que, entre os campos dos tipos data e horário, o de horário tenha a maior presença entre os navegadores, ele ainda não tem presença universal. Logo, é provável que você vá precisar fornecer uma maneira alternativa de se inserir data e hora, para que os usuários do Safari (e de outros navegadores sem suporte) ainda consigam inserir horários facilmente.</p>
 
-<p>A seguir, vamos conferir casos de uso básicos e complexos do <code>&lt;input type="time"&gt;</code>, além de dar conselhos sobre como contornar a questão dos navegadores na seção (see {{anch("Lidando com navegadores sem suporte")}}).</p>
+<p>A seguir, vamos conferir casos de uso básicos e complexos do <code>&lt;input type="time"&gt;</code>, além de dar conselhos sobre como contornar a questão dos navegadores na seção (see <a href="#lidando_com_navegadores_sem_suporte">Lidando com navegadores sem suporte</a>).</p>
 
 <h3 id="Usos_básicos_de_horário">Usos básicos de horário</h3>
 
@@ -443,7 +443,7 @@ function populateMinutes() {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 
 

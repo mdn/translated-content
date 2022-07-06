@@ -3,10 +3,10 @@ title: <input type="checkbox">
 slug: Web/HTML/Element/Input/checkbox
 translation_of: Web/HTML/Element/input/checkbox
 ---
-<p><span class="seoSummary">HTML input元素 <strong><code>&lt;input type="checkbox"&gt;</code></strong> 允许你为表单中（或不在表单中）的提交项选择一个单一值。</span></p>
+<p>HTML input 元素 <strong><code>&lt;input type="checkbox"&gt;</code></strong> 允许你为表单中（或不在表单中）的提交项选择一个单一值。</p>
 
 <div class="note">
-<p><strong>注意</strong>： 若表单提交时，checkbox未勾选，则提交的值并非为value=unchecked；此时的值不会被提交到服务器。</p>
+<p><strong>注意</strong>： 若表单提交时，checkbox 未勾选，则提交的值并非为 value=unchecked；此时的值不会被提交到服务器。</p>
 </div>
 
 <h2 id="属性">属性</h2>
@@ -16,16 +16,16 @@ translation_of: Web/HTML/Element/input/checkbox
 <dl>
  <dt>{{htmlattrdef("checked")}}</dt>
  <dd>
- <p>当<strong>type</strong>属性的值为<code>checkbox时</code>, 这个属性的存在表示input是否默认被选中。你可以将该属性设置为<code>checked="checked"，</code>或更简单地只设置为<code>checked。</code></p>
+ <p>当<strong>type</strong>属性的值为<code>checkbox 时</code>, 这个属性的存在表示 input 是否默认被选中。你可以将该属性设置为<code>checked="checked"，</code>或更简单地只设置为<code>checked。</code></p>
  </dd>
  <dt>{{htmlattrdef("value")}}</dt>
- <dd>指定input的值。如果省略，获取该元素的值的结果为字符串"on"。<br>
- 请注意，如果value值发生改变后页面重新加载，Gecko和IE<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">会忽略HTML源代码中设置的value值</a>。</dd>
+ <dd>指定 input 的值。如果省略，获取该元素的值的结果为字符串"on"。<br>
+ 请注意，如果 value 值发生改变后页面重新加载，Gecko 和 IE<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">会忽略 HTML 源代码中设置的 value 值</a>。</dd>
  <dt>{{htmlattrdef("indeterminate")}}</dt>
- <dd>指定checkbox处于不定状态（在大多数平台，这样会产生一个划过checkbox的横线）。</dd>
+ <dd>指定 checkbox 处于不定状态（在大多数平台，这样会产生一个划过 checkbox 的横线）。</dd>
 </dl>
 
-<h2 id="示例">示例</h2>
+<h2 id="Example">示例</h2>
 
 <pre class="brush: html">&lt;p&gt;
   &lt;input type="checkbox" id="cbox1" value="first_checkbox"&gt;
@@ -37,7 +37,7 @@ translation_of: Web/HTML/Element/input/checkbox
 &lt;/p&gt;
 </pre>
 
-<p>以上代码将产生2个checkbox，如下所示：</p>
+<p>以上代码将产生 2 个 checkbox，如下所示：</p>
 
 <p>{{EmbedLiveSample("Example")}}</p>
 
@@ -71,67 +71,4 @@ translation_of: Web/HTML/Element/input/checkbox
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.7 or earlier")}}</td>
-   <td>2 or earlier</td>
-   <td>1.0</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td>type=checkbox</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.7 or earlier")}}<br>
-    {{CompatGeckoDesktop("1.9.2")}} for <code>indeterminate</code> value</td>
-   <td>2</td>
-   <td>1.0</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>type=checkbox</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.elements.input.input-checkbox")}}

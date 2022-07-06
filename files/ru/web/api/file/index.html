@@ -9,7 +9,7 @@ translation_of: Web/API/File
 
 <p>Интерфейс <strong><code>File</code></strong> представляет информацию о файлах и предоставляет JavaScript в веб странице доступ к их контенту.</p>
 
-<p><code>Объекты File</code>  как правило извлекаются из объекта {{domxref("FileList")}}, который возвращён как результат пользовательского выбора файлов с помощью {{HTMLElement("input")}} элемента, из drag and drop операций {{domxref("DataTransfer")}} объекта, или из <code>mozGetAsFile()</code> API на {{domxref("HTMLCanvasElement")}}. В Gecko, привилегированный код может создать файл представляющий любой локалный файл без пользовательского взаимодействия (см {{anch("Gecko notes")}} для получения большей информации.)</p>
+<p><code>Объекты File</code>  как правило извлекаются из объекта {{domxref("FileList")}}, который возвращён как результат пользовательского выбора файлов с помощью {{HTMLElement("input")}} элемента, из drag and drop операций {{domxref("DataTransfer")}} объекта, или из <code>mozGetAsFile()</code> API на {{domxref("HTMLCanvasElement")}}. В Gecko, привилегированный код может создать файл представляющий любой локалный файл без пользовательского взаимодействия (см <a href="#gecko_notes">Gecko notes</a> для получения большей информации.)</p>
 
 <p>Объект <code>File</code> - особый вид {{domxref("Blob")}}, и может быть использован в любом контексте так же, как и Blob. В частности, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, и {{domxref("XMLHttpRequest", "", "send()")}} допускают и <code>Blob,</code> и <code>File</code>.</p>
 
@@ -42,24 +42,11 @@ translation_of: Web/API/File
 
 <h2 id="Спецификация">Спецификация</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Исходное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
 
-<div>{{Compat("api.File")}}</div>
+<div>{{Compat}}</div>
 
 <p> </p>
 
@@ -67,8 +54,8 @@ translation_of: Web/API/File
 
 <ul>
  <li>В Gecko, вы можете использовать этот API изнутри chrome code. Смотрите <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code">Использование DOM File API в chrome code</a>, чтобы узнать больше. Чтобы использовать API в chrome code, JSM и Bootstrap, вы должны импортировать его используя <code><a href="/en-US/docs/Components.utils.importGlobalProperties">Cu.importGlobalProperties</a>(['File']);</code></li>
- <li>Начиная с Gecko 6.0 {{geckoRelease("6.0")}}, привелигированный код (такой как расширение) может передавать объект {{interface("nsIFile")}} в DOM <code>File</code> конструктор для указания файла в справку.</li>
- <li>Начиная с Gecko 8.0 {{geckoRelease("8.0")}}, вы можете использовать <code>new File</code> чтобы создать <code>объект File</code> из XPCOM компонентного кода вместо создания экземпляра {{interface("nsIDOMFile")}} объекта напрямую. Конструктор принимает {{domxref("Blob")}}, второй аргумент - имя файла. Имя файла может быть любой строкой.
+ <li>Начиная с Gecko 6.0 {{geckoRelease("6.0")}}, привелигированный код (такой как расширение) может передавать объект <code>nsIFile</code> в DOM <code>File</code> конструктор для указания файла в справку.</li>
+ <li>Начиная с Gecko 8.0 {{geckoRelease("8.0")}}, вы можете использовать <code>new File</code> чтобы создать <code>объект File</code> из XPCOM компонентного кода вместо создания экземпляра <code>nsIDOMFile</code> объекта напрямую. Конструктор принимает {{domxref("Blob")}}, второй аргумент - имя файла. Имя файла может быть любой строкой.
   <pre class="syntaxbox">File File(
   Array parts,
   String filename,

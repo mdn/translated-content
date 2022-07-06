@@ -1,42 +1,43 @@
 ---
-title: window.releaseEvents
+title: Window.releaseEvents()
 slug: Web/API/Window/releaseEvents
 tags:
+  - API
   - DOM
   - DOM_0
-  - Gecko
-  - Gecko DOM Reference
-  - 要更新
+  - Method
+  - Non-standard
+  - Reference
+  - Window
+  - releaseEvents
 translation_of: Web/API/Window/releaseEvents
 ---
-<p> </p>
-<p>{{ ApiRef() }} {{ 英語版章題("Summary") }}</p>
-<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
-<p>{{ Obsolete_header() }} 指定したタイプのイベントを補足することを解除します。</p>
-<p>{{ 英語版章題("Syntax") }}</p>
-<h3 id="Syntax">構文</h3>
-<pre class="eval">window.releaseEvents(<i>eventType</i>)
+<div>{{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_header}}</div>
+
+<p>このウィンドウが指定された種類のイベントを捕捉することを解除します。</p>
+
+<h2 id="Syntax">構文</h2>
+
+<pre class="brush: js">window.releaseEvents(<em>eventType</em>)
 </pre>
-<p><code>eventType</code> は、次の値の組み合わせを取ります。: <code>Event.ABORT</code>, <code>Event.BLUR</code>, <code>Event.CLICK</code>, <code>Event.CHANGE</code>, <code>Event.DBLCLICK</code>, <code>Event.DRAGDDROP</code>, <code>Event.ERROR</code>, <code>Event.FOCUS</code>, <code>Event.KEYDOWN</code>, <code>Event.KEYPRESS</code>, <code>Event.KEYUP</code>, <code>Event.LOAD</code>, <code>Event.MOUSEDOWN</code>, <code>Event.MOUSEMOVE</code>, <code>Event.MOUSEOUT</code>, <code>Event.MOUSEOVER</code>, <code>Event.MOUSEUP</code>, <code>Event.MOVE</code>, <code>Event.RESET</code>, <code>Event.RESIZE</code>, <code>Event.SELECT</code>, <code>Event.SUBMIT</code>, <code>Event.UNLOAD</code>.</p>
-<p>{{ 英語版章題("Example") }}</p>
-<h3 id=".E4.BE.8B" name=".E4.BE.8B">例</h3>
-<pre class="eval">window.releaseEvents(Event.KEYPRESS)
+
+<p><code>eventType</code> は、 <code>Event.ABORT</code>, <code>Event.BLUR</code>, <code>Event.CLICK</code>, <code>Event.CHANGE</code>, <code>Event.DBLCLICK</code>, <code>Event.DRAGDDROP</code>, <code>Event.ERROR</code>, <code>Event.FOCUS</code>, <code>Event.KEYDOWN</code>, <code>Event.KEYPRESS</code>, <code>Event.KEYUP</code>, <code>Event.LOAD</code>, <code>Event.MOUSEDOWN</code>, <code>Event.MOUSEMOVE</code>, <code>Event.MOUSEOUT</code>, <code>Event.MOUSEOVER</code>, <code>Event.MOUSEUP</code>, <code>Event.MOVE</code>, <code>Event.RESET</code>, <code>Event.RESIZE</code>, <code>Event.SELECT</code>, <code>Event.SUBMIT</code>, <code>Event.UNLOAD</code> の値の組み合わせです。</p>
+
+<h2 id="Example">例</h2>
+
+<pre class="brush:js">window.releaseEvents(Event.KEYPRESS)
 </pre>
-<p>{{ 英語版章題("Notes") }}</p>
-<h3 id="Notes">注</h3>
-<div class="note">
- <p>W3C DOM Events メソッドを支持するにあたり、このメソッドは Gecko 1.9 では廃止されました（<a href="ja/DOM/element.addEventListener">addEventListener</a> を参照してください）。このメソッドのサポートは <a href="ja/Gecko">Gecko</a> 1.9 で <a href="ja/Gecko_1.9_Changes_affecting_websites">削除されました</a>。</p>
-</div>
-<p>注：次の構文を使用することでこのメソッドにイベントのリストを渡すことができます。</p>
-<dl>
- <dd>
-  window.releaseEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP).</dd>
-</dl>
-<p><a href="ja/DOM/window.captureEvents">window.captureEvents</a> も参照してください ({{ Obsolete_inline() }})。</p>
-<p>{{ 英語版章題("Specification") }}</p>
-<h3 id=".E4.BB.95.E6.A7.98" name=".E4.BB.95.E6.A7.98">仕様</h3>
-<p>{{ DOM0() }}</p>
-<p> </p>
-<div class="noinclude">
-  </div>
-<p>{{ languages( { "en": "en/DOM/window.releaseEvents", "pl": "pl/DOM/window.releaseEvents" } ) }}</p>
+
+<h2 id="Notes">注</h2>
+
+<p>イベントのリストをこのメソッドに渡すには、 <code>window.releaseEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP)</code> のような構文を使用することに注意してください。</p>
+
+<p><a href="/ja/docs/Web/API/Window/captureEvents"><code>window.captureEvents</code></a> ({{deprecated_inline}}) も参照してください。</p>
+
+<h2 id="Specifications">仕様書</h2>
+
+<p>どの仕様書にも含まれていません。</p>
+
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("api.Window.releaseEvents")}}</p>

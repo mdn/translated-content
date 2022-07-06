@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Math.cosh()</code></strong> 函数返回数值的双曲余弦函数, 可用 {{jsxref("Math.E", "constant e", "", 1)}} 表示:</p>
+<p><strong><code>Math.cosh()</code></strong> 函数返回数值的双曲余弦函数，可用 {{jsxref("Math.E", "constant e", "", 1)}} 表示：</p>
 
 <p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math></p>
 
@@ -17,12 +17,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
 
 <dl>
  <dt><code>x</code></dt>
- <dd>数值.</dd>
+ <dd>数值。</dd>
 </dl>
 
 <h2 id="描述">描述</h2>
 
-<p>由于<code>cosh()</code> 是Math的静态函数, 只需通过<code>Math.cosh() </code>调用,而不用通过创建Math对象来调用.</p>
+<p>由于<code>cosh()</code> 是 Math 的静态函数，只需通过<code>Math.cosh() </code>调用，而不用通过创建 Math 对象来调用。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -35,14 +35,14 @@ Math.cosh(-1); // 1.5430806348152437
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>可通过 {{jsxref("Math.exp()")}} 函数模拟实现:</p>
+<p>可通过 {{jsxref("Math.exp()")}} 函数模拟实现：</p>
 
 <pre class="brush: js">Math.cosh = Math.cosh || function(x) {
   return (Math.exp(x) + Math.exp(-x)) / 2;
 }
 </pre>
 
-<p>或只调用一次 {{jsxref("Math.exp()")}} 函数:</p>
+<p>或只调用一次 {{jsxref("Math.exp()")}} 函数：</p>
 
 <pre class="brush: js">Math.cosh = Math.cosh || function(x) {
   var y = Math.exp(x);
@@ -69,55 +69,7 @@ Math.cosh(-1); // 1.5430806348152437
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("38")}}</td>
-   <td>{{CompatGeckoDesktop("25")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera("25")}}</td>
-   <td>{{CompatSafari("7.1")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("25")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>8</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

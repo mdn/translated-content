@@ -23,7 +23,7 @@ original_slug: Web/API/Geolocation/Using_geolocation
 </pre>
 
 <div class="note">
-<p><strong>注意:</strong> 在 Firefox 24 和之前的浏览器中，即使 API 被禁止，代码 <code>"geolocation" in navigator</code> 也总是会得到 <code>true</code>。这在 <a href="/en-US/docs/Mozilla/Firefox/Releases/25/Site_Compatibility">Firefox 25</a> 中已经被修复 ({{ bug(884921) }})。</p>
+<p><strong>注意：</strong> 在 Firefox 24 和之前的浏览器中，即使 API 被禁止，代码 <code>"geolocation" in navigator</code> 也总是会得到 <code>true</code>。这在 <a href="/en-US/docs/Mozilla/Firefox/Releases/25/Site_Compatibility">Firefox 25</a> 中已经被修复 ({{ bug(884921) }})。</p>
 </div>
 
 <h3 id="获取当前定位">获取当前定位</h3>
@@ -31,7 +31,7 @@ original_slug: Web/API/Geolocation/Using_geolocation
 <p>您可以调用 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 函数获取用户当前定位位置。这会异步地请求获取用户位置，并查询定位硬件来获取最新信息。当定位被确定后，定义的回调函数就会被执行。您可以选择性地提供第二个回调函数，当有错误时会被执行。第三个参数也是可选的，您可以通过该对象参数设定最长可接受的定位返回时间、等待请求的时间和是否获取高精度定位。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 默认情况下，{{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 会尽快返回一个低精度结果，这在您不关心准确度只关心快速获取结果的情况下很有用。有 GPS 的设备可能需要一分钟或更久来获取 GPS 定位，在这种情况下 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 会返回低精度数据（基于 IP 的定位或 Wi-Fi 定位）。</p>
+<p><strong>注意：</strong> 默认情况下，{{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 会尽快返回一个低精度结果，这在您不关心准确度只关心快速获取结果的情况下很有用。有 GPS 的设备可能需要一分钟或更久来获取 GPS 定位，在这种情况下 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 会返回低精度数据（基于 IP 的定位或 Wi-Fi 定位）。</p>
 </div>
 
 <pre class="brush: js">navigator.geolocation.getCurrentPosition(function(position) {
@@ -45,7 +45,7 @@ original_slug: Web/API/Geolocation/Using_geolocation
 <p>您可以设定一个回调函数来响应定位数据发生的变更（设备发生了移动，或获取到了更高精度的地理位置信息）。您可以通过 {{domxref("Geolocation.watchPosition","watchPosition()")}} 函数实现该功能。它与 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 接受相同的参数，但回调函数会被调用多次。错误回调函数与 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 中一样是可选的，也会被多次调用。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 您可以直接调用 {{domxref("Geolocation.watchPosition","watchPosition()")}} 函数，不需要先调用 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 函数。</p>
+<p><strong>注意：</strong> 您可以直接调用 {{domxref("Geolocation.watchPosition","watchPosition()")}} 函数，不需要先调用 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 函数。</p>
 </div>
 
 <pre class="brush: js">var watchID = navigator.geolocation.watchPosition(function(position) {
@@ -63,7 +63,7 @@ original_slug: Web/API/Geolocation/Using_geolocation
 
 <p>{{page("/zh-CN/docs/Web/API/Geolocation.getCurrentPosition","PositionOptions")}}</p>
 
-<p>对 {{domxref("Geolocation.watchPosition()","watchPosition")}} 的调用类似于这样:</p>
+<p>对 {{domxref("Geolocation.watchPosition()","watchPosition")}} 的调用类似于这样：</p>
 
 <pre class="brush: js">function geo_success(position) {
   do_something(position.coords.latitude, position.coords.longitude);
@@ -81,7 +81,7 @@ var geo_options = {
 
 var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);</pre>
 
-<p>watchPosition 实际使用示例: <a class="external" href="http://www.thedotproduct.org/experiments/geo/">http://www.thedotproduct.org/experiments/geo/</a></p>
+<p>watchPosition 实际使用示例：<a class="external" href="http://www.thedotproduct.org/experiments/geo/">http://www.thedotproduct.org/experiments/geo/</a></p>
 
 <h2 id="描述位置">描述位置</h2>
 
@@ -229,69 +229,7 @@ prompt(window,
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{ CompatibilityTable() }}</div>
-
-<div> </div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>5</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>9</td>
-   <td>10.60<br>
-    Removed in 15.0<br>
-    Reintroduced in 16.0</td>
-   <td>5</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>{{CompatGeckoMobile("4")}}</td>
-   <td>1.0.1</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>10.60<br>
-    Removed in 15.0<br>
-    Reintroduced in 16.0</td>
-   <td>{{CompatUnknown()}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Gecko_注释">Gecko 注释</h3>
-
-<p>Firefox 支持根据您的 Wi-Fi 信息通过谷歌定位服务来定位。在 Firefox 和 Google 的数据交互中，Wi-Fi 接入点信息、访问令牌（类似于一个两周过期的 cookie）和用户的 IP 地址会被发送。关于数据使用情况，请查看 Mozilla 的<a class="external" href="http://www.mozilla.com/en-US/legal/privacy/" title="http://www.mozilla.com/en-US/legal/privacy/">隐私声明</a>和 Google 的<a class="external" href="http://www.google.com/privacy-lsf.html" title="http://www.google.com/privacy-lsf.html">隐私声明</a>。</p>
-
-<p>Firefox 3.6 (Gecko 1.9.2) 增加了 Linux 上对 <a class="external" href="http://catb.org/gpsd/" title="http://catb.org/gpsd/">GPSD</a> (GPS daemon) 服务定位的支持。</p>
+{{Compat("api.Geolocation")}}
 
 <h2 id="另请参阅">另请参阅</h2>
 

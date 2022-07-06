@@ -10,36 +10,38 @@ translation_of: Web/JavaScript/Reference/Errors/Cant_assign_to_property
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<h2 id="メッセージ">メッセージ</h2>
+<p>JavaScript の strict モードの例外 "can't assign to property" は、<a href="/ja/docs/Glossary/Primitive">プリミティブ</a>値、例えば<a href="/ja/docs/Glossary/Symbol">シンボル</a>、<a href="/ja/docs/Glossary/String">文字列</a>、<a href="/ja/docs/Glossary/Number">数値</a>、<a href="/ja/docs/Glossary/Boolean">論理値</a>などにプロパティを作成しようとしたときに発生します。<a href="/ja/docs/Glossary/Primitive">プリミティブ</a>値はいかなる<a href="/ja/docs/Glossary/property/JavaScript">プロパティ</a>を持つこともできません。</p>
 
-<pre class="syntaxbox">TypeError: <code class="highlighted" id="line-87">can't assign to property "x" on {y}: not an object</code> (Firefox)
+<h2 id="Message">エラーメッセージ</h2>
+
+<pre class="brush: js">TypeError: can't assign to property &quot;x&quot; on {y}: not an object (Firefox)
 TypeError: Cannot create property 'x' on {y} (Chrome)
 </pre>
 
-<h2 id="エラータイプ">エラータイプ</h2>
+<h2 id="Error_type">エラーの種類</h2>
 
-<p>{{jsxref("TypeError")}}.</p>
+<p>{{jsxref("TypeError")}}</p>
 
-<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-<p>In {{jsxref("Strict_mode")}}, a {{jsxref("TypeError")}} is raised when attempting to create a property on {{Glossary("primitive")}} value such as a {{Glossary("symbol")}}, a {{Glossary("string")}}, a {{Glossary("number")}} or a {{Glossary("boolean")}}. {{Glossary("Primitive")}} values cannot hold any {{Glossary("property/JavaScript", "property")}}.</p>
+<p>{{jsxref("Strict_mode", "Strict モード", "", 1)}}では、 {{jsxref("TypeError")}} は<a href="/ja/docs/Glossary/Primitive">プリミティブ</a>値、例えば<a href="/ja/docs/Glossary/Symbol">シンボル</a>、<a href="/ja/docs/Glossary/String">文字列</a>、<a href="/ja/docs/Glossary/Number">数値</a>、<a href="/ja/docs/Glossary/Boolean">論理値</a>などにプロパティを作成しようとしたときに発生します。<a href="/ja/docs/Glossary/Primitive">プリミティブ</a>値はいかなる<a href="/ja/docs/Glossary/property/JavaScript">プロパティ</a>を持つこともできません。</p>
 
-<p>The problem might be that an unexpected value is flowing at an unexpected place, or that an object variant of a {{jsxref("String")}} or a {{jsxref("Number")}} is expected.</p>
+<p>想定外の場所に想定外の値が流れてきたり、 {{jsxref("String")}} や {{jsxref("Number")}} のオブジェクトバリアントが想定されていたりすることが問題となることがあります。</p>
 
-<h2 id="例">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="無効なケース">無効なケース</h3>
+<h3 id="Invalid_cases">無効な場合</h3>
 
 <pre class="brush: js example-bad">'use strict';
 
 var foo = "my string";
-// The following line does nothing if not in strict mode.
-foo.bar = {}; // <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">TypeError: can't assign to property "bar" on "my string": not an object</span></span></span>
+// 次の行は strict モードでない場合は何もしません。
+foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not an object
 </pre>
 
-<h3 id="問題を修正する">問題を修正する</h3>
+<h3 id="Fixing_the_issue">問題の修正</h3>
 
-<p>Either fix the code to prevent the {{Glossary("primitive")}} from being used in such places, or fix the issue is to create the object equivalent {{jsxref("Object")}}.</p>
+<p>このような場所で<a href="/ja/docs/Glossary/Primitive">プリミティブ</a>値を使用しないようにコードを修正するか、 {{jsxref("Object")}} と同等のオブジェクトを生成して問題を修正するかします。</p>
 
 <pre class="brush: js example-good">'use strict';
 
@@ -47,9 +49,9 @@ var foo = new String("my string");
 foo.bar = {};
 </pre>
 
-<h2 id="あわせて参照">あわせて参照</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li>{{jsxref("Strict_mode")}}</li>
- <li>{{Glossary("primitive")}}</li>
+  <li>{{jsxref("Strict_mode", "Strict モード", "", 1)}}</li>
+  <li><a href="/ja/docs/Glossary/Primitive">プリミティブ</a></li>
 </ul>

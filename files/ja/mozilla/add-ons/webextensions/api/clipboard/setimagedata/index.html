@@ -7,7 +7,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 
 <p>イメージをクリップボードにコピーします。イメージはクリップボードに書き込まれる前に再エンコードされます。イメージが無効な場合、クリップボードは修正されません。</p>
 
-<p>The image is provided as an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> containing the encoded image. JPEG and PNG formats are supported.</p>
+<p>The image is provided as an <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> containing the encoded image. JPEG and PNG formats are supported.</p>
 
 <p>Although this API is based on Chrome's <code><a href="https://developer.chrome.com/apps/clipboard">clipboard.setImageData()</a></code> API, there are some differences:</p>
 
@@ -18,7 +18,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
  <li>This API does not support the <code>additionalItems</code> parameter.</li>
 </ul>
 
-<p>これは<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>を返す非同期関数です。</p>
+<p>これは<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>を返す非同期関数です。</p>
 
 <h2 id="書式">書式</h2>
 
@@ -29,18 +29,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 
 <dl>
  <dt><code>imageData</code></dt>
- <dd>An <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> containing the encoded image data to copy to the clipboard.</dd>
+ <dd>An <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> containing the encoded image data to copy to the clipboard.</dd>
  <dt><code>imageType</code></dt>
  <dd>A {{domxref("DOMString")}} indicating the type of image contained in <code>imageData</code>: <code>"png"</code> or <code>"jpeg"</code>.</dd>
 </dl>
 
 <h3 id="返り値">返り値</h3>
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be resolved with no arguments if the operation succeeded, or rejected if there was an error (for example, because the data did not represent a valid image).</p>
+<p>A <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be resolved with no arguments if the operation succeeded, or rejected if there was an error (for example, because the data did not represent a valid image).</p>
 
 <h2 id="ブラウザ互換性">ブラウザ互換性</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("webextensions.api.clipboard.setImageData", 10)}}</p>
 

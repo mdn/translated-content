@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><strong><code>for await...of</code> 文</strong>は非同期および同期の<a href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">反復可能オブジェクト</a>を使用して、反復処理を行うループを作成します。たとえば、組込みの {{jsxref("String")}}, {{jsxref("Array")}}, 配列風オブジェクト (例えば {{jsxref("Functions/arguments", "arguments")}}, {{domxref("NodeList")}} など), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, さらに、ユーザー定義の非同期・同期の反復可能オブジェクトを使用することができます。これはオブジェクトのそれぞれの識別可能なプロパティの値に対して、実行される文を表す独自の反復フックを呼び出します。 {{jsxref("Operators/await", "await")}} 演算子と同様に、この分は{{jsxref("Statements/async_function", "非同期関数", "", 1)}}の中でのみ使用されます。</p>
+<p><strong><code>for await...of</code> 文</strong>は非同期および同期の<a href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル">反復可能オブジェクト</a>を使用して、反復処理を行うループを作成します。たとえば、組込みの {{jsxref("String")}}, {{jsxref("Array")}}, 配列風オブジェクト (例えば {{jsxref("Functions/arguments", "arguments")}}, {{domxref("NodeList")}} など), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, さらに、ユーザー定義の非同期・同期の反復可能オブジェクトを使用することができます。これはオブジェクトのそれぞれの識別可能なプロパティの値に対して、実行される文を表す独自の反復フックを呼び出します。 {{jsxref("Operators/await", "await")}} 演算子と同様に、この分は{{jsxref("Statements/async_function", "非同期関数", "", 1)}}の中でのみ使用されます。</p>
 
 <div class="blockIndicator note">
 <p><code>for await...of</code> は非同期の反復可能オブジェクトではない非同期イテレーターでは動作しません。</p>
@@ -158,7 +158,7 @@ for (let numOrPromise of generator()) {
 // 4
 </pre>
 
-<div></div>
+
 
 <div class="blockIndicator note">
 <p><strong>注</strong>: 同期のジェネレーターから拒否されたプロミスが生み出される場合があることに注意してください。このような場合、 <code>for await...of</code> は拒否されたプロミスを消費するので、ジェネレーター内の <code>finally</code> ブロックが呼び出されません。これは、確保したリソースを <code>try/finally</code> で解放する必要がある場合は望ましくない動作になる可能性があります。</p>
@@ -242,8 +242,6 @@ try {
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("javascript.statements.for_await_of")}}</p>
 

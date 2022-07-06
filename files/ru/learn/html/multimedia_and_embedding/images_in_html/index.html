@@ -14,7 +14,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
  <tbody>
   <tr>
    <th scope="row">Необходимы:</th>
-   <td>Базовые знания компьютера, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">установленное базовое ПО</a>, базовые знания по <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">работе с файлами</a>, знания основ HTML (как описано в статье <a href="/ru/docs/Learn/HTML/Введение_в_HTML/Начало_работы">Начало работы с HTML</a>).</td>
+   <td>Базовые знания компьютера, <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">установленное базовое ПО</a>, базовые знания по <a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">работе с файлами</a>, знания основ HTML (как описано в статье <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Начало работы с HTML</a>).</td>
   </tr>
   <tr>
    <th scope="row">Цель:</th>
@@ -28,16 +28,16 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 <p>Чтобы разместить изображение на странице, нужно использовать тег {{htmlelement("img")}}. Это пустой элемент (имеется ввиду, что не содержит текста и закрывающего тега), который требует минимум один атрибут для использования — <code>src</code> (произносится <em>эс-ар-си</em>, иногда говорят его полное название, <em>source</em>). Атрибут <code>src</code> содержит путь к изображению, которое вы хотите встроить в страницу, и может быть относительным или абсолютным URL, точно так же, как значения атрибута <code>href</code> для элемента {{htmlelement("a")}}.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Перед тем как продолжить, вам стоит вспомнить про <a href="/ru/docs/Learn/HTML/Введение_в_HTML/Создание_гиперссылок#Абсолютные_и_относительные_URL-адреса">типы адресов URL</a>, чтобы обновить в памяти про относительные и абсолютные адреса.</p>
+<p><strong>Примечание</strong>: Перед тем как продолжить, вам стоит вспомнить про <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#%d0%90%d0%b1%d1%81%d0%be%d0%bb%d1%8e%d1%82%d0%bd%d1%8b%d0%b5_%d0%b8_%d0%be%d1%82%d0%bd%d0%be%d1%81%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5_url-%d0%b0%d0%b4%d1%80%d0%b5%d1%81%d0%b0">типы адресов URL</a>, чтобы обновить в памяти про относительные и абсолютные адреса.</p>
 </div>
 
 <p>Например, если ваше изображение называется <code>dinosaur.jpg</code>, и оно находится в той же директории что и ваша HTML страница, вы можете встроить это изображение как:</p>
 
-<pre class="brush: html notranslate">&lt;img src="dinosaur.jpg"&gt;</pre>
+<pre class="brush: html">&lt;img src="dinosaur.jpg"&gt;</pre>
 
 <p>Если изображение было в поддиректории <code>images</code> , находящаяся внутри той же директории, что и HTML страница (что рекомендует Google для индексации и целей SEO), тогда вы можете встроить его так:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"&gt;</pre>
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"&gt;</pre>
 
 <p>И так далее.</p>
 
@@ -47,7 +47,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 
 <p>Вы можете встроить изображение используя абсолютный URL, например:</p>
 
-<pre class="brush: html notranslate">&lt;img src="https://www.example.com/images/dinosaur.jpg"&gt;</pre>
+<pre class="brush: html">&lt;img src="https://www.example.com/images/dinosaur.jpg"&gt;</pre>
 
 <p>Но это бессмысленно, так как он просто заставляет браузер делать больше работы, запрашивая каждый раз IP-адрес от DNS-сервера.  Вы почти всегда будете держать свои изображения для сайта на том же сервере, что и ваш HTML.</p>
 
@@ -65,10 +65,10 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 
 <p>Наш код выше даст нам следующий результат:</p>
 
-<p><img alt="A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it" src="https://mdn.mozillademos.org/files/12700/basic-image.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it" src="basic-image.png" style="display: block; margin: 0px auto;"></p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Такие элементы как {{htmlelement("img")}} и {{htmlelement("video")}} иногда называются замещаемыми элементами. Это потому что содержание элемента и размер, определяет внешний ресурс (как изображение или видео файл), а не содержание самого элемента. Вы можете узнать о них больше в <a href="/ru/docs/Web/CSS/Замещаемый_элемент">Замещаемых элементах</a>.</p>
+<p><strong>Примечание</strong>: Такие элементы как {{htmlelement("img")}} и {{htmlelement("video")}} иногда называются замещаемыми элементами. Это потому что содержание элемента и размер, определяет внешний ресурс (как изображение или видео файл), а не содержание самого элемента. Вы можете узнать о них больше в <a href="/ru/docs/Web/CSS/Replaced_element">Замещаемых элементах</a>.</p>
 </div>
 
 <div class="note">
@@ -79,13 +79,13 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 
 <p>Следующий атрибут, который мы рассмотрим — <code>alt</code>. Его значением должно быть текстовое описание изображения для использования в ситуациях, когда изображение не может быть просмотрено / отображено или отрисовка занимает много времени из-за медленного интернет-соединения. Чтобы продемонстрировать использование атрибута <code>alt</code> на практике, внесём изменения в код из предыдущего примера:</p>
 
-<pre class="notranslate">&lt;img src="images/dinosaur.jpg"
+<pre>&lt;img src="images/dinosaur.jpg"
      alt="Голова и туловище скелета динозавра;
          у него большая голова с длинными острыми зубами"&gt;</pre>
 
 <p>Самый простой способ увидеть атрибут <code>alt</code> в действии — это сделать намеренную ошибку в имени файла. Например, если бы мы написали имя изображения как <code>dinosooooor.jpg</code>, браузер не смог бы его отобразить, и на экране появился бы текст из атрибута <code>alt</code>:</p>
 
-<p><img alt="The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place." src="https://mdn.mozillademos.org/files/12702/alt-text.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;">Итак, в каких случаях текст из атрибута <code>alt</code> может быть нам полезен? Приведём несколько примеров:</p>
+<p><img alt="The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place." src="alt-text.png" style="display: block; margin: 0px auto;">Итак, в каких случаях текст из атрибута <code>alt</code> может быть нам полезен? Приведём несколько примеров:</p>
 
 <ul>
  <li>Пользователь с нарушением зрения использует <a href="https://en.wikipedia.org/wiki/Screen_reader">устройство чтения с экрана</a>, которое может читать вслух описание элементов веб-страницы. На самом деле, наличие текста в атрибуте <code>alt</code> для описания изображения может быть полезно для большинства пользователей.</li>
@@ -98,23 +98,23 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 <p>Что именно вы должны писать в атрибут <code>alt</code>? В первую очередь, это зависит от того, <em>зачем</em> изображение вообще находится на странице. Другими словами, что вы потеряете, если ваше изображение не появится:</p>
 
 <ul>
- <li><strong>Декорация. </strong>Вы должны использовать {{anch ("Фоновые изображения CSS")}} для декоративных изображений, но если вы должны использовать HTML, добавьте пустой alt = "". Если изображение служит просто украшением и не является частью содержимого, добавьте пустой <code>alt=""</code>. Например, программа чтения с экрана не тратит время на чтение содержимого, которое не является важным для пользователя.</li>
+ <li><strong>Декорация. </strong>Вы должны использовать <a href="#фоновые_изображения_css">Фоновые изображения CSS</a> для декоративных изображений, но если вы должны использовать HTML, добавьте пустой alt = "". Если изображение служит просто украшением и не является частью содержимого, добавьте пустой <code>alt=""</code>. Например, программа чтения с экрана не тратит время на чтение содержимого, которое не является важным для пользователя.</li>
  <li><strong>Контент.</strong> Если ваше изображение содержит важную информацию, передайте ту же информацию через краткий<em> </em><code>alt</code>. Или даже лучше, в <em>главном</em> тексте, который все увидят. Не используйте <code>alt</code> , если можете обойтись без него. Насколько неудобно было бы для пользователя, если бы <em>параграфы</em> были написаны дважды в <em>главном контенте</em>? Если изображение адекватно описано в основном тексте, можете просто использовать <code>alt=""</code>.</li>
- <li><strong>Ссылка.</strong> Если вы помещаете изображение в {{htmlelement("a")}}, для того, чтобы сделать из него ссылку, вы всё ещё должны <a href="/ru/docs/Learn/HTML/Введение_в_HTML/Создание_гиперссылок#Используйте_чёткие_формулировки_описания_ссылок">использовать чёткие формулировки описания ссылок</a>. В таком случае, вы сможете использовать элемент <code>&lt;a&gt;</code>  или атрибут <code>alt</code> . Старайтесь выбрать лучший вариант.</li>
+ <li><strong>Ссылка.</strong> Если вы помещаете изображение в {{htmlelement("a")}}, для того, чтобы сделать из него ссылку, вы всё ещё должны <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#%d0%98%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d1%83%d0%b9%d1%82%d0%b5_%d1%87%d1%91%d1%82%d0%ba%d0%b8%d0%b5_%d1%84%d0%be%d1%80%d0%bc%d1%83%d0%bb%d0%b8%d1%80%d0%be%d0%b2%d0%ba%d0%b8_%d0%be%d0%bf%d0%b8%d1%81%d0%b0%d0%bd%d0%b8%d1%8f_%d1%81%d1%81%d1%8b%d0%bb%d0%be%d0%ba">использовать чёткие формулировки описания ссылок</a>. В таком случае, вы сможете использовать элемент <code>&lt;a&gt;</code>  или атрибут <code>alt</code> . Старайтесь выбрать лучший вариант.</li>
  <li><strong>Текст.</strong> Не пишите текст в изображениях. Если вашему заголовку понадобится тень, то лучше используйте для этого <a href="/ru/docs/Web/CSS/text-shadow">CSS</a> вместо добавления текста в изображение. Однако, если  <em>действительно этого не избежать</em>, то вам следует дополнить текст в атрибуте <code>alt</code>.</li>
 </ul>
 
 <p>По существу, главная идея здесь это предоставить нечто полезное, для случая когда изображения не видны. Это гарантирует что все пользователи не упустят ничего из содержимого страницы. Попробуйте отключить изображения в своём браузере и посмотрите как всё выглядит. Вы вскоре выясните насколько полезным является альтернативный текст, если изображения не видны.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Более подробную информацию, смотрите здесь: <a href="/ru/docs/Learn/Доступность/HTML#Альтернативный_текст">Альтернативный текст</a>.</p>
+<p><strong>Примечание</strong>: Более подробную информацию, смотрите здесь: <a href="/ru/docs/Learn/Accessibility/HTML#%d0%90%d0%bb%d1%8c%d1%82%d0%b5%d1%80%d0%bd%d0%b0%d1%82%d0%b8%d0%b2%d0%bd%d1%8b%d0%b9_%d1%82%d0%b5%d0%ba%d1%81%d1%82">Альтернативный текст</a>.</p>
 </div>
 
 <h3 id="Ширина_и_высота">Ширина и высота</h3>
 
 <p>Вы можете использовать атрибуты <code>width</code> и <code>height</code>, чтобы указать ширину и высоту вашего изображения. Ширину и высоту вашего изображение можете найти различными способами. Например, на Mac можно использовать  <kbd>Cmd</kbd> + <kbd>I</kbd>  чтобы  получить информацию по изображению. Повторяя наш пример, мы можем сделать так:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
      alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
      width="400"
@@ -122,7 +122,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 
 <p>Это не приводит к большой разнице в отображении при нормальных обстоятельствах. Но если изображение не будет показано, например, когда пользователь только что перешёл на страницу, а оно ещё не успело загрузится, вы укажите браузеру оставить место для отрисовки изображения:</p>
 
-<p><img alt="The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings" src="https://mdn.mozillademos.org/files/12706/alt-text-with-width-height.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings" src="alt-text-with-width-height.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Это хорошая практика, в результате страница загрузится быстрее и более гладко.</p>
 
@@ -134,9 +134,9 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 
 <h3 id="Заголовок_изображения">Заголовок изображения</h3>
 
-<p>Как и для <a href="/ru/docs/Learn/HTML/Введение_в_HTML/Создание_гиперссылок">ссылок</a>, вы также можете добавить атрибут <code>title</code> для изображений, чтобы при необходимости предоставить дополнительную информацию. В нашем примере мы могли бы сделать это так:</p>
+<p>Как и для <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">ссылок</a>, вы также можете добавить атрибут <code>title</code> для изображений, чтобы при необходимости предоставить дополнительную информацию. В нашем примере мы могли бы сделать это так:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
      alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
      width="400"
@@ -145,7 +145,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 
 <p>Это даёт нам всплывающую подсказку при наведении курсора мыши, также как и в ссылках:</p>
 
-<p><img alt="The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum " src="https://mdn.mozillademos.org/files/12708/image-with-title.png" style="display: block; height: 341px; margin: 0px auto; width: 400px;"></p>
+<p><img alt="The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum " src="image-with-title.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Однако это не рекомендуется - <code>title</code> имеет ряд проблем с доступностью, в основном из-за того, что поддержка программ чтения с экрана очень непредсказуема, и большинство браузеров не будут отображать её, если вы не наведёте курсор мыши (например, нет доступа для пользователей клавиатуры). Зачастую лучше включить такого рода вспомогательную информацию в основной текст статьи, чем прикреплять её к изображению. Однако, она полезна в некоторых обстоятельствах; например, в галереях изображений, когда у вас нет места для их заголовков.</p>
 
@@ -170,7 +170,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Input&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Input&lt;/h2&gt;
 &lt;textarea id="code" class="input"&gt;
 &lt;img&gt;&lt;/textarea&gt;
 &lt;h2&gt;Output&lt;/h2&gt;
@@ -181,7 +181,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -198,7 +198,7 @@ button {
 }
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById("code");
+<pre class="brush: js">var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var code = textarea.value;
 var output = document.querySelector(".output");
@@ -229,7 +229,7 @@ window.addEventListener("load", drawOutput);
 
 <p>Начиная разговор о заголовках, есть множество путей как вы можете добавить заголовок к своему изображению. Для примера, нет ничего, что может вас остановить сделать это таким образом:</p>
 
-<pre class="brush: html notranslate">&lt;div class="figure"&gt;
+<pre class="brush: html">&lt;div class="figure"&gt;
   &lt;img src="images/dinosaur.jpg"
        alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
@@ -243,7 +243,7 @@ window.addEventListener("load", drawOutput);
 
 <p>Лучшим решением будет использование элементов HTML5 {{htmlelement("figure")}} и {{htmlelement("figcaption")}}. Они были созданы исключительно для этой цели: предоставить семантический контейнер для рисунков и чётко связать рисунок с заголовком. Наш пример выше мог бы быть переписан так:</p>
 
-<pre class="notranslate">&lt;figure&gt;
+<pre>&lt;figure&gt;
   &lt;img src="images/dinosaur.jpg"
        alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
@@ -283,7 +283,7 @@ window.addEventListener("load", drawOutput);
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code 2</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Input&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Input&lt;/h2&gt;
 &lt;textarea id="code" class="input"&gt;
 &lt;/textarea&gt;
 &lt;h2&gt;Output&lt;/h2&gt;
@@ -294,7 +294,7 @@ window.addEventListener("load", drawOutput);
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -311,7 +311,7 @@ button {
 }
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById("code");
+<pre class="brush: js">var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var code = textarea.value;
 var output = document.querySelector(".output");
@@ -342,7 +342,7 @@ window.addEventListener("load", drawOutput);
 
 <p>Вы можете использовать CSS для встраивания изображений в веб-страницы (или JavaScript, но это совсем другая история). Параметры CSS {{cssxref("background-image")}} и другие <code>background-*</code> применяются для контроля размещения фонового изображения. К примеру, чтобы залить фон каждого параграфа страницы, необходимо сделать следующее:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   background-image: url("images/dinosaur.jpg");
 }</pre>
 

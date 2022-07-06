@@ -12,18 +12,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 ---
 <div>{{JSRef("Global_Objects", "Date")}} {{deprecated_header}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <strong><code>toGMTString()</code></strong> преобразует дату в строку, используя соглашения Среднего времени по Гринвичу (GMT) в Интернет. Точный формат значения, возвращаемого методом <code>toGMTString()</code> различается на разных платформах и браузерах, можно лишь сказать, что он представляет собой человеко-читаемую строку с датой.</p>
 <div class="note">
  <p><strong>Примечание:</strong> метод <code>toGMTString()</code> устарел и не должен использоваться. Он оставлен только для обратной совместимости; пожалуйста, используйте вместо него метод {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}}.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code><var>dateObj</var>.toGMTString()</code></pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_toGMTString" name="Example:_Using_toGMTString">Пример: использование метода <code>toGMTString()</code></h3>
+<h3 id="Example:_Using_toGMTString">Пример: использование метода <code>toGMTString()</code></h3>
 <p>В этом примере метод <code>toGMTString()</code> преобразует дату в формат GMT (UTC), используя часовой пояс операционной системы и возвращает подобную строку. Точный формат зависит от платформы.</p>
 <pre class="brush: js">var today = new Date();
 var str = today.toGMTString();  // устарел! используйте метод toUTCString()
@@ -31,7 +31,7 @@ var str = today.toGMTString();  // устарел! используйте мет
 console.log(str);               // Mon, 18 Dec 1995 17:28:35 GMT
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -57,10 +57,10 @@ console.log(str);               // Mon, 18 Dec 1995 17:28:35 GMT
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
  <li>{{jsxref("Date.prototype.toTimeString()")}}</li>

@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 </dl>
 
 <div class="blockIndicator warning">
-<p><strong>Aviso:</strong> Quando uma string vazia (<code>""</code>) é usada como separador, a string não é dividida por caracteres percebidos pelo usuário (<a href="https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries" title="https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries">grapheme clusters</a>) ou caracteres Unicode (pontos de código), mas por unidades de código UTF-16. Isso destrói <a href="http://unicode.org/faq/utf_bom.html#utf16-2" title="http://unicode.org/faq/utf_bom.html#utf16-2">pares substitutos</a>. Consulte “<a href="https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402" title="https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402">Como você transforma uma string em um array de caracteres em JavaScript?” no StackOverflow</a>.</p>
+<p><strong>Aviso:</strong> Quando uma string vazia (<code>""</code>) é usada como separador, a string não é dividida por caracteres percebidos pelo usuário (<a href="https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries">grapheme clusters</a>) ou caracteres Unicode (pontos de código), mas por unidades de código UTF-16. Isso destrói <a href="http://unicode.org/faq/utf_bom.html#utf16-2">pares substitutos</a>. Consulte “<a href="https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402">Como você transforma uma string em um array de caracteres em JavaScript?” no StackOverflow</a>.</p>
 </div>
 
 <dl>
@@ -166,7 +166,7 @@ console.log(splits);
 <h3 id="Revertendo_uma_String_usando_split">Revertendo uma String usando <code>split()</code></h3>
 
 <div class="blockIndicator warning">
-<p>Esta não é a mlehor maneira de reverter uma string:</p>
+<p>Esta não é a melhor maneira de reverter uma string:</p>
 
 <pre class="brush: js example-bad notranslate">const str = 'asdfghjkl'
 const strReverse = str.split('').reverse().join('')
@@ -175,7 +175,7 @@ const strReverse = str.split('').reverse().join('')
 // split() retorna um array onde os métodos
 // reverse() e join() podem ser aplicados</pre>
 
-<p>Não funciona se a string contém <code>grapheme clusters</code>, mesmo ao usar uma divisão compatível com Unicode. (Use, por exemplo, <a href="https://github.com/mathiasbynens/esrever" title="https://github.com/mathiasbynens/esrever">esrever</a> no lugar.)</p>
+<p>Não funciona se a string contém <code>grapheme clusters</code>, mesmo ao usar uma divisão compatível com Unicode. (Use, por exemplo, <a href="https://github.com/mathiasbynens/esrever">esrever</a> no lugar.)</p>
 
 <pre class="brush: js example-bad notranslate">const str = 'résumé'
 const strReverse = str.split(/(?:)/u).reverse().join('')

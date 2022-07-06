@@ -20,11 +20,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 
 <p class="hidden">Источник этого интерактивного примера хранится в репозитории GitHub. Если вы хотите внести свой вклад в проект интерактивных примеров, скопируйте <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и отправьте нам запрос на перенос.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>arr</var>.fill(<var>value</var>[, <var>start<var> = 0[, <var>end</var> = this.length]])</var></var></code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>value</code></dt>
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
  </dt>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Элементы заполняются в полузакрытом интервале [<code>start</code>, <code>end</code>).</p>
 
@@ -54,7 +54,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 
 <p>Если аргумент <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">value</span></font>​​​​​ является объектом, то метод <code><strong>fill</strong></code> заполнит массив ссылками на этот объект.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <pre><code>[1, 2, 3].fill(4);               // [4, 4, 4]
 [1, 2, 3].fill(4, 1);            // [1, 4, 4]
@@ -71,7 +71,7 @@ Array(3).fill(4);                // [4, 4, 4]
 var arr = Array(3).fill({}) // [{}, {}, {}];
 arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]</code></pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <pre><code>if (!Array.prototype.fill) {
   Object.defineProperty(Array.prototype, 'fill', {
@@ -120,37 +120,17 @@ arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]</code></pre>
 
 <p>Если вам нужно поддерживать действительно устаревшие движки JavaScript, которые не поддерживают <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a>, то лучше вообще не использовать полифилы для методов <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Array.prototype</span></font>, так как вы не можете сделать их не перечисляемыми.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.fill', 'Array.prototype.fill')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.fill', 'Array.prototype.fill')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div>
-<div class="hidden">Таблица совместимости на этой странице создаётся из структурированных данных. Если вы хотите внести свой вклад, ознакомьтесь с <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправить нам pull request.</div>
-
-<p>{{Compat("javascript.builtins.Array.fill")}}</p>
+<p>{{Compat}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array")}}</li>

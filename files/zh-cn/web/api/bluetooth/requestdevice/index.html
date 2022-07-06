@@ -3,13 +3,13 @@ title: Bluetooth.requestDevice()
 slug: Web/API/Bluetooth/requestDevice
 tags:
   - API
-  - Web蓝牙
+  - Web 蓝牙
   - 蓝牙
 translation_of: Web/API/Bluetooth/requestDevice
 ---
 <p>{{APIRef()}}{{SeeCompatTable}}</p>
 
-<p>{{domxref("Bluetooth")}}接口的<strong><code>Bluetooth.requestDevice()</code></strong>方法返回一个带有对应options的{{domxref("BluetoothDevice")}}对象的{{jsxref("Promise")}}对象. 如果没有蓝牙设备选择界面，则此方法返回与条件匹配的第一个设备。</p>
+<p>{{domxref("Bluetooth")}}接口的<strong><code>Bluetooth.requestDevice()</code></strong>方法返回一个带有对应 options 的{{domxref("BluetoothDevice")}}对象的{{jsxref("Promise")}}对象。如果没有蓝牙设备选择界面，则此方法返回与条件匹配的第一个设备。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -17,17 +17,17 @@ translation_of: Web/API/Bluetooth/requestDevice
 
 <h3 id="返回值">返回值</h3>
 
-<p>带有{{domxref("BluetoothDevice")}} 对象的{{jsxref("Promise")}} 对象.</p>
+<p>带有{{domxref("BluetoothDevice")}} 对象的{{jsxref("Promise")}} 对象。</p>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt>options </dt>
- <dd>设置设备请求选项的对象. 可用的选项是:
+ <dd>设置设备请求选项的对象. 可用的选项是：
  <ul>
-  <li><code>filters[]</code>: 一个BluetoothScanFilters数组。 此过滤器由一个BluetoothServiceUUID数组，一个名称参数和一个namePrefix参数组成。</li>
-  <li><code>optionalServices[]</code>: 一个BluetoothServiceUUID数组。</li>
-  <li><code>acceptAllDevices</code>: boolean 表示请求脚本可以接受所有蓝牙设备。 默认值为false。</li>
+  <li><code>filters[]</code>: 一个 BluetoothScanFilters 数组。此过滤器由一个 BluetoothServiceUUID 数组，一个名称参数和一个 namePrefix 参数组成。</li>
+  <li><code>optionalServices[]</code>: 一个 BluetoothServiceUUID 数组。</li>
+  <li><code>acceptAllDevices</code>: boolean 表示请求脚本可以接受所有蓝牙设备。默认值为 false。</li>
  </ul>
  </dd>
 </dl>
@@ -75,71 +75,8 @@ navigator.bluetooth.requestDevice(options).then(function(device) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">说明</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Bluetooth', '#dom-bluetooth-requestdevice', 'requestDevice()')}}</td>
-   <td>{{Spec2('Web Bluetooth')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome (56)}}</td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatOpera(43)}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome (56)}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatOperaMobile(43)}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Bluetooth.requestDevice")}}

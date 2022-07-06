@@ -117,8 +117,8 @@ translation_of: Mozilla/Firefox/Releases/62
 
 <ul>
  <li>{{event("userproximity")}} および {{event("deviceproximity")}} イベント ({{domxref("UserProximityEvent")}} および {{domxref("DeviceProximityEvent")}} もご覧ください) を設定項目 <code>device.sensors.proximity.enabled</code> で、デフォルトで無効化しました ({{bug(1462308)}})。</li>
- <li>{{event("devicelight")}} イベント ({{domxref("DeviceLightEvent")}} もご覧ください) を設定項目 <code>device.sensors.ambientLight.enabled</code> で、デフォルトで無効化しました ({{bug(1462308)}})。</li>
- <li>{{event("DOMSubtreeModified")}} および {{event("DOMAttrModified")}} <a href="/ja/docs/Web/Guide/Events/Mutation_events">ミューテーションイベント</a> は、CSSOM によって {{htmlattrxref("style")}} 属性が変更されたときに発生しないようになりました ({{bug(1460295)}}、こちらの <a href="https://www.fxsitecompat.com/docs/2018/domattrmodified-and-domsubtreemodified-events-are-no-longer-fired-when-style-attribute-is-changed-via-cssom/">サイト互換性情報</a> をご覧ください).</li>
+ <li><code>devicelight</code> イベント (<code>DeviceLightEvent</code> もご覧ください) を設定項目 <code>device.sensors.ambientLight.enabled</code> で、デフォルトで無効化しました ({{bug(1462308)}})。</li>
+ <li>{{event("DOMSubtreeModified")}} および {{event("DOMAttrModified")}} <a href="/ja/docs/Web/Guide/Events/Mutation_events">ミューテーションイベント</a> は、CSSOM によって {{htmlattrxref("style")}} 属性が変更されたときに発生しないようになりました ({{bug(1460295)}}).</li>
  <li>{{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} のサポートを廃止しました ({{bug(1408301)}})。</li>
  <li>{{domxref("CSSValue")}}、{{domxref("CSSPrimitiveValue")}}、{{domxref("CSSValueList")}} のサポートを廃止しました ({{bug(1459871)}})。</li>
  <li>{{domxref("window.getComputedStyle()")}} が表示するものがない <code>Window</code> で呼び出されたときに、<code>null</code> を返さないようになりました ({{bug(1467722)}})。</li>
@@ -213,7 +213,6 @@ translation_of: Mozilla/Firefox/Releases/62
 <h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
- <li><a href="https://www.fxsitecompat.com/ja/versions/62/">Firefox 62 サイト互換性情報</a></li>
  <li><a href="https://www.mozilla.org/en-US/firefox/62.0/releasenotes/">Firefox 62.0, See All New Features, Updates and Fixes</a></li>
 </ul>
 

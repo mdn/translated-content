@@ -74,11 +74,6 @@ original_slug: Web/HTTP/Controle_Acesso_CORS
    <li>{{HTTPHeader("Accept-Language")}}</li>
    <li>{{HTTPHeader("Content-Language")}}</li>
    <li>{{HTTPHeader("Content-Type")}} (porém observe os requisitos adicionais abaixo)</li>
-   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#dpr">DPR</a></code></li>
-   <li>{{HTTPHeader("Downlink")}}</li>
-   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#save-data">Save-Data</a></code></li>
-   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#viewport-width">Viewport-Width</a></code></li>
-   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#width">Width</a></code></li>
   </ul>
  </li>
  <li>Os únicos valores permitidos para o {{HTTPHeader("Content-Type")}} do cabeçalho são:
@@ -286,7 +281,7 @@ Content-Type: text/plain
 <p>As linhas de 1 a 12 acima representam a requisição com pré-envio tendo o método {{HTTPMethod("OPTIONS")}}. O navegador determina que precisa fazer este envio baseado nos parâmetros da requisição do código JavaScript acima utilizado, para que o servidor possa responder caso seja aceitável o envio da requisição com os dados parâmetros da mesma. OPTIONS é um método HTTP/1.1 usado para determinar informações complementares dos servidores, sendo o mesmo um método {{Glossary("safe")}}, o que significa que não pode ser utilizado para troca de recurso. Note que junto da requisição OPTIONS, outros dois cabeçalhos são enviados (linhas 10 e 11, respectivamente):</p>
 
 <pre class="notranslate">Access-Control-Request-Method: POST
-Access-Controa l-Request-Headers: X-PINGOTHER, Content-Type
+Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 </pre>
 
 <p>O cabeçalho {{HTTPHeader("Access-Control-Request-Method")}} notifica o servidor como sendo uma parte da requisição com pré-envio que, quando a requisição efetiva é enviada, será enviada com uma requisição de método <code>POST</code>. O cabeçalho {{HTTPHeader("Access-Control-Request-Headers")}} notifica o servidor que quando a requisição efetiva fora enviada, será enviada com os seguintes cabeçalhos personalizados <code>X-PINGOTHER</code> e <code>Content-Type</code>. O servidor agora tem a oportunidade para definir se deseja aceitar uma requisição sob estas condições.</p>
@@ -517,11 +512,7 @@ Content-Type: text/plain
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_entre_Navegadores">Compatibilidade entre Navegadores</h2>
-
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>{{Compat("http.headers.Access-Control-Allow-Origin")}}</p>
 

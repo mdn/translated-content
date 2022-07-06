@@ -15,8 +15,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/shift
 
 <div>{{EmbedInteractiveExample("pages/js/array-shift.html")}}</div>
 
-<p class="hidden">这份交互测试源码存储在Github仓库中。如果你想为这份交互测试源码做贡献, 请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 同时提交一个pull request.</p>
-
 <h2 id="语法">语法</h2>
 
 <pre class="syntaxbox"><code><var>arr</var>.shift()</code></pre>
@@ -29,17 +27,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/shift
 
 <h2 id="描述">描述</h2>
 
-<p><code>shift</code> 方法移除索引为 0 的元素(即第一个元素)，并返回被移除的元素，其他元素的索引值随之减 1。如果 {{jsxref("Array.length", "length")}} 属性的值为 0 (长度为 0)，则返回 {{jsxref("undefined")}}。</p>
+<p><code>shift</code> 方法移除索引为 0 的元素 (即第一个元素)，并返回被移除的元素，其他元素的索引值随之减 1。如果 {{jsxref("Array.length", "length")}} 属性的值为 0 (长度为 0)，则返回 {{jsxref("undefined")}}。</p>
 
-<p><code>shift</code> 方法并不局限于数组：这个方法能够通过 {{jsxref("Function.call", "call")}} 或 {{jsxref("Function.apply", "apply")}} 方法作用于类似数组的对象上。但是对于没有 length 属性（从0开始的一系列连续的数字属性的最后一个）的对象，调用该方法可能没有任何意义。</p>
+<p><code>shift</code> 方法并不局限于数组：这个方法能够通过 {{jsxref("Function.call", "call")}} 或 {{jsxref("Function.apply", "apply")}} 方法作用于类似数组的对象上。但是对于没有 length 属性（从 0 开始的一系列连续的数字属性的最后一个）的对象，调用该方法可能没有任何意义。</p>
 
-<p>{{jsxref("Array.prototype.pop()")}} 有着和 <code>shift</code>相似的行为, 但是是作用在数组的最后一个元素上的。</p>
+<p>{{jsxref("Array.prototype.pop()")}} 有着和 <code>shift</code>相似的行为，但是是作用在数组的最后一个元素上的。</p>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="移除数组中的一个元素">移除数组中的一个元素</h3>
 
-<p>以下代码显示了删除其第一个元素之前和之后的myFish数组。它还显示已删除的元素：</p>
+<p>以下代码显示了删除其第一个元素之前和之后的 myFish 数组。它还显示已删除的元素：</p>
 
 <pre class="brush: js">let myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
 
@@ -67,9 +65,9 @@ console.log('myFish after:', myFish);
 console.log('Removed this element:', shifted);
 // Removed this element: angel</code></pre>
 
-<h3 id="在while循环中使用shift">在while循环中使用shift()</h3>
+<h3 id="在while循环中使用shift">在 while 循环中使用 shift()</h3>
 
-<p>shift() 方法经常用于while loop的环境中.。下例中每个循环将要从一个数组中移除下一项元素，直至它成为空数组。</p>
+<p>shift() 方法经常用于 while loop 的环境中.。下例中每个循环将要从一个数组中移除下一项元素，直至它成为空数组。</p>
 
 <pre><code>var names = ["Andrew", "Edward", "Paul", "Chris" ,"John"];
 

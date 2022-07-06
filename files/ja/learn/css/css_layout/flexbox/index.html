@@ -54,7 +54,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>内部に最上位の見出しを持つ {{htmlelement("header")}} 要素と、3つの {{htmlelement("article")}} を含む {{htmlelement("section")}} 要素があります。 これらを使用して、かなり標準的な3列のレイアウトを作成します。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13406/flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
 <h2 id="Specifying_what_elements_to_lay_out_as_flexible_boxes" name="Specifying_what_elements_to_lay_out_as_flexible_boxes">柔軟な箱としてレイアウトする要素を指定</h2>
 
@@ -66,7 +66,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>この結果は次のようになります。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13408/flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
 
 <p>それで、このたった一つの宣言が必要なものすべてを与えてくれます — 信じられないでしょ？ 同じ幅の列を持つ複数列のレイアウトがあり、列の高さはすべて同じです。 これは、フレックス項目（フレックスコンテナの子）に与えられるデフォルト値が、このような一般的な問題を解決するために設定されているためです。 それらについての詳細は後で。</p>
 
@@ -78,7 +78,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>要素が柔軟な箱として配置されるとき、それらは次のように2つの軸に沿って配置されます。</p>
 
-<p><img alt="flex_terms.png" class="default internal" src="/files/3739/flex_terms.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="flex_terms.png" class="default internal" src="flex_terms.png"></p>
 
 <ul>
  <li>主軸（<strong>main axis</strong>）は、フレックス項目が配置されている方向に走る軸です（例えば、ページを横切る行、またはページ下の列として）。 この軸の始点と終点は、主始点（<strong>main start</strong>）と主終点（<strong>main end</strong>）と呼ばれます。</li>
@@ -107,7 +107,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>レイアウトの幅や高さが決まっているときに発生する問題の1つは、最終的にはフレックスボックスの子がコンテナをオーバーフローさせてレイアウトが壊れることです。 <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html">flexbox-wrap0.html</a> の例を見て、それを<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html">ライブで見て</a>みてください（この例に沿って進めたい場合は、このファイルのローカルコピーを取ってください）。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13410/flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
 
 <p>ここで実際に子がコンテナから抜け出しているのを見ます。 これを修正できる1つの方法は、{{htmlelement("section")}}）の規則に次の宣言を追加することです。</p>
 
@@ -119,7 +119,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>試してみてください。 これが含まれていると次のようにレイアウトがはるかに良く見えることがわかります。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13412/flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;">現在、複数の行があります — 多くのフレックスボックスの子が各行に納められているので、オーバーフローは次のラインに移動します。 <code>article</code> に設定した <code>flex: 200px</code> の宣言は、それぞれが少なくとも 200px 幅になることを意味します。 このプロパティについては後で詳しく説明します。 また、最後の行の最後の数個の子がそれぞれ幅広になっているので、依然として行全体がいっぱいになっていることに気付くかもしれません。</p>
+<p><img alt="" src="flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;">現在、複数の行があります — 多くのフレックスボックスの子が各行に納められているので、オーバーフローは次のラインに移動します。 <code>article</code> に設定した <code>flex: 200px</code> の宣言は、それぞれが少なくとも 200px 幅になることを意味します。 このプロパティについては後で詳しく説明します。 また、最後の行の最後の数個の子がそれぞれ幅広になっているので、依然として行全体がいっぱいになっていることに気付くかもしれません。</p>
 
 <p>しかし、ここでできることは他にもあります。 まず最初に、{{cssxref("flex-direction")}} プロパティの値を <code>row-reverse</code> に変更してみてください。 これで、まだ複数行のレイアウトがあることがわかりますが、ブラウザーウィンドウの反対側の隅から開始して逆方向に流れます。</p>
 
@@ -166,7 +166,7 @@ article:nth-of-type(3) {
 
 <p>これは基本的に「各フレックス項目には最初に 200px の使用可能なスペースが与えられます。 その後、残りの使用可能なスペースは割合単位に従って共有されます。」と述べています。 リフレッシュしてみると、スペースの共有方法に違いが見られます。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13406/flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
 <p>フレックスボックスの真の価値は、その柔軟性/応答性に見ることができます — ブラウザーウィンドウのサイズを変更したり、別の {{htmlelement("article")}} 要素を追加したりしても、レイアウトは問題なく機能します。</p>
 
@@ -186,7 +186,7 @@ article:nth-of-type(3) {
 
 <p>フレックスボックスの機能を使用して、主軸または交差軸に沿ってフレックス項目を整列させることもできます。 新しい例である <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">flex-align0.html</a> を見て（<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">ライブも見る</a>）、これを調べてみましょう。 これは、きちんとした柔軟なボタン/ツールバーに変わります。 現時点では、いくつかのボタンが左上隅に詰まった水平のメニューバーが表示されます。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13414/flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="" src="flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
 
 <p>まず、この例のローカルコピーを取ります。</p>
 
@@ -257,7 +257,7 @@ article:nth-of-type(3) {
 
 <p>フレックスボックスを使ってかなり複雑なレイアウトを作成することは可能です。 フレックス項目をフレックスコンテナとしても設定して、その子も柔軟な箱のようにレイアウトできるようにしてもまったく問題ありません。 <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html">complex-flexbox.html</a> を見てください（<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html">ライブも見る</a>）。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13418/flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>このための HTML はかなり単純です。 3つの {{htmlelement("article")}} を含む {{htmlelement("section")}} 要素があります。 3番目の {{htmlelement("article")}} には3つの {{htmlelement("div")}} が含まれています。</p>
 
@@ -321,7 +321,7 @@ article:nth-of-type(3) {
 
 <h2 id="スキルをテストしましょう!">スキルをテストしましょう!</h2>
 
-<p>この記事では多くをカバーしましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります — <a href="https://wiki.developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout/Flexbox_skills">Test your skills: Flexbox</a> を見てください。</p>
+<p>この記事では多くをカバーしましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります — <a href="/ja/docs/Learn/CSS/CSS_layout/Flexbox_skills">Test your skills: Flexbox</a> を見てください。</p>
 
 <h2 id="Summary" name="Summary">まとめ</h2>
 

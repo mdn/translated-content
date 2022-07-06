@@ -26,7 +26,7 @@ translation_of: Learn/HTML/Tables/Advanced
 
 <p>Вы можете добавить заголовок для таблицы установив его в элементе {{htmlelement("caption")}} и этот элемент необходимо поместить внутрь  элемента {{htmlelement("table")}}. Причём вам нужно поместить его сразу после открытия тега <code>&lt;table&gt;</code>.</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;caption&gt;Dinosaurs in the Jurassic period&lt;/caption&gt;
 
   ...
@@ -83,7 +83,7 @@ translation_of: Learn/HTML/Tables/Advanced
  <li>Сохраните, перезагрузите и вы увидите, что добавление элемента <code>&lt;tfoot&gt;</code> привело к тому,  что строка "SUM" опустилась к нижней части таблицы.</li>
  <li>Далее, добавьте атрибут {{htmlattrxref("colspan","td")}}, чтобы ячейка "SUM" занимала первые четыре столбца, таким образом числовое значение "Cost" появится в последнем столбце.</li>
  <li>Давайте добавим несколько простых дополнительных стилей к таблице, чтобы дать вам представление насколько эти элементы полезны при использовании CSS. Внутри в <code>&lt;head&gt;</code> вашего HTML документа вы увидите пустой элемент {{htmlelement("style")}}. Внутри этого элемента добавьте следующие строки CSS кода:
-  <pre class="brush: css notranslate">tbody {
+  <pre class="brush: css">tbody {
   font-size: 90%;
   font-style: italic;
 }
@@ -97,7 +97,7 @@ tfoot {
 </ol>
 
 <div class="note">
-<p><strong>Примечание</strong>: Мы не ожидаем что сейчас вы полностью поймёте CSS. Вы узнаете больше когда пройдёте наши CSS курсы (например, <a href="/ru/docs/Learn/CSS/Introduction_to_CSS">Вступление в CSS</a> это хорошее место для начала; у нас также есть статья конкретно о <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Styling_tables">стилизации таблиц</a>).</p>
+<p><strong>Примечание</strong>: Мы не ожидаем что сейчас вы полностью поймёте CSS. Вы узнаете больше когда пройдёте наши CSS курсы (например, <a href="/ru/docs/Learn/CSS/Introduction_to_CSS">Вступление в CSS</a> это хорошее место для начала; у нас также есть статья конкретно о <a href="/ru/docs/Learn/CSS/Building_blocks/Styling_tables">стилизации таблиц</a>).</p>
 </div>
 
 <p>Ваша готовая таблица должна выглядеть примерно так:</p>
@@ -105,7 +105,7 @@ tfoot {
 <div class="hidden">
 <h6 id="Hidden_example">Hidden example</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -224,7 +224,7 @@ tfoot {
 
 <p>Разметка простой вложенной таблицы:</p>
 
-<pre class="brush: html notranslate">&lt;table id="table1"&gt;
+<pre class="brush: html">&lt;table id="table1"&gt;
   &lt;tr&gt;
     &lt;th&gt;title1&lt;/th&gt;
     &lt;th&gt;title2&lt;/th&gt;
@@ -363,7 +363,7 @@ tfoot {
 
 <p>Новая тема в этой статье это атрибут {{htmlattrxref("scope","th")}}, который может быть добавлен к элементу <code>&lt;th&gt;</code> он сообщает скринридеру какие ячейки точно являются заголовками — например, заголовок строки в которой он находится или столбца. Возвращаясь назад к нашему примеру с записями расходов, вы могли однозначно определить заголовки столбцов как здесь:</p>
 
-<pre class="brush: html notranslate">&lt;thead&gt;
+<pre class="brush: html">&lt;thead&gt;
   &lt;tr&gt;
     &lt;th scope="col"&gt;Purchase&lt;/th&gt;
     &lt;th scope="col"&gt;Location&lt;/th&gt;
@@ -375,7 +375,7 @@ tfoot {
 
 <p>И у каждой строки может быть определён заголовок, как здесь (если мы добавили заголовки строк и заголовки столбцов):</p>
 
-<pre class="brush: html notranslate">&lt;tr&gt;
+<pre class="brush: html">&lt;tr&gt;
   &lt;th scope="row"&gt;Haircut&lt;/th&gt;
   &lt;td&gt;Hairdresser&lt;/td&gt;
   &lt;td&gt;12/09&lt;/td&gt;
@@ -400,7 +400,7 @@ tfoot {
 
 <p>Вернёмся к нашему примеру с расчётом затрат, его можно переписать следующим образом:</p>
 
-<pre class="brush: html notranslate">&lt;thead&gt;
+<pre class="brush: html">&lt;thead&gt;
   &lt;tr&gt;
     &lt;th id="purchase"&gt;Purchase&lt;/th&gt;
     &lt;th id="location"&gt;Location&lt;/th&gt;

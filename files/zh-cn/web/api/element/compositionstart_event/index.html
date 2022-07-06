@@ -11,6 +11,8 @@ tags:
 translation_of: Web/API/Element/compositionstart_event
 original_slug: Web/Events/compositionstart
 ---
+<div>{{APIRef}}</div>
+
 <p>文本合成系统如 {{glossary("input method editor")}}（即输入法编辑器）开始新的输入合成时会触发 <strong><code>compositionstart</code></strong> 事件。</p>
 
 <p>例如，当用户使用拼音输入法开始输入汉字时，这个事件就会被触发。</p>
@@ -52,11 +54,11 @@ inputElement.addEventListener('compositionstart', (event) =&gt; {
   console.log(`generated characters were: ${event.data}`);
 });</pre>
 
-<h3 id="动态演示">动态演示</h3>
+<h3 id="Live_example">动态演示</h3>
 
 <h4 id="HTML">HTML</h4>
 
-<pre>&lt;div class="control"&gt;
+<pre class="brush: html">&lt;div class="control"&gt;
   &lt;label for="name"&gt;On macOS, click in the textbox below,&lt;br&gt; then type &lt;kbd&gt;option&lt;/kbd&gt; + &lt;kbd&gt;`&lt;/kbd&gt;, then &lt;kbd&gt;a&lt;/kbd&gt;:&lt;/label&gt;
   &lt;input type="text" id="example" name="example"&gt;
 &lt;/div&gt;
@@ -67,9 +69,10 @@ inputElement.addEventListener('compositionstart', (event) =&gt; {
   &lt;button class="clear-log"&gt;Clear&lt;/button&gt;
 &lt;/div&gt;</pre>
 
+<div class="hidden">
 <h4 id="CSS">CSS</h4>
 
-<pre>body {
+<pre class="brush: css">body {
   padding: .2rem;
   display: grid;
   grid-template-areas: "control  log";
@@ -101,10 +104,11 @@ kbd {
   border: 1px solid black;
 }
 </pre>
+</div>
 
 <h4 id="JS">JS</h4>
 
-<pre>const inputElement = document.querySelector('input[type="text"]');
+<pre class="brush: js">const inputElement = document.querySelector('input[type="text"]');
 const log = document.querySelector('.event-log-contents');
 const clearLog = document.querySelector('.clear-log');
 
@@ -123,7 +127,7 @@ inputElement.addEventListener('compositionend', handleEvent);
 
 <h4 id="结果">结果</h4>
 
-<p><iframe class="live-sample-frame sample-code-frame" frameborder="0" height="180px" id="frame_Live_example" src="https://mdn.mozillademos.org/en-US/docs/Web/API/Element/compositionstart_event$samples/Live_example?revision=1606277" width="100%"></iframe></p>
+<p>{{ EmbedLiveSample('Live_example', '100%', '180px') }}</p>
 
 <h2 id="规范">规范</h2>
 
@@ -144,7 +148,7 @@ inputElement.addEventListener('compositionend', handleEvent);
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("api.Element.compositionstart_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="参见">参见</h2>
 

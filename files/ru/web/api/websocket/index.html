@@ -39,7 +39,7 @@ WebSocket WebSocket(
 <dl>
 </dl>
 
-<h2 id="Method_overview" name="Method_overview">Обзор метода</h2>
+<h2 id="Method_overview">Обзор метода</h2>
 
 <table class="standard-table">
  <tbody>
@@ -69,7 +69,7 @@ WebSocket WebSocket(
   <tr>
    <td><code>bufferedAmount</code></td>
    <td><code><a href="/en/unsigned_long" title="en/unsigned long">unsigned long</a></code></td>
-   <td>Количество байтов данных, которые были поставлены в очередь, используя вызовы {{ manch("send") }}, но ещё не переданные в сеть. Это значение не сбрасывается в ноль, при закрытии соединения; если продолжить вызывать  {{ manch("send") }}, значение будет расти. <strong>Только чтение.</strong></td>
+   <td>Количество байтов данных, которые были поставлены в очередь, используя вызовы <a href="#send">send</a>, но ещё не переданные в сеть. Это значение не сбрасывается в ноль, при закрытии соединения; если продолжить вызывать  <a href="#send">send</a>, значение будет расти. <strong>Только чтение.</strong></td>
   </tr>
   <tr>
    <td><code>extensions</code></td>
@@ -113,7 +113,7 @@ WebSocket WebSocket(
    <td><code>readyState</code></td>
    <td><code><a href="/en/unsigned_short" title="en/unsigned short">unsigned short</a></code></td>
    <td>
-    <p>Текущее состояние подключения; это одно из {{ anch("Ready state constants") }}. <strong>Только для чтения</strong><strong>.</strong></p>
+    <p>Текущее состояние подключения; это одно из <a href="#ready_state_constants">Ready state constants</a>. <strong>Только для чтения</strong><strong>.</strong></p>
    </td>
   </tr>
   <tr>
@@ -126,7 +126,7 @@ WebSocket WebSocket(
  </tbody>
 </table>
 
-<h2 id="Constants" name="Constants">Константы</h2>
+<h2 id="Constants">Константы</h2>
 
 <h3 id="Константы_состояния_готовности">Константы состояния готовности</h3>
 
@@ -162,9 +162,9 @@ WebSocket WebSocket(
  </tbody>
 </table>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
-<h3 id="close" name="close()">close()</h3>
+<h3 id="close">close()</h3>
 
 <p>Закрывает WebSocket - подключение или заканчивает попытку подключения. Если подключение уже закрыто, этот метод не делает ничего.</p>
 
@@ -174,7 +174,7 @@ WebSocket WebSocket(
 );
 </pre>
 
-<h6 id="Parameters" name="Parameters">Параметры</h6>
+<h6 id="Parameters">Параметры</h6>
 
 <dl>
  <dt><code>code</code> {{ optional_inline() }}</dt>
@@ -196,7 +196,7 @@ WebSocket WebSocket(
 
 <p>В Gecko этот метод не поддерживает никакие параметры включительно до Gecko 8.0 {{ geckoRelease("8.0") }}.</p>
 
-<h3 id="send" name="send()">send()</h3>
+<h3 id="send">send()</h3>
 
 <p>Передаёт данные на сервер через WebSocket - соединение.</p>
 
@@ -213,7 +213,7 @@ void send(
 );
 </pre>
 
-<h6 id="Parameters" name="Parameters">Параметры</h6>
+<h6 id="Parameters">Параметры</h6>
 
 <dl>
  <dt><code>data</code></dt>
@@ -235,7 +235,7 @@ void send(
 <p>Начиная с {{Gecko("11.0")}}, поддержка <code><a href="/en/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer">ArrayBuffer</a></code> была реализована, но не {{ domxref("Blob") }} типы данных.</p>
 </div>
 
-<h2 id="See_also" name="See_also">Спецификации</h2>
+<h2 id="See_also">Спецификации</h2>
 
 <table class="standard-table">
  <tbody>
@@ -250,7 +250,7 @@ void send(
  </tbody>
 </table>
 
-<h2 id="See_also" name="See_also">Пример</h2>
+<h2 id="See_also">Пример</h2>
 
 <pre class="brush: js"><code>// Создаёт WebSocket - подключение.
 const socket = new WebSocket('ws://localhost:8080');
@@ -270,12 +270,12 @@ socket.addEventListener('message', function (event) {
 <div>
 
 
-<p>{{Compat("api.WebSocket")}}</p>
+<p>{{Compat}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/en/WebSockets/Writing_WebSocket_client_applications" title="en/WebSockets/Writing WebSocket client applications">Writing WebSocket client applications</a></li>
- <li><a class="external" href="http://dev.w3.org/html5/websockets/" title="http://dev.w3.org/html5/websockets/">HTML5: WebSockets</a></li>
+ <li><a class="external" href="http://dev.w3.org/html5/websockets/">HTML5: WebSockets</a></li>
 </ul>

@@ -71,7 +71,7 @@ WebSocket WebSocket(
   <tr>
    <td><code>bufferedAmount</code></td>
    <td><code><a href="/en/unsigned_long" title="en/unsigned long">unsigned long</a></code></td>
-   <td>Die Anzahl der Bytes der Daten, welche bereits durch Aufrufe von {{ manch("send") }} gebuffert wurden, allerdings noch nicht über das Netzwerk versand wurden. Dieses Feld setzt sich nicht auf Null zurück, wenn die Verbindung beendet wurde; falls du weiterhin {{ manch("send") }} aufrufst, wird dieses Feld weiterhin ansteigen. <strong>Read only.</strong></td>
+   <td>Die Anzahl der Bytes der Daten, welche bereits durch Aufrufe von <a href="#send">send</a> gebuffert wurden, allerdings noch nicht über das Netzwerk versand wurden. Dieses Feld setzt sich nicht auf Null zurück, wenn die Verbindung beendet wurde; falls du weiterhin <a href="#send">send</a> aufrufst, wird dieses Feld weiterhin ansteigen. <strong>Read only.</strong></td>
   </tr>
   <tr>
    <td><code>extensions</code></td>
@@ -106,7 +106,7 @@ WebSocket WebSocket(
   <tr>
    <td><code>readyState</code></td>
    <td><code><a href="/en/unsigned_short" title="en/unsigned short">unsigned short</a></code></td>
-   <td>Der aktuelle Status der Verbindung; dies ist einer der {{ anch("Ready state Konstanten") }}. <strong>Read only.</strong></td>
+   <td>Der aktuelle Status der Verbindung; dies ist einer der <a href="#ready_state_konstanten">Ready state Konstanten</a>. <strong>Read only.</strong></td>
   </tr>
   <tr>
    <td><code>url</code></td>
@@ -231,7 +231,7 @@ void send(
 
 <ul>
  <li><a href="/en/WebSockets/Writing_WebSocket_client_applications" title="en/WebSockets/Writing WebSocket client applications">Writing WebSocket client applications</a></li>
- <li><a class="external" href="http://dev.w3.org/html5/websockets/" title="http://dev.w3.org/html5/websockets/">HTML5: WebSockets</a></li>
+ <li><a class="external" href="http://dev.w3.org/html5/websockets/">HTML5: WebSockets</a></li>
 </ul>
 
 <h2 id="Browser_Kompatibilität">Browser Kompatibilität</h2>
@@ -309,6 +309,6 @@ void send(
 
 <p>Das <code>extensions</code>-Attribut wurde bis Gecko 8.0 nicht unterstützt.</p>
 
-<div class="note"><strong>Notiz:</strong> Vor {{Gecko("11.0")}} ausgehende Nachrichten welche mit der {{ manch("send") }} Methode versendet wurden, waren auf 16 MB begrenzt. Jetzt können sie bis zu 2 GB wachsen.</div>
+<div class="note"><strong>Notiz:</strong> Vor {{Gecko("11.0")}} ausgehende Nachrichten welche mit der <a href="#send">send</a> Methode versendet wurden, waren auf 16 MB begrenzt. Jetzt können sie bis zu 2 GB wachsen.</div>
 
 <p>{{ languages ( {"zh-tw": "zh_tw/WebSockets/WebSockets_reference/WebSocket"} ) }}</p>

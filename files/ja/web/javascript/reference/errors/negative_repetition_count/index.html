@@ -23,7 +23,7 @@ RangeError: Invalid count value (Chrome)
 
 <p>{{jsxref("RangeError")}}</p>
 
-<h2 id="What_went_wrong">原因</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
 <p>{{jsxref("String.prototype.repeat()")}} メソッドを使用しています。 <code>count</code> 引数は、文字列の繰り返し回数を指定します。 これは 0 から正の {{jsxref("Infinity")}} 未満の値である必要があり、負の数は使用できません。 有効値の範囲は [0, +∞) のように説明できます。</p>
 
@@ -33,7 +33,7 @@ RangeError: Invalid count value (Chrome)
 
 <pre class="brush: js example-bad">'abc'.repeat(-1); // RangeError </pre>
 
-<h3 id="Valid_cases">有効なケース</h3>
+<h3 id="Valid_cases">有効な場合</h3>
 
 <pre class="brush: js example-good">'abc'.repeat(0);    // ''
 'abc'.repeat(1);    // 'abc'

@@ -44,11 +44,11 @@ translation_of: Web/API/EventSource
 
 <dl>
  <dt>{{domxref("EventSource.onerror")}}</dt>
- <dd>エラーが発生して、<code>EventSource</code> オブジェクトで {{domxref("EventSource/error_event", "error")}} イベントが発生したときに呼び出される {{domxref("EventHandler")}} です。</dd>
+ <dd>エラーが発生して、<code>EventSource</code> オブジェクトで {{domxref("EventSource/error_event", "error")}} イベントが発生したときに呼び出される {{event("Event_handlers", "event handler")}} です。</dd>
  <dt>{{domxref("EventSource.onmessage")}}</dt>
- <dd>{{domxref("EventSource/message_event", "message")}} イベントを受け取ったとき、すなわち発信元からメッセージが到着したときに呼び出される {{domxref("EventHandler")}} です。</dd>
+ <dd>{{domxref("EventSource/message_event", "message")}} イベントを受け取ったとき、すなわち発信元からメッセージが到着したときに呼び出される {{event("Event_handlers", "event handler")}} です。</dd>
  <dt>{{domxref("EventSource.onopen")}}</dt>
- <dd>{{domxref("EventSource/open_event", "open")}} イベントを受け取ったとき、すなわち接続を開始したときに呼び出される {{domxref("EventHandler")}} です。</dd>
+ <dd>{{domxref("EventSource/open_event", "open")}} イベントを受け取ったとき、すなわち接続を開始したときに呼び出される {{event("Event_handlers", "event handler")}} です。</dd>
 </dl>
 
 <h2 id="Methods" name="Methods">メソッド</h2>
@@ -112,8 +112,6 @@ evtSource.onmessage = function(e) {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
-
 <p>{{Compat("api.EventSource")}}</p>
 </div>
 

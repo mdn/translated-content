@@ -9,7 +9,7 @@ original_slug: Web/Progressive_web_apps/加载
 ---
 <div>{{PreviousMenu("Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}</div>
 
-<p class="summary">在前面的文章我们介绍了很多 API，例如：<a href="en-US/docs/Web/Apps/Progressive/Offline_Service_workers">Service Workers</a>,、<a href="/en-US/docs/Web/Apps/Progressive/Installable_PWAs">Web Manifests</a>、<a href="/en-US/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push">Notifications and Push</a>，它们让我们的示例应用 <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> 成为一个渐进式 Web 应用。在这篇文章里我们将会更进一步，使用资源渐进式加载来提高整个应用的性能。</p>
+<p>在前面的文章我们介绍了很多 API，例如：<a href="en-US/docs/Web/Apps/Progressive/Offline_Service_workers">Service Workers</a>,、<a href="/en-US/docs/Web/Apps/Progressive/Installable_PWAs">Web Manifests</a>、<a href="/en-US/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push">Notifications and Push</a>，它们让我们的示例应用 <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> 成为一个渐进式 Web 应用。在这篇文章里我们将会更进一步，使用资源渐进式加载来提高整个应用的性能。</p>
 
 <h2 id="首次有效渲染">首次有效渲染</h2>
 
@@ -79,7 +79,7 @@ const loadImages = (image) =&gt; {
 
 <p>为了让整个过程视觉效果更好，图片占位符的样式用 CSS 做了模糊处理：</p>
 
-<p><img alt="js13kPWA 应用中占位符图片的效果截图" src="https://mdn.mozillademos.org/files/15992/js13kpwa-placeholders.png" style="height: 684px; width: 675px;"></p>
+<p><img alt="js13kPWA 应用中占位符图片的效果截图" src="js13kpwa-placeholders.png"></p>
 
 <p>我们一开始用模糊滤镜来渲染图像，然后就可以实现从模糊到清晰图像的过渡效果：</p>
 

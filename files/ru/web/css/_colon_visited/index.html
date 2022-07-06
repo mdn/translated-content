@@ -9,12 +9,12 @@ translation_of: 'Web/CSS/:visited'
 
 <h2 id="Описание">Описание</h2>
 
-<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:visited</code> позволяет вам выбирать ссылки, которые были посещены. Этот стиль может переопределяться другими относящимися к ссылкам псевдоклассами, такими как {{ cssxref(":link") }}, {{ cssxref(":hover") }} и {{ cssxref(":active") }}, появляющимися в соответствующем порядке. Чтобы стилизировать ссылки должным образом, вам нужно вставлять правило <code>:visited</code> до правила <code>:link</code>, но после других, определённых <em>LVHA-порядком</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
+<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:visited</code> позволяет вам выбирать ссылки, которые были посещены. Этот стиль может переопределяться другими относящимися к ссылкам псевдоклассами, такими как {{ cssxref(":link") }}, {{ cssxref(":hover") }} и {{ cssxref(":active") }}, появляющимися в соответствующем порядке. Чтобы стилизировать ссылки должным образом, вставьте правило <code>:visited</code> после правила <code>:link</code> до правил <code>:hover</code> и <code>:active</code>, как определено <em>LVHA-порядком</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
 
 <div class="note style-wrap">
-<p><strong>Замечание: </strong>Из-за причин приватности, браузеры строго ограничивают стили, которые вы можете применить к элементу, используя этот псевдокласс: только {{ cssxref("color") }}, {{ cssxref("background-color") }}, {{ cssxref("border-color") }}, {{ cssxref("border-bottom-color") }}, {{ cssxref("border-left-color") }}, {{ cssxref("border-right-color") }}, {{ cssxref("border-top-color") }}, {{ cssxref("outline-color") }}, {{ cssxref("column-rule-color") }}, <code>fill</code> и <code>stroke</code>. Заметьте также, что альфа-канал будет игнорироваться: будет использоваться альфа-канал, используемый для непосвящённых ссылок вместо него (но если прозрачность - <code>0</code>, то в этот случае игнорируется весь цвет, и один из используемых стилей для непосвящённых ссылок).</p>
+<p><strong>Замечание: </strong>Из-за причин приватности, браузеры строго ограничивают стили, которые вы можете применить к элементу, используя этот псевдокласс: только {{ cssxref("color") }}, {{ cssxref("background-color") }}, {{ cssxref("border-color") }}, {{ cssxref("border-bottom-color") }}, {{ cssxref("border-left-color") }}, {{ cssxref("border-right-color") }}, {{ cssxref("border-top-color") }}, {{ cssxref("outline-color") }}, {{ cssxref("column-rule-color") }}, <code>fill</code> и <code>stroke</code>. Компонент альфа-канала в доступных стилях будет игнорироваться. Вместо него будет использоваться альфа-канал, используемый для непосещённых ссылок. Если в цвете альфа-канала для посещённых ссылок задан<code>0</code>, то в этом случае будет использоваться цвет непосещённых ссылок.</p>
 
-<p>Несмотря на то, что цвет может меняться, метод <code>getComputedStyle</code> наврёт и всегда будет давать значение цвета непосвящённых ссылок.</p>
+<p>Несмотря на то, что цвет может меняться, метод <code>getComputedStyle</code> наврёт и всегда будет давать значение цвета непосещённых ссылок.</p>
 
 <p>Для дополнительной информации об ограничениях и их причин, смотрите <a href="/ru/docs/CSS/Privacy_and_the_:visited_selector" title="/ru/docs/CSS/Privacy_and_the_:visited_selector">Приватность и селектор :visited</a>.</p>
 </div>
@@ -26,46 +26,11 @@ a:visited { background-color: white } </pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', 'scripting.html#selector-visited', ':visited') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#link', ':visited') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>Без изменений.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Selectors', '#link', ':visited') }}</td>
-   <td>{{ Spec2('CSS3 Selectors') }}</td>
-   <td>Без изменений.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'selector.html#link-pseudo-classes', ':visited') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Ограничение использовать его только для элементов {{ HTMLElement("a") }}. Позволяет браузерам ограничивать его поведение из-за причин приватности.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS1', '#anchor-pseudo-classes', ':visited') }}</td>
-   <td>{{ Spec2('CSS1') }}</td>
-   <td>Изначальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Поддержка браузерами</h2>
+<h2 id="Browser_compatibility">Поддержка браузерами</h2>
 
-<p>{{Compat("css.selectors.visited")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

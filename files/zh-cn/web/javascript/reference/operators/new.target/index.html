@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Operators/new.target
 
 <h2 id="描述">描述</h2>
 
-<p><code>new.target</code>语法由一个关键字"<code>new</code>"，一个点，和一个属性名"<font face="Consolas, Liberation Mono, Courier, monospace">target</font>"组成。通常"<code>new.</code>"<code>的</code>作用是提供属性访问的上下文，但这里"<code>new.</code>"其实不是一个真正的对象。不过在构造方法调用中，<code>new.target</code>指向被<code>new</code>调用的构造函数，所以"<code>new.</code>"成为了一个虚拟上下文。</p>
+<p><code>new.target</code>语法由一个关键字"<code>new</code>"，一个点，和一个属性名"<code>target</code>"组成。通常"<code>new.</code>"<code>的</code>作用是提供属性访问的上下文，但这里"<code>new.</code>"其实不是一个真正的对象。不过在构造方法调用中，<code>new.target</code>指向被<code>new</code>调用的构造函数，所以"<code>new.</code>"成为了一个虚拟上下文。</p>
 
 <p><code>new.target</code>属性适用于所有函数访问的元属性。在  <a href="http://www.javascripttutorial.net/es6/javascript-arrow-function/">arrow functions</a> 中，<code>new.target</code> 指向最近的外层函数的<code>new.target</code>（An arrow function expression does not have its own this, arguments, super , or new.target) 。</p>
 
@@ -59,7 +59,7 @@ var c = new C(); // logs class C{constructor(){console.log(new.target);}}
 var d = new D(); // logs class D extends C{constructor(){super();}}
 </pre>
 
-<p class="summary">从上面类 C 和 D 的例子可以看出来，new.target 指向的是初始化类的类定义。比如当 D 通过 new 初始化的时候，打印出了 D 的类定义，C 的例子与之类似，打印出的是 C 的类定义。</p>
+<p>从上面类 C 和 D 的例子可以看出来，new.target 指向的是初始化类的类定义。比如当 D 通过 new 初始化的时候，打印出了 D 的类定义，C 的例子与之类似，打印出的是 C 的类定义。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -84,8 +84,6 @@ var d = new D(); // logs class D extends C{constructor(){super();}}
 </table>
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
-
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("javascript.operators.new_target")}}</p>
 

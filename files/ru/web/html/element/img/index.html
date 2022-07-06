@@ -29,7 +29,7 @@ translation_of: Web/HTML/Element/img
 
 <ul>
  <li>управление Referrer/CORS в целях безопасности. Смотрите ниже атрибуты <code>crossorigin</code> и <code>referrerpolicy</code>;</li>
- <li>настройка {{glossary("Intrinsic Size", "внутреннего размера")}} с использованием <code>width</code> и <code>hight</code>, которые полезны, когда вы хотите задать пространство занимаемое изображением, чтобы обеспечить стабильность макета страницы перед его загрузкой;</li>
+ <li>настройка {{glossary("Intrinsic Size", "внутреннего размера")}} с использованием <code>width</code> и <code>height</code>, которые полезны, когда вы хотите задать пространство занимаемое изображением, чтобы обеспечить стабильность макета страницы перед его загрузкой;</li>
  <li>адаптивные изображения рекомендуется использовать с атрибутами <code>sizes</code> и <code>srcset</code> (смотрите также элемент {{htmlelement("picture")}} и наше руководство "<a href="/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Адаптивные изображения</a>").</li>
 </ul>
 
@@ -153,6 +153,19 @@ translation_of: Web/HTML/Element/img
  <p><strong>Примечание:</strong> Этот атрибут разрешён, только если элемент <code>&lt;img&gt;</code> является потомком элемента {{htmlelement("a")}} с валидным (соответствующий требованиям) атрибутом {{htmlattrxref("href","a")}}.</p>
  </div>
  </dd>
+  <dt>{{htmlattrdef("loading")}} {{experimental_inline}}</dt>
+ <dd>
+ <p>Указывает на то, как браузер должен загрузить изображение:</p>
+
+ <ul>
+  <li><code>eager</code>: Загружает изображение немедленно независимо от того, находится оно в области просмотра или нет (является значением по умолчанию).</li>
+  <li><code>lazy</code>: Откладывает загрузку изображения до того момента, пока оно не достигнет подсчитанного расстояния области просмотра, определяемого браузером. Данное значение помогает избежать использования ресурсов сети и хранилища, необходимых для обработки изображения, пока это действительно не понадобится. В большинстве случаев использование этого аргумента улучшает производительность.</li>
+ </ul>
+ 
+ <div class="note">
+	<p><strong>Примечание:</strong> Загрузка откладывается только тогда, когда включён JavaScript. Это анти-трэкинг мера. Если бы пользовательский клиент поддерживал опцию отложенной загрузки изображения при отключённом JavaScript, то сайт имел бы возможность отслеживать приблизительную позицию области просмотра в течение сессии пользователя, размещая изображения на странице таким образом, чтобы сервер мог отслеживать, сколько изображений загружено и когда.</p>
+ </div>
+ </dd>
  <dt>{{htmlattrdef("referrerpolicy")}} {{experimental_inline}}</dt>
  <dd>
  <p>Строка, указывающая, какой реферер (referrer) использовать при выборке ресурсов:</p>
@@ -170,7 +183,7 @@ translation_of: Web/HTML/Element/img
  <p>Список из одного или нескольких строк, разделённых запятыми, указывающих набор размеров источника. Каждый размер источника состоит из:</p>
 
  <ol>
-  <li>Условия мёда-запроса. Оно должно быть пропущено для последнего элемента.</li>
+  <li>Условия медиа-запроса. Должно быть пропущено для последнего элемента.</li>
   <li>Значения размера источника.</li>
  </ol>
 
@@ -340,43 +353,11 @@ translation_of: Web/HTML/Element/img
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}}</td>
-   <td>{{Spec2('Referrer Policy')}}</td>
-   <td>Добавлен атрибут <code>referrerpolicy</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#the-img-element', '&lt;img&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'embedded-content-0.html#the-img-element', '&lt;img&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/objects.html#h-13.2', '&lt;img&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>
-    <p> </p>
-   </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p>{{Compat("html.elements.img")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

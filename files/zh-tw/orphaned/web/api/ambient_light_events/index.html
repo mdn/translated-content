@@ -1,0 +1,97 @@
+---
+title: 使用光線事件
+slug: orphaned/Web/API/Ambient_Light_Events
+translation_of: Web/API/Ambient_Light_Events
+original_slug: Web/API/Ambient_Light_Events
+---
+<p>{{ SeeCompatTable }}</p>
+<h2 id="摘要">摘要</h2>
+<p>環境光源 (Ambient light) 事件，可告知 Apps 或網頁目前光線強度的變化，以利做出反應，例如改變使用者介面 (User Interface，UI) 的顏色對比，或在拍照時改變曝光程度</p>
+<h2 id="光源事件">光源事件</h2>
+<p>只要裝置的光線感測器偵測到光線強度變化，隨即通知瀏覽器。一旦瀏覽器取得該通知，就會發出 <a href="https://developer.mozilla.org/en-US/docs/DOM/DeviceLightEvent" title="/en-US/docs/DOM/DeviceLightEvent"><code>DeviceLightEvent</code></a> 事件而提供光線強度的確實資訊。</p>
+<p>只要使用 <a href="https://developer.mozilla.org/en-US/docs/DOM/EventTarget.addEventListener" title="/en-US/docs/DOM/EventTarget.addEventListener"><code>addEventListener</code></a> 函式 (使用 {{event("devicelight")}} 事件名稱)，或將事件處理器 (Event Handler) 附加至 <a href="https://developer.mozilla.org/en-US/docs/DOM/window.ondevicelight" title="/en-US/docs/DOM/window.ondevicelight"><code>window.ondevicelight</code></a> 屬性，均可於 <code>window</code> 物件擷取到此事件。</p>
+<p>一旦擷取完畢，則事件物件將透過 <a href="https://developer.mozilla.org/en-US/docs/DOM/DeviceLightEvent.value" title="/en-US/docs/DOM/DeviceLightEvent.value"><code>DeviceLightEvent.value</code></a> 屬性，存取光線強度值 (以 <a href="http://en.wikipedia.org/wiki/Lux" title="http://en.wikipedia.org/wiki/Lux">Lux</a> 為單位)。</p>
+<h2 id="範例">範例</h2>
+<pre class="brush: js">window.addEventListener('devicelight', function(event) {
+  var html = document.getElementsByTagName('html')[0];
+
+  if (event.value &lt; 50) {
+    html.classList.add('darklight');
+    html.classList.remove('brightlight');
+  } else {
+    html.classList.add('brightlight');
+    html.classList.remove('darklight');
+  }
+});</pre>
+<h2 id="Specifications" name="Specifications">規格</h2>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('AmbientLight', '', 'Ambient Light Events') }}</td>
+   <td>{{ Spec2('AmbientLight') }}</td>
+   <td>Initial specification</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+<p>{{ CompatibilityTable() }}</p>
+<div id="compat-desktop">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Feature</th>
+    <th>Chrome</th>
+    <th>Firefox (Gecko)</th>
+    <th>Internet Explorer</th>
+    <th>Opera</th>
+    <th>Safari</th>
+   </tr>
+   <tr>
+    <td>{{domxref("DeviceLightEvent")}}</td>
+    <td>{{CompatNo()}}</td>
+    <td>{{CompatGeckoDesktop("22.0")}} (Mac OS X only)</td>
+    <td>{{CompatNo()}}</td>
+    <td>{{CompatNo()}}</td>
+    <td>{{CompatNo()}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div id="compat-mobile">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Feature</th>
+    <th>Android</th>
+    <th>Chrome for Android</th>
+    <th>Firefox Mobile (Gecko)</th>
+    <th>IE Mobile</th>
+    <th>Opera Mobile</th>
+    <th>Safari Mobile</th>
+   </tr>
+   <tr>
+    <td>{{domxref("DeviceLightEvent")}}</td>
+    <td>{{CompatNo()}}</td>
+    <td>{{CompatNo()}}</td>
+    <td>{{CompatGeckoMobile("15.0")}}</td>
+    <td>{{CompatNo()}}</td>
+    <td>{{CompatNo()}}</td>
+    <td>{{CompatNo()}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<h3 id="Gecko_說明">Gecko 說明</h3>
+<p><code>已建構 </code>{{event("devicelight")}} 事件，且在 Firefox Mobile for Android (15.0) 與 Firefox OS (B2G) 中均預設為開啟。從 Gecko 22.0 (Firefox 22.0 / Thunderbird 22.0 / SeaMonkey 2.19) 開始，亦提供 Mac OS X 的桌機支援。目前對 Windows 7 的支援功能仍開發中 (請見 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=754199">bug 754199</a>)。</p>
+<h2 id="另請參閱">另請參閱</h2>
+<ul>
+ <li>{{domxref("DeviceLightEvent")}}</li>
+ <li>{{event("devicelight")}}</li>
+</ul>

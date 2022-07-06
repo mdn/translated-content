@@ -49,7 +49,7 @@ translation_of: Web/API/IndexedDB_API
 
 <ul>
  <li>
-  <p>Firefox: no hay límite en el tamaño de una base de datos IndexedDB. La interfaz de usuario solicita permiso para almacenar blobs de más de 50MB. Este límite puede ser modificado mediante la preferencia dom.indexedDB.warningQuota (que está definida en <a href="http://mxr.mozilla.org/mozilla-central/source/modules/libpref/src/init/all.js" title="http://mxr.mozilla.org/mozilla-central/source/modules/libpref/src/init/all.js">http://mxr.mozilla.org/mozilla-central/source/modules/libpref/src/init/all.js</a>).</p>
+  <p>Firefox: no hay límite en el tamaño de una base de datos IndexedDB. La interfaz de usuario solicita permiso para almacenar blobs de más de 50MB. Este límite puede ser modificado mediante la preferencia dom.indexedDB.warningQuota (que está definida en <a href="http://mxr.mozilla.org/mozilla-central/source/modules/libpref/src/init/all.js">http://mxr.mozilla.org/mozilla-central/source/modules/libpref/src/init/all.js</a>).</p>
  </li>
  <li>Google Chrome: vea <a class="link-https" href="https://developers.google.com/chrome/whitepapers/storage#temporary" rel="freelink">https://developers.google.com/chrome...rage#temporary</a></li>
 </ul>
@@ -58,87 +58,19 @@ translation_of: Web/API/IndexedDB_API
 
 <p>Un claro ejemplo para lo que IndexedDB puede ser utilizado en la web, es el ejemplo de Marco Castelluccio, ganador del DevDerby IndexedDB Mozilla. La demostración ganadora fue <a href="/en-US/demos/detail/elibri" title="https://developer.mozilla.org/en-US/demos/detail/elibri">eLibri</a>, una biblioteca y una aplicación de lectura de libros electrónicos.</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de los navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>API asíncrono</td>
-   <td>
-    <p>24.0<br>
-     11.0 {{ property_prefix("webkit") }}</p>
-   </td>
-   <td>
-    <p>{{ CompatGeckoDesktop("16.0") }}<br>
-     {{ CompatGeckoDesktop("2.0") }} {{ property_prefix("moz") }}</p>
-   </td>
-   <td>10 {{ property_prefix("ms") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td>API síncrono<br>
-    (usado por <a href="/en-US/docs/DOM/Using_web_workers" title="https://developer.mozilla.org/en-US/docs/Using_web_workers">WebWorkers</a>)</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}<br>
-    Vea {{ bug(701634) }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>API síncrono</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoDesktop("6.0") }} {{ property_prefix("moz") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>Para otra matriz de compatibilidad, vea también: <a href="http://caniuse.com/indexeddb" title="http://caniuse.com/indexeddb">Cuándo puedo usar IndexedDB</a></p>
-
-<p>También existe la posibilidad de usar IndexedDB en <a href="http://caniuse.com/sql-storage" title="http://caniuse.com/sql-storage"> navegadores que soportan WebSQL</a> por el uso de <a href="https://github.com/axemclion/IndexedDBShim" title="https://github.com/axemclion/IndexedDBShim">IndexedDB Polyfill</a>.</p>
 
 <h2 id="Ver_también">Ver también</h2>
 
 <ul>
  <li><a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB" title="en-US/docs/IndexedDB/Basic Concepts Behind IndexedDB">Conceptos básicos acerca de IndexedDB</a></li>
  <li><a href="/en-US/docs/IndexedDB/Using_IndexedDB" title="en-US/docs/IndexedDB/IndexedDB primer">Usando IndexedDB</a></li>
- <li><a class="external" href="http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/" title="http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/">Almacenando imágenes y archivos en IndexedDB</a></li>
- <li><a class="external" href="http://www.html5rocks.com/tutorials/indexeddb/todo/" title="http://www.html5rocks.com/tutorials/indexeddb/todo/">Una lista simple de PENDIENTES usando HTML5 IndexedDB</a>.  Nota("Este tutorial está basado en una antigua versión de la especificación y no funciona en los navegadores actualizados. por ejemplo, todavía usa el método actualmente eliminado <code>setVersion()</code>.")</li>
- <li><a class="external" href="http://www.w3.org/TR/IndexedDB/" title="http://www.w3.org/TR/IndexedDB/">Especificación de la API para Indexed Database </a></li>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx" title="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — El alamcén en su navegador</a></li>
- <li><a class="external" href="http://caniuse.com/indexeddb" title="http://caniuse.com/indexeddb">Soporte IndexedDB en navegadores</a></li>
- <li><a class="external" href="http://nparashuram.com/IndexedDB/trialtool/index.html" title="http://nparashuram.com/IndexedDB/trialtool/index.html">Ejemplos IndexedDB</a></li>
- <li><a href="https://github.com/axemclion/IndexedDBShim" title="https://github.com/axemclion/IndexedDBShim">IndexedDB Polyfill</a> para navegadores que sólo soportan WebSQL (p.e. mobile WebKit)</li>
- <li><a href="http://nparashuram.com/IndexedDBShim/" title="http://nparashuram.com/IndexedDBShim/">JQuery IndexedDB plugin</a></li>
+ <li><a class="external" href="http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/">Almacenando imágenes y archivos en IndexedDB</a></li>
+ <li><a class="external" href="http://www.html5rocks.com/tutorials/indexeddb/todo/">Una lista simple de PENDIENTES usando HTML5 IndexedDB</a>.  Nota("Este tutorial está basado en una antigua versión de la especificación y no funciona en los navegadores actualizados. por ejemplo, todavía usa el método actualmente eliminado <code>setVersion()</code>.")</li>
+ <li><a class="external" href="http://www.w3.org/TR/IndexedDB/">Especificación de la API para Indexed Database </a></li>
+ <li><a class="external" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — El alamcén en su navegador</a></li>
+ <li><a class="external" href="http://caniuse.com/indexeddb">Soporte IndexedDB en navegadores</a></li>
+ <li><a class="external" href="http://nparashuram.com/IndexedDB/trialtool/index.html">Ejemplos IndexedDB</a></li>
+ <li><a href="https://github.com/axemclion/IndexedDBShim">IndexedDB Polyfill</a> para navegadores que sólo soportan WebSQL (p.e. mobile WebKit)</li>
+ <li><a href="http://nparashuram.com/IndexedDBShim/">JQuery IndexedDB plugin</a></li>
 </ul>

@@ -19,7 +19,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Se
  <tbody>
   <tr>
    <th scope="row">Необходимые условия:</th>
-   <td>Базовая компьютерная грамотность, <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F">установка базового ПО</a>, базовые знания о <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">работе с файлами</a>, основы HTML (изучите <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML">Введение в HTML</a>) и понимание работы CSS (изучите <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/First_steps">Введение в CSS</a>.)</td>
+   <td>Базовая компьютерная грамотность, <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F">установка базового ПО</a>, базовые знания о <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">работе с файлами</a>, основы HTML (изучите <a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML">Введение в HTML</a>) и понимание работы CSS (изучите <a href="/ru/docs/Learn/CSS/First_steps">Введение в CSS</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Задача:</th>
@@ -46,9 +46,9 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Se
 
 <h3 id="Использование_универсального_селектора_для_облегчения_чтения_ваших_селекторов"><span class="tlid-translation translation" lang="ru"><span title="">Использование универсального селектора для облегчения чтения ваших селекторов</span></span></h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Одно из применений универсального селектора состоит в том, чтобы облегчить чтение селекторов и сделать их более удобопонятными с точки зрения того, что они делают.</span></span> Например, если мы хотим выбрать элементы-потомки элемента <code>&lt;article&gt;</code>, которые являются первыми дочерними элементами своего родителя, включая дочерние элементы самого <code>&lt;article&gt;</code>, и сделать их шрифт жирным, мы могли бы использовать псевдокласс {{cssxref(":first-child")}}, который мы будем изучать в уроке о <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements">псевдоклассах и псевдо-элементах</a>, как селектор-потомок вместе с селектором элемента <code>&lt;article&gt;</code>: </p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Одно из применений универсального селектора состоит в том, чтобы облегчить чтение селекторов и сделать их более удобопонятными с точки зрения того, что они делают.</span></span> Например, если мы хотим выбрать элементы-потомки элемента <code>&lt;article&gt;</code>, которые являются первыми дочерними элементами своего родителя, включая дочерние элементы самого <code>&lt;article&gt;</code>, и сделать их шрифт жирным, мы могли бы использовать псевдокласс {{cssxref(":first-child")}}, который мы будем изучать в уроке о <a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements">псевдоклассах и псевдо-элементах</a>, как селектор-потомок вместе с селектором элемента <code>&lt;article&gt;</code>: </p>
 
-<pre class="brush: css notranslate">article :first-child {
+<pre class="brush: css">article :first-child {
   font-weight: bold;
 }</pre>
 
@@ -56,7 +56,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Se
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Чтобы избежать этой путаницы, мы можем добавить универсальный селектор в псевдокласс</span></span> <code>:first-child</code> <span class="tlid-translation translation" lang="ru"><span title="">, чтобы было очевидно, что делает селектор.</span> <span title="">Он выбирает <em>любой</em> элемент, который является первым дочерним элементом элемента</span></span> <code>&lt;article&gt;</code> или <span class="tlid-translation translation" lang="ru"><span title="">первым дочерним элементом любого потомка</span></span> <span class="tlid-translation translation" lang="ru"><span title="">элемента</span></span> <code>&lt;article&gt;</code>:</p>
 
-<pre class="brush: css notranslate">article *:first-child {
+<pre class="brush: css">article *:first-child {
   font-weight: bold;
 } </pre>
 
@@ -102,30 +102,30 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Se
 
 <h2 id="В_следующей_статье">В следующей статье</h2>
 
-<p>Мы продолжим изучение селекторов и рассмотрим <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors">селекторы атрибута</a>.</p>
+<p>Мы продолжим изучение селекторов и рассмотрим <a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors">селекторы атрибута</a>.</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}</p>
 
 <h2 id="В_этом_модуле">В этом модуле</h2>
 
 <ol>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Каскад и наследование</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B">Селекторы CSS</a>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Каскад и наследование</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B">Селекторы CSS</a>
   <ul>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Type_Class_and_ID_Selectors">Селекторы типа, класса и ID</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors">Селекторы атрибута</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements">Псевдоклассы и псевдоэлементы</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Combinators">Комбинаторы</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Type_Class_and_ID_Selectors">Селекторы типа, класса и ID</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors">Селекторы атрибута</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements">Псевдоклассы и псевдоэлементы</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Combinators">Комбинаторы</a></li>
   </ul>
  </li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/The_box_model">Модель коробки (The box model)</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Фон и границы</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Обработка разных направлений текста</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Overflowing_content">Переполнение содержимого</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Values_and_units">Значения и единицы измерения</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Изменение размеров в CSS</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Элементы изображений, форм и медиа-элементы</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Styling_tables">Стилизация таблиц</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS">Отладка CSS</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Organizing">Организация вашей CSS</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/The_box_model">Модель коробки (The box model)</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Фон и границы</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Обработка разных направлений текста</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Overflowing_content">Переполнение содержимого</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Values_and_units">Значения и единицы измерения</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Изменение размеров в CSS</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Элементы изображений, форм и медиа-элементы</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Styling_tables">Стилизация таблиц</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS">Отладка CSS</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Organizing">Организация вашей CSS</a></li>
 </ol>

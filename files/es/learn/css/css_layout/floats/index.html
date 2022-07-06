@@ -13,7 +13,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
  <tbody>
   <tr>
    <th scope="row">Requisitos previos:</th>
-   <td>HTML básico (ver <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">Introducción al HTML</a>), y una idea de Cómo funciona CSS (ver <a href="/es/docs/Learn/CSS/First_steps">Introducción a CSS</a>.)</td>
+   <td>HTML básico (ver <a href="/es/docs/Learn/HTML/Introduction_to_HTML">Introducción al HTML</a>), y una idea de Cómo funciona CSS (ver <a href="/es/docs/Learn/CSS/First_steps">Introducción a CSS</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -321,7 +321,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
   display: block;
 }</pre>
 
-<p>Ahora recarga la página y la caja debería limpiarse. Esto es básicamente lo missmo que si hubieras añadido un elemento HTML como un <code>&lt;div&gt;</code> debajo de los elementos y le hubieras añadido la propiedad <code>clear: both</code>.</p>
+<p>Ahora recarga la página y la caja debería limpiarse. Esto es básicamente lo mismo que si hubieras añadido un elemento HTML como un <code>&lt;div&gt;</code> debajo de los elementos y le hubieras añadido la propiedad <code>clear: both</code>.</p>
 
 <div id="Float_5">
 <div class="hidden">
@@ -431,7 +431,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <h3 id="display_flow-root">display: flow-root</h3>
 
-<p>La manera moderna de resolver este problema es usar el valor <code>flow-root</code> de la propiedad <code>display</code>. Esto existe solo para crear un BFC sin usar hacks; no habrá consecuencias no deseadas cuando lo use. Elimina <code>overflow: auto</code> de la regla <code>.wrapper</code> y añade <code>display: flow-root</code>. Asumiendo que tu <a href="/en-US/docs/Web/CSS/display#Browser_compatibility">navegador sea compatible</a>, la caja se limpiará.</p>
+<p>La manera moderna de resolver este problema es usar el valor <code>flow-root</code> de la propiedad <code>display</code>. Esto existe solo para crear un BFC sin usar hacks; no habrá consecuencias no deseadas cuando lo use. Elimina <code>overflow: auto</code> de la regla <code>.wrapper</code> y añade <code>display: flow-root</code>. Asumiendo que tu <a href="/en-US/docs/Web/CSS/display#browser_compatibility">navegador sea compatible</a>, la caja se limpiará.</p>
 
 <pre class="brush: css notranslate">.wrapper {
   background-color: rgb(79,185,227);

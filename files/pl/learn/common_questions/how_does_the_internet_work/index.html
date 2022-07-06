@@ -50,35 +50,35 @@ original_slug: Learn/Common_questions/Jak_dziala_Internet
 <p><strong>Uwaga:</strong> W dalszej części tego artykułu będziemy mówić tylko o kablach fizycznych, ale sieci bezprzewodowe działają tak samo.</p>
 </div>
 
-<p><img alt="Dwa komputery połączone razem" src="https://mdn.mozillademos.org/files/8441/internet-schema-1.png" style="height: 152px; width: 600px;"></p>
+<p><img alt="Dwa komputery połączone razem" src="internet-schema-1.png"></p>
 
 <p>Taka sieć nie jest ograniczona do dwóch komputerów. Można podłączyć tyle komputerów, ile się chce. Ale to się szybko komplikuje. Jeśli próbujesz połączyć, powiedzmy dziesięć komputerów, potrzebujesz 45 kabli, z dziewięcioma wtyczkami na komputer!</p>
 
-<p><img alt="Dziesięć komputerów, wszystkie razem" src="https://mdn.mozillademos.org/files/8443/internet-schema-2.png" style="height: 576px; width: 600px;"></p>
+<p><img alt="Dziesięć komputerów, wszystkie razem" src="internet-schema-2.png"></p>
 
 <p>Aby rozwiązać ten problem, każdy komputer w sieci jest podłączony do specjalnego malutkiego komputera zwanego <em>routerem</em>. Ten <em>router</em> ma tylko jedno zadanie: podobnie jak sygnalizator na stacji krajowej, dba o to, aby wiadomość wysłana z danego komputera dotarła do właściwego komputera docelowego. Aby wysłać wiadomość do komputera B, komputer A musi wysłać wiadomość do routera, który z kolei przekazuje wiadomość do komputera B i upewnia się, że wiadomość nie zostanie dostarczona do komputera C.</p>
 
 <p>Po dodaniu routera do systemu, nasza sieć składająca się z 10 komputerów wymaga tylko 10 kabli: jedna wtyczka na każdy komputer i router z 10 wtyczkami.</p>
 
-<p><img alt="Dziesięć komputerów z routerem" src="https://mdn.mozillademos.org/files/8445/internet-schema-3.png" style="height: 576px; width: 600px;"></p>
+<p><img alt="Dziesięć komputerów z routerem" src="internet-schema-3.png"></p>
 
 <h3 id="Sieć_sieci">Sieć sieci</h3>
 
 <p>Na razie w porządku. Ale co z podłączeniem setek, tysięcy, miliardów komputerów? Oczywiście pojedynczy <em>router</em> nie działa na tak dużą skalę, ale jeśli uważnie czytasz, powiedzieliśmy, że <em>router</em> jest komputerem jak każdy inny, więc co powstrzymuje nas przed połączeniem dwóch <em>routerów</em>? Nic, więc zróbmy to.</p>
 
-<p><img alt="Dwa routery połączone razem" src="https://mdn.mozillademos.org/files/8447/internet-schema-4.png"></p>
+<p><img alt="Dwa routery połączone razem" src="internet-schema-4.png"></p>
 
 <p>Podłączając komputery do routerów, a następnie routery do routerów, jesteśmy w stanie skalować w nieskończoność.</p>
 
-<p><img alt="Routery połączone z routerami" src="https://mdn.mozillademos.org/files/8449/internet-schema-5.png" style="height: 563px; width: 600px;"></p>
+<p><img alt="Routery połączone z routerami" src="internet-schema-5.png"></p>
 
 <p>Taka sieć jest bardzo zbliżona do tego, co nazywamy Internetem, ale czegoś nam brakuje. Zbudowaliśmy tę sieć dla naszych własnych celów. Są inne sieci: twoi przyjaciele, sąsiedzi, każdy może mieć swoją własną sieć komputerów. Ale tak naprawdę nie jest możliwe ułożenie kabli między domem a resztą świata, więc jak sobie z tym poradzić? Cóż, są już kable podłączone do twojego domu, na przykład zasilanie elektryczne i telefon. Infrastruktura telefoniczna już łączy Twój dom z kimkolwiek na świecie, więc jest to idealny przewód, którego potrzebujemy. Aby połączyć naszą sieć z infrastrukturą telefoniczną, potrzebujemy specjalnego urządzenia zwanego <em>modemem</em>. <em>Modem</em> ten zamienia informacje z naszej sieci w informacje zarządzane przez infrastrukturę telefoniczną i na odwrót.</p>
 
-<p><img alt="Router połączony z modemem" src="https://mdn.mozillademos.org/files/8451/internet-schema-6.png" style="height: 340px; width: 600px;"></p>
+<p><img alt="Router połączony z modemem" src="internet-schema-6.png"></p>
 
 <p>Więc jesteśmy podłączeni do infrastruktury telefonicznej. Następnym krokiem jest wysłanie wiadomości z naszej sieci do sieci, do której chcemy dotrzeć. W tym celu podłączymy naszą sieć do Dostawcy Usług Internetowych (ISP). Dostawca usług internetowych to firma, która zarządza kilkoma specjalnymi <em>routerami</em>, które są ze sobą połączone i mogą również uzyskać dostęp do routerów innych dostawców usług internetowych. Tak więc wiadomość z naszej sieci jest przekazywana przez sieć dostawców usług internetowych do sieci docelowej. Internet składa się z całej tej infrastruktury sieci.</p>
 
-<p><img alt="Pełny stos Internetowy" src="https://mdn.mozillademos.org/files/8453/internet-schema-7.png" style="height: 1293px; width: 340px;"></p>
+<p><img alt="Pełny stos Internetowy" src="internet-schema-7.png"></p>
 
 <h3 id="Wyszukiwanie_komputerów">Wyszukiwanie komputerów</h3>
 
@@ -86,7 +86,7 @@ original_slug: Learn/Common_questions/Jak_dziala_Internet
 
 <p>To doskonale pasuje do komputerów, ale my, ludzie, mamy problem z zapamiętywaniem tego typu adresów. Aby to ułatwić, możemy nadać adres IP z czytelną dla człowieka nazwą zwaną <em>nazwą domeny</em>. Na przykład (w momencie pisania; adresy IP mogą się zmieniać) <code>google.com</code> to nazwa domeny używana do adresu IP <code>172.217.165.131</code>. Tak więc używanie nazwy domeny jest dla nas najłatwiejszym sposobem dotarcia do komputera przez Internet.</p>
 
-<p><img alt="Pokazuje, jak nazwa domeny może zmienić adres IP na inny" src="https://mdn.mozillademos.org/files/8405/dns-ip.png" style="height: 160px; width: 330px;"></p>
+<p><img alt="Pokazuje, jak nazwa domeny może zmienić adres IP na inny" src="dns-ip.png"></p>
 
 <h3 id="Internet_i_sieć">Internet i sieć</h3>
 

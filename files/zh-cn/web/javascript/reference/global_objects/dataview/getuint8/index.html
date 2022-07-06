@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>getUint8()</code></strong><code>方法</code><code>从</code>{{jsxref("DataView")}}相对于起始位置偏移 n 个字节处开始，获取一个无符号的8-bit整数(一个字节).</p>
+<p><strong><code>getUint8()</code></strong><code>方法</code><code>从</code>{{jsxref("DataView")}}相对于起始位置偏移 n 个字节处开始，获取一个无符号的 8-bit 整数 (一个字节).</p>
 
 <div>{{EmbedInteractiveExample("pages/js/dataview-getuint8.html")}}</div>
 
@@ -22,21 +22,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
 
 <dl>
  <dt>byteOffset</dt>
- <dd>偏移量, 单位为字节, 从头开始计算.</dd>
+ <dd>偏移量，单位为字节，从头开始计算。</dd>
 </dl>
 
 <h3 id="抛出错误">抛出错误</h3>
 
 <dl>
  <dt>{{jsxref("RangeError")}}</dt>
- <dd>如果byteOffset超出了视图能储存的值，就会抛出错误.</dd>
+ <dd>如果 byteOffset 超出了视图能储存的值，就会抛出错误。</dd>
 </dl>
 
 <h2 id="描述">描述</h2>
 
-<dl>
- <dd> 没有对齐约束; 多字节值可以从任何偏移量获取.</dd>
-</dl>
+<p> 没有对齐约束; 多字节值可以从任何偏移量获取。</p>
 
 <h2 id="例子">例子</h2>
 

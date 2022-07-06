@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Guide/Using_promises
 ---
 <div>{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}</div>
 
-<p class="summary">{{jsxref("Promise")}}는 비동기 작업의 최종 완료 또는 실패를 나타내는 객체입니다. 대부분 여러분은 이미 만들어진 promise를 사용했었기 때문에 이 가이드에서는 어떻게 promise를 만드는지 설명하기에 앞서 promise의 사용법에 대해 설명합니다.</p>
+<p >{{jsxref("Promise")}}는 비동기 작업의 최종 완료 또는 실패를 나타내는 객체입니다. 대부분 여러분은 이미 만들어진 promise를 사용했었기 때문에 이 가이드에서는 어떻게 promise를 만드는지 설명하기에 앞서 promise의 사용법에 대해 설명합니다.</p>
 
 <p>기본적으로 promise는 함수에 콜백을 전달하는 대신에, 콜백을 첨부하는 방식의 객체입니다.<br>
   </p>
@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Guide/Using_promises
 
 <p><code>createAudioFileAsync()</code>는 함수는 아래와 같이 사용됩니다.  </p>
 
-<pre class="notranslate"><code>function successCallback(result) {
+<pre class="brush: js"><code>function successCallback(result) {
   console.log("Audio file ready at URL: " + result);
 }</code>
 
@@ -29,13 +29,13 @@ translation_of: Web/JavaScript/Guide/Using_promises
 
 <p>…모던한 함수들은 위와 같이 콜백들을 전달하지 않고 콜백을 붙여 사용할 수 있게 Promise를 반환해줍니다.</p>
 
-<p>만약 <code>createAudioFileAsync()</code> 함수가 Promise를 반환해주도록 수정해본다면, 다음과 같이 간단하게 사용되어질 수 있습니다.</p>
+<p>만약 <code>createAudioFileAsync()</code> 함수가 Promise를 반환하도록 수정한다면, 다음과 같이 간단하게 사용될 수 있습니다.</p>
 
-<pre class="notranslate"><code><span style='background-color: rgba(220, 220, 220, 0.5); font-family: consolas,"Liberation Mono",courier,monospace; font-style: inherit; font-weight: inherit;'>createAudioFileAsync(audioSettings).then(successCallback, failureCallback);</span></code></pre>
+<pre class="brush: js"><code>createAudioFileAsync(audioSettings).then(successCallback, failureCallback);</code></pre>
 
 <p>…조금 더 간단하게 써보자면:</p>
 
-<pre class="notranslate"><code>const promise = createAudioFileAsync(audioSettings);
+<pre class="brush: js"><code>const promise = createAudioFileAsync(audioSettings);
 promise.then(successCallback, failureCallback);</code></pre>
 
 <p>우리는 이와 같은 것을 <em>비동기 함수 호출</em>이라고 부릅니다. 이런 관례는 몇 가지 장점을 갖고 있습니다. 각각에 대해 한번 살펴보도록 합시다.</p>
@@ -45,7 +45,7 @@ promise.then(successCallback, failureCallback);</code></pre>
 <p>콜백 함수를 전달해주는 고전적인 방식과는 달리, Promise는 아래와 같은 특징을 보장합니다.</p>
 
 <ul>
- <li>콜백은 자바스크립트 Event Loop이 <a href="/en-US/docs/Web/JavaScript/EventLoop#Run-to-completion">현재 실행중인 콜 스택을 완료</a>하기 이전에는 절대 호출되지 않습니다.</li>
+ <li>콜백은 자바스크립트 Event Loop가 <a href="/en-US/docs/Web/JavaScript/EventLoop#Run-to-completion">현재 실행중인 콜 스택을 완료</a>하기 이전에는 절대 호출되지 않습니다.</li>
  <li>비동기 작업이 성공하거나 실패한 뒤에 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> 을 이용하여 추가한 콜백의 경우에도 위와 같습니다.</li>
  <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code>을 여러번 사용하여 여러개의 콜백을 추가 할 수 있습니다. 그리고 각각의 콜백은 주어진 순서대로 하나 하나 실행되게 됩니다.</li>
 </ul>
@@ -54,26 +54,26 @@ promise.then(successCallback, failureCallback);</code></pre>
 
 <h2 id="Chaining">Chaining</h2>
 
-<p>보통 하나나 두 개 이상의 비동기 작업을 순차적으로 실행해야 하는 상황을 흔히 보게 됩니다. 순차적으로 각각의 작업이 이전 단계 비동기 작업이 성공하고 나서 그 결과값을 이용하여 다음 비동기 작업을 실행해야 하는 경우를 의미합니다. 우리는 이런 상황에서 <strong>promise chain</strong>을 이용하여 해결하기도 합니다.</p>
+<p>보통 두 개 이상의 비동기 작업을 순차적으로 실행해야 하는 상황을 흔히 보게 됩니다. 순차적으로 각각의 작업이 이전 단계 비동기 작업이 성공하고 나서 그 결과값을 이용하여 다음 비동기 작업을 실행해야 하는 경우를 의미합니다. 우리는 이런 상황에서 <strong>promise chain</strong>을 이용하여 해결하기도 합니다.</p>
 
 <p><code>then()</code> 함수는 새로운 promise를 반환합니다. 처음에 만들었던 promise와는 다른 새로운 promise입니다.</p>
 
-<pre class="brush: js notranslate">const promise = doSomething();
+<pre class="brush: js">const promise = doSomething();
 const promise2 = promise.then(successCallback, failureCallback);
 </pre>
 
 <p>또는</p>
 
-<pre class="brush: js notranslate">const promise2 = doSomething().then(successCallback, failureCallback);
+<pre class="brush: js">const promise2 = doSomething().then(successCallback, failureCallback);
 </pre>
 
-<p>두 번째 promise는 <code>doSomething()</code> 뿐만 아니라 <code>successCallback</code> or <code>failureCallback</code> 의 완료를 의미합니다. <code>successCallback</code> or <code>failureCallback</code> 또한 promise를 반환하는 비동기 함수일 수도 있습니다. 이 경우 <code>promise2</code>에 추가 된 콜백은 <code>successCallback</code>또는 <code>failureCallback</code>에 의해 반환된 promise 뒤에 대기합니다.</p>
+<p>두 번째 promise는 <code>doSomething()</code> 뿐만 아니라 <code>successCallback</code> or <code>failureCallback</code> 의 완료를 의미합니다. <code>successCallback</code> or <code>failureCallback</code> 또한 promise를 반환하는 비동기 함수일 수도 있습니다. 이 경우 <code>promise2</code>에 추가된 콜백은 <code>successCallback</code>또는 <code>failureCallback</code>에 의해 반환된 promise 뒤에 대기합니다.</p>
 
 <p>기본적으로, 각각의 promise는 체인 안에서 서로 다른 비동기 단계의 완료를 나타냅니다.</p>
 
 <p>예전에는 여러 비동기 작업을 연속적으로 수행하면 고전적인 '지옥의 콜백 피라미드'가 만들어 졌었습니다.</p>
 
-<pre class="brush: js notranslate">doSomething(function(result) {
+<pre class="brush: js">doSomething(function(result) {
   doSomethingElse(result, function(newResult) {
     doThirdThing(newResult, function(finalResult) {
       console.log('Got the final result: ' + finalResult);
@@ -84,7 +84,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>모던한 방식으로 접근한다면, 우리는 콜백 함수들을 반환된 promise에 promise chain을 형성하도록 추가할 수 있습니다:</p>
 
-<pre class="brush: js notranslate">doSomething().then(function(result) {
+<pre class="brush: js">doSomething().then(function(result) {
   return doSomethingElse(result);
 })
 .then(function(newResult) {
@@ -98,7 +98,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p><code>then</code> 에 넘겨지는 인자는 선택적(optional)입니다. 그리고 <code>catch(failureCallback)</code> 는 <code>then(null, failureCallback)</code> 의 축약입니다. 이 표현식을 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">화살표 함수</a>로 나타내면 다음과 같습니다.</p>
 
-<pre class="brush: js notranslate">doSomething()
+<pre class="brush: js">doSomething()
 .then(result =&gt; doSomethingElse(result))
 .then(newResult =&gt; doThirdThing(newResult))
 .then(finalResult =&gt; {
@@ -108,13 +108,13 @@ const promise2 = promise.then(successCallback, failureCallback);
 </pre>
 
 <p><strong>중요:</strong> 반환값이 반드시 있어야 합니다, 만약 없다면 콜백 함수가 이전의 promise의 결과를 받지 못합니다.<br>
- (화살표 함수 () =&gt; x는 () =&gt; {return x;}와 같습니다).</p>
+ (화살표 함수 () =&gt; x는 () =&gt; {return x;}와 같습니다.)</p>
 
 <h3 id="Chaining_after_a_catch">Chaining after a catch</h3>
 
 <p>chain에서 작업이 실패한 후에도 새로운 작업을 수행하는 것이 가능하며 매우 유용합니다. (예 : <code>catch</code>) 다음 예를 읽으십시오:</p>
 
-<pre class="brush: js notranslate">new Promise((resolve, reject) =&gt; {
+<pre class="brush: js">new Promise((resolve, reject) =&gt; {
     console.log('Initial');
 
     resolve();
@@ -134,7 +134,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>그러면 다음 텍스트가 출력됩니다.</p>
 
-<pre class="notranslate">Initial
+<pre>Initial
 Do that
 Do this, whatever happened before
 </pre>
@@ -143,17 +143,17 @@ Do this, whatever happened before
 
 <h2 id="Error_propagation">Error propagation</h2>
 
-<p>'콜백 지옥'에서 <code>failureCallback</code>이 3번 발생한 것을 기억 할 것입니다. promise chain에서는 단 한 번만 발생하는것과 비교되죠.</p>
+<p>'콜백 지옥'에서 <code>failureCallback</code>이 3번 발생한 것을 기억할 것입니다. promise chain에서는 단 한 번만 발생하는 것과 비교되죠.</p>
 
-<pre class="notranslate"><code>doSomething()
+<pre class="brush: js"><code>doSomething()
 .then(result =&gt; doSomethingElse(result))
 .then(newResult =&gt; doThirdThing(newResult))
 .then(finalResult =&gt; console.log(`Got the final result: ${finalResult}`))
 .catch(failureCallback);</code></pre>
 
-<p>기본적으로 promise chain은 예외가 발생하면 멈추고 chain의 아래에서 catch를 찾습니다. 이것은 동기 코드가 어떻게 동작 하는지 모델링 한 것입니다.</p>
+<p>기본적으로 promise chain은 예외가 발생하면 멈추고 chain의 아래에서 catch를 찾습니다. 이것은 동기 코드가 어떻게 동작하는지 모델링 한 것입니다.</p>
 
-<pre class="notranslate"><code>try {
+<pre class="brush: js"><code>try {
   const result = syncDoSomething();
   const newResult = syncDoSomethingElse(result);
   const finalResult = syncDoThirdThing(newResult);
@@ -162,9 +162,9 @@ Do this, whatever happened before
   failureCallback(error);
 }</code></pre>
 
-<p>비동기 코드를 사용한 이러한 대칭성은 ECMAScript 2017에서 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><code>async</code>/<code>await</code></a> 구문(Syntactic sugar) 에서 최고로 느낄 수 있습니다.</p>
+<p>비동기 코드를 사용한 이러한 대칭성은 ECMAScript 2017에서 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><code>async</code>/<code>await</code></a> 구문(Syntactic sugar) 에서 최고로 느낄 수 있습니다.</p>
 
-<pre class="notranslate"><code>async function foo() {
+<pre class="brush: js"><code>async function foo() {
   try {
     const result = await doSomething();
     const newResult = await doSomethingElse(result);
@@ -175,7 +175,7 @@ Do this, whatever happened before
   }
 }</code></pre>
 
-<p>이것은 promise를 기반으로 합니다. <code>doSomething()</code>은 이전 함수와 같습니다. 문법은 <a href="https://developers.google.com/web/fundamentals/getting-started/primers/async-functions">이곳</a>에서 확인 할 수 있습니다.</p>
+<p>이것은 promise를 기반으로 합니다. <code>doSomething()</code>은 이전 함수와 같습니다. 문법은 <a href="https://developers.google.com/web/fundamentals/getting-started/primers/async-functions">이곳</a>에서 확인할 수 있습니다.</p>
 
 <p>Promise는 모든 오류를 잡아내어, 예외 및 프로그래밍 오류가 발생해도 콜백 지옥의 근본적인 결함을 해결합니다. 이는 비동기 작업의 기능 구성에 필수적입니다.</p>
 
@@ -194,9 +194,9 @@ Do this, whatever happened before
 
 <p>이들을 이용해 프로미스에 대한 에러 처리를 대체(fallback)하는 것이 가능해지며, 또한 프로미스 관리시 발생하는 이슈들을 디버깅하는 데 도움을 얻을 수 있습니다. 이 핸들러들은 모든 맥락에서 전역적(global)이기 때문에, 모든 에러는 발생한 지점(source)에 상관없이 동일한 핸들러로 전달됩니다.</p>
 
-<p>특히 유용한 사례 : {{Glossary("Node.js")}}로 코드를 작성할 때, 흔히 프로젝트에서 사용하는 모듈이 reject된 프로미스를 처리하지 않을 수 있습니다. 이런 경우 노드 실행시 콘솔에 로그가 남습니다. 이를 수집에서 분석하고 직접 처리할 수도 있습니다. 아니면 그냥 콘솔 출력을 어지럽히는 것을 막기 위해 그럴 수도 있죠. 이런 식으로 {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}(<a href="/en-US/docs/Web/API/Window/unhandledrejection_event">영어</a>) 이벤트를 처리하는 핸들러를 추가하면 됩니다.</p>
+<p>특히 유용한 사례 : {{Glossary("Node.js")}}로 코드를 작성할 때, 흔히 프로젝트에서 사용하는 모듈이 reject된 프로미스를 처리하지 않을 수 있습니다. 이런 경우 노드 실행 시 콘솔에 로그가 남습니다. 이를 수집에서 분석하고 직접 처리할 수도 있습니다. 아니면 그냥 콘솔 출력을 어지럽히는 것을 막기 위해 그럴 수도 있죠. 이런 식으로 {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}(<a href="/en-US/docs/Web/API/Window/unhandledrejection_event">영어</a>) 이벤트를 처리하는 핸들러를 추가하면 됩니다.</p>
 
-<pre class="notranslate"><code>window.addEventListener("unhandledrejection", event =&gt; {
+<pre class="brush: js"><code>window.addEventListener("unhandledrejection", event =&gt; {
   /* You might start here by adding code to examine the
      promise specified by event.promise and the reason in
      event.reason */
@@ -212,16 +212,16 @@ Do this, whatever happened before
 
 <p>{{jsxref ( "Promise")}}는 생성자를 사용하여 처음부터 생성 될 수 있습니다. 이것은 오래된 API를 감쌀 때만 필요합니다.</p>
 
-<p>이상적인 프로그래밍 세계에서는 모든 비동기 함수는 promise을 반환해야 하지만. 불행히도 일부 API는 여전히 success 및 / 또는 failure 콜백을 전달하는 방식일거라 생각합니다.. 예를 들면 {{domxref ( "WindowTimers.setTimeout", "setTimeout ()")}} 함수가 있습니다.</p>
+<p>이상적인 프로그래밍 세계에서는 모든 비동기 함수는 promise을 반환해야 하지만, 불행히도 일부 API는 여전히 success 및 / 또는 failure 콜백을 전달하는 방식일거라 생각합니다. 예를 들면 {{domxref ( "WindowTimers.setTimeout", "setTimeout ()")}} 함수가 있습니다.</p>
 
-<pre class="notranslate"><code>setTimeout(() =&gt; saySomething("10 seconds passed"), 10000);</code>
+<pre class="brush: js"><code>setTimeout(() =&gt; saySomething("10 seconds passed"), 10000);</code>
 </pre>
 
-<p>예전 스타일의 콜백과 Promise를 합치는것 문제가 있습니다. 함수 <code>saySomething()</code>이 실패하거나 프로그래밍 오류가 있으면 아무 것도 잡아 내지 않습니다. <code>setTimeout</code>의 문제점 입니다.</p>
+<p>예전 스타일의 콜백과 Promise를 합치는 것은 문제가 있습니다. 함수 <code>saySomething()</code>이 실패하거나 프로그래밍 오류가 있으면 아무 것도 잡아 내지 않습니다. <code>setTimeout</code>의 문제점 입니다.</p>
 
-<p>다행히도 우리는 <code>setTimeout</code>을 Promise로 감쌀 수 있습니다. 가장 좋은 방법은 가능한 가장 낮은 수준에서 문제가되는 함수를 래핑 한 다음 다시는 직접 호출하지 않는 것입니다.</p>
+<p>다행히도 우리는 <code>setTimeout</code>을 Promise로 감쌀 수 있습니다. 가장 좋은 방법은 가능한 가장 낮은 수준에서 문제가 되는 함수를 감싼 다음 다시는 직접 호출하지 않는 것입니다.</p>
 
-<pre class="notranslate"><code>const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
+<pre class="brush: js"><code>const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
 
 wait(10000).then(() =&gt; saySomething("10 seconds")).catch(failureCallback);</code>
 </pre>
@@ -234,36 +234,34 @@ wait(10000).then(() =&gt; saySomething("10 seconds")).catch(failureCallback);</c
 
 <p>{{jsxref("Promise.all()")}}와 {{jsxref("Promise.race()")}}는 비동기 작업을 병렬로 실행하기위한 두 가지 구성 도구입니다.</p>
 
-<p>우리는 병렬로 작업을 시작하고 모든 작업이 다음과 같이 끝날 때까지 기다릴 수 있습니다.</p>
+<p>우리는 병렬로 작업을 시작하고 다음과 같이 모두 완료될 때까지 기다릴 수 있습니다.</p>
 
-<pre class="notranslate"><code>Promise.all([func1(), func2(), func3()])
+<pre class="brush: js"><code>Promise.all([func1(), func2(), func3()])
 .then(([result1, result2, result3]) =&gt; { /* use result1, result2 and result3 */ });</code></pre>
-
-<p>Sequential composition is possible using some clever JavaScript:</p>
 
 <p>고급진 JavaScript를 사용하여 순차적 구성이 가능합니다.</p>
 
-<pre class="notranslate"><code>[func1, func2, func3].reduce((p, f) =&gt; p.then(f), Promise.resolve())
+<pre class="brush: js"><code>[func1, func2, func3].reduce((p, f) =&gt; p.then(f), Promise.resolve())
 .then(result3 =&gt; { /* use result3 */ });</code>
 </pre>
 
-<p>기본적으로 <code>Promise.resolve().then(func1).then(func2).then(func3);</code>과 같은 약속 체인으로 비동기 함수 배열을 축소합니다.</p>
+<p>기본적으로, 우리는 비동기 함수 배열을 다음과 같은 promise 체인으로 줄입니다. <code>Promise.resolve().then(func1).then(func2).then(func3);</code></p>
 
-<p>이것은 재사용 가능한 작성 기능으로 만들 수 있는데, 이는 함수형 프로그래밍에서 일반적인 방식입니다.</p>
+<p>이것을 재사용 가능한 합성 함수로 만들 수 있는데, 이는 함수형 프로그래밍에서 일반적인 방식입니다.</p>
 
-<pre class="notranslate"><code>const applyAsync = (acc,val) =&gt; acc.then(val);
+<pre class="brush: js"><code>const applyAsync = (acc,val) =&gt; acc.then(val);
 const composeAsync = (...funcs) =&gt; x =&gt; funcs.reduce(applyAsync, Promise.resolve(x));</code>
 </pre>
 
 <p><code>composeAsync()</code> 함수는 여러 함수를 인수로 받아들이고 composition 파이프 라인을 통해 전달되는 초기 값을 허용하는 새 함수를 반환합니다.</p>
 
-<pre class="notranslate"><code>const transformData = composeAsync(func1, func2, func3);
+<pre class="brush: js"><code>const transformData = composeAsync(func1, func2, func3);
 const result3 = transformData(data);</code>
 </pre>
 
-<p>ECMAScript 2017에서는 async / await를 사용하여 순차적 구성을보다 간단하게 수행 할 수 있습니다.</p>
+<p>ECMAScript 2017에서는 async / await를 사용하여 순차적 구성을 보다 간단하게 수행할 수 있습니다.</p>
 
-<pre class="notranslate"><code>let result;
+<pre class="brush: js"><code>let result;
 for (const f of [func1, func2, func3]) {
   result = await f(result);
 }
@@ -271,17 +269,15 @@ for (const f of [func1, func2, func3]) {
 
 <h2 id="Timing">Timing</h2>
 
-<p>To avoid surprises, functions passed to <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> will never be called synchronously, even with an already-resolved promise:</p>
+<p>놀라움(역자 주. 에러가 난다거나, 코드가 문제가 생긴다거나..했을때의 그 놀라움..)을 피하기 위해 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code>에 전달된 함수는 already-resolved promise에 있는 경우에도 동기적으로 호출되지 않습니다.</p>
 
-<p>놀라움(역자 주. 에러가 난다거나, 코드가 문제가 생긴다거나..했을때의 그 놀라움..)을 피하기 위해 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code>에 전달 된 함수는 already-resolved promise에 있는 경우에도 동기적으로 호출되지 않습니다.</p>
-
-<pre class="notranslate"><code>Promise.resolve().then(() =&gt; console.log(2));
+<pre class="brush: js"><code>Promise.resolve().then(() =&gt; console.log(2));
 console.log(1); // 1, 2</code>
 </pre>
 
-<p>즉시 실행되는 대신 전달 된 함수는 마이크로 태스크 대기열에 저장됩니다. 즉, 자바 스크립트 이벤트 루프의 현재 실행이 끝날 때 대기열이 비면 나중에 실행됩니다.</p>
+<p>즉시 실행되는 대신 전달된 함수는 마이크로 태스크 대기열에 저장됩니다. 즉, 자바 스크립트 이벤트 루프의 현재 실행이 끝나고, 대기열도 비어있을 때에 제어권이 이벤트 루프로 반환되기 직전에 실행됩니다.</p>
 
-<pre class="notranslate"><code>const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
+<pre class="brush: js"><code>const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
 
 wait().then(() =&gt; console.log(4));
 Promise.resolve().then(() =&gt; console.log(2)).then(() =&gt; console.log(3));
@@ -289,17 +285,11 @@ console.log(1); // 1, 2, 3, 4</code></pre>
 
 <h2 id="Nesting">Nesting</h2>
 
-<div class="blockIndicator note">
-<p>역자 주. 아래부분에 대한 번역이 미흡합니다. 원문을 참고해 주세요</p>
-</div>
+<p>간단한 promise 체인은 평평하게 유지하는 것이 가장 좋습니다. 중첩된 체인은 부주의한 구성의 결과일 수 있습니다. <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Using_promises#Common_mistakes">common mistakes</a>를 참조하십시오.</p>
 
-<p>간단한 promise 체인은 중첩이 부주의 한 구성의 결과 일 수 있으므로 중첩하지 않고 평평하게 유지하는 것이 가장 좋습니다. <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Using_promises#Common_mistakes">common mistakes</a>를 참조하십시오.</p>
+<p>중첩은 <code>catch</code> 문 범위를 제한하는 제어 구조입니다. 특히, 중첩된 <code>catch</code>는 중첩된 범위 외부의 체인에 있는 오류가 아닌 범위 및 그 이하의 오류만 잡습니다. 올바르게 사용하면 오류 복구 시 더 정확한 결과를 얻을 수 있습니다.</p>
 
-<p>(Simple promise chains are best kept flat without nesting, as nesting can be a result of careless composition. See <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Using_promises#Common_mistakes">common mistakes</a>.)</p>
-
-<p>중첩은 <code>catch</code> 문 범위를 제한하는 제어 구조입니다. 특히, 중첩 된 <code>catch</code>는 중첩 된 범위 외부의 체인에있는 오류가 아닌 범위 및 그 이하의 오류 만 잡습니다. 올바르게 사용하면 오류 복구에서보다 정확한 결과를 얻을 수 있습니다.</p>
-
-<pre class="notranslate"><code>doSomethingCritical()
+<pre class="brush: js"><code>doSomethingCritical()
 .then(result =&gt; doSomethingOptional(result)
   .then(optionalResult =&gt; doSomethingExtraNice(optionalResult))
   .catch(e =&gt; {})) // Ignore if optional stuff fails; proceed.
@@ -309,13 +299,13 @@ console.log(1); // 1, 2, 3, 4</code></pre>
 
 <p>여기에 있는 선택적 단계는 들여 쓰기가 아닌 중첩되어 있지만 주위의 바깥 쪽 <code>(</code> 및 <code>)</code> 의 규칙적이지 않은 배치를 하지않도록 조심하세요.</p>
 
-<p>inner neutralizing <code>catch</code> 문은 <code>doSomethingOptional()</code>및 <code>doSomethingExtraNice()</code>에서 발생한 오류를 catch 한 후에 코드가 <code>moreCriticalStuff()</code>로 다시 시작됩니다. 중요하게도 <code>doSomethingCritical()</code>이 실패하면 해당 오류는 최종 (외부) <code>catch</code>에 의해서만 포착됩니다.</p>
+<p>inner neutralizing <code>catch</code> 문은 <code>doSomethingOptional()</code>및 <code>doSomethingExtraNice()</code>에서 발생한 오류를 catch 한 후에 코드가 <code>moreCriticalStuff()</code>로 다시 시작됩니다. 중요한 것은 <code>doSomethingCritical()</code>이 실패하면 해당 오류는 최종 (외부) <code>catch</code>에서만 포착된다는 것입니다.</p>
 
 <h2 id="Common_mistakes">Common mistakes</h2>
 
 <p>promise chains을 작성할 때 주의해야 할 몇 가지 일반적인 실수는 다음과 같습니다. 이러한 실수 중 몇 가지는 다음 예제에서 나타납니다.</p>
 
-<pre class="notranslate"><code>// Bad example! Spot 3 mistakes!
+<pre class="brush: js"><code>// Bad example! Spot 3 mistakes!
 
 doSomething().then(function(result) {
   doSomethingElse(result) // Forgot to return promise from inner chain + unnecessary nesting
@@ -324,15 +314,15 @@ doSomething().then(function(result) {
 // Forgot to terminate chain with a catch!</code>
 </pre>
 
-<p>첫 번째 실수는 제대로 체인을 연결하지 않는 것입니다. 이것은 우리가 새로운 promise를 만들었지 만 그것을 반환하는 것을 잊었을때 일어납니다. 결과적으로 체인이 끊어 지거나 오히려 두 개의 독립적 인 체인이 경쟁하게됩니다. 즉, <code>doFourthThing()</code>은 <code>doSomethingElse()</code> 또는 <code>doThirdThing()</code>이 완료 될 때까지 기다리지 않고 의도하지 않은 것처럼 병렬로 실행됩니다. 별도의 체인은 별도의 오류 처리 기능을 가지고있어서 잡기 어려운 오류가 발생합니다.</p>
+<p>첫 번째 실수는 제대로 체인을 연결하지 않는 것입니다. 이것은 우리가 새로운 promise를 만들었지만 그것을 반환하는 것을 잊었을 때 일어납니다. 결과적으로 체인이 끊어지거나 오히려 두 개의 독립적인 체인이 경쟁하게 됩니다. 즉, <code>doFourthThing()</code>은 <code>doSomethingElse()</code> 또는 <code>doThirdThing()</code>이 완료될 때까지 기다리지 않고 우리가 의도하지 않았지만 이들과 병렬로 실행됩니다. 또한 별도의 체인은 별도의 오류 처리 기능을 가지고 있어서 잡기 어려운 오류가 발생합니다.</p>
 
-<p>두 번째 실수는 불필요하게 중첩되어 첫 번째 실수를 가능하게 만드는 것입니다. 중첩은 내부 오류 처리기의 범위를 제한합니다. 의도하지 않은 경우 에러가 캐치되지 않는 오류가 발생할 수 있습니다. 이 변형은 <a href="https://stackoverflow.com/questions/23803743/what-is-the-explicit-promise-construction-antipattern-and-how-do-i-avoid-it">promise constructor anti-pattern</a>입니다.이 패턴은 이미 약속을 사용하는 코드를 감싸기 위해 promise 생성자의 중복 사용과 중첩을 결합합니다.</p>
+<p>두 번째 실수는 불필요하게 중첩되어 첫 번째 실수를 가능하게 만드는 것입니다. 또한 중첩은 내부 오류 처리기의 범위를 제한하며, 의도하지 않은 에러가 캐치되지 않는 오류가 발생할 수 있습니다. 이 변형은 <a href="https://stackoverflow.com/questions/23803743/what-is-the-explicit-promise-construction-antipattern-and-how-do-i-avoid-it">promise constructor anti-pattern</a>입니다. 이 패턴은 이미 약속을 사용하는 코드를 감싸기 위해 promise 생성자의 중복 사용과 중첩을 결합합니다.</p>
 
-<p>세 번째 실수는 <code>catch</code>로 체인을 종료하는 것을 잊는 것입니다. 약속되지 않은 약속 체인은 대부분의 브라우저에서 예상하지 못한 약속 거부를 초래합니다.</p>
+<p>세 번째 실수는 <code>catch</code>로 체인을 종료하는 것을 잊는 것입니다. 종료되지 않은 promise 체인은 대부분의 브라우저에서 예상하지 못한 promise rejection을 초래합니다.</p>
 
-<p>좋은 경험 법칙은 항상 약속의 사슬을 반환하거나 종결하는 것이며, 새로운 약속을 얻 자마자 즉각적으로 돌려서 물건을 평평하게하는 것입니다.</p>
+<p>좋은 경험 법칙은 항상 promise 체인을 반환하거나 종결하는 것이며, 새로운 promise를 얻자마자 즉시 반환하여 복잡도를 낮추는 것입니다.</p>
 
-<pre class="notranslate"><code>doSomething()
+<pre class="brush: js"><code>doSomething()
 .then(function(result) {
   return doSomethingElse(result);
 })
@@ -340,11 +330,18 @@ doSomething().then(function(result) {
 .then(() =&gt; doFourthThing())
 .catch(error =&gt; console.log(error));</code></pre>
 
-<p><code>() =&gt; x</code> 은  <code>() =&gt; { return x; }</code>.의 축약형임을 참고하세요</p>
+<p><code>() =&gt; x</code> 은  <code>() =&gt; { return x; }</code>의 축약형임을 참고하세요.</p>
 
-<p>이제는 적절한 오류 처리 기능을 갖춘 결정성있는 단일 체인이 있습니다.</p>
+<p>이제 우리는 적절한 오류 처리 기능을 갖춘 결정성있는 단일 체인이 있습니다.</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><code>async</code>/<code>await</code></a>를 사용하면 대부분의 문제를 해결할 수 있습니다. 이러한 문법의 가장 흔한 실수는 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><code>await</code></a>키워드를 빼먹는 것입니다.</p>
+<p><a href="/ko/docs/Web/JavaScript/Reference/Statements/async_function"><code>async</code>/<code>await</code></a>를 사용하면 대부분의 문제를 해결할 수 있습니다. 이러한 문법의 가장 흔한 실수는 <a href="/ko/docs/Web/JavaScript/Reference/Statements/async_function"><code>await</code></a>키워드를 빼먹는 것입니다.</p>
+
+<h2 id="promise와_작업이_충돌할_때">promise와 작업이 충돌할 때</h2>
+
+<p>예측할 수 없는 순서로 실행되는 promise 및 작업(예: 이벤트 또는 콜백)이 있는 상황에 직면하면 마이크로 태스크를 사용하여 상태를 확인하거나 promise가 조건부로 생성될 때 promise의 균형을 맞추는 것이 좋습니다.</p>
+
+<p>마이크로 태스크가 이 문제를 해결하는 데 도움이 될 수 있다고 생각되면, <a href="/ko/docs/Web/API/queueMicrotask">queueMicrotask()</a>를 사용해서 함수를 마이크로 태스크로 대기열에 넣는 방법을 <a href="/ko/docs/Web/API/HTML_DOM_API/Microtask_guide">마이크로 태스크 가이드</a>에서 자세히 알아보십시오.</p>
+
 
 <h2 id="See_also">See also</h2>
 

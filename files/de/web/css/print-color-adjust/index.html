@@ -1,0 +1,98 @@
+---
+title: '-webkit-print-color-adjust'
+slug: Web/CSS/print-color-adjust
+tags:
+  - CSS
+  - CSS Eigenschaft
+  - Layout
+  - NeedsExample
+  - Non-standard
+  - Web
+translation_of: Web/CSS/-webkit-print-color-adjust
+original_slug: Web/CSS/-webkit-print-color-adjust
+---
+<div>{{CSSRef}}{{Non-standard_header}}</div>
+
+<p>Die <code>-webkit-print-color-adjust</code> Eigenschaft ist eine nicht standardisierte CSS Erweiterung, die dazu verwendet werden kann, um das Drucken von Hintergrundfarben und -bildern in Browsern zu erzwingen, die auf der WebKit Engine basieren.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">-webkit-print-color-adjust: economy | exact
+</pre>
+
+<h3 id="Werte">Werte</h3>
+
+<dl>
+ <dt><code>economy</code></dt>
+ <dd>Normales Verhalten. Hintergrundfarben und -bilder werden nur gedruckt, falls der Benutzer dies explizit in den Druckeinstellungen seines Browsers erlaubt.</dd>
+ <dt><code>exact</code></dt>
+ <dd>Hintergrundfarben und -bilder des Elements, auf den die Regel zutrifft, werden immer gedruckt. Die Druckeinstellungen des Benutzers werden überschrieben.</dd>
+</dl>
+
+<h2 id="Vererbung">Vererbung</h2>
+
+<p>Diese Eigenschaft wird <a href="/de/docs/Web/Guide/CSS/Getting_started/Kaskadierung_und_vererbung">vererbt</a>.</p>
+
+<h2 id="Browser_Kompatibilität">Browser Kompatibilität</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Merkmal</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Grundlegende Unterstützung</td>
+   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>6.0<sup>[2]</sup></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Merkmal</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Grundlegende Unterstützung</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Chrome druckt keine Hintergründe des {{HTMLElement("body")}} Elements. Falls diese Eigenschaft für das <code>&lt;body&gt;</code> Element auf <code>exact</code> gesetzt ist, wird sie nur auf dessen Unterknoten angewendet.</p>
+
+<p>Wenn Hintergrundbilder zugeschnitten sind (zum Beispiel wenn Sprites als Hintergrundbilder verwendet werden), werden sie wegen<a href="http://code.google.com/p/chromium/issues/detail?id=131054"> Chromium Bug 131054</a> verzerrt dargestellt, wenn sie im Chrome Browser mit <code>-webkit-print-color-adjust: exact</code> gedruckt werden. Einfarbige Hintergründe und Hintergrundbilder, die nicht zugeschnitten sind (d. h. sie haben eine kleinere Breite und Höhe als das Element, auf das sie angewendet werden), werden korrekt gedruckt.</p>
+
+<p>[2] Safari druckt keine Hintergründe des {{HTMLElement("body")}} Elements. Falls diese Eigenschaft für das <code>&lt;body&gt;</code> Element auf <code>exact</code> gesetzt ist, wird sie nur auf dessen Unterknoten angewendet.</p>
+
+<h2 id="Siehe_auch">Siehe auch</h2>
+
+<ul>
+ <li>WebKit <a href="https://bugs.webkit.org/show_bug.cgi?id=64583">Bug 64583</a>: "WIP: Add CSS property to control printing of backgrounds for individual elements"</li>
+ <li>CSSWG Wiki: "<a href="http://wiki.csswg.org/ideas/print-backgrounds">print-backgrounds</a>" - Ein Vorschlag diese Eigenschaft zu standardisieren</li>
+ <li>CSS Color Module Level 4:  die <code><a href="https://drafts.csswg.org/css-color-4/#color-adjust">color-adjust</a></code> Eigenschaft - ein neuerer Vorschlag, diese Eigenschaft zu standardisieren</li>
+</ul>

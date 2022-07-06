@@ -1,0 +1,80 @@
+---
+title: HTMLElement.style
+slug: orphaned/Web/API/ElementCSSInlineStyle/style
+translation_of: Web/API/ElementCSSInlineStyle/style
+original_slug: Web/API/ElementCSSInlineStyle/style
+---
+<div>{{ APIRef("HTML DOM") }}</div>
+
+<p>The <code><strong>HTMLElement.style</strong></code> property is used to get as well as set the <strong>inline </strong>style of an element. While getting, it returns a <a href="/en-US/docs/DOM/CSSStyleDeclaration" title="DOM/CSSStyleDeclaration"><code>CSSStyleDeclaration</code></a> object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's <strong>inline</strong> <a href="/en-US/docs/Web/HTML/Global_attributes#style"><code>style</code> attribute</a>. See the <a href="/en-US/docs/Web/CSS/CSS_Properties_Reference" title="/en-US/docs/Web/CSS/CSS_Properties_Reference">CSS Properties Reference</a> for a list of the CSS properties accessible via <code>style</code>.The <code>style</code> property has the same (and highest) priority in the CSS cascade as an inline style declaration set via the <code>style</code> attribute.</p>
+
+<h3 id="設定_styles">設定 <code>styles</code></h3>
+
+<p>Styles can be set by assigning a string directly to the <code>style</code> property (as in<code> elt.style = "color: blue;") </code>or by assigning values to the properties of <code>style</code><code>. </code>For adding specific styles to an element without altering other style values, it is preferred to use the individual properties of <code>style</code> (as in<code> elt.style.color = '...' </code>) as using<code> elt.style.cssText = '...' or elt.setAttribute('style', '...')</code> sets the complete inline style for the element by overriding the existing inline styles. Note that the property names are in camel-case and not kebab-case while setting the style using <code>elt.style.&lt;property&gt; (</code>i.e.<code> elt.style.fontSize, </code>not<code> elt.style.font-size)</code></p>
+
+<h2 id="範例">範例</h2>
+
+<pre class="brush:js"><code>// Set multiple styles in a single statement
+elt.style.cssText = "color: blue; border: 1px solid black";
+// OR
+elt.setAttribute("style", "color:red; border: 1px solid blue;");</code>
+
+
+elt.style.color = "blue";  // Set specific style while leaving other inline style values untouched
+</pre>
+
+<h3 id="取得樣式資訊">取得樣式資訊</h3>
+
+<p>The <code>style</code> property is not useful for completely learning about the styles applied on the element, since it represents only the CSS declarations set in the element's inline <code>style</code> attribute, not those that come from style rules elsewhere, such as style rules in the {{HTMLElement("head")}} section, or external style sheets. To get the values of all CSS properties for an element you should use {{domxref("window.getComputedStyle()")}} instead.</p>
+
+<p>The following code snippet demonstrates the difference between the values obtained using the element's <code>style </code>property and that obtained using the <code>computedStyle()</code> method:</p>
+
+<pre class="brush: html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;body style="font-weight:bold;"&gt;
+
+    &lt;div style="color:red" id="myElement"&gt;..&lt;/div&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<pre class="brush:js">var element = document.getElementById("myElement");
+var out = "";
+var elementStyle = element.style;
+var computedStyle = window.getComputedStyle(element, null);
+
+for (prop in elementStyle) {
+  if (elementStyle.hasOwnProperty(prop)) {
+    out += "  " + prop + " = '" + elementStyle[prop] + "' &gt; '" + computedStyle[prop] + "'\n";
+  }
+}
+console.log(out)
+</pre>
+
+<p>The output would be something like:</p>
+
+<pre>...
+fontWeight = '' &gt; 'bold'
+color = 'red' &gt; 'rgb(255, 0, 0)'
+...</pre>
+
+<p>Note the presence of the value "bold" for font-weight in the computed style and the absence of it in the element's style property</p>
+
+<h2 id="Specification" name="Specification">規範</h2>
+
+<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-ElementCSSInlineStyle">DOM Level 2 Style: ElementCSSInlineStyle.style</a></p>
+
+<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+
+<div class="note">
+<p><strong>Note:</strong> Starting in {{Gecko("2.0")}}, you can set SVG properties' values using the same shorthand syntax. For example:</p>
+
+<pre><code>element.style.fill = 'lime';</code></pre>
+</div>
+
+<h2 id="參見">參見</h2>
+
+<ul>
+ <li><a href="/en-US/docs/DOM/Using_dynamic_styling_information" title="DOM/Using dynamic styling information">Using dynamic styling information</a></li>
+</ul>

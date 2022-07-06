@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 <h2 id="构造函数语法">构造函数语法</h2>
 
 <div class="warning">
-<p><strong>重要提示：</strong>由于大型模块的编译可能很消耗资源，开发人员只有在绝对需要同步编译时，才使用 <code>Module()</code> 构造函数；其他情况下，应该使用异步 {{jsxref("WebAssembly.compile()")}} 方法。</p>
+<p><strong>警告：</strong>由于大型模块的编译可能很消耗资源，开发人员只有在绝对需要同步编译时，才使用 <code>Module()</code> 构造函数；其他情况下，应该使用异步 {{jsxref("WebAssembly.compile()")}} 方法。</p>
 </div>
 
 <pre class="syntaxbox">var myModule = new WebAssembly.Module(bufferSource);</pre>
@@ -70,11 +70,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <div>
-<div class="hidden">此页面上的兼容性表格由结构化数据生成。 如果您想为数据做出贡献，请查看 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 并向我们发送合并请求。</div>
-
 <p>{{Compat("javascript.builtins.WebAssembly.Module")}}</p>
 </div>
 

@@ -29,7 +29,7 @@ translation_of: Web/API/XRReferenceSpace/getOffsetReferenceSpace
 
 <p>つまり、3D 空間にオブジェクトがあり、それに対して別のオブジェクトを相対的に配置する必要がある場合は、<code>getOffsetReferenceSpace()</code> を呼び出して、<em><code>getOffsetReferenceSpace()</code> を呼び出すオブジェクトの位置と向きを基準</em>にして、2番目のオブジェクトに持たせる位置と向きを渡します。</p>
 
-<p>次に、シーンを描画するときに、オフセット参照空間を使用して、オブジェクトを相互に相対的に配置するだけでなく、必要な変換を適用して、ビューアーの位置に基づいてオブジェクトを適切にレンダリングできます。 これは、{{anch("Implementing rotation based on non-XR inputs", "非 XR 入力に基づく回転の実装")}}の例で示されています。 この例では、この方法を使用して、ユーザーがマウスを使用して視野角をピッチおよびヨーできるようにする方法を示しています。</p>
+<p>次に、シーンを描画するときに、オフセット参照空間を使用して、オブジェクトを相互に相対的に配置するだけでなく、必要な変換を適用して、ビューアーの位置に基づいてオブジェクトを適切にレンダリングできます。 これは、<a href="#implementing_rotation_based_on_non-xr_inputs">非 XR 入力に基づく回転の実装</a>の例で示されています。 この例では、この方法を使用して、ユーザーがマウスを使用して視野角をピッチおよびヨーできるようにする方法を示しています。</p>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -142,9 +142,5 @@ function rotateViewBy(dx, dy) {
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
 
 <p>{{Compat("api.XRReferenceSpace.getOffsetReferenceSpace")}}</p>

@@ -44,7 +44,7 @@ Digest: &lt;digest-algorithm&gt;=&lt;digest-value&gt;,&lt;digest-algorithm&gt;=&
 
 <dl>
  <dt><code>&lt;digest-algorithm&gt;</code></dt>
- <dd>已支持的摘要算法在 <a href="https://tools.ietf.org/html/rfc3230">RFC 3230</a> 和 <a href="https://tools.ietf.org/html/rfc5843">RFC 5843</a>,中定义，包括 <code>SHA-256</code> 和 <code>SHA-512</code>。一些支持的算法(如 <code>unixsum</code> 和 <code>MD5</code>) 容易发生冲突，因此不适合冲突阻力很重要的应用。</dd>
+ <dd>已支持的摘要算法在 <a href="https://tools.ietf.org/html/rfc3230">RFC 3230</a> 和 <a href="https://tools.ietf.org/html/rfc5843">RFC 5843</a>,中定义，包括 <code>SHA-256</code> 和 <code>SHA-512</code>。一些支持的算法 (如 <code>unixsum</code> 和 <code>MD5</code>) 容易发生冲突，因此不适合冲突阻力很重要的应用。</dd>
  <dt><code>&lt;digest-value&gt;</code></dt>
  <dd>对资源表示的摘要算法的结果和编码的结果。摘要算法的选择决定了编码类型：例如 <code>SHA-256</code> 用 base64 编码。</dd>
 </dl>
@@ -76,8 +76,6 @@ Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637</pre>
 <p>该头最初在 <a href="https://tools.ietf.org/html/rfc3230">RFC 3230</a> 中定义，但在 <a href="https://www.rfc-editor.org/info/rfc7231">RFC 7231</a> 里的 "选中的表示" 定义使原始定与当前 HTTP 规范中不一致。发布时，"HTTP 资源摘要" 草案将废弃 RFC 3230 并将更新标准以保持一致。</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<p class="hidden">该页面的兼容表是由结构化数据生成。如果你想要贡献数据，请访问 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 并发送一个 pull 请求。</p>
 
 <p>{{Compat("http.headers.Digest")}}</p>
 

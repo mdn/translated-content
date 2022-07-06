@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Statements/try...catch
 
 <h2 id="문법">문법</h2>
 
-<pre class="notranslate">try {
+<pre >try {
   <em>try_statements</em>
 }
 [catch (<em>exception_var</em>) {
@@ -67,7 +67,7 @@ translation_of: Web/JavaScript/Reference/Statements/try...catch
 
 
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js ">try {
    throw "myException"; // generates an exception
 }
 catch (e) {
@@ -82,7 +82,7 @@ catch (e) {
 
 
 
-<pre class="notranslate">try {
+<pre >try {
   myroutine(); // may throw three types of exceptions
 } catch (e) {
   if (e instanceof TypeError) {
@@ -102,7 +102,7 @@ catch (e) {
 
 <p>이에 대한 일반적인 사용 사례는 예상 오류의 작은 하위 집합 만 포착 (및 침묵) 한 다음 다른 경우에 오류를 다시 발생시키는 것입니다.</p>
 
-<pre class="notranslate">try {
+<pre >try {
   myRoutine();
 } catch (e) {
   if (e instanceof RangeError) {
@@ -118,7 +118,7 @@ catch (e) {
 
 
 
-<pre class="notranslate">function isValidJSON(text) {
+<pre >function isValidJSON(text) {
   try {
     JSON.parse(text);
     return true;
@@ -135,7 +135,7 @@ catch (e) {
 
 <p>The following example shows one use case for the <code>finally</code>-block. The code opens a file and then executes statements that use the file; the <code>finally</code>-block makes sure the file always closes after it is used even if an exception was thrown.</p>
 
-<pre class="notranslate">openMyFile();
+<pre >openMyFile();
 try {
   // tie up a resource
   writeMyFile(theData);
@@ -150,7 +150,7 @@ finally {
 
 <p>First, let's see what happens with this:</p>
 
-<pre class="notranslate">try {
+<pre >try {
   try {
     throw new Error('oops');
   }
@@ -169,7 +169,7 @@ catch (ex) {
 
 <p>Now, if we already caught the exception in the inner <code>try</code>-block by adding a <code>catch</code>-block</p>
 
-<pre class="notranslate">try {
+<pre >try {
   try {
     throw new Error('oops');
   }
@@ -191,7 +191,7 @@ catch (ex) {
 
 <p>And now, let's rethrow the error.</p>
 
-<pre class="notranslate">try {
+<pre >try {
   try {
     throw new Error('oops');
   }
@@ -219,7 +219,7 @@ catch (ex) {
 
 <p>If the <code>finally</code>-block returns a value, this value becomes the return value of the entire <code>try-catch-finally</code> statement, regardless of any <code>return</code> statements in the <code>try</code> and <code>catch</code>-blocks. This includes exceptions thrown inside of the <code>catch</code>-block:</p>
 
-<pre class="notranslate">(function() {
+<pre >(function() {
   try {
     try {
       throw new Error('oops');
@@ -260,8 +260,6 @@ catch (ex) {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("javascript.statements.try_catch")}}</p>
 

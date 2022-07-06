@@ -15,8 +15,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 
 <div>{{EmbedInteractiveExample("pages/js/promise-then.html")}}</div>
 
-<p class="hidden">해당 예제의 소스 코드는 GitHub 리포지토리에 저장되어 있습니다. 인터랙티브 데모 프로젝트에 기여하고 싶다면 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 를 클론하고 pull request를 보내 주세요.</p>
-
 <div class="note">
 <p>매개변수 중 하나 이상을 생략했거나 함수가 아닌 값을 전달한 경우, <code>then</code>은 핸들러가 없는 것이 되지만 오류를 발생하지는 않습니다. <code>then</code> 바로 이전의 <code>Promise</code>가 <code>then</code>에 핸들러가 없는 상태로 완료(이행이나 거부)했을 경우, 추가 핸들러가 없는 <code>Promise</code>가 생성되며, 원래 <code>Promise</code>의 마지막 상태를 그대로 물려받습니다.</p>
 </div>
@@ -43,7 +41,7 @@ p.then(function(value) {
 
 <h3 id="반환값">반환값</h3>
 
-<p>{{jsxref("Promise")}}가 이행하거나 거부했을 때, 각각에 해당하는 핸들러 함수(<code style="font-style: normal; font-weight: normal;">onFulfilled</code>나 <code style="font-style: normal; font-weight: normal;">onRejected</code>)가 <strong>비동기적으로</strong> 실행됩니다. 핸들러 함수는 다음 규칙을 따라 실행됩니다.</p>
+<p>{{jsxref("Promise")}}가 이행하거나 거부했을 때, 각각에 해당하는 핸들러 함수(<code>onFulfilled</code>나 <code>onRejected</code>)가 <strong>비동기적으로</strong> 실행됩니다. 핸들러 함수는 다음 규칙을 따라 실행됩니다.</p>
 
 <ul>
  <li>함수가 값을 반환할 경우, <code>then</code>에서 반환한 프로미스는 그 반환값을 자신의 결과값으로 하여 이행합니다.</li>
@@ -293,8 +291,6 @@ p3.then(function(v) {
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
 
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("javascript.builtins.Promise.then")}}</p>
 

@@ -45,12 +45,12 @@ original_slug: Web/Media/Formats/WebRTC_кодеки
  </thead>
  <tbody>
   <tr>
-   <th scope="row">{{anch("VP8")}}</th>
+   <th scope="row"><a href="#vp8">VP8</a></th>
    <td>—</td>
    <td>Chrome, Edge, Firefox, Safari (12.1+)</td>
   </tr>
   <tr>
-   <th scope="row">{{anch("AVC", "AVC / H.264")}}</th>
+   <th scope="row"><a href="#avc">AVC / H.264</a></th>
    <td>Constrained Baseline (CB)</td>
    <td>Chrome (52+), Edge, Firefox<sup><a href="#supported-foot-1">[1]</a></sup>, Safari</td>
   </tr>
@@ -99,7 +99,7 @@ original_slug: Web/Media/Formats/WebRTC_кодеки
 
 <p>Формат полезной нагрузки сети для совместного использования VP8 с помощью {{Glossary("RTP")}} (например, при использовании WebRTC) описано в {{RFC(7741, "RTP Payload Format for VP8 Video")}}.</p>
 
-<h3 id="Кодек_AVC_H.264"><a id="AVC" name="AVC"> Кодек AVC / H.264</a></h3>
+<h3 id="Кодек_AVC_H.264"><a id="AVC"> Кодек AVC / H.264</a></h3>
 
 <p>Поддержка профиля AVC Constrained Baseline (<code>CB</code>) требуется во всех полностью совместимых реализациях WebRTC. <code>CB</code> является подмножеством основного профиля и специально разработан для приложений с низкой сложностью и малой задержкой, таких как мобильное видео и видеоконференции, а также для платформ с более низкими возможностями обработки видео..</p>
 
@@ -298,13 +298,13 @@ original_slug: Web/Media/Formats/WebRTC_кодеки
 
 <p>Существует два способа для выполнения этого. Наиболее эффективный - использовать статический метод {{domxref("RTCRtpSender.getCapabilities()")}} (или эквивалентный для принимающего узла {{domxref("RTCRtpReceiver.getCapabilities()")}} ), определяющий тип медиаданных в параметре. К примеру, для определения поддерживаемых кодеков видео применяем :</p>
 
-<pre class="brush: js notranslate">codecList = RTCRtpSender.getCapabilities("video").codecs;</pre>
+<pre class="brush: js">codecList = RTCRtpSender.getCapabilities("video").codecs;</pre>
 
 <p>Теперь массив <code>codecList</code> содержит объекты {{domxref("RTCRtpCodecCapability")}} , каждый содержащий описываемую конфигурацию кодека. Также в списке будут присутствовать записи для повторной передачи (RTX), избыточного кодирования (RED) и прямого исправления ошибок (FEC).</p>
 
 <p>Если соединение находится в процессе запуска, используем событие {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}  для наблюдения за изменением статуса сборки кандидатов  {{Glossary("ICE")}} и при завершении, запрашиваем список кодеков.</p>
 
-<pre class="brush: js notranslate">let codecList = null;
+<pre class="brush: js">let codecList = null;
 
 peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
   if (peerConnection.iceGatheringState === "complete") {
@@ -337,7 +337,7 @@ peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
 
 <p>Как только получен список доступных кодеков, его можно изменить и передать этот пересмотренный список методу  {{domxref("RTCRtpTransceiver.setCodecPreferences()")}} для перенастройки списка, используемых кодеков. Это изменяет порядок предпочтений кодеков, позволяя указать WebRTC на более предпочтительный кодек среди прочих .</p>
 
-<pre class="brush: js notranslate">function changeVideoCodec(mimeType) {
+<pre class="brush: js">function changeVideoCodec(mimeType) {
   const transceivers = peerConnection.getTransceivers();
 
   transceivers.forEach(transceiver =&gt; {
@@ -368,7 +368,7 @@ peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
 
 <p>Функция <code>preferCodec()</code> вызываемая приведённым выше кодом, действует так, чтобы переместить указанный кодек в верхнюю часть списка (для приоритета во время согласования):</p>
 
-<pre class="brush: js notranslate">function preferCodec(codecs, mimeType) {
+<pre class="brush: js">function preferCodec(codecs, mimeType) {
   let otherCodecs = [];
   let sortedCodecs = [];
   let count = codecs.length;

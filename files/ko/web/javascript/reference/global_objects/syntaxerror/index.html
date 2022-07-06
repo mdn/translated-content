@@ -1,123 +1,110 @@
 ---
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
+tags:
+  - Class
+  - JavaScript
+  - Object
+  - Reference
+  - SyntaxError
 translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
+browser-compat: javascript.builtins.SyntaxError
 ---
+
 <div>{{JSRef}}</div>
 
-<p><code><strong>SyntaxError</strong></code> 객체는 문법적으로 유효하지 않은 코드를 해석하려고 시도할 때 발생하는 오류를 표현합니다.</p>
+<p>
+  <code><strong>SyntaxError</strong></code
+  > 객체는 문법적으로 유효하지 않은 코드를 해석하려고 시도할 때 발생하는 오류를
+  의미합니다. Javascript 엔진이 코드를 구문 분석할 때 언어의 구문에 맞지 않는
+  토큰이나 토큰 순서를 만나면 이 오류를 던집니다.
+</p>
 
-<h2 id="설명">설명</h2>
-
-<p><code>SyntaxError</code>는 JavaScript 엔진이 코드를 분석할 때 문법을 준수하지 않은 코드를 만나면 발생합니다.</p>
-
-<h2 id="구문">구문</h2>
-
-<pre class="syntaxbox"><code>new SyntaxError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
-
-<h3 id="매개변수">매개변수</h3>
+<h2 id="생성자">생성자</h2>
 
 <dl>
- <dt><code>message</code><strong> {{optional_inline}}</strong></dt>
- <dd>오류에 대한 설명.</dd>
- <dt><code>fileName</code><strong> {{optional_inline}}</strong> {{non-standard_inline}}</dt>
- <dd>예외가 발생한 코드를 담고 있는 파일의 이름.</dd>
- <dt><code>lineNumber</code><strong> {{optional_inline}}</strong> {{non-standard_inline}}</dt>
- <dd>예외가 발생한 코드의 라인 넘버.</dd>
+  <dt>{{jsxref("Global_Objects/SyntaxError/SyntaxError", "SyntaxError()")}}</dt>
+  <dd>새로운 <code>SyntaxError</code> 객체를 만듭니다.</dd>
 </dl>
 
-<h2 id="속성">속성</h2>
+<h2 id="인스턴스_속성">인스턴스 속성</h2>
 
 <dl>
- <dt>{{jsxref("SyntaxError.prototype")}}</dt>
- <dd><code>SyntaxError</code> 객체에 속성을 추가할 수 있도록 해주고 있습니다.</dd>
+  <dt>
+    {{jsxref("Error.prototype.message", "SyntaxError.prototype.message")}}
+  </dt>
+  <dd>
+    오류 메시지. 비록 ECMA-262에서 {{jsxref("SyntaxError")}}는 반드시 자체
+    <code>message</code> 속성을 제공해야한다고 명시했지만,
+    <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>는
+    {{jsxref("Error.prototype.message")}}를 상속합니다.
+  </dd>
+  <dt>{{jsxref("Error.prototype.name", "SyntaxError.prototype.name")}}</dt>
+  <dd>오류 이름. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+  <dt>
+    {{jsxref("Error.prototype.fileName", "SyntaxError.prototype.fileName")}}
+  </dt>
+  <dd>이 오류가 발생한 파일 경로. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+  <dt>
+    {{jsxref("Error.prototype.lineNumber", "SyntaxError.prototype.lineNumber")}}
+  </dt>
+  <dd>
+    이 오류가 발생한 파일의 줄 수. {{jsxref("Error")}}로부터 상속되었습니다.
+  </dd>
+  <dt>
+    {{jsxref("Error.prototype.columnNumber","SyntaxError.prototype.columnNumber")}}
+  </dt>
+  <dd>
+    이 오류가 발생한 줄(행)에서의 열 위치. {{jsxref("Error")}}로부터 상속되었습니다.
+  </dd>
+  <dt>{{jsxref("Error.prototype.stack", "SyntaxError.prototype.stack")}}</dt>
+  <dd>스택 트레이스. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
 </dl>
-
-<h2 id="메서드">메서드</h2>
-
-<p>전역(global) <code>SyntaxError</code> 는 고유의 메소드를 가지고 있지 않지만, prototype chain을 통해 몇몇의 메소드를 상속 받습니다.</p>
-
-<h2 id="SyntaxError_인스턴스"><code>SyntaxError</code> 인스턴스</h2>
-
-<h3 id="속성_2">속성</h3>
-
-<div>{{page('en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', 'Properties')}}</div>
-
-<h3 id="메소드">메소드</h3>
-
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', 'Methods')}}</div>
 
 <h2 id="예제">예제</h2>
 
 <h3 id="SyntaxError_잡기"><code>SyntaxError</code> 잡기</h3>
 
-<pre class="brush: js">try {
+<pre class="brush: js">
+try {
   eval('hoo bar');
 } catch (e) {
-  console.log(e instanceof SyntaxError); // true
-  console.log(e.message);                // "missing ; before statement"
-  console.log(e.name);                   // "SyntaxError"
-  console.log(e.fileName);               // "Scratchpad/1"
-  console.log(e.lineNumber);             // 1
-  console.log(e.columnNumber);           // 4
-  console.log(e.stack);                  // "@Scratchpad/1:2:3\n"
+  console.error(e instanceof SyntaxError);
+  console.error(e.message);
+  console.error(e.name);
+  console.error(e.fileName);
+  console.error(e.lineNumber);
+  console.error(e.columnNumber);
+  console.error(e.stack);
 }
 </pre>
 
 <h3 id="SyntaxError_생성하기"><code>SyntaxError</code> 생성하기</h3>
 
-<pre class="brush: js">try {
+<pre class="brush: js">
+try {
   throw new SyntaxError('Hello', 'someFile.js', 10);
 } catch (e) {
-  console.log(e instanceof SyntaxError); // true
-  console.log(e.message);                // "Hello"
-  console.log(e.name);                   // "SyntaxError"
-  console.log(e.fileName);               // "someFile.js"
-  console.log(e.lineNumber);             // 10
-  console.log(e.columnNumber);           // 0
-  console.log(e.stack);                  // "@Scratchpad/2:11:9\n"
+  console.error(e instanceof SyntaxError); // true
+  console.error(e.message);                // Hello
+  console.error(e.name);                   // SyntaxError
+  console.error(e.fileName);               // someFile.js
+  console.error(e.lineNumber);             // 10
+  console.error(e.columnNumber);           // 0
+  console.error(e.stack);                  // @debugger eval code:3:9
 }
 </pre>
 
 <h2 id="명세">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>초기 정의.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11.6.4', 'SyntaxError')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-syntaxerror', 'SyntaxError')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-syntaxerror', 'SyntaxError')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
-<p>{{Compat("javascript.builtins.SyntaxError")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="같이_보기">같이 보기</h2>
 
 <ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("SyntaxError.prototype")}}</li>
+  <li>{{jsxref("Error")}}</li>
 </ul>

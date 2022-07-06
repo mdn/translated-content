@@ -7,69 +7,67 @@ tags:
   - Reference
   - TypeError
 translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
+browser-compat: javascript.builtins.TypeError
 ---
+
 <div>{{JSRef}}</div>
 
-<p><code><strong>TypeError</strong></code> 객체는 보통 값이 기대하던 자료형이 아니라서 연산을 할 수 없을 때 발생하는 오류입니다.</p>
+<p>
+  <code><strong>TypeError</strong></code> 객체는 일반적으로 값이 기대하던 자료형이 아니라서 연산을 할 수 없을 때 발생하는 오류입니다.
+</p>
 
-<h2 id="구문">구문</h2>
+<p>다음과 같은 경우 <code>TypeError</code>가 발생할 수 있습니다.</p>
 
-<pre class="syntaxbox"><code>new TypeError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+<ul>
+  <li>
+    함수에 전달된 피연산자 또는 인수가 해당 연산자나 함수가 예상하는 타입과
+    호환되지 않거나,
+  </li>
+  <li>변경할 수 없는 값을 수정하려고 하거나,</li>
+  <li>부적절한 방법으로 값을 사용하려고 할 때.</li>
+</ul>
 
-<h3 id="매개변수">매개변수</h3>
-
-<dl>
- <dt><code>message</code> {{optional_inline}}</dt>
- <dd>사람이 읽을 수 있는 오류에 대한 설명.</dd>
- <dt><code>fileName</code> {{optional_inline}} {{non-standard_inline}}</dt>
- <dd>오류가 발생한 코드를 포함한 파일 이름.</dd>
- <dt><code>lineNumber</code> {{optional_inline}} {{non-standard_inline}}</dt>
- <dd>오류가 발생한 코드의 줄 위치.</dd>
-</dl>
-
-<h2 id="설명">설명</h2>
-
-<p>함수나 연산자의 인자가, 그 함수나 연산자가 예상하던 타입과 호환되지 않을 때 <code>TypeError</code> 오류가 던져집니다.</p>
-
-<h2 id="속성">속성</h2>
+<h2 id="Constructor">생성자</h2>
 
 <dl>
- <dt>{{jsxref("TypeError.prototype")}}</dt>
- <dd><code>TypeError</code> 객체에 속성을 추가할 수 있습니다.</dd>
+  <dt>{{jsxref("Global_Objects/TypeError/TypeError", "TypeError()")}}</dt>
+  <dd>새로운 <code>TypeError</code> 객체를 생성합니다.</dd>
 </dl>
 
-<h2 id="메서드">메서드</h2>
+<h2 id="Instance_properties">인스턴스 속성</h2>
 
-<p>전역 <code>TypeError</code>는 메서드는 자신만의 메서드를 갖지 않지만, 프로토타입 체인을 통해 몇몇 메서드를 상속합니다.</p>
-
-<h2 id="TypeError_인스턴스"><code>TypeError</code> 인스턴스</h2>
-
-<h3 id="속성_2">속성</h3>
-
-<div>
 <dl>
- <dt><code>TypeError.prototype.constructor</code></dt>
- <dd>인스턴스의 프로토타입을 생성한 함수를 나타냅니다.</dd>
- <dt>{{jsxref("Error.prototype.message", "TypeError.prototype.message")}}</dt>
- <dd>오류의 메시지.</dd>
- <dt>{{jsxref("Error.prototype.name", "TypeError.prototype.name")}}</dt>
- <dd>오류 이름. {{jsxref("Error")}}에서 상속합니다.</dd>
- <dt>{{jsxref("Error.prototype.fileName", "TypeError.prototype.fileName")}}</dt>
- <dd>오류가 발생한 파일로의 경로. {{jsxref("Error")}}에서 상속합니다.</dd>
- <dt>{{jsxref("Error.prototype.lineNumber", "TypeError.prototype.lineNumber")}}</dt>
- <dd>오류가 발생한 곳의 줄 위치. {{jsxref("Error")}}에서 상속합니다.</dd>
- <dt>{{jsxref("Error.prototype.columnNumber", "TypeError.prototype.columnNumber")}}</dt>
- <dd>오류가 발생한 곳의 행 위치. {{jsxref("Error")}}에서 상속합니다.</dd>
- <dt>{{jsxref("Error.prototype.stack", "TypeError.prototype.stack")}}</dt>
- <dd>스택 추적. {{jsxref("Error")}}에서 상속합니다.</dd>
+  <dt>{{jsxref("Error.prototype.message", "TypeError.prototype.message")}}</dt>
+  <dd>
+    오류 메시지. 비록 ECMA-262에서 {{jsxref("TypeError")}}는 반드시 자체
+    <code>message</code> 속성을 제공해야 한다고 명시했지만,
+    <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>는
+    {{jsxref("Error.prototype.message")}}를 상속합니다.
+  </dd>
+  <dt>{{jsxref("Error.prototype.name", "TypeError.prototype.name")}}</dt>
+  <dd>오류 이름. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+  <dt>
+    {{jsxref("Error.prototype.fileName", "TypeError.prototype.fileName")}}
+  </dt>
+  <dd>오류가 발생한 파일 경로. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+  <dt>
+    {{jsxref("Error.prototype.lineNumber", "TypeError.prototype.lineNumber")}}
+  </dt>
+  <dd>오류가 발생한 곳의 줄 위치. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+  <dt>
+    {{jsxref("Error.prototype.columnNumber", "TypeError.prototype.columnNumber")}}
+  </dt>
+  <dd>오류가 발생한 곳의 열 위치. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+  <dt>{{jsxref("Error.prototype.stack", "TypeError.prototype.stack")}}</dt>
+  <dd>스택 추적. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
 </dl>
-</div>
 
-<h2 id="예제">예제</h2>
+<h2 id="Examples">예제</h2>
 
-<h3 id="TypeError_오류를_잡아내기"><code>TypeError</code> 오류를 잡아내기</h3>
+<h3 id="Catching_a_TypeError"><code>TypeError</code> 오류를 잡아내기</h3>
 
-<pre class="brush: js">try {
+<pre class="brush: js">
+try {
   null.f();
 } catch (e) {
   console.log(e instanceof TypeError); // true
@@ -82,9 +80,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 }
 </pre>
 
-<h3 id="TypeError_오류를_생성하기"><code>TypeError</code> 오류를 생성하기</h3>
+<h3 id="Creating_a_TypeError"><code>TypeError</code> 오류를 생성하기</h3>
 
-<pre class="brush: js">try {
+<pre class="brush: js">
+try {
   throw new TypeError('Hello', "someFile.js", 10);
 } catch (e) {
   console.log(e instanceof TypeError); // true
@@ -97,27 +96,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 }
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
 
+<p>{{Compat}}</p>
 
-
-<p>{{Compat("javascript.builtins.TypeError")}}</p>
-
-<h2 id="같이_보기">같이 보기</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
- <li>{{jsxref("Error")}}</li>
+  <li>{{jsxref("Error")}}</li>
 </ul>

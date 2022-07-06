@@ -1,38 +1,48 @@
 ---
-title: window.scrollMaxY
+title: Window.scrollMaxY
 slug: Web/API/Window/scrollMaxY
 tags:
-  - DOM
-  - DOM_0
-  - Gecko
-  - Gecko DOM Reference
-  - Window
-  - 要更新
+- API
+- DOM_0
+- HTML DOM
+- NeedsExample
+- NeedsMarkupWork
+- NeedsSpecTable
+- Non-standard
+- Property
+- Reference
+- Window
 translation_of: Web/API/Window/scrollMaxY
 ---
-<p>{{ ApiRef() }}</p>
-<p>{{ 英語版章題("Summary") }}</p>
-<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
-<p>文書が垂直スクロールされ得る最大ピクセル数を返します。</p>
-<p>{{ 英語版章題("Syntax") }}</p>
-<h3 id="Syntax">構文</h3>
-<pre class="eval"><i>ypix</i> = window.scrollMaxY
+<div>{{APIRef}} {{Non-standard_header}}</div>
+
+<p><code><strong>Window.scrollMaxY</strong></code> は読み取り専用プロパティで、文書が縦方向にスクロールできる最大ピクセル数を返します。</p>
+
+<h2 id="Syntax">構文</h2>
+
+<pre class="brush: js"><em>yMax</em> = window.scrollMaxY
 </pre>
-<p>{{ 英語版章題("Parameters") }}</p>
-<h3 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h3>
+
 <ul>
- <li><code>ypix</code> は、ピクセル数です。</li>
+  <li><code>yMax</code> はピクセル数です。</li>
 </ul>
-<p>{{ 英語版章題("Example") }}</p>
-<h3 id=".E4.BE.8B" name=".E4.BE.8B">例</h3>
-<pre>// ページの最下部までスクロールします。
- var maxY = window.scrollMaxY;
- window.scrollTo(0,maxY);
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush:js">// ページの下端までスクロールする
+let maxY = window.scrollMaxY;
+
+window.scrollTo(0, maxY);
 </pre>
-<p>{{ 英語版章題("Notes") }}</p>
-<h3 id="Notes">注</h3>
-<p>このプロパティは、文書の高さの合計を取得するために使用してください。文書の高さの合計は、<a href="ja/DOM/window.innerHeight">window.innerHeight</a> + window.scrollMaxY と同等です。</p>
-<p><a href="ja/DOM/window.scrollMaxX">window.scrollMaxX</a> と <a href="ja/DOM/window.scrollTo">window.scrollTo</a> も参照してください。</p>
-<p>{{ 英語版章題("Specification") }}</p>
-<h3 id=".E4.BB.95.E6.A7.98" name=".E4.BB.95.E6.A7.98">仕様</h3>
-<p>{{ DOM0() }}</p>
+
+<h2 id="Notes">注</h2>
+
+<p>このプロパティを、文書の全体の高さを取得するためには使用しないでください。これは {{domxref("window.innerHeight")}} + window.scrollMaxY とは等しくありません。これは {{domxref("window.innerHeight")}} には表示中の水平スクロールバーがすべて含まれるからであり、結果は文書の幅よりすべての表示中の水平スクロールバーの幅だけ大きくなります。代わりに {{domxref("element.scrollHeight","document.body.scrollHeight")}} を使用してください。 {{domxref("window.scrollMaxX")}} および {{domxref("window.scrollTo")}} も参照してください。</p>
+
+<h2 id="Specifications">仕様書</h2>
+
+<p>どの仕様書にも含まれていません。</p>
+
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("api.Window.scrollMaxY")}}</p>

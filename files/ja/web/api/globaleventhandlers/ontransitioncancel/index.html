@@ -14,7 +14,7 @@ translation_of: Web/API/GlobalEventHandlers/ontransitioncancel
 ---
 <div>{{APIRef("CSS3 Transitions")}}</div>
 
-<p><strong><code>ontransitioncancel</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("transitioncancel")}} イベントを処理するイベントハンドラー ({{domxref("EventHandler")}}) です。</p>
+<p><strong><code>ontransitioncancel</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("transitioncancel")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。</p>
 
 <p><code>transitioncancel</code> イベントは <a href="/ja/docs/Web/CSS/CSS_Transitions">CSS トランジション</a>がキャンセルされたときに送信されます。トランジションがキャンセルされるのは下記のような時です。</p>
 
@@ -136,8 +136,6 @@ box.ontransitioncancel = function(event) {
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("api.GlobalEventHandlers.ontransitioncancel")}}</p>
 

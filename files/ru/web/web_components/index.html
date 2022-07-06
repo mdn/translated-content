@@ -22,7 +22,7 @@ translation_of: Web/Web_Components
 <p>Базовый подход к реализации веб-компонента обычно выглядит примерно так:</p>
 
 <ol>
- <li>Создайте класс, в котором вы указываете функциональность своего веб-компонента, используя синтаксис классов ECMAScript 2015 (дополнительную информацию см. в разделе <a href="https://wiki.developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes">Классы</a>).</li>
+ <li>Создайте класс, в котором вы указываете функциональность своего веб-компонента, используя синтаксис классов ECMAScript 2015 (дополнительную информацию см. в разделе <a href="/ru/docs/Web/JavaScript/Reference/Classes">Классы</a>).</li>
  <li>Зарегистрируйте свой новый настраиваемый элемент с помощью метода {{domxref("CustomElementRegistry.define()")}}, передав ему имя элемента, который будет определён, класс или функцию, в которых указана его функциональность, и, необязательно, от какого элемента он наследуется.</li>
  <li>При необходимости прикрепите теневую DOM к настраиваемому элементу с помощью метода {{domxref("Element.attachShadow()")}}. Добавьте дочерние элементы, обработчики событий и т.д. в теневой DOM, используя обычные методы DOM.</li>
  <li>При необходимости определите HTML template, используя {{htmlelement("template")}} и {{htmlelement("slot")}}. Снова используйте обычные методы DOM, чтобы клонировать шаблон и прикрепить его к вашей теневой DOM.</li>
@@ -160,7 +160,7 @@ translation_of: Web/Web_Components
   <tr>
    <td>{{SpecName("HTML WHATWG","custom-elements.html#custom-elements","custom elements")}}</td>
    <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Определение <a href="/ru/docs/Web/Web_Components/Использование_пользовательских_элементов">пользовательских HTML элементов</a></td>
+   <td>Определение <a href="/ru/docs/Web/Web_Components/Использование_пользовательских_элементов">пользовательских HTML-элементов</a></td>
   </tr>
   <tr>
    <td>{{SpecName("DOM WHATWG","#shadow-trees","shadow trees")}}</td>

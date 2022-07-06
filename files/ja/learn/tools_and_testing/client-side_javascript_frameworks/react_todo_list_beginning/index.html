@@ -11,78 +11,78 @@ translation_of: >-
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
 </div>
 
-<p class="summary"><font><font><font><font>たとえば、Reactで</font></font></font></font><font><font>概念実証</font></font><font><font><font><font>を作成する必要があるとします。これは、ユーザーが作業したいタスクを追加、編集、削除したり、タスクを削除せずに完了としてマークしたりできるアプリです。</font></font></font><font><font><font>この記事では、基本的な</font></font></font></font><code>App</code><font><font><font><font>コンポーネントの構造とスタイルを設定し、個々のコンポーネントの定義と変更に対応できるようにします。これについては後で追加します。</font></font></font></font></p>
+<p class="summary">例えば、React でアイディアを検証するためにアプリを試作してみることになったとします(いわゆる、Proof of Concept - 概念実証)。ユーザーが作業したいタスクを追加、編集、削除することができ、また、タスクを削除せずに完了とすることができるアプリです。この記事では、基本的な <code>App</code> コンポーネントの構造とスタイルを整え、後から追加する個々のコンポーネントの定義とインタラクティブな機能の準備を行っていきます。</p>
 
 <div class="blockIndicator note">
-<p class="summary"><strong><font><font><font><font>注</font></font></font></font></strong><font><font><font><font>：コードをGoogleのバージョンと照合する必要がある場合は、</font></font></font></font><a href="https://github.com/mdn/todo-react"><font><font><font><font>todo-react</font></font></font></font></a><font><font><font><font>リポジトリでサンプルのReactアプリコードの完成版を見つけることができます。実行</font></font></font><font><font><font>中の</font></font></font></font><a href="https://mdn.github.io/todo-react-build/"><font><font><font><font>バージョン</font></font></font></font></a><font><font><font><font>については、</font></font></font><a href="https://mdn.github.io/todo-react-build/"><font><font><font>https：//mdn.github .io / todo-react-build /を</font></font></font></a></font><font><font><font><font>参照してください。</font></font></font></font></p>
+<p class="summary"><strong>注</strong>：コードを我々のバージョンと照らし合わせる必要がある場合は、我々の <a href="https://github.com/mdn/todo-react">todo-react</a> リポジトリからサンプルの React アプリコードの完成版を確認することができます。実際に動作しているアプリのバージョンについては、<a href="https://mdn.github.io/todo-react-build/">https://mdn.github.io/todo-react-build/</a> を参照してください。</p>
 </div>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row"><font><font><font><font>前提条件：</font></font></font></font></th>
+   <th scope="row">前提条件：</th>
    <td>
-    <p><font><font><font><font>コア</font></font></font></font><a href="/en-US/docs/Learn/HTML"><font><font><font><font>HTML</font></font></font></font></a><font><font><font><font>、</font></font></font></font><a href="/en-US/docs/Learn/CSS"><font><font><font><font>CSS</font></font></font></font></a><font><font><font><font>、</font></font></font></font><a href="/en-US/docs/Learn/JavaScript"><font><font><font><font>JavaScriptの</font></font></font></font></a><font><font><font><font>言語に精通していること</font><font>、</font></font></font></font><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"><font><font><font><font>ターミナル/マンドコライン</font></font></font></font></a><font><font><font><font>に関すてる知識</font></font></font><font><font><font>。</font></font></font></font></p>
+    <p><a href="/ja/docs/Learn/HTML">HTML</a> 、<a href="/ja/docs/Learn/CSS">CSS</a> 、<a href="/ja/docs/Learn/JavaScript">JavaScript</a> の基本的な知識を持っていること。また <a href="/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">ターミナル/コマンドライン</a> に関する知識を持っていること。</p>
    </td>
   </tr>
   <tr>
-   <th scope="row"><font><font><font><font>目的：</font></font></font></font></th>
-   <td><font><font><font><font>todoリストの</font></font></font></font><font><font><font><font>ケーススタディを紹介</font></font></font><font><font><font>し、基本的な</font></font></font></font><code>App</code><font><font><font><font>構造とスタイルを整える。</font></font></font></font></td>
+   <th scope="row">目的：</th>
+   <td>todoリストの実際の利用例を紹介し、基本的なアプリの構造とスタイルを整えていきます。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="アプリの「ユーザーストーリー」"><font><font><font><font>アプリの「ユーザーストーリー」</font></font></font></font></h2>
+<h2 id="アプリの「ユーザーストーリー」">アプリの「ユーザーストーリー」</h2>
 
-<p><font><font><font><font>ソフトウェア開発では、ユーザーストーリーはユーザーの観点から実行可能な目標を</font></font></font><font><font><font>指し</font></font></font><font><font><font>ます。</font></font><font><font>作業を開始する前にユーザーストーリーを定義すると、作業に集中することができます。今回、</font></font></font><font><font><font>私たちのアプリは以下のストーリーを実現する必要があります：</font></font></font></font></p>
+<p>ソフトウェア開発においてユーザーストーリーとは、ユーザーの視点から見た実行可能な目標のことを指します。作業を始める前にユーザーストーリーを定義することで、作業に集中することができます。私たちのアプリは、次のようなストーリーを満たす必要があります：</p>
 
-<p><font><font><font><font>ユーザーができること</font></font></font></font></p>
-
-<ul>
- <li><font><font><font><font>タスクのリストを読むこと</font></font></font></font></li>
- <li><font><font><font><font>マウスまたはキーボードを使用してタスクを追加すること</font></font></font></font></li>
- <li><font><font><font><font>マウスまたはキーボードを使用して、タスクに完了のマークを付けること</font></font></font></font></li>
- <li><font><font><font><font>マウスまたはキーボードを使用して、タスクを削除すること</font></font></font></font></li>
- <li><font><font><font><font>マウスまたはキーボードを使用して、タスクを編集すること</font></font></font></font></li>
- <li><font><font><font><font>タスクの特定の一部を表示する：すべてのタスク、アクティブなタスクのみ、または完了したタスクのみ。</font></font></font></font></li>
-</ul>
-
-<p><font><font><font><font>これらのストーリーに1つずつ取り組みます。</font></font></font></font></p>
-
-<h2 id="プロジェクトに入る前に現状整理"><font><font><font><font>プロジェクトに入る前に現状整理</font></font></font></font></h2>
-
-<p><font><font><font><font>create-react-appは、プロジェクトでまったく使用しないファイルをいくつか作成しています。</font></font></font></font></p>
+<p>ユーザーができること</p>
 
 <ul>
- <li><font><font><font><font>コンポーネントごと</font></font></font></font><code>App.js</code><font><font>の</font></font><font><font><font><font>スタイルシート</font></font></font></font><font><font><font><font>は作成しないので、</font></font></font><font><font><font>最初に</font></font></font><font>の</font><font><font><font>上部にあるインポート</font></font></font></font><code>App.css</code><font><font><font><font>を削除します。</font></font></font></font></li>
- <li><font><font>また、</font></font><code>logo.svg</code><font><font>ファイル</font><font>を使用しない</font><font>ので、そのインポートも削除します。</font></font></li>
+ <li>タスクのリストを読むこと</li>
+ <li>マウスまたはキーボードを使用してタスクを追加すること</li>
+ <li>マウスまたはキーボードを使用して、タスクに完了のマークを付けること</li>
+ <li>マウスまたはキーボードを使用して、タスクを削除すること</li>
+ <li>マウスまたはキーボードを使用して、タスクを編集すること</li>
+ <li>タスクの特定の一部を表示する：すべてのタスク、アクティブなタスクのみ、完了したタスクのみ。</li>
 </ul>
 
-<p><font><font>次に、以下のコマンドをコピーしてターミナルに貼り付け、不要なファイルをいくつか削除します。</font><font>アプリのルートディレクトリから開始していることを確認してください。</font></font></p>
+<p>これらのストーリーに1つずつ取り組んでいきます。</p>
 
-<pre># Move into the src directory of your project
+<h2 id="プロジェクトに入る前に現状整理">プロジェクトに入る前に現状整理</h2>
+
+<p>create-react-app を用いた場合、今回のプロジェクトでは使用しないファイルがいくつか作られます。</p>
+
+<ul>
+ <li>コンポーネントごとにスタイルシートを書く予定はないので、まず <code>App.js</code> の冒頭にある <code>App.css</code> のインポートを削除してください。</li>
+ <li><code>logo.svg</code> を使用する予定もないので、このインポートも削除してください。</li>
+</ul>
+
+<p>次に、以下のコマンドをコピーしてターミナルに貼り付け、不要なファイルをいくつか削除します。アプリのルートディレクトリから開始していることを確認してください。</p>
+
+<pre class="brush: bash"># Move into the src directory of your project
 cd src
 # Delete a few files
 rm -- App.test.js App.css logo.svg serviceWorker.js setupTests.js
 # Move back up to the root of the project
 cd ..</pre>
 
-<p><font><font>ノート：</font></font></p>
+<p>注意点：</p>
 
 <ul>
- <li><font><font>削除する2つのファイルは、アプリケーションのテスト用です。</font><font>ここではテストを扱いません。</font></font></li>
- <li><font><font>上記のターミナルタスクを実行するためにサーバーを停止した場合は、</font></font><code>npm start</code><font><font>を使用してサーバーを再起動する必要があります。</font></font></li>
+ <li>今回削除するうちの2つのファイルは、アプリケーションのテスト用です。ここではテストについては説明しません。</li>
+ <li>上記のターミナルで作業を行うためにサーバーを停止した場合は、<code>npm start</code> を使用してサーバーを再度起動する必要があります。</li>
 </ul>
 
-<h2 id="はじめのプロジェクトコード"><font><font>はじめのプロジェクト</font></font><font><font>コード</font></font></h2>
+<h2 id="プロジェクトの出発地点のコード">プロジェクトの出発地点のコード</h2>
 
-<p><font><font>このプロジェクトの開始点として、次の2つを提供します。現在持っているものを置き換えるApp関数と、アプリのスタイルを設定するCSSです。</font></font></p>
+<p>このプロジェクトの出発地点として、次の2つを用意します。今あるものを置き換えた <code>App()</code> 関数と、アプリのスタイルを設定するための CSS です。</p>
 
-<h3 id="JSX"><font><font>JSX</font></font></h3>
+<h3 id="JSX">JSX</h3>
 
-<p><font><font>次のスニペットをクリップボードにコピーして貼り付け</font></font><code>App.js</code><font><font>、既存の</font></font><code>App()</code><font><font>関数を</font><font>置き換え</font><font>ます。</font></font></p>
+<p>次のスニペットをクリップボードにコピーして <code>App.js</code> に貼り付け、既存の <code>App()</code> 関数を置き換えます。</p>
 
-<pre>function App(props) {
+<pre class="brush: js">function App(props) {
   return (
     &lt;div className="todoapp stack-large"&gt;
       &lt;h1&gt;TodoMatic&lt;/h1&gt;
@@ -181,74 +181,74 @@ cd ..</pre>
   );
 }</pre>
 
-<p><font><font>次に</font></font><code>public/index.html</code>を開いて<font><font>、</font></font><code><a href="/en-US/docs/Web/HTML/Element/title">&lt;title&gt;</a></code><font><font>要素のテキストを</font><font>開い</font><font>て</font></font><code>TodoMatic</code><font><font>に変更します。</font><font>こうすることでアプリ上部の</font></font><code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code><font><font>と一致し</font><font>ます。</font></font></p>
+<p>次に <code>public/index.html</code> を開いて、<code><a href="/ja/docs/Web/HTML/Element/title">&lt;title&gt;</a></code>要素のテキストを <code>TodoMatic</code> に変更します。こうすることでアプリ上部の <code><a href="/ja/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> と一致します。</p>
 
-<pre>&lt;title&gt;TodoMatic&lt;/title&gt;</pre>
+<pre class="brush: html">&lt;title&gt;TodoMatic&lt;/title&gt;</pre>
 
-<p><font><font>ブラウザが更新されると、次のように表示されます。</font></font></p>
+<p>ブラウザを更新すると、次のように表示されます。</p>
 
 <p><img alt="todo-maticアプリ、スタイルなし、乱雑なラベル、入力、ボタンの混乱を表示" src="https://mdn.mozillademos.org/files/17253/unstyled-app.png" style="border-style: solid; border-width: 1px; height: 743px; width: 838px;"></p>
 
-<p><font><font>まだ見た目が整っていなくて、機能もしていませんが、一旦問題はありません。すぐにスタイルを設定します。</font><font>まず、このJSXと、それがユーザーストーリーにどのように対応するかを考えます。</font></font></p>
+<p>まだ見た目が整っていなくて、機能もしていませんが、一旦問題はありません。すぐにスタイルを設定します。まず現在の JSX と、それがユーザーストーリーにどのように対応しているかを考えてみます。</p>
 
 <ul>
- <li><font><font>新しいタスクを書き込むためのと、フォームを送信するためのボタン</font><font>を備えた</font></font><code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code>と<code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code><font><font>要素があります。</font></font></li>
- <li><font><font>タスクのフィルタリングに使用するボタンの配列があります。</font></font></li>
- <li><font><font>残っているタスクの数を示す見出しがあります。</font></font></li>
- <li><font><font>3つのタスクがあり、順序付けられていないリストに配置されています。</font><font>各タスクはリストアイテム（</font></font><code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code><font><font>）であり、</font><font>タスク</font><font>を編集および削除するためのボタンと、完了時にチェックボックスをオンにするチェックボックスがあります。</font></font></li>
+ <li>新しいタスクを書き込むための <code><a href="/ja/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> 要素と、フォームを送信するためのボタンを備えた <code><a href="/ja/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> 要素があります。</li>
+ <li>タスクのフィルタリングに使用するためのボタンが並んでいます。</li>
+ <li>残っているタスクの数を示す見出しがあります。</li>
+ <li>3つのタスクがあり、順序付けられていないリストとして配置されています。それぞれのタスクはリストアイテム（<code><a href="/ja/docs/Web/HTML/Element/li">&lt;li&gt;</a></code>）であり、タスクを編集および削除するためのボタンと、完了したことをチェックするためのチェックボックスがあります。</li>
 </ul>
 
-<p><font><font>このフォームにより</font></font><em><font><font>、</font></font></em><font><font>タスク</font><font>を作成できます。また、</font><font>ボタンでフィルタリングもで</font></font><font><font>きます。</font><font>見出しとリストは、</font><font>それら</font><font>を読むためのものです</font><font>。</font><font>現在のところ、タスク</font><font>を編集するためのUIはあまりよくありません</font><font>。大丈夫です。後ほど書き足していきます。</font></font></p>
+<p>フォームはタスクを作成するためのもので、ボタンはタスクをフィルタリングするためのもの、また見出しとリストはタスクを読むためのものです。今のところタスクを編集するための UI は分かりづらいですが、そちらについては後でコードを書き足していきます。</p>
 
-<h3 id="アクセシビリティ"><font><font>アクセシビリティ</font></font></h3>
+<h3 id="アクセシビリティ">アクセシビリティ</h3>
 
-<p><font><font>ここでいくつかの変わった属性に気付くかもしれません。</font><font>例えば：</font></font></p>
+<p>ここでいくつかの珍しい属性に気付くかもしれません。例えば：</p>
 
-<pre>&lt;button type="button" className="btn toggle-btn" aria-pressed="true"&gt;
+<pre class="brush: html">&lt;button type="button" className="btn toggle-btn" aria-pressed="true"&gt;
   &lt;span className="visually-hidden"&gt;Show &lt;/span&gt;
   &lt;span&gt;all&lt;/span&gt;
   &lt;span className="visually-hidden"&gt; tasks&lt;/span&gt;
 &lt;/button&gt;</pre>
 
-<p><font><font>ここでは、</font></font><code>aria-pressed</code><font><font>ボタンは2つの状態のいずれかであることができることを（スクリーンリーダーなど）技術的に伝えます(</font></font><code>pressed</code><font><font>か</font></font><code>unpressed</code>)<font><font>。</font></font><code>on</code><font><font>と</font></font><code>off</code>の切替のように考えられます。<code>true</code><font><font>の値を設定</font></font><font><font>すると、デフォルトでボタンが押されます。</font></font></p>
+<p><code>aria-pressed</code> は支援技術（スクリーン・リーダーなど）に対して、ボタンが押された状態と押されていない状態の2つの状態のうちの1つであることを伝えます。これは <code>on</code> と <code>off</code> (あるいは <code>pressed</code> か <code>unpressed</code> )を切り替えるようなものだと考えてください。 <code>true</code> の値を設定すると、デフォルトでボタンが押された状態となります。</p>
 
-<p><font><font>CSSが含まれていないため、</font><font>この</font></font><code>visually-hidden</code><font><font>クラス</font><font>はまだ意味がありません。</font><font>ただし、スタイルを設定すると、このクラスの要素はすべて、目の見えるユーザーからは隠され、スクリーンリーダーのユーザーは引き続き使用できます。これは、目の見えるユーザーがこれらの単語を必要としないためです。</font><font>それらは、ボタンを使用してスクリーンリーダーのユーザーに役立つ追加の視覚的コンテキストがないユーザーのために、ボタンの機能に関する詳細情報を提供するためにあります。</font></font></p>
+<p><code>visually-hidden</code> というクラスについては、CSS を記述していないので、まだ意味はありません。ただし、スタイルを設定すると、このクラスの要素はすべて目の見えるユーザーからは隠され、スクリーンリーダーのユーザーは引き続き使用できるようになります。これらの単語は、目の見えるユーザーには必要ありません。視覚的な文脈を持たないスクリーンリーダーのユーザーに、ボタンが何をするのかという情報を提供するためにあります。</p>
 
-<p><font><font>さらに下には</font></font><code><a href="/en-US/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code><font><font>要素</font><font>があります</font><font>：</font></font></p>
+<p>さらに下には <code><a href="/ja/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code> 要素があります：</p>
 
-<pre>&lt;ul
+<pre class="brush: html">&lt;ul
   role="list"
   className="todo-list stack-large stack-exception"
   aria-labelledby="list-heading"
 &gt;</pre>
 
-<p><code>role</code><font><font>属性は、タグが表す要素の種類を説明するのに役立ちます。</font></font><code>&lt;ul&gt;</code><font><font>はデフォルトではリストのように扱われますが、これから追加するスタイルはその機能を壊します。</font><font>この役割は、</font></font><code>&lt;ul&gt;</code><font><font>  要素の</font><font>「リスト」の意味を復元し</font><font>ます。</font><font>これが必要な理由について詳しく知りたい場合は、</font></font><font><font><a href="https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html">Scott O'Haraの記事「Fixing Lists」</a>を</font></font><font><font>チェックしてください</font><font>。</font></font></p>
+<p><code>role</code>属性は、タグがどのような要素を表しているのかを説明するのに役立ちます。 <code>&lt;ul&gt;</code> はデフォルトではリストのように扱われますが、これから追加するスタイルはその機能を壊します。この <code>role</code> 属性は、<code>&lt;ul&gt;</code>  要素に「リスト」であることを再度伝えます。なぜこれが必要な理由なのか詳しく知りたい方は、<a href="https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html">Scott O'Haraの記事「Fixing Lists」</a> をご覧ください。</p>
 
-<p><font><font>この</font></font><code>aria-labelledby</code><font><font>属性は、リストの見出しをその下にあるリストの目的を説明するラベルとして扱っていることを伝えます。</font><font>この関連付けを行うと、リストの情報が豊富になり、スクリーンリーダーを通じてユーザーがリストの目的を理解しやすくなります。</font></font></p>
+<p><code>aria-labelledby</code> 属性は、リストの見出しをその下にあるリストの目的を説明するラベルとして扱っていることを支援技術に伝えます。この関連付けを行うことで、リストの情報がより豊富になり、スクリーンリーダーのユーザーがリストの目的をよりよく理解できるようになります。</p>
 
-<p><font><font>最後に、リスト項目のラベルと入力には、JSXに固有のいくつかの属性があります。</font></font></p>
+<p>最後に、リスト項目のラベルと入力には、JSX特有の属性がいくつかあります。</p>
 
-<pre>&lt;input id="todo-0" type="checkbox" defaultChecked={true} /&gt;
+<pre class="brush: html">&lt;input id="todo-0" type="checkbox" defaultChecked={true} /&gt;
 &lt;label className="todo-label" htmlFor="todo-0"&gt;
   Eat
 &lt;/label&gt;</pre>
 
-<p><code>&lt;input/ &gt;</code><font><font>タグ</font><font>の</font></font><code>defaultChecked</code><font><font>属性は、デフォルトで</font></font><font><font>このチェックボックスをチェックするようにReactに指示します。通常のHTMLの場合</font><font>と同様に、</font></font><code>checked</code><font><font>を使用する</font><font>と、Reactは、チェックボックスでのイベントの処理に関する警告をブラウザーコンソールに表示しますが、これは望ましくありません。</font><font>とりあえず、これについてあまり心配しないでください。後でイベントを使用するときにこれについて説明します。</font></font></p>
+<p><code>&lt;input/ &gt;</code> タグの <code>defaultChecked</code> 属性は、React にこのチェックボックスを最初にチェックするように指示します。通常の HTML のように <code>checked</code> を使用した場合、React はチェックボックスのイベント処理に関連する警告をブラウザコンソールに表示させます。今のところは気にしないで大丈夫です。後ほどイベントを使用するときにこれについては説明します。</p>
 
-<p><font><font>この</font></font><code>htmlFor</code><font><font>属性は、HTMLで使用される</font></font><code>for</code><font><font>属性に対応してい</font><font>ます。</font></font><code>for</code><font><font>は予約語であるため、JSXでは属性として</font><font>使用できません</font><font>。そのためReactは</font></font><code>for</code>の代わりに<code>htmlFor</code><font><font>を使用し</font><font>ます。</font></font></p>
+<p>また <code>htmlFor</code> 属性は、HTMLで使用されている <code>for</code> 属性に対応しています。 JSX では <code>for</code> は予約語であるため、属性として使用できません。そのため React は <code>for</code> の代わりに <code>htmlFor</code> を使用します。</p>
 
-<p><font><font>ノート：</font></font></p>
+<p>注意点：</p>
 
 <ul>
- <li><font><font>JSX属性で</font><font>ブール値（</font></font><code>true</code><font><font>および</font></font><code>false</code><font><font>）</font><font>を使用するには</font><font>、それらを中括弧で囲む必要があります。</font><font>あなたが書く場合は</font></font><code>defaultChecked="true"</code><font><font>、の値は</font></font><code>defaultChecked</code><font><font>ではなくなり、文字列リテラル</font></font><code>"true"</code><font><font>になります。覚えておいてください—これは実際にはHTMLではなくJavaScriptです！</font></font></li>
- <li>先ほどのコードで使われたいた<code>aria-pressed</code>属性は<code>"true"</code>をもっていましたが、これはcheckedのようにブール値としてのtrueではありません。</li>
+ <li>JSX の属性でブール値（ <code>true</code> および <code>false</code> ）を使用するには、それらを中括弧で囲む必要があります。もし <code>defaultChecked="true"</code> と書いた場合、<code>defaultChecked</code> の値は文字列リテラルである <code>"true"</code> になります。これは実際には HTML ではなく JavaScript であることを忘れないでください。</li>
+ <li>先ほどのコードで使われていた <code>aria-pressed</code> 属性は <code>"true"</code> でしたが、これは <code>checked</code> のようにブール値としての true とは扱われないためです。</li>
 </ul>
 
-<h3 id="スタイルを実装する"><font><font>スタイルを実装する</font></font></h3>
+<h3 id="スタイルを実装する">スタイルを実装する</h3>
 
-<p><font><font>次のCSSコードをに貼り付けて、</font></font><code>src/index.css</code>を<font><font>現在あるものを置き換えます。</font></font></p>
+<p>次のCSSコードを <code>src/index.css</code> に貼り付けて、現在のコードを置き換えてください。</p>
 
-<pre>/* RESETS */
+<pre class="brush: css">/* RESETS */
 *,
 *::before,
 *::after {
@@ -541,51 +541,51 @@ body {
   opacity: 1;
 }</pre>
 
-<p><font><font>保存してブラウザーを確認すると、アプリに適切なスタイルが設定されているはずです。</font></font></p>
+<p>保存してブラウザーを確認すると、アプリに適切なスタイルが設定されているはずです。</p>
 
 <h2 id="まとめ">まとめ</h2>
 
-<p><font><font>これで、todoリストアプリはまるで実際のアプリのように見えます。</font><font>問題は、実際には何も動かないことです。</font><font>次の章で修正を始めます！</font></font></p>
+<p>これで、私達の todoリストアプリは実際のアプリのようになりました。ただし、まだ実際には何も動きません。次の章で修正をしていきます。</p>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
 
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
+ <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
+ <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
  <li>React
   <ul>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
   </ul>
  </li>
  <li>Ember
   <ul>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
   </ul>
  </li>
  <li>Vue
   <ul>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
+   <li><a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
   </ul>
  </li>
 </ul>

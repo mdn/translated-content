@@ -9,7 +9,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary"><strong><code>Function</code> 생성자</strong>는 새 <code>Function</code> 객체를 만듭니다.</span> 이 생성자를 직접 호출하여 동적으로 함수를 생성할 수도 있으나, 보안 문제 및 {{jsxref("eval")}}과 유사한(그러나 훨씬 덜 심각한) 성능 문제가 발생할 수 있습니다. 하지만 <code>eval</code>과 달리, <code>Function</code> 생성자는 전역 범위로 한정된 함수만 생성합니다.</p>
+
+<p><strong><code>Function</code> 생성자</strong>는 새 <code>Function</code> 객체를 만듭니다. 이 생성자를 직접 호출하여 동적으로 함수를 생성할 수도 있으나, 보안 문제 및 {{jsxref("eval")}}과 유사한(그러나 훨씬 덜 심각한) 성능 문제가 발생할 수 있습니다. 하지만 <code>eval</code>과 달리, <code>Function</code> 생성자는 전역 범위로 한정된 함수만 생성합니다.</p>
+
 
 <div>{{EmbedInteractiveExample("pages/js/function-constructor.html")}}</div>
 
@@ -50,7 +52,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function
 <dl>
  <dt>{{jsxref("Function.arguments")}} {{deprecated_inline}}</dt>
  <dd>함수에 전달되는 인수(argument)에 해당하는 배열. 이는 {{jsxref("Function")}}의 속성으로 사라지므로(deprecated), 대신 함수 내에서 이용 가능한 {{jsxref("Functions/arguments", "arguments")}} 객체를 사용하세요.</dd>
- <dt><s class="obsoleteElement">{{jsxref("Function.arity")}} {{obsolete_inline}}</s></dt>
+ <dt><s class="obsoleteElement">{{jsxref("Function.arity")}} {{deprecated_inline}}</s></dt>
  <dd><s class="obsoleteElement">함수에 의해 기대되는 인수의 수를 지정하기 위해 사용됐으나 제거되었습니다. 대신 {{jsxref("Function.length", "length")}} 속성을 사용하세요.</s></dd>
  <dt>{{jsxref("Function.caller")}} {{non-standard_inline}}</dt>
  <dd>현재 실행 중인 함수를 호출한 함수를 지정합니다.</dd>
@@ -76,7 +78,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function
  <dt>{{jsxref("Function.prototype.call()")}}</dt>
  <dd>함수를 호출(실행)하고 <em>this</em>를 제공된 값으로 설정합니다, 인수는 그대로 전달될 수 있습니다.</dd>
  <dt>{{jsxref("Function.prototype.isGenerator()")}} {{non-standard_inline}}</dt>
- <dd>함수가 <a href="/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators" title="generator">생성기</a>인 경우 <code>true</code>를 반환합니다; 그렇지 않으면 <code>false</code>를 반환합니다.</dd>
+ <dd>함수가 <a href="/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators">생성기</a>인 경우 <code>true</code>를 반환합니다; 그렇지 않으면 <code>false</code>를 반환합니다.</dd>
  <dt>{{jsxref("Function.prototype.toSource()")}} {{non-standard_inline}}</dt>
  <dd>함수의 소스 코드를 나타내는 문자열을 반환합니다. {{jsxref("Object.prototype.toSource")}} 메서드를 재정의(override)합니다.</dd>
  <dt>{{jsxref("Function.prototype.toString()")}}</dt>

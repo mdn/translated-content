@@ -61,7 +61,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
    <td><a id="all_frames"><code>all_frames</code></a></td>
    <td><code>Boolean</code></td>
    <td>
-    <p><code>true</code>: <code><a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts$edit#js">js</a></code> と <code><a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts$edit#css">css</a></code> で指定されたすべてのスクリプトを、指定した URL要求にマッチするすべてのフレームに(タブの最上位フレームでなくても)挿入します。これは親のフレームだけが URL要求にマッチしている子フレームには挿入しません。URL 要求は各フレームごとにチェックされます。</p>
+    <p><code>true</code>: <code><a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#js">js</a></code> と <code><a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#css">css</a></code> で指定されたすべてのスクリプトを、指定した URL要求にマッチするすべてのフレームに(タブの最上位フレームでなくても)挿入します。これは親のフレームだけが URL要求にマッチしている子フレームには挿入しません。URL 要求は各フレームごとにチェックされます。</p>
 
     <p><code>false</code>: タブの最上位フレームで URL要求にマッチしたフレームだけに挿入します。</p>
 
@@ -80,17 +80,17 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
   <tr>
    <td><a id="exclude_globs"><code>exclude_globs</code></a></td>
    <td><code>Array</code></td>
-   <td>ワイルドカードを含む文字配列。下記の <a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">URL パターンにマッチする</a> を見てください。</td>
+   <td>ワイルドカードを含む文字配列。下記の <a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#URL_パターンにマッチする">URL パターンにマッチする</a> を見てください。</td>
   </tr>
   <tr>
    <td><a id="exclude_matches"><code>exclude_matches</code></a></td>
    <td><code>Array</code></td>
-   <td><a href="/ja/Add-ons/WebExtensions/match_patterns">マッチパターン</a>の配列。下記の <a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">URL パターンにマッチする</a>を見てください。</td>
+   <td><a href="/ja/Add-ons/WebExtensions/match_patterns">マッチパターン</a>の配列。下記の <a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#URL_パターンにマッチする">URL パターンにマッチする</a>を見てください。</td>
   </tr>
   <tr>
    <td><a id="include_globs"><code>include_globs</code></a></td>
    <td><code>Array</code></td>
-   <td>ワイルドカードを含む文字配列。下記の <a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">URL パターンにマッチする</a> を見てください。</td>
+   <td>ワイルドカードを含む文字配列。下記の <a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#URL_パターンにマッチする">URL パターンにマッチする</a> を見てください。</td>
   </tr>
   <tr>
    <td><a id="js"><code>js</code></a></td>
@@ -105,14 +105,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 
     <p><code>こうすると <code>"my-content-script.js"</code> から jQuery を使えます。</code></p>
 
-    <p><code>ファイルは <code><a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts$edit#run_at">run_at</a></code> で指定した時に挿入されます。</code></p>
+    <p><code>ファイルは <code><a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#run_at">run_at</a></code> で指定した時に挿入されます。</code></p>
    </td>
   </tr>
   <tr>
    <td><code><a id="match_about_blank">match_about_blank</a></code></td>
    <td><code>Boolean</code></td>
    <td>
-    <p>コンテンツスクリプトを <code>"about:blank"</code> もしくは<code>"about:srcdoc"</code>のURLを持つページに挿入します。 if the URL of the page that opened or created this page <a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">matches the patterns</a> specified in the rest of the <code>content_scripts</code> key.</p>
+    <p>コンテンツスクリプトを <code>"about:blank"</code> もしくは<code>"about:srcdoc"</code>のURLを持つページに挿入します。 if the URL of the page that opened or created this page <a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#URL_パターンにマッチする">matches the patterns</a> specified in the rest of the <code>content_scripts</code> key.</p>
 
     <p>This is especially useful to run scripts in empty iframes , whose URL is <code>"about:blank"</code>. To do this you should also set the <code>all_frames</code> key.</p>
 
@@ -137,7 +137,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
    <td><a id="matches"><code>matches</code></a></td>
    <td><code>Array</code></td>
    <td>
-    <p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">マッチパターン</a>の配列。下記の <a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">URLパターンにマッチする</a> を見てください。</p>
+    <p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">マッチパターン</a>の配列。下記の <a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#URL_パターンにマッチする">URLパターンにマッチする</a> を見てください。</p>
 
     <p>これは唯一の必須なキーです。</p>
    </td>
@@ -146,7 +146,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
    <td><a id="run_at"><code>run_at</code></a></td>
    <td><code>String</code></td>
    <td>
-    <p>This option determines when the scripts specified in <code><a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts$edit#js">js</a></code> are injected. You can supply one of three strings here, each of which identifies a state in the process of loading a document. The states directly correspond to {{domxref("Document/readyState", "Document.readyState")}}:</p>
+    <p>This option determines when the scripts specified in <code><a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#js">js</a></code> are injected. You can supply one of three strings here, each of which identifies a state in the process of loading a document. The states directly correspond to {{domxref("Document/readyState", "Document.readyState")}}:</p>
 
     <ul>
      <li>"<code>document_start</code>": corresponds to <code>loading</code>. The DOM is still loading.</li>
@@ -156,7 +156,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 
     <p>The default value is <code>"document_idle"</code>.</p>
 
-    <p>In all cases, files in <code><a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts$edit#js">js</a></code> are injected after files in <code><a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts$edit#css">css</a></code>.</p>
+    <p>In all cases, files in <code><a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#js">js</a></code> are injected after files in <code><a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#css">css</a></code>.</p>
    </td>
   </tr>
  </tbody>
@@ -169,11 +169,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 <ul>
  <li><code>matches</code>: <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">マッチパターン</a>の配列</li>
  <li><code>exclude_matches:</code> <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">マッチパターン</a>の配列</li>
- <li><code>include_globs</code>: <a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts$edit#globs">globs</a> の配列</li>
- <li><code>exclude_globs:</code> <a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts$edit#globs">globs</a> の配列</li>
+ <li><code>include_globs</code>: <a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#globs">globs</a> の配列</li>
+ <li><code>exclude_globs:</code> <a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#globs">globs</a> の配列</li>
 </ul>
 
-<p>これらのプロパティにマッチするには、URL は配列内で少なくとも 1 つの項目にマッチしなれりばなりません。例えばこのようなプロパティが与えられたら:</p>
+<p>これらのプロパティにマッチするには、URL は配列内で少なくとも 1 つの項目にマッチしなければなりません。例えばこのようなプロパティが与えられたら:</p>
 
 <pre class="brush: json no-line-numbers  language-json notranslate">"matches": ["*://*.example.org/*", "*://*.example.com/*"]</pre>
 
@@ -197,7 +197,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
  <li>"?" はちょうど 1個のキャラクターにマッチします</li>
 </ul>
 
-<p>例えば: <code>"*na?i"</code> は <code>"illuminati"</code> と <code>"annunaki"</code> にマッチし、<code>"sagnarelli"</code> にはマッチしせん</p>
+<p>例えば: <code>"*na?i"</code> は <code>"illuminati"</code> と <code>"annunaki"</code> にマッチし、<code>"sagnarelli"</code> にはマッチしません。</p>
 
 <h2 id="例">例</h2>
 
@@ -223,7 +223,5 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 <p>コンテンツスクリプトは同じ DOM を見て、配列の順番どおりに挿入されます。よって "borderify.js" からは "jquery.js" によって追加されたグローバル変数が見えます。</p>
 
 <h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("webextensions.manifest.content_scripts")}}</p>

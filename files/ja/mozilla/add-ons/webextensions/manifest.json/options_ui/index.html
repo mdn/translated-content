@@ -31,13 +31,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
  </tbody>
 </table>
 
-<p><code>options_ui</code> キーは、拡張機能の<a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Options_pages">オプションページ</a>を定義するために使用します。</p>
+<p><code>options_ui</code> キーは、拡張機能の<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">オプションページ</a>を定義するために使用します。</p>
 
 <p>オプションページは、拡張機能の設定を含みます。オプションページはブラウザーのアドオンマネージャー、または拡張機能内で {{WebExtAPIRef("runtime.openOptionsPage()")}} を使用することでアクセスできます。</p>
 
-<p><code>options_ui</code> を拡張機能にパッケージされた HTML ファイルへのパスとして指定します。通常のウェブページのように、HTML、CSS、JavaScript ファイルを含めることができます。しかし、通常のページと異なり、拡張機能が<a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">権限</a>を持つすべての <a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/API">WebExtension API</a> を使用できます。しかし、バックグラウンドスクリプトとは異なるスコープで実行されます。</p>
+<p><code>options_ui</code> を拡張機能にパッケージされた HTML ファイルへのパスとして指定します。通常のウェブページのように、HTML、CSS、JavaScript ファイルを含めることができます。しかし、通常のページと異なり、拡張機能が<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">権限</a>を持つすべての <a href="/ja/Add-ons/WebExtensions/API">WebExtension API</a> を使用できます。しかし、バックグラウンドスクリプトとは異なるスコープで実行されます。</p>
 
-<p><strong>オプションページ</strong>と<strong>バックグラウンドスクリプト</strong>の JavaScript 上で、データや関数を<strong>共有したい</strong>場合、{{WebExtAPIRef("extension.getBackgroundPage()")}} を使用してバックグラウンドスクリプトの <a href="/ja/docs/Web/API/Window">Window</a> への参照を直接取得するか、{{WebExtAPIRef("extension.getViews()")}} で拡張機能内で実行されているいずれかのページの {{domxref("Window")}} を取得します。あるいは、JavaScript で <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> や <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code>、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect">runtime.connect()</a></code> を使用することで、オプションページとバックグラウンドスクリプト間で相互にコミュニケーションできます。後者の方法 (や同等の <code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> ) でも <a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Background_scripts">バックグラウンドスクリプト</a>と<strong><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Content_scripts">コンテンツスクリプト</a></strong>とでオプションを共有できます。</p>
+<p><strong>オプションページ</strong>と<strong>バックグラウンドスクリプト</strong>の JavaScript 上で、データや関数を<strong>共有したい</strong>場合、{{WebExtAPIRef("extension.getBackgroundPage()")}} を使用してバックグラウンドスクリプトの <a href="/ja/docs/Web/API/Window">Window</a> への参照を直接取得するか、{{WebExtAPIRef("extension.getViews()")}} で拡張機能内で実行されているいずれかのページの {{domxref("Window")}} を取得します。あるいは、JavaScript で <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> や <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code>、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect">runtime.connect()</a></code> を使用することで、オプションページとバックグラウンドスクリプト間で相互にコミュニケーションできます。後者の方法 (や同等の <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> ) でも <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">バックグラウンドスクリプト</a>と<strong><a href="/ja/Add-ons/WebExtensions/Content_scripts">コンテンツスクリプト</a></strong>とでオプションを共有できます。</p>
 
 <p>一般的に、オプションページで変更されたオプションは、<a href="/ja/Add-ons/WebExtensions/API/storage">storage API</a> を使用して、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync">storage.sync</a> (ユーザーがログインしているすべてのブラウザーインスタンス間で設定を同期する場合) か <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a> (現在のマシン / プロファイルのローカル設定にする場合) のいずれかに保存します。バックグラウンドスクリプトに変更を通知する必要がある場合、バックグラウンドスクリプトで <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/onChanged">storage.onChanged</a> にリスナーを追加します。</p>
 
@@ -97,7 +97,5 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
   }</pre>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("webextensions.manifest.options_ui")}}</p>

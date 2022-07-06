@@ -21,7 +21,7 @@ oReq.send();</pre>
 
 <h2 id="Manipulando_Respostas">Manipulando Respostas</h2>
 
-<p>Existem vários tipos de <a href="http://www.w3.org/TR/XMLHttpRequest2/#response" title="http://www.w3.org/TR/XMLHttpRequest2/#response">atributos de resposta</a> definidos pela especificação da W3C para o  XMLHttpRequest.  Eles informam ao cliente que efetuou a requisição XMLHttpRequest informações importantes sobre o status da resposta. Em alguns casos onde se lida com tipos de resposa de não-texto, os tipos de resposta podem envolver alguma manipulação e/ou análise conforme descrito nas seções seguintes<span style="line-height: 1.572;">.</span></p>
+<p>Existem vários tipos de <a href="http://www.w3.org/TR/XMLHttpRequest2/#response">atributos de resposta</a> definidos pela especificação da W3C para o  XMLHttpRequest.  Eles informam ao cliente que efetuou a requisição XMLHttpRequest informações importantes sobre o status da resposta. Em alguns casos onde se lida com tipos de resposa de não-texto, os tipos de resposta podem envolver alguma manipulação e/ou análise conforme descrito nas seções seguintes<span style="line-height: 1.572;">.</span></p>
 
 <h3 id="Analisando_e_manipulando_a_propriedade_responseXML">Analisando e manipulando a propriedade <code>responseXML</code></h3>
 
@@ -60,7 +60,7 @@ oReq.overrideMimeType("text/plain; charset=x-user-defined");
 /* ... */
 </pre>
 
-<p>A especificação XMLHttpRequest Level 2  adiciona novo <a href="http://www.w3.org/TR/XMLHttpRequest2/#the-responsetype-attribute" title="http://www.w3.org/TR/XMLHttpRequest2/#the-responsetype-attribute">responseType attributes</a> que tornam o envio e recebimento de dados muito mais fácil.</p>
+<p>A especificação XMLHttpRequest Level 2  adiciona novo <a href="http://www.w3.org/TR/XMLHttpRequest2/#the-responsetype-attribute">responseType attributes</a> que tornam o envio e recebimento de dados muito mais fácil.</p>
 
 <pre class="brush:js">var oReq = new XMLHttpRequest();
 
@@ -79,7 +79,7 @@ oReq.send();
 
 <p><code>XMLHttpRequest</code> <span id="result_box" lang="pt"><span class="hps">fornece a capacidade de</span> <span class="hps">ouvir vários</span> <span class="hps">eventos que podem</span> <span class="hps">ocorrer</span> <span class="hps">enquanto o</span> <span class="hps">pedido está sendo processado</span></span>. <span id="result_box" lang="pt"><span class="alt-edited">Isso inclui notificações periódicas de progresso, notificações de erro e assim por diante</span></span>.</p>
 
-<p>Suporte para evento de progresso DOM monitorando a conexão <code>XMLHttpRequest</code> transfers siga a Web API <a href="http://dev.w3.org/2006/webapi/progress/Progress.html" title="http://dev.w3.org/2006/webapi/progress/Progress.html">specification for progress events</a>: estes eventos implementam a interface {{domxref("ProgressEvent")}} .</p>
+<p>Suporte para evento de progresso DOM monitorando a conexão <code>XMLHttpRequest</code> transfers siga a Web API <a href="http://dev.w3.org/2006/webapi/progress/Progress.html">specification for progress events</a>: estes eventos implementam a interface {{domxref("ProgressEvent")}} .</p>
 
 <pre class="brush:js">var oReq = new XMLHttpRequest();
 
@@ -657,7 +657,7 @@ oReq.send(null);</pre>
 
 <h3 id="XMLHttpRequests_being_stopped">XMLHttpRequests being stopped</h3>
 
-<p>If you end up with an XMLHttpRequest having <code>status=0</code> and <code>statusText=null</code>, it means that the request was not allowed to be performed. It was <code><a href="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent" title="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent">UNSENT</a></code>. A likely cause for this is when the <a href="http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin" style="outline: 1px dotted; outline-offset: 0pt;"><code>XMLHttpRequest</code> origin</a> (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest is then <code>open()</code>. This case can happen for example when one has an XMLHttpRequest that gets fired on an onunload event for a window: the XMLHttpRequest gets in fact created when the window to be closed is still there, and then the request is sent (ie <code>open()</code>) when this window has lost its focus and potentially different window has gained focus. The way to avoid this problem is to set a listener on the new window "activate" event that gets set when the old window has its "unload" event fired.</p>
+<p>If you end up with an XMLHttpRequest having <code>status=0</code> and <code>statusText=null</code>, it means that the request was not allowed to be performed. It was <code><a href="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent">UNSENT</a></code>. A likely cause for this is when the <a href="http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin" style="outline: 1px dotted; outline-offset: 0pt;"><code>XMLHttpRequest</code> origin</a> (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest is then <code>open()</code>. This case can happen for example when one has an XMLHttpRequest that gets fired on an onunload event for a window: the XMLHttpRequest gets in fact created when the window to be closed is still there, and then the request is sent (ie <code>open()</code>) when this window has lost its focus and potentially different window has gained focus. The way to avoid this problem is to set a listener on the new window "activate" event that gets set when the old window has its "unload" event fired.</p>
 
 <h2 id="Using_XMLHttpRequest_from_JavaScript_modules_XPCOM_components">Using XMLHttpRequest from JavaScript modules / XPCOM components</h2>
 
@@ -685,5 +685,5 @@ var oReq = XMLHttpRequest();
  <li><a href="http://developer.apple.com/internet/webcontent/xmlhttpreq.html">Apple developers' reference</a></li>
  <li><a href="http://jibbering.com/2002/4/httprequest.html">"Using the XMLHttpRequest Object" (jibbering.com)</a></li>
  <li><a href="http://www.w3.org/TR/XMLHttpRequest/">The XMLHttpRequest Object: W3C Specification</a></li>
- <li><a href="http://dev.w3.org/2006/webapi/progress/Progress.html" title="http://dev.w3.org/2006/webapi/progress/Progress.html">Web Progress Events specification</a></li>
+ <li><a href="http://dev.w3.org/2006/webapi/progress/Progress.html">Web Progress Events specification</a></li>
 </ol>

@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
+<pre class="syntaxbox">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
    <em>statements</em>
 }
 </pre>
@@ -49,7 +49,7 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <h3 id="Простой_пример">Простой пример</h3>
 
-<pre class="brush: js notranslate">function resolveAfter2Seconds(x) {
+<pre class="brush: js">function resolveAfter2Seconds(x) {
   return new Promise(resolve =&gt; {
     setTimeout(() =&gt; {
       resolve(x);
@@ -86,7 +86,7 @@ add2(10).then(v =&gt; {
 
 <h3 id="Когда_функция_async_выбрасывает_исключение">Когда функция <code>async </code>выбрасывает исключение</h3>
 
-<pre class="brush: js notranslate">async function throwsValue() {
+<pre class="brush: js">async function throwsValue() {
     throw new Error('oops');
 }
 throwsValue()
@@ -112,7 +112,7 @@ throwsValue()
 
 <p>API, которое возвращает {{jsxref("Promise")}}, будет возвращать значение в цепочке, тем самым разбивая функцию на много частей. Рассматривая следующий код:</p>
 
-<pre class="brush: js notranslate">function getProcessedData(url) {
+<pre class="brush: js">function getProcessedData(url) {
   return downloadData(url) // returns a promise
     .catch(e =&gt; {
       return downloadFallbackData(url) // returns a promise
@@ -125,7 +125,7 @@ throwsValue()
 
 <p>он может быть переписан с одним использованием функции <code>async</code>:</p>
 
-<pre class="brush: js notranslate">async function getProcessedData(url) {
+<pre class="brush: js">async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
@@ -140,34 +140,12 @@ throwsValue()
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Initial definition in ES2017.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES8', '#sec-async-function-definitions', 'async function')}}</td>
-   <td>{{Spec2('ES8')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
 <div>
-<div class="hidden">Таблица совместимости на этой странице создаётся из структурированных данных. Если вы хотите внести свой вклад, ознакомьтесь с <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправить нам pull request.</div>
-
-<p>{{Compat("javascript.statements.async_function")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h2 id="Смотрите_также">Смотрите также</h2>

@@ -50,7 +50,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <p>각각의 기술은 저마다 용도가 있고, 장단점이 있으며, 어떤 기술도 독립적인 용도를 갖추도록 설계되지는 않았다. 각 메서드가 어떤 용도로 마련된 것인지 이해하게 되면 해당 작업에 가장 적합한 도구가 어떤 것인지 파악하는 데 유리한 입지를 점하게 된다.</p>
 
-<h2 id="보통_흐름normal_flow">보통 흐름(normal flow)</h2>
+<h2 id="Normal_flow">보통 흐름(normal flow)</h2>
 
 <p>보통 흐름(normal flow)은 당신이 페이지 레이아웃을 전혀 제어하지 않을 경우 브라우저가 기본값으로 HTML 페이지를 배치하는 방법을 말합니다. 간단한 HTML 예를 살펴봅시다:</p>
 
@@ -66,7 +66,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <p>기본적으로 브라우저는 이 코드를 다음과 같이 표시한다.</p>
 
-<p>{{ EmbedLiveSample('일반_대열', '100%', 200) }}</p>
+<p>{{ EmbedLiveSample('Normal_flow', '100%', 200) }}</p>
 
 <p>소스 코드에 나타나는 순서 그대로 HTML 요소가 표시되는 방법에 주의하자. 요소가 상대 요소의 상위(上位)에 차곡 차곡 올려진다. 즉 첫 번째 단락이 나오고 순서가 없는 목록이 이어지고 두 번째 단락으로 이어진다.</p>
 
@@ -88,7 +88,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
  <li><strong>다단 레이아웃</strong> — <a href="/en-US/docs/Web/CSS/CSS_Columns">다단 레이아웃</a> 속성은 당신이 신문 지상에서 볼 수 있듯이 블록 콘텐츠를 단 형태로 배치되도록 만들 수 있다.</li>
 </ul>
 
-<h2 id="디스플레이_속성">디스플레이 속성</h2>
+<h2 id="Flexbox">디스플레이 속성</h2>
 
 <p>CSS 상에서 페이지 레이아웃을 완성하는 주요 메서드는 <code>display</code> 속성에 포함된 모든 속성값 지정을 통해 이뤄진다. 디스플레이 속성은 요소가 표시되는 기본값 변경을 허용한다. 보통 흐름(normal flow)상의 모든 요소는 한 가지 <code>display</code> 속성값을 갖고 있으며, 해당 요소의 기본 동작 방식을 지정하는 데 사용된다. 예를 들어 영어로 된 단락은 다른 대상 요소 바로 밑에 표시되는 것은 그들 요소의 스타일이 <code>display: block</code>으로 지정되었기 때문이다. 단락 내부 어떤 텍스트 주변에 링크를 만들면 그 링크는 나머지 텍스트와 함께 인라인을 유지하며 새 줄로 넘어가는 행갈이를 하지 않는다. 그런 까닭에 {{htmlelement("a")}} 요소는 기본값으로 <code>display: inline</code>가 된다.</p>
 
@@ -104,9 +104,9 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <p>그러나 부모 요소에 <code>display: flex</code>를 부여하면 세개 항목이 자체적으로 단으로 배열된다. 그렇게 된 까닭은 그들 요소들이 <em>가변 항목</em>이 되었을 뿐만 아니라 flexbox가 그들 요소에 부여한 일부 초기값을 사용했기 때문이다. 그들은 행으로 표시되었는데, 그 까닭은 {{cssxref("flex-direction")}}의 초기값이 <code>row</code>이기 때문이다. 그들은 모두 항목 무리에서 키가 가장 큰 높이로 연장된 모양새가 되는데, 그 까닭은 {{cssxref("align-items")}} 속성의 초기값이 <code>stretch</code>이기 때문이다. 즉, 항목 무리가 가변 컨테이너의 높이에 맞춰 연장된다는 것으로 이번 경우에 키가 가장 큰 항목이 기준으로 정해진다. 항목 무리 전체가 가변 컨테이너의 초입에 맞춰 정렬하면서 행의 말미에 여분의 공간이 남겨진다.</p>
 
-<div id="가변_1">
+<div id="Flex_1">
 <div class="hidden">
-<h6 id="flexbox_예제_1">flexbox 예제 1</h6>
+<h6 id="Flexbox_Example_1">flexbox 예제 1</h6>
 
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -131,15 +131,15 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('가변_1', '300', '200') }}</p>
+<p>{{ EmbedLiveSample('Flex_1', '300', '200') }}</p>
 
 <p>가변 콘테이너에 적용될 수 있는 상기한 속성이외에도 가변 항목에 적용될 수 있는 속성이 있다. 다른 것들 중에서 그들 속성들은 항목이 변형되는 방식을 변경할 수 있는데, 항목을 여유 공간에 맞춰 연장하거나 수축될 수 있다.</p>
 
 <p>이에 대한 간단한 예로 자식 항목 전체에 대한 {{cssxref("flex")}} 속성에 대해 속성값 <code>1</code>을 부가할 수 있다. 그로 인해 컨테이너 말미에 공간을 남기지 않고 항목 무리 전체가 확대되거나 채워지도록 만든다. 항목 무리보다 많은 공간이 있을 경우는 늘어날 것이고 적은 공간이 있으면 축소될 것이다. 게다가 HTML 마크업에 다른 요소를 추가하면 그 대상 요소를 위한 공간 생성을 위해 항목 무리 전체가 축소될 것이다. 그들은 그 요소가 뭐가됐건 동일한 공간 점유를 위해 크기가 조종된다.</p>
 
-<div id="가변_2">
+<div id="Flex_2">
 <div class="hidden">
-<h6 id="flexbox_예제_2">flexbox 예제 2</h6>
+<h6 id="Flexbox_Example_2">flexbox 예제 2</h6>
 
 <pre class="brush: css">    * {box-sizing: border-box;}
 
@@ -168,7 +168,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('가변_2', '300', '200') }}</p>
+<p>{{ EmbedLiveSample('Flex_2', '300', '200') }}</p>
 
 <div class="note">
 <p><strong>참고</strong>: 이 안내서는 flexbox 상에서 있을 수 있는 내용에 대한 짧은 입문서였다. 더 자세한 내용은 <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">flexbox</a> 편을 참조하세요.</p>
@@ -180,9 +180,9 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <p>반복되는 얘기지만, 디스플레이 속성에 <code>display: grid</code>라는 특정 값을 지정하면 그리드 레이아웃으로 전환할 수 있다. 아래 예를 보면 가변 요소 사례에 비슷한 마크업을 사용했다. 하나의 컨테이너와 몇몇 자식 요소가 딸려있다. 우리는 <code>display: grid</code> 사용뿐만 아니라 {{cssxref("grid-template-rows")}}와 {{cssxref("grid-template-columns")}}라는 개별 속성을 활용하여 부모 요소를 상대로 일부 행과 열 궤도를 정의한다. 여기 각기 <code>1fr</code>값이 지정된 3열과 <code>100px</code>이 지정된 2행을 정의했다. 자식 요소 상에 굳이 어떤 규칙도 적용할 필요없이, 그 요소들이 우리가 생성한 그리드 안에 자동적으로 자리잡게 된다.</p>
 
-<div id="격자_1">
+<div id="Grid_1">
 <div class="hidden">
-<h6 id="그리드_예제_1">그리드 예제 1</h6>
+<h6 id="Grid_example_1">그리드 예제 1</h6>
 
 <pre class="brush: css">    * {box-sizing: border-box;}
 
@@ -213,13 +213,13 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('격자_1', '300', '330') }}</p>
+<p>{{ EmbedLiveSample('Grid_1', '300', '330') }}</p>
 
 <p>그리드가 주어지고 나면 앞서 확인했듯 당신의 항목 무리를 그리드 상에 자동 배치하는 동작 방식이 아니라 명시적으로 위치를 지정할 수 있다. 아래 두 번째 예제에서 동일한 그리드를 정의했지만, 이번에는 세개의 자식 항목이 주어졌다. 우리는 {{cssxref("grid-column")}}와 {{cssxref("grid-row")}}를 사용해서 각 항목의 행과 열의 시작과 끝을 지정했다. 이로써 항목 무리가 차지하는 공간이 여러 궤도에 걸쳐 확대되었다.</p>
 
-<div id="격자_2">
+<div id="Grid_2">
 <div class="hidden">
-<h6 id="그리드_예제_2">그리드 예제 2</h6>
+<h6 id="Grid_example_2">그리드 예제 2</h6>
 
 <pre class="brush: css">    * {box-sizing: border-box;}
 
@@ -262,7 +262,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('격자_2', '300', '330') }}</p>
+<p>{{ EmbedLiveSample('Grid_2', '300', '330') }}</p>
 
 <div class="note">
 <p><strong>참고</strong>: 이 두 예제는 그리드 레이아웃의 일부분일 뿐이며, 자세한 내용은 <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">그리드 레이아웃</a></p>
@@ -285,9 +285,9 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <p>아래 예제에서 우리는 <code>&lt;div&gt;</code> 왼쪽을 띄우고 오른쪽에 {{cssxref("margin")}}을 주어 텍스트를 <code>&lt;div&gt;</code> 요소 자리에서 밀어낸다. 이것은 우리에게 텍스트가 그 상자를 감싸는 효과를 부여하며, 이는 현대 웹 디자인에서 사용되는 Floats에 대해 알아야할 내용의 대부분이다.</p>
 
-<div id="부동_1">
+<div id="Float_1">
 <div class="hidden">
-<h6 id="Floats_예제">Floats 예제</h6>
+<h6 id="Floats_example">Floats 예제</h6>
 
 <pre class="brush: css">body {
     width: 90%;
@@ -327,13 +327,13 @@ p {
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('부동_1', '100%', 600) }}</p>
+<p>{{ EmbedLiveSample('Float_1', '100%', 600) }}</p>
 
 <div class="note">
 <p><strong>참고</strong>: Floats에 대한 설명은 <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">부동 및 해제</a> 속성 편에서 충분히 다룹니다. flexbox 및 그리드 레이아웃과 같은 기술이 나오기 이전에 Floats는 열 레이아웃을 만드는 메서드로 사용되었다. 웹에서 이러한 메서드와 대면하는 경우도 여전히 있다. <a href="/ko/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">레거시 레이아웃 메서드</a>에 관한 단원에서 그 내용을 다루게 된다.</p>
 </div>
 
-<h2 id="포지셔닝_기술">포지셔닝 기술</h2>
+<h2 id="Positioning_techniques">포지셔닝 기술</h2>
 
 <p>포지셔닝를 통해 보통 흐름(normal flow)속에 있는 요소를 예상되는 기존의 배치 위치에서 벗어나 다른 위치로 이동시킬 수 있다. 포지셔닝는 메인 페이지 레이아웃을 생성하는 메서드가 아니라 페이지의 특정 항목의 위치를 관리하고 미세 조정하는 것에 관한 것이다.</p>
 
@@ -349,7 +349,7 @@ p {
  <li><strong>스티키 포지셔닝</strong>는 하나의 요소를 <code>position: static</code>와 같이 작동하다가 뷰포트 기준에서 사전에 정의된 간격띄우기 지점에 도달한 순간 이후부터는 <code>position: fixed</code>와 같이 같이 작동하는 새로운 포지셔닝 메서드이다.</li>
 </ul>
 
-<h3 id="간단한_포지셔닝_예제">간단한 포지셔닝 예제</h3>
+<h3 id="Simple_positioning_example">간단한 포지셔닝 예제</h3>
 
 <p>이러한 페이지 레이아웃 기술에 친숙해지도록 몇 가지 간단한 예를 보여드리겠습니다. 예제는 다음과 같이 모두 동일한 HTML 특성을 갖고 있다:</p>
 
@@ -377,9 +377,9 @@ p {
 
 <p>렌더링된 출력은 다음과 같다:</p>
 
-<p>{{ EmbedLiveSample('간단한_포지셔닝_예제', '100%', 300) }}</p>
+<p>{{ EmbedLiveSample('Simple_positioning_example', '100%', 300) }}</p>
 
-<h3 id="상대_포지셔닝">상대 포지셔닝</h3>
+<h3 id="Relative_positioning">상대 포지셔닝</h3>
 
 <p>상대 포지셔닝 통해 기본 대열 속에서 예상되는 기본값으로 주어지는 위치로부터 항목을 간격띄우기할 수 있다. 이것은 아이콘을 약간 아래로 이동하여 텍스트 레이블에 맞춰 정렬하는 것과 같은 작업을 수행할 수 있다는 의미다. 이를 위해 다음 규칙을 추가하여 상대적인 위치를 추가할 수 있습니다:</p>
 
@@ -393,9 +393,9 @@ p {
 
 <p>이 코드를 추가하면 다음과 같은 결과가 나타난다.</p>
 
-<div id="상대적_1">
+<div id="Relative_1">
 <div class="hidden">
-<h6 id="상대적_포지셔닝_예제">상대적 포지셔닝 예제</h6>
+<h6 id="Relative_positioning_example">상대적 포지셔닝 예제</h6>
 
 <pre class="brush: html">&lt;h1&gt;상대적 포지셔닝&lt;/h1&gt;
 
@@ -427,9 +427,9 @@ p {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('상대적_1', '100%', 300) }}</p>
+<p>{{ EmbedLiveSample('Relative_1', '100%', 300) }}</p>
 
-<h3 id="절대_포지셔닝">절대 포지셔닝</h3>
+<h3 id="Absolute_positioning">절대 포지셔닝</h3>
 
 <p>절대 포지셔닝는 보통 흐름(normal flow)에서 요소를 완전히 제거하고 컨테이너 블록의 가장자리로부터 간격띄우기값(오프셋)을 사용하여 배치하는 데 사용된다.</p>
 
@@ -443,9 +443,9 @@ p {
 
 <p>여기서 우리는 중간 단락에 <code>absolute</code> {{cssxref("position")}} 값과 이전과 동일한 {{cssxref("top")}}과 {{cssxref("left")}}속성을 부여한다. 그러나 이 코드를 추가하면 다음과 같은 결과가 나온다.</p>
 
-<div id="절대_1">
+<div id="Absolute_1">
 <div class="hidden">
-<h6 id="절대_포지셔닝_예제">절대 포지셔닝 예제</h6>
+<h6 id="Absolute_positioning_example">절대 포지셔닝 예제</h6>
 
 <pre class="brush: html">&lt;h1&gt;절대 포지셔닝&lt;/h1&gt;
 
@@ -477,7 +477,7 @@ p {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('절대_1', '100%', 300) }}</p>
+<p>{{ EmbedLiveSample('Absolute_1', '100%', 300) }}</p>
 
 <p>이건 아주 달라! 위치 지정 요소는 이제 페이지 레이아웃의 나머지 부분과 완전히 분리되어 그 것 위에 놓여있다. 나머지 두 단락은 이제 원래 위치에 있던 자기 형제가 존재하지 않은 듯이 나란히 놓여 있다. {{cssxref("top")}}과 {{cssxref("left")}} 속성은 상대적 위치 지정 요소에 대해 미치는 것과는 다른 영향을 절대적 위치 지정 요소에 대해 미친다. 이 경우 간격띄우기값(오프셋)은 페이지의 좌측 최상단을 기준으로 계산되었다. 여기서 컨테이너가 되는 부모 요소를 변경할 수 있으며 <a href="/en-US/docs/Learn/CSS/CSS_layout/위치잡기">포지셔닝</a>에 관한 단원에서 해당 내용을 살펴보겠다.</p>
 
@@ -496,9 +496,9 @@ p {
 &lt;p&gt;단락 3.&lt;/p&gt;
 </pre>
 
-<div id="고정_1">
+<div id="Fixed_1">
 <div class="hidden">
-<h6 id="고정_포지셔닝_예제">고정 포지셔닝 예제</h6>
+<h6 id="Fixed_positioning_example">고정 포지셔닝 예제</h6>
 
 <pre class="brush: html">&lt;h1&gt;고정 포지셔닝&lt;/h1&gt;
 
@@ -533,15 +533,15 @@ p {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('고정_1', '100%', 200) }}</p>
+<p>{{ EmbedLiveSample('Fixed_1', '100%', 200) }}</p>
 
 <h3 id="흡착_포지셔닝">흡착 포지셔닝</h3>
 
 <p>흡착 포지셔닝는 우리의 선택을 기다리며 대기중인 마지막 포지셔닝 메서드다. 이것은 기본값인 정적 포지셔닝와 고정 포지셔닝의 혼합형이다. 항목이 <code>position: sticky</code>로 지정된 경우 해당 항목은 뷰포트 기준에서 우리가 정의한 간격띄우기 지점에 도달하기 전까지 보통 흐름(normal flow) 상에서 스크롤된다. 그 지점에 마치 <code>position: fixed</code>가 적용된 것처럼 "철썩" 붙게 된다.</p>
 
-<div id="흡착_1">
+<div id="Sticky_1">
 <div class="hidden">
-<h6 id="흡착_포지셔닝_예제">흡착 포지셔닝 예제</h6>
+<h6 id="Sticky_positioning_example">흡착 포지셔닝 예제</h6>
 
 <pre class="brush: html">&lt;h1&gt;흡착 포지셔닝&lt;/h1&gt;
 
@@ -574,13 +574,13 @@ p {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('흡착_1', '100%', 200) }}</p>
+<p>{{ EmbedLiveSample('Sticky_1', '100%', 200) }}</p>
 
 <div class="note">
 <p><strong>참고</strong>: 포지셔닝에 대해 더 알아보고 싶다면 <a href="/kr/docs/Learn/CSS/CSS_layout/위치잡기">포지셔닝</a> 단원을 보라.</p>
 </div>
 
-<h2 id="테이블_레이아웃">테이블 레이아웃</h2>
+<h2 id="Table_layout">테이블 레이아웃</h2>
 
 <p>HTML 테이블은 표로 나타낸 데이터를 표시하기에는 무난했다. 그러나 (수년 전, 심지어 기초적인 CSS가 여러 브라우저에서 안정적으로 지원되기 이전에도) 웹 개발자들은 머리글, 바닥글, 서로 다른 단 등을 여러가지 테이블 행과 열에 집어넣어 웹페이지 전체 레이아웃을 짜는데 테이블을 사용하기도 했다. 이것은 당시에는 먹혔지만, 많은 문제가 상존했다. 테이블 레이아웃은 유연하지 않고, 마크업이 과도하고, 디버그하기 어렵고, 의미론적으로 맞지 않았다(예: 스크린 리더 사용자는 테이블 레이아웃을 탐색하는 데 문제가 있다).</p>
 
@@ -648,7 +648,7 @@ form p {
 
 <p>이것은 우리에게 다음과 같은 결과를 제공합니다.</p>
 
-<p>{{ EmbedLiveSample('테이블_레이아웃', '100%', '170') }}</p>
+<p>{{ EmbedLiveSample('Table_layout', '100%', '170') }}</p>
 
 <p>이 예제 역시 여기 <a href="https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html">CSS 테이블 예제</a>에서 라이브로 볼 수 있고, 이곳 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html">소스 코드</a>에서도 역시 볼 수 있다.</p>
 
@@ -671,9 +671,9 @@ form p {
 
 <p>우리는 해당 컨테이너에 200픽셀의 단 너비를 사용해서 브라우저가 컨테이너에 맞아 떨어지도록 최대 200픽셀의 단을 만들며, 그 뒤에 생성된 단 사이 나머지 공간을 나눠쓰게 된다.</p>
 
-<div id="다단_1">
+<div id="Multicol_1">
 <div class="hidden">
-<h6 id="다단_예제">다단 예제</h6>
+<h6 id="Multicol_example">다단 예제</h6>
 
 <pre class="brush: html">    &lt;div class="container"&gt;
         &lt;h1&gt;다단 레이아웃&lt;/h1&gt;
@@ -694,7 +694,7 @@ form p {
     }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('다단_1', '100%', 200) }}</p>
+<p>{{ EmbedLiveSample('Multicol_1', '100%', 200) }}</p>
 
 <h2 id="요약정리">요약정리</h2>
 

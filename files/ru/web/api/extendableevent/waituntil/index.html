@@ -19,7 +19,7 @@ translation_of: Web/API/ExtendableEvent/waitUntil
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><em>extendableEvent</em>.waitUntil(<em>promise</em>);</pre>
+<pre class="syntaxbox"><em>extendableEvent</em>.waitUntil(<em>promise</em>);</pre>
 
 <h3 id="Параметры">Параметры</h3>
 
@@ -33,7 +33,7 @@ translation_of: Web/API/ExtendableEvent/waitUntil
 
 <p>Использование <code>waitUntil()</code> внутри события <code>install</code> в service worker:</p>
 
-<pre class="brush: js;highlight:[10] notranslate">addEventListener('install', event =&gt; {
+<pre class="brush: js;highlight:[10]">addEventListener('install', event =&gt; {
   const preCache = async () =&gt; {
     const cache = await caches.open('static-v1');
     return cache.addAll([
@@ -47,26 +47,10 @@ translation_of: Web/API/ExtendableEvent/waitUntil
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификации</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-extendableevent-waituntil', 'waitUntil()')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Изначальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-
-<div class="hidden">Таблица совместимости на этой странице сгенерирована из структурированных данных. Если вы хотите внести свой вклад в данные, пожалуйста посмотрите на <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам pull request.</div>
-
-<p>{{Compat("api.ExtendableEvent.waitUntil")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

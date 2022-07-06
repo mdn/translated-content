@@ -12,7 +12,7 @@ translation_of: Web/HTTP/Headers/Accept-Language
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>HTTP の <strong><code>Accept-Language</code></strong> リクエストヘッダーは、クライアントがどの言語を理解できるか、どの種類のロケールが推奨されるかを示します。 (言語というのは、英語のような自然言語を意味し、プログラミング言語ではありません。) <a href="/ja/docs/Web/HTTP/Content_negotiation">コンテンツネゴシエーション</a>を使用して、サーバーは提案されたものから一つを選択して使用し、 {{HTTPHeader("Content-Language")}} レスポンスヘッダーを使用してクライアントに選択結果を知らせます。ブラウザーはユーザーインターフェイスの言語に従って、このヘッダーに適切な値を設定し、ユーザーはこれを変更することができますが、稀です (そして指紋につながるとして難色を示されます)。</p>
+<p>HTTP の <strong><code>Accept-Language</code></strong> リクエストヘッダーは、クライアントがどの言語を理解できるか、どの種類のロケールが推奨されるかを示します。 (言語というのは、英語のような自然言語を意味し、プログラミング言語ではありません。) <a href="/ja/docs/Web/HTTP/Content_negotiation">コンテンツネゴシエーション</a>を使用して、サーバーは提案されたものから一つを選択して使用し、 {{HTTPHeader("Content-Language")}} レスポンスヘッダーを使用してクライアントに選択結果を知らせます。ブラウザーはユーザーインターフェイスの言語に従って、このヘッダーに適切な値を設定し、ユーザーはこれを変更することができますが、稀です (そしてフィンガープリントにつながるとして難色を示されます)。</p>
 
 <p>このヘッダーはヒントであり、サーバーが言語を判別するための方法として、明示的なユーザーの選択によって制御する特定の URL など、他のものがない場合に使用されます。サーバーは明示的な決定を上書きしないことを推奨します。 <code>Accept-Language</code> の中身はユーザーが制御できないことが良くあります（旅行中で外国のインターネットカフェを使用している場合など）。ユーザーはユーザーインターフェースのロケール以外の言語によるページを訪問したがっているかもしれません。</p>
 
@@ -88,14 +88,12 @@ Accept-Language: en-US,en;q=0.5
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
-
 <p>{{Compat("http.headers.Accept-Language")}}</p>
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
- <li>HTTP <a href="/docs/Web/HTTP/Content_negotiation">コンテンツネゴシエーション</a></li>
+ <li>HTTP <a href="/ja/docs/Web/HTTP/Content_negotiation">コンテンツネゴシエーション</a></li>
  <li>コンテンツネゴシエーションの結果を伴うヘッダー: {{HTTPHeader("Content-Language")}}</li>
  <li>他の同様のヘッダー: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept")}}</li>
 </ul>

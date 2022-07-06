@@ -7,7 +7,7 @@ tags:
   - CSS 网格
 translation_of: Web/CSS/grid-template
 ---
-<p><strong><code>grid-template</code></strong>，CSS属性简写，用以定义网格中{{glossary("grid rows", "行")}}、{{glossary("grid column", "列")}}与{{glossary("grid areas", "分区")}}。</p>
+<p><strong><code>grid-template</code></strong>，CSS 属性简写，用以定义网格中{{glossary("grid rows", "行")}}、{{glossary("grid column", "列")}}与{{glossary("grid areas", "分区")}}。</p>
 
 <p>{{EmbedInteractiveExample("pages/css/grid-template.html")}}</p>
 
@@ -47,13 +47,13 @@ grid-template: unset;
  <dt><code>&lt;'grid-template-rows'&gt; / &lt;'grid-template-columns'&gt;</code></dt>
  <dd>指定{{cssxref("grid-template-rows")}}与{{cssxref("grid-template-columns")}}之值，并设{{cssxref("grid-template-areas")}}为<code>none</code>。</dd>
  <dt><code>[ &lt;line-names&gt;? &lt;string&gt; &lt;track-size&gt;? &lt;line-names&gt;? ]+ [ / &lt;explicit-track-list&gt; ]?</code></dt>
- <dd>设{{cssxref("grid-template-areas")}}为列得<code>&lt;string&gt;</code>、{{cssxref("grid-template-columns")}}为<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">&lt;explicit-track-list&gt;</span></font>（默认为<code>none</code>）、{{cssxref("grid-template-rows")}}为<code>&lt;track-size&gt;</code>（默认为<code>auto</code>）并拼接尺寸前后所定义之行。<br>
+ <dd>设{{cssxref("grid-template-areas")}}为列得<code>&lt;string&gt;</code>、{{cssxref("grid-template-columns")}}为&lt;explicit-track-list&gt;（默认为<code>none</code>）、{{cssxref("grid-template-rows")}}为<code>&lt;track-size&gt;</code>（默认为<code>auto</code>）并拼接尺寸前后所定义之行。<br>
 
- <p class="note">注：轨道被用以与“ASCII art”（即字符画，此处指<code>&lt;string&gt;</code>）中行列逐一视觉对齐，故<code>&lt;explicit-track-list&gt;</code>中不允许{{cssxref("repeat()")}}。</p>
+ <p>注：轨道被用以与“ASCII art”（即字符画，此处指<code>&lt;string&gt;</code>）中行列逐一视觉对齐，故<code>&lt;explicit-track-list&gt;</code>中不允许{{cssxref("repeat()")}}。</p>
  </dd>
 </dl>
 
-<p class="note"><strong>注：</strong>{{cssxref("grid")}}可如此用，但将重置隐式网格属性。Use <code>grid</code> (as opposed to <code>grid-template</code>) to prevent these values from cascading in seperately.</p>
+<p><strong>注：</strong>{{cssxref("grid")}}可如此用，但将重置隐式网格属性。Use <code>grid</code> (as opposed to <code>grid-template</code>) to prevent these values from cascading in seperately.</p>
 
 <h3 id="语法形式">语法形式</h3>
 
@@ -136,17 +136,17 @@ footer {
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>相关CSS属性：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}}、{{cssxref("grid-template-areas")}}</li>
+ <li>相关 CSS 属性：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}}、{{cssxref("grid-template-areas")}}</li>
  <li>网格布局指导：
   <ul>
-   <li><em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">CSS网格中基于线的定位</a></em></li>
+   <li><em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">CSS 网格中基于线的定位</a></em></li>
    <li><em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#网格定义的简写规则">网格定义的简写规则</a></em></li>
   </ul>
  </li>
  <li>视频教程：<em> <a href="http://gridbyexample.com/video/grid-template-shorthand/">Grid Template shorthand</a></em></li>
 </ul>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
  <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>

@@ -357,7 +357,7 @@ translation_of: Learn/Accessibility/HTML
   <span class="punctuation token">}</span>
 <span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
 
-<p>ここでは、キーボード上でいつボタンが押されたのかを検出するために、<code>document</code> オブジェクトにリスナーを追加しています。どのボタンが押されたのかを、イベント・オブジェクトの <code><a href="https://developer.mozilla.org/ja/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> プロパティを介して調べています。 [訳注: 以上の二つの文の「ボタン」はキーボード上のキーのことのようです。また、<code>keyCode</code> プロパティは非推奨になっています。]もしエンターキー / リターンキーに合致するキーコードだったら、<code>document.activeElement.onclick()</code> を用い、ボタンの <code>onclick</code> ハンドラーに記憶されている関数を実行します [訳注: この文の「ボタン」は <code>&lt;div&gt;</code> ボタンのことのようです]。<code><a href="https://developer.mozilla.org/ja/docs/Web/API/Document/activeElement">activeElement</a></code> は、ページ上で現在フォーカスの当たっている要素を教えてくれます。</p>
+<p>ここでは、キーボード上でいつボタンが押されたのかを検出するために、<code>document</code> オブジェクトにリスナーを追加しています。どのボタンが押されたのかを、イベント・オブジェクトの <code><a href="/ja/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> プロパティを介して調べています。 [訳注: 以上の二つの文の「ボタン」はキーボード上のキーのことのようです。また、<code>keyCode</code> プロパティは非推奨になっています。]もしエンターキー / リターンキーに合致するキーコードだったら、<code>document.activeElement.onclick()</code> を用い、ボタンの <code>onclick</code> ハンドラーに記憶されている関数を実行します [訳注: この文の「ボタン」は <code>&lt;div&gt;</code> ボタンのことのようです]。<code><a href="/ja/docs/Web/API/Document/activeElement">activeElement</a></code> は、ページ上で現在フォーカスの当たっている要素を教えてくれます。</p>
 
 <div class="note">
 <p><strong>注</strong>: 自分の独自のイベントハンドラーを、イベントハンドラー・プロパティ (たとえば <code>onclick</code>) を介して設定した場合にのみ、この技法がうまくいくだろうということに留意すべきです。<code>addEventListener</code> だと、うまくいきません。</p>

@@ -28,8 +28,8 @@ translation_of: Mozilla/Firefox/Releases/13
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li>ECMAScript 6 の <a href="/en/JavaScript/Reference/Statements/for...of" title="for...of"><code>for..of</code></a> 構造をサポートしました。</li>
- <li>ECMAScript 6 の <a href="/en/JavaScript/Reference/Global_Objects/Map" title="en/JavaScript/Reference/Global_Objects/Map"><code>Map</code></a> と <a href="/en/JavaScript/Reference/Global_Objects/Set" title="en/JavaScript/Reference/Global_Objects/Set"><code>Set</code></a> オブジェクトの実験的サポートを実装しました。</li>
+ <li>ECMAScript 6 の <a href="/ja/JavaScript/Reference/Statements/for...of" title="for...of"><code>for..of</code></a> 構造をサポートしました。</li>
+ <li>ECMAScript 6 の <a href="/ja/JavaScript/Reference/Global_Objects/Map" title="en/JavaScript/Reference/Global_Objects/Map"><code>Map</code></a> と <a href="/ja/JavaScript/Reference/Global_Objects/Set" title="en/JavaScript/Reference/Global_Objects/Set"><code>Set</code></a> オブジェクトの実験的サポートを実装しました。</li>
 </ul>
 
 <h3 id="DOM">DOM</h3>
@@ -39,7 +39,7 @@ translation_of: Mozilla/Firefox/Releases/13
  <li>{{ domxref("window.setTimeout()") }} および {{ domxref("window.setInterval()") }} メソッドは、付加的な引数である "遅延" をコールバックルーチンに渡さないようになりました。</li>
  <li>{{ domxref("Blob","Blob.mozSlice()") }} メソッドの接頭辞を削除しました。</li>
  <li>{{ domxref("Blob") }} コンストラクタをサポートしました。</li>
- <li><a href="/ja/DOM/Storage#globalStorage" title="ja/DOM/Storage#globalStorage"><code>globalStorage</code></a> のサポートを削除しました。</li>
+ <li><a href="/ja/DOM/Storage#globalStorage"><code>globalStorage</code></a> のサポートを削除しました。</li>
  <li>バックグラウンドの処理の状態や結果を報告するために用いる {{ domxref("DOMRequest") }} インタフェースを新たに追加しました。</li>
  <li>{{ domxref("HTMLOptionElement", "HTMLOptionElement.index()") }} メソッドは、{{ HTMLElement("option") }} が {{ HTMLElement("datalist") }} HTML 要素の内部にあるときに誤った値 <code>-1</code> ではなく <code>0</code> を返すようになりました。</li>
  <li>{{ domxref("DOMException") }} のうち DOM Level 4 で定義された部分を実装しました。</li>
@@ -52,7 +52,7 @@ translation_of: Mozilla/Firefox/Releases/13
 <h3 id="UA_文字列">UA 文字列</h3>
 
 <ul>
- <li>Android 版 Firefox は、フォームファクタを示すため <a href="/en/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators" title="en/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators">UserAgent 文字列に Tablet または Mobile のトークンを含むようになり</a>、Fennec トークンは持たなくなりました。また "Gecko/" に続く数値は、フリーズした日付から Gecko のバージョン番号に変わります。</li>
+ <li>Android 版 Firefox は、フォームファクタを示すため <a href="/ja/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators" title="en/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators">UserAgent 文字列に Tablet または Mobile のトークンを含むようになり</a>、Fennec トークンは持たなくなりました。また "Gecko/" に続く数値は、フリーズした日付から Gecko のバージョン番号に変わります。</li>
  <li>UA 文字列では、Gecko のパッチ番号やリリース状況をバージョン番号で公開しないようになりました。バージョン番号は常に "X.Y" という形式になり、X はメジャーリリース番号、Y はマイナー番号を表します。例えば、"13.0" や "14.1" となります。"14.0.1b1" のようにはなりません。</li>
 </ul>
 
@@ -65,14 +65,14 @@ translation_of: Mozilla/Firefox/Releases/13
 <h3 id="WebGL">WebGL</h3>
 
 <ul>
- <li><a href="/ja/WebGL/Using_Extensions#EXT_texture_filter_anisotropic" title="ja/WebGL/Using_Extensions#EXT_texture_filter_anisotropic"><code>EXT_texture_filter_anisotropic</code></a> 拡張のサポートを追加しました。異方性テクスチャフィルタリングは、テクスチャが貼り付けられた斜めのプリミティブを表示する際のミップマップテクスチャのアクセスの品質を向上させます。</li>
+ <li><a href="/ja/WebGL/Using_Extensions#EXT_texture_filter_anisotropic"><code>EXT_texture_filter_anisotropic</code></a> 拡張のサポートを追加しました。異方性テクスチャフィルタリングは、テクスチャが貼り付けられた斜めのプリミティブを表示する際のミップマップテクスチャのアクセスの品質を向上させます。</li>
 </ul>
 
 <h3 id="MathML">MathML</h3>
 
 <ul>
  <li>{{ MathMLElement("mtable") }} 要素で <code>width</code> 属性をサポートしました ({{ bug("722880") }})。</li>
- <li>数学的なテキストで <a class="external" href="http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/" rel="external" title="http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/">MathJax fonts</a> をデフォルトフォントとして使用するようになりました。詳しくは <a href="/en/Mozilla_MathML_Project/Fonts" title="Fonts for Mozilla's MathML engine">Fonts for Mozilla's MathML engine</a> をご覧ください。</li>
+ <li>数学的なテキストで <a class="external" href="http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/" rel="external">MathJax fonts</a> をデフォルトフォントとして使用するようになりました。詳しくは <a href="/ja/Mozilla_MathML_Project/Fonts" title="Fonts for Mozilla's MathML engine">Fonts for Mozilla's MathML engine</a> をご覧ください。</li>
 </ul>
 
 <h3 id="Developer_tools">Developer tools</h3>
@@ -111,7 +111,7 @@ translation_of: Mozilla/Firefox/Releases/13
  <li>ソースエディタの API に、ダーティフラグのサポートを追加しました。</li>
  <li>ソースエディタは、Orion を利用せずに {{ HTMLElement("textarea") }} へフォールバックする動作をサポートしなくなりました。</li>
  <li>エディタが focus と blue のイベントを公開するようになりました。</li>
- <li><a href="/en/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29" title="en/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29"><code>getIndentationString()</code></a> メソッドを追加しました。これは、エディタでテキストのインデントに使用する文字を返します。</li>
+ <li><a href="/ja/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29" title="en/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29"><code>getIndentationString()</code></a> メソッドを追加しました。これは、エディタでテキストのインデントに使用する文字を返します。</li>
  <li>ソースエディタで、ブレークポイントのリストの管理とブレークポイントのオン・オフを切り替えるユーザインタフェースの表示をサポートしました。ただし実際は、ブレークポイントを実装していません。そのためのデバッガのコードを記述するのはあなた次第です。</li>
  <li><code>highlightCurrentLine</code> 設定オプションを用いて、カレント行をハイライトする機能をサポートしました。</li>
 </ul>
@@ -119,16 +119,16 @@ translation_of: Mozilla/Firefox/Releases/13
 <h3 id="ARIA">ARIA</h3>
 
 <ul>
- <li>CSS プロパティ {{ cssxref("margin-left") }}、{{ cssxref("margin-right") }}、{{ cssxref("margin-top") }}、および {{ cssxref("margin-bottom") }} はすべて、同じ名前で ARIA オブジェクトに反映されます。詳しくは <a href="/en/Accessibility/AT-APIs/Gecko/Attrs" title="Gecko Object Attributes">Gecko object attributes</a> をご覧ください。</li>
+ <li>CSS プロパティ {{ cssxref("margin-left") }}、{{ cssxref("margin-right") }}、{{ cssxref("margin-top") }}、および {{ cssxref("margin-bottom") }} はすべて、同じ名前で ARIA オブジェクトに反映されます。詳しくは <a href="/ja/Accessibility/AT-APIs/Gecko/Attrs" title="Gecko Object Attributes">Gecko object attributes</a> をご覧ください。</li>
 </ul>
 
 <h3 id="インタフェースの変更">インタフェースの変更</h3>
 
 <ul>
- <li>{{ interface("nsIScreen") }} インタフェースが、新たに引数 <code>rotation</code> を通して回転の制御をサポートしました。</li>
- <li>{{ interface("nsIPrefBranch2") }} インタフェースを {{ interface("nsIPrefBranch") }} に統合しました ({{ bug("718255") }})。</li>
- <li>以前のバージョンの Gecko で削除されたエイリアス <code>MozOpacity</code>、<code>MozOutline</code>、<code>MozOutlineStyle</code>、<code>MozOutlineWidth</code>、<code>MozOutlineOffset</code>、および <code>MozOutlineColor</code> を、{{ interface("nsIDOMCSS2Properties") }} から削除しました。これは、エイリアスを削除した当初に行うべきでした。</li>
- <li>{{ interface("nsINavHistoryQueryOptions") }} の属性 <code>excludeItemIfParentHasAnnotation</code> を、対応するクエリ操作と共に削除しました。これはライブブックマークのサポート用に存在しましたが、もはや存在しません。</li>
+ <li><code>nsIScreen</code> インタフェースが、新たに引数 <code>rotation</code> を通して回転の制御をサポートしました。</li>
+ <li><code>nsIPrefBranch2</code> インタフェースを <code>nsIPrefBranch</code> に統合しました ({{ bug("718255") }})。</li>
+ <li>以前のバージョンの Gecko で削除されたエイリアス <code>MozOpacity</code>、<code>MozOutline</code>、<code>MozOutlineStyle</code>、<code>MozOutlineWidth</code>、<code>MozOutlineOffset</code>、および <code>MozOutlineColor</code> を、<code>nsIDOMCSS2Properties</code> から削除しました。これは、エイリアスを削除した当初に行うべきでした。</li>
+ <li><code>nsINavHistoryQueryOptions</code> の属性 <code>excludeItemIfParentHasAnnotation</code> を、対応するクエリ操作と共に削除しました。これはライブブックマークのサポート用に存在しましたが、もはや存在しません。</li>
 </ul>
 
 <h2 id="See_also" name="See_also">関連記事</h2>

@@ -7,13 +7,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 ---
 <p>{{JSRef}}</p>
 
-<p><strong><code>substring() </code></strong>方法返回一个字符串在开始索引到结束索引之间的一个子集, 或从开始索引直到字符串的末尾的一个子集。</p>
+<p><strong><code>substring() </code></strong>方法返回一个字符串在开始索引到结束索引之间的一个子集，或从开始索引直到字符串的末尾的一个子集。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.substring(<var>indexStart</var>[, <var>indexEnd</var>])</code></pre>
+<pre class="syntaxbox"><code><var>str</var>.substring(<var>indexStart</var>[, <var>indexEnd</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>indexStart</code></dt>
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 
 <p>包含给定字符串的指定部分的新字符串。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>substring</code> 提取从 <code>indexStart</code> 到 <code>indexEnd</code>（不包括）之间的字符。特别地：</p>
 
@@ -38,13 +38,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
  <li>如果 <code>indexStart</code> 大于 <code>indexEnd</code>，则 <code>substring</code> 的执行效果就像两个参数调换了一样。见下面的例子。</li>
 </ul>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Using_substring" name="Example:_Using_substring">例子：使用 <code>substring</code></h3>
+<h3 id="Example_Using_substring">例子：使用 <code>substring</code></h3>
 
 <p>下例使用 <code>substring</code> 输出字符串 "<code>Mozilla</code>" 中的字符：</p>
 
-<pre class="brush:js notranslate">var anyString = "Mozilla";
+<pre class="brush:js">var anyString = "Mozilla";
 
 // 输出 "Moz"
 console.log(anyString.substring(0,3));
@@ -73,7 +73,7 @@ console.log(anyString.substring(0,10));
 
 <p>下面一个例子运用了    String.length 属性去获取指定字符串的倒数元素。显然这个办法更容易记住，因为你不再像上面那个例子那样去记住起始位置和最终位置。</p>
 
-<pre class="brush: js notranslate"><code>// Displays 'illa' the last 4 characters
+<pre class="brush: js"><code>// Displays 'illa' the last 4 characters
 var anyString = 'Mozilla';
 var anyString4 = anyString.substring(anyString.length - 4);
 console.log(anyString4);</code>
@@ -83,11 +83,11 @@ var anyString = 'Mozilla';
 var anyString5 = anyString.substring(anyString.length - 5);
 console.log(anyString5);</pre>
 
-<h3 id="Example_Replacing_a_substring_within_a_string" name="Example:_Replacing_a_substring_within_a_string">例子：替换一个字符串的子字符串</h3>
+<h3 id="Example_Replacing_a_substring_within_a_string">例子：替换一个字符串的子字符串</h3>
 
 <p>下例替换了一个字符串中的子字符串。可以替换单个字符和子字符串。该例结尾调用的函数将 "<code>Brave New World</code>" 变成了 "<code>Brave New Web</code>"。</p>
 
-<pre class="brush:js notranslate">function replaceString(oldS, newS, fullS) {
+<pre class="brush:js">function replaceString(oldS, newS, fullS) {
 // Replaces oldS with newS in the string fullS
   for (var i = 0; i &lt; fullS.length; i++) {
     if (fullS.substring(i, i + oldS.length) == oldS) {
@@ -101,11 +101,11 @@ replaceString("World", "Web", "Brave New World");</pre>
 
 <p>需要注意的是，如果 <code>oldS</code> 是 <code>newS</code> 的子字符串将会导致死循环。例如，尝试把 "Web" 替换成 "OtherWorld"。一个更好的方法如下：</p>
 
-<pre class="brush:js notranslate">function replaceString(oldS, newS,fullS){
+<pre class="brush:js">function replaceString(oldS, newS,fullS){
   return fullS.split(oldS).join(newS);
 }</pre>
 
-<p><span style="line-height: 1.5;">上面的代码只是子字符串操作的一个例子。如果你需要替换子字符串，更多时候会用到 </span><span style="line-height: 1.5em;">{{jsxref("String.prototype.replace()")}}。</span></p>
+<p>上面的代码只是子字符串操作的一个例子。如果你需要替换子字符串，更多时候会用到 {{jsxref("String.prototype.replace()")}}。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -136,57 +136,9 @@ replaceString("World", "Web", "Brave New World");</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.substr()")}}</li>

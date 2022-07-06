@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 <ul>
  <li>If you need to know if a string matches a regular expression {{jsxref("RegExp")}}, use {{jsxref("RegExp.prototype.test()", "RegExp.test()")}}.</li>
  <li>If you only want the first match found, you might want to use {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} instead.</li>
- <li>if you want to obtain capture groups and the global flag is set, you need to use {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} instead.</li>
+ <li>if you want to obtain capture groups and the global flag is set, you need to use {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} instead.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
@@ -80,62 +80,32 @@ str.match();   // returns [""]</pre>
 
 <h3 id="A_non-RegExp_object_as_the_parameter">A non-RegExp object as the parameter</h3>
 
-<p>When the parameter is a string or a number, it is implicitly converted to a {{jsxref("RegExp")}} by using new RegExp(obj). If it is a positive number with a positive sign,the RegExp() method will ignore the positive sign. </p>
+<p>When the parameter is a string or a number, it is implicitly converted to a {{jsxref("RegExp")}} by using new RegExp(obj). If it is a positive number with a positive sign,the RegExp() method will ignore the positive sign. </p>
 
 <pre class="brush: js">var str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
     str2 = "My grandfather is 65 years old and My grandmother is 63 years old.",
     str3 = "The contract was declared null and void.";
-str1.match("number");   // "number" is a string. returns ["number"]
-str1.match(NaN);        // the type of NaN is the number. returns ["NaN"]
-str1.match(Infinity);   // the type of Infinity is the number. returns ["Infinity"]
-str1.match(+Infinity);  // returns ["Infinity"]
-str1.match(-Infinity);  // returns ["-Infinity"]
-str2.match(65);         // returns ["65"]
-str2.match(+65);        // A number with a positive sign. returns ["65"]
-str3.match(null);       // returns ["null"]</pre>
+str1.match("number");   // "number" is a string. returns ["number"]
+str1.match(NaN);        // the type of NaN is the number. returns ["NaN"]
+str1.match(Infinity);   // the type of Infinity is the number. returns ["Infinity"]
+str1.match(+Infinity);  // returns ["Infinity"]
+str1.match(-Infinity);  // returns ["-Infinity"]
+str2.match(65);         // returns ["65"]
+str2.match(+65);        // A number with a positive sign. returns ["65"]
+str3.match(null);       // returns ["null"]</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.10', 'String.prototype.match')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.match', 'String.prototype.match')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.match', 'String.prototype.match')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("javascript.builtins.String.match")}}</p>
 
 <h2 id="Firefox-specific_notes">Firefox-specific notes</h2>
 
 <ul>
- <li><code>flags</code> was a non standard second argument only available in Gecko : <var>str</var>.match(<var>regexp, flags</var>)</li>
+ <li><code>flags</code> was a non standard second argument only available in Gecko : <var>str</var>.match(<var>regexp, flags</var>)</li>
  <li>Starting with Gecko 27 {{geckoRelease(27)}}, this method has been adjusted to conform with the ECMAScript specification. When <code>match()</code> is called with a global regular expression, the {{jsxref("RegExp.lastIndex")}} property (if specified) will be reset to <code>0</code> ({{bug(501739)}}).</li>
  <li>Starting with Gecko 39 {{geckoRelease(39)}}, the non-standard <code>flags</code> argument is deprecated and throws a console warning ({{bug(1142351)}}).</li>
  <li>Starting with Gecko 47 {{geckoRelease(47)}}, the non-standard <code>flags</code> argument is no longer supported in non-release builds and will soon be removed entirely ({{bug(1245801)}}).</li>

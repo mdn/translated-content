@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
  <dd>A função (function) chamada cria uma nova substring (para ser colocada no lugar da substring recebida pelo parametro #1). Os argumentos fornececidos para essa função estão descritos na seção "<a href="#" id="Specifying_a_string_as_a_parameter">Especificando uma função como parâmetro</a>" mais abaixo.</dd>
  <dt><code>flags</code> {{non-standard_inline}}</dt>
  <dd>
- <p>Uma string especificando uma combinação de <a href="https://wiki.developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions" title="https://wiki.developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions">flags de expressão regular</a>. O uso do parâmetro <code>flags</code> no método <code>String.prototype.replace()</code> é não-padrão. Ao invés de usar este parâmetro, use um objeto {{jsxref("Global_Objects/RegExp", "RegExp")}} com as flags correspondentes. O valor deste parâmetro deve ser uma string consistindo em um ou mais dos seguintes caracteres para afetar a operação, tais como descrito:</p>
+ <p>Uma string especificando uma combinação de <a href="/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions">flags de expressão regular</a>. O uso do parâmetro <code>flags</code> no método <code>String.prototype.replace()</code> é não-padrão. Ao invés de usar este parâmetro, use um objeto {{jsxref("Global_Objects/RegExp", "RegExp")}} com as flags correspondentes. O valor deste parâmetro deve ser uma string consistindo em um ou mais dos seguintes caracteres para afetar a operação, tais como descrito:</p>
 
  <dl>
   <dt><code>g</code></dt>
@@ -159,7 +159,7 @@ console.log(newstr);
 // retorna "Twas the night before Christmas..."</code></pre>
 
 <div class="blockIndicator note">
-<p><strong>Nota:</strong> Veja <a href="https://wiki.developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions" title="https://wiki.developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions">este guia</a> para maiores explicações as sobre expressões regulares.</p>
+<p><strong>Nota:</strong> Veja <a href="/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions">este guia</a> para maiores explicações as sobre expressões regulares.</p>
 </div>
 
 <h3 id="Usando_global_e_ignore_com_replace">Usando <code>global</code> e <code>ignore</code> com <code>replace()</code></h3>
@@ -176,7 +176,7 @@ console.log(newstr);
 
 <h3 id="Trocando_palavras_em_uma_string">Trocando palavras em uma string</h3>
 
-<p>O script a seguir troca as palavras na string. Para o texto que vai substituir, o script usa <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges" title="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">grupos de captura</a> e os padrões de substituição <code>$1</code> e <code>$2</code>.</p>
+<p>O script a seguir troca as palavras na string. Para o texto que vai substituir, o script usa <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">grupos de captura</a> e os padrões de substituição <code>$1</code> e <code>$2</code>.</p>
 
 <pre class="notranslate"><code>var re = /(\w+)\s(\w+)/;
 var str = 'John Smith';

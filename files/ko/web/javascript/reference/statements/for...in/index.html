@@ -12,11 +12,11 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <p>{{EmbedInteractiveExample("pages/js/statement-forin.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">문법</h2>
+<h2 id="Syntax">문법</h2>
 
-<pre class="syntaxbox notranslate">for (<var>variable</var> in <var>object</var>) {<em> ... </em>}</pre>
+<pre class="syntaxbox ">for (<var>variable</var> in <var>object</var>) {<em> ... </em>}</pre>
 
-<h3 id="Parameters" name="Parameters">파라미터</h3>
+<h3 id="Parameters">파라미터</h3>
 
 <dl>
  <dt><code>variable</code></dt>
@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
  <dd>반복작업을 수행할 객체로 열거형 속성을 가지고 있는 객체.</dd>
 </dl>
 
-<h2 id="Description" name="Description">설명</h2>
+<h2 id="Description">설명</h2>
 
 <p><code>for...in</code>문은 열거 가능한 non-Symbol 속성에 대해서만 반복합니다.<br>
  <code>Array</code>나 <code>Object</code> 등 내장 constructor를 통해 만들어진 객체는  {{jsxref("String")}}의 {{jsxref("String.indexOf", "indexOf()")}}, {{jsxref("Object")}}의 {{jsxref("Object.toString", "toString()")}}와 같이 <code>Object.prototype</code>, <code>String.prototype</code> 로부터 열거가 가능하지 않은 속성들을 상속해왔습니다. <code>for...in</code>문은 객체 자체의 모든 열거 가능한 속성들과 프로토타입 체인으로부터 상속받은 속성들에 대해 반복할 것입니다. (더 가까운 프로토타입의 속성들이 프로토타입 체인 객체로부터 더 멀리 떨어진 프로토 타입의 속성보다 더 우선합니다.)</p>
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <h3 id="배열의_반복과_for...in">배열의 반복과 for...in</h3>
 
-<div class="note" id="arrayNote">
+<div class="note"  >
 <p><strong>Note: <code>for...in</code>은</strong> 인덱스의 순서가 중요한<strong> </strong>{{jsxref("Array")}}에서 반복을 위해 사용할 수 없습니다.</p>
 </div>
 
@@ -58,13 +58,13 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <p>이것은 쉽게 객체의 속성을 확인(콘솔이나 다른 방법으로 출력)할 수 있기 때문에 실질적으로 디버깅을 위해 사용될 수 있습니다. 배열이 데이터의 저장에 있어서는 더 실용적이지만, 키-값 쌍이 선호되는 데이터의 경우(속성이 "key"의 역할을 함) 특정 값을 가진 키가 있는지 확인하려는 경우에 for...in을 사용할 수 있습니다.</p>
 
-<h2 id="Example" name="Example">예제</h2>
+<h2 id="Example">예제</h2>
 
 <h3 id="for...in의_사용">for...in의 사용</h3>
 
 <p>아래의 예는 열거 가능한 non-Symbol속성들을 반복해서 속성의 이름과 그 값을 기록합니다.</p>
 
-<pre class="notranslate"><code>var obj = {a: 1, b: 2, c: 3};
+<pre ><code>var obj = {a: 1, b: 2, c: 3};
 
 for (const prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
@@ -79,7 +79,7 @@ for (const prop in obj) {
 
 <p>아래는 {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} 를 사용하는 예를 보여주고 있습니다. 상속된 속성은 표시되지 않습니다.</p>
 
-<pre class="brush: js notranslate">var triangle = {a:1, b:2, c:3};
+<pre class="brush: js ">var triangle = {a:1, b:2, c:3};
 
 function ColoredTriangle() {
   this.color = "red";
@@ -142,15 +142,13 @@ alert(show_own_props(o, "o")); /* alerts: o.color = red */
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
 <p>{{Compat("javascript.statements.for_in")}}</p>
 
 <h2 id="Compatibility_Initializer_expressions_in_strict_mode">Compatibility: Initializer expressions in strict mode</h2>
 
 <p>Prior to SpiderMonkey 40 {{geckoRelease(40)}}, it was possible to use an initializer expression (<code>i=0</code>) in a <code>for...in</code> loop:</p>
 
-<pre class="notranslate"><code>var obj = {a: 1, b: 2, c: 3};
+<pre ><code>var obj = {a: 1, b: 2, c: 3};
 for (var i = 0 in obj) {
   console.log(obj[i]);
 }

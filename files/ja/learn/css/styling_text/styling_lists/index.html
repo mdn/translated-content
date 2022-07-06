@@ -16,13 +16,13 @@ translation_of: Learn/CSS/Styling_text/Styling_lists
 
 <div>{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}</div>
 
-<p class="summary"><span class="seoSummary"><a href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists">リスト</a>は他のテキストとほとんど同じようにふるまいますが、知っておくべきリスト固有の CSS プロパティと、考慮すべきベストプラクティスがいくつかあります。 この記事はすべてを説明しています。</span></p>
+<p class="summary"><a href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists">リスト</a>は他のテキストとほとんど同じようにふるまいますが、知っておくべきリスト固有の CSS プロパティと、考慮すべきベストプラクティスがいくつかあります。 この記事はすべてを説明しています。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">前提知識:</th>
-   <td>基本的なコンピューターリテラシー、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>を学ぶ）、CSS の基本（<a href="/ja/docs/Learn/CSS/Introduction_to_CSS">CSS 入門</a>を学ぶ）、<a href="/ja/docs/Learn/CSS/Styling_text/Fundamentals">CSS のテキストとフォントの基礎</a>。</td>
+   <td>基本的なコンピューターリテラシー、HTML の基本 (<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>を学ぶ)、 CSS の基本 (<a href="/ja/docs/Learn/CSS/First_steps">CSS 入門</a>を学ぶ)、<a href="/ja/docs/Learn/CSS/Styling_text/Fundamentals">CSS のテキストとフォントの基礎</a>。</td>
   </tr>
   <tr>
    <th scope="row">学習目標:</th>
@@ -31,13 +31,13 @@ translation_of: Learn/CSS/Styling_text/Styling_lists
  </tbody>
 </table>
 
-<h2 id="A_simple_list_example" name="A_simple_list_example">簡単なリストの例</h2>
+<h2 id="A_simple_list_example">簡単なリストの例</h2>
 
-<p>はじめに、簡単なリストの例を見てみましょう。 この記事を通して、順序なしリスト、順序付きリスト、そして説明リストを見ていきます。これらはどれも似たような装飾機能持っていますが、リストの種類に特有のものもあります。 <a href="http://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html">装飾していない例</a>は Github にあります（<a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html">ソースコード</a>もチェックしてください）。</p>
+<p>はじめに、簡単なリストの例を見てみましょう。 この記事を通して、順序なしリスト、順序付きリスト、そして説明リストを見ていきます。これらはどれも似たような装飾機能持っていますが、リストの種類に特有のものもあります。 <a href="https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html">装飾していない例</a>は Github にあります (<a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html">ソースコード</a>もチェックしてください) 。</p>
 
 <p>そのリストの例の HTML はこんな感じです。</p>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Shopping (unordered) list&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Shopping (unordered) list&lt;/h2&gt;
 
 &lt;p&gt;Paragraph for reference, paragraph for reference, paragraph for reference,
 paragraph for reference, paragraph for reference, paragraph for reference.&lt;/p&gt;
@@ -77,23 +77,23 @@ paragraph for reference, paragraph for reference, paragraph for reference.&lt;/p
   &lt;dd&gt;That green healthy stuff that many of us just use to garnish kebabs.&lt;/dd&gt;
 &lt;/dl&gt;</pre>
 
-<p>ここで実際の例に行き、<a href="/ja/docs/Learn/Common_questions/What_are_browser_developer_tools">ブラウザー開発者ツール</a>を使用してリスト要素を調べると、次のようないくつかの装飾のデフォルト設定に気付くでしょう。</p>
+<p>ここで実際の例に行き、<a href="/ja/docs/Learn/Common_questions/What_are_browser_developer_tools">ブラウザー開発者ツール</a>を使用してリスト要素を調べると、次のようないくつかの装飾の既定設定に気付くでしょう。</p>
 
 <ul>
- <li>{{htmlelement("ul")}} 要素と {{htmlelement("ol")}} 要素の上下の {{cssxref("margin")}} は <code>16px</code>（<code>1em</code>）、{{cssxref("padding-left")}} は <code>40px</code>（<code>2.5em</code>）です。</li>
- <li>リスト項目（{{htmlelement("li")}} 要素）には、間隔の設定に関するデフォルトはありません。</li>
- <li>{{htmlelement("dl")}} 要素の上下の {{cssxref("margin")}} は <code>16px</code>（<code>1em</code>）ですが、パディングの設定はありません。</li>
- <li>{{htmlelement("dd")}} 要素の {{cssxref("margin-left")}} は <code>40px</code>（<code>2.5em</code>）です。</li>
- <li>参照用に含めた {{htmlelement("p")}} 要素には、さまざまな種類のリストと同じ <code>16px</code>（<code>1em</code>）の上下の {{cssxref("margin")}} があります。</li>
+ <li>{{htmlelement("ul")}} 要素と {{htmlelement("ol")}} 要素の上下の {{cssxref("margin")}} は <code>16px</code> (<code>1em</code>)、{{cssxref("padding-left")}} は <code>40px</code> (<code>2.5em</code>) です。</li>
+ <li>リスト項目 ({{htmlelement("li")}} 要素) には、間隔の設定に関する既定はありません。</li>
+ <li>{{htmlelement("dl")}} 要素の上下の {{cssxref("margin")}} は <code>16px</code> (<code>1em</code>) ですが、パディングの設定はありません。</li>
+ <li>{{htmlelement("dd")}} 要素の {{cssxref("margin-left")}} は <code>40px</code> (<code>2.5em</code>) です。</li>
+ <li>参照用に含めた {{htmlelement("p")}} 要素には、さまざまな種類のリストと同じ <code>16px</code> (<code>1em</code>) の上下の {{cssxref("margin")}} があります。</li>
 </ul>
 
-<h2 id="Handling_list_spacing" name="Handling_list_spacing">リストの間隔の取り扱い</h2>
+<h2 id="Handling_list_spacing">リストの間隔の取り扱い</h2>
 
-<p>リストを装飾するときは、（段落や画像などの）周囲の要素と同じ垂直方向の間隔（バーティカルリズム（vertical rhythm）とも呼ばれる）と、互いに同じ水平方向の間隔を維持するように装飾を調整する必要があります（Github で<a href="http://mdn.github.io/learning-area/css/styling-text/styling-lists/">完成した装飾した例</a>を見ることができ、<a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html">ソースコード</a>も見つけることができます）。</p>
+<p>リストを装飾するときは、 (段落や画像などの) 周囲の要素と同じ垂直方向の間隔 (バーティカルリズム (vertical rhythm) とも呼ばれる) と、互いに同じ水平方向の間隔を維持するように装飾を調整する必要があります (Github で<a href="https://mdn.github.io/learning-area/css/styling-text/styling-lists/">完成した装飾した例</a>を見ることができ、<a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html">ソースコード</a>も見つけることができます) 。</p>
 
 <p>テキストの装飾と間隔調整に使用する CSS は次のとおりです。</p>
 
-<pre class="brush: css notranslate">/* General styles */
+<pre class="brush: css">/* General styles */
 
 html {
   font-family: Helvetica, Arial, sans-serif;
@@ -114,7 +114,6 @@ li, p {
 
 /* Description list styles */
 
-
 dd, dt {
   line-height: 1.5;
 }
@@ -122,19 +121,16 @@ dd, dt {
 dt {
   font-weight: bold;
 }
-
-dd {
-  margin-bottom: 1.5rem;
-}</pre>
+</pre>
 
 <ul>
- <li>規則1はサイト全体のフォントと <code>10px</code> の基準フォントサイズを設定します。 これらはページ上のすべてのものに継承されます。</li>
- <li>規則2と3では、見出し、さまざまなリストの種類（リスト要素の子はこれらを継承）、および段落に相対フォントサイズを設定します。 つまり、各段落とリストのフォントサイズ、上下の間隔は同じになり、バーティカルリズムを一定に保つのに役立ちます。</li>
- <li>規則4では、段落とリスト項目に同じ {{cssxref("line-height")}} を設定しているため、段落と各個々のリスト項目のラインの間隔は同じになります。 これは、バーティカルリズムを一定に保つのにも役立ちます。</li>
- <li>説明リストには規則5と6が適用されます。 説明リストの用語と説明には、段落とリスト項目の場合と同じ <code>line-height</code> を設定します。 繰り返しますが、一貫性があることは良いことです！ また、説明する用語は太字にして、視覚的に目立つようにしています。<span id="cke_bm_126E" class="hidden"> </span></li>
+ <li>1 番目の規則はサイト全体のフォントと <code>10px</code> の基準フォントサイズを設定します。 これらはページ上のすべてのものに継承されます。</li>
+ <li>2 番目と 3 番目の規則では、見出し、さまざまなリストの種類 (リスト要素の子はこれらを継承) 、および段落に相対フォントサイズを設定します。 つまり、各段落とリストのフォントサイズ、上下の間隔は同じになり、バーティカルリズムを一定に保つのに役立ちます。</li>
+ <li>4 番目では、段落とリスト項目に同じ {{cssxref("line-height")}} を設定しているため、段落と各個々のリスト項目のラインの間隔は同じになります。 これは、バーティカルリズムを一定に保つのにも役立ちます。</li>
+ <li>説明リストには 5 番目と 6 番目の規則が適用されます。 説明リストの用語と説明には、段落とリスト項目の場合と同じ <code>line-height</code> を設定します。 繰り返しますが、一貫性があることは良いことです！ また、説明する用語は太字にして、視覚的に目立つようにしています。></li>
 </ul>
 
-<h2 id="List-specific_styles" name="List-specific_styles">リスト固有の装飾</h2>
+<h2 id="List-specific_styles">リスト固有の装飾</h2>
 
 <p>リストの一般的な間隔調整テクニックを見てきました。 次に、リスト固有のプロパティを調べてみましょう。 最初に知っておくべき3つのプロパティがあり、それらは {{htmlelement("ul")}} や {{htmlelement("ol")}} 要素に設定できます。</p>
 
@@ -144,46 +140,46 @@ dd {
  <li>{{cssxref("list-style-image")}}: 行頭記号に簡単な正方形や円ではなく、カスタム画像を使うことができます。</li>
 </ul>
 
-<h3 id="Bullet_styles" name="Bullet_styles">行頭記号の装飾</h3>
+<h3 id="Bullet_styles">行頭記号の装飾</h3>
 
-<p>前述のように、{{cssxref("list-style-type")}} プロパティを使用して、行頭記号（bullet point）に使用する行頭記号（bullet）の種類を設定できます。 この例では、順序付きリストで大文字のローマ数字を使用するように設定しています。</p>
+<p>前述のように、{{cssxref("list-style-type")}} プロパティを使用して、行頭記号 (bullet point) に使用する行頭記号 (bullet) の種類を設定できます。 この例では、順序付きリストで大文字のローマ数字を使用するように設定しています。</p>
 
-<pre class="brush: css notranslate">ol {
+<pre class="brush: css">ol {
   list-style-type: upper-roman;
 }</pre>
 
 <p>これにより、次のようになります。</p>
 
-<p><img alt="行頭記号がリスト項目テキストの外側に表示されるように設定された順序付きリスト。" src="https://mdn.mozillademos.org/files/12962/outer-bullets.png" style="border-style: solid; border-width: 1px; display: block; height: 119px; margin: 0px auto; width: 376px;"></p>
+<p><img alt="行頭記号がリスト項目テキストの外側に表示されるように設定された順序付きリスト。" src="outer-bullets.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<p>{{cssxref("list-style-type")}} のリファレンスページをチェックすることで、もっとたくさんのオプションを見つけることができます。</p>
+<p>それ以外のオプションを見るには、 {{cssxref("list-style-type")}} のリファレンスページを参照してください。</p>
 
-<h3 id="Bullet_position" name="Bullet_position">行頭記号の位置</h3>
+<h3 id="Bullet_position">行頭記号の位置</h3>
 
-<p>{{cssxref("list-style-position")}} プロパティは、行頭記号をリスト項目の内側に表示するか、その外側の各項目の先頭より前に表示するかを設定します。 デフォルト値は <code>outside</code> です。 これは、上で見たように、行頭記号をリスト項目の外側に配置します。</p>
+<p>{{cssxref("list-style-position")}} プロパティは、行頭記号をリスト項目の内側に表示するか、その外側の各項目の先頭より前に表示するかを設定します。 既定値は <code>outside</code> です。 これは、上で見たように、行頭記号をリスト項目の外側に配置します。</p>
 
-<p>値を <code>inside</code> に設定すると、行頭記号をラインの内側に配置します。</p>
+<p>値を <code>inside</code> に設定すると、行頭記号を行の内側に配置します。</p>
 
-<pre class="brush: css notranslate">ol {
+<pre class="brush: css">ol {
   list-style-type: upper-roman;
   list-style-position: inside;
 }</pre>
 
-<p><img alt="行頭記号がリスト項目のテキストの内側に表示されるように設定された順序付きリスト。" src="https://mdn.mozillademos.org/files/12958/inner-bullets.png" style="border-style: solid; border-width: 1px; display: block; height: 123px; margin: 0px auto; width: 370px;"></p>
+<p><img alt="行頭記号がリスト項目のテキストの内側に表示されるように設定された順序付きリスト。" src="inner-bullets.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<h3 id="Using_a_custom_bullet_image" name="Using_a_custom_bullet_image">カスタム行頭記号画像の使用</h3>
+<h3 id="Using_a_custom_bullet_image">独自の行頭記号画像の使用</h3>
 
-<p>{{cssxref("list-style-image")}} プロパティを使用すると、行頭記号にカスタム画像を使用できます。 構文は次のようにとても簡単です。</p>
+<p>{{cssxref("list-style-image")}} プロパティを使用すると、行頭記号に独自の画像を使用することができます。構文は次のようにとても簡単です。</p>
 
-<pre class="brush: css notranslate">ul {
+<pre class="brush: css">ul {
   list-style-image: url(star.svg);
 }</pre>
 
-<p>ただし、このプロパティは、行頭記号の位置、サイズなどを制御するという点では少し制限があります。 {{cssxref("background")}} プロパティファミリーを使用するほうが得策です。 これについては、<a href="/ja/docs/Learn/CSS/Styling_boxes">ボックスの装飾</a>モジュールで詳しく説明します。 今のところ、これは味見です！</p>
+<p>ただし、このプロパティは、行頭記号の位置、サイズなどを制御するという点では少し制限があります。 {{cssxref("background")}} プロパティファミリーを使用するほうが得策です。 これについては、<a href="/ja/docs/Learn/CSS/Building_blocks">ボックスの装飾</a>モジュールで詳しく説明します。とりあえず、その例をご紹介しましょう。</p>
 
-<p>完成した例では、（既に上で見たものの上に）次のように順序なしリストを装飾しました。</p>
+<p>完成した例では、 (既に上で見たものの上に) 次のように順序なしリストを装飾しました。</p>
 
-<pre class="brush: css notranslate">ul {
+<pre class="brush: css">ul {
   padding-left: 2rem;
   list-style-type: none;
 }
@@ -199,27 +195,27 @@ ul li {
 <p>ここでは次のことを行いました。</p>
 
 <ul>
- <li> {{htmlelement("ul")}} の {{cssxref("padding-left")}} をデフォルトの <code>40px</code> から <code>20px</code> に減らし、リスト項目にも同じ量を設定します。 これにより、リスト項目は全体的にはまだ順序リスト項目や説明リストの説明文が並んでいますが、リスト項目には背景画像が入るように多少のパディングが入っています。これをしないと、背景画像がリスト項目のテキストと重なってしまい、見た目がごちゃごちゃしてしまいます。</li>
- <li>デフォルトで行頭記号が表示されないように、{{cssxref("list-style-type")}} を <code>none</code> に設定します。 代わりに、行頭記号を処理するために {{cssxref("background")}} プロパティを使用します。</li>
+ <li>{{htmlelement("ul")}} の {{cssxref("padding-left")}} を既定の <code>40px</code> から <code>20px</code> に減らし、リスト項目にも同じ量を設定します。 これにより、リスト項目は全体的にはまだ順序リスト項目や説明リストの説明文が並んでいますが、リスト項目には背景画像が入るように多少のパディングが入っています。これをしないと、背景画像がリスト項目のテキストと重なってしまい、見た目がごちゃごちゃしてしまいます。</li>
+ <li>既定で行頭記号が表示されないように、{{cssxref("list-style-type")}} を <code>none</code> に設定します。 代わりに、行頭記号を処理するために {{cssxref("background")}} プロパティを使用します。</li>
  <li>各順序なしリスト項目に行頭記号を挿入しました。 関連するプロパティは次のとおりです。
   <ul>
    <li>{{cssxref("background-image")}}: 行頭記号として使用する画像ファイルへのパスを参照します。</li>
    <li>{{cssxref("background-position")}}: これは選択した要素の背景のどこに画像を表示するかを定義します。 この場合は <code>0 0</code> としています。 つまり、各リスト項目の左上に行頭記号が表示されます。</li>
-   <li>{{cssxref("background-size")}}: 背景画像のサイズを設定します。 行頭記号のサイズをリスト項目と同じサイズ（または、ごくわずかに大きいか小さい）にすることをお勧めします。 サイズは <code>1.6rem</code>（<code>16px</code>）を使用しています。 これは、行頭記号を内部に配置できる <code>20px</code> のパディングに非常によく合っています — 行頭記号とリスト項目のテキストの間に 16px + 4px のスペースがあるとうまくいきます。</li>
-   <li>{{cssxref("background-repeat")}}: デフォルトでは、背景画像は利用可能な背景スペースを埋めつくすまで繰り返します。 それぞれの場合に画像のコピーを1つだけ挿入したいので、これを <code>no-repeat</code> の値に設定します。</li>
+   <li>{{cssxref("background-size")}}: 背景画像のサイズを設定します。 行頭記号のサイズをリスト項目と同じサイズ (または、ごくわずかに大きいか小さい) にすることをお勧めします。 サイズは <code>1.6rem</code> (<code>16px</code>) を使用しています。 これは、行頭記号を内部に配置できる <code>20px</code> のパディングに非常によく合っています — 行頭記号とリスト項目のテキストの間に 16px + 4px のスペースがあるとうまくいきます。</li>
+   <li>{{cssxref("background-repeat")}}: 既定では、背景画像は利用可能な背景スペースを埋めつくすまで繰り返します。 それぞれの場合に画像のコピーを1つだけ挿入したいので、これを <code>no-repeat</code> の値に設定します。</li>
   </ul>
  </li>
 </ul>
 
 <p>これにより、次のような結果が得られます。</p>
 
-<p><img alt="行頭記号が小さな星の画像として設定された順序なしリスト" src="https://mdn.mozillademos.org/files/16226/list_formatting.png" style="border-style: solid; border-width: 1px; display: block; height: 106px; margin: 0px auto; width: 124px;"></p>
+<p><img alt="行頭記号が小さな星の画像として設定された順序なしリスト" src="list_formatting.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<h3 id="list-style_shorthand" name="list-style_shorthand">list-style 一括指定</h3>
+<h3 id="list-style_shorthand">list-style 一括指定</h3>
 
-<p>上記の3つのプロパティはすべて、単一の一括指定プロパティ {{cssxref("list-style")}} を使用して設定できます。 例えば、次の CSS を、</p>
+<p>上記の 3 つのプロパティはすべて、単一の一括指定プロパティ {{cssxref("list-style")}} を使用して設定できます。 例えば、次の CSS を、</p>
 
-<pre class="brush: css notranslate">ul {
+<pre class="brush: css">ul {
   list-style-type: square;
   list-style-image: url(example.png);
   list-style-position: inside;
@@ -227,43 +223,43 @@ ul li {
 
 <p>これに置き換えることができます。</p>
 
-<pre class="brush: css notranslate">ul {
+<pre class="brush: css">ul {
   list-style: square url(example.png) inside;
 }</pre>
 
-<p>値は任意の順序でリストすることができ、1つ、2つ、または3つすべてを使用できます（含まれていないプロパティーに使用されるデフォルト値は <code>disc</code>、<code>none</code>、<code>outside</code> です）。 <code>type</code> と <code>image</code> の両方が指定されている場合、画像が何らかの理由でロードできない場合に、<code>type</code> を代替として使用します。</p>
+<p>値は任意の順序でリストすることができ、1つ、2つ、または3つすべてを使用できます (含まれていないプロパティーに使用される既定値は <code>disc</code>、<code>none</code>、<code>outside</code> です) 。 <code>type</code> と <code>image</code> の両方が指定されている場合、画像が何らかの理由でロードできない場合に、<code>type</code> を代替として使用します。</p>
 
-<h2 id="Controlling_list_counting" name="Controlling_list_counting">リストの数え方の制御</h2>
+<h2 id="Controlling_list_counting">リストの数え方の制御</h2>
 
 <p>場合によっては、順序付きリストで異なる方法で数えたいことがあります — 例えば 1 以外の数から始めたり、逆方向に数えたり、1 以上のステップで数えたりです。 HTML と CSS には、ここで役立つツールがいくつかあります。</p>
 
-<h3 id="start" name="start">start</h3>
+<h3 id="start">start</h3>
 
 <p>{{htmlattrxref("start","ol")}} 属性を使用すると、1 以外の数からリストを数え始めます。 次の例では、</p>
 
-<pre class="brush: html notranslate">&lt;ol start="4"&gt;
+<pre class="brush: html">&lt;ol start="4"&gt;
   &lt;li&gt;Toast pita, leave to cool, then slice down the edge.&lt;/li&gt;
   &lt;li&gt;Fry the halloumi in a shallow, non-stick pan, until browned on both sides.&lt;/li&gt;
   &lt;li&gt;Wash and chop the salad.&lt;/li&gt;
   &lt;li&gt;Fill pita with salad, hummus, and fried halloumi.&lt;/li&gt;
 &lt;/ol&gt;</pre>
 
-<p>この出力を与えます。</p>
+<p>この出力が得られます。</p>
 
 <p>{{ EmbedLiveSample('start', '100%', 150) }}</p>
 
-<h3 id="reversed" name="reversed">reversed</h3>
+<h3 id="reversed">reversed</h3>
 
 <p>{{htmlattrxref("reversed","ol")}} 属性はリストのカウントアップではなくカウントダウンを開始します。 次の例では、</p>
 
-<pre class="brush: html notranslate">&lt;ol start="4" reversed&gt;
+<pre class="brush: html">&lt;ol start="4" reversed&gt;
   &lt;li&gt;Toast pita, leave to cool, then slice down the edge.&lt;/li&gt;
   &lt;li&gt;Fry the halloumi in a shallow, non-stick pan, until browned on both sides.&lt;/li&gt;
   &lt;li&gt;Wash and chop the salad.&lt;/li&gt;
   &lt;li&gt;Fill pita with salad, hummus, and fried halloumi.&lt;/li&gt;
 &lt;/ol&gt;</pre>
 
-<p>この出力を与えます。</p>
+<p>この出力が得られます。</p>
 
 <p>{{ EmbedLiveSample('reversed', '100%', 150) }}</p>
 
@@ -271,28 +267,28 @@ ul li {
 <p><strong>注</strong>: 逆方向のリストに <code>start</code> 属性の値より多くのリスト項目がある場合、カウントは引き続きゼロになり、その後負の値になります。</p>
 </div>
 
-<h3 id="value" name="value">value</h3>
+<h3 id="value">value</h3>
 
-<p>{{htmlattrxref("value","li")}} 属性を使用すると、リスト項目を特定の数値に設定できます。 次の例では、</p>
+<p>{{htmlattrxref("value","ol")}} 属性を使用すると、リスト項目を特定の数値に設定できます。 次の例では、</p>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
   &lt;li value="2"&gt;Toast pita, leave to cool, then slice down the edge.&lt;/li&gt;
   &lt;li value="4"&gt;Fry the halloumi in a shallow, non-stick pan, until browned on both sides.&lt;/li&gt;
   &lt;li value="6"&gt;Wash and chop the salad.&lt;/li&gt;
   &lt;li value="8"&gt;Fill pita with salad, hummus, and fried halloumi.&lt;/li&gt;
 &lt;/ol&gt;</pre>
 
-<p>この出力を与えます。</p>
+<p>この出力が得られます。</p>
 
 <p>{{ EmbedLiveSample('value', '100%', 150) }}</p>
 
 <div class="note">
-<p>注: 非数値の {{cssxref("list-style-type")}} を使用している場合でも、<code>value</code> 属性に同等の数値を使用する必要があります。</p>
+<p><strong>注</strong>: 数値以外の {{cssxref("list-style-type")}} を使用している場合でも、<code>value</code> 属性に同等の数値を使用する必要があります。</p>
 </div>
 
-<h2 id="Active_learning_Styling_a_nested_list" name="Active_learning_Styling_a_nested_list">能動的学習: ネストしたリストの装飾</h2>
+<h2 id="Active_learning_Styling_a_nested_list">アクティブラーニング: ネストしたリストの装飾</h2>
 
-<p>この能動的学習セッションでは、上で学んだことを取り入れて、ネストしたリストを装飾してください。 HTML を提供してあるので、次のことを行います。</p>
+<p>このアクティブラーニングセッションでは、上で学んだことを取り入れて、ネストしたリストを装飾してください。 HTML を提供してあるので、次のことを行います。</p>
 
 <ol>
  <li>順序なしリストに正方形の行頭記号を付けます。</li>
@@ -306,7 +302,7 @@ ul li {
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
+<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
   &lt;h2&gt;HTML Input&lt;/h2&gt;
   &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;ul&gt;
   &lt;li&gt;First, light the candle.&lt;/li&gt;
@@ -332,7 +328,7 @@ ul li {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js notranslate">var htmlInput = document.querySelector(".html-input");
+<pre class="brush: js">var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");
 var htmlCode = htmlInput.value;
@@ -369,7 +365,7 @@ window.addEventListener("load", drawOutput);
 
 <p>{{ EmbedLiveSample('Playable_code', 700, 800) }}</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <p>CSS カウンターは、リストの数え方と装飾をカスタマイズするための高度なツールを提供しますが、非常に複雑です。 あなたが自身を伸ばしたいと思うならば、これらを調べることを勧めます。 次を見てください。</p>
 
@@ -379,20 +375,24 @@ window.addEventListener("load", drawOutput);
  <li>{{cssxref("counter-reset")}}</li>
 </ul>
 
-<h2 id="Summary" name="Summary">まとめ</h2>
+<h2 id="Test_your_skills!">腕試し</h2>
+
+<p>この記事の最後までたどり着き、アクティブラーニングのセクションでいくつかのスキルテストを行いましたが、今後も最も重要な情報を覚えていられますか？モジュールの最後には、あなたがこの情報を覚えているかどうかを確認するための評価があります — <a href="/ja/docs/Learn/CSS/Styling_text/Typesetting_a_homepage">コミュニティスクールのホームページの組版</a>を参照してください。</p>
+
+<p>この評価は、このモジュールで説明されているすべての知識をテストするものなので、先に進む前に他の記事を読んでおくとよいでしょう。</p>
+
+<h2 id="Summary">まとめ</h2>
 
 <p>関連するいくつかの基本的な原則と特定のプロパティを知っていれば、リストの装飾のこつは比較的簡単です。 次の記事では、リンクの装飾テクニックについて説明します。</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}</p>
 
-
-
-<h2 id="In_this_module" name="In_this_module">このモジュール内の文書</h2>
+<h2 id="In_this_module">このモジュール内の文書</h2>
 
 <ul>
  <li><a href="/ja/docs/Learn/CSS/Styling_text/Fundamentals">基本的なテキストとフォントの装飾</a></li>
  <li><a href="/ja/docs/Learn/CSS/Styling_text/Styling_lists">リストの装飾</a></li>
  <li><a href="/ja/docs/Learn/CSS/Styling_text/Styling_links">リンクの装飾</a></li>
  <li><a href="/ja/docs/Learn/CSS/Styling_text/Web_fonts">ウェブフォント</a></li>
- <li><a href="/ja/Learn/CSS/Styling_text/Typesetting_a_homepage">コミュニティスクールのホームページの組版</a></li>
+ <li><a href="/ja/docs/Learn/CSS/Styling_text/Typesetting_a_homepage">コミュニティスクールのホームページの組版</a></li>
 </ul>

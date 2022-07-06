@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Referencia/Sentencias/for...of
 <div>
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><span style="font-size: 1rem; letter-spacing: -0.00278rem;">La sentencia </span><strong style="font-size: 1rem; letter-spacing: -0.00278rem;">sentencia <code>for...of</code></strong><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> ejecuta un bloque de código para cada elemento de un </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable" style="font-size: 1rem; letter-spacing: -0.00278rem;">objeto iterable</a>,<span style="font-size: 1rem; letter-spacing: -0.00278rem;"> como lo son: {{jsxref("String")}}, {{jsxref("Array")}}, objetos similares a array (por ejemplo, {{jsxref("Functions/arguments", "arguments")}} or </span><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/NodeList" style="font-size: 1rem; letter-spacing: -0.00278rem;" title="NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll()."><code>NodeList</code></a><span style="font-size: 1rem; letter-spacing: -0.00278rem;">), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} e iterables definidos por el usuario.</span></p>
+<p><span style="font-size: 1rem; letter-spacing: -0.00278rem;">La sentencia </span><strong style="font-size: 1rem; letter-spacing: -0.00278rem;">sentencia <code>for...of</code></strong><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> ejecuta un bloque de código para cada elemento de un </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable" style="font-size: 1rem; letter-spacing: -0.00278rem;">objeto iterable</a>,<span style="font-size: 1rem; letter-spacing: -0.00278rem;"> como lo son: {{jsxref("String")}}, {{jsxref("Array")}}, objetos similares a array (por ejemplo, {{jsxref("Functions/arguments", "arguments")}} or </span><a href="/en-US/docs/Web/API/NodeList" style="font-size: 1rem; letter-spacing: -0.00278rem;" title="NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll()."><code>NodeList</code></a><span style="font-size: 1rem; letter-spacing: -0.00278rem;">), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} e iterables definidos por el usuario.</span></p>
 </div>
 
 <h2 id="Sintaxis">Sintaxis</h2>
@@ -253,64 +253,7 @@ for (let i of arr) {
 
 <h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Edge</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatChrome(38)}} <a href="##Chrome_note_1">[1]</a><br>
-    {{CompatChrome(51)}} <a href="##Chrome_note_3">[3]</a></td>
-   <td>{{CompatGeckoDesktop("13")}} <a href="##Gecko_note_2">[2]</a> <a href="##Chrome_note_4">[4]</a></td>
-   <td>12</td>
-   <td>25</td>
-   <td>7.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>5.1</td>
-   <td>{{CompatChrome(38)}} <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/for...of$edit#Chrome_note_1">[1]</a></td>
-   <td>{{CompatGeckoMobile("13")}} <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/for...of$edit#Gecko_note_2">[2]</a></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>8</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p><a id="#Chrome_note_1" name="#Chrome_note_1">[1]</a> Desde Chrome 29 a Chrome 37 esta funcionalidad estuvo disponible al activar la opción chrome://flags/#enable-javascript-harmony: “JavaScript experimental”.</p>
-
-<p><a id="#Gecko_note_2" name="#Gecko_note_2">[2]</a> Antes de Firefox 51, el uso de <code>for...of usando</code> {{jsxref("const")}}<code> resultaba en un</code> {{jsxref("SyntaxError")}} ("missing = in const declaration"). El problema ha sido resuelto ({{bug(1101653)}}).</p>
-
-<p><a id="#Chrome_note_3" name="#Chrome_note_3">[3]</a> Chrome 51 añadió soporte para iterar objetos.</p>
-
-<p><a id="#Chrome_note_4" name="#Chrome_note_4">[4]</a> Firefox aún permite el uso de un generador después de haber interrumpido el bucle {{Bug(1147371)}}. Como se vio más arriba, <a href="##re-use">no se deben reutilizar los generadores</a>.</p>
+{{Compat("javascript.statements.for_of")}}
 
 <h2 id="Vea_también">Vea también</h2>
 

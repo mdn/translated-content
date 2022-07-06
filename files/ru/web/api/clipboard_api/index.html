@@ -18,11 +18,11 @@ translation_of: Web/API/Clipboard_API
 ---
 <div>{{DefaultAPISidebar("Clipboard API")}}</div>
 
-<div></div>
+
 
 <div><strong>Clipboard API </strong>предоставляет возможность реагировать на команды буфера обмена (вырезать, копировать и вставить), а также выполнять асинхронные чтение/запись в системный буфер обмена. Доступ к содержимому буфера обмена осуществляется через <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>: <code>clipboard-write</code> (разрешение на запись) в буфер обмена автоматически предоставляется страницам, когда они находятся на активной вкладке. Для <code>clipboard-read</code> (чтение из буфера обмена) должно быть запрошено разрешение пользователя. Можно сделать запрос на разрешение, попытавшись прочитать данные из буфера обмена.</div>
 
-<div></div>
+
 
 <p>API предназначен заменить {{domxref("document.execCommand()")}} в качестве способа для доступа к буферу обмена.</p>
 
@@ -30,7 +30,7 @@ translation_of: Web/API/Clipboard_API
 
 <p>Вместо создания объекта буфера посредством инициализации экземпляра, вы получаете доступ к системному буферу обмена через глобальный {{domxref("Navigator.clipboard")}}:</p>
 
-<pre class="brush: js notranslate">navigator.clipboard.readText().then(
+<pre class="brush: js">navigator.clipboard.readText().then(
   clipText =&gt; document.querySelector(".editor").innerText += clipText);</pre>
 
 <p>Этот фрагмент извлекает текст из буфера обмена и добавляет его к первому элементу, найденному с помощью <code>editor</code> (редактора) классов. Этот код безопасен, поскольку {{domxref("Clipboard.readText", "readText()")}} (и {{domxref("Clipboard.read", "read()")}}, если на то пошло) возвращает пустую строку, если в буфере обмена нет текста.</p>
@@ -48,20 +48,7 @@ translation_of: Web/API/Clipboard_API
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Clipboard API')}}</td>
-   <td>{{Spec2('Clipboard API')}}</td>
-   <td>Первоначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("api.Clipboard")}}
 
 <h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
 
@@ -73,8 +60,6 @@ translation_of: Web/API/Clipboard_API
 <p>{{Compat("api.Clipboard")}}</p>
 
 <h3 id="ClipboardEvent">ClipboardEvent</h3>
-
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("api.ClipboardEvent")}}</p>
 

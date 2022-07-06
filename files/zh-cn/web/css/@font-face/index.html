@@ -8,21 +8,21 @@ translation_of: Web/CSS/@font-face
 ---
 <div>{{CSSRef}}</div>
 
-<div>@font-face CSS at-rule 指定一个用于显示文本的自定义字体；字体能从远程服务器或者用户本地安装的字体加载. 如果提供了local()函数，从用户本地查找指定的字体名称，并且找到了一个匹配项, 本地字体就会被使用. 否则, 字体就会使用url()函数下载的资源。</div>
+<div>@font-face CSS at-rule 指定一个用于显示文本的自定义字体；字体能从远程服务器或者用户本地安装的字体加载。如果提供了 local() 函数，从用户本地查找指定的字体名称，并且找到了一个匹配项，本地字体就会被使用。否则，字体就会使用 url() 函数下载的资源。</div>
 
-<div></div>
 
-<div>通过允许作者提供他们自己的字体，@font-face 让设计内容成为了一种可能，同时并不会被所谓的"网络-安全"字体所限制(字体如此普遍以至于它们能被广泛的使用). 指定查找和使用本地安装的字体名称可以让字体的自定义化程度超过基本字体，同时在不依赖网络情况下实现此功能。</div>
 
-<div></div>
+<div>通过允许作者提供他们自己的字体，@font-face 让设计内容成为了一种可能，同时并不会被所谓的"网络 - 安全"字体所限制 (字体如此普遍以至于它们能被广泛的使用). 指定查找和使用本地安装的字体名称可以让字体的自定义化程度超过基本字体，同时在不依赖网络情况下实现此功能。</div>
 
-<div>在同时使用url()和local()功能时，为了用户已经安装的字体副本在需要使用时被使用，如果在用户本地没有找到字体副本就会去使用户下载的副本查找字体。</div>
 
-<div></div>
 
-<div>@font-face 规则不仅仅使用在CSS的顶层，还可以用在任何CSS条件组规则中.</div>
+<div>在同时使用 url() 和 local() 功能时，为了用户已经安装的字体副本在需要使用时被使用，如果在用户本地没有找到字体副本就会去使用户下载的副本查找字体。</div>
 
-<div></div>
+
+
+<div>@font-face 规则不仅仅使用在 CSS 的顶层，还可以用在任何 CSS 条件组规则中。</div>
+
+
 
 <pre class="brush: css no-line-numbers notranslate">@font-face {
   font-family: "Open Sans";
@@ -32,7 +32,7 @@ translation_of: Web/CSS/@font-face
 
 <h2 id="概述">概述</h2>
 
-<p>这是一个叫做<code>@font-face</code> 的<a href="/zh-CN/docs/CSS" title="CSS">CSS</a> <a href="/zh-CN/docs/CSS/At-rule" title="At-rule">@规则</a> ，它允许网页开发者为其网页指定在线字体。 通过这种作者自备字体的方式，<code>@font-face</code> 可以消除对用户电脑字体的依赖。 <code>@font-face</code> 不仅可以放在在CSS的最顶层, 也可以放在 @规则 的 <a href="/zh-CN/docs/CSS/At-rule#Conditional_Group_Rules" title="CSS/At-rule#Conditional_Group_Rules">条件规则组</a> 中。</p>
+<p>这是一个叫做<code>@font-face</code> 的<a href="/zh-CN/docs/CSS" title="CSS">CSS</a> <a href="/zh-CN/docs/CSS/At-rule" title="At-rule">@规则</a> ，它允许网页开发者为其网页指定在线字体。 通过这种作者自备字体的方式，<code>@font-face</code> 可以消除对用户电脑字体的依赖。 <code>@font-face</code> 不仅可以放在在 CSS 的最顶层，也可以放在 @规则 的 <a href="/zh-CN/docs/CSS/At-rule#Conditional_Group_Rules" title="CSS/At-rule#Conditional_Group_Rules">条件规则组</a> 中。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -42,9 +42,9 @@ translation_of: Web/CSS/@font-face
 
 <dl>
  <dt>{{cssxref("@font-face/font-family", "font-family")}}</dt>
- <dd>所指定的字体名字将会被用于font或font-family属性( i.e. font-family: &lt;family-name&gt;; )</dd>
+ <dd>所指定的字体名字将会被用于 font 或 font-family 属性 ( i.e. font-family: &lt;family-name&gt;; )</dd>
  <dt>{{cssxref("@font-face/src", "src")}}</dt>
- <dd>远程字体文件位置的URL或者用户计算机上的字体名称， 可以使用local语法通过名称指定用户的本地计算机上的字体( i.e. src: local('Arial'); )。 如果找不到该字体，将会尝试其他来源，直到找到它。</dd>
+ <dd>远程字体文件位置的 URL 或者用户计算机上的字体名称， 可以使用 local 语法通过名称指定用户的本地计算机上的字体 ( i.e. src: local('Arial'); )。 如果找不到该字体，将会尝试其他来源，直到找到它。</dd>
  <dt>{{cssxref("@font-face/font-variant", "font-variant")}}</dt>
  <dd>A {{cssxref("font-variant")}} value.</dd>
  <dt>{{cssxref("@font-face/font-stretch", "font-stretch")}}</dt>
@@ -52,14 +52,14 @@ translation_of: Web/CSS/@font-face
  <dt>{{cssxref("@font-face/font-weight", "font-weight")}}</dt>
  <dd>A {{cssxref("font-weight")}} value.</dd>
  <dt>{{cssxref("@font-face/font-style", "font-style")}}</dt>
- <dd>对于src所指字体的描述。如果所需字体符合描述，则采用本font-face所定义的字体。</dd>
+ <dd>对于 src 所指字体的描述。如果所需字体符合描述，则采用本 font-face 所定义的字体。</dd>
  <dt>{{cssxref("@font-face/unicode-range", "unicode-range")}}</dt>
- <dd>在该@font-face中定义的unicode字体范围</dd>
+ <dd>在该 @font-face 中定义的 unicode 字体范围</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
-<p>下面的例子简单定义了一个可下载的字体，并应用到了文档的整个body标签上。</p>
+<p>下面的例子简单定义了一个可下载的字体，并应用到了文档的整个 body 标签上。</p>
 
 <p><a href="/@api/deki/files/2935/=webfont-sample.html" title="/@api/deki/files/2935/=webfont-sample.html">View live sample</a></p>
 
@@ -69,7 +69,7 @@ translation_of: Web/CSS/@font-face
   &lt;style type="text/css" media="screen, print"&gt;
     @font-face {
       font-family: "Bitstream Vera Serif Bold";
-      src: url("http://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
+      src: url("https://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
     }
 
     body { font-family: "Bitstream Vera Serif Bold", serif }
@@ -83,7 +83,7 @@ translation_of: Web/CSS/@font-face
 
 
 
-<p>在接下来的例子中，用到了用户本地字体"Helvetica Neue Bold"的备份；如果当前用户(浏览器)未安装该字体(两种可能的字体名都已经试过)，就会用下载的字体"MgOpenModernaBold.ttf"来代替：</p>
+<p>在接下来的例子中，用到了用户本地字体"Helvetica Neue Bold"的备份；如果当前用户 (浏览器) 未安装该字体 (两种可能的字体名都已经试过)，就会用下载的字体"MgOpenModernaBold.ttf"来代替：</p>
 
 <pre class="brush: css notranslate">@font-face {
   font-family: MyHelvetica;
@@ -100,7 +100,7 @@ translation_of: Web/CSS/@font-face
 <p>接下来的例子在英文原文中已被删除。</p>
 </div>
 
-<p>这个例子新定义了一个字体，正常粗细的字采用字体Times New Roman，粗体字采用Consolas。</p>
+<p>这个例子新定义了一个字体，正常粗细的字采用字体 Times New Roman，粗体字采用 Consolas。</p>
 
 <pre class="brush:css notranslate">@font-face {
     font-family: myFirstFont;
@@ -118,8 +118,8 @@ translation_of: Web/CSS/@font-face
 <h2 id="注意">注意</h2>
 
 <ul>
- <li>这里使用的Web fonts 仍然受到同域限制  (字体文件必须和调用它的网页同一域), 但可以使用 <a href="https://developer.mozilla.org/en-US/docs/HTTP_access_control">HTTP access controls</a> 解除这一限制。</li>
- <li>因为这里没有为 TrueType(ttf), OpenType(otf) 和 Web Open File Format(WOFF) 字体定义MIME，因此不能为这些字体类型设置特定的MIME（实际上WOFF的MIME将会是application/font-woff，但浏览器对此MIME的识别还不统一，其它字体情况也类似，可暂时使用application/octet-stream）。 </li>
+ <li>这里使用的 Web fonts 仍然受到同域限制  (字体文件必须和调用它的网页同一域), 但可以使用 <a href="https://developer.mozilla.org/en-US/docs/HTTP_access_control">HTTP access controls</a> 解除这一限制。</li>
+ <li>因为这里没有为 TrueType(ttf), OpenType(otf) 和 Web Open File Format(WOFF) 字体定义 MIME，因此不能为这些字体类型设置特定的 MIME（实际上 WOFF 的 MIME 将会是 application/font-woff，但浏览器对此 MIME 的识别还不统一，其它字体情况也类似，可暂时使用 application/octet-stream）。 </li>
  <li>你不能在一个 CSS 选择器中定义 @font-face 。例如，这样写是无效的：
   <pre class="brush: css; example-bad notranslate">.className {
   @font-face {
@@ -171,7 +171,7 @@ translation_of: Web/CSS/@font-face
  <li><a href="/en-US/docs/WOFF" title="About WOFF">About WOFF</a></li>
  <li><a class="external" href="http://www.fontsquirrel.com/fontface/generator">FontSquirrel @font-face generator</a></li>
  <li><a class="external" href="http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/">Beautiful fonts with @font-face</a></li>
- <li><a class="external" href="http://openfontlibrary.org/" title="http://openfontlibrary.org/">Open Font Library</a></li>
+ <li><a class="external" href="http://openfontlibrary.org/">Open Font Library</a></li>
  <li><a class="external" href="http://msdn.microsoft.com/en-us/library/ms530757(VS.85).aspx">Microsoft Developer Network (MSDN) @font-face reference</a></li>
  <li><a class="external" href="http://caniuse.com/woff">When can I use WOFF?</a></li>
  <li><a class="external" href="http://caniuse.com/svg-fonts">When can I use SVG Fonts?</a></li>

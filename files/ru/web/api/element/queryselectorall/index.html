@@ -3,13 +3,13 @@ title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 translation_of: Web/API/Element/querySelectorAll
 ---
-<h2 id="Summary" name="Summary">Общая информация</h2>
+<h2 id="Summary">Общая информация</h2>
 
 <p>Возвращает список типа <a href="/ru/docs/Web/API/NodeList">NodeList</a>, состоящий из всех элементов, которые являются потомками для элемента, над которым была выполнена функция и удовлетворяющим условию выборки.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><em>elementList</em> = baseElement.querySelectorAll(<em>selectors</em>);
+<pre class="syntaxbox"><em>elementList</em> = baseElement.querySelectorAll(<em>selectors</em>);
 </pre>
 
 <p>где</p>
@@ -20,25 +20,25 @@ translation_of: Web/API/Element/querySelectorAll
  <li><code>selectors —</code> <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">текст селектора</a> для выбора нужных элементов.</li>
 </ul>
 
-<h2 id="Example" name="Example">Примеры</h2>
+<h2 id="Example">Примеры</h2>
 
 <p>Этот пример возвращает список всех элементов с тегом p, которые находятся в теле документа:</p>
 
-<pre class="brush: js notranslate">var matches = document.body.querySelectorAll('p');
+<pre class="brush: js">var matches = document.body.querySelectorAll('p');
 </pre>
 
 <p>Этот пример возвращает список всех элементов с тегом p, которые находятся непосредственно в элементах-контейнерах с тегом div, имеющих класс 'highlighted', которые в свою очередь находятся внутри элемента с идентификатором 'test':</p>
 
-<pre class="brush:js notranslate">var el = document.querySelector('#test');
+<pre class="brush:js">var el = document.querySelector('#test');
 var matches = el.querySelectorAll('div.highlighted &gt; p');
 </pre>
 
 <p>Этот пример возвращает список всех элементов iframe, которые имеют атрибут "data-src":</p>
 
-<pre class="brush: js notranslate">var matches = el.querySelectorAll('iframe[data-src]');
+<pre class="brush: js">var matches = el.querySelectorAll('iframe[data-src]');
 </pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <p>Функция выбрасывает исключение SYNTAX_ERR, если текст селектора неправильный.</p>
 
@@ -50,17 +50,17 @@ var matches = el.querySelectorAll('div.highlighted &gt; p');
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<div></div>
 
-<p>{{Compat("api.Element.querySelectorAll")}}</p>
 
-<h2 id="Specification" name="Specification">Ссылки на спецификации</h2>
+<p>{{Compat}}</p>
+
+<h2 id="Specification">Ссылки на спецификации</h2>
 
 <ul>
- <li><a href="http://www.w3.org/TR/selectors-api/" title="http://www.w3.org/TR/selectors-api/">Selectors API</a></li>
+ <li><a href="http://www.w3.org/TR/selectors-api/">Selectors API</a></li>
 </ul>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/DOM/Document.querySelectorAll" title="DOM/document.querySelectorAll"><code>document.querySelectorAll</code></a></li>

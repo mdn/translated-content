@@ -29,11 +29,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 
 <p>Для больших целочисленных значений, рассмотрите возможность использования типа {{jsxref("BigInt")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code>Number.isSafeInteger(<var>testValue</var>)</code></pre>
+<pre class="syntaxbox"><code>Number.isSafeInteger(<var>testValue</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>testValue</code></dt>
@@ -44,9 +44,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 
 <p>{{jsxref("Boolean")}} значение, сообщающее о том, является ли переданное значение безопасным целочисленным числом или же нет.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<pre class="brush: js notranslate">Number.isSafeInteger(3);                    // true
+<pre class="brush: js">Number.isSafeInteger(3);                    // true
 Number.isSafeInteger(Math.pow(2, 53));      // false
 Number.isSafeInteger(Math.pow(2, 53) - 1);  // true
 Number.isSafeInteger(NaN);                  // false
@@ -56,36 +56,23 @@ Number.isSafeInteger(3.1);                  // false
 Number.isSafeInteger(3.0);                  // true
 </pre>
 
-<h2 id="Specifications" name="Specifications">Полифил</h2>
+<h2 id="Specifications">Полифил</h2>
 
-<pre class="brush: js notranslate">Number.isSafeInteger = Number.isSafeInteger || function (value) {
+<pre class="brush: js">Number.isSafeInteger = Number.isSafeInteger || function (value) {
    return Number.isInteger(value) &amp;&amp; Math.abs(value) &lt;= Number.MAX_SAFE_INTEGER;
 };</pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-  </tr>
-  <tr>
-   <td>
-    <p>{{SpecName('ESDraft', '#sec-number.issafeinteger', 'Number.isSafeInteger')}}</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div>
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("javascript.builtins.Number.isSafeInteger")}}</p>
+<p>{{Compat}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>Объект {{jsxref("Number")}}, которому принадлежит этот метод.</li>

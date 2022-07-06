@@ -13,7 +13,7 @@ translation_of: Web/API/GlobalEventHandlers/onformdata
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p><code><strong>onformdata</strong></code> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、フォームのデータを表す項目リストが構築された後に発行される {{event("formdata")}} イベントを処理するイベントハンドラー ({{domxref("EventHandler")}}) です。これはフォームが送信されたときに発生しますが、 {{domxref("FormData.FormData", "FormData()")}} コンストラクターを呼び出しても発行することができます。 <code>onformdata</code> は {{domxref("HTMLFormElement")}} で利用できます。</p>
+<p><code><strong>onformdata</strong></code> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、フォームのデータを表す項目リストが構築された後に発行される {{event("formdata")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。これはフォームが送信されたときに発生しますが、 {{domxref("FormData.FormData", "FormData()")}} コンストラクターを呼び出しても発行することができます。 <code>onformdata</code> は {{domxref("HTMLFormElement")}} で利用できます。</p>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -77,8 +77,6 @@ formElem.onformdata = (e) =&gt; {
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("api.GlobalEventHandlers.onformdata")}}</p>
 

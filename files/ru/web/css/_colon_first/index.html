@@ -8,36 +8,36 @@ tags:
   - Разметка
 translation_of: 'Web/CSS/:first'
 ---
-<div></div>
+
 
 <p><a href="/ru/docs/Web/CSS">CSS</a> <a href="/ru/docs/Web/CSS/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B">псевдокласс</a> <strong><code>:first</code></strong> используется с @-правилом  {{cssxref("@page")}}, представляя первую страницу документа при печати.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Выбирает первую страницу при печати */
+<pre class="brush: css no-line-numbers">/* Выбирает первую страницу при печати */
 @page :first {
   margin-left: 50%;
   margin-top: 50%;
 }</pre>
 
 <div class="note">
-<p><strong>Обратите внимание:</strong> Вы можете изменять не все CSS свойства в этом псевдоклассе. Вы можете изменять только внешние отступы, {{cssxref("orphans")}}, {{cssxref("widows")}}, и разбитие документа на страницы. Более того, вы можете использовать только <a href="/en-US/docs/Web/CSS/размер#Абсолютные_единицы_измерения_размера">абсолютные единицы измерения</a>, определяя внешние отступы. Все остальные правила будут проигнорированы.</p>
+<p><strong>Обратите внимание:</strong> Вы можете изменять не все CSS-свойства в этом псевдоклассе. Вы можете изменять только внешние отступы, {{cssxref("orphans")}}, {{cssxref("widows")}}, и разбитие документа на страницы. Более того, вы можете использовать только <a href="/en-US/docs/Web/CSS/размер#Абсолютные_единицы_измерения_размера">абсолютные единицы измерения</a>, определяя внешние отступы. Все остальные правила будут проигнорированы.</p>
 </div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">Примеры</h2>
+<h2 id="Example">Примеры</h2>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Первая страница.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Первая страница.&lt;/p&gt;
 &lt;p&gt;Вторая страница.&lt;/p&gt;
 &lt;button&gt;Напечатать&lt;/button&gt;
 </pre>
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">@page :first {
+<pre class="brush: css">@page :first {
   margin-left: 50%;
   margin-top: 50%;
 }
@@ -49,7 +49,7 @@ p {
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">document.querySelector("button").onclick = function () {
+<pre class="brush: js">document.querySelector("button").onclick = function () {
   window.print();
 }
 </pre>
@@ -62,35 +62,11 @@ p {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Paged Media', '#left-right-first', ':first')}}</td>
-   <td>{{Spec2('CSS3 Paged Media')}}</td>
-   <td>Без изменений.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'page.html#page-selectors', ':first')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Первое определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-
-
-<div class="hidden">Таблица совместимости на этой странице генерируется из структурированных данных. Если вы хотите внести свой вклад в эти данные, просмотрите <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам запрос на извлечение.</div>
-
-<p>{{Compat("css.selectors.first")}}</p>
+<p>{{Compat}}</p>
 
 
 

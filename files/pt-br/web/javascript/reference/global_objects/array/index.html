@@ -106,14 +106,14 @@ new Array(<em>arrayLength</em>)
 
 <dl>
  <dt><code><var>element0</var>, <var>element1</var>, ..., <var>elementN</var> </code></dt>
- <dd>Um array JavaScript é inicializado com os elementos contém,  exceto no caso onde um único argumento é passado para o construtor do <code>Array</code> e esse argumento é um número (veja o parâmetro arrayLength abaixo).  Esse caso especial só se aplica para os arrays JavaScript criados com o construtor <code>Array</code> , e não para literais de array criados com a sintaxe de colchetes [].</dd>
+ <dd>Um array JavaScript é inicializado com os elementos contém, exceto no caso onde um único argumento é passado para o construtor do <code>Array</code> e esse argumento é um número (veja o parâmetro arrayLength abaixo). Esse caso especial só se aplica para os arrays JavaScript criados com o construtor <code>Array</code> , e não para literais de array criados com a sintaxe de colchetes [].</dd>
  <dt><code><var>arrayLength</var></code></dt>
- <dd>Se o único argumento passado para o construtor do <code>Array</code> for um número inteiro entre 0 and 2<sup>32</sup>-1 (inclusive), um novo array com o tamanho desse número é retornado. Se o argumento for qualquer outro número, uma exceção <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/RangeError" title="JavaScript/Reference/Global_Objects/RangeError">RangeError</a></code> é lançada.</dd>
+ <dd>Se o único argumento passado para o construtor do <code>Array</code> for um número inteiro entre 0 e 2<sup>32</sup>-1 (inclusive), um novo array com o tamanho desse número é retornado. Se o argumento for qualquer outro número, uma exceção <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/RangeError" title="JavaScript/Reference/Global_Objects/RangeError">RangeError</a></code> é lançada.</dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Arrays são objetos semelhantes a listas que vêm com uma série de  métodos embutidos para realizar operações de travessia e mutação. Nem o tamanho de um array JavaScript nem os tipos de elementos são fixos. Já que  o tamanho de um array pode ser alterado a qualquer momento e os dados podem ser armazenados em posições não contíguas, arrays JavaScript não tem a garantia de serem densos; isso depende de como o programador escolhe usá-los. De uma maneira geral, essas são características convenientes, mas, se esses recursos não são desejáveis para o seu caso em particular, você pode considerar usar arrays tipados.</p>
+<p>Arrays são objetos semelhantes a listas que vêm com uma série de métodos embutidos para realizar operações de travessia e mutação. Nem o tamanho de um array JavaScript nem os tipos de elementos são fixos. Já que o tamanho de um array pode ser alterado a qualquer momento e os dados podem ser armazenados em posições não contíguas, arrays JavaScript não tem a garantia de serem densos; isso depende de como o programador escolhe usá-los. De uma maneira geral, essas são características convenientes, mas, se esses recursos não são desejáveis para o seu caso em particular, você pode considerar usar arrays tipados.</p>
 
 <p>Arrays não podem usar strings como índices (como em um <a href="https://pt.wikipedia.org/wiki/Vetor_associativo">array associativo</a>), devem ser usados números inteiros. Definir ou acessar não-inteiros usando <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors">notação de colchetes (ou notação de ponto)</a> não vai definir ou recuperar um elemento do array em si, mas sim definir ou acessar uma variável associada com a <a href="/pt-BR/docs/Web/JavaScript/Data_structures#Propriedades">coleção de propriedades de objeto</a> daquele array. As propriedades de objeto do array e a lista de elementos do array são separados, e as operações de travessia e mutação não podem ser aplicadas a essas propriedades nomeadas.</p>
 
@@ -309,7 +309,7 @@ if (Array.prototype.every.call(str, isLetter))
 
 <p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String#String_generic_methods" title="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String#String_generic_methods">Generics</a> também estão disponíveis em <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String" title="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String"><code>String</code></a>.</p>
 
-<p>Estes não são atualmente parte dos padrões ECMAScript (através do ES2015 <a href="https://github.com/monolithed/ECMAScript-6" title="https://github.com/monolithed/ECMAScript-5"><code>Array.from()</code></a> pode se conseguir isto). A seguir segue uma adaptação para permitir o uso em todos os navegadores:</p>
+<p>Estes não são atualmente parte dos padrões ECMAScript (através do ES2015 <a href="https://github.com/monolithed/ECMAScript-6"><code>Array.from()</code></a> pode se conseguir isto). A seguir segue uma adaptação para permitir o uso em todos os navegadores:</p>
 
 <pre class="brush: js">/*globals define*/
 // Assumes Array extras already present (one may use shims for these as well)

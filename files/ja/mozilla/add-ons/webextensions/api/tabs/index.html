@@ -22,7 +22,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 <p>この API の大半の使用に特別なパーミッションは要りませんが:</p>
 
 <ul>
- <li><code>Tab.url</code> <code>Tab.title</code> <code>Tab.favIconUrl</code>, のアクセスには "tabs" <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>が必要です。また Firefox では URL による{{WebExtAPIRef("tabs.query", "問い合わせ")}}をするのにも "tabs" が必要です。</li>
+ <li><code>Tab.url</code> <code>Tab.title</code> <code>Tab.favIconUrl</code>, のアクセスには "tabs" <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>が必要です。また Firefox では URL による{{WebExtAPIRef("tabs.query", "問い合わせ")}}をするのにも "tabs" が必要です。</li>
  <li>{{WebExtAPIRef("tabs.executeScript()")}} や {{WebExtAPIRef("tabs.insertCSS()")}} を使うには、そのタブの <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host パーミッション</a>が必要です。</li>
 </ul>
 
@@ -39,7 +39,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
  <dd>タブがミュートされているかを示す真理値と、最後の変更の理由からなるオブジェクト。</dd>
  <dt>{{WebExtAPIRef("tabs.PageSettings")}}</dt>
  <dd>
- <p><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF" title="Saves the current page as a PDF. This will open a dialog, supplied by the underlying operating system, asking the user where they want to save the PDF."><code>tabs.saveAsPDF()</code></a>メソッドにおいて、どのように PDF を描画するかを制御する。</p>
+ <p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF" title="Saves the current page as a PDF. This will open a dialog, supplied by the underlying operating system, asking the user where they want to save the PDF."><code>tabs.saveAsPDF()</code></a>メソッドにおいて、どのように PDF を描画するかを制御する。</p>
  </dd>
  <dt>{{WebExtAPIRef("tabs.Tab")}}</dt>
  <dd>タブについての情報を含む。</dd>
@@ -70,7 +70,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
  <dt>{{WebExtAPIRef("tabs.captureVisibleTab()")}}</dt>
  <dd>特定のウィンドウのアクティブなタブの可視エリアの画像をエンコードしたデータURI を作成します。</dd>
  <dt>{{WebExtAPIRef("tabs.connect()")}}</dt>
- <dd>あるタブにおいて、バックグラウンドスクリプト（またはその他ポップアップやオプションページのスクリプトなど特権スクリプト）と <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> 間でのメッセージのやり取り用の経路を確保します。</dd>
+ <dd>あるタブにおいて、バックグラウンドスクリプト（またはその他ポップアップやオプションページのスクリプトなど特権スクリプト）と <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> 間でのメッセージのやり取り用の経路を確保します。</dd>
  <dt>{{WebExtAPIRef("tabs.create()")}}</dt>
  <dd>新しいタブを作る。</dd>
  <dt>{{WebExtAPIRef("tabs.detectLanguage()")}}</dt>
@@ -86,7 +86,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
  <dt>{{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}</dt>
  <dd>特定のウィンドウ内のすべてのタブについての情報を取り出す。</dd>
  <dt>{{WebExtAPIRef("tabs.getCurrent()")}}</dt>
- <dd>スクリプトが実行されているタブについての情報を <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab" title="This type contains information about a tab."><code>tabs.Tab</code></a> オブジェクトとして取り出す。</dd>
+ <dd>スクリプトが実行されているタブについての情報を <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab" title="This type contains information about a tab."><code>tabs.Tab</code></a> オブジェクトとして取り出す。</dd>
  <dt>{{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}</dt>
  <dd>あるウィンドウにおいてタブが選択されているかを得る。</dd>
  <dt>{{WebExtAPIRef("tabs.getZoom()")}}</dt>

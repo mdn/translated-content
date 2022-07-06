@@ -55,7 +55,7 @@ Math.max(-10, 20);  //  20
 <pre class="brush: js">var arr = [1, 2, 3];
 var max = arr.reduce(function(a, b) {
   return Math.max(a, b);
-});
+}, -Infinity);
 </pre>
 
 <p>Die folgende Funktion benutzt {{jsxref("Function.prototype.apply()")}}, um den maximalen Wert eines numerischen Arrays zu finden. <code>getMaxOfArray([1, 2, 3])</code> entspricht <code>Math.max(1, 2, 3)</code>, aber <code>getMaxOfArray()</code> kann programmatisch erstellte Arrays jeder Art annehmen.</p>
@@ -106,8 +106,6 @@ var max = Math.max(...arr);
 </table>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("javascript.builtins.Math.max")}}</p>
 

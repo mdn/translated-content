@@ -20,14 +20,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>str</var>.search(<var>regexp</var>)</pre>
+<pre class="syntaxbox"><var>str</var>.search(<var>regexp</var>)</pre>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt><code>regexp</code></dt>
- <dd>一个{{jsxref("RegExp", "正则表达式（regular expression）")}}对象</dd>
- <dd>如果传入一个非正则表达式对象 <code>regexp</code>，则会使用 <code>new RegExp(regexp)</code> 隐式地将其转换为正则表达式对象。</dd>
+ <dd>一个{{jsxref("RegExp", "正则表达式（regular expression）")}}对象。如果传入一个非正则表达式对象 <code>regexp</code>，则会使用 <code>new RegExp(regexp)</code> 隐式地将其转换为正则表达式对象。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -44,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 
 <p>下面的例子中用两个不同的正则表达式对同一个字符串执行搜索匹配，得到一个成功匹配（正数返回值）和一个失败匹配（-1）。</p>
 
-<pre class="brush: js notranslate">var str = "hey JudE";
+<pre class="brush: js">var str = "hey JudE";
 var re = /[A-Z]/g;
 var re2 = /[.]/g;
 console.log(str.search(re)); // returns 4, which is the index of the first capital letter "J"
@@ -64,8 +63,6 @@ console.log(str.search(re2)); // returns -1 cannot find '.' dot punctuation</pre
 </table>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("javascript.builtins.String.search")}}</p>
 

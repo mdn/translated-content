@@ -7,7 +7,7 @@ translation_of: Web/API/WebGL_API/Constants
 
 <p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 提供了一些常量，这些常量常作为参数传入函数调用，或常作为函数的返回值。所有这些常量都是 {{domxref("GLenum")}} 类型。</p>
 
-<p>标准WebGL常量挂载在WebGL的两个渲染上下文环境（{{domxref("WebGLRenderingContext")}} 和{{domxref("WebGL2RenderingContext")}}）中，因此，以形如<code>gl.CONSTANT_NAME</code>的形式使用WebGL常量：</p>
+<p>标准 WebGL 常量挂载在 WebGL 的两个渲染上下文环境（{{domxref("WebGLRenderingContext")}} 和{{domxref("WebGL2RenderingContext")}}）中，因此，以形如<code>gl.CONSTANT_NAME</code>的形式使用 WebGL 常量：</p>
 
 <pre class="brush: js">var canvas = document.getElementById('myCanvas');
 var gl = canvas.getContext('webgl');
@@ -20,7 +20,7 @@ gl.getParameter(gl.LINE_WIDTH);
 <pre class="brush: js">var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
 var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API/Tutorial" title="WebGL tutorial">WebGL tutorial</a> 中有更多关于WebGL的信息，示例和如何开始WebGL编程的其它资源。</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API/Tutorial" title="WebGL tutorial">WebGL tutorial</a> 中有更多关于 WebGL 的信息，示例和如何开始 WebGL 编程的其它资源。</p>
 
 <h2 id="常量表">常量表</h2>
 
@@ -106,7 +106,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>TRIANGLE_STRIP</code></td>
    <td>0x0005</td>
-   <td>传递给<code>drawElements<font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: rgba(212, 221, 228, 0.15);">或</span></font></code><code>drawArrays</code> 画一组相连的三角形带。</td>
+   <td>传递给 <code>drawElements</code> 或 <code>drawArrays</code> 画一组相连的三角形带。</td>
   </tr>
   <tr>
    <td><code>TRIANGLE_FAN</code></td>
@@ -120,7 +120,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
 
 <h3 id="混合模式">混合模式</h3>
 
-<p>传递给 {{domxref("WebGLRenderingContext.blendFunc()")}} 或{{domxref("WebGLRenderingContext.blendFuncSeparate()")}} 的常量来指定混合模式 (同时用于或分别用于RBG和alpha).</p>
+<p>传递给 {{domxref("WebGLRenderingContext.blendFunc()")}} 或{{domxref("WebGLRenderingContext.blendFuncSeparate()")}} 的常量来指定混合模式 (同时用于或分别用于 RBG 和 alpha).</p>
 
 <table class="standard-table">
  <thead>
@@ -149,27 +149,27 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>ONE_MINUS_SRC_COLOR</code></td>
    <td>0x0301</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以1 减去源颜色分量。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以 1 减去源颜色分量。</td>
   </tr>
   <tr>
    <td><code>SRC_ALPHA</code></td>
    <td>0x0302</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以源颜色的 alpha值。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以源颜色的 alpha 值。</td>
   </tr>
   <tr>
    <td><code>ONE_MINUS_SRC_ALPHA</code></td>
    <td>0x0303</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以一个源颜色的 alpha值。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以一个源颜色的 alpha 值。</td>
   </tr>
   <tr>
    <td><code>DST_ALPHA</code></td>
    <td>0x0304</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以目标颜色的alpha值。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以目标颜色的 alpha 值。</td>
   </tr>
   <tr>
    <td><code>ONE_MINUS_DST_ALPHA</code></td>
    <td>0x0305</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以1减去目标颜色的alpha值。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以 1 减去目标颜色的 alpha 值。</td>
   </tr>
   <tr>
    <td><code>DST_COLOR</code></td>
@@ -179,12 +179,12 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>ONE_MINUS_DST_COLOR</code></td>
    <td>0x0307</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以1减去目标颜色分量。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以 1 减去目标颜色分量。</td>
   </tr>
   <tr>
    <td><code>SRC_ALPHA_SATURATE</code></td>
    <td>0x0308</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以源颜色alpha与目标颜色alpha中的最小值。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以源颜色 alpha 与目标颜色 alpha 中的最小值。</td>
   </tr>
   <tr>
    <td><code>CONSTANT_COLOR</code></td>
@@ -194,24 +194,24 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>ONE_MINUS_CONSTANT_COLOR</code></td>
    <td>0x8002</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以指定1减去常量颜色的混合函数。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以指定 1 减去常量颜色的混合函数。</td>
   </tr>
   <tr>
    <td><code>CONSTANT_ALPHA</code></td>
    <td>0x8003</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以指定常量alpha混合函数。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以指定常量 alpha 混合函数。</td>
   </tr>
   <tr>
    <td><code>ONE_MINUS_CONSTANT_ALPHA</code></td>
    <td>0x8004</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以指定1减去一个常量alpha的混合函数。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以指定 1 减去一个常量 alpha 的混合函数。</td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="混合方程">混合方程</h3>
 
-<p>传递给 {{domxref("WebGLRenderingContext.blendEquation()")}} 或 {{domxref("WebGLRenderingContext.blendEquationSeparate()")}} 的常量，以控制混合的计算方式（同时用于或分别用于RBG和alpha）。</p>
+<p>传递给 {{domxref("WebGLRenderingContext.blendEquation()")}} 或 {{domxref("WebGLRenderingContext.blendEquationSeparate()")}} 的常量，以控制混合的计算方式（同时用于或分别用于 RBG 和 alpha）。</p>
 
 <table class="standard-table">
  <thead>
@@ -256,37 +256,37 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>BLEND_EQUATION</code></td>
    <td>0x8009</td>
-   <td>传递给 <code>getParameter</code> 以获取当前的RGB混合函数。</td>
+   <td>传递给 <code>getParameter</code> 以获取当前的 RGB 混合函数。</td>
   </tr>
   <tr>
    <td><code>BLEND_EQUATION_RGB</code></td>
    <td>0x8009</td>
-   <td>传递给 <code>getParameter</code> 以获取当前的RGB混合函数。与 BLEND_EQUATION 相同。</td>
+   <td>传递给 <code>getParameter</code> 以获取当前的 RGB 混合函数。与 BLEND_EQUATION 相同。</td>
   </tr>
   <tr>
    <td><code>BLEND_EQUATION_ALPHA</code></td>
    <td>0x883D</td>
-   <td>传递给 <code>getParameter</code> 以获取当前的alpha函数。与 BLEND_EQUATION 相同。</td>
+   <td>传递给 <code>getParameter</code> 以获取当前的 alpha 函数。与 BLEND_EQUATION 相同。</td>
   </tr>
   <tr>
    <td><code>BLEND_DST_RGB</code></td>
    <td>0x80C8</td>
-   <td>传递给 <code>getParameter</code> 以获取当前的目标RGB混合函数。</td>
+   <td>传递给 <code>getParameter</code> 以获取当前的目标 RGB 混合函数。</td>
   </tr>
   <tr>
    <td><code>BLEND_SRC_RGB</code></td>
    <td>0x80C9</td>
-   <td>传递给 <code>getParameter</code> 以获取当前的源RGB混合函数。</td>
+   <td>传递给 <code>getParameter</code> 以获取当前的源 RGB 混合函数。</td>
   </tr>
   <tr>
    <td><code>BLEND_DST_ALPHA</code></td>
    <td>0x80CA</td>
-   <td>传递给 <code>getParameter</code> 以获取当前目标的alpha混合函数。</td>
+   <td>传递给 <code>getParameter</code> 以获取当前目标的 alpha 混合函数。</td>
   </tr>
   <tr>
    <td><code>BLEND_SRC_ALPHA</code></td>
    <td>0x80CB</td>
-   <td>传递给 <code>getParameter</code> 以获取当前的源alpha混合函数。</td>
+   <td>传递给 <code>getParameter</code> 以获取当前的源 alpha 混合函数。</td>
   </tr>
   <tr>
    <td><code>BLEND_COLOR</code></td>
@@ -316,7 +316,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>ALIASED_LINE_WIDTH_RANGE</code></td>
    <td>0x846E</td>
-   <td>传递给 <code>getParameter</code> 得到一条线的可用宽度范围。返回一个长度为2的数组。其中低值为0，高值为1。</td>
+   <td>传递给 <code>getParameter</code> 得到一条线的可用宽度范围。返回一个长度为 2 的数组。其中低值为 0，高值为 1。</td>
   </tr>
   <tr>
    <td><code>CULL_FACE_MODE</code></td>
@@ -331,7 +331,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>DEPTH_RANGE</code></td>
    <td>0x0B70</td>
-   <td>传递给 <code>getParameter</code> 返回长度为2的浮点数数组，以表示当前深度范围。</td>
+   <td>传递给 <code>getParameter</code> 返回长度为 2 的浮点数数组，以表示当前深度范围。</td>
   </tr>
   <tr>
    <td><code>DEPTH_WRITEMASK</code></td>
@@ -3980,57 +3980,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("9")}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatIE("11")}}</td>
-   <td>{{CompatOpera("12")}}</td>
-   <td>{{CompatSafari("5.1")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>25</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>12</td>
-   <td>8.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
 
 <h2 id="See_also">See also</h2>
 

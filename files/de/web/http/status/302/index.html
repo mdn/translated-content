@@ -12,11 +12,11 @@ translation_of: Web/HTTP/Status/302
 
 <div><span lang="de">Der HTTP-Statuscode </span><code><strong>302 Found</strong></code><span lang="de"> besagt, dass die angeforderte Ressource vorübergehend auf die URL verschoben wurde, die durch den {{HTTPHeader("Location")}}-Header angegeben wurde. Ein Browser folgt der Weiterleitung auf diese Seite, aber Suchmaschinen aktualisieren ihre Links auf die Ressource nicht (In SEO-Sprech sagt man, dass der 'link-juice' nicht an die neue URL gesendet wird).</span></div>
 
-<div></div>
+
 
 <div>Obwohl die Spezifikation verlangt, dass die Anfragemethode (und der Body der Anfrage) beim Folgen auf die Weiterleitung nicht verändert wird, setzen das nicht alle User-Agents um - man findet immer noch Programme, die hier Fehler haben Daher ist zu empfehlen, den Code <code>302</code> nur als Antwort auf die Anfragemethoden {{HTTPMethod("GET")}} und {{HTTPMethod("HEAD")}} auszugeben und ansonsten {{HTTPStatus("307")}} <code>Temporary Redirect</code> zu benutzen, wo ein Wechsel der Methode ausdrücklich verboten ist.</div>
 
-<div></div>
+
 
 <p>Falls Sie möchten, dass der User-Agent die Anfragemethode auf {{HTTPMethod("GET")}} ändert, benutzen Sie stattdessen den Code {{HTTPStatus("303")}} <code>See Other</code>. Das ist etwa nützlich, wenn Sie eine {{HTTPMethod("PUT")}}-Anfrage nicht mit der hochgeladenen Resource, sondern mit einer bestätigenden Nachricht wie "Sie haben XYZ erfolgreich hochgeladen." beantworten wollen.</p>
 
@@ -40,8 +40,6 @@ translation_of: Web/HTTP/Status/302
 </table>
 
 <h2 id="Browser-Kompatibilität">Browser-Kompatibilität</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("http.status.302")}}</p>
 

@@ -3,31 +3,29 @@ title: Sensor APIs
 slug: Web/API/Sensor_APIs
 tags:
   - 传感器
-  - 传感器API
+  - 传感器 API
   - 参考
   - 概述
-  - 通用传感器API
+  - 通用传感器 API
 translation_of: Web/API/Sensor_APIs
 ---
 <div>{{APIRef("Generic Sensor API")}}</div>
 
-<div class="summary">
-<p>传感器API （Sensor APIs）是一组统一设计的接口，它们在web平台中为各类传感器提供了一致的访问方式。</p>
-</div>
+<p>传感器 API（Sensor APIs）是一组统一设计的接口，它们在 web 平台中为各类传感器提供了一致的访问方式。</p>
 
-<h2 id="传感器API的概念和使用">传感器API的概念和使用</h2>
+<h2 id="传感器API的概念和使用">传感器 API 的概念和使用</h2>
 
-<p>尽管通用传感器API规范（Generic Sensor API specification）定义了一个 {{domxref('Sensor')}} 接口，但作为web开发者不应该直接使用它。你应该使用它的某个子类来获得指定的传感器数据。例如，{{domxref('accelerometer')}}接口返回设备当前沿所有三个轴的加速度。</p>
+<p>尽管通用传感器 API 规范（Generic Sensor API specification）定义了一个 {{domxref('Sensor')}} 接口，但作为 web 开发者不应该直接使用它。你应该使用它的某个子类来获得指定的传感器数据。例如，{{domxref('accelerometer')}}接口返回设备当前沿所有三个轴的加速度。</p>
 
 <p>传感器接口不一定与物理上的传感器一一对应。例如，{{domxref('Gyroscope')}} 接口确实与一个单独的物理器件接口对应，但{{domxref('AbsoluteOrientationSensor')}}接口提供的信息则是来自两个或更多传感器器件的数据通过算法得到的。这两类传感器分别被称为<em>低级的</em>（<em>low-level</em>）和<em>高级的</em>（<em>high-level</em>）。后者也被称为融合传感器（fusion sensor），或者虚拟（virtual）传感器，或称合成（synthetic）传感器。</p>
 
 <h3 id="功能检测">功能检测</h3>
 
-<p>传感器接口仅仅是底层器件传感器的代理。因此，相比其它API，传感器功能检测更为复杂。传感器API的存在并不能告诉你API是否与一个真实的硬件传感器相连，即使相连它是否在工作，甚至用户是否已经授权访问它。要一致地提供所有这些信息是要消耗性能和电池电量的。</p>
+<p>传感器接口仅仅是底层器件传感器的代理。因此，相比其它 API，传感器功能检测更为复杂。传感器 API 的存在并不能告诉你 API 是否与一个真实的硬件传感器相连，即使相连它是否在工作，甚至用户是否已经授权访问它。要一致地提供所有这些信息是要消耗性能和电池电量的。</p>
 
-<p>因此，传感器API的功能检测必须包含API本身的检测以及<a href="#Defensive_Programming">防御性编程策略（见下）</a>（defensive programming strategies）。</p>
+<p>因此，传感器 API 的功能检测必须包含 API 本身的检测以及<a href="#Defensive_Programming">防御性编程策略（见下）</a>（defensive programming strategies）。</p>
 
-<p>下面的例子展示了检测传感器API的三种方法。此外你还可以把对象实例化部分放在一个{{jsxref('statements/try...catch', 'try...catch')}} 块中。注意通过你并不能通过{{domxref('Navigator')}} 接口来实现传感器检测。</p>
+<p>下面的例子展示了检测传感器 API 的三种方法。此外你还可以把对象实例化部分放在一个{{jsxref('statements/try...catch', 'try...catch')}} 块中。注意通过你并不能通过{{domxref('Navigator')}} 接口来实现传感器检测。</p>
 
 <pre class="brush: js">if (typeof Gyroscope === "function") {
     // run in circles...
@@ -43,7 +41,7 @@ if (window.AmbientLightSensor) {
 
 <h3 id="许可和功能策略">许可和功能策略</h3>
 
-<p>只有用户对针对某种类型的传感器授权之后，才能对该类传感器进行读取。用{{domxref('Permissions')}} API来进行这种授权。下面的小例子展示了在试图使用传感器之前首先请求授权。</p>
+<p>只有用户对针对某种类型的传感器授权之后，才能对该类传感器进行读取。用{{domxref('Permissions')}} API 来进行这种授权。下面的小例子展示了在试图使用传感器之前首先请求授权。</p>
 
 <pre class="brush: js">navigator.permissions.query({ name: 'accelerometer' })
 .then(result =&gt; {
@@ -63,7 +61,7 @@ sensor.onerror = event =&gt; {
     console.log("No permissions to use AbsoluteOrientationSensor.");
 };</pre>
 
-<p>下表描述了每种传感器类型，使用它们在Permissions API、{{HTMLElement('iframe')}} 元素中<code>allow</code> 属性，以及{{httpheader('Feature-Policy')}}语句中被引用时使用的名字。</p>
+<p>下表描述了每种传感器类型，使用它们在 Permissions API、{{HTMLElement('iframe')}} 元素中<code>allow</code> 属性，以及{{httpheader('Feature-Policy')}}语句中被引用时使用的名字。</p>
 
 <table class="standard-table">
  <caption>Sensor permissions</caption>
@@ -206,7 +204,7 @@ try {
   <tr>
    <td>{{SpecName('Accelerometer')}}</td>
    <td>{{Spec2('Accelerometer')}}</td>
-   <td><code>定义Accelerometer</code>和<code>LinearAccerationSensor</code>。</td>
+   <td>定义 <code>Accelerometer</code> 和 <code>LinearAccerationSensor</code>。</td>
   </tr>
   <tr>
    <td>{{SpecName('AmbientLight')}}</td>

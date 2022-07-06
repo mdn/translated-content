@@ -26,13 +26,13 @@ translation_of: Learn/HTML/Tables/Basics
 
 <p>Таблица - это структурированный набор данных, состоящий из строк и столбцов (<strong>табличных данных</strong>). Таблицы позволяют быстро и легко посмотреть значения, показывающие некоторую взаимосвязь между различными типами данных, например - человек и его возраст, или расписание в плавательном бассейне.</p>
 
-<p><img alt="A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47." src="https://mdn.mozillademos.org/files/14583/numbers-table.png" style="display: block; height: 156px; margin: 0px auto; width: 350px;"></p>
+<p><img alt="A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47." src="numbers-table.png" style="display: block; margin: 0px auto;"></p>
 
-<p><img alt="A swimming timetable showing a sample data table" src="https://mdn.mozillademos.org/files/14587/swimming-timetable.png" style="display: block; height: 301px; margin: 0px auto; width: 794px;"></p>
+<p><img alt="A swimming timetable showing a sample data table" src="swimming-timetable.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Люди постоянно используют таблицы, причём уже давно, как показывает документ по переписи в США, относящийся к 1800 году:</p>
 
-<p><img alt="A very old parchment document; the data is not easily readable, but it clearly shows a data table being used." src="https://mdn.mozillademos.org/files/14585/1800-census.jpg" style="display: block; height: 505px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="A very old parchment document; the data is not easily readable, but it clearly shows a data table being used." src="1800-census.jpg" style="display: block; margin: 0px auto;"></p>
 
 <p>Так что не удивительно, что создатели HTML включили в него средства для структурирования и представления табличных данных в сети.</p>
 
@@ -98,24 +98,24 @@ translation_of: Learn/HTML/Tables/Basics
 
 <h3 id="Оформление_таблиц">Оформление таблиц</h3>
 
-<p><a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/personal-pronouns.html">Исходный код HTML (HTML source code)</a> вышеприведённой таблице есть в GitHub; посмотрите его и <a href="http://mdn.github.io/learning-area/html/tables/basic/personal-pronouns.html">живой пример (look at the live example)</a>! Вы заметите, что таблица там выглядит иначе — это потому, что на сайте MDN к этим данным была применена таблица стилей, а приведённый в GitHub пример информации о стиле не имеет.</p>
+<p><a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/personal-pronouns.html">Исходный код HTML (HTML source code)</a> вышеприведённой таблице есть в GitHub; посмотрите его и <a href="https://mdn.github.io/learning-area/html/tables/basic/personal-pronouns.html">живой пример (look at the live example)</a>! Вы заметите, что таблица там выглядит иначе — это потому, что на сайте MDN к этим данным была применена таблица стилей, а приведённый в GitHub пример информации о стиле не имеет.</p>
 
-<p>Не питайте ложных иллюзий - чтобы эффективно представлять таблицы в веб, необходимо придать им хорошую структуру в HTML и применить к ним таблицы стилей (<a href="/en-US/docs/Learn/CSS">CSS</a>). В данном разделе мы сфокусируемся на HTML, чтобы узнать о том, что касается CSS, вам надо обратиться к статье <a href="/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables">Стилизация таблиц</a>.</p>
+<p>Не питайте ложных иллюзий - чтобы эффективно представлять таблицы в веб, необходимо придать им хорошую структуру в HTML и применить к ним таблицы стилей (<a href="/en-US/docs/Learn/CSS">CSS</a>). В данном разделе мы сфокусируемся на HTML, чтобы узнать о том, что касается CSS, вам надо обратиться к статье <a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Стилизация таблиц</a>.</p>
 
 <p>В этом разделе мы не фокусируемся на CSS, но всё же дали простейшую таблицу стилей CSS, чтобы сделать таблицы более читабельными. Эту таблицу стилей можно найти <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">здесь</a>, можно также использовать <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">шаблон HTML</a>, применяющий эту стаблицу стилей — вместе они дадут вам хорошую основу для экспериментов с таблицами HTML.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Посмотрите также <a href="http://mdn.github.io/learning-area/html/tables/basic/personal-pronouns-styled.html">таблицу personal_pronouns с применённым к ней стилем</a>, чтобы получить представление о том, как она выглядит.</p>
+<p><strong>Примечание</strong>: Посмотрите также <a href="https://mdn.github.io/learning-area/html/tables/basic/personal-pronouns-styled.html">таблицу personal_pronouns с применённым к ней стилем</a>, чтобы получить представление о том, как она выглядит.</p>
 </div>
 
 <h3 id="Когда_не_надо_использовать_таблицы_HTML">Когда не надо использовать таблицы HTML?</h3>
 
-<p>HTML-таблицы следует использовать для табличных данных — это то, для чего они предназначены. К сожалению, многие используют таблицы HTML для оформления веб-страниц, например, одна строка для заголовка, одна для содержимого, одна для сносок, и тому подобное. Подробнее об этом можно узнать в разделе <a href="/ru/docs/Learn/Доступность/HTML#Вёрстка">Вёрстка</a> на <a href="/ru/docs/Learn/Доступность">Начальном обучающем модуле доступности</a>. Это происходило из-за плохой поддержки CSS в разных браузерах; в наше время такое встречается гораздо реже, но иногда всё же попадается.</p>
+<p>HTML-таблицы следует использовать для табличных данных — это то, для чего они предназначены. К сожалению, многие используют таблицы HTML для оформления веб-страниц, например, одна строка для заголовка, одна для содержимого, одна для сносок, и тому подобное. Подробнее об этом можно узнать в разделе <a href="/ru/docs/Learn/Accessibility/HTML#%d0%92%d1%91%d1%80%d1%81%d1%82%d0%ba%d0%b0">Вёрстка</a> на <a href="/ru/docs/Learn/Accessibility">Начальном обучающем модуле доступности</a>. Это происходило из-за плохой поддержки CSS в разных браузерах; в наше время такое встречается гораздо реже, но иногда всё же попадается.</p>
 
 <p>Короче говоря, использование таблиц в целях оформления вместо <a href="/en-US/docs/Learn/CSS/CSS_layout">методов CSS</a> является плохой идеей по следующим причинам :</p>
 
 <ol>
- <li><strong>Таблицы, используемые для оформления, уменьшают доступность страниц для людей, имеющих проблемы со зрением</strong>: <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">Скринридеры (Screenreaders</a>), используемые ими, интерпретируют HTML-теги и читают содержимое пользователю. Поскольку таблицы не являются средством для представления структуры таблицы, и разметка получается сложнее, чем при использовании методов CSS, скринридеры вводят пользователей в заблуждение.</li>
+ <li><strong>Таблицы, используемые для оформления, уменьшают доступность страниц для людей, имеющих проблемы со зрением</strong>: <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders">Скринридеры (Screenreaders</a>), используемые ими, интерпретируют HTML-теги и читают содержимое пользователю. Поскольку таблицы не являются средством для представления структуры таблицы, и разметка получается сложнее, чем при использовании методов CSS, скринридеры вводят пользователей в заблуждение.</li>
  <li><strong>Таблицы создают путаницу тегов</strong>: Как уже упоминалось, оформление страниц с помощью таблиц даёт более сложную структуру разметки, чем специально предназначенные для этого методы. Соответственно, такой код труднее писать, поддерживать и отлаживать.</li>
  <li><strong>Таблицы не реагируют автоматически на тип устройства</strong>: У надлежащих контейнеров (например, {{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}}, или {{htmlelement("div")}}) ширина по умолчанию равна 100% от их родительского элемента. У таблиц же размер по умолчанию подстраивается под их содержимое, так что чтобы они одинаково хорошо работали на разных типах устройств необходимо принимать дополнительные меры.</li>
 </ol>
@@ -128,10 +128,10 @@ translation_of: Learn/HTML/Tables/Basics
  <li>Прежде всего, создайте локальную копию <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">blank-template.html</a> и <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">minimal-table.css</a> в новой папке на вашем компьютере.</li>
  <li>Содержимое любой таблицы заключается между двумя тегами : <strong><code><a href="/en-US/docs/Web/HTML/Element/table">&lt;table&gt;&lt;/table&gt;</a></code></strong>. Добавьте их в тело HTML.</li>
  <li>Самым маленьким контейнером в таблице является ячейка, она создаётся элементом <strong><code><a href="/en-US/docs/Web/HTML/Element/td">&lt;td&gt;</a></code></strong> ('td' - сокращение от 'table data'). Введите внутри тегов table следующее:
-  <pre class="brush: html notranslate">&lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;</pre>
+  <pre class="brush: html">&lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;</pre>
  </li>
  <li>Чтобы получить строку из четырёх ячеек, необходимо скопировать эти теги три раза. Обновите содержимое таблицы так, чтобы она выглядела следующим образом:
-  <pre class="brush: html notranslate">&lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;
+  <pre class="brush: html">&lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;
 &lt;td&gt;I'm your second cell.&lt;/td&gt;
 &lt;td&gt;I'm your third cell.&lt;/td&gt;
 &lt;td&gt;I'm your fourth cell.&lt;/td&gt;</pre>
@@ -145,7 +145,7 @@ translation_of: Learn/HTML/Tables/Basics
 <ol>
  <li>Поместите четыре уже созданных ячейки между тегами <code>&lt;tr&gt;</code> как здесь показано:
 
-  <pre class="brush: html notranslate">&lt;tr&gt;
+  <pre class="brush: html">&lt;tr&gt;
   &lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;
   &lt;td&gt;I'm your second cell.&lt;/td&gt;
   &lt;td&gt;I'm your third cell.&lt;/td&gt;
@@ -175,14 +175,14 @@ translation_of: Learn/HTML/Tables/Basics
 </table>
 
 <div class="note">
-<p><strong>Примечание</strong>: Этот пример можно также найти на GitHub под названием <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html">simple-table.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/basic/simple-table.html">see it live also</a>).</p>
+<p><strong>Примечание</strong>: Этот пример можно также найти на GitHub под названием <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html">simple-table.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/basic/simple-table.html">see it live also</a>).</p>
 </div>
 
 <h2 id="Добавление_заголовков_с_помощью_элементов_&lt;th>">Добавление заголовков с помощью элементов &lt;th&gt;</h2>
 
 <p>Теперь обратимся к табличным заголовкам — особым ячейкам, которые идут вначале строки или столбца и определяют тип данных, которые содержит данная строка или столбец (как "Person" и "Age" в первом примере данной статьи). Чтобы показать, для чего они нужны, возьмём следующий пример. Сначала исходный код:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;&amp;nbsp;&lt;/td&gt;
     &lt;td&gt;Knocky&lt;/td&gt;
@@ -275,7 +275,7 @@ translation_of: Learn/HTML/Tables/Basics
 </ol>
 
 <div class="note">
-<p><strong>Примечание</strong>: Законченный пример можно найти на <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html">dogs-table-fixed.html</a> в GitHub (<a href="http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html">посмотрите живой пример</a>).</p>
+<p><strong>Примечание</strong>: Законченный пример можно найти на <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html">dogs-table-fixed.html</a> в GitHub (<a href="https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html">посмотрите живой пример</a>).</p>
 </div>
 
 <h3 id="Для_чего_нужны_заголовки">Для чего нужны заголовки?</h3>
@@ -294,7 +294,7 @@ translation_of: Learn/HTML/Tables/Basics
 
 <p>Исходная разметка выглядит так:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;th&gt;Animals&lt;/th&gt;
   &lt;/tr&gt;
@@ -362,7 +362,7 @@ translation_of: Learn/HTML/Tables/Basics
 </ol>
 
 <div class="note">
-<p><strong>Примечание</strong>: Законченный пример можно посмотреть в <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html">animals-table-fixed.html</a> на GitHub (<a href="http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html">живой пример</a>).</p>
+<p><strong>Примечание</strong>: Законченный пример можно посмотреть в <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html">animals-table-fixed.html</a> на GitHub (<a href="https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html">живой пример</a>).</p>
 </div>
 
 <table id="tabular" style="background-color: white;">
@@ -374,7 +374,7 @@ translation_of: Learn/HTML/Tables/Basics
 
 <p>Возьмём простой пример:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;th&gt;Data 1&lt;/th&gt;
     &lt;th style="background-color: yellow"&gt;Data 2&lt;/th&gt;
@@ -410,7 +410,7 @@ translation_of: Learn/HTML/Tables/Basics
 
 <p>Он не идеален, поскольку нам пришлось повторить информацию о стиле для всех трёх ячеек в столбце (в реальном проекте, возможно, придётся вводить <code>class</code> на всех трёх и вводит правило в таблице стилей). Вместо этого, мы можем задать информацию один раз, в элементе <code>&lt;col&gt;</code>. <code>Элемент &lt;col&gt;</code> задаётся в контейнере <code>&lt;colgroup&gt;</code> сразу же за открывающим тегом <code>&lt;table&gt;</code>. Эффект, который мы видели выше, можно задать так:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;colgroup&gt;
     &lt;col&gt;
     &lt;col style="background-color: yellow"&gt;
@@ -433,7 +433,7 @@ translation_of: Learn/HTML/Tables/Basics
 
 <p>Если бы мы хотели применить информацию о стиле к обоим столбцам, мы могли бы просто ввести один элемент <code>&lt;col&gt;</code> с атрибутом span, таким образом:</p>
 
-<pre class="brush: html notranslate">&lt;colgroup&gt;
+<pre class="brush: html">&lt;colgroup&gt;
   &lt;col style="background-color: yellow" span="2"&gt;
 &lt;/colgroup&gt;</pre>
 
@@ -521,7 +521,7 @@ translation_of: Learn/HTML/Tables/Basics
  <li>Последние два дня выходные; значением атрибута style <code>будет width: 42px;</code></li>
 </ol>
 
-<p>Посмотрите, что у вас получилось. Если застрянете, или захотите себя проверить, можете посмотреть нашу версию в <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html">timetable-fixed.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html">посмотрите живой пример</a>).</p>
+<p>Посмотрите, что у вас получилось. Если застрянете, или захотите себя проверить, можете посмотреть нашу версию в <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html">timetable-fixed.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html">посмотрите живой пример</a>).</p>
 
 <h2 id="Итог">Итог</h2>
 

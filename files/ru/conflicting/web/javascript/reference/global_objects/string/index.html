@@ -1,150 +1,16 @@
 ---
-title: String.prototype
+title: ByteString
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/String
 tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String
-translation_of_original: Web/JavaScript/Reference/Global_Objects/String/prototype
-original_slug: Web/JavaScript/Reference/Global_Objects/String/prototype
+  - Строки
+translation_of: Web/API/ByteString
+original_slug: Web/API/ByteString
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+<div>{{APIRef("DOM")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<p><strong><code>ByteString</code></strong> является UTF-8 строкой, которая соответствует набору всех возможных последовательностей байтов. <code>ByteString</code> отображается как {{jsxref("String")}} при возврате в JavaScript; как правило, используется только при взаимодействии с протоколами, которые равнозначно используют байты и строки, например HTTP.</p>
 
-<p>Свойство <strong><code>String.prototype</code></strong> представляет прототип объекта {{jsxref("Global_Objects/String", "String")}}.</p>
-
-<div>{{js_property_attributes(0, 0, 0)}}</div>
-
-<h2 id="Description" name="Description">Описание</h2>
-
-<p>Все объекты {{jsxref("Global_Objects/String", "String")}} наследуются от <code>String.prototype</code>. Изменения в прототипе объекта {{jsxref("Global_Objects/String", "String")}} распространяются на все его экземпляры.</p>
-
-<h2 id="Properties" name="Properties">Свойства</h2>
-
-<dl>
- <dt><code>String.prototype.constructor</code></dt>
- <dd>Определяет функцию, создающую прототип этого объекта.</dd>
- <dt>{{jsxref("String.prototype.length")}}</dt>
- <dd>Отражает длину строки.</dd>
- <dt><code><em>N</em></code></dt>
- <dd>Используется для доступа к символу в позиции <em>N</em>, где <em>N</em> — это целое число между 0 и длиной строки {{jsxref("String.length", "length")}} минус один. Эти свойства доступны только для чтения.</dd>
-</dl>
-
-<h2 id="Methods" name="Methods">Методы</h2>
-
-<h3 id="Methods_unrelated_to_HTML" name="Methods_unrelated_to_HTML">Методы, не относящиеся к HTML</h3>
-
-<dl>
- <dt>{{jsxref("String.prototype.charAt()")}}</dt>
- <dd>Возвращает символ по указанному индексу.</dd>
- <dt>{{jsxref("String.prototype.charCodeAt()")}}</dt>
- <dd>Возвращает число, представляющее значение символа в Юникоде по указанному индексу.</dd>
- <dt>{{jsxref("String.prototype.codePointAt()")}} {{experimental_inline}}</dt>
- <dd>Возвращает неотрицательное целое число, представляющее закодированную в UTF-16 кодовую точку значения по указанной позиции.</dd>
- <dt>{{jsxref("String.prototype.concat()")}}</dt>
- <dd>Объединяет текст двух строк и возвращает новую строку.</dd>
- <dt>{{jsxref("String.prototype.includes()")}} {{experimental_inline}}</dt>
- <dd>Определяет, находится ли строка внутри другой строки.</dd>
- <dt>{{jsxref("String.prototype.endsWith()")}} {{experimental_inline}}</dt>
- <dd>Определяет, заканчивается ли строка символами другой строки.</dd>
- <dt>{{jsxref("String.prototype.indexOf()")}}</dt>
- <dd>Возвращает индекс первого вхождения указанного значения в объекте {{jsxref("Global_Objects/String", "String")}}, на котором был вызван этот метод, или -1, если вхождений нет.</dd>
- <dt>{{jsxref("String.prototype.lastIndexOf()")}}</dt>
- <dd>Возвращает индекс последнего вхождения указанного значения в объекте {{jsxref("Global_Objects/String", "String")}}, на котором был вызван этот метод, или -1, если вхождений нет.</dd>
- <dt>{{jsxref("String.prototype.localeCompare()")}}</dt>
- <dd>Возвращает число, указывающее, находится ли образцовая строка до, после или на том же самом месте, что и указанная строка в порядке сортировки.</dd>
- <dt>{{jsxref("String.prototype.match()")}}</dt>
- <dd>Используется для сопоставления строке регулярного выражения.</dd>
-</dl>
-
-<dl>
- <dt>{{jsxref("String.prototype.matchAll()")}}</dt>
- <dd>Возвращает итератор по всем результатам при сопоставлении строки с регулярным выражением.</dd>
-</dl>
-
-<dl>
- <dt>{{jsxref("String.prototype.normalize()")}} {{experimental_inline}}</dt>
- <dd>Возвращает форму нормализации Юникода для строкового значения.</dd>
- <dt><s class="obsoleteElement">{{jsxref("String.prototype.quote()")}} {{obsolete_inline}}</s></dt>
- <dd><s class="obsoleteElement">Оборачивает строку в двойные кавычки ("<code>"</code>").</s></dd>
- <dt>{{jsxref("String.prototype.repeat()")}} {{experimental_inline}}</dt>
- <dd>Возвращает строку. состоящую из элементов объекта, повторённых указанное количество раз.</dd>
- <dt>{{jsxref("String.prototype.replace()")}}</dt>
- <dd>Используется для сопоставления строке регулярного выражения и для замены совпавшей подстроки на новую подстроку.</dd>
- <dt>{{jsxref("String.prototype.search()")}}</dt>
- <dd>Выполняет поиск совпадения регулярного выражения со строкой.</dd>
- <dt>{{jsxref("String.prototype.slice()")}}</dt>
- <dd>Извлекает часть строки и возвращает новую строку.</dd>
- <dt>{{jsxref("String.prototype.split()")}}</dt>
- <dd>Разбивает объект {{jsxref("Global_Objects/String", "String")}} на массив строк, разделённых указанной строкой на подстроки.</dd>
- <dt>{{jsxref("String.prototype.startsWith()")}} {{experimental_inline}}</dt>
- <dd>Определяет, начинается ли строка символами другой строки.</dd>
- <dt>{{jsxref("String.prototype.substr()")}}</dt>
- <dd>Возвращает указанное количество символов в строке, начинающихся с указанной позиции.</dd>
- <dt>{{jsxref("String.prototype.substring()")}}</dt>
- <dd>Возвращает символы в строке между двумя индексами.</dd>
- <dt>{{jsxref("String.prototype.toLocaleLowerCase()")}}</dt>
- <dd>Приводит символы в строке к нижнему регистру согласно текущей локали. Для большинства языков, метод делает то же самое, что и метод {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.</dd>
- <dt>{{jsxref("String.prototype.toLocaleUpperCase()")}}</dt>
- <dd>Приводит символы в строке к верхнему регистру согласно текущей локали. Для большинства языков, метод делает то же самое, что и метод {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}.</dd>
- <dt>{{jsxref("String.prototype.toLowerCase()")}}</dt>
- <dd>Возвращает строковое значение с символами в нижнем регистре.</dd>
- <dt>{{jsxref("String.prototype.toSource()")}} {{non-standard_inline}}</dt>
- <dd>Возвращает литерал объекта, представляющий указанный объект; вы можете использовать это значение для создания нового объекта. Переопределяет метод {{jsxref("Object.prototype.toSource()")}}.</dd>
- <dt>{{jsxref("String.prototype.toString()")}}</dt>
- <dd>Возвращает строковое представление указанного объекта. Переопределяет метод {{jsxref("Object.prototype.toString()")}}.</dd>
- <dt>{{jsxref("String.prototype.toUpperCase()")}}</dt>
- <dd>Возвращает строковое значение с символами в верхнем регистре.</dd>
- <dt>{{jsxref("String.prototype.trim()")}}</dt>
- <dd>Обрезает пробельные символы в начале и в конце строки. Часть стандарта ECMAScript 5.</dd>
- <dt>{{jsxref("String.prototype.trimLeft()")}} {{non-standard_inline}}</dt>
- <dd>Обрезает пробельные символы с левой стороны строки.</dd>
- <dt>{{jsxref("String.prototype.trimRight()")}} {{non-standard_inline}}</dt>
- <dd>Обрезает пробельные символы с правой стороны строки.</dd>
- <dt>{{jsxref("String.prototype.valueOf()")}}</dt>
- <dd>Возвращает примитивное значение указанного объекта. Переопределяет метод {{jsxref("Object.prototype.valueOf()")}}.</dd>
- <dt>{{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]()")}} {{experimental_inline}}</dt>
- <dd>Возвращает новый объект итератора <code>Iterator</code>, который итерируется по кодовым точкам строки и возвращает каждую кодовую точку в виде строкового значения.</dd>
-</dl>
-
-<h3 id="HTML_wrapper_methods" name="HTML_wrapper_methods">Методы-обёртки HTML</h3>
-
-<p>Эти методы имеют ограниченное применение, поскольку они представляют только ограниченное подмножество доступных тегов и атрибутов HTML.</p>
-
-<dl>
- <dt>{{jsxref("String.prototype.anchor()")}} {{deprecated_inline}}</dt>
- <dd><code><a href="/ru/docs/Web/HTML/Element/a#attr-name">&lt;a name="<em>имя</em>"&gt;</a></code> (цель гипертекста)</dd>
- <dt>{{jsxref("String.prototype.big()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("big")}}</dd>
- <dt>{{jsxref("String.prototype.blink()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("blink")}}</dd>
- <dt>{{jsxref("String.prototype.bold()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("b")}}</dd>
- <dt>{{jsxref("String.prototype.fixed()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("tt")}}</dd>
- <dt>{{jsxref("String.prototype.fontcolor()")}} {{deprecated_inline}}</dt>
- <dd><a href="/ru/docs/Web/HTML/Element/font#attr-color"><code>&lt;font color="<em>цвет</em>"&gt;</code></a></dd>
- <dt>{{jsxref("String.prototype.fontsize()")}} {{deprecated_inline}}</dt>
- <dd><a href="/ru/docs/Web/HTML/Element/font#attr-size"><code>&lt;font size="<em>размер</em>"&gt;</code></a></dd>
- <dt>{{jsxref("String.prototype.italics()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("i")}}</dd>
- <dt>{{jsxref("String.prototype.link()")}} {{deprecated_inline}}</dt>
- <dd><a href="/ru/docs/Web/HTML/Element/a#attr-href"><code>&lt;a href="<em>url</em>"&gt;</code></a> (ссылка на URL)</dd>
- <dt>{{jsxref("String.prototype.small()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("small")}}</dd>
- <dt>{{jsxref("String.prototype.strike()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("strike")}}</dd>
- <dt>{{jsxref("String.prototype.sub()")}} {{deprecated_inline}}}</dt>
- <dd>{{HTMLElement("sub")}}</dd>
- <dt>{{jsxref("String.prototype.sup()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("sup")}}</dd>
-</dl>
-
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Спецификации">Спецификации</h2>
 
 <table class="standard-table">
  <tbody>
@@ -154,78 +20,16 @@ original_slug: Web/JavaScript/Reference/Global_Objects/String/prototype
    <th scope="col">Комментарии</th>
   </tr>
   <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.3.1', 'String.prototype')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype', 'String.prototype')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
+   <td>{{SpecName('WebIDL', '#idl-ByteString', 'ByteString')}}</td>
+   <td>{{Spec2('WebIDL')}}</td>
+   <td>Изначальное определение</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
-
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Возможность</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Возможность</th>
-   <th>Android</th>
-   <th>Chrome для Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li>{{jsxref("Global_Objects/String", "String")}}</li>
- <li>{{jsxref("Function.prototype")}}</li>
+ <li><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/String" title="/en-US/docs/Web/API/DOMString">String</a></li>
+ <li><a href="/ru/docs/Web/API/DOMString/Binary">Binary strings</a></li>
 </ul>

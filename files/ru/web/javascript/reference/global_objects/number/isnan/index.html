@@ -13,28 +13,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ---
 <div>{{JSRef("Global_Objects", "Number")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>Number.isNaN()</code></strong> определяет, является ли переданное значение {{jsxref("Global_Objects/NaN", "NaN")}}. Это более надёжная версия оригинальной глобальной функции {{jsxref("Global_Objects/isNaN", "isNaN()")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>Number.isNaN(<var>value</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>value</code></dt>
  <dd>Значение, проверяемое на {{jsxref("Global_Objects/NaN", "NaN")}}.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Поскольку оба оператора проверки на равенство, {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} и {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}, вычисляются в <code>false</code> при проверке, что {{jsxref("Global_Objects/NaN", "NaN")}} <em>и есть</em> {{jsxref("Global_Objects/NaN", "NaN")}}, появляется необходимость в функции <code>Number.isNaN()</code>. Эта ситуация отличается от всех других возможных сравнений в JavaScript.</p>
 
 <p>В отличие от глобальной функции {{jsxref("Global_Objects/isNaN", "isNaN()")}}, <code>Number.isNaN()</code> не имеет проблемы принудительного преобразования параметра в число. Это значит, что в него безопасно передавать значения, которые обычно превращаются в {{jsxref("Global_Objects/NaN", "NaN")}}, но на самом деле {{jsxref("Global_Objects/NaN", "NaN")}} не являются. Также это значит, что метод возвращает <code>true</code> только для числовых значений, имеющих значение {{jsxref("Global_Objects/NaN", "NaN")}}.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <pre class="brush: js">Number.isNaN(NaN); // true
 Number.isNaN(Number.NaN); // true
@@ -56,39 +56,21 @@ Number.isNaN('');
 Number.isNaN(' ');
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <pre class="brush: js">Number.isNaN = Number.isNaN || function(value) {
   return typeof value === 'number' &amp;&amp; isNaN(value);
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>
-    <p>{{SpecName('ES6', '#sec-number.isnan', 'Number.isnan')}}</p>
-   </td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+<p>{{Compat}}</p>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("javascript.builtins.Number.isNaN")}}</p>
-
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/Number", "Number")}}</li>

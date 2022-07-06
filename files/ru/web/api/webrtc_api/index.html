@@ -11,15 +11,15 @@ translation_of: Web/API/WebRTC_API
 
 <h2 id="Совместимость">Совместимость</h2>
 
-<p>Поскольку реализация WebRTC находится в процессе становления, и каждый браузер имеет <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Media/Formats/WebRTC_codecs">различный уровень поддержки кодеков</a> и WebRTC функций, настоятельно рекомендуется использовать полифил-библиотеку <a href="https://github.com/webrtcHacks/adapter">Adapter.js</a> от Google до начала работы над вашим кодом.</p>
+<p>Поскольку реализация WebRTC находится в процессе становления, и каждый браузер имеет <a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">различный уровень поддержки кодеков</a> и WebRTC функций, настоятельно рекомендуется использовать полифил-библиотеку <a href="https://github.com/webrtcHacks/adapter">Adapter.js</a> от Google до начала работы над вашим кодом.</p>
 
 <p>Adapter.js использует клинья и полифилы для гладкой стыковки различий в реализациях WebRTC среди контекстов, его поддерживающих. Adapter.js также обрабатывает префиксы производителей и иные различия именования свойств, облегчая процесс разработки на WebRTC с наиболее совместимым результатом. Библиотека также доступна как <a href="https://www.npmjs.com/package/webrtc-adapter">NPM пакет</a>.</p>
 
-<p>Для дальнейшего изучения библиотеки Adapter.js смотрите <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/adapter.js">Улучшаем совместимость при использовании WebRTC adapter.js</a>.</p>
+<p>Для дальнейшего изучения библиотеки Adapter.js смотрите <a href="/en-US/docs/Web/API/WebRTC_API/adapter.js">Улучшаем совместимость при использовании WebRTC adapter.js</a>.</p>
 
 <h2 id="Понятия_и_использование_WebRTC">Понятия и использование WebRTC </h2>
 
-<p>WebRTC является многоцелевым и вместе с <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>, предоставляют мощные мультимедийные возможности для Web, включая поддержку аудио и видео конференций, обмен файлами, захват экрана, управление идентификацией и взаимодействие с  устаревшими телефонными системами, включая поддержку передачи сигналов тонового набора {{Glossary("DTMF")}}. Соединения между узлами могут создаваться без использования специальных драйверов или плагинов, и часто без промежуточных сервисов.</p>
+<p>WebRTC является многоцелевым и вместе с <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>, предоставляют мощные мультимедийные возможности для Web, включая поддержку аудио и видео конференций, обмен файлами, захват экрана, управление идентификацией и взаимодействие с  устаревшими телефонными системами, включая поддержку передачи сигналов тонового набора {{Glossary("DTMF")}}. Соединения между узлами могут создаваться без использования специальных драйверов или плагинов, и часто без промежуточных сервисов.</p>
 
 <p>Соединение между двумя узлами представлено как объект интерфейса  {{DOMxRef("RTCPeerConnection")}}. Как только соединение установлено и открыто, используя объект <code>RTCPeerConnection</code>, медиапотоки ({{DOMxRef("MediaStream")}}s) и/или каналы данных ({{DOMxRef("RTCDataChannel")}}s) могут быть добавлены в соединение.</p>
 
@@ -116,7 +116,7 @@ translation_of: Web/API/WebRTC_API
  <dd>Например, мы берём чат на веб сокете, который мы создали в другом примере, и добавляем в него способность создавать видео вызовы. Сервер чата расширяется функциональностью обработки WebRTC сигнализации.</dd>
 </dl>
 
-<h2 id="Ресурсы_2"><a id="Ресурсы" name="Ресурсы">Ресурсы</a></h2>
+<h2 id="Ресурсы_2"><a id="Ресурсы">Ресурсы</a></h2>
 
 <h3 id="Протоколы">Протоколы</h3>
 
@@ -146,36 +146,28 @@ translation_of: Web/API/WebRTC_API
 <h4 id="WebRTC_статистика"><cite>WebRTC статистика</cite></h4>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/WebRTC_Statistics_API">WebRTC Statistics API</a></li>
+ <li><a href="/en-US/docs/Web/API/WebRTC_Statistics_API">WebRTC Statistics API</a></li>
 </ul>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>The initial definition of the API of WebRTC.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>The initial definition of the object conveying the stream of media content.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture DOM Elements')}}</td>
-   <td>{{Spec2('Media Capture DOM Elements')}}</td>
-   <td>The initial definition on how to obtain stream of content from DOM Elements</td>
-  </tr>
- </tbody>
+<table>
+  <thead>
+    <tr>
+      <th>Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://w3c.github.io/webrtc-pc/">WebRTC: Real-Time Communication Between Browsers</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://w3c.github.io/mediacapture-main/">Media Capture and Streams</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://w3c.github.io/mediacapture-fromelement/">Media Capture from DOM Elements</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <p>В дополнение к этим спецификациям, определяющим API, необходимый для использования WebRTC, имеется несколько протоколов, перечисленных в разделе <a href="#Ресурсы">ресурсы</a>.</p>

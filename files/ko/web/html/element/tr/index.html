@@ -39,7 +39,7 @@ translation_of: Web/HTML/Element/tr
 <p><span style="line-height: 21px;">This element includes the </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">global attributes</a><span style="line-height: 21px;">.</span></p>
 
 <dl>
- <dt>{{htmlattrdef("align")}} {{deprecatedGeneric("inline","html4.01")}}, {{obsoleteGeneric("inline","html5")}}</dt>
+ <dt>{{htmlattrdef("align")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}</dt>
  <dd>This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
  <ul>
   <li><code>left</code>, aligning the content to the left of the cells</li>
@@ -62,31 +62,31 @@ translation_of: Web/HTML/Element/tr
 </dl>
 
 <dl>
- <dt>{{htmlattrdef("bgcolor")}} {{deprecatedGeneric("inline","html4.01")}}, {{obsoleteGeneric("inline","html5")}}</dt>
+ <dt>{{htmlattrdef("bgcolor")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}</dt>
  <dd>This attribute defines the background color of each cell of the row. It can be either an <a href="/en-US/docs/CSS/color_value#HTML.2fSVG.2fX11.c2.a0_Color_Keywords" title="CSS/color value#HTML.2fSVG.2fX11.c2.a0 Color Keywords">#RRGGBB code</a> or an <a href="/#HTML.2fSVG.2fX11.c2.a0_Color_Keywords" title="#HTML.2fSVG.2fX11.c2.a0 Color Keywords">SVG color keyword</a>.
  <div class="note"><strong>Usage note: </strong>the {{HTMLElement("tr")}} element should be styled using <a href="/en-US/docs/CSS" title="CSS">CSS</a>. To give a similar effect to the <strong>bgcolor</strong> attribute, use the <a href="/en-US/docs/CSS" title="CSS">CSS</a> property {{cssxref("background-color")}}.</div>
  </dd>
 </dl>
 
 <dl>
- <dt>{{htmlattrdef("char")}} {{deprecatedGeneric("inline","html4.01")}}, {{obsoleteGeneric("inline","html5")}}</dt>
+ <dt>{{htmlattrdef("char")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}</dt>
  <dd>This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to <code>char</code>, this attribute is ignored.
  <div class="note"><strong>참고: </strong>Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{htmlattrxref("char", "tr")}}, in CSS3, you can use the character set using the {{htmlattrxref("char", "tr")}} attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.</div>
  </dd>
 </dl>
 
 <dl>
- <dt>{{htmlattrdef("charoff")}} {{deprecatedGeneric("inline","html4.01")}}, {{obsoleteGeneric("inline","html5")}}</dt>
+ <dt>{{htmlattrdef("charoff")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}</dt>
  <dd>This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the <strong>char</strong> attribute.
  <div class="note"><strong>참고: </strong>Do not use this attribute as it is obsolete (and not supported) in the latest standard.</div>
  </dd>
 </dl>
 
 <dl>
- <dt>{{htmlattrdef("valign")}} {{deprecatedGeneric("inline","html4.01")}}, {{obsoleteGeneric("inline","html5")}}</dt>
+ <dt>{{htmlattrdef("valign")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}</dt>
  <dd>This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
  <ul>
-  <li><code>baseline</code>, which will put the text as close to the bottom of the cell as it is possible, but align it on the <a class="external" href="http://en.wikipedia.org/wiki/Baseline_%28typography%29" title="http://en.wikipedia.org/wiki/Baseline_(typography)">baseline</a> of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as <code>bottom</code>.</li>
+  <li><code>baseline</code>, which will put the text as close to the bottom of the cell as it is possible, but align it on the <a class="external" href="http://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as <code>bottom</code>.</li>
   <li><code>bottom</code>, which will put the text as close to the bottom of the cell as it is possible;</li>
   <li><code>middle</code>, which will center the text in the cell;</li>
   <li>and <code>top</code>, which will put the text as close to the top of the cell as it is possible.</li>

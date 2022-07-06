@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
 <p>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}</p>
 
-<div></div>
+
 
 <p class="summary">Expressões regulares são padrões utilizados para selecionar combinações de caracteres em uma string. Em JavaScript, expressões regulares também são objetos. Elas podem ser utilizadas com os métodos <a href="/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec" title="exec"><code>exec</code></a> e <a href="/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/test" title="test"><code>test</code></a> do objeto<a href="/en-US/docs/JavaScript/Reference/Global_Objects/RegExp" title="RegExp"> <code>RegExp</code></a>, e com os métodos <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/match" title="match"><code>match</code></a>, <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/replace" title="en-US/docs/JavaScript/Reference/Global_Objects/String/replace"><code>replace</code></a>,<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/search" title="search"> <code>search</code></a>, e <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/split" title="split"><code>split</code></a> do objeto <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="String"><code>String</code></a>. Este capítulo descreve o uso de expressões regulares em JavaScript.</p>
 
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 <p>Usando o construtor, a compilação da expressão regular é realizada em tempo de execução. Use o construtor quando souber que o padrão da expressão regular irá mudar ou quando o padrão for desconhecido, oriundo de outra fonte, uma entrada de usuário por exemplo.</p>
 
 <div class="blockIndicator note">
-<p>Nota: Se você já está familiarizado com as formas de uma expressão regular, também pode ler o <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">resumo</a>  para uma rápida pesquisa de um padrão específico.</p>
+<p>Nota: Se você já está familiarizado com as formas de uma expressão regular, também pode ler o <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">resumo</a>  para uma rápida pesquisa de um padrão específico.</p>
 </div>
 
 <h2 id="Escrevendo_um_padrão_de_expressão_regular"><a id="escrita_expressao_regular" name="escrita_expressao_regular">Escrevendo um padrão de expressão regular</a></h2>
@@ -544,7 +544,7 @@ console.log(myArray);
 // e pode ter vários espaços entre o nome e o sobrenome.
 var names = "Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ; Chris Hand ";
 
-var output = ["---------- Original String\n", names + "\n"];
+var output = ["---------- String original\n", names + "\n"];
 
 // Prepare dois padrões de expressão regular e armazenamento em array.
 // Divide a string em elementos da matriz.
@@ -574,7 +574,7 @@ var bySurnameList = [];
 // As variáveis ​​$ 1 e $ 2 se referem às partes
 // memorizado enquanto corresponde ao padrão.
 
-output.push("---------- After Split by Regular Expression");
+output.push("---------- Após Separar pela Expressão Regular");
 
 var i, len;
 for (i = 0, len = nameList.length; i &lt; len; i++){
@@ -583,19 +583,19 @@ for (i = 0, len = nameList.length; i &lt; len; i++){
 }
 
 // Exibe a nova matriz.
-output.push("---------- Names Reversed");
+output.push("---------- Nomes Invertidos");
 for (i = 0, len = bySurnameList.length; i &lt; len; i++){
   output.push(bySurnameList[i]);
 }
 
 // Classifica pelo sobrenome e exibe a matriz classificada.
 bySurnameList.sort();
-output.push("---------- Sorted");
+output.push("---------- Ordenado");
 for (i = 0, len = bySurnameList.length; i &lt; len; i++){
   output.push(bySurnameList[i]);
 }
 
-output.push("---------- End");
+output.push("---------- Fim");
 
 console.log(output.join("\n"));
 </pre>

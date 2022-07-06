@@ -1,148 +1,21 @@
 ---
-title: String.prototype
+title: ByteString
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/String
 tags:
-  - JavaScript
-  - 原型
+  - API
+  - DOM
+  - String
+  - WebIDL
   - 参考
   - 字符串
-  - 属性
-translation_of: Web/JavaScript/Reference/Global_Objects/String
-translation_of_original: Web/JavaScript/Reference/Global_Objects/String/prototype
-original_slug: Web/JavaScript/Reference/Global_Objects/String/prototype
+translation_of: Web/API/ByteString
+original_slug: Web/API/ByteString
 ---
-<div>{{JSRef}}</div>
+<p>{{APIRef("DOM")}}</p>
 
-<p> <code><strong>String.prototype</strong></code> 属性表示 {{jsxref("String")}}原型对象。</p>
+<p><strong><code>ByteString</code></strong> 是一个可以对应所有可能的字节序列的 UTF-8 字符串。在 JavaScript 中，当返回时 <code>ByteString</code> 时，它会映射到一个 {{jsxref("String")}} 上去； 通常，只有在和一些协议交互，进行字节和字符串的相互转换时，它才会被用到，例如 HTTP 协议。</p>
 
-<div>{{js_property_attributes(0,0,0)}}</div>
-
-<h2 id="Description" name="Description">描述</h2>
-
-<p>所有 {{jsxref("String")}} 的实例都继承自 <code>String.prototype</code>. 任何String.prototype上的改变都会影响到所有的 {{jsxref("String")}} <code>实例。</code></p>
-
-<h2 id="Properties" name="Properties">属性</h2>
-
-<dl>
- <dt><code>String.prototype.constructor</code></dt>
- <dd>用于创造对象的原型对象的特定的函数。</dd>
- <dt>{{jsxref("String.prototype.length")}}</dt>
- <dd>返回了字符串的长度。</dd>
- <dt><em>N</em></dt>
- <dd>用于访问第N个位置的字符，其中N是小于 {{jsxref("String.length", "length")}} 和 0之间的正整数。这些属性都是“只读”性质，不能编辑。</dd>
-</dl>
-
-<h2 id="Methods" name="Methods">方法</h2>
-
-<h3 id="Methods_unrelated_to_HTML" name="Methods_unrelated_to_HTML">跟HTML无关的方法</h3>
-
-<dl>
- <dt>{{jsxref("String.prototype.charAt()")}}</dt>
- <dd>返回特定位置的字符。</dd>
- <dt>{{jsxref("String.prototype.charCodeAt()")}}</dt>
- <dd>返回表示给定索引的字符的Unicode的值。</dd>
- <dt>{{jsxref("String.prototype.codePointAt()")}}</dt>
- <dd>返回使用UTF-16编码的给定位置的值的非负整数。</dd>
- <dt>{{jsxref("String.prototype.concat()")}}</dt>
- <dd>连接两个字符串文本，并返回一个新的字符串。</dd>
- <dt>{{jsxref("String.prototype.includes()")}}</dt>
- <dd>判断一个字符串里是否包含其他字符串。</dd>
- <dt>{{jsxref("String.prototype.endsWith()")}}</dt>
- <dd>判断一个字符串的是否以给定字符串结尾，结果返回布尔值。</dd>
- <dt>{{jsxref("String.prototype.indexOf()")}}</dt>
- <dd>从字符串对象中返回首个被发现的给定值的索引值，如果没有找到则返回-1。</dd>
- <dt>{{jsxref("String.prototype.lastIndexOf()")}}</dt>
- <dd>从字符串对象中返回最后一个被发现的给定值的索引值，如果没有找到则返回-1。</dd>
- <dt>{{jsxref("String.prototype.localeCompare()")}}</dt>
- <dd>返回一个数字表示是否引用字符串在排序中位于比较字符串的前面，后面，或者二者相同。</dd>
- <dt>{{jsxref("String.prototype.match()")}}</dt>
- <dd>使用正则表达式与字符串相比较。</dd>
- <dt>{{jsxref("String.prototype.normalize()")}}</dt>
- <dd>返回调用字符串值的Unicode标准化形式。</dd>
- <dt>{{jsxref("String.prototype.padEnd()")}}</dt>
- <dd>在当前字符串尾部填充指定的字符串， 直到达到指定的长度。 返回一个新的字符串。</dd>
- <dt>{{jsxref("String.prototype.padStart()")}}</dt>
- <dd>
- <p>在当前字符串头部填充指定的字符串， 直到达到指定的长度。 返回一个新的字符串。</p>
- </dd>
- <dt>{{jsxref("String.prototype.quote()")}} {{ obsolete_inline }}</dt>
- <dd>设置嵌入引用的引号类型。</dd>
- <dt>{{jsxref("String.prototype.repeat()")}}</dt>
- <dd>返回指定重复次数的由元素组成的字符串对象。</dd>
- <dt>{{jsxref("String.prototype.replace()")}}</dt>
- <dd>被用来在正则表达式和字符串直接比较，然后用新的子串来替换被匹配的子串。</dd>
- <dt>{{jsxref("String.prototype.search()")}}</dt>
- <dd>对正则表达式和指定字符串进行匹配搜索，返回第一个出现的匹配项的下标。</dd>
- <dt>{{jsxref("String.prototype.slice()")}}</dt>
- <dd>摘取一个字符串区域，返回一个新的字符串。</dd>
- <dt>{{jsxref("String.prototype.split()")}}</dt>
- <dd>通过分离字符串成字串，将字符串对象分割成字符串数组。</dd>
- <dt>{{jsxref("String.prototype.startsWith()")}}</dt>
- <dd>判断字符串的起始位置是否匹配其他字符串中的字符。</dd>
- <dt>{{jsxref("String.prototype.substr()")}}</dt>
- <dd>通过指定字符数返回在指定位置开始的字符串中的字符。</dd>
- <dt>{{jsxref("String.prototype.substring()")}}</dt>
- <dd>返回在字符串中指定两个下标之间的字符。</dd>
- <dt>{{jsxref("String.prototype.toLocaleLowerCase()")}}</dt>
- <dd>根据当前区域设置，将符串中的字符转换成小写。对于大多数语言来说，{{jsxref("String.toLowerCase", "toLowerCase")}}的返回值是一致的。</dd>
- <dt>{{jsxref("String.prototype.toLocaleUpperCase()")}}</dt>
- <dd>根据当前区域设置，将字符串中的字符转换成大写，对于大多数语言来说，{{jsxref("String.toUpperCase", "toUpperCase")}}的返回值是一致的。</dd>
- <dt>{{jsxref("String.prototype.toLowerCase()")}}</dt>
- <dd>将字符串转换成小写并返回。</dd>
- <dt>{{jsxref("String.prototype.toSource()")}} {{ Non-standard_inline() }}</dt>
- <dd>返回一个对象文字代表着特定的对象。你可以使用这个返回值来创建新的对象。重写 {{jsxref("Object.prototype.toSource")}} 方法。</dd>
- <dt>{{jsxref("String.prototype.toString()")}}</dt>
- <dd>返回用字符串表示的特定对象。重写 {{jsxref("Object.prototype.toString")}} 方法。</dd>
- <dt>{{jsxref("String.prototype.toUpperCase()")}}</dt>
- <dd>将字符串转换成大写并返回。</dd>
- <dt>{{jsxref("String.prototype.trim()")}}</dt>
- <dd>从字符串的开始和结尾去除空格。参照部分 ECMAScript 5 标准。</dd>
- <dt>{{jsxref("String.prototype.trimStart()")}}</dt>
- <dt>{{jsxref("String.prototype.trimLeft()")}} {{ Non-standard_inline() }}</dt>
- <dd>从字符串的左侧去除空格。</dd>
- <dt>{{jsxref("String.prototype.trimEnd()")}}</dt>
- <dt>{{jsxref("String.prototype.trimRight()")}} {{ Non-standard_inline() }}</dt>
- <dd>从字符串的右侧去除空格。</dd>
- <dt>{{jsxref("String.prototype.valueOf()")}}</dt>
- <dd>返回特定对象的原始值。重写 {{jsxref("Object.prototype.valueOf")}} 方法。</dd>
- <dt>{{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]()")}}</dt>
- <dd>返回一个新的迭代器对象，该对象遍历字符串值的索引位置，将每个索引值作为字符串值返回。</dd>
-</dl>
-
-<h3 id="HTML_wrapper_methods" name="HTML_wrapper_methods">HTML wrapper methods</h3>
-
-<p>下面的方法被限制使用，因为只对可用的HTML标签和属性提供部分支持。</p>
-
-<dl>
- <dt>{{jsxref("String.prototype.anchor()")}}</dt>
- <dd><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#attr-name">&lt;a name="name"&gt;</a></code> (hypertext target)</dd>
- <dt>{{jsxref("String.prototype.big()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("big")}}</dd>
- <dt>{{jsxref("String.prototype.blink()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("blink")}}</dd>
- <dt>{{jsxref("String.prototype.bold()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("b")}}</dd>
- <dt>{{jsxref("String.prototype.fixed()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("tt")}}</dd>
- <dt>{{jsxref("String.prototype.fontcolor()")}} {{deprecated_inline}}</dt>
- <dd><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/font#attr-color"><code>&lt;font color="<em>color</em>"&gt;</code></a></dd>
- <dt>{{jsxref("String.prototype.fontsize()")}} {{deprecated_inline}}</dt>
- <dd><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/font#attr-size"><code>&lt;font size="<em>size</em>"&gt;</code></a></dd>
- <dt>{{jsxref("String.prototype.italics()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("i")}}</dd>
- <dt>{{jsxref("String.prototype.link()")}}</dt>
- <dd><a class="external" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#attr-href"><code>&lt;a href="<em>url</em>"&gt;</code></a> (link to URL)</dd>
- <dt>{{jsxref("String.prototype.small()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("small")}}</dd>
- <dt>{{jsxref("String.prototype.strike()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("strike")}}</dd>
- <dt>{{jsxref("String.prototype.sub()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("sub")}}</dd>
- <dt>{{jsxref("String.prototype.sup()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("sup")}}</dd>
-</dl>
-
-<h2 id="Specifications">Specifications</h2>
+<h2 id="Specification" name="Specification">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -152,37 +25,17 @@ original_slug: Web/JavaScript/Reference/Global_Objects/String/prototype
    <th scope="col">备注</th>
   </tr>
   <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
+   <td>{{SpecName('WebIDL', '#idl-ByteString', 'ByteString')}}</td>
+   <td>{{Spec2('WebIDL')}}</td>
    <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.3.1', 'String.prototype')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype', 'String.prototype')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype', 'String.prototype')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("javascript.builtins.String.prototype")}}</p>
-
-<h2 id="更多">更多</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
- <li>{{jsxref("Global_Objects/String", "String")}}</li>
- <li>{{jsxref("Function.prototype")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" title="/en-US/docs/Web/API/DOMString">String</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays/String_view" title="/en-US/docs/Web/JavaScript/Typed_arrays/String_view"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMString/Binary">Binary strings</a></li>
 </ul>

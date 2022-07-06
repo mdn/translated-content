@@ -10,11 +10,11 @@ original_slug: Server-sent_events/EventSource
 ---
 <p>{{APIRef("Websockets API")}}</p>
 
-<p class="summary"><code><strong>EventSource</strong></code> 是服务器推送的一个网络事件接口。一个EventSource实例会对HTTP服务开启一个持久化的连接，以<code>text/event-stream</code> 格式发送事件, 会一直保持开启直到被要求关闭。</p>
+<p><code><strong>EventSource</strong></code> 是服务器推送的一个网络事件接口。一个 EventSource 实例会对 HTTP 服务开启一个持久化的连接，以<code>text/event-stream</code> 格式发送事件，会一直保持开启直到被要求关闭。</p>
 
 <p>一旦连接开启，来自服务端传入的消息会以事件的形式分发至你代码中。如果接收消息中有一个事件字段，触发的事件与事件字段的值相同。如果没有事件字段存在，则将触发通用事件。</p>
 
-<p>与 <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>,不同的是，服务端推送是单向的。数据信息被单向从服务端到客户端分发. 当不需要以消息形式将数据从客户端发送到服务器时，这使它们成为绝佳的选择。例如，对于处理社交媒体状态更新，新闻提要或将数据传递到客户端存储机制（如IndexedDB或Web存储）之类的，EventSource无疑是一个有效方案。</p>
+<p>与 <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>,不同的是，服务端推送是单向的。数据信息被单向从服务端到客户端分发。当不需要以消息形式将数据从客户端发送到服务器时，这使它们成为绝佳的选择。例如，对于处理社交媒体状态更新，新闻提要或将数据传递到客户端存储机制（如 IndexedDB 或 Web 存储）之类的，EventSource 无疑是一个有效方案。</p>
 
 <h2 id="构造函数">构造函数</h2>
 
@@ -29,11 +29,11 @@ original_slug: Server-sent_events/EventSource
 
 <dl>
  <dt>{{domxref("EventSource.onerror")}}</dt>
- <dd>是一个 {{domxref("EventHandler")}}，当发生错误时被调用，并且在此对象上派发 {{event("error")}} 事件。</dd>
+ <dd>是一个 {{event("Event_handlers", "event handler")}}，当发生错误时被调用，并且在此对象上派发 {{event("error")}} 事件。</dd>
  <dt>{{domxref("EventSource.onmessage")}}</dt>
- <dd>是一个 {{domxref("EventHandler")}}，当收到一个 {{event("message")}} 事件，即消息来自源头时被调用。</dd>
+ <dd>是一个 {{event("Event_handlers", "event handler")}}，当收到一个 {{event("message")}} 事件，即消息来自源头时被调用。</dd>
  <dt>{{domxref("EventSource.onopen")}}</dt>
- <dd>是一个 {{domxref("EventHandler")}}，当收到一个 {{event(" open ")}} 事件，即连接刚打开时被调用。</dd>
+ <dd>是一个 {{event("Event_handlers", "event handler")}}，当收到一个 {{event(" open ")}} 事件，即连接刚打开时被调用。</dd>
  <dt>{{domxref("EventSource.readyState")}} {{readonlyinline}}</dt>
  <dd>一个 <code>unsigned </code> <code> short</code> 值，代表连接状态。可能值是 <code>CONNECTING</code> (<code>0</code>), <code>OPEN</code> (<code>1</code>), 或者 <code>CLOSED</code> (<code>2</code>)。</dd>
  <dt>{{domxref("EventSource.url")}} {{readonlyinline}}</dt>
@@ -44,11 +44,11 @@ original_slug: Server-sent_events/EventSource
 
 <dl>
  <dt>{{domxref("EventSource.onerror")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} called when an error occurs and the {{domxref("EventSource/error_event", "error")}} event is dispatched on an <code>EventSource</code> object.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} called when an error occurs and the {{domxref("EventSource/error_event", "error")}} event is dispatched on an <code>EventSource</code> object.</dd>
  <dt>{{domxref("EventSource.onmessage")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} called when a {{domxref("EventSource/message_event", "message")}} event is received, that is when a message is coming from the source.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} called when a {{domxref("EventSource/message_event", "message")}} event is received, that is when a message is coming from the source.</dd>
  <dt>{{domxref("EventSource.onopen")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} called when an {{domxref("EventSource/open_event", "open")}} event is received, that is when the connection was just opened.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} called when an {{domxref("EventSource/open_event", "open")}} event is received, that is when the connection was just opened.</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -129,18 +129,7 @@ evtSource.onmessage = function(e) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#the-eventsource-interface", "EventSource")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

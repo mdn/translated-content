@@ -1,71 +1,113 @@
 ---
-title: Fills and Strokes
+title: 塗りつぶしとストローク
 slug: Web/SVG/Tutorial/Fills_and_Strokes
 tags:
+  - Beginner
+  - NeedLiveSamples
   - SVG
-  - 'SVG:Tutorial'
+  - SVG:Tutorial
 translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 ---
-<p>{{ PreviousNext("SVG/Tutorial/Paths", "SVG/Tutorial/Gradients") }}</p>
-<p>全種類の図形を描く方法を知ることができましたので、次の目標はそれらに色をつけることでしょう。これを行う方法はいくつかあり、オブジェクトの属性で指定、インライン CSS の利用、埋め込んだ CSS セレクタの利用、外部 CSS ファイルの利用が含まれます。Web で見かけるほとんどの SVG はインライン CSS を用いていますが、どの方法にも利点と欠点があります。</p>
-<p>{{ 英語版章題("Fill and Stroke Attributes") }}</p>
-<h2 id="fill_および_stroke_属性">fill および stroke 属性</h2>
-<p>{{ 英語版章題("Painting") }}</p>
-<h3 id="塗りつぶし">塗りつぶし</h3>
-<p>これまで見てきた例で塗りつぶしの属性を入れずにおくことが少し難しかった一方で、あなたは気づいていなかったかもしれませんが、もっとも基本的な色づけはノードに 2 つの属性を設定することで行えます: <code>fill</code> と <code>stroke</code>。fill はオブジェクト内部の色を、stroke はオブジェクトの縁の線の色を指定します。色名 (例えば <em>red</em>)、RGB 値 (例えば <em>rgb(255,0,0)</em>)、16進数値、RGBA 値など、HTML で用いる CSS の色名と同じ仕組みを用いることができます。</p>
-<pre class="eval"> &lt;rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
+<p>{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}</p>
+
+<p>図形に色を付ける方法としては (オブジェクトに属性を指定することを含む)、インライン <a href="/ja/docs/Glossary/CSS">CSS</a>、埋め込み CSS セクション、外部 CSS ファイルなどいくつかの方法があります。ほとんどに <a href="/ja/docs/Glossary/SVG">SVG</a> ではインライン CSS を使用していますが、どの方法にも利点と欠点があります。</p>
+
+<h2 id="Fill_and_Stroke_Attributes">fill および stroke 属性</h2>
+
+<h3 id="Painting">塗りつぶし</h3>
+
+<p>基本的な色付けは、ノードに <code>fill</code> と <code>stroke</code> という 2 つの属性を設定することで行うことができます。 <code>fill</code> を使用するとオブジェクトの内部の色を設定し、 <code>stroke</code> はオブジェクトを囲む線の色を設定します。色名 (例えば <code><em>red</em></code>)、RGB 値 (例えば <code><em>rgb(255,0,0)</em></code>)、16進数値、RGBA 値など、HTML で用いる CSS の色名と同じ仕組みを用いることができます。</p>
+
+<pre class="brush:xml;"> &lt;rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
        fill-opacity="0.5" stroke-opacity="0.8"/&gt;
 </pre>
-<p>加えて、SVG では fill と stroke それぞれの不透明度を分けて指定することができます。これは <code>fill-opacity</code> 属性と <code>stroke-opacity</code> 属性で操作します。FF3 では RGBA 値を受け入れて同様の透過効果をもたらしますが、他のブラウザとの互換性のために fill および stroke の不透明度は分けて指定することが最善であることに注意してください。RGBA 値と fill/stroke-opacity 値をどちらも指定した場合は、両方とも適用されます。</p>
-<p>{{ 英語版章題("Stroke") }}</p>
-<h3 id="ストローク">ストローク</h3>
+
+<p>さらに、 SVG では <code>fill</code> と <code>stroke</code> の透明度を別々に指定することができます。これらは <code>fill-opacity</code> 属性と <code>stroke-opacity</code> 属性で制御されます。</p>
+
+<div class="note style-wrap"><strong>注:</strong> Firefox 3+ 以降では、 <code>rgba</code> の値も許可されており、同じ効果が得られます。しかし、他のビューアーとの互換性を考慮すると、 <code>fill</code>/<code>stroke</code> の透明度を個別に指定したほうがよい場合があります。 <code>rgba</code> 値と <code>fill</code>/<code>stroke</code> opacity 値の両方を指定した場合、両方が適用されます。</div>
+
+<h3 id="Stroke">ストローク</h3>
+
 <p>この色のプロパティに加えて、線上にストロークを描画する方法を操作するための属性がいくつかあります。</p>
-<p><img align="right" alt="" class="internal" src="/@api/deki/files/355/=SVG_Stroke_Linecap_Example.png"></p>
-<pre>&lt;?xml version="1.0" standalone="no"?&gt;
+
+<p><img alt="" class="internal" src="svg_stroke_linecap_example.png" style="float: right;"></p>
+
+<pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
   &lt;line x1="40" x2="120" y1="20" y2="20" stroke="black" stroke-width="20" stroke-linecap="butt"/&gt;
   &lt;line x1="40" x2="120" y1="60" y2="60" stroke="black" stroke-width="20" stroke-linecap="square"/&gt;
   &lt;line x1="40" x2="120" y1="100" y2="100" stroke="black" stroke-width="20" stroke-linecap="round"/&gt;
-&lt;/svg&gt;
-</pre>
-<p>これらについて説明する前に、ストロークはパスの周りに中央揃えで置かれるよう描画されますので、上の例ではパスを桃色、ストロークを黒色で示していることを注記したいと思います。<code>stroke-width</code> プロパティはストロークの幅を指定します。例でわかるように、ストロークはパスの両側へ均等に置かれます。</p>
-<p>第 2 のプロパティは前出の例にもある <code>stroke-linecap</code> プロパティです。これは線の終端に見られる形状を指定します。このプロパティには指定できる値が 3 種類あります。<code>butt</code> はストロークの向きに対して垂直 (90 度) のまっすぐな縁で線を閉じ、縁はパスの終端を横切ります。<code>square</code> は本質的には butt と同じ外見ですが、ストロークが実際のパスから少しはみ出すように広がることが違いです。パスからはみ出すストロークの長さは <code>stroke-width</code> プロパティで制御できます。<code>round</code> はストロークの終端が湾曲する効果を生み出し、その曲線の半径もまた <code>stroke-width</code> プロパティで制御されます。</p>
-<p>また <code>stroke-linejoin</code> プロパティは、2 つの線分が接続するときにストロークをどのように描画するかを制御します。</p>
-<p><img align="right" alt="" class="internal" src="/@api/deki/files/356/=SVG_Stroke_Linejoin_Example.png"></p>
-<pre>&lt;?xml version="1.0" standalone="no"?&gt;
+&lt;/svg&gt;</pre>
+
+<p><code>stroke-width</code> プロパティは、このストロークの幅を定義します。ストロークはパスの中心に描かれます。上の例では、パスはピンク色、ストロークは黒で表示されています。</p>
+
+<p>ストロークに影響する 2 つ目の属性は、上記の <code>stroke-linecap</code> プロパティです。これは、線の端の形状を制御します。</p>
+
+<p>このプロパティには指定できる値が 3 種類あります。</p>
+
+<ul>
+ <li><code>butt</code> は、ストロークの方向に対して垂直 (90度) な直線エッジで線を閉じ、その端を交差させます。</li>
+ <li><code>square</code> は基本的には同じ外観ですが、ストロークを実際のパスよりもわずかに伸ばします。ストロークがパスよりも長くなる長さは、 <code>stroke-width</code> の半分です。</li>
+ <li><code>round</code> は、ストロークの終わりに丸める効果をもたらします。この曲線の半径は、 <code>stroke-width</code> で制御します。</li>
+</ul>
+
+<p>また <code>stroke-linejoin</code> プロパティは、 2 本の線分の接続部をどのように描画するかを制御します。</p>
+
+<p><img alt="" class="internal" src="svg_stroke_linejoin_example.png" style="float: right;"></p>
+
+<pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
   &lt;polyline points="40 60 80 20 120 60" stroke="black" stroke-width="20"
-      stroke-linecap="butt" fill="transparent" stroke-linejoin="miter"/&gt;
+      stroke-linecap="butt" fill="none" stroke-linejoin="miter"/&gt;
 
   &lt;polyline points="40 140 80 100 120 140" stroke="black" stroke-width="20"
-      stroke-linecap="round" fill="transparent" stroke-linejoin="round"/&gt;
+      stroke-linecap="round" fill="none" stroke-linejoin="round"/&gt;
 
   &lt;polyline points="40 220 80 180 120 220" stroke="black" stroke-width="20"
-      stroke-linecap="square" fill="transparent" stroke-linejoin="bevel"/&gt;
-&lt;/svg&gt;
-</pre>
-<p>各々のポリラインは 2 つの線分で構成されています。これら 2 つが合わさる場所の接続法は、<code>stroke-linejoin</code> 属性で制御されます。この属性には指定できる値が 3 種類あります。<code>miter</code> は、一つの角だけが使用される四角形を作成するように、ストロークの線を元の幅のままで少し延長します。<code>round</code> は miter の動作に加えて、湾曲した線分を描画します。<code>bevel</code> は、2 つの線分の間を渡るように新しい角を生成します。</p>
-<p>最後に、<code>stroke-dasharray</code> 属性を指定することで波線状のストロークを描画することもできます。</p>
-<p><img align="right" alt="" class="internal" src="/@api/deki/files/354/=SVG_Stroke_Dasharray_Example.png"></p>
-<pre>&lt;?xml version="1.0" standalone="no"?&gt;
+      stroke-linecap="square" fill="none" stroke-linejoin="bevel"/&gt;
+&lt;/svg&gt;</pre>
+
+<p>これらの連続線は、それぞれ 2 本の線分から成っています。 2 本の接続箇所は <code>stroke-linejoin</code> 属性で制御します。この属性で取りうる値は 3 つあります。
+ <code>miter</code> は、線を通常の幅よりわずかに延長して、 1 つの角度だけを使用して四角い角を作成します。 <code>round</code> は、丸みを帯びた線分を作成します。 <code>bevel</code> は、2 つの線分の間を渡るように新しい角を生成します。</p>
+
+<p>あと、 <code>stroke-dasharray</code> 属性を指定することで波線状のストロークを描画することもできます。</p>
+
+<p><img alt="" class="internal" src="svg_stroke_dasharray_example.png" style="float: right;"></p>
+
+<pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
   &lt;path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="black"
     stroke-linecap="round" stroke-dasharray="5,10,5" fill="none"/&gt;
   &lt;path d="M 10 75 L 190 75" stroke="red"
     stroke-linecap="round" stroke-width="1" stroke-dasharray="5,5" fill="none"/&gt;
-&lt;/svg&gt;
+&lt;/svg&gt;</pre>
+
+<p><code>stroke-dasharray</code> 属性は引数として、連続したカンマ区切りの数値をとります。</p>
+
+<div class="note">
+<p><strong>注:</strong> {{SVGElement("path")}} とは異なり、これらの数値はカンマ区切りでなければ<strong><em>なりません</em></strong> (ホワイトスペースは無視されます)。</p>
+</div>
+
+<p>最初の数字は塗りつぶされた部分の長さを、 2 番目の数字は塗りつぶされていない部分の長さを指定します。上の例では、 2 番目のパスで 5 ピクセル単位を埋め、 5 単位の次のダッシュまで 5 単位の空白を作ります。もっと複雑なダッシュパターンにしたい場合は、より多くの数字を指定することができます。最初の例では 3 つの数字を指定していますが、この場合、レンダラーは数字を 2 回ループさせて偶数のパターンを作ります。つまり、最初のパスでは、 5 個の塗りつぶし、 10 個の空、 5 個の塗りつぶしがレンダリングされ、さらにループして、 5 個の空、 10 個の塗りつぶし、 5 個の空が作成されます。このパターンが繰り返されます。</p>
+
+<p><code>stroke</code> および <code>fill</code> プロパティは他にもあります。例えば、 <code><a href="/ja/docs/Web/SVG/Attribute/fill-rule">fill-rule</a></code> は自身が重なり合っている図形でどのように色をつけるかを指定します。 <code><a href="/ja/docs/Web/SVG/Attribute/stroke-miterlimit">stroke-miterlimit</a></code> はストロークが miter を描画するかどうかを指定します。そして <a href="/ja/docs/Web/SVG/Attribute/stroke-dashoffset">stroke-dashoffset</a> は、線上で波線の列をどこから始めるかを指定します。</p>
+
+<h2 id="Using_CSS">CSS の使用</h2>
+
+<p>オブジェクトに属性を設定するだけでなく、 CSS を使って塗りつぶしやストロークのスタイルを設定することもできます。すべての属性を CSS で設定できるわけではありません。ふつうは描画や塗りつぶしを行う属性が利用できます。 <code>fill</code>, <code>stroke</code>, <code>stroke-dasharray</code> などは、グラデーションや後述するパターン版に追加することで、すべてこの方法で設定できます。 <code>width</code>, <code>height</code>,  {{SVGElement("path")}} コマンドなどの属性は、 CSS では設定できません。何が使えて、何が使えないのかは、テストしてみるのが一番簡単です。</p>
+
+<div class="note style-wrap"><strong>注:</strong> <a class="external" href="https://www.w3.org/TR/SVG/propidx.html">SVG 仕様書</a> では<em>プロパティ</em>とその他の属性を厳密に区別しています。前者は CSS で変更できますが、後者はできません。</div>
+
+<p>CSS は要素に <code>style</code>  属性を用いることで、インラインで挿入することができます。</p>
+
+<pre class="brush:xml;"> &lt;rect x="10" height="180" y="10" width="180" style="stroke: black; fill: red;"/&gt;
 </pre>
-<p><code>stroke-dasharray</code> 属性はパラメータとして、一連のカンマ区切りの数値をとります。パスとは異なり、これらの数値はカンマで<em>区切らなければならない</em>ことに注意してください。必要に応じてホワイトスペースを挿入することもできますが、数値同士の間にはカンマを入れなければなりません。それぞれの数値はストロークで塗りつぶす領域の長さ、および塗りつぶさないエリアの長さを指定します。従って前出の例で、2 番目のパスは 5 ピクセル塗りつぶし、次の 5 ピクセルは塗りつぶさない、そしてまた 5 ピクセル塗りつぶすというかたちになります。より複雑な波線のパターンにしたい場合は、より多くの数値を指定することができます。1 番目の例には 3 つの数値があり、この場合レンダラは規則的なパターンを作るために指定した数値を 2 回繰り返します。従って 1 番目のパスは 5 ピクセル塗りつぶし、10 ピクセル空白、5 ピクセル塗りつぶし、そして 5 ピクセル空白、10 ピクセル塗りつぶし、5ピクセル空白を作成するため始めに戻ります。以上のパターンが繰り返されます。</p>
-<p>stroke および fille プロパティの付加的なプロパティはさらにいくつかあり、自身が重なり合っている図形でどのように色をつけるかを指定する <code>fill-rule</code>、 ストロークが miter を描画するとき、どこで描画を止めるかを扱う <code>stroke-miterlimit</code>、そして線上で波線の列をどこから始めるかを指定する <code>stroke-dashoffset</code> などです。</p>
-<p>{{ 英語版章題("Using CSS") }}</p>
-<h2 id="CSS_の利用">CSS の利用</h2>
-<p>オブジェクトに属性を設定するのに加えて、CSS を用いて fill や stroke のスタイルをつけることもできます。この構文は <code>background-color</code> や <code>border</code> の代わりに <code>fill</code> や <code>stroke</code> に値を設定する点を除いて、通常の HTML で用いられる CSS と同じです。すべての属性を CSS で指定できるわけではないことは伝えておくべきでしょう。描画や塗りつぶしを扱う属性は利用可能ですので <code>fill</code>、<code>stroke</code>、<code>stroke-dasharray</code> などはこの方法で設定可能です。また、後ほど示すグラデーションやパターン向けの属性も同様です。<code>width</code>、<code>height</code>、あるいはパスのコマンド <code>d</code> は CSS を通して設定できません。何が可能あるいは不可能かをテストして調べるのは、とても簡単です。FF3 の DOM Inspector では、XUL や HTML に加え、SVG の CSS 属性の一覧も表示するようになりました。</p>
-<div class="note"><a class="external" href="http://www.w3.org/TR/SVG/propidx.html" title="http://www.w3.org/TR/SVG/propidx.html">SVG 仕様</a> は<em>{{ 原語併記("プロパティ", "Property") }}</em>である属性とその他の属性を厳密に定めています。前者は CSS で変更できますが、後者はできません。</div>
-<p>style 属性を用いて、要素にインラインで CSS を挿入できます:</p>
-<pre class="eval"> &lt;rect x="10" height="180" y="10" width="180" style="stroke: black; fill: red;"/&gt;
-</pre>
-<p>もしくは、あなたが入れる特別な style セクションに移すこともできます。そのセクションは HTML で行うように <code>&lt;head&gt;</code> 内へ入れるのではなく、<a href="/ja/SVG/Element/defs" title="ja/SVG/Element/defs"><code>&lt;defs&gt;</code></a> と呼ばれるエリアに入れます。<code>&lt;defs&gt;</code> は定義を意味し、SVG 仕様に直接は見受けられないものの、他の要素から用いられる要素を作成する場所です。</p>
-<pre>&lt;?xml version="1.0" standalone="no"?&gt;
+
+<p>もしくは、特別な style セクションに移すこともできます。そのようなセクションは HTML のように <code>&lt;head&gt;</code> に入れるのではなく、 {{SVGElement("defs")}} と呼ばれる領域に入れます。</p>
+
+<p>{{SVGElement("defs")}} は定義を意味し、ここで作成された要素は SVG の中で直接は現れませんが、他の要素から使用されます。</p>
+
+<pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
   &lt;defs&gt;
     &lt;style type="text/css"&gt;&lt;![CDATA[
@@ -76,28 +118,30 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
     ]]&gt;&lt;/style&gt;
   &lt;/defs&gt;
   &lt;rect x="10" height="180" y="10" width="180" id="MyRect"/&gt;
-&lt;/svg&gt;
-</pre>
-<p>スタイルをこのようなエリアに移すと、大きな要素グループでのプロパティの調整が容易になります。ロールオーバー効果を作るための <strong>hover 擬似クラス</strong> といったものを用いることもできます:</p>
-<pre class="eval"> #MyRect:hover {
+&lt;/svg&gt;</pre>
+
+<p>スタイルをこのような領域に移すと、大きな要素グループでのプロパティの調整が容易になります。ロールオーバー効果を作るための <strong><code>:hover</code> 擬似クラス</strong> などを用いることもできます。</p>
+
+<pre class="brush:css;"> #MyRect:hover {
    stroke: black;
    fill: blue;
  }
 </pre>
-<p>ここで一覧を述べることもできますが、学習するには CSS チュートリアルを読む方が良いでしょう。<code>before</code> および <code>after</code> 擬似クラスなど、通常の HTML と異なり動作しないものもありますので、すべてを区分するには少し実験することが必要です。</p>
-<p><a class="external" href="http://www.w3.org/TR/xml-stylesheet/" title="http://www.w3.org/TR/xml-stylesheet/">XML スタイルシート構文</a>を通して、CSS ルールを収めた外部スタイルシートを指定することもできます:</p>
-<pre>&lt;?xml version="1.0" standalone="no"?&gt;
+
+<p>CSS 規則を外部スタイルシートで指定するのに、<a href="https://www.w3.org/TR/xml-stylesheet/">ふつうの XML スタイルシート構文</a>を使用することもできます。</p>
+
+<pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;?xml-stylesheet type="text/css" href="style.css"?&gt;
 
 &lt;svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
   &lt;rect height="10" width="10" id="MyRect"/&gt;
-&lt;/svg&gt;
-</pre>
-<p>style.css は以下のようにします:</p>
-<pre>#MyRect {
+&lt;/svg&gt;</pre>
+
+<p>style.css は以下のようにします。</p>
+
+<pre class="brush:css;">#MyRect {
   fill: red;
   stroke: black;
-}
-</pre>
-<p>{{ PreviousNext("SVG/Tutorial/Paths", "SVG/Tutorial/Gradients") }}</p>
-<p>{{ languages( { "en": "en/SVG/Tutorial/Fills_and_Strokes"} ) }}</p>
+}</pre>
+
+<p>{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}</p>

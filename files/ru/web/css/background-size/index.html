@@ -9,7 +9,7 @@ translation_of: Web/CSS/background-size
 
 <p>Значение <strong><code>background-size</code></strong> в <a href="/en-US/docs/CSS" title="CSS">CSS</a> позволяет задавать размер фонового изображения. Изображение может быть оставлено в исходном размере, растянуто, или подогнано под размеры доступного пространства.</p>
 
-<div class="note"><strong>Предупреждение:</strong> Если значение этого свойства не задано в сокращённом свойстве {{cssxref("background")}}, которое применяется к элементу после CSS свойства <code>background-size</code>, то значение этого свойства затем сбрасывается до исходного значения c помощью сокращённого свойства.</div>
+<div class="note"><strong>Предупреждение:</strong> Если значение этого свойства не задано в сокращённом свойстве {{cssxref("background")}}, которое применяется к элементу после CSS-свойства <code>background-size</code>, то значение этого свойства затем сбрасывается до исходного значения c помощью сокращённого свойства.</div>
 
 <p>{{cssinfo}}</p>
 
@@ -95,7 +95,7 @@ background-size: unset;
 
 <h2 id="Замечания">Замечания</h2>
 
-<p>Если вы указываете градиент в качестве фона и указали <code>background-size</code>, который будет использоваться вместе с ним, лучше не указывать размер, который использует единственную автоматическую составную часть, или задаётся с использованием только значения ширины (для примера, <code>background-size: 50%</code>). Рендеринг градиентов в таких случаях изменился в Firefox 8, и в настоящее время он обычно несовместим во всех браузерах, которые не реализуют рендеринг в соответствии с <a href="http://www.w3.org/TR/css3-background/#the-background-size" title="http://www.w3.org/TR/css3-background/#the-background-size">CSS3 спецификацией <code>background-size</code> </a>и с <a href="http://dev.w3.org/csswg/css3-images/#gradients" title="http://dev.w3.org/csswg/css3-images/#gradients">CSS3 спецификацией градиента значений изображения</a>.</p>
+<p>Если вы указываете градиент в качестве фона и указали <code>background-size</code>, который будет использоваться вместе с ним, лучше не указывать размер, который использует единственную автоматическую составную часть, или задаётся с использованием только значения ширины (для примера, <code>background-size: 50%</code>). Рендеринг градиентов в таких случаях изменился в Firefox 8, и в настоящее время он обычно несовместим во всех браузерах, которые не реализуют рендеринг в соответствии с <a href="http://www.w3.org/TR/css3-background/#the-background-size">CSS3 спецификацией <code>background-size</code> </a>и с <a href="http://dev.w3.org/csswg/css3-images/#gradients">CSS3 спецификацией градиента значений изображения</a>.</p>
 
 <pre class="brush: css">.bar {
        width: 50px; height: 100px;
@@ -115,28 +115,13 @@ background-size: unset;
 
 <p>Обратите внимание, что особенно не рекомендуется использовать размер в пикселях и размер <code>auto</code> с градиентом, потому что невозможно воспроизвести рендеринг в версиях Firefox до 8 и в браузерах, не реализующих рендеринг Firefox 8, без знания точного размера элемента, фон которого указывается.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-size', 'background-size')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Первоначальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("css.properties.background-size")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

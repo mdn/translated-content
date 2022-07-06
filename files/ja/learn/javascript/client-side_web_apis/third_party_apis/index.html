@@ -262,7 +262,7 @@ function fetchResults(e) {
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: この例では初歩的なフォームデータの検証を行っています — 検索語フィールドは、フォームを送信する前に入力しなければなりません (<code>required</code> 属性を使用して達成されます)。日付フィールドには <code>pattern</code> 属性が指定されており、値が 8 個の数字 (<code>pattern="[0-9]{8}"</code>) で構成されていないと送信されません。これらがどのように機能するかについての詳細は <a href="/ja/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a> を参照してください。</p>
+<p><strong>Note</strong>: この例では初歩的なフォームデータの検証を行っています — 検索語フィールドは、フォームを送信する前に入力しなければなりません (<code>required</code> 属性を使用して達成されます)。日付フィールドには <code>pattern</code> 属性が指定されており、値が 8 個の数字 (<code>pattern="[0-9]{8}"</code>) で構成されていないと送信されません。これらがどのように機能するかについての詳細は <a href="/ja/docs/Learn/HTML/Forms/Form_validation">Form data validation</a> を参照してください。</p>
 </div>
 
 <h3 id="API_からデータを要求する">API からデータを要求する</h3>
@@ -278,7 +278,7 @@ fetch(url).then(function(result) {
   displayResults(json);
 });</pre>
 
-<p>ここでは、<code>url</code> 変数を <code><a href="/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> に渡してリクエストを実行し、<code><a href="/ja/docs/Web/API/Body/json">json()</a></code> 関数を使用してレスポンスボディを JSON に変換し、結果の JSON を <code>displayResults()</code> 関数に渡して、データを UI に表示できるようにします。</p>
+<p>ここでは、<code>url</code> 変数を <code><a href="/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> に渡してリクエストを実行し、<code><a href="/ja/docs/Web/API/Response/json">json()</a></code> 関数を使用してレスポンスボディを JSON に変換し、結果の JSON を <code>displayResults()</code> 関数に渡して、データを UI に表示できるようにします。</p>
 
 <h3 id="データを表示する">データを表示する</h3>
 

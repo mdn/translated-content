@@ -41,13 +41,13 @@ text-shadow: unset;</code></pre>
 
 <p>When more than one shadow is given, shadows are applied front-to-back, with the first-specified shadow on top.</p>
 
-<p>This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first-letter")}} <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>.</p>
+<p>This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first-letter")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>.</p>
 
 <h3 id="Values" name="Values">값</h3>
 
 <dl>
  <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>선택값(생략가능). 위치값(offset)이전/이후에 설정이 가능하다. 색상(color)값이 설정되지 않으면, 브라우저 기본값(UA-chosen color)이 사용된다. {{ note("만약 다양한 브라우저에서 동일하게 표현하고 싶다면, 특정 색상(color)을 지정할 것.") }}</dd>
+ <dd>선택값(생략가능). 위치값(offset)이전/이후에 설정이 가능하다. 색상(color)값이 설정되지 않으면, 브라우저 기본값(UA-chosen color)이 사용된다.</dd>
  <dt><code>&lt;offset-x&gt; &lt;offset-y&gt;</code></dt>
  <dd>Required. These {{cssxref("&lt;length&gt;")}} values specify the shadow's distance from the text. <code>&lt;offset-x&gt;</code> specifies the horizontal distance; a negative value places the shadow to the left of the text. <code>&lt;offset-y&gt;</code> specifies the vertical distance; a negative value places the shadow above the text. If both values are <code>0</code>, the shadow is placed directly behind the text, although it may be partly visible due to the effect of <code>&lt;blur-radius&gt;</code>.</dd>
  <dt><code>&lt;blur-radius&gt;</code></dt>
@@ -121,5 +121,5 @@ text-shadow: unset;</code></pre>
  Gecko has a bug whereby {{cssxref("transition")}}s will not work when transitioning from a <code>text-shadow</code> with a color specified to a <code>text-shadow</code> without a color specified ({{bug(726550)}}). This has been fixed in Firefox's new parallel CSS engine (also known as <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> or <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, planned for release in Firefox 57).
 
  <h2 id="See_also">See also</h2>
- <a href="https://cssgenerator.org/text-shadow-css-generator.html">Text Shadow CSS Generator</a> - An interactive text shadow CSS generator. {{cssxref("box-shadow")}} The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color) <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></dt>
+ <a href="https://cssgenerator.org/text-shadow-css-generator.html">Text Shadow CSS Generator</a> - An interactive text shadow CSS generator. {{cssxref("box-shadow")}} The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color) <a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></dt>
 </dl>

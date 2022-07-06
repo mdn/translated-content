@@ -8,7 +8,7 @@ translation_of: Web/SVG/Tutorial/Getting_Started
 ---
 <p>{{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}</p>
 
-<h3 id="A_Simple_Example" name="A_Simple_Example">Простой пример</h3>
+<h3 id="A_Simple_Example">Простой пример</h3>
 
 <p>Давайте начнём наше погружение с простого примера. Посмотрите на код, представленный ниже:</p>
 
@@ -26,7 +26,7 @@ translation_of: Web/SVG/Tutorial/Getting_Started
 &lt;/svg&gt;
 </pre>
 
-<p>Скопируйте код и вставьте его в файл demo1.svg. После чего откройте его в Firefox. Браузер отобразит вам следующее изображение (пользователи Firefox: нажмите <a class="external" href="http://developer.mozilla.org/@api/deki/files/4571/=svgdemo1.xml" title="http://developer.mozilla.org/@api/deki/files/4571/=svgdemo1.xml">сюда</a>):</p>
+<p>Скопируйте код и вставьте его в файл demo1.svg. После чего откройте его в Firefox. Браузер отобразит вам следующее изображение (пользователи Firefox: нажмите <a class="external" href="https://developer.mozilla.org/@api/deki/files/4571/=svgdemo1.xml" title="https://developer.mozilla.org/@api/deki/files/4571/=svgdemo1.xml">сюда</a>):</p>
 
 <p><img alt="svgdemo1.png" class="default internal" src="/@api/deki/files/4928/=svgdemo1.png"></p>
 
@@ -67,13 +67,13 @@ translation_of: Web/SVG/Tutorial/Getting_Started
  <li>Как SVG управляет размерами и единицами будет объяснено <a href="/en-US/Web/SVG/Tutorial/Positions" title="en-US/Web/SVG/Tutorial/Positions">на следующей странице</a>.</li>
 </ul>
 
-<h3 id="SVG_File_Types" name="SVG_File_Types">Типы SVG файлов</h3>
+<h3 id="SVG_File_Types">Типы SVG файлов</h3>
 
 <p>Файлы SVG бывают двух видов. Нормальные файлы SVG - это простые текстовые файлы, содержащие разметку SVG. Рекомендуется расширение ".svg" (все нижним регистром) к имени файла для этих файлов.</p>
 
 <p>Благодаря потенциально массивному размеру, который файлы SVG могут иметь при использовании в некоторых приложениях (например, географические приложения), спецификация SVG также допускает gzip-архивированные файлы SVG. Рекомендуется расширение ".svgz" (все нижним регистром) к имени файла. К сожалению, очень проблематично получить gzip-архивированные файлы SVG для надёжной работы со всеми SVG совместимыми пользовательскими агентами при управлении с сервера Microsofts IIS, когда Firefox не может загрузить gzip-архивированный SVG с локального компьютера. Избегайте gzip-архивированного SVG, кроме случаев, когда вы публикуетесь на веб-сервере, в корректной работе которого вы уверены (смотри ниже).</p>
 
-<h3 id="A_Word_on_Webservers" name="A_Word_on_Webservers">Слово о Веб-серверах</h3>
+<h3 id="A_Word_on_Webservers">Слово о Веб-серверах</h3>
 
 <p>Теперь, когда вы имеете представление о том, как создавать основные файлы SVG, следующим шагом будет загрузить их на Веб-сервер. Но на этом этапе существуют некоторые подводные камни. Для нормальных файлов SVG, сервера должны посылать заголовки HTTP:</p>
 

@@ -11,21 +11,21 @@ translation_of: Web/SVG/Content_type
 <dl>
  <dt>&lt;angle&gt;</dt>
  <dd>
- <p>可以用两种办法指定角度。如果用在样式表的属性的值中，<code>&lt;angle&gt;</code>可以用如下方法定义：</p>
+ <p>可以用两种办法指定角度。如果用在样式表的属性的值中，<code>&lt;angle&gt;</code> 可以用如下方法定义：</p>
 
  <pre>angle ::= number (~"deg" | ~"grad" | ~"rad")?</pre>
 
- <p>在这里deg标识了度数，grad标识了斜率，rad标识了弧度。</p>
+ <p>在这里 deg 标识了度数，grad 标识了斜率，rad 标识了弧度。</p>
 
- <p>对于定义在CSS2中的属性，必须提供一个角度单位标识符。对于在SVG特有的属性和它们对应的外观属性中的角度值，角度单位标识符是可选的。如果没有提供，角度值会被潜在分配一个度数单位。在所有元素的外观属性中，无论是在SVG1.1中定义的，还是在CSS2中定义的，如果指定了角度标识符，角度标识符必须是小写的。</p>
+ <p>对于定义在 CSS2 中的属性，必须提供一个角度单位标识符。对于在 SVG 特有的属性和它们对应的外观属性中的角度值，角度单位标识符是可选的。如果没有提供，角度值会被潜在分配一个度数单位。在所有元素的外观属性中，无论是在 SVG1.1 中定义的，还是在 CSS2 中定义的，如果指定了角度标识符，角度标识符必须是小写的。</p>
 
- <p>如果角度用在一个SVG属性中，<code>&lt;angle&gt;</code>可以用以下方式定义：</p>
+ <p>如果角度用在一个 SVG 属性中，<code>&lt;angle&gt;</code>可以用以下方式定义：</p>
 
  <pre>angle ::= number ("deg" | "grad" | "rad")?</pre>
 
  <p>在这个&lt;angle&gt;值中，单位标识符必须是小写的。</p>
 
- <p>在SVG DOM中，&lt;angle&gt;值使用{{domxref("SVGAngle")}}或{{domxref("SVGAnimatedAngle objects")}}表达。</p>
+ <p>在 SVG DOM 中，&lt;angle&gt; 值使用{{domxref("SVGAngle")}}或{{domxref("SVGAnimatedAngle objects")}}表达。</p>
  </dd>
 </dl>
 
@@ -34,11 +34,11 @@ translation_of: Web/SVG/Content_type
 <dl>
  <dt>&lt;anything&gt;</dt>
  <dd>
- <p>基本类型&lt;anything&gt;是一个零字符或多字符的序列。具体如下：</p>
+ <p>基本类型 &lt;anything&gt; 是一个零字符或多字符的序列。具体如下：</p>
 
  <pre>anything ::= Char*</pre>
 
- <p>在这里，<a href="http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char" title="http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char">Char</a> 表示一个字符，XML 1.0 第2.2节中定义了它。</p>
+ <p>在这里，<a href="http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char">Char</a> 表示一个字符，XML 1.0 第 2.2 节中定义了它。</p>
  </dd>
 </dl>
 
@@ -47,7 +47,7 @@ translation_of: Web/SVG/Content_type
 <dl>
  <dt>&lt;clock-value&gt;</dt>
  <dd>
- <p>时钟值的句法与<a href="http://www.w3.org/TR/2001/REC-smil-animation-20010904/" title="http://www.w3.org/TR/2001/REC-smil-animation-20010904/">SMIL Animation</a>规范中写的句法相同。在这里重放一下时钟值的语法：</p>
+ <p>时钟值的句法与<a href="http://www.w3.org/TR/2001/REC-smil-animation-20010904/">SMIL Animation</a>规范中写的句法相同。在这里重放一下时钟值的语法：</p>
 
  <pre>Clock-val         ::= Full-clock-val | Partial-clock-val | Timecount-val
 Full-clock-val    ::= Hours ":" Minutes ":" Seconds ("." Fraction)?
@@ -63,29 +63,29 @@ Timecount         ::= DIGIT+
 DIGIT             ::= [0-9]
 </pre>
 
- <p>对于<code>Timecount</code>值，默认的公制前缀是“s”（秒）。在时钟值中不能嵌入空白，而且前导和末尾的空白字符会被忽略掉。</p>
+ <p>对于<code>Timecount</code>值，默认的公制前缀是 “s”（秒）。在时钟值中不能嵌入空白，而且前导和末尾的空白字符会被忽略掉。</p>
 
  <p>下面是合法的时钟值的示例：</p>
 
  <ul>
   <li>完整时钟值：<br>
-   <code>02:30:03 </code> = 2小时30分钟又3秒<br>
-   <code>50:00:10.25</code> = 50小时10秒又250毫秒</li>
+   <code>02:30:03 </code> = 2 小时 30 分钟又 3 秒<br>
+   <code>50:00:10.25</code> = 50 小时 10 秒又 250 毫秒</li>
   <li>部分时钟值：<br>
-   <code>02:33 </code> = 2分钟又33秒<br>
-   <code>00:10.5</code> = 10.5 秒 = 10秒又500毫秒</li>
-  <li>Timecount值：<br>
-   <code>3.2h </code> = 3.2小时 = 3小时12分钟<br>
-   <code>45min </code> = 45分钟<br>
-   <code>30s </code> = 30秒<br>
-   <code>5ms </code> = 5毫秒<br>
-   <code>12.467 </code> = 12秒又467毫秒</li>
+   <code>02:33 </code> = 2 分钟又 33 秒<br>
+   <code>00:10.5</code> = 10.5 秒 = 10 秒又 500 毫秒</li>
+  <li>Timecount 值：<br>
+   <code>3.2h </code> = 3.2 小时 = 3 小时 12 分钟<br>
+   <code>45min </code> = 45 分钟<br>
+   <code>30s </code> = 30 秒<br>
+   <code>5ms </code> = 5 毫秒<br>
+   <code>12.467 </code> = 12 秒又 467 毫秒</li>
  </ul>
 
- <p>小数值是基数为10的浮点数，秒的界定。因此：</p>
+ <p>小数值是基数为 10 的浮点数，秒的界定。因此：</p>
 
- <p><code>00.5s = 500毫秒<br>
-  00:00.005 = 5毫秒</code></p>
+ <p><code>00.5s = 500 毫秒<br>
+  00:00.005 = 5 毫秒</code></p>
  </dd>
 </dl>
 
@@ -94,15 +94,15 @@ DIGIT             ::= [0-9]
 <dl>
  <dt>&lt;color&gt;</dt>
  <dd>
- <p>基本类型&lt;color&gt;是一个CSS2兼容的规范，针对sRGB颜色空间的颜色。&lt;color&gt;应用在SVG的属性 {{SVGAttr("color")}} 上，也是属性{{SVGAttr("fill")}}、属性{{SVGAttr("stroke")}}、属性{{SVGAttr("stop-color")}}、属性 {{SVGAttr("flood-color")}}和属性{{SVGAttr("lighting-color")}}的定义的组成部分，&lt;color&gt;还提供了可选的基于ICC的颜色规范。</p>
+ <p>基本类型&lt;color&gt;是一个 CSS2 兼容的规范，针对 sRGB 颜色空间的颜色。&lt;color&gt; 应用在 SVG 的属性 {{SVGAttr("color")}} 上，也是属性{{SVGAttr("fill")}}、属性{{SVGAttr("stroke")}}、属性{{SVGAttr("stop-color")}}、属性 {{SVGAttr("flood-color")}}和属性{{SVGAttr("lighting-color")}}的定义的组成部分，&lt;color&gt; 还提供了可选的基于 ICC 的颜色规范。</p>
 
- <p>SVG支持所有的定义在<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color" title="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color">CSS2句法和基本数据类型</a>中的&lt;color&gt;供选择的句法，而且还支持<a href="http://www.w3.org/TR/css3-color/" title="http://www.w3.org/TR/css3-color/">CSS Color Module Level 3</a>中的&lt;color&gt;句法（取决于编译器）。</p>
+ <p>SVG 支持所有的定义在<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color">CSS2 句法和基本数据类型</a>中的 &lt;color&gt; 供选择的句法，而且还支持<a href="http://www.w3.org/TR/css3-color/">CSS Color Module Level 3</a>中的 &lt;color&gt; 句法（取决于编译器）。</p>
 
- <p>一个&lt;color&gt;可以是一个关键词，或者一个数字化的RGB规范。</p>
+ <p>一个&lt;color&gt; 可以是一个关键词，或者一个数字化的 RGB 规范。</p>
 
- <p>除了这些颜色关键词，用户可以利用用户环境中的对象指定对应于颜色的关键词。 这些关键词的规范定义可以在<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors">用户对颜色的引用</a>（CSS2规范第18.2节）中找到。</p>
+ <p>除了这些颜色关键词，用户可以利用用户环境中的对象指定对应于颜色的关键词。 这些关键词的规范定义可以在<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors">用户对颜色的引用</a>（CSS2 规范第 18.2 节）中找到。</p>
 
- <p>一个16进制记号法的RGB值的格式是一个“#”后面紧跟着3个或者6个16进制字符。三数字RGB记号法（#rgb）可以转换成六数字RGB格式（#rrggbb），只需要复制数字，而不是添加0。举个例子，#fb0扩展为#ffbb00。这样确保白色（#ffffff）可以用缩写记法#fff指定，去掉任何对显示器的色深的依赖。一个函数记号法的RGB值的格式是一个RGB开头函数后面跟着一个逗号分隔的三数值数列（可以是三个数字或者三个百分数）后面跟着一个右括号“)”。一个RGB开头函数是一个大小写不敏感的字符串“rgb(”，举个例子，“RGB(”或者“rGb(”。为了兼容性，建议使用全小写形式“rgb(”。整型值255对应于100%，也对应于16进制计号法中的F或FF：<code>rgb(255,255,255)</code> = <code>rgb(100%,100%,100%)</code> = <code>#FFF。数字值周围允许存在空白字符。所有的RGB值都指定在sRGB颜色空间里。使用sRGB提供了一个清楚的、客观的、可测量的颜色定义，可以关联到国际标准。</code></p>
+ <p>一个 16 进制记号法的 RGB 值的格式是一个 “#” 后面紧跟着 3 个或者 6 个 16 进制字符。三数字 RGB 记号法（#rgb）可以转换成六数字 RGB 格式（#rrggbb），只需要复制数字，而不是添加 0。举个例子，#fb0 扩展为 #ffbb00。这样确保白色（#ffffff）可以用缩写记法 #fff 指定，去掉任何对显示器的色深的依赖。一个函数记号法的 RGB 值的格式是一个 RGB 开头函数后面跟着一个逗号分隔的三数值数列（可以是三个数字或者三个百分数）后面跟着一个右括号 “)”。一个 RGB 开头函数是一个大小写不敏感的字符串 “rgb(”，举个例子，“RGB(” 或者 “rGb(”。为了兼容性，建议使用全小写形式 “rgb(”。整型值 255 对应于 100%，也对应于 16 进制计号法中的 F 或 FF：<code>rgb(255,255,255)</code> = <code>rgb(100%,100%,100%)</code> = <code>#FFF。数字值周围允许存在空白字符。所有的 RGB 值都指定在 sRGB 颜色空间里。使用 sRGB 提供了一个清楚的、客观的、可测量的颜色定义，可以关联到国际标准。</code></p>
 
  <pre>color    ::= "#" hexdigit hexdigit hexdigit (hexdigit hexdigit hexdigit)?
              | "rgb("integer, integer, integer")"
@@ -111,9 +111,9 @@ DIGIT             ::= [0-9]
 hexdigit ::= [0-9A-Fa-f]
 </pre>
 
- <p>在这里，color-keyword要于匹配列于<a href="http://www.w3.org/TR/css3-color/" title="http://www.w3.org/TR/css3-color/">CSS Color Module Level 3</a>中的颜色关键词（大小写不敏感）中的一个，要么匹配列于<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors" title="http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors">对颜色的用户参考</a>中的一个。</p>
+ <p>在这里，color-keyword 要于匹配列于<a href="http://www.w3.org/TR/css3-color/">CSS Color Module Level 3</a>中的颜色关键词（大小写不敏感）中的一个，要么匹配列于<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors">对颜色的用户参考</a>中的一个。</p>
 
- <p>SVG DOM对&lt;color&gt;的定义，CSS中也做了同样的定义。SVG对颜色的扩展，包括指定基于ICC的颜色的能力，可以使用DOM接口{{domxref("SVGColor")}}来表现。</p>
+ <p>SVG DOM 对 &lt;color&gt; 的定义，CSS 中也做了同样的定义。SVG 对颜色的扩展，包括指定基于 ICC 的颜色的能力，可以使用 DOM 接口{{domxref("SVGColor")}}来表现。</p>
  </dd>
 </dl>
 
@@ -122,9 +122,9 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;coordinate&gt;</dt>
  <dd>
- <p>一个&lt;coordinate&gt;是一个用户坐标系统中的长度，是从用户坐标系统的原点沿着相关轴走出给定的距离（X轴针对X坐标，Y轴针对Y坐标）。它的句法与<a href="/en-US/docs/SVG/Content_type#length" title="https://developer.mozilla.org/en/SVG/Content_type#length">&lt;length&gt;</a>相同。</p>
+ <p>一个&lt;coordinate&gt; 是一个用户坐标系统中的长度，是从用户坐标系统的原点沿着相关轴走出给定的距离（X 轴针对 X 坐标，Y 轴针对 Y 坐标）。它的句法与<a href="/en-US/docs/SVG/Content_type#length" title="https://developer.mozilla.org/en/SVG/Content_type#length">&lt;length&gt;</a>相同。</p>
 
- <p>在SVG DOM内部，一个 &lt;coordinate&gt; 代表了一个{{domxref("SVGLength")}} 或者一个{{domxref("SVGAnimatedLength")}}.</p>
+ <p>在 SVG DOM 内部，一个 &lt;coordinate&gt; 代表了一个{{domxref("SVGLength")}} 或者一个{{domxref("SVGAnimatedLength")}}.</p>
  </dd>
 </dl>
 
@@ -133,7 +133,7 @@ hexdigit ::= [0-9A-Fa-f]
 <dl class="definitions">
  <dt>&lt;frequency&gt;</dt>
  <dd>
- <p>频率值用在可听到的属性上。就如CSS2中所定义的，一个频率值是一个<a href="/en-US/docs/SVG/Content_type#Number" title="https://developer.mozilla.org/en/SVG/Content_type#Number">&lt;number&gt;</a>后面跟着一个频率单位标识符。频率单位标识符可以是：</p>
+ <p>频率值用在可听到的属性上。就如 CSS2 中所定义的，一个频率值是一个<a href="/en-US/docs/SVG/Content_type#Number" title="https://developer.mozilla.org/en/SVG/Content_type#Number">&lt;number&gt;</a>后面跟着一个频率单位标识符。频率单位标识符可以是：</p>
 
  <ul>
   <li><code>Hz：赫兹</code></li>
@@ -151,17 +151,17 @@ hexdigit ::= [0-9A-Fa-f]
  <dd>用于引用的功能记号法，该引用的句法与{{cssxref("uri", "CSS URI")}}相同。</dd>
 </dl>
 
-<h2 id="ICC颜色">ICC颜色</h2>
+<h2 id="ICC颜色">ICC 颜色</h2>
 
 <dl>
  <dt>&lt;icccolor&gt;</dt>
  <dd>
- <p>&lt;icccolor&gt; 一份ICC颜色规范。在SVG 1.1，一份ICC颜色规范，顾名思义，是一个参考了一个{{SVGElement("color-profile")}} 元素，以及一个或更多颜色成分值。语法如下所示：</p>
+ <p>&lt;icccolor&gt; 一份 ICC 颜色规范。在 SVG 1.1，一份 ICC 颜色规范，顾名思义，是一个参考了一个{{SVGElement("color-profile")}} 元素，以及一个或更多颜色成分值。语法如下所示：</p>
 
  <pre>icccolor ::= "icc-color(" name (, number)+ ")"
 </pre>
 
- <p>&lt;icccolor&gt;对应的SVG DOM接口是{{domxref("SVGICCColor")}}。</p>
+ <p>&lt;icccolor&gt;对应的 SVG DOM 接口是{{domxref("SVGICCColor")}}。</p>
  </dd>
 </dl>
 
@@ -170,15 +170,15 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;integer&gt;</dt>
  <dd>
- <p>用一个可选的正负符号（“+”或“-”）后面跟着一个或多个0到9的数字可以指定一个&lt;integer&gt;：</p>
+ <p>用一个可选的正负符号（“+” 或 “-”）后面跟着一个或多个 0 到 9 的数字可以指定一个&lt;integer&gt;：</p>
 
  <pre>integer ::= [+-]? [0-9]+</pre>
 
  <p>如果正负符号不出现，则这个数字是非负的。</p>
 
- <p>除非是另有声明为特殊的属性，&lt;integer&gt;的范围是-2147483648到2147483647之间。</p>
+ <p>除非是另有声明为特殊的属性，&lt;integer&gt; 的范围是 -2147483648 到 2147483647 之间。</p>
 
- <p>在SVG DOM内部，一个&lt;integer&gt;代表了一个数字或者一个{{domxref("SVGAnimatedInteger")}}。</p>
+ <p>在 SVG DOM 内部，一个 &lt;integer&gt; 代表了一个数字或者一个{{domxref("SVGAnimatedInteger")}}。</p>
  </dd>
 </dl>
 
@@ -189,19 +189,19 @@ hexdigit ::= [0-9A-Fa-f]
  <dd>
  <p>一个国际化资源标识符。</p>
 
- <p>在因特网上，资源是用<em>IRI</em>（一个国际化资源标识符）标识的。举个例子，一个SVG文档调用了位于http://example.com上的someDrawing.svg，可以使用下面的<em>IRI</em>：</p>
+ <p>在因特网上，资源是用<em>IRI</em>（一个国际化资源标识符）标识的。举个例子，一个 SVG 文档调用了位于 http://example.com 上的 someDrawing.svg，可以使用下面的<em>IRI</em>：</p>
 
  <pre>http://example.com/someDrawing.svg
 </pre>
 
- <p>一个<em>IRI</em>中包含一个<em>IRI</em>片段标识符，就可以定位一个XML文档内部的特定的元素。一个包含有<em>IRI</em>片段标识符的<em>IRI</em>，由一个可选的基础<em>IRI</em>后面跟着一个“#”号，再跟着一个<em>IRI</em>片段标识符组成。举个例子，下面的IRI可以用来指定文件someDrawing.svg中的ID为“Lamppost”的元素：</p>
+ <p>一个<em>IRI</em>中包含一个<em>IRI</em>片段标识符，就可以定位一个 XML 文档内部的特定的元素。一个包含有<em>IRI</em>片段标识符的<em>IRI</em>，由一个可选的基础<em>IRI</em>后面跟着一个“#”号，再跟着一个<em>IRI</em>片段标识符组成。举个例子，下面的 IRI 可以用来指定文件 someDrawing.svg 中的 ID 为“Lamppost”的元素：</p>
 
  <pre>http://example.com/someDrawing.svg#Lamppost
 </pre>
 
- <p><em>IRI</em>s用在{{SVGAttr("xlink:href")}}属性中。有些属性既允许<em>IRI</em>作为内容，也允许文本字符串。为了消除歧意，避免一个文本字符串被当作IRI，可以使用功能记号法&lt;FuncIRI&gt;。这只是简单用功能记号法分隔一个IRI。注意：出于历史原因，为了与CSS规范兼容，分隔符是“url(”和“)”。该<em>FuncIRI</em>格式用在外观属性中。</p>
+ <p><em>IRI</em>s 用在{{SVGAttr("xlink:href")}}属性中。有些属性既允许<em>IRI</em>作为内容，也允许文本字符串。为了消除歧意，避免一个文本字符串被当作 IRI，可以使用功能记号法&lt;FuncIRI&gt;。这只是简单用功能记号法分隔一个 IRI。注意：出于历史原因，为了与 CSS 规范兼容，分隔符是“url(”和“)”。该<em>FuncIRI</em>格式用在外观属性中。</p>
 
- <p>SVG广泛地使用了<em>IRI</em>引用，引用对象既可以是绝对引用也可以是引对引用。举个例子，要用线性渐变填充一个矩形，你可以先定义一个{{SVGElement("linearGradient")}}元素，然后给它一个ID，如下：</p>
+ <p>SVG 广泛地使用了<em>IRI</em>引用，引用对象既可以是绝对引用也可以是引对引用。举个例子，要用线性渐变填充一个矩形，你可以先定义一个{{SVGElement("linearGradient")}}元素，然后给它一个 ID，如下：</p>
 
  <pre>&lt;linearGradient xml:id="MyGradient"&gt;...&lt;/linearGradient&gt;
 </pre>
@@ -211,14 +211,14 @@ hexdigit ::= [0-9A-Fa-f]
  <pre>&lt;rect fill="url(#MyGradient)"/&gt;
 </pre>
 
- <p>SVG支持两种类型的<em>IRI</em> 引用：</p>
+ <p>SVG 支持两种类型的<em>IRI</em> 引用：</p>
 
  <ul>
-  <li>本地<em>IRI</em>引用，在这里IRI引用不能包含一个<code>&lt;absoluteIRI&gt;</code>或<code>&lt;relativeIRI&gt;</code>，因此只能包含一个片段标识符（例如： <code>#&lt;elementID&gt;</code> 或者<code>#xpointer(id&lt;elementID&gt;)）。</code></li>
+  <li>本地<em>IRI</em>引用，在这里 IRI 引用不能包含一个<code>&lt;absoluteIRI&gt;</code>或<code>&lt;relativeIRI&gt;</code>，因此只能包含一个片段标识符（例如： <code>#&lt;elementID&gt;</code> 或者<code>#xpointer(id&lt;elementID&gt;)）。</code></li>
   <li>非本地<em>IRI</em>引用，在这里<em>IRI</em>引用必须包含一个<code>&lt;absoluteIRI&gt;</code>或<code>&lt;relativeIRI&gt;。</code></li>
  </ul>
 
- <p>欲了解完整的SVG中的IRI引用的规范请阅读<a href="http://www.w3.org/TR/SVG/linking.html#IRIReference" title="http://www.w3.org/TR/SVG/linking.html#IRIReference">SVG 1.1 (2nd Edition): IRI references</a>。</p>
+ <p>欲了解完整的 SVG 中的 IRI 引用的规范请阅读<a href="http://www.w3.org/TR/SVG/linking.html#IRIReference">SVG 1.1 (2nd Edition): IRI references</a>。</p>
  </dd>
 </dl>
 
@@ -231,11 +231,11 @@ hexdigit ::= [0-9A-Fa-f]
 
  <pre>length ::= number (~"em" | ~"ex" | ~"px" | ~"in" | ~"cm" | ~"mm" | ~"pt" | ~"pc")?</pre>
 
- <p>请阅读<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#length-units" title="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#length-units">CSS2规范</a> 以了解单位标识符的意义。</p>
+ <p>请阅读<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#length-units">CSS2 规范</a> 以了解单位标识符的意义。</p>
 
- <p>在CSS2中定义的长度属性，必须提供单位标识符。而SVG专用属性的长度值以及它们对应的外观属性，长度单位标识符是可选的。如果没有提供单位标识符，长度值代表当前用户坐标系统中的一段距离。对于外观属性，无论是定义在SVG1.1还是定义在CSS2中，长度单位标识符必须是小写的。</p>
+ <p>在 CSS2 中定义的长度属性，必须提供单位标识符。而 SVG 专用属性的长度值以及它们对应的外观属性，长度单位标识符是可选的。如果没有提供单位标识符，长度值代表当前用户坐标系统中的一段距离。对于外观属性，无论是定义在 SVG1.1 还是定义在 CSS2 中，长度单位标识符必须是小写的。</p>
 
- <p>如果是在SVG属性中使用长度，&lt;length&gt;需定义如下：</p>
+ <p>如果是在 SVG 属性中使用长度，&lt;length&gt;需定义如下：</p>
 
  <pre>length ::= number ("em" | "ex" | "px" | "in" | "cm" | "mm" | "pt" | "pc" | "%")?</pre>
 
@@ -248,7 +248,7 @@ hexdigit ::= [0-9A-Fa-f]
   <li>百分比长度值表达了一个给定对象上的边界盒的宽度或高度的百分比。</li>
  </ul>
 
- <p>在SVG DOM中，&lt;length&gt;值可以用{domxref("SVGLength")}}对象或{{domxref("SVGAnimatedLength")}}对象来表达。</p>
+ <p>在 SVG DOM 中，&lt;length&gt;值可以用{domxref("SVGLength")}}对象或{{domxref("SVGAnimatedLength")}}对象来表达。</p>
  </dd>
 </dl>
 
@@ -257,15 +257,15 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;list-of-<var>T</var>s&gt;</dt>
  <dd>
- <p>（在这里<var>T</var> 某些类型。）由一系列分开的值构成的数列。除非另有说明，SVG的XML属性内的数列既可以是逗号分隔的，也可以是空格分隔的。用逗号作分隔符，逗号前面或后面可有带空格。</p>
+ <p>（在这里<var>T</var> 某些类型。）由一系列分开的值构成的数列。除非另有说明，SVG 的 XML 属性内的数列既可以是逗号分隔的，也可以是空格分隔的。用逗号作分隔符，逗号前面或后面可有带空格。</p>
 
- <p>数列中的空白被定义为一个或多个下列连续字符：“空格” （U+0020）、“制表符” （U+0009）、 “换行符” （U+000A）、 “回车符” （U+000D）以及“换页符”(U+000C)。</p>
+ <p>数列中的空白被定义为一个或多个下列连续字符：“空格”（U+0020）、“制表符”（U+0009）、 “换行符”（U+000A）、 “回车符”（U+000D）以及“换页符”(U+000C)。</p>
 
- <p>下面是一个EBNF语法的模板，用来描述&lt;list-of-<var>T</var>s&gt;句法：</p>
+ <p>下面是一个 EBNF 语法的模板，用来描述&lt;list-of-<var>T</var>s&gt;句法：</p>
 
  <pre>list-of-<var>T</var>s ::= <var>T </var>| <var>T</var>, list-of-<var>T</var>s</pre>
 
- <p>在SVG DOM内部，&lt;list-of-<em>T</em>s&gt;类型的值可以用一个限特定类型<em>T</em>的接口来表达。举个例子，SVG DOM中的&lt;list-of-lengths&gt;使用一个{{domxref("SVGLengthList")}}对象或者{{domxref("SVGAnimatedLengthList")}}对象来表达。</p>
+ <p>在 SVG DOM 内部，&lt;list-of-<em>T</em>s&gt;类型的值可以用一个限特定类型<em>T</em>的接口来表达。举个例子，SVG DOM 中的&lt;list-of-lengths&gt;使用一个{{domxref("SVGLengthList")}}对象或者{{domxref("SVGAnimatedLengthList")}}对象来表达。</p>
  </dd>
 </dl>
 
@@ -276,7 +276,7 @@ hexdigit ::= [0-9A-Fa-f]
  <dd>
  <p>一个命名，是一个字符串，是不符合句法意义的少量的字符。</p>
 
- <pre>name  ::= [^,()#x20#x9#xD#xA] /* 除了",", "(", ")" 或 wsp 之外的任何字符 */</pre>
+ <pre>name  ::= [^,()#x20#x9#xD#xA] /* 除了 ",", "(", ")" 或 wsp 之外的任何字符 */</pre>
  </dd>
 </dl>
 
@@ -285,17 +285,17 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;number&gt;</dt>
  <dd>
- <p>真实数字可以用两种方法指定。如果用在样式表中，一个&lt;number&gt;可以如下定义：</p>
+ <p>真实数字可以用两种方法指定。如果用在样式表中，一个 &lt;number&gt; 可以如下定义：</p>
 
  <pre>number ::= integer | [+-]? [0-9]* "." [0-9]+</pre>
 
- <p>该句法与CSS（CSS2第4.3.1章节）中的定义一样。</p>
+ <p>该句法与 CSS（CSS2 第 4.3.1 章节）中的定义一样。</p>
 
- <p>如果用在一个SVG属性中，一个&lt;number&gt;可以用别的方法定义，允许一个数字后面跟着大数指数，以指定得更精确：</p>
+ <p>如果用在一个 SVG 属性中，一个 &lt;number&gt; 可以用别的方法定义，允许一个数字后面跟着大数指数，以指定得更精确：</p>
 
  <pre>number ::= integer ([Ee] integer)?| [+-]? [0-9]* "." [0-9]+ ([Ee] integer)?</pre>
 
- <p>在SVG DOM内部，一个&lt;number&gt;可以用浮点数、{{domxref("SVGNumber")}}对象或者{{domxref("SVGAnimatedNumber")}}对象来表达。</p>
+ <p>在 SVG DOM 内部，一个 &lt;number&gt; 可以用浮点数、{{domxref("SVGNumber")}}对象或者{{domxref("SVGAnimatedNumber")}}对象来表达。</p>
  </dd>
 </dl>
 
@@ -304,11 +304,11 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;number-optional-number&gt;</dt>
  <dd>
- <p>一对&lt;number&gt;，其中第二个&lt;number&gt;是可视情况取舍的。</p>
+ <p>一对&lt;number&gt;，其中第二个 &lt;number&gt; 是可视情况取舍的。</p>
 
  <pre>number-optional-number ::= number | number, number</pre>
 
- <p>在SVG DOM中，一个&lt;number-optional-number&gt;可以用一对{{domxref("SVGAnimatedInteger")}}对象或者一对{{domxref("SVGAnimatedNumber")}}对象来表达。</p>
+ <p>在 SVG DOM 中，一个 &lt;number-optional-number&gt; 可以用一对{{domxref("SVGAnimatedInteger")}}对象或者一对{{domxref("SVGAnimatedNumber")}}对象来表达。</p>
  </dd>
 </dl>
 
@@ -316,7 +316,7 @@ hexdigit ::= [0-9A-Fa-f]
 
 <dl>
  <dt>&lt;opacity-value&gt;</dt>
- <dd>颜色不透明度或者当前对象填充的内容的不透明度，它是一个<a href="/en-US/docs/SVG/Content_type#Number" title="SVG/Content_type#Number">&lt;number&gt;</a>。任何超出0.0到1.0范围的值将被压制回这个范围。0.0表示完全透明，1.0表示完全不透明。</dd>
+ <dd>颜色不透明度或者当前对象填充的内容的不透明度，它是一个<a href="/en-US/docs/SVG/Content_type#Number" title="SVG/Content_type#Number">&lt;number&gt;</a>。任何超出 0.0 到 1.0 范围的值将被压制回这个范围。0.0 表示完全透明，1.0 表示完全不透明。</dd>
 </dl>
 
 <h2 id="涂色">涂色</h2>
@@ -324,9 +324,9 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;paint&gt;</dt>
  <dd>
- <p>属性{{SVGAttr("fill")}}和属性{{SVGAttr("stroke")}}的值，是涂色类型的规范，用在要对一个给定元素填充或描边的时候。SVG规范的<a href="http://www.w3.org/TR/SVG/painting.html#SpecifyingPaint" title="http://www.w3.org/TR/SVG/painting.html#SpecifyingPaint">Specifying paint</a>章节中描述了&lt;paint&gt;可用的选项以及句法。</p>
+ <p>属性{{SVGAttr("fill")}}和属性{{SVGAttr("stroke")}}的值，是涂色类型的规范，用在要对一个给定元素填充或描边的时候。SVG 规范的<a href="http://www.w3.org/TR/SVG/painting.html#SpecifyingPaint">Specifying paint</a>章节中描述了&lt;paint&gt;可用的选项以及句法。</p>
 
- <p>在SVG DOM内部，&lt;paint&gt;值用{{domxref("SVGPaint")}}对象表达。</p>
+ <p>在 SVG DOM 内部，&lt;paint&gt; 值用{{domxref("SVGPaint")}}对象表达。</p>
  </dd>
 </dl>
 
@@ -339,11 +339,11 @@ hexdigit ::= [0-9A-Fa-f]
 
  <pre>percentage ::= number "%"</pre>
 
- <p>注意&lt;number&gt;的意义取决于百分数是在一个样式表中指定的，还是在一个SVG属性非外观属性中指定的。</p>
+ <p>注意&lt;number&gt; 的意义取决于百分数是在一个样式表中指定的，还是在一个 SVG 属性非外观属性中指定的。</p>
 
  <p>百分数值总是关联到另一个值。举个例子，每种允许百分比的属性同时定义了引用了给百分比数参考的距离测量。</p>
 
- <p>在SVG DOM内部，&lt;percentage&gt;用{{domxref("SVGNumber")}}对象或{{domxref("SVGAnimatedNumber")}}对象表达。</p>
+ <p>在 SVG DOM 内部，&lt;percentage&gt; 用{{domxref("SVGNumber")}}对象或{{domxref("SVGAnimatedNumber")}}对象表达。</p>
  </dd>
 </dl>
 
@@ -352,11 +352,11 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;time&gt;</dt>
  <dd>
- <p>一个时间值是一个&lt;number&gt;后面紧跟着时间单位标识符。时间单位标识符可以是：</p>
+ <p>一个时间值是一个 &lt;number&gt; 后面紧跟着时间单位标识符。时间单位标识符可以是：</p>
 
  <ul>
-  <li><span class="attr-value">ms：毫秒</span></li>
-  <li><span class="attr-value">s：秒</span></li>
+  <li>ms：毫秒</li>
+  <li>s：秒</li>
  </ul>
  </dd>
 </dl>
@@ -366,8 +366,8 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;transform-list&gt;</dt>
  <dd>
- <p>一个&lt;transform-list&gt;是用来指定一个坐标系统转换数列。属性{{SVGAttr("transform")}}的定义中给出了&lt;transform-list&gt;的可用值的详细描述。</p>
+ <p>一个&lt;transform-list&gt; 是用来指定一个坐标系统转换数列。属性{{SVGAttr("transform")}}的定义中给出了 &lt;transform-list&gt; 的可用值的详细描述。</p>
 
- <p>在SVG DOM内部，一个&lt;transform-list&gt;值是用了一个{{domxref("SVGTransformList")}}对象或者{{domxref("SVGAnimatedTransformList")}}对象来表达的。</p>
+ <p>在 SVG DOM 内部，一个 &lt;transform-list&gt; 值是用了一个{{domxref("SVGTransformList")}}对象或者{{domxref("SVGAnimatedTransformList")}}对象来表达的。</p>
  </dd>
 </dl>

@@ -10,24 +10,26 @@ translation_of: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<h2 id="Message" name="Message">メッセージ</h2>
+<p>JavaScript の例外である "too much recursion" または "Maximum call stack size exceeded" は、関数の呼び出しが多すぎる場合や、関数に基礎ケースがない場合に発生します。</p>
 
-<pre class="syntaxbox">Error: Out of stack space (Edge)
+<h2 id="Message">メッセージ</h2>
+
+<pre class="brush: js">Error: Out of stack space (Edge)
 InternalError: too much recursion (Firefox)
 RangeError: Maximum call stack size exceeded (Chrome)
 </pre>
 
-<h2 id="Error_Type" name="Error_Type">エラーの種類</h2>
+<h2 id="Error_type">エラーの種類</h2>
 
 <p>{{jsxref("InternalError")}}。</p>
 
-<h2 id="What_went_wrong" name="What_went_wrong">エラーの原因</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
 <p>自分自身を呼び出す関数は<em>再帰関数</em>と呼ばれます。ある条件を満たすと、関数は自分自身を呼び出すのをやめます。これは<em>基礎ケース</em>と呼ばれます。</p>
 
-<p>いくつかの点で、再帰はループに似ています。両方とも、同じコードを複数回実行し、 (無限ループまたは無限再帰を避けるために) 条件を必要とします。<span class="seoSummary">関数の再帰呼び出しが深すぎる場合、または関数が基礎ケースを欠いている場合、 JavaScript はこのエラーを発生します。</span></p>
+<p>いくつかの点で、再帰はループに似ています。両方とも、同じコードを複数回実行し、 (無限ループまたは無限再帰を避けるために) 条件を必要とします。関数の再帰呼び出しが深すぎる場合、または関数が基礎ケースを欠いている場合、 JavaScript はこのエラーを発生します。</p>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
 <p>終了条件に従って、この再帰関数は 10 回実行されます。</p>
 
@@ -63,7 +65,7 @@ loop(0);
 
 // InternalError: too much recursion</pre>
 
-<h3 id="Class_error_too_much_recursion" name="Class_error_too_much_recursion">Class error: too much recursion</h3>
+<h3 id="Class_error_too_much_recursion">Class error: too much recursion</h3>
 
 <pre class="brush: js example-bad">class Person{
 	constructor(){}
@@ -71,7 +73,6 @@ loop(0);
 		this.name = name; // 再帰呼び出し
 	}
 }
-
 
 const tony = new Person();
 tony.name = "Tonisha"; // InternalError: too much recursion
@@ -85,7 +86,7 @@ tony.name = "Tonisha"; // InternalError: too much recursion
 </pre>
 
 <div class="note">
-<p>この例では、セッターが呼び出されたとき、同じことを再度行うように指示されます。<em>つまり、処理しているのと同じプロパティに設定します。</em>これにより、関数は何度も何度も自分自身を呼び出し、無限に再帰が行われます。</p>
+	<p>この例では、セッターが呼び出されたとき、同じことを再度行うように指示されます。<em>つまり、処理しているのと同じプロパティに設定します。</em>これにより、関数は何度も何度も自分自身を呼び出し、無限に再帰が行われます。</p>
 </div>
 
 <p>この問題は同じ変数がゲッターに使用される場合にも発生します。</p>
@@ -111,9 +112,9 @@ tony.name = "Tonisha";
 console.log(tony);
 </pre>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li>{{Glossary("Recursion", "再帰")}}</li>
- <li><a href="/ja/docs/Web/JavaScript/Guide/Functions#Recursion">再帰関数</a></li>
+	<li>{{Glossary("Recursion", "再帰")}}</li>
+	<li><a href="/ja/docs/Web/JavaScript/Guide/Functions#recursion">再帰関数</a></li>
 </ul>

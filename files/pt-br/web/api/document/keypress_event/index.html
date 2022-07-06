@@ -99,7 +99,7 @@ translation_of: Web/API/Document/keypress_event
   <tr>
    <td><code>keyCode</code> {{readonlyInline}}</td>
    <td>Longo não assinado (int)</td>
-   <td>Um código numérico dependente do sistema e da implementação que identifica o valor não modificado da tecla pressionada. Este é geralmente o código ASCII decimal ({{RFC (20)}}) ou Windows 1252 correspondente à chave; veja {{anch ("Códigos de teclas virtuais")}} para uma lista de valores comuns. Se a chave não puder ser identificada, esse valor será 0.
+   <td>Um código numérico dependente do sistema e da implementação que identifica o valor não modificado da tecla pressionada. Este é geralmente o código ASCII decimal ({{RFC (20)}}) ou Windows 1252 correspondente à chave; veja <a href="#códigos_de_teclas_virtuais">Códigos de teclas virtuais</a> para uma lista de valores comuns. Se a chave não puder ser identificada, esse valor será 0.
     <div class="warning"><strong>Aviso:</strong> este atributo está obsoleto; você deve usar em <code>key</code>vez disso, se disponível.</div>
    </td>
   </tr>
@@ -156,7 +156,7 @@ translation_of: Web/API/Document/keypress_event
 });
 </pre>
 
-<h2 id="Compatibilidade_do_navegador">Compatibilidade do navegador</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>O Chrome não dispara o <code>keypress</code>evento para atalhos de teclado conhecidos ( <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=13891#c50">referência</a> ). Quais atalhos de teclado são conhecidos depende do sistema do usuário. Use o <code>keydown</code>evento para implementar atalhos de teclado.</p>
 

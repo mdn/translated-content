@@ -1,0 +1,52 @@
+---
+title: DOMString
+slug: >-
+  conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
+tags:
+  - API
+  - DOM
+  - Reference
+  - String
+translation_of: Web/API/DOMString
+original_slug: Web/API/DOMString
+---
+<div>{{APIRef("DOM")}}</div>
+
+<p><strong><code>DOMString</code></strong> は符号なし 16 ビット整数の並びで、通常は UTF-16 <a href="http://www.unicode.org/glossary/#code_unit">コード単位</a>として解釈されます。これは JavaScript の<a href="https://tc39.es/ecma262/#sec-ecmascript-language-types-string-type">文字列プリミティブ型</a>に正確に対応します。 <code>DOMString</code> が JavaScript に現れると、直接 {{jsxref("String")}} に対応づけられます。</p>
+
+<p>ある Web API が <code>DOMString</code> を受け取る場合、渡された値は <code><a href="https://tc39.es/ecma262/#sec-tostring">ToString</a></code> 抽象操作を使用して文字列化されます。 (Symbol 以外の型では、これは {{jsxref("String/String", "String()")}} 関数と同じ動作をします。)</p>
+
+<p><code>DOMString</code> を受け取る一部の Web API は追加の古い動作があり、 {{jsxref("null")}} を渡すと、通常の <code>"null"</code> ではなく空文字列になります。</p>
+
+<h2 id="Specifications">仕様書</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('WebIDL', '#idl-DOMString', 'DOMString')}}</td>
+   <td>{{Spec2('WebIDL')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebIDL', '#es-DOMString')}}</td>
+   <td>{{Spec2('WebIDL')}}</td>
+   <td>これは、 JavaScript の値がどのように DOMString に変換されるか、あるいはその逆を定義しています。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="See_also">関連情報</h2>
+
+<ul>
+ <li>JavaScript {{jsxref("String")}}</li>
+ <li>{{domxref("USVString")}}</li>
+ <li>{{domxref("CSSOMString")}}</li>
+ <li><a href="/ja/docs/Web/API/DOMString/Binary">バイナリー文字列</a></li>
+</ul>

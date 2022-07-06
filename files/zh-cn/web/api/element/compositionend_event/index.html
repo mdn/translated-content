@@ -6,7 +6,7 @@ tags:
 translation_of: Web/API/Element/compositionend_event
 original_slug: Web/Events/compositionend
 ---
-<p>当文本段落的组成完成或取消时, compositionend 事件将被触发 (具有特殊字符的触发, 需要一系列键和其他输入, 如语音识别或移动中的字词建议)。</p>
+<p>当文本段落的组成完成或取消时，compositionend 事件将被触发 (具有特殊字符的触发，需要一系列键和其他输入，如语音识别或移动中的字词建议)。</p>
 
 <table class="properties">
  <tbody>
@@ -31,7 +31,7 @@ original_slug: Web/Events/compositionend
 
 <h2 id="Properties">Properties</h2>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Property</th>
@@ -73,71 +73,23 @@ original_slug: Web/Events/compositionend
   <tr>
    <td><code>data </code>{{ReadOnlyInline}}</td>
    <td>{{domxref("DOMString")}} (string)</td>
-   <td>正在编辑的原始字符串, 否则为空字符串。只读。</td>
+   <td>正在编辑的原始字符串，否则为空字符串。只读。</td>
   </tr>
   <tr>
    <td><code>locale</code></td>
    <td>{{domxref("DOMString")}} (string)</td>
-   <td>组合事件的语言代码 (如果可用);否则, 为空字符串。只读。</td>
+   <td>组合事件的语言代码 (如果可用);否则，为空字符串。只读。</td>
   </tr>
  </tbody>
 </table>
+
+<h2 id="规范">规范</h2>
+
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("9.0")}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("9.0")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 该事件是在9.0 之前的Gecko版本中已经可以使用, 但没有 DOM 级3属性和方法。Gecko还不支持给受信任事件的locale属性设置值。但是, 当创建不受信任的事件时，此值可以通过<code>initCompositionEvent()</code> 设置。</p>
+{{Compat("api.Element.compositionend_event")}}
 
 <h2 id="Related_events">Related events</h2>
 

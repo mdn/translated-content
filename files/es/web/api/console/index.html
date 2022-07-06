@@ -20,7 +20,7 @@ translation_of: Web/API/Console
 
 <p><code>Console </code>puede ser accedido desde cualquier método global, {{domxref("Window")}} en el ámbito de navegación, {{domxref("WorkerGlobalScope")}}, y sus variantes especificas de <code>worker</code>.</p>
 
-<p>Esta página documenta los {{anch("Métodos")}} disponibles en el objeto <code>console </code>y da algunos ejemplos de {{anch("uso")}}.</p>
+<p>Esta página documenta los <a href="#métodos">Métodos</a> disponibles en el objeto <code>console </code>y da algunos ejemplos de <a href="#uso">uso</a>.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -159,7 +159,7 @@ console.info("Mi primer carro fue un ", car, ". El objeto es: ", someObject);</p
 
 <div><img alt="" src="https://mdn.mozillademos.org/files/7739/console-style.png" style="display: block; height: 52px; margin-left: auto; margin-right: auto; width: 293px;"></div>
 
-<div>{{h3_gecko_minversion("Usando grupos en la consola", "9.0")}}</div>
+<h3>Usando grupos en la consola</h3>
 
 <p>Puedes usar grupos anidades para ayudar a organizar la salida visualmente combinando material relacionado. Para crear un nuevo bloque anidado, se debe usar <code>console.group(). El método console.groupCollapsed() es similar, pero crea el nuevo bloque colapsado, requiriendo el uso de un "botón de mostrar" para abrirlo y leerlo.</code></p>
 
@@ -185,7 +185,7 @@ console.debug("Back to the outer level");
 
 <p><img alt="nesting.png" class="default internal" src="/@api/deki/files/6082/=nesting.png"></p>
 
-<div>{{h3_gecko_minversion("Timers", "10.0")}}</div>
+<h3>Timers</h3>
 
 <p>En orden para calcular la duración de una operación específica, Geco 10 introdujo soporte de contadores (timers del inglés) en el objeto console. Para iniciar un contador, usa el método <code>console.time</code><code>()</code> , pasándole como parámetro un nombre. Para detener un contador, y obtener el tiempo transcurrido en milisegúndos, solo usa el método <code>console.timeEnd(), nuevamente pasándole el nombre del contador como parámetro. Se pueden ejecutar hasta 10000 (diez mil) contadores simultáneamente en una página.</code></p>
 
@@ -231,7 +231,7 @@ function foo() {
 <ul>
  <li>Al menos en Firefox, si una página define un objeto console, este objeto sobreescribirá el construido en Firefox.</li>
  <li>Anteriormente a {{Gecko("12.0")}}, los métodos del objeto console solo funcionaban cuando la consola estaba abierta. Desde e iniciando con {{Gecko("12.0")}}, la salida es almacenada (cacheada del inglés cached) hasta que la consola web es abierta, entonces se muestra en ese momento.</li>
- <li>Vale la pena destacar que el objeto console construido por Firefox es compatible con el provisto por <a class="external" href="http://getfirebug.com/" title="http://getfirebug.com/">Firebug</a>.</li>
+ <li>Vale la pena destacar que el objeto console construido por Firefox es compatible con el provisto por <a class="external" href="http://getfirebug.com/">Firebug</a>.</li>
 </ul>
 
 <h2 id="Ver_tambien">Ver tambien</h2>

@@ -3,208 +3,106 @@ title: MutationObserver
 slug: Web/API/MutationObserver
 tags:
   - API
-  - Advan
   - DOM
   - DOM Reference
+  - Interface
+  - MutationObserver
   - NeedsContent
   - NeedsUpdate
   - Reference
+  - mutation
+  - observers
+  - resize
 translation_of: Web/API/MutationObserver
 ---
-<p>{{APIRef("DOM WHATWG")}}</p>
+<div>{{APIRef("DOM WHATWG")}}</div>
 
-<p><code>MutationObserver</code> とは、指定したコールバック関数を <a href="/ja/docs/DOM">DOM</a> の変更時に実行させる API です。この API は、DOM3 Events の仕様で定義されていた <a href="https://developer.mozilla.org/ja/docs/Web/Guide/Events/Mutation_events">Mutation Events</a> を新しく設計し直したものです。</p>
+<p>{{domxref("MutationObserver")}} インターフェイスは、 <a href="/ja/docs/Web/API/Document_Object_Model">DOM</a> ツリーへ変更が加えられたことを監視することができる機能を提供します。これは DOM3 Events の仕様で定義されていた <a href="/ja/docs/Web/API/MutationEvent">Mutation Events</a> 機能の置き換えとして設計されたものです。</p>
 
-<p>{{英語版章題("Constructor")}}</p>
-
-<h2 id="Constructor" name="Constructor">コンストラクタ</h2>
-
-<h3 id="MutationObserver()" name="MutationObserver()"><code>MutationObserver()</code></h3>
-
-<p>DOM の変更を検知するオブザーバを生成します。</p>
-
-<pre>MutationObserver(
-  function callback
-);
-</pre>
-
-<h6 id="Parameters" name="Parameters">引数</h6>
+<h2 id="Constructor">コンストラクター</h2>
 
 <dl>
- <dt><code>callback</code></dt>
- <dd>DOM の変更時に呼び出される関数です。この関数は第 1 引数に {{domxref("MutationRecord")}} の配列を、第 2 引数に <code>MutationObserver</code> インスタンス自身を受け取ります。</dd>
+	<dt>{{domxref("MutationObserver.MutationObserver", "MutationObserver()")}}</dt>
+	<dd>DOM の変更が行われたときに指定されたコールバック関数を呼び出す新しい <code>MutationObserver</code> を生成して返します。</dd>
 </dl>
 
-<p>{{英語版章題("Instance medhods")}}</p>
-
-<h2 id="Instance_methods" name="Instance_methods">インスタンスメソッド</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>void <a href="#observe()">observe</a>( {{domxref("Node")}} target, <a href="#MutationObserverInit">MutationObserverInit</a> options );</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#disconnect()">disconnect</a>();</code></td>
-  </tr>
-  <tr>
-   <td><code>Array <a href="#takeRecords()">takeRecords</a>();</code></td>
-  </tr>
- </tbody>
-</table>
-
-<div class="note">
-<p><strong>補足</strong>: 引数 {{domxref("Node")}} target は <a href="https://nodejs.org/">NodeJS</a> と関係ありません。</p>
-</div>
-
-<h3 id="observe()" name="observe()"><code>observe()</code></h3>
-
-<p>DOM の変更を検知したいノードを指定し、<code>MutationObserver</code> インスタンスを紐づけます。</p>
-
-<pre>void observe(
-  {{domxref("Node")}} target,
-  <a href="#MutationObserverInit"><code>MutationObserverInit</code></a> options
-);
-</pre>
-
-<h6 id="Parameters" name="Parameters">引数</h6>
+<h2 id="Methods">メソッド</h2>
 
 <dl>
- <dt><code>target</code></dt>
- <dd>DOM の変更を検知したい {{domxref("Node")}}</dd>
- <dt><code>options</code></dt>
- <dd>取得したい変更の種類を指定する <a href="#MutationObserverInit"><code>MutationObserverInit</code></a> オブジェクト</dd>
+	<dt>{{domxref("MutationObserver.disconnect()", "disconnect()")}}</dt>
+	<dd><code>MutationObserver</code> のインスタンスが今後の通知を受け取ることを、 {{domxref("MutationObserver.observe", "observe()")}} が再び呼び出されるまで停止します。</dd>
+	<dt>{{domxref("MutationObserver.observe()", "observe()")}}</dt>
+	<dd>指定したオプションに合う DOM の変更が発生したときに、コールバック関数を介して通知を受信し始めるように <code>MutationObserver</code> を構成します。</dd>
+	<dt>{{domxref("MutationObserver.takeRecords()", "takeRecords()")}}</dt>
+	<dd><code>MutationObserver</code> の通知キューから保留中の通知をすべて削除し、 {{domxref("MutationRecord")}} の新しい配列 ({{jsxref("Array")}}) で返します。</dd>
 </dl>
 
-<div class="note">
-<p><strong>補足</strong>: MutationObserver インスタンスと対象ノードを変えずに observe() を 2 回実行しても、コールバックは 1 回だけ呼び出され、また disconnect() を 2 回呼び出す必要もありません（addEventListener と同様）。しかし、別の MutationObserver インスタンスであれば、同じノードに別のオブザーバが追加されます。</p>
-</div>
+<h2 id="Mutation_Observer_customize_resize_event_listener_demo">Mutation Observer と resize イベントリスナーのカスタマイズとデモ</h2>
 
-<h3 id="disconnect()" name="disconnect()"><code>disconnect()</code></h3>
+<p><a href="https://codepen.io/webgeeker/full/YjrZgg/">https://codepen.io/webgeeker/full/YjrZgg/</a></p>
 
-<p><code>MutationObserver</code> インスタンスを対象ノードから解除します。同じインスタンスで <a href="#observe()"><code>observe()</code></a> メソッドを再度呼び出すまで、オブザーバのコールバック関数は実行されません。</p>
+<h2 id="Example">例</h2>
 
-<pre>void disconnect();
-</pre>
+<p>以下の例は <a class="external" href="https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/">このブログ記事</a> を参考にしたものです。</p>
 
-<h3 id="takeRecords()" name="takeRecords()"><code>takeRecords()</code></h3>
+<pre class="brush: js">// 変更を監視するノードを選択
+const targetNode = document.getElementById('some-id');
 
-<p>コールバック関数へ渡される {{domxref("MutationRecord")}} のキューを空にし、キューに入っていた値を返します。</p>
+// (変更を監視する) オブザーバーのオプション
+const config = { attributes: true, childList: true, subtree: true };
 
-<pre>Array takeRecords();
-</pre>
+// 変更が発見されたときに実行されるコールバック関数
+const callback = function(mutationsList, observer) {
+    // Use traditional 'for loops' for IE 11
+    for(const mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+            console.log('A child node has been added or removed.');
+        }
+        else if (mutation.type === 'attributes') {
+            console.log('The ' + mutation.attributeName + ' attribute was modified.');
+        }
+    }
+};
 
-<h6 id="Return_value" name="Return_value">戻り値</h6>
+// コールバック関数に結びつけられたオブザーバーのインスタンスを生成
+const observer = new MutationObserver(callback);
 
-<p>{{domxref("MutationRecord")}} の配列。</p>
+// 対象ノードの設定された変更の監視を開始
+observer.observe(targetNode, config);
 
-<h2 id="MutationObserverInit" name="MutationObserverInit"><code>MutationObserverInit</code></h2>
+// その後で、監視を停止することができる
+observer.disconnect();</pre>
 
-<p><code>MutationObserverInit</code> は以下のプロパティを指定できるオブジェクトです。</p>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">プロパティ</td>
-   <td class="header">意味</td>
-  </tr>
-  <tr>
-   <td><code>childList</code></td>
-   <td>対象ノードの子ノード（テキストノードも含む）に対する追加・削除を監視する場合は <code>true</code> にします。</td>
-  </tr>
-  <tr>
-   <td><code>attributes</code></td>
-   <td>対象ノードの属性に対する変更を監視する場合は <code>true</code> にします。</td>
-  </tr>
-  <tr>
-   <td><code>characterData</code></td>
-   <td>対象ノードのデータに対する変更を監視する場合は <code>true</code> にします。</td>
-  </tr>
-  <tr>
-   <td><code>subtree</code></td>
-   <td>対象ノードとその子孫ノードに対する変更を監視する場合は <code>true</code> にします。</td>
-  </tr>
-  <tr>
-   <td><code>attributeOldValue</code></td>
-   <td>対象ノードの変更前の属性値を記録する場合は <code>true</code> にします（<code>attributes</code> が <code>true</code> の時に有効）。</td>
-  </tr>
-  <tr>
-   <td><code>characterDataOldValue</code></td>
-   <td>対象ノードの変更前のデータを記録する場合は <code>true</code> にします（<code>characterData</code> が <code>true</code> の時に有効）。</td>
-  </tr>
-  <tr>
-   <td><code>attributeFilter</code></td>
-   <td>すべての属性の変更を監視する必要がない場合は、（名前空間を除いた）属性ローカル名の配列を指定します。</td>
-  </tr>
- </tbody>
-</table>
-
-<p>{{英語版章題("Example usage")}}</p>
-
-<h2 id="Example_usage" name="Example_usage">使用例</h2>
-
-<p>以下の例は <a class="external" href="http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/" rel="freelink">このブログ記事</a> を参考にしたものです。</p>
-
-<pre class="brush: js">// 対象とするノードを取得
-const target = document.getElementById('some-id');
-
-// オブザーバインスタンスを作成
-const observer = new MutationObserver((mutations) =&gt; {
-  mutations.forEach((mutation) =&gt; {
-    console.log(mutation.type);
-  });
-});
-
-// オブザーバの設定
-const config = { attributes: true, childList: true, characterData: true };
-
-// 対象ノードとオブザーバの設定を渡す
-observer.observe(target, config);
-
-// 後ほど、監視を中止
-observer.disconnect();
-</pre>
-
-<p>{{英語版章題("Additional reading")}}</p>
-
-<h2 id="Additional_reading" name="Additional_reading">関連情報</h2>
-
-<ul>
- <li><a class="external" href="http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers" rel="freelink">簡単な概要</a></li>
- <li><a class="external" href="http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/" rel="freelink">より詳細な議論</a></li>
- <li><a class="external" href="http://www.youtube.com/watch?v=eRZ4pO0gVWw" rel="freelink">Chromium の開発者 Rafael Weinstein 氏によるスクリーンキャスト</a></li>
- <li><a class="external" href="http://code.google.com/p/mutation-summary/" rel="freelink">ライブラリ "mutation-summary"</a></li>
-</ul>
-
-<p>{{英語版章題("Specifications")}}</p>
-
-<h2 id="Specifications" name="Specifications">仕様</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#mutationobserver', 'MutationObserver')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">仕様書</th>
+			<th scope="col">状態</th>
+			<th scope="col">備考</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('DOM WHATWG', '#interface-mutationobserver', 'MutationObserver')}}</td>
+			<td>{{ Spec2('DOM WHATWG') }}</td>
+			<td></td>
+		</tr>
+	</tbody>
 </table>
 
-<p>{{英語版章題("Browser compatibility")}}</p>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>{{Compat("api.MutationObserver")}}</p>
 
-<article class="approved text-content">
-<div class="boxed translate-rendered">
-<div id="compat-desktop"> </div>
-</div>
-</article>
+<h2 id="See_also">関連情報</h2>
+
+<ul>
+	<li>{{domxref('PerformanceObserver')}}</li>
+	<li>{{domxref('ResizeObserver')}}</li>
+	<li>{{domxref('IntersectionObserver')}}</li>
+	<li><a href="https://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers">A brief overview</a></li>
+	<li><a href="https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/">A more in-depth discussion</a></li>
+	<li><a href="https://www.youtube.com/watch?v=eRZ4pO0gVWw">A screencast by Chromium developer Rafael Weinstein</a></li>
+</ul>

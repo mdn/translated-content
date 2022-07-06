@@ -7,7 +7,7 @@ translation_of: Web/API/GlobalEventHandlers/ondblclick
 
 <h3 id="概述">概述</h3>
 
-<p><strong>ondblclick</strong>属性用来获取或设置当前元素的<code>dblclick</code>事件的事件处理函数.</p>
+<p><strong>ondblclick</strong>属性用来获取或设置当前元素的<code>dblclick</code>事件的事件处理函数。</p>
 
 <h3 id="语法">语法</h3>
 
@@ -15,10 +15,10 @@ translation_of: Web/API/GlobalEventHandlers/ondblclick
 </pre>
 
 <ul>
- <li><code>function</code> 是一个函数名,后面没有括号(),或者是一个匿名的函数表达式,比如</li>
+ <li><code>function</code> 是一个函数名，后面没有括号 (),或者是一个匿名的函数表达式，比如</li>
 </ul>
 
-<pre class="eval">element.ondblclick = function() { alert("触发了dblclick事件!"); };
+<pre class="eval">element.ondblclick = function() { alert("触发了 dblclick 事件！"); };
 </pre>
 
 <h3 id="例子">例子</h3>
@@ -26,21 +26,21 @@ translation_of: Web/API/GlobalEventHandlers/ondblclick
 <pre class="brush: html">&lt;html&gt;
 
 &lt;head&gt;
-&lt;title&gt;ondblclick示例演示&lt;/title&gt;
+&lt;title&gt;ondblclick 示例演示&lt;/title&gt;
 
 &lt;script type="text/javascript"&gt;
 
 function initElement()
  {
  var p = document.getElementById("foo");
- // 注意:这里写成showAlert()或者 showAlert(参数)是不对的.
- // 必须是一个函数名,而不是函数调用.
+ // 注意：这里写成 showAlert() 或者 showAlert(参数) 是不对的。
+ // 必须是一个函数名，而不是函数调用。
  p.ondblclick = showAlert;
  };
 
 function showAlert()
  {
- alert("检测到dblclick事件!")
+ alert("检测到 dblclick 事件！")
  }
 &lt;/script&gt;
 
@@ -55,17 +55,15 @@ border: solid blue 2px;
 
 &lt;body onload="initElement()";&gt;
 &lt;span id="foo"&gt;这是一个元素&lt;/span&gt;
-&lt;p&gt;双击上面的元素会触发dblclick事件.&lt;/p&gt;
+&lt;p&gt;双击上面的元素会触发 dblclick 事件.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 
 <h3 id="备注">备注</h3>
 
-<p>在当前元素上双击鼠标左键会触发<code>dblclick</code>事件.</p>
+<p>在当前元素上双击鼠标左键会触发<code>dblclick</code>事件。</p>
 
 <h3 id="规范">规范</h3>
 
-<p>不属于任何公开的规范.</p>
-
-<p>{{ languages( { "fr": "fr/DOM/element.ondblclick","zh-cn": "zh-cn/DOM/element.ondblclick" } ) }}</p>
+<p>不属于任何公开的规范。</p>

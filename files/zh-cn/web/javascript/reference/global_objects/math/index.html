@@ -43,13 +43,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
 <h2 id="方法">方法</h2>
 
 <div class="note">
-<p>需要注意的是，三角函数 <code>sin()</code>、<code>cos()</code>、<code>tan()</code>、<code>asin()</code>、<code>acos()</code>、<code>atan()</code> 和 <code>atan2()</code> 返回的值是<em>弧度</em>而非角度。</p>
+<p><strong>备注：</strong>需要注意的是，三角函数 <code>sin()</code>、<code>cos()</code>、<code>tan()</code>、<code>asin()</code>、<code>acos()</code>、<code>atan()</code> 和 <code>atan2()</code> 返回的值是<em>弧度</em>而非角度。</p>
 
 <p>若要转换，弧度除以 <code>(Math.PI / 180)</code> 即可转换为角度，同理，角度乘以这个数则能转换为弧度。</p>
 </div>
 
 <div class="note">
-<p>需要注意的是，很多 <code>Math</code> 函数都有一个精度，而且这个精度在不同实现中也是不相同的。这意味着不同的浏览器会给出不同的结果，甚至，在不同的系统或架构下，相同的 JS 引擎也会给出不同的结果！</p>
+<p><strong>备注：</strong>需要注意的是，很多 <code>Math</code> 函数都有一个精度，而且这个精度在不同实现中也是不相同的。这意味着不同的浏览器会给出不同的结果，甚至，在不同的系统或架构下，相同的 JS 引擎也会给出不同的结果！</p>
 </div>
 
 <dl>
@@ -80,7 +80,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
  <dt>{{jsxref("Global_Objects/Math/cosh", "Math.cosh(<var>x</var>)")}}</dt>
  <dd>返回一个数的双曲余弦值。</dd>
  <dt>{{jsxref("Global_Objects/Math/exp", "Math.exp(<var>x</var>)")}}</dt>
- <dd>返回欧拉常数的参数次方，<code>E<var><sup>x</sup></var></code>，其中 <code><var>x</var></code> 为参数，<code>E</code> 是欧拉常数（2.718...，自然对数的底数）。</dd>
+ <dd>返回欧拉常数的参数次方，<code>E<var>^x</var></code>，其中 <code><var>x</var></code> 为参数，<code>E</code> 是欧拉常数（2.718...，自然对数的底数）。</dd>
  <dt>{{jsxref("Global_Objects/Math/expm1", "Math.expm1(<var>x</var>)")}}</dt>
  <dd>返回 <code>exp(x) - 1</code> 的值。</dd>
  <dt>{{jsxref("Global_Objects/Math/floor", "Math.floor(<var>x</var>)")}}</dt>
@@ -127,40 +127,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
  <dd>返回一个数的整数部分，直接去除其小数点及之后的部分。</dd>
 </dl>
 
-<div class="hidden">
-<div class="note">
-<p>已被移除的内容：</p>
-</div>
-
-<h2 id="拓展_Math_对象">拓展 <code>Math</code> 对象</h2>
-
-<p>As with most of the built-in objects in JavaScript, the <code>Math</code> object can be extended with custom properties and methods. To extend the <code>Math</code> object, you do not use <code>prototype</code>. Instead, you directly extend <code>Math</code>:</p>
-
-<pre>Math.propName = propValue;
-Math.methodName = methodRef;</pre>
-
-<p>For instance, the following example adds a method to the <code>Math</code> object for calculating the <em>greatest common divisor</em> of a list of arguments.</p>
-
-<pre class="brush: js">/* Variadic function -- Returns the greatest common divisor of a list of arguments */
-Math.gcd = function() {
-    if (arguments.length == 2) {
-        if (arguments[1] == 0)
-            return arguments[0];
-        else
-            return Math.gcd(arguments[1], arguments[0] % arguments[1]);
-    } else if (arguments.length &gt; 2) {
-        var result = Math.gcd(arguments[0], arguments[1]);
-        for (var i = 2; i &lt; arguments.length; i++)
-            result = Math.gcd(result, arguments[i]);
-        return result;
-    }
-};</pre>
-
-<p>试试运行下面的代码：</p>
-
-<pre class="brush: js">console.log(Math.gcd(20, 30, 15, 70, 40)); // `5`</pre>
-</div>
-
 <h2 id="规范">规范</h2>
 
 <table class="standard-table">
@@ -175,8 +141,6 @@ Math.gcd = function() {
 </table>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("javascript.builtins.Math")}}</p>
 

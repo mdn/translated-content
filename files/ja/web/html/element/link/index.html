@@ -93,7 +93,7 @@ translation_of: Web/HTML/Element/link
      <p>fetch, XHR</p>
 
      <div class="blockIndicator note">
-     <p>この値は <code>&lt;link&gt;</code> に crossorigin 属性をつけるために必要です。</p>
+     <p>この値では <code>&lt;link&gt;</code> に crossorigin 属性が必要です。</p>
      </div>
     </td>
    </tr>
@@ -163,7 +163,7 @@ translation_of: Web/HTML/Element/link
  <p><strong>注:</strong></p>
 
  <ul>
-  <li>HTML 4 では、単純なホワイトスペースで区切られたメディアリテラルのリストのみ記述できます。これは<a href="/ja/docs/Web/CSS/@media">メディアタイプとグループ</a> で、<code>print</code>, <code>screen</code>, <code>aural</code>, <code>braille</code> などの使用可能な値が定義されています。 HTML5 ではこれがあらゆる<a href="/ja/docs/Web/CSS/Media_queries">メディアクエリ</a>に拡張され、 HTML 4 で使用できる値の上位互換となっています。</li>
+  <li>HTML 4 では、単純なホワイトスペースで区切られたメディアリテラルのリストのみ記述できます。これは<a href="/ja/docs/Web/CSS/@media">メディア種別とグループ</a> で、<code>print</code>, <code>screen</code>, <code>aural</code>, <code>braille</code> などの使用可能な値が定義されています。 HTML5 ではこれがあらゆる<a href="/ja/docs/Web/CSS/Media_queries">メディアクエリ</a>に拡張され、 HTML 4 で使用できる値の上位互換となっています。</li>
   <li><a href="/ja/docs/Web/CSS/Media_queries">CSS3 メディアクエリ</a>に対応していないブラウザーは、リンクを適切に理解するとは限りません。 HTML 4 で定義されたメディアクエリーのセットに制限されるので、フォールバックリンクを設定することを忘れないでください。</li>
  </ul>
  </div>
@@ -259,7 +259,7 @@ translation_of: Web/HTML/Element/link
 &lt;!-- 高解像度でない iPhone, iPod Touch, Android 2.1 以降の端末 --&gt;
 &lt;link rel="apple-touch-icon-precomposed" href="favicon57.png"&gt;
 &lt;!-- 基本的なファビコン --&gt;
-&lt;link rel="shortcut icon" href="favicon32.png"&gt;</pre>
+&lt;link rel="icon" href="favicon32.png"&gt;</pre>
 
 <h3 id="メディアクエリのついた条件付きのリソース読み込み">メディアクエリのついた条件付きのリソース読み込み</h3>
 
@@ -363,8 +363,6 @@ myStylesheet.onerror = function() {
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("html.elements.link", 3)}}</p>
 

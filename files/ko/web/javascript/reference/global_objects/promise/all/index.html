@@ -14,8 +14,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 
 <div>{{EmbedInteractiveExample("pages/js/promise-all.html")}}</div>
 
-<p class="hidden">해당 예제의 소스 코드는 GitHub 리포지토리에 저장되어 있습니다. 인터랙티브 데모 프로젝트에 기여하고 싶다면 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 를 클론하고 pull request를 보내 주세요.</p>
-
 <h2 id="구문">구문</h2>
 
 <pre class="syntaxbox">Promise.all(<var>iterable</var>);
@@ -32,13 +30,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 
 <ul>
  <li>매개변수로 주어진 순회 가능한 객체가 비어 있으면 <strong>이미 이행한</strong> {{jsxref("Promise")}}.</li>
- <li>객체에 프로미스가 없으면, <strong>비동기적으로 이행하는</strong> {{jsxref("Promise")}}. 단, 구글 크롬 58은 <strong>이미 이행한</strong> 프로미스를 반환합니다.</li>
+ <li>객체에 프로미스가 없으면, <strong>비동기적으로 이행하는</strong> {{jsxref("Promise")}}. 단, Google Chrome 58은 <strong>이미 이행한</strong> 프로미스를 반환합니다.</li>
  <li>그렇지 않은 경우, <strong>대기 중</strong>인 {{jsxref("Promise")}}. 결과로 반환하는 프로미스는 인자의 모든 프로미스가 이행하거나 어떤 프로미스가 거부할 때 (호출 스택이 비는 즉시) <strong>비동기적으로</strong> 이행/거부합니다. "<code>Promise.all</code>의 동기성/비동기성" 예제를 참고하세요. 반환하는 프로미스의 이행 값은 매개변수로 주어진 프로미스의 순서와 일치하며, 완료 순서에 영향을 받지 않습니다.</li>
 </ul>
 
 <h2 id="설명">설명</h2>
 
-<p><code>Promise.all</code>은 여러 프로미스의 결과를 집계할 때 유용하게 사용할 수 있습니다.</p>
+<p>이 메서드는 여러 프로미스의 결과를 집계할 때 유용하게 사용할 수 있습니다. 일반적으로 다음 코드를 계속 실행하기 전에 서로 연관된 비동기 작업 여러 개가 모두 이행되어야 하는 경우에 사용됩니다.</p>
+
+<p>입력 값으로 들어온 프로미스 중 <strong>하나라도</strong> 거부 당하면 <code>Promise.all()</code>은 즉시 거부합니다. 이에 비해, {{jsxref("Promise.allSettled()")}}가 반환하는 프로미스는 이행/거부 여부에 관계없이 주어진 프로미스가 모두 완료될 때까지 기다립니다. 결과적으로, 주어진 이터러블의 모든 프로미스와 함수의 결과 값을 최종적으로 반환합니다.</p>
 
 <h3 id="이행">이행</h3>
 
@@ -226,8 +226,6 @@ Promise.all([
 </table>
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-<div class="hidden">To contribute to this compatibility data, please write a pull request against this repository: <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
 
 <p>{{Compat("javascript.builtins.Promise.all")}}</p>
 

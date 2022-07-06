@@ -21,7 +21,7 @@ original_slug: Web/API/Element/addEventListener
  <dt>listener</dt>
  <dd>O objeto que recebe uma notificação quando um evento do tipo especificado ocorre. Esse objeto precisa implementar a interface do <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener"><code>EventListener</code></a>, ou simplesmente executar uma <a href="/pt-BR/docs/JavaScript/Guide/Functions" title="JavaScript/Guide/Functions">função</a> JavaScript.</dd>
  <dt><code>useCapture</code> {{ optional_inline() }}</dt>
- <dd>Se <code>true</code>, <code>useCapture</code> indica que o usuário deseja iniciar uma captura. Depois de iniciada a captura, todos os eventos do tipo especificado serão enviados à <code>listener</code> registrada antes de serem enviados à qualquer <code>EventTarget</code> abaixo dela na hierarquia de DOMs. Eventos que borbulharem para cima na hierarquia não acionarão a escuta designada  a usar a captura. Veja <a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow" title="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">Eventos DOM Nível 3</a> para uma explicação detalhada. Perceba que esse parâmetro não é opcional em todos os navegadores. Se não for especificado, <code>useCapture</code> é <code>false</code>.</dd>
+ <dd>Se <code>true</code>, <code>useCapture</code> indica que o usuário deseja iniciar uma captura. Depois de iniciada a captura, todos os eventos do tipo especificado serão enviados à <code>listener</code> registrada antes de serem enviados à qualquer <code>EventTarget</code> abaixo dela na hierarquia de DOMs. Eventos que borbulharem para cima na hierarquia não acionarão a escuta designada  a usar a captura. Veja <a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">Eventos DOM Nível 3</a> para uma explicação detalhada. Perceba que esse parâmetro não é opcional em todos os navegadores. Se não for especificado, <code>useCapture</code> é <code>false</code>.</dd>
  <dt><code>wantsUntrusted</code> {{ Non-standard_inline() }}</dt>
  <dd>Se <code>true</code>, o evento pode ser acionado por conteúdo não-confiável. Veja <a href="/pt-BR/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages" title="Code snippets/Interaction between privileged and non-privileged pages">Interação entre páginas com e sem privilégios</a>.</dd>
 </dl>
@@ -312,12 +312,12 @@ for(i=0 ; i&lt;els.length ; i++){
 <ul>
  <li><a href="/pt-BR/docs/DOM/element.removeEventListener" title="DOM/element.removeEventListener">elemento.removeEventListener()</a></li>
  <li><a href="/pt-BR/docs/DOM/Creating_and_triggering_events" title="DOM/Creating_and_triggering_custom_events">Criando e disparando eventos customizáveis</a></li>
- <li><a class="external" href="http://www.quirksmode.org/js/this.html" title="http://www.quirksmode.org/js/this.html">Mais detalhes no uso de <code>this</code> nos manipuladores de eventos</a></li>
+ <li><a class="external" href="http://www.quirksmode.org/js/this.html">Mais detalhes no uso de <code>this</code> nos manipuladores de eventos</a></li>
 </ul>
 
 <h2 id="Especificação">Especificação</h2>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener" title="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener">Eventos DOM Nível 2: EventTarget.addEventListener</a></li>
- <li><a class="external" href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html#events-EventTarget-addEventListener" title="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html#events-EventTarget-addEventListener">Eventos DOM Nível 3: EventTarget.addEventListener</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener">Eventos DOM Nível 2: EventTarget.addEventListener</a></li>
+ <li><a class="external" href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html#events-EventTarget-addEventListener">Eventos DOM Nível 3: EventTarget.addEventListener</a></li>
 </ul>

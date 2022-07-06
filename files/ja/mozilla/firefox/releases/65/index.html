@@ -114,7 +114,7 @@ translation_of: Mozilla/Firefox/Releases/65
 
 <ul>
  <li>今後、{{domxref("Window.open()")}} はイベントごとに 1 回だけ呼び出し可能になります ({{bug(675574)}})。</li>
- <li>CJKT ユーザーに対してブラウザー間の互換性を高めるため、IME で変換している間に <code><a href="/ja/docs/Web/Events/keyup">keyup</a></code> および <code><a href="/ja/docs/Web/Events/keydown">keydown</a></code> イベントが発生するようになりました ({{bug(354358)}}、 詳しくは <a href="https://www.fxsitecompat.com/docs/2018/keydown-and-keyup-events-are-now-fired-during-ime-composition/">keydown and keyup events are now fired during IME composition</a> もご覧ください)。</li>
+ <li>CJKT ユーザーに対してブラウザー間の互換性を高めるため、IME で変換している間に <code><a href="/ja/docs/Web/Events/keyup">keyup</a></code> および <code><a href="/ja/docs/Web/Events/keydown">keydown</a></code> イベントが発生するようになりました ({{bug(354358)}})。</li>
 </ul>
 
 <h4 id="Web_workers" name="Web_workers">Web workers</h4>
@@ -136,7 +136,7 @@ translation_of: Mozilla/Firefox/Releases/65
 <h4 id="Media_Web_Audio_および_WebRTC">Media, Web Audio, および WebRTC</h4>
 
 <ul>
- <li>{{domxref("WebRTC API", "WebRTC", "", "1")}} の {{domxref("RTCIceCandidateStats")}} ディクショナリーを、最新の仕様に合わせて更新しました ({{bug(1324788)}}、{{bug(1489040)}}。変更点について、詳しくは <a href="https://www.fxsitecompat.com/en-CA/docs/2018/rtcicecandidatestats-has-been-updated-to-the-latest-spec/">RTCIceCandidateStats has been updated to the latest spec</a> をご覧ください)。</li>
+ <li>{{domxref("WebRTC API", "WebRTC", "", "1")}} の {{domxref("RTCIceCandidateStats")}} ディクショナリーを、最新の仕様に合わせて更新しました ({{bug(1324788)}}、{{bug(1489040)}})。</li>
  <li>{{domxref("MediaRecorder")}} の <code>pause</code> および <code>resume</code> イベント (また、対応するイベントハンドラープロパティの {{domxref("MediaRecorder.onpause")}} および {{domxref("MediaRecorder.onresume")}}) は、ブラウザー実装状況では実装済みとしていましたが、以前は実装されていませんでした。これらを実装しました ({{bug(1458538)}}, {{bug(1514016)}})。</li>
 </ul>
 
@@ -232,12 +232,6 @@ translation_of: Mozilla/Firefox/Releases/65
 
 <ul>
  <li><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">Webextension themes</a> の <code>headerURL</code>/<code>theme_frame</code> プロパティを、Android 版 Firefox でサポートしました ({{bug(1429488)}})。</li>
-</ul>
-
-<h2 id="あわせて参照">あわせて参照</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/versions/65/">Firefox 65 サイト互換性情報</a></li>
 </ul>
 
 <h2 id="旧バージョン">旧バージョン</h2>

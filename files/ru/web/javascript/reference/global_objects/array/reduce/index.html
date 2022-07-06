@@ -21,11 +21,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
 <p class="hidden">Источник этого интерактивного примера хранится в репозитории GitHub. Если вы хотите внести свой вклад в проект интерактивных примеров, скопируйте <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и отправьте нам запрос на перенос.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>array</var>.reduce(<var>callback</var>[, <var>initialValue</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
  <dd>Необязательный параметр. Объект, используемый в качестве первого аргумента при первом вызове функции <code>callback</code>.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>reduce()</code> выполняет функцию <code>callback</code> один раз для каждого элемента, присутствующего в массиве, за исключением пустот, принимая четыре аргумента: начальное значение (или значение от предыдущего вызова <code>callback</code>), значение текущего элемента, текущий индекс и массив, по которому происходит итерация.</p>
 
@@ -175,9 +175,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
 <p>Значение, возвращённое методом <code>reduce()</code> на этот раз, конечно же, будет равным <code>20</code>.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Sum_up_all_values_within_an_array" name="Example:_Sum_up_all_values_within_an_array">Суммирование всех значений в массиве</h3>
+<h3 id="Example_Sum_up_all_values_within_an_array">Суммирование всех значений в массиве</h3>
 
 <pre class="brush: js">var total = [0, 1, 2, 3].reduce(function(a, b) {
   return a + b;
@@ -206,7 +206,7 @@ var sum = [{x: 1}, {x:2}, {x:3}].reduce(
 // sum == 6
 </pre>
 
-<h3 id="Example_Flatten_an_array_of_arrays" name="Example:_Flatten_an_array_of_arrays">Разворачивание массива массивов</h3>
+<h3 id="Example_Flatten_an_array_of_arrays">Разворачивание массива массивов</h3>
 
 <pre class="brush: js">var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
   return a.concat(b);
@@ -214,7 +214,7 @@ var sum = [{x: 1}, {x:2}, {x:3}].reduce(
 // flattened равен [0, 1, 2, 3, 4, 5]
 </pre>
 
-<h3 id="Example_Flatten_an_array_of_arrays" name="Example:_Flatten_an_array_of_arrays">Пример: склеивание массивов, содержащихся в объектах массива, с использованием оператора расширения и initialValue</h3>
+<h3 id="Example_Flatten_an_array_of_arrays">Пример: склеивание массивов, содержащихся в объектах массива, с использованием оператора расширения и initialValue</h3>
 
 <pre class="brush: js">// friends - список из объектов(друзей)
 // где поле "books" - список любимых книг друга
@@ -234,7 +234,7 @@ var allbooks = friends.reduce(function(prev, curr) {
 // "Romeo and Juliet", "The Lord of the Rings", "The Shining"]
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Метод <code>Array.prototype.reduce()</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>reduce()</code> в реализациях, которые не поддерживают этот метод.</p>
 
@@ -272,42 +272,17 @@ if (!Array.prototype.reduce) {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.21', 'Array.prototype.reduce()')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.8.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.reduce', 'Array.prototype.reduce()')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.reduce', 'Array.prototype.reduce()')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 <div>
-<div class="hidden">Таблица совместимости на этой странице создаётся из структурированных данных. Если вы хотите внести свой вклад, ознакомьтесь с <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправить нам pull request.</div>
-
-<p>{{Compat("javascript.builtins.Array.reduce")}}</p>
+<p>{{Compat}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.reduceRight()")}}</li>

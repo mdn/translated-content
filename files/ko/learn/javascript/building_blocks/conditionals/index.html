@@ -1,5 +1,5 @@
 ---
-title: Making decisions in your code — 조건문
+title: 판단 내리기 — 조건문
 slug: Learn/JavaScript/Building_blocks/conditionals
 translation_of: Learn/JavaScript/Building_blocks/conditionals
 original_slug: Learn/JavaScript/Building_blocks/조건문
@@ -8,99 +8,100 @@ original_slug: Learn/JavaScript/Building_blocks/조건문
 
 <div>{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}</div>
 
-<p class="summary">어떤 프로그래밍 언어든 코드는 의사 결정을 내리고 입력 내용에 따라 작업을 수행해야합니다. 예를 들어 게임에서 플레이어의 생명 수치가 0이면 게임이 종료됩니다. 날씨 앱에서는 아침에 해가 뜬 그림을 보여주고 밤에는 달과 별을 보여줍니다. 이 문서에서는 JavaScript에서 조건문이 작동하는 방법을 살펴 보겠습니다.</p>
+<p class="summary">어떤 프로그래밍 언어든 코드는 의사 결정을 내리고 입력 내용에 따라 작업을 수행해야 합니다. 예를 들어 게임에서 플레이어의 생명 수치가 0이면 게임이 종료됩니다. 날씨 앱에서는 아침에 해가 뜬 그림을 보여주고 밤에는 달과 별을 보여줍니다. 이 문서에서는 JavaScript에서 조건문이 작동하는 방법을 살펴 보겠습니다.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">선행 조건:</th>
+   <th scope="row">필요한 사전 지식:</th>
    <td>
-    <p>기본적인 컴퓨터 활용 능력, HTML, CSS, <a href="/ko/docs/Learn/JavaScript/First_steps">Javascript 첫 걸음</a></p>
+    기본적인 컴퓨터 활용 능력, HTML, CSS, <a href="/ko/docs/Learn/JavaScript/First_steps">Javascript 첫걸음</a>
    </td>
   </tr>
   <tr>
    <th scope="row">목표:</th>
    <td>
-    <p>자바스크립트에서 조건문의 사용법을 이해합니다.</p>
+    자바스크립트에서 조건문의 사용법을 이해합니다.
    </td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="당신은_하나의_조건을_가질_수_있습니다.">당신은 하나의 조건을 가질 수 있습니다.</h2>
+<h2 id="You_can_have_it_on_one_condition..!">여러분은 한 조건보다 우위에 있을 수 있습니다..!</h2>
 
-<p>사람(과 동물)은 작은 것(과자를 하나 먹을까? 두개 먹을까?)부터 큰 것(고향에 머물면서 아버지의 농장에서 일해야 할까? 아니면 천체물리학을 공부하러 미국으로 유학을 갈까?)까지 자신의 경험을 바탕으로 결정합니다.</p>
+<p>사람(과 동물)은 항상 그들의 삶에 영향을 미치는 결정을, 작은 것(과자를 하나 먹을까? 두개 먹을까?)부터 큰 것(고향에 머물면서 아버지의 농장에서 일해야 할까? 아니면 천체물리학을 공부하러 미국으로 유학을 갈까?)까지 내립니다.</p>
 
-<p>조건문은 결정해야 하는 선택(예를 들면, "과자 하나? 두 개?)부터 선택의 결과(과자를 하나 먹으면 여전히 배고플 수 있고, 두 개를 먹으면 배는 부르지만, 엄마한테 과자를 다 먹었다고 혼날 수 있다)까지 자바스크립트에서 의사 결정을 내릴 수 있습니다. </p>
+<p>조건문은 우리가, 반드시 내려져야 하는 선택에서부터 (예를 들자면, "쿠키 한 개 또는 두 개"), 그 선택들의 결과까지 (아마도 "쿠키 한 개를 먹는다" 의 결과는 "여전히 배가 고프다" 일지도 모르고, "쿠키 두 개를 먹는다" 의 결과는 "배부르다, 그러나 엄마가 쿠키를 다 먹었다고 나를 야단칠 것이다" 일지도 모릅니다), 그러한 의사 결정을 자바스크립트에서 표현할 수 있게 합니다.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13703/cookie-choice-small.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="cookie-choice-small.png" style="display: block; margin: 0 auto;"></p>
 
-<h2 id="if_..._else_문">if ... else 문</h2>
+<h2 id="if...else_statements">if ... else 문</h2>
 
-<p>자바스크립트에서 사용하는 조건문 중에서 가장 일반적인 유형을 봅시다. — the humble <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if ... else</a></code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else"> statement</a>.</p>
+<p>여러분이 자바스크립트에서 쓸 단연코 가장 일반적인 형태의 조건문을 살펴봅시다 — 변변찮은 <code><a href="/ko/docs/Web/JavaScript/Reference/Statements/if...else">if ... else</a></code><a href="/ko/docs/Web/JavaScript/Reference/Statements/if...else"> 문</a>입니다.</p>
 
-<h3 id="if_..._else_문법">if ... else 문법</h3>
+<h3 id="Basic_if_..._else_syntax">기본 if ... else 문법</h3>
 
-<p><code>if...else</code> 문법은 {{glossary("pseudocode")}} 다음과 같습니다:</p>
+<p>기본 <code>if...else</code> 문법은 의사 코드({{glossary("pseudocode")}})로 다음과 같이 보입니다:</p>
 
-<pre class="notranslate">if (condition) {
-  code to run if condition is true
+<pre class="notranslate">if (조건) {
+  만약 조건(condition)이 참일 경우 실행할 코드
 } else {
-  run some other code instead
+  대신 실행할 다른 코드
 }</pre>
 
-<p>Here we've got:</p>
+<p>위를 살펴보면:</p>
 
 <ol>
  <li>키워드 <code>if</code> 뒤에 괄호가 옵니다.</li>
- <li>시험할 조건은 괄호 안에 위치합니다. (전형적으로 "이 값이 다른 값보다 큰지", "이 값이 존재하는지") 이 조건은 마지막 모듈에서 논의했던 비교연산자(<a href="/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators">comparison operators</a>)를 사용할 것이고 <code>true</code> 나  <code>false</code>를 리턴합니다.</li>
- <li>내부의 중괄호 안에 코드가 있습니다. — 이것은 우리가 좋아하는 코드일 수 있고, 조건이 <code>true</code>를 반환하는 경우에만 실행됩니다.</li>
+ <li>시험할 조건은 괄호 안에 위치합니다 (전형적으로 "이 값은 다른 값보다 큰가?", 또는 "이 값은 존재하는가?"). 이 조건은 마지막 모듈에서 논의했던 비교 연산자(<a href="/ko/docs/Learn/JavaScript/First_steps/Math#comparison_operators">comparison operators</a>)를 사용할 것이고 <code>true</code>나  <code>false</code>를 리턴합니다.</li>
+ <li>내부의 중괄호 안에 코드가 있습니다. — 이것은 우리가 좋아하는 어떤 코드든 될 수 있고, 오직 조건이 <code>true</code>를 반환하는 경우에만 실행됩니다.</li>
  <li>키워드 <code>else</code>.</li>
- <li>또 다른 중괄호 안에 더 많은 코드가 있습니다. — 이것은 우리가 좋아하는 코드 일 수 있고, 조건이 <code>true</code>가 아닌 경우에만 실행됩니다.</li>
+ <li>또 다른 중괄호 안에 더 많은 코드가 있습니다. — 이것은 우리가 좋아하는 어떤 코드든 될 수 있고, 오직 조건이 <code>true</code>가 아닌 경우에만 실행됩니다. — 또는 다른 말로 하자면, 조건이 <code>false</code>인 경우에만 실행됩니다.</li>
 </ol>
 
-<p>이 코드는 사람이 읽을 수 있습니다. — "만약 조건이 <code>true</code>면, 코드 A를 실행하고, 아니면 코드 B를 실행한다." 라고 말합니다.</p>
+<p>이 코드는 사람이 읽을 수 있습니다. — 이것은 "<strong>만약</strong> <strong>조건</strong>이 <code>true</code>면, 코드 A를 실행하고, <strong>아니면</strong> 코드 B를 실행한다." 라고 말합니다.</p>
 
-<p>반드시 <code>else</code>와 두 번째 중괄호를 포함하지 않아도 된다는 것을 주목해야 합니다. — 다음은 또한 완벽한 코드입니다.:</p>
+<p>반드시 <code>else</code>와 두 번째 중괄호를 포함하지 않아도 된다는 것을 주목해야 합니다. — 다음은 또한 완벽한 코드입니다:</p>
 
-<pre class="notranslate">if (condition) {
-  code to run if condition is true
+<pre class="notranslate">if (조건) {
+  만약 조건(condition)이 참일 경우 실행할 코드
 }
 
-run some other code</pre>
+실행할 다른 코드</pre>
 
-<p>하지만, 여기서 조심 해야 할 점— 위의 경우, 코드의 두 번째 블록은 조건문에 의해서 제어되지 않습니다. 그래서 조건이 <code>true</code>나 <code>false</code>를 리턴하는 것에 관계없이 항상 동작합니다. 이것이 반드시 나쁜 것은 아니지만, 원하는 대로 되지 않을 수도 있습니다. — 코드의 한 블록이나 다른 블록이 실행되거나 둘 다 실행되지 않는 것을 원할 것입니다.</p>
+<p>하지만, 여기서 조심해야 할 점 — 위의 경우, 코드의 두 번째 블록은 조건문에 의해서 제어되지 않아서, 조건이 <code>true</code>나 <code>false</code>를 리턴하는 것에 관계없이 <strong>항상</strong> 동작합니다. 이것이 반드시 나쁜 것은 아니지만, 여러분이 원하는 것이 아닐 지도 모릅니다. — 종종 여러분은 둘 다가 아니라, 코드의 한 블럭 또는 다른 블럭을 실행하기를 원합니다.</p>
 
-<p>마지막으로, 다음과 같이 짧은 스타일로 중괄호 없이 쓰여진 <code>if...else</code>를  볼 수 있었을 것입니다.:</p>
+<p>마지막으로, 여러분은 때때로 다음과 같이 짧은 스타일로 중괄호 없이 쓰여진 <code>if...else</code>를 보았을 지도 모릅니다:</p>
 
-<pre class="notranslate">if (condition) code to run if condition is true
-else run some other code instead</pre>
+<pre class="notranslate">if (조건) 만약 조건(condition)이 참일 경우 실행할 코드
+else 대신 실행할 다른 코드</pre>
 
-<p>이것은 완벽하게 유효한 코드이지만, 사용하는 것을 추천하지 않습니다. — 중괄호를 사용하여 코드를 구분하고, 여러 줄과 들여쓰기를 사용한다면, 코드를 쉽게 읽고, 진행되는 작업을 훨씬 쉽게 처리할 수 있습니다.</p>
+<p>이것은 완벽하게 유효한 코드이지만, 사용하는 것을 추천하지 않습니다 — 만약 코드 블록의 범위를 정하기 위해 중괄호를 사용하고, 다수의 줄과 들여쓰기를 사용한다면 코드를 읽고 무엇이 진행되는지 알아내는 것이 훨씬 쉽습니다.</p>
 
-<h3 id="실제_예시">실제 예시</h3>
+<h3 id="A_real_example">실제 예시</h3>
 
-<p>문법을 잘 이해하기 위해서 실제 예시를 알아봅시다. 어머니나 아버지가 아이에게 집안일을 도와달라고 요청한다고 상상해 봅시다. 부모님께서 "우리 애기, 만약에 쇼핑 하고 가는 걸 도와주면, 용돈을 더 줄게! 그럼 네가 원하는 걸 살 수 있을거야"라고 말씀 하신다면, 자바스크립트에서 이것을 다음과 같이 표현할 수 있습니다.</p>
+<p>문법을 잘 이해하기 위해서 실제 예시를 알아봅시다. 어머니나 아버지가 아이에게 집안일을 도와달라고 요청한다고 상상해 봅시다. 부모님께서 "우리 애기, 만약에 쇼핑 가는 걸 도와주면, 네가 원하는 장난감을 살 여유가 되도록 용돈을 더 줄게." 라고 말씀하실지도 모릅니다. 자바스크립트에서, 우리는 이것을 다음과 같이 표현할 수 있습니다:</p>
 
-<pre class="brush: js notranslate">var shoppingDone = false;
+<pre class="brush: js notranslate">let shoppingDone = false;
+let childsAllowance;
 
 if (shoppingDone === true) {
-  var childsAllowance = 10;
+  childsAllowance = 10;
 } else {
-  var childsAllowance = 5;
+  childsAllowance = 5;
 }</pre>
 
-<p>위 코드에는 항상 <code>false</code>를 리턴하는 <code>shoppingDone</code>변수를 결과로 얻을 것입니다. 아이에게 실망을 안겨주겠죠. 아이가 부모님과 함께 쇼핑을 간다면 우리가 부모님을 위해 <code>shoppingDone</code>변수를 <code>true</code>로 설정하는 메커니즘을 만들 수 있겠죠.</p>
+<p>위 코드는 항상 <code>false</code>를 리턴하는 <code>shoppingDone</code>변수를 결과로 낳는데, 이는 우리의 불쌍한 아이에게 실망을 안겨주겠죠. 아이가 부모님과 함께 쇼핑을 간다면 부모님이 <code>shoppingDone</code>변수를 <code>true</code>로 설정하는 메커니즘을 제공하는 것은 우리에게 달렸습니다.</p>
 
 <div class="note">
-<p><strong>Note</strong>: GitHub에서 예시를 더 볼 수 있습니다.  <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">complete version of this example on GitHub</a> (also see it <a href="http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">running live</a>.)</p>
+<p><strong>참고</strong>: GitHub에서 예시를 더 볼 수 있습니다.  <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">이 예제의 완성 버전 on GitHub</a> (also see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">running live</a>.)</p>
 </div>
 
 <h3 id="else_if">else if</h3>
 
-<p>지난 예시에서는  두 가지 선택과 결과가 있었죠. — 하지만 우리가 두 가지보다 더 많은 선택과 결과를 원한다면?</p>
+<p>지난 예시에서는 두 가지 선택, 또는 결과가 있었죠 — 하지만 우리가 두 가지보다 더 많은 것을 원한다면?</p>
 
-<p>추가로 선택/결과를 <code>if...else</code>에 연결하는 방법이 있습니다. — <code>else if</code>를 사용하여. 각 추가 선택은 <code>if() { ... }</code>와 <code>else { ... }</code>사이에 추가적인 블록이 필요합니다. 간단한 날씨 예보 어플리케이션의 일부가 될 수 있는 다음의 예시를 확인하세요. </p>
+<p>추가로 선택/결과를 <code>if...else</code>에 연결하는 방법이 있습니다. — <code>else if</code>를 사용해서 말입니다. 각 추가 선택은 <code>if() { ... }</code>와 <code>else { ... }</code>사이에 넣을 추가적인 블록을 필요로 합니다. 간단한 날씨 예보 어플리케이션의 일부가 될 수 있는 다음의 좀 더 관련된 예시를 확인하세요:</p>
 
 <pre class="brush: html notranslate">&lt;label for="weather"&gt;Select the weather type today: &lt;/label&gt;
 &lt;select id="weather"&gt;
@@ -113,13 +114,13 @@ if (shoppingDone === true) {
 
 &lt;p&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: js notranslate">var select = document.querySelector('select');
-var para = document.querySelector('p');
+<pre class="brush: js notranslate">const select = document.querySelector('select');
+const para = document.querySelector('p');
 
 select.addEventListener('change', setWeather);
 
 function setWeather() {
-  var choice = select.value;
+  const choice = select.value;
 
   if (choice === 'sunny') {
     para.textContent = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
@@ -139,33 +140,33 @@ function setWeather() {
 <p>{{ EmbedLiveSample('else_if', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <ol>
- <li>여기서 우리는 HTML {{htmlelement("select")}} 엘리먼트를 사용하여 다른 날씨 선택과 간단한 문단을 만들 수 있습니다. </li>
- <li>자바스크립트에서 {{htmlelement("select")}} 와 {{htmlelement("p")}} 엘리먼트를 모두 저장하고 있고,  <code>&lt;select&gt;</code> 엘리먼트에 이벤트 리스너를 추가하고, 값이 변할 때 <code>setWeather()</code>함수가 동작합니다.</li>
- <li>함수가 동작했을 때, 현재 <code>&lt;select&gt;</code> 에서 선택된 값을 <code>choice</code>라는 변수에 설정합니다. 그런 다음 조건문을 사용하여 <code>choice</code>값에 따라 문단 안에 다른 텍스트를 표시합니다. <code>if() {...} block</code>에서 테스트된 첫 번째를 제외하고, <code>else if() {...}</code>에서 조건은 테스트되는 방법에 유의하세요.</li>
- <li><code>else {...}</code>안의 가장 마지막 선택은 기본적으로 "최후의 수단" 옵션입니다. — <code>true</code>인 조건이 없으면 코드가 실행됩니다. 이 경우 아무것도 선택되지 않으면 예를 들어, 사용자가 처음에 표시한 "Make a choice" placeholder 옵션에서 다시 선택하기로 한다면, 문단의 텍스트를 비우는 역할을 합니다.</li>
+ <li>여기서 우리는 HTML {{htmlelement("select")}} 엘리먼트를 사용하여 다른 날씨 선택과 간단한 문단을 만들 수 있습니다.</li>
+ <li>자바스크립트 코드에서 {{htmlelement("select")}} 와 {{htmlelement("p")}} 요소를 모두 저장하고 있고, 값이 변할 때 <code>setWeather()</code>함수가 동작하도록 <code>&lt;select&gt;</code> 요소에 이벤트 리스너를 추가했습니다.</li>
+ <li>함수가 동작했을 때, 현재 <code>&lt;select&gt;</code> 요소에서 선택된 현재 값을 <code>choice</code>라는 변수에 먼저 설정합니다. 그런 다음 <code>choice</code>값에 따라 문단 안에 다른 텍스트를 표시하기 위해 조건문을 사용합니다. <code>if() {...} block</code>에서 테스트된 첫 번째를 제외하고, <code>else if() {...}</code>에서 모든 조건들이 어떻게 테스트되는지에 유의하세요.</li>
+ <li><code>else {...}</code>안의, 가장 마지막 선택은 기본적으로 "최후의 수단" 옵션입니다 — <code>true</code>인 조건이 없으면 그 안의 코드가 실행됩니다. 이 경우 아무것도 선택되지 않으면, 예를 들어, 사용자가 처음에 표시한 "--Make a choice--" 플레이스홀더(placeholder) 옵션을 다시 선택하기로 한다면, 문단의 텍스트를 비우는 역할을 합니다.</li>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: You can also <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html">find this example on GitHub</a> (<a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html">see it running live</a> on there also.)</p>
+<p><strong>참고</strong>: 또한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html">이 예제를 GitHub에서 찾을 수 있습니다</a>. (<a href="https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html">see it running live</a> on there also.)</p>
 </div>
 
-<h3 id="비교_연산자">비교 연산자</h3>
+<h3 id="A_note_on_comparison_operators">비교 연산자에 대한 메모</h3>
 
-<p>비교 연산자는 우리의 조건문 안에 조건을 테스트하는데 사용된다. 우리는 먼저 <a href="/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators">Basic math in JavaScript — numbers and operators</a> 에서 비교 연산자를 봤습니다. </p>
+<p>비교 연산자는 우리의 조건문 안의 조건을 테스트하는데 사용됩니다. 우리는 먼저 이전의 <a href="/ko/docs/Learn/JavaScript/First_steps/Math#comparison_operators">자바스크립트의 기본적인 연산 - 숫자와 연산자</a> 문서에서 비교 연산자를 봤습니다. 우리의 선택들은 다음과 같습니다:</p>
 
 <ul>
- <li><code>===</code>와 <code>!==</code> — 한 값이 다른 값과 같거나 다른지 테스트 한다.</li>
- <li><code>&lt;</code> 와 <code>&gt;</code> — 한 값이 다른 값보다 작은지 큰지 테스트 한다.</li>
- <li><code>&lt;=</code> 와 <code>&gt;=</code> — 한 값이 다른 값보다 작거나 같은지, 크거나 같은지 테스트 한다</li>
+ <li><code>===</code>와 <code>!==</code> — 한 값이 다른 값과 같거나 다른지 테스트한다.</li>
+ <li><code>&lt;</code> 와 <code>&gt;</code> — 한 값이 다른 값보다 작은지 큰지 테스트한다.</li>
+ <li><code>&lt;=</code> 와 <code>&gt;=</code> — 한 값이 다른 값보다 작거나 같은지, 크거나 같은지 테스트한다</li>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Review the material at the previous link if you want to refresh your memories on these.</p>
+<p><strong>참고</strong>: 이것들에 대한 기억을 되살리기를 원하신다면 저 링크에 있는 것들을 다시 보세요.</p>
 </div>
 
-<p>boolean(<code>true</code>/<code>false</code>)값과 몇 번이고 다시 만날 일반적인 패턴을 테스트하는 것의 특별한 언급을 하고 싶었습니다.. <code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code>이나 빈 문자열(<code>''</code>)이 아닌 어떤 값은 조건문이 테스트 되었을 때, <code>true</code>를 리턴합니다.. 그러므로 우리는 변수가 참인지 값이 존재하는지 간단하게 변수 이름을 사용할 수 있습니다.. 예를 들어,</p>
+<p>몇 번이고 다시 만날 boolean(<code>true</code>/<code>false</code>)값을 테스트하는 것과 일반적인 패턴에 대한 특별한 언급을 하고 싶었습니다. 어떠한 값들이든 <code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code>이나 빈 문자열(<code>''</code>)이 아닌 값은 조건문으로 테스트되었을 때, 실제로는 <code>true</code>를 리턴하므로, 변수가 참인지 혹은 값이 존재하는지를 테스트하기 위해 변수 이름 그 자체를 사용할 수 있습니다. 예를 들어:</p>
 
-<pre class="brush: js notranslate">var cheese = 'Cheddar';
+<pre class="brush: js notranslate">let cheese = 'Cheddar';
 
 if (cheese) {
   console.log('Yay! Cheese available for making cheese on toast.');
@@ -173,19 +174,20 @@ if (cheese) {
   console.log('No cheese on toast for you today.');
 }</pre>
 
-<p>그리고 부모님을 위해 집안일을 하는 아이에 대한 이전 예시에서 리턴하는 것을 다음과 같이 작성할 수 있었습니다.</p>
+<p>그리고, 부모님을 위해 집안일을 하는 아이에 대한 이전 예시로 돌아가자면, 다음과 같이 작성할 수 있습니다.</p>
 
-<pre class="brush: js notranslate">var shoppingDone = false;
+<pre class="brush: js notranslate">let shoppingDone = false;
+let childsAllowance;
 
-if (shoppingDone) { // don't need to explicitly specify '=== true'
-  var childsAllowance = 10;
+if (shoppingDone) { // 명시적으로 '=== true'를 명시할 필요가 없습니다
+  childsAllowance = 10;
 } else {
-  var childsAllowance = 5;
+  childsAllowance = 5;
 }</pre>
 
-<h3 id="if_..._else_중첩">if ... else 중첩</h3>
+<h3 id="Nesting_if_..._else">if ... else 중첩</h3>
 
-<p><code>if...else</code>문을 다른 문 앞에 넣는 것(중첩하여)은 완벽하게 가능합니다.. 예를 들어, 온도가 무엇인지에 따라 더 많은 선택의 옵션을 보여주기위해 우리의 날씨 예보 어플리케이션에서 업데이트 할 수 있습니다..</p>
+<p><code>if...else</code>문을 또 다른 문 앞에 (중첩하기 위하여) 넣는 것은 완벽하게 가능합니다. 예를 들어, 온도가 무엇인지에 따라 추가적인 선택의 옵션을 보여주기 위해 우리의 날씨 예보 어플리케이션을 업데이트 할 수 있습니다.</p>
 
 <pre class="brush: js notranslate">if (choice === 'sunny') {
   if (temperature &lt; 86) {
@@ -195,18 +197,18 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
   }
 }</pre>
 
-<p>비록 코드가 모두 동작하더라도, 각 <code>if...else</code>문은 다른 문과 완전히 독립적으로 동작합니다..</p>
+<p>비록 코드가 모두 동작하더라도, 각 <code>if...else</code>문은 다른 문과 완전히 독립적으로 동작합니다.</p>
 
-<h3 id="논리_연산자_AND_OR_and_NOT">논리 연산자: AND, OR and NOT</h3>
+<h3 id="Logical_operators_AND_OR_and_NOT">논리 연산자: AND, OR 그리고 NOT</h3>
 
-<p>만약 중첩된 <code>if...else</code>문을 작성하는 것 없이 다양한 조건을 테스트하길 원한다면 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators">logical operators</a> 이 당신을 도와줄 수 있습니다. 조건 내에서 사용될 때, 처음 두 가지는 다음과 같이 합니다.</p>
+<p>만약 중첩된 <code>if...else</code>문을 작성 없이 다양한 조건을 테스트하길 원한다면 <a href="/en-US/docs/Web/JavaScript/Reference/Operators">논리 연산자</a>가 여러분을 도와줄 수 있습니다. 조건 내에서 사용될 때, 처음의 두 가지는 다음을 합니다:</p>
 
 <ul>
- <li><code>&amp;&amp;</code> — AND; <code>true</code>를 리턴하는 전체 표현식을 위해 각각 <code>true</code>계산되는 둘 이상의 표현식을 함께 연결할 수 있습니다.</li>
- <li><code>||</code> — OR; <code>true</code>를 리턴하는 전체 표현식을 위해 하나 이상이 <code>true</code>로 계산되는 둘 이상의 표현식을 함께 연결할 수 있습니다.</li>
+ <li><code>&amp;&amp;</code> — AND; 전체 표현식(expression)이 <code>true</code>를 리턴하기 위해 두 개 혹은 그 이상의 표현식이 개별적으로 <code>true</code>로 평가되도록 그 식들을 같이 연결할 수 있게 합니다.</li>
+ <li><code>||</code> — OR; 전체 표현식이 <code>true</code>를 리턴하기 위해 하나 혹은 그 이상의 표현식이 개별적으로 <code>true</code>로 평가되도록 두 개 혹은 그 이상의 식들을 같이 연결할 수 있게 합니다.</li>
 </ul>
 
-<p>AND 예시를 위해서 앞의 예제 코드 중에서 다음과 같이 작성할 수 있습니다.</p>
+<p>AND 예시를 위해서 앞의 예제 코드를 다음과 같이 재작성할 수 있습니다.</p>
 
 <pre class="brush: js notranslate">if (choice === 'sunny' &amp;&amp; temperature &lt; 86) {
   para.textContent = 'It is ' + temperature + ' degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.';
@@ -214,7 +216,7 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
   para.textContent = 'It is ' + temperature + ' degrees outside — REALLY HOT! If you want to go outside, make sure to put some suncream on.';
 }</pre>
 
-<p>위 예시에서, 첫 번째 코드 블록은 <code>choice === 'sunny'</code>와 <code>temperature &lt; 86</code>가 <code>true</code>를 리턴한다면 실행될 것입니다.</p>
+<p>위 예시에서, 첫 번째 코드 블록은 <code>choice === 'sunny'</code><em>와</em> <code>temperature &lt; 86</code>가 오직 <code>true</code>를 리턴해야만 실행될 것입니다.</p>
 
 <p>빠르게 OR 예시를 봅시다.</p>
 
@@ -224,7 +226,7 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
   console.log('Probably should just stay in then.');
 }</pre>
 
-<p>논리 연산자의 마지막 유형인 <code>!</code> 연산자로 표현되는 NOT은 표현식을 무효화할 수 있습니다. 위 OR 예시와 함께 봅시다.</p>
+<p>논리 연산자의 마지막 유형인 <code>!</code> 연산자로 표현되는 NOT은 표현식을 부정(negate)하기 위해 사용될 수 있습니다. 위 OR 예시와 함께 봅시다.</p>
 
 <pre class="brush: js notranslate">if (!(iceCreamVanOutside || houseStatus === 'on fire')) {
   console.log('Probably should just stay in then.');
@@ -232,31 +234,31 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
   console.log('You should leave the house quickly.');
 }</pre>
 
-<p>위 예시에서, OR 문이 <code>true</code>를 리턴한다면, NOT 연산자는 전체 표현식이 <code>false</code>를 리턴하도록 무효화할 것입니다.</p>
+<p>위 예시에서, OR 문이 <code>true</code>를 리턴한다면, NOT 연산자는 전체 표현식이 <code>false</code>를 리턴하도록 부정할 것입니다.</p>
 
-<p>어떤 구조든지 당신이 원하는 만큼 많은 논리 문을 결합할 수 있습니다. 다음 예시는 두 가지 OR 문 모두 true를 리턴하면, 전체 AND문은 true를 리턴한다는 것을 의미하는 코드를 실행합니다.</p>
+<p>어떤 구조든지, 여러분이 원하는 만큼 많은 논리 문(statement)을 결합할 수 있습니다. 다음 예시는 오직 두 OR 문 모두가 true를 리턴하면 내부의 코드를 실행하는데, 이는 전체의 AND 문이 true를 리턴할 것임을 의미합니다.</p>
 
 <pre class="brush: js notranslate">if ((x === 5 || y &gt; 3 || z &lt;= 10) &amp;&amp; (loggedIn || userName === 'Steve')) {
   // run the code
 }</pre>
 
-<p>조건 문에서 논리적 OR 연산자를 사용할 때 일반적인 실수는 값을 한번 체크하는 변수를 명시한 다음, <code>||</code> (OR) 연산로 분리하여 true를 리턴될 수 있는 변수의 리스트를 사용한다는 것입니다. 예를 들어: </p>
+<p>조건문에서 논리적 OR 연산자를 사용할 때의 일반적인 실수는 여러분이 검사하는 값의 변수를 한 번 명시하기(state)를 시도하고, 그리고 true를 리턴할 수 있는 값들의 목록을, <code>||</code> (OR) 연산자에 의해 분리하며 제공하는 것입니다. 예를 들자면:</p>
 
 <pre class="example-bad brush: js notranslate">if (x === 5 || 7 || 10 || 20) {
   // run my code
 }</pre>
 
-<p>이 경우에 <code>if(...)</code> 내부 조건은 7(또는 다른 0이 아닌 값)이 항상 true가 되므로, 항상 true를 계산할 것입니다. 조건은 "x가 5와 같거나 7이 true면, 항상 그렇다"라고 분명하게 말하고 있습니다. 이것은 논리적으로 우리가 원하는 것이 아닙니다! 이를 동작하게 하기 위해 우리는 각 OR 연산자를 완전하게 명시해야 합니다.</p>
+<p>이 경우에 <code>if(...)</code> 내부 조건은 7(또는 다른 0이 아닌 값)이 항상 true로 평가되므로, 항상 true로 평가될 것입니다. 이 조건은 실제로는 "만약 x가 5와 같거나, 7이 true면 — 이것은 항상 true다"라고 분명하게 말하고 있습니다. 이것은 논리적으로 우리가 원하는 것이 아닙니다! 이를 동작하게 하기 위해 우리는 각 OR 연산자의 양 측에서 완전한 테스트를 명시해야 합니다.</p>
 
 <pre class="brush: js notranslate">if (x === 5 || x === 7 || x === 10 ||x === 20) {
   // run my code
 }</pre>
 
-<h2 id="switch_문">switch 문</h2>
+<h2 id="switch_statements">switch 문</h2>
 
-<p><code>if...else</code> 문은 조건문 코드가 잘 동작되는 일을 하지만, 단점이 없지 않습니다. 그 문은 두 가지 선택을 가지고 있는 경우에 주로 유용합니다. 그리고 각각은 실행되기 위한 합리적인 양의 코드가 필요하고, AND/OR 조건은 복잡합니다.(e.g. 다수의 논리 연산자) 어떤 값의 선택으로 변수를 설정하거나 조건에 따라서 특정 문을 출력하는 경우 구문이 약간 번거로울 수 있습니다. 특히 많은 선택 항목이 있는 경우에 특히 그렇습니다.</p>
+<p><code>if...else</code> 문은 조건문 코드가 잘 가능하게 하는 일을 하지만, 단점이 없지는 않습니다. 그 문은 두 가지 선택을 가지고 있고, 각각은 실행될 합리적인 양의 코드가 필요하고, 및/또는 그 조건이 복잡한 (예를 들자면, 다수의 논리 연산자) 경우에 주로 유용합니다. 여러분이 단지 어떤 값의 선택에 변수를 설정하거나 조건에 달린 특정한 문(statement)을 출력하기를 원하는 경우에, 그 구문(syntax)은 다소 번거로울 수 있는데, 특히 여러분이 다수의 선택을 가지고 있는 경우에 그렇습니다.</p>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/switch"><code>switch</code> statements</a> 은 당신의 친구입니다. 이는 입력으로 하나의 표현식/값을 받고, 값과 일치하는 하나를 찾을 때까지 여러 항목을 살펴보고 그에 맞는 코드를 실행합니다. 여기 몇몇 많은 수도코드가 있습니다.</p>
+<p>그러한 경우에 <a href="/ko/docs/Web/JavaScript/Reference/Statements/switch"><code>switch</code>문</a>은 여러분의 친구입니다. 이는 입력으로 하나의 표현식/값을 받고, 값과 일치하는 하나를 찾을 때까지 여러 항목을 살펴보고 그에 맞는 코드를 실행합니다. 여러분에게 아이디어를 주기 위해, 여기 몇몇 많은 의사 코드가 있습니다:</p>
 
 <pre class="notranslate">switch (expression) {
   case choice1:
@@ -267,7 +269,7 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
     run this code instead
     break;
 
-  // include as many cases as you like
+  // 원하는 만큼 많은 case를 포함하십시오
 
   default:
     actually, just run this code
@@ -277,20 +279,21 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
 
 <ol>
  <li>뒤에 괄호가 오는 키워드 <code>switch</code>.</li>
- <li>괄오 내부에는 표현식이나 값을 입력합니다.</li>
- <li>표현식이나 값이 될 수 있는 선택이 따라 오는 키워드 <code>case</code>는 콜론이 뒤에 옵니다.</li>
- <li><code>break</code>문은 뒤에 세미콜론이 옵니다. 이전의 선택이 표현식이나 값과 일치한다면 해당 코드 블록에서 실행을 멉추고, switch 문 아래에 있는 어떤 코드로 이동합니다.</li>
- <li>원하는 많은 다른 케이스를 입력할 수 있습니다. </li>
- <li>키워드 <code>default</code>는 case들과 같은 코드를 입력하고, 일치하는 항목이 없으면 실행되는 기본 옵션입니다. case와 일치하지 않고, 예외가 필요하지 않는 경우 제외할 수 있습니다.</li>
+ <li>괄호 내부에는 표현식이나 값을 입력합니다.</li>
+ <li>표현식이나 값이 될 수 있는 선택이 따라오는, 키워드 <code>case</code>는 콜론이 뒤에 옵니다.</li>
+ <li>만약 선택이 표현식과 일치하면 실행할 코드.</li>
+ <li><code>break</code>문은 뒤에 세미콜론이 옵니다. 이전의 선택이 표현식이나 값과 일치한다면 브라우저는 해당 코드 블록에서 실행을 멉추고, switch 문 아래에 있는 코드로 이동합니다.</li>
+ <li>원하는 만큼 다른 케이스를 (3번–5번) 입력할 수 있습니다.</li>
+ <li>키워드 <code>default</code>는 그 뒤에 선택이 없다는 것을 제외하고 케이스들 중 하나와 완전히 같은 코드 패턴인데 (3번–5번), 이 블록 이후에는 실행할 어떤 코드도 없으므로 <code>break</code> 문이 필요하지 않습니다. 일치하는 항목이 없으면 실행되는 기본 옵션입니다.</li>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: default를 반드시 포함하지 않고 생략가능합니다. 다만 필요하다면 미지의 경우를 처리하기 위해 포함해야 합니다.</p>
+<p><strong>참고</strong>: <code>default</code>를 반드시 포함하지 않아도 됩니다 — 만약 표현식이 미지의 값과 같게 되어버릴 수 있는 경우가 없다면 여러분은 안전하게 이것을 생략할 수 있습니다. 그러나, 그 경우가 있다면, 여러분은 미지의 경우를 다루기 위해 이것을 포함할 필요가 있습니다.</p>
 </div>
 
 <h3 id="A_switch_example">A switch example</h3>
 
-<p>실전 예제를 해봅시다.switch문을 활용해 일기예보 애플리케이션을 작성하세요.</p>
+<p>실전 예제를 해 봅시다. switch문을 대신 사용해 일기예보 애플리케이션을 재작성할 것입니다.</p>
 
 <pre class="brush: html notranslate">&lt;label for="weather"&gt;Select the weather type today: &lt;/label&gt;
 &lt;select id="weather"&gt;
@@ -303,14 +306,14 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
 
 &lt;p&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: js notranslate">var select = document.querySelector('select');
-var para = document.querySelector('p');
+<pre class="brush: js notranslate">const select = document.querySelector('select');
+const para = document.querySelector('p');
 
 select.addEventListener('change', setWeather);
 
 
 function setWeather() {
-  var choice = select.value;
+  const choice = select.value;
 
   switch (choice) {
     case 'sunny':
@@ -333,24 +336,24 @@ function setWeather() {
 <p>{{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can also <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html">find this example on GitHub</a> (see it <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html">running live</a> on there also.)</p>
+<p><strong>참고</strong>: 또한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html">이 예제를 GitHub에서 찾을 수 있습니다</a>. (see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html">running live</a> on there also.)</p>
 </div>
 
-<h2 id="삼항연산자">삼항연산자 </h2>
+<h2 id="Ternary_operator">삼항연산자 </h2>
 
-<p>다른 예제로 들어가기 전에 소개하고 싶은 마지막 구문이 있다.삼항(조건)연산자( <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">ternary or conditional operator</a>)는 조건이 참이면 한 값/표현식을 반환하고 조건이 거짓이면 다른  값/표현식을 반환하는 구문이다.— 이것은 어떤 상황에 유용할 수 있으며, 참/거짓 조건을 간단히 선택할 수 있는 상황이라면 <code>if...else</code> 블록문보다 코드를 훨씬 적게 사용할수 있다. 이 pseudocode는 아래와 같다:</p>
+<p>다른 예제로 들어가기 전에 소개하고 싶은 마지막 구문이 있습니다. 삼항(조건)연산자(<a href="/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">ternary or conditional operator</a>)는 조건을 테스트하고 만약 조건이 <code>true</code>라면 하나의 값/표현식을 리턴하고, 만약 <code>false</code>라면 다른 값/표현식을 리턴하는 구문입니다 — 이것은 어떤 상황에 유용할 수 있으며, 만약 <code>true</code>/<code>false</code>조건 사이를 통해 선택되는 두 선택을 가지고 있다면 <code>if...else</code> 블록보다 코드를 훨씬 적게 사용할 수 있습니다. 이 의사 코드는 아래와 같습니다:</p>
 
 <pre class="notranslate">( condition ) ? run this code : run this code instead</pre>
 
-<p>그러면 간단한 예를 보자:</p>
+<p>그러면 간단한 예를 봅시다:</p>
 
-<pre class="brush: js notranslate">var greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';</pre>
+<pre class="brush: js notranslate">let greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';</pre>
 
-<p><code>isBirthday</code> 라는 변수명이 여기 있다— 게스트가 생일이면 '해피버스데이' 메세지를 보내고, 생일이 아니라면  일반적인 '인사' 메세지를 보내는 경우에 해당된다..</p>
+<p><code>isBirthday</code> 라는 변수명이 여기 있습니다 — 만약 이것이 <code>true</code>라면, 우리는 게스트에게 생일 축하 메시지를 보냅니다; 만약 아니라면, 우리는 그녀에게 일반적인 인사를 보냅니다.</p>
 
-<h3 id="삼항_연산자_예제">삼항 연산자 예제</h3>
+<h3 id="Ternary_operator_example">삼항 연산자 예제</h3>
 
-<p>삼항연산자로 변수값을 정할 필요가 없다; 단지  좋아하는 함수나 코드를 사용하면 된다. — . 이 예제는 삼항연산자를 사용하여 사이트의 스타일링 테마를 선택할  수 있는 것을 보여준다</p>
+<p>삼항연산자로 단지 변수 값만을 정할 필요가 없습니다; 무엇이든지 좋아하는 함수나 코드를 실행할 수 있습니다. 이 예제는 삼항연산자를 사용하여 사이트의 스타일링이 적용되는 간단한 테마 선택기를 보여줍니다.</p>
 
 <pre class="brush: html notranslate">&lt;label for="theme"&gt;Select theme: &lt;/label&gt;
 &lt;select id="theme"&gt;
@@ -360,8 +363,8 @@ function setWeather() {
 
 &lt;h1&gt;This is my website&lt;/h1&gt;</pre>
 
-<pre class="brush: js notranslate">var select = document.querySelector('select');
-var html = document.querySelector('html');
+<pre class="brush: js notranslate">const select = document.querySelector('select');
+const html = document.querySelector('html');
 document.body.style.padding = '10px';
 
 function update(bgColor, textColor) {
@@ -376,39 +379,39 @@ select.onchange = function() {
 
 <p>{{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<p>여기에는  black이나 white의 테마를 고르기 위한 '{{htmlelement('select')}}' 엘리먼트가 있고, 여기에 더하여 웹사이트 제목을 보여주는 '{{htmlelement('h1')}}" 엘리먼트가 있다.  <code>update()</code> 함수를 덧붙이면 두 칼라를 입력 인수(parameter)로 선택할 수 있다. 웹사이트 배경 칼라가 첫 번째 칼라로 지정되고, 텍스트 칼라가 두 번째로 정해진다.</p>
+<p>여기에는 테마(검정 또는 하양)를 고르기 위한 '{{htmlelement('select')}}' 요소가 있고, 여기에 더하여 웹사이트 제목을 보여주는 간단한 '{{htmlelement('h1')}}" 요소가 있습니다. 우리는 또한 <code>update()</code>라는 함수를 가지고 있는데, 이 함수는 두 색상을 매개변수(parameter)(입력)로 취합니다. 웹사이트의 배경색이 첫 번째 제공된 색상으로 지정되고, 텍스트 색상이 두 번째 제공된 색상으로 정해집니다.</p>
 
-<p>끝으로,  '<a href="/en-US/docs/Web/API/GlobalEventHandlers/onchange">onchange</a>' 이벤트 리스너는 삼중연산자를 포함하는 함수를 움직('run')이게 합니다. <code>select.value === 'black' </code>조건을 테스트는 하는 것으로 시작하는데, 이 조건이 참이면  <code>update()</code> 함수가 배경색은 black으로 텍스트 색은  white로 동작하게 합니다. 이와는 반대로 select theme이  white로 선택되면(조건이 거짓이면) , <code>update()</code> 함수는  배경색은 white으로 텍스트 색은  black로 동작하게 합니다.</p>
+<p>끝으로, 우리는 또한 삼항연산자를 포함하고 있는 함수의 실행을 제공하는 '<a href="/ko/docs/Web/API/GlobalEventHandlers/onchange">onchange</a>' 이벤트 리스너를 가지고 있습니다. 이것은 테스트 조건으로 시작합니다 — <code>select.value === 'black'</code>. 만약 이것이 <code>true</code>를 리턴하면, 우리는 검정과 하양의 매개변수를 지니고 있는 <code>update()</code>함수를 실행하는데, 이는 배경색은 검정으로 텍스트 색은 하양으로 되는 결과를 의미합니다. 만약 이것이 <code>false</code>를 리턴하면, 우리는 하양과 검정의 매개변수를 지니고 있는 <code>update()</code>함수를 실행하는데, 이는 사이트의 색상이 반전됐다는 것을 의미합니다.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can also <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">find this example on GitHub</a> (see it <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">running live</a> on there also.)</p>
+<p><strong>참고</strong>: 또한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">이 예제를 GitHub에서 찾을 수 있습니다</a>. (see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">running live</a> on there also.)</p>
 </div>
 
-<h2 id="Active_learning_간단한_달력_만들기">Active learning: 간단한 달력 만들기</h2>
+<h2 id="Active_learning_A_simple_calendar">직접 해보기: 간단한 달력 만들기</h2>
 
-<p>이 예제에서는 간단한 달력 어플리케이션을 만들어 볼겁니다. 코드에는 다음과 같은 것들이 들어 있습니다.</p>
+<p>이 예제에서는 간단한 달력 어플리케이션을 만들어 볼 것입니다. 코드에는 다음과 같은 것들이 들어 있습니다.</p>
 
 <ul>
- <li>유저가 여러 달 중 특정 달을 고를 수 있게 하는 {{htmlelement("select")}} 요소.</li>
- <li><code>&lt;select&gt;</code> 메뉴에서 선택된 값이 변경 되었음을 탐지하는 <code>onchange</code> 이벤트 핸들러.</li>
- <li>{{htmlelement("h1")}} 요소에서 달력을 생성하고 올바른 달을 표시하는 <code>createCalendar()</code> 함수.</li>
+ <li>유저가 여러 달을 고를 수 있게 하는 {{htmlelement("select")}} 요소.</li>
+ <li><code>&lt;select&gt;</code> 메뉴에서 선택된 값이 변경되었을 때를 탐지하는 <code>onchange</code> 이벤트 핸들러.</li>
+ <li>{{htmlelement("h1")}} 요소에 올바른 달을 표시하고 달력을 생성하는 <code>createCalendar()</code> 함수.</li>
 </ul>
 
 <p><code>onchange</code> 핸들러 함수내에 조건문을 작성해야 합니다. 위치는 <code>// ADD CONDITIONAL HERE</code> 주석 바로 아래입니다. 조건문은 다음을 만족해야 합니다:</p>
 
 <ol>
- <li>선택한 달 보기(이것은 값이 변경된 후의 요소 값이 됨.) </li>
- <li><code>days</code> 란 변수를 선택한 달의 일 수와 같게 하기. 다만 윤년은 무시할 수 있다.</li>
+ <li>선택된 달 보기 (<code>choice</code>변수 안에 저장되어 있습니다. 이것은 값이 변경된 이후에 <code>&lt;select&gt;</code> 요소 값일 것입니다. 예를 들자면 "January")</li>
+ <li><code>days</code> 변수를 선택된 달의 일수와 동일하게 설정하기. 이것을 하기 위해서는 1년의 각 달의 일수를 찾아봐야만 할 것입니다. 이 예제의 목적을 위해 윤년은 무시할 수 있습니다.</li>
 </ol>
 
-<p>Hints:</p>
+<p>힌트:</p>
 
 <ul>
- <li>논리연산자 OR을 사용해 동일한 일 수인 여러 달을 하나의 조건으로 그룹화 하기.</li>
- <li>가장 흔한 일 수를 기본값을 사용하기.</li>
+ <li>논리연산자 OR을 사용해 동일한 일 수인 여러 달을 하나의 조건으로 그룹화하기. 많은 달들이 동일한 일수를 공유합니다.</li>
+ <li>가장 흔한 일 수를 생각해보고, 그것을 기본값으로 사용하기.</li>
 </ul>
 
-<p>만약 실수를 하더라도 'Reset' 버튼으로 초기화 할 수 있습니다. 해답을 모르겠다면 "Show solution" 으로 해결방법을 확인하세요.</p>
+<p>만약 실수를 하더라도 'Reset' 버튼으로 초기화 할 수 있습니다. 정말로 해답을 모르겠다면, "Show solution" 으로 해결 방법을 확인하세요.</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
@@ -440,12 +443,12 @@ select.onchange = function() {
 &lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
 
 &lt;textarea id="code" class="playable-code" style="height: 400px;width: 95%"&gt;
-var select = document.querySelector('select');
-var list = document.querySelector('ul');
-var h1 = document.querySelector('h1');
+const select = document.querySelector('select');
+const list = document.querySelector('ul');
+const h1 = document.querySelector('h1');
 
 select.onchange = function() {
-  var choice = select.value;
+  const choice = select.value;
 
   // ADD CONDITIONAL HERE
 
@@ -455,8 +458,8 @@ select.onchange = function() {
 function createCalendar(days, choice) {
   list.innerHTML = '';
   h1.textContent = choice;
-  for (var i = 1; i &lt;= days; i++) {
-    var listItem = document.createElement('li');
+  for (let i = 1; i &lt;= days; i++) {
+    const listItem = document.createElement('li');
     listItem.textContent = i;
     list.appendChild(listItem);
   }
@@ -510,11 +513,11 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var code = textarea.value;
-var userEntry = textarea.value;
+<pre class="brush: js notranslate">const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+let code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
@@ -539,8 +542,8 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var select = document.querySelector(\'select\');\nvar list = document.querySelector(\'ul\');\nvar h1 = document.querySelector(\'h1\');\n\nselect.onchange = function() {\n var choice = select.value;\n var days = 31;\n if(choice === \'February\') {\n days = 28;\n } else if(choice === \'April\' || choice === \'June\' || choice === \'September\'|| choice === \'November\') {\n days = 30;\n }\n\n createCalendar(days, choice);\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = \'\';\n h1.textContent = choice;\n for(var i = 1; i &lt;= days; i++) {\n var listItem = document.createElement(\'li\');\n listItem.textContent = i;\n list.appendChild(listItem);\n }\n }\n\ncreateCalendar(31,\'January\');';
-var solutionEntry = jsSolution;
+const jsSolution = 'const select = document.querySelector(\'select\');\nconst list = document.querySelector(\'ul\');\nconst h1 = document.querySelector(\'h1\');\n\nselect.onchange = function() {\n const choice = select.value;\n let days = 31;\n if(choice === \'February\') {\n days = 28;\n } else if(choice === \'April\' || choice === \'June\' || choice === \'September\'|| choice === \'November\') {\n days = 30;\n }\n\n createCalendar(days, choice);\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = \'\';\n h1.textContent = choice;\n for(let i = 1; i &lt;= days; i++) {\n const listItem = document.createElement(\'li\');\n listItem.textContent = i;\n list.appendChild(listItem);\n }\n }\n\ncreateCalendar(31,\'January\');';
+let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
@@ -560,11 +563,11 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
+  const front = (textarea.value).substring(0, caretPos);
+  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -590,17 +593,17 @@ textarea.onkeyup = function(){
 
 <p>{{ EmbedLiveSample('Playable_code', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<h2 id="Active_learning_색깔_고르기">Active learning: 색깔 고르기</h2>
+<h2 id="Active_learning_More_color_choices!">직접 해보기: 색깔 고르기</h2>
 
-<p>In this example you are going to take the ternary operator example we saw earlier and convert the ternary operator into a switch statement that will allow us to apply more choices to the simple website. Look at the {{htmlelement("select")}} — this time you'll see that it has not two theme options, but five. You need to add a switch statement just underneath the <code>// ADD SWITCH STATEMENT</code> comment:</p>
+<p>이 예제에서는 위에서 봤던 삼항연산자 예제의 삼항연산자를 간단한 웹사이트에 더 많은 선택을 적용할 수 있게 하는 switch문으로 전환할 것입니다. {{htmlelement("select")}}을 보세요 — 이번에는 이것이 두 개의 테마 옵션을 가지고 있지 않고, 다섯 개를 가지고 있는 것을 보실 수 있을 것입니다. 여러분은 <code>// ADD SWITCH STATEMENT</code> 주석 바로 밑에 추가할 필요가 있습니다:</p>
 
 <ul>
- <li>It should accept the <code>choice</code> variable as its input expression.</li>
- <li>For each case, the choice should equal one of the possible values that can be selected, i.e. white, black, purple, yellow, or psychedelic.</li>
- <li>For each case, the <code>update()</code> function should be run, and be passed two color values, the first one for the background color, and the second one for the text color. Remember that color values are strings, so need to be wrapped in quotes.</li>
+ <li>이것은 <code>choice</code> 변수를 이것의 입력 표현식으로 받아야 합니다.</li>
+ <li>각각의 경우에 대해, 선택은 선택될 수 있는 가능한 값들 중 하나와 동일해야만 합니다. 예: 하양, 검정, 보라, 노랑, 또는 사이키델릭.</li>
+ <li>각각의 경우에 대해, <code>update()</code> 함수는 실행되어야만 하고, 두 개의 색상을, 첫번째는 배경색으로, 두번째는 텍스트 색상으로 전달해야만 합니다. 색상값은 문자열이므로, 따옴표로 감싸져야 할 필요가 있다는 것을 기억하세요.</li>
 </ul>
 
-<p>If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.</p>
+<p>만약 실수를 하더라도 'Reset' 버튼으로 초기화 할 수 있습니다. 정말로 해답을 모르겠다면, "Show solution" 으로 해결 방법을 확인하세요.</p>
 
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code 2</h6>
@@ -623,11 +626,11 @@ textarea.onkeyup = function(){
 &lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
 
 &lt;textarea id="code" class="playable-code" style="height: 450px;width: 95%"&gt;
-var select = document.querySelector('select');
-var html = document.querySelector('.output');
+const select = document.querySelector('select');
+const html = document.querySelector('.output');
 
 select.onchange = function() {
-  var choice = select.value;
+  const choice = select.value;
 
   // ADD SWITCH STATEMENT
 }
@@ -663,11 +666,11 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var code = textarea.value;
-var userEntry = textarea.value;
+<pre class="brush: js notranslate">const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+let code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
@@ -692,8 +695,8 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var select = document.querySelector(\'select\');\nvar html = document.querySelector(\'.output\');\n\nselect.onchange = function() {\n var choice = select.value;\n\n switch(choice) {\n case \'black\':\n update(\'black\',\'white\');\n break;\n case \'white\':\n update(\'white\',\'black\');\n break;\n case \'purple\':\n update(\'purple\',\'white\');\n break;\n case \'yellow\':\n update(\'yellow\',\'darkgray\');\n break;\n case \'psychedelic\':\n update(\'lime\',\'purple\');\n break;\n }\n}\n\nfunction update(bgColor, textColor) {\n html.style.backgroundColor = bgColor;\n html.style.color = textColor;\n}';
-var solutionEntry = jsSolution;
+const jsSolution = 'const select = document.querySelector(\'select\');\nconst html = document.querySelector(\'.output\');\n\nselect.onchange = function() {\n const choice = select.value;\n\n switch(choice) {\n case \'black\':\n update(\'black\',\'white\');\n break;\n case \'white\':\n update(\'white\',\'black\');\n break;\n case \'purple\':\n update(\'purple\',\'white\');\n break;\n case \'yellow\':\n update(\'yellow\',\'darkgray\');\n break;\n case \'psychedelic\':\n update(\'lime\',\'purple\');\n break;\n }\n}\n\nfunction update(bgColor, textColor) {\n html.style.backgroundColor = bgColor;\n html.style.color = textColor;\n}';
+let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
@@ -713,11 +716,11 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
+  const front = (textarea.value).substring(0, caretPos);
+  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -743,29 +746,33 @@ textarea.onkeyup = function(){
 
 <p>{{ EmbedLiveSample('Playable_code_2', '100%', 950, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<h2 id="Conclusion">Conclusion</h2>
+<h2 id="Test_your_skills!">실력을 평가해 보세요!</h2>
 
-<p>And that's all you really need to know about conditional structures in JavaScript right now! I'm sure you'll have understood these concepts and worked through the examples with ease; if there is anything you didn't understand, feel free to read through the article again, or <a href="/en-US/Learn#Contact_us">contact us</a> to ask for help.</p>
+<p>이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — <a href="/ko/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals">실력을 평가해 보세요: 조건문</a>.</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="Conclusion">결론</h2>
+
+<p>그리고 이것이 여러분이 지금 자바스크립트에서 알아야 할 조건문 구조에 대한 모든 것입니다! 저는 여러분이 이 개념들을 이해했고 이 예제들을 쉽게 통과했을 것이라고 확신합니다; 만약 뭐든지 이해하지 못한 게 있다면, 자유롭게 이 문서를 다시 읽거나, <a href="/en-US/docs/Learn#contact_us">문의하기</a>에서 도움을 요청해 보세요.</p>
+
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
- <li><a href="/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators">Comparison operators</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements">Conditional statements in detail</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else reference</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">Conditional (ternary) operator reference</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/First_steps/Math#comparison_operators">비교 연산자(Comparison operators)</a></li>
+ <li><a href="/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements">조건문 자세하게 살펴보기</a></li>
+ <li><a href="/ko/docs/Web/JavaScript/Reference/Statements/if...else">if...else 참고서</a></li>
+ <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">삼항연산자 참고서</a></li>
 </ul>
 
 <p>{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}</p>
 
-<h2 id="In_this_module">In this module</h2>
+<h2 id="In_this_module">이 과정에서는</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
+ <li><strong>판단 내리기 — 조건문</strong></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Looping_code">반복문</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Functions">함수 — 코드 재사용</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">함수 만들기</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Return_values">함수 반환 값</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Events">이벤트 입문</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Image_gallery">이미지 갤러리</a></li>
 </ul>

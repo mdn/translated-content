@@ -2,109 +2,116 @@
 title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
 tags:
-  - Math
-  - 메소드
-  - 자바스크립트
-  - 참조
+- JavaScript
+- Largest Number
+- Largest Value
+- Math
+- Method
+- Maximum
+- Reference
+- Largest
+- max
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
+browser-compat: javascript.builtins.Math.max
 ---
 <div>{{JSRef}}</div>
 
 <p><strong>Math.max()</strong>함수는 입력값으로 받은 0개 이상의 숫자 중 가장 큰 숫자를 반환합니다.</p>
 
-<h2 id="문법">문법</h2>
+<div>{{EmbedInteractiveExample("pages/js/math-max.html")}}</div>
 
-<pre class="syntaxbox notranslate"><code>Math.max([<var>값1</var>[, <var>값2</var>[, ...]]])</code></pre>
 
-<h3 id="매개변수">매개변수</h3>
+<h2 id="Syntax">문법</h2>
+
+<pre class="brush: js">
+  Math.max()
+  Math.max(값0)
+  Math.max(값0, 값1)
+  Math.max(값0, 값1, ... , 값N)
+  </pre>
+
+<h3 id="Parameters">매개변수</h3>
 
 <dl>
- <dt><code>값1, 값2, ...</code></dt>
- <dd>숫자들.</dd>
+  <dt><code>값1, 값2, ...</code></dt>
+  <dd>가장 큰 값을 선택하고 반환할 0개 이상의 숫자입니다.</dd>
 </dl>
 
-<h3 id="반환_값">반환 값</h3>
+<h3 id="Return_value">반환 값</h3>
 
-<p>입력된 숫자 중 가장 큰 숫자를 반환합니다. 만약 인수 중 하나라도 숫자로 변환하지 못한다면 {{jsxref("NaN")}}로 반환합니다.</p>
+<p>입력된 숫자 중 가장 큰 숫자를 반환합니다. 만약 인수 중 하나라도 숫자로 변환하지 못한다면 {{jsxref("NaN")}}로 반환합니다.
+  매개변수를 제공하지 않은 경우 결과는 -{{jsxref("Infinity")}}입니다.
+</p>
 
-<h2 id="설명">설명</h2>
+<h2 id="Description">설명</h2>
 
 <p>max ()는 Math의 정적 메서드이기 때문에 만든 Math 개체의 메서드가 아닌 항상 Math.max ()로 사용해야합니다. (Math는 생성자가 아닙니다).</p>
 
-<p>만약 아무 요소도 주어지지 않았다면 {{jsxref("-Infinity")}}로 반환합니다.</p>
+<p>만약 아무 요소도 주어지지 않았다면 -{{jsxref("Infinity")}}로 반환합니다.</p>
 
 <p>만약 한 개 이상의 요소가 숫자로 변환되지 않는다면 {{jsxref("NaN")}}로 반환됩니다.</p>
 
-<h2 id="예제">예제</h2>
+<h2 id="Examples">예제</h2>
 
-<h3 id="Math.max함수_사용하기"><code>Math.max()함수 사용하기</code></h3>
+<h3 id="Using_Math.max"><code>Math.max()함수 사용하기</code></h3>
 
-<pre class="brush: js notranslate">Math.max(10, 20);   //  20
+<pre class="brush: js">Math.max(10, 20);   //  20
 Math.max(-10, -20); // -10
 Math.max(-10, 20);  //  20
 </pre>
 
-<p>다음 함수는 {{jsxref ( "Function.prototype.apply ()")}}을 사용하여 숫자 배열에서 최대 요소를 찾습니다. getMaxOfArray ([1, 2, 3])는 Math.max (1, 2, 3)와 동일하지만 프로그래밍 방식으로 생성 된 모든 크기의 배열에서 getMaxOfArray ()를 사용할 수 있습니다.</p>
+<h3 id="Getting_the_maximum_element_of_an_array">배열의 최대값 가져오기
+</h3>
 
-<pre class="brush: js notranslate">function getMaxOfArray(numArray) {
+<p>{{jsxref("Array.prototype.reduce", "Array.reduce()")}} 숫자 배열의 최대 값을 찾는 데 사용할 수 있습니다.
+  숫자 배열의 요소, 각 값 비교 :</p>
+최대값을 찾는 데 사용할 수 있습니다.
+
+<pre class="brush: js">var arr = [1,2,3];
+var max = arr.reduce(function(a, b) {
+    return Math.max(a, b);
+}, -Infinity);
+</pre>
+
+<p>다음 함수는 {{jsxref ( "Function.prototype.apply ()")}}을 사용하여 숫자 배열에서 최대 요소를 찾습니다. <code>getMaxOfArray([1, 2, 3])</code>는
+  <code>Math.max(1, 2, 3)</code>와 동일하지만 프로그래밍 방식으로 생성 된 모든 크기의 배열에서 <code>getMaxOfArray()</code>를 사용할 수 있습니다.
+</p>
+
+<pre class="brush: js">function getMaxOfArray(numArray) {
   return Math.max.apply(null, numArray);
 }
 </pre>
 
-<p>{{jsxref("Array.prototype.reduce", "Array.reduce()")}} 이 함수 또한 배열의 각 값을 비교하여 가장 큰 숫자를 얻을 수 있습니다.</p>
+<p>새로운<a href="/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax">스프레드
+    연산자</a>는 다음을 얻기 위해 솔루션을 <code>적용</code>하는 짧은 방법입니다.
+  배열의 최대값:</p>
 
-<pre class="brush: js notranslate">var arr = [1,2,3];
-var max = arr.reduce(function(a, b) {
-    return Math.max(a, b);
-});
-</pre>
+<pre class="brush: js">var arr = [1, 2, 3];
+  var max = Math.max(...arr);
+  </pre>
 
-<p>또한 {{jsxref("Operators/Spread_operator", "spread operator")}}이 함수를 사용하면 배열의 숫자들 중 가장 큰 숫자를 쉽게 얻을 수 있습니다.</p>
+<p>또한 {{jsxref("Operators/Spread_syntax", "spread operator")}}이 함수를 사용하면 배열의 숫자들 중 가장 큰 숫자를 쉽게 얻을 수 있습니다.</p>
 
-<pre class="brush: js notranslate">var arr = [1, 2, 3];
+<pre class="brush: js">var arr = [1, 2, 3];
 var max = Math.max(...arr);
 </pre>
 
-<h2 id="표준">표준</h2>
+<p>그러나, 두 스프레드 (<code>...</code>)와 <code>apply</code> 모두 실패하거나 배열에 요소가 너무 많은 경우 잘못된 결과를 반환합니다.
+  왜냐하면 배열이 함수 요소를 통과하기 때문입니다.
+  배열 요소를 함수 매개 변수로 사용할 수 있습니다.
+  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#using_apply_and_built-in_functions">apply와
+    built-in 함수들의 사용법은 여기서 확인 할 수 있습니다.</a> <code>reduce</code>를 사용한 방법에는 해당 문제가 발생하지 않습니다.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">표준</th>
-   <th scope="col">상태</th>
-   <th scope="col">비고</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.11', 'Math.max')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.max', 'Math.max')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.max', 'Math.max')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<h2 id="Specifications">표준</h2>
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+{{Specifications}}
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
 
-<p>{{Compat("javascript.builtins.Math.max")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="참조">참조</h2>
+<h2 id="See_also">같이보기</h2>
 
 <ul>
- <li>{{jsxref("Math.min()")}}</li>
+  <li>{{jsxref("Math.min()")}}</li>
 </ul>

@@ -12,18 +12,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Array.from()</strong></code> 메서드는 유사 배열 객체(array-like object)나반복 가능한 객체(iterable object)를 얕게 복사해새로운<code>Array</code> 객체를 만듭니다.</p>
+<p><code><strong>Array.from()</strong></code> 메서드는 유사 배열 객체(array-like object)나 반복 가능한 객체(iterable object)를 얕게 복사해 새로운<code>Array</code> 객체를 만듭니다.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-from.html")}}</div>
 
 
 
-<h2 id="Syntax" name="Syntax">구문</h2>
+<h2 id="Syntax">구문</h2>
 
 <pre class="syntaxbox">Array.from(<em>arrayLike</em>[, <em>mapFn</em>[, <em>thisArg</em>]])
 </pre>
 
-<h3 id="Parameters" name="Parameters"><span>매개변수</span></h3>
+<h3 id="Parameters">매개변수</h3>
 
 <dl>
  <dt><code>arrayLike</code></dt>
@@ -38,16 +38,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 
 <p>새로운 {{jsxref("Array")}} 인스턴스.</p>
 
-<h2 id="Description" name="Description">설명</h2>
+<h2 id="Description">설명</h2>
 
 <p>다음과 같은 경우에 <code>Array.from()</code>으로새<code>Array</code>를 만들 수 있습니다.</p>
 
 <ul>
- <li>유사 배열 객체 (<code>length</code> 속성과 인덱싱된 요소를 가진 객체)</li>
+ <li>유사 배열 객체 (<code>length</code> 속성과 인덱싱 된 요소를 가진 객체)</li>
  <li><a href="/en-US/docs/Web/JavaScript/Guide/iterable">순회 가능한 객체</a> ({{jsxref("Map")}}, {{jsxref("Set")}} 등객체의 요소를 얻을 수 있는 객체)</li>
 </ul>
 
-<p><code>Array.from()</code>은 선택 매개변수인 <code>mapFn</code>를 가지는데,배열(혹은 배열 서브클래스)의 각 요소를{{jsxref("Array.prototype.map", "맵핑", "", 0)}}할 때 사용할 수 있습니다. 즉,<code>Array.from(obj, mapFn, thisArg)</code>는 중간에 다른 배열을 생성하지 않는다는 점을 제외하면<code>Array.from(obj).map(mapFn, thisArg)</code>와 같습니다. 이 특징은 <a href="/ko/docs/Web/JavaScript/Typed_arrays">typed arrays</a>와 같은 특정 배열 서브클래스에서 중간 배열 값이 적절한 유형에 맞게 생략되기 때문에 특히 중요합니다.</p>
+<p><code>Array.from()</code>은 선택 매개변수인 <code>mapFn</code>를 가지는데, 배열(혹은 배열 서브클래스)의 각 요소를{{jsxref("Array.prototype.map", "맵핑", "", 0)}}할 때 사용할 수 있습니다. 즉,<code>Array.from(obj, mapFn, thisArg)</code>는 중간에 다른 배열을 생성하지 않는다는 점을 제외하면<code>Array.from(obj).map(mapFn, thisArg)</code>와 같습니다. 이 특징은 <a href="/ko/docs/Web/JavaScript/Typed_arrays">typed arrays</a>와 같은 특정 배열 서브클래스에서 중간 배열 값이 적절한 유형에 맞게 생략되기 때문에 특히 중요합니다.</p>
 
 <p><code>from()</code> 메서드의 <code>length</code> 속성은 1입니다.</p>
 
@@ -126,7 +126,7 @@ range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =&gt; String.fromCharCode(x
 
 <h2 id="폴리필">폴리필</h2>
 
-<p><code><font face="consolas, Liberation Mono, courier, monospace">Array.from</font></code>은 ECMA-262 표준 제6판에 추가됐습니다.따라서 어떤 표준 구현체에서는 사용할 수없을 수도 있습니다. 다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 플랫폼에서도<code>Array.from</code>을사용할 수 있습니다. 아래 알고리즘은<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object" title="객체(object) 생성자(constructor)는 객체 레퍼(wrapper)를 생성합니다."><code>Object</code></a>와<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError" title="TypeError 객체는 변수의 값이 원하는 타입이 아닐 때 발생하는 에러를 표현합니다."><code>TypeError</code></a>가 변형되지 않고,<code>callback.call</code>의 계산 값이 원래의<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call" title="call() 메소드는 주어진 this 값 및 각각 전달된 인수와 함께 함수를 호출합니다."><code>Function.prototype.call()</code></a>과 같은 경우ECMA-262 제6판이 명시한 것과 동일합니다.<span style="letter-spacing: -0.00278rem;">또한 반복가능자(iterable)는 완벽하게 폴리필할 수없기에 본 구현은 ECMA-262 제6판의 제네릭 반복가능자를 지원하지 않습니다.</span></p>
+<p><code>Array.from</code>은 ECMA-262 표준 제6판에 추가됐습니다.따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 플랫폼에서도<code>Array.from</code>을 사용할 수 있습니다. 아래 알고리즘은<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>와<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a>가 변형되지 않고,<code>callback.call</code>의 계산 값이 원래의<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>Function.prototype.call()</code></a>과 같은 경우ECMA-262 제6판이 명시한 것과 동일합니다. 또한 반복가능자(iterable)는 완벽하게 폴리필 할 수 없기에 본 구현은 ECMA-262 제6판의 제네릭 반복가능자를 지원하지 않습니다.</p>
 
 <pre class="brush: js">// Production steps of ECMA-262, Edition 6, 22.1.2.1
 if (!Array.from) {
@@ -235,7 +235,7 @@ if (!Array.from) {
 
 <p>{{Compat("javascript.builtins.Array.from")}}</p>
 
-<h2 id="See_also" name="See_also">같이 보기</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
  <li>{{jsxref("Array")}}</li>

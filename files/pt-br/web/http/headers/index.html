@@ -17,7 +17,7 @@ translation_of: Web/HTTP/Headers
 
 <div>Os cabeçalhos HTTP permitem que o cliente e o servidor passem informações adicionais com a solicitação ou a resposta HTTP. Um cabeçalho de solicitação é composto por seu nome <em>case-insensitive</em> (não diferencia letras maiúsculas e minúsculas), seguido por dois pontos ':' e pelo seu valor (sem quebras de linha).  Espaços em branco antes do valor serão ignorados.</div>
 
-<div></div>
+
 
 <p>Cabeçalhos proprietários personalizados podem ser adicionados usando o prefixo 'X-', mas essa convenção foi descontinuada em Junho de 2012, devido aos inconvenientes que causou quando os campos não-padronizados tornaram-se padronizados na <a href="https://tools.ietf.org/html/rfc6648">RFC 6648</a>; outros estão listados em um <a href="http://www.iana.org/assignments/message-headers/perm-headers.html">registro IANA</a>, cujo o conteúdo original foi definido na <a class="external" href="http://tools.ietf.org/html/rfc4229">RFC 4229</a>. O IANA também mantém o <a href="http://www.iana.org/assignments/message-headers/prov-headers.html">registro das propostas de novas mensagens de cabeçalhos HTTP</a>.</p>
 
@@ -71,13 +71,13 @@ translation_of: Web/HTTP/Headers
 
 <h2 id="Client_hints">Client hints</h2>
 
-<p>O recurso HTTP <a href="https://wiki.developer.mozilla.org/docs/Glossary/Client_hints">Client hints</a> ainda está em desenvolvimento. A documentação está disponível no site do <a href="https://httpwg.org/http-extensions/client-hints.html">HTTP working group.</a></p>
+<p>O recurso HTTP <a href="/pt-BR/docs/Glossary/Client_hints">Client hints</a> ainda está em desenvolvimento. A documentação está disponível no site do <a href="https://httpwg.org/http-extensions/client-hints.html">HTTP working group.</a></p>
 
 <dl>
  <dt>{{HTTPHeader("Accept-CH")}} {{experimental_inline}}</dt>
- <dd>Os servidores podem dar suporte para o <a href="https://wiki.developer.mozilla.org/docs/Glossary/Client_hints">Client hints</a> usando o campo de cabeçalho Accept-CH ou um elemento HTML &lt;meta&gt; equivalente com atributo http-equiv ([HTML5]).</dd>
+ <dd>Os servidores podem dar suporte para o <a href="/pt-BR/docs/Glossary/Client_hints">Client hints</a> usando o campo de cabeçalho Accept-CH ou um elemento HTML &lt;meta&gt; equivalente com atributo http-equiv ([HTML5]).</dd>
  <dt>{{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}}</dt>
- <dd>Os servidores podem solicitar ao cliente que lembre-se do conjunto de <a href="https://wiki.developer.mozilla.org/docs/Glossary/Client_hints">Client hints</a> que o servidor dá suporte por um período de tempo especificado, para permitir a entrega de <a href="https://wiki.developer.mozilla.org/docs/Glossary/Client_hints">Client hints</a> em solicitações seguidas ao servidor de origem([RFC6454]).</dd>
+ <dd>Os servidores podem solicitar ao cliente que lembre-se do conjunto de <a href="/pt-BR/docs/Glossary/Client_hints">Client hints</a> que o servidor dá suporte por um período de tempo especificado, para permitir a entrega de <a href="/pt-BR/docs/Glossary/Client_hints">Client hints</a> em solicitações seguidas ao servidor de origem([RFC6454]).</dd>
  <dt>{{HTTPHeader("Content-DPR")}} {{experimental_inline}}</dt>
  <dd><span class="tlid-translation translation" lang="pt"><span title="">Um número que indica a proporção entre pixels físicos sobre pixels CSS da resposta de imagem selecionada.</span></span></dd>
  <dt>{{HTTPHeader("DPR")}} {{experimental_inline}}</dt>
@@ -177,7 +177,7 @@ translation_of: Web/HTTP/Headers
  <dt>{{HTTPHeader("Origin")}}</dt>
  <dd>Inddica de onde uma busca se origina.</dd>
  <dt>{{HTTPHeader("Timing-Allow-Origin")}}</dt>
- <dd>Especifica as origens que tem permissão para ver valores de atributos recuperados por meio de recursos da API de Tempo de Recurso (<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a>) que, de outra forma, seriam relatados como zero devido a restrições de origem cruzada (cross-origin restrictions).</dd>
+ <dd>Especifica as origens que tem permissão para ver valores de atributos recuperados por meio de recursos da API de Tempo de Recurso (<a href="/pt-BR/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a>) que, de outra forma, seriam relatados como zero devido a restrições de origem cruzada (cross-origin restrictions).</dd>
 </dl>
 
 <h2 id="Do_Not_Track">Do Not Track</h2>

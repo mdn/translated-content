@@ -1,17 +1,18 @@
 ---
-title: Basic Example
+title: XSLT の基本的な例
 slug: Web/API/XSLTProcessor/Basic_Example
 tags:
   - XSLT
 translation_of: Web/API/XSLTProcessor/Basic_Example
 ---
-<div>{{英語版章題("Basic Example")}}</div>
-<h2 id=".E5.9F.BA.E6.9C.AC.E7.9A.84.E3.81.AA.E4.BE.8B" name=".E5.9F.BA.E6.9C.AC.E7.9A.84.E3.81.AA.E4.BE.8B">基本的な例</h2>
-<p>最初の例は、ブラウザで XSLT 変換の設定の基本を実演します。 この例は、人が読むことのできる書式で書かれた記事についての情報 (タイトル、著者の一覧、本文) を含む XML ドキュメントを取得します。</p>
-<p>図 1 は基本的な XSLT の例のソースです。XML ドキュメント (example.xml) は記事についての情報を含んでいます。<code>?xml-stylesheet?</code> で処理を指示すると、その href 属性を通して XSLT スタイルシートへリンクします。</p>
+<h2 id="Basic_Example">基本的な例</h2>
+
+<p>最初の例は、ブラウザーで XSLT 変換の設定の基本を実演します。 この例は、人が読むことのできる書式で書かれた記事についての情報 (タイトル、著者の一覧、本文) を含む XML 文書を取得します。</p>
+<p>図 1 は基本的な XSLT の例のソースです。 XML 文書 (example.xml) は記事についての情報を含んでいます。 <code>?xml-stylesheet?</code> で処理を指示すると、その href 属性を通して XSLT スタイルシートへリンクします。</p>
 <p>XSLT スタイルシートは、最終的な出力を生成するためのすべてのテンプレートを含む、<code>xsl:stylesheet</code> 要素で開始します。図 1 の例には二つのテンプレートがあります。一つはルートノードに対応し、一つは Author ノードに対応します。ルートノードが出力する記事のタイトルにテンプレートが一致すると、(<code>apply-templates</code> を通して) Authors ノードの子の、すべての Author ノードに対応するテンプレートが処理されます。</p>
+
 <p>図 1 : 簡単な XSLT の例</p>
-<p>XML ドキュメント (example.xml) :</p>
+<p>XML 文書 (example.xml) :</p>
 
 <pre class="brush:xml">&lt;?xml version="1.0"?&gt;
 &lt;?xml-stylesheet type="text/xsl" href="example.xsl"?&gt;
@@ -41,9 +42,10 @@ translation_of: Web/API/XSLTProcessor/Basic_Example
   &lt;/xsl:template&gt;
 
 &lt;/xsl:stylesheet&gt;</pre>
-<p>ブラウザの出力:</p>
+
+<p>ブラウザーの出力:</p>
+
 <pre>Article - My Article
 Authors:
 - Mr. Foo
-- Mr. Bar
-</pre>
+- Mr. Bar</pre>

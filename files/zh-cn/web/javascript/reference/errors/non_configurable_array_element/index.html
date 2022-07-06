@@ -22,13 +22,13 @@ TypeError: Cannot delete property '2' of [object Array] (Chrome)
 
 <p>这个错误提示发生于当试图<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#Shortening_an_array">缩短一个数组的长度</a>的时候，其中有元素是不可配置的（<a href="/en-US/docs/Web/JavaScript/Data_structures#Properties">non-configurable</a>）。正常情况下，缩短数组的长度，则超出限度的元素会被删除，而这里指的是这种操作失效的情况。</p>
 
-<p><code><font face="Open Sans, arial, x-locale-body, sans-serif"> </font>configurable</code>  特性控制着属性是否可以从对象中删除，以及它的特性（除了 writable 之外）是否可以发生改变。</p>
+<p><code>configurable</code>  特性控制着属性是否可以从对象中删除，以及它的特性（除了 writable 之外）是否可以发生改变。</p>
 
 <p>通常，使用<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Syntax">数组初始化语句</a>创建的对象是可配置的，而通过 {{jsxref("Object.defineProperty()")}} 创建的属性，默认则是不可配置的。</p>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="通过_Object.defineProperty_创建的不可配置属性"><code><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif">通过 </font>Object.defineProperty 创建的不可配置属性</code></h3>
+<h3 id="通过_Object.defineProperty_创建的不可配置属性"><code>通过 Object.defineProperty 创建的不可配置属性</code></h3>
 
 <p>使用 {{jsxref("Object.defineProperty()")}} 且在没有明确将属性设定为可配置的情况下，默认可以创建不可配置属性。</p>
 

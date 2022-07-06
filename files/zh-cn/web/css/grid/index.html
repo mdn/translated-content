@@ -7,7 +7,7 @@ tags:
   - CSS Property
 translation_of: Web/CSS/grid
 ---
-<p><strong><code>grid</code></strong> 是一个CSS简写属性，可以用来设置以下属性：<br>
+<p><strong><code>grid</code></strong> 是一个 CSS 简写属性，可以用来设置以下属性：<br>
  显式网格属性 {{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-areas")}}，<br>
  隐式网格属性 {{cssxref("grid-auto-rows")}}、{{cssxref("grid-auto-columns")}} 和  {{cssxref("grid-auto-flow")}}，<br>
  间距属性 {{cssxref("grid-column-gap")}} 和 {{cssxref("grid-row-gap")}}。</p>
@@ -57,10 +57,10 @@ grid: unset;
  <dt><code>&lt;'grid-template'&gt;</code></dt>
  <dd>定义了 {{cssxref("grid-template")}}，其包含 {{cssxref("grid-template-columns")}}，{{cssxref("grid-template-rows")}} 和 {{cssxref("grid-template-areas")}}。</dd>
  <dt><code>&lt;'grid-template-rows'&gt; / [ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-columns'&gt;?</code></dt>
- <dd>通过 {{cssxref("grid-template-rows")}} 属性显式设置行轨道来设置自动流（{{cssxref("grid-template-columns")}} 属性设为 <code>none</code>），并通过 {{cssxref("grid-auto-columns")}} 明确该如何自动重复列轨道（同时{{cssxref("grid-auto-rows")}}属性设为 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.498039);">auto</span></font>）。{{cssxref("grid-auto-flow")}} 属性也被相应的设置为 <code>column</code>，并可附有 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.498039);">dense</span></font>。</dd>
+ <dd>通过 {{cssxref("grid-template-rows")}} 属性显式设置行轨道来设置自动流（{{cssxref("grid-template-columns")}} 属性设为 <code>none</code>），并通过 {{cssxref("grid-auto-columns")}} 明确该如何自动重复列轨道（同时{{cssxref("grid-auto-rows")}}属性设为 auto）。{{cssxref("grid-auto-flow")}} 属性也被相应的设置为 <code>column</code>，并可附有 dense。</dd>
  <dd>所有其余 <code>grid</code> 次级属性被重置为初始值。</dd>
  <dt><code>[ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-rows'&gt;? / &lt;'grid-template-columns'&gt;</code></dt>
- <dd>通过 {{cssxref("grid-template-columns")}} 属性显式设置列轨道来设置自动流（{{cssxref("grid-template-rows")}} 属性设为 <code>none</code>），并通过 {{cssxref("grid-auto-rows")}} 明确该如何自动重复行轨道（同时{{cssxref("grid-auto-columns")}}属性设为 <code>auto</code>）。{{cssxref("grid-auto-flow")}} 属性也被相应的设置为 <code>row</code>，并可附有 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.498039);">dense</span></font>。</dd>
+ <dd>通过 {{cssxref("grid-template-columns")}} 属性显式设置列轨道来设置自动流（{{cssxref("grid-template-rows")}} 属性设为 <code>none</code>），并通过 {{cssxref("grid-auto-rows")}} 明确该如何自动重复行轨道（同时{{cssxref("grid-auto-columns")}}属性设为 <code>auto</code>）。{{cssxref("grid-auto-flow")}} 属性也被相应的设置为 <code>row</code>，并可附有 dense。</dd>
  <dd>所有其余 <code>grid</code> 次级属性被重置为初始值。</dd>
 </dl>
 
@@ -128,12 +128,12 @@ grid: unset;
 <h2 id="参见">参见</h2>
 
 <ul>
- <li>相关CSS属性：{{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}</li>
+ <li>相关 CSS 属性：{{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}</li>
  <li><em>网格布局指南：<a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
  <li><em>网格布局指南：</em><em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Grid_definition_shorthands">Grid template areas - Grid definition shorthands</a></em></li>
 </ul>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
  <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>

@@ -14,7 +14,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/proxy
 
 <p>Google Chrome では<a href="https://developer.chrome.com/extensions/proxy"> 同じく"proxy"という拡張機能API</a> が提供されていて、その機能はこの API と似ていて、拡張機能はプロキシポリシーを使うことができます。しかし、Chrome API の設計はこの API とまったく違います。Chrome の API では拡張機能は PAC ファイルを定義できて、明示的なプロキシルールも定義できます。このため拡張機能 PAC ファイルも使用できて、この API は PAC ファイルアプローチのみをサポートします。この API は Chrome <code>proxy</code> API と互換性がないため、この API は <code>browser</code> 名前空間のみで利用できます。</p>
 
-<p>この API を使うには、"proxy" <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>が必要です。</p>
+<p>この API を使うには、"proxy" <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>が必要です。</p>
 
 <h2 id="Communicating_with_PAC_files" name="Communicating_with_PAC_files">PAC ファイルと通信する</h2>
 
@@ -53,7 +53,7 @@ browser.runtime.onMessage.addListener((message) =&gt; {
 
 <h3 id="FindProxyForURL()_return_value" name="FindProxyForURL()_return_value">FindProxyForURL() return value</h3>
 
-<p>The standard <code>FindProxyForURL()</code> <a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file#Return_value_format">returns a string</a>. In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 <em>only</em>, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.</p>
+<p>The standard <code>FindProxyForURL()</code> <a href="/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file#Return_value_format">returns a string</a>. In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 <em>only</em>, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.</p>
 
 <p>From Firefox 57 onwards, <code>FindProxyForURL()</code> may still return a string, but may alternatively (and preferably) return an array of objects. Each object has the following properties:</p>
 

@@ -209,7 +209,7 @@ var obj = {
 obj.b(); // imprime undefined, Window {...} (ou o objeto global)
 obj.c(); // imprime 10, Object {...}</code></pre>
 
-<p><em>Arrow functions</em> não tem o próprio <code>this</code>. Outro exmemplo envolvendo {{jsxref("Object.defineProperty()")}}:</p>
+<p><em>Arrow functions</em> não tem o próprio <code>this</code>. Outro exemplo envolvendo {{jsxref("Object.defineProperty()")}}:</p>
 
 <pre><code>'use strict';
 
@@ -253,7 +253,7 @@ var func = (x, y) =&gt; { return x + y; };
 
 <h2 id="Retornando_objetos_literais">Retornando objetos literais</h2>
 
-<p>Tenha em mente que retornar objetos literais usando a sintaxe de corpo conciso (<em>concise body</em>) <code>params =&gt; {object:literal}</code> não funcionará como experado.</p>
+<p>Tenha em mente que retornar objetos literais usando a sintaxe de corpo conciso (<em>concise body</em>) <code>params =&gt; {object:literal}</code> não funcionará como esperado.</p>
 
 <pre><code>var func = () =&gt; { foo: 1 };
 // Chamar func() retornará undefined!
@@ -276,7 +276,7 @@ var func = () =&gt; { foo: function() {} };
 
 <pre><code>var func = (a, b, c)
            =&gt; 1;
-// SyntaxError (Erro de sintaxe): experada expressão, mas obteve '=&gt;'</code></pre>
+// SyntaxError (Erro de sintaxe): esperada expressão, mas obteve '=&gt;'</code></pre>
 
 <p>Entretanto, isto pode ser corrigido ao usar parênteses ou colocar a quebra de linha dentro dos argumentos como visto abaixo para garantir que o código permaneça bonito e leve.</p>
 
@@ -373,11 +373,7 @@ setTimeout( () =&gt; {
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_com_Navegadores">Compatibilidade com Navegadores</h2>
-
-<div class="hidden">
-<p>A tabela de compatibilidade nesta página é gerada de dados estruturados. Se você quiser contribuir com os dados, por favor verifique <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> e nos mande um <em>pull request</em>.</p>
-</div>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <div>{{Compat("javascript.functions.arrow_functions")}}</div>
 

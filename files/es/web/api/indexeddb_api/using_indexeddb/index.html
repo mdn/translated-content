@@ -128,7 +128,7 @@ request.onsuccess = function(event) {
 
 <h3 id="Creación_o_actualización_de_la_versión_de_la_base_de_datos">Creación o actualización de la versión de la base de datos</h3>
 
-<p>Cuando se crea una nueva base de datos o se aumenta el número de versión de una base de datos existente (mediante la especificación de un número de versión más alto de lo que hizo antes, en {{anch ("Cómo abrir una base de datos")}}), el evento onupgradeneeded se activará y un objeto <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> será pasado a cualquier controlador de eventos <code>onversionchange</code> establecido en <code>request.result</code> (es decir, db en el ejemplo). En el controlador para el evento <code>upgradeneeded</code>, se debe crear los almacenes de objetos necesarios para esta versión de la base de datos:</p>
+<p>Cuando se crea una nueva base de datos o se aumenta el número de versión de una base de datos existente (mediante la especificación de un número de versión más alto de lo que hizo antes, en <a href="#cómo_abrir_una_base_de_datos">Cómo abrir una base de datos</a>), el evento onupgradeneeded se activará y un objeto <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> será pasado a cualquier controlador de eventos <code>onversionchange</code> establecido en <code>request.result</code> (es decir, db en el ejemplo). En el controlador para el evento <code>upgradeneeded</code>, se debe crear los almacenes de objetos necesarios para esta versión de la base de datos:</p>
 
 <pre class="brush:js;">// Este evento solamente está implementado en navegadores recientes
 request.onupgradeneeded = function(event) {
@@ -321,7 +321,7 @@ for (var i in customerData) {
   };
 }</pre>
 
-<p>The <code>result</code> of a request generated from a call to <code>add()</code> is the key of the value that was added. So in this case, it should equal the <code>ssn</code> property of the object that was added, since the object store uses the <code>ssn</code> property for the key path. Note that the <code>add()</code> function requires that no object already be in the database with the same key. If you're trying to modify an existing entry, or you don't care if one exists already, you can use the <code>put()</code> function, as shown below in the {{ anch("Updating an entry in the database") }} section.</p>
+<p>The <code>result</code> of a request generated from a call to <code>add()</code> is the key of the value that was added. So in this case, it should equal the <code>ssn</code> property of the object that was added, since the object store uses the <code>ssn</code> property for the key path. Note that the <code>add()</code> function requires that no object already be in the database with the same key. If you're trying to modify an existing entry, or you don't care if one exists already, you can use the <code>put()</code> function, as shown below in the <a href="#updating_an_entry_in_the_database">Updating an entry in the database</a> section.</p>
 
 <h3 id="Extracción_de_datos_de_la_base_de_datos">Extracción de datos de la base de datos</h3>
 
@@ -1285,21 +1285,21 @@ input {
 
 <ul>
  <li><a href="/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB API Reference</a></li>
- <li><a class="external" href="http://www.w3.org/TR/IndexedDB/" title="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
  <li><a href="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome" title="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">Using IndexedDB in chrome</a></li>
 </ul>
 
 <p>Tutorials</p>
 
 <ul>
- <li><a class="external" href="http://www.html5rocks.com/tutorials/indexeddb/todo/" title="http://www.html5rocks.com/tutorials/indexeddb/todo/">A simple TODO list using HTML5 IndexedDB</a><span class="external">. {{Note("This tutorial is based on an old version of the specification and does not work on up-to-date browsers - it still uses the removed <code>setVersion()</code> method.") }}</span></li>
- <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/" title="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
+ <li><a class="external" href="http://www.html5rocks.com/tutorials/indexeddb/todo/">A simple TODO list using HTML5 IndexedDB</a><span class="external">. {{Note("This tutorial is based on an old version of the specification and does not work on up-to-date browsers - it still uses the removed <code>setVersion()</code> method.") }}</span></li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
 </ul>
 
 <p>Related articles</p>
 
 <ul>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx" title="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
+ <li><a class="external" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
 </ul>
 
 <p>Firefox</p>

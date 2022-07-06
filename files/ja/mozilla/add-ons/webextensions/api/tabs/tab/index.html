@@ -25,11 +25,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
  <dt><code>autoDiscardable</code> {{optional_inline}}</dt>
  <dd><code>boolean</code>. Whether the tab can be discarded automatically by the browser when resources are low.</dd>
  <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
- <dd><code>string</code>. タブのクッキーストア。If different tabs can have different cookie stores (for example, to support <a href="https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers">contextual identity</a>), you can pass this as the <code>storeId</code> option into various methods of the {{WebExtAPIRef("cookies")}} API, to set and get cookies associated with this tab's cookie store. Only present if the extension has the <code>"cookies"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
+ <dd><code>string</code>. タブのクッキーストア。If different tabs can have different cookie stores (for example, to support <a href="https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers">contextual identity</a>), you can pass this as the <code>storeId</code> option into various methods of the {{WebExtAPIRef("cookies")}} API, to set and get cookies associated with this tab's cookie store. Only present if the extension has the <code>"cookies"</code> <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
  <dt><code>discarded</code> {{optional_inline}}</dt>
  <dd><code>boolean</code>. タブが破棄されたか。 A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.</dd>
  <dt><code>favIconUrl</code> {{optional_inline}}</dt>
- <dd><code>string</code>. タブのfaviconのURL。Only present if the extension has the <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>. It may also be an empty string if the tab is loading.</dd>
+ <dd><code>string</code>. タブのfaviconのURL。Only present if the extension has the <code>"tabs"</code> <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>. It may also be an empty string if the tab is loading.</dd>
  <dt><code>height</code> {{optional_inline}}</dt>
  <dd><code>integer</code>. タブの高さのピクセル値。</dd>
  <dt><code>hidden</code></dt>
@@ -47,9 +47,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
  <dt><code>index</code></dt>
  <dd><code>integer</code>. 0を底としたウィンドウの中のタブのインデックス。</dd>
  <dt><code>isArticle</code></dt>
- <dd><code>boolean</code>. Trueなら<a href="/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode">rendered in Reader Mode</a>で閲覧可能、falseならそれ以外。</dd>
+ <dd><code>boolean</code>. Trueなら<a href="/ja/Add-ons/WebExtensions/API/tabs/toggleReaderMode">rendered in Reader Mode</a>で閲覧可能、falseならそれ以外。</dd>
  <dt><code>isInReaderMode</code></dt>
- <dd><code>boolean</code>. Trueなら<a href="/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode">rendered in Reader Mode</a>で閲覧中、falseならそれ以外。</dd>
+ <dd><code>boolean</code>. Trueなら<a href="/ja/Add-ons/WebExtensions/API/tabs/toggleReaderMode">rendered in Reader Mode</a>で閲覧中、falseならそれ以外。</dd>
  <dt><code>lastAccessed</code></dt>
  <dd><code>double</code>. タブが最後にアクセスされた時刻(単位: <a class="external external-icon" href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>)。</dd>
  <dt><code>mutedInfo</code> {{optional_inline}}</dt>
@@ -67,9 +67,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
  <dt><code>successorId</code> {{optional_inline}}</dt>
  <dd><code>integer</code> タブの後継者のID。</dd>
  <dt><code>title</code> {{optional_inline}}</dt>
- <dd><code>string</code>. タブのタイトル。Only present if the extension has the <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
+ <dd><code>string</code>. タブのタイトル。Only present if the extension has the <code>"tabs"</code> <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
  <dt><code>url</code> {{optional_inline}}</dt>
- <dd><code>string</code>. タブが表示しているドキュメントのURL。Only present if the extension has the <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
+ <dd><code>string</code>. タブが表示しているドキュメントのURL。Only present if the extension has the <code>"tabs"</code> <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
  <dt><code>width</code> {{optional_inline}}</dt>
  <dd><code>integer</code>. タブの横幅のピクセル値。</dd>
  <dt><code>windowId</code></dt>
@@ -82,8 +82,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 </dl>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("webextensions.api.tabs.Tab", 10)}}</p>
 

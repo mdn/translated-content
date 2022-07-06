@@ -10,11 +10,11 @@ tags:
   - Reference
 translation_of: Web/API/MutationRecord
 ---
-<p><strong><code>MutationRecord</code></strong> とは、DOM に生じた個々の変更を表すオブジェクトです。このオブジェクトは {{domxref("MutationObserver")}} のコールバック関数に渡されます。</p>
+<div>{{APIRef("DOM")}}</div>
 
-<p>{{英語版章題("Properties")}}</p>
+<p><strong><code>MutationRecord</code></strong> は、 DOM に生じた個々の変更を表します。これは {{domxref("MutationObserver")}} のコールバック関数に渡されるオブジェクトです。</p>
 
-<h2 id="プロパティ">プロパティ</h2>
+<h2 id="Properties">プロパティ</h2>
 
 <table class="standard-table">
  <tbody>
@@ -30,35 +30,27 @@ translation_of: Web/API/MutationRecord
   </tr>
   <tr>
    <td>{{domxref("MutationRecord.target")}}</td>
-   <td><code>{{domxref("Node")}}</code></td>
-   <td>
-    <p>変更の影響を受けたノードを返します。戻り値は {{domxref("MutationRecord.type")}} に応じて以下のように変わります。</p>
+   <td>{{domxref("Node")}}</td>
+   <td>変更の影響を受けたノードを、 {{domxref("MutationRecord.type")}} に応じて返します。<br>
 
-    <p><code>attributes</code> の場合、属性が変更された要素となります。</p>
-
-    <p><code>characterData</code> の場合、<code>CharacterData</code> ノードとなります。</p>
-
-    <p><code>childList</code> の場合、子ノードが変更されたノードとなります。</p>
-   </td>
+    <code>attributes</code> の場合、属性が変更された要素となります。<br>
+    <code>characterData</code> の場合、<code>CharacterData</code> ノードとなります。<br>
+    <code>childList</code> の場合、子ノードが変更されたノードとなります。</td>
   </tr>
   <tr>
    <td>{{domxref("MutationRecord.addedNodes")}}</td>
-   <td><code>{{domxref("NodeList")}}</code></td>
-   <td>
-    <p>追加されたノードを返します。何もノードが追加されていなかった場合は、空の {{domxref("NodeList")}} が返されます。</p>
-   </td>
+   <td>{{domxref("NodeList")}}</td>
+   <td>追加されたノードを返します。何もノードが追加されていなかった場合は、空の {{domxref("NodeList")}} を返します。</td>
   </tr>
   <tr>
    <td>{{domxref("MutationRecord.removedNodes")}}</td>
-   <td><code>{{domxref("NodeList")}}</code></td>
-   <td>削除されたノードを返します。何もノードが削除されていなかった場合は、空の {{domxref("NodeList")}} が返されます。</td>
+   <td>{{domxref("NodeList")}}</td>
+   <td>削除されたノードを返します。何もノードが削除されていなかった場合は、空の {{domxref("NodeList")}} を返します。</td>
   </tr>
   <tr>
    <td>{{domxref("MutationRecord.previousSibling")}}</td>
-   <td><code>{{domxref("Node")}}</code></td>
-   <td>
-    <p>追加あるいは削除されたノードの直前にあるノード、もしくは <code>null</code> を返します。</p>
-   </td>
+   <td>{{domxref("Node")}}</td>
+   <td>追加あるいは削除されたノードの直前にあるノード、もしくは <code>null</code> を返します。</td>
   </tr>
   <tr>
    <td>{{domxref("MutationRecord.nextSibling")}}</td>
@@ -79,27 +71,26 @@ translation_of: Web/API/MutationRecord
    <td>{{domxref("MutationRecord.oldValue")}}</td>
    <td><code>String</code></td>
    <td>
-    <p>戻り値は {{domxref("MutationRecord.type")}} に応じて以下のように変わります。</p>
+    <p>返値は {{domxref("MutationRecord.type")}} に応じて以下のように変わります。<br>
+     <code>attributes</code> の場合、変更された属性の変更前の属性値となります。<br>
+     <code>characterData</code> の場合、変更されたノードの変更前のデータとなります。<br>
+     <code>childList</code> の場合、<code>null</code> となります。</p>
 
-    <p><code>attributes</code> の場合、変更された属性の変更前の属性値となります。</p>
-
-    <p><code>characterData</code> の場合、変更されたノードの変更前のデータとなります。</p>
-
-    <p><code>childList</code> の場合、<code>null</code> となります。</p>
+    <div class="note">
+    <p>なお、この機能が正常に動作するためには、 <code>MutationObserver</code> <a href="/ja/docs/Web/API/MutationObserver/observe">observe</a> メソッドの対応する <a href="/ja/docs/Web/API/MutationObserverInit">MutationObserverInit</a> 引数で、 <code>attributeOldValue</code> または <code>characterDataOldValue</code> が <code>true</code> に設定されている必要があります</p>
+    </div>
    </td>
   </tr>
  </tbody>
 </table>
 
-<p>{{英語版章題("Specifications")}}</p>
-
-<h2 id="Specifications" name="Specifications">仕様</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
   <tr>
    <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
+   <th scope="col">状態</th>
    <th scope="col">備考</th>
   </tr>
  </thead>
@@ -107,12 +98,11 @@ translation_of: Web/API/MutationRecord
   <tr>
    <td>{{SpecName('DOM WHATWG', '#mutationrecord', 'MutationRecord')}}</td>
    <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4', '#mutationrecord', 'MutationRecord')}}</td>
-   <td>{{ Spec2('DOM4') }}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>
+
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("api.MutationRecord")}}</p>

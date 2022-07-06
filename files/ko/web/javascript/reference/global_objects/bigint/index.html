@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>BigInt</code></strong>는 {{jsxref("Number")}} 원시 값이 안정적으로 나타낼 수 있는 최대치인 2<sup>53</sup> - 1보다 큰 정수를 표현할 수 있는 내장 객체입니다.</p>
+<p><strong><code>BigInt</code></strong>는 {{jsxref("Number")}} 원시 값이 안정적으로 나타낼 수 있는 최대치인 2^53 - 1보다 큰 정수를 표현할 수 있는 내장 객체입니다.</p>
 
 <h2 id="설명">설명</h2>
 
@@ -179,9 +179,9 @@ Boolean(12n)
 
 <dl>
  <dt>{{jsxref("BigInt.asIntN()")}}</dt>
- <dd>주어진 <code>BigInt</code>를 <code>-2<sup>width-1</sup></code>과 <code>2<sup>width-1</sup> - 1</code>의 범위로 자릅니다.</dd>
+ <dd>주어진 <code>BigInt</code>를 <code>-2^(width - 1)</code>과 <code>2^(width - 1) - 1</code>의 범위로 자릅니다.</dd>
  <dt>{{jsxref("BigInt.asUintN()")}}</dt>
- <dd>주어진 <code>BigInt</code>를 <code>0</code>과 <code>2<sup>width</sup> - 1</code>의 범위로 자릅니다.</dd>
+ <dd>주어진 <code>BigInt</code>를 <code>0</code>과 <code>2^width - 1</code>의 범위로 자릅니다.</dd>
 </dl>
 
 <h2 id="인스턴스_메서드">인스턴스 메서드</h2>
@@ -199,7 +199,7 @@ Boolean(12n)
 
 <h3 id="변환">변환</h3>
 
-<p><code>BigInt</code>를 {{jsxref("Number")}}로 변환하는 과정에서 정확도를 유실할 수 있으므로, 2<sup>53</sup>보다 큰 값을 예상할 수 있는 경우 <code>BigInt</code>만 사용하는 것이 좋습니다.</p>
+<p><code>BigInt</code>를 {{jsxref("Number")}}로 변환하는 과정에서 정확도를 유실할 수 있으므로, 2^53보다 큰 값을 예상할 수 있는 경우 <code>BigInt</code>만 사용하는 것이 좋습니다.</p>
 
 <h3 id="암호화">암호화</h3>
 

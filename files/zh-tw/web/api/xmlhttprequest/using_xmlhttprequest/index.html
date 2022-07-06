@@ -371,7 +371,7 @@ var AJAXSubmit = (function () {
               this.segments.push(fFilter(oField.name) + "=" + fFilter(oField.files[nFile++].name)));
         }
       } else if ((sFieldType !== "RADIO" &amp;&amp; sFieldType !== "CHECKBOX") || oField.checked) {
-        /* NOTE: this will submit _all_ submit buttons. Detecting the correct one is non-trivial. */
+        /* NOTE: this will submit _all_ submit buttons. Detecting the correct one is non-trivial. */
         /* field type is not FILE or is FILE but is empty */
         this.segments.push(
           this.technique === 3 ? /* enctype is multipart/form-data */

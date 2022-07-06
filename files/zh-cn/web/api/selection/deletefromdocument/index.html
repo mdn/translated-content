@@ -14,16 +14,16 @@ original_slug: Web/API/Selection/从Document中删除
 <p>The <strong><code>Selection.deleteFromDocument()</code></strong> method deletes the actual text being represented by a selection object from the document's DOM.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><em>sel</em>.deleteFromDocument()
 </pre>
 
-<h3 id="Parameters" name="Parameters">Parameters</h3>
+<h3 id="Parameters">Parameters</h3>
 
 <p><em>None.</em></p>
 
-<h2 id="Examples" name="Examples">Examples</h2>
+<h2 id="Examples">Examples</h2>
 
 <p>A user selects the (imaginary) text "ve two ea" from "Rabbits have two ears." on a web page. The user then clicks a button that executes the JavaScript snippet <code>window.getSelection().deleteFromDocument()</code>. The document's text becomes "Rabbits hars."</p>
 
@@ -49,59 +49,11 @@ original_slug: Web/API/Selection/从Document中删除
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
+{{Compat("api.Selection.deleteFromDocument")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>1.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("Selection")}}, the interface it belongs to.</li>

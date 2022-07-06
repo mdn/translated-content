@@ -25,9 +25,6 @@ translation_of: Web/JavaScript/Reference/Functions/set
 <dl>
  <dt><code>prop</code></dt>
  <dd>要绑定到给定函数的属性名。</dd>
-</dl>
-
-<dl>
  <dt><code>val</code></dt>
  <dd>用于保存尝试分配给<code>prop</code>的值的变量的一个别名。</dd>
  <dt>表达式</dt>
@@ -51,9 +48,9 @@ translation_of: Web/JavaScript/Reference/Functions/set
 
 <h2 id="示例">示例</h2>
 
-<h3 id="Example_Defining_a_getter_with_the_get_operator" name="Example:_Defining_a_getter_with_the_get_operator">在对象初始化时定义 setter</h3>
+<h3 id="Example_Defining_a_getter_with_the_get_operator">在对象初始化时定义 setter</h3>
 
-<p>这将定义一个对象 <code><font face="consolas, Liberation Mono, courier, monospace">language</font></code> 的伪属性<code>current</code>，当<code>current</code>被分配一个值时，将使用该值更新<code>log</code>：</p>
+<p>这将定义一个对象 <code>language</code> 的伪属性<code>current</code>，当<code>current</code>被分配一个值时，将使用该值更新<code>log</code>：</p>
 
 <pre class="brush: js">const language = {
   set current(name) {
@@ -70,7 +67,7 @@ console.log(language.log); // ['EN', 'FA']</pre>
 
 <p>请注意，<code>current</code>属性是未定义的，访问它时将会返回 <code>undefined</code>。</p>
 
-<h3 id="Example_Removing_a_setter_with_the_delete_operator" name="Example:_Removing_a_setter_with_the_delete_operator">用 <code>delete</code> 操作符移除一个 setter</h3>
+<h3 id="Example_Removing_a_setter_with_the_delete_operator">用 <code>delete</code> 操作符移除一个 setter</h3>
 
 <p>我们可以使用<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>操作符移除 setter。</p>
 
@@ -102,7 +99,7 @@ obj.foo = "baz";      // run the setter
 console.log(obj.baz); // "baz"
 </pre>
 
-<h2 id="规范"><span class="def"><span>规范</span></span></h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <thead>
@@ -119,11 +116,9 @@ console.log(obj.baz); // "baz"
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
 <p>{{Compat("javascript.functions.set")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/get">getter</a></li>

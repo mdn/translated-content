@@ -111,7 +111,7 @@ para.textContent = 'My computed font-size is ' +
 <h2 id="Notes" name="Notes">注</h2>
 
 <ul>
- <li>返された {{DOMxRef("CSSStyleDeclaration")}} オブジェクトは、 CSS プロパティの<em><strong>個別指定</strong></em>の名前のアクティブな値を含んでいます。例えば、 <code>border-bottom-width</code> の値は <code>border-width</code> や <code>border</code> などの<a href="/ja/docs/Web/CSS/Shorthand_properties">一括指定プロパティ名</a>ではアクセスできません。 <code>font-size</code> のような個別指定の名前だけで値を食えりするのが最も安全です。 <code>font</code> のような一括指定の名前では、ほとんどのブラウザーでは動作しません。</li>
+ <li>返された {{DOMxRef("CSSStyleDeclaration")}} オブジェクトは、 CSS プロパティの<em><strong>個別指定</strong></em>の名前のアクティブな値を含んでいます。例えば、 <code>border-bottom-width</code> の値は <code>border-width</code> や <code>border</code> などの<a href="/ja/docs/Web/CSS/Shorthand_properties">一括指定プロパティ名</a>ではアクセスできません。 <code>font-size</code> のような個別指定の名前だけで値を問い合わせるのが最も安全です。 <code>font</code> のような一括指定の名前では、ほとんどのブラウザーでは動作しません。</li>
  <li>CSS のプロパティ値は、 <code>getPropertyValue(propName)</code> API を使用してアクセスすることも、 <code>obj['z-index']</code> や <code>obj.zIndex</code>のようにオブジェクトに直接添字を指定してアクセスすることもできます。</li>
  <li><code>getComputedStyle</code> によって返される値は、{{CSSxRef("resolved_value", "解決値", "", 1)}}です。これらの値は通常、CSS 2.1 の{{CSSxRef("computed_value","計算値", "", 1)}}と同じですが、 <code>width</code>, <code>height</code>, <code>padding</code> のような古いプロパティの場合は、{{CSSxRef("used_value","使用値", "", 1)}}と同じになります。もともと CSS 2.0 では、<em>計算値</em>はカスケードと継承後のプロパティの「使用可能な」最終値として定義されていましたが、 CSS 2.1 ではレイアウトする前の値として再定義され、<em>使用値</em>はレイアウト後の値として再定義されています。 CSS 2.0 のプロパティでは、 <code>getComputedStyle</code> は計算値の古い意味を返しますが、現在は<strong>使用値</strong>と呼ばれています。レイアウト前の値とレイアウト後の値の違いの例として、 <code>width</code> や <code>height</code> のパーセント値の解像度があり、これらは<em>使用値</em>のみ同等のピクセル数に置き換えられます。</li>
  <li>返される値が意図的に不正確になる場合があります。「CSS History Leak」のセキュリティ問題を回避するために、ブラウザーは訪問したリンクの計算されたスタイルについて嘘をつき、ユーザーがリンク先の URL を訪問していないかのような値を返すことがあります。これがどのように実装されているかについては、 <a class="external" href="https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/">Plugging the CSS History Leak</a> と <a class="external" href="https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/">Privacy-related changes coming to CSS :visited</a> を参照してください。</li>
@@ -144,8 +144,6 @@ para.textContent = 'My computed font-size is ' +
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("api.Window.getComputedStyle")}}</p>
 

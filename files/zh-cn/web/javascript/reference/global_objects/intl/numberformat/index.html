@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Intl.NumberFormat是对语言敏感的格式化数字类的构造器类</code></strong></p>
+<p><strong><code>Intl.NumberFormat</code></strong> 是对语言敏感的格式化数字类的构造器类。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -21,18 +21,18 @@ Intl.NumberFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>
 <dl>
  <dt><code>locales</code></dt>
  <dd>
- <p>可选。缩写语言代码（BCP 47 language tag，例如: cmn-Hans-CN）的字符串或者这些字符串组成的数组. 关于参数 locales 的一般形式和解释请参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation" title="国际化的构造函数和其他构造函数的几个语言敏感的方法（可见See also）一样，使用同样的模式来识别语言区域和确定使用哪一种语言格式：他们都接收 locales 和 options 参数，使用 options.localeMatcher 属性指定的一个算法来对比应用请求的和支持的语言区域，来确定使用哪一个语言区域。">Intl page</a>. 下面的这些 Unicode 扩展键也是被允许的:</p>
+ <p>可选。缩写语言代码（BCP 47 language tag，例如: cmn-Hans-CN）的字符串或者这些字符串组成的数组. 关于参数 locales 的一般形式和解释请参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation" title="国际化的构造函数和其他构造函数的几个语言敏感的方法（可见See also）一样，使用同样的模式来识别语言区域和确定使用哪一种语言格式：他们都接收 locales 和 options 参数，使用 options.localeMatcher 属性指定的一个算法来对比应用请求的和支持的语言区域，来确定使用哪一个语言区域。">Intl page</a>. 下面的这些 Unicode 扩展键也是被允许的：</p>
 
- <p>译者注:下面扩展的使用方式是language[-scripts][-region]-u-nu-*,例如:zh-u-nu-hanidec(表示中文十进制数字) </p>
+ <p>译者注：下面扩展的使用方式是 language[-scripts][-region]-u-nu-*,例如:zh-u-nu-hanidec(表示中文十进制数字) </p>
 
  <dl>
   <dt><code>nu</code></dt>
-  <dd>要使用的编号系统。可能的值有: <code>"arab"</code>, <code>"arabext"</code>, <code>"bali"</code>, <code>"beng"</code>, <code>"deva"</code>, <code>"fullwide"</code>, <code>"gujr"</code>, <code>"guru"</code>, <code>"hanidec"(中文十进制数字)</code>, <code>"khmr"</code>, <code>"knda"</code>, <code>"laoo"</code>, <code>"latn"</code>, <code>"limb"</code>, <code>"mlym"</code>, <code>"mong"</code>, <code>"mymr"</code>, <code>"orya"</code>, <code>"tamldec"</code>, <code>"telu"</code>, <code>"thai"</code>, <code>"tibt"</code>.</dd>
+  <dd>要使用的编号系统。可能的值有：<code>"arab"</code>, <code>"arabext"</code>, <code>"bali"</code>, <code>"beng"</code>, <code>"deva"</code>, <code>"fullwide"</code>, <code>"gujr"</code>, <code>"guru"</code>, <code>"hanidec"(中文十进制数字)</code>, <code>"khmr"</code>, <code>"knda"</code>, <code>"laoo"</code>, <code>"latn"</code>, <code>"limb"</code>, <code>"mlym"</code>, <code>"mong"</code>, <code>"mymr"</code>, <code>"orya"</code>, <code>"tamldec"</code>, <code>"telu"</code>, <code>"thai"</code>, <code>"tibt"</code>.</dd>
  </dl>
  </dd>
  <dt><code>options</code></dt>
  <dd>
- <p>可选. 包含一些或所有的下面属性的类:</p>
+ <p>可选。包含一些或所有的下面属性的类：</p>
 
  <ul>
   <li><code>“decimal”</code> 用于纯数字格式；</li>
@@ -43,43 +43,36 @@ Intl.NumberFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>
 
  <dl>
   <dt><code>localeMatcher</code></dt>
-  <dd>使用的 local 的匹配算法. 可能的值有 <code>"lookup</code> 和 <code>"best fit"</code>; 默认值是 <code>"best fit"</code>. 有关此选项更多的信息, 请参见 {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
+  <dd>使用的 local 的匹配算法。可能的值有 <code>"lookup</code> 和 <code>"best fit"</code>; 默认值是 <code>"best fit"</code>. 有关此选项更多的信息，请参见 {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
   <dt><code>style</code></dt>
   <dd>要使用的格式样式，默认为 “decimal”。</dd>
   <dt><code>numberingSystem</code> {{Experimental_inline}}</dt>
   <dd>编号系统。可能的值包括："<code>arab</code>"，"<code>arabext</code>"，" <code>bali</code>"，"<code>beng</code>"，"<code>deva</code>"，"<code>fullwide</code>"，" <code>gujr</code>"，"<code>guru</code>"，"<code>hanidec</code>"，"<code>khmr</code>"，" <code>knda</code>"，"<code>laoo</code>", "<code>latn</code>"，"<code>limb</code>"，"<code>mlym</code>"，" <code>mong</code>"，"<code>mymr</code>"，"<code>orya</code>"，"<code>tamldec</code>"，" <code>telu</code>"，"<code>thai</code>"，"<code>tibt</code>"。</dd>
   <dt><code>unit</code>{{Experimental_inline}}</dt>
-  <dd><code>unit</code> 格式中使用的单位，可能的值为在 <a href="http://unicode.org/reports/tr35/tr35-general.html#Unit_Elements" rel="nofollow">UTS #35, Part 2, Section 6</a> 定义的核心单元标识符。已从<a href="https://github.com/unicode-org/cldr/blob/master/common/validity/unit.xml">完整列表</a>中选择了一个<a href="https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier">单位子集</a>以用于ECMAScript。可以将成对的简单单位与 <code>“ -per-”</code> 连接以组成一个复合单位。没有默认值；如果 <code>style</code> 为 <code>“unit”</code>，必须提供<code>unit</code> 属性。</dd>
+  <dd><code>unit</code> 格式中使用的单位，可能的值为在 <a href="http://unicode.org/reports/tr35/tr35-general.html#Unit_Elements" rel="nofollow">UTS #35, Part 2, Section 6</a> 定义的核心单元标识符。已从<a href="https://github.com/unicode-org/cldr/blob/master/common/validity/unit.xml">完整列表</a>中选择了一个<a href="https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier">单位子集</a>以用于 ECMAScript。可以将成对的简单单位与 <code>“ -per-”</code> 连接以组成一个复合单位。没有默认值；如果 <code>style</code> 为 <code>“unit”</code>，必须提供<code>unit</code> 属性。</dd>
   <dt><code>unitDisplay</code>{{Experimental_inline}}</dt>
-  <dd><code>unit</code> 格式化中使用的单位格式化样式，默认值为“ short”。</dd>
-  <dd>
-  <ul>
-   <li><code>“long”</code> (e.g., <code>16 litres</code>)</li>
-   <li><code>“short“</code> (e.g., <code>16 l</code>)</li>
-   <li><code>”narrow“</code> (e.g., <code>16l</code>)</li>
-  </ul>
-  </dd>
+  <dd><code>unit</code> 格式化中使用的单位格式化样式，默认值为“ short”。<code>“long”</code> (e.g., <code>16 litres</code>)、<code>“short“</code> (e.g., <code>16 l</code>)、<code>”narrow“</code> (e.g., <code>16l</code>)</dd>
   <dt><code>currency</code></dt>
-  <dd>在货币格式化中使用的货币符号. 可能的值是<em>ISO</em>的货币代码 (the ISO 4217 currency codes,) 例如 <code>"USD"</code> 表示美元, <code>"EUR"</code> 表示欧元, 或者 <code>"CNY"是人民币</code> — 更多请参考 <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">Current currency &amp; funds code list</a>。没有默认值，如果 <code>style</code> 是 <code>“currency”</code>，必须提 <code>currency</code> 属性.</dd>
+  <dd>在货币格式化中使用的货币符号. 可能的值是<em>ISO</em>的货币代码 (the ISO 4217 currency codes,) 例如 <code>"USD"</code> 表示美元，<code>"EUR"</code> 表示欧元，或者 <code>"CNY"是人民币</code> — 更多请参考 <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">Current currency &amp; funds code list</a>。没有默认值，如果 <code>style</code> 是 <code>“currency”</code>，必须提 <code>currency</code> 属性。</dd>
   <dt><code>currencyDisplay</code></dt>
-  <dd>如何在货币格式化中显示货币. 可能的值有 <code>"symbol"</code> 表示使用本地化的货币符号，例如 €, <code>"code"</code> 表示使用国际标准组织货币代码, <code>"name"</code> 表示使用本地化的货币名称，如 <code>"dollar"</code>; 默认值是 <code>"symbol"</code>.</dd>
+  <dd>如何在货币格式化中显示货币。可能的值有 <code>"symbol"</code> 表示使用本地化的货币符号，例如 €, <code>"code"</code> 表示使用国际标准组织货币代码，<code>"name"</code> 表示使用本地化的货币名称，如 <code>"dollar"</code>; 默认值是 <code>"symbol"</code>.</dd>
   <dt><code>useGrouping</code></dt>
   <dd>是否使用分组分隔符，如千位分隔符或千/万/亿分隔符。可能的值是 true 和 false，默认值是 true。</dd>
  </dl>
 
- <p>下面的属性分为两组：<code>minimumintegerdigits</code>，<code>minimumfractiondigits</code>，<code>maximumfractiondigits</code> 作为一组，<code>minimumsignificantdigits</code> 和 <code>maximumsignificantdigits</code> 作为一组。如果定义了第二组中的任意一个属性,则忽略第一组的设置.</p>
+ <p>下面的属性分为两组：<code>minimumintegerdigits</code>，<code>minimumfractiondigits</code>，<code>maximumfractiondigits</code> 作为一组，<code>minimumsignificantdigits</code> 和 <code>maximumsignificantdigits</code> 作为一组。如果定义了第二组中的任意一个属性，则忽略第一组的设置。</p>
 
  <dl>
   <dt><code>minimumIntegerDigits</code></dt>
-  <dd>使用的整数数字的最小数目.可能的值是从1到21,默认值是1.</dd>
+  <dd>使用的整数数字的最小数目。可能的值是从 1 到 21，默认值是 1.</dd>
   <dt><code>minimumFractionDigits</code></dt>
-  <dd>使用的小数位数的最小数目.可能的值是从 0 到 20；默认为普通的数字和百分比格式为 0；默认为货币格式是由 <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">ISO 4217 currency code list</a>  提供 (如果列表中没有提供则值为 2)。</dd>
+  <dd>使用的小数位数的最小数目。可能的值是从 0 到 20；默认为普通的数字和百分比格式为 0；默认为货币格式是由 <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">ISO 4217 currency code list</a>  提供 (如果列表中没有提供则值为 2)。</dd>
   <dt><code>maximumFractionDigits</code></dt>
-  <dd>使用的小数位数的最大数目。可能的值是从 0 到 20；纯数字格式的默认值是<code>minimumfractiondigits</code> 和 3 中大的那一个；货币格式默认值是<code>minimumfractiondigits</code> 和 <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">ISO 4217 currency code list</a> 中大的那一个(如果列表中没有提供则值为2)；百分比格式默认值是 <code>minimumfractiondigits</code> 和 0 中大的那一个。</dd>
+  <dd>使用的小数位数的最大数目。可能的值是从 0 到 20；纯数字格式的默认值是<code>minimumfractiondigits</code> 和 3 中大的那一个；货币格式默认值是<code>minimumfractiondigits</code> 和 <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">ISO 4217 currency code list</a> 中大的那一个 (如果列表中没有提供则值为 2)；百分比格式默认值是 <code>minimumfractiondigits</code> 和 0 中大的那一个。</dd>
   <dt><code>minimumSignificantDigits</code></dt>
-  <dd>使用的有效数字的最小数目。可能的值是从1到21；默认值是1。</dd>
+  <dd>使用的有效数字的最小数目。可能的值是从 1 到 21；默认值是 1。</dd>
   <dt><code>maximumSignificantDigits</code></dt>
-  <dd>使用的有效数字的最大数量。可能的值是从1到21；默认是 21.</dd>
+  <dd>使用的有效数字的最大数量。可能的值是从 1 到 21；默认是 21.</dd>
   <dt><code>notation</code>{{Experimental_inline}}</dt>
   <dd>该号码应显示的格式，默认为 <code>“standard”</code>。
   <ul>
@@ -110,20 +103,20 @@ Intl.NumberFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>
 
 <dl>
  <dt>{{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}</dt>
- <dd>返回一个数组包含的那些被提供的可以被支持的locales，运行时的默认的 locale 不会出现在该数组中.</dd>
+ <dd>返回一个数组包含的那些被提供的可以被支持的 locales，运行时的默认的 locale 不会出现在该数组中。</dd>
 </dl>
 
 <h2 id="NumberFormat_实例"><code>NumberFormat</code> 实例</h2>
 
 <h3 id="属性_2">属性</h3>
 
-<p><code>NumberFormat</code> 实例继承一下原型的属性:</p>
+<p><code>NumberFormat</code> 实例继承一下原型的属性：</p>
 
 <div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Properties')}}</div>
 
 <h3 id="方法_2">方法</h3>
 
-<p><code>NumberFormat</code> 实例继承一下原型的方法:</p>
+<p><code>NumberFormat</code> 实例继承一下原型的方法：</p>
 
 <div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Methods')}}</div>
 
@@ -131,7 +124,7 @@ Intl.NumberFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>
 
 <h3 id="基本用法">基本用法</h3>
 
-<p>在不指定locale的基本用法中, 一个使用默认locale和默认options的字符串被返回.</p>
+<p>在不指定 locale 的基本用法中，一个使用默认 locale 和默认 options 的字符串被返回。</p>
 
 <pre class="brush: js">var number = 3500;
 
@@ -145,7 +138,7 @@ console.log(new Intl.NumberFormat().format(number));
 
 <pre class="brush: js">var number = 123456.789;
 
-// 德语使用逗号作为小数点,使用.作为千位分隔符
+// 德语使用逗号（<code>,</code>）作为小数点，使用句号（<code>.</code>）作为千位分隔符
 console.log(new Intl.NumberFormat('de-DE').format(number));
 // → 123.456,789
 
@@ -157,18 +150,18 @@ console.log(new Intl.NumberFormat('ar-EG').format(number));
 console.log(new Intl.NumberFormat('en-IN').format(number));
 // → 1,23,456.789
 
-// 通过编号系统中的nu扩展键请求, 例如<code>中文十进制数字</code>
+// 通过编号系统中的 nu 扩展键请求，例如：中文十进制数字
 console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(number));
 // → 一二三,四五六.七八九
 
-//当请求的语言不被支持,例如巴里,包含一个回滚语言印尼,这时候就会使用印尼语
+//当请求的语言不被支持，例如巴里，包含一个回滚语言印尼，这时候就会使用印尼语
 console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 // → 123.456,789
 </pre>
 
 <h3 id="可用的选项">可用的选项</h3>
 
-<p>可用的选项参数,返回的值可以被设置成想要的形式：</p>
+<p>可用的选项参数，返回的值可以被设置成想要的形式：</p>
 
 <pre class="brush: js">var number = 123456.789;
 
@@ -186,7 +179,7 @@ console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).form
 
 </pre>
 
-<h3 id="Using_notation">Using <font face="consolas, Liberation Mono, courier, monospace">notation</font></h3>
+<h3 id="Using_notation">Using <code>notation</code></h3>
 
 <pre><code>console.log(new Intl.NumberFormat('en-US', { notation: "scientific" }).format(987654321));
 // → 9.877E8
@@ -238,9 +231,9 @@ console.log(new Intl.NumberFormat('en-GB', { notation: "compact" , compactDispla
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div></div>
 
-<div id="compat-mobile">{{Compat("javascript.builtins.Intl.NumberFormat")}}</div>
+
+<div>{{Compat("javascript.builtins.Intl.NumberFormat")}}</div>
 
 <h2 id="参见">参见</h2>
 

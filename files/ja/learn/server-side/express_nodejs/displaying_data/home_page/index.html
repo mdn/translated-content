@@ -9,7 +9,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 
 <h2 id="Route">Route</h2>
 
-<p>We created our index page routes in a <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes">previous tutorial.</a> As a reminder, all the route functions are defined in <strong>/routes/catalog.js</strong>:</p>
+<p>We created our index page routes in a <a href="/ja/docs/Learn/Server-side/Express_Nodejs/routes">previous tutorial.</a> As a reminder, all the route functions are defined in <strong>/routes/catalog.js</strong>:</p>
 
 <pre class="brush: js ">// GET catalog home page.
 router.get('/', book_controller.index);  //This actually maps to /catalog/ because we import the route with a /catalog prefix</pre>
@@ -27,7 +27,7 @@ router.get('/', book_controller.index);  //This actually maps to /catalog/ becau
 <p>The index controller function needs to fetch information about how many <code>Book</code>, <code>BookInstance</code>, available <code>BookInstance</code>, <code>Author</code>, and <code>Genre</code> records we have in the database, render this data in a template to create an HTML page, and then return it in an HTTP response.</p>
 
 <div class="note">
-<p><strong>Note:</strong> We use the <code><a class="external external-icon" href="http://mongoosejs.com/docs/api.html#model_Model.countDocuments" rel="noopener">countDocuments()</a></code> method to get the number of instances of each model. This is called on a model with an optional set of conditions to match against in the first argument and a callback in the second argument (as discussed in <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Using a Database (with Mongoose)</a>, and you can also return a <code>Query</code> and then execute it with a callback later. The callback will be returned when the database returns the count, with an error value (or <code>null</code>) as the first parameter and the count of records (or null if there was an error) as the second parameter.</p>
+<p><strong>Note:</strong> We use the <code><a class="external external-icon" href="http://mongoosejs.com/docs/api.html#model_Model.countDocuments" rel="noopener">countDocuments()</a></code> method to get the number of instances of each model. This is called on a model with an optional set of conditions to match against in the first argument and a callback in the second argument (as discussed in <a href="/ja/docs/Learn/Server-side/Express_Nodejs/mongoose">Using a Database (with Mongoose)</a>, and you can also return a <code>Query</code> and then execute it with a callback later. The callback will be returned when the database returns the count, with an error value (or <code>null</code>) as the first parameter and the count of records (or null if there was an error) as the second parameter.</p>
 
 <pre class="brush: js ">SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
  // ... do something if there is an err
@@ -128,6 +128,6 @@ block content
 <h2 id="Next_steps">Next steps</h2>
 
 <ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
- <li>Proceed to the next subarticle of part 5: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page">Book list page</a>.</li>
+ <li>Return to <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
+ <li>Proceed to the next subarticle of part 5: <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page">Book list page</a>.</li>
 </ul>

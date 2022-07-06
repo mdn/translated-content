@@ -186,8 +186,7 @@ translation_of: Web/HTML/Link_types
     <p>リンクを新しい閲覧コンテキストで開き、リンク元の文書へアクセスできないようにすることをブラウザーに指示します。つまり、新たに開いたウィンドウで {{DOMxRef("Window.opener")}} プロパティを設定しません（<code>null</code> を返します）。<br>
      <br>
      これは信頼できないリンクを開く際、 {{DOMxRef("Window.opener")}} プロパティでリンク元の文書を変更できないようにするために特に役に立つリンク種別です（詳しくは <a href="https://mathiasbynens.github.io/rel-noopener/">About rel=noopener</a> を参照してください）。ただし、 <code>Referer</code> HTTP ヘッダーは（<code>noreferrer</code> を使用しない限り）提供します。</p>
-
-    <p>Note that when <code>noopener</code> is used, nonempty target names other than <code>_top</code>, <code>_self</code>, and <code>_parent</code> are all treated like <code>_blank</code> in terms of deciding whether to open a new window/tab.</p>
+     <strong>注:</strong> <code>noopener</code> を使用した場合、ターゲット名に <code>_top</code>, <code>_self</code>, <code>_parent</code> 以外の空でない名前を使用すると、新しいウィンドウやタブを開くかどうかの判断において、すべて <code>_blank</code> と同様に扱われます。
    </td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
    <td>{{HTMLElement("link")}}</td>
@@ -358,7 +357,5 @@ translation_of: Web/HTML/Link_types
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("html.elements.link.rel")}}</p>

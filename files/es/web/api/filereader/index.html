@@ -111,67 +111,7 @@ translation_of: Web/API/FileReader
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Soporte en los navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer*</th>
-   <th>Opera*</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{ CompatGeckoDesktop("1.9.2") }}</td>
-   <td>7</td>
-   <td>10</td>
-   <td>12.02</td>
-   <td>6.0.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>32</td>
-   <td>3</td>
-   <td>10</td>
-   <td>11.5</td>
-   <td>6.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Notas_de_implementación">Notas de implementación</h3>
-
-<ul>
- <li>IE9 tiene una <a href="http://html5labs.interoperabilitybridges.com/prototypes/fileapi/fileapi/info" title="http://html5labs.interoperabilitybridges.com/prototypes/fileapi/fileapi/info">File API Lab</a>.</li>
- <li>Opera tiene un <a href="http://www.opera.com/docs/specs/presto28/file/" title="http://my.opera.com/desktopteam/blog/2011/04/05/stability-gmail-socks">soporte parcial</a> in 11.1.</li>
-</ul>
-
-<h4 id="Notas_específicas_para_Gecko">Notas específicas para Gecko</h4>
-
-<ul>
- <li>Antes de Gecko 2.0 beta 7 (Firefox 4.0 beta 7), todos los parámetros {{ domxref("Blob") }} de a continuación eran parámetros {{ domxref("File") }}; esto ya se ha actualizado para que coincida con la especificación correcta.</li>
- <li>Antes de Gecko 13.0 {{ geckoRelease("13.0") }} la propiedad<code> FileReader.error</code> devolvía un objeto {{ domxref("FileError") }}. Esta interface ha sido eliminada y <code>FileReader.error</code> ahora devielve el objeto {{ domxref("DOMError") }} tal y como se define en el último borrador de FileAPI.</li>
-</ul>
+{{Compat("api.FileReader")}}
 
 <h2 id="See_also" name="See_also">See also</h2>
 

@@ -15,12 +15,12 @@ translation_of: Web/API/GlobalEventHandlers/onkeydown
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">element.onkeydown = <var>event handling code</var>
+<pre class="syntaxbox">element.onkeydown = <var>event handling code</var>
 </pre>
 
 <h3 id="Значение">Значение</h3>
 
-<p>Имя функции <code>functionRef</code> или <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. Функция получает объект {{domxref("KeyboardEvent")}} в качестве единственного аргумента.</p>
+<p>Имя функции <code>functionRef</code> или <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. Функция получает объект {{domxref("KeyboardEvent")}} в качестве единственного аргумента.</p>
 
 <h2 id="Пример">Пример</h2>
 
@@ -28,12 +28,12 @@ translation_of: Web/API/GlobalEventHandlers/onkeydown
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;input&gt;
+<pre class="brush: html">&lt;input&gt;
 &lt;p id="log"&gt;&lt;/p&gt;</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">const input = document.querySelector('input');
+<pre class="brush: js">const input = document.querySelector('input');
 const log = document.getElementById('log');
 
 input.onkeydown = logKey;
@@ -48,24 +48,11 @@ function logKey(e) {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onkeydown','onkeydown')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<div>{{Compat("api.GlobalEventHandlers.onkeydown")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

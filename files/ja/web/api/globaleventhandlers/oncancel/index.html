@@ -14,7 +14,7 @@ translation_of: Web/API/GlobalEventHandlers/oncancel
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p><code><strong>oncancel</strong></code>プロパティは{{domxref("GlobalEventHandlers")}}のミックスイン(mixin)で、{{event("cancel")}}イベントを{{HTMLElement("dialog")}}要素に送るための{{domxref("EventHandler")}}です</p>
+<p><code><strong>oncancel</strong></code>プロパティは{{domxref("GlobalEventHandlers")}}のミックスイン(mixin)で、{{event("cancel")}}イベントを{{HTMLElement("dialog")}}要素に送るための{{event("Event_handlers", "event handler")}}です</p>
 
 <p><code>cancel</code>イベントはユーザーが<code>&lt;dialog&gt;</code>を閉じる意向を示した際に発火します。このイベントハンドラーはイベントをバブリングから防ぎます。つまり、いかなる親ハンドラーであってもイベントは通知されません。</p>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/GlobalEventHandlers/oncancel
 
 <h3 id="引数">引数</h3>
 
-<p><code>functionRef</code>は関数名もしくは<a href="https://wiki.developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a>です。この関数は{{domxref("Event")}}オブジェクトを唯一の引数として受け取ります。</p>
+<p><code>functionRef</code>は関数名もしくは<a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a>です。この関数は{{domxref("Event")}}オブジェクトを唯一の引数として受け取ります。</p>
 
 <p><code>oncancel</code>ハンドラーは一つのオブジェクトに対して一つのみ割り当てることが可能です。より柔軟であることから{{domxref("EventTarget.addEventListener()")}}メソッドを代わりに使用するのも良いかもしれません。</p>
 

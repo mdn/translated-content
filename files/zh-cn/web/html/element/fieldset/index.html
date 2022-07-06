@@ -4,7 +4,7 @@ slug: Web/HTML/Element/fieldset
 tags:
   - Element
   - HTML
-  - HTML表单
+  - HTML 表单
   - 元素
   - 参考
   - 表单
@@ -14,11 +14,11 @@ translation_of: Web/HTML/Element/fieldset
 
 <div><strong>HTML <code>&lt;fieldset&gt;</code> </strong>元素用于对表单中的控制元素进行分组（也包括 label 元素）。</div>
 
-<div></div>
+
 
 <div>{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}</div>
 
-<div>如上述例子所示，<code>&lt;fieldset&gt;</code> 元素将一个HTML表单的一部分组成一组，内置了一个 {{htmlelement("legend")}} 元素作为 <code>fieldset</code> 的标题。这个元素有几个属性，最值得注意的是 <code>form</code>，其可以包含同一页面的 {{htmlelement("form")}} 元素的 <code>id</code>，以使 <code>&lt;fieldset&gt;</code> 成为这个 <code>&lt;form&gt;</code> 的一部分，即使 <code>&lt;fieldset&gt;</code> 不在其内。还有 <code>disabled</code> 属性，可将 <code>&lt;fieldset&gt;</code> 及其所有内容设置为不可用。</div>
+<div>如上述例子所示，<code>&lt;fieldset&gt;</code> 元素将一个 HTML 表单的一部分组成一组，内置了一个 {{htmlelement("legend")}} 元素作为 <code>fieldset</code> 的标题。这个元素有几个属性，最值得注意的是 <code>form</code>，其可以包含同一页面的 {{htmlelement("form")}} 元素的 <code>id</code>，以使 <code>&lt;fieldset&gt;</code> 成为这个 <code>&lt;form&gt;</code> 的一部分，即使 <code>&lt;fieldset&gt;</code> 不在其内。还有 <code>disabled</code> 属性，可将 <code>&lt;fieldset&gt;</code> 及其所有内容设置为不可用。</div>
 
 <h2 id="属性">属性</h2>
 
@@ -26,7 +26,7 @@ translation_of: Web/HTML/Element/fieldset
 
 <dl>
  <dt>{{htmlattrdef("disabled")}}</dt>
- <dd>如果设置了这个 bool 值属性, <code>&lt;fieldset&gt;</code> 的所有子代表单控件也会继承这个属性。这意味着它们不可编辑，也不会随着 {{htmlelement("form")}} 一起提交。它们也不会接收到任何浏览器事件，如鼠标点击或与聚焦相关的事件。默认情况下，浏览器会将这样的控件展示为灰色。注意，{{HTMLElement("legend")}} 中的表单元素不会被禁用。</dd>
+ <dd>如果设置了这个 bool 值属性，<code>&lt;fieldset&gt;</code> 的所有子代表单控件也会继承这个属性。这意味着它们不可编辑，也不会随着 {{htmlelement("form")}} 一起提交。它们也不会接收到任何浏览器事件，如鼠标点击或与聚焦相关的事件。默认情况下，浏览器会将这样的控件展示为灰色。注意，{{HTMLElement("legend")}} 中的表单元素不会被禁用。</dd>
  <dt>{{htmlattrdef("form")}}</dt>
  <dd>将该值设为一个 {{HTMLElement("form")}} 元素的 {{htmlattrxref("id")}} 属性值以将 <code>&lt;fieldset&gt;</code> 设置成这个 {{HTMLElement("form")}} 的一部分。      </dd>
  <dt>{{htmlattrdef("name")}}</dt>
@@ -39,7 +39,7 @@ translation_of: Web/HTML/Element/fieldset
 
 <p><code>&lt;fieldset&gt;</code> 有几种特别的样式方案。</p>
 
-<p>它的 {{cssxref("display")}} 值默认为 <code>block</code>，因此建立了一个<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context">块级格式化上下文</a>。如果将 <code>&lt;fieldset&gt;</code> 的 <code>display</code> 值设置为行内级别，则会表现为 <code>inline-block</code>，否则会表现为 <code>block</code>。默认情况下 <code>&lt;fieldset&gt;</code> 会有 <code>2px</code> <code>groove</code> 的边界围绕着内容，还有一个默认的小的内边距，还有 {{cssxref("min-inline-size", "min-inline-size: min-content")}} 。</p>
+<p>它的 {{cssxref("display")}} 值默认为 <code>block</code>，因此建立了一个<a href="/zh-CN/docs/Web/Guide/CSS/Block_formatting_context">块级格式化上下文</a>。如果将 <code>&lt;fieldset&gt;</code> 的 <code>display</code> 值设置为行内级别，则会表现为 <code>inline-block</code>，否则会表现为 <code>block</code>。默认情况下 <code>&lt;fieldset&gt;</code> 会有 <code>2px</code> <code>groove</code> 的边界围绕着内容，还有一个默认的小的内边距，还有 {{cssxref("min-inline-size", "min-inline-size: min-content")}} 。</p>
 
 <p>如果其中有 {{htmlelement("legend")}} 元素，会放在块级框起始处的边界上。<code>&lt;legend&gt;</code> 的宽度会根据内容尽量收缩（shrink-wrap），同时也建立了一个格式化上下文。<code>display</code> 值会块级化（例如  <code>display: inline</code> 表现为 <code>block</code>）。</p>
 
@@ -48,16 +48,16 @@ translation_of: Web/HTML/Element/fieldset
 <p>你可以以任意方式自行设置 <code>&lt;fieldset&gt;</code> 和 <code>&lt;legend&gt;</code> 的样式以配合你的页面设计。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 <a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/Flexbox">flexbox</a> 和 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">grid </a>布局。<a href="https://github.com/w3c/csswg-drafts/issues/321">这个 GitHub issue</a> 跟踪了这个bug。</p>
+<p><strong>注意：</strong>截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 <a href="/zh-CN/docs/Glossary/Flexbox">flexbox</a> 和 <a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">grid </a>布局。<a href="https://github.com/w3c/csswg-drafts/issues/321">这个 GitHub issue</a> 跟踪了这个 bug。</p>
 </div>
 
-<h2 id="示例">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="简单的_fieldset">简单的 fieldset</h3>
+<h3 id="Simple_fieldset">简单的 fieldset</h3>
 
 <p>这个例子展示了一个非常简单的 <code>&lt;fieldset&gt;</code>，其中有一个 <code>&lt;legend&gt; </code>和一个简单的控件。</p>
 
-<pre>&lt;form action="#"&gt;
+<pre class="brush: html">&lt;form action="#"&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Simple fieldset&lt;/legend&gt;
     &lt;input type="radio" id="radio"&gt;
@@ -65,13 +65,13 @@ translation_of: Web/HTML/Element/fieldset
   &lt;/fieldset&gt;
 &lt;/form&gt;</pre>
 
-<p><iframe class="live-sample-frame sample-code-frame" frameborder="0" height="80" id="frame_Simple_fieldset" src="https://mdn.mozillademos.org/en-US/docs/Web/HTML/Element/fieldset$samples/Simple_fieldset?revision=1625975" width="100%"></iframe></p>
+<p>{{ EmbedLiveSample('Simple_fieldset', '100%', '80') }}</p>
 
-<h3 id="禁用_fieldset">禁用 fieldset</h3>
+<h3 id="Disabled_fieldset">禁用 fieldset</h3>
 
 <p>这个例子展示了一个被禁用的 <code>&lt;fieldset&gt;</code> ，其中有两个控件。注意随着 <code>&lt;fieldset&gt;</code> 被一起禁用的控件如何表现。</p>
 
-<pre>&lt;form action="#"&gt;
+<pre class="brush: html">&lt;form action="#"&gt;
   &lt;fieldset disabled&gt;
     &lt;legend&gt;Disabled fieldset&lt;/legend&gt;
     &lt;div&gt;
@@ -85,15 +85,15 @@ translation_of: Web/HTML/Element/fieldset
   &lt;/fieldset&gt;
 &lt;/form&gt;</pre>
 
-<p><iframe class="live-sample-frame sample-code-frame" frameborder="0" height="110" id="frame_Disabled_fieldset" src="https://mdn.mozillademos.org/en-US/docs/Web/HTML/Element/fieldset$samples/Disabled_fieldset?revision=1625975" width="100%"></iframe></p>
+<p>{{ EmbedLiveSample('Disabled_fieldset', '100%', '110') }}</p>
 
 <h2 id="技术概览">技术概览</h2>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="https://wiki.developer.mozilla.org/en-US/docs/HTML/Content_categories">内容目录</a></th>
-   <td><a href="https://wiki.developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="https://wiki.developer.mozilla.org/en-US/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root">sectioning root</a>, <a href="https://wiki.developer.mozilla.org/en-US/docs/HTML/Content_categories#form_listed">listed</a>, <a href="https://wiki.developer.mozilla.org/en-US/docs/HTML/Content_categories#form-associated_content">form-associated</a> element, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容目录</a></th>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root">sectioning root</a>, <a href="/zh-CN/docs/HTML/Content_categories#form_listed">listed</a>, <a href="/zh-CN/docs/HTML/Content_categories#form-associated_content">form-associated</a> element, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -105,7 +105,7 @@ translation_of: Web/HTML/Element/fieldset
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>Any element that accepts <a href="https://wiki.developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content">flow content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Flow_content">flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">默认 ARIA role</th>
@@ -126,36 +126,11 @@ translation_of: Web/HTML/Element/fieldset
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-fieldset-element', '&lt;fieldset&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definition of the <code>fieldset</code> element</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#the-fieldset-element', '&lt;fieldset&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.10', '&lt;fieldset&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("html.elements.fieldset")}}</p>
+<p>{{Compat}}</p>
 
 <p>[1] 在 IE11 中 disabled 的 fieldset 的子元素并不会全都被 disabled;  相关 Issues: <a href="https://connect.microsoft.com/IE/feedbackdetail/view/817488">IE bug 817488: <code>input[type="file"]</code> not disabled inside disabled <code>fieldset</code></a> and <a href="https://connect.microsoft.com/IE/feedbackdetail/view/962368/can-still-edit-input-type-text-within-fieldset-disabled">IE bug 962368: Can still edit <code>input[type="text"]</code> within <code>fieldset[disabled]</code></a>.</p>
 

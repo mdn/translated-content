@@ -114,7 +114,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
   }
 }</pre>
 
-<p>このファイルは標準の JSON — メンバーがそれぞれに <code>message</code> と <code>description</code>. を含む名前付きオブジェクトです。すべての項目が文字列です; <code>$URL$</code> はプレースホルダーで、拡張機能から呼ばれる <code>notificationContent</code> メンバーに置き換えられます。{{anch("Retrieving message strings from JavaScript")}} 節でその方法を学びます。</p>
+<p>このファイルは標準の JSON — メンバーがそれぞれに <code>message</code> と <code>description</code>. を含む名前付きオブジェクトです。すべての項目が文字列です; <code>$URL$</code> はプレースホルダーで、拡張機能から呼ばれる <code>notificationContent</code> メンバーに置き換えられます。<a href="#retrieving_message_strings_from_javascript">Retrieving message strings from JavaScript</a> 節でその方法を学びます。</p>
 
 <div class="note">
 <p><strong>注</strong>: <code>messages.json</code> ファイルの中身についての詳しい情報は<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference">ロケール固有のメッセージリファレンス</a>にあります。</p>
@@ -153,7 +153,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 
 <pre class="brush: json">"default_locale": "en"</pre>
 
-<p>これは拡張機能がブラウザーの現在のロケールに対するロケール文字列を含んでいない場合のデフォルトロケールを指定します。ブラウザーロケールで利用できないあらゆるメッセージ文字列が代わりのデフォルトロケールとして引受られます。ブラウザーが文字列を選ぶ方法に関して意識すべき詳細な点があります —  {{anch("Localized string selection")}} を見てください。</p>
+<p>これは拡張機能がブラウザーの現在のロケールに対するロケール文字列を含んでいない場合のデフォルトロケールを指定します。ブラウザーロケールで利用できないあらゆるメッセージ文字列が代わりのデフォルトロケールとして引受られます。ブラウザーが文字列を選ぶ方法に関して意識すべき詳細な点があります —  <a href="#localized_string_selection">Localized string selection</a> を見てください。</p>
 
 <h2 id="Locale-dependent_CSS" name="Locale-dependent_CSS">ロケールに依存しない CSS</h2>
 
@@ -163,7 +163,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
   background-image: url(../images/__MSG_extensionName__/header.png);
 }</pre>
 
-<p>{{anch("Predefined messages")}} を使ってこんな状況を扱う方がより良いものの、これは便利です。</p>
+<p><a href="#predefined_messages">Predefined messages</a> を使ってこんな状況を扱う方がより良いものの、これは便利です。</p>
 
 <h2 id="Retrieving_message_strings_from_JavaScript" name="Retrieving_message_strings_from_JavaScript">JavaScript からメッセージ文字列を取得する</h2>
 
@@ -293,7 +293,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <h2 id="Predefined_messages" name="Predefined_messages">事前定義されたメッセージ</h2>
 
-<p>i18n モジュールでは、事前定義されたメッセージを提供しており、これまで見てきた{{anch("Calling message strings from manifests and extension CSS")}} と同じ方法で呼び出すことができます。例えばこのように:</p>
+<p>i18n モジュールでは、事前定義されたメッセージを提供しており、これまで見てきた<a href="#calling_message_strings_from_manifests_and_extension_css">Calling message strings from manifests and extension CSS</a> と同じ方法で呼び出すことができます。例えばこのように:</p>
 
 <pre>__MSG_extensionName__</pre>
 
@@ -382,7 +382,7 @@ padding-left: 1.5em;</pre>
 
 <h2 id="Testing_out_your_extension" name="Testing_out_your_extension">あなたの拡張機能をテストする</h2>
 
-<p>Firefox 45 からは、拡張機能を一時的にディスクからインストールできます — <a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Packaging_and_installation#Loading_from_disk">ディスクから読み込む</a>を見てください。これを行ってから、<a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> 拡張機能をテストしてみます。お好きなウェブサイトに移動してクリックしたリンクの URL を報告した通知が出てくるか見てください。</p>
+<p>Firefox 45 からは、拡張機能を一時的にディスクからインストールできます — <a href="/ja/Add-ons/WebExtensions/Packaging_and_installation#Loading_from_disk">ディスクから読み込む</a>を見てください。これを行ってから、<a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> 拡張機能をテストしてみます。お好きなウェブサイトに移動してクリックしたリンクの URL を報告した通知が出てくるか見てください。</p>
 
 <p>次に、Firefox のロケールをテストしたい拡張機能がサポートするものに変えます。</p>
 

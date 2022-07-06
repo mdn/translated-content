@@ -12,7 +12,7 @@ translation_of: WebAssembly/C_to_wasm
 ---
 <div>{{WebAssemblySidebar}}</div>
 
-<p class="summary">当你在用C/C++之类的语言编写模块时，你可以使用<a href="/en-US/docs/Mozilla/Projects/Emscripten">Emscripten</a>来将它编译到WebAssembly。让我们来看看它是如何工作的。</p>
+<p>当你在用 C/C++ 之类的语言编写模块时，你可以使用<a href="/en-US/docs/Mozilla/Projects/Emscripten">Emscripten</a>来将它编译到 WebAssembly。让我们来看看它是如何工作的。</p>
 
 <h2 id="Emscripten_环境安装">Emscripten 环境安装</h2>
 
@@ -23,27 +23,27 @@ translation_of: WebAssembly/C_to_wasm
 <p>你需要将下列工具安装在您的电脑上，首先让我们确认下都有哪些。</p>
 
 <ul>
- <li><a href="https://git-scm.com/">Git</a> — Linux和OS X的机器一般已经预装了，在Windows下您可以从这里下载<a href="https://git-scm.com/download/win">Git for Windows installer</a>。</li>
- <li>CMake — 在Linux或者OS X上，使用类似 apt-get 或 <a href="http://brew.sh/">brew</a> 这样的包管理器来安装它，请确保依赖以及路径是否正确。在Windows上，使用<a href="https://cmake.org/download/">CMake installer</a>。</li>
- <li>主系统编译器 — 在Linux下，<a href="http://askubuntu.com/questions/154402/install-gcc-on-ubuntu-12-04-lts">安装 GCC</a>。在OS X下，<a href="https://itunes.apple.com/us/app/xcode/id497799835">安装 Xcode</a>。在Windows下，安装<a href="https://www.microsoft.com/en-us/download/details.aspx?id=48146">Visual Studio Community 2015 with Update 3 or newer</a>。</li>
- <li>Python 2.7.x — On Linux and OS X, this is most likely provided out of the box. 从 <a href="https://wiki.python.org/moin/BeginnersGuide/Downloadhere">初学者指南</a> 获取帮助。 在 Windows 上, 从 <a href="https://www.python.org/downloads/">Python 主页</a>获取安装包。</li>
+ <li><a href="https://git-scm.com/">Git</a> — Linux 和 macOS 的机器一般已经预装了，在 Windows 下您可以从这里下载 <a href="https://git-scm.com/download/win">Git for Windows installer</a>。</li>
+ <li>CMake — 在 Linux 或者 macOS 上，使用类似 apt-get 或 <a href="http://brew.sh/">brew</a> 这样的包管理器来安装它，请确保依赖以及路径是否正确。在 Windows 上，使用 <a href="https://cmake.org/download/">CMake installer</a>。</li>
+ <li>主系统编译器 — 在 Linux 下，<a href="http://askubuntu.com/questions/154402/install-gcc-on-ubuntu-12-04-lts">安装 GCC</a>。在 macOS 下，<a href="https://itunes.apple.com/us/app/xcode/id497799835">安装 Xcode</a>。在 Windows 下，安装 <a href="https://www.microsoft.com/en-us/download/details.aspx?id=48146">Visual Studio Community 2015 with Update 3 or newer</a>。</li>
+ <li>Python 2.7.x — On Linux and macOS, this is most likely provided out of the box. 从 <a href="https://wiki.python.org/moin/BeginnersGuide/Downloadhere">初学者指南</a> 获取帮助。在 Windows 上，从 <a href="https://www.python.org/downloads/">Python 主页</a>获取安装包。</li>
 </ul>
 
 <div class="note">
-<p><strong>注意: </strong>在Windows下您可能需要<a href="https://sourceforge.net/projects/pywin32/files/pywin32/">pywin32</a>，为了降低安装pywin32可能遇到的错误，请使用管理员权限在cmd内运行安装程序。</p>
+<p><strong>注意：</strong>在 Windows 下您可能需要<a href="https://sourceforge.net/projects/pywin32/files/pywin32/">pywin32</a>，为了降低安装 pywin32 可能遇到的错误，请使用管理员权限在 cmd 内运行安装程序。</p>
 </div>
 
-<h3 id="编译Emscripten">编译Emscripten</h3>
+<h3 id="编译Emscripten">编译 Emscripten</h3>
 
-<p>接下来，您需要通过源码自己编译一个Emscripten。运行下列命令来自动化地使用Emscripten SDK。(在你想保存Emscripten的文件夹下运行)。</p>
+<p>接下来，您需要通过源码自己编译一个 Emscripten。运行下列命令来自动化地使用 Emscripten SDK。(在你想保存 Emscripten 的文件夹下运行)。</p>
 
 <pre class="brush: bash notranslate">git clone https://github.com/juj/emsdk.git
 cd emsdk
 
-# 在 Linux 或者 Mac OS X 上
+# 在 Linux 或者 Mac macOS 上
 ./emsdk install --build=Release sdk-incoming-64bit binaryen-master-64bit
 ./emsdk activate --global --build=Release sdk-incoming-64bit binaryen-master-64bit
-# 如果在你的macos上获得以下错误
+# 如果在你的 macos 上获得以下错误
 Error: No tool or SDK found by name 'sdk-incoming-64bit'
 # 请执行
 <code>./emsdk install latest
@@ -58,19 +58,19 @@ emsdk activate --global --build=Release sdk-incoming-64bit binaryen-master-64bit
 # 注意：Windows 版本的 Visual Studio 2017 已经被支持，但需要在 emsdk install 需要追加 --vs2017 参数。
 </pre>
 
-<p> 安装过程可以会花上一点时间，是时候去休息一下。安装程序会设置所有Emscripten运行所需要的环境变量。</p>
+<p>安装过程可以会花上一点时间，是时候去休息一下。安装程序会设置所有 Emscripten 运行所需要的环境变量。</p>
 
 <div class="note">
-<p><strong>注意: </strong>--global标识会让PATH变量在全局被设置，所以接下来所打开的终端或者命令行窗口都会被设置。如果您仅仅想让Emscripten在当前窗口生效，就删掉这个标识。</p>
+<p><strong>注意：</strong>--global 标识会让 PATH 变量在全局被设置，所以接下来所打开的终端或者命令行窗口都会被设置。如果您仅仅想让 Emscripten 在当前窗口生效，就删掉这个标识。</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>: 每当您想要使用Emscripten时，尝试从远程更新最新的emscripten代码是个很好的习惯（运行 git pull）。如果有更新，重新执行 install 和 activate 命令。这样就可以确保您使用的Emscripten一直保持最新。</p>
+<p><strong>注意</strong>: 每当您想要使用 Emscripten 时，尝试从远程更新最新的 emscripten 代码是个很好的习惯（运行 git pull）。如果有更新，重新执行 install 和 activate 命令。这样就可以确保您使用的 Emscripten 一直保持最新。</p>
 </div>
 
-<p>现在让我们进入emsdk文件夹，输入以下命令来让你进入接下来的流程，编译一个样例C程序到asm.js或者wasm。</p>
+<p>现在让我们进入 emsdk 文件夹，输入以下命令来让你进入接下来的流程，编译一个样例 C 程序到 asm.js 或者 wasm。</p>
 
-<pre class="brush: bash notranslate"># on Linux or Mac OS X
+<pre class="brush: bash notranslate"># on Linux or Mac macOS
 source ./emsdk_env.sh
 
 # on Windows
@@ -79,10 +79,10 @@ emsdk_env.bat
 
 <h2 id="编译样例代码">编译样例代码</h2>
 
-<p>现在环境配置完毕，让我们看看如何使用它把C代码编译到Emscripten。当使用Emscripten来编译的时候有很多种不同的选择，我们介绍其中主要的2种：</p>
+<p>现在环境配置完毕，让我们看看如何使用它把 C 代码编译到 Emscripten。当使用 Emscripten 来编译的时候有很多种不同的选择，我们介绍其中主要的 2 种：</p>
 
 <ul>
- <li>编译到 wasm 并且生成一个用来运行我们代码的HTML，将所有 wasm 在web环境下运行所需要的 “胶水” JavaScript代码都添加进去。</li>
+ <li>编译到 wasm 并且生成一个用来运行我们代码的 HTML，将所有 wasm 在 web 环境下运行所需要的“胶水”JavaScript 代码都添加进去。</li>
  <li>编译到 wasm 然后仅仅生成 JavaScript。</li>
 </ul>
 
@@ -90,17 +90,17 @@ emsdk_env.bat
 
 <h3 id="生成_HTML_和_JavaScript">生成 HTML 和 JavaScript</h3>
 
-<p>我们先来看一个最简单的例子，通过这个，你可以使用Emscripten来将任何代码生成到WebAssembly，然后在浏览器上运行。</p>
+<p>我们先来看一个最简单的例子，通过这个，你可以使用 Emscripten 来将任何代码生成到 WebAssembly，然后在浏览器上运行。</p>
 
 <ol>
- <li>首先我们需要编译一段样例代码。将下方的C代码复制一份然后命名为hello.c保存在一个新的文件夹内。
+ <li>首先我们需要编译一段样例代码。将下方的 C 代码复制一份然后命名为 hello.c 保存在一个新的文件夹内。
   <pre class="brush: cpp notranslate">#include &lt;stdio.h&gt;
 
 int main(int argc, char ** argv) {
   printf("Hello World\n");
 }</pre>
  </li>
- <li>现在，转到一个已经配置过Emscripten编译环境的终端窗口中，进入刚刚保存hello.c文件的文件夹中，然后运行下列命令：
+ <li>现在，转到一个已经配置过 Emscripten 编译环境的终端窗口中，进入刚刚保存 hello.c 文件的文件夹中，然后运行下列命令：
   <pre class="brush: bash notranslate">emcc hello.c -s WASM=1 -o hello.html</pre>
  </li>
 </ol>
@@ -108,16 +108,16 @@ int main(int argc, char ** argv) {
 <p>下面列出了我们命令中选项的细节：</p>
 
 <ul>
- <li><code>-s WASM=1</code> — 指定我们想要的wasm输出形式。如果我们不指定这个选项，Emscripten默认将只会生成<a href="http://asmjs.org/">asm.js</a>。</li>
- <li><code>-o hello.html</code> — 指定这个选项将会生成HTML页面来运行我们的代码，并且会生成wasm模块，以及编译和实例化wasm模块所需要的“胶水”js代码，这样我们就可以直接在web环境中使用了。</li>
+ <li><code>-s WASM=1</code> — 指定我们想要的 wasm 输出形式。如果我们不指定这个选项，Emscripten 默认将只会生成<a href="http://asmjs.org/">asm.js</a>。</li>
+ <li><code>-o hello.html</code> — 指定这个选项将会生成 HTML 页面来运行我们的代码，并且会生成 wasm 模块，以及编译和实例化 wasm 模块所需要的“胶水”js 代码，这样我们就可以直接在 web 环境中使用了。</li>
 </ul>
 
-<p>这个时候在您的源码文件夹应该有下列文件:</p>
+<p>这个时候在您的源码文件夹应该有下列文件：</p>
 
 <ul>
- <li><code>hello.wasm</code>     二进制的wasm模块代码</li>
- <li><code>hello.js</code>         一个包含了用来在原生C函数和JavaScript/wasm之间转换的胶水代码的JavaScript文件</li>
- <li><code>hello.html</code>     一个用来加载，编译，实例化你的wasm代码并且将它输出在浏览器显示上的一个HTML文件</li>
+ <li><code>hello.wasm</code>     二进制的 wasm 模块代码</li>
+ <li><code>hello.js</code>         一个包含了用来在原生 C 函数和 JavaScript/wasm 之间转换的胶水代码的 JavaScript 文件</li>
+ <li><code>hello.html</code>     一个用来加载，编译，实例化你的 wasm 代码并且将它输出在浏览器显示上的一个 HTML 文件</li>
 </ul>
 
 <h3 id="运行你的例子">运行你的例子</h3>
@@ -125,14 +125,14 @@ int main(int argc, char ** argv) {
 <p>现在使用一个支持 WebAssembly 的浏览器，加载生成的 <code>hello.html</code> 。</p>
 
 <div class="note">
-<p>提示 ：Firefox 52+ 和 Chrome 57+ 和最新版本的 Opera 已经默认启用，你也可以在 Firefox 47+ 中通过在 <em>about:config</em> 页面启用 <code>javascript.options.wasm</code> 字段获得支持，Chrome 51+ 和 Opera 38+ 可以在 <em>chrome://flags 页面启用 Experimental WebAssembly 选项以支持 </em>WebAssembly<em>。</em></p>
+<p>提示：Firefox 52+ 和 Chrome 57+ 和最新版本的 Opera 已经默认启用，你也可以在 Firefox 47+ 中通过在 <em>about:config</em> 页面启用 <code>javascript.options.wasm</code> 字段获得支持，Chrome 51+ 和 Opera 38+ 可以在 <em>chrome://flags 页面启用 Experimental WebAssembly 选项以支持 </em>WebAssembly<em>。</em></p>
 </div>
 
 <p>如果一切顺利，你应该可以在页面上的 <code>Emscripten 控制台</code>和 <code>浏览器控制台</code> 中看到 "Hello World" 的输出。</p>
 
 <p>恭喜！你已经成功将 C 代码编译成 JavaScript 并且在浏览器中执行了！</p>
 
-<h2 id="使用自定义HTML模板">使用自定义HTML模板</h2>
+<h2 id="使用自定义HTML模板">使用自定义 HTML 模板</h2>
 
 <p>有些时候你可能想要使用一个自定义的 HTML 模板。让我们看看怎么实现。</p>
 
@@ -153,27 +153,27 @@ int main(int argc, char ** argv) {
 cp ~/emsdk/emscripten/1.38.15/src/shell_minimal.html html_template</pre>
  </li>
  <li>
-  <p>现在使用你的Emscripten编译器环境的终端窗口进入你的新目录， 然后运行下面的命令：</p>
+  <p>现在使用你的 Emscripten 编译器环境的终端窗口进入你的新目录，然后运行下面的命令：</p>
 
   <pre class="brush: bash notranslate">emcc -o hello2.html hello2.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html</pre>
 
   <p>这次使用的选项略有不同：</p>
 
   <ul>
-   <li>我们使用了 <code>-o hello2.html</code> ，这意味编译器将仍然输出 js 胶水代码 和 html 文件。</li>
-   <li>我们还使用了 <code>--shell-file html_template/shell_minimal.html</code> ，这指定了您要运行的例子使用 HTML 页面模板。</li>
+   <li>我们使用了 <code>-o hello2.html</code>，这意味编译器将仍然输出 js 胶水代码 和 html 文件。</li>
+   <li>我们还使用了 <code>--shell-file html_template/shell_minimal.html</code>，这指定了您要运行的例子使用 HTML 页面模板。</li>
   </ul>
  </li>
  <li>
-  <p>下面让我们来运行这个例子。上面的命令已经生成了 hello2.html，内容和我们使用的模板非常相像，只不过多加了一些 js 胶水和加载wasm文件的代码。 在浏览器中打开它，你会看到与上一个例子相同的输出。</p>
+  <p>下面让我们来运行这个例子。上面的命令已经生成了 hello2.html，内容和我们使用的模板非常相像，只不过多加了一些 js 胶水和加载 wasm 文件的代码。 在浏览器中打开它，你会看到与上一个例子相同的输出。</p>
  </li>
 </ol>
 
 <div class="note">
-<p><strong>注意：</strong>通过用.js取代.htm(l)作为文件后缀名，你就可以得到只有JavaScript的输出文件，而不再是完整的HTML文件。例如：<code>emcc -o hello2.js hello2.c -O3 -s WASM=1</code>. 你可以完全从零开始创建你自己的HTML文件。尽管如此，不推荐这样做。因为Emscripten需要大量的JavaScript“胶水”代码从而能够 处理内存分配、内存泄漏以及大量的其他问题。这些问题都已经在提供的模板中得到了处理。使用模板要比自己编写模板要容易得多。不过，当对模板所做的事情越来越熟悉的时候，你就能够按照自己的需要创建定制化的模板了。</p>
+<p><strong>注意：</strong>通过用.js 取代.htm(l) 作为文件后缀名，你就可以得到只有 JavaScript 的输出文件，而不再是完整的 HTML 文件。例如：<code>emcc -o hello2.js hello2.c -O3 -s WASM=1</code>. 你可以完全从零开始创建你自己的 HTML 文件。尽管如此，不推荐这样做。因为 Emscripten 需要大量的 JavaScript“胶水”代码从而能够 处理内存分配、内存泄漏以及大量的其他问题。这些问题都已经在提供的模板中得到了处理。使用模板要比自己编写模板要容易得多。不过，当对模板所做的事情越来越熟悉的时候，你就能够按照自己的需要创建定制化的模板了。</p>
 </div>
 
-<h2 id="调用一个定义在C中的自定义方法">调用一个定义在C中的自定义方法</h2>
+<h2 id="调用一个定义在C中的自定义方法">调用一个定义在 C 中的自定义方法</h2>
 
 <p>如果需要调用一个在 C 语言自定义的函数，你可以使用  Emscripten 中的 <code>ccall()</code> 函数，以及 <code>EMSCRIPTEN_KEEPALIVE</code> 声明 （将你的函数添加到导出函数列表中（详见 <a href="https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process">Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?</a>））。</p>
 
@@ -212,7 +212,7 @@ int EMSCRIPTEN_KEEPALIVE myFunction(int argc, char ** argv) {
   <p>为了方便起见，现在将 <code>html_template/shell_minimal.html</code> 也添加到这一目录（但在实际开发环境中你肯定需要将其放到某一特定位置）。</p>
  </li>
  <li>
-  <p>运行以下命令编译：(注意由于使用ccall函数，需要添加指定参数)</p>
+  <p>运行以下命令编译：(注意由于使用 ccall 函数，需要添加指定参数)</p>
 
   <pre class="brush: bash notranslate">emcc -o hello3.html hello3.c -O3 -s WASM=1 -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']" --shell-file html_template/shell_minimal.html</pre>
  </li>
@@ -225,7 +225,7 @@ int EMSCRIPTEN_KEEPALIVE myFunction(int argc, char ** argv) {
   <pre class="brush: html notranslate">&lt;button class="mybutton"&gt;运行我的函数&lt;/button&gt;</pre>
  </li>
  <li>
-  <p>现在在最后一个 {{htmlelement("script")}} 元素 （就在 <code>&lt;/script&gt;</code> 关闭标签之前）中添加以下代码：</p>
+  <p>现在在最后一个 {{htmlelement("script")}} 元素（就在 <code>&lt;/script&gt;</code> 关闭标签之前）中添加以下代码：</p>
 
   <pre class="brush: js notranslate">document.querySelector('.mybutton').addEventListener('click', function(){
   alert('检查控制台');
@@ -247,6 +247,6 @@ int EMSCRIPTEN_KEEPALIVE myFunction(int argc, char ** argv) {
  <li><a href="https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process">Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?</a></li>
  <li><a href="https://research.mozilla.org/webassembly/">WebAssembly on Mozilla Research</a></li>
  <li>
-  <p><a href="https://wiki.developer.mozilla.org/en-US/docs/WebAssembly/existing_C_to_wasm">Compiling an Existing C Module to WebAssembly</a></p>
+  <p><a href="/zh-CN/docs/WebAssembly/existing_C_to_wasm">Compiling an Existing C Module to WebAssembly</a></p>
  </li>
 </ul>

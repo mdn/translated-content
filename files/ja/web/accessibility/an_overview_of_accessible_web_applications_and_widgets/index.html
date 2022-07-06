@@ -41,7 +41,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <h2 id="ARIA" name="ARIA">ARIA</h2>
 
-<p>W3C の <a href="http://www.w3.org/WAI/" title="http://www.w3.org/WAI/">Web Accessibility Initiative</a> から生まれた <a href="http://www.w3.org/WAI/intro/aria.php" title="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a> こと <strong>Accessible Rich Internet Applications</strong> 仕様は、スクリーンリーダーのような支援技術が必要とする、欠けているセマンティクスを追加する手段です。ARIA はマークアップに特別な属性を追加することで、開発者が自身のウィジェットをより詳しく説明することを可能にします。ARIA は動的な Web アプリケーションにおいて、標準の HTML タグとデスクトップスタイルのコントロールとの間にあるギャップを埋めるように設計されており、ほとんどのよく知られた UI ウィジェットの動作を示す役割や状態を与えます。</p>
+<p>W3C の <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a> から生まれた <a href="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a> こと <strong>Accessible Rich Internet Applications</strong> 仕様は、スクリーンリーダーのような支援技術が必要とする、欠けているセマンティクスを追加する手段です。ARIA はマークアップに特別な属性を追加することで、開発者が自身のウィジェットをより詳しく説明することを可能にします。ARIA は動的な Web アプリケーションにおいて、標準の HTML タグとデスクトップスタイルのコントロールとの間にあるギャップを埋めるように設計されており、ほとんどのよく知られた UI ウィジェットの動作を示す役割や状態を与えます。</p>
 
 <p>ARIA 仕様書は 3 種類の属性に分けられています: ロール、ステート、プロパティです。ロールは HTML 4 において他の方法で利用できないウィジェット、例えばスライダー、メニューバー、タブ、ダイアログなどを説明します。プロパティはこれらのウィジェットの特徴、例えばドラッグ可能、必須の要素がある、関連づけられたポップアップがあるなどを説明します。ステートは要素について支援技術に伝える現在の対話状態、例えばビジー、無効、選択中、非可視などを説明します。</p>
 
@@ -87,27 +87,19 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
  <li><strong><code>aria-grabbed</code></strong>: ドラッグアンドドロップの操作で、オブジェクトが 'つかまれている' 状態を示します。</li>
 </ul>
 
-<p>(ARIA のすべてのステートの一覧については、<a href="http://www.w3.org/TR/wai-aria/states_and_properties" title="http://www.w3.org/TR/wai-aria/states_and_properties">ARIA のステートとプロパティの一覧</a>をご覧ください。)</p>
+<p>(ARIA のすべてのステートの一覧については、<a href="http://www.w3.org/TR/wai-aria/states_and_properties">ARIA のステートとプロパティの一覧</a>をご覧ください。)</p>
 
 <p>開発者は UI ウィジェット要素の状態を示すために ARIA のステートを使用して、ステートの変化に基づく視覚的外見の変更に (スクリプトを使用して要素のクラス名を変更するのではなく) CSS の属性セレクタを使用しましょう。</p>
-
-<p><em>注意: この例(</em><s><em><a class="external external-icon" href="http://www.oaa-accessibility.org/example/25/" rel="freelink">http://www.oaa-accessibility.org/example/25/</a></em></s><em>) はもう利用できません。状況が変わったので、W3C ARIA オーサリングプラクティスガイドの例</em> <em>(<a class="external external-icon" href="http://www.w3.org/TR/wai-aria-practices-1.1/examples/checkbox/checkbox-1/checkbox-1.html">www.w3.org/TR/wai-aria-practices-1.1/examples/checkbox/checkbox-1/checkbox-1.html</a>) を見てください。</em></p>
-
-<p><s>Open Ajax Alliance の Web サイトに、<a href="http://www.oaa-accessibility.org/example/25/" title="http://www.oaa-accessibility.org/example/25/">ARIA のステートに基づく CSS 属性セレクタの例</a>があります。この例では、動的なメニューシステムによる WYSIWYG エディタのインターフェイスを示しています。フォントフェイススなどのメニューで現在選択されている項目は、他のアイテムと視覚的に区別されます。例の中で関係する部分を、以下で説明します。</s></p>
-
-<p><s>この例でメニュー用の HTML は、例 1a で示す形式になっています。7 行目と 13　行目で、メニュー項目の選択状態を表すために <strong><code>aria-checked</code></strong> プロパティを使用していることに注意してください。</s></p>
-
-<p><s><em>例 1a: 選択可能なメニュー用の HTML (<a href="http://www.oaa-accessibility.org/example/25/" rel="freelink">http://www.oaa-accessibility.org/example/25/</a> をもとに改作)。</em></s></p>
 
 <h4 id="Visibility_changes" name="Visibility_changes">可視性の変化</h4>
 
 <p>コンテンツの可視性を変えるとき (例えば要素を隠したり表示したりする)、開発者は <strong><code>aria-hidden</code></strong> プロパティの値を変更するとよいでしょう。先に説明した手法を、<code>display:none</code> を使用して要素を視覚的に隠すという CSS を示すために使用しましょう。</p>
 
-<p>Open Ajax Alliance の Web サイトに、<a href="http://www.oaa-accessibility.org/example/39/" title="http://www.oaa-accessibility.org/example/39/">可視性の制御に <strong><code>aria-hidden</code></strong> を使用するツールチップの例</a>があります。この例では、入力フィールドに関する指示を収めたツールチップを持つシンプルな Web フォームの例を示しています。例の中で関係する部分を、以下で説明します。</p>
+<p>これは、可視性の制御に <strong><code>aria-hidden</code></strong> を使用するツールチップの例です。この例では、入力フィールドに関する指示を収めたツールチップを持つシンプルな Web フォームの例を示しています。例の中で関係する部分を、以下で説明します。</p>
 
 <p>この例でツールチップ用の HTML は、例 2a で示す形式になっています。9 行目で <strong><code>aria-hidden</code></strong> を <code>true</code> に設定しています。</p>
 
-<p><em>例 2a: ツールチップ用の HTML (<a href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a> をもとに改作)。</em></p>
+<p><em>例 2a: ツールチップ用の HTML</em></p>
 
 <pre class="brush: html">&lt;div class="text"&gt;
     &lt;label id="tp1-label" for="first"&gt;First Name:&lt;/label&gt;
@@ -123,7 +115,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p>このマークアップ用の CSS を例 2b で示します。ここでは独自のクラス名を使用せず、1 行目で <strong><code>aria-hidden</code></strong> 属性の状態のみを使用していることに注意してください。</p>
 
-<p><em>例 2b: 状態を示すための、属性セレクタ (<a href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a> より)。</em></p>
+<p><em>例 2b: 状態を示すための、属性セレクタ</em></p>
 
 <pre class="brush: css">div.tooltip[aria-hidden="true"] {
   display: none;
@@ -132,7 +124,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p><strong>&gt;<code>aria-hidden</code></strong> プロパティを更新するための JavaScript は、例 2c で示す形式になっています。このスクリプトは <strong>&gt;<code>aria-hidden</code></strong> 属性しか更新しないことに注意してください (2 行目)。独自のクラス名の追加や削除は不要です。</p>
 
-<p><em>例 2c: aria-hidden 属性を更新する JavaScript (<a href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a> に基づく)。</em></p>
+<p><em>例 2c: aria-hidden 属性を更新する JavaScript</em></p>
 
 <pre class="brush: js">var showTip = function(el) {
   el.setAttribute('aria-hidden', 'false');
@@ -172,14 +164,14 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p>従って前出のタブウィジェットの例では、ユーザが Tab および Shift+Tab キーを使用してウィジェットのコンテナ (マークアップにおける &lt;ol&gt;) に出入りするナビゲーションを行えるとよいでしょう。キーボードのフォーカスがコンテナ内に入ったら、矢印キーで各々のタブ (&lt;li&gt; 要素) を行き来できるとよいでしょう。ここからは、プラットフォームによって慣習が異なります。Windows では、ユーザが矢印キーを押すと自動的に次のタブがアクティブ化されます。Mac OS X では、ユーザは次のタブをアクティブ化するために Enter またはスペースキーを押します。<a href="/ja/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets" title="Accessibility/Keyboard-navigable JavaScript widgets">キーボードでナビゲーション可能な JavaScript ウィジェット</a>作成の包括的なチュートリアルで、このような動作を JavaScript で実装する方法を説明します。</p>
 
-<p>デスクトップスタイルのキーボードナビゲーションの慣習に関する詳細として、包括的な <a class="external external-icon" href="http://access.aol.com/dhtml-style-guide-working-group/" title="http://dev.aol.com/dhtml_style_guide">DHTML style guide</a> があります。これは、ARIA がサポートする各種ウィジェットで動作すべきキーボードナビゲーションは何かの概要を示します。W3C でもさまざまなウィジェット向けのキーボードナビゲーションやショートカットの慣習を収めた、<a href="http://www.w3.org/WAI/PF/aria-practices/Overview.html" title="http://www.w3.org/WAI/PF/aria-practices/Overview.html">ARIA Best Practices</a> の有用なドキュメントを提供しています。</p>
+<p>デスクトップスタイルのキーボードナビゲーションの慣習に関する詳細として、包括的な <a class="external external-icon" href="http://access.aol.com/dhtml-style-guide-working-group/">DHTML style guide</a> があります。これは、ARIA がサポートする各種ウィジェットで動作すべきキーボードナビゲーションは何かの概要を示します。W3C でもさまざまなウィジェット向けのキーボードナビゲーションやショートカットの慣習を収めた、<a href="http://www.w3.org/WAI/PF/aria-practices/Overview.html">ARIA Best Practices</a> の有用なドキュメントを提供しています。</p>
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
  <li><a href="/ja/docs/ARIA" title="ARIA">ARIA</a></li>
  <li><a href="/ja/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ" title="Web applications and ARIA FAQ">Web アプリケーションと ARIA の FAQ</a></li>
- <li><a href="http://www.w3.org/TR/wai-aria/" title="http://www.w3.org/TR/wai-aria/">WAI-ARIA Specification</a></li>
- <li><a href="http://www.w3.org/WAI/PF/aria-practices/Overview.html" title="http://www.w3.org/WAI/PF/aria-practices/Overview.html">WAI-ARIA Best Practices</a></li>
- <li><a class="external external-icon" href="http://access.aol.com/dhtml-style-guide-working-group/" title="http://dev.aol.com/dhtml_style_guide">DHTML Style Guide</a></li>
+ <li><a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA Specification</a></li>
+ <li><a href="http://www.w3.org/WAI/PF/aria-practices/Overview.html">WAI-ARIA Best Practices</a></li>
+ <li><a class="external external-icon" href="http://access.aol.com/dhtml-style-guide-working-group/">DHTML Style Guide</a></li>
 </ul>

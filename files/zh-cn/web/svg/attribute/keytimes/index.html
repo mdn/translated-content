@@ -3,23 +3,23 @@ title: keyTimes
 slug: Web/SVG/Attribute/keyTimes
 tags:
   - SVG
-  - SVG属性
+  - SVG 属性
   - keyTimes
 translation_of: Web/SVG/Attribute/keyTimes
 ---
 <p>« <a href="/en-US/docs/Web/SVG/Attribute" title="en-US/docs/Web/SVG/Attribute">SVG </a>属性参考主页</p>
 
-<p>keyTimes属性是一个以分号分隔的时间值列表，用于控制动画的执行步骤。列表中的每个值与{{ SVGAttr("values") }}中的值一一对应，定义了{{ SVGAttr("values") }}中的值在动画中何时执行，keyTimes列表中的每一个值都是指定在[0-1]之间的浮点数，表示动画的完成时间。</p>
+<p>keyTimes 属性是一个以分号分隔的时间值列表，用于控制动画的执行步骤。列表中的每个值与{{ SVGAttr("values") }}中的值一一对应，定义了{{ SVGAttr("values") }}中的值在动画中何时执行，keyTimes 列表中的每一个值都是指定在 [0-1] 之间的浮点数，表示动画的完成时间。</p>
 
-<p>如果指定了keyTimes列表，那么一定有与之完全对应的{{ SVGAttr("values") }}列表。</p>
+<p>如果指定了 keyTimes 列表，那么一定有与之完全对应的{{ SVGAttr("values") }}列表。</p>
 
 <p>每一个连续的时间值必须大于等于前一个时间值。</p>
 
-<p>keyTimes列表的语义取决于插值模式：</p>
+<p>keyTimes 列表的语义取决于插值模式：</p>
 
 <ul>
- <li>对于linear(线性)和spline(样条)动画，列表中的第一个时间值必须为0，列表的最后一个时间值必须为1。与每个value关联的时间值定义了何时设置该value，该value在keyTimes的时间 值的中间插值。</li>
- <li>对于discrete(离线)动画，列表中的第一个值必须为0。与每个value关联的时间值定义了何时设置该value，动画函数使用该value，直到keyTimes中定义的下一个时间值。</li>
+ <li>对于 linear(线性) 和 spline(样条) 动画，列表中的第一个时间值必须为 0，列表的最后一个时间值必须为 1。与每个 value 关联的时间值定义了何时设置该 value，该 value 在 keyTimes 的时间 值的中间插值。</li>
+ <li>对于 discrete(离线) 动画，列表中的第一个值必须为 0。与每个 value 关联的时间值定义了何时设置该 value，动画函数使用该 value，直到 keyTimes 中定义的下一个时间值。</li>
 </ul>
 
 <p> </p>
@@ -31,9 +31,9 @@ translation_of: Web/SVG/Attribute/keyTimes
 
 <p> </p>
 
-<p>如果插值模式是paced（踏步），keyTimes属性被忽略。</p>
+<p>如果插值模式是 paced（踏步），keyTimes 属性被忽略。</p>
 
-<p>如果duration（持续时间）不确定，则将忽略任何keyTimes规范。</p>
+<p>如果 duration（持续时间）不确定，则将忽略任何 keyTimes 规范。</p>
 
 <h2 id="用法">用法</h2>
 
@@ -53,7 +53,7 @@ translation_of: Web/SVG/Attribute/keyTimes
   </tr>
   <tr>
    <th scope="row">规范文档</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/animate.html#KeyTimesAttribute" title="http://www.w3.org/TR/SVG/animate.html#KeyTimesAttribute">SVG 1.1 (2nd Edition)</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/SVG/animate.html#KeyTimesAttribute">SVG 1.1 (2nd Edition)</a></td>
   </tr>
  </tbody>
 </table>
@@ -87,7 +87,7 @@ translation_of: Web/SVG/Attribute/keyTimes
 
 <h2 id="元素">元素</h2>
 
-<p>以下元素可以使用 <code>keyTimes属性</code></p>
+<p>以下元素可以使用 <code>keyTimes 属性</code></p>
 
 <ul>
  <li>{{ SVGElement("animate") }}</li>

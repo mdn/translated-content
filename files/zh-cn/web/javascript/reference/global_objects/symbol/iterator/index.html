@@ -16,9 +16,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 
 <h2 id="描述">描述</h2>
 
-<p>当需要对一个对象进行迭代时（<font><font>比如开始用于一个</font></font><code><font><font>for..of</font></font></code><font><font>循环中</font></font>），它的<code>@@iterator</code>方法都会在不传参情况下被调用，返回的<strong>迭代器</strong>用于获取要迭代的值。</p>
+<p>当需要对一个对象进行迭代时（比如开始用于一个<code>for..of</code>循环中），它的<code>@@iterator</code>方法都会在不传参情况下被调用，返回的<strong>迭代器</strong>用于获取要迭代的值。</p>
 
-<p>一些内置类型拥有默认的迭代器行为，其他类型（如 {{jsxref("Object")}}）则没有。下表中的内置类型拥有默认的<span style="font-family: consolas,monaco,andale mono,monospace;"><code>@@iterator</code></span>方法：</p>
+<p>一些内置类型拥有默认的迭代器行为，其他类型（如 {{jsxref("Object")}}）则没有。下表中的内置类型拥有默认的<code>@@iterator</code>方法：</p>
 
 <ul>
  <li>{{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}</li>
@@ -77,8 +77,6 @@ nonWellFormedIterable[Symbol.iterator] = () =&gt; 1
 </table>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("javascript.builtins.Symbol.iterator")}}</p>
 

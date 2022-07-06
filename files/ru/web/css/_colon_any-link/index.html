@@ -18,7 +18,7 @@ translation_of: 'Web/CSS/:any-link'
 
 <p>Селектор <a href="/en-US/docs/Web/CSS/Pseudo-classes">псевдокласса</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>:any-link</code></strong> представляет собой элемент, который действует как исходный якорь гиперссылки, независимо от того, была ли она посещена. Другими словами, он соответствует всем элементам {{HTMLElement("a")}}, {{HTMLElement("area")}}, или {{HTMLElement("link")}}, которые имеют атрибут <code>href</code>. Таким образом, он соответствует всем элементам, которые используют {{cssxref(":link")}} или {{cssxref(":visited")}}.</p>
 
-<pre class="brush: css no-line-numbers  language-css notranslate"><code class="language-css"><span class="selector token"><span class="pseudo-class token">/* Выбирает любой элемент, который будет соответствовать:link или :visited */
+<pre class="brush: css no-line-numbers  language-css"><code class="language-css"><span class="selector token"><span class="pseudo-class token">/* Выбирает любой элемент, который будет соответствовать:link или :visited */
 :any-link</span> </span><span class="punctuation token">{</span>
   <span class="property token">color</span><span class="punctuation token">:</span> green<span class="punctuation token">;</span>
 <span class="punctuation token">}</span></code></pre>
@@ -31,13 +31,13 @@ translation_of: 'Web/CSS/:any-link'
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;a href="https://example.com"&gt;External link&lt;/a&gt;&lt;br&gt;
+<pre class="brush: html">&lt;a href="https://example.com"&gt;External link&lt;/a&gt;&lt;br&gt;
 &lt;a href="#"&gt;Internal target link&lt;/a&gt;&lt;br&gt;
 &lt;a&gt;Placeholder link (won't get styled)&lt;/a&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">a:any-link {
+<pre class="brush: css">a:any-link {
   border: 1px solid blue;
   color: orange;
 }
@@ -55,38 +55,20 @@ a:-webkit-any-link {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#the-any-link-pseudo", ":any-link")}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Первое определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("css.selectors.any-link")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA">Создание гиперссылок</a></li>
- <li>Соответствует HTML элементам: <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code>, <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/area">&lt;area&gt;</a></code> и <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> с атрибутом {{htmlattrxref("href", "a")}}</li>
+ <li>Соответствует HTML-элементам: <code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/area">&lt;area&gt;</a></code> и <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> с атрибутом {{htmlattrxref("href", "a")}}</li>
  <li>Похожие CSS селекторы:
   <ul>
-   <li><code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/:visited">:visited</a></code></li>
-   <li><code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/:link">:link</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/:visited">:visited</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/:link">:link</a></code></li>
   </ul>
  </li>
 </ul>

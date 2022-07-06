@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 
 <p>manifest.json内の <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> に似た一つのオブジェクトを引数に持ちます。<code>content_scripts</code> では配列ですが、この <code>register()</code> ではオブジェクトを引数に持ちます。</p>
 
-<p>これは <code><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
+<p>これは <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -64,14 +64,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 
 <h3 id="Examples" name="Examples">返り値</h3>
 
-<p>登録したコンテントスクリプトを削除することができる {{WebExtAPIRef("contentScripts.RegisteredContentScript")}} オブジェクトを引数に持つ <code><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返します。</p>
+<p>登録したコンテントスクリプトを削除することができる {{WebExtAPIRef("contentScripts.RegisteredContentScript")}} オブジェクトを引数に持つ <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返します。</p>
 
 <p><br>
  <span class="message"><span class="content">現在、登録したコンテントスクリプトは、これを登録した拡張機能ページをアンロードしたときに削除されます。</span></span>したがって、コンテントスクリプトを登録する際は、少なくとも登録されたままであってほしいだけ存在する拡張機能ページから登録すべきです。</p>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("webextensions.api.contentScripts.register", 10)}}</p>
 

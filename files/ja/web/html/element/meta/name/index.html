@@ -7,13 +7,14 @@ tags:
   - HTML document metadata
   - Reference
   - metadata
+browser-compat: html.elements.meta.name
 translation_of: Web/HTML/Element/meta/name
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">{{htmlelement("meta")}} 要素を使用して、文書のメタデータを名前と値の組み合わせで提供することができ、 {{htmlattrxref("name", "meta")}} 属性はメタデータ名を指定し、 {{htmlattrxref("content", "meta")}} 属性は値を指定します。</span></p>
+<p><span class="seoSummary">{{htmlelement("meta")}} 要素を使用すると、文書のメタデータを名前と値の組み合わせで提供することができます。 {{htmlattrxref("name", "meta")}} 属性でメタデータ名を指定し、 {{htmlattrxref("content", "meta")}} 属性で値を指定します。</span></p>
 
-<h3 id="Standard_metadata_names_defined_in_the_HTML_specification" name="Standard_metadata_names_defined_in_the_HTML_specification">HTML 仕様書で定義されている標準メタデータ名</h3>
+<h3 id="Standard_metadata_names_defined_in_the_HTML_specification">HTML 仕様書で定義されている標準メタデータ名</h3>
 
 <p>HTML 仕様書は、以下の一連の標準メタデータ名を定義しています。</p>
 
@@ -21,7 +22,7 @@ translation_of: Web/HTML/Element/meta/name
  <li>
   <p><code>application-name</code>: ウェブページで動作しているアプリケーションの名前です。</p>
 
-  <div class="note"><strong>注:</strong>
+  <div class="note"><strong>メモ:</strong>
 
   <ul>
    <li>ブラウザーはアプリケーションを識別するためにこれを使用することがあります。これはふつうアプリケーション名が含まれるものの、文書名や状態などの情報も含まれる {{HTMLElement("title")}} 要素とは異なります。</li>
@@ -72,198 +73,193 @@ translation_of: Web/HTML/Element/meta/name
    </tbody>
   </table>
 
-  <div class="note"><strong>注:</strong>
+  <div class="note"><strong>メモ:</strong>
 
   <ul>
-   <li>Dynamically inserting <code>&lt;meta name="referrer"&gt;</code> (with {{domxref("Document.write", "document.write()")}} or {{domxref("Node.appendChild", "appendChild()")}}) makes the referrer behaviour unpredictable.</li>
-   <li>When several conflicting policies are defined, the <code>no-referrer</code> policy is applied.</li>
+   <li><code>&lt;meta name="referrer"&gt;</code> を ({{domxref("Document.write", "document.write()")}} または {{domxref("Node.appendChild", "appendChild()")}} で) 動的に挿入すると、リファラーの動作が予測不能になります。</li>
+   <li>相反する複数のポリシーが定義されている場合は、 <code>no-referrer</code> ポリシーが適用されます。</li>
   </ul>
   </div>
  </li>
- <li><code><a href="/ja/docs/Web/HTML/Element/meta/name/theme-color">theme-color</a></code>: indicates a suggested color that user agents should use to customize the display of the page or of the surrounding user interface. The <code>content</code> attribute contains a valid CSS {{cssxref("&lt;color&gt;")}}.</li>
-</ul>
-
-<h3 id="Standard_metadata_names_defined_in_other_specifications" name="Standard_metadata_names_defined_in_other_specifications">他の仕様書で定義されている標準メタデータ名</h3>
-
-<p>The CSS Color Adjustment specification defines the following metadata name:</p>
-
-<ul>
+ <li><code><a href="/ja/docs/Web/HTML/Element/meta/name/theme-color">theme-color</a></code>: ユーザーエージェントがページの表示や周辺のユーザーインターフェースをカスタマイズするために使用すべき推奨色を示します。 <code>content</code> 属性には、有効な CSS の {{cssxref("&lt;color&gt;")}} が含まれます。</li>
  <li>
-  <p><code>color-scheme</code>: specifies one or more color schemes with which the document is compatible.</p>
+  <p><code>color-scheme</code>: 文書と互換性のある 1 つ以上の複数のカラースキームを指定します。</p>
 
-  <p>The browser will use this information in tandem with the user's browser or device settings to determine what colors to use for everything from background and foregrounds to form controls and scrollbars. The primary use for <code>&lt;meta name="color-scheme"&gt;</code> is to indicate compatibility with—and order of preference for—light and dark color modes.</p>
+  <p>ブラウザーは、この情報をユーザーのブラウザーや端末の設定と合わせて使用し、背景や前景、フォームコントロールやスクロールバーなど、あらゆるものに使用する色を決定します。 <code>&lt;meta name="color-scheme"&gt;</code> の主な用途は、ライトモードとダークモードの互換性と優先順位を示すことです。</p>
 
-  <p>The value of the {{htmlattrxref("content", "meta")}} property for <code>color-scheme</code> may be one of the following:</p>
+  <p><code>color-scheme</code> の {{htmlattrxref("content", "meta")}} プロパティは次のうちの一つになります。</p>
 
   <dl>
    <dt><code>normal</code></dt>
-   <dd>The document is unaware of color schemes and should simply be rendered using the default color palette.</dd>
+   <dd>この文書は配色を意識していないので、既定のカラーパレットを使って描画する必要があります。</dd>
    <dt>[<code>light</code> | <code>dark</code>]+</dt>
-   <dd>One or more color schemes supported by the document. Specifying the same color scheme more than once has the same effect as specifying it only once. Indicating multiple color schemes indicates that the first scheme is preferred by the document, but that the second specified scheme is acceptable if the user prefers it.</dd>
+   <dd>この文書で対応している 1 つ以上の配色。同じ配色を 2 回以上指定しても、 1 回だけ指定した場合と同じ効果が得られる。複数の配色を指定すると、この文書では最初の配色が優先されるが、ユーザーが好む場合は 2 番目に指定された配色でもよいことを示す。</dd>
    <dt><code>only light</code></dt>
-   <dd>Indicates that the document <em>only</em> supports light mode, with a light background and dark foreground colors. By specification, <code>only dark</code> <em>is not valid</em>, because forcing a document to render in dark mode when it isn't truly compatible with it can result in unreadable content; all major browsers default to light mode if not otherwise configured.</dd>
+   <dd>この文書がライトモード<em>のみ</em>に対応していることを示します。背景色が明るく、前景色が暗い色です。仕様書によれば、 <code>only dark</code> は有効ではありません。ダークモードに対応していない文書を強制的にダークモードで描画すると、コンテンツが読めなくなる可能性があるからです。主要なブラウザーは、特に設定されていなければ既定でライトモードになります。</dd>
   </dl>
 
-  <p>For example, to indicate that a document prefers dark mode but does render functionally in light mode as well:</p>
+  <p>例えば、この文書はダークモードを推奨するが、ライトモードでも機能的にはレンダリングできることを示すためには、次のようにします。</p>
 
-  <pre class="brush: html notranslate">&lt;meta name="color-scheme" content="dark light"&gt;</pre>
+  <pre class="brush: html">&lt;meta name="color-scheme" content="dark light"&gt;</pre>
 
-  <p>This works at the document level in the same way that the CSS {{cssxref("color-scheme")}} property lets individual elements specify their preferred and accepted color schemes. Your styles can adapt to the current color scheme using the {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} CSS media feature.</p>
+  <p>これは、CSS の {{cssxref("color-scheme")}} プロパティで個々の要素が好みの配色と受け入れられる配色を指定できるのと同じように、文書レベルで機能します。スタイルは、 {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} という CSS メディア機能を使って、現在の配色に合わせることができます。</p>
  </li>
 </ul>
 
-<p>The CSS Device Adaptation specification defines the following metadata name:</p>
+<h3 id="Standard_metadata_names_defined_in_other_specifications">他の仕様書で定義されている標準メタデータ</h3>
+
+<p>CSS Device Adaptation 仕様書は、以下のメタデータ名を定義しています。</p>
 
 <ul>
  <li>
-  <p><code>viewport</code>: gives hints about the size of the initial size of the {{glossary("viewport")}}. Used by mobile devices only.</p>
+  <p><code>viewport</code>: この{{glossary("viewport", "ビューポート")}}の初期の寸法の大きさについてのヒントを指定します。モバイル端末でのみ使用されます。</p>
 
   <table class="fullwidth-table">
-   <caption>Values for the content of <code>&lt;meta name="viewport"&gt;</code></caption>
+   <caption><code>&lt;meta name="viewport"&gt;</code> の content の値</caption>
    <thead>
     <tr>
      <th scope="col">値</th>
-     <th scope="col">Possible subvalues</th>
+     <th scope="col">使用可能なサブ値</th>
      <th scope="col">解説</th>
     </tr>
    </thead>
    <tbody>
     <tr>
      <td><code>width</code></td>
-     <td>A positive integer number, or the text <code>device-width</code></td>
-     <td>Defines the pixel width of the viewport that you want the web site to be rendered at.</td>
+     <td>正の整数値、または <code>device-width</code> のテキスト</td>
+     <td>ウェブサイトを表示させるビューポートのピクセル単位の幅を定義します。</td>
     </tr>
     <tr>
      <td><code>height</code></td>
-     <td>A positive integer, or the text <code>device-height</code></td>
-     <td>Defines the height of the viewport. Not used by any browser.</td>
+     <td>正の整数値、または <code>device-height</code> のテキスト</td>
+     <td>ビューポートの高さを定義します。どのブラウザーでも使用されていません。</td>
     </tr>
     <tr>
      <td><code>initial-scale</code></td>
-     <td>A positive number between <code>0.0</code> and <code>10.0</code></td>
-     <td>Defines the ratio between the device width (<code>device-width</code> in portrait mode or <code>device-height</code> in landscape mode) and the viewport size.</td>
+     <td><code>0.0</code> と <code>10.0</code> の間の正の実数</td>
+     <td>端末の幅 (縦長画面で <code>device-width</code>、横長画面で <code>device-height</code>) とビューポートの寸法の比率を定義します。</td>
     </tr>
     <tr>
      <td><code>maximum-scale</code></td>
-     <td>A positive number between <code>0.0</code> and <code>10.0</code></td>
-     <td>Defines the maximum amount to zoom in. It must be greater or equal to the <code>minimum-scale</code> or the behaviour is undefined. Browser settings can ignore this rule and iOS10+ ignores it by default.</td>
+     <td><code>0.0</code> と <code>10.0</code> の間の正の実数</td>
+     <td>拡大縮小インする最大値を定義します。 <code>minimum-scale</code> 以上でなければ、動作は未定義です。ブラウザーの設定でこの規則を無視することができ、iOS 10 以降では既定で無視されます。</td>
     </tr>
     <tr>
      <td><code>minimum-scale</code></td>
-     <td>A positive number between <code>0.0</code> and <code>10.0</code></td>
-     <td>Defines the minimum zoom level. It must be smaller or equal to the <code>maximum-scale</code> or the behaviour is undefined. Browser settings can ignore this rule and iOS10+ ignores it by default.</td>
+     <td><code>0.0</code> と <code>10.0</code> の間の正の実数</td>
+     <td>拡大縮小レベルの最小値を定義します。 <code>maximum-scale</code> 以下でなければ、動作は未定義です。ブラウザーの設定でこの規則を無視することができ、iOS 10 以降では既定で無視されます。</td>
     </tr>
     <tr>
      <td><code>user-scalable</code></td>
-     <td><code>yes</code> or <code>no</code></td>
-     <td>If set to <code>no</code>, the user is not able to zoom in the webpage. The default is <code>yes</code>. Browser settings can ignore this rule, and iOS10+ ignores it by default.</td>
+     <td><code>yes</code> または <code>no</code></td>
+     <td><code>no</code> に設定された場合は、ユーザーがウェブページを拡大縮小することができなくなります。既定値は <code>yes</code> です。ブラウザーの設定でこの規則を無視することができ、iOS 10 以降では既定で無視されます。</td>
     </tr>
     <tr>
      <td><code>viewport-fit</code></td>
-     <td><code>auto</code>, <code>contain</code> or <code>cover</code></td>
+     <td><code>auto</code>, <code>contain</code>, <code>cover</code></td>
      <td>
-      <p>The <code>auto</code> value doesn’t affect the initial layout viewport, and the whole web page is viewable.</p>
+      <p><code>auto</code> の値は、初期レイアウトのビューポートに影響を与えず、ウェブページ全体が表示されます。</p>
 
-      <p>The <code>contain</code> value means that the viewport is scaled to fit the largest rectangle inscribed within the display.</p>
+      <p><code>contain</code> の値は、ディスプレイに内接する最大の長方形に合わせてビューポートが拡大されることを意味します。</p>
 
-      <p>The <code>cover</code> value means that the viewport is scaled to fill the device display. It is highly recommended to make use of the <a href="/ja/docs/Web/CSS/env">safe area inset</a> variables to ensure that important content doesn't end up outside the display.</p>
+      <p><code>cover</code> の値は、ビューポートが端末のディスプレイいっぱいになるように縮小されることを意味します。重要なコンテンツがディスプレイの外に出てしまわないように、 <a href="/ja/docs/Web/CSS/env">safe-area-inset-*</a> 変数を使用することを強くお勧めします。</p>
      </td>
     </tr>
    </tbody>
   </table>
 
-  <div class="note"><strong>Notes:</strong>
+  <div class="note"><strong>メモ:</strong>
 
   <ul>
-   <li>Though unstandardized, this declaration is respected by most mobile browsers due to de-facto dominance.</li>
-   <li>The default values may vary between devices and browsers.</li>
-   <li>To learn about this declaration in Firefox for Mobile, see <a href="/ja/docs/Mobile/Viewport_meta_tag" title="Mobile/Viewport meta tag">this article</a>.</li>
+   <li>この宣言は標準化されていませんが、事実上の優位性から、ほとんどのモバイルブラウザーで尊重されています。</li>
+   <li>既定値は、端末やブラウザーによって異なる場合があります。</li>
+   <li>Firefox for Mobile でのこの宣言については、<a href="/ja/docs/Mobile/Viewport_meta_tag">こちらの記事</a>を参照してください。</li>
   </ul>
   </div>
 
-  <h5 id="Accessibility_concerns_with_viewport_scaling" name="Accessibility_concerns_with_viewport_scaling">ビューポートの拡大縮小についてのアクセシビリティの考慮</h5>
+  <h5 id="Accessibility_concerns_with_viewport_scaling">ビューポートの拡大縮小についてのアクセシビリティの考慮</h5>
 
-  <div>Disabling zooming capabilities by setting <code>user-scalable</code> to a value of <code>no</code> prevents people experiencing low vision conditions from being able to read and understand page content.</div>
+  <div><code>user-scalable</code> を <code>no</code> に設定して拡大縮小機能を無効にすると、弱視の人がページの内容を読んだり理解したりすることができなくなります。</div>
 
   <ul>
-   <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
+   <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN WCAG を理解する、ガイドライン 1.4 の説明</a></li>
    <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0</a></li>
   </ul>
 
-  <h5 id="See_also" name="See_also">関連情報</h5>
+  <h5 id="See_also">関連情報</h5>
 
-  <p>The <a href="/ja/docs/Web/CSS/@viewport"><code>@viewport</code></a> CSS at-rule.</p>
+  <p>CSS の <a href="/ja/docs/Web/CSS/@viewport"><code>@viewport</code></a> アット規則</p>
  </li>
 </ul>
 
-<h3 id="Other_metadata_names" name="Other_metadata_names">その他のメタデータ名</h3>
+<h3 id="Other_metadata_names">その他のメタデータ名</h3>
 
-<p>The <a class="external" href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG Wiki MetaExtensions page</a> contains a large set of non-standard metadata names that have not been formally accepted yet; however, some of the names included there are already used quite commonly in practice — including the following:</p>
+<p><a href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG Wiki の MetaExtensions のページ</a>には、まだ正式に受け入れられていない標準外のメタデータの名前が多数掲載されています。しかし、ここに掲載されている名前の中には、以下のように、すでに実際によく使われているものもあります。</p>
 
 <ul>
- <li><code>creator</code>: the name of the creator of the document, such as an organization or institution. If there are more than one, several {{HTMLElement("meta")}} elements should be used.</li>
- <li><code>googlebot</code>, a synonym of <code>robots</code>, is only followed by Googlebot (the indexing crawler for Google).</li>
- <li><code>publisher</code>: the name of the document's publisher.</li>
- <li><code>robots</code>: the behaviour that cooperative crawlers, or "robots", should use with the page. It is a comma-separated list of the values below:
+ <li><code>creator</code>: この文書の作成者の名前で、組織や機関などです。複数ある場合は、複数の {{HTMLElement("meta")}} 要素を使用する必要があります。</li>
+ <li><code>googlebot</code>: <code>robots</code> と同様ですが、Googlebot (Google のインデックス作成用クローラー) のみが従います。</li>
+ <li><code>publisher</code>: この文書の発行者の名前です。</li>
+ <li><code>robots</code>: 協力的なクローラー、つまり「ロボット」がページに対して使用すべき動作です。以下の値をカンマで区切ったリストです。
   <table class="standard-table">
    <caption>Values for the content of <code>&lt;meta name="robots"&gt;</code></caption>
    <thead>
     <tr>
      <th scope="col">値</th>
      <th scope="col">解説</th>
-     <th scope="col">Used by</th>
+     <th scope="col">使用者</th>
     </tr>
    </thead>
    <tbody>
     <tr>
      <td><code>index</code></td>
-     <td>Allows the robot to index the page (default).</td>
-     <td>All</td>
+     <td>ロボットがこのページをインデックスすることを許可します (既定値)。</td>
+     <td>すべて</td>
     </tr>
     <tr>
      <td><code>noindex</code></td>
-     <td>Requests the robot to not index the page.</td>
-     <td>All</td>
+     <td>ロボットにこのページをインデックスしないよう要求します。</td>
+     <td>すべて</td>
     </tr>
     <tr>
      <td><code>follow</code></td>
-     <td>Allows the robot to follow the links on the page (default).</td>
-     <td>All</td>
+     <td>ロボットがこのページ上のリンクをたどることを許可します (既定値)。</td>
+     <td>すべて</td>
     </tr>
     <tr>
      <td><code>nofollow</code></td>
-     <td>Requests the robot to not follow the links on the page.</td>
-     <td>All</td>
+     <td>ロボットにこのページ上のリンクをたどらないよう要求します。</td>
+     <td>すべて</td>
     </tr>
     <tr>
      <td><code>all</code></td>
-     <td>Equivalent to <code>index, follow</code></td>
-     <td><a class="external" href="https://support.google.com/webmasters/answer/79812">Google</a></td>
+     <td><code>index, follow</code> と同等です。</td>
+     <td><a href="https://support.google.com/webmasters/answer/79812">Google</a></td>
     </tr>
     <tr>
      <td><code>none</code></td>
-     <td>Equivalent to <code>noindex, nofollow</code></td>
-     <td><a class="external" href="https://support.google.com/webmasters/answer/79812">Google</a></td>
+     <td><code>noindex, nofollow</code> と同等です。</td>
+     <td><a href="https://support.google.com/webmasters/answer/79812">Google</a></td>
     </tr>
     <tr>
      <td><code>noarchive</code></td>
-     <td>Requests the search engine not to cache the page content.</td>
-     <td><a class="external" href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a>, <a class="external" href="https://help.yahoo.com/kb/search-for-desktop/SLN2213.html">Yahoo</a>, <a class="external" href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
+     <td>検索エンジンにこのページの内容をキャッシュしないよう要求します。</td>
+     <td><a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a>, <a href="https://help.yahoo.com/kb/search-for-desktop/SLN2213.html">Yahoo</a>, <a href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
     </tr>
     <tr>
      <td><code>nosnippet</code></td>
-     <td>Prevents displaying any description of the page in search engine results.</td>
-     <td><a class="external" href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a>, <a class="external" href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
+     <td>検索エンジンの結果でこのページの説明の表示を抑制します。</td>
+     <td><a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a>, <a href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
     </tr>
     <tr>
      <td><code>noimageindex</code></td>
-     <td>Requests this page not to appear as the referring page of an indexed image.</td>
-     <td><a class="external" href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a></td>
+     <td>このページをインデックスされた画像の参照ページとして表示しないよう要求します。</td>
+     <td><a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a></td>
     </tr>
     <tr>
      <td><code>nocache</code></td>
-     <td>Synonym of <code>noarchive</code>.</td>
-     <td><a class="external" href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
+     <td><code>noarchive</code> と同等です。</td>
+     <td><a href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
     </tr>
    </tbody>
   </table>
@@ -271,42 +267,21 @@ translation_of: Web/HTML/Element/meta/name
   <div class="note"><strong>Notes:</strong>
 
   <ul>
-   <li>Only cooperative robots follow these rules. Do not expect to prevent e-mail harvesters with them.</li>
-   <li>The robot still needs to access the page in order to read these rules. To prevent bandwidth consumption, use a <em>{{Glossary("robots.txt")}}</em> file.</li>
-   <li>If you want to remove a page, <code>noindex</code> will work, but only after the robot visits the page again. Ensure that the <code>robots.txt</code> file is not preventing revisits.</li>
-   <li>Some values are mutually exclusive, like <code>index</code> and <code>noindex</code>, or <code>follow</code> and <code>nofollow</code>. In these cases the robot's behaviour is undefined and may vary between them.</li>
-   <li>Some crawler robots, like Google, Yahoo and Bing, support the same values for the HTTP header <code>X-Robots-Tag</code>; this allows non-HTML documents like images to use these rules.</li>
+   <li>協力的なロボットだけがこのルールに従っています。メールアドレスの自動収集プログラムを抑制できるとは期待しないでください。</li>
+   <li>ロボットがこれらのルールを読むためには、ページにアクセスする必要があります。帯域幅の消費を防ぐには、 <em>{{Glossary("robots.txt")}}</em> ファイルを使用してください。</li>
+   <li>ページを削除したい場合、 <code>noindex</code> で行うことができますが、ロボットがそのページに再びアクセスした後のことになります。 <code>robots.txt</code> ファイルが再訪問を妨害していないことを確認してください。</li>
+   <li>値によっては互いに排他的なものがあります。例えば <code>index</code> と <code>noindex</code>、 <code>follow</code> と <code>nofollow</code> などです。このような場合、ロボットの動作は未定義であり、ロボット間で異なる可能性があります。</li>
+   <li>Google、Yahoo、Bing など一部のクローラーロボットでは、 HTTP ヘッダーの X-Robots-Tag で提供された同じ値に対応しているものがあります。これにより、画像などの HTML 以外の文書でもこれらの規則を使用することができます。</li>
   </ul>
   </div>
  </li>
 </ul>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#standard-metadata-names', 'standard metadata names')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS Color Adjust', '#color-scheme-meta', 'the "color-scheme" metadata name')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Device', '#viewport-meta', 'the "viewport" metadata name')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-meta', 'the "referrer" metadata name')}}</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<p>{{Compat}}</p>
 
-<p>{{Compat("html.elements.meta.name")}}</p>

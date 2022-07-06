@@ -9,7 +9,7 @@ tags:
 translation_of: Web/API/History_API
 ---
 <p>{{DefaultAPISidebar("History API")}}<br>
- DOM-объект {{DOMxRef("Window")}} предоставляет доступ к истории текущей сессии браузера (не путать с <a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history">историей браузерных расширений</a>) через объект {{DOMxRef("Window.history","history")}}. Он предоставляет полезные методы и свойства, которые позволяют переходить назад и вперёд по истории пользователя и манипулировать её содержимым.</p>
+ DOM-объект {{DOMxRef("Window")}} предоставляет доступ к истории текущей сессии браузера (не путать с <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history">историей браузерных расширений</a>) через объект {{DOMxRef("Window.history","history")}}. Он предоставляет полезные методы и свойства, которые позволяют переходить назад и вперёд по истории пользователя и манипулировать её содержимым.</p>
 
 <h2 id="Понятия_и_использование">Понятия и использование</h2>
 
@@ -19,13 +19,13 @@ translation_of: Web/API/History_API
 
 <p>Чтобы переместиться назад по истории:</p>
 
-<pre class="brush: js notranslate">window.history.back();
+<pre class="brush: js">window.history.back();
 </pre>
 
 <p>Данный метод работает так, будто пользователь нажал на кнопку "Назад" на панели браузера.<br>
  Похожим образом можно переместиться вперёд (как если бы пользователь нажал на кнопку "Вперёд"):</p>
 
-<pre class="brush: js notranslate">window.history.forward();
+<pre class="brush: js">window.history.forward();
 </pre>
 
 <h3 id="Перемещение_к_определённой_странице_в_истории">Перемещение к определённой странице в истории</h3>
@@ -34,25 +34,25 @@ translation_of: Web/API/History_API
 
 <p>Вернуться на одну страницу назад (равноценно вызову {{DOMxRef("History.back","back()")}}):</p>
 
-<pre class="brush: js notranslate">window.history.go(-1);
+<pre class="brush: js">window.history.go(-1);
 </pre>
 
 <p>Перейти на одну страницу вперёд (равноценно вызову {{DOMxRef("History.forward","forward()")}})</p>
 
-<pre class="brush: js notranslate">window.history.go(1);
+<pre class="brush: js">window.history.go(1);
 </pre>
 
 <p>По такому же принципу, можно перемещаться вперёд на 2 страницы, передавая аргумент <code>2</code>, и так далее.</p>
 
 <p>Кроме того, метод <code>go()</code> можно использовать для обновления текущей страницы, передавая аргумент <code>0</code> или вызывая его без аргументов:</p>
 
-<pre class="notranslate">// Обе следующих инструкции обновляют текущую страницу
+<pre>// Обе следующих инструкции обновляют текущую страницу
 window.history.go(0)
 window.history.go()</pre>
 
 <p>Узнать количество страниц, которые находятся в стеке истории, можно, получив значение свойства <code>length</code>:</p>
 
-<pre class="brush: js notranslate">var numberOfEntries = window.history.length;
+<pre class="brush: js">var numberOfEntries = window.history.length;
 </pre>
 
 <h2 id="Интерфейсы">Интерфейсы</h2>
@@ -64,9 +64,9 @@ window.history.go()</pre>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>В следующем примере свойству <code>onpopstate</code> назначается обработчик. А затем приводятся некоторые методы объекта истории для добавления, замени и перемещения по истории текущей вкладки браузера</p>
+<p>В следующем примере свойству <code>onpopstate</code> назначается обработчик. А затем приводятся некоторые методы объекта истории для добавления, замены и перемещения по истории текущей вкладки браузера</p>
 
-<pre class="notranslate">window.onpopstate = function(event) {
+<pre>window.onpopstate = function(event) {
   alert(`location: ${document.location}, state: ${JSON.stringify(event.state)}`)
 }
 
@@ -79,24 +79,28 @@ history.go(2)  // alerts "location: http://example.com/example.html?page=3, stat
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "browsers.html#history", "History")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Нет изменений по сравнению с {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#history", "History")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Изначальное определение</td>
-  </tr>
- </tbody>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> {{SpecName("HTML WHATWG", "browsers.html#history", "History")}}
+      </td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td>No change from {{SpecName("HTML5 W3C")}}.</td>
+    </tr>
+    <tr>
+      <td> {{SpecName("HTML5 W3C", "browsers.html#history", "History")}}
+      </td>
+      <td>{{Spec2("HTML5 W3C")}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
@@ -115,5 +119,5 @@ history.go(2)  // alerts "location: http://example.com/example.html?page=3, stat
 <h3 id="Руководства">Руководства</h3>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a></li>
+ <li><a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a></li>
 </ul>

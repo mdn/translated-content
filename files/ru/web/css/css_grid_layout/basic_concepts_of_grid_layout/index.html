@@ -3,41 +3,41 @@ title: Основные понятия Grid Layout
 slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 ---
-<p><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> представляет двумерную сетку для CSS. Grid (здесь и далее подразумевается <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> ) можно использовать для размещения основных областей страницы или небольших элементов пользовательского интерфейса. В этой статье описывается компоновка сетки CSS и новая терминология, которая является частью спецификации CSS Grid Layout Level 1. Функции, показанные в этом обзоре, будут более подробно описаны в остальной части данного руководства.</p>
+<p><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">Грид-раскладка (CSS Grid Layout)</a> представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы, и небольших элементов пользовательского интерфейса. Эта статья даёт общее представление о грид-раскладке и новой терминологии, которая является частью спецификации CSS Grid Layout Level&nbsp;1. Более подробно показанные возможности будут описаны описаны далее в руководстве.</p>
 
-<h2 id="Что_такое_Grid">Что такое Grid?</h2>
+<h2 id="Что_такое_грид">Что такое грид?</h2>
 
-<p>Grid представляет собой пересекающийся набор горизонтальных и вертикальных линий - один набор определяет столбцы, а другой строки. Элементы могут быть помещены в сетку, соответственно строкам и столбцам.  Grid имеет следующие функции:</p>
+<p>Грид представляет собой пересекающийся набор горизонтальных и вертикальных линий, образующих колонки и строки. Элементы могут быть помещены в грид в пределах линий этих колонок и строк. Грид имеет следующие особенности:</p>
 
 <h3 id="Фиксированные_и_гибкие_размеры_полос">Фиксированные и гибкие размеры полос</h3>
 
-<p>Вы можете создать сетку с фиксированными размерами полос — например, используя пиксели. Вы также можете создать сетку с гибкими размерами, используя проценты или новую единицу измерения - fr, предназначенную для этой цели.</p>
+<p>Вы можете создать грид с фиксированными размерами полоc, например используя пиксели. Это установит грид на определенный пиксель, соответствующим желаемому макету. Вы также можете создать грид с гибкими размерами, используя проценты или новую единицу измерения&nbsp;&mdash; «<code>fr</code>», разработанную для этой цели.</p>
 
 <h3 id="Расположение_элемента">Расположение элемента</h3>
 
-<p>Вы можете размещать элементы в заданном месте Grid, используя номера строк, имена или путём привязки к области Grid. Grid также содержит алгоритм управления размещением элементов, не имеющих явной позиции в Grid.</p>
+<p>Вы можете размещать элементы в заданном месте на гриде используя номера строк, имена или путём привязки к области грида. Грид также содержит алгоритм управления размещением элементов, не имеющих явной позиции на гриде.</p>
 
 <h3 id="Создание_дополнительных_полос_для_хранения_контента">Создание дополнительных полос для хранения контента</h3>
 
-<p>Вы можете определить явную сетку с макетом сетки, но спецификация также касается контента, добавленного за пределами объявленной сетки, при необходимости добавляя дополнительные строки и столбцы. Включены такие функции, как добавление «столько столбцов, сколько будет помещено в контейнер».</p>
+<p>Вы можете определить явную сетку с помощью грид-раскладки. Cпецификация грид-раскладки достаточно гибкая, чтобы добавить при необходимости дополнительные строки и колонки. Также в нее включены такие возможности как, например, добавление «стольких колонок, сколько будет помещено в контейнер».</p>
 
 <h3 id="Управление_выравниванием">Управление выравниванием</h3>
 
-<p>Grid содержит функции выравнивания, чтобы мы могли контролировать, как элементы выравниваются после размещения в области сетки, и как выравнивается весь Grid.</p>
+<p>Грид содержит механизм выравнивания, таким образом мы можем контролировать, как элементы выравниваются после размещения в области сетки и как выравнивается вся сетка.</p>
 
 <h3 id="Управление_перекрывающимся_контентом">Управление перекрывающимся контентом</h3>
 
-<p>В ячейку сетки может быть помещено более одного элемента, или области могут частично перекрывать друг друга. Затем это расслоение можно контролировать с помощью {{cssxref ("z-index")}}.</p>
+<p>В ячейку или область грида может быть помещено несколько элементов; эти элементы могут частично перекрывать друг друга. Такое наложение можно контролировать с помощью свойства {{cssxref ("z-index")}}.</p>
 
-<p>Grid - это мощная спецификация и в сочетании с другими частями CSS, такими как <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a>, может помочь вам создать макеты, которые ранее невозможно было построить в CSS. Все начинается с создания сетки в вашем <strong>grid контейнере</strong>.</p>
+<p>Грид&nbsp;&ndash; это мощная спецификация, и в сочетании с другими частями CSS, такими как <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a>, поможет вам создать макеты, которые ранее невозможно было построить в CSS. Все начинается с создания сетки в вашем <strong>грид-контейнере</strong>.</p>
 
-<h2 id="Grid_контейнер">Grid контейнер</h2>
+<h2 id="Грид-контейнер">Грид-контейнер</h2>
 
-<p>Мы создаём<em> grid контейнер</em>, объявляя<strong> display: grid </strong>или <strong>display: inline-grid </strong>на элементе. Как только мы это сделаем, <em>все прямые дети</em> этого элемента станут <em>элементами сетки</em>.</p>
+<p>Мы создаём <em>grid контейнер</em>, объявляя на элементе <code>display: grid</code> или <code>display: inline-grid</code>. Как только мы это сделаем, <em>все прямые потомки</em> этого элемента станут <em>элементами сетки</em>.</p>
 
-<p>В этом примере есть div, содержащий класс wrapper с пятью потомками</p>
+<p>В этом примере у меня есть контейнер div с классом-обёрткой и пятью дочерними элементами внутри.</p>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
    &lt;div&gt;Two&lt;/div&gt;
    &lt;div&gt;Three&lt;/div&gt;
@@ -46,15 +46,15 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<p>Сделаем wrapper grid контейнером</p>
+<p>Я сделал <code>.wrapper</code> грид-контейнером.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
 }
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -76,28 +76,30 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('Grid_контейнер', '200', '330') }}</p>
+<p>{{ EmbedLiveSample('Грид-контейнер', '200', '330') }}</p>
 
-<p>Все прямые потомки теперь являются grid элементами. В веб-браузере вы не увидите никакой разницы в отображении элементов, поскольку Grid создал единую сетку столбцов для элементов. На данный момент вам может оказаться удобным работать в Firefox Developer Edition, в котором есть <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a>, доступный как часть инструментов разработчика. Если вы просмотрите этот пример в Firefox и проверите Grid, вы увидите маленький значок рядом с display: grid. Нажмите этот значок, и сетка на этом элементе будет наложена в окне браузера.</p>
+<p>Все прямые потомки теперь являются грид-элементами. В браузере вы не увидите разницы с тем, как элементы отображались до помещения их в грид, поскольку грид сделан как одноколоночная сетка. На этой стадии вам, возможно, будет удобнее работать с инструментом <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">«Грид-инспектор»</a>, который является частью «Инструментов веб-разработчика» Firefox (Firefox's Developer Tools). Если вы просмотрите этот пример в Firefox и проинспектируете грид, вы увидите маленький значок рядом с значением <code>grid</code>. Нажмите на него и сетка на этом элементе будет наложена в окне браузера.</p>
 
-<p><img alt="Using the Grid Highlighter in DevTools to view a grid" src="https://mdn.mozillademos.org/files/14631/1-grid-inspector.png" style="height: 753px; width: 900px;"></p>
+<p><img alt="Использование инструмента подсвечивания грида в инструментах веб-разработчика для просмотра грида" src="https://mdn.mozillademos.org/files/14631/1-grid-inspector.png" style="height: 753px; width: 900px;"></p>
 
-<p>По мере вашего обучения и последующей работы с CSS Grid Layout этот инструмент даст вам лучшее визуальное представление о том, что происходит с вашей сеткой.</p>
+<p>По мере вашего обучения и последующей работы с грид-раскладкой этот инструмент даст вам лучшее визуальное представление о том, что происходит с вашим гридом.</p>
 
-<p>Если мы хотим, чтобы это стало более похожим на сетку, нам нужно добавить полосы.</p>
+<p>Если мы хотим, чтобы пример стал более похожим на сетку, нам нужно добавить полосы-колонки.</p>
 
-<h2 id="Grid_Tracks">Grid Tracks</h2>
+<h2 id="Грид-треки">Грид-треки (грид-полосы)</h2>
 
-<p>Мы определяем ряды и столбцы в нашей сетке при помощи свойств {{cssxref("grid-template-columns")}} и {{cssxref("grid-template-rows")}}. Это определяет полосы сетки. Полоса сетки — это место между любыми двумя линиями сетки. На изображении ниже вы можете увидеть подсветку полосы — первого трека ряда в нашей сетке.</p>
+<p>Мы определяем ряды и колонки в нашей сетке при помощи свойств {{cssxref("grid-template-columns")}} и {{cssxref("grid-template-rows")}}. Это определения грид-треков (грид-полос). <em>Грид-трек</em>&nbsp;&ndash; это промежуток между любыми двумя линиями грида. На изображении ниже вы можете увидеть подсвеченный трек&nbsp;&ndash; это первый трек-строка в нашем гриде.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14637/1_Grid_Track.png" style="height: 261px; width: 392px;"></p>
 
-<p>Можно дополнить пример выше, добавив свойство <code>grid-template-columns</code>  и  задав размеры полос колонок.</p>
+<h3 id="Базовый_пример">Базовый пример</h3>
 
-<p>В примере ниже мы создаём сетку с шириной колонки 200px. Каждый дочерний элемент сетки будет располагаться в отдельной ячейке сетки.</p>
+<p>Я могу дополнить пример выше, добавив свойство <code>grid-template-columns</code> и задав размеры треков-колонок.</p>
+
+<p>Сейчас я создал грид с тремя колонками шириной по 200px. Каждый дочерний элемент будет располагаться в отдельной ячейке грида.</p>
 
 <div id="grid_first">
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
    &lt;div&gt;Two&lt;/div&gt;
    &lt;div&gt;Three&lt;/div&gt;
@@ -106,14 +108,14 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: 200px 200px 200px;
 }
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -138,12 +140,12 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 <p>{{ EmbedLiveSample('grid_first', '610', '140') }}</p>
 </div>
 
-<h3 id="Единица_измерения_fr">Единица измерения fr</h3>
+<h3 id="Единица_измерения_fr">Единица измерения «fr»</h3>
 
-<p>Размер треков (полос) может быть задан с помощью любой единицы длины. Спецификация также вводит дополнительную единицу длины, позволяющую создавать эластичные (flexible) грид-треки. Новая единица длины <code>fr</code> представляет собой долю (fraction) доступного пространства в грид-контейнере. Определение грида в коде ниже создаст три трека равной длины, которые будут увеличиваться и уменьшаться в размерах в соответствии с доступным пространством.</p>
+<p>Размер треков может быть задан с помощью любой единицы длины. Спецификация также вводит дополнительную единицу длины, позволяющую создавать гибкие (flexible) грид-треки. Новая единица длины «<code>fr</code>» представляет собой долю (fraction) доступного пространства в грид-контейнере. Следующее определение грида создаст три одинаковых по ширине трека, расширяющихся и сужающихся в соответствии с доступным пространством.</p>
 
 <div id="fr_unit_ls">
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
    &lt;div&gt;Two&lt;/div&gt;
    &lt;div&gt;Three&lt;/div&gt;
@@ -152,14 +154,14 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -184,51 +186,123 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 <p>{{ EmbedLiveSample('fr_unit_ls', '220', '140') }}</p>
 </div>
 
-<p>В следующем примере мы создаём грид с треком в  <code>2fr</code> и двумя треками по  <code>1fr</code>. Доступное пространство разбивается на четыре части. Две части занимает первый трек, и две части - два оставшихся. </p>
+<h3 id="Разные_размеры">Разные размеры</h3>
 
-<pre class="brush: css notranslate">.wrapper {
+<p>В следующем примере мы создаём грид с треком в <code>2fr</code> и двумя треками по <code>1fr</code>. Доступное пространство разбивается на четыре части. Две части занимает первый трек, и две части&nbsp;&ndash; два оставшихся.</p>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+  &lt;div&gt;One&lt;/div&gt;
+  &lt;div&gt;Two&lt;/div&gt;
+  &lt;div&gt;Three&lt;/div&gt;
+  &lt;div&gt;Four&lt;/div&gt;
+  &lt;div&gt;Five&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
 }
 </pre>
 
-<p>В последнем примере смешаем треки с абсолютной длиной и треки с длиной во fr. Размер первого трека 500 пикселей, и эта фиксированная ширина убирается из доступного пространства. Оставшееся пространство разбивается на три части и пропорционально разделяется между двумя эластичными треками.</p>
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+.wrapper &gt; div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+.nested {
+    border: 2px solid #ffec99;
+    border-radius: 5px;
+    background-color: #fff9db;
+    padding: 1em;
+}
+</pre>
+</div>
 
-<pre class="brush: css notranslate">.wrapper {
+<p>{{ EmbedLiveSample('Разные_размеры', '220', '140') }}</p>
+
+<h3 id="Смешение_гибких_и_фиксированных_размеров">Смешение гибких и фиксированных размеров</h3>
+
+<p>В последнем примере смешаем треки с абсолютными размерами и треки с размерами, определенными в <code>fr</code>. Первый трек&nbsp;&ndash; 500 пикселей, фиксированная ширина убирается из доступного пространства. Оставшееся пространство разбивается на три части и пропорционально разделяется между двумя гибкими треками.</p>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+  &lt;div&gt;One&lt;/div&gt;
+  &lt;div&gt;Two&lt;/div&gt;
+  &lt;div&gt;Three&lt;/div&gt;
+  &lt;div&gt;Four&lt;/div&gt;
+  &lt;div&gt;Five&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: 500px 1fr 2fr;
 }
 </pre>
 
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+.wrapper &gt; div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+.nested {
+    border: 2px solid #ffec99;
+    border-radius: 5px;
+    background-color: #fff9db;
+    padding: 1em;
+}
+</pre>
+</div>
+
+<p>{{ EmbedLiveSample('Смешение_гибких_и_фиксированных_размеров', '220', '140') }}</p>
+
 <h3 id="Задание_треков_с_помощью_нотации_repeat">Задание треков с помощью нотации <code>repeat()</code></h3>
 
-<p>В огромных гридах с большим количеством треков можно использовать нотацию <code>repeat()</code> , чтобы повторить структуру треков или её часть. Например, такое задание грида:</p>
+<p>В огромных гридах с большим количеством треков можно использовать нотацию <code>repeat()</code>, чтобы повторить всю структуру треков или её часть. Например, определение грида:</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 </pre>
 
-<p>можно записать вот так:</p>
+<p>Может быть также записано как:</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 </pre>
 
-<p>Repeat-нотацию можно использовать как часть списка треков. В следующем примере создаётся грид с начальным треком шириной в 20 пикселей, шестью треками шириной в 1fr и последним треком шириной в 20 пикселей.</p>
+<p>Repeat-нотация может быть использована для части структуры треков. В следующем примере я создал грид с начальным треком в 20 пикселей, затем повторил секцию с шестью треками по 1fr и завершил 20-пиксельным треком.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: 20px repeat(6, 1fr) 20px;
 }
 </pre>
 
-<p>Repeat-нотация в качестве аргумента принимает список треков, поэтому с её помощью можно создавать структуру из повторяющихся треков. В следующем примере грид состоит из 10 треков: за треком шириной <code>1fr</code> следует трек шириной <code>2fr</code> , и все это дело повторяется пять раз.</p>
+<p>Repeat-нотация принимает список треков и использует его для создания повторяющегося шаблона треков. В следующем примере мой грид состоит из 10 треков: за треком в&nbsp;<code>1fr</code> следует трек в&nbsp;<code>2fr</code>. Этот шаблон будет повторен пять раз.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr 2fr);
 }
@@ -236,13 +310,15 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <h3 id="Явный_и_неявный_грид">Явный и неявный грид</h3>
 
-<p>Во всех примерах выше мы создавали наши колоночные (столбцовые) треки с помощью свойства {{cssxref("grid-template-columns")}}, в то время как грид самостоятельно создавал строки (ряды, полосы) для любого контента там, где это требовалось. Эти строки создавались в неявном гриде. Явный грид состоит из строк и колонок, которые мы определяем с помощью {{cssxref("grid-template-columns")}} и {{cssxref("grid-template-rows")}}. Если вы размещаете что-нибудь вне рамок определённого данными свойствами грида или в зависимости от контента требуется большее количество грид-треков, грид создаёт строки и колонки в виде неявного грида. Размер подобных треков по умолчанию задаётся автоматически в зависимости от находящегося в них контента.</p>
+<p>При создании грида в примере выше мы специально объявляли треки-колонки при помощи свойства {{cssxref("grid-template-columns")}}, но грид также самостоятельно создавал строки. Эти строки - часть «неявного» грида. В отличие от него, «явный» грид состоит из строк и колонок, заданных с помощью {{cssxref("grid-template-columns")}} или {{cssxref("grid-template-rows")}}.</p>
 
-<p>Вы также можете задать размер треков, создаваемых в виде неявного грида с помощью свойств {{cssxref("grid-auto-rows")}} и {{cssxref("grid-auto-columns")}}.</p>
+<p>Если вы размещаете что-нибудь вне рамок определённого грида или из-за количества контента требуется большее количество грид-треков, грид создаёт строки и колонки в виде неявного грида. Размер этих треков по умолчанию задаётся автоматически в зависимости от находящегося в них контента.</p>
 
-<p>В примере ниже мы задаём <code>grid-auto-rows</code> , чтобы треки, создаваемые в неявном гриде были высотой 200 пикселей.</p>
+<p>Вы также можете задать размер треков, создаваемых в виде неявного грида, с помощью свойств {{cssxref("grid-auto-rows")}} и {{cssxref("grid-auto-columns")}}.</p>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<p>В примере ниже мы используем <code>grid-auto-rows</code>, чтобы убедиться, что треки, создаваемые в неявном гриде, были высотой 200 пикселей.</p>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
    &lt;div&gt;Two&lt;/div&gt;
    &lt;div&gt;Three&lt;/div&gt;
@@ -251,7 +327,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 200px;
@@ -259,7 +335,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -281,15 +357,15 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('Явный_и_неявный_грид', '230', '420') }}</p>
+<p>{{ EmbedLiveSample('Явный_и_неявный_грид', '230', '450') }}</p>
 
 <h3 id="Масштабирование_треков_и_minmax">Масштабирование треков и <code>minmax()</code></h3>
 
-<p>При задании размеров явного грида или при определении размеров автоматически создаваемых колонок или строк может возникнуть следующая ситуация: мы хотим определить для треков минимальный размер, но при этом быть уверенными, что при необходимости треки растянутся, чтобы вместить весь добавленный в них контент. Например, нам нужно, чтобы строки никогда не становились меньше 100 пикселей, но если контент занимает, скажем, 300 пикселей в высоту, мы хотим, чтобы  строка тоже стала 300 пикселей.</p>
+<p>При задании размеров явного грида или при определении размеров автоматически создаваемых колонок или строк нам может понадобиться задать трекам минимальный размер, но при этом быть уверенными, что они треки растянутся, чтобы вместить весь добавленный в них контент. Например, мне нужно, чтобы строки никогда не становились меньше 100 пикселей, но если контент занимает 300 пикселей в высоту, я бы хотел растянуть строку на эту высоту.</p>
 
-<p>Для подобных ситуаций в Grid  предусмотрено решение с помощью функции {{cssxref("minmax", "minmax()")}}. В следующем примере  <code>minmax()</code> используется, как значение свойства {{cssxref("grid-auto-rows")}}. Автоматически создаваемые строки будут как минимум 100 пикселей в высоту, а как максимум примут значение <code>auto</code>. Использование <code>auto</code> означает, что размер строки посмотрит на размер контента и растянется таким образом, чтобы вместить самый высокий элемент ячейки в этой строке. </p>
+<p>В гриде есть решение этой задачи&nbsp;&ndash; функция {{cssxref("minmax", "minmax()")}}. В следующем примере я использую <code>minmax()</code> в качестве {{cssxref("grid-auto-rows")}}. То есть автоматически создаваемые строки будут как минимум 100 пикселей в высоту, а как максимум&nbsp;&ndash; примут значение <code>auto</code>. Использование <code>auto</code> означает следующее: высота строки «растягивается» до размера ячейки с самым высоким элементом контента.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -297,7 +373,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -319,7 +395,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
    &lt;div&gt;Two
    &lt;p&gt;I have some more content in.&lt;/p&gt;
@@ -333,23 +409,23 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>{{ EmbedLiveSample('Масштабирование_треков_и_minmax', '240', '470') }}</p>
 
-<h2 id="Grid-линии">Grid-линии</h2>
+<h2 id="Грид-линии">Грид-линии</h2>
 
-<p>Нужно заметить, что когда мы определяем грид, мы определяем грид-треки, а не грид-линии. После этого грид обеспечивает нас пронумерованными линиями, номера которых можно использовать для размещения элементов. Например, в гриде с тремя колонками и двумя рядами у нас - четыре колоночные линии.</p>
+<p>Нужно заметить, что когда мы определяем грид, мы определяем грид-треки, а не грид-линии. После этого грид обеспечивает нас пронумерованными линиями, для использования при размещении элементов. В нашем гриде с тремя колонками и двумя рядами у нас есть четыре линии колонок.</p>
 
-<p><img alt="Diagram showing numbered grid lines." src="https://mdn.mozillademos.org/files/14761/1_diagram_numbered_grid_lines.png" style="height: 456px; width: 764px;"></p>
+<p><img alt="Диаграма, показывающая номера грид-линий." src="https://mdn.mozillademos.org/files/14761/1_diagram_numbered_grid_lines.png" style="height: 456px; width: 764px;"></p>
 
-<p>Линии нумеруются в соответствии с режимом написания (writing mode) документа. В языках с написанием слева-направо, линия 1 - самая левая линия в гриде. В языках с написанием справа-налево, линия 1 - самая правая линия в гриде. Линиям также можно давать имена, и - не переключайтесь, дальше мы узнаем, как это делать. </p>
+<p>Линии пронумерованы в соответствии с режимом написания (writing mode) документа. В языках с написанием слева направо, линия 1&nbsp;&ndash; самая левая линия в гриде. В языках с написанием справа налево линия 1&nbsp;&ndash; самая правая линия в гриде. Линии также могут быть именованы, и мы рассмотрим, как это сделать, в одном из последующих руководств этой серии.</p>
 
 <h3 id="Размещение_элементов_по_линиям">Размещение элементов по линиям</h3>
 
-<p>В дальнейшем мы детально рассмотрим размещение элементов с помощью линий, а пока остановимся на простом способе. При размещении элемента мы ссылаемся именно на линию, а не на трек. </p>
+<p>Детально размещение элементов с помощью линий мы рассмотрим в дальнейшем. Следующий пример демонстрирует простой способ. При размещении элемента мы задаем линию, а не на трек.</p>
 
-<p>В следующем примере мы размещаем первые два элемента в нашем гриде из трёх колоночных треков с помощью свойств {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row-start")}} и {{cssxref("grid-row-end")}}. Поскольку режим написания слева направо, первый элемент размещается, начиная с колоночной линии 1, и занимает пространство до колоночной линии 4, которая в нашем случае - самая правая линия грида. Наш элемент начинается со строчной линии 1 и заканчивается на строчной линии 3, таким образом занимая два строчных трека.</p>
+<p>В следующем примере я разместил первые два элемента на нашем трёхколоночном гриде с помощью свойств {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row-start")}} и {{cssxref("grid-row-end")}}. Работая слева направо, первый элемент размещен начиная с колоночной линии 1 и занимает пространство до колоночной линии 4, которая в нашем случае&nbsp;&ndash; самая правая линия грида. Наш элемент начинается со строчной линии 1 и заканчивается на строчной линии 3, таким образом занимая два строчных трека.</p>
 
-<p>Второй элемент начинается с колоночной линии 1 и занимает один трек. Это поведение по умолчанию, поэтому не нужно задавать конечную линию. Элемент также занимает два строчных трека - со строчной линии 3 до строчной линии 5. Остальные элементы самостоятельно размещаются в пустых пространствах грида. </p>
+<p>Второй элемент начинается с колоночной линии 1 и занимает один трек. Это поведение по умолчанию, поэтому нет необходимости задавать конечную линию. Элемент также занимает два строчных трека&nbsp;&ndash; со строчной линии 3 до строчной линии 5. Остальные элементы самостоятельно размещаются в свободном месте на гриде.</p>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -358,7 +434,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 100px;
@@ -377,7 +453,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -399,27 +475,51 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('Размещение_элементов_по_линиям', '230', '420') }}</p>
+<p>{{ EmbedLiveSample('Размещение_элементов_по_линиям', '230', '450') }}</p>
 
-<p>Не забывайте, что вы можете использовать <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a> в Firefox Developer Tools, чтобы посмотреть, как элементы размещаются по линиям грида.</p>
+<div class="note">
+  <p><strong>Примечание.</strong> Не забывайте, что вы можете использовать <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a> в Firefox Developer Tools, чтобы посмотреть, как элементы размещаются по линиям грида.</p>
+</div>
 
-<h2 id="Grid-ячейки">Grid-ячейки</h2>
 
-<p>Грид-ячейка (<em>grid cell)</em> - наименьшая единица измерения грида, концептуально похожая на ячейку таблицы. Как мы видели в предыдущих примерах, едва грид определён для родительского элемента, дочерние элементы автоматически размещаются в каждой ячейке нашего заданного грида. На рисунке ниже первая ячейка грида выделена цветом.</p>
+<h3 id="Сокращения_при_использовании_размещения_по_линиям">Сокращения при использовании размещения по линиям</h3>
 
-<p><img alt="The first cell of the grid highlighted" src="https://mdn.mozillademos.org/files/14643/1_Grid_Cell.png" style="height: 233px; width: 350px;"></p>
+<p>Обычные значения, использованные выше, могут быть умещены в одну строку: для колонок&nbsp;&ndash; с использованием {{cssxref("grid-column")}}, для строк&nbsp;&ndash; с использованием {{cssxref("grid-row")}}. Следующий пример сделает такое же расположение, как и предыдущий, но с менее громоздким кодом CSS. значение до слэша («/»)&nbsp;&ndash; это первая линия, значение после&nbsp;&ndash; последняя линия.</p>
 
-<h2 id="Grid-области">Grid-области</h2>
+<p>Можно опустить конечное значение, если область занимает только один трек.</p>
 
-<p>Элементы могут занимать одну или несколько ячеек внутри строки или колонки, и подобное поведение создаёт грид-область (<em>grid area)</em>. Грид-области должны быть перпендикулярными, - невозможно создать область, например, в форме буквы L. Выделенная цветом грид-область на рисунке ниже занимает два строчных трека и два колоночных. </p>
+<pre class="brush: css">.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+}
+.box1 {
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+}
+.box2 {
+  grid-column: 1;
+  grid-row: 3 / 5;
+}
+</pre>
 
-<p><img alt="A grid area" src="https://mdn.mozillademos.org/files/14645/1_Grid_Area.png" style="height: 238px; width: 357px;"></p>
+<h2 id="Грид-ячейки">Грид-ячейки</h2>
 
-<h2 id="Зазоры_Gutters">Зазоры (Gutters)</h2>
+<p><em>Грид-ячейка</em>&nbsp;&ndash; наименьшая часть на гриде. Концептуально она похожа на ячейку таблицы. Как мы видели в предыдущих примерах, едва грид определён для родительского элемента, дочерние элементы автоматически размещаются в каждой ячейке заданного грида. На рисунке ниже я выделил первую ячейку грида.</p>
 
-<p><em>Зазоры (Gutters)</em> или аллеи (<em>alleys)</em> между грид-ячейками можно создать с помощью свойств {{cssxref("grid-column-gap")}} и {{cssxref("grid-row-gap")}}, или с помощью сокращённого свойства {{cssxref("grid-gap")}}. В примере ниже мы создаём зазор в 10 пикселей между колонками и в <code>1em</code> между строками.</p>
+<p><img alt="Выделена первая ячейка грида" src="https://mdn.mozillademos.org/files/14643/1_Grid_Cell.png" style="height: 233px; width: 350px;"></p>
 
-<pre class="brush: css notranslate">.wrapper {
+<h2 id="Грид-области">Грид-области</h2>
+
+<p>Элементы могут занимать одну или несколько ячеек внутри строки или колонки, таким образом, создаётся <em>грид-область</em>. Грид-области должны быть перпендикулярными&nbsp;&ndash; невозможно создать область, например, в форме буквы «L». Выделенная грид-область на рисунке ниже занимает два строчных трека и два колоночных.</p>
+
+<p><img alt="Грид-область" src="https://mdn.mozillademos.org/files/14645/1_Grid_Area.png" style="height: 238px; width: 357px;"></p>
+
+<h2 id="Промежутки">Промежутки</h2>
+
+<p><em>Промежутки (gutters)</em>, или <em>дорожки (alleys)</em>, между грид-ячейками могут быть созданы с помощью свойств {{cssxref("grid-column-gap")}} и {{cssxref("grid-row-gap")}}, или с помощью сокращённого свойства {{cssxref("grid-gap")}}. В примере ниже я создаю 10-пиксельный промежуток между колонками и промежуток в <code>1em</code> между строками.</p>
+
+<pre class="brush: css">.wrapper {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-column-gap: 10px;
@@ -427,7 +527,12 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<div class="note">
+  <p><strong>Примечание.</strong> Когда грид был добавлен в браузеры, у свойств {{cssxref("column-gap")}}, {{cssxref("row-gap")}} и {{cssxref("gap")}} был префикс «grid-»: «grid-column-gap», «grid-row-gap» «grid-gap» соответственно.</p>
+  <p>Сейчас все браузеры поддерживают значения без префикса, однако версии с префиксом будут поддерживаться как псевдонимы, что делает их использование безопасным.</p>
+</div>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
    &lt;div&gt;Two&lt;/div&gt;
    &lt;div&gt;Three&lt;/div&gt;
@@ -437,7 +542,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -459,16 +564,31 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('Зазоры_Gutters') }}</p>
+<p>{{ EmbedLiveSample('Промежутки') }}</p>
 
-<p>Любое пространство, которое занимают зазоры, добавляется в начало эластичных треков, задаваемых с помощью <code>fr</code>, поэтому зазоры используются для регулирования размеров и действуют как регулярные грид-треки, хотя что-то разместить в них нельзя. В терминах расположения элементов по грид-линиям (line-based positioning) зазоры ведут себя так, как если бы самой грид-линии была добавлена толщина.</p>
+<p>Пространство, занимаемое промежутками, будет учитываться как пространство, расположенное перед гибкими треками, заданными с помощью <code>fr</code>, и приписанное к длине этих треков, и промежутки служат для задания размеров как обычные грид-треки, однако в промежутках нельзя ничего размещать. С точки зрения размещения по линиям, промежутки действуют в роли толстой линии.</p>
 
-<h2 id="Вложенные_гриды">Вложенные гриды</h2>
+<h2 id="Вкладывание_гридов">Вкладывание гридов</h2>
 
-<p>Грид-элемент может быть и грид-контейнером. В следующем примере у нас есть созданный ранее трёхколоночный грид, в котором размещены два элемента. В данном случае у первого элемента есть несколько подэлементов. Поскольку эти подэлементы не являются прямыми потомками грида, они не участвуют в структуре грида и отображаются в соответствии с нормальным потоком документа.</p>
+<p>Грид-элемент может быть и грид-контейнером. В следующем примере у меня есть созданный ранее трёхколоночный грид, с двумя нашими размещенными элементами. В данном случае у первого элемента есть несколько подэлементов. Поскольку эти подэлементы не являются прямыми потомками грида, они не участвуют в структуре грида и отображаются в нормальном потоке документа.</p>
 
-<div id="nesting">
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<p><img alt="Вложенные гриды в потоке" src="https://mdn.mozillademos.org/files/14641/1_Nested_Grids_in_flow.png" style="height: 512px; width: 900px;"></p>
+
+<h3 id="Вкладывание_без_подгридов">Вкладывание без подгридов</h3>
+
+<p>Если я задам для <code>box1</code> значение <code>display: grid</code>, я могу установить для него структуру треков, и он тоже станет гридом. Элементы будут размещены на этом новом гриде.</p>
+
+<div id="nesting"><pre class="brush: css">.box1 {
+   grid-column-start: 1;
+   grid-column-end: 4;
+   grid-row-start: 1;
+   grid-row-end: 3;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+}
+</pre>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box box1"&gt;
        &lt;div class="nested"&gt;a&lt;/div&gt;
        &lt;div class="nested"&gt;b&lt;/div&gt;
@@ -481,26 +601,14 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<p><img alt="Nested grid in flow" src="https://mdn.mozillademos.org/files/14641/1_Nested_Grids_in_flow.png" style="height: 512px; width: 900px;"></p>
-
-<p>Если мы задаём для <code>box1</code> значение <code>display: grid</code> , то можем написать для него структуру треков, и он тоже станет гридом, а его дочерние элементы будут размещены внутри этого нового грида.</p>
-
-<pre class="brush: css notranslate">.box1 {
-   grid-column-start: 1;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-}
-</pre>
-
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
     background-color: #fff4e6;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .box {
     border: 2px solid #ffa94d;
@@ -508,6 +616,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
+}
+.box1 {
+  grid-column: 1 / 4;
 }
 .nested {
     border: 2px solid #ffec99;
@@ -521,19 +632,19 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>{{ EmbedLiveSample('nesting', '600', '340') }}</p>
 
-<p>В данном случае вложенный грид не связан с родительским. Как вы можете видеть, он не наследует значение свойства {{cssxref("grid-gap")}} родительского элемента и линии вложенного грида не выравниваются по линиям родительского грида.</p>
+<p>В данном случае вложенный грид не связан с родительским. Как вы можете видеть, он не наследует значение свойства {{cssxref("gap")}} родителя и линии вложенного грида не выравниваются по линиям родительского грида.</p>
 
 <h3 id="Подгрид_Subgrid">Подгрид (Subgrid)</h3>
 
-<p>В спецификации гридов уровня 2 есть функциональность, называемая подгридом (subgrid) , которая позволит нам создавать вложенные гриды, использующие структуру треков родительского грида.</p>
+<p>В рабочих черновиках спецификации гридов второго уровня есть функциональность, называемая <em>подгридом</em>, которая позволит нам создавать вложенные гриды, использующие структуру треков родительского грида.</p>
 
 <div class="note">
-<p>Примечание. Эта функция поставляется в браузере Firefox 71, который в настоящее время является единственным браузером для реализации subgrid.</p>
+<p><strong>Примечание.</strong> Эта функция поддерживается в браузере Firefox 71, который в настоящее время является единственным браузером, обеспечивающим выполнение подгрида.</p>
 </div>
 
-<p>В приведённом выше примере мы можем отредактировать вложенный грид, изменив <code>grid-template-columns: repeat(3, 1fr)</code>, на <code>grid-template-columns: subgrid</code>. Вложенный грид будет использовать родительскую структуру треков, чтобы разместить свои дочерние элементы.</p>
+<p>Согласно этой спецификации, мы можем отредактировать приведенный выше пример вложенного грида, изменив <code>grid-template-columns: repeat(3, 1fr)</code> на <code>grid-template-columns: subgrid</code>. Вложенный грид будет использовать родительскую структуру треков для размещения элементов.</p>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-column-start: 1;
    grid-column-end: 4;
    grid-row-start: 1;
@@ -545,10 +656,14 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <h2 id="Размещение_элементов_с_помощью_z-index">Размещение элементов с помощью <code>z-index</code></h2>
 
-<p>Несколько грид-элементов могут занимать одну и ту же ячейку. Если вернуться к нашему примеру с элементами, размещёнными по номерам линий, мы можем сделать так, чтобы два элемента перекрывались:</p>
+<p>Несколько грид-элементов могут занимать одну и ту же ячейку и поэтому мы можем использовать свойство {{cssxref("z-index")}}, чтобы контролировать порядок наложения перекрывающихся элементов.</p>
+
+<h3 id="Наложение_без_z-index">Наложение без z-index</h3>
+
+<p>Если мы вернемся к нашему примеру с элементами, размещёнными по номерам линий, мы можем изменить его, чтобы два элемента перекрывались:</p>
 
 <div id="l_ex">
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box box1"&gt;One&lt;/div&gt;
    &lt;div class="box box2"&gt;Two&lt;/div&gt;
    &lt;div class="box box3"&gt;Three&lt;/div&gt;
@@ -557,7 +672,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-auto-rows: 100px;
@@ -576,7 +691,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -599,15 +714,15 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 </div>
 </div>
 
-<p>{{ EmbedLiveSample('l_ex', '230', '420') }}</p>
+<p>{{ EmbedLiveSample('l_ex', '230', '460') }}</p>
 
-<p>Элемент <code>box2</code> теперь перекрывает <code>box1</code>, и отображается сверху, поскольку в исходном коде находится ниже.</p>
+<p>Элемент <code>box2</code> теперь перекрывает <code>box1</code>, он отображается сверху, поскольку в исходном коде находится ниже.</p>
 
 <h3 id="Управление_порядком_отображения">Управление порядком отображения</h3>
 
-<p>Порядком, в котором элементы накладываются друг на друга, можно управлять с помощью свойства <code>z-index</code> - точно так же, как в случае с позиционированными элементами. Если задать <code>box2</code> значение <code>z-index</code> , меньшее, чем у <code>box1</code> , в стеке он отобразится под элементом <code>box1</code>.</p>
+<p>Мы можем управлять порядком наложения элементов с помощью свойства <code>z-index</code>&nbsp;&ndash; точно так же, как позиционированными элементами. Если мы зададим для <code>box2</code> значение <code>z-index</code>, меньшее, чем у <code>box1</code>, он отобразится под элементом <code>box1</code>.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-auto-rows: 100px;
@@ -628,7 +743,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 </pre>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div class="box box1"&gt;One&lt;/div&gt;
     &lt;div class="box box2"&gt;Two&lt;/div&gt;
    &lt;div class="box box3"&gt;Three&lt;/div&gt;
@@ -637,7 +752,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -659,13 +774,13 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('Управление_порядком_отображения', '230', '420') }}</p>
+<p>{{ EmbedLiveSample('Управление_порядком_отображения', '230', '460') }}</p>
 
 <h2 id="Что_дальше">Что дальше?</h2>
 
-<p>В данной статье мы очень кратко рассмотрели спецификацию Grid Layout. Поиграйте с примерами кода и переходите  <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">к следующей части нашего гида, где мы детально покопаемся в недрах CSS Grid Layout</a>.</p>
+<p>В данной статье мы очень кратко рассмотрели спецификацию Grid Layout. Поиграйте с примерами кода и переходите <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">к следующей части нашего руководства, где мы начнём углубляться в детали CSS Grid Layout</a>.</p>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
  <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>

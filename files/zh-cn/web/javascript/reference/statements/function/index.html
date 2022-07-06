@@ -17,11 +17,9 @@ translation_of: Web/JavaScript/Reference/Statements/function
 <p>你还可以使用  {{jsxref("Function")}} 构造函数和 一个{{jsxref("Operators/function", "function expression")}} 定义函数。</p>
 </div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<h2 id="语法">语法</h2>
 
-<h2 id="语法"><span style="font-size: 2.14285714285714rem;">语法</span></h2>
-
-<pre class="eval notranslate">function <em>name</em>([<em>param</em>,[, <em>param</em>,[..., <em>param</em>]]]) {
+<pre class="eval">function <em>name</em>([<em>param</em>,[, <em>param</em>,[..., <em>param</em>]]]) {
    [<em>statements</em>]
 }
 </pre>
@@ -29,112 +27,98 @@ translation_of: Web/JavaScript/Reference/Statements/function
 <dl>
  <dt><code>name</code></dt>
  <dd>函数名</dd>
-</dl>
-
-<dl>
  <dt><code>param</code></dt>
  <dd>要传递给函数的参数的名称。不同引擎中的最大参数数量不同。</dd>
-</dl>
-
-<dl>
  <dt><code>statements</code></dt>
  <dd>包含函数体的语句。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>一个被函数声明创建的函数是一个 Function 对象，具有 Function 对象的所有属性、方法和行为。查看 <a href="/en/JavaScript/Reference/Global_Objects/Function">Function</a> 以获取 function 的详细信息。</p>
 
 <p>函数也可以被表达式创建（ <a href="/en/JavaScript/Reference/Operators/function">function expression</a> ）</p>
 
-<p>函数可以被有条件来声明，这意味着，在一个 if 语句里，函数声明是可以嵌套的。有的浏览器会将这种有条件的声明看成是无条件的声明，无论这里的条件是true还是false，浏览器都会创建函数。因此，它们不应该被使用。</p>
+<p>函数可以被有条件来声明，这意味着，在一个 if 语句里，函数声明是可以嵌套的。有的浏览器会将这种有条件的声明看成是无条件的声明，无论这里的条件是 true 还是 false，浏览器都会创建函数。因此，它们不应该被使用。</p>
 
 <p>默认情况下，函数是返回 undefined 的。想要返回一个其他的值，函数必须通过一个 <a href="/en/JavaScript/Reference/Statements/return">return</a> 语句指定返回值。</p>
 
-<h3 id="有条件的创建函数" style="line-height: 24px; font-size: 1.71428571428571rem;">有条件的创建函数</h3>
+<h3 id="有条件的创建函数">有条件的创建函数</h3>
 
-<p>函数可以被有条件来声明，这意味着，函数声明可能出现在一个 if 语句里，但是，这种声明方式在不同的浏览器里可能有不同的效果。因此，不应该在生成环境代码中使用这种声明方式，应该使用函数表达式来代替。</p>
+<p>函数可以被有条件来声明，这意味着，函数声明可能出现在一个 if 语句里，但是，这种声明方式在不同的浏览器里可能有不同的效果。因此，不应该在生产环境代码中使用这种声明方式，应该使用函数表达式来代替。</p>
 
-<pre class="brush: js notranslate"><code>var hoisted = "foo" in this;
+<pre class="brush: js"><code>var hoisted = "foo" in this;
 console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
 if (false) {
   function foo(){ return 1; }
 }
 
-// 在Chrome里:
+// 在 Chrome 里：
 // 'foo' 变量名被提升，但是 typeof foo 为 undefined
 //
-// 在Firefox里:
-// 'foo' 变量名被提升. 但是 typeof foo 为 undefined
+// 在 Firefox 里：
+// 'foo' 变量名被提升。但是 typeof foo 为 undefined
 //
-// 在Edge里:
-// 'foo' 变量名未被提升. 而且 typeof foo 为 undefined
+// 在 Edge 里：
+// 'foo' 变量名未被提升。而且 typeof foo 为 undefined
 //
-// 在Safari里:
-// 'foo' 变量名被提升. 而且 typeof foo 为 function</code></pre>
+// 在 Safari 里：
+// 'foo' 变量名被提升。而且 typeof foo 为 function</code></pre>
 
 <p>注意，即使把上面代码中的 if(false) 改为 if(true)，结果也是一样的</p>
 
-<pre class="brush: js notranslate"><code>var hoisted = "foo" in this;
+<pre class="brush: js"><code>var hoisted = "foo" in this;
 console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
 if (true) {
   function foo(){ return 1; }
 }
 
-// 在Chrome里:
+// 在 Chrome 里：
 // 'foo' 变量名被提升，但是 typeof foo 为 undefined
 //
-// 在Firefox里:
-// 'foo' 变量名被提升. 但是 typeof foo 为 undefined
+// 在 Firefox 里：
+// 'foo' 变量名被提升。但是 typeof foo 为 undefined
 //
-// 在Edge里:
-// 'foo' 变量名未被提升. 而且 typeof foo 为 undefined
+// 在 Edge 里：
+// 'foo' 变量名未被提升。而且 typeof foo 为 undefined
 //
-// 在Safari里:
-// 'foo' 变量名被提升. 而且 typeof foo 为 function</code>
+// 在 Safari 里：
+// 'foo' 变量名被提升。而且 typeof foo 为 function</code>
 </pre>
 
 <h3 id="函数声明提升">函数声明提升</h3>
 
-<p>JavaScript 中的<strong>函数声明</strong>被提升到了<strong>函数定义</strong>。你可以在函数声明之前使用该函数:</p>
+<p>JavaScript 中的<strong>函数声明</strong>被提升到了<strong>函数定义</strong>。你可以在函数声明之前使用该函数：</p>
 
-<pre class="brush: js  language-js notranslate"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="function token">hoisted<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span><span class="comment token"> // "foo"
+<pre class="brush: js">hoisted(); // logs "foo"
 
-</span><span class="keyword token">function</span> <span class="function token">hoisted<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-     console<span class="punctuation token">.</span><span class="function token">log<span class="punctuation token">(</span></span><span class="string token">"foo"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}
-</span>
-<span class="comment token">/* equal to*/
-var </span><span class="function token">hoisted</span><span class="punctuation token">;</span><span class="comment token"> </span>
-
-<span class="function token">hoisted = </span><span class="keyword token">function</span><span class="function token"><span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log<span class="punctuation token">(</span></span><span class="string token">"foo"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}
-</span><span class="function token">hoisted<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// "foo" </span></code>
+function hoisted() {
+  console.log('foo');
+}
 </pre>
 
 <div class="note">
-<p>注意 :<strong>函数表达式</strong>{{jsxref("Operators/function", "function expressions")}} 不会被提升:</p>
+<p><strong>备注：</strong><strong>函数表达式</strong>{{jsxref("Operators/function", "function expressions")}} 不会被提升：</p>
 </div>
 
-<pre class="brush: js  language-js notranslate"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="function token">notHoisted<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span><span class="comment token"> // TypeError: notHoisted is not a function
-</span>
-<span class="keyword token">var</span> notHoisted <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-   console<span class="punctuation token">.</span><span class="function token">log<span class="punctuation token">(</span></span><span class="string token">"bar"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">notHoisted(); // TypeError: notHoisted is not a function
 
-<h2 id="Examples" name="Examples">示例</h2>
+var notHoisted = function() {
+  console.log('bar');
+};
+</pre>
 
-<h3 id="Example_Using_function" name="Example:_Using_function">使用函数</h3>
+<h2 id="Examples">示例</h2>
 
-<p>下面的代码声明了一个函数,该函数返回了销售的总金额, 参数是产品a,b,c分别的销售的数量.</p>
+<h3 id="Example_Using_function">使用函数</h3>
 
-<pre class="brush: js  language-js notranslate"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token">function</span> <span class="function token">calc_sales<span class="punctuation token">(</span></span>units_a<span class="punctuation token">,</span> units_b<span class="punctuation token">,</span> units_c<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-   <span class="keyword token">return</span> units_a<span class="operator token">*</span><span class="number token">79</span> <span class="operator token">+</span> units_b <span class="operator token">*</span> <span class="number token">129</span> <span class="operator token">+</span> units_c <span class="operator token">*</span> <span class="number token">699</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<p>下面的代码声明了一个函数，该函数返回了销售的总金额，参数是产品 a,b,c 分别的销售的数量。</p>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">规范</h2>
+<pre class="brush: js">function calc_sales(units_a, units_b, units_c) {
+   return units_a * 79 + units_b * 129 + units_c * 699;
+}</pre>
+
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -161,13 +145,13 @@ var </span><span class="function token">hoisted</span><span class="punctuation t
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 
 
 <p>{{Compat("javascript.statements.function")}}</p>
 
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Functions_and_function_scope", "Functions and function scope")}}</li>

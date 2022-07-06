@@ -11,18 +11,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 
 <p>Объект <strong><code>WeakSet</code></strong> - коллекция, элементами которой могут быть только <em>объекты. </em>Ссылки на эти объекты в WeakSet являются слабыми. Каждый объект может быть добавлен в WeakSet только один раз.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"> new WeakSet([iterable]);</pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt>iterable</dt>
  <dd>При передаче <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/for...of">итерируемого объекта</a>, все его элементы будут добавлены в новый WeakSet. <code>Null</code> обрабатывается как <code>undefined</code>.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Объекты <code>WeakSet </code>представляют собой коллекции объектов. Каждый объект в WeakSet встречается только один раз, что обеспечивает его уникальность в рамках коллекции WeakSet.</p>
 
@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
  <li>Ссылки на объекты в WeakSet являются слабыми: если на объект, хранимый в WeakSet нет ни одной внешней ссылки, то сборщик мусора удалит этот объект. Также это означает, что WeakSet <strong>не итерируем, </strong>так как нет возможности получить список текущих хранимых в WeakSet объектов.  </li>
 </ul>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt><code>WeakSet.length</code></dt>
@@ -46,17 +46,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 
 <p>Все экземпляры класса <code>WeakSet</code> унаследованы от {{jsxref("WeakSet.prototype")}}.</p>
 
-<h3 id="Properties_2" name="Properties_2">Свойства</h3>
+<h3 id="Properties_2">Свойства</h3>
 
 <p>{{page('ru/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Properties')}}</p>
 
-<h3 id="Methods" name="Methods">Методы</h3>
+<h3 id="Methods">Методы</h3>
 
 <p>{{page('ru/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Methods')}}</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:Using_the_WeakSet_object" name="Example:Using_the_WeakSet_object">Использование объекта <code>WeakSet</code> </h3>
+<h3 id="Example:Using_the_WeakSet_object">Использование объекта <code>WeakSet</code> </h3>
 
 <pre class="brush: js">var ws = new WeakSet();
 var obj = {};
@@ -72,35 +72,17 @@ ws.delete(window); // удаляет window из WeakSet
 ws.has(window);    // false, window был удалён
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-weakset-objects', 'WeakSet')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakset-objects', 'WeakSet')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.WeakSet")}}</p>
+<p>{{Compat}}</p>
 
 <div id="compat-mobile"> </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Map")}}</li>

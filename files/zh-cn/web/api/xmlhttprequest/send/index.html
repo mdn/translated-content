@@ -13,12 +13,12 @@ translation_of: Web/API/XMLHttpRequest/send
 ---
 <p>{{APIRef('XMLHttpRequest')}}</p>
 
-<p><code><strong>XMLHttpRequest.send()</strong></code> 方法用于发送 HTTP 请求。如果是异步请求（默认为异步请求），则此方法会在请求发送后立即返回；如果是同步请求，则此方法直到响应到达后才会返回。<font face="Consolas, Liberation Mono, Courier, monospace">XMLHttpRequest.send() 方法接受一个可选的参数，其作为请求主体；如果请求方法是 GET 或者 HEAD，则应将请求主体设置为 null。</font></p>
+<p><code><strong>XMLHttpRequest.send()</strong></code> 方法用于发送 HTTP 请求。如果是异步请求（默认为异步请求），则此方法会在请求发送后立即返回；如果是同步请求，则此方法直到响应到达后才会返回。<code>XMLHttpRequest.send()</code> 方法接受一个可选的参数，其作为请求主体；如果请求方法是 GET 或者 HEAD，则应将请求主体设置为 null。</p>
 
 <p>如果没有使用 {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}} 方法设置 {{HTTPHeader("Accept")}} 头部信息，则会发送带有 <code>"* / *"</code> 的{{HTTPHeader("Accept")}} 头部。</p>
 
 <div class="note">
-<p><strong>Note:</strong> 请注意不要使用一个简单的AarryBuffer对象作为参数，ArrayBuffer已经不再是ajax规范的一部分，请改用ArrayBufferView（有关信息请参考兼容性列表。）</p>
+<p><strong>Note:</strong> 请注意不要使用一个简单的 ArrayBuffer 对象作为参数，ArrayBuffer 已经不再是 AJAX 规范的一部分，请改用 ArrayBufferView（有关信息请参考兼容性列表。）</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -29,19 +29,19 @@ translation_of: Web/API/XMLHttpRequest/send
 
 <dl>
  <dt><code>body</code> {{optional_inline}}</dt>
- <dd>在XHR请求中要发送的数据体. 可以是:
+ <dd>在 XHR 请求中要发送的数据体. 可以是：
  <ul>
-  <li>可以为 {{domxref("Document")}}, 在这种情况下，它在发送之前被序列化.</li>
-  <li>为 <code>XMLHttpRequestBodyInit</code>, 从 <a href="https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit">per the Fetch spec</a> （规范中）可以是 {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, 或者 {{domxref("USVString")}} 对象.</li>
+  <li>可以为 {{domxref("Document")}}, 在这种情况下，它在发送之前被序列化。</li>
+  <li>为 <code>XMLHttpRequestBodyInit</code>, 从 <a href="https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit">per the Fetch spec</a> （规范中）可以是 {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, 或者 {{domxref("USVString")}} 对象。</li>
   <li><code>null</code></li>
  </ul>
- 如果body没有指定值，则默认值为 <code>null</code> .</dd>
+ 如果 body 没有指定值，则默认值为 <code>null</code> .</dd>
  <dt>
  <h3 id="返回值">返回值</h3>
 
  <p><code>undefined</code>.</p>
 
- <h3 id="例外"> 例外</h3>
+ <h3 id="例外">例外</h3>
 
  <table>
   <thead>
@@ -73,11 +73,11 @@ XMLHttpRequest.send(DOMString? <var>data</var>);
 XMLHttpRequest.send(FormData <var>data</var>);
 </pre>
 
-<p>如果发送的数据是Document对象，需要在发送之前将其序列化。当发送一个Document对象时，Firefox 3之前的版本都是使用utf-8编码发送请求的；FireFox 3则使用由<code>body.xmlEncoding</code>指定的编码格式正确的发送文档，但如果未指定编码格式，则使用utf-8编码格式发送。</p>
+<p>如果发送的数据是 Document 对象，需要在发送之前将其序列化。当发送一个 Document 对象时，Firefox 3 之前的版本都是使用 UTF-8 编码发送请求的；FireFox 3 则使用由 <code>body.xmlEncoding</code> 指定的编码格式正确的发送文档，但如果未指定编码格式，则使用 UTF-8 编码格式发送。</p>
 
-<p>如果是一个nsIInputStream接口,它必须与nsIUploadChannel的setUploadStream（）方法兼容。在这种情况下，将 Content-Length的头部添加到请求中，它的值则使用nsIInputStream接口的available（）方法获取。任何报头包括在数据流顶部的都会被当做报文主体。所以，应该在发送请求即调用send（）方法之前使用<a class="internal" href="#setRequestHeader()"><code>setRequestHeader()</code></a> 方法设置 Content-Type头部来指定数据流的MIME类型。</p>
+<p>如果是一个 nsIInputStream 接口，它必须与 nsIUploadChannel 的 <code>setUploadStream()</code> 方法兼容。在这种情况下，将 Content-Length 的头部添加到请求中，它的值则使用 nsIInputStream 接口的 <code>available()</code> 方法获取。任何报头包括在数据流顶部的都会被当做报文主体。所以，应该在发送请求即调用 <code>send()</code> 方法之前使用<a class="internal" href="#setRequestHeader()"><code>setRequestHeader()</code></a> 方法设置 Content-Type 头部来指定数据流的 MIME 类型。</p>
 
-<p>发送二进制内容的最佳方法（如上传文件）是使用一个与send（）方法结合的 <a href="/en-US/docs/Web/API/ArrayBufferView">ArrayBufferView</a> 或者<a href="/en-US/docs/Web/API/Blob">Blobs</a></p>
+<p>发送二进制内容的最佳方法（如上传文件）是使用一个与 <code>send()</code> 方法结合的 <a href="/en-US/docs/Web/API/ArrayBufferView">ArrayBufferView</a> 或者 <a href="/en-US/docs/Web/API/Blob">Blobs</a></p>
 
 <h2 id="案例_GET">案例: GET</h2>
 
@@ -85,14 +85,13 @@ XMLHttpRequest.send(FormData <var>data</var>);
 xhr.open('GET', '/server', true);
 
 xhr.onload = function () {
-   // 请求结束后,在此处写处理代码
+   // 请求结束后，在此处写处理代码
 };
 
 xhr.send(null);
 // xhr.send('string');
 </code>// <code>xhr.send(new Blob());
 // xhr.send(new Int8Array());
-// xhr.send({ form: 'data' });
 // xhr.send(document);</code>
 </pre>
 
@@ -105,13 +104,12 @@ xhr.open("POST", '/server', true);
 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 xhr.onload = function () {
-    // 请求结束后,在此处写处理代码
+    // 请求结束后，在此处写处理代码
 };
 xhr.send("foo=bar&amp;lorem=ipsum");
 // xhr.send('string');
 </code>// <code>xhr.send(new Blob());
 // xhr.send(new Int8Array());
-// xhr.send({ form: 'data' });
 // xhr.send(document);</code>
 </pre>
 
@@ -134,124 +132,7 @@ xhr.send("foo=bar&amp;lorem=ipsum");
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特点</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatChrome(1)}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatIe('5')}}<sup>[2]</sup><br>
-    {{CompatIe('7')}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatSafari('1.2')}}</td>
-  </tr>
-  <tr>
-   <td><code>send(ArrayBuffer)</code></td>
-   <td>{{CompatChrome(9)}}</td>
-   <td>{{CompatGeckoDesktop("9.0")}}<sup>[1]</sup></td>
-   <td>{{CompatIe('10')}}</td>
-   <td>{{CompatOpera('11.60')}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(ArrayBufferView)</code></td>
-   <td>{{CompatChrome(22)}}</td>
-   <td>{{CompatGeckoDesktop("20.0")}}</td>
-   <td>{{compatUnknown}}</td>
-   <td>{{compatUnknown}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(Blob)</code></td>
-   <td>{{CompatChrome(7)}}</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
-   <td>{{CompatIe('10')}}</td>
-   <td>{{CompatOpera('12')}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(FormData)</code></td>
-   <td>{{CompatChrome(6)}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatIe('10')}}</td>
-   <td>{{CompatOpera('12')}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特点</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatUnknown}}</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(ArrayBuffer)</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(ArrayBufferView)</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(Blob)</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(FormData)</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 发送一个简单的<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>对象已不再是ajax规范一部分,也已经被弃用了。请使用 已被加入Gecko 20.0 {{geckoRelease("20.0")}}的<a href="/en-US/docs/Web/API/ArrayBufferView"><code>ArrayBufferView</code></a></p>
-
-<p>[2] 由于 Internet Explorer 7实现了标准的XMLHttpRequest，此功能通过ActiveXObject（）实现。</p>
+{{Compat("api.XMLHttpRequest.send")}}
 
 <h2 id="参见">参见</h2>
 

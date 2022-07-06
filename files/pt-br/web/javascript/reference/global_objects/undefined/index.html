@@ -52,7 +52,7 @@ else {
 
 </pre>
 
-<div class="note"><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">Observação: O operarador de igualdade estrita (</span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">===</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">) tem que ser utilizado aqui uma vez que </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">x == undefined</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);"> também checa se </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">x</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);"> é nulo, enquanto o operador não o faz. </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">null</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);"> não é equivalente à </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">undefined</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">. Veja </span><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">{{jsxref("Operators/Comparison_Operators", "operadores de comparação")}} (em inglês) para maiores detalhes.</span></div>
+<div class="note"><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">Observação: O operador de igualdade estrita (</span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">===</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">) tem que ser utilizado aqui uma vez que </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">x == undefined</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);"> também checa se </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">x</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);"> é nulo, enquanto o operador não o faz. </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">null</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);"> não é equivalente à </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">undefined</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">. Veja </span><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">{{jsxref("Operators/Comparison_Operators", "operadores de comparação")}} (em inglês) para maiores detalhes.</span></div>
 
 <h3 id="Operador_Typeof_e_undefined"><code>Operador Typeof</code> e <code>undefined</code></h3>
 
@@ -67,7 +67,7 @@ if (typeof x === 'undefined') {
 <p>Uma das principais razões para usar o {{jsxref("Operators/typeof", "typeof")}} é que ele não lança erros caso a variável não tenha sido inicializada.</p>
 
 <pre class="brush: js">// x não foi atribuída anteriormente
-if (typeof x === 'undefined') { // returna verdadeiro sem lançar erros
+if (typeof x === 'undefined') { // retorna verdadeiro sem lançar erros
    // esse código executa
 }
 
@@ -120,7 +120,7 @@ if (y === void 0) {
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_entre_navegadores">Compatibilidade entre navegadores</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>{{ CompatibilityTable() }}</p>
 

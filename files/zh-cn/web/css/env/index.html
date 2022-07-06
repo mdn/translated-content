@@ -1,0 +1,134 @@
+---
+title: env()
+slug: Web/CSS/env
+tags:
+  - CSS
+  - env
+  - env()
+  - iPhoneX
+translation_of: Web/CSS/env()
+original_slug: Web/CSS/env()
+---
+<div>{{CSSRef}}</div>
+
+<div> <strong><code>env()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 函数以类似于 {{cssxref("var")}} 函数和 <a href="/en-US/docs/Web/CSS/--*">custom properties</a> 的方式将用户代理定义的环境变量值插入你的 CSS 中。区别在于，环境变量除了由用户代理定义而不是由用户定义外，还被全局作用在文档中，而自定义属性则限定在声明它们的元素中。</div>
+
+
+
+<div>为了告诉浏览器使用屏幕上所有的可用空间，并以此使用<code style="font-size: 1rem; letter-spacing: -0.00278rem;">env()</code>变量，我们需要添加一个新的视口元值：</div>
+
+<div class="highlight highlight-text-html-basic">
+<pre>&lt;meta name="viewport" content="... <strong>viewport-fit=cover</strong>"&gt;</pre>
+</div>
+
+<pre class="brush: css">body {
+  padding:
+    env(safe-area-inset-top, 20px)
+    env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px)
+    env(safe-area-inset-left, 20px);
+}</pre>
+
+<p>另外，与自定义属性不同，自定义属性不能在声明之外使用，而<code>env()</code>函数可以代替属性值或描述符的任何部分（例如，在 <a href="/en-US/docs/Web/CSS/@media">媒体查询的规则</a> 中）。随着规范的发展，它也可能在像是 选择器 等其他地方使用。</p>
+
+<p>最初由 iOS 浏览器提供，用于允许开发人员将其内容放置在视口的安全区域中，该规范中定义的<code>safe-area-inset-* </code>值可用于确保内容即使在非矩形的视区中也可以完全显示。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="brush: css">/* Using the four safe area inset values with no fallback values */
+env(safe-area-inset-top);
+env(safe-area-inset-right);
+env(safe-area-inset-bottom);
+env(safe-area-inset-left);
+
+/* Using them with fallback values */
+env(safe-area-inset-top, 20px);
+env(safe-area-inset-right, 1em);
+env(safe-area-inset-bottom, 0.5vh);
+env(safe-area-inset-left, 1.4rem);
+</pre>
+
+<h3 id="Values">Values</h3>
+
+<dl>
+ <dt><code id="safe-area-inset-top" style="white-space: nowrap;">safe-area-inset-top</code>, <code id="safe-area-inset-right" style="white-space: nowrap;">safe-area-inset-right</code>, <code id="safe-area-inset-bottom" style="white-space: nowrap;">safe-area-inset-bottom</code>, <code id="safe-area-inset-left" style="white-space: nowrap;">safe-area-inset-left</code></dt>
+ <dd><code style="white-space: nowrap;">safe-area-inset-*</code>由四个定义了视口边缘内矩形的 top, right, bottom 和 left 的环境变量组成，这样可以安全地放入内容，而不会有被非矩形的显示切断的风险。对于矩形视口，例如普通的笔记本电脑显示器，其值等于零。对于非矩形显示器（如圆形表盘，iPhoneX 屏幕），在用户代理设置的四个值形成的矩形内，所有内容均可见。</dd>
+</dl>
+
+<p><strong>注意</strong>: 不同于其他的 CSS 属性，用户代理定义的属性名字对大小写敏感。</p>
+
+<h3 id="Formal_syntax">Formal syntax</h3>
+
+{{CSSSyntax}}
+
+<h2 id="Examples">Examples</h2>
+
+<p>下面的示例使用<code>env()</code>的第二个可选参数，如果环境变量不可用，该参数可让您设置备用值</p>
+
+<pre class="brush: html">&lt;p&gt;
+  If the &lt;code&gt;env()&lt;/code&gt; function is supported in your browser,
+  this paragraph’s text will have 50px of padding between it and
+  the left border — but not the top, right and bottom.
+  This is because the accompanying CSS is the equivalent of
+  &lt;code&gt;padding: 0 0 0 50px&lt;/code&gt;, because, unlike other CSS
+  properties, user agent property names are case-sensitive.
+&lt;/p&gt;</pre>
+
+<pre class="brush: css">p {
+  width: 300px;
+  border: 2px solid red;
+  padding:
+    env(safe-area-inset-top, 50px)
+    env(safe-area-inset-right, 50px)
+    env(safe-area-inset-bottom, 50px)
+    env(SAFE-AREA-INSET-LEFT, 50px);
+}</pre>
+
+<p>{{EmbedLiveSample("Examples")}}</p>
+
+<h3 id="Example_values">Example values</h3>
+
+<pre class="brush: css">padding: env(safe-area-inset-bottom, 50px); /* zero for all rectangular user agents */
+padding: env(Safe-area-inset-bottom, 50px); /* 50px because UA properties are case sensitive */
+padding: env(x, 50px 20px); /* as if padding: '50px 20px' were set because x is not a valid environment variable */
+padding: env(x, 50px, 20px); /* ignored because '50px, 20px' is not a valid padding value and x is not a valid environment variable */
+</pre>
+
+<p>向下兼容的语法和自定义属性一样，允许使用逗号。但是如果属性值不支持逗号，则该值无效。</p>
+
+<p><strong>Note</strong>: User agent properties are not reset by the <a href="/en-US/docs/Web/CSS/all">all</a> property.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS3 Environment Variables", "#env-function", "env()")}}</td>
+   <td>{{Spec2("CSS3 Environment Variables")}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("css.properties.custom-property.env")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{CSSxRef("var", "var(…)")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Variables">CSS Custom Properties for Cascading Variables</a></li>
+ <li><a href="/en-US/docs/Web/CSS/--*">Custom Properties (--*)</a></li>
+ <li><a href="/en-US/docs/Web/CSS/Using_CSS_variables">Using CSS custom properties (variables)</a></li>
+ <li>{{CSSxRef("@viewport/viewport-fit", "viewport-fit (@viewport)")}}</li>
+</ul>

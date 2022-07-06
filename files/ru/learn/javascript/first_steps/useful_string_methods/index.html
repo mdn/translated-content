@@ -1,5 +1,5 @@
 ---
-title: Полезные строковые методы
+title: Полезные методы для строк
 slug: Learn/JavaScript/First_steps/Useful_string_methods
 tags:
   - Beginner
@@ -39,7 +39,7 @@ original_slug: Learn/JavaScript/Первые_шаги/Useful_string_methods
 
 <p id="Useful_string_methods">Почти всё в JavaScript является объектами. Когда вы создаёте строку, например: </p>
 
-<pre class="notranslate">let string = 'This is my string';</pre>
+<pre>let string = 'This is my string';</pre>
 
 <p>ваша переменная становится строковым объектом, и, как результат, ей доступно множество свойств и методов. Можете убедиться в этом, перейдя на страницу {{jsxref ("String")}} и просмотрев на ней список свойств и методов!</p>
 
@@ -51,7 +51,7 @@ original_slug: Learn/JavaScript/Первые_шаги/Useful_string_methods
 
 <p>Это легко — вы просто используете свойство {{jsxref ("String.prototype.length", "length")}}. Попробуйте ввести следующие строки:</p>
 
-<pre class="notranslate">let browserType = 'mozilla';
+<pre>let browserType = 'mozilla';
 browserType.length;</pre>
 
 <p>Результатом должно быть число 7, потому что слово «mozilla» состоит из 7 символов. Это свойство можно применить, например, если вы захотите найти длины серии имён, чтобы их можно было отображать по порядку длины или сообщить пользователю, что имя пользователя, которое он ввёл в поле формы, слишком длинное, если оно превышает определённую длину.</p>
@@ -60,11 +60,11 @@ browserType.length;</pre>
 
 <p>Вы можете вернуть любой символ внутри строки, используя <strong>обозначение в квадратных скобках.</strong> Это означает, что вы добавляете квадратные скобки ([ ]) в конце вашего имени переменной. В квадратных скобках вы указываете номер символа, который хотите вернуть. Например, чтобы получить первую букву, нужно написать:</p>
 
-<pre class="syntaxbox notranslate">browserType[0];</pre>
+<pre class="syntaxbox">browserType[0];</pre>
 
 <p>Компьютеры считают от 0, а не 1! Чтобы получить последний символ <em>любой</em> строки, мы могли бы использовать следующую строку, объединив эту технику с свойством <code>length</code>:</p>
 
-<pre class="syntaxbox notranslate"> browserType[browserType.length-1];</pre>
+<pre class="syntaxbox"> browserType[browserType.length-1];</pre>
 
 <p>Длина слова «mozilla» равна 7, но, поскольку счёт начинается с 0, позиция последнего символа равна 6, поэтому нам нужна <code>length-1</code>. Такой способ можно использовать, чтобы найти первую букву ряда строк и упорядочить их по алфавиту.</p>
 
@@ -72,17 +72,17 @@ browserType.length;</pre>
 
 <ol>
  <li>Иногда вам может понадобиться выяснить, присутствует ли меньшая строка внутри большей (обычно мы говорим, что внутри строки есть подстрока). Это можно сделать с помощью метода {{jsxref ("String.prototype.indexOf ()", "indexOf ()")}}, который принимает одну {{glossary ("parameter")}} - подстроку, которую вы хотите найти. Введите:
-  <pre class="notranslate">browserType.indexOf('zilla');</pre>
+  <pre>browserType.indexOf('zilla');</pre>
   Это даёт нам результат 2, потому что подстрока «zilla» начинается в позиции 2 ("m" — 0, "o" — 1, "z" — 2) внутри «mozilla». Такой код можно использовать для фильтрации строк. Например, если есть список веб-адресов и вы хотите распечатать только те, которые содержат «mozilla».</li>
 </ol>
 
 <ol start="2">
  <li>Это можно сделать по-другому, что, возможно, ещё более эффективно. Введите следующее:
-  <pre class="notranslate">browserType.indexOf('vanilla');</pre>
+  <pre>browserType.indexOf('vanilla');</pre>
   Это должно дать вам результат -1. Такое значение возвращается, когда подстрока, в данном случае «vanilla», не найдена в основной строке.<br>
   <br>
   Вы можете использовать это, чтобы найти все экземпляры строк, которые не содержат подстроку «mozilla» (для обратного эффекта, используйте оператор отрицания):
-  <pre class="notranslate">if(browserType.indexOf('mozilla') === -1) {
+  <pre>if(browserType.indexOf('mozilla') === -1) {
   // сделать что-то, если 'mozilla'
   // не является частью этой строки
 }
@@ -93,10 +93,10 @@ if(browserType.indexOf('mozilla') !== -1) {
 }</pre>
  </li>
  <li>Когда вы знаете, где подстрока начинается внутри строки, и вы знаете, на каком символе вы хотите её завершить, можно использовать {{jsxref ("String.prototype.slice ()", "slice ()")}}  для извлечения. Попробуйте следующее:
-  <pre class="notranslate">browserType.slice(0,3);</pre>
+  <pre>browserType.slice(0,3);</pre>
   Это возвращает «moz». Первым параметром является позиция символа, с которого начинается извлечение, а второй параметр — позиция последнего символа, перед которым нужно отсечь строку<em>.</em> Таким образом, срез происходит с первой позиции, вплоть до последней позиции, но не включая её <em>(</em>помним, что <em>счёт идёт с 0, а не с 1)</em>. Также можно сказать, что второй параметр равен длине возвращаемой строки.</li>
  <li>Кроме того, если вы знаете, что хотите извлечь все остальные символы в строке после определённого символа, вам не нужно включать второй параметр. Достаточно включить только положение символа, с которого вы хотите начать извлечение оставшихся символов в строке. Введите:
-  <pre class="notranslate">browserType.slice(2);</pre>
+  <pre>browserType.slice(2);</pre>
   Этот код возвращает «zilla» — это потому, что позиция символа 2 — это буква z, и поскольку вы не указали второй параметр, возвращаемая подстрока состояла из всех остальных символов в строке.</li>
 </ol>
 
@@ -110,7 +110,7 @@ if(browserType.indexOf('mozilla') !== -1) {
 
 <p>Попробуем ввести следующие строки, чтобы узнать, что происходит:</p>
 
-<pre class="notranslate">var radData = 'My NaMe Is MuD';
+<pre>var radData = 'My NaMe Is MuD';
 radData.toLowerCase();
 radData.toUpperCase();</pre>
 
@@ -120,7 +120,7 @@ radData.toUpperCase();</pre>
 
 <p>Он принимает два параметра — строку, которую вы хотите заменить, и строку, которую вы хотите вставить вместо заменяемой. Попробуйте этот пример:</p>
 
-<pre class="notranslate">browserType.replace('moz','van');</pre>
+<pre>browserType.replace('moz','van');</pre>
 
 <p>Обратите внимание, что для фактического получения обновлённого значения, отражённого в переменной browserType в реальной программе, вам нужно будет установить значение переменной в результате операции; он не просто обновляет значение подстроки автоматически. Таким образом, вы должны были бы написать это: <code>browserType = browserType.replace('moz','van');</code></p>
 
@@ -143,7 +143,7 @@ radData.toUpperCase();</pre>
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;h2&gt;Результат&lt;/h2&gt;
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;h2&gt;Результат&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 125px;"&gt;
 
@@ -183,7 +183,7 @@ for (var i = 0; i &lt; greetings.length; i++) {
   &lt;input id="solution" type="button" value="Показать решение"&gt;
 &lt;/div&gt;</code></pre>
 
-<pre class="brush: css line-numbers  language-css notranslate"><code class="language-css">html {
+<pre class="brush: css line-numbers  language-css"><code class="language-css">html {
   font-family: sans-serif;
 }
 
@@ -203,7 +203,7 @@ body {
   background: #f5f9fa;
 }</code></pre>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var textarea = document.getElementById('code');
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -301,7 +301,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code 2</h6>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;h2&gt;Результат&lt;/h2&gt;
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;h2&gt;Результат&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 125px;"&gt;
 
@@ -334,7 +334,7 @@ for(var i = 0; i &lt; cities.length; i++) {
   &lt;input id="solution" type="button" value="Показать решение"&gt;
 &lt;/div&gt;</code></pre>
 
-<pre class="brush: css line-numbers  language-css notranslate"><code class="language-css">html {
+<pre class="brush: css line-numbers  language-css"><code class="language-css">html {
   font-family: sans-serif;
 }
 
@@ -354,7 +354,7 @@ body {
   background: #f5f9fa;
 }</code></pre>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var textarea = document.getElementById('code');
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -438,11 +438,11 @@ textarea.onkeyup = function(){
 
 <p>В этом последнем упражнении массив содержит кучу строк, содержащих информацию о железнодорожных станциях на севере Англии. Строки представляют собой элементы данных, которые содержат трёхбуквенный код станции, за которым следуют некоторые машиночитаемые данные, за которыми следует точка с запятой, а затем название станции, пригодное для чтения человеком. Например:</p>
 
-<pre class="notranslate">MAN675847583748sjt567654;Manchester Piccadilly</pre>
+<pre>MAN675847583748sjt567654;Manchester Piccadilly</pre>
 
 <p>Мы хотим извлечь код станции и имя и поместить их в строку со следующей структурой:</p>
 
-<pre class="notranslate">MAN: Manchester Piccadilly</pre>
+<pre>MAN: Manchester Piccadilly</pre>
 
 <p>Мы бы рекомендовали реализовать это следующим образом:</p>
 
@@ -457,7 +457,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code_3">Playable code 3</h6>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;h2&gt;Результат&lt;/h2&gt;
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;h2&gt;Результат&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 125px;"&gt;
 
@@ -495,7 +495,7 @@ for (var i = 0; i &lt; stations.length; i++) {
   &lt;input id="solution" type="button" value="Показать решение"&gt;
 &lt;/div&gt;</code></pre>
 
-<pre class="brush: css line-numbers  language-css notranslate"><code class="language-css">html {
+<pre class="brush: css line-numbers  language-css"><code class="language-css">html {
   font-family: sans-serif;
 }
 
@@ -515,7 +515,7 @@ body {
   background: #f5f9fa;
 }</code></pre>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var textarea = document.getElementById('code');
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -610,7 +610,7 @@ textarea.onkeyup = function(){
  <li><a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Variables">Переменные — место хранения необходимой информации</a></li>
  <li><a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Math">Базовая математика в JavaScript</a></li>
  <li><a href="/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/%D0%A1%D1%82%D1%80%D0%BE%D0%BA%D0%B8">Работа с текстом — строки в JavaScript</a></li>
- <li><a href="/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Useful_string_methods">Полезные строковые методы</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Arrays">Массивы</a></li>
+ <li><a href="/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Useful_string_methods">Полезные методы для строк</a></li>
+ <li><a href="/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Arrays">Массивы</a></li>
  <li><a href="/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C_%D0%B3%D0%BB%D1%83%D1%8B%D1%85_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B9">Генератор глупых историй</a></li>
 </ul>

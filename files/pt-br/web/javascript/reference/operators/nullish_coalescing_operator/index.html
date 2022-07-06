@@ -41,7 +41,7 @@ original_slug: Web/JavaScript/Reference/Operators/operador_de_coalescencia_nula
 //  foo nunca é endereçado a nenhum valor, portanto, ainda está indefinido
 let someDummyText = foo || 'Hello!';</pre>
 
-<p>Entretanto, devido ao <code>||</code> ser um operador lógico booleano, o operando do lado esquerdo é coagido para um valor booleano para sua avaliação, e, qualquer valor <em>falseável</em> (<code>0</code>, <code>''</code>, <code>NaN</code>, <code>null</code>, <code>undefined</code>) não é retornado. Este comportamento pode causar consequencias inesperadas se você considerar <code>0</code>, <code>''</code>, or <code>NaN</code> como valores válidos.</p>
+<p>Entretanto, devido ao <code>||</code> ser um operador lógico booleano, o operando do lado esquerdo é coagido para um valor booleano para sua avaliação e qualquer valor <em>falseável</em> (<code>0</code>, <code>''</code>, <code>NaN</code>, <code>null</code>, <code>undefined</code>) não é retornado. Este comportamento pode causar consequencias inesperadas se você considerar <code>0</code>, <code>''</code>, ou <code>NaN</code> como valores válidos.</p>
 
 <pre class="brush: js">let count = 0;
 let text = "";
@@ -49,7 +49,7 @@ let text = "";
 let qty = count || 42;
 let message = text || "Olá!";
 console.log(qty);     // 42 e não 0
-console.log(message); // "hi!" e não ""
+console.log(message); // "Olá!" e não ""
 </pre>
 
 <p>O operador de coalescência nula evita esta cilada pois retorna o segundo operando apenas quando o primeiro é avaliado entre os valores <code>null</code> ou <code>undefined</code> (mas nehum outro valor falseável):</p>
@@ -139,7 +139,7 @@ console.log(valC); // 42
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_de_navegadores">Compatibilidade de navegadores</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 
 

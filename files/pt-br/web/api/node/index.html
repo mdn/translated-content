@@ -21,7 +21,7 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.baseURI")}} {{readonlyInline}}</dt>
  <dd>Retorna uma {{domxref("DOMString")}} representando o URL base do nó. O conceito de URL base muda de uma linguagem para outra; no HTML, ela corresponde ao protocolo, ao nome de domínio e a estrutura de diretório; tudo isso até a última <code>'/'</code>.</dd>
  <dt>{{domxref("Node.baseURIObject")}} {{Non-standard_inline()}}</dt>
- <dd>Retorna um objeto {{ Interface("nsIURI") }}, representando o URL base do nó. <em>(Indisponível para conteúdo Web)</em></dd>
+ <dd>Retorna um objeto <code>nsIURI</code>, representando o URL base do nó. <em>(Indisponível para conteúdo Web)</em></dd>
  <dt>{{domxref("Node.childNodes")}} {{readonlyInline}}</dt>
  <dd>Retorna um objeto {{domxref("NodeList")}} "vivo" contendo todos os filhos deste nó. Dizer que um objeto {{domxref("NodeList")}} é vivo significa que se houver alguma mudança em um dos filhos deste nó, o objeto {{domxref("NodeList")}} é automaticamente atualizado com tais mudanças.</dd>
  <dt>{{domxref("Node.firstChild")}} {{readonlyInline}}</dt>
@@ -33,7 +33,7 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.nodeName")}} {{readonlyInline}}</dt>
  <dd>Retorna uma {{domxref("DOMString")}} contendo o nome do elemento, do <code>Node</code>. A estrutura do nome irá mudar conforme o tipo do elemento. Veja as diferenças na documentação do método {{domxref("Node.nodeName")}}.  </dd>
  <dt>{{domxref("Node.nodePrincipal")}} {{Non-standard_inline()}}</dt>
- <dd>Uma interface {{ Interface("nsIPrincipal") }} representando o nó principal.</dd>
+ <dd>Uma interface <code>nsIPrincipal</code> representando o nó principal.</dd>
  <dt>{{domxref("Node.nodeType")}}{{readonlyInline}}</dt>
  <dd>Retorna um <code>unsigned short</code> representando o tipo do nodo. Valores possíveis são:</dd>
 </dl>
@@ -129,7 +129,7 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}</dt>
  <dd>O espaço de nomes URI desse nó, ou <code>null</code> se não estiver no espaço de nomes.
  <div class="note">
- <p><strong>Nota:</strong> No Firefox 3.5 e nas versões anteriores, elementos HTML estão no espaço de nomes. Em versões posteriores, elementos HTML estão em <code><a class="linkification-ext external" href="https://www.w3.org/1999/xhtml/" style="outline: 1px dotted; outline-offset: 0px;" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml/</a></code>, nas árvores HTML e XML. {{gecko_minversion_inline("1.9.2")}}</p>
+ <p><strong>Nota:</strong> No Firefox 3.5 e nas versões anteriores, elementos HTML estão no espaço de nomes. Em versões posteriores, elementos HTML estão em <code><a class="linkification-ext external" href="https://www.w3.org/1999/xhtml/" style="outline: 1px dotted; outline-offset: 0px;">http://www.w3.org/1999/xhtml/</a></code>, nas árvores HTML e XML. {{gecko_minversion_inline("1.9.2")}}</p>
  </div>
  </dd>
  <dt>{{domxref("Node.prefix")}} {{obsolete_inline}}{{readonlyInline}}</dt>
@@ -299,5 +299,5 @@ onload = function () {
  <li><a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1950641247">DOM Level 1 Core: Node interface</a></li>
  <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1950641247">DOM Level 2 Core: Node interface</a></li>
  <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1950641247">DOM Level 3 Core: Node interface</a></li>
- <li><a href="http://dom.spec.whatwg.org/#interface-node" title="http://dom.spec.whatwg.org/#interface-node">DOM Standard: Node Interface</a></li>
+ <li><a href="http://dom.spec.whatwg.org/#interface-node">DOM Standard: Node Interface</a></li>
 </ul>

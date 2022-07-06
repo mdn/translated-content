@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 
 <h3 id="Umgebungsübergreifend_den_globalen_Kontext_finden">Umgebungsübergreifend den globalen Kontext finden</h3>
 
-<p><span class="tlid-translation translation" lang="de"><span title="">Vor <code>globalThis</code> war <code>Function('return this')()</code> die einzige zuverlässige, plattformübergreifende Methode, um das globale Objekt für eine Umgebung abzurufen.</span> <span title="">Dies führt jedoch in einigen Einstellungen zu </span></span> <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/CSP">CSP </a><span class="tlid-translation translation" lang="de"><span title="">Verstößen. Daher verwendet </span></span> <a href="https://github.com/paulmillr/es6-shim">es6-shim</a><span class="tlid-translation translation" lang="de"><span title=""> eine Prüfung wie diese:</span></span></p>
+<p><span class="tlid-translation translation" lang="de"><span title="">Vor <code>globalThis</code> war <code>Function('return this')()</code> die einzige zuverlässige, plattformübergreifende Methode, um das globale Objekt für eine Umgebung abzurufen.</span> <span title="">Dies führt jedoch in einigen Einstellungen zu </span></span> <a href="/en-US/docs/Web/HTTP/CSP">CSP </a><span class="tlid-translation translation" lang="de"><span title="">Verstößen. Daher verwendet </span></span> <a href="https://github.com/paulmillr/es6-shim">es6-shim</a><span class="tlid-translation translation" lang="de"><span title=""> eine Prüfung wie diese:</span></span></p>
 
 <pre class="brush: js notranslate">var getGlobal = function () {
   if (typeof self !== 'undefined') { return self; }

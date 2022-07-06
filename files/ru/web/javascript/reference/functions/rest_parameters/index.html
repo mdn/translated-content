@@ -1,21 +1,21 @@
 ---
-title: Оставшиеся параметры (rest parameters)
+title: Остаточные параметры (rest parameters)
 slug: Web/JavaScript/Reference/Functions/Rest_parameters
 tags:
   - JavaScript
-  - Оставшиеся параметры
+  - Остаточные параметры
   - Функции
 translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
 <div>{{jsSidebar("Functions")}} </div>
 
-<p>Синтаксис <strong>оставшихся параметров</strong> функции позволяет представлять неограниченное множество аргументов в виде массива.</p>
+<p>Синтаксис <strong>остаточных параметров</strong> функции позволяет представлять неограниченное множество аргументов в виде массива.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="brush: js notranslate">function(a, b, ...theArgs) {
+<pre class="brush: js">function(a, b, ...theArgs) {
   // ...
 }
 </pre>
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 
 <p>Если последний именованный аргумент функции имеет префикс <code>...</code>, он автоматически становится массивом с элементами от <code>0</code> до <code>theArgs.length-1</code> в соответствии с актуальным количеством аргументов, переданных в функцию.</p>
 
-<pre class="brush: js notranslate">function myFun(a, b, ...manyMoreArgs) {
+<pre class="brush: js">function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a);
   console.log("b", b);
   console.log("manyMoreArgs", manyMoreArgs);
@@ -38,21 +38,21 @@ myFun("один", "два", "три", "четыре", "пять", "шесть");
 // manyMoreArgs, [три, четыре, пять, шесть]
 </pre>
 
-<h3 id="Отличия_оставшихся_параметров_от_объекта_arguments">Отличия оставшихся параметров от объекта <code>arguments</code></h3>
+<h3 id="Отличия_остаточных_параметров_от_объекта_arguments">Отличия остаточных параметров от объекта <code>arguments</code></h3>
 
-<p>Существует три основных отличия оставшихся параметров от объекта <a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments"><code>arguments</code></a>:</p>
+<p>Существует три основных отличия остаточных параметров от объекта <a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments"><code>arguments</code></a>:</p>
 
 <ul>
- <li>оставшиеся параметры включают только те, которым не задано отдельное имя, в то время как объект <code>arguments</code> содержит все аргументы, передаваемые в функцию;</li>
- <li>объект <code>arguments</code> не является массивом, в то время как оставшиеся параметры являются экземпляром <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a> и методы <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" title="Array sort method"><code>sort</code></a>, <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="Array map method"><code>map</code></a>, <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" title="Array forEach method"><code>forEach</code></a> или <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="Array pop method"><code>pop</code></a> могут непосредственно у них использоваться;</li>
+ <li>остаточные параметры включают только те, которым не задано отдельное имя, в то время как объект <code>arguments</code> содержит все аргументы, передаваемые в функцию;</li>
+ <li>объект <code>arguments</code> не является массивом, в то время как остаточные параметры являются экземпляром <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a> и методы <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" title="Array sort method"><code>sort</code></a>, <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="Array map method"><code>map</code></a>, <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" title="Array forEach method"><code>forEach</code></a> или <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="Array pop method"><code>pop</code></a> могут непосредственно у них использоваться;</li>
  <li>объект <code>arguments</code> имеет дополнительную функциональность, специфичную только для него (например, свойство <code>callee</code>).</li>
 </ul>
 
 <h3 id="Из_аргументов_в_массив">Из аргументов в массив</h3>
 
-<p>Оставшиеся параметры были введены для уменьшения количества шаблонного кода:</p>
+<p>Остаточные параметры были введены для уменьшения количества шаблонного кода:</p>
 
-<pre class="brush: js notranslate">// До появления оставшихся параметров "arguments" конвертировали в обычный массив используя:
+<pre class="brush: js">// До появления остаточных параметров "arguments" конвертировали в обычный массив используя:
 
 function f(a, b) {
 
@@ -67,18 +67,18 @@ function f(a, b) {
 
 }
 
-// Теперь мы можем легко получить оставшиеся параметры как обычный массив
+// Теперь мы можем легко получить остаточные параметры как обычный массив
 
 function f(...args) {
   var normalArray = args;
   var first = normalArray.shift(); // OK, даёт первый аргумент
 }</pre>
 
-<h3 id="Деструктуризация_оставшихся_параметров">Деструктуризация оставшихся параметров</h3>
+<h3 id="Деструктуризация_остаточных_параметров">Деструктуризация остаточных параметров</h3>
 
-<p>Оставшиеся параметры могут быть деструктурированы (только массивы). Это означает, что их данные могут быть заданы как отдельные значения. Смотрите <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Деструктурирующее присваивание</a>.</p>
+<p>Остаточные параметры могут быть деструктурированы (только массивы). Это означает, что их данные могут быть заданы как отдельные значения. Смотрите <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Деструктурирующее присваивание</a>.</p>
 
-<pre class="notranslate"><code>function f(...[a, b, c]) {
+<pre><code>function f(...[a, b, c]) {
   return a + b + c;
 }
 
@@ -86,11 +86,11 @@ f(1)          // NaN (b и c равны undefined)
 f(1, 2, 3)    // 6
 f(1, 2, 3, 4) // 6 (четвёртый параметр не деструктурирован)</code></pre>
 
-<h2 id="Example" name="Example">Примеры</h2>
+<h2 id="Example">Примеры</h2>
 
 <p>В этом примере первый аргумент задан как <code>"a"</code>, второй как <code>"b"</code>, так что эти аргументы используются как обычно. Однако третий аргумент <code>"manyMoreArgs"</code> будет массивом, который содержит 3-й, 4-й, 5-й, 6-й ... n-й аргументы, которые передаст пользователь.</p>
 
-<pre class="brush: js notranslate">function myFun(a, b, ...manyMoreArgs) {
+<pre class="brush: js">function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a);
   console.log("b", b);
   console.log("manyMoreArgs", manyMoreArgs);
@@ -104,7 +104,7 @@ myFun("один", "два", "три", "четыре", "пять", "шесть");
 
 <p>Ниже... даже если передано одно значение последним аргументом, оно всё равно помещается в массив.</p>
 
-<pre class="brush: js notranslate">// использование той же функции, что и в примере выше
+<pre class="brush: js">// использование той же функции, что и в примере выше
 
 myFun("один", "два", "три");
 
@@ -114,7 +114,7 @@ myFun("один", "два", "три");
 
 <p>Ниже... третий аргумент не был передан, но "manyMoreArgs" всё ещё массив (хотя и пустой).</p>
 
-<pre class="brush: js notranslate">// использование той же функции, что и в примере выше
+<pre class="brush: js">// использование той же функции, что и в примере выше
 
 myFun("один", "два");
 
@@ -124,7 +124,7 @@ myFun("один", "два");
 
 <p>Поскольку <code>theArgs</code> является массивом, количество элементов в нём определяется свойством <code>length</code>:</p>
 
-<pre class="brush: js notranslate">function fun1(...theArgs) {
+<pre class="brush: js">function fun1(...theArgs) {
   console.log(theArgs.length);
 }
 
@@ -132,9 +132,9 @@ fun1();  // 0
 fun1(5); // 1
 fun1(5, 6, 7); // 3</pre>
 
-<p>В следующем примере, оставшиеся параметры используются для сбора всех аргументов после первого в массив. Каждый из них умножается на первый параметр и возвращается массив:</p>
+<p>В следующем примере, остаточные параметры используются для сбора всех аргументов после первого в массив. Каждый из них умножается на первый параметр и возвращается массив:</p>
 
-<pre class="brush: js notranslate"><code>function multiply(multiplier, ...theArgs) {
+<pre class="brush: js"><code>function multiply(multiplier, ...theArgs) {
   return theArgs.map(function(element) {
     return multiplier * element;
   });
@@ -143,9 +143,9 @@ fun1(5, 6, 7); // 3</pre>
 var arr = multiply(2, 1, 2, 3);
 console.log(arr); // [2, 4, 6]</code></pre>
 
-<p>Методы <code>Array</code> могут быть использованы на оставшихся параметрах, но не на объекте <code>arguments</code>: </p>
+<p>Методы <code>Array</code> могут быть использованы на остаточных параметрах, но не на объекте <code>arguments</code>: </p>
 
-<pre class="brush: js notranslate">function sortRestArgs(...theArgs) {
+<pre class="brush: js">function sortRestArgs(...theArgs) {
   var sortedArgs = theArgs.sort();
   return sortedArgs;
 }
@@ -162,7 +162,7 @@ console.log(sortArguments(5, 3, 7, 1)); // TypeError (arguments.sort is not a fu
 
 <p>Чтобы использовать методы <code>Array</code> на объекте <code>arguments</code>, нужно преобразовать его в настоящий массив.</p>
 
-<pre class="brush: js notranslate"><code>function sortArguments() {
+<pre class="brush: js"><code>function sortArguments() {
   var args = Array.from(arguments);
   var sortedArgs = args.sort();
   return sortedArgs;
@@ -171,33 +171,15 @@ console.log(sortArguments(5, 3, 7, 1)); // 1, 3, 5, 7</code></pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function-definitions', 'Определение функций')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function-definitions', 'Function Definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.functions.rest_parameters")}}</div>
+<div>{{Compat}}</div>
 
 <div id="compat-mobile"></div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments">Объект arguments</a></li>

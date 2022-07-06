@@ -68,7 +68,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <p>Isto fará com que a barra URL mostre <span class="nowiki">http://mozilla.org/bar.html, porém não fará com que o navegador carregue </span><code>bar.html</code> ou verifique se <code>bar.html</code> existe. </p>
 
-<p>Agora suponha que o usuário navegue para <span class="nowiki">http://google.com e logo em seguida clique no botão Voltar. Nesse momento, a barra de URL mostrará http://mozilla.org/bar.html, e <s>a página receberá um evento </s></span><s><code>popstate</code> cujo <em>objeto de estado</em> contém uma copia de <code>stateObj</code></s> se você ler o <code>history.state</code> você receberá o <code>stateObj</code>. O evento <code>popstate</code> não será disparado pois a página foi recarregada. A página carregada será <code>bar.html</code>.</p>
+<p>Agora suponha que o usuário navegue para <span class="nowiki">http://google.com e logo em seguida clique no botão Voltar. Nesse momento, a barra de URL mostrará http://mozilla.org/bar.html, e se você ler o <code>history.state</code> você receberá o <code>stateObj</code>. O evento <code>popstate</code> não será disparado pois a página foi recarregada. A página carregada será <code>bar.html</code>.</p>
 
 <p>Se clicarmos no botão Voltar novamente, a URL modificará para <span class="nowiki">http://mozilla.org/foo.html, e o documento receberá um evento </span><code>popstate</code>, dessa vez com objeto de estado sendo nulo. Nesse momento, o documento também não altera seu conteúdo em relação ao passo anterior, porém o documento pode atualizar seu conteúdo manualmente após o recebimento do evento <code>popstate</code>.</p>
 
@@ -81,7 +81,7 @@ history.pushState(stateObj, "page 2", "bar.html");
   <p><strong>objeto de estado</strong> — O objeto de estado é um objeto JavaScript que é associado com uma nova entrada no histórico criado por <code>pushState()</code>. Sempre que o usuário navegar para o novo estado um evento <code>popstate</code> é disparado e a propriedade <code>state</code> do evento contém uma cópia do objeto de estado da entrada no histórico.</p>
  </li>
  <li>
-  <p>O objeto de estado pode ser qualquer coisa que possa ser serializada. O Firefox salva o objeto de estado no disco do usuário para que possa ser restaurado após um reinício do navegador. É imposto um limite de 640k caracteres na representação serializada do objeto de estado. Caso um objeto de estado serializado maior que este valor seja passado como argumento para <code>pushState()</code>, o método irá ativar uma exceção. Caso você precise de mais espaço do que 640k, é recomendada a utilização do <code>sessionStorage</code> e/ou <code>localSotrage</code>.</p>
+  <p>O objeto de estado pode ser qualquer coisa que possa ser serializada. O Firefox salva o objeto de estado no disco do usuário para que possa ser restaurado após um reinício do navegador. É imposto um limite de 640k caracteres na representação serializada do objeto de estado. Caso um objeto de estado serializado maior que este valor seja passado como argumento para <code>pushState()</code>, o método irá ativar uma exceção. Caso você precise de mais espaço do que 640k, é recomendada a utilização do <code>sessionStorage</code> e/ou <code>localStorage</code>.</p>
  </li>
  <li>
   <p><strong>título </strong>— Atualmente o Firefox ignora este parâmetro. Passar uma string vazia é suficiente contra futuras mudanças no método. Alternativamente, você pode passar um título curto para o estado.</p>
@@ -112,7 +112,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <p><code>history.replaceState()</code> opera exatamente igual à <code>history.pushState()</code> com exceção de modificar a atual entrada no histórico ao invés de criar uma nova. Note que isso não impede a criação de uma nova entrada no histórico global do navegador.</p>
 
-<p><code>replaceState()</code> é particularmente útil quando você quer atualiza o objeto de estado ou a URL da atual entrada do histórico como resposta a alguma ação do usuário.</p>
+<p><code>replaceState()</code> é particularmente útil quando você quer atualizar o objeto de estado ou a URL da atual entrada do histórico como resposta a alguma ação do usuário.</p>
 
 <div class="note"><strong>Nota: </strong>Em Gecko 2.0 {{ geckoRelease("2.0") }} até Gecko 5.0 {{ geckoRelease("5.0") }}, o objeto passado é serializado utilizando JSON. Começando do Gecko 6.0 {{ geckoRelease("6.0") }}, o objeto é serializado usando <a href="/en/DOM/The_structured_clone_algorithm" title="en/DOM/The structured clone algorithm"> o algorítmo de clonagem estruturada</a>. Isso permite que uma variedade maior de objetos possam ser serializados.</div>
 
@@ -175,7 +175,7 @@ history.pushState(stateObj, "page 2", "bar.html");
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_de_navegadores">Compatibilidade de navegadores</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>{{ CompatibilityTable() }}</p>
 

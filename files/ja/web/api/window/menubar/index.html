@@ -1,42 +1,32 @@
 ---
-title: window.menubar
+title: Window.menubar
 slug: Web/API/Window/menubar
 tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
+- API
+- HTML DOM
+- Property
+- Reference
+- Window
 translation_of: Web/API/Window/menubar
 ---
-<p>{{ ApiRef() }} {{ 英語版章題("Summary") }}</p>
+<div>{{ APIRef() }}</div>
 
-<h3 id="概要">概要</h3>
+<p><code><strong>Window.menubar</strong></code> プロパティは <code>menubar</code> オブジェクトを返します。これによって表示状態を確認することができます。</p>
 
-<p><code>menubar</code> オブジェクトを返します。このバーの表示は、ウィンドウ内でトグル（表示/非表示の状態を切り替える）ことができます。</p>
+<h2 id="Syntax">構文</h2>
 
-<p>{{ 英語版章題("Syntax") }}</p>
-
-<h3 id="構文">構文</h3>
-
-<pre class="eval"><var>objRef</var> = window.menubar
+<pre class="brush: js"><em>objRef</em> = <em>window</em>.menubar
 </pre>
 
-<p>{{ 英語版章題("Example") }}</p>
+<h2 id="Example">例</h2>
 
-<h3 id="例">例</h3>
-
-<p>以下の完全な HTML の例は、様々な "bar" オブジェクトの visible プロパティで利用可能な方法を示しています。</p>
+<p>以下の完全な HTML の例は、 <code>menubar</code> オブジェクトの <code>visible</code> プロパティの使用方法を示しています。</p>
 
 <pre class="brush:html">&lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;様々な DOM テスト&lt;/title&gt;
   &lt;script&gt;
-    // 存在するウィンドウのバーの状態を変更します
-    netscape.security.PrivilegeManager.
-        enablePrivilege("UniversalBrowserWrite");
-    window.menubar.visible=!window.menubar.visible;
+    var visible = window.menubar.visible;
   &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -45,28 +35,40 @@ translation_of: Web/API/Window/menubar
 &lt;/html&gt;
 </pre>
 
-<h3 id="仕様">仕様</h3>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'browsers.html#dom-window-menubar', 'Window.menubar')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-window-menubar', 'Window.menubar')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">仕様書</th>
+      <th scope="col">状態</th>
+      <th scope="col">備考</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'browsers.html#dom-window-menubar',
+        'Window.menubar')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-window-menubar', 'Window.menubar')}}
+      </td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="関連項目">関連項目</h3>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p><a href="/ja/DOM/window.locationbar">window.locationbar</a>, <a href="/ja/DOM/window.personalbar">window.personalbar</a>, <a href="/ja/DOM/window.scrollbars">window.scrollbars</a>, <a href="/ja/DOM/window.statusbar">window.statusbar</a>, <a href="/ja/DOM/window.toolbar">window.toolbar</a></p>
+<p>{{Compat("api.Window.menubar")}}</p>
+
+<h2 id="See_also">関連情報</h2>
+
+<ul>
+  <li>{{domxref("Window.locationbar")}}</li>
+  <li>{{domxref("Window.personalbar")}}</li>
+  <li>{{domxref("Window.scrollbars")}}</li>
+  <li>{{domxref("Window.statusbar")}}</li>
+  <li>{{domxref("Window.toolbar")}}</li>
+</ul>

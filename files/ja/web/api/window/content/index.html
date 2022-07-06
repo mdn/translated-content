@@ -1,33 +1,40 @@
 ---
-title: window.content
+title: Window.content
 slug: Web/API/Window/content
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-  - 要更新
 translation_of: Web/API/Window/content
 ---
-<p>{{ ApiRef() }} {{ 英語版章題("Summary") }}</p>
-<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
-<p>主となるコンテンツウィンドウを表す <a href="ja/DOM/window">Window</a> オブジェクトを返します。これは、<code>type="content-primary"</code> 属性を持つ <code>&lt;browser&gt;</code> (もしくは <code>tabbrowser</code> や <code>&lt;iframe&gt;</code>) 要素のある XUL ウィンドウにおいて役立ちます。最も有名な例は、Firefox のメインウィンドウである <code>browser.xul</code> です。このような場合、<code>content</code> はブラウザに現在表示されているドキュメントを表す <code>Window</code> オブジェクトへの参照を返します。これは、<code><var>browserRef</var>.contentWindow</code> のショートカットです。</p>
-<p>特権のないコンテンツ (Web ページ) では、<code>content</code> は通常 <a href="ja/DOM/window.top">top</a> と同じです。ただし、Web ページがサイドバーに読み込まれた場合を除きます。このときの <code>content</code> は、現在選択しているタブの <code>Window</code> を参照しています。</p>
-<p>いくつかの例では、<code>content</code> の代わりに <code>_content</code> を使用しています。しかし、後者は長い間非推奨とされています。ですから、新しいコードでは <code>content</code> を使うべきです。</p>
-<p>{{ 英語版章題("Syntax") }}</p>
+<p>{{APIRef}}{{non-standard_header}}</p>
+
+<div class="note">
+<p><strong>注</strong>: Firefox 57 以降 (当初はナイトリーのみ)、 <code>content</code> および <code>_content</code> の変化形はクロームの (特権) コードでのみ利用可能となり、ウェブではどこでも利用できなくなりました。</p>
+</div>
+
+<p>主となるコンテンツウィンドウを表す <a href="/ja/docs/Web/API/Window">Window object</a> オブジェクトを返します。これは、<code>type="content-primary"</code> 属性を持つ <code>&lt;browser&gt;</code> (もしくは <code>tabbrowser</code> や <code>&lt;iframe&gt;</code>) 要素のある XUL ウィンドウにおいて役立ちます。最も有名な例は、Firefox のメインウィンドウである <code>browser.xul</code> です。このような場合、<code>content</code> はブラウザーに現在表示されている文書のための <code>Window</code> オブジェクトへの参照を返します。これは、<code><var>browserRef</var>.contentWindow</code> のショートカットです。</p>
+<p>特権のないコンテンツ (ウェブページ) では、<code>content</code> は通常 <a href="/ja/docs/Web/API/Window/top">top</a> と同じです (ウェブページがサイドバーに読み込まれた場合は例外で、 <code>content</code> は現在選択しているタブの <code>Window</code> を参照します)。</p>
+
+<div class="note">
+<p><strong>注</strong>: いくつかの例では、<code>content</code> の代わりに <code>_content</code> を使用しています。しかし、後者は長い間非推奨とされています。ですから、新しいコードでは <code>content</code> を使うべきです。</p>
+</div>
+
 <h3 id="Syntax">構文</h3>
+
 <pre class="eval">var <var>windowObject</var> = window.content;
 </pre>
-<p>{{ 英語版章題("Example") }}</p>
-<h3 id=".E4.BE.8B" name=".E4.BE.8B">例</h3>
-<p>以下のコードを <code>&lt;browser type="content-primary"/&gt;</code> 要素を持つ chrome XUL ウィンドウで実行すると、ブラウザで現在表示されているページの最初の div 要素の周囲に赤い枠が描画されます。</p>
+
+<h3 id="Example">例</h3>
+
+<p>以下のコードを <code>&lt;browser type="content-primary"/&gt;</code> 要素を持つ chrome XUL ウィンドウで実行すると、ブラウザーで現在表示されているページの最初の div 要素の周囲に赤い枠が描画されます。</p>
+
 <pre class="eval">content.document.getElementsByTagName("div")[0].style.border = "solid red 1px";
 </pre>
-<p>{{ 英語版章題("Specification") }}</p>
-<h3 id=".E4.BB.95.E6.A7.98" name=".E4.BB.95.E6.A7.98">仕様</h3>
-<p>W3C の仕様の一部ではありません。</p>
-<p>{{ 英語版章題("See also") }}</p>
-<h3 id=".E5.8F.82.E7.85.A7" name=".E5.8F.82.E7.85.A7">参照</h3>
+
+<h3 id="Specifications">仕様書</h3>
+
+<p>なし。</p>
+
+<h3 id="See_also">関連情報</h3>
+
 <ul>
  <li><a href="/ja/docs/Working_with_windows_in_chrome_code">chrome コードでウィンドウを取り扱う</a></li>
- <li>特権コードからコンテンツのドキュメントにアクセスするときは、<a href="/ja/docs/XPCNativeWrapper">XPCNativeWrapper</a> について知っておいてください。</li>
+ <li>特権コードからコンテンツの文書にアクセスする場合は、 <a href="/ja/XPCNativeWrapper">XPCNativeWrapper</a> 注意してください。</li>
 </ul>

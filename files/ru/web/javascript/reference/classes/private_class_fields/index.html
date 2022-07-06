@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Classes/Приватные_поля_кл
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">class ClassWithPrivateField {
+<pre class="syntaxbox">class ClassWithPrivateField {
   #privateField
 }
 
@@ -33,7 +33,7 @@ class ClassWithPrivateStaticField {
 
 <p>Ограничение статических переменных, вызываемых только статическими методами, все ещё сохраняется.</p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateStaticField {
+<pre class="brush: js">class ClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
 
   static publicStaticMethod() {
@@ -50,7 +50,7 @@ console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)</pre>
 
 <p>Это может привести к неожиданному поведению при использовании this.</p>
 
-<pre class="brush: js notranslate">class BaseClassWithPrivateStaticField {
+<pre class="brush: js">class BaseClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
 
   static basePublicStaticMethod() {
@@ -76,7 +76,7 @@ console.assert(error instanceof TypeError)
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Инкапсуляция обеспечивается языком.</span> <span title="">Обращение к <code>#</code> именам вне области видимости является синтаксической ошибкой.</span></span></p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateField {
+<pre class="brush: js">class ClassWithPrivateField {
   #privateField
 
   constructor() {
@@ -99,7 +99,7 @@ instance.#privateField === 42 // Syntax error
 
 <p>Приватные статические методы могут быть генераторами, асинхронными функциями и асинхронными функциями-генераторами.</p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateStaticMethod {
+<pre class="brush: js">class ClassWithPrivateStaticMethod {
     static #privateStaticMethod() {
         return 42
     }
@@ -119,7 +119,7 @@ console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
 
 <p>Это может привести к неожиданному поведению при его использовании <strong><code>this</code></strong>. В следующем примере <code>this</code> относится к классу <code>Derived</code> (а не к классу <code>Base</code>), когда мы пытаемся вызвать <code>Derived.publicStaticMethod2()</code>, и, таким образом, имеет такое же "ограничение по происхождению", как упоминалось выше:</p>
 
-<pre class="brush: js notranslate">class Base {
+<pre class="brush: js">class Base {
     static #privateStaticMethod() {
         return 42;
     }
@@ -141,7 +141,7 @@ console.log(Derived.publicStaticMethod2()); // TypeError
 
 <p>Приватные методы экземпляров это методы, доступные у экземпляров класса, доступ к которым запрещён также, как у приватных полей класса.</p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateMethod {
+<pre class="brush: js">class ClassWithPrivateMethod {
   #privateMethod() {
     return 'hello world'
   }
@@ -157,7 +157,7 @@ console.log(instance.getPrivateMessage())
 
 <p>Приватные методы экземпляров могут быть генератором, async, или функциями async генератора. Приватные геттеры и сеттеры также возможны:</p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateAccessor {
+<pre class="brush: js">class ClassWithPrivateAccessor {
   #message
 
   get #decoratedMessage() {
@@ -179,24 +179,11 @@ new ClassWithPrivateAccessor();
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Public and private instance fields', '#prod-FieldDefinition', 'FieldDefinition')}}</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications("javascript.classes")}}</p>
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<div class="hidden">Таблица совместимости на этой странице составлена из структурированных данных. Если вы хотите внести свой вклад в данные, пожалуйста, посетите https://github.com/mdn/browser-compat-data и отправьте нам запрос.</div>
-
-<p>{{Compat("javascript.classes.private_class_fields")}}</p>
+<p>{{Compat("javascript.classes")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

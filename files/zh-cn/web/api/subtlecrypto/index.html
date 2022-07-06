@@ -10,30 +10,30 @@ translation_of: Web/API/SubtleCrypto
 <p>基于<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a>的<strong>SubtleCrypto</strong> 接口提供了许多底层加密功能。它通过窗口上下文提供可用的{{domxref("Crypto.subtle")}} 属性来访问（通过{{domxref("Window.crypto")}}）。</p>
 
 <div class="warning">
-<p>注意: 此API提供了许多底层加密源语。滥用他们很容易陷入微妙的陷阱中。</p>
+<p>注意：此 API 提供了许多底层加密源语。滥用他们很容易陷入微妙的陷阱中。</p>
 
 <p>即使你正确的使用基础加密方法，也很难设计一套正确的安全密钥管理及整体安全设计方案，这些往往是安全专家的领域。</p>
 
 <p>错误的安全系统设计和实现会使系统的安全性完全失效</p>
 
-<p><strong>如果你不知道此API能为你提供什么，则不应该使用该API</strong></p>
+<p><strong>如果你不知道此 API 能为你提供什么，则不应该使用该 API</strong></p>
 </div>
 
 <h2 id="概览">概览</h2>
 
-<p>我们可以将此API的功能分为两类：加密功能和密钥管理功能。</p>
+<p>我们可以将此 API 的功能分为两类：加密功能和密钥管理功能。</p>
 
 <h3 id="加密功能">加密功能</h3>
 
-<p>这些函数你可以用来实现系统中的隐私和身份验证等安全功能。<strong>SubtleCrypto </strong>API提供了如下加密函数：</p>
+<p>这些函数你可以用来实现系统中的隐私和身份验证等安全功能。<strong>SubtleCrypto </strong>API 提供了如下加密函数：</p>
 
 <p>* <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/sign">sign()</a></code> 、 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/verify">verify()</a></code>: 创建和验证数字签名。<br>
- * <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt">encrypt()</a></code> and <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/decrypt">decrypt()</a></code>: 加密和解密数据。<br>
- * <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest">digest()</a></code>: create a fixed-length, collision-resistant digest of some data.</p>
+ * <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt">encrypt()</a></code> 和 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/decrypt">decrypt()</a></code>: 加密和解密数据。<br>
+ * <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest">digest()</a></code>：为数据生成一个定长的，防碰撞的消息摘要。</p>
 
 <h3 id="密钥管理功能">密钥管理功能</h3>
 
-<p>除了 <code>digest()</code>，在<strong>SubtleCrypto </strong>API中所有加密功能都会使用密钥，并使用CryptoKey对象表示加密密钥。要执行签名和加密操作, 请将 <code>CryptoKey</code> 对象传参给 <code>sign()</code> 或 <code>encrypt()</code> 函数.</p>
+<p>除了 <code>digest()</code>，在<strong>SubtleCrypto </strong>API 中所有加密功能都会使用密钥，并使用 CryptoKey 对象表示加密密钥。要执行签名和加密操作，请将 <code>CryptoKey</code> 对象传参给 <code>sign()</code> 或 <code>encrypt()</code> 函数。</p>
 
 <h4 id="生成和派生密钥"><strong>生成和派生密钥</strong></h4>
 
@@ -49,11 +49,11 @@ translation_of: Web/API/SubtleCrypto
 
 <p>如果密钥是敏感的，你需要使用 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/wrapKey">wrapKey()</a></code>, 该函数导出密钥并且使用另外一个密钥加密它。</p>
 
-<p><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">unwrapKey()</a><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">与</span></font></code><code>wrapKey()</code>相反，该函数解密密钥后导入解密的密钥</p>
+<p><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey">unwrapKey()</a>与</code><code>wrapKey()</code>相反，该函数解密密钥后导入解密的密钥</p>
 
 <h4 id="存储密钥">存储密钥</h4>
 
-<p><code>CryptoKey</code>对象可以通过 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone algorithm</a></code>来存储，这意味着你可以通过web storage APIs来存储和获取他们。更为规范的方式是通过使用<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a></code> 来存储<code>CryptoKey</code>对象。</p>
+<p><code>CryptoKey</code>对象可以通过 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone algorithm</a></code>来存储，这意味着你可以通过 web storage APIs 来存储和获取他们。更为规范的方式是通过使用<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a></code> 来存储<code>CryptoKey</code>对象。</p>
 
 <h3 id="支持的算法">支持的算法</h3>
 
@@ -232,9 +232,9 @@ translation_of: Web/API/SubtleCrypto
 
 <dl>
  <dt>{{domxref("SubtleCrypto.encrypt()")}}</dt>
- <dd><code>以算法、密钥、</code>明文<code>为参数，返回一个包含加密数据的 </code>{{jsxref("Promise")}}对象。</dd>
+ <dd>以算法、密钥、明文为参数，返回一个包含加密数据的 {{jsxref("Promise")}} 对象。</dd>
  <dt>{{domxref("SubtleCrypto.decrypt()")}}</dt>
- <dd><code>以算法、密钥、</code>明文<code>为参数，返回一个包含解密数据的 </code>{{jsxref("Promise")}}对象。</dd>
+ <dd>以算法、密钥、密文为参数，返回一个包含解密数据的 {{jsxref("Promise")}} 对象。</dd>
  <dt>{{domxref("SubtleCrypto.sign()")}}</dt>
  <dd>以文本、算法和密码为参数，返回一个包含签名的 {{jsxref("Promise")}}。</dd>
  <dt>{{domxref("SubtleCrypto.verify()")}}</dt>
@@ -246,7 +246,7 @@ translation_of: Web/API/SubtleCrypto
  <dt>{{domxref("SubtleCrypto.deriveKey()")}}</dt>
  <dd>以从 master key 派生出来的密钥和特定的算法作为参数，返回一个包含新生成的 {{domxref("CryptoKey")}}  的 {{jsxref("Promise")}}对象。</dd>
  <dt>{{domxref("SubtleCrypto.deriveBits()")}}</dt>
- <dd>以从 master key 派生出来的密钥和特定的算法作为参数，返回一个包含新生成的伪随机字节的 Buffer的 {{jsxref("Promise")}} 对象。</dd>
+ <dd>以从 master key 派生出来的密钥和特定的算法作为参数，返回一个包含新生成的伪随机字节的 Buffer 的 {{jsxref("Promise")}} 对象。</dd>
  <dt>{{domxref("SubtleCrypto.importKey()")}}</dt>
  <dd>以格式、算法、原始密钥数据、用途和可提取性作为参数，返回一个包含 {{domxref("CryptoKey")}} 的 {{jsxref("Promise")}} 对象。</dd>
  <dt>{{domxref("SubtleCrypto.exportKey()")}}</dt>
@@ -276,55 +276,7 @@ translation_of: Web/API/SubtleCrypto
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome(37) }}</td>
-   <td>{{ CompatGeckoDesktop(34) }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>37</td>
-   <td>{{ CompatChrome(37) }}</td>
-   <td>{{ CompatGeckoMobile(34) }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.SubtleCrypto")}}
 
 <h2 id="另见">另见</h2>
 

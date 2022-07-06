@@ -15,13 +15,13 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}</div>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">В этом уроке мы рассмотрим некоторые интересные возможности, которые вы можете сделать с помощью CSS свойств фона и границ .</span> <span title="">Благодаря добавлению градиентов, фоновых изображений и закруглённых углов свойства фона и границ ответят на многие вопросы стилизации в CSS.</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">В этом уроке мы рассмотрим некоторые интересные возможности, которые вы можете сделать с помощью CSS-свойств фона и границ .</span> <span title="">Благодаря добавлению градиентов, фоновых изображений и закруглённых углов свойства фона и границ ответят на многие вопросы стилизации в CSS.</span></span></p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Необходимые умения:</th>
-   <td>Базовая компьютерная грамотность, <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F">основное программное обеспечение</a>, понимание <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">работы с файлами</a>, базовые знания HTML (смотрите <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML">Введение в HTML</a>) и представление о том, как работает CSS (смотрите <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/First_steps">Введение в CSS</a>).</td>
+   <td>Базовая компьютерная грамотность, <a href="/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F">основное программное обеспечение</a>, понимание <a href="/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">работы с файлами</a>, базовые знания HTML (смотрите <a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML">Введение в HTML</a>) и представление о том, как работает CSS (смотрите <a href="/ru/docs/Learn/CSS/First_steps">Введение в CSS</a>).</td>
   </tr>
   <tr>
    <th scope="row">Цель:</th>
@@ -32,9 +32,9 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <h2 id="Стилизация_фона_в_CSS">Стилизация фона в CSS</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">CSS свойство {{cssxref ("background")}} является сокращением для ряда полных свойств фона, с которыми мы познакомимся в этом уроке.</span> <span title="">Если вы обнаружите сложное свойство </span></span><code>background</code><span class="tlid-translation translation" lang="ru"><span title=""> в таблице стилей, это может показаться трудным для понимания, так как одновременно может быть передано так много значений.</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">CSS-свойство {{cssxref ("background")}} является сокращением для ряда полных свойств фона, с которыми мы познакомимся в этом уроке.</span> <span title="">Если вы обнаружите сложное свойство </span></span><code>background</code><span class="tlid-translation translation" lang="ru"><span title=""> в таблице стилей, это может показаться трудным для понимания, так как одновременно может быть передано так много значений.</span></span></p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
   url(big-star.png) center no-repeat, rebeccapurple;
 } </code>
@@ -116,7 +116,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Вы можете использовать такие ключевые слова, как <code>top</code> и <code>right</code> (с остальными можете ознакомиться на странице {{cssxref ("background-position")}}):</span></span></p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top center;
@@ -125,7 +125,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <p>Допустимы значения <a href="/ru/docs/Web/CSS/размер">длины</a> и <a href="/ru/docs/Web/CSS/percentage">процентные</a>:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: 20px 10%;
@@ -134,7 +134,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Вы также можете смешивать значения ключевых слов с длинами или процентами, например:</span></span></p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top 20px;
@@ -142,7 +142,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">И наконец, вы также можете использовать синтаксис с четырьмя значениями, чтобы указать расстояние от определённых краёв блока - единица длины в данном случае представляет собой смещение от значения ключевого слова.</span> <span title="">Итак, в CSS ниже мы сместили фон на 20 пикселей сверху и на 10 пикселей справа:</span></span></p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top 20px right 10px;
@@ -178,7 +178,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Другие свойства <code>background- *</code> также могут иметь значения, разделённые запятыми,  как и <code>background-image</code>:</span></span></p>
 
-<pre class="brush: css notranslate">background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
+<pre class="brush: css">background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position: 10px 20px,  top right;</pre>
 
@@ -229,19 +229,19 @@ background-position: 10px 20px,  top right;</pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Мы можем установить границу для всех четырёх сторон блока с помощью {{cssxref ("border")}}:</span></span></p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border: 1px solid black;
 } </code></pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Или мы можем нацеливаться на один край блока, например:</span></span></p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border-top: 1px solid black;
 } </code></pre>
 
 <p>Индивидуальные свойства этих сокращений будут следующими:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border-width: 1px;
   border-style: solid;
   border-color: black;
@@ -249,7 +249,7 @@ background-position: 10px 20px,  top right;</pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">И более детально:</span></span></p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: black;
@@ -269,13 +269,13 @@ background-position: 10px 20px,  top right;</pre>
 
 <p>Например, чтобы сделать все четыре угла блока радиусом 10px:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border-radius: 10px;
 } </code></pre>
 
 <p>Или, чтобы верхний правый угол имел горизонтальный радиус 1em и вертикальный радиус 10%:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border-top-right-radius: 1em 10%;
 } </code></pre>
 
@@ -311,15 +311,15 @@ background-position: 10px 20px,  top right;</pre>
 
 <ol>
  <li><a href="/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Каскад и наследование </a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B">Селекторы CSS</a> <a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы"> </a>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B">Селекторы CSS</a> <a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы"> </a>
   <ul>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Type_Class_and_ID_Selectors">Селекторы типа, класса и ID</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors">Селекторы атрибута</a> <a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Attribute_selectors"> </a></li>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements">Псевдоклассы и псевдоэлементы</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Combinators">Комбинаторы</a> <a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Combinators"> </a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Type_Class_and_ID_Selectors">Селекторы типа, класса и ID</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors">Селекторы атрибута</a> <a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Attribute_selectors"> </a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements">Псевдоклассы и псевдоэлементы</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Combinators">Комбинаторы</a> <a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Combinators"> </a></li>
   </ul>
  </li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/The_box_model">Модель коробки</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/The_box_model">Модель коробки</a></li>
  <li><a href="/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Фон и границы </a></li>
  <li><a href="/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Изменение направления текста </a></li>
  <li><a href="/ru/docs/Learn/CSS/Building_blocks/Overflowing_content">Перекрытие содержимого</a></li>

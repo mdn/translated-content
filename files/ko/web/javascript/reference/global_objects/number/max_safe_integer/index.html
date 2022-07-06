@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Number.MAX_SAFE_INTEGER</code></strong> 상수는 JavaScript에서 안전한 최대 정수값을 나타냅니다. (<code>2<sup>53</sup> - 1</code>).</p>
+<p><strong><code>Number.MAX_SAFE_INTEGER</code></strong> 상수는 JavaScript에서 안전한 최대 정수값을 나타냅니다. (<code>2^53 - 1</code>).</p>
 
 <div>{{EmbedInteractiveExample("pages/js/number-maxsafeinteger.html")}}</div>
 
@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 
 <h2 id="설명">설명</h2>
 
-<p><code>MAX_SAFE_INTEGER</code> 상수는 <code>9007199254740991</code>(9,007,199,254,740,991 또는 약 9000조)의 값을 갖고 있습니다. 이 값의 이유는 JavaScript가 <a href="http://en.wikipedia.org/wiki/IEEE_floating_point">IEEE 754</a>에 기술된 <a href="http://en.wikipedia.org/wiki/Double_precision_floating-point_format">배정밀도 부동소숫점 형식 숫자체계</a>를 사용하기 때문으로, 이로 인해 <code>-(2<sup>53</sup> - 1)</code>과 <code>2<sup>53</sup> - 1</code> 사이의 수만 안전하게 표현할 수 있습니다.</p>
+<p><code>MAX_SAFE_INTEGER</code> 상수는 <code>9007199254740991</code>(9,007,199,254,740,991 또는 약 9000조)의 값을 갖고 있습니다. 이 값의 이유는 JavaScript가 <a href="http://en.wikipedia.org/wiki/IEEE_floating_point">IEEE 754</a>에 기술된 <a href="http://en.wikipedia.org/wiki/Double_precision_floating-point_format">배정밀도 부동소숫점 형식 숫자체계</a>를 사용하기 때문으로, 이로 인해 <code>-(2^53 - 1)</code>과 <code>2^53 - 1</code> 사이의 수만 안전하게 표현할 수 있습니다.</p>
 
 <p>여기서의 안전함이란 정수를 정확하고 올바르게 비교할 수 있음을 의미합니다. 예를 들어 <code>Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2</code>는 참으로 평가되며 이는 수학적으로 올바르지 않습니다. 더 자세한 내용은 {{jsxref("Number.isSafeInteger()")}}를 참고하세요.</p>
 
@@ -62,8 +62,6 @@ Number.MAX_SAFE_INTEGER * Number.EPSILON // 2 because in floating points, the va
 </table>
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("javascript.builtins.Number.MAX_SAFE_INTEGER")}}</p>
 

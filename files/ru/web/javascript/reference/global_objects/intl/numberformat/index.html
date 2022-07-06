@@ -9,17 +9,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ---
 <div>{{JSRef("Global_Objects", "NumberFormat", "Intl,Collator,DateTimeFormat")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Объект <strong><code>Intl.NumberFormat</code></strong> является конструктором объектов, включающих языка-зависимое форматирование чисел.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>new Intl.NumberFormat([<var>locales</var>[, <var>options</var>]])
 Intl.NumberFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>]])
 </code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>locales</code></dt>
@@ -65,39 +65,39 @@ Intl.NumberFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>
  </dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
-<h3 id="Properties" name="Properties">Свойства</h3>
+<h3 id="Properties">Свойства</h3>
 
 <dl>
  <dt>{{jsxref("NumberFormat.prototype", "Intl.NumberFormat.prototype")}}</dt>
  <dd>Позволяет добавлять свойства ко всем объектам.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <dl>
  <dt>{{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}</dt>
  <dd>Возвращает массив, содержащий те из предоставленных локалей, которые поддерживаются без отката к локали по умолчанию среды выполнения.</dd>
 </dl>
 
-<h2 id="NumberFormat_instances" name="NumberFormat_instances">Экземпляры объекта <code>NumberFormat</code></h2>
+<h2 id="NumberFormat_instances">Экземпляры объекта <code>NumberFormat</code></h2>
 
-<h3 id="Properties_of_NumberFormat_instance" name="Properties_of_NumberFormat_instance">Свойства</h3>
+<h3 id="Properties_of_NumberFormat_instance">Свойства</h3>
 
 <p>Экземпляры <code>NumberFormat</code> наследуют следующие свойства из своего прототипа:</p>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Properties')}}</div>
 
-<h3 id="Methods_of_NumberFormat_instance" name="Methods_of_NumberFormat_instance">Методы</h3>
+<h3 id="Methods_of_NumberFormat_instance">Методы</h3>
 
 <p>Экземпляры <code>NumberFormat</code> наследуют следующие методы из своего прототипа:</p>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Methods')}}</div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Basic_usage" name="Example:_Basic_usage">Пример: базовое использование</h3>
+<h3 id="Example_Basic_usage">Пример: базовое использование</h3>
 
 <p>При базовом использовании без определения локали возвращается строка, отформатированная с помощью локали по умолчанию с опциями по умолчанию.</p>
 
@@ -107,7 +107,7 @@ console.log(new Intl.NumberFormat().format(number));
 // → '3,500' в локали US English
 </pre>
 
-<h3 id="Example_Using_locales" name="Example:_Using_locales">Пример: использование аргумента <code>locales</code></h3>
+<h3 id="Example_Using_locales">Пример: использование аргумента <code>locales</code></h3>
 
 <p>Этот пример показывает некоторые локализованные числовые форматы. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент <code>locales</code>:</p>
 
@@ -139,7 +139,7 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 // → 123.456,789
 </pre>
 
-<h3 id="Example_Using_options" name="Example:_Using_options">Пример: использование аргумента <code>options</code></h3>
+<h3 id="Example_Using_options">Пример: использование аргумента <code>options</code></h3>
 
 <p>Результат может быть настроен с помощью аргумента <code>options</code>:</p>
 
@@ -161,29 +161,16 @@ console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).form
 // → 1,23,000
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 1.0', '#sec-11.1', 'Intl.NumberFormat')}}</td>
-   <td>{{Spec2('ES Int 1.0')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.Intl.NumberFormat")}}</p>
+<p>{{Compat}}</p>
 
 <div id="compat-mobile"></div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}</div>

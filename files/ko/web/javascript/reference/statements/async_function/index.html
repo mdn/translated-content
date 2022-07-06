@@ -13,19 +13,13 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <p><code><strong>async function</strong></code> 선언은 {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}객체를 반환하는 하나의 비동기 함수를 정의합니다. 비동기 함수는 이벤트 루프를 통해 비동기적으로 작동하는 함수로, 암시적으로 {{jsxref("Promise")}}를 사용하여 결과를 반환합니다. 그러나 비동기 함수를 사용하는 코드의 구문과 구조는, 표준 동기 함수를 사용하는것과 많이 비슷합니다.</p>
 
-<div class="noinclude">
 <p>또한 {{jsxref("Operators/async_function", "async function expression", "", 1)}}을 사용해서 async function을 선언할 수 있습니다.</p>
-</div>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}</div>
 
-<div class="hidden">
-<p>이 데모에 대한 소스가 여기에 있다. 기여하고싶다면 다음의 주소에서 Clone하고 pull request하라 : <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a></p>
-</div>
-
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate" dir="rtl">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
+<pre class="syntaxbox">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
     <em>statements</em>
 }
 </pre>
@@ -44,9 +38,9 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <dl>
  <dt><code>statements</code></dt>
- <dd><font face="Consolas, Liberation Mono, Courier, monospace">함수본문을 구성하는 내용.</font></dd>
+ <dd>함수 본문을 구성하는 내용.</dd>
  <dt>
- <h3 id="반환_값"><font face="Consolas, Liberation Mono, Courier, monospace">반환 값</font></h3>
+ <h3 id="반환_값">반환 값</h3>
 
  <p>Promise : async 함수에 의해 반환 된 값으로 해결되거나 async함수 내에서 발생하는 캐치되지 않는 예외로 거부되는 값.</p>
  </dt>
@@ -69,13 +63,13 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <p>예를 들어</p>
 
-<pre class="notranslate">async function foo() {
+<pre >async function foo() {
     return 1
 }</pre>
 
 <p>위 코드는 아래와 같습니다.</p>
 
-<pre class="notranslate">function foo() {
+<pre >function foo() {
     return Promise.resolve(1)
 }</pre>
 
@@ -83,13 +77,13 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <p>예를 들어</p>
 
-<pre class="notranslate">async function foo() {
+<pre >async function foo() {
     await 1
 }</pre>
 
 <p>위 코드는 아래와 같습니다.</p>
 
-<pre class="notranslate">function foo() {
+<pre >function foo() {
     return Promise.resolve(1).then(() =&gt; undefined)
 }
 </pre>
@@ -98,7 +92,7 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <h3 id="Simple_example">Simple example</h3>
 
-<pre class="notranslate"><code>var resolveAfter2Seconds = function() {
+<pre ><code>var resolveAfter2Seconds = function() {
   console.log("starting slow promise");
   return new Promise(resolve =&gt; {
     setTimeout(function() {
@@ -175,7 +169,7 @@ setTimeout(parallel, 10000); // trully parallel: after 1 second, logs "fast", th
 <p>{{jsxref("Promise")}} 를 반환하는 API는 promise chain을 만들며 여러 파트의 함수로 나뉜다.<br>
  아래 코드를 보자.</p>
 
-<pre class="brush: js notranslate">function getProcessedData(url) {
+<pre class="brush: js ">function getProcessedData(url) {
   return downloadData(url) // returns a promise
     .catch(e =&gt; {
       return downloadFallbackData(url) // returns a promise
@@ -188,7 +182,7 @@ setTimeout(parallel, 10000); // trully parallel: after 1 second, logs "fast", th
 
 <p>위의 코드는 하나의 async함수로 아래와 같이 쓰여질 수도 있다.</p>
 
-<pre class="brush: js notranslate">async function getProcessedData(url) {
+<pre class="brush: js ">async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
@@ -226,10 +220,6 @@ setTimeout(parallel, 10000); // trully parallel: after 1 second, logs "fast", th
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>and send us a pull request.</p>
-</div>
 
 <p>{{Compat("javascript.statements.async_function")}}</p>
 

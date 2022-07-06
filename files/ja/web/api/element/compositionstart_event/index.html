@@ -9,13 +9,14 @@ tags:
   - compositionstart
   - イベント
   - 入力メソッド
+browser-compat: api.Element.compositionstart_event
 translation_of: Web/API/Element/compositionstart_event
 ---
 <div>{{APIRef}}</div>
 
 <p><strong><code>compositionstart</code></strong> イベントは、 {{glossary("input method editor", "IME")}} などのテキスト変換システムが新しい変換セッションを開始した時に発生します。</p>
 
-<p>例えば、このイベントは、ユーザーが<a href="https://ja.wikipedia.org/wiki/ピン音">ピン音</a> IME を使用して漢字の入力を開始した後に発生します。</p>
+<p>例えば、このイベントはユーザーが<a href="https://ja.wikipedia.org/wiki/ピン音">ピン音</a> IME を使用して漢字の入力を開始した後に発生します。</p>
 
 <table class="properties">
  <tbody>
@@ -38,7 +39,7 @@ translation_of: Web/API/Element/compositionstart_event
  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
 <pre class="brush: js">const inputElement = document.querySelector('input[type="text"]');
 
@@ -46,7 +47,7 @@ inputElement.addEventListener('compositionstart', (event) =&gt; {
   console.log(`generated characters were: ${event.data}`);
 });</pre>
 
-<h3 id="Live_example" name="Live_example">実行例</h3>
+<h3 id="Live_example">実行例</h3>
 
 <h4 id="HTML">HTML</h4>
 
@@ -117,34 +118,19 @@ inputElement.addEventListener('compositionupdate', handleEvent);
 inputElement.addEventListener('compositionend', handleEvent);
 </pre>
 
-<h4 id="Result" name="Result">結果</h4>
+<h4 id="Result">結果</h4>
 
 <p>{{ EmbedLiveSample('Live_example', '100%', '180px') }}</p>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-compositionstart')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<p>{{Compat}}</p>
 
-<p>{{Compat("api.Element.compositionstart_event")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>関連イベント: {{domxref("Element/compositionend_event", "compositionend")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}}。</li>

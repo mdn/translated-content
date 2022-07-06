@@ -7,18 +7,18 @@ translation_of: Web/API/Document/documentURIObject
 ---
 <p>{{ ApiRef("DOM") }}</p>
 
-<p><code><strong>Document.documentURIObject</strong></code> свойство только для чтения возвращает {{ Interface("nsIURI") }} объект представляющий URI <a href="/en-US/docs/">документа</a>.</p>
+<p><code><strong>Document.documentURIObject</strong></code> свойство только для чтения возвращает <code>nsIURI</code> объект представляющий URI <a href="/en-US/docs/">документа</a>.</p>
 
 <p>Это работает только для привилегированных  (UniversalXPConnect) скриптов, включая расширенный код. Для веб содержания это свойство не имеет какого-либо специального значения и может быть использовано так же как и любое другое обычное свойство.</p>
 
 <p>Привилегированный код должен быть осторожным не пытаясь получить или установить это свойство на объект с незапакованным  содержанием (e.g. on a <code>wrappedJSObject</code> of an <code><a href="/en/XPCNativeWrapper" title="en/XPCNativeWrapper">XPCNativeWrapper</a></code>). Смотрите {{ Bug(324464) }}' комментарии для детализации.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="eval">var <em>uri</em> = <em>doc</em>.documentURIObject;
 </pre>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="eval">// Проверка является ли этот URI scheme текущей вкладки Firefox - 'http',
 // предполагая что этот код выполняется в контексте  browser.xul
@@ -30,6 +30,6 @@ if (uriObj.schemeIs('http')) {
 }
 </pre>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <p>Не является частью спецификации.</p>

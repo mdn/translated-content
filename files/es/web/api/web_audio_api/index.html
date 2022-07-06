@@ -91,7 +91,7 @@ original_slug: Web_Audio_API
  <dt>{{domxref("ConvolverNode")}}</dt>
  <dd>La interfaz <code><strong>Convolver</strong></code><strong><code>Node</code></strong><strong> </strong>es un <span style="line-height: 1.5;">{{domxref("AudioNode")}} que realiza una Convolución Lineal en un</span><span style="line-height: 1.5;"> {{domxref("AudioBuffer")}} determinado, y es usado a menudo para lograr un efecto de reverberación</span><span style="line-height: 1.5;">.</span></dd>
  <dt>{{domxref("DelayNode")}}</dt>
- <dd>La interfaz <strong><code>DelayNode</code></strong> representa una <a href="http://en.wikipedia.org/wiki/Digital_delay_line" title="http://en.wikipedia.org/wiki/Digital_delay_line">línea de detardo</a>; un módulo de procesamiento de audio de {{domxref("AudioNode")}} que causa un retardo entre la llegada de una entrada de datos y su propagación a la salida.</dd>
+ <dd>La interfaz <strong><code>DelayNode</code></strong> representa una <a href="http://en.wikipedia.org/wiki/Digital_delay_line">línea de detardo</a>; un módulo de procesamiento de audio de {{domxref("AudioNode")}} que causa un retardo entre la llegada de una entrada de datos y su propagación a la salida.</dd>
  <dt>{{domxref("DynamicsCompressorNode")}}</dt>
  <dd>La intefaz <strong><code>DynamicsCompressorNode</code></strong> proporciona un efecto de compresión, que reduce el volumen de las partes más ruidosas de la señal para ayudar a evitar el recorte y la distorsión que pueden ocurrir cuando se reproducen y multiplexan múltiples sonidos a la vez.</dd>
  <dt>{{domxref("GainNode")}}</dt>
@@ -380,62 +380,7 @@ function voiceMute() { // alternar para silenciar y activar el sonido
 
 <h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Soporte Básico</td>
-   <td>14 {{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>23</td>
-   <td>{{CompatNo}}</td>
-   <td>15 {{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte Básico</td>
-   <td>{{CompatNo}}</td>
-   <td>28 {{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>25</td>
-   <td>1.2</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.AudioContext", 0)}}
 
 <h2 id="También_ver">También ver</h2>
 
@@ -445,8 +390,8 @@ function voiceMute() { // alternar para silenciar y activar el sonido
  <li><a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic example</a></li>
  <li><a href="http://mdn.github.io/violent-theremin/">Violent Theremin example</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Bases de la espacialización de audio Web</a></li>
- <li><a href="http://www.html5rocks.com/tutorials/webaudio/positional_audio/" title="http://www.html5rocks.com/tutorials/webaudio/positional_audio/">Mixing Positional Audio and WebGL</a></li>
- <li><a href="http://www.html5rocks.com/tutorials/webaudio/games/" title="http://www.html5rocks.com/tutorials/webaudio/games/">Developing Game Audio with the Web Audio API</a></li>
+ <li><a href="http://www.html5rocks.com/tutorials/webaudio/positional_audio/">Mixing Positional Audio and WebGL</a></li>
+ <li><a href="http://www.html5rocks.com/tutorials/webaudio/games/">Developing Game Audio with the Web Audio API</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext" title="/en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext">Porting webkitAudioContext code to standards based AudioContext</a></li>
  <li><a href="https://github.com/bit101/tones">Tonos</a>: Una sencilla librería para reproducción de tonos/notas específicas usando el API de Audio Web.</li>
  <li><a href="https://github.com/goldfire/howler.js/">howler.js</a>: a JS audio library that defaults to <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html">Web Audio API</a> and falls back to <a href="http://www.whatwg.org/specs/web-apps/current-work/#the-audio-element">HTML5 Audio</a>, as well as providing other useful features.</li>

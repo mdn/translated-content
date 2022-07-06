@@ -56,7 +56,7 @@ document.close();
 
 <p>Gecko 1.9 以降、このメソッドは他のプロパティと同一オリジンポリシーが同じになるようになり、文書のオリジンを変更しようとした場合に動作しません。</p>
 
-<p>Gecko 1.9.2 以降、 <code>document.open()</code> は<a href="/docs/Security_check_basics">プリンシパル</a>をスタックからフェッチするのではなく、 URI を使用する文書のプリンシパルを使用します。その結果、 <a class="internal" href="/ja/wrappedJSObject"><code>wrappedJSObject</code></a> を使用しても、 {{domxref("document.write()")}} を{{Glossary("chrome", "クローム")}}からの信頼できない文書に呼び出すことはできません。考え方については<a href="/ja/Security_check_basics">セキュリティチェックの基本</a>を参照してください。</p>
+<p>Gecko 1.9.2 以降、 <code>document.open()</code> は<a href="/ja/docs/Security_check_basics">プリンシパル</a>をスタックからフェッチするのではなく、 URI を使用する文書のプリンシパルを使用します。その結果、 <a class="internal" href="/ja/wrappedJSObject"><code>wrappedJSObject</code></a> を使用しても、 {{domxref("document.write()")}} を{{Glossary("chrome", "クローム")}}からの信頼できない文書に呼び出すことはできません。考え方については<a href="/ja/Security_check_basics">セキュリティチェックの基本</a>を参照してください。</p>
 
 <h2 id="Three-argument_document.open" name="Three-argument_document.open">引数3つの document.open()</h2>
 
@@ -101,8 +101,6 @@ document.close();
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("api.Document.open")}}</p>
 

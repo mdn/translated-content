@@ -10,30 +10,36 @@ translation_of: Web/JavaScript/Reference/Errors/Invalid_array_length
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<p>JavaScript の例外 "Invalid array length" は、 {{jsxref("Array")}} または {{jsxref("ArrayBuffer")}} を長さが負の数か 2<sup>32</sup> 以上で生成しようとした場合、または {{jsxref("Array.length")}} プロパティに負の数か 2<sup>32</sup> 以上の値を設定しようとした場合に発生します。</p>
+<p>JavaScript の例外 "Invalid array length" は、配列の長さが負の数か、プラットフォームで対応している最大値を超える値に設定しようとしたとき (すなわち、 {{jsxref("Array")}} または {{jsxref("ArrayBuffer")}} を生成しようとしたとき、または {{jsxref("Array.length")}} を設定しようとしたとき) に発生します。</p>
+
+<p>配列の長さに許されている最大値は、プラットフォームとブラウザーとそのバージョンに依存します。 {{jsxref("Array")}} については、最大長は 2GB-1 (2^32-1) です。 {{jsxref("ArrayBuffer")}} については、最大値は 32 ビットシステムで 2GB-1 (2^32-1) です。 Firefox バージョン 89 から、 {{jsxref("ArrayBuffer")}} の最大値は 64 ビットシステムでは 8GB (2^33) です。</p>
+
+<div class="notecard note">
+  <p><strong>補足:</strong> <code>Array</code> と <code>ArrayBuffer</code> は別個のデータ構造です (一方の実装がもう一方には影響しません)。</p>
+</div>
 
 <h2 id="Message">メッセージ</h2>
 
-<pre class="brush: js">RangeError: Array length must be a finite positive integer (Edge)
-RangeError: invalid array length (Firefox)
-RangeError: Invalid array length (Chrome)
-RangeError: Invalid array buffer length (Chrome)
+<pre class="brush: js">RangeError: invalid array length (Firefox)
+RangeError: Invalid array length (Chromium-based)
+RangeError: Array buffer allocation failed (Chromium-based)
 </pre>
 
-<h2 id="Error_type">エラー種別</h2>
+
+<h2 id="Error_type">エラーの種類</h2>
 
 <p>{{jsxref("RangeError")}}</p>
 
-<h2 id="What_went_wrong">原因</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
 <p>配列の長さが不正になるのは、以下のような場合です。</p>
 
 <ul>
- <li>{{jsxref("Array")}} や {{jsxref("ArrayBuffer")}} を、負の数や 2<sup>32</sup> 以上の長さで生成しようとした。</li>
- <li>{{jsxref("Array.length")}} プロパティに負の数や 2<sup>32</sup> 以上の値を設定しようとした。</li>
+  <li>{{jsxref("Array")}} や {{jsxref("ArrayBuffer")}} を、負の数の長さで生成しようとしたか、 {{jsxref("Array.length")}} プロパティに負の数を設定しようとした。</li>
+  <li>2GB-1 (2^32-1) よりも大きな {{jsxref("Array")}} を生成しようとしたか、 {{jsxref("Array.length")}} プロパティに設定しようとした。</li>
+  <li>32 ビットシステムで 2GB-1 (2^32-1)、 64 ビットシステムで 8GB (2^33) を超える {{jsxref("ArrayBuffer")}} を生成しようとした。</li>
+  <li>Firefox 89 以前: 2GB-1 (2^32-1) より大きな {{jsxref("ArrayBuffer")}} を生成しようとした。</li>
 </ul>
-
-<p>なぜ <code>Array</code> と <code>ArrayBuffer</code> の length が制限されるのでしょうか？ <code>Array</code> と <code>ArrayBuffer</code> の <code>length</code> プロパティは、符号なし 32 ビット整数で表されるため、値は 0 から 2<sup>32</sup>-1 の範囲の値しか保持できません。</p>
 
 <p>コンストラクターを使用して <code>Array</code> を生成すると、最初の引数が <code>Array</code> の長さとして解釈されるので、代わりにリテラル表記を使った方が良いかもしれません。</p>
 
@@ -45,7 +51,7 @@ RangeError: Invalid array buffer length (Chrome)
 
 <pre class="brush: js example-bad">new Array(Math.pow(2, 40))
 new Array(-1)
-new ArrayBuffer(Math.pow(2, 32))
+new ArrayBuffer(Math.pow(2, 32)) //32 ビットシステム
 new ArrayBuffer(-1)
 
 let a = [];
@@ -55,11 +61,12 @@ let b = new Array(Math.pow(2, 32) - 1);
 b.length = b.length + 1;         // length プロパティに 2^32 を設定
 </pre>
 
-<h3 id="Valid_cases">有効なケース</h3>
+<h3 id="Valid_cases">有効な場合</h3>
 
 <pre class="brush: js example-good">[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
 [ -1 ]                                  // [ -1 ]
 new ArrayBuffer(Math.pow(2, 32) - 1)
+new ArrayBuffer(Math.pow(2, 33))  // 64 ビットシステム、 Firefox 89 以降
 new ArrayBuffer(0)
 
 let a = [];
@@ -68,8 +75,8 @@ a.length = Math.max(0, a.length - 1);
 let b = new Array(Math.pow(2, 32) - 1);
 b.length = Math.min(0xffffffff, b.length + 1);
 
-// 0xffffffff is the hexadecimal notation for 2^32 - 1
-// which can also be written as (-1 &gt;&gt;&gt; 0)
+// 0xffffffff は 2^32 - 1 の 16 進表記です。
+// (-1 &gt;&gt;&gt; 0) と書くこともできます。
 </pre>
 
 <h2 id="See_also">関連情報</h2>

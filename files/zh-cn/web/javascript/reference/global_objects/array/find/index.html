@@ -11,19 +11,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 ---
 <div>{{JSRef}}</div>
 
-<p> <code><strong>find()</strong></code> 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 {{jsxref("undefined")}}。</p>
+<p><code><strong>find()</strong></code> 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 {{jsxref("undefined")}}。</p>
 
 <p>{{EmbedInteractiveExample("pages/js/array-find.html")}}</p>
 
-<p>另请参见  {{jsxref("Array.findIndex", "findIndex()")}} 方法，它返回数组中找到的元素的索引，而不是其值。</p>
+<p>另请参见 {{jsxref("Array.findIndex", "findIndex()")}} 方法，它返回数组中找到的元素的索引，而不是其值。</p>
 
-<p>如果你需要找到一个元素的位置或者一个元素是否存在于数组中，使用{{jsxref("Array.prototype.indexOf()")}} 或 {{jsxref("Array.prototype.includes()")}}。</p>
+<p>如果你需要找到一个元素的位置或者一个元素是否存在于数组中，请使用 {{jsxref("Array.prototype.indexOf()")}} 或 {{jsxref("Array.prototype.includes()")}}。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><em>arr</em>.find(<em>callback</em>[, <em>thisArg</em>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -38,85 +38,100 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
  </dl>
  </dd>
  <dt><code>thisArg</code>{{Optional_inline}}</dt>
- <dd>执行回调时用作<code>this</code> 的对象。</dd>
+ <dd>执行回调时用作 <code>this</code> 的对象。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
 <p>数组中第一个满足所提供测试函数的元素的值，否则返回 {{jsxref("undefined")}}。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p><code>find</code>方法对数组中的每一项元素执行一次 <code>callback</code> 函数，直至有一个 callback 返回 <code>true</code>。当找到了这样一个元素后，该方法会立即返回这个元素的值，否则返回 {{jsxref("undefined")}}。注意 <code>callback </code>函数会为数组中的每个索引调用即从 <code>0 </code>到 <code>length - 1</code>，而不仅仅是那些被赋值的索引，这意味着对于稀疏数组来说，该方法的效率要低于那些只遍历有值的索引的方法。</p>
+<p><code>find</code> 方法对数组中的每一项元素执行一次 <code>callback</code> 函数，直至有一个 callback 返回 <code>true</code>。当找到了这样一个元素后，该方法会立即返回这个元素的值，否则返回 {{jsxref("undefined")}}。注意 <code>callback</code> 函数会为数组中的每个索引调用即从 <code>0</code> 到 <code>length - 1</code>，而不仅仅是那些被赋值的索引，这意味着对于稀疏数组来说，该方法的效率要低于那些只遍历有值的索引的方法。</p>
 
-<p><code>callback</code>函数带有3个参数：当前元素的值、当前元素的索引，以及数组本身。</p>
+<p><code>callback</code> 函数带有 3 个参数：当前元素的值、当前元素的索引，以及数组本身。</p>
 
-<p>如果提供了 <code>thisArg</code>参数，那么它将作为每次 <code>callback</code>函数执行时的<code>this</code> ，如果未提供，则使用 {{jsxref("undefined")}}。</p>
+<p>如果提供了 <code>thisArg</code> 参数，那么它将作为每次 <code>callback</code> 函数执行时的 <code>this</code>，如果未提供，则使用 {{jsxref("undefined")}}。</p>
 
-<p><code>find</code>方法不会改变数组。</p>
+<p><code>find</code> 方法不会改变数组。</p>
 
-<p>在第一次调用 <code>callback</code>函数时会确定元素的索引范围，因此在 <code>find</code>方法开始执行之后添加到数组的新元素将不会被 <code>callback</code>函数访问到。如果数组中一个尚未被<code>callback</code>函数访问到的元素的值被<code>callback</code>函数所改变，那么当<code>callback</code>函数访问到它时，它的值是将是根据它在数组中的索引所访问到的当前值。被删除的元素仍旧会被访问到，但是其值已经是undefined了。</p>
+<p>在第一次调用 <code>callback</code> 函数时会确定元素的索引范围，因此在 <code>find</code> 方法开始执行之后添加到数组的新元素将不会被 <code>callback</code> 函数访问到。如果数组中一个尚未被 <code>callback</code> 函数访问到的元素的值被 <code>callback</code> 函数所改变，那么当 <code>callback</code> 函数访问到它时，它的值是将是根据它在数组中的索引所访问到的当前值。被删除的元素仍旧会被访问到，但是其值已经是 undefined 了。</p>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="用对象的属性查找数组里的对象">用对象的属性查找数组里的对象</h3>
 
-<pre class="brush: js">var inventory = [
-    {name: 'apples', quantity: 2},
-    {name: 'bananas', quantity: 0},
-    {name: 'cherries', quantity: 5}
+<pre class="brush: js">const inventory = [
+  {name: 'apples', quantity: 2},
+  {name: 'bananas', quantity: 0},
+  {name: 'cherries', quantity: 5}
 ];
 
-function findCherries(fruit) {
-    return fruit.name === 'cherries';
+function isCherries(fruit) {
+  return fruit.name === 'cherries';
 }
 
-console.log(inventory.find(findCherries)); // { name: 'cherries', quantity: 5 }</pre>
+console.log(inventory.find(isCherries));
+// { name: 'cherries', quantity: 5 }</pre>
 
 <h3 id="寻找数组中的质数">寻找数组中的质数</h3>
 
-<p>下面的例子展示了如何从一个数组中寻找质数（如果找不到质数则返回{{jsxref("undefined")}}）</p>
+<p>下面的例子展示了如何从一个数组中寻找质数（如果找不到质数则返回 {{jsxref("undefined")}}）</p>
 
 <pre class="brush: js">function isPrime(element, index, array) {
-  var start = 2;
-  while (start &lt;= Math.sqrt(element)) {
-    if (element % start++ &lt; 1) {
+  let start = 2;
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
       return false;
     }
   }
-  return element &gt; 1;
+  return element > 1;
 }
 
 console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
-console.log([4, 5, 8, 12].find(isPrime)); // 5
-
-</pre>
+console.log([4, 5, 8, 12].find(isPrime)); // 5</pre>
 
 <p>当在回调中删除数组中的一个值时，当访问到这个位置时，其传入的值是 undefined：</p>
 
-<pre class="brush: js">// Declare array with no element at index 2, 3 and 4
-var a = [0,1,,,,5,6];
+<pre class="brush: js">// Declare array with no elements at indexes 2, 3, and 4
+const array = [0,1,,,,5,6];
 
-// Shows all indexes, not just those that have been assigned values
-a.find(function(value, index) {
-  console.log('Visited index ' + index + ' with value ' + value);
+// Shows all indexes, not just those with assigned values
+array.find(function(value, index) {
+  console.log('Visited index ', index, ' with value ', value);
 });
 
 // Shows all indexes, including deleted
-a.find(function(value, index) {
-
+array.find(function(value, index) {
   // Delete element 5 on first iteration
-  if (index == 0) {
-    console.log('Deleting a[5] with value ' + a[5]);
-    delete a[5];  // 注：这里只是将a[5]设置为undefined，可以试试用a.pop()删除最后一项，依然会遍历到被删的那一项
+  if (index === 0) {
+    console.log('Deleting array[5] with value ', array[5]);
+    delete array[5];
   }
   // Element 5 is still visited even though deleted
-  console.log('Visited index ' + index + ' with value ' + value);
-});</pre>
+  console.log('Visited index ', index, ' with value ', value);
+});
+// expected output:
+// Visited index 0 with value 0
+// Visited index 1 with value 1
+// Visited index 2 with value undefined
+// Visited index 3 with value undefined
+// Visited index 4 with value undefined
+// Visited index 5 with value 5
+// Visited index 6 with value 6
+// Deleting array[5] with value 5
+// Visited index 0 with value 0
+// Visited index 1 with value 1
+// Visited index 2 with value undefined
+// Visited index 3 with value undefined
+// Visited index 4 with value undefined
+// Visited index 5 with value undefined
+// Visited index 6 with value 6
+</pre>
 
-<h2 id="Polyfill" name="Polyfill">Polyfill</h2>
+<h2 id="Polyfill">Polyfill</h2>
 
-<p>本方法在ECMAScript 6规范中被加入，可能不存在于某些实现中。你可以通过以下代码来补充 <code>Array.prototype.find()</code>。</p>
+<p>本方法在 ECMAScript 6 规范中被加入，可能不存在于某些实现中。你可以通过以下代码来补充 <code>Array.prototype.find()</code>。</p>
 
 <pre class="brush: js">// https://tc39.github.io/ecma262/#sec-array.prototype.find
 if (!Array.prototype.find) {
@@ -189,7 +204,7 @@ if (!Array.prototype.find) {
 
 <p>{{Compat("javascript.builtins.Array.find")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.findIndex()")}} – find and return an index</li>

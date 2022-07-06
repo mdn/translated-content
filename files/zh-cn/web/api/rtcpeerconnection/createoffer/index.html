@@ -13,9 +13,9 @@ translation_of: Web/API/RTCPeerConnection/createOffer
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<div>{{domxref("RTCPeerConnection")}}接口的createOffer（）方法启动创建一个{{Glossary("SDP")}} offer，目的是启动一个新的WebRTC去连接远程端点。SDP offer包含有关已附加到WebRTC会话，浏览器支持的编解码器和选项的所有{{domxref("MediaStreamTrack")}}s信息，以及{{Glossary("ICE")}} 代理，目的是通过信令信道发送给潜在远程端点，以请求连接或更新现有连接的配置。</div>
+<div>{{domxref("RTCPeerConnection")}}接口的 createOffer() 方法启动创建一个{{Glossary("SDP")}} offer，目的是启动一个新的 WebRTC 去连接远程端点。SDP offer 包含有关已附加到 WebRTC 会话，浏览器支持的编解码器和选项的所有{{domxref("MediaStreamTrack")}}s 信息，以及{{Glossary("ICE")}} 代理，目的是通过信令信道发送给潜在远程端点，以请求连接或更新现有连接的配置。</div>
 
-<div></div>
+
 
 <div>返回值是一个{{domxref("Promise")}}，创建 offer 后，将使用包含新创建的要约的{{domxref("RTCSessionDescription")}}对象来解析该返回值。</div>
 
@@ -29,32 +29,32 @@ translation_of: Web/API/RTCPeerConnection/createOffer
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">选项</span></font> {{optional_inline}}</dt>
+ <dt>选项 {{optional_inline}}</dt>
  <dd><code><a href="#RTCOfferOptions_dictionary">RTCOfferOptions</a></code> 词典提供要约所要求的选项。</dd>
 </dl>
 
 <h4 id="RTCOfferOptions_词典">RTCOfferOptions 词典</h4>
 
-<p><code>RTCOfferOptions</code> 词典被用于自定义通过此方法创建offer。</p>
+<p><code>RTCOfferOptions</code> 词典被用于自定义通过此方法创建 offer。</p>
 
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/RTCOfferOptions/iceRestart">iceRestart</a></code> {{optional_inline}}</dt>
- <dd>要在活动连接上重新启动ICE，请将其设置为<code>true</code>。 这将导致返回的 offer 与已经存在的凭证不同。 如果您应用返回的offer，则ICE将重新启动。 指定<code>false</code>以保留相同的凭据，因此不重新启动ICE。 默认值为<code>false</code>。</dd>
+ <dd>要在活动连接上重新启动 ICE，请将其设置为<code>true</code>。 这将导致返回的 offer 与已经存在的凭证不同。 如果您应用返回的 offer，则 ICE 将重新启动。 指定<code>false</code>以保留相同的凭据，因此不重新启动 ICE。 默认值为<code>false</code>。</dd>
  <dt><code>offerToReceiveAudio</code> {{optional_inline}} (Legacy)</dt>
  <dd>
  <p>传统的布尔选项，用于控制是否向远程对等方提供尝试发送音频的机会。 如果该值为<code>false</code>，即使本地端将发送音频数据，也不会提供远程端点发送音频数据。 如果此值为<code>true</code>，即使本地端不会发送音频数据，也将向远程端点发送音频数据。 默认行为是仅在本地发送音频时才提供接收音频，否则不提供。</p>
  </dd>
- <dd>为了在现代实现中模拟此行为，该成员的值为false将设置所有现有音频收发器的方向以排除接收（即，设置为“仅发送”或“无效”）。</dd>
- <dd>在现代实现中，此成员的值为true的存在将确保至少有一个收发器集可以接收尚未停止的音频，如果没有，则将创建一个。</dd>
+ <dd>为了在现代实现中模拟此行为，该成员的值为 false 将设置所有现有音频收发器的方向以排除接收（即，设置为“仅发送”或“无效”）。</dd>
+ <dd>在现代实现中，此成员的值为 true 的存在将确保至少有一个收发器集可以接收尚未停止的音频，如果没有，则将创建一个。</dd>
  <dd>
- <div class="note"><strong>笔记:</strong> 您不应该使用此旧版属性。取而代之, 用 {{domxref("RTCRtpTransceiver")}} 去控制是否接受传入的音频。</div>
+ <div class="note"><strong>备注：</strong> 您不应该使用此旧版属性。取而代之，用 {{domxref("RTCRtpTransceiver")}} 去控制是否接受传入的音频。</div>
  </dd>
  <dt><code>offerToReceiveVideo</code> {{optional_inline}} (Legacy)</dt>
  <dd>传统的布尔选项，用于控制是否向远程对等方提供尝试发送视频的机会。 如果此值为<code>false</code>，即使本地端将发送视频数据，也不会提供远程端点发送视频数据。 如果此值为<code>true</code>，即使本地端将不发送视频数据，也将向远程端点发送视频数据。 默认行为是仅在本地端正在发送视频时才提供接收视频，否则不提供。</dd>
  <dd>为了在现代实现中模拟这种行为，该成员的值为<code>false</code>将设置所有现有视频收发器的方向以排除接收（即设置为“仅发送”或“无效”）。</dd>
- <dd>在现代实现中，该成员的值为true的存在将确保至少有一个收发器集可以接收尚未停止的视频，如果没有，则将创建一个。</dd>
+ <dd>在现代实现中，该成员的值为 true 的存在将确保至少有一个收发器集可以接收尚未停止的视频，如果没有，则将创建一个。</dd>
  <dd>
- <div class="note"><strong>笔记:</strong> 您不应该使用此旧版属性。取而代之, 用 {{domxref("RTCRtpTransceiver")}} 去控制是否接受传入的视频。</div>
+ <div class="note"><strong>备注：</strong> 您不应该使用此旧版属性。取而代之，用 {{domxref("RTCRtpTransceiver")}} 去控制是否接受传入的视频。</div>
  </dd>
  <dt><code>voiceActivityDetection</code> {{optional_inline}}</dt>
  <dd>一些编解码器和硬件能够通过监视是否出现“静音”（或相对较低的声音水平）来检测音频何时开始和结束。 通过仅在实际有广播内容时发送音频数据，从而减少了用于音频的网络带宽。 但是，在某些情况下，这是不需要的。 例如，在音乐或其他非语音传输的情况下，这可能会导致重要的低音量声音丢失。 而且，紧急呼叫在安静时切勿切断音频。 此选项默认为<strong><code>true</code></strong>（启用语音活动检测）。</dd>
@@ -73,16 +73,16 @@ translation_of: Web/API/RTCPeerConnection/createOffer
 
 <dl>
  <dt><code>successCallback</code> {{deprecated_inline}}</dt>
- <dd>{{domxref("RTCSessionDescriptionCallback")}}将传递一个描述新创建的offer的{{domxref("RTCSessionDescription")}}对象。</dd>
+ <dd>{{domxref("RTCSessionDescriptionCallback")}}将传递一个描述新创建的 offer 的{{domxref("RTCSessionDescription")}}对象。</dd>
  <dt><code>errorCallback</code> {{deprecated_inline}}</dt>
- <dd>{{domxref("RTCPeerConnectionErrorCallback")}}将会传递给一个{{domxref("DOMException")}}对象，该对象说明了创建offer的请求失败的原因。</dd>
+ <dd>{{domxref("RTCPeerConnectionErrorCallback")}}将会传递给一个{{domxref("DOMException")}}对象，该对象说明了创建 offer 的请求失败的原因。</dd>
  <dt><code>options</code> {{optional_inline}}</dt>
- <dd>可选的<code><a href="#RTCOfferOptions_dictionary">RTCOfferOptions</a></code>词典，提供 offer所要求的选项。</dd>
+ <dd>可选的<code><a href="#RTCOfferOptions_dictionary">RTCOfferOptions</a></code>词典，提供 offer 所要求的选项。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>{{jsxref("Promise")}}的履行处理程序将接收符合{{domxref("RTCSessionDescriptionInit")}}字典的对象，该字典包含描述所生成 offer 的SDP。 收到的 offer 应通过信令服务器传递到。</p>
+<p>{{jsxref("Promise")}}的履行处理程序将接收符合{{domxref("RTCSessionDescriptionInit")}}字典的对象，该字典包含描述所生成 offer 的 SDP。 收到的 offer 应通过信令服务器传递到。</p>
 
 <h3 id="异常">异常</h3>
 
@@ -90,9 +90,9 @@ translation_of: Web/API/RTCPeerConnection/createOffer
 
 <dl>
  <dt><code>InvalidStateError</code></dt>
- <dd><code>RTCPeerConnection</code> 被关闭.</dd>
+ <dd><code>RTCPeerConnection</code> 被关闭。</dd>
  <dt><code>NotReadableError</code></dt>
- <dd>没有提供用于保护连接的证书或一组证书，并且<code>createOffer()</code>无法创建新证书。 由于需要保护所有WebRTC连接，因此会导致错误。</dd>
+ <dd>没有提供用于保护连接的证书或一组证书，并且<code>createOffer()</code>无法创建新证书。 由于需要保护所有 WebRTC 连接，因此会导致错误。</dd>
  <dt><code>OperationError</code></dt>
  <dd>由于某些原因，检查系统状态以确定资源可用性以生成报价失败。</dd>
 </dl>
@@ -102,7 +102,7 @@ translation_of: Web/API/RTCPeerConnection/createOffer
 <p>在这里，我们看到了{{event("negotiationneeded")}}事件的处理程序，该处理程序创建了要约，并通过信令通道将其发送到远程系统。</p>
 
 <div class="note">
-<p><strong>笔记:</strong> 请记住，这是信令过程的一部分，传输层的实现细节完全由您决定。 在这种情况下，<a href="/en-US/docs/Web/API/WebSocket_API">WebSocket</a>连接用于向其他端点发送带有值为“ video-offer”的类型字段的{{Glossary("JSON")}}消息。 传递给<code>sendToServer()</code>函数的对象的内容，以及承诺履行处理程序中的所有其他内容，完全取决于您的设计。</p>
+<p><strong>备注：</strong> 请记住，这是信令过程的一部分，传输层的实现细节完全由您决定。 在这种情况下，<a href="/en-US/docs/Web/API/WebSocket_API">WebSocket</a>连接用于向其他端点发送带有值为“ video-offer”的类型字段的{{Glossary("JSON")}}消息。 传递给<code>sendToServer()</code>函数的对象的内容，以及承诺履行处理程序中的所有其他内容，完全取决于您的设计。</p>
 </div>
 
 <pre class="brush: js">  myPeerConnection.createOffer().then(function(offer) {
@@ -120,9 +120,9 @@ translation_of: Web/API/RTCPeerConnection/createOffer
     // An error occurred, so handle the failure to connect
   });</pre>
 
-<p>在此代码中，创建了offer，一旦成功，就将{{domxref("RTCPeerConnection")}}的本地端配置为通过传递要约进行匹配（使用符合{{domxref("RTCSessionDescriptionInit")}}）放入{{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}。 完成后，要约将通过信令通道发送到远程系统。 在这种情况下，使用名为<code>sendToServer()</code>的自定义函数。 信令服务器的实现独立于WebRTC规范，因此只要主叫方和潜在接收方都使用相同的offer，如何发送offer都无关紧要。</p>
+<p>在此代码中，创建了 offer，一旦成功，就将{{domxref("RTCPeerConnection")}}的本地端配置为通过传递要约进行匹配（使用符合{{domxref("RTCSessionDescriptionInit")}}）放入{{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}。 完成后，要约将通过信令通道发送到远程系统。 在这种情况下，使用名为<code>sendToServer()</code>的自定义函数。 信令服务器的实现独立于 WebRTC 规范，因此只要主叫方和潜在接收方都使用相同的 offer，如何发送 offer 都无关紧要。</p>
 
-<p>用 {{jsxref("Promise.catch()")}} 来捕获和处理错误.</p>
+<p>用 {{jsxref("Promise.catch()")}} 来捕获和处理错误。</p>
 
 <p>请参阅 <a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a>，以获取此摘录的完整示例。 这将帮助您了解此处的信令代码如何工作。</p>
 

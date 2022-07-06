@@ -14,11 +14,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <h2 id="구문">구문</h2>
 
-<pre class="syntaxbox notranslate">undefined</pre>
+<pre class="syntaxbox ">undefined</pre>
 
 <h2 id="설명">설명</h2>
 
@@ -31,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 <div class="note">
 <p><code>undefined</code>는 <a href="/ko/docs/Web/JavaScript/Reference/Reserved_Words">예약어</a>가 아니기 때문에 전역 범위 외에서 {{Glossary("Identifier", "식별자")}}(변수 이름)로 사용할 수 있습니다. 그러나 유지보수와 디버깅 시 어려움을 낳을 수 있으므로 반드시 피해야 합니다.</p>
 
-<pre class="brush: js example-bad notranslate">//  DON'T DO THIS
+<pre class="brush: js example-bad ">//  DON'T DO THIS
 
 //  logs "foo string"
 (function() {
@@ -51,7 +49,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 
 <p><code>undefined</code>와 일치, 불일치 연산자를 사용해 변수에 값이 할당됐는지 판별할 수 있습니다. 다음 예제에서 변수 <code>x</code>는 초기화되지 않았으므로 <code>if</code>문은 <code>true</code>로 평가됩니다.</p>
 
-<pre class="brush: js notranslate">var x;
+<pre class="brush: js ">var x;
 if (x === undefined) {
    // 이 문이 실행됨
 }
@@ -70,7 +68,7 @@ else {
 
 <p>위의 예제 대신 {{jsxref("Operators/typeof", "typeof")}}를 사용할 수도 있습니다.</p>
 
-<pre class="brush: js notranslate">var x;
+<pre class="brush: js ">var x;
 if (typeof x === 'undefined') {
    // 이 문이 실행됨
 }
@@ -78,7 +76,7 @@ if (typeof x === 'undefined') {
 
 <p><code>typeof</code>를 사용하는 이유 중 하나는 선언하지 않은 변수를 사용해도 오류를 던지지 않기 때문입니다.</p>
 
-<pre class="brush: js notranslate">// x를 선언한 적 없음
+<pre class="brush: js ">// x를 선언한 적 없음
 if (typeof x === 'undefined') { // 오류 없이 true로 평가
    // 이 문이 실행됨
 }
@@ -92,7 +90,7 @@ if(x === undefined) { // ReferenceError
 
 <p>전역 범위는 {{jsxref("globalThis", "전역 객체", "", 1)}}에 묶여 있으므로, 전역 맥락에서 변수의 존재 유무는 {{jsxref("Operators/in", "in")}} 연산자를 전역 객체 대상으로 실행해 알 수 있습니다. 즉,</p>
 
-<pre class="brush: js notranslate">if ('x' in window) {
+<pre class="brush: js ">if ('x' in window) {
   //  x가 전역으로 정의된 경우 이 문이 실행됨
 }</pre>
 
@@ -100,7 +98,7 @@ if(x === undefined) { // ReferenceError
 
 <p>{{jsxref("Operators/void", "void")}} 연산자를 제 3의 대안으로 사용할 수 있습니다.</p>
 
-<pre class="brush: js notranslate">var x;
+<pre class="brush: js ">var x;
 if (x === void 0) {
    // 이 문이 실행됨
 }

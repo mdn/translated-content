@@ -1,10 +1,58 @@
 ---
-title: 为这个EventTarget附加事件.
+title: EventListener.handleEvent()
 slug: conflicting/Web/API/EventTarget/addEventListener
 tags:
-  - Junk
-translation_of: Web/API/EventTarget/addEventListener
-translation_of_original: Web/API/EventTarget/attachEvent
-original_slug: Web/API/EventTarget/attachEvent
+  - API
+  - 事件
+  - 参考
+  - 方法
+translation_of: Web/API/EventListener/handleEvent
+original_slug: Web/API/EventListener/handleEvent
 ---
-<p>{{DOMxRef("EventTarget.addEventListener","EventTarget.addEventListener()")}}</p>
+<div>{{APIRef("DOM Events")}}</div>
+
+<div>当事件被发送到 {{domxref("EventListener")}} 时，{{Glossary("user agent")}} 将调用 {{domxref("EventListener")}} 方法 <code><strong>handleEvent()</strong></code>，以便处理在观察到的 {{domxref("EventTarget")}} 上发生的事件。</div>
+
+<h2 id="语法"><font><font>语法</font></font></h2>
+
+<pre class="syntaxbox"><code><var>eventListener</var>.handleEvent(<var>event</var>);</code>
+</pre>
+
+<h3 id="参数"><font><font>参数</font></font></h3>
+
+<dl>
+ <dt><strong><code>event</code></strong></dt>
+ <dd><font><font>一个 </font></font>{{domxref("Event")}}<font><font> 对象，描述已被触发并需要处理的事件。</font></font></dd>
+</dl>
+
+<h3 id="返回值"><font><font>返回值</font></font></h3>
+
+<p><code>undefined</code><font><font>。</font><font>如果返回了值，浏览器将忽略它。</font></font></p>
+
+<h2 id="规范"><font><font>规范</font></font></h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">备注</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-eventlistener-handleevent', 'EventListener.handleEvent()')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>No change.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Events', '#Events-EventListener-handleEvent', 'EventListener.handleEvent()')}}</td>
+   <td>{{Spec2('DOM2 Events')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<p>{{Compat("api.EventListener.handleEvent")}}</p></font>

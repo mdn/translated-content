@@ -15,17 +15,17 @@ translation_of: Web/API/Event/stopImmediatePropagation
 ---
 <p id="Summary">{{APIRef("DOM")}}</p>
 
-<p>Останавливает цепочку вызова событий для последующих обработчиков DOM элемента.</p>
+<p>Останавливает цепочку вызова событий для последующих обработчиков DOM-элемента.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="eval"><em>event</em>.stopImmediatePropagation();
 </pre>
 
-<h2 id="Notes" name="Notes">Замечания</h2>
+<h2 id="Notes">Замечания</h2>
 
 <p>Если несколько обработчиков прикреплены к одному и тому же элементу с одинаковым типом события, тогда они будут вызваны в порядке своего добавления. Если один из этих обработчиков вызовет <span style="font-family: consolas,monaco,andale mono,monospace; line-height: 19.0909080505371px;">event.stopImmediatePropagation() тогда события оставшихся обработчиков вызваны не будут.</span></p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <p><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#events-event-type-stopImmediatePropagation">DOM Level 3 Events: stopImmediatePropagation</a></p>

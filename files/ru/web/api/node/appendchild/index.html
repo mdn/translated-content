@@ -9,7 +9,7 @@ tags:
   - WebAPI
 translation_of: Web/API/Node/appendChild
 ---
-<h2 id="Summary" name="Summary">Аннотация</h2>
+<h2 id="Summary">Аннотация</h2>
 
 <p><code><strong>Node.appendChild()</strong></code> добавляет узел в конец списка дочерних элементов указанного родительского узла. Если данный дочерний элемент является ссылкой на существующий узел в документе, то функция <code>appendChild()</code> перемещает его из текущей позиции в новую позицию (нет необходимости удалять узел из родительского узла перед добавлением его к какому-либо другому узлу).</p>
 
@@ -22,40 +22,40 @@ translation_of: Web/API/Node/appendChild
  <a href="https://developer.mozilla.org/ru/docs/Web/API/ParentNode/append"><code>ParentNode.append()</code></a> поддерживает несколько аргументов и добавляемые строки.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">var child = <em>element</em>.appendChild(<em>child</em>);</pre>
+<pre class="syntaxbox">var child = <em>element</em>.appendChild(<em>child</em>);</pre>
 
 <ul>
  <li><code>element</code> родительский <a href="/en-US/docs/DOM/element" title="/en-US/docs/DOM/element">элемент</a>.</li>
  <li><code>child</code> это элемент вставляется в конец <code>element</code>.</li>
 </ul>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 
 <p>Возвращается дочерний элемент (<code><var>aChild</var></code>), кроме тех случаев, когда <code><var>child</var></code> это {{domxref("DocumentFragment")}}, в таком случае возвращается пустой {{domxref("DocumentFragment")}}.</p>
 
-<h2 id="Notes" name="Notes">Примечание</h2>
+<h2 id="Notes">Примечание</h2>
 
 <p>Цепочка может работать не так, как ожидалось, из-за того, что <code>appendChild()</code> возвращает дочерний элемент:</p>
 
-<pre class="brush: js notranslate">let aBlock = document.createElement('block').appendChild( document.createElement('b') );</pre>
+<pre class="brush: js">let aBlock = document.createElement('block').appendChild( document.createElement('b') );</pre>
 
 <p>Присваивает переменной <code>aBlock</code> элемент <code>&lt;b&gt;&lt;/b&gt;</code>, а не <code>&lt;block&gt;&lt;/block&gt;</code>, как вы могли ожидать.</p>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
-<pre class="brush:js notranslate">// Создаём новый элемент параграфа, и вставляем в конец document body
+<pre class="brush:js">// Создаём новый элемент параграфа, и вставляем в конец document body
 var p = document.createElement("p");
 document.body.appendChild(p);</pre>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107" title="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107">DOM Level 3 Core: appendChild</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107">DOM Level 3 Core: appendChild</a></li>
 </ul>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("Node.removeChild")}}</li>

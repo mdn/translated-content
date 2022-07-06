@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 
 <p>Прокси - это новые объекты; невозможно выполнить "проксирование" существующего объекта. Пример создания прокси:</p>
 
-<pre class="brush: js notranslate">var p = new Proxy(target, handler);
+<pre class="brush: js">var p = new Proxy(target, handler);
 </pre>
 
 <p>Где:</p>
@@ -56,7 +56,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 <table class="standard-table">
  <thead>
   <tr>
-   <th>JavaScript код</th>
+   <th>JavaScript-код</th>
    <th>Метод обработчика</th>
    <th>Описание</th>
   </tr>
@@ -150,7 +150,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 
 <p>Объект, возвращающий значение <code>37</code>, в случае отсутствия свойства с указанным именем:</p>
 
-<pre class="brush: js notranslate">var handler = {
+<pre class="brush: js">var handler = {
     get: function(target, name){
         return name in target?
             target[name] :
@@ -170,7 +170,7 @@ console.log('c' in p, p.c); // false, 37
 
 <p>В данном примере мы используем JavaScript объект, к которому наш прокси направляет все запросы:</p>
 
-<pre class="brush: js notranslate">var target = {};
+<pre class="brush: js">var target = {};
 var p = new Proxy(target, {});
 
 p.a = 37; // операция перенаправлена прокси
@@ -182,7 +182,7 @@ console.log(target.a); // 37. Операция была успешно пере�
 
 <p>При помощи <code>Proxy</code> вы можете легко проверять передаваемые объекту значения:</p>
 
-<pre class="brush: js notranslate">let validator = {
+<pre class="brush: js">let validator = {
   set: function(obj, prop, value) {
     if (prop === 'age') {
       if (!Number.isInteger(value)) {
@@ -195,6 +195,9 @@ console.log(target.a); // 37. Операция была успешно пере�
 
     // Стандартное сохранение значения
     obj[prop] = value;
+    
+    // Обозначить успех
+    return true;
   }
 };
 
@@ -210,7 +213,7 @@ person.age = 300; // Вызовет исключение
 
 <p>Функция прокси может легко дополнить конструктор новым:</p>
 
-<pre class="brush: js notranslate">function extend(sup, base) {
+<pre class="brush: js">function extend(sup, base) {
     var descriptor = Object.getOwnPropertyDescriptor(
         base.prototype, 'constructor',
     );
@@ -257,7 +260,7 @@ console.log(Peter.age); // 13
 
 <p>Иногда возникает необходимость переключить атрибут или имя класса у двух разных элементов:</p>
 
-<pre class="brush: js notranslate">let view = new Proxy({
+<pre class="brush: js">let view = new Proxy({
   selected: null
 },
 {
@@ -290,7 +293,7 @@ console.log(i2.getAttribute('aria-selected')); // 'true'
 
 <p>Прокси объект <code>products</code> проверяет передаваемые значения и преобразует их в массив в случае необходимости. Объект также поддерживает дополнительное свойство <code>latestBrowser</code> на чтение и запись.</p>
 
-<pre class="brush: js notranslate">let products = new Proxy({
+<pre class="brush: js">let products = new Proxy({
   browsers: ['Internet Explorer', 'Netscape']
 },
 {
@@ -333,7 +336,7 @@ console.log(products.latestBrowser); // 'Chrome'
 
 <p>Данный прокси расширяет массив дополнительными возможностями. Как вы видите, вы можете гибко "задавать" свойства без использования <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperties"><code>Object.defineProperties</code></a>. Данный пример также может быть использован для поиска строки таблицы по её ячейке. В этом случае целью будет <a href="/en-US/docs/DOM/table.rows"><code>table.rows</code></a>.</p>
 
-<pre class="brush: js notranslate">let products = new Proxy([
+<pre class="brush: js">let products = new Proxy([
   { name: 'Firefox', type: 'browser' },
   { name: 'SeaMonkey', type: 'browser' },
   { name: 'Thunderbird', type: 'mailer' }
@@ -394,7 +397,7 @@ console.log(products.number); // 3
 
 <p>В данном примере, использующем все виды перехватчиков, мы попытаемся проксировать <em>не нативный</em> объект, который частично приспособлен для этого - <code>docCookies,</code> созданном в разделе <a href="https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support" title="https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support">"little framework" и опубликованном на странице <code>document.cookie</code></a>.</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
   var docCookies = ... получить объект "docCookies" можно здесь:
   https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
 */
@@ -467,7 +470,7 @@ alert(docCookies.getItem("my_cookie1"));
 docCookies.setItem("my_cookie1", "Changed value");
 alert(docCookies.my_cookie1);</pre>
 
-<h2 id="See_also" name="See_also" style="line-height: 30px; font-size: 2.14285714285714rem;">Смотрите также</h2>
+<h2 id="See_also" style="line-height: 30px; font-size: 2.14285714285714rem;">Смотрите также</h2>
 
 <ul>
  <li><a class="external" href="http://jsconf.eu/2010/speaker/be_proxy_objects.html">"Proxies are awesome" презентация Brendan Eich на JSConf</a> (<a class="external" href="http://www.slideshare.net/BrendanEich/metaprog-5303821">слайды</a>)</li>

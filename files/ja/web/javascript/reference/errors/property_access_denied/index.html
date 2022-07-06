@@ -2,34 +2,34 @@
 title: 'Error: Permission denied to access property "x"'
 slug: Web/JavaScript/Reference/Errors/Property_access_denied
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - Security
+- Error
+- Errors
+- JavaScript
+- Security
 translation_of: Web/JavaScript/Reference/Errors/Property_access_denied
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
 <p>JavaScript の例外 "Permission denied to access property" は、権限がない状態でオブジェクトへのアクセスの試行があった場合に発生します。</p>
 
-<h2 id="Message" name="Message">メッセージ</h2>
+<h2 id="Message">エラーメッセージ</h2>
 
-<pre class="syntaxbox notranslate">Error: Permission denied to access property "x"
+<pre class="brush: js">Error: Permission denied to access property "x"
 </pre>
 
-<h2 id="Error_type" name="Error_type">エラー種別</h2>
+<h2 id="Error_type">エラーの種類</h2>
 
 <p>{{jsxref("Error")}}</p>
 
-<h2 id="What_went_wrong" name="What_went_wrong">原因</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
 <p>権限がない状態でオブジェクトへのアクセスの試行がありました。これは異なるドメインから読み込んだ {{HTMLElement("iframe")}} 要素が<a href="/ja/docs/Web/Security/Same-origin_policy">同一オリジンポリシー</a>に違反する場合などです。</p>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="No_permission_to_access_document" name="No_permission_to_access_document">文書にアクセスする権限がない</h3>
+<h3 id="No_permission_to_access_document">文書にアクセスする権限がない</h3>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"&gt;&lt;/iframe&gt;
@@ -43,9 +43,9 @@ translation_of: Web/JavaScript/Reference/Errors/Property_access_denied
   &lt;body&gt;&lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li>{{HTMLElement("iframe")}}</li>
- <li><a href="/ja/docs/Web/Security/Same-origin_policy">同一オリジンポリシー</a></li>
+  <li>{{HTMLElement("iframe")}}</li>
+  <li><a href="/ja/docs/Web/Security/Same-origin_policy">同一オリジンポリシー</a></li>
 </ul>

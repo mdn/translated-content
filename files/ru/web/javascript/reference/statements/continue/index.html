@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Statements/continue
 
 <p>Инструкция <strong>continue</strong> прерывает выполнение текущей итерации текущего или отмеченного цикла, и продолжает его выполнение на следующей итерации.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">continue [ label ];</pre>
 
@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Statements/continue
  <dd>Идентификатор, являющийся меткой (<code>label</code>) инструкции.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>По сравнению с инструкцией {{jsxref("Statements/break", "break")}}, <code>continue</code> прерывает выполнение цикла не полностью, вместо этого:</p>
 
@@ -35,9 +35,9 @@ translation_of: Web/JavaScript/Reference/Statements/continue
 
 <p>Инструкция <code>continue</code> может использоваться вместе с необязательной меткой, которая будет начинать следующую итерацию отмеченного цикла, а не текущего. В этом случае, <code>continue</code> должен находиться внутри отмеченного блока, который соответствует метке.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_continue_with_while" name="Example:_Using_continue_with_while">Использование <code>continue</code> с циклом <code>while</code></h3>
+<h3 id="Example_Using_continue_with_while">Использование <code>continue</code> с циклом <code>while</code></h3>
 
 <p>Пример показывает использование цикла {{jsxref("Statements/while", "while")}} вместе с инструкцией <code>continue, которая выполняется, когда</code> <code>i</code> станет равно 3-м. Таким образом, <code>n</code> принимает значения 1, 3, 7 и 12.</p>
 
@@ -110,41 +110,13 @@ checkiandj: while (i &lt; 4) {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е Издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Версия без метки.</td>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е Издание.</td>
-   <td>Стандарт</td>
-   <td>Добавлена поддержка метки.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.7', 'Continue statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-continue-statement', 'Continue statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Statements/break", "break")}}</li>

@@ -27,7 +27,7 @@ translation_of: Mozilla/Firefox/Releases/54
  <li>以前は、<code>display:block</code> を指定した {{domxref("HTMLInputElement")}} 型の子要素を持つ、{{cssxref("display")}}<code>: inline-block</code> を指定した要素のベースラインが誤っていました ({{bug(1330962)}})。この問題を修正しました。</li>
  <li>Mozilla がコンテンツ専用のスレッドを (Electrolysis または e10s プロジェクトで) Firefox に導入したとき、{{HTMLElement("option")}} 要素へのスタイル設定機能のを一時的に削除しました。Firefox 54 より {{cssxref("color")}} および {{cssxref("background-color")}} プロパティを使用して、<code>&lt;option&gt;</code> 要素に再び前景色や背景色を設定できるようになりました。詳しくは {{bug(910022)}} をご覧ください。Linux では、コントラストが不足するためまだ無効化していますので注意してください (進捗状況は {{bug(1338283)}} で確認してください)。</li>
  <li><a href="/ja/docs/Web/CSS/CSS_Animations">CSS Animations</a> でアニメーションが早期に終了したとき、想定どおりに {{event("animationcancel")}} イベントが発生するようになりました ({{bug(1302648)}})。</li>
- <li>透過色 (すなわち、アルファチャンネルが 0 である色) が、<a href="https://www.fxsitecompat.com/ja/docs/2017/transparent-rgba-colour-values-are-no-longer-serialized-to-transparent-keyword/">特定の状況</a> で <a href="/ja/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code> 色キーワード</a> にシリアライズされていました。これを、仕様書や他のブラウザーの実装に従うよう修正しました。詳しくは {{bug("1339394")}} をご覧ください。</li>
+ <li>透過色 (すなわち、アルファチャンネルが 0 である色) が、特定の状況 で <a href="/ja/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code> 色キーワード</a> にシリアライズされていました。これを、仕様書や他のブラウザーの実装に従うよう修正しました。詳しくは {{bug("1339394")}} をご覧ください。</li>
  <li>独自仕様である <code>:-moz-table-border-nonzero</code> 疑似クラスが、ウェブコンテンツで使用できなくなりました。Firefox 内部の UA スタイルシートのみに制限されています ({{bug(1341925)}})。</li>
  <li>[css-grid] overflow:auto を指定したコンテンツがグリッド内で重なり合う問題を修正しました ({{bug(1348857)}})。</li>
  <li>[css-grid] 固有の比率を持つ、サイズをパーセンテージで指定したグリッドアイテムに対する、Transferred min-size の寄与に関する問題を修正しました ({{bug(1349320)}})。</li>
@@ -120,7 +120,6 @@ translation_of: Mozilla/Firefox/Releases/54
 
 <ul>
  <li><a href="https://www.mozilla.jp/firefox/54.0/releasenotes/">Firefox 54.0 リリースノート</a></li>
- <li><a href="https://www.fxsitecompat.com/ja/versions/54/">Firefox 54 サイト互換性情報</a></li>
  <li><a href="https://dev.mozilla.jp/2017/04/firefox-54-addon-compatibility/">Firefox 54 アドオン互換性情報</a></li>
 </ul>
 

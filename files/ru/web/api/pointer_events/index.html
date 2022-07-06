@@ -160,7 +160,7 @@ translation_of: Web/API/Pointer_events
 
 <p>В этом примере определённому элементу назначаются обработчики каждого типа события.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
   &lt;script&gt;
     function over_handler(event) { }
     function enter_handler(event) { }
@@ -198,7 +198,7 @@ translation_of: Web/API/Pointer_events
 
 <p>Этот пример демонстрирует доступ ко всем свойствам события касания.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
   &lt;script&gt;
     var id = -1;
 
@@ -345,7 +345,7 @@ translation_of: Web/API/Pointer_events
 
 <p>The following example shows pointer capture being set on an element.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;script&gt;
   function downHandler(ev) {
     let el = document.getElementById("target");
@@ -366,7 +366,7 @@ translation_of: Web/API/Pointer_events
 
 <p>The following example shows a pointer capture being released (when a {{event("pointercancel")}} event occurs. The browser does this automatically when a {{event("pointerup")}} or {{event("pointercancel")}} event occurs.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
   &lt;script&gt;
     function downHandler(ev) {
       let el = document.getElementById("target");
@@ -401,7 +401,7 @@ translation_of: Web/API/Pointer_events
 
 <p>In the following example, the browser's default touch behavior is disabled for the <code>div</code> element.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
   &lt;body&gt;
     &lt;div style="touch-action:none;"&gt;Can't touch this ... &lt;/div&gt;
   &lt;/body&gt;
@@ -410,14 +410,14 @@ translation_of: Web/API/Pointer_events
 
 <p>In the following example, default touch behavior is disabled for some <code>button</code> elements.</p>
 
-<pre class="brush: css notranslate">button#tiny {
+<pre class="brush: css">button#tiny {
   touch-action: none;
 }
 </pre>
 
 <p>In the following example, when the <code>target</code> element is touched, it will only pan in the horizontal direction.</p>
 
-<pre class="brush: css notranslate">#target {
+<pre class="brush: css">#target {
   touch-action: pan-x;
 }
 </pre>
@@ -474,10 +474,6 @@ translation_of: Web/API/Pointer_events
 </table>
 
 <h2 id="Browser_compatibility"><span>Browser compatibility</span></h2>
-
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
 
 <p>{{Compat("api.PointerEvent")}}</p>
 

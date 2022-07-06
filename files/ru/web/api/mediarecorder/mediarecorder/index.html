@@ -23,7 +23,7 @@ translation_of: Web/API/MediaRecorder/MediaRecorder
  <p>Объект, содержащий следующие свойства:</p>
 
  <ul>
-  <li><code>mimeType</code>:  <code>mime</code> тип, определяет формат результата записи, который нужно использовать в качестве контейнера для создаваемого объекта <code>MediaRecorder</code>. Можно просто указать формат контейнера, а браузер сам выберет нужный кодек для записи аудио/видео, или используйте <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Media/Formats/codecs_parameter">параметр codecs</a> или параметр<code> profiles</code> для расширения информации об использовании и тонкой конфигурации кодеков. Приложения, предварительно, могут проверять поддержку браузерами определённого типа из свойства <code>mimeType</code> , вызывая метод {{domxref("MediaRecorder.isTypeSupported()")}}.</li>
+  <li><code>mimeType</code>:  <code>mime</code> тип, определяет формат результата записи, который нужно использовать в качестве контейнера для создаваемого объекта <code>MediaRecorder</code>. Можно просто указать формат контейнера, а браузер сам выберет нужный кодек для записи аудио/видео, или используйте <a href="/en-US/docs/Web/Media/Formats/codecs_parameter">параметр codecs</a> или параметр<code> profiles</code> для расширения информации об использовании и тонкой конфигурации кодеков. Приложения, предварительно, могут проверять поддержку браузерами определённого типа из свойства <code>mimeType</code> , вызывая метод {{domxref("MediaRecorder.isTypeSupported()")}}.</li>
   <li><code>audioBitsPerSecond</code>: Скорость записи медиа данных аудио.</li>
   <li><code>videoBitsPerSecond</code>: Скорость записи медиа данных видео.</li>
   <li><code>bitsPerSecond</code>: Скорость записи медиаданных аудио и видео. Может определяться вместо верхних двух. Если определяется вместе с одним из свойств выше, имеет меньший приоритет, и используется  вместо отсутствующей настройки выше..</li>
@@ -66,24 +66,11 @@ if (navigator.mediaDevices.getUserMedia) {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("MediaStream Recording")}}</td>
-   <td>{{Spec2("MediaStream Recording")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.MediaRecorder.MediaRecorder")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

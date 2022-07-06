@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<p><span class="seoSummary">全局属性 <code>globalThis</code> 包含全局的 <code>this</code> 值，类似于全局对象（global object）。</span></p>
+<p>全局属性 <code>globalThis</code> 包含全局的 <code>this</code> 值，类似于全局对象（global object）。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html","shorter")}}</div>
 
@@ -24,13 +24,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">globalThis</pre>
+<pre class="syntaxbox">globalThis</pre>
 
 <h2 id="描述">描述</h2>
 
 <p>在以前，从不同的 JavaScript 环境中获取全局对象需要不同的语句。在 Web 中，可以通过 <code>window</code>、<code>self</code> 或者 <code>frames</code> 取到全局对象，但是在 <a href="/zh-CN/docs/Web/API/Worker">Web Workers</a> 中，只有 <code>self</code> 可以。在 Node.js 中，它们都无法获取，必须使用 <code>global</code>。</p>
 
-<p>在松散模式下，可以在函数中返回 <code>this</code> 来获取全局对象，但是在严格模式和模块环境下，<code>this</code> 会返回 <code>undefined</code>。 You can also use <code>Function('return this')()</code>, but environments that disable {{jsxref("eval", "eval()")}}, like <a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/CSP">CSP</a> in browsers, prevent use of {{jsxref("Function")}} in this way.</p>
+<p>在松散模式下，可以在函数中返回 <code>this</code> 来获取全局对象，但是在严格模式和模块环境下，<code>this</code> 会返回 <code>undefined</code>。你也可以使用 <code>Function('return this')()</code>，但那些禁用{{jsxref("eval", "eval()")}}的环境，如在浏览器中的<a href="/zh-CN/docs/Glossary/CSP">CSP</a>，不允许这样使用{{jsxref("Function")}}。</p>
 
 <p><code>globalThis</code> 提供了一个标准的方式来获取不同环境下的全局 <code>this</code>  对象（也就是全局对象自身）。不像 <code>window</code> 或者 <code>self</code> 这些属性，它确保可以在有无窗口的各种环境下正常工作。所以，你可以安心的使用 <code>globalThis</code>，不必担心它的运行环境。为便于记忆，你只需要记住，全局作用域中的 <code>this</code> 就是 <code>globalThis</code>。</p>
 
@@ -40,13 +40,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 
 <h3 id="命名">命名</h3>
 
-<p>并没有采用一些更常见的命名方式类似 <code>self</code> 和 <code>global</code> 是因为考虑到前向兼容，为了避免影响到现存代码的正常工作。 更多相关信息可以查看 <a href="https://github.com/tc39/proposal-global/blob/master/NAMING.md">language proposal's "naming" document</a> 。</p>
+<p>并没有采用一些更常见的命名方式，如 <code>self</code> 和 <code>global</code>，这是为了避免影响现存代码的兼容性。更多相关信息可以查看 <a href="https://github.com/tc39/proposal-global/blob/master/NAMING.md">language proposal's "naming" document</a> 。</p>
 
 <h2 id="示例">示例</h2>
 
 <p>在 <code>globalThis</code> 之前，获取某个全局对象的唯一方式就是 <code>Function('return this')()</code>，但是这在某些情况下会违反 <a href="/zh-CN/docs/Web/HTTP/CSP">CSP</a> 规则，所以，<a href="https://github.com/paulmillr/es6-shim">es6-shim</a> 使用了类似如下的方式：</p>
 
-<pre class="brush: js notranslate">var getGlobal = function () {
+<pre class="brush: js">var getGlobal = function () {
   if (typeof self !== 'undefined') { return self; }
   if (typeof window !== 'undefined') { return window; }
   if (typeof global !== 'undefined') { return global; }
@@ -62,7 +62,7 @@ if (typeof globals.setTimeout !== 'function') {
 
 <p>但是有了 <code>globalThis</code> 之后，只需要：</p>
 
-<pre class="brush: js notranslate">if (typeof globalThis.setTimeout !== 'function') {
+<pre class="brush: js">if (typeof globalThis.setTimeout !== 'function') {
   //  此环境中没有 setTimeout 方法！
 }</pre>
 

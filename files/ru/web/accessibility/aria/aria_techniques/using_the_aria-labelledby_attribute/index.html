@@ -5,15 +5,15 @@ translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby
 ---
 <h3 id="Описание">Описание</h3>
 
-<p><span class="seoSummary">Атрибут <a class="external" href="https://www.w3.org/TR/wai-aria/#aria-labelledby" rel="external" title="http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby"><code>aria-labelledby</code></a> содержит идентификаторы (атрибут id) меток для таких объектов как элементы ввода (input), виджеты, группы. Атрибут создаёт связь между объектами и их метками. Вспомогательные технологии, такие как средства чтения экрана, используют этот атрибут чтобы собирать все метки в каталог документа, из которого пользователь может перемещаться между ними. Без идентификатора (атрибута id) вспомогательные технологии не могут собрать данные объекты в каталог.</span></p>
+<p><span class="seoSummary">Атрибут <a class="external" href="https://www.w3.org/TR/wai-aria/#aria-labelledby" rel="external"><code>aria-labelledby</code></a> содержит идентификаторы (атрибут id) меток для таких объектов как элементы ввода (input), виджеты, группы. Атрибут создаёт связь между объектами и их метками. Вспомогательные технологии, такие как средства чтения экрана, используют этот атрибут чтобы собирать все метки в каталог документа, из которого пользователь может перемещаться между ними. Без идентификатора (атрибута id) вспомогательные технологии не могут собрать данные объекты в каталог.</span></p>
 
 <p><code>aria-labelledby</code> очень похож на <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a>: Метка (label) предоставляет основную информацию об объекте, в то время как описание (description) даёт более полную/детальную информацию которая может понадобится пользователю.</p>
 
-<p><span class="tlid-translation translation"><span title="">В дополнение к элементам формы вы можете использовать атрибут <code>aria-labelledby</code>, чтобы связать статический текст с виджетами, группами элементов, панелями, областями, которые имеют заголовок, определения и другие типы объектов</span></span>. Ниже, в разделе {{ anch("Примеры") }} приведенны примеры и информация как использовать атрибут в данном виде.</p>
+<p><span class="tlid-translation translation"><span title="">В дополнение к элементам формы вы можете использовать атрибут <code>aria-labelledby</code>, чтобы связать статический текст с виджетами, группами элементов, панелями, областями, которые имеют заголовок, определения и другие типы объектов</span></span>. Ниже, в разделе <a href="#примеры">Примеры</a> приведенны примеры и информация как использовать атрибут в данном виде.</p>
 
 <p>Чтобы повысить совместимость с <a href="https://ru.wikipedia.org/wiki/User_agent">клиентскими приложениями </a>которые не поддерживают ARIA атрибуты, вы можете использовать <code>aria-labelledby</code> вместе элементом {{ HTMLElement("label") }} (используя <code>for</code> атрибут)</p>
 
-<p>Этот атрибут может быть использован в любом типичном HTML элементе формы, он не ограничен элементами которые имеют атрибут ARIA <code>role</code></p>
+<p>Этот атрибут может быть использован в любом типичном HTML-элементе формы, он не ограничен элементами которые имеют атрибут ARIA <code>role</code></p>
 
 <h3 id="Значение">Значение</h3>
 
@@ -136,5 +136,5 @@ an inert preparation prescribed more for the mental relief of the patient than f
 <h3 id="Additional_resources">Additional resources</h3>
 
 <ul>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria/#aria-labelledby" title="http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby">WAI-ARIA specification for aria-labelledby</a></li>
+ <li><a class="external" href="https://www.w3.org/TR/wai-aria/#aria-labelledby">WAI-ARIA specification for aria-labelledby</a></li>
 </ul>

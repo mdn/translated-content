@@ -6,11 +6,11 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">本文介绍了在一些特定输入和浏览器版本下的HTTP  <code><a href="/en-US/docs/Web/HTTP/Headers/Accept">Accept</a></code> 头的默认值</span></p>
+<p>本文介绍了在一些特定输入和浏览器版本下的 HTTP <code><a href="/zh-CN/docs/Web/HTTP/Headers/Accept">Accept</a></code> 头的默认值</p>
 
 <h2 id="默认值">默认值</h2>
 
-<p>这些值将在上下文未设置其它信息时被使用。 注意：所有的浏览器都会添加 <code>*/*</code> MIME 类型以涵盖各种情况。这通常用于通过浏览器的地址栏或HTML {{HTMLElement("a")}} 标签发起的请求。</p>
+<p>这些值将在上下文未设置其它信息时被使用。 注意：所有的浏览器都会添加 <code>*/*</code> MIME 类型以涵盖各种情况。这通常用于通过浏览器的地址栏或 HTML {{HTMLElement("a")}} 标签发起的请求。</p>
 
 <table class="standard-table">
  <tbody>
@@ -23,14 +23,14 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
    <td>Firefox</td>
    <td><code>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</code><br>
      </td>
-   <td><code>这个值可以通过<a class="external" href="http://kb.mozillazine.org/Network.http.accept.default" title="http://kb.mozillazine.org/Network.http.accept.default">network.http.accept.default</a></code> 参数来修改。</td>
+   <td><code>这个值可以通过<a class="external" href="http://kb.mozillazine.org/Network.http.accept.default">network.http.accept.default</a></code> 参数来修改。</td>
   </tr>
   <tr>
    <td>Safari, Chrome</td>
    <td>
     <p><code>application/xml,application/xhtml+xml,text/html;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5</code></p>
    </td>
-   <td><a class="external" href="http://www.newmediacampaigns.com/page/browser-rest-http-accept-headers" title="http://www.newmediacampaigns.com/page/browser-rest-http-accept-headers"><span style="font-size: x-small;">source</span></a></td>
+   <td><a class="external" href="http://www.newmediacampaigns.com/page/browser-rest-http-accept-headers">source</a></td>
   </tr>
   <tr>
    <td>Safari 5</td>
@@ -42,11 +42,11 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
   <tr>
    <td>Internet Explorer 8</td>
    <td><code>image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, application/x-shockwave-flash, application/msword, */*</code></td>
-   <td> 请参见 <a class="external" href="http://blogs.msdn.com/b/ieinternals/archive/2009/07/01/ie-and-the-accept-header.aspx" title="http://blogs.msdn.com/b/ieinternals/archive/2009/07/01/ie-and-the-accept-header.aspx">IE and the Accept Header (IEInternals' MSDN blog)</a>.</td>
+   <td> 请参见 <a class="external" href="http://blogs.msdn.com/b/ieinternals/archive/2009/07/01/ie-and-the-accept-header.aspx">IE and the Accept Header (IEInternals' MSDN blog)</a>.</td>
   </tr>
   <tr>
    <td>Edge</td>
-   <td><font face="Consolas, Liberation Mono, Courier, monospace">text/html, application/xhtml+xml, image/jxr, */*</font></td>
+   <td>text/html, application/xhtml+xml, image/jxr, */*</td>
    <td> </td>
   </tr>
   <tr>
@@ -57,9 +57,9 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
  </tbody>
 </table>
 
-<h2 id="image请求">image请求</h2>
+<h2 id="image请求">image 请求</h2>
 
-<p>当请求一张图片时, 比如一个 HTML {{HTMLElement("img")}} 元素, 用户代理通常会设置一个特定的媒体类型列表。</p>
+<p>当请求一张图片时， 比如一个 HTML {{HTMLElement("img")}} 元素，用户代理通常会设置一个特定的媒体类型列表。</p>
 
 <table class="standard-table">
  <tbody>
@@ -82,24 +82,24 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
   <tr>
    <td>Chrome</td>
    <td><code>image/webp,image/*,*/*;q=0.8</code></td>
-   <td> 在支持webp格式之前，是使用的 <code>*/*</code></td>
+   <td> 在支持 webp 格式之前，是使用的 <code>*/*</code></td>
   </tr>
   <tr>
    <td>Internet Explorer 8 及更早版本</td>
    <td><code>*/*</code></td>
-   <td> 请参见 <a class="external" href="http://blogs.msdn.com/b/ieinternals/archive/2009/07/01/ie-and-the-accept-header.aspx" title="http://blogs.msdn.com/b/ieinternals/archive/2009/07/01/ie-and-the-accept-header.aspx">IE and the Accept Header (IEInternals' MSDN blog)</a></td>
+   <td> 请参见 <a class="external" href="http://blogs.msdn.com/b/ieinternals/archive/2009/07/01/ie-and-the-accept-header.aspx">IE and the Accept Header (IEInternals' MSDN blog)</a></td>
   </tr>
   <tr>
    <td>Internet Explorer 9</td>
    <td><code>image/png,image/svg+xml,image/*;q=0.8, */*;q=0.5</code></td>
-   <td>请参见 <a class="external" href="http://blogs.msdn.com/b/fiddler/archive/2011/02/10/fiddler-is-better-with-internet-explorer-9.aspx" title="http://blogs.msdn.com/b/fiddler/archive/2011/02/10/fiddler-is-better-with-internet-explorer-9.aspx">Fiddler is better with Internet Explorer 9 (IEInternals' MSDN blog)</a></td>
+   <td>请参见 <a class="external" href="http://blogs.msdn.com/b/fiddler/archive/2011/02/10/fiddler-is-better-with-internet-explorer-9.aspx">Fiddler is better with Internet Explorer 9 (IEInternals' MSDN blog)</a></td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="video请求">video请求</h2>
+<h2 id="video请求">video 请求</h2>
 
-<p>通过HTML {{HTMLElement("video")}} 元素请求一个video时, 大多数浏览器会使用特定值。</p>
+<p>通过 HTML {{HTMLElement("video")}} 元素请求一个 video 时， 大多数浏览器会使用特定值。</p>
 
 <table class="standard-table">
  <tbody>
@@ -116,7 +116,7 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
   <tr>
    <td>Firefox 3.6 及以上版本</td>
    <td><code>audio/webm, audio/ogg, audio/wav, audio/*;q=0.9, application/ogg;q=0.7, video/*;q=0.6; */*;q=0.5</code></td>
-   <td> 请参见<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=489071" title="https://bugzilla.mozilla.org/show_bug.cgi?id=489071">bug 489071</a></td>
+   <td> 请参见<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=489071">bug 489071</a></td>
   </tr>
   <tr>
    <td>Chrome</td>
@@ -131,9 +131,9 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
  </tbody>
 </table>
 
-<h2 id="audio请求">audio请求</h2>
+<h2 id="audio请求">audio 请求</h2>
 
-<p>通过HTML {{HTMLElement("audio")}} 元素请求audio资源时, 大多数浏览器会使用特定值。</p>
+<p>通过 HTML {{HTMLElement("audio")}} 元素请求 audio 资源时， 大多数浏览器会使用特定值。</p>
 
 <table class="standard-table">
  <tbody>
@@ -145,7 +145,7 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
   <tr>
    <td>Firefox 3.6 及以上版本</td>
    <td><code>audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5</code></td>
-   <td>See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=489071" title="https://bugzilla.mozilla.org/show_bug.cgi?id=489071">bug 489071</a></td>
+   <td>See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=489071">bug 489071</a></td>
   </tr>
   <tr>
    <td>Safari, Chrome</td>
@@ -165,9 +165,9 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
  </tbody>
 </table>
 
-<h2 id="scripts请求">scripts请求</h2>
+<h2 id="scripts请求">scripts 请求</h2>
 
-<p>当通过 {{HTMLElement("script")}} 元素请求script时, 一些浏览器使用特定值。</p>
+<p>当通过 {{HTMLElement("script")}} 元素请求 script 时， 一些浏览器使用特定值。</p>
 
 <table class="standard-table">
  <tbody>
@@ -179,7 +179,7 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
   <tr>
    <td>Firefox</td>
    <td><code>*/*</code></td>
-   <td> 请参见<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=170789" title="https://bugzilla.mozilla.org/show_bug.cgi?id=170789">bug 170789</a></td>
+   <td> 请参见<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=170789">bug 170789</a></td>
   </tr>
   <tr>
    <td>Safari, Chrome</td>
@@ -189,19 +189,19 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
   <tr>
    <td>Internet Explorer 8 及更早版本</td>
    <td><code>*/*</code></td>
-   <td>请参见 <a class="external" href="http://blogs.msdn.com/b/ieinternals/archive/2009/07/01/ie-and-the-accept-header.aspx" title="http://blogs.msdn.com/b/ieinternals/archive/2009/07/01/ie-and-the-accept-header.aspx">IE and the Accept Header (IEInternals' MSDN blog)</a></td>
+   <td>请参见 <a class="external" href="http://blogs.msdn.com/b/ieinternals/archive/2009/07/01/ie-and-the-accept-header.aspx">IE and the Accept Header (IEInternals' MSDN blog)</a></td>
   </tr>
   <tr>
    <td>Internet Explorer 9</td>
    <td><code>application/javascript, */*;q=0.8</code></td>
-   <td>请参见 <a class="external" href="http://blogs.msdn.com/b/fiddler/archive/2011/02/10/fiddler-is-better-with-internet-explorer-9.aspx" title="http://blogs.msdn.com/b/fiddler/archive/2011/02/10/fiddler-is-better-with-internet-explorer-9.aspx">Fiddler is better with Internet Explorer 9 (IEInternals' MSDN blog)</a></td>
+   <td>请参见 <a class="external" href="http://blogs.msdn.com/b/fiddler/archive/2011/02/10/fiddler-is-better-with-internet-explorer-9.aspx">Fiddler is better with Internet Explorer 9 (IEInternals' MSDN blog)</a></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="CSS_请求">CSS 请求</h2>
 
-<p>当通过 <code>&lt;link rel="stylesheet"&gt;</code> HTML 元素请求CSS样式表时, 大多数浏览器使用特定值。</p>
+<p>当通过 <code>&lt;link rel="stylesheet"&gt;</code> HTML 元素请求 CSS 样式表时， 大多数浏览器使用特定值。</p>
 
 <table class="standard-table">
  <tbody>
@@ -213,7 +213,7 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
   <tr>
    <td>Firefox 4</td>
    <td><code>text/css,*/*;q=0.1</code></td>
-   <td> 请参见<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=170789" title="https://bugzilla.mozilla.org/show_bug.cgi?id=170789">bug 170789</a></td>
+   <td> 请参见<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=170789">bug 170789</a></td>
   </tr>
   <tr>
    <td>Safari 5</td>
@@ -223,12 +223,12 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
   <tr>
    <td>Internet Explorer 8 及更早版本</td>
    <td><code>*/*</code></td>
-   <td>请参见 <a class="external" href="http://blogs.msdn.com/b/ieinternals/archive/2009/07/01/ie-and-the-accept-header.aspx" title="http://blogs.msdn.com/b/ieinternals/archive/2009/07/01/ie-and-the-accept-header.aspx">IE and the Accept Header (IEInternals' MSDN blog)</a></td>
+   <td>请参见 <a class="external" href="http://blogs.msdn.com/b/ieinternals/archive/2009/07/01/ie-and-the-accept-header.aspx">IE and the Accept Header (IEInternals' MSDN blog)</a></td>
   </tr>
   <tr>
    <td>Internet Explorer 9</td>
    <td><code>text/css</code></td>
-   <td>请参见 <a class="external" href="http://blogs.msdn.com/b/fiddler/archive/2011/02/10/fiddler-is-better-with-internet-explorer-9.aspx" title="http://blogs.msdn.com/b/fiddler/archive/2011/02/10/fiddler-is-better-with-internet-explorer-9.aspx">Fiddler is better with Internet Explorer 9 (IEInternals' MSDN blog)</a></td>
+   <td>请参见 <a class="external" href="http://blogs.msdn.com/b/fiddler/archive/2011/02/10/fiddler-is-better-with-internet-explorer-9.aspx">Fiddler is better with Internet Explorer 9 (IEInternals' MSDN blog)</a></td>
   </tr>
   <tr>
    <td>Chrome 12</td>

@@ -42,21 +42,21 @@ translation_of: Web/HTML/Element/meter
 
 <dl>
  <dt>{{htmlattrdef("value")}}</dt>
- <dd>当前的数值。如果设置了最小值和最大值（分别由min属性和max属性定义），它必须介于最小值和最大值之间。如果没有指定或者格式有误，值即为0.如果给定的值不在最小值和最大值之间，它的值就等于它最接近的一端的值。
- <div class="note"><strong>使用备注: </strong>除非值域在0到1（闭区间）, 否则最小值和最大值属性需要定义，以保证value属性在值域范围内。换言之，默认的min和max值分别为0和1。</div>
+ <dd>当前的数值。如果设置了最小值和最大值（分别由 min 属性和 max 属性定义），它必须介于最小值和最大值之间。如果没有指定或者格式有误，值即为 0.如果给定的值不在最小值和最大值之间，它的值就等于它最接近的一端的值。
+ <div class="note"><strong>使用备注：</strong>除非值域在 0 到 1（闭区间）, 否则最小值和最大值属性需要定义，以保证 value 属性在值域范围内。换言之，默认的 min 和 max 值分别为 0 和 1。</div>
  </dd>
  <dt>{{htmlattrdef("min")}}</dt>
- <dd>值域的最小边界值。如果设置了，它必须比最大值要小。如果没设置，默认为0。</dd>
+ <dd>值域的最小边界值。如果设置了，它必须比最大值要小。如果没设置，默认为 0。</dd>
  <dt>{{htmlattrdef("max")}}</dt>
- <dd>值域的上限边界值。如果设置了，它必须比最小值要大。如果没设置，默认为1。</dd>
+ <dd>值域的上限边界值。如果设置了，它必须比最小值要大。如果没设置，默认为 1。</dd>
  <dt>{{htmlattrdef("low")}}</dt>
- <dd>定义了低值区间的上限值（译者注：如果value介于min和low之间，该元素就会表现出低值的视觉效果，value落在[min,low]、[high,max]等不同的区间会使浏览器渲染该元素时出不同的视觉效果）。如果设置了，它必须比最小值属性大，并且不能超过high值和最大值。未设置或者比最小值还要小时，其值即为最小值。</dd>
+ <dd>定义了低值区间的上限值（译者注：如果 value 介于 min 和 low 之间，该元素就会表现出低值的视觉效果，value 落在 [min,low]、[high,max] 等不同的区间会使浏览器渲染该元素时出不同的视觉效果）。如果设置了，它必须比最小值属性大，并且不能超过 high 值和最大值。未设置或者比最小值还要小时，其值即为最小值。</dd>
  <dt>{{htmlattrdef("high")}}</dt>
- <dd>定义了高值区间的下限值。如果设置了，它必须小于最大值，同时必须大于low值和最小值。如果没有设置，或者比最大值还大，其值即为最大值。</dd>
+ <dd>定义了高值区间的下限值。如果设置了，它必须小于最大值，同时必须大于 low 值和最小值。如果没有设置，或者比最大值还大，其值即为最大值。</dd>
  <dt>{{htmlattrdef("optimum")}}</dt>
- <dd>这个属性用来指示最优/最佳取值。它必须在正确的值域内（由最小值属性和最大值属性定义）。当使用了low和high属性时，它指明哪一个取值范围是更好的。例如，假设它介于最小值和low之间，那么lower区间就被认为是更佳的取值范围。</dd>
+ <dd>这个属性用来指示最优/最佳取值。它必须在正确的值域内（由最小值属性和最大值属性定义）。当使用了 low 和 high 属性时，它指明哪一个取值范围是更好的。例如，假设它介于最小值和 low 之间，那么 lower 区间就被认为是更佳的取值范围。</dd>
  <dt>{{htmlattrdef("form")}}</dt>
- <dd>该属性将本元素与对应的form元素关联。例如，一个计量器可能用来显示某个数值输入框（input元素，number类型）的范围。只有当计量器元素被用作表单关联的元素时，该属性才应当被使用；即便如此，如果它作为表单的后代元素出现，它仍然有可能被省略。</dd>
+ <dd>该属性将本元素与对应的 form 元素关联。例如，一个计量器可能用来显示某个数值输入框（input 元素，number 类型）的范围。只有当计量器元素被用作表单关联的元素时，该属性才应当被使用；即便如此，如果它作为表单的后代元素出现，它仍然有可能被省略。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -73,13 +73,13 @@ translation_of: Web/HTML/Element/meter
 
 <p>{{EmbedLiveSample("Simple_example", 300, 60)}}</p>
 
-<p>在Google Chrome浏览器上, 计量器结果如下:</p>
+<p>在 Google Chrome 浏览器上，计量器结果如下：</p>
 
 <p><img alt="meter1.png" class="default internal" src="/@api/deki/files/4940/=meter1.png"></p>
 
 <h3 id="高低值区间示例">高低值区间示例</h3>
 
-<p>注意本例中min属性被省略，这是允许的，默认值为0。</p>
+<p>注意本例中 min 属性被省略，这是允许的，默认值为 0。</p>
 
 <h4 id="HTML_content_2">HTML content</h4>
 
@@ -91,7 +91,7 @@ translation_of: Web/HTML/Element/meter
 
 <p>{{EmbedLiveSample("High_and_Low_range_example", 300, 60)}}</p>
 
-<p>Google Chrome浏览器中，计量器显示效果如下:</p>
+<p>Google Chrome 浏览器中，计量器显示效果如下：</p>
 
 <p><img alt="meter2.png" class="default internal" src="/@api/deki/files/4941/=meter2.png"></p>
 
@@ -121,63 +121,7 @@ translation_of: Web/HTML/Element/meter
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Edge</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>6.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("16.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>20<sup>[1]</sup></td>
-   <td>11.0</td>
-   <td>5.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Edge Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("16.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>20<sup>[1]</sup></td>
-   <td>11.0</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] See the <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/meterelement">Microsoft Edge Platform Status page</a>.</p>
+{{Compat("html.elements.meter")}}
 
 <h2 id="参见">参见</h2>
 

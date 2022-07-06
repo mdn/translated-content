@@ -50,7 +50,7 @@ translation_of: Web/API/Document/scroll_event
 
 <p>Обратите внимание, однако, что входные события и кадры анимации запускаются примерно с одинаковой скоростью, и поэтому приведённая ниже оптимизация зачастую не требуется. В примере ниже оптимизируется событие <code>scroll</code> для <code>requestAnimationFrame</code>:</p>
 
-<pre class="brush: js notranslate">// Источник: http://www.html5rocks.com/en/tutorials/speed/animations/
+<pre class="brush: js">// Источник: http://www.html5rocks.com/en/tutorials/speed/animations/
 
 let last_known_scroll_position = 0;
 let ticking = false;
@@ -76,22 +76,11 @@ window.addEventListener('scroll', function(e) {
 
 <h2 id="Спецификация">Спецификация</h2>
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#event-type-scroll')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Document.scroll_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

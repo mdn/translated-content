@@ -2,17 +2,20 @@
 title: 'SyntaxError: missing : after property id'
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+- Error
+- Errors
+- JavaScript
+- SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<h2 id="メッセージ">メッセージ</h2>
+<p>JavaScript の例外 "missing : after property id" は、オブジェクトが<a href="/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer">オブジェクト初期化子</a>の構文を使用して生成されたときに発生します。コロン (<code>:</code>) はオブジェクトのプロパティのキーと値を区切ります。おそらく、このコロンがないか場所が間違っているかです。</p>
 
-<pre class="syntaxbox">SyntaxError: missing : after property id
+<h2 id="Message">エラーメッセージ</h2>
+
+<pre class="brush: js">SyntaxError: Expected ':' (Edge)
+SyntaxError: missing : after property id (Firefox)
 </pre>
 
 <h2 id="エラータイプ">エラータイプ</h2>
@@ -28,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 
 <h2 id="例">例</h2>
 
-<h3 id="コロン_vs._代入記号">コロン vs. 代入記号</h3>
+<h3 id="Colons_vs._equal_signs">コロンと代入記号</h3>
 
 <p>この方法で代入記号をオブジェクト初期化子構文として使用できないため、このコードは失敗します。</p>
 
@@ -46,32 +49,32 @@ var obj = { };
 obj['propertyKey'] = 'value';
 </pre>
 
-<h3 id="空のプロパティ">空のプロパティ</h3>
+<h3 id="Empty_properties">空のプロパティ</h3>
 
-<p>このような方法で空のプロパティを生成できません:</p>
+<p>次のような方法では、プロパティを生成することができません。</p>
 
 <pre class="brush: js example-bad">var obj = { propertyKey; };
 // SyntaxError: missing : after property id
 </pre>
 
-<p>値がないプロパティを定義する必要がある場合、値として {{jsxref("null")}} を使用します。</p>
+<p>値がないプロパティを定義する必要がある場合、値として {{jsxref("null")}} を使用することができます。</p>
 
 <pre class="brush: js example-good">var obj = { propertyKey: null };</pre>
 
-<h3 id="計算されたプロパティ">計算されたプロパティ</h3>
+<h3 id="Computed_properties">計算されたプロパティ</h3>
 
-<p>式からプロパティキーを生成する場合、角括弧を使用します。そうしなければ、プロパティ名は計算できません:</p>
+<p>式からプロパティキーを生成する場合、角括弧を使用してください。そうしなければ、プロパティ名を計算することができません。</p>
 
 <pre class="brush: js example-bad">var obj = { 'b'+'ar': 'foo' };
 // SyntaxError: missing : after property id
 </pre>
 
-<p>式を括弧 <code>[]</code> に入れます:</p>
+<p>式を括弧 <code>[]</code> に入れてください。</p>
 
 <pre class="brush: js example-good">var obj = { ['b'+'ar']: 'foo' };</pre>
 
 <h2 id="関連項目">関連項目</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">オブジェクト初期化子</a></li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer">オブジェクト初期化子</a></li>
 </ul>

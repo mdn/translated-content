@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/log2
 ---
 <div>{{JSRef("Global_Objects", "Math")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>Math.log2()</code></strong> возвращает двоичный (по основанию 2) логарифм числа, то есть</p>
 
@@ -21,26 +21,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/log2
 
 
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>Math.log2(<var>x</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>x</code></dt>
  <dd>Число.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Если значение <code>x</code> меньше 0, возвращаемое значение всегда будет равным {{jsxref("Global_Objects/NaN", "NaN")}}.</p>
 
 <p>Поскольку метод <code>log2()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.log2()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_Math.log2" name="Example:_Using_Math.log2">Пример: использование метода <code>Math.log2()</code></h3>
+<h3 id="Example_Using_Math.log2">Пример: использование метода <code>Math.log2()</code></h3>
 
 <pre class="brush: js">Math.log2(3);    // 1.584962500721156
 Math.log2(2);    // 1
@@ -50,7 +50,7 @@ Math.log2(-2);   // NaN
 Math.log2(1024); // 10
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Этот метод может эмулироваться следующим способом:</p>
 
@@ -59,30 +59,14 @@ Math.log2(1024); // 10
 };
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.log2', 'Math.log2')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+<p>{{Compat}}</p>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("javascript.builtins.Math.log2")}}</p>
-
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Math.exp()")}}</li>

@@ -12,12 +12,12 @@ translation_of: Web/API/Document/body
 
 <p>Возвращает узел {{HTMLElement("body")}} или {{HTMLElement("frameset")}} текущей страницы, или <strong><code>null</code></strong> если таких элементов не существует.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><em>var objRef</em> = document.body;
 document.body = <em>objRef;</em></pre>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush:js">// в HTML: &lt;body id="oldBodyElement"&gt;&lt;/body&gt;
 alert(document.body.id); // "oldBodyElement"
@@ -29,13 +29,13 @@ document.body = aNewBodyElement;
 alert(document.body.id); // "newBodyElement"
 </pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <p><strong><code>document.body</code></strong> это элемент, который включает в себя содержимое страницы. На страницах с <code>&lt;body&gt;</code> вернётся элемент <code>&lt;body&gt;</code>, а с frameset - элемент <code>&lt;frameset&gt;</code>.</p>
 
 <p><strong><code>body</code></strong> может быть заменено, но это удалит все его дочерние элементы.</p>
 
-<h2 id="Specification" name="Specification">Спецификации</h2>
+<h2 id="Specification">Спецификации</h2>
 
 <table class="spectable standard-table">
  <tbody>
@@ -74,11 +74,7 @@ alert(document.body.id); // "newBodyElement"
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>and send us a pull request.</p>
-</div>
-
-<p>{{Compat("api.Document.body")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

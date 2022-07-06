@@ -80,7 +80,7 @@ btn.onclick = function() {
   document.body.style.backgroundColor = rndCol;
 }</pre>
 
-<p>このコードでは、<code>btn</code> という変数に {{domxref("Document.querySelector()")}} 関数を使って取得したボタンへの参照を格納しています。それとは別にランダムな数値を返す関数も定義しています。コードの 3 つ目の部分はイベントハンドラーです。<code>btn</code> 変数は<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/button">&lt;button&gt;</a></code>要素を指していますが、この種のオブジェクトにはたくさん発火し得るイベントがあるので、色々なイベントハンドラーが使えます。<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/GlobalEventHandlers/onclick">onclick</a></code> イベントハンドラプロパティに、ランダムな RGB色を生成し <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/body">&lt;body&gt;</a></code> の <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/CSS/background-color">background-color</a></code> を設定するコードを抱えた匿名関数を代入する事で、<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/Element/click_event">click</a></code> イベントが発火されるのを待ちかまえます。</p>
+<p>このコードでは、<code>btn</code> という変数に {{domxref("Document.querySelector()")}} 関数を使って取得したボタンへの参照を格納しています。それとは別にランダムな数値を返す関数も定義しています。コードの 3 つ目の部分はイベントハンドラーです。<code>btn</code> 変数は<code><a href="/ja/docs/Web/HTML/Element/button">&lt;button&gt;</a></code>要素を指していますが、この種のオブジェクトにはたくさん発火し得るイベントがあるので、色々なイベントハンドラーが使えます。<code><a href="/ja/docs/Web/API/GlobalEventHandlers/onclick">onclick</a></code> イベントハンドラプロパティに、ランダムな RGB色を生成し <code><a href="/ja/docs/Web/HTML/Element/body">&lt;body&gt;</a></code> の <code><a href="/ja/docs/Web/CSS/background-color">background-color</a></code> を設定するコードを抱えた匿名関数を代入する事で、<code><a href="/ja/docs/Web/API/Element/click_event">click</a></code> イベントが発火されるのを待ちかまえます。</p>
 
 <p>このコードは <code>&lt;button&gt;</code> 要素でクリックイベントが発火すれば常に実行されます、要はユーザーがクリックしたらいつでも。</p>
 
@@ -137,7 +137,7 @@ btn.onclick = bgChange;</pre>
  <li><code><a href="/ja/docs/Web/API/GlobalEventHandlers/onmouseover">btn.onmouseover</a></code> と <code><a href="/ja/docs/Web/API/GlobalEventHandlers/onmouseout">btn.onmouseout</a></code> — マウスポインタがボタンの上に来たときとボタンの上から外れた時に色が変わります。</li>
 </ul>
 
-<p>いくつかのイベントはとても汎用的なのでほとんどどこでも使えます(例えば onlick ハンドラはほぼ全ての要素に登録できます)が、いくつかはもっと限定的で、特定の状況でしか使えません(例えば <a href="https://developer.mozilla.org/ja/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay">onplay </a> は{{htmlelement("video")}}のような特定の要素でのみ意味を持ちます)。</p>
+<p>いくつかのイベントはとても汎用的なのでほとんどどこでも使えます(例えば onlick ハンドラはほぼ全ての要素に登録できます)が、いくつかはもっと限定的で、特定の状況でしか使えません(例えば <a href="/ja/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay">onplay </a> は{{htmlelement("video")}}のような特定の要素でのみ意味を持ちます)。</p>
 
 <h3 id="インラインイベントハンドラー_—_使っちゃだめ">インラインイベントハンドラー — 使っちゃだめ</h3>
 
@@ -171,7 +171,7 @@ for (let i = 0; i &lt; buttons.length; i++) {
   buttons[i].onclick = bgChange;
 }</pre>
 
-<p class="brush: js">ここにある他のオプションは <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/NodeList">NodeList</a></code> オブジェクトの組み込みメソッドの <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/NodeList/forEach">forEach()</a></code> で使えることに注意してください:</p>
+<p class="brush: js">ここにある他のオプションは <code><a href="/ja/docs/Web/API/NodeList">NodeList</a></code> オブジェクトの組み込みメソッドの <code><a href="/ja/docs/Web/API/NodeList/forEach">forEach()</a></code> で使えることに注意してください:</p>
 
 <pre class="brush: js notranslate">buttons.forEach(function(button) {
   button.onclick = bgChange;
@@ -564,7 +564,7 @@ video.onclick = function() {
 
 <h2 id="スキルをテストしよう!">スキルをテストしよう!</h2>
 
-<p>この記事の最後に来ましたが、最も大事な情報を覚えていますか? 次に移動する前に、さらなるテストでこの情報を保持しているか検証できます — <a href="https://wiki.developer.mozilla.org/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events">Test your skills: Events</a> を見てください。</p>
+<p>この記事の最後に来ましたが、最も大事な情報を覚えていますか? 次に移動する前に、さらなるテストでこの情報を保持しているか検証できます — <a href="/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events">Test your skills: Events</a> を見てください。</p>
 
 <h2 id="Conclusion" name="Conclusion">結論</h2>
 

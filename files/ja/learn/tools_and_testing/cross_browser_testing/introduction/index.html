@@ -50,7 +50,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 <p>その一方で、サイトが視力のあるユーザーにとって動作していても、視覚障がいのあるユーザーにとって、スクリーンリーダーアプリケーションがそこにある情報を読み取れないため完全にアクセスできない場合は、OKではありません。</p>
 
-<p>2つ目に、「受け入れられる数のウェブブラウザ間で」と言った時、世界中のブラウザの 100% の意味ではありません — これは不可能です。ユーザーが使うブラウザや端末の情報を呼び出すことができます (このシリーズの2つ目の記事で見ていきましょう — <a href="https://developer.mozilla.org/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all">Gotta test 'em all?</a>を見てください)が、すべてを保証することはできません。ウェブ開発者としては、ある範囲のブラウザと端末にてコードが完全に動作することをサイトオーナーと同意しておく必要があります。しかしそれを超えて、その他のブラウザでコンテンツを使う機会をできるだけ与えられるよう防衛的なコードを書いておく必要があります。</p>
+<p>2つ目に、「受け入れられる数のウェブブラウザ間で」と言った時、世界中のブラウザの 100% の意味ではありません — これは不可能です。ユーザーが使うブラウザや端末の情報を呼び出すことができます (このシリーズの2つ目の記事で見ていきましょう — <a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all">Gotta test 'em all?</a>を見てください)が、すべてを保証することはできません。ウェブ開発者としては、ある範囲のブラウザと端末にてコードが完全に動作することをサイトオーナーと同意しておく必要があります。しかしそれを超えて、その他のブラウザでコンテンツを使う機会をできるだけ与えられるよう防衛的なコードを書いておく必要があります。</p>
 
 <div class="note">
 <p><strong>注</strong>: このモジュールの後の方でも、防衛的なコードをカバーします。</p>
@@ -171,7 +171,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 <p>The first thing to do is to narrow down where the bug occurs as much as possible. Get as much information as you can from the person reporting the bug — what platform(s), device(s), browser version(s), etc. Try it on similar configurations (e.g. the same browser version on different desktop platforms, or a few different versions of the same browser on the same platform) to see how widely the bug persists.</p>
 
-<p>It might not be your fault — if a bug exists in a browser, then hopefully the vendor will rapidly fix it. It might have already been fixed — for example if a bug is present in Firefox release 49, but it is no longer there in Firefox Nightly (version 52), then they have fixed it. If it is not fixed, then you may want to file a bug (see {{anch("Reporting bugs")}}, below).</p>
+<p>It might not be your fault — if a bug exists in a browser, then hopefully the vendor will rapidly fix it. It might have already been fixed — for example if a bug is present in Firefox release 49, but it is no longer there in Firefox Nightly (version 52), then they have fixed it. If it is not fixed, then you may want to file a bug (see <a href="#reporting_bugs">Reporting bugs</a>, below).</p>
 
 <p>If it is your fault, you need to fix it! Finding out the cause of the bug involves the same strategy as any web development bug (again, see <a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a>, <a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a>, and <a href="/ja/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a>). Once you've discovered what is causing your bug, you need to decide how to work around it in the particular browser it is causing problems in — you can't just change the problem code outright, as this may break the code in other browsers. The general approach is usually to fork the code in some way, for example use JavaScript feature detection code to detect situations in which a problem feature doesn't work, and run some different code in those cases that does work.</p>
 

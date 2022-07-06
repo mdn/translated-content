@@ -3,7 +3,7 @@ title: Контекст наложения (stacking context)
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 ---
-<p>Контекст наложения (stacking context) это концепция трёхмерного расположения HTML элементов вдоль оси Z по отношению к пользователю, находящемуся перед экраном.  HTML элементы занимают это место по порядку, основанному на атрибутах элемента.</p>
+<p>Контекст наложения (stacking context) это концепция трёхмерного расположения HTML-элементов вдоль оси Z по отношению к пользователю, находящемуся перед экраном.  HTML-элементы занимают это место по порядку, основанному на атрибутах элемента.</p>
 
 <p>« <a href="/en-US/docs/CSS" title="CSS">CSS</a> « <a href="/en-US/docs/CSS/Understanding_z-index" title="Understanding CSS z-index">Understanding CSS z-index</a></p>
 
@@ -19,7 +19,7 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_conte
  <li>является корневым элементом (HTML),</li>
  <li>позиционирован абсолютно (position:absolute) или относительно (position:relative) с z-index значением отличным от "auto",</li>
  <li>flex элемент с z-index отличным от  "auto", чей родительский элемент имеет свойство display: flex|inline-flex,</li>
- <li>элементы с  {{cssxref("opacity")}} меньше чем 1. (См. <a href="http://www.w3.org/TR/css3-color/#transparency" title="http://www.w3.org/TR/css3-color/#transparency">the specification for opacity</a>),</li>
+ <li>элементы с  {{cssxref("opacity")}} меньше чем 1. (См. <a href="http://www.w3.org/TR/css3-color/#transparency">the specification for opacity</a>),</li>
  <li>элементы с  {{cssxref("transform")}} отличным от "none",</li>
  <li>элементы с {{cssxref("mix-blend-mode")}} значением отличным от "normal",</li>
  <li>элементы с {{cssxref("filter")}} значением отличным от "none",</li>
@@ -34,12 +34,12 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_conte
 <p>Суммируем:</p>
 
 <ul>
- <li>Позиционирование и присваивание HTML элементам свойства z-index создаёт контекст наложения, (так же как и присваивание элементу opacity меньше 1).</li>
+ <li>Позиционирование и присваивание HTML-элементам свойства z-index создаёт контекст наложения, (так же как и присваивание элементу opacity меньше 1).</li>
  <li>Контексты наложения могут быть частью других контекстов наложения и вместе создавать иерархию контекстов наложения. </li>
  <li>Каждый контекст наложения абсолютно независим от своего соседа: только подчинённые элементы учитываются при обработке контекста наложения.</li>
 </ul>
 
-<div class="note"><strong>Note:</strong> Иерархия контекстов наложения является подмножеством иерархии HTML элементов, потому что только определённые элементы создают контексты наложения. Можно сказать, что элементы, которые не создают собственного контекста наложения, используют контекст наложения родителя.</div>
+<div class="note"><strong>Note:</strong> Иерархия контекстов наложения является подмножеством иерархии HTML-элементов, потому что только определённые элементы создают контексты наложения. Можно сказать, что элементы, которые не создают собственного контекста наложения, используют контекст наложения родителя.</div>
 
 <h2 id="Пример"><strong>Пример</strong></h2>
 
@@ -215,14 +215,14 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_conte
 &lt;/html&gt;
 </pre>
 
-<h3 id="Division_Element_.231" name="Division_Element_.231">Division Element #1</h3>
+<h3 id="Division_Element_.231">Division Element #1</h3>
 
 <pre class="brush:css">position: relative;
 z-index: 5;
 </pre>
 
 <div id="div2">
-<h3 id="Division_Element_.232" name="Division_Element_.232">Division Element #2</h3>
+<h3 id="Division_Element_.232">Division Element #2</h3>
 
 <pre class="brush:css">position: relative;
 z-index: 2;
@@ -230,7 +230,7 @@ z-index: 2;
 </div>
 
 <div id="div3">
-<h3 id="Division_Element_.233" name="Division_Element_.233">Division Element #3</h3>
+<h3 id="Division_Element_.233">Division Element #3</h3>
 
 <pre class="brush:css">position: absolute;
 z-index: 4;
@@ -238,7 +238,7 @@ z-index: 4;
 </div>
 
 <div id="div4">
-<h3 id="Division_Element_.234" name="Division_Element_.234">Division Element #4</h3>
+<h3 id="Division_Element_.234">Division Element #4</h3>
 
 <pre class="brush:css">position: relative;
 z-index: 6;
@@ -246,7 +246,7 @@ z-index: 6;
 </div>
 
 <div id="div5">
-<h3 id="Division_Element_.235" name="Division_Element_.235">Division Element #5</h3>
+<h3 id="Division_Element_.235">Division Element #5</h3>
 
 <pre class="brush:css">position: relative;
 z-index: 1;
@@ -254,7 +254,7 @@ z-index: 1;
 </div>
 
 <div id="div6">
-<h3 id="Division_Element_.236" name="Division_Element_.236">Division Element #6</h3>
+<h3 id="Division_Element_.236">Division Element #6</h3>
 
 <pre class="brush:css">position: absolute;
 z-index: 3;
@@ -273,7 +273,7 @@ z-index: 3;
 </ul>
 
 <div class="originaldocinfo">
-<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+<h2 id="Original_Document_Information">Original Document Information</h2>
 
 <ul>
  <li>Author(s): Paolo Lombardi</li>

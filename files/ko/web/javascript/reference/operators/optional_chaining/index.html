@@ -5,19 +5,17 @@ translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
 <div>{{JSSidebar("Operators")}}</div>
 
-<p>{{SeeCompatTable}}</p>
+<p><strong>optional chaining</strong> 연산자 (<strong><code>?.</code></strong>) 는 체인의 각 참조가 유효한지 명시적으로 검증하지 않고, 연결된 객체 체인 내에 깊숙이 위치한 속성 값을 읽을 수 있다.</p>
+  
+<p><code>?.</code> 연산자는 <code>.</code> 체이닝 연산자와 유사하게 작동하지만, 만약 참조가 {{glossary("nullish")}} ({{JSxRef("null")}} 또는 {{JSxRef("undefined")}})이라면, 에러가 발생하는 것 대신에 표현식의 리턴 값은 <code>undefined</code>로 단락된다. 함수 호출에서 사용될 때, 만약 주어진 함수가 존재하지 않는다면, <code>undefined</code>를 리턴한다.</p>
 
-<p><strong>optional chaining</strong> 연산자 <strong><code>?.</code></strong> 는 체인의 각 참조가 유효한지 명시적으로 검증하지 않고, 연결된 객체 체인 내에 깊숙이 위치한 속성 값을 읽을 수 있다. <span class="seoSummary"><code>?.</code> 연산자는 <code>.</code> 체이닝 연산자와 유사하게 작동하지만, 만약 참조가 {{glossary("nullish")}} ({{JSxRef("null")}} 또는 {{JSxRef("undefined")}})이라면, 에러가 발생하는 것 대신에 표현식의 리턴 값은 <code>undefined</code>로 단락된다.</span> 함수 호출에서 사용될 때, 만약 주어진 함수가 존재하지 않는다면, <code>undefined</code>를 리턴한다.</p>
+<p>따라서 참조가 누락될 가능성이 있는 경우 연결된 속성으로 접근할 때 더 짧고 간단한 표현식이 생성된다. 어떤 속성이 필요한지에 대한 보증이 확실하지 않는 경우 객체의 내용을 탐색하는 동안 도움이 될 수 있다.</p>
 
-<p>이것은 참조가 누락될 가능성이 있는 경우 연결된 속성으로 접근할 때 더 짧고 간단한 표현식이 생성된다. 어떤 속성이 필요한지에 대한 보증이 확실하지 않는 경우 객체의 내용을 탐색하는 동안 도움이 될 수 있다.</p>
+<p>optional chaining은 선언되지 않은 루트 객체에 사용할 수 없지만, 정의되지 않은 루트 객체와는 함께 사용할 수 있다.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html")}}</div>
 
-<div></div>
-
-<p class="hidden">이 대화식 예제의 소스는 GitHub repository에 저장된다. 만약 너가 대화식 예제 프로젝트에 기여하려면, <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>를 복제(clone)하고 풀 리퀘스트를 보내라.</p>
-
-<h2 id="문법">문법</h2>
+<h2>문법</h2>
 
 <pre class="syntaxbox"><var>obj</var>?.<var>prop</var>
 <var>obj</var>?.[<var>expr</var>]
@@ -25,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 <var>func</var>?.(<var>args</var>)
 </pre>
 
-<h2 id="설명">설명</h2>
+<h2>설명</h2>
 
 <p>optional chaining 연산자는 참조나 기능이 <code>undefined</code> 또는 <code>null</code>일 수 있을 때 연결된 객체의 값에 접근하는 단순화할 수 있는 방법을 제공한다.</p>
 
@@ -41,11 +39,12 @@ translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 
 <p><code>.</code> 대신에 <code>?.</code> 연산자를 사용함으로써, 자바스크립트는 <code>obj.first.second</code>에 접근하기 전에 <code>obj.first</code>가 <code>null</code> 또는 <code>undefined</code>가 아니라는 것을 암묵적으로 확인하는 것을 알고 있다. 만약 <code>obj.first</code>가 <code>null</code> 또는 <code>undefined</code>이라면, 그 표현식은 자동으로 단락되어 <code>undefined</code>가 반환된다.</p>
 
-<p>이는 다음과 같다:</p>
+<p>이는 임시 변수가 실제로 생성되지 않는다는 점을 제외하고 다음과 동일하다.</p>
 
-<pre class="brush: js">let nestedProp = ((obj.first === null || obj.first === undefined) ? undefined : obj.first.second);</pre>
+<pre class="brush: js">let temp = obj.first;
+let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);</pre>
 
-<h3 id="함수의_호출과_Optional_chaining">함수의 호출과 Optional chaining</h3>
+<h3>함수의 호출과 Optional chaining</h3>
 
 <p>존재하지 않을 수 있는 매서드를 호출할 때, optional chaining을 사용할 수 있다. 예를 들어, 구현 기간이나 사용자 장치에서 사용할 수 없는 기능 때문에 메서드를 사용할 수 없는 API를 사용할 경우,  유용할 수 있다.</p>
 
@@ -57,9 +56,13 @@ translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 <p><strong>메모:</strong> 만약 속성에 해당 이름이 있지만 함수가 아니라면, <code>?.</code>의 사용은 여전히 예외를 발생시킨다. {{JSxRef("TypeError")}} exception (<code>x.y</code><code> is not a function</code>).</p>
 </div>
 
+<div class="blockIndicator note">
+<p><strong>메모:</strong> 만약 <code>someInterface</code> 자체가 <code>null</code>이나 <code>undefined</code>이면, <code>TypeError</code> 예외가 여전히 발생 할 것이다. <code>someInterface</code> 자체가 <code>null</code>이나 <code>undefined</code>으로 예상된다면, <code>?.</code>을 사용해야한다: <code>someInterface?.customMethod?.()</code></p>
+</div>
+
 <h4 id="optional_callbacks과_event_handlers_다루기">optional callbacks과 event handlers 다루기</h4>
 
-<p>만약 객체에서 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring">destructuring assignment</a>로 callbacks 또는 fetch 메서드를 사용한다면, 그 존재 여부를 테스트하지 않으면 함수로 호출할 수 없는 존재 하지 않는 값을 가질 수 있다. <code>?.</code>을 사용하면, 다음 추가 테스트를 피할 수 있다:</p>
+<p>만약 객체에서 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring">destructuring assignment</a>로 callbacks 또는 fetch 메서드를 사용한다면, 그 존재 여부를 테스트하지 않으면 함수로 호출할 수 없는 존재 하지 않는 값을 가질 수 있다. <code>?.</code>을 사용하면, 다음 추가 테스트를 피할 수 있다:</p>
 
 <pre class="brush: js">// Written as of ES2019
 function doSomething(onContent, onError) {
@@ -85,20 +88,27 @@ function doSomething(onContent, onError) {
 }
 </pre>
 
-<h3 id="표현식에서_Optional_chaining">표현식에서 Optional chaining</h3>
+<h3>표현식에서 Optional chaining</h3>
 
-<p>optional chaining 연산자를 속성에 표현식으로 접근할 때 대괄호 표기법(<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation">the bracket notation of the property accessor</a>)을 사용할 수 있다:</p>
+<p>optional chaining 연산자를 속성에 표현식으로 접근할 때 대괄호 표기법(<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation">the bracket notation of the property accessor</a>)을 사용할 수 있다:</p>
 
 <pre class="brush: js">let nestedProp = obj?.['prop' + 'Name'];
 </pre>
 
-<h3 id="Optional_chaining으로_배열_항목에_접근하기">Optional chaining으로 배열 항목에 접근하기</h3>
+<h3>Optional chaining은 할당자 왼쪽에서 유효하지 않습니다.</h3>
+
+<pre class="brush: js">
+let object = {};
+object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment
+</pre>
+
+<h3>Optional chaining으로 배열 항목에 접근하기</h3>
 
 <pre class="brush: js">let arrayItem = arr?.[42];</pre>
 
-<h2 id="예제">예제</h2>
+<h2>예제</h2>
 
-<h3 id="기본_예제">기본 예제</h3>
+<h3>기본 예제</h3>
 
 <p>이 예제는 해당 멤버가 없을 때, map에서 멤버 bar의 <code>name</code>의 속성 값을 찾는다. 그러므로 결과는 <code>undefined</code>이다.</p>
 
@@ -107,7 +117,7 @@ myMap.set("foo", {name: "baz", desc: "inga"});
 
 let nameBar = myMap.get("bar")?.name;</pre>
 
-<h3 id="단락_평가">단락 평가</h3>
+<h3>단락 평가</h3>
 
 <p>표현식에서 optional chaining을 사용할 때, 만약 왼쪽에 있는 피연산자가 <code>null</code> or <code>undefined</code>인  경우, 그 표현식은 평가되지 않는다. 예들 들어:</p>
 
@@ -118,7 +128,7 @@ let prop = potentiallyNullObj?.[x++];
 console.log(x); // 0  x는 증가하지 않음
 </pre>
 
-<h3 id="optional_chaining_연산자_쌓기">optional chaining 연산자 쌓기</h3>
+<h3>optional chaining 연산자 쌓기</h3>
 
 <p>중첩된 구조에서는 optional chaining을 여러 번 사용할 수 있다:</p>
 
@@ -135,7 +145,7 @@ let customerCity = customer.details?.address?.city;
 let duration = vacations.trip?.getTime?.();
 </pre>
 
-<h3 id="널_병합_연산자와_같이_사용하기">널 병합 연산자와 같이 사용하기</h3>
+<h3>널 병합 연산자와 같이 사용하기</h3>
 
 <p>널 병합 연산자는 optional chaining를 사용한 후에 아무 값도 찾을 수 없을 때 기본 값을 주기 위해 사용될 수 있다:</p>
 
@@ -146,7 +156,7 @@ let duration = vacations.trip?.getTime?.();
 const customerCity = customer?.city ?? "Unknown city";
 console.log(customerCity); // Unknown city</pre>
 
-<h2 id="명세">명세</h2>
+<h2>명세</h2>
 
 <table class="standard-table">
  <thead>
@@ -165,11 +175,11 @@ console.log(customerCity); // Unknown city</pre>
  </tbody>
 </table>
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+<h2>브라우저 호환성</h2>
 
 <p>{{Compat("javascript.operators.optional_chaining")}}</p>
 
-<h2 id="참고">참고</h2>
+<h2>참고</h2>
 
 <ul>
  <li>The {{JSxRef("Operators/Nullish_Coalescing_Operator", "Nullish Coalescing Operator", '', 1)}}</li>

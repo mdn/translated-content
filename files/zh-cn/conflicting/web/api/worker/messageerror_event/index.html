@@ -1,0 +1,44 @@
+---
+title: Worker.onmessageerror
+slug: conflicting/Web/API/Worker/messageerror_event
+translation_of: Web/API/Worker/onmessageerror
+original_slug: Web/API/Worker/onmessageerror
+---
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p>{{domxref("Worker")}} 的 <code><strong>onmessageerror</strong></code> 事件处理器接口是一个{{domxref("EventListener")}}, 在 {{domxref("MessageEvent")}} 类型的事件 <code>messageerror</code> 触发时调用 — 也就是说, 它收到的消息是不能进行序列化的 {{glossary("Deserialization", "deserialized")}}.</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">Worker.onmessageerror = function() { ... };</pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-worker-onmessageerror', 'onmessageerror')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+
+
+<p>{{Compat("api.Worker.onmessageerror")}}</p>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
+</ul>

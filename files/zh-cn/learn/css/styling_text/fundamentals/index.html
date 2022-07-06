@@ -14,7 +14,7 @@ original_slug: Learn/CSS/为文本添加样式/Fundamentals
 
 <div>{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}</div>
 
-<p class="summary"><span class="seoSummary">在这篇文章中，我们将带你开始掌握 {{glossary("CSS")}} 的文字样式的旅程。</span>这里我们将详细介绍文本/字体样式的所有基本原理，包括设置文字的粗细，字体和样式，文字的属性简写，文字的对齐，和其他效果，以及行和字母间距。</p>
+<p>在这篇文章中，我们将带你开始掌握 {{glossary("CSS")}} 的文字样式的旅程。这里我们将详细介绍文本/字体样式的所有基本原理，包括设置文字的粗细，字体和样式，文字的属性简写，文字的对齐，和其他效果，以及行和字母间距。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -23,18 +23,18 @@ original_slug: Learn/CSS/为文本添加样式/Fundamentals
    <td>基本的电脑操作，HTML 基础 (学习 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>)，CSS 基础 (学习 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>).</td>
   </tr>
   <tr>
-   <th scope="row">目的:</th>
+   <th scope="row">目的：</th>
    <td>了解在网页上设计文本所需的基本属性和技术。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="CSS中的文字样式涉及什么？">CSS中的文字样式涉及什么？</h2>
+<h2 id="CSS中的文字样式涉及什么？">CSS 中的文字样式涉及什么？</h2>
 
 <p>正如你已经在你使用 HTML 和 CSS 完成工作时所经历的一样，元素中的文本是布置在元素的内容框中。以内容区域的左上角作为起点 (或者是右上角，是在 RTL 语言的情况下)，一直延续到行的结束部分。一旦达到行的尽头，它就会进到下一行，然后继续，再接着下一行，直到所有内容都放入了盒子中。文本内容表现地像一些内联元素，被布置到相邻的行上，除非到达了行的尽头，否则不会换行，或者你想强制地，手动地造成换行的话，你可以使用 {{htmlelement("br")}} 元素。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 如果上面的段落让你感到困惑，没关系，在继续之前，可以重新看看我们的 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model">Box model</a> 文件，复习框模型的理论。</p>
+<p><strong>注意</strong>: 如果上面的段落让你感到困惑，没关系，在继续之前，可以重新看看我们的 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model">Box model</a> 文件，复习盒模型的理论。</p>
 </div>
 
 <p>用于样式文本的 CSS 属性通常可以分为两类，我们将在本文中分别观察。</p>
@@ -65,11 +65,11 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>你可以在这找到完成版本 <a href="http://mdn.github.io/learning-area/css/styling-text/fundamentals/">finished example on Github</a> (也可以看源码 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html">the source code</a>.)</p>
 
-<h3 id="颜色">颜色</h3>
+<h3 id="Color">颜色</h3>
 
 <p>{{cssxref("color")}} 属性设置选中元素的前景内容的颜色 (通常指文本，不过也包含一些其他东西，或者是使用 {{cssxref("text-decoration")}} 属性放置在文本下方或上方的线 (underline overline)。</p>
 
-<p><code>color</code> 也可以接受任何合法的 <a href="/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors">CSS 颜色单位</a>, 比如:</p>
+<p><code>color</code> 也可以接受任何合法的 <a href="/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors">CSS 颜色单位</a>, 比如：</p>
 
 <pre class="brush: css">p {
   color: red;
@@ -90,11 +90,11 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;</pre>
 </div>
 
-<p>{{ EmbedLiveSample('颜色', '100%', 220) }}</p>
+<p>{{ EmbedLiveSample('Color', '100%', 230) }}</p>
 
 <h3 id="字体种类">字体种类</h3>
 
-<p>要在你的文本上设置一个不同的字体，你可以使用 {{cssxref("font-family")}}  属性，这个允许你为浏览器指定一个字体 (或者一个字体的列表)，然后浏览器可以将这种字体应用到选中的元素上。浏览器只会把在当前机器上可用的字体应用到当前正在访问的网站上；如果字体不可用，那么就会用浏览器默认的字体代替 {{anch("Default fonts", "default font")}}. 下面是一个简单的例子:</p>
+<p>要在你的文本上设置一个不同的字体，你可以使用 {{cssxref("font-family")}}  属性，这个允许你为浏览器指定一个字体 (或者一个字体的列表)，然后浏览器可以将这种字体应用到选中的元素上。浏览器只会把在当前机器上可用的字体应用到当前正在访问的网站上；如果字体不可用，那么就会用浏览器默认的字体代替 <a href="#默认字体">default font</a>. 下面是一个简单的例子：</p>
 
 <pre class="brush: css">p {
   font-family: arial;
@@ -106,11 +106,11 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>说到字体可用性，只有某几个字体通常可以应用到所有系统，因此可以毫无顾忌地使用。这些都是所谓的 <strong>网页安全字体</strong>。</p>
 
-<p>大多数时候，作为网页开发者，我们希望对用于显示我们的文本内容的字体有更具体的控制。问题在于，需要一个方法来知道当前正在浏览我们的网站网页的电脑，它有哪些可用字体。我们并不是总能在每种情况下都知道这一点，但是网络安全字体在几乎所有最常用的操作系统（Windows，Mac，最常见的Linux发行版，Android和iOS版本）中都可用。</p>
+<p>大多数时候，作为网页开发者，我们希望对用于显示我们的文本内容的字体有更具体的控制。问题在于，需要一个方法来知道当前正在浏览我们的网站网页的电脑，它有哪些可用字体。我们并不是总能在每种情况下都知道这一点，但是网络安全字体在几乎所有最常用的操作系统（Windows，Mac，最常见的 Linux 发行版，Android 和 iOS 版本）中都可用。</p>
 
-<p>实际的Web安全字体列表将随着操作系统的发展而改变，但是可以认为下面的字体是网页安全的，至少对于现在来说 (它们中的许多都非常流行，这要感谢微软在90年代末和21世纪初期的倡议<em><a href="https://en.wikipedia.org/wiki/Core_fonts_for_the_Web">Core fonts for the Web</a></em> )：</p>
+<p>实际的 Web 安全字体列表将随着操作系统的发展而改变，但是可以认为下面的字体是网页安全的，至少对于现在来说 (它们中的许多都非常流行，这要感谢微软在 90 年代末和 21 世纪初期的倡议<em><a href="https://en.wikipedia.org/wiki/Core_fonts_for_the_Web">Core fonts for the Web</a></em> )：</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">字体名称</th>
@@ -122,12 +122,12 @@ occasion such as this that he did.&lt;/p&gt;</pre>
   <tr>
    <td>Arial</td>
    <td>sans-serif</td>
-   <td>通常认为最佳做法还是添加 Helvetica 作为 Arial 的首选替代品，尽管它们的字体面几乎相同，但 Helvetica 被认为具有更好的形状，即使Arial更广泛地可用。</td>
+   <td>通常认为最佳做法还是添加 Helvetica 作为 Arial 的首选替代品，尽管它们的字体面几乎相同，但 Helvetica 被认为具有更好的形状，即使 Arial 更广泛地可用。</td>
   </tr>
   <tr>
    <td>Courier New</td>
    <td>monospace</td>
-   <td>某些操作系统有一个 Courier New 字体的替代（可能较旧的）版本叫Courier。使用Courier New作为Courier的首选替代方案，被认为是最佳做法。</td>
+   <td>某些操作系统有一个 Courier New 字体的替代（可能较旧的）版本叫 Courier。使用 Courier New 作为 Courier 的首选替代方案，被认为是最佳做法。</td>
   </tr>
   <tr>
    <td style="white-space: nowrap;">Georgia</td>
@@ -137,7 +137,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
   <tr>
    <td style="white-space: nowrap;">Times New Roman</td>
    <td>serif</td>
-   <td>某些操作系统有一个 Times New Roman 字体的替代（可能较旧的）版本叫 Times。使用Times作为Times New Roman的首选替代方案，被认为是最佳做法。</td>
+   <td>某些操作系统有一个 Times New Roman 字体的替代（可能较旧的）版本叫 Times。使用 Times 作为 Times New Roman 的首选替代方案，被认为是最佳做法。</td>
   </tr>
   <tr>
    <td>Trebuchet MS</td>
@@ -162,11 +162,11 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <h4 id="默认字体">默认字体</h4>
 
-<p>CSS 定义了 5 个常用的字体名称:  <code>serif<font face="Open Sans, Arial, sans-serif">, </font></code><code>sans-serif,<font face="Open Sans, Arial, sans-serif"> </font></code><code>monospace</code>, <code>cursive,</code>和 <code>fantasy. </code>这些都是非常通用的，当使用这些通用名称时，使用的字体完全取决于每个浏览器，而且它们所运行的每个操作系统也会有所不同。这是一种糟糕的情况，浏览器会尽力提供一个看上去合适的字体。 <code>serif</code>, <code>sans-serif</code> 和 <code>monospace</code> 是比较好预测的，默认的情况应该比较合理，另一方面，<code>cursive</code> 和 <code>fantasy</code> 是不太好预测的，我们建议使用它们的时候应该稍微注意一些，多多测试。</p>
+<p>CSS 定义了 5 个常用的字体名称:  <code>serif, </code><code>sans-serif, </code><code>monospace</code>, <code>cursive,</code>和 <code>fantasy. </code>这些都是非常通用的，当使用这些通用名称时，使用的字体完全取决于每个浏览器，而且它们所运行的每个操作系统也会有所不同。这是一种糟糕的情况，浏览器会尽力提供一个看上去合适的字体。 <code>serif</code>, <code>sans-serif</code> 和 <code>monospace</code> 是比较好预测的，默认的情况应该比较合理，另一方面，<code>cursive</code> 和 <code>fantasy</code> 是不太好预测的，我们建议使用它们的时候应该稍微注意一些，多多测试。</p>
 
 <p>五个名称定义如下：</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">名称</th>
@@ -177,28 +177,28 @@ occasion such as this that he did.&lt;/p&gt;</pre>
  <tbody>
   <tr>
    <td><code>serif</code></td>
-   <td>有衬线的字体 （衬线一词是指字体笔画尾端的小装饰，存在于某些印刷体字体中）</td>
-   <td><span style="font-family: serif;">My big red elephant</span></td>
+   <td>有衬线的字体（衬线一词是指字体笔画尾端的小装饰，存在于某些印刷体字体中）</td>
+   <td>My big red elephant</td>
   </tr>
   <tr>
    <td><code>sans-serif</code></td>
    <td>没有衬线的字体。</td>
-   <td><span style="font-family: sans-serif;">My big red elephant</span></td>
+   <td>My big red elephant</td>
   </tr>
   <tr>
    <td><code>monospace</code></td>
    <td>每个字符具有相同宽度的字体，通常用于代码列表。</td>
-   <td><span style="font-family: monospace;">My big red elephant</span></td>
+   <td>My big red elephant</td>
   </tr>
   <tr>
    <td><code>cursive</code></td>
    <td>用于模拟笔迹的字体，具有流动的连接笔画。</td>
-   <td><span style="font-family: cursive;">My big red elephant</span></td>
+   <td>My big red elephant</td>
   </tr>
   <tr>
    <td><code>fantasy</code></td>
    <td>用来装饰的字体</td>
-   <td><span style="font-family: fantasy;">My big red elephant</span></td>
+   <td>My big red elephant</td>
   </tr>
  </tbody>
 </table>
@@ -213,13 +213,13 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>在这种情况下，浏览器从列表的第一个开始，然后查看在当前机器中，这个字体是否可用。如果可用，就把这个字体应用到选中的元素中。如果不可用，它就移到列表中的下一个字体，然后再检查。</p>
 
-<p>在字体栈的最后提供一个合适的通用的字体名称是个不错的办法，这样的话，即使列出的字体都无法使用，浏览器至少可以提供一个还算合适的选择。为了强调这一点，如果没有其他选项可用，那么段落将被赋予浏览器的默认衬线字体 - 通常是Time New Roman - 这对于 sans-serif 字体是不利的！</p>
+<p>在字体栈的最后提供一个合适的通用的字体名称是个不错的办法，这样的话，即使列出的字体都无法使用，浏览器至少可以提供一个还算合适的选择。为了强调这一点，如果没有其他选项可用，那么段落将被赋予浏览器的默认衬线字体 - 通常是 Time New Roman - 这对于 sans-serif 字体是不利的！</p>
 
 <div class="note">
 <p><strong>注意</strong>: 有一些字体名称不止一个单词，比如<code>Trebuchet MS</code> ，那么就需要用引号包裹。</p>
 </div>
 
-<h4 id="一个使用_font-family_的例子">一个使用 font-family 的例子</h4>
+<h4 id="A_font-family_example">一个使用 font-family 的例子</h4>
 
 <p>让我们把它添加到之前的例子上，给段落一个 sans-serif 的字体。</p>
 
@@ -243,7 +243,7 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;</pre>
 </div>
 
-<p>{{ EmbedLiveSample('一个使用_font-family_的例子', '100%', 220) }}</p>
+<p>{{ EmbedLiveSample('A_font-family_example', '100%', 220) }}</p>
 
 <h3 id="字体大小">字体大小</h3>
 
@@ -251,8 +251,8 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <ul>
  <li><code>px</code> (像素): 将像素的值赋予给你的文本。这是一个绝对单位， 它导致了在任何情况下，页面上的文本所计算出来的像素值都是一样的。</li>
- <li><code>em</code>: 1em 等于我们设计的当前元素的父元素上设置的字体大小 (更加具体的话，比如包含在父元素中的大写字母 M 的宽度) 如果你有大量设置了不同字体大小的嵌套元素，这可能会变得棘手, 但它是可行的，如下图所示。为什么要使用这个麻烦的单位呢? 当你习惯这样做时，那么就会变得很自然，你可以使用<code>em</code>调整任何东西的大小，不只是文本。你可以有一个单位全部都使用 em 的网站，这样维护起来会很简单。</li>
- <li><code>rem</code>: 这个单位的效果和 <code>em</code> 差不多，除了 1<code>rem</code> 等于 HTML 中的根元素的字体大小， (i.e. {{htmlelement("html")}}) ，而不是父元素。这可以让你更容易计算字体大小，但是遗憾的是， <code>rem</code> 不支持 Internet Explorer 8 和以下的版本。如果你的项目需要支持较老的浏览器，你可以坚持使用<code>em</code> 或 <code>px</code>, 或者是 {{glossary("polyfill")}} 就像 <a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM-unit-polyfill</a>. （这个单位在“CSS的值和单位”一节也有讲解）</li>
+ <li><code>em</code>: 1em 等于我们设计的当前元素的父元素上设置的字体大小 (更加具体的话，比如包含在父元素中的大写字母 M 的宽度) 如果你有大量设置了不同字体大小的嵌套元素，这可能会变得棘手，但它是可行的，如下图所示。为什么要使用这个麻烦的单位呢？当你习惯这样做时，那么就会变得很自然，你可以使用<code>em</code>调整任何东西的大小，不只是文本。你可以有一个单位全部都使用 em 的网站，这样维护起来会很简单。</li>
+ <li><code>rem</code>: 这个单位的效果和 <code>em</code> 差不多，除了 1<code>rem</code> 等于 HTML 中的根元素的字体大小， (i.e. {{htmlelement("html")}}) ，而不是父元素。这可以让你更容易计算字体大小，但是遗憾的是， <code>rem</code> 不支持 Internet Explorer 8 和以下的版本。如果你的项目需要支持较老的浏览器，你可以坚持使用<code>em</code> 或 <code>px</code>, 或者是 {{glossary("polyfill")}} 就像 <a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM-unit-polyfill</a>. （这个单位在“CSS 的值和单位”一节也有讲解）</li>
 </ul>
 
 <p>元素的 <code>font-size</code> 属性是从该元素的父元素继承的。所以这一切都是从整个文档的根元素——{{htmlelement("html")}}开始，浏览器的 <code>font-size</code> 标准设置的值为 16px。在根元素中的任何段落 (或者那些浏览器没有设置默认大小的元素)，会有一个最终的大小值：16px。其他元素也许有默认的大小，比如 {{htmlelement("h1")}} 元素有一个 2em 的默认值，所以它的最终大小值为 32px。当你开始更改嵌套元素的字体大小时，事情会变得棘手。比如，如果你有一个 {{htmlelement("article")}} 元素在你的页面上，然后设置它的 font-size 为 <code>1.5em</code> (通过计算，可以得到大小为 24px)，然后想让 <code>&lt;article&gt;</code> 元素中的段落获得一个计算值为 20px 的大小，那么你应该使用多少 em。</p>
@@ -264,11 +264,11 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>你需要将 em 的值设置为 20/24, 或者 <code>0.83333333em</code>. 这个计算可能比较复杂，所以当你设置的时候，你需要仔细一些。如果可以使用 rem 的话，那实现起来就变得简单不少，避免在可能的情况下设置容器元素的字体大小。</p>
 
-<h4 id="一个简单的_size_示例">一个简单的 size 示例</h4>
+<h4 id="A_simple_sizing_example">一个简单的 size 示例</h4>
 
-<p>当调整你的文本大小时，将文档(document)的基础  <code>font-size</code> 设置为10px往往是个不错的主意，这样之后的计算会变得简单，所需要的 (r)em 值就是想得到的像素的值除以 10，而不是 16。做完这个之后，你可以简单地调整在你的 HTML 中你想调整的不同类型文本的字体大小。在样式表的指定区域列出所有<code>font-size</code>的规则集是一个好主意，这样它们就可以很容易被找到。</p>
+<p>当调整你的文本大小时，将文档 (document) 的基础  <code>font-size</code> 设置为 10px 往往是个不错的主意，这样之后的计算会变得简单，所需要的 (r)em 值就是想得到的像素的值除以 10，而不是 16。做完这个之后，你可以简单地调整在你的 HTML 中你想调整的不同类型文本的字体大小。在样式表的指定区域列出所有<code>font-size</code>的规则集是一个好主意，这样它们就可以很容易被找到。</p>
 
-<p>我们的新结果是这样的:</p>
+<p>我们的新结果是这样的：</p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
@@ -298,14 +298,14 @@ p {
   font-family: Helvetica, Arial, sans-serif;
 }</pre>
 
-<p>{{ EmbedLiveSample('字体大小', '100%', 220) }}</p>
+<p>{{ EmbedLiveSample('A_simple_sizing_example', '100%', 260) }}</p>
 
-<h3 id="字体样式，字体粗细，文本转换和文本装饰">字体样式，字体粗细，文本转换和文本装饰</h3>
+<h3 id="Font_style_font_weight_text_transform_and_text_decoration">字体样式，字体粗细，文本转换和文本装饰</h3>
 
 <p>CSS 提供了 4 种常用的属性来改变文本的样子：</p>
 
 <ul>
- <li>{{cssxref("font-style")}}: 用来打开和关闭文本 italic (斜体)。 可能的值如下 (你很少会用到这个属性，除非你因为一些理由想将斜体文字关闭斜体状态)：
+ <li>{{cssxref("font-style")}}: 用来打开和关闭文本 italic (斜体)。可能的值如下 (你很少会用到这个属性，除非你因为一些理由想将斜体文字关闭斜体状态)：
   <ul>
    <li><code>normal</code>: 将文本设置为普通字体 (将存在的斜体关闭)</li>
    <li><code>italic</code>: 如果当前字体的斜体版本可用，那么文本设置为斜体版本；如果不可用，那么会利用 oblique 状态来模拟 italics。</li>
@@ -331,10 +331,10 @@ p {
   <ul>
    <li><code>none</code>: 取消已经存在的任何文本装饰。</li>
    <li><code>underline</code>: <u>文本下划线</u>.</li>
-   <li><code>overline</code>: <span style="text-decoration: overline;">文本上划线</span></li>
+   <li><code>overline</code>: 文本上划线</li>
    <li><code>line-through</code>: 穿过文本的线 <s style="text-decoration: line-through;">strikethrough over the text</s>.</li>
   </ul>
-  你应该注意到 {{cssxref("text-decoration")}} 可以一次接受多个值，如果你想要同时添加多个装饰值， 比如 <span style="text-decoration: underline overline;"><code>text-decoration: underline overline</code></span>.。同时注意 {{cssxref("text-decoration")}} 是一个缩写形式，它由 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} 和 {{cssxref("text-decoration-color")}} 构成。你可以使用这些属性值的组合来创建有趣的效果，比如 <span style="text-decoration: line-through red wavy;"><code>text-decoration: line-through red wavy</code>.</span></li>
+  你应该注意到 {{cssxref("text-decoration")}} 可以一次接受多个值，如果你想要同时添加多个装饰值， 比如 <code>text-decoration: underline overline</code>.。同时注意 {{cssxref("text-decoration")}} 是一个缩写形式，它由 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} 和 {{cssxref("text-decoration-color")}} 构成。你可以使用这些属性值的组合来创建有趣的效果，比如 <code>text-decoration: line-through red wavy</code>.</li>
 </ul>
 
 <p>我们来看一下这几个属性添加到我们的例子中：</p>
@@ -374,7 +374,7 @@ p {
   font-family: Helvetica, Arial, sans-serif;
 }</pre>
 
-<p>{{ EmbedLiveSample('字体样式，字体粗细，文本转换和文本装饰', '100%', 220) }}</p>
+<p>{{ EmbedLiveSample('Font_style_font_weight_text_transform_and_text_decoration', '100%', 260) }}</p>
 
 <h3 id="文字阴影">文字阴影</h3>
 
@@ -382,12 +382,12 @@ p {
 
 <pre class="brush: css">text-shadow: 4px 4px 5px red;</pre>
 
-<p>4 个属性如下:</p>
+<p>4 个属性如下：</p>
 
 <ol>
  <li>阴影与原始文本的水平偏移，可以使用大多数的 CSS 单位 <a href="/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size">length and size units</a>, 但是 px 是比较合适的。这个值必须指定。</li>
  <li>阴影与原始文本的垂直偏移;效果基本上就像水平偏移，除了它向上/向下移动阴影，而不是左/右。这个值必须指定。</li>
- <li>模糊半径 - 更高的值意味着阴影分散得更广泛。如果不包含此值，则默认为0，这意味着没有模糊。可以使用大多数的 CSS 单位 <a href="/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size">length and size units</a>.</li>
+ <li>模糊半径 - 更高的值意味着阴影分散得更广泛。如果不包含此值，则默认为 0，这意味着没有模糊。可以使用大多数的 CSS 单位 <a href="/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size">length and size units</a>.</li>
  <li>阴影的基础颜色，可以使用大多数的 CSS 颜色单位 <a href="/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors">CSS color unit</a>. 如果没有指定，默认为 <code>black</code>.</li>
 </ol>
 
@@ -395,14 +395,14 @@ p {
 <p><strong>注意</strong>: 正偏移值可以向右移动阴影，但也可以使用负偏移值来左右移动阴影，例如 <code>-1px -1px</code>.</p>
 </div>
 
-<h4 id="多种阴影">多种阴影</h4>
+<h4 id="Hidden_example1">多种阴影</h4>
 
 <p>您可以通过包含以逗号分隔的多个阴影值，将多个阴影应用于同一文本，例如：</p>
 
-<pre class="brush: css"><code class="language-css"><span class="property token">text-shadow</span><span class="punctuation token">:</span> -<span class="number token">1</span>px -<span class="number token">1</span>px <span class="number token">1</span>px <span class="hexcode token">#aaa</span>,
-             <span class="number token">0</span>px <span class="number token">4</span>px <span class="number token">1</span>px <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0.5</span><span class="punctuation token">)</span>,
-             <span class="number token">4</span>px <span class="number token">4</span>px <span class="number token">5</span>px <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0.7</span><span class="punctuation token">)</span>,
-             <span class="number token">0</span>px <span class="number token">0</span>px <span class="number token">7</span>px <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0.4</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: css"><code class="language-css">text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(0,0,0,0.5),
+             4px 4px 5px rgba(0,0,0,0.7),
+             0px 0px 7px rgba(0,0,0,0.4);</code></pre>
 
 <p>如果我们把这个样式应用到我们 "Tommy the cat" 示例中的 {{htmlelement("h1")}} 元素，就像这样：</p>
 
@@ -443,7 +443,7 @@ p {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('多种阴影', '100%', 220) }}</p>
+<p>{{ EmbedLiveSample('Hidden_example1', '100%', 260) }}</p>
 
 <div class="note">
 <p><strong>注意</strong>: 你可以看到更多有趣的关于 <code>text-shadow</code> 使用的示例在 <a href="http://www.sitepoint.com/moonlighting-css-text-shadow/">Moonlighting with CSS text-shadow</a>.</p>
@@ -453,7 +453,7 @@ p {
 
 <p>有了基本的字体属性，我们来看看我们可以用来影响文本布局的属性。</p>
 
-<h3 id="文本对齐">文本对齐</h3>
+<h3 id="Text_alignment">文本对齐</h3>
 
 <p> {{cssxref("text-align")}} 属性用来控制文本如何和它所在的内容盒子对齐。可用值如下，并且在与常规文字处理器应用程序中的工作方式几乎相同：</p>
 
@@ -504,11 +504,11 @@ p {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('文本对齐', '100%', 220) }}</p>
+<p>{{ EmbedLiveSample('Text_alignment', '100%', 260) }}</p>
 
-<h3 id="行高">行高</h3>
+<h3 id="Hidden_example2">行高</h3>
 
-<p> {{cssxref("line-height")}} 属性设置文本每行之间的高，可以接受大多数单位 <a href="/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size">length and size units</a>，不过也可以设置一个无单位的值，作为乘数，通常这种是比较好的做法。无单位的值乘以 {{cssxref("font-size")}} 来获得 <code>line-height</code>。当行与行之间拉开空间，正文文本通常看起来更好更容易阅读。推荐的行高大约是 1.5–2 (双倍间距。) 所以要把我们的文本行高设置为字体高度的1.5倍，你可以使用这个:</p>
+<p> {{cssxref("line-height")}} 属性设置文本每行之间的高，可以接受大多数单位 <a href="/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size">length and size units</a>，不过也可以设置一个无单位的值，作为乘数，通常这种是比较好的做法。无单位的值乘以 {{cssxref("font-size")}} 来获得 <code>line-height</code>。当行与行之间拉开空间，正文文本通常看起来更好更容易阅读。推荐的行高大约是 1.5–2 (双倍间距。) 所以要把我们的文本行高设置为字体高度的 1.5 倍，你可以使用这个：</p>
 
 <pre class="brush: css">line-height: 1.5;</pre>
 
@@ -553,9 +553,9 @@ p {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('行高', '100%', 250) }}</p>
+<p>{{ EmbedLiveSample('Hidden_example2', '100%', 300) }}</p>
 
-<h3 id="字母和单词间距">字母和单词间距</h3>
+<h3 id="Letter_and_word_spacing">字母和单词间距</h3>
 
 <p>{{cssxref("letter-spacing")}} 和 {{cssxref("word-spacing")}} 属性允许你设置你的文本中的字母与字母之间的间距、或是单词与单词之间的间距。你不会经常使用它们，但是可能可以通过它们，来获得一个特定的外观，或者让较为密集的文字更加可读。它们可以接受大多数单位 <a href="/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size">length and size units</a>.</p>
 
@@ -612,13 +612,13 @@ p {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('字母和字间距', '100%', 250) }}</p>
+<p>{{ EmbedLiveSample('Letter_and_word_spacing', '100%', 330) }}</p>
 
 <h3 id="其他一些值得看一下的属性">其他一些值得看一下的属性</h3>
 
-<p>以上属性让你了解如何开始在网页上设置文本， 但是你可以使用更多的属性。我们只是想介绍最重要的。一旦你习惯使用上面的内容，你还应该探索以下几点：</p>
+<p>以上属性让你了解如何开始在网页上设置文本，但是你可以使用更多的属性。我们只是想介绍最重要的。一旦你习惯使用上面的内容，你还应该探索以下几点：</p>
 
-<p>Font 样式:</p>
+<p>Font 样式：</p>
 
 <ul>
  <li>{{cssxref("font-variant")}}: 在小型大写字母和普通文本选项之间切换。</li>
@@ -626,7 +626,7 @@ p {
  <li>{{cssxref("font-feature-settings")}}: 开启或关闭不同的 <a href="https://en.wikipedia.org/wiki/OpenType">OpenType</a> 字体特性。</li>
  <li>{{cssxref("font-variant-alternates")}}: 控制给定的自定义字体的替代字形的使用。</li>
  <li>{{cssxref("font-variant-caps")}}: 控制大写字母替代字形的使用。</li>
- <li>{{cssxref("font-variant-east-asian")}}: 控制东亚文字替代字形的使用, 像日语和汉语。</li>
+ <li>{{cssxref("font-variant-east-asian")}}: 控制东亚文字替代字形的使用，像日语和汉语。</li>
  <li>{{cssxref("font-variant-ligatures")}}: 控制文本中使用的连写和上下文形式。</li>
  <li>{{cssxref("font-variant-numeric")}}: 控制数字，分式和序标的替代字形的使用。</li>
  <li>{{cssxref("font-variant-position")}}: 控制位于上标或下标处，字号更小的替代字形的使用。</li>
@@ -643,7 +643,7 @@ p {
  <li>{{cssxref("text-overflow")}}: 定义如何向用户表示存在被隐藏的溢出内容。</li>
  <li>{{cssxref("white-space")}}: 定义如何处理元素内部的空白和换行。</li>
  <li>{{cssxref("word-break")}}: 指定是否能在单词内部换行。</li>
- <li>{{cssxref("direction")}}: 定义文本的方向 (这取决于语言，并且通常最好让HTML来处理这部分，因为它是和文本内容相关联的。)</li>
+ <li>{{cssxref("direction")}}: 定义文本的方向 (这取决于语言，并且通常最好让 HTML 来处理这部分，因为它是和文本内容相关联的。)</li>
  <li>{{cssxref("hyphens")}}: 为支持的语言开启或关闭连字符。</li>
  <li>{{cssxref("line-break")}}: 对东亚语言采用更强或更弱的换行规则。</li>
  <li>{{cssxref("text-align-last")}}: 定义一个块或行的最后一行，恰好位于一个强制换行前时，如何对齐。</li>
@@ -664,9 +664,9 @@ p {
 
 <pre class="brush: css">font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;</pre>
 
-<h2 id="动手练习_使用样式文本">动手练习: 使用样式文本</h2>
+<h2 id="动手练习_使用样式文本">动手练习：使用样式文本</h2>
 
-<p>在这个动手练习中，我们没有任何具体的练习来做：我们只是希望你和一些字体/文本布局属性相处地愉快，看看你可以制作什么！你可以使用离线HTML / CSS文件进行此操作，也可以将代码输入到下面的实时可编辑示例中。</p>
+<p>在这个动手练习中，我们没有任何具体的练习来做：我们只是希望你和一些字体/文本布局属性相处地愉快，看看你可以制作什么！你可以使用离线 HTML / CSS 文件进行此操作，也可以将代码输入到下面的实时可编辑示例中。</p>
 
 <p>如果你犯了错误，你可以使用 Reset 按钮来复原。</p>
 

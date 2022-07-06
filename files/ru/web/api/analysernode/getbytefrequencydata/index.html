@@ -15,7 +15,7 @@ translation_of: Web/API/AnalyserNode/getByteFrequencyData
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="brush: js notranslate">var audioCtx = new AudioContext();
+<pre class="brush: js">var audioCtx = new AudioContext();
 var analyser = audioCtx.createAnalyser();
 var dataArray = new Uint8Array(analyser.frequencyBinCount); // Uint8Array должен иметь такой же размер, что и frequencyBinCount
 
@@ -38,7 +38,7 @@ void <em>analyser</em>.getByteFrequencyData(dataArray); // заполняет Ui
 
 <p>Следующий пример показывает базовое использование {{domxref ("AudioContext")}} для создания AnalyserNode, затем {{domxref ("window.requestAnimationFrame ()", "requestAnimationFrame")}} и {{htmlelement ("canvas" )}} для повторения сбора частотных данных и вывода в стиле гистограммы winamp для текущего аудиовхода. Для получения дополнительных примеров / информации ознакомьтесь с нашей демонстрацией <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> (см. соответствующий код в строках <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> ).</p>
 
-<pre class="brush: js notranslate">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
   ...
@@ -101,9 +101,7 @@ draw();</pre>
 <h2 id="Поддержка_в_браузерах">Поддержка в браузерах</h2>
 
 <div>
-<div class="hidden">Таблица совместимости на этой странице создана на основе структурированных данных. Если вы хотите внести свой вклад в данные, посетите <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам pull request..</div>
-
-<p>{{Compat("api.AnalyserNode.getByteFrequencyData")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h2 id="Смотрите_также">Смотрите также</h2>

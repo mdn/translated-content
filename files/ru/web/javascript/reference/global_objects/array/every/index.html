@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
 <div>{{JSRef("Global_Objects", "Array")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <code><strong>every()</strong></code> проверяет, удовлетворяют ли все элементы массива условию, заданному в передаваемой функции.</p>
 
@@ -22,11 +22,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 <p><strong>Обратите внимание</strong>: метод возвращает <code>true</code> при любом условии для пустого массива.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">arr.every(callback(currentValue[, index[, array]])[, thisArg])</pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 
 <p><code><strong>true</strong></code> если функция проверки возвращает {{Glossary("truthy")}} значение для каждого элемента массива. Иначе, <code><strong>false</strong></code>.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>every()</code> вызывает переданную функцию <code>callback</code> один раз для каждого элемента, присутствующего в массиве до тех пор, пока не найдёт такой, для которого <code>callback</code> вернёт <em>ложное</em> значение (значение, становящееся равным <code>false</code> при приведении его к типу {{jsxref("Boolean")}}). Если такой элемент найден, метод <code>every()</code> немедленно вернёт <code>false</code>. В противном случае, если <code>callback</code> вернёт <code>true</code> для всех элементов массива, метод <code>every()</code> вернёт <code>true</code>. Функция <code>callback</code> вызывается только для индексов массива, имеющих присвоенные значения; она не вызывается для индексов, которые были удалены или которым значения никогда не присваивались.</p>
 
@@ -62,9 +62,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 
 <p>Метод <code>every()</code> действует подобно квантору всеобщности в математике. В частности, он вернёт <code>true</code> для пустого массива. Это так называемая <a href="http://en.wikipedia.org/wiki/Vacuous_truth#Vacuous_truths_in_mathematics">бессодержательная истина (vacuously true)</a> — все элементы <a href="http://ru.wikipedia.org/wiki/Пустое_множество">пустого множества</a> (<a href="http://en.wikipedia.org/wiki/Empty_set#Common_problems">англ.</a>) удовлетворяют любому заданному условию.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Testing_size_of_all_array_elements" name="Example:_Testing_size_of_all_array_elements">Пример: проверка размера всех элементов массива</h3>
+<h3 id="Example:_Testing_size_of_all_array_elements">Пример: проверка размера всех элементов массива</h3>
 
 <p>Следующий пример проверяет, являются ли все элементы массива числами, большими 10.</p>
 
@@ -75,7 +75,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 [12, 54, 18, 130, 44].every(isBigEnough); // true
 </pre>
 
-<h3 id="Example:_Using_arrow_functions" name="Example:_Using_arrow_functions">Пример: использование стрелочных функций</h3>
+<h3 id="Example:_Using_arrow_functions">Пример: использование стрелочных функций</h3>
 
 <p><a href="/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Стрелочные функции</a> предоставляют более краткий синтаксис для подобных проверок.</p>
 
@@ -83,7 +83,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 [12, 54, 18, 130, 44].every(elem =&gt; elem &gt;= 10); // true
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Метод <code>every()</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может не присутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>every()</code> в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; и предполагает что {{jsxref("Object")}} и {{jsxref("TypeError")}} имеют свои первоначальные значения и что <code>callback.call</code> вычисляется в оригинальное значение {{jsxref("Function.prototype.call()")}}.</p>
 
@@ -152,40 +152,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.16', 'Array.prototype.every')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.every', 'Array.prototype.every')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.every', 'Array.prototype.every')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div></div>
 
-<div id="compat-mobile">{{Compat("javascript.builtins.Array.every")}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<div id="compat-mobile">{{Compat}}</div>
+
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.forEach()")}}</li>

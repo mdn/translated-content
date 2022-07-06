@@ -7,120 +7,120 @@ tags:
   - HTML
 translation_of: Web/Accessibility/ARIA
 ---
-<p class="summary"><span class="seoSummary">Accessible Rich Internet Applications <strong>(ARIA)</strong> は Web コンテンツや Web アプリケーション (特に Ajax や JavaScript や Bootstrap のようなより最新のウェブ技術を伴って開発するもの) を、ハンディキャップを持つ人々にとってよりアクセシブルにする方法を定義します。</span>例えば、ARIA はナビゲーションの目印、JavaScript ウィジェット、フォームのヒントやエラーメッセージ、動的なコンテンツ更新などをアクセシブルにします。</p>
+<p class="summary"><span class="seoSummary">Accessible Rich Internet Applications <strong>(ARIA)</strong> はウェブコンテンツやウェブアプリケーション (特に JavaScript で開発するもの) を、ハンディキャップを持つ人々にとってよりアクセシブルにする方法を定義します。</span></p>
 
-<p>ARIA は任意のマークアップに追加できる特別なアクセシビリティの属性のセットですが、とりわけ HTML に適応しています。<code>role</code> 属性は、オブジェクトの一般的な型が何か (article、alert、slider など) を定義します。付加的な ARIA の属性は他の役に立つ特性、例えばフォームの説明やプログレスバーの現在の値を提供します。ARIA の属性はオブジェクト(特にボタン)のアクティブ/無効化の状態を指定するのにも使われます。</p>
+<p><span class="seoSummary">ARIA は、アプリケーションで一般的に使用されている対話操作やウィジェットを、他のメカニズムがない場合に支援技術に渡すことができるように HTML を補完します。</span>例えば ARIA は、 HTML4 のアクセシブルナビゲーションランドマーク、 JavaScript のウィジェット、フォームのヒントやエラーメッセージ、ライブコンテンツの更新などを可能にします。</p>
 
-<p>スクリーンリーダーにその要素が無視できるのを教える <code>aria-hidden</code> 属性は、ブラウザーに表示しないよう教える HTML5 の <code>hidden</code> 属性と混用されるべきではありません。</p>
+<div class="warning">
+<p>これらのウィジェットの多くは、後に HTML5 に組み込まれました。意味的に正しい HTML 要素が存在するのであれば、 <strong>ARIA を使用するよりも、その要素を使用したほうがいいでしょう</strong>。例えば、ネイティブな要素には<a href="/ja/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">キーボードのアクセシビリティ</a>や役割、状態が組み込まれています。しかし、 ARIA を使用する場合は、スクリプトで (同等の) ブラウザーの動作を模倣する責任があります。</p>
+</div>
 
-<p>ARIA は、ほとんどの一般的なブラウザーやスクリーンリーダーに実装されています。ただし実装状況はまちまちであり、また古い技術では (どうあっても) それを十分にサポートしていません。上手に退行する "安全な" ARIA を使用するか、新しい技術へのアップグレードをユーザーに求めましょう。</p>
+<p>プログレスバーウィジェットのためのマークアップです。</p>
+
+<pre class="brush: html">&lt;div id="percent-loaded" role="progressbar" aria-valuenow="75"
+     aria-valuemin="0" aria-valuemax="100"&gt;
+&lt;/div&gt;
+</pre>
+
+<p>このプログレスバーは、意味を持たない <code>&lt;div&gt;</code> を使って作られています。残念ながら、 HTML 4 には開発者が利用できるより意味のある要素がないので、 ARIA の役割とプロパティを追加する必要があります。要素に属性を追加することでこれを指定します。この例では、 <code>role="progressbar"</code> 属性により、この要素が実際には JavaScript を使用したプログレスバーウィジェットであることをブラウザーに伝えています。 <code>aria-valuemin</code> および <code>aria-valuemax</code> 属性はプログレスバーの最小値と最大値を指定し、 <code>aria-valuenow</code> は現在の状態を表すため、 JavaScript から更新し続けます。</p>
+
+<p>マークアップに直接配置するとともに、 ARIA の属性を要素に追加して、次のような JavaScript コードを使用して動的に更新することができます。</p>
+
+<pre class="brush: js">// プログレスバーの &lt;div&gt; を DOM 内で探す。
+var progressBar = document.getElementById("percent-loaded");
+
+// ARIA ロールと状態を設定することで、
+// 支援技術がウィジェットの種類を知ることができる。
+progressBar.setAttribute("role", "progressbar");
+progressBar.setAttribute("aria-valuemin", 0);
+progressBar.setAttribute("aria-valuemax", 100);
+
+// プログレスバーの値を更新したいときにいつでも呼び出せる
+// 関数を作成する。
+function updateProgress(percentComplete) {
+  progressBar.setAttribute("aria-valuenow", percentComplete);
+}</pre>
 
 <div class="note">
-<p><strong>注記</strong>: ぜひ貢献して、後進のために ARIA をよりよくしてください! 十分な時間がありませんか? でしたら、Mozilla の<a href="https://lists.mozilla.org/listinfo/accessibility">アクセシビリティメーリングリスト</a>や <a href="https://wiki.mozilla.org/IRC">IRC</a> の #accessibility チャンネルで提案してください。</p>
+<p>ARIA は HTML4 以降に導入されたため、 HTML4 や XHTML の派生形では検証できません。ただし、技術的に問題があっても、それを上回るアクセシビリティの向上が得られます。</p>
+
+<p>HTML5 では、すべての ARIA 属性が有効です。新しいランドマーク要素 (<code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code> など) は ARIA ロールに組み込まれたため、重複指定する必要はありません。</p>
 </div>
 
-<div class="row topicpage-table">
-<div class="section">
-<h2 id="Documentation" name="Documentation">ARIA 入門</h2>
+<h2 id="Support">対応</h2>
+
+<p>他のウェブ技術と同様に、 ARIA の対応には様々な程度があります。対応の程度は、使用しているオペレーティングシステムとブラウザー、それらと連携している支援技術の種類によって異なります。また、OS、ブラウザー、支援技術のバージョンも要因となります。古いバージョンのソフトウェアは、特定の ARIA ロールを対応していなかったり、部分的にしか対応していなかったり、機能を誤って報告していたりする可能性があります。</p>
+
+<p>また、支援技術に依存している人の中には、コンピューターやブラウザーとのやり取りができなくなることを恐れて、ソフトウェアの更新に消極的な人がいることも認識しておく必要があります。そのため、できるだけ<a href="/ja/docs/Learn/Accessibility/HTML">意味を持った HTML 要素を使用する</a>ことが重要です。意味を持った HTML は、支援技術への対応がはるかに優れているからです。</p>
+
+<p>また、作成した ARIA を実際の支援技術でテストすることも重要です。ブラウザーのエミュレーターやシミュレーターを使っても、完全な対応をテストするために効果的ではないのと同様に、代理の支援技術ソリューションを使用しても、機能性を完全に保証することはできません。</p>
+
+<h2 id="Tutorials">チュートリアル</h2>
 
 <dl>
- <dt><a href="/ja/docs/Accessibility/An_overview_of_accessible_web_applications_and_widgets" title="An overview of accessible web applications and widgets">ARIA の紹介</a></dt>
- <dd>ARIA で動的コンテンツをアクセシブルにする方法の簡単な紹介です。2008 年に作成された、定評のある <a href="http://dev.opera.com/articles/view/introduction-to-wai-aria/" title="http://dev.opera.com/articles/view/introduction-to-wai-aria/">Gez Lemon 氏による ARIA の紹介</a>もご覧ください。</dd>
- <dt><a href="/ja/docs/Accessibility/ARIA/Web_applications_and_ARIA_FAQ" title="https://developer.mozilla.org/ja/docs/Accessibility/Web_applications_and_ARIA_FAQ">Web アプリケーションと ARIA の FAQ</a></dt>
- <dd>WAI-ARIA に関する一般的な質問や、なぜ Web アプリケーションをアクセシブルにすることが必要かに対する回答です。</dd>
- <dt><a href="http://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/" title="http://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/">Videos of Screen Readers Using ARIA</a></dt>
- <dd>ARIA の導入 "前" および "後" を含む、Web の方々から集めた簡単な実例のビデオをご覧ください。</dd>
- <dt><a href="http://w3c.github.io/aria-in-html/">Using ARIA</a></dt>
- <dd>
- <p>開発者向けの実践的なガイドです。HTML 要素で使用する ARIA 属性は何かについて提案しています。提案内容は、実際の実装状況に基づいています。</p>
- </dd>
+ <dt><a href="/ja/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets">ARIA 入門</a></dt>
+<dd>ARIA で動的コンテンツをアクセシブルにする方法の簡単な紹介です。2008 年に作成された、定評のある <a href="https://dev.opera.com/articles/view/introduction-to-wai-aria/">Gez Lemon 氏による ARIA の紹介</a>もご覧ください。</dd>
+ <dt><a href="https://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/">Videos of screen readers using ARIA</a></dt>
+ <dd>ARIA の導入「前」および「後」を含む、ウェブ中の簡単な実例のビデオをご覧ください。</dd>
+ <dt><a href="https://w3c.github.io/using-aria/">Using ARIA</a></dt>
+ <dd>開発者向けの実践的なガイドです。HTML 要素で使用する ARIA 属性は何かについて提案しています。提案内容は、実際の実装状況に基づいています。</dd>
 </dl>
 
-<h2 id="Simple_ARIA_Enhancements" name="Simple_ARIA_Enhancements">簡単な ARIA の強化</h2>
+<h2 id="Simple_ARIA_Enhancements">単純な ARIA の強化</h2>
 
 <dl>
- <dt><a href="http://www.paciellogroup.com/blog/2010/10/using-wai-aria-landmark-roles/" rel="external" title="http://www.paciellogroup.com/blog/2010/10/using-wai-aria-landmark-roles/">Enhancing Page Navigation with ARIA Landmarks</a></dt>
- <dd>スクリーンリーダーの利用者向けに Web ページのナビゲーションを向上させるための、ARIA landmark の使用法を紹介します。<a href="http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/" rel="external" title="http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/">ARIA landmark の実装状況の覚え書き</a>や実際のサイトでの例もご覧ください (2011 年 7 月更新)。</dd>
- <dt><a href="/ja/docs/ARIA/forms" rel="internal" title="ARIA/forms">フォームのアクセシビリティ向上</a></dt>
+ <dt><a href="https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/">Enhancing page navigation with ARIA landmarks</a></dt>
+ <dd>画面リーダーの利用者向けにウェブページのナビゲーションを向上させるための、 ARIA landmark の使用法を紹介します。 <a href="https://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/">ARIA landmark の実装状況の覚え書き</a>や実際のサイトでの例もご覧ください (2011 年 7 月更新)。</dd>
+ <dt><a href="/ja/docs/Web/Accessibility/ARIA/forms">フォームのアクセシビリティ向上</a></dt>
  <dd>ARIA は動的コンテンツのためだけのものではありません! 付加的な ARIA の属性を使用して HTML フォームのアクセシビリティを向上させる方法を学びましょう。</dd>
- <dt><a href="/ja/docs/Accessibility/ARIA/ARIA_Live_Regions" title="Live Regions">Live regions (作成中)</a></dt>
- <dd>Live region は、ページのコンテンツの変化をどのように制御するかに関する提案を、スクリーンリーダーに与えます。</dd>
- <dt><a href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm" rel="external" title="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">Using ARIA Live Regions to Announce Content Changes</a></dt>
- <dd>スクリーンリーダーソフトウェア JAWS の作者による、Live region の簡単な概説です。なお、live region は Firefox での NVDA や、Safari での VoiceOver (OS X Lion および iOS 5) でもサポートされています。</dd>
 </dl>
 
-<h2 id="ARIA_for_Scripted_Widgets" name="ARIA_for_Scripted_Widgets">スクリプトウィジェット向け ARIA</h2>
+<h2 id="ARIA_for_Scripted_Widgets">スクリプトウィジェット向け ARIA</h2>
 
 <dl>
- <dt><a href="/ja/docs/Accessibility/Keyboard-navigable_JavaScript_widgets" title="Accessibility/Keyboard-navigable_JavaScript_widgets">JavaScript ウィジェット向けのキーボードナビゲーションとフォーカス</a></dt>
- <dd>アクセシブルな JavaScript ウィジェットを作成する最初のステップは、キーボードでナビゲーション可能にすることです。この記事では、そのプロセスを見ていきます。<a href="http://www.yuiblog.com/blog/2009/02/23/managing-focus/" title="http://www.yuiblog.com/blog/2009/02/23/managing-focus/">Yahoo! のフォーカス制御に関する記事</a>もすばらしい情報源です。</dd>
- <dt><a class="external external-icon" href="https://web.archive.org/web/20141006075412/http://access.aol.com/dhtml-style-guide-working-group/">Style Guide for Keyboard Navigation</a></dt>
- <dd>ARIA は、開発者に一貫性のある動作を実装させることに挑戦します。それは明らかにユーザーにとってもっともよいことです。このスタイルガイドは、一般的なウィジェット向けのキーボードインターフェイスを説明します。</dd>
+ <dt><a href="/ja/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">キーボードで操作可能な JavaScript ウィジェットを書く</a></dt>
+ <dd>&lt;input&gt; や &lt;button&gt; などのような組み込み要素は、キーボードのアクセシビリティが組み込まれています。これらを &lt;div&gt; と ARIA で「偽装」する場合は、ウィジェットがキーボードでアクセシブルであることを保証する必要があります。</dd>
+ <dt><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ライブリージョン</a></dt>
+ <dd>ライブリージョンは、ページのコンテンツが変更された場合に、画面リーダーにどのように対処すべきかを提案します。</dd>
+ <dt><a href="https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">Using ARIA Live Regions to announce content changes</a></dt>
+ <dd>画面リーダーソフトウェア JAWS のメーカーによる、ライブリージョンについての簡単なまとめです。ライブリージョンは、 Firefox と NVDA、 Safari と VoiceOver でも対応しています。</dd>
 </dl>
 
-<h2 class="Tools" id="リファレンス">リファレンス</h2>
+<h2 class="Tools" id="References">リファレンス</h2>
 
 <dl>
- <dt><a href="/ja/docs/Accessibility/ARIA/widgets/overview" title="aria/widgets/overview">ウィジェット技術、チュートリアル、サンプル</a></dt>
- <dd>スライダー、メニュー、あるいは他のウィジェットが必要ですか? こちらで情報を見つけましょう。</dd>
- <dt><a href="http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/" title="http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/">ARIA が有効な JavaScript UI ライブラリ</a></dt>
- <dd>新たなプロジェクトを始める場合は、ARIA サポートが組み込まれた UI ウィジェットライブラリを選択しましょう。注意: これは 2009 年から存在する記事です。更新することが可能な MDN のページへコンテンツを移行すべきでしょう。</dd>
+ <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles">ARIA ロール</a></dt>
+ <dd>MDN 上のすべての WAI-ARIA ロールをカバーするリファレンスページです。</dd>
 </dl>
 
-<dl>
- <dt><a href="https://www.w3.org/WAI/PF/HTML/wiki/RoleAttribute">Role attribute-ARIA</a></dt>
- <dd>role 属性の提案。</dd>
- <dt>
- <h2 id="Examples" name="Examples">例</h2>
- </dt>
- <dt><a href="/ja/docs/Accessibility/ARIA/ARIA_Test_Cases" title="ARIA/examples">ARIA サンプルライブラリ</a></dt>
- <dd>学びやすくなっている、要点のサンプルファイルを集めています。</dd>
- <dt>アクセシブルな JS ウィジェットライブラリのデモ</dt>
- <dd><a class="external external-icon" href="http://hanshillen.github.com/jqtest/">jQuery</a>, <a class="external external-icon" href="http://yuilibrary.com/gallery/">YUI</a></dd>
-</dl>
-
-<h2 id="Standardization_Efforts" name="Standardization_Efforts">標準化の取り組み</h2>
+<h2 id="Standardization_Efforts">標準化の取り組み</h2>
 
 <dl>
- <dt><a href="http://www.w3.org/WAI/intro/aria.php" title="http://www.w3.org/WAI/intro/aria.php">W3C の WAI-ARIA 活動の概要</a></dt>
- <dd>Web Accessibility Initiative (WAI) による、WAI-ARIA の標準化の取り組みに関する権威ある概要です。</dd>
-</dl>
-<strong><a class="external external-icon" href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA 仕様</a></strong>
-
-<dl>
- <dd>W3C の仕様そのものであり、リファレンスとして有用です。まだ実装に不一致がみられるため、現時点では互換性のテストが重要であることに注意してください。</dd>
- <dt><a href="http://www.w3.org/WAI/PF/aria-practices/" title="http://www.w3.org/WAI/PF/aria-practices/">WAI-ARIA Authoring Practices</a></dt>
- <dd>W3C の WAI-ARIA 仕様と同様に、将来の理想 (さまざまなブラウザーやスクリーンリーダーで一貫性のある ARIA サポートに作成者が頼れるとき) を表した公式のベストプラクティスです。W3C のドキュメントは ARIA の深い視点をもたらします。<br>
- <br>
- 今のところ、ARIA を実装する Web 開発者は互換性を最大化するべきです。現在の実装状況に基づいて、ベストプラクティスのドキュメントやサンプルを使用しましょう。</dd>
- <dt><a href="http://www.openajax.org/member/wiki/Accessibility" title="http://www.openajax.org/member/wiki/Accessibility">Open AJAX Accessibility Task Force</a></dt>
- <dd>Open AJAX は、ARIA の開発ツール、サンプルファイル、自動テストを中心に取り組んでいます。</dd>
- <dt><a href="/ja/docs/Accessibility/ARIA/ARIA_Techniques" title="ARIA Techniques">作成中: WCAG 2.0 ARIA Techniques</a></dt>
+ <dt><a href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA 仕様書</a></dt>
+ <dd>W3C の仕様書そのものです。</dd>
+ <dt><a href="https://www.w3.org/TR/wai-aria-practices-1.1/">WAI-ARIA Authoring Practices</a></dt>
  <dd>
- <p>コミュニティは WAI-ARIA + HTML 向けの WCAG 技術の完全なセットを求めており、それにより組織は自身の ARIA が有効なコンテンツが WCAG に準拠するという要求を満たすことができます。これは主として、規則や方針が WCAG に基づいている場合に重要です。</p>
+ <p>一般的なウィジェットや対話操作をどのように ARIA 化するのが最良なのかを記述した、公式のベストプラクティス文書です。優れたリソースです。</p>
  </dd>
 </dl>
-</div>
 
-<div class="section">
-<h2 id="Community" name="Community">ブログ</h2>
+<h2 id="Videos">動画</h2>
 
-<p>ブログ上の ARIA に関する情報は、早々に古くなってしまう傾向があります。それでも、現在 ARIA に取り組んでいる他の開発者が提供したすばらしい情報があります。</p>
-
-<p><a href="http://www.paciellogroup.com/blog/category/wai-aria/" title="http://www.paciellogroup.com/blog/category/wai-aria/">Paciello Group</a></p>
-
-<h2 id="Videos" name="Videos">動画</h2>
-
-<p>Following talks are a great way to understand ARIA:</p>
+<p>ARIA を理解するには、以下の講演が最適です。</p>
 
 <p><a href="https://www.youtube.com/watch?v=qdB8SRhqvFc">ARIA, Accessibility APIs and coding like you give a damn! – Léonie Watson</a></p>
 
-<h2 id="Filing_Bugs" name="Filing_Bugs">バグ報告</h2>
+<h2 id="Filing_Bugs">バグ報告</h2>
 
-<p><a href="/ja/docs/Accessibility/ARIA/How_to_file_ARIA-related_bugs" title="https://developer.mozilla.org/en/ARIA/How_to_file_ARIA-related_bugs">ブラウザー、スクリーンリーダー、JavaScript ライブラリの ARIA に関するバグを報告してください</a>。</p>
-</div>
-</div>
+<p><a href="/ja/docs/Accessibility/ARIA/How_to_file_ARIA-related_bugs">ブラウザー、スクリーンリーダー、JavaScript ライブラリの ARIA に関するバグを報告してください</a>。</p>
 
-<h2 id="Related_Topics" name="Related_Topics">関連トピック</h2>
+<h2 id="Related_Topics">関連トピック</h2>
 
-<p><a href="https://developer.mozilla.org/ja/docs/Accessibility">Accessibility</a>, <a href="https://developer.mozilla.org/ja/docs/AJAX">AJAX</a>, <a href="https://developer.mozilla.org/ja/docs/JavaScript">JavaScript</a></p>
+<p><a href="/ja/docs/Web/Accessibility">Accessibility</a>, <a href="/ja/docs/Web/Guide/AJAX">AJAX</a>, <a href="/ja/docs/Web/JavaScript">JavaScript</a></p>
+
+<section id="Quick_links">
+<ol>
+ <li><a href="/ja/docs/Web/Guide">ウェブ開発</a></li>
+ <li><a href="/ja/docs/Mozilla/Accessibility">アクセシビリティと Mozilla</a></li>
+</ol>
+</section>

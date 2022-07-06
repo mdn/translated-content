@@ -1,75 +1,50 @@
 ---
-title: abort
+title: GlobalEventHandlers.onabort
 slug: conflicting/Web/API/HTMLMediaElement/abort_event
-tags:
-  - abort
-translation_of: Web/API/HTMLMediaElement/abort_event
-translation_of_original: Web/Events/abort
-original_slug: Web/Events/abort
+translation_of: Web/API/GlobalEventHandlers/onabort
+original_slug: Web/API/GlobalEventHandlers/onabort
 ---
-<p>当一个资源的加载已中止时，将触发 <strong>abort</strong>事件。</p>
+<div>{{ ApiRef("HTML DOM") }}</div>
 
-<div class="note">
-<p>译者注：这个事件只在 IE 支持，试了最新的 Chrome、FireFox、Safari 都不支持。</p>
-</div>
+<h2 id="Summary" name="Summary">摘要</h2>
 
-<h2 id="常规信息">常规信息</h2>
+<p>一个中断事件的事件处理器发送到 window 全局对象。（Firefox 2 和 Safari 不可用）</p>
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">规范</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-abort">DOM L3</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">接口</dt>
- <dd style="margin: 0 0 0 120px;">从UI组件产生为UIEvent , 否则为Event .</dd>
- <dt style="float: left; text-align: right; width: 120px;">是否冒泡</dt>
- <dd style="margin: 0 0 0 120px;">否</dd>
- <dt style="float: left; text-align: right; width: 120px;">可取消默认行为</dt>
- <dd style="margin: 0 0 0 120px;">否</dd>
- <dt style="float: left; text-align: right; width: 120px;">目标对象</dt>
- <dd style="margin: 0 0 0 120px;">元素（Element）</dd>
- <dt style="float: left; text-align: right; width: 120px;">默认行为</dt>
- <dd style="margin: 0 0 0 120px;">无</dd>
-</dl>
+<p>TODO 要定义什么是“abort”。通过窗口管理关掉窗口么？停止页面的加载？有什么意图和理由（用户，网络或服务器）？在哪一步被发起或被捕获？对于 IE 浏览器，onabort 只可用于<code>img</code>标签。</p>
 
-<h2 id="属性">属性</h2>
+<h2 id="Syntax" name="Syntax">语法</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">属性</th>
-   <th scope="col">类型</th>
-   <th scope="col">描述</th>
-  </tr>
- </thead>
+<pre class="syntaxbox">window.onabort =<em>funcRef</em>
+</pre>
+
+<ul>
+ <li><code>funcRef</code>是一个函数引用</li>
+</ul>
+
+<h2 id="Example" name="Example">例子</h2>
+
+<pre class="brush:js">window.onabort = function() {
+  alert("Load aborted.");
+}</pre>
+
+<h2 id="Specification" name="Specification">规范</h2>
+
+<table class="spectable standard-table">
  <tbody>
   <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>产生该事件的对象(DOM树中最顶级的那个对象).</td>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>事件类型.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>该事件是否冒泡.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>该事件是否可取消默认行为.</td>
-  </tr>
-  <tr>
-   <td><code>view</code> {{readonlyInline}}</td>
-   <td><a class="new" href="/zh-CN/docs/Web/API/WindowProxy" rel="nofollow" title="The documentation about this has not yet been written; please consider contributing!"><code>WindowProxy</code></a></td>
-   <td><a href="/zh-CN/docs/Web/API/Document/defaultView" title="In browsers, document.defaultView returns the window object associated with a document, or null if none is available."><code>document.defaultView</code></a> (该文档的<code>window</code>对象 )</td>
-  </tr>
-  <tr>
-   <td><code>detail</code> {{readonlyInline}}</td>
-   <td><code>long</code> (<code>float</code>)</td>
-   <td>0.</td>
+   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onabort','onabort')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
+
+<h2 id="浏览器兼容性"> 浏览器兼容性</h2>
+
+<article>
+{{Compat("api.GlobalEventHandlers.onabort")}}

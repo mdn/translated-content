@@ -11,19 +11,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-split.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <div>{{js_property_attributes(0,0,0)}}</div>
 
 <h2 id="示例">示例</h2>
 
-<p>[Symbol.split]指向‘aba’.split(/a/)</p>
+<p>[Symbol.split] 指向‘aba’.split(/a/)</p>
 
-<pre class="brush: js notranslate">/a/[Symbol.split]('aba',3)</pre>
+<pre class="brush: js">/a/[Symbol.split]('aba',3)</pre>
 
-<p>"dayinlove".split(exp)调用[Symbol.split](str)处理，并把实参"dayinlove"传给形参str</p>
+<p>"dayinlove".split(exp) 调用 [Symbol.split](str) 处理，并把实参"dayinlove"传给形参 str</p>
 
-<pre class="brush: js notranslate">var exp =  {
+<pre class="brush: js">var exp =  {
         pat:'in',
         [Symbol.split](str) {
           return str.split(this.pat);
@@ -45,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
   <tr>
    <td>{{SpecName('ES6', '#sec-symbol.split', 'Symbol.split')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td>初始定义.</td>
+   <td>初始定义。</td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-symbol.split', 'Symbol.split')}}</td>
@@ -57,55 +55,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(50)}}</td>
-   <td>{{ CompatGeckoDesktop(49) }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile(49) }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="参阅">参阅</h2>
 

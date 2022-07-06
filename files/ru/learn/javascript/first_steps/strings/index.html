@@ -31,23 +31,23 @@ original_slug: Learn/JavaScript/Первые_шаги/Строки
 
 <h2 id="Строки_—_основы">Строки — основы</h2>
 
-<p>С первого взгляда строки обрабатываются аналогично числам, но если копнуть глубже, вы увидите некоторые заметные отличия. Давайте начнём с ввода некоторых основных строк в <a href="/ru/docs/Learn/Common_questions/What_are_browser_developer_tools">консоль разработчика</a>, чтобы ознакомиться с ними.</p>
+<p>С первого взгляда строки обрабатываются аналогично числам, но если копнуть глубже, вы увидите некоторые заметные отличия. Давайте начнём с ввода некоторых основных строк в <a href="/ru/docs/Learn/Common_questions/What_are_browser_developer_tools">консоль разработчика</a>, чтобы познакомиться с ними.</p>
 
 <h3 id="Создание_строки">Создание строки</h3>
 
 <ol>
  <li>Для начала введите следующие строки:
-  <pre class="brush: js notranslate">var string = 'The revolution will not be televised.';
+  <pre class="brush: js">var string = 'The revolution will not be televised.';
 string;</pre>
  </li>
  <li>Как и в случае с числами, мы объявляем переменную, инициализируя её строковым значением, а затем возвращаем значение. Единственное различие здесь в том, что при написании строки вам нужно окружить значение кавычками. </li>
  <li>Если вы не сделаете этого или пропустите одну из кавычек, вы получите сообщение об ошибке. Попробуйте ввести следующие строки:
-  <pre class="brush: js example-bad notranslate">var badString = This is a test;
+  <pre class="brush: js example-bad">var badString = This is a test;
 var badString = 'This is a test;
 var badString = This is a test';</pre>
   Эти строки не работают, потому что любая текстовая строка без кавычек считается именем переменной, именем свойства, зарезервированным словом или чем-то подобным. Если браузер не может найти его, возникает ошибка (например, «missing, before statement»). Если браузер может видеть, где начинается строка, но не может найти конец строки, как указано во 2-й строке, она жалуется на ошибку (с «unterminated string literal»). Если ваша программа выявляет такие ошибки, вернитесь назад и проверьте все свои строки, чтобы убедиться, что у вас нет пропущенных кавычек.</li>
  <li>Следующий код будет выполнен только в том случае, если ранее была объявлена переменная <code>string</code> — убедитесь сами:
-  <pre class="brush: js notranslate">var badString = string;
+  <pre class="brush: js">var badString = string;
 badString;</pre>
   В настоящее время строка <code>badString</code> имеет то же значение, что и строка <code>string</code>.</li>
 </ol>
@@ -56,22 +56,22 @@ badString;</pre>
 
 <ol>
  <li>В JavaScript вы можете выбрать одинарные кавычки или двойные кавычки, чтобы обернуть ваши строки. Оба варианта будут работать нормально:
-  <pre class="brush: js notranslate">var sgl = 'Single quotes.';
+  <pre class="brush: js">var sgl = 'Single quotes.';
 var dbl = "Double quotes";
 sgl;
 dbl;</pre>
  </li>
  <li>Существует очень мало различий между одиночными и двойными кавычками, и решение какие из них использовать в коде остаётся на ваше усмотрение. Однако вы должны выбрать один вариант и придерживаться его, иначе ваш код может выдать ошибку, особенно если вы используете разные кавычки в одной строке! Ниже приведён пример:
-  <pre class="brush: js example-bad notranslate">var badQuotes = 'What on earth?";</pre>
+  <pre class="brush: js example-bad">var badQuotes = 'What on earth?";</pre>
  </li>
  <li>Браузер будет считать, что строка не была закрыта, потому что в строке может появиться другой тип цитаты, который вы не используете, чтобы хранить ваши строки в переменных. Из примера можно понять, о чем идёт речь (в коде ошибок нет):
-  <pre class="brush: js notranslate">var sglDbl = 'Would you eat a "fish supper"?';
+  <pre class="brush: js">var sglDbl = 'Would you eat a "fish supper"?';
 var dblSgl = "I'm feeling blue.";
 sglDbl;
 dblSgl;</pre>
  </li>
  <li>Однако вы не можете включить один и тот же знак кавычки внутри строки, если он используется для их хранения. Ниже приведена ошибка, браузер ошибочно определяет место, где строка кончается:
-  <pre class="brush: js example-bad notranslate">var bigmouth = 'I've got no right to take my place...';</pre>
+  <pre class="brush: js example-bad">var bigmouth = 'I've got no right to take my place...';</pre>
   Что приводит нас к следующей теме.</li>
 </ol>
 
@@ -79,27 +79,27 @@ dblSgl;</pre>
 
 <p>Чтобы исправить нашу предыдущую строку кода, нам нужно дать понять браузеру, что кавычка в середине строки не является меткой её конца. Экранирование символов означает, что мы делаем что-то с ними, чтобы убедиться, что они распознаются как текст, а не часть кода. В JavaScript мы делаем это, помещая обратную косую черту непосредственно перед символом. Введите эти строки:</p>
 
-<pre class="brush: js notranslate">var bigmouth = 'I\'ve got no right to take my place...';
+<pre class="brush: js">var bigmouth = 'I\'ve got no right to take my place...';
 bigmouth;</pre>
 
-<p>Так лучше. Таким же образом можно экранировать и другие символы, например <code>"\</code>. Кроме того существуют специальные коды. Для дополнительной информации см. <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation">Escape notation</a>.</p>
+<p>Так лучше. Таким же образом можно экранировать и другие символы, например <code>"\</code>. Кроме того существуют специальные коды. Для дополнительной информации см. <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation">Escape notation</a>.</p>
 
 <h2 id="Конкатенация_строк">Конкатенация строк</h2>
 
 <ol>
  <li>Конкатенация — это новомодное программистское слово, которое означает «объединить». Объединение строк в JavaScript использует оператор плюс (+), тот же, который мы используем для сложения чисел, но в этом контексте он делает кое-что другое. Попробуем пример в нашей консоли.</li>
  <li>
-  <pre class="brush: js notranslate">var one = 'Hello, ';
+  <pre class="brush: js">var one = 'Hello, ';
 var two = 'how are you?';
 var joined = one + two;
 joined;</pre>
   Результат этой программы - это переменная <code>joined</code>, содержащая значение "Hello, how are you?".</li>
  <li>В последнем случае мы просто объединим две строки вместе, но на самом деле, вы можете объединить столько строк, сколько хотите, до тех пор, пока вы ставите <code>+</code> между ними. Попробуйте это:
-  <pre class="brush: js notranslate">var multiple = one + one + one + one + two;
+  <pre class="brush: js">var multiple = one + one + one + one + two;
 multiple;</pre>
  </li>
  <li>Вы также можете использовать сочетание переменных и фактических строк. Попробуйте это:
-  <pre class="brush: js notranslate">var response = one + 'I am fine — ' + two;
+  <pre class="brush: js">var response = one + 'I am fine — ' + two;
 response;</pre>
  </li>
 </ol>
@@ -112,16 +112,16 @@ response;</pre>
 
 <p>Давайте посмотрим на конкатенацию строк в действии — вот пример из предыдущего курса:</p>
 
-<pre class="brush: html notranslate">&lt;button&gt;Press me&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button&gt;Press me&lt;/button&gt;</pre>
 
-<pre class="brush: js notranslate">var button = document.querySelector('button');
+<pre class="brush: js">var button = document.querySelector('button');
 
 button.onclick = function() {
   var name = prompt('What is your name?');
   alert('Hello ' + name + ', nice to see you!');
 }</pre>
 
-<p>{{ EmbedLiveSample('Concatenation_in_context', '100%', 50) }}</p>
+<p>{{ EmbedLiveSample('Конкатенация_строк_в_контексте', '100%', 50, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <p>Здесь мы используем функцию {{domxref ("Window.prompt ()", "Window.prompt ()")}} в строке 4, которая просит пользователя ответить на вопрос через всплывающее диалоговое окно, а затем сохраняет введённый текст внутри заданной переменной — в этом случае <code><strong>name</strong></code>. Затем мы используем функцию {{domxref ("Window.alert ()", "Window.alert ()")}} в строке 5 для отображения другого всплывающего окна, содержащего строку, которую мы собрали из двух строковых литералов и переменной <code>name</code>.</p>
 
@@ -129,22 +129,22 @@ button.onclick = function() {
 
 <ol>
  <li>Итак, что происходит, когда мы пытаемся добавить (или конкатенировать) строку и число? Попробуем это в нашей консоли:
-  <pre class="brush: js notranslate">'Front ' + 242;
+  <pre class="brush: js">'Front ' + 242;
 </pre>
   Вы можете ожидать, что это вызовет ошибку, но все работает отлично. Попытка представить строку как число на самом деле не имеет смысла, но число как строку — имеет, поэтому браузер довольно умно преобразует число в строку и объединяет две строки вместе.</li>
  <li>Вы даже можете сделать это с двумя числами, вы можете заставить число стать строкой, обернув её в кавычки. Попробуйте следующее (мы используем оператор <code>typeof</code> для того, чтобы установить является ли переменная числом или строкой):
-  <pre class="brush: js notranslate">var myDate = '19' + '67';
+  <pre class="brush: js">var myDate = '19' + '67';
 typeof myDate;</pre>
  </li>
  <li>Если у вас есть числовая переменная, которую вы хотите преобразовать в строчную без внесения каких-либо иных изменений или строковую переменную, которую вы хотите преобразовать в число, вы можете использовать следующие две конструкции:
   <ul>
    <li>Объект {{jsxref ("Number")}} преобразует всё переданное в него в число, если это возможно. Попробуйте следующее:
-    <pre class="brush: js notranslate">var myString = '123';
+    <pre class="brush: js">var myString = '123';
 var myNum = Number(myString);
 typeof myNum;</pre>
    </li>
-   <li>С другой стороны, каждое число имеет метод, называемый <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">toString()</a></code>, который преобразует его в эквивалентную строку. Попробуй это:
-    <pre class="brush: js notranslate">var myNum = 123;
+   <li>С другой стороны, каждое число имеет метод, называемый <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">toString()</a></code>, который преобразует его в эквивалентную строку. Попробуй это:
+    <pre class="brush: js">var myNum = 123;
 var myString = myNum.toString();
 typeof myString;</pre>
    </li>

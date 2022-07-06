@@ -6,14 +6,31 @@ tags:
   - Reference
   - ヘッダー
   - レスポンスヘッダー
+browser-compat: http.headers.Expect-CT
 translation_of: Web/HTTP/Headers/Expect-CT
 ---
 <p>{{HTTPSidebar}}</p>
 
-<p><code>Expect-CT</code> ヘッダーは、サイトが認証透過性の要件の報告や強制に参加して、サイトの不正な認証情報が通知されない状態を防ぐことができます。</p>
+<p><code>Expect-CT</code> ヘッダーは、サイトが<a href="/ja/docs/Web/Security/Certificate_Transparency">証明書の透明性</a>の要件の報告や強制に参加して、サイトの不正な認証情報の使用が通知されない状態を防ぐことができます。</p>
+
+<p>CT の要件は、以下のいずれかの仕組みで満たすことができます。</p>
+
+<ul>
+ <li>個々のログで発行された署名付き証明書のタイムスタンプを埋め込めるようにするための X.509v3 証明書の拡張</li>
+ <li>ハンドシェイク中に送信される <code>signed_certificate_timestamp</code> 型の TLS 拡張</li>
+ <li>OCSP ステープリング (つまり、 <code>status_request</code> TLS 拡張) に対応し、 <code>SignedCertificateTimestampList</code> を提供すること</li>
+</ul>
 
 <div class="note">
 <p>サイトが <code>Expect-CT</code> ヘッダーを有効にすると、ブラウザーが<strong><a href="https://www.certificate-transparency.org/known-logs">公開 CT ログ</a></strong>に現れるサイトのすべての認証情報をチェックするよう要求します。</p>
+</div>
+
+<div class="notecard note">
+  <p><strong>メモ:</strong> ブラウザーは、 HTTP では <code>Expect-CT</code> ヘッダーを<strong>無視</strong>し、 HTTPS 接続でのみ効果を発揮します。</p>
+</div>
+
+<div class="notecard note">
+<p><strong>メモ:</strong> <code>Expect-CT</code> は 2021 年 6 月に廃止される可能性が高いです。 2018 年 5 月以降、新しい証明書は既定で SCT に対応することが期待されています。 2018 年 3 月以前の証明書は 39 ヶ月の有効期限が認められていましたが、それらが 2021 年 6 月にすべて失効します。</p>
 </div>
 
 <table class="properties">
@@ -29,43 +46,48 @@ translation_of: Web/HTTP/Headers/Expect-CT
  </tbody>
 </table>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+<h2 id="Syntax">構文</h2>
 
 <pre>Expect-CT: report-uri="&lt;uri&gt;",
            enforce,
            max-age=&lt;age&gt;</pre>
 
-<h2 id="Directives" name="Directives">ディレクティブ</h2>
+<h2 id="Directives">ディレクティブ</h2>
 
 <dl>
- <dt>max-age</dt>
+ <dt><code>max-age</code></dt>
  <dd>
  <p><code>Expect-CT</code> ヘッダーフィールドを受信した後で、ユーザーエージェントがメッセージを受信したホストを、既知の Expect-CT ホストと見なすべき時間を秒数で指定します。</p>
 
- <p>キャッシュが表現可能な値よりも大きな値を受信した場合や、計算でオーバーフローが発生した場合、キャッシュは値を 2147483648 (2^31) または使用している表現方法で最も大きな整数値とみなします。</p>
+ <p>キャッシュが表現可能な値よりも大きな値を受信した場合や、計算でオーバーフローが発生した場合、キャッシュは値を 2,147,483,648 (2^31) または使用している表現方法で最も大きな整数値とみなします。</p>
  </dd>
- <dt>report-uri="&lt;uri&gt;" {{optional_inline}}</dt>
+ <dt><code>report-uri="&lt;uri&gt;"</code> {{optional_inline}}</dt>
  <dd>
- <p>ユーザーエージェントが Expect-CT の失敗を報告する URI を指定します。</p>
- <code>enforce</code> ディレクティブと <code>report-uri</code> ディレクティブが両方ともある場合、設定は "enforce-and-report" の設定と呼ばれ、ユーザーエージェントに認証透過性ポリシーに従い、違反を報告することを指示します。
-
- <p> </p>
- </dd>
- <dt>enforce {{optional_inline}}</dt>
+ <p>ユーザーエージェントが <code>Expect-CT</code> の失敗を報告する URI を指定します。</p>
+ <code>enforce</code> ディレクティブと <code>report-uri</code> ディレクティブが両方ともある場合、設定は "enforce-and-report" の設定と呼ばれ、ユーザーエージェントに証明書の透明性ポリシーに従い、違反を報告することを指示します。</dd>
+ <dt><code>enforce</code> {{optional_inline}}</dt>
  <dd>
- <p>ユーザーエージェントに (報告するだけでなく) 認証透過性ポリシーに従い、ユーザーエージェントが認証透過性ポリシーに違反するコネクションを拒否するよう指示します。</p>
+ <p>ユーザーエージェントに (報告するだけでなく) 証明書の透明性ポリシーに従い、ユーザーエージェントが証明書の透明性ポリシーに違反するコネクションを拒否するよう指示します。</p>
 
- <p><code>enforce</code> ディレクティブと <code>report-uri</code> ディレクティブが両方ともある場合、設定は "enforce-and-report" の設定と呼ばれ、ユーザーエージェントに認証透過性ポリシーに従い、違反を報告することを指示します。</p>
+ <p><code>enforce</code> ディレクティブと <code>report-uri</code> ディレクティブが両方ともある場合、設定は "enforce-and-report" の設定と呼ばれ、ユーザーエージェントに証明書の透明性ポリシーに従い、違反を報告することを指示します。</p>
  </dd>
 </dl>
 
-<h2 id="Example" name="Example">例</h2>
+<h2 id="Example">例</h2>
 
-<p>以下の例は認証透過性を24時間強制し、違反を foo.example に報告することを示します。</p>
+<p>以下の例は証明書の透明性を 24 時間強制し、違反を <code>foo.example</code> に報告することを示します。</p>
 
 <pre>Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"</pre>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Notes">メモ</h2>
+
+<p>信頼ストアに手動で追加されたルート CA は、 <code>Expect-CT</code> の報告/強制を上書きし、抑制します。</p>
+
+<p>ブラウザーは、サイトが証明書の透明性要件を満たす証明書を提供できることを「証明」しない限り、 <code>Expect-CT</code> ポリシーを記憶しません。ブラウザーは、どの CT ログが証明書のログとして信頼できるとみなされるかについて、独自の信頼モデルを実装しています。</p>
+
+<p>Chrome のビルドは、インストールのビルド日から 10 週間後に <code>Expect-CT</code> ポリシーの施行を停止するように設計されています。</p>
+
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -76,14 +98,12 @@ translation_of: Web/HTTP/Headers/Expect-CT
  </thead>
  <tbody>
   <tr>
-   <td><a href="https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-07">Internet Draft</a></td>
+   <td><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-08">Internet Draft</a></td>
    <td>Expect-CT Extension for HTTP</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</p>
-
-<p>{{Compat("http.headers.Expect-CT")}}</p>
+<p>{{Compat}}</p>

@@ -1,0 +1,67 @@
+---
+title: Window.onbeforeinstallprompt
+slug: Web/API/Window/beforeinstallprompt_event
+tags:
+  - Window.onbeforeinstallprompt
+  - beforeinstallprompt
+translation_of: Web/API/Window/onbeforeinstallprompt
+original_slug: Web/API/Window/onbeforeinstallprompt
+---
+<p>{{ ApiRef() }}</p>
+
+<p><code><strong>Window.onbeforeinstallprompt</strong></code> 属性是一个事件处理程序，用于处理一个{{event("beforeinstallprompt")}}, 当一个 Web 清单存在时，它将在移动设备上发送，但是在提示用户将网站保存到主屏幕之前。</p>
+
+<h2 id="句法">句法</h2>
+
+<pre class="syntaxbox">window.addEventListener("beforeinstallprompt", function(event) { ... });
+
+window.onbeforeinstallprompt = function(event) { ...};</pre>
+
+<h2 id="范例">范例</h2>
+
+<p>The following example uses the beforeinstallprompt function to verify that it is an appropriate time to display an installation prompt to the user. If it is not, the event is redispatched.</p>
+
+<pre class="brush: js">let isTooSoon = true;
+window.addEventListener("beforeinstallprompt", function(e) {
+  if (isTooSoon) {
+    e.preventDefault(); // Prevents prompt display
+    // Prompt later instead:
+    setTimeout(function() {
+      isTooSoon = false;
+      e.prompt(); // Shows prompt
+    }, 10000);
+  }
+
+  // The event was re-dispatched in response to our request
+  // ...
+});</pre>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+{{Compat("api.Window.onbeforeinstallprompt")}}
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Manifest', '#onbeforeinstallprompt-attribute', 'Window.onbeforeinstallprompt')}}</td>
+   <td>{{Spec2('Manifest')}}</td>
+   <td>Initial specification.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="也可以看看">也可以看看</h2>
+
+<ul>
+ <li>{{domxref("BeforeInstallPromptEvent.prompt")}}</li>
+ <li>{{domxref("BeforeInstallPromptEvent")}}</li>
+</ul>

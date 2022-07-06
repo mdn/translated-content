@@ -5,15 +5,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 ---
 <div>{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
-<p><code><strong>ReferenceError（引用错误）</strong></code> 对象代表当一个不存在的变量被引用时发生的错误。</p>
+<p><code><strong>ReferenceError</strong></code>（引用错误）对象代表当一个不存在（或尚未初始化）的变量被引用时发生的错误。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>new ReferenceError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>message</code></dt>
@@ -24,34 +24,34 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
  <dd>可选。引起异常的代码行号</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>当你尝试引用一个未被定义的变量时，将会抛出一个 <code>ReferenceError</code> 。</p>
 
-<h2 id="Properties" name="Properties">属性</h2>
+<h2 id="Properties">属性</h2>
 
 <dl>
  <dt>{{jsxref("ReferenceError.prototype")}}</dt>
  <dd>Allows the addition of properties to an <code>ReferenceError</code> object.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
 <p>全局的 <code>ReferenceError</code> 本身并不包含有方法，但是他可以从原型链上继承一些方法</p>
 
-<h2 id="ReferenceError_instances" name="ReferenceError_instances"><code>ReferenceError</code> 实例</h2>
+<h2 id="ReferenceError_instances"><code>ReferenceError</code> 实例</h2>
 
-<h3 id="Properties_of_ReferenceError_instances" name="Properties_of_ReferenceError_instances">属性</h3>
+<h3 id="Properties_of_ReferenceError_instances">属性</h3>
 
 <div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties')}}</div>
 
-<h3 id="Methods_of_ReferenceError_instances" name="Methods_of_ReferenceError_instances">方法</h3>
+<h3 id="Methods_of_ReferenceError_instances">方法</h3>
 
 <div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods')}}</div>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
-<h3 id="Example:_Catch_an_ReferenceError" name="Example:_Catch_an_ReferenceError">例: 捕获一个 <code>ReferenceError</code></h3>
+<h3 id="Example:_Catch_an_ReferenceError">例：捕获一个 <code>ReferenceError</code></h3>
 
 <pre class="brush: js">try {
   var a = undefinedVariable;
@@ -66,7 +66,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 }
 </pre>
 
-<h3 id="Example:_Create_an_ReferenceError" name="Example:_Create_an_ReferenceError">例: 创建一个 <code>ReferenceError</code></h3>
+<h3 id="Example:_Create_an_ReferenceError">例：创建一个 <code>ReferenceError</code></h3>
 
 <pre class="brush: js">try {
   throw new ReferenceError('Hello', 'someFile.js', 10);
@@ -110,57 +110,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Error")}}</li>

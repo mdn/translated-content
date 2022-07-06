@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">new Proxy(<var>target</var>, <var>handler</var>)</pre>
+<pre class="syntaxbox">new Proxy(<var>target</var>, <var>handler</var>)</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -70,7 +70,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 
 <p>本例中，被代理对象有两个属性： <code>notProxied</code>  和 <code>proxied</code> 。我们定义了一个处理函数，它为 <code>proxied</code> 属性返回一个不同的值，而其他属性返回原值。</p>
 
-<pre class="brush: js notranslate">const target = {
+<pre class="brush: js">const target = {
   notProxied: "original value",
   proxied: "original value"
 };

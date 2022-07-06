@@ -18,7 +18,7 @@ translation_of: Web/CSS/filter
 
 <p>Hay varias funciones Incluidas en el estándar CSS que logran efectos predefinidos. También puede hacer referencia a un filtro especificado en SVG con una URL  a un <a href="/es/docs/Web/SVG/Element/filter" title="/en/SVG/Element/filter">filtro de un elemento SVG</a>.</p>
 
-<div class="note"><strong>Nota:</strong> Versiones anteriores (4.0 hasta 9.0) del navegador Internet Explorer de Windows admiten una propiedad <a class="external" href="https://msdn.microsoft.com/es-es/library/ms532853(v=vs.85).aspx" title="http://msdn.microsoft.com/en-us/library/ms532853(v=vs.85).aspx">"filter"</a> no incluida en el estándar que ha quedado en desuso.</div>
+<div class="note"><strong>Nota:</strong> Versiones anteriores (4.0 hasta 9.0) del navegador Internet Explorer de Windows admiten una propiedad <a class="external" href="https://msdn.microsoft.com/es-es/library/ms532853(v=vs.85).aspx">"filter"</a> no incluida en el estándar que ha quedado en desuso.</div>
 
 <p>{{cssinfo}}</p>
 
@@ -1110,79 +1110,7 @@ table.standard-table td {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatChrome("18.0")}}{{ property_prefix("-webkit") }} [4]</td>
-   <td>{{ CompatGeckoDesktop(35) }} [1] [2]</td>
-   <td>{{ CompatNo() }} [3]</td>
-   <td>{{CompatOpera("15.0")}}{{ property_prefix("-webkit")}}</td>
-   <td>{{ CompatSafari("6.0") }}{{ property_prefix("-webkit") }}</td>
-  </tr>
-  <tr>
-   <td>En elementos SVG</td>
-   <td>{{CompatNo}} (See bug 109224)</td>
-   <td>{{ CompatGeckoDesktop(35) }}</td>
-   <td>{{ CompatNo}}</td>
-   <td>{{ CompatNo}}</td>
-   <td>{{ CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{ CompatAndroid("4.4") }}{{ property_prefix("-webkit")}}</td>
-   <td>{{ CompatGeckoDesktop(35) }} [1] [2]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>22.0 {{ CompatVersionUnknown() }}{{ property_prefix("-webkit")}}</td>
-   <td>
-    <p>6.0 {{ CompatVersionUnknown() }}{{ property_prefix("-webkit")}}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>En elementos SVG</td>
-   <td>{{CompatNo}} (See bug 109224)</td>
-   <td>{{ CompatGeckoDesktop(35) }}</td>
-   <td>{{ CompatNo}}</td>
-   <td>{{ CompatNo}}</td>
-   <td>{{ CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Antes de Firefox 34, Gecko solo implementa la forma <code>{{ anch("url()") }}</code> de la propiedad <code>filter</code>; como no estaba implementado el encadenamiento, solo se permitía una <code>url()</code> (o cuando la preferencia <code>layout.css.filters.enabled era establecida a </code><code>false</code>).<br>
- <br>
- [2] Los valores funcionales de <code>filter</code> son controlados por la preferencia <code>layout.css.filters.enabled</code>, pero fue deshabiliada en Firefox 34.</p>
-
-<p>[3] Internet Explorer 4.0 a 9.0 implementan una propiedad <code>filter</code> que no es estándar. La sintáxis era completamente diferente del estándar, y no está documentada aquí.</p>
-
-<p>[4] En Chrome 18 a 19, la función <code>saturate()</code> solo toma enteros, en vez de decimales o porcentajes. Este bug fue corregido en Chrome 20 y superiores.</p>
+{{Compat("css.properties.filter")}}
 
 <h2 id="Véase_también">Véase también</h2>
 

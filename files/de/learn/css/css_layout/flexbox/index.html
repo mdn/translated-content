@@ -53,7 +53,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Sie werden sehen, dass wir ein {{htmlelement ("header")}} Element mit einer Überschrift der obersten Ebene und ein {{htmlelement ("section")}} Element mit drei {{htmlelement ("article") }} haben. Wir werden damit ein standardmäßiges dreispaltiges Layout erstellen.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13406/flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
 <h2 id="Festlegen_der_Elemente_für_flexible_Boxen">Festlegen der Elemente für flexible Boxen </h2>
 
@@ -65,7 +65,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Dies führt dazu, dass das &lt;section&gt; -Element zu einem <strong>Flex-Container</strong> wird und seine untergeordneten Elemente zu <strong>Flex-Elementen</strong> werden. Das Ergebnis sollte ungefähr so sein:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13408/flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
 
 <p>Diese Deklaration erzeugt alles, was wir brauchen - unglaublich, oder? Wir haben unser mehrspaltiges Layout mit gleich großen Spalten, und die Spalten haben alle die gleiche Höhe. Dies liegt an de Standardwerte für Flex-Elemente (die untergeordneten Elemente des Flex-Containers), die  so eingerichtet sind, um solche häufig auftretenden Probleme wie dieses zu lösen.</p>
 
@@ -75,7 +75,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Wenn Elemente als flex-Elemente angeordnet sind, werden sie entlang zweier Achsen angeordnet:</p>
 
-<p><img alt="flex_terms.png" class="default internal" src="/files/3739/flex_terms.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="flex_terms.png" class="default internal" src="flex_terms.png"></p>
 
 <ul>
  <li>Die <strong>Hauptachse (main axis) </strong>ist die Achse, die in der Richtung verläuft, in der die Flex-Elemente angeordnet sind (z. B. als Zeilen auf der Seite oder Spalten auf der Seite). Anfang und Ende dieser Achse werden als main start und main end bezeichnet.</li>
@@ -104,7 +104,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Ein Problem, das auftritt, wenn Sie eine feste Breite oder Höhe in Ihrem Layout haben, ist, dass Ihre Flexbox-Kinder möglicherweise ihren Container überlaufen und das Layout beschädigen. Schauen Sie sich unser Beispiel <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html">flexbox-wrap0.html</a> an und versuchen Sie, <a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html">es live anzuzeigen</a> (erstellen Sie jetzt eine lokale Kopie dieser Datei, wenn Sie diesem Beispiel folgen möchten):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13410/flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
 
 <p>Hier sehen wir die Kind-Elemente tatsächlich aus ihrem Container laufen. Eine Möglichkeit, dies zu beheben, besteht darin, Ihrer {{htmlelement ("section")}} -Regel die folgende Deklaration hinzuzufügen:</p>
 
@@ -116,7 +116,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Sie werden sehen, dass das Layout damit viel besser aussieht:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13412/flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
 
 <p>Wir haben jetzt mehrere Zeilen - so viele Flexbox-Kinder werden in jede Zeile eingefügt, wie sinnvoll ist, und jeder Überlauf wird in die nächste Zeile verschoben. Die auf den Artikeln festgelegte <code>flex: 200px</code>-Deklaration bedeutet, dass jede mindestens 200px breit ist. Wir werden diese Eigenschaft später genauer besprechen. Möglicherweise stellen Sie auch fest, dass die letzten untergeordneten Elemente in der letzten Zeile jeweils breiter sind, sodass die gesamte Zeile noch gefüllt ist.</p>
 
@@ -165,7 +165,7 @@ article:nth-of-type(3) {
 
 <p>Das heißt im Wesentlichen: "Jedes Flex-Element erhält zuerst 200 Pixel des verfügbaren Speicherplatzes. Danach wird der Rest des verfügbaren Speicherplatzes entsprechend den Proportionseinheiten aufgeteilt." Versuchen Sie es mit einer Aktualisierung, und Sie werden einen Unterschied in der Aufteilung des Speicherplatzes feststellen.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13406/flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
 <p>Der wahre Wert von flexbox zeigt sich in seiner Flexibilität / Responsiveness. Wenn Sie die Größe des Browserfensters ändern oder ein weiteres {{htmlelement ("article")}} Element hinzufügen, funktioniert das Layout weiterhin einwandfrei.</p>
 
@@ -185,19 +185,19 @@ article:nth-of-type(3) {
 
 <p>Sie können auch Flexbox-Funktionen verwenden, um Flex-Elemente entlang der Haupt- oder Querachse auszurichten. Schauen wir uns dies anhand eines neuen Beispiels an - f<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">lex-align0.html</a> (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">siehe auch live</a>) - das wir in eine übersichtliche, flexible Schaltfläche / Symbolleiste verwandeln werden. Im Moment sehen Sie eine horizontale Menüleiste mit einigen Schaltflächen in der oberen linken Ecke.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13414/flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="" src="flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
 
 <p>Nehmen Sie zunächst eine lokale Kopie dieses Beispiels.</p>
 
 <p>Fügen Sie nun am Ende des CSS des Beispiels Folgendes hinzu:</p>
 
-<pre class="brush: css  notranslate">div {
+<pre class="brush: css notranslate">div {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }</pre>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17210/flexbox_center_space-around.png" style="height: 209px; width: 1217px;"></p>
+<p><img alt="" src="flexbox_center_space-around.png" style="height: 209px; width: 1217px;"></p>
 
 <p>Aktualisieren Sie die Seite und Sie werden sehen, dass die Schaltflächen jetzt horizontal und vertikal gut zentriert sind. Wir haben dies über zwei neue Eigenschaften getan.</p>
 
@@ -215,7 +215,7 @@ article:nth-of-type(3) {
   align-self: flex-end;
 }</pre>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17211/flexbox_first-child_flex-end.png" style="height: 217px; width: 1219px;"></p>
+<p><img alt="" src="flexbox_first-child_flex-end.png" style="height: 217px; width: 1219px;"></p>
 
 <p>Sehen Sie sich an, welchen Effekt dies hat, und entfernen Sie ihn erneut, wenn Sie fertig sind.</p>
 
@@ -260,7 +260,7 @@ article:nth-of-type(3) {
 
 <p>Mit der Flexbox können einige recht komplexe Layouts erstellt werden. Es ist vollkommen in Ordnung, ein Flex-Element auch als Flex-Container festzulegen, damit seine untergeordneten Elemente auch wie flexible Boxen angeordnet sind. Schauen Sie sich <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html">complex-flexbox.html</a> an (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html">Live-Ansicht</a>).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13418/flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Das HTML dafür ist ziemlich einfach. Wir haben ein {{htmlelement ("section")}} Element, das drei {{htmlelement ("article")}} enthält. Das dritte {{htmlelement ("article")}} enthält drei {{htmlelement ("div")}}. ::</p>
 
@@ -320,7 +320,7 @@ article:nth-of-type(3) {
 
 <p>Flexbox ist etwas kniffliger als einige CSS-Funktionen. Wenn einem Browser beispielsweise ein CSS-Schlagschatten fehlt, kann die Site wahrscheinlich weiterhin verwendet werden. Wenn Flexbox-Funktionen nicht unterstützt werden, wird ein Layout wahrscheinlich vollständig beschädigt, wodurch es unbrauchbar wird.</p>
 
-<p>In unserem <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross-Browser-Testmodul</a> diskutieren wir Strategien zur Überwindung von Problemen mit der Cross-Browser-Unterstützung.</p>
+<p>In unserem <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross-Browser-Testmodul</a> diskutieren wir Strategien zur Überwindung von Problemen mit der Cross-Browser-Unterstützung.</p>
 
 <h2 id="Testen_Sie_Ihre_Fähigkeiten!">Testen Sie Ihre Fähigkeiten!</h2>
 

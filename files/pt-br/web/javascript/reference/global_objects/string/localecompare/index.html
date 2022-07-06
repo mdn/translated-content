@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
  <dd>
  <p>Esses argumentos personalizam o comportamento da função e permitem que os aplicativos especifiquem o idioma cujas convenções de formatação devem ser usadas. Em implementações que ignoram os argumentos <em><code>locales</code></em> e <em><code>options</code></em>, a localidade usada e a forma da string retornada são inteiramente dependentes da implementação.</p>
 
- <p>Consulte o <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator" title="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator">construtor </a><code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator" title="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator">Intl.Collator()</a></code> para obter detalhes sobre esses parâmetros e como usá-los.</p>
+ <p>Consulte o <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator">construtor </a><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator">Intl.Collator()</a></code> para obter detalhes sobre esses parâmetros e como usá-los.</p>
  </dd>
 </dl>
 
@@ -70,7 +70,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 'a'.localeCompare('c'); // -2 ou -1 (ou algum outro valor negativo)
 
 // Alfabeticamente, a palavra "verificar" vem depois de "contra", produzindo um valor positivo
-'verificar'.localeCompare('contra'); // 2 ou 1 (ou algum outro valor negativo)
+'verificar'.localeCompare('contra'); // 2 ou 1 (ou algum outro valor positivo)
 
 // "a" e "a" são equivalentes, resultando em um valor neutro de zero
 'a'.localeCompare('a'); // 0
@@ -150,9 +150,7 @@ console.log(<span class="message-body-wrapper"><span class="message-flex-body"><
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_de_navegador">Compatibilidade de navegador</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>{{Compat("javascript.builtins.String.localeCompare")}}</p>
 

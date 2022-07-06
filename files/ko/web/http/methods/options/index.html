@@ -86,7 +86,7 @@ Origin: http://foo.example
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type</pre>
 
-<p>서버는 {{HTTPHeader("Access-Control-Allow-Methods")}}로 응답하고, <code>POST</code>, <code>GET</code>, 그리고 <code>OPTIONS</code> 메소드를 통해서 해당하는 자원을 문의 (query) 할 수 알려준다. 이 헤더는 {{HTTPHeader("Allow")}} 응답 헤더와 비슷하지만 반드시 CORS 에 한해서만 사용된다. </p>
+<p>서버는 {{HTTPHeader("Access-Control-Allow-Methods")}}로 응답하고, <code>POST</code>, <code>GET</code>, 그리고 <code>OPTIONS</code> 메소드를 통해서 해당하는 자원을 문의 (query) 할 수 있다고 알려준다. 이 헤더는 {{HTTPHeader("Allow")}} 응답 헤더와 비슷하지만 반드시 CORS 에 한해서만 사용된다. </p>
 
 <pre>HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:15:39 GMT
@@ -118,8 +118,6 @@ Content-Type: text/plain</pre>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("http.methods.OPTIONS")}}</p>
 

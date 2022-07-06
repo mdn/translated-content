@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <strong><code>toISOString()</code></strong> retorna uma cadeia de caracteres (<em>string</em>) simplificada no formato ISO extendido (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>), que é sempre 24 ou 27 caracteres de tamanho (<code><var>YYYY</var>-<var>MM</var>-<var>DD</var>T<var>HH</var>:<var>mm</var>:<var>ss.sss</var>Z</code> ou <code><var>±</var><var>YYYYYY</var>-<var>MM</var>-<var>DD</var>T<var>HH</var>:<var>mm</var>:<var>ss.sss</var>Z</code>, respectivamente). O fuso horário é sempre o deslocamente zero UTC, como denotado pelo sufixo "<code>Z</code>".</p>
+<p>O método <strong><code>toISOString()</code></strong> retorna uma cadeia de caracteres (<em>string</em>) simplificada no formato ISO extendido (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>), que é sempre 24 ou 27 caracteres de tamanho (<code><var>YYYY</var>-<var>MM</var>-<var>DD</var>T<var>HH</var>:<var>mm</var>:<var>ss.sss</var>Z</code> ou <code><var>±</var><var>YYYYYY</var>-<var>MM</var>-<var>DD</var>T<var>HH</var>:<var>mm</var>:<var>ss.sss</var>Z</code>, respectivamente). O fuso horário é sempre o deslocamento zero UTC, como denotado pelo sufixo "<code>Z</code>".</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}</div>
 
@@ -64,7 +64,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 
 <pre class="brush: js notranslate">let today = new Date('05 October 2011 14:48 UTC')
 
-console.log(today.toISOString())  // Returna 2011-10-05T14:48:00.000Z
+console.log(today.toISOString())  // Retorna 2011-10-05T14:48:00.000Z
 </pre>
 
 <p>O exemplo acima usa uma conversão de uma <em>string</em> não-padrão que pode não ser convertida corretamente em navegadores que não sejam da Mozilla..</p>
@@ -82,9 +82,7 @@ console.log(today.toISOString())  // Returna 2011-10-05T14:48:00.000Z
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_de_navegador">Compatibilidade de navegador</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>{{Compat("javascript.builtins.Date.toISOString")}}</p>
 

@@ -3,16 +3,16 @@ title: begin
 slug: Web/SVG/Attribute/begin
 tags:
   - SVG
-  - SVG属性
+  - SVG 属性
   - 参考
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/begin
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG属性参考主页</a></p>
+<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG 属性参考主页</a></p>
 
 <p>这个属性定义了动画何时开始。</p>
 
-<p>这个属性值是一个分号分隔的数列值。SMIL规范的<a class="external" href="http://www.w3.org/TR/2001/REC-smil-animation-20010904/#Timing-EvaluationOfBeginEndTimeLists" title="http://www.w3.org/TR/2001/REC-smil-animation-20010904/#Timing-EvaluationOfBeginEndTimeLists">"Evaluation of begin and end time lists"</a>章节详细解释了开始时间数列。每个单独的值可以是下述之一：<code>&lt;offset-value&gt;</code>、 <code>&lt;syncbase-value&gt;</code>、 <code>&lt;event-value&gt;</code>、 <code>&lt;repeat-value&gt;</code>、 <code>&lt;accessKey-value&gt;</code>、 <code>&lt;wallclock-sync-value&gt;</code>或者关键词<code>indefinite</code>。</p>
+<p>这个属性值是一个分号分隔的数列值。SMIL 规范的<a class="external" href="http://www.w3.org/TR/2001/REC-smil-animation-20010904/#Timing-EvaluationOfBeginEndTimeLists">"Evaluation of begin and end time lists"</a>章节详细解释了开始时间数列。每个单独的值可以是下述之一：<code>&lt;offset-value&gt;</code>、<code>&lt;syncbase-value&gt;</code>、<code>&lt;event-value&gt;</code>、<code>&lt;repeat-value&gt;</code>、<code>&lt;accessKey-value&gt;</code>、<code>&lt;wallclock-sync-value&gt;</code>或者关键词<code>indefinite</code>。</p>
 
 <h2 id="用法">用法</h2>
 
@@ -32,7 +32,7 @@ translation_of: Web/SVG/Attribute/begin
   </tr>
   <tr>
    <th scope="row">规范文档</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/animate.html#BeginAttribute" title="http://www.w3.org/TR/SVG/animate.html#BeginAttribute">SVG 1.1 (2nd Edition)</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/SVG/animate.html#BeginAttribute">SVG 1.1 (2nd Edition)</a></td>
   </tr>
  </tbody>
 </table>
@@ -41,38 +41,38 @@ translation_of: Web/SVG/Attribute/begin
 
 <dl>
  <dt>&lt;offset-value&gt;</dt>
- <dd>一个<a href="/en/SVG/Content_type#Clock-value" title="en/SVG/Content_type#Clock-value">时钟值</a>代表了一个相对于SVG文档开头的时间点，SVG文档开头通常是指load事件或者DOMReady事件触发的时间点。负值是合法的。</dd>
+ <dd>一个<a href="/en/SVG/Content_type#Clock-value" title="en/SVG/Content_type#Clock-value">时钟值</a>代表了一个相对于 SVG 文档开头的时间点，SVG 文档开头通常是指 load 事件或者 DOMReady 事件触发的时间点。负值是合法的。</dd>
  <dt>&lt;syncbase-value&gt;</dt>
- <dd>描述一个<em>syncbase</em>以及一个可选的来自于<em>syncbase</em>的时偏移。元素的动画开始时间被定义为相对于另一个动画的开头或者激活结束。一个ID及其后面跟着的.begin或.end构成了一个syncbase，ID引用到另一个动画元素，.begin或.end用来确定到底是与引用的动画元素的动画开头同步、 还是与引用的动画元素的动画激活结束同步。</dd>
+ <dd>描述一个<em>syncbase</em>以及一个可选的来自于<em>syncbase</em>的时偏移。元素的动画开始时间被定义为相对于另一个动画的开头或者激活结束。一个 ID 及其后面跟着的 .begin 或 .end 构成了一个 syncbase，ID 引用到另一个动画元素，.begin 或 .end 用来确定到底是与引用的动画元素的动画开头同步、还是与引用的动画元素的动画激活结束同步。</dd>
  <dt>&lt;event-value&gt;</dt>
- <dd><font face="Consolas, Liberation Mono, Courier, monospace">描述了一个事件以及一个可选的时偏移，用来确定动画开始的时点。触发指定事件的时点，被定义为动画开始的时点。一个元素ID及其后面跟着的一个点及其后面跟着事件名构成了一个合法的event-value值。事件名必须是元素支持的事件名。全部合法的事件（不一定是所有元素都支持的事件）包括这些：focusin、 focusout、 </font><code>activate</code>、 <code>click</code>、 <code>mousedown</code>、 <code>mouseup</code>、 <code>mouseover</code>、 <code>mousemove</code>、 <code>mouseout</code>、 <code>DOMSubtreeModified</code>、 <code>DOMNodeInserted</code>、 <code>DOMNodeRemoved</code>、 <code>DOMNodeRemovedFromDocument</code>、 <code>DOMNodeInsertedIntoDocument</code>、 <code>DOMAttrModified</code>、 <code>DOMCharacterDataModified</code>、 <code>SVGLoad</code>、 <code>SVGUnload</code>、 <code>SVGAbort</code>、 <code>SVGError</code>、 <code>SVGResize</code>、 <code>SVGScroll</code>、 <code>SVGZoom</code>、 <code>beginEvent</code>、 <code>endEvent</code>和<code>repeatEvent。</code></dd>
+ <dd>描述了一个事件以及一个可选的时偏移，用来确定动画开始的时点。触发指定事件的时点，被定义为动画开始的时点。一个元素 ID 及其后面跟着的一个点及其后面跟着事件名构成了一个合法的 event-value 值。事件名必须是元素支持的事件名。全部合法的事件（不一定是所有元素都支持的事件）包括这些：focusin、focusout、<code>activate</code>、<code>click</code>、<code>mousedown</code>、<code>mouseup</code>、<code>mouseover</code>、<code>mousemove</code>、<code>mouseout</code>、<code>DOMSubtreeModified</code>、<code>DOMNodeInserted</code>、<code>DOMNodeRemoved</code>、<code>DOMNodeRemovedFromDocument</code>、<code>DOMNodeInsertedIntoDocument</code>、<code>DOMAttrModified</code>、<code>DOMCharacterDataModified</code>、<code>SVGLoad</code>、<code>SVGUnload</code>、<code>SVGAbort</code>、<code>SVGError</code>、<code>SVGResize</code>、<code>SVGScroll</code>、<code>SVGZoom</code>、<code>beginEvent</code>、<code>endEvent</code>和<code>repeatEvent。</code></dd>
  <dt>&lt;repeat-value&gt;</dt>
- <dd>描述了一个符合条件重复事件。repeat事件发生了指定次数的时间点，被定义为元素动画的开始时间点。</dd>
+ <dd>描述了一个符合条件重复事件。repeat 事件发生了指定次数的时间点，被定义为元素动画的开始时间点。</dd>
  <dt>&lt;accessKey-value&gt;</dt>
  <dd>描述了一个用来触发动画的访问键。当用户按下指定的键时，元素动画就开始了。</dd>
  <dt>&lt;wallclock-sync-value&gt;</dt>
- <dd>描述了一个动画开始时间，是真实世界钟的时点。时点的句法遵守ISO8601定义的句法。</dd>
+ <dd>描述了一个动画开始时间，是真实世界钟的时点。时点的句法遵守 ISO8601 定义的句法。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="Offset示例">Offset示例</h3>
+<h3 id="Offset示例">Offset 示例</h3>
 
 <p>» <a href="https://developer.mozilla.org/files/3290/begin-1-offset.svg" title="https://developer.mozilla.org/files/3290/begin-1-offset.svg">begin-1-offset.svg</a></p>
 
-<h3 id="Syncbase示例">Syncbase示例</h3>
+<h3 id="Syncbase示例">Syncbase 示例</h3>
 
 <p>» <a href="https://developer.mozilla.org/files/3291/begin-2-syncbase.svg" title="https://developer.mozilla.org/files/3291/begin-2-syncbase.svg">begin-2-syncbase.svg</a></p>
 
-<h3 id="Event示例">Event示例</h3>
+<h3 id="Event示例">Event 示例</h3>
 
 <p>» <a href="https://developer.mozilla.org/files/3292/begin-3-event.svg" title="https://developer.mozilla.org/files/3292/begin-3-event.svg">begin-3-event.svg</a></p>
 
-<h3 id="Repeat示例">Repeat示例</h3>
+<h3 id="Repeat示例">Repeat 示例</h3>
 
 <p>» <a href="https://developer.mozilla.org/files/3293/begin-4-repeat.svg" title="https://developer.mozilla.org/files/3293/begin-4-repeat.svg">begin-4-repeat.svg</a></p>
 
-<h3 id="Accesskey示例">Accesskey示例</h3>
+<h3 id="Accesskey示例">Accesskey 示例</h3>
 
 <p>» <a href="https://developer.mozilla.org/files/3294/begin-5-accesskey.svg" title="https://developer.mozilla.org/files/3294/begin-5-accesskey.svg">begin-5-accesskey.svg</a></p>
 

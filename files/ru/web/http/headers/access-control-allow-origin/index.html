@@ -23,7 +23,7 @@ original_slug: Web/HTTP/Заголовки/Access-Control-Allow-Origin
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">Access-Control-Allow-Origin: *
+<pre class="syntaxbox">Access-Control-Allow-Origin: *
 Access-Control-Allow-Origin: &lt;origin&gt;
 Access-Control-Allow-Origin: null
 </pre>
@@ -45,11 +45,11 @@ Access-Control-Allow-Origin: null
 
 <p>Ответ, который указывает браузеру разрешить доступ к ресурсу из любого источника:</p>
 
-<pre class="notranslate">Access-Control-Allow-Origin: *</pre>
+<pre>Access-Control-Allow-Origin: *</pre>
 
 <p>Ответ, который указывает браузеру разрешить доступ к ресурсу только из источника <code>https://developer.mozilla.org</code>:</p>
 
-<pre class="notranslate">Access-Control-Allow-Origin: https://developer.mozilla.org</pre>
+<pre>Access-Control-Allow-Origin: https://developer.mozilla.org</pre>
 
 <p>Чтобы ограничить <code>Access-Control-Allow-Origin</code> разрешённым набором значений, необходимо реализовать логику на стороне сервера для проверки значения заголовка {{HTTPHeader("Origin")}} запроса, сравнить его с разрешённым списком источников, а затем, если значение {{HTTPHeader("Origin")}} присутствует в списке, задать значение <code>Access-Control-Allow-Origin</code>, равное значению {{HTTPHeader("Origin")}}.</p>
 
@@ -57,7 +57,7 @@ Access-Control-Allow-Origin: null
 
 <p>Если сервер послал ответ со значением <code>Access-Control-Allow-Origin</code>, которое содержит явное указание источника (а не шаблонное значение "<code>*</code>"), тогда ответ также должен включать в себя заголовок {{HTTPHeader("Vary")}} со значением <code>Origin</code> — чтобы указать браузеру, что ответы с сервера могут отличаться в зависимости от заголовка запроса <code>Origin</code>.</p>
 
-<pre class="notranslate">Access-Control-Allow-Origin: https://developer.mozilla.org
+<pre>Access-Control-Allow-Origin: https://developer.mozilla.org
 Vary: Origin</pre>
 
 <h2 id="Спецификации">Спецификации</h2>
@@ -80,10 +80,7 @@ Vary: Origin</pre>
 </table>
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("http.headers.Access-Control-Allow-Origin")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Reference/template_strings
 
 <div>Шаблонными литералами называются строковые литералы, допускающие использование выражений внутри. С ними вы можете использовать многострочные литералы и строковую интерполяцию. В спецификациях до ES2015 они назывались "шаблонными строками".</div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">`строка текста`
 
@@ -26,7 +26,7 @@ original_slug: Web/JavaScript/Reference/template_strings
 tag `строка текста ${выражение} строка текста`
 </pre>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Шаблонные литералы заключены в обратные кавычки (` `) вместо двойных или одинарных. Они могут содержать подстановки, обозначаемые знаком доллара и фигурными скобками (<code>${выражение}</code>). Выражения в подстановках и текст между ними передаются в функцию. По умолчанию функция просто объединяет все части в строку. Если перед строкой есть выражение (здесь это <code>tag</code>), то шаблонная строка называется "теговым шаблоном". В этом случае, теговое выражение (обычно функция) вызывается с обработанным шаблонным литералом, который вы можете изменить перед выводом. Для экранирования обратной кавычки в шаблонных литералах указывается обратный слеш <strong>\</strong>.</p>
 
@@ -202,36 +202,10 @@ latex`\unicode`
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-template-literals', 'Template Literals')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Изначальное определение. Определено в секциях <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-template-literals">Template Literals</a>, <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-tagged-templates">Tagged Templates</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-template-literals', 'Template Literals')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Определено в секциях <a href="https://tc39.github.io/ecma262/#sec-template-literals">Template Literals</a>, <a href="https://tc39.github.io/ecma262/#sec-tagged-templates">Tagged Templates</a></td>
-  </tr>
-  <tr>
-   <td><a href="https://tc39.github.io/proposal-template-literal-revision/">Template Literal Revision</a></td>
-   <td>Черновик 4-го уровня</td>
-   <td>Устранено ограничение экранирования в теговых шаблонах</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-
-<div class="hidden">Таблица совместимости на этой странице сгенерирована из автоматически получаемых данных. Если вы хотите внести свои данные, пожалуйста перейдите на <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам пулреквест.</div>
-
-<p>{{Compat("javascript.grammar.template_literals")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

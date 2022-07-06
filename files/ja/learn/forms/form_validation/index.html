@@ -37,7 +37,7 @@ translation_of: Learn/Forms/Form_validation
 
 <p>クライアント側検証は最初のチェックであり、ユーザーの使い勝手を良くするために重要な機能ですクライアント側で不当なデータを捕捉することで、ユーザーはすぐに修正できます。もしも無効なデータがサーバーに送られてから拒否される場合、サーバーへの往復とクライアント側に戻ってユーザーにデータを修正するように指示することにより、かなり時間を浪費します。</p>
 
-<p>しかし、クライアント側の検証はセキュリティ対策<em>とは考えられません</em>!アプリは常に<em>サーバー側でも</em>クライアント側と<strong>同様に</strong>送信されたデータのセキュリティをチェックします。なぜならクライアント側の検証は容易に回避することができて、悪意のユーザーは簡単に、サーバーへ不正なデータを送信できます。何が起こり得るかは <a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Server-side/First_steps/Website_security">ウェブサイトセキュリティ</a>を見てください。サーバー側検証はこのガイドの範囲を超えますが、覚えておいてください。</p>
+<p>しかし、クライアント側の検証はセキュリティ対策<em>とは考えられません</em>!アプリは常に<em>サーバー側でも</em>クライアント側と<strong>同様に</strong>送信されたデータのセキュリティをチェックします。なぜならクライアント側の検証は容易に回避することができて、悪意のユーザーは簡単に、サーバーへ不正なデータを送信できます。何が起こり得るかは <a href="/ja/docs/Learn/Server-side/First_steps/Website_security">ウェブサイトセキュリティ</a>を見てください。サーバー側検証はこのガイドの範囲を超えますが、覚えておいてください。</p>
 
 <h2 id="What_is_form_validation" name="What_is_form_validation">フォーム検証とは何か</h2>
 
@@ -81,7 +81,7 @@ translation_of: Learn/Forms/Form_validation
  <li><code><a href="/ja/docs/Web/HTML/Attributes/minlength">minlength</a></code> 属性と <code><a href="/ja/docs/Web/HTML/Attributes/maxlength">maxlength</a></code>属性: データ長の最小値と最大値を指定します。</li>
  <li><code><a href="/ja/docs/Web/HTML/Attributes/min">min</a></code> 属性と <code><a href="/ja/docs/Web/HTML/Attributes/max">max</a></code>属性: 値の最小値と最大値を指定します。</li>
  <li><code>type</code> 属性: その入力データが数値や、E メールアドレスや、特定の指定型かを指定します。</li>
- <li><code><a href="/ja/docs/Web/HTML/Attributes/pattern">pattern</a></code> 属性: データが指定された<a href="https://wiki.developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions">正規表現</a>にマッチするかどうかを指定します。</li>
+ <li><code><a href="/ja/docs/Web/HTML/Attributes/pattern">pattern</a></code> 属性: データが指定された<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">正規表現</a>にマッチするかどうかを指定します。</li>
 </ul>
 
 <p>入力データをこの指定されたルールに基いて検証します。検証にパスすれば妥当で検証にパスしなければ妥当ではないと考えます。</p>
@@ -132,7 +132,7 @@ input:valid {
 
 <h3 id="The_required_attribute" name="The_required_attribute">required 属性</h3>
 
-<p><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/required">required</a></code> 属性は、使うのがもっとも簡単な HTML5 の検証機能です。入力欄を必須にしたい場合は、この属性を使用して要素をマークすることができます。この属性が設定されていて、要素が {{cssxref(':required')}} にマッチすると、UI疑似クラスとフォームは送信されず、入力が空の場合のエラーメッセージが表示されるでしょう。空のままでは、この入力は不正とみなされ、{{cssxref(':invalid')}} 疑似クラスにマッチします。</p>
+<p><code><a href="/ja/docs/Web/HTML/Attributes/required">required</a></code> 属性は、使うのがもっとも簡単な HTML5 の検証機能です。入力欄を必須にしたい場合は、この属性を使用して要素をマークすることができます。この属性が設定されていて、要素が {{cssxref(':required')}} にマッチすると、UI疑似クラスとフォームは送信されず、入力が空の場合のエラーメッセージが表示されるでしょう。空のままでは、この入力は不正とみなされ、{{cssxref(':invalid')}} 疑似クラスにマッチします。</p>
 
 <p>以下のように、<code>required</code> 属性を入力欄に追加しましょう。</p>
 
@@ -187,7 +187,7 @@ input:valid {
  <li><code>abc|xyz</code> —  <code>abc</code> の並びまたは <code>xyz</code> の並びに一致する。これは <code>abcxyz</code> や <code>a</code> や <code>y</code> などには一致しない。</li>
 </ul>
 
-<p>正規表現には多くの組合せがあるので例はここまでとする。完全な一覧や多くの例は、<a href="https://wiki.developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions">正規表現</a>ドキュメントを参照してください。</p>
+<p>正規表現には多くの組合せがあるので例はここまでとする。完全な一覧や多くの例は、<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">正規表現</a>ドキュメントを参照してください。</p>
 
 <p>使用例を実装しましょう。HTML を更新して <a href="/ja/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> 属性を追加しましょう:</p>
 
@@ -215,12 +215,12 @@ input:valid {
 
 <p>この例では、{{HTMLElement("input")}} 要素は "banana"、"Banana"、"cherry" または "Cherry" という 4 つの文字列値のうち 1 つを受け付けます。正規表現は大文字小文字を区別しますが、中括弧にはさまれた"Aa"のパターンを使って小文字と同様に先頭が大文字のバージョンをサポートします。</p>
 
-<p>この時点で、<a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> 属性の中の値を以前に見たいくつかの例と同じ値に変更してみて、入力欄が有効になるように入力する値がどのように影響するかを確認してください。自分で考えた値も書いてみて、どのようになるか確認しましょう。果物に関する値を可能にすれば、例が分かりやすくなります。</p>
+<p>この時点で、<a href="/ja/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> 属性の中の値を以前に見たいくつかの例と同じ値に変更してみて、入力欄が有効になるように入力する値がどのように影響するかを確認してください。自分で考えた値も書いてみて、どのようになるか確認しましょう。果物に関する値を可能にすれば、例が分かりやすくなります。</p>
 
 <p>もし {{HTMLElement("input")}} の空ではない値が正規表現パターンに一致しなかった場合、この <code>input</code> は {{cssxref(':invalid')}} 疑似クラスに一致します。</p>
 
 <div class="blockIndicator note">
-<p><strong>メモ:</strong> {{HTMLElement("input")}} 要素の型によっては、検証のために <a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> 属性が必要ないことがあります。例えば <code>email</code> 型を指定すると、入力された文字列を、妥当な形式のメールアドレスまたは、 <a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/multiple"><code>multiple</code></a> 属性がある場合はカンマで区切られたメールアドレスのリストであることを確認する正規表現で検証します。</p>
+<p><strong>メモ:</strong> {{HTMLElement("input")}} 要素の型によっては、検証のために <a href="/ja/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> 属性が必要ないことがあります。例えば <code>email</code> 型を指定すると、入力された文字列を、妥当な形式のメールアドレスまたは、 <a href="/ja/docs/Web/HTML/Attributes/multiple"><code>multiple</code></a> 属性がある場合はカンマで区切られたメールアドレスのリストであることを確認する正規表現で検証します。</p>
 </div>
 
 <div class="blockIndicator note">
@@ -235,7 +235,7 @@ input:valid {
 
 <h3 id="Constraining_the_values_of_your_entries" name="Constraining_the_values_of_your_entries">入力欄の値に制約を加える</h3>
 
-<p>数値のフィールド (例えば <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/number">&lt;input type="number"&gt;</a></code>) の場合、<code><a href="/ja/docs/Web/HTML/Attributes/min">min</a></code> 属性と <code><a href="/ja/docs/Web/HTML/Attributes/max">max</a></code> 属性によって入力に制限を加えられます。もしそのフィールドの値がこの範囲を超える場合、そのフィールドは妥当ではありません。</p>
+<p>数値のフィールド (例えば <code><a href="/ja/docs/Web/HTML/Element/input/number">&lt;input type="number"&gt;</a></code>) の場合、<code><a href="/ja/docs/Web/HTML/Attributes/min">min</a></code> 属性と <code><a href="/ja/docs/Web/HTML/Attributes/max">max</a></code> 属性によって入力に制限を加えられます。もしそのフィールドの値がこの範囲を超える場合、そのフィールドは妥当ではありません。</p>
 
 <p>他の例を見てみましょう。<a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> ファイルの新しいコピーを作成してください。</p>
 
@@ -281,7 +281,7 @@ div {
 </div>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: <code>&lt;input type="number"&gt;</code> （及び <code>range</code> や <code>date</code> のような他の型）は <a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/step"><code>step</code></a> 属性を取ることもでき、入力コントロール（数値の増加・減少ボタンなど）を使用するときに上げ下げすることができる値の刻みを設定することができます。上の例では <code>step</code> 属性を入れていませんので、既定値の <code>1</code> となります。つまり 3.2 のような浮動小数でも、不正になります。</p>
+<p><strong>注</strong>: <code>&lt;input type="number"&gt;</code> （及び <code>range</code> や <code>date</code> のような他の型）は <a href="/ja/docs/Web/HTML/Attributes/step"><code>step</code></a> 属性を取ることもでき、入力コントロール（数値の増加・減少ボタンなど）を使用するときに上げ下げすることができる値の刻みを設定することができます。上の例では <code>step</code> 属性を入れていませんので、既定値の <code>1</code> となります。つまり 3.2 のような浮動小数でも、不正になります。</p>
 </div>
 
 <h3 id="Full_example" name="Full_example">サンプル全体</h3>
@@ -368,7 +368,7 @@ input:focus:invalid {
 
 <p>{{EmbedLiveSample("Full_example", "100%", 420)}}</p>
 
-<p>入力値と、それをサポートする入力タイプの制約に使える属性の完全なリストは、<a href="https://wiki.developer.mozilla.org/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation#Validation-related_attributes">検証関連の属性</a>を見てください。</p>
+<p>入力値と、それをサポートする入力タイプの制約に使える属性の完全なリストは、<a href="/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation#Validation-related_attributes">検証関連の属性</a>を見てください。</p>
 
 <div class="blockIndicator note">
 <p><strong>注</strong>: GitHub の <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html">fruit-length.html</a> でライブサンプルを見ることができます(<a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html">ソースコード</a>も見てください)</p>
@@ -380,15 +380,15 @@ input:focus:invalid {
 
 <h3 id="The_HTML5_constraint_validation_API" name="The_HTML5_constraint_validation_API">HTML5 の制約検証 API</h3>
 
-<p>多くのブラウザーが <a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/Constraint_validation">制約検証API</a>  に対応しています。この API は各フォーム要素で使用できる一連のメソッドやプロパティで構成されています。</p>
+<p>多くのブラウザーが <a href="/ja/docs/Web/API/Constraint_validation">制約検証API</a>  に対応しています。この API は各フォーム要素で使用できる一連のメソッドやプロパティで構成されています。</p>
 
 <ul>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/HTMLButtonElement">HTMLButtonElement</a></code> (<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/button">&lt;button&gt;</a></code> 要素を表現)</li>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/HTMLFieldSetElement">HTMLFieldSetElement</a></code> (<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/fieldset">&lt;fieldset&gt;</a></code> 要素を表現)</li>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/HTMLInputElement">HTMLInputElement</a></code> ( <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> 要素を表現)</li>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/HTMLOutputElement">HTMLOutputElement</a></code> (<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/output">&lt;output&gt;</a></code> 要素を表現)</li>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/HTMLSelectElement">HTMLSelectElement</a></code> (<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/select">&lt;select&gt;</a></code> 要素を表現)</li>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/HTMLTextAreaElement">HTMLTextAreaElement</a></code> (<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code> 要素を表現)</li>
+ <li><code><a href="/ja/docs/Web/API/HTMLButtonElement">HTMLButtonElement</a></code> (<code><a href="/ja/docs/Web/HTML/Element/button">&lt;button&gt;</a></code> 要素を表現)</li>
+ <li><code><a href="/ja/docs/Web/API/HTMLFieldSetElement">HTMLFieldSetElement</a></code> (<code><a href="/ja/docs/Web/HTML/Element/fieldset">&lt;fieldset&gt;</a></code> 要素を表現)</li>
+ <li><code><a href="/ja/docs/Web/API/HTMLInputElement">HTMLInputElement</a></code> ( <code><a href="/ja/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> 要素を表現)</li>
+ <li><code><a href="/ja/docs/Web/API/HTMLOutputElement">HTMLOutputElement</a></code> (<code><a href="/ja/docs/Web/HTML/Element/output">&lt;output&gt;</a></code> 要素を表現)</li>
+ <li><code><a href="/ja/docs/Web/API/HTMLSelectElement">HTMLSelectElement</a></code> (<code><a href="/ja/docs/Web/HTML/Element/select">&lt;select&gt;</a></code> 要素を表現)</li>
+ <li><code><a href="/ja/docs/Web/API/HTMLTextAreaElement">HTMLTextAreaElement</a></code> (<code><a href="/ja/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code> 要素を表現)</li>
 </ul>
 
 <p id="Constraint_validation_API_properties">制約検証 API には、上記の要素で利用できる、次のプロパティがあります。</p>
@@ -413,7 +413,7 @@ input:focus:invalid {
 <p id="Constraint_validation_API_methods">制約検証 API には、上記の要素で利用できる、次のメソッドがあります。</p>
 
 <ul>
- <li><code>checkValidity()</code>: 要素の値で妥当性の問題がない場合に <code>true</code> を返します。そうでない場合は <code>false</code> を返します。要素が不正である場合、このメソッドは要素で {<a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/HTMLInputElement/invalid_event"><code>invalid</code> イベント</a>を発生させます。</li>
+ <li><code>checkValidity()</code>: 要素の値で妥当性の問題がない場合に <code>true</code> を返します。そうでない場合は <code>false</code> を返します。要素が不正である場合、このメソッドは要素で {<a href="/ja/docs/Web/API/HTMLInputElement/invalid_event"><code>invalid</code> イベント</a>を発生させます。</li>
  <li><code>setCustomValidity(<em>message</em>)</code>: 要素に独自のエラーメッセージを追加します。独自のエラーメッセージを設定すると、要素が不正であるとみなされる場合に指定したエラーが表示されます。これにより JavaScript で、標準の HTML5 制約検証 API で提供されるもの以外の検証不合格状態を作り出すことができます。ユーザーに問題を報告する際に、メッセージが表示されます。</li>
 </ul>
 
@@ -428,9 +428,9 @@ input:focus:invalid {
  <li>    メッセージはブラウザーのロケールに依存しており、ある言語のページでエラーメッセージが別の言語で表示されることがあり、これは下記の Firefox スクリーンショットで見ることができます。</li>
 </ul>
 
-<p><img alt="Example of an error message with Firefox in French on an English page" src="https://wiki.developer.mozilla.org/files/4329/error-firefox-win7.png" style="height: 97px; width: 228px;"></p>
+<p><img alt="Example of an error message with Firefox in French on an English page" src="/files/4329/error-firefox-win7.png" style="height: 97px; width: 228px;"></p>
 
-<p>これらのメッセージの外見やテキストを変更するには、<a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/Constraint_validation" rel="external">制約検証 API</a> の最も一般的なユースケースです。この使用法を例で詳しく見てみましょう。</p>
+<p>これらのメッセージの外見やテキストを変更するには、<a href="/ja/docs/Web/API/Constraint_validation" rel="external">制約検証 API</a> の最も一般的なユースケースです。この使用法を例で詳しく見てみましょう。</p>
 
 <p>いくつかの簡単な HTML で開始します (空の HTML ファイルにこれを入力します; もしよければ、<a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> を基礎としてもいいでしょう):</p>
 
@@ -454,7 +454,7 @@ email.addEventListener("input", function (event) {
 
 <p>ここでメールアドレス入力への参照を保管して、入力値が変更されるたびに制約コードが走るためのイベントリスナーを追加します。</p>
 
-<p>制約コードの中で、メールアドレス入力の <code>validity.typeMismatch</code> プロパティが <code>true</code>かどうか、つまり値がメールアドレスの形式のパターンにマッチしていないかを確認します。その場合、カスタムメッセージとともに <a href="https://wiki.developer.mozilla.org/ja/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"><code>setCustomValidity()</code></a> を呼び出して、フォームを送信するときに、送信が失敗してカスタムエラーメッセージが表示されます。</p>
+<p>制約コードの中で、メールアドレス入力の <code>validity.typeMismatch</code> プロパティが <code>true</code>かどうか、つまり値がメールアドレスの形式のパターンにマッチしていないかを確認します。その場合、カスタムメッセージとともに <a href="/ja/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"><code>setCustomValidity()</code></a> を呼び出して、フォームを送信するときに、送信が失敗してカスタムエラーメッセージが表示されます。</p>
 
 <p><code>validity.typeMismatch</code> が <code>false</code>の場合、空文字で <code>setCustomValidity()</code> メソッドを呼び出します。これは入力が妥当となり、フォームが送信されます。</p>
 
@@ -485,7 +485,7 @@ email.addEventListener("input", function (event) {
 
 <p>この簡単なフォームでは、ブラウザーの自動検証を無効にするために <code><a href="/ja/docs/Web/HTML/Attributes/novalidate">novalidate</a></code> 属性を使用しています。これで、検証を制御するためにスクリプトを使用できます。ただし、これは制約検証 API の対応や CSS の疑似クラス {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}}, {{cssxref(":out-of-range")}} の適用を無効にするわけではありません。つまり、データを送信する前にブラウザーが自動的なフォームの妥当性確認を行わないとしても、あなた自身で確認を行って、フォームの状態に応じたスタイル設定ができます。</p>
 
-<p>検証する入力は <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code>で、これは <code>required</code>(入力必須)で、8文字の <code>minlength</code> があります。これをわれわれのコードで確認して、それぞれカスタムエラーメッセージを表示させてみましょう。</p>
+<p>検証する入力は <code><a href="/ja/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code>で、これは <code>required</code>(入力必須)で、8文字の <code>minlength</code> があります。これをわれわれのコードで確認して、それぞれカスタムエラーメッセージを表示させてみましょう。</p>
 
 <p><code>&lt;span&gt;</code>要素の中にエラーメッセージを表示させようとしています。 <code>&lt;span&gt;</code>にセットされた <a href="/ja/docs/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code></a> 属性は、スクリーンリーダーのような支援技術を使用している人々を含む皆に、独自のエラーメッセージを提示するようにします。</p>
 
@@ -608,7 +608,7 @@ function showError() {
 
 <ul>
  <li>入力値を変えるたびに、それが妥当なデータを含んでいるかをチェックします。その場合は表示されたエラーメッセージを削除します。データが不正の場合は、適当なエラーを表示する <code>showError()</code> を実行します。</li>
- <li>フォームの送信を試すごとに、またデータが妥当かチェックします。その場合はフォームの送信を許可します。そうでない場合、適当なエラーを表示する <code>showError()</code> を実行し、<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/Event/preventDefault">preventDefault()</a></code>でフォーム送信を停止します。</li>
+ <li>フォームの送信を試すごとに、またデータが妥当かチェックします。その場合はフォームの送信を許可します。そうでない場合、適当なエラーを表示する <code>showError()</code> を実行し、<code><a href="/ja/docs/Web/API/Event/preventDefault">preventDefault()</a></code>でフォーム送信を停止します。</li>
  <li><code>showError()</code> 関数は、入力の <code>validity</code> オブジェクトのさまざまなプロパティを使ってエラーがどれかを決めて、適当なエラーメッセージを表示します。</li>
 </ul>
 
@@ -623,7 +623,7 @@ function showError() {
 <p>制約検証 API はフォーム検証を制御するための強力なツールであり、HTML および CSS のみで検証を行うよりもはるかにユーザーインターフェイスをコントロールできます。</p>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: さらなる情報は、<a href="https://wiki.developer.mozilla.org/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation">制約検証ガイド</a>と<a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/Constraint_validation">制約検証 API</a> リファレンスを見てください。</p>
+<p><strong>注</strong>: さらなる情報は、<a href="/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation">制約検証ガイド</a>と<a href="/ja/docs/Web/API/Constraint_validation">制約検証 API</a> リファレンスを見てください。</p>
 </div>
 
 <h3 id="Validating_forms_without_a_built-in_API" name="Validating_forms_without_a_built-in_API">組み込み API を使用しないフォーム検証</h3>
@@ -817,29 +817,29 @@ addEvent(form, "submit", function () {
  <li>どこでエラーが発生しているかを正確に示してください（特に大きなフォームで）。</li>
 </ul>
 
-<p>フォームが正しく埋められたことをチェックしたら、送信することができます。次の<a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Sending_and_retrieving_form_data">データ送信</a>でカバーします。</p>
+<p>フォームが正しく埋められたことをチェックしたら、送信することができます。次の<a href="/ja/docs/Learn/Forms/Sending_and_retrieving_form_data">データ送信</a>でカバーします。</p>
 
 <p>{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}</p>
 
 <h2 id="In_this_module" name="In_this_module">このモジュール</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Your_first_HTML_form">初めてのフォーム</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">フォームの構築方法</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/The_native_form_widgets">ネイティブフォームウィジェット</a></li>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/HTML5_input_types" rel="noopener">The HTML5 input types</a></li>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Other_form_controls" rel="noopener">Other form controls</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Styling_HTML_forms">フォームへのスタイル設定</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">フォームへの高度なスタイル設定</a></li>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/UI_pseudo-classes" rel="noopener">UI pseudo-classes</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Data_form_validation">フォームデータの検証</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">フォームデータの送信</a></li>
+ <li><a href="/ja/docs/Learn/HTML/Forms/Your_first_HTML_form">初めてのフォーム</a></li>
+ <li><a href="/ja/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">フォームの構築方法</a></li>
+ <li><a href="/ja/docs/Learn/HTML/Forms/The_native_form_widgets">ネイティブフォームウィジェット</a></li>
+ <li><a class="external" href="/ja/docs/Learn/Forms/HTML5_input_types" rel="noopener">The HTML5 input types</a></li>
+ <li><a class="external" href="/ja/docs/Learn/Forms/Other_form_controls" rel="noopener">Other form controls</a></li>
+ <li><a href="/ja/docs/Learn/HTML/Forms/Styling_HTML_forms">フォームへのスタイル設定</a></li>
+ <li><a href="/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">フォームへの高度なスタイル設定</a></li>
+ <li><a class="external" href="/ja/docs/Learn/Forms/UI_pseudo-classes" rel="noopener">UI pseudo-classes</a></li>
+ <li><a href="/ja/docs/Learn/HTML/Forms/Data_form_validation">フォームデータの検証</a></li>
+ <li><a href="/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">フォームデータの送信</a></li>
 </ul>
 
 <h3 id="Advanced_Topics" name="Advanced_Topics">上級トピック</h3>
 
 <ul>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/How_to_build_custom_form_controls" rel="noopener">カスタムフォームコントロールの作成方法</a></li>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Sending_forms_through_JavaScript" rel="noopener">JavaScript によるフォームの送信</a></li>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets" rel="noopener">フォームウィジェット向けプロパティ実装状況一覧</a></li>
+ <li><a class="external" href="/ja/docs/Learn/Forms/How_to_build_custom_form_controls" rel="noopener">カスタムフォームコントロールの作成方法</a></li>
+ <li><a class="external" href="/ja/docs/Learn/Forms/Sending_forms_through_JavaScript" rel="noopener">JavaScript によるフォームの送信</a></li>
+ <li><a class="external" href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets" rel="noopener">フォームウィジェット向けプロパティ実装状況一覧</a></li>
 </ul>

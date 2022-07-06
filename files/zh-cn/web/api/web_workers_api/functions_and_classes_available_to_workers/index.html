@@ -1,21 +1,21 @@
 ---
-title: Web Workers可以使用的函数和类
+title: Web Workers 可以使用的函数和类
 slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 tags:
   - functions and classes available to Web Workers
 translation_of: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 ---
-<p>除了标准的 <a href="/en-US/docs/Web/JavaScript">JavaScript</a> 函数集 (例如 {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Object")}}, {{jsxref("JSON")}} 等), DOM有多种功能可供 workers使用。</p>
+<p>除了标准的 <a href="/en-US/docs/Web/JavaScript">JavaScript</a> 函数集 (例如 {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Object")}}, {{jsxref("JSON")}} 等), DOM 有多种功能可供 workers 使用。</p>
 
 <p>本文提供了一些列表。</p>
 
 <p><strong>Workers </strong>在另一个全局上下文内运行<strong>, {{domxref("DedicatedWorkerGlobalScope")}} </strong>与当前<strong> window</strong>不同。</p>
 
-<p>默认情况下，{{domxref("Window")}}的方法和属性不可用，但{{domxref("DedicatedWorkerGlobalScope")}}像Window，实现{{domxref("WindowTimers")}} 和 {{domxref("WindowBase64")}}。</p>
+<p>默认情况下，{{domxref("Window")}}的方法和属性不可用，但{{domxref("DedicatedWorkerGlobalScope")}}像 Window，实现{{domxref("WindowTimers")}} 和 {{domxref("WindowBase64")}}。</p>
 
 
 
-<h2 id="比较不同类型workers的属性和方法">比较不同类型workers的属性和方法</h2>
+<h2 id="比较不同类型workers的属性和方法">比较不同类型 workers 的属性和方法</h2>
 
 <table class="standard-table">
  <tbody>
@@ -125,23 +125,23 @@ translation_of: Web/API/Web_Workers_API/Functions_and_classes_available_to_worke
   <tr>
    <td>{{domxref("Broadcast_Channel_API","Broadcast Channel API")}}</td>
    <td>
-    <p>允许在{{glossary("origin","同源")}}的浏览{{glossary("browsing context", "上下文")}}（即窗口，制表符，框架或iframe）之间进行简单通信（通常是来自同一站点的页面）。</p>
+    <p>允许在{{glossary("origin","同源")}}的浏览{{glossary("browsing context", "上下文")}}（即窗口，制表符，框架或 iframe）之间进行简单通信（通常是来自同一站点的页面）。</p>
    </td>
    <td>{{ CompatGeckoDesktop(38)}}</td>
-   <td><span style="background-color: rgba(212, 221, 228, 0.14902);">{{CompatNo}}</span></td>
-   <td><span style="background-color: rgba(212, 221, 228, 0.14902);">{{CompatNo}}</span></td>
-   <td><span style="background-color: rgba(212, 221, 228, 0.14902);">{{CompatNo}}</span></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
   </tr>
   <tr>
-   <td><span style="background-color: rgba(212, 221, 228, 0.14902);">{{domxref("Cache", "Cache")}}</span></td>
-   <td>Cache API<span style="background-color: rgba(212, 221, 228, 0.14902);"> provides the ability to programmatically</span> control cache storage associated with current origin.</td>
-   <td><span style="background-color: rgba(212, 221, 228, 0.14902);">{{CompatVersionUnknown}}</span></td>
-   <td><span style="background-color: rgba(212, 221, 228, 0.14902);">{{CompatNo}}</span></td>
-   <td><span style="background-color: rgba(212, 221, 228, 0.14902);">{{ CompatChrome(43) }}</span></td>
-   <td><span style="background-color: rgba(212, 221, 228, 0.14902);">{{CompatUnknown}}</span></td>
+   <td>{{domxref("Cache", "Cache")}}</td>
+   <td>Cache API provides the ability to programmatically control cache storage associated with current origin.</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{ CompatChrome(43) }}</td>
+   <td>{{CompatUnknown}}</td>
   </tr>
   <tr>
-   <td><span style="background-color: rgba(212, 221, 228, 0.14902);">{{domxref("Channel_Messaging_API", "Channel Messaging API")}}</span></td>
+   <td>{{domxref("Channel_Messaging_API", "Channel Messaging API")}}</td>
    <td>Allows two separate scripts running in different browsing contexts attached to the same document (e.g., two IFrames, or the main document and an IFrame, two documents via a {{domxref("SharedWorker")}}, or two workers) to communicate directly via two ports.</td>
    <td>{{ CompatGeckoDesktop(41)}}</td>
    <td>{{CompatVersionUnknown}}</td>
@@ -149,7 +149,7 @@ translation_of: Web/API/Web_Workers_API/Functions_and_classes_available_to_worke
    <td>{{CompatVersionUnknown}}</td>
   </tr>
   <tr>
-   <td><span style="background-color: rgba(212, 221, 228, 0.14902);">{{domxref("Console", "Console API")}}</span></td>
+   <td>{{domxref("Console", "Console API")}}</td>
    <td>Provides access to the browser's debugging console (e.g., the <a href="/en-US/docs/Tools/Web_Console">Web Console</a> in Firefox). The specifics of how it works vary from browser to browser, but there is a <em>de facto</em> set of features that are typically provided.</td>
    <td>{{ CompatGeckoDesktop(38)}}</td>
    <td>{{CompatVersionUnknown}}</td>
@@ -157,7 +157,7 @@ translation_of: Web/API/Web_Workers_API/Functions_and_classes_available_to_worke
    <td>{{CompatVersionUnknown}}</td>
   </tr>
   <tr>
-   <td><span style="background-color: rgba(212, 221, 228, 0.14902);">{{domxref("CustomEvent")}}</span></td>
+   <td>{{domxref("CustomEvent")}}</td>
    <td>The <strong><code>CustomEvent</code></strong> interface represents events initialized by an application for any purpose.</td>
    <td>{{ CompatGeckoDesktop(48)}}</td>
    <td>{{CompatVersionUnknown}}</td>
@@ -315,7 +315,7 @@ translation_of: Web/API/Web_Workers_API/Functions_and_classes_available_to_worke
    <td>Creates a new {{ domxref("Worker") }}. Yes, workers can spawn more workers.</td>
    <td>{{CompatGeckoDesktop("1.9.1")}}</td>
    <td>10.0</td>
-   <td>{{CompatNo}} See <a class="external" href="https://code.google.com/p/chromium/issues/detail?id=31666" rel="external" title="http://code.google.com/p/chromium/issues/detail?id=31666">crbug.com/31666</a></td>
+   <td>{{CompatNo}} See <a class="external" href="https://code.google.com/p/chromium/issues/detail?id=31666" rel="external">crbug.com/31666</a></td>
    <td>{{CompatNo}}</td>
   </tr>
   <tr>

@@ -1,77 +1,71 @@
 ---
-title: Addition (+)
+title: 더하기 (+)
 slug: Web/JavaScript/Reference/Operators/Addition
+tags:
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
+browser-compat: javascript.operators.addition
 translation_of: Web/JavaScript/Reference/Operators/Addition
 ---
+
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>증가 연산자<sup>addition operator</sup> (<code>+</code>)는 숫자 또는 여러 문자열의 더합니다.</p>
+<p>더하기 연산자(<code>+</code>)는 숫자 피연산자의 합을 구하거나, 문자열을 서로 연결합니다.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-addition.html")}}</div>
 
-<div></div>
+<h2 id="syntax">구문</h2>
 
+<pre class="brush: js">x + y</pre>
 
+<h2 id="examples">예제</h2>
 
-<h2 id="Syntax">Syntax</h2>
+<h3 id="numeric_addition">덧셈</h3>
 
-<pre class="syntaxbox notranslate"><strong>Operator:</strong> <var>x</var> + <var>y</var>
-</pre>
-
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Numeric_addition">Numeric addition</h3>
-
-<pre class="brush: js notranslate">// Number + Number -&gt; addition
+<pre class="brush: js">
+// Number + Number -&gt; 덧셈
 1 + 2 // 3
-
-// Boolean + Number -&gt; addition
+  
+// Boolean + Number -&gt; 덧셈
 true + 1 // 2
 
-// Boolean + Boolean -&gt; addition
-false + false // 0
-</pre>
+// Boolean + Boolean -&gt; 덧셈
+false + false // 0</pre>
 
-<h3 id="String_concatenation">String concatenation</h3>
+<h3 id="string_concatenation">문자열 연결</h3>
 
-<pre class="brush: js notranslate">// String + String -&gt; concatenation
+<pre class="brush: js">
+// String + String -&gt; 연결
 'foo' + 'bar' // "foobar"
 
-// Number + String -&gt; concatenation
+// Number + String -&gt; 연결
 5 + 'foo' // "5foo"
 
-// String + Boolean -&gt; concatenation
+// String + Boolean -&gt; 연결
 'foo' + false // "foofalse"</pre>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-addition-operator-plus', 'Addition operator')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="browser_compatibility">브라우저 호환성</h2>
 
+<p>{{Compat}}</p>
 
-
-<p>{{Compat("javascript.operators.addition")}}</p>
-
-<h2 id="See_also">See also</h2>
+<h2 id="see_also">같이 보기</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary negation operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus operator</a></li>
+  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Subtraction">빼기 연산자</a></li>
+  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Division">나누기 연산자</a></li>
+  <li><a
+      href="/ko/docs/Web/JavaScript/Reference/Operators/Multiplication">곱하기 연산자</a></li>
+  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Remainder">나머지 연산자</a></li>
+  <li><a
+      href="/ko/docs/Web/JavaScript/Reference/Operators/Exponentiation">거듭제곱 연산자</a></li>
+  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Increment">증가 연산자</a></li>
+  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Decrement">감소 연산자</a></li>
+  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Unary_negation">단항 부정 연산자</a></li>
+  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Unary_plus">단항 플러스 연산자</a></li>
 </ul>

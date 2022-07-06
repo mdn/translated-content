@@ -19,7 +19,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Основы_анимации
 
 <p>Вероятно, самым большим ограничением является то, что когда фигура нарисована, её уже нельзя двигать. Чтобы изобразить движение нам нужно перерисовать фигуру и всё, что было нарисовано до неё. Перерисовка сложных кадров занимает много времени, и производительность сильно зависит от скорости компьютера, на котором она выполняется.</p>
 
-<h2 id="Basic_animation_steps" name="Basic_animation_steps">Основные шаги анимации</h2>
+<h2 id="Basic_animation_steps">Основные шаги анимации</h2>
 
 <p>Ниже перечислены необходимые шаги для того, чтобы нарисовать кадр:</p>
 
@@ -34,7 +34,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Основы_анимации
   Если вы сохраняли состояние, восстановите его, прежде чем отрисовывать новый кадр.</li>
 </ol>
 
-<h2 id="Controlling_an_animation" name="Controlling_an_animation">Управление анимацией</h2>
+<h2 id="Controlling_an_animation">Управление анимацией</h2>
 
 <p>Фигуры отрисовываются на canvas либо напрямую — при помощи методов canvas, либо с помощью сторонних функций. В нормальной ситуации результат станет виден на canvas после окончания выполнения скрипта. К примеру, цикл for использовать для анимации нельзя. </p>
 
@@ -116,7 +116,7 @@ init();
 <pre class="brush: html">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;</pre>
 </div>
 
-<p>{{EmbedLiveSample("An_animated_solar_system", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}</p>
+<p>{{EmbedLiveSample("Анимированная_солнечная_система", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}</p>
 
 <h2 id="Анимированные_часы">Анимированные часы</h2>
 
@@ -225,11 +225,11 @@ window.requestAnimationFrame(clock);</pre>
 <pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 </div>
 
-<p>{{EmbedLiveSample("An_animated_clock", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}</p>
+<p>{{EmbedLiveSample("Анимированные_часы", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}</p>
 
 <h2 id="Зацикленная_панорама">Зацикленная панорама</h2>
 
-<p>В этом примере панорама прокручивается слева направо. Мы используем <a href="http://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg" title="http://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg">фото национального парка Йосемити</a> взятое из Википедии, но вы можете использовать любое изображение, большее элемента canvas.</p>
+<p>В этом примере панорама прокручивается слева направо. Мы используем <a href="http://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg">фото национального парка Йосемити</a> взятое из Википедии, но вы можете использовать любое изображение, большее элемента canvas.</p>
 
 <pre class="brush: js">var img = new Image();
 
@@ -295,9 +295,9 @@ function draw() {
 
 <pre class="brush: html">&lt;canvas id="canvas" width="800" height="200"&gt;&lt;/canvas&gt;</pre>
 
-<p>{{EmbedLiveSample("A_looping_panorama", "830", "230")}}</p>
+<p>{{EmbedLiveSample("Зацикленная_панорама", "830", "230")}}</p>
 
-<h2 id="Other_examples" name="Other_examples">Другие примеры</h2>
+<h2 id="Other_examples">Другие примеры</h2>
 
 <dl>
  <dt><a href="/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster" title="/en-US/docs/Web/Guide/HTML/A_basic_ray-caster">A basic ray-caster</a></dt>

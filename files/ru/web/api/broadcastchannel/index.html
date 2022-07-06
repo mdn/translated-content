@@ -5,7 +5,7 @@ translation_of: Web/API/BroadcastChannel
 ---
 <p>{{APIRef("Broadcast Channel API")}}</p>
 
-<p>Интерфейс <code><strong>BroadcastChannel</strong></code> представляет собой именованный канал, на который можно подписаться из любого {{glossary("контекста просмотра")}} данного {{glossary("источника")}}. Это позволяет настроить коммуникацию между разными документами (в разных окнах, вкладках, фреймах и т.д.) одного источника. Сообщения распространяются с помощью события {{event("message")}}, выстреливающего для всех объектов <code>BroadcastChannel</code>, слушающих этот канал.</p>
+<p>Интерфейс <code><strong>BroadcastChannel</strong></code> представляет собой именованный канал, на который можно подписаться из любого {{glossary("browsing context","контекста просмотра")}} данного {{glossary("origin","источника")}}. Это позволяет настроить коммуникацию между разными документами (в разных окнах, вкладках, фреймах и т.д.) одного источника. Сообщения распространяются с помощью события {{event("message")}}, выстреливающего для всех объектов <code>BroadcastChannel</code>, слушающих этот канал.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -27,9 +27,9 @@ translation_of: Web/API/BroadcastChannel
  <h3 id="Обработчики_событий">Обработчики событий</h3>
  </dt>
  <dt>{{domxref("BroadcastChannel.onmessage")}}</dt>
- <dd>{{domxref("EventHandler")}} свойство, определяющее функцию, которая будет запущена, когда произойдёт вызов события {{event("message")}} на этом объекте.</dd>
+ <dd>{{event("Event_handlers", "event handler")}} свойство, определяющее функцию, которая будет запущена, когда произойдёт вызов события {{event("message")}} на этом объекте.</dd>
  <dt>{{domxref("BroadcastChannel.onmessageerror")}}</dt>
- <dd>{{domxref("EventHandler")}}, который вызывается, когда приходит {{domxref("MessageEvent")}} типа {{domxref("MessageError")}} — когда приходит сообщение, которое не может быть десереализовано.</dd>
+ <dd>{{event("Event_handlers", "event handler")}}, который вызывается, когда приходит {{domxref("MessageEvent")}} типа {{domxref("MessageError")}} — когда приходит сообщение, которое не может быть десереализовано.</dd>
 </dl>
 
 <h2 id="Методы">Методы</h2>
@@ -45,26 +45,13 @@ translation_of: Web/API/BroadcastChannel
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#broadcastchannel", "BroadcastChannel")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
 
 
 
-<p>{{Compat("api.BroadcastChannel")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

@@ -26,7 +26,7 @@ translation_of: Web/API/InputEvent/data
 
 <h2 id="示例">示例</h2>
 
-<p>在下面的简单示例中，我们在 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event">input</a> 事件上设置了一个事件监听器，以便在对 {{htmlelement("input")}} 元素的内容进行任何更改时（通过键入或粘贴），通过 <strong><code>InputEvent.data</code></strong> 属性检索添加的文本，并在 <code>&lt;input&gt;</code> 下面的段落中报告。</p>
+<p>在下面的简单示例中，我们在 <a href="/zh-CN/docs/Web/API/HTMLElement/input_event">input</a> 事件上设置了一个事件监听器，以便在对 {{htmlelement("input")}} 元素的内容进行任何更改时（通过键入或粘贴），通过 <strong><code>InputEvent.data</code></strong> 属性检索添加的文本，并在 <code>&lt;input&gt;</code> 下面的段落中报告。</p>
 
 <pre class="brush: html">&lt;p&gt;Some text to copy and paste.&lt;/p&gt;
 
@@ -45,25 +45,10 @@ editable.addEventListener('input', (e) =&gt; {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('InputEvents2','#dfn-data','data')}}</td>
-   <td>{{Spec2('InputEvents2')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <div>
-<div class="hidden">此页上的兼容性表是从结构化数据生成的。如果您想贡献数据，请访问 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 并向我们发送一个请求。</div>
-
 <p>{{Compat("api.InputEvent.data")}}</p>
 </div>

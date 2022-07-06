@@ -62,8 +62,6 @@ browser.cookies.onChanged.hasListener(listener)
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p class="hidden">本相容性表格由結構化資料產生。若要貢獻資料，請參考 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 並給一個 pull request。</p>
-
 <p>{{Compat("webextensions.api.cookies.onChanged")}}</p>
 
 <h2 id="示例">示例</h2>
@@ -71,10 +69,10 @@ browser.cookies.onChanged.hasListener(listener)
 <p>本範例監聽 <code>onChanged</code> 事件並紀錄由 <code>changeInfo</code> 參數傳來的資訊：</p>
 
 <pre class="brush: js line-numbers  language-js">browser.cookies.onChanged.addListener(function(changeInfo) {
-  console.log('Cookie changed: ' +
-              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
-              '\n * Cause: ' + changeInfo.cause +
-              '\n * Removed: ' + changeInfo.removed);
+  console.log('Cookie changed: ' +
+              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
+              '\n * Cause: ' + changeInfo.cause +
+              '\n * Removed: ' + changeInfo.removed);
 });</pre>
 
 <p>{{WebExtExamples}}</p>

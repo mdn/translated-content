@@ -5,15 +5,15 @@ translation_of: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 ---
 <h2 id="引言">引言</h2>
 
-<p>你可以通过这个例子知道如何用甲骨文的Java语言来创建一个WebSocket服务。<br>
+<p>你可以通过这个例子知道如何用甲骨文的 Java 语言来创建一个 WebSocket 服务。<br>
  <br>
- 虽然其他的服务端语言也能创建WebSocket服务，但是通过这个例子你可以看到使用Java来做这件事会更简单。</p>
+ 虽然其他的服务端语言也能创建 WebSocket 服务，但是通过这个例子你可以看到使用 Java 来做这件事会更简单。</p>
 
-<p>这个服务符合协议<a href="http://tools.ietf.org/html/rfc6455" title="http://tools.ietf.org/html/rfc6455">RFC 6455</a>， 所以它只处理Chrome版本16，Firefox 11，IE 10及更高版本的连接。</p>
+<p>这个服务符合协议<a href="http://tools.ietf.org/html/rfc6455" title="http://tools.ietf.org/html/rfc6455">RFC 6455</a>， 所以它只处理 Chrome 版本 16，Firefox 11，IE 10 及更高版本的连接。</p>
 
 <h2 id="第一步">第一步</h2>
 
-<p>WebSocket通过<a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" title="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP（传输控制协议）</a>通信. Java的<a href="http://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html">ServerSocket</a> 类位于java.net包中。</p>
+<p>WebSocket 通过<a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" title="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP（传输控制协议）</a>通信. Java 的<a href="http://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html">ServerSocket</a> 类位于 java.net 包中。</p>
 
 <h3 id="ServerSocket">ServerSocket</h3>
 
@@ -21,9 +21,9 @@ translation_of: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 
 <p><code>ServerSocket(int port)</code></p>
 
-<p>实例化ServerSocket类时，它将绑定到port参数指定的端口号。</p>
+<p>实例化 ServerSocket 类时，它将绑定到 port 参数指定的端口号。</p>
 
-<p><span style="line-height: 1.572;">实现代码片段一：</span></p>
+<p>实现代码片段一：</p>
 
 <pre><code>import java.io.IOException;
 import java.io.InputStream;
@@ -50,10 +50,10 @@ public class WebSocket {
 <p>方法：</p>
 
 <ul>
- <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <span class="memberNameLink"><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getInputStream--">getInputStream</a></span>()</code><br>
-  返回这个Socket的输入流InputStream</li>
- <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <span class="memberNameLink"><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getOutputStream--">getOutputStream</a></span>()</code><br>
-  返回这个Socket的输出流OutputStream</li>
+ <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getInputStream--">getInputStream</a>()</code><br>
+  返回这个 Socket 的输入流 InputStream</li>
+ <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getOutputStream--">getOutputStream</a>()</code><br>
+  返回这个 Socket 的输出流 OutputStream</li>
 </ul>
 
 <h3 id="OutputStream">OutputStream</h3>
@@ -80,7 +80,7 @@ public class WebSocket {
 
 <h2 id="握手">握手</h2>
 
-<p>当客户端连接到服务器时，它会发送GET请求以从简单的HTTP请求升级到WebSocket的连接。这被称为握手。</p>
+<p>当客户端连接到服务器时，它会发送 GET 请求以从简单的 HTTP 请求升级到 WebSocket 的连接。这被称为握手。</p>
 
 <pre><code>try {
 				String data = s.useDelimiter("\\r\\n\\r\\n").next();
@@ -91,10 +91,10 @@ public class WebSocket {
 <p>你必须：</p>
 
 <ol>
- <li>获取Sec-WebSocket-Key请求标头的值，去除头部和尾部的所有空格</li>
+ <li>获取 Sec-WebSocket-Key 请求标头的值，去除头部和尾部的所有空格</li>
  <li>追加字符串"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"</li>
- <li>使用SHA-1计算拿到结果值并进行Base64编码</li>
- <li>将其作为HTTP响应的一部分写回Sec-WebSocket-Accept响应头的值</li>
+ <li>使用 SHA-1 计算拿到结果值并进行 Base64 编码</li>
+ <li>将其作为 HTTP 响应的一部分写回 Sec-WebSocket-Accept 响应头的值</li>
 </ol>
 
 <pre><code>if (get.find()) {
@@ -156,14 +156,14 @@ public class WebSocket {
  </tbody>
 </table>
 
-<p>FIN: 你可以分多次发送一个完整的消息。但现在为了简单，操作码0x1表示这是一个完整的消息。<span style="line-height: 1.572;"> </span><a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;" title="http://tools.ietf.org/html/rfc6455#section-5.2">Full list of Opcodes</a></p>
+<p>FIN: 你可以分多次发送一个完整的消息。但现在为了简单，操作码 0x1 表示这是一个完整的消息。 <a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;" title="http://tools.ietf.org/html/rfc6455#section-5.2">Full list of Opcodes</a></p>
 
 <p>- 134:</p>
 
-<p>如果第二个字节减去128在0到125之间，则这是消息的长度。 如果是126，则后面的2个字节（16位无符号整数），如果是127，则后面的8个字节（64位无符号整数，最高有效位必须为0）是长度。</p>
+<p>如果第二个字节减去 128 在 0 到 125 之间，则这是消息的长度。 如果是 126，则后面的 2 个字节（16 位无符号整数），如果是 127，则后面的 8 个字节（64 位无符号整数，最高有效位必须为 0）是长度。</p>
 
 <div class="note">
-<p>我可以拿128，因为第一位总是1。</p>
+<p>我可以拿 128，因为第一位总是 1。</p>
 </div>
 
 <p>- 167, 225, 225 和 210 是要解码的密钥<code>key</code>的字节。它每次都在变化。</p>
@@ -174,7 +174,7 @@ public class WebSocket {
 
 <p><code>decoded[i] = (byte) (encoded[i] ^ key[i &amp; 0x3]);</code></p>
 
-<p>Java例子：</p>
+<p>Java 例子：</p>
 
 <pre><code>byte[] decoded = new byte[6];
 					byte[] encoded = new byte[] { (byte) 198, (byte) 131, (byte) 130, (byte) 182, (byte) 194, (byte) 135 };
@@ -197,5 +197,3 @@ public class WebSocket {
 <ul>
  <li><a href="/zh-CN/docs/WebSockets/Writing_WebSocket_servers">Writing WebSocket servers</a></li>
 </ul>
-
-<div id="cke_pastebin" style="position: absolute; top: 2209.23px; width: 1px; height: 1px; overflow: hidden; left: -1000px;"></div>

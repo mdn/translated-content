@@ -49,7 +49,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 
 <p><code>Array.from()</code> は任意の引数 <code>mapFn</code> を持ちます。これは、作成した配列 (もしくは、サブクラスオブジェクト) のすべての要素に対して {{jsxref("Array.prototype.map", "map")}} 関数を実行できます。</p>
 
-<p>より明確に言うと、中間配列を生成しないことを除いて、<code>Array.from(obj, mapFn, thisArg)</code> は <code>Array.from(obj).map(mapFn, thisArg)</code> と同じ結果です。中間配列は、適切な型に合うように丸められた値を持つ必要があるため、<a href="/docs/Web/JavaScript/Typed_arrays">typed arrays</a> のような配列サブクラスにとっては特に重要です。</p>
+<p>より明確に言うと、中間配列を生成しないことを除いて、<code>Array.from(obj, mapFn, thisArg)</code> は <code>Array.from(obj).map(mapFn, thisArg)</code> と同じ結果です。中間配列は、適切な型に合うように丸められた値を持つ必要があるため、<a href="/ja/docs/Web/JavaScript/Typed_arrays">typed arrays</a> のような配列サブクラスにとっては特に重要です。</p>
 
 <div class="note">これは、<a href="/ja/docs/Web/JavaScript/Typed_arrays">型付き配列</a>のような特定の配列のサブクラスでは特に重要です。なぜなら、中間配列の値は適切な型に収まるように切り捨てられている必要があるからです。</div>
 

@@ -48,7 +48,7 @@ original_slug: Web/Acessibilidade/An_overview_of_accessible_web_applications_and
 
 <h2 id="ARIA">ARIA</h2>
 
-<p>As definições para <a class="external" href="http://www.w3.org/WAI/intro/aria.php" title="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a> <strong>Accessible Rich Internet Applications</strong> (Aplicações Ricas para uma Internete Acessível), da W3C -  <a class="external" href="http://www.w3.org/WAI/" title="http://www.w3.org/WAI/">Web Accessibility Initiative</a> (Iniciativa pela Acessibilidade na Rede Mundial/World Wide Web Consortium-W3C) - oferecem uma via para a adição das necessidades semânticas perdidas pelas tecnologias assistivas, como os leitores de tela. O conjunto ARIA possibilita que desenvolvedores possam descrever seus <em>widgets</em> de forma mais detalhada com a inclusão de atributos especiais à marcação. Projetado para preencher a lacuna entre o padrão de rotulagem HTML e os controles com estilo ambiente encontrados em aplicações dinâmicas pela <em>web</em>, o conjunto ARIA fornece funções (roles) e estados (states) que descrevem o comportamento da maioria das interfaces de utilização dos <em>widgets </em>conhecidas.</p>
+<p>As definições para <a class="external" href="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a> <strong>Accessible Rich Internet Applications</strong> (Aplicações Ricas para uma Internete Acessível), da W3C -  <a class="external" href="http://www.w3.org/WAI/">Web Accessibility Initiative</a> (Iniciativa pela Acessibilidade na Rede Mundial/World Wide Web Consortium-W3C) - oferecem uma via para a adição das necessidades semânticas perdidas pelas tecnologias assistivas, como os leitores de tela. O conjunto ARIA possibilita que desenvolvedores possam descrever seus <em>widgets</em> de forma mais detalhada com a inclusão de atributos especiais à marcação. Projetado para preencher a lacuna entre o padrão de rotulagem HTML e os controles com estilo ambiente encontrados em aplicações dinâmicas pela <em>web</em>, o conjunto ARIA fornece funções (roles) e estados (states) que descrevem o comportamento da maioria das interfaces de utilização dos <em>widgets </em>conhecidas.</p>
 
 <p>A especificação ARIA está dividida em três tipos diferentes de atributos: funções (roles), estados (states) e propriedades (properties). As funções (roles) descrevem os<em> widgets</em> que não estão disponíveis de outra forma em HTML 4, como deslizantes, barras de menu, abas e diálogos. As propriedades (properties) descrevem as características desses <em>widgets</em> - se podem ser arrastados (<em>draggable</em>), se existe algum elemento obrigatório, ou se trazem uma janela de explosão (popup) associada. Os estados (states) descrevem a interação atual de um elemento, informando à tecnlogia assistiva se este se encontra ativo, desativado, selecionado, ou oculto.</p>
 
@@ -94,15 +94,15 @@ original_slug: Web/Acessibilidade/An_overview_of_accessible_web_applications_and
  <li><strong><code>aria-grabbed </code></strong><code>(arrastado)</code>: indica o estado "arrastado" para um objeto, em uma operação de "arrastar e soltar".</li>
 </ul>
 
-<p>(Para uma lista completa de estados ARIA, consulte a <a class="external external-icon" href="http://www.w3.org/TR/wai-aria/states_and_properties" title="http://www.w3.org/TR/wai-aria/states_and_properties">ARIA list of states and properties</a> (lista de estados e propriedades ARIA).</p>
+<p>(Para uma lista completa de estados ARIA, consulte a <a class="external external-icon" href="http://www.w3.org/TR/wai-aria/states_and_properties">ARIA list of states and properties</a> (lista de estados e propriedades ARIA).</p>
 
 <p>Os desenvolvedores devem dar preferência ao uso dos estados ARIA para indicar a situação atual <span id="result_box" lang="pt"><span>dos elemento</span><span><em>s widgets</em></span> <span>na interface de utilização (UI)</span></span> e os seletores de atributos CSS para alterar a sua aparência, com base nas mudanças desses estados (em vez de usar um roteiro (<em>script</em>) para mudar um nome de classe de um elemento).</p>
 
-<p>A <em>Open Ajax Alliance</em> (OAA - Aliança <em>OpenAJAX </em>) disponibiliza um exemplo de um seletor de atributos CSS baseado nos estados ARIA (em inglês) - <a class="external" href="http://www.oaa-accessibility.org/example/25/" title="http://www.oaa-accessibility.org/example/25/">an example of CSS attribute selectors based on ARIA states</a>. O exemplo mostra a <span id="result_box" lang="pt"><span>interface de um editor</span> <span>WYS/WYG</span> <span>com um sistema de</span> <span>menu dinâmico. Os itens</span></span> selecionados no menu, como o tipo de fonte estão, visualmente, distintos dos outros. As partes importantes do exemplo são explicadas a seguir.</p>
+<p>A <em>Open Ajax Alliance</em> (OAA - Aliança <em>OpenAJAX </em>) disponibiliza um exemplo de um seletor de atributos CSS baseado nos estados ARIA (em inglês) - an example of CSS attribute selectors based on ARIA states. O exemplo mostra a <span id="result_box" lang="pt"><span>interface de um editor</span> <span>WYS/WYG</span> <span>com um sistema de</span> <span>menu dinâmico. Os itens</span></span> selecionados no menu, como o tipo de fonte estão, visualmente, distintos dos outros. As partes importantes do exemplo são explicadas a seguir.</p>
 
 <p>Neste exemplo, a HTML para um menu tem a forma exibida abaixo. Note como, nas linhas 7 e 13, a propriedade (<em>property</em>) <strong><code>aria-checked</code></strong> é usada para declarar o estado da seleção dos itens do menu.</p>
 
-<p><em>Exemplo 1a: HTML para um menu selecionável (adaptado da  <a class="external" href="http://www.oaa-accessibility.org/example/25/" rel="freelink">http://www.oaa-accessibility.org/example/25/</a>).</em></p>
+<p><em>Exemplo 1a: HTML para um menu selecionável.</em></p>
 
 <pre class="brush: html">&lt;ul id="fontMenu" class="menu" role="menu" aria-hidden="true"&gt;
   &lt;li id="sans-serif"
@@ -122,7 +122,7 @@ original_slug: Web/Acessibilidade/An_overview_of_accessible_web_applications_and
 
 <p>A CSS usada para alterar a aparência do item selecionado é mostrada no Exemplo 1b. Perceba que não existe um nome de classe (<em>classname</em>) de personalização, apenas o estado do atributo <strong><code>aria-checked</code></strong>, na linha 1.</p>
 
-<p><em>Exemplo 1b: Seletor baseado em atributo para indicar um estado (da  <a class="external" href="http://www.oaa-accessibility.org/example/25/" rel="freelink">http://www.oaa-accessibility.org/example/25/</a>).</em></p>
+<p><em>Exemplo 1b: Seletor baseado em atributo para indicar um estado.</em></p>
 
 <pre class="brush: css">li[aria-checked="true"] {
   font-weight: bold;
@@ -134,7 +134,7 @@ original_slug: Web/Acessibilidade/An_overview_of_accessible_web_applications_and
 
 <p>O  JavaScript para atualizar a propriedade <strong><code>aria-checked</code></strong> tem a forma exibida no Exemplo 1c. Repare que o roteiro (<em>script</em>) apenas atualiza o atributo <strong><code>aria-checked</code></strong> (linhas 3 e 8); <span id="result_box" lang="pt"><span>também não é necessário</span> <span>adicionar, ou remover,</span> <span>um nome de</span> <span>classe personalizada</span></span>.</p>
 
-<p><em>Exemplo 1c: A  JavaScript atualiza o atributo aria-checked  (baseado em  <a class="external" href="http://www.oaa-accessibility.org/example/25/" rel="freelink">http://www.oaa-accessibility.org/example/25/</a>)</em>.</p>
+<p><em>Exemplo 1c: A  JavaScript atualiza o atributo aria-checked</em>.</p>
 
 <pre class="brush: javascript">var processMenuChoice = function(item) {
   // 'check' the selected item
@@ -153,11 +153,11 @@ original_slug: Web/Acessibilidade/An_overview_of_accessible_web_applications_and
 
 <p>Quando o conteúdo visual é alterado (isto é, um elemento é escondido, ou mostrado), os desenvolvedores devem mudar o valor da propriedade <strong><code>aria-hidden</code></strong>. As técnicas descritas acima devem ser usadas, a fim de declarar a CSS para ocultar um elemento utilizando<code><em> </em></code><em><code>display:none</code></em><code> </code>(<em>exibir:nenhum</em>).</p>
 
-<p>O sítio da <em>Open Ajax Alliance</em> fornece um exemplo de uma dica de tela (<em>tooltip</em>) que utiliza o estado aria-hidden para controlar a sua visibilidade (em inglês) <a class="external" href="http://www.oaa-accessibility.org/example/39/" title="http://www.oaa-accessibility.org/example/39/">an example of a tooltip that uses <strong><code>aria-hidden</code></strong> to control the visibility of the tooltip</a>. O exemplo mostra um formulário <em>web</em> simples, com caixas de dicas de tela contendo instruções associadas aos campos de entrada. As partes relevantes deste exemplo estão explicadas abaixo.</p>
+<p>O sítio da <em>Open Ajax Alliance</em> fornece um exemplo de uma dica de tela (<em>tooltip</em>) que utiliza o estado aria-hidden para controlar a sua visibilidade (em inglês) an example of a tooltip that uses <strong><code>aria-hidden</code></strong> to control the visibility of the tooltip. O exemplo mostra um formulário <em>web</em> simples, com caixas de dicas de tela contendo instruções associadas aos campos de entrada. As partes relevantes deste exemplo estão explicadas abaixo.</p>
 
 <p>Aqui, a HTML para a dica de tela tem a forma exibida no Exemplo 2a. A linha 9 configura o estado da <strong><code>aria-hidden</code></strong> para <code>true</code>.</p>
 
-<p><em>Exemplo 2a: HTML para dicas de tela (adaptado de  <a class="external" href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a>).</em></p>
+<p><em>Exemplo 2a: HTML para dicas de tela.</em></p>
 
 <pre class="brush: html">&lt;div class="text"&gt;
     &lt;label id="tp1-label" for="first"&gt;First Name:&lt;/label&gt;
@@ -173,7 +173,7 @@ original_slug: Web/Acessibilidade/An_overview_of_accessible_web_applications_and
 
 <p>A CSS para esta marcação está explicada no Exemplo 2b. Veja que não há uso de <em>classname</em> personalizada, apenas o estado do atributo <strong><code>aria-hidden</code></strong>, na linha 1.</p>
 
-<p><em>Exemplo 2b:  Seletor basedo em atributo para indicar um estado  (de <a class="external" href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a>).</em></p>
+<p><em>Exemplo 2b:  Seletor basedo em atributo para indicar um estado.</em></p>
 
 <pre class="brush: css">div.tooltip[aria-hidden="true"] {
   display: none;
@@ -182,7 +182,7 @@ original_slug: Web/Acessibilidade/An_overview_of_accessible_web_applications_and
 
 <p>O JavaScript que atualiza a propriedade <strong><code>aria-hidden</code></strong> tem a forma exposta no Exemplo 2c. Observe que o roteiro apenas atualiza o atributo <strong><code>aria-hidden</code></strong> (linha 2); não é necessário adicionar, nem remover, uma <em>classname</em> customizada.</p>
 
-<p><em>Exemplo 2c: JavaScript para atualização do atributo aria-checked (com base em <a class="external" href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a>).</em></p>
+<p><em>Exemplo 2c: JavaScript para atualização do atributo aria-checked.</em></p>
 
 <pre class="brush: javascript">var showTip = function(el) {
   el.setAttribute('aria-hidden', 'false');
@@ -222,14 +222,14 @@ original_slug: Web/Acessibilidade/An_overview_of_accessible_web_applications_and
 
 <p>Assim, para o exemplo de <em>widget</em> de abas acima, a pessoa que estiver navegando deve ser capaz de entrar e sair da caixa que o contém usando as teclas "<em>Tab</em>" e "<em>Shift+Tab</em>" ( a &lt;ol&gt; na nossa marcação). Uma vez que o foco, pelo teclado, estiver dentro do contêiner, as teclas de setas devem permitir a navegação entre as suas diferentes guias (os elementos &lt;li&gt; ). A partir daqui as convenções variam de plataforma para plataforma. No Windows, a próxima aba deve ser ativada, automaticamente, quando as teclas de setas forem pressionadas. Em Mac OS X, seus utilizadores ativam a próxima aba pressionando a tecla "<em>Entra</em>", ou a "<em>barra de espaço</em>". Um  tutorial abrangente, para a criação de <em>widgets</em>, com navegação pelo teclado, descreve como implementar esse comportamento utilizando JavaScript <a href="/en/Accessibility/Keyboard-navigable_JavaScript_widgets" title="en/Accessibility/Keyboard-navigable JavaScript widgets">Keyboard-navigable JavaScript widgets (<em>JavaScript para </em><em>widgets navegáveis pelo teclado</em>)</a>.</p>
 
-<p>Para mais detalhes sobre as convenções da navegação pelo teclado em modelo ambiente, um guia completo (em inglês) <a class="external" href="http://access.aol.com/dhtml-style-guide-working-group/" title="http://dev.aol.com/dhtml_style_guide">DHTML style guide (<em>guia de estilos da HTML Dinâmica</em>)</a> está disponível. Este guia oferece uma visão global de como a navegação pelo teclado deve funcionar em cada tipo de <em>widget</em> suportado pelo conjunto ARIA. A  W3C também oferece um documento que ajuda muito,<em> </em><a class="external" href="http://www.w3.org/WAI/PF/aria-practices/Overview.html" title="http://www.w3.org/WAI/PF/aria-practices/Overview.html">ARIA Best Practices</a>, incluindo a navegação pelo teclado e as convenções de atalhos para uma variedade de <em>widgets</em>.</p>
+<p>Para mais detalhes sobre as convenções da navegação pelo teclado em modelo ambiente, um guia completo (em inglês) <a class="external" href="http://access.aol.com/dhtml-style-guide-working-group/">DHTML style guide (<em>guia de estilos da HTML Dinâmica</em>)</a> está disponível. Este guia oferece uma visão global de como a navegação pelo teclado deve funcionar em cada tipo de <em>widget</em> suportado pelo conjunto ARIA. A  W3C também oferece um documento que ajuda muito,<em> </em><a class="external" href="http://www.w3.org/WAI/PF/aria-practices/Overview.html">ARIA Best Practices</a>, incluindo a navegação pelo teclado e as convenções de atalhos para uma variedade de <em>widgets</em>.</p>
 
 <h2 id="Veja_também">Veja, também</h2>
 
 <ul>
  <li><a href="/en/ARIA" title="ARIA">ARIA</a></li>
  <li><a href="/en/Accessibility/Web_applications_and_ARIA_FAQ" title="Web applications and ARIA FAQ">Web applications and ARIA FAQ</a></li>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/" title="http://www.w3.org/TR/wai-aria/">WAI-ARIA Specification</a></li>
- <li><a class="external" href="http://www.w3.org/WAI/PF/aria-practices/Overview.html" title="http://www.w3.org/WAI/PF/aria-practices/Overview.html">WAI-ARIA Best Practices</a></li>
- <li><a class="external" href="http://access.aol.com/dhtml-style-guide-working-group/" title="http://dev.aol.com/dhtml_style_guide">DHTML Style Guide</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/wai-aria/">WAI-ARIA Specification</a></li>
+ <li><a class="external" href="http://www.w3.org/WAI/PF/aria-practices/Overview.html">WAI-ARIA Best Practices</a></li>
+ <li><a class="external" href="http://access.aol.com/dhtml-style-guide-working-group/">DHTML Style Guide</a></li>
 </ul>

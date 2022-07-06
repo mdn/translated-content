@@ -5,11 +5,11 @@ translation_of: Web/CSS/@font-face/src
 ---
 <div>{{CSSRef}}</div>
 
-<p>{{cssxref("@font-face")}} 中的src描述符指定了包含字体数据的资源。<code>@font-face</code> 规则中需要指定这个属性。</p>
+<p>{{cssxref("@font-face")}} 中的 src 描述符指定了包含字体数据的资源。<code>@font-face</code> 规则中需要指定这个属性。</p>
 
 <p>它的值是一个有优先级的，以逗号分割的外部引用或者本地安装的字体名称。当需要使用字体时，用户代理（指浏览器的意思）将会使用以逗号分隔的参考集中能成功激活的第一个参考值。如果是包含无效数据的字体或者本地的字体资源不存在，用户代理将会忽略当前字体并且加载下一个字体。</p>
 
-<p>与CSS中的其他URL一样，URL可以是相对的，在这种情况下，它相对于包含@ font-face规则的样式表的位置进行解析。对于SVG字体，URL指向文档中定义的包含SVG字体的元素。如果省略元素引用，则默认引用第一个定义字体。同样，字体容器只加载<code>@font-face</code> 规则给定的其中一种字体。片段标识符用于指示要加载的字体。如果容器格式缺少定义的片段标识符方案，将会使用一个简单的基于1的索引方案（e.g., "font-collection#1" for the first font, "font-collection#2" for the second font, etc.）</p>
+<p>与 CSS 中的其他 URL 一样，URL 可以是相对的，在这种情况下，它相对于包含 @ font-face 规则的样式表的位置进行解析。对于 SVG 字体，URL 指向文档中定义的包含 SVG 字体的元素。如果省略元素引用，则默认引用第一个定义字体。同样，字体容器只加载<code>@font-face</code> 规则给定的其中一种字体。片段标识符用于指示要加载的字体。如果容器格式缺少定义的片段标识符方案，将会使用一个简单的基于 1 的索引方案（e.g., "font-collection#1" for the first font, "font-collection#2" for the second font, etc.）</p>
 
 <p>{{cssinfo}}</p>
 

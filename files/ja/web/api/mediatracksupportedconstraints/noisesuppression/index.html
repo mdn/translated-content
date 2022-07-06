@@ -5,7 +5,7 @@ translation_of: Web/API/MediaTrackSupportedConstraints/noiseSuppression
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<p><a href="https://developer.mozilla.org/ja/docs/Web/API/MediaTrackSupportedConstraints" title="MediaTrackSupportedConstraintsディクショナリは、MediaStreamTrackオブジェクトを実装しているuser agentやブラウザによって理解できる制約可能なプロパティの一覧を表します。MediaDevices.getSupportedConstraints()によって、MediaTrackSupportedConstraintsに適合するオブジェクトが戻り値として返されます。"><code>MediaTrackSupportedConstraints</code></a>ディクショナリーの<strong><code>noiseSuppression</code></strong>プロパティは読み取り専用のBooleanの値です。<a href="https://developer.mozilla.org/ja/docs/Glossary/user_agent" rel="nofollow" title="この用語 (user agent) の定義はまだ書かれていません。ぜひご寄稿ください！">user agent</a>が<strong><code>noiseSuppression</code></strong>の制約をサポートしている場合、<a href="https://developer.mozilla.org/ja/docs/Web/API/MediaDevices/getSupportedConstraints" title="MediaDevices インタフェースのgetSupportedConstraints() メソッドは、MediaTrackSupportedConstraintsディクショナリをベースとするオブジェクトを戻り値として返します。このオブジェクトのメンバーフィールドは、user agentが扱えるメディア制約に関するプロパティを表しています。"><code>MediaDevices.getSupportedConstraints()</code></a>の戻り値のオブジェクトに含まれ<code>true</code>が設定されます。この制約がサポートされない場合は含まれないため、<code>false</code>になることはありません。</p>
+<p><a href="/ja/docs/Web/API/MediaTrackSupportedConstraints" title="MediaTrackSupportedConstraintsディクショナリは、MediaStreamTrackオブジェクトを実装しているuser agentやブラウザによって理解できる制約可能なプロパティの一覧を表します。MediaDevices.getSupportedConstraints()によって、MediaTrackSupportedConstraintsに適合するオブジェクトが戻り値として返されます。"><code>MediaTrackSupportedConstraints</code></a>ディクショナリーの<strong><code>noiseSuppression</code></strong>プロパティは読み取り専用のBooleanの値です。<a href="/ja/docs/Glossary/user_agent" rel="nofollow" title="この用語 (user agent) の定義はまだ書かれていません。ぜひご寄稿ください！">user agent</a>が<strong><code>noiseSuppression</code></strong>の制約をサポートしている場合、<a href="/ja/docs/Web/API/MediaDevices/getSupportedConstraints" title="MediaDevices インタフェースのgetSupportedConstraints() メソッドは、MediaTrackSupportedConstraintsディクショナリをベースとするオブジェクトを戻り値として返します。このオブジェクトのメンバーフィールドは、user agentが扱えるメディア制約に関するプロパティを表しています。"><code>MediaDevices.getSupportedConstraints()</code></a>の戻り値のオブジェクトに含まれ<code>true</code>が設定されます。この制約がサポートされない場合は含まれないため、<code>false</code>になることはありません。</p>
 
 <p>サポートされている制約のディクショナリーは<code>navigator.mediaDevices.getSupportedConstraints()</code>を呼び出すことで取得できます。</p>
 
@@ -17,7 +17,7 @@ translation_of: Web/API/MediaTrackSupportedConstraints/noiseSuppression
 
 <h3 id="値">値</h3>
 
-<p>ユーザエージェント<code>noiseSuppression</code>の制約をサポートしている場合、このプロパティはディクショナリーの中に含まれ、その値は常に<code>true</code>の値です。このプロパティが存在しない場合は、サポートされている制約ディクショナリーには存在しないため、<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined" title="グローバルプロパティ undefined はプリミティブ値 undefined を表します。これは JavaScript におけるプリミティブ型の一つです。"><code>undefined</code></a>の値を取ることになります。</p>
+<p>ユーザエージェント<code>noiseSuppression</code>の制約をサポートしている場合、このプロパティはディクショナリーの中に含まれ、その値は常に<code>true</code>の値です。このプロパティが存在しない場合は、サポートされている制約ディクショナリーには存在しないため、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined" title="グローバルプロパティ undefined はプリミティブ値 undefined を表します。これは JavaScript におけるプリミティブ型の一つです。"><code>undefined</code></a>の値を取ることになります。</p>
 
 <h2 id="例">例</h2>
 
@@ -76,7 +76,7 @@ if (navigator.mediaDevices.getSupportedConstraints()["noiseSuppression"]) {
 <h2 id="関連項目">関連項目</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a></li>
+ <li><a href="/ja/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a></li>
  <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
  <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
  <li>{{domxref("MediaStreamTrack")}}</li>

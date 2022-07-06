@@ -51,7 +51,7 @@ translation_of: Web/API/Window/beforeunload_event
 
 <p>В HTML-спецификации указано, что авторы должны использовать метод {{domxref("Event.preventDefault()")}}, а не {{domxref("Event.returnValue")}}. Однако, это поддерживается не всеми браузерами.</p>
 
-<pre class="brush: js notranslate">window.addEventListener('beforeunload', (event) =&gt; {
+<pre class="brush: js">window.addEventListener('beforeunload', (event) =&gt; {
   // Отмените событие, как указано в стандарте.
   event.preventDefault();
   // Chrome требует установки возвратного значения.
@@ -61,33 +61,11 @@ translation_of: Web/API/Window/beforeunload_event
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "indices.html#event-beforeunload", "beforeunload")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "browsers.html#unloading-documents", "beforeunload")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<div class="hidden">Таблица совместимости на этой странице составлена из структурированных данных. Если вы хотите внести свой вклад в данные, пожалуйста, посетите https://github.com/mdn/browser-compat-data и отправьте нам запрос.</div>
-
-<p>{{Compat("api.Window.beforeunload_event")}}</p>
+<p>{{Compat}}</p>
 
 <p>Смотрите <a href="/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload#Browser_compatibility">WindowEventHandlers/onbeforeunload</a> для получения более подробной информации о том, как различные браузеры обрабатывают это событие.</p>
 

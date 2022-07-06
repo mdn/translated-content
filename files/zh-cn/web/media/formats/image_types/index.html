@@ -14,11 +14,11 @@ translation_of: Web/Media/Formats/Image_types
 ---
 <div>{{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}</div>
 
-<p><span class="seoSummary">在本指南中，我们将介绍网页浏览器普遍支持的图像文件类型，并提供一些关于他们的信息与见解，帮助您为您的网站选择最合适的图像格式。</span></p>
+<p>在本指南中，我们将介绍网页浏览器普遍支持的图像文件类型，并提供一些关于他们的信息与见解，帮助您为您的网站选择最合适的图像格式。</p>
 
 <h2 id="常见图像文件类型">常见图像文件类型</h2>
 
-<p>世界上有非常多的图像文件格式。下面列举了网页上常用的格式，其中BMP由于浏览器支持限制而不被推荐，通常应该避免在网页内容中使用。</p>
+<p>世界上有非常多的图像文件格式。下面列举了网页上常用的格式，其中 BMP 由于浏览器支持限制而不被推荐，通常应该避免在网页内容中使用。</p>
 
 <div id="table-of-image-file-types">
 <table class="standard-table">
@@ -33,7 +33,7 @@ translation_of: Web/Media/Formats/Image_types
  </thead>
  <tbody>
   <tr>
-   <th scope="row">{{anch("APNG")}}</th>
+   <th scope="row"><a href="#apng_animated_portable_network_graphics">APNG</a></th>
    <th scope="row">Animated Portable Network Graphics<br>
     <strong>动态便携式网络图像</strong></th>
    <td><code>image/apng</code></td>
@@ -41,15 +41,15 @@ translation_of: Web/Media/Formats/Image_types
    <td>Chrome, Edge, Firefox, Opera, Safari</td>
   </tr>
   <tr>
-   <th scope="row">{{anch("AVIF")}}</th>
+   <th scope="row"><a href="#avif">AVIF</a></th>
    <th scope="row">AV1 Image File Format<br>
     AV1 图像文件格式</th>
-   <td><code>image/</code>avif</td>
-   <td><code>.</code>avif</td>
+   <td><code>image/avif</code></td>
+   <td><code>.avif</code></td>
    <td>Chrome, Opera, Firefox (feature flag)</td>
   </tr>
   <tr>
-   <th scope="row">{{anch("BMP")}}</th>
+   <th scope="row"><a href="#bmp_bitmap_file">BMP</a></th>
    <th scope="row">Bitmap file<br>
     <strong>位图</strong>文件</th>
    <td><code>image/bmp</code></td>
@@ -57,7 +57,7 @@ translation_of: Web/Media/Formats/Image_types
    <td>Chrome, Edge, Firefox, Internet Explorer, Opera, Safari</td>
   </tr>
   <tr>
-   <th scope="row">{{anch("GIF")}}</th>
+   <th scope="row"><a href="#gif_graphics_interchange_format">GIF</a></th>
    <th scope="row">Graphics Interchange Format<br>
     图像互换格式</th>
    <td><code>image/gif</code></td>
@@ -65,7 +65,7 @@ translation_of: Web/Media/Formats/Image_types
    <td>Chrome, Edge, Firefox, Internet Explorer, Opera, Safari</td>
   </tr>
   <tr>
-   <th scope="row">{{anch("ICO")}}</th>
+   <th scope="row"><a href="#ico_microsoft_windows_icon">ICO</a></th>
    <th scope="row">Microsoft Icon<br>
     微软图标</th>
    <td><code>image/x-icon</code></td>
@@ -73,7 +73,7 @@ translation_of: Web/Media/Formats/Image_types
    <td>Chrome, Edge, Firefox, Internet Explorer, Opera, Safari</td>
   </tr>
   <tr>
-   <th scope="row">{{anch("JPEG")}}</th>
+   <th scope="row"><a href="#jpeg_joint_photographic_experts_group_image">JPEG</a></th>
    <th scope="row">Joint Photographic Expert Group image<br>
     联合影像专家小组图像</th>
    <td><code>image/jpeg</code></td>
@@ -81,7 +81,7 @@ translation_of: Web/Media/Formats/Image_types
    <td>Chrome, Edge, Firefox, Internet Explorer, Opera, Safari</td>
   </tr>
   <tr>
-   <th scope="row">{{anch("PNG")}}</th>
+   <th scope="row"><a href="#png_portable_network_graphics">PNG</a></th>
    <th scope="row">Portable Network Graphics<br>
     <strong>便携式网络图像</strong></th>
    <td><code>image/png</code></td>
@@ -89,7 +89,7 @@ translation_of: Web/Media/Formats/Image_types
    <td>Chrome, Edge, Firefox, Internet Explorer, Opera, Safari</td>
   </tr>
   <tr>
-   <th scope="row">{{anch("SVG")}}</th>
+   <th scope="row"><a href="#svg_scalable_vector_graphics">SVG</a></th>
    <th scope="row">Scalable Vector Graphics<br>
     <strong>可缩放矢量图形</strong></th>
    <td><code>image/svg+xml</code></td>
@@ -97,7 +97,7 @@ translation_of: Web/Media/Formats/Image_types
    <td>Chrome, Edge, Firefox, Internet Explorer, Opera, Safari</td>
   </tr>
   <tr>
-   <th scope="row">{{anch("TIFF")}}</th>
+   <th scope="row"><a href="#tiff_tagged_image_file_format">TIFF</a></th>
    <th scope="row">Tagged Image File Format<br>
     标签图像文件格式</th>
    <td><code>image/tiff</code></td>
@@ -105,7 +105,7 @@ translation_of: Web/Media/Formats/Image_types
    <td>Safari</td>
   </tr>
   <tr>
-   <th scope="row">{{anch("WebP")}}</th>
+   <th scope="row"><a href="#webp_image">WebP</a></th>
    <th scope="row">Web Picture format<br>
     万维网图像格式</th>
    <td><code>image/webp</code></td>
@@ -126,7 +126,7 @@ translation_of: Web/Media/Formats/Image_types
 
 <h3 id="APNG_Animated_Portable_Network_Graphics"><a id="APNG" name="APNG">APNG</a> (Animated Portable Network Graphics)</h3>
 
-<p>APNG is a file format first introduced by Mozilla which extends the {{anch("PNG")}} standard to add support for animated images. Conceptually similar to the animated GIF format which has been in use for decades, APNG is more capable in that it supports a variety of {{interwiki("wikipedia", "color depth", "color depths")}}, whereas animated GIF supports only 8-bit {{interwiki("wikipedia", "indexed color")}}.</p>
+<p>APNG is a file format first introduced by Mozilla which extends the <a href="#png_portable_network_graphics">PNG</a> standard to add support for animated images. Conceptually similar to the animated GIF format which has been in use for decades, APNG is more capable in that it supports a variety of {{interwiki("wikipedia", "color depth", "color depths")}}, whereas animated GIF supports only 8-bit {{interwiki("wikipedia", "indexed color")}}.</p>
 
 <p>APNG is ideal for basic animations that do not need to synchronize to other activities or to a sound track, such as progress indicators, activity {{interwiki("wikipedia", "throbber", "throbbers")}}, and other animated sequences. For example, APNG is <a href="https://developer.apple.com/stickers/">one of the formats supported when creating animated stickers</a> for Apple's iMessage application (and the Messages application on iOS). They're also commonly used for the animated portions of web browsers' user interfaces.</p>
 
@@ -216,7 +216,7 @@ translation_of: Web/Media/Formats/Image_types
 
 <p>While other data representations are defined in the specification, they are not widely used and often completely unimplemented. These features include: support for different bit depths, indexed color, alpha channels, and different pixel orders (by default, BMP is written from bottom-left corner toward the right and top, rather than from the top-left corner toward the right and bottom).</p>
 
-<p>Theoretically, several compression algorithms are supported, and the image data can also be stored in {{anch("JPEG")}} or {{anch("PNG")}} format within the BMP file.</p>
+<p>Theoretically, several compression algorithms are supported, and the image data can also be stored in <a href="#jpeg_joint_photographic_experts_group_image">JPEG</a> or <a href="#png_portable_network_graphics">PNG</a> format within the BMP file.</p>
 
 <table class="standard-table">
  <tbody>
@@ -294,7 +294,7 @@ translation_of: Web/Media/Formats/Image_types
 
 <h3 id="GIF_Graphics_Interchange_Format"><a id="GIF" name="GIF">GIF</a> (Graphics Interchange Format)</h3>
 
-<p>In 1987, the CompuServe online service provider introduced the <strong>{{interwiki("wikipedia", "GIF")}}</strong> (<strong>Graphics Interchange Format</strong>) image file format to provide a compressed graphics format that all members of their service would be able to use. GIF uses the {{interwiki("wikipedia", "Lempel-Ziv-Welch")}} (LZW) algorithm to losslessly compress 8-bit indexed color graphics. GIF was one of the first two graphics formats supported by {{Glossary("HTML")}}, along with {{anch("XBM")}}.</p>
+<p>In 1987, the CompuServe online service provider introduced the <strong>{{interwiki("wikipedia", "GIF")}}</strong> (<strong>Graphics Interchange Format</strong>) image file format to provide a compressed graphics format that all members of their service would be able to use. GIF uses the {{interwiki("wikipedia", "Lempel-Ziv-Welch")}} (LZW) algorithm to losslessly compress 8-bit indexed color graphics. GIF was one of the first two graphics formats supported by {{Glossary("HTML")}}, along with <a href="#xbm_x_window_system_bitmap_file">XBM</a>.</p>
 
 <p>Each pixel in a GIF is represented by a single 8-bit value serving as an index into a palette of 24-bit colors (8 bits each of red, green, and blue). The length of a color table is always a power of 2 (that is, each palette has 2, 4, 8, 16, 32, 64, or 256 entries). To simulate more than 255 or 256 colors, {{interwiki("wikipedia", "dithering")}} is generally used. It is <a href="https://gif.ski/">technically possible</a> to tile multiple image blocks, each with its own color palette, to create truecolor images, but in practice this is rarely done.</p>
 
@@ -306,7 +306,7 @@ translation_of: Web/Media/Formats/Image_types
 
 <p>Another popular feature of GIF is support for {{interwiki("wikipedia", "Interlacing_(bitmaps)", "interlacing")}}, where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality. This is particularly useful when network connections are slow.</p>
 
-<p>GIF is a good choice for simple images and animations, although converting full color images to GIF can result in unsatisfactory dithering. Typically, modern content should use {{anch("PNG")}} for lossless <em>and</em> indexed still images, and should consider using {{anch("APNG")}} for lossless animation sequences.</p>
+<p>GIF is a good choice for simple images and animations, although converting full color images to GIF can result in unsatisfactory dithering. Typically, modern content should use <a href="#png_portable_network_graphics">PNG</a> for lossless <em>and</em> indexed still images, and should consider using <a href="#apng_animated_portable_network_graphics">APNG</a> for lossless animation sequences.</p>
 
 <table class="standard-table">
  <tbody>
@@ -387,7 +387,7 @@ translation_of: Web/Media/Formats/Image_types
 
 <p>The ICO (Microsoft Windows icon) file format was designed by Microsoft for desktop icons of Windows systems. However, early versions of Internet Explorer introduced the ability for a web site to provide a ICO file named <code>favicon.ico</code> in a web site's root directory to specify a <strong><a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_custom_icons_to_your_site">favicon</a></strong> — an icon to be displayed in the Favorites menu, and other places where an iconic representation of the site would be useful.</p>
 
-<p>An ICO file can contain multiple icons, and begins with a directory listing details about each. Following the directory comes the data for the icons. Each icon's data can be either a {{anch("BMP")}} image without the file header, or a complete {{anch("PNG")}} image (including the file header). If you use ICO files, you should use the BMP format, as support for PNG inside ICO files wasn't added until Windows Vista and may not be well supported.</p>
+<p>An ICO file can contain multiple icons, and begins with a directory listing details about each. Following the directory comes the data for the icons. Each icon's data can be either a <a href="#bmp_bitmap_file">BMP</a> image without the file header, or a complete <a href="#png_portable_network_graphics">PNG</a> image (including the file header). If you use ICO files, you should use the BMP format, as support for PNG inside ICO files wasn't added until Windows Vista and may not be well supported.</p>
 
 <div class="blockIndicator warning">
 <p>ICO files <em>should not</em> be used in web content. Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in {{SectionOnPage("/en-US/docs/Web/HTML/Element/link", "Providing icons for different usage contexts")}}.</p>
@@ -584,7 +584,7 @@ translation_of: Web/Media/Formats/Image_types
 
 <h3 id="PNG_Portable_Network_Graphics"><a id="PNG" name="PNG">PNG</a> (Portable Network Graphics)</h3>
 
-<p>The {{Glossary("PNG")}} (pronounced "<strong>ping</strong>") image format uses lossless or lossy compression to provide more efficient compression, and supports higher color depths than {{anch("GIF")}}, as well as full alpha transparency support.</p>
+<p>The {{Glossary("PNG")}} (pronounced "<strong>ping</strong>") image format uses lossless or lossy compression to provide more efficient compression, and supports higher color depths than <a href="#gif_graphics_interchange_format">GIF</a>, as well as full alpha transparency support.</p>
 
 <p>PNG is widely supported, with all major browsers offering full support for its features. Internet Explorer, which introduced PNG support in versions 4–5, did not fully support it until IE 9, and had many infamous bugs for many of the intervening years, including in the once-omnipresent Internet Explorer 6. This slowed PNG adoption, but it is now commonly used, especially when precise reproduction of the source image is needed.</p>
 
@@ -960,7 +960,7 @@ translation_of: Web/Media/Formats/Image_types
 
 <p>WebP also supports animation: in a lossy WebP file, the image data is represented by a VP8 bitstream, which may contain multiple frames. Lossless WebP holds the <code>ANIM</code> chunk, which describes the animation, and the <code>ANMF</code> chunk, which represents a frame of an animation sequence. Looping is supported.</p>
 
-<p>WebP now has broad support in the latest versions of major web browsers, although it does not have deep historical support. Provide a fallback in either {{anch("JPEG")}} or {{anch("PNG")}} format, such as with <a href="/zh-CN/docs/Web/HTML/Element/picture">the <code>&lt;picture&gt;</code> element</a>.</p>
+<p>WebP now has broad support in the latest versions of major web browsers, although it does not have deep historical support. Provide a fallback in either <a href="#jpeg_joint_photographic_experts_group_image">JPEG</a> or <a href="#png_portable_network_graphics">PNG</a> format, such as with <a href="/zh-CN/docs/Web/HTML/Element/picture">the <code>&lt;picture&gt;</code> element</a>.</p>
 
 <table class="standard-table">
  <tbody>
@@ -1142,7 +1142,7 @@ static unsigned char square8_bits[] = {
 
 <h3 id="Photographs">Photographs</h3>
 
-<p>Photographs typically fare well with lossy compression (depending on the encoder's configuration). This makes {{anch("JPEG")}} and {{anch("WebP")}} good choices for photographs, with JPEG being more compatible but WebP perhaps offering better compression. To maximize quality and minimize download time, consider providing both {{anch("Providing image fallbacks", "using a fallback")}} with WebP as the first choice and JPEG as the second. Otherwise, JPEG is the safe choice for compatibility.</p>
+<p>Photographs typically fare well with lossy compression (depending on the encoder's configuration). This makes <a href="#jpeg_joint_photographic_experts_group_image">JPEG</a> and <a href="#webp_image">WebP</a> good choices for photographs, with JPEG being more compatible but WebP perhaps offering better compression. To maximize quality and minimize download time, consider providing both <a href="#提供后备图像">using a fallback</a> with WebP as the first choice and JPEG as the second. Otherwise, JPEG is the safe choice for compatibility.</p>
 
 <table class="standard-table" style="max-width: 42rem;">
  <thead>
@@ -1161,9 +1161,9 @@ static unsigned char square8_bits[] = {
 
 <h3 id="Icons">Icons</h3>
 
-<p>For smaller images such as icons, use a lossless format to avoid loss of detail in a size-constrained image. While lossless WebP is ideal for this purpose, support is not widespread yet, so PNG is a better choice unless you offer a {{anch("Providing image fallbacks", "fallback")}}. If your image contains fewer than 256 colors, GIF is an option, although PNG often compresses even smaller with its indexed compression option (PNG-8).</p>
+<p>For smaller images such as icons, use a lossless format to avoid loss of detail in a size-constrained image. While lossless WebP is ideal for this purpose, support is not widespread yet, so PNG is a better choice unless you offer a <a href="#提供后备图像">fallback</a>. If your image contains fewer than 256 colors, GIF is an option, although PNG often compresses even smaller with its indexed compression option (PNG-8).</p>
 
-<p>If the icon can be represented using vector graphics, consider {{anch("SVG")}}, since it scales across various resolutions and sizes, so it's perfect for responsive design. Although SVG support is good, it may be worth offering a PNG fallback for older browsers.</p>
+<p>If the icon can be represented using vector graphics, consider <a href="#svg_scalable_vector_graphics">SVG</a>, since it scales across various resolutions and sizes, so it's perfect for responsive design. Although SVG support is good, it may be worth offering a PNG fallback for older browsers.</p>
 
 <table class="standard-table" style="max-width: 42rem;">
  <thead>
@@ -1210,8 +1210,8 @@ static unsigned char square8_bits[] = {
    <th scope="col">Fallback</th>
   </tr>
   <tr>
-   <td>{{anch("SVG")}}</td>
-   <td>{{anch("PNG")}}</td>
+   <td><a href="#svg_scalable_vector_graphics">SVG</a></td>
+   <td><a href="#png_portable_network_graphics">PNG</a></td>
   </tr>
  </thead>
 </table>

@@ -16,7 +16,7 @@ original_slug: Web/CSS/:any
 
 <p>La <a href="/es/docs/CSS/Pseudo-classes" title="CSS/Pseudo-classes">pseudo-clase</a> <code>:any()</code> permite construir rápidamente conjuntos de selectores similares estableciendo grupos desde los que cualquier elemento incluido coincidirá. Es una alternativa a tener que repetir el selector completo por uno de los elementos que va a variar.</p>
 
-<div class="note"><strong>Nota:</strong> Esta pseudo-clase está en progreso de ser estandarizada en <a class="external" href="http://dev.w3.org/csswg/selectors4/#matches" title="http://dev.w3.org/csswg/selectors4/#matches"><em>Selectores CSS Nivel 4</em></a> bajo el nombre <code>:matches()</code>. Es probable que la sintaxis y el nombre de <code>:-<em>vendor</em>-any()</code> sean cambiados para reflejar el estándar en el futuro próximo.</div>
+<div class="note"><strong>Nota:</strong> Esta pseudo-clase está en progreso de ser estandarizada en <a class="external" href="http://dev.w3.org/csswg/selectors4/#matches"><em>Selectores CSS Nivel 4</em></a> bajo el nombre <code>:matches()</code>. Es probable que la sintaxis y el nombre de <code>:-<em>vendor</em>-any()</code> sean cambiados para reflejar el estándar en el futuro próximo.</div>
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
@@ -26,7 +26,7 @@ original_slug: Web/CSS/:any
 
 <dl>
  <dt><code>selector</code></dt>
- <dd>Un selector. Puede ser un selector simple o un selector múltiple, comprendido de <a class="external" href="http://www.w3.org/TR/css3-selectors/#simple-selectors" title="http://www.w3.org/TR/css3-selectors/#simple-selectors">selectores simples de CSS 3</a>, y puede incluir el combinador descendiente.</dd>
+ <dd>Un selector. Puede ser un selector simple o un selector múltiple, comprendido de <a class="external" href="http://www.w3.org/TR/css3-selectors/#simple-selectors">selectores simples de CSS 3</a>, y puede incluir el combinador descendiente.</dd>
 </dl>
 
 <div class="note"><strong>Nota:</strong> Los selectores pueden <strong>no</strong> contener pseudo-elementos , y el combinador único combinador permitido es el de descendientes.</div>
@@ -116,7 +116,7 @@ h1 {
 
 <h3 id="Issues_with_performance_and_specificity" name="Issues_with_performance_and_specificity">Problemas con rendimiento y especificidad</h3>
 
-<p><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=561154" title="https://bugzilla.mozilla.org/show_bug.cgi?id=561154">Bug 561154</a> sigue un problema con Gecko donde la especificidad de <code>:-moz-any()</code> es incorrecta. La implementación hasta Firefox 12 pone a <code>:-moz-any()</code> en la categoría de reglas universales, por lo que usarlo como el selector más hacia la derecha será más lento que usando un ID, una clase o etiqueta como el selector a la derecha.</p>
+<p><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=561154">Bug 561154</a> sigue un problema con Gecko donde la especificidad de <code>:-moz-any()</code> es incorrecta. La implementación hasta Firefox 12 pone a <code>:-moz-any()</code> en la categoría de reglas universales, por lo que usarlo como el selector más hacia la derecha será más lento que usando un ID, una clase o etiqueta como el selector a la derecha.</p>
 
 <p>Por ejemplo</p>
 
@@ -135,54 +135,4 @@ h1 {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatGeckoDesktop("2")}}{{property_prefix("-moz")}}</td>
-   <td>12.0 (534.30){{property_prefix("-webkit")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>5<br>
-    {{property_prefix("-webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>5<br>
-    {{property_prefix("-webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.selectors.is")}}

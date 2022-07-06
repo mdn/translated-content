@@ -1,0 +1,162 @@
+---
+title: WindowEventHandlers.onhashchange
+slug: conflicting/Web/API/Window/hashchange_event
+tags:
+  - Event Handler
+  - HTML DOM
+  - Hash
+  - Property
+  - Reference
+  - URL & Hash
+  - WindowEventHandlers
+translation_of: Web/API/WindowEventHandlers/onhashchange
+original_slug: Web/API/WindowEventHandlers/onhashchange
+---
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p><span class="seoSummary">{{domxref("WindowEventHandlers")}} ミックスインの <strong><code>onhashchange</code></strong> プロパティは、<code><a href="/ja/docs/Web/API/Window/hashchange_event">hashchange</a></code> イベントを処理するための {{event("Event_handlers", "event handler")}} です。</span></p>
+
+<p><code>hashchange</code> イベントは、ウィンドウのハッシュが変更されると発生します（{{domxref("Window.location")}} および {{domxref("HTMLHyperlinkElementUtils.hash")}} を参照）。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<p><strong>イベントハンドラの使用</strong></p>
+
+<pre class="syntaxbox">window.onhashchange = funcRef;
+</pre>
+
+<p><strong>HTML イベントハンドラの使用</strong></p>
+
+<pre class="syntaxbox">&lt;body onhashchange="funcRef();"&gt;
+</pre>
+
+<p><strong>イベントリスナーの使用</strong></p>
+
+<p>イベントリスナーを追加するには、{{domxref("EventTarget.addEventListener()", "addEventListener()")}} を使用します。</p>
+
+<pre class="syntaxbox">window.addEventListener("hashchange", funcRef, false);
+</pre>
+
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
+
+<dl>
+ <dt><code>funcRef</code></dt>
+ <dd> 関数への参照。</dd>
+</dl>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<h3 id="Using_an_event_handler" name="Using_an_event_handler">イベントハンドラの使用</h3>
+
+<p>この例では、イベントハンドラ（<code>window.onhashchange</code>）を使用して、新しいハッシュ値が変更されるたびにチェックします。 それが <code>#cool-feature</code> と等しい場合、スクリプトはコンソールにメッセージを記録します。</p>
+
+<pre class="brush:js">function locationHashChanged() {
+  if (location.hash === '#cool-feature') {
+    console.log("あなたはクールな機能を訪れています！");
+  }
+}
+
+window.onhashchange = locationHashChanged;
+</pre>
+
+<h3 id="Using_an_event_listener" name="Using_an_event_listener">イベントリスナーの使用</h3>
+
+<p>この例では、イベントリスナーを使用して、ハッシュが変更されるたびに通知を記録します。</p>
+
+<pre class="brush:js">function hashHandler() {
+  console.log('ハッシュが変更されました！');
+}
+
+window.addEventListener('hashchange', hashHandler, false);
+</pre>
+
+<h3 id="Overriding_the_hash" name="Overriding_the_hash">ハッシュのオーバーライド</h3>
+
+<p>この関数は、新しいハッシュを動的に設定し、2つの値のいずれかにランダムに設定します。</p>
+
+<pre class="brush:js">function changeHash() {
+  location.hash = (Math.random() &gt; 0.5) ? 'location1' : 'location2';
+}
+</pre>
+
+<h2 id="The_hashchange_event" name="The_hashchange_event">hashchange イベント</h2>
+
+<p>送出された <code>hashchange</code> イベントには、次のプロパティがあります。</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">フィールド</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>newURL</code></td>
+   <td><code>DOMString</code></td>
+   <td>ウィンドウがナビゲートされた新しい URL。</td>
+  </tr>
+  <tr>
+   <td><code>oldURL</code></td>
+   <td><code>DOMString</code></td>
+   <td>ウィンドウがナビゲートされる前の URL。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Polyfill_for_event.newURL_and_event.oldURL" name="Polyfill_for_event.newURL_and_event.oldURL">event.newURL および event.oldURL のポリフィル</h3>
+
+<pre class="brush:js">// hashchange イベントを登録するコードの前にこのスニペットを実行してください
+if (!window.HashChangeEvent)(function(){
+  var lastURL = document.URL;
+  window.addEventListener("hashchange", function(event){
+    Object.defineProperty(event, "oldURL", {enumerable:true,configurable:true,value:lastURL});
+    Object.defineProperty(event, "newURL", {enumerable:true,configurable:true,value:document.URL});
+    lastURL = document.URL;
+  });
+}());
+</pre>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-window-onhashchange', 'onhashchange')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+
+
+<p>{{Compat("api.WindowEventHandlers.onhashchange")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><code><a href="/ja/docs/Web/API/Window/hashchange_event">hashchange</a></code> イベント</li>
+ <li><a href="/ja/docs/DOM/Manipulating_the_browser_history">ブラウザーの履歴の操作</a></li>
+ <li><a href="/ja/docs/DOM/window.history"><code>history.pushState()</code> メソッドと <code>history.replaceState()</code> メソッド</a></li>
+ <li>{{domxref("WindowEventHandlers.onpopstate")}}</li>
+ <li>{{domxref("HTMLHyperlinkElementUtils.hash")}}</li>
+</ul>

@@ -28,46 +28,46 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/has
 
 <h3 id="参数">参数</h3>
 
-<p><code>下面是传递给 has</code> 方法的参数. <code>this</code> is bound to the handler.</p>
+<p><code>下面是传递给 has</code> 方法的参数。<code>this</code> is bound to the handler.</p>
 
 <dl>
  <dt><code>target</code></dt>
- <dd>目标对象.</dd>
+ <dd>目标对象。</dd>
  <dt><code>prop</code></dt>
- <dd>需要检查是否存在的属性.</dd>
+ <dd>需要检查是否存在的属性。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p><code>has</code> 方法返回一个 boolean 属性的值.</p>
+<p><code>has</code> 方法返回一个 boolean 属性的值。</p>
 
 <h2 id="描述">描述</h2>
 
-<p><code><strong>handler.has</strong></code> 方法可以看作是针对 {{jsxref("Operators/in", "in")}} 操作的钩子.</p>
+<p><code><strong>handler.has</strong></code> 方法可以看作是针对 {{jsxref("Operators/in", "in")}} 操作的钩子。</p>
 
 <h3 id="拦截">拦截</h3>
 
-<p>这个钩子可以拦截下面这些操作:</p>
+<p>这个钩子可以拦截下面这些操作：</p>
 
 <ul>
- <li>属性查询: <code>foo in proxy</code></li>
- <li>继承属性查询: <code>foo in Object.create(proxy)</code></li>
+ <li>属性查询：<code>foo in proxy</code></li>
+ <li>继承属性查询：<code>foo in Object.create(proxy)</code></li>
  <li><code>with</code> 检查<code>: with(proxy) { (foo); }</code></li>
  <li>{{jsxref("Reflect.has()")}}</li>
 </ul>
 
 <h3 id="约束">约束</h3>
 
-<p>如果违反了下面这些规则,  proxy 将会抛出 {{jsxref("TypeError")}}:</p>
+<p>如果违反了下面这些规则，proxy 将会抛出 {{jsxref("TypeError")}}:</p>
 
 <ul>
- <li>如果目标对象的某一属性本身不可被配置，则该属性不能够被代理隐藏.</li>
+ <li>如果目标对象的某一属性本身不可被配置，则该属性不能够被代理隐藏。</li>
  <li>如果目标对象为不可扩展对象，则该对象的属性不能够被代理隐藏</li>
 </ul>
 
 <h2 id="示例">示例</h2>
 
-<p>下面的代码拦截了 {{jsxref("Operators/in", "in")}} 操作符.</p>
+<p>下面的代码拦截了 {{jsxref("Operators/in", "in")}} 操作符。</p>
 
 <pre class="brush: js">var p = new Proxy({}, {
   has: function(target, prop) {
@@ -80,7 +80,7 @@ console.log('a' in p); // "called: a"
                        // true
 </pre>
 
-<p>下面的代码违反了约束.</p>
+<p>下面的代码违反了约束。</p>
 
 <pre class="brush: js">var obj = { a: 10 };
 Object.preventExtensions(obj);
@@ -115,57 +115,9 @@ var p = new Proxy(obj, {
  </tbody>
 </table>
 
-<h2 id="浏览器支持">浏览器支持</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("18")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("18")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="其他">其他</h2>
 

@@ -13,7 +13,7 @@ translation_of: Web/API/TouchEvent
 
 <p><code>TouchEvent</code> 是一类描述手指在触摸平面（触摸屏、触摸板等）的状态变化的事件。这类事件用于描述一个或多个触点，使开发者可以检测触点的移动，触点的增加和减少，等等。</p>
 
-<p>每 个 {{ domxref("Touch") }} 对象代表一个触点; 每个触点都由其位置，大小，形状，压力大小，和目标 {{ domxref("element") }} 描述。 {{ domxref("TouchList") }} 对象代表多个触点的一个列表.</p>
+<p>每 个 {{ domxref("Touch") }} 对象代表一个触点; 每个触点都由其位置，大小，形状，压力大小，和目标 {{ domxref("element") }} 描述。 {{ domxref("TouchList") }} 对象代表多个触点的一个列表。</p>
 
 <h2 id="构造函数">构造函数</h2>
 
@@ -34,7 +34,7 @@ translation_of: Web/API/TouchEvent
  <dt>{{ domxref("event.ctrlKey", "TouchEvent.ctrlKey") }} {{readonlyInline}}</dt>
  <dd>布尔值，指明触摸事件触发时，键盘 ctrl 键是否被按下。</dd>
  <dt>{{ domxref("event.metaKey", "TouchEvent.metaKey") }} {{readonlyInline}}</dt>
- <dd>布尔值，指明触摸事件触发时，键盘 meta 键 （<a href="http://en.wikipedia.org/wiki/Meta_key" title="http://en.wikipedia.org/wiki/Meta_key">Wikipedia - meta Key</a>）是否被按下。</dd>
+ <dd>布尔值，指明触摸事件触发时，键盘 meta 键（<a href="http://en.wikipedia.org/wiki/Meta_key">Wikipedia - meta Key</a>）是否被按下。</dd>
  <dt>{{ domxref("event.shiftKey", "TouchEvent.shiftKey") }} {{readonlyInline}}</dt>
  <dd>布尔值，指明触摸事件触发时，键盘 shift 键是否被按下。</dd>
  <dt>{{ domxref("TouchEvent.targetTouches") }} {{readonlyInline}}</dt>
@@ -47,7 +47,7 @@ translation_of: Web/API/TouchEvent
 
 <p>为了区别触摸相关的状态改变，存在多种类型的触摸事件。可以通过检查触摸事件的 {{ domxref("event.type", "TouchEvent.type") }} 属性来确定当前事件属于哪种类型</p>
 
-<div class="note"><strong>注意:</strong> 在很多情况下，触摸事件和鼠标事件会同时被触发（目的是让没有对触摸设备优化的代码仍然可以在触摸设备上正常工作）。如果你使用了触摸事件，可以调用 {{ domxref("event.preventDefault()") }} 来阻止鼠标事件被触发。</div>
+<div class="note"><strong>注意：</strong> 在很多情况下，触摸事件和鼠标事件会同时被触发（目的是让没有对触摸设备优化的代码仍然可以在触摸设备上正常工作）。如果你使用了触摸事件，可以调用 {{ domxref("event.preventDefault()") }} 来阻止鼠标事件被触发。</div>
 
 <h3 id="domxrefElementtouchstart_event_touchstart">{{domxref("Element/touchstart_event", "touchstart")}}</h3>
 
@@ -67,7 +67,7 @@ translation_of: Web/API/TouchEvent
 
 <p>当触点的半径、旋转角度以及压力大小发生变化时，也将触发此事件。</p>
 
-<div class="note"><strong>注意:</strong> 不同浏览器上 <code>touchmove</code> 事件的触发频率并不相同。这个触发频率还和硬件设备的性能有关。因此决不能让程序的运作依赖于某个特定的触发频率。</div>
+<div class="note"><strong>注意：</strong> 不同浏览器上 <code>touchmove</code> 事件的触发频率并不相同。这个触发频率还和硬件设备的性能有关。因此决不能让程序的运作依赖于某个特定的触发频率。</div>
 
 <h3 id="domxrefElementtouchcancel_event_touchcancel">{{domxref("Element/touchcancel_event", "touchcancel")}}</h3>
 
@@ -83,7 +83,7 @@ translation_of: Web/API/TouchEvent
 
 <p>很值得注意的是，在很多情况下，触摸事件和鼠标事件会一起触发（以使非触摸专用的代码仍然可以与用户交互）。如果你要使用触摸事件，你可以使用 {{domxref("Event.preventDefault","preventDefault()")}} 来取消鼠标事件。</p>
 
-<p>但 Chrome 是例外，从版本56（桌面版、安卓版和安卓 webview）开始，Chrome 中 {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} 的默认值就是 <code>true</code>，没有必要调用 {{domxref("Event.preventDefault","preventDefault()")}}。如果要重写这个行为，简单地将 <code>passive</code> 设置成 <code>false</code> 就行。这样设置可以阻止监听器在用户滚动时停止页面渲染。<a href="https://developers.google.com/web/updates/2016/06/passive-event-listeners">Google Developer</a> 有一个简单的演示。</p>
+<p>但 Chrome 是例外，从版本 56（桌面版、安卓版和安卓 webview）开始，Chrome 中 {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} 的默认值就是 <code>true</code>，没有必要调用 {{domxref("Event.preventDefault","preventDefault()")}}。如果要重写这个行为，简单地将 <code>passive</code> 设置成 <code>false</code> 就行。这样设置可以阻止监听器在用户滚动时停止页面渲染。<a href="https://developers.google.com/web/updates/2016/06/passive-event-listeners">Google Developer</a> 有一个简单的演示。</p>
 
 <h2 id="全局事件处理">全局事件处理</h2>
 

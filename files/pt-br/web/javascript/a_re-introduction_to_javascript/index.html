@@ -57,7 +57,7 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 <pre class="eval">0.1 + 0.2 == 0.30000000000000004
 </pre>
 
-<p><span lang="pt"><span class="hps">Na prática,</span> <span class="hps">valores inteiros</span> <span class="hps">são tratados como</span> <span class="hps">inteiros</span> <span class="hps">de 32 bits</span> <span class="atn hps">(</span><span>e são armazenados</span> <span class="hps">dessa forma</span> <span class="hps">em algumas implementações</span> <span class="hps">do navegador)</span><span class="alt-edited">, que podem ser</span> <span class="alt-edited hps">importantes para as operações</span> <span class="hps">bit a bit</span><span>.</span> <span class="hps">Para mais detalhes</span><span>, consulte</span> <span class="hps"><a class="external" href="http://www.hunlock.com/blogs/The_Complete_Javascript_Number_Reference" title="http://www.hunlock.com/blogs/The_Complete_Javascript_Number_Reference">The Complete JavaScript Number Reference</a>.</span></span></p>
+<p><span lang="pt"><span class="hps">Na prática,</span> <span class="hps">valores inteiros</span> <span class="hps">são tratados como</span> <span class="hps">inteiros</span> <span class="hps">de 32 bits</span> <span class="atn hps">(</span><span>e são armazenados</span> <span class="hps">dessa forma</span> <span class="hps">em algumas implementações</span> <span class="hps">do navegador)</span><span class="alt-edited">, que podem ser</span> <span class="alt-edited hps">importantes para as operações</span> <span class="hps">bit a bit</span><span>.</span> <span class="hps">Para mais detalhes</span><span>, consulte</span> <span class="hps"><a class="external" href="http://www.hunlock.com/blogs/The_Complete_Javascript_Number_Reference">The Complete JavaScript Number Reference</a>.</span></span></p>
 
 <p>Os <a href="/en/JavaScript/Reference/Operators/Arithmetic_Operators">operadores numéricos</a> padrões são suportados, incluindo adição, subtração, módulo (ou resto) aritmético e assim por diante. Há também um objeto embutido que eu esqueci de mencionar mais cedo chamado <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math">Math</a> para manipular funções e constantes matemáticas mais avançadas:</p>
 
@@ -121,7 +121,7 @@ false
 false
 </pre>
 
-<div class="note"><strong>Nota:</strong> As funções <a href="/en/JavaScript/Reference/Global_Objects/parseInt" title="en/JavaScript/Reference/Global Objects/parseInt"><code>parseInt()</code></a> e <code><a href="/en/JavaScript/Reference/Global_Objects/parseFloat" title="en/JavaScript/Reference/Global Objects/parseFloat">parseFloat()</a></code> fazem a conversão da string até alcançarem um caracter que não é válido para o formato numérico especificado, então elas retornam o número convertido até aquele ponto. Contudo, o operador "+" simplesmente converte a string em <code>NaN</code>  se tiver algum caracter inválido nela. Apenas tente por si mesmo converter a string "10.2abc" usando cada um desses métodos <span style="line-height: 1.5;">no console </span><span style="line-height: 1.5;">e entenderá melhor essas diferenças.</span></div>
+<div class="note"><strong>Nota:</strong> As funções <a href="/en/JavaScript/Reference/Global_Objects/parseInt" title="en/JavaScript/Reference/Global Objects/parseInt"><code>parseInt()</code></a> e <code><a href="/en/JavaScript/Reference/Global_Objects/parseFloat" title="en/JavaScript/Reference/Global Objects/parseFloat">parseFloat()</a></code> fazem a conversão da string até alcançarem um caracter que não é válido para o formato numérico especificado, então elas retornam o número convertido até aquele ponto. Contudo, o operador "+" simplesmente converte a string em <code>NaN</code> se tiver algum caracter inválido nela. Apenas tente por si mesmo converter a string "10.2abc" usando cada um desses métodos <span style="line-height: 1.5;">no console </span><span style="line-height: 1.5;">e entenderá melhor essas diferenças.</span></div>
 
 <h2 id="Strings">Strings</h2>
 
@@ -440,7 +440,7 @@ undefined
 }
 </pre>
 
-<p>Aqui nós estamos declarando duas variáveis. A atribuição na parte do meio do laço <code>for</code> é também testada — se for verdadeira, o laço continuara. Uma vez que o <code>i</code> é incrementado toda vez, os itens do array serão atribuiídos a variável item sequencialmente. A iteração é finalizada quando item "falsy" é encontrado (tal como o <code>undefined</code>, false ou zero).</p>
+<p>Aqui nós estamos declarando duas variáveis. A atribuição na parte do meio do laço <code>for</code> é também testada — se for verdadeira, o laço continuará. Uma vez que o <code>i</code> é incrementado toda vez, os itens do array serão atribuídos a variável item sequencialmente. A iteração é finalizada quando item "falsy" é encontrado (tal como o <code>undefined</code>, false ou zero).</p>
 
 <p>Note que esse truque só deveria ser usado em vetores que você sabe não conter valores "falsy" (vetores de objeto ou nós <a href="/en/DOM" title="en/DOM">DOM</a> por exemplo). Se você iterar sobre dados numéricos que possam ter o 0 ou sobre dados string que possam ter uma string vazia, você deveria usar a segunda forma como alternativa.</p>
 
@@ -492,11 +492,11 @@ undefined
   </tr>
   <tr>
    <td><code>a.reverse()</code></td>
-   <td>Reverte o vetor</td>
+   <td>Reverte o vetor.</td>
   </tr>
   <tr>
    <td><code>a.shift()</code></td>
-   <td>Remove e retorna o primeiro item</td>
+   <td>Remove e retorna o primeiro item.</td>
   </tr>
   <tr>
    <td><code>a.slice(start, end)</code></td>
@@ -648,7 +648,7 @@ NaN // Você não pode executar adição em <span style="background-color: #ffff
 
 <div class="note"><strong>Nota:</strong> Para uma discursão mais detalhada de programação orientada a objetos em JavaScript, veja <a href="/en/JavaScript/Introduction_to_Object-Oriented_JavaScript" title="https://developer.mozilla.org/en/Introduction_to_Object-Oriented_JavaScript">Introdução a JavaScript Orientado a Objeto</a>.</div>
 
-<p>Na clássica Programação Orientada a Objetos, objetos são coleções de dados e métodos que operam sobre esses dados. JavaScript é uma linguagem baseada em protótipos que não contém a estrutura de classe, como tem em C++ e Java. (Algumas vezes isso é algo confuso para o programador acostumado a linguagens com estrutura de classe) Em vez disso, JavaScript usa funções como classes. Vamos considerar um objeto pessoa com os campos primeiro e último nome. Há duas formas em que o nome talvez possa ser exibido: como "primeiro nome segundo nome" ou como "último nome, primeiro nome". Usando as funções e objetos que discutimos anteriormente, aqui está uma forma de fazer isso:</p>
+<p>Na clássica Programação Orientada a Objetos, objetos são coleções de dados e métodos que operam sobre esses dados. JavaScript é uma linguagem baseada em protótipos que não contém a estrutura de classe, como tem em C++ e Java. (Algumas vezes isso é algo confuso para o programador acostumado a linguagens com estrutura de classe). Em vez disso, JavaScript usa funções como classes. Vamos considerar um objeto pessoa com os campos primeiro e último nome. Há duas formas em que o nome talvez possa ser exibido: como "primeiro nome segundo nome" ou como "último nome, primeiro nome". Usando as funções e objetos que discutimos anteriormente, aqui está uma forma de fazer isso:</p>
 
 <pre class="brush: js">function makePerson(first, last) {
     return {
@@ -715,7 +715,7 @@ undefined undefined
 var s = new Person("Simon", "Willison");
 </pre>
 
-<p>Nós introduzimos uma outra palavra-chave: '<code><a href="/en/JavaScript/Reference/Operators/new" title="en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/new_Operator">new</a></code>'. <code>new</code> é fortemente relacionada a '<code>this</code>'. O que ele faz é criar um novo objeto vazio, e então chamar a função especificada com '<code>this</code>' para atribui aquele novo objeto. Funções que são desenhadas para ser chamadas pelo '<code>new</code>' são chamadas de funções construtoras. Uma prática comum é capitular  essas funções como um lembrete de chamá-las com o <code>new</code>.</p>
+<p>Nós introduzimos uma outra palavra-chave: '<code><a href="/en/JavaScript/Reference/Operators/new" title="en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/new_Operator">new</a></code>'. <code>new</code> é fortemente relacionada a '<code>this</code>'. O que ele faz é criar um novo objeto vazio, e então chamar a função especificada com '<code>this</code>' para atribuir aquele novo objeto. Funções que são desenhadas para ser chamadas pelo '<code>new</code>' são chamadas de funções construtoras. Uma prática comum é capitular  essas funções como um lembrete de chamá-las com o <code>new</code>.</p>
 
 <p>Nossos objetos pessoa estão ficando melhor mas ainda existem algumas arestas feias. Toda vez que criamos um objeto pessoa, criamos duas marcas de nova função dentro dele — não seria melhor se este código fosse compartilhado?</p>
 
@@ -845,7 +845,7 @@ s.lastNameCaps();
 
 <p>Isto permite um compromisso maior de utilidade ao escrever um código de melhor mantenibilidade. Se uma função depende de uma ou mais funções que não são úteis para outras parte do seu código, você pode aninhar estas funções utilitárias dentro da função que será chamada. Isto mantém o número de funções que estão no escopo global baixo, o que é sempre uma boa coisa.</p>
 
-<p>isto é também um ótimo contador de atração de variáveis globais. Quando se escreve um código complexo, é sempre tentador usar as variáveis globais para compartilhar valores entre múltiplas funções  — do qual leva a um código que é difícil de manter. Funções aninhadas podem compartilhar variáveis em seus parentes, então você pode usar este mecanismo para acoplar e ajuntar funções, quando isto fizer sentido, sem poluir o seu "namespace" global — 'globais locais' se preferir. Esta técnica deve ser usada com cautela, mas é uma habilidade a se ter.</p>
+<p>Isto é também um ótimo contador de atração de variáveis globais. Quando se escreve um código complexo, é sempre tentador usar as variáveis globais para compartilhar valores entre múltiplas funções  — do qual leva a um código que é difícil de manter. Funções aninhadas podem compartilhar variáveis em seus parentes, então você pode usar este mecanismo para acoplar e ajuntar funções, quando isto fizer sentido, sem poluir o seu "namespace" global — 'globais locais' se preferir. Esta técnica deve ser usada com cautela, mas é uma habilidade a se ter.</p>
 
 <h2 id="Clausuras_Closures">Clausuras (Closures)</h2>
 

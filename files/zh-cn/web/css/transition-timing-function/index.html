@@ -7,11 +7,11 @@ translation_of: Web/CSS/transition-timing-function
 
 <h2 id="概述">概述</h2>
 
-<p>CSS属性受到 <a href="/en-US/docs/CSS/Tutorials/Using_CSS_transitions" title="en/CSS/CSS transitions">transition effect</a>的影响，会产生不断变化的中间值，而 <a href="/en-US/docs/CSS" title="/en-US/docs/CSS">CSS</a> <code>transition-timing-function</code> 属性用来描述这个中间值是怎样计算的。实质上，通过这个函数会建立一条加速度曲线，因此在整个transition变化过程中，变化速度可以不断改变。</p>
+<p>CSS 属性受到 <a href="/en-US/docs/CSS/Tutorials/Using_CSS_transitions" title="en/CSS/CSS transitions">transition effect</a>的影响，会产生不断变化的中间值，而 <a href="/en-US/docs/CSS" title="/en-US/docs/CSS">CSS</a> <code>transition-timing-function</code> 属性用来描述这个中间值是怎样计算的。实质上，通过这个函数会建立一条加速度曲线，因此在整个 transition 变化过程中，变化速度可以不断改变。</p>
 
-<p>这条加速度曲线被{{cssxref("&lt;timing-function&gt;")}}所定义，之后作用到每个CSS属性的过渡. </p>
+<p>这条加速度曲线被{{cssxref("&lt;timing-function&gt;")}}所定义，之后作用到每个 CSS 属性的过渡. </p>
 
-<p>你可以规定多个timing function,通过使用 {{ cssxref("transition-property") }}属性，可以根据主列表(transition property的列表)给每个CSS属性应用相应的timing function.如果timing function的个数比主列表中数量少，缺少的值被设置为初始值（ease） 。如果timing function比主列表要多，timing function函数列表会被截断至合适的大小。这两种情况下声明的CSS属性都是有效的。</p>
+<p>你可以规定多个 timing function，通过使用 {{ cssxref("transition-property") }}属性，可以根据主列表 (transition property 的列表) 给每个 CSS 属性应用相应的 timing function.如果 timing function 的个数比主列表中数量少，缺少的值被设置为初始值（ease） 。如果 timing function 比主列表要多，timing function 函数列表会被截断至合适的大小。这两种情况下声明的 CSS 属性都是有效的。</p>
 
 <p>{{cssinfo}}</p>
 
@@ -39,7 +39,7 @@ transition-timing-function: inherit
 
 <dl>
  <dt><code>&lt;timing-function&gt;</code></dt>
- <dd>通过{{ cssxref("transition-property") }}中定义被过渡属性，每个 {{cssxref("&lt;timing-function&gt;")}}的值代表与这个属性相对应的timing function.</dd>
+ <dd>通过{{ cssxref("transition-property") }}中定义被过渡属性，每个 {{cssxref("&lt;timing-function&gt;")}}的值代表与这个属性相对应的 timing function.</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -571,58 +571,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}{{ property_prefix("-webkit") }}</td>
-   <td>{{ CompatGeckoDesktop("2.0") }}{{ property_prefix("-moz") }}<br>
-    {{ CompatGeckoDesktop("16.0") }}</td>
-   <td>10</td>
-   <td>11.6{{ property_prefix("-o") }}<br>
-    12.10 <a href="http://my.opera.com/ODIN/blog/2012/08/03/a-hot-opera-12-50-summer-time-snapshot" title="http://my.opera.com/ODIN/blog/2012/08/03/a-hot-opera-12-50-summer-time-snapshot">#</a></td>
-   <td>{{ CompatVersionUnknown() }}{{ property_prefix("-webkit") }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}{{ property_prefix("-webkit") }}</td>
-   <td>{{ CompatVersionUnknown() }}{{ property_prefix("-webkit") }}</td>
-   <td>{{ CompatGeckoMobile("2.0") }}{{ property_prefix("-moz") }}<br>
-    {{ CompatGeckoMobile("16.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}{{ property_prefix("-webkit") }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.transition-timing-function")}}
 
 <h2 id="参考">参考</h2>
 

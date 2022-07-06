@@ -11,15 +11,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
 ---
 <div>{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Объект <code><strong>SyntaxError</strong></code> представляет ошибку, возникающую при попытке интерпретировать синтаксически неправильный код.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>new SyntaxError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>message</code></dt>
@@ -30,34 +30,34 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
  <dd>Необязательный параметр. Номер строки кода, вызвавшей исключение.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Исключение <code>SyntaxError</code> выбрасывается, когда движок JavaScript при разборе кода обнаруживает токены или токен, которые, согласно синтаксису, не должны здесь находиться.</p>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt>{{jsxref("SyntaxError.prototype")}}</dt>
  <dd>Позволяет добавлять свойства в объект <code>SyntaxError</code>.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <p>Глобальный объект <code>SyntaxError</code> не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.</p>
 
-<h2 id="SyntaxError_instances" name="SyntaxError_instances">Экземпляры объекта <code>SyntaxError</code></h2>
+<h2 id="SyntaxError_instances">Экземпляры объекта <code>SyntaxError</code></h2>
 
-<h3 id="Properties_of_SyntaxError_instances" name="Properties_of_SyntaxError_instances">Свойства</h3>
+<h3 id="Properties_of_SyntaxError_instances">Свойства</h3>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', 'Properties')}}</div>
 
-<h3 id="Methods_of_SyntaxError_instances" name="Methods_of_SyntaxError_instances">Методы</h3>
+<h3 id="Methods_of_SyntaxError_instances">Методы</h3>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', 'Methods')}}</div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Catch_an_SyntaxError" name="Example:_Catch_an_SyntaxError">Пример: перехват исключения <code>SyntaxError</code></h3>
+<h3 id="Example:_Catch_an_SyntaxError">Пример: перехват исключения <code>SyntaxError</code></h3>
 
 <pre class="brush: js">try {
   eval('hoo bar');
@@ -72,7 +72,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
 }
 </pre>
 
-<h3 id="Example:_Create_an_SyntaxError" name="Example:_Create_an_SyntaxError">Пример: возбуждение исключения <code>SyntaxError</code></h3>
+<h3 id="Example:_Create_an_SyntaxError">Пример: возбуждение исключения <code>SyntaxError</code></h3>
 
 <pre class="brush: js">try {
   throw new SyntaxError('Привет', 'someFile.js', 10);
@@ -87,38 +87,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11.6.4', 'SyntaxError')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-syntaxerror', 'SyntaxError')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Error")}}</li>

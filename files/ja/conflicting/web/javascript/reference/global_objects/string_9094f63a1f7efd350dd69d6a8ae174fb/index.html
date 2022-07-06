@@ -1,0 +1,42 @@
+---
+title: USVString
+slug: >-
+  conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb
+tags:
+  - API
+  - DOM
+  - Reference
+  - String
+  - WebIDL
+translation_of: Web/API/USVString
+original_slug: Web/API/USVString
+---
+<p>{{APIRef("DOM")}}</p>
+
+<p><strong><code>USVString</code></strong> は、Unicode スカラー値（unicode scalar values）のすべての可能なシーケンスの集合に対応します。 <code>USVString</code> は、JavaScript で返されると {{JSxRef("String")}} にマップされます。 通常、テキスト処理を実行し、操作するために Unicode スカラー値の文字列が必要な API にのみ使用されます。 <code>USVString</code> は、対になっていないサロゲートコードポイント（surrogate codepoints）を許可しないこと以外は {{DOMxRef("DOMString")}} と同じです。 <code>USVString</code> にある対になっていないサロゲートコードポイントは、ブラウザーによって Unicode の置換文字（replacement character）<code>U+FFFD</code> (�) に変換されます。</p>
+
+<h2 id="Specification" name="Specification">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("WebIDL", "#idl-USVString", "USVString")}}</td>
+   <td>{{Spec2("WebIDL")}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{JSxRef("String")}}</li>
+ <li>{{DOMxRef("DOMString")}}</li>
+ <li>{{DOMxRef("CSSOMString")}}</li>
+ <li><a href="/ja/docs/Web/API/DOMString/Binary">バイナリ文字列</a></li>
+</ul>

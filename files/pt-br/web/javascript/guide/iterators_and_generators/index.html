@@ -53,11 +53,11 @@ console.log(it.next().done);  // true</pre>
 
 <p>Um objeto é iterável <strong>(iterable),</strong> se ele define seu comportamento de iteração, como no caso de quais valores percorridos em um laço do tipo {{jsxref("Statements/for...of", "for..of")}}. Alguns tipos embutidos, como o {{jsxref("Array")}}, ou o {{jsxref("Map")}}, têm um comportamento iterável padrão, enquanto outros tipos (como o{{jsxref("Object")}}) não possuem.</p>
 
-<p>Para que um objeto seja <strong>iterable</strong>, o objeto precisa implemntar o método <strong>@@iterator</strong>, significando que o objeto (ou um dos objetos na cadeia de prototipagem  - <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype chain</a>) precisa ter uma propriedade com uma chave {{jsxref("Symbol.iterator")}}:</p>
+<p>Para que um objeto seja <strong>iterable</strong>, o objeto precisa implementar o método <strong>@@iterator</strong>, significando que o objeto (ou um dos objetos na cadeia de prototipagem  - <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype chain</a>) precisa ter uma propriedade com uma chave {{jsxref("Symbol.iterator")}}:</p>
 
 <h3 id="Iterables_definidos_pelo_usuário">Iterables definidos pelo usuário</h3>
 
-<p>Nós podemos fazer, criar, os nossos próprios iteráveis como aqui:</p>
+<p>Você pode fazer seus próprios iteráveis da seguinte maneira:</p>
 
 <pre class="brush: js notranslate">var myIterable = {}
 myIterable[Symbol.iterator] = function* () {
@@ -98,7 +98,7 @@ a // "a"
 
 <h2 id="Generators">Generators</h2>
 
-<p>Enquanto os iteradores são ferramentas muito úteis, sua criação requer um cuidado devido a necessidade de manter explicito seu estado interno. <strong>{{jsxref("Global_Objects/Generator","Generators","","true")}}</strong> provê uma alternativa poderosa: eles te permitem definir um algorítimo iterativo escrevendo uma função simples que pode manter seu estado próprio.</p>
+<p>Enquanto os iteradores são ferramentas muito úteis, sua criação requer um cuidado devido à necessidade de manter explícito seu estado interno. <strong>{{jsxref("Global_Objects/Generator","Generators","","true")}}</strong> provêm uma alternativa poderosa: eles te permitem definir um algorítimo iterativo escrevendo uma função simples que pode manter seu estado próprio.</p>
 
 <p>Generator é um tipo especial de função que trabalha como uma factory para iteradores. A função vira um generator se ela contém uma ou mais expressões {{jsxref("Operators/yield","yield")}} e se ela usa a sintaxe {{jsxref("Statements/function*","function*")}}.</p>
 
@@ -117,11 +117,11 @@ console.log(gen.next().value); // 2
 
 <h2 id="Generators_avançados">Generators avançados</h2>
 
-<p>Generators computam seus valores "yielded" por demanda, que os permitem representar sequencias de forma eficiente que costumam ser trabalhosas ao serem computadas, ou até sequencias infinitas como demonstradas acima.</p>
+<p>Generators computam seus valores "yielded" por demanda, que os permitem representar sequências de forma eficiente que costumam ser trabalhosas ao serem computadas, ou até sequências infinitas como demonstradas acima.</p>
 
 <p>O método {{jsxref("Global_Objects/Generator/next","next()")}} também aceita um valor que pode ser usado para modificar o estado interno de um generator. O valor passado pro <code>next()</code> será tratado como o resultado da última expressão yield que pausou o generator.</p>
 
-<p>Aqui um gerador de sequencia fibonacci usando <code>next(x)</code> pra restartar a sequencia:</p>
+<p>Aqui um gerador de sequência Fibonacci usando <code>next(x)</code> pra restartar a sequência:</p>
 
 <pre class="brush: js notranslate">function* fibonacci(){
   var fn1 = 1;
@@ -157,6 +157,6 @@ console.log(sequence.next().value);     // 3</pre>
 
 <p>Se um yield não for encontrado durante o processo de lançamento de um thrown exception, então o exception será propagado através da chamada do <code>throw()</code>, e pra subsequente chamada do <code>next()</code> que terá a propriedade done resultando em <code>true</code>.</p>
 
-<p>Generators tem o método {{jsxref("Global_Objects/Generator/return","return(value)")}} que retorna o valor pego e finaliza o generator.</p>
+<p>Generators têm o método {{jsxref("Global_Objects/Generator/return","return(value)")}} que retorna o valor pego e finaliza o generator.</p>
 
 <p>{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}</p>

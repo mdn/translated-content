@@ -5,7 +5,7 @@ translation_of: Web/API/Animation/Animation
 ---
 <p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
 
-<p>Animation构造函数返回一个新的Animation对象实例。</p>
+<p>Animation 构造函数返回一个新的 Animation 对象实例。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -17,86 +17,25 @@ translation_of: Web/API/Animation/Animation
 
 <dl>
  <dt>effect {{optional_inline}}</dt>
- <dd>将{{domxref("KeyframeEffect")}}对象分配给动画。（在将来，其他类型的效果，如SequenceEffects或GroupEffects是可能被实现的，但现在，唯一的效果是KeyframeEffect。）</dd>
+ <dd>将{{domxref("KeyframeEffect")}}对象分配给动画。（在将来，其他类型的效果，如 SequenceEffects 或 GroupEffects 是可能被实现的，但现在，唯一的效果是 KeyframeEffect。）</dd>
  <dt>timeline {{optional_inline}}</dt>
- <dd>指定与动画关联的时间轴。 （目前唯一可用的时间轴类型是{{domxref("DocumentTimeline")}}，但在将来我会有与手势或滚动相关联的时间轴。）默认为{{domxref("Document.timeline")}}。 这也可以设置为null。</dd>
+ <dd>指定与动画关联的时间轴。（目前唯一可用的时间轴类型是{{domxref("DocumentTimeline")}}，但在将来我会有与手势或滚动相关联的时间轴。）默认为{{domxref("Document.timeline")}}。 这也可以设置为 null。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
 
-<p>在<a href="http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010">White Rabbit</a>示例中，Animation构造函数用于使用文档时间轴为兔子创建关键帧动画：</p>
+<p>在<a href="http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010">White Rabbit</a>示例中，Animation 构造函数用于使用文档时间轴为兔子创建关键帧动画：</p>
 
 <pre class="brush: js">var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
 </pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-animation-animation', 'animation()' )}}</td>
-   <td>{{Spec2('Web Animations')}}</td>
-   <td>Editor's draft.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop(48)}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(48)}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]  {{domxref("KeyframeEffect")}} 和 {{domxref("DocumentTimeline")}} 接口目前在发行版本中是关闭的, 所以目前无法使用.</p>
+{{Compat("api.Animation.Animation")}}
 
 <h2 id="相关内容">相关内容</h2>
 

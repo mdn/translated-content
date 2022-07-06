@@ -1,5 +1,5 @@
 ---
-title: Build your own function
+title: 함수 만들기
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
@@ -7,51 +7,51 @@ translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}</div>
 
-<p class="summary">이번 장에선 앞의 글에서 배운 function이론을 사용하여 사용자 정의 함수를 만들어 봅니다. 사용자 정의 함수 연습과 더불어, 함수를 다루는 몇 가지 유용한 사항들도 설명을 하겠습니다. </p>
+<p class="summary">지난 문서에서 다뤄진 필수적인 이론의 대부분을 바탕으로, 이 문서에서는 실제적인 경험을 제공합니다. 여기서 사용자 정의(custom) 함수를 만드는 연습을 할 수 있습니다. 그 과정에서 함수를 다루는 데 있어 유용한 세부 사항을 설명할 것입니다.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">알아야 할 것:</th>
-   <td>기본적인 컴퓨터 사용 능력, HTML과 CSS에 대한 기본적인 이해, 자바스크립트 첫걸음, 함수 - 재사용 가능한 블록 코드</td>
+   <th scope="row">필요한 사전 지식:</th>
+   <td>기본적인 컴퓨터 사용 능력, HTML과 CSS에 대한 기본적인 이해, <a href="/ko/docs/Learn/JavaScript/First_steps">JavaScript 첫걸음</a>, <a href="/ko/docs/Learn/JavaScript/Building_blocks/Functions">함수 — 코드 재사용</a>.</td>
   </tr>
   <tr>
    <th scope="row">목표:</th>
-   <td>사용자 정의 함수를 만드는 방법에 대한 몇가지 예제 제공, 그와 관련된 여러가지 유용한 세부 사항 설명. </td>
+   <td>사용자 정의 함수를 만들어보기, 그리고 그와 관련된 유용한 세부 사항 좀 더 설명하기.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Active_learning_Lets_build_a_function">Active learning: Let's build a function</h2>
+<h2 id="Active_learning_Lets_build_a_function">직접 해보기: 함수를 만들어 봅시다</h2>
 
-<p>여기서 만들 사용자 정의 함수는 <code>displayMessage()</code>라고 명명하겠습니다. 이 함수는 내장함수 <a href="/en-US/docs/Web/API/Window/alert">alert()</a> 을 사용하여 메시지를 표시하는 대신 다른 방법으로 페이지에 메시지 박스를 만듭니다. 이전에도 봐온 기능이지만 다시한번 연습해보자는 의미로 브라우저의 JavaScript 콘솔에 아래처럼 입력하세요 :</p>
+<p>우리가 만들 사용자 정의 함수는 <code>displayMessage()</code>라는 이름입니다. 이 함수는 웹 페이지에 사용자 정의 메시지 박스를 표시하고 브라우저의 내장 <a href="/ko/docs/Web/API/Window/alert">alert()</a> 함수를 대체하는 역할을 할 것입니다. 우리는 이것을 전에 보긴 했지만, 기억을 되살려 봅시다. 원하는 어떤 페이지에서든지, 다음을 브라우저의 JavaScript 콘솔에 입력해 보세요:</p>
 
 <pre class="brush: js notranslate">alert('This is a message');</pre>
 
-<p><code>alert</code> 함수는 하나의 인수만 사용합니다. — 전달받는 인수는 브라우저의 alert박스에 표시됩니다. 인수를 다른 문자로 교체하여 시험해보세요.</p>
+<p><code>alert</code> 함수는 하나의 인수(argument)를 취합니다 — alert 박스에 표시될 문자열입니다. 메시지를 바꾸기 위해서 문자열에 변화를 줘 보세요.</p>
 
-<p><code>alert</code> 함수는 제한적 입니다. : 원하는 메시지를 출력할 순 있지만 글자 색, 아이콘 등 다른 요소는 첨부할 수 없습니다. 아래서 다른 방법을 사용하여 재미있는 무언가를 만드는 방법을 소개하겠습니다.</p>
+<p><code>alert</code> 함수는 제한적입니다: 메시지를 바꿀 수는 있지만, 색상, 아이콘 등 그 밖에 다른 것에는 쉽게 변화를 줄 수 없습니다. 우리는 더 재미있는 것을 만들 것입니다.</p>
 
 <div class="note">
-<p><strong>Note</strong>: 이 예제는 모든 모던 브라우저에서 잘 작동합니다. 하지만 조금 오래된 브라우저는 스타일이 이상하게 적용될 수 있습니다. 이번 예제를 원활하게 즐기려면 Firefox, Opera, Chrome 브라우저를 사용해주세요</p>
+<p><strong>참고</strong>: 이 예제는 모든 현대적인 브라우저에서 잘 동작할 것이지만, 약간 오래된 브라우저에서는 스타일이 조금 이상하게 적용될지도 모릅니다. Firefox, Opera, 또는 Chrome같은 브라우저에서 이 연습을 진행하기를 추천합니다.</p>
 </div>
 
-<h2 id="The_basic_function">The basic function</h2>
+<h2 id="The_basic_function">기본적인 함수</h2>
 
-<p>본격적으로 시작하기 앞서, 기본적인 함수를 만들어봅시다..</p>
+<p>기본적인 함수를 만들면서 시작해 봅시다.</p>
 
 <div class="note">
-<p><strong>Note</strong>: 함수 명명규칙은 <a href="/en-US/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules">변수 명명규칙</a>과 동일하게 사용하는것이 좋습니다. 명명규칙이 동일해서 헷갈리지 않습니다.  — 함수는 이름 뒤에 ()괄호가 함께 쓰이지만 변수는 그렇지 않습니다.</p>
+<p><strong>참고</strong>: 함수에 이름을 붙일 때 <a href="/ko/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules">변수 명명 규칙</a>과 같은 규칙을 따라야 합니다. 함수와 변수를 떼어놓고 이야기할 수 있으므로, 이렇게 하는 것은 괜찮습니다 — 함수명은 뒤에 괄호가 나타나지만 변수는 그렇지 않습니다.</p>
 </div>
 
 <ol>
- <li><a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html">function-start.html</a> 파일을 연습하고있는 컴퓨터에 복사하여 저장합니다. HTML 구조는 매우 간단합니다. — body 태그에는 한 개의 버튼이 있습니다. 그리고 style 태그에 메시지 박스를 위한 CSS 블럭이 있습니다. 그리고 비어있는 {{htmlelement("script")}} 엘리먼트에 연습할 자바스크립트 코드를 앞으로 쓰겠씁니다..</li>
- <li>다음으로 아래의 코드를 <code>&lt;script&gt;</code> 엘리먼트에 써봅시다. :
+ <li><a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html">function-start.html</a> 파일을 다운로드한 후 시작해 봅시다. HTML은 간단합니다 — body는 버튼 하나만을 포함하고 있습니다. 또한 커스텀 메시지 박스를 꾸밀 기본적인 CSS와, JavaScript를 넣을 빈 {{htmlelement("script")}} 요소가 제공됩니다.</li>
+ <li>다음으로, 다음을 <code>&lt;script&gt;</code> 요소 내부에 추가해 보세요:
   <pre class="brush: js notranslate">function displayMessage() {
 
 }</pre>
-  <code>function</code>이라는 키워드로 블럭 작성을 시작했습니다. 이 의미는 방금 우리가 함수를 정의했다는 뜻 입니다. 그리고 뒤에는 만들고자 하는 이름을 정의했고, 괄호에 이어 중괄호를 넣었습니다. 함수에 전달하고자 하는 인수는 괄호()안에 작성합니다. 그리고 우리가 만들고자 하는 로직은 중괄호 안에 작성합니다..</li>
- <li>마지막으로 아래의 코드를 중괄호 안에 작성합니다.:
+  우리는 키워드 <code>function</code>으로 시작했는데, 이는 우리가 함수를 정의하고 있다는 것을 의미합니다. 이것 다음에는 우리가 함수에 붙이고 싶은 이름이 오고, 그 다음에는 괄호가 오고, 그 다음에는 중괄호가 옵니다. 함수에 넣고자 하는 매개변수(parameter)는 괄호 안에 들어가고, 함수를 호출했을 때 실행될 코드는 중괄호 안에 들어갑니다.</li>
+ <li>마지막으로, 다음의 코드를 중괄호 안에 추가해 보세요:
   <pre class="brush: js notranslate">const html = document.querySelector('html');
 
 const panel = document.createElement('div');
@@ -72,23 +72,23 @@ closeBtn.onclick = function() {
  </li>
 </ol>
 
-<p>코드가 꽤 긴 편이니 조금씩 설명을 이어가겠습니다..</p>
+<p>코드가 꽤 긴 편이니 조금씩 설명을 이어가겠습니다.</p>
 
-<p>첫 번째 줄에서 {{domxref("document.querySelector()")}} 라는 DOM API를 사용했습니다. 이 API는 {{htmlelement("html")}} 엘리먼트를 선택하여 <code>html</code>이라는 변수에 저장합니다. 따라서 아래와 같은 작업을 수행할 수 있습니다. :</p>
+<p>첫 번째 줄은 {{htmlelement("html")}} 요소를 선택하고, <code>html</code> 상수에 그것에 대한 참조를 저장하기 위해 {{domxref("document.querySelector()")}} 라는 DOM API 함수를 사용했습니다. 이를 통해, 우리는 나중에 이 요소에 이런저런 것들을 할 수 있습니다.</p>
 
 <pre class="brush: js notranslate">const html = document.querySelector('html');</pre>
 
-<p>다음 줄에선 마찬가지로 DOM API인 {{domxref("document.createElement()")}} 을 사용하여 {{htmlelement("div")}} 엘리먼트를 생성한 후 <code>panel</code>변수에 저장합니다. 이 엘리먼트는 메시지 상자 바깥쪽 컨테이너가 될 것 입니다.</p>
+<p>다음 섹션은 {{htmlelement("div")}} 요소를 생성하기 위해 {{domxref("document.createElement()")}} 라는 또 다른 DOM API 함수를 사용하고 <code>panel</code> 상수에 그것에 대한 참조를 저장합니다. 이 요소는 메시지 박스의 바깥 컨테이너가 될 것입니다.</p>
 
-<p>그리고 또 다른 DOM API인 {{domxref("Element.setAttribute()")}} 을 사용하여 <code>class</code> 속성을 만들고 그 이름을 <code>msgBox</code>로 지정했습니다. 이 작업으로 스타일을 좀 더 쉽게 적용할 수 있습니다. — HTML 파일의 CSS 블럭을 살펴보면 <code>.msgBox</code> 클래스 셀렉터를 사용하여 메시지 박스와 그 내용을 스타일링할 수 있음을 알 수 있습니다.</p>
+<p>그 후, 패널에 있는 <code>class</code> 어트리뷰트에 <code>msgBox</code>라는 값을 설정하기 위해 {{domxref("Element.setAttribute()")}} 라는 또 다른 DOM API 함수를 사용합니다. 이렇게 하는 이유는 요소를 스타일하기 쉽게 만들기 위함입니다 — 만약 CSS를 보면, 메시지 박스와 메시지 박스의 컨텐츠를 스타일하기 위해 <code>.msgBox</code> 클래스 선택자를 사용하고 있는 것을 볼 수 있을 것입니다.</p>
 
-<p>마지막으로, {{domxref("Node.appendChild()")}} DOM 함수를 사용하여 <code>html</code> 변수 안의 엘리먼트에 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">panel</span></font> 변수에 저장된 <code>&lt;div&gt;</code>엘리먼트를 자식 엘리먼트로 삽입했습니다. 변수 선언만으로는 페이지에 표시할 수 없습니다. 반드시 아래처럼 작성하여 엘리먼트가 어디에 표시되는지 명시할 필요가 있습니다. </p>
+<p>마지막으로, 우리는 앞에서 저장한 <code>html</code> 상수에 {{domxref("Node.appendChild()")}} 라는 DOM 함수를 호출하는데, 이는 한 요소를 다른 요소 안에 그것의 자식으로서 중첩합니다. 우리는 <code>&lt;html&gt;</code> 요소 안에 덧붙이기를 원하는 자식으로서 패널 <code>&lt;div&gt;</code>를 명시했습니다. 우리가 생성한 요소가 페이지에 혼자서 나타나지는 않으므로 우리는 appendChild를 사용할 필요가 있습니다 — panel을 어디 넣을지 명시해야 합니다.</p>
 
 <pre class="brush: js notranslate">const panel = document.createElement('div');
 panel.setAttribute('class', 'msgBox');
 html.appendChild(panel);</pre>
 
-<p>다음 두 섹션은 위에서 봤던것과 동일한 <code>createElement()</code> 그리고 <code>appendChild()</code> 함수를 사용합니다. —  {{htmlelement("p")}} 그리고 {{htmlelement("button")}} — 만들어  <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">panel</span></font>의 <code>&lt;div&gt;</code>태그의 자식 엘리먼트로 넣습니다. 우리는 {{domxref("Node.textContent")}} 속성을 사용하여 버튼에 x 라는 글자를 새겨넣습니다. 이 버튼은 사용자가 메시지 박스를 닫기를 원할 때 클릭/활성화 해야 하는 버튼입니다..</p>
+<p>다음의 두 섹션은 새로운 요소 두 개 — {{htmlelement("p")}} 와 {{htmlelement("button")}} — 를 생성하기 위해 이미 살펴본 <code>createElement()</code>와 <code>appendChild()</code> 함수를 사용하고 이것들을 페이지에 패널 <code>&lt;div&gt;</code>의 자식으로서 삽입합니다. 단락 안에 메시지와, 버튼 안에 'x'를 삽입하기 위해 우리는 이 요소들의 {{domxref("Node.textContent")}} 프로퍼티를 사용해 요소의 텍스트 콘텐츠를 나타냅니다. 이 버튼은 유저가 메시지 박스를 닫기를 원할 때 클릭될/작동될 필요가 있는 것입니다.</p>
 
 <pre class="brush: js notranslate">const msg = document.createElement('p');
 msg.textContent = 'This is a message box';
@@ -98,109 +98,109 @@ const closeBtn = document.createElement('button');
 closeBtn.textContent = 'x';
 panel.appendChild(closeBtn);</pre>
 
-<p>마지막으로 {{domxref("GlobalEventHandlers.onclick")}} 이벤트 핸들러를 사용하여 사용자가 x버튼을 클릭하면 메시지상자를 닫을 수 있게 만듭니다. </p>
+<p>마지막으로, 우리는 버튼이 클릭되었을 때, 전체 패널을 페이지에서 삭제하기 위해 — 메시지 박스를 닫기 위해 — 몇몇 코드가 실행되도록 {{domxref("GlobalEventHandlers.onclick")}} 이벤트 핸들러를 사용합니다.</p>
 
-<p>간단히 말하면 <code>onclick</code> 핸들러는 버튼 (또는 실제 페이지의 다른 엘리먼트) 에서 사용할 수 있으며 버튼이 클릭됐을때 실행될 코드를 작성할 수 있습니다. 더 자세한 기능은 <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">events article</a>을 참조하세요. 이제 <code>onclick</code> 핸들러를 익명 함수와 동일하게 만들고, 그 안에 버튼이 클릭됐을 때 실행될 코드를 작성합니다. 함수 안쪽에서 {{domxref("Node.removeChild()")}} DOM API 함수를 사용하여 HTML 엘리먼트를 삭제하도록 명령합니다. — 이 경우 <code>panel</code> 변수의 <code>&lt;div&gt;</code>입니다.</p>
+<p>간략하게 말하자면, <code>onclick</code> 핸들러는 버튼이 클릭되었을 때 어떤 코드를 실행할 지 명시하기 위해 함수에 설정될 수 있는, 버튼에서 (사실은, 페이지에 있는 어떠한 요소들에서든지) 사용 가능한 프로퍼티입니다. 차후의 <a href="/ko/docs/Learn/JavaScript/Building_blocks/Events">이벤트 문서</a>에서 이것에 대해 더 많이 배울 것입니다. 우리는 <code>onclick</code> 핸들러를 익명 함수로 만들었는데, 이는 버튼이 클릭되었을 때 실행할 코드를 포함합니다. 함수 내부의 코드는 우리가 특정한 자식 요소 — 이 경우 패널 <code>&lt;div&gt;</code> — 를 제거하고 싶다는 것을 명시하기 위해 {{domxref("Node.removeChild()")}} DOM API를 사용합니다.</p>
 
 <pre class="brush: js notranslate">closeBtn.onclick = function() {
   panel.parentNode.removeChild(panel);
 }</pre>
 
-<p>기본적으로 전체 코드 블럭은 아래처럼 보이는 HTML 블록을 생성하고 페이지에 나타내줍니다. :</p>
+<p>기본적으로, 이 전체 코드 블록은 아래와 같이 보이는 HTML 블록을 생성하고, 페이지에 삽입합니다:</p>
 
 <pre class="brush: html notranslate">&lt;div class="msgBox"&gt;
   &lt;p&gt;This is a message box&lt;/p&gt;
   &lt;button&gt;x&lt;/button&gt;
 &lt;/div&gt;</pre>
 
-<p>많은 코드를 살펴봤습니다. — 예제에 포함된 CSS코드를 포함한 모든 코드를 지금 당장 이해할 필요는 없습니다. 이 예제에서 중점적으로 다루고자 하는 부분은 함수의 구조와 사용 방법 이었습니다. CSS 코드는 학습자의 흥미를 유도하기 위해 재미있는 것을 보여주고자 만들었습니다.</p>
+<p>이것은 뚫고 나오기에 많은 코드였습니다 — 지금은 어떻게 코드의 모든 부분이 동작하는지 정확히 기억하지 못해도 너무 걱정하지는 마세요! 이 문서에서 우리가 집중하기를 원하는 주된 부분은 함수의 구조와 사용이지만, 우리는 이 예제에 대해 무언가 흥미로운 것을 보여주고 싶었습니다.</p>
 
-<h2 id="Calling_the_function">Calling the function</h2>
+<h2 id="Calling_the_function">함수 호출하기</h2>
 
-<p>You've now got your function definition written into your <code>&lt;script&gt;</code> element just fine, but it will do nothing as it stands.</p>
+<p>이제 여러분은 <code>&lt;script&gt;</code> 요소에 아주 잘 작성된 함수 정의를 가지고 있지만, 이것은 현재 상태 그대로는 아무것도 하지 않을 것입니다.</p>
 
 <ol>
- <li>Try including the following line below your function to call it:
+ <li>함수를 호출하기 위해, 다음의 코드를 함수 아래에 포함시켜 보세요.
   <pre class="brush: js notranslate">displayMessage();</pre>
-  This line invokes the function, making it run immediately. When you save your code and reload it in the browser, you'll see the little message box appear immediately, only once. We are only calling it once, after all.</li>
+  이 코드는 함수를 호출하는데, 즉시 실행되게 합니다. 코드를 저장하고 브라우저에서 새로고침했을 때, 작은 메시지 박스가 단 한 번, 즉시 나타나는 것을 볼 수 있을 것입니다. 어쨌든 우리는 이 함수를 오직 한 번 호출했으니까요.</li>
  <li>
-  <p>Now open your browser developer tools on the example page, go to the JavaScript console and type the line again there, you'll see it appear again! So this is fun — we now have a reusable function that we can call any time we like.</p>
+  <p>이제 예제 페이지에서 브라우저 개발자 도구를 열고, JavaScript 콘솔로 가서 이 코드를 다시 입력해 보면, 메시지 박스가 다시 나타나는 것을 볼 수 있을 것입니다! 이것은 재미있습니다 — 이제 우리는 우리가 원할 때 언제든지 호출할 수 있는 재사용 가능한 함수를 가지고 있는 것입니다.</p>
 
-  <p>But we probably want it to appear in response to user and system actions. In a real application, such a message box would probably be called in response to new data being available, or an error having occurred, or the user trying to delete their profile ("are you sure about this?"), or the user adding a new contact and the operation completing successfully, etc.</p>
+  <p>하지만 우리는 이 함수가 유저와 시스템 작동에 응답하여 나타나기를 원합니다. 실제 어플리케이션에서는, 그러한 메시지 박스는 아마도 이용 가능한 새로운 데이터나, 발생한 에러나, 프로필을 지우려는 유저나 ("정말로 지우시겠습니까?"), 새로운 연락처를 추가한 유저 그리고 성공적으로 완료된 작동 등에 응답하여 호출될 것입니다.</p>
 
-  <p>In this demo, we'll get the message box to appear when the user clicks the button.</p>
+  <p>이 예제에서는, 우리는 유저가 버튼을 클릭했을 때 메시지 박스가 나타나게 할 것입니다.</p>
  </li>
- <li>Delete the previous line you added.</li>
- <li>Next, we'll select the button and store a reference to it in a constant. Add the following line to your code, above the function definition:
+ <li>추가한 마지막 줄을 지우세요.</li>
+ <li>다음으로, 우리는 버튼을 선택하고 상수에 이것에 대한 참조를 저장할 것입니다. 함수 정의 위에, 다음을 코드에 추가해 보세요:
   <pre class="brush: js notranslate">const btn = document.querySelector('button');</pre>
  </li>
- <li>Finally, add the following line below the previous one:
+ <li>마지막으로, 다음을 지난 코드 아래에 추가해 보세요:
   <pre class="brush: js notranslate">btn.onclick = displayMessage;</pre>
-  In a similar way to our <code>closeBtn.onclick...</code> line inside the function, here we are calling some code in response to a button being clicked. But in this case, instead of calling an anonymous function containing some code, we are calling our function name directly.</li>
- <li>Try saving and refreshing the page — now you should see the message box appear when you click the button.</li>
+  함수 내부의 <code>closeBtn.onclick...</code> 코드와 비슷한 방식으로, 여기서 우리는 클릭된 버튼에 응답하여 몇몇 코드를 호출하고 있습니다. 하지만 이 경우, 코드를 포함하는 익명 함수를 호출하는 대신, 우리는 함수명을 직접 호출하고 있습니다.</li>
+ <li>저장하고 페이지를 새로고침해 보세요 — 이제 여러분이 버튼을 클릭했을 때 메시지 박스가 나타나는 것을 볼 수 있을 것입니다.</li>
 </ol>
 
-<p>You might be wondering why we haven't included the parentheses after the function name. This is because we don't want to call the function immediately — only after the button has been clicked. If you try changing the line to</p>
+<p>왜 함수명 뒤에 괄호를 포함하지 않았는지 궁금할지도 모릅니다. 그 이유는 함수를 즉시 호출하고 싶지 않았기 때문입니다 — 오직 버튼이 클릭된 이후에만 호출되기를 원했습니다. 만약 이 줄을 다음으로 변경하고</p>
 
 <pre class="brush: js notranslate">btn.onclick = displayMessage();</pre>
 
-<p>and saving and reloading, you'll see that the message box appears without the button being clicked! The parentheses in this context are sometimes called the "function invocation operator". You only use them when you want to run the function immediately in the current scope. In the same respect, the code inside the anonymous function is not run immediately, as it is inside the function scope.</p>
+<p>저장한 후 새로고침한다면, 여러분은 메시지 박스가 버튼이 클릭되지도 않았는데 나타나는 것을 보게 될 것입니다. 이 맥락에서의 괄호는 때때로 "함수 호출 연산자(function invocation operator)"라고 불립니다. 이것은 함수를 현재 스코프에서 즉시 실행하고 싶을 때만 사용됩니다. 같은 측면에서, 익명 함수 내부의 코드는 즉시 실행되지 않는데, 이는 그것이 함수 스코프 내에 있기 때문입니다.</p>
 
-<p>If you tried the last experiment, make sure to undo the last change before carrying on.</p>
+<p>만약 마지막 실험을 시도해 봤다면, 앞으로 가기 전에 반드시 이전으로 되돌리세요.</p>
 
-<h2 id="Improving_the_function_with_parameters">Improving the function with parameters</h2>
+<h2 id="Improving_the_function_with_parameters">매개변수를 사용해 함수를 더 낫게 만들기</h2>
 
-<p>As it stands, the function is still not very useful — we don't want to just show the same default message every time. Let's improve our function by adding some parameters, allowing us to call it with some different options.</p>
+<p>현재로써는, 함수는 여전히 유용하지 않습니다 — 우리는 같은 기본 메시지를 매번 보이게 하고 싶지 않습니다. 함수를 다른 옵션으로 호출할 수 있게 해 주는 매개변수를 추가해서 우리의 함수를 더 낫게 만들어 봅시다.</p>
 
 <ol>
- <li>First of all, update the first line of the function:
+ <li>우선, 함수의 첫 번째 줄을
   <pre class="brush: js notranslate">function displayMessage() {</pre>
 
-  <div>to this:</div>
+  <div>이것으로 업데이트하세요:</div>
 
   <pre class="brush: js notranslate">function displayMessage(msgText, msgType) {</pre>
-  Now when we call the function, we can provide two variable values inside the parentheses to specify the message to display in the message box, and the type of message it is.</li>
- <li>To make use of the first parameter, update the following line inside your function:
+  이제 함수를 호출할 때, 우리는 메시지 박스에 표시할 메시지와, 메시지의 타입을 나타내기 위해 괄호 안에 두 개의 변수 값을 제공할 수 있습니다.</li>
+ <li>첫번째 매개변수를 사용하기 위해, 함수 안의 다음의 줄을
   <pre class="brush: js notranslate">msg.textContent = 'This is a message box';</pre>
 
-  <div>to</div>
+  <div>다음으로 업데이트하세요:</div>
 
   <pre class="brush: js notranslate">msg.textContent = msgText;</pre>
  </li>
- <li>Last but not least, you now need to update your function call to include some updated message text. Change the following line:
+ <li>마지막으로 또한 중요한 것은, 업데이트된 메시지 텍스트를 포함시키기 위해 이제 함수 호출을 바꿀 필요가 있다는 것입니다. 다음의 줄을
   <pre class="brush: js notranslate">btn.onclick = displayMessage;</pre>
 
-  <div>to this block:</div>
+  <div>이 블록으로 바꾸세요:</div>
 
   <pre class="brush: js notranslate">btn.onclick = function() {
   displayMessage('Woo, this is a different message!');
 };</pre>
-  If we want to specify parameters inside parentheses for the function we are calling, then we can't call it directly — we need to put it inside an anonymous function so that it isn't in the immediate scope and therefore isn't called immediately. Now it will not be called until the button is clicked.</li>
- <li>Reload and try the code again and you'll see that it still works just fine, except that now you can also vary the message inside the parameter to get different messages displayed in the box!</li>
+  만약 호출할 함수의 괄호 내부에 매개변수를 넣기 원한다면, 함수는 직접 호출될 수 없습니다 — 대신, 함수를 익명 함수 안에 넣어 함수가 즉각적인 스코프(immediate scope) 내에 있지 않게 하여 즉시 호출되지 않게 할 수 있습니다. 이제 함수는 버튼이 클릭되기 전까지는 호출되지 않을 것입니다.</li>
+ <li>새로고침하고 다시 시도해 보면, 여전히 아주 잘 작동할 뿐만 아니라 박스 안에 다른 메시지들이 표시될 수 있게 매개변수에 변화를 줄 수 있다는 것 또한 확인할 수 있을 것입니다.</li>
 </ol>
 
-<h3 id="A_more_complex_parameter">A more complex parameter</h3>
+<h3 id="A_more_complex_parameter">더욱 복잡한 매개변수</h3>
 
-<p>On to the next parameter. This one is going to involve slightly more work — we are going to set it so that depending on what the <code>msgType</code> parameter is set to, the function will display a different icon and a different background color.</p>
+<p>다음 매개변수로 가 봅시다. 이것은 약간의 수고를 더 필요로 합니다 — 우리는 이것을 설정하여 <code>msgType</code> 매개변수가 무엇으로 설정되어 있는지에 따라, 함수가 다른 아이콘과 다른 배경색을 표시하도록 할 것입니다.</p>
 
 <ol>
- <li>First of all, download the icons needed for this exercise (<a href="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png">warning</a> and <a href="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png">chat</a>) from GitHub. Save them in a new folder called <code>icons</code> in the same location as your HTML file.
+ <li>우선, 이 예제를 위해 필요한 아이콘들을 GitHub에서 다운로드하세요 (<a href="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png">경고</a> 그리고 <a href="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png">채팅</a>). 이것들을 HTML파일과 같은 위치에 있는 <code>icons</code> 라는 새로운 폴더에 저장하세요.
 
-  <div class="note"><strong>Note</strong>: The warning and chat icons were originally found on <a href="https://www.iconfinder.com/">iconfinder.com</a>, and designed by <a href="https://www.iconfinder.com/nazarr">Nazarrudin Ansyari</a> — Thanks! (The actual icon pages were since moved or removed.)</div>
+  <div class="note"><strong>참고</strong>: 경고와 채팅 아이콘은 원래 <a href="https://www.iconfinder.com/">iconfinder.com</a>에서 찾아졌고, <a href="https://www.iconfinder.com/nazarr">Nazarrudin Ansyari</a>가 디자인했습니다 — 감사합니다! (실제 아이콘 페이지는 이전에 이동되거나 삭제되었습니다.)</div>
  </li>
- <li>Next, find the CSS inside your HTML file. We'll make a few changes to make way for the icons. First, update the <code>.msgBox</code> width from:
+ <li>다음으로, HTML 파일 내부에서 CSS를 찾으세요. 우리는 아이콘이 들어갈 자리를 만들기 위해 약간의 변경을 가할 것입니다. 우선, <code>.msgBox</code> 폭을
   <pre class="brush: css notranslate">width: 200px;</pre>
 
-  <div>to</div>
+  <div>다음으로 업데이트하세요: </div>
 
   <pre class="brush: css notranslate">width: 242px;</pre>
  </li>
- <li>Next, add the following lines inside the <code>.msgBox p { ... }</code> rule:
+ <li>다음으로, <code>.msgBox p { ... }</code> 규칙 내부에 다음을 추가하세요:
   <pre class="brush: css notranslate">padding-left: 82px;
 background-position: 25px center;
 background-repeat: no-repeat;</pre>
  </li>
- <li>Now we need to add code to our <code>displayMessage()</code> function to handle displaying the icons. Add the following block just above the closing curly brace (<code>}</code>) of your function:
+ <li>이제 우리는 아이콘 표시를 처리하기 위해 <code>displayMessage()</code> 함수에 코드를 추가해야 합니다. 다음의 블록을 함수의 닫는 중괄호 (<code>}</code>) 바로 위에 추가하세요:
   <pre class="brush: js notranslate">if (msgType === 'warning') {
   msg.style.backgroundImage = 'url(icons/warning.png)';
   panel.style.backgroundColor = 'red';
@@ -210,42 +210,42 @@ background-repeat: no-repeat;</pre>
 } else {
   msg.style.paddingLeft = '20px';
 }</pre>
-  Here, if the <code>msgType</code> parameter is set as <code>'warning'</code>, the warning icon is displayed and the panel's background color is set to red. If it is set to <code>'chat'</code>, the chat icon is displayed and the panel's background color is set to aqua blue. If the <code>msgType</code> parameter is not set at all (or to something different), then the <code>else { ... }</code> part of the code comes into play, and the paragraph is simply given default padding and no icon, with no background panel color set either. This provides a default state if no <code>msgType</code> parameter is provided, meaning that it is an optional parameter!</li>
- <li>Let's test out our updated function, try updating the <code>displayMessage()</code> call from this:
+  여기서, 만약 <code>msgType</code> 매개변수가 <code>'warning'</code>으로 설정되어 있다면, 경고 아이콘이 표시될 것이고 패널의 배경색이 빨강으로 설정될 것입니다. 만약 이것이 <code>'chat'</code>으로 설정되어 있다면, 채팅 아이콘이 표시되고 패널의 배경색이 연한 파랑으로 설정될 것입니다. 만약 <code>msgType</code> 매개변수가 전혀 설정되어 있지 않다면 (혹은 무언가 다른 것으로 설정되어 있다면), 코드의 <code>else { ... }</code> 부분이 작동하고, 문단은 단순히 기본 패딩이 적용되고 아이콘과 패널 배경색 없이 보여질 것입니다. 즉 <code>msgType</code> 매개변수가 제공되지 않으면 기본 상태가 표시되는데, 이는 이 매개변수가 선택적인 매개변수라는 것을 의미합니다!</li>
+ <li>업데이트된 함수를 시험해 봅시다. <code>displayMessage()</code> 호출을
   <pre class="brush: js notranslate">displayMessage('Woo, this is a different message!');</pre>
 
-  <div>to one of these:</div>
+  <div>이것들 중 하나로 업데이트해 봅시다:</div>
 
   <pre class="brush: js notranslate">displayMessage('Your inbox is almost full — delete some mails', 'warning');
 displayMessage('Brian: Hi there, how are you today?','chat');</pre>
-  You can see how useful our (now not so) little function is becoming.</li>
+  우리의 작은 (이제 그렇게 작지는 않은) 함수가 얼마나 유용해졌는지 볼 수 있습니다.</li>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: If you have trouble getting the example to work, feel free to check your code against the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html">finished version on GitHub</a> (<a href="http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html">see it running live</a> also), or ask us for help.</p>
+<p><strong>참고</strong>: 만약 이 예제를 작업하는 데 어려움이 있다면, 자유롭게 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html">GitHub에 있는 완성된 버전</a>과 비교해 보거나 (<a href="https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html">실제로 작동하는 모습</a>도 보세요), 우리에게 도움을 요청해 보세요.</p>
 </div>
 
-<h2 id="Test_your_skills!">Test your skills!</h2>
+<h2 id="Test_your_skills!">실력을 평가해 보세요!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions">Test your skills: Functions</a>. These tests require skills that are covered in the next article, so you might want to read those first before trying it.</p>
+<p>이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — <a href="/ko/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions">실력을 평가해 보세요: 함수</a>. 이 평가들은 다음 문서에서 다뤄지는 기술들을 요구하므로, 평가를 시도해보기 전에 다음 문서를 먼저 읽을 수도 있습니다.</p>
 
-<h2 id="Conclusion">Conclusion</h2>
+<h2 id="Conclusion">결론</h2>
 
-<p>Congratulations on reaching the end! This article took you through the entire process of building up a practical custom function, which with a bit more work could be transplanted into a real project. In the next article we'll wrap up functions by explaining another essential related concept — return values.</p>
+<p>끝에 도달하신 것을 축하드립니다! 이 문서는 여러분이 실용적인 사용자 정의 함수를 만들어보는 전체 과정을 익히도록 했는데, 이는 조금의 추가적인 작업과 함께 실제 프로젝트로 이식될 수도 있습니다. 다음 문서에서 우리는 또 다른 관련된 필수적인 개념 — 반환 값을 설명함으로써 함수를 마무리지을 것입니다.</p>
 
 <ul>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}</p>
 
-<h2 id="In_this_module">In this module</h2>
+<h2 id="In_this_module">이 과정에서는</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/conditionals">판단 내리기 — 조건문</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Looping_code">반복문</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Functions">함수 — 코드 재사용</a></li>
+ <li><strong>함수 만들기</strong></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Return_values">함수 반환 값</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Events">이벤트 입문</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Image_gallery">이미지 갤러리</a></li>
 </ul>

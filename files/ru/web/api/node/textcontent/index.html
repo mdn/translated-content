@@ -12,17 +12,17 @@ translation_of: Web/API/Node/textContent
 ---
 <p>{{ApiRef}}</p>
 
-<h2 id="Summary" name="Summary">Аннотация</h2>
+<h2 id="Summary">Аннотация</h2>
 
 <p>Позволяет задавать или получать текстовое содержимое элемента и его потомков.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">var <em>text</em> = element.textContent;
 element.textContent = "Это просто текст";
 </pre>
 
-<h2 id="Notes" name="Notes">Описание</h2>
+<h2 id="Notes">Описание</h2>
 
 <ul>
  <li><code>textContent</code> возвращает <code>null,</code> <em> </em>если узел является <a href="/en-US/docs/DOM/document" title="DOM/Document">документом</a>, типом документа, или его описанием<em>.</em> Для получения <em>всего</em> текста и CDATA-данных во всём документе можно использовать <code> <a href="/en-US/docs/DOM/document.documentElement" title="DOM/document.documentElement">document.documentElement</a>.textContent</code>.</li>
@@ -45,7 +45,7 @@ element.textContent = "Это просто текст";
 
 <p><code>innerHTML</code>, как можно понять из его названия, возвращает HTML. Довольно часто <code>innerHTML</code> используется для получения или записи текста в элемент. Тем не менее, вместо него желательно использовать <code>textContent</code>: этот метод потребляет гораздо меньше ресурсов, так как текст парсится как текст, а не HTML. Кроме того, это защищает от <span title="cross-site scripting">XSS</span> атак.</p>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush: js">// Дан следующий фрагмент:
 //   &lt;div id="block"&gt;Это — &lt;span&gt;просто&lt;/span&gt; текст&lt;/div&gt;
@@ -62,9 +62,9 @@ document.getElementById("block").textContent = "Это — просто текс
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p>{{Compat("api.Node.textContent")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#Node3-textContent">textContent</a></li>

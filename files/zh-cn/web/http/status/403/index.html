@@ -12,7 +12,7 @@ translation_of: Web/HTTP/Status/403
 
 <p>状态码 <strong><code>403 Forbidden</code></strong> 代表客户端错误，指的是服务器端有能力处理该请求，但是拒绝授权访问。</p>
 
-<p>这个状态类似于 {{HTTPStatus("401")}}，但进入该状态后不能再继续进行验证。该访问是长期禁止的，并且与应用逻辑密切相关（例如不正确的密码）。</p>
+<p>这个状态类似于 {{HTTPStatus("401")}}，但进入 {{HTTPStatus("403")}}状态后即使重新验证也不会改变该状态。该访问是长期禁止的，并且与应用逻辑密切相关（例如没有足够的权限访问该资源）。</p>
 
 <h2 id="状态">状态</h2>
 
@@ -40,8 +40,6 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 </table>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("http.status.403")}}</p>
 

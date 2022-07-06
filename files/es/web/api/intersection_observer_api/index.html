@@ -5,7 +5,7 @@ translation_of: Web/API/Intersection_Observer_API
 ---
 <p>{{DefaultAPISidebar("Intersection Observer API")}}</p>
 
-<div></div>
+
 
 <p class="summary"><span class="seoSummary">La API Observador de Intersección provee una vía asíncrona para observar cambios en la intersección de un elemento con un elemento ancestro o con el {{Glossary("viewport")}} del documento de nivel superior.</span></p>
 
@@ -64,7 +64,7 @@ let observer = new IntersectionObserver(callback, options);</pre>
  <dt><code>root</code></dt>
  <dd>El elemento que es usado como viewport para comprobar la visibilidad de elemento target. Debe ser ancestro de target. Por defecto es el viewport del navegador si no se especifica o si es <code>null</code>.</dd>
  <dt><code>rootMargin</code>  </dt>
- <dd>Margen alrededor del elemeto root. Puede tener valores similares a los de CSS {{cssxref("margin")}} property, e.g. "<code>10px 20px 30px 40px"</code> (top, right, bottom, left). Los valores pueden ser porcentajes. Este conjunto de valores sirve para aumentar o encoger cada lado del cuadro delimitador del elemento root antes de calcular las intersecciones. Por defecto son todos cero.</dd>
+ <dd>Margen alrededor del elemento root. Puede tener valores similares a los de CSS {{cssxref("margin")}} property, e.g. "<code>10px 20px 30px 40px"</code> (top, right, bottom, left). Los valores pueden ser porcentajes. Este conjunto de valores sirve para aumentar o encoger cada lado del cuadro delimitador del elemento root antes de calcular las intersecciones. Por defecto son todos cero.</dd>
  <dt><code>threshold</code></dt>
  <dd>Es un número o un array de números que indican a que porcentaje de visibilidad del elemento target, la función callback del observer debería ser ejecutada. Si usted quiere que se detecte cuando la visibilidad pasa la marca del 50%, debería usar un valor de 0.5. Si quiere ejecutar la función callback cada vez que la visibilidad pase otro 25%, usted debería especificar el array [0, 0.25, 0.5, 0.75, 1]. El valor por defecto es 0 (lo que significa que tan pronto como un píxel sea visible, la función callback será ejecutada). Un valor de 1.0 significa que el umbral no se considera pasado hasta que todos los pixels son visibles.</dd>
 </dl>
@@ -290,7 +290,7 @@ function intersectionCallback(entries) {
  <li>Starting at the target's immediate parent block and moving outward, each containing block's clipping (if any) is applied to the intersection rectangle. A block's clipping is determined based on the intersection of the two blocks and the clipping mode (if any) specified by the {{cssxref("overflow")}} property. Setting <code>overflow</code> to anything but <code>visible</code> causes clipping to occur.</li>
  <li>If one of the containing elements is the root of a nested browsing context (such as the document contained in an {{HTMLElement("iframe")}}, the intersection rectangle is clipped to the containing context's viewport, and recursion upward through the containers continues with the container's containing block. So if the top level of an <code>&lt;iframe&gt;</code> is reached, the intersection rectangle is clipped to the frame's viewport, then the frame's parent element is the next block recursed through toward the intersection root.</li>
  <li>When recursion upward reaches the intersection root, the resulting rectangle is mapped to the intersection root's coordinate space.</li>
- <li>The resulting rectangle is then updated by intersecting it with the <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#root-intersection-rectangle">root intersection rectangle</a>.</li>
+ <li>The resulting rectangle is then updated by intersecting it with the <a href="/en-US/docs/Web/API/Intersection_Observer_API#root-intersection-rectangle">root intersection rectangle</a>.</li>
  <li>This rectangle is, finally, mapped to the coordinate space of the target's {{domxref("document")}}.</li>
 </ol>
 
@@ -571,63 +571,7 @@ window.addEventListener("load", function(event) {
 
 <h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>15</td>
-   <td>{{CompatGeckoDesktop(55)}}<sup>[1][2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(38)}}</td>
-   <td>{{WebKitBug(159475)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>{{CompatGeckoMobile(55)}}<sup>[1][2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOperaMobile(38)}}</td>
-   <td>{{WebKitBug(159475)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] This feature has been implemented since Gecko 53.0 {{geckoRelease("53.0")}} behind the preference <code>dom.IntersectionObserver.enabled</code>, which was <code>false</code> by default. Enabled by default beginning in Firefox 55. See {{bug(1243846)}}.</p>
-
-<p>[2] Firefox doesn't currently take the {{cssxref("clip-path")}} of ancestor elements into account when computing the visibility of an element within its root. See {{bug(1319140)}} for the status of this issue.</p>
+{{Compat("api.IntersectionObserver")}}
 
 <h2 id="Ver_también">Ver también</h2>
 

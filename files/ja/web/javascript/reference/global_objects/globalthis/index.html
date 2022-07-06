@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 
 <h3 id="Search_for_the_global_across_environments" name="Search_for_the_global_across_environments">異なる環境間でグローバルの検索</h3>
 
-<p><code>globalThis</code> 以前は、その環境のグローバルオブジェクトを取得する信頼性の高い方法は <code>Function('return this')()</code> だけでした。ただし、これは設定によっては <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> 違反が発生するため、<a href="https://github.com/paulmillr/es6-shim">es6-shim</a> では次のようなチェックを使用します。</p>
+<p><code>globalThis</code> 以前は、その環境のグローバルオブジェクトを取得する信頼性の高い方法は <code>Function('return this')()</code> だけでした。ただし、これは設定によっては <a href="/ja/docs/Web/HTTP/CSP">CSP</a> 違反が発生するため、<a href="https://github.com/paulmillr/es6-shim">es6-shim</a> では次のようなチェックを使用します。</p>
 
 <pre class="brush: js notranslate">var getGlobal = function () {
   if (typeof self !== 'undefined') { return self; }
@@ -77,8 +77,6 @@ if (typeof globals.setTimeout !== 'function') {
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、<a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("javascript.builtins.globalThis")}}</p>
 

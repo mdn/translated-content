@@ -6,7 +6,7 @@ original_slug: Using_Firefox_1.5_caching
 ---
 <div>{{FirefoxSidebar}}</div><p> </p>
 
-<h3 id="Introduction" name="Introduction">Введение</h3>
+<h3 id="Introduction">Введение</h3>
 
 <p><a href="/en/Firefox_1.5_for_developers" title="en/Firefox_1.5_for_developers">Firefox 1.5</a> использует кеширование целых Web-страниц, включая их JavaScript-состояния, в рамках сессии браузера. Переходы по посещённым страницам вперёд-назад не требуют загрузки страниц, а JavaScript-состояния сохраняются. Эта функция, обозначаемая иногда как <strong>bfcache</strong> (Back-Forward Cache), делает навигацию по страницам очень быстрой. Такое кешированное состояние сохраняется, пока пользователь не закроет браузер.</p>
 
@@ -37,11 +37,11 @@ original_slug: Using_Firefox_1.5_caching
 
 <p>Это позволяют сделать два новых события браузера.</p>
 
-<h3 id="New_browser_events" name="New_browser_events">Новые события браузера</h3>
+<h3 id="New_browser_events">Новые события браузера</h3>
 
 <p>Если вы используете эти новые события, ваши страницы продолжат правильно отображаться в других браузерах (мы протестировали старые версии Firefox, Internet Explorer, Opera и Safari), а при загрузке в Firefox 1.5 добавится новая функциональность кеширования.</p>
 
-<p>Примечание: по состоянию на октябрь 2009 года разработческие версии Safari добавили поддержку этих новых событий (см. <a class="link-https" href="https://bugs.webkit.org/show_bug.cgi?id=28758" title="https://bugs.webkit.org/show_bug.cgi?id=28758">webkit-баг</a>).</p>
+<p>Примечание: по состоянию на октябрь 2009 года разработческие версии Safari добавили поддержку этих новых событий (см. <a class="link-https" href="https://bugs.webkit.org/show_bug.cgi?id=28758">webkit-баг</a>).</p>
 
 <p>Стандартное поведение для Web-страниц следующее:</p>
 
@@ -59,7 +59,7 @@ original_slug: Using_Firefox_1.5_caching
 
 <p>Если у вас есть поведение, запускаемое, когда пользователь уходит со страницы, но вы хотите воспользоваться новой функциональностью кеширования, и поэтому не хотите использовать обработчик unload, используйте новое событие <code>pagehide</code>.</p>
 
-<h4 id="pageshow_event" name="pageshow_event">Событие pageshow</h4>
+<h4 id="pageshow_event">Событие pageshow</h4>
 
 <p>Это событие работает так же, как событие <code>load</code>, но срабатывает каждый раз при загрузке страницы (в то время как событие <code>load</code> в Firefox 1.5 не срабатывает, когда страница загружается из кеша). При первой загрузке страницы событие <code>pageshow</code> срабатывает сразу после события <code>load</code>. Событие <code>pageshow</code> использует булевское свойство <code>persisted</code>, которое выставляется в <code>false</code> при начальной загрузке. Оно выставляется в <code>true</code>, если это не начальная загрузка (то есть когда страница уже кеширована).</p>
 
@@ -67,7 +67,7 @@ original_slug: Using_Firefox_1.5_caching
 
 <p>Вызывая JavaScript-функции в обработчике события <code>pageshow</code>, вы можете обеспечить их вызов при загрузке страницы в браузерах, отличных от Firefox 1.5, вызывая этот обработчик в обработчике события <code>load</code>, как показано в примере ниже.</p>
 
-<h4 id="pagehide_event" name="pagehide_event">Событие pagehide</h4>
+<h4 id="pagehide_event">Событие pagehide</h4>
 
 <p>Если вы хотите определить поведение, которое происходит, когда пользователь уходит со страницы, но не хотите использовать событие <code>unload</code> (что воспрепятствовало бы кешированию страницы), вы можете использовать новое событие <code>pagehide</code>. Как и <code>pageshow</code>, событие <code>pagehide</code> использует булевское свойство <code>persisted</code>. Оно выставляется в <code>false</code>, если страница не кеширована в браузере, а в <code>true</code>,— если кеширована. Когда это свойство выставлено в <code>false</code>, обработчик <code>unload</code>, если он есть, вызывается сразу после события <code>pagehide</code>.</p>
 
@@ -79,7 +79,7 @@ original_slug: Using_Firefox_1.5_caching
  <li>Для навигации, происходящей внутри отдельного фрейма, события срабатывают только в затронутом фрейме.</li>
 </ul>
 
-<h4 id="pagehide_event" name="pagehide_event">Кеширование страницы несмотря на обработчики <code>unload</code> и <code>beforeunload</code></h4>
+<h4 id="pagehide_event">Кеширование страницы несмотря на обработчики <code>unload</code> и <code>beforeunload</code></h4>
 
 <p>Если вы хотите использовать события <code>unload</code> или <code>beforeunload</code>, сохранив кеширование страницы, вы можете просто удалить эти события в обработчике события и восстановить их в обработчике <code>pageshow</code>, если возвращаетесь на эту страницу:</p>
 
@@ -202,7 +202,7 @@ function loadOnlyFirst() {
 &lt;body onload="onLoad();"&gt;
 </pre>
 
-<h3 id="Developing_Firefox_extensions" name="Developing_Firefox_extensions">Developing Firefox extensions</h3>
+<h3 id="Developing_Firefox_extensions">Developing Firefox extensions</h3>
 
 <p>Firefox 1.5 <a href="/en/Building_an_Extension" title="en/Building_an_Extension">extensions</a> need to allow for this caching functionality. If you are developing a Firefox extension that you want to be compatible with both 1.5 and earlier versions, make sure that it listens for the <code>load</code> event for triggers that can be cached and listens for the <code>pageshow</code> event for triggers that shouldn’t be cached.</p>
 

@@ -27,14 +27,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
  <p>O valor de <code>this</code> é fornecido para a chamada de <em>fun. </em>Note que isso talvez não seja o valor real visto pelo método:  se um método é uma função em código {{jsxref("Functions/Strict_mode", "non-strict mode", "", 1)}} , {{jsxref("null")}} e {{jsxref("undefined")}} serão substituidos com o objeto global, e os valores primitivos serão embalados.</p>
  </dd>
  <dt><code>argsArray</code></dt>
- <dd>Um objeto parecido com um array (array-like), especificando os argumentos com os quais <em>fun </em>deve ser chamado, ou {{jsxref("null")}} ou {{jsxref("undefined")}} se não houverem argumentos que possam ser passados para a função. Começando com ECMAScript5 esses argumentos podem ser um objeto genérico array-like ao invés de um array. Veja abaixo a informação de {{anch("Browser_compatibility", "compatibilidade de browsers")}}.</dd>
+ <dd>Um objeto parecido com um array (array-like), especificando os argumentos com os quais <em>fun </em>deve ser chamado, ou {{jsxref("null")}} ou {{jsxref("undefined")}} se não houverem argumentos que possam ser passados para a função. Começando com ECMAScript5 esses argumentos podem ser um objeto genérico array-like ao invés de um array. Veja abaixo a informação de <a href="#browser_compatibility">compatibilidade de browsers</a>.</dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
 
 <p>Você pode atribuir um objeto <code>this</code><em> </em>diferente quando chamar uma função existente. <code>this</code><em> </em>refere-se ao objeto atual, o objeto da chamada. Com <code>apply</code><em>, </em>você pode escrever um método apenas uma vez e então herdá-lo em outro objeto, sem ter que reescrever o método para o novo objeto.</p>
 
-<p><code>apply </code>é muito parecido com {{jsxref("Function.call", "call()")}}, exceto pelo tipo de argumentos que ele suporta. Você pode usar um array de argumentos em vez de conjunto de parâmetros nomeados. Com <code>apply, </code>você pode usar um array literal, por exemplo, <code><em>fun</em>.apply(this, ['comer', 'bananas'])</code>, ou um objeto {{jsxref("Array")}}, por exemplo f<code><em>un</em>.apply(this, new Array('comer', 'bananas')).</code></p>
+<p><code>apply </code>é muito parecido com {{jsxref("Function.call", "call()")}}, exceto pelo tipo de argumentos que ele suporta. Você pode usar um array de argumentos em vez de conjunto de parâmetros nomeados. Com <code>apply, </code>você pode usar um array literal, por exemplo, <code><em>fun</em>.apply(this, ['comer', 'bananas'])</code>, ou um objeto {{jsxref("Array")}}, por exemplo <code><em>fun</em>.apply(this, new Array('comer', 'bananas')).</code></p>
 
 <p>Você pode também usar {{jsxref("Functions/arguments", "arguments")}} para o parâmetro <code>argsArray.</code> <code>arguments </code>é uma variável local de uma função.  Ele pode ser utilizado para todos os argumentos não especificados do objeto chamado. Assim, você não tem que saber os argumentos do objeto chamado quando você usa o método <code>apply</code>. Você pode usar <code>arguments </code>para passar todos os argumentos para o objeto da chamada. O objeto chamado fica então responsável por manipular os argumentos.</p>
 
@@ -170,7 +170,7 @@ someobject.foo = function() {
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_de_navegadores">Compatibilidade de navegadores</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <div>{{CompatibilityTable}}</div>
 

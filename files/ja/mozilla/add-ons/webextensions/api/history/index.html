@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
 <p>ブラウザー履歴とやりとりする <code>history</code> API を使用します。</p>
 
 <div class="note">
-<p>downloads は <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem" title="A HistoryItem object provides information about a page in the browser history."><code>HistoryItem</code></a> オブジェクトとして扱われるのに注意します。このため、ダウンロードのために <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited" title="Fired each time the user visits a page. A history.HistoryItem object is passed to the listener. This event fires before the page has loaded."><code>history.onVisited</code></a> も発火します。</p>
+<p>downloads は <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem" title="A HistoryItem object provides information about a page in the browser history."><code>HistoryItem</code></a> オブジェクトとして扱われるのに注意します。このため、ダウンロードのために <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited" title="Fired each time the user visits a page. A history.HistoryItem object is passed to the listener. This event fires before the page has loaded."><code>history.onVisited</code></a> も発火します。</p>
 </div>
 
 <p>ブラウザー履歴はユーザーが訪れたページの時間順の記録です。history API では次の事ができます:</p>
@@ -36,7 +36,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
  <li><a href="/ja/Add-ons/WebExtensions/API/history/deleteRange">所定の期間に訪問したあらゆるページの訪問を削除する</a></li>
 </ul>
 
-<p>このAPIを使うには <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> ファイルで指定する "history" <a href="https://developer.mozilla.org/JA/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">パーミッション</a>が必要です。</p>
+<p>このAPIを使うには <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> ファイルで指定する "history" <a href="/JA/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">パーミッション</a>が必要です。</p>
 
 <h2 id="Types" name="Types">型</h2>
 
@@ -57,7 +57,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
 
 <dl>
  <dt>{{WebExtAPIRef("history.search()")}}</dt>
- <dd>ブラウザー履歴を検索して、所与の条件にマッチする <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem" title="A HistoryItem object provides information about one result from a history query."><code>history.HistoryItem</code></a> オブジェクトを得る</dd>
+ <dd>ブラウザー履歴を検索して、所与の条件にマッチする <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem" title="A HistoryItem object provides information about one result from a history query."><code>history.HistoryItem</code></a> オブジェクトを得る</dd>
  <dt>{{WebExtAPIRef("history.getVisits()")}}</dt>
  <dd>所定のページへの訪問についての情報を取得する</dd>
  <dt>{{WebExtAPIRef("history.addUrl()")}}</dt>
@@ -86,8 +86,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
 </dl>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("webextensions.api.history")}}</p>
 

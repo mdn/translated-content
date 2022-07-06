@@ -26,7 +26,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 <ul>
 </ul>
 
-<p>これは、<code><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
+<p>これは、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
 
 <div class="blockIndicator note">
 <p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">コネクションベースのメッセージ</a>を使うこともできます。</p>
@@ -45,7 +45,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 
 <dl>
  <dt><code>extensionId</code>{{optional_inline}}</dt>
- <dd><code>string</code> 型。 メッセージを送信する拡張機能の ID。別の拡張機能にメッセージを送信する場合は、この引数を含めてください。受信させることを意図している拡張機能が manifest.json の <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> キーを使って明示的に ID を設定されている場合は、その値を <code>extensionId</code> に指定する必要があります。そうでない場合、受信側の拡張機能のために生成された ID を指定する必要があります。</dd>
+ <dd><code>string</code> 型。 メッセージを送信する拡張機能の ID。別の拡張機能にメッセージを送信する場合は、この引数を含めてください。受信させることを意図している拡張機能が manifest.json の <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> キーを使って明示的に ID を設定されている場合は、その値を <code>extensionId</code> に指定する必要があります。そうでない場合、受信側の拡張機能のために生成された ID を指定する必要があります。</dd>
  <dd>もし <code>extensionId</code> が省略された場合、メッセージは自分自身の拡張機能に送信されます。</dd>
  <dt><code>message</code></dt>
  <dd><code>any</code> 型。シリアライズされたクローンに構造化できるオブジェクト。</dd>
@@ -83,11 +83,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 
 <h3 id="戻り値">戻り値</h3>
 
-<p><code><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> 型。受信側が応答を送信する場合、その応答を JSON オブジェクトとして使って fulfilled 状態にされます。それ以外の場合、値を持たない fulfilled 状態になります。拡張機能との接続中にエラーが発生した場合、Promise はエラーメッセージを持つ rejected 状態になります。</p>
+<p><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> 型。受信側が応答を送信する場合、その応答を JSON オブジェクトとして使って fulfilled 状態にされます。それ以外の場合、値を持たない fulfilled 状態になります。拡張機能との接続中にエラーが発生した場合、Promise はエラーメッセージを持つ rejected 状態になります。</p>
 
 <h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("webextensions.api.runtime.sendMessage")}}</p>
 

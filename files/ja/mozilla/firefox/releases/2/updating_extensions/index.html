@@ -1,5 +1,5 @@
 ---
-title: Updating extensions for Firefox 2
+title: Firefox 2 のための拡張機能の更新
 slug: Mozilla/Firefox/Releases/2/Updating_extensions
 tags:
   - Add-ons
@@ -7,32 +7,40 @@ tags:
 translation_of: Mozilla/Firefox/Releases/2/Updating_extensions
 original_slug: Updating_extensions_for_Firefox_2
 ---
-<p>この記事は、開発者が彼らの拡張機能を更新して Firefox 2 で動作させるために役立つ情報を提供しています。
-</p><p>{{ 英語版章題("Step 1: Update the install manifest") }}
+<div>{{FirefoxSidebar}}</div><p>この記事は、 Firefox 2 で正しく動作するように拡張機能を更新したい開発者にとって有益な情報を提供します。
+
+<h2 id="Step_1:_Update_the_install_manifest">ステップ 1: インストール定義ファイルの更新</h2>
+
+<p>最初のステップ -- ほとんどの拡張機能で唯一必要なこと -- は、<a href="/ja/Install_Manifests">インストール定義</a>ファイル install.rdf を更新し、Firefox 2 との互換性を持たせることです。
 </p>
-<h2 id=".E3.82.B9.E3.83.86.E3.83.83.E3.83.97_1:_.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB.E5.AE.9A.E7.BE.A9.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E6.9B.B4.E6.96.B0" name=".E3.82.B9.E3.83.86.E3.83.83.E3.83.97_1:_.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB.E5.AE.9A.E7.BE.A9.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E6.9B.B4.E6.96.B0">ステップ 1: インストール定義ファイルの更新</h2>
-<p>最初のステップ -- ほとんどの拡張機能で唯一必要なこと -- は、<a href="ja/Install_Manifests">インストール定義</a>ファイル &lt;tt&gt;install.rdf&lt;/tt&gt; を更新し、Firefox 2 との互換性を持たせることです。
-</p><p>単純に、Firefox の最大互換バージョンを指示する行を探します (次のように Firefox 1.5 向けになっています):
-</p>
-<pre class="eval"> <span class="nowiki">&lt;em:maxVersion&gt;1.5.0.*&lt;/em:maxVersion&gt;</span>
+
+<p>単純に、Firefox の最大互換バージョンを指示する行を探します (次のように Firefox 1.5 向けになっています)。</p>
+
+<pre class="eval"> &lt;em:maxVersion&gt;1.5.0.*&lt;/em:maxVersion&gt;
 </pre>
-<p>これを変更して Firefox 2 と互換性を持たせます:
-</p>
-<pre class="eval"> <span class="nowiki">&lt;em:maxVersion&gt;2.0.0.*&lt;/em:maxVersion&gt;</span>
+
+<p>これを変更して Firefox 2 と互換性を持たせます。</p>
+
+<pre class="eval"> &lt;em:maxVersion&gt;2.0.0.*&lt;/em:maxVersion&gt;
 </pre>
-<p>そして、拡張機能を再インストールしてみます。
-</p><p>{{ 英語版章題("Step 2: Update XUL overlays") }}
-</p>
-<h2 id=".E3.82.B9.E3.83.86.E3.83.83.E3.83.97_2:_XUL_.E3.82.AA.E3.83.BC.E3.83.90.E3.83.BC.E3.83.AC.E3.82.A4.E3.81.AE.E6.9B.B4.E6.96.B0" name=".E3.82.B9.E3.83.86.E3.83.83.E3.83.97_2:_XUL_.E3.82.AA.E3.83.BC.E3.83.90.E3.83.BC.E3.83.AC.E3.82.A4.E3.81.AE.E6.9B.B4.E6.96.B0">ステップ 2: XUL オーバーレイの更新</h2>
+
+<p>そして、拡張機能を再インストールします。</p>
+
+<h2 id="Step_2:_Update_XUL_overlays">ステップ 2: XUL オーバーレイの更新</h2>
+
 <p>Firefox 2 はデフォルトのテーマに変更を加えています。さらに、一部のユーザインタフェース要素が変更、または移動されているため、あなたの拡張機能の XUL オーバーレイに依存する部分が影響を受けます。
-</p><p>拡張機能の XUL オーバーレイに影響する変更箇所について学ぶには、<a href="ja/Theme_changes_in_Firefox_2">Firefox 2 におけるテーマの変更点</a>の記事に目を通してください。
-</p><p>{{ 英語版章題("Step 3: Test") }}
 </p>
-<h2 id=".E3.82.B9.E3.83.86.E3.83.83.E3.83.97_3:_.E3.83.86.E3.82.B9.E3.83.88" name=".E3.82.B9.E3.83.86.E3.83.83.E3.83.97_3:_.E3.83.86.E3.82.B9.E3.83.88">ステップ 3: テスト</h2>
+
+<p>拡張機能の XUL オーバーレイに影響する変更箇所について学ぶには、<a href="/ja/Theme_changes_in_Firefox_2">Firefox 2 におけるテーマの変更点</a>の記事に目を通してください。
+</p>
+
+<h2 id="Step_3:_Test">ステップ 3: テスト</h2>
+
 <p>公式にリリースする前に、必ず拡張機能を Firefox 2 上でテストしてください。最後にすることは、Firefox のリリース時に起こる問題報告のラッシュに、あなたの拡張機能の新バージョンが責任を持つことです。
-</p><p>{{ 英語版章題("Step 4: Release") }}
 </p>
-<h2 id=".E3.82.B9.E3.83.86.E3.83.83.E3.83.97_4:_.E3.83.AA.E3.83.AA.E3.83.BC.E3.82.B9" name=".E3.82.B9.E3.83.86.E3.83.83.E3.83.97_4:_.E3.83.AA.E3.83.AA.E3.83.BC.E3.82.B9">ステップ 4: リリース</h2>
-<p><a class=" external" href="http://addons.mozilla.org" rel="freelink">http://addons.mozilla.org</a> 上のあなたの拡張機能のエントリを更新してください。ユーザが更新を見つけられるようになります。
-</p><p>さらに、あなたの拡張機能のインストール定義ファイルで <code><a href="ja/Install_Manifests#updateURL">updateURL</a></code> を提供している場合は、必ず update manifest を更新し、Firefox が自動的に拡張機能の新バージョンを見つけられるようにしてください。こうすることによって、ユーザが Firefox 2 にアップグレードした後で最初にあなたの拡張機能を実行した時、新バージョンを自動的にインストールさせることができます。
-</p>{{ languages( { "en": "en/Updating_extensions_for_Firefox_2", "fr": "fr/Mise_\u00e0_jour_des_extensions_pour_Firefox_2", "ko": "ko/Updating_extensions_for_Firefox_2", "pl": "pl/Aktualizacja_rozszerze\u0144_do_Firefoksa_2" } ) }}
+
+<h2 id="Step_4:_Release">ステップ 4: リリース</h2>
+
+<p><a class=" external" href="https://addons.mozilla.org" rel="freelink">http://addons.mozilla.org</a> 上のあなたの拡張機能のエントリーを更新してください。ユーザが更新を見つけられるようになります。</p>
+
+<p>さらに、あなたの拡張機能のインストール定義ファイルで <code><a href="/ja/Install_Manifests#updateURL">updateURL</a></code> を提供している場合は、必ず update manifest を更新し、Firefox が自動的に拡張機能の新バージョンを見つけられるようにしてください。こうすることによって、ユーザが Firefox 2 にアップグレードした後で最初にあなたの拡張機能を実行した時、新バージョンを自動的にインストールさせることができます。</p>

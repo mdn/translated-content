@@ -10,34 +10,34 @@ translation_of: Web/API/Pointer_events
 ---
 <p>{{DefaultAPISidebar("Pointer Events")}}</p>
 
-<p>目前绝大多数的Web内容都假设用户的指针定点设备为鼠标。然而，近年来的新兴设备支持更多不同方式的指针定点输入，如各类触控笔和触摸屏幕等。这就有必要扩展现存的定点设备事件模型，以有效追踪各类<em><a href="#term_pointer_event">指针事件</a></em>。 </p>
+<p>目前绝大多数的 Web 内容都假设用户的指针定点设备为鼠标。然而，近年来的新兴设备支持更多不同方式的指针定点输入，如各类触控笔和触摸屏幕等。这就有必要扩展现存的定点设备事件模型，以有效追踪各类<em><a href="#term_pointer_event">指针事件</a></em>。 </p>
 
-<p>指针事件 - Pointer events 是一类可以为定点设备所触发的DOM事件。它们被用来创建一个可以有效掌握各类输入设备（鼠标、触控笔和单点或多点的手指触摸）的统一的DOM事件模型。所谓 <em><a href="#term_pointer">指针</a></em> 是指一个可以明确指向屏幕上某一组坐标的硬件设备。建立这样一个单独的事件模型可以有效的简化Web站点与应用所需的工作，同时也便于提供更加一致与良好的用户体验，无需关心不同用户和场景在输入硬件上的差异。另外，对于某些需要处理特定设备的场景，指针事件也定义了一个 {{domxref("PointerEvent.pointerType","pointerType")}} 属性用以查看触发事件的设备类型。</p>
+<p>指针事件 - Pointer events 是一类可以为定点设备所触发的 DOM 事件。它们被用来创建一个可以有效掌握各类输入设备（鼠标、触控笔和单点或多点的手指触摸）的统一的 DOM 事件模型。所谓 <em><a href="#term_pointer">指针</a></em> 是指一个可以明确指向屏幕上某一组坐标的硬件设备。建立这样一个单独的事件模型可以有效的简化 Web 站点与应用所需的工作，同时也便于提供更加一致与良好的用户体验，无需关心不同用户和场景在输入硬件上的差异。另外，对于某些需要处理特定设备的场景，指针事件也定义了一个 {{domxref("PointerEvent.pointerType","pointerType")}} 属性用以查看触发事件的设备类型。</p>
 
 <p>这些事件需要能够处理 {{domxref("MouseEvent","mouse events")}} 之类较为通用的指针输入（<code>mousedown/pointerdown</code>, <code>mousemove/pointermove</code>, 等）。 因此，指针事件的类型，很大程度上类似于当前的鼠标事件类型。</p>
 
-<p>此外，一个指针事件，也同时包含了鼠标事件中所常见的属性（client coordinates, target element, button states，等）以及适用于其他输入设备的新属性：pressure, contact geometry, tilt, 等等。实际上，{{domxref("PointerEvent")}} 接口继承了所有 {{domxref("MouseEvent","MouseEvent")}} 中的属性，以保障原有为鼠标事件所开发的内容能更加有效的迁移到指针事件。</p>
+<p>此外，一个指针事件，也同时包含了鼠标事件中所常见的属性（client coordinates, target element, button states，等）以及适用于其他输入设备的新属性：pressure, contact geometry, tilt，等等。实际上，{{domxref("PointerEvent")}} 接口继承了所有 {{domxref("MouseEvent","MouseEvent")}} 中的属性，以保障原有为鼠标事件所开发的内容能更加有效的迁移到指针事件。</p>
 
 <h2 id="相关名词">相关名词</h2>
 
 <dl>
  <dt>active buttons state</dt>
- <dd>The condition when a <em><a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/API/Pointer_events$edit#term_pointer">pointer</a></em> has a non-zero value for the <code>buttons</code> property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.</dd>
+ <dd>The condition when a <em><a href="/zh-CN/docs/Web/API/Pointer_events$edit#term_pointer">pointer</a></em> has a non-zero value for the <code>buttons</code> property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.</dd>
 </dl>
 
 <dl>
  <dt>活跃指针 - active pointer</dt>
  <dd>任意<em><a href="#term_pointer">指针</a>输入设备都可以产生事件。一个可以产生后继事件的指针可以被认为是一个活跃指针。例如，一个触摸笔处于压下状态时可以认为是活跃的，因为它接下来的抬起或移动都会产生额外的后继事件。</em></dd>
- <dt id="term_digitizer">数位设备 - digitizer</dt>
+ <dt>数位设备 - digitizer</dt>
  <dd>一个可以检测其表面接触行为的传感设备。通常来说，其所用的传感设备是一个可以感知由某些输入设备（如触控笔、压感笔、手指等）所提供的输入信息的可触摸屏幕。</dd>
- <dt id="term_hit_test">命中检测 - hit test</dt>
+ <dt>命中检测 - hit test</dt>
  <dd>浏览器用以检测某一指针事件的目标元素的过程。通常来说，这一过程是通过比照出现在文档或屏幕媒介上的指针位置与视觉布局来实现的。</dd>
- <dt id="term_pointer">指针 - pointer</dt>
+ <dt>指针 - pointer</dt>
  <dd>某个呈现形式并不确定的硬件，该硬件可以指向一个（或一组）屏幕上特定坐标。典型的指针输入设备有鼠标、触控笔、手指触控点等。</dd>
  <dt>指针捕捉 - pointer capture</dt>
  <dd>指针捕捉能够允许某些事件的产生。这些事件在指针将要重新指向一些并非通过命中检测而给定元素时触发。</dd>
- <dt id="term_pointer_event">指针事件 - pointer event</dt>
- <dd>一个被<em><a href="#term_pointer">指针</a>所</em>触发DOM事件。</dd>
+ <dt>指针事件 - pointer event</dt>
+ <dd>一个被<em><a href="#term_pointer">指针</a>所</em>触发 DOM 事件。</dd>
 </dl>
 
 <h2 id="相关接口">相关接口</h2>
@@ -52,9 +52,9 @@ translation_of: Web/API/Pointer_events
 
 <ul>
  <li>{{ domxref('PointerEvent.pointerId','pointerId')}} - 对于某个由指针引起的事件的唯一标识。</li>
- <li>{{ domxref('PointerEvent.width','width')}} - 以CSS像素计数的宽度属性，取决于指针的接触面的几何构成。</li>
- <li>{{ domxref('PointerEvent.height','height')}} -  以CSS像素计数的高度属性，取决于指针的接触面的几何构成。</li>
- <li>{{ domxref('PointerEvent.pressure','pressure')}} - 规范化后的指针输入的压力值，取值范围为0到1，0代表硬件可检测到的压力最小值，1代表最大值。</li>
+ <li>{{ domxref('PointerEvent.width','width')}} - 以 CSS 像素计数的宽度属性，取决于指针的接触面的几何构成。</li>
+ <li>{{ domxref('PointerEvent.height','height')}} -  以 CSS 像素计数的高度属性，取决于指针的接触面的几何构成。</li>
+ <li>{{ domxref('PointerEvent.pressure','pressure')}} - 规范化后的指针输入的压力值，取值范围为 0 到 1，0 代表硬件可检测到的压力最小值，1 代表最大值。</li>
  <li>{{ domxref('PointerEvent.tangentialPressure','tangentialPressure')}} The normalized tangential pressure of the pointer input (also known as barrel pressure or cylinder stress) in the range <code>-1</code> to <code>1</code>, where <code>0</code> is the neutral position of the control.</li>
  <li>{{ domxref('PointerEvent.tiltX','tiltX')}} - the plane angle (in degrees, in the range of -90 to 90) between the Y-Z plane and the plane containing both the transducer (e.g. pen stylus) axis and the Y axis.</li>
  <li>{{ domxref('PointerEvent.tiltY','tiltY')}} - the plane angle (in degrees, in the range of -90 to 90) between the X-Z plane and the plane containing both the transducer (e.g. pen stylus) axis and the X axis.</li>
@@ -82,7 +82,7 @@ translation_of: Web/API/Pointer_events
   <tr>
    <td>{{event('pointerenter')}}</td>
    <td>{{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}</td>
-   <td>当定点设备进入某个元素或其子元素的<a href="#term_hit_test">命中检测</a>范围时，或做为某一类不支悬停（hover）状态的设备所触发的poinerdown事件的后续事件时所触发。(详情可见 pointerdown事件类型).</td>
+   <td>当定点设备进入某个元素或其子元素的<a href="#term_hit_test">命中检测</a>范围时，或做为某一类不支悬停（hover）状态的设备所触发的 poinerdown 事件的后续事件时所触发。(详情可见 pointerdown 事件类型).</td>
   </tr>
   <tr>
    <td>{{event('pointerdown')}}</td>
@@ -107,7 +107,7 @@ translation_of: Web/API/Pointer_events
   <tr>
    <td>{{event('pointerout')}}</td>
    <td>{{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}</td>
-   <td>可能由若干原因触发该事件，包括：定位设备移出了某<a href="term_hit_test">命中检测</a>的边界；不支持悬浮状态的设备发生pointerup事件（见pointerup事件）； 作为 pointercancel event事件的后续事件（见pointercancel事件）；当数位板检测到数位笔离开了悬浮区域时。</td>
+   <td>可能由若干原因触发该事件，包括：定位设备移出了某<a href="term_hit_test">命中检测</a>的边界；不支持悬浮状态的设备发生 pointerup 事件（见 pointerup 事件）； 作为 pointercancel event 事件的后续事件（见 pointercancel 事件）；当数位板检测到数位笔离开了悬浮区域时。</td>
   </tr>
   <tr>
    <td>{{event('pointerleave')}}</td>
@@ -127,7 +127,7 @@ translation_of: Web/API/Pointer_events
  </tbody>
 </table>
 
-<h3 id="Element接口扩展">Element接口扩展</h3>
+<h3 id="Element接口扩展">Element 接口扩展</h3>
 
 <p>对于{{domxref("Element")}}接口有以下一些扩展：</p>
 
@@ -136,7 +136,7 @@ translation_of: Web/API/Pointer_events
  <li>{{domxref("Element.releasePointerCapture()","releasePointerCapture()")}} - 该方法将释放（并停止）之前对于某一特定的指针事件的指针捕捉。</li>
 </ul>
 
-<h3 id="Navigator对象扩展">Navigator对象扩展</h3>
+<h3 id="Navigator对象扩展">Navigator 对象扩展</h3>
 
 <p>属性 {{domxref("Navigator.maxTouchPoints")}}  被设计用来指明在同一时间点所支持的最大的触摸点数量。</p>
 
@@ -264,7 +264,7 @@ translation_of: Web/API/Pointer_events
 
 <h2 id="确定按钮状态">确定按钮状态</h2>
 
-<p>对于某些指针设备来说，比如鼠标或者压感笔，设备上可能有一个或多个按钮可以同时或依次序按动。比如在某个按钮释放后立刻按下其他按钮。为了确定这些按钮的按压状态，指针事件使用{{domxref("MouseEvent.button","button")}}与 {{domxref("MouseEvent.buttons","buttons")}}等{{domxref("MouseEvent")}}接口中的事件 （{{domxref("PointerEvent")}}继承于此）表明相应的状态。下表提供了各类设备的按钮状态与button和buttons属性的属性值对应关系。</p>
+<p>对于某些指针设备来说，比如鼠标或者压感笔，设备上可能有一个或多个按钮可以同时或依次序按动。比如在某个按钮释放后立刻按下其他按钮。为了确定这些按钮的按压状态，指针事件使用{{domxref("MouseEvent.button","button")}}与 {{domxref("MouseEvent.buttons","buttons")}}等{{domxref("MouseEvent")}}接口中的事件（{{domxref("PointerEvent")}}继承于此）表明相应的状态。下表提供了各类设备的按钮状态与 button 和 buttons 属性的属性值对应关系。</p>
 
 <table class="standard-table">
  <tbody>
@@ -299,12 +299,12 @@ translation_of: Web/API/Pointer_events
    <td>2</td>
   </tr>
   <tr>
-   <td>鼠标X1（前进）</td>
+   <td>鼠标 X1（前进）</td>
    <td>3</td>
    <td>8</td>
   </tr>
   <tr>
-   <td>鼠标X2（后退）</td>
+   <td>鼠标 X2（后退）</td>
    <td>4</td>
    <td>16</td>
   </tr>
@@ -376,9 +376,9 @@ translation_of: Web/API/Pointer_events
 &lt;/html&gt;
 </pre>
 
-<h2 id="touch-action_CSS属性">touch-action CSS属性</h2>
+<h2 id="touch-action_CSS属性">touch-action CSS 属性</h2>
 
-<p>CSS属性{{cssxref("touch-action")}}被用来指明浏览器是否应当对某一区域的触摸事件应用其默认行为（例如放大或旋转等）。这一属性可以被用在所有元素上，除了：不可替换的行内元素（inline elements）、表格行（table rows）、行组（row groups）、表格列（table columns）、列组（column groups）。</p>
+<p>CSS 属性{{cssxref("touch-action")}}被用来指明浏览器是否应当对某一区域的触摸事件应用其默认行为（例如放大或旋转等）。这一属性可以被用在所有元素上，除了：不可替换的行内元素（inline elements）、表格行（table rows）、行组（row groups）、表格列（table columns）、列组（column groups）。</p>
 
 <p>属性值<code>auto</code>意味着浏览器可以自由应用其默认的触摸行为（对于特定区域），属性值<code>none</code>则会禁止某一区域的浏览器默认触摸行为。 属性值<code>pan-x</code>和<code>pan-y</code>表示由某区域开始的触摸操作仅分别产生水平的或垂直的滚动。属性值<code>manipulation</code>表示希望浏览器认为某元素上的触摸行为仅用于滚动或放大。</p>
 
@@ -407,14 +407,14 @@ translation_of: Web/API/Pointer_events
 
 <h2 id="与鼠标事件的兼容性">与鼠标事件的兼容性</h2>
 
-<p>尽管指针事件接口允许应用程序去为各种指针输入设备创建更佳的用户体验，但事实上，目前的大多数web内容仍然是仅为支持鼠标输入而设计的。因此，即使一个浏览器支持了指针事件，它也仍然需要在这些仅支持鼠标设置网页在不做任何修改的情况下继续对其提供支持。理想情况下，通用的指针模型将使得应用不再需要专门为鼠标输入设计相应。然而，因为浏览器仍必须处理鼠标事件，所以可能仍留存一些需要加以处理的兼容性问题。这一部分包含了一些对于开发者可能有用的关于鼠标事件和指针事件的异同点。</p>
+<p>尽管指针事件接口允许应用程序去为各种指针输入设备创建更佳的用户体验，但事实上，目前的大多数 web 内容仍然是仅为支持鼠标输入而设计的。因此，即使一个浏览器支持了指针事件，它也仍然需要在这些仅支持鼠标设置网页在不做任何修改的情况下继续对其提供支持。理想情况下，通用的指针模型将使得应用不再需要专门为鼠标输入设计相应。然而，因为浏览器仍必须处理鼠标事件，所以可能仍留存一些需要加以处理的兼容性问题。这一部分包含了一些对于开发者可能有用的关于鼠标事件和指针事件的异同点。</p>
 
-<p>出于对基于鼠标的内容的兼容性考虑，浏览器会将通用的指针事件映射成相应的鼠标事件。 这一事件映射被乘坐兼容性鼠标事件。开发者可以通过取消pointerdown事件相应来阻止某一特定的兼容性鼠标事件的产生，但需要注意以下情况：</p>
+<p>出于对基于鼠标的内容的兼容性考虑，浏览器会将通用的指针事件映射成相应的鼠标事件。 这一事件映射被乘坐兼容性鼠标事件。开发者可以通过取消 pointerdown 事件相应来阻止某一特定的兼容性鼠标事件的产生，但需要注意以下情况：</p>
 
 <ul>
  <li>鼠标事件仅在指针失效（when the pointer is down）的情况下可以被阻止。</li>
  <li>悬浮的指针（比如没有按键按下时的鼠标指针）的事件不能被阻止。</li>
- <li>某些鼠标事件，如：mouseover，mouseout，mouseenter，和mouseleave等事件，永远不能够被阻止。</li>
+ <li>某些鼠标事件，如：mouseover，mouseout，mouseenter，和 mouseleave 等事件，永远不能够被阻止。</li>
 </ul>
 
 <h2 id="最佳实践">最佳实践</h2>
@@ -423,7 +423,7 @@ translation_of: Web/API/Pointer_events
 
 <ul>
  <li>尽量减少在事件处理器中要必须完成的工作量。</li>
- <li>为尽量精确的元素绑定相应的事件响应器（而不是在整个document节点或更高层的dom元素上）。</li>
+ <li>为尽量精确的元素绑定相应的事件响应器（而不是在整个 document 节点或更高层的 dom 元素上）。</li>
  <li>目标元素（节点）应该有足够的尺寸覆盖最大情况下的接触面（手指触摸的情况尤其典型）。如果目标区域过小，触摸将会引起临近元素的其他意料外的触摸事件。</li>
 </ul>
 

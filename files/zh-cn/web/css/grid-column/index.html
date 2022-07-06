@@ -3,7 +3,7 @@ title: grid-column
 slug: Web/CSS/grid-column
 translation_of: Web/CSS/grid-column
 ---
-<p><code>grid-column</code> CSS属性是 {{cssxref("grid-column-start")}} 和 {{cssxref("grid-column-end")}} 的简写属性，用于指定网格项目的大小和位置{ 通过为它的网格位置贡献线条，跨度或不添加任何内容（自动），从而指定其 {{glossary("grid area","grid area","网格区域")}}。</p>
+<p><code>grid-column</code> CSS 属性是 {{cssxref("grid-column-start")}} 和 {{cssxref("grid-column-end")}} 的简写属性，用于指定网格项目的大小和位置{ 通过为它的网格位置贡献线条，跨度或不添加任何内容（自动），从而指定其 {{glossary("grid area","grid area","网格区域")}}。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/grid-column.html")}}</div>
 
@@ -11,7 +11,7 @@ translation_of: Web/CSS/grid-column
 
 <h2 id="语法">语法</h2>
 
-<p>如果给出两个<code>&lt;grid-line&gt;</code>值，它们之间用“ /”分隔。 将<code>grid-column-start</code>的正手设置为斜线之前的值，并将<code>grid-column-end</code>的正手设置为斜线之后的值。</p>
+<p>如果给出两个<code>&lt;grid-line&gt;</code>值，它们之间用“ /”分隔。将<code>grid-column-start</code>的正手设置为斜线之前的值，并将<code>grid-column-end</code>的正手设置为斜线之后的值。</p>
 
 <p>每个<code>&lt;grid-line&gt;</code>值可以指定为：</p>
 
@@ -20,7 +20,7 @@ translation_of: Web/CSS/grid-column
  <li>或<code>&lt;custom-ident&gt;</code>值</li>
  <li>或<code>&lt;integer&gt;</code>值</li>
  <li>或者<code>&lt;custom-ident&gt;</code>和<code>&lt;integer&gt;</code>，两者之间用空格分隔</li>
- <li>或关键字span与<code>&lt;custom-ident&gt;</code>或<code>&lt;integer&gt;</code>或两者一起使用。</li>
+ <li>或关键字 span 与<code>&lt;custom-ident&gt;</code>或<code>&lt;integer&gt;</code>或两者一起使用。</li>
 </ul>
 
 <h3 id="值">值</h3>
@@ -29,7 +29,7 @@ translation_of: Web/CSS/grid-column
  <code>auto</code></p>
 
 <p><br>
- 是一个关键字，指示该属性对网格项目的放置没有任何作用，表示自动放置，自动跨度或默认跨度为1。</p>
+ 是一个关键字，指示该属性对网格项目的放置没有任何作用，表示自动放置，自动跨度或默认跨度为 1。</p>
 
 <p><br>
  <code>&lt;custom-ident&gt;</code></p>
@@ -41,23 +41,23 @@ translation_of: Web/CSS/grid-column
 <p>注意：命名网格区域会自动生成这种形式的隐式命名行，因此请指定<code>grid-column: foo;</code>将选择该命名网格区域的开始/结束边缘（除非在其之前明确指定了另一条名为<code>foo-start / foo-end</code>的行）。</p>
 </div>
 
-<p>否则，将其视为与<code>&lt;custom-ident&gt;</code>一起指定了整数1。</p>
+<p>否则，将其视为与<code>&lt;custom-ident&gt;</code>一起指定了整数 1。</p>
 
 <p><br>
  <code>&lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;?</code></p>
 
 <p><br>
- 将第n条网格线贡献到网格项目的位置。如果给定一个负整数，则从显式网格的末端开始，反向计数。</p>
+ 将第 n 条网格线贡献到网格项目的位置。如果给定一个负整数，则从显式网格的末端开始，反向计数。</p>
 
 <p>如果将名称指定为&lt;custom-ident&gt;，则仅计算具有该名称的行。如果没有足够多的具有该名称的线，则假定所有隐式网格线都具有该名称，以查找该位置。</p>
 
 <p>{{cssxref("integer")}}的值为<code>0</code>无效。</p>
 
 <p><code>span &amp;&amp; [ &lt;integer&gt; || &lt;custom-ident&gt; ]</code><br>
- 将网格范围扩展到该网格项目的位置，以使该网格项目的网格区域的相应边缘距离相对边缘n行。<br>
+ 将网格范围扩展到该网格项目的位置，以使该网格项目的网格区域的相应边缘距离相对边缘 n 行。<br>
  如果将名称指定为&lt;custom-ident&gt;，则仅计算具有该名称的行。如果没有足够多的具有该名称的线，则为计算此跨度，假定与搜索方向相对应的显式网格侧的所有隐式网格线均具有该名称。</p>
 
-<p>如果省略&lt;integer&gt;，则默认为<code>1</code>。负整数或0无效。</p>
+<p>如果省略&lt;integer&gt;，则默认为<code>1</code>。负整数或 0 无效。</p>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
@@ -99,9 +99,9 @@ translation_of: Web/CSS/grid-column
 
 <p>{{EmbedLiveSample("Example", "100%", "100px")}}</p>
 
-<h2 id="IE问题">IE问题</h2>
+<h2 id="IE问题">IE 问题</h2>
 
-<p>IE11不支持自动放置网格项目。 除非用-ms-{{cssxref("grid-column")}}和-ms-{{cssxref("grid-row")}}显式注释，否则所有项目都以网格的第一行/列结尾。 可以使用一些JavaScript来启用自动注释：源存储库。</p>
+<p>IE11 不支持自动放置网格项目。除非用-ms-{{cssxref("grid-column")}}和-ms-{{cssxref("grid-row")}}显式注释，否则所有项目都以网格的第一行/列结尾。可以使用一些 JavaScript 来启用自动注释：源存储库。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -138,7 +138,7 @@ translation_of: Web/CSS/grid-column
  <li>Video tutorial: <em><a href="http://gridbyexample.com/video/series-line-based-placement/">Line-based placement</a></em></li>
 </ul>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
  <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>

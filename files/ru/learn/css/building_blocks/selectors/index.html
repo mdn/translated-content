@@ -24,7 +24,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы
  <tbody>
   <tr>
    <th scope="row">Необходимые знания:</th>
-   <td>Базовая компьютерная грамотность, <a href="/ru/docs/Learn/Getting_started_with_the_web/Установка_базового_программного_обеспечения">основное программное обеспечение</a>, понимание <a href="/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">работы с файлами</a>, базовые знания HTML (смотрите <a href="/ru/docs/Learn/HTML/Введение_в_HTML">Введение в HTML</a>), и представление о том, как работает CSS (смотрите <a href="/ru/docs/Learn/CSS/First_steps">Введение в CSS</a>).</td>
+   <td>Базовая компьютерная грамотность, <a href="/ru/docs/Learn/Getting_started_with_the_web/Installing_basic_software">основное программное обеспечение</a>, понимание <a href="/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">работы с файлами</a>, базовые знания HTML (смотрите <a href="/ru/docs/Learn/HTML/Introduction_to_HTML">Введение в HTML</a>), и представление о том, как работает CSS (смотрите <a href="/ru/docs/Learn/CSS/First_steps">Введение в CSS</a>).</td>
   </tr>
   <tr>
    <th scope="row">Цель:</th>
@@ -37,7 +37,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы
 
 <p>Вы уже встречались с селекторами. Это выражения, которые говорят браузеру, к какому элементу HTML нужно применить те или иные свойства CSS, определённые внутри блока объявления стиля.</p>
 
-<p><img alt="Some code with the h1 highlighted." src="https://mdn.mozillademos.org/files/16550/selector.png" style="border: 1px solid #cccccc; height: 218px; width: 471px;"></p>
+<p><img alt="Some code with the h1 highlighted." src="selector.png" style="border: 1px solid #cccccc;"></p>
 
 <p>Ранее вы встречали несколько разных селекторов и узнали, что существуют селекторы, которые по-разному относятся к документу, — например используя элемент <code>h1</code> или класс <code>.special</code>.</p>
 
@@ -47,26 +47,26 @@ original_slug: Learn/CSS/Building_blocks/Селекторы
 
 <p>Несколько селекторов, использующих одни и те же таблицы стилей, можно объединить в <em>лист селекторов</em>: правило будет добавлено к каждому селектору. К примеру, у меня есть одинаковые правила для заголовка <code>h1</code> и класса <code>.special</code>; я могу написать их так:</p>
 
-<pre class="brush: css notranslate"><code>h1 {
+<pre class="brush: css">h1 {
   color: blue;
 }
 
 .special {
   color: blue;
-} </code></pre>
+} </pre>
 
 <p>А могу написать короче — просто отделив селекторы запятыми:</p>
 
-<pre class="brush: css notranslate"><code>h1, .special {
+<pre class="brush: css">h1, .special {
   color: blue;
-} </code></pre>
+} </pre>
 
 <p>Пробел можно вставлять до или после запятой. Ещё удобнее писать каждый селектор с новой строки:</p>
 
-<pre class="brush: css notranslate"><code>h1,
+<pre class="brush: css">h1,
 .special {
   color: blue;
-} </code></pre>
+} </pre>
 
 <p>В упражнении ниже объедините два селектора в одном правиле. Результат должен остаться таким же.</p>
 
@@ -76,19 +76,19 @@ original_slug: Learn/CSS/Building_blocks/Селекторы
 
 <p>В примере ниже правило для селектора класса не будет работать, в то время как <code>h1</code> будет стилизован.</p>
 
-<pre class="brush: css notranslate"><code>h1 {
+<pre class="brush: css">h1 {
   color: blue;
 }
 
 ..special {
   color: blue;
-} </code></pre>
+} </pre>
 
 <p>Но если мы объединим селекторы, правило не применится ни к <code>h1</code>, ни к классу: оно считается недействительным.</p>
 
-<pre class="brush: css notranslate"><code>h1, ..special {
+<pre class="brush: css">h1, ..special {
   color: blue;
-} </code></pre>
+} </pre>
 
 <h2 id="Типы_селекторов">Типы селекторов</h2>
 
@@ -98,45 +98,45 @@ original_slug: Learn/CSS/Building_blocks/Селекторы
 
 <p>К этой группе относятся селекторы HTML-элементов, таких как <code>&lt;h1&gt;</code>.</p>
 
-<pre class="brush: css notranslate">h1 { }</pre>
+<pre class="brush: css">h1 { }</pre>
 
 <p>К группе относятся и селекторы классов:</p>
 
-<pre class="brush: css notranslate">.box { }</pre>
+<pre class="brush: css">.box { }</pre>
 
 <p>или селекторы идентификаторов (ID):</p>
 
-<pre class="brush: css notranslate">#unique { }</pre>
+<pre class="brush: css">#unique { }</pre>
 
 <h3 id="Селекторы_атрибутов">Селекторы атрибутов</h3>
 
 <p>Эта группа селекторов позволяет выбирать селекторы, основываясь на <em>наличии</em> у них конкретного атрибута элемента:</p>
 
-<pre class="brush: css notranslate">a[title] { }</pre>
+<pre class="brush: css">a[title] { }</pre>
 
 <p>или основываясь на <em>значении</em> атрибута:</p>
 
-<pre class="brush: css notranslate">a[href="https://example.com"] { }</pre>
+<pre class="brush: css">a[href="https://example.com"] { }</pre>
 
 <h3 id="Псевдоклассы_псевдоэлементы">Псевдоклассы, псевдоэлементы</h3>
 
 <p>К этой группе относятся псевдоклассы, которые стилизуют определённое состояние элемента. Псевдокласс <code>:hover</code>, например, применяет правило, только если на элемент наведён курсор мыши</p>
 
-<pre class="brush: css notranslate">a:hover { }</pre>
+<pre class="brush: css">a:hover { }</pre>
 
 <p>К группе ещё относятся псевдоэлементы, которые выбирают определённую часть элемента (вместо целого элемента). Например, <code>::first-line</code> всегда выбирает первую строку внутри элемента (абзаца <code>&lt;p&gt;</code> в нашем случае), действуя, как если бы тег <code>&lt;span&gt;</code> оборачивал первую строку, а затем был стилизован.</p>
 
-<pre class="brush: css notranslate">p::first-line { }</pre>
+<pre class="brush: css">p::first-line { }</pre>
 
 <h3 id="Комбинаторы">Комбинаторы</h3>
 
 <p>И последняя группа селекторов: она позволяет объединять селекторы, чтобы было легче находить конкретные элементы внутри документа. В следующем примере мы отыскали дочерний элемент <code>&lt;article&gt;</code> с помощью комбинатора дочерних элементов (<code>&gt;</code>):</p>
 
-<pre class="brush: css notranslate">article &gt; p { }</pre>
+<pre class="brush: css">article &gt; p { }</pre>
 
 <h2 id="Продолжение">Продолжение</h2>
 
-<p>Ниже можно просмотреть таблицу различных видов селекторов с соответствующими ссылками, или вы можете двинуться дальше: нас ждут <a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Selectors">селекторы тегов, классов и идентификаторов</a>.</p>
+<p>Ниже можно просмотреть таблицу различных видов селекторов с соответствующими ссылками, или вы можете двинуться дальше: нас ждут <a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">селекторы тегов, классов и идентификаторов</a>.</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}</p>
 
@@ -156,57 +156,57 @@ original_slug: Learn/CSS/Building_blocks/Селекторы
   <tr>
    <td><a href="/ru/docs/Web/CSS/Type_selectors">Селектор по типу</a></td>
    <td><code>h1 {  }</code></td>
-   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Selectors#Селекторы_по_типу">Селектор по типу</a></td>
+   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#%d0%a1%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d0%be%d1%80%d1%8b_%d0%bf%d0%be_%d1%82%d0%b8%d0%bf%d1%83">Селектор по типу</a></td>
   </tr>
   <tr>
    <td><a href="/ru/docs/Web/CSS/Universal_selectors">Универсальный селектор</a></td>
    <td><code>* {  }</code></td>
-   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Selectors#Универсальный_селектор">Универсальный селектор</a></td>
+   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#%d0%a3%d0%bd%d0%b8%d0%b2%d0%b5%d1%80%d1%81%d0%b0%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9_%d1%81%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d0%be%d1%80">Универсальный селектор</a></td>
   </tr>
   <tr>
    <td><a href="/ru/docs/Web/CSS/Class_selectors">Селектор класса</a></td>
    <td><code>.box {  }</code></td>
-   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Selectors#Селекторы_классов">Селекторы классов</a></td>
+   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#%d0%a1%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d0%be%d1%80%d1%8b_%d0%ba%d0%bb%d0%b0%d1%81%d1%81%d0%be%d0%b2">Селекторы классов</a></td>
   </tr>
   <tr>
    <td><a href="/ru/docs/Web/CSS/ID_selectors">Селектор ID</a></td>
    <td><code>#unique { }</code></td>
-   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Selectors#Селекторы_по_ID">Селекторы по ID</a></td>
+   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#%d0%a1%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d0%be%d1%80%d1%8b_%d0%bf%d0%be_id">Селекторы по ID</a></td>
   </tr>
   <tr>
    <td><a href="/ru/docs/Web/CSS/Attribute_selectors">Селектор атрибутов </a></td>
    <td><code>a[title] {  }</code></td>
-   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Attribute_selectors">Селекторы атрибутов </a></td>
+   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Селекторы атрибутов </a></td>
   </tr>
   <tr>
-   <td><a href="/ru/docs/Web/CSS/Псевдо-классы">Селектор псевдоклассов</a></td>
+   <td><a href="/ru/docs/Web/CSS/Pseudo-classes">Селектор псевдоклассов</a></td>
    <td><code>p:first-child { }</code></td>
-   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_pseudo-elements#Что_такое_псевдокласс">Псевдоклассы</a></td>
+   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#%d0%a7%d1%82%d0%be_%d1%82%d0%b0%d0%ba%d0%be%d0%b5_%d0%bf%d1%81%d0%b5%d0%b2%d0%b4%d0%be%d0%ba%d0%bb%d0%b0%d1%81%d1%81">Псевдоклассы</a></td>
   </tr>
   <tr>
    <td><a href="/ru/docs/Web/CSS/Pseudo-elements">Селектор псевдоэлементов</a></td>
    <td><code>p::first-line { }</code></td>
-   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_pseudo-elements#Что_такое_псевдоэлемент">Псевдоэлементы</a></td>
+   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#%d0%a7%d1%82%d0%be_%d1%82%d0%b0%d0%ba%d0%be%d0%b5_%d0%bf%d1%81%d0%b5%d0%b2%d0%b4%d0%be%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82">Псевдоэлементы</a></td>
   </tr>
   <tr>
    <td><a href="/ru/docs/Web/CSS/Descendant_combinator">Селектор потомков</a></td>
    <td><code>article p</code></td>
-   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Combinators#Селектор_потомков">Селектор потомков</a></td>
+   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators#%d0%a1%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d0%be%d1%80_%d0%bf%d0%be%d1%82%d0%be%d0%bc%d0%ba%d0%be%d0%b2">Селектор потомков</a></td>
   </tr>
   <tr>
    <td><a href="/ru/docs/Web/CSS/Child_combinator">Селектор дочерних элементов</a></td>
    <td><code>article &gt; p</code></td>
-   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Combinators#Комбинатор">Селектор дочерних элементов</a></td>
+   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators#%d0%9a%d0%be%d0%bc%d0%b1%d0%b8%d0%bd%d0%b0%d1%82%d0%be%d1%80">Селектор дочерних элементов</a></td>
   </tr>
   <tr>
    <td><a href="/ru/docs/Web/CSS/Adjacent_sibling_combinator">Смежные селекторы</a></td>
    <td><code>h1 + p</code></td>
-   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Combinators#Смежные_селекторы">Смежные селекторы </a></td>
+   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators#%d0%a1%d0%bc%d0%b5%d0%b6%d0%bd%d1%8b%d0%b5_%d1%81%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d0%be%d1%80%d1%8b">Смежные селекторы </a></td>
   </tr>
   <tr>
    <td><a href="/ru/docs/Web/CSS/General_sibling_combinator">Селектор братских элементов</a></td>
    <td><code>h1 ~ p</code></td>
-   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Combinators#Братские_элементы">Селектор братских элементов</a></td>
+   <td><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators#%d0%91%d1%80%d0%b0%d1%82%d1%81%d0%ba%d0%b8%d0%b5_%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82%d1%8b">Селектор братских элементов</a></td>
   </tr>
  </tbody>
 </table>
@@ -215,12 +215,12 @@ original_slug: Learn/CSS/Building_blocks/Селекторы
 
 <ol>
  <li><a href="/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Каскад и наследование </a></li>
- <li><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы">CSS-селекторы </a>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors">CSS-селекторы </a>
   <ul>
-   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Selectors">Селекторы по типу, классу и идентификатору</a></li>
-   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Attribute_selectors">Селекторы атрибутов </a></li>
-   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_pseudo-elements">Псевдоклассы, псевдоэлементы </a></li>
-   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы/Combinators">Комбинации селекторов </a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Селекторы по типу, классу и идентификатору</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Селекторы атрибутов </a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Псевдоклассы, псевдоэлементы </a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Комбинации селекторов </a></li>
   </ul>
  </li>
  <li><a href="/ru/docs/Learn/CSS/Building_blocks/The_box_model">Блоки в CSS </a></li>

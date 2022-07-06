@@ -7,7 +7,9 @@ The following is a set of guidelines for contributing to the
 [translated content of MDN Web Docs](https://github.com/mdn/translated-content),
 which is hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
 
-## Tier 1 locales
+[Guidelines for peers can be found here](PEERS_GUIDELINES.md).
+
+## Locales
 
 Before we go any further, you should be aware that we are only accepting updates
 to active locales — this means locales that have active community maintenance
@@ -20,11 +22,14 @@ of active locales is:
 - `pt-BR`
 - `ru`
 - `zh` (`zh-CN` and `zh-TW`)
+- `es`
 
 If you want to just find a task and jump in, search by the labels `l10n-fr`,
-`l10n-ja`, `l10n-ko`, `l10n-pt-br`, `l10n-ru`, and `l10n-zh` in this repo’s
+`l10n-ja`, `l10n-ko`, `l10n-pt-br`, `l10n-ru`, `l10n-zh` and `l10n-es` in this repo’s
 [issues list](https://github.com/mdn/translated-content/issues),
 or the main [content repo issues](https://github.com/mdn/content/issues)
+
+---
 
 ## Code of Conduct
 
@@ -35,6 +40,8 @@ Everyone participating in this project is expected to follow our
 
 When contributing to the content you agree to license your contributions
 according to [our license](LICENSE.md).
+
+---
 
 ## Making contributions
 
@@ -55,8 +62,9 @@ bit more to consider.
 To begin with, get the basic required tooling set up, as described in the
 [content repo Setup section](https://github.com/mdn/content#setup).
 
-Now you need to fork and clone both the [content repo](https://github.com/mdn/content)
-and the translated-content repo (this repo).
+Now you need to fork and clone both the
+ [content repo](https://github.com/mdn/content)
+ and the translated-content repo (this repo).
 
 ### Content repo setup
 
@@ -87,7 +95,7 @@ and the translated-content repo (this repo).
    (the `.env` file will be created for you if it does not already exist.)
 
 1. Now you’ve got this set up, enter the command `yarn start` to begin the local
-   testing server running at `localhost:5000`.
+   testing server running at `localhost:5042`.
 
 ### Working in the translated-content repo
 
@@ -97,7 +105,7 @@ then:
 1. Create a new branch to make your changes in.
 
 1. Switch to your new branch and make the changes you want to make. You can keep
-   going back to `localhost:5000/<your_locale>` (e.g. `localhost:5000/fr` for
+   going back to `localhost:5042/<your_locale>` (e.g. `localhost:5042/fr` for
    French) to test your changes and make sure the content looks how you want it
    to look.
 
@@ -117,128 +125,3 @@ and read its README file, particularly to learn about [fundamental concepts](htt
 and common actions such as [adding](https://github.com/mdn/content#adding-a-new-document),
 [moving](https://github.com/mdn/content#moving-one-or-more-documents), or
 [deleting](https://github.com/mdn/content#deleting-a-document) documents.
-
-## Policies for active community maintenance teams
-
-### Reviewing and issue queue
-
-It is the responsibility of the active community maintenance team for each
-active locale to keep up-to-date with reviews of pull requests and handling
-issues filed against that locale. You can filter the relevant pull requests and
-issues for each locale using the relevant label — `l10n-fr`, `l10n-ja`, `l10n-ko`
-, `l10n-pt-br`, `l10n-ru`, and `l10n-zh`.
-
-The review teams for each locale are:
-
-- Brazilian Portuguese (`pt-BR`) content — the [@yari-content-pt-br](https://github.com/orgs/mdn/teams/yari-content-pt-br)
-  team, which consists of:
-  - [@lumigueres](https://github.com/lumigueres)
-  - [@josielrocha](https://github.com/josielrocha)
-  - [@juliosampaio](https://github.com/juliosampaio)
-  - [@clovislima](https://github.com/clovislima)
-- French (`fr`) content — the [@yari-content-fr](https://github.com/orgs/mdn/teams/yari-content-fr)
-  team, which consists of:
-  - [@nicolas-goudry](https://github.com/nicolas-goudry)
-  - [@JNa0](https://github.com/JNa0)
-  - [@tristantheb](https://github.com/tristantheb)
-  - [@LEMIBANDDEXARI](https://github.com/LEMIBANDDEXARI)
-  - [@SphinxKnight](https://github.com/SphinxKnight)
-- Japanese (`ja`) content — the [@yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja)
-  team, which consists of:
-  - [@hmatrjp](https://github.com/hmatrjp)
-  - [@potappo](https://github.com/potappo)
-  - [@dynamis](https://github.com/dynamis)
-  - [@kenji-yamasaki](https://github.com/kenji-yamasaki)
-  - [@mfuji09](https://github.com/mfuji09)
-- Korea (`ko`) content — the [@yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko)
-  team, which consists of:
-  - [@yechoi42](https://github.com/yechoi42)
-  - [@cos18](https://github.com/cos18)
-  - [@GwangYeol-Im](https://github.com/GwangYeol-Im)
-  - [@pje1740](https://github.com/pje1740)
-  - [@nKiNk](https://github.com/nKiNk)
-  - [@yujo11](https://github.com/yujo11)
-  - [@hochan222](https://github.com/hochan222)
-- Russian (`ru`) content — the [@yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru)
-  team, which consists of:
-  - [@armanpwnz](https://github.com/armanpwnz)
-  - [@captainspring](https://github.com/captainspring)
-  - [@mpstv](https://github.com/mpstv)
-  - [@myshov](https://github.com/myshov)
-  - [@Saionaro](https://github.com/Saionaro)
-  - [@sashasushko](https://github.com/sashasushko)
-  - [@lex111](https://github.com/lex111)
-- Chinese (`zh-CN` and `zh-TW`) content — the [@yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh)
-  team, which consists of:
-  - [@t7yang](https://github.com/t7yang)
-  - [@dibery](https://github.com/dibery)
-  - [@irvin](https://github.com/irvin)
-
-### Requirements for keeping locales up-to-date
-
-Active community maintenance teams are expected to keep their locales maintained
-and reasonably up-to-date. This means:
-
-- Reviewing and actioning all pull requests within 2 weeks.
-- Triaging and fixing all actionable issues within 1 month.
-- Making reasonable progress on keeping MDN’s Tier 1 content (definition TBD)
-   synchronized with the `en-US` versions. This means some progress should be
-   made each week, e.g. updating an article to be in sync with the English
-   version, removing or fixing a bad quality article…
-
-If no progress is made on a locale in these areas within 1 month, the locale
-will be considered inactive, and edits will stop being accepted.
-
-### Promoting an inactive locale to Tier 1
-
-If you want to promote a currently-inactive/frozen locale to Tier 1, meaning
-that it is activated and can then be edited, you need to put together a
-community maintenance team. This requires:
-
-- A team lead who will be the communication point between that team and the MDN
-  core team, and have overall responsibility for the team.
-- At least one other member, so that one member can review another member's
-  work.
-- A place to discuss this team's localization work. This can be a Telegram
-  group, Matrix chat room, or whatever the team thinks is best.
-
-If you want to find out more about our community maintenance teams, see
-[localizing MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Localize).
-If you want to ask questions or talk to us about forming a new community
-maintenance team, see [ask for help](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
-
-## Synchronization with the en-US document structure
-
-Before unfreezing the Tier 1 locales, we made an update to synchronize all the
-localized document tree structures with the `en-US` tree structure (English
-slugs only), to make the documentation easier to manage. This resulted in two
-new buckets of documents being created for each locale, existing as
-subdirectories of each local folder:
-
-- `orphaned` — documents that are not associated with any parent `en-US` page.
-- `conflicting` — documents with duplicate translations in existence (e.g.
-  localized once under the existing `en-US` slug, and then again under a
-  localized slug). The duplicate(s) are put in this folder.
-
-Active locale maintenance teams are invited to spend some time exploring the
-orphaned and conflicting documents, to see whether any of this work is worth
-keeping (either adding to, or merging with an existing document in, the main
-tree), or whether it can just be deleted.
-
-### Periodic synchronization updates
-
-We run a GitHub action every day to update the localized documentation and keep
-it in sync with the `en-US` tree structure, for example if documents are deleted
-for, or moved to a different location, in the tree.
-
-When a synchronization occurs:
-
-- Tier 1 (active) locale maintenance teams are given two weeks to decide what to
-  do with the affected documents in their locales to keep things in sync.
-- Tier 2 (frozen) locales have the affected documents deleted/moved immediately.
-
-Note: Conflicting docs are often created during the sync operation when `en-US`
-documents get merged — for example if `Foo/Bar` becomes just a section inside
-`Foo`, and we redirect `Foo/Bar` to `Foo#Bar`. This will result in a conflict
-as the sync job tries to move the translated `Foo/Bar` to `Foo` according to the
-redirect, but `Foo` already exists.

@@ -9,7 +9,7 @@ translation_of: Web/API/Node/ownerDocument
 
 <p>Свойство <code><strong>Node.ownerDocument</strong></code> только для чтения, возвращающее объект документа верхнего уровня для этого узла.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><em>document</em> = element.ownerDocument
 </pre>
@@ -18,7 +18,7 @@ translation_of: Web/API/Node/ownerDocument
  <li><code>document</code> это объект <a href="/en-US/docs/DOM/document" title="DOM/document"><code>document</code></a> родитель текущего элемента.</li>
 </ul>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush:js">// given a node "p", get the top-level HTML child
 // of the document object
@@ -27,15 +27,15 @@ var d = p.ownerDocument;
 var html = d.documentElement;
 </pre>
 
-<h2 id="Notes" name="Notes">Примечание</h2>
+<h2 id="Notes">Примечание</h2>
 
 <p>Объект <code>document</code>, возвращаемый этим свойством, это основной объект с которым все дочерние узлы в настоящем  HTML документе созданы. Если это свойство используется для узла самого документа, результат будет <code>null</code>.</p>
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Node.ownerDocument")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#node-ownerDoc">DOM Level 2 Core: Node.ownerDocument</a></li>

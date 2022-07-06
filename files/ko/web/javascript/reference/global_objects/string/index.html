@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 
 <p><strong><code>String</code></strong> 전역 객체는 문자열(문자의 나열)의 생성자입니다.</p>
 
-<h2 id="Syntax" name="Syntax">구문</h2>
+<h2 id="Syntax">구문</h2>
 
 <p>문자열 리터럴은 다음과 같은 형식을 사용합니다.</p>
 
@@ -36,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 
 <p>ECMAScript 2015 이후, 문자열 리터럴은 소위 <a href="/ko/docs/Web/JavaScript/Reference/Template_literals">템플릿 리터럴</a>이 될 수 있습니다.</p>
 
-<pre class="language-html"><code class="language-html">`hello world` `hello! world!` `hello ${who}` tag `<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>a</span><span class="punctuation token">&gt;</span></span>${who}<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>a</span><span class="punctuation token">&gt;</span></span>`</code></pre>
+<pre class="language-html"><code class="language-html">`hello world` `hello! world!` `hello ${who}` tag `&lt;a&gt;${who}&lt;/a&gt;`</code></pre>
 
 <h3 id="이스케이프_표현">이스케이프 표현</h3>
 
@@ -127,9 +127,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 
 <p>두 예시 모두 동일한 문자열을 생성합니다.</p>
 
-<h2 id="Description" name="Description">설명</h2>
+<h2 id="Description">설명</h2>
 
-<p>문자열은 텍스트 형태로 표현될 수있는 데이터를 보관하는 데 유용합니다. 문자열에서 가장 많이 사용되는 작업들은 문자열의 길이를 확인하는 ({{jsxref("String.length", "length")}}), 문자열을 생성하고 연결하는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/String_Operators" title="JavaScript/Reference/Operators/String_Operators">+ 와 += 문자열 연산자</a>, 서브문자열(substring)이 있는지 확인하고, 있으면 위치를 확인하는 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 메서드, 서브문자열(substring)을 추출해내는 {{jsxref("String.prototype.substring()", "substring()")}} 메서드가 있습니다.</p>
+<p>문자열은 텍스트 형태로 표현될 수있는 데이터를 보관하는 데 유용합니다. 문자열에서 가장 많이 사용되는 작업들은 문자열의 길이를 확인하는 ({{jsxref("String.length", "length")}}), 문자열을 생성하고 연결하는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/String_Operators">+ 와 += 문자열 연산자</a>, 서브문자열(substring)이 있는지 확인하고, 있으면 위치를 확인하는 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 메서드, 서브문자열(substring)을 추출해내는 {{jsxref("String.prototype.substring()", "substring()")}} 메서드가 있습니다.</p>
 
 <h3 id="문자_접근">문자 접근</h3>
 
@@ -145,9 +145,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 
 <p>브라켓([ ]) 표기법을 사용하여 문자에 접근하는 경우 , 이러한 프로퍼티들에 새로운 값을 할당하거나 삭제할 수는 없습니다. 포함되어 있는 프로퍼티들은 작성할 수도, 수정할 수도 없습니다. (더 자세한 정보는 {{jsxref("Object.defineProperty()")}}를 참고 바랍니다 .)</p>
 
-<h3 id="Comparing_strings" name="Comparing_strings">문자열 비교</h3>
+<h3 id="Comparing_strings">문자열 비교</h3>
 
-<p>C 개발자는 문자열 비교를 위하여 <code><span style="font-family: courier new,andale mono,monospace;">strcmp()</span></code> 함수를 사용합니다. JavaScript에서는 단지 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" style="line-height: inherit;" title="JavaScript/Reference/Operators/Comparison_Operators">less-than와 greater-than 연산자</a>만을 사용하여 문자열을 비교할 수 있습니다<span style="line-height: inherit;"> </span><span style="line-height: inherit;">:</span></p>
+<p>C 개발자는 문자열 비교를 위하여 <code>strcmp()</code> 함수를 사용합니다. JavaScript에서는 단지 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">less-than와 greater-than 연산자</a>만을 사용하여 문자열을 비교할 수 있습니다:</p>
 
 <pre class="brush: js">var a = "a";
 var b = "b";
@@ -160,11 +160,11 @@ if (a &lt; b) { // true
 }
 </pre>
 
-<p>비슷한 결과를 얻을 수 있는 방법으로 <span style="font-family: courier new,andale mono,monospace;">String</span> 인스턴스에서 상속된 {{jsxref("String.prototype.localeCompare()", "localeCompare()")}} 메서드를 사용할 수 있습니다.</p>
+<p>비슷한 결과를 얻을 수 있는 방법으로 String 인스턴스에서 상속된 {{jsxref("String.prototype.localeCompare()", "localeCompare()")}} 메서드를 사용할 수 있습니다.</p>
 
 <h3 id="문자열_원형과_String_객체의_차이">문자열 원형과 <code>String</code> 객체의 차이</h3>
 
-<div>JavaScript는 <code>String</code> 오브젝트와 원형의 문자열을 다르게 취급한다는 것에 주의해야 합니다. ({{jsxref("Boolean")}}과 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects" title="JavaScript/Reference/Global_Objects/">숫자</a>의 true도 마찬가지입니다.)</div>
+<div>JavaScript는 <code>String</code> 오브젝트와 원형의 문자열을 다르게 취급한다는 것에 주의해야 합니다. ({{jsxref("Boolean")}}과 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects">숫자</a>의 true도 마찬가지입니다.)</div>
 
 <div> </div>
 
@@ -187,58 +187,284 @@ console.log(eval(s2));          // returns the string "2 + 2"
 
 <p>이러한 이유로, 비록 코드 상에서 원형 문자열을 사용하는 대신에 <code>String</code> 오브젝트를 사용하게 되면 코드가 손상될 수 있지만, 일반적인 개발자는 차이를 걱정할 필요는 없습니다.</p>
 
-<p><code>String</code><span style="line-height: inherit;"> 오프젝트는 언제든지 </span>{{jsxref("String.prototype.valueOf()", "valueOf()")}} <span style="line-height: inherit;"> 메서드로 원형에 대응하도록 전환할 수 있습니다.</span></p>
+<p><code>String</code> 오브젝트는 언제든지 </span>{{jsxref("String.prototype.valueOf()", "valueOf()")}} 메서드로 원형에 대응하도록 전환할 수 있습니다.</span></p>
 
 <pre class="brush: js">console.log(eval(s2.valueOf())); // returns the number 4
 </pre>
 
-<h2 id="Properties" name="Properties">속성</h2>
-
+<h2>생성자</h2>
 <dl>
- <dt>{{jsxref("String.prototype")}}</dt>
- <dd>String 오브젝트는 프로퍼티의 추가가 가능합니다.</dd>
+  <dt>{{jsxref("String/String", "String()")}}</dt>
+  <dd>
+    <p>
+      Creates a new <code>String</code> object. It performs type conversion when called as
+      a function, rather than as a constructor, which is usually more useful.
+    </p>
+  </dd>
 </dl>
 
-<h2 id="Methods" name="Methods">메서드</h2>
-
+<h2>정적 메서드</h2>
 <dl>
- <dt>{{jsxref("String.fromCharCode()")}}</dt>
- <dd>지정된 유니코 값의 순서를 이용하여 만든 문자열을 반환합니다.</dd>
- <dt>{{jsxref("String.fromCodePoint()")}} {{experimental_inline}}</dt>
- <dd>지정된 코드 포인트 순서를 이용하여 만든 문자열을 반환합니다.</dd>
- <dt>{{jsxref("String.raw()")}} {{experimental_inline}}</dt>
- <dd>원형 템플릿 문자열(raw template string)에서 생성된 문자열을 반환합니다.</dd>
+  <dt>{{jsxref("String.fromCharCode()", "String.fromCharCode(<var>num1</var> [, ...[,
+    <var>numN</var>]])")}}</dt>
+  <dd>
+    <p>지정된 유니코드 값의 순서를 이용하여 만든 문자열을 반환합니다.</p>
+  </dd>
+  <dt>{{jsxref("String.fromCodePoint()", "String.fromCodePoint(<var>num1</var> [, ...[,
+    <var>numN</var>)")}}</dt>
+  <dd>
+    <p>지정된 코드 포인트 순서를 이용하여 만든 문자열을 반환합니다.</p>
+  </dd>
+  <dt>{{jsxref("String.raw()")}}</dt>
+  <dd>
+    <p>원형 템플릿 문자열(raw template string)에서 생성된 문자열을 반환합니다.</p>
+  </dd>
 </dl>
 
-<h2 id="String_generic_메서드"><code>String</code> generic 메서드</h2>
+<h2>인스턴스 속성</h2>
+<dl>
+  <dt>{{jsxref("String.prototype.length")}}</dt>
+  <dd>
+    <p>Reflects the <code>length</code> of the string. Read-only.</p>
+  </dd>
+</dl>
 
-<div class="warning">
-<p><strong><code>String</code> generic들은 비표준으로, 가까운 미래에 사라질 것입니다.</strong> 아래에서 제공하고 있는 방식을 사용하지 않으면, 브라우저들간의 호환성은 기대하기 어렵습니다. </p>
-</div>
-
-<p><code>String</code><span style="line-height: inherit;"> 인스턴스 메서드는 JavScript 1.6으로 Firefox에서(ECMAScript 표준에 속하지는 않지만) 어떤 오브젝트라도 String 메서드에 적용하여 String 오브젝트에서 사용가능합니다:</span></p>
-
-<pre class="brush: js">var num = 15;
-console.log(String.replace(num, /5/, '2'));
-</pre>
-
-<p class="brush: js">{{jsxref("Global_Objects/Array", "Generics", "#Array_generic_methods", 1)}}은<span style="line-height: inherit;"> </span>{{jsxref("Global_Objects/Array", "Array")}}<span style="line-height: inherit;"> 메서드에도 사용 가능합니다.</span></p>
-
-<h2 id="String_instances" name="String_instances"><code>String</code> 인스턴스</h2>
-
-<h3 id="속성">속성</h3>
-
-<p>{{ page('ko/docs/JavaScript/Reference/Global_Objects/String/prototype', 'Properties') }}</p>
-
-<h3 id="메서드">메서드</h3>
-
-<h4 id="HTML과_관계없는_메서드">HTML과 관계없는 메서드</h4>
-
-<p>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Methods_unrelated_to_HTML')}}</p>
-
-<h4 id="HTML_wrapper_methods">HTML wrapper methods</h4>
-
-<p>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'HTML_wrapper_methods')}}</p>
+<h2>인스턴스 메서드</h2>
+<dl>
+  <dt>{{jsxref("String.prototype.at()", "String.prototype.at(<var>index</var>)")}}{{Experimental_Inline}}</dt>
+  <dd>
+    <p>Returns the character (exactly one UTF-16 code unit) at the specified <code>index</code>. Accepts negative integers, which count back from the last string character.</p>
+  </dd>
+  <dt>{{jsxref("String.prototype.charAt()", "String.prototype.charAt(<var>index</var>)")}}</dt>
+  <dd>
+    <p>
+      Returns the character (exactly one UTF-16 code unit) at the specified
+      <code>index</code>.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.charCodeAt()",
+    "String.prototype.charCodeAt(<var>index</var>)")}}</dt>
+  <dd>
+    <p>
+      Returns a number that is the UTF-16 code unit value at the given
+      <code>index</code>.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.codePointAt()",
+    "String.prototype.codePointAt(<var>pos</var>)")}}</dt>
+  <dd>
+    <p>
+      Returns a nonnegative integer Number that is the code point value of the UTF-16
+      encoded code point starting at the specified <code>pos</code>.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.concat()", "String.prototype.concat(<var>str </var>[,
+    ...<var>strN </var>])")}}</dt>
+  <dd>
+    <p>Combines the text of two (or more) strings and returns a new string.</p>
+  </dd>
+  <dt>{{jsxref("String.prototype.includes()",
+    "String.prototype.includes(<var>searchString</var> [, <var>position</var>])")}}</dt>
+  <dd>
+    <p>Determines whether the calling string contains <code>searchString</code>.</p>
+  </dd>
+  <dt>{{jsxref("String.prototype.endsWith()",
+    "String.prototype.endsWith(<var>searchString</var> [, <var>length</var>])")}}</dt>
+  <dd>
+    <p>
+      Determines whether a string ends with the characters of the string
+      <code>searchString</code>.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.indexOf()",
+    "String.prototype.indexOf(<var>searchValue</var> [, <var>fromIndex</var>])")}}</dt>
+  <dd>
+    <p>
+      Returns the index within the calling {{jsxref("String")}} object of the first
+      occurrence of <code>searchValue</code>, or <code>-1</code> if not found.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.lastIndexOf()",
+    "String.prototype.lastIndexOf(<var>searchValue</var> [, <var>fromIndex</var>])")}}</dt>
+  <dd>
+    <p>
+      Returns the index within the calling {{jsxref("String")}} object of the last
+      occurrence of <code>searchValue</code>, or <code>-1</code> if not found.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.localeCompare()",
+    "String.prototype.localeCompare(<var>compareString</var> [, <var>locales</var> [,
+    <var>options</var>]])")}}</dt>
+  <dd>
+    <p>
+      Returns a number indicating whether the reference string
+      <code>compareString</code> comes before, after, or is equivalent to the
+      given string in sort order.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.match()", "String.prototype.match(<var>regexp</var>)")}}</dt>
+  <dd>
+    <p>Used to match regular expression <code>regexp</code> against a string.</p>
+  </dd>
+  <dt>{{jsxref("String.prototype.matchAll()",
+    "String.prototype.matchAll(<var>regexp</var>)")}}</dt>
+  <dd>
+    <p>Returns an iterator of all <code>regexp</code>'s matches.</p>
+  </dd>
+  <dt>{{jsxref("String.prototype.normalize()",
+    "String.prototype.normalize([<var>form</var>])")}}</dt>
+  <dd>
+    <p>Returns the Unicode Normalization Form of the calling string value.</p>
+  </dd>
+  <dt>{{jsxref("String.prototype.padEnd()",
+    "String.prototype.padEnd(<var>targetLength</var> [, <var>padString</var>])")}}</dt>
+  <dd>
+    <p>
+      Pads the current string from the end with a given string and returns a new string of
+      the length <code>targetLength</code>.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.padStart()",
+    "String.prototype.padStart(<var>targetLength</var> [, <var>padString</var>])")}}</dt>
+  <dd>
+    <p>
+      Pads the current string from the start with a given string and returns a new string
+      of the length <code>targetLength</code>.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.repeat()", "String.prototype.repeat(<var>count</var>)")}}</dt>
+  <dd>
+    <p>
+      Returns a string consisting of the elements of the object repeated
+      <code>count</code> times.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.replace()" ,
+    "String.prototype.replace(<var>searchFor</var>, <var>replaceWith</var>)")}}</dt>
+  <dd>
+    <p>
+      Used to replace occurrences of <code>searchFor</code> using
+      <code>replaceWith</code>. <code>searchFor</code> may be a string
+      or Regular Expression, and <code>replaceWith</code> may be a string or
+      function.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.replaceAll()" ,
+    "String.prototype.replaceAll(<var>searchFor</var>, <var>replaceWith</var>)")}}</dt>
+  <dd>
+    <p>
+      Used to replace all occurrences of <code>searchFor</code> using
+      <code>replaceWith</code>. <code>searchFor</code> may be a string
+      or Regular Expression, and <code>replaceWith</code> may be a string or
+      function.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.search()",
+    "String.prototype.search(<var>regexp</var>)")}}</dt>
+  <dd>
+    <p>
+      Search for a match between a regular expression <code>regexp</code> and
+      the calling string.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.slice()", "String.prototype.slice(<var>beginIndex</var>[,
+    <var>endIndex</var>])")}}</dt>
+  <dd>
+    <p>Extracts a section of a string and returns a new string.</p>
+  </dd>
+  <dt>{{jsxref("String.prototype.split()", "String.prototype.split([<var>sep</var> [,
+    <var>limit</var>] ])")}}</dt>
+  <dd>
+    <p>
+      Returns an array of strings populated by splitting the calling string at occurrences
+      of the substring <code>sep</code>.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.startsWith()",
+    "String.prototype.startsWith(<var>searchString</var> [, <var>length</var>])")}}</dt>
+  <dd>
+    <p>
+      Determines whether the calling string begins with the characters of string
+      <code>searchString</code>.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.substring()",
+    "String.prototype.substring(<var>indexStart</var> [, <var>indexEnd</var>])")}}</dt>
+  <dd>
+    <p>
+      Returns a new string containing characters of the calling string from (or between)
+      the specified index (or indices).
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.toLocaleLowerCase()",
+    "String.prototype.toLocaleLowerCase( [<var>locale</var>, ...<var>locales</var>])")}}</dt>
+  <dd>
+    <p>
+      The characters within a string are converted to lowercase while respecting the
+      current locale.
+    </p>
+    <p>
+      For most languages, this will return the same as
+      {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.toLocaleUpperCase()",
+    "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}</dt>
+  <dd>
+    <p>
+      The characters within a string are converted to uppercase while respecting the
+      current locale.
+    </p>
+    <p>
+      For most languages, this will return the same as
+      {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.toLowerCase()")}}</dt>
+  <dd>
+    <p>Returns the calling string value converted to lowercase.</p>
+  </dd>
+  <dt>{{jsxref("String.prototype.toString()")}}</dt>
+  <dd>
+    <p>
+      Returns a string representing the specified object. Overrides the
+      {{jsxref("Object.prototype.toString()")}} method.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.toUpperCase()")}}</dt>
+  <dd>
+    <p>Returns the calling string value converted to uppercase.</p>
+  </dd>
+  <dt>{{jsxref("String.prototype.trim()")}}</dt>
+  <dd>
+    <p>
+      Trims whitespace from the beginning and end of the string. Part of the ECMAScript 5
+      standard.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.trimStart()")}}</dt>
+  <dd>
+    <p>Trims whitespace from the beginning of the string.</p>
+  </dd>
+  <dt>{{jsxref("String.prototype.trimEnd()")}}</dt>
+  <dd>
+    <p>Trims whitespace from the end of the string.</p>
+  </dd>
+  <dt>{{jsxref("String.prototype.valueOf()")}}</dt>
+  <dd>
+    <p>
+      Returns the primitive value of the specified object. Overrides the
+      {{jsxref("Object.prototype.valueOf()")}} method.
+    </p>
+  </dd>
+  <dt>{{jsxref("String.prototype.@@iterator()")}}</dt>
+  <dd>
+    <p>
+      Returns a new iterator object that iterates over the code points of a String value,
+      returning each code point as a String value.
+    </p>
+  </dd>
+</dl>
 
 <h2 id="예제">예제</h2>
 
@@ -252,7 +478,7 @@ for (var i = 0, n = inputValues.length; i &lt; n; ++i) {
 }
 </pre>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">명세</h2>
+<h2 id="Browser_Compatibility">명세</h2>
 
 <table class="standard-table">
  <tbody>
@@ -284,7 +510,7 @@ for (var i = 0, n = inputValues.length; i &lt; n; ++i) {
  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">브라우저 호환성</h2>
+<h2 id="Browser_Compatibility">브라우저 호환성</h2>
 
 
 

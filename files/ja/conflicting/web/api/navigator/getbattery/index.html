@@ -1,0 +1,44 @@
+---
+title: Navigator.battery
+slug: conflicting/Web/API/Navigator/getBattery
+tags:
+  - API
+  - Battery
+  - Battery API
+  - Device API
+  - Navigator
+  - Non-standard
+  - Obsolete
+  - Property
+  - Reference
+  - バッテリ
+  - プロパティ
+  - 廃止
+  - 標準外
+translation_of: Web/API/Navigator/battery
+original_slug: Web/API/Navigator/battery
+---
+<div>{{ApiRef("Battery API")}}</div>
+
+<p><span class="seoSummary"><strong><code>battery</code></strong> プロパティは読み取り専用で、システムのバッテリの充電レベルや端末が充電中であるかどうかについての情報を提供し、これらのパラメーターが変化したときに発生するイベントを公開する {{DOMxRef("BatteryManager")}} を返します。このインターフェイスは <a href="/ja/docs/Web/API/Battery_Status_API">Battery Status API</a> の早期の草稿で導入されましたが、 {{JSxRef("Promise")}} ベースの {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} に置き換えられました。</span></p>
+
+<div class="note">
+<p><code>battery</code> プロパティは非推奨になり、バッテリの {{JSxRef("Promise")}} を返す {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} メソッドに置き換えられました。</p>
+</div>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox">var battery = navigator.battery;</pre>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("api.Navigator.battery")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}}</li>
+ <li><a href="/ja/docs/Web/API/Battery_Status_API">Battery Status API</a></li>
+ <li><a class="external" href="http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/">Blog post - Using the Battery API</a></li>
+ <li><a class="external" href="http://davidwalsh.name/battery-api">David Walsh on the JavaScript Battery API</a></li>
+</ul>

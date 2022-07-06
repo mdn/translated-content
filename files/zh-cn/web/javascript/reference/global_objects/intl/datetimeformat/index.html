@@ -9,8 +9,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 
 <div>{{EmbedInteractiveExample("pages/js/intl-datetimeformat.html")}}</div>
 
-<p class="hidden">交互示例的源代码存储在 GitHub 资源库。如果你愿意分布交互示例，请复制<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>，并向我们发送一个pull请求。</p>
-
 <h2 id="语法">语法</h2>
 
 <pre class="syntaxbox"><code>new Intl.DateTimeFormat([<var>locales</var>[, <var>options</var>]])
@@ -21,34 +19,30 @@ Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</va
 <dl>
  <dt><code>locales</code></dt>
  <dd>
- <p>可选.缩写语言代码(BCP 47 language tag,例如:cmn-Hans-CN)的字符串或者这些字符串组成的数组. 关于参数locales的一般形式和解释请参见{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}. 下面的这些Unicode扩展键也是被允许的:</p>
+ <p>可选。缩写语言代码 (BCP 47 language tag，例如:cmn-Hans-CN) 的字符串或者这些字符串组成的数组. 关于参数 locales 的一般形式和解释请参见{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}. 下面的这些 Unicode 扩展键也是被允许的：</p>
 
- <p>译者注:下面这两种扩展的使用方式是language[-scripts][-region]-u-nu-* 和 language[-scripts][-region]-u-ca-* ,例如:zh-u-nu-hanidec(表示中文十进制数字) 和 zh-u-ca-chinese(表示中国日历,比如壬辰年冬月8日) ,也可以 nu 和 ca 组合使用 比如 使用 zh-u-ca-chinese-nu-hanidec 格式化Date.now()的返回值类似于"丙申年冬月九日"</p>
-
- <p><code>nu</code></p>
+ <p>译者注：下面这两种扩展的使用方式是 language[-scripts][-region]-u-nu-* 和 language[-scripts][-region]-u-ca-* ,例如:zh-u-nu-hanidec(表示中文十进制数字) 和 zh-u-ca-chinese(表示中国日历，比如壬辰年冬月 8 日) ,也可以 nu 和 ca 组合使用 比如 使用 zh-u-ca-chinese-nu-hanidec 格式化 Date.now() 的返回值类似于"丙申年冬月九日"</p>
 
  <dl>
-  <dd>编号系统. 可能的值包括: <code>"arab"</code>, <code>"arabext"</code>, <code>"bali"</code>, <code>"beng"</code>, <code>"deva"</code>, <code>"fullwide"</code>, <code>"gujr"</code>, <code>"guru"</code>, <code>"hanidec"</code>, <code>"khmr"</code>, <code>"knda"</code>, <code>"laoo"</code>, <code>"latn"</code>, <code>"limb"</code>, <code>"mlym"</code>, <code>"mong"</code>, <code>"mymr"</code>, <code>"orya"</code>, <code>"tamldec"</code>, <code>"telu"</code>, <code>"thai"</code>, <code>"tibt"</code>.</dd>
+  <dt><code>nu</code></dt>
+  <dd>编号系统。可能的值包括：<code>"arab"</code>, <code>"arabext"</code>, <code>"bali"</code>, <code>"beng"</code>, <code>"deva"</code>, <code>"fullwide"</code>, <code>"gujr"</code>, <code>"guru"</code>, <code>"hanidec"</code>, <code>"khmr"</code>, <code>"knda"</code>, <code>"laoo"</code>, <code>"latn"</code>, <code>"limb"</code>, <code>"mlym"</code>, <code>"mong"</code>, <code>"mymr"</code>, <code>"orya"</code>, <code>"tamldec"</code>, <code>"telu"</code>, <code>"thai"</code>, <code>"tibt"</code>.</dd>
   <dt><code>ca</code></dt>
-  <dd>日历. 可能的值包括: <code>"buddhist"</code>, <code>"chinese"</code>, <code>"coptic"</code>, <code>"ethioaa"</code>, <code>"ethiopic"</code>, <code>"gregory"</code>, <code>"hebrew"</code>, <code>"indian"</code>, <code>"islamic"</code>, <code>"islamicc"</code>, <code>"iso8601"</code>, <code>"japanese"</code>, <code>"persian"</code>, <code>"roc"</code>.</dd>
+  <dd>日历。可能的值包括：<code>"buddhist"</code>, <code>"chinese"</code>, <code>"coptic"</code>, <code>"ethioaa"</code>, <code>"ethiopic"</code>, <code>"gregory"</code>, <code>"hebrew"</code>, <code>"indian"</code>, <code>"islamic"</code>, <code>"islamicc"</code>, <code>"iso8601"</code>, <code>"japanese"</code>, <code>"persian"</code>, <code>"roc"</code>.</dd>
  </dl>
  </dd>
  <dt><code>options</code></dt>
  <dd>
- <p>可选. 包含一些或所有的下面属性的类:</p>
+ <p>可选。包含一些或所有的下面属性的类：</p>
 
  <dl>
   <dt><code>localeMatcher</code></dt>
-  <dd>使用的local的匹配算法. 可能的值有"lookup"和"best fit"; 默认值是 <code>"best fit"</code>. 有关此选项的信息, 请参见{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
+  <dd>使用的 local 的匹配算法。可能的值有"lookup"和"best fit"; 默认值是 <code>"best fit"</code>. 有关此选项的信息，请参见{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
   <dt><code>timeZone</code></dt>
-  <dd>使用的时区. 这唯一的值实现必须被标准世界时间(UTC)所识别。默认值是运行时的默认时区. <a href="https://www.iana.org/time-zones">IANA time zone database</a>中的时区名称可能会被识别, 例如<code>"Asia/Shanghai"</code>, <code>"Asia/Kolkata"</code>, <code>"America/New_York"</code>.</dd>
+  <dd>使用的时区。这唯一的值实现必须被标准世界时间 (UTC) 所识别。默认值是运行时的默认时区。<a href="https://www.iana.org/time-zones">IANA time zone database</a>中的时区名称可能会被识别，例如<code>"Asia/Shanghai"</code>, <code>"Asia/Kolkata"</code>, <code>"America/New_York"</code>.</dd>
   <dt><code>hour12</code></dt>
-  <dd>是否使用12小时时间制(而不是24小时的时间). 可能的值是<code>true</code> 或 <code>false</code>; 默认值是根据locale来自动决定的(译者注:中国地区的默认值为true).</dd>
+  <dd>是否使用 12 小时时间制 (而不是 24 小时的时间). 可能的值是<code>true</code> 或 <code>false</code>; 默认值是根据 locale 来自动决定的 (译者注：中国地区的默认值为 true).</dd>
   <dt><code>formatMatcher</code></dt>
-  <dd><code>format的匹配算法.可能的值有"basic"和"best fit";默认值是"best fit".有关此属性使用的信息，参见以下段落。</code></dd>
-  <dd>
-  <p>日期时间插件被格式化输出时可以使用的属性集合描述。实现需要支持是以下子集中的其中一个(译者注:当weekday,year等这些属性一个也不使用的时候,在cmn-Hans-CN中相当于使用集合year, month, day, hour, minute, second并且它们的值都是numeric)：</p>
-  </dd>
+  <dd><code>format 的匹配算法。可能的值有"basic"和"best fit";默认值是"best fit".有关此属性使用的信息，参见以下段落。</code>日期时间插件被格式化输出时可以使用的属性集合描述。实现需要支持是以下子集中的其中一个 (译者注：当 weekday,year 等这些属性一个也不使用的时候，在 cmn-Hans-CN 中相当于使用集合 year, month, day, hour, minute, second 并且它们的值都是 numeric)：</dd>
  </dl>
 
  <ul>
@@ -61,30 +55,30 @@ Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</va
   <li><code>hour</code>, <code>minute</code></li>
  </ul>
 
- <p>实现可能支持其他的子集，并通过对所有可用的子集对比找到最匹配的子集。通过 formatMatcher属性可以设置两种算法用于对比和选择子集:  <a href="http://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher">完全匹配<code>"basic"算法</code> </a> 和 一种依赖于“best fit”算法的实现.</p>
+ <p>实现可能支持其他的子集，并通过对所有可用的子集对比找到最匹配的子集。通过 formatMatcher 属性可以设置两种算法用于对比和选择子集:  <a href="http://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher">完全匹配<code>"basic"算法</code> </a> 和 一种依赖于“best fit”算法的实现。</p>
 
  <dl>
   <dt><code>weekday</code></dt>
-  <dd>工作日的展现方式.可能的值有 <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code>.</dd>
+  <dd>工作日的展现方式：可能的值有 <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code></dd>
   <dt><code>era</code></dt>
-  <dd>纪元的展现方式. 可能的值有 <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code>.</dd>
+  <dd>纪元的展现方式。可能的值有 <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code></dd>
   <dt><code>year</code></dt>
-  <dd>年的展现方式.  可能的值有 <code>"numeric"</code>, <code>"2-digit"</code>.</dd>
+  <dd>年的展现方式：可能的值有 <code>"numeric"</code>, <code>"2-digit"</code></dd>
   <dt><code>month</code></dt>
-  <dd>月的展现方式. 可能的值有 <code>"numeric"</code>, <code>"2-digit"</code>, <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code>.</dd>
+  <dd>月的展现方式：可能的值有 <code>"numeric"</code>, <code>"2-digit"</code>, <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code></dd>
   <dt><code>day</code></dt>
-  <dd>日的展现方式.可能的值有 <code>"numeric"</code>, <code>"2-digit"</code>.</dd>
+  <dd>日的展现方式：可能的值有 <code>"numeric"</code>, <code>"2-digit"</code></dd>
   <dt><code>hour</code></dt>
-  <dd>时的展现方式.可能的值有 <code>"numeric"</code>, <code>"2-digit"</code>.</dd>
+  <dd>时的展现方式：可能的值有 <code>"numeric"</code>, <code>"2-digit"</code></dd>
   <dt><code>minute</code></dt>
-  <dd>分钟的展现方式.可能的值有 <code>"numeric"</code>, <code>"2-digit"</code>.</dd>
+  <dd>分钟的展现方式：可能的值有 <code>"numeric"</code>, <code>"2-digit"</code></dd>
   <dt><code>second</code></dt>
-  <dd>秒的展现方式. 可能的值有<code>"numeric"</code>, <code>"2-digit"</code>.</dd>
+  <dd>秒的展现方式：可能的值有<code>"numeric"</code>, <code>"2-digit"</code></dd>
   <dt><code>timeZoneName</code></dt>
-  <dd>时区名称的展现方式.可能的值有 <code>"short"</code>, <code>"long"</code>.</dd>
+  <dd>时区名称的展现方式：可能的值有 <code>"short"</code>, <code>"long"</code></dd>
  </dl>
 
- <p class="noinclude">每个日期时间组件属性的默认值都是{{jsxref("undefined")}},但是若所有的组件属性都是{{jsxref("undefined")}},那么<code>year</code>, <code>month</code>, and <code>day</code> 的值就都被认为是"<code>numeric</code>".</p>
+ <p>每个日期时间组件属性的默认值都是 {{jsxref("undefined")}}，但是若所有的组件属性都是 {{jsxref("undefined")}}，那么 <code>year</code>、<code>month</code> 和 <code>day</code> 的值就都被认为是 <code>numeric</code>。</p>
  </dd>
 </dl>
 
@@ -108,13 +102,13 @@ Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</va
 
 <h3 id="属性_2">属性</h3>
 
-<p><code>DateTimeFormat实例集成以下原型的属性</code>:</p>
+<p><code>DateTimeFormat 实例集成以下原型的属性</code>:</p>
 
 <div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype', 'Properties')}}</div>
 
 <h3 id="方法_2">方法</h3>
 
-<p><code>DateTimeFormat实例集成以下原型的方法</code>:</p>
+<p><code>DateTimeFormat 实例集成以下原型的方法</code>:</p>
 
 <div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype', 'Methods')}}</div>
 
@@ -122,29 +116,29 @@ Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</va
 
 <h3 id="使用_DateTimeFormat">使用 <code>DateTimeFormat</code></h3>
 
-<p>不指定locale时,DateTimeFormat使用默认的locale 和 默认的 options</p>
+<p>不指定 locale 时，DateTimeFormat 使用默认的 locale 和 默认的 options</p>
 
 <pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
-//参数未填时使用默认的locale和默认的时区
+//参数未填时使用默认的 locale 和默认的时区
 console.log(new Intl.DateTimeFormat().format(date));
 //如果是在洛杉矶那么值为 → "12/19/2012"
 </pre>
 
 <h3 id="使用locales">使用<code>locales</code></h3>
 
-<p>这个例子显示了本地化日期和时间格式的一些变化。为了获得用于您的应用程序的用户界面的语言格式，请确保使用locales参数确保指定语言（可能还有一些回退语言）：</p>
+<p>这个例子显示了本地化日期和时间格式的一些变化。为了获得用于您的应用程序的用户界面的语言格式，请确保使用 locales 参数确保指定语言（可能还有一些回退语言）：</p>
 
 <pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // 下面是假定的所在时区
-// 洛杉矶(America/Los_Angeles for the US)
+// 洛杉矶 (America/Los_Angeles for the US)
 
-// 美式英语(US English) 使用  month-day-year 格式
+// 美式英语 (US English) 使用  month-day-year 格式
 console.log(new Intl.DateTimeFormat('en-US').format(date));
 // → "12/19/2012"
 
-// 英式英语(British English) 使用 day-month-year 格式
+// 英式英语 (British English) 使用 day-month-year 格式
 console.log(new Intl.DateTimeFormat('en-GB').format(date));
 // → "20/12/2012"
 
@@ -152,35 +146,35 @@ console.log(new Intl.DateTimeFormat('en-GB').format(date));
 console.log(new Intl.DateTimeFormat('ko-KR').format(date));
 // → "2012. 12. 20."
 
-//大部分阿拉伯国家使用阿拉伯字母(real Arabic digits)
+// 大部分阿拉伯国家使用阿拉伯字母 (real Arabic digits)
 console.log(new Intl.DateTimeFormat('ar-EG').format(date));
-// → "<span dir="rtl">٢٠‏/١٢‏/٢٠١٢</span>"
+// → "٢٠‏/١٢‏/٢٠١٢"
 
-//在日本，应用可能想要使用日本日历,
-//2012 是平成24年（平成是是日本天皇明仁的年号,由1989年1月8日起开始计算直至现在）
+// 在日本，应用可能想要使用日本日历，
+// 2012 是平成 24 年（平成是是日本天皇明仁的年号，由 1989 年 1 月 8 日起开始计算直至现在）
 console.log(new Intl.DateTimeFormat('ja-JP-u-ca-japanese').format(date));
-// → "平成24/12/20"
+// → "平成 24/12/20"
 
-//当请求一个语言可能不支持，如巴厘(ban)，若有备用的语言印尼语(id)，
-//那么将使用印尼语(id)
+// 当请求一个语言可能不支持，如巴厘 (ban)，若有备用的语言印尼语 (id)，
+// 那么将使用印尼语 (id)
 console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
 // → "20/12/2012"
 </pre>
 
 <h3 id="使用options">使用<code>options</code></h3>
 
-<p>可以使用 <code>options </code>参数来自定义 <font face="Consolas, Liberation Mono, Courier, monospace">日期时间格式化</font>方法返回的字符串。</p>
+<p>可以使用 <code>options</code> 参数来自定义日期时间格式化方法返回的字符串。</p>
 
 <pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
-//请求参数(options)中包含参数星期(weekday)，并且该参数的值为长类型(long)
+// 请求参数 (options) 中包含参数星期 (weekday)，并且该参数的值为长类型 (long)
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 console.log(new Intl.DateTimeFormat('de-DE', options).format(date));
 // → "Donnerstag, 20. Dezember 2012"
 
-// 一个应用使用 世界标准时间(UTC),并且UTC使用短名字(short)展示
+// 一个应用使用世界标准时间 (UTC)，并且 UTC 使用短名字 (short) 展示
 options.timeZone = 'UTC';
-options.timeZoneName = 'short';//若不写这一行那么仍然显示的是世界标准时间；但是GMT三个字母不会显示
+options.timeZoneName = 'short'; // 若不写这一行那么仍然显示的是世界标准时间；但是 GMT 三个字母不会显示
 console.log(new Intl.DateTimeFormat('en-US', options).format(date));
 // → "Thursday, December 20, 2012, GMT"
 
@@ -192,7 +186,7 @@ options = {
 console.log(new Intl.DateTimeFormat('en-AU', options).format(date));
 // → "2:00:00 pm AEDT"
 
-// 使用24小时制
+// 使用 24 小时制
 options = {
   year: 'numeric', month: 'numeric', day: 'numeric',
   hour: 'numeric', minute: 'numeric', second: 'numeric',
@@ -231,55 +225,7 @@ console.log(date.toLocaleString('en-US', options));
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("24")}}</td>
-   <td>{{CompatGeckoDesktop("29")}}</td>
-   <td>{{CompatIE("11")}}</td>
-   <td>{{CompatOpera("15")}}</td>
-   <td>{{CompatSafari("10")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome("26")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatSafari("10")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

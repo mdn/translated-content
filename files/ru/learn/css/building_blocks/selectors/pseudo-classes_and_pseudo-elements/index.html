@@ -20,7 +20,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
  <tbody>
   <tr>
    <th scope="row">Необходимые условия:</th>
-   <td>Базовая компьютерная грамотность, <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F">установка базового ПО</a>, базовые знания о <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">работе с файлами</a>, основы HTML (изучите <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML">Введение в HTML</a>) и понимание работы CSS (изучите <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/First_steps">Введение в CSS</a>.)</td>
+   <td>Базовая компьютерная грамотность, <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F">установка базового ПО</a>, базовые знания о <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">работе с файлами</a>, основы HTML (изучите <a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML">Введение в HTML</a>) и понимание работы CSS (изучите <a href="/ru/docs/Learn/CSS/First_steps">Введение в CSS</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Цель:</th>
@@ -35,7 +35,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
 
 <p>Псевдоклассы — это ключевые слова, которые начинаются с двоеточия:</p>
 
-<pre class="notranslate">:<em>pseudo-class-name</em></pre>
+<pre>:<em>pseudo-class-name</em></pre>
 
 <h3 id="Простой_пример_псевдокласса">Простой пример псевдокласса</h3>
 
@@ -50,9 +50,9 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
 <p>Все псевдоклассы ведут себя подобным образом. Они нацелены на какой-то фрагмент вашего документа, находящийся в определённом состоянии, и ведут себя так, как если бы вы добавили класс в свой HTML. Рассмотрим некоторые другие примеры в MDN:</p>
 
 <ul>
- <li><code><a href="https://wiki.developer.mozilla.org/ru/docs/Web/CSS/:last-child">:last-child</a></code></li>
- <li><code><a href="https://wiki.developer.mozilla.org/ru/docs/Web/CSS/:only-child">:only-child</a></code></li>
- <li><code><a href="https://wiki.developer.mozilla.org/ru/docs/Web/CSS/:invalid">:invalid</a></code></li>
+ <li><code><a href="/ru/docs/Web/CSS/:last-child">:last-child</a></code></li>
+ <li><code><a href="/ru/docs/Web/CSS/:only-child">:only-child</a></code></li>
+ <li><code><a href="/ru/docs/Web/CSS/:invalid">:invalid</a></code></li>
 </ul>
 
 <div class="blockIndicator note">
@@ -74,7 +74,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
 
 <p>Псевдоэлементы ведут себя сходным образом, однако они действуют так, как если бы вы добавили в разметку целый новый HTML-элемент, а не применили класс к существующим элементам. Псевдоэлементы начинаются с двойного двоеточия <code>::</code>.</p>
 
-<pre class="notranslate"><em>::pseudo-element-name</em></pre>
+<pre><em>::pseudo-element-name</em></pre>
 
 <div class="blockIndicator note">
 <p><strong>Примечание</strong>: Некоторые ранние псевдоэлементы использовали синтаксис одинарного двоеточия, которое вы можете иногда видеть в коде или примерах. Современные браузеры поддерживают ранние псевдоэлементы с одинарным или двойным двоеточием синтаксиса для обратной совместимости.</p>
@@ -94,7 +94,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
 
 <p>Если вы хотите сделать шрифт первой строки первого абзаца жирным, вы можете связать вместе селекторы <code>:first-child</code> и <code>::first-line</code>. Попробуйте отредактировать предыдущий живой пример, чтобы использовалась следующая CSS. Мы говорим, что хотим выбрать первую строку первого элемента <code>&lt;p&gt;,</code> который находится внутри элемента <code>&lt;article&gt;</code>.</p>
 
-<pre class="brush: css notranslate"><code>article p:first-child::first-line {
+<pre class="brush: css"><code>article p:first-child::first-line {
   font-size: 120%;
   font-weight: bold;
 }</code></pre>
@@ -145,7 +145,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
   </tr>
   <tr>
    <td>{{ Cssxref(":blank") }}</td>
-   <td>Соответствует <a href="https://wiki.developer.mozilla.org/ru/docs/Web/HTML/Element/Input">элементу <code>&lt;input&gt;</code></a>, для которого значение ввода является пустым.</td>
+   <td>Соответствует <a href="/ru/docs/Web/HTML/Element/Input">элементу <code>&lt;input&gt;</code></a>, для которого значение ввода является пустым.</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":checked") }}</td>
@@ -161,7 +161,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
   </tr>
   <tr>
    <td>{{ Cssxref(":dir") }}</td>
-   <td>Выбирает элемент на основе его направленности (значение атрибута HTML <code><a href="https://wiki.developer.mozilla.org/ru/docs/Web/HTML/Global_attributes/dir">dir</a></code> или свойства CSS <code><a href="https://wiki.developer.mozilla.org/ru/docs/Web/CSS/direction">direction</a></code> ).</td>
+   <td>Выбирает элемент на основе его направленности (значение атрибута HTML <code><a href="/ru/docs/Web/HTML/Global_attributes/dir">dir</a></code> или свойства CSS <code><a href="/ru/docs/Web/CSS/direction">direction</a></code> ).</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":disabled") }}</td>
@@ -177,7 +177,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
   </tr>
   <tr>
    <td>{{ Cssxref(":first") }}</td>
-   <td>В <a href="https://wiki.developer.mozilla.org/ru/docs/Web/CSS/Paged_Media">постраничном носителе</a> соответствует первой странице.</td>
+   <td>В <a href="/ru/docs/Web/CSS/Paged_Media">постраничном носителе</a> соответствует первой странице.</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":first-child") }}</td>
@@ -209,7 +209,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
   </tr>
   <tr>
    <td>{{ Cssxref(":indeterminate") }}</td>
-   <td>Соответствует элементам пользовательского интерфейса, значение которых находится в неопределённом состоянии, обычно <a href="https://wiki.developer.mozilla.org/ru/docs/Web/HTML/Element/Input/checkbox">checkboxes</a>.</td>
+   <td>Соответствует элементам пользовательского интерфейса, значение которых находится в неопределённом состоянии, обычно <a href="/ru/docs/Web/HTML/Element/Input/checkbox">checkboxes</a>.</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":in-range") }}</td>
@@ -221,7 +221,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
   </tr>
   <tr>
    <td>{{ Cssxref(":lang") }}</td>
-   <td>Соответствует элементу, основанному на языке (значение атрибута HTML <a href="https://wiki.developer.mozilla.org/ru/docs/Web/HTML/Global_attributes/lang">lang</a>).</td>
+   <td>Соответствует элементу, основанному на языке (значение атрибута HTML <a href="/ru/docs/Web/HTML/Global_attributes/lang">lang</a>).</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":last-child") }}</td>
@@ -233,7 +233,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
   </tr>
   <tr>
    <td>{{ Cssxref(":left") }}</td>
-   <td>В <a href="https://wiki.developer.mozilla.org/ru/docs/Web/CSS/Paged_Media">постраничном носителе</a> соответствует левосторонним страницам.</td>
+   <td>В <a href="/ru/docs/Web/CSS/Paged_Media">постраничном носителе</a> соответствует левосторонним страницам.</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":link")}}</td>
@@ -313,7 +313,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
   </tr>
   <tr>
    <td>{{ Cssxref(":right") }}</td>
-   <td>В <a href="https://wiki.developer.mozilla.org/ru/docs/Web/CSS/Paged_Media">постраничном носителе</a> соответствует правосторонним страницам.</td>
+   <td>В <a href="/ru/docs/Web/CSS/Paged_Media">постраничном носителе</a> соответствует правосторонним страницам.</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":root") }}</td>
@@ -394,23 +394,23 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
 <h2 id="В_этом_модуле">В этом модуле</h2>
 
 <ol>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Каскад и наследование</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B">Селекторы CSS</a>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Каскад и наследование</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B">Селекторы CSS</a>
   <ul>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Type_Class_and_ID_Selectors">Селекторы типа, класса и ID</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors">Селекторы атрибута</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements">Псевдоклассы и псевдоэлементы</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Combinators">Комбинаторы</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Type_Class_and_ID_Selectors">Селекторы типа, класса и ID</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors">Селекторы атрибута</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements">Псевдоклассы и псевдоэлементы</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Combinators">Комбинаторы</a></li>
   </ul>
  </li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/The_box_model">Модель коробки</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Фон и границы</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Обработка разных направлений текста</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Overflowing_content">Переполнение содержимого</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Values_and_units">Значения и единицы измерения</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Изменение размеров в CSS</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Элементы изображений, форм и медиа-элементы</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Styling_tables">Стилизация таблиц</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS">Отладка CSS</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Organizing">Организация вашей CSS</a><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing"> </a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/The_box_model">Модель коробки</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Фон и границы</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Обработка разных направлений текста</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Overflowing_content">Переполнение содержимого</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Values_and_units">Значения и единицы измерения</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Изменение размеров в CSS</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Элементы изображений, форм и медиа-элементы</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Styling_tables">Стилизация таблиц</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS">Отладка CSS</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Organizing">Организация вашей CSS</a><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing"> </a></li>
 </ol>

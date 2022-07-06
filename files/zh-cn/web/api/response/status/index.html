@@ -8,7 +8,7 @@ translation_of: Web/API/Response/status
 <div>{{APIRef("Fetch")}}</div>
 
 <p><br>
- {{domxref("Response")}}  接口的<strong><code>status</code></strong> 只读属性包含响应的状态代码（例如，成功为200）。</p>
+ {{domxref("Response")}}  接口的<strong><code>status</code></strong> 只读属性包含响应的状态代码（例如，成功为 200）。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -16,7 +16,7 @@ translation_of: Web/API/Response/status
 
 <h3 id="值">值</h3>
 
-<p>一个数字（确切来讲是一个unsigned short）</p>
+<p>一个数字（确切来讲是一个 unsigned short）</p>
 
 <h2 id="示例">示例</h2>
 
@@ -55,68 +55,7 @@ fetch(myRequest).then(function(response) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(42)}}<br>
-    {{CompatChrome(41)}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(39)}}<br>
-    34<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>
-    <p>29<br>
-     28<sup>[1]</sup></p>
-   </td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] This feature is implemented behind a preference.</p>
+{{Compat("api.Response.status")}}
 
 <h2 id="See_also">See also</h2>
 

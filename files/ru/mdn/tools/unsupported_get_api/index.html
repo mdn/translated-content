@@ -33,25 +33,25 @@ original_slug: MDN/Tools/URL-suffix
  </dd>
  <dt><code>raw</code></dt>
  <dd><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Указывает Kuma вернуть необработанное содержимое страницы без какого-либо материала обложки, такого как верхние, нижние колонтитулы и т. д.</span></span> <span class="ChMk0b JLqJ4b"><span>При этом не выполняются шаблоны или сценарии, что удобно для редакторов сборки.</span></span></span></dd>
- <dd><strong>Пример:</strong> <a href="https://wiki.developer.mozilla.org/ru/docs/HTML/HTML5?raw">https://wiki.developer.mozilla.org/ru/docs/HTML/HTML5?raw</a></dd>
+ <dd><strong>Пример:</strong> <a href="/ru/docs/HTML/HTML5?raw">/ru/docs/HTML/HTML5?raw</a></dd>
  <dt><code>macros</code></dt>
  <dd><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Поручает Kuma выполнить все шаблоны на странице.</span></span> <span class="ChMk0b JLqJ4b"><span>В сочетании с <code>?raw</code> это предлагает полностью визуализированный контент MDN без оболочки сайт</span></span></span> . <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Поручает Kuma выполнить все шаблоны на странице.</span></span> <span class="ChMk0b JLqJ4b"><span>В сочетании с <code>?raw</code> это предлагает полностью визуализированный контент MDN без оболочки сайта.</span></span></span> <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>По умолчанию включено без  <code>?raw</code> (то есть при обычном просмотре сайта), по умолчанию выключено, когда присутствует <code>?raw</code>.</span></span></span></dd>
- <dd><strong>Пример:</strong> <a href="https://wiki.developer.mozilla.org/ru/docs/HTML/HTML5?raw&amp;macros">https://wiki.developer.mozilla.org/ru/docs/HTML/HTML5?raw&amp;macros</a></dd>
+ <dd><strong>Пример:</strong> <a href="/ru/docs/HTML/HTML5?raw&amp;macros">/ru/docs/HTML/HTML5?raw&amp;macros</a></dd>
  <dt><code>nomacros</code></dt>
  <dd>
  <div class="J0lOec"><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Указывает Kuma не выполнять шаблоны KumaScript на странице.</span></span> <span class="ChMk0b JLqJ4b"><span>Поскольку при обычном просмотре сайта для <code>?macros</code> по умолчанию установлено значение «включено», этот параметр отключает его.</span></span></span></div>
  </dd>
- <dd><strong>Пример:</strong> <a href="https://wiki.developer.mozilla.org/ru/docs/HTML/HTML5?nomacros">https://wiki.developer.mozilla.org/ru/docs/HTML/HTML5?nomacros</a></dd>
+ <dd><strong>Пример:</strong> <a href="/ru/docs/HTML/HTML5?nomacros">/ru/docs/HTML/HTML5?nomacros</a></dd>
  <dt><code>include</code></dt>
  <dd><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Говорит Kuma удалить все блоки, на которых есть класс <code>noinclude</code>.</span></span> <span class="ChMk0b JLqJ4b"><span>Это полезно для получения вывода таким, каким он был бы при включении на другую страницу, а не на отдельной странице.</span></span> <span class="ChMk0b JLqJ4b"><span>Часто это удаляет образец кода и тому подобное (хотя не всегда).</span></span></span></dd>
- <dd><strong>Пример:</strong> <a href="https://wiki.developer.mozilla.org/ru/docs/Archive/Mozilla/XUL/Attribute/align?raw&amp;macros&amp;include">https://wiki.developer.mozilla.org/ru/docs/Archive/Mozilla/XUL/Attribute/align?raw&amp;macros&amp;include</a></dd>
+ <dd><strong>Пример:</strong> <a href="/ru/docs/Archive/Mozilla/XUL/Attribute/align?raw&amp;macros&amp;include">/ru/docs/Archive/Mozilla/XUL/Attribute/align?raw&amp;macros&amp;include</a></dd>
  <dt><code>section=id</code></dt>
  <dd><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Указывает Kuma вернуть содержимое только из раздела с указанным якорем/именем привязки.</span></span></span></dd>
  <dd><strong>Пример:</strong>
  <ul>
-  <li><a href="/ru/docs/MDN/Tools/URL-suffix?raw&amp;section=params">https://wiki.developer.mozilla.org/ru/docs/MDN/Tools/URL-suffix?raw&amp;section=params</a><br>
+  <li><a href="/ru/docs/MDN/Tools/URL-suffix?raw&amp;section=params">/ru/docs/MDN/Tools/URL-suffix?raw&amp;section=params</a><br>
    (...и больше интересного...)</li>
-  <li><a href="/ru/docs/MDN/Tools/URL-suffix?raw&amp;macros&amp;section=params">https://wiki.developer.mozilla.org/ru/docs/MDN/Tools/URL-suffix?raw&amp;macros&amp;section=params</a></li>
+  <li><a href="/ru/docs/MDN/Tools/URL-suffix?raw&amp;macros&amp;section=params">/ru/docs/MDN/Tools/URL-suffix?raw&amp;macros&amp;section=params</a></li>
  </ul>
 
  <div class="note"><strong><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Уведомление об ошибке</span></span></span>: </strong> <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>В настоящее время существует ошибка, из-за которой параметр</span></span></span> <code>section</code>  <span class="VIiyi" lang="ru"><span class="C1N51c ChMk0b JLqJ4b"><span>возвращает весь документ, если вы также не укажете параметр</span></span></span> <code>raw</code>.</div>
@@ -60,7 +60,7 @@ original_slug: MDN/Tools/URL-suffix
  <dd>
  <p><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>В сочетании с представлением <code>$children</code> расширяет ответ JSON с подробной информацией для каждой подстраницы.</span></span> <span class="ChMk0b JLqJ4b"><span>Он работает как комбинация <code>$children</code> и <code>$json</code> на каждой подстранице.</span></span> <span class="ChMk0b JLqJ4b"><span>Таким образом, можно узнать о тегах для подстраницы.</span></span></span></p>
 
- <p><strong>Пример:</strong> <a href="/ru/docs/MDN/About$children?expand">https://wiki.developer.mozilla.org/ru/docs/MDN/About$children?expand</a></p>
+ <p><strong>Пример:</strong> <a href="/ru/docs/MDN/About$children?expand">/ru/docs/MDN/About$children?expand</a></p>
  </dd>
 </dl>
 </section>
@@ -73,13 +73,13 @@ original_slug: MDN/Tools/URL-suffix
 <dl>
  <dt><code>$toc</code></dt>
  <dd><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Указывает Kuma вернуть только оглавление страницы в HTML.</span></span> <span class="ChMk0b JLqJ4b"><span>Он возвращается как упорядоченный список (то есть</span></span></span> , {{HTMLElement("ol")}}).</dd>
- <dd><strong>Пример:</strong> <a href="https://wiki.developer.mozilla.org/ru/docs/MDN/Tools/URL-suffix$toc">https://wiki.developer.mozilla.org/ru/docs/MDN/Tools/URL-suffix$toc</a></dd>
+ <dd><strong>Пример:</strong> <a href="/ru/docs/MDN/Tools/URL-suffix$toc">/ru/docs/MDN/Tools/URL-suffix$toc</a></dd>
  <dt id="json-view"><code>$json</code></dt>
  <dd><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Сообщает Kuma описать страницу в объекте JSON.</span></span> <span class="ChMk0b JLqJ4b"><span>Этот объект по сути тот же, что и при использовании подпрограммы KumaScript <code>wiki.getPage()</code>.</span></span></span></dd>
- <dd><strong>Пример:</strong> <a href="/ru/docs/MDN/About$json">https://wiki.developer.mozilla.org/ru/docs/MDN/About$json</a></dd>
+ <dd><strong>Пример:</strong> <a href="/ru/docs/MDN/About$json">/ru/docs/MDN/About$json</a></dd>
  <dt><code>$children</code></dt>
  <dd><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Говорит Kuma перечислить дочерние темы страницы в JSON.</span></span> <span class="ChMk0b JLqJ4b"><span>Этот объект по сути тот же, что и при использовании подпрограммы KumaScript</span></span></span> <code>pages.subpages()</code>.</dd>
- <dd><strong>Пример:</strong> <a href="/ru/docs/MDN/Contribute$children">https://wiki.developer.mozilla.org/ru/docs/MDN/Contribute$children</a></dd>
+ <dd><strong>Пример:</strong> <a href="/ru/docs/MDN/Contribute$children">/ru/docs/MDN/Contribute$children</a></dd>
  <dd>
  <div class="J0lOec"><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>(<code>М</code>можно использовать с параметром <code>?expand</code> для получения более подробного ответа.)</span></span></span></div>
  </dd>
@@ -87,15 +87,15 @@ original_slug: MDN/Tools/URL-suffix
  <dd>
  <p>Представляет различия строк исходного текста между ревизиями, указанными в требуемых параметрах запроса <code>?from</code> и <code>?to</code>.</p>
  </dd>
- <dd><strong>Пример:</strong> <a href="/ru/docs/Web/API/KeyboardEvent/key/Key_Values$compare?locale=ru&amp;to=1651013&amp;from=1650680">https://wiki.developer.mozilla.org/ru/docs/Web/API/KeyboardEvent/key/Key_Values$compare?locale=ru&amp;to=1651013&amp;from=1650680</a></dd>
+ <dd><strong>Пример:</strong> <a href="/ru/docs/Web/API/KeyboardEvent/key/Key_Values$compare?locale=ru&amp;to=1651013&amp;from=1650680">/ru/docs/Web/API/KeyboardEvent/key/Key_Values$compare?locale=ru&amp;to=1651013&amp;from=1650680</a></dd>
  <dt><code>$edit</code></dt>
  <dd><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Редактирует текущую ревизию данного документа вместо его отображения.</span></span></span></dd>
- <dd><strong>Пример:</strong> <a href="/ru/docs/MDN/Tools/URL-suffix$edit">https://wiki.developer.mozilla.org/ru/docs/MDN/Tools/URL-suffix$edit</a></dd>
+ <dd><strong>Пример:</strong> <a href="/ru/docs/MDN/Tools/URL-suffix$edit">/ru/docs/MDN/Tools/URL-suffix$edit</a></dd>
  <dt><code>$history</code></dt>
  <dd><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Показывает историю последних десяти ревизий данного документа вместо его содержимого.</span></span> <span class="ChMk0b JLqJ4b"><span>Полную историю можно запросить с помощью значения параметра запроса <code>?limit=all</code>.</span></span></span></dd>
- <dd><strong>Пример:</strong> <a href="/ru/docs/MDN/Tools/URL-suffix$history?limit=all">https://wiki.developer.mozilla.org/ru/docs/MDN/Tools/URL-suffix$history?limit=all</a></dd>
+ <dd><strong>Пример:</strong> <a href="/ru/docs/MDN/Tools/URL-suffix$history?limit=all">/ru/docs/MDN/Tools/URL-suffix$history?limit=all</a></dd>
  <dt><code>$revision</code></dt>
  <dd><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Отображает номер ревизии документа, который необходимо указать после разделителя «/».</span></span></span></dd>
- <dd><strong>Пример:</strong> <a href="/ru/docs/MDN/Tools/URL-suffix$revision/1652169">https://wiki.developer.mozilla.org/ru/docs/MDN/Tools/URL-suffix$revision/1652169</a></dd>
+ <dd><strong>Пример:</strong> <a href="/ru/docs/MDN/Tools/URL-suffix$revision/1652169">/ru/docs/MDN/Tools/URL-suffix$revision/1652169</a></dd>
 </dl>
 </section>

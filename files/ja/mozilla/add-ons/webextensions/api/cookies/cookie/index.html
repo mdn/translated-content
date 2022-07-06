@@ -27,7 +27,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
  <dt><code>expirationDate</code>{{optional_inline}}</dt>
  <dd>cookie の有効期限をUNIX時刻からの秒数で持つ <code>number</code> 型です。セッション cookie はこのプロパティを持っていません。</dd>
  <dt><code>firstPartyDomain</code></dt>
- <dd>cookie に関連付けられたファーストパーティドメインを表す文字列を格納している <code>string</code> 型です。 cookie のFirst-party isolationが無効の間は空文字列になります。詳細は <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/cookies#First-party_isolation">First-party isolation</a> をご覧ください。</dd>
+ <dd>cookie に関連付けられたファーストパーティドメインを表す文字列を格納している <code>string</code> 型です。 cookie のFirst-party isolationが無効の間は空文字列になります。詳細は <a href="/ja/Add-ons/WebExtensions/API/cookies#First-party_isolation">First-party isolation</a> をご覧ください。</dd>
  <dt><code>hostOnly</code></dt>
  <dd><code>boolean</code> 型です。cookie がホストオンリークッキー (リクエストのホストが cookie の指定ドメインと完全一致している場合のみ送信) である場合に <code>true</code> 、でなければ <code>false</code> になります。</dd>
  <dt><code>httpOnly</code></dt>
@@ -47,8 +47,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 </dl>
 
 <h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("webextensions.api.cookies.Cookie")}}</p>
 

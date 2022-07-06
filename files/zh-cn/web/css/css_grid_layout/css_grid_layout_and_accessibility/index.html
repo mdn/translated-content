@@ -16,12 +16,12 @@ translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
 
 <h2 id="在_CSS_网格布局中重排内容">在 CSS 网格布局中重排内容</h2>
 
-<p>我们已经看到，网格使我们有能力以各种方式重新排列页面的内容。 通过 {{cssxref("order")}} 属性来改变项目自动定位，可以使用 <code>grid-auto-flow: dense</code> 使项目在视觉上脱离 DOM 顺序，还可以使用网格模板区域的基于线的定位来定位项目，这些方法都不用考虑标记位于 HTML 源代码中的位置。</p>
+<p>我们已经看到，网格使我们有能力以各种方式重新排列页面的内容。通过 {{cssxref("order")}} 属性来改变项目自动定位，可以使用 <code>grid-auto-flow: dense</code> 使项目在视觉上脱离 DOM 顺序，还可以使用网格模板区域的基于线的定位来定位项目，这些方法都不用考虑标记位于 HTML 源代码中的位置。</p>
 
-<p><a href="https://drafts.csswg.org/css-grid/#order-accessibility">CSS 网格布局规范</a>包括一个涵盖重新排序和可访问性的部分。 该部分详细介绍了当使用网格布局对内容进行可视化重新排序时，规范期望浏览器执行的操作。</p>
+<p><a href="https://drafts.csswg.org/css-grid/#order-accessibility">CSS 网格布局规范</a>包括一个涵盖重新排序和可访问性的部分。该部分详细介绍了当使用网格布局对内容进行可视化重新排序时，规范期望浏览器执行的操作。</p>
 
 <blockquote>
-<p>网格布局赋予了 web 开发者重新排列文档内容的强大能力，但是，这并不能取代 HTML 源代码中自身的排序。 order 属性和网格定位不影响非可视媒体（例如语音）的排序。 同样，可视化地重新排列网格项目不会影响顺序导航模式的默认遍历顺序（例如通过 TAB 键循环选取链接，参见 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex">tabindex</a> HTML5）。</p>
+<p>网格布局赋予了 web 开发者重新排列文档内容的强大能力，但是，这并不能取代 HTML 源代码中自身的排序。order 属性和网格定位不影响非可视媒体（例如语音）的排序。同样，可视化地重新排列网格项目不会影响顺序导航模式的默认遍历顺序（例如通过 TAB 键循环选取链接，参见 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex">tabindex</a> HTML5）。</p>
 </blockquote>
 
 <p>虽然使用网格布局对内容进行了可视化重新排列，但是在通过屏幕阅读器或其他文本到语音的用户代理读取内容时，并不会改变项目的排列方式。另外，重新排序不会改变 tab 键顺序，这意味着使用键盘进行导航的用户，通过按 TAB 键来引导阅读顺序，但由于下一个项目是在源代码的下一行，而这个项目正好被重新排序过，那他就会从网站的顶部一下子跳转到网站的底部。</p>
@@ -88,7 +88,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
 
 <h3 id="Firefox_中_flex_布局的排序_bug">Firefox 中 flex 布局的排序 bug</h3>
 
-<p>Firefox 中一个<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=812687">久已存在的 bug</a> 因此变得非常显眼。 虽然这个问题在 Firefox 的 CSS 网格布局实现中不存在，但它确实暴露了一个我们在使用网格时需要考虑的问题。</p>
+<p>Firefox 中一个<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=812687">久已存在的 bug</a> 因此变得非常显眼。虽然这个问题在 Firefox 的 CSS 网格布局实现中不存在，但它确实暴露了一个我们在使用网格时需要考虑的问题。</p>
 
 <p>目前，在使用 flex 布局时，Firefox 将遵循视觉顺序而不是逻辑顺序浏览文档。<a href="http://tink.uk/flexbox-the-keyboard-navigation-disconnect/">有人认为</a>，这实际上是一个更好的方法 —— 使 tab 键顺序遵循文档的视觉顺序。然而，事实证明，这是 Firefox 实现中的一个 bug。两种规范都声明逻辑顺序就是源文档的结构顺序，而 tab 键顺序和语音浏览器应遵循文档的逻辑顺序。</p>
 
@@ -98,11 +98,11 @@ translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
 
 <dl>
  <dt>从结构化的、可访问的文档开始</dt>
- <dd>网格布局意味着不需要改变文档源代码，就可以获得想要的布局。 因此，开发页面的起点应该是一个结构良好的，可访问的源文档。 正如 CSS 网格布局规范指出的，这通常也要求为最小的屏幕设备提供一个良好的文档结构。 如果用户在移动设备上滚动长文档，那么用户优先要看到的内容也应在文档中位于优先的位置。</dd>
+ <dd>网格布局意味着不需要改变文档源代码，就可以获得想要的布局。因此，开发页面的起点应该是一个结构良好的，可访问的源文档。正如 CSS 网格布局规范指出的，这通常也要求为最小的屏幕设备提供一个良好的文档结构。如果用户在移动设备上滚动长文档，那么用户优先要看到的内容也应在文档中位于优先的位置。</dd>
  <dt>创建响应式的、自适应的网格</dt>
- <dd>有了一个结构稳固的文档，就可以创建布局了，很可能要使用<a href="/en-US/docs/Web/CSS/Media_Queries">媒体查询</a>来创建额外的列，并对不同的屏幕尺寸和设备改变布局。 网格此时大有用武之地，例如，在移动设备上优先级不高的元素，在桌面设备上会被移到边栏中显示。此时的关键环节是要持续测试，一个非常简单的测试方法就是用 tab 键浏览文档。这个浏览顺序还有意义吗？检查是否有什么奇怪的从布局顶部跳到底部的情况，如果有的话，这就是一个信号，要赶快找找布局哪里出了问题。</dd>
+ <dd>有了一个结构稳固的文档，就可以创建布局了，很可能要使用<a href="/en-US/docs/Web/CSS/Media_Queries">媒体查询</a>来创建额外的列，并对不同的屏幕尺寸和设备改变布局。网格此时大有用武之地，例如，在移动设备上优先级不高的元素，在桌面设备上会被移到边栏中显示。此时的关键环节是要持续测试，一个非常简单的测试方法就是用 tab 键浏览文档。这个浏览顺序还有意义吗？检查是否有什么奇怪的从布局顶部跳到底部的情况，如果有的话，这就是一个信号，要赶快找找布局哪里出了问题。</dd>
  <dt>回到源代码</dt>
- <dd>如果在设计布局的过程中发现自己在使用网格重新定位元素的位置，就要考虑是否应该返回到文档并对逻辑顺序进行更改。使用CSS网格布局的一大好处是能够移动源文档中的项目以匹配逻辑顺序，而无需对布局进行大的更改。例如，对于基于 {{cssxref("float")}} 的布局，这是一个巨大的改进，其中文档的源代码非常重要，以便在不同的断点处获取布局。 然而，作为开发人员，我们需要记得回到源代码并更新它以维护逻辑顺序。</dd>
+ <dd>如果在设计布局的过程中发现自己在使用网格重新定位元素的位置，就要考虑是否应该返回到文档并对逻辑顺序进行更改。使用 CSS 网格布局的一大好处是能够移动源文档中的项目以匹配逻辑顺序，而无需对布局进行大的更改。例如，对于基于 {{cssxref("float")}} 的布局，这是一个巨大的改进，其中文档的源代码非常重要，以便在不同的断点处获取布局。然而，作为开发人员，我们需要记得回到源代码并更新它以维护逻辑顺序。</dd>
 </dl>
 
 <h2 id="网格和标记变平的危险">网格和标记变平的危险</h2>
@@ -121,11 +121,11 @@ translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
 
 <p>作为一种开始思考这些问题的方式，当使用 CSS 网格布局时，建议阅读 Leonie Watson 的 <em><a href="http://tink.uk/flexbox-the-keyboard-navigation-disconnect/">Flexbox &amp; the Keyboard Navigation Disconnect</a>。<a href="https://www.youtube.com/watch?v=spxT2CmHoPk">来自 ffconf 的 Leoie 的演示视频</a>有助于了解屏幕阅读器如何使用 CSS 的视觉表示进行工作。Adrian Roselli 也发表了 <a href="http://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html">tab order in various browsers</a> —— 尽管这是在 Firefox 完全实现网格支持之前。</em></p>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li><em><a href="/zh-CN/docs/Web/CSS"><strong>CSS</strong></a></em></li>
- <li><em><a href="/zh-CN/docs/Web/CSS/Reference"><strong>CSS参考</strong></a></em></li>
- <li><em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS网格布局</a></em></li>
+ <li><em><a href="/zh-CN/docs/Web/CSS/Reference"><strong>CSS 参考</strong></a></em></li>
+ <li><em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS 网格布局</a></em></li>
  <li data-default-state="open"><em><a href="#"><strong>指南</strong></a> </em>
   <ol>
    <li><em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">网格布局的基本概念</a></em></li>
@@ -136,8 +136,8 @@ translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
    <li><em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">网格布局中的自动定位</a></em></li>
    <li><em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">网格布局中的盒模型对齐</a></em></li>
    <li><em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">网格、逻辑值和书写模式</a></em></li>
-   <li><em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS网格布局和可访问性</a></em></li>
-   <li><em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS网格布局和渐进增强</a></em></li>
+   <li><em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS 网格布局和可访问性</a></em></li>
+   <li><em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS 网格布局和渐进增强</a></em></li>
    <li><em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">使用网格实现常见布局</a></em></li>
   </ol>
   <em> </em></li>

@@ -11,7 +11,7 @@ translation_of: Web/API/BeforeUnloadEvent
 
 <p><strong><code>beforeunload</code></strong> 事件触发于 window、document 和它们的资源即将卸载时。 </p>
 
-<p>当事件属性 <code>returnValue</code> 被赋值为非空字符串时，会弹出一个对话框，让用户确认是否离开页面（示例如下）。否则，事件被静默处理。一些浏览器实现仅在框架或内置框架接收到用户手势或交互时才显示对话框。在 {{anch("浏览器兼容性")}} 中查看更多信息。</p>
+<p>当事件属性 <code>returnValue</code> 被赋值为非空字符串时，会弹出一个对话框，让用户确认是否离开页面（示例如下）。否则，事件被静默处理。一些浏览器实现仅在框架或内置框架接收到用户手势或交互时才显示对话框。在 <a href="#浏览器兼容性">浏览器兼容性</a> 中查看更多信息。</p>
 
 <table class="properties">
  <tbody>
@@ -67,5 +67,5 @@ window.addEventListener("beforeunload", function( event ) {
  <li>{{Event("load")}}</li>
  <li>{{Event("beforeunload")}}</li>
  <li>{{Event("unload")}}</li>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document" title="http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document">卸载文档 — 提示卸载文档</a></li>
+ <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document">卸载文档 — 提示卸载文档</a></li>
 </ul>

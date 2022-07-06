@@ -19,7 +19,7 @@ translation_of: Web/API/Window/rejectionhandled_event
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary"><strong><code>rejectionhandled</code></strong> イベントは、 JavaScript の {{jsxref("Promise")}} が拒絶されたものの、その後で Promise の拒絶が処理された場合にスクリプトのグローバルスコープ (ふつうは {{domxref("window")}} だが {{domxref("Worker")}} の場合もある) に送られます。</span>これは、 Promise が拒絶されたが拒絶の手助けがないときに送信される {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} イベントと並行して、デバッグや一般的なアプリケーションの回復に使用できます。</p>
+<p><span class="seoSummary"><strong><code>rejectionhandled</code></strong> イベントは、 JavaScript の {{jsxref("Promise")}} が拒否されたものの、その後で Promise の拒否が処理された場合にスクリプトのグローバルスコープ (ふつうは {{domxref("window")}} だが {{domxref("Worker")}} の場合もある) に送られます。</span>これは、 Promise が拒否されたが拒否の手助けがないときに送信される {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} イベントと並行して、デバッグや一般的なアプリケーションの回復に使用できます。</p>
 
 <table class="properties">
  <tbody>
@@ -44,7 +44,7 @@ translation_of: Web/API/Window/rejectionhandled_event
 
 <h2 id="Example" name="Example">例</h2>
 
-<p><code>rejectionhandled</code> イベントを使用して、拒絶された Promise を、拒絶された理由を添えてコンソールに出力することができます。</p>
+<p><code>rejectionhandled</code> イベントを使用して、拒否された Promise を、拒否された理由を添えてコンソールに出力することができます。</p>
 
 <pre class="brush: js">window.addEventListener("rejectionhandled", event =&gt; {
   console.log("Promise rejected; reason: " + event.reason);
@@ -71,8 +71,6 @@ translation_of: Web/API/Window/rejectionhandled_event
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("api.Window.rejectionhandled_event")}}</p>
 

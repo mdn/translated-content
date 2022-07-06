@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>str</var>.endsWith(<var>searchString</var>[, <var>length</var>])</pre>
+<pre class="syntaxbox"><var>str</var>.endsWith(<var>searchString</var>[, <var>length</var>])</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 
 <p>这个方法已经加入到 ECMAScript 6 标准当中，但是可能还没有在所有的  JavaScript 实现中可用。然而，你可以通过如下的代码片段扩展 <code>String.prototype.endsWith()</code> 实现兼容：</p>
 
-<pre class="brush: js notranslate">if (!String.prototype.endsWith) {
+<pre class="brush: js">if (!String.prototype.endsWith) {
 	String.prototype.endsWith = function(search, this_len) {
 		if (this_len === undefined || this_len &gt; this.length) {
 			this_len = this.length;
@@ -60,7 +60,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 
 <h3 id="使用_endsWith">使用 <code>endsWith()</code></h3>
 
-<pre class="brush:js; notranslate">var str = "To be, or not to be, that is the question.";
+<pre class="brush:js;">var str = "To be, or not to be, that is the question.";
 
 alert( str.endsWith("question.") );  // true
 alert( str.endsWith("to be") );      // false
@@ -81,10 +81,6 @@ alert( str.endsWith("to be", 19) );  // true
 </table>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<div class="hidden">
-<p>这个页面上的兼容性表格是通过结构化的数据自动生成的，如果你希望改进这些数据，你可以查看 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 并提交你的改进。 </p>
-</div>
 
 <p>{{Compat("javascript.builtins.String.endsWith")}}</p>
 

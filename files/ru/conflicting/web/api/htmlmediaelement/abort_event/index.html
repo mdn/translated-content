@@ -1,71 +1,49 @@
 ---
-title: abort
+title: GlobalEventHandlers.onabort
 slug: conflicting/Web/API/HTMLMediaElement/abort_event
-tags:
-  - Событие
-translation_of: Web/API/HTMLMediaElement/abort_event
-translation_of_original: Web/Events/abort
-original_slug: Web/Events/abort
+translation_of: Web/API/GlobalEventHandlers/onabort
+original_slug: Web/API/GlobalEventHandlers/onabort
 ---
-<p>Событие "abort" вызывается когда загрузка какого-либо ресурса была прервана.</p>
+<div>{{ ApiRef("HTML DOM") }}</div>
 
-<h2 id="Общая_информация">Общая информация</h2>
+<h2 id="Summary">Summary</h2>
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Спецификация</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-abort">DOM L3</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Интерфейс</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("UIEvent")}} если событие сгенерировано из пользовательского интерфейса, иначе {{domxref("Event")}}.</dd>
- <dt style="float: left; text-align: right; width: 120px;">Всплывание</dt>
- <dd style="margin: 0 0 0 120px;">Нет</dd>
- <dt style="float: left; text-align: right; width: 120px;">Отменяемость</dt>
- <dd style="margin: 0 0 0 120px;">Нет</dd>
- <dt style="float: left; text-align: right; width: 120px;">Цель</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("window")}}, {{domxref("Element")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Действие по умолчанию</dt>
- <dd style="margin: 0 0 0 120px;">Нет</dd>
-</dl>
+<p>Обработчик событий, позволяющий прерывать события объекта <strong>window</strong>. (Недоступен для<strong> Firefox 2</strong> и <strong>Safari</strong>).</p>
 
-<h2 id="Свойства">Свойства</h2>
+<p>TODO define what "abort" is. Closing the window via window manager? Stopping the load of the page? By which means and reasons (user, network/server)? At which stages would it fire / be catched? Для IE, событие <strong>onabort</strong> доступно только для тега <code>img</code>.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Свойство</th>
-   <th scope="col">Тип</th>
-   <th scope="col">Описание</th>
-  </tr>
- </thead>
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">window.onabort = <em>funcRef</em>
+</pre>
+
+<ul>
+ <li><code>funcRef</code>: Reference to a function</li>
+</ul>
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush:js">window.onabort = function() {
+  alert("Load aborted.");
+}</pre>
+
+<h2 id="Specification">Specification</h2>
+
+<table class="spectable standard-table">
  <tbody>
   <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/EventTarget" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a></td>
-   <td>Цель события (самый вышележащий элемент в DOM дереве).</td>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a></td>
-   <td>Тип события.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a></td>
-   <td>Поднимается ли событие вверх как принято или нет.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a></td>
-   <td>Является ли событие отменяемым или нет?</td>
-  </tr>
-  <tr>
-   <td><code>view</code> {{readonlyInline}}</td>
-   <td><a class="new" href="/en-US/docs/Web/API/WindowProxy" rel="nofollow" title="The documentation about this has not yet been written; please consider contributing!"><code>WindowProxy</code></a></td>
-   <td><a href="/en-US/docs/Web/API/Document/defaultView" title="In browsers, document.defaultView returns the window object associated with a document, or null if none is available."><code>document.defaultView</code></a> (свойство <code>window</code>  объекта document)</td>
-  </tr>
-  <tr>
-   <td><code>detail</code> {{readonlyInline}}</td>
-   <td><code>long</code> (<code>float</code>)</td>
-   <td>0.</td>
+   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onabort','onabort')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
+
+<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+
+<p>{{Compat}}</p>

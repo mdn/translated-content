@@ -15,13 +15,9 @@ translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 
 <p>{{EmbedInteractiveExample("pages/js/functions-default.html")}}</p>
 
-<div class="hidden">
-<p>위의 상호작용가능한 예제의 소스는 깃허브 저장소에 저장됩니다. 상호작용 예제 프로젝트에 기여하고 싶다면 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 를 클론(clone)하여 풀 리퀘스트(pull request) 를 보내주세요.</p>
-</div>
-
 <h2 id="구문">구문</h2>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js ">
 function fnName(param1 = defaultValue1, ..., paramN = defaultValueN) { ... }
 </pre>
 
@@ -33,7 +29,7 @@ function fnName(param1 = defaultValue1, ..., paramN = defaultValueN) { ... }
 
 <p>다음 예제에서, <code>multiply</code>호출시 <code>b</code>에 할당된  값이 없다면, <code>b</code> 값은 <code>a*b</code>를 평가할 때 <code>undefined</code>일 거고 <code>multiply</code> 호출은 <code>NaN</code>이 반환됩니다. </p>
 
-<pre class="brush: js notranslate">function multiply(a, b) {
+<pre class="brush: js ">function multiply(a, b) {
   return a * b
 }
 
@@ -43,7 +39,7 @@ multiply(5)     // NaN !
 
 <p>이를 방지하기 위해서, 아래 두번째 줄과 같이  <code>multiply</code> 함수가 오직 한 개의 인수만 있다면  <code>b</code>를  <code>1</code>로 설정하는 방식을 사용하곤 했습니다.</p>
 
-<pre class="brush: js notranslate">function multiply(a, b) {
+<pre class="brush: js ">function multiply(a, b) {
   b = (typeof b !== 'undefined') ?  b : 1
   return a*b
 }
@@ -54,7 +50,7 @@ multiply(5)      // 5
 
 <p>ES2015의 기본값 매개변수로 함수 내부 에서의 검사는 더 이상 필요치 않습니다. 이제, 간단히 함수 머리(head)에서 <code>b</code>의 기본값으로 <code>1</code> 로 설정할 수 있습니다:</p>
 
-<pre class="brush: js notranslate">function multiply(a, b = 1) {
+<pre class="brush: js ">function multiply(a, b = 1) {
   return a*b
 }
 
@@ -69,7 +65,7 @@ multiply(5, undefined)  // 5
 
 <p>아래 예제중 두 번째 호출에서, 설사 두 번째 인수를 호출할 때 명시해서 <code>undefined</code> (<code>null</code> 혹은 {{glossary("falsy")}} 값이 아니긴 하지만 )로 설정하더라도 , <code>num</code> 인수의 값은 여전히 기본값입니다.</p>
 
-<pre class="brush: js notranslate">function test(num = 1) {
+<pre class="brush: js ">function test(num = 1) {
   console.log(typeof num)
 }
 
@@ -85,7 +81,7 @@ test(null)        // 'object' (num 은 null로 설정됨)
 
 <p>기본 인수는 <em>호출</em> <em>시 </em>에 평가됩니다, 그래서 Python의 경우 와는 달리, 함수가 호출될 때마다 새로운 객체가 생성됩니다.</p>
 
-<pre class="brush: js notranslate">function append(value, array = []) {
+<pre class="brush: js ">function append(value, array = []) {
   array.push(value)
   return array
 }
@@ -97,7 +93,7 @@ append(2)  // [2], [1, 2]가 아니라
 
 <p>이는 심지어 함수 및 변수에도 적용됩니다:</p>
 
-<pre class="brush: js notranslate">function callSomething(thing = something()) {
+<pre class="brush: js ">function callSomething(thing = something()) {
   return thing
 }
 
@@ -115,7 +111,7 @@ callSomething()  // 2
 
 <p>매개 변수가 여러개일 때 앞쪽에( 왼쪽 부분) 정의된 매개변수는 뒷쪽에 정의된 매개변수의 기본값에  바로 사용할 수 있습니다.</p>
 
-<pre class="brush: js notranslate">function greet(name, greeting, message = greeting + ' ' + name) {
+<pre class="brush: js ">function greet(name, greeting, message = greeting + ' ' + name) {
   return [name, greeting, message]
 }
 
@@ -125,7 +121,7 @@ greet('David', 'Hi', 'Happy Birthday!')   // ["David", "Hi", "Happy Birthday!"]
 
 <p>이 기능은,  얼마나 많은 경계 조건(edge case)를 다룰수 있는지 보여주는, 아래 예제로 거의 설명 가능합니다.</p>
 
-<pre class="brush: js notranslate">function go() {
+<pre class="brush: js ">function go() {
   return ':P'
 }
 
@@ -176,13 +172,13 @@ withoutDefaults.call({value:"=^_^="});
 
 <p>아래 함수는 호출되면 <code>ReferenceError</code> 를 발생시킵니다. 매개변수 기본값이 함수 내부의 자식 유효범위를 참조할 수 없기 때문입니다.</p>
 
-<pre class="brush: js example-bad notranslate">function f(a = go()) { // `f`가 호출 되면 `ReferenceError` 발생
+<pre class="brush: js example-bad ">function f(a = go()) { // `f`가 호출 되면 `ReferenceError` 발생
   function go() { return ':P' }
 }</pre>
 
 <p>...그리고 아래 함수는 <code>undefined</code> 를 프린트 하는데,  <code>var a</code> 가 함수 내부 대상의 유효범위내에서만 효과를 가지기 때문입니다. ( 매개변수 목록이 대상인 부모 스코프가 아니라)</p>
 
-<pre class="brush: js example-bad notranslate">function f(a, b = () =&gt; console.log(a)) {
+<pre class="brush: js example-bad ">function f(a, b = () =&gt; console.log(a)) {
   var a = 1
   b() // `undefined`를 인쇄하는데, 매개변수 기본값이 자체 스코프에 있기 때문입니다
 } </pre>
@@ -191,7 +187,7 @@ withoutDefaults.call({value:"=^_^="});
 
 <p>매개변수는 여전히 왼쪽에서 오른쪽으로 설정됩니다. 아래 예제에서 뒷쪽에 기본값이 없는 매개변수가 있지만 기본값 매개변수를 덮어씁니다.</p>
 
-<pre class="brush: js notranslate">function f(x=1, y) {
+<pre class="brush: js ">function f(x=1, y) {
   return [x, y];
 }
 
@@ -203,7 +199,7 @@ f(2)  // [2, undefined]
 
 <p>기본값 할당을 {{jsxref("Operators/Destructuring_assignment", "destructuring assignment", "", 1)}} 표기와 함께 사용할 수 있습니다:</p>
 
-<pre class="brush: js notranslate">function f([x, y] = [1, 2], {z: z} = {z: 3}) {
+<pre class="brush: js ">function f([x, y] = [1, 2], {z: z} = {z: 3}) {
   return x + y + z
 }
 
@@ -226,14 +222,11 @@ f()  // 6</pre>
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
-<div class="hidden">
-<p>이 페이지의 호환성 표는 구조화된 데이타로 부터 생성됩니다. 해당 데이타 업데이트에 기여하고 싶다면 이 깃허브 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 를 체크아웃 해서 풀 리퀘스트를 보내주세요.</p>
-</div>
 
 <p>{{Compat("javascript.functions.default_parameters")}}</p>
 
 <h2 id="참조">참조</h2>
 
 <ul>
- <li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values" rel="external" title="http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values">Original proposal at ecmascript.org</a></li>
+ <li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values" rel="external">Original proposal at ecmascript.org</a></li>
 </ul>
