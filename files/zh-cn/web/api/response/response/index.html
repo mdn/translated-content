@@ -5,9 +5,9 @@ translation_of: Web/API/Response/Response
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<div></div>
 
-<p><code><strong>Response()</strong></code> 构造函数创建了一个新的  {{domxref("Response")}} 对象.</p>
+
+<p><code><strong>Response()</strong></code> 构造函数创建了一个新的  {{domxref("Response")}} 对象。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -17,7 +17,7 @@ translation_of: Web/API/Response/Response
 
 <dl>
  <dt><em>body</em> {{optional_inline}}</dt>
- <dd>一个定义 response 中 body 的对象. 可以为 <code>null</code> ，或是以下其中一个:
+ <dd>一个定义 response 中 body 的对象。可以为 <code>null</code> ，或是以下其中一个：
  <ul>
   <li>{{domxref("Blob")}}</li>
   <li>{{domxref("BufferSource")}}</li>
@@ -28,18 +28,18 @@ translation_of: Web/API/Response/Response
  </ul>
  </dd>
  <dt><em>init</em> {{optional_inline}}</dt>
- <dd>一个参数(options)对象，包含要应用到 response 上的任何自定义设置. 可能参数(options)是:
+ <dd>一个参数 (options) 对象，包含要应用到 response 上的任何自定义设置。可能参数 (options) 是：
  <ul>
-  <li><code>status</code>: response 的状态码, 例如:<code>200</code>.</li>
-  <li><code>statusText</code>: 和状态码关联的状态消息, 例如: <code>OK</code>.</li>
-  <li><code>headers</code>: 你想加到 response 上的任何 headers, 包含了一个 {{domxref("Headers")}} 对象或满足对象语法的 {{domxref("ByteString")}} key/value 对 (详见 <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a>).</li>
+  <li><code>status</code>: response 的状态码，例如：<code>200</code>.</li>
+  <li><code>statusText</code>: 和状态码关联的状态消息，例如: <code>OK</code>.</li>
+  <li><code>headers</code>: 你想加到 response 上的任何 headers，包含了一个 {{domxref("Headers")}} 对象或满足对象语法的 {{domxref("ByteString")}} key/value 对 (详见 <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a>).</li>
  </ul>
  </dd>
 </dl>
 
 <h2 id="例子">例子</h2>
 
-<p>在我们的 <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response">Fetch Response 示例</a>中 (参见<a href="http://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) 我们使用构造函数创建了一个新的Response 对象，传递一个新的 {{domxref("Blob")}} 作为 body, 和一个包含自定义 <code>status</code> <font face="Open Sans, Arial, sans-serif">和</font><code>statusText</code>的 init 对象:</p>
+<p>在我们的 <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response">Fetch Response 示例</a>中 (参见<a href="http://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) 我们使用构造函数创建了一个新的 Response 对象，传递一个新的 {{domxref("Blob")}} 作为 body，和一个包含自定义 <code>status</code> 和<code>statusText</code>的 init 对象：</p>
 
 <pre class="brush: js notranslate">var myBlob = new Blob();
 var init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };

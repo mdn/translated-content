@@ -7,7 +7,7 @@ translation_of: Web/API/InputEvent/isComposing
 
 <p>The <code><strong>InputEvent.isComposing</strong></code> read-only property returns a {{jsxref("Boolean")}} value indicating if the event is fired after {{event("compositionstart")}} and before {{event("compositionend")}}.</p>
 
-<h2 id="这是一个只读属性，返回boolean类型。表示正处于输入事件的开始与结束之间，表示正在输入状态。">这是一个只读属性，返回boolean类型。表示正处于输入事件的开始与结束之间，表示正在输入状态。</h2>
+<h2 id="这是一个只读属性，返回boolean类型。表示正处于输入事件的开始与结束之间，表示正在输入状态。">这是一个只读属性，返回 boolean 类型。表示正处于输入事件的开始与结束之间，表示正在输入状态。</h2>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -19,7 +19,7 @@ translation_of: Web/API/InputEvent/isComposing
 console.log(inputEvent.isComposing); // return false
 </pre>
 
-<h2 id="Specifications" name="Specifications">Specifications</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table" style="height: 49px; width: 1000px;">
  <thead>
@@ -40,55 +40,9 @@ console.log(inputEvent.isComposing); // return false
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat("api.InputEvent.isComposing")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoDesktop("31.0") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoMobile("31.0") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 class="note" id="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{ event("compositionstart") }} and {{ event("compositionend")}}</li>

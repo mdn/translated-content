@@ -13,7 +13,7 @@ translation_of: Web/API/WebVTT_API
 
 <p>Файл WebVTT (<code>.vtt</code>) содержит реплики (cues), которые могут быть одной строкой или несколькими строками, как показано ниже:</p>
 
-<pre class="notranslate">WEBVTT
+<pre>WEBVTT
 
 00:01.000 --&gt; 00:04.000
 Никогда не пейте жидкий азот.
@@ -44,17 +44,17 @@ translation_of: Web/API/WebVTT_API
 
 <h5 id="Пример_1_-_Простейший_возможный_файл_WEBVTT">Пример 1 - Простейший возможный файл WEBVTT</h5>
 
-<pre class="eval notranslate">WEBVTT
+<pre class="eval">WEBVTT
 </pre>
 
 <h5 id="Пример_2_-_Очень_простой_файл_WebVTT_с_текстовым_заголовком">Пример 2 - Очень простой файл WebVTT с текстовым заголовком</h5>
 
-<pre class="eval notranslate">WEBVTT - Этот файл не содержит реплик.
+<pre class="eval">WEBVTT - Этот файл не содержит реплик.
 </pre>
 
 <h5 id="Пример_3_-_Обычный_WebVTT_с_заголовком_и_репликами">Пример 3 - Обычный WebVTT с заголовком и репликами</h5>
 
-<pre class="eval notranslate">WEBVTT - Этот файл содержит реплики.
+<pre class="eval">WEBVTT - Этот файл содержит реплики.
 
 14
 00:01:14.815 --&gt; 00:01:18.114
@@ -75,7 +75,7 @@ translation_of: Web/API/WebVTT_API
 
 <p>Давайте вернёмся к одному из наших предыдущих примеров и рассмотрим структуру реплик более подробно.</p>
 
-<pre class="notranslate">WEBVTT
+<pre>WEBVTT
 
 00:01.000 --&gt; 00:04.000
 - Never drink liquid nitrogen.
@@ -115,12 +115,12 @@ NOTE Это последняя строка в файле</pre>
 
 <h5 id="Example_4_-_Common_WebVTT_example">Example 4 - Common WebVTT example</h5>
 
-<pre class="eval notranslate">NOTE This is a comment
+<pre class="eval">NOTE This is a comment
 </pre>
 
 <h5 id="Example_5_-_Multi-line_comment">Example 5 - Multi-line comment</h5>
 
-<pre class="eval notranslate">NOTE
+<pre class="eval">NOTE
 Another comment that is spanning
 more than one line.
 
@@ -130,7 +130,7 @@ across more than one line this way.
 
 <h5 id="Example_6_-_Common_comment_usage">Example 6 - Common comment usage</h5>
 
-<pre class="eval notranslate">WEBVTT - Translation of that film I like
+<pre class="eval">WEBVTT - Translation of that film I like
 
 NOTE
 This translation was done by Kyle so that
@@ -159,7 +159,7 @@ NOTE This last line may not translate well.
 
 <h3 id="В_CSS-стилях_сайта">В CSS-стилях сайта</h3>
 
-<pre class="brush: css notranslate">video::cue {
+<pre class="brush: css">video::cue {
   background-image: linear-gradient(to bottom, dimgray, lightgray);
   color: papayawhip;
 }
@@ -173,7 +173,7 @@ video::cue(b) {
 
 <p>Фрагмент HTML, приведённый ниже, отображает видео.</p>
 
-<pre class="brush: html notranslate">&lt;video controls autoplay src="video.webm"&gt;
+<pre class="brush: html">&lt;video controls autoplay src="video.webm"&gt;
  &lt;track default src="track.vtt"&gt;
 &lt;/video&gt;
 </pre>
@@ -182,7 +182,7 @@ video::cue(b) {
 
 <p>You can also define the style directly in the WebVTT file. In this case, you insert your CSS rules into the file with each rule preceded by the string <code>"STYLE"</code> all by itelf on a line of text, as shown below:</p>
 
-<pre class="notranslate">WEBVTT
+<pre>WEBVTT
 
 STYLE
 ::cue {
@@ -205,7 +205,7 @@ NOTE style blocks cannot appear after the first cue.</pre>
 
 <p>We can also use identifiers inside WebVTT file, which can be used for defining a new style for some particular cues in the file. The example where we wanted the transcription text to be red highlighted and the other part to remain normal, we can define it as follows using CSS. Where it must be noted that the CSS uses escape sequences the way they are used in HTML pages:</p>
 
-<pre class="notranslate">WEBVTT
+<pre>WEBVTT
 
 1
 00:00.000 --&gt; 00:02.000
@@ -216,12 +216,12 @@ crédit de transcription
 Transcrit par Célestes™
 </pre>
 
-<pre class="brush: css notranslate">::cue(#\31) { color: lime; }
+<pre class="brush: css">::cue(#\31) { color: lime; }
 ::cue(#crédit\ de\ transcription) { color: red; }</pre>
 
-<p>Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see {{anch("Cue settings")}} for more information):</p>
+<p>Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see <a href="#cue_settings">Cue settings</a> for more information):</p>
 
-<pre class="notranslate">WEBVTT
+<pre>WEBVTT
 
 00:00:00.000 --&gt; 00:00:04.000 position:10%,line-left align:left size:35%
 Where did he go?
@@ -246,7 +246,7 @@ What are you waiting for?</pre>
 
 <h5 id="Example_7_-_Example_of_a_cue">Example 7 - Example of a cue</h5>
 
-<pre class="eval notranslate">1 - Title Crawl
+<pre class="eval">1 - Title Crawl
 00:00:05.000 --&gt; 00:00:10.000 line:0 position:20% size:60% align:start
 Some time ago in a place rather distant....</pre>
 
@@ -256,11 +256,11 @@ Some time ago in a place rather distant....</pre>
 
 <h5 id="Example_8_-_Cue_identifier_from_Example_7">Example 8 - Cue identifier from Example 7</h5>
 
-<pre class="eval notranslate">1 - Title Crawl</pre>
+<pre class="eval">1 - Title Crawl</pre>
 
 <h5 id="Example_9_-_Common_usage_of_identifiers">Example 9 - Common usage of identifiers</h5>
 
-<pre class="eval notranslate">WEBVTT
+<pre class="eval">WEBVTT
 
 1
 00:00:22.230 --&gt; 00:00:24.606
@@ -331,20 +331,20 @@ Third
 
 <h5 id="Example_10_-_Basic_cue_timing_examples">Example 10 - Basic cue timing examples</h5>
 
-<pre class="eval notranslate">00:22.230 --&gt; 00:24.606
+<pre class="eval">00:22.230 --&gt; 00:24.606
 00:30.739 --&gt; 00:00:34.074
 00:00:34.159 --&gt; 00:35.743
 00:00:35.827 --&gt; 00:00:40.122</pre>
 
 <h5 id="Example_11_-_Overlapping_cue_timing_examples">Example 11 - Overlapping cue timing examples</h5>
 
-<pre class="eval notranslate">00:00:00.000 --&gt; 00:00:10.000
+<pre class="eval">00:00:00.000 --&gt; 00:00:10.000
 00:00:05.000 --&gt; 00:01:00.000
 00:00:30.000 --&gt; 00:00:50.000</pre>
 
 <h5 id="Example_12_-_Non-overlapping_cue_timing_examples">Example 12 - Non-overlapping cue timing examples</h5>
 
-<pre class="eval notranslate">00:00:00.000 --&gt; 00:00:10.000
+<pre class="eval">00:00:00.000 --&gt; 00:00:10.000
 00:00:10.000 --&gt; 00:01:00.581
 00:01:00.581 --&gt; 00:02:00.100
 00:02:01.000 --&gt; 00:02:01.000</pre>
@@ -555,7 +555,7 @@ Third
 
 <p>The first line demonstrates no settings. The second line might be used to overlay text on a sign or label. The third line might be used for a title. The last line might be used for an Asian language.</p>
 
-<pre class="eval notranslate">00:00:05.000 --&gt; 00:00:10.000
+<pre class="eval">00:00:05.000 --&gt; 00:00:10.000
 00:00:05.000 --&gt; 00:00:10.000 line:63% position:72% align:start
 00:00:05.000 --&gt; 00:00:10.000 line:0 position:20% size:60% align:start
 00:00:05.000 --&gt; 00:00:10.000 vertical:rt line:-1 align:end
@@ -628,7 +628,7 @@ Third
   <div>
   <h5 id="Example_12_-_Karaoke_style_text">Example 12 - Karaoke style text</h5>
 
-  <pre class="eval notranslate">1
+  <pre class="eval">1
 00:16.500 --&gt; 00:18.500
 When the moon &lt;00:17.500&gt;hits your eye
 
@@ -656,7 +656,7 @@ That's &lt;00:00:21.000&gt;amore
   <div>
   <h5 id="Example_14_-_Class_tag">Example 14 - Class tag</h5>
 
-  <pre class="notranslate">&lt;c.classname&gt;text&lt;/c&gt;</pre>
+  <pre>&lt;c.classname&gt;text&lt;/c&gt;</pre>
   </div>
  </li>
  <li><strong>Italics tag</strong> (<code>&lt;i&gt;&lt;/i&gt;</code>)
@@ -667,7 +667,7 @@ That's &lt;00:00:21.000&gt;amore
   <div>
   <h5 id="Example_15_-_Italics_tag">Example 15 - Italics tag</h5>
 
-  <pre class="notranslate">&lt;i&gt;text&lt;/i&gt;</pre>
+  <pre>&lt;i&gt;text&lt;/i&gt;</pre>
   </div>
  </li>
  <li><strong>Bold tag</strong> (<code>&lt;b&gt;&lt;/b&gt;</code>)
@@ -678,7 +678,7 @@ That's &lt;00:00:21.000&gt;amore
   <div>
   <h5 id="Example_16_-_Bold_tag">Example 16 - Bold tag</h5>
 
-  <pre class="notranslate">&lt;b&gt;text&lt;/b&gt;</pre>
+  <pre>&lt;b&gt;text&lt;/b&gt;</pre>
   </div>
  </li>
  <li><strong>Underline tag</strong> (<code>&lt;u&gt;&lt;/u&gt;</code>)
@@ -689,7 +689,7 @@ That's &lt;00:00:21.000&gt;amore
   <div>
   <h5 id="Example_17_-_Underline_tag">Example 17 - Underline tag</h5>
 
-  <pre class="notranslate">&lt;u&gt;text&lt;/u&gt;</pre>
+  <pre>&lt;u&gt;text&lt;/u&gt;</pre>
   </div>
  </li>
  <li><strong>Ruby tag</strong> (<code>&lt;ruby&gt;&lt;/ruby&gt;</code>)
@@ -700,7 +700,7 @@ That's &lt;00:00:21.000&gt;amore
   <div>
   <h5 id="Example_18_-_Ruby_tag">Example 18 - Ruby tag</h5>
 
-  <pre class="notranslate">&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
+  <pre>&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
   </div>
  </li>
  <li><strong>Ruby text tag</strong> (<code>&lt;rt&gt;&lt;/rt&gt;</code>)
@@ -711,7 +711,7 @@ That's &lt;00:00:21.000&gt;amore
   <div>
   <h5 id="Example_19_-_Ruby_text_tag">Example 19 - Ruby text tag</h5>
 
-  <pre class="notranslate">&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
+  <pre>&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
   </div>
  </li>
  <li><strong>Voice tag</strong> (<code>&lt;v&gt;&lt;/v&gt;</code>)
@@ -722,7 +722,7 @@ That's &lt;00:00:21.000&gt;amore
   <div>
   <h5 id="Example_20_-_Voice_tag">Example 20 - Voice tag</h5>
 
-  <pre class="notranslate">&lt;v Bob&gt;text&lt;/v&gt;</pre>
+  <pre>&lt;v Bob&gt;text&lt;/v&gt;</pre>
   </div>
  </li>
 </ul>
@@ -737,7 +737,7 @@ That's &lt;00:00:21.000&gt;amore
 
 <p>Constructor is the first point for starting the Cue which is defined using the default constructor VTTCue(startTime, endTime, text) where starting time, ending time and text for cue can be adjusted. After that we can set the region for that particular cue to which this cue belongs using cue.region. Vertical, horizontal, line, lineAlign, Position, positionAlign, text, size and Align can be used to alter the cue and its formation, just like we can alter the objects form, shape and visibility in HTML using CSS. But the VTTCue interface is within the WebVTT provides the vast range of adjustment variables which can be used directly to alter the Cue. Following interface can be used to expose WebVTT cues in DOM API:</p>
 
-<pre class="idl def notranslate">enum <dfn>AutoKeyword</dfn> { <dfn>"auto"</dfn> };
+<pre class="idl def">enum <dfn>AutoKeyword</dfn> { <dfn>"auto"</dfn> };
 enum <dfn>DirectionSetting</dfn> { <dfn>""</dfn> /* horizontal */, <dfn>"rl"</dfn>, <dfn>"lr"</dfn> };
 enum <dfn>LineAlignSetting</dfn> { <dfn>"start"</dfn>, <dfn>"center"</dfn>, <dfn>"end"</dfn> };
 enum <dfn>PositionAlignSetting</dfn> { <dfn>"line-left"</dfn>, <dfn>"center"</dfn>, <dfn>"line-right"</dfn>, <dfn>"auto"</dfn> };
@@ -763,7 +763,7 @@ interface <dfn>VTTCue</dfn> : <a href="https://html.spec.whatwg.org/multipage/em
 
 <p>The new keyword can be used for defining a new VTTRegion object which can then be used for containing the multiple cues. There are several properties of VTTRegion which are width, lines, regionAnchorX, RegionAnchorY, viewportAnchorX, viewportAnchorY and scroll that can be used to specify the look and feel of this VTT region. The interface code is given below which can be used to expose the WebVTT regions in DOM API:</p>
 
-<pre class="idl def notranslate">enum <dfn>ScrollSetting</dfn> { <dfn>""</dfn> /* none */, <dfn>"up"</dfn> };
+<pre class="idl def">enum <dfn>ScrollSetting</dfn> { <dfn>""</dfn> /* none */, <dfn>"up"</dfn> };
 [<a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-vttregion" id="ref-for-dom-vttregion-vttregion-1">Constructor</a>]
 interface <dfn>VTTRegion</dfn> {
   attribute double <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-width" id="ref-for-dom-vttregion-width-1">width</a>;
@@ -819,11 +819,11 @@ interface <dfn>VTTRegion</dfn> {
  <li>The first line of WebVTT is standardized similar in the way some other languages require you to put headers as the file starts to indicate the file type. One the very first line you have to write.</li>
 </ol>
 
-<pre class="notranslate">WEBVTT</pre>
+<pre>WEBVTT</pre>
 
 <p>      3. Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:</p>
 
-<pre class="notranslate">00:01.000 --&gt; 00:05.000</pre>
+<pre>00:01.000 --&gt; 00:05.000</pre>
 
 <ol>
  <li>On the next line you can write the caption for this cue which will run from 1<sup>st</sup> second to the 5<sup>th</sup> second, inclusive.</li>
@@ -836,7 +836,7 @@ interface <dfn>VTTRegion</dfn> {
 
 <p>It is one of the good features supported by WebVTT is the localization and use of class elements which can be used in same way they are used in HTML and CSS to classify the style for particular type of objects, but here these are used for styling and classifying the Cues as shown below:</p>
 
-<pre class="notranslate">WEBVTT
+<pre>WEBVTT
 
 04:02.500 --&gt; 04:05.000
 J’ai commencé le basket à l'âge de 13, 14 ans
@@ -898,6 +898,6 @@ Sur les &lt;i.foreignphrase&gt;&lt;lang en&gt;playground&lt;/lang&gt;&lt;/i&gt;,
 
 <p>Prior to Firefox 50, the <code>AlignSetting</code> enum (representing possible values for {{domxref("VTTCue.align")}}) incorrectly included the value <code>"middle"</code> instead of <code>"center"</code>. This has been corrected.</p>
 
-<p>WebVTT was implemented in Firefox 24 behind the preference {{pref("media.webvtt.enabled")}}, which is disabled by default; you can enable it by setting this preference to <code>true</code>. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to <code>false</code>.</p>
+<p>WebVTT was implemented in Firefox 24 behind the preference <code>media.webvtt.enabled</code>, which is disabled by default; you can enable it by setting this preference to <code>true</code>. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to <code>false</code>.</p>
 
 <p>Prior to Firefox 58, the <code>REGION</code> keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports <code>VTTRegion</code> and its use; however, this feature is disabled by default behind the preference <code>media.webvtt.regions.enabled</code>; set it to <code>true</code> to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs {{bug(1338030)}} and {{bug(1415805)}}).</p>

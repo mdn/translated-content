@@ -5,11 +5,11 @@ translation_of: Web/API/Request
 ---
 <div>{{APIRef("Fetch")}}{{SeeCompatTable}}</div>
 
-<div><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 的 <strong><code>Request</code></strong>接口?用来表示资源请求。</div>
+<div><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 的 <strong><code>Request</code></strong>接口？用来表示资源请求。</div>
 
-<div></div>
 
-<p>你可以使用  {{domxref("Request.Request()")}} ?构造函数创建一个<code>Request 对象，但是你可能会遇到一个 Request 对象作为其它 API 的操作被返回，比如一个 </code>service worker的{{domxref("FetchEvent.request")}}。</p>
+
+<p>你可以使用  {{domxref("Request.Request()")}} ?构造函数创建一个<code>Request 对象，但是你可能会遇到一个 Request 对象作为其它 API 的操作被返回，比如一个 </code>service worker 的{{domxref("FetchEvent.request")}}。</p>
 
 <h2 id="构造器">构造器</h2>
 
@@ -24,11 +24,11 @@ translation_of: Web/API/Request
  <dt>{{domxref("Request.method")}} {{readonlyInline}}</dt>
  <dd>包含请求的方法 (<code>GET</code>, <code>POST</code>, 等.)</dd>
  <dt>{{domxref("Request.url")}} {{readonlyInline}}</dt>
- <dd>包含这个请求的URL。</dd>
+ <dd>包含这个请求的 URL。</dd>
  <dt>{{domxref("Request.headers")}} {{readonlyInline}}</dt>
  <dd>包含请求相关的{{domxref("Headers")}}对象。</dd>
  <dt>{{domxref("Request.context")}} {{readonlyInline}} {{deprecated_inline()}}</dt>
- <dd>包含请求的上下文(例如：<code>audio</code>, <code>image</code>, <code>iframe</code>, 等)</dd>
+ <dd>包含请求的上下文 (例如：<code>audio</code>, <code>image</code>, <code>iframe</code>, 等)</dd>
  <dt>{{domxref("Request.referrer")}} {{readonlyInline}}</dt>
  <dd>?包含请求的来源 (例如：<code>client</code>)。</dd>
  <dt>{{domxref("Request.referrerPolicy")}} {{readonlyInline}}</dt>
@@ -36,54 +36,54 @@ translation_of: Web/API/Request
  <dt>{{domxref("Request.mode")}} {{readonlyInline}}</dt>
  <dd>包含请求的模式 (例如： <code>cors</code>, <code>no-cors</code>, <code>same-origin</code>,<code> navigate</code>).</dd>
  <dt>{{domxref("Request.credentials")}} {{readonlyInline}}</dt>
- <dd>包含请求的证书(例如： <code>omit</code>, <code>same-origin</code>).</dd>
+ <dd>包含请求的证书 (例如： <code>omit</code>, <code>same-origin</code>).</dd>
  <dt>{{domxref("Request.redirect")}} {{readonlyinline}}</dt>
- <dd>包含?如何处理重定向模式，它可能是一个<code> follow </code>，<code>error</code>或者<code>manual</code>。</dd>
+ <dd>包含？如何处理重定向模式，它可能是一个<code> follow </code>，<code>error</code>或者<code>manual</code>。</dd>
  <dt>{{domxref("Request.integrity")}} {{readonlyInline}}</dt>
  <dd>包含请求的<a href="/en-US/docs/Web/Security/Subresource_Integrity">子资源的完整性</a>值 (例如： <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</dd>
  <dt>{{domxref("Request.cache")}} {{readonlyInline}}</dt>
  <dd>包含请求的缓存模式 (例如： <code>default</code>, <code>reload</code>, <code>no-cache</code>).</dd>
 </dl>
 
-<p><code>Request</code>实现了{{domxref("Body")}}, 所以它还具有以下属性可用:</p>
+<p><code>Request</code>实现了{{domxref("Body")}}, 所以它还具有以下属性可用：</p>
 
 <dl>
  <dt>{{domxref("Body.body")}} {{readonlyInline}}</dt>
- <dd>一个简单getter用于曝光一个{{domxref("ReadableStream")}}的主体内容.</dd>
+ <dd>一个简单 getter 用于曝光一个{{domxref("ReadableStream")}}的主体内容。</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("Body.bodyUsed")}} {{readonlyInline}}</dt>
- <dd>存储一个{{domxref("Boolean")}}判断主体是否已经被用于一个响应中.</dd>
+ <dd>存储一个{{domxref("Boolean")}}判断主体是否已经被用于一个响应中。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
 
 <dl>
  <dt>{{domxref("Request.clone()")}}</dt>
- <dd>创建当前request的副本。</dd>
+ <dd>创建当前 request 的副本。</dd>
 </dl>
 
-<p><code>Request</code>实现 {{domxref("Body")}}, 因此它也有以下方法可用:</p>
+<p><code>Request</code>实现 {{domxref("Body")}}, 因此它也有以下方法可用：</p>
 
 <dl>
  <dt>{{domxref("Body.arrayBuffer()")}}</dt>
- <dd>返回解决一个{{domxref("ArrayBuffer")}}表示的请求主体的promise.</dd>
+ <dd>返回解决一个{{domxref("ArrayBuffer")}}表示的请求主体的 promise.</dd>
  <dt>{{domxref("Body.blob()")}}</dt>
- <dd>返回解决一个{{domxref("Blob")}}表示的请求主体的promise.</dd>
+ <dd>返回解决一个{{domxref("Blob")}}表示的请求主体的 promise.</dd>
  <dt>{{domxref("Body.formData()")}}</dt>
- <dd>返回解决一个{{domxref("FormData")}}表示的请求主体的promise.</dd>
+ <dd>返回解决一个{{domxref("FormData")}}表示的请求主体的 promise.</dd>
  <dt>{{domxref("Body.json()")}}</dt>
- <dd>返回解决一个{{domxref("JSON")}}表示的请求主体的promise.</dd>
+ <dd>返回解决一个{{domxref("JSON")}}表示的请求主体的 promise.</dd>
  <dt>{{domxref("Body.text()")}}</dt>
- <dd>返回解决一个{{domxref("USVString")}}(文本)表示的请求主体的promise.</dd>
+ <dd>返回解决一个{{domxref("USVString")}}(文本) 表示的请求主体的 promise.</dd>
 </dl>
 
-<p class="note">注意：这些Body功能只能运行一次; 随后的调用将通过空strings/ ArrayBuffers解析.</p>
+<p>注意：这些 Body 功能只能运行一次; 随后的调用将通过空 strings/ ArrayBuffers 解析。</p>
 
 <h2 id="示例">示例</h2>
 
-<p>在下面的代码中，我们使用 Request ( ) 构造函数创建了一个新的 request实例 （用来请求同一目录下的图片）, 然后返回请求的一些属性。</p>
+<p>在下面的代码中，我们使用 Request ( ) 构造函数创建了一个新的 request 实例（用来请求同一目录下的图片）, 然后返回请求的一些属性。</p>
 
 <pre class="brush: js">const myRequest = new Request('http://localhost/flowers.jpg');
 
@@ -92,7 +92,7 @@ const myMethod = myRequest.method; // GET
 const myCred = myRequest.credentials; // omit
 </pre>
 
-<p>然后，通过将Request对象作为参数传递给<a href="/en-US/docs/Web/API/GlobalFetch/fetch">{{domxref("GlobalFetch.fetch()")}}</a>调用来获取此请求，例如：</p>
+<p>然后，通过将 Request 对象作为参数传递给<a href="/en-US/docs/Web/API/GlobalFetch/fetch">{{domxref("GlobalFetch.fetch()")}}</a>调用来获取此请求，例如：</p>
 
 <pre class="brush: js  line-numbers  language-js">fetch(myRequest)
   .then(response =&gt; response.blob())
@@ -102,7 +102,7 @@ const myCred = myRequest.credentials; // omit
 
 </pre>
 
-<p>在下面的代码片段中，我们使用<code>Request()</code>构造函数创建了一个新的request，其中包含一些初始数据和正文内容，用于需要主体有效载荷的api请求：</p>
+<p>在下面的代码片段中，我们使用<code>Request()</code>构造函数创建了一个新的 request，其中包含一些初始数据和正文内容，用于需要主体有效载荷的 api 请求：</p>
 
 <pre class="brush: js line-numbers  language-js">const myRequest = new Request('http://localhost/api', {method: 'POST', body: '{"foo":"bar"}'});
 
@@ -112,9 +112,9 @@ const myCred = myRequest.credentials; // omit
 const bodyUsed = myRequest.bodyUsed;
 </pre>
 
-<p class="note">注意：body类型只能是一个{{domxref("Blob")}},{{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} 或者{{domxref("ReadableStream")}}类型，因此增加一个JSON对象的有效载荷则需要字符串化该对象.</p>
+<p>注意：body 类型只能是一个{{domxref("Blob")}},{{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} 或者{{domxref("ReadableStream")}}类型，因此增加一个 JSON 对象的有效载荷则需要字符串化该对象。</p>
 
-<p>例如，您可以通过将<code>Request</code>对象作为参数传递给{{domxref("GlobalFetch.fetch()")}}调用来获取此api请求，并获得响应：</p>
+<p>例如，您可以通过将<code>Request</code>对象作为参数传递给{{domxref("GlobalFetch.fetch()")}}调用来获取此 api 请求，并获得响应：</p>
 
 <pre>fetch(myRequest)
   .then(response =&gt; {

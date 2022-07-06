@@ -1,0 +1,56 @@
+---
+title: BroadcastChannel.onmessage
+slug: conflicting/Web/API/BroadcastChannel/message_event
+translation_of: Web/API/BroadcastChannel/onmessage
+original_slug: Web/API/BroadcastChannel/onmessage
+---
+<p>{{APIRef("BroadCastChannel API")}}</p>
+
+<p>当 {{domxref("BroadcastChannel")}} 接收到类型为 {{domxref("MessageEvent")}} 的 {{event("message")}} 事件时，<code><strong>BroadcastChannel.onmessage</strong></code> 属性可以指定一个函数，作为该事件对应的事件处理程序来执行。</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox"><em>channel</em>.onmessage = <em>function</em>;
+</pre>
+
+<h3 id="值">值</h3>
+
+<ul>
+ <li><code>function</code> 是一个用户自定义函数的名称，不带 <code>()</code> 后续或参数；也可以是一个匿名函数，如 <code>function(event) {...}</code>。一个事件处理程序通常只有一个参数，包含了类型为 {{domxref("MessageEvent")}} 的事件。</li>
+</ul>
+
+<h2 id="示例">示例</h2>
+
+<pre class="brush: js">bc.onmessage = function(ev) { console.log('message event received!'); };
+</pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">备注</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "comms.html#handler-broadcastchannel-onmessage", "BroadcastChannel.onmessage")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+
+
+<p>{{Compat("api.BroadcastChannel.onmessage")}}</p>
+
+<h2 id="另见">另见</h2>
+
+<ul>
+ <li>一种在不同浏览器上下文之间通信的重量级方案：{{domxref("ServiceWorker")}}。</li>
+</ul>

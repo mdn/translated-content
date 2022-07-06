@@ -9,6 +9,8 @@ translation_of: Web/HTTP/Headers/X-Frame-Options
 
 <p>이 설정은 사용자가  <code>X-Frame-Options</code>를 지원하는 브라우저를 통해 페이지에 접근할 경우에만 보안됩니다.</p>
 
+<div class="note"><strong>참고:</strong> {{HTTPHeader("Content-Security-Policy")}} HTTP 헤더에는 브라우저를 지원하기 위해 이 헤더를 <a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">사용하지 않도록 하는</a> {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 지시문이 있습니다.</div>
+
 <table class="properties">
  <tbody>
   <tr>
@@ -40,7 +42,7 @@ X-Frame-Options: allow-from https://example.com/
  <dt><code>deny</code></dt>
  <dd>어떠한 사이트에서도 frame 상에서 보여질 수 없습니다.</dd>
  <dt><code>sameorigin</code></dt>
- <dd>동일한 사이트의 frame에서만 보여집니다. 해당 스펙 안에서 브라우저 벤더가 최상위(top level), 혹은 부모(parent), 모든 체인(whole chain)에서 적용할지를 결정하도록 맡겨집니다. 하지만 모든 조상(ancestor)이 동일한 사이트에서 제공되지 않으면 이 옵션은 그다지 유용하지 않다고 논의되고 있습니다. (참고 {{bug(725490)}}). 상세 지원사항에 대한 참고 {{anch("Browser compatibility")}}.</dd>
+ <dd>동일한 사이트의 frame에서만 보여집니다. 해당 스펙 안에서 브라우저 벤더가 최상위(top level), 혹은 부모(parent), 모든 체인(whole chain)에서 적용할지를 결정하도록 맡겨집니다. 하지만 모든 조상(ancestor)이 동일한 사이트에서 제공되지 않으면 이 옵션은 그다지 유용하지 않다고 논의되고 있습니다. (참고 {{bug(725490)}}). 상세 지원사항에 대한 참고 <a href="#browser_compatibility">Browser compatibility</a>.</dd>
  <dt><code>allow-from <em>uri</em></code></dt>
  <dd>지정된 특정 uri의 frame 에서만 보여집니다. 파이어폭스에서는 <code>sameorigin</code> 과 동일한 문제를 겪고 있습니다. 즉 동일한 사이트에 있는지에 대해서 frame의 조상(ancestor)을 확인하지 않습니다.</dd>
 </dl>
@@ -48,7 +50,7 @@ X-Frame-Options: allow-from https://example.com/
 <h2 id="예시">예시</h2>
 
 <div class="note">
-<p><strong>Note:</strong> 메타 테그 설정은 무용지물이다! 이를테면, <code>&lt;meta http-equiv="X-Frame-Options" content="deny"&gt;</code> 태그는 아무런 영향을 미치지 않는다. 따라서 사용하지지 말ㄹ! 오직 아래의 예제처럼 HTTP 헤더 설정을 통해서만<code>X-Frame-Options</code>이 동작한다.</p>
+<p><strong>Note:</strong> 메타 테그 설정은 무용지물이다! 이를테면, <code>&lt;meta http-equiv="X-Frame-Options" content="deny"&gt;</code> 태그는 아무런 영향을 미치지 않는다. 따라서 사용하지 말자! 오직 아래의 예제처럼 HTTP 헤더 설정을 통해서만 <code>X-Frame-Options</code>이 동작한다.</p>
 </div>
 
 <h3 id="Apache_설정">Apache 설정</h3>

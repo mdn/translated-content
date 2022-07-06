@@ -1,0 +1,110 @@
+---
+title: PositionOptions
+slug: conflicting/Web/API/Geolocation/getCurrentPosition
+translation_of: Web/API/PositionOptions
+original_slug: Web/API/PositionOptions
+---
+<div>{{APIRef("Geolocation API")}}</div>
+
+<div> </div>
+
+<div>A interface <code><strong>PositionOptions</strong></code> consiste em um objeto que contém propriedades opcionais para passar como um parâmetro de {{domxref("Geolocation.getCurrentPosition()")}} e {{domxref("Geolocation.watchPosition()")}}.</div>
+
+<div> </div>
+
+<h2 id="Propriedades">Propriedades</h2>
+
+<p><em>A interface <code>PositionOptions</code> não herda </em><em><em>qualquer propriedade</em></em>.</p>
+
+<dl>
+ <dt>{{domxref("PositionOptions.enableHighAccuracy")}}</dt>
+ <dd>É um {{domxref("Boolean")}} que indica se a aplicação deve receber os melhores (mais exatos) resultados possíveis. Se o valor for <code>true </code>e o dispositivo puder disponibilizar uma posição mais exata, ele o fará. Note que isto pode resultar em respostas mais lentas ou aumentar o consumo de bateria. (GPS em um dispositivo mobile). Se o valor for <code>false, </code>o dispositivo toma a liberdade de salvar os recursos respondendo mais rapidamente e/ou utilizando menos bateria. Default: <code>false</code></dd>
+ <dt>{{domxref("PositionOptions.timeout")}}</dt>
+ <dd>É um valor <code>long </code>positivo que representa o tamanho máximo do tempo (em milissegundos) que o dispositivo deve levar para retornar uma posição. O valor default é <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>, o que significa que <code>getCurrentPosition() </code>não terá retorno até que a posição esteja disponível.</dd>
+ <dt>{{domxref("PositionOptions.maximumAge")}}</dt>
+ <dd>É um valor <code>long </code>positivo indicando o valor máximo em milissegundos de uma possível posição em cache aceitável para retornar. Se o valor for <code>0</code>, significa que o dispositivo não deve utilizar uma posição em cache e deve tentar obter a posição atual real. Se o valor for <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code> o dispositivo deve retornar uma posição em cache, independente de seu tempo de expiração. Default: 0.</dd>
+</dl>
+
+<h2 id="Métodos">Métodos</h2>
+
+<p>A interface <code>PositionOptions</code>  não implementa ou herda nenhum método.</p>
+
+<h2 id="Especificações">Especificações</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Geolocation', '#positionoptions', 'PositionOptions')}}</td>
+   <td>{{Spec2('Geolocation')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>5</td>
+   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
+   <td>9</td>
+   <td>10.60<br>
+    {{CompatNo}} 15.0<br>
+    16.0</td>
+   <td>5</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("4")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>10.60</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Veja_também">Veja também</h2>
+
+<ul>
+ <li><a href="/en-US/docs/WebAPI/Using_geolocation">Usando geolocation</a></li>
+ <li>A interface {{domxref("Geolocation")}} que utiliza <code><strong>PositionOptions</strong></code>.</li>
+</ul>

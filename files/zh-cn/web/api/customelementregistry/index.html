@@ -27,7 +27,7 @@ translation_of: Web/API/CustomElementRegistry
 
 <h2 id="示例">示例</h2>
 
-<p>以下代码来自我们的 <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> 示例（<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">see it live also</a>）。 请注意我们如何使用 {{domxref("CustomElementRegistry.define()")}} 方法在创建其类后定义自定义元素。</p>
+<p>以下代码来自我们的 <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> 示例（<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">see it live also</a>）。请注意我们如何使用 {{domxref("CustomElementRegistry.define()")}} 方法在创建其类后定义自定义元素。</p>
 
 <pre class="brush: js">// Create a class for the element
 class WordCount extends HTMLParagraphElement {
@@ -70,20 +70,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "custom-elements.html#customelementregistry", "CustomElementRegistry")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

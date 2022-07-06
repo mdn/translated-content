@@ -234,7 +234,7 @@ input:valid {
 
 <h3 id="Constraining_the_values_of_your_entries">Ограничение допустимых значений</h3>
 
-<p>В полях, предназначеннх для ввода чисел (например, <code><a href="/ru/docs/Web/HTML/Element/input/number">&lt;input type="number"&gt;</a></code>), диапазон допустимых значений можно определить с помощью атрибутов <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> и <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code>. Если поле содержит значение за пределами данного диапазона, оно будет не валидным.</p>
+<p>В полях, предназначенных для ввода чисел (например, <code><a href="/ru/docs/Web/HTML/Element/input/number">&lt;input type="number"&gt;</a></code>), диапазон допустимых значений можно определить с помощью атрибутов <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> и <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code>. Если поле содержит значение за пределами данного диапазона, оно будет не валидным.</p>
 
 <p>Давайте рассмотрим другой пример. Создайте новую копию файла <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a>.</p>
 
@@ -255,7 +255,7 @@ input:valid {
 &lt;/form&gt;</pre>
 
 <ul>
- <li>Здесь мы в полю с типом <code>text</code> атрибутам <code>minlength</code> и <code>maxlength</code>, задали одинаковое значение 6, что соответствует количеству символов в словах banana и cherry.</li>
+ <li>Здесь мы в поле с типом <code>text</code> атрибутам <code>minlength</code> и <code>maxlength</code>, задали одинаковое значение 6, что соответствует количеству символов в словах banana и cherry.</li>
  <li>В поле с типом <code>number</code> атрибуту <code>min</code> мы задали значение 1, а атрибуту <code>max</code> значение 10. При вводе чисел за пределами данного диапазона, поле будет становиться не валидным; с помощью стрелок увеличения/уменьшения пользователи не смогут выйти за границы диапазона. Текущее поле не является обязательным для заполнения, поэтому даже после очистки будет оставаться валидным.</li>
 </ul>
 
@@ -453,7 +453,7 @@ email.addEventListener("input", function (event) {
   }
 });</pre>
 
-<p>Здесь мы сохраняем ссылку на поле email, а затем добавляем к нему слушатель события, который запускает код обработчика каждый раз, когда в поле меняется значение.</p>
+<p>Здесь мы сохраняем ссылку на поле email, а затем добавляем к нему обработчик события, который запускает код обработчика каждый раз, когда в поле меняется значение.</p>
 
 <p>В коде обработчика мы проверяем, возвращает ли свойство поля email <code>validity.typeMismatch</code> значение <code>true</code>, что значит, что содержащееся значение не соответствует шаблону корректного email-адреса. Если возвращается <code>true</code>, мы вызываем метод {{domxref("HTMLInputElement.setCustomValidity()","setCustomValidity()")}} с кастомным сообщением. Это делает поле не валидным, поэтому попытка отправить форму приводит к ошибке и отображается кастомное сообщение об ошибке.</p>
 
@@ -743,7 +743,7 @@ const emailRegExp = /^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-
 function addEvent(element, event, callback) {
   let previousEventCallBack = element["on"+event];
   element["on"+event] = function (e) {
-    const output = callback(e);
+    let output = callback(e);
 
     // Колбэк, который возвращает `false`, останавливает цепочку колбэков
     // и прерывает выполнение колбэка события
@@ -753,8 +753,8 @@ function addEvent(element, event, callback) {
       output = previousEventCallBack(e);
       if(output === false) return false;
     }
-  }
-};
+  };
+}
 
 // Теперь мы можем изменить наши критерии валидации
 // Поскольку мы не полагаемся на CSS-псевдокласс, для поля email

@@ -117,75 +117,7 @@ flex-grow: unset;
 
 <h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte Básico</td>
-   <td>{{CompatGeckoDesktop("18.0")}}<sup>[1]</sup></td>
-   <td>21.0{{property_prefix("-webkit")}}</td>
-   <td>11</td>
-   <td>12.10</td>
-   <td>6.1{{property_prefix("-webkit")}}</td>
-  </tr>
-  <tr>
-   <td>&lt; 0 animate</td>
-   <td>{{CompatGeckoDesktop("32.0")}}<sup>[2]</sup></td>
-   <td>49.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte Básico</td>
-   <td>{{CompatGeckoMobile("18.0")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>12.10</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>&lt; 0 animate</td>
-   <td>{{CompatGeckoDesktop("32.0")}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Firefox soporta sólo Caja flexible de línea simple hasta Firefox 27. Para activar el soporte de caja flexible para Firefox 18 y 19, el usuario tiene que cambiar en preferencias about:config el <code>layout.css.flexbox.enabled</code> en <code>true</code>.</p>
-
-<p>Además del soporte sin prefijo, Gecko 48.0 {{geckoRelease("48.0")}} añade soporte para un prefijo <code>-webkit</code> en versión porpietaria por razones compatibilidad web bajo la preferencia <code>layout.css.prefixes.webkit</code>, por defecto en <code>false</code>. Desde Gecko 49.0 {{geckoRelease("49.0")}} la preferencia por defecto está en <code>true</code>.</p>
-
-<p>[2] Antes de Firefox 32, Gecko no era capaz de animar los valores de inicio o parada en 0<code>(<a href="https://drafts.csswg.org/css-flexbox-1/#resolve-flexible-lengths">Spec</a>, <a href="https://jsbin.com/zacifexuke/edit?html,css,output">Demo</a>)</code>.</p>
+{{Compat("css.properties.flex-grow")}}
 
 <h2 id="Ver_también">Ver también</h2>
 

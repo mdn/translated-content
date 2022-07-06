@@ -94,7 +94,7 @@ second.onchange = function() {
 
 <div class="note"><strong>注</strong>: メインのスクリプトスレッドで <code>onmessage</code> および <code>postMessage()</code> を使用するときは <code>Worker</code> オブジェクトにぶら下げなければなりませんが、ワーカー内ではそのようにする必要はありません。これは、ワーカー内ではそれ自身が実質的にグローバルスコープであるためです。</div>
 
-<div class="note"><strong>注</strong>: メッセージをメインスレッドとワーカーの間でやりとりするとき、共有されるのではなく、コピーまたは「転送」 (移動) されます。詳しい解説は、{{anch("Transferring data to and from workers further details", "ワーカーとの間のデータ転送の詳細")}}をご覧ください。</div>
+<div class="note"><strong>注</strong>: メッセージをメインスレッドとワーカーの間でやりとりするとき、共有されるのではなく、コピーまたは「転送」 (移動) されます。詳しい解説は、<a href="#transferring_data_to_and_from_workers_further_details">ワーカーとの間のデータ転送の詳細</a>をご覧ください。</div>
 
 <h3 id="Terminating_a_worker">ワーカーの終了</h3>
 
@@ -213,7 +213,7 @@ importScripts('//example.com/hello.js'); /* 他のオリジンのスクリプト
 
 <pre class="brush: plain">Content-Security-Policy: script-src 'self'</pre>
 
-<p>特に、これは <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code> を使用したスクリプトを防ぎます。しかし、スクリプトがワーカーを構築した場合、ワーカーのコンテキストで実行中のコードは <code>eval()</code> を使用することができます。</p>
+<p>特に、これは <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code> を使用したスクリプトを防ぎます。しかし、スクリプトがワーカーを構築した場合、ワーカーのコンテキストで実行中のコードは <code>eval()</code> を使用することができます。</p>
 
 <p>ワーカーのコンテンツセキュリティポリシーを指定するには、ワーカースクリプト自身が配信されたリクエストの <a href="/ja/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</a> レスポンスヘッダーで設定してください。</p>
 

@@ -16,7 +16,7 @@ translation_of: Web/API/WebGLRenderingContext/cullFace
 
 <dl>
  <dt><code>mode</code></dt>
- <dd>{{domxref("GLenum")}} 指定适合进行剔除的面是正面还是背面。默认值是 <code>gl.BACK</code>. 可能的值有:
+ <dd>{{domxref("GLenum")}} 指定适合进行剔除的面是正面还是背面。默认值是 <code>gl.BACK</code>. 可能的值有：
  <ul>
   <li><code>gl.FRONT</code></li>
   <li><code>gl.BACK</code></li>
@@ -31,7 +31,7 @@ translation_of: Web/API/WebGLRenderingContext/cullFace
 
 <h2 id="示例">示例</h2>
 
-<p>多边形剔除功能默认不开启。 想要开启这个功能, 使用{{domxref("WebGLRenderingContext.enable", "enable()")}} 和 {{domxref("WebGLRenderingContext.disable", "disable()")}} 方法，传入参数<code>gl.CULL_FACE</code>.</p>
+<p>多边形剔除功能默认不开启。 想要开启这个功能，使用{{domxref("WebGLRenderingContext.enable", "enable()")}} 和 {{domxref("WebGLRenderingContext.disable", "disable()")}} 方法，传入参数<code>gl.CULL_FACE</code>.</p>
 
 <pre class="brush: js notranslate">gl.enable(gl.CULL_FACE);
 gl.cullFace(gl.FRONT_AND_BACK);

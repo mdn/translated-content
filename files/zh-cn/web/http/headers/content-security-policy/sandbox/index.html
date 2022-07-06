@@ -3,8 +3,8 @@ title: 'CSP: sandbox'
 slug: Web/HTTP/Headers/Content-Security-Policy/sandbox
 tags:
   - CSP
-  - XSS防御
-  - http头
+  - XSS 防御
+  - http 头
   - 安全
 translation_of: Web/HTTP/Headers/Content-Security-Policy/sandbox
 ---
@@ -28,38 +28,38 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/sandbox
  </tbody>
 </table>
 
-<h2 id="句法"><font><font>句法</font></font></h2>
+<h2 id="句法">句法</h2>
 
 <pre class="syntaxbox">Content-Security-Policy: sandbox;
 Content-Security-Policy: sandbox &lt;value&gt;;
 </pre>
 
-<p><code>&lt;value&gt;</code><font><font>可以选择是以下值之一：</font></font></p>
+<p><code>&lt;value&gt;</code>可以选择是以下值之一：</p>
 
 <dl>
  <dt><code>allow-forms</code></dt>
- <dd><font><font>允许嵌入式浏览上下文提交表单。</font><font>如果未使用此关键字，则不允许此操作。</font></font></dd>
+ <dd>允许嵌入式浏览上下文提交表单。如果未使用此关键字，则不允许此操作。</dd>
  <dt><code>allow-modals</code></dt>
- <dd><font><font>允许嵌入式浏览上下文打开模态窗口。</font></font></dd>
+ <dd>允许嵌入式浏览上下文打开模态窗口。</dd>
  <dt><code>allow-orientation-lock</code></dt>
  <dd>允许嵌入式浏览上下文禁用锁定屏幕方向的功能。</dd>
  <dt><code>allow-pointer-lock</code></dt>
- <dd><font><font>允许嵌入式浏览上下文使用</font></font><a href="https://developer.mozilla.org/en-US/docs/WebAPI/Pointer_Lock"><font><font>Pointer Lock API</font></font></a><font><font>。</font></font></dd>
+ <dd>允许嵌入式浏览上下文使用<a href="https://developer.mozilla.org/en-US/docs/WebAPI/Pointer_Lock">Pointer Lock API</a>。</dd>
  <dt><code>allow-popups</code></dt>
- <dd><font><font>允许弹出窗口（像</font></font><code>window.open</code><font><font>，</font></font><code>target="_blank"</code><font><font>，</font></font><code>showModalDialog</code><font><font>）。</font><font>如果未使用此关键字，则该功能将无提示失败。</font></font></dd>
+ <dd>允许弹出窗口（像<code>window.open</code>，<code>target="_blank"</code>，<code>showModalDialog</code>）。如果未使用此关键字，则该功能将无提示失败。</dd>
  <dt><code>allow-popups-to-escape-sandbox</code></dt>
- <dd><font>允许沙盒文档打开新窗口而不强制沙盒标记。</font><font>例如，这将允许安全地沙箱化第三方广告，而不会对登陆页面施加相同的限制。</font></dd>
+ <dd>允许沙盒文档打开新窗口而不强制沙盒标记。例如，这将允许安全地沙箱化第三方广告，而不会对登陆页面施加相同的限制。</dd>
  <dt><code>allow-presentation</code></dt>
- <dd><font><font>允许嵌入器控制iframe是否可以启动演示会话。</font></font></dd>
+ <dd>允许嵌入器控制 iframe 是否可以启动演示会话。</dd>
  <dt><code>allow-same-origin</code></dt>
- <dd><font>允许将内容视为来自其正常来源。</font><font>如果未使用此关键字，则嵌入的内容将被视为来自唯一来源。</font></dd>
+ <dd>允许将内容视为来自其正常来源。如果未使用此关键字，则嵌入的内容将被视为来自唯一来源。</dd>
  <dt><code>allow-scripts</code></dt>
- <dd><font>允许嵌入式浏览上下文运行脚本（但不创建弹出窗口）。</font><font>如果未使用此关键字，则不允许此操作。</font></dd>
+ <dd>允许嵌入式浏览上下文运行脚本（但不创建弹出窗口）。如果未使用此关键字，则不允许此操作。</dd>
  <dt><code>allow-top-navigation</code></dt>
- <dd><font>允许嵌入式浏览上下文将内容导航（加载）到顶级浏览上下文。</font><font>如果未使用此关键字，则不允许此操作。</font></dd>
+ <dd>允许嵌入式浏览上下文将内容导航（加载）到顶级浏览上下文。如果未使用此关键字，则不允许此操作。</dd>
 </dl>
 
-<h2 id="例子"><font><font>例子</font></font></h2>
+<h2 id="例子">例子</h2>
 
 <pre class="brush: bash">Content-Security-Policy: sandbox allow-scripts;</pre>
 
@@ -85,7 +85,7 @@ Content-Security-Policy: sandbox &lt;value&gt;;
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性"><font><font>浏览器兼容性</font></font></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("http.headers.csp.sandbox")}}</p>
 

@@ -5,7 +5,7 @@ translation_of: Web/API/Resize_Observer_API
 ---
 <p>{{DefaultAPISidebar("Resize Observer API")}}</p>
 
-<p>Resize Observer API提供了一种高性能的机制，通过该机制，代码可以监视元素的大小更改，并且每次大小更改时都会向观察者传递通知。</p>
+<p>Resize Observer API 提供了一种高性能的机制，通过该机制，代码可以监视元素的大小更改，并且每次大小更改时都会向观察者传递通知。</p>
 
 <h2 id="概念和使用">概念和使用</h2>
 
@@ -17,7 +17,7 @@ translation_of: Web/API/Resize_Observer_API
 
 <p>这样的解决方案仅适用于有限的场景，对性能不利（不断调用上述方法会导致性能严重下降），并且在不更改浏览器窗口大小的情况下通常不起作用。</p>
 
-<p>Resize Observer API提供了一种解决此类问题的解决方案，此外，它还使您能够轻松观察和响应元素内容或边框的大小变化，并以高效的方式做出响应。 它为Web平台中经常讨论的缺少<a href="https://www.xanthir.com/b4PR0">element queries</a> 提供了JavaScript解决方案。</p>
+<p>Resize Observer API 提供了一种解决此类问题的解决方案，此外，它还使您能够轻松观察和响应元素内容或边框的大小变化，并以高效的方式做出响应。 它为 Web 平台中经常讨论的缺少<a href="https://www.xanthir.com/b4PR0">element queries</a> 提供了 JavaScript 解决方案。</p>
 
 <p>用法很简单，并且与其他观察者（例如 <a href="/en-US/docs/Web/API/PerformanceObserver">Performance Observer</a> 或者 <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer</a> )— 几乎相同，您可以使用 <code><a href="/en-US/docs/Web/API/ResizeObserver/ResizeObserver">ResizeObserver()</a></code>构造函数创建一个新的{{domxref("ResizeObserver")}} ，然后使用 {{domxref("ResizeObserver.observe()")}}使其寻找特定元素大小的更改。 每次更改大小时，构造函数中设置的回调函数便会运行，从而提供对新维度的访问权限，并允许您根据需要执行任何操作。</p>
 
@@ -32,11 +32,11 @@ translation_of: Web/API/Resize_Observer_API
 
 <h2 id="例子">例子</h2>
 
-<p>您可以在我们的GitHub存储库中找到几个简单的示例：</p>
+<p>您可以在我们的 GitHub 存储库中找到几个简单的示例：</p>
 
 <ul>
  <li><a href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-border-radius.html">resize-observer-border-radius.html</a> (<a href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-border-radius.html">源码</a>): 一个带有绿色框的简单示例，其大小为视口大小的百分比。更改视口大小时，框的圆角将根据框的大小成比例地变化。 我们可以通过 {{cssxref("border-radius")}} 来百分比来实现，但这很快会导致椭圆形的角看起来很丑陋，而上述解决方案为您提供了随盒子大小缩放的漂亮的角形正方形。</li>
- <li><a href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html">resize-observer-text.html</a> (<a href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html">源码</a>): 这里我们使用resize observer来改变 {{cssxref("font-size")}} ，标题和段落的值随着滑块值的改变而改变，导致包含的&lt;div&gt;改变宽度。 这表明您可以响应元素大小的更改，即使它们与视口无关。</li>
+ <li><a href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html">resize-observer-text.html</a> (<a href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html">源码</a>): 这里我们使用 resize observer 来改变 {{cssxref("font-size")}} ，标题和段落的值随着滑块值的改变而改变，导致包含的&lt;div&gt;改变宽度。 这表明您可以响应元素大小的更改，即使它们与视口无关。</li>
 </ul>
 
 <p>代码通常将遵循这种模式 (取自 resize-observer-border-radius.html):</p>
@@ -74,7 +74,7 @@ resizeObserver.observe(document.querySelector('div'));</pre>
 
 <h2 id="浏览器支持情况">浏览器支持情况</h2>
 
-<p>此页面中的兼容性表是根据结构化数据生成的。如果你想贡献数据，请到 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 提PR。</p>
+<p>此页面中的兼容性表是根据结构化数据生成的。如果你想贡献数据，请到 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 提 PR。</p>
 
 <p>{{Compat("api.ResizeObserver")}}</p>
 

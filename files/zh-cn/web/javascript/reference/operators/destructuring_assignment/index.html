@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p><strong>解构赋值</strong>语法是一种 Javascript 表达式。通过<strong>解构赋值, </strong>可以将属性/值从对象/数组中取出,赋值给其他变量。</p>
+<p><strong>解构赋值</strong>语法是一种 Javascript 表达式。通过<strong>解构赋值，</strong>可以将属性/值从对象/数组中取出，赋值给其他变量。</p>
 
 <p>{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html")}}</p>
 
@@ -94,7 +94,7 @@ console.log(b); // 7</pre>
 
 <p>在一个解构表达式中可以交换两个变量的值。</p>
 
-<p>没有解构赋值的情况下，交换两个变量需要一个临时变量（或者用低级语言中的<a class="external" href="http://en.wikipedia.org/wiki/XOR_swap">XOR-swap技巧</a>）。</p>
+<p>没有解构赋值的情况下，交换两个变量需要一个临时变量（或者用低级语言中的<a class="external" href="http://en.wikipedia.org/wiki/XOR_swap">XOR-swap 技巧</a>）。</p>
 
 <pre class="brush: js">var a = 1;
 var b = 3;
@@ -188,7 +188,7 @@ console.log(q); // true
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>：赋值语句周围的圆括号 <code>( ... )</code> 在使用对象字面量无声明解构赋值时是必须的。</p>
+<p><strong>备注：</strong>赋值语句周围的圆括号 <code>( ... )</code> 在使用对象字面量无声明解构赋值时是必须的。</p>
 
 <p><code>{a, b} = {a: 1, b: 2}</code> 不是有效的独立语法，因为左边的 <code>{a, b}</code> 被认为是一个块而不是对象字面量。</p>
 
@@ -259,7 +259,7 @@ drawES2015Chart({
 });</pre>
 
 <div class="note">
-<p>在上面的 <strong><code>drawES2015Chart</code></strong> 的函数签名中，解构的左手边被分配给右手边的空对象字面值：<code>{size = 'big', cords = {x: 0, y: 0}, radius = 25} = {}</code>。你也可以在没有右侧分配的情况下编写函数。但是，如果你忽略了右边的赋值，那么函数会在被调用的时候查找至少一个被提供的参数，而在当前的形式下，你可以直接调用 <code><strong>drawES2015Chart()</strong></code> 而不提供任何参数。如果你希望能够在不提供任何参数的情况下调用该函数，则当前的设计非常有用，而另一种方法在您确保将对象传递给函数时非常有用。</p>
+<p><strong>备注：</strong>在上面的 <strong><code>drawES2015Chart</code></strong> 的函数签名中，解构的左手边被分配给右手边的空对象字面值：<code>{size = 'big', cords = {x: 0, y: 0}, radius = 25} = {}</code>。你也可以在没有右侧分配的情况下编写函数。但是，如果你忽略了右边的赋值，那么函数会在被调用的时候查找至少一个被提供的参数，而在当前的形式下，你可以直接调用 <code><strong>drawES2015Chart()</strong></code> 而不提供任何参数。如果你希望能够在不提供任何参数的情况下调用该函数，则当前的设计非常有用，而另一种方法在您确保将对象传递给函数时非常有用。</p>
 </div>
 
 <h3 id="解构嵌套对象和数组">解构嵌套对象和数组</h3>
@@ -342,7 +342,7 @@ var user = {
 console.log("userId: " + userId(user)); // "userId: 42"
 whois(user); // "jdoe is John"</pre>
 
-<p>这段代码从user对象中提取并输出<code>id<font face="Open Sans, Arial, sans-serif">、</font></code><code>displayName</code> 和 <code>firstName</code>。</p>
+<p>这段代码从 user 对象中提取并输出<code>id、</code><code>displayName</code> 和 <code>firstName</code>。</p>
 
 <h3 id="对象属性计算名和解构">对象属性计算名和解构</h3>
 
@@ -365,12 +365,12 @@ rest; // { c: 30, d: 40 }</pre>
 
 <h3 id="无效的_JavaScript_标识符作为属性名称">无效的 JavaScript 标识符作为属性名称</h3>
 
-<p>通过提供有效的替代标识符，解构可以与不是有效的JavaScript<a href="/zh-CN/docs/Glossary/Identifier">标识符</a>的属性名称一起使用。</p>
+<p>通过提供有效的替代标识符，解构可以与不是有效的 JavaScript<a href="/zh-CN/docs/Glossary/Identifier">标识符</a>的属性名称一起使用。</p>
 
 <pre class="brush: js">const foo = { 'fizz-buzz': true };
 const { 'fizz-buzz': fizzBuzz } = foo;
 
-console.log(fizzBuzz); // "true"
+console.log(fizzBuzz); // true
 </pre>
 
 <h3 id="解构对象时会查找原型链（如果属性不在对象自身，将从原型链中查找）">解构对象时会查找原型链（如果属性不在对象自身，将从原型链中查找）</h3>

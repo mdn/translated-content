@@ -13,33 +13,33 @@ translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-bitwise-not.html")}}</div>
 
-<div></div>
+
 
 
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>~a</var></code>
+<pre class="syntaxbox"><code><var>~a</var></code>
 </pre>
 
 <h2 id="描述">描述</h2>
 
-<p>操作数被转换为32位二进制表示（0和1）。超过32位的数字将丢弃其最高有效位。如下例子中，超过32位的整数转换为32位整数：</p>
+<p>操作数被转换为 32 位二进制表示（0 和 1）。超过 32 位的数字将丢弃其最高有效位。如下例子中，超过 32 位的整数转换为 32 位整数：</p>
 
-<pre class="brush: js notranslate">Before: 11100110111110100000000000000110000000000001
+<pre class="brush: js">Before: 11100110111110100000000000000110000000000001
 After:              10100000000000000110000000000001</pre>
 
 <p>第一个操作数中的每个位都与第二个操作数中的相应位配对：第一位到第一位，第二位到第二位，依此类推。</p>
 
 <p>将运算符应用于每对位，然后按位构造结果。</p>
 
-<p>非运算的真值表:</p>
+<p>非运算的真值表：</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th class="header" scope="col">a</th>
-   <th class="header" scope="col">NOT a</th>
+   <th scope="col">a</th>
+   <th scope="col">NOT a</th>
   </tr>
  </thead>
  <tbody>
@@ -54,22 +54,22 @@ After:              10100000000000000110000000000001</pre>
  </tbody>
 </table>
 
-<pre class="brush: js notranslate"> 9 (base 10) = 00000000000000000000000000001001 (base 2)
+<pre class="brush: js"> 9 (base 10) = 00000000000000000000000000001001 (base 2)
                --------------------------------
 ~9 (base 10) = 11111111111111111111111111110110 (base 2) = -10 (base 10)
 </pre>
 
-<p>按位非运算时，任何数字<code>x<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">的运算结果都是</span></font></code><code>-(x + 1)</code>。例如，<code>〜-5</code>运算结果为<code>4</code>。</p>
+<p>按位非运算时，任何数字 <code>x</code> 的运算结果都是 <code>-(x + 1)</code>。例如，<code>〜-5</code> 运算结果为 <code>4</code>。</p>
 
-<p>Note that due to using 32-bit representation for numbers both <code>~-1</code> and <code>~4294967295</code> (2<sup>32</sup>-1) results in <code>0</code>.</p>
+<p>Note that due to using 32-bit representation for numbers both <code>~-1</code> and <code>~4294967295</code> (2^32 - 1) results in <code>0</code>.</p>
 
-<p>请注意，由于对数字<code>~-1</code>和<code>~4294967295</code> (2<sup>32</sup>-1) 使用32位表示形式，结果均为0。</p>
+<p>请注意，由于对数字<code>~-1</code>和<code>~4294967295</code> (2^32 - 1) 使用 32 位表示形式，结果均为 0。</p>
 
 <h2 id="例子">例子</h2>
 
 <h3 id="使用按位取反">使用按位取反</h3>
 
-<pre class="brush: js notranslate">~0;  // -1
+<pre class="brush: js">~0;  // -1
 ~-1; // 0
 ~1;  // -2
 </pre>

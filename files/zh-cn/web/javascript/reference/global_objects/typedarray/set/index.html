@@ -9,19 +9,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 
 <h2 id="语法">语法</h2>
 
-<pre class="notranslate"><var>typedarray</var>.set(<em>array</em>[, <em>offset</em>])
+<pre><var>typedarray</var>.set(<em>array</em>[, <em>offset</em>])
 <em>typedarray</em>.set(<em>typedarray</em>[, <em>offset</em>])</pre>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt><code>array</code></dt>
- <dd>拷贝数据的源数组，源数组的所有值都会被复制到目标数组中，除非源数组的长度加上偏移量超过目标数组的长度，而在这种情况下会抛出异常。</dd>
- <dd>参数array是源数组，指定从哪里拷贝值。源数组中的所有值都会被拷贝到目标数组中去。如果源数组的长度加上偏移值offset的结果超过目标数组的长度，则会抛出异常错误。</dd>
+ <dd>拷贝数据的源数组，源数组的所有值都会被复制到目标数组中，除非源数组的长度加上偏移量超过目标数组的长度，而在这种情况下会抛出异常。参数 array 是源数组，指定从哪里拷贝值。源数组中的所有值都会被拷贝到目标数组中去。如果源数组的长度加上偏移值 offset 的结果超过目标数组的长度，则会抛出异常错误。</dd>
  <dt><code>typedarray</code></dt>
  <dd>如果源数组是一个类型化数组（typed array），则源数组和目标数组可以共享同一个底层的{{jsxref("ArrayBuffer")}}；JavaScript 引擎会智能地将 buffer 的指定区段拷贝到目标区段中去。</dd>
  <dt><code>offset</code> {{ optional_inline() }}</dt>
- <dd>偏移量参数 offset 指定从什么地方开始使用源数组 <code>array</code> 的值进行写入操作。如果忽略该参数，则默认为0（也就是说，从目标数组的下标为0处开始，使用源数组 <code>array</code> 的值覆盖重写）。</dd>
+ <dd>偏移量参数 offset 指定从什么地方开始使用源数组 <code>array</code> 的值进行写入操作。如果忽略该参数，则默认为 0（也就是说，从目标数组的下标为 0 处开始，使用源数组 <code>array</code> 的值覆盖重写）。</dd>
 </dl>
 
 <h3 id="异常">异常</h3>
@@ -35,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 
 <h3 id="使用_set">使用 <code>set()</code></h3>
 
-<pre class="brush:js notranslate">var buffer = new ArrayBuffer(8);
+<pre class="brush:js">var buffer = new ArrayBuffer(8);
 var uint8 = new Uint8Array(buffer);
 
 uint8.set([1,2,3], 3);
@@ -55,12 +54,12 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
   <tr>
    <td>{{SpecName('Typed Array')}}</td>
    <td>{{Spec2('Typed Array')}}</td>
-   <td>ECMAScript 6中已废弃。</td>
+   <td>ECMAScript 6 中已废弃。</td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-%typedarray%.prototype.set-array-offset', 'TypedArray.prototype.set')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td>在ECMA标准中初始定义。</td>
+   <td>在 ECMA 标准中初始定义。</td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.set-array-offset', 'TypedArray.prototype.set')}}</td>
@@ -72,55 +71,7 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>浏览器</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>最低版本</td>
-   <td>7.0</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>5.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>浏览器</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>最低版本</td>
-   <td>4.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("2")}}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>4.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="另见">另见</h2>
 

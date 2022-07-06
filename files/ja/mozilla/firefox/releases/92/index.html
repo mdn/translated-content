@@ -1,0 +1,84 @@
+---
+title: Firefox 92 for developers
+slug: Mozilla/Firefox/Releases/92
+tags:
+  - '92'
+  - Firefox
+  - Mozilla
+  - Release
+---
+<p>{{FirefoxSidebar}}</p>
+
+<p class="summary">このページでは、開発者に影響する Firefox 92 の変更点をまとめています。Firefox 92 は 2021 年 9 月 7 日にリリースされました。</p>
+
+<div class="note notecard">
+  <h4>補足</h4>
+  <p>Mozilla Hacks の <a href="https://hacks.mozilla.org/2021/09/time-for-a-review-of-firefox-92/">Time for a review of Firefox 92</a> もご覧ください。</p>
+</div>
+
+<h2 id="Changes_for_web_developers">ウェブ開発者向けの変更点一覧</h2>
+
+<h3 id="HTML">HTML</h3>
+
+<p>変更なし。</p>
+
+<h3 id="CSS">CSS</h3>
+
+<ul>
+  <li>{{cssxref("break-inside")}} プロパティの <code>avoid-page</code> および <code>avoid-column</code> キーワードをサポートしました ({{bug(1722945)}})。</li>
+  <li>{{cssxref("font-size-adjust")}} プロパティの二値構文をサポートしました ({{bug(1720131)}})。</li>
+  <li>{{cssxref("@font-face/size-adjust")}} ディスクリプターをサポートしました ({{bug(1720131)}})。</li>
+  <li>{{cssxref("accent-color")}} プロパティをサポートしました ({{bug(1722031)}})。</li>
+  <li>{{cssxref("font-family")}} プロパティの値 <code>system-ui</code> をサポートしました ({{bug(1226042)}})。</li>
+</ul>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<ul>
+  <li>{{jsxref("Object.hasOwn()")}} を、プロパティがオブジェクトで定義されたものか継承されたものかを確認するために使用できるようになりました ({{bug(1721149)}})。</li>
+</ul>
+
+<h3 id="HTTP">HTTP</h3>
+
+<ul>
+  <li>{{Glossary("HTTPS RR")}} が使用可能であるときに、Firefox は自動的に HTTP リクエストを HTTPS にアップグレードします。また、HTTPS コネクションを確立するプロセスを最適化するために、<em>HTTPS RR</em> で提供される情報を使用します。これは概念的に、{{HTTPHeader("Alt-Svc")}} ヘッダーを使用することに似ています ({{bug(1721132)}})。</li>
+</ul>
+
+<h3 id="APIs">API</h3>
+
+<ul>
+  <li>カスタム要素に <code>disabledFeatures</code> 静的プロパティを実装しました ({{bug(1723396)}})。</li>
+</ul>
+
+<h4 id="DOM">DOM</h4>
+
+<ul>
+  <li><a href="/ja/docs/Web/API/HTMLSlotElement">Imperative Slotting API</a> (<a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow Dom API</a> の一部) を実装しました ({{bug(1705141)}})。</li>
+  <li>{{HTMLElement("input")}} および {{HTMLElement("textarea")}} でテキストの選択が変更されたことを、それぞれ {{domxref("HTMLInputElement.selectionchange_event", "HTMLInputElement")}} および {{domxref("HTMLTextAreaElement/selectionchange_event", "HTMLTextAreaElement")}} の <code>selectionchange</code> イベントをリッスンすることで監視できるようになりました ({{bug(1648944)}})。</li>
+</ul>
+
+<h4 id="Media_WebRTC_and_Web_Audio">Media、WebRTC、Web Audio</h4>
+
+<ul>
+  <li>スピーカーやヘッドホンのようなサウンド出力デバイスへのアクセスが、<a href="speaker-selection">speaker-selection</a> 機能ポリシーで保護されるようになりました ({{bug(1577199)}})。</li>
+</ul>
+
+
+<h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+
+<ul>
+  <li><code>webSocketUrl</code> 特性のサポートが向上しました。<code>true</code> が渡されて、かつ BiDi がサポートされている場合に、WebDriver BiDi の websocket URL を返すようになりました ({{bug(1692984)}})。</li>
+</ul>
+
+
+<h2 id="Changes_for_add-on_developers">アドオン開発者向けの変更点</h2>
+
+<ul>
+  <li>{{WebExtAPIRef('downloads.download')}}、{{WebExtAPIRef('downloads.DownloadQuery')}}
+{{WebExtAPIRef('downloads.DownloadItem')}} で <code>cookieStoreId</code> をサポートしました。{{WebExtAPIRef('downloads.DownloadQuery')}} および {{WebExtAPIRef('downloads.DownloadItem')}} 型に加えて、{{WebExtAPIRef('downloads.search')}} および {{WebExtAPIRef('downloads.erase')}} でのサポートも提供します。ブラウザー拡張機能が、Container タブ (<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">contextual identities</a>) のような特定の Cookie ストアとダウンロードを関連付けできるようになりました ({{bug(1669566)}})。</li>
+</ul>
+
+
+<h2 id="Older_versions">過去のバージョン</h2>
+
+<p>{{Firefox_for_developers(91)}}</p>

@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
  <dt>traps</dt>
  <dd>프로퍼티에 접근할 수 있는 메소드. 운영체제에서 trap 이라는 컨셉과 유사하다.</dd>
  <dt>target</dt>
- <dd>proxy가 가상화하는 실제 객체. 이것은 proxy를 위한  backend 저장소로 사용된다.   Invariants (semantics that remain unchanged) regarding object non-extensibility or non-configurable properties are verified against the target.</dd>
+ <dd>proxy가 가상화하는 실제 객체. 이것은 proxy를 위한  backend 저장소로 사용된다. Invariants (semantics that remain unchanged) regarding object non-extensibility or non-configurable properties are verified against the target.</dd>
 </dl>
 
 <h2 id="구문">구문</h2>
@@ -32,9 +32,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 
 <dl>
  <dt><code>target</code></dt>
- <dd>proxy와 함께 감싸진 target  객체 (native array, function, 다른 proxy을 포함한 객체)</dd>
+ <dd>proxy와 함께 감싸진 target 객체 (native array, function, 다른 proxy을 포함한 객체)</dd>
  <dt><code>handler</code></dt>
- <dd>프로퍼티들이 function 인  객체이다. 동작이 수행될 때, handler는 proxy의 행동을 정의한다.</dd>
+ <dd>프로퍼티들이 function인 객체이다. 동작이 수행될 때, handler는 proxy의 행동을 정의한다.</dd>
 </dl>
 
 <h2 id="메서드">메서드</h2>
@@ -44,17 +44,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
  <dd>폐기할 수 있는(revocable) Proxy 객체를 생성.</dd>
 </dl>
 
-<h2 id="Methods_of_the_handler_object">Methods of the handler object</h2>
-
-<p>handler객체는 <code>Proxy를 위한 trap들을 포함하고 있는 </code>placeholder 객체이다.</p>
-
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler', 'Methods') }}</div>
-
 <h2 id="예제">예제</h2>
 
 <h3 id="Basic_example">Basic example</h3>
 
-<p>프로퍼티 이름이 객체에 없을때, 기본값을 숫자 37로 리턴받는 간단한 예제이다. 이것은 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get"><code>get</code></a> handler 를 사용하였다. </p>
+<p>프로퍼티 이름이 객체에 없을때, 기본값을 숫자 37로 리턴받는 간단한 예제이다. 이것은 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get"><code>get</code></a> handler를 사용하였다.</p>
 
 <pre class="brush: js">var handler = {
     get: function(target, name){
@@ -86,7 +80,7 @@ console.log(target.a); // 37. 동작이 제대로 전달됨
 
 <h3 id="Validation_(검증)">Validation (검증)</h3>
 
-<p>Proxy에서, 객체에 전달된 값을 쉽게 검증할 수 있다. 이 예제는 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set"><code>set</code></a> handler 를 사용하였다.</p>
+<p>Proxy에서, 객체에 전달된 값을 쉽게 검증할 수 있다. 이 예제는 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set"><code>set</code></a> handler를 사용하였다.</p>
 
 <pre class="brush: js">let validator = {
   set: function(obj, prop, value) {
@@ -114,7 +108,7 @@ person.age = 300; // Throws an exception
 
 <h3 id="Extending_constructor_(생성자_확장)">Extending constructor (생성자 확장)</h3>
 
-<p>function proxy는 쉽게 새로운 생성자와 함께 생성자를 확장할 수 있다. 이 예제에서는 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct">construct</a> 와</code> <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply"><code>apply</code></a> handlers 를 사용하였다.</p>
+<p>function proxy는 쉽게 새로운 생성자와 함께 생성자를 확장할 수 있다. 이 예제에서는 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct">construct</a></code>와 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply"><code>apply</code></a> handlers를 사용하였다.</p>
 
 <pre class="brush: js">function extend(sup,base) {
   var descriptor = Object.getOwnPropertyDescriptor(
@@ -155,7 +149,7 @@ console.log(Peter.age);  // 13</pre>
 
 <h3 id="Manipulating_DOM_nodes_(DOM_nodes_조작)">Manipulating DOM nodes (DOM nodes 조작)</h3>
 
-<p>가끔씩, 두 개의 다른 element의 속성이나 클래스 이름을 바꾸고 싶을 것이다. 아래는 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set"><code>set</code></a> handler 를 사용하였다.</p>
+<p>가끔씩, 두 개의 다른 element의 속성이나 클래스 이름을 바꾸고 싶을 것이다. 아래는 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set"><code>set</code></a> handler를 사용하였다.</p>
 
 <pre class="brush: js">let view = new Proxy({
   selected: null
@@ -188,7 +182,7 @@ console.log(i2.getAttribute('aria-selected')); // 'true'
 
 <h3 id="Value_correction_and_an_extra_property_(값_정정과_추가적인_property)">Value correction and an extra property (값 정정과 추가적인 property)</h3>
 
-<p><code>products</code> 라는 proxy 객체는 전달된 값을 평가하고, 필요할 때 배열로 변환한다. 이 객체는 <code>latestBrowser</code> 라는 추가적인 property를 지원하는데, getter와 setter 모두 지원한다. </p>
+<p><code>products</code>라는 proxy 객체는 전달된 값을 평가하고, 필요할 때 배열로 변환한다. 이 객체는 <code>latestBrowser</code>라는 추가적인 property를 지원하는데, getter와 setter 모두 지원한다.</p>
 
 <pre class="brush: js">let products = new Proxy({
   browsers: ['Internet Explorer', 'Netscape']
@@ -231,7 +225,7 @@ console.log(products.latestBrowser); // 'Chrome'
 
 <h3 id="Finding_an_array_item_object_by_its_property_(property로_배열의_객체를_찾기)">Finding an array item object by its property (property로 배열의 객체를 찾기)</h3>
 
-<p>proxy 는 유용한 특성을 가진 배열로 확장할 것이다. <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties">Object.defineProperties</a>를 사용하지 않고, </code>유연하게 property들을 유연하게 "정의"할 수 있다. 이 예제는 테이블의 cell을 이용해서 row(열)을 찾는데 적용할 수 있다. 이 경우, target은 <code><a href="/en-US/docs/DOM/table.rows">table.rows</a>가 될 것이다.</code></p>
+<p>proxy 는 유용한 특성을 가진 배열로 확장할 것이다. <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties">Object.defineProperties</a></code>를 사용하지 않고, 유연하게 property들을 유연하게 "정의"할 수 있다. 이 예제는 테이블의 cell을 이용해서 row(열)을 찾는데 적용할 수 있다. 이 경우, target은 <code><a href="/en-US/docs/DOM/table.rows">table.rows</a></code>가 될 것이다.</p>
 
 <pre class="brush: js">let products = new Proxy([
   { name: 'Firefox', type: 'browser' },
@@ -292,7 +286,7 @@ console.log(products.number); // 3
 
 <h3 id="A_complete_traps_list_example_(완벽한_traps_리스트_예제)">A complete <code>traps</code> list example (완벽한 <code>traps</code> 리스트 예제)</h3>
 
-<p>이제 완벽한 traps 리스트를 생성하기 위해서, <em>non native</em> 객체를 프록시화 할 것이다. 이것은 특히, 다음과 같은 동작에 적합하다 : <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie/Simple_document.cookie_framework" title="https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support">the "little framework" published on the <code>document.cookie</code> page</a> 에 의해 생성된 <code>docCookies</code> 는 글로벌 객체</p>
+<p>이제 완벽한 <code>traps</code> 리스트를 생성하기 위해서, 이러한 유형의 작업에 특히 적합한 <em>non native</em> 객체를 프록시화 할 것이다. [a simple cookie framework](https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework)에 의해 생성된 전역 객체 <code>docCookies</code>이다.</p>
 
 <pre class="brush: js">/*
   var docCookies = ... get the "docCookies" object here:

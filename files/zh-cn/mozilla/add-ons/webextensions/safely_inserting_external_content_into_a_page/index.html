@@ -7,21 +7,21 @@ translation_of: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_
 
 <p>很多时候你需要从外部资源引入内容到你的插件。但是，源可能被嵌入了恶意的源代码，这些恶意的源代码可能由源的开发者或者恶意的第三方所编写。</p>
 
-<p>以RSS读取器为例子。你不知道你的插件将会打开什么RSS源也无法控制那些RSS源的内容。所以，可能用户可能订阅到一个RSS源里面包含了带有恶意脚本的标题。可能就是简单的JavaScript代码标签&lt;script&gt;&lt;/script&gt;。如果你在提取标题的时候，当作一般文本添加到一个页面的DOM，用户可能加载未知的脚本。因此，需要注意避免直接把一般文本加载为HTML。</p>
+<p>以 RSS 读取器为例子。你不知道你的插件将会打开什么 RSS 源也无法控制那些 RSS 源的内容。所以，可能用户可能订阅到一个 RSS 源里面包含了带有恶意脚本的标题。可能就是简单的 JavaScript 代码标签&lt;script&gt;&lt;/script&gt;。如果你在提取标题的时候，当作一般文本添加到一个页面的 DOM，用户可能加载未知的脚本。因此，需要注意避免直接把一般文本加载为 HTML。</p>
 
-<p>你还需要记住扩展有授权的上下文，例如后台的脚本backgroup scrips以及内容脚本content scripts。最坏的情况里，一个内嵌的洁白你可能运行在一个或多种上下文中，导致一些提取操作。这种情况会导致用户的浏览器暴露在远程攻击下，被注入代码访问用户的重要数据，例如密码、浏览器历史或者浏览器行为等。</p>
+<p>你还需要记住扩展有授权的上下文，例如后台的脚本 backgroup scrips 以及内容脚本 content scripts。最坏的情况里，一个内嵌的洁白你可能运行在一个或多种上下文中，导致一些提取操作。这种情况会导致用户的浏览器暴露在远程攻击下，被注入代码访问用户的重要数据，例如密码、浏览器历史或者浏览器行为等。</p>
 
-<p>这篇文章说明如何安全的对待远端数据并添加到DOM。</p>
+<p>这篇文章说明如何安全的对待远端数据并添加到 DOM。</p>
 
 
 
 <h2 id="处理任意字符串">处理任意字符串</h2>
 
-<p>当处理字符串时，有很多推荐的策略来安全添加他们到页面：标准的DOM节点创建方法或jQuery。</p>
+<p>当处理字符串时，有很多推荐的策略来安全添加他们到页面：标准的 DOM 节点创建方法或 jQuery。</p>
 
 <h3 id="DOM节点创建方法函数">DOM节点创建方法/函数</h3>
 
-<p>一个轻量级的方法来插入字符串到页面是使用原生的DOM操纵方法/函数: <a href="/en-US/docs/Web/API/Document/createElement"><code>document.createElement</code></a>, <a href="/en-US/docs/Web/API/Element/setAttribute"><code>Element.setAttribute</code></a>, 以及<a href="/en-US/docs/Web/API/Node/textContent"><code>Node.textContent</code></a>. 安全的方法是分别创建节点并使用textContent属性赋值：</p>
+<p>一个轻量级的方法来插入字符串到页面是使用原生的DOM操纵方法/函数: <a href="/en-US/docs/Web/API/Document/createElement"><code>document.createElement</code></a>, <a href="/en-US/docs/Web/API/Element/setAttribute"><code>Element.setAttribute</code></a>, 以及<a href="/en-US/docs/Web/API/Node/textContent"><code>Node.textContent</code></a>. 安全的方法是分别创建节点并使用 textContent 属性赋值：</p>
 
 <pre class="brush: js example-good">var data = JSON.parse(responseText);
 var div = document.createElement("div");
@@ -29,7 +29,7 @@ div.className = data.className;
 div.textContent = "Your favorite color is now " + data.color;
 addonElement.appendChild(div);</pre>
 
-<p>这种方法安全原因是使用<code>.textContent</code> 时会自动消除 <code>data.color</code>.中的任何远程 HTML代码。</p>
+<p>这种方法安全原因是使用<code>.textContent</code> 时会自动消除 <code>data.color</code>.中的任何远程 HTML 代码。</p>
 
 <p>但是要注意，使用原生方法不能保证绝对安全，例如下面的代码：</p>
 
@@ -38,25 +38,25 @@ addonElement.innerHTML = "&lt;div class='" + data.className + "'&gt;" +
                          "Your favorite color is now " + data.color +
                          "&lt;/div&gt;";</pre>
 
-<p>在其中，Here, the contents of <code>data.className</code> 或 <code>data.color</code> 的内容可能包含HTML代码使得标签提早关闭，并插入更多的HTML内容，之后关闭另一个标签。</p>
+<p>在其中，Here, the contents of <code>data.className</code> 或 <code>data.color</code> 的内容可能包含 HTML 代码使得标签提早关闭，并插入更多的 HTML 内容，之后关闭另一个标签。</p>
 
 <p>jQuery</p>
 
-<p>当使用jQuery的方法如 <code>attr()</code> 和 <code>text()</code> ，会清洗添加到DOM的内容。所以，上面“favorite color”例子采用jQuery实现会形如：</p>
+<p>当使用 jQuery 的方法如 <code>attr()</code> 和 <code>text()</code> ，会清洗添加到 DOM 的内容。所以，上面“favorite color”例子采用 jQuery 实现会形如：</p>
 
 <pre class="brush: js example-good">var node = $("&lt;/div&gt;");
 node.addClass(data.className);
 node.text("Your favorite color is now " + data.color); </pre>
 
-<h2 id="处理HTML内容">处理HTML内容</h2>
+<h2 id="处理HTML内容">处理 HTML 内容</h2>
 
-<p>当你知道处理外部源的内容是HTML的时候，添加到页面之前净化HTML是很关键的。净化HTML的最好办法是使用HTML净化的库或者一个带有HTML净化特性的模板引擎。在这一节，我们来看一些合适的工具以及使用方法。</p>
+<p>当你知道处理外部源的内容是 HTML 的时候，添加到页面之前净化 HTML 是很关键的。净化 HTML 的最好办法是使用 HTML 净化的库或者一个带有 HTML 净化特性的模板引擎。在这一节，我们来看一些合适的工具以及使用方法。</p>
 
 <h3 id="HTML_净化">HTML 净化</h3>
 
-<p>An HTML sanitization library strips anything that could lead to script execution from HTML, so you can safely inject complete sets of HTML nodes from a remote source into your DOM. <a href="https://github.com/cure53/DOMPurify">DOMPurify</a>,是一个HTML净化的库，可以脱离任意会导致脚本执行的元素，以便安全注入远端源到HTML节点，这个库被很多不同的安全专家评估过，是很适合这种任务扩展的库。</p>
+<p>An HTML sanitization library strips anything that could lead to script execution from HTML, so you can safely inject complete sets of HTML nodes from a remote source into your DOM. <a href="https://github.com/cure53/DOMPurify">DOMPurify</a>,是一个 HTML 净化的库，可以脱离任意会导致脚本执行的元素，以便安全注入远端源到 HTML 节点，这个库被很多不同的安全专家评估过，是很适合这种任务扩展的库。</p>
 
-<p><a href="https://github.com/cure53/DOMPurify">DOMPurify</a> 有一个简约版用于生产环境，purify.min.js. 你可以使用这个版本来适配你的扩展，例如你可以这样添加:</p>
+<p><a href="https://github.com/cure53/DOMPurify">DOMPurify</a> 有一个简约版用于生产环境，purify.min.js. 你可以使用这个版本来适配你的扩展，例如你可以这样添加：</p>
 
 <pre class="brush: json">"content_scripts": [
   {
@@ -65,13 +65,13 @@ node.text("Your favorite color is now " + data.color); </pre>
   }
 ]</pre>
 
-<p>之后，在myinjectionscript.js中你可以读取外部HTML并净化，之后添加到页面的DOM中：</p>
+<p>之后，在 myinjectionscript.js 中你可以读取外部 HTML 并净化，之后添加到页面的 DOM 中：</p>
 
 <pre class="brush: js">var elem = document.createElement("div");
 var cleanHTML = DOMPurify.sanitize(externalHTML);
 elem.innerHTML = cleanHTML;</pre>
 
-<p>你可以使用任何方法添加净化后的HTML到DOM，例如jQuery’s <code>.html()</code> 方法。注意这种情况需要使用 Remember though that the <code>SAFE_FOR_JQUERY</code> 标记:</p>
+<p>你可以使用任何方法添加净化后的 HTML 到 DOM，例如 jQuery’s <code>.html()</code> 方法。注意这种情况需要使用 Remember though that the <code>SAFE_FOR_JQUERY</code> 标记：</p>
 
 <pre class="brush: js">var elem = $("&lt;div/&gt;");
 var cleanHTML = DOMPurify.sanitize(externalHTML, { SAFE_FOR_JQUERY: true });
@@ -79,11 +79,11 @@ elem.html(cleanHTML);</pre>
 
 <h3 id="模板引擎">模板引擎</h3>
 
-<p>另一个常见的模式是对一个页面创建本地HTML模板并通过远端的值来填空。这种方法被广泛应用，应该注意去避免构造函数的使用，可能会导致执行代码的注入。当模板引擎使用构造函数插入HTML到文档的时候会发生这种情况，如果用来注入原始HTML的变量是远端代码，这就属于上面介绍中的安全风险。</p>
+<p>另一个常见的模式是对一个页面创建本地 HTML 模板并通过远端的值来填空。这种方法被广泛应用，应该注意去避免构造函数的使用，可能会导致执行代码的注入。当模板引擎使用构造函数插入 HTML 到文档的时候会发生这种情况，如果用来注入原始 HTML 的变量是远端代码，这就属于上面介绍中的安全风险。</p>
 
-<p>例如，当使用<a href="https://mustache.github.io/">mustache templates</a> 你必须使用两个花括号<code>\{{variable}}</code>,来去掉任何HTML。使用三个花括号<code>\{\{{variable}}}</code> 必须避免注入原始HTML字符串到模板。</p>
+<p>例如，当使用<a href="https://mustache.github.io/">mustache templates</a> 你必须使用两个花括号<code>\{{variable}}</code>,来去掉任何 HTML。使用三个花括号<code>\{\{{variable}}}</code> 必须避免注入原始 HTML 字符串到模板。</p>
 
-<p><a href="http://handlebarsjs.com/">Handlebars</a> 工作原理也是类似, <code>\{{variable}}</code> 。同时，如果创造了Handlebars helper使用 <code>Handlebars.SafeString</code> 使用<code>Handlebars.escapeExpression()</code> 来消除任何传给helper的动态参数。<code>Handlebars.SafeString</code> 的结果被认为是安全的，当插入到双handlebars的时候就不会做消除动作。</p>
+<p><a href="http://handlebarsjs.com/">Handlebars</a> 工作原理也是类似，<code>\{{variable}}</code> 。同时，如果创造了 Handlebars helper 使用 <code>Handlebars.SafeString</code> 使用<code>Handlebars.escapeExpression()</code> 来消除任何传给 helper 的动态参数。<code>Handlebars.SafeString</code> 的结果被认为是安全的，当插入到双 handlebars 的时候就不会做消除动作。</p>
 
 <p>在其他模板系统中也有类似的构造函数，需要有同样的考虑。</p>
 

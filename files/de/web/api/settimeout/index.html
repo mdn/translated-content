@@ -1,0 +1,330 @@
+---
+title: WindowTimers.setTimeout()
+slug: Web/API/setTimeout
+translation_of: Web/API/WindowOrWorkerGlobalScope/setTimeout
+original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
+---
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p>Die Funktion <strong><code>setTimeout()</code></strong> der {{domxref("WindowOrWorkerGlobalScope")}}-Schnittstelle ruft nach der gegebenen Zeitspanne eine Funktion oder direkt angebenen Code auf.</p>
+
+<h2 id="Syntax" name="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><em>var timeoutID</em> = window.setTimeout(funktion, zeitspanne, [<em>parameter1</em>, <em>parameter2</em>, ...]);
+<em>var timeoutID</em> = window.setTimeout(<em>code</em>, zeitspanne);
+</pre>
+
+<p> </p>
+
+<h3 id="Parameter">Parameter</h3>
+
+<p> </p>
+
+<dl>
+ <dt><code>funktion</code></dt>
+ <dd>Die {{jsxref("function", "Funktion")}}, die nach <code>zeitspanne</code> Millisekunden ausgeführt werden soll.</dd>
+ <dt><code>code</code></dt>
+ <dd><code>code</code> in der alternativen Syntax ist eine Zeichenkette, die Code enthält, der nach <code>zeitspanne</code> Millisekunden ausgeführt werden soll.  <code>code</code> sollte aus den gleichen Gründen, die auch <a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval!" title="en-US/docs/Core JavaScript 1.5 Reference/Global Functions/Eval#Don't use eval!">eval()</a> zum Sicherheitsrisiko machen, <strong>nicht verwendet</strong> werden.</dd>
+ <dt><code>zeitspanne</code> {{optional_inline}}</dt>
+ <dd><code>zeitspanne</code> ist die Wartezeit in Millisekunden (ein Tausendstel einer Sekunde), nach der <code>funktion</code> bzw. <code>code</code> ausgeführt werden soll. Dieser Wert ist ein Mindestwert, die tatsächlich abgelaufene Zeit kann länger sein, siehe <a href="#gründe_für_längere_als_gegebene_wartezeiten">Gründe für längere als gegebene Wartezeiten</a> weiter unten.</dd>
+ <dt><code>parameter1, ..., parameterN</code> {{optional_inline}}</dt>
+ <dd>Diese Parameter werden an die <code>funktion</code><em> </em>oder den <code>code</code> übergeben.</dd>
+</dl>
+
+<div class="note"><strong>Anmerkung:</strong> Der Internet Explorer unterstützt bis einschließlich Version 9 die Übergabe von zusätzlichen Parametern nicht.</div>
+
+<h3 id="Rückgabewert">Rückgabewert</h3>
+
+<p><code>setTimeout()</code> gibt eine ID zurück, die den eingerichteten Zeitgeber identifiziert; um die Wartezeit abzubrechen, kann sie an {{domxref("WindowOrWorkerGlobalScope.clearTimeout","clearTimeout()")}}  übergeben werden.</p>
+
+<p>Jede ID wird von <code>setTimeout()</code> und <code>setInterval()</code> nur einmalig je Objekt (window oder Worker) verwendet.</p>
+
+<h2 id="Examples" name="Examples">Beispiel</h2>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Beispiel<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span> <span class="attr-name token">onclick</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>delayedAlert();<span class="punctuation token">"</span></span><span class="punctuation token">&gt;Zeige nach zwei Sekunden einen Alarm.</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span> <span class="attr-name token">onclick</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>clearAlert();<span class="punctuation token">"</span></span><span class="punctuation token">&gt;Alarm</span></span> vorzeitig abbrechen.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span></code></pre>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> timeoutID<span class="punctuation token">;</span>
+
+<span class="keyword token">function</span> <span class="function token">delayedAlert</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  timeoutID <span class="operator token">=</span> window<span class="punctuation token">.</span><span class="function token">setTimeout</span><span class="punctuation token">(</span>slowAlert<span class="punctuation token">,</span> <span class="number token">2000</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span>
+
+<span class="keyword token">function</span> <span class="function token">slowAlert</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  <span class="function token">alert</span><span class="punctuation token">(</span><span class="string token">'Das hat gedauert!'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span>
+
+<span class="keyword token">function</span> <span class="function token">clearAlert</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  window<span class="punctuation token">.</span><span class="function token">clearTimeout</span><span class="punctuation token">(</span>timeoutID<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span></code></pre>
+
+<h3 id="Ergebnis">Ergebnis</h3>
+
+<p>{{EmbedLiveSample('Example')}}</p>
+
+<p>Siehe auch <a href="/en-US/docs/DOM/window.clearTimeout#Example" title="en-US/docs/DOM/window.clearTimeout#Example"><code>clearTimeout()</code></a></p>
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<p>Der nachfolgende Polyfill-Code ermöglicht es, der aufzurufenden Funktion auch im Internet Explorer Parameter zu übergeben:</p>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">/*\
+|*|
+|*|  Polyfill which enables the passage of arbitrary arguments to the
+|*|  callback functions of JavaScript timers (HTML5 standard syntax).
+|*|
+|*|  https://developer.mozilla.org/en-US/docs/DOM/window.setInterval
+|*|
+|*|  Syntax:
+|*|  var timeoutID = window.setTimeout(func, delay[, param1, param2, ...]);
+|*|  var timeoutID = window.setTimeout(code, delay);
+|*|  var intervalID = window.setInterval(func, delay[, param1, param2, ...]);
+|*|  var intervalID = window.setInterval(code, delay);
+|*|
+\*/</span>
+
+<span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  <span class="function token">setTimeout</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>arg1<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="keyword token">if</span> <span class="punctuation token">(</span>arg1 <span class="operator token">===</span> <span class="string token">'test'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+      <span class="comment token">// feature test is passed, no need for polyfill</span>
+      <span class="keyword token">return</span><span class="punctuation token">;</span>
+    <span class="punctuation token">}</span>
+    <span class="keyword token">var</span> __nativeST__ <span class="operator token">=</span> window<span class="punctuation token">.</span>setTimeout<span class="punctuation token">;</span>
+    window<span class="punctuation token">.</span>setTimeout <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>vCallback<span class="punctuation token">,</span> nDelay <span class="comment token">/*, argumentToPass1, argumentToPass2, etc. */</span> <span class="punctuation token">)</span> <span class="punctuation token">{</span>
+      <span class="keyword token">var</span> aArgs <span class="operator token">=</span> Array<span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>slice<span class="punctuation token">.</span><span class="function token">call</span><span class="punctuation token">(</span>arguments<span class="punctuation token">,</span> <span class="number token">2</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+      <span class="keyword token">return</span> <span class="function token">__nativeST__</span><span class="punctuation token">(</span>vCallback <span class="keyword token">instanceof</span> <span class="class-name token">Function</span> <span class="operator token">?</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+        vCallback<span class="punctuation token">.</span><span class="function token">apply</span><span class="punctuation token">(</span><span class="keyword token">null</span><span class="punctuation token">,</span> aArgs<span class="punctuation token">)</span><span class="punctuation token">;</span>
+      <span class="punctuation token">}</span> <span class="punctuation token">:</span> vCallback<span class="punctuation token">,</span> nDelay<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="punctuation token">}</span><span class="punctuation token">;</span>
+  <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="string token">'test'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+  <span class="keyword token">var</span> interval <span class="operator token">=</span> <span class="function token">setInterval</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>arg1<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="function token">clearInterval</span><span class="punctuation token">(</span>interval<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="keyword token">if</span> <span class="punctuation token">(</span>arg1 <span class="operator token">===</span> <span class="string token">'test'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+      <span class="comment token">// feature test is passed, no need for polyfill</span>
+      <span class="keyword token">return</span><span class="punctuation token">;</span>
+    <span class="punctuation token">}</span>
+    <span class="keyword token">var</span> __nativeSI__ <span class="operator token">=</span> window<span class="punctuation token">.</span>setInterval<span class="punctuation token">;</span>
+    window<span class="punctuation token">.</span>setInterval <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>vCallback<span class="punctuation token">,</span> nDelay <span class="comment token">/*, argumentToPass1, argumentToPass2, etc. */</span> <span class="punctuation token">)</span> <span class="punctuation token">{</span>
+      <span class="keyword token">var</span> aArgs <span class="operator token">=</span> Array<span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>slice<span class="punctuation token">.</span><span class="function token">call</span><span class="punctuation token">(</span>arguments<span class="punctuation token">,</span> <span class="number token">2</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+      <span class="keyword token">return</span> <span class="function token">__nativeSI__</span><span class="punctuation token">(</span>vCallback <span class="keyword token">instanceof</span> <span class="class-name token">Function</span> <span class="operator token">?</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+        vCallback<span class="punctuation token">.</span><span class="function token">apply</span><span class="punctuation token">(</span><span class="keyword token">null</span><span class="punctuation token">,</span> aArgs<span class="punctuation token">)</span><span class="punctuation token">;</span>
+      <span class="punctuation token">}</span> <span class="punctuation token">:</span> vCallback<span class="punctuation token">,</span> nDelay<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="punctuation token">}</span><span class="punctuation token">;</span>
+  <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="string token">'test'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span></code></pre>
+
+<p>Eine andere Möglichkeit ist, die Funktion innerhalb einer anonymen Funktion aufzurufen:</p>
+
+<pre class="brush: js">setTimeout(function() {
+    funktion("eins", "zwei", "drei");
+}, 1000);
+</pre>
+
+<p>Ebenfalls kann die Funktion <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind"><code>bind()</code></a> genutzt werden:</p>
+
+<p> </p>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="function token">setTimeout</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>arg1, arg2, arg3<span class="punctuation token">)</span><span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">.</span><span class="function token">bind</span><span class="punctuation token">(</span>undefined<span class="punctuation token">,</span> "eins", "zwei", "drei"<span class="punctuation token">)</span><span class="punctuation token">,</span> <span class="number token">1000</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<p> </p>
+
+<h2 id="Das_this-Problem">Das "<code>this</code>"-Problem</h2>
+
+<p>In der an <code>setTimeout()</code> übergebenen Funktion wird <code>this</code> bei Aufruf einen falschen Wert enthalten. Dieses Problem wird detailliert in der <a href="/en-US/docs/JavaScript/Reference/Operators/this#Method_binding" title="en-US/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator#Method_binding">JavaScript-Referenz</a> beschrieben.</p>
+
+<h3 id="Erklärung">Erklärung</h3>
+
+<p>Von <code>setTimeout()</code> ausgeführter Code wird in einem anderen Kontext ausgeführt, als in dem <code>setTimeout()</code> aufgerufen wurde. <code>this</code> wird deshalb in der aufgerufenen Funktion <code>window</code> oder <code>global</code> entsprechen, nicht dem <code>this</code> des Bereichs, in dem  <code>setTimeout()</code> aufgerufen wurde. Beispiel:</p>
+
+<pre class="brush: js">myArray = ["null", "eins", "drei"];
+myArray.myMethod = function (sProperty) {
+    alert(arguments.length &gt; 0 ? this[sProperty] : this);
+};
+
+myArray.myMethod(); // Ausgabe: "null,eins,zwei"
+myArray.myMethod(1); // Ausgabe: "eins"
+setTimeout(myArray.myMethod, 1000); // Ausgabe: "[object Window]" nach 1 Sekunde
+setTimeout(myArray.myMethod, 1500, "1"); // Ausgabe: "undefined" nach 1,5 Sekunden
+// Versuchen wir, 'this' zu übergeben
+setTimeout.call(myArray, myArray.myMethod, 2000); // Fehler: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
+setTimeout.call(myArray, myArray.myMethod, 2500, 2); // Der gleiche Fehler</pre>
+
+<p>Es gibt hier keine Möglichkeit, <code>this</code> an die aufzurufende Funktion durchzureichen.</p>
+
+<h3 id="Eine_Lösungsmöglichkeit">Eine Lösungsmöglichkeit</h3>
+
+<p>Eine Möglichkeit, das Problem zu umgehen, ist es, die beiden eingebauten Funktionen <code>setTimeout()</code> und <code>setInterval()</code> durch zwei eigene zu ersetzen, die sich <a href="en-US/docs/JavaScript/Reference/Global_Objects/Function/call" title="en-US/docs/JavaScript/Reference/Global_Objects/Function/call"><code>Function.prototype.call</code></a> bedienen:</p>
+
+<pre class="brush: js">// Enable the passage of the 'this' object through the JavaScript timers
+
+var __nativeST__ = window.setTimeout, __nativeSI__ = window.setInterval;
+
+window.setTimeout = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
+  var oThis = this, aArgs = Array.prototype.slice.call(arguments, 2);
+  return __nativeST__(vCallback instanceof Function ? function () {
+    vCallback.apply(oThis, aArgs);
+  } : vCallback, nDelay);
+};
+
+window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
+  var oThis = this, aArgs = Array.prototype.slice.call(arguments, 2);
+  return __nativeSI__(vCallback instanceof Function ? function () {
+    vCallback.apply(oThis, aArgs);
+  } : vCallback, nDelay);
+};</pre>
+
+<div class="note"><strong>Hinweis:</strong> Diese beiden Ersatzfunktionen ermöglichen es auch, im Internet Explorer Parameter an die aufzurufende Funktion zu übergeben, wie es HTML5 vorsieht. Sie können daher auch als <a href="#polyfill">Polyfill</a> benutzt werden.</div>
+
+<h2 id="Anmerkungen">Anmerkungen</h2>
+
+<p>Eine Wartezeit kann mit <code><a href="/en-US/docs/DOM/window.clearTimeout" title="en-US/docs/DOM/window.clearTimeout">window.clearTimeout()</a></code> abgebrochen werden.</p>
+
+<p>Soll eine Funktion wiederholt alle n Millisekunden aufgerufen werden, ist <code><a href="/en-US/docs/DOM/window.setInterval" title="en-US/docs/DOM/window.setInterval">window.setInterval()</a></code> die bessere Wahl.</p>
+
+<h3 id="Passing_string_literals">Passing string literals</h3>
+
+<p>Passing a string instead of a function to <code>setTimeout()</code> suffers from the same hazards as using <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don.27t_use_eval.21" title="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/eval">eval</a>. </code></p>
+
+<pre class="brush: js">// Correct
+window.setTimeout(function() {
+    alert("Hello World!");
+}, 500);
+
+// Incorrect
+window.setTimeout("alert(\"Hello World!\");", 500);
+
+</pre>
+
+<p>String literals are evaluated in the global context, so local symbols in the context where <code>setTimeout()</code> was called will not be available when the string is evaluated as code.</p>
+
+<h3 id="Gründe_für_längere_als_gegebene_Wartezeiten">Gründe für längere als gegebene Wartezeiten</h3>
+
+<p>Aus verschiedenen Gründen kann die tatsächliche Zeit bis zum Aufruf der Funktion länger sein als mit setTimeout() angegeben wurde. Dieser Abschnitt beschreibt die beiden häufigsten.</p>
+
+<h4 id="Wartezeiten_betragen_4ms_oder_mehr">Wartezeiten betragen 4ms oder mehr</h4>
+
+<p>Um das System nicht zu überlasten, begrenzen moderne Browser die Häufigkeit der von setTimeout() und setInterval() ausgelösten Ereignisse ab einer bestimmten Aufruftiefe oder -häufigkeit. Beispiel:</p>
+
+<pre class="brush: js line-numbers  language-js" id="ct-0"><code class="language-js"><span class="keyword token">function</span> <span class="function token">cb</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="function token">f</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="function token">setTimeout</span><span class="punctuation token">(</span>cb<span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
+<span class="function token">setTimeout</span><span class="punctuation token">(</span>cb<span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="function token">setInterval</span><span class="punctuation token">(</span>f<span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<p>Chrome und Firefox drosseln nach dem fünften Aufruf, Safari nach dem sechsten, Edge bereits nach dem dritten.</p>
+
+<p>Eine Wartezeit von 0 ms kann mit {{domxref("window.postMessage()")}} erreicht werden, wie <a class="external external-icon" href="http://dbaron.org/log/20100309-faster-timeouts">hier beschrieben</a>.</p>
+
+<p> </p>
+
+<div class="note">
+<p><strong>Hinweis</strong>: Die Mindestwartezeit, <code>DOM_MIN_TIMEOUT_VALUE</code>, beträgt 4 ms (Firefox-Einstellung <code>dom.min_timeout_value</code>), die Verschachtelungstiefe <code>DOM_CLAMP_TIMEOUT_NESTING_LEVEL</code> beträgt 5.</p>
+</div>
+
+<div class="note">
+<p><strong>Hinweis</strong>: Der Wert 4 ms wurde mit <a class="external external-icon" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">HTML5 festgelegt</a> und wird von allen Browsern umgesetzt, die nach 2010 erschienen sind. Vor {{geckoRelease("5.0")}} war der Mindestwert 10 ms.</p>
+</div>
+
+<p> </p>
+
+<p> </p>
+
+<h4 id="Wartezeiten_in_inaktiven_Tabs_größer_als_1s">Wartezeiten in inaktiven Tabs  größer als 1s</h4>
+
+<p>Um die Last noch weiter zu verringern, beträgt die Mindestwartezeit in sich im Hintergrund befindlichen Tabs grundsätzlich mindestens 1 s.</p>
+
+<p>Firefox setzt diese Beschränkung seit Version 5 um (siehe {{bug(633421)}}). Der Wert von 1000 ms kann in der Einstellungen <span class="comment-copy"><code>dom.min_background_timeout_value</code> geändert werden.</span><br>
+ Chrome setzt diese Beschränkung seit Version 11 um (<a class="external external-icon" href="http://crbug.com/66078">crbug.com/66078</a>).</p>
+
+<p>Bei Firefox für Android beträgt seit Version 14 die Mindestwartezeit in sich im Hintergrund befindlichen Tabs 15 Minuten (siehe {{bug(736602)}}). Jegliche Aktivität in diesen Tabs kann auch vollständig angehalten werden.</p>
+
+<div class="note">
+<p>Seit Version 50 gelten in Firefox keine Beschränkungen mehr, falls sich die Web Audio API {{domxref("AudioContext")}} im Wiedergabemodus befindet. Seit Firefox 51 gilt dies bereits für jegliche Dokumente mit einem {{domxref("AudioContext")}}, unabhängig von dessen Status.<br>
+ Apps, die Musik Note für Note abspielen, konnten wegen der Beschränkungen den Takt nicht halten, sobald sie in den Hintergrund gelegt wurden.</p>
+</div>
+
+<h4 id="Lastbedingte_Verzögerungen">Lastbedingte Verzögerungen</h4>
+
+<p>Zusätzlich zum aktiven Drosseln kann es zu verlängerten Wartezeiten kommen, falls das Dokument, der Browser oder das Betriebssystem anderweitig beschäftigt sind. Ein wichtiger Punkt in diesem Zusammenhang ist, dass die aufzurufende Funktion nicht ausgeführt werden kann, solange der Thread, der <code>setTimeout()</code> aufgerufen hat, noch aktiv ist:</p>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> bla<span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'bla wurde aufgerufen'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span>
+<span class="function token">setTimeout</span><span class="punctuation token">(</span>bla<span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'hinter setTimeout'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<p>Ergebnis:</p>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js">hinter setTimeout
+bla wurde aufgerufen</code></pre>
+
+<p>Obwohl <code>setTimeout</code> die sofortige Ausführung angewiesen wurde, wird der Aufruf von bla() in einer Warteschlange bis zur nächsten Gelegenheit zurückgestellt. Erst wenn der aktuell laufende Code ausgeführt wurde, werden die in der Warteschlange gesammelten Aufrufe abgearbeitet. In der Folge ist der Programmablauf nicht, wie eventuell erwartet.</p>
+
+<h2 id="Browserkompatibilität">Browserkompatibilität</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Eigenschaft</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basis</td>
+   <td>1.0</td>
+   <td>{{ CompatGeckoDesktop("1") }}</td>
+   <td>4.0</td>
+   <td>4.0</td>
+   <td>1.0</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Eigenschaft</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic</td>
+   <td>1.0</td>
+   <td>1.0</td>
+   <td>{{ CompatGeckoMobile("1") }}</td>
+   <td>6.0</td>
+   <td>6.0</td>
+   <td>1.0</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Specification" name="Specification">Spezifikation</h2>
+
+<p>Gehört zu DOM-Level 0, wie spezifiziert in <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#timers">HTML5</a>.</p>
+
+<h2 id="See_also" name="See_also">Siehe auch</h2>
+
+<ul>
+ <li>{{domxref("window.setInterval")}}</li>
+ <li>{{domxref("window.requestAnimationFrame")}}</li>
+</ul>

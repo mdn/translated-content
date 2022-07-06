@@ -5,41 +5,35 @@ translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
 ---
 <div>{{JSRef}}</div>
 
-<p>本对象代表了一个关于 <a href="/en/Core_JavaScript_1.5_Reference/Global_Functions/eval" title="en/Core_JavaScript_1.5_Reference/Global_Functions/eval">eval</a> 函数的错误.此异常不再会被JavaScript抛出，但是EvalError对象仍然保持兼容性.</p>
+<p>本对象代表了一个关于 <a href="/en/Core_JavaScript_1.5_Reference/Global_Functions/eval" title="en/Core_JavaScript_1.5_Reference/Global_Functions/eval">eval</a> 函数的错误。此异常不再会被 JavaScript 抛出，但是 EvalError 对象仍然保持兼容性。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>new EvalError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt>message</dt>
- <dd>可选参数.人类可阅读的关于错误的描述.</dd>
+ <dd>可选参数：可阅读的关于错误的描述。</dd>
+ <dt>fileName (非标准)</dt>
+ <dd>可选参数：代码中导致异常的文件的文件名。</dd>
+ <dt>lineNumber (非标准)</dt>
+ <dd>可选参数：代码中导致异常的代码的行号。</dd>
 </dl>
 
-<dl>
- <dt>fileName(非标准)</dt>
- <dd>可选参数.代码中导致异常的文件的文件名.</dd>
-</dl>
-
-<dl>
- <dt>lineNumber(非标准)</dt>
- <dd>可选参数.代码中导致异常的代码的行号.</dd>
-</dl>
-
-<h2 id="Properties" name="Properties">属性</h2>
+<h2 id="Properties">属性</h2>
 
 <dl>
  <dt><a href="/en/Core_JavaScript_1.5_Reference/Global_Objects/EvalError/prototype" title="en/Core_JavaScript_1.5_Reference/Global_Objects/EvalError/prototype">prototype</a></dt>
- <dd>允许向EvalError对象中添加自定义属性.</dd>
+ <dd>允许向 EvalError 对象中添加自定义属性。</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
-<p>全局的EvalError对象本身不包含任何方法, 然而它通过原型链继承了一些方法.</p>
+<p>全局的 EvalError 对象本身不包含任何方法，然而它通过原型链继承了一些方法。</p>
 
-<h2 id="EvalError_实例"><code>EvalError</code> 实例</h2>
+<h2 id="EvalError_实例"><code>EvalError</code> 实例</h2>
 
 <h3 id="属性">属性</h3>
 
@@ -51,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
 
 <h2 id="例子">例子</h2>
 
-<p><code>EvalError</code> 不在当前ECMAScript规范中使用，因此不会被运行时抛出. 但是对象本身仍然与规范的早期版本向后兼容.</p>
+<p><code>EvalError</code> 不在当前 ECMAScript 规范中使用，因此不会被运行时抛出。但是对象本身仍然与规范的早期版本向后兼容。</p>
 
 <h3 id="创建_EvalError">创建 <code>EvalError</code></h3>
 
@@ -79,22 +73,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
   <tr>
    <td>{{SpecName('ES3')}}</td>
    <td>{{Spec2('ES3')}}</td>
-   <td>初始定义.</td>
+   <td>初始定义。</td>
   </tr>
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.11.6.1', 'EvalError')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td>本规范中未使用. 为了保持向后兼容.</td>
+   <td>本规范中未使用。为了保持向后兼容。</td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td>本规范中未使用. 为了保持向后兼容.</td>
+   <td>本规范中未使用。为了保持向后兼容。</td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>

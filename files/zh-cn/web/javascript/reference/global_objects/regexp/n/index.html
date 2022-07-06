@@ -22,19 +22,19 @@ RegExp.$9
 
 <h2 id="描述">描述</h2>
 
-<p>$1, ..., $9 属性是静态的, 他不是独立的的正则表达式属性. 所以, 我们总是像这样子使用他们<code>RegExp.$1</code>, ..., <code>RegExp.$9</code>.</p>
+<p>$1, ..., $9 属性是静态的，他不是独立的正则表达式属性。所以，我们总是像这样子使用他们<code>RegExp.$1</code>, ..., <code>RegExp.$9</code>.</p>
 
-<p>属性的值是只读的而且只有在正确匹配的情况下才会改变.</p>
+<p>属性的值是只读的而且只有在正确匹配的情况下才会改变。</p>
 
-<p>括号匹配项是无限的, 但是RegExp对象能捕获的只有九个. 你可以通过返回一个数组索引来取得所有的括号匹配项.</p>
+<p>括号匹配项是无限的，但是 RegExp 对象能捕获的只有九个。你可以通过返回一个数组索引来取得所有的括号匹配项。</p>
 
-<p>这些属性可以在{{jsxref("String.replace")}} 方法中替换字符串. 在这种情况下, 不用在前面加上RegExp。下面的例子将详细说明. 当正则表达式中不包含括号, 脚本中的 <code>$n</code>'s 就是字面上的意思 (当n是正整数).</p>
+<p>这些属性可以在{{jsxref("String.replace")}} 方法中替换字符串。在这种情况下，不用在前面加上 RegExp。下面的例子将详细说明。当正则表达式中不包含括号，脚本中的 <code>$n</code>'s 就是字面上的意思 (当 n 是正整数).</p>
 
 <h2 id="例子">例子</h2>
 
-<h3 id="n_在_String.replace中的应用"><code>$n</code> 在 <code>String.replace中的应用</code></h3>
+<h3 id="n_在_String.replace中的应用"><code>$n</code> 在 <code>String.replace 中的应用</code></h3>
 
-<p>以下脚本用 {{jsxref("String.prototype.replace()", "replace()")}} 方法去匹配一个first last格式的 name{{jsxref("String")}} 实例 输出last first格式. 在替换文本里, 脚本用 <code>$1</code> 和 <code>$2</code> 表示正则表达式中的括号匹配项的结果.</p>
+<p>以下脚本用 {{jsxref("String.prototype.replace()", "replace()")}} 方法去匹配一个 first last 格式的 name{{jsxref("String")}} 实例 输出 last first 格式。在替换文本里，脚本用 <code>$1</code> 和 <code>$2</code> 表示正则表达式中的括号匹配项的结果。</p>
 
 <pre class="brush: js">var re = /(\w+)\s(\w+)/;
 var str = 'John Smith';
@@ -45,59 +45,11 @@ RegExp.$2; // "Smith"
 
 <h2 id="技术指标">技术指标</h2>
 
-<p>非标准. 不属于当前的任何规范.</p>
+<p>非标准。不属于当前的任何规范。</p>
 
-<h2 id="浏览器适配">浏览器适配</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="参见">参见</h2>
 

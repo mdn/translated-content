@@ -1,0 +1,50 @@
+---
+title: Navigator.language
+slug: Web/API/Navigator/language
+tags:
+  - API
+  - Language
+  - Navigator
+  - Property
+  - Read-only
+  - Reference
+browser-compat: api.Navigator.language
+translation_of: Web/API/Navigator/language
+---
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p><strong><code>Navigator.language</code></strong> 为只读属性，返回一个表示用户偏好语言（通常是浏览器界面语言）的字符串。 </p>
+
+<h2 id="Syntax">语法</h2>
+
+<pre class="brush: js">const <em>lang</em> = navigator.language
+</pre>
+
+<h3 id="Value">值</h3>
+
+<p>一个 {{domxref("DOMString")}}。<em><code>lang</code></em>存储了一个在 <a class="external"
+  href="https://tools.ietf.org/rfc/bcp/bcp47.txt">BCP 47</a> 中定义的语言版本。一些有效的语言版本代码示例包括： “en”、“en-US”、“fr”、“fr-FR”、“es-ES” 等。</p>
+
+<p>请注意，在 iOS 10.2 之前的 Safari 中，返回的语言版本代码是小写的： “en-us”、“fr-fr” 等。</p>
+
+<h2 id="Example">示例</h2>
+
+<pre class="brush: js">if (/^en\b/.test(navigator.language)) {
+  doLangSelect(window.navigator.language);
+}
+</pre>
+
+<h2 id="Specifications">规格</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">更多参见</h2>
+
+<ul>
+  <li>{{domxref("navigator.languages")}}</li>
+  <li>{{domxref("navigator")}}</li>
+</ul>

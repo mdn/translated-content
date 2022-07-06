@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 ---
 <div>{{JSRef}}</div>
 
-<p> <code><strong>has()</strong></code> 方法根据WeakMap对象的元素中是否存在key键返回一个boolean值。</p>
+<p> <code><strong>has()</strong></code> 方法根据 WeakMap 对象的元素中是否存在 key 键返回一个 boolean 值。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -15,19 +15,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 
 <dl>
  <dt>key</dt>
- <dd>必须的。用来检测WeakMap对象中是否存在元素的键为key。</dd>
+ <dd>必须的。用来检测 WeakMap 对象中是否存在元素的键为 key。</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
 <dl>
  <dt>Boolean</dt>
- <dd>如果指定的key存在于某个元素中则返回true，否则返回flase。</dd>
+ <dd>如果指定的 key 存在于某个元素中则返回 true，否则返回 flase。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
 
-<h3 id="使用_has方法">使用 <code>has方法</code></h3>
+<h3 id="使用_has_方法">使用 <code>has</code> 方法</h3>
 
 <pre class="brush: js">var wm = new WeakMap();
 wm.set(window, "foo");
@@ -58,60 +58,14 @@ wm.has("baz");  // returns false
  </tbody>
 </table>
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>36</td>
-   <td>{{CompatGeckoDesktop("6.0")}}</td>
-   <td>11</td>
-   <td>23</td>
-   <td>7.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("6.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>8</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Firefox-特有说明">Firefox-特有说明</h2>
 
 <ul>
- <li>直到SpiderMonkey 38 {{geckoRelease(38)}}, 这个方法在key参数不是一个对象时会抛出 {{jsxref("TypeError")}}。它已经从版本38后按照最新版本的ES6标准修复 ({{bug(1127827)}}).</li>
+ <li>直到 SpiderMonkey 38 {{geckoRelease(38)}}, 这个方法在 key 参数不是一个对象时会抛出 {{jsxref("TypeError")}}。它已经从版本 38 后按照最新版本的 ES6 标准修复 ({{bug(1127827)}}).</li>
 </ul>
 
 <h2 id="See_also">See also</h2>

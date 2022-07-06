@@ -1,0 +1,58 @@
+---
+title: Error.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
+tags:
+  - Error
+  - JavaScript
+  - Method
+  - Non-standard
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Error/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Error/toSource
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<p>Die <code><strong>toSource()</strong></code> Methode gibt den Quelltext zurück, der zu dem selben Error ausgewertet werden kann.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><var>e</var>.toSource()</pre>
+
+<h3 id="Rückgabewert">Rückgabewert</h3>
+
+<p>Ein String, der den Quelltext des Fehlers enthält.</p>
+
+<h2 id="Beschreibung">Beschreibung</h2>
+
+<p>Das Aufrufen der <code>toSource</code> Methode auf einer {{jsxref("Error")}} Instanz (auch bei<em> <a href="/de/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_Typen">NativeErrors</a></em>) gibt einen String zurück, der den Quelltext der Instanz enthält. Dieser String kann ausgeführt werden, um (annähernd) gleiches Objekt zu erzeugen. Normalerweise enthält der String den Quelltext des {{jsxref("Error")}} Konstruktors. Zum Beispiel:</p>
+
+<pre class="brush: js">(new<em>name</em>(<em>message</em> ,<em>fileName</em>,<em>lineNumber</em>))
+</pre>
+
+<p>wo die Attribute den Eigenschaften der Error-Instanz entsprechen.</p>
+
+<div class="note">
+<p><strong>Bemerkung:</strong> <span id="result_box" lang="de"><span>Seien Sie sich bewusst</span><span>, dass die Eigenschaften</span>, <span>die</span> <span>durch die toSource</span> <span>Methode</span> <span>bei der Erstellung</span> des Strings <span>verwendet</span>, veränderbar <span>sind</span> <span>und</span> <span>nicht genau die</span> <span>Funktion</span> <span>widerspiegeln</span><span>, die eine Fehler</span> <span>Instanz erstellt habt. Das betrifft</span><span> den Dateinamen </span><span>und</span> <span>die Zeilennummer.</span></span></p>
+</div>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<p>In keine Spezifikation enthalten. Implementiert in JavaScript 1.3.</p>
+
+<h2 id="Browserkompatibilität">Browserkompatibilität</h2>
+
+<div>
+
+
+<p>{{Compat("javascript.builtins.Error.toSource")}}</p>
+</div>
+
+<h2 id="See_auch">See auch</h2>
+
+<ul>
+ <li>{{jsxref("Error.prototype.fileName")}}</li>
+ <li>{{jsxref("Error.prototype.lineNumber")}}</li>
+ <li>{{jsxref("Error.prototype.message")}}</li>
+ <li>{{jsxref("Error.prototype.name")}}</li>
+ <li>{{jsxref("Object.prototype.toSource()")}}</li>
+</ul>

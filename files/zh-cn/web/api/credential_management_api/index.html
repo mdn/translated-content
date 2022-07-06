@@ -6,22 +6,22 @@ translation_of: Web/API/Credential_Management_API
 <div>
 <p>{{APIRef("Credential Management API")}}{{ SeeCompatTable() }}</p>
 
-<p class="summary">Credential Management API 允许网站存储和检索用户，联合账户和公钥证书。这些功能允许用户在不输入密码的情况下登录，查看他们曾经登录到一个站点的联合帐户，并且在会话过期且没有显式的登录流程的情况下恢复会话。</p>
+<p>Credential Management API 允许网站存储和检索用户，联合账户和公钥证书。这些功能允许用户在不输入密码的情况下登录，查看他们曾经登录到一个站点的联合帐户，并且在会话过期且没有显式的登录流程的情况下恢复会话。</p>
 </div>
 
 <h2 id="Credential_management_概念和用法">Credential management 概念和用法</h2>
 
-<p>此API允许网站与用户代理的密码系统进行交互，以便网站能够以统一的方式处理站点凭证，而用户代理则可以为他们的凭证管理提供更好的帮助。例如，用户代理在处理联合身份提供程序或使用不仅仅是用户名和密码的深奥登录机制时特别困难。为了解决这些问题，Credential Management API为网站提供了存储和检索不同类型凭据的方法。这为用户提供了一些功能，比如查看他们曾经登录到某个站点的联合帐户，或者在会话过期且没有显式的登录流程的情况下恢复会话。</p>
+<p>此 API 允许网站与用户代理的密码系统进行交互，以便网站能够以统一的方式处理站点凭证，而用户代理则可以为他们的凭证管理提供更好的帮助。例如，用户代理在处理联合身份提供程序或使用不仅仅是用户名和密码的深奥登录机制时特别困难。为了解决这些问题，Credential Management API 为网站提供了存储和检索不同类型凭据的方法。这为用户提供了一些功能，比如查看他们曾经登录到某个站点的联合帐户，或者在会话过期且没有显式的登录流程的情况下恢复会话。</p>
 
 <div class="note">
-<p>此API仅限于顶级上下文。在&lt;iframe&gt;元素中调用get()和store()将无效。</p>
+<p>此 API 仅限于顶级上下文。在&lt;iframe&gt;元素中调用 get() 和 store() 将无效。</p>
 </div>
 
 <h3 id="子域共享凭据（Subdomain-shared_credentials）">子域共享凭据（Subdomain-shared credentials）</h3>
 
 <p> </p>
 
-<p>规范的更高版本允许从不同的子域检索凭证。例如，存储在login.example.com中的密码可用于登录www.example.com。要利用这一点，必须通过调用{{domxref("CredentialsContainer.store()")}}显式存储密码。这有时被称为公共后缀列表（PSL）匹配;但是规范仅建议使用PSL来确定凭证的有效范围。它(子域共享凭据)不需要它。因此浏览器的实现可能会有所不同。</p>
+<p>规范的更高版本允许从不同的子域检索凭证。例如，存储在 login.example.com 中的密码可用于登录 www.example.com。要利用这一点，必须通过调用{{domxref("CredentialsContainer.store()")}}显式存储密码。这有时被称为公共后缀列表（PSL）匹配;但是规范仅建议使用 PSL 来确定凭证的有效范围。它 (子域共享凭据) 不需要它。因此浏览器的实现可能会有所不同。</p>
 
 <h2 id="接口">接口</h2>
 
@@ -31,123 +31,17 @@ translation_of: Web/API/Credential_Management_API
  <dt>{{domxref("CredentialsContainer")}}</dt>
  <dd>公开请求凭据的方法，并在发生令人关注的事件（如成功登录或注销）时通知用户代理。可以从<code>Navigator.credentials</code>访问此接口。</dd>
  <dt>{{domxref("FederatedCredential")}}</dt>
- <dd>提供关于联合身份提供程序的凭据的信息，联合身份提供程序是网站信任的实体，可以正确地对用户进行身份验证，并为此提供API。 <a href="http://openid.net/developers/specs/">OpenID Connect</a> 就是这种框架的一个例子。</dd>
+ <dd>提供关于联合身份提供程序的凭据的信息，联合身份提供程序是网站信任的实体，可以正确地对用户进行身份验证，并为此提供 API。 <a href="http://openid.net/developers/specs/">OpenID Connect</a> 就是这种框架的一个例子。</dd>
  <dt>{{domxref("PasswordCredential")}}</dt>
  <dd>提供有关用户名/密码对的信息。</dd>
  <dt>{{domxref("PublicKeyCredential")}}</dt>
- <dd>提供使用不可窃取和数据破坏的非对称密钥对(而不是密码登录)的凭据。</dd>
+ <dd>提供使用不可窃取和数据破坏的非对称密钥对 (而不是密码登录) 的凭据。</dd>
 </dl>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Credential Management')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>初步定义</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebAuthn')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>初步定义</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{ CompatibilityTable() }}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support（基础支持）</td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(44)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Subdomain-shared credentials（子域共享凭据）</td>
-   <td>{{CompatChrome(57)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(44)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Web authentication（Web身份验证）</td>
-   <td>{{CompatChrome(65)}}<sup>[1]</sup></td>
-   <td>60</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support（基础支持）</td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOperaMobile(44)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Subdomain-shared credentials（子域共享凭据）</td>
-   <td>{{CompatChrome(57)}}</td>
-   <td>{{CompatChrome(57)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOperaMobile(44)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Web authentication（Web身份验证）</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在 chrome://flags#enable-webauthentication flag中。 （这仅适用于Chrome中的链接。）</p>
+{{Compat("api.Credential")}}

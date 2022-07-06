@@ -12,32 +12,32 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
 <div>{{JSRef("Global_Objects", "RegExp")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>test()</code></strong> выполняет поиск сопоставления регулярного выражения указанной строке. Возвращает <code>true</code> или <code>false</code>.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre><code><var>regexObj</var>.test(str)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>str</code></dt>
  <dd>Строка, с которой сопоставляется регулярное выражение.</dd>
 </dl>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 
 <p>Логическое значение: <code>true</code> или <code>false</code>.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Используйте метод <code>test()</code>, если вы просто хотите узнать, находится ли шаблон в строке (он почти аналогичен методу {{jsxref("String.prototype.search()")}}, только вместо индекса шаблона возвращает <code>true</code> или <code>false</code>); для получения дополнительной информации о сопоставлении (но за счёт более медленного выполнения) используйте метод {{jsxref("RegExp.prototype.exec()", "exec()")}} (он аналогичен методу {{jsxref("String.prototype.match()")}}). Как и при вызове метода {{jsxref("RegExp.prototype.exec()", "exec()")}} (или при совместном с ним вызове), метод <code>test()</code>, вызванный несколько раз на одном и том же экземпляре глобального регулярного выражения, будет начинать проверку с конца предыдущего сопоставления.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_test" name="Example:_Using_test">Пример: использование метода <code>test()</code></h3>
+<h3 id="Example_Using_test">Пример: использование метода <code>test()</code></h3>
 
 <p>Следующий пример печатает сообщение, в зависимости от того, была ли проверка успешной:</p>
 
@@ -52,38 +52,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.10.6.3', 'RegExp.test')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-regexp.prototype.test', 'RegExp.test')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>Глава про <a href="/ru/docs/Web/JavaScript/Guide/Regular_Expressions">регулярные выражения</a> в <a href="/ru/docs/Web/JavaScript/Guide">руководстве по JavaScript</a></li>

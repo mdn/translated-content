@@ -9,12 +9,12 @@ translation_of: Web/API/SharedWorker
 ---
 <div>{{APIRef("Web Workers API")}}</div>
 
-<div><code><strong>SharedWorker</strong></code><strong> </strong>接口代表一种特定类型的 worker，可以从几个浏览上下文中<em>访问</em>，例如几个窗口、iframe 或其他 worker。它们实现一个不同于普通 worker 的接口，具有不同的全局作用域, {{domxref("SharedWorkerGlobalScope")}} 。</div>
+<div><code><strong>SharedWorker</strong></code> 接口代表一种特定类型的 worker，可以从几个浏览上下文中<em>访问</em>，例如几个窗口、iframe 或其他 worker。它们实现一个不同于普通 worker 的接口，具有不同的全局作用域，{{domxref("SharedWorkerGlobalScope")}} 。</div>
 
-<div></div>
+
 
 <div class="note">
-<p><span style="font-size: 14px; line-height: 21px;"><strong>注意：如果要使 </strong></span>SharedWorker <span style="font-size: 14px; line-height: 21px;"><strong>连接到多个不同的页面，这些页面必须是同源的（相同的协议、host 以及端口）。</strong></span></p>
+<p><strong>注意：如果要使 </strong>SharedWorker <strong>连接到多个不同的页面，这些页面必须是同源的（相同的协议、host 以及端口）。</strong></p>
 </div>
 
 <h2 id="构造函数">构造函数</h2>
@@ -51,11 +51,11 @@ translation_of: Web/API/SharedWorker
 <pre class="brush: js">var myWorker = new SharedWorker("worker.js");
 </pre>
 
-<p>然后两个脚本都通过 {{domxref("MessagePort")}} 对象来访问worker，这个对象用{{domxref("SharedWorker.port")}} 属性获得。如果已经用 addEventListener 监听了 onmessage 事件，则可以使用 <code>start()</code> 方法手动启动端口：</p>
+<p>然后两个脚本都通过 {{domxref("MessagePort")}} 对象来访问 worker，这个对象用{{domxref("SharedWorker.port")}} 属性获得。如果已经用 addEventListener 监听了 onmessage 事件，则可以使用 <code>start()</code> 方法手动启动端口：</p>
 
 <pre class="brush: js">myWorker.port.start();</pre>
 
-<p>当启动端口时，两个脚本都会向 worker 发送消息， 然后使用 <code>port.postMessage()</code>和 <code>port.onmessage</code> 处理从 worker 返回的消息:</p>
+<p>当启动端口时，两个脚本都会向 worker 发送消息， 然后使用 <code>port.postMessage()</code>和 <code>port.onmessage</code> 处理从 worker 返回的消息：</p>
 
 <pre class="brush: js">first.onchange = function() {
     myWorker.port.postMessage([first.value,second.value]);

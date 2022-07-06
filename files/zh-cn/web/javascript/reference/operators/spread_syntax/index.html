@@ -10,61 +10,59 @@ translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<div><strong>展开语法(Spread syntax), </strong>可以在函数调用/数组构造时, 将数组表达式或者string在语法层面展开；还可以在构造字面量对象时, 将对象表达式按key-value的方式展开。(<strong>译者注</strong>: 字面量一般指 <code>[1, 2, 3]</code> 或者 <code>{name: "mdn"}</code> 这种简洁的构造方式)</div>
+<div><strong>展开语法 (Spread syntax), </strong>可以在函数调用/数组构造时，将数组表达式或者 string 在语法层面展开；还可以在构造字面量对象时，将对象表达式按 key-value 的方式展开。(<strong>译者注</strong>: 字面量一般指 <code>[1, 2, 3]</code> 或者 <code>{name: "mdn"}</code> 这种简洁的构造方式)</div>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}</div>
 
-<p class="hidden">该示例的源代码存放于Github中，如果你想进行修订，请先克隆<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>, 修改完成之后再通过pull request的方式推送给源仓库。</p>
+<h2 id="语法">语法</h2>
 
-<h2 id="语法"><font><font>语法</font></font></h2>
+<p>函数调用：</p>
 
-<p><font><font>函数调用：</font></font></p>
+<pre class="syntaxbox">myFunction(...iterableObj);</pre>
 
-<pre class="syntaxbox notranslate">myFunction(...iterableObj);</pre>
+<p>字面量数组构造或字符串：</p>
 
-<p><font><font>字面量数组构造或字符串：</font></font></p>
+<pre>[...iterableObj, '4', ...'hello', 6];</pre>
 
-<pre class="notranslate">[...iterableObj, '4', ...'hello', 6];</pre>
+<p>构造字面量对象时，进行克隆或者属性拷贝（ECMAScript 2018 规范新增特性）：</p>
 
-<p>构造字面量对象时,进行克隆或者属性拷贝（ECMAScript 2018规范新增特性）：</p>
+<pre class="syntaxbox">let objClone = { ...obj };</pre>
 
-<pre class="syntaxbox notranslate">let objClone = { ...obj };</pre>
-
-<h2 id="示例"><font><font>示例</font></font></h2>
+<h2 id="示例">示例</h2>
 
 <h3 id="在函数调用时使用展开语法">在函数调用时使用展开语法</h3>
 
-<h4 id="等价于apply的方式">等价于apply的方式</h4>
+<h4 id="等价于_apply_的方式">等价于 apply 的方式</h4>
 
-<p><font><font>如果想将数组元素迭代为函数参数，一般使用</font></font>{{jsxref( "Function.prototype.apply")}} 的方式进行调用<font><font>。</font></font></p>
+<p>如果想将数组元素迭代为函数参数，一般使用{{jsxref( "Function.prototype.apply")}} 的方式进行调用。</p>
 
-<pre class="brush: js notranslate">function myFunction(x, y, z) { }
+<pre class="brush: js">function myFunction(x, y, z) { }
 var args = [0, 1, 2];
 myFunction.apply(null, args);</pre>
 
-<p><font><font>有了展开语法，可以这样写：</font></font></p>
+<p>有了展开语法，可以这样写：</p>
 
-<pre class="brush: js notranslate"><code>function myFunction(x, y, z) { }
+<pre class="brush: js"><code>function myFunction(x, y, z) { }
 var args = [0, 1, 2];
 myFunction(...args);</code></pre>
 
-<p><font><font>所有参数都可以通过展开语法来传值，也不限制多次使用展开语法。</font></font></p>
+<p>所有参数都可以通过展开语法来传值，也不限制多次使用展开语法。</p>
 
-<pre class="brush: js notranslate">function myFunction(v, w, x, y, z) { }
+<pre class="brush: js">function myFunction(v, w, x, y, z) { }
 var args = [0, 1];
 myFunction(-1, ...args, 2, ...[3]);</pre>
 
 <h4 id="在_new_表达式中应用">在 new 表达式中应用</h4>
 
-<p><font><font>使用 </font></font><code>new</code><font><font> 关键字来调用构造函数时</font></font><font><font>，不能</font></font><strong><font><font>直接</font></font></strong><font><font>使用数组+ </font></font><code>apply</code><font><font> 的方式（</font></font><code>apply</code><font><font> 执行的是调用 </font></font><code>[[Call]]</code><font><font> , 而不是构造 </font></font><code>[[Construct]]</code><font><font>）。当然</font><font>, 有了展开语法, 将数组展开为构造函数的参数就很简单了：</font></font></p>
+<p>使用 <code>new</code> 关键字来调用构造函数时，不能<strong>直接</strong>使用数组 + <code>apply</code> 的方式（<code>apply</code> 执行的是调用 <code>[[Call]]</code> , 而不是构造 <code>[[Construct]]</code>）。当然，有了展开语法，将数组展开为构造函数的参数就很简单了：</p>
 
-<pre class="brush: js notranslate"><font><font>var dateFields = [1970, 0, 1]; </font><font>// 1970年1月1日</font></font><font><font>
+<pre class="brush: js">var dateFields = [1970, 0, 1]; // 1970 年 1 月 1 日
 var d = new Date(...dateFields);</font></font>
 </pre>
 
-<p><font><font>如果不使用展开语法, 想将数组元素传给构造函数, 实现方式可能是这样的</font></font><font><font>：</font></font></p>
+<p>如果不使用展开语法，想将数组元素传给构造函数，实现方式可能是这样的：</p>
 
-<pre class="brush: js notranslate">function applyAndNew(constructor, args) {
+<pre class="brush: js">function applyAndNew(constructor, args) {
    function partial () {
       return constructor.apply(this, args);
    };
@@ -86,26 +84,26 @@ var myArguments = ["hi", "how", "are", "you", "mr", null];
 var myConstructorWithArguments = applyAndNew(myConstructor, myArguments);
 
 console.log(new myConstructorWithArguments);
-// (myConstructor构造函数中):           arguments.length: 6
-// (myConstructor构造函数中):           ["hi", "how", "are", "you", "mr", null]
+// (myConstructor 构造函数中):           arguments.length: 6
+// (myConstructor 构造函数中):           ["hi", "how", "are", "you", "mr", null]
 // ("new myConstructorWithArguments"中): {prop1: "val1", prop2: "val2"}</pre>
 
-<h3 id="构造字面量数组时使用展开语法"><font><font>构造字面量数组时使用展开语法</font></font></h3>
+<h3 id="构造字面量数组时使用展开语法">构造字面量数组时使用展开语法</h3>
 
-<h4 id="构造字面量数组时更给力！"><font><font>构造字面量数组时更给力！</font></font></h4>
+<h4 id="构造字面量数组时更给力！">构造字面量数组时更给力！</h4>
 
-<p><font><font>没有展开语法的时候，只能组合使用 </font></font><code>push</code><font><font>, </font></font><code>splice</code><font><font>, </font></font><code>concat</code><font><font> 等方法，来将已有数组元素变成新数组的一部分。有了展开语法,  通过字面量方式, 构造新数组会变得更简单、更优雅：</font></font></p>
+<p>没有展开语法的时候，只能组合使用 <code>push</code>, <code>splice</code>, <code>concat</code> 等方法，来将已有数组元素变成新数组的一部分。有了展开语法，通过字面量方式，构造新数组会变得更简单、更优雅：</p>
 
-<pre class="brush: js notranslate"><font><font>var parts = ['shoulders', 'knees'];
+<pre class="brush: js">var parts = ['shoulders', 'knees'];
 var lyrics = ['head', ...parts, 'and', 'toes']; </font></font>
 // ["head", "shoulders", "knees", "and", "toes"]
 </pre>
 
-<p>和参数列表的展开类似,  <code>...</code> 在构造字面量数组时, 可以在任意位置多次使用.</p>
+<p>和参数列表的展开类似， <code>...</code> 在构造字面量数组时，可以在任意位置多次使用。</p>
 
-<h4 id="数组拷贝copy">数组拷贝(copy)</h4>
+<h4 id="数组拷贝_copy">数组拷贝 (copy)</h4>
 
-<pre class="brush: js notranslate">var arr = [1, 2, 3];
+<pre class="brush: js">var arr = [1, 2, 3];
 var arr2 = [...arr]; // like arr.slice()
 arr2.push(4);
 
@@ -113,51 +111,51 @@ arr2.push(4);
 // arr 不受影响
 </pre>
 
-<p><strong>提示:</strong> 实际上, 展开语法和 {{jsxref("Object.assign()")}} 行为一致, 执行的都是浅拷贝(只遍历一层)。如果想对多维数组进行深拷贝, 下面的示例就有些问题了。</p>
+<p><strong>提示：</strong> 实际上，展开语法和 {{jsxref("Object.assign()")}} 行为一致，执行的都是浅拷贝 (只遍历一层)。如果想对多维数组进行深拷贝，下面的示例就有些问题了。</p>
 
-<pre class="brush: js notranslate">var a = [[1], [2], [3]];
+<pre class="brush: js">var a = [[1], [2], [3]];
 var b = [...a];
 b.shift().shift(); // 1
-// Now array a is affected as well: [[2], [3]]
+// Now array a is affected as well: [[], [2], [3]]
 </pre>
 
 <h4 id="连接多个数组">连接多个数组</h4>
 
-<p>{{jsxref("Array.concat")}} 函数常用于将一个数组连接到另一个数组的后面。如果不使用展开语法, 代码可能是下面这样的:</p>
+<p>{{jsxref("Array.concat")}} 函数常用于将一个数组连接到另一个数组的后面。如果不使用展开语法，代码可能是下面这样的：</p>
 
-<pre class="brush: js notranslate">var arr1 = [0, 1, 2];
+<pre class="brush: js">var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 // 将 arr2 中所有元素附加到 arr1 后面并返回
 var arr3 = arr1.concat(arr2);</pre>
 
-<p>使用展开语法:</p>
+<p>使用展开语法：</p>
 
-<pre class="brush: js notranslate">var arr1 = [0, 1, 2];
+<pre class="brush: js">var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 var arr3 = [...arr1, ...arr2];
 </pre>
 
-<p>{{jsxref("Array.unshift")}} 方法常用于在数组的开头插入新元素/数组.  不使用展开语法, 示例如下:</p>
+<p>{{jsxref("Array.unshift")}} 方法常用于在数组的开头插入新元素/数组.  不使用展开语法，示例如下：</p>
 
-<pre class="brush: js notranslate">var arr1 = [0, 1, 2];
+<pre class="brush: js">var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 // 将 arr2 中的元素插入到 arr1 的开头
 Array.prototype.unshift.apply(arr1, arr2) // arr1 现在是 [3, 4, 5, 0, 1, 2]</pre>
 
-<p>如果使用展开语法, 代码如下:  [请注意, 这里使用展开语法创建了一个新的 <code>arr1</code> 数组,  {{jsxref("Array.unshift")}} 方法则是修改了原本存在的 <code>arr1</code> 数组]:</p>
+<p>如果使用展开语法，代码如下:  [请注意，这里使用展开语法创建了一个新的 <code>arr1</code> 数组，  {{jsxref("Array.unshift")}} 方法则是修改了原本存在的 <code>arr1</code> 数组]:</p>
 
-<pre class="brush: js notranslate">var arr1 = [0, 1, 2];
+<pre class="brush: js">var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 arr1 = [...arr2, ...arr1]; // arr1 现在为 [3, 4, 5, 0, 1, 2]
 </pre>
 
-<h3 id="构造字面量对象时使用展开语法">构造<font><font>字面量对象时使用展开语法</font></font></h3>
+<h3 id="构造字面量对象时使用展开语法">构造字面量对象时使用展开语法</h3>
 
-<p><a href="https://github.com/tc39/proposal-object-rest-spread">Rest/Spread Properties for ECMAScript</a> 提议(stage 4) 对 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer">字面量对象</a> 增加了展开特性。其行为是, 将已有对象的所有可枚举(enumerable)属性拷贝到新构造的对象中.</p>
+<p><a href="https://github.com/tc39/proposal-object-rest-spread">Rest/Spread Properties for ECMAScript</a> 提议 (stage 4) 对 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer">字面量对象</a> 增加了展开特性。其行为是，将已有对象的所有可枚举 (enumerable) 属性拷贝到新构造的对象中。</p>
 
-<p>浅拷贝(Shallow-cloning, 不包含 prototype) 和对象合并, 可以使用更简短的展开语法。而不必再使用 {{jsxref("Object.assign()")}} 方式.</p>
+<p>浅拷贝 (Shallow-cloning，不包含 prototype) 和对象合并，可以使用更简短的展开语法。而不必再使用 {{jsxref("Object.assign()")}} 方式。</p>
 
-<pre class="brush: js notranslate">var obj1 = { foo: 'bar', x: 42 };
+<pre class="brush: js">var obj1 = { foo: 'bar', x: 42 };
 var obj2 = { foo: 'baz', y: 13 };
 
 var clonedObj = { ...obj1 };
@@ -171,9 +169,9 @@ var mergedObj = { ...obj1, ...obj2 };
 
 
 
-<p><strong>提示</strong>: 不能替换或者模拟 {{jsxref("Object.assign()")}} 函数:</p>
+<p><strong>提示</strong>: 不能替换或者模拟 {{jsxref("Object.assign()")}} 函数：</p>
 
-<pre class="notranslate"><code>var obj1 = { foo: 'bar', x: 42 };
+<pre><code>var obj1 = { foo: 'bar', x: 42 };
 var obj2 = { foo: 'baz', y: 13 };
 const merge = ( ...objects ) =&gt; ( { ...objects } );
 
@@ -183,15 +181,15 @@ var mergedObj = merge ( obj1, obj2);
 var mergedObj = merge ( {}, obj1, obj2);
 // Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }</code></pre>
 
-<p>在这段代码中, 展开操作符(spread operator)并没有按预期的方式执行:  而是先将多个解构变为剩余参数(rest parameter), 然后再将剩余参数展开为字面量对象.</p>
+<p>在这段代码中，展开操作符 (spread operator) 并没有按预期的方式执行:  而是先将多个解构变为剩余参数 (rest parameter), 然后再将剩余参数展开为字面量对象。</p>
 
 
 
 <h3 id="只能用于可迭代对象">只能用于可迭代对象</h3>
 
-<p>在数组或函数参数中使用展开语法时, 该语法只能用于 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator">可迭代对象</a>：</p>
+<p>在数组或函数参数中使用展开语法时，该语法只能用于 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator">可迭代对象</a>：</p>
 
-<pre class="brush: js notranslate">var obj = {'key1': 'value1'};
+<pre class="brush: js">var obj = {'key1': 'value1'};
 var array = [...obj]; // TypeError: obj is not iterable
 </pre>
 
@@ -201,7 +199,7 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 <h2 id="剩余语法（剩余参数）">剩余语法（剩余参数）</h2>
 
-<p>剩余语法(Rest syntax) 看起来和展开语法完全相同，不同点在于, 剩余参数用于解构数组和对象。从某种意义上说，剩余语法与展开语法是相反的：展开语法将数组展开为其中的各个元素，而剩余语法则是将多个元素收集起来并“凝聚”为单个元素。 请参考: <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>。</p>
+<p>剩余语法 (Rest syntax) 看起来和展开语法完全相同，不同点在于，剩余参数用于解构数组和对象。从某种意义上说，剩余语法与展开语法是相反的：展开语法将数组展开为其中的各个元素，而剩余语法则是将多个元素收集起来并“凝聚”为单个元素。 请参考: <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -232,12 +230,12 @@ var array = [...obj]; // TypeError: obj is not iterable
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性"><font><font>浏览器兼容性</font></font></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("javascript.operators.spread")}}</p>
 
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters"><font><font>剩余参数</font></font></a><font><font>（Rest Parameters也使用' </font></font><code>...</code><font><font> '）</font></font></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>（Rest Parameters 也使用' <code>...</code> '）</li>
 </ul>

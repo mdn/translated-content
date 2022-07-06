@@ -103,7 +103,7 @@ console.log(removedItems);
 // ["Клубника", "Манго"]
 </pre>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>[<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>]
 new Array(<var>element0</var>, <var>element1</var>[, ...[, <var>elementN</var>]])
@@ -116,13 +116,13 @@ new Array(<var>arrayLength</var>)</code></pre>
  <dd>Если конструктору <code>Array</code> передаётся единственный аргумент, являющийся целым числом в диапазоне от 0 до 2<sup>32</sup>-1 (включительно), будет возвращён новый пустой JavaScript-массив, длина которого установится в это число (<strong>примечание</strong>: это означает массив, содержащий <code>arrayLength</code> пустых ячеек, а не ячеек со значениями <code>undefined</code>). Если аргументом будет любое другое число, возникнет исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Массивы являются спископодобными объектами, чьи прототипы содержат методы для операций обхода и изменения массива. Ни размер JavaScript-массива, ни типы его элементов не являются фиксированными. Поскольку размер массива может увеличиваться и уменьшаться в любое время, то нет гарантии, что массив окажется плотным. То есть, при работе с массивом может возникнуть ситуация, что элемент массива, к которому вы обратитесь, будет пустым и вернёт <code>undefined</code>. В целом, это удобная характеристика; но если эта особенность массива не желательна в вашем специфическом случае, вы можете рассмотреть возможность использования типизированных массивов.</p>
 
 <p>Некоторые полагают, что <a class="external" href="http://www.andrewdupont.net/2006/05/18/javascript-associative-arrays-considered-harmful/">вы не должны использовать массив в качестве ассоциативного массива</a>. В любом случае, вместо него вы можете использовать простые {{jsxref("Global_Objects/Object", "объекты")}}, хотя у них есть и свои подводные камни. Смотрите пост <a class="external" href="http://www.less-broken.com/blog/2010/12/lightweight-javascript-dictionaries.html">Легковесные JavaScript-словари с произвольными ключами</a><em>(англ.)</em> в качестве примера.</p>
 
-<h3 id="Accessing_array_elements" name="Accessing_array_elements">Доступ к элементам массива</h3>
+<h3 id="Accessing_array_elements">Доступ к элементам массива</h3>
 
 <p>Массивы в JavaScript индексируются с нуля: первый элемент массива имеет индекс, равный <code>0</code>, а индекс последнего элемента равен значению свойства массива {{jsxref("Array.length", "length")}} минус 1.</p>
 
@@ -163,7 +163,7 @@ renderer['3d'].setTexture(model, 'character.png');  // работает как �
 console.log(promise['array']);
 </pre>
 
-<h3 id="Relationship_between_length_and_numerical_properties" name="Relationship_between_length_and_numerical_properties">Взаимосвязь свойства <code>length</code> с числовыми свойствами</h3>
+<h3 id="Relationship_between_length_and_numerical_properties">Взаимосвязь свойства <code>length</code> с числовыми свойствами</h3>
 
 <p>Свойство массивов {{jsxref("Array.length", "length")}} взаимосвязано с числовыми свойствами. Некоторые встроенные методы массива (например, {{jsxref("Array.join", "join")}}, {{jsxref("Array.slice", "slice")}}, {{jsxref("Array.indexOf", "indexOf")}} и т.д.) учитывают значение свойства <code>length</code> при своём вызове. Другие методы (например, {{jsxref("Array.push", "push")}}, {{jsxref("Array.splice", "splice")}} и т.д.) в результате своей работы также обновляют свойство <code>length</code> массива.</p>
 
@@ -197,7 +197,7 @@ console.log(fruits.length); // 2
 
 <p>Более подробно эта тема освещена на странице, посвящённой свойству {{jsxref("Array.length")}}.</p>
 
-<h3 id="Creating_an_array_using_the_result_of_a_match" name="Creating_an_array_using_the_result_of_a_match">Создание массива с использованием результата сопоставления</h3>
+<h3 id="Creating_an_array_using_the_result_of_a_match">Создание массива с использованием результата сопоставления</h3>
 
 <p>Результатом сопоставления регулярного выражения строке является JavaScript-массив. Этот массив имеет свойства и элементы, предоставляющие информацию о сопоставлении. Подобные массивы возвращаются методами {{jsxref("RegExp.exec")}}, {{jsxref("String.match")}} и {{jsxref("String.replace")}}. Чтобы было проще понять, откуда и какие появились свойства и элементы, посмотрите следующий пример и обратитесь к таблице ниже:</p>
 
@@ -243,7 +243,7 @@ var myArray = myRe.exec('cdbBdbsbz');
  </tbody>
 </table>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt>{{jsxref("Array.length")}}</dt>
@@ -252,7 +252,7 @@ var myArray = myRe.exec('cdbBdbsbz');
  <dd>Позволяет добавлять свойства ко всем объектам массива.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <dl>
  <dt>{{jsxref("Array.from()")}} {{experimental_inline}}</dt>
@@ -265,29 +265,29 @@ var myArray = myRe.exec('cdbBdbsbz');
  <dd>Создаёт новый экземпляр <code>Array</code> из любого количества аргументов, независимо от их количества или типа.</dd>
 </dl>
 
-<h2 id="Array_instances" name="Array_instances">Экземпляры массива</h2>
+<h2 id="Array_instances">Экземпляры массива</h2>
 
 <p>Все экземпляры массива наследуются от {{jsxref("Array.prototype")}}. Изменения в объекте прототипа конструктора массива затронет все экземпляры <code>Array</code>.</p>
 
-<h3 id="Methods_of_array_instances" name="Methods_of_array_instances">Свойства</h3>
+<h3 id="Methods_of_array_instances">Свойства</h3>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype', 'Properties')}}</div>
 
-<h3 id="Methods_of_array_instances" name="Methods_of_array_instances">Методы</h3>
+<h3 id="Methods_of_array_instances">Методы</h3>
 
-<h4 id="Mutator_methods" name="Mutator_methods">Методы изменения</h4>
+<h4 id="Mutator_methods">Методы изменения</h4>
 
 <div>{{page('ru/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype', 'Mutator_methods')}}</div>
 
-<h4 id="Accessor_methods" name="Accessor_methods">Методы доступа</h4>
+<h4 id="Accessor_methods">Методы доступа</h4>
 
 <div>{{page('ru/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype', 'Accessor_methods')}}</div>
 
-<h4 id="Iteration_methods" name="Iteration_methods">Методы обхода</h4>
+<h4 id="Iteration_methods">Методы обхода</h4>
 
 <div>{{page('ru/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype', 'Iteration_methods')}}</div>
 
-<h2 id="Array_generic_methods" name="Array_generic_methods">Общие методы массива</h2>
+<h2 id="Array_generic_methods">Общие методы массива</h2>
 
 <p>Иногда хочется применить методы массива к строкам или другим массивоподобным объектам (например, к {{jsxref("Functions_and_function_scope/arguments", "аргументам", "", 1)}} функции). Делая это, вы трактуете строку как массив символов (другими словами, рассматриваете не-массив в качестве массива). Например, в порядке проверки каждого символа в переменной <var>str</var> на то, что он является буквой (латинского алфавита), вы пишете следующий код:</p>
 
@@ -345,9 +345,9 @@ if (Array.prototype.every.call(str, isLetter)) {
 }());
 </pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Creating_an_array" name="Example:_Creating_an_array">Пример: создание массива</h3>
+<h3 id="Example:_Creating_an_array">Пример: создание массива</h3>
 
 <p>Следующий пример создаёт массив <code>msgArray</code> с длиной 0, присваивает значения элементам <code>msgArray[0]</code> и <code>msgArray[99]</code>, что изменяет длину массива на 100.</p>
 
@@ -360,7 +360,7 @@ if (msgArray.length === 100) {
 }
 </pre>
 
-<h3 id="Example.3A_Creating_a_two-dimensional_array" name="Example.3A_Creating_a_two-dimensional_array">Пример: создание двумерного массива</h3>
+<h3 id="Example.3A_Creating_a_two-dimensional_array">Пример: создание двумерного массива</h3>
 
 <p>Следующий код создаёт шахматную доску в виде двумерного массива строк. Затем он перемещает пешку путём копирования символа 'p' в позиции (6,4) на позицию (4,4). Старая позиция (6,4) затирается пустым местом.</p>
 
@@ -403,45 +403,17 @@ p,p,p,p, ,p,p,p
 r,n,b,q,k,b,n,r
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4', 'Array')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Добавлены новые методы: {{jsxref("Array.isArray")}}, {{jsxref("Array.prototype.indexOf", "indexOf")}}, {{jsxref("Array.prototype.lastIndexOf", "lastIndexOf")}}, {{jsxref("Array.prototype.every", "every")}}, {{jsxref("Array.prototype.some", "some")}}, {{jsxref("Array.prototype.forEach", "forEach")}}, {{jsxref("Array.prototype.map", "map")}}, {{jsxref("Array.prototype.filter", "filter")}}, {{jsxref("Array.prototype.reduce", "reduce")}}, {{jsxref("Array.prototype.reduceRight", "reduceRight")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-array-objects', 'Array')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Добавлены новые методы: {{jsxref("Array.from")}}, {{jsxref("Array.of")}}, {{jsxref("Array.prototype.find", "find")}}, {{jsxref("Array.prototype.findIndex", "findIndex")}}, {{jsxref("Array.prototype.fill", "fill")}}, {{jsxref("Array.prototype.copyWithin", "copyWithin")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES7', '#sec-array-objects', 'Array')}}</td>
-   <td>{{Spec2('ES7')}}</td>
-   <td>Добавлен новый метод: {{jsxref("Array.prototype.includes()")}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Поддержка браузерами</h2>
+<h2 id="Browser_compatibility">Поддержка браузерами</h2>
 
-<p>{{Compat("javascript.builtins.Array")}}</p>
+<p>{{Compat}}</p>
 
 <div> </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/docs/Web/JavaScript/Guide_ru/Working_with_Objects#.D0.98.D0.BD.D0.B4.D0.B5.D0.BA.D1.81.D1.8B_.D1.81.D0.B2.D0.BE.D0.B9.D1.81.D1.82.D0.B2_.D0.BE.D0.B1.D1.8A.D0.B5.D0.BA.D1.82.D0.B0">Руководство JavaScript: «Индексирование объекта свойствами»</a></li>

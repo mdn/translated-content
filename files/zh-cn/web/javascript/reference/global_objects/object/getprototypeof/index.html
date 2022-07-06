@@ -17,21 +17,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 <pre class="syntaxbox"><code>Object.getPrototypeOf(<em>object</em>)</code>
 </pre>
 
-<dl>
- <dt>
- <h3 id="参数">参数</h3>
- </dt>
- <dt><code>obj</code></dt>
- <dd>要返回其原型的对象。</dd>
- <dt>
- <h3 id="返回值">返回值</h3>
- </dt>
- <dd>给定对象的原型。如果没有继承属性，则返回 {{jsxref("null")}} 。</dd>
-</dl>
+<h3 id="参数">参数<code>obj</code></h3>
+
+<p>要返回其原型的对象。</p>
+
+<h3 id="返回值">返回值</h3>
+
+<p>给定对象的原型。如果没有继承属性，则返回 {{jsxref("null")}} 。</p>
 
 <p>{{EmbedInteractiveExample("pages/js/object-getprototypeof.html")}}</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <pre class="brush: js">var proto = {};
 var obj = Object.create(proto);
@@ -43,11 +39,13 @@ Object.getPrototypeOf(reg) === RegExp.prototype; // true</pre>
 <h3 id="说明">说明</h3>
 
 <div class="note">
-<p><strong>Object.getPrototypeOf(Object)  不是  Object.prototype</strong></p>
+<p><strong>备注：</strong></p>
 </div>
 
-<pre class="brush: js">JavaScript中的 <strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> 是构造函数（创建对象的包装器）。
-一般用法是：
+JavaScript 中的 <strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> 是构造函数（创建对象的包装器）。
+
+<pre class="brush: js">
+// 一般用法是：
 var obj = new Object();
 
 所以：
@@ -56,39 +54,25 @@ Object.getPrototypeOf( Function );             // ƒ () { [native code] }
 
 Object.getPrototypeOf( Object ) === Function.prototype;        // true
 
-Object.getPrototypeOf( Object )是把Object这一构造函数看作对象，
+Object.getPrototypeOf( Object ) 是把 Object 这一构造函数看作对象，
 返回的当然是函数对象的原型，也就是 Function.prototype。
 
-正确的方法是，Object.prototype是<strong>构造出来的对象的原型</strong>。
+正确的方法是，Object.prototype 是<strong>构造出来的对象的原型</strong>。
 var obj = new Object();
 Object.prototype === Object.getPrototypeOf( obj );              // true
 
 Object.prototype === Object.getPrototypeOf( {} );               // true</pre>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"> </div>
+<h2 id="Notes">Notes</h2>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 19px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 38px; background: 0px 0px;"> </div>
-
-<h2 id="Notes" name="Notes">Notes</h2>
-
-<p>在 ES5 中，如果参数不是一个对象类型，将抛出一个{{jsxref("TypeError")}}异常。在 ES2015 中，参数会被强制转换为一个 {{jsxref("Object")}}<strong style="font-weight: bold;">。</strong></p>
+<p>在 ES5 中，如果参数不是一个对象类型，将抛出一个{{jsxref("TypeError")}}异常。在 ES2015 中，参数会被强制转换为一个 {{jsxref("Object")}}<strong>。</strong></p>
 
 <pre class="brush: js">Object.getPrototypeOf('foo');
 // TypeError: "foo" is not an object (ES5 code)
 Object.getPrototypeOf('foo');
 // String.prototype                  (ES2015 code)</pre>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 19px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 38px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 57px; background: 0px 0px;"> </div>
-
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -121,15 +105,15 @@ Object.getPrototypeOf('foo');
 
 <h2 id="Opera_特别提示">Opera 特别提示</h2>
 
-<p>即使旧版本Opera不支持<code>Object.getPrototypeOf()</code>，Opera 10.50之后还支持非标准的 {{jsxref("Object.proto", "__proto__")}}属性。</p>
+<p>即使旧版本 Opera 不支持<code>Object.getPrototypeOf()</code>，Opera 10.50 之后还支持非标准的 {{jsxref("Object.proto", "__proto__")}}属性。</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Object.prototype.isPrototypeOf")}}</li>
  <li>{{jsxref("Object.setPrototypeOf()")}}</li>
  <li>{{jsxref("Object.prototype.__proto__")}}</li>
- <li>John Resig's post on <a class="external external-icon" href="http://ejohn.org/blog/objectgetprototypeof/" style="white-space: pre-line;" title="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a></li>
+ <li>John Resig's post on <a class="external external-icon" href="http://ejohn.org/blog/objectgetprototypeof/" title="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a></li>
  <li>{{jsxref("Reflect.getPrototypeOf()")}}</li>
  <li>{{jsxref("AsyncFunction")}}</li>
 </ul>

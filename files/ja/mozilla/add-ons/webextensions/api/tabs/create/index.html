@@ -7,7 +7,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/create
 
 <p>新しいタブを作ります。</p>
 
-<p>これは<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>を返す非同期関数です.</p>
+<p>これは<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>を返す非同期関数です.</p>
 
 <h2 id="構文">構文</h2>
 
@@ -26,13 +26,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/create
   <dt><code>active</code>{{optional_inline}}</dt>
   <dd>タブをアクティブにするかどうかを<code>真理値</code>で指定します。ウィンドウがフォーカスされているかには影響されません({{WebExtAPIRef('windows.update')}}も参照)。デフォルト値は<code>true</code>.</dd>
   <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
-  <dd><code>文字列</code> 。タブのcookie store IDが<code>cookieStoreId</code>のタブを作るときに使用します。このオプションは拡張機能が<code>"cookies"</code> <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>を持つときのみ使用できます。</dd>
+  <dd><code>文字列</code> 。タブのcookie store IDが<code>cookieStoreId</code>のタブを作るときに使用します。このオプションは拡張機能が<code>"cookies"</code> <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>を持つときのみ使用できます。</dd>
   <dt><code>index</code>{{optional_inline}}</dt>
   <dd><code>整数値</code>。ウィンドウ中のタブの位置を指定します。数値はゼロからウィンドウ内のタブの数までです。</dd>
   <dt><code>openerTabId</code>{{optional_inline}}</dt>
   <dd><code>整数値</code>。開くタブのIDを指定します。指定した場合、開く側のタブは新しいタブと同じウィンドウにある必要があります。</dd>
   <dt><code>openInReaderMode</code>{{optional_inline}}</dt>
-  <dd><code>真理値</code>。もし<code>true</code>であれば<a href="/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode">リーダーモード</a>で開かれます。 デフォルトは<code>false</code>。</dd>
+  <dd><code>真理値</code>。もし<code>true</code>であれば<a href="/ja/Add-ons/WebExtensions/API/tabs/toggleReaderMode">リーダーモード</a>で開かれます。 デフォルトは<code>false</code>。</dd>
   <dt><code>pinned</code>{{optional_inline}}</dt>
   <dd><code>真理値</code>。タブをピン留めするかを指定します。デフォルトは<code>false</code>。</dd>
   <dt><code>selected</code>{{optional_inline}}</dt>
@@ -63,7 +63,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/create
 
 <h3 id="返り値">返り値</h3>
 
-<p>新しく作ったタブに関する{{WebExtAPIRef('tabs.Tab')}}オブジェクトを引数に持つ<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>が返されます。URLが特権URLであるなどして、タブが作られなかった場合はpromiseはエラーメッセージとともにrejectされます。</p>
+<p>新しく作ったタブに関する{{WebExtAPIRef('tabs.Tab')}}オブジェクトを引数に持つ<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>が返されます。URLが特権URLであるなどして、タブが作られなかった場合はpromiseはエラーメッセージとともにrejectされます。</p>
 
 <h2 id="ブラウザー互換状況">ブラウザー互換状況</h2>
 

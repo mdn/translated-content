@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 
 <p>Поскольку каждое значение в <code>Set</code> должно быть уникальным, сравнение значений основано на алгоритме "подобное значение": <code>NaN</code> равно <code>NaN</code> (несмотря на то, что <code>NaN !== NaN</code>); все другие значения рассматриваются равными исходя из семантики оператора строго равенства ===. В ранних версиях черновика ECMAScript 6 <code>-0</code> и <code>+0</code> считались разными (несмотря на то, что <code>-0 === +0</code>), это было изменено в последующих версиях и адаптировано в Gecko 29 {{geckoRelease("29")}} ({{bug("952870")}}) и <a href="https://code.google.com/p/v8/issues/detail?id=3069">последней ночной сборке Chrome</a>. <code>NaN</code> и <code>undefined</code> также могут сохраняться в <code>Set</code>.</p>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt><code>Set.length</code></dt>
@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
  <dd>Представляет прототип конструктора <code>Set</code>. Позволяет добавлять свойства всем объектам типа <code>Set</code>.</dd>
 </dl>
 
-<h2 id="Set_instances" name="Set_instances">Экземпляры <code>Set</code></h2>
+<h2 id="Set_instances">Экземпляры <code>Set</code></h2>
 
 <p>Все экземпляры <code>Set</code> унаследованы от {{jsxref("Set.prototype")}}.</p>
 
@@ -209,29 +209,11 @@ mySet.size;  // 5</code>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-set-objects', 'Set')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set-objects', 'Set')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.Set")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

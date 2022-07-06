@@ -1,0 +1,61 @@
+---
+title: MutationObserverInit
+slug: conflicting/Web/API/MutationObserver/observe_2f2addbfa1019c23a6255648d6526387
+tags:
+  - API
+  - DOM
+  - MutationObserver
+translation_of: Web/API/MutationObserverInit
+original_slug: Web/API/MutationObserverInit
+---
+<div>{{APIRef("DOM WHATWG")}}</div>
+
+<p><span class="seoSummary"><strong><code>MutationObserverInit</code></strong> 字典描述了 <code>MutationObserver</code> 的配置。因此，它主要被用作 {{domxref("MutationObserver.observe()")}} 方法的参数类型。</span></p>
+
+<h2 id="属性">属性</h2>
+
+<p>当调用 {{domxref("MutationObserver.observe", "observe()")}} 方法时，<code>childList</code>，<code>attributes</code> 或者 <code>characterData</code> 三个属性之中，至少有一个必须为 <code>true</code>，否则会抛出 <code>TypeError</code> 异常。</p>
+
+<dl>
+ <dt>{{domxref("MutationObserverInit.attributeFilter", "attributeFilter")}} {{optional_inline}}</dt>
+ <dd>要监视的特定属性名称的数组。如果未包含此属性，则对所有属性的更改都会触发变动通知。无默认值。</dd>
+ <dt>{{domxref("MutationObserverInit.attributeOldValue", "attributeOldValue")}} {{optional_inline}}</dt>
+ <dd>当监视节点的属性改动时，将此属性设为 <code>true</code> 将记录任何有改动的属性的上一个值。有关观察属性更改和值记录的详细信息，详见{{SectionOnPage("/en-US/docs/Web/API/MutationObserver", "Monitoring attribute values")}}。无默认值。</dd>
+ <dt>{{domxref("MutationObserverInit.attributes", "attributes")}} {{optional_inline}}</dt>
+ <dd>设为 <code>true</code> 以观察受监视元素的属性值变更。默认值为 <code>false</code>。</dd>
+ <dt>{{domxref("MutationObserverInit.characterData", "characterData")}} {{optional_inline}}</dt>
+ <dd>设为 <code>true</code> 以监视指定目标节点或子节点树中节点所包含的字符数据的变化。无默认值。</dd>
+ <dt>{{domxref("MutationObserverInit.characterDataOldValue", "characterDataOldValue")}} {{optional_inline}}</dt>
+ <dd>设为 <code>true</code> 以在文本在受监视节点上发生更改时记录节点文本的先前值。详情及例子，请查看 {{SectionOnPage("/zh-CN/docs/Web/API/MutationObserver", "Monitoring text content changes")}}。无默认值。</dd>
+ <dt>{{domxref("MutationObserverInit.childList", "childList")}} {{optional_inline}}</dt>
+ <dd>设为 <code>true</code> 以监视目标节点（如果 <code>subtree</code> 为 <code>true</code>，则包含子孙节点）添加或删除新的子节点。默认值为 <code>false</code>。</dd>
+ <dt>{{domxref("MutationObserverInit.subtree", "subtree")}} {{optional_inline}}</dt>
+ <dd>设为 <code>true</code> 以将监视范围扩展至目标节点整个节点树中的所有节点。<code>MutationObserverInit</code> 的其他值也会作用于此子树下的所有节点，而不仅仅只作用于目标节点。默认值为 <code>false</code>。</dd>
+</dl>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">批注</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dictdef-mutationobserverinit', 'MutationObserverInit')}}</td>
+   <td>{{ Spec2('DOM WHATWG') }}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<div>
+
+
+<p>{{Compat("api.MutationObserverInit")}}</p>
+</div>

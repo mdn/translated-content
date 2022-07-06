@@ -12,15 +12,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>toLocaleString()</code></strong> возвращает строку с языкозависимым представлением даты. Новые аргументы <code>locales</code> и <code>options</code> позволяют приложениям определять язык, чьи соглашения по форматированию должны использоваться, а также менять поведение этого метода. В старых реализациях, игнорирующих аргументы <code>locales</code> и <code>options</code>, используемая локаль и форма возвращённой строки целиком зависит от реализации.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>dateObj</var>.toLocaleString([<var>locales</var>[, <var>options</var>]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <p>Проверьте раздел <a href="#Browser_compatibility">Совместимость с браузерами</a>, чтобы увидеть, какие браузеры поддерживают аргументы <code>locales</code> и <code>options</code>, и <a href="#Example:_Checking_for_support_for_locales_and_options_arguments">Пример: проверка поддержки аргументов <code>locales</code> и <code>options</code></a> для определения этой возможности.</p>
 
@@ -28,9 +28,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 
 <p>Значением по умолчанию для каждой компоненты даты-времени является {{jsxref("Global_Objects/undefined", "undefined")}}, однако, если все свойства <code>weekday</code>, <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code> и <code>second</code> равны {{jsxref("Global_Objects/undefined", "undefined")}}, то их значения предполагаются равными <code>"numeric"</code>.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_toLocaleString" name="Example:_Using_toLocaleString">Пример: использование метода <code>toLocaleString()</code></h3>
+<h3 id="Example:_Using_toLocaleString">Пример: использование метода <code>toLocaleString()</code></h3>
 
 <p>При базовом использовании без указания локали возвращается строка, отформатированная в соответствии с локалью и опциями по умолчанию.</p>
 
@@ -42,7 +42,7 @@ console.log(date.toLocaleString());
 // → "12/11/2012, 7:00:00 PM", если код запущен с локалью en-US и часовым поясом America/Los_Angeles
 </pre>
 
-<h3 id="Example:_Checking_for_support_for_locales_and_options_arguments" name="Example:_Checking_for_support_for_locales_and_options_arguments">Пример: проверка поддержки аргументов <code>locales</code> и <code>options</code></h3>
+<h3 id="Example:_Checking_for_support_for_locales_and_options_arguments">Пример: проверка поддержки аргументов <code>locales</code> и <code>options</code></h3>
 
 <p>Аргументы <code>locales</code> и <code>options</code> поддерживаются ещё не всеми браузерами. Для проверки того, поддерживает ли их уже реализация, можно затребовать несуществующую метку языка и проверить, будет ли выброшено исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}:</p>
 
@@ -56,7 +56,7 @@ console.log(date.toLocaleString());
 }
 </pre>
 
-<h3 id="Example:_Using_locales" name="Example:_Using_locales">Пример: использование аргумента <code>locales</code></h3>
+<h3 id="Example:_Using_locales">Пример: использование аргумента <code>locales</code></h3>
 
 <p>Этот пример показывает некоторые локализованные форматы даты и времени. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент <code>locales</code>:</p>
 
@@ -95,7 +95,7 @@ console.log(date.toLocaleString(['ban', 'id']));
 // → "20/12/2012 11.00.00"
 </pre>
 
-<h3 id="Example:_Using_options" name="Example:_Using_options">Пример: использование аргумента <code>options</code></h3>
+<h3 id="Example:_Using_options">Пример: использование аргумента <code>options</code></h3>
 
 <p>Результат, предоставляемый методом <code>toLocaleString()</code>, может быть настроен с помощью аргумента <code>options</code>:</p>
 
@@ -117,47 +117,19 @@ console.log(date.toLocaleString('en-US', { hour12: false }));
 // → "12/19/2012, 19:00:00"
 </pre>
 
-<h2 id="Performance" name="Performance">Производительность</h2>
+<h2 id="Performance">Производительность</h2>
 
 <p>При форматировании большого количества дат лучшим вариантом будет создание объекта {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} и использование функции, предоставляемой его свойством {{jsxref("DateTimeFormat.prototype.format", "format")}}.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', 'sec-15.9.5.5', 'Date.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 1.0', '#sec-13.3.1', 'Date.prototype.toLocaleDateString')}}</td>
-   <td>{{Spec2('ES Int 1.0')}}</td>
-   <td>Определяет аргументы <code>locales</code> и <code>options</code>.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</li>

@@ -1,0 +1,127 @@
+---
+title: CSS счётчики
+slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
+tags:
+  - CSS
+  - CSS счётчики
+  - вложенные счётчики
+translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+---
+<div>{{CSSRef}}</div>
+
+<p>CSS счётчики, в своей сущности, переменные CSS, значения которых могут быть инкрементированы при помощи CSS для отслеживания количества их использования. Они позволяют регулировать внешний вид контента, основываясь на его местоположении в документе. CSS счётчики реализованы в CSS 2.1 (<a href="https://www.w3.org/TR/CSS21/generate.html#counters">ссылка на спецификацию</a>).</p>
+
+<p>Значение счётчика сбрасывается (инициализируется) при помощи {{cssxref("counter-reset")}}. </p>
+
+<p>{{cssxref("counter-increment")}} может быть отображён на странице, используя функцию <code>counter() или counters() в свойстве </code>{{cssxref("content")}}.</p>
+
+<h2 id="Использование_счётчиков">Использование счётчиков</h2>
+
+<p>Для того, чтобы использовать CSS счётчики, сначала необходимо сбросить их значение (0 по умолчанию). Для того, чтобы отобразить значение счётчика - используйте функцию <code>counter(). Следующий пример прибавляет в начале каждого h3 элемента </code>"Section &lt;<em>значение счётчика</em>&gt;:".</p>
+
+<pre class="brush: css">body {
+  counter-reset: section;                     /* Устанавливает значение
+                                                 счётчика, равным 0 */
+}
+
+h3::before {
+  counter-increment: section;                 /* Инкрементирует счётчик*/
+  content: "Секция " counter(section) ": ";   /* Отображает текущее
+                                                 значение счётчика */
+}
+</pre>
+
+<p>Пример:</p>
+
+<pre class="brush: html">&lt;h3&gt;Вступление&lt;/h3&gt;
+&lt;h3&gt;Основная часть&lt;/h3&gt;
+&lt;h3&gt;Заключение&lt;/h3&gt;</pre>
+
+<p>{{EmbedLiveSample("Использование_счётчиков", 200, 150)}}</p>
+
+<h2 id="Вложенные_счётчики">Вложенные счётчики</h2>
+
+<p>CSS счётчики могут быть очень полезны для создания нумерованных списков, потому что новая сущность CSS счётчика автоматически создаётся в дочерних элементах. Используя функцию <code>counters(), можно вставить строку между разными уровнями вложенных счётчиков. Пример:</code></p>
+
+<pre class="brush: css">ol {
+  counter-reset: section;           /*Создаёт новый счётчик для каждого
+                                      тега &lt;ol&gt;*/
+  list-style-type: none;
+}
+
+li::before {
+  counter-increment: section;      /*Инкрементируется только счётчик
+                                     текущего уровня вложенности*/
+  content: counters(section,".") " ";/*Добавляем значения всех уровней
+                                    вложенности, используя разделитель '.'*/
+                                   /*Если необходима поддержка &lt; IE8,
+                                      необходимо убедиться, что после
+                                      разделителя ('.') не стоит пробел*/
+}
+</pre>
+
+<p>Объединим с данным HTML:</p>
+
+<pre class="brush: html">&lt;ol&gt;
+  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 1     --&gt;
+  &lt;li&gt;item               &lt;!-- 2     --&gt;
+    &lt;ol&gt;
+      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.1   --&gt;
+      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.2   --&gt;
+      &lt;li&gt;item           &lt;!-- 2.3   --&gt;
+        &lt;ol&gt;
+          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.1 --&gt;
+          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.2 --&gt;
+        &lt;/ol&gt;
+        &lt;ol&gt;
+          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.1 --&gt;
+          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.2 --&gt;
+          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.3 --&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.4   --&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 3     --&gt;
+  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 4     --&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 1     --&gt;
+  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 2     --&gt;
+&lt;/ol&gt;</pre>
+
+<p>Результат:</p>
+
+<p>{{EmbedLiveSample("Вложенные_счётчики", 250, 350)}}</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Specification</th>
+      <th>Status</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("CSS3 Lists", "#auto-numbering", "CSS Counters")}}</td>
+      <td>{{Spec2("CSS3 Lists")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>{{SpecName("CSS2.1", "generate.html#counters", "CSS Counters")}}</td>
+      <td>{{Spec2("CSS2.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{cssxref("counter-reset")}}</li>
+ <li>{{cssxref("counter-increment")}}</li>
+</ul>

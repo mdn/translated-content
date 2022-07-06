@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
+<pre class="syntaxbox">const <var>p</var> = new Proxy(<var>target</var>, {
   apply: function(<var>target</var>, <var>thisArg</var>, <var>argumentsList</var>) {
   }
 });
@@ -66,7 +66,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 
 <p>Следующий код ловит вызов функции.</p>
 
-<pre class="brush: js notranslate">const p = new Proxy(function() {}, {
+<pre class="brush: js">const p = new Proxy(function() {}, {
   apply: function(target, thisArg, argumentsList) {
     console.log('called: ' + argumentsList.join(', '));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
@@ -79,18 +79,7 @@ console.log(p(1, 2, 3)); // "called: 1, 2, 3"
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-call-thisargument-argumentslist', '[[Call]]')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 

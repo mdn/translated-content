@@ -972,7 +972,7 @@ translation_of: Web/CSS/color_value
  </tbody>
 </table>
 
-<h3 id="Прозрачное_ключевое_слово"><code><a name="transparent">Прозрачное</a></code> ключевое слово</h3>
+<h3 id="Прозрачное_ключевое_слово"><code><a>Прозрачное</a></code> ключевое слово</h3>
 
 <p>Ключевое слово <code>transparent</code> представляет собой полностью прозрачный цвет. Это делает фон позади цветного элемента полностью видимым. Технически <code>transparent </code>- это ярлык для <code>rgba (0,0,0,0)</code>.</p>
 
@@ -984,7 +984,7 @@ translation_of: Web/CSS/color_value
 <p><strong>Историческая запись:</strong> <code>transparent</code> не был истинным цветом на уровне CSS 2 (Редакция 1). Это было специальное ключевое слово, которое можно было использовать вместо обычного значения <code>&lt;color&gt;</code> для двух свойств CSS: {{Cssxref("background")}} и {{Cssxref("border")}}. Он был существенно добавлен, чтобы позволить разработчикам переопределить унаследованный сплошной цвет. С появлением Альфа-каналов в CSS Colors Level 3, <code>transparent </code>был переопределён как истинный цвет. Теперь его можно использовать везде, где можно использовать значение <code>&lt;color&gt;</code>.</p>
 </div>
 
-<h3 id="currentColor_ключевое_слово"><code><a id="currentColor" name="currentColor">currentColor</a></code> ключевое слово</h3>
+<h3 id="currentColor_ключевое_слово"><code><a id="currentColor">currentColor</a></code> ключевое слово</h3>
 
 <p>Ключевое слово <code>currentColor</code> представляет значение свойства элемента {{Cssxref("color")}}. Это позволяет использовать значение <code>color</code> для свойств, которые не получают его по умолчанию.</p>
 
@@ -992,13 +992,13 @@ translation_of: Web/CSS/color_value
 
 <h4 id="currentColor_пример">currentColor пример</h4>
 
-<pre class="brush: html notranslate">&lt;div style="color:blue; border: 1px dashed currentColor;"&gt;
+<pre class="brush: html">&lt;div style="color:blue; border: 1px dashed currentColor;"&gt;
   Цвет текста-синий.
   &lt;div style="background:currentColor; height:9px;"&gt;&lt;/div&gt;
   This block is surrounded by a blue border.
 &lt;/div&gt;</pre>
 
-<p>{{EmbedLiveSample("currentColor_example")}}</p>
+<p>{{EmbedLiveSample("currentColor_пример")}}</p>
 
 <h3 id="RGB_цвет">RGB цвет</h3>
 
@@ -1029,7 +1029,7 @@ translation_of: Web/CSS/color_value
 
 <p>В этом примере показано множество способов создания одного цвета с помощью различных цветовых синтаксисов RGB.</p>
 
-<pre class="notranslate">/* Все эти варианты синтаксиса задают один и тот же цвет: полностью непрозрачный ярко-розовый. */
+<pre>/* Все эти варианты синтаксиса задают один и тот же цвет: полностью непрозрачный ярко-розовый. */
 
 /* Шестнадцатеричный синтаксис */
 #f09
@@ -1067,7 +1067,7 @@ rgb(1e2, .5e1, .5e0, +.25e2%)
 
 <h5 id="RGB_вариации_прозрачности">RGB вариации прозрачности</h5>
 
-<pre class="notranslate">/* Шестнадцатеричный синтаксис */
+<pre>/* Шестнадцатеричный синтаксис */
 #3a30                   <span style="background: #3a30;"> /*   0% непрозрачный зелёный цвет */ </span>
 #3A3F                   <span style="background: #3A3F;"> /* полный непрозрачный зелёный цвет */ </span>
 #33aa3300               <span style="background: #33aa3300;"> /*   0% непрозрачный зелёный цвет */ </span>
@@ -1506,7 +1506,7 @@ hsla(240 100% 50% / 5%)      <span style="background: hsla(240,100%,50%,0.05);">
 </table>
 
 <h2 id="Совместимость_браузера">Совместимость браузера</h2>
-<p>{{Compat("css.properties.color")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотреть_также">Смотреть также</h2>
 

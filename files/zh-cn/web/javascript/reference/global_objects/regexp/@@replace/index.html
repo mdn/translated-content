@@ -40,15 +40,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
 
 /a/[Symbol.replace]('abc', 'A');</pre>
 
-<p>该方法是为了在RegExp子类中自定义匹配的替换模式。</p>
+<p>该方法是为了在 RegExp 子类中自定义匹配的替换模式。</p>
 
-<p>如果匹配模式不是一个{{jsxref("RegExp")}} 对象, {{jsxref("String.prototype.replace()")}} 就不会调用该方法，也不会创建一个 {{jsxref("RegExp")}}对象。</p>
+<p>如果匹配模式不是一个{{jsxref("RegExp")}} 对象，{{jsxref("String.prototype.replace()")}} 就不会调用该方法，也不会创建一个 {{jsxref("RegExp")}}对象。</p>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="直接调用">直接调用</h3>
 
-<p>这个方法基本可以和 {{jsxref("String.prototype.replace()")}} 一样使用, 不同之处是 <code>this</code> 和参数顺序。</p>
+<p>这个方法基本可以和 {{jsxref("String.prototype.replace()")}} 一样使用，不同之处是 <code>this</code> 和参数顺序。</p>
 
 <pre class="brush: js">var re = /-/g;
 var str = '2016-01-01';
@@ -56,7 +56,7 @@ var newstr = re[Symbol.replace](str, '.');
 console.log(newstr);  // 2016.01.01
 </pre>
 
-<h3 id="在子类中使用replace">在子类中使用@@replace</h3>
+<h3 id="在子类中使用_replace">在子类中使用 @@replace</h3>
 
 <p>{{jsxref("RegExp")}} 的子类可以覆写 <code>[@@replace]()</code>方法来修改默认行为。</p>
 

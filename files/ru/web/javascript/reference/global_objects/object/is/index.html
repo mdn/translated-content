@@ -12,15 +12,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 ---
 <div>{{JSRef("Global_Objects", "Object")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <code><strong>Object.is()</strong></code> определяет, являются ли два значения <a href="/ru/docs/Web/JavaScript/Guide/Sameness">одинаковыми значениями</a>.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>var <var>isSame</var> = Object.is(<var>value1</var>, <var>value2</var>);</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>value1</code></dt>
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
  <dd>Второе сравниваемое значение.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>Object.is()</code> определяет, являются ли два значения <a href="/ru/docs/Web/JavaScript/Guide/Sameness">одинаковыми значениями</a>. Два значения являются одинаковыми в следующих случаях:</p>
 
@@ -53,7 +53,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 
 <p>Поведение этого метода <em>не</em> аналогично оператору {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}. Оператор {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} (также как и оператор {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}) считает числовые значения <code>-0</code> и <code>+0</code> равными, а значение {{jsxref("Number.NaN")}} не равным самому себе.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <pre class="brush: js">Object.is('foo', 'foo');     // true
 Object.is(window, window);   // true
@@ -72,7 +72,7 @@ Object.is(-0, -0);           // true
 Object.is(NaN, 0/0);         // true
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Метод <code>Object.is</code> предложен в дополнение к стандарту ECMA-262; поэтому он может быть недоступен в некоторых браузерах. Это можно обойти, вставив приведённый ниже фрагмент кода в начало ваших скриптов. Он позволит вам использовать метод <code>Object.is</code> в случаях, когда он не имеет родной поддержки браузером.</p>
 
@@ -89,33 +89,15 @@ Object.is(NaN, 0/0);         // true
   };
 }</code></pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.is', 'Object.is')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.is', 'Object.is')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.Object.is")}}</div>
+<div>{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/docs/Web/JavaScript/Guide/Sameness">Руководство по JavaScript: одинаковость</a> — сравнение всех трёх встроенных способов проверки на одинаковость</li>

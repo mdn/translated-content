@@ -5,7 +5,7 @@ translation_of: Web/API/window/getDefaultComputedStyle
 ---
 <div>{{APIRef("CSSOM")}}{{Non-standard_header}}</div>
 
-<p><code>getDefaultComputedStyle()</code> 给出元素的所有CSS属性的默认计算值(<a href="/en-US/docs/Web/CSS/computed_value">computed values</a> )，忽略作者样式。也就是说，只考虑用户代理和用户风格。</p>
+<p><code>getDefaultComputedStyle()</code> 给出元素的所有 CSS 属性的默认计算值 (<a href="/en-US/docs/Web/CSS/computed_value">computed values</a> )，忽略作者样式。也就是说，只考虑用户代理和用户风格。</p>
 
 <h2 id="语法及参数说明">语法及参数说明</h2>
 
@@ -16,10 +16,10 @@ translation_of: Web/API/window/getDefaultComputedStyle
  <dt>element</dt>
  <dd>获取计算样式的元素</dd>
  <dt>pseudoElt {{optional_inline}}</dt>
- <dd>指定匹配的伪类. 通常情况下可以为空.</dd>
+ <dd>指定匹配的伪类。通常情况下可以为空。</dd>
 </dl>
 
-<p>返回的样式是一个 <a href="/en-US/docs/Web/API/CSSStyleDeclaration"><code>CSSStyleDeclaration</code></a> 对象.</p>
+<p>返回的样式是一个 <a href="/en-US/docs/Web/API/CSSStyleDeclaration"><code>CSSStyleDeclaration</code></a> 对象。</p>
 
 <h2 id="例子">例子</h2>
 
@@ -51,7 +51,7 @@ var style = window.getDefaultComputedStyle(elem1);
 
 <h2 id="使用伪元素">使用伪元素</h2>
 
-<p><code>getDefaultComputedStyle</code> 同样可以从伪元素中获取属性 (比如, <code>::after</code>, <code>::before</code>).</p>
+<p><code>getDefaultComputedStyle</code> 同样可以从伪元素中获取属性 (比如，<code>::after</code>, <code>::before</code>).</p>
 
 <pre class="brush: html">&lt;style&gt;
  h3:after {
@@ -79,66 +79,4 @@ var style = window.getDefaultComputedStyle(elem1);
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>19</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>pseudo-element support</td>
-   <td>{{CompatNo}}</td>
-   <td>19</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>19</td>
-   <td>7.5</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>pseudo-element support</td>
-   <td>{{CompatNo}}</td>
-   <td>19</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Window.getDefaultComputedStyle")}}

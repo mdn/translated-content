@@ -19,29 +19,29 @@ original_slug: Web/HTML/Element/ссылка
 
 <p>Чтобы подключить таблицу стилей, вы должны включить элемент <code>&lt;link&gt;</code> внутри вашего {{HTMLElement("head")}} следующим образом:</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link href="main.css" rel="stylesheet"&gt;</pre>
+<pre class="brush: html no-line-numbers">&lt;link href="main.css" rel="stylesheet"&gt;</pre>
 
 <p>В этом простом примере указывается путь к таблице стилей внутри атрибута <code>href</code> и атрибут <code>rel</code> со значением <code>stylesheet</code>. <code>rel</code> означает "отношения (relationship)", и, вероятно, является одной из ключевых особенностей элемента <code>&lt;link&gt;</code>  — значение сообщает как указанный элемент связан с  содержащим его документом. Как вы увидите в нашем справочнике <a href="/en-US/docs/Web/HTML/Link_types">типы ссылок</a>, есть много различных видов отношений.</p>
 
 <p>Существует ряд других распространённых типов, с которыми вы столкнётесь. Например, ссылка на сайт иконок:</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link rel="icon" href="favicon.ico"&gt;</pre>
+<pre class="brush: html no-line-numbers">&lt;link rel="icon" href="favicon.ico"&gt;</pre>
 
 <p>Есть ряд других значений <code>rel</code> для иконок, в основном, используемых для обозначения специальных типов иконок для использования на различных мобильных платформах, например:</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link rel="apple-touch-icon-precomposed" sizes="114x114"
+<pre class="brush: html no-line-numbers">&lt;link rel="apple-touch-icon-precomposed" sizes="114x114"
       href="apple-icon-114.png" type="image/png"&gt;</pre>
 
 <p>Атрибут <code>sizes</code> определяет размер иконки, когда <code>type</code> содержит тип MIME связанного ресурса. Они предоставляют советы, позволяющие браузеру выбрать наиболее подходящую иконку.</p>
 
 <p>Вы можете, также, указать медиа тип или запрос внутри атрибута <code>media</code>; этот ресурс будет загружен только в том случае, если media состояние равно true. Например:</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link href="print.css" rel="stylesheet" media="print"&gt;
+<pre class="brush: html no-line-numbers">&lt;link href="print.css" rel="stylesheet" media="print"&gt;
 &lt;link href="mobile.css" rel="stylesheet" media="screen and (max-width: 600px)"&gt;</pre>
 
 <p>В элемент <code>&lt;link&gt;</code> также были добавлены некоторые новые интересные возможности производительности и безопасности, к примеру:</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link rel="preload" href="myFont.woff2" as="font"
+<pre class="brush: html no-line-numbers">&lt;link rel="preload" href="myFont.woff2" as="font"
       type="font/woff2" crossorigin="anonymous"&gt;</pre>
 
 <p>Значение <code>rel</code> - <code>preload</code> указывает, что браузер должен предварительно загрузить этот ресурс (смотрите <a href="/en-US/docs/Web/HTML/Preloading_content">Предварительная загрузка контента при помощи rel="preload"</a> для более подробной информации), атрибут <code>as</code> указывает на определённый класс загружаемого контента. Атрибут <code>crossorigin</code> указывает должен ли ресурс загружаться с помощью запроса  {{Glossary("CORS")}}.</p>
@@ -180,7 +180,7 @@ original_slug: Web/HTML/Element/ссылка
 
 <p>Включение таблицы стилей на страницы имеет следующий синтаксис:</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link href="style.css" rel="stylesheet"&gt;
+<pre class="brush: html no-line-numbers">&lt;link href="style.css" rel="stylesheet"&gt;
 </pre>
 
 <h3 id="Предоставление_альтернативных_таблиц_стилей">Предоставление альтернативных таблиц стилей</h3>
@@ -189,7 +189,7 @@ original_slug: Web/HTML/Element/ссылка
 
 <p>Пользователь может выбрать, какую таблицу стилей использовать, выбрав её в меню  Вид &gt; Стиль страницы. Это позволяет пользователям видеть мультиверсию страницы.</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link href="default.css" rel="stylesheet" title="Default Style"&gt;
+<pre class="brush: html no-line-numbers">&lt;link href="default.css" rel="stylesheet" title="Default Style"&gt;
 &lt;link href="fancy.css" rel="alternate stylesheet" title="Fancy"&gt;
 &lt;link href="basic.css" rel="alternate stylesheet" title="Basic"&gt;
 </pre>
@@ -198,7 +198,7 @@ original_slug: Web/HTML/Element/ссылка
 
 <p>Вы можете включить ссылки на несколько различных иконок на одной странице, и браузер выберет, какая из них лучше подходит для его конкретного контекста, используя значения <code>rel</code> и <code>sizes</code> как подсказки.</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
+<pre class="brush: html no-line-numbers">&lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
 &lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png"&gt;
 &lt;!-- iPhone with high-resolution Retina display: --&gt;
 &lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png"&gt;
@@ -213,7 +213,7 @@ original_slug: Web/HTML/Element/ссылка
 
 <p>Вы можете предоставить тип медиа или запрос внутри атрибута <code>media</code>; этот ресурс будет загружен только в том случае, если условия медиа равно true. Например:</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link href="print.css" rel="stylesheet" media="print"&gt;
+<pre class="brush: html no-line-numbers">&lt;link href="print.css" rel="stylesheet" media="print"&gt;
 &lt;link href="mobile.css" rel="stylesheet" media="all"&gt;
 &lt;link href="desktop.css" rel="stylesheet" media="screen and (min-width: 600px)"&gt;
 &lt;link href="highres.css" rel="stylesheet" media="screen and (min-resolution: 300dpi)"&gt;
@@ -223,7 +223,7 @@ original_slug: Web/HTML/Element/ссылка
 
 <p>Вы можете определить,  когда таблица стилей была загружена, наблюдая за событием  <code>load</code>, запускающимся в нем; аналогично, вы можете обнаружить, произошла ли ошибка при обработки таблицы стилей, наблюдая за событием <code>error</code>:</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
 var myStylesheet = document.querySelector('#my-stylesheet');
 
 myStylesheet.onload = function() {
@@ -279,55 +279,13 @@ myStylesheet.onerror = function() {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">
-    <p class="syntaxbox">Комментарий</p>
-   </th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Preload")}}</td>
-   <td>{{Spec2("Preload")}}</td>
-   <td>Определены <code>&lt;link rel="preload"&gt;</code>, и атрибут<code>as</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Subresource Integrity", "#HTMLLinkElement", "lt;link&gt;")}}</td>
-   <td>{{Spec2("Subresource Integrity")}}</td>
-   <td>Добавлен атрибут <code>integrit</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "semantics.html#the-link-element", "&lt;link&gt;")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Нет изменений, в сравнении с последней версией</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "document-metadata.html#the-link-elemen", "&lt;link&gt;")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Добавлены атрибуты <code>crossorigin</code> и <code>sizes</code>; расширены значения <code>media</code> для любых медиавыражений; добавлены многочисленные новые значения для <code>rel</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML4.01", "struct/links.html#h-12.3", "&lt;link&gt;")}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Resource Hints", "#prefetch", "prefetch")}}</td>
-   <td>{{Spec2("Resource Hints")}}</td>
-   <td>Добавлены <code>dns-prefetch</code>, <code>preconnect</code>, <code>prefetch</code> и <code>prerender</code>.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
 
 
-<p>{{Compat("html.elements.link", 3)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

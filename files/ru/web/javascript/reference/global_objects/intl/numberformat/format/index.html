@@ -11,24 +11,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 ---
 <div>{{JSRef("Global_Objects", "NumberFormat", "Intl,Collator,DateTimeFormat")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Свойство <strong><code>Intl.NumberFormat.prototype.format</code></strong> возвращает функцию-геттер, форматирующую число согласно локали и параметрам форматирования соответствующего объекта {{jsxref("Global_Objects/NumberFormat", "NumberFormat")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code><var>numberFormat</var>.format(<var>number</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>number</code></dt>
  <dd>Число для форматирования.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Функция, возвращённая геттером <code>format</code>, форматирует число согласно локали и параметрам форматирования соответствующего объекта {{jsxref("Global_Objects/NumberFormat", "NumberFormat")}}.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_format" name="Example:_Using_format">Пример: использование функции <code>format</code></h3>
+<h3 id="Example_Using_format">Пример: использование функции <code>format</code></h3>
 <p>Использование функции, возвращённой геттером <code>format</code>, для форматирования одного значения валюты, здесь пример для русского языка:</p>
 <pre class="brush: js">var options = { style: 'currency', currency: 'RUB' };
 var numberFormat = new Intl.NumberFormat('ru-RU', options);
@@ -36,7 +36,7 @@ console.log(numberFormat.format(654321.987));
 // → "654 321,99 руб."
 </pre>
 
-<h3 id="Example_Using_format_with_map" name="Example:_Using_format_with_map">Пример: использование функции <code>format</code> вместе с <code>map</code></h3>
+<h3 id="Example_Using_format_with_map">Пример: использование функции <code>format</code> вместе с <code>map</code></h3>
 <p>Использование функции, возвращённой геттером <code>format</code>, для форматирования всех чисел в массиве. Обратите внимание, что функция привязана к объекту {{jsxref("Global_Objects/NumberFormat", "NumberFormat")}}, из которого она была получена, так что её можно передавать в {{jsxref("Array.prototype.map")}} напрямую.</p>
 <pre class="brush: js">var a = [123456.789, 987654.321, 456789.123];
 var numberFormat = new Intl.NumberFormat('es-ES');
@@ -45,7 +45,7 @@ console.log(formatted.join('; '));
 // → "123.456,789; 987.654,321; 456.789,123"
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -61,10 +61,10 @@ console.log(formatted.join('; '));
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("NumberFormat", "Intl.NumberFormat")}}</li>
  <li>{{jsxref("Number.prototype.toLocaleString()")}}</li>

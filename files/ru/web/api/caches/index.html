@@ -1,0 +1,62 @@
+---
+title: WindowOrWorkerGlobalScope.caches
+slug: Web/API/caches
+translation_of: Web/API/WindowOrWorkerGlobalScope/caches
+original_slug: Web/API/WindowOrWorkerGlobalScope/caches
+---
+<div>{{APIRef()}}{{SeeCompatTable}}</div>
+
+<p><code><strong>caches</strong></code> {{domxref("WindowOrWorkerGlobalScope")}}  свойство только для чтения интерфейса возвращающее  объект ассоциированный с текущим контекстом {{domxref("CacheStorage")}}.</p>
+
+<p>Этот объект реализует такую  функциональность как строгое соответствие для офлайн-использования  и генерирование пользовательских ответов на запросы.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">var <em>myCacheStorage</em> = self.caches; // or just caches
+</pre>
+
+<h3 id="Значение">Значение</h3>
+
+<p>Возвращает значение {{domxref("CacheStorage")}} .</p>
+
+<h2 id="Пример">Пример</h2>
+
+<p>Данный пример показывает как надо использовать кеш в контексте <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a> для хранения в автономном режиме</p>
+
+<pre class="brush: js">this.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open('v1').then(function(cache) {
+      return cache.addAll([
+        '/sw-test/',
+        '/sw-test/index.html',
+        '/sw-test/style.css',
+        '/sw-test/app.js',
+        '/sw-test/image-list.js',
+        '/sw-test/star-wars-logo.jpg',
+        '/sw-test/gallery/',
+        '/sw-test/gallery/bountyHunters.jpg',
+        '/sw-test/gallery/myLittleVader.jpg',
+        '/sw-test/gallery/snowTroopers.jpg'
+      ]);
+    })
+  );
+});</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+{{Specifications}}
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+
+
+<p>{{Compat}}</p>
+
+<h2 id="Также_смотрите">Также смотрите</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
+ <li>{{domxref("CacheStorage")}}</li>
+ <li>{{domxref("Cache")}}</li>
+</ul>

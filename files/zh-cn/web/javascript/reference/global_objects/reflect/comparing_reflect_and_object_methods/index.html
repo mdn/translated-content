@@ -14,9 +14,9 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_�
 ---
 <div>{{jssidebar}}</div>
 
-<p>ES2015中引入的 {{jsxref("Reflect")}} 对象是一个内置对象，提供了与JavaScript对象交互的方法。<code>Reflect</code> 上存在的一些静态函数也对应于ES2015之前的{{jsxref("Object")}}上可用的方法。尽管某些方法在行为上看似相似，但它们之间常常存在细微的差异。</p>
+<p>ES2015 中引入的 {{jsxref("Reflect")}} 对象是一个内置对象，提供了与 JavaScript 对象交互的方法。<code>Reflect</code> 上存在的一些静态函数也对应于 ES2015 之前的{{jsxref("Object")}}上可用的方法。尽管某些方法在行为上看似相似，但它们之间常常存在细微的差异。</p>
 
-<p>下表详细介绍了<code>Object</code> 和 <code>Reflect</code> API上可用方法之间的差异。请注意，如果API中不存在某种方法，则将其标记为N/A。</p>
+<p>下表详细介绍了<code>Object</code> 和 <code>Reflect</code> API 上可用方法之间的差异。请注意，如果 API 中不存在某种方法，则将其标记为 N/A。</p>
 
 <table class="standard-table">
  <thead>
@@ -83,10 +83,10 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_�
   <tr>
    <td><code>getPrototypeOf()</code></td>
    <td>
-    <p>{{jsxref("Object.getPrototypeOf()")}}返回给定对象的原型。如果没有继承的原型，则返回<code>null。</code>在ES5中为非对象抛出<code>TypeError</code>，但在ES2015中强制为非对象。</p>
+    <p>{{jsxref("Object.getPrototypeOf()")}}返回给定对象的原型。如果没有继承的原型，则返回<code>null。</code>在 ES5 中为非对象抛出<code>TypeError</code>，但在 ES2015 中强制为非对象。</p>
    </td>
    <td>
-    <p>{{jsxref("Reflect.getPrototypeOf()")}}返回给定对象的原型。如果没有继承的原型，则返回null，并为非对象抛出<code>TypeError</code>。</p>
+    <p>{{jsxref("Reflect.getPrototypeOf()")}}返回给定对象的原型。如果没有继承的原型，则返回 null，并为非对象抛出<code>TypeError</code>。</p>
    </td>
   </tr>
   <tr>
@@ -95,13 +95,13 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_�
     <p>如果对象的原型设置成功，则{{jsxref("Object.setPrototypeOf()")}}返回对象本身。如果设置的原型不是<code>Object</code>或<code>null</code>，或者被修改的对象的原型不可扩展，则抛出<code>TypeError</code>。</p>
    </td>
    <td>
-    <p>如果在对象上成功设置了原型，则{{jsxref("Reflect.setPrototypeOf()")}} 返回true，否则返回false（包括原型是否不可扩展）。如果传入的目标不是<code>Object</code>，或者设置的原型不是<code>Object</code>或<code>null</code>，则抛出<code>TypeError</code>。</p>
+    <p>如果在对象上成功设置了原型，则{{jsxref("Reflect.setPrototypeOf()")}} 返回 true，否则返回 false（包括原型是否不可扩展）。如果传入的目标不是<code>Object</code>，或者设置的原型不是<code>Object</code>或<code>null</code>，则抛出<code>TypeError</code>。</p>
    </td>
   </tr>
   <tr>
    <td><code>isExtensible()</code></td>
    <td>
-    <p>如果对象是可扩展的，则Object.isExtensible（）返回true，否则返回false。如果第一个参数不是对象（原始值），则在ES5中抛出<code>TypeError</code>。在ES2015中，它将被强制为不可扩展的普通对象并返回<code>false</code>。</p>
+    <p>如果对象是可扩展的，则 Object.isExtensible（）返回 true，否则返回 false。如果第一个参数不是对象（原始值），则在 ES5 中抛出<code>TypeError</code>。在 ES2015 中，它将被强制为不可扩展的普通对象并返回<code>false</code>。</p>
    </td>
    <td>
     <p>如果对象是可扩展的，则{{jsxref("Reflect.isExtensible()")}} 返回<code>true</code>，否则返回<code>false</code>。如果第一个参数不是对象（原始值），则抛出<code>TypeError</code>。</p>
@@ -110,7 +110,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_�
   <tr>
    <td><code>preventExtensions()</code></td>
    <td>
-    <p>{{jsxref("Object.preventExtensions()")}} 返回被设为不可扩展的对象。如果参数不是对象（原始值），则在ES5中抛出<code>TypeError</code>。在ES2015中，参数如为不可扩展的普通对象，然后返回对象本身。</p>
+    <p>{{jsxref("Object.preventExtensions()")}} 返回被设为不可扩展的对象。如果参数不是对象（原始值），则在 ES5 中抛出<code>TypeError</code>。在 ES2015 中，参数如为不可扩展的普通对象，然后返回对象本身。</p>
    </td>
    <td>
     <p>returns <code>true</code> if the object has been made non-extensible, and <code>false</code> if it has not. Throws a <code>TypeError</code> if the argument is not an object (a primitive).</p>
@@ -121,7 +121,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_�
   <tr>
    <td><code>keys()</code></td>
    <td>
-    <p>{{jsxref("Object.keys()")}}返回一个字符串<code>数组</code>，该字符串映射到目标对象自己的（可枚举）属性键。如果目标不是对象，则在ES5中抛出<code>TypeError</code>，但将非对象目标强制为ES2015中的对象</p>
+    <p>{{jsxref("Object.keys()")}}返回一个字符串<code>数组</code>，该字符串映射到目标对象自己的（可枚举）属性键。如果目标不是对象，则在 ES5 中抛出<code>TypeError</code>，但将非对象目标强制为 ES2015 中的对象</p>
    </td>
    <td>N/A</td>
   </tr>
@@ -129,7 +129,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_�
    <td><code>ownKeys()</code></td>
    <td>N/A</td>
    <td>
-    <p>{{jsxref("Reflect.ownKeys()")}}返回一个属性名称<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">数组</span></font>，该属性名称映射到目标对象自己的属性键。如果目标不是<code>Object</code>，则抛出<code>TypeError</code>。</p>
+    <p>{{jsxref("Reflect.ownKeys()")}}返回一个属性名称数组，该属性名称映射到目标对象自己的属性键。如果目标不是<code>Object</code>，则抛出<code>TypeError</code>。</p>
    </td>
   </tr>
  </tbody>

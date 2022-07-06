@@ -15,7 +15,7 @@ translation_of: Web/API/Node/insertBefore
 
 <p>Метод <code><strong>Node.insertBefore()</strong></code> добавляет элемент в  список дочерних элементов родителя перед указанным элементом.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">var <em>insertedElement</em> = <em>parentElement</em>.insertBefore(<em>newElement</em>, <em>referenceElement</em>);
 </pre>
@@ -29,7 +29,7 @@ translation_of: Web/API/Node/insertBefore
  <li><code>referenceElement</code> Элемент, перед которым будет вставлен <code>newElement</code>.</li>
 </ul>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush:html">&lt;div id="parentElement"&gt;
   &lt;span id="childElement"&gt;foo bar&lt;/span&gt;
@@ -57,7 +57,7 @@ parentDiv.insertBefore(sp1, sp2);
 
 <p>Если <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">sp2</span> не имеет следующего элемента, то он будет последним дочерним элементом,  <code style="font-style: normal;">sp2.nextSibling вернёт </code><span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">null</span>, а <code style="font-style: normal;">sp1</code> вставится в конец дочернего узла (сразу после <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">sp2</span>).</p>
 
-<h2 id="Example2" name="Example2">Пример 2</h2>
+<h2 id="Example2">Пример 2</h2>
 
 <p>Вставка элемента перед первым дочерним элементом с помощью <a href="/en-US/docs/DOM/Node.firstChild" title="Node.firstChild">firstChild</a>.</p>
 
@@ -75,11 +75,11 @@ parentElement.insertBefore(newElement, theFirstChild);
 
 <p>Когда у родителя нет первого дочернего элемента, <code>firstChild</code> вернёт <code>null</code>. Новый элемент всё равно будет выставляться после последнего дочернего элемента. Но так как родитель не имеет первого дочернего элемента, то он не будет иметь и последнего. Следовательно, после добавления в него элемента, этот элемент будет единственным дочерним элементом.</p>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Node.insertBefore")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <ul>
  <li><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-952280727">insertBefore</a></li>

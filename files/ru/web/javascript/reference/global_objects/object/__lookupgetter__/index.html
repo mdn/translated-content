@@ -13,23 +13,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 ---
 <div>{{JSRef("Global_Objects", "Object")}} {{non-standard_header}} {{deprecated_header}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <strong><code>__lookupGetter__()</code></strong> возвращает функцию, привязанную к геттеру указанного свойства.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code><var>obj</var>.__lookupGetter__(<var>sprop</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>sprop</code></dt>
  <dd>Строка, содержащая имя свойства, чей геттер должен быть возвращён.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Если для свойства объекта был определён геттер, то на него невозможно сослаться через это свойство, поскольку оно ссылается на возвращаемое значение геттера. Метод <code>__lookupGetter__()</code> может использоваться для получения ссылки на геттер.</p>
 <p>Сегодня это возможно сделать стандартным способом через {{jsxref("Object.getOwnPropertyDescriptor()")}} и {{jsxref("Object.getPrototypeOf()")}}.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 <pre class="brush: js">var obj = {
   get foo() {
     return Math.random() &gt; 0.5 ? 'foo' : 'bar';
@@ -47,13 +47,13 @@ Object.getOwnPropertyDescriptor(obj, 'foo').get;
 // (function() { return Math.random() &gt; 0.5 ? 'foo' : 'bar'; })
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <p>Не является частью какой-либо спецификации.</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Object.prototype.__lookupSetter__()")}}</li>
  <li>оператор {{jsxref("Operators/get", "get")}}</li>

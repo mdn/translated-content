@@ -8,9 +8,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API
 <div>{{AddonSidebar}}</div>
 
 <div>
-<p>WebExtension 用の JavaScript API は拡張機能の<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">バックグラウンドスクリプト</a>と、その他の拡張機能にバンドルした文書 (<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Browser_action">ブラウザーアクション</a>や<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Page_actions">ページアクション</a>ポップアップや<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Sidebars">サイドバー</a>や<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Options_pages">オプションページ</a>や<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/manifest.json/chrome_url_overrides">新規タブページ</a>を含む) で使用できます。いくつかの API は拡張機能の<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">コンテンツスクリプト</a>からもアクセスできます (<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs">コンテンツスクリプトガイドの表</a>を見てください)。</p>
+<p>WebExtension 用の JavaScript API は拡張機能の<a href="/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">バックグラウンドスクリプト</a>と、その他の拡張機能にバンドルした文書 (<a href="/ja/Add-ons/WebExtensions/Browser_action">ブラウザーアクション</a>や<a href="/ja/Add-ons/WebExtensions/Page_actions">ページアクション</a>ポップアップや<a href="/ja/Add-ons/WebExtensions/Sidebars">サイドバー</a>や<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">オプションページ</a>や<a href="/ja/Add-ons/WebExtensions/manifest.json/chrome_url_overrides">新規タブページ</a>を含む) で使用できます。いくつかの API は拡張機能の<a href="/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">コンテンツスクリプト</a>からもアクセスできます (<a href="/ja/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs">コンテンツスクリプトガイドの表</a>を見てください)。</p>
 
-<p>もっと強力な API を使うには、拡張機能の <code>manifest.json</code> で<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/manifest.json/permissions">パーミッションをリクエストする</a>必要があります。</p>
+<p>もっと強力な API を使うには、拡張機能の <code>manifest.json</code> で<a href="/ja/Add-ons/WebExtensions/manifest.json/permissions">パーミッションをリクエストする</a>必要があります。</p>
 
 <p><code>browser</code> 名前空間内で API にアクセスできます:</p>
 
@@ -33,7 +33,7 @@ browser<span class="punctuation token">.</span>tabs<span class="punctuation toke
 <span class="punctuation token">}</span>
 
 <span class="keyword token">let</span> setCookie <span class="operator token">=</span> browser<span class="punctuation token">.</span>cookies<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">(</span>
-  <span class="punctuation token">{</span>url<span class="punctuation token">:</span> <span class="string token">"https://developer.mozilla.org/"</span><span class="punctuation token">}</span>
+  <span class="punctuation token">{</span>url<span class="punctuation token">:</span> <span class="string token">"/"</span><span class="punctuation token">}</span>
 <span class="punctuation token">)</span><span class="punctuation token">;</span>
 setCookie<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>logCookie<span class="punctuation token">,</span> logError<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 </div>
@@ -45,7 +45,7 @@ setCookie<span class="punctuation token">.</span><span class="function token">th
 
 <p>Microsoft Edge は <code>browser</code> 名前空間を使いますが、promise ベースの非同期 API はサポートされていません。Edge では当面、非同期 API はコールバックを使うのが必須です。</p>
 
-<p>すべてのブラウザーがすべての API をサポートしているわけではありません: 詳しくは<a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">  JavaScript API のブラウザーサポート</a>をご覧ください。</p>
+<p>すべてのブラウザーがすべての API をサポートしているわけではありません: 詳しくは<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">  JavaScript API のブラウザーサポート</a>をご覧ください。</p>
 
 <h2 id="JavaScript_API_listing" name="JavaScript_API_listing">JavaScript API 一覧</h2>
 

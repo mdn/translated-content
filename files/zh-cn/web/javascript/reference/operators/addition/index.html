@@ -6,24 +6,20 @@ original_slug: Web/JavaScript/Reference/Operators/相加
 ---
 <div>{{jsSidebar("相加运算符")}}</div>
 
-<p>相加运算符 (<code>+</code>) 用于对两个操作数进行相加运算，如果操作数为字符串则该运算符将两个操作数连接成一个字符串。</p>
+<p>相加运算符 (<code>+</code>) 用于对两个操作数进行相加运算，如果操作数中有一方为字符串，则该运算符将两个操作数连接成一个字符串。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-addition.html")}}</div>
 
-<div></div>
-
-
-
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><strong>表达式:</strong> <var>x</var> + <var>y</var>
+<pre class="brush: js">x + y
 </pre>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="数字的相加运算">数字的相加运算</h3>
 
-<pre class="brush: js notranslate">// Number + Number -&gt; addition
+<pre class="brush: js">// Number + Number -&gt; addition
 1 + 2 // 3
 
 // Boolean + Number -&gt; addition
@@ -35,7 +31,7 @@ false + false // 0
 
 <h3 id="字符串相加运算">字符串相加运算</h3>
 
-<pre class="brush: js notranslate">// String + String -&gt; concatenation
+<pre class="brush: js">// String + String -&gt; concatenation
 'foo' + 'bar' // "foobar"
 
 // Number + String -&gt; concatenation
@@ -43,8 +39,6 @@ false + false // 0
 
 // String + Boolean -&gt; concatenation
 'foo' + false // "foofalse"</pre>
-
-<p>注: '+'两侧只要有一侧是字符串，另一侧的数字则会自动转换成字符串，因为其中存在隐式转换</p>
 
 <h2 id="规范">规范</h2>
 
@@ -60,8 +54,6 @@ false + false // 0
 </table>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-
 
 <p>{{Compat("javascript.operators.addition")}}</p>
 

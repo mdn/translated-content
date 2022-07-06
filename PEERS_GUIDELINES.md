@@ -8,7 +8,7 @@ It is the responsibility of the active community maintenance team for each
 active locale to keep up-to-date with reviews of pull requests and handling
 issues filed against that locale. You can filter the relevant pull requests and
 issues for each locale using the relevant label — `l10n-fr`, `l10n-ja`, `l10n-ko`
-, `l10n-pt-br`, `l10n-ru`, and `l10n-zh`.
+, `l10n-pt-br`, `l10n-ru`, `l10n-zh` and `l10n-es`.
 
 ### Requirements for keeping locales up-to-date
 
@@ -39,9 +39,10 @@ The review teams for each locale are:
 - French (`fr`) content — the
 [@yari-content-fr](https://github.com/orgs/mdn/teams/yari-content-fr)
   team, which consists of:
-  - [@tristantheb](https://github.com/tristantheb)
-  - [@SphinxKnight](https://github.com/SphinxKnight)
   - [@audrasjb](https://github.com/audrasjb)
+  - [@cw118](https://github.com/cw118)
+  - [@SphinxKnight](https://github.com/SphinxKnight)
+  - [@tristantheb](https://github.com/tristantheb)
 - Japanese (`ja`) content — the
 [@yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja)
   team, which consists of:
@@ -53,8 +54,8 @@ The review teams for each locale are:
 - Korea (`ko`) content — the
 [@yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko)
   team, which consists of:
-  - [@yechoi42](https://github.com/yechoi42)
   - [@cos18](https://github.com/cos18)
+  - [@yechoi42](https://github.com/yechoi42)
   - [@GwangYeol-Im](https://github.com/GwangYeol-Im)
   - [@pje1740](https://github.com/pje1740)
   - [@nKiNk](https://github.com/nKiNk)
@@ -65,7 +66,6 @@ The review teams for each locale are:
   team, which consists of:
   - [@armanpwnz](https://github.com/armanpwnz)
   - [@captainspring](https://github.com/captainspring)
-  - [@mpstv](https://github.com/mpstv)
   - [@myshov](https://github.com/myshov)
   - [@Saionaro](https://github.com/Saionaro)
   - [@sashasushko](https://github.com/sashasushko)
@@ -76,6 +76,15 @@ The review teams for each locale are:
   - [@t7yang](https://github.com/t7yang)
   - [@dibery](https://github.com/dibery)
   - [@irvin](https://github.com/irvin)
+- Spanish (`es`) content - the [@yari-content-es](https://github.com/orgs/mdn/teams/yari-content-es)
+  team, which consists of:
+  - [@JuanVqz](https://github.com/JuanVqz)
+  - [@dacalderonp](https://github.com/dacalderonp)
+  - [@lasr21](https://github.com/lasr21)
+  - [@tuxxy](https://github.com/tuxxy)
+  - [@Graywolf9](https://github.com/Graywolf9)
+  - [@davbrito](https://github.com/davbrito)
+  - [@Vallejoanderson](https://github.com/vallejoanderson)
 
 ---
 
@@ -108,9 +117,8 @@ To activate a locale you must apply with the following information:
 
 ### Your locale
 
-Please specify which of the following three locales you wish to have unfrozen:
+Please specify which of the following two locales you wish to have unfrozen:
 
-- Spanish (es)
 - German (de)
 - Polish (pl)
 

@@ -10,19 +10,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/toString
 ---
 <div>{{JSRef("Global_Objects", "Array")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <code><strong>toString()</strong></code> возвращает строковое представление указанного массива и его элементов.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>arr</var>.toString()</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <p>Нет.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Объект {{jsxref("Global_Objects/Array", "Array")}} переопределяет метод <code>toString</code> объекта {{jsxref("Global_Objects/Object", "Object")}}. Для объектов класса <code>Array</code>, метод <code>toString</code> соединяет массив и возвращает одну строку, содержащую каждый элемент массива, разделённый запятыми. Например, следующий код создаёт массив и использует метод <code>toString</code> для преобразования массива в строку.</p>
 
@@ -32,42 +32,19 @@ var myVar = monthNames.toString(); // присваивает 'Янв,Фев,Ма
 
 <p>JavaScript вызывает метод <code>toString</code> автоматически, когда массив представляется текстовым значением или когда массив находится в контексте конкатенации строк.</p>
 
-<h3 id="ECMAScript_5_semantics" name="ECMAScript_5_semantics">Семантика ECMAScript 5</h3>
+<h3 id="ECMAScript_5_semantics">Семантика ECMAScript 5</h3>
 
 <p>Начиная с JavaScript 1.8.5 (<span class="st">Firefox 4</span>), и в соответствии с семантикой ECMAScript 5-го издания, метод <code>toString()</code> является обобщённым и может использоваться с любым объектом. В случае с массивами, если он имеет метод <code>join()</code>, он будет вызван и результат его работы будет возвращён. В противном случае будет вызван метод {{jsxref("Object.prototype.toString()")}}, и будет возвращён результат его работы.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.2', 'Array.prototype.toString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.tostring', 'Array.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Object.prototype.toSource()")}}</li>

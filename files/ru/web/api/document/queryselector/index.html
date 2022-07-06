@@ -20,9 +20,9 @@ translation_of: Web/API/Document/querySelector
 <p><strong>Примечание</strong>: Сопоставление выполняется с использованием обхода по предварительному порядку в глубину узлов документа, начиная с первого элемента в разметке документа и повторяя последовательные узлы по порядку количества дочерних узлов.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="brush: js notranslate">element = document.querySelector(selectors);
+<pre class="brush: js">element = document.querySelector(selectors);
 </pre>
 
 <h3 id="Параметры">Параметры</h3>
@@ -33,7 +33,7 @@ translation_of: Web/API/Document/querySelector
 </dl>
 
 <div class="blockIndicator note">
-<p><strong>Примечание:</strong> Символы, которые не являются частью стандартного синтаксиса CSS должны быть экранированы символом обратной косой черты. Поскольку JavaScript также использует экранирование символом обратной косой черты, будьте особенно внимательны при написании строковых литералов с использованием этих символов. См. {{anch("Escaping special characters")}} для получения дополнительной информации.</p>
+<p><strong>Примечание:</strong> Символы, которые не являются частью стандартного синтаксиса CSS должны быть экранированы символом обратной косой черты. Поскольку JavaScript также использует экранирование символом обратной косой черты, будьте особенно внимательны при написании строковых литералов с использованием этих символов. См. <a href="#escaping_special_characters">Escaping special characters</a> для получения дополнительной информации.</p>
 </div>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
@@ -59,7 +59,7 @@ translation_of: Web/API/Document/querySelector
 
 <p>Чтобы сопоставить ID или селекторы, которые не соответствуют стандартному синтаксису CSS (например, использующих ненадлежащим образом двоеточие или пробел), необходимо экранировать символ обратной косой чертой ("<code>\</code>"). Поскольку обратная косая черта также является экранирующим символом в JavaScript, то при вводе литеральной строки необходимо экранировать её <em>дважды</em> (первый раз для строки JavaScript и второй для <code>querySelector()</code>):</p>
 
-<pre class="brush: html notranslate">&lt;div id="foo\bar"&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div id="foo\bar"&gt;&lt;/div&gt;
 &lt;div id="foo:bar"&gt;&lt;/div&gt;
 
 &lt;script&gt;
@@ -74,49 +74,31 @@ translation_of: Web/API/Document/querySelector
   document.querySelector('#foo\\:bar');  // Match the second div
 &lt;/script&gt;</pre>
 
-<h2 id="Example" name="Example">Примеры</h2>
+<h2 id="Example">Примеры</h2>
 
 <h3 id="Выбор_первого_элемента_с_совпадающим_классом">Выбор первого элемента с совпадающим классом</h3>
 
 <p>В этом примере, нам вернётся первый элемент в документе с классом "<code>myclass</code>":</p>
 
-<pre class="brush: js notranslate">var el = document.querySelector(".myclass");
+<pre class="brush: js">var el = document.querySelector(".myclass");
 </pre>
 
-<h3 id="Notes" name="Notes">Более сложный селектор</h3>
+<h3 id="Notes">Более сложный селектор</h3>
 
 <p>Селекторы, передаваемые в querySelector, могут быть использованы и для точного поиска, как показано в примере ниже. В данном примере возвращается элемент &lt;input name="login"/&gt;, находящийся в &lt;div class="user-panel main"&gt;:</p>
 
-<pre class="brush: js notranslate">var el = document.querySelector("div.user-panel.main input[name=login]");
+<pre class="brush: js">var el = document.querySelector("div.user-panel.main input[name=login]");
 </pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Selectors API Level 2", "#interface-definitions", "document.querySelector()")}}</td>
-   <td>{{Spec2("Selectors API Level 2")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Selectors API Level 1", "#interface-definitions", "document.querySelector()")}}</td>
-   <td>{{Spec2("Selectors API Level 1")}}</td>
-   <td>Изначальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Document.querySelector")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">Locating DOM elements using selectors</a></li>

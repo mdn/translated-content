@@ -16,17 +16,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
 <div>{{JSRef("Global_Objects", "Array")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Начальное значение свойства <strong><code>@@iterator</code></strong> является тем же самым функциональным объектом, что и начальное значение, возвращаемое методом {{jsxref("Array.prototype.values()", "values()")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>arr</var>[Symbol.iterator]()</code></pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Iteration_using_for...of_loop" name="Example:_Iteration_using_for...of_loop">Пример: итерация посредством цикла <code>for...of</code></h3>
+<h3 id="Example:_Iteration_using_for...of_loop">Пример: итерация посредством цикла <code>for...of</code></h3>
 
 <pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
 // ваш браузер должен поддерживать цикл for..of
@@ -36,7 +36,7 @@ for (let letter of arr) {
 }
 </pre>
 
-<h3 id="Example:_Alternative_iteration" name="Example:_Alternative_iteration">Пример: альтернативный способ итерации</h3>
+<h3 id="Example:_Alternative_iteration">Пример: альтернативный способ итерации</h3>
 
 <pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr[Symbol.iterator]();
@@ -47,28 +47,15 @@ console.log(eArr.next().value); // o
 console.log(eArr.next().value); // p
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.keys()")}}</li>

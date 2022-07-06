@@ -13,8 +13,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/eval
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}</div>
 
-<p class="hidden">此交互式示例的源存储在GitHub存储库中。 如果您想参与交互式示例项目，请克隆https://github.com/mdn/interactive-examples并向我们发送拉取请求。</p>
-
 <h2 id="语法">语法</h2>
 
 <pre class="syntaxbox"><code>eval(<em>string</em>)</code></pre>
@@ -60,15 +58,15 @@ eval(expression.toString());
 <code>  (0, eval)('x + y'); // 另一个间接调用的例子
 ​</code>}</pre>
 
-<h2 id="Don.27t_use_eval.21" name="Don.27t_use_eval.21">永远不要使用 <code>eval</code>！</h2>
+<h2 id="Don.27t_use_eval.21">永远不要使用 <code>eval</code>！</h2>
 
 <p><code>eval()</code> 是一个危险的函数， 它使用与调用者相同的权限执行代码。如果你用 <code>eval()</code> 运行的字符串代码被恶意方（不怀好意的人）修改，您最终可能会在您的网页/扩展程序的权限下，在用户计算机上运行恶意代码。更重要的是，第三方代码可以看到某一个 <code>eval()</code> 被调用时的作用域，这也有可能导致一些不同方式的攻击。相似的 {{jsxref("Global_Objects/Function", "Function")}} 就不容易被攻击。</p>
 
 <p><code>eval()</code> 通常比其他替代方法更慢，因为它必须调用 JS 解释器，而许多其他结构则可被现代 JS 引擎进行优化。</p>
 
-<p>此外，现代JavaScript解释器将javascript转换为机器代码。 这意味着任何变量命名的概念都会被删除。 因此，任意一个eval的使用都会强制浏览器进行冗长的变量名称查找，以确定变量在机器代码中的位置并设置其值。 另外，新内容将会通过 <code>eval()</code> 引进给变量， 比如更改该变量的类型，因此会强制浏览器重新执行所有已经生成的机器代码以进行补偿。 但是，（谢天谢地）存在一个非常好的eval替代方法：只需使用 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">window.Function</a>。 这有个例子方便你了解如何将<code>eval()</code>的使用转变为<code>Function()</code>。</p>
+<p>此外，现代 JavaScript 解释器将 JavaScript 转换为机器代码。这意味着任何变量命名的概念都会被删除。因此，任意一个 eval 的使用都会强制浏览器进行冗长的变量名称查找，以确定变量在机器代码中的位置并设置其值。另外，新内容将会通过 <code>eval()</code> 引进给变量，比如更改该变量的类型，因此会强制浏览器重新执行所有已经生成的机器代码以进行补偿。但是（谢天谢地）存在一个非常好的 eval 替代方法：只需使用 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">window.Function</a>。这有个例子方便你了解如何将<code>eval()</code>的使用转变为<code>Function()</code>。</p>
 
-<p>使用eval的糟糕代码:</p>
+<p>使用 eval 的糟糕代码：</p>
 
 <pre class="brush:js example-bad">function looseJsonParse(obj){
     return eval("(" + obj + ")");
@@ -78,7 +76,7 @@ console.log(looseJsonParse(
 ))
 </pre>
 
-<p> 不用eval的更好的代码:</p>
+<p>不用 eval 的更好的代码：</p>
 
 <pre class="brush:js example-good">function looseJsonParse(obj){
     return Function('"use strict";return (' + obj + ')')();
@@ -89,7 +87,7 @@ console.log(looseJsonParse(
 
 </pre>
 
-<p>比较上面的两个代码片段，两个代码片段似乎是以相同的方式工作，但再想一想：eval的这个代码的速度要慢得多。 注意<code>c: new Date()</code>在执行体中。 在没有eval的函数中，对象在全局范围内被用来进行计算，因此浏览器可以放心的假设<code>Date</code>是来自<code>window.Date</code>的而不是一个名为<code>Date</code>的局部变量。 然而，在使用<code>eval()</code>的代码中，浏览器不能假设这一点，因为如果您的代码是下面这个：</p>
+<p>比较上面的两个代码片段，两个代码片段似乎是以相同的方式工作，但再想一想：eval 的这个代码的速度要慢得多。注意<code>c: new Date()</code>在执行体中。在没有 eval 的函数中，对象在全局范围内被用来进行计算，因此浏览器可以放心的假设 <code>Date</code> 是来自 <code>window.Date</code> 的而不是一个名为 <code>Date</code> 的局部变量。 然而，在使用 <code>eval()</code> 的代码中，浏览器不能假设这一点，因为如果您的代码是下面这个：</p>
 
 <pre class="brush:js example-bad">function Date(n){
     return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
@@ -102,9 +100,9 @@ console.log(looseJsonParse(
 ))
 </pre>
 
-<p>因此，在<code>eval()</code>版本的代码中，浏览器被迫进行高代价的查找调用以检查是否存在名为Date()的任何局部变量。 与<code>Function()</code>相比，这是非常低效的。</p>
+<p>因此，在 <code>eval()</code> 版本的代码中，浏览器被迫进行高代价的查找调用以检查是否存在名为 <code>Date()</code> 的任何局部变量。与 <code>Function()</code> 相比，这是非常低效的。</p>
 
-<p>在类似的情况下，如果您确实希望能够从<code>Function()</code>内部的代码调用<code>Date</code>函数，该怎么办？ 你应该躲避并退回到<code>eval()</code>吗？ 绝对不是，永远不要这么做。 而是尝试下面的方法。</p>
+<p>在类似的情况下，如果您确实希望能够从 <code>Function()</code> 内部的代码调用 <code>Date</code> 函数，该怎么办？ 你应该躲避并退回到 <code>eval()</code> 吗？绝对不是，永远不要这么做。而是尝试下面的方法。</p>
 
 <pre class="brush:js example-good">function Date(n){
     return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
@@ -121,20 +119,20 @@ console.log(runCodeWithDateFunction(
 
 <p>由于三重嵌套函数，上面的代码似乎效率低下，但让我们分析一下上述有效方法的好处：</p>
 
-<p>1.它使得传递给<code>runCodeWithDateFunction</code>的字符串中的代码更少。</p>
+<p>1. 它使得传递给<code>runCodeWithDateFunction</code>的字符串中的代码更少；</p>
 
-<p>2.函数调用开销很小，使得代码尺寸小得多，值得获益</p>
+<p>2. 函数调用开销很小，使得代码尺寸小得多，值得获益；</p>
 
-<p>3. <code>Function()</code>更容易让你的代码利用特性修饰<code>"use strict"</code>;</p>
+<p>3. <code>Function()</code>更容易让你的代码利用特性修饰 <code>"use strict"</code>；</p>
 
-<p>4.代码不使用eval（），使其比其他方式快几个数量级。</p>
+<p>4. 代码不使用 <code>eval()</code>，使其比其他方式快几个数量级。</p>
 
-<p>最后，我们来看看简化版。 使用如上所示的<code>Function()</code>，您可以更有效地缩小传递给<code>runCodeWithDateFunction</code>的代码字符串，因为函数参数名称也可以缩小，如下面的缩小代码所示。</p>
+<p>最后，我们来看看简化版。使用如上所示的<code>Function()</code>，您可以更有效地缩小传递给<code>runCodeWithDateFunction</code>的代码字符串，因为函数参数名称也可以缩小，如下面的缩小代码所示。</p>
 
 <pre class="brush:js">console.log(Function('"use strict";return(function(a){return a(5)})')()(function(a){
 return"Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(" ")[a%7||0]}));</pre>
 
-<p>对于常见用例，<code>eval()</code>或<code>Function()</code>还有更安全(而且更快!)的替代方案。</p>
+<p>对于常见用例，<code>eval()</code>或<code>Function()</code>还有更安全 (而且更快！) 的替代方案。</p>
 
 <h3 id="访问成员属性">访问成员属性</h3>
 
@@ -145,7 +143,7 @@ var propName = getPropName(); // 返回 "a" 或 "b"
 
 eval( 'var result = obj.' + propsName )</pre>
 
-<p>但是，这里并不是必须得使用 <code>eval()</code> 。事实上，这里并不建议这样使用。可以使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors">属性访问器</a> 进行代替，它更快、更安全：</p>
+<p>但是，这里并不是必须得使用 <code>eval()</code>。事实上，这里并不建议这样使用。可以使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors">属性访问器</a> 进行代替，它更快、更安全：</p>
 
 <pre class="brush: js">var obj = { a: 20, b: 30 }
 var propName = getPropName(); // 返回 "a" 或 "b"
@@ -189,29 +187,29 @@ var result = setDescendantProp(obj, propPath, 1);  // a.b.c 值为 1</pre>
 
 <h3 id="使用函数而非代码段">使用函数而非代码段</h3>
 
-<p>JavaScript 拥有 <a href="/zh-CN/docs/Glossary/First-class_Function">first-class functions</a>，这意味着你可以将函数直接作为参数传递给其他接口，将他们保存在变量中或者对象的属性中，等等。很多DOM的API都用这种思路进行设计，你也可以（或者应该）这样子设计你的代码：</p>
+<p>JavaScript 拥有 <a href="/zh-CN/docs/Glossary/First-class_Function">first-class functions</a>，这意味着你可以将函数直接作为参数传递给其他接口，将他们保存在变量中或者对象的属性中，等等。很多 DOM 的 API 都用这种思路进行设计，你也可以（或者应该）这样子设计你的代码：</p>
 
-<pre class="brush: js">// 代替 setTimeout(" ... ", 1000) 写法:
+<pre class="brush: js">// 代替 setTimeout(" ... ", 1000) 写法：
 setTimeout(function() { ... }, 1000);
 
-// 代替 elt.setAttribute("onclick", "...") 写法:
+// 代替 elt.setAttribute("onclick", "...") 写法：
 elt.addEventListener('click', function() { ... } , false);</pre>
 
 <p><a href="/zh-CN/docs/Web/JavaScript/Closures">闭包</a> 也有助于创建参数化函数而不用连接字符串。</p>
 
 <h3 id="解析_JSON（将字符串转化为_JavaScript_对象）">解析 JSON（将字符串转化为 JavaScript 对象）</h3>
 
-<p>如果你在调用 <code>eval()</code> 传入的字符串参数中包含数据（如：一个数组“[1,2,3]”）而不是代码，你应该考虑将其转换为 <a href="/zh-CN/docs/Glossary/JSON">JSON</a> 对象，这允许你用JavaScript语法的子集来表示数据。<a href="/zh-CN/docs/Downloading_JSON_and_JavaScript_in_extensions">在扩展中下载JSON和JavaScript</a></p>
+<p>如果你在调用 <code>eval()</code> 传入的字符串参数中包含数据（如：一个数组“[1,2,3]”）而不是代码，你应该考虑将其转换为 <a href="/zh-CN/docs/Glossary/JSON">JSON</a> 对象，这允许你用 JavaScript 语法的子集来表示数据。<a href="/zh-CN/docs/Downloading_JSON_and_JavaScript_in_extensions">在扩展中下载 JSON 和 JavaScript</a></p>
 
 <p>提示：因为 JSON 语法子集相对于 JavaScript 语法子集比较有局限性，很多在 JavaScript 中可用的特性在 JSON 中就不起作用了。比如，后缀逗号在 JSON 中不支持，并且对象中的属性名在 JSON 中必须用引号括起来。请务必使用 JSON 序列化方法来生成稍后将被解析为 JSON 的字符串。</p>
 
 <h3 id="尽量传递数据而非代码">尽量传递数据而非代码</h3>
 
-<p>例如，设计为抓取网页内容的扩展，可能会在XPath中定义抓取规则，而不是在 JavaScript 代码中。</p>
+<p>例如，设计为抓取网页内容的扩展，可能会在 XPath 中定义抓取规则，而不是在 JavaScript 代码中。</p>
 
 <h3 id="以有限权限运行代码">以有限权限运行代码</h3>
 
-<p>如果你必须执行这段代码, 应考虑以更低的权限运行。此建议主要适用于扩展和 XUL 应用程序，可以使用 <a href="/zh-CN/docs/Components.utils.evalInSandbox">Components.utils.evalInSandbox</a> 做到降低权限。</p>
+<p>如果你必须执行这段代码，应考虑以更低的权限运行。此建议主要适用于扩展和 XUL 应用程序，可以使用 <a href="/zh-CN/docs/Components.utils.evalInSandbox">Components.utils.evalInSandbox</a> 做到降低权限。</p>
 
 <h2 id="例子">例子</h2>
 
@@ -228,7 +226,7 @@ eval(z);           // returns 42
 
 <h3 id="使用_eval_执行一串_JavaScript_语句">使用 <code>eval</code> 执行一串 JavaScript 语句</h3>
 
-<p>下面的例子使用 <code>eval()</code> 来执行 <code>str</code> 字符串。这个字符串包含了如果 <code>x</code> 等于5，就打开一个Alert 对话框并对 <code>z</code> 赋值 42，否则就对 <code>z</code> 赋值 0 的 JavaScript 语句。 当第二个声明被执行，<code>eval()</code> 将会令字符串被执行，并最终返回赋值给 <code>z</code> 的 42。</p>
+<p>下面的例子使用 <code>eval()</code> 来执行 <code>str</code> 字符串。这个字符串包含了如果 <code>x</code> 等于 5，就打开一个 Alert 对话框并对 <code>z</code> 赋值 42，否则就对 <code>z</code> 赋值 0 的 JavaScript 语句。 当第二个声明被执行，<code>eval()</code> 将会令字符串被执行，并最终返回赋值给 <code>z</code> 的 42。</p>
 
 <pre class="brush:js">var x = 5;
 var str = "if (x == 5) {console.log('z is 42'); z = 42;} else z = 0;";
@@ -262,7 +260,7 @@ console.log('b is : ' + b);</pre>
 
 <pre class="brush:js">var fctStr1 = 'function a() {}'
 var fctStr2 = '(function a() {})'
-var fct1 = eval(fctStr1)  // 返回undefined
+var fct1 = eval(fctStr1)  // 返回 undefined
 var fct2 = eval(fctStr2)  // 返回一个函数
 </pre>
 
@@ -307,7 +305,7 @@ var fct2 = eval(fctStr2)  // 返回一个函数
 <h2 id="Firefox_相关">Firefox 相关</h2>
 
 <ul>
- <li>从历史上看，<code>eval()</code> 有一个可选的第二个参数，指定上下文执行对象。 这个参数是非标准的，并且明确地从 Firefox 4 中删除。请参阅 {{bug(531675)}} 。</li>
+ <li>从历史上看，<code>eval()</code> 有一个可选的第二个参数，指定上下文执行对象。这个参数是非标准的，并且明确地从 Firefox 4 中删除。请参阅 {{bug(531675)}} 。</li>
 </ul>
 
 <h2 id="参见">参见</h2>

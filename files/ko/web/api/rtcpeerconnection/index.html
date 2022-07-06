@@ -3,7 +3,7 @@ title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
 translation_of: Web/API/RTCPeerConnection
 ---
-<p>{{APIRef('WebRTC')}}{{draft}}</p>
+<p>{{APIRef('WebRTC')}}</p>
 
 <p><span class="seoSummary"><strong><code>RTCPeerConnection</code> </strong>인터페이스는 로컬 컴퓨터와 원격 피어 간의 WebRTC 연결을 담당하며 원격 피어에 연결하기 위한 메서드들을 제공하고, 연결을 유지하고 연결 상태를 모니터링하며 더 이상 연결이 필요하지 않을 경우 연결을 종료합니다.</span></p>
 
@@ -14,7 +14,7 @@ translation_of: Web/API/RTCPeerConnection
 <p>다음 메서드는 오래 전부터 사용되지 않았으며 모든 주요 브라우저에서 구현되지 않았습니다.</p>
 
 <dl>
- <dt>{{domxref("RTCPeerConnection.createDTMFSender()")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("RTCPeerConnection.createDTMFSender()")}} {{deprecated_inline}}</dt>
  <dd>특정 {{domxref("MediaStreamTrack")}}와 관련된 신규 {{domxref("RTCDTMFSender")}}를 생성합니다. {{domxref("RTCDTMFSender")}}는 연결을 통해 {{Glossary("DTMF")}} 전화 신호를 보낼 수 있습니다. </dd>
 </dl>
 
@@ -58,21 +58,21 @@ translation_of: Web/API/RTCPeerConnection
 <h3 id="사용되지_않는_이벤트">사용되지 않는 이벤트</h3>
 
 <dl>
- <dt>{{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{deprecated_inline}}</dt>
  <dd>Sent when a new {{domxref("MediaStream")}} has been added to the connection. Instead of watching for this obsolete event, you should watch each for {{domxref("RTCPeerConnection.track_event", "track")}} events; one is sent for each {{domxref("MediaStreamTrack")}} added to the connection.<br>
  Available as the {{domxref("RTCPeerConnection.onaddstream", "onaddstream")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.identityresult_event", "identityresult")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("RTCPeerConnection.identityresult_event", "identityresult")}} {{deprecated_inline}}</dt>
  <dd>In old versions of the WebRTC specification, this event was used to indicate that an identity assertion is available. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to resolve with an identity.<br>
  Also available using the {{domxref("RTCPeerConnection.onidentityresult", "onidentityresult")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.idpassertionerror_event", "idpassertionerror")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("RTCPeerConnection.idpassertionerror_event", "idpassertionerror")}} {{deprecated_inline}}</dt>
  <dd>In old versions of the WebRTC specification, this event was used to indicate that an error occurred while attempting to generate an identity assertion. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to be rejected with an error.<br>
  Also available as the {{domxref("RTCPeerConnection.onidpassertionerror", "onidpinsertionerror")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.idpvalidationerror_event", "idpvalidationerror")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("RTCPeerConnection.idpvalidationerror_event", "idpvalidationerror")}} {{deprecated_inline}}</dt>
  <dd>In old versions of the WebRTC specification, this event was used to indicate that an error occurred while attempting to validate an identity assertion. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to be rejected with an error.<br>
  Also available using the {{domxref("RTCPeerConnection.onpeeridentity", "onpeerdentity")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.peeridentity_event", "peeridentity")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("RTCPeerConnection.peeridentity_event", "peeridentity")}} {{deprecated_inline}}</dt>
  <dd>In old versions of the WebRTC specification, this event was used to deliver a received identity. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to resolve with an identity.</dd>
- <dt>{{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{deprecated_inline}}</dt>
  <dd>Sent to the <code>RTCPeerConnection</code> when a {{domxref("MediaStream")}} is removed from the connection. Instead of watching for this obsolete event, you should watch each stream for {{domxref("MediaStream.removetrack_event", "removetrack")}} events on each stream within the <code>RTCPeerConnection</code>.<br>
  Also available as the {{domxref("RTCPeerConnection.onremovestream", "onaddstream")}} event handler property.</dd>
 </dl>
@@ -197,7 +197,7 @@ translation_of: Web/API/RTCPeerConnection
    <td>All ICE candidates will be considered.</td>
   </tr>
   <tr>
-   <td><code>"public" </code>{{obsolete_inline}}</td>
+   <td><code>"public" </code>{{deprecated_inline}}</td>
    <td>Only ICE candidates with public IP addresses will be considered. <em>Removed from the specification's May 13, 2016 working draft.</em></td>
   </tr>
   <tr>
@@ -310,7 +310,7 @@ translation_of: Web/API/RTCPeerConnection
    <td>A provisional answer has been received and successfully applied in response to an offer previously sent and established by calling <code>setLocalDescription()</code>.</td>
   </tr>
   <tr>
-   <td><code>"closed"</code> {{obsolete_inline}}</td>
+   <td><code>"closed"</code> {{deprecated_inline}}</td>
    <td>
     <p>The connection is closed.</p>
 
@@ -341,7 +341,7 @@ translation_of: Web/API/RTCPeerConnection
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
-<div></div>
+
 
 <div>{{Compat("api.RTCPeerConnection")}}</div>
 

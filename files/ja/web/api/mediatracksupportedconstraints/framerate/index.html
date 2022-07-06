@@ -7,9 +7,9 @@ translation_of: Web/API/MediaTrackSupportedConstraints/frameRate
 
 <div> </div>
 
-<p><a href="https://developer.mozilla.org/ja/docs/Web/API/MediaTrackSupportedConstraints" title="MediaTrackSupportedConstraintsディクショナリは、MediaStreamTrackオブジェクトを実装しているuser agentやブラウザによって理解できる制約可能なプロパティの一覧を表します。MediaDevices.getSupportedConstraints()によって、MediaTrackSupportedConstraintsに適合するオブジェクトが戻り値として返されます。"><code>MediaTrackSupportedConstraints</code></a>ディクショナリーの<strong><code>frameRate</code></strong>プロパティは読み取り専用のBooleanの値です。<a href="https://developer.mozilla.org/ja/docs/Glossary/user_agent" rel="nofollow" title="この用語 (user agent) の定義はまだ書かれていません。ぜひご寄稿ください！">user agent</a>が<strong><code>frameRate</code></strong>の制約をサポートしている場合、<a href="https://developer.mozilla.org/ja/docs/Web/API/MediaDevices/getSupportedConstraints" title="MediaDevices インタフェースのgetSupportedConstraints() メソッドは、MediaTrackSupportedConstraintsディクショナリをベースとするオブジェクトを戻り値として返します。このオブジェクトのメンバーフィールドは、user agentが扱えるメディア制約に関するプロパティを表しています。"><code>MediaDevices.getSupportedConstraints()</code></a>の戻り値のオブジェクトに含まれ<code>true</code>が設定されます。この制約がサポートされない場合は含まれないため、<code>false</code>になることはありません。</p>
+<p><a href="/ja/docs/Web/API/MediaTrackSupportedConstraints" title="MediaTrackSupportedConstraintsディクショナリは、MediaStreamTrackオブジェクトを実装しているuser agentやブラウザによって理解できる制約可能なプロパティの一覧を表します。MediaDevices.getSupportedConstraints()によって、MediaTrackSupportedConstraintsに適合するオブジェクトが戻り値として返されます。"><code>MediaTrackSupportedConstraints</code></a>ディクショナリーの<strong><code>frameRate</code></strong>プロパティは読み取り専用のBooleanの値です。<a href="/ja/docs/Glossary/user_agent" rel="nofollow" title="この用語 (user agent) の定義はまだ書かれていません。ぜひご寄稿ください！">user agent</a>が<strong><code>frameRate</code></strong>の制約をサポートしている場合、<a href="/ja/docs/Web/API/MediaDevices/getSupportedConstraints" title="MediaDevices インタフェースのgetSupportedConstraints() メソッドは、MediaTrackSupportedConstraintsディクショナリをベースとするオブジェクトを戻り値として返します。このオブジェクトのメンバーフィールドは、user agentが扱えるメディア制約に関するプロパティを表しています。"><code>MediaDevices.getSupportedConstraints()</code></a>の戻り値のオブジェクトに含まれ<code>true</code>が設定されます。この制約がサポートされない場合は含まれないため、<code>false</code>になることはありません。</p>
 
-<p><code>frameRate</code>制約は、新しいビデオトラックのフレームレートの許容できる上限と下限、あるいは正確なフレームレートを表すのに用いられます。このプロパティの値を確認することで、フレームレートでのビデオトラック設定の制約をユーザーエージェントが対応しているかを特定することができます。どのように使われるかは{{anch("Example", "example")}}を見てください。</p>
+<p><code>frameRate</code>制約は、新しいビデオトラックのフレームレートの許容できる上限と下限、あるいは正確なフレームレートを表すのに用いられます。このプロパティの値を確認することで、フレームレートでのビデオトラック設定の制約をユーザーエージェントが対応しているかを特定することができます。どのように使われるかは<a href="#example">example</a>を見てください。</p>
 
 <h2 id="文法">文法</h2>
 
@@ -88,7 +88,7 @@ if (navigator.mediaDevices.getSupportedConstraints()["frameRate"]) {
 <h2 id="関連項目">関連項目</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a></li>
+ <li><a href="/ja/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a></li>
  <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
  <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
  <li>{{domxref("MediaStreamTrack")}}</li>

@@ -5,80 +5,25 @@ translation_of: Web/API/Crypto/subtle
 ---
 <p>{{APIRef("Web Crypto API")}}</p>
 
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+
 <p><strong><code>Crypto.subtle</code></strong> 是一个只读属性，返回一个 {{domxref("SubtleCrypto")}} 对象允许做一个些加密操作。</p>
 
 <h2 id="语法">语法</h2>
 
 <pre>var <em>crypto</em> = crypto.subtle;</pre>
 
+<h3 id="value">值</h3>
+
+<p>一个可用于与 Web Crypto API 的低级加密功能交互的 {{domxref("SubtleCrypto")}} 对象。</p>
+
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-Crypto', 'Crypto.subtle') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome(37) }}</td>
-   <td>{{ CompatGeckoDesktop(34) }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>37</td>
-   <td>{{ CompatGeckoMobile(34) }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Crypto.subtle")}}
 
 <h2 id="另见">另见</h2>
 

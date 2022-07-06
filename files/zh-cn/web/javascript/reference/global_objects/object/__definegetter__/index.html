@@ -5,11 +5,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ---
 <div>
  {{JSRef("Global_Objects", "Object")}} {{non-standard_header}} {{deprecated_header}}</div>
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 <p><code><strong>__defineGetter__</strong></code> 方法可以将一个函数绑定在当前对象的指定属性上，当那个属性的值被读取时，你所绑定的函数就会被调用。</p>
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 <pre class="syntaxbox"><code><var>obj</var>.__defineGetter__(<var>prop</var>, <var>func</var>)</code></pre>
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 <dl>
  <dt>
   <code>prop</code></dt>
@@ -20,9 +20,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
  <dd>
   一个函数，当 <code>prop</code> 属性的值被读取时自动被调用。</dd>
 </dl>
-<h2 id="Description" name="Description">描述</h2>
-<p><code>__defineGetter__ 方法可以为一个已经存在的对象设置（新建或修改）访问器属性，</code>而 {{jsxref("Operators/get", "对象字面量中的 get 语法", "", 1)}} 只能在新建一个对象时使用。</p>
-<h2 id="Examples" name="Examples"><span class="def"><span>示例</span></span></h2>
+<h2 id="Description">描述</h2>
+<p><code>__defineGetter__</code> 方法可以为一个已经存在的对象设置（新建或修改）访问器属性，而 {{jsxref("Operators/get", "对象字面量中的 get 语法", "", 1)}} 只能在新建一个对象时使用。</p>
+<h2 id="Examples">示例</h2>
 <pre class="brush: js">// 请注意，该方法是非标准的：
 
 var o = {};
@@ -45,63 +45,19 @@ Object.defineProperty(o, 'gimmeFive', {
 });
 console.log(o.gimmeFive); // 5
 </pre>
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="Specifications">规范</h2>
 <p>不属于任何规范。</p>
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
-<div>
- {{CompatibilityTable}}</div>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatIE("11")}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Android</th>
-    <th>Chrome for Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Mobile</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<h2 id="See_also" name="See_also">相关链接</h2>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+{{Compat}}
+
+<h2 id="See_also">相关链接</h2>
 <ul>
  <li>{{jsxref("Object.prototype.__defineSetter__()")}}</li>
  <li>{{jsxref("Operators/get", "get")}} operator</li>
  <li>{{jsxref("Object.defineProperty()")}}</li>
  <li>{{jsxref("Object.prototype.__lookupGetter__()")}}</li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">JS 指南: 定义 Getter 和 Setter</a></li>
- <li><a href="http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/">[个人博文] defineGetter__ 和 __defineSetter__已被废弃</a></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">JS 指南：定义 Getter 和 Setter</a></li>
+ <li><a href="http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/">[个人博文] defineGetter__ 和 __defineSetter__ 已被废弃</a></li>
 </ul>

@@ -12,18 +12,18 @@ translation_of: 'Web/CSS/:empty'
 ---
 <p>{{ CSSRef() }}</p>
 
-<h2 id="Summary" name="Summary">Описание</h2>
+<h2 id="Summary">Описание</h2>
 
 <p>{{ Cssxref("pseudo-classes", "Псевдокласс") }} <code>:empty</code> находит любой элемент, у которого нет потомков. Учитываются элементы и текст (включая пробелы). Комментарии не повлияют на то, что элемент будет рассматриваться как не пустой.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">&lt;element&gt;:empty { <em>/* стили</em> */ }
+<pre class="syntaxbox">&lt;element&gt;:empty { <em>/* стили</em> */ }
 </pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   background: red;
   height: 200px;
   width: 200px;
@@ -34,36 +34,16 @@ translation_of: 'Web/CSS/:empty'
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="box"&gt;&lt;!-- Я буду лаймовым --&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div class="box"&gt;&lt;!-- Я буду лаймовым --&gt;&lt;/div&gt;
 &lt;div class="box"&gt;Я буду красным&lt;/div&gt;
 &lt;div class="box"&gt;
     &lt;!-- Я буду красным, так как перед комментарием стоят пробелы --&gt;
 &lt;/div&gt;</pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#empty-pseudo', ':empty') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>Без изменений</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Selectors', '#empty-pseudo', ':empty') }}</td>
-   <td>{{ Spec2('CSS3 Selectors') }}</td>
-   <td>Изначальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p>{{Compat("css.selectors.empty")}}</p>
+<p>{{Compat}}</p>

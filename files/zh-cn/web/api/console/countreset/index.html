@@ -9,7 +9,7 @@ translation_of: Web/API/Console/countReset
 
 <p>{{AvailableInWorkers}}</p>
 
-<p>如果提供了参数<code>label</code>，此函数会重置与label关联的计数。</p>
+<p>如果提供了参数<code>label</code>，此函数会重置与 label 关联的计数。</p>
 
 <p>如果省略了参数<code>label</code>，此函数会重置默认的计数器。</p>
 
@@ -22,34 +22,34 @@ translation_of: Web/API/Console/countReset
 
 <dl>
  <dt><code>label</code></dt>
- <dd>一个字符串， 若传入此参数 <code>countReset() </code>重置此label的count为0。</dd>
- <dd>若忽略此参数  <code>countReset()</code> 重置count()默认的 default 字段的count为0<br>
+ <dd>一个字符串，若传入此参数 <code>countReset() </code>重置此 label 的 count 为 0。</dd>
+ <dd>若忽略此参数  <code>countReset()</code> 重置 count() 默认的 default 字段的 count 为 0<br>
   </dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>若传入label参数:</p>
+<p>若传入 label 参数：</p>
 
-<pre> <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">counter-name: 0</span></span></span></pre>
+<pre> counter-name: 0</pre>
 
-<p>若不传入label参数:</p>
+<p>若不传入 label 参数：</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">default: 0</span></span></span></pre>
+<pre>default: 0</pre>
 
 <h3 id="异常情况">异常情况</h3>
 
-<p>若传入一个不存在的 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"><code>label</code></span></font>, <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><code>countReset</code> 返回下面的警告信息:</span></span></span></p>
+<p>若传入一个不存在的 <code>label</code>, <code>countReset</code> 返回下面的警告信息：</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><code>Counter "counter-name" doesn’t exist.</code></span></span></span></pre>
+<pre><code>Counter "counter-name" doesn’t exist.</code></pre>
 
-<p>若 <code>label</code> 没有被传入 并且 <code>count()</code> 也没有被调用过, <code>countReset</code> 返回下面的警告信息:</p>
+<p>若 <code>label</code> 没有被传入 并且 <code>count()</code> 也没有被调用过，<code>countReset</code> 返回下面的警告信息：</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><code>Counter "default" doesn’t exist.</code></span></span></span></pre>
+<pre><code>Counter "default" doesn’t exist.</code></pre>
 
 <h2 id="示例">示例</h2>
 
-<p>下面给出示例代码:</p>
+<p>下面给出示例代码：</p>
 
 <pre class="brush: js">var user = "";
 
@@ -66,7 +66,7 @@ greet();
 console.count();
 console.countReset();</pre>
 
-<p>控制台打印输出结果:</p>
+<p>控制台打印输出结果：</p>
 
 <pre class="eval">"default: 1"
 "default: 2"
@@ -77,7 +77,7 @@ console.countReset();</pre>
 
 <p>Note that the call to console.counterReset() resets the value of the default counter to zero.</p>
 
-<p>可以看到 调用 <code>console.counterReset()</code> 重置了<code>default</code> 的计数为0</p>
+<p>可以看到 调用 <code>console.counterReset()</code> 重置了<code>default</code> 的计数为 0</p>
 
 <p>如果我们把 <code>user</code> 变量做为 <code>label</code> 传入第一次调用的 <code>count() </code> 把字符串 <code>'alice' </code>作为第二次调用<code>count()</code> 的参数</p>
 
@@ -96,7 +96,7 @@ greet();
 console.countReset("bob");
 console.count("alice");</pre>
 
-<p>我们看到的输出如下:</p>
+<p>我们看到的输出如下：</p>
 
 <pre class="eval">"bob: 1"
 "alice: 1"
@@ -104,29 +104,12 @@ console.count("alice");</pre>
 "bob: 0"
 "alice: 3"</pre>
 
-<p>调用countReset("bod")只是重置了 "bob" 的计数器值  而 "alice" 的计数器值没有改变。</p>
+<p>调用 countReset("bod") 只是重置了 "bob" 的计数器值  而 "alice" 的计数器值没有改变。</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#count", "console.countReset()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
-<p>{{Compat("api.Console.countReset")}}</p>
+{{Compat}}

@@ -13,7 +13,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 
 <p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}</p>
 
-<div class="summary">
+<div>
 <p>层叠样式表（<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heet，简称：CSS）是为网页添加样式的代码。本节将介绍 CSS 的基础知识，并解答类似问题：怎样将文本设置为黑色或红色？怎样将内容显示在屏幕的特定位置？怎样用背景图片或颜色来装饰网页？</p>
 </div>
 
@@ -27,7 +27,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 
 <p>不妨试一下：首先新建一个 <code>styles</code> 文件夹，在其中新建一个 <code>style.css</code> 文件，将这三行 CSS 保存在这个新文件中。</p>
 
-<p>然后再将该 CSS 文件连接至 HTML 文档，否则 CSS 代码不会对 HTML 文档在浏览器里的显示效果有任何影响。（如果你没有完成前几节的实践，请复习 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">处理文件</a> 和 <a href="/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML 基础</a>。）</p>
+<p>然后再将该 CSS 文件连接至 HTML 文档，否则 CSS 代码不会对 HTML 文档在浏览器里的显示效果有任何影响。（如果你没有完成前几节的实践，请复习 <a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">处理文件</a> 和 <a href="/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML 基础</a>。）</p>
 
 <ol>
  <li>打开 <code>index.html</code> 文件，然后将下面一行粘贴到文档头（也就是 <code>&lt;head&gt;</code> 和 <code>&lt;/head&gt;</code> 标签之间）。
@@ -37,13 +37,13 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
  <li>保存 <code>index.html</code> 并用浏览器将其打开。应该看到以下页面：</li>
 </ol>
 
-<p><img alt="测试页面，文字设置为红色" src="https://mdn.mozillademos.org/files/16480/beginner-site-red.png">如果段落文字变红，那么祝贺你，你已经成功地迈出了 CSS 学习的第一步。</p>
+<p><img alt="测试页面，文字设置为红色" src="website-screenshot-styled.png">如果段落文字变红，那么祝贺你，你已经成功地迈出了 CSS 学习的第一步。</p>
 
 <h3 id="“CSS_规则集”详解">“CSS 规则集”详解</h3>
 
-<p>让我们来仔细看一看上述CSS：</p>
+<p>让我们来仔细看一看上述 CSS：</p>
 
-<p><img alt="图解CSS声明" src="https://mdn.mozillademos.org/files/16483/css-declaration.png"></p>
+<p><img alt="图解CSS声明" src="css-declaration-small.png"></p>
 
 <p>整个结构称为 <strong>规则集</strong>（通常简称“规则”），各部分释义如下：</p>
 
@@ -97,7 +97,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
  <tbody>
   <tr>
    <td>元素选择器（也称作标签或类型选择器）</td>
-   <td>所有指定(该)类型的 HTML 元素</td>
+   <td>所有指定 (该) 类型的 HTML 元素</td>
    <td><code>p</code><br>
     选择 <code>&lt;p&gt;</code></td>
   </tr>
@@ -148,7 +148,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
   <p>将下列代码添加到相应的位置，用你在 Google Fonts 找到的字体替代 <code>font-family</code> 中的占位行。（ <code>font-family</code> 意味着你想要你的文本使用的字体。）这条规则首先为整个页面设定了一个全局字体和字号（因为 <code>&lt;html&gt;</code> 是整个页面的父元素，而且它所有的子元素都会继承相同的 <code>font-size</code> 和 <code>font-family</code>）：</p>
 
   <pre class="brush: css notranslate">html {
-  /* px 表示 “像素（pixels）”: 基础字号为 10 像素 */
+  /* px 表示“像素（pixels）”: 基础字号为 10 像素 */
   font-size: 10px;
   /* Google fonts 输出的 CSS */
   font-family: 'Open Sans', sans-serif;
@@ -179,13 +179,13 @@ p, li {
 
 <p>可以随时调整这些 <code>px</code><strong> </strong>值来获得满意的结果，以下是大体效果：</p>
 
-<p><img alt="测试页面，设置了文字间距和行间距等格式。" src="https://mdn.mozillademos.org/files/16481/beginner-site-text.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="测试页面，设置了文字间距和行间距等格式。" src="website-screenshot-font-small.png"></p>
 
 <h2 id="一切皆盒子">一切皆盒子</h2>
 
 <p>编写 CSS 时你会发现，你的工作好像是围绕着一个一个盒子展开的——设置尺寸、颜色、位置，等等。页面里大部分 HTML 元素都可以被看作若干层叠的盒子。</p>
 
-<p><img alt="a big stack of boxes or crates sat on top of one another" src="https://mdn.mozillademos.org/files/9441/boxes.jpg" style="display: block; margin: 0px auto;"></p>
+<p><img alt="a big stack of boxes or crates sat on top of one another" src="boxes.jpg"></p>
 
 <p>并不意外，CSS 布局主要就是基于盒模型的。每个占据页面空间的块都有这样的属性：</p>
 
@@ -195,7 +195,7 @@ p, li {
  <li><code>margin</code>：即外边距，围绕元素外部的空间。</li>
 </ul>
 
-<p><img alt="three boxes sat inside one another. From outside to in they are labelled margin, border and padding" src="https://mdn.mozillademos.org/files/9443/box-model.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="three boxes sat inside one another. From outside to in they are labelled margin, border and padding" src="box-model.png"></p>
 
 <p>这里还使用了：</p>
 
@@ -215,7 +215,7 @@ p, li {
   background-color: #00539F;
 }</pre>
 
-<p>这条规则将整个页面的背景颜色设置为 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">所计划的颜色</a>。</p>
+<p>这条规则将整个页面的背景颜色设置为 <a href="/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">所计划的颜色</a>。</p>
 
 <h3 id="文档体格式设置">文档体格式设置</h3>
 
@@ -233,7 +233,7 @@ p, li {
  <li><code>width: 600px;</code> —— 强制页面永远保持 600 像素宽。</li>
  <li><code>margin: 0 auto;</code> —— 为 <code>margin</code> 或 <code>padding</code> 等属性设置两个值时，第一个值代表元素的上方<strong>和</strong>下方（在这个例子中设置为 <code>0</code>），而第二个值代表左边<strong>和</strong>右边（在这里，<code>auto</code><strong> </strong>是一个特殊的值，意思是水平方向上左右对称）。你也可以使用一个，三个或四个值，参考 <a href="/zh-CN/docs/Web/CSS/margin#取值">这里</a> 。</li>
  <li><code>background-color: #FF9500;</code> —— 如前文所述，指定元素的背景颜色。我们给 body 用了一种略微偏红的橘色以与深蓝色的 {{htmlelement("html")}} <strong> </strong>元素形成反差，你也可以尝试其它颜色。</li>
- <li><code>padding: 0 20px 20px 20px;</code> —— 我们给内边距设置了四个值来让内容四周产生一点空间。这一次我们不设置上方的内边距，设置右边，下方，左边的内边距为20像素。值以上、右、下、左的顺序排列。</li>
+ <li><code>padding: 0 20px 20px 20px;</code> —— 我们给内边距设置了四个值来让内容四周产生一点空间。这一次我们不设置上方的内边距，设置右边，下方，左边的内边距为 20 像素。值以上、右、下、左的顺序排列。</li>
  <li><code>border: 5px solid black;</code> —— 直接为 body 设置 5 像素的黑色实线边框。</li>
 </ul>
 
@@ -277,18 +277,18 @@ p, li {
 </div>
 
 <div class="note">
-<p><strong>注：</strong>如果你暂时不能理解 <code>display: block</code> 和块级元素与行内元素的差别也没关系；随着你对 CSS 学习的深入，你将明白这个问题。<code>display</code> 属性的更多信息请查看 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/display">参考页面</a> 。</p>
+<p><strong>注：</strong>如果你暂时不能理解 <code>display: block</code> 和块级元素与行内元素的差别也没关系；随着你对 CSS 学习的深入，你将明白这个问题。<code>display</code> 属性的更多信息请查看 <a href="/zh-CN/docs/Web/CSS/display">参考页面</a> 。</p>
 </div>
 
 <h2 id="小结">小结</h2>
 
 <p>如果你按部就班完成本文的实践，那么最终可以得到以下页面（可以 <a href="https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site-styled/">查看我们的版本</a>）：</p>
 
-<p><img alt="测试页面，设置了标题、正文字体，图片居中，背景色、文字块颜色。" src="https://mdn.mozillademos.org/files/16482/beginner-site-styled.png"></p>
+<p><img alt="测试页面，设置了标题、正文字体，图片居中，背景色、文字块颜色。" src="website-screenshot-final.png"></p>
 
 <p>若遇到问题，可以参考 GitHub 上的 <a href="https://github.com/roy-tian/learning-area/tree/master/extras/getting-started-web/beginner-html-site-styled">完整示例代码</a> 做对比。</p>
 
-<p>本章介绍的 CSS 知识非常有限，更多内容请访问 <a href="/zh-CN/Learn/CSS">CSS学习页面</a>。</p>
+<p>本章介绍的 CSS 知识非常有限，更多内容请访问 <a href="/zh-CN/Learn/CSS">CSS 学习页面</a>。</p>
 
 <p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}</p>
 

@@ -7,7 +7,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 
 <p><strong><code>insertAdjacentHTML()</code></strong> разбирает указанный текст как HTML или XML и вставляет полученные узлы (nodes) в DOM дерево в указанную позицию. Данная функция не переписывает имеющиеся элементы, что предотвращает дополнительную сериализацию и поэтому работает быстрее, чем манипуляции с {{domxref("Element.innerHTML", "innerHTML")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre><em>targetElement</em>.insertAdjacentHTML(<em>position</em>, <em>text</em>);</pre>
 
@@ -43,7 +43,7 @@ foo
 
 <div class="note"><strong>Примечание:</strong>  позиции <code>beforebegin</code> и <code>afterend</code> работают только если узел имеет родительский элемент.</div>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush: js">// &lt;div id="one"&gt;one&lt;/div&gt;
 var d1 = document.getElementById('one');
@@ -62,27 +62,12 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#widl-Element-insertAdjacentHTML-void-DOMString-position-DOMString-text', 'Element.insertAdjacentHTML()')}}</td>
-   <td>{{ Spec2('DOM Parsing') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Element.insertAdjacentHTML")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="Specification" name="Specification"><span style="font-size: 2.33333rem; letter-spacing: -0.00278rem;">Смотрите также</span></h2>
+<h2 id="Specification"><span style="font-size: 2.33333rem; letter-spacing: -0.00278rem;">Смотрите также</span></h2>
 
 <p><a class="external" href="http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/">hacks.mozilla.org guest post by Henri Sivonen including benchmark showing that insertAdjacentHTML can be way faster in some cases.</a></p>

@@ -53,12 +53,12 @@ translation_of: Web/Media/Formats/codecs_parameter
 
 <div class="index">
 <ul>
- <li>{{anch("ISO-BMFF", "3GP")}}</li>
- <li>{{anch("AV1")}}</li>
- <li>{{anch("ISO-BMFF", "ISO BMFF")}}</li>
- <li>{{anch("ISO-BMFF", "MPEG-4")}}</li>
- <li>{{anch("ISO-BMFF", "QuickTime")}}</li>
- <li>{{anch("WebM")}}</li>
+ <li><a href="#iso-bmff">3GP</a></li>
+ <li><a href="#av1">AV1</a></li>
+ <li><a href="#iso-bmff">ISO BMFF</a></li>
+ <li><a href="#iso-bmff">MPEG-4</a></li>
+ <li><a href="#iso-bmff">QuickTime</a></li>
+ <li><a href="#webm">WebM</a></li>
 </ul>
 </div>
 
@@ -203,7 +203,7 @@ translation_of: Web/Media/Formats/codecs_parameter
  <dd>AV1 Main Profile, level 5.3, Main tier, 10 bits per color component. The remaining properties are taken from the defaults: 4:2:0 chroma subsampling, BT.709 color primaries, transfer characteristics, and matrix coefficients. Studio swing representation.</dd>
 </dl>
 
-<h3 id="ISO_Base_Media_File_Format_MP4_QuickTime_and_3GP"><a id="ISO-BMFF" name="ISO-BMFF">ISO Base Media File Format: MP4, QuickTime, and 3GP</a></h3>
+<h3 id="ISO_Base_Media_File_Format_MP4_QuickTime_and_3GP"><a id="ISO-BMFF">ISO Base Media File Format: MP4, QuickTime, and 3GP</a></h3>
 
 <p>All media types based upon the {{interwiki("wikipedia", "ISO Base Media File Format")}} (ISO BMFF) share the same syntax for the <code>codecs</code> parameter. These media types include <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MPEG-4</a> (and, in fact, the <a href="/en-US/docs/Web/Media/Formats/Containers#QuickTime">QuickTime</a> file format upon which MPEG-4 is based) as well as <a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a>. Both video and audio tracks can be described using the <code>codecs</code> parameter with the following MIME types:</p>
 
@@ -257,12 +257,12 @@ translation_of: Web/Media/Formats/codecs_parameter
  <dt><code>cccc[.pp]*</code> (Generic ISO BMFF)</dt>
  <dd>Where <code>cccc</code> is the four-character ID for the codec and <code>pp</code> is where zero or more two-character encoded property values go.</dd>
  <dt><code>mp4a.oo[.A]</code> (MPEG-4 audio)</dt>
- <dd>Where <code>oo</code> is the Object Type Indication value describing the contents of the media more precisely and <code>A</code> is the one-digit <em>audio</em> OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's <a href="http://mp4ra.org/#/object_types">Object Types page</a>. For example, Opus audio in an MP4 file is <code>mp4a.ad</code>. For further details, see {{anch("MPEG-4 audio")}}.</dd>
+ <dd>Where <code>oo</code> is the Object Type Indication value describing the contents of the media more precisely and <code>A</code> is the one-digit <em>audio</em> OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's <a href="http://mp4ra.org/#/object_types">Object Types page</a>. For example, Opus audio in an MP4 file is <code>mp4a.ad</code>. For further details, see <a href="#mpeg-4_audio">MPEG-4 audio</a>.</dd>
  <dt><code>mp4v.oo[.V]</code> (MPEG-4 video)</dt>
  <dd>Here, <code>oo</code> is again the OTI describing the contents more precisely, while <code>V</code> is the one-digit <em>video</em> OTI.</dd>
  <dt><code>avc1.oo[.PPCCLL]</code> (AVC video)</dt>
  <dd>
- <p><code>oo</code> is the OTI describing the contents, while <code>PPCCLL</code> is six hexadecimal digits specifying the profile number (<code>PP</code>), constraint set flags (<code>CC</code>), and level (<code>LL</code>). See {{anch("AVC profiles")}} for the possible values of <code>PP</code>.</p>
+ <p><code>oo</code> is the OTI describing the contents, while <code>PPCCLL</code> is six hexadecimal digits specifying the profile number (<code>PP</code>), constraint set flags (<code>CC</code>), and level (<code>LL</code>). See <a href="#avc_profiles">AVC profiles</a> for the possible values of <code>PP</code>.</p>
 
  <p>The constraint set flags byte is comprised of one-bit Boolean flags, with the most significant bit being referred to as flag 0 (or <code>constraint_set0_flag</code>, in some resources), and each successive bit being numbered one higher. Currently, only flags 0 through 2 are used; the other five bits <em>must</em> be zero. The meanings of the flags vary depending on the profile being used.</p>
 

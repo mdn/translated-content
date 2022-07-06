@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/rb
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong>HTML Ruby Base</strong>（<code>&lt;rb&gt;</code>）元素用于分隔{{HTMLElement("ruby")}}注释的基本文本组件（即正在注释的文本）。一个<code>&lt;rb&gt;</code>元素应该包装基本文本的每个单独的原子段。</span></p>
+<p><strong>HTML Ruby Base</strong>（<code>&lt;rb&gt;</code>）元素用于分隔{{HTMLElement("ruby")}}注释的基本文本组件（即正在注释的文本）。一个<code>&lt;rb&gt;</code>元素应该包装基本文本的每个单独的原子段。</p>
 
 <div class="hidden">\{{EmbedInteractiveExample("pages/tabbed/rb.html", "tabbed-standard")}}</div>
 
@@ -47,21 +47,21 @@ translation_of: Web/HTML/Element/rb
 <h2 id="用法注解">用法注解</h2>
 
 <ul>
- <li>Ruby 注解用于展示东亚文字的发音，例如使用日语罗马音和汉语拼音的文字。 <code>&lt;rb&gt;</code> 元素用于分隔出ruby基本文本的每个片段。</li>
- <li>虽然 <code>&lt;rb&gt;</code> 不是一个空元素，但是在源码中通常只包括每个元素的开始标签。 因此ruby标记就不那么复杂，也更容易阅读。在渲染版本中，浏览器也可以填充完整的元素。</li>
+ <li>Ruby 注解用于展示东亚文字的发音，例如使用日语罗马音和汉语拼音的文字。 <code>&lt;rb&gt;</code> 元素用于分隔出 ruby 基本文本的每个片段。</li>
+ <li>虽然 <code>&lt;rb&gt;</code> 不是一个空元素，但是在源码中通常只包括每个元素的开始标签。 因此 ruby 标记就不那么复杂，也更容易阅读。在渲染版本中，浏览器也可以填充完整的元素。</li>
  <li>你需要为要注释的每个基本段（<code>&lt;rb&gt;</code>元素）包含一个{{htmlelement("rt")}}元素。</li>
 </ul>
 
 <h2 id="示例">示例</h2>
 
-<p>在此示例中，我们提供了与“hanzi”等效的原始字符的注释：</p>
+<p>在此示例中，我们提供了与 “hanzi” 等效的原始字符的注释：</p>
 
 <pre class="brush: html">&lt;ruby&gt;
   &lt;rb&gt;漢&lt;/rb&gt;字
   &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;han&lt;/rt&gt;zi&lt;rp&gt;)&lt;/rp&gt;
 &lt;/ruby&gt;</pre>
 
-<p>请注意我们如何包含两个<code>&lt;rb&gt;</code>元素，以分隔ruby基本文本的两个独立部分。 另一方面，注释由两个{{htmlelement("rt")}}元素分隔。</p>
+<p>请注意我们如何包含两个<code>&lt;rb&gt;</code>元素，以分隔 ruby 基本文本的两个独立部分。 另一方面，注释由两个{{htmlelement("rt")}}元素分隔。</p>
 
 <p>请注意，我们也可以使用完全单独注释的两个基本文本部分来编写此示例。 在这种情况下，我们不需要包含<code>&lt;rb&gt;</code>元素：</p>
 
@@ -85,7 +85,7 @@ translation_of: Web/HTML/Element/rb
 
 <p>{{EmbedLiveSample("with-ruby", "100%", 60)}}</p>
 
-<p>当在不支持ruby的浏览器中呈现时，上面的HTML可能看起来像这样：</p>
+<p>当在不支持 ruby 的浏览器中呈现时，上面的 HTML 可能看起来像这样：</p>
 
 <div id="without-ruby">
 <div class="hidden">

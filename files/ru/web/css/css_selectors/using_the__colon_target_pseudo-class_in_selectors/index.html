@@ -6,9 +6,9 @@ original_slug: Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_
 ---
 <div>{{CSSRef}}</div>
 
-<p>Иногда пользователям трудно заметить, что URL указывает на определённую часть документа.  Узнайте, как можно использовать простое CSS правило, чтобы привлечь внимание пользователей к цели указания URL и улучшить их впечатления.</p>
+<p>Иногда пользователям трудно заметить, что URL указывает на определённую часть документа.  Узнайте, как можно использовать простое CSS-правило, чтобы привлечь внимание пользователей к цели указания URL и улучшить их впечатления.</p>
 
-<h2 id="Picking_a_Target" name="Picking_a_Target">Выбор целевых элементов</h2>
+<h2 id="Picking_a_Target">Выбор целевых элементов</h2>
 
 <p>Псевдокласс {{cssxref(":target")}} используется для стилизации целевого элемента URL, содержащего идентификатор фрагмента. Например, URL <code><span class="nowiki">http://developer.mozilla.org/en/docs/Using_the_:target_selector#example</span></code> содержит идентификатор фрагмента <code>#example</code>. В HTML, идентификаторы определяются значениями атрибутов  <code>id</code> или <code>name</code>, т.к. эти атрибуты разделяют одно пространство имён. Таким образом,  в вышеприведённом примере URL указывает на первый элемент "example" в документе.</p>
 
@@ -20,14 +20,14 @@ original_slug: Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_
 
 <pre class="brush: css">#example:target { border: 1px solid black; }</pre>
 
-<h2 id="Targeting_the_Root_Element" name="Targeting_the_Root_Element">Отметка всех элементов, как целевых</h2>
+<h2 id="Targeting_the_Root_Element">Отметка всех элементов, как целевых</h2>
 
 <p>Если вы намерены создать общий стиль, который будет применяться ко всем целевым элементам, то вам пригодится следующий универсальный селектор:</p>
 
 <pre class="brush: css">:target { color: red; }
 </pre>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <p>В данном примере имеются пять ссылок, которые ссылаются на элементы одного и того же документа. Выбор ссылки "First" , например, приведёт к тому, что  <code>&lt;h1 id="one"&gt;</code> станет целевым элементом.  Заметьте, что при прокрутке документа целевые элементы располагаются вверху окна браузера, если это возможно.</p>
 
@@ -42,18 +42,18 @@ original_slug: Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_
 &lt;a href="#five"&gt;Fifth&lt;/a&gt;</pre>
 </div>
 
-<h2 id="Conclusion" name="Conclusion">Вывод</h2>
+<h2 id="Conclusion">Вывод</h2>
 
 <p>В некоторых случаях, когда идентификатор фрагмента указывает на часть документа, читатели могут запутаться в том, какую именно часть документа они читают. Стилизуя целевой элемент URI, такую путаницу читателей можно уменьшить или убрать вообще.</p>
 
-<h2 id="Related_Links" name="Related_Links">Смотрите также</h2>
+<h2 id="Related_Links">Смотрите также</h2>
 
 <ul>
  <li>{{cssxref(":target")}}</li>
 </ul>
 
 <div class="originaldocinfo">
-<h3 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h3>
+<h3 id="Original_Document_Information">Original Document Information</h3>
 
 <ul>
  <li>Author(s): Eric Meyer, Standards Evangelist, Netscape Communications</li>

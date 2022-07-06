@@ -13,17 +13,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/NaN
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}</div>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>NaN</code> 是一个<em>全局对象</em>的属性。</p>
 
-<p><font face="monospace">NaN </font>属性的初始值就是 NaN，和 {{jsxref("Number.NaN")}} 的值一样。在现代浏览器中（ES5中）， <code>NaN</code> 属性是一个不可配置（non-configurable），不可写（non-writable）的属性。但在ES3中，这个属性的值是可以被更改的，但是也应该避免覆盖。</p>
+<p><code>NaN</code> 属性的初始值就是 NaN，和 {{jsxref("Number.NaN")}} 的值一样。在现代浏览器中（ES5 中）， <code>NaN</code> 属性是一个不可配置（non-configurable），不可写（non-writable）的属性。但在 ES3 中，这个属性的值是可以被更改的，但是也应该避免覆盖。</p>
 
-<p>编码中很少直接使用<code>到 NaN</code>。通常都是在计算失败时，作为 Math 的某个方法的返回值出现的（例如：<code>Math.sqrt(-1)</code>）或者尝试将一个字符串解析成数字但失败了的时候（例如：<code>parseInt("blabla")</code>）。</p>
+<p>编码中很少直接使用到 <code>NaN</code>。通常都是在计算失败时，作为 Math 的某个方法的返回值出现的（例如：<code>Math.sqrt(-1)</code>）或者尝试将一个字符串解析成数字但失败了的时候（例如：<code>parseInt("blabla")</code>）。</p>
 
-<h3 id="判断一个值是否是NaN">判断一个值是否是<code>NaN</code></h3>
+<h3 id="判断一个值是否是NaN">判断一个值是否是 <code>NaN</code></h3>
 
-<p><code>NaN</code>如果通过  <code>==</code> 、 <code>!=</code> 、 <code>===</code> 、以及 <code>!==</code>与其他任何值比较都将不相等 -- 包括与其他 NAN值进行比较。必须使用 {{jsxref("Number.isNaN()")}} 或 {{jsxref("Global_Objects/isNaN", "isNaN()")}} 函数。在执行自比较之中：NaN，也只有NaN，比较之中不等于它自己。</p>
+<p><code>NaN</code> 如果通过 <code>==</code>、 <code>!=</code>、 <code>===</code>、以及 <code>!==</code> 与其他任何值比较都将不相等 -- 包括与其他 <code>NaN</code> 值进行比较。必须使用 {{jsxref("Number.isNaN()")}} 或 {{jsxref("Global_Objects/isNaN", "isNaN()")}} 函数。在执行自比较之中：也只有 <code>NaN</code> 不等于它自己。</p>
 
 <pre class="brush: js">NaN === NaN;        // false
 Number.NaN === NaN; // false
@@ -35,12 +35,12 @@ valueIsNaN(1);          // false
 valueIsNaN(NaN);        // true
 valueIsNaN(Number.NaN); // true</pre>
 
-<p>但是，请注意isNaN（）和Number.isNaN（）之间的区别：如果当前值是NaN，或者将其强制转换为数字后将是NaN，则前者将返回true。而后者仅当值当前为NaN时才为true：</p>
+<p>但是，请注意 <code>isNaN()</code> 和 <code>Number.isNaN()</code> 之间的区别：如果当前值是 <code>NaN</code>，或者将其强制转换为数字后将是 <code>NaN</code>，则前者将返回 <code>true</code>。而后者仅当值当前为 <code>NaN</code> 时才为 <code>true</code>：</p>
 
-<pre><code>isNaN('hello world');        // true
+<pre class="brush: js"><code>isNaN('hello world');        // true
 Number.isNaN('hello world'); // false</code></pre>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <thead>
@@ -55,11 +55,11 @@ Number.isNaN('hello world'); // false</code></pre>
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("javascript.builtins.NaN")}}</p>
 
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Number.NaN")}}</li>

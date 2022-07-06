@@ -10,7 +10,7 @@ translation_of: WebAssembly/Rust_to_wasm
 ---
 <div>{{WebAssemblySidebar}}</div>
 
-<p class="summary">如果你写了一些 Rust 代码，你可以把它编译成 WebAssembly！这份教程将带你编译 Rust 项目为 wasm 并在一个现存的 web 应用中使用它。</p>
+<p>如果你写了一些 Rust 代码，你可以把它编译成 WebAssembly！这份教程将带你编译 Rust 项目为 wasm 并在一个现存的 web 应用中使用它。</p>
 
 <h2 id="Rust_和_WebAssembly_用例">Rust 和 WebAssembly 用例</h2>
 
@@ -29,9 +29,9 @@ translation_of: WebAssembly/Rust_to_wasm
 
 <p>让我们看看安装 Rust 环境的所有必要步骤。</p>
 
-<h3 id="安装Rust">安装Rust</h3>
+<h3 id="安装Rust">安装 Rust</h3>
 
-<p>前往 <a href="https://www.rust-lang.org/install.html">Install Rust</a> 页面并跟随指示安装 Rust。这里会安装一个名为 “rustup” 的工具，这个工具能让你管理多个不同版本的 Rust。默认情况下，它会安装用于惯常Rust开发的 stable 版本 Rust Release。Rustup 会安装 Rust 的编译器 <code>rustc</code>、Rust 的包管理工具 <code>cargo</code>、Rust 的标准库 <code>rust-std</code> 以及一些有用的文档 <code>rust-docs</code>。</p>
+<p>前往 <a href="https://www.rust-lang.org/install.html">Install Rust</a> 页面并跟随指示安装 Rust。这里会安装一个名为“rustup”的工具，这个工具能让你管理多个不同版本的 Rust。默认情况下，它会安装用于惯常 Rust 开发的 stable 版本 Rust Release。Rustup 会安装 Rust 的编译器 <code>rustc</code>、Rust 的包管理工具 <code>cargo</code>、Rust 的标准库 <code>rust-std</code> 以及一些有用的文档 <code>rust-docs</code>。</p>
 
 <div class="note">
 <p><strong>Note</strong>: 需要注意，在安装完成后，你需要把 cargo 的 <code>bin</code> 目录添加到你系统的 <code>PATH</code> 。一般来说它会自动添加，但需要你重启终端后才会生效。 </p>
@@ -60,7 +60,7 @@ Password:
 Email: (this IS public) you@example.com
 </code></pre>
 
-<p>你需要完善你的用户名，密码和邮箱。如果成功了，你将会看到:</p>
+<p>你需要完善你的用户名，密码和邮箱。如果成功了，你将会看到：</p>
 
 <pre class="brush: bash notranslate"><code>Logged in as yournpmusername on https://registry.npmjs.org/.
 </code></pre>
@@ -127,7 +127,7 @@ pub fn greet(name: &amp;str) {
 use wasm_bindgen::prelude::*;
 </code></pre>
 
-<p>第一行就像在说 “哇 Rust，我们在用一个叫做 wasm_bindgen 的库”。在 Rust 当中，库被称为 “crates”，因为我们使用的是一个外部库，所以有  "extern"。</p>
+<p>第一行就像在说“哇 Rust，我们在用一个叫做 wasm_bindgen 的库”。在 Rust 当中，库被称为“crates”，因为我们使用的是一个外部库，所以有  "extern"。</p>
 
 <p>明白了吗？ <strong>Cargo ships crates</strong>.</p>
 
@@ -149,15 +149,15 @@ extern {
 }
 </code></pre>
 
-<p>在 <code>#[]</code> 中的内容叫做 "属性"，并以某种方式改变下面的语句。在这种情况下，下面的语句是一个 <code>extern</code>，它将告诉 Rust that <span class="tlid-translation translation" lang="zh-CN"><span title="">我们想调用一些外部定义的函数</span></span>。这个属性告诉我们 "wasm-bindgen 知道如何找到这些函数"。</p>
+<p>在 <code>#[]</code> 中的内容叫做 "属性"，并以某种方式改变下面的语句。在这种情况下，下面的语句是一个 <code>extern</code>，它将告诉 Rust that 我们想调用一些外部定义的函数。这个属性告诉我们 "wasm-bindgen 知道如何找到这些函数"。</p>
 
 <p>第三行是用 Rust 写的函数签名。它告诉我们 "<code>alert</code> 函数接受一个叫做 s 的字符串作为参数。"</p>
 
 <p>你可能会疑惑这个函数是什么，你的疑惑可能是正确的：这是 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert">the <code>alert</code> function provided by JavaScript</a>！我们将在下一节中调用这个函数。</p>
 
-<p>当你想调用新的 JavaScript 函数时，你可以在这里写他们，<code>wasm-bindgen</code> 将负责为您设置一切。<span class="tlid-translation translation" lang="zh-CN"><span title="">并非一切都得到支持，但我们正在努力！如果缺少某些内容，</span></span>请 <a href="https://github.com/rustwasm/wasm-bindgen/issues/new">file bugs</a> 。</p>
+<p>当你想调用新的 JavaScript 函数时，你可以在这里写他们，<code>wasm-bindgen</code> 将负责为您设置一切。并非一切都得到支持，但我们正在努力！如果缺少某些内容，请 <a href="https://github.com/rustwasm/wasm-bindgen/issues/new">file bugs</a> 。</p>
 
-<h4 id="编写能够在JavaScript中调用的_Rust_函数">编写能够在JavaScript中调用的 Rust 函数</h4>
+<h4 id="编写能够在JavaScript中调用的_Rust_函数">编写能够在 JavaScript 中调用的 Rust 函数</h4>
 
 <p>最后一部分是这样的：</p>
 
@@ -167,7 +167,7 @@ pub fn greet(name: &amp;str) {
 }
 </code></pre>
 
-<p>我们又看到了 <code>#[wasm_bindgen]</code> 属性。在这里，它并非定义一个 <code>extern</code> 块，而是 <code>fn，</code>这代表我们希望能够在 JavaScript 中使用这个 Rust 函数。 这和 <code>extern</code> 正相反：我们并非引入函数，而是要把函数给外部世界使用。</p>
+<p>我们又看到了 <code>#[wasm_bindgen]</code> 属性。在这里，它并非定义一个 <code>extern</code> 块，而是 <code>fn，</code>这代表我们希望能够在 JavaScript 中使用这个 Rust 函数。这和 <code>extern</code> 正相反：我们并非引入函数，而是要把函数给外部世界使用。</p>
 
 <p>这个函数的名字是 <code>greet</code>，它需要一个参数，一个字符串 （写作 <code>&amp;str</code>）。它调用了我们前面在 <code>extern</code> 块中引入的 <code>alert</code> 函数。它传递了一个让我们串联字符串的 <code>format!</code> 宏的调用。</p>
 
@@ -179,7 +179,7 @@ pub fn greet(name: &amp;str) {
 
 <h3 id="把我们的代码编译到_WebAssembly">把我们的代码编译到 WebAssembly</h3>
 
-<p>为了能够正确的编译我们的代码，首先我们需要配置 <code>Cargo.toml</code>。打开这个文件，将内容改为如下所示:</p>
+<p>为了能够正确的编译我们的代码，首先我们需要配置 <code>Cargo.toml</code>。打开这个文件，将内容改为如下所示：</p>
 
 <pre class="notranslate"><code class="toml language-toml">[package]
 name = "hello-wasm"
@@ -204,7 +204,7 @@ wasm-bindgen = "0.2"
 
 <h3 id="构建包">构建包</h3>
 
-<p>现在我们已经完成了所有配置项，开始构建吧！在命令行输入以下命令:</p>
+<p>现在我们已经完成了所有配置项，开始构建吧！在命令行输入以下命令：</p>
 
 <pre class="brush: bash notranslate"><code class="shell language-shell">$ wasm-pack build --scope mynpmusername
 </code></pre>
@@ -233,13 +233,13 @@ wasm-bindgen = "0.2"
 $ npm publish --access=public
 </code></pre>
 
-<p>我们现在有了一个 npm 包，使用 Rust 编写，但已经被编译为 WebAssembly 了。现在这个包已经可以被 JavaScript 使用了，而且使用它完全不需要用户安装 Rust ；包中的代码是 WebAssembly 代码，而不是 Rust 源码！</p>
+<p>我们现在有了一个 npm 包，使用 Rust 编写，但已经被编译为 WebAssembly 了。现在这个包已经可以被 JavaScript 使用了，而且使用它完全不需要用户安装 Rust；包中的代码是 WebAssembly 代码，而不是 Rust 源码！</p>
 
 <h2 id="在网站上使用我们的包">在网站上使用我们的包</h2>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">让我们建立一个使用我们包的网站！</span> <span title="">人们通过各种打包工具使用 npm包，在本教程中，我们将使用 </span></span><code>webpack</code><span class="tlid-translation translation" lang="zh-CN"><span title="">。</span> <span title="">它比其他某些打包工具稍微复杂一点，但展示了更实际的用法。</span><br>
+<p>让我们建立一个使用我们包的网站！人们通过各种打包工具使用 npm 包，在本教程中，我们将使用 <code>webpack</code>。它比其他某些打包工具稍微复杂一点，但展示了更实际的用法。<br>
  <br>
- <span title="">让我们离开</span></span><code>pkg</code><span class="tlid-translation translation" lang="zh-CN"><span title="">目录，并创建一个新目录</span></span><code>site</code><span class="tlid-translation translation" lang="zh-CN"><span title="">，尝试以下操作：</span></span></p>
+ 让我们离开<code>pkg</code>目录，并创建一个新目录<code>site</code>，尝试以下操作：</p>
 
 <pre class="brush: bash notranslate"><code class="bash language-bash">$ cd ../..
 $ mkdir site
@@ -263,9 +263,9 @@ $ cd site
 }
 </code></pre>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">请注意，您需要在依赖项部分的 </span></span><code>@</code><span class="tlid-translation translation" lang="zh-CN"><span title=""> 之后填写自己的用户名。</span><br>
+<p>请注意，您需要在依赖项部分的 <code>@</code> 之后填写自己的用户名。<br>
  <br>
- <span title="">接下来，我们需要配置Webpack。</span> <span title="">创建 </span></span><code>webpack.config.js</code><span class="tlid-translation translation" lang="zh-CN"><span title=""> 并输入：</span></span></p>
+ 接下来，我们需要配置 Webpack。创建 <code>webpack.config.js</code> 并输入：</p>
 
 <pre class="brush: js notranslate"><code class="javascript language-javascript">const path = require('path');
 module.exports = {
@@ -278,7 +278,7 @@ module.exports = {
 };
 </code></pre>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">现在我们需要一个HTML文件。</span> <span title="">创建一个<code>index.html</code>并写入如下内容：</span></span></p>
+<p>现在我们需要一个 HTML 文件。创建一个<code>index.html</code>并写入如下内容：</p>
 
 <pre class="notranslate"><code class="html language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -292,7 +292,7 @@ module.exports = {
 &lt;/html&gt;
 </code></pre>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">最后，从HTML文件中引用<code>index.js</code>：</span></span></p>
+<p>最后，从 HTML 文件中引用<code>index.js</code>：</p>
 
 <pre class="brush: js notranslate"><code class="javascript language-javascript">const js = import("./node_modules/@yournpmusername/hello-wasm/hello_wasm.js");
 js.then(js =&gt; {
@@ -300,17 +300,17 @@ js.then(js =&gt; {
 });
 </code></pre>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">请注意，您需要再次填写您的npm用户名。</span><br>
+<p>请注意，您需要再次填写您的 npm 用户名。<br>
  <br>
- <span title="">这将从<code>node_modules</code>文件夹导入我们的模块。</span><span title="">这不是最佳做法，但这里只做一个演示，因此暂时就这样用。</span> <span title="">加载后，它将从该模块调用<code>greet</code>函数，并传入字符串“WebAssembly”参数。</span><span title="">注意这里看上去没有什么特别的，但是我们正在调用 Rust 代码！</span> <span title="">就JavaScript代码所知，这只是一个普通模块。</span><br>
+ 这将从<code>node_modules</code>文件夹导入我们的模块。这不是最佳做法，但这里只做一个演示，因此暂时就这样用。加载后，它将从该模块调用<code>greet</code>函数，并传入字符串“WebAssembly”参数。注意这里看上去没有什么特别的，但是我们正在调用 Rust 代码！就 JavaScript 代码所知，这只是一个普通模块。<br>
  <br>
- <span title="">我们已经完成了所有的文件！</span> <span title="">让我们试一下：</span></span></p>
+ 我们已经完成了所有的文件！让我们试一下：</p>
 
 <pre class="brush: bash notranslate"><code class="shell language-shell">$ npm install
 $ npm run serve
 </code></pre>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">这将启动一个Web服务器。</span> <span title="">访问 </span></span><a href="http://localhost:8080">http://localhost:8080 </a><span class="tlid-translation translation" lang="zh-CN"><span title="">，您应该会在屏幕上看到一个警告框，其中包含 </span></span><code>Hello, WebAssembly!</code><span class="tlid-translation translation" lang="zh-CN"> ！<span title="">我们已经成功地从 JavaScript 调用了 Rust，并从 Rust 调用了 JavaScript。</span></span></p>
+<p>这将启动一个 Web 服务器。访问 <a href="http://localhost:8080">http://localhost:8080 </a>，您应该会在屏幕上看到一个警告框，其中包含 <code>Hello, WebAssembly!</code> ！我们已经成功地从 JavaScript 调用了 Rust，并从 Rust 调用了 JavaScript。</p>
 
 <p>
  </p><h2 id="结论">结论</h2>

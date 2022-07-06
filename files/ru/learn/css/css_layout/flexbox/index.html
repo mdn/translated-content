@@ -46,19 +46,19 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Вы увидите элемент {{htmlelement("header")}} с заголовком верхнего уровня внутри, и элемент {{htmlelement("section")}} содержащий три элемента {{htmlelement("article")}}. Мы будем использовать их для создания стандартного трёхколоночного макета.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13406/flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
 <h2 id="Определяем_какие_элементы_разместить_в_виде_flex_блоков">Определяем, какие элементы разместить в виде flex блоков</h2>
 
 <p>Для начала нам нужно выбрать, какие элементы следует выкладывать в виде flex блоков. Для этого мы устанавливаем специальное значение {{cssxref ("display")}} в родительском элементе тех элементов, которые вы хотите оформить. В нашем случае мы хотим расположить элементы {{htmlelement ("article")}}, поэтому мы устанавливаем это значение на {{htmlelement ("section")}} (который становится flex контейнером):</p>
 
-<pre class="brush: css notranslate">section {
+<pre class="brush: css">section {
   display: flex;
 }</pre>
 
 <p>В результате у нас получится вот так:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13408/flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
 
 <p>Так, всего одно объявление делает всё, что нам нужно — здорово, правда? Мы получили 3-х колоночный макет с колонками равных размеров по ширине и высоте. Это связано с тем, что значения по умолчанию, заданные для flex элементов (дочерние элементы flex контейнера), настроены для решения основных задач. Подробнее об этом позже.</p>
 
@@ -68,7 +68,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Когда элементы выложены как flex блоки, они располагаются вдоль двух осей:</p>
 
-<p><img alt="flex_terms.png" class="default internal" src="/files/3739/flex_terms.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="flex_terms.png" class="default internal" src="flex_terms.png"></p>
 
 <ul>
  <li><strong>Главная ось (main axis)</strong> проходит в том направлении, вдоль которого расположены Flex элементы (например, в строку слева направо или вдоль колонок вниз.) Начало и конец этой оси называются <strong>main start</strong> и <strong>main end</strong>.</li>
@@ -85,7 +85,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Попробуйте добавить следующую строчку в ваш файл:</p>
 
-<pre class="brush: css notranslate">flex-direction: column</pre>
+<pre class="brush: css">flex-direction: column</pre>
 
 <p>Вы увидите, что элементы расположились в виде столбцов, также как было до того, как мы добавили CSS код. Прежде чем продолжать, удалите эту строчку из примера.</p>
 
@@ -97,15 +97,15 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Проблема может быть в том, что, если у вас фиксированная ширина или высота макета, ваши flexbox элементы переполнят контейнер и нарушат макет. Посмотрите на этот пример: <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html">flexbox-wrap0.html</a> и <a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html">посмотрите его вживую</a> (сохраните его себе на компьютер, если хотите изучить этот пример):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13410/flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
 
 <p>Мы видим, что дочерние элементы выбиваются из своего родителя-контейнера. Один из способов как это исправить - это добавить следующее свойство:</p>
 
-<pre class="brush: css notranslate">flex-wrap: wrap</pre>
+<pre class="brush: css">flex-wrap: wrap</pre>
 
 <p>Попробуйте, и вы увидите, что так макет стал выглядеть гораздо лучше:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13412/flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
 
 <p>Теперь у нас в макете несколько рядов— все дети-блоки, которые не помещаются, переносятся на следующую строку, чтобы не было переполнения. Свойство <code>flex: 200px</code>, установленное на статьях, означает, что каждый блок должен быть минимум 200 пикселей в ширину. Мы обсудим это свойство более подробно позже. Вы также можете заметить, что несколько дочерних блоков в последней строке стали более широкими, так что вся строка стала заполнена.</p>
 
@@ -115,12 +115,12 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>На этом этапе нужно заметить, что существует сокращение для свойств {{cssxref("flex-direction")}} и {{cssxref("flex-wrap")}} — {{cssxref("flex-flow")}}. Например, вы можете заменить</p>
 
-<pre class="brush: css notranslate">flex-direction: row;
+<pre class="brush: css">flex-direction: row;
 flex-wrap: wrap;</pre>
 
 <p>на</p>
 
-<pre class="brush: css notranslate">flex-flow: row wrap;</pre>
+<pre class="brush: css">flex-flow: row wrap;</pre>
 
 <h2 id="Гибкое_изменение_размеров_flex_элементов">Гибкое изменение размеров flex элементов</h2>
 
@@ -128,7 +128,7 @@ flex-wrap: wrap;</pre>
 
 <p>Прежде всего, добавим следующее правило в конец вашего CSS кода:</p>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   flex: 1;
 }</pre>
 
@@ -136,7 +136,7 @@ flex-wrap: wrap;</pre>
 
 <p>Теперь добавьте следующее правило в строку после предыдущего:</p>
 
-<pre class="brush: css notranslate">article:nth-of-type(3) {
+<pre class="brush: css">article:nth-of-type(3) {
   flex: 2;
 }</pre>
 
@@ -144,7 +144,7 @@ flex-wrap: wrap;</pre>
 
 <p>Вы также можете указать минимальный размер внутри значения flex. Попробуйте изменить существующие правила, добавив размеры:</p>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   flex: 1 200px;
 }
 
@@ -154,7 +154,7 @@ article:nth-of-type(3) {
 
 <p>Это просто означает, что каждому flex элементу сначала будет дано 200px от свободного места. Потом оставшееся место будет поделено в соответствии с частями пропорций. Обновите страницу, и вы увидите разницу, как пространство поделено теперь.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13406/flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
 <p>Настоящая ценность flexbox можно увидеть в его гибкости/отзывчивости — если изменить размер окна или добавить ещё элемент {{htmlelement("article")}}, макет будет и дальше выглядеть также хорошо.</p>
 
@@ -174,13 +174,13 @@ article:nth-of-type(3) {
 
 <p>Flexbox также имеет функции для выравнивания flex элементов вдоль основной (main) или поперечной (cross) осей. Рассмотрим их на новом примере — <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">flex-align0.html</a> (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">просмотр</a>) — который мы превратим в аккуратную, гибкую кнопочную панель инструментов. На данный момент вы видите горизонтальную панель меню, кнопки которой застряли в верхнем левом углу.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13414/flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="" src="flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
 
 <p>Сначала сделайте себе копию этого примера.</p>
 
 <p>Теперь добавьте следующую строку в низ кода CSS:</p>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -198,7 +198,7 @@ article:nth-of-type(3) {
 
 <p>Вы можете переопределить {{cssxref("align-items")}} поведение для отдельных flex элементов, применив свойство {{cssxref("align-self")}} к ним. Например, попробуйте добавить эти строки в код:</p>
 
-<pre class="brush: css notranslate">button:first-child {
+<pre class="brush: css">button:first-child {
   align-self: flex-end;
 }</pre>
 
@@ -222,7 +222,7 @@ article:nth-of-type(3) {
 
 <p>Код здесь простой: попробуйте добавить следующий CSS вниз вашего кода примера:</p>
 
-<pre class="brush: css notranslate">button:first-child {
+<pre class="brush: css">button:first-child {
   order: 1;
 }</pre>
 
@@ -237,7 +237,7 @@ article:nth-of-type(3) {
 
 <p>Вы можете установить отрицательные значения , чтобы элементы отображались раньше, чем элементы с установленным 0. Например, вы можете сделать, чтобы кнопка «Blush» появлялась в начале основной оси, используя следующее правило:</p>
 
-<pre class="brush: css notranslate">button:last-child {
+<pre class="brush: css">button:last-child {
   order: -1;
 }</pre>
 
@@ -245,11 +245,11 @@ article:nth-of-type(3) {
 
 <p>Можно создать несколько довольно сложных макетов с помощью flexbox. Совершенно нормально сделать flex элемент flex контейнером, чтобы его потомки также были flex блоками. Посмотрите на <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html">complex-flexbox.html</a> (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html">см. вживую</a>).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13418/flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>HTML для этого довольно простой. У нас есть элемент {{htmlelement ("section")}}, содержащий три {{htmlelement ("article")}}. Третий {{htmlelement ("article")}} содержит ещё три {{htmlelement ("div")}}.</p>
 
-<pre class="notranslate">section - article
+<pre>section - article
           article
           article - div - button
                     div   button
@@ -261,13 +261,13 @@ article:nth-of-type(3) {
 
 <p>Прежде всего, мы устанавливаем дочерние элементы {{htmlelement ("section")}} в виде flex блоков.</p>
 
-<pre class="brush: css notranslate">section {
+<pre class="brush: css">section {
   display: flex;
 }</pre>
 
 <p>Затем мы устанавливаем несколько значений на самих {{htmlelement ("article")}}. Обратите внимание на второе правило: мы устанавливаем третий {{htmlelement ("article")}}, чтобы его дети были в макете в виде flex блоков, но на этот раз мы располагаем их как столбец.</p>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   flex: 1 200px;
 }
 
@@ -280,7 +280,7 @@ article:nth-of-type(3) {
 
 <p>Затем мы берём первый {{htmlelement ("div")}}. Сначала мы пишем flex: 1 100px; чтобы дать ему минимальную высоту 100px, потом мы устанавливаем его дочерние элементы (элементы {{htmlelement ("button")}}) также в виде flex блоков. Им мы назначаем перенос блоков и выравниваем их по центру доступного пространства, как это было в примере с кнопкой.</p>
 
-<pre class="brush: css notranslate">article:nth-of-type(3) div:first-child {
+<pre class="brush: css">article:nth-of-type(3) div:first-child {
   flex: 1 100px;
   display: flex;
   flex-flow: row wrap;
@@ -290,7 +290,7 @@ article:nth-of-type(3) {
 
 <p>Наконец, мы устанавливаем размер кнопке, мы даём ему значение flex 1. Это даёт очень интересный эффект, который вы увидите, если попытаетесь изменить размер ширины окна браузера. Кнопки занимают столько места, сколько могут, и сидят на одной линии также, сколько могут. Если же они не могут комфортно расположиться на одной линии, они перепрыгнут на новые строки.</p>
 
-<pre class="brush: css notranslate">button {
+<pre class="brush: css">button {
   flex: 1;
   margin: 5px;
   font-size: 18px;

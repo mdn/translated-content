@@ -10,26 +10,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 ---
 <div>{{JSRef("Global_Objects", "Number")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>toFixed()</code></strong> форматирует число, используя запись с фиксированной запятой.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>numObj</var>.toFixed([<var>digits</var>])</code></pre>
+<pre class="syntaxbox"><code><var>numObj</var>.toFixed([<var>digits</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>digits</code></dt>
  <dd>Необязательный параметр. Количество цифр после десятичной запятой; может быть значением между 0 и 20 включительно, хотя реализации могут поддерживать и больший диапазон значений. Если аргумент опущен, он считается равным 0.</dd>
 </dl>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 
 <p>Строка, представляющая <code>numObj</code>, не использующая экспоненциальную запись и содержащая ровно <code>digits</code> цифр после десятичной запятой. Число округляется при необходимости, а дробная часть дополняется нулями таким образом, чтобы иметь указанную длину. Если <code>numObj</code> больше или равно <code>1e+21</code>, этот метод просто вызывает метод {{jsxref("Number.prototype.toString()")}} и возвращает строку в экспоненциальной записи.</p>
 
-<h3 id="Throws" name="Throws">Выбрасываемые исключения</h3>
+<h3 id="Throws">Выбрасываемые исключения</h3>
 
 <dl>
  <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
@@ -38,11 +38,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toFixed
  <dd>Если этот метод вызывается на объекте, не являющимся объектом {{jsxref("Global_Objects/Number", "Number")}}.</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_toFixed" name="Example:_Using_toFixed">Пример: использование <code>toFixed</code></h3>
+<h3 id="Example_Using_toFixed">Пример: использование <code>toFixed</code></h3>
 
-<pre class="brush: js notranslate">var numObj = 12345.6789;
+<pre class="brush: js">var numObj = 12345.6789;
 
 numObj.toFixed();       // Вернёт '12346': обратите внимание на округление, дробной части нет
 numObj.toFixed(1);      // Вернёт '12345.7': обратите внимание на округление
@@ -55,38 +55,15 @@ numObj.toFixed(6);      // Вернёт '12345.678900': обратите вни�
 (-2.34).toFixed(1);     // Вернёт '-2.3' (...до тех пор, пока вы не заключите их в круглые скобки)
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.4.5', 'Number.prototype.toFixed')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.Number.toFixed")}}</div>
+<div>{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Number.prototype.toExponential()")}}</li>

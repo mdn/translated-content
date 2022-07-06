@@ -13,24 +13,24 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <div> </div>
 
-<div>在 JavaScript中，函数是<strong>头等(</strong>first-class<strong>)</strong>对象，因为它们可以像任何其他<strong>对象</strong>一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是<code><a href="/zh-cn/JavaScript/Reference/Global_Objects/Function" title="zh-cn/Core_JavaScript_1.5_Reference/Global_Objects/Function">Function</a></code>对象。</div>
+<div>在 JavaScript 中，函数是<strong>头等 (</strong>first-class<strong>)</strong>对象，因为它们可以像任何其他<strong>对象</strong>一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是<code><a href="/zh-cn/JavaScript/Reference/Global_Objects/Function" title="zh-cn/Core_JavaScript_1.5_Reference/Global_Objects/Function">Function</a></code>对象。</div>
 
 <div> </div>
 
-<p>有关更多示例和说明，请参阅<a href="/zh-CN/docs/Web/JavaScript/Guide/Functions">有关函数的JavaScript指南</a>。</p>
+<p>有关更多示例和说明，请参阅<a href="/zh-CN/docs/Web/JavaScript/Guide/Functions">有关函数的 JavaScript 指南</a>。</p>
 
 <h2 id="描述">描述</h2>
 
-<p>在JavaScript中，每个函数其实都是一个<code>Function</code>对象。查看{{jsxref("Function")}}页面<code>了解其</code>属性和方法。</p>
+<p>在 JavaScript 中，每个函数其实都是一个<code>Function</code>对象。查看{{jsxref("Function")}}页面<code>了解其</code>属性和方法。</p>
 
-<p>如果一个函数中没有使用return语句，则它默认返回<code>undefined</code>。要想返回一个特定的值，则函数必须使用 <code><a href="/zh-cn/JavaScript/Reference/Statements/return" title="zh-cn/Core_JavaScript_1.5_Reference/Statements/return">return</a></code> 语句来指定一个要返回的值。(使用<a href="/zh-cn/JavaScript/Reference/Operators/new" title="new">new</a>关键字调用一个<a href="/zh-cn/JavaScript/Reference/Global_Objects/Object/constructor" title="constructor">构造函数</a>除外)。</p>
+<p>如果一个函数中没有使用 return 语句，则它默认返回<code>undefined</code>。要想返回一个特定的值，则函数必须使用 <code><a href="/zh-cn/JavaScript/Reference/Statements/return" title="zh-cn/Core_JavaScript_1.5_Reference/Statements/return">return</a></code> 语句来指定一个要返回的值。(使用<a href="/zh-cn/JavaScript/Reference/Operators/new" title="new">new</a>关键字调用一个<a href="/zh-cn/JavaScript/Reference/Global_Objects/Object/constructor" title="constructor">构造函数</a>除外)。</p>
 
-<p>调用函数时，传递给函数的值被称为函数的实参（值传递），对应位置的函数参数名叫作形参。如果实参是一个包含原始值(数字，字符串，布尔值)的变量，则就算函数在内部改变了对应形参的值，返回后，该实参变量的值也不会改变。如果实参是一个对象引用，则对应形参会和该实参指向同一个对象。假如函数在内部改变了对应形参的值，返回后，实参指向的对象的值也会改变：</p>
+<p>调用函数时，传递给函数的值被称为函数的实参（值传递），对应位置的函数参数名叫作形参。如果实参是一个包含原始值 (数字，字符串，布尔值) 的变量，则就算函数在内部改变了对应形参的值，返回后，该实参变量的值也不会改变。如果实参是一个对象引用，则对应形参会和该实参指向同一个对象。假如函数在内部改变了对应形参的值，返回后，实参指向的对象的值也会改变：</p>
 
-<pre class="brush: js line-numbers  language-js"> /* 定义函数 myFunc */
+<pre class="brush: js"> /* 定义函数 myFunc */
  function myFunc(theObject)
  {
-   //实参 mycar 和形参 theObject 指向同一个对象.
+   //实参 mycar 和形参 theObject 指向同一个对象。
    theObject.brand = "Toyota";
  }
 
@@ -52,40 +52,34 @@ translation_of: Web/JavaScript/Reference/Functions
  myFunc(mycar);
 
  /*
-  * 弹出 'Toyota',对象的属性已被修改.
+  * 弹出 'Toyota',对象的属性已被修改。
   */
  console.log(mycar.brand);
 </pre>
 
-<p>在函数执行时，<a href="/zh-cn/JavaScript/Reference/Operators/this" title="this"><code>this</code> 关键字</a>并不会指向正在运行的函数本身，而是指向调用该函数的对象。所以，如果你想在函数内部获取函数自身的引用，只能使用函数名或者使用<a href="/zh-cn/JavaScript/Reference/Functions_and_function_scope/arguments/callee" title="zh-cn/Core_JavaScript_1.5_Reference/Functions_and_function_scope/arguments/callee">arguments.callee</a>属性(<u><a href="/zh-cn/JavaScript/Strict_mode" title="https://developer.mozilla.org/zh-cn/JavaScript/Strict_mode">严格模式</a></u>下不可用)，如果该函数是一个匿名函数,则你只能使用后者。</p>
+<p>在函数执行时，<a href="/zh-cn/JavaScript/Reference/Operators/this" title="this"><code>this</code> 关键字</a>并不会指向正在运行的函数本身，而是指向调用该函数的对象。所以，如果你想在函数内部获取函数自身的引用，只能使用函数名或者使用<a href="/zh-cn/JavaScript/Reference/Functions_and_function_scope/arguments/callee" title="zh-cn/Core_JavaScript_1.5_Reference/Functions_and_function_scope/arguments/callee">arguments.callee</a>属性 (<u><a href="/zh-cn/JavaScript/Strict_mode" title="https://developer.mozilla.org/zh-cn/JavaScript/Strict_mode">严格模式</a></u>下不可用)，如果该函数是一个匿名函数，则你只能使用后者。</p>
 
-<h2 id="Defining_functions" name="Defining_functions">函数定义</h2>
+<h2 id="Defining_functions">函数定义</h2>
 
-<p>定义函数有多种方法:</p>
+<p>定义函数有多种方法：</p>
 
-<h3 id="The_function_declaration_.28function_statement.29" name="The_function_declaration_.28function_statement.29">函数声明 (<font face="Consolas, Liberation Mono, Courier, monospace">函数</font>语句)</h3>
+<h3 id="The_function_declaration_.28function_statement.29">函数声明 (函数语句)</h3>
 
-<p>有一个特殊的语法来声明函数(查看<a href="/zh-cn/JavaScript/Reference/Statements/function" title="zh-cn/Core_JavaScript_1.5_Reference/Statements/function">函数语句</a>了解详情)：</p>
+<p>有一个特殊的语法来声明函数 (查看<a href="/zh-cn/JavaScript/Reference/Statements/function" title="zh-cn/Core_JavaScript_1.5_Reference/Statements/function">函数语句</a>了解详情)：</p>
 
 <pre class="syntaxbox">function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) { <em>statements </em>}
 </pre>
 
 <dl>
  <dt><code>name</code></dt>
- <dd>函数名.</dd>
-</dl>
-
-<dl>
+ <dd>函数名。</dd>
  <dt><code>param</code></dt>
- <dd>传递给函数的参数的名称，一个函数最多可以有255个参数。</dd>
-</dl>
-
-<dl>
+ <dd>传递给函数的参数的名称。</dd>
  <dt><code>statements</code></dt>
  <dd>组成函数体的声明语句。</dd>
 </dl>
 
-<h3 id="The_function_expression_.28function_operator.29" name="The_function_expression_.28function_operator.29">函数表达式 (<code>function</code> expression)</h3>
+<h3 id="The_function_expression_.28function_operator.29">函数表达式 (<code>function</code> expression)</h3>
 
 <p>函数表达式和函数声明非常相似，它们甚至有相同的语法（查看<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/function">函数表达式</a>了解详情）。一个函数表达式可能是一个更大的表达式的一部分。可以定义函数“名字”（例如可以在调用堆栈时使用）或者使用“匿名”函数。函数表达式不会提升，所以不能在定义之前调用。</p>
 
@@ -95,14 +89,8 @@ translation_of: Web/JavaScript/Reference/Functions
 <dl>
  <dt><code>name</code></dt>
  <dd>函数名，可以省略。当省略函数名的时候，该函数就成为了匿名函数。</dd>
-</dl>
-
-<dl>
  <dt><code>param</code></dt>
- <dd>传递给函数的参数的名称，一个函数最多可以有255个参数.</dd>
-</dl>
-
-<dl>
+ <dd>传递给函数的参数的名称。</dd>
  <dt><code>statements</code></dt>
  <dd>组成函数体的声明语句。</dd>
 </dl>
@@ -121,7 +109,7 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <p>命名函数表达式的好处是当我们遇到错误时，堆栈跟踪会显示函数名，容易寻找错误。</p>
 
-<p>可以看到，上面的两个例子都不以function开头。不以function开头的函数语句就是函数表达式定义。</p>
+<p>可以看到，上面的两个例子都不以 function 开头。不以 function 开头的函数语句就是函数表达式定义。</p>
 
 <p>当函数只使用一次时，通常使用<strong>IIFE (<em>Immediately Invokable Function Expressions</em>)。</strong></p>
 
@@ -139,9 +127,9 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <dl>
  <dt><code>name</code></dt>
- <dd>函数名称.</dd>
+ <dd>函数名称。</dd>
  <dt><code>param</code></dt>
- <dd>传递给函数的参数的名称，一个函数最多可以有255个参数。</dd>
+ <dd>传递给函数的参数的名称。</dd>
  <dt><code>statements</code></dt>
  <dd>组成函数体的声明语句。</dd>
 </dl>
@@ -156,7 +144,7 @@ translation_of: Web/JavaScript/Reference/Functions
  <dt><code>name</code></dt>
  <dd>函数名称。函数名可以被省略，在这种情况下该函数将变成匿名函数。</dd>
  <dt><code>param</code></dt>
- <dd>传递给函数的参数的名称。一个函数可以有多达255个参数</dd>
+ <dd>传递给函数的参数的名称。</dd>
  <dt><code>statements</code></dt>
  <dd>组成函数体的声明语句。</dd>
 </dl>
@@ -169,58 +157,52 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <dl>
  <dt><code>param</code></dt>
- <dd>参数名称. 零参数需要用()表示.  只有一个参数时不需要括号. (例如 <code>foo =&gt; 1</code>)</dd>
+ <dd>参数名称。零参数需要用 () 表示.  只有一个参数时不需要括号. (例如 <code>foo =&gt; 1</code>)</dd>
  <dt><code>statements or expression</code></dt>
- <dd>多个声明statements需要用大括号括起来，而单个表达式时则不需要。表达式expression也是该函数的隐式返回值。</dd>
+ <dd>多个声明 statements 需要用大括号括起来，而单个表达式时则不需要。表达式 expression 也是该函数的隐式返回值。</dd>
 </dl>
 
 <h3 id="Function构造函数"> <code>Function</code>构造函数</h3>
 
 <div class="note">
-<p><strong>注意:</strong> 不推荐使用 <code>Function</code> 构造函数创建函数,因为它需要的函数体作为字符串可能会阻止一些JS引擎优化,也会引起其他问题。</p>
+<p><strong>备注：</strong> 不推荐使用 <code>Function</code> 构造函数创建函数，因为它需要的函数体作为字符串可能会阻止一些 JS 引擎优化，也会引起其他问题。</p>
 </div>
 
-<p>所有其他对象, {{jsxref("Function")}} 对象可以用new操作符创建:</p>
+<p>所有其他对象，{{jsxref("Function")}} 对象可以用 new 操作符创建：</p>
 
 <pre class="syntaxbox">new Function (<em>arg1</em>, <em>arg2</em>, ... <em>argN</em>, <em>functionBody</em>)</pre>
 
 <dl>
  <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
- <dd>函数使用零个或多个名称作为正式的参数名称。每一个必须是一个符合有效的JavaScript标识符规则的字符串或用逗号分隔的字符串列表,例如“x”,“theValue”或“a,b”。</dd>
-</dl>
-
-<dl>
+ <dd>函数使用零个或多个名称作为正式的参数名称。每一个必须是一个符合有效的 JavaScript 标识符规则的字符串或用逗号分隔的字符串列表，例如“x”,“theValue”或“a,b”。</dd>
  <dt><code>functionBody</code></dt>
- <dd>一个构成的函数定义的，包含JavaScript声明语句的字符串。</dd>
+ <dd>一个构成的函数定义的，包含 JavaScript 声明语句的字符串。</dd>
 </dl>
 
-<p>把Function的构造函数当作函数一样调用(不使用new操作符)的效果与作为Function的构造函数调用一样。</p>
+<p>把 Function 的构造函数当作函数一样调用 (不使用 new 操作符) 的效果与作为 Function 的构造函数调用一样。</p>
 
 <h3 id="生成器函数的构造函数">生成器函数的构造函数</h3>
 
 <div class="note">
-<p><strong>注意:</strong> <code>GeneratorFunction</code> 不是一个全局对象，但可以从构造函数实例取得。(详情请查阅<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数">生成器函数</a>).</p>
+<p><strong>备注：</strong> <code>GeneratorFunction</code> 不是一个全局对象，但可以从构造函数实例取得。(详情请查阅<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数">生成器函数</a>).</p>
 </div>
 
 <div class="note">
-<p><strong>注意:</strong> 不推荐使用构造器函数的构造函数 (<code>GeneratorFunction</code> constructor)创建函数，因为它需要的函数体作为字符串可能会阻止一些JS引擎优化，也会引起其他问题。</p>
+<p><strong>备注：</strong> 不推荐使用构造器函数的构造函数 (<code>GeneratorFunction</code> constructor) 创建函数，因为它需要的函数体作为字符串可能会阻止一些 JS 引擎优化，也会引起其他问题。</p>
 </div>
 
-<p>所有其他对象, {{jsxref("GeneratorFunction")}} 对象可以用 new 操作符创建：</p>
+<p>所有其他对象，{{jsxref("GeneratorFunction")}} 对象可以用 new 操作符创建：</p>
 
 <pre class="syntaxbox">new GeneratorFunction (<em>arg1</em>, <em>arg2</em>, ... <em>argN</em>, <em>functionBody</em>)</pre>
 
 <dl>
  <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
- <dd>函数使用零个或多个名称作为正式的参数名称。每一个必须是一个符合有效的JavaScript标识符规则的字符串或用逗号分隔的字符串列表,例如“x”,“theValue”或“a,b”。</dd>
-</dl>
-
-<dl>
+ <dd>函数使用零个或多个名称作为正式的参数名称。每一个必须是一个符合有效的 JavaScript 标识符规则的字符串或用逗号分隔的字符串列表，例如“x”,“theValue”或“a,b”。</dd>
  <dt><code>functionBody</code></dt>
- <dd>一个构成的函数定义的，包含JavaScript声明语句的字符串。</dd>
+ <dd>一个构成的函数定义的，包含 JavaScript 声明语句的字符串。</dd>
 </dl>
 
-<p>把Function的构造函数当作函数一样调用(不使用new操作符)的效果与作为Function的构造函数调用一样。</p>
+<p>把 Function 的构造函数当作函数一样调用 (不使用 new 操作符) 的效果与作为 Function 的构造函数调用一样。</p>
 
 <h2 id="函数参数">函数参数</h2>
 
@@ -247,7 +229,7 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <h3 id="Getter_和_setter_函数">Getter 和 setter 函数</h3>
 
-<p>你可以在支持添加新属性的任何标准的内置对象或用户定义的对象内定义getter(访问方法)和setter(设置方法)。使用对象字面量语法定义getters和setters方法。</p>
+<p>你可以在支持添加新属性的任何标准的内置对象或用户定义的对象内定义 getter(访问方法) 和 setter(设置方法)。使用对象字面量语法定义 getters 和 setters 方法。</p>
 
 <dl>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a></dt>
@@ -260,9 +242,9 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <h3 id="方法定义语法">方法定义语法</h3>
 
-<p>从ECMAScript 6开始, 你可以用更短的语法定义自己的方法，类似于getters和setters。详情请查阅 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a> .</p>
+<p>从 ECMAScript 6 开始，你可以用更短的语法定义自己的方法，类似于 getters 和 setters。详情请查阅 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a> .</p>
 
-<pre class="brush: js line-numbers  language-js"> var obj = {
+<pre class="brush: js"> var obj = {
    foo() {},
    bar() {}
  };
@@ -272,7 +254,7 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <p>对比下面的例子：</p>
 
-<p>一个用<code>Function</code>构造函数定义的函数,被赋值给变量multiply：</p>
+<p>一个用<code>Function</code>构造函数定义的函数，被赋值给变量 multiply：</p>
 
 <pre class="brush: js"><code>var multiply = new Function('x', 'y', 'return x * y');</code></pre>
 
@@ -283,14 +265,14 @@ translation_of: Web/JavaScript/Reference/Functions
 } // 没有分号
 </pre>
 
-<p>一个匿名函数的函数表达式，被赋值给变量<code><font face="Open Sans, Arial, sans-serif">multiply</font></code><font face="Open Sans, Arial, sans-serif">：</font></p>
+<p>一个匿名函数的函数表达式，被赋值给变量<code>multiply</code>：</p>
 
-<pre class="brush: js line-numbers  language-js"> var multiply = function(x, y) {
+<pre class="brush: js"> var multiply = function(x, y) {
    return x * y;
  };
 </pre>
 
-<p><font face="Open Sans, Arial, sans-serif">一个命名为<code>func_named</code>的函数的函数表达式，被赋值给变量</font><code><font face="Open Sans, Arial, sans-serif">multiply</font></code><font face="Open Sans, Arial, sans-serif">：</font></p>
+<p>一个命名为<code>func_named</code>的函数的函数表达式，被赋值给变量<code>multiply</code>：</p>
 
 <pre class="brush: js">var multiply = function func_name(x, y) {
    return x * y;
@@ -300,9 +282,9 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <p>虽然有一些细微的差别，但所起的作用都差不多：</p>
 
-<p>函数名和函数的变量存在着差别。函数名不能被改变，但函数的变量却能够被再分配。函数名只能在函数体内使用。倘若在函数体外使用函数名将会导致错误（如果函数之前是通过一个var语句声明的则是undefined）。例如：</p>
+<p>函数名和函数的变量存在着差别。函数名不能被改变，但函数的变量却能够被再分配。函数名只能在函数体内使用。倘若在函数体外使用函数名将会导致错误（如果函数之前是通过一个 var 语句声明的则是 undefined）。例如：</p>
 
-<pre class="brush: js line-numbers  language-js">var y = function x() {};
+<pre class="brush: js">var y = function x() {};
 alert(x); // throws an error
 </pre>
 
@@ -310,31 +292,31 @@ alert(x); // throws an error
 
 <p>另一方面，被函数赋值的变量仅仅受限于它的作用域，该作用域确保包含着该函数被声明时的作用域。</p>
 
-<p>正如第四个例子所展示的那样，函数名与被函数赋值的变量是不相同的. 彼此之间没有关系。函数声明同时也创建了一个和函数名相同的变量。因此，与函数表达式定义不同，以函数声明定义的函数能够在它们被定义的作用域内通过函数名而被访问到：</p>
+<p>正如第四个例子所展示的那样，函数名与被函数赋值的变量是不相同的。彼此之间没有关系。函数声明同时也创建了一个和函数名相同的变量。因此，与函数表达式定义不同，以函数声明定义的函数能够在它们被定义的作用域内通过函数名而被访问到：</p>
 
-<p>使用用 '<code>new Function'定义的函数没有函数名。</code> 然而，在 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> JavaScript引擎中，其函数的序列化形式表现的好像它拥有一个名叫"anonymous"的名称一样。比如，使用 <code>alert(new Function())</code> 输出：</p>
+<p>使用用 '<code>new Function'定义的函数没有函数名。</code> 然而，在 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> JavaScript 引擎中，其函数的序列化形式表现的好像它拥有一个名叫"anonymous"的名称一样。比如，使用 <code>alert(new Function())</code> 输出：</p>
 
-<pre class="brush: js line-numbers  language-js">function anonymous() {
+<pre class="brush: js">function anonymous() {
 }</pre>
 
 <p>而实际上其函数并没有名称，<code>anonymous</code> 不是一个可以在函数内被访问到的变量。例如，下面的例子将会导致错误：</p>
 
-<pre class="brush: js line-numbers  language-js">var foo = new Function("alert(anonymous);");
+<pre class="brush: js">var foo = new Function("alert(anonymous);");
 foo();
 </pre>
 
-<p>和通过函数表达式定义或者通过Function构造函数定义的函数不同，函数声明定义的函数可以在它被声明之前使用。举个例子：</p>
+<p>和通过函数表达式定义或者通过 Function 构造函数定义的函数不同，函数声明定义的函数可以在它被声明之前使用。举个例子：</p>
 
 <pre class="brush: js">foo(); // alerts FOO!
 function foo() {
    alert('FOO!');
 }</pre>
 
-<p>函数表达式定义的函数继承了当前的作用域。换言之，函数构成了闭包。另一方面，Function构造函数定义的函数不继承任何全局作用域以外的作用域(那些所有函数都继承的)。</p>
+<p>函数表达式定义的函数继承了当前的作用域。换言之，函数构成了闭包。另一方面，Function 构造函数定义的函数不继承任何全局作用域以外的作用域 (那些所有函数都继承的)。</p>
 
-<p>通过函数表达式定义的函数和通过函数声明定义的函数只会被解析一次，而Function构造函数定义的函数却不同。也就是说，每次构造函数被调用，传递给Function构造函数的函数体字符串都要被解析一次 。虽然函数表达式每次都创建了一个闭包，但函数体不会被重复解析，因此函数表达式仍然要快于"<code>new Function(...)</code>"。 所以Function构造函数应尽可能地避免使用。</p>
+<p>通过函数表达式定义的函数和通过函数声明定义的函数只会被解析一次，而 Function 构造函数定义的函数却不同。也就是说，每次构造函数被调用，传递给 Function 构造函数的函数体字符串都要被解析一次 。虽然函数表达式每次都创建了一个闭包，但函数体不会被重复解析，因此函数表达式仍然要快于"<code>new Function(...)</code>"。 所以 Function 构造函数应尽可能地避免使用。</p>
 
-<p>有一点应该要注意的，在通过解析Function构造函数字符串产生的函数里，内嵌的函数表达式和函数声明不会被重复解析。例如：</p>
+<p>有一点应该要注意的，在通过解析 Function 构造函数字符串产生的函数里，内嵌的函数表达式和函数声明不会被重复解析。例如：</p>
 
 <pre class="brush: js">var foo = (new Function("var bar = \'FOO!\';\nreturn(function() {\n\talert(bar);\n});"))();
 foo(); // 函数体字符串"function() {\n\talert(bar);\n}"的这一部分不会被重复解析。</pre>
@@ -343,12 +325,12 @@ foo(); // 函数体字符串"function() {\n\talert(bar);\n}"的这一部分不�
 
 <ul>
  <li>成为表达式的一部分</li>
- <li>不再是函数或者脚本自身的“源元素” （source element）。“源元素”是脚本或函数体中的非嵌套语句。</li>
+ <li>不再是函数或者脚本自身的“源元素”（source element）。“源元素”是脚本或函数体中的非嵌套语句。</li>
 </ul>
 
 <pre class="brush: js">var x = 0;               // source element
 if (x === 0) {           // source element
-   x = 10;               // 非source element
+   x = 10;               // 非 source element
    function boo() {}     // 非 source element
 }
 function foo() {         // source element
@@ -356,14 +338,14 @@ function foo() {         // source element
    function bar() {}     // source element
    while (y === 10) {    // source element
       function blah() {} // 非 source element
-      y++;               //非source element
+      y++;               //非 source element
    }
 }
 </pre>
 
 <h3 id="例子">例子</h3>
 
-<pre class="brush: js line-numbers  language-js">// 函数声明
+<pre class="brush: js">// 函数声明
 function foo() {}
 
 // 函数表达式
@@ -390,7 +372,7 @@ function a() {
 
 <h2 id="块级函数">块级函数</h2>
 
-<p>从ECMAScript 6开始，在<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>下，块里的函数作用域为这个块。ECMAScript 6之前不建议块级函数在严格模式下使用。</p>
+<p>从 ECMAScript 6 开始，在<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>下，块里的函数作用域为这个块。ECMAScript 6 之前不建议块级函数在严格模式下使用。</p>
 
 <pre class="brush: js">'use strict';
 
@@ -421,9 +403,9 @@ f() === 1; // true
 }
 </pre>
 
-<p>ECMAScript 6中，如果<code>shouldDefineZero</code>是false，则永远不会定义zero,因为这个块从不执行。然而，这是标准的新的一部分。这是历史遗留问题，无论这个块是否执行，一些浏览器会定义zero。</p>
+<p>ECMAScript 6 中，如果<code>shouldDefineZero</code>是 false，则永远不会定义 zero，因为这个块从不执行。然而，这是标准的新的一部分。这是历史遗留问题，无论这个块是否执行，一些浏览器会定义 zero。</p>
 
-<p><code>在</code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a><code>下，所有支持</code>ECMAScript 6的<code>浏览器以相同的方式处理：只有在shouldDefineZero为true的情况下定义zero，并且作用域只是这个块内。</code></p>
+<p><code>在</code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a><code>下，所有支持</code>ECMAScript 6 的<code>浏览器以相同的方式处理：只有在 shouldDefineZero 为 true 的情况下定义 zero，并且作用域只是这个块内。</code></p>
 
 <p>有条件地定义一个函数的一个更安全的方法是把函数表达式赋给一个变量：</p>
 
@@ -439,19 +421,19 @@ if (0) {
 
 <h3 id="返回格式化数字">返回格式化数字</h3>
 
-<p>下面的函数返回一个字符串，其中包含了一个格式化的、以一个由0开头并填充的数字。</p>
+<p>下面的函数返回一个字符串，其中包含了一个格式化的、以一个由 0 开头并填充的数字。</p>
 
-<pre class="brush: js">// 这个函数返回一个由0开头并填充的字符串
+<pre class="brush: js">// 这个函数返回一个由 0 开头并填充的字符串
 function padZeros(num, totalLen) {
    var numStr = num.toString();             // 用字符串返回值进行初始化
-   var numZeros = totalLen - numStr.length; // 计算zeros顺序
+   var numZeros = totalLen - numStr.length; // 计算 zeros 顺序
    for (var i = 1; i &lt;= numZeros; i++) {
       numStr = "0" + numStr;
    }
    return numStr;
 }</pre>
 
-<p>下面的语句调用了padZeros函数：</p>
+<p>下面的语句调用了 padZeros 函数：</p>
 
 <pre class="brush: js">var result;
 result = padZeros(42,4); // returns "0042"
@@ -460,7 +442,7 @@ result = padZeros(5,4);  // returns "0005"</pre>
 
 <h3 id="检测函数是否存在">检测函数是否存在</h3>
 
-<p>你可以通过<strong> typeof </strong>操作符检测一个函数是否存在。在下面的例子中，用一个测试来演示检测window对象是否拥有一个noFunc函数的属性。如果存在，那就使用它；否则就采取其它的一些操作。</p>
+<p>你可以通过<strong> typeof </strong>操作符检测一个函数是否存在。在下面的例子中，用一个测试来演示检测 window 对象是否拥有一个 noFunc 函数的属性。如果存在，那就使用它；否则就采取其它的一些操作。</p>
 
 <pre class="brush: js">if ('function' === typeof window.noFunc) {
    // use noFunc()
@@ -468,7 +450,7 @@ result = padZeros(5,4);  // returns "0005"</pre>
    // do something else
  }</pre>
 
-<p>注意在if语句中，使用了noFunc的引用--在函数名的后面没有括号“（）”，所以实际函数并没有被调用。</p>
+<p>注意在 if 语句中，使用了 noFunc 的引用 -- 在函数名的后面没有括号“（）”，所以实际函数并没有被调用。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -504,9 +486,7 @@ result = padZeros(5,4);  // returns "0005"</pre>
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-
-
-<p>{{Compat("javascript.functions")}}</p>
+{{Compat}}
 
 <h2 id="参阅">参阅</h2>
 

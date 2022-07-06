@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 
 <h2 id="语法">语法</h2>
 
-<pre class="brush: js notranslate">switch (expression) {
+<pre class="brush: js">switch (expression) {
   case value1:
     // 当 expression 的结果与 value1 匹配时，执行此处语句
     [break;]
@@ -59,7 +59,7 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 
 <p>下面的例子中，如果 <code>expr</code> 计算为 "Bananas"，程序就会匹配值为 "Bananas" 的 case 然后执行相关语句。当遇到 <code>break</code> 时，程序就跳出 <code>switch</code> 然后执行 <code>switch</code> 后的语句。若 <code>break</code> 被省略，值为 "Cherries" 的 case 中的语句就也将被执行。</p>
 
-<pre class="brush: js notranslate">switch (expr) {
+<pre class="brush: js">switch (expr) {
   case 'Oranges':
     console.log('Oranges are $0.59 a pound.');
     break;
@@ -87,7 +87,7 @@ console.log("Is there anything else you'd like?");
 
 <p>如果你忘记添加 break，那么代码将会从值所匹配的 case 语句开始运行，然后持续执行下一个 case 语句而不论值是否匹配。例子如下：</p>
 
-<pre class="brush: js notranslate">var foo = 0;
+<pre class="brush: js">var foo = 0;
 switch (foo) {
   case -1:
     console.log('negative 1');
@@ -109,7 +109,7 @@ switch (foo) {
 
 <p>可以啊！JavaScript 会在它找不到匹配项时跳回到那个 default ：</p>
 
-<pre class="brush: js notranslate">var foo = 5;
+<pre class="brush: js">var foo = 5;
 switch (foo) {
   case 2:
     console.log(2);
@@ -136,7 +136,7 @@ switch (foo) {
 
 <p>这是一个单操作顺序的 switch 语句，其中四个不同值的执行结果完全一样。</p>
 
-<pre class="brush: js notranslate">var Animal = 'Giraffe';
+<pre class="brush: js">var Animal = 'Giraffe';
 switch (Animal) {
   case 'Cow':
   case 'Giraffe':
@@ -153,7 +153,7 @@ switch (Animal) {
 
 <p>这是一个关联操作顺序的 switch 语句，其中，根据所输入的整数，你会得到不同的输出。这表示它将以你放置 case 语句的顺序遍历，并且不必是数字顺序的。在 JavaScript 中，你甚至可以将字符串定义到这些 case 语句里。</p>
 
-<pre class="brush: js notranslate">var foo = 1;
+<pre class="brush: js">var foo = 1;
 var output = 'Output: ';
 switch (foo) {
   case 0:
@@ -222,7 +222,7 @@ switch (foo) {
 
 <p>以这段代码为例：</p>
 
-<pre class="brush: js notranslate">const action = 'say_hello';
+<pre class="brush: js">const action = 'say_hello';
 switch (action) {
   case 'say_hello':
     let message = 'hello';
@@ -243,7 +243,7 @@ switch (action) {
 
 <p>通过把 case 语句包装到括号里面，我们就可以轻松解决这个问题。</p>
 
-<pre class="brush: js notranslate">const action = 'say_hello';
+<pre class="brush: js">const action = 'say_hello';
 switch (action) {
   case 'say_hello': { // added brackets
     let message = 'hello';

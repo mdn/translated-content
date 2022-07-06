@@ -33,8 +33,8 @@ POST /add_row HTTP/1.1   -&gt; Adiciona a 3ª linha
 <p><code>DELETE /idX/delete HTTP/1.1</code> é idempotente, mesmo que o código de status mude entre requisições:</p>
 
 <pre>DELETE /idX/delete HTTP/1.1   -&gt; Retorna 200 se idX existe
-DELETE /idX/delete HTTP/1.1   -&gt; Returna 404 como ele acabou de ser deletado
-DELETE /idX/delete HTTP/1.1   -&gt; Returna 404</pre>
+DELETE /idX/delete HTTP/1.1   -&gt; Retorna 404 como ele acabou de ser deletado
+DELETE /idX/delete HTTP/1.1   -&gt; Retorna 404</pre>
 
 <h2 id="Aprenda_mais">Aprenda mais</h2>
 

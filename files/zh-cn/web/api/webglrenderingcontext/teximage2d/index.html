@@ -31,21 +31,21 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
 
 <dl>
  <dt><code>target</code></dt>
- <dd> {{domxref("GLenum")}} 指定纹理的绑定对象.可能的值:
+ <dd> {{domxref("GLenum")}} 指定纹理的绑定对象。可能的值：
  <ul>
-  <li><code>gl.TEXTURE_2D</code>: 二维纹理贴图.</li>
-  <li><code>gl.TEXTURE_CUBE_MAP_POSITIVE_X</code>:立方体映射纹理的正X面。</li>
-  <li><code>gl.TEXTURE_CUBE_MAP_NEGATIVE_X</code>: 立方体映射纹理的负X面。</li>
-  <li><code>gl.TEXTURE_CUBE_MAP_POSITIVE_Y</code>: 立方体映射纹理的正Y面。</li>
-  <li><code>gl.TEXTURE_CUBE_MAP_NEGATIVE_Y</code>: 立方体映射纹理的负Y面。</li>
-  <li><code>gl.TEXTURE_CUBE_MAP_POSITIVE_Z</code>: 立方体映射纹理的正Z面。</li>
-  <li><code>gl.TEXTURE_CUBE_MAP_NEGATIVE_Z</code>: 立方体映射纹理的负Z面。</li>
+  <li><code>gl.TEXTURE_2D</code>: 二维纹理贴图。</li>
+  <li><code>gl.TEXTURE_CUBE_MAP_POSITIVE_X</code>:立方体映射纹理的正 X 面。</li>
+  <li><code>gl.TEXTURE_CUBE_MAP_NEGATIVE_X</code>: 立方体映射纹理的负 X 面。</li>
+  <li><code>gl.TEXTURE_CUBE_MAP_POSITIVE_Y</code>: 立方体映射纹理的正 Y 面。</li>
+  <li><code>gl.TEXTURE_CUBE_MAP_NEGATIVE_Y</code>: 立方体映射纹理的负 Y 面。</li>
+  <li><code>gl.TEXTURE_CUBE_MAP_POSITIVE_Z</code>: 立方体映射纹理的正 Z 面。</li>
+  <li><code>gl.TEXTURE_CUBE_MAP_NEGATIVE_Z</code>: 立方体映射纹理的负 Z 面。</li>
  </ul>
  </dd>
  <dt><code>level</code></dt>
- <dd> {{domxref("GLint")}} 指定详细级别. 0级是基本图像等级，n级是第n个金字塔简化级.</dd>
+ <dd> {{domxref("GLint")}} 指定详细级别. 0 级是基本图像等级，n 级是第 n 个金字塔简化级。</dd>
  <dt><code>internalformat</code></dt>
- <dd> {{domxref("GLenum")}} 指定纹理中的颜色组件.</dd>
+ <dd> {{domxref("GLenum")}} 指定纹理中的颜色组件。</dd>
  <dd>在 WebGL1 和 WebGL2 中可能的值：</dd>
  <dt>
  <table>
@@ -109,7 +109,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
   </tbody>
  </table>
  </dt>
- <dd>在WebGL2 中，对带有 <code>ArrayBufferView</code> 或 <code>GLintptr offset</code>的  <code>texImage2D</code> 版本，其它可能的值</dd>
+ <dd>在 WebGL2 中，对带有 <code>ArrayBufferView</code> 或 <code>GLintptr offset</code>的  <code>texImage2D</code> 版本，其它可能的值</dd>
 </dl>
 
 <table>
@@ -681,14 +681,14 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
 <dl>
  <dd>
  <p><br>
-   在WebGL2 中，使用<code>HTMLImageElement</code>, <code>HTMLCanvasElement</code>, <code>HTMLVideoElement</code>, <code>ImageBitmap</code>, 或 <code>ImageData</code>作为<code>texImage2D</code> 纹理的版本中，可能的值有：</p>
+   在 WebGL2 中，使用<code>HTMLImageElement</code>, <code>HTMLCanvasElement</code>, <code>HTMLVideoElement</code>, <code>ImageBitmap</code>, 或 <code>ImageData</code>作为<code>texImage2D</code> 纹理的版本中，可能的值有：</p>
 
  <ul>
-  <li><code>gl.ALPHA</code>: 抛弃红色、绿色和蓝色组件并读取alpha组件。</li>
-  <li><code>gl.RGB</code>:抛弃alpha组件，读取红色、绿色和蓝色组件。</li>
-  <li><code>gl.RGBA</code>: 从颜色缓冲区读取红色、绿色、蓝色和alpha组件。</li>
-  <li><code>gl.LUMINANCE</code>: E每个颜色组件是一个亮度组件，alpha值为1.0。</li>
-  <li><code>gl.LUMINANCE_ALPHA</code>: 每个组件都是亮度/alpha组件。</li>
+  <li><code>gl.ALPHA</code>: 抛弃红色、绿色和蓝色组件并读取 alpha 组件。</li>
+  <li><code>gl.RGB</code>:抛弃 alpha 组件，读取红色、绿色和蓝色组件。</li>
+  <li><code>gl.RGBA</code>: 从颜色缓冲区读取红色、绿色、蓝色和 alpha 组件。</li>
+  <li><code>gl.LUMINANCE</code>: E 每个颜色组件是一个亮度组件，alpha 值为 1.0。</li>
+  <li><code>gl.LUMINANCE_ALPHA</code>: 每个组件都是亮度/alpha 组件。</li>
   <li>当时用 {{domxref("WEBGL_depth_texture")}} 扩展：
    <ul>
     <li><code>gl.DEPTH_COMPONENT</code></li>
@@ -740,15 +740,15 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
  <dt><code>border</code></dt>
  <dd>{{domxref("GLint")}} 指定纹理的边框宽度。必须为 0。</dd>
  <dt><code>format</code></dt>
- <dd> {{domxref("GLenum")}} 指定texel数据格式。在 WebGL 1中，它必须与 <code>internalformat</code> 相同（查看上面). 在WebGL 2中, <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE">这张表</a>中列出了这些组合。</dd>
+ <dd> {{domxref("GLenum")}} 指定 texel 数据格式。在 WebGL 1 中，它必须与 <code>internalformat</code> 相同（查看上面). 在 WebGL 2 中，<a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE">这张表</a>中列出了这些组合。</dd>
  <dt><code>type</code></dt>
- <dd> {{domxref("GLenum")}} 指定texel数据的数据类型。可能的值:
+ <dd> {{domxref("GLenum")}} 指定 texel 数据的数据类型。可能的值：
  <ul>
-  <li><code>gl.UNSIGNED_BYTE</code>:  <code>gl.RGBA</code>每个通道8位</li>
-  <li><code>gl.UNSIGNED_SHORT_5_6_5</code>: 5 bits红, 6 bits绿, 5 bits蓝</li>
-  <li><code>gl.UNSIGNED_SHORT_4_4_4_4</code>: 4 bits红, 4 bits绿, 4 bits蓝, 4 alpha bits.</li>
-  <li><code>gl.UNSIGNED_SHORT_5_5_5_1</code>: 5 bits红, 5 bits绿, 5 bits蓝, 1 alpha bit.</li>
-  <li>当使用 {{domxref("WEBGL_depth_texture")}} 扩展:
+  <li><code>gl.UNSIGNED_BYTE</code>:  <code>gl.RGBA</code>每个通道 8 位</li>
+  <li><code>gl.UNSIGNED_SHORT_5_6_5</code>: 5 bits 红，6 bits 绿，5 bits 蓝</li>
+  <li><code>gl.UNSIGNED_SHORT_4_4_4_4</code>: 4 bits 红，4 bits 绿，4 bits 蓝，4 alpha bits.</li>
+  <li><code>gl.UNSIGNED_SHORT_5_5_5_1</code>: 5 bits 红，5 bits 绿，5 bits 蓝，1 alpha bit.</li>
+  <li>当使用 {{domxref("WEBGL_depth_texture")}} 扩展：
    <ul>
     <li><code>gl.UNSIGNED_SHORT</code></li>
     <li><code>gl.UNSIGNED_INT</code></li>
@@ -760,12 +760,12 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
     <li><code>gl.FLOAT</code></li>
    </ul>
   </li>
-  <li>当使用 {{domxref("OES_texture_half_float")}} 扩展:
+  <li>当使用 {{domxref("OES_texture_half_float")}} 扩展：
    <ul>
     <li><code>ext.HALF_FLOAT_OES</code> (constant provided by the extension)</li>
    </ul>
   </li>
-  <li>当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},下面的值也是可用的:
+  <li>当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},下面的值也是可用的：
    <ul>
     <li><code>gl.BYTE</code></li>
     <li><code>gl.UNSIGNED_SHORT</code></li>
@@ -784,7 +784,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
  </ul>
  </dd>
  <dt><code>pixels</code></dt>
- <dd>下列对象之一可以用作纹理的像素源:
+ <dd>下列对象之一可以用作纹理的像素源：
  <ul>
   <li>{{domxref("ArrayBufferView")}},
    <ul>
@@ -802,7 +802,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
  </ul>
  </dd>
  <dt>offset</dt>
- <dd> {{domxref("GLintptr")}} 类型偏移到 {{domxref("WebGLBuffer")}}的数据存储中。 用于上传数据到当前范围 {{domxref("WebGLTexture")}} 从<code>WebGLBuffer</code> 范围到<code>PIXEL_UNPACK_BUFFER</code> 目标。(仅在WebGL 2中 )</dd>
+ <dd> {{domxref("GLintptr")}} 类型偏移到 {{domxref("WebGLBuffer")}}的数据存储中。 用于上传数据到当前范围 {{domxref("WebGLTexture")}} 从<code>WebGLBuffer</code> 范围到<code>PIXEL_UNPACK_BUFFER</code> 目标。(仅在 WebGL 2 中 )</dd>
  <dd>
  <ul>
  </ul>
@@ -835,17 +835,17 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
   <tr>
    <td>{{SpecName('OpenGL ES 2.0', "glTexImage2D.xml", "glTexImage2D")}}</td>
    <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>OpenGL ES 2.0 API手册(类似).</td>
+   <td>OpenGL ES 2.0 API 手册 (类似).</td>
   </tr>
   <tr>
    <td>{{SpecName('WebGL2', "#3.7.6", "texImage2D")}}</td>
    <td>{{Spec2('WebGL2')}}</td>
-   <td>WebGL更新定义.</td>
+   <td>WebGL 更新定义。</td>
   </tr>
   <tr>
    <td>{{SpecName('OpenGL ES 3.0', "glTexImage2D.xhtml", "glTexImage2D")}}</td>
    <td>{{Spec2('OpenGL ES 3.0')}}</td>
-   <td>OpenGL ES 3.0 API手册(类似).</td>
+   <td>OpenGL ES 3.0 API 手册 (类似).</td>
   </tr>
  </tbody>
 </table>

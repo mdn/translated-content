@@ -5,7 +5,7 @@ translation_of: Web/API/AudioBuffer/getChannelData
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p> {{ domxref("AudioBuffer") }} 接口的getChannelData()方法返回一{{domxref("Float32Array")}} ，其中包含与通道关联的PCM数据，通道参数定义(0表示第一个通道)。</p>
+<p> {{ domxref("AudioBuffer") }} 接口的 getChannelData() 方法返回一{{domxref("Float32Array")}} ，其中包含与通道关联的 PCM 数据，通道参数定义 (0 表示第一个通道)。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -16,7 +16,7 @@ var nowBuffering = myArrayBuffer.getChannelData(channel);</pre>
 
 <dl>
  <dt>channel</dt>
- <dd>channel属性是要获取特定通道数据的索引。0代表第一个通道。 如果索引值大于或等于{{domxref("AudioBuffer.numberOfChannels")}}, 会抛出一个索引大小异常（<code>INDEX_SIZE_ERR</code> ）的错误。</dd>
+ <dd>channel 属性是要获取特定通道数据的索引。0 代表第一个通道。 如果索引值大于或等于{{domxref("AudioBuffer.numberOfChannels")}}, 会抛出一个索引大小异常（<code>INDEX_SIZE_ERR</code> ）的错误。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -28,7 +28,7 @@ var nowBuffering = myArrayBuffer.getChannelData(channel);</pre>
 
 <h2 id="例子">例子</h2>
 
-<p>在下例中，我们创建一个2秒钟的缓冲区，用白噪声填充它，然后通过{{domxref("AudioBufferSourceNode") }}来播放它. 评论应该会清楚的解释发生的事情。 你也可以<a href="https://mdn.github.io/webaudio-examples/audio-buffer/">实时运行代码</a>，或者<a href="https://github.com/mdn/webaudio-examples">查看源代码</a>。</p>
+<p>在下例中，我们创建一个 2 秒钟的缓冲区，用白噪声填充它，然后通过{{domxref("AudioBufferSourceNode") }}来播放它。评论应该会清楚的解释发生的事情。 你也可以<a href="https://mdn.github.io/webaudio-examples/audio-buffer/">实时运行代码</a>，或者<a href="https://github.com/mdn/webaudio-examples">查看源代码</a>。</p>
 
 <pre class="brush: js;highlight[21]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var button = document.querySelector('button');
@@ -72,20 +72,7 @@ button.onclick = function() {
 
 <h2 id="Specification">Specification</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-audiobuffer-getchanneldata', 'getChannelData')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

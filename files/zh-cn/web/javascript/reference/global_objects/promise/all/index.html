@@ -13,15 +13,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
 <div>{{JSRef}}</div>
 
-<p>Promise.all() 方法接收一个promise的iterable类型（注：Array，Map，Set都属于ES6的iterable类型）的输入，并且只返回一个{{jsxref("Promise")}}实例， 那个输入的所有promise的resolve回调的结果是一个数组。这个{{jsxref("Promise")}}的resolve回调执行是在所有输入的promise的resolve回调都结束，或者输入的iterable里没有promise了的时候。它的reject回调执行是，只要任何一个输入的promise的reject回调执行或者输入不合法的promise就会立即抛出错误，并且reject的是第一个抛出的错误信息。</p>
+<p>Promise.all() 方法接收一个 promise 的 iterable 类型（注：Array，Map，Set 都属于 ES6 的 iterable 类型）的输入，并且只返回一个{{jsxref("Promise")}}实例， 那个输入的所有 promise 的 resolve 回调的结果是一个数组。这个{{jsxref("Promise")}}的 resolve 回调执行是在所有输入的 promise 的 resolve 回调都结束，或者输入的 iterable 里没有 promise 了的时候。它的 reject 回调执行是，只要任何一个输入的 promise 的 reject 回调执行或者输入不合法的 promise 就会立即抛出错误，并且 reject 的是第一个抛出的错误信息。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/promise-all.html")}}</div>
 
-<p class="hidden">The source for this interactive demo is stored in a GitHub repository. If you'd like to contribute to the interactive demo project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
-
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>Promise.all(iterable)</var>;</pre>
+<pre class="syntaxbox"><var>Promise.all(iterable)</var>;</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -56,7 +54,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 
 <p><code>Promise.all</code> 等待所有都完成（或第一个失败）。</p>
 
-<pre class="brush: js notranslate">var p1 = Promise.resolve(3);
+<pre class="brush: js">var p1 = Promise.resolve(3);
 var p2 = 1337;
 var p3 = new Promise((resolve, reject) =&gt; {
   setTimeout(resolve, 100, 'foo');
@@ -68,7 +66,7 @@ Promise.all([p1, p2, p3]).then(values =&gt; {
 
 <p>如果参数中包含非 <code>promise</code> 值，这些值将被忽略，但仍然会被放在返回数组中（如果 <code>promise</code> 完成的话）：</p>
 
-<pre class="brush: js notranslate">// this will be counted as if the iterable passed is empty, so it gets fulfilled
+<pre class="brush: js">// this will be counted as if the iterable passed is empty, so it gets fulfilled
 var p = Promise.all([1,2,3]);
 // this will be counted as if the iterable passed contains only the resolved promise with value "444", so it gets fulfilled
 var p2 = Promise.all([1,2,3, Promise.resolve(444)]);
@@ -91,7 +89,7 @@ setTimeout(function(){
 
 <p>下面的例子中演示了 <code>Promise.all</code> 的异步性（如果传入的可迭代对象是空的，就是同步）：</p>
 
-<pre class="brush: js notranslate">// we are passing as argument an array of promises that are already resolved,
+<pre class="brush: js">// we are passing as argument an array of promises that are already resolved,
 // to trigger Promise.all as soon as possible
 var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
 
@@ -113,7 +111,7 @@ setTimeout(function(){
 
 <p>如果 <code>Promise.all</code> 失败，也是一样的：</p>
 
-<pre class="brush: js notranslate">var mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
+<pre class="brush: js">var mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
 var p = Promise.all(mixedPromisesArray);
 console.log(p);
 setTimeout(function(){
@@ -129,7 +127,7 @@ setTimeout(function(){
 
 <p>但是，<code>Promise.all</code> <strong>当且仅当</strong>传入的可迭代对象为空时为同步：</p>
 
-<pre class="brush: js notranslate">var p = Promise.all([]); // will be immediately resolved
+<pre class="brush: js">var p = Promise.all([]); // will be immediately resolved
 var p2 = Promise.all([1337, "hi"]); // non-promise values will be ignored, but the evaluation will be done asynchronously
 console.log(p);
 console.log(p2)
@@ -149,7 +147,7 @@ setTimeout(function(){
 
 <p><code>Promise.all</code> 在任意一个传入的 <code>promise</code> 失败时返回失败。例如，如果你传入的 <code>promise</code>中，有四个 <code>promise</code> 在一定的时间之后调用成功函数，有一个立即调用失败函数，那么 <code>Promise.all</code> 将立即变为失败。</p>
 
-<pre class="brush: js notranslate">var p1 = new Promise((resolve, reject) =&gt; {
+<pre class="brush: js">var p1 = new Promise((resolve, reject) =&gt; {
   setTimeout(resolve, 1000, 'one');
 });
 var p2 = new Promise((resolve, reject) =&gt; {

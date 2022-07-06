@@ -4,7 +4,7 @@ slug: Mozilla/Firefox/Releases/19/Site_compatibility
 translation_of: Mozilla/Firefox/Releases/19/Site_compatibility
 original_slug: Site_Compatibility_for_Firefox_19
 ---
-<div>{{FirefoxSidebar}}</div><p>{{ draft() }}</p>
+<div>{{FirefoxSidebar}}</div>
 <p>Firefox 19 <a href="http://www.mozilla.org/zh-CN/firefox/beta/">Beta</a> was released on <time datetime="2013-01-10">January 10</time>. While it has been developed to maintain compatibility as much as possible, the new version includes some changes affecting backward compatibility aimed at improving interoperability with the other browsers or following the latest Web standards. Here's the list of such changes — Hope this helps whenever you test your sites or applications.</p>
 <p><strong>This article only explains the changes that may affect backward compatibility for Websites</strong>. For the other new features and changes, please read the following documents:</p>
 <ul>
@@ -16,7 +16,7 @@ original_slug: Site_Compatibility_for_Firefox_19
 <section id="sect1">
   <h2 id="CSS">CSS</h2>
   <section id="sect2">
-    <h3 id="flexbox脱前缀">flexbox脱前缀</h3>
+    <h3 id="flexbox脱前缀">flexbox 脱前缀</h3>
     <ul>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=801098">Bug 801098 – Unprefix CSS3 flexbox</a></li>
     </ul>
@@ -44,7 +44,7 @@ original_slug: Site_Compatibility_for_Firefox_19
     <p>Following the latest <a href="/zh-CN/docs/CSS/Using_CSS_animations">CSS3 animations</a> spec, key frame rule declarations with the <code>!important</code> keyword are now be ignored and parse errors will be returned.</p>
   </section>
   <section id="sect6">
-    <h3 id="在aboutconfig中添加了一些控制带前缀的CSS属性的有效性的选项">在about:config中添加了一些控制带前缀的CSS属性的有效性的选项</h3>
+    <h3 id="在aboutconfig中添加了一些控制带前缀的CSS属性的有效性的选项">在 about:config 中添加了一些控制带前缀的 CSS 属性的有效性的选项</h3>
     <ul>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=804944">Bug 804944 – add preferences for sets of CSS prefixed properties</a></li>
     </ul>
@@ -58,7 +58,7 @@ original_slug: Site_Compatibility_for_Firefox_19
     <ul>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=799464">Bug 799464 – Make Element.getElementsBy* return HTMLCollection</a></li>
     </ul>
-    <p><a href="/zh-CN/docs/DOM/element.getElementsByTagName"><code>getElementsByTagName</code></a>, <a href="/zh-CN/docs/DOM/element.getElementsByTagNameNS"><code>getElementsByTagNameNS</code></a>以及<a href="/zh-CN/docs/DOM/document.getElementsByClassName"><code>getElementsByClassName</code></a>方法返回的元素列表对象的类型从<a href="/zh-CN/docs/DOM/NodeList"><code>NodeList</code></a>(遵循DOM3核心规范)变为<a href="/zh-CN/docs/DOM/HTMLCollection"><code>HTMLCollection</code></a>(遵循DOM4规范草案).</p>
+    <p><a href="/zh-CN/docs/DOM/element.getElementsByTagName"><code>getElementsByTagName</code></a>, <a href="/zh-CN/docs/DOM/element.getElementsByTagNameNS"><code>getElementsByTagNameNS</code></a>以及<a href="/zh-CN/docs/DOM/document.getElementsByClassName"><code>getElementsByClassName</code></a>方法返回的元素列表对象的类型从<a href="/zh-CN/docs/DOM/NodeList"><code>NodeList</code></a>(遵循 DOM3 核心规范) 变为<a href="/zh-CN/docs/DOM/HTMLCollection"><code>HTMLCollection</code></a>(遵循 DOM4 规范草案).</p>
   </section>
   <section id="sect9">
     <h3 id="hasFeatureisSupported方法现在总会返回true"><code>hasFeature</code>/<code>isSupported</code>方法现在总会返回<code>true</code></h3>
@@ -96,7 +96,7 @@ original_slug: Site_Compatibility_for_Firefox_19
     <p>Following a change of the <a href="http://encoding.spec.whatwg.org/#api">Encoding API</a> spec, the implementation of <code>TextEncoder</code> and <code>TextDecoder</code> has been updated.</p>
   </section>
   <section id="sect14">
-    <h3 id="移除XForms支持">移除XForms支持</h3>
+    <h3 id="移除XForms支持">移除 XForms 支持</h3>
     <ul>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=656311">Bug 656311 – Remove XML Events, or improve the implementation</a></li>
     </ul>
@@ -136,7 +136,7 @@ original_slug: Site_Compatibility_for_Firefox_19
 <section id="sect43">
   <h2 id="插件">插件</h2>
   <section id="sect44">
-    <h3 id="移除了对Carbon_NPAPI的支持">移除了对Carbon NPAPI的支持</h3>
+    <h3 id="移除了对Carbon_NPAPI的支持">移除了对 Carbon NPAPI 的支持</h3>
     <ul>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=598397">Bug 598397 - remove support for Carbon NPAPI</a></li>
     </ul>

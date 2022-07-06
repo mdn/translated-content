@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Guide/Functions
  <li>сборщик мусора (<code>garbage collector</code>)</li>
 </ul>
 
-<h2 id="Объявление_функций"><a id="definition" name="definition"></a>Объявление функций</h2>
+<h2 id="Объявление_функций"><a id="definition"></a>Объявление функций</h2>
 
 <h3 id="Функции_вида_function_declaration_statement">Функции вида "function declaration statement"</h3>
 
@@ -61,7 +61,7 @@ translation_of: Web/JavaScript/Guide/Functions
 
 <p>Примитивные параметры (например, число) передаются функции значением; <strong>значение</strong> передаётся в функцию, но если функция меняет значение параметра,<strong> это изменение не отразится глобально или после вызова функции.</strong></p>
 
-<p>Если вы передадите объект как параметр (не примитив, например, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="The JavaScript Array object is a global object that is used in the construction of arrays; which are high-level, list-like objects.">массив</a></code> или определяемые пользователем объекты), и функция изменит свойство переданного в неё объекта, это изменение будет видно и вне функции, как показано в следующим примере:</p>
+<p>Если вы передадите объект как параметр (не примитив, например, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="The JavaScript Array object is a global object that is used in the construction of arrays; which are high-level, list-like objects.">массив</a></code> или определяемые пользователем объекты), и функция изменит свойство переданного в неё объекта, это изменение будет видно и вне функции, как показано в следующем примере:</p>
 
 <pre class="brush: js">function myFunc(theObject) {
   theObject.make = 'Toyota';
@@ -95,7 +95,7 @@ console.log(factorial(3));
 <p>Функции вида "function definition expression" удобны, когда функция передаётся аргументом другой функции. Следующий пример показывает функцию <code>map</code>, которая должна получить функцию первым аргументом и массив вторым.</p>
 
 <pre class="brush: js">function map(f, a) {
-  var result = [], // Create a new Array
+  var result = [], // Создаём новый массив
       i;
   for (i = 0; i != a.length; i++)
     result[i] = f(a[i]);
@@ -103,11 +103,11 @@ console.log(factorial(3));
 }
 </pre>
 
-<p>В следующим коде наша функция принимает функцию, которая является function definition expression, и выполняет его для каждого элемента принятого массива вторым аргументом.</p>
+<p>В следующем коде наша функция принимает функцию, которая является function definition expression, и выполняет его для каждого элемента принятого массива вторым аргументом.</p>
 
 <pre class="brush: js">function map(f, a) {
-  var result = []; // Create a new Array
-  var i; // Declare variable
+  var result = []; // Создаём новый массив
+  var i; // Объявляем переменную
   for (i = 0; i != a.length; i++)
     result[i] = f(a[i]);
       return result;
@@ -134,7 +134,7 @@ if (num === 0) {
 
 <p><strong>Метод</strong> — это функция, которая является свойством объекта. Узнать больше про объекты и методы можно по ссылке: <a href="/ru/docs/Web/JavaScript/Guide/Working_with_Objects">Работа с объектами</a>.</p>
 
-<h2 id="Вызовы_функций"><a id="call" name="call"></a>Вызовы функций</h2>
+<h2 id="Вызовы_функций"><a id="call"></a>Вызовы функций</h2>
 
 <p>Объявление функции не выполняет её. Объявление функции просто называет функцию и указывает, что делать при вызове функции.</p>
 
@@ -144,7 +144,7 @@ if (num === 0) {
 
 <p>Эта инструкция вызывает функцию с аргументом 5. Функция вызывает свои инструкции и возвращает значение 25.</p>
 
-<p>Функции могут быть в области видимости, когда они уже определены, но функции вида "function declaration statment" могут быть подняты (<em><a href="/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/%D0%9F%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5">поднятие </a>—</em> <em>hoisting</em>), также как в этом примере:</p>
+<p>Функции могут быть в области видимости, когда они уже определены, но функции вида "function declaration statement" могут быть подняты (<em><a href="/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/%D0%9F%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5">поднятие </a>—</em> <em>hoisting</em>), также как в этом примере:</p>
 
 <pre class="brush: js">console.log(square(5));
 /* ... */
@@ -177,16 +177,16 @@ var square = function(n) {
 <p>Затем вы можете вычислить факториалы от одного до пяти следующим образом:</p>
 
 <pre class="brush: js">var a, b, c, d, e;
-a = factorial(1); // a gets the value 1
-b = factorial(2); // b gets the value 2
-c = factorial(3); // c gets the value 6
-d = factorial(4); // d gets the value 24
-e = factorial(5); // e gets the value 120
+a = factorial(1); // a получает значение 1
+b = factorial(2); // b получает значение 2
+c = factorial(3); // c получает значение 6
+d = factorial(4); // d получает значение 24
+e = factorial(5); // e получает значение 120
 </pre>
 
 <p>Есть другие способы вызвать функцию. Существуют частые случаи, когда функции необходимо вызывать динамически, или поменять номера аргументов функции, или необходимо вызвать функцию с привязкой к определённому контексту. Оказывается, что функции сами по себе являются объектами, и эти объекты в свою очередь имеют методы (посмотрите объект <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function" title="The Function constructor creates a new Function object. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues similar to eval. However, unlike eval, the Function constructor allows executing code in the global scope, prompting better programming habits and allowing for more efficient code minification."><code>Function</code></a>). Один из них это метод <code><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).">apply()</a></code>, использование которого может достигнуть этой цели.</p>
 
-<h2 id="Область_видимости_функций"><a id="definition" name="definition"></a>Область видимости функций</h2>
+<h2 id="Область_видимости_функций"><a id="definition"></a>Область видимости функций</h2>
 
 <p><u><em>(function scope)</em></u></p>
 
@@ -219,7 +219,7 @@ function getScore() {
 getScore(); // вернёт "Chamahk scored 5"
 </pre>
 
-<h2 id="Scope_и_стек_функции"><a id="definition" name="definition"></a>Scope и стек функции</h2>
+<h2 id="Scope_и_стек_функции"><a id="definition"></a>Scope и стек функции</h2>
 
 <p><em><u>(function stack)</u></em></p>
 
@@ -236,7 +236,7 @@ getScore(); // вернёт "Chamahk scored 5"
 <p>Для примера рассмотрим следующие функцию:</p>
 
 <pre class="brush: js">var foo = function bar() {
-   // statements go here
+   // здесь будут выражения
 };</pre>
 
 <p>Внутри функции (<em>function body</em>) все следующие вызовы эквивалентны:</p>
@@ -251,7 +251,7 @@ getScore(); // вернёт "Chamahk scored 5"
 
 <pre class="brush: js">var x = 0;
 while (x &lt; 10) { // "x &lt; 10" — это условие для цикла
-   // do stuff
+   // что-то делаем
    x++;
 }</pre>
 
@@ -340,8 +340,8 @@ c = addSquares(4, 5); // возвращает 41
   }
   return inside;
 }
-fn_inside = outside(3); // Подумайте над этим: дайте мне функцию,
-                        // который передай 3
+fn_inside = outside(3); // Думайте об этом как: дайте мне функцию,
+                        // которая добавляет 3 к любому введенному значению
 
 result = fn_inside(5); // возвращает 8
 
@@ -369,7 +369,7 @@ result1 = outside(3)(5); // возвращает 8
   }
   B(2);
 }
-A(1); // в консоле выведится 6 (1 + 2 + 3)</pre>
+A(1); // в консоле выводится 6 (1 + 2 + 3)</pre>
 
 <p>В этом примере C имеет доступ к <code>y</code> функции <code>B</code> и к <code>x</code> функции <code>A</code>. Так получается, потому что:</p>
 
@@ -397,7 +397,7 @@ outside()(10); // возвращает 20 вместо 10</pre>
 
 <p>Конфликт имени произошёл в инструкции <code>return x * 2</code> между параметром <code>x</code> функции <code>inside</code> и переменной <code>x</code> функции <code>outside</code>. Scope chain здесь будет таким: {<code>inside</code> ==&gt; <code>outside</code> ==&gt; глобальный объект (<em>global object</em>)}. Следовательно <code>x</code> функции <code>inside</code> имеет больший приоритет по сравнению с <code>outside</code>, и нам вернулось 20 (= 10 * 2), а не 10 (= 5 * 2).</p>
 
-<h2 id="Замыкания"><a id="definition" name="definition"></a>Замыкания</h2>
+<h2 id="Замыкания"><a id="definition"></a>Замыкания</h2>
 
 <p><em><u>(Closures)</u></em></p>
 
@@ -461,28 +461,28 @@ pet.getName();                  // Oliver</pre>
 <p>В коде выше переменная <code>name</code> внешней функции доступна для вложенной функции, и нет другого способа доступа к вложенным переменным кроме как через вложенную функцию. Вложенные переменные вложенной функции являются безопасными хранилищами для внешних аргументов и переменных. Они содержат "постоянные" и "инкапсулированные" данные для работы с ними вложенными функциями. Функции даже не должны присваиваться переменной или иметь имя.</p>
 
 <pre class="brush: js">var getCode = (function() {
-  var apiCode = '0]Eal(eh&amp;2'; // A code we do not want outsiders to be able to modify...
+  var apiCode = '0]Eal(eh&amp;2'; // Мы не хотим, чтобы данный код мог быть изменен кем-то извне...
 
   return function() {
     return apiCode;
   };
 }());
 
-getCode();    // Returns the apiCode
+getCode();    // Возвращает apiCode
 </pre>
 
 <p>Однако есть ряд подводных камней, которые следует учитывать при использовании замыканий. Если закрытая функция определяет переменную с тем же именем, что и имя переменной во внешней области, нет способа снова ссылаться на переменную во внешней области.</p>
 
-<pre class="brush: js">var createPet = function(name) {  // The outer function defines a variable called "name".
+<pre class="brush: js">var createPet = function(name) {  // Внешняя функция определяет переменную с именем "name".
   return {
-    setName: function(name) {    // The enclosed function also defines a variable called "name".
-      name = name;               // How do we access the "name" defined by the outer function?
+    setName: function(name) {    // Внутренняя функция также определяет переменную с именем "name".
+      name = name;               // Как мы можем получить доступ к "name", определённой во внешней функции?
     }
   }
 }
 </pre>
 
-<h2 id="Использование_объекта_arguments"><a id="definition" name="definition"></a>Использование объекта arguments</h2>
+<h2 id="Использование_объекта_arguments"><a id="definition"></a>Использование объекта arguments</h2>
 
 <p>Объект arguments функции является псевдо-массивом. Внутри функции вы можете ссылаться к аргументам следующим образом:</p>
 
@@ -524,9 +524,9 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 
 <p>Рассмотрите объект <code><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function" title="The Function constructor creates a new Function object. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues similar to eval. However, unlike eval, the Function constructor allows executing code in the global scope, prompting better programming habits and allowing for more efficient code minification.">Function</a></code> в JavaScript-справочнике для большей информации.</p>
 
-<h2 id="Параметры_функции"><a id="definition" name="definition"></a>Параметры функции</h2>
+<h2 id="Параметры_функции"><a id="definition"></a>Параметры функции</h2>
 
-<p>Начиная с ECMAScript 2015 появились два новых вида параметров: параметры по умолчанию (<em>default parameters</em>) и оставшиеся параметры (<em>rest parameters</em>).</p>
+<p>Начиная с ECMAScript 2015 появились два новых вида параметров: параметры по умолчанию (<em>default parameters</em>) и остаточные параметры (<em>rest parameters</em>).</p>
 
 <h3 id="Параметры_по_умолчанию_Default_parameters">Параметры по умолчанию (Default parameters)</h3>
 
@@ -552,9 +552,9 @@ multiply(5); // 5</pre>
 
 <p>Для более детального рассмотрения ознакомьтесь с <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметрами по умолчанию</a>.</p>
 
-<h3 id="Оставшиеся_параметры_Rest_parameters">Оставшиеся параметры (Rest parameters)</h3>
+<h3 id="Остаточные_параметры_Rest_parameters">Остаточные параметры (Rest parameters)</h3>
 
-<p><a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">Оставшиеся параметры</a> предоставляют нам массив неопределённых аргументов. В примере мы используем оставшиеся параметры, чтобы собрать аргументы с индексами со 2-го до последнего. Затем мы умножим каждый из них на значение первого аргумента. В этом примере используется стрелочная функция (<u><em><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a>)</em></u>, о которой будет рассказано в следующей секции.</p>
+<p><a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">Остаточные параметры</a> предоставляют нам массив неопределённых аргументов. В примере мы используем остаточные параметры, чтобы собрать аргументы с индексами со 2-го до последнего. Затем мы умножим каждый из них на значение первого аргумента. В этом примере используется стрелочная функция (<u><em><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a>)</em></u>, о которой будет рассказано в следующей секции.</p>
 
 <pre class="brush: js">function multiply(multiplier, ...theArgs) {
   return theArgs.map(x =&gt; multiplier * x);
@@ -564,7 +564,7 @@ var arr = multiply(2, 1, 2, 3);
 console.log(arr); // [2, 4, 6]
 </pre>
 
-<h2 id="Стрелочные_функции"><a id="definition" name="definition"></a>Стрелочные функции</h2>
+<h2 id="Стрелочные_функции"><a id="definition"></a>Стрелочные функции</h2>
 
 <p><u><em>(Arrow functions)</em></u></p>
 
@@ -585,11 +585,11 @@ console.log(arr); // [2, 4, 6]
 
 var a2 = a.map(function(s) { return s.length; });
 
-console.log(a2); // logs [8, 6, 7, 9]
+console.log(a2); // выводит [8, 6, 7, 9]
 
 var a3 = a.map(s =&gt; s.length);
 
-console.log(a3); // logs [8, 6, 7, 9]</pre>
+console.log(a3); // выводит [8, 6, 7, 9]</pre>
 
 <h3 id="Лексика_this">Лексика <code>this</code></h3>
 
@@ -617,8 +617,8 @@ var p = new Person();</pre>
   self.age = 0;
 
   setInterval(function growUp() {
-    // The callback refers to the `self` variable of which
-    // the value is the expected object.
+    // Колбэк ссылается на переменную `self`, 
+    // значением которой является ожидаемый объект.
     self.age++;
   }, 1000);
 }</pre>

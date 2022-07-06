@@ -17,7 +17,7 @@ translation_of: Web/API/Selection
 
 <div> </div>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt>{{domxref("Selection.anchorNode")}}</dt>
@@ -34,7 +34,7 @@ translation_of: Web/API/Selection
  <dd>Returns the number of ranges in the selection.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <dl>
  <dt>{{domxref("Selection.getRangeAt()")}}</dt>
@@ -99,7 +99,7 @@ var range  = selObj.getRangeAt(0);</pre>
 
 <p>Safari and Chrome (unlike Firefox) historically focus the element containing selection when modifying the selection programmatically, but this might change in the future (see <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383">W3C bug 14383</a> and {{webkitbug("38696")}}).</p>
 
-<h3 id="Glossary" name="Glossary">Glossary</h3>
+<h3 id="Glossary">Glossary</h3>
 
 <p>Other key terms used in this section.</p>
 
@@ -134,11 +134,11 @@ var range  = selObj.getRangeAt(0);</pre>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Selection")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("Window.getSelection")}}, {{domxref("Document.getSelection")}}, {{domxref("Range")}}</li>
@@ -149,7 +149,7 @@ var range  = selObj.getRangeAt(0);</pre>
 <h2 id="Gecko_notes">Gecko notes</h2>
 
 <ul>
- <li>Gecko/Firefox provide additional features, available to chrome (internal and add-on) code only. These are defined in {{interface("nsISelectionPrivate")}}.</li>
+ <li>Gecko/Firefox provide additional features, available to chrome (internal and add-on) code only. These are defined in <code>nsISelectionPrivate</code>.</li>
  <li>Mozilla source code: {{source("dom/webidl/Selection.webidl")}}</li>
  <li>{{obsolete_inline("gecko29")}} {{domxref("Selection.selectionLanguageChange()")}} used to be exposed to the web content until Firefox 29</li>
 </ul>

@@ -48,9 +48,9 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 
 <h2 id="Анатомия_ссылки">Анатомия ссылки</h2>
 
-<p><span id="result_box" lang="ru"><span class="alt-edited">Простая ссылка создаётся путём обёртывания текста (или другого содержимого, смотрите  </span></span>{{anch("Ссылки-блоки")}}<span lang="ru"><span class="alt-edited">), который вы хотите превратить в ссылку, в элемент {{htmlelement ("a")}}, и придания этому элементу атрибута {{htmlattrxref ("href", "a")}} (который также известен как <strong>гипертекстовая ссылка,</strong> или <strong>цель</strong>), который будет содержать веб-адрес, на который вы хотите указать ссылку.</span></span></p>
+<p><span id="result_box" lang="ru"><span class="alt-edited">Простая ссылка создаётся путём обёртывания текста (или другого содержимого, смотрите  </span></span><a href="#ссылки-блоки">Ссылки-блоки</a><span lang="ru"><span class="alt-edited">), который вы хотите превратить в ссылку, в элемент {{htmlelement ("a")}}, и придания этому элементу атрибута {{htmlattrxref ("href", "a")}} (который также известен как <strong>гипертекстовая ссылка,</strong> или <strong>цель</strong>), который будет содержать веб-адрес, на который вы хотите указать ссылку.</span></span></p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Я создал ссылку на
+<pre class="brush: html">&lt;p&gt;Я создал ссылку на
   &lt;a href="https://www.mozilla.org/ru/"&gt;домашнюю страницу Mozilla&lt;/a&gt;.
 &lt;/p&gt;</pre>
 
@@ -62,7 +62,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 
 <p>Другим атрибутом, который вы можете добавить к своим ссылкам, является — <code>title</code>. Он предназначен для хранения полезной информации о ссылке. Например, какую информацию содержит страница или другие вещи, о которых вам нужно знать. Например:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Я создал ссылку на
+<pre class="brush: html">&lt;p&gt;Я создал ссылку на
   &lt;a href="https://www.mozilla.org/ru/"
      title="Лучшее место для поиска дополнительной информации
      о миссии Mozilla и о том, как внести свой вклад"&gt;домашнюю страницу Mozilla
@@ -91,7 +91,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 
 <p>Как упоминалось ранее, вы можете превратить любой элемент в ссылку, даже <a href="/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Block_versus_inline_elements">блочный элемент</a>. Если у вас есть изображение, которые вы хотели бы превратить в ссылку, вы можете просто поместить изображение между тегами <code>&lt;a&gt;&lt;/a&gt;.</code></p>
 
-<pre class="brush: html notranslate">&lt;a href="https://www.mozilla.org/ru/"&gt;
+<pre class="brush: html">&lt;a href="https://www.mozilla.org/ru/"&gt;
   &lt;img src="mozilla-image.png" alt="логотип mozilla со ссылкой на их домашнюю страницу"&gt;
 &lt;/a&gt;</pre>
 
@@ -117,7 +117,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
  <li>
   <p><strong>Тот же каталог</strong>: Если вы хотите подключить ссылку внутри <code>index.html</code> (верхний уровень <code>index.html</code>), указывающую на <code>contacts.html</code>, вам просто нужно указать имя файла, на который вы хотите установить ссылку, так как он находится в том же каталоге, что и текущий файл. Таким образом, URL-адрес, который вы используете — <code>contacts.html</code>:</p>
 
-  <pre class="brush: html notranslate">&lt;p&gt;Хотите связаться с конкретным сотрудником?
+  <pre class="brush: html">&lt;p&gt;Хотите связаться с конкретным сотрудником?
    Найдите подробную информацию на нашей
   &lt;a href="contacts.html"&gt;странице контактов&lt;/a&gt;.
 &lt;/p&gt;</pre>
@@ -125,14 +125,14 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
  <li>
   <p><strong>Перемещение вниз в подкаталоги</strong>: Если вы хотите подключить ссылку внутри <code>index.html</code> (верхний уровень <code>index.html<font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">), указывающую на </span></font></code><code>projects/index.html</code>, вам нужно спуститься ниже в директории <code>projects</code> перед тем, как указать файл, который вы хотите. Это делается путём указания имени каталога, после которого идёт слеш и затем имя файла. Итак, URL-адрес, который вы используете - <code>projects/index.html</code>:</p>
 
-  <pre class="brush: html notranslate">&lt;p&gt;Посетите мою
+  <pre class="brush: html">&lt;p&gt;Посетите мою
   &lt;a href="projects/index.html"&gt;домашнюю страницу проекта&lt;/a&gt;.
 &lt;/p&gt;</pre>
  </li>
  <li>
   <p><strong>Перемещение обратно в родительские каталоги</strong>: Если вы хотите подключить ссылку внутри <code>projects/index.html</code>, указывающую на <code>pdfs/project-brief.pdf</code>, вам нужно будет подняться на уровень каталога, затем спустится в каталог <code>pdf</code>. "Подняться вверх на уровень каталога" обозначается двумя точками — <code>..</code> — так, URL-адрес, который вы используете <code>../pdfs/project-brief.pdf</code>:</p>
 
-  <pre class="brush: html notranslate">&lt;p&gt;Ссылка на
+  <pre class="brush: html">&lt;p&gt;Ссылка на
   &lt;a href="../pdfs/project-brief.pdf"&gt;краткое описание моего проекта&lt;/a&gt;.
 &lt;/p&gt;</pre>
  </li>
@@ -147,17 +147,17 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 
 <p>Можно ссылаться на определённую часть документа HTML (известную как <strong>фрагмент документа</strong>), а не только на верхнюю часть документа. Для этого вам сначала нужно назначить атрибут {{htmlattrxref("id")}} элементу, с которым вы хотите связаться. Обычно имеет смысл ссылаться на определённый заголовок, поэтому это выглядит примерно так:</p>
 
-<pre class="brush: html notranslate">&lt;h2 id="Почтовый_адрес"&gt;Почтовый адрес&lt;/h2&gt;</pre>
+<pre class="brush: html">&lt;h2 id="Почтовый_адрес"&gt;Почтовый адрес&lt;/h2&gt;</pre>
 
 <p>Затем, чтобы связаться с  этим конкретным  <code>id</code>, вы должны включить его в конец URL-адреса, которому предшествует знак решётки, например:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Хотите написать мне письмо? Используйте наш
+<pre class="brush: html">&lt;p&gt;Хотите написать мне письмо? Используйте наш
   &lt;a href="contacts.html#Почтовый_адрес"&gt;почтовый адрес&lt;/a&gt;.
 &lt;/p&gt;</pre>
 
 <p>Вы даже можете использовать ссылку на фрагмент документа отдельно для ссылки на <em>другую часть того же документа</em>:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   &lt;a href="#Почтовый_адрес"&gt;Почтовый адрес кампании&lt;/a&gt;
   можно найти в нижней части этой страницы.
 &lt;/p&gt;</pre>
@@ -203,13 +203,13 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 
 <p><em><strong>Хороший</strong> текст ссылки:</em> <a href="https://firefox.com">Скачать Firefox</a></p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;a href="https://firefox.com/"&gt;
+<pre class="brush: html">&lt;p&gt;&lt;a href="https://firefox.com/"&gt;
   Скачать Firefox
 &lt;/a&gt;&lt;/p&gt;</pre>
 
 <p><em><strong>Плохой</strong> текст ссылки:</em> <a href="https://firefox.com/">Нажми сюда</a>, чтобы скачать Firefox</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;a href="https://firefox.com/"&gt;
+<pre class="brush: html">&lt;p&gt;&lt;a href="https://firefox.com/"&gt;
   Нажми сюда
 &lt;/a&gt;
 чтобы скачать Firefox&lt;/p&gt;
@@ -244,7 +244,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 
 <p>Посмотрите на примеры, чтобы увидеть, как добавить описание:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;a href="http://www.example.com/large-report.pdf"&gt;
+<pre class="brush: html">&lt;p&gt;&lt;a href="http://www.example.com/large-report.pdf"&gt;
   Скачать отчёт о продажах (PDF, 10MB)
 &lt;/a&gt;&lt;/p&gt;
 
@@ -260,7 +260,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 
 <p>Когда создаёте ссылку на файл, который должен быть загружен, а не открыт в браузере, можете использовать атрибут <code>download</code>, чтобы создать имя файла по умолчанию для сохранения . Приведём пример ссылки для загрузки браузера Firefox 39:</p>
 
-<pre class="brush: html notranslate">&lt;a href="https://download.mozilla.org/?product=firefox-39.0-SSL&amp;os=win&amp;lang=en-US"
+<pre class="brush: html">&lt;a href="https://download.mozilla.org/?product=firefox-39.0-SSL&amp;os=win&amp;lang=en-US"
    download="firefox-39-installer.exe"&gt;
   Скачать Firefox 39 для Windows
 &lt;/a&gt;</pre>
@@ -301,7 +301,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 
 <p>Самыми простыми и часто используемыми формами <code>mailto:</code> являются  <em>subject</em>, <em>cc</em>,<em> bcc</em> и <em>body</em>; дальше прописываем адрес электронной почты. Например:</p>
 
-<pre class="brush: html notranslate">&lt;a href="mailto:nowhere@mozilla.org"&gt;Отправить письмо для nowhere&lt;/a&gt;
+<pre class="brush: html">&lt;a href="mailto:nowhere@mozilla.org"&gt;Отправить письмо для nowhere&lt;/a&gt;
 </pre>
 
 <p>В результате получим ссылку вида: <a href="mailto:nowhere@mozilla.org">Отправить письмо для nowhere</a>.</p>
@@ -314,7 +314,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 
 <p>Вот пример который включает cc(кому отправить копию сообщения, все получатели письма видят список тех кто это письмо получит), bcc(скрытый адрес получателя, никто из получателей не будет видеть полный список получателей письма), subject(тема письма) и body(текст сообщения):</p>
 
-<pre class="brush: html notranslate">&lt;a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&amp;bcc=name3@rapidtables.com&amp;amp;subject=The%20subject%20of%20the%20email &amp;amp;body=The%20body%20of%20the%20email"&gt;
+<pre class="brush: html">&lt;a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&amp;bcc=name3@rapidtables.com&amp;amp;subject=The%20subject%20of%20the%20email &amp;amp;body=The%20body%20of%20the%20email"&gt;
   Send mail with cc, bcc, subject and body
 &lt;/a&gt;</pre>
 

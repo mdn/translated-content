@@ -1,0 +1,130 @@
+---
+title: Object.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
+tags:
+  - JavaScript
+  - Method
+  - Non-standard
+  - Object
+  - Obsolete
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Object/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Object/toSource
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p><strong><code>toSource()</code></strong> メソッドは、オブジェクトのソースコードを表す文字列を返します。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox notranslate">Object.toSource();
+<var>obj</var>.toSource();</pre>
+
+<h3 id="Parameters" name="Parameters">返値</h3>
+
+<p>オブジェクトのソースコードを表す文字列です。</p>
+
+<h2 id="Description" name="Description">解説</h2>
+
+<p><code>toSource()</code> メソッドは以下の値を返します。</p>
+
+<ul>
+ <li>組み込みの {{jsxref("Object")}} オブジェクトに対しては、 <code>toSource()</code> はソースコードが利用できないことを示す次の文字列を返します。
+
+  <pre class="brush: js notranslate">function Object() {
+    [native code]
+}
+</pre>
+ </li>
+ <li>{{jsxref("Object")}} のインスタンスに対しては、<code>toSource()</code> はソースコードを表す文字列を返します。</li>
+</ul>
+
+<p>デバッグ時に <code>toSource()</code> を呼び出して、オブジェクトの内容を調べることができます。</p>
+
+<h3 id="Overriding_the_toSource_method" name="Overriding_the_toSource_method">toSource() メソッドのオーバーライド</h3>
+
+<p>オブジェクトが <code>toSource()</code> メソッドをオーバーライドしても安全です。例えば次のコードを見てください。</p>
+
+<pre class="brush: js notranslate">function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.toSource = function Person_toSource() {
+  return 'new Person(' + uneval(this.name) + ')';
+};
+
+console.log(new Person('Joe').toSource()); // ---&gt; new Person("Joe")
+</pre>
+
+<h3 id="Built-in_toSource_methods" name="Built-in_toSource_methods">組み込み toSource() メソッド</h3>
+
+<p>コア JavaScript のそれぞれの型は独自の <code>toSource()</code> メソッドを持っています。これらのオブジェクトの例を示します。</p>
+
+<ul>
+ <li>{{jsxref("Array.prototype.toSource()")}} — {{jsxref("Array")}} オブジェクト</li>
+ <li>{{jsxref("Boolean.prototype.toSource()")}} — {{jsxref("Boolean")}} オブジェクト</li>
+ <li>{{jsxref("Date.prototype.toSource()")}} — {{jsxref("Date")}} オブジェクト</li>
+ <li>{{jsxref("Function.prototype.toSource()")}} — {{jsxref("Function")}} オブジェクト</li>
+ <li>{{jsxref("Number.prototype.toSource()")}} — {{jsxref("Number")}} オブジェクト</li>
+ <li>{{jsxref("RegExp.prototype.toSource()")}} — {{jsxref("RegExp")}} オブジェクト</li>
+ <li>{{jsxref("String.prototype.toSource()")}} — {{jsxref("String")}} オブジェクト</li>
+ <li>{{jsxref("Symbol.prototype.toSource()")}} — {{jsxref("Symbol")}} オブジェクト</li>
+ <li><code>Math.toSource()</code> — 文字列 "Math" を返す。</li>
+</ul>
+
+<h3 id="Limitations_on_cyclical_objects" name="Limitations_on_cyclical_objects">循環オブジェクトの正弦</h3>
+
+<p>再帰的にリンクされたリストや双方向に移動可能なツリーなど、自分自身への参照を含むオブジェクトの場合、 <code>toSource()</code> は Firefox 24 のように自己参照を再生成しません。例えば、次のようになります。</p>
+
+<pre class="brush: js notranslate">var obj1 = {};
+var obj2 = { a: obj1 };
+obj1.b = obj2;
+
+console.log('Cyclical: ' + (obj1.b.a == obj1));
+
+var objSource = obj1.toSource(); // returns "({b:{a:{}}})"
+
+obj1 = eval(objSource);
+
+console.log('Cyclical: ' + (obj1.b.a == obj1));
+</pre>
+
+<p>循環構造が採用されていて <code>toSource()</code> が必要な場合、オブジェクトはコンストラクターへの参照を使用するか、無名関数を提供するかのいずれかの方法で、 <code>toSource()</code> へのオーバーライドを提供しなければなりません。</p>
+
+<h2 id="例">例</h2>
+
+<h3 id="Using_toSource" name="Using_toSource">toSource() の使用</h3>
+
+<p>次のコードは <code>Dog</code> オブジェクト型を定義して <code>theDog</code>、すなわち <code>Dog</code> 型のオブジェクトを生成します。</p>
+
+<pre class="brush: js notranslate">function Dog(name, breed, color, sex) {
+  this.name = name;
+  this.breed = breed;
+  this.color = color;
+  this.sex = sex;
+}
+
+theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
+</pre>
+
+<p><code>toSource()</code> メソッドを <code>theDog</code> に対して呼び出すと、そのオブジェクトを定義する JavaScript のソースが表示されます。</p>
+
+<pre class="brush: js notranslate">theDog.toSource();
+// returns ({name:"Gabby", breed:"Lab", color:"chocolate", sex:"female"})
+</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<p>標準の一部ではありません。 JavaScript 1.3 で実装されました。</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<div>
+<p>{{Compat("javascript.builtins.Object.toSource")}}</p>
+</div>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{jsxref("Object.prototype.toString()")}}</li>
+</ul>

@@ -19,15 +19,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 <p><strong>Предупреждение:</strong> Изменение прототипа <code>[[Prototype]]</code> объекта является, по самой природе оптимизации доступа к свойствам в современных движках JavaScript, очень медленной операцией, это справедливо для <strong><em>любого</em></strong> браузера и движка JavaScript. Изменение прототипов очень тонко и обширно влияет на производительность, причём это влияние не ограничивается просто временем, проведённым внутри метода <code>Object.setPrototypeOf()</code>, оно может распространяться на <strong><em>любой</em></strong> код, который имеет доступ к <strong><em>любому</em></strong> объекту, чей прототип <code>[[Prototype]]</code> был изменён. Если вы заботитесь о производительности, вы никогда не должны изменять прототип <code>[[Prototype]]</code> объекта. Вместо этого создайте объект с нужным прототипом <code>[[Prototype]]</code>, с помощью метода {{jsxref("Object.create()")}}.</p>
 </div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>Object.setPrototypeOf()</code></strong> устанавливает прототип (то есть, внутреннее свойство <code>[[Prototype]]</code>) указанного объекта в другой объект или {{jsxref("null")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>Object.setPrototypeOf(<var>obj</var>, <var>prototype</var>);</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>obj</code></dt>
@@ -36,16 +36,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
  <dd>Новый прототип объекта (объект или {{jsxref("null")}}).</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Выкидывает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}, если объект, чей прототип <code>[[Prototype]]</code> является не расширяемым, согласно методу {{jsxref("Object.isExtensible()")}}. Не делает ничего, если параметр <code>prototype</code> не является объектом или значением {{jsxref("null")}} (то есть, является числом, строкой, логическим значением или {{jsxref("undefined")}}). В противном случае метод устанавливает прототип <code>[[Prototype]]</code> объекта <code>obj</code> в новое значение.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <pre class="brush: js">var dict = Object.setPrototypeOf({}, null);
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Используя старое свойство {{jsxref("Object.proto", "Object.prototype.__proto__")}}, мы можем легко определить <code>Object.setPrototypeOf()</code>, если он ещё не доступен:</p>
 
@@ -69,7 +69,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
      <span class="punctuation token">}</span>
 <span class="punctuation token">}</span></code></pre>
 
-<h2 id="Appending_Prototype_Chains" name="Appending_Prototype_Chains">Добавление цепочки прототипов</h2>
+<h2 id="Appending_Prototype_Chains">Добавление цепочки прототипов</h2>
 
 <p>Сочетание метода <code>Object.getPrototypeOf()</code> и свойства {{jsxref("Object.proto", "Object.prototype.__proto__")}} позволяет добавить целую цепочку прототипов к новому прототипу объекта:</p>
 
@@ -117,9 +117,9 @@ Object.appendChain = function(oChain, oProto) {
 }
 </pre>
 
-<h3 id="Usage" name="Usage">Использование</h3>
+<h3 id="Usage">Использование</h3>
 
-<h4 id="First_example.3A_Appending_a_chain_to_a_prototype" name="First_example.3A_Appending_a_chain_to_a_prototype">Первый пример: присоединение цепочки к прототипу</h4>
+<h4 id="First_example.3A_Appending_a_chain_to_a_prototype">Первый пример: присоединение цепочки к прототипу</h4>
 
 <pre class="brush: js">function Mammal() {
   this.isMammal = 'да';
@@ -145,7 +145,7 @@ Object.appendChain(oCat, new Animal());
 alert(oCat.breathing); // 'да'
 </pre>
 
-<h4 id="Second_example.3A_Transforming_a_primitive_value_into_an_instance_of_its_constructor_and_append_its_chain_to_a_prototype" name="Second_example.3A_Transforming_a_primitive_value_into_an_instance_of_its_constructor_and_append_its_chain_to_a_prototype">Второй пример: преобразование примитивного значения в экземпляр его конструктора и присоединение его цепочки к прототипу</h4>
+<h4 id="Second_example.3A_Transforming_a_primitive_value_into_an_instance_of_its_constructor_and_append_its_chain_to_a_prototype">Второй пример: преобразование примитивного значения в экземпляр его конструктора и присоединение его цепочки к прототипу</h4>
 
 <pre class="brush: js">function Symbol() {
   this.isSymbol = 'да';
@@ -162,7 +162,7 @@ alert(oPrime.isSymbol); // 'да'
 alert(typeof oPrime); // 'object'
 </pre>
 
-<h4 id="Third_example.3A_Appending_a_chain_to_the_Function.prototype_object_and_appending_a_new_function_to_that_chain" name="Third_example.3A_Appending_a_chain_to_the_Function.prototype_object_and_appending_a_new_function_to_that_chain">Третий пример: присоединение цепочки к объекту <code>Function.prototype</code> и новой функции к этой цепочке</h4>
+<h4 id="Third_example.3A_Appending_a_chain_to_the_Function.prototype_object_and_appending_a_new_function_to_that_chain">Третий пример: присоединение цепочки к объекту <code>Function.prototype</code> и новой функции к этой цепочке</h4>
 
 <pre class="brush: js">function Person(sName) {
   this.identity = sName;
@@ -175,28 +175,15 @@ alert(george.identity); // 'Георг'
 george(); // 'Привет, парни!!'
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.setprototypeof', 'Object.setProtoypeOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>

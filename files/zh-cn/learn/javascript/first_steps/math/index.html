@@ -1,5 +1,5 @@
 ---
-title: JavaScript中的基础数学 — 数字和操作符
+title: JavaScript 中的基础数学 — 数字和操作符
 slug: Learn/JavaScript/First_steps/Math
 translation_of: Learn/JavaScript/First_steps/Math
 ---
@@ -7,13 +7,13 @@ translation_of: Learn/JavaScript/First_steps/Math
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">在本次课程中，我们讨论 JavaScript 中的数学 — 我们如何使用 {{Glossary("Operator","运算符")}} 和其他功能来成功地操作数字以完成我们的请求。</p>
+<p>在本次课程中，我们讨论 JavaScript 中的数学 — 我们如何使用 {{Glossary("Operator","运算符")}} 和其他功能来成功地操作数字以完成我们的请求。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">前提：</th>
-   <td>基本的计算机知识，对HTML和CSS初步了解，知道JavaScript是什么。</td>
+   <td>基本的计算机知识，对 HTML 和 CSS 初步了解，知道 JavaScript 是什么。</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -33,26 +33,26 @@ translation_of: Learn/JavaScript/First_steps/Math
 <p>在编程中，即使是人人熟知的最普遍的十进制数，也比你想象的要复杂的多。我们使用不同的术语来描述不同类型的十进制数，例如：</p>
 
 <ul>
- <li><strong>整数</strong> 就是整数,例如 10, 400, 或者 -5.</li>
+ <li><strong>整数</strong> 就是整数，例如 10, 400, 或者 -5.</li>
  <li><strong>浮点数</strong> (浮点) 有小数点或小数位，例如 12.5，和 56.7786543。</li>
  <li><strong>双精度</strong>双精度是一种特定类型的浮点数，它们具有比标准浮点数更高的精度（这意味着它们精确到更大的小数位数）。</li>
 </ul>
 
-<p>我们甚至有不同类型的数字系统！ 十进制是基数10（意味着它在每列使用0-9），但是我们也有这样的东西：</p>
+<p>我们甚至有不同类型的数字系统！十进制是基数 10（意味着它在每列使用 0-9），但是我们也有这样的东西：</p>
 
 <ul>
- <li><strong>二进制</strong> — 计算机的最基础语言; 0s and 1s</li>
- <li><strong>八进制</strong> — 基数8，每列使用0-7</li>
- <li><strong>十六进制</strong> — 基数16，每列使用0-9，然后使用a-f。 在CSS中设置颜色时，可能会遇到这些数字。</li>
+ <li><strong>二进制</strong> — 计算机的最基础语言—— 0 和 1</li>
+ <li><strong>八进制</strong> — 基数 8，每列使用 0-7</li>
+ <li><strong>十六进制</strong> — 基数 16，每列使用 0-9，然后使用 a-f。在 CSS 中设置颜色时，可能会遇到这些数字。</li>
 </ul>
 
-<p>在你开始担心你的大脑混乱之前，先停下来吧！ 一开始，我们将在本课程中坚持使用十进制数; 你很少会遇到需要开始考虑其他类型的情况，如果有的话。</p>
+<p>在你开始担心你的大脑混乱之前，先停下来吧！一开始，我们将在本课程中坚持使用十进制数; 你很少会遇到需要开始考虑其他类型的情况，如果有的话。</p>
 
-<p>第二个好消息是，与其他一些编程语言不同，JavaScript只有一个数据类型用来表示数字（包括 integers 和 decimals ），您猜对了，{{jsxref("Number")}}。 这意味着，你在JavaScript中处理的任何类型的数字，都以完全相同的方式处理它们。</p>
+<p>第二个好消息是，与其他一些编程语言不同，JavaScript 只有一个数据类型用来表示数字（包括 integers 和 decimals），您猜对了，{{jsxref("Number")}}。这意味着，你在 JavaScript 中处理的任何类型的数字，都以完全相同的方式处理它们。</p>
 
 <h3 id="这是我们的全部数字">这是我们的全部数字</h3>
 
-<p>让我们快点玩一些数字，以重新定义我们所需要的基本语法。 在您的<a href="/zh-CN/docs/Learn/Discover_browser_developer_tools">开发工具JavaScript控制台</a>中输入下面列出的命令。</p>
+<p>让我们快点玩一些数字，以重新定义我们所需要的基本语法。在您的<a href="/zh-CN/docs/Learn/Discover_browser_developer_tools">开发工具 JavaScript 控制台</a>中输入下面列出的命令。</p>
 
 <p><strong><a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/">在新窗口中打开</a></strong></p>
 
@@ -64,7 +64,7 @@ myInt;
 myFloat;</pre>
  </li>
  <li>数值键入不带引号 —— 在继续之前尝试声明和初始化更多包含数字的变量。</li>
- <li>现在我们来看看我们的原始变量是否是相同的数据类型。 在JavaScript中有一个称为{{jsxref("Operators / typeof", "typeof")}} 的运算符。 输入如下所示的两行：
+ <li>现在我们来看看我们的原始变量是否是相同的数据类型。在 JavaScript 中有一个称为{{jsxref("Operators / typeof", "typeof")}} 的运算符。输入如下所示的两行：
   <pre class="brush: js notranslate">typeof myInt;
 typeof myFloat;</pre>
   在这两种情况下，都应该返回 <code>"number"</code> —— 这使得事情变得更简单，因为若是不同的数字具有不同的数据类型，那么我们还须以不同的方式处理它们。呦！</li>
@@ -74,7 +74,7 @@ typeof myFloat;</pre>
 
 <p>算术运算符是我们用来做和的基本运算符：</p>
 
-<table class="standard-table" style="height: 321px; width: 852px;">
+<table>
  <thead>
   <tr>
    <th scope="col">运算符</th>
@@ -110,17 +110,17 @@ typeof myFloat;</pre>
   </tr>
   <tr>
    <td><code>%</code></td>
-   <td>求余(有时候也叫取模)</td>
+   <td>求余 (有时候也叫取模)</td>
    <td>
     <p>在你将左边的数分成同右边数字相同的若干整数部分后，返回剩下的余数</p>
    </td>
-   <td><code>8 % 3</code> (返回 2，8除以3的倍数，余下2 。)</td>
+   <td><code>8 % 3</code> (返回 2，8 除以 3 的倍数，余下 2。)</td>
   </tr>
   <tr>
    <td><code>**</code></td>
    <td>幂</td>
    <td>
-    <p>取底数的指数次方，即指数所指定的底数相乘。它在EcmaScript 2016 中首次引入。</p>
+    <p>取底数的指数次方，即指数所指定的底数相乘。它在 EcmaScript 2016 中首次引入。</p>
    </td>
    <td><code>5 ** 5</code> (返回 3125，相当于 <code>5 * 5 * 5 * 5 * 5</code> 。)</td>
   </tr>
@@ -128,14 +128,14 @@ typeof myFloat;</pre>
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: 你以后有时候会看到参与算术计算的数字被称为 操作数({{Glossary("Operand", "operands")}})。</p>
+<p><strong>Note</strong>: 你以后有时候会看到参与算术计算的数字被称为 操作数 ({{Glossary("Operand", "operands")}})。</p>
 </div>
 
 <div class="blockIndicator note">
-<p>Note: 有时你可能会看到使用较旧的 {{jsxref("Math.pow()")}} 方法表达的指数，该方法的工作方式非常相似。 例如，在 <code>Math.pow(7, 3)</code>  中，<code>7</code> 是基数，<code>3</code> 是指数，因此表达式的结果是 <code>343</code>。 <code>Math.pow(7, 3)</code> 相当于 <code>7 ** 3</code>。</p>
+<p>Note: 有时你可能会看到使用较旧的 {{jsxref("Math.pow()")}} 方法表达的指数，该方法的工作方式非常相似。例如，在 <code>Math.pow(7, 3)</code>  中，<code>7</code> 是基数，<code>3</code> 是指数，因此表达式的结果是 <code>343</code>。 <code>Math.pow(7, 3)</code> 相当于 <code>7 ** 3</code>。</p>
 </div>
 
-<p>我们可能不需要教你如何做基础数学，但我们想测试你对所涉及的语法的理解。 尝试将下面的示例输入到<a href="/zh-CN/docs/Learn/Discover_browser_developer_tools">开发者工具JavaScript控制台</a>中。</p>
+<p>我们可能不需要教你如何做基础数学，但我们想测试你对所涉及的语法的理解。尝试将下面的示例输入到<a href="/zh-CN/docs/Learn/Discover_browser_developer_tools">开发者工具 JavaScript 控制台</a>中。</p>
 
 <ol>
  <li>首先尝试输入一些简单的例子，例如
@@ -143,7 +143,7 @@ typeof myFloat;</pre>
 9 * 8
 60 % 3</pre>
  </li>
- <li>您还可以尝试声明变量并用数字初始化变量，然后尝试使用这些变量来求和 - 求和中变量的行为与直接用其持有的数来求和完全一样。 例如：
+ <li>您还可以尝试声明变量并用数字初始化变量，然后尝试使用这些变量来求和 - 求和中变量的行为与直接用其持有的数来求和完全一样。例如：
   <pre class="brush: js notranslate">let num1 = 10;
 let num2 = 50;
 9 * num1;
@@ -161,46 +161,46 @@ num2 + num1 / 8 + 2;</pre>
 
 <h3 id="运算符优先级">运算符优先级</h3>
 
-<p>我们来看看上面的最后一个例子，假设num2的值为50，num1的值为10（如上所述）：</p>
+<p>我们来看看上面的最后一个例子，假设 num2 的值为 50，num1 的值为 10（如上所述）：</p>
 
 <pre class="brush: js notranslate">num2 + num1 / 8 + 2;</pre>
 
-<p>一般人，你会将它看作“50加10等于60”，然后“8加2等于10”，最后“60除以10等于6”。</p>
+<p>一般人，你会将它看作“50 加 10 等于 60”，然后“8 加 2 等于 10”，最后“60 除以 10 等于 6”。</p>
 
-<p>但浏览器的“10除以8等于1.25”，那么“50加1.25加2等于53.25”。</p>
+<p>但浏览器的“10 除以 8 等于 1.25”，那么“50 加 1.25 加 2 等于 53.25”。</p>
 
-<p>这是因为<strong>运算符优先级</strong> —— 一些运算符将在计算算式（在编程中称为表达式）的结果时先于其他运算符被执行。 JavaScript中的运算符优先级与学校的数学课程相同 - 乘法和除法总是先完成，然后是加法和减法（总是从左到右进行计算）。</p>
+<p>这是因为<strong>运算符优先级</strong> —— 一些运算符将在计算算式（在编程中称为表达式）的结果时先于其他运算符被执行。JavaScript 中的运算符优先级与学校的数学课程相同 - 乘法和除法总是先完成，然后是加法和减法（总是从左到右进行计算）。</p>
 
-<p>如果想要改变计算优先级，可以把想要优先计算的部分用括号围住。 所以要得到结果为6，我们可以这样做：</p>
+<p>如果想要改变计算优先级，可以把想要优先计算的部分用括号围住。所以要得到结果为 6，我们可以这样做：</p>
 
 <pre class="brush: js notranslate">(num2 + num1) / (8 + 2);</pre>
 
 <p>尝试看看。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 注意：可以在<a href="/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#运算符优先级">表达式和运算符</a>中找到所有JavaScript运算符的完整列表及其优先级。</p>
+<p><strong>Note</strong>: 注意：可以在<a href="/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#运算符优先级">表达式和运算符</a>中找到所有 JavaScript 运算符的完整列表及其优先级。</p>
 </div>
 
 <h2 id="自增和自减运算符">自增和自减运算符</h2>
 
-<p>有时候，您需要反复把一个变量加1或减1。 这可以方便地使用增量（<code>++</code>）和递减（ <code>--</code> ）运算符来完成。 我们在<a href="/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash">JavaScript 初体验</a>文章的“猜数字”游戏中使用了++，当我们添加1到我们的guessCount变量来跟踪用户在每次转动之后剩下的猜测时。</p>
+<p>有时候，您需要反复把一个变量加 1 或减 1。这可以方便地使用增量（<code>++</code>）和递减（ <code>--</code> ）运算符来完成。我们在<a href="/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash">JavaScript 初体验</a>文章的“猜数字”游戏中使用了++，当我们添加 1 到我们的 guessCount 变量来跟踪用户在每次转动之后剩下的猜测时。</p>
 
 <pre class="brush: js notranslate">guessCount++;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: 它们最常用于 <a href="/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration">循环</a> 中，您将在以后的课程中了解。 例如，假设您想循环查看价格表，并为每个价格增加销售税。 您可以使用循环依次查看每个值，并在每种情况下进行必要的计算，以添加销售税。 当需要时，增量器用于移动到下一个值。 我们实际上提供了一个简单的例子，显示了如何完成 ——  <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html">在线查看效果</a>，并 <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html">查看源代码</a>，看看是否可以发现增量器！ 我们稍后将会详细介绍循环。</p>
+<p><strong>Note</strong>: 它们最常用于 <a href="/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration">循环</a> 中，您将在以后的课程中了解。例如，假设您想循环查看价格表，并为每个价格增加销售税。您可以使用循环依次查看每个值，并在每种情况下进行必要的计算，以添加销售税。当需要时，增量器用于移动到下一个值。我们实际上提供了一个简单的例子，显示了如何完成 ——  <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html">在线查看效果</a>，并 <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html">查看源代码</a>，看看是否可以发现增量器！我们稍后将会详细介绍循环。</p>
 </div>
 
-<p>我们来试试看你们的控制台。 首先，请注意，您不能将这些直接应用于一个数字，这可能看起来很奇怪，但是我们为变量赋值一个新的更新值，而不是对该值进行操作。 以下将返回错误：</p>
+<p>我们来试试看你们的控制台。首先，请注意，您不能将这些直接应用于一个数字，这可能看起来很奇怪，但是我们为变量赋值一个新的更新值，而不是对该值进行操作。以下将返回错误：</p>
 
 <pre class="brush: js notranslate">3++;</pre>
 
-<p>所以，你只能增加一个现有的变量。 尝试这个：</p>
+<p>所以，你只能增加一个现有的变量。尝试这个：</p>
 
 <pre class="brush: js notranslate">let num1 = 4;
 num1++;</pre>
 
-<p>好的，第二个奇怪的东西！ 执行此操作时，您会看到返回值为4，这是因为浏览器返回当前值，然后增加变量。 如果您再次返回变量值，则可以看到它已经递增：</p>
+<p>好的，第二个奇怪的东西！执行此操作时，您会看到返回值为 4，这是因为浏览器返回当前值，然后增加变量。如果您再次返回变量值，则可以看到它已经递增：</p>
 
 <pre class="brush: js notranslate">num1;</pre>
 
@@ -211,20 +211,20 @@ num2--;
 num2;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: 您可以使浏览器以其他方式进行操作 - 递增/递减变量，然后返回值 - 将操作符放在变量的开头，而不是结束。 再次尝试上面的例子，但这次使用 <code>++num1</code> 和 <code>--num2</code>。</p>
+<p><strong>Note</strong>: 您可以使浏览器以其他方式进行操作 - 递增/递减变量，然后返回值 - 将操作符放在变量的开头，而不是结束。再次尝试上面的例子，但这次使用 <code>++num1</code> 和 <code>--num2</code>。</p>
 </div>
 
 <h2 id="赋值运算符">赋值运算符</h2>
 
-<p>赋值运算符是向变量分配值的运算符。 我们已经使用了最基本的一个很多次了：<code>=</code>， 它只是将右边的值赋给左边的变量 ，即：</p>
+<p>赋值运算符是向变量分配值的运算符。我们已经使用了最基本的一个很多次了：<code>=</code>，它只是将右边的值赋给左边的变量，即：</p>
 
 <pre class="brush: js notranslate">let x = 3; // x 的值是 3
 let y = 4; // y 的值是 4
-x = y; // x 和 y 有相同的值, 4</pre>
+x = y; // x 和 y 有相同的值，4</pre>
 
-<p>但是还有一些更复杂的类型，它们提供了有用的快捷方式，可以使您的代码更加清洁和高效。 最常见的如下：</p>
+<p>但是还有一些更复杂的类型，它们提供了有用的快捷方式，可以使您的代码更加清洁和高效。最常见的如下：</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">运算符</th>
@@ -274,7 +274,7 @@ x = y; // x 和 y 有相同的值, 4</pre>
  </tbody>
 </table>
 
-<p>尝试在你的控制台中输入上面的一些示例，以了解它们的工作原理。 在每种情况下，你是否可以猜出在输入第二行之前的值。</p>
+<p>尝试在你的控制台中输入上面的一些示例，以了解它们的工作原理。在每种情况下，你是否可以猜出在输入第二行之前的值。</p>
 
 <p>请注意，您可以愉快地使用每个表达式右侧的其他变量，例如：</p>
 
@@ -288,30 +288,30 @@ x *= y; // x 现在包含值 12</pre>
 
 <h2 id="主动学习：调整画布框的大小">主动学习：调整画布框的大小</h2>
 
-<p>在这个练习中，我们将让你填写一些数字和操作符来操纵一个框的大小。 该框使用称为{{domxref("Canvas API", "", "", "true")}}的浏览器API绘制。 没有必要担心这是如何工作的 - 现在只关注数学。 盒子的宽度和高度（以像素为单位）由变量 <code>x</code> 和 <code>y</code> 定义，变量 <code>x</code> 和 <code>y</code> 最初都被赋值为50。</p>
+<p>在这个练习中，我们将让你填写一些数字和操作符来操纵一个框的大小。该框使用称为{{domxref("Canvas API", "", "", "true")}}的浏览器 API 绘制。没有必要担心这是如何工作的 - 现在只关注数学。盒子的宽度和高度（以像素为单位）由变量 <code>x</code> 和 <code>y</code> 定义，变量 <code>x</code> 和 <code>y</code> 最初都被赋值为 50。</p>
 
 <p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html", '100%', 620)}}</p>
 
 <p><strong><a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html">新窗口打开</a></strong></p>
 
-<p>在上面的可编辑代码框中，有两行标有清晰的注释，我们希望你更新以使框增长/缩小到某些大小，在每种情况下使用某些操作符和/或值。 我们希望你回答以下问题：</p>
+<p>在上面的可编辑代码框中，有两行标有清晰的注释，我们希望你更新以使框增长/缩小到某些大小，在每种情况下使用某些操作符和/或值。我们希望你回答以下问题：</p>
 
 <ul>
- <li>更改计算x的行，使框仍然是50px宽，并且使用数字43和7以及算术运算符计算50。</li>
- <li>更改计算y的行，使框为高75像素，使用数字25和3计算75，以及算术运算符。</li>
- <li>更改计算x的行，使框为250px宽，250是使用两个数字和余数（模）运算符计算的。</li>
- <li>更改计算y的行，使框为150px高，150是使用三个数字计算的，以及减法和除数运算符。</li>
- <li>更改计算x的行，因此该框为200px宽，并且使用数字4和赋值运算符计算200。</li>
- <li>更改计算y的行，使框为200px高，使用数字50和3，乘法运算符和加法运算符计算200。</li>
+ <li>更改计算 x 的行，使框仍然是 50px 宽，并且使用数字 43 和 7 以及算术运算符计算 50。</li>
+ <li>更改计算 y 的行，使框为高 75 像素，使用数字 25 和 3 计算 75，以及算术运算符。</li>
+ <li>更改计算 x 的行，使框为 250px 宽，250 是使用两个数字和余数（模）运算符计算的。</li>
+ <li>更改计算 y 的行，使框为 150px 高，150 是使用三个数字计算的，以及减法和除数运算符。</li>
+ <li>更改计算 x 的行，因此该框为 200px 宽，并且使用数字 4 和赋值运算符计算 200。</li>
+ <li>更改计算 y 的行，使框为 200px 高，使用数字 50 和 3，乘法运算符和加法运算符计算 200。</li>
 </ul>
 
-<p>如果你完全混淆了代码，别担心。 您可以随时按“重置”按钮，使事情恢复正常。 在您正确回答了上述所有问题后，可以自由地使用代码或创建自己的挑战。</p>
+<p>如果你完全混淆了代码，别担心。您可以随时按“重置”按钮，使事情恢复正常。在您正确回答了上述所有问题后，可以自由地使用代码或创建自己的挑战。</p>
 
 <h2 id="比较运算符">比较运算符</h2>
 
 <p>有时，我们将要运行真/假测试，然后根据该测试的结果进行相应的操作 - 为此，我们使用比较运算符。</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">运算符</th>
@@ -359,10 +359,10 @@ x *= y; // x 现在包含值 12</pre>
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: 您可能会看到有些人在他们的代码中使用<code>==</code>和<code>!=</code>来判断相等和不相等，这些都是JavaScript中的有效运算符，但它们与<code>===</code>/<code>!==</code>不同，前者测试值是否相同， 但是数据类型可能不同，而后者的严格版本测试值和数据类型是否相同。 严格的版本往往导致更少的错误，所以我们建议您使用这些严格的版本。</p>
+<p><strong>Note</strong>: 您可能会看到有些人在他们的代码中使用<code>==</code>和<code>!=</code>来判断相等和不相等，这些都是 JavaScript 中的有效运算符，但它们与<code>===</code>/<code>!==</code>不同，前者测试值是否相同，但是数据类型可能不同，而后者的严格版本测试值和数据类型是否相同。严格的版本往往导致更少的错误，所以我们建议您使用这些严格的版本。</p>
 </div>
 
-<p>如果您尝试在控制台中输入这些值，您将看到它们都返回 <code>true</code>/<code>false</code> 值 - 我们在上一篇文章中提到的那些布尔值。 这些是非常有用的，因为它们允许我们在我们的代码中做出决定 - 每次我们想要选择某种类型时，都会使用这些代码，例如：</p>
+<p>如果您尝试在控制台中输入这些值，您将看到它们都返回 <code>true</code>/<code>false</code> 值 - 我们在上一篇文章中提到的那些布尔值。这些是非常有用的，因为它们允许我们在我们的代码中做出决定 - 每次我们想要选择某种类型时，都会使用这些代码，例如：</p>
 
 <ul>
  <li>根据功能是打开还是关闭，在按钮上显示正确的文本标签。</li>
@@ -371,7 +371,7 @@ x *= y; // x 现在包含值 12</pre>
  <li>根据选择的缩放级别缩小或放大地图。</li>
 </ul>
 
-<p>当我们在以后的的文章中查看条件语句时，我们将介绍如何编写这样的逻辑。 现在，我们来看一个简单的例子：</p>
+<p>当我们在以后的的文章中查看条件语句时，我们将介绍如何编写这样的逻辑。现在，我们来看一个简单的例子：</p>
 
 <pre class="brush: html notranslate">&lt;button&gt;Start machine&lt;/button&gt;
 &lt;p&gt;The machine is stopped.&lt;/p&gt;
@@ -396,7 +396,7 @@ function updateBtn() {
 
 <p><strong><a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/conditional.html">新窗口打开</a></strong></p>
 
-<p>您可以在updateBtn（）函数内看到正在使用的等号运算符。 在这种情况下，我们不会测试两个数学表达式是否具有相同的值 - 我们正在测试一个按钮的文本内容是否包含某个字符串 - 但它仍然是工作原理。 如果按钮当前按“启动机”，则将其标签更改为“停机”，并根据需要更新标签。 如果按下按钮当前正在说“停机”，我们再次将显示器交换回来。</p>
+<p>您可以在 updateBtn（）函数内看到正在使用的等号运算符。在这种情况下，我们不会测试两个数学表达式是否具有相同的值 - 我们正在测试一个按钮的文本内容是否包含某个字符串 - 但它仍然是工作原理。如果按钮当前为“启动机器（start machine）”，则将其标签更改为“停止机器（stop machine）”，并根据需要更新标签。如果按钮上写着“停机”时被按下，我们将显示回原来的内容。</p>
 
 <div class="note">
 <p><strong>Note</strong>: 这种在两个状态之间来回交换的行为通常被称为<strong> </strong><strong>切换 (toggle)</strong>。它在一个状态和另一个状态之间切换 - 点亮，熄灭等</p>
@@ -404,12 +404,12 @@ function updateBtn() {
 
 <h2 id="总结">总结</h2>
 
-<p>在本文中，我们已经介绍了现在需要了解JavaScript中数字的基本信息。 你会发现，在你学习JavaScript过程中，num类型的数据一直都在被使用，所以熟练的掌握它是一个不错的选择。 如果你是那些不喜欢数学的人之一，你应该庆幸这一章内容很简短。</p>
+<p>在本文中，我们已经介绍了现在需要了解 JavaScript 中数字的基本信息。你会发现，在你学习 JavaScript 过程中，num 类型的数据一直都在被使用，所以熟练的掌握它是一个不错的选择。如果你是那些不喜欢数学的人之一，你应该庆幸这一章内容很简短。</p>
 
-<p>在下一篇文章中，我们将探讨文本，以及JavaScript如何让我们操纵它。</p>
+<p>在下一篇文章中，我们将探讨文本，以及 JavaScript 如何让我们操纵它。</p>
 
 <div class="note">
-<p><strong>Note</strong>:  如果您喜欢数学，并希望阅读更多关于它如何在JavaScript中实现的, 那么你可以在 MDN's main JavaScript 部分读到更多关于它的内容。对于学习<a href="/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates">数字与日期</a> 和 <a href="/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#运算符优先级">表达式与运算符</a> 来说，那是一个不错的地方。</p>
+<p><strong>Note</strong>:  如果您喜欢数学，并希望阅读更多关于它如何在 JavaScript 中实现的，那么你可以在 MDN's main JavaScript 部分读到更多关于它的内容。对于学习<a href="/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates">数字与日期</a> 和 <a href="/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#运算符优先级">表达式与运算符</a> 来说，那是一个不错的地方。</p>
 </div>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}</p>
@@ -423,7 +423,7 @@ function updateBtn() {
  <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/Variables">存储你需要的信息——变量</a></li>
  <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/Math">JavaScript 中的基本运算——数值和运算符</a></li>
  <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/Strings">文字处理——JavaScript 字符串</a></li>
- <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods">实用的strings方法</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods">实用的 strings 方法</a></li>
  <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a></li>
  <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator">Assessment: Silly story generator</a></li>
 </ul>

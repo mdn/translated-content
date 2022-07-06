@@ -41,7 +41,7 @@ Access-Control-Allow-Headers: *
  <dt>&lt;header-name&gt;</dt>
  <dd>対応しているリクエストヘッダーの名前です。ヘッダーはコンマで区切って、任意の数のリストにすることができます。</dd>
  <dt><code>*</code> (ワイルドカード)</dt>
- <dd>"<code>*</code>" の値は、資格情報のないリクエスト (<a href="/en-US/docs/Web/HTTP/Cookies">HTTP Cookie</a> や HTTP の認証情報のないリクエスト) の特殊なワイルドカード値です。認証情報付きのリクエストでは、特別な意味のない "<code>*</code>" というヘッダー名として扱われます。なお、 {{HTTPHeader("Authorization")}} ヘッダーはワイルドカードで表すことができず、常に明示的に列挙する必要があります。</dd>
+ <dd>"<code>*</code>" の値は、資格情報のないリクエスト (<a href="/ja/docs/Web/HTTP/Cookies">HTTP Cookie</a> や HTTP の認証情報のないリクエスト) の特殊なワイルドカード値です。認証情報付きのリクエストでは、特別な意味のない "<code>*</code>" というヘッダー名として扱われます。なお、 {{HTTPHeader("Authorization")}} ヘッダーはワイルドカードで表すことができず、常に明示的に列挙する必要があります。</dd>
 </dl>
 
 <p>{{glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} は常に許可されており、このヘッダーで列挙する必要はありません。しかし、これらのヘッダーを <code>Access-Control-Allow-Headers</code> に列挙することで、これらのヘッダーでも追加の制約の適用を回避することができることに注意してください。</p>
@@ -62,7 +62,7 @@ Access-Control-Allow-Headers: *
 
 <h3 id="Bypassing_additional_restrictions" name="Bypassing_additional_restrictions">追加の制約の回避</h3>
 
-<p>{{glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}は常に許可され、ふつうは <code>Access-Control-Allow-Headers</code> に列挙する必要はありませんが、それでも列挙すれば<a href="/en-US/docs/Glossary/CORS-safelisted_request_header#Additional_restrictions">追加の制約</a>が適用されることを回避できます。</p>
+<p>{{glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}は常に許可され、ふつうは <code>Access-Control-Allow-Headers</code> に列挙する必要はありませんが、それでも列挙すれば<a href="/ja/docs/Glossary/CORS-safelisted_request_header#Additional_restrictions">追加の制約</a>が適用されることを回避できます。</p>
 
 <pre>Access-Control-Allow-Headers: Accept</pre>
 

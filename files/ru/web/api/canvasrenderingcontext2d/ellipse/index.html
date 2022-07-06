@@ -15,7 +15,7 @@ translation_of: Web/API/CanvasRenderingContext2D/ellipse
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">void <em>ctx</em>.ellipse(<em>x</em>, <em>y</em>, <em>radiusX</em>, <em>radiusY</em>, <em>rotation</em>, <em>startAngle</em>, <em>endAngle</em> [, <em>anticlockwise</em>]);
+<pre class="syntaxbox">void <em>ctx</em>.ellipse(<em>x</em>, <em>y</em>, <em>radiusX</em>, <em>radiusY</em>, <em>rotation</em>, <em>startAngle</em>, <em>endAngle</em> [, <em>anticlockwise</em>]);
 </pre>
 
 <p><code>ellipse()</code> - метод, который создаёт эллиптическую дугу с центром в точках <code>(x, y)</code> с радиусом <code>radiusX</code> и <code>radiusY</code>. Путь начинается от точки <code>startAngle</code> и заканчивается в точке <code>endAngle</code>, идёт по направлению, казанному в параметре (по часовой стрелке или против неё) <code>anticlockwise</code> .</p>
@@ -49,12 +49,12 @@ translation_of: Web/API/CanvasRenderingContext2D/ellipse
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="200" height="200"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas" width="200" height="200"&gt;&lt;/canvas&gt;
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[6] notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js; highlight:[6]">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Рисование эллипса
@@ -72,7 +72,7 @@ ctx.stroke();
 
 <h4 id="Результат">Результат</h4>
 
-<p>{{ EmbedLiveSample('Drawing_a_full_ellipse', 700, 250) }}</p>
+<p>{{ EmbedLiveSample('Рисование_полного_эллипса', 700, 250) }}</p>
 
 <h3 id="Различные_эллиптические_дуги">Различные эллиптические дуги</h3>
 
@@ -80,12 +80,12 @@ ctx.stroke();
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 </pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js; highlight:[6,11,16] notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js; highlight:[6,11,16]">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.fillStyle = 'red';
@@ -106,30 +106,17 @@ ctx.fill();
 
 <h4 id="Результат_2">Результат</h4>
 
-<p>{{ EmbedLiveSample('Various_elliptical_arcs', 700, 180) }}</p>
+<p>{{ EmbedLiveSample('Различные_эллиптические_дуги', 700, 180) }}</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-ellipse", "CanvasRenderingContext2D.ellipse")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_браузера">Совместимость браузера</h2>
 
 
 
-<p>{{Compat("api.CanvasRenderingContext2D.ellipse")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Изучите_также">Изучите также</h2>
 

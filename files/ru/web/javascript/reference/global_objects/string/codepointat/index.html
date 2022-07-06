@@ -15,28 +15,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>codePointAt()</code></strong> возвращает неотрицательное целое число, являющееся закодированным в UTF-16 значением кодовой точки.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>str</var>.codePointAt(<var>pos</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>pos</code></dt>
  <dd>Позиция элемента в строке, чья кодовая точка возвращается функцией.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Если на указанной позиции нет элементов, будет возвращено значение {{jsxref("Global_Objects/undefined", "undefined")}}. Если суррогатная пара UTF-16 не начинается в позиции <code>pos</code>, будет возвращено кодовое значение в позиции <code>pos</code>.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_codePointAt" name="Example:_Using_codePointAt">Пример: использование метода <code>codePointAt()</code></h3>
+<h3 id="Example:_Using_codePointAt">Пример: использование метода <code>codePointAt()</code></h3>
 
 <pre class="brush: js">'ABC'.codePointAt(1);          // 66
 '\uD800\uDC00'.codePointAt(0); // 65536
@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 'XYZ'.codePointAt(42); // undefined
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Следующий полифил расширяет прототип строки определённой в ECMAScript 6 функцией <code>codePointAt()</code>, если браузер не имеет её родной поддержки.</p>
 
@@ -95,28 +95,15 @@ if (!String.prototype.codePointAt) {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.codepointat', 'String.prototype.codePointAt')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("String.fromCodePoint()")}}</li>

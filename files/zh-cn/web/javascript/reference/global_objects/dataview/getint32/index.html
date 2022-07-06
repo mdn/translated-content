@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>getInt32()</code></strong><code>方法</code><code>从</code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView" title="DataView 视图提供了一种用于向 ArrayBuffer 读写数据的底层接口。"><code>DataView</code></a>相对于起始位置偏移 n 个字节处开始，获取一个32-bit数(长整型，4个字节).</p>
+<p><strong><code>getInt32()</code></strong> 方法从 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView"><code>DataView</code></a> 相对于起始位置偏移 n 个字节处开始，获取一个 32-bit 数 (长整型，4 个字节)。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/dataview-getint32.html")}}</div>
 
@@ -19,29 +19,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
 
 <dl>
  <dt>byteOffset</dt>
- <dd>偏移量, 单位为字节, 从头开始计算.</dd>
+ <dd>偏移量，单位为字节，从头开始计算。</dd>
  <dt>littleEndian</dt>
  <dd>{{optional_inline}} Indicates whether the 32-bit int is stored in {{Glossary("Endianness", "little- or big-endian")}} format. If false or undefined, a big-endian value is read.</dd>
 </dl>
 
 <h3 id="返回">返回</h3>
 
-<dl>
- <dd>一个长整型32位数.</dd>
-</dl>
+<p>一个长整型 32 位数。</p>
 
 <h3 id="抛出错误">抛出错误</h3>
 
 <dl>
  <dt>{{jsxref("RangeError")}}</dt>
- <dd>如果byteOffset超出了视图能储存的值，就会抛出错误.</dd>
+ <dd>如果 byteOffset 超出了视图能储存的值，就会抛出错误。</dd>
 </dl>
 
 <h2 id="描述">描述</h2>
 
-<dl>
- <dd> 没有对齐约束; 多字节值可以从任何偏移量获取.</dd>
-</dl>
+<p> 没有对齐约束; 多字节值可以从任何偏移量获取。</p>
 
 <h2 id="例子">例子</h2>
 

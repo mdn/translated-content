@@ -5,19 +5,19 @@ translation_of: Web/API/XMLDocument/load
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><code>document.load()</code>作为旧版的w3c标准 <a class="external" href="http://www.w3.org/TR/2003/WD-DOM-Level-3-LS-20030619/load-save.html#LS-DocumentLS">DOM Level 3 Load &amp; Save module</a> 其中的一部分. <a href="/zh-cn/DOM/document.async" title="zh-cn/DOM/document.async">document.async</a> 用来表明该请求是以同步模式进行还是异步模式进行(默认值). 从 Gecko 1.9开始 ,该方法不支持跨站的文档请求.(使用 <a href="/zh-cn/DOM/XMLHttpRequest" title="zh-cn/XMLHttpRequest">XMLHttpRequest</a> 代替).</p>
+<p><code>document.load()</code>作为旧版的 w3c 标准 <a class="external" href="http://www.w3.org/TR/2003/WD-DOM-Level-3-LS-20030619/load-save.html#LS-DocumentLS">DOM Level 3 Load &amp; Save module</a> 其中的一部分。<a href="/zh-cn/DOM/document.async" title="zh-cn/DOM/document.async">document.async</a> 用来表明该请求是以同步模式进行还是异步模式进行 (默认值)。从 Gecko 1.9 开始，该方法不支持跨站的文档请求。(使用 <a href="/zh-cn/DOM/XMLHttpRequest" title="zh-cn/XMLHttpRequest">XMLHttpRequest</a> 代替)。</p>
 
 <h3 id="代码示例">代码示例</h3>
 
 <pre>var xmlDoc = document.implementation.createDocument("", "test", null);
 function documentLoaded (e) {
-    alert(new XMLSerializer().serializeToString(e.target)); // 返回一个包含querydata.xml内容的字符串.
+    alert(new XMLSerializer().serializeToString(e.target)); // 返回一个包含 querydata.xml 内容的字符串。
 }
 xmlDoc.addEventListener("load", documentLoaded, false);
 xmlDoc.load('querydata.xml');
 </pre>
 
-<p>在XML/tests目录下{{ Source("content/xml/tests/load/", "查看load示例") }} . (在LXR生成的页面内加载load.html文件是无效的,因为LXR会将test.xml合并到load.html中作为一个单独的HTML页面返回. 为了测试这个功能,你可以在自己的本地磁盘或网络服务器上创建测试文件.)</p>
+<p>在 XML/tests 目录下{{ Source("content/xml/tests/load/", "查看 load 示例") }}。(在 LXR 生成的页面内加载 load.html 文件是无效的，因为 LXR 会将 test.xml 合并到 load.html 中作为一个单独的 HTML 页面返回。为了测试这个功能，你可以在自己的本地磁盘或网络服务器上创建测试文件。)</p>
 
 <h3 id="相关链接">相关链接</h3>
 
@@ -31,5 +31,3 @@ xmlDoc.load('querydata.xml');
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/2003/WD-DOM-Level-3-LS-20030619/load-save.html#LS-DocumentLS">Old W3C Working Draft of the DOM Level 3 Load &amp; Save module</a></li>
 </ul>
-
-<p>{{ languages( {"en": "en/DOM/document.load" } ) }}</p>

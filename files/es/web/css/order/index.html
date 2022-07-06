@@ -99,71 +99,7 @@ order: unset;
 
 <h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatChrome(21.0)}}{{property_prefix("-webkit")}}<br>
-    29</td>
-   <td>{{CompatGeckoDesktop("18.0")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("20.0")}}<sup>[2]</sup></td>
-   <td>
-    <p>10.0{{property_prefix("-ms")}}<sup>[3]</sup><br>
-     11</p>
-   </td>
-   <td>12.10</td>
-   <td>7 {{property_prefix("-webkit")}}<br>
-    9</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("18.0")}}<sup>[1]</sup><br>
-    {{CompatGeckoMobile("20.0")}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>12.10</td>
-   <td>7 {{property_prefix("-webkit")}}<br>
-    9</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Para activar el soporte Flexbox en  Firefox 18 and 19, el usuario debe cambiar en preferencias about:config <code>layout.css.flexbox.enabled</code> a <code>true</code>. Las cajas flexibles multi-línea son soportadas desde Firefox 28.</p>
-
-<p>Actualmente Firefox cambia incorrectamente el orden de tabulación de los elementos. Ver {{bug("812687")}}.</p>
-
-<p>[2] Además del soporte sin prefijo, Gecko 48.0 {{geckoRelease("48.0")}} añade soporte para un prefijo <code>-webkit</code> en versión porpietaria por razones compatibilidad web bajo la preferencia <code>layout.css.prefixes.webkit</code>, por defecto en <code>false</code>. Desde Gecko 49.0 {{geckoRelease("49.0")}} la preferencia por defecto está en <code>true</code>.</p>
-
-<p>[3] En Internet Explorer 10, un contenedor flexible se declara usando <code>display:-ms-flexbox</code> y no <code>display:flex</code>. La propiedad está implementada bajo el monbre no-estándar <code>-ms-flex-order</code>.</p>
+{{Compat("css.properties.order")}}
 
 <h2 id="Ver_también">Ver también</h2>
 

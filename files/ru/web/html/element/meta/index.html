@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/meta
 ---
 <div>{{HTMLRef}}</div>
 
-<p><strong>HTML элемент <code>&lt;meta&gt;</code></strong> представляет такие {{Glossary("Metadata","метаданные")}}, которые не могут быть представлены другими HTML-метатегами, такими как {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} или {{HTMLElement("title")}}.</p>
+<p><strong>HTML-элемент <code>&lt;meta&gt;</code></strong> представляет такие {{Glossary("Metadata","метаданные")}}, которые не могут быть представлены другими HTML-метатегами, такими как {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} или {{HTMLElement("title")}}.</p>
 
 <table class="properties">
  <tbody>
@@ -88,7 +88,7 @@ translation_of: Web/HTML/Element/meta
   <dt><code>"Content-Security-Policy"</code></dt>
   <dd>Это значение позволит администратору веб-сайта определить политику содержания для обслуживаемых ресурсов. За некоторыми исключениями, политика в основном включают в себя указание происхождения сервера и конечные точки сценария. Это помогает предотвратить атаки межсайтового скриптинга.</dd>
   <dt><code>"content-type"</code> {{obsolete_inline}}</dt>
-  <dd>Этот атрибут определяет <a href="/en-US/docs/MIME">MIME type</a> документа. За ним следует синтаксис такой же как и в поле заголовка объекта содержимого HTTPI, однако как и внутри HTML элемента, большинство этих значений не доступно.<br>
+  <dd>Этот атрибут определяет <a href="/en-US/docs/MIME">MIME type</a> документа. За ним следует синтаксис такой же как и в поле заголовка объекта содержимого HTTPI, однако как и внутри HTML-элемента, большинство этих значений не доступно.<br>
   Поэтому допустимым синтаксисом для его содержимого является литеральная строка '<code>text/html</code>', за которой следует набор символов со следующим синтаксисом: '<code>; charset=</code><em><code>IANAcharset</code></em>' где  <code>IANAcharset</code> это предпочтительное<em> MIME имя</em> для набора символов, который определяется как<a class="external" href="https://www.iana.org/assignments/character-sets"> IANA.</a>
   <div class="note"><strong>Замечания:</strong>
   <ul>
@@ -103,8 +103,8 @@ translation_of: Web/HTML/Element/meta
   <dt><code>"refresh"</code></dt>
   <dd>Эта прагма определяет:
   <ul>
-   <li>Количество секунд перезагрузки таблицы, если {{htmlattrxref("content", "meta")}} атрибут содержит только положительный целочисленный номер;</li>
-   <li>Время, в количестве секунд, за которое страница должна быть перенаправлена ​​на другую, если {{htmlattrxref("content", "meta")}} атрибут содержит положительный целочисленный номер, заканчивающийся строкой '<code>;url=</code>' и корректный URL.</li>
+   <li>Количество секунд перезагрузки таблицы, если {{htmlattrxref("content", "meta")}} атрибут содержит только целое положительное число;</li>
+   <li>Время, в количестве секунд, за которое страница должна быть перенаправлена ​​на другую, если {{htmlattrxref("content", "meta")}} атрибут содержит целое положительное число, заканчивающийся строкой '<code>;url=</code>' и корректный URL.</li>
   </ul>
   </dd>
   <dt><code>"set-cookie"</code> {{obsolete_inline}}</dt>
@@ -270,12 +270,12 @@ translation_of: Web/HTML/Element/meta
     <tbody>
      <tr>
       <td><code>width</code></td>
-      <td>положительный целочисленный номер или литерал <code>device-width</code></td>
+      <td>целое положительное число или литерал <code>device-width</code></td>
       <td>Определяет ширину области просмотра в пикселях</td>
      </tr>
      <tr>
       <td><code>height</code></td>
-      <td>положительный целочисленный номер или литерал <code>device-height</code></td>
+      <td>целое положительное число или литерал <code>device-height</code></td>
       <td>Определяет высоту области просмотра в пикселях</td>
      </tr>
      <tr>
@@ -364,43 +364,11 @@ translation_of: Web/HTML/Element/meta
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-meta', '&lt;meta name="referrer"&gt;')}}</td>
-   <td>{{Spec2('Referrer Policy')}}</td>
-   <td>Определяет значения и семантику <code>&lt;meta name="referrer"&gt;</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-meta-element', '&lt;meta&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>
-    <p>Добавлен <code>itemprop</code> атрибут</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'document-metadata.html#the-meta-element', '&lt;meta&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Добавлен <code>charset</code> атрибут</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/global.html#h-7.4.4.2', '&lt;meta&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("html.elements.meta")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

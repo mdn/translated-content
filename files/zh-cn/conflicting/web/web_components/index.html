@@ -1,0 +1,60 @@
+---
+title: HTML 导入（HTML Imports）
+slug: conflicting/Web/Web_Components
+tags:
+  - HTML Imports
+  - Web Components
+translation_of: Web/Web_Components/HTML_Imports
+original_slug: Web/Web_Components/HTML_Imports
+---
+<p>{{DefaultAPISidebar("Web Components")}}</p>
+
+<div class="blockIndicator obsolete">
+<p><strong>在 Google Chrome 73 后已过时</strong><br>
+ 此功能已过时。虽然它可能仍然适用于某些浏览器，但不鼓励使用它，因为它随时可能被删除。尽量避免使用它。</p>
+</div>
+
+<div class="warning">
+<p>Firefox 将不会以当前形式发布HTML导入特性，<font><font>有关</font><font> 更多信息，</font><font>请参阅此</font></font><a href="https://hacks.mozilla.org/2015/06/the-state-of-web-components/" rel="noopener"><font><font>状态更新</font></font></a>。<font><font>在对标准达成共识或制定替代机制之前，您可以使用Google等的polyfill </font></font><code><a href="https://github.com/webcomponents/webcomponentsjs" rel="noopener">webcomponents.js</a></code><font><font>。</font></font> </p>
+</div>
+
+<p><strong>HTML Imports </strong>旨在成为 <a href="/zh-CN/docs/Web/Web_Components">Web Components</a> 的打包机制，但也可以单独使用 HTML Imports。</p>
+
+<div>可以在HTML文档中使用<code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> 标记导入HTML文件，如下所示：</div>
+
+<div> </div>
+
+<pre>&lt;link rel="import" href="myfile.html"&gt;</pre>
+
+<p><span style="line-height: 1.5;">链接类型 </span><code style="font-style: normal; line-height: 1.5;">import</code><span style="line-height: 1.5;"> 是新加入的。</span></p>
+
+<h2 id="规范">规范</h2>
+
+<table class="spec-table standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">评论</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML Imports', "", "")}}</td>
+   <td>{{Spec2('HTML Imports')}}</td>
+   <td>初步定义</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性"><font><font>浏览器兼容性</font></font></h2>
+
+<p>{{Compat("html.elements.link.rel.import")}}</p>
+
+<h2 id="阅读更多"><strong>阅读更多:</strong></h2>
+
+<ul>
+ <li>https://developer.mozilla.org/zh-CN/docs/Web/Web_Components</li>
+ <li>https://developer.mozilla.org/zh-CN/docs/Web/Web_Components/Custom_Elements</li>
+ <li>https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/template</li>
+ <li>https://developer.mozilla.org/zh-CN/docs/Web/Web_Components/Shadow_DOM<br>
+   </li>
+</ul>

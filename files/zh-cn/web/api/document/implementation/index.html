@@ -3,14 +3,19 @@ title: document.implementation
 slug: Web/API/Document/implementation
 translation_of: Web/API/Document/implementation
 ---
-<div>
- {{ApiRef}}</div>
+<div>{{ApiRef}}</div>
+
 <h2 id="概要">概要</h2>
+
 <p>返回一个和当前文档相关联的{{domxref("DOMImplementation")}}对象。</p>
+
 <h2 id="语法">语法</h2>
+
 <pre class="syntaxbox"><var>DOMImpObj</var> = document.implementation;
 </pre>
+
 <h2 id="示例">示例</h2>
+
 <pre class="brush: js">var modName = "HTML";
 var modVer = "2.0";
 var conformTest = document.implementation.hasFeature( modName, modVer );
@@ -19,11 +24,15 @@ alert( "DOM " + modName + " " + modVer + " supported?: " + conformTest );
 
 // alerts with: "DOM HTML 2.0 supported?: true" if DOM Level 2 HTML module is supported.
 </pre>
-<p>可以在<a href="http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2" style="line-height: 1.5;">一致性章节</a>中查看可用的一系列DOM2级模型名称<span style="line-height: 1.5;">（例如：Core, HTML, XML等等）。</span></p>
+
+<p>可以在<a href="http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2">一致性章节</a>中查看可用的一系列 DOM2 级模型名称（例如：Core, HTML, XML 等等）。</p>
+
 <h2 id="说明">说明</h2>
-<p>W3C的DOM1级建议值规定了一种检测浏览器对某个DOM模型是否支持的方法——<code>hasFeature方法</code>（请参考上边的例子以及这篇文章 <a href="http://www.w3.org/2003/02/06-dom-support.html">What does your user agent claim to support?</a>）。如果它可用的话，那么<code>DOMImplementation接口的其他方法就可以为操作文档以外的内容提供一些服务了。例如，</code><code>DOMImplementation接口包含一个</code><code>createDocumentType方法，它可以为实例管理的文档创建对应的DTD文档定义。</code></p>
+
+<p>W3C 的 DOM1 级建议值规定了一种检测浏览器对某个DOM模型是否支持的方法——<code>hasFeature</code> 方法（请参考上边的例子以及这篇文章 <a href="http://www.w3.org/2003/02/06-dom-support.html">What does your user agent claim to support?</a>）。如果它可用的话，那么 <code>DOMImplementation</code> 接口的其他方法就可以为操作文档以外的内容提供一些服务了。例如，<code>DOMImplementation</code> 接口包含一个 <code>createDocumentType</code> 方法，它可以为实例管理的文档创建对应的 DTD 文档定义。</p>
+
 <h2 id="方法">方法</h2>
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <th>名称</th>
@@ -57,12 +66,17 @@ alert( "DOM " + modName + " " + modVer + " supported?: " + conformTest );
   </tr>
  </tbody>
 </table>
+
 <h2 id="规范">规范</h2>
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-102161490">DOM2级核心: implementation</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-102161490">DOM3级核心: implementation</a></li>
-</ul>
+
+{{Specifications}}
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+{{Compat}}
+
 <h2 id="Gecko引擎的特别说明">Gecko引擎的特别说明</h2>
+
 <ul>
- <li>从Gecko 19.0 {{geckoRelease("19.0")}}开始{{domxref("DOMImplementation.hasFeature","hasFeature")}}方法总是返回true。</li>
+ <li>从 Gecko 19.0 {{geckoRelease("19.0")}}开始{{domxref("DOMImplementation.hasFeature","hasFeature")}}方法总是返回 true。</li>
 </ul>
