@@ -18221,12 +18221,6 @@
       "Mingun"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/toSource": {
-    "modified": "2019-03-23T23:10:31.696Z",
-    "contributors": [
-      "Mingun"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2019-09-15T17:12:05.770Z",
     "contributors": [
@@ -18330,12 +18324,6 @@
       "AlexChuev",
       "Mingun",
       "Troynov"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Boolean/toSource": {
-    "modified": "2019-03-23T23:08:31.932Z",
-    "contributors": [
-      "Mingun"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
@@ -18680,12 +18668,6 @@
       "Mingun"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Date/toSource": {
-    "modified": "2019-03-23T23:07:30.899Z",
-    "contributors": [
-      "Mingun"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Date/toString": {
     "modified": "2019-03-23T23:07:27.147Z",
     "contributors": [
@@ -18874,12 +18856,6 @@
       "Mingun",
       "teoli",
       "Lord_Howe"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Function/toSource": {
-    "modified": "2019-03-23T23:08:53.546Z",
-    "contributors": [
-      "Mingun"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Function/toString": {
@@ -19624,13 +19600,6 @@
       "Mingun"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Number/toSource": {
-    "modified": "2019-08-25T13:48:33.955Z",
-    "contributors": [
-      "Yialo",
-      "Mingun"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Number/toString": {
     "modified": "2020-12-14T05:17:27.925Z",
     "contributors": [
@@ -19916,13 +19885,6 @@
   "Web/JavaScript/Reference/Global_Objects/Object/toLocaleString": {
     "modified": "2019-09-20T08:30:13.696Z",
     "contributors": [
-      "Mingun"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Object/toSource": {
-    "modified": "2020-10-15T21:30:13.861Z",
-    "contributors": [
-      "boxa6",
       "Mingun"
     ]
   },
@@ -20309,13 +20271,6 @@
       "waterplea",
       "Mingun",
       "InoY"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/toSource": {
-    "modified": "2019-08-27T16:00:03.262Z",
-    "contributors": [
-      "Yialo",
-      "Mingun"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/RegExp/toString": {
@@ -20765,12 +20720,6 @@
   },
   "Web/JavaScript/Reference/Global_Objects/String/toLowerCase": {
     "modified": "2019-03-23T23:06:20.814Z",
-    "contributors": [
-      "Mingun"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/String/toSource": {
-    "modified": "2019-03-23T23:06:17.942Z",
     "contributors": [
       "Mingun"
     ]
@@ -21237,16 +21186,6 @@
     "modified": "2020-03-12T19:40:42.425Z",
     "contributors": [
       "Mishman"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/uneval": {
-    "modified": "2020-10-15T21:32:06.154Z",
-    "contributors": [
-      "boxa6",
-      "teoli",
-      "maxbarbul",
-      "fscholz",
-      "Correcter"
     ]
   },
   "Web/JavaScript/Reference/Iteration_protocols": {
@@ -23865,8 +23804,30 @@
       "uleming"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects": {
+    "modified": "2020-10-15T21:32:06.154Z",
+    "contributors": [
+      "boxa6",
+      "teoli",
+      "maxbarbul",
+      "fscholz",
+      "Correcter"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
+    "modified": "2019-03-23T23:10:31.696Z",
+    "contributors": [
+      "Mingun"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean": {
     "modified": "2019-03-23T23:08:22.785Z",
+    "contributors": [
+      "Mingun"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
+    "modified": "2019-03-23T23:08:31.932Z",
     "contributors": [
       "Mingun"
     ]
@@ -23876,6 +23837,12 @@
     "contributors": [
       "alexbs",
       "deepdarkness",
+      "Mingun"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString": {
+    "modified": "2019-03-23T23:07:30.899Z",
+    "contributors": [
       "Mingun"
     ]
   },
@@ -23907,6 +23874,12 @@
       "teoli",
       "fscholz",
       "Skorney"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString": {
+    "modified": "2019-03-23T23:08:53.546Z",
+    "contributors": [
+      "Mingun"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/GeneratorFunction": {
@@ -23956,6 +23929,13 @@
       "Mingun"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString": {
+    "modified": "2019-08-25T13:48:33.955Z",
+    "contributors": [
+      "Yialo",
+      "Mingun"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Object": {
     "modified": "2020-03-13T11:04:21.413Z",
     "contributors": [
@@ -23964,6 +23944,13 @@
       "Mingun",
       "teoli",
       "kreshikhin"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString": {
+    "modified": "2020-10-15T21:30:13.861Z",
+    "contributors": [
+      "boxa6",
+      "Mingun"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Promise": {
@@ -24000,6 +23987,13 @@
       "Mingun"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString": {
+    "modified": "2019-08-27T16:00:03.262Z",
+    "contributors": [
+      "Yialo",
+      "Mingun"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Set": {
     "modified": "2020-10-15T22:08:32.198Z",
     "contributors": [
@@ -24013,6 +24007,12 @@
     "contributors": [
       "ekirpichyov",
       "opereverzeva"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String/toString": {
+    "modified": "2019-03-23T23:06:17.942Z",
+    "contributors": [
+      "Mingun"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab": {

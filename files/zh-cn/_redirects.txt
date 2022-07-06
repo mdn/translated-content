@@ -175,7 +175,7 @@
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Object	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/lastIndex	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
-/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource
+/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Properties	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Properties/NaN	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Statements	/zh-CN/docs/Web/JavaScript/Reference/Statements
@@ -627,7 +627,7 @@
 /zh-CN/docs/JS-ref/Array/shift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
 /zh-CN/docs/JS-ref/Array/slice	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 /zh-CN/docs/JS-ref/Array/some	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/some
-/zh-CN/docs/JS-ref/Array/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource
+/zh-CN/docs/JS-ref/Array/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 /zh-CN/docs/JS-ref/Array/unshift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /zh-CN/docs/JS-ref/Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /zh-CN/docs/JS-ref/Date	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date
@@ -648,7 +648,7 @@
 /zh-CN/docs/JS-ref/Function/caller	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/caller
 /zh-CN/docs/JS-ref/Function/length	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /zh-CN/docs/JS-ref/Function/name	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/name
-/zh-CN/docs/JS-ref/Function/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource
+/zh-CN/docs/JS-ref/Function/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/JS-ref/Function/toString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/JS-ref/Functions_and_function_scope	/zh-CN/docs/Web/JavaScript/Reference/Functions
 /zh-CN/docs/JS-ref/Functions_and_function_scope/arguments	/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments
@@ -722,7 +722,7 @@
 /zh-CN/docs/JS-ref/Global_Objects/Object/proto	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto
 /zh-CN/docs/JS-ref/Global_Objects/Object/seal	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
 /zh-CN/docs/JS-ref/Global_Objects/Object/setPrototypeOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-/zh-CN/docs/JS-ref/Global_Objects/Object/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
+/zh-CN/docs/JS-ref/Global_Objects/Object/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
 /zh-CN/docs/JS-ref/Global_Objects/Object/toString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /zh-CN/docs/JS-ref/Global_Objects/Object/valueOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
 /zh-CN/docs/JS-ref/Global_Objects/Proxy	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy
@@ -744,7 +744,7 @@
 /zh-CN/docs/JS-ref/RegExp	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /zh-CN/docs/JS-ref/RegExp/exec	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec
 /zh-CN/docs/JS-ref/RegExp/lastIndex	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
-/zh-CN/docs/JS-ref/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource
+/zh-CN/docs/JS-ref/RegExp/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/JS-ref/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /zh-CN/docs/JS-ref/Statements	/zh-CN/docs/Web/JavaScript/Reference/Statements
 /zh-CN/docs/JS-ref/Statements/const	/zh-CN/docs/Web/JavaScript/Reference/Statements/const
@@ -815,7 +815,7 @@
 /zh-CN/docs/JavaScript/Reference/Array/shift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
 /zh-CN/docs/JavaScript/Reference/Array/slice	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 /zh-CN/docs/JavaScript/Reference/Array/some	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/some
-/zh-CN/docs/JavaScript/Reference/Array/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource
+/zh-CN/docs/JavaScript/Reference/Array/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 /zh-CN/docs/JavaScript/Reference/Array/unshift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /zh-CN/docs/JavaScript/Reference/Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /zh-CN/docs/JavaScript/Reference/Date	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date
@@ -836,7 +836,7 @@
 /zh-CN/docs/JavaScript/Reference/Function/caller	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/caller
 /zh-CN/docs/JavaScript/Reference/Function/length	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /zh-CN/docs/JavaScript/Reference/Function/name	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/name
-/zh-CN/docs/JavaScript/Reference/Function/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource
+/zh-CN/docs/JavaScript/Reference/Function/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/JavaScript/Reference/Function/toString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/JavaScript/Reference/Functions_and_function_scope	/zh-CN/docs/Web/JavaScript/Reference/Functions
 /zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments	/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments
@@ -857,7 +857,7 @@
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Array/shift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Array/slice	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Array/some	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/some
-/zh-CN/docs/JavaScript/Reference/Global_Objects/Array/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource
+/zh-CN/docs/JavaScript/Reference/Global_Objects/Array/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Array/unshift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Date	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date
@@ -879,7 +879,7 @@
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Function/caller	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/caller
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Function/length	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Function/name	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/name
-/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource
+/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Function/toString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/JavaScript/Reference/Global_Objects/JSON	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /zh-CN/docs/JavaScript/Reference/Global_Objects/JSON/stringify	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
@@ -947,14 +947,14 @@
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Object/proto	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Object/seal	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Object/setPrototypeOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
+/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Object/toString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Object/valueOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Proxy	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy
 /zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/exec	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec
 /zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/lastIndex	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
-/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource
+/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Set	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set
 /zh-CN/docs/JavaScript/Reference/Global_Objects/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
 /zh-CN/docs/JavaScript/Reference/Global_Objects/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
@@ -989,7 +989,7 @@
 /zh-CN/docs/JavaScript/Reference/RegExp	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /zh-CN/docs/JavaScript/Reference/RegExp/exec	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec
 /zh-CN/docs/JavaScript/Reference/RegExp/lastIndex	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
-/zh-CN/docs/JavaScript/Reference/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource
+/zh-CN/docs/JavaScript/Reference/RegExp/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/JavaScript/Reference/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /zh-CN/docs/JavaScript/Reference/Statements	/zh-CN/docs/Web/JavaScript/Reference/Statements
 /zh-CN/docs/JavaScript/Reference/Statements/const	/zh-CN/docs/Web/JavaScript/Reference/Statements/const
@@ -2208,6 +2208,7 @@
 /zh-CN/docs/Web/JavaScript/Guide/Inheritance_Revisited	/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain	/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-CN/docs/Web/JavaScript/Guide/Predefined_Core_Objects	/zh-CN/docs/Web/JavaScript/Guide
+/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges	/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
 /zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/量词	/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers
 /zh-CN/docs/Web/JavaScript/Guide/Sameness	/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /zh-CN/docs/Web/JavaScript/Guide/Statements	/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
@@ -2232,7 +2233,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Array/shift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
 /zh-CN/docs/Web/JavaScript/Reference/Array/slice	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 /zh-CN/docs/Web/JavaScript/Reference/Array/some	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/some
-/zh-CN/docs/Web/JavaScript/Reference/Array/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource
+/zh-CN/docs/Web/JavaScript/Reference/Array/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 /zh-CN/docs/Web/JavaScript/Reference/Array/unshift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /zh-CN/docs/Web/JavaScript/Reference/Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /zh-CN/docs/Web/JavaScript/Reference/Classes/Class_elements	/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields
@@ -2259,7 +2260,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Function/caller	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/caller
 /zh-CN/docs/Web/JavaScript/Reference/Function/length	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /zh-CN/docs/Web/JavaScript/Reference/Function/name	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/name
-/zh-CN/docs/Web/JavaScript/Reference/Function/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource
+/zh-CN/docs/Web/JavaScript/Reference/Function/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/Web/JavaScript/Reference/Function/toString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope	/zh-CN/docs/Web/JavaScript/Reference/Functions
 /zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/Method_definitions	/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions
@@ -2274,14 +2275,19 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/index	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/of
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/input	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce()用法	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBufferView	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Collator	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DisplayNames	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Locale	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/反双曲余弦值	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/acosh
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/format	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create/About_JavaScript	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
@@ -2306,6 +2312,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/lookupGetter	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions/About_this_Reference	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions/Global_Objects	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/PluralRules	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
@@ -2321,12 +2328,16 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototypeOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_和_Object_方法	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/prototype	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/contains	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null	/zh-CN/docs/Web/JavaScript/Reference/Operators/null
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/uneval	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 /zh-CN/docs/Web/JavaScript/Reference/Methods_Index	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
@@ -2344,7 +2355,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/RegExp	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /zh-CN/docs/Web/JavaScript/Reference/RegExp/exec	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec
 /zh-CN/docs/Web/JavaScript/Reference/RegExp/lastIndex	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
-/zh-CN/docs/Web/JavaScript/Reference/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource
+/zh-CN/docs/Web/JavaScript/Reference/RegExp/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/Web/JavaScript/Reference/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /zh-CN/docs/Web/JavaScript/Reference/Statements/import.meta	/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta
 /zh-CN/docs/Web/JavaScript/Reference/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
