@@ -1,5 +1,5 @@
 ---
-title: Actualizando add-ons para Firefox 9
+title: Actualizar add-ons para Firefox 9
 slug: Mozilla/Firefox/Releases/9/Updating_add-ons
 translation_of: Mozilla/Firefox/Releases/9/Updating_add-ons
 ---
@@ -10,13 +10,13 @@ Firefox 9 no tiene grandes cambios que vayan a resultar en problemas de compatib
 
 ## ¿Es necesario hacer algo?
 
-Si tu complemento se distribuye en [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) (AMO), este ya ha sido verificado por una herramienta automatizada de verificación de compatibilidad. Los complementos que no utilizan APIs que cambiaron en Firefox 8, y no tienen componentes binarios (que [deben volver a compilarse para cada versión mayor de Firefox](/es/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), automáticamente se han actualizado en AMO para indicar que funcionan en Firefox 9.
+Si tu complemento se distribuye en [addons.mozilla.org](https://addons.mozilla.org/es/firefox/) (AMO), este ya ha sido verificado por una herramienta automatizada de verificación de compatibilidad. Los complementos que no utilizan APIs que cambiaron en Firefox 8, y no tienen componentes binarios (que [deben volver a compilarse para cada versión mayor de Firefox](/es/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), automáticamente se han actualizado en AMO para indicar que funcionan en Firefox 9.
 
 Así que puedes empezar visitando AMO para comprobar si tu complemento requiere trabajo.
 
 > **Nota:** Todavía debes testear tu complemento en Firefox 9, incluso si ha sido actualizado automáticamente. Existen casos extremos que pueden no ser automáticamente detectados.
 
-## Los componentes de inicio pueden remover scropt con carga retrasada
+## Los componentes de inicio pueden remover scripts con carga retrasada
 
 Si tu complemento utiliza `nsIChromeFrameMessageManager.loadFrameScript()` con la bandera de carga retrasada establecida, el script se carga en cada frame creado desde ese punto. Esto está bien, expecto que hasta Firefox 9, no hay forma de parar la carga del script, por lo que este seguiría sucediendo incluso después de que tu add-on sea apagado.
 
@@ -40,9 +40,9 @@ browser.messageManager.removeDelayedFrameScript(
 
 Las preferencia `geo.wifi.*` no tendrán valores por defecto, aunque son respetados si los tienen. Si tu código los lee sin tener en cuenta los casos donde estos no existen, vas a necesitar actualizar tu código para tener en cuenta la excepxión que es lanzada cuando no están presentes.
 
-## Camvios en XPConnect
+## Cambios en XPConnect
 
-`nodePrincipal` y `baseURIObject` han sido movidos de `nsDOMClassInfo` a `XrayWrapper`. Esto no debería afectar a demasiados complemento, ya que esto solo sería un problema si estos intentan accedar a esas propiedades en los objetos DOM {{ domxref("Node") }} desde script no privilegiados que han pedido privilegios XPConnect usando `enablePrivilege()`.
+`nodePrincipal` y `baseURIObject` han sido movidos de `nsDOMClassInfo` a `XrayWrapper`. Esto no debería afectar a demasiados complementos, ya que esto solo sería un problema si estos intentan accedar a esas propiedades en los objetos DOM {{ domxref("Node") }} desde scripts no privilegiados que han pedido privilegios XPConnect usando `enablePrivilege()`.
 
 This shouldn't affect many add-ons, since it would only be an issue if they try to access these properties on DOM {{ domxref("Node") }} objects from unprivileged script that have requested XPConnect privileges using `enablePrivilege()`.
 
@@ -62,4 +62,5 @@ Estos cambios son notables, pudiendo afectar a los componentes binarios XPCOM. D
 
 El atributo `pending` ha sido añadido al elemento `tab`. Si este atributo está presente, la pestaña está en el proceso de ser restaurada por el servicio de almacenamiento de sesión. Tú puedes usar esto para dar estilos a la pestaña miestras dura el proceso de restauración. No importa si el usuario ha activado en preferencia la opción "No cargar las pestañas hasta que sean seleccionadas", el atributo `pending` se establece en las pestañas hasta que se cargan.
 
-Similarmente, las pestañas también ahora tienen un atributo `unread`. Esta propiedad, si esta presente, indica que la pestanã ha cambiado desde el último momento en que estuvo activa. Tú puedes usarlo para dar diferentes estilos a las pestañas cuando hayan cambiado desde la última vez que el usuario las abrió. Este atributo también está presente en las pestañas que no han sido vistas durante la sesión actual.
+Similarmente, las pestañas también ahora tienen un atributo `unread`. Esta propiedad, si esta presente, indica que la pestaña ha cambiado desde el último momento en que estuvo activa. Tú puedes usarlo para dar diferentes estilos a las pestañas cuando hayan cambiado desde la última vez que el usuario las abrió. Este atributo también está presente en las pestañas que no han sido vistas durante la sesión actual.
+
