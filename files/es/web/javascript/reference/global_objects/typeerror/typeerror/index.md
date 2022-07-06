@@ -16,10 +16,10 @@ new TypeError(message, fileName)
 new TypeError(message, fileName, lineNumber)
 ```
 
-### Parameters
+### Parametros
 
 - `message` {{optional_inline}}
-  - : Descripción del error humanamente legible
+  - : Descripción del error humanamente legible.
 - `options` {{optional_inline}}
   - : Un objeto con las siguientes propiedades:
     - `cause` {{optional_inline}}
