@@ -321,51 +321,8 @@ console.log(mistakes);
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#interface-node", "Node")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>增加了以下方法：<code>getRootNode()</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#interface-node", "Node")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td>移除了以下属性：<code>attributes</code>, <code>namespaceURI</code>, <code>prefix</code>, 和 <code>localName</code>.<br>
-    移除了以下方法：<code>isSupported()</code>, <code>hasAttributes()</code>, <code>getFeature()</code>, <code>setUserData()</code>, and <code>getUserData()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Core", "core.html#ID-1950641247", "Node")}}</td>
-   <td>{{Spec2("DOM3 Core")}}</td>
-   <td><code>insertBefore()</code>, <code>replaceChild()</code>, <code>removeChild()</code>, 和 <code>appendChild()</code> 方法在{{DOMxRef("Document")}} 上调用时遇到特定错误时会抛出一个新的异常 (<code>NOT_SUPPORTED_ERR</code>)。<br>
-    <code>normalize()</code> 方法已被修改，使得当设定特定的 {{DOMxRef("DOMConfiguration")}}  属性时， {{DOMxRef("Text")}} 节点也能被正确整理。<br>
-    添加以下方法：<code>compareDocumentPosition()</code>, <code>isSameNode()</code>, <code>lookupPrefix()</code>, <code>isDefaultNamespace()</code>, <code>lookupNamespaceURI()</code>, <code>isEqualNode()</code>, <code>getFeature()</code>, <code>setUserData()</code>, and <code>getUserData().</code><br>
-    添加以下属性：<code>baseURI</code> 和 <code>textContent</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Core", "core.html#ID-1950641247", "Node")}}</td>
-   <td>{{Spec2("DOM2 Core")}}</td>
-   <td>修改 <code>ownerDocument</code> 属性，当访问 {{DOMxRef("DocumentFragment")}} 子节点的 <code>ownerDocument</code> 属性也会返回 null。<br>
-    添加下列属性：<code>namespaceURI</code>, <code>prefix</code>, 和 <code>localName</code>.<br>
-    添加下列方法：<code>normalize()</code>, <code>isSupported()</code> 和 <code>hasAttributes()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM1", "level-one-core.html#ID-1950641247", "Node")}}</td>
-   <td>{{Spec2("DOM1")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-
-
-<p>{{Compat("api.Node")}}</p>
+<p>{{Compat}}</p>

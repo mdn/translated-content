@@ -702,13 +702,13 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/some	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/some
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/sort	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/splice	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
-/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource
+/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/unshift	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Boolean	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Boolean/constructor	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Boolean/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
-/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Boolean/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource
+/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Boolean/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Boolean/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Boolean/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Date	/ja/docs/Web/JavaScript/Reference/Global_Objects/Date
@@ -781,7 +781,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Number/toExponential	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Number/toFixed	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Number/toPrecision	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision
-/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Number/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource
+/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Number/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Number/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Number/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/valueOf
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Object	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object
@@ -792,7 +792,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Object/propertyIsEnumerable	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Object/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Object/toLocaleString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
-/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Object/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
+/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Object/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Object/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Object/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Promise	/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise
@@ -811,7 +811,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/source	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/source
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/test	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
-/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource
+/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String	/ja/docs/Web/JavaScript/Reference/Global_Objects/String
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
@@ -849,7 +849,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/substring	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/substring
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/sup	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/sup
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/toLowerCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toSource
+/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/toUpperCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
@@ -861,7 +861,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/URIError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/URIError
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/null	/ja/docs/Web/JavaScript/Reference/Operators/null
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/parseInt	/ja/docs/Web/JavaScript/Reference/Global_Objects/parseInt
-/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/uneval	/ja/docs/Web/JavaScript/Reference/Global_Objects/uneval
+/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/uneval	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Properties	/ja/docs/Web/JavaScript/Reference/Global_Objects
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Properties/Infinity	/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Properties/NaN	/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN
@@ -943,13 +943,13 @@
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:some	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/some
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:sort	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:splice	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
-/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource
+/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:unshift	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Boolean	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Boolean:constructor	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Boolean:prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
-/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Boolean:toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource
+/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Boolean:toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Boolean:toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Boolean:valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Date	/ja/docs/Web/JavaScript/Reference/Global_Objects/Date
@@ -1002,7 +1002,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Number:toExponential	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Number:toFixed	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Number:toPrecision	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision
-/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Number:toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource
+/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Number:toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Number:toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Number:valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/valueOf
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Object	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object
@@ -1012,7 +1012,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Object:propertyIsEnumerable	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Object:prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Object:toLocaleString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
-/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Object:toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
+/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Object:toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Object:toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Object:valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:RegExp	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp
@@ -1025,7 +1025,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:RegExp:prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:RegExp:source	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/source
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:RegExp:test	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
-/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:RegExp:toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource
+/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:RegExp:toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:RegExp:toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:String	/ja/docs/Web/JavaScript/Reference/Global_Objects/String
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:String:anchor	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
@@ -1058,7 +1058,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:String:substring	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/substring
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:String:sup	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/sup
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:String:toLowerCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:String:toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toSource
+/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:String:toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:String:toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:String:toUpperCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:String:valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
@@ -2265,7 +2265,7 @@
 /ja/docs/JavaScript/Reference/Global_Objects/Array/sort-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 /ja/docs/JavaScript/Reference/Global_Objects/Array/splice	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 /ja/docs/JavaScript/Reference/Global_Objects/Array/splice-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
-/ja/docs/JavaScript/Reference/Global_Objects/Array/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource
+/ja/docs/JavaScript/Reference/Global_Objects/Array/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 /ja/docs/JavaScript/Reference/Global_Objects/Array/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /ja/docs/JavaScript/Reference/Global_Objects/Array/toString-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /ja/docs/JavaScript/Reference/Global_Objects/Array/unshift	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
@@ -2273,9 +2273,9 @@
 /ja/docs/JavaScript/Reference/Global_Objects/Boolean/constructor	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/JavaScript/Reference/Global_Objects/Boolean/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/JavaScript/Reference/Global_Objects/Boolean/prototype-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
-/ja/docs/JavaScript/Reference/Global_Objects/Boolean/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource
-/ja/docs/JavaScript/Reference/Global_Objects/Boolean/toSource-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource
-/ja/docs/JavaScript/Reference/Global_Objects/Boolean/toSource-redirect-2	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource
+/ja/docs/JavaScript/Reference/Global_Objects/Boolean/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
+/ja/docs/JavaScript/Reference/Global_Objects/Boolean/toSource-redirect-1	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
+/ja/docs/JavaScript/Reference/Global_Objects/Boolean/toSource-redirect-2	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /ja/docs/JavaScript/Reference/Global_Objects/Boolean/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /ja/docs/JavaScript/Reference/Global_Objects/Boolean/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 /ja/docs/JavaScript/Reference/Global_Objects/Date	/ja/docs/Web/JavaScript/Reference/Global_Objects/Date
@@ -2330,7 +2330,7 @@
 /ja/docs/JavaScript/Reference/Global_Objects/Function/name-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/name
 /ja/docs/JavaScript/Reference/Global_Objects/Function/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Function
 /ja/docs/JavaScript/Reference/Global_Objects/Function/prototype-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Function
-/ja/docs/JavaScript/Reference/Global_Objects/Function/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource
+/ja/docs/JavaScript/Reference/Global_Objects/Function/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
 /ja/docs/JavaScript/Reference/Global_Objects/Function/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /ja/docs/JavaScript/Reference/Global_Objects/Function/toString-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /ja/docs/JavaScript/Reference/Global_Objects/Infinity	/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity
@@ -2402,7 +2402,7 @@
 /ja/docs/JavaScript/Reference/Global_Objects/Number/toExponential	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential
 /ja/docs/JavaScript/Reference/Global_Objects/Number/toFixed	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 /ja/docs/JavaScript/Reference/Global_Objects/Number/toPrecision	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision
-/ja/docs/JavaScript/Reference/Global_Objects/Number/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource
+/ja/docs/JavaScript/Reference/Global_Objects/Number/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString
 /ja/docs/JavaScript/Reference/Global_Objects/Number/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
 /ja/docs/JavaScript/Reference/Global_Objects/Number/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/valueOf
 /ja/docs/JavaScript/Reference/Global_Objects/Object	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object
@@ -2428,8 +2428,8 @@
 /ja/docs/JavaScript/Reference/Global_Objects/Object/seal	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
 /ja/docs/JavaScript/Reference/Global_Objects/Object/seal-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
 /ja/docs/JavaScript/Reference/Global_Objects/Object/toLocaleString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
-/ja/docs/JavaScript/Reference/Global_Objects/Object/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
-/ja/docs/JavaScript/Reference/Global_Objects/Object/toSource-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
+/ja/docs/JavaScript/Reference/Global_Objects/Object/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
+/ja/docs/JavaScript/Reference/Global_Objects/Object/toSource-redirect-1	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
 /ja/docs/JavaScript/Reference/Global_Objects/Object/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /ja/docs/JavaScript/Reference/Global_Objects/Object/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
 /ja/docs/JavaScript/Reference/Global_Objects/Proxy	/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy
@@ -2448,7 +2448,7 @@
 /ja/docs/JavaScript/Reference/Global_Objects/RegExp/prototype-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /ja/docs/JavaScript/Reference/Global_Objects/RegExp/source	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/source
 /ja/docs/JavaScript/Reference/Global_Objects/RegExp/test	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
-/ja/docs/JavaScript/Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource
+/ja/docs/JavaScript/Reference/Global_Objects/RegExp/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/JavaScript/Reference/Global_Objects/RegExp/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/JavaScript/Reference/Global_Objects/String	/ja/docs/Web/JavaScript/Reference/Global_Objects/String
 /ja/docs/JavaScript/Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
@@ -2501,7 +2501,7 @@
 /ja/docs/JavaScript/Reference/Global_Objects/String/substring-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/substring
 /ja/docs/JavaScript/Reference/Global_Objects/String/sup	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/sup
 /ja/docs/JavaScript/Reference/Global_Objects/String/toLowerCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-/ja/docs/JavaScript/Reference/Global_Objects/String/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toSource
+/ja/docs/JavaScript/Reference/Global_Objects/String/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/JavaScript/Reference/Global_Objects/String/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/JavaScript/Reference/Global_Objects/String/toUpperCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 /ja/docs/JavaScript/Reference/Global_Objects/String/trim-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
@@ -4371,6 +4371,7 @@
 /ja/docs/Web/JavaScript/Guide/Predefined_Functions/escape_and_unescape_Functions	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions/escape_and_unescape_Functions
 /ja/docs/Web/JavaScript/Guide/Predefined_Functions/eval_Function	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions/eval_Function
 /ja/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries	/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions
+/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges	/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
 /ja/docs/Web/JavaScript/Guide/Statements	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /ja/docs/Web/JavaScript/Guide/The_Employee_Example	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example
 /ja/docs/Web/JavaScript/Guide/The_Employee_Example/Creating_the_Hierarchy	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example/Creating_the_Hierarchy
@@ -4415,6 +4416,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/index	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/input	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype	/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBufferView_temp	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer
@@ -4422,6 +4424,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wake	/ja/docs/Web/JavaScript/Reference/Global_Objects/Atomics/notify
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/constructor	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Collator	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Collator/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
@@ -4431,6 +4434,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/DataView_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/DataView
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Date/constructor	/ja/docs/Web/JavaScript/Reference/Global_Objects/Date
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Date
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 /ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/format	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
@@ -4446,6 +4450,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Float32Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Float32Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Float64Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Float64Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Function
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Int16Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Int16Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Int32Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Int32Array
@@ -4476,6 +4481,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Locale/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Number/constructor	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /ja/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/format	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 /ja/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/formatToParts	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
@@ -4485,6 +4491,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__proto__	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Object/コンストラクタ	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor
 /ja/docs/Web/JavaScript/Reference/Global_Objects/PluralRules	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise
@@ -4506,13 +4513,16 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/constructor	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Set/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Set
 /ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 /ja/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ja/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /ja/docs/Web/JavaScript/Reference/Global_Objects/String/constructor	/ja/docs/Web/JavaScript/Reference/Global_Objects/String
 /ja/docs/Web/JavaScript/Reference/Global_Objects/String/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/String
+/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
 /ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError
 /ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
@@ -4527,6 +4537,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 /ja/docs/Web/JavaScript/Reference/Global_Objects/null	/ja/docs/Web/JavaScript/Reference/Operators/null
+/ja/docs/Web/JavaScript/Reference/Global_Objects/uneval	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects
 /ja/docs/Web/JavaScript/Reference/Global_Properties	/ja/docs/Web/JavaScript/Reference/Global_Objects
 /ja/docs/Web/JavaScript/Reference/Global_Properties/Infinity	/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 /ja/docs/Web/JavaScript/Reference/Global_Properties/NaN	/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN
@@ -4955,13 +4966,13 @@
 /ja/docs/dummySlug/Reference/Global_Objects/Array/some	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/some
 /ja/docs/dummySlug/Reference/Global_Objects/Array/sort	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 /ja/docs/dummySlug/Reference/Global_Objects/Array/splice	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
-/ja/docs/dummySlug/Reference/Global_Objects/Array/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource
+/ja/docs/dummySlug/Reference/Global_Objects/Array/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 /ja/docs/dummySlug/Reference/Global_Objects/Array/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /ja/docs/dummySlug/Reference/Global_Objects/Array/unshift	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /ja/docs/dummySlug/Reference/Global_Objects/Boolean	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/dummySlug/Reference/Global_Objects/Boolean/constructor	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/dummySlug/Reference/Global_Objects/Boolean/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
-/ja/docs/dummySlug/Reference/Global_Objects/Boolean/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource
+/ja/docs/dummySlug/Reference/Global_Objects/Boolean/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /ja/docs/dummySlug/Reference/Global_Objects/Boolean/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /ja/docs/dummySlug/Reference/Global_Objects/Boolean/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 /ja/docs/dummySlug/Reference/Global_Objects/Date	/ja/docs/Web/JavaScript/Reference/Global_Objects/Date
@@ -5028,7 +5039,7 @@
 /ja/docs/dummySlug/Reference/Global_Objects/Number/toExponential	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential
 /ja/docs/dummySlug/Reference/Global_Objects/Number/toFixed	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 /ja/docs/dummySlug/Reference/Global_Objects/Number/toPrecision	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision
-/ja/docs/dummySlug/Reference/Global_Objects/Number/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource
+/ja/docs/dummySlug/Reference/Global_Objects/Number/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString
 /ja/docs/dummySlug/Reference/Global_Objects/Number/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
 /ja/docs/dummySlug/Reference/Global_Objects/Number/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/valueOf
 /ja/docs/dummySlug/Reference/Global_Objects/Object	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object
@@ -5047,7 +5058,7 @@
 /ja/docs/dummySlug/Reference/Global_Objects/Object/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object
 /ja/docs/dummySlug/Reference/Global_Objects/Object/seal	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
 /ja/docs/dummySlug/Reference/Global_Objects/Object/toLocaleString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
-/ja/docs/dummySlug/Reference/Global_Objects/Object/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
+/ja/docs/dummySlug/Reference/Global_Objects/Object/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
 /ja/docs/dummySlug/Reference/Global_Objects/Object/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /ja/docs/dummySlug/Reference/Global_Objects/Object/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
 /ja/docs/dummySlug/Reference/Global_Objects/RangeError	/ja/docs/Web/JavaScript/Reference/Global_Objects/RangeError
@@ -5064,7 +5075,7 @@
 /ja/docs/dummySlug/Reference/Global_Objects/RegExp/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /ja/docs/dummySlug/Reference/Global_Objects/RegExp/source	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/source
 /ja/docs/dummySlug/Reference/Global_Objects/RegExp/test	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
-/ja/docs/dummySlug/Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource
+/ja/docs/dummySlug/Reference/Global_Objects/RegExp/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/dummySlug/Reference/Global_Objects/RegExp/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/dummySlug/Reference/Global_Objects/String	/ja/docs/Web/JavaScript/Reference/Global_Objects/String
 /ja/docs/dummySlug/Reference/Global_Objects/String/TrimLeft	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
@@ -5099,7 +5110,7 @@
 /ja/docs/dummySlug/Reference/Global_Objects/String/substring	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/substring
 /ja/docs/dummySlug/Reference/Global_Objects/String/sup	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/sup
 /ja/docs/dummySlug/Reference/Global_Objects/String/toLowerCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-/ja/docs/dummySlug/Reference/Global_Objects/String/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toSource
+/ja/docs/dummySlug/Reference/Global_Objects/String/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/dummySlug/Reference/Global_Objects/String/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/dummySlug/Reference/Global_Objects/String/toUpperCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 /ja/docs/dummySlug/Reference/Global_Objects/String/trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
@@ -5193,7 +5204,7 @@
 /ja/docs/reftest_opportunities_files	/ja/docs/orphaned/reftest_opportunities_files
 /ja/docs/slice	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/slice
 /ja/docs/title	/ja/docs/Web/HTML/Element/title
-/ja/docs/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
+/ja/docs/toSource	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
 /ja/docs/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /ja/docs/width	/ja/docs/Web/CSS/width
 /ja/docs/window.clearInterval	/ja/docs/Web/API/clearInterval

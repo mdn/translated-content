@@ -1,0 +1,56 @@
+---
+title: Symbol.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Symbol/toString
+tags:
+  - JavaScript
+  - Method
+  - Obsolete
+  - Prototype
+  - Symbol
+translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/toSource
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p><strong><code>toSource()</code></strong> メソッドは、そのオブジェクトのソースコードを表す文字列を返します。</p>
+
+<p>このメソッドは、通常 JavaScript から内部的に呼び出されます。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox notranslate"><var>Symbol</var>.toSource()
+
+var sym = Symbol()
+sym.toSource()</pre>
+
+<h3 id="Return_value" name="Return_value">返値</h3>
+
+<p>そのオブジェクトのソースコードを表す文字列です。</p>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<h3 id="Native_function" name="Native_function">ネイティブ関数</h3>
+
+<p>組込みの <code>Symbol</code> オブジェクトでは、 <code>toSource</code> はソースコードが使用できないことを表す以下の文字列を返します。</p>
+
+<pre class="brush:js notranslate">"function Symbol() {
+   [ネイティブコード]
+}"</pre>
+
+<p><code>Symbol</code> のインスタンスでは、 <code>toSource</code> はソースコードを表す文字列を返します。</p>
+
+<pre class="brush: js notranslate">"Symbol()"</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<p>どの標準にも含まれていません。</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("javascript.builtins.Symbol.toSource")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{jsxref("Object.prototype.toSource()")}}</li>
+</ul>
