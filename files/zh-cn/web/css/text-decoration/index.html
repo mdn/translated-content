@@ -7,7 +7,7 @@ translation_of: Web/CSS/text-decoration
 ---
 <div>{{ CSSRef() }}</div>
 
-<h2 id="Summary" name="Summary">简介</h2>
+<h2 id="Summary">简介</h2>
 
 <p>{{EmbedInteractiveExample("pages/css/text-decoration.html")}}</p>
 
@@ -15,7 +15,7 @@ translation_of: Web/CSS/text-decoration
 
 <p>文本修饰属性会延伸到子元素。这意味着如果祖先元素指定了文本修饰属性，子元素则不能将其删除。例如，在如下标记中<code> &lt;p&gt;This text has &lt;em&gt;some emphasized words&lt;/em&gt; in it.&lt;/p&gt;，应用样式</code><code>p { text-decoration: underline }</code> 会对整个段落添加下划线，此时再添加样式 <code>em { text-decoration: none }</code> 则不会引起任何改变，整个段落仍然有下划线修饰。然而，新加样式 <code>em { text-decoration: overline }</code> 则会在&lt;em&gt;标记的文字上再添加上这种 overline 样式。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <p>text-decoration 属性是一种简写属性，并且可以使用普通属性三个值中的任何一个。普通属性如下：{{cssxref("text-decoration-line")}}，{{cssxref("text-decoration-color")}}和{{cssxref("text-decoration-style")}}</p>
 
@@ -78,7 +78,7 @@ translation_of: Web/CSS/text-decoration
 
 <p>{{EmbedLiveSample('示例','auto','280')}}</p>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="Specifications">规范</h2>
 
 <table class="standard-table" style="height: 225px; width: 1157px;">
  <thead>
@@ -116,7 +116,7 @@ translation_of: Web/CSS/text-decoration
 
 <p>{{cssinfo}}</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <p>{{Compat("css.properties.text-decoration")}}</p>
 

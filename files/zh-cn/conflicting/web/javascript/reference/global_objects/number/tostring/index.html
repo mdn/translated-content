@@ -1,0 +1,38 @@
+---
+title: Number.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString
+translation_of: Web/JavaScript/Reference/Global_Objects/Number/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Number/toSource
+---
+<div>
+ {{JSRef("Global_Objects", "Number")}} {{ Non-standard_header() }}</div>
+<h2 id="Summary">概述</h2>
+<p><code><strong>toSource()</strong></code> 方法返回该对象源码的字符串表示。</p>
+<h2 id="Syntax">语法</h2>
+<pre class="syntaxbox">numObj.toSource();
+Number.toSource();
+</pre>
+<h3 id="Parameters">参数</h3>
+<p>无</p>
+<h2 id="Description">描述</h2>
+<p><code>toSource()</code> 方法返回下列值：</p>
+
+<ul>
+ <li>对于内置 <code>Number</code> 对象， <code>toSource()</code> 返回下面字符串，用来指明源码是不可见的。</li>
+</ul>
+<pre class="eval">function Number() { [native code] }</pre>
+<ul>
+ <li>对于 <code>Number</code> 对象的实例，<code>toSource()</code> 返回一个表示源码的字符串。</li>
+</ul>
+<p>该方法通常被 JavaScript 内部调用，而不是在代码中显示调用。</p>
+<h2 id="规范">规范</h2>
+<p>不是任何标准的一部分。在 JavaScript 1.3 被实现。</p>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+{{Compat}}
+
+<h2 id="See_Also">相关链接</h2>
+<ul>
+ <li>{{jsxref("Object.prototype.toSource()")}}</li>
+</ul>

@@ -134,7 +134,7 @@ console.log(Point.distance(p1, p2)); // 7.0710678118654755</code></pre>
 
 <h3 id="Привязка_this_в_прототипных_и_статических_методах">Привязка <code>this</code> в прототипных и статических методах</h3>
 
-<p>Когда статический или прототипный метод вызывается без привязки к <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">this</span></font> объекта (или когда <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">this</span></font> является типом boolean, string, number, undefined, null), тогда <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">this</span></font> будет иметь значение <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">undefined</span></font> внутри вызываемой функции. Автоупаковка не будет произведена. Поведение будет таким же как если бы мы писали код в нестрогом режиме.</p>
+<p>Когда статический или прототипный метод вызывается без привязки к <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">this</span></font> объекта (или когда <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">this</span></font> является типом boolean, string, number, undefined, null), тогда <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">this</span></font> будет иметь значение <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">undefined</span></font> внутри вызываемой функции. Поведение будет таким же даже без директивы <code>"use strict"</code>, потому что код внутри тела класса всегда выполняется в строгом режиме.</p>
 
 <pre class="brush: js"><code>class Animal {
   speak() {
@@ -160,11 +160,11 @@ eat(); // undefined</code></pre>
 
 Animal.prototype.speak = function(){
   return this;
-}
+};
 
 Animal.eat = function() {
   return this;
-}
+};
 
 let obj = new Animal();
 let speak = obj.speak;

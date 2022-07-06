@@ -10,7 +10,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/利用CSS网格布局实现常用布局
 
 <p>许多网站都是这种布局的变体，有内容、边栏、页眉和页脚。在响应式设计中，您可能希望将布局显示为单个列，在某个断点添加侧栏，然后为更宽的屏幕引入三列布局。</p>
 
-<p><img alt="Image of the three different layouts created by redefining our grid at two breakpoints." src="https://mdn.mozillademos.org/files/14749/11-responsive-areas.png"></p>
+<p><img alt="Image of the three different layouts created by redefining our grid at two breakpoints." src="11-responsive-areas.png"></p>
 
 <p>我将使用我们在向导<a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">网格模板区域</a>中了解到的命名模板区域来创建这个布局。</p>
 
@@ -206,7 +206,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/利用CSS网格布局实现常用布局
 
 <p>我没有设置结束行号，而是选择使用 span 关键字表示这个元素应该跨多少个轨道。我喜欢这种方法，因为在使用多列布局系统时，我们通常根据网格的轨迹数量来考虑块，并根据不同的断点进行调整。要查看块如何与轨道对齐，请使用 <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Inspector</a>. 。它清楚地展示了我们的项目是如何放置的。</p>
 
-<p><img alt="Showing the items placed on the grid with grid tracks highlighted." src="https://mdn.mozillademos.org/files/14753/11-grid-inspector-12col.png"></p>
+<p><img alt="Showing the items placed on the grid with grid tracks highlighted." src="11-grid-inspector-12col.png"></p>
 
 <p>与您以前可能使用过的网格系统上的网格布局的工作方式有一些关键区别。如您所见，我们不需要添加任何标记来创建行，网格系统需要这样做来阻止元素弹出到上面的行中。使用 CSS 网格布局，我们可以将内容放入行中，如果行是空的，则它们不会上升到上面的行中。由于这种严格的列和行布局，我们也可以很容易地在布局中留出空白。我们也不需要特殊的类来拉或推东西，将它们缩进网格。我们需要做的就是指定项目的开始和结束行。</p>
 
@@ -331,7 +331,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/利用CSS网格布局实现常用布局
 
 <p>网格检查器再次帮助我们了解布局是如何形成的。</p>
 
-<p><img alt="Showing the layout with grid tracks highlighted by the grid inspector." src="https://mdn.mozillademos.org/files/14755/11-grid-inspector-12col-layout.png" style="height: 614px; width: 2050px;"></p>
+<p><img alt="Showing the layout with grid tracks highlighted by the grid inspector." src="11-grid-inspector-12col-layout.png"></p>
 
 <p>在创建这个布局时需要注意的一点是，我们不需要在每个断点显式地定位网格上的每个元素。我们能够继承为早期断点设置的位置——这是移动优先”的优势。我们还可以利用网格自动布局。通过保持元素的逻辑顺序，自动布局为我们将项目放到网格上做了很多工作。在本指南的最后一个示例中，我们将创建完全依赖自动布局的布局。</p>
 
@@ -434,7 +434,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/利用CSS网格布局实现常用布局
 
 <p>这一切现在看起来相当完整，然而我们有时拥有这些卡片，其中包含的内容比其他卡片多得多。让它们跨越两条轨道可能很好，这样它们就不会那么高了。我在较大的项目上有一个 wide 类，我添加了一个规则{{cssxref("grid-column-end")}}，其值为 span 2。现在，当 grid 遇到这个项目时，它将为它分配两个轨道。在某些断点处，这意味着我们将在网格中得到一个缺口——在这个缺口中没有空间放置一个双轨项目。</p>
 
-<p><img alt="The layout has gaps as there is not space to layout a two track item." src="https://mdn.mozillademos.org/files/14751/11-grid-auto-flow-sparse.png" style="height: 812px; width: 800px;"></p>
+<p><img alt="The layout has gaps as there is not space to layout a two track item." src="11-grid-auto-flow-sparse.png"></p>
 
 <p>我可以通过设置{{cssxref("grid-auto-flow")}}<code>: dense </code>在网格容器上设置稠密，从而使网格填充这些空白。但是，在这样做时要小心，因为它会使项目偏离其逻辑源顺序。您应该只在项目没有设置顺序时才这样做——并且要注意源文件后面的选项卡顺序的问题，而不是重新排序的显示。</p>
 

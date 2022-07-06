@@ -19,7 +19,7 @@ translation_of: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 
 <p>为了演示 3D 空间化，我们在 <a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a> 指南中的 boombox 演示的基础上创建一个修改版本。参见 <a href="https://mdn.github.io/webaudio-examples/spacialization/">3D spatialization demo live</a> （同时也可以看 <a href="https://github.com/mdn/webaudio-examples/tree/master/spacialization">source code</a>）</p>
 
-<p><img alt="A simple UI with a rotated boombox and controls to move it left and right and in and out, and rotate it." src="https://mdn.mozillademos.org/files/16232/web-audio-spatialization.png"></p>
+<p><img alt="A simple UI with a rotated boombox and controls to move it left and right and in and out, and rotate it." src="web-audio-spatialization.png"></p>
 
 <p>音箱放置于房间中（由浏览器视区边缘定义），在本 demo 中我们可以通过提供的控件移动和旋转它。当我们移动音箱时，它产生的声音会相应的改变，当它在移动到房间的左侧或右侧时声音平移，或当它远离用户时变得安静，或旋转使得扬声器背离它们等。这是通过给 <code>PannerNode</code> 对象实例设置不同的与该运动有关的属性来实现模拟空间化。</p>
 

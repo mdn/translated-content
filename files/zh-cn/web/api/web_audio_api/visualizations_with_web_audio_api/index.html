@@ -127,7 +127,7 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <p>这个演示画出了一个每秒会刷新几次并且看起来还不错的波形图：</p>
 
-<p><img alt="a black oscilloscope line, showing the waveform of an audio signal" src="https://mdn.mozillademos.org/files/7977/wave.png" style="display: block; height: 96px; margin: 0px auto; width: 640px;"></p>
+<p><img alt="a black oscilloscope line, showing the waveform of an audio signal" src="wave.png"></p>
 
 <h2 id="创建一个频率条形图">创建一个频率条形图</h2>
 
@@ -180,7 +180,7 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <p>这些代码会带来下面的效果：</p>
 
-<p><img alt="a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal" src="https://mdn.mozillademos.org/files/7975/bar-graph.png" style="height: 157px; width: 1260px;"></p>
+<p><img alt="a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal" src="bar-graph.png"></p>
 
 <div class="note">
 <p><strong>注意：</strong> 本文中的案例展现了 {{ domxref("AnalyserNode.getByteFrequencyData()") }} 和 {{ domxref("AnalyserNode.getByteTimeDomainData()") }} 的用法。如果想要查看 {{ domxref("AnalyserNode.getFloatFrequencyData()") }} 和 {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} 的用法，请参考我们的 <a href="http://mdn.github.io/voice-change-o-matic-float-data/">Voice-change-O-matic-float-data</a> 演示（也能看到 <a href="https://github.com/mdn/voice-change-o-matic-float-data">源代码</a> ）——它和本文中出现的 <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 功能完全相同，唯一区别就是它使用的是浮点数作数据，而不是本文中的无符号整型数。</p>

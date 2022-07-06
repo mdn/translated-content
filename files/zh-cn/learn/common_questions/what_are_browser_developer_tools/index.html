@@ -19,7 +19,7 @@ original_slug: Learn/Discover_browser_developer_tools
 
 <p>开发者工具内置在您的浏览器的子窗口之中，大概像这样：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9561/Screenshot%20from%202014-11-25%2012:32:57.png" style="display: block; height: 625px; margin: 0px auto; width: 775px;"></p>
+<p><img src="devtools_63_inspector.png"></p>
 
 <p><strong>如何打开它？有三种方式：</strong></p>
 
@@ -33,22 +33,22 @@ original_slug: Learn/Discover_browser_developer_tools
  </li>
  <li><em><strong>菜单栏 </strong></em>
   <ul>
-   <li><strong>Firefox</strong>：菜单 <img src="2014-01-10-13-08-08-f52b8c.png"> <em>➤</em><em> Web 开发者 ➤ </em><em>切换工具箱（译者注：此处修改为最新的 Firefox Quantum），或者工具栏中的 </em><em><img alt="" src="https://mdn.mozillademos.org/files/9639/Screenshot%20from%202014-11-26%2014:24:56.png" style="height: 40px; width: 45px;"></em><em>➤ 切换工具箱 </em></li>
+   <li><strong>Firefox</strong>：菜单 <img src="2014-01-10-13-08-08-f52b8c.png"> ➤ <em>Web 开发者</em> ➤ <em>切换工具箱（译者注：此处修改为最新的 Firefox Quantum），或者工具栏中的</em> ➤ <em>Web 开发者</em> ➤ <em>切换工具箱</em></li>
    <li><strong>Chrome</strong>：菜单 <em>➤ 更多工具 ➤ 开发者工具</em></li>
-   <li><strong>Safari</strong>：<em>Develop ➤ Show Web Inspector</em>。如果你看不到 <em>Develop </em>菜单，去到<em>Safari ➤ Preferences ➤ Advanced</em>，然后点击<em>Show Develop menu in menu bar</em> 复选框。</li>
+   <li><strong>Safari</strong>：<em>Develop ➤ Show Web Inspector</em>。如果你看不到 <em>Develop</em> 菜单，去到<em>Safari ➤ Preferences ➤ Advanced</em>，然后点击<em>Show Develop menu in menu bar</em> 复选框。</li>
    <li><strong>Opera</strong>. <em>Developer ➤ Web Inspector</em></li>
   </ul>
  </li>
  <li><strong>右键菜单</strong>：右键单击网页中的一个项目上（在 Mac 上按 Ctrl 点击），并从弹出的菜单中选择<code>检查元素</code>（译者注：选择<code>检查</code>（Chrome）或<code>查看元素</code>（Firefox））。（这种方法的好处是：该方法直接将你右击的元素的代码突出显示）。</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9605/inspect-element-option.png" style="display: block; height: 264px; margin: 0px auto; width: 350px;"></p>
+<p><img src="inspector_context.png"></p>
 
-<p>检查器（Inspector）：DOM 浏览器和 CSS 编辑器</p>
+<p>检查器（Inspector）：DOM 浏览器和 CSS 编辑器</p>
 
 <p>开发者工具在打开时默认为检查器页面，如下图所示。这个工具可以让你看到你的网页的 HTML 运行时的样子，以及哪些 CSS 规则被应用到了页面上元素。它还允许您立即修改 HTML 和 CSS 并在浏览器中实时观察修改的结果。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9607/inspector.png" style="display: block; height: 727px; margin: 0px auto; width: 800px;"></p>
+<p><img src="inspector_highlighted.png"></p>
 
 <p>如果你看不到调试器，</p>
 
@@ -62,7 +62,7 @@ original_slug: Learn/Discover_browser_developer_tools
 
 <p>首先在 DOM 检查器中右键单击（按 Ctrl 点击）一个 HTML 元素，看上下文菜单。菜单选项各不相同，但主要功能是相同的：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9609/dev-tool-context-menu.png" style="display: block; height: 236px; margin: 0px auto; width: 200px;"></p>
+<p><img src="dom_inspector.png"></p>
 
 <ul>
  <li><strong>删除节点</strong>（或删除元素）：删除当前元素<strong>。</strong></li>
@@ -76,7 +76,7 @@ original_slug: Learn/Discover_browser_developer_tools
 
 <h3 id="探索CSS编辑器">探索 CSS 编辑器</h3>
 
-<p>默认情况下，CSS 编辑器显示当前<img alt="" src="https://mdn.mozillademos.org/files/9631/css-viewer-2.png" style="border: 1px solid black; display: block; height: 218px; margin: 0px auto; width: 326px;">所选元素应用的 CSS 规则：</p>
+<p>默认情况下，CSS 编辑器显示当前<img src="css_inspector.png">所选元素应用的 CSS 规则：</p>
 
 <p>这些功能特别有用：</p>
 
@@ -167,11 +167,11 @@ original_slug: Learn/Discover_browser_developer_tools
  <li><a href="https://developer.apple.com/safari/tools/">Safari Debugger</a></li>
 </ul>
 
-<h2 id="JavaScript控制台">JavaScript 控制台  </h2>
+<h2 id="JavaScript控制台">JavaScript 控制台</h2>
 
 <p>JavaScript 控制台是一个非常有用的工具，用于调试没有按预期运行的 JavaScript。它允许您针对浏览器当前加载的页面运行 JavaScript 行，并报告浏览器尝试执行代码时遇到的错误。要在任何浏览器中访问控制台，只需按控制台按钮。 （在 Internet Explorer 中，按 Ctrl + 2.）这将给你一个如下所示的窗口：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9541/console.png" style="border: 1px solid black; display: block; height: 249px; margin: 0px auto; width: 821px;"></p>
+<p><img src="console_only.png"></p>
 
 <p>要查看会发生什么，请尝试逐个输入以下代码片段（然后按 Enter 键）:</p>
 

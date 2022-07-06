@@ -156,7 +156,7 @@ P
 
 <p>本例以一种简单的方法阐述了事件是如何触发以及在 DOM 中是如何处理的。当这个 HTML 文档 BODY 载入的时候，在 TABLE 的首行注册了一个事件监听器。事件监听器通过执行函数 stopEvent 处理事件，从而改变在该表的底部单元的值。</p>
 
-<p>然而，stopEvent 同时也会调用一个事件对象的方法，<a href="/zh-cn/DOM/event.stopPropagation" title="zh-cn/DOM/event.stopPropagation">event.stopPropagation</a>，其阻止了当前事件在 DOM 的进一步冒泡行为。请注意，表本身有一个 {{domxref("element.onclick","onclick")}} 事件处理程序，当表被点击时其会显示一条消息。但 stopEvent 方法已经阻止了冒泡，所以在表中的数据更新后，该事件事件阶段有效地结束（effectively ended），并且显示一个警告框——证实了有效结束。</p>
+<p>然而，stopEvent 同时也会调用一个事件对象的方法，<a href="/zh-cn/DOM/event.stopPropagation">event.stopPropagation</a>，其阻止了当前事件在 DOM 的进一步冒泡行为。请注意，表本身有一个 {{domxref("element.onclick","onclick")}} 事件处理程序，当表被点击时其会显示一条消息。但 stopEvent 方法已经阻止了冒泡，所以在表中的数据更新后，该事件事件阶段有效地结束（effectively ended），并且显示一个警告框——证实了有效结束。</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -362,14 +362,14 @@ for (var i=0; i&lt;2; i++) {
 <ul>
  <li>表的{{domxref("element.innerHTML","innerHTML")}}属性不应该被用来修改表，虽然你可以用它来写一个完整的表格或单元格的内容。</li>
  <li>如果用 DOM 核心方法{{domxref("document.createElement")}}和{{domxref("Node.appendChild")}}创建表的行和单元，IE 会要求它们附加到一个 tbody 元素，而其它浏览器允许它们附加到一个 table 元素（行会被添加到最后的 tbody 元素）。</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement#Methods">表接口</a>还有一些可用于创建和修改的表的便利方法。</li>
+ <li><a href="/en-US/docs/Web/API/HTMLTableElement#Methods">表接口</a>还有一些可用于创建和修改的表的便利方法。</li>
 </ul>
 
 <h2 id="Subnav">Subnav</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM Reference</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">Introduction to the DOM</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events">Events and the DOM</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples">Examples</a></li>
+ <li><a href="/en-US/docs/Web/API/Document_Object_Model">DOM Reference</a></li>
+ <li><a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">Introduction to the DOM</a></li>
+ <li><a href="/en-US/docs/Web/API/Document_Object_Model/Events">Events and the DOM</a></li>
+ <li><a href="/en-US/docs/Web/API/Document_Object_Model/Examples">Examples</a></li>
 </ul>
