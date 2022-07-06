@@ -37,7 +37,7 @@ Un `TypeError` puede ser lanzado cuando:
 
 ## Ejemplos
 
-### Atrapando un TypeError
+### Capturar un TypeError
 
 ```js
 try {
