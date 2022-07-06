@@ -122,7 +122,6 @@ Les arrêts de couleurs sont positionnés selon une ligne virtuelle qui part du 
 
 Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients) pour plus d'exemples.
 
-
 ## Spécifications
 
 {{Specifications}}

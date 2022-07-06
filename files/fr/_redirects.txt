@@ -4417,8 +4417,8 @@
 /fr/docs/Web/CSS/radial-gradient	/fr/docs/Web/CSS/gradient/radial-gradient
 /fr/docs/Web/CSS/radial-gradient()	/fr/docs/Web/CSS/gradient/radial-gradient
 /fr/docs/Web/CSS/repeat()	/fr/docs/Web/CSS/repeat
-/fr/docs/Web/CSS/repeating-conic-gradient	/fr/docs/orphaned/Web/CSS/repeating-conic-gradient()
-/fr/docs/Web/CSS/repeating-conic-gradient()	/fr/docs/orphaned/Web/CSS/repeating-conic-gradient()
+/fr/docs/Web/CSS/repeating-conic-gradient	/fr/docs/Web/CSS/gradient/repeating-conic-gradient
+/fr/docs/Web/CSS/repeating-conic-gradient()	/fr/docs/Web/CSS/gradient/repeating-conic-gradient
 /fr/docs/Web/CSS/repeating-linear-gradient	/fr/docs/orphaned/Web/CSS/repeating-linear-gradient()
 /fr/docs/Web/CSS/repeating-linear-gradient()	/fr/docs/orphaned/Web/CSS/repeating-linear-gradient()
 /fr/docs/Web/CSS/repeating-radial-gradient	/fr/docs/orphaned/Web/CSS/repeating-radial-gradient()
@@ -6259,6 +6259,7 @@
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/orphaned/Web/CSS/paint()	/fr/docs/Web/CSS/image/paint
 /fr/docs/orphaned/Web/CSS/radial-gradient()	/fr/docs/Web/CSS/gradient/radial-gradient
+/fr/docs/orphaned/Web/CSS/repeating-conic-gradient()	/fr/docs/Web/CSS/gradient/repeating-conic-gradient
 /fr/docs/orphaned/Web/CSS/transform-function/translateX	/fr/docs/Web/CSS/transform-function/translateX
 /fr/docs/orphaned/Web/Guide/Events	/fr/docs/Web/Events
 /fr/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
