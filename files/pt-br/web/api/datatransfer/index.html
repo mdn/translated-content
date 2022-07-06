@@ -140,15 +140,15 @@ translation_of: Web/API/DataTransfer
 <p>These examples dump the list of files dragged into the browser window.</p>
 
 <ul>
- <li>(Firefox only):  <a class="external" href="http://jsfiddle.net/9C2EF/" title="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></li>
- <li>(All browsers):  <a class="external" href="https://jsbin.com/hiqasek/edit?html,js,output" title="https://jsbin.com/hiqasek">https://jsbin.com/hiqasek/</a></li>
+ <li>(Firefox only):  <a class="external" href="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></li>
+ <li>(All browsers):  <a class="external" href="https://jsbin.com/hiqasek/edit?html,js,output">https://jsbin.com/hiqasek/</a></li>
 </ul>
 
 <h3 id="types.28.29" name="types.28.29">types</h3>
 
 <p>Guarda uma lista dos tipos de formato dos dados que estão armazenados para o primeiro ítem, na mesma ordem que os dados foram adicionados. Uma lista vazia será retornada caso nenhum dado tenha sido adicionado.</p>
 
-<p>{{ h3_gecko_minversion("mozCursor", "1.9.1", "mozCursor") }}</p>
+<h3>mozCursor</h3>
 
 <p>O estado do cursor de drag. Isto é usado principalmente para controlar o cursor durante a guia de drag.</p>
 
@@ -334,7 +334,7 @@ translation_of: Web/API/DataTransfer
 
 <p>Data should be added in order of preference, with the most specific format added first and the least specific format added last. If data of the given format already exists, it is replaced in the same position as the old data.</p>
 
-<p>The data should be either a string, a primitive boolean or number type (which will be converted into a string) or an {{ interface("nsISupports") }}.</p>
+<p>The data should be either a string, a primitive boolean or number type (which will be converted into a string) or an <code>nsISupports</code>.</p>
 
 <div class="note"><strong>Note:</strong> This method is Gecko-specific.</div>
 

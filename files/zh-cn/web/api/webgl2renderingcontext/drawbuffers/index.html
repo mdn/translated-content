@@ -5,7 +5,7 @@ translation_of: Web/API/WebGL2RenderingContext/drawBuffers
 ---
 <div>{{APIRef("WebGL")}} {{SeeCompatTable}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a>的 <strong><code>WebGL2RenderingContext.drawBuffers()</code></strong>  方法定义了将写入零散数据（fragment colors）的绘制缓存(draw buffer)。绘制缓存设置了上一次绑定帧缓存状态，如果没有帧缓存可用的话，则用绘制缓存。</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a>的 <strong><code>WebGL2RenderingContext.drawBuffers()</code></strong>  方法定义了将写入零散数据（fragment colors）的绘制缓存 (draw buffer)。绘制缓存设置了上一次绑定帧缓存状态，如果没有帧缓存可用的话，则用绘制缓存。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -16,11 +16,11 @@ translation_of: Web/API/WebGL2RenderingContext/drawBuffers
 
 <dl>
  <dt><code>buffers</code></dt>
- <dd>一个 <span>{{domxref("GLenum")}}的{{jsxref("Array")}}}</span> 对碎片颜色的说明将被写入缓冲区。可能的值有:
+ <dd>一个 {{domxref("GLenum")}}的{{jsxref("Array")}}} 对碎片颜色的说明将被写入缓冲区。可能的值有：
  <ul>
   <li><code>gl.NONE</code>: 碎片着色器的输出没有被写入到任何颜色缓存中。</li>
   <li><code>gl.BACK</code>: 碎片着色器的输出被写入到返回的颜色缓存中。</li>
-  <li><code>gl.COLOR_ATTACHMENT{0-15}</code>: 碎片着色器的输出被写入当前帧缓存的第n个颜色缓存中。Fragment shader output is written in the nth color attachment of the current framebuffer.</li>
+  <li><code>gl.COLOR_ATTACHMENT{0-15}</code>: 碎片着色器的输出被写入当前帧缓存的第 n 个颜色缓存中。Fragment shader output is written in the nth color attachment of the current framebuffer.</li>
  </ul>
  </dd>
 </dl>
@@ -47,7 +47,7 @@ translation_of: Web/API/WebGL2RenderingContext/drawBuffers
   <tr>
    <th scope="col">详情</th>
    <th scope="col">状态</th>
-   <th scope="col">用法(Comment)</th>
+   <th scope="col">用法 (Comment)</th>
   </tr>
   <tr>
    <td>{{SpecName('WebGL2', "#3.7.11", "drawBuffers")}}</td>

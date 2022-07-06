@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 <p><strong>Предупреждение:</strong> хотя на сегодняшний момент большинство браузеров поддерживают свойство <code>Object.prototype.__proto__</code>, его поведение только недавно было стандартизировано в новой спецификации ECMAScript 6. Если вам требуется поддержка браузеров до этой спецификации, рекомендуется использовать вместо него метод {{jsxref("Object.getPrototypeOf()")}}.</p>
 </div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Свойство <code>__proto__</code> объекта {{jsxref("Object.prototype")}} является свойством доступа (комбинацией геттера и сеттера), которое расширяет внутренний прототип <code>[[Prototype]]</code> объекта (являющийся объектом или {{jsxref("Global_Objects/null", "null")}}), через который осуществлялся доступ.</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 
 <p>Свойство <code>__proto__</code> также может использоваться при определении литерала объекта, устанавливая прототип <code>[[Prototype]]</code> объекта при его создании. Этот способ может рассматриваться как альтернатива методу {{jsxref("Object.create()")}}. Смотрите также <a href="/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer">литеральный синтаксис инициализации объекта</a>.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="brush: js">var shape = {}, circle = new Circle();
 
@@ -40,7 +40,7 @@ console.log(shape.__proto__ === circle); // true
 
 <p>Обратите внимание: название свойства состоит из двух подчёркиваний, следующих за ними пяти символов «proto» и следующих за ними ещё двух подчёркиваний.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Геттер свойства <code>__proto__</code> расширяет значение внутреннего прототипа <code>[[Prototype]]</code> объекта. Для объектов, созданных с использованием литеральной формы создания объекта, это значение равно {{jsxref("Object.prototype")}}. Для функций это значение равно {{jsxref("Function.prototype")}}. Для объектов, созданных с использованием формы <code>new fun</code>, где <code>fun</code> является одной из встроенных функций-конструкторов, предоставляемых JavaScript ({{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Boolean", "Boolean")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Number", "Number")}}, {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/String", "String")}} и так далее — включая новые конструкторы, добавленные в процессе развития JavaScript), это значение равно <code>fun.prototype</code>. Для объектов, созданных с использованием формы <code>new fun</code>, где <code>fun</code> является функцией, определённой в скрипте, это значение равно значению <code>fun.prototype</code> во время вычисления <code>new fun</code>. Именно поэтому при присваивании <code>fun.prototype</code> нового значения, ранее созданные экземпляры <code>fun</code> продолжат использовать предыдущее значение в качестве своего прототипа <code>[[Prototype]]</code>, а последующие вызовы <code>new fun</code> будут использовать вновь присвоенное значение в качестве своего прототипа <code>[[Prototype]]</code>.</p>
 
@@ -68,7 +68,7 @@ console.log(protoHidden.__proto__); // 42
 console.log(Object.getPrototypeOf(protoHidden) === Object.prototype); // true
 </pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <p>В следующем примере создаётся новый экземпляр <code>Employee</code>, а затем проверяется, что его свойство <code>__proto__</code> является тем же самым объектом, что и его конструктор <code>prototype</code>.</p>
 
@@ -117,7 +117,7 @@ b.hi();
 
 <p>Если свойство <code>__proto__</code> объекта {{jsxref("Object.prototype")}} не установлено в {{jsxref("Global_Objects/null", "null")}}, или в другой объект, чья цепочка прототипов, в конечном итоге, явно не заканчивается значением {{jsxref("Global_Objects/null", "null")}}, будет выкинуто исключение {{jsxref("Global_Objects/TypeError", "TypeError")}} «циклическое значение __proto__», поскольку цепочка должна заканчиваться {{jsxref("Global_Objects/null", "null")}} (как это и происходит на {{jsxref("Object.prototype")}} при нормальных обстоятельствах).</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
 <table class="standard-table">
  <tbody>
@@ -134,15 +134,15 @@ b.hi();
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div class="note">
 <p><strong>Примечание:</strong> спецификация ES6 требует поддержку свойства <code>__proto__</code> только в браузерах и не требует его поддержку в других окружениях (хотя оно и рекомендуется в качестве обязательного). Если ваш код должен работать в не-браузерных окружениях, вместо свойства рекомендуется использовать методы {{jsxref("Object.getPrototypeOf()")}} и {{jsxref("Object.setPrototypeOf()")}}.</p>
 </div>
 
-<div>{{Compat("javascript.builtins.Object.proto")}}</div>
+<div>{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>

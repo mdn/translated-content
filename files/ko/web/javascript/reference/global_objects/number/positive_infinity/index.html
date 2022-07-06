@@ -29,10 +29,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
  <li>{{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}를 포함한 아무 음의 수와 <code>POSITIVE_INFINITY</code>를 곱한 결과는 {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}입니다.</li>
  <li>아무 양의 수를 <code>POSITIVE_INFINITY</code>로 나눈 결과는 0입니다.</li>
  <li>아무 음의 수를 <code>POSITIVE_INFINITY</code>로 나눈 결과는 음의 부호를 가진 0입니다.</li>
- <li>0을 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">POSITIVE_INFINITY</span></font>로 나눈 결과는 {{jsxref("NaN")}}입니다.</li>
+ <li>0을 <code>POSITIVE_INFINITY</code>로 나눈 결과는 {{jsxref("NaN")}}입니다.</li>
  <li>{{jsxref("NaN")}}에 <code>POSITIVE_INFINITY</code>를 곱한 결과는 {{jsxref("NaN")}}입니다.</li>
  <li><code>POSITIVE_INFINITY</code>를, {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}를 제외한 아무 음의 수로 나눈 결과는 {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}입니다.</li>
- <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">POSITIVE_INFINITY<code>를</code></span></font>, <code>POSITIVE_INFINITY</code>를 제외한 아무 양의 수로 나눈 결과는 <code>NEGATIVE_INFINITY</code>입니다.</li>
+ <li><code>POSITIVE_INFINITY</code>를, <code>POSITIVE_INFINITY</code>를 제외한 아무 양의 수로 나눈 결과는 <code>NEGATIVE_INFINITY</code>입니다.</li>
  <li><code>POSITIVE_INFINITY</code>를 {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} 또는 <code>POSITIVE_INFINITY</code>로 나눈 결과는 {{jsxref("NaN")}}입니다.</li>
 </ul>
 
@@ -44,9 +44,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 
 <h3 id="POSITIVE_INFINITY_사용하기"><code>POSITIVE_INFINITY</code> 사용하기</h3>
 
-<p>다음 코드에서 <code>smallNumber</code>는 JavaScript의 최댓값보다 큰 값을 할당받습니다. {{jsxref("Statements/if...else", "if")}} 문이 실행되면, <code>bigNumber</code>의 값이 <code>Infinity</code>이므로 <code>bigNumber</code>는 계산에 좀 더 적합한 유한값을 다시 할당합니다.</p>
+<p>다음 코드에서 <code>bigNumber</code>는 JavaScript의 최댓값보다 큰 값을 할당받습니다. {{jsxref("Statements/if...else", "if")}} 문이 실행되면, <code>bigNumber</code>의 값이 <code>Infinity</code>이므로 <code>bigNumber</code>는 계산에 좀 더 적합한 유한값을 다시 할당합니다.</p>
 
-<pre class="brush: js notranslate">var bigNumber = (Number.MAX_VALUE) * 2;
+<pre class="brush: js">var bigNumber = (Number.MAX_VALUE) * 2;
 
 if (bigNumber === Number.POSITIVE_INFINITY) {
   bigNumber = returnFinite();

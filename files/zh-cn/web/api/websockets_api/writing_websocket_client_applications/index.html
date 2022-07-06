@@ -1,12 +1,12 @@
 ---
-title: 编写WebSocket客户端应用
+title: 编写 WebSocket 客户端应用
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 tags:
   - WebSocket
   - 指南
 translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
-<p>WebSocket客户端应用程序使用WebSocket API通过WebSocket协议与WebSocket服务器通信。</p>
+<p>WebSocket 客户端应用程序使用 WebSocket API 通过 WebSocket 协议与 WebSocket 服务器通信。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -16,9 +16,9 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 
 <h2 id="创建_WebSocket_对象">创建 WebSocket 对象</h2>
 
-<p>为了使用 WebSocket 协议通信，你需要创建一个 <a href="/en/WebSockets/WebSockets_reference/WebSocket" title="en/WebSockets/WebSockets reference/WebSocket"><code>WebSocket</code></a> 对象；这将会自动地尝试建立与服务器的连接。</p>
+<p>为了使用 WebSocket 协议通信，你需要创建一个 <a href="/en/WebSockets/WebSockets_reference/WebSocket" title="en/WebSockets/WebSockets reference/WebSocket"><code>WebSocket</code></a> 对象；这将会自动地尝试建立与服务器的连接。</p>
 
-<p>WebSocket 构造函数接受一个必要参数和一个可选参数：</p>
+<p>WebSocket 构造函数接受一个必要参数和一个可选参数：</p>
 
 <pre class="syntaxbox">WebSocket WebSocket(
   in DOMString url,
@@ -28,9 +28,9 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 
 <dl>
  <dt><code>url</code></dt>
- <dd>要连接的URL；这应当是 WebSocket  服务器会响应的URL。</dd>
+ <dd>要连接的 URL；这应当是 WebSocket  服务器会响应的 URL。</dd>
  <dt><code>protocols</code> {{ optional_inline() }}</dt>
- <dd>一个协议字符串或一个协议字符串数组。这些字符串用来指定子协议，这样一个服务器就可以实现多个WebSocket子协议（比如你可能希望一个服务器可以根据指定的 <code>protocol</code> 来应对不同的互动情况）。如果不指定协议字符串则认为是空字符串。</dd>
+ <dd>一个协议字符串或一个协议字符串数组。这些字符串用来指定子协议，这样一个服务器就可以实现多个 WebSocket 子协议（比如你可能希望一个服务器可以根据指定的 <code>protocol</code> 来应对不同的互动情况）。如果不指定协议字符串则认为是空字符串。</dd>
 </dl>
 
 <p>构造函数可能抛出以下异常：</p>
@@ -45,13 +45,13 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 
 <h3 id="连接错误">连接错误</h3>
 
-<p>如果尝试连接过程中发生错误，那么首先一个名为 "error" 的事件会被发送给 <a href="/en/WebSockets/WebSockets_reference/WebSocket" title="WebSocket"><code>WebSocket</code></a> 对象（然后调用其<code>onerror</code> handler），然后 <a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="CloseEvent"><code>CloseEvent</code></a> 被发送给<a href="/en/WebSockets/WebSockets_reference/WebSocket" title="WebSocket"><code>WebSocket</code></a>  （然后调用其 <code>onclose</code> handler）以说明连接关闭的原因。</p>
+<p>如果尝试连接过程中发生错误，那么首先一个名为 "error" 的事件会被发送给 <a href="/en/WebSockets/WebSockets_reference/WebSocket" title="WebSocket"><code>WebSocket</code></a> 对象（然后调用其<code>onerror</code> handler），然后 <a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="CloseEvent"><code>CloseEvent</code></a> 被发送给<a href="/en/WebSockets/WebSockets_reference/WebSocket" title="WebSocket"><code>WebSocket</code></a> （然后调用其 <code>onclose</code> handler）以说明连接关闭的原因。</p>
 
 <p>在 Firefox 11 中，通常会从 Mozilla 平台的控制台中收到一个描述性的错误信息，以及一个通过 <code><a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="CloseEvent">CloseEvent</a></code> 在 <a class="external" href="http://tools.ietf.org/html/rfc6455#section-7.4" title="RFC 6455 Section 7.4">RFC 6455, Section 7.4</a> 中定义的错误代码。</p>
 
 <h3 id="示例">示例</h3>
 
-<p>本例创建了一个新的 WebSocket，连接到地址为 <code><span class="nowiki">ws://www.example.com/socketserver</span></code> 的服务器。请求中命名了一个自定义的协议 "protocolOne"，这一部分可以省略。</p>
+<p>本例创建了一个新的 WebSocket，连接到地址为 <code>ws://www.example.com/socketserver</code> 的服务器。请求中命名了一个自定义的协议 "protocolOne"，这一部分可以省略。</p>
 
 <pre class="brush: js">var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
 </pre>
@@ -65,7 +65,7 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 
 <p>一旦连接建立了（也就是说 <code>readyState</code> 是 <code>OPEN</code>） <code>exampleSocket.protocol</code> 就会告诉你服务器选择了哪个协议。</p>
 
-<p>上面的例子中 <code>ws</code> 替代了 <code>http</code>，同样地 <code>wss 也会替代https</code>. 建立WebSocket链接有赖于 <a href="/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism">HTTP Upgrade mechanism</a>, 所以当我们使用 <code><span class="nowiki">ws://www.example.com</span></code>或者 <code><span class="nowiki">wss://www.example.com</span></code>来访问HTTP服务器的时候协议会隐式地升级。</p>
+<p>上面的例子中 <code>ws</code> 替代了 <code>http</code>，同样地 <code>wss 也会替代 https</code>. 建立 WebSocket 链接有赖于 <a href="/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism">HTTP Upgrade mechanism</a>, 所以当我们使用 <code>ws://www.example.com</code>或者 <code>wss://www.example.com</code>来访问 HTTP 服务器的时候协议会隐式地升级。</p>
 
 <h2 id="向服务器发送数据">向服务器发送数据</h2>
 
@@ -76,9 +76,9 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 
 <p>你可以把数据作为字符串，{{ domxref("Blob") }}，或者<a href="/en/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a>来发送。</p>
 
-<div class="note"><strong>注意：</strong> 在版本11之前，Firefox只支持以字符串的形式发送数据。</div>
+<div class="note"><strong>注意：</strong> 在版本 11 之前，Firefox 只支持以字符串的形式发送数据。</div>
 
-<p>因为连接的建立是异步的，而且容易失败，所以不能保证刚创建WebSocket对象时使用 <code>send()</code> 方法会成功。我们至少可以确定企图在链接建立起来之后立马发送数据，可以通过注册 <code>onopen</code> 事件处理器解决:</p>
+<p>因为连接的建立是异步的，而且容易失败，所以不能保证刚创建 WebSocket 对象时使用 <code>send()</code> 方法会成功。我们至少可以确定企图在链接建立起来之后立马发送数据，可以通过注册 <code>onopen</code> 事件处理器解决：</p>
 
 <pre class="brush: js">exampleSocket.onopen = function (event) {
   exampleSocket.send("Here's some text that the server is urgently awaiting!");
@@ -87,7 +87,7 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 
 <h3 id="使用_JSON_发送对象">使用 JSON 发送对象</h3>
 
-<p>你可以方便地使用<a href="/en/JSON" title="en/JSON">JSON</a> 来向服务器发送复杂一些的数据。例如一个聊天程序与服务器交互的协议可以通过封装在JSON里的数据来实现：</p>
+<p>你可以方便地使用<a href="/en/JSON" title="en/JSON">JSON</a> 来向服务器发送复杂一些的数据。例如一个聊天程序与服务器交互的协议可以通过封装在 JSON 里的数据来实现：</p>
 
 <pre class="brush: js">// 服务器向所有用户发送文本
 function sendText() {
@@ -99,7 +99,7 @@ function sendText() {
     date: Date.now()
   };
 
-  // 把 msg 对象作为JSON格式字符串发送
+  // 把 msg 对象作为 JSON 格式字符串发送
   exampleSocket.send(JSON.stringify(msg));
 
   // 清空文本输入元素，为接收下一条消息做好准备。
@@ -118,7 +118,7 @@ function sendText() {
 
 <h3 id="接受与解析_JSON_对象">接受与解析 JSON 对象</h3>
 
-<p>考虑在 {{ anch("Using JSON to transmit objects") }}中提到的聊天应用客户端。客户端会收到各种类型的数据包，比如：</p>
+<p>考虑在 <a href="#使用_json_发送对象">使用 JSON 发送对象</a>中提到的聊天应用客户端。客户端会收到各种类型的数据包，比如：</p>
 
 <ul>
  <li>登陆握手</li>
@@ -164,17 +164,17 @@ function sendText() {
   }
 };</code></pre>
 
-<p>这里我们使用 <a href="/en/JavaScript/Reference/Global_Objects/JSON/parse" title="en/JavaScript/Reference/Global Objects/JSON/parse"><code>JSON.parse()</code></a> 来将JSON转换回原始对象，然后检查并根据其内容做下一步动作。</p>
+<p>这里我们使用 <a href="/en/JavaScript/Reference/Global_Objects/JSON/parse" title="en/JavaScript/Reference/Global Objects/JSON/parse"><code>JSON.parse()</code></a> 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。</p>
 
 <h3 id="文本数据的格式">文本数据的格式</h3>
 
-<p>通过WebSocket连接收到的文本是 UTF-8 格式的。</p>
+<p>通过 WebSocket 连接收到的文本是 UTF-8 格式的。</p>
 
 <p>在 Gecko 9.0 {{ geckoRelease("9.0") }} 之前，一部分有效的 UTF-8 文本中的非字符将导致连接被中断。现在 Gecko 已经允许这些值。</p>
 
 <h2 id="关闭连接">关闭连接</h2>
 
-<p>当你不需要再用 WebSocket 连接了,调用 WebSocket <a href="/en/WebSockets/WebSockets_reference/WebSocket#close()" title="en/WebSockets/WebSockets reference/WebSocket#close()"><code>close()</code></a>方法：</p>
+<p>当你不需要再用 WebSocket 连接了，调用 WebSocket <a href="/en/WebSockets/WebSockets_reference/WebSocket#close()" title="en/WebSockets/WebSockets reference/WebSocket#close()"><code>close()</code></a>方法：</p>
 
 <pre class="brush: js">exampleSocket.close();
 </pre>
@@ -183,4 +183,4 @@ function sendText() {
 
 <h2 id="安全方面的考虑">安全方面的考虑</h2>
 
-<p>WebSocket 不应当用于混合的上下文环境；也就是说，不应该在用HTTPS加载的页面中打开非安全版本的WebSocket，反之亦然。而实际上一些浏览器也明确禁止这一行为，包括 Firefox 8 及更高版本。</p>
+<p>WebSocket 不应当用于混合的上下文环境；也就是说，不应该在用 HTTPS 加载的页面中打开非安全版本的 WebSocket，反之亦然。而实际上一些浏览器也明确禁止这一行为，包括 Firefox 8 及更高版本。</p>

@@ -10,15 +10,15 @@ translation_of: Web/CSS/align-items
 ---
 <div>{{ CSSRef}}</div>
 
-<div></div>
 
-<p>CSS align-items属性将所有直接子节点上的align-self值设置为一个组。 align-self属性设置项目在其包含块中在交叉轴方向上的对齐方式。</p>
+
+<p>CSS align-items 属性将所有直接子节点上的 align-self 值设置为一个组。align-self 属性设置项目在其包含块中在交叉轴方向上的对齐方式。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/align-items.html")}}</div>
 
 
 
-<p>目前，Flexbox和CSS网格布局支持此属性。在Flexbox中，它控制十字轴上项目的对齐方式，在网格布局中，它控制块轴上项目的对齐方式。</p>
+<p>目前，Flexbox 和 CSS 网格布局支持此属性。在 Flexbox 中，它控制十字轴上项目的对齐方式，在网格布局中，它控制块轴上项目的对齐方式。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -57,7 +57,7 @@ align-items: unset;</pre>
   <li>在绝对定位布局的静态位置上，效果和<code>stretch</code>一样。</li>
   <li>对于那些弹性项目而言，效果和<code>stretch</code>一样。</li>
   <li>对于那些网格项目而言，效果和<code>stretch</code>一样，除了有部分比例或者一个固定大小的盒子的效果像<code>start</code>。</li>
-  <li>这个属性不适用于会计盒子和表格。</li>
+  <li>这个属性不适用于块级盒子和表格。</li>
  </ul>
  </dd>
 </dl>
@@ -86,7 +86,7 @@ align-items: unset;</pre>
  last baseline</code></dt>
  <dd>所有元素向基线对齐。侧轴起点到元素基线距离最大的元素将会于侧轴起点对齐以确定基线。</dd>
  <dt><code>stretch</code></dt>
- <dd>弹性元素被在侧轴方向被拉伸到与容器相同的高度或宽度。</dd>
+ <dd>弹性项包含外边距的交叉轴尺寸被拉升至行高</dd>
  <dt><code>safe</code></dt>
  <dd>Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were <code>start</code>.</dd>
  <dt><code>unsafe</code></dt>
@@ -282,5 +282,5 @@ display.addEventListener('change', function (evt) {
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_flexible_boxes" title="/en-US/docs/CSS/Using_CSS_flexible_boxes">使用CSS弹性框</a></li>
+ <li><a href="/en-US/docs/CSS/Using_CSS_flexible_boxes" title="/en-US/docs/CSS/Using_CSS_flexible_boxes">使用 CSS 弹性框</a></li>
 </ul>

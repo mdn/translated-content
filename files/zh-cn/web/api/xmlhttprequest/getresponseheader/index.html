@@ -3,23 +3,23 @@ title: XMLHttpRequest.getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
 tags:
   - API
-  - HTTP协议
-  - XHR头
-  - XHR请求
+  - HTTP 协议
+  - XHR 头
+  - XHR 请求
   - XMLHttpRequest
   - getResponseHeader
-  - http头
+  - HTTP 头
   - 引用
   - 得到响应头
   - 报文
   - 方法
 translation_of: Web/API/XMLHttpRequest/getResponseHeader
 ---
-<p>{{draft}}{{APIRef('XMLHttpRequest')}}</p>
+<p>{{APIRef('XMLHttpRequest')}}</p>
 
 <p><strong>XMLHttpRequest.getResponseHeader()</strong>方法返回包含指定响应头文本的字符串。</p>
 
-<p>如果在返回的响应头中有多个一样的名称，那么返回的值就会是用逗号和空格将值分隔的字符串。getResponseHeader()方法以UTF编码返回值。搜索的报文名是不区分大小写的。</p>
+<p>如果在返回的响应头中有多个一样的名称，那么返回的值就会是用逗号和空格将值分隔的字符串。<code>getResponseHeader()</code> 方法以 UTF 编码返回值。搜索的报文名是不区分大小写的。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -34,18 +34,18 @@ translation_of: Web/API/XMLHttpRequest/getResponseHeader
 
 <h3 id="返回值">返回值</h3>
 
-<p>报文项值，如果连接未完成，响应中不存在报文项，或者被W3C限制，则返回null。</p>
+<p>报文项值，如果连接未完成，响应中不存在报文项，或者被 W3C 限制，则返回 null。</p>
 
 <h2 id="示例：">示例：</h2>
 
-<pre class="brush: js notranslate">var client = new XMLHttpRequest();//新建XMLHttpRequest对象。
-client.open("GET", "somefile.txt", true);//采用异步，GET方式获取somefile.txt。
-client.send();//发送空的query string。
-client.onreadystatechange = function() {//设定侦听器onreadystatechange。
-  if(this.readyState == this.HEADERS_RECEIVED) {//如果readyState表示响应头已返回
-    var contentType=client.getResponseHeader("Content-Type"));//将此连接的Content-Type响应头项赋值到contentType。
-    if(contentType != my_expected_type) {//如果这不是你的预期值
-      client.abort();//终止连接
+<pre class="brush: js notranslate">var client = new XMLHttpRequest(); //新建 XMLHttpRequest 对象。
+client.open("GET", "somefile.txt", true); // 采用异步，GET 方式获取 somefile.txt。
+client.send(); // 发送空的 query string。
+client.onreadystatechange = function() { //设定侦听器 onreadystatechange。
+  if(this.readyState == this.HEADERS_RECEIVED) { // 如果 readyState 表示响应头已返回
+    var contentType=client.getResponseHeader("Content-Type")); // 将此连接的 Content-Type 响应头项赋值到 contentType。
+    if(contentType != my_expected_type) { // 如果这不是你的预期值
+      client.abort(); // 终止连接
     }
   }
 }</pre>
@@ -69,72 +69,13 @@ client.onreadystatechange = function() {//设定侦听器onreadystatechange。
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
+{{Compat("api.XMLHttpRequest.getResponseHeader")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>浏览器</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>{{CompatChrome(1)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatIe('5')}}<sup>[2]</sup><br>
-    {{CompatIe('7')}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatSafari('1.2')}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>
-    <p>浏览器</p>
-   </th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>{{CompatUnknown}}</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]从Firefox 49开始，在首选项network.http.keep_empty_response_headers_as_empty_string设置为true的情况下，空响应头将作为空字符串返回，默认为false。 在Firefox 49之前，空响应头已被忽略。从Firefox 50开始，该项默认设置为true。</p>
-
-<p>[2]该功能最开始是通过ActiveXObject()实现的。 直到Internet Explorer 7，标准的XMLHttpRequest才出现。</p>
-
-<h2 id="也请看看">也请看看:</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li>如何使用<a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">XMLHttpRequest</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers">HTTP headers</a></li>
+ <li><a href="/zh-CN/docs/Web/HTTP/Headers">HTTP headers</a></li>
  <li>{{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}</li>
  <li>{{DOMxRef("XMLHttpRequest.response", "response")}}</li>
  <li>设置请求头: {{DOMxRef("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}</li>

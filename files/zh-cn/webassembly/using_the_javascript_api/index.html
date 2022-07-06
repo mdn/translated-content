@@ -1,5 +1,5 @@
 ---
-title: 使用WebAssembly JavaScript API
+title: 使用 WebAssembly JavaScript API
 slug: WebAssembly/Using_the_JavaScript_API
 tags:
   - API
@@ -15,34 +15,34 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 ---
 <div>{{WebAssemblySidebar}}</div>
 
-<p class="summary">如果您已经使用Emscripten等工具编译了另一种语言的模块，或者自己加载并运行代码，那么下一步是了解如何使用WebAssembly JavaScript API的其他功能。这篇文章告诉你你需要知道什么。</p>
+<p>如果您已经使用 Emscripten 等工具编译了另一种语言的模块，或者自己加载并运行代码，那么下一步是了解如何使用 WebAssembly JavaScript API 的其他功能。这篇文章告诉你你需要知道什么。</p>
 
 <div class="note">
-<p><strong>注</strong>：如果你不熟悉本文中提到到基础概念并且需要更多的解释，先阅读 <a href="/zh-CN/docs/WebAssembly/Concepts">WebAssembly概念</a> 然后再回来。</p>
+<p><strong>注</strong>：如果你不熟悉本文中提到到基础概念并且需要更多的解释，先阅读 <a href="/zh-CN/docs/WebAssembly/Concepts">WebAssembly 概念</a> 然后再回来。</p>
 </div>
 
 <h2 id="一个简单的例子">一个简单的例子</h2>
 
-<p>让我们通过一步一步的例子来了解如何在WebAssembly 中使用 Javascript API，和如何在网页中加载一个 wasm 模块。</p>
+<p>让我们通过一步一步的例子来了解如何在 WebAssembly 中使用 Javascript API，和如何在网页中加载一个 wasm 模块。</p>
 
 <div class="note">
-<p><strong>注</strong>：你可以发现同样的代码在 <a href="https://github.com/mdn/webassembly-examples">webassembly-examples</a> GitHub 仓库.</p>
+<p><strong>注</strong>：你可以发现同样的代码在 <a href="https://github.com/mdn/webassembly-examples">webassembly-examples</a> GitHub 仓库。</p>
 </div>
 
 <h3 id="准备工作">准备工作</h3>
 
 <ol>
- <li>首先需要一个 wasm 模块！下载 <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm">simple.wasm</a> 文件到本机的一个新的目录下.</li>
- <li>确保本机使用的是支持 webassembly 的浏览器。Firefox 52+ 和 Chrome 57+ 是默认支持 webassembly 的.</li>
- <li>然后, 创建一个简单的HTML 文件命名为 index.html 和并且你的本机的 wasm 文件处于同一目录下 ( 如果你没有模板可以使用我们提供的 <a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">simple template</a> ).</li>
- <li>现在, 为了帮助我们理解发生了什么, 让我们来看看这个 wasm 模块的文本表示(也可以在<a href="/zh-CN/docs/WebAssembly/Text_format_to_wasm#初识文本格式">将WebAssembly文本格式转换为wasm</a>见到):
+ <li>首先需要一个 wasm 模块！下载 <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm">simple.wasm</a> 文件到本机的一个新的目录下。</li>
+ <li>确保本机使用的是支持 webassembly 的浏览器。Firefox 52+ 和 Chrome 57+ 是默认支持 webassembly 的。</li>
+ <li>然后，创建一个简单的 HTML 文件命名为 index.html 和并且你的本机的 wasm 文件处于同一目录下 ( 如果你没有模板可以使用我们提供的 <a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">simple template</a> ).</li>
+ <li>现在，为了帮助我们理解发生了什么，让我们来看看这个 wasm 模块的文本表示 (也可以在<a href="/zh-CN/docs/WebAssembly/Text_format_to_wasm#初识文本格式">将 WebAssembly 文本格式转换为 wasm</a>见到):
   <pre class="notranslate">(module
   (func $i (import "imports" "imported_func") (param i32))
   (func (export "exported_func")
     i32.const 42
     call $i))</pre>
  </li>
- <li>在第二行, 你将看到导入有一个两级命名空间 —— 内部函数 <code>$i</code> 是从<font face="consolas, Liberation Mono, courier, monospace"> imports.imported_func 导入的</font>. 编写要导入到wasm模块的对象时，我们需要在JavaScript中反映这个两级命名空间. 创建一个 <code>&lt;script&gt;&lt;/script&gt;</code> 节点在你的HTML 文件中, 并且添加下面的代码:
+ <li>在第二行，你将看到导入有一个两级命名空间 —— 内部函数 <code>$i</code> 是从 imports.imported_func 导入的。编写要导入到 wasm 模块的对象时，我们需要在 JavaScript 中反映这个两级命名空间。创建一个 <code>&lt;script&gt;&lt;/script&gt;</code> 节点在你的 HTML 文件中，并且添加下面的代码：
   <pre class="brush: js notranslate">var importObject = {
   imports: {
       imported_func: function(arg) {
@@ -56,7 +56,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 <p>如上所述，  我们在 <code>imports.imported_func 中有我们导入的函数</code>.</p>
 
 <div class="note">
-<p><strong>注</strong>：使用 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">ES6箭头函数</a> 将会更加简洁:</p>
+<p><strong>注</strong>：使用 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">ES6 箭头函数</a> 将会更加简洁：</p>
 
 <pre class="brush: js notranslate">let importObject = {
     imports: {
@@ -66,13 +66,13 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 </pre>
 </div>
 
-<p>具体哪种风格由你决定.</p>
+<p>具体哪种风格由你决定。</p>
 
 <h3 id="加载并使用_wasm_模块">加载并使用 wasm 模块</h3>
 
-<p>当我们导入了对象后, 我们将获取 wasm 文件, 使其在 array buffer 可用, 然后就可以使用其导出的函数.</p>
+<p>当我们导入了对象后，我们将获取 wasm 文件，使其在 array buffer 可用，然后就可以使用其导出的函数。</p>
 
-<p>在第一个块下面添加以下代码到你的脚本中:</p>
+<p>在第一个块下面添加以下代码到你的脚本中：</p>
 
 <pre class="brush: js notranslate">fetch('simple.wasm')
 .then(res =&gt;
@@ -84,32 +84,32 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 });</pre>
 
 <div class="note">
-<p><strong>注</strong>：我们已经非常详细地解释了这种语法如何工作通过<a href="/zh-CN/docs/WebAssembly/Loading_and_running#使用Fetch">加载和运行WebAssembly代码</a>。如果不确定，请回到那里进行复习。</p>
+<p><strong>注</strong>：我们已经非常详细地解释了这种语法如何工作通过<a href="/zh-CN/docs/WebAssembly/Loading_and_running#使用Fetch">加载和运行 WebAssembly 代码</a>。如果不确定，请回到那里进行复习。</p>
 </div>
 
-<p>这样做的结果是执行我们导出的 WebAssembly 函数 exported_func，<font face="consolas, Liberation Mono, courier, monospace">这样又调用了另一个我们导入的 JavaScript 函数 imported_func</font>, 它将WebAssembly实例（42）中提供的值记录到控制台. 如果你保存实例代码并且在支持 WebAssembly 的浏览器中运行，你将看到此操作。</p>
+<p>这样做的结果是执行我们导出的 WebAssembly 函数 exported_func，这样又调用了另一个我们导入的 JavaScript 函数 imported_func, 它将 WebAssembly 实例（42）中提供的值记录到控制台。如果你保存实例代码并且在支持 WebAssembly 的浏览器中运行，你将看到此操作。</p>
 
 <div class="note">
-<p><strong>注</strong>：WebAssembly 在 Firefox 52+ 和 Chrome 57+/latest Opera 是默认支持的(你也可以运行 wasm 代码 在 Firefox 47+ 通过将 <em>about:config</em> 中的 <code>javascript.options.wasm</code> flag 设置为 enabling , 或者在 Chrome (51+) 以及 Opera (38+) 通过访问 <em>chrome://flags</em> 并且将 <em>Experimental WebAssembly</em> flag 设置为 enabling.)</p>
+<p><strong>注</strong>：WebAssembly 在 Firefox 52+ 和 Chrome 57+/latest Opera 是默认支持的 (你也可以运行 wasm 代码 在 Firefox 47+ 通过将 <em>about:config</em> 中的 <code>javascript.options.wasm</code> flag 设置为 enabling , 或者在 Chrome (51+) 以及 Opera (38+) 通过访问 <em>chrome://flags</em> 并且将 <em>Experimental WebAssembly</em> flag 设置为 enabling.)</p>
 </div>
 
-<p>这是一个冗长的，令人费解的例子并且实现了很少的功能, 但它确实有助于说明这是可能的 —— 在 Web 应用中与 JavaScript 一起使用 WebAssembly 代码. 正如我们一直说的,  WebAssembly 并不旨在替代 JavaScript; 两者可以一起工作，借鉴对方的优势。</p>
+<p>这是一个冗长的，令人费解的例子并且实现了很少的功能，但它确实有助于说明这是可能的 —— 在 Web 应用中与 JavaScript 一起使用 WebAssembly 代码。正如我们一直说的， WebAssembly 并不旨在替代 JavaScript; 两者可以一起工作，借鉴对方的优势。</p>
 
-<h3 id="在开发者工具查看wasm">在开发者工具查看wasm </h3>
+<h3 id="在开发者工具查看wasm">在开发者工具查看 wasm </h3>
 
-<p>在 Firefox 54+,  Developer Tool Debugger Panel 有用于公开网页中包含的任何 wasm 代码的文本表示的功能. 为了查看它们, 要查看它，您可以转到 Debugger Panel 然后单击 “xxx &gt; wasm” .</p>
+<p>在 Firefox 54+,  Developer Tool Debugger Panel 有用于公开网页中包含的任何 wasm 代码的文本表示的功能. 为了查看它们，要查看它，您可以转到 Debugger Panel 然后单击 “xxx &gt; wasm” .</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14655/wasm-debugger-output.png" style="display: block; height: 354px; margin: 0px auto; width: 1026px;"></p>
 
-<p>从 Firfox 开始，除了将WebAssembly视为文本，开发者可以使用文本格式调试 (打断点, 检查调用堆栈, 单步调试等等.) WebAssembly 代码. 通过这个视频<a href="https://www.youtube.com/watch?v=R1WtBkMeGds">使用Firefox开发者工具调试WebAssembly</a><span class="watch-title" dir="ltr" id="eow-title" title="WebAssembly debugging with Firefox DevTools">预览。</span></p>
+<p>从 Firfox 开始，除了将 WebAssembly 视为文本，开发者可以使用文本格式调试 (打断点，检查调用堆栈，单步调试等等.) WebAssembly 代码。通过这个视频<a href="https://www.youtube.com/watch?v=R1WtBkMeGds">使用 Firefox 开发者工具调试 WebAssembly</a>预览。</p>
 
 <h2 id="内存">内存</h2>
 
-<p>在WebAssembly的底层内存模型中，内存被表示为称为 <a href="http://webassembly.org/docs/semantics/#linear-memory">线性内存</a> 的无类型字节的连续范围，通过模块中的<a href="http://webassembly.org/docs/semantics/#linear-memory-accesses">加载和存储指令</a>读取和写入。  在这个内存模型中， 任何加载或存储都可以访问整个线性存储器中的任何字节，这是忠实地表示C / C ++概念（如指针）所必需的。</p>
+<p>在 WebAssembly 的底层内存模型中，内存被表示为称为 <a href="http://webassembly.org/docs/semantics/#linear-memory">线性内存</a> 的无类型字节的连续范围，通过模块中的<a href="http://webassembly.org/docs/semantics/#linear-memory-accesses">加载和存储指令</a>读取和写入。  在这个内存模型中， 任何加载或存储都可以访问整个线性存储器中的任何字节，这是忠实地表示 C / C ++概念（如指针）所必需的。</p>
 
-<p>然后，和原生 C/C++ 程序不同的是可用内存范围跨越整个进程，特定WebAssembly实例可访问的内存被限制在由WebAssembly Memory对象包含的一个特定的 —— 可能非常小的范围内。</p>
+<p>然后，和原生 C/C++ 程序不同的是可用内存范围跨越整个进程，特定 WebAssembly 实例可访问的内存被限制在由 WebAssembly Memory 对象包含的一个特定的 —— 可能非常小的范围内。</p>
 
-<p>在 JavaScript 中，内存实例可以被认为是可调整大小的ArrayBuffer，就像ArrayBuffers一样，一个Web应用程序可以创建许多独立的内存对象。 您可以使用 {{jsxref("WebAssembly.Memory()")}} 构造函数创建一个，它将参数作为初始大小和（可选）最大大小）。</p>
+<p>在 JavaScript 中，内存实例可以被认为是可调整大小的 ArrayBuffer，就像 ArrayBuffers 一样，一个 Web 应用程序可以创建许多独立的内存对象。您可以使用 {{jsxref("WebAssembly.Memory()")}} 构造函数创建一个，它将参数作为初始大小和（可选）最大大小）。</p>
 
 <p>我们通过一个快速的例子来开始探索。</p>
 
@@ -118,51 +118,51 @@ translation_of: WebAssembly/Using_the_JavaScript_API
   <p>创建另一个简单的 HTML 页面 (复制我们的 <a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">simple template</a>) 并且命名为 <code>memory.html。</code>添加一个 <code>&lt;script&gt;&lt;/script&gt;</code> 节点到页面中。</p>
  </li>
  <li>
-  <p>在脚本的顶部添加下面的一行代码来创建一个内存实例:</p>
+  <p>在脚本的顶部添加下面的一行代码来创建一个内存实例：</p>
 
   <pre class="brush: js notranslate">var memory = new WebAssembly.Memory({initial:10, maximum:100});</pre>
 
-  <p>初始和最大的单位是 WebAssembly pages ——这些页面的大小固定为64KB。这意味着上述内存实例的初始大小为640KB，最大大小为6.4MB。</p>
+  <p>初始和最大的单位是 WebAssembly pages ——这些页面的大小固定为 64KB。这意味着上述内存实例的初始大小为 640KB，最大大小为 6.4MB。</p>
 
-  <p>WebAssembly内存通过简单地提供一个返回ArrayBuffer的缓冲区getter / setter来显示它的字节。例如，要直接将42写入线性内存的第一个单词，你可以这样做：</p>
+  <p>WebAssembly 内存通过简单地提供一个返回 ArrayBuffer 的缓冲区 getter / setter 来显示它的字节。例如，要直接将 42 写入线性内存的第一个单词，你可以这样做：</p>
 
   <pre class="brush: js notranslate">new Uint32Array(memory.buffer)[0] = 42;</pre>
 
-  <p>你也可以得到刚才的值通过:</p>
+  <p>你也可以得到刚才的值通过：</p>
 
   <pre class="brush: js notranslate">new Uint32Array(memory.buffer)[0]</pre>
  </li>
  <li>
-  <p>现在尝试这个演示 —— 保存目前为止添加的内容，将其加载到浏览器中，然后尝试在JavaScript控制台中输入上述两行。</p>
+  <p>现在尝试这个演示 —— 保存目前为止添加的内容，将其加载到浏览器中，然后尝试在 JavaScript 控制台中输入上述两行。</p>
  </li>
 </ol>
 
 <h3 id="增加内存">增加内存</h3>
 
-<p>一个内存实例的大小可以通过 {{jsxref("Memory.prototype.grow()")}} 来增加，再次以 WebAssembly pages 为单位指定参数:</p>
+<p>一个内存实例的大小可以通过 {{jsxref("Memory.prototype.grow()")}} 来增加，再次以 WebAssembly pages 为单位指定参数：</p>
 
 <pre class="brush: js notranslate">memory.grow(1);</pre>
 
-<p>如果在创建内存实例时提供了最大值，则尝试超过此最大值将抛出 {{jsxref("WebAssembly.RangeError")}} 异常。 引擎利用这个提供的上限来提前预留内存，这样可以使调整大小更有效率。</p>
+<p>如果在创建内存实例时提供了最大值，则尝试超过此最大值将抛出 {{jsxref("WebAssembly.RangeError")}} 异常。引擎利用这个提供的上限来提前预留内存，这样可以使调整大小更有效率。</p>
 
-<p>Note: 由于 {{domxref("ArrayBuffer")}} 的byteLength是不可变的，所以在成功 {{jsxref("Memory.prototype.grow()")}} 操作之后，缓冲区getter将返回一个新的ArrayBuffer对象 新的byteLength）和任何先前的ArrayBuffer对象变成“分离”，或者与先前指向的底层内存断开连接。</p>
+<p>Note: 由于 {{domxref("ArrayBuffer")}} 的 byteLength 是不可变的，所以在成功 {{jsxref("Memory.prototype.grow()")}} 操作之后，缓冲区 getter 将返回一个新的 ArrayBuffer 对象 新的 byteLength）和任何先前的 ArrayBuffer 对象变成“分离”，或者与先前指向的底层内存断开连接。</p>
 
-<p>和函数一样，线性内存可以在模块内部进行定义或者导入。类似地，模块还可以可选地导出其内存。这这意味着JavaScript可以通过创建<code>new WebAssembly.Memory</code> 并将其作为导入或通过接收内存导出传递给WebAssembly实例的内存来访问(通过 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports">Instance.prototype.exports</a></code>).</p>
+<p>和函数一样，线性内存可以在模块内部进行定义或者导入。类似地，模块还可以可选地导出其内存。这这意味着 JavaScript 可以通过创建<code>new WebAssembly.Memory</code> 并将其作为导入或通过接收内存导出传递给 WebAssembly 实例的内存来访问 (通过 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports">Instance.prototype.exports</a></code>).</p>
 
 <h3 id="更复杂的内存示例">更复杂的内存示例</h3>
 
-<p>让我们通过看一个更复杂的内存示例——一个对整数数组进行求和的WebAssembly模块——来明确上面的概念。你可以在这里<a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm">memory.wasm</a>找到示例。</p>
+<p>让我们通过看一个更复杂的内存示例——一个对整数数组进行求和的 WebAssembly 模块——来明确上面的概念。你可以在这里<a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm">memory.wasm</a>找到示例。</p>
 
 <ol>
  <li>
-  <p>像前面那样在相同的目录下复制一份memory.wasm。</p>
+  <p>像前面那样在相同的目录下复制一份 memory.wasm。</p>
 
   <div class="note">
   <p><strong>注</strong>：你可以在这里<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat">memory.wat</a>找到模块的文本表示形式。</p>
   </div>
  </li>
  <li>
-  <p>回到你的示例文件memory.html，像前面那样获取、编译和实例化你的wasm模块——在你的脚本代码底部加入下面的代码：</p>
+  <p>回到你的示例文件 memory.html，像前面那样获取、编译和实例化你的 wasm 模块——在你的脚本代码底部加入下面的代码：</p>
 
   <pre class="brush: js notranslate">fetch('memory.wasm').then(response =&gt;
   response.arrayBuffer()
@@ -173,7 +173,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 });</pre>
  </li>
  <li>
-  <p>因为该模块导出了它的内存，给定该模块的一个实例，我们可以使用一个导出函数accumulate()在该模块实例的线性内存（mem）中创建和填入一个输入数组。在前面指明的地方加入如下代码：</p>
+  <p>因为该模块导出了它的内存，给定该模块的一个实例，我们可以使用一个导出函数 accumulate() 在该模块实例的线性内存（mem）中创建和填入一个输入数组。在前面指明的地方加入如下代码：</p>
 
   <pre class="brush: js notranslate">var i32 = new Uint32Array(results.instance.exports.mem.buffer);
 for (var i = 0; i &lt; 10; i++) {
@@ -187,11 +187,11 @@ console.log(sum);</pre>
 
 <p>注意我们是如何在内存对象的缓存上创建了 {{domxref("Uint32Array")}}视图，而不是在内存对象本身这么做。</p>
 
-<p>内存导入与函数导入很像，只是内存对象取代了JavaScript函数作为了传入值。内存导入在下面两方面很有用：</p>
+<p>内存导入与函数导入很像，只是内存对象取代了 JavaScript 函数作为了传入值。内存导入在下面两方面很有用：</p>
 
 <ul>
- <li>它们允许JavaScript在模块编译之前或者同时获取和创建内存的初始内容。</li>
- <li>它们允许一个单一的内存对象被多个模块实例导入，对于实现WebAssembly动态链接来说，这是一个关键的构建模块。</li>
+ <li>它们允许 JavaScript 在模块编译之前或者同时获取和创建内存的初始内容。</li>
+ <li>它们允许一个单一的内存对象被多个模块实例导入，对于实现 WebAssembly 动态链接来说，这是一个关键的构建模块。</li>
 </ul>
 
 <div class="note">
@@ -200,23 +200,23 @@ console.log(sum);</pre>
 
 <h2 id="表格">表格</h2>
 
-<p>WebAssembly表格是一个可变大小的带类型的引用数组，其中的引用可以被JavaScript和WebAssembly代码存取。然而，内存提供的是一个可变大小的带类型的原始字节数组。所以，把引用存储在内存中是不安全。由于安全、可移植性和稳定性等原因，作为引擎信任的引用值是千万不能被直接读写的。</p>
+<p>WebAssembly 表格是一个可变大小的带类型的引用数组，其中的引用可以被 JavaScript 和 WebAssembly 代码存取。然而，内存提供的是一个可变大小的带类型的原始字节数组。所以，把引用存储在内存中是不安全。由于安全、可移植性和稳定性等原因，作为引擎信任的引用值是千万不能被直接读写的。</p>
 
-<p>表格有一个元素类型，其限制了可以存储在表格的引用类型。在当前的WebAssembly版本中，只有一种WebAssembly代码所需要的引用类型——函数——也就是唯一合法的元素类型。在将来的版本中，更多的元素类型会被加入。</p>
+<p>表格有一个元素类型，其限制了可以存储在表格的引用类型。在当前的 WebAssembly 版本中，只有一种 WebAssembly 代码所需要的引用类型——函数——也就是唯一合法的元素类型。在将来的版本中，更多的元素类型会被加入。</p>
 
 <p>函数引用对于编译诸如C/C++这类拥有函数指针的语言来说是必要的。在C/C++的原生实现中，函数指针是通过函数代码在进程的虚地址空间的原始地址表示的，并且由于前面提到的安全原因，它是不能被直接存储在线性内存中的。取而代之的是，函数引用被存储在表格之中。它们的整数索引可以存储在线性内存中并进行传递。</p>
 
-<p>当调用一个函数指针的时候，WebAssembly调用函数提供索引。在进行索引和调用索引到的函数引用之前，可以对该索引进行表格的边界检查。因而，目前的表格是一个相当底层的用来安全地和可移植地编译底层编程语言特性的基本类型。</p>
+<p>当调用一个函数指针的时候，WebAssembly 调用函数提供索引。在进行索引和调用索引到的函数引用之前，可以对该索引进行表格的边界检查。因而，目前的表格是一个相当底层的用来安全地和可移植地编译底层编程语言特性的基本类型。</p>
 
-<p>表格可以通过<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set">Table.prototype.set()</a>和 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow">Table.prototype.grow()</a>进行更改，它们会更新表格中的一个值和增加可以存储在表格的大小。这允许间接可调用函数集合可以随着时间而改变，其对于<a href="http://webassembly.org/docs/dynamic-linking/">动态链接技术</a>来说是必要的。这些更改对于JavaScript和wasm模块来说是立即生效的。同时，在JavaScript可以通过<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a>得到最新值。</p>
+<p>表格可以通过<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set">Table.prototype.set()</a>和 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow">Table.prototype.grow()</a>进行更改，它们会更新表格中的一个值和增加可以存储在表格的大小。这允许间接可调用函数集合可以随着时间而改变，其对于<a href="http://webassembly.org/docs/dynamic-linking/">动态链接技术</a>来说是必要的。这些更改对于 JavaScript 和 wasm 模块来说是立即生效的。同时，在 JavaScript 可以通过<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a>得到最新值。</p>
 
 <h3 id="表格示例">表格示例</h3>
 
-<p>让我们看一个简单的表格示例——一个WebAssembly模块，该模块创建并导出了一个带有两个元素的表格：元素0返回13，元素1返回42。你可以在<a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm">table.wasm</a>中找到该示例。</p>
+<p>让我们看一个简单的表格示例——一个 WebAssembly 模块，该模块创建并导出了一个带有两个元素的表格：元素 0 返回 13，元素 1 返回 42。你可以在<a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm">table.wasm</a>中找到该示例。</p>
 
 <ol>
  <li>
-  <p>在一个新的目录中复制一份table.wasm。</p>
+  <p>在一个新的目录中复制一份 table.wasm。</p>
 
   <div class="note">
   <p><strong>注</strong>：你可以在<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat">table.wat</a>中查看模块的文本表示。</p>
@@ -226,7 +226,7 @@ console.log(sum);</pre>
   <p>创建一份<a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">HTML 模板</a>的新副本并将其命名为<code>table.html</code>.</p>
  </li>
  <li>
-  <p>如前所示，获取、编译并且实例化你的wasm模块——将下面的代码放入到HTML body底部的<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a>节点里面：</p>
+  <p>如前所示，获取、编译并且实例化你的 wasm 模块——将下面的代码放入到 HTML body 底部的<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a>节点里面：</p>
 
   <pre class="brush: js notranslate">fetch('table.wasm').then(response =&gt;
   response.arrayBuffer()
@@ -245,28 +245,28 @@ console.log(tbl.get(1)());  // 42</pre>
  </li>
 </ol>
 
-<p>这段代码获取获取了存储在表格中的每一个函数引用，然后实例化它们从而将它们拥有的值打印到控制台——注意每一各函数引用是如何使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a>函数获取的以及在其后面增加一对小括号从而真正的调用该函数。</p>
+<p>这段代码获取获取了存储在表格中的每一个函数引用，然后实例化它们从而将它们拥有的值打印到控制台——注意每一个函数引用是如何使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a>函数获取的以及在其后面增加一对小括号从而真正的调用该函数。</p>
 
 <div class="note">
-<p><strong>注</strong>：你可以在<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html">table.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/table.html">或实时查看运行</a>)找到我们完整的示例——这个版本使用了<code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code>函数。</p>
+<p><strong>注</strong>：你可以在<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html">table.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/table.html">或实时查看运行</a>) 找到我们完整的示例——这个版本使用了<code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code>函数。</p>
 </div>
 
 <h2 id="多样性">多样性</h2>
 
-<p>现在，我们已经展示了WebAssembly的主要组成模块的使用，这里是提到多样性概念的好地方。这为WebAssembly提供了大量的关于架构效率的优势：</p>
+<p>现在，我们已经展示了 WebAssembly 的主要组成模块的使用，这里是提到多样性概念的好地方。这为 WebAssembly 提供了大量的关于架构效率的优势：</p>
 
 <ul>
- <li>一个模块可以有N个实例，这与一个函数可以产生N个闭包值一样。</li>
- <li>一个模块实例可以使用0-1个内存实例，它为这个实例提供了“地址空间”。将来的WebAssembly版本可能允许每个模块实例拥有0-N个内存实例（参考<a href="http://webassembly.org/docs/future-features/#multiple-tables-and-memories">多表格与内存</a>）。</li>
- <li>一个模块实例可以使用0-1个表格实例——这是该实例的“函数地址空间”，可以用来实现C函数指针。将来的WebAssembly版本可能允许每个模块实例拥有0-N个表格实例。</li>
- <li>一个内存或表格实例能够被0-N个模块实例使用——这些实例全部共享相同的地址空间，这使得<a href="http://webassembly.org/docs/dynamic-linking">动态链接</a>成为可能。</li>
+ <li>一个模块可以有 N 个实例，这与一个函数可以产生 N 个闭包值一样。</li>
+ <li>一个模块实例可以使用 0-1 个内存实例，它为这个实例提供了“地址空间”。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个内存实例（参考<a href="http://webassembly.org/docs/future-features/#multiple-tables-and-memories">多表格与内存</a>）。</li>
+ <li>一个模块实例可以使用 0-1 个表格实例——这是该实例的“函数地址空间”，可以用来实现 C 函数指针。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个表格实例。</li>
+ <li>一个内存或表格实例能够被 0-N 个模块实例使用——这些实例全部共享相同的地址空间，这使得<a href="http://webassembly.org/docs/dynamic-linking">动态链接</a>成为可能。</li>
 </ul>
 
 <p>你可以在我们的理解文本格式一本中看到多样性的应用——参考修改表格和动态链接部分（TBD）。</p>
 
 <h2 id="总结">总结</h2>
 
-<p>本文带你了解了使用WebAssembly的JavaScript API的基本知识，包括在JavaScript上下文中导入一个WebAssembly模块、使用该模块的函数以及在JavaScript中使用WebAssembly的内存和表格。同时，我们也介绍了多样性的概念。</p>
+<p>本文带你了解了使用 WebAssembly 的 JavaScript API 的基本知识，包括在 JavaScript 上下文中导入一个 WebAssembly 模块、使用该模块的函数以及在 JavaScript 中使用 WebAssembly 的内存和表格。同时，我们也介绍了多样性的概念。</p>
 
 <h2 id="另见">另见</h2>
 

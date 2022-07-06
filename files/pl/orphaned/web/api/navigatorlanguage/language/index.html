@@ -1,0 +1,46 @@
+---
+title: NavigatorLanguage.language
+slug: orphaned/Web/API/NavigatorLanguage/language
+tags:
+  - DOM
+  - Dokumentacja_Gecko_DOM
+  - Gecko
+  - Wszystkie_kategorie
+translation_of: Web/API/NavigatorLanguage/language
+original_slug: Web/API/NavigatorLanguage/language
+---
+<p>{{ ApiRef() }}</p>
+
+<h3 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h3>
+
+<p>Zwraca łańcuch znaków reprezentujący wersję językową przeglądarki.</p>
+
+<h3 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h3>
+
+<pre class="eval"><i>lang</i> = window.navigator.language
+</pre>
+
+<h3 id="Parametry" name="Parametry">Parametry</h3>
+
+<ul>
+ <li><code>lang</code> jest dwu znakowym łańcuchem znaków (na przykład "en" lub "ja") reprezentującym wersję języka.</li>
+</ul>
+
+<h3 id="Przyk.C5.82ad" name="Przyk.C5.82ad">Przykład</h3>
+
+<pre>if ( window.navigator.language != "pl" ) {
+ doLangSelect(window.navigator.language);
+}
+</pre>
+
+<h3 id="Uwagi" name="Uwagi">Uwagi</h3>
+
+<p>Ta własność pojawia się również jako część łańcucha znaków <a href="pl/DOM/window.navigator.userAgent">navigator.userAgent</a>.</p>
+
+<h3 id="Specyfikacja" name="Specyfikacja">Specyfikacja</h3>
+
+<p>DOM Level 0. Nie jest częścią specyfikacji.</p>
+
+<div class="noinclude"> </div>
+
+<p>{{ languages( { "en": "en/DOM/window.navigator.language", "ja": "ja/DOM/window.navigator.language" } ) }}</p>

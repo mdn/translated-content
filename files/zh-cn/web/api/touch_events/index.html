@@ -16,11 +16,11 @@ translation_of: Web/API/Touch_events
 ---
 <div>{{DefaultAPISidebar("Touch Events")}}</div>
 
-<div></div>
+
 
 <p>为了给基于触摸的用户界面提供高质量的支持，触摸事件提供了在触摸屏或触控板上解释手指（或触控笔）活动的能力。</p>
 
-<div></div>
+
 
 <p>触摸事件接口是较为底层的 API，可为特定程序提供多点触控交互（比如双指手势）的支持。多点触控交互开始于一个手指（或触控笔）开始接触设备平面的时刻。随后其他手指也可触摸设备表面，并随意进行划动。当所有手指离开设备平面时，交互结束。整个交互期间，程序接收开始、移动、结束三个阶段的触摸事件。</p>
 
@@ -35,7 +35,7 @@ translation_of: Web/API/Touch_events
 
 <dl>
  <dt>触摸点（touch point）</dt>
- <dd>表面上的一个接触点.。有可能是手指 (或者胳膊肘、耳朵、鼻子都行。但一般是手指) 或者触摸笔.</dd>
+ <dd>表面上的一个接触点.。有可能是手指 (或者胳膊肘、耳朵、鼻子都行。但一般是手指) 或者触摸笔。</dd>
 </dl>
 
 <h2 id="接口">接口</h2>
@@ -113,7 +113,7 @@ translation_of: Web/API/Touch_events
 
 <h4 id="当触摸移动时绘制">当触摸移动时绘制</h4>
 
-<p>在触摸平面上移动一根或者几根手指会触发 {{event("touchmove")}} 事件，从而将调用<code>handleMove()</code> 函数。本例中<span style="line-height: 1.572;">这个函数用于更新触摸点信息，并为每个触摸点从之前位置到当前位置之间绘制直线。</span></p>
+<p>在触摸平面上移动一根或者几根手指会触发 {{event("touchmove")}} 事件，从而将调用<code>handleMove()</code> 函数。本例中这个函数用于更新触摸点信息，并为每个触摸点从之前位置到当前位置之间绘制直线。</p>
 
 <pre class="brush: js">function handleMove(evt) {
   evt.preventDefault();
@@ -145,7 +145,7 @@ translation_of: Web/API/Touch_events
 }
 </pre>
 
-<p>这个函数不仅对所有已改变的触摸点进行了遍历，还从缓存的触摸信息数组中得到了每个触摸点要绘制的新线段的起点。这是通过读取每个触摸点的 {{domxref("Touch.identifier")}} 属性实现的。对每个触摸点而言，该属性是个唯一的整数，且<span style="line-height: inherit;">手指接触表面的整个过程中，这个属性保持不变。</span></p>
+<p>这个函数不仅对所有已改变的触摸点进行了遍历，还从缓存的触摸信息数组中得到了每个触摸点要绘制的新线段的起点。这是通过读取每个触摸点的 {{domxref("Touch.identifier")}} 属性实现的。对每个触摸点而言，该属性是个唯一的整数，且手指接触表面的整个过程中，这个属性保持不变。</p>
 
 <p>这样我们就可以取得每个触摸点之前位置的坐标，并且使用恰当的上下文方法绘制片段，从而将新旧两个位置连接起来。</p>
 
@@ -182,7 +182,7 @@ translation_of: Web/API/Touch_events
 }
 </pre>
 
-<p>这个函数与上一个很相像，唯一的实质性区别就是在调用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" title="en/JavaScript/Reference/Global Objects/Array/splice">Array.splice()</a></code> 时, 我们把用过的触摸实体从 <code>ongoingTouches</code> 数组中直接移除了，不再添加更新信息。对这个触摸点的跟踪随之终止。</p>
+<p>这个函数与上一个很相像，唯一的实质性区别就是在调用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" title="en/JavaScript/Reference/Global Objects/Array/splice">Array.splice()</a></code> 时， 我们把用过的触摸实体从 <code>ongoingTouches</code> 数组中直接移除了，不再添加更新信息。对这个触摸点的跟踪随之终止。</p>
 
 <h4 id="触摸取消处理">触摸取消处理</h4>
 
@@ -223,10 +223,10 @@ translation_of: Web/API/Touch_events
 }
 </pre>
 
-<p>这个函数返回一个表示颜色的字符串，可以在调用 {{ HTMLElement("canvas") }} 的函数时使用。比如，若 <span style="line-height: inherit;">{{ domxref("Touch.identifier") }} 的值</span><span style="line-height: inherit;">为 10, 则返回的字符串为 "#aaa"。</span></p>
+<p>这个函数返回一个表示颜色的字符串，可以在调用 {{ HTMLElement("canvas") }} 的函数时使用。比如，若 {{ domxref("Touch.identifier") }} 的值为 10，则返回的字符串为 "#aaa"。</p>
 
 <div class="blockIndicator warning">
-<p><span style="line-height: inherit;"><strong>译注：</strong>这里的 <code>colorForTouch()</code> 不是一个好主意。</span><span style="line-height: inherit;"><code>Touch.identifier</code> 是一个实验性属性，存在兼容性问题，不同浏览器之间实现方法不同，因此会得到不同的结果。</span></p>
+<p><strong>译注：</strong>这里的 <code>colorForTouch()</code> 不是一个好主意。<code>Touch.identifier</code> 是一个实验性属性，存在兼容性问题，不同浏览器之间实现方法不同，因此会得到不同的结果。</p>
 </div>
 
 <h4 id="拷贝触摸对象">拷贝触摸对象</h4>
@@ -309,7 +309,7 @@ translation_of: Web/API/Touch_events
 
 <h3 id="只在第二次触摸时调用_preventDefault()">只在第二次触摸时调用 preventDefault()</h3>
 
-<p>为了阻止页面产生类似 pinchZoom 的行为，可以通过“在系列触摸点的第二个调用 <code>preventDefault()</code>”技术来实现。但是该技术的行为并没有在触摸事件的标准中做出完整定义，并且在不同浏览器中会产生不同行为（比如，iOS将阻止缩放，但允许二指平移；Android 允许缩放但阻止平移；Opera 和 Firefox 目前会阻止所有缩放和平移操作）。目前，对于此类情况最好依靠 <code>meta viewport</code> 来阻止缩放，而不要依赖于上述行为。</p>
+<p>为了阻止页面产生类似 pinchZoom 的行为，可以通过“在系列触摸点的第二个调用 <code>preventDefault()</code>”技术来实现。但是该技术的行为并没有在触摸事件的标准中做出完整定义，并且在不同浏览器中会产生不同行为（比如，iOS 将阻止缩放，但允许二指平移；Android 允许缩放但阻止平移；Opera 和 Firefox 目前会阻止所有缩放和平移操作）。目前，对于此类情况最好依靠 <code>meta viewport</code> 来阻止缩放，而不要依赖于上述行为。</p>
 
 <dl>
 </dl>

@@ -30,7 +30,7 @@ translation_of: Mozilla/Firefox/Releases/5
  <li>Specifying non-finite values when adding color stops through a call to the {{ domxref("CanvasGradient") }} method <code>addColorStop()</code> now correctly throws <code>INDEX_SIZE_ERR</code> instead of <code>SYNTAX_ERR</code>.</li>
  <li>The {{ domxref("HTMLCanvasElement") }} method <code>toDataURL()</code> now correctly lower-cases the specified MIME type before matching.</li>
  <li><code>getImageData()</code> now correctly accepts rectangles that extend beyond the bounds of the canvas; pixels outside the canvas are returned as transparent black.</li>
- <li><code>drawImage()</code> and <code>createImageData()</code> now handle negative arguments in accordance with the specification, by flipping the rectangle around the appropriate axis. <strong>We need an article about <a class="external" href="http://dev.w3.org/csswg/css3-images/#default-sizing" title="http://dev.w3.org/csswg/css3-images/#default-sizing">CSS sizing</a> and how this works.</strong></li>
+ <li><code>drawImage()</code> and <code>createImageData()</code> now handle negative arguments in accordance with the specification, by flipping the rectangle around the appropriate axis. <strong>We need an article about <a class="external" href="http://dev.w3.org/csswg/css3-images/#default-sizing">CSS sizing</a> and how this works.</strong></li>
  <li>Specifying non-finite values when calling <code>createImageData()</code> now properly throws a <code>NOT_SUPPORTED_ERR</code> exception.</li>
  <li><code>createImageData()</code> and <code>getImageData()</code> now correctly return at least one pixel's worth of image data if a rectangle smaller than one pixel is specified.</li>
  <li>Specifying a negative radius when calling <code>createRadialGradient()</code> now correctly throws <code>INDEX_SIZE_ERR</code>.</li>
@@ -89,7 +89,7 @@ translation_of: Mozilla/Firefox/Releases/5
 <h3 id="MathML">MathML</h3>
 
 <ul>
- <li>Support for <a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#id.3.2.5.7.3" title="http://www.w3.org/TR/MathML3/chapter3.html#id.3.2.5.7.3">embellished operators</a></li>
+ <li>Support for <a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#id.3.2.5.7.3">embellished operators</a></li>
 </ul>
 
 <h3 id="Developer_tools">Developer tools</h3>
@@ -115,18 +115,18 @@ translation_of: Mozilla/Firefox/Releases/5
 <h4 id="NetUtil.jsm">NetUtil.jsm</h4>
 
 <ul>
- <li>The <a href="/en/JavaScript_code_modules/NetUtil.jsm#asyncFetch()" title="en/JavaScript code modules/NetUtil.jsm#asyncFetch()"><code>asyncFetch()</code></a> method now supports specifying the input source as an {{ interface("nsIInputStream") }}.</li>
+ <li>The <a href="/en/JavaScript_code_modules/NetUtil.jsm#asyncFetch()" title="en/JavaScript code modules/NetUtil.jsm#asyncFetch()"><code>asyncFetch()</code></a> method now supports specifying the input source as an <code>nsIInputStream</code>.</li>
 </ul>
 
 <h3 id="Interface_changes">Interface changes</h3>
 
 <ul>
- <li>The {{ interface("nsIHttpChannelInternal") }} interface has new attributes providing access to information about the channels' endpoints' addresses and ports. This information is provided primarily for debugging purposes.</li>
+ <li>The <code>nsIHttpChannelInternal</code> interface has new attributes providing access to information about the channels' endpoints' addresses and ports. This information is provided primarily for debugging purposes.</li>
  <li>The {{ HTMLElement("canvas") }} element's {{ htmlattrxref("width", "canvas") }} and {{ htmlattrxref("height", "canvas") }} attributes are now reflected in IDL as unsigned integers instead of signed (see <a href="/en/DOM/HTMLCanvasElement" title="en/DOM/HTMLCanvasElement"><code>HTMLCanvasElement</code></a>).</li>
- <li>The <code>nsIAppStartup2</code> and {{ interface("nsIAppStartup_MOZILLA_2_0") }} interfaces have been merged into the {{ interface("nsIAppStartup") }} interface.</li>
- <li>The <code>nsIDocShell_MOZILLA_2_0_BRANCH</code> interface has been merged into the {{ interface("nsIDocShell") }} interface.</li>
- <li>The <code>nsIFocusManager_MOZILLA_2_0_BRANCH</code> interface has been merged into the {{ interface("<code><code>nsIFocusManager</code></code>") }} interface.</li>
- <li>The <code>nsIHTMLEditor_MOZILLA_2_0_BRANCH</code> interface has been merged into the {{ interface("nsIHTMLEditor") }} interface.</li>
+ <li>The <code>nsIAppStartup2</code> and <code>nsIAppStartup_MOZILLA_2_0</code> interfaces have been merged into the <code>nsIAppStartup</code> interface.</li>
+ <li>The <code>nsIDocShell_MOZILLA_2_0_BRANCH</code> interface has been merged into the <code>nsIDocShell</code> interface.</li>
+ <li>The <code>nsIFocusManager_MOZILLA_2_0_BRANCH</code> interface has been merged into the <code>nsIFocusManager</code> interface.</li>
+ <li>The <code>nsIHTMLEditor_MOZILLA_2_0_BRANCH</code> interface has been merged into the <code>nsIHTMLEditor</code> interface.</li>
 </ul>
 
 <h4 id="New_interfaces">New interfaces</h4>

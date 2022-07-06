@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 
 <p>O operador de <strong>encadeamento opcional</strong> <strong><code>?.</code></strong> permite a leitura do valor de uma propriedade localizada internamente em uma cadeia de objetos conectados, sem que a validação de cada referência da cadeia seja expressivamente realizada.</p>
 
-<p>O operador <strong><code>?.</code></strong> funciona de maneira similar ao operador <span class="seoSummary"><code>.</code> de encadeament, exceto que, ao invés de causar um erro se a referência é <a href="/en-US/docs/Glossary/nullish">nullish</a> ({{JSxRef("null")}} ou {{JSxRef("undefined")}}), a expressão sofre um "curto-circuito" e retorna com um valor de <code>undefined</code>.</span> Quando utilizado com uma chamada de função, retorna <code>undefined</code> se a função executada não existir.</p>
+<p>O operador <strong><code>?.</code></strong> funciona de maneira similar ao operador <span class="seoSummary"><code>.</code> de encadeamento, exceto que, ao invés de causar um erro se a referência é <a href="/pt_BR/docs/Glossary/nullish">nullish</a> ({{JSxRef("null")}} ou {{JSxRef("undefined")}}), a expressão sofre um "curto-circuito" e retorna com um valor de <code>undefined</code>.</span> Quando utilizado com uma chamada de função, retorna <code>undefined</code> se a função executada não existir.</p>
 
 <p>Isso resulta em expressões mais curtas e simples ao acessar propriedades encadeadas quando a possibilidade de uma referência ser inexistente. Isso também pode auxiliar ao explorar o conteúdo de um objeto quando não existe garantia da existência de determinadas propriedades obrigatórias.</p>
 
@@ -87,12 +87,12 @@ function doSomething(onContent, onError) {
 
 <h3 id="Encadeamento_opcional_com_expressões">Encadeamento opcional com expressões</h3>
 
-<p>Você também pode usar o operador de encadeamento opcional ao acessar propriedades com uma expressão usando <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation">assessores de propriedade</a>:</p>
+<p>Você também pode usar o operador de encadeamento opcional ao acessar propriedades com uma expressão usando <a href="/pt_BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation">assessores de propriedade</a>:</p>
 
 <pre class="brush: js notranslate">let nestedProp = obj?.['prop' + 'Name'];
 </pre>
 
-<h3 id="Encadeamento_opcional_não_valid_no_lado_esquerdo_de_uma_atribuição">Encadeamento opcional não valid no lado esquerdo de uma atribuição</h3>
+<h3 id="Encadeamento_opcional_não_válido_no_lado_esquerdo_de_uma_atribuição">Encadeamento opcional não válido no lado esquerdo de uma atribuição</h3>
 
 <pre class="brush: js notranslate"><code>let object = {};
 object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment</code></pre>
@@ -170,7 +170,7 @@ console.log(customerCity); // Cidade desconhecida</pre>
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_de_Navegadores">Compatibilidade de Navegadores</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <div>
 

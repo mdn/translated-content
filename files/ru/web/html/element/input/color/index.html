@@ -27,7 +27,7 @@ translation_of: Web/HTML/Element/input/color
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#value">Value</a></strong></td>
    <td>7-значная {{domxref("DOMString")}} , указывающая {{cssxref("&lt;color&gt;")}} в строчной шестнадцатеричной системе счисления</td>
   </tr>
   <tr>
@@ -65,9 +65,9 @@ translation_of: Web/HTML/Element/input/color
 
 <p>Вы можете обновить простой пример выше, чтобы установить значение по умолчанию, так что цветовая заливка будет предварительно заполнена цветом по умолчанию, и палитра цветов (если таковая имеется) также будет по умолчанию использовать этот цвет:</p>
 
-<pre class="brush: html notranslate">&lt;input type="color" value="#ff0000"&gt;</pre>
+<pre class="brush: html">&lt;input type="color" value="#ff0000"&gt;</pre>
 
-<p>{{EmbedLiveSample("Providing_a_default_color", 700, 30)}}</p>
+<p>{{EmbedLiveSample("Предоставление_цвета_по_умолчанию", 700, 30)}}</p>
 
 <p>Если вы не зададите значение, то по умолчанию будет <code>#000000</code>, то есть чёрный цвет. Значение должно быть в семизначной шестнадцатеричной системе счисления, то есть символ"#", за которым следуют две цифры, каждая из которых представляет красный, зелёный и синий цвета, например: #rrggbb. Если у вас есть цвета в любом другом формате (например, имена цветов CSS или цветовые функции CSS, такие как rgb () или rgba ()), вам придётся преобразовать их в шестнадцатеричные перед установкой значения.</p>
 
@@ -77,7 +77,7 @@ translation_of: Web/HTML/Element/input/color
 
 <p>Вот пример, который наблюдает за изменениями со временем значения цвета:</p>
 
-<pre class="brush: js notranslate">colorPicker.addEventListener("input", updateFirst, false);
+<pre class="brush: js">colorPicker.addEventListener("input", updateFirst, false);
 colorPicker.addEventListener("change", watchColorPicker, false);
 
 function watchColorPicker(event) {
@@ -91,7 +91,7 @@ function watchColorPicker(event) {
 
 <p>Если реализация элемента {{HTMLElement("input")}} типа <code>color</code> в браузере пользователя не поддерживается правильно, а вместо этого является текстовым полем для непосредственного ввода строки цвета, вы можете использовать {{domxref("HTMLInputElement.select", " select ()")}} метод выбора текста, находящегося в данный момент в поле редактирования. Если браузер вместо этого верно использует <code>color</code>, select () ничего не делает. Вы должны знать об этом, чтобы ваш код мог адекватно реагировать в любом случае.</p>
 
-<pre class="brush: js notranslate">colorWell.select();</pre>
+<pre class="brush: js">colorWell.select();</pre>
 
 <h3 id="Вариации_внешнего_вида">Вариации внешнего вида</h3>
 
@@ -115,7 +115,7 @@ function watchColorPicker(event) {
 
 <p>HTML довольно прост — пара абзацев описательного материала с {{HTMLElement ("input")}} типа <code>color </code>с идентификатором <code>colorWell</code>, который мы будем использовать для изменения цвета текста абзацев.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;An example demonstrating the use of the &lt;code&gt;&amp;lt;input type="color"&amp;gt;&lt;/code&gt;
+<pre class="brush: html">&lt;p&gt;An example demonstrating the use of the &lt;code&gt;&amp;lt;input type="color"&amp;gt;&lt;/code&gt;
    control.&lt;/p&gt;
 
 &lt;label for="colorWell"&gt;Color:&lt;/label&gt;
@@ -132,7 +132,7 @@ function watchColorPicker(event) {
 
 <p>Во-первых, есть некоторые настройки. Здесь мы объявляем некоторые переменные. Объявляя переменную, содержащую цвет, который мы установим, когда загрузим страницу, а затем устанавливаем обработчик {{domxref("Window/load_event", "load")}} для выполнения основной работы запуска, как только страница будет полностью загружена.</p>
 
-<pre class="brush: js notranslate">var colorWell;
+<pre class="brush: js">var colorWell;
 var defaultColor = "#0000ff";
 
 window.addEventListener("load", startup, false);
@@ -142,7 +142,7 @@ window.addEventListener("load", startup, false);
 
 <p>Как только страница загружена, вызывается наш обработчик событий загрузки <code>startup()</code>:</p>
 
-<pre class="brush: js notranslate">function startup() {
+<pre class="brush: js">function startup() {
   colorWell = document.querySelector("#colorWell");
   colorWell.value = defaultColor;
   colorWell.addEventListener("input", updateFirst, false);
@@ -159,7 +159,7 @@ window.addEventListener("load", startup, false);
 
 <p>Мы предоставляем две функции, которые имеют дело с изменением цвета. Функция <code>updateFirst()</code> вызывается в ответ на <code>input</code> событие. Он изменяет цвет первого элемента абзаца в документе, чтобы соответствовать новому значению входного цвета. Поскольку <code>input</code> события запускаются каждый раз, когда производится корректировка значения (например, если яркость цвета увеличивается), они будут происходить повторно при использовании средства выбора цвета.</p>
 
-<pre class="brush: js notranslate">function updateFirst(event) {
+<pre class="brush: js">function updateFirst(event) {
   var p = document.querySelector("p");
 
   if (p) {
@@ -169,7 +169,7 @@ window.addEventListener("load", startup, false);
 
 <p>Когда средство выбора цвета закрывается, указывая, что значение больше не будет меняться (если пользователь повторно не откроет средство выбора цвета), в элемент отправляется событие <code>change</code>. Мы обрабатываем это событие с помощью функции <code>updateAll()</code>, используя {{domxref("HTMLInputElement.value", "Event.target.value")}} для получения окончательного выбранного цвета:</p>
 
-<pre class="brush: js notranslate">function updateAll(event) {
+<pre class="brush: js">function updateAll(event) {
   document.querySelectorAll("p").forEach(function(p) {
     p.style.color = event.target.value;
   });
@@ -182,35 +182,15 @@ window.addEventListener("load", startup, false);
 
 <p>Финальный результат выглядит так:</p>
 
-<p>{{EmbedLiveSample("Example", 700, 200)}}</p>
+<p>{{EmbedLiveSample("Пример", 700, 200)}}</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#color-state-(type=color)')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Первоначальное определение</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#the-input-element')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Первоначальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
 
-<p>{{Compat("html.elements.input.input-color")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Изучите_также">Изучите также</h2>
 

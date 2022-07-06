@@ -29,93 +29,7 @@ original_slug: Web/Events/mousewheel
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome("1.0") }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatIE("6.0") }}</td>
-   <td>{{ CompatOpera("10.00") }}</td>
-   <td>{{ CompatSafari("3.0") }}</td>
-  </tr>
-  <tr>
-   <td><code>wheelDeltaX</code></td>
-   <td>{{ CompatChrome("1.0") }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatSafari("3.0") }}</td>
-  </tr>
-  <tr>
-   <td><code>wheelDeltaY</code></td>
-   <td>{{ CompatChrome("1.0") }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatSafari("3.0") }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>wheelDeltaX</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>wheelDeltaY</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Element.mousewheel_event")}}
 
 <h2 id="detail_value">detail value</h2>
 
@@ -155,7 +69,7 @@ original_slug: Web/Events/mousewheel
 
 <p>This difference makes a serious issue for web application developers. That is, web developers cannot know if <code>mousewheel</code> event is caused by which device.</p>
 
-<p>See <code>WebInputEventFactory::mouseWheelEvent</code> of the <a href="http://mxr.mozilla.org/chromium/source/src/third_party/WebKit/Source/web/WebInputEventFactoryMac.mm" title="http://mxr.mozilla.org/chromium/source/src/third_party/WebKit/Source/web/mac/WebInputEventFactory.mm">Chromium's source code</a> for the detail.</p>
+<p>See <code>WebInputEventFactory::mouseWheelEvent</code> of the <a href="http://mxr.mozilla.org/chromium/source/src/third_party/WebKit/Source/web/WebInputEventFactoryMac.mm">Chromium's source code</a> for the detail.</p>
 
 <h3 id="Safari">Safari</h3>
 

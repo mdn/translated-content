@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Float64Array
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Float64Array</code></strong> 类型数组代表的是平台字节顺序为64位的浮点数型数组(对应于 C 浮点数据类型) 。 如果需要控制字节顺序， 使用 {{jsxref("DataView")}} 替代。其内容初始化为<code>0</code>。一旦建立起来，你可以使用这个对象的方法对其元素进行操作，或者使用标准数组索引语法 (使用方括号)。</p>
+<p><strong><code>Float64Array</code></strong> 类型数组代表的是平台字节顺序为 64 位的浮点数型数组 (对应于 C 浮点数据类型) 。 如果需要控制字节顺序，使用 {{jsxref("DataView")}} 替代。其内容初始化为<code>0</code>。一旦建立起来，你可以使用这个对象的方法对其元素进行操作，或者使用标准数组索引语法 (使用方括号)。</p>
 
 <h2 id="语法">?语法 </h2>
 
@@ -25,9 +25,9 @@ new Float64Array(buffer [, byteOffset [, length]]);</pre>
 
 <dl>
  <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT", "Float64Array.BYTES_PER_ELEMENT")}}</dt>
- <dd>返回元素字节数。 <code>在</code> <code>Float64Array的情况下返回8。</code></dd>
+ <dd>返回元素字节数。<code>在</code> <code>Float64Array</code> 的情况下返回 8。</dd>
  <dt>Float64Array.length</dt>
- <dd>长度属性的值为 3。关于其实际长度(元素数量)参见 {{jsxref("TypedArray.prototype.length", "Float64Array.prototype.length")}}。</dd>
+ <dd>长度属性的值为 3。关于其实际长度 (元素数量) 参见 {{jsxref("TypedArray.prototype.length", "Float64Array.prototype.length")}}。</dd>
  <dt>{{jsxref("TypedArray.name", "Float64Array.name")}}</dt>
  <dd>返回构造函数名字的字符串值。在 <code>Float64Array</code> 类型的情况下为："Float64Array"。</dd>
  <dt>{{jsxref("TypedArray.prototype", "Float64Array.prototype")}}</dt>
@@ -38,28 +38,28 @@ new Float64Array(buffer [, byteOffset [, length]]);</pre>
 
 <dl>
  <dt>{{jsxref("TypedArray.from", "Float64Array.from()")}}</dt>
- <dd>从一个类数组对象或可遍历对象创建一个新的Float64Array。参见 {{jsxref("Array.from()")}}。</dd>
+ <dd>从一个类数组对象或可遍历对象创建一个新的 Float64Array。参见 {{jsxref("Array.from()")}}。</dd>
  <dt>{{jsxref("TypedArray.of", "Float64Array.of()")}}</dt>
- <dd>用可变数量的参数创建一个新的Float64Array。 参见 {{jsxref("Array.of()")}}。</dd>
+ <dd>用可变数量的参数创建一个新的 Float64Array。 参见 {{jsxref("Array.of()")}}。</dd>
 </dl>
 
 <h2 id="Float64Array_属性"><code>Float64Array</code> 属性</h2>
 
-<p>所有的<code>Float64Array对象都</code>继承自 {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}。</p>
+<p>所有的 <code>Float64Array</code> 对象都继承自 {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}。</p>
 
 <h3 id="特性">特性</h3>
 
 <dl>
  <dt><code>Float64Array.prototype.constructor</code></dt>
- <dd>返回创建这个实例原型的函数。 这是<code>Float64Array</code> 默认的构造函数。</dd>
+ <dd>返回创建这个实例原型的函数。这是 <code>Float64Array</code> 默认的构造函数。</dd>
  <dt>{{jsxref("TypedArray.prototype.buffer", "Float64Array.prototype.buffer")}} {{readonlyInline}}</dt>
- <dd>返回这个<code>Float64Array引用的</code> {{jsxref("ArrayBuffer")}}。构造时已固定，所以是<strong>只读</strong>的。</dd>
+ <dd>返回这个<code>Float64Array 引用的</code> {{jsxref("ArrayBuffer")}}。构造时已固定，所以是<strong>只读</strong>的。</dd>
  <dt>{{jsxref("TypedArray.prototype.byteLength", "Float64Array.prototype.byteLength")}} {{readonlyInline}}</dt>
- <dd>返回从<code>Float64Array的</code>{{jsxref("ArrayBuffer")}}开头开始<code>的</code>长度 (以字节为单位) 。构造时已固定，所以是<strong>只读</strong>的。</dd>
+ <dd>返回从<code>Float64Array 的</code>{{jsxref("ArrayBuffer")}}开头开始<code>的</code>长度 (以字节为单位) 。构造时已固定，所以是<strong>只读</strong>的。</dd>
  <dt>{{jsxref("TypedArray.prototype.byteOffset", "Float64Array.prototype.byteOffset")}} {{readonlyInline}}</dt>
- <dd>返回从<code>Float64Array的</code>{{jsxref("ArrayBuffer")}}开头开始<code>的偏移量</code> (以字节为单位) 。构造时已固定，所以是<strong>只读</strong>的。</dd>
+ <dd>返回从<code>Float64Array 的</code>{{jsxref("ArrayBuffer")}}开头开始<code>的偏移量</code> (以字节为单位) 。构造时已固定，所以是<strong>只读</strong>的。</dd>
  <dt>{{jsxref("TypedArray.prototype.length", "Float64Array.prototype.length")}} {{readonlyInline}}</dt>
- <dd>返回<code>Float64Array中的元素个数</code>。构造时已固定，所以是<strong>只读</strong>的。</dd>
+ <dd>返回 <code>Float64Array</code> 中的元素个数。构造时已固定，所以是<strong>只读</strong>的。</dd>
 </dl>
 
 <h3 id="方法_2">方法</h3>
@@ -72,21 +72,21 @@ new Float64Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.every", "Float64Array.prototype.every()")}}</dt>
  <dd>检测是否所有元素都能通过给定函数的测试。参见{{jsxref("Array.prototype.every()")}}。</dd>
  <dt>{{jsxref("TypedArray.fill", "Float64Array.prototype.fill()")}}</dt>
- <dd>用一个静态值填充给定的起始位置。 参见{{jsxref("Array.prototype.fill()")}}。</dd>
+ <dd>用一个静态值填充给定的起始位置。参见{{jsxref("Array.prototype.fill()")}}。</dd>
  <dt>{{jsxref("TypedArray.filter", "Float64Array.prototype.filter()")}}</dt>
- <dd>创建一个新数组，数据为原数组中所有能让给入函数返回true的元素。参见{{jsxref("Array.prototype.filter()")}}。</dd>
+ <dd>创建一个新数组，数据为原数组中所有能让给入函数返回 true 的元素。参见{{jsxref("Array.prototype.filter()")}}。</dd>
  <dt>{{jsxref("TypedArray.find", "Float64Array.prototype.find()")}}</dt>
- <dd>返回满足测试函数的值，如果没有找到，返回undefined。 参见{{jsxref("Array.prototype.find()")}}。</dd>
+ <dd>返回满足测试函数的值，如果没有找到，返回 undefined。 参见{{jsxref("Array.prototype.find()")}}。</dd>
  <dt>{{jsxref("TypedArray.findIndex", "Float64Array.prototype.findIndex()")}}</dt>
  <dd>返回满足测试函数的值的位置，如果没有找到，返回-1。参见{{jsxref("Array.prototype.findIndex()")}}。</dd>
  <dt>{{jsxref("TypedArray.forEach", "Float64Array.prototype.forEach()")}}</dt>
  <dd>以每个元素为参数各调用一次函数。参见{{jsxref("Array.prototype.forEach()")}}。</dd>
  <dt>{{jsxref("TypedArray.includes", "Float64Array.prototype.includes()")}} {{experimental_inline}}</dt>
- <dd>判断是否包含某个元素，<code>返回true</code> 或 <code>false</code>。参见{{jsxref("Array.prototype.includes()")}}。</dd>
+ <dd>判断是否包含某个元素，返回 <code>true</code> 或 <code>false</code>。参见{{jsxref("Array.prototype.includes()")}}。</dd>
  <dt>{{jsxref("TypedArray.indexOf", "Float64Array.prototype.indexOf()")}}</dt>
  <dd>返回数组中等于给定值的元素的第一个（最小）位置， 没有找到则返回-1。参见{{jsxref("Array.prototype.indexOf()")}}。</dd>
  <dt>{{jsxref("TypedArray.join", "Float64Array.prototype.join()")}}</dt>
- <dd>合并所有数组元素到一个字符串中。 参见{{jsxref("Array.prototype.join()")}}。</dd>
+ <dd>合并所有数组元素到一个字符串中。参见{{jsxref("Array.prototype.join()")}}。</dd>
  <dt>{{jsxref("TypedArray.keys", "Float64Array.prototype.keys()")}}</dt>
  <dd><code>返回一个包含数组中所有索引的数组遍历器</code>。 参见{{jsxref("Array.prototype.keys()")}}。</dd>
  <dt>{{jsxref("TypedArray.lastIndexOf", "Float64Array.prototype.lastIndexOf()")}}</dt>
@@ -106,7 +106,7 @@ new Float64Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.slice", "Float64Array.prototype.slice()")}}</dt>
  <dd>提取数组的一部分并且返回一个新数组。参见{{jsxref("Array.prototype.slice()")}}。</dd>
  <dt>{{jsxref("TypedArray.some", "Float64Array.prototype.some()")}}</dt>
- <dd>如果数组中至少有一个元素满足测试函数的要求则返回true。参见{{jsxref("Array.prototype.some()")}}。</dd>
+ <dd>如果数组中至少有一个元素满足测试函数的要求则返回 true。参见{{jsxref("Array.prototype.some()")}}。</dd>
  <dt>{{jsxref("TypedArray.sort", "Float64Array.prototype.sort()")}}</dt>
  <dd>对数组元素进行排序并返回数组。参见{{jsxref("Array.prototype.sort()")}}。</dd>
  <dt>{{jsxref("TypedArray.subarray", "Float64Array.prototype.subarray()")}}</dt>
@@ -156,12 +156,12 @@ var z = new Float64Array(buffer, 0, 4);
   <tr>
    <td>{{SpecName('Typed Array')}}</td>
    <td>{{Spec2('Typed Array')}}</td>
-   <td>被ECMAScript 6取代。</td>
+   <td>被 ECMAScript 6 取代。</td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#table-49', 'TypedArray constructors')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td>在ECMA中初始定义，另外规定需要使用new。</td>
+   <td>在 ECMA 中初始定义，另外规定需要使用 new。</td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}}</td>
@@ -171,82 +171,17 @@ var z = new Float64Array(buffer, 0, 4);
  </tbody>
 </table>
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>7.0</td>
-   <td>{{CompatGeckoDesktop(2)}}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td><code>需要用new</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(44)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>4.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile(2) }}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>4.2</td>
-  </tr>
-  <tr>
-   <td><code>需要用new</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile(44) }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="一致性提示">一致性提示</h2>
 
-<p>从ECMAScript 2015 (ES6)开始， <code>Float32Array</code>构造函数需要用一个{{jsxref("Operators/new", "new")}}操作符来构造。现在直接把<code>Float32Array构造函数当函数调用而不使用new，会抛出一个</code>{{jsxref("TypeError")}}。</p>
+<p>从 ECMAScript 2015 (ES6) 开始，<code>Float32Array</code> 构造函数需要用一个 {{jsxref("Operators/new", "new")}} 操作符来构造。现在直接把 <code>Float32Array</code> 构造函数当函数调用而不使用 new，会抛出一个 {{jsxref("TypeError")}}。</p>
 
 <pre class="brush: js example-bad">var dv = Float64Array([1, 2, 3]);
 // TypeError: calling a builtin Float64Array constructor
-// 不允许不使用new</pre>
+// 不允许不使用 new</pre>
 
 <pre class="brush: js example-good">var dv = new Float64Array([1, 2, 3]);</pre>
 

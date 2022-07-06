@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>BigInt.asUintN</code></strong> 静态方法将 <code>BigInt</code> 转换为一个 0 和 2<sup>width</sup>-1 之间的无符号整数。</p>
+<p><strong><code>BigInt.asUintN</code></strong> 静态方法将 <code>BigInt</code> 转换为一个 0 和 2^width-1 之间的无符号整数。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/bigint-asuintn.html")}}</div>
 
@@ -26,13 +26,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 
 <h3 id="返回值">返回值</h3>
 
-<p><code>bigint</code> 模(modulo) 2<sup><code>width</code></sup> 作为无符号整数的值。</p>
+<p><code>bigint</code> 模 (modulo) <code>2^width</code> 作为无符号整数的值。</p>
 
 <h2 id="例子">例子</h2>
 
-<h3 id="保持在64位范围内">保持在64位范围内</h3>
+<h3 id="保持在_64_位范围内">保持在 64 位范围内</h3>
 
-<p><code>BigInt.asUintN()</code> 方法对于保持在64位(64-bit)算数范围内非常有用。</p>
+<p><code>BigInt.asUintN()</code> 方法对于保持在 64 位 (64-bit) 算数范围内非常有用。</p>
 
 <pre class="brush: js">const max = 2n ** 64n - 1n;
 

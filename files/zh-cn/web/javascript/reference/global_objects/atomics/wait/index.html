@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 <p>静态方法 <code><strong>Atomics</strong></code><strong><code>.wait()</code></strong> 确保了一个在 {{jsxref("Int32Array")}} 数组中给定位置的值没有发生变化、仍然是给定的值时进程将会睡眠，直到被唤醒或超时。该方法返回一个字符串，值为<code>"ok"</code>, <code>"not-equal"</code>, 或 <code>"timed-out"</code> 之一。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 这项操作仅允许同一个共享内存的 {{jsxref("Int32Array")}} 配合使用并且无法运行在主线程中。</p>
+<p><strong>备注：</strong>这项操作仅允许同一个共享内存的 {{jsxref("Int32Array")}} 配合使用并且无法运行在主线程中。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -53,12 +53,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 var int32 = new Int32Array(sab);
 </pre>
 
-<p>检测给定的数组索引0的值，如果它如预期一般的等于我们给定的值0，则这个读取线程将会睡眠等待。一旦当有一个写入线程在这个位置存储了一个新值，它将会收到写入线程的通知并且返回新值 (123) :</p>
+<p>检测给定的数组索引 0 的值，如果它如预期一般的等于我们给定的值 0，则这个读取线程将会睡眠等待。一旦当有一个写入线程在这个位置存储了一个新值，它将会收到写入线程的通知并且返回新值 (123) :</p>
 
 <pre class="brush: js">Atomics.wait(int32, 0, 0);
 console.log(int32[0]); // 123</pre>
 
-<p>一旦某个写入线程存储了一个新值到<code>int32</code> 的索引0位置，则通知给该等待线程：</p>
+<p>一旦某个写入线程存储了一个新值到<code>int32</code> 的索引 0 位置，则通知给该等待线程：</p>
 
 <pre class="brush: js">console.log(int32[0]); // 0;
 Atomics.store(int32, 0, 123);

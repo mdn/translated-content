@@ -75,14 +75,14 @@ X-DNS-Prefetch-Control: off
 <pre class="brush: html">&lt;link rel="dns-prefetch" href="http://www.spreadfirefox.com/"&gt;
 </pre>
 
-<p>在这个例子中，Firefox 将预解析域名"<a class="linkification-ext external" href="http://www.spreadfirefox.com" title="Linkification: http://www.spreadfirefox.com">www.spreadfirefox.com</a>"。</p>
+<p>在这个例子中，Firefox 将预解析域名"<a class="linkification-ext external" href="http://www.spreadfirefox.com">www.spreadfirefox.com</a>"。</p>
 
 <p>而且，{{ HTMLElement("link") }} 元素也可以使用不完整的 URL 的主机名来标记预解析，但这些主机名前必需要有双斜线：</p>
 
 <pre class="brush: html">&lt;link rel="dns-prefetch" href="//www.spreadfirefox.com"&gt;
 </pre>
 
-<p>强制对域名进行预读取在一些情况下很有用, 比如, 在网站的主页上，强制在整个网站上频繁引用的域名的预解析，即使它们不在主页本身上使用。即使主页的性能可能不受影响，这将提高整体站点性能。</p>
+<p>强制对域名进行预读取在一些情况下很有用，比如，在网站的主页上，强制在整个网站上频繁引用的域名的预解析，即使它们不在主页本身上使用。即使主页的性能可能不受影响，这将提高整体站点性能。</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

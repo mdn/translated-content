@@ -49,7 +49,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 <p>Давайте снова посмотрим на <a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B#%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_HTML_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0">HTML-документ из прошлой статьи</a>:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -62,7 +62,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 <p>Содержимое {{htmlelement("head")}}, в отличие от содержимого элемента {{htmlelement("body")}}, не отображается на странице. Задача &lt;head&gt; — хранить {{glossary("Metadata", "метаданные")}} документа. В приведённом выше примере &lt;head&gt; совсем небольшой:</p>
 
-<pre class="brush: html notranslate">&lt;head&gt;
+<pre class="brush: html">&lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Моя тестовая страница&lt;/title&gt;
 &lt;/head&gt;</pre>
@@ -108,9 +108,9 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 <p>В заголовке примера выше есть следующая строка:</p>
 
-<pre class="brush: html notranslate">&lt;meta charset="utf-8"&gt;</pre>
+<pre class="brush: html">&lt;meta charset="utf-8"&gt;</pre>
 
-<p>В этом элементе указана кодировка документа — набор символов, которые в нём можно использовать . <code>utf-8</code> — универсальный набор символов, который включает почти все символы со всех языков человечества. Такая веб-страница сможет работать с любым языком. Установить эту кодировку на всех веб-странице, которые вы создаёте — отличная идея! Страница в такой кодировке прекрасно отображает как английские, так и японские символы:</p>
+<p>В этом элементе указана кодировка документа — набор символов, которые в нём можно использовать . <code>utf-8</code> — универсальный набор символов, который включает почти все символы со всех языков человечества. Такая веб-страница сможет работать с любым языком. Установить эту кодировку на всех веб-страницах, которые вы создаёте — отличная идея! Страница в такой кодировке прекрасно отображает как английские, так и японские символы:</p>
 
 <p><img alt="a web page containing English and Japanese characters, with the character encoding set to universal, or utf-8. Both languages display fine," src="https://mdn.mozillademos.org/files/12343/correct-encoding.png" style="display: block; margin: 0 auto;">Если использовать, скажем, кодировку <code>ISO-8859-1</code> (набор символов для латиницы), текст страницы испортится:</p>
 
@@ -124,7 +124,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 <p>Чтобы проверить это, вернитесь к HTML из примера <code>&lt;title&gt;</code> (странице <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html">title-example.html</a>), поменяйте meta charset на <code>ISO-8859-1</code> и попробуйте написать что-нибудь на японском или русском. Вот текст из нашего примера (кстати, там написано <em>«рис горячий»</em>):</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Пример на японском: ご飯が熱い。&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Пример на японском: ご飯が熱い。&lt;/p&gt;</pre>
 
 <h3 id="Указываем_автора_и_описание">Указываем автора и описание</h3>
 
@@ -137,7 +137,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 <p>Два полезных элемента метаданных — указание автора страницы и краткое описание её содержимого. Рассмотрим эти элементы на примере:</p>
 
-<pre class="brush: html notranslate">&lt;meta name="author" content="Крис Миллс"&gt;
+<pre class="brush: html">&lt;meta name="author" content="Крис Миллс"&gt;
 &lt;meta name="description" content="Задача MDN — в том, чтобы обучить
 новичков всему тому, что нужно им для разработки веб-сайтов и приложений."&gt;</pre>
 
@@ -153,7 +153,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
  <li>Перейдите на<a href="https://developer.mozilla.org/en-US/"> главную страницу Mozilla Developer Network</a>.</li>
  <li>Откройте исходный код страницы (кликните правой кнопкой мыши и выберите <em>Просмотреть код</em> в контекстном меню.)</li>
  <li>Найдите тег meta с описанием. Он выглядит так:
-  <pre class="brush: html notranslate">&lt;meta name="description" content="Веб-документация на MDN
+  <pre class="brush: html">&lt;meta name="description" content="Веб-документация на MDN
 предоставляет собой информацию об открытых веб-технологиях,
 включая HTML, CSS и различные API для веб-сайтов и
 прогрессивных веб-приложений. Также на сайте содержатся материалы
@@ -178,7 +178,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 <p>Например, <a href="https://ruogp.me/">Протокол Open Graph</a> создан Facebook чтобы предоставить сайтам дополнительные возможности использования метаданных. В исходном коде MDN Web Docs вы можете найти строки:</p>
 
-<pre class="brush: html notranslate">&lt;meta property="og:image" content="https://wiki.developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png"&gt;
+<pre class="brush: html">&lt;meta property="og:image" content="/static/img/opengraph-logo.72382e605ce3.png"&gt;
 &lt;meta property="og:description" content="Веб-документация на MDN предоставляет
 собой информацию об открытых веб-технологиях, включая HTML, CSS и различные API для веб-сайтов
 и прогрессивных веб-приложений. Также на сайте содержатся материалы для разработчиков о таких
@@ -189,7 +189,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 <p><img alt="Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description." src="https://mdn.mozillademos.org/files/12349/facebook-output.png" style="display: block; margin: 0 auto;">У Twitter также есть собственный формат метаданных, с помощью которого  создаётся аналогичный эффект, при отображении URL сайта на twitter.com:</p>
 
-<pre class="brush: html notranslate">&lt;meta name="twitter:title" content="MDN Web Docs"&gt;</pre>
+<pre class="brush: html">&lt;meta name="twitter:title" content="MDN Web Docs"&gt;</pre>
 
 <h2 id="Добавление_иконок">Добавление иконок</h2>
 
@@ -202,13 +202,13 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 <ol>
  <li>Сохраните изображение в формате <code>.ico</code> (многие браузеры поддерживают и в более привычных форматах, таких как <code>.gif</code> или <code>.png</code>) в папку со своим документом. Старые браузеры, например, Internet Explorer 6, поддерживают только формат <code>.ico</code></li>
  <li>Добавьте ссылку на иконку в <code>&lt;head&gt;</code> документа:
-  <pre class="brush: html notranslate">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</pre>
+  <pre class="brush: html">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</pre>
  </li>
 </ol>
 
 <p>Для разных устройств можно указывать разные иконки. Например, на главной странице MDN:</p>
 
-<pre class="brush: html notranslate">&lt;!-- Для iPad 3 с Retina-экраном высокого разрешения: --&gt;
+<pre class="brush: html">&lt;!-- Для iPad 3 с Retina-экраном высокого разрешения: --&gt;
 &lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.mozilla.org/static/img/favicon144.png"&gt;
 &lt;!-- Для iPhone с Retina-экраном высокого разрешения: --&gt;
 &lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.mozilla.org/static/img/favicon114.png"&gt;
@@ -231,12 +231,12 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
  <li>
   <p>Элемент {{htmlelement("link")}} помещают в заголовок документа. У него есть два атрибута: <code>rel="stylesheet"</code> показывает, что мы указываем <em>стиль</em> документа, а в <code>href</code> указан путь к файлу:</p>
 
-  <pre class="brush: html notranslate">&lt;link rel="stylesheet" href="my-css-file.css"&gt;</pre>
+  <pre class="brush: html">&lt;link rel="stylesheet" href="my-css-file.css"&gt;</pre>
  </li>
  <li>
   <p>Элемент {{htmlelement("script")}} не обязательно находится в заголовке — на самом деле лучше поместить его в самом конце страницы, прямо перед закрывающем тегом <code>&lt;/body&gt;</code>. Так браузер сначала отобразит саму страницу, а уже затем загрузит и запустит скрипт — иначе скрипт может обратиться к ещё не созданному элементу страницы и сломаться.</p>
 
-  <pre class="brush: html notranslate">&lt;script src="my-js-file.js"&gt;&lt;/script&gt;</pre>
+  <pre class="brush: html">&lt;script src="my-js-file.js"&gt;&lt;/script&gt;</pre>
 
   <p><strong>Примечание</strong>: Элемент <code>&lt;script&gt;</code> кажется пустым, но это не всегда так, и указывать закрывающий тег обязательно. Вместо того чтобы ссылаться на внешний скрипт, код можно писать прямо внутри этого элемента — так можно не тратить время на загрузку отдельного скрипта, но зато не выйдет сослаться на один js-файл с нескольких страниц.</p>
  </li>
@@ -267,16 +267,16 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 <p>Наконец, стоит отметить, что вы можете (и действительно должны) установить язык для своей страницы. Это можно сделать, добавив <a href="/en-US/docs/Web/HTML/Global_attributes/lang">атрибут lang</a> в открывающий HTML-тег (как в примере <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html">meta-example.html</a>: и как показано ниже):</p>
 
-<pre class="syntaxbox notranslate">&lt;html lang="en-US"&gt;</pre>
+<pre class="syntaxbox">&lt;html lang="en-US"&gt;</pre>
 
-<pre class="syntaxbox notranslate">&lt;html lang="ru"&gt;
+<pre class="syntaxbox">&lt;html lang="ru"&gt;
 </pre>
 
 <p>Это полезно во многих случаях. Ваш HTML-документ будет более эффективно индексироваться поисковыми системами, если его язык установлен (что позволяет ему правильно отображаться в языковых результатах), и он полезен людям с нарушением зрения, которые используют программы, читающие страницы вслух (например, слово "шесть" пишется одинаково как на французском, так и на английском языках, но произносится по-разному.).</p>
 
 <p>Можно также указать язык для части документа. Например, мы могли бы установить язык для части страницы на японском:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Пример на японском: &lt;span lang="jp"&gt;ご飯が熱い。&lt;/span&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Пример на японском: &lt;span lang="ja"&gt;ご飯が熱い。&lt;/span&gt;.&lt;/p&gt;</pre>
 
 <p>Коды языков определены в стандарте <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>. Подробнее о работе с языками можно узнать в <a href="https://www.w3.org/International/articles/language-tags/">Языковые тэги в HTML и XML</a>.</p>
 

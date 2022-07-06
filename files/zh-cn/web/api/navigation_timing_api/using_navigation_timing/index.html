@@ -14,43 +14,43 @@ translation_of: Web/API/Navigation_timing_API/Using_Navigation_Timing
 
 <h2 id="收集计时信息">收集计时信息</h2>
 
-<p>使用该API就像使用{{domxref("window.performance")}}获取{{domxref("Performance")}}对象并在返回的对象中查找所需内容一样简单。比如，为了测量页面的感知到的加载时间：</p>
+<p>使用该 API 就像使用 {{domxref("window.performance")}} 获取 {{domxref("Performance")}} 对象并在返回的对象中查找所需内容一样简单。比如，为了测量页面的感知到的加载时间：</p>
 
-<pre>window.addEventListener("load", function() {
-  let now = new Date().getTime();
-  let loadingTime = now - performance.timing.navigationStart;
+<pre class="brush: js">window.addEventListener("load", function() {
+  let now = new Date().getTime();
+  let loadingTime = now - performance.timing.navigationStart;
 
-  document.querySelector(".output").innerText =
+  document.querySelector(".output").innerText =
         loadingTime + " ms";
 }, false);</pre>
 
-<p>在发生{{event("load")}}事件时执行的该代码从当前时间中减去浏览器导航开始时记录的时间({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}})，并通过将该信息插入到元素中，输出到屏幕。</p>
+<p>在发生 {{event("load")}} 事件时执行的该代码从当前时间中减去浏览器导航开始时记录的时间 ({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}})，并通过将该信息插入到元素中，输出到屏幕。</p>
 
 <div class="hidden">
 <h4 id="HTML">HTML</h4>
 
-<pre>&lt;div class="output"&gt;
+<pre class="brush: html">&lt;div class="output"&gt;
 &lt;/div&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre>.output {
+<pre class="brush: css">.output {
   border: 1px solid #bbb;
   font: 16px "Open Sans", "Helvetica", "Arial", sans-serif;
 }</pre>
 </div>
 
-<p>结合适当的HTML和CSS，结果就是：</p>
+<p>结合适当的 HTML 和 CSS，结果就是：</p>
 
-<p>{{EmbedLiveSample("Collecting_timing_information", 500, 80)}}</p>
+<p>{{EmbedLiveSample("收集计时信息", 500, 80)}}</p>
 
-<p>列出的值适用于上面展示了示例的{{HTMLElement("iframe")}}。</p>
+<p>列出的值适用于上面展示了示例的 {{HTMLElement("iframe")}}。</p>
 
-<p>你可以在{{domxref("PerformanceTiming")}}中查找可用的计时值的列表，请参见{{domxref("PerformanceTiming")}}接口的“<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/API/PerformanceTiming">属性</a>”部分。</p>
+<p>你可以在 {{domxref("PerformanceTiming")}} 中查找可用的计时值的列表，请参见 {{domxref("PerformanceTiming")}} 接口的“<a href="/zh-CN/docs/Web/API/PerformanceTiming">属性</a>”部分。</p>
 
 <h2 id="确定导航类型">确定导航类型</h2>
 
-<p>为了将从 {{domxref("PerformanceTiming")}}获取到的计时信息放入正确的观点，你需要更多地了解发生了哪种加载操作。特别是你需要知道：</p>
+<p>为了将从 {{domxref("PerformanceTiming")}} 获取到的计时信息放入正确的观点，你需要更多地了解发生了哪种加载操作。特别是你需要知道：</p>
 
 <ul>
  <li>这是加载还是重新加载？</li>
@@ -58,11 +58,11 @@ translation_of: Web/API/Navigation_timing_API/Using_Navigation_Timing
  <li>完成导航需要多少个（如果有）重定向？</li>
 </ul>
 
-<p>此信息由{{domxref("Performance.navigation")}}属性提供，该属性返回包含所需信息的{{domxref("PerformanceNavigation")}}对象。</p>
+<p>此信息由 {{domxref("Performance.navigation")}} 属性提供，该属性返回包含所需信息的 {{domxref("PerformanceNavigation")}} 对象。</p>
 
 <p>让我们将此信息添加到上面的示例中。 新代码如下所示：</p>
 
-<pre>window.addEventListener("load", function() {
+<pre class="brush: js">window.addEventListener("load", function() {
   let now = new Date().getTime();
   let loadingTime = now - performance.timing.navigationStart;
 
@@ -89,17 +89,17 @@ translation_of: Web/API/Navigation_timing_API/Using_Navigation_Timing
   document.querySelector(".output").innerHTML = output;
 }, false);</pre>
 
-<p>这通过查看<code>performance.navigation</code>对象的内容来修改了前面的示例。{{domxref("PerformanceNavigation.type", "performance.navigation.type")}}指示发生了哪种加载操作：导航，重新加载或浏览器历史记录的切换。我们还从{{domxref("PerformanceNavigation.redirectCount", "performance.navigation.redirectCount")}}获取导航期间发生的重定向次数。就像以前的页面加载时间一样，此信息通过插入到具有<code>"output"</code>类的元素中输出到屏幕上。</p>
+<p>这通过查看 <code>performance.navigation</code> 对象的内容来修改了前面的示例。{{domxref("PerformanceNavigation.type", "performance.navigation.type")}} 指示发生了哪种加载操作：导航，重新加载或浏览器历史记录的切换。我们还从 {{domxref("PerformanceNavigation.redirectCount", "performance.navigation.redirectCount")}} 获取导航期间发生的重定向次数。就像以前的页面加载时间一样，此信息通过插入到具有 <code>"output"</code> 类的元素中输出到屏幕上。</p>
 
 <div class="hidden">
 <h4 id="HTML_2">HTML</h4>
 
-<pre>&lt;div class="output"&gt;
+<pre class="brush: html">&lt;div class="output"&gt;
 &lt;/div&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre>.output {
+<pre class="brush: css">.output {
   border: 1px solid #bbb;
   font: 16px "Open Sans", "Helvetica", "Arial", sans-serif;
 }</pre>
@@ -107,14 +107,14 @@ translation_of: Web/API/Navigation_timing_API/Using_Navigation_Timing
 
 <p>使用此代码后，结果如下所示：</p>
 
-<p>{{EmbedLiveSample("Determining_navigation_type", 500, 120)}}</p>
+<p>{{EmbedLiveSample("确定导航类型", 500, 120)}}</p>
 
-<p>列出的值适用于展示示例的 {{HTMLElement("iframe")}} 。</p>
+<p>列出的值适用于展示示例的 {{HTMLElement("iframe")}}。</p>
 
 <h2 id="也可以看看">也可以看看</h2>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Navigation_timing_API">Navigation Timing API</a></li>
+ <li><a href="/zh-CN/docs/Web/API/Navigation_timing_API">Navigation Timing API</a></li>
  <li>{{domxref("window.performance")}}</li>
  <li>{{domxref("Performance")}}, {{domxref("PerformanceTiming")}}, and {{domxref("PerformanceNavigation")}}</li>
 </ul>

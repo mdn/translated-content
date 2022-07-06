@@ -85,7 +85,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 <p>Other popular editors have similar linting packages available. For example, see:</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/www.sublimelinter.com/">SublimeLinter</a> for Sublime Text</li>
+ <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/www.sublimelinter.com/">SublimeLinter</a> for Sublime Text</li>
  <li><a href="https://sourceforge.net/projects/notepad-linter/">Notepad++ linter</a></li>
 </ul>
 
@@ -94,7 +94,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 <p>The developer tools built into most browsers also feature useful tools for hunting down errors, mainly for CSS.</p>
 
 <div class="note">
-<p><strong>メモ</strong>: ブラウザが不正な形式のマークアップを自動的に修正しようとするため、HTML エラーは開発ツールではそれほど簡単には表示されない傾向があります。W3C バリデータは HTML エラーを取得するための最良の方法です — 上の {{anch("Validation")}} を見てください。</p>
+<p><strong>メモ</strong>: ブラウザが不正な形式のマークアップを自動的に修正しようとするため、HTML エラーは開発ツールではそれほど簡単には表示されない傾向があります。W3C バリデータは HTML エラーを取得するための最良の方法です — 上の <a href="#validation">Validation</a> を見てください。</p>
 </div>
 
 <p>As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:</p>
@@ -109,9 +109,9 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <h3 id="Older_browsers_not_supporting_modern_features">Older browsers not supporting modern features</h3>
 
-<p>This is a common problem, especially when you need to support old browsers (such as old IE versions) or you are using features that are implemented using CSS prefixes. In general, most core HTML and CSS functionality (such as basic HTML elements, CSS basic colors and text styling) works across most browsers you'll want to support; more problems are uncovered when you start wanting to use newer features such as <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">HTML5 video/audio</a>, or even more nascent, <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout">CSS Grids</a> or <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Advanced_box_effects#-webkit-background-clip_text">-webkit-background-clip: text</a>.</p>
+<p>This is a common problem, especially when you need to support old browsers (such as old IE versions) or you are using features that are implemented using CSS prefixes. In general, most core HTML and CSS functionality (such as basic HTML elements, CSS basic colors and text styling) works across most browsers you'll want to support; more problems are uncovered when you start wanting to use newer features such as <a href="/ja/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>, or <a href="/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">HTML5 video/audio</a>, or even more nascent, <a href="/ja/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout">CSS Grids</a> or <a href="/ja/docs/Learn/CSS/Styling_boxes/Advanced_box_effects#-webkit-background-clip_text">-webkit-background-clip: text</a>.</p>
 
-<p>Once you've identified a list of potential problem technologies you will be using, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See {{anch("Finding help")}} below.</p>
+<p>Once you've identified a list of potential problem technologies you will be using, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See <a href="#finding_help">Finding help</a> below.</p>
 
 <h4 id="HTML_fallback_behaviour">HTML fallback behaviour</h4>
 
@@ -120,10 +120,10 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 <p>Unrecognised HTML elements are treated by the browser as anonymous inline elements (effectively inline elements with no semantic value, similar to {{htmlelement("span")}} elements). You can still refer to them by their names, and style them with CSS, for example — you just need to make sure they are behaving as you want them to, for example setting <code>display: block;</code> on all of the new semantic elements (such as {{htmlelement("article")}}, {{htmlelement("aside")}}, etc.), but only in old versions of IE that don't recognise them (so, IE 8 and lower). This way new browsers can just use the code as normal, but older IE versions will be able to style these elements too.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See {{anch("IE conditional comments")}} for the best way to do this.</p>
+<p><strong>Note</strong>: See <a href="#ie_conditional_comments">IE conditional comments</a> for the best way to do this.</p>
 </div>
 
-<p>More complex elements like HTML <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">&lt;audio&gt;</a></code>, and <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code> (and other features besides) have natural mechanisms for fallbacks to be added, which work on the same principle as described above. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.</p>
+<p>More complex elements like HTML <code><a href="/ja/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>, <code><a href="/ja/docs/Web/HTML/Element/audio">&lt;audio&gt;</a></code>, and <code><a href="/ja/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code> (and other features besides) have natural mechanisms for fallbacks to be added, which work on the same principle as described above. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.</p>
 
 <p>For example:</p>
 
@@ -143,13 +143,13 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
   <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>a</span> <span class="attr-name token">href</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/tears-of-steel-battle-clip-medium.mp4<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Download MP4<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>a</span><span class="punctuation token">&gt;</span></span>
 <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>video</span><span class="punctuation token">&gt;</span></span></code></pre>
 
-<p>This example (taken from <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a>) includes not only a Flash video fallback for older IE versions, but also a simple link allowing you to download the video if even the Flash player doesn't work, so at least the user can still access the video.</p>
+<p>This example (taken from <a href="/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a>) includes not only a Flash video fallback for older IE versions, but also a simple link allowing you to download the video if even the Flash player doesn't work, so at least the user can still access the video.</p>
 
 <div class="note">
 <p><strong>Note</strong>: 3rd party libraries like <a href="http://videojs.com/">Video.js</a> and <a href="https://www.jwplayer.com/">JW Player</a> use such fallback mechanisms to provide cross-browser support.</p>
 </div>
 
-<p>HTML5 form elements also exhibit fallback qualities — HTML5 introduced some special <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> types for inputting specific information into forms, such as times, dates, colors, numbers, etc. These are very useful, particularly on mobile platforms, where providing a pain-free way of entering data is very important for the user experience. Supporting platforms provide special UI widgets when these input types are used, such as a calendar widget for entering dates.</p>
+<p>HTML5 form elements also exhibit fallback qualities — HTML5 introduced some special <code><a href="/ja/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> types for inputting specific information into forms, such as times, dates, colors, numbers, etc. These are very useful, particularly on mobile platforms, where providing a pain-free way of entering data is very important for the user experience. Supporting platforms provide special UI widgets when these input types are used, such as a calendar widget for entering dates.</p>
 
 <p>The following example shows date and time inputs:</p>
 
@@ -252,14 +252,14 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
               inset <span class="number token">-1</span><span class="token unit">px</span> <span class="number token">-1</span><span class="token unit">px</span> <span class="number token">3</span><span class="token unit">px</span> <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">255</span><span class="punctuation token">,</span><span class="number token">255</span><span class="punctuation token">,</span><span class="number token">255</span><span class="punctuation token">,</span><span class="number token">0.4</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 <span class="punctuation token">}</span></code></pre>
 
-<p>Here we are providing an <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgba()">RGBA</a> {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. The trouble is that RGBA colors and box shadows don't work in IE versions older than 9 — in older versions the background just wouldn't show up at all so the text would be unreadable, no good at all!</p>
+<p>Here we are providing an <a href="/ja/docs/Web/CSS/color_value#rgba()">RGBA</a> {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. The trouble is that RGBA colors and box shadows don't work in IE versions older than 9 — in older versions the background just wouldn't show up at all so the text would be unreadable, no good at all!</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14135/unreadable-button.png" style="display: block; margin: 0 auto;"></p>
 
 <p>To sort this out, we have added a second <code>background-color</code> declaration, which just specifies a hex color — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first <code>background-color</code> value; when it gets to the second <code>background-color</code> declaration, it will override the initial value with this value if it supports RGBA colors. If not, it will just ignore the entire declaration and move on.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The same is true for other CSS features like <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</a></code> and <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports">@supports</a></code> blocks — if they are not supported, the browser just ignores them.</p>
+<p><strong>Note</strong>: The same is true for other CSS features like <a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a>, <code><a href="/ja/docs/Web/CSS/@font-face">@font-face</a></code> and <code><a href="/ja/docs/Web/CSS/@supports">@supports</a></code> blocks — if they are not supported, the browser just ignores them.</p>
 </div>
 
 <h4 id="IE_conditional_comments">IE conditional comments</h4>
@@ -292,7 +292,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <h4 id="Selector_support">Selector support</h4>
 
-<p>Of course, no CSS features will apply at all if you don't use the right <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">selectors</a> to select the element you want to style! If you just write a selector incorrectly so the styling isn't as expected in any browser, you'll just need to troubleshoot and work out what is wrong with your selector. We find that it is helpful to inspect the element you are trying to style using your browser's dev tools, then look at the DOM tree breadcrumb trail that DOM inspectors tend to provide to see if your selector makes sense compared to it.</p>
+<p>Of course, no CSS features will apply at all if you don't use the right <a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors">selectors</a> to select the element you want to style! If you just write a selector incorrectly so the styling isn't as expected in any browser, you'll just need to troubleshoot and work out what is wrong with your selector. We find that it is helpful to inspect the element you are trying to style using your browser's dev tools, then look at the DOM tree breadcrumb trail that DOM inspectors tend to provide to see if your selector makes sense compared to it.</p>
 
 <p>For example, in the Firefox dev tools, you get this kind of output at the bottom of the DOM inspector:</p>
 
@@ -304,7 +304,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <p>(The <code>date</code> form input isn't directly inside the <code>&lt;form&gt;</code>; you'd be better off using a general descendant selector instead of a child selector).</p>
 
-<p>However, another issue that appears in versions of IE older than 9 is that none of the newer selectors (mainly pseudo-classes and pseudo-elements like <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type">:nth-of-type</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:not">:not</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::selection">::selection</a></code>, etc.) work. If you want to use these in your CSS and you need to support older IE versions, a good move is to use Keith Clark's <a href="http://selectivizr.com/">Selectivizr</a> library — this is a small JavaScript library that works on top of an existing JavaScript library like <a href="http://jquery.com/">jQuery</a> or <a href="http://mootools.net/">MooTools</a>.</p>
+<p>However, another issue that appears in versions of IE older than 9 is that none of the newer selectors (mainly pseudo-classes and pseudo-elements like <code><a href="/ja/docs/Web/CSS/:nth-of-type">:nth-of-type</a></code>, <code><a href="/ja/docs/Web/CSS/:not">:not</a></code>, <code><a href="/ja/docs/Web/CSS/::selection">::selection</a></code>, etc.) work. If you want to use these in your CSS and you need to support older IE versions, a good move is to use Keith Clark's <a href="http://selectivizr.com/">Selectivizr</a> library — this is a small JavaScript library that works on top of an existing JavaScript library like <a href="http://jquery.com/">jQuery</a> or <a href="http://mootools.net/">MooTools</a>.</p>
 
 <ol>
  <li>To try this example, make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html">selectivizr-example-start.html</a>. If you look at this running live, you'll see that it contains two paragraphs, one of which is styled. We've selected the paragraph with <code>p:first-child</code>, which won't work in old versions of IE.</li>
@@ -345,7 +345,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <p>The first line shows a {{cssxref("transform")}} property with a <code>-webkit-</code> prefix — this was needed to make transforms work in Chrome, etc. until the feature was finalized and such browsers added a prefix-free version of the property (at the time of writing, Chrome supported both versions).</p>
 
-<p>The last three lines show three different versions of the <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient">linear-gradient()</a></code> function, which is used to generate a linear gradient in the background of an element:</p>
+<p>The last three lines show three different versions of the <code><a href="/ja/docs/Web/CSS/linear-gradient">linear-gradient()</a></code> function, which is used to generate a linear gradient in the background of an element:</p>
 
 <ol>
  <li>The first one has a <code>-moz-</code> prefix, and shows a slightly older version of the syntax (Firefox)</li>
@@ -370,7 +370,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <ul>
  <li> </li>
- <li>Now try to set a new value for the CSS property you are interested in on that element; you can do this using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style">style</a> property of the element, for example try typing these into the JavaScript console:
+ <li>Now try to set a new value for the CSS property you are interested in on that element; you can do this using the <a href="/ja/docs/Web/API/HTMLElement/style">style</a> property of the element, for example try typing these into the JavaScript console:
   <pre class="brush: js line-numbers language-js"><code class="language-js">test<span class="punctuation token">.</span>style<span class="punctuation token">.</span>transform <span class="operator token">=</span> <span class="string token">'rotate(90deg)'</span>
 test<span class="punctuation token">.</span>style<span class="punctuation token">.</span>webkitTransform <span class="operator token">=</span> <span class="string token">'rotate(90deg)'</span></code></pre>
  </li>
@@ -443,13 +443,13 @@ test<span class="punctuation token">.</span>style<span class="punctuation token"
 
 <h4 id="Support_for_new_layout_features">Support for new layout features</h4>
 
-<p>Much of the layout work on the web today is done using <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a> — this is because floats are well-supported (way back to IE4, albeit with a number of bugs that would also need to be investigated if you were to try to support IE that far back). However, they are not really meant for layout purposes — using floats the way we do is really a hack — and they do have some serious limitations (e.g. see <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox#Why_Flexbox">Why Flexbox?</a>)</p>
+<p>Much of the layout work on the web today is done using <a href="/ja/docs/Learn/CSS/CSS_layout/Floats">floats</a> — this is because floats are well-supported (way back to IE4, albeit with a number of bugs that would also need to be investigated if you were to try to support IE that far back). However, they are not really meant for layout purposes — using floats the way we do is really a hack — and they do have some serious limitations (e.g. see <a href="/ja/docs/Learn/CSS/CSS_layout/Flexbox#Why_Flexbox">Why Flexbox?</a>)</p>
 
-<p>More recently, dedicated layout mechanisms have appeared, like <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> and <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout">CSS Grids</a>, which make common layout tasks far easier and remove such shortcomings. These however are not as well-supported in browsers:</p>
+<p>More recently, dedicated layout mechanisms have appeared, like <a href="/ja/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> and <a href="/ja/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout">CSS Grids</a>, which make common layout tasks far easier and remove such shortcomings. These however are not as well-supported in browsers:</p>
 
 <ul>
  <li>CSS grids are very new; at the time of writing, they were only <a href="http://gridbyexample.com/browsers/">supported</a> in the very newest versions of modern browsers.</li>
- <li>Flexbox is <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility">well-supported</a> in modern browsers, but provides problems in older browsers. IE 9 doesn't support it at all, and IE 10 and old versions of iOS/desktop Safari respectively support incompatible old versions of the flexbox spec. This results in some interesting browser prefix juggling if you want to try to use flexbox across all these browsers (see <a href="https://dev.opera.com/articles/advanced-cross-browser-flexbox/">Advanced Cross-Browser Flexbox</a> to get an idea).</li>
+ <li>Flexbox is <a href="/ja/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility">well-supported</a> in modern browsers, but provides problems in older browsers. IE 9 doesn't support it at all, and IE 10 and old versions of iOS/desktop Safari respectively support incompatible old versions of the flexbox spec. This results in some interesting browser prefix juggling if you want to try to use flexbox across all these browsers (see <a href="https://dev.opera.com/articles/advanced-cross-browser-flexbox/">Advanced Cross-Browser Flexbox</a> to get an idea).</li>
 </ul>
 
 <p>Layout features aren't as easy to provide graceful fallbacks for than simple colors, shadows, or gradients. If layout properties are ignored, your entire design will likely fall to pieces. Because of this, you need to use feature detection to detect whether visiting browsers support those layout features, and selectively apply different layouts depending on the result (we will cover feature detection in detail in a later article).</p>
@@ -457,14 +457,14 @@ test<span class="punctuation token">.</span>style<span class="punctuation token"
 <p>For example, you could apply a flexbox layout to modern browsers, then instead apply a floated layout to older browsers that don't support flexbox.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There is a fairly new feature in CSS called <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports">@supports</a></code>, which allows you to implement native feature detection tests.</p>
+<p><strong>Note</strong>: There is a fairly new feature in CSS called <code><a href="/ja/docs/Web/CSS/@supports">@supports</a></code>, which allows you to implement native feature detection tests.</p>
 </div>
 
 <h4 id="Responsive_design_problems">Responsive design problems</h4>
 
-<p>Responsive design is the practice of creating web layouts that change to suit different device form factors — for example different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries">media queries</a>, and make sure it is applied correctly using <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>. You can find a detailed account of such practices in <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks">The building blocks of responsive design</a>.</p>
+<p>Responsive design is the practice of creating web layouts that change to suit different device form factors — for example different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using <a href="/ja/docs/Web/CSS/Media_Queries">media queries</a>, and make sure it is applied correctly using <a href="/ja/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>. You can find a detailed account of such practices in <a href="/ja/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks">The building blocks of responsive design</a>.</p>
 
-<p>Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixellated. There are a number of techniques that allow you to work around such problems, from simple <a href="https://developer.mozilla.org/en-US/Apps/Progressive/Responsive/Mobile_first">mobile first media queries</a>, to more complex <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Different_sizes">responsive image techniques</a>.</p>
+<p>Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixellated. There are a number of techniques that allow you to work around such problems, from simple <a href="/ja/Apps/Progressive/Responsive/Mobile_first">mobile first media queries</a>, to more complex <a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Different_sizes">responsive image techniques</a>.</p>
 
 <p>Another difficulty that can present problems is browser support for the features that make the above techniques possible. media queries are not supported in IE 8 or less, so if you want to use a mobile first layout and have the desktop layout then apply to old IE versions, you'll have to apply a media query {{glossary("polyfill")}} to your page, like <a href="https://code.google.com/archive/p/css3-mediaqueries-js/">css3-mediaqueries-js</a>, or <a href="https://github.com/scottjehl/Respond">Respond.js</a>.</p>
 
@@ -477,9 +477,9 @@ test<span class="punctuation token">.</span>style<span class="punctuation token"
 <p>To use the Mozilla Developer Network (MDN), most people do a search engine search of the technology they are trying to find information on, plus the term "mdn", for example "mdn HTML5 video". MDN contains several useful types of content:</p>
 
 <ul>
- <li>Reference material with browser support information for client-side web technologies, e.g. the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">&lt;video&gt; reference page</a>.</li>
- <li>Other supporting reference material, e.g. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats">Media formats supported by the HTML audio and video elements</a>.</li>
- <li>Useful tutorials that solve specific problems, for example <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a>.</li>
+ <li>Reference material with browser support information for client-side web technologies, e.g. the <a href="/ja/docs/Web/HTML/Element/video">&lt;video&gt; reference page</a>.</li>
+ <li>Other supporting reference material, e.g. <a href="/ja/docs/Web/HTML/Supported_media_formats">Media formats supported by the HTML audio and video elements</a>.</li>
+ <li>Useful tutorials that solve specific problems, for example <a href="/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a>.</li>
 </ul>
 
 <p><a href="http://caniuse.com/">caniuse.com</a> provides support information, along with a few useful external resource links. For example, see <a href="http://caniuse.com/#search=video">http://caniuse.com/#search=video</a> (you just have to enter the feature you are searching for into the text box).</p>
@@ -497,12 +497,12 @@ test<span class="punctuation token">.</span>style<span class="punctuation token"
 <h2 id="このモジュール">このモジュール</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">Introduction to cross browser testing</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies">Strategies for carrying out testing</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">Handling common HTML and CSS problems</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">Handling common JavaScript problems</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Handling common accessibility problems</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">Implementing feature detection</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">Introduction to automated testing</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Setting up your own test automation environment</a></li>
+ <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">Introduction to cross browser testing</a></li>
+ <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies">Strategies for carrying out testing</a></li>
+ <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">Handling common HTML and CSS problems</a></li>
+ <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">Handling common JavaScript problems</a></li>
+ <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Handling common accessibility problems</a></li>
+ <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">Implementing feature detection</a></li>
+ <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">Introduction to automated testing</a></li>
+ <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Setting up your own test automation environment</a></li>
 </ul>

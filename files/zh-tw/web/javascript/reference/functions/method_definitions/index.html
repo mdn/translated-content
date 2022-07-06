@@ -69,7 +69,7 @@ translation_of: Web/JavaScript/Reference/Functions/Method_definitions
  </li>
 </ul>
 
-<pre class="brush: js;highlight[12]">// Using a named property
+<pre class="brush: js">// Using a named property
 var obj2 = {
   g: function* () {
     var index = 0;
@@ -95,7 +95,7 @@ console.log(it.next().value); // 1</pre>
 
 <p>{{jsxref("Statements/async_function", "Async 方法", "", 1)}} 也可以透過簡短語法定義。</p>
 
-<pre class="brush: js;highlight[12]">// Using a named property
+<pre class="brush: js">// Using a named property
 var obj3 = {
   f: async function () {
     await some_promise;
@@ -150,7 +150,7 @@ new obj.g; // TypeError: obj.g is not a constructor (changed in ES2016)
 
 <h3 id="Simple_test_case">Simple test case</h3>
 
-<pre class="brush: js;highlight[3]">var obj = {
+<pre class="brush: js">var obj = {
   a: 'foo',
   b() { return this.a; }
 };
@@ -161,7 +161,7 @@ console.log(obj.b()); // "foo"
 
 <p>The shorthand syntax also supports computed property names.</p>
 
-<pre class="brush: js;highlight[4]">var bar = {
+<pre class="brush: js">var bar = {
   foo0: function() { return 0; },
   foo1() { return 1; },
   ['foo' + 2]() { return 2; }
@@ -173,30 +173,7 @@ console.log(bar.foo2()); // 2</pre>
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-method-definitions', 'Method definitions')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2016', '#sec-method-definitions', 'Method definitions')}}</td>
-   <td>{{Spec2('ES2016')}}</td>
-   <td>Changed that generator methods should also not have a [[Construct]] trap and will throw when used with <code>new</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 

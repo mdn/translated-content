@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/suppor
 
 <dl>
  <dt><code><var>locales</var></code></dt>
- <dd>BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 <code>locales</code> 引数の一般的な形式については、 {{jsxref("Intl", "Intl のページ", "#Locale_identification_and_negotiation", 1)}}を参照してください。</dd>
+ <dd>BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 <code>locales</code> 引数の一般的な形式については、 {{jsxref("Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。</dd>
  <dt><code><var>options</var></code></dt>
  <dd>
  <p>省略可能です。以下のプロパティを持つことがあるオブジェクトです。</p>
@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/suppor
 
 <h2 id="Description" name="Description">解説</h2>
 
-<p><code>locales</code> で提供されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムが数値のロケールに対応しているもので、使用しているロケール一致アルゴリズムで一致しているとみなされているものです。</p>
+<p><code>locales</code> で提供されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムが数値のロケールに対応しているもので、使用しているロケール照合アルゴリズムで一致しているとみなされているものです。</p>
 
 <h2 id="Examples" name="Examples">例</h2>
 
@@ -74,8 +74,6 @@ console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(', '));
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
 <div>
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
-
 <p>{{Compat("javascript.builtins.Intl.NumberFormat.supportedLocalesOf")}}</p>
 </div>
 

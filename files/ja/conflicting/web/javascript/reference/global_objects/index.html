@@ -1,0 +1,73 @@
+---
+title: uneval()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects
+tags:
+  - Function
+  - JavaScript
+  - Method
+  - Non-standard
+  - Obsolete
+  - Reference
+  - uneval
+translation_of: Web/JavaScript/Reference/Global_Objects/uneval
+original_slug: Web/JavaScript/Reference/Global_Objects/uneval
+---
+<p>{{JSSidebar("Objects")}}{{Non-standard_Header}}{{Obsolete_Header("Gecko74")}}</p>
+
+<p><code><strong>uneval()</strong></code> 関数は、オブジェクトのソースコードを表す文字列を生成します。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox notranslate">uneval(<var>object</var>)</pre>
+
+<h3 id="Parameters" name="Parameters">引数</h3>
+
+<dl>
+ <dt><code><var>object</var></code></dt>
+ <dd>Javascript の式、あるいは文。</dd>
+</dl>
+
+<h3 id="Return_value" name="Return_value">返値</h3>
+
+<p>与えられた <code><var>object</var></code> のソースコードを表す文字列です。</p>
+
+<div class="note"><strong>注:</strong> 返値は <code><var>object</var></code> に対する正しい JSON 表現になるとは限りません。</div>
+
+<h2 id="Description" name="Description">解説</h2>
+
+<p><code>uneval()</code> は最上位関数であり、どのオブジェクトにも関連付けられていません。</p>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<h3 id="Using_uneval" name="Using_uneval">uneval の使用</h3>
+
+<pre class="brush:js notranslate">var a = 1;
+uneval(a); // 1 を含む文字列が返される
+
+var b = '1';
+uneval(b) // "1" を含む文字列が返される
+
+uneval(function foo() {}); // "(function foo(){})" が返される
+
+
+var a = uneval(function foo() { return 'hi'; });
+var foo = eval(a);
+foo(); // "hi" が返される
+</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<p><span class="pl-s">いずれかの標準の一部ではありません。</span></p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("javascript.builtins.uneval")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{JSxRef("Global_Objects/eval", "eval()")}}</li>
+ <li>{{JSxRef("JSON.stringify()")}}</li>
+ <li>{{JSxRef("JSON.parse()")}}</li>
+ <li>{{JSxRef("Object.toSource()")}}</li>
+</ul>

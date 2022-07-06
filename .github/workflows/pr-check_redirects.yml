@@ -14,20 +14,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           repository: mdn/content
           path: mdn/content
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.4
+        uses: actions/setup-node@v3
         with:
-          node-version: "12"
+          node-version: "16"
 
       - name: Cache node_modules
-        uses: actions/cache@v2.1.5
+        uses: actions/cache@v3
         id: cached-node_modules
         with:
           path: |

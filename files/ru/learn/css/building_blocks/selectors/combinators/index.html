@@ -16,7 +16,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Combinators
  <tbody>
   <tr>
    <th scope="row">Необходимые условия:</th>
-   <td>Базовая компьютерная грамотность, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">установленное базовое программное обеспечение</a>, базовые знания о <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">работе с файлами</a>, основы HTML (изучите <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML">Введение в HTML</a>) и понимание работы CSS (изучите <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/First_steps">Введение в CSS</a>.)</td>
+   <td>Базовая компьютерная грамотность, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">установленное базовое программное обеспечение</a>, базовые знания о <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">работе с файлами</a>, основы HTML (изучите <a href="/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML">Введение в HTML</a>) и понимание работы CSS (изучите <a href="/ru/docs/Learn/CSS/First_steps">Введение в CSS</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Цель:</th>
@@ -29,7 +29,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Combinators
 
 <p><strong>Селектор потомка</strong> — обычно представляется символом пробела (<code> </code>) — соединяет два селектора так, что элементы, соответствующие второму селектору, выбираются, если они имеют предка (родителя, родителя родителя, родителя родителя родителя и т.д.), соответствующего первому селектору. Селекторы, которые используют комбинатор потомка, называются <dfn>селекторами потомка.</dfn></p>
 
-<pre class="brush: css notranslate">body article p</pre>
+<pre class="brush: css">body article p</pre>
 
 <p>В приведённом ниже примере выбирается только тот элемент &lt;p&gt;, который находится внутри элемента с классом<code>.box</code>.</p>
 
@@ -39,7 +39,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Combinators
 
 <p><strong>Дочерний комбинатор</strong> (<code>&gt;</code>) помещается между двумя селекторами CSS. При этом будут выбраны только те элементы, соответствующие второму селектору, которые являются прямыми потомками элементов, соответствующих первому селектору. Все элементы-потомки на более низких уровнях иерархии будут пропущены. Например, чтобы выбрать только те элементы <code>&lt;p&gt;</code>, которые являются дочерними элементами <code>&lt;article&gt;</code>, селектор пишется так:</p>
 
-<pre class="brush: css notranslate">article &gt; p</pre>
+<pre class="brush: css">article &gt; p</pre>
 
 <p>Другой пример. Имеется неупорядоченный список, заключающий в себе другой, упорядоченный список. Дочерний комбинатор используется для того, чтобы выбрать только те элементы <code>&lt;li&gt;</code>, которые являются прямыми потомками <code>&lt;ul&gt;</code>, и присвоить им верхнюю границу красного цвета.</p>
 
@@ -51,7 +51,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Combinators
 
 <p>Соседний родственный селектор (<code>+</code>) используется для выбора элемента, который непосредственно следует за другим элементом и находится на одном с ним уровне иерархии. Например, чтобы выбрать все элементы <code>&lt;img&gt;</code> , которые идут сразу после элементов <code>&lt;p&gt;</code> :</p>
 
-<pre class="brush: css notranslate">p + img</pre>
+<pre class="brush: css">p + img</pre>
 
 <p>Распространённый вариант использования — сделать что-то с абзацем, который следует за заголовком, как в примере ниже. Здесь мы ищем абзац, который непосредственно примыкает к <code>&lt;h1&gt;</code>, и стилизуем его.</p>
 
@@ -63,7 +63,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Combinators
 
 <p>Если вы хотите выбрать родственные элементы, даже если они не являются непосредственными соседями, то вы можете использовать общий родственный комбинатор (<code>~</code>). Чтобы выбрать все элементы <code>&lt;img&gt;</code>, которые находятся в <em>любом</em> месте после элементов <code>&lt;p&gt;</code>, надо указать так:</p>
 
-<pre class="brush: css notranslate">p ~ img</pre>
+<pre class="brush: css">p ~ img</pre>
 
 <p>В приведённом ниже примере мы выбираем все элементы <code>&lt;p&gt;</code>, которые идут после <code>&lt;h1&gt;</code>, и хотя в документе есть также <code>&lt;div&gt;</code>, тем не менее <code>&lt;p&gt;</code>, который идёт после него, будет выбран.</p>
 
@@ -73,7 +73,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Combinators
 
 <p>Вы можете соединять с помощью комбинаторов любые селекторы, которые мы изучали в предыдущих уроках, чтобы выбрать часть вашего документа. Например, если мы хотим выбрать пункты списка с классом "a", которые являются прямыми потомками <code>&lt;ul&gt;</code>, можно использовать следующую комбинацию:</p>
 
-<pre class="brush: css notranslate">ul &gt; li[class="a"]  {  }</pre>
+<pre class="brush: css">ul &gt; li[class="a"]  {  }</pre>
 
 <p>Однако будьте осторожны при создании больших списков селекторов, которые выделяют очень конкретные части вашего документа. Будет трудно повторно использовать правила CSS, так как вы сделали селектор очень специфичным для определения местоположения этого элемента в разметке.</p>
 
@@ -81,34 +81,34 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Combinators
 
 <h2 id="Проверьте_ваши_навыки!">Проверьте ваши навыки!</h2>
 
-<p>Мы охватили много тем в этой статье. А вы можете вспомнить наиболее важную информацию? Можете пройти несколько дополнительных тестов для того чтобы убедиться в том, что вы усвоили эту информацию, прежде чем пойдёте дальше — смотрите <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B_%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8">Проверьте ваши навыки: Селекторы</a>.</p>
+<p>Мы охватили много тем в этой статье. А вы можете вспомнить наиболее важную информацию? Можете пройти несколько дополнительных тестов для того чтобы убедиться в том, что вы усвоили эту информацию, прежде чем пойдёте дальше — смотрите <a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B_%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8">Проверьте ваши навыки: Селекторы</a>.</p>
 
 <h2 id="Двигаемся_дальше">Двигаемся дальше</h2>
 
-<p>Это последний раздел в наших уроках по селекторам. Далее мы перейдём к другой важной части CSS — <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/The_box_model">CSS модель коробки</a>.</p>
+<p>Это последний раздел в наших уроках по селекторам. Далее мы перейдём к другой важной части CSS — <a href="/ru/docs/Learn/CSS/Building_blocks/The_box_model">CSS модель коробки</a>.</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}</p>
 
 <h2 id="В_этом_модуле">В этом модуле</h2>
 
 <ol>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Каскад и наследование</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B">Селекторы CSS</a>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Каскад и наследование</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B">Селекторы CSS</a>
   <ul>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Type_Class_and_ID_Selectors">Селекторы типа, класса и ID</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors">Селекторы атрибута</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements">Псевдоклассы и псевдоэлементы</a></li>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Combinators">Комбинаторы</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Type_Class_and_ID_Selectors">Селекторы типа, класса и ID</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors">Селекторы атрибута</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements">Псевдоклассы и псевдоэлементы</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Combinators">Комбинаторы</a></li>
   </ul>
  </li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/The_box_model">Модель коробки</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Фон и границы</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Обработка разных направлений текста</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Overflowing_content">Переполнение содержимого</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Values_and_units">Значения и единицы измерения</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Изменение размеров в CSS</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Элементы изображений, форм и медиа-элементы</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Styling_tables">Стилизация таблиц</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS">Отладка CSS</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Organizing">Организация вашей CSS</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/The_box_model">Модель коробки</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Фон и границы</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Обработка разных направлений текста</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Overflowing_content">Переполнение содержимого</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Values_and_units">Значения и единицы измерения</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Изменение размеров в CSS</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Элементы изображений, форм и медиа-элементы</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Styling_tables">Стилизация таблиц</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS">Отладка CSS</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Organizing">Организация вашей CSS</a></li>
 </ol>

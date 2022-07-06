@@ -14,7 +14,7 @@ translation_of: Web/API/Element/mousemove_event
 ---
 <div>{{APIRef}}</div>
 
-<p><font face="Consolas, Liberation Mono, Courier, monospace">当指针设备( 通常指鼠标 )在元素上移动时, mousemove 事件被触发。</font></p>
+<p>当指针设备 ( 通常指鼠标 ) 在元素上移动时，mousemove 事件被触发。</p>
 
 <h2 id="基本信息">基本信息</h2>
 
@@ -39,21 +39,21 @@ translation_of: Web/API/Element/mousemove_event
  </tbody>
 </table>
 
-<h2 id="例子"><span style="">例子</span></h2>
+<h2 id="示例">示例</h2>
 
-<p>下面的例子将使用 {{domxref("Element/mousedown_event", "mousedown")}}, <code>mousemove</code> 以及 {{domxref("Element/mouseup_event", "mouseup")}} 事件，实现一个允许用户在 HTML5 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Canvas_API">canvas</a>绘图的功能。这个例子的功能很简单：线的粗细设置为1，颜色始终为黑色。</p>
+<p>下面的例子将使用 {{domxref("Element/mousedown_event", "mousedown")}}, <code>mousemove</code> 以及 {{domxref("Element/mouseup_event", "mouseup")}} 事件，实现一个允许用户在 HTML5 <a href="/zh-CN/docs/Web/API/Canvas_API">canvas</a>绘图的功能。这个例子的功能很简单：线的粗细设置为 1，颜色始终为黑色。</p>
 
-<p>当页面加载完成，我们使用变量 <code>myPics</code> 和<code>context</code>分别保存ID为<code>myPics</code>的DOM元素和接下来需要加工的的2d元素。</p>
+<p>当页面加载完成，我们使用变量 <code>myPics</code> 和<code>context</code>分别保存 ID 为<code>myPics</code>的 DOM 元素和接下来需要加工的的 2d 元素。</p>
 
 <p>当<code>mousedown</code>事件被触发时，绘图也开始了。首先，我们将鼠标的<code>x</code>坐标和<code>y</code>坐标分别赋值给变量<code>x</code>和<code>y</code>，然后设置<code>isDrawing</code>为<code>true</code>。</p>
 
-<p>当鼠标在页面上移动时，<code>mousemove</code>事件被触发。当<code>isDrawing</code>为true时，事件处理程序将会调用<code>drawLine</code>函数，该函数从变量<code>x</code>和<code>y</code>所指的位置开始，到现在鼠标所在的位置，画一条线。</p>
+<p>当鼠标在页面上移动时，<code>mousemove</code>事件被触发。当<code>isDrawing</code>为 true 时，事件处理程序将会调用<code>drawLine</code>函数，该函数从变量<code>x</code>和<code>y</code>所指的位置开始，到现在鼠标所在的位置，画一条线。</p>
 
 <p>当<code>drawLine()</code>调用结束时，我们需要把坐标赋值到<code>x</code>和<code>y</code>中。</p>
 
-<p><code>mouseup</code>事件绘制图形的最后一段，并把<code>x</code>和<code>y</code>设置为0.通过设置isDra</p>
+<p><code>mouseup</code>事件绘制图形的最后一段，并把<code>x</code>和<code>y</code>设置为 0.通过设置 isDra</p>
 
-<p><code>mouseup</code>事件绘制图形的最后一段，并把<code>x</code>和<code>y</code>设置为0.通过设置<code>isDrawing</code>为false，可以停止绘制。</p>
+<p><code>mouseup</code>事件绘制图形的最后一段，并把<code>x</code>和<code>y</code>设置为 0.通过设置<code>isDrawing</code>为 false，可以停止绘制。</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -118,7 +118,7 @@ function drawLine(context, x1, y1, x2, y2) {
 
 <h3 id="结果">结果</h3>
 
-<p>{{EmbedLiveSample("Examples", 640, 450)}}</p>
+<p>{{EmbedLiveSample("示例", 640, 450)}}</p>
 
 <h2 id="参考">参考</h2>
 

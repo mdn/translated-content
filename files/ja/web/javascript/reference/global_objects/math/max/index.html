@@ -55,7 +55,7 @@ Math.max(-10, 20);  //  20
 <pre class="brush: js notranslate">var arr = [1,2,3];
 var max = arr.reduce(function(a, b) {
     return Math.max(a, b);
-});
+}, -Infinity);
 </pre>
 
 <p>次の関数では {{jsxref("Function.prototype.apply()")}} を使用して配列の最大値を取得します。 <code>getMaxOfArray([1, 2, 3])</code> は <code>Math.max(1, 2, 3)</code> と同等ですが、 <code>getMaxOfArray()</code> はプログラム的に構築された配列に使用することができます。これは比較的要素が少ない配列に対して使用してください。</p>
@@ -88,8 +88,6 @@ var max = Math.max(...arr);
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("javascript.builtins.Math.max")}}</p>
 

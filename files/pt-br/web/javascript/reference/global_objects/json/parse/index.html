@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">O método <strong><code>JSON.parse()</code></strong> analisa uma string JSON, construindo o valor ou um objeto JavaScript descrito pela string. Uma função <strong>reviver</strong> opcional pode ser fornecida para executar uma transformação no objeto resultante antes de ser retornada.</span></p>
+<p><span class="seoSummary">O método <strong><code>JSON.parse()</code></strong> analisa uma string JSON, construindo o valor ou um objeto JavaScript descrito pela string. Uma função <strong>reviver</strong> opcional pode ser fornecida para executar uma transformação no objeto que será retornado.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/json-parse.html")}}</div>
 
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
  <dt><code>text</code></dt>
  <dd>A string para analisar como JSON. Veja o objeto {{jsxref("JSON")}} para uma descrição da sintaxe JSON.</dd>
  <dt><code>reviver</code> {{optional_inline}}</dt>
- <dd>Se for uma função, isso prescreve como o valor originalmente produzido pela análise é transformado antes de ser retornado.</dd>
+ <dd>Se for uma função, prescreve como o valor originalmente produzido pela análise será transformado antes de ser retornado.</dd>
 </dl>
 
 <h3 id="Valor_retornado">Valor retornado</h3>
@@ -74,7 +74,7 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) =&gt; 
 // ""
 </pre>
 
-<h3 id="JSON.parse()_não_é_permitido_vírgulas_à_direta"><code>JSON.parse()</code> não é permitido vírgulas à direta</h3>
+<h3 id="JSON.parse()_não_é_permitido_vírgulas_à_direta"><code>JSON.parse()</code> não permite vírgulas à direta</h3>
 
 <pre class="example-bad brush: js example-bad">// ambos retornarão um SyntaxError
 JSON.parse('[1, 2, 3, 4, ]');
@@ -108,7 +108,7 @@ JSON.parse('{"foo" : 1, }');
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_dos_navegadores">Compatibilidade dos navegadores</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <div>
 

@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView
  <dt><code><var>byteOffset</var></code> {{optional_inline}}</dt>
  <dd>此 <code>DataView</code> 对象的第一个字节在 buffer 中的字节偏移。如果未指定，则默认从第一个字节开始。</dd>
  <dt><code><var>byteLength</var></code> {{optional_inline}}</dt>
- <dd>此 DataView 对象的字节长度。如果未指定，这个视图的长度将匹配buffer的长度。</dd>
+ <dd>此 DataView 对象的字节长度。如果未指定，这个视图的长度将匹配 buffer 的长度。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 <dl>
  <dt><code>{{jsxref("RangeError")}}</code></dt>
  <dd>如果 <code>byteOffset</code> 或者 <code>byteLength </code>参数的值导致视图超出了 buffer 的结束位置就会抛出此异常。<br>
- 例如，假设 buffer （缓冲对象）是 16 字节长度，<code>byteOffset</code> 参数为 8，<code>byteLength</code> 参数为 10，这个错误就会抛出，这是因为结果视图试图超出 buffer 对象的总长度 2 个字节。</dd>
+ 例如，假设 buffer（缓冲对象）是 16 字节长度，<code>byteOffset</code> 参数为 8，<code>byteLength</code> 参数为 10，这个错误就会抛出，这是因为结果视图试图超出 buffer 对象的总长度 2 个字节。</dd>
 </dl>
 
 <h2 id="描述">描述</h2>

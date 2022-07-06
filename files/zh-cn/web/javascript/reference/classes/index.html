@@ -12,11 +12,11 @@ tags:
   - 高阶类
 translation_of: Web/JavaScript/Reference/Classes
 ---
-<div></div>
+
 
 <div>{{JsSidebar("Classes")}}</div>
 
-<p>类是用于创建对象的模板。他们用代码封装数据以处理该数据。 JS中的类建立在原型上，但也具有某些语法和语义未与ES5类相似语义共享。</p>
+<p>类是用于创建对象的模板。他们用代码封装数据以处理该数据。 JS 中的类建立在原型上，但也具有某些语法和语义未与 ES5 类相似语义共享。</p>
 
 <h2 id="定义类">定义类</h2>
 
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Classes
 
 <p>定义类的一种方法是使用<strong>类声明</strong>。要声明一个类，你可以使用带有<code>class</code>关键字的类名（这里是“Rectangle”）。</p>
 
-<pre class="brush: js notranslate">class Rectangle {
+<pre class="brush: js">class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
@@ -35,18 +35,18 @@ translation_of: Web/JavaScript/Reference/Classes
 
 <h4 id="提升">提升</h4>
 
-<p><strong>函数声明</strong>和<strong>类声明</strong>之间的一个重要区别在于, 函数声明会{{Glossary("Hoisting", "提升")}}，类声明不会。你首先需要声明你的类，然后再访问它，否则类似以下的代码将抛出{{jsxref("ReferenceError")}}：</p>
+<p><strong>函数声明</strong>和<strong>类声明</strong>之间的一个重要区别在于，函数声明会{{Glossary("Hoisting", "提升")}}，类声明不会。你首先需要声明你的类，然后再访问它，否则类似以下的代码将抛出{{jsxref("ReferenceError")}}：</p>
 
-<pre class="brush: js example-bad notranslate">let p = new Rectangle(); // ReferenceError
+<pre class="brush: js example-bad">let p = new Rectangle(); // ReferenceError
 
 class Rectangle {}
 </pre>
 
 <h3 id="类表达式">类表达式</h3>
 
-<p><strong>类表达式</strong>是定义类的另一种方法。类表达式可以命名或不命名。命名类表达式的名称是该类体的局部名称。(不过，可以通过类的(而不是一个实例的) {{jsxref("Function.name", "name")}} 属性来检索它)。</p>
+<p><strong>类表达式</strong>是定义类的另一种方法。类表达式可以命名或不命名。命名类表达式的名称是该类体的局部名称。(不过，可以通过类的 (而不是一个实例的) {{jsxref("Function.name", "name")}} 属性来检索它)。</p>
 
-<pre class="brush: js notranslate">// 未命名/匿名类
+<pre class="brush: js">// 未命名/匿名类
 let Rectangle = class {
   constructor(height, width) {
     this.height = height;
@@ -66,8 +66,8 @@ let Rectangle = class Rectangle2 {
 console.log(Rectangle.name);
 // 输出: "Rectangle2"</pre>
 
-<div class="blockIndicator note">
-<p><strong>注意:</strong> 类<strong>表达式</strong>也同样受到<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes$edit#Class_declarations">类声明</a>部分中提到的类型提升的限制。</p>
+<div class="note">
+<p><strong>备注：</strong> 类<strong>表达式</strong>也同样受到<a href="/zh-CN/docs/Web/JavaScript/Reference/Classes$edit#Class_declarations">类声明</a>部分中提到的类型提升的限制。</p>
 </div>
 
 <h2 id="类体和方法定义">类体和方法定义</h2>
@@ -76,7 +76,7 @@ console.log(Rectangle.name);
 
 <h3 id="严格模式">严格模式</h3>
 
-<p>类声明和类表达式的主体都执行在<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>下。比如，构造函数，静态方法，原型方法，getter和setter都在严格模式下执行。</p>
+<p>类声明和类表达式的主体都执行在<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>下。比如，构造函数，静态方法，原型方法，getter 和 setter 都在严格模式下执行。</p>
 
 <h3 id="构造函数">构造函数</h3>
 
@@ -88,7 +88,7 @@ console.log(Rectangle.name);
 
 <p>参见<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions">方法定义</a>。</p>
 
-<pre class="brush: js notranslate">class Rectangle {
+<pre class="brush: js">class Rectangle {
     // constructor
     constructor(height, width) {
         this.height = height;
@@ -113,7 +113,7 @@ console.log(square.area);
 
 <p><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Classes/static">static</a></code> 关键字用来定义一个类的一个静态方法。调用静态方法不需要<a href="/zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_object_(class_instance)">实例化</a>该类，但不能通过一个类实例调用静态方法。静态方法通常用于为一个应用程序创建工具函数。</p>
 
-<pre class="brush: js notranslate">class Point {
+<pre class="brush: js">class Point {
     constructor(x, y) {
         this.x = x;
         this.y = y;
@@ -143,9 +143,9 @@ console.log(Point.distance(p1, p2));
 
 <h3 id="用原型和静态方法绑定_this">用原型和静态方法绑定 this</h3>
 
-<p>当调用静态或原型方法时没有指定 <em>this </em>的值，那么方法内的 <em>this </em>值将被置为 <strong><code>undefined</code></strong>。即使你未设置 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">"use strict"</span></font> ，因为 <code>class</code> 体内部的代码总是在严格模式下执行。</p>
+<p>当调用静态或原型方法时没有指定 <em>this </em>的值，那么方法内的 <em>this </em>值将被置为 <strong><code>undefined</code></strong>。即使你未设置 <code>"use strict"</code> ，因为 <code>class</code> 体内部的代码总是在严格模式下执行。</p>
 
-<pre class="brush: js notranslate">class Animal {
+<pre class="brush: js">class Animal {
   speak() {
     return this;
   }
@@ -167,7 +167,7 @@ eat(); // undefined</pre>
 
 <p>严格模式下不会发生自动装箱，<em>this </em>值将保留传入状态。</p>
 
-<pre class="brush: js notranslate">function Animal() { }
+<pre class="brush: js">function Animal() { }
 
 Animal.prototype.speak = function() {
   return this;
@@ -189,7 +189,7 @@ eat(); // global object
 
 <p>实例的属性必须定义在类的方法里：</p>
 
-<pre class="notranslate"><code>class Rectangle {
+<pre><code>class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
@@ -199,21 +199,21 @@ eat(); // global object
 
 <p>静态的或原型的数据属性必须定义在类定义的外面。</p>
 
-<pre class="notranslate"><code>Rectangle.staticWidth = 20;
+<pre><code>Rectangle.staticWidth = 20;
 Rectangle.prototype.prototypeWidth = 25;</code>
 </pre>
 
 <h3 id="字段声明">字段声明</h3>
 
-<div class="blockIndicator warning">
-<p>公共和私有字段声明是JavaScript标准委员会<a href="https://tc39.es/">TC39</a>提出的<a href="https://github.com/tc39/proposal-class-fields">实验性功能（第3阶段）</a>。浏览器中的支持是有限的，但是可以通过<a href="https://babeljs.io/">Babel</a>等系统构建后使用此功能。</p>
+<div class="warning">
+<p><strong>警告：</strong>公共和私有字段声明是 JavaScript 标准委员会<a href="https://tc39.es/">TC39</a>提出的<a href="https://github.com/tc39/proposal-class-fields">实验性功能（第 3 阶段）</a>。浏览器中的支持是有限的，但是可以通过<a href="https://babeljs.io/">Babel</a>等系统构建后使用此功能。</p>
 </div>
 
 <h4 id="公有字段声明">公有字段声明</h4>
 
-<p>使用JavaScript字段声明语法，上面的示例可以写成：</p>
+<p>使用 JavaScript 字段声明语法，上面的示例可以写成：</p>
 
-<pre class="notranslate"><code>class Rectangle {
+<pre><code>class Rectangle {
   height = 0;
   width;
   constructor(height, width) {
@@ -225,13 +225,15 @@ Rectangle.prototype.prototypeWidth = 25;</code>
 
 <p>通过预先声明字段，类定义变得更加自我记录，并且字段始终存在。</p>
 
+<p>在声明字段时，我们不需要像 <code>let</code>、<code>const</code> 和 <code>var</code> 这样的关键字。</p>
+
 <p>正如上面看到的，这个字段可以用也可以不用默认值来声明。</p>
 
 <h4 id="私有字段声明">私有字段声明</h4>
 
 <p>使用私有字段，可以按以下方式细化定义。</p>
 
-<pre class="notranslate"><code>class Rectangle {
+<pre><code>class Rectangle {
   #height = 0;
   #width;
   constructor(height, width) {
@@ -243,8 +245,8 @@ Rectangle.prototype.prototypeWidth = 25;</code>
 
 <p>从类外部引用私有字段是错误的。它们只能在类里面中读取或写入。通过定义在类外部不可见的内容，可以确保类的用户不会依赖于内部，因为内部可能在不同版本之间发生变化。</p>
 
-<div class="blockIndicator note">
-<p>私有字段仅能在字段声明中预先定义。 </p>
+<div class="note">
+<p><strong>备注：</strong>私有字段仅能在字段声明中预先定义。 </p>
 </div>
 
 <p>私有字段不能通过在之后赋值来创建它们，这种方式只适用普通属性。</p>
@@ -255,7 +257,7 @@ Rectangle.prototype.prototypeWidth = 25;</code>
 
 <p><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Classes/extends">extends</a></code> 关键字在 <em>类声明 </em>或 <em>类表达式 </em>中用于创建一个类作为另一个类的一个子类。</p>
 
-<pre class="brush: js notranslate">class Animal {
+<pre class="brush: js">class Animal {
   constructor(name) {
     this.name = name;
   }
@@ -267,7 +269,7 @@ Rectangle.prototype.prototypeWidth = 25;</code>
 
 class Dog extends Animal {
   constructor(name) {
-    super(name); // 调用超类构造函数并传入name参数
+    super(name); // 调用超类构造函数并传入 name 参数
   }
 
   speak() {
@@ -283,7 +285,7 @@ d.speak();// 'Mitzie barks.'
 
 <p>也可以继承传统的基于函数的“类”：</p>
 
-<pre class="brush: js notranslate">function Animal (name) {
+<pre class="brush: js">function Animal (name) {
   this.name = name;
 }
 Animal.prototype.speak = function () {
@@ -302,7 +304,7 @@ d.speak();//Mitzie makes a noise.  Mitzie barks.</pre>
 
 <p>请注意，类不能继承常规对象（不可构造的）。如果要继承常规对象，可以改用{{jsxref("Object.setPrototypeOf()")}}：</p>
 
-<pre class="brush: js notranslate">var Animal = {
+<pre class="brush: js">var Animal = {
   speak() {
     console.log(this.name + ' makes a noise.');
   }
@@ -314,7 +316,7 @@ class Dog {
   }
 }
 
-Object.setPrototypeOf(Dog.prototype, Animal);// 如果不这样做，在调用speak时会返回TypeError
+Object.setPrototypeOf(Dog.prototype, Animal);// 如果不这样做，在调用 speak 时会返回 TypeError
 
 var d = new Dog('Mitzie');
 d.speak(); // Mitzie makes a noise.</pre>
@@ -325,7 +327,7 @@ d.speak(); // Mitzie makes a noise.</pre>
 
 <p>例如，当使用像{{jsxref("Array.map", "map()")}}返回默认构造函数的方法时，您希望这些方法返回一个父<code>Array</code>对象，而不是<code>MyArray</code>对象。{{jsxref("Symbol.species")}} 符号可以让你这样做：</p>
 
-<pre class="brush: js notranslate">class MyArray extends Array {
+<pre class="brush: js">class MyArray extends Array {
   // Overwrite species to the parent Array constructor
   static get [Symbol.species]() { return Array; }
 }
@@ -342,7 +344,7 @@ console.log(mapped instanceof Array);
 
 <p><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/super">super</a></code> 关键字用于调用对象的父对象上的函数。</p>
 
-<pre class="brush: js notranslate">class Cat {
+<pre class="brush: js">class Cat {
   constructor(name) {
     this.name = name;
   }
@@ -364,9 +366,9 @@ class Lion extends Cat {
 
 <p>抽象子类或者 mix-ins 是类的模板。 一个 ECMAScript 类只能有一个单超类，所以想要从工具类来多重继承的行为是不可能的。子类继承的只能是父类提供的功能性。因此，例如，从工具类的多重继承是不可能的。该功能必须由超类提供。</p>
 
-<p>一个以超类作为输入的函数和一个继承该超类的子类作为输出可以用于在ECMAScript中实现混合：</p>
+<p>一个以超类作为输入的函数和一个继承该超类的子类作为输出可以用于在 ECMAScript 中实现混合：</p>
 
-<pre class="brush: js notranslate">var calculatorMixin = Base =&gt; class extends Base {
+<pre class="brush: js">var calculatorMixin = Base =&gt; class extends Base {
   calc() { }
 };
 
@@ -376,7 +378,7 @@ var randomizerMixin = Base =&gt; class extends Base {
 
 <p>使用 mix-ins 的类可以像下面这样写：</p>
 
-<pre class="brush: js notranslate">class Foo { }
+<pre class="brush: js">class Foo { }
 class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</pre>
 
 <h2 id="规范">规范</h2>
@@ -424,15 +426,13 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</pre>
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-
-
-<p>{{Compat("javascript.classes")}}</p>
+{{Compat}}
 
 <h2 id="重新运行一个类定义">重新运行一个类定义</h2>
 
 <p>无法重新定义类。尝试这样做会产生一个 <code>SyntaxError</code>.</p>
 
-<p>如果您正在使用Web浏览器（例如Firefox Web控制台， (<strong>Tools </strong>&gt;<strong> Web Developer </strong>&gt;<strong> Web Console</strong>)并且您两次“运行”具有相同名称的类的定义，您将收到一个 <code>SyntaxError: redeclaration of let <em>ClassName</em>;</code>. (请参阅中有关此问题的进一步讨论 {{Bug(1428672)}}.) 在Chrome开发者工具中执行类似的操作会给您一个以下信息： <code>Uncaught SyntaxError: Identifier '<em>ClassName</em>' has already been declared at &lt;anonymous&gt;:1:1</code>.</p>
+<p>如果您正在使用 Web 浏览器（例如 Firefox Web 控制台， (<strong>Tools </strong>&gt;<strong> Web Developer </strong>&gt;<strong> Web Console</strong>) 并且您两次“运行”具有相同名称的类的定义，您将收到一个 <code>SyntaxError: redeclaration of let <em>ClassName</em>;</code>. (请参阅中有关此问题的进一步讨论 {{Bug(1428672)}}.) 在 Chrome 开发者工具中执行类似的操作会给您一个以下信息： <code>Uncaught SyntaxError: Identifier '<em>ClassName</em>' has already been declared at &lt;anonymous&gt;:1:1</code>.</p>
 
 <h2 id="参见">参见</h2>
 
@@ -446,7 +446,3 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</pre>
  <li><a href="https://hacks.mozilla.org/2015/07/es6-in-depth-classes/">Blog post: "ES6 In Depth: Classes"</a></li>
  <li><a href="https://github.com/tc39/proposal-class-fields">Fields and public/private class properties proposal (stage 3)</a></li>
 </ul>
-
-<div id="gtx-trans" style="position: absolute; left: 160px; top: 11337px;">
-<div class="gtx-trans-icon"></div>
-</div>

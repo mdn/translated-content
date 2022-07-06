@@ -5,22 +5,22 @@ translation_of: Web/Guide/AJAX/Getting_Started
 ---
 <div>{{DefaultAPISidebar("XMLHttpRequest")}}</div>
 
-<p class="summary">这篇文章旨在帮助你了解AJAX基础，并提供两个可上手的简单案例供你学习。</p>
+<p>这篇文章旨在帮助你了解 AJAX 基础，并提供两个可上手的简单案例供你学习。</p>
 
-<h2 id="什么是AJAX？">什么是AJAX？</h2>
+<h2 id="什么是AJAX？">什么是 AJAX？</h2>
 
-<p>AJAX是异步的JavaScript和XML（<strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML）。简单点说，就是使用 <code><a href="/en/DOM/XMLHttpRequest">XMLHttpRequest</a></code> 对象与服务器通信。 它可以使用JSON，XML，HTML和text文本等格式发送和接收数据。AJAX最吸引人的就是它的“异步”特性，也就是说它可以在不重新刷新页面的情况下与服务器通信，交换数据，或更新页面。</p>
+<p>AJAX 是异步的 JavaScript 和 XML（<strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML）。简单点说，就是使用 <code><a href="/en/DOM/XMLHttpRequest">XMLHttpRequest</a></code> 对象与服务器通信。 它可以使用 JSON，XML，HTML 和 text 文本等格式发送和接收数据。AJAX 最吸引人的就是它的“异步”特性，也就是说它可以在不重新刷新页面的情况下与服务器通信，交换数据，或更新页面。</p>
 
-<p>你可以使用AJAX最主要的两个特性做下列事：</p>
+<p>你可以使用 AJAX 最主要的两个特性做下列事：</p>
 
 <ul>
  <li>在不重新加载页面的情况下发送请求给服务器。</li>
  <li>接受并使用从服务器发来的数据。</li>
 </ul>
 
-<h2 id="Step_1_–_怎样发送http请求">Step 1 – 怎样发送http请求</h2>
+<h2 id="Step_1_–_怎样发送http请求">Step 1 – 怎样发送 http 请求</h2>
 
-<p>为了使用JavaScript向服务器发送一个http请求，你需要一个包含必要函数功能的对象实例。这就是为什么会有 <code>XMLHttpRequest</code> 的原因。 这是IE浏览器的ActiveX对象 <code>XMLHTTP</code>的前身。 随后Mozilla，Safari和其他浏览器也都实现了类似的方法，被称为 <code>XMLHttpRequest</code> 。同时，微软也实现了XMLHttpRequest方法。</p>
+<p>为了使用 JavaScript 向服务器发送一个 http 请求，你需要一个包含必要函数功能的对象实例。这就是为什么会有 <code>XMLHttpRequest</code> 的原因。 这是 IE 浏览器的 ActiveX 对象 <code>XMLHTTP</code>的前身。 随后 Mozilla，Safari 和其他浏览器也都实现了类似的方法，被称为 <code>XMLHttpRequest</code> 。同时，微软也实现了 XMLHttpRequest 方法。</p>
 
 <pre class="brush: js">// Old compatibility code, no longer needed.
 if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
@@ -30,50 +30,50 @@ if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
 }
 </pre>
 
-<div class="note"><strong>Note: 上面代码只是简单版的如何创建一个XMLHttp实例。更实际的例子，请看本篇文章的step 3。</strong></div>
+<div class="note"><strong>Note: 上面代码只是简单版的如何创建一个 XMLHttp 实例。更实际的例子，请看本篇文章的 step 3。</strong></div>
 
-<p>发送一个请求后，你会收到响应。在这一阶段，你要告诉XMLHttp请求对象是由哪一个JavaScript函数处理响应，在设置了对象的 <code>onreadystatechange </code>属性后给他命名，当请求状态改变时调用函数。</p>
+<p>发送一个请求后，你会收到响应。在这一阶段，你要告诉 XMLHttp 请求对象是由哪一个 JavaScript 函数处理响应，在设置了对象的 <code>onreadystatechange </code>属性后给他命名，当请求状态改变时调用函数。</p>
 
 <pre class="brush: js"><code>httpRequest.onreadystatechange = nameOfTheFunction;</code></pre>
 
-<p>要注意的是，函数名后没有参数，因为你把一个引用赋值给了函数，而不是真正的调用了它。 此外，如果不使用函数名的方式，你还可以用JavaScript的匿名函数响应处理的动作，就像下面这样：</p>
+<p>要注意的是，函数名后没有参数，因为你把一个引用赋值给了函数，而不是真正的调用了它。 此外，如果不使用函数名的方式，你还可以用 JavaScript 的匿名函数响应处理的动作，就像下面这样：</p>
 
 <pre class="brush: js">httpRequest.onreadystatechange = function(){
     // Process the server response here.
 };
 </pre>
 
-<p>接下来，声明当你接到响应后要做什么，你要发送一个实际的请求，通过调用HTTP请求对象的 <code>open()</code> 和 <code>send()</code> 方法，像下面这样:</p>
+<p>接下来，声明当你接到响应后要做什么，你要发送一个实际的请求，通过调用 HTTP 请求对象的 <code>open()</code> 和 <code>send()</code> 方法，像下面这样：</p>
 
 <pre class="brush: js">httpRequest.open('GET', 'http://www.example.org/some.file', true);
 httpRequest.send();
 </pre>
 
 <ul>
- <li><code>open()</code> 的第一个参数是HTTP请求方法 - 有GET，POST，HEAD以及服务器支持的其他方法。 保证这些方法一定要是大写字母，否则其他一些浏览器（比如FireFox）可能无法处理这个请求。更多关于HTTP的请求方法，可以查看 <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">W3C specs</a>。</li>
- <li>第二个参数是你要发送的URL。由于安全原因，默认不能调用第三方URL域名。 确保你在页面中使用的是正确的域名，否则在调用 <code>open()</code> 方法是会有 "permission denied" 错误提示。一个容易犯的错误是你企图通过 <code>domain.tld</code> 访问网站， 而不是使用 <code>www.domain.tld</code>。如果你真的需要向另一个域名发送请求, 可以查看 <a href="/En/HTTP_access_control">HTTP access control</a>。</li>
- <li>第三个参数是可选的，用于设置请求是否是异步的。如果设为 <code>true</code> (默认值)，即开启异步，JavaScript就不会在此语句阻塞，使得用户能在服务器还没有响应的情况下与页面进行交互。</li>
+ <li><code>open()</code> 的第一个参数是 HTTP 请求方法 - 有 GET，POST，HEAD 以及服务器支持的其他方法。 保证这些方法一定要是大写字母，否则其他一些浏览器（比如 FireFox）可能无法处理这个请求。更多关于 HTTP 的请求方法，可以查看 <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">W3C specs</a>。</li>
+ <li>第二个参数是你要发送的 URL。由于安全原因，默认不能调用第三方 URL 域名。 确保你在页面中使用的是正确的域名，否则在调用 <code>open()</code> 方法是会有 "permission denied" 错误提示。一个容易犯的错误是你企图通过 <code>domain.tld</code> 访问网站， 而不是使用 <code>www.domain.tld</code>。如果你真的需要向另一个域名发送请求，可以查看 <a href="/En/HTTP_access_control">HTTP access control</a>。</li>
+ <li>第三个参数是可选的，用于设置请求是否是异步的。如果设为 <code>true</code> (默认值)，即开启异步，JavaScript 就不会在此语句阻塞，使得用户能在服务器还没有响应的情况下与页面进行交互。</li>
 </ul>
 
 <p><code>send()</code> 方法的参数可以是任何你想发送给服务器的内容，如果是 <code>POST</code> 请求的话。发送表单数据时应该用服务器可以解析的格式，像查询语句：</p>
 
 <pre><code>"name=value&amp;anothername="+encodeURIComponent(myVar)+"&amp;so=on"</code></pre>
 
-<p>或者其他格式, 类似 <code>multipart/form-data</code>，JSON，XML等。</p>
+<p>或者其他格式，类似 <code>multipart/form-data</code>，JSON，XML 等。</p>
 
-<p>如果你使用 POST 数据，那就需要设置请求的MIME类型。比如，在调用 <code>send()</code> 方法获取表单数据前要有下面这个：</p>
+<p>如果你使用 POST 数据，那就需要设置请求的 MIME 类型。比如，在调用 <code>send()</code> 方法获取表单数据前要有下面这个：</p>
 
 <pre class="brush: js">httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 </pre>
 
 <h2 id="Step_2_–_处理服务器响应">Step 2 – 处理服务器响应</h2>
 
-<p>在发送请求时，你提供的JavaScript函数名负责处理响应：</p>
+<p>在发送请求时，你提供的 JavaScript 函数名负责处理响应：</p>
 
 <pre class="brush: js">httpRequest.onreadystatechange = nameOfTheFunction;
 </pre>
 
-<p>这个函数应该做什么？首先，函数要检查请求的状态。如果状态的值是 <code>XMLHttpRequest.DONE</code> （对应的值是4），意味着服务器响应收到了并且是没问题的，然后就可以继续执行。</p>
+<p>这个函数应该做什么？首先，函数要检查请求的状态。如果状态的值是 <code>XMLHttpRequest.DONE</code> （对应的值是 4），意味着服务器响应收到了并且是没问题的，然后就可以继续执行。</p>
 
 <pre class="brush: js">if (httpRequest.readyState === XMLHttpRequest.DONE) {
     // Everything is good, the response was received.
@@ -82,7 +82,7 @@ httpRequest.send();
 }
 </pre>
 
-<p>全部readyState状态值都在 <a href="/en-US/docs/Web/API/XMLHttpRequest#Properties">XMLHTTPRequest.readyState</a>，如下也是：</p>
+<p>全部 readyState 状态值都在 <a href="/en-US/docs/Web/API/XMLHttpRequest#Properties">XMLHTTPRequest.readyState</a>，如下也是：</p>
 
 <ul>
  <li>0 (未初始化) or (<strong>请求还未初始化</strong>)</li>
@@ -94,7 +94,7 @@ httpRequest.send();
 
 <p>(<a class="external" href="http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx">Source</a>)</p>
 
-<p>接下来，点击HTTP响应的 <a href="/en/HTTP#HTTP_Response_Codes">response code</a>。 可能的响应码都已经列在 <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">W3C</a>这个列表里。在下面的例子中，我们通过检查响应码 <code>200 OK</code> 判断AJAX有没有成功。</p>
+<p>接下来，点击 HTTP 响应的 <a href="/en/HTTP#HTTP_Response_Codes">response code</a>。 可能的响应码都已经列在 <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">W3C</a>这个列表里。在下面的例子中，我们通过检查响应码 <code>200 OK</code> 判断 AJAX 有没有成功。</p>
 
 <pre class="brush: js">if (httpRequest.status === 200) {
     // Perfect!
@@ -104,18 +104,18 @@ httpRequest.send();
     // or 500 (Internal Server Error) response code.
 }</pre>
 
-<p>在检查完请求状态和HTTP响应码后， 你就可以用服务器返回的数据做任何你想做的了。你有两个方法去访问这些数据：</p>
+<p>在检查完请求状态和 HTTP 响应码后， 你就可以用服务器返回的数据做任何你想做的了。你有两个方法去访问这些数据：</p>
 
 <ul>
  <li><code>httpRequest.responseText</code> – 服务器以文本字符的形式返回</li>
- <li><code>httpRequest.responseXML</code> – 以 XMLDocument 对象方式返回，之后就可以使用JavaScript来处理</li>
+ <li><code>httpRequest.responseXML</code> – 以 XMLDocument 对象方式返回，之后就可以使用 JavaScript 来处理</li>
 </ul>
 
 <p>注意上面这一步只在你发起异步请求时有效（即 <code>open()</code> 的第三个参数未特别指定或设为 <code>true</code>）。如果你你发起的是<strong>同步</strong>请求则不必使用函数，但是非常不推荐这样子做，它的用户体验很糟糕。</p>
 
 <h2 id="Step_3_–_一个简单的例子">Step 3 – 一个简单的例子</h2>
 
-<p>让我们把所有的知识都集中起来做一个简单的HTTP请求。这个JavaScript会请求一个HTML文档 <code>test.html</code>，包含 "I'm a  test" 内容。然后我们 <code>alert()</code> 响应的内容。注意这个例子我们只是用了JavaScript，没有用jQuery。而且，HTML，XML和PHP文件都要放在用一个目录下。</p>
+<p>让我们把所有的知识都集中起来做一个简单的 HTTP 请求。这个 JavaScript 会请求一个 HTML 文档 <code>test.html</code>，包含 "I'm a  test" 内容。然后我们 <code>alert()</code> 响应的内容。注意这个例子我们只是用了 JavaScript，没有用 jQuery。而且，HTML，XML 和 PHP 文件都要放在用一个目录下。</p>
 
 <pre class="brush: html">&lt;button id="ajaxButton" type="button"&gt;Make a request&lt;/button&gt;
 
@@ -155,10 +155,10 @@ httpRequest.send();
  <li>用户点击 “Make a request” 按钮；</li>
  <li>事件处理调用 <code>makeRequest()</code> 函数；</li>
  <li>请求已通过然后（<code>onreadystatechange</code>）传给 <code>alertContents()</code> 执行。</li>
- <li><code>alertContents()</code> 检查返回的响应是否OK，然后 <code>alert()</code> <code>test.html</code> 文件内容。</li>
+ <li><code>alertContents()</code> 检查返回的响应是否 OK，然后 <code>alert()</code> <code>test.html</code> 文件内容。</li>
 </ul>
 
-<div class="note"><strong>Note</strong>: 如果你向一个代码片段发送请求，将返回XML，而不是静态XML文件，在IE浏览器上则必须要设置响应头才能正常工作。如果不设置响应头为 <code>Content-Type:application/xml</code> ，IE浏览器会在你访问XML元素时抛出 “Object Expected” 错误。</div>
+<div class="note"><strong>Note</strong>: 如果你向一个代码片段发送请求，将返回 XML，而不是静态 XML 文件，在 IE 浏览器上则必须要设置响应头才能正常工作。如果不设置响应头为 <code>Content-Type:application/xml</code> ，IE 浏览器会在你访问 XML 元素时抛出 “Object Expected” 错误。</div>
 
 <div class="note"><strong>Note 2</strong>: 如果不设置响应头 <code>Cache-Control: no-cache</code> 浏览器将会把响应缓存下来而且再也无法重新提交请求。你也可以添加一个总是不同的 GET 参数，比如时间戳或者随机数 (详情见 <a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache">bypassing the cache</a>)</div>
 
@@ -184,7 +184,7 @@ httpRequest.send();
 
 <h2 id="Step_4_–_处理_XML_响应">Step 4 – 处理 XML 响应</h2>
 
-<p>在上一个例子中，在收到HTTP请求的响应后我们会请求对象的 <code>responseText</code> 属性，包含 <code>test.html</code> 文件的内容。现在我们试试 <code>responseXML </code>属性。 </p>
+<p>在上一个例子中，在收到 HTTP 请求的响应后我们会请求对象的 <code>responseText</code> 属性，包含 <code>test.html</code> 文件的内容。现在我们试试 <code>responseXML </code>属性。 </p>
 
 <p>首先，我们创建一个稍后将要请求的有效的 XML 文档。文档（<code>test.html</code>）包含以下内容：</p>
 
@@ -224,7 +224,7 @@ alert(root_node.firstChild.data);
 &lt;/span&gt;
 </pre>
 
-<p>还要添加事件处理程序，从表单中获取用户数据连同服务器端的UTL一并发送给 makeRequest()  函数：</p>
+<p>还要添加事件处理程序，从表单中获取用户数据连同服务器端的 UTL 一并发送给 makeRequest()  函数：</p>
 
 <pre class="brush: js">  document.getElementById("ajaxButton").onclick = function() {
       var userName = document.getElementById("ajaxTextbox").value;
@@ -249,7 +249,7 @@ alert(root_node.firstChild.data);
 
 <p><code>{"userData":"Jane","computedString":"Hi, Jane!"}</code></p>
 
-<p>为了在 <code>alertContents()</code> 中使用这个数据，我们可不能只是alert <code>responseText</code> ，我们要解析它并 alert <code>conputedString</code>，我们想要的属性：</p>
+<p>为了在 <code>alertContents()</code> 中使用这个数据，我们可不能只是 alert <code>responseText</code> ，我们要解析它并 alert <code>computedString</code>，我们想要的属性：</p>
 
 <pre class="brush: js">function alertContents() {
   if (httpRequest.readyState === XMLHttpRequest.DONE) {
@@ -270,4 +270,4 @@ $computedString = "Hi, " . $name;
 $array = ['userName' =&gt; $name, 'computedString' =&gt; $computedString];
 echo json_encode($array);</code></pre>
 
-<p><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: #eeeeee;">想获取更多 DOM 方法，可以查看</span></font><code> <a class="external" href="http://www.mozilla.org/docs/dom/">Mozilla's DOM implementation</a> 文档.</code></p>
+<p>想获取更多 DOM 方法，可以查看<code> <a class="external" href="http://www.mozilla.org/docs/dom/">Mozilla's DOM implementation</a> 文档。</code></p>

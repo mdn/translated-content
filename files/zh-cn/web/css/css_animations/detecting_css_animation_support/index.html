@@ -1,15 +1,15 @@
 ---
-title: 检测CSS动画的支持性
+title: 检测 CSS 动画的支持性
 slug: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 translation_of: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 ---
 <p>{{CSSRef}}</p>
 
-<p>CSS 动画 使仅用CSS属性来使内容呈现动画效果成为一种可能，然而，某些时候CSS动画属性并不能生效，此时，我们希望能够通过javascript代码来实现相似的动画效果。针对此种情况，本文基于Chris Heilmann的 <a href="http://hacks.mozilla.org/2011/09/detecting-and-generating-css-animations-in-javascript/" title="http://hacks.mozilla.org/2011/09/detecting-and-generating-css-animations-in-javascript/">this blog post</a> 对该技术进行了示范。</p>
+<p>CSS 动画 使仅用 CSS 属性来使内容呈现动画效果成为一种可能，然而，某些时候 CSS 动画属性并不能生效，此时，我们希望能够通过 javascript 代码来实现相似的动画效果。针对此种情况，本文基于 Chris Heilmann 的<a href="https://hacks.mozilla.org/2011/09/detecting-and-generating-css-animations-in-javascript/">博客</a>对该技术进行了示范。</p>
 
-<h2 id="CSS动画支持检测">CSS动画支持检测</h2>
+<h2 id="css_动画支持检测">CSS 动画支持检测</h2>
 
-<p>下面的代码将检测CSS动画的支持性是否是有效的。</p>
+<p>下面的代码将检测 CSS 动画的支持性是否是有效的。</p>
 
 <pre class="brush: js">var animation = false,
     animationstring = 'animation',
@@ -33,17 +33,17 @@ if( animation === false ) {
 }
 </pre>
 
-<p>首先先定义几个变量，并通过初始化<code>animation</code> 为false来假设不支持CSS动画属性，先设置animationstring变量为<code>animation并在稍后进行修改。创建一个浏览器前缀的数组用来循环遍历并设置pfx前缀为空字符串。</code> </p>
+<p>首先先定义几个变量，并通过初始化 <code>animation</code> 为 false 来假设不支持 CSS 动画属性，先设置 animationstring 变量为 <code>animation</code> 并在稍后进行修改。创建一个浏览器前缀的数组用来循环遍历并设置 pfx 前缀为空字符串。</p>
 
-<p>然后，检测创建的elm元素的style属性集合中{{ cssxref("animation-name") }} 属性是否被设置，如果被设置，则意味着着浏览器支持CSS animation属性，而不需要加任何前缀，然而到目前，还没有任何浏览器实现（译者：chrome中试验了一下是可以的）；</p>
+<p>然后，检测创建的 elm 元素的 style 属性集合中 {{cssxref("animation-name")}} 属性是否被设置，如果被设置，则意味着着浏览器支持 CSS animation 属性，而不需要加任何前缀，然而到目前，还没有任何浏览器实现（译者：chrome 中试验了一下是可以的）；</p>
 
-<p>如果浏览器不支持无前缀的animation，那么animation变量值仍为false，遍历所有可能的浏览器前缀，由于所有的主流浏览器现在都在该属性前加了前缀，因此在<code>AnimationName</code> 前加上前缀即可。</p>
+<p>如果浏览器不支持无前缀的 animation，那么 animation 变量值仍为 false，遍历所有可能的浏览器前缀，由于所有的主流浏览器现在都在该属性前加了前缀，因此在 <code>AnimationName</code> 前加上前缀即可。</p>
 
-<p>当代码执行完，如果浏览器不支持CSS animation属性，则返回animation 为false，否则为true。如果animation为true，则所有animation 相关属性名称以及keyframes属性前缀都是检测到的正确的，因此，如果使用firefox，属性名称就是MozAnimation，keyframes前缀就是-moz-，如果使用chrome，属性为<code>WebkitAnimation</code> ，keyframes前缀为 <code>-webkit-。注意，浏览器是不方便在驼峰法和连字符法之间进行切换的。</code></p>
+<p>当代码执行完，如果浏览器不支持 CSS animation 属性，则返回 animation 为 false，否则为 true。如果 animation 为 true，则所有 animation 相关属性名称以及 keyframes 属性前缀都是检测到的正确的，因此，如果使用 firefox，属性名称就是 MozAnimation，keyframes 前缀就是 -moz-，如果使用 chrome，属性为<code>WebkitAnimation</code> ，keyframes 前缀为 <code>-webkit-</code>。注意，浏览器是不方便在驼峰法和连字符法之间进行切换的。</p>
 
 <h2 id="针对不同浏览器使用正确语法实现动画效果">针对不同浏览器使用正确语法实现动画效果</h2>
 
-<p>现在可以知道，无论浏览器是否支持CSS animation，均可以实现动画效果。</p>
+<p>现在可以知道，无论浏览器是否支持 CSS animation，均可以实现动画效果。</p>
 
 <pre class="brush: js">if( animation === false ) {
 
@@ -72,19 +72,19 @@ if( animation === false ) {
 }
 </pre>
 
-<p>以上代码主要根据animation的值来进行不同的操作，如果为false,则需要执行javascript脚本来实现动画效果，否则，就用javascript来创建所需要的CSS animation 效果。</p>
+<p>以上代码主要根据 animation 的值来进行不同的操作，如果为 false，则需要执行 javascript 脚本来实现动画效果，否则，就用 javascript 来创建所需要的 CSS animation 效果。</p>
 
-<p>设置animation属性是很简单的，可以在style属性集合中简单的更新它的值。然而，增加keyframes是有难度的，由于它们不能够通过传统的css语法来定义。（虽然这样使得它们更加灵活，但是通过脚本来定义更加不易）</p>
+<p>设置 animation 属性是很简单的，可以在 style 属性集合中简单的更新它的值。然而，增加 keyframes 是有难度的，由于它们不能够通过传统的 css 语法来定义。（虽然这样使得它们更加灵活，但是通过脚本来定义更加不易）</p>
 
-<p>使用javascript来定义keyframes，需要将其具体语法写为字符串。为了创建keyframes变量，在构建keyframes时要在其所有属性前加前缀，该变量包含完整的所有动画序列所需要的keyframes描述。</p>
+<p>使用 javascript 来定义 keyframes，需要将其具体语法写为字符串。为了创建 keyframes 变量，在构建 keyframes 时要在其所有属性前加前缀，该变量包含完整的所有动画序列所需要的 keyframes 描述。</p>
 
-<p>下一个任务是将创建的keyframes添加到实际的CSS中。首先要检查是否在document中存在CSStylesheet，如果存在，则能够简单的将keyframes值插入到CSSstylesheet中。</p>
+<p>下一个任务是将创建的 keyframes 添加到实际的 CSS 中。首先要检查是否在 document 中存在 CSStylesheet，如果存在，则能够简单的将 keyframes 值插入到 CSSstylesheet 中。</p>
 
-<p>如果不存在CSSstylesheet，创建一个新的 {{ HTMLElement("style") }} 元素，并将keyframes设置为其内容。然后将新的{{ HTMLElement("style") }}元素插入到document 的head中，从而将新的style sheet添加到了html文档中。</p>
+<p>如果不存在 CSSstylesheet，创建一个新的 {{HTMLElement("style")}} 元素，并将 keyframes 设置为其内容。然后将新的 {{HTMLElement("style")}} 元素插入到 document 的 head 中，从而将新的 style sheet 添加到了 html 文档中。</p>
 
-<p><a href="https://jsfiddle.net/codepo8/ATS2S/8/embedded/result">在JSFiddle中查看</a></p>
+<p><a href="https://jsfiddle.net/codepo8/ATS2S/8/embedded/result">在 JSFiddle 中查看</a></p>
 
-<h2 id="更多">更多</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li><a href="/en/CSS/CSS_animations" title="en/CSS/CSS animations">CSS animations</a></li>

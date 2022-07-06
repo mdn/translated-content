@@ -29,7 +29,7 @@ translation_of: Web/HTML/Element/img
 
 <h2 id="Atributos">Atributos</h2>
 
-<p><span style="line-height: 21px;">Este Elemeto inlcui o <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">atributo global</a></span><span style="line-height: 21px;">.</span></p>
+<p><span style="line-height: 21px;">Este Elemeto inlcui o <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes">atributo global</a></span><span style="line-height: 21px;">.</span></p>
 
 <dl>
  <dt>{{htmlattrdef("align")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}} Use the {{cssxref('vertical-align')}} CSS property</dt>
@@ -96,14 +96,14 @@ translation_of: Web/HTML/Element/img
 <p>O padrão HTML não fornece uma lista de formatos de imagem que devem ser suportados, portanto, cada agente de usuário oferece suporte a um conjunto diferente de formatos. <a href="/pt-BR/docs/Mozilla/Gecko">Gecko</a> suporta:</p>
 
 <ul>
- <li><a class="external" href="http://en.wikipedia.org/wiki/JPEG" title="http://en.wikipedia.org/wiki/JPEG">JPEG</a></li>
- <li><a class="external" href="http://en.wikipedia.org/wiki/Graphics_Interchange_Format" title="http://en.wikipedia.org/wiki/Graphics_Interchange_Format">GIF</a>, incluindo GIFs animados</li>
- <li><a class="external" href="http://en.wikipedia.org/wiki/Portable_Network_Graphics" title="http://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a></li>
+ <li><a class="external" href="http://en.wikipedia.org/wiki/JPEG">JPEG</a></li>
+ <li><a class="external" href="http://en.wikipedia.org/wiki/Graphics_Interchange_Format">GIF</a>, incluindo GIFs animados</li>
+ <li><a class="external" href="http://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a></li>
  <li><a href="/en-US/docs/Animated_PNG_graphics" title="Animated PNG graphics">APNG</a> {{gecko_minversion_inline("1.9.2")}}</li>
  <li><a href="/en-US/docs/SVG" title="SVG">SVG</a> {{gecko_minversion_inline("2.0")}}</li>
- <li><a class="external" href="http://en.wikipedia.org/wiki/BMP_file_format" title="http://en.wikipedia.org/wiki/BMP_file_format">BMP</a></li>
- <li><a class="external" href="http://en.wikipedia.org/wiki/ICO_%28file_format%29" title="http://en.wikipedia.org/wiki/ICO_%28file_format%29">BMP ICO</a></li>
- <li><a class="external" href="http://en.wikipedia.org/wiki/ICO_%28file_format%29" title="http://en.wikipedia.org/wiki/ICO_%28file_format%29">PNG ICO</a> {{gecko_minversion_inline("9.0")}}</li>
+ <li><a class="external" href="http://en.wikipedia.org/wiki/BMP_file_format">BMP</a></li>
+ <li><a class="external" href="http://en.wikipedia.org/wiki/ICO_%28file_format%29">BMP ICO</a></li>
+ <li><a class="external" href="http://en.wikipedia.org/wiki/ICO_%28file_format%29">PNG ICO</a> {{gecko_minversion_inline("9.0")}}</li>
 </ul>
 
 <h2 id="Interação_com_CSS">Interação com CSS</h2>
@@ -187,7 +187,7 @@ translation_of: Web/HTML/Element/img
  <li><a class="external external-icon" href="https://www.w3.org/WAI/tutorials/images/decision-tree/">An alt Decision Tree • Images • WAI Web Accessibility Tutorials</a></li>
  <li><a class="external external-icon" href="https://axesslab.com/alt-texts/">Alt-texts: The Ultimate Guide — Axess Lab</a></li>
  <li><a class="external external-icon" href="https://www.deque.com/blog/great-alt-text-introduction/">How to Design Great Alt Text: An Introduction | Deque</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_—_Providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_—_Providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
  <li><a class="external external-icon" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -195,7 +195,7 @@ translation_of: Web/HTML/Element/img
 
 <p>O atributo {{htmlattrxref("title")}} não é um substituto aceitável para o atributo <code>alt</code>. Além disso, evite duplicar o valor do atributo <code>alt</code> no atributo <code>title</code> para uma mesma imagem. Isso pode fazer com que alguns programas leitores de tela narrem duas vezes a descrição, o que pode criar uma experiência confusa para usuários.</p>
 
-<p>Evite usar o atributo <code>title</code> como uma forma suplementar de legenda para a descrição do <code>alt</code>. Caso a imagem precise de uma legenda, prefisa os elementos <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/figure">figure</a></code> e <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption">figcaption</a></code>.</p>
+<p>Evite usar o atributo <code>title</code> como uma forma suplementar de legenda para a descrição do <code>alt</code>. Caso a imagem precise de uma legenda, prefisa os elementos <code><a href="/en-US/docs/Web/HTML/Element/figure">figure</a></code> e <code><a href="/en-US/docs/Web/HTML/Element/figcaption">figcaption</a></code>.</p>
 
 <p>O valor do atributo <code>title</code> é geralmente mostrado ao usuário como uma dica, que aparece após o usuário parar o cursor sobre a imagem. Apesar de <em>poder</em> <em>prover</em> informações adicionais ao usuário, não se deve assumir todos os usuários vão vê-lo, pois o mesmo pode possuir apenas um teclado ou uma tela de toque (touchscreen). Se você considera a informação particularmente importante para o usuário, prefira o uso de elementos inline.</p>
 

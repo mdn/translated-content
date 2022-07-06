@@ -9,33 +9,31 @@ translation_of: Web/API/WebGL_API/Tutorial
 ---
 <div>{{WebGLSidebar}}</div>
 
-<div class="summary">
-<p><a class="external" href="http://www.khronos.org/webgl/" title="http://www.khronos.org/webgl/">WebGL</a> 使得网页在支持HTML {{HTMLElement("canvas")}} 标签的浏览器中，不需要使用任何插件，便可以使用基于 <a href="http://www.khronos.org/opengles/" title="http://www.khronos.org/opengles/">OpenGL ES</a> 2.0 的 API 在 canvas 中进行3D渲染. WebGL 程序由javascript的控制代码，和在计算机的图形处理单元（GPU, Graphics Processing Unit）中执行的特效代码(shader code，渲染代码) 组成. WebGL 元素可以和其他HTML元素混合, 并且会和页面的其他部分或页面背景相合成.</p>
-</div>
+<p><a class="external" href="http://www.khronos.org/webgl/">WebGL</a> 使得网页在支持 HTML {{HTMLElement("canvas")}} 标签的浏览器中，不需要使用任何插件，便可以使用基于 <a href="http://www.khronos.org/opengles/" title="http://www.khronos.org/opengles/">OpenGL ES</a> 2.0 的 API 在 canvas 中进行 3D 渲染. WebGL 程序由 javascript 的控制代码，和在计算机的图形处理单元（GPU, Graphics Processing Unit）中执行的特效代码 (shader code，渲染代码) 组成. WebGL 元素可以和其他 HTML 元素混合，并且会和页面的其他部分或页面背景相合成。</p>
 
-<p><span class="seoSummary">此教程从基础开始讲解如何使用<code>&lt;canvas&gt;</code> 元素来画WebGL 图形. 提供的例子会让你对WebGL有更清晰的认识, 并且会提供代码片段方便你构建自己的内容.</span></p>
+<p>此教程从基础开始讲解如何使用<code>&lt;canvas&gt;</code> 元素来画 WebGL 图形。提供的例子会让你对 WebGL 有更清晰的认识，并且会提供代码片段方便你构建自己的内容。</p>
 
 <h2 id="开始之前">开始之前</h2>
 
-<p>使用 <code>&lt;canvas&gt;</code> 元素并不困难，但你需要基本的 <a href="/en-US/docs/Web/HTML" title="HTML">HTML</a> 和 <a href="/en-US/docs/Web/JavaScript" title="JavaScript">JavaScript</a> 知识。一些老浏览器不支持<code>&lt;canvas&gt;</code> 元素和 WebGL，但所有最近的主流浏览器都支持它们.。为了能在canvas中绘制图形，我们使用Javascript的上下文环境（context）对象，此对象可以动态创建图形。</p>
+<p>使用 <code>&lt;canvas&gt;</code> 元素并不困难，但你需要基本的 <a href="/en-US/docs/Web/HTML" title="HTML">HTML</a> 和 <a href="/en-US/docs/Web/JavaScript" title="JavaScript">JavaScript</a> 知识。一些老浏览器不支持<code>&lt;canvas&gt;</code> 元素和 WebGL，但所有最近的主流浏览器都支持它们.。为了能在 canvas 中绘制图形，我们使用 Javascript 的上下文环境（context）对象，此对象可以动态创建图形。</p>
 
 <h2 id="在本教程中">在本教程中</h2>
 
 <dl>
- <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL">开始WebGL</a></dt>
- <dd>如何设置WebGL上下文环境.</dd>
- <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context">给WebGL的上下文环境添加2D内容</a></dt>
- <dd>如何用WebGl渲染简单的平面化图形.</dd>
- <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL">在WebGL中使用着色器(shader)去赋予颜色</a></dt>
- <dd>演示如何使用着色器给图形添加颜色.</dd>
- <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL">用WebGL让对象动起来</a></dt>
- <dd>展示如何旋转移动物体来实现简单动画效果.</dd>
- <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL">使用WebGL创建3D物体</a></dt>
- <dd>展示如何创建并设置一个3D物体动画 (这里使用立方体).</dd>
- <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">在WebGL中使用纹理贴图(texture)</a></dt>
- <dd>展示如何投射纹理贴图到物体的各个面.</dd>
- <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">WebGL中的灯光</a></dt>
- <dd>如何在WebGL上下文环境中模拟灯光效果.</dd>
- <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL">WebGL中的动画纹理贴图</a></dt>
- <dd>展示如何让纹理贴图动起来; 在此例中, 会投射一个Ogg格式的视频在一个旋转立方体的各个面上.</dd>
+ <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL">开始 WebGL</a></dt>
+ <dd>如何设置 WebGL 上下文环境。</dd>
+ <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context">给 WebGL 的上下文环境添加 2D 内容</a></dt>
+ <dd>如何用 WebGl 渲染简单的平面化图形。</dd>
+ <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL">在 WebGL 中使用着色器 (shader) 去赋予颜色</a></dt>
+ <dd>演示如何使用着色器给图形添加颜色。</dd>
+ <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL">用 WebGL 让对象动起来</a></dt>
+ <dd>展示如何旋转移动物体来实现简单动画效果。</dd>
+ <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL">使用 WebGL 创建 3D 物体</a></dt>
+ <dd>展示如何创建并设置一个 3D 物体动画 (这里使用立方体).</dd>
+ <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">在 WebGL 中使用纹理贴图 (texture)</a></dt>
+ <dd>展示如何投射纹理贴图到物体的各个面。</dd>
+ <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">WebGL 中的灯光</a></dt>
+ <dd>如何在 WebGL 上下文环境中模拟灯光效果。</dd>
+ <dt><a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL">WebGL 中的动画纹理贴图</a></dt>
+ <dd>展示如何让纹理贴图动起来; 在此例中，会投射一个 Ogg 格式的视频在一个旋转立方体的各个面上。</dd>
 </dl>

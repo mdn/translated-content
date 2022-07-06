@@ -9,9 +9,9 @@ tags:
   - 输入
 translation_of: Web/API/ValidityState
 ---
-<div>{{APIRef("HTML DOM")}} {{gecko_minversion_header("2.0")}}</div>
+<div>{{APIRef("HTML DOM")}}</div>
 
-<p>DOM接口 <code>ValidityState</code> 代表一个元素可有的有效性状态（<em>validity states</em>），其与约束验证（constraint validation）相关。这些状态一起解释了当元素值无效时，它的值为什么不能通过验证。</p>
+<p>DOM 接口 <code>ValidityState</code> 代表一个元素可有的有效性状态（<em>validity states</em>），其与约束验证（constraint validation）相关。这些状态一起解释了当元素值无效时，它的值为什么不能通过验证。</p>
 
 <h2 id="属性">属性</h2>
 
@@ -32,9 +32,9 @@ translation_of: Web/API/ValidityState
  <dt>{{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} {{ReadOnlyInline}}</dt>
  <dd>一个 {{jsxref("Boolean")}}，<code>true</code> 表示值小于 {{htmlattrxref("min", "input")}} 属性规定的最小值，<code>false</code> 则表示大于或等于这个最小值。<code>true</code> 的时候元素可用 CSS 伪类 {{cssxref(":invalid")}} 和 {{cssxref(":out-of-range")}} 匹配。</dd>
  <dt>{{domxref("ValidityState.stepMismatch", "stepMismatch")}} {{ReadOnlyInline}}</dt>
- <dd>一个 {{jsxref("Boolean")}}，<code>true</code> 表示值不符合由 {{htmlattrxref("step", "input")}} 属性规定的规则（即该值不能被步长值除尽，译注：假设最小值是0）。<code>false</code> 表示其符合步长值规则。<code>true</code> 的时候元素可用 CSS 伪类 {{cssxref(":invalid")}} 和 {{cssxref(":out-of-range")}} 匹配。</dd>
+ <dd>一个 {{jsxref("Boolean")}}，<code>true</code> 表示值不符合由 {{htmlattrxref("step", "input")}} 属性规定的规则（即该值不能被步长值除尽，译注：假设最小值是 0）。<code>false</code> 表示其符合步长值规则。<code>true</code> 的时候元素可用 CSS 伪类 {{cssxref(":invalid")}} 和 {{cssxref(":out-of-range")}} 匹配。</dd>
  <dt>{{domxref("ValidityState.tooLong", "tooLong")}} {{ReadOnlyInline}}</dt>
- <dd>一个 {{jsxref("Boolean")}}，<code>true</code> 表示值超过了{{domxref("HTMLInputElement")}} 或 {{domxref("HTMLTextAreaElement")}} 对象中规定的 <code>maxlength</code>， <code>false</code> 表示值的长度小于或等于最大长度。<em><strong>注意：</strong>This这个属性在Gecko中永远不会是 <code>true</code>，因为元素值不允许比 <code>maxlength</code> 长。</em><code>true</code> 的时候元素可用 CSS 伪类 {{cssxref(":invalid")}} 和 {{cssxref(":out-of-range")}} 匹配。</dd>
+ <dd>一个 {{jsxref("Boolean")}}，<code>true</code> 表示值超过了{{domxref("HTMLInputElement")}} 或 {{domxref("HTMLTextAreaElement")}} 对象中规定的 <code>maxlength</code>， <code>false</code> 表示值的长度小于或等于最大长度。<em><strong>注意：</strong>This 这个属性在 Gecko 中永远不会是 <code>true</code>，因为元素值不允许比 <code>maxlength</code> 长。</em><code>true</code> 的时候元素可用 CSS 伪类 {{cssxref(":invalid")}} 和 {{cssxref(":out-of-range")}} 匹配。</dd>
  <dt>{{domxref("ValidityState.tooShort", "tooShort")}} {{ReadOnlyInline}}</dt>
  <dd>一个 {{jsxref("Boolean")}}，<code>true</code> 表示值的长度小于 {{domxref("HTMLInputElement")}} 或 {{domxref("HTMLTextAreaElement")}} 对象中规定的 <code>minlength</code>， <code>false</code> 表示值的长度大于或等于最大长度。<code>true</code> 的时候元素可用 CSS 伪类 {{cssxref(":invalid")}} 和 {{cssxref(":out-of-range")}} 匹配。</dd>
  <dt>{{domxref("ValidityState.typeMismatch", "typeMismatch")}} {{ReadOnlyInline}}</dt>
@@ -83,6 +83,6 @@ translation_of: Web/API/ValidityState
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation">约束验证</a></li>
- <li><a href="https://wiki.developer.mozilla.org/zh-CN/docs/Learn/HTML/Forms/Data_form_validation">表单数据校验</a></li>
+ <li><a href="/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation">约束验证</a></li>
+ <li><a href="/zh-CN/docs/Learn/HTML/Forms/Data_form_validation">表单数据校验</a></li>
 </ul>

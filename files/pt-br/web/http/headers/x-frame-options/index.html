@@ -51,7 +51,7 @@ X-Frame-Options: SAMEORIGIN
  <dt><code>DENY</code></dt>
  <dd>A página não pode ser mostrada em um enquadramento, independente do site que esteja tentando fazer isso.</dd>
  <dt><code>SAMEORIGIN</code></dt>
- <dd>A página só pode ser exibida em um enquadramento se for da mesma origem da página em si. A especificação deixa a cargo do navegador para decidir se esta opção se aplica ao nível mais alto, ao parente, ou à cadeia inteira, entretanto é discutido se a opção não é muito útil a não ser que todos os ancestrias estejam na mesma origem (veja {{bug(725490)}}). Veja também {{anch("Browser compatibility")}} para mais detalhes de suporte.</dd>
+ <dd>A página só pode ser exibida em um enquadramento se for da mesma origem da página em si. A especificação deixa a cargo do navegador para decidir se esta opção se aplica ao nível mais alto, ao parente, ou à cadeia inteira, entretanto é discutido se a opção não é muito útil a não ser que todos os ancestrias estejam na mesma origem (veja {{bug(725490)}}). Veja também <a href="#browser_compatibility">Browser compatibility</a> para mais detalhes de suporte.</dd>
  <dt><code>ALLOW-FROM <em>uri</em></code><em> </em>{{obsolete_inline()}}</dt>
  <dd>Esta é uma diretiva obsoleta que não funciona mais em navegadores modernos. Não a utilize. Em navegadores legado que a suportam, a página pode ser mostrada em um enquadramento somente na URI de origem especificada. Note que implementação legada do Firefox isso ainda sofria do mesmo problema que a <code>SAMEORIGIN</code> sofreu — ela não checa se os enquadramentos ancestrais para ver se eles são da mesma origem. O cabeçalho HTTP {{HTTPHeader("Content-Security-Policy")}} tem a diretiva <code>frame-ancestors</code> que você pode usar ao invés disso.</dd>
 </dl>
@@ -144,7 +144,7 @@ app.use(frameguard({ action: 'SAMEORIGIN' }))
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_de_navegador">Compatibilidade de navegador</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 
 

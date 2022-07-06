@@ -15,10 +15,10 @@ translation_of: Web/CSS/vertical-align
 
 
 
-<p>vertical-align属性可被用于两种环境：</p>
+<p>vertical-align 属性可被用于两种环境：</p>
 
 <ul>
- <li>使行内元素盒模型与其行内元素容器垂直对齐。例如，用于垂直对齐一行文本的内的图片{{HTMLElement("img")}}：</li>
+ <li>使行内元素盒模型与其行内元素容器垂直对齐。例如，用于垂直对齐一行文本内的图片{{HTMLElement("img")}}：</li>
 </ul>
 
 <div id="vertical-align-inline">
@@ -60,10 +60,10 @@ p {
 </pre>
 </div>
 
-<p>{{EmbedLiveSample("vertical-align-inline", 1200, 120, "", "", "example-outcome-frame")}}</p>
+<p>{{EmbedLiveSample("vertical-align-inline", 1200, 160)}}</p>
 
 <ul>
- <li>垂直对齐表格单元内容:</li>
+ <li>垂直对齐表格单元内容：</li>
 </ul>
 
 <div id="vertical-align-table">
@@ -99,9 +99,9 @@ td {
 </pre>
 </div>
 
-<p>{{EmbedLiveSample("vertical-align-table", 1200, 210, "", "", "example-outcome-frame")}}</p>
+<p>{{EmbedLiveSample("vertical-align-table", 1200, 230)}}</p>
 
-<p>注意 <code>vertical-align</code> 只对行内元素、表格单元格元素生效：不能用它垂直对齐<a href="/zh-CN/docs/Web/HTML/Block-level_elements">块级元素</a>。</p>
+<p>注意 <code>vertical-align</code> 只对行内元素、行内块元素和表格单元格元素生效：不能用它垂直对齐<a href="/zh-CN/docs/Web/HTML/Block-level_elements">块级元素</a>。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -138,7 +138,7 @@ vertical-align: unset;
 
 <dl>
  <dt><code>baseline</code></dt>
- <dd>使元素的基线与父元素的基线对齐。HTML规范没有详细说明部分<a href="/zh-CN/docs/Web/CSS/Replaced_element">可替换元素</a>的基线，如{{HTMLElement("textarea")}} ，这意味着这些元素使用此值的表现因浏览器而异。</dd>
+ <dd>使元素的基线与父元素的基线对齐。HTML 规范没有详细说明部分<a href="/zh-CN/docs/Web/CSS/Replaced_element">可替换元素</a>的基线，如{{HTMLElement("textarea")}} ，这意味着这些元素使用此值的表现因浏览器而异。</dd>
  <dt><code>sub</code></dt>
  <dd>使元素的基线与父元素的下标基线对齐。</dd>
  <dt><code>super</code></dt>
@@ -148,7 +148,7 @@ vertical-align: unset;
  <dt><code>text-bottom</code></dt>
  <dd>使元素的底部与父元素的字体底部对齐。</dd>
  <dt><code>middle</code></dt>
- <dd>使元素的中部与父元素的基线加上父元素x-height（译注：<a href="https://www.zhangxinxu.com/wordpress/2015/06/about-letter-x-of-css/">x高度</a>）的一半对齐。</dd>
+ <dd>使元素的中部与父元素的基线加上父元素 x-height（译注：<a href="https://www.zhangxinxu.com/wordpress/2015/06/about-letter-x-of-css/">x 高度</a>）的一半对齐。</dd>
  <dt>{{cssxref("&lt;length&gt;")}}</dt>
  <dd>使元素的基线对齐到父元素的基线之上的给定长度。可以是负数。</dd>
  <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
@@ -227,7 +227,7 @@ img.middle { vertical-align: middle; }
   <tr>
    <td>{{SpecName('CSS2.1', 'visudet.html#propdef-vertical-align', 'vertical-align')}}</td>
    <td>{{Spec2('CSS2.1')}}</td>
-   <td>增加 {{cssxref("&lt;length&gt;")}} 取值， 允许它对{{cssxref("display")}}类型为<code>table-cell</code>的元素生效。</td>
+   <td>增加 {{cssxref("&lt;length&gt;")}} 取值，允许它对{{cssxref("display")}}类型为<code>table-cell</code>的元素生效。</td>
   </tr>
   <tr>
    <td>{{SpecName('CSS1', '#vertical-align', 'vertical-align')}}</td>

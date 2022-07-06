@@ -5,11 +5,11 @@ translation_of: Web/API/Frame_Timing_API
 ---
 <div>{{DefaultAPISidebar("Frame Timing API")}} {{SeeCompatTable}}</div>
 
-<p>该<strong><code>PerformanceFrameTiming</code></strong>界面提供有关浏览器事件循环的<em>帧</em>计时数据。一<em>帧</em>表示浏览器在<a href="https://html.spec.whatwg.org/multipage/webappapis.html#processing-model-8">一个事件循环迭代</a>中所做的工作量，例如处理DOM事件，调整大小，滚动，渲染，CSS动画等。60Hz刷新速率的<em>帧率</em>为60 fps（每秒帧），良好<em>响应</em>用户体验的共同目标。这意味着浏览器应在大约16.7毫秒内处理一个帧。</p>
+<p>该<strong><code>PerformanceFrameTiming</code></strong>界面提供有关浏览器事件循环的<em>帧</em>计时数据。一<em>帧</em>表示浏览器在<a href="https://html.spec.whatwg.org/multipage/webappapis.html#processing-model-8">一个事件循环迭代</a>中所做的工作量，例如处理 DOM 事件，调整大小，滚动，渲染，CSS 动画等。60Hz 刷新速率的<em>帧率</em>为 60 fps（每秒帧），良好<em>响应</em>用户体验的共同目标。这意味着浏览器应在大约 16.7 毫秒内处理一个帧。</p>
 
 <p>应用程序可以为“<code>frame</code>”{{domxref("PerformanceEntry","性能条目类型")}} 注册 {{domxref("PerformanceObserver")}}。当新的“<code>frame</code>”事件添加到浏览器的<em>性能时间轴</em>并且框架的{{domxref("PerformanceEntry.duration","持续时间")}}（时间长度）可用时，将通知<em>观察者</em>（回调）。此数据可用于帮助识别需要太长时间才能提供良好用户体验的区域。</p>
 
-<p>本文档中描述的接口的示例代码包含在“<em><a href="/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API">使用帧定时API”</a><a></a></em><a>中。</a></p><a>
+<p>本文档中描述的接口的示例代码包含在“<em><a href="/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API">使用帧定时 API”</a><a></a></em><a>中。</a></p><a>
 
 <h2 id="性能_frames">性能 <code>frames</code></h2>
 
@@ -45,6 +45,6 @@ translation_of: Web/API/Frame_Timing_API
 <h2 id="也可以看看">也可以看看</h2>
 
 <ul>
- <li><a href="/docs/Tools/Performance/Frame_rate">帧速率（Firefox性能工具）</a></li>
- <li><a href="/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API">使用帧计时API</a></li>
+ <li><a href="/docs/Tools/Performance/Frame_rate">帧速率（Firefox 性能工具）</a></li>
+ <li><a href="/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API">使用帧计时 API</a></li>
 </ul>

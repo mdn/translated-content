@@ -23,7 +23,7 @@ translation_of: Web/API/GeolocationCoordinates
  <dt>{{domxref("Coordinates.altitudeAccuracy")}} {{readonlyInline}}</dt>
  <dd>回傳一個 double 代表高度的精準度，單位為公尺。如果無法提供這個值則回傳 null。</dd>
  <dt>{{domxref("Coordinates.heading")}} {{readonlyInline}}</dt>
- <dd>回傳一個 double 代表裝置前進的方向，這個數值代表你偏離北方多少度，0度代表你向著正北方，照著順時針的方向遞增(90度代表正東方，270度代表正西方) 。如果速度值為0度，則此值為 <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/NaN" title="/en-US/docs/JavaScript/Reference/Global_Objects/NaN">NaN</a></code>。如果無法提供這個值則回傳 null。</dd>
+ <dd>回傳一個 double 代表裝置前進的方向，這個數值代表你偏離北方多少度，0度代表你向著正北方，照著順時針的方向遞增(90度代表正東方，270度代表正西方) 。如果速度值為0度，則此值為 <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/NaN">NaN</a></code>。如果無法提供這個值則回傳 null。</dd>
  <dt>{{domxref("Coordinates.speed")}} {{readonlyInline}}</dt>
  <dd>回傳一個 double 代表速度，單位為公尺/秒。如果無法提供這個值則回傳 null。</dd>
 </dl>
@@ -34,80 +34,15 @@ translation_of: Web/API/GeolocationCoordinates
 
 <h2 id="規格">規格</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation', '#coordinates', 'Coordinates')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器的相容性">瀏覽器的相容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>5</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>9</td>
-   <td>10.60<br>
-    {{CompatNo}} 15.0<br>
-    16.0</td>
-   <td>5</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>{{CompatGeckoMobile("4")}}</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>10.60</td>
-   <td>{{CompatUnknown()}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.GeolocationCoordinates")}}
 
 <h2 id="請參考">請參考</h2>
 
 <ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation" title="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
+ <li><a href="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
  <li>{{domxref("Geolocation")}} 介面使用此物件。</li>
 </ul>

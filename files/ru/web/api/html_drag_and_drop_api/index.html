@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("HTML Drag and Drop API")}}</div>
 
-<p><span class="seoSummary">Интерфейс<strong>HTML Drag and Drop</strong> позволяет приложениям использовать функционал перетаскивания в браузерах.</span> Пользователь может выбрать <em>перетаскиваемые</em> элементы мышью, перетащить к элементу <em>сброса</em> и бросить их, отпустив кнопку мыши. Во время переноса за указателем следует полупрозрачный образ <em>перетаскиваемого</em> элемента</p>
+<p><span class="seoSummary">Интерфейс<strong> HTML Drag and Drop</strong> позволяет приложениям использовать функционал перетаскивания в браузерах.</span> Пользователь может выбрать <em>перетаскиваемые</em> элементы мышью, перетащить к элементу <em>сброса</em> и бросить их, отпустив кнопку мыши. Во время переноса за указателем следует полупрозрачный образ <em>перетаскиваемого</em> элемента</p>
 
 <p>При создании веб-сайтов, расширений и XUL-приложений можно настраивать, какие именно элементы можно <em>перетаскивать</em>, какую обратную связь они при этом будут создавать, и какие элементы будут создавать область <em>сброса</em>.</p>
 
@@ -88,7 +88,7 @@ tags:
 
 <p>Объекты {{domxref("DataTransfer")}} включают состояние события, такое как тип выполненного перетаскивания (вроде <code>copy</code> или <code>move</code>), данные перетаскивания (один или более элементов) и MIME-тип каждого <em>элемента перетаскивания</em>. Объекты {{domxref("DataTransfer")}} также имеют методы добавления или удаления элементов из данных о перетасивании.</p>
 
-<p>Для добавления в приложение поддержки HTML Drag and Drop, следует использовать только интерфейсы {{domxref("DragEvent")}} и {{domxref("DataTransfer")}}. (Firefox поддерживает некоторые {{anch("Gecko specific interfaces","Специфичные для Gecko расширения")}} объекта {{domxref("DataTransfer")}}, но они будут работать только в Firefox.)</p>
+<p>Для добавления в приложение поддержки HTML Drag and Drop, следует использовать только интерфейсы {{domxref("DragEvent")}} и {{domxref("DataTransfer")}}. (Firefox поддерживает некоторые <a href="#gecko_specific_interfaces">Специфичные для Gecko расширения</a> объекта {{domxref("DataTransfer")}}, но они будут работать только в Firefox.)</p>
 
 <p>Каждый объект {{domxref("DataTransfer")}} содержит свойство {{domxref("DataTransfer.items","items")}}, являющееся {{domxref("DataTransferItemList","списком")}} объектов {{domxref("DataTransferItem")}}. Объект {{domxref("DataTransferItem")}} представляет собой отдельный <em>перетаскиваемый элемент</em>, каждый со свойством {{domxref("DataTransferItem.kind","kind")}} (либо <code>string</code> либо <code>file</code>) и свойство {{domxref("DataTransferItem.type","type")}} для MIME-типа данных элемента. Объект {{domxref("DataTransferItem")}} также имеет методы для получения данных о перемещаемых элементах.</p>
 
@@ -96,7 +96,7 @@ tags:
 
 <p>Ключевое отличие интерфейсов {{domxref("DataTransfer")}} и {{domxref("DataTransferItem")}} заключается в том, что первый использует синхронный метод доступа к данным о перетаскиваемых объектах {{domxref("DataTransfer.getData","getData()")}}, а второй – асинхронный метод {{domxref("DataTransferItem.getAsString","getAsString()")}}.</p>
 
-<p class="note"><strong>Примечание:</strong> {{domxref("DragEvent")}} и {{domxref("DataTransfer")}} широко поддерживаются десктопными браузерами. Однако, поддержка интерфейсов {{domxref("DataTransferItem")}} и {{domxref("DataTransferItemList")}} достаточно ограниченная. Более подробно можно узнать в разделе {{anch("Interoperability", "Поддержка")}} .</p>
+<p class="note"><strong>Примечание:</strong> {{domxref("DragEvent")}} и {{domxref("DataTransfer")}} широко поддерживаются десктопными браузерами. Однако, поддержка интерфейсов {{domxref("DataTransferItem")}} и {{domxref("DataTransferItemList")}} достаточно ограниченная. Более подробно можно узнать в разделе <a href="#interoperability">Поддержка</a> .</p>
 
 <h3 id="Gecko-specific_interfaces">Специфичные для Gecko интерфейсы</h3>
 
@@ -295,21 +295,21 @@ function drop_handler(ev) {
 
 <h2 id="Specifications">Спецификация</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th><strong>Спецификация</strong></th>
-   <th><strong>Статус</strong></th>
-   <th><strong>Комментарий</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#dnd")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><strong>Specification</strong></th>
+      <th><strong>Status</strong></th>
+      <th><strong>Comment</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "#dnd")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="See_also">Смотрите также</h2>

@@ -8,11 +8,11 @@ translation_of: Web/CSS/Class_selectors
 ---
 <div>{{ CSSRef() }}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
-<p>在一个HTML文档中，CSS类选择器会根据元素的类属性中的内容匹配元素。类属性被定义为一个以空格分隔的列表项，在这组类名中，必须有一项与类选择器中的类名完全匹配，此条样式声明才会生效。</p>
+<p>在一个 HTML 文档中，CSS 类选择器会根据元素的类属性中的内容匹配元素。类属性被定义为一个以空格分隔的列表项，在这组类名中，必须有一项与类选择器中的类名完全匹配，此条样式声明才会生效。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">.类名 {<em>样式声明</em> }</pre>
 
@@ -20,26 +20,26 @@ translation_of: Web/CSS/Class_selectors
 
 <pre class="syntaxbox">[class~=类名] {<em>样式声明</em> }</pre>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <pre class="brush: css">span.classy {
   background-color: DodgerBlue;
 }
 </pre>
 
-<p>上面的CSS作用于下面的HTML代码:</p>
+<p>上面的 CSS 作用于下面的 HTML 代码：</p>
 
 <pre class="brush: html">  &lt;span class="classy"&gt;Here's a span with some text.&lt;/span&gt;
   &lt;span&gt;Here's another.&lt;/span&gt;
 </pre>
 
-<p>则会产生这样的效果:</p>
+<p>则会产生这样的效果：</p>
 
-<p><span style="background-color: DodgerBlue;">Here's a span with some text.</span></p>
+<p>Here's a span with some text.</p>
 
 <p>Here's another.</p>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="Specifications">规范</h2>
 
 <table class="standard-table">
  <thead>
@@ -51,17 +51,17 @@ translation_of: Web/CSS/Class_selectors
  </thead>
  <tbody>
   <tr>
-   <td><a class="external" href="http://www.w3.org/TR/css3-selectors/#class-html" title="http://www.w3.org/TR/css3-selectors/#class-html">CSS Selectors Level 3</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/css3-selectors/#class-html">CSS Selectors Level 3</a></td>
    <td>{{ Spec2('CSS3 Selectors') }}</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a class="external" href="http://www.w3.org/TR/CSS21/selector.html#class-html" title="http://www.w3.org/TR/CSS21/selector.html#class-html">CSS 2.1</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/CSS21/selector.html#class-html">CSS 2.1</a></td>
    <td>{{ Spec2('CSS2.1') }}</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a class="external" href="http://www.w3.org/TR/CSS1/#class-as-selector" title="http://www.w3.org/TR/CSS1/#class-as-selector">CSS 1</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/CSS1/#class-as-selector">CSS 1</a></td>
    <td>{{ Spec2('CSS1') }}</td>
    <td> </td>
   </tr>
@@ -70,54 +70,6 @@ translation_of: Web/CSS/Class_selectors
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat("css.selectors.class")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>

@@ -29,9 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 
 <h3 id="返回值">返回值</h3>
 
-<dl>
- <dd>给定对象自身可枚举属性的键值对数组。</dd>
-</dl>
+<p>给定对象自身可枚举属性的键值对数组。</p>
 
 <h2 id="描述">描述</h2>
 
@@ -79,7 +77,7 @@ console.log(map); // Map { foo: "bar", baz: 42 }</pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>要在较旧环境中添加兼容的<code>Object.entries</code>支持，你可以在 <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> 中找到Object.entries的示例（如果你不需要任何对IE的支持），在 <a href="https://github.com/es-shims/Object.entries">es-shims/Object.entries</a> 资料库中的一个polyfill，或者你可以使用下面列出的简易 polyfill。</p>
+<p>要在较旧环境中添加兼容的<code>Object.entries</code>支持，你可以在 <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> 中找到 Object.entries 的示例（如果你不需要任何对 IE 的支持），在 <a href="https://github.com/es-shims/Object.entries">es-shims/Object.entries</a> 资料库中的一个 polyfill，或者你可以使用下面列出的简易 polyfill。</p>
 
 <pre class="brush: js">if (!Object.entries)
   Object.entries = function( obj ){

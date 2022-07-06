@@ -18,14 +18,14 @@ translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>a</var> &amp; <var>b</var></code>
+<pre class="syntaxbox"><code><var>a</var> &amp; <var>b</var></code>
 </pre>
 
 <h2 id="Описание">Описание</h2>
 
 <p>Операнды преобразуются в  32-битные целые числа и выражаются серией битов (нулей and единиц). Числа с более чем 32 битами отбрасывают старшие разряды. Например, следующее целое число  с более чем 32 битами будет преобразовано в 32-битное целое:</p>
 
-<pre class="brush: js notranslate">До: 11100110111110100000000000000110000000000001
+<pre class="brush: js">До: 11100110111110100000000000000110000000000001
 После:          10100000000000000110000000000001</pre>
 
 <p>Каждый бит в первом операнде связан с соответствующим битом во втором операнде:<em>первый бит - с первым</em>,<em>второй- со вторым</em>, и т.д.</p>
@@ -66,7 +66,7 @@ translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND
  </tbody>
 </table>
 
-<pre class="brush: js notranslate">.    9 (base 10) = 00000000000000000000000000001001 (base 2)
+<pre class="brush: js">.    9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
 14 &amp; 9 (base 10) = 00000000000000000000000000001000 (base 2) = 8 (base 10)
@@ -78,30 +78,19 @@ translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND
 
 <h3 id="Использование_побитового_И">Использование побитового И</h3>
 
-<pre class="brush: js notranslate">// 5: 00000000000000000000000000000101
+<pre class="brush: js">// 5: 00000000000000000000000000000101
 // 2: 00000000000000000000000000000010
 5 &amp; 2; // 0</pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#prod-BitwiseANDExpression', 'Bitwise AND expression')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
 
 
 
-<p>{{Compat("javascript.operators.bitwise_and")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

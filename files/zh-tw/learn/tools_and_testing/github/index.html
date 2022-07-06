@@ -10,85 +10,84 @@ tags:
 ---
 <div>{{LearnSidebar}}</div>
 
-<p class="summary">所有開發者都將使用到一些<strong>版本控制系統</strong> (<strong> V</strong>ersion <strong>C</strong>ontrol <strong>S</ strong>ystem, 簡稱<strong> VCS</strong> ), 這種工具讓人們可以與其他開發者同公開發一個專案同時避免了不必要的重複與衝突，如果遇到什麼問題，也可以及時回退到之前的版本。當今最流行的<strong>版本控制系統</strong>（至少在網絡開發者中是這樣的）是<strong> Git</strong>，和與之關聯的程式社區網站<strong> GitHub</strong > 。這篇短文將帶你簡單地了解他們。 </p>
+<p>所有開發者都將使用到一些<strong>版本控制系統</strong> (<strong> V</strong>ersion <strong>C</strong>ontrol <strong>S</ strong>ystem, 簡稱<strong> VCS</strong> ), 這種工具讓人們可以與其他開發者同公開發一個專案同時避免了不必要的重複與衝突，如果遇到什麼問題，也可以及時回退到之前的版本。當今最流行的<strong>版本控制系統</strong>（至少在網路開發者中是這樣的）是<strong> Git</strong>，和與之關聯的程式社區網站<strong> GitHub</strong >。這篇短文將帶你簡單地了解他們。</p>
 
 <h2 id="Overview">概述</h2>
 
 <p>版本控制系統在軟體開發過程中是不可或缺的：</p>
 
 <ul>
- <li>It is rare that you will work on a project completely on your own, and as soon as you start working with other people you start to run the risk of conflicting with each other's work — this is when both of you try to update the same piece of code at the same time. You need to have some kind of mechanism in place to manage the occurrences, and help avoid loss of work as a result.</li>
- <li>When working on a project on your own or with others, you'll want to be able to back up the code in a central place, so it is not lost if your computer breaks.</li>
- <li>You will also want to be able to roll back to earlier versions if a problem is later discovered. You might have started doing this in your own work by creating different versions of the same file, e.g. <code>myCode.js</code>, <code>myCode_v2.js</code>, <code>myCode_v3.js</code>, <code>myCode_final.js</code>, <code>myCode_really_really_final.js</code>, etc., but this is really error-prone and unreliable.</li>
- <li>Different team members will commonly want to create their own separate versions of the code (called <strong>branches</strong> in Git), work on a new feature in that version, and then get it merged in a controlled manner (in GitHub we use <strong>pull requests</strong>) with the master version when they are done with it.</li>
+ <li>我們很少獨自完成一個專案，而在分工合作的同時我們都會有與他人的工作相衝突的風險：尤其是當兩個人同時嘗試修改同一段程式碼的時候。所以我們需要有相應的機制用以避免這種情況。</li>
+ <li>不管是自己一人或與他人一起開發專案時，總希望能夠程式碼能夠及時保存，這樣就可以避免像電腦突然損壞而丟失程式碼的局面。</ li>
+ <li>如果後期發現了問題，我們可能還會想要回到比較早的版本。有些人在做自己的專案時透過創建同一文件的不同版本，例如 <code>myCode.js</code>, <code>myCode_v2.js</code>, <code>myCode_v3.js</code>, <code>myCode_final.js< /code>, <code>myCode_really_really_final.js</code> 之類的文件用於保存歷史版本，但這個方法不可靠，且容易出錯。</li>
+ <li>不同的團隊成員也會需要創建他們自己的獨特的版本（在Git中叫做<strong>branches</strong>（分支）），他們在這裡添加一些新的功能特性，然後通過一些可控的方法（在GitHub 中我們使用<strong>pull request</strong>（提取要求））將其合併到原來的主幹項目中。</li>
 </ul>
 
-<p>VCSes provide tools to meet the above needs. <a href="https://git-scm.com/">Git</a> is an example of a VCS, and <a href="https://github.com/">GitHub</a> is a web site + infrastructure that provides a Git server plus a number of really useful tools for working with git repositories individually or in teams, such as reporting issues with the code, reviewing tools, project management features such as assigning tasks and task statuses, and more.</p>
+<p>版本控制系統提供了能夠滿足以上需求的工具。 <a href="https://git-scm.com/">Git</a> 是版本控制系統的範例，而<a href="https://github.com/">GitHub</a>是一個為個人或團隊操作Git儲存庫( Git Repositories) 提供了Git伺服器和一系列非常實用的工具的網站+基礎設施。它提供了回報程式碼錯誤、檢查工具以及分配任務和任務狀態等項目管理工具等等。</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Git is actually a <em>distributed</em> version control system, meaning that a complete copy of the repository containing the codebase is made on your computer (and everyone else's). You make changes to your own copy and then push those changes back up to the server, where an administrator will decide whether to merge your changes with the master copy.</p>
-</div>
+<p> <strong>注意</ strong>：Git實際上是一個<em>分散式</ em>版本控制系統，這意味著包含程式碼庫的儲存庫的完整副本是在您的電腦上（以及其他所有人）上創建的。 您可以對自己的副本進行更改，然後將這些更改推送回伺服器，管理員將決定是否將您的更改與主副本合併到主幹上。</ p>
+</ div>
 
 <div class="callout">
-  <h4 id="Looking_to_become_a_front-end_web_developer">Looking to become a front-end web
-    developer?</h4>
+  <h4 id="Looking_to_become_a_front-end_web_developer">嘗試成為一位前端網頁程式開發者?</h4>
 
-  <p>We have put together a course that includes all the essential information you need to
-    work towards your goal.</p>
+  <p>我們準備了一系列的課程當中包括核心的資訊，讓你往你的目標(成為一位前端網頁程式開發者)邁進。</p>
 
-  <p><a href="/en-US/docs/Learn/Front-end_web_developer"><strong>Get started</strong></a></p>
+  <p><a href="/en-US/docs/Learn/Front-end_web_developer"><strong>開始學習</strong></a></p>
 
 </div>
 
-<h2 id="Prerequisites">Prerequisites</h2>
+<h2 id="Prerequisites">事前準備</h2>
 
-<p>To use Git and GitHub, you need:</p>
+<p>要使用Git和GitHub，你需要:</p>
 
 <ul>
- <li>A desktop computer with Git installed on it (see the <a href="https://git-scm.com/downloads">Git downloads page</a>).</li>
- <li>A tool to use Git. Depending on how you like to work, you could use a <a href="https://git-scm.com/downloads/guis/">Git GUI client</a> (we'd recommend GitHub Desktop, SourceTree or Git Kraken) or just stick to using a terminal window. In fact, it is probably useful for you to get to know at least the basics of git terminal commands, even if you intend to use a GUI.</li>
- <li>A <a href="https://github.com/join">GitHub account</a>. If you haven't already got one, sign up now using the provided link.</li>
+ <li>一台有安裝Git的電腦 (請參考 <a href="https://git-scm.com/downloads">Git 下載頁面</a>)。</li>
+ <li>一個工具來使用Git，取決於你喜歡用哪類型工具，你可以使用一個 <a href="https://git-scm.com/downloads/guis/">Git GUI client</a>（我們建議使用GitHub Desktop, SourceTree or Git Kraken）或就使用terminal window。即便你傾向使用GUI，實際上使用terminal window可以幫助你學習一些git的基本指令。</li>
+ <li>一個 <a href="https://github.com/join">GitHub 帳號</a>。如果你還沒有帳號，建議使用提供的連結去註冊一個帳號並開始用。</li>
 </ul>
 
-<p>In terms of prerequisite knowledge, you don't need to know anything about web development, Git/GitHub, or VCSes to start this module. However, it is recommended that you know some coding so that you have reasonable computer literacy, and some code to store in your repositories!</p>
+<p>就事前必備知識而言，您無需了解所有有關Web開發，Git / GitHub的知識即可開始使用此版本控制系統。 但是，建議您了解一些開發程式碼的知識，並嘗試把一些程式碼存儲在你的儲存庫中！</ p>
 
-<p>It is also preferable that you have some basic terminal knowledge, so for example moving between directories, creating files, and modifying the system <code>PATH</code>.</p>
+<p>最好還具有一些基本的終端機知識，例如在目錄之間移動，創立文件以及修改系統的<code> PATH </ code>。</ p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Github is not the only site/toolset you can use with Git. There are other alternatives such as <a href="https://about.gitlab.com/">GitLab</a> that you could try, and you could also try setting your own Git server up and using it instead of GitHub. We've only stuck with GitHub in this course to provide a single way that works.</p>
-</div>
+<p> <strong>注意</ strong>：Github不是唯一網站/工具集讓你使用Git。 您可以嘗試其它替代方法，例如<a href="https://about.gitlab.com/"> GitLab </a>，也可以嘗試設置自己的Git伺服器並使用它來取代GitHub。在本章節中，我們僅停留在GitHub使用教學上。</ p>
+</ div>
 
-<h2 id="Guides">Guides</h2>
+<h2 id="Guides">其它指南</h2>
 
-<p>Note that the links below take you to resources on external sites. Eventually, we are aiming to have our own dedicated Git/GitHub course, but for now, these will help you get to grips with the subject at hand.</p>
+<p>請注意，下面的連結將您帶到外部站點上的資源。最終，我們的目標是開設自己的專屬Git / GitHub課程，但目前，這些課程將幫助您掌握相關主題。</ p>
 
 <dl>
- <dt><a href="https://guides.github.com/activities/hello-world/">Hello, World (from GitHub)</a></dt>
- <dd>This is a good place to start — this practical guide gets you to jump right into using GitHub, learning the basics of Git such as creating repositories and branches, making commits, and opening and merging pull requests.</dd>
- <dt><a href="https://guides.github.com/introduction/git-handbook/">Git Handbook (from GitHub)</a></dt>
- <dd>This Git Handbook goes into a little more depth, explaining what a VCS is, what a repository is, how the basic GitHub model works, Git commands and examples, and more.</dd>
- <dt><a href="https://guides.github.com/activities/forking/">Forking Projects (from GitHub)</a></dt>
- <dd>Forking projects is essential when you want to contribute to someone else's code. This guide explains how.</dd>
- <dt><a href="https://help.github.com/en/articles/about-pull-requests">About Pull Requests (from GitHub)</a></dt>
- <dd>A useful guide to managing pull requests, the way that your suggested code changes are delivered to people's repositories for consideration.</dd>
- <dt><a href="https://guides.github.com/features/issues/">Mastering issues (from GitHub)</a></dt>
- <dd>Issues are like a forum for your GitHub project, where people can ask questions and report problems, and you can manage updates (for example assigning people to fix issues, clarifying the issue, letting people know things are fixed). This articles gives you what you need to know about issues.</dd>
-</dl>
+  <dt> <a href="https://guides.github.com/activities/hello-world/">Hello, World（來自GitHub）</a> </ dt>
+  <dd>這是一個很好的起點-本實用指南可讓您直接使用GitHub，學習Git的基礎知識，例如創建儲存庫和分支，進行提交以及合併提取要求。</ dd>
+  <dt> <a href="https://guides.github.com/introduction/git-handbook/"> Git使用手冊（來自GitHub）</a> </ dt>
+  <dd>這本Git手冊更深入地介紹了版本控制系统是什麼，儲存庫是什麼，基本GitHub模如何運行，Git命令和範例等等。</ dd>
+  <dt> <a href="https://guides.github.com/activities/forking/">Forking Projects分叉專案（來自GitHub）</a> </ dt>
+  <dd>當您想為別人的程式碼做貢獻時，Forking Projects分叉專案是必不可少的。本指南說明了方法。</ dd>
+  <dt> <a href="https://help.github.com/en/articles/about-pull-requests">關於提取要求（來自GitHub）</a> </ dt>
+  <dd>有用的指南，用於管理請求請求，將建議的程式碼更改傳遞給人們的儲存庫以供考慮。</ dd>
+  <dt> <a href="https://guides.github.com/features/issues/">掌握問題（來自GitHub）</a> </ dt>
+  <dd>問題就像是GitHub項目的論壇，人們可以在其中提出問題和報告問題，還可以管理更新（例如，分配人員來解決問題，澄清問題，讓人們知道問題已解決）。本文將提供你有關問題的必備知識。</ dd>
+</ dl>
+   
 
-<div class="notecard note">
-<p><strong>Note</strong>: There is <strong>a lot more</strong> that you can do with Git and GitHub, but we feel that the above represents the minimum you need to know to start using Git effectively. As you get deeper into Git, you'll start to realize that it is easy to go wrong when you start using more complicated commands. Don't worry, even professional web developers find Git confusing sometimes, and often solve problems by searching for solutions on the web, or consulting sites like <a href="https://github.com/k88hudson/git-flight-rules">Flight rules for Git</a> and<a href="https://dangitgit.com/"> Dangit, git!</a></p>
+<div class="blockIndicator note">
+<p><strong>溫馨提示：</strong> 你還可以用Git跟GitHub來完成更多的事情，但我們認為，如果你想要有效地使用 Git，上面的這些知識是至少應該具備的。當你更深入地了解Git時，你將會意識到，當你開始使用更加複雜的指令時會更容易出錯。但不要擔心，即使是專業的網路工程師有時都會感到困惑，並通過網路檢索或<a href="https://github.com/k88hudson/git-flight-rules">Flight rules for Git</a>和<a href="https://dangitgit.com/"> Dangit, git!</a> 這樣的網站來尋找答案。</p>
 </div>
 
-<h2 id="See_also">See also</h2>
+<h2 id="See_also">也可以參考以下</h2>
 
 <ul>
- <li><a href="https://guides.github.com/introduction/flow/">Understanding the GitHub flow</a></li>
- <li><a href="https://git-scm.com/docs">Git command list</a></li>
- <li><a href="https://guides.github.com/features/mastering-markdown/">Mastering markdown</a> (the text format you write in on PR, issue comments, and <code>.md</code> files).</li>
- <li><a href="https://guides.github.com/features/pages/">Getting Started with GitHub Pages</a> (how to publish demos and websites on GitHub).</li>
- <li><a href="https://learngitbranching.js.org/">Learn Git branching</a></li>
- <li><a href="https://github.com/k88hudson/git-flight-rules">Flight rules for Git</a> (a very useful compendium of ways to achieve specific things in Git, including how to correct things when you went wrong).</li>
- <li>
-  <p><a href="https://dangitgit.com/">Dangit, git!</a> (another useful compendium, specifically of ways to correct things when you went wrong).</p>
- </li>
-</ul>
+  <li><a href="https://guides.github.com/introduction/flow/">【理解GitHub流程】</a></li>
+  <li><a href="https://git-scm.com/docs">【指令列表】</a></li>
+  <li><a href="https://guides.github.com/features/mastering-markdown/">【掌握Markdown 格式】</a>（在網頁上、評論區常用的格式以及<code >.md</code> 文件所使用的格式，GitHub中的介紹文件(readme.md)即用這種格式書寫）。</li>
+  <li><a href="https://guides.github.com/features/pages/">【入門 Github 頁面】</a>（如何在GitHub上發布示例和網站）。</li>
+  <li><a href="https://learngitbranching.js.org/">【學習 Git 的分支結構】</a></li>
+  <li><a href="https://github.com/k88hudson/git-flight-rules">【Git 中的飛行法則】</a>（ 在Git中實現特定功能的非常有用的方法介紹綱要，包括如何在出錯時糾錯等）。</li>
+  <li>
+   <p><a href="https://dangitgit.com/">【該死的Git，Git !】</a>（另一個十分有用的方法介紹綱要，特別是在出錯的時候進行糾正的方法）。</p>
+  </li>
+ </ul>

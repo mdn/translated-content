@@ -16,15 +16,15 @@ translation_of: Web/API/Media_Streams_API
 ---
 <div>{{DefaultAPISidebar("Media Capture and Streams")}}</div>
 
-<p><strong>Media Capture and Streams</strong> APIは一般的に<em>Media Stream API</em>や<em>Stream API</em>と呼ばれる<a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a>に関連したAPIです。このAPIでは、オーディオやビデオデータのストリーム、これらを操作するためのメソッド、データタイプに関連づけられた制約、データを非同期に利用する際の成功と失敗のコールバック、これらの処理を行なっている最中に発生するイベントなどをサポートします。</p>
+<p><strong>Media Capture and Streams</strong> APIは一般的に<em>Media Stream API</em>や<em>Stream API</em>と呼ばれる<a href="/ja/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a>に関連したAPIです。このAPIでは、オーディオやビデオデータのストリーム、これらを操作するためのメソッド、データタイプに関連づけられた制約、データを非同期に利用する際の成功と失敗のコールバック、これらの処理を行なっている最中に発生するイベントなどをサポートします。</p>
 
 <h2 id="基本概念">基本概念</h2>
 
-<p>このAPIは、オーディオまたはビデオに関連づけられたデータの流れを表現するための{{domxref("MediaStream")}}オブジェクトの操作を基本としています。例として<a href="/en-US/docs/WebRTC/taking_webcam_photos#Get_the_video" title="/en-US/docs/WebRTC/taking_webcam_photos#Get_the_video">Get the video</a>(英語)をご覧ください。</p>
+<p>このAPIは、オーディオまたはビデオに関連づけられたデータの流れを表現するための{{domxref("MediaStream")}}オブジェクトの操作を基本としています。例として<a href="/ja/docs/WebRTC/taking_webcam_photos#Get_the_video" title="/en-US/docs/WebRTC/taking_webcam_photos#Get_the_video">Get the video</a>(英語)をご覧ください。</p>
 
 <p><code>MediaStream</code>は0個以上の{{domxref("MediaStreamTrack")}}によって構成されます。<code>MediaStreamTrack</code>は様々なオーディオやビデオの<strong>トラック</strong>を表現します。それぞれの<code>MediaStreamTrack</code>は、1つ以上の<strong>チャンネル</strong>を持ちます。このチャンネルはメディアストリームの最小の単位を表現します。例えば、ステレオのオーディオトラックの<em>left</em>と<em>right</em>のチャンネルのそれぞれのように、与えられたスピーカーに関連づけられたオーディオ信号です。</p>
 
-<p><code>MediaStream</code>オブジェクトは、1つの<strong>入力</strong>と1つの<strong>出力</strong>を持ちます。<code>MediaStream</code>オブジェクトは、ローカルで呼び出される{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}によって生成され、ユーザーのカメラやマイクの1つを入力ソースとして持ちます。ローカルでない<code>MediaStream</code>は、{{HTMLElement("video")}}や{{HTMLElement("audio")}}などのメディア要素や、WebRTC {{domxref("RTCPeerConnection")}} APIによって取得できるネットワーク越しに生成されたストリーム、<a href="/en-US/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">Web Audio API</a> {{domxref("MediaStreamAudioSourceNode")}}によって作成されたストリームとして表現されます。<code>MediaStream</code>オブジェクトの出力は<strong>コンシューマ</strong>(consumer)に接続されます。出力として{{HTMLElement("audio")}}や{{HTMLElement("video")}}などのメディア要素、WebRTC {{domxref("RTCPeerConnection")}} API、<a href="/en-US/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">Web Audio API</a> {{domxref("MediaStreamAudioDestinationNode")}}が使用できます。</p>
+<p><code>MediaStream</code>オブジェクトは、1つの<strong>入力</strong>と1つの<strong>出力</strong>を持ちます。<code>MediaStream</code>オブジェクトは、ローカルで呼び出される{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}によって生成され、ユーザーのカメラやマイクの1つを入力ソースとして持ちます。ローカルでない<code>MediaStream</code>は、{{HTMLElement("video")}}や{{HTMLElement("audio")}}などのメディア要素や、WebRTC {{domxref("RTCPeerConnection")}} APIによって取得できるネットワーク越しに生成されたストリーム、<a href="/ja/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">Web Audio API</a> {{domxref("MediaStreamAudioSourceNode")}}によって作成されたストリームとして表現されます。<code>MediaStream</code>オブジェクトの出力は<strong>コンシューマ</strong>(consumer)に接続されます。出力として{{HTMLElement("audio")}}や{{HTMLElement("video")}}などのメディア要素、WebRTC {{domxref("RTCPeerConnection")}} API、<a href="/ja/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">Web Audio API</a> {{domxref("MediaStreamAudioDestinationNode")}}が使用できます。</p>
 
 <p> </p>
 
@@ -68,7 +68,7 @@ translation_of: Web/API/Media_Streams_API
 <h2 id="関連項目">関連項目</h2>
 
 <ul>
- <li><a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> - APIの入門ページ</li>
+ <li><a href="/ja/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> - APIの入門ページ</li>
  <li>{{domxref("mediaDevices.getUserMedia()")}}</li>
- <li><a href="/en-US/docs/WebRTC/taking_webcam_photos">Taking webcam photos</a>: <code>getUserMedia()</code>を用いたデモとチュートリアル</li>
+ <li><a href="/ja/docs/WebRTC/taking_webcam_photos">Taking webcam photos</a>: <code>getUserMedia()</code>を用いたデモとチュートリアル</li>
 </ul>

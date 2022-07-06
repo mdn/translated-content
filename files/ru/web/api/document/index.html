@@ -7,7 +7,7 @@ translation_of: Web/API/Document
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<div></div>
+
 
 <p>Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект <strong>document</strong>. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего <a href="/en-US/docs/Using_the_W3C_DOM_Level_1_Core" title="Using_the_W3C_DOM_Level_1_Core">DOM</a> - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), <span id="result_box" lang="ru"><span>а также обеспечивает функциональность</span><span>, которая является</span> <span>глобальной для</span> <span>документа</span>, <span>например, для получения</span> <span>URL-адреса </span><span>страницы</span> <span>и</span>ли <span>создания новых элементов</span> <span>в документе</span></span>).</p>
 
@@ -24,13 +24,13 @@ translation_of: Web/API/Document
 
 <ul>
  <li>Все объекты документов реализуют интерфейс <a href="http://dom.spec.whatwg.org/#interface-document"><code>Document</code></a> (и следовательно {{domxref("Node")}} и {{domxref("EventTarget")}} интерфейсы). Таким образом основные свойства и методы, описанные на этой странице, доступны для всех видов документов.</li>
- <li>В современных браузерах некоторые документы (т.е. те, которые содержат контент <code>text/html</code>) также реагируют  {{domxref("HTMLDocument")}} интерфейс.</li>
+ <li>В современных браузерах некоторые документы (т.е. те, которые содержат контент <code>text/html</code>) также реализуют  {{domxref("HTMLDocument")}} интерфейс.</li>
  <li>В современных браузерах SVG документы реализуют {{domxref("SVGDocument")}} интерфейс.</li>
 </ul>
 
 <p>В будущем все эти интерфейсы будут сведены в один интерфейс - <code>Document</code>.</p>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <div class="note">
 <p><strong>Примечание:</strong> Интерфейс <code>Document</code> наследует также интерфейсы {{domxref("Node")}} и {{domxref("EventTarget")}}.</p>
@@ -50,7 +50,7 @@ translation_of: Web/API/Document
  <dt>{{domxref("Document.doctype")}}</dt>
  <dd>Возвращает Document Type Definition (DTD) текущего документа .</dd>
  <dt>{{domxref("Document.documentElement")}}</dt>
- <dd>Возвращает Element, который является первым дочерним элементом документа. Для HTML документов это HTML элемент.</dd>
+ <dd>Возвращает Element, который является первым дочерним элементом документа. Для HTML документов это HTML-элемент.</dd>
  <dt>{{domxref("Document.documentURI")}}</dt>
  <dd>Возвращает URL документа.</dd>
  <dt>{{domxref("Document.domConfig")}} {{Deprecated_inline}}</dt>
@@ -81,9 +81,9 @@ translation_of: Web/API/Document
  <dd>Returns a list of the style sheet sets available on the document.</dd>
  <dt>{{domxref("Document.xmlEncoding")}} {{Deprecated_inline}}</dt>
  <dd>Returns the encoding as determined by the XML declaration.</dd>
- <dt>{{domxref("Document.xmlStandalone")}} {{obsolete_inline("10.0")}}</dt>
+ <dt>{{domxref("Document.xmlStandalone")}} {{Deprecated_inline}}</dt>
  <dd>Returns <code>true</code> if the XML declaration specifies the document to be standalone (<em>e.g.,</em> An external part of the DTD affects the document's content), else <code>false</code>.</dd>
- <dt>{{domxref("Document.xmlVersion")}} {{obsolete_inline("10.0")}}</dt>
+ <dt>{{domxref("Document.xmlVersion")}} {{Deprecated_inline}}</dt>
  <dd>Returns the version number as specified in the XML declaration or <code>"1.0"</code> if the declaration is absent.</dd>
 </dl>
 
@@ -156,7 +156,7 @@ translation_of: Web/API/Document
  <dd>Returns the width of the current document.</dd>
 </dl>
 
-<h3 id="Event_handlers" name="Event_handlers">Event handlers</h3>
+<h3 id="Event_handlers">Event handlers</h3>
 
 <dl>
  <dt>{{domxref("Document.onpointerlockchange")}} {{experimental_inline}}</dt>
@@ -167,7 +167,7 @@ translation_of: Web/API/Document
  <dd>Returns the event handling code for the <code>readystatechange</code> event.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Methods</h2>
+<h2 id="Methods">Methods</h2>
 
 <div class="note">
 <p><strong>Note:</strong> The <code>Document</code> interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.</p>
@@ -365,7 +365,7 @@ translation_of: Web/API/Document
  <dt>{{domxref("document.currentScript")}} {{gecko_minversion_inline("2.0")}}</dt>
  <dd>Returns the {{HTMLElement("script")}} element that is currently executing.</dd>
  <dt>{{domxref("document.documentURIObject")}} {{gecko_minversion_inline("1.9")}}</dt>
- <dd>(<strong>Mozilla add-ons only!</strong>) Returns the {{Interface("nsIURI")}} object representing the URI of the document. This property only has special meaning in privileged JavaScript code (with UniversalXPConnect privileges).</dd>
+ <dd>(<strong>Mozilla add-ons only!</strong>) Returns the <code>nsIURI</code> object representing the URI of the document. This property only has special meaning in privileged JavaScript code (with UniversalXPConnect privileges).</dd>
  <dt>{{domxref("document.popupNode")}}</dt>
  <dd>Returns the node upon which a popup was invoked.</dd>
  <dt>{{domxref("document.tooltipNode")}}</dt>
@@ -375,13 +375,13 @@ translation_of: Web/API/Document
 <p>Mozilla also define some non-standard methods:</p>
 
 <dl>
- <dt>{{domxref("Document.execCommandShowHelp")}} {{obsolete_inline("14.0")}}</dt>
+ <dt>{{domxref("Document.execCommandShowHelp")}} {{deprecated_inline}}</dt>
  <dd>This method never did anything and always threw an exception, so it was removed in Gecko 14.0 {{geckoRelease("14.0")}}.</dd>
- <dt>{{domxref("Document.getBoxObjectFor")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Document.getBoxObjectFor")}} {{deprecated_inline}}</dt>
  <dd>Use the {{domxref("Element.getBoundingClientRect()")}} method instead.</dd>
  <dt>{{domxref("Document.loadOverlay")}}</dt>
  <dd>Loads a <a href="/en-US/docs/XUL_Overlays" title="XUL_Overlays">XUL overlay</a> dynamically. This only works in XUL documents.</dd>
- <dt>{{domxref("document.queryCommandText")}} {{obsolete_inline("14.0")}}</dt>
+ <dt>{{domxref("document.queryCommandText")}} {{deprecated_inline}}</dt>
  <dd>This method never did anything but throw an exception, and was removed in Gecko 14.0 {{geckoRelease("14.0")}}.</dd>
 </dl>
 
@@ -390,8 +390,8 @@ translation_of: Web/API/Document
 <p>Microsoft defines some non-standard properties:</p>
 
 <dl>
- <dt>{{domxref("document.fileSize")}}* {{non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See <a href="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx" title="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx">MSDN</a>.</dd>
+ <dt>{{domxref("document.fileSize")}}* {{Non-standard_Inline}} {{deprecated_inline}}</dt>
+ <dd>Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See <a href="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx">MSDN</a>.</dd>
  <dt><span style="font-weight: normal; line-height: 1.5;">Internet Explorer does not support all methods from the <code>Node</code> interface in the <code>Document</code> interface:</span></dt>
 </dl>
 
@@ -402,4 +402,4 @@ translation_of: Web/API/Document
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Document")}}</p>
+<p>{{Compat}}</p>

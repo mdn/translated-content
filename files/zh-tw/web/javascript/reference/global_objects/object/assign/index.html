@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 <h2 id="語法">語法</h2>
 
-<pre class="syntaxbox notranslate">Object.assign(<var>target</var>, ...<var>sources</var>)</pre>
+<pre class="syntaxbox">Object.assign(<var>target</var>, ...<var>sources</var>)</pre>
 
 <h3 id="參數">參數</h3>
 
@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 <h3 id="回傳值">回傳值</h3>
 
-<p>     合併目標物件及(多個)來源物件所得到的最終物件。</p>
+<p>     合併目標物件及(多個)來源物件所得到的最終物件。</p>
 
 <h2 id="說明">說明</h2>
 
@@ -34,22 +34,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 <p>若發生錯誤，例如: 當一個屬性不可被寫入時，將會引發 {{jsxref("TypeError")}} 的錯誤，且目標物件剩餘的屬性將不會改變。</p>
 
-<p>注意: <code>Object.assign()</code> 不會在來源物件屬性的值為{{jsxref("null")}} 或 {{jsxref("undefined")}} 的時候拋出錯誤。</p>
+<p>注意: <code>Object.assign()</code> 不會在來源物件屬性的值為{{jsxref("null")}} 或 {{jsxref("undefined")}} 的時候拋出錯誤。</p>
 
 <h2 id="範例">範例</h2>
 
 <h3 id="複製物件">複製物件</h3>
 
-<pre class="brush: js notranslate">var obj = { a: 1 };
+<pre class="brush: js">var obj = { a: 1 };
 var copy = Object.assign({}, obj);
 console.log(copy); // { a: 1 }
 </pre>
 
-<h3 id="Deep_Clone" name="Deep_Clone">警告:非深層複製</h3>
+<h3 id="Deep_Clone">警告:非深層複製</h3>
 
-<p>深層複製(deep clone)需要使用其他的替代方案，因為 <code>Object.assign()</code> 僅複製屬性值。若來源物件的值參照到一個子物件，它只會複製該子物件的參照。</p>
+<p>深層複製(deep clone)需要使用其他的替代方案，因為 <code>Object.assign()</code> 僅複製屬性值。若來源物件的值參照到一個子物件，它只會複製該子物件的參照。</p>
 
-<pre class="brush: js notranslate">function test() {
+<pre class="brush: js">function test() {
   let a = { b: {c:4} , d: { e: {f:1}} }
   let g = Object.assign({},a) // 淺層
   let h = JSON.parse(JSON.stringify(a)); // 深層
@@ -70,7 +70,7 @@ test();
 
 <h3 id="合併物件">合併物件</h3>
 
-<pre class="brush: js notranslate">var o1 = { a: 1 };
+<pre class="brush: js">var o1 = { a: 1 };
 var o2 = { b: 2 };
 var o3 = { c: 3 };
 
@@ -80,7 +80,7 @@ console.log(o1);  // { a: 1, b: 2, c: 3 }, 目標物件本身也被改變。</pr
 
 <h3 id="有相同屬性時合併物件">有相同屬性時合併物件</h3>
 
-<pre class="brush: js notranslate">var o1 = { a: 1, b: 1, c: 1 };
+<pre class="brush: js">var o1 = { a: 1, b: 1, c: 1 };
 var o2 = { b: 2, c: 2 };
 var o3 = { c: 3 };
 
@@ -91,7 +91,7 @@ console.log(obj); // { a: 1, b: 2, c: 3 }，屬性c為o3.c的值，最後一個�
 
 <h3 id="複製_Symbol_型別的屬性">複製 Symbol 型別的屬性</h3>
 
-<pre class="brush: js notranslate">var o1 = { a: 1 };
+<pre class="brush: js">var o1 = { a: 1 };
 var o2 = { [Symbol('foo')]: 2 };
 
 var obj = Object.assign({}, o1, o2);
@@ -101,7 +101,7 @@ Object.getOwnPropertySymbols(obj); // [Symbol(foo)]非不在
 
 <h3 id="在屬性鏈中的不可列舉屬性不會被複製">在屬性鏈中的不可列舉屬性不會被複製</h3>
 
-<pre class="brush: js notranslate">var obj = Object.create({ foo: 1 }, { // foo 是 obj 的屬性鏈。
+<pre class="brush: js">var obj = Object.create({ foo: 1 }, { // foo 是 obj 的屬性鏈。
   bar: {
     value: 2  // bar 是不可列舉的屬性，因為enumerable預設為false。
   },
@@ -117,7 +117,7 @@ console.log(copy); // { baz: 3 }
 
 <h3 id="原始型別會被包成物件">原始型別會被包成物件</h3>
 
-<pre class="brush: js notranslate">var v1 = 'abc';
+<pre class="brush: js">var v1 = 'abc';
 var v2 = true;
 var v3 = 10;
 var v4 = Symbol('foo');
@@ -130,7 +130,7 @@ console.log(obj); // { "0": "a", "1": "b", "2": "c" }
 
 <h3 id="任何異常將會中斷正進行的複製程序">任何異常將會中斷正進行的複製程序</h3>
 
-<pre class="brush: js notranslate">var target = Object.defineProperty({}, 'foo', {
+<pre class="brush: js">var target = Object.defineProperty({}, 'foo', {
   value: 1,
   writable: false
 }); // target.foo 是 read-only (唯讀)屬性
@@ -148,7 +148,7 @@ console.log(target.baz);  // undefined, 第三個來源物件也不會被複製�
 
 <h3 id="複製的存取程序">複製的存取程序</h3>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
   foo: 1,
   get bar() {
     return 2;
@@ -162,17 +162,17 @@ console.log(copy);
 // 這個函式用來複製完整的描述內容。
 function completeAssign(target, ...sources) {
   sources.forEach(source =&gt; {
-    let descriptors = Object.keys(source).reduce((descriptors, key) =&gt; {
-      descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
-      return descriptors;
-    }, {});
-    // Object.assign 預設會複製可列舉的Symbols。
-    Object.getOwnPropertySymbols(source).forEach(sym =&gt; {
-      let descriptor = Object.getOwnPropertyDescriptor(source, sym);
-      if (descriptor.enumerable) {
-        descriptors[sym] = descriptor;
-      }
-    });
+    let descriptors = Object.keys(source).reduce((descriptors, key) =&gt; {
+      descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
+      return descriptors;
+    }, {});
+    // Object.assign 預設會複製可列舉的Symbols。
+    Object.getOwnPropertySymbols(source).forEach(sym =&gt; {
+      let descriptor = Object.getOwnPropertyDescriptor(source, sym);
+      if (descriptor.enumerable) {
+        descriptors[sym] = descriptor;
+      }
+    });
     Object.defineProperties(target, descriptors);
   });
   return target;
@@ -187,59 +187,41 @@ console.log(copy);
 
 <p>{{Glossary("Polyfill","polyfill")}} 不支援Symbol屬性，因為ES5沒有Symbol型別。</p>
 
-<pre class="brush: js notranslate">if (typeof Object.assign != 'function') {
-  Object.assign = function (target, varArgs) { // .length of function is 2
-    'use strict';
-    if (target == null) { // TypeError if undefined or null
-      throw new TypeError('Cannot convert undefined or null to object');
-    }
+<pre class="brush: js">if (typeof Object.assign != 'function') {
+  Object.assign = function (target, varArgs) { // .length of function is 2
+    'use strict';
+    if (target == null) { // TypeError if undefined or null
+      throw new TypeError('Cannot convert undefined or null to object');
+    }
 
-    var to = Object(target);
+    var to = Object(target);
 
-    for (var index = 1; index &lt; arguments.length; index++) {
-      var nextSource = arguments[index];
+    for (var index = 1; index &lt; arguments.length; index++) {
+      var nextSource = arguments[index];
 
-      if (nextSource != null) { // Skip over if undefined or null
-        for (var nextKey in nextSource) {
+      if (nextSource != null) { // Skip over if undefined or null
+        for (var nextKey in nextSource) {
           // Avoid bugs when hasOwnProperty is shadowed
-          if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-            to[nextKey] = nextSource[nextKey];
-          }
-        }
-      }
-    }
-    return to;
-  };
+          if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+            to[nextKey] = nextSource[nextKey];
+          }
+        }
+      }
+    }
+    return to;
+  };
 }
 </pre>
 
 <h2 id="規格">規格</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.assign', 'Object.assign')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.assign', 'Object.assign')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
 <div>{{Compat("javascript.builtins.Object.assign")}}</div>
 
-<div id="compat-desktop"></div>
+<div></div>
 
 <h2 id="參閱">參閱</h2>
 

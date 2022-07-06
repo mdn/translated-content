@@ -15,13 +15,13 @@ translation_of: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 
 <p>Чтобы извлечь данные из вашего источника звука, вам понадобится {{ domxref("AnalyserNode") }}, созданный при помощи метода {{ domxref("AudioContext.createAnalyser()") }}, например:</p>
 
-<pre class="brush: js notranslate">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 </pre>
 
 <p>Затем этот узел подключается к вашему источнику звука где-то между получением звука и его обработкой, например:</p>
 
-<pre class="brush: js notranslate">source = audioCtx.createMediaStreamSource(stream);
+<pre class="brush: js">source = audioCtx.createMediaStreamSource(stream);
 source.connect(analyser);
 analyser.connect(distortion);
 distortion.connect(audioCtx.destination);</pre>
@@ -42,13 +42,13 @@ distortion.connect(audioCtx.destination);</pre>
 
 <p>Например, если параметр AnalyserNode.fftSize установлен на 2048, мы возвращаем значение {{ domxref("AnalyserNode.frequencyBinCount") }}, равное половине fft, затем вызываем Uint8Array() с frequencyBinCount в качестве длины — столько измерений мы произведём для данного размера fft.</p>
 
-<pre class="brush: js notranslate">analyser.fftSize = 2048;
+<pre class="brush: js">analyser.fftSize = 2048;
 var bufferLength = analyser.frequencyBinCount;
 var dataArray = new Uint8Array(bufferLength);</pre>
 
 <p>Чтобы собрать данные и копировать их в массив, мы вызываем подходящий метод сбора данных, с массивом в качестве аргумента. Например:</p>
 
-<pre class="brush: js notranslate">analyser.getByteTimeDomainData(dataArray);</pre>
+<pre class="brush: js">analyser.getByteTimeDomainData(dataArray);</pre>
 
 <p>Теперь в массиве хранятся данные, описывающие звук в данный момент времени, и мы можем визуализировать их любым удобным образом, например с помощью холста HTML5: {{ htmlelement("canvas") }}.</p>
 
@@ -58,46 +58,46 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <p>Чтобы визуализировать осциллограф (спасибо <a href="http://soledadpenades.com/">Soledad Penadés</a> за код в <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167">Voice-change-O-matic</a>), мы сначала следуем шаблону, описанному в предыдущей секции, для создания буфера:</p>
 
-<pre class="brush: js notranslate">analyser.fftSize = 2048;
+<pre class="brush: js">analyser.fftSize = 2048;
 var bufferLength = analyser.frequencyBinCount;
 var dataArray = new Uint8Array(bufferLength);</pre>
 
 <p>Затем, мы очищаем холст:</p>
 
-<pre class="brush: js notranslate">canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);</pre>
+<pre class="brush: js">canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);</pre>
 
 <p>И определяем функцию <code>draw()</code>:</p>
 
-<pre class="brush: js notranslate">function draw() {</pre>
+<pre class="brush: js">function draw() {</pre>
 
 <p>Здесь мы используем <code>requestAnimationFrame()</code> чтобы многократно вызывать эту функцию:</p>
 
-<pre class="brush: js notranslate">      drawVisual = requestAnimationFrame(draw);</pre>
+<pre class="brush: js">      drawVisual = requestAnimationFrame(draw);</pre>
 
 <p>Затем мы копируем данные в наш массив:</p>
 
-<pre class="brush: js notranslate">      analyser.getByteTimeDomainData(dataArray);</pre>
+<pre class="brush: js">      analyser.getByteTimeDomainData(dataArray);</pre>
 
 <p>Устанавливаем заливку холста</p>
 
-<pre class="brush: js notranslate">      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+<pre class="brush: js">      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
       canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);</pre>
 
 <p>Затем устанавливаем ширину линий и цвет волны, которую мы хотим нарисовать, и начинаем рисовать путь</p>
 
-<pre class="brush: js notranslate">      canvasCtx.lineWidth = 2;
+<pre class="brush: js">      canvasCtx.lineWidth = 2;
       canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
 
       canvasCtx.beginPath();</pre>
 
 <p>Мы определяем ширину каждого отрезка в линии, деля длину холста на длину массива (равную FrequencyBinCount), затем определяем переменную x, задающую позицию, в которую необходимо перенести каждый отрезок.</p>
 
-<pre class="brush: js notranslate">      var sliceWidth = WIDTH * 1.0 / bufferLength;
+<pre class="brush: js">      var sliceWidth = WIDTH * 1.0 / bufferLength;
       var x = 0;</pre>
 
 <p>В цикле, мы задаём позицию небольшого отрезка волны для каждой точки в буфере на высоте, основанной на значении массива в этой точке, а затем перемещаем линию туда, где должен быть нарисован следующий отрезок:</p>
 
-<pre class="brush: js notranslate">      for(var i = 0; i &lt; bufferLength; i++) {
+<pre class="brush: js">      for(var i = 0; i &lt; bufferLength; i++) {
 
         var v = dataArray[i] / 128.0;
         var y = v * HEIGHT/2;
@@ -113,13 +113,13 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <p>Наконец, мы заканчиваем линию в середине правой стороны холста и рисуем, используя установленные цвет и ширину линий:</p>
 
-<pre class="brush: js notranslate">      canvasCtx.lineTo(canvas.width, canvas.height/2);
+<pre class="brush: js">      canvasCtx.lineTo(canvas.width, canvas.height/2);
       canvasCtx.stroke();
     };</pre>
 
 <p>В конце концов, мы вызываем функцию <code>draw()</code> , запускающую весь процесс:</p>
 
-<pre class="brush: js notranslate">    draw();</pre>
+<pre class="brush: js">    draw();</pre>
 
 <p>Мы получаем изображение волны, обновляющееся несколько раз в секунду:</p>
 
@@ -131,7 +131,7 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <p>Сначала мы снова создаём анализатор и массив для данных, затем очищаем холст при помощи <code>clearRect()</code>. Единственное отличие от того, что мы делали раньше - ы том, что мы можем установить намного меньший размер fft. Таким образом, каждый столбец в диаграмме будет выглядеть как столбец, а не как тонкая полоска.</p>
 
-<pre class="brush: js notranslate">    analyser.fftSize = 256;
+<pre class="brush: js">    analyser.fftSize = 256;
     var bufferLength = analyser.frequencyBinCount;
     console.log(bufferLength);
     var dataArray = new Uint8Array(bufferLength);
@@ -140,7 +140,7 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <p>Затем мы запускаем функцию <code>draw()</code>  и задаём цикл при помощи <code>requestAnimationFrame()</code> таким образом, чтобы в каждом кадре анимации данные обновлялись.</p>
 
-<pre class="brush: js notranslate">    function draw() {
+<pre class="brush: js">    function draw() {
       drawVisual = requestAnimationFrame(draw);
 
       analyser.getByteFrequencyData(dataArray);
@@ -152,7 +152,7 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <p>Мы также устанавливаем значение переменных <code>barHeight</code> и <code>x</code> , задающей то, где на холсте должен быть размещён каждый столбец.</p>
 
-<pre class="brush: js notranslate">      var barWidth = (WIDTH / bufferLength) * 2.5;
+<pre class="brush: js">      var barWidth = (WIDTH / bufferLength) * 2.5;
       var barHeight;
       var x = 0;</pre>
 
@@ -160,7 +160,7 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <p>Одна переменная, требующая объяснения, - это вертикальный сдвиг, с которым мы рисуем каждый столбец: <code>HEIGHT-barHeight/2</code>. Это делается для того, чтобы столбцы начинались в нижней части холста, а не в верхней, как было бы, если бы вертикальное положение было установлена в 0 0. Поэтому мы каждый раз устанавливаем вертикальное положение в разность высоты холста и <code>barHeight/2</code>, чтобы столбцы начинались где-то между верхом и низом холста и заканчивались снизу.</p>
 
-<pre class="brush: js notranslate">      for(var i = 0; i &lt; bufferLength; i++) {
+<pre class="brush: js">      for(var i = 0; i &lt; bufferLength; i++) {
         barHeight = dataArray[i]/2;
 
         canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
@@ -172,7 +172,7 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <p>Снова, мы вызываем функцию draw() в конце кода, чтобы запустить процесс.</p>
 
-<pre class="brush: js notranslate">    draw();</pre>
+<pre class="brush: js">    draw();</pre>
 
 <p>Этот код даёт нам следующий результат:</p>
 

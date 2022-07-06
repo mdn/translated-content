@@ -5,19 +5,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error/message
 ---
 <div>{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p><code><strong>message</strong></code> 属性是有关错误信息，人类易读的（human-readable）描述。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>如果该属性已经被设置，则该属性包含了错误的一个简短描述。<a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> 大量应用 <code>message</code> 属性在异常方面。 <code>message</code> 属性结合 {{jsxref("Error.prototype.name", "name")}} 属性一起被  {{jsxref("Error.prototype.toString()")}} 方法用来创建错误的字符串形式。</p>
 
 <p>默认情况下，<code>message</code> 属性是一个空字符串，但是可以通过指定一段信息作为 {{jsxref("Error", "Error constructor")}} 的第一个参数创建一个实例来改变该属性值。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example:_Throwing_a_custom_error" name="Example:_Throwing_a_custom_error">例子：抛出一个自定义错误</h3>
+<h3 id="Example:_Throwing_a_custom_error">例子：抛出一个自定义错误</h3>
 
 <pre class="brush: js">var e = new Error("Could not parse input"); // e.message is "Could not parse input"
 throw e;
@@ -25,84 +25,13 @@ throw e;
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范版本</th>
-   <th scope="col">规范状态</th>
-   <th scope="col">注解</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11.4.3', 'Error.prototype.message')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-error.prototype.message', 'Error.prototype.message')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Error.prototype.name")}}</li>

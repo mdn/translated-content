@@ -11,68 +11,45 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDate
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>getDate()</code></strong> возвращает день месяца указанной даты по местному времени.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.getDate()</code></pre>
+<pre class="syntaxbox"><code><var>dateObj</var>.getDate()</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <p>Нет.</p>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 
 <p>Значение, возвращённое методом <code>getDate()</code>, является целым числом от 1 до 31.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_getDate" name="Example:_Using_getDate">Пример: использование метода <code>getDate()</code></h3>
+<h3 id="Example_Using_getDate">Пример: использование метода <code>getDate()</code></h3>
 
 <p>Вторая инструкция в примере ниже присваивает значение 25 переменной <code>day</code> из значения объекта {{jsxref("Global_Objects/Date", "Date")}} <code>date</code>.</p>
 
-<pre class="brush: js notranslate">let date = new Date('December 25, 1995 23:15:30');
+<pre class="brush: js">let date = new Date('December 25, 1995 23:15:30');
 let day = date.getDate();
 
 console.log(day); // 25
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.14', 'Date.prototype.getDate')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getdate', 'Date.prototype.getDate')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div></div>
 
-<div id="compat-mobile">{{Compat("javascript.builtins.Date.getDate")}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<div id="compat-mobile">{{Compat}}</div>
+
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>

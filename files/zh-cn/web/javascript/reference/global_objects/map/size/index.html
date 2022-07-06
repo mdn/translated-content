@@ -1,0 +1,64 @@
+---
+title: Map.prototype.size
+slug: Web/JavaScript/Reference/Global_Objects/Map/size
+tags:
+  - ECMAScript 2015
+  - JavaScript
+  - Map
+  - Property
+translation_of: Web/JavaScript/Reference/Global_Objects/Map/size
+original_slug: Web/JavaScript/Reference/Global_Objects/Map/size
+browser-compat: javascript.builtins.Map.size
+---
+<div>{{JSRef}}<br>
+ </div>
+
+<p><code><strong>size</strong></code> 是可访问属性，用于返回 一个{{jsxref("Map")}} 对象的成员数量。</p>
+
+<p>{{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}</p>
+
+<h2 id="描述">描述</h2>
+
+<p>size 属性的值是一个整数，表示 Map 对象有多少个键值对。size 是只读属性，用 set 方法修改 size 返回 undefined，即不能改变它的值。</p>
+
+<h2 id="示例">示例</h2>
+
+<pre class="brush:js">var myMap = new Map();
+myMap.set("a", "alpha");
+myMap.set("b", "beta");
+myMap.set("g", "gamma");
+
+myMap.size // 3
+</pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-get-map.prototype.size', 'Map.prototype.size')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-get-map.prototype.size', 'Map.prototype.size')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+{{Compat}}
+
+<h2 id="相关阅读">相关阅读</h2>
+
+<ul>
+ <li>{{jsxref("Map")}}</li>
+</ul>

@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Statements/function*
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><code><strong>function*</strong></code> 这种声明方式(<code style="font-style: normal;">function</code>关键字后跟一个星号）会定义一个<strong><em>生成器函数</em> (</strong><em>generator function</em><strong>)</strong>，它返回一个  {{jsxref("Global_Objects/Generator","Generator")}}  对象。</p>
+<p><code><strong>function*</strong></code> 这种声明方式 (<code>function</code>关键字后跟一个星号）会定义一个<strong><em>生成器函数</em> (</strong><em>generator function</em><strong>)</strong>，它返回一个  {{jsxref("Global_Objects/Generator","Generator")}}  对象。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}</div>
 
@@ -31,16 +31,10 @@ translation_of: Web/JavaScript/Reference/Statements/function*
 <dl>
  <dt><code>name</code></dt>
  <dd>函数名</dd>
-</dl>
-
-<dl>
  <dt><code>param</code></dt>
- <dd>要传递给函数的一个参数的名称，一个函数最多可以有255个参数。</dd>
-</dl>
-
-<dl>
+ <dd>要传递给函数的一个参数的名称，一个函数最多可以有 255 个参数。</dd>
  <dt><code>statements</code></dt>
- <dd>普通JS语句。</dd>
+ <dd>普通 JS 语句。</dd>
 </dl>
 
 <h2 id="描述">描述</h2>
@@ -51,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Statements/function*
 
 <p><code>next()</code>方法返回一个对象，这个对象包含两个属性：value 和 done，value 属性表示本次 <code>yield </code>表达式的返回值，done 属性为布尔类型，表示生成器后续是否还有<code> yield </code>语句，即生成器函数是否已经执行完毕并返回。</p>
 
-<p>调用 <code>next()</code>方法时，如果传入了参数，那么这个参数会传给<strong>上一条执行的 yield语句左边的变量</strong>，例如下面例子中的<code> x </code>：</p>
+<p>调用 <code>next()</code>方法时，如果传入了参数，那么这个参数会传给<strong>上一条执行的 yield 语句左边的变量</strong>，例如下面例子中的<code> x </code>：</p>
 
 <pre class="brush: js">function *gen(){
     yield 10;
@@ -124,7 +118,7 @@ console.log(gen.next().value); // 20
 <pre class="brush: js">function *createIterator() {
     let first = yield 1;
     let second = yield first + 2; // <strong>4</strong> + 2
-                                  // first =4 是next<strong>(4)将参数赋给上一条的</strong>
+                                  // first =4 是 next<strong>(4) 将参数赋给上一条的</strong>
     yield second + 3;             // <strong>5</strong> + 3
 }
 
@@ -159,19 +153,19 @@ var obj = new f; // throws "TypeError: f is not a constructor"</pre>
 <pre class="brush: js">function* iterArr(arr) {            //迭代器返回一个迭代器对象
   if (Array.isArray(arr)) {         // 内节点
       for(let i=0; i &lt; arr.length; i++) {
-          yield* iterArr(arr[i]);   // (*)递归
+          yield* iterArr(arr[i]);   // (*) 递归
       }
   } else {                          // 离开
       yield arr;
   }
 }
-// 使用 for-of 遍历:
+// 使用 for-of 遍历：
 var arr = ['a', ['b', 'c'], ['d', 'e']];
 for(var x of iterArr(arr)) {
         console.log(x);               // a  b  c  d  e
  }
 
-// 或者直接将迭代器展开:
+// 或者直接将迭代器展开：
 var arr = [ 'a', ['b',[ 'c', ['d', 'e']]]];
 var gen = iterArr(arr);
 arr = [...gen];                        // ["a", "b", "c", "d", "e"]</pre>
@@ -209,15 +203,15 @@ arr = [...gen];                        // ["a", "b", "c", "d", "e"]</pre>
 <p>{{Compat("javascript.statements.generator_function")}} </p>
 </div>
 
-<h2 id="Firefox浏览器具体事项">Firefox浏览器具体事项</h2>
+<h2 id="Firefox浏览器具体事项">Firefox 浏览器具体事项</h2>
 
-<h4 id="Firefox_26之前的生成器和迭代器">Firefox 26之前的生成器和迭代器</h4>
+<h4 id="Firefox_26之前的生成器和迭代器">Firefox 26 之前的生成器和迭代器</h4>
 
-<p>旧版本的Firefox实施了旧版本的生成器提案。旧版中用普通的<code>function关键字定义</code>（没有星号）.</p>
+<p>旧版本的 Firefox 实施了旧版本的生成器提案。旧版中用普通的<code>function 关键字定义</code>（没有星号）.</p>
 
 <h4 id="IteratorResult不再抛出错误"><code>IteratorResult</code>不再抛出错误</h4>
 
-<p>从Gecko 29 {{geckoRelease(29)}}开始，完成的生成器函数不再抛出{{jsxref("TypeError")}} "generator has already finished". 而是返回一个<code>IteratorResult</code>对象：<span style="font-family: consolas,monaco,andale mono,monospace;">{ value: undefined, done: true }</span> ({{bug(958951)}})。</p>
+<p>从 Gecko 29 {{geckoRelease(29)}}开始，完成的生成器函数不再抛出{{jsxref("TypeError")}} "generator has already finished". 而是返回一个<code>IteratorResult</code>对象：{ value: undefined, done: true } ({{bug(958951)}})。</p>
 
 <h2 id="相关链接">相关链接</h2>
 
@@ -231,7 +225,7 @@ arr = [...gen];                        // ["a", "b", "c", "d", "e"]</pre>
  <li>{{jsxref("Statements/function", "function declaration")}}</li>
  <li>{{jsxref("Operators/function", "function expression")}}</li>
  <li>{{jsxref("Functions_and_function_scope", "Functions and function scope")}}</li>
- <li>其他网络资源:
+ <li>其他网络资源：
   <ul>
    <li><a href="http://facebook.github.io/regenerator/">Regenerator</a> an ES2015 generator compiler to ES5</li>
    <li><a href="http://www.youtube.com/watch?v=qbKWsbJ76-s">Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013</a></li>

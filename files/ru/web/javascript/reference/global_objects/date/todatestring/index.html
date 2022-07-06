@@ -11,26 +11,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <strong><code>toDateString()</code></strong> возвращает часть, содержащую только дату объекта {{jsxref("Global_Objects/Date", "Date")}} в виде человеко-читаемой строки на американском английском.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code><var>dateObj</var>.toDateString()</code></pre>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Экземпляры объекта {{jsxref("Global_Objects/Date", "Date")}} ссылаются на определённый момент времени. Вызов метода {{jsxref("Date.prototype.toString()", "toString()")}} вернёт дату, отформатированную в виде человеко-читаемой строки на американском английском. В <a href="/ru/docs/SpiderMonkey">SpiderMonkey</a> она состоит из части, содержащей дату (день, месяц и год) и следующей за ней части, содержащей время (часы, минуты, секунды и часовой пояс). Иногда желательно получить строку, содержащую только часть с датой; этого можно достигнуть использованием метода <code>toDateString()</code>.</p>
 <p>Метод <code>toDateString()</code> полезен тем, что совместимые движки, реализующие <a href="/ru/docs/ECMAScript">ECMA-262</a> могут давать разные строки с помощью метода {{jsxref("Date.prototype.toString()", "toString()")}} объекта {{jsxref("Global_Objects/Date", "Date")}}, поскольку формат строки зависит от реализации и простой подход с разрезанием строки на дату и время может не всегда сработать.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_A_basic_usage_of_toDateString" name="Example:_A_basic_usage_of_toDateString">Пример: базовое использование метода <code>toDateString()</code></h3>
+<h3 id="Example:_A_basic_usage_of_toDateString">Пример: базовое использование метода <code>toDateString()</code></h3>
 <pre class="brush: js">var d = new Date(1993, 6, 28, 14, 39, 7);
 
 console.log(d.toString());     // напечатает Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toDateString()); // напечатает Wed Jul 28 1993
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -56,10 +56,10 @@ console.log(d.toDateString()); // напечатает Wed Jul 28 1993
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
  <li>{{jsxref("Date.prototype.toTimeString()")}}</li>

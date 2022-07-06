@@ -6,13 +6,13 @@ original_slug: WebRTC/Peer-to-peer_communications_with_WebRTC
 ---
 <p>{{SeeCompatTable}}</p>
 <p>Las <strong>WebRTC APIs</strong> están diseñadas para permitir a las aplicaciones JS la creación de conexiones de tiempo real con canales de Audio, Video, y/o Datos (Data), directamente entre usuarios y a través de sus browsers, o hacia servers que soporten los protocolos WebRTC. También potencia navigator.mozGetUserMedia() para acceder a los datos de cámara y micrófono (getUserMedia() está siendo estandarizado por la Media Capture Task Force, así como las Recording APIs).</p>
-<p>Las fuentes primarias de las especificaciones para WebRTC (en constante <strong>evolución</strong>), son las especificaciones <a href="http://dev.w3.org/2011/webrtc/editor/webrtc.html" title="http://dev.w3.org/2011/webrtc/editor/webrtc.html">WebRTC</a> y <a href="http://dev.w3.org/2011/webrtc/editor/getusermedia.html" title="http://dev.w3.org/2009/dap/camera/">getUserMedia</a>, y varios de los borradores del IETF, en mayor medida en el <a href="http://tools.ietf.org/wg/rtcweb/" title="http://tools.ietf.org/wg/rtcweb/">rtcweb working group</a>, pero también <a href="http://tools.ietf.org/wg/mmusic/" title="http://tools.ietf.org/wg/mmusic/">mmusic</a>, <a href="http://tools.ietf.org/wg/rmcat/" title="http://tools.ietf.org/wg/rmcat/">rmcat</a> y algunos otros.<br>
+<p>Las fuentes primarias de las especificaciones para WebRTC (en constante <strong>evolución</strong>), son las especificaciones <a href="http://dev.w3.org/2011/webrtc/editor/webrtc.html" title="http://dev.w3.org/2011/webrtc/editor/webrtc.html">WebRTC</a> y <a href="http://dev.w3.org/2011/webrtc/editor/getusermedia.html" title="http://dev.w3.org/2009/dap/camera/">getUserMedia</a>, y varios de los borradores del IETF, en mayor medida en el <a href="http://tools.ietf.org/wg/rtcweb/" title="http://tools.ietf.org/wg/rtcweb/">rtcweb working group</a>, pero también <a href="http://tools.ietf.org/wg/mmusic/">mmusic</a>, <a href="http://tools.ietf.org/wg/rmcat/">rmcat</a> y algunos otros.<br>
   <br>
-  Gran parte de la implementación en Chrome y Firefox está basada en código que fue abierto por Google en <a href="http://www.webrtc.org/reference" title="http://www.webrtc.org/reference">webrtc.org</a>.</p>
+  Gran parte de la implementación en Chrome y Firefox está basada en código que fue abierto por Google en <a href="http://www.webrtc.org/reference">webrtc.org</a>.</p>
 <p style="margin-left: 40px;"><span style="color: #ff0000;"><strong>NOTA</strong></span>:  Las versiones actuales de FlashBlock pueden bloquear elementos HTML5 &lt;video&gt;. Si es así, dile que permita el contenido en la página, o deshabilita esa opción vía Herramientas/Add-ons.</p>
-<p>Hay un buen tutorial en las características básicas de WebRTC en <a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/" title="http://www.html5rocks.com/en/tutorials/webrtc/basics/">HTML5 Rocks</a>. Una colección de páginas de pruebas básicas para soportar el desarrollo existe en <a href="http://mozilla.github.com/webrtc-landing" title="http://mozilla.github.com/webrtc-landing">webrtc-landing</a>.</p>
-<p>Puedes hacer simples llamadas persona-a-persona (inclusive si usan Chrome) en <a href="https://apprtc.appspot.com/" title="https://apprtc.appspot.com/">apprtc.appspot.com</a>.</p>
-<p>Una descripción de alto nivel de lo que sucede en una conexión RTCPeerConnection se publicó en un artículo de <a href="https://hacks.mozilla.org/2013/05/embedding-webrtc-video-chat-right-into-your-website/" title="https://hacks.mozilla.org/2013/05/embedding-webrtc-video-chat-right-into-your-website/">Mozilla Hacks</a> (puedes ver todos los artículos sobre WebRTC <a href="https://hacks.mozilla.org/category/webrtc/" title="https://hacks.mozilla.org/category/webrtc/">aquí</a>).</p>
+<p>Hay un buen tutorial en las características básicas de WebRTC en <a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/">HTML5 Rocks</a>. Una colección de páginas de pruebas básicas para soportar el desarrollo existe en <a href="http://mozilla.github.com/webrtc-landing">webrtc-landing</a>.</p>
+<p>Puedes hacer simples llamadas persona-a-persona (inclusive si usan Chrome) en <a href="https://apprtc.appspot.com/">apprtc.appspot.com</a>.</p>
+<p>Una descripción de alto nivel de lo que sucede en una conexión RTCPeerConnection se publicó en un artículo de <a href="https://hacks.mozilla.org/2013/05/embedding-webrtc-video-chat-right-into-your-website/">Mozilla Hacks</a> (puedes ver todos los artículos sobre WebRTC <a href="https://hacks.mozilla.org/category/webrtc/">aquí</a>).</p>
 <p><img alt="Basics of RTCPeerConnection call setup" src="https://hacks.mozilla.org/wp-content/uploads/2013/05/webRTC-BasicsOfHowItWorks2.png" style="width: 898px; height: 805px;"></p>
 <h2 id="Especificaciones">Especificaciones</h2>
 <table class="standard-table">
@@ -30,71 +30,8 @@ original_slug: WebRTC/Peer-to-peer_communications_with_WebRTC
     <tr>
       <td>getUserMedia API</td>
       <td>En definición</td>
-      <td><a href="http://dev.w3.org/2011/webrtc/editor/getusermedia.html" title="http://dev.w3.org/2011/webrtc/editor/getusermedia.html">http://dev.w3.org/2011/webrtc/editor/getusermedia.html</a></td>
+      <td><a href="http://dev.w3.org/2011/webrtc/editor/getusermedia.html">http://dev.w3.org/2011/webrtc/editor/getusermedia.html</a></td>
     </tr>
   </tbody>
 </table>
-<h2 id="Compatibilidad_de_browsers">Compatibilidad de browsers</h2>
-<div>
-  {{CompatibilityTable}}</div>
-<div id="compat-desktop">
-  <table class="compat-table">
-    <tbody>
-      <tr>
-        <th>Características</th>
-        <th>Chrome</th>
-        <th>Firefox (Gecko)</th>
-        <th>Internet Explorer</th>
-        <th>Opera</th>
-        <th>Safari (WebKit)</th>
-      </tr>
-      <tr>
-        <td>Soporte básico</td>
-        <td>Sí{{property_prefix("webkit")}}</td>
-        <td>Firefox 22</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-      </tr>
-      <tr>
-        <td>DataChannels</td>
-        <td>A partir de Chrome 29</td>
-        <td>Firefox 22</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div id="compat-mobile">
-  <table class="compat-table">
-    <tbody>
-      <tr>
-        <th>Feature</th>
-        <th>Android</th>
-        <th>Firefox Mobile (Gecko)</th>
-        <th>IE Phone</th>
-        <th>Opera Mobile</th>
-        <th>Safari Mobile</th>
-      </tr>
-      <tr>
-        <td>Soporte preliminar</td>
-        <td>Via Chrome (detrás de un flag de configuración)</td>
-        <td>Activado en Nightly y Aurora</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-      </tr>
-      <tr>
-        <td>DataChannels</td>
-        <td>{{CompatUnknown}}</td>
-        <td>Activado en Nightly y Aurora</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<p> </p>
+

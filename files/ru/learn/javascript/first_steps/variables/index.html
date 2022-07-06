@@ -33,9 +33,9 @@ original_slug: Learn/JavaScript/Первые_шаги/Variables
 
 <p>Переменные — это контейнер для таких значений, как числа, используемые в сложении, или строка, которую мы могли бы использовать как часть предложения. Но одна из особенностей переменных — их значение может меняться. Давайте взглянем на простой пример:</p>
 
-<pre class="brush: html notranslate">&lt;button&gt;Нажми на меня&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button&gt;Нажми на меня&lt;/button&gt;</pre>
 
-<pre class="brush: js notranslate">const button = document.querySelector('button');
+<pre class="brush: js">const button = document.querySelector('button');
 
 button.onclick = function() {
   let name = prompt('Как вас зовут?');
@@ -48,7 +48,7 @@ button.onclick = function() {
 
 <p>Чтобы лучше понять действие переменной здесь, давайте подумаем о том, как мы будем писать этот пример без использования переменной. Это будет выглядеть примерно так:</p>
 
-<pre class="example-bad notranslate">var name = prompt('Как вас зовут?');
+<pre class="example-bad">var name = prompt('Как вас зовут?');
 
 if (name === 'Адам') {
   alert('Привет, Адам, рады тебя видеть!');
@@ -78,7 +78,7 @@ if (name === 'Адам') {
 
 <p>Чтобы использовать переменную, вы сначала должны её создать, или, если быть точнее, объявить переменную. Чтобы сделать это, мы вводим ключевое слово var, за которым следует имя, которое вы хотите дать своей переменной:</p>
 
-<pre class="brush: js notranslate">var myName;
+<pre class="brush: js">var myName;
 var myAge;</pre>
 
 <p>Здесь мы создаём две переменные myName и myAge. Попробуйте ввести эти строки сейчас в консоли вашего веб-браузера или в консоли ниже (можно открыть эту консоль в отдельной вкладке или в новом окне). После этого попробуйте создать переменную (или две) с вашими именами.</p>
@@ -86,7 +86,7 @@ var myAge;</pre>
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -201,12 +201,12 @@ var myAge;</pre>
 
 <p>Теперь проверим, существуют ли эти значения в среде выполнения. Для этого введём только имя переменной.</p>
 
-<pre class="brush: js notranslate">myName;
+<pre class="brush: js">myName;
 myAge;</pre>
 
 <p>В настоящее время они не содержат значения, это пустые контейнеры. В этом случае, когда вы вводите имена переменных, вы должны получить значение  <code>undefined</code> . Если они не существуют, вы получите сообщение об ошибке - попробуйте сейчас ввести в консоли имя переменной ниже:</p>
 
-<pre class="brush: js notranslate">scoobyDoo;</pre>
+<pre class="brush: js">scoobyDoo;</pre>
 
 <div class="note">
 <p><strong>Примечание</strong>: Не путайте переменную, которая существует, но не имеет значения, с переменной, которая вообще не существует - это разные вещи.</p>
@@ -216,17 +216,17 @@ myAge;</pre>
 
 <p>Как только переменная объявлена, ей можно присвоить значение. Для этого пишется имя переменной, затем следует знак равенства (<code>=</code>), а за ним значение, которое вы хотите присвоить. Например:</p>
 
-<pre class="brush: js notranslate">myName = 'Chris';
+<pre class="brush: js">myName = 'Chris';
 myAge = 37;</pre>
 
 <p>Попробуйте вернуться в консоль и ввести эти строки. Вы должны увидеть значение, которое вы назначили переменной, возвращаемой в консоли. Чтобы посмотреть значения переменных, нужно набрать их имя в консоли:</p>
 
-<pre class="brush: js notranslate">myName;
+<pre class="brush: js">myName;
 myAge;</pre>
 
 <p>Вы можете объявить переменную и задать ей значение одновременно:</p>
 
-<pre class="brush: js notranslate">var myName = 'Chris';</pre>
+<pre class="brush: js">var myName = 'Chris';</pre>
 
 <p>Скорее всего, так вы будете писать большую часть времени, так как запись и выполнения кода с одно строки происходит быстрее, чем выполнение двух действий на двух отдельных строках.</p>
 
@@ -238,7 +238,7 @@ myAge;</pre>
 
 <p>Когда переменной присваивается значение, вы можете изменить (обновить) это значение, просто указав другое значение. Попробуйте ввести следующие строки в консоль:</p>
 
-<pre class="brush: js notranslate">myName = 'Bob';
+<pre class="brush: js">myName = 'Bob';
 myAge = 40;</pre>
 
 <h3 id="Правила_именования_переменных">Правила именования переменных</h3>
@@ -261,7 +261,7 @@ myAge = 40;</pre>
 
 <p>Примеры хороших имён переменных:</p>
 
-<pre class="example-good notranslate">age
+<pre class="example-good">age
 myAge
 init
 initialColor
@@ -272,7 +272,7 @@ audio2
 
 <p>Примеры плохих имён переменных:</p>
 
-<pre class="example-bad notranslate">1
+<pre class="example-bad">1
 a
 _12
 myage
@@ -284,7 +284,7 @@ thisisareallylongstupidvariablenameman</pre>
 
 <p>Примеры имён переменных, которые вызовут ошибки:</p>
 
-<pre class="example-invalid notranslate">var
+<pre class="example-invalid">var
 Document
 </pre>
 
@@ -298,23 +298,23 @@ Document
 
 <p>Вы можете хранить числа в переменных (целые числа, такие как 30, или десятичные числа, такие как 2.456, также называемые числами с плавающей точкой или с плавающей запятой). Вам не нужно объявлять типы переменных в JavaScript, в отличие от некоторых других языков программирования Если давать переменной значение числа,кавычки не используются:</p>
 
-<pre class="brush: js notranslate">var myAge = 17;</pre>
+<pre class="brush: js">var myAge = 17;</pre>
 
 <h3 id="Строки_Strings">Строки ('Strings')</h3>
 
 <p>Строки - это фрагменты текста. Когда вы даёте переменной значение строки, вам нужно обернуть её в одиночные или двойные кавычки, в противном случае JavaScript попытается проиндексировать её как другое имя переменной.</p>
 
-<pre class="brush: js notranslate">var dolphinGoodbye = 'So long and thanks for all the fish';</pre>
+<pre class="brush: js">var dolphinGoodbye = 'So long and thanks for all the fish';</pre>
 
 <h3 id="Логические_Booleans">Логические (Booleans)</h3>
 
 <p>Booleans - истинные / ложные значения - они могут иметь два значения: true или false. Они обычно используются для проверки состояния, после чего код запускается соответствующим образом. Вот простой пример:</p>
 
-<pre class="brush: js notranslate">var iAmAlive = true;</pre>
+<pre class="brush: js">var iAmAlive = true;</pre>
 
 <p>В действительности вы чаще будете использовать этот тип переменных так:</p>
 
-<pre class="brush: js notranslate">var test = 6 &lt; 3;
+<pre class="brush: js">var test = 6 &lt; 3;
 </pre>
 
 <p>Здесь используется оператор «меньше» (&lt;), чтобы проверить, является ли 6 меньше 3. В данном примере, он вернёт false, потому что 6 не меньше 3! В дальнейшем вы узнаете больше о таких операторах.</p>
@@ -323,12 +323,12 @@ Document
 
 <p>Массив - это один объект, который содержит несколько значений, заключённых в квадратные скобки и разделённых запятыми. Попробуйте ввести следующие строки в консоль:</p>
 
-<pre class="brush: js notranslate">var myNameArray = ['Chris', 'Bob', 'Jim'];
+<pre class="brush: js">var myNameArray = ['Chris', 'Bob', 'Jim'];
 var myNumberArray = [10,15,40];</pre>
 
 <p>Как только эти массивы определены, можно получить доступ к каждому значению по их местоположению в массиве. Наберите следующие строки:</p>
 
-<pre class="brush: js notranslate">myNameArray[0]; // should return 'Chris'
+<pre class="brush: js">myNameArray[0]; // should return 'Chris'
 myNumberArray[2]; // should return 40</pre>
 
 <p>Квадратные скобки указывают значение индекса, соответствующее позиции возвращаемого значения. Возможно, вы заметили, что массивы в JavaScript индексируются с нулевой отметкой: первый элемент имеет индекс 0.</p>
@@ -341,25 +341,25 @@ myNumberArray[2]; // should return 40</pre>
 
 <p>Попробуйте ввести следующую строку в консоль:</p>
 
-<pre class="brush: js notranslate">var dog = { name : 'Spot', breed : 'Dalmatian' };</pre>
+<pre class="brush: js">var dog = { name : 'Spot', breed : 'Dalmatian' };</pre>
 
 <p>Чтобы получить информацию, хранящуюся в объекте, вы можете использовать следующий синтаксис:</p>
 
-<pre class="brush: js notranslate">dog.name</pre>
+<pre class="brush: js">dog.name</pre>
 
 <p>Мы больше не будем рассматривать объекты в данном курсе - вы можете больше узнать о них в будущем модуле.</p>
 
-<h2 id="Свободная_типизация">Свободная типизация</h2>
+<h2 id="Динамическая_типизация">Динамическая типизация</h2>
 
-<p>JavaScript - это «свободно типизируемый язык», что означает, что в отличие от некоторых других языков вам не нужно указывать, какой тип данных будет содержать переменная (например, числа, строки, массивы и т. д.).</p>
+<p>JavaScript - это «динамически типизируемый язык», что означает, что в отличие от некоторых других языков вам не нужно указывать, какой тип данных будет содержать переменная (например, числа, строки, массивы и т. д.).</p>
 
 <p>Например, если вы объявите переменную и присвоите ей значение, заключённое в кавычки, браузер будет обрабатывать переменную как строку:</p>
 
-<pre class="brush: js notranslate">var myString = 'Привет';</pre>
+<pre class="brush: js">var myString = 'Привет';</pre>
 
 <p>Он всё равно будет строкой, даже если он содержит числа, поэтому будьте осторожны:</p>
 
-<pre class="brush: js notranslate">var myNumber = '500'; // упс, это все ещё строка (string)
+<pre class="brush: js">var myNumber = '500'; // упс, это все ещё строка (string)
 typeof(myNumber);
 myNumber = 500; // так-то лучше, теперь это число (number)
 typeof(myNumber);</pre>

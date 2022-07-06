@@ -971,7 +971,7 @@ translation_of: Web/CSS/color_value
 <div class="note"><strong>Nota histórica</strong><br>
 La palabra clave <code>transparent</code> no fue  un color en CSS hasta CSS Nivel 2 (Revisión 1). Podía ser usada en lugar de un valor &lt;color&gt; regular en dos propiedades CSS: {{Cssxref("background")}} y {{Cssxref("border")}}. En esencia fue añadida para permitir sobreescribir valores sólidos heredados.<br>
 <br>
-Con el soporte de la opacidad que nos proporcionan los <a class="external" href="http://en.wikipedia.org/wiki/Alpha_compositing" title="http://en.wikipedia.org/wiki/Alpha_compositing">alpha channels</a>, <code>transparent fue redefinido como un color verdadero más en </code>CSS Nivel 3 permitiendo su use en cualquier sitio donde de requiera un valor<code>&lt;color&gt;</code> , como la propiedad {{Cssxref("color")}}.</div>
+Con el soporte de la opacidad que nos proporcionan los <a class="external" href="http://en.wikipedia.org/wiki/Alpha_compositing">alpha channels</a>, <code>transparent fue redefinido como un color verdadero más en </code>CSS Nivel 3 permitiendo su use en cualquier sitio donde de requiera un valor<code>&lt;color&gt;</code> , como la propiedad {{Cssxref("color")}}.</div>
 
 <h3 id="Palabra_clave_currentColor"><code>Palabra clave currentColor</code></h3>
 
@@ -1276,137 +1276,7 @@ hsla(240,100%,50%,   1)  <span style="background: hsla(240,100%,50%,1);"> /* ful
 
 <h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>palabras clave de colores</td>
-   <td>1.0</td>
-   <td>1.0 (1.0)</td>
-   <td>3.0 <sup>[1]</sup></td>
-   <td>3.5</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td><code>#RRGGBB</code> | <code>#RGB</code></td>
-   <td>1.0</td>
-   <td>1.0 (1.0)</td>
-   <td>3.0</td>
-   <td>3.5</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td><code>rgb()</code></td>
-   <td>1.0</td>
-   <td>1.0 (1.0)</td>
-   <td>4.0</td>
-   <td>3.5</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td><code>hsl()</code></td>
-   <td>1.0</td>
-   <td>1.0 (1.5)</td>
-   <td>9.0</td>
-   <td>9.5</td>
-   <td>3.1 (525)</td>
-  </tr>
-  <tr>
-   <td><code>rgba()</code></td>
-   <td>1.0</td>
-   <td>3.0 (1.9)</td>
-   <td>9.0</td>
-   <td>10.0</td>
-   <td>3.1 (525)</td>
-  </tr>
-  <tr>
-   <td><code>hsla()</code></td>
-   <td>1.0</td>
-   <td>3.0 (1.9)</td>
-   <td>9.0</td>
-   <td>10.0</td>
-   <td>3.1 (525)</td>
-  </tr>
-  <tr>
-   <td><code>currentColor</code></td>
-   <td>1.0</td>
-   <td>1.5 (1.8)</td>
-   <td>9.0</td>
-   <td>9.5</td>
-   <td>4.0 (528)</td>
-  </tr>
-  <tr>
-   <td><code>transparent</code></td>
-   <td>1.0</td>
-   <td>3.0 (1.9)</td>
-   <td>9.0 <sup>[2]</sup></td>
-   <td>10.0</td>
-   <td>3.1 (525)</td>
-  </tr>
-  <tr>
-   <td><code>rebeccapurple</code></td>
-   <td>38.0</td>
-   <td>{{CompatGeckoDesktop("33")}}</td>
-   <td>11</td>
-   <td>25.0</td>
-   <td>7.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>rgba()</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>rebeccapurple</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("33")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>8</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Los colores  'e'-grey (con una e) (<code>grey</code>, <code>darkgrey</code>, <code>darkslategrey</code>, <code>dimgrey</code>, <code>lightgrey</code>, <code>lightslategrey</code>) sólo son soportados a partir de IE 8.0. De IE 3 a IE 7 sólo son soportadas las variantes con 'a': <code>gray</code>, <code>darkgray</code>, <code>darkslategray</code>, <code>dimgray</code>, <code>lightgray</code>, <code>lightslategray</code>.</p>
-
-<p>[2] IE 7-8 soporta la palabra clave <code>transparent</code> sólo para  {{Cssxref("background")}} y {{cssxref("border")}}. <code>color: transparent;</code> es equivalente a negro en IE. IE6 renderiza también como negros los bordes transparentes.</p>
+{{Compat("css.types.color")}}
 
 <h2 id="Ver_además">Ver además</h2>
 

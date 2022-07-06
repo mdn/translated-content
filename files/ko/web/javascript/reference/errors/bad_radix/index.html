@@ -1,25 +1,44 @@
 ---
 title: 'RangeError: radix must be an integer'
 slug: Web/JavaScript/Reference/Errors/Bad_radix
+tags:
+- Error
+- Errors
+- JavaScript
+- RangeError
 translation_of: Web/JavaScript/Reference/Errors/Bad_radix
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<h2 id="메시지">메시지</h2>
+<p>JavaScript 예외 "radix must be an integer at least 2 and no greater than 36"는
+    {{jsxref("Number.prototype.toString()")}} 또는 {{jsxref("BigInt.prototype.toString()")}}
+    메서드의 선택적 매개 변수가 지정된 경우 2에서 36 사이여야 합니다.
+</p>
 
-<pre class="syntaxbox">RangeError: radix must be an integer at least 2 and no greater than 36 (Firefox)
-RangeError: toString() radix argument must be between 2 and 36 (Chrome)
-</pre>
+<h2 id="Message">메시지</h2>
 
-<h2 id="에러_형식">에러 형식</h2>
+<pre class="brush: js">RangeError: invalid argument (Edge)
+    RangeError: radix must be an integer at least 2 and no greater than 36 (Firefox)
+    RangeError: toString() radix argument must be between 2 and 36 (Chrome)
+    </pre>
+
+<h2 id="Error_type">에러 형식</h2>
 
 <p>{{jsxref("RangeError")}}</p>
 
-<h2 id="무엇이_잘못되었을까">무엇이 잘못되었을까?</h2>
+<h2 id="What_went_wrong">무엇이 잘못되었을까?</h2>
 
-<p>{{jsxref("Number.prototype.toString()")}} 메소드는 선택적 파라메터인 <code>radix</code>(기수:진수를 지정하는 값)와 함께 사용되어 왔습니다. 이 파라메터는 반드시 수의 값을 나타내는 진법의 2와 36 사이로 지정된 정수(숫자)여야 합니다. </p>
+<p>{{jsxref("Number.prototype.toString()")}} 또는 
+    {{jsxref("BigInt.prototype.toString()")}} 
+    메서드는 선택적 파라미터인 <code>radix</code>(기수: 진수를 지정하는 값)와 함게 사용되어 왔습니다.
+    이 파라미터는 반드시 수의 값을 나타내는 진법 2와 36 사이로 지정된 정수(숫자)여야 합니다.
+</p>
 
-<p>왜 36으로 제한이 되었을까요? <code>radix</code>는 digit(밑기수) 알파벳 글자로 사용되는 10보다는 큽니다. 그렇기 때문에, <code>radix</code>는 라틴 알파벳 26글자를 가졌을 때, 36보다 클 수 없습니다.  </p>
+<p>
+    이 매개 변수의 값이 36으로 제한된 이유는 무엇일까요?
+    10보다 큰 기수는 알파벳 문자를 숫자로 사용하기 때문입니다.
+    따라서 기수는 36을 초과할 수 없습니다. 라틴 알파벳(영어와 다른 많은 언어에서 사용됨)은 26자뿐이기 때문입니다.
+</p>
 
 <p>보통 아래의 <code>radix</code> 중 하나를 사용하게 될 것입니다.</p>
 
@@ -30,9 +49,9 @@ RangeError: toString() radix argument must be between 2 and 36 (Chrome)
  <li>16 for <a href="https://en.wikipedia.org/wiki/Hexadecimal">hexadecimal numbers</a> (16진수).</li>
 </ul>
 
-<h2 id="예">예</h2>
+<h2 id="Examples">예제</h2>
 
-<h3 id="허용되지_않는_경우">허용되지 않는 경우</h3>
+<h3 id="Invalid_cases">허용되지 않는 경우</h3>
 
 <pre class="brush: js example-bad">(42).toString(0);
 (42).toString(1);
@@ -42,7 +61,7 @@ RangeError: toString() radix argument must be between 2 and 36 (Chrome)
 (12071989).toString("MM-dd-yyyy");
 </pre>
 
-<h3 id="허용된_경우">허용된 경우</h3>
+<h3 id="Valid_cases">허용된 경우</h3>
 
 <pre class="brush: js example-good">(42).toString(2);     // "101010" (2진수)
 (13).toString(8);     // "15"     (8진수)
@@ -50,8 +69,9 @@ RangeError: toString() radix argument must be between 2 and 36 (Chrome)
 (100000).toString(16) // "186a0"  (16진수)
 </pre>
 
-<h2 id="참조">참조</h2>
+<h2 id="See_also">또 다른 내용</h2>
 
 <ul>
- <li>{{jsxref("Number.prototype.toString()")}}</li>
+  <li>{{jsxref("Number.prototype.toString()")}}</li>
+  <li>{{jsxref("BigInt.prototype.toString()")}}</li>
 </ul>

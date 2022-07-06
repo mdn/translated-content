@@ -10,11 +10,11 @@ translation_of: Web/API/Element/getAttribute
 ---
 <p>{{ ApiRef("DOM") }}</p>
 
-<h2 id="Summary" name="Summary">Описание</h2>
+<h2 id="Summary">Описание</h2>
 
-<p><code>getAttribute()</code> возвращает значение указанного атрибута элемента. Если элемент не содержит данный атрибут, могут быть возвращены <code>null</code> или <code>""</code> (пустая строка); подробнее {{ Anch("Notes") }}.</p>
+<p><code>getAttribute()</code> возвращает значение указанного атрибута элемента. Если элемент не содержит данный атрибут, могут быть возвращены <code>null</code> или <code>""</code> (пустая строка); подробнее <a href="#notes">Notes</a>.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="eval"><em>var attribute</em> = element.getAttribute(<em>attributeName</em>);
 </pre>
@@ -26,14 +26,14 @@ translation_of: Web/API/Element/getAttribute
  <li><code><em>attributeName</em></code> - имя атрибута, значение которого необходимо получить.</li>
 </ul>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="eval">var div1 = document.getElementById("div1");
 var align = div1.getAttribute("align");
 alert(align); // отобразит значение атрибута align элемента с id="div1"
 </pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <p>Когда метод <code>getAttribute</code> вызывается применительно к HTML-элементу, в DOM HTML-документа, значение аргумента приводится к нижнему регистру.</p>
 
@@ -41,7 +41,7 @@ alert(align); // отобразит значение атрибута align эл
 
 <p>{{ DOMAttributeMethods() }}</p>
 
-<h2 id="Specification" name="Specification">Спецификации</h2>
+<h2 id="Specification">Спецификации</h2>
 
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-666EE0F9">DOM Level 2 Core: getAttribute</a> (представлено в <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute">DOM Level 1 Core</a>)</li>

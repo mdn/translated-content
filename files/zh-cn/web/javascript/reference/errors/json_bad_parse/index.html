@@ -50,7 +50,7 @@ SyntaxError: JSON.parse: unexpected non-whitespace character after JSON data
 
 <p>{{jsxref("SyntaxError")}}</p>
 
-<h2 id="哪里出错了">哪里出错了?</h2>
+<h2 id="哪里出错了">哪里出错了？</h2>
 
 <p>{{jsxref("JSON.parse()")}} 会把一个字符串解析成 JSON 对象。如果字符串书写正确，那么其将会被解析成一个有效的 JSON，但是这个字符串被检测出错误语法的时候将会抛出错误。</p>
 
@@ -58,7 +58,7 @@ SyntaxError: JSON.parse: unexpected non-whitespace character after JSON data
 
 <h3 id="JSON.parse()_不允许在末尾添加多余的逗号"><code>JSON.parse()</code> 不允许在末尾添加多余的逗号</h3>
 
-<p>下面两行代码都会抛出错误:</p>
+<p>下面两行代码都会抛出错误：</p>
 
 <pre class="brush: js example-bad">JSON.parse('[1, 2, 3, 4, ]');
 JSON.parse('{"foo" : 1, }');
@@ -66,7 +66,7 @@ JSON.parse('{"foo" : 1, }');
 // at line 1 column 14 of the JSON data
 </pre>
 
-<p>省略末尾多余的逗号解析 JSON 就是正确:</p>
+<p>省略末尾多余的逗号解析 JSON 就是正确：</p>
 
 <pre class="brush: js example-good">JSON.parse('[1, 2, 3, 4 ]');
 JSON.parse('{"foo" : 1 }');</pre>
@@ -85,7 +85,7 @@ JSON.parse('{"foo" : 1 }');</pre>
 
 <h3 id="前导_0_和小数点">前导 0 和小数点</h3>
 
-<p>数字不能用 0 开头，比如01，并且你的小数点后面必须跟着至少一个数字。</p>
+<p>数字不能用 0 开头，比如 01，并且你的小数点后面必须跟着至少一个数字。</p>
 
 <pre class="brush: js example-bad">JSON.parse('{"foo" : 01 }');
 // SyntaxError: JSON.parse: expected ',' or '}' after property value
@@ -96,7 +96,7 @@ JSON.parse('{"foo" : 1. }');
 // at line 1 column 2 of the JSON data
 </pre>
 
-<p>正确的写法应该是只写一个1，不书写前面的0。在小数点的后面至少要跟上一个数字:</p>
+<p>正确的写法应该是只写一个 1，不书写前面的 0。在小数点的后面至少要跟上一个数字：</p>
 
 <pre class="brush: js example-good">JSON.parse('{"foo" : 1 }');
 JSON.parse('{"foo" : 1.0 }');

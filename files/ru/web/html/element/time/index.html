@@ -3,7 +3,7 @@ title: <time>
 slug: Web/HTML/Element/time
 translation_of: Web/HTML/Element/time
 ---
-<p><strong>Элемент HTML</strong> <strong><code>&lt;time&gt;</code></strong> используется для представления либо времени в 24-рехчасовом формате, либо точной даты по <a class="external" href="http://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B8%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C" title="http://ru.wikipedia.org/wiki/Григорианский_календарь">Григорианскому календарю</a> (с опциональным указанием времени и часового пояса).</p>
+<p><strong>Элемент HTML</strong> <strong><code>&lt;time&gt;</code></strong> используется для представления либо времени в 24-часовом формате, либо точной даты по <a class="external" href="http://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B8%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C">Григорианскому календарю</a> (с опциональным указанием времени и часового пояса).</p>
 
 <p>Этот элемент предназначен для представления дат и времени в машиночитаемом формате. Это облегчает клиентским приложениям добавление событий в календарь пользователя. </p>
 
@@ -44,23 +44,23 @@ translation_of: Web/HTML/Element/time
 
 <dl>
  <dt>{{htmlattrdef("datetime")}}</dt>
- <dd>Этот атрибут специфицирует время и дату и должен быть <a class="external" href="https://www.w3.org/TR/html/infrastructure.html#dates-and-times" title="http://www.w3.org/TR/html5/common-microsyntaxes.html#valid-date-string-with-optional-time">допустимой датой с возможным дополнительным указанием времени</a>. Если значение элемента не может быть распознано как дата с возможным дополнительным указанием времени, элементу не будет сопоставлен временной срез (timestamp).</dd>
+ <dd>Этот атрибут специфицирует время и дату и должен быть <a class="external" href="https://www.w3.org/TR/html/infrastructure.html#dates-and-times">допустимой датой с возможным дополнительным указанием времени</a>. Если значение элемента не может быть распознано как дата с возможным дополнительным указанием времени, элементу не будет сопоставлен временной срез (timestamp).</dd>
 </dl>
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Simple_example" name="Simple_example">Простой пример</h3>
+<h3 id="Simple_example">Простой пример</h3>
 
 <h4 id="HTML">HTML</h4>
 
 <pre class="brush: html">&lt;p&gt;Концерт начинается в &lt;time&gt;20:00&lt;/time&gt;.&lt;/p&gt;
 </pre>
 
-<h4 id="Output" name="Output">Вывод</h4>
+<h4 id="Output">Вывод</h4>
 
 <p>{{ EmbedLiveSample('Simple_example', 250, 60) }}</p>
 
-<h3 id="Datetime_example" name="Datetime_example">пример <code>datetime</code></h3>
+<h3 id="Datetime_example">пример <code>datetime</code></h3>
 
 <h4 id="HTML_2">HTML</h4>
 
@@ -71,40 +71,15 @@ translation_of: Web/HTML/Element/time
 
 <p>{{ EmbedLiveSample('Datetime_example', 250, 60) }}</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#the-time-element', '&lt;time&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Неизменен с {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'grouping-content.html#the-time-element', '&lt;time&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Нет изменений с {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-time-element', '&lt;time&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Первое появление</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
 
-<p>{{Compat("html.elements.time")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>The {{HTMLElement("data")}} элемент, позволяющий обозначать другие типы данных.</li>

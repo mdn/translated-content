@@ -423,7 +423,7 @@ original_slug: Web/CSS/Transiciones_de_CSS
 
 <p>Un uso común de CSS es resaltar elementos de un menú mientras el usuario desplaza el cursor del ratón por encima de ellos. Es fácil usar las transciones para hacer que el efecto sea aún más atractivo.</p>
 
-<p>Antes de que miremos los fragmentos de código, tal vez desees <a class="external" href="http://developer.mozilla.org/samples/cssref/transitions/sample2/" title="http://developer.mozilla.org/samples/cssref/transitions/sample2/">echar un vistazo a la demo en vivo</a> (suponiendo que tu navegador admita transiciones). También puedes echar un <a class="external" href="http://developer.mozilla.org/samples/cssref/transitions/sample2/transitions.css" title="http://developer.mozilla.org/samples/cssref/transitions/sample2/transitions.css">vistazo directamente a la CSS</a> que usa.</p>
+<p>Antes de que miremos los fragmentos de código, tal vez desees <a class="external" href="http://developer.mozilla.org/samples/cssref/transitions/sample2/">echar un vistazo a la demo en vivo</a> (suponiendo que tu navegador admita transiciones). También puedes echar un <a class="external" href="http://developer.mozilla.org/samples/cssref/transitions/sample2/transitions.css">vistazo directamente a la CSS</a> que usa.</p>
 
 <p>Primero configuramos el menú usando HTML:</p>
 
@@ -478,7 +478,7 @@ original_slug: Web/CSS/Transiciones_de_CSS
 
 <p>Esta CSS establece el aspecto del menú con los colores de fondo y del texto que cambian cuando el elemento está en su estado {{ cssxref(":hover") }}.</p>
 
-<p>En lugar de describir el efecto con todo detalle, puedes echar un <a href="/samples/cssref/transitions/sample2" title="samples/cssref/transitions/sample2">vistazo a la muestra en vivo</a> si tu navegador admite transiciones (Firefox y WebKit nightlies, Opera 10.5).</p>
+<p>En lugar de describir el efecto con todo detalle, puedes echar un <a href="/samples/cssref/transitions/sample2">vistazo a la muestra en vivo</a> si tu navegador admite transiciones (Firefox y WebKit nightlies, Opera 10.5).</p>
 
 <h3 id="Usar_eventos_de_transición_para_animar_un_objeto">Usar eventos de transición para animar un objeto</h3>
 
@@ -490,7 +490,7 @@ original_slug: Web/CSS/Transiciones_de_CSS
 
 
 
-<p>Antes de que miremos los fragmentos de código, tal vez desees <a class="external" href="http://developer.mozilla.org/samples/cssref/transitions/sample1/" title="http://developer.mozilla.org/samples/cssref/transitions/sample1/">echar un vistazo a la demo en vivo</a> (suponiendo que tu navegador admita transiciones). También puedes echar un <a class="external" href="http://developer.mozilla.org/samples/cssref/transitions/sample1/transitions.css" title="http://developer.mozilla.org/samples/cssref/transitions/sample1/transitions.css">vistazo directamente a la CSS</a> que usa.</p>
+<p>Antes de que miremos los fragmentos de código, tal vez desees <a class="external" href="http://developer.mozilla.org/samples/cssref/transitions/sample1/">echar un vistazo a la demo en vivo</a> (suponiendo que tu navegador admita transiciones). También puedes echar un <a class="external" href="http://developer.mozilla.org/samples/cssref/transitions/sample1/transitions.css">vistazo directamente a la CSS</a> que usa.</p>
 
 <h4 id="El_HTML">El HTML</h4>
 
@@ -562,7 +562,7 @@ original_slug: Web/CSS/Transiciones_de_CSS
 
 <p>Una vez que hemos establecido los extremos de la secuencia de animación, lo que tenemos que hacer es iniciar la animación. Podemos hacerlo fácilmente usando JavaScript.</p>
 
-<div class="note"><strong>Nota:</strong> una vez que <a class="external" href="http://dev.w3.org/csswg/css3-animations/" title="http://dev.w3.org/csswg/css3-animations/">la compatibilidad para las animaciones</a> CSS esté disponible, el código JavaScript no será necesario para lograr este efecto.</div>
+<div class="note"><strong>Nota:</strong> una vez que <a class="external" href="http://dev.w3.org/csswg/css3-animations/">la compatibilidad para las animaciones</a> CSS esté disponible, el código JavaScript no será necesario para lograr este efecto.</div>
 
 <p>En primer lugar, la función<code> runDemo()</code> que se llama cuando el documento se carga para inicializar la secuencia de animación:</p>
 
@@ -598,97 +598,12 @@ original_slug: Web/CSS/Transiciones_de_CSS
 
 <p>Si no se halla ningún elemento que coincida con la clase "slideLeft", buscamos el elemento que coincida con "slideRight" y cambiamos su clase a "slideLeft", comenzando de ese modo la animación en la dirección contraria.</p>
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Navegadores</th>
-   <th>Compatibilidad básica</th>
-   <th>Propiedad</th>
-   <th>Evento de transición finalizada</th>
-  </tr>
-  <tr>
-   <td>Internet Explorer</td>
-   <td>(ninguna, a partir de IE9 pp7)</td>
-   <td>---</td>
-   <td>---</td>
-  </tr>
-  <tr>
-   <td>Firefox (Gecko)</td>
-   <td><strong>4.0</strong> (2.0)</td>
-   <td><code>-moz-transition</code></td>
-   <td><code>transitionend</code></td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td><strong>10.5</strong></td>
-   <td><code>-o-transition</code></td>
-   <td><code>OTransitionEnd</code></td>
-  </tr>
-  <tr>
-   <td>Safari | Chrome | WebKit</td>
-   <td>3.2 | yes | yes</td>
-   <td><code>-webkit-transition</code></td>
-   <td><code>webkitTransitionEnd</code></td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad de navegadores</h3>
-
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidad</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Compatibilidad básica</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidad</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Compatibilidad básica</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
 
 <h2 id="Consultar_también">Consultar también</h2>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/css3-transitions" title="http://www.w3.org/TR/css3-transitions">Módulo de transiciones CSS nivel 3</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/css3-transitions">Módulo de transiciones CSS nivel 3</a></li>
  <li>{{ cssxref("-moz-transition") }}</li>
  <li>{{ cssxref("-moz-transition-property") }}</li>
  <li>{{ cssxref("-moz-transition-duration") }}</li>

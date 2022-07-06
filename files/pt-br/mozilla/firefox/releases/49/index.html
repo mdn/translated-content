@@ -101,7 +101,7 @@ translation_of: Mozilla/Firefox/Releases/49
  <li>Por padrão, a característica <code>scrollbars</code> {{domxref("Window")}} é habilitado quando chamado {{domxref("Window.open()")}}. Anteriormente, quanto era altamente recomendado ativar ele, pois não era padrão ({{bug(1257887)}}).</li>
  <li>Adicionado o <em>metodo experimental</em> e <em>non-standard</em> do metodo {{domxref("HTMLMediaElement.seekToNextFrame()")}}, que permite bucar quadro a quadro no conteúdo do vídeo ({{bug(1235301)}}). Equanto você é incentivado a expertimentar, dessar forma você nos ajuda a entender o quão útil ele é, <em>não use ele em produção de código!</em></li>
  <li>A propriedade {{domxref("HTMLLabelElement.form")}} agora retorna a forma com que o controle de label's foi assiciado, se houver um controle (e se esse controle for associado ao formulário). Anteriormente, labels eram diretamente associados com formulários usando essa propriedade ({{bug(1268852)}}).</li>
- <li>Suporte ao paramtro third de {{domxref("EventTarget.addEventListener()")}}, ou um {{jsxref("Boolean")}} ou a {{interface("EventListenerOptions")}} foi adicionado ({{bug(1266164)}} and {{bug(1266066)}}).</li>
+ <li>Suporte ao paramtro third de {{domxref("EventTarget.addEventListener()")}}, ou um {{jsxref("Boolean")}} ou a <code>EventListenerOptions</code> foi adicionado ({{bug(1266164)}} and {{bug(1266066)}}).</li>
  <li>O volume do audio relativo a {{domxref("KeyboardEvent.key")}} foram renomeados. <code>"VolumeDown"</code> é agora <code>"AudioVolumeDown"</code>, <code>"VolumeUp"</code> é agora <code>"AudioVolumeUp"</code>, e <code>"VolumeMute"</code> e agora <code>"AudioVolumeMute".</code> Isso trás Firefox p<em><span style="font-style: normal;">ara alinhamento com os últimos rascunhos de especificações de UI Events</span></em> ({{bug(1272578)}}). Veja {{SectionOnPage("/en-US/docs/Web/API/KeyboardEvent/code", "Code values")}} para uma lista completa de possibilidades de códigos.</li>
  <li>Os códigos ateriormente referidos a <code>"MozHomeScreen"</code>, <code>"MozCameraFocusAdjust"</code>, e <code>"MozPhoneCall"</code> agora tem nomes oficiais na especificação UI Events: <code>"GoHome"</code>, <code>"CameraFocus"</code>, e <code>"Call"</code>. Firefox 49 foi atualizado para utilizar os novos nomes ({{bug(1272599)}}). Veja {{SectionOnPage("/en-US/docs/Web/API/KeyboardEvent/code", "Code values")}} para uma lista completa de possilidades de códigos</li>
  <li>O valor dos códigos <code>"Separator"</code> e <code>"MediaSkip"</code> foram removidos, por serem desatualizados e não utilizados ({{bug(1232919)}}).</li>
@@ -340,12 +340,6 @@ translation_of: Mozilla/Firefox/Releases/49
 <h3 id="Outros">Outros</h3>
 
 <p><em>Sem mudanças!.</em></p>
-
-<h2 id="Veja_tambpem">Veja tambpem</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/49">Sites compatíveis com o Firefox 49</a></li>
-</ul>
 
 <h2 id="Outras_versões">Outras versões</h2>
 

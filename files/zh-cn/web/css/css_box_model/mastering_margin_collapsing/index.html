@@ -10,19 +10,19 @@ translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 ---
 <div>{{CSSRef}}</div>
 
-<p>块的<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin-top">上外边距(margin-top)</a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin-bottom">下外边距(margin-bottom)</a>有时合并(折叠)为单个边距，其大小为单个边距的最大值(或如果它们相等，则仅为其中一个)，这种行为称为<strong>边距折叠</strong>。</p>
+<p>块的<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin-top">上外边距 (margin-top)</a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin-bottom">下外边距 (margin-bottom)</a>有时合并 (折叠) 为单个边距，其大小为单个边距的最大值 (或如果它们相等，则仅为其中一个)，这种行为称为<strong>边距折叠</strong>。</p>
 
 <div class="blockIndicator note">
 <p>注意有设定<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/float">float</a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/position#absolute">position=absolute</a>的元素不会产生外边距重叠行为。</p>
 </div>
 
-<div></div>
+
 
 <p>有三种情况会形成外边距重叠：</p>
 
 <dl>
  <dt>同一层相邻元素之间</dt>
- <dd>相邻的两个元素之间的外边距重叠，除非后一个元素加上<a href="/zh-CN/docs/Web/CSS/clear">clear-fix清除浮动</a>。</dd>
+ <dd>相邻的两个元素之间的外边距重叠，除非后一个元素加上<a href="/zh-CN/docs/Web/CSS/clear">clear-fix 清除浮动</a>。</dd>
 </dl>
 
 <pre class="brush: html notranslate">&lt;style&gt;
@@ -37,7 +37,7 @@ p:nth-child(2){
 &lt;p&gt;下边界范围会...&lt;/p&gt;
 &lt;p&gt;...会跟这个元素的上边界范围重叠。&lt;/p&gt;</pre>
 
-<p>这个例子如果以为边界会合并的话，理所当然会猜测上下2个元素会合并一个100px的边界范围，但其实会发生边界折叠，只会挑选最大边界范围留下，所以这个例子的边界范围其实是87px。</p>
+<p>这个例子如果以为边界会合并的话，理所当然会猜测上下 2 个元素会合并一个 100px 的边界范围，但其实会发生边界折叠，只会挑选最大边界范围留下，所以这个例子的边界范围其实是 87px。</p>
 
 <dl>
  <dt>没有内容将父元素和后代元素分开</dt>
@@ -67,7 +67,7 @@ p:nth-child(2){
 
 <dl>
  <dt>空的块级元素</dt>
- <dd>当一个块元素上边界{{cssxref("margin-top")}} 直接贴到元素下边界{{cssxref("margin-bottom")}}时也会发生边界折叠。这种情况会发生在一个块元素完全没有设定边框{{cssxref("border")}}、内边距{{cssxref("paddng")}}、高度{{cssxref("height")}}、最小高度{{cssxref("min-height")}} 、最大高度{{cssxref("max-height")}} 、内容设定为inline或是加上<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear">clear-fix</a>的时候。</dd>
+ <dd>当一个块元素上边界{{cssxref("margin-top")}} 直接贴到元素下边界{{cssxref("margin-bottom")}}时也会发生边界折叠。这种情况会发生在一个块元素完全没有设定边框{{cssxref("border")}}、内边距{{cssxref("padding")}}、高度{{cssxref("height")}}、最小高度{{cssxref("min-height")}} 、最大高度{{cssxref("max-height")}} 、内容设定为 inline 或是加上<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear">clear-fix</a>的时候。</dd>
 </dl>
 
 <pre class="brush: html notranslate">&lt;style&gt;
@@ -88,12 +88,12 @@ div {
 
 <ul>
  <li>上述情况的组合会产生更复杂的外边距折叠。</li>
- <li>即使某一外边距为0，这些规则仍然适用。因此就算父元素的外边距是0，第一个或最后一个子元素的外边距仍然会“溢出”到父元素的外面。</li>
- <li>如果参与折叠的外边距中包含负值，折叠后的外边距的值为最大的正边距与最小的负边距（即绝对值最大的负边距）的和,；也就是说如果有-13px 8px 100px叠在一起，边界范围的技术就是 100px -13px的87px。</li>
+ <li>即使某一外边距为 0，这些规则仍然适用。因此就算父元素的外边距是 0，第一个或最后一个子元素的外边距仍然会“溢出”到父元素的外面。</li>
+ <li>如果参与折叠的外边距中包含负值，折叠后的外边距的值为最大的正边距与最小的负边距（即绝对值最大的负边距）的和，；也就是说如果有 -13px 8px 100px 叠在一起，边界范围的技术就是 100px -13px 的 87px。</li>
  <li>如果所有参与折叠的外边距都为负，折叠后的外边距的值为最小的负边距的值。这一规则适用于相邻元素和嵌套元素。</li>
 </ul>
 
-<p>以上这些内容都是发生在Block-Level的元素，设定floating和absolutely positioned的元素完全不用担心边界重叠的问题。</p>
+<p>以上这些内容都是发生在 Block-Level 的元素，设定 floating 和 absolutely positioned 的元素完全不用担心边界重叠的问题。</p>
 
 <h2 id="示例">示例</h2>
 

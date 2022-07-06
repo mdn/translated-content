@@ -16,7 +16,7 @@ translation_of: Web/API/SpeechSynthesis
 
 <h2 id="属性">属性</h2>
 
-<p><em><code>SpeechSynthesis</code> 也从它的父接口继承属性, {{domxref("EventTarget")}}.</em></p>
+<p><em><code>SpeechSynthesis</code> 也从它的父接口继承属性，{{domxref("EventTarget")}}.</em></p>
 
 <dl>
  <dt>{{domxref("SpeechSynthesis.paused")}} {{readonlyinline}}</dt>
@@ -53,9 +53,9 @@ translation_of: Web/API/SpeechSynthesis
 
 <h2 id="示例">示例</h2>
 
-<p>在我们基础的 <a href="https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis">Speech synthesiser演示中 </a>，我们第一次用 <code>window.speechSynthesis</code>抓取了关于语音播放控制器的参考。在定义了一些必要的变量后，我们用 {{domxref("SpeechSynthesis.getVoices()")}}获取了一列可用的声音并且用它们生成一列可选表单，这样用户能够选择他们想要的声音。</p>
+<p>在我们基础的 <a href="https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis">Speech synthesiser 演示中</a>，我们第一次用 <code>window.speechSynthesis</code>抓取了关于语音播放控制器的参考。在定义了一些必要的变量后，我们用 {{domxref("SpeechSynthesis.getVoices()")}}获取了一列可用的声音并且用它们生成一列可选表单，这样用户能够选择他们想要的声音。</p>
 
-<p> <code>inputForm.onsubmit</code> 的内部操作中，我们用<a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a>阻止了表单的提交，创建了一个从{{htmlelement("input")}}文本框获取文本的新{{domxref("SpeechSynthesisUtterance")}}实例，在{{htmlelement("select")}}元素可选的声音设置成语音谈话的voice属性，然后通过{{domxref("SpeechSynthesis.speak()")}}方法开始语音播放。</p>
+<p> <code>inputForm.onsubmit</code> 的内部操作中，我们用<a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a>阻止了表单的提交，创建了一个从{{htmlelement("input")}}文本框获取文本的新{{domxref("SpeechSynthesisUtterance")}}实例，在{{htmlelement("select")}}元素可选的声音设置成语音谈话的 voice 属性，然后通过{{domxref("SpeechSynthesis.speak()")}}方法开始语音播放。</p>
 
 <pre class="brush: js">var synth = window.speechSynthesis;
 

@@ -9,7 +9,7 @@ translation_of: Web/API/History/replaceState
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">history.replaceState(<em>stateObj</em>, <em>title</em>, [<em>url</em>])</pre>
+<pre class="syntaxbox">history.replaceState(<em>stateObj</em>, <em>title</em>, [<em>url</em>])</pre>
 
 <h3 id="Параметры">Параметры</h3>
 
@@ -26,7 +26,7 @@ translation_of: Web/API/History/replaceState
 
 <p>Предположим, на странице <code>http://mozilla.org/foo.html</code> выполняется следующий JavaScript-код:</p>
 
-<pre class="notranslate">let stateObj = { foo: "bar" }
+<pre>let stateObj = { foo: "bar" }
 history.pushState(stateObj, "page 2", "bar.html")
 </pre>
 
@@ -34,7 +34,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 <p>Далее, предположим, на странице <code>http://mozilla.org/bar.html</code> выполняется JavaScript-код:</p>
 
-<pre class="notranslate">history.replaceState(stateObj, "page 3", "bar2.html")
+<pre>history.replaceState(stateObj, "page 3", "bar2.html")
 </pre>
 
 <p>Это приведёт к тому, что в URL-строке отобразится адрес <code>http://mozilla.org/bar2.html</code>, но браузер не станет сразу загружать <code>bar2.html</code> и даже не станет проверять наличие этой страницы <code>bar2.html</code>.</p>
@@ -43,28 +43,10 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "history.html#dom-history-replacestate", "History.replaceState()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "history.html#dom-history-replacestate", "History.replaceState()")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 
 
-<p>{{Compat("api.History.replaceState")}}</p>
+<p>{{Compat}}</p>

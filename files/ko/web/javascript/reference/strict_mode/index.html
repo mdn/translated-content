@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 
 <div><a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 5</a> 에서 소개된 JavaScript 의 엄격모드는 JavaScript 의 제한된 버전을 선택하여 암묵적인 "<strong><a href="https://developer.mozilla.org/ko/docs/Glossary/Sloppy_mode">느슨한 모드</a></strong>(sloppy mode)" 를 해제하기 위한 방법입니다. 엄격 모드는 단지 부분적인 것이 아니며, 이것은 <em>고의적으로 </em>일반 코드와 다른 시멘틱을 가지고 있습니다. 엄격모드를 지원하지 않는 브라우저에서는 엄격 모드의 코드가 다른 방식으로 동작할 것입니다, 그 때문에 엄격 모드가 적절하게 적용된 피쳐 테스트 없이 엄격 모드에 의존하면 안됩니다. 엄격 모드의 코드와 비-엄격 모드의 코드는 공존할 수 있으며, 때문에 스크립트의 엄격 모드를 취사 선택하는 것이 점진적으로 가능하게 되었습니다.</div>
 
-<div></div>
+
 
 <p>엄격 모드는 평범한 JavaScript 시멘틱스에 몇가지 변경이 일어나게 합니다.</p>
 
@@ -33,12 +33,12 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 
 <p>엄격모드를 전체 스크립트에 적용하기 위해, 정확한 구문 <code>"use strict";</code>(또는 <code>'use strict';</code>) 을 다른 구문 작성 전에 삽입합니다.</p>
 
-<pre class="brush: js notranslate">// 전체 스크립트 엄격 모드 구문
+<pre class="brush: js ">// 전체 스크립트 엄격 모드 구문
 'use strict';
 var v = "Hi!  I'm a strict mode script!";
 </pre>
 
-<p><span style='background-color: transparent; color: #333333; display: inline !important; float: none; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;'>이 구문은 이미 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=627531">유명한 웹사이트</a>에서 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=579119">문제를 일으킨 전적</a>이 있습니다. </span>상충되지 않는 스크립트들 끼리 맹목적인 연결이 불가능하기 때문입니다. 엄격 모드의 스크립트와 비-엄격 모드의 스크립트의 연결은 심사숙고 하시기를 바랍니다. 이렇게 되면 전체 연결은 엄격으로 보입니다! 엄격 모드에 다른 엄격모드 들을 결합하는 것은 괜찮습니다. 그리고, 비-엄격 스크립트 사이의 결합도 괜찮습니다. 분명한건, 스크립트를 결합하는 것이 절대 이상적인 것이 아니라는 것이지만, 그래야 한다면 함수를 기준으로 엄격모드 사용을 고려하시기 바랍니다.</p>
+<p>이 구문은 이미 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=627531">유명한 웹사이트</a>에서 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=579119">문제를 일으킨 전적</a>이 있습니다. 상충되지 않는 스크립트들 끼리 맹목적인 연결이 불가능하기 때문입니다. 엄격 모드의 스크립트와 비-엄격 모드의 스크립트의 연결은 심사숙고 하시기를 바랍니다. 이렇게 되면 전체 연결은 엄격으로 보입니다! 엄격 모드에 다른 엄격모드 들을 결합하는 것은 괜찮습니다. 그리고, 비-엄격 스크립트 사이의 결합도 괜찮습니다. 분명한건, 스크립트를 결합하는 것이 절대 이상적인 것이 아니라는 것이지만, 그래야 한다면 함수를 기준으로 엄격모드 사용을 고려하시기 바랍니다.</p>
 
 <p>또한 함수 내부의 전체 스크립트 내용에 접근할 수 있으며, 엄격모드를 사용하는 외부 함수를 가질 수 있습니다. 이는 결합 문제를 없애주기도 하지만, 이것이 스코프 바깥에 위치한 어떤 전역 변수든 확실하게 밖으로 추출할 수 있음을 의미합니다 . </p>
 
@@ -46,7 +46,7 @@ var v = "Hi!  I'm a strict mode script!";
 
 <p>마찬가지로, 함수에 strict mode를 적용하기 위해, 함수 본문 처음에 다음의 구문을 넣습니다. <code>"use strict";</code> (또는 <code>'use strict';</code>).</p>
 
-<pre class="brush: js notranslate">function strict() {
+<pre class="brush: js ">function strict() {
   // 함수-레벨 strict mode 문법
   'use strict';
   function nested() { return "And so am I!"; }
@@ -59,7 +59,7 @@ function notStrict() { return "I'm not strict."; }
 
 <p>ECMAScript 2015 는 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export">JavaScript 모듈</a>을 소개했습니다. 따라서, 이는 엄격 모드를 적용할 수 있는 3번 째 방법입니다. JavaScript 모듈의 전체 컨텐츠는 엄격 모드 시작을 위한 구문 없이도 자동으로 엄격모드입니다.</p>
 
-<pre class="notranslate"><code>function strict() {
+<pre ><code>function strict() {
     // 모듈이기때문에 기본적으로 엄격합니다
 }
 export default strict;</code>
@@ -72,18 +72,18 @@ export default strict;</code>
 
 <h3 id="실수를_에러로_바꾸는_것">실수를 에러로 바꾸는 것</h3>
 
-<p>엄격한 모드는 일부 이전에 허용되었던 실수를 오류로 바꿔 놓습니다. 자바 스크립트는 초보 개발자에게 쉬운 것이 되도록 설계되었으며, 때로는 오류를 일으킬만한  동작을 에러없이 시행합니다. 때때로 이것은 즉각적인 문제를 해결하지만, 때때로 이것은 더 심각한 문제를 만들어 냅니다. 엄격한 모드는 이러한 실수를 <span style='background-color: transparent; color: #333333; display: inline !important; float: none; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;'>오류로 처리해서</span> 그것을 발견하고 즉시 고칠 수 있도록 합니다.</p>
+<p>엄격한 모드는 일부 이전에 허용되었던 실수를 오류로 바꿔 놓습니다. 자바 스크립트는 초보 개발자에게 쉬운 것이 되도록 설계되었으며, 때로는 오류를 일으킬만한  동작을 에러없이 시행합니다. 때때로 이것은 즉각적인 문제를 해결하지만, 때때로 이것은 더 심각한 문제를 만들어 냅니다. 엄격한 모드는 이러한 실수를 오류로 처리해서 그것을 발견하고 즉시 고칠 수 있도록 합니다.</p>
 
 <p>첫째로, 엄격모드는 실수로 글로벌 변수를 생성하는 것을 불가능하게 만듭니다. 일반적인 JavaScript에서 변수를 잘못 입력하면 전역 객체에 대한 새 속성이 만들어지고 그대로 "동작" (미래의 오류가 발생할 수 있음: modern 자바 스크립트처럼) 합니다. 전역 변수를 생성하는 할당은 엄격 모드에선 오류를 발생시킵니다.</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js ">"use strict";
                        // 전역 변수 mistypedVariable 이 존재한다고 가정
 mistypedVaraible = 17; // 변수의 오타때문에 이 라인에서 ReferenceError 를 발생시킴
 </pre>
 
 <p>둘째로, 엄격모드는 예외를 발생시키는 실패를 조용히 넘어가는 대신 작업을 만듭니다. 예를 들어, <code>NaN</code> 은 쓸 수 없는 전역 변수입니다. <code>NaN</code> 에 할당하는 일반적인 코드는 아무 것도 하지 않습니다. 개발자도 아무런 실패 피드백을 받지 않습니다. 엄격 모드에서 <code>NaN</code> 에 할당하는 것은 예외를 발생시킵니다. 일반 코드에서 조용히 넘어가는 모든 실패에 대해 (쓸 수 없는 전역 또는 프로퍼티에 할당, getter-only 프로퍼티에 할당, <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions" title="en-US/JavaScript/Reference/Global Objects/Object/preventExtensions">확장 불가</a> 객체에 새 프로퍼티 할당) 엄격 모드에서는 예외를 발생시킵니다.</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js ">"use strict";
 
 // 쓸 수 없는 프로퍼티에 할당
 var undefined = 5; // TypeError 발생
@@ -106,7 +106,7 @@ fixed.newProp = "ohai"; // TypeError 발생
 
 <p>셋째로, 엄격 모드는 삭제할 수 없는 프로퍼티를 삭제하려할 때 예외를 발생시킵니다(시도가 어떤 효과도 없을 때).</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js ">"use strict";
 delete Object.prototype; // TypeError 발생
 </pre>
 
@@ -116,13 +116,13 @@ delete Object.prototype; // TypeError 발생
 <p>ECMAScript 2015부터는 에러가 아닙니다. ({{bug(1041128)}}).</p>
 </div>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js ">"use strict";
 var o = { p: 1, p: 2 }; // !!! 구문 에러
 </pre>
 
 <p>다섯째로, 엄격모드는 유니크한 함수 파라미터 이름을 요구합니다. 일반 코드에서는 마지막으로 중복된 인수가 이전에 지정된 인수를 숨깁니다. 이러한 이전의 인수들은 <code>arguments[i]</code> 를 통해 여전히 남아 있을 수 있으므로, 완전히 접근 불가한 것이 아닙니다. 여전히, 이런 숨김 처리는 이치에 맞지 않으며 원했던 것이 아닐 수 있습니다(예를 들면 오타를 숨길 수도 있습니다). 따라서 엄격 모드에서는 중복 인수명은 구문 에러입니다.</p>
 
-<pre class="brush: js notranslate">function sum(a, a, c){ // !!! 구문 에러
+<pre class="brush: js ">function sum(a, a, c){ // !!! 구문 에러
   "use strict";
   return a + b + c; // 코드가 실행되면 잘못된 것임
 }
@@ -130,11 +130,11 @@ var o = { p: 1, p: 2 }; // !!! 구문 에러
 
 <p>여섯째로, ECMAScript 5 에서의 엄격 모드는 8진 구문을 금지합니다. 8진 구문은 ES5의 문법이 아니지만, 모든 브라우저에서 앞에 0을 붙여 지원됩니다(<code>0644 === 420</code> 와 <code>"\045" === "%"</code>). ECMAScript 2015 에서는 접두사 "<code>0o</code>"를 붙여 8진수를 지원합니다.</p>
 
-<pre class="brush: js notranslate">var a = 0o10; // ES6: 8진수</pre>
+<pre class="brush: js ">var a = 0o10; // ES6: 8진수</pre>
 
 <p>초보 개발자들은 가끔 앞에 붙은 0 이 무의미하다고 생각하여, 이를 정렬용으로 사용합니다 — 하지만 이는 숫자의 의미를 바꿔버립니다! 이 8진수 문법은 거의 무용하며 잘못 사용될 수 있으므로 엄격모드에서 이 구문은 에러입니다.</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js ">"use strict";
 var sum = 015 + // !!! 구문 에러
           197 +
           142;
@@ -142,7 +142,7 @@ var sum = 015 + // !!! 구문 에러
 
 <p>일곱째로, ECMAScript 6 의 엄격모드는 {{Glossary("primitive")}} 값에 프로퍼티를 설정하는 것을 금지합니다. 엄격모드가 아닐 때에는 프로퍼티 설정이 간단하게 무시되지만(no-op), 엄격모드에서는 {{jsxref("TypeError")}} 를 발생시킵니다.</p>
 
-<pre class="brush: js notranslate">(function() {
+<pre class="brush: js ">(function() {
 "use strict";
 
 false.true = "";         // TypeError
@@ -157,7 +157,7 @@ false.true = "";         // TypeError
 
 <p>첫째로, 엄격모드는 <code>with</code> 를 사용하지 못하게합니다. <code>with</code> 사용의 문제는 런타임중에 블록안의 모든 이름이 전달된 객체의 프로퍼티나 인근 (또는 심지어 전역) 스코프 내의 변수로 매핑될 수도 있다는 것입니다. 이는 사전에 아는 것이 불가합니다. 엄격 모드는 <code>with</code> 를 구문 에러로 만들어, <code>with</code> 의 이름이 런타임에 알 수 없는 위치를 참조하지 않도록합니다.</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js ">"use strict";
 var x = 17;
 with (obj) // !!! 구문 에러
 {
@@ -171,9 +171,9 @@ with (obj) // !!! 구문 에러
 
 <p>이름이 짧은 변수에 객체를 할당한 후, 변수에 해당하는 프로퍼티에 접근하는 간단한 대안은 <code>with</code> 를 대체할 준비가 되었습니다.</p>
 
-<p>둘째로, <a class="external" href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/">엄격모드 코드의 <code>eval</code> 은 새로운 변수를 주위 스코프에 추가하지 않습니다</a>. 일반적인 코드에서 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">eval("var x;")</span></font> 는 변수 <code>x</code> 를 주위 함수나 전역 스코프에 추가합니다. 이는, 일반적으로 <code>eval</code> 호출을 포함하는 함수에서 인수나 지역 변수를 참조하지 않는 모든 이름은 런타임에 특정 정의에 반드시 매핑되어야 함을 의미합니다(<code>eval</code> 이 외부 변수를 숨기는 새로운 변수를 추가했기 때문입니다). 엄격모드에서 <code>eval</code> 은 evaluated 된 코드에서만 변수를 생성하므로, 외부 변수나 일부 로컬 변수에 참조하는지에 영향을 주지 않습니다.</p>
+<p>둘째로, <a class="external" href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/">엄격모드 코드의 <code>eval</code> 은 새로운 변수를 주위 스코프에 추가하지 않습니다</a>. 일반적인 코드에서 <code>eval("var x;")</code> 는 변수 <code>x</code> 를 주위 함수나 전역 스코프에 추가합니다. 이는, 일반적으로 <code>eval</code> 호출을 포함하는 함수에서 인수나 지역 변수를 참조하지 않는 모든 이름은 런타임에 특정 정의에 반드시 매핑되어야 함을 의미합니다(<code>eval</code> 이 외부 변수를 숨기는 새로운 변수를 추가했기 때문입니다). 엄격모드에서 <code>eval</code> 은 evaluated 된 코드에서만 변수를 생성하므로, 외부 변수나 일부 로컬 변수에 참조하는지에 영향을 주지 않습니다.</p>
 
-<pre class="brush: js notranslate">var x = 17;
+<pre class="brush: js ">var x = 17;
 var evalX = eval("'use strict'; var x = 42; x");
 console.assert(x === 17);
 console.assert(evalX === 42);
@@ -181,7 +181,7 @@ console.assert(evalX === 42);
 
 <p>이와 관련해서, <code>eval</code> 함수가 엄격모드 코드 내에서 <code>eval(...)</code> 형태의 표현으로 적용되었다면, 코드는 엄격모드 코드로 evaluated 됩니다. 코드는 명시적으로 엄격모드를 적용할 수 있지만, 필수적인 것은 아닙니다.</p>
 
-<pre class="brush: js notranslate">function strict1(str){
+<pre class="brush: js ">function strict1(str){
   "use strict";
   return eval(str); // str 은 엄격모드 코드로 다뤄짐
 }
@@ -206,7 +206,7 @@ nonstrict("'use strict'; '엄격모드 코드!'");
 
 <p>셋째로, 엄격모드는 일반 이름을 제거하는 것을 금지합니다. 엄격 모드에서 <code>delete name</code> 은 구문 에러입니다.</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js ">"use strict";
 
 var x;
 delete x; // !!! 구문 에러
@@ -215,11 +215,11 @@ eval("var y; delete y;"); // !!! syntax error</pre>
 
 <h3 id="eval_과_arguments_를_더_간단하게_하기"><code>eval</code> 과 <code>arguments</code> 를 더 간단하게 하기</h3>
 
-<p>엄격모드는 <code>arguments</code> 와 <code>evel</code> 을 덜 기괴하고 마법적으로 만듭니다. 둘은 일반 코드에서 상당히 많은 마법적인 동작들을 갖고 있습니다: 바인딩을 추가하거나 삭제하고 바인딩 값을 변경하기위한 <code>eval</code>, 명명된 인수를 앨리어스하는 인덱싱된 프로퍼티 <code>arguments</code>. 엄격모드는 ECMAScript 의 미래 버전까지는 모든 수정이 이루지지는 않겠지만 <code>eval</code> 과 <code>arguments</code> 를 키워드로 다루기 위한 훌륭한 큰 걸음을 내딛었습니다.</p>
+<p>엄격모드는 <code>arguments</code> 와 <code>eval</code> 을 덜 기괴하고 마법적으로 만듭니다. 둘은 일반 코드에서 상당히 많은 마법적인 동작들을 갖고 있습니다: 바인딩을 추가하거나 삭제하고 바인딩 값을 변경하기위한 <code>eval</code>, 명명된 인수를 앨리어스하는 인덱싱된 프로퍼티 <code>arguments</code>. 엄격모드는 ECMAScript 의 미래 버전까지는 모든 수정이 이루지지는 않겠지만 <code>eval</code> 과 <code>arguments</code> 를 키워드로 다루기 위한 훌륭한 큰 걸음을 내딛었습니다.</p>
 
 <p>첫째로, 변수명 eval 과 arguments 는 언어 문법에 바운드되거나 할당될 수 없습니다. 다음 시도들은 모두 구문 에러입니다.</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js ">"use strict";
 eval = 17;
 arguments++;
 ++eval;
@@ -234,7 +234,7 @@ var f = new Function("arguments", "'use strict'; return 17;");
 
 <p>둘째로, 엄격모드 코드는 <code>arguments</code> 객체가 생성한 프로퍼티를 앨리어스하지 않습니다. 함수의 첫 번째 인수가 <code>arg</code> 인 일반 코드에서는 <code>arg</code> 를 설정하는 것은 <code>arguments[0]</code> 를 설정하기도 하며, 그 반대도 그렇습니다(인수가 제공되지 않거나, <code>arguments[0]</code> 이 삭제된 경우는 제외). 엄격모드 함수의 <code>arguments</code> 객체는 함수가 호출될 때 원본 인수들을 저장합니다. <code><em>arguments[i]</em></code> 는 명명된 인수에 해당하는 값을 추적하지 않으며, 명명된 인수도 <code>arguments[i]</code> 에 해당하는 값을 추적하지 않습니다.</p>
 
-<pre class="brush: js notranslate">function f(a){
+<pre class="brush: js ">function f(a){
   "use strict";
   a = 42;
   return [a, arguments[0]];
@@ -246,7 +246,7 @@ console.assert(pair[1] === 17);
 
 <p>셋째로, <code>arguments.callee</code> 는 더 이상 지원되지 않습니다. 일반 코드의 <code>arguments.callee</code> 는 바깥 함수를 참조합니다. 이런 유즈 케이스는 중요하지 않습니다. 간단히 바깥 함수의 이름을 사용하면됩니다. 더욱이, <code>arguments.callee</code> 는 인라인 함수와 같은 최적화를 상당히 방해하므로, <code>arguments.callee</code> 가 접근하는 함수는 인라인이 아닌 함수를 참조하도록 제공해야 했습니다. 엄격모드 함수의 <code>arguments.callee</code> 는 삭제할 수 없는 프로퍼티이며, 설정이나 반환할때 에러를 발생합니다.</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js ">"use strict";
 var f = function() { return arguments.callee; };
 f(); // TypeError
 </pre>
@@ -257,7 +257,7 @@ f(); // TypeError
 
 <p>첫째, 엄격모드에서는 <code>this</code> 로  함수에 전달된 값은 강제로 객체가 되지 않습니다 (a.k.a. "boxed"). 보통 함수의 경우, <code>this</code> 는 언제나 객체입니다: 객체값 <code>this</code>  와 함께 호출된 경우 제공된 객체이거나 ; 부울값,  문자 또는 숫자 <code>this</code>  로 호출된 경우 그 값은 Boxed 입니다; 또는 <code>undefined</code> 또는 <code>null</code> <code>this</code> 로 호출되면 전역객체입니다. (특정된 <code>this</code> 명세를 위해서는 <a href="/en-US/Web/JavaScript/Reference/Global_Objects/Function/call" title="en-US/JavaScript/Reference/Global_Objects/Function/call"><code>call</code></a>, <a href="/en-US/Web/JavaScript/Reference/Global_Objects/Function/apply" title="en-US/JavaScript/Reference/Global_Objects/Function/apply"><code>apply</code></a>, 또는 <a href="/en-US/Web/JavaScript/Reference/Global_Objects/Function/bind" title="en-US/JavaScript/Reference/Global_Objects/Function/bind"><code>bind</code></a> 를 사용하십시요) 자동 박싱은 성능 비용뿐 아니라 전역 객체가 브라우저에 노출되는것은 보안상 위험합니다. 전역객체들은 자바스크립트 환경의 "보안"  기능에 접근하는것을 제공하기때문에 제한되어야 합니다. 따라서 엄격모드의 함수는, 정의된  <code>this</code>  는 박스드 객체가 되지 않으며, 정의되지 않은경우 <code>this</code> 는 <code>undefined</code> 가 됩니다:</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js ">"use strict";
 function fun() { return this; }
 console.assert(fun() === undefined);
 console.assert(fun.call(2) === 2);
@@ -268,9 +268,9 @@ console.assert(fun.bind(true)() === true);
 
 <p>즉, 브라우저에서 엄격모드의 함수내 에서는 더 이상 <code>window</code> 객체를  <code>this</code> 를 통해 참조할 수 없습니다.</p>
 
-<p>둘째로, 엄격모드에서는 ECMAScript의 일반적으로 구현된 확장을 통해 자바스크립트 스택을 "걷는"것이 불가능합니다. 이러한 일반적인 확장 코드는,  함수 <code>fun</code> 이 호출되는 중간에, <code>fun.caller</code> 는 가장 최근에 <code>fun</code> 을 호출한 함수이고 <code>fun.arguments</code> 는 <code>fun</code>을 호출하기 위한 <code>인</code><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">수</span></font>  입니다. "권한있는"함수와 (잠재적으로 보안되지 않은) 인수에 접근을 허용하기때문에 두가지 확장 모두 자바스크립트의 "보안" 문제가 됩니다. <code>fun</code> 이 엄격모드인경우, both <code>fun.caller</code> 와 <code>fun.arguments</code> 모두 설정 또는 검색될때 삭제 불가능한 속성이 됩니다.</p>
+<p>둘째로, 엄격모드에서는 ECMAScript의 일반적으로 구현된 확장을 통해 자바스크립트 스택을 "걷는"것이 불가능합니다. 이러한 일반적인 확장 코드는,  함수 <code>fun</code> 이 호출되는 중간에, <code>fun.caller</code> 는 가장 최근에 <code>fun</code> 을 호출한 함수이고 <code>fun.arguments</code> 는 <code>fun</code>을 호출하기 위한 인수입니다. "권한있는"함수와 (잠재적으로 보안되지 않은) 인수에 접근을 허용하기때문에 두가지 확장 모두 자바스크립트의 "보안" 문제가 됩니다. <code>fun</code> 이 엄격모드인경우, both <code>fun.caller</code> 와 <code>fun.arguments</code> 모두 설정 또는 검색될때 삭제 불가능한 속성이 됩니다.</p>
 
-<pre class="brush: js notranslate">function restricted()
+<pre class="brush: js ">function restricted()
 {
   "use strict";
   restricted.caller;    // throws a TypeError
@@ -285,7 +285,7 @@ privilegedInvoker();
 
 <p>셋째, 엄격모드의 <code>인수</code> 는 더이상 해당 함수의 호출 변수에 대한 접근을 제공하지 않습니다. 일부 이전 ECMAScript에서  <code>arguments.caller</code>  해당 함수에  별명이 지정된 객체였습니다.  이것은 함수의 추상화를 통해 권한이 있는 값을 숨길수 있는 기능을  차단하여 <a class="external" href="http://stuff.mit.edu/iap/2008/facebook/">보안의 위협</a>이 됩니다; 이것은 또한 대부분의 최적화를  배제시킵니다. 이러한 이유로 최신 브라우저들은 이를 구현하지 않습니다. 하지만 이것들의 이전 기능들 때문에, 엄격모드함수에서  <code>arguments.caller</code>  설정이나 검색시 삭제 불가능한 요소가 됩니다:</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js ">"use strict";
 function fun(a, b)
 {
   "use strict";
@@ -301,7 +301,7 @@ fun(1, 2); // doesn't expose v (or a or b)
 
 <p>첫번째로, 엄격 모드에서의 식별자 후보들은 예약어가 됩니다. 이 예약어들은 <code>implements</code>, <code>interface</code>, <code>let</code>, <code>package</code>, <code>private</code>, <code>protected</code>, <code>public</code>, <code>static</code>, <code>yield</code>입니다. 그럼, 엄격 모드에서는 이 예약어와 똑같은 이름을 사용하거나, 변수명 또는 아규먼트명으로도 사용할 수 없습니다.  </p>
 
-<pre class="brush: js notranslate">function package(protected){ // !!!
+<pre class="brush: js ">function package(protected){ // !!!
   "use strict";
   var implements; // !!!
 
@@ -320,7 +320,7 @@ function fun(static) { 'use strict'; } // !!!
 
 <p>다음은, 엄격 모드는 스크립트나 함수의 탑 레벨이 아닌 곳에서의 함수 내용 정의를 제한합니다. (<a class="external" href="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/">strict mode prohibits function statements not at the top level of a script or function</a>). 브라우저에서 일반적인 코드는 함수 내용 정의가 "어디에서든" 허용됩니다. <em>이것은 ES5의 부분이 아닙니다!(심지어 ES3도 아니다.) </em>이건 다른 브라우저에서 공존할 수 없는 시멘틱의 확장입니다. 앞으로의 ECMAScript 에디션은 바라건대, 스크립트나 함수의 탑 레벨이 아닌 곳에서의 함수 내용 정의를 위해, 새로운 시멘틱을 명시할 것입니다. 엄격 모드에서 이러한 함수 정의를 금지하는 것(<a class="external" href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">Prohibiting such function statements in strict mode</a>)은 앞으로 출시될 ECMAScript의 사양을 위한 "준비"입니다.  :</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js ">"use strict";
 if (true){
   function f() { } // !!! syntax error
   f();
@@ -340,7 +340,7 @@ function baz(){ // kosher
 
 <h2 id="브라우저에서의_엄격_모드">브라우저에서의 엄격 모드</h2>
 
-<p>현재 주류의 브라우저들은 엄격 모드를 지원하고 있습니다. 하지만, 아직도 현실에서 사용되는 수 많은 브라우저의 버전들은 엄격 모드를 부분적으로만 지원하거나(<a href="http://caniuse.com/use-strict" rel="external" title="caniuse.com availability of strict mode">Browser versions used in the wild that only have partial support for strict mode</a>), 아예 지원을 하지 않고 있기 때문에, 맹목적으로 여기에 의지할 수는 없습니다. (예를 들면, Internet Explorer 10 버전 이하!) <em>엄격 모드는 시멘틱을 바꿉니다. </em>이 변화들에 의지하는 것은 실수와 엄격 모드를 지원하지 않는 브라우저의 에러를 야기할 것입니다. 엄격 모드를 사용하는 데에 주의하는 것을 익히세요, 그리고 피쳐 테스트로 엄격 모드를 사용하기에 적절한 부분인지 확인하고 보완하세요. 마지막으로, <em>엄격 모드를 지원하는 브라우저와 그렇지 않은 브라우저에서 작성한 코드의 테스트를 확실히 하도록 하세요.</em> </p>
+<p>현재 주류의 브라우저들은 엄격 모드를 지원하고 있습니다. 하지만, 아직도 현실에서 사용되는 수 많은 브라우저의 버전들은 엄격 모드를 부분적으로만 지원하거나(<a href="http://caniuse.com/use-strict" rel="external">Browser versions used in the wild that only have partial support for strict mode</a>), 아예 지원을 하지 않고 있기 때문에, 맹목적으로 여기에 의지할 수는 없습니다. (예를 들면, Internet Explorer 10 버전 이하!) <em>엄격 모드는 시멘틱을 바꿉니다. </em>이 변화들에 의지하는 것은 실수와 엄격 모드를 지원하지 않는 브라우저의 에러를 야기할 것입니다. 엄격 모드를 사용하는 데에 주의하는 것을 익히세요, 그리고 피쳐 테스트로 엄격 모드를 사용하기에 적절한 부분인지 확인하고 보완하세요. 마지막으로, <em>엄격 모드를 지원하는 브라우저와 그렇지 않은 브라우저에서 작성한 코드의 테스트를 확실히 하도록 하세요.</em> </p>
 
 <h2 id="명세">명세</h2>
 
@@ -372,11 +372,11 @@ function baz(){ // kosher
 <h2 id="함께_보기">함께 보기</h2>
 
 <ul>
- <li><a class="external" href="http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/" title="http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/">Where's Walden? » New ES5 strict mode support: now with poison pills!</a></li>
- <li><a class="external" href="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/" title="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/">Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited</a></li>
- <li><a class="external" href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/" title="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/">Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only</a></li>
+ <li><a class="external" href="http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/">Where's Walden? » New ES5 strict mode support: now with poison pills!</a></li>
+ <li><a class="external" href="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/">Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited</a></li>
+ <li><a class="external" href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/">Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only</a></li>
  <li><a href="http://qnimate.com/javascript-strict-mode-in-nutshell/">JavaScript "use strict" tutorial for beginners.</a></li>
- <li><a class="external" href="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/" title="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/">John Resig - ECMAScript 5 Strict Mode, JSON, and More</a></li>
+ <li><a class="external" href="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/">John Resig - ECMAScript 5 Strict Mode, JSON, and More</a></li>
  <li><a class="external" href="http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/">ECMA-262-5 in detail. Chapter 2. Strict Mode.</a></li>
  <li><a class="external" href="http://kangax.github.io/compat-table/es5/#Strict_mode">Strict mode compatibility table</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode">Transitioning to strict mode</a></li>

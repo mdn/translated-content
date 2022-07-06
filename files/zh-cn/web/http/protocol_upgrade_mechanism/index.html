@@ -5,21 +5,21 @@ translation_of: Web/HTTP/Protocol_upgrade_mechanism
 ---
 <p>{{HTTPSidebar}}</p>
 
-<p><a href="/en/HTTP" title="en/HTTP">HTTP协议</a> 提供了一种特殊的机制，这一机制允许将一个已建立的连接升级成新的、不相容的协议。这篇指南涵盖了其工作原理和使用场景。</p>
+<p><a href="/zh-CN/docs/Web/HTTP">HTTP 协议</a> 提供了一种特殊的机制，这一机制允许将一个已建立的连接升级成新的、不相容的协议。这篇指南涵盖了其工作原理和使用场景。</p>
 
-<p>通常来说这一机制总是由客户端发起的 （不过也有例外，比如说可以由服务端发起{{anch("Server-initiated upgrade to TLS", "升级到传输层安全协议（TLS）")}}）， 服务端可以选择是否要升级到新协议。借助这一技术，连接可以以常用的协议启动（如HTTP/1.1），随后再升级到HTTP2甚至是WebSockets.</p>
+<p>通常来说这一机制总是由客户端发起的（不过也有例外，比如说可以由服务端发起<a href="#server-initiated_upgrade_to_tls">升级到传输层安全协议（TLS）</a>）， 服务端可以选择是否要升级到新协议。借助这一技术，连接可以以常用的协议启动（如 HTTP/1.1），随后再升级到 HTTP2 甚至是 WebSockets.</p>
 
-<p>注意：HTTP/2 明确禁止使用此机制，这个机制只属于HTTP/1.1</p>
+<p>注意：HTTP/2 明确禁止使用此机制，这个机制只属于 HTTP/1.1</p>
 
-<h2 id="升级HTTP1.1的链接">升级HTTP/1.1的链接</h2>
+<h2 id="升级HTTP1.1的链接">升级 HTTP/1.1 的链接</h2>
 
 <p>协议升级请求总是由客户端发起的；暂时没有服务端请求协议更改的机制。当客户端试图升级到一个新的协议时，可以先发送一个普通的请求（{{HTTPMethod("GET")}}，{{HTTPMethod("POST")}}等），不过这个请求需要进行特殊配置以包含升级请求。</p>
 
-<p>特别这个请求需要添加两项额外的header：</p>
+<p>特别这个请求需要添加两项额外的 header：</p>
 
 <dl>
  <dt><code><a href="/en-US/docs/Web/HTTP/Headers/Connection">Connection: Upgrade</a></code></dt>
- <dd>设置 <code>Connection</code> 头的值为 <code>"Upgrade"</code> 来指示这是一个升级请求.</dd>
+ <dd>设置 <code>Connection</code> 头的值为 <code>"Upgrade"</code> 来指示这是一个升级请求。</dd>
  <dt><code><a href="/en-US/docs/Web/HTTP/Headers/Upgrade">Upgrade: <em>protocols</em></a></code></dt>
  <dd><code>Upgrade</code> 头指定一项或多项协议名，按优先级排序，以逗号分隔。</dd>
 </dl>
@@ -31,46 +31,46 @@ Host: www.example.com
 Connection: upgrade
 Upgrade: example/1, foo/2</pre>
 
-<p>根据之前的请求的协议，可能需要其他头部信息，例如：从HTTP/1.1升级到<a href="/en-US/docs/Web/API/WebSocket">WebSocket</a> 允许配置有关 WebSocket 连接的头部详细信息，以及在连接时提供一定程度的安全性。查看 {{anch("Upgrading to a WebSocket connection")}} 获取更多信息。</p>
+<p>根据之前的请求的协议，可能需要其他头部信息，例如：从 HTTP/1.1 升级到<a href="/en-US/docs/Web/API/WebSocket">WebSocket</a> 允许配置有关 WebSocket 连接的头部详细信息，以及在连接时提供一定程度的安全性。查看 <a href="#升级到websocket协议的连接">升级到 WebSocket 协议的连接</a> 获取更多信息。</p>
 
-<p>如果服务器决定升级这次连接，就会返回一个 {{HTTPStatus(101, "101 Switching Protocols")}} 响应状态码，和一个要切换到的协议的头部字段Upgrade。 如果服务器没有（或者不能）升级这次连接，它会忽略客户端发送的 <code>"Upgrade</code> 头部字段，返回一个常规的响应：例如一个{{HTTPStatus(200, "200 OK")}}).</p>
+<p>如果服务器决定升级这次连接，就会返回一个 {{HTTPStatus(101, "101 Switching Protocols")}} 响应状态码，和一个要切换到的协议的头部字段 Upgrade。 如果服务器没有（或者不能）升级这次连接，它会忽略客户端发送的 <code>"Upgrade</code> 头部字段，返回一个常规的响应：例如一个{{HTTPStatus(200, "200 OK")}}).</p>
 
 <p>服务在发送 {{HTTPStatus(101)}}  状态码之后，就可以使用新的协议，并可以根据需要执行任何其他协议指定的握手。实际上，一旦这次升级完成了，连接就变成了双向管道。并且可以通过新协议完成启动升级的请求。</p>
 
-<p>由HTTP/1.1请求建立的连接可以升级为HTTP/2协议的连接，但是反过来不可以。事实上HTTP/2已经不再支持101状态码了，也不再支持任何连接升级机制。</p>
+<p>由 HTTP/1.1 请求建立的连接可以升级为 HTTP/2 协议的连接，但是反过来不可以。事实上 HTTP/2 已经不再支持 101 状态码了，也不再支持任何连接升级机制。</p>
 
 <h2 id="升级机制的常用场合">升级机制的常用场合</h2>
 
-<p>此处将介绍最常用到 <code>Upgrade</code> header的场合。</p>
+<p>此处将介绍最常用到 <code>Upgrade</code> header 的场合。</p>
 
-<h3 id="升级到WebSocket协议的连接">升级到WebSocket协议的连接</h3>
+<h3 id="升级到WebSocket协议的连接">升级到 WebSocket 协议的连接</h3>
 
-<p>至今为止最经常会需要升级一个HTTP连接的场合就是使用WebSocket。当你用 <a href="/en-US/docs/Web/API/WebSocket">WebSocket API</a> 以及其他大部分实现WebSockets的库去建立WebSocket连接时，基本上都不用操心升级的过程，因为这些API已经实现了这一步。比如，用如下API打开一个WebSocket连接：</p>
+<p>至今为止最经常会需要升级一个 HTTP 连接的场合就是使用 WebSocket。当你用 <a href="/en-US/docs/Web/API/WebSocket">WebSocket API</a> 以及其他大部分实现 WebSockets 的库去建立 WebSocket 连接时，基本上都不用操心升级的过程，因为这些 API 已经实现了这一步。比如，用如下 API 打开一个 WebSocket 连接：</p>
 
 <pre class="notranslate">webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");</pre>
 
 <p>{{domxref("WebSocket.WebSocket", "WebSocket()")}} 构造函数已经自动完成了发送初始 HTTP/1.1 请求，处理握手及升级过程。</p>
 
-<p>你也可以用 <code>"wss://"</code> 地址格式来打开安全的WebSocket连接。</p>
+<p>你也可以用 <code>"wss://"</code> 地址格式来打开安全的 WebSocket 连接。</p>
 
-<p>如果想要自己重头实现WebSocket 连接，就必须要处理握手和升级过程。在创建初始HTTP/1.1会话之后你需要发送另一个HTTP标准请求，但在headers中要带上{{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}}，也就是：</p>
+<p>如果想要自己重头实现 WebSocket 连接，就必须要处理握手和升级过程。在创建初始 HTTP/1.1 会话之后你需要发送另一个 HTTP 标准请求，但在 headers 中要带上{{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}}，也就是：</p>
 
 <pre class="notranslate">Connection: Upgrade
 Upgrade: websocket</pre>
 
 <h3 id="WebSocket_专有的_headers">WebSocket 专有的 headers</h3>
 
-<p>以下headers是在WebSocket升级过程中会出现的。除了 {{HTTPHeader("Upgrade")}} 和 {{HTTPHeader("Connection")}} headers, 其他的一般浏览器和服务器都会在交互过程中处理好。</p>
+<p>以下 headers 是在 WebSocket 升级过程中会出现的。除了 {{HTTPHeader("Upgrade")}} 和 {{HTTPHeader("Connection")}} headers，其他的一般浏览器和服务器都会在交互过程中处理好。</p>
 
 <h4 id="HTTPHeaderSec-WebSocket-Extensions">{{HTTPHeader("Sec-WebSocket-Extensions")}}</h4>
 
-<p>用于指定一个或多个请求服务器使用的协议级WebSocket扩展。允许在一个请求中使用多个Sec-WebSocket-Extension头，结果跟在一个头文件中包含了所有列出的扩展一样。</p>
+<p>用于指定一个或多个请求服务器使用的协议级 WebSocket 扩展。允许在一个请求中使用多个 Sec-WebSocket-Extension 头，结果跟在一个头文件中包含了所有列出的扩展一样。</p>
 
 <pre class="notranslate">Sec-WebSocket-Extensions: <em>extensions</em></pre>
 
 <dl>
  <dt><code>extensions</code></dt>
- <dd>指需要(或支持)的扩展的逗号分隔列表。这些值来自<a href="https://www.iana.org/assignments/websocket/websocket.xml#extension-name">IANA WebSocket 扩展名注册表</a>。带参数的扩展使用分号表示。</dd>
+ <dd>指需要 (或支持) 的扩展的逗号分隔列表。这些值来自<a href="https://www.iana.org/assignments/websocket/websocket.xml#extension-name">IANA WebSocket 扩展名注册表</a>。带参数的扩展使用分号表示。</dd>
 </dl>
 
 <p>例如：</p>
@@ -204,7 +204,7 @@ Connection: Upgrade
     and what to do if this text is seen ...
 &lt;/html&gt;</pre>
 
-<p>If the client receiving the <code>"426 Upgrade Required"</code> response is willing and able to upgrade to TLS, it should then start the same process covered above under {{anch("Client-initiated upgrade to TLS")}}.</p>
+<p>If the client receiving the <code>"426 Upgrade Required"</code> response is willing and able to upgrade to TLS, it should then start the same process covered above under <a href="#client-initiated_upgrade_to_http_over_tls">Client-initiated upgrade to HTTP over TLS</a>.</p>
 
 <h2 id="References">References</h2>
 

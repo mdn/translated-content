@@ -1,23 +1,23 @@
 ---
-title: 对于开发人员的Firefox 78
+title: 对于开发人员的 Firefox 78
 slug: Mozilla/Firefox/Releases/78
 translation_of: Mozilla/Firefox/Releases/78
 ---
 <p>{{FirefoxSidebar}}</p>
 
-<p class="summary">本文提供了有关Firefox 78中将影响开发人员的更改的信息。 Firefox 78发布于<a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/">2020年6月30日</a>.</p>
+<p>本文提供了有关 Firefox 78 中将影响开发人员的更改的信息。Firefox 78 发布于<a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/">2020 年 6 月 30 日</a>.</p>
 
-<p class="summary">另请参阅Firefox 78中的新增功能：<a href="https://hacks.mozilla.org/2020/06/new-in-firefox-78/">DevTools的改进，新的正则表达式引擎以及Mozilla hacks上大量的Web平台更新。</a></p>
+<p>另请参阅 Firefox 78 中的新增功能：<a href="https://hacks.mozilla.org/2020/06/new-in-firefox-78/">DevTools 的改进，新的正则表达式引擎以及 Mozilla hacks 上大量的 Web 平台更新。</a></p>
 
-<h2 id="对于Web开发人员的更改">对于Web开发人员的更改</h2>
+<h2 id="对于Web开发人员的更改">对于 Web 开发人员的更改</h2>
 
 <h3 id="开发者工具">开发者工具</h3>
 
 <h4 id="调试器">调试器</h4>
 
 <ul>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">现在，您可以从</span></span><a href="/en-US/docs/Tools/about:debugging#Connecting_to_a_remote_device">关于：调试</a><span class="tlid-translation translation" lang="zh-CN"><span title="">面板更改远程设备访问的URL。</span></span>({{bug("1617237")}})</li>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">现在，<a href="/en-US/docs/Tools/Debugger/UI_Tour">调试器</a>中的</span></span> <strong>禁用JavaScript</strong> <span class="tlid-translation translation" lang="zh-CN"><span title="">菜单项仅影响当前选项卡</span></span>，<span class="tlid-translation translation" lang="zh-CN"><span title="">并且在关闭“开发人员工具”后会重置。</span></span>({{bug("1640318")}})</li>
+ <li>现在，您可以从<a href="/en-US/docs/Tools/about:debugging#Connecting_to_a_remote_device">关于：调试</a>面板更改远程设备访问的 URL。({{bug("1617237")}})</li>
+ <li>现在，<a href="/en-US/docs/Tools/Debugger/UI_Tour">调试器</a>中的 <strong>禁用 JavaScript</strong> 菜单项仅影响当前选项卡，并且在关闭“开发人员工具”后会重置。({{bug("1640318")}})</li>
  <li>如果在<a href="/en-US/docs/Tools/Debugger/UI_Tour#Scopes">作用域</a>中启用<strong>映射</strong>，则<a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">日志点</a>可以将源映射代码中的变量名称映射回其原始名称。({{bug("1536857")}})</li>
 </ul>
 
@@ -69,7 +69,7 @@ translation_of: Mozilla/Firefox/Releases/78
  <li>The garbage collection of {{jsxref("WeakMap")}} objects has been improved. <code>WeakMaps</code> are now marked incrementally ({{bug(1167452)}}).</li>
 </ul>
 
-<h3 id="一些API">一些API</h3>
+<h3 id="一些API">一些 API</h3>
 
 <h4 id="DOM">DOM</h4>
 
@@ -83,32 +83,26 @@ translation_of: Mozilla/Firefox/Releases/78
  <li><a href="https://www.mozilla.org/en-US/firefox/organizations/">Extended Support Releases (ESR)</a>: Firefox 78 is the first ESR release that supports <a href="/en-US/docs/Web/API/Service_Worker_API">Service workers</a> (and the <a href="/en-US/docs/Web/API/Push_API">Push API</a>). Earlier ESR releases had no support ({{bug(1547023)}}).</li>
 </ul>
 
-<h3 id="Web组装">Web组装</h3>
+<h3 id="Web组装">Web 组装</h3>
 
 <ul>
  <li><a href="https://hacks.mozilla.org/2019/11/multi-value-all-the-wasm/">Wasm Multi-value</a> is now supported, meaning that WebAssembly functions can now return multiple values, and instruction sequences can consume and produce multiple stack values ({{bug(1628321)}}).</li>
  <li>WebAssembly now supports import and export of 64-bit integer function parameters (i64) using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt">BigInt</a></code> from JavaScript ({{bug(1608770)}}).</li>
 </ul>
 
-<h3 id="TLS_1.0和1.1已被移除">TLS 1.0和1.1已被移除</h3>
+<h3 id="TLS_1.0和1.1已被移除">TLS 1.0 和 1.1 已被移除</h3>
 
 <ul>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">所有浏览器都不再支持</span></span><a href="/en-US/docs/Web/Security/Transport_Layer_Security">传输层安全</a> (TLS) <span class="tlid-translation translation" lang="zh-CN"><span title="">协议的1.0和1.1版本。阅读</span></span><a href="https://hacks.mozilla.org/2019/05/tls-1-0-and-1-1-removal-update/">TLS 1.0和1.1删除更新</a><span class="tlid-translation translation" lang="zh-CN"><span title="">以获取先前的公告，以及如果受到影响应采取的措施</span></span> ({{bug(1643229)}}).</li>
+ <li>所有浏览器都不再支持<a href="/en-US/docs/Web/Security/Transport_Layer_Security">传输层安全</a> (TLS) 协议的 1.0 和 1.1 版本。阅读<a href="https://hacks.mozilla.org/2019/05/tls-1-0-and-1-1-removal-update/">TLS 1.0 和 1.1 删除更新</a>以获取先前的公告，以及如果受到影响应采取的措施 ({{bug(1643229)}}).</li>
 </ul>
 
 <h2 id="对于附加组件开发人员的更改">对于附加组件开发人员的更改</h2>
 
 <ul>
  <li>{{WebExtAPIRef("browsingData.removeCache")}} 和 {{WebExtAPIRef("browsingData.removePluginData")}} 现在支持按主机名删除。({{bug(1636784)}}).</li>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">使用</span></span><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest">proxy.onRequest</a></code><span class="tlid-translation translation" lang="zh-CN"><span title="">时，现在可以正确应用基于选项卡ID或窗口ID限制的过滤器。</span> <span title="">这对于希望仅在一个窗口中提供代理功能的加载项很有用。</span></span></li>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">现在，从“所有选项卡”下拉菜单中</span></span><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked">单击上下文菜单</a><span class="tlid-translation translation" lang="zh-CN"><span title="">即可传递适当的选项卡对象。</span> <span title="">过去，活动选项卡被错误地传递了。</span></span></li>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">当使用带有另存为选项的</span></span><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download">downloads.download</a></code><span class="tlid-translation translation" lang="zh-CN"><span title="">时，可以记住最近使用的目录。</span> <span title="">尽管此信息对开发人员用处不大，但对用户而言却非常方便。</span></span></li>
-</ul>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-CA/versions/78/">Firefox 78的网站兼容性</a></li>
+ <li>使用<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest">proxy.onRequest</a></code>时，现在可以正确应用基于选项卡 ID 或窗口 ID 限制的过滤器。这对于希望仅在一个窗口中提供代理功能的加载项很有用。</li>
+ <li>现在，从“所有选项卡”下拉菜单中<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked">单击上下文菜单</a>即可传递适当的选项卡对象。过去，活动选项卡被错误地传递了。</li>
+ <li>当使用带有另存为选项的<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download">downloads.download</a></code>时，可以记住最近使用的目录。尽管此信息对开发人员用处不大，但对用户而言却非常方便。</li>
 </ul>
 
 <h2 id="旧版本">旧版本</h2>

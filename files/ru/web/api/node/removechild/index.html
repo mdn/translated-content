@@ -10,11 +10,11 @@ translation_of: Web/API/Node/removeChild
 ---
 <div>{{ApiRef}}</div>
 
-<h2 id="Summary" name="Summary">Аннотация</h2>
+<h2 id="Summary">Аннотация</h2>
 
 <p>Удаляет дочерний элемент из DOM. Возвращает удалённый элемент.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><em>var oldChild</em> = <em>element</em>.removeChild(<em>child</em>);
 <em>element</em>.removeChild(<em>child</em>);
@@ -30,7 +30,7 @@ translation_of: Web/API/Node/removeChild
 
 <p>Если <code>child</code> не является дочерним элементом <code>element</code>, тогда метод генерирует исключение. Также это происходит если <code>child</code> является дочерним элементом <code>element</code> во время вызова метода, но был удалён во время вызова обработчика событий удаляющего элемент(т.e при удалении элемента непосредственно перед вызовом обработчика событий).</p>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre>&lt;!-- Пример --&gt;
 
@@ -59,7 +59,7 @@ while (element.firstChild) {
 }
 </pre>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <ul>
  <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild">DOM Level 1 Core: removeChild</a></li>
@@ -67,7 +67,7 @@ while (element.firstChild) {
  <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066">DOM Level 3 Core: removeChild</a></li>
 </ul>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("Node.replaceChild")}}</li>

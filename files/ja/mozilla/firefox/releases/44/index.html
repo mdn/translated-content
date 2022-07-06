@@ -84,7 +84,7 @@ translation_of: Mozilla/Firefox/Releases/44
 <ul>
  <li>グローバルレベルにおける <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/let">let</a></code> および <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/const">const</a></code> のバインディングを、ES2015 に準拠させました。{{bug(589199)}} およびブログ記事 <a href="https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/">"Breaking changes in let and const in Firefox Nightly 44"</a> をご覧ください。また、<code>let</code> がデフォルトで Web JavaScript (strict モードおよび 非 strict モード) で使用できるようになり、バージョンのオプトインが不要になりました ({{bug(932517)}})。</li>
  <li><a href="/ja/docs/Web/JavaScript/Typed_arrays">型付き配列</a> ({{jsxref("Int8Array", "Int8Array")}} や {{jsxref("ArrayBuffer", "ArrayBuffer")}} など) のコンストラクタを {{jsxref("Operators/new", "new")}} 演算子をつけずに関数として呼び出した場合に、ES6 仕様に従って {{jsxref("TypeError")}} が発生するようになりました ({{bug(980945)}}、{{bug(1214936)}})。</li>
- <li>{{jsxref("RegExp")}} のスティッキーフラグが、ES2015 標準の <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#Anchored_sticky_flag">anchored sticky regular expressions</a> に従うようになりました ({{bug(773687)}})。</li>
+ <li>{{jsxref("RegExp")}} のスティッキーフラグが、ES2015 標準の <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#Anchored_sticky_flag">anchored sticky regular expressions</a> に従うようになりました ({{bug(773687)}})。</li>
  <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Introduction_to_the_JavaScript_shell">JavaScript シェル</a> (SpiderMonkey の REPL) のデフォルト JS バージョンが、Web 互換の JS バージョンになりました (JS1.7 以降ではありません) ({{bug(1192329)}})。</li>
 </ul>
 
@@ -170,7 +170,7 @@ translation_of: Mozilla/Firefox/Releases/44
  <li>{{domxref("RTCPeerConnection.canTrickleIceCandidates")}} 属性を追加して、非標準メソッド {{domxref("RTCPeerConnection.updateIce()")}} を削除しました ({{bug(1209744)}})。</li>
  <li>{{domxref("MediaStream")}} インターフェイスで {{domxref("MediaStream.addTrack()")}} および {{domxref("MediaStream.removeTrack()")}} メソッドをサポートしました ({{bug(1103188)}})。</li>
  <li>{{domxref("MediaStream.MediaStream", "MediaStream()")}} コンストラクタを実装しました ({{bug(1070216)}})。</li>
- <li>{{domxref("RTCOfferOptions")}} の、非標準である制約的なオプションリストのサポートを廃止しました。詳しくは、<a href="https://www.fxsitecompat.com/ja/docs/2015/constraint-like-rtcofferoptions-are-no-longer-supported/">こちらのサイト互換性情報</a>をご覧ください。</li>
+ <li>{{domxref("RTCOfferOptions")}} の、非標準である制約的なオプションリストのサポートを廃止しました。</li>
 </ul>
 
 <h4 id="New_APIs_2" name="New_APIs_2">新規 API</h4>
@@ -240,7 +240,7 @@ translation_of: Mozilla/Firefox/Releases/44
 <h3 id="XPCOM" name="XPCOM">XPCOM</h3>
 
 <ul>
- <li>{{interface("nsIDOMWindow")}} インターフェイスが空になりました。存在していたアイテムは使用されない、他のインターフェイスに移転、あるいは C++ に限り使用するものになりました。C++ コードから利用できるアイテムは、<code>{{source("dom/base/nsPIDOMWindow.h", "nsPIDOMWindow")}}</code> インターフェイスに存在しています ({{bug(1216401)}})。</li>
+ <li><code>nsIDOMWindow</code> インターフェイスが空になりました。存在していたアイテムは使用されない、他のインターフェイスに移転、あるいは C++ に限り使用するものになりました。C++ コードから利用できるアイテムは、<code>{{source("dom/base/nsPIDOMWindow.h", "nsPIDOMWindow")}}</code> インターフェイスに存在しています ({{bug(1216401)}})。</li>
 </ul>
 
 <h3 id="Other_2" name="Other_2">その他</h3>
@@ -253,7 +253,6 @@ translation_of: Mozilla/Firefox/Releases/44
 
 <ul>
  <li><a href="https://www.mozilla.jp/firefox/44.0/releasenotes/">Firefox 44.0 リリースノート</a></li>
- <li><a href="https://www.fxsitecompat.com/ja/versions/44/">Firefox 44 サイト互換性情報</a></li>
  <li><a href="https://dev.mozilla.jp/2015/12/firefox-44-addon-compatibility/">Firefox 44 アドオン互換性情報</a></li>
 </ul>
 

@@ -103,7 +103,7 @@ original_slug: Firefox_3.5_para_desarrolladores
  <dt><a href="/en-US/docs/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress" title="Using XMLHttpRequest#Monitoring progress">Eventos de progreso para </a><code><a href="/en-US/docs/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress" title="Using XMLHttpRequest#Monitoring progress">XMLHttpRequest</a></code></dt>
  <dd>Ahora se ofrecen eventos de progreso para que las extensiones puedan monitorizar el progreso de las peticiones.</dd>
  <dt>Soporte <code>XMLHttpRequest</code> síncrono mejorado</dt>
- <dd><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=340345" title="https://bugzilla.mozilla.org/show_bug.cgi?id=340345">DOM Timeout</a> y <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=333198" title="https://bugzilla.mozilla.org/show_bug.cgi?id=333198">Input Events</a> son ahora soportados durante un <code>XMLHttpRequest</code> síncrono.</dd>
+ <dd><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=340345">DOM Timeout</a> y <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=333198">Input Events</a> son ahora soportados durante un <code>XMLHttpRequest</code> síncrono.</dd>
  <dt><a href="/en-US/docs/Controlling_DNS_prefetching" title="Controlling DNS prefetching">Control de prefetch de DNS</a></dt>
  <dd>Firefox 3.5 ofrece prefetch de DNS, por el que resuelve nombres de dominio con anticipación para links incluidos en la página actual, para ahorrar tiempo cuando los enlaces son realmente clickados. Este artículo describe cómo puedes optimizar tu sitio web para desactivar el prefetch, o ajustar cómo opera el prefetch.</dd>
 </dl>
@@ -153,8 +153,8 @@ original_slug: Firefox_3.5_para_desarrolladores
  <li>Los filtros SVG ahora funcionan para <code>foreignObject</code>.</li>
  <li>El método <code>GetSVGDocument()</code> ha sido añadido a los elementos <a href="/en-US/docs/HTML/Element/object" title="HTML/Element/Object"><code>object</code></a> y <a href="/en-US/docs/HTML/Element/iframe" title="HTML/Element/Iframe"><code>iframe</code></a> por compatibilidad.</li>
  <li>El setting implícito de propiedades en inicializadores de objeto y array ya no ejecuta los setters JavaScript. Ver el post <a href="/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated" title="web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated">Object and array initializers should not invoke setters when evaluated</a> para más detalles.</li>
- <li>La variable <code>gDownloadLastDir.path</code> ha sido renombrada a <code>gDownloadLastDir.file</code> porque se refiere a un {{interface("nsIFile")}}, no a una ruta.</li>
- <li>La variable <code>gDownloadLastDirPath</code> ha sido renombrada a <code>gDownloadLastDirFile</code> porque se refiere a un {{interface("nsIFile")}}, not a una ruta.</li>
+ <li>La variable <code>gDownloadLastDir.path</code> ha sido renombrada a <code>gDownloadLastDir.file</code> porque se refiere a un <code>nsIFile</code>, no a una ruta.</li>
+ <li>La variable <code>gDownloadLastDirPath</code> ha sido renombrada a <code>gDownloadLastDirFile</code> porque se refiere a un <code>nsIFile</code>, not a una ruta.</li>
  <li>A partir de Firefox 3.5, no puedes usar <code>data:</code> bindings en los chrome packages que tienen automatización <code>XPCNativeWrapper</code>.</li>
 </ul>
 

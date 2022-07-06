@@ -1,0 +1,53 @@
+---
+title: NavigatorLanguage.language
+slug: orphaned/Web/API/NavigatorLanguage/language
+translation_of: Web/API/NavigatorLanguage/language
+original_slug: Web/API/NavigatorLanguage/language
+---
+<p>{{ APIRef("HTML DOM") }}</p>
+
+<p><span id="result_box" lang="ru"><span>Свойство <code><strong>NavigatorLanguage.language</strong></code></span> <span class="hps">только для чтения, оно</span> <span class="hps">возвращает</span> <span class="hps">строку, представляющую</span> <span class="hps">предпочитаемый</span> <span class="hps">пользователем язык</span><span>, как правило это</span><span class="hps"> язык</span> <span class="hps">пользовательского интерфейса</span> <span class="hps">браузера</span><span>.</span></span></p>
+
+<h2 id="Syntax">Синтаксис</h2>
+
+<pre class="eval"><em>lang</em> = <em>globalObj</em>.navigator.language
+</pre>
+
+<h3 id="Parameters">Значение</h3>
+
+<p>Строка представляющая версию языка которая определена в <a class="external" href="http://tools.ietf.org/html/rfc4646">RFC 4646</a>. <span id="result_box" lang="ru"><span class="hps">Пример</span>ы <span class="hps">валидных</span> языковых кодов <span class="hps">включают </span><span class="atn hps">"</span><span>en</span><span>"</span><span>,</span> <span class="atn hps">"</span><span>EN-US</span><span>"</span><span>,</span> <span class="hps">"FR</span><span class="atn">", "</span><span>es</span><span>-ES"</span> <span class="hps">и т.д.</span></span></p>
+
+<h2 id="Example">Пример</h2>
+
+<pre class="brush: js">if ( window.navigator.language.slice(0, 2) !== "en" ) {
+ doLangSelect(window.navigator.language);
+}
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{ SpecName('HTML5 Web application', '#dom-navigator-language', 'navigator.language') }}</td>
+   <td>{{ Spec2('HTML5.1') }}</td>
+   <td>Начальное описание.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Доступность_в_браузерах">Доступность в браузерах</h2>
+
+<p>{{Compat("api.NavigatorLanguage.language")}}</p>
+
+<h2 id="See_also">Смотрите также</h2>
+
+<ul>
+ <li>{{domxref("NavigatorLanguage.languages","navigator.languages")}}</li>
+ <li>{{domxref("navigator")}}</li>
+</ul>

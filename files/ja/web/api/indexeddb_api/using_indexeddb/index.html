@@ -1,46 +1,52 @@
 ---
-title: IndexedDB を使用する
+title: IndexedDB の使用
 slug: Web/API/IndexedDB_API/Using_IndexedDB
 tags:
   - API
   - Advanced
   - Database
+  - Guide
   - IndexedDB
   - Storage
   - Tutorial
+  - jsstore
 translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 ---
 <p>{{DefaultAPISidebar("IndexedDB")}}</p>
 
 <div class="summary">
-<p>IndexedDB は、ユーザーのブラウザー内にデータを永続的に保存する手段です。ネットワークの状態にかかわらず高度な問い合わせ機能を持つ ウェブアプリケーションを作成できますので、オンラインとオフラインの両方で動作するアプリケーションになります。</p>
+<p>IndexedDB は、ユーザーのブラウザー内にデータを永続的に保存する手段です。ネットワークの状態にかかわらず高度な問い合わせ機能を持つウェブアプリケーションを作成できますので、アプリケーションがオンラインとオフラインの両方で動作するようになります。</p>
 </div>
 
-<h2 id="About_this_document" name="About_this_document">このドキュメントについて</h2>
+<h2 id="About_this_document">このドキュメントについて</h2>
 
-<p>このチュートリアルでは、IndexedDB の非同期 API の使い方を見ていきます。IndexedDB について詳しくない場合は、始めに <a href="/ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB" title="IndexedDB/Basic Concepts Behind IndexedDB">IndexedDB の基本的な概念</a>をお読みください。</p>
+<p>このチュートリアルでは、IndexedDB の非同期 API の使い方を見ていきます。IndexedDB について詳しくない場合は、始めに <a href="/ja/docs/Web/API/IndexedDB_API/Basic_Terminology">IndexedDB の主な特徴と基本用語</a>をお読みください。</p>
 
-<p>IndexedDB API のリファレンスドキュメントとして、<a href="/ja/docs/Web/API/IndexedDB_API" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB</a> の記事とそのサブ記事をご覧ください。IndexedDB で使用されるオブジェクトの型や、同期 API および非同期 API のドキュメントがあります。</p>
+<p>IndexedDB API のリファレンスドキュメントとして、<a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB API</a> の記事とそのサブ記事をご覧ください。この記事では、IndexedDB で使用されるオブジェクトの種類と、非同期 API のメソッドについて説明します (同期 API は仕様から削除されました)。</p>
 
-<h2 id="pattern" name="pattern">基本パターン</h2>
+<h2 id="pattern">基本パターン</h2>
 
-<p>IndexedDB で推奨される基本パターンは、以下のようになります:</p>
+<p>IndexedDB で推奨される基本パターンは、以下のようになります。</p>
 
 <ol>
  <li>データベースを開きます。</li>
  <li>データベース内に、オブジェクトストアを作成します。</li>
  <li>データの追加や取り出しといった、データベース操作のトランザクションを開始して、リクエストを行います。</li>
- <li>適切な DOM イベントを受け取ることにより、操作が完了するのを待ちます。</li>
- <li>結果 (リクエストオブジェクトで見つけることができます) に応じた処理を行います。</li>
+ <li>
+  <div>適切な DOM イベントを受け取ることにより、操作が完了するのを待ちます。</div>
+ </li>
+ <li>
+  <div>結果 (リクエストオブジェクトにある) に応じた処理を行います。</div>
+ </li>
 </ol>
 
 <p>これらの主要な概念を踏まえることで、より具体的な手続きを理解できます。</p>
 
-<h2 id="open" name="open">ストアを作成および構築する</h2>
+<h2 id="open">ストアを作成および構築する</h2>
 
-<h3 id="Using_an_experimental_version_of_IndexedDB" name="Using_an_experimental_version_of_IndexedDB">実験的なバージョンの IndexedDB を使用する</h3>
+<h3 id="Using_an_experimental_version_of_IndexedDB">実験的なバージョンの IndexedDB を使用する</h3>
 
-<p>まだ接頭辞を使用しているブラウザーでコードのテストを行いたい場合は、以下のコードを使用するとよいでしょう:</p>
+<p>まだ接頭辞を使用しているブラウザーでコードのテストを行いたい場合は、以下のコードを使用するとよいでしょう。</p>
 
 <pre class="brush: js">// 以下の行に、テストを行いたい実装の接頭辞を含めてください。
 window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
@@ -50,35 +56,35 @@ window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || 
 window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
 // (Mozilla はこれらのオブジェクトに接頭辞をつけていませんので、window.mozIDB* は不要です)</pre>
 
-<p>接頭辞を使用している実装は不具合がある、未完成、あるいは古い版の仕様に従っている可能性がありますので注意してください。よって、これらを製品版のコードで使用することは推奨しません。サポートしているものとして失敗するより、未サポートとする方が好ましいでしょう:</p>
+<p>接頭辞を使用している実装は不具合がある、未完成、あるいは古い版の仕様に従っている可能性がありますので注意してください。よって、これらを製品版のコードで使用することは推奨しません。対応しているものとして失敗するより、未対応とする方が好ましいでしょう。</p>
 
 <pre class="brush: js">if (!window.indexedDB) {
-    window.alert("このブラウザーは安定版の IndexedDB をサポートしていません。IndexedDB の機能は利用できません。");
+    window.console.log("このブラウザーは安定版の IndexedDB を対応していません。IndexedDB の機能は利用できません。");
 }
 </pre>
 
-<h3 id="Opening_a_database" name="Opening_a_database">データベースを開く</h3>
+<h3 id="Opening_a_database">データベースを開く</h3>
 
-<p>プロセス全体は以下のようにして始めます:</p>
+<p>プロセス全体は以下のようにして始めます。</p>
 
 <pre class="brush: js">// データベースを開く
 var request = window.indexedDB.open("MyTestDatabase", 3);
 </pre>
 
-<p>わかりますか? データベースを開くことも他の操作と同様であり、"リクエスト" が必要です。</p>
+<p>わかりますか? データベースを開くことも他の操作と同様であり、「リクエスト」が必要です。</p>
 
-<p>データベースを開くリクエストは、すぐにはデータベースを開いたりトランザクションを開始したりはしません。<code>open()</code> 関数を呼び出すと、結果 (成功) またはイベントとして扱うエラー値を伴う <a href="/ja/docs/Web/API/IDBOpenDBRequest" title="IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> オブジェクトを返します。IndexedDB のほとんどの他の非同期関数も同様であり、結果またはエラーを伴う <a href="/ja/docs/Web/API/IDBRequest" title="IndexedDB/IDBRequest"><code>IDBRequest</code></a> オブジェクトを返します。open 関数の結果は <code><a href="/ja/docs/Web/API/IDBDatabase" title="IndexedDB/IDBDatabase">IDBDatabase</a></code> のインスタンスです。</p>
+<p>データベースを開くリクエストは、すぐにはデータベースを開いたりトランザクションを開始したりはしません。<code>open()</code> 関数を呼び出すと、結果 (成功) またはイベントとして扱うエラー値を伴う <a href="/ja/docs/Web/API/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> オブジェクトを返します。IndexedDB のほとんどの他の非同期関数も同様であり、結果またはエラーを伴う <a href="/ja/docs/Web/API/IDBRequest"><code>IDBRequest</code></a> オブジェクトを返します。open 関数の結果は <code><a href="/ja/docs/Web/API/IDBDatabase">IDBDatabase</a></code> のインスタンスです。</p>
 
-<p>open メソッドの第 2 引数は、データベースのバージョンです。データベースのバージョンは、データベースのスキーマ、すなわちデータベース内のオブジェクトストアとその構造を決定します。データベースが存在しない場合に <code>open</code> 操作でデータベースが作成されると、<code>onupgradeneeded</code> イベントが発生して、そのイベントハンドラでデータベースのスキーマを作成できます。データベースが存在する場合に従来より高いバージョン番号を指定すると、すぐに <code>onupgradeneeded</code> イベントが発生して、そのイベントハンドラで更新されたスキーマを提供できます。詳しくは、後ほど<a href="#Updating_the_version_of_the_database">データベースのバージョンを更新する</a>で説明します。また、{{domxref("IDBFactory.open")}} のリファレンスページもご覧ください。</p>
+<p>open メソッドの第 2 引数は、データベースのバージョンです。データベースのバージョンは、データベースのスキーマ、すなわちデータベース内のオブジェクトストアとその構造を決定します。データベースが存在しない場合に <code>open</code> 操作でデータベースが作成されると、<code>onupgradeneeded</code> イベントが発生し、そのイベントハンドラーでデータベースのスキーマを作成することができます。データベースが存在する場合に従来より高いバージョン番号を指定すると、すぐに <code>onupgradeneeded</code> イベントが発生して、そのイベントハンドラーで更新されたスキーマを提供することができます。詳しくは、後ほど<a href="#updating_the_version_of_the_database">データベースのバージョンの更新</a>で説明します。また、{{domxref("IDBFactory.open")}} のリファレンスページもご覧ください。</p>
 
 <div class="warning">
-<p><strong>重要</strong>: バージョン番号は <code>unsigned long long</code> 型の数値であり、とても大きい整数にすることができます。また浮動小数点数値は使用できず、使用した場合は <code>upgradeneeded</code> イベントが発生せず、もっとも近い小さな数値に変換されてトランザクションが始まるでしょう。よって、例えばバージョン番号として 2.4 を使用しないでください:<br>
+<p><strong>重要</strong>: バージョン番号は <code>unsigned long long</code> 型の数値であり、とても大きい整数にすることができます。また浮動小数点数値は使用できず、使用した場合は <code>upgradeneeded</code> イベントが発生せず、もっとも近い小さな数値に変換されてトランザクションが始まるでしょう。よって、例えばバージョン番号として 2.4 を使用しないでください。<br>
  <code>var request = indexedDB.open("MyTestDatabase", 2.4); // 行ってはいけません。バージョンは 2 に丸められます</code></p>
 </div>
 
-<h4 id="Generating_handlers" name="Generating_handlers">ハンドラを生成する</h4>
+<h4 id="Generating_handlers">ハンドラーの生成</h4>
 
-<p>ほぼすべてのリクエスト生成に合わせて始めに行いたいことは、成功およびエラーのハンドラを生成することでしょう:</p>
+<p>ほぼすべてのリクエスト生成に合わせて始めに行いたいことは、成功およびエラーのハンドラーを生成することでしょう。</p>
 
 <pre class="brush: js">request.onerror = function(event) {
   // request.errorCode に対して行うこと!
@@ -89,38 +95,38 @@ request.onsuccess = function(event) {
 
 <p>2 つの関数 <code>onsuccess()</code> と <code>onerror()</code> のどちらが呼び出されるのでしょう? すべてが成功すると成功イベント (すなわち <code>type</code> プロパティが <code>"success"</code> である DOM イベント) が、<code>request</code> を <code>target</code> として発生します。イベントが発生すると <code>request</code> の <code>onsuccess()</code> 関数が、success イベントを引数として呼び出されます。一方、何らかの問題がある場合はエラーイベント (すなわち <code>type</code> プロパティが <code>"error"</code> である DOM イベント) が <code>request</code> で発生します。これは、エラーイベントを引数として <code>onerror()</code> 関数を呼び出します。</p>
 
-<p>IndexedDB API は必要なエラー処理を最小限にするよう設計されていますので、多くのエラーイベントを見ることはないでしょう (少なくとも、API に慣れていなければ!)。しかしデータベースを開く場合は、エラーイベントが発生する一般的な状況があります。もっとも多いであろう問題は、データベースを作成する許可をユーザーが ウェブアプリに与えなかったことです。IndexedDB の主要な設計目標のひとつが、オフラインで使用するために大量のデータを保存できるようにすることです。(各ブラウザーでどれだけの量のストレージを持てるかについては、<a href="/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Storage_limits" title="IndexedDB#Storage_limits">ストレージの制限</a>をご覧ください)</p>
+<p>IndexedDB API は必要なエラー処理を最小限にするよう設計されていますので、多くのエラーイベントを見ることはないでしょう (少なくとも、API に慣れていなければ)。しかしデータベースを開く場合は、エラーイベントが発生する一般的な状況があります。もっとも多いであろう問題は、データベースを作成する許可をユーザーがウェブアプリに与えなかったことです。IndexedDB の主要な設計目標のひとつが、オフラインで使用するために大量のデータを保存できるようにすることです。(各ブラウザーでどれだけの量のストレージを持てるかについては、<a href="/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#storage_limits" title="IndexedDB#Storage_limits">ストレージの制限</a>をご覧ください)</p>
 
-<p>広告ネットワークやコンピュータを汚染させる悪意のある Web サイトをブラウザーが許可したくないことは明らかですので、ブラウザーは ウェブアプリが初めてストレージ用に IndexedDB を開こうとしたときに、ユーザーへプロンプトを表示します。ユーザーはアクセスを許可または拒否できます。またブラウザーのプライバシーモードでの IndexedDB ストレージは、匿名のセッションを閉じるまでの間だけメモリ上に存在します (Firefox のプライベートブラウジングモードや Chrome のシークレットモードのことですが、2015 年 11 月現在の Firefox ではこれが<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=781982">未実装です</a>ので、Firefox のプライベートブラウジングでは IndexedDB をまったく使用できません)。</p>
+<p>広告ネットワークやコンピューターを汚染させる悪意のあるウェブサイトをブラウザーが許可したくないことは明らかですので、ブラウザーは ウェブアプリが初めてストレージ用に IndexedDB を開こうとしたときに、ユーザーへプロンプトを表示します。ユーザーはアクセスを許可または拒否できます。またブラウザーのプライバシーモードでの IndexedDB ストレージは、匿名のセッションを閉じるまでの間だけメモリー上に存在します (Firefox のプライベートブラウジングモードや Chrome のシークレットモードのことですが、2021 年 5 月現在の Firefox ではこれが<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=781982">未実装です</a>ので、Firefox のプライベートブラウジングでは IndexedDB をまったく使用できません)。</p>
 
-<p>ユーザーがデータベース作成の要求を許可して、成功コールバックを実行する成功イベントを受け取ったと想定します。次は何を行うのでしょうか? 以下のリクエストは <code>indexedDB.open()</code> の呼び出しを伴って生成されており、<code>request.result</code> は <code>IDBDatabase</code> のインスタンスですので、以降のためにこれを保存したいことは確実です。よって、コードは以下のようになるでしょう:</p>
+<p>ユーザーがデータベース作成の要求を許可して、成功コールバックを実行する成功イベントを受け取ったと想定します。次は何を行うのでしょうか? 以下のリクエストは <code>indexedDB.open()</code> の呼び出しを伴って生成されており、<code>request.result</code> は <code>IDBDatabase</code> のインスタンスですので、以降のためにこれを保存したいことは確実です。よって、コードは以下のようになるでしょう。</p>
 
 <pre class="brush: js">var db;
 var request = indexedDB.open("MyTestDatabase");
 request.onerror = function(event) {
-  alert("なぜ私の ウェブアプリで IndexedDB を使わせてくれないのですか?!");
+  console.log("なぜ私の ウェブアプリで IndexedDB を使わせてくれないのですか?!");
 };
 request.onsuccess = function(event) {
   db = event.target.result;
 };
 </pre>
 
-<h4 id="Handling_Errors" name="Handling_Errors">エラーを処理する</h4>
+<h4 id="Handling_Errors">エラーを処理する</h4>
 
-<p>前述のとおり、エラーイベントはバブリングします。エラーイベントはエラーを発生させたリクエストをターゲットにして、さらにトランザクションや最終的にデータベースオブジェクトへバブリングします。すべてのリクエストにエラーハンドラを追加することを避けたい場合は、代わりに以下のように、ひとつのエラーハンドラをデータベースオブジェクトに追加することができます:</p>
+<p>前述のとおり、エラーイベントはバブリングします。エラーイベントはエラーを発生させたリクエストをターゲットにして、さらにトランザクションや最終的にデータベースオブジェクトへバブリングします。すべてのリクエストにエラーハンドラーを追加することを避けたい場合は、代わりに以下のように、ひとつのエラーハンドラーをデータベースオブジェクトに追加することができます。</p>
 
 <pre class="brush: js">db.onerror = function(event) {
   // このデータベースのリクエストに対するすべてのエラー用の
-  // 汎用エラーハンドラ!
-  alert("Database error: " + event.target.errorCode);
+  // 汎用エラーハンドラー!
+  console.log("Database error: " + event.target.errorCode);
 };
 </pre>
 
-<p>データベースを開く際によく発生するエラーのひとつが <code>VER_ERR</code> です。これはディスクに保存されているデータベースのバージョンが、開こうとしているバージョンより<em>大きい</em>ことを表します。これは、必ずエラーハンドラで処理しなければならないエラーの実例です。</p>
+<p>データベースを開く際によく発生するエラーのひとつが <code>VER_ERR</code> です。これはディスクに保存されているデータベースのバージョンが、開こうとしているバージョンより<em>大きい</em>ことを表します。これは、必ずエラーハンドラーで処理しなければならないエラーの実例です。</p>
 
 <h3 id="Creating_or_updating_the_version_of_the_database" name="Creating_or_updating_the_version_of_the_database">データベースを作成またはデータベースのバージョンを更新する</h3>
 
-<p><a name="Updating_the_version_of_the_database"></a>新しいデータベースを作成したり既存のデータベースのバージョンを更新したりする ({{anch("Opening a database","データベースを開く")}}際に、従来より大きなバージョン番号を指定する) と <code>onupgradeneeded</code> イベントが発生して、<code>request.result</code> (すなわち、以下の例の <code>db</code>) に設定した <code>onversionchange</code> イベントハンドラに <a href="/ja/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> オブジェクトが渡されます。<code>upgradeneeded</code> イベントのハンドラでは、このバージョンのデータベースで必要なオブジェクトストアを作成します:</p>
+<p><a name="Updating_the_version_of_the_database"></a>新しいデータベースを作成したり既存のデータベースのバージョンを更新したりする (<a href="#opening_a_database">データベースを開く</a>際に、従来より大きなバージョン番号を指定する) と <code>onupgradeneeded</code> イベントが発生して、<code>request.result</code> (すなわち、以下の例の <code>db</code>) に設定した <code>onversionchange</code> イベントハンドラーに <a href="/ja/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> オブジェクトが渡されます。<code>upgradeneeded</code> イベントのハンドラーでは、このバージョンのデータベースで必要なオブジェクトストアを作成します。</p>
 
 <pre class="brush:js;">// このイベントは最新のブラウザーにのみ実装されています
 request.onupgradeneeded = function(event) {
@@ -135,21 +141,19 @@ request.onupgradeneeded = function(event) {
 
 <p>既存の名称を使用してオブジェクトストアを作成しようとする (あるいは、存在しない名称のオブジェクトストアを削除しようとする) と、エラーが発生します。</p>
 
-<p><code>onupgradeneeded</code> イベントから正常に抜けた場合は、データベースを開くリクエストの <code>onsuccess</code> ハンドラが実行されます。</p>
+<p><code>onupgradeneeded</code> イベントから正常に抜けた場合は、データベースを開くリクエストの <code>onsuccess</code> ハンドラーが実行されます。</p>
 
-<p>Chrome 23 以降および Opera 17 以降の Blink/Webkit は、現行バージョンの仕様をサポートします。IE10 以降も同様です。他の実装や古い実装では現行バージョンの仕様を実装しておらず、<code>indexedDB.open(name, version).onupgradeneeded</code> シグネチャが未サポートです。古い Webkit/Blink でデータベースのバージョンを更新する方法について、詳しくは <a href="/ja/docs/Web/API/IDBDatabase#setVersion()_.0A.0ADeprecated" title="IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">IDBDatabase のリファレンス記事</a>をご覧ください。</p>
+<h3 id="Structuring_the_database">データベースを構築する</h3>
 
-<h3 id="Structuring_the_database" name="Structuring_the_database">データベースを構築する</h3>
+<p>次に、データベースを構築します。IndexedDB はテーブルではなくオブジェクトストアを使用しており、ひとつのデータベースに複数のオブジェクトストアを含めることができます。値をオブジェクトストアへ保存するたびに、値がキーと関連付けられます。オブジェクトストアで<a href="/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath">キーパス</a>を使用するか<a href="/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keygenerator">キージェネレーター</a>を使用するかに応じて、キーを供給する方法がいくつか存在します。</p>
 
-<p>次に、データベースを構築します。IndexedDB はテーブルではなくオブジェクトストアを使用しており、ひとつのデータベースに複数のオブジェクトストアを含めることができます。値をオブジェクトストアへ保存するたびに、値がキーと関連付けられます。オブジェクトストアで<a href="/ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath" title="IndexedDB#gloss_key_path">キーパス</a>を使用するか<a href="/ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator" title="IndexedDB#gloss key generator">キージェネレータ</a>を使用するかに応じて、キーを供給する方法がいくつか存在します。</p>
-
-<p>以下の表で、キーを供給するさまざまな方法を示します:</p>
+<p>以下の表で、キーを供給するさまざまな方法を示します。</p>
 
 <table class="standard-table">
  <thead>
   <tr>
    <th scope="col">キーパス (<code>keyPath</code>)</th>
-   <th scope="col">キージェネレータ (<code>autoIncrement</code>)</th>
+   <th scope="col">キージェネレーター (<code>autoIncrement</code>)</th>
    <th scope="col">説明</th>
   </tr>
  </thead>
@@ -181,7 +185,7 @@ request.onupgradeneeded = function(event) {
 
 <p>さらにインデックスには、保存されたデータに単純な制限を強制する機能があります。インデックスを作成する際に unique フラグを設定すると、インデックスのキーパスで同じ値を持つオブジェクトが複数保存されないことを、インデックスが保証します。よって例えば人々の集団の情報を保持するオブジェクトストアがある場合に、同じメールアドレスを持つ人が 2 人存在しないことを保証したい場合は、これを強制するために unique フラグを設定したインデックスを使用するとよいでしょう。</p>
 
-<p>これには混乱するかもしれませんので、シンプルな例で概念を説明するべきでしょう。始めに、例で使用する顧客データをいくつか定義します:</p>
+<p>これには混乱するかもしれませんので、シンプルな例で概念を説明するべきでしょう。始めに、例で使用する顧客データをいくつか定義します。</p>
 
 <pre class="brush: js">// 顧客データがどのようなものかを示します
 const customerData = [
@@ -192,7 +196,7 @@ const customerData = [
 
 <p>もちろん、誰かの社会保障番号を顧客テーブルの主キーとして使用するべきではないですし (社会保障番号を持っていない人もいます)、年齢の代わりに誕生日を保管することもできますが、これらの不適切な選択は利便性のために無視して先へ進みましょう。</p>
 
-<p>次に、データを保存する IndexedDB を作成するところを見てみましょう:</p>
+<p>次に、データを保存する IndexedDB を作成するところを見てみましょう。</p>
 
 <pre class="brush: js">const dbName = "the_name";
 
@@ -222,28 +226,28 @@ request.onupgradeneeded = function(event) {
   objectStore.transaction.oncomplete = function(event) {
     // 新たに作成した objectStore に値を保存します。
     var customerObjectStore = db.transaction("customers", "readwrite").objectStore("customers");
-    for (var i in customerData) {
-      customerObjectStore.add(customerData[i]);
-    }
+    customerData.forEach(function(customer) {
+      customerObjectStore.add(customer);
+    });
   };
 };
 </pre>
 
 <p>先に示したように、<code>onupgradeneeded</code> はデータベースの構造を変えることができる唯一の場所です。ここではオブジェクトストアの作成および削除や、インデックスの構築および削除が可能です。</p>
 
-<p>オブジェクトストアは <code>createObjectStore()</code> を 1 回呼び出して作成します。このメソッドの引数は、ストアの名前とパラメータオブジェクトです。パラメータオブジェクトは省略可能ですが、重要なオプションプロパティを定義したり、作成したいオブジェクトストアの型を改良することができますので、とても重要です。この例では "customers" という名前のオブジェクトストアを要求して、<code>keyPath</code> を定義しています。<code>keyPath</code> は、ストア内で個々のオブジェクトを一意にするプロパティです。この例では、社会保障番号が一意であることが保証されていますので "ssn" にしています。"ssn" は、<code>objectStore</code> に保存するすべてのオブジェクトに与えなければなりません。</p>
+<p>オブジェクトストアは <code>createObjectStore()</code> を 1 回呼び出して作成します。このメソッドの引数は、ストアの名前と引数オブジェクトです。引数オブジェクトは省略可能ですが、重要なオプションプロパティを定義したり、作成したいオブジェクトストアの型を改良することができますので、とても重要です。この例では "customers" という名前のオブジェクトストアを要求して、<code>keyPath</code> を定義しています。<code>keyPath</code> は、ストア内で個々のオブジェクトを一意にするプロパティです。この例では、社会保障番号が一意であることが保証されていますので "ssn" にしています。"ssn" は、<code>objectStore</code> に保存するすべてのオブジェクトに与えなければなりません。</p>
 
 <p>また、保存されたオブジェクトの <code>name</code> プロパティを参照する、"name" という名前のインデックスも要求しています。<code>createObjectStore()</code> と同様に <code>createIndex()</code> も、作成したいインデックスの型を改良するための省略可能な引数 <code>options</code> オブジェクトを指定できます。<code>name</code> プロパティを持たないオブジェクトを追加することはできますが、そのオブジェクトは "name" インデックス内に現れません。</p>
 
-<p>以上でオブジェクトストアに保存された顧客オブジェクトを、<code>ssn</code> を使用して直接、またはインデックスを使用して名前をもとにして、取り出すことができます。この仕組みについて詳しくは、<a href="#Using_an_index" title="Using IndexedDB#Using an index">インデックスを使用する</a> をご覧ください。</p>
+<p>以上でオブジェクトストアに保存された顧客オブジェクトを、<code>ssn</code> を使用して直接、またはインデックスを使用して名前をもとにして、取り出すことができます。この仕組みについて詳しくは、<a href="#using_an_index">インデックスを使用する</a> をご覧ください。</p>
 
-<h3 id="Using_a_key_generator" name="Using_a_key_generator">キージェネレータを使用する</h3>
+<h3 id="Using_a_key_generator">キージェネレーターを使用する</h3>
 
-<p>オブジェクトストアを作成するときに <code>autoIncrement</code> フラグを設定すると、そのオブジェクトストアでキージェネレータを使用できます。デフォルトで、このフラグは設定されません。</p>
+<p>オブジェクトストアを作成するときに <code>autoIncrement</code> フラグを設定すると、そのオブジェクトストアでキージェネレーターを使用できます。デフォルトで、このフラグは設定されません。</p>
 
-<p>キージェネレータを使用すると、オブジェクトストアに値を追加するのに応じて自動的にキーが生成されます。オブジェクトストアでキージェネレータを初めて作成した時点では、キージェネレータの値が常に 1 になります。基本的に、新たに自動生成されるキーは、前のキーから 1 増加した値になります。データベースのトランザクションが中止されるなど、データベースの操作が取り消された場合を除き、キージェネレータの現在の値が減少することはありません。従って、オブジェクトストアからレコードを削除したりすべてのレコードをクリアしたりしても、オブジェクトストアのキージェネレータには影響がありません。</p>
+<p>キージェネレーターを使用すると、オブジェクトストアに値を追加するのに応じて自動的にキーが生成されます。オブジェクトストアでキージェネレーターを初めて作成した時点では、キージェネレーターの値が常に 1 になります。基本的に、新たに自動生成されるキーは、前のキーから 1 増加した値になります。データベースのトランザクションが中止されるなど、データベースの操作が取り消された場合を除き、キージェネレーターの現在の値が減少することはありません。従って、オブジェクトストアからレコードを削除したりすべてのレコードをクリアしたりしても、オブジェクトストアのキージェネレーターには影響がありません。</p>
 
-<p>以下のように、キージェネレータを持つ別のオブジェクトストアを作成できます:</p>
+<p>以下のように、キージェネレーターを持つ別のオブジェクトストアを作成できます。</p>
 
 <pre class="brush: js">// indexedDB を開きます。
 var request = indexedDB.open(dbName, 3);
@@ -255,7 +259,7 @@ request.onupgradeneeded = function (event) {
     // autoIncrement フラグに true を設定した、"names" という名前のオブジェクトストアを作成します。
     var objStore = db.createObjectStore("names", { autoIncrement : true });
 
-    // "names" オブジェクトストアはキージェネレータを持っていますので、値 name のキーは自動的に生成されます。
+    // "names" オブジェクトストアはキージェネレーターを持っていますので、値 name のキーは自動的に生成されます。
     // 追加したレコードは以下のようになります:
     // キー : 1 =&gt; 値 : "Bill"
     // キー : 2 =&gt; 値 : "Donna"
@@ -264,34 +268,34 @@ request.onupgradeneeded = function (event) {
     }
 };</pre>
 
-<p>キージェネレータについて詳しくは、<a href="http://www.w3.org/TR/IndexedDB/#key-generator-concept">"W3C Key Generators"</a> をご覧ください。</p>
+<p>キージェネレーターについて詳しくは、<a href="https://www.w3.org/TR/IndexedDB/#key-generator-concept">"W3C Key Generators"</a> をご覧ください。</p>
 
-<h2 id="Adding_retrieving_and_removing_data" name="Adding_retrieving_and_removing_data">データを追加する、読み出す、削除する</h2>
+<h2 id="Adding_retrieving_and_removing_data">データの追加、読み取り、削除</h2>
 
 <p>新しいデータベースで何かを行えるようにする前に、トランザクションを開始しなければなりません。トランザクションはデータベースオブジェクトから生じており、トランザクションの対象にしたいオブジェクトストアを指定しなければなりません。トランザクションの内部では、データを保持しているオブジェクトストアへのアクセスや、リクエストの実行が可能です。次に、データベースに変更処理を行うのか、あるいはデータベースから読み出すだけかを決めなければなりません。トランザクションは <code>readonly</code>、<code>readwrite</code>、<code>versionchange</code> の 3 つのモードを使用できます。</p>
 
-<p>データベースの "スキーマ" や構造を変更する (オブジェクトストアやインデックスを作成または削除する) には、トランザクションを <code>versionchange</code> モードにしなければなりません。このトランザクションは、<code>version</code> を指定して {{domxref("IDBFactory.open")}} メソッドを呼び出すことによって開きます。(最新の仕様を実装していない WebKit ブラウザーは {{domxref("IDBFactory.open")}} メソッドの引数が、データベースの <code>name</code> の 1 つしかありません。よって、<code>versionchange</code> トランザクションを開始するには {{domxref("IDBVersionChangeRequest.setVersion")}} を呼び出さなければなりません)</p>
+<p>データベースの「スキーマ」や構造を変更する (オブジェクトストアやインデックスを作成または削除する) には、トランザクションを <code>versionchange</code> モードにしなければなりません。このトランザクションは、<code>version</code> を指定して {{domxref("IDBFactory.open")}} メソッドを呼び出すことによって開きます。</p>
 
 <p>既存のオブジェクトストアからレコードを読み出すには、トランザクションで <code>readonly</code> モードまたは <code>readwrite</code> モードを使用できます。既存のオブジェクトストアに変更処理を行うには、トランザクションを <code>readwrite</code> モードにしなければなりません。このようなトランザクションは {{domxref("IDBDatabase.transaction")}} で開きます。このメソッドの引数は 2 つあり、<code>storeNames</code> (アクセスしたいオブジェクトストアの配列で定義されるスコープ) とトランザクションの <code>mode</code> (<code>readonly</code> または <code>readwrite</code>) です。またこのメソッドは、{{domxref("IDBTransaction.objectStore")}} メソッドを持つトランザクションオブジェクトを返します。<code>objectStore</code> メソッドは、オブジェクトストアにアクセスするために使用できます。デフォルトでは、モードを指定しなければ <code>readonly</code> モードでトランザクションを開きます。</p>
 
 <div class="note">
-<p><strong>注記</strong>: Firefox 40 で、IndexedDB トランザクションはパフォーマンスを向上させるために、永続性の保証を緩和しました ({{Bug("1112702")}} を参照)。以前は <code>readwrite</code> モードのトランザクションで、すべてのデータをディスク上に反映したことが保証された場合に限り {{domxref("IDBTransaction.oncomplete")}} 発生しました。Firefox 40 以降では OS がデータの書き込みを指示した時点で <code>complete</code> が発生しており、実際にはデータがディスク上に反映されていない可能性があります。これにより <code>complete</code> イベントをより早く発生させられますが、データをディスク上に反映する前に OS のクラッシュや電源断が発生するとトランザクション全体を失う危険性が若干あります。このような破壊的な事象はまれですので、ほとんどの利用者は心配する必要がないでしょう。何らかの理由 (例えば、後で再計算できない重要なデータを保存する) で永続性を保証しなければならない場合は、実験的 (非標準) な <code>readwriteflush</code> モード ({{domxref("IDBDatabase.transaction")}} を参照) を使用してトランザクションを生成すると、<code>complete</code> イベントを発生させる前にディスクへの反映を強制させることができます。</p>
+<p><strong>メモ</strong>: Firefox 40 で、IndexedDB トランザクションはパフォーマンスを向上させるために、永続性の保証を緩和しました ({{Bug("1112702")}} を参照)。以前は <code>readwrite</code> モードのトランザクションで、すべてのデータをディスク上に反映したことが保証された場合に限り {{domxref("IDBTransaction.oncomplete")}} 発生しました。Firefox 40 以降では OS がデータの書き込みを指示した時点で <code>complete</code> が発生しており、実際にはデータがディスク上に反映されていない可能性があります。これにより <code>complete</code> イベントをより早く発生させられますが、データをディスク上に反映する前に OS のクラッシュや電源断が発生するとトランザクション全体を失う危険性が若干あります。このような破壊的な事象はまれですので、ほとんどの利用者は心配する必要がないでしょう。何らかの理由 (例えば、後で再計算できない重要なデータを保存する) で永続性を保証しなければならない場合は、実験的 (非標準) な <code>readwriteflush</code> モード ({{domxref("IDBDatabase.transaction")}} を参照) を使用してトランザクションを生成すると、<code>complete</code> イベントを発生させる前にディスクへの反映を強制させることができます。</p>
 </div>
 
-<p>トランザクションで適切なスコープおよびモードを使用すると、データアクセスを高速化できます。ヒントを 2 つ紹介します:</p>
+<p>トランザクションで適切なスコープおよびモードを使用すると、データアクセスを高速化できます。ヒントを 2 つ紹介します。</p>
 
 <ul>
  <li>スコープを定義するときは、必要なオブジェクトストアのみ指定します。これにより、同時にスコープが重なり合うことなく、複数のトランザクションを実行できます。</li>
- <li><code>readwrite</code> トランザクションモードは、必要な場合に限り指定します。<code>readonly</code> トランザクションはスコープが重なっても複数同時に実行できますが、<code>readwrite</code> トランザクションはオブジェクトストアに対して 1 個しか実行できません。詳しくは、<a href="/ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB">基本的な概念</a>の記事で <dfn><a href="/ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#Database">トランザクション</a></dfn>の定義をご覧ください。</li>
+ <li><code>readwrite</code> トランザクションモードは、必要な場合に限り指定します。<code>readonly</code> トランザクションはスコープが重なっても複数同時に実行できますが、<code>readwrite</code> トランザクションはオブジェクトストアに対して 1 個しか実行できません。詳しくは、<a href="/ja/docs/Web/API/IndexedDB_API/Basic_Terminology">IndexedDB の主な特徴と基本用語</a>の記事で <a href="/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction">トランザクション</a>の定義をご覧ください。</li>
 </ul>
 
-<h3 id="Adding_data_to_the_database" name="Adding_data_to_the_database">データベースにデータを追加する</h3>
+<h3 id="Adding_data_to_the_database">データベースにデータを追加する</h3>
 
-<p>データベースを作成したら、書き込みを行いたいと考えるでしょう。これは以下のようにします:</p>
+<p>データベースを作成したら、書き込みを行いたいと考えるでしょう。これは以下のようにします。</p>
 
 <pre class="brush:js;">var transaction = db.transaction(["customers"], "readwrite");
-// 注記: 古い実験的な実装では、"readwrite" の代わりに非推奨の定数 IDBTransaction.READ_WRITE を使用します。
-// そのような実装をサポートしたい場合は、以下のように記述します:
+// メモ: 古い実験的な実装では、"readwrite" の代わりに非推奨の定数 IDBTransaction.READ_WRITE を使用します。
+// そのような実装をサポートしたい場合は、以下のように記述します。
 // var transaction = db.transaction(["customers"], IDBTransaction.READ_WRITE);</pre>
 
 <p><code>transaction()</code> 関数は引数が 2 つあり (ひとつは省略可能)、トランザクションオブジェクトを返します。第 1 引数は、トランザクションの対象にするオブジェクトストアのリストです。トランザクションですべてのオブジェクトを対象にしたい場合は空の配列を渡すことができますが、仕様書では空の配列に対して InvalidAccessError を生成すべきとされていますので、行わないようにしてください。第 2 引数に何も指定しなければ、読み取り専用のトランザクションになります。書き込みを行いたい場合は、<code>"readwrite"</code> フラグを渡さなければなりません。</p>
@@ -304,7 +308,7 @@ request.onupgradeneeded = function (event) {
 
 <pre class="brush: js">// すべてのデータがデータベースに追加されたときに行う処理
 transaction.oncomplete = function(event) {
-  alert("All done!");
+  console.log("All done!");
 };
 
 transaction.onerror = function(event) {
@@ -319,11 +323,11 @@ for (var i in customerData) {
   };
 }</pre>
 
-<p><code>add()</code> を呼び出して生成されたリクエストの <code>result</code> は、追加された値のキーです。よってこのケースでは、オブジェクトストアでキーパスとして <code>ssn</code> プロパティを使用していますので、追加されたオブジェクトの <code>ssn</code> プロパティと等しくなります。<code>add()</code> 関数では、データベース内に同一のキーを持つオブジェクトが存在しないことを要求しますので注意してください。既存の項目を変更しようとする場合や、既存の項目があるかを配慮しない場合は、{{anch("Updating an entry in the database", "データベース内の項目を更新する")}} の章で説明している <code>put()</code> 関数を使用できます。</p>
+<p><code>add()</code> を呼び出して生成されたリクエストの <code>result</code> は、追加された値のキーです。よってこのケースでは、オブジェクトストアでキーパスとして <code>ssn</code> プロパティを使用していますので、追加されたオブジェクトの <code>ssn</code> プロパティと等しくなります。<code>add()</code> 関数では、データベース内に同一のキーを持つオブジェクトが存在しないことを要求しますので注意してください。既存の項目を変更しようとする場合や、既存の項目があるかを配慮しない場合は、<a href="#updating_an_entry_in_the_database">データベース内の項目を更新する</a> の章で説明している <code>put()</code> 関数を使用できます。</p>
 
-<h3 id="Removing_data_from_the_database" name="Removing_data_from_the_database">データベースからデータを削除する</h3>
+<h3 id="Removing_data_from_the_database">データベースからのデータの削除</h3>
 
-<p>データの削除もよく似ています:</p>
+<p>データの削除もよく似ています。</p>
 
 <pre class="brush: js">var request = db.transaction(["customers"], "readwrite")
                 .objectStore("customers")
@@ -332,9 +336,9 @@ request.onsuccess = function(event) {
   // 削除完了!
 };</pre>
 
-<h3 id="Getting_data_from_the_database" name="Getting_data_from_the_database">データベースからデータを取得する</h3>
+<h3 id="Getting_data_from_the_database">データベースからのデータの取得</h3>
 
-<p>データベースは情報を持っていますので、いくつかの方法でデータを読み出すことができます。まずは、単純に <code>get()</code> を使用します。以下のように、値を読み出すためにキーを提供しなければなりません:</p>
+<p>データベースは情報を持っていますので、いくつかの方法でデータを読み出すことができます。まずは、単純に <code>get()</code> を使用します。以下のように、値を読み出すためにキーを提供しなければなりません。</p>
 
 <pre class="brush: js">var transaction = db.transaction(["customers"]);
 var objectStore = transaction.objectStore("customers");
@@ -344,27 +348,27 @@ request.onerror = function(event) {
 };
 request.onsuccess = function(event) {
   // request.result に対して行う処理!
-  alert("Name for SSN 444-44-4444 is " + request.result.name);
+  console.log("Name for SSN 444-44-4444 is " + request.result.name);
 };</pre>
 
-<p>"単純に" 読み出すにも多くのコードがあります。データベースレベルでエラー処理を行うとすれば、コードを少々短縮できることを以下に示します:</p>
+<p>"単純に" 読み出すにも多くのコードがあります。データベースレベルでエラー処理を行うとすれば、コードを少々短縮できることを以下に示します。</p>
 
 <pre class="brush: js">db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = function(event) {
-  alert("Name for SSN 444-44-4444 is " + event.target.result.name);
+  console.log("Name for SSN 444-44-4444 is " + event.target.result.name);
 };</pre>
 
 <p>どのように動作するかわかりますか? オブジェクトストアが 1 つしかありませんので、トランザクションで必要とするオブジェクトストアのリストを渡さずに、名称を文字列で渡しています。また、データベースから読み出すだけですので、<code>"readwrite"</code> トランザクションは不要です。モードを指定せずに <code>transaction()</code> を呼び出すと、<code>"readonly"</code> トランザクションになります。さらに細かいことですが、実はリクエストオブジェクトを変数に保存していません。DOM イベントはターゲットとしてリクエストを持ちますので、<code>result</code> プロパティを得るためにイベントを使用できます。</p>
 
-<p>トランザクションでスコープやモードを制限することにより、データアクセスを高速化できることに留意してください。ヒントを 2 つ紹介します:</p>
+<p>トランザクションでスコープやモードを制限することにより、データアクセスを高速化できることに留意してください。ヒントを 2 つ紹介します。</p>
 
 <ul>
  <li><a href="#scope">スコープ</a>を定義するときは、必要なオブジェクトストアのみ指定します。これにより、同時にスコープが重なり合うことなく、複数のトランザクションを実行できます。</li>
- <li>readwrite トランザクションモードは、必要な場合に限り指定します。readonly トランザクションはスコープが重なっても複数同時に実行できますが、readwrite トランザクションはオブジェクトストアに対して 1 個しか実行できません。詳しくは、<a href="/ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_transaction">基本的な概念の記事でトランザクション</a>の定義をご覧ください。</li>
+ <li>readwrite トランザクションモードは、必要な場合に限り指定します。readonly トランザクションはスコープが重なっても複数同時に実行できますが、readwrite トランザクションはオブジェクトストアに対して 1 個しか実行できません。詳しくは、<a href="/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction">基本的な概念の記事でトランザクション</a>の定義をご覧ください。</li>
 </ul>
 
-<h3 id="Updating_an_entry_in_the_database" name="Updating_an_entry_in_the_database">データベース内の項目を更新する</h3>
+<h3 id="Updating_an_entry_in_the_database">データベース内の項目の更新</h3>
 
-<p>読み出したデータを更新して IndexedDB に書き戻す方法は、とてもシンプルです。先ほどのサンプルを多少更新しましょう:</p>
+<p>読み出したデータを更新して IndexedDB に書き戻す方法は、とてもシンプルです。先ほどのサンプルを多少更新しましょう。</p>
 
 <pre class="brush: js">var objectStore = db.transaction(["customers"], "readwrite").objectStore("customers");
 var request = objectStore.get("444-44-4444");
@@ -391,29 +395,29 @@ request.onsuccess = function(event) {
 <p>ここでは <code>objectStore</code> を作成して、ssn の値 (<code>444-44-4444</code>) で特定される顧客レコードの取り出しを要求しています。リクエストの結果を変数 (<code>data</code>) に代入して、そのオブジェクトの <code>age</code> プロパティを更新します。そして、顧客レコードを <code>objectStore</code> に書き戻して前の値を上書きする、第 2 のリクエスト (<code>requestUpdate</code>) を作成します。</p>
 
 <div class="note">
-<p><strong>注記</strong>: このケースではデータベースから読み出すだけでなく書き込みも行いたいので、<code>readwrite</code> トランザクションを指定しました。</p>
+<p><strong>メモ</strong>: このケースではデータベースから読み出すだけでなく書き込みも行いたいので、<code>readwrite</code> トランザクションを指定しました。</p>
 </div>
 
-<h3 id="Using_a_cursor" name="Using_a_cursor">カーソルを使用する</h3>
+<h3 id="Using_a_cursor">カーソルの使用</h3>
 
-<p><code>get()</code> を使用する際は、読み出したいキーがどれかを知っていることが必要です。オブジェクトストア内のすべての値を渡り歩きたい場合は、カーソルを使用できます。以下のようなものです:</p>
+<p><code>get()</code> を使用する際は、読み出したいキーがどれかを知っていることが必要です。オブジェクトストア内のすべての値を渡り歩きたい場合は、カーソルを使用できます。以下のようなものです。</p>
 
 <pre class="brush: js">var objectStore = db.transaction("customers").objectStore("customers");
 
 objectStore.openCursor().onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
-    alert("Name for SSN " + cursor.key + " is " + cursor.value.name);
+    console.log("Name for SSN " + cursor.key + " is " + cursor.value.name);
     cursor.continue();
   }
   else {
-    alert("No more entries!");
+    console.log("No more entries!");
   }
 };</pre>
 
-<p><code>openCursor()</code> 関数は、引数がいくつかあります。第一に、すぐに取得するキーレンジオブジェクトを使用して、読み出すアイテムの範囲を制限できます。第二に、反復処理を行いたい方向を指定できます。上記の例では、すべてのオブジェクトを昇順方向に反復します。カーソルの成功イベントのコールバックは、やや特殊です。カーソルオブジェクト自体は、リクエストの <code>result</code> です (上記の例ではショートハンドを使用しており、<code>event.target.result</code> になります)。そして実際のキーと値は、カーソルオブジェクトの <code>key</code> プロパティと <code>value</code> プロパティで見つかります。進み続けたい場合は、カーソルで <code>continue()</code> を呼び出さなければなりません。データの終端に達した (または、<code>openCursor()</code> リクエストにマッチする項目が存在しない) 場合は成功のコールバックを受け取りますが、<code>result</code> プロパティが <code>undefined</code> になります。</p>
+<p><code>openCursor()</code> 関数は、引数がいくつかあります。第一に、すぐに取得するキーレンジオブジェクトを使用して、読み出すアイテムの範囲を制限できます。第二に、反復処理を行いたい方向を指定できます。上記の例では、すべてのオブジェクトを昇順方向に反復します。カーソルの成功イベントのコールバックは、やや特殊です。カーソルオブジェクト自体は、リクエストの <code>result</code> です (上記の例では略記法を使用しており、<code>event.target.result</code> になります)。そして実際のキーと値は、カーソルオブジェクトの <code>key</code> プロパティと <code>value</code> プロパティで見つかります。進み続けたい場合は、カーソルで <code>continue()</code> を呼び出さなければなりません。データの終端に達した (または、<code>openCursor()</code> リクエストに一致する項目が存在しない) 場合は成功のコールバックを受け取りますが、<code>result</code> プロパティが <code>undefined</code> になります。</p>
 
-<p>カーソルをよく使用するパターンのひとつが、以下のようにオブジェクトストア内の全データを読み出して、配列に追加することです:</p>
+<p>カーソルをよく使用するパターンのひとつが、以下のようにオブジェクトストア内の全データを読み出して、配列に追加することです。</p>
 
 <pre class="brush: js">var customers = [];
 
@@ -424,40 +428,45 @@ objectStore.openCursor().onsuccess = function(event) {
     cursor.continue();
   }
   else {
-    alert("Got all customers: " + customers);
+    console.log("Got all customers: " + customers);
   }
 };</pre>
 
 <div class="note">
-<p><strong>注記</strong>: Mozilla は、このような処理を行うために <code>getAll()</code> も実装しています (および <code>getAllKeys()</code> もあり、これは現在、about:config の設定項目 <code>dom.indexedDB.experimental</code> で隠しています)。これらは IndexedDB 標準の一部ではなく、将来削除する可能性があります。これらは便利であると考えられますので、実装しました。以下のコードは、前出の例とまったく同じことを行います:</p>
+<p><strong>メモ</strong>: それ以外に、このような処理を行うために <code>getAll()</code>  (および <code>getAllKeys()</code>)。を使用することができます。以下のコードは、前出の例とまったく同じことを行います。</p>
 
 <pre class="brush: js">objectStore.getAll().onsuccess = function(event) {
-  alert("Got all customers: " + event.target.result);
+  console.log("Got all customers: " + event.target.result);
 };</pre>
 
 <p>これはオブジェクトを横着な方法で作成するため、カーソルの <code>value</code> プロパティの検索に関してパフォーマンスコストが発生します。例えば <code>getAll()</code> を使用するとき、Gecko はすべてのオブジェクトを一度に作成しなければなりません。例えばそれぞれのキーを検索することにのみ関心がある場合は、<code>getAll()</code> よりもカーソルを使用する方がとても効率的です。オブジェクトストア内の全データの配列を得ようとしている場合は、<code>getAll()</code> を使用しましょう。</p>
 </div>
 
-<h3 id="Using_an_index" name="Using_an_index">インデックスを使用する</h3>
+<h3 id="Using_an_index">インデックスの使用</h3>
 
 <p>SSN は個人を一意に識別しますので、キーとして SSN を使用して顧客データを保管することは論理的です。(プライバシーの観点でよいアイデアであるかは別の問題であり、この記事の対象外です) 一方、名前で顧客を検索しなければならない場合は、正しいものが見つかるまでデータベース内のすべての SSN に対して反復処理を行わなければなりません。この方法による検索はとても遅いため、代わりにインデックスを使用するとよいでしょう。</p>
 
-<pre class="brush: js">var index = objectStore.index("name");
+<pre class="brush: js">// 最初に、 request.onupgradeneeded の中にインデックスを生成したか確認してください。
+// objectStore.createIndex("name", "name");
+// まだであれば、 DOMException が発生します。
+
+var index = objectStore.index("name");
 
 index.get("Donna").onsuccess = function(event) {
-  alert("Donna's SSN is " + event.target.result.ssn);
-};</pre>
+  console.log("Donna's SSN is " + event.target.result.ssn);
+};
+</pre>
 
 <p>"name" カーソルは一意ではないので、<code>name</code> に <code>"Donna"</code> が設定されている項目は複数存在する可能性があります。この場合は常に、キーの値がもっとも小さいものを取得します。</p>
 
-<p>指定した <code>name</code> に該当するすべての項目にアクセスしなければならない場合は、カーソルを使用します。インデックス上で、2 種類のカーソルを開くことができます。ノーマルカーソルは、インデックスのプロパティと、オブジェクトストア内のオブジェクトを紐づけます。キーカーソルは、インデックスのプロパティと、オブジェクトストア内にオブジェクトを保存するために使用するキーを紐づけます。これらの違いを以下に示します:</p>
+<p>指定した <code>name</code> に該当するすべての項目にアクセスしなければならない場合は、カーソルを使用します。インデックス上で、2 種類のカーソルを開くことができます。ノーマルカーソルは、インデックスのプロパティと、オブジェクトストア内のオブジェクトを紐づけます。キーカーソルは、インデックスのプロパティと、オブジェクトストア内にオブジェクトを保存するために使用するキーを紐づけます。これらの違いを以下に示します。</p>
 
 <pre class="brush: js">// 顧客レコードのオブジェクト全体を得るために、ノーマルカーソルを使用します。
 index.openCursor().onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
     // cursor.key は "Bill" のような名前、cursor.value はオブジェクト全体です。
-    alert("Name: " + cursor.key + ", SSN: " + cursor.value.ssn + ", email: " + cursor.value.email);
+    console.log("Name: " + cursor.key + ", SSN: " + cursor.value.ssn + ", email: " + cursor.value.email);
     cursor.continue();
   }
 };
@@ -468,40 +477,40 @@ index.openKeyCursor().onsuccess = function(event) {
   if (cursor) {
     // cursor.key は "Bill" のような名前、cursor.value は SSN です。
     // 保存されたオブジェクトの他の部分を直接取得する方法はありません。
-    alert("Name: " + cursor.key + ", SSN: " + cursor.value);
+    console.log("Name: " + cursor.key + ", SSN: " + cursor.value);
     cursor.continue();
   }
 };</pre>
 
-<h3 id="Specifying_the_range_and_direction_of_cursors" name="Specifying_the_range_and_direction_of_cursors">カーソルの範囲や方向を指定する</h3>
+<h3 id="Specifying_the_range_and_direction_of_cursors">カーソルの範囲や方向を指定する</h3>
 
-<p>カーソルで参照する値の範囲を制限したい場合は、<code>IDBKeyRange</code> オブジェクトを使用して、<code>openCursor()</code> または <code>openKeyCursor()</code> の第 1 引数として渡します。ひとつのキーのみ許可するキーレンジ、下限または上限の片方を持つキーレンジ、あるいは下限と上限の両方を持つキーレンジを作成できます。境界は "closed" (すなわち、キーレンジは指定した値を含む) または "open" (すなわち、キーレンジは指定した値を含まない) のどちらにもできます。使い方を以下に示します:</p>
+<p>カーソルで参照する値の範囲を制限したい場合は、<code>IDBKeyRange</code> オブジェクトを使用して、<code>openCursor()</code> または <code>openKeyCursor()</code> の第 1 引数として渡します。ひとつのキーのみ許可するキーレンジ、下限または上限の片方を持つキーレンジ、あるいは下限と上限の両方を持つキーレンジを作成できます。境界は "closed" (すなわち、キーレンジは指定した値を含む) または "open" (すなわち、キーレンジは指定した値を含まない) のどちらにもできます。使い方を以下に示します。</p>
 
-<pre class="brush: js">// "Donna" にのみマッチします。
+<pre class="brush: js">// "Donna" にのみ一致します。
 var singleKeyRange = IDBKeyRange.only("Donna");
 
-// "Bill" より先のすべてにマッチします。"Bill" を含みます。
+// "Bill" より先のすべてに一致します。"Bill" を含みます。
 var lowerBoundKeyRange = IDBKeyRange.lowerBound("Bill");
 
-// "Bill" より先のすべてにマッチします。ただし "Bill" は含みません。
+// "Bill" より先のすべてに一致します。ただし "Bill" は含みません。
 var lowerBoundOpenKeyRange = IDBKeyRange.lowerBound("Bill", true);
 
-// "Donna" までのすべてにマッチします。ただし "Donna" は含みません。
+// "Donna" までのすべてに一致します。ただし "Donna" は含みません。
 var upperBoundOpenKeyRange = IDBKeyRange.upperBound("Donna", true);
 
-// "Bill" から "Donna" までにマッチします。ただし "Donna" は含みません。
+// "Bill" から "Donna" までに一致します。ただし "Donna" は含みません。
 var boundKeyRange = IDBKeyRange.bound("Bill", "Donna", false, true);
 
 // いずれかのキーレンジを使用するには、openCursor()/openKeyCursor() の第 1 引数として渡します。
 index.openCursor(boundKeyRange).onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
-    // マッチした場合の処理。
+    // 一致した場合の処理。
     cursor.continue();
   }
 };</pre>
 
-<p>昇順 (すべてのカーソルのデフォルトの方向) ではなく、降順に反復処理を行いたい場合があるかもしれません。方向の切り替えは、<code>openCursor()</code> の第 2 引数に <code>prev</code> を渡すことで実現します:</p>
+<p>昇順 (すべてのカーソルのデフォルトの方向) ではなく、降順に反復処理を行いたい場合があるかもしれません。方向の切り替えは、<code>openCursor()</code> の第 2 引数に <code>prev</code> を渡すことで実現します。</p>
 
 <pre class="brush: js">objectStore.openCursor(boundKeyRange, "prev").onsuccess = function(event) {
   var cursor = event.target.result;
@@ -511,7 +520,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
   }
 };</pre>
 
-<p>方向を変えたいだけで表示する結果は制限しない場合は、第 1 引数に null を渡します:</p>
+<p>方向を変えたいだけで表示する結果は制限しない場合は、第 1 引数に null を渡します。</p>
 
 <pre class="brush: js">objectStore.openCursor(null, "prev").onsuccess = function(event) {
   var cursor = event.target.result;
@@ -521,7 +530,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
   }
 };</pre>
 
-<p>"name" インデックスは一意ではありませんので、<code>name</code> が同じ項目が複数存在する可能性があります。キーは常に一意でなければならないため、オブジェクトストアでこのような状況は発生できないことに注意してください。インデックスに対して反復処理を行う際に重複を取り除きたい場合は、方向のパラメータに <code>nextunique</code> (逆向きであれば <code>prevunique</code>) を指定します。<code>nextunique</code> または <code>prevunique</code> を使用すると、常にキーが最小の項目が返ります。</p>
+<p>"name" インデックスは一意ではありませんので、<code>name</code> が同じ項目が複数存在する可能性があります。キーは常に一意でなければならないため、オブジェクトストアでこのような状況は発生できないことに注意してください。インデックスに対して反復処理を行う際に重複を取り除きたい場合は、方向の引数に <code>nextunique</code> (逆向きであれば <code>prevunique</code>) を指定します。<code>nextunique</code> または <code>prevunique</code> を使用すると、常にキーが最小の項目が返ります。</p>
 
 <pre class="brush: js">index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
   var cursor = event.target.result;
@@ -531,18 +540,18 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
   }
 };</pre>
 
-<p>有効な方向の引数については、"<a href="/ja/docs/Web/API/IDBCursor#Constants">IDBCursor Constants</a>" をご覧ください。</p>
+<p>有効な方向の引数については、"<a href="/ja/docs/Web/API/IDBCursor#constants">IDBCursor Constants</a>" をご覧ください。</p>
 
-<h2 id="Version_changes_while_a_web_app_is_open_in_another_tab" name="Version_changes_while_a_web_app_is_open_in_another_tab">ウェブアプリが別のタブで開かれているときにバージョンを変更する</h2>
+<h2 id="Version_changes_while_a_web_app_is_open_in_another_tab">ウェブアプリが別のタブで開かれているときにバージョンを変更する</h2>
 
-<p>データベースのバージョン変更が必要である場合に ウェブアプリでそのようなことを行うときは、ユーザーが古いバージョンの ウェブアプリをタブで開いている場合に別のタブで新しいバージョンのアプリを読み込んだときに発生することを考慮しなければなりません。データベースの実際のバージョンより大きなバージョンを指定して <code>open()</code> を呼び出すときは、データベースに変更を施す前に、他にデータベースを開いているものが明示的に要求を認めなければなりません (それらを閉じるか再読み込みするまで、<code>onblocked</code> イベントが発生します)。使い方を以下に示します:</p>
+<p>データベースのバージョン変更が必要である場合に ウェブアプリでそのようなことを行うときは、ユーザーが古いバージョンの ウェブアプリをタブで開いている場合に別のタブで新しいバージョンのアプリを読み込んだときに発生することを考慮しなければなりません。データベースの実際のバージョンより大きなバージョンを指定して <code>open()</code> を呼び出すときは、データベースに変更を施す前に、他にデータベースを開いているものが明示的に要求を認めなければなりません (それらを閉じるか再読み込みするまで、<code>onblocked</code> イベントが発生します)。使い方を以下に示します。</p>
 
 <pre class="brush: js">var openReq = mozIndexedDB.open("MyTestDatabase", 2);
 
 openReq.onblocked = function(event) {
   // 他のタブがデータベースを読み込んでいる場合は、処理を進める前に
   // それらを閉じなければなりません。
-  alert("このサイトを開いている他のタブをすべて閉じてください!");
+  console.log("このサイトを開いている他のタブをすべて閉じてください!");
 };
 
 openReq.onupgradeneeded = function(event) {
@@ -558,12 +567,12 @@ openReq.onsuccess = function(event) {
 };
 
 function useDatabase(db) {
-  // 別のページがバージョン変更を求めた場合に、通知されるようにするためのハンドラを追加するようにしてください。
+  // 別のページがバージョン変更を求めた場合に、通知されるようにするためのハンドラーを追加するようにしてください。
   // データベースを閉じなければなりません。データベースを閉じると、別のページがデータベースをアップグレードできます。
   // これを行わなければ、ユーザーがタブを閉じるまでデータベースはアップグレードされません。
   db.onversionchange = function(event) {
     db.close();
-    alert("新しいバージョンのページが使用可能になりました。再読み込みしてください!");
+    console.log("新しいバージョンのページが使用可能になりました。再読み込みしてください!");
   };
 
   // データベースを使用する処理
@@ -572,39 +581,39 @@ function useDatabase(db) {
 
 <p>すでに開かれているアプリが新たにデータベースを開こうとするコードを開始したが、古いバージョンのデータベースを使用している状況に対処するため、<code>VersionError</code> エラーもリッスンしましょう。</p>
 
-<h2 id="Security" name="Security">セキュリティ</h2>
+<h2 id="Security">セキュリティ</h2>
 
 <p>IndexedDB は同一生成元の原則を使用します。すなわち、ストアとサイトの生成元 (通常、サイトのドメインまたはサブドメイン) を紐づけますので、他の生成元からアクセスすることはできません。</p>
 
 <p>サードパーティの window コンテンツ (例えば {{htmlelement("iframe")}} のコンテンツ) は、ブラウザーが<a href="https://support.mozilla.org/ja/kb/disable-third-party-cookies">サードパーティ Cookie を禁止していない</a>限り、自身が埋め込まれている生成元の IndexedDB ストアにアクセスできます ({{bug("1147821")}} をご覧ください)。</p>
 
-<h2 id="Warning_About_Browser_Shutdown" name="Warning_About_Browser_Shutdown">ブラウザーの終了に関する警告</h2>
+<h2 id="Warning_About_Browser_Shutdown">ブラウザーの終了に関する警告</h2>
 
-<p>ブラウザーを終了するとき (例えばユーザーが "終了" や "閉じる" ボタンをクリックしたとき)、データベースを含むディスクは予期せず削除されたり、データベースストアへのパーミッションが失われたり、次のことが起きたりします:</p>
+<p>ブラウザーを終了するとき (例えばユーザーが「終了」や「閉じる」ボタンをクリックしたとき)、データベースを含むディスクは予期せず削除されたり、データベースストアへのパーミッションが失われたり、次のことが起きたりします。</p>
 
 <ol>
  <li>影響するデータベース (あるいは、ブラウザーを終了する場合はすべての開いているデータベース) の各トランザクションは <code>AbortError</code> とともに中断されます。この効果は各トランザクションで {{domxref("IDBTransaction.abort()")}} が呼ばれたのと同等です。</li>
  <li>すべてのトランザクションが完了していたら、データベース接続は閉じられます。</li>
- <li>最後に、データベース接続を表す {{domxref("IDBDatabase")}} オブジェクトは {{event("close")}} イベントを受け取ります。{{domxref("IDBDatabase.onclose")}} イベントハンドラを使ってこのイベントをリッスンできます。その結果、データベースが予期せず閉じられたことがわかります。</li>
+ <li>最後に、データベース接続を表す {{domxref("IDBDatabase")}} オブジェクトは {{event("close")}} イベントを受け取ります。{{domxref("IDBDatabase.onclose")}} イベントハンドラーを使ってこのイベントを待ち受けできます。その結果、データベースが予期せず閉じられたことがわかります。</li>
 </ol>
 
-<p>上記の挙動は新しく、下記のブラウザーリリース以降で利用できます: Firefox 50, Google Chrome 31 (おおよそ)。</p>
+<p>上記の挙動は新しく、ブラウザーの Firefox 50、Google Chrome 31 以降 (おおよそ) のリリースで利用できます。</p>
 
-<p>このブラウザーバージョンの前は、トランザクションは静かに中断され、{{event("close")}} イベントは発火せず、予期せぬデータベースの停止を検出する方法はありませんでした。</p>
+<p>このバージョンのブラウザーの前は、トランザクションは暗黙裡に中断され、{{event("close")}} イベントが発行されず、予期せぬデータベースの停止を検出する方法はありませんでした。</p>
 
 <p>ユーザーはいつでもブラウザーを終了することができますので、特定のトランザクションが完了することをあてにしたり、完了しなかったことを知ったりすることはできません。この動作が暗示することがいくつかあります。</p>
 
 <p>第一に、データベースであらゆるトランザクションが終了したときに、常に一貫性がある状態を保つように注意するべきです。例えば、ユーザーが編集可能な項目のリストを保存する IndexedDB を使用していると想定します。オブジェクトストアを消去してから新たなリストを書き込むことにより、編集後のリストを保存します。あるトランザクションでオブジェクトストアを消去して、別のトランザクションで新たなリストを書き込むとすれば、消去した後かつ書き込む前にブラウザーが閉じられる危険性があり、その場合は空のデータベースが残ります。これを避けるために、消去と書き込みをひとつのトランザクションに結合しましょう。</p>
 
-<p>第二に、データベースのトランザクションと unload イベントを紐づけるべきではありません。ブラウザーを閉じることで unload イベントが発生した場合、unload イベントハンドラで作成したトランザクションは完了しません。ブラウザーのセッションにわたって情報を管理するための直感的な方法は、ブラウザー (または特定のページ) を開いたときに情報を読み込んで、ユーザーとブラウザーとの対話に応じて更新して、ブラウザー (またはページ) を閉じるときに保存する流れです。しかし、これは動作しないでしょう。データベースのトランザクションは unload イベントハンドラで作成されますが、これらは非同期処理ですので、実行できるようになる前に中止されるでしょう。</p>
+<p>第二に、データベースのトランザクションと unload イベントを紐づけるべきではありません。ブラウザーを閉じることで unload イベントが発生した場合、unload イベントハンドラーで作成したトランザクションは完了しません。ブラウザーのセッションにわたって情報を管理するための直感的な方法は、ブラウザー (または特定のページ) を開いたときに情報を読み込んで、ユーザーとブラウザーとの対話に応じて更新して、ブラウザー (またはページ) を閉じるときに保存する流れです。しかし、これは動作しないでしょう。データベースのトランザクションは unload イベントハンドラーで作成されますが、これらは非同期処理ですので、実行できるようになる前に中止されるでしょう。</p>
 
 <p>実は通常のブラウザー終了であっても、IndexedDB のトランザクションが完了するよう保証する手段はありません。{{bug(870645)}} をご覧ください。通常の終了通知の回避策として、トランザクションの状況を追跡して、アンロード時にトランザクションが完了していないことをユーザーに警告するための <code>beforeunload</code> イベントを追加するとよいでしょう。</p>
 
-<p>少なくともアボート通知と{{domxref("IDBDatabase.onclose")}}を追加することで、いつ起こったのかがわかります。</p>
+<p>少なくとも中止通知と{{domxref("IDBDatabase.onclose")}}を追加することで、いつ起こったのかがわかります。</p>
 
-<h2 id="Locale-aware_sorting" name="Locale-aware_sorting">ロケールを意識した並べ替え</h2>
+<h2 id="Locale-aware_sorting">ロケールを意識した並べ替え</h2>
 
-<p>Mozilla は Firefox 43 以降に、IndexedDB のデータでロケールを意識した並べ替えを行う機能を実装しました。デフォルトでは、IndexedDB は文字列の並べ替えで国際化にまったく対処せず、すべてが英語のテキストであるかのように並べ替えられます。例えば b、á、z、a は以下のように並べ替えられます:</p>
+<p>Mozilla は Firefox 43 以降に、IndexedDB のデータでロケールを意識した並べ替えを行う機能を実装しました。デフォルトでは、IndexedDB は文字列の並べ替えで国際化にまったく対処せず、すべてが英語のテキストであるかのように並べ替えられます。例えば b、á、z、a は以下のように並べ替えられます。</p>
 
 <ul>
  <li>a</li>
@@ -613,19 +622,19 @@ function useDatabase(db) {
  <li>á</li>
 </ul>
 
-<p>これは明らかに、ユーザーが望むデータの並べ替えではありません。例えば Aaron と Áaron は、連絡先一覧で隣り合うべきです。従って適切な国際化並べ替えを実現するには、データセット全体をメモリに読み込んで、クライアントサイド JavaScript で並べ替えを実行しなければならず、非効率的です。</p>
+<p>これは明らかに、ユーザーが望むデータの並べ替えではありません。例えば Aaron と Áaron は、連絡先一覧で隣り合うべきです。従って適切な国際化並べ替えを実現するには、データセット全体をメモリーに読み込んで、クライアントサイド JavaScript で並べ替えを実行しなければならず、非効率的です。</p>
 
 <p>この新機能は、開発者が {{domxref("IDBObjectStore.createIndex()")}} を使用してインデックスを作成する際にロケールを指定できるようにします (引数を確認してください)。データセットに対して反復処理を行うためにカーソルを使用するときに、ロケールを意識した並べ替えを行いたい場合は、特化した {{domxref("IDBLocaleAwareKeyRange")}} を使用できます。</p>
 
 <p>また {{domxref("IDBIndex")}} には、ロケールが指定されているか、およびどのロケールが指定されているかを特定するために追加された新たなプロパティがあります。<code>locale</code> (指定されたロケール、または未指定であれば null を返します) と <code>isAutoLocale</code> (プラットフォームの既定のロケールを使用する自動ロケールでインデックスが作成されていれば <code>true</code>、そうでなければ <code>false</code> を返します) です。</p>
 
 <div class="note">
-<p><strong>注記</strong>: 現在、この機能はフラグで隠されています。有効化して実験するには、<a>about:config</a> に移動して <code>dom.indexedDB.experimental</code> を有効化してください。</p>
+<p><strong>メモ</strong>: 現在、この機能はフラグで隠されています。有効化して実験するには、<a>about:config</a> に移動して <code>dom.indexedDB.experimental</code> を有効化してください。</p>
 </div>
 
-<h2 id="Full_IndexedDB_example" name="Full_IndexedDB_example">包括的な IndexedDB のサンプル</h2>
+<h2 id="Full_IndexedDB_example">包括的な IndexedDB のサンプル</h2>
 
-<h3 id="HTML_Content" name="HTML_Content">HTML コンテンツ</h3>
+<h3 id="HTML_Content">HTML コンテンツ</h3>
 
 <pre class="brush: html">&lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"&gt;&lt;/script&gt;
 
@@ -760,7 +769,7 @@ function useDatabase(db) {
     &lt;/div&gt;
 </pre>
 
-<h3 id="CSS_Content" name="CSS_Content">CSS コンテンツ</h3>
+<h3 id="CSS_Content">CSS コンテンツ</h3>
 
 <pre class="brush: css">body {
   font-size: 0.8em;
@@ -849,7 +858,7 @@ input {
 }
 </pre>
 
-<h3 id="JavaScript_Content" name="JavaScript_Content">JavaScript コンテンツ</h3>
+<h3 id="JavaScript_Content">JavaScript コンテンツ</h3>
 
 <pre class="brush: js">(function () {
   var COMPAT_ENVS = [
@@ -877,9 +886,7 @@ input {
     console.log("openDb ...");
     var req = indexedDB.open(DB_NAME, DB_VERSION);
     req.onsuccess = function (evt) {
-      // ガベージコレクションの問題を避けるため、結果を得る際は
-      // "req" より "this" を使用する方がよい
-      // db = req.result;
+      // db = req.result; と同等
       db = this.result;
       console.log("openDb DONE");
     };
@@ -907,7 +914,7 @@ input {
     return tx.objectStore(store_name);
   }
 
-  function clearObjectStore(store_name) {
+  function clearObjectStore() {
     var store = getObjectStore(DB_STORE_NAME, 'readwrite');
     var req = store.clear();
     req.onsuccess = function(evt) {
@@ -996,7 +1003,7 @@ input {
         // ストア内の次のオブジェクトに移動する
         cursor.continue();
 
-        // このカウンタは、個別の ID を作成するためだけに使用する
+        // このカウンターは、個別の ID を作成するためだけに使用する
         i++;
       } else {
         console.log("No more entries");
@@ -1069,7 +1076,7 @@ input {
    * @param {string} url ダウンロードしてローカルの IndexedDB データベースに保存する
    *   画像の URL。この URL の背後にあるリソースは、"同一生成元ポリシー" に従います。
    *   よって、この方法を動作させるために URL は、このコードを配置する
-   *   Web サイト/アプリと同一生成元であることが必要です。
+   *  ウェブサイト/アプリと同一生成元であることが必要です。
    */
   function addPublicationFromUrl(biblioid, title, year, url) {
     console.log("addPublicationFromUrl:", arguments);
@@ -1189,8 +1196,8 @@ input {
       // 警告: 削除するには、作成時に使用したものとまったく同じキーを使用しなければ
       // なりません。作成時のキーが数値であった場合は、削除時も数値でなければ
       // なりません。
-      req = store.delete(key);
-      req.onsuccess = function(evt) {
+      var deleteReq = store.delete(key);
+      deleteReq.onsuccess = function(evt) {
         console.log("evt:", evt);
         console.log("evt.target:", evt.target);
         console.log("evt.target.result:", evt.target.result);
@@ -1198,7 +1205,7 @@ input {
         displayActionSuccess("Deletion successful");
         displayPubList(store);
       };
-      req.onerror = function (evt) {
+      deleteReq.onerror = function (evt) {
         console.error("deletePublication:", evt.target.errorCode);
       };
     };
@@ -1298,37 +1305,38 @@ input {
   openDb();
   addEventListeners();
 
-})(); // Immediately-Invoked Function Expression (IIFE)
-</pre>
+})(); // Immediately-Invoked Function Expression (IIFE)</pre>
 
 <p>{{LiveSampleLink('Full_IndexedDB_example', "オンラインのライブデモを試す")}}</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<div class="notecard note">
+<p><strong>メモ</strong>: <code>window.indexedDB.open()</code> は非同期です。このメソッドは <code>success</code> イベントが発行されるよりもはるかに前に終了します。すなわち、ある関数 (例えば <code>openDb()</code>) が <code>open()</code> や <code>onsuccess</code> を呼び出すと、 <code>onsuccess</code> ハンドラーが実行されるよりも前に戻ります。この問題は、 <code>transaction()</code> や <code>get()</code> のような他のリクエストメソッドでも言えます。</p>
+</div>
+
+<h2 id="See_also">関連情報</h2>
 
 <p>必要に応じて、より多くの情報を知るための記事集です。</p>
 
-<h3 id="Reference" name="Reference">リファレンス</h3>
+<h3 id="Reference">リファレンス</h3>
 
 <ul>
- <li><a href="/ja/docs/Web/API/IndexedDB_API" title="IndexedDB">IndexedDB API リファレンス</a></li>
- <li><a href="http://www.w3.org/TR/IndexedDB/" title="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
- <li><a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB_in_chrome" title="IndexedDB/Using_IndexedDB_in_chrome">chrome で IndexedDB を使用する</a></li>
- <li><a href="/ja/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox">Firefox で JavaScript ジェネレータを使用する</a></li>
- <li>Firefox のソースコード内の、IndexedDB <a class="link-https" href="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom%2FindexedDB%2F.*%5C.idl&amp;regexp=1" title="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom/indexedDB/.*\.idl&amp;regexp=1">インタフェースのファイル</a></li>
+ <li><a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB API リファレンス</a></li>
+ <li><a href="https://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
+ <li>IndexedDB <a class="link-https" href="https://searchfox.org/mozilla-central/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true">インターフェイスファイル</a> (Firefox のソースコード内)</li>
 </ul>
 
-<h3 id="Tutorials_and_guides" name="Tutorials_and_guides">チュートリアルとガイド</h3>
+<h3 id="Tutorials_and_guides">チュートリアルとガイド</h3>
 
 <ul>
- <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/" title="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
- <li><a href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx" title="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
+ <li><a href="https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
+ <li><a href="https://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
 </ul>
 
-<h3 id="Libraries" name="Libraries">ライブラリ</h3>
+<h3 id="Libraries">ライブラリー</h3>
 
 <ul>
- <li><a href="http://mozilla.github.io/localForage/">localForage</a>: クライアントサイドのデータストレージ向けに、シンプルな name:value 形式の構文を提供する Polyfill です。バックグラウンドで IndexedDB を使用しますが、IndexedDB をサポートしないブラウザーでは WebSQL や localStorage にフォールバックします。</li>
- <li><a href="http://www.dexie.org/">dexie.js</a>: 優良でシンプルな構文により高速なコード開発を可能にする、IndexedDB のラッパーです。</li>
+ <li><a href="https://localforage.github.io/localForage/">localForage</a>: クライアント側のデータストレージ向けに、シンプルな name:value 形式の構文を提供するポリフィルです。バックグラウンドで IndexedDB を使用しますが、IndexedDB に対応していないブラウザーでは WebSQL や localStorage にフォールバックします。</li>
+ <li><a href="https://www.dexie.org/">dexie.js</a>: 優良でシンプルな構文により高速なコード開発を可能にする、IndexedDB のラッパーです。</li>
  <li><a href="https://github.com/erikolson186/zangodb">ZangoDB</a>: IndexedDB の MongoDB ライクなインターフェイスで、MongoDB でおなじみのフィルタリング、射影、ソート、アップデート、集計をサポートしています。</li>
- <li><a href="http://jsstore.net/">JsStore</a>: シンプルで高度な IndexedDB ラッパーで SQL ライクな文法があります。</li>
+ <li><a href="https://jsstore.net/">JsStore</a>: シンプルで高度な IndexedDB ラッパーで SQL ライクな文法があります。</li>
 </ul>

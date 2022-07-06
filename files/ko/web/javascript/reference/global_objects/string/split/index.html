@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 <pre class="syntaxbox"><var>str</var>.split([<var>separator</var>[, <var>limit</var>]])</pre>
 
 <div class="warning">
-<p><strong>주의:</strong> 구분자로 빈 문자열(<code>""</code>)을 제공하면, 사용자가 인식하는 문자 하나(<a href="https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries">grapheme cluster</a>) 또는 유니코드 문자(코드포인트) 하나씩으로 나누는 것이 아니라, UTF-16 코드유닛으로 나누게 되며 <a href="http://unicode.org/faq/utf_bom.html#utf16-2">써로게이트 페어</a><sup>surrogate pair</sup>가 망가질 수 있습니다. 스택 오버플로우의 <a href="https://stackoverflow.com/a/34717402">How do you get a string to a character array in JavaScript?</a> 질문도 참고해 보세요.</p>
+<p><strong>주의:</strong> 구분자로 빈 문자열(<code>""</code>)을 제공하면, 사용자가 인식하는 문자 하나(<a href="https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries">grapheme cluster</a>) 또는 유니코드 문자(코드포인트) 하나씩으로 나누는 것이 아니라, UTF-16 코드유닛으로 나누게 되며 <a href="http://unicode.org/faq/utf_bom.html#utf16-2">써로게이트 페어</a>가 망가질 수 있습니다. 스택 오버플로우의 <a href="https://stackoverflow.com/a/34717402">How do you get a string to a character array in JavaScript?</a> 질문도 참고해 보세요.</p>
 </div>
 
 <h3 id="매개변수">매개변수</h3>
@@ -44,15 +44,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 
 <p>문자열에서 <code>separator</code>가 등장하면 해당 부분은 삭제되고 남은 문자열이 배열로 반환됩니다. <code>separator</code>가 등장하지 않거나 생략되었을 경우 배열은 원본 문자열을 유일한 원소로 가집니다. <code>separator</code>가 빈 문자열일 경우, <code>str</code>은 문자열의 모든 문자를 원소로 가지는 배열로 변환됩니다. <code>separator</code>가 원본 문자열의 처음이나 끝에 등장할 경우 반환되는 배열도 빈 문자열로 시작하거나 끝납니다. 그러므로 원본 문자열에 <code>separator</code> 하나만이 포함되어 있을 경우 빈 문자열 두 개를 원소로 가지는 배열이 반환됩니다.</p>
 
-<p><code>separator</code>가 포획 괄호<sup>capturing parentheses</sup>를 포함하는 정규표현식일 경우, <code>separator</code>가 일치할 때마다 포획 괄호의 (정의되지 않은 경우도 포함한) 결과가 배열의 해당 위치에 포함됩니다.</p>
+<p><code>separator</code>가 포획 괄호를 포함하는 정규표현식일 경우, <code>separator</code>가 일치할 때마다 포획 괄호의 (정의되지 않은 경우도 포함한) 결과가 배열의 해당 위치에 포함됩니다.</p>
 
-<p>{{Note("<code>separator</code>가 배열일 경우 분할에 사용하기 전에 우선 문자열로 변환됩니다.")}}</p>
+<div class="notecard note">
+  <p><code>separator</code>가 배열일 경우 분할에 사용하기 전에 우선 문자열로 변환됩니다.</p>
+</div>
 
 <h2 id="예제">예제</h2>
 
 <h3 id="split()_사용하기"><code>split()</code> 사용하기</h3>
 
-<p>{{Note("빈 문자열이 주어졌을 경우 <code>split()</code>은 빈 배열이 아니라 빈 문자열을 포함한 배열을 반환합니다. 문자열과 <code>separator</code>가 모두 빈 문자열일 때는 빈 배열을 반환합니다.")}}</p>
+<div class="notecard note">
+  <p>빈 문자열이 주어졌을 경우 <code>split()</code>은 빈 배열이 아니라 빈 문자열을 포함한 배열을 반환합니다. 문자열과 <code>separator</code>가 모두 빈 문자열일 때는 빈 배열을 반환합니다.</p>
+</div>
 
 <pre class="brush: js">const myString = '';
 const splits = myString.split();

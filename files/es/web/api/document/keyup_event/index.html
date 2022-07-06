@@ -11,7 +11,7 @@ translation_of: Web/API/Document/keyup_event
  <dt style="float: left; text-align: right; width: 120px;">Specification</dt>
  <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keyup">DOM L3</a></dd>
  <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;"><a href="http://developer.mozilla.org/en-US/docs/DOM/KeyboardEvent" title="http://en-US/docs/DOM/KeyboardEvent">KeyboardEvent</a></dd>
+ <dd style="margin: 0 0 0 120px;"><a href="http://developer.mozilla.org/en-US/docs/DOM/KeyboardEvent">KeyboardEvent</a></dd>
  <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
  <dd style="margin: 0 0 0 120px;">Si</dd>
  <dt style="float: left; text-align: right; width: 120px;">Cancelable</dt>
@@ -78,7 +78,7 @@ translation_of: Web/API/Document/keyup_event
   <tr>
    <td><code>key</code> {{readonlyInline}}</td>
    <td>DOMString (string)</td>
-   <td>The key value of the key represented by the event. If the value has a printed representation, this attribute's value is the same as the <code>char</code> attribute. Otherwise, it's one of the key value strings specified in {{ anch("Key values") }}. If the key can't be identified, this is the string "Unidentified". See <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values">key names and char values</a> for the detail. Read Only.</td>
+   <td>The key value of the key represented by the event. If the value has a printed representation, this attribute's value is the same as the <code>char</code> attribute. Otherwise, it's one of the key value strings specified in <a href="#key_values">Key values</a>. If the key can't be identified, this is the string "Unidentified". See <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values">key names and char values</a> for the detail. Read Only.</td>
   </tr>
   <tr>
    <td><code>charCode</code> {{readonlyInline}}</td>
@@ -90,7 +90,7 @@ translation_of: Web/API/Document/keyup_event
   <tr>
    <td><code>keyCode</code> {{readonlyInline}}</td>
    <td>Unsigned long (int)</td>
-   <td>A system and implementation dependent numerical code identifying the unmodified value of the pressed key. This is usually the decimal ASCII ({{ RFC(20) }}) or Windows 1252 code corresponding to the key; see {{ anch("Virtual key codes") }} for a list of common values. If the key can't be identified, this value is 0.
+   <td>A system and implementation dependent numerical code identifying the unmodified value of the pressed key. This is usually the decimal ASCII ({{ RFC(20) }}) or Windows 1252 code corresponding to the key; see <a href="#virtual_key_codes">Virtual key codes</a> for a list of common values. If the key can't be identified, this value is 0.
     <div class="warning"><strong>Warning:</strong> This attribute is deprecated; you should use <code>key</code> instead, if available.</div>
    </td>
   </tr>

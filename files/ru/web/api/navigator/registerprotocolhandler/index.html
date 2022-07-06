@@ -11,7 +11,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler
 
 <p><span id="result_box" lang="ru"><span class="hps">Расширения могут</span> <span class="hps">регистрировать обработчики</span> <span class="hps">протоколов</span><span>, направленные</span> <span class="hps">другие сайты</span><span>: </span></span>см. "Смотрите также" раздел как использовать их с XPCOM.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="eval">window.navigator.registerProtocolHandler(<em>protocol</em>, <em>uri</em>, <em>title</em>);
 </pre>
@@ -28,7 +28,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler
  </li>
 </ul>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <p>Если ваше веб-приложение находится по адресу <code><span class="nowiki">http://www.google.co.uk</span></code>, вы можете зарегистрировать обработчик протокола и привязать  обращение к нему "burger", как это:</p>
 
@@ -48,19 +48,19 @@ translation_of: Web/API/Navigator/registerProtocolHandler
 <p><strong>Примечание</strong>: "<a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#Getting_most_recent_window">Регистрация службы веб-почты, как mailto-обработчик</a>", показывает как сделать это в рамках XPCOM.</p>
 </div>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <p>Specified by the WHATWG's <a class="external" href="http://whatwg.org/specs/web-apps/current-work/#custom-handlers">Web Applications 1.0 working draft</a> (HTML5).</p>
 
-<h2 id="See_also" name="See_also">Совместимость с браузерами</h2>
+<h2 id="See_also">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Navigator.registerProtocolHandler")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/en/Web-based_protocol_handlers" title="en/Web-based_protocol_handlers">Web-based protocol handlers</a></li>
- <li><a class="external" href="http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/" title="http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/">RegisterProtocolHandler Enhancing the Federated Web</a> at Mozilla Webdev</li>
+ <li><a class="external" href="http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/">RegisterProtocolHandler Enhancing the Federated Web</a> at Mozilla Webdev</li>
  <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#whitelisted-scheme">Web Application APIs - Custom scheme and content handlers - Whitelisted schemes</a></li>
  <li><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#Getting_most_recent_window">Register a webmail service as mailto handler</a> shows how to do <code>registerProtocolHandler</code> from XPCOM scope.</li>
  <li><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#registerProtocolHandler">XPCOM Interface Reference &gt; nsIWebContentHandlerRegistrar &gt; registerContentHandler</a> - This shows how to use this function XPCOM scope</li>

@@ -97,12 +97,12 @@ original_slug: Learn/Forms/How_to_build_custom_form_widgets
 
 <p>一般的に、新しい操作を設計するのは、標準を作成するに十分なリーチを持った、とても大きな産業プレイヤーだけの選択肢です。例えば、Apple は 2001年に iPod にスクロールホイールを導入しました。完全に新しい操作方法のデバイスを導入するのに成功するマーケットシェアがありましたが、たいていのデバイス会社はそうはいきません。</p>
 
-<p>新しいユーザーインタラクションを発明しないのがベストです。インタラクションを追加する場合、設計段階で時間を使うのが重要です。動作の定義が貧弱であったり定義もれがあったりした場合、いったんユーザーが使い始めると動作を再定義するのが非常に困難になると思われますので、設計段階に時間をかけることは賢明です。もし疑っているのでしたら、他の人に意見を聞きましょう。また予算を持っているのでしたら、<a href="http://en.wikipedia.org/wiki/Usability_testing" rel="external" title="http://en.wikipedia.org/wiki/Usability_testing">ユーザーテストの実施</a>をためらってはいけません。このプロセスは、UX デザインと呼ばれます。この点について詳しく学びたいのでしたら、以下の役に立つリソースをご覧になるとよいでしょう:</p>
+<p>新しいユーザーインタラクションを発明しないのがベストです。インタラクションを追加する場合、設計段階で時間を使うのが重要です。動作の定義が貧弱であったり定義もれがあったりした場合、いったんユーザーが使い始めると動作を再定義するのが非常に困難になると思われますので、設計段階に時間をかけることは賢明です。もし疑っているのでしたら、他の人に意見を聞きましょう。また予算を持っているのでしたら、<a href="http://en.wikipedia.org/wiki/Usability_testing" rel="external">ユーザーテストの実施</a>をためらってはいけません。このプロセスは、UX デザインと呼ばれます。この点について詳しく学びたいのでしたら、以下の役に立つリソースをご覧になるとよいでしょう:</p>
 
 <ul>
- <li><a href="http://www.uxmatters.com/" rel="external" title="http://www.uxmatters.com/">UXMatters.com</a></li>
- <li><a href="http://uxdesign.com/" rel="external" title="http://uxdesign.com/">UXDesign.com</a></li>
- <li><a href="http://uxdesign.smashingmagazine.com/" rel="external" title="http://uxdesign.smashingmagazine.com/">The UX Design section of SmashingMagazine</a></li>
+ <li><a href="http://www.uxmatters.com/" rel="external">UXMatters.com</a></li>
+ <li><a href="http://uxdesign.com/" rel="external">UXDesign.com</a></li>
+ <li><a href="http://uxdesign.smashingmagazine.com/" rel="external">The UX Design section of SmashingMagazine</a></li>
 </ul>
 
 <div class="note">
@@ -338,7 +338,7 @@ original_slug: Learn/Forms/How_to_build_custom_form_widgets
  <li>スクリプトが読み込まれません。これはよくあるケースのひとつであり、特にネットワークの信頼性が低いモバイル環境で発生します。</li>
  <li>スクリプトに不具合があります。この可能性は常に考慮すべきです。</li>
  <li>スクリプトがサードパーティのスクリプトと競合しています。これは、トラッキングのスクリプトやユーザーが使用するブックマークレットとの間で発生する可能性があります。</li>
- <li>スクリプトがブラウザーの拡張機能 (Firefox の <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/" rel="external" title="https://addons.mozilla.org/fr/firefox/addon/noscript/">NoScript</a> 拡張機能や Chrome の <a href="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn" rel="external" title="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn">NotScripts</a> 拡張機能など) と競合したり、拡張機能の影響を受けたりしています。</li>
+ <li>スクリプトがブラウザーの拡張機能 (Firefox の <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/" rel="external">NoScript</a> 拡張機能や Chrome の <a href="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn" rel="external">NotScripts</a> 拡張機能など) と競合したり、拡張機能の影響を受けたりしています。</li>
  <li>ユーザーが古いブラウザーを使用しており、必要な機能のいずれかがサポートされていません。これは、最先端の API を使用するときに頻繁に発生します。</li>
  <li>ユーザーは JavaScript が完全にダウンロード、解析、実行される前にコンテンツを操作します。</li>
 </ul>
@@ -677,7 +677,7 @@ window.addEventListener('load', function () {
   });
 });</pre>
 
-<p>上記のコードで、<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/HTMLElement/tabIndex" title="/ja/docs/Web/API/HTMLElement/tabIndex">tabIndex</a></code> プロパティを使用していることは注目に値します。このプロパティは、ネイティブコントロールにフォーカスが当たらないようにすることと、ユーザーがキーボードやマウスを使用するとカスタムコントロールがフォーカスを得るようにするために必要です。</p>
+<p>上記のコードで、<code><a href="/ja/docs/Web/API/HTMLElement/tabIndex" title="/ja/docs/Web/API/HTMLElement/tabIndex">tabIndex</a></code> プロパティを使用していることは注目に値します。このプロパティは、ネイティブコントロールにフォーカスが当たらないようにすることと、ユーザーがキーボードやマウスを使用するとカスタムコントロールがフォーカスを得るようにするために必要です。</p>
 
 <p>これで完了です! 結果は以下のとおりです:</p>
 
@@ -703,7 +703,7 @@ window.addEventListener('load', function () {
 
 <p>フル機能のセレクトボックスとはかけ離れていますが動作するものはできましたし、よく動作しています。しかし、私たちが行ってきたことは DOM の操作にすぎません。これには実際のセマンティクスがなく、またセレクトボックスのように見えていてもブラウザーの視点からはそうではないため、支援技術はそれがセレクトボックスであるとは理解できません。つまり、このきれいなセレクトボックスはアクセシブルではありません!</p>
 
-<p>幸いなことに解決策があり、それは <a href="/ja/docs/Accessibility/ARIA" title="Accessibility/ARIA">ARIA</a> と呼ばれます。ARIA は "Accessible Rich Internet Application" を表し、その <a href="http://www.w3.org/TR/wai-aria/" rel="external" title="http://www.w3.org/TR/wai-aria/">W3C 仕様</a> は私たちがここで行っていることに特化して設計されています: ウェブアプリケーションやカスタムコントロールをアクセシブルにします。これは基本的には、私たちが作り出した要素がネイティブコントロールとして通るかのように、役割や状態や特性をより説明できるようにするために HTML を拡張する属性のセットです。これらの属性の使用はとても簡単ですので、行ってみましょう。</p>
+<p>幸いなことに解決策があり、それは <a href="/ja/docs/Accessibility/ARIA" title="Accessibility/ARIA">ARIA</a> と呼ばれます。ARIA は "Accessible Rich Internet Application" を表し、その <a href="http://www.w3.org/TR/wai-aria/" rel="external">W3C 仕様</a> は私たちがここで行っていることに特化して設計されています: ウェブアプリケーションやカスタムコントロールをアクセシブルにします。これは基本的には、私たちが作り出した要素がネイティブコントロールとして通るかのように、役割や状態や特性をより説明できるようにするために HTML を拡張する属性のセットです。これらの属性の使用はとても簡単ですので、行ってみましょう。</p>
 
 <h3 id="The_role_attribute" name="The_role_attribute"><code>role</code> 属性</h3>
 
@@ -757,7 +757,7 @@ window.addEventListener('load', function () {
 
 <p>スクリーンリーダーにオフスクリーンselectに焦点をあてて他のスタイルを無視するようにした法が簡単に見えますが、これはアクセシブルな解決策ではありません。スクリーンリーダーは盲目の人だけのものではありません。低視力や、完全な視力の人もこれを使います。このため、スクリーンリーダーをオフスクリーン要素だけに焦点をあてるようにはできません。</p>
 
-<p>以下がこれらの変更を施した最終結果です (<a href="http://www.nvda-project.org/" rel="external" title="http://www.nvda-project.org/">NVDA</a> や <a href="http://www.apple.com/accessibility/voiceover/" rel="external" title="http://www.apple.com/accessibility/voiceover/">VoiceOver</a> などの支援技術でコントロールを使用してみても、よい感触を得られるでしょう):</p>
+<p>以下がこれらの変更を施した最終結果です (<a href="http://www.nvda-project.org/" rel="external">NVDA</a> や <a href="http://www.apple.com/accessibility/voiceover/" rel="external">VoiceOver</a> などの支援技術でコントロールを使用してみても、よい感触を得られるでしょう):</p>
 
 <table>
  <thead>
@@ -865,10 +865,10 @@ window.addEventListener('load', function () {
 <p>自分でコーディングする前に検討するとよいライブラリをいくつか紹介します:</p>
 
 <ul>
- <li><a href="http://jqueryui.com/" rel="external" title="http://jqueryui.com/">jQuery UI</a></li>
+ <li><a href="http://jqueryui.com/" rel="external">jQuery UI</a></li>
  <li><a href="https://www.webaxe.org/accessible-custom-select-dropdowns">AXE accessible custom select dropdowns</a></li>
- <li><a href="https://github.com/marghoobsuleman/ms-Dropdown" rel="external" title="https://github.com/marghoobsuleman/ms-Dropdown">msDropDown</a></li>
- <li><a href="http://www.emblematiq.com/lab/niceforms/" rel="external" title="http://www.emblematiq.com/lab/niceforms/">Nice Forms</a></li>
+ <li><a href="https://github.com/marghoobsuleman/ms-Dropdown" rel="external">msDropDown</a></li>
+ <li><a href="http://www.emblematiq.com/lab/niceforms/" rel="external">Nice Forms</a></li>
 </ul>
 
 <p>ラジオボタン、独自JavaScript 、またはサードパーティライブラリで代替コントロールを作る場合、アクセシブルかつ機能への耐性を高めましょう。すなわち Web 標準の実装状況がまちまちである、多様なブラウザーで良好に動作できるようにすることが必要です。楽しんでください!</p>
@@ -894,9 +894,9 @@ window.addEventListener('load', function () {
 <h3 id="Advanced_Topics" name="Advanced_Topics">上級トピック</h3>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form widgets</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">Advanced styling for HTML forms</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href="/ja/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
+ <li><a href="/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form widgets</a></li>
+ <li><a href="/ja/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
+ <li><a href="/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">Advanced styling for HTML forms</a></li>
+ <li><a href="/ja/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
 </ul>

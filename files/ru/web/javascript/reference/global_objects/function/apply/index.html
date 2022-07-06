@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
 <div>{{JSRef("Global_Objects", "Function")}}</div>
 
-<h2 id="Summary" name="Summary">Общие сведения</h2>
+<h2 id="Summary">Общие сведения</h2>
 
 <p>Метод <strong><code>apply()</code></strong> вызывает функцию с указанным значением <code>this</code> и аргументами, предоставленными в виде массива (либо <a href="/ru/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects">массивоподобного объекта</a>).</p>
 
@@ -19,20 +19,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 <p><strong>Примечание:</strong> хотя синтаксис этой функции практически полностью идентичен функции {{jsxref("Function.prototype.call()", "call()")}}, фундаментальное различие между ними заключается в том, что функция <code>call()</code> принимает список аргументов, в то время как функция <code>apply()</code> принимает единичный массив аргументов.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>fun</var>.apply(<var>thisArg</var>, [<var>argsArray</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>thisArg</code></dt>
  <dd>Опциональный параметр. Значение <code>this</code>, предоставляемое для вызова функции <em><code>fun</code></em>. Обратите внимание, что <code>this</code> может не быть реальным значением, видимым этим методом: если метод является функцией в {{jsxref("Functions_and_function_scope/Strict_mode", "нестрогом режиме", "", 1)}}, значения {{jsxref("Global_Objects/null", "null")}} и {{jsxref("Global_Objects/undefined", "undefined")}} будут заменены глобальным объектом, а примитивные значения будут упакованы в объекты.</dd>
  <dt><code>argsArray</code></dt>
- <dd>Опциональный параметр. Массивоподобный объект, определяющий аргументы, с которыми функция <em><code>fun</code></em> должна быть вызвана, либо {{jsxref("Global_Objects/null", "null")}} или {{jsxref("Global_Objects/undefined", "undefined")}}, если в функцию не надо передавать аргументы. Начиная с ECMAScript 5 эти аргументы могут быть обобщёнными массивоподобными объектами, а не только массивом. Смотрите ниже информацию по {{anch("Browser_compatibility", "совместимости с браузерами")}}.</dd>
+ <dd>Опциональный параметр. Массивоподобный объект, определяющий аргументы, с которыми функция <em><code>fun</code></em> должна быть вызвана, либо {{jsxref("Global_Objects/null", "null")}} или {{jsxref("Global_Objects/undefined", "undefined")}}, если в функцию не надо передавать аргументы. Начиная с ECMAScript 5 эти аргументы могут быть обобщёнными массивоподобными объектами, а не только массивом. Смотрите ниже информацию по <a href="#browser_compatibility">совместимости с браузерами</a>.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Вы можете присваивать различные объекты <code>this</code> при вызове существующей функции. <code>this</code> ссылается на текущий объект, вызывающий объект. С помощью <code>apply()</code> вы можете написать метод один раз, а затем наследовать его в других объектах без необходимости переписывать метод для каждого нового объекта.</p>
 
@@ -44,9 +44,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 <p>{{note("Большинство браузеров, включая Chrome 14 и Internet Explorer 9, всё ещё не принимают массивоподобные объекты и будут выбрасывать исключение.")}}</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_apply_to_chain_constructors" name="Example:_Using_apply_to_chain_constructors">Пример: использование <code>apply()</code> для связи конструкторов объекта в цепочку</h3>
+<h3 id="Example_Using_apply_to_chain_constructors">Пример: использование <code>apply()</code> для связи конструкторов объекта в цепочку</h3>
 
 <p>Вы можете использовать метод <code>apply()</code> для объединения в цепочку {{jsxref("Operators/new", "конструкторов", "", 1)}} объекта, как в Java. В следующем примере мы создадим в объекте {{jsxref("Global_Objects/Function", "Function")}} глобальный метод <code>construct()</code>, который позволит нам использовать массивоподобные объекты с конструктором вместо списка аргументов.</p>
 
@@ -88,7 +88,7 @@ alert(myInstance.constructor);              // выведет 'MyConstructor'
 <p><strong>Примечание:</strong> этот неродной метод <code>Function.construct()</code> не будет работать с некоторыми родными конструкторами (вроде конструктора {{jsxref("Global_Objects/Date", "Date")}}, к примеру). В этих случаях вы можете использовать метод {{jsxref("Function.prototype.bind()")}} (например, представьте, что вы имеете следующий массив, который можно использовать с конструктором {{jsxref("Global_Objects/Date", "Date")}}: <code>[2012, 11, 4]</code>; в этом случае вы напишите что-то вроде: <code>new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()</code> — так или иначе, это не самый изящный способ и, вероятно, его не стоит использовать в рабочем окружении).</p>
 </div>
 
-<h3 id="Example_Using_apply_and_built-in_functions" name="Example:_Using_apply_and_built-in_functions">Пример: использование <code>apply()</code> и встроенных функций</h3>
+<h3 id="Example_Using_apply_and_built-in_functions">Пример: использование <code>apply()</code> и встроенных функций</h3>
 
 <p>Умное использование метода <code>apply()</code> позволяет вам использовать встроенные функции для некоторых задач, для которых в противном случае пришлось бы писать цикл по массиву значений. В качестве примера давайте используем {{jsxref("Math.max()")}}/{{jsxref("Math.min()")}} для нахождения максимального/минимального значения в массиве.</p>
 
@@ -130,7 +130,7 @@ for (var i = 0; i &lt; numbers.length; i++) {
 var min = minOfArray([5, 6, 2, 3, 7]);
 </pre>
 
-<h3 id="Example_Using_apply_in_monkey-patching" name="Example:_Using_apply_in_monkey-patching">Пример: использование <code>apply()</code> в «monkey-патчинге»</h3>
+<h3 id="Example_Using_apply_in_monkey-patching">Пример: использование <code>apply()</code> в «monkey-патчинге»</h3>
 
 <p>Метод <code>apply()</code> может быть лучшим вариантом для «monkey-патчинга» встроенных в Firefox функций, либо JS библиотек. Пусть у вас есть функция <code>someobject.foo()</code>, вы можете изменить её таким немного хакерским способом:</p>
 
@@ -146,38 +146,15 @@ someobject.foo = function() {
 
 <p>Этот метод особенно удобен, когда вам нужно отладить события, либо интерфейс с чем-то, что не имеет API, вроде различных событий <code>.on([event]...</code>, например, тех что используются в <a href="/ru/docs/Tools/Page_Inspector#Developer_API">Инспекторе инструментов разработчика</a>).</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.3.4.3', 'Function.prototype.apply')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function.prototype.apply', 'Function.prototype.apply')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>объект {{jsxref("Functions_and_function_scope/arguments", "arguments")}}</li>

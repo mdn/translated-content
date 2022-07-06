@@ -12,7 +12,7 @@ original_slug: Web/Guide/HTML/Forms/Sending_and_retrieving_form_data
 
 <h3 id="Sobre_a_arquitetura_cliente_servidor">Sobre a arquitetura cliente / servidor</h3>
 
-<p>A web é baseada em uma arquitetura cliente / servidor muito básica que pode ser resumida da seguinte forma: um cliente (normalmente um navegador da Web) envia um pedido a um servidor (na maioria das vezes um servidor web como <a href="http://httpd.apache.org/" rel="external" title="http://www.apache.org/">Apache</a>, <a href="http://nginx.com/" rel="external" title="http://nginx.com/">Nginx</a>, <a href="http://www.iis.net/" rel="external" title="http://www.iis.net/">IIS</a>, <a href="http://tomcat.apache.org/" rel="external" title="http://tomcat.apache.org/">Tomcat</a>, etc.), usando o <a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">HTTP protocol</a>. O servidor responde a solicitação usando o mesmo protocolo.</p>
+<p>A web é baseada em uma arquitetura cliente / servidor muito básica que pode ser resumida da seguinte forma: um cliente (normalmente um navegador da Web) envia um pedido a um servidor (na maioria das vezes um servidor web como <a href="http://httpd.apache.org/" rel="external">Apache</a>, <a href="http://nginx.com/" rel="external">Nginx</a>, <a href="http://www.iis.net/" rel="external">IIS</a>, <a href="http://tomcat.apache.org/" rel="external">Tomcat</a>, etc.), usando o <a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">HTTP protocol</a>. O servidor responde a solicitação usando o mesmo protocolo.</p>
 
 <p><img alt="A basic schema of the Web client/server architecture" src="/files/4291/client-server.png" style="height: 141px; width: 400px;"></p>
 
@@ -99,7 +99,7 @@ say=Hi&amp;to=Mom</pre>
 
 <p>O cabeçalho Content-Length indica o tamanho do corpo eo cabeçalho Content-Type indica o tipo de recurso enviado para o servidor. Vamos discutir esses cabeçalhos em um pouco.</p>
 
-<p>Obviamente, as solicitações HTTP nunca são exibidas para o usuário (se você quiser vê-las, você precisa usar ferramentas como o Firefox <a href="/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Web Console</a> ou o <a href="https://developers.google.com/chrome-developer-tools/" title="https://developers.google.com/chrome-developer-tools/">Chrome Developer Tools</a>). A única coisa exibida para o usuário é o URL chamado. Assim, com uma solicitação GET, o usuário verá os dados em sua barra de URL, mas com uma solicitação POST, eles não. Isso pode ser muito importante por duas razões:</p>
+<p>Obviamente, as solicitações HTTP nunca são exibidas para o usuário (se você quiser vê-las, você precisa usar ferramentas como o Firefox <a href="/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Web Console</a> ou o <a href="https://developers.google.com/chrome-developer-tools/">Chrome Developer Tools</a>). A única coisa exibida para o usuário é o URL chamado. Assim, com uma solicitação GET, o usuário verá os dados em sua barra de URL, mas com uma solicitação POST, eles não. Isso pode ser muito importante por duas razões:</p>
 
 <ol>
  <li>Se você precisar enviar uma senha (ou qualquer parte sensível de dados), nunca use o método GET ou corre o risco de exibi-lo na barra de URL.</li>
@@ -128,7 +128,7 @@ say=Hi&amp;to=Mom</pre>
 
 <h4 id="Example_Python_Bruto">Example: Python Bruto</h4>
 
-<p>This example uses Python to do the same thing--display the provided data on a web page. It uses the <a href="http://docs.python.org/3/library/cgi.html" rel="external" title="http://docs.python.org/3/library/cgi.html">CGI Python package</a> to access the form data.</p>
+<p>This example uses Python to do the same thing--display the provided data on a web page. It uses the <a href="http://docs.python.org/3/library/cgi.html" rel="external">CGI Python package</a> to access the form data.</p>
 
 <pre class="brush: python">#!/usr/bin/env python
 import html
@@ -150,13 +150,13 @@ print(say, " ", to)</pre>
 
 <h4 id="Outros_idiomas_e_frameworks">Outros idiomas e frameworks</h4>
 
-<p>Há muitas outras tecnologias do lado do servidor que você pode usar para o tratamento de formulários, incluindo <a href="/en-US/docs/" title="/en-US/docs/">Perl</a>, <a href="/en-US/docs/" title="/en-US/docs/">Java</a>, <a href="http://www.microsoft.com/net" title="http://www.microsoft.com/net">.Net</a>, <a href="/en-US/docs/" title="/en-US/docs/">Ruby</a>, etc. Basta escolher o que você mais gosta. Dito isto, é importante notar que é muito incomum usar essas tecnologias diretamente porque isso pode ser complicado. É mais comum usar um dos muitos frameworks agradáveis que facilitam o manuseio de formulários, como:</p>
+<p>Há muitas outras tecnologias do lado do servidor que você pode usar para o tratamento de formulários, incluindo <a href="/en-US/docs/" title="/en-US/docs/">Perl</a>, <a href="/en-US/docs/" title="/en-US/docs/">Java</a>, <a href="http://www.microsoft.com/net">.Net</a>, <a href="/en-US/docs/" title="/en-US/docs/">Ruby</a>, etc. Basta escolher o que você mais gosta. Dito isto, é importante notar que é muito incomum usar essas tecnologias diretamente porque isso pode ser complicado. É mais comum usar um dos muitos frameworks agradáveis que facilitam o manuseio de formulários, como:</p>
 
 <ul>
- <li><a href="http://symfony.com/" rel="external" title="http://symfony.com/">Symfony</a> Para PHP</li>
- <li><a href="https://www.djangoproject.com/" rel="external" title="https://www.djangoproject.com/">Django</a> Para Python</li>
- <li><a href="http://rubyonrails.org/" rel="external" title="http://rubyonrails.org/">Ruby On Rails</a> Para Ruby</li>
- <li><a href="http://grails.org/" rel="external" title="http://grails.org/">Grails</a> Para Java</li>
+ <li><a href="http://symfony.com/" rel="external">Symfony</a> Para PHP</li>
+ <li><a href="https://www.djangoproject.com/" rel="external">Django</a> Para Python</li>
+ <li><a href="http://rubyonrails.org/" rel="external">Ruby On Rails</a> Para Ruby</li>
+ <li><a href="http://grails.org/" rel="external">Grails</a> Para Java</li>
  <li>etc.</li>
 </ul>
 
@@ -214,15 +214,15 @@ print(say, " ", to)</pre>
 
 <h4 id="SQL_injection">SQL injection</h4>
 
-<p>SQL injection is a type of attack that tries to perform actions on a database used by the target web site. This typically involves sending an SQL request in the hope that the server will execute it (many times when the application server tries to store the data). This is actually <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project" rel="external" title="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">one of the main vector attacks against web sites</a>.</p>
+<p>SQL injection is a type of attack that tries to perform actions on a database used by the target web site. This typically involves sending an SQL request in the hope that the server will execute it (many times when the application server tries to store the data). This is actually <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project" rel="external">one of the main vector attacks against web sites</a>.</p>
 
-<p>The consequences can be terrible, ranging from data loss to access to a whole infrastructure by using privilege escalation. This is a very serious threat and you should never store data sent by a user without performing some sanitization (for example, by using <code><a href="http://www.php.net/manual/en/function.mysql-real-escape-string.php" rel="external" title="http://www.php.net/manual/en/function.mysql-real-escape-string.php">mysql_real_escape_string()</a></code> on a PHP/MySQL infrastructure).</p>
+<p>The consequences can be terrible, ranging from data loss to access to a whole infrastructure by using privilege escalation. This is a very serious threat and you should never store data sent by a user without performing some sanitization (for example, by using <code><a href="http://www.php.net/manual/en/function.mysql-real-escape-string.php" rel="external">mysql_real_escape_string()</a></code> on a PHP/MySQL infrastructure).</p>
 
 <h4 id="HTTP_header_injection_and_email_injection">HTTP header injection and email injection</h4>
 
 <p>These kinds of attacks can occur when your application builds HTTP headers or emails based on the data input by a user on a form. These won't directly damage your server or affect your users, but they are an open door to deeper problems such as session hijacking or phishing attacks.</p>
 
-<p>These attacks are mostly silent, and can turn your server into a <a href="http://en.wikipedia.org/wiki/Zombie_(computer_science)" rel="exernal" title="http://en.wikipedia.org/wiki/Zombie_(computer_science)">zombie</a>.</p>
+<p>These attacks are mostly silent, and can turn your server into a <a href="http://en.wikipedia.org/wiki/Zombie_(computer_science)" rel="exernal">zombie</a>.</p>
 
 <h3 id="Be_paranoid_Never_trust_your_users">Be paranoid: Never trust your users</h3>
 
@@ -247,6 +247,6 @@ print(say, " ", to)</pre>
 <p>If you want to learn more about securing a web application, you can dig into these resources:</p>
 
 <ul>
- <li><a href="https://www.owasp.org/index.php/Main_Page" rel="external" title="https://www.owasp.org/index.php/Main_Page">The Open Web Application Security Project (OWASP)</a></li>
- <li><a href="http://shiflett.org/" rel="external" title="http://shiflett.org/">Chris Shiflett's blog about PHP Security</a></li>
+ <li><a href="https://www.owasp.org/index.php/Main_Page" rel="external">The Open Web Application Security Project (OWASP)</a></li>
+ <li><a href="http://shiflett.org/" rel="external">Chris Shiflett's blog about PHP Security</a></li>
 </ul>

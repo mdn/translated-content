@@ -24,7 +24,7 @@ translation_of: Web/API/Element/classList
 
 <h3 id="返回值">返回值</h3>
 
-<p><code><em><var>elementClasses</var></em></code> 是一个 {{domxref("DOMTokenList")}} 表示  <code><var>elementNodeReference</var></code> 的类属性 。如果类属性未设置或为空，那么 <code><em>elementClasses.length</em></code> 返回 <code>0</code>。虽然 <code>element.classList</code> 本身是只读的，但是你可以使用 <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/add">add()</a></code> 和 <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/remove">remove()</a></code> 方法修改它。</p>
+<p><code><em><var>elementClasses</var></em></code> 是一个 {{domxref("DOMTokenList")}} 表示  <code><var>elementNodeReference</var></code> 的类属性 。如果类属性未设置或为空，那么 <code><em>elementClasses.length</em></code> 返回 <code>0</code>。虽然 <code>element.classList</code> 本身是只读的，但是你可以使用 <code><a href="/zh-CN/docs/Web/API/DOMTokenList/add">add()</a></code> 和 <code><a href="/zh-CN/docs/Web/API/DOMTokenList/remove">remove()</a></code> 方法修改它。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -67,7 +67,7 @@ div.classList.replace("foo", "bar");</pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>由于<code>Element.prototype.className</code>属性在指定事件被更改后会触发该事件，因此旧的<code>onpropertychange</code>事件可用于创建活动的类列表模型。以下针对<code>classList</code>和多令牌列表的聚合列表确保了IE10-IE11浏览器的所有标准方法和属性的完全覆盖以及IE 6-9向其“疯狂靠近”——这可真是值得吃惊的。看看吧:</p>
+<p>由于<code>Element.prototype.className</code>属性在指定事件被更改后会触发该事件，因此旧的<code>onpropertychange</code>事件可用于创建活动的类列表模型。以下针对<code>classList</code>和多令牌列表的聚合列表确保了 IE10-IE11 浏览器的所有标准方法和属性的完全覆盖以及 IE 6-9 向其“疯狂靠近”——这可真是值得吃惊的。看看吧：</p>
 
 <pre class="brush: js notranslate">// 1. String.prototype.trim polyfill
 if (!"".trim) String.prototype.trim = function(){ return this.replace(/^[\s﻿]+|[\s﻿]+$/g, ''); };
@@ -223,9 +223,9 @@ if (typeof DOMTokenList !== "function") (function(window){
 
 
 
-<p>这里有一个关于classList的“妙用”，我觉得很有必要给你分享一下：</p>
+<p>这里有一个关于 classList 的“妙用”，我觉得很有必要给你分享一下：</p>
 
-<p>我们都知道，通过JS去操控CSS确实是一件很麻烦的事情——他可能导致回流和重绘。</p>
+<p>我们都知道，通过 JS 去操控 CSS 确实是一件很麻烦的事情——他可能导致回流和重绘。</p>
 
 <p>一般我们会这样做：</p>
 
@@ -233,13 +233,13 @@ if (typeof DOMTokenList !== "function") (function(window){
 
 <p><code>document.style.fontSize="24";</code></p>
 
-<p>这样的话相当于【元素的样式被改变了两次】！整个JavaScript的性能就下来了。必要的时候（对一个元素更改多个样式）我们可以“把他们合在一起”：</p>
+<p>这样的话相当于【元素的样式被改变了两次】！整个 JavaScript 的性能就下来了。必要的时候（对一个元素更改多个样式）我们可以“把他们合在一起”：</p>
 
 <p><code>document.style.cssText="background:red;font-size:24;";</code></p>
 
-<p>这一个“列表”形式也可以体现classList叫法的来源。</p>
+<p>这一个“列表”形式也可以体现 classList 叫法的来源。</p>
 
-<p>——它确实是一个list列表的形式：</p>
+<p>——它确实是一个 list 列表的形式：</p>
 
 <p>document.getElementById("myDIV").classList.add("mystyle");</p>
 
@@ -251,33 +251,13 @@ if (typeof DOMTokenList !== "function") (function(window){
 
 <h3 id="警告">警告</h3>
 
-<p>polyfill的功能有限。它目前无法在IE6-7中使用和获取“游离于文档外的”元素(例如：由<code>document.createElement</code>创建的元素，在它们被附加到父节点之前)。</p>
+<p>polyfill 的功能有限。它目前无法在 IE6-7 中使用和获取“游离于文档外的”元素 (例如：由<code>document.createElement</code>创建的元素，在它们被附加到父节点之前)。</p>
 
-<p>然而，它应该在IE9中运行良好。<code>classList</code>的多适应性版本和W3规范之间的一个主要差异是：对于IE6-8，没有办法创建一个不可变的对象(其属性不能被直接修改的对象)。然而，在IE9中，可以通过扩展原型、冻结可见对象和覆盖本地属性方法来实现。虽然这样的动作在IE6-IE8中不起作用，即使在IE9中，这样做也会使整个网页的性能慢得像蜗牛爬行一样，使得这些修改对于这个聚合函数来说完全不切实际。 需要注意的是，在IE6-7中，这个polyfill使用window对象上的window[" uCL"]属性与CSS表达式进行通信，使用x-uCLp css属性对所有元素进行通信，使用元素[" uCL"]属性对所有元素进行通信，以允许垃圾收集并提高性能。在所有多填充浏览器(IE6-9)中，一个额外的元素[" uCLp"]属性被添加到元素以确保符合标准原型，并且一个DOMTokenList[" uCL"]属性被添加到每个元素["classList"]对象以确保DOMTokenList被绑定到它自己的元素。</p>
+<p>然而，它应该在 IE9 中运行良好。<code>classList</code>的多适应性版本和 W3 规范之间的一个主要差异是：对于 IE6-8，没有办法创建一个不可变的对象 (其属性不能被直接修改的对象)。然而，在 IE9 中，可以通过扩展原型、冻结可见对象和覆盖本地属性方法来实现。虽然这样的动作在 IE6-IE8 中不起作用，即使在 IE9 中，这样做也会使整个网页的性能慢得像蜗牛爬行一样，使得这些修改对于这个聚合函数来说完全不切实际。 需要注意的是，在 IE6-7 中，这个 polyfill 使用 window 对象上的 window[" uCL"] 属性与 CSS 表达式进行通信，使用 x-uCLp css 属性对所有元素进行通信，使用元素 [" uCL"] 属性对所有元素进行通信，以允许垃圾收集并提高性能。在所有多填充浏览器 (IE6-9) 中，一个额外的元素 [" uCLp"] 属性被添加到元素以确保符合标准原型，并且一个 DOMTokenList[" uCL"] 属性被添加到每个元素 ["classList"] 对象以确保 DOMTokenList 被绑定到它自己的元素。</p>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-element-classlist", "Element.classList")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

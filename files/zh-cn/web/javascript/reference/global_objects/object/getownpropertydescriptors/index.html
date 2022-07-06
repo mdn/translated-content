@@ -41,14 +41,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
 
 <p>创建子类的典型方法是定义子类，将其原型设置为超类的实例，然后在该实例上定义属性。这么写很不优雅，特别是对于 getters 和 setter 而言。 相反，您可以使用此代码设置原型：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">superclass</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span><span class="punctuation token">}</span>
-superclass<span class="punctuation token">.</span>prototype <span class="operator token">=</span> <span class="punctuation token">{</span>
-  <span class="comment token">// 在这里定义方法和属性</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="keyword token">function</span> <span class="function token">subclass</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span><span class="punctuation token">}</span>
-subclass<span class="punctuation token">.</span>prototype <span class="operator token">=</span> Object<span class="punctuation token">.</span><span class="function token">create</span><span class="punctuation token">(</span>superclass<span class="punctuation token">.</span>prototype<span class="punctuation token">,</span> Object<span class="punctuation token">.</span><span class="function token">getOwnPropertyDescriptors</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  <span class="comment token">// 在这里定义方法和属性</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">function superclass() {}
+superclass.prototype = {
+  // 在这里定义方法和属性
+};
+function subclass() {}
+subclass.prototype = Object.create(superclass.prototype, Object.getOwnPropertyDescriptors({
+  // 在这里定义方法和属性
+}));</pre>
 
 <h2 id="规范">规范</h2>
 
@@ -76,7 +76,7 @@ subclass<span class="punctuation token">.</span>prototype <span class="operator 
 
 <div>{{Compat("javascript.builtins.Object.getOwnPropertyDescriptors")}}</div>
 
-<div id="compat-desktop"> </div>
+<div> </div>
 
 <h2 id="相关链接">相关链接</h2>
 

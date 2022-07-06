@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Object.setPrototypeOf
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><code>Object.setPrototypeOf(<var>obj</var>, <var>prototype</var>);</code></pre>
+<pre class="syntaxbox "><code>Object.setPrototypeOf(<var>obj</var>, <var>prototype</var>);</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -37,14 +37,14 @@ browser-compat: javascript.builtins.Object.setPrototypeOf
 
 <p>Examples</p>
 
-<pre class="brush: js notranslate">var dict = Object.setPrototypeOf({}, null);
+<pre class="brush: js ">var dict = Object.setPrototypeOf({}, null);
 </pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 
 <p>예전 버전의 프로퍼티 {{jsxref("Object.prototype.__proto__")}} 를 사용한다면, 우리는 쉽게 Object.setPrototypeOf 가 쉽게 정의 할수 있다.</p>
 
-<pre class="brush: js notranslate">// Only works in Chrome and FireFox, does not work in IE:
+<pre class="brush: js ">// Only works in Chrome and FireFox, does not work in IE:
 Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
   obj.__proto__ = proto;
   return obj;
@@ -55,7 +55,7 @@ Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
 
 <p><code>Object.getPrototypeOf()</code> and {{jsxref("Object.proto", "Object.prototype.__proto__")}} 의 결합은 새로운 프로토타입 오브젝트에 전반적인 프로토타입 Chain을 설정하도록 할수 있다.</p>
 
-<pre class="brush: js notranslate">/**
+<pre class="brush: js ">/**
 *** Object.appendChain(@object, @prototype)
 *
 * Appends the first non-native prototype of a chain to a new prototype.
@@ -103,7 +103,7 @@ Object.appendChain = function(oChain, oProto) {
 
 <h4 id="First_example_프로토타입에_Chain_설정하기">First example: 프로토타입에 Chain 설정하기</h4>
 
-<pre class="brush: js notranslate">function Mammal() {
+<pre class="brush: js ">function Mammal() {
   this.isMammal = 'yes';
 }
 
@@ -129,7 +129,7 @@ console.log(oCat.breathing); // 'yes'
 
 <h4 id="Second_example_객체_Constructor의_인스턴스에_존재하는_원래_값을_변경_및_해당_객체_프로토타입에_Chain_설정하기">Second example: 객체 Constructor의 인스턴스에 존재하는 원래 값을 변경 및 해당 객체 프로토타입에 Chain 설정하기</h4>
 
-<pre class="brush: js notranslate">function MySymbol() {
+<pre class="brush: js ">function MySymbol() {
   this.isSymbol = 'yes';
 }
 
@@ -146,7 +146,7 @@ console.log(typeof oPrime); // 'object'
 
 <h4 id="Third_example_Function.prototype객체에_Chain을_설정하고_그_Chain에_새로운_함수를_설정하기">Third example: Function.prototype객체에 Chain을 설정하고 그 Chain에 새로운 함수를 설정하기</h4>
 
-<pre class="brush: js notranslate">function Person(sName) {
+<pre class="brush: js ">function Person(sName) {
   this.identity = sName;
 }
 

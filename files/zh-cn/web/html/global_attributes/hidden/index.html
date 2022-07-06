@@ -7,7 +7,7 @@ translation_of: Web/HTML/Global_attributes/hidden
 
 <p><a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a> <code>hidden</code> 是一个布尔属性，表示一个元素尚未或者不再相关。例如，它可以被用来隐藏一个页面元素直到登录完毕。如果一个元素设置了这个属性，它就不会被显示。</p>
 
-<p><code>hidden</code>属性不能用于隐藏那些可以在其它板块中合理显示的内容。 例如,用<code>hidden</code>属性去隐藏一个选项卡对话框种的面板是不正确的，因为选项卡界面只不过是溢出显示的一种——一个可以等量于一个只显示所有form表单控件的拥有滚动条的大页面。类似地，用 <code>hidden </code>属性在某个特定板块中隐藏一部分内容也是不正确的，——如果某些内容被标记为隐藏，它将从所有版块中隐藏,包括例如屏幕阅读器.</p>
+<p><code>hidden</code>属性不能用于隐藏那些可以在其它板块中合理显示的内容。 例如，用<code>hidden</code>属性去隐藏一个选项卡对话框种的面板是不正确的，因为选项卡界面只不过是溢出显示的一种——一个可以等量于一个只显示所有 form 表单控件的拥有滚动条的大页面。类似地，用 <code>hidden </code>属性在某个特定板块中隐藏一部分内容也是不正确的，——如果某些内容被标记为隐藏，它将从所有版块中隐藏，包括例如屏幕阅读器。</p>
 
 <p>隐藏元素不应与非隐藏元素链接，作为隐藏元素的后代的元素仍然是活动的，这意味着脚本元素仍然可以执行，表单元素仍然可以提交。</p>
 
@@ -18,7 +18,7 @@ translation_of: Web/HTML/Global_attributes/hidden
 <p>类似的，你也可以将一个带有 hidden 标签的 canvas 元素作为屏幕外的缓存区域，或者在表单控件中引用一个已经隐藏的表单。</p>
 
 <div class="note">
-<p><strong>说明:</strong> 改变具有hidden属性的元素的CSS的 {{cssxref("display")}} 属性将覆盖该行为。 例如, 元素被设置为 <code>display: flex</code> 将会导致元素显示出来，尽管设置了hidden属性</p>
+<p><strong>说明：</strong> 改变具有 hidden 属性的元素的 CSS 的 {{cssxref("display")}} 属性将覆盖该行为。 例如，元素被设置为 <code>display: flex</code> 将会导致元素显示出来，尽管设置了 hidden 属性</p>
 </div>
 
 <h2 id="规范">规范</h2>
@@ -50,59 +50,11 @@ translation_of: Web/HTML/Global_attributes/hidden
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("2") }}</td>
-   <td>11</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("2") }}</td>
-   <td>11</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.global_attributes.hidden")}}
 
 <h2 id="另见">另见</h2>
 
 <ul>
  <li>所有<a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a>。</li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute">aria-hidden</a>属性</li>
+ <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute">aria-hidden</a>属性</li>
 </ul>

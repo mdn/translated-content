@@ -29,7 +29,7 @@ svg|a {}
 
 <p><code>@namespace</code> правила можно использовать для определения префиксов имён. Когда селектор имеет префикс, он будет выбирать элементы совпадающие по пространству имён и именам или атрибутам.</p>
 
-<p>В <a href="/ru/docs/HTML/HTML5">HTML5</a> существуют <a href="https://html.spec.whatwg.org/#foreign-elements">сторонние элементы</a> которые автоматически ассоциируются с соответствующими пространствами имён. Это значит, что HTML элементы будут действовать так, как если бы они находились в пространстве имён (<code>http://www.w3.org/1999/xhtml</code>), также если они не имеют <code>xmlns</code> атрибута где-либо в документе, то такие элементы как <a href="/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/SVG">&lt;svg&gt;</a> и <a href="/ru/docs/Web/MathML/Element/math">&lt;math&gt;</a> будут ассоциироваться с их стандартными пространствами имён (<code>http://www.w3.org/2000/svg</code> and <code>http://www.w3.org/1998/Math/MathML</code>).</p>
+<p>В <a href="/ru/docs/HTML/HTML5">HTML5</a> существуют <a href="https://html.spec.whatwg.org/#foreign-elements">сторонние элементы</a> которые автоматически ассоциируются с соответствующими пространствами имён. Это значит, что HTML-элементы будут действовать так, как если бы они находились в пространстве имён (<code>http://www.w3.org/1999/xhtml</code>), также если они не имеют <code>xmlns</code> атрибута где-либо в документе, то такие элементы как <a href="/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/SVG">&lt;svg&gt;</a> и <a href="/ru/docs/Web/MathML/Element/math">&lt;math&gt;</a> будут ассоциироваться с их стандартными пространствами имён (<code>http://www.w3.org/2000/svg</code> and <code>http://www.w3.org/1998/Math/MathML</code>).</p>
 
 <div class="blockIndicator note">
 <p>Примечание: В XML, если префикс отличается от атрибута (Например, <code>xlink:href</code>), то атрибут не будет иметь пространства имён. Другими словами, атрибуты не могут наследовать пространство имён элемента в котором они находятся.</p>
@@ -49,25 +49,10 @@ svg|a {}
 
 {{csssyntax}}
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Namespaces', '#declaration', '@namespace')}}</td>
-   <td>{{Spec2('CSS3 Namespaces')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("css.at-rules.namespace")}}</p>
+<p>{{Compat}}</p>

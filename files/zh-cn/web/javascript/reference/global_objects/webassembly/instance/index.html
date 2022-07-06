@@ -11,47 +11,37 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 ---
 <div>{{JSRef}} {{SeeCompatTable}}</div>
 
-<p>  <strong><code>WebAssembly.Instance</code></strong> 对象本身是有状态的，是 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module">WebAssembly.Module</a> 的一个可执行实例。  <code>实例</code>包含所有的 <a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Exported_functions">WebAssembly 导出函数</a> ，允许从JavaScript 调用 WebAssembly 代码。</p>
+<p><strong><code>WebAssembly.Instance</code></strong> 对象本身是有状态的，是 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module">WebAssembly.Module</a> 的一个可执行实例。<code>实例</code>包含所有的 <a href="/zh-CN/docs/WebAssembly/Exported_functions">WebAssembly 导出函数</a>，允许从 JavaScript 调用 WebAssembly 代码。</p>
 
-<p><code>WebAssembly.Instance()</code> 构造函数以同步方式实例化一个{{jsxref("WebAssembly.Module")}} 对象。 然而, 通常获取实例的方法是通过异步函数{{jsxref("WebAssembly.instantiate()")}} .</p>
+<p><code>WebAssembly.Instance()</code> 构造函数以同步方式实例化一个{{jsxref("WebAssembly.Module")}} 对象。 然而，通常获取实例的方法是通过异步函数{{jsxref("WebAssembly.instantiate()")}} .</p>
 
 <h2 id="构造函数">构造函数</h2>
 
 <div class="warning">
-<p><strong>重要</strong>: 由于大型模块的实例化代价极高， 开发人员应只在必须同步实例化的时候，才使用<code>Instance()</code>；绝大多数情况应该使用异步方法{{jsxref("WebAssembly.instantiate()")}} .</p>
+<p><strong>警告：</strong>由于大型模块的实例化代价极高， 开发人员应只在必须同步实例化的时候，才使用<code>Instance()</code>；绝大多数情况应该使用异步方法{{jsxref("WebAssembly.instantiate()")}} .</p>
 </div>
 
-<pre class="syntaxbox notranslate">var myInstance = new WebAssembly.Instance(<em>module</em>, <em>importObject</em>);</pre>
+<pre class="syntaxbox">var myInstance = new WebAssembly.Instance(<em>module</em>, <em>importObject</em>);</pre>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt><em>module</em></dt>
- <dd>要被实例化的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module" title="The Module() constructor of the WebAssembly global object creates a new Module object instance."><code>WebAssembly.Module</code></a> 对象.</dd>
+ <dd>要被实例化的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module" title="The Module() constructor of the WebAssembly global object creates a new Module object instance."><code>WebAssembly.Module</code></a> 对象。</dd>
  <dt><em>importObject</em> {{optional_inline}}</dt>
- <dd>一个包含值的对象，导入到新创建的 <code>实例</code>, 比如函数或 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory" title="The Memory() constructor of the WebAssembly global object creates a new Memory object instance, which represents a WebAssembly memory. These can be thought of as resizeable array buffers, wrappers around WebAssembly memories."><code>WebAssembly.Memory</code></a> 对象. There must be one matching property for each declared import of <code>module</code> 否则抛出 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError">WebAssembly.LinkError</a> 异常.</dd>
+ <dd>一个包含值的对象，导入到新创建的 <code>实例</code>, 比如函数或 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory" title="The Memory() constructor of the WebAssembly global object creates a new Memory object instance, which represents a WebAssembly memory. These can be thought of as resizeable array buffers, wrappers around WebAssembly memories."><code>WebAssembly.Memory</code></a> 对象. There must be one matching property for each declared import of <code>module</code> 否则抛出 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError">WebAssembly.LinkError</a> 异常。</dd>
 </dl>
 
 <h2 id="实例化">实例化</h2>
 
-<p>所有的 <code>Instance</code> 实例继承自<code>Instance()</code> <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/prototype">属性对象</a>— 修改它会影响所有的<code>Instance</code> 实例.</p>
+<p>所有的 <code>Instance</code> 实例继承自<code>Instance()</code> <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/prototype">属性对象</a>— 修改它会影响所有的<code>Instance</code> 实例。</p>
 
 <h3 id="实例属性">实例属性</h3>
 
 <dl>
  <dt>{{jsxref("WebAssembly/Instance/exports", "Instance.prototype.exports")}}</dt>
  <dd>返回一个包含此 WebAssembly 模块实例所导出的全部成员的 JS 对象，以便 JavaScript 访问和使用这些成员，这个对象是只读的。</dd>
- <dt></dt>
 </dl>
-
-<div class="hidden">
-<dl>
- <dt></dt>
- <dt>
- <p>译者注：英文版的变动有点大，用例模块暂时不翻译，后来者有心的话可以翻译一下。</p>
- </dt>
-</dl>
-</div>
 
 <h2 id="规格">规格</h2>
 
@@ -72,9 +62,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{Compat("javascript.builtins.WebAssembly.Instance")}}</div>
+{{Compat}}
 
 <h2 id="参考">参考</h2>
 

@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Создаёт экземпляр объекта <strong><code>Date</code></strong>, представляющего собой момент времени. Объект Дата содержит число миллисекунд прошедших с 1 января 1970 г. UTC</p>
 
@@ -22,9 +22,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date
 <p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code>new Date();
+<pre class="syntaxbox"><code>new Date();
 new Date(<var>value</var>);
 new Date(<var>dateString</var>);
 new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]]);
@@ -34,7 +34,7 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
 <p><strong>Обратите внимание:</strong> объекты <code>Date</code> могут быть созданы только путём вызова функции <code>Date</code> в качестве конструктора: обычный вызов функции (то есть, без использования оператора {{jsxref("Operators/new", "new")}}) вернёт строку вместо объекта <code>Date</code>; в отличие от других объектных типов JavaScript, объекты <code>Date</code> не имеют литерального синтаксиса.</p>
 </div>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <div class="note">
 <p><strong>Обратите внимание:</strong> если функция <code>Date</code> вызывается в качестве конструктора с более, чем одним аргументом, значения, большие логического диапазона (например, 13 в качестве номера месяца или 70 для значения минут) «переметнутся» на соседние значения. Например, вызов <code>new Date(2013, 13, 1)</code> эквивалентен вызову <code>new Date(2014, 1, 1)</code>, оба создадут дату <code>2014-02-01</code> (нумерация месяцев начинается с нуля). Тоже самое действует и для других значений: вызов <code>new Date(2013, 2, 1, 0, 70)</code> эквивалентен вызову <code>new Date(2013, 2, 1, 1, 10)</code> — оба вызова создадут дату <code>2013-03-01T01:10:00</code>.</p>
@@ -50,7 +50,7 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
  <dt><code>dateString</code></dt>
  <dd>Строковое значение, представляющее дату. Строка должна быть в одном из форматов, распознаваемых методом {{jsxref("Date.parse()")}} (совместимые с IETF RFC 2822 временные метки [<a href="http://tools.ietf.org/html/rfc2822#page-14">на английском</a>, <a href="http://rfc2.ru/5322.rfc/print#p3.3">на русском</a>], а также версия ISO8601 [<a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15">на английском</a>, <a href="http://es5.javascript.ru/x15.9.html#x15.9.1.15">на русском</a>]).</dd>
  <dt><code>year</code></dt>
- <dd>Целое значение, представляющее год. Значения с 0 по 99 отображаются на года с 1900 по 1999. Смотрите {{anch("Example:_Two_digit_years_map_to_1900_-_1999", "пример ниже")}}.</dd>
+ <dd>Целое значение, представляющее год. Значения с 0 по 99 отображаются на года с 1900 по 1999. Смотрите <a href="#example:_two_digit_years_map_to_1900_-_1999">пример ниже</a>.</dd>
  <dt><code>month</code></dt>
  <dd>Целое значение, представляющее месяц, начинается с 0 для января и кончается 11 для декабря.</dd>
  <dt><code>day</code></dt>
@@ -65,7 +65,7 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
  <dd>Необязательный параметр. Целое значение, представляющее миллисекунды времени.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <ul>
  <li>Если никаких аргументов передано не было, конструктор создаёт объект <code>Date</code>  для текущих даты и времени, согласно системным настройкам.</li>
@@ -76,7 +76,7 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
  <li>Вызов объекта <code>Date</code> в качестве функции (то есть, без использования оператора {{jsxref("Operators/new", "new")}}) вернёт строку, представляющую текущие дату и время.</li>
 </ul>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt>{{jsxref("Date.prototype")}}</dt>
@@ -87,7 +87,7 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
 
 <div>{{jsOverrides("Function", "properties", "prototype")}}</div>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <dl>
  <dt>{{jsxref("Date.now()")}}</dt>
@@ -100,7 +100,7 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
 
 <div>{{jsOverrides("Function", "Methods", "now", "parse", "UTC")}}</div>
 
-<h2 id="Date_instances" name="Date_instances">Экземпляры объекта <code>Date</code></h2>
+<h2 id="Date_instances">Экземпляры объекта <code>Date</code></h2>
 
 <p>Все экземпляры объекта <code>Date</code> наследуются от {{jsxref("Date.prototype")}}. Объект прототипа конструктора <code>Date</code> может быть изменён, чтобы затронуть все экземпляры объекта <code>Date</code>.</p>
 
@@ -108,9 +108,9 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype', 'Methods')}}</div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Several_ways_to_assign_dates" name="Example:_Several_ways_to_assign_dates">Пример: несколько способов создания объекта <code>Date</code></h3>
+<h3 id="Example_Several_ways_to_assign_dates">Пример: несколько способов создания объекта <code>Date</code></h3>
 
 <p>Следующие примеры показывают несколько способов создания дат в JavaScript:</p>
 
@@ -118,18 +118,18 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
 <p><strong>Обратите внимание:</strong> разбор строкового представления дат с помощью конструктора <code>Date</code> (так же как эквивалентный ему метод <code>Date.parse</code>) может иметь различия и несоответствия в браузерах.</p>
 </div>
 
-<pre class="brush: js notranslate">var today = new Date();
+<pre class="brush: js">var today = new Date();
 var birthday = new Date('December 17, 1995 03:24:00');
 var birthday = new Date('1995-12-17T03:24:00');
 var birthday = new Date(1995, 11, 17);
 var birthday = new Date(1995, 11, 17, 3, 24, 0);
 </pre>
 
-<h3 id="Example_Two_digit_years_map_to_1900_-_1999" name="Example:_Two_digit_years_map_to_1900_-_1999">Пример: двухциферный год отображается на 1900 - 1999 года</h3>
+<h3 id="Example_Two_digit_years_map_to_1900_-_1999">Пример: двухциферный год отображается на 1900 - 1999 года</h3>
 
 <p>Для того, чтобы создать и получить даты между 0 и 99 годом, нужно использовать методы {{jsxref("Date.prototype.setFullYear()")}} и {{jsxref("Date.prototype.getFullYear()")}}.</p>
 
-<pre class="brush: js notranslate">var date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+<pre class="brush: js">var date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
 // Устаревший метод, 98 отображается на 1998 год
 date.setYear(98);           // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
@@ -137,11 +137,11 @@ date.setYear(98);           // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 date.setFullYear(98);       // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
 </pre>
 
-<h3 id="Example_Calculating_elapsed_time" name="Example:_Calculating_elapsed_time">Пример: вычисление затраченного времени</h3>
+<h3 id="Example_Calculating_elapsed_time">Пример: вычисление затраченного времени</h3>
 
 <p>Следующие примеры показывают, как определить разницу во времени между двумя датами в JavaScript:</p>
 
-<pre class="brush: js notranslate">// Используя объекты Date
+<pre class="brush: js">// Используя объекты Date
 var start = Date.now();
 
 // Событие, для которого замеряется время, происходит тут:
@@ -150,7 +150,7 @@ var end = Date.now();
 var elapsed = end - start; // затраченное время в миллисекундах
 </pre>
 
-<pre class="brush: js notranslate">// Используя встроенные методы
+<pre class="brush: js">// Используя встроенные методы
 var start = new Date();
 
 // Событие, для которого замеряется время, происходит тут:
@@ -159,7 +159,7 @@ var end = new Date();
 var elapsed = end.getTime() - start.getTime(); // затраченное время в миллисекундах
 </pre>
 
-<pre class="brush: js notranslate">// Проверяет функцию и возвращает её возвращаемое значение
+<pre class="brush: js">// Проверяет функцию и возвращает её возвращаемое значение
 function printElapsedTime(fTest) {
   var nStartTime = Date.now(),
       vReturn = fTest(),
@@ -179,50 +179,14 @@ yourFunctionReturn = printElapsedTime(yourFunction);
 
 <h3 id="Получить_количество_секунд_с_начала_эпохи_Unix">Получить количество секунд с начала эпохи Unix</h3>
 
-<pre class="notranslate"><code>var seconds = Math.floor(Date.now() / 1000);</code></pre>
+<pre><code>var seconds = Math.floor(Date.now() / 1000);</code></pre>
 
 <p>В этом случае важно возвращать только целое число (так что простое деление не подойдёт), а также возвращать только фактически прошедшие секунды (поэтому этот код использует {{jsxref ("Math.floor ()")}} а не {{jsxref ("Math.round ()")}}).</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>
-    <table>
-     <tbody>
-      <tr>
-       <td>{{Spec2('ES1')}}</td>
-      </tr>
-     </tbody>
-    </table>
-   </td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9', 'Date')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date-objects', 'Date')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date-objects', 'Date')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.Date", 3)}}</p>
+<p>{{Compat}}</p>

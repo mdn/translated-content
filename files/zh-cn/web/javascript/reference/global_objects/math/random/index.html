@@ -11,29 +11,29 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 ---
 <div>{{JSRef}}</div>
 
-<div><code><strong>Math.random()</strong></code> 函数返回一个浮点数,  伪随机数在范围从<strong>0到</strong>小于<strong>1</strong>，也就是说，从0（包括0）往上，但是不包括1（排除1），然后您可以缩放到所需的范围。实现将初始种子选择到随机数生成算法;它不能被用户选择或重置。</div>
+<div><code><strong>Math.random()</strong></code> 函数返回一个浮点数， 伪随机数在范围从<strong>0 到</strong>小于<strong>1</strong>，也就是说，从 0（包括 0）往上，但是不包括 1（排除 1），然后您可以缩放到所需的范围。实现将初始种子选择到随机数生成算法;它不能被用户选择或重置。</div>
 
 <p>{{EmbedInteractiveExample("pages/js/math-random.html")}}</p>
 
 <div class="note">
-<p><code>Math.random()</code> <em>不能</em>提供像密码一样安全的随机数字。不要使用它们来处理有关安全的事情。使用Web Crypto API 来代替, 和更精确的{{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}} 方法.</p>
+<p><strong>备注：</strong><code>Math.random()</code> <em>不能</em>提供像密码一样安全的随机数字。不要使用它们来处理有关安全的事情。使用 Web Crypto API 来代替，和更精确的{{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}} 方法。</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code>Math.random()</code></pre>
+<pre class="syntaxbox"><code>Math.random()</code></pre>
 
-<h3 id="Parameters" name="Parameters">返回值</h3>
+<h3 id="Parameters">返回值</h3>
 
-<p>一个浮点型伪随机数字，在<code>0</code>（包括0）和<code>1</code>（不包括）之间。</p>
+<p>一个浮点型伪随机数字，在<code>0</code>（包括 0）和<code>1</code>（不包括）之间。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<p>请注意, 由于 JavaScript 中的数字是 IEEE 754 浮点数字，具有最近舍入（ round-to-nearest-even）的行为, 因此以下函数的范围 (不包括<code>Math.random()</code> 本身) 并不准确。如果选择了非常大的边界 (2<sup>53</sup> 或更高), 在极罕见的情况下会计算通常-排除（usually-excluded）的上界。（注：round-to-nearest-even采用最近舍入的去偶数舍入的方式，对.5的舍入上，采用取偶数的方式）</p>
+<p>请注意，由于 JavaScript 中的数字是 IEEE 754 浮点数字，具有最近舍入（ round-to-nearest-even）的行为，因此以下函数的范围 (不包括<code>Math.random()</code> 本身) 并不准确。如果选择了非常大的边界 (2^53 或更高), 在极罕见的情况下会计算通常 - 排除（usually-excluded）的上界。（注：round-to-nearest-even 采用最近舍入的去偶数舍入的方式，对.5 的舍入上，采用取偶数的方式）</p>
 
-<h3 id="得到一个大于等于0，小于1之间的随机数">得到一个大于等于0，小于1之间的随机数</h3>
+<h3 id="得到一个大于等于_0，小于_1_之间的随机数">得到一个大于等于 0，小于 1 之间的随机数</h3>
 
-<pre class="brush: js notranslate">function getRandom() {
+<pre class="brush: js">function getRandom() {
   return Math.random();
 }</pre>
 
@@ -41,7 +41,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 
 <p>这个例子返回了一个在指定值之间的随机数。这个值不小于 <code>min</code>（有可能等于），并且小于（不等于）<code>max</code>。</p>
 
-<pre class="brush: js notranslate">function getRandomArbitrary(min, max) {
+<pre class="brush: js">function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
 </pre>
@@ -50,25 +50,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 
 <p>这个例子返回了一个在指定值之间的随机整数。这个值不小于 <code>min</code> （如果 <code>min</code> 不是整数，则不小于 <code>min</code> 的向上取整数），且小于（不等于）<code>max</code>。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">getRandomInt</span><span class="punctuation token">(</span>min<span class="punctuation token">,</span> max<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  min <span class="operator token">=</span> Math<span class="punctuation token">.</span><span class="function token">ceil</span><span class="punctuation token">(</span>min<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  max <span class="operator token">=</span> Math<span class="punctuation token">.</span><span class="function token">floor</span><span class="punctuation token">(</span>max<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">return</span> Math<span class="punctuation token">.</span><span class="function token">floor</span><span class="punctuation token">(</span>Math<span class="punctuation token">.</span><span class="function token">random</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">*</span> <span class="punctuation token">(</span>max <span class="operator token">-</span> min<span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="operator token">+</span> min<span class="punctuation token">;</span> </code>//不含最大值，含最小值<code class="language-js">
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js">function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+}</pre>
 
 <div class="note">
-<p>也许很容易想到用 <code>Math.round()</code> 来实现，但是这会导致你的随机数处于一个不均匀的分布，这可能不符合你的需求。</p>
+<p><strong>备注：</strong>也许很容易想到用 <code>Math.round()</code> 来实现，但是这会导致你的随机数处于一个不均匀的分布，这可能不符合你的需求。</p>
 </div>
 
 <h3 id="得到一个两数之间的随机整数，包括两个数在内">得到一个两数之间的随机整数，包括两个数在内</h3>
 
-<p>上一个例子提到的函数 <code>getRandomInt()</code> 结果范围包含了最小值，但不含最大值。如果你的随机结果需要同时包含最小值和最大值，怎么办呢?  <code>getRandomIntInclusive()</code> 函数可以实现。</p>
+<p>上一个例子提到的函数 <code>getRandomInt()</code> 结果范围包含了最小值，但不含最大值。如果你的随机结果需要同时包含最小值和最大值，怎么办呢？<code>getRandomIntInclusive()</code> 函数可以实现。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">getRandomIntInclusive</span><span class="punctuation token">(</span>min<span class="punctuation token">,</span> max<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  min <span class="operator token">=</span> Math<span class="punctuation token">.</span><span class="function token">ceil</span><span class="punctuation token">(</span>min<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  max <span class="operator token">=</span> Math<span class="punctuation token">.</span><span class="function token">floor</span><span class="punctuation token">(</span>max<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">return</span> Math<span class="punctuation token">.</span><span class="function token">floor</span><span class="punctuation token">(</span>Math<span class="punctuation token">.</span><span class="function token">random</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">*</span> <span class="punctuation token">(</span>max <span class="operator token">-</span> min <span class="operator token">+</span> <span class="number token">1</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="operator token">+</span> min<span class="punctuation token">;</span> <span class="comment token">//含最大值，含最小值 </span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js">function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
+}</pre>
 
 <h2 id="规范">规范</h2>
 
@@ -90,5 +90,5 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/RandomSource/getRandomValues" title="The documentation about this has not yet been written; please consider contributing!"><code>window.crypto.getRandomValues()</code></a></li>
+ <li><a href="/zh-CN/docs/Web/API/RandomSource/getRandomValues" title="The documentation about this has not yet been written; please consider contributing!"><code>window.crypto.getRandomValues()</code></a></li>
 </ul>

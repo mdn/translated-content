@@ -17,11 +17,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 
 <div>Метод <strong><code>repeat()</code></strong> конструирует и возвращает новую строку, содержащую указанное количество соединённых вместе копий строки, на которой он был вызван.</div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>str</var>.repeat(<var>count</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>count</code></dt>
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 
 <p>Новая строка, содержащая указанное количество копий строки, для которой был вызван метод.</p>
 
-<h3 id="Throws" name="Throws">Исключения</h3>
+<h3 id="Throws">Исключения</h3>
 
 <ul>
  <li>{{jsxref("Errors/Negative_repetition_count", "RangeError")}}: число повторений не должно быть отрицательным.</li>
@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 <dl>
 </dl>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <pre class="brush: js">'абв'.repeat(-1);   // RangeError
 'абв'.repeat(0);    // ''
@@ -55,7 +55,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 // 'абвабв' (метод repeat() является обобщённым методом)
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Этот метод был добавлен к спецификации ECMAScript 2015 и может быть доступен ещё не во всех реализациях JavaScript. Однако, вы можете легко эмулировать этот метод при помощи следующего кода:</p>
 
@@ -95,27 +95,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-string.prototype.repeat', 'String.prototype.repeat')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.repeat', 'String.prototype.repeat')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat("javascript.builtins.String.repeat")}}</p>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+<p>{{Compat}}</p>

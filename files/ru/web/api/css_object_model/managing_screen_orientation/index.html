@@ -25,7 +25,7 @@ original_slug: Web/API/CSS_Object_Model/ориентация_экрана
 
 <p>Пример. Имеется HTML страница:</p>
 
-<pre class="brush: html notranslate">&lt;ul id="toolbar"&gt;
+<pre class="brush: html">&lt;ul id="toolbar"&gt;
   &lt;li&gt;A&lt;/li&gt;
   &lt;li&gt;B&lt;/li&gt;
   &lt;li&gt;C&lt;/li&gt;
@@ -36,7 +36,7 @@ original_slug: Web/API/CSS_Object_Model/ориентация_экрана
 
 <p>Соответствующий CSS:</p>
 
-<pre class="brush: css notranslate">/* Сначала зададим простые стили */
+<pre class="brush: css">/* Сначала зададим простые стили */
 
 html, body {
   width : 100%;
@@ -79,7 +79,7 @@ li {
 
 <p>Теперь разберёмся с поведением страницы в различных случаях ориентации.</p>
 
-<pre class="brush: css notranslate">/* Для портретного режима отправим панель на верхнюю часть области отображения */
+<pre class="brush: css">/* Для портретного режима отправим панель на верхнюю часть области отображения */
 
 @media screen and (orientation: portrait) {
   #toolbar {
@@ -118,10 +118,10 @@ li {
  <tbody>
   <tr>
    <td>
-    <div style="max-width: 220px;">{{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 180, 350) }}</div>
+    <div style="max-width: 220px;">{{ EmbedLiveSample('Настройка_раскладки_содержимого_по_ориентации_экрана', 180, 350) }}</div>
    </td>
    <td>
-    <div style="max-width: 390px;">{{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 350, 180) }}</div>
+    <div style="max-width: 390px;">{{ EmbedLiveSample('Настройка_раскладки_содержимого_по_ориентации_экрана', 350, 180) }}</div>
    </td>
   </tr>
  </tbody>
@@ -146,7 +146,7 @@ li {
 
 <p>Событие {{event("orientationchange")}} возникает каждый раз, когда устройство изменяет ориентацию экрана и самого себя, и может быть отслежено свойством {{domxref("Screen.orientation")}}.</p>
 
-<pre class="brush: js notranslate">screen.addEventListener("orientationchange", function () {
+<pre class="brush: js">screen.addEventListener("orientationchange", function () {
   console.log("The orientation of the screen is: " + screen.orientation);
 });
 </pre>
@@ -157,7 +157,7 @@ li {
 
 <p>Метод {{domxref("Screen.lockOrientation()")}} принимает одну или несколько строк для определения типа блокировки: <code>portrait-primary</code>, <code>portrait-secondary</code>, <code>landscape-primary</code>, <code>landscape-secondary</code>, <code>portrait</code>, <code>landscape</code>. Подробнее: {{domxref("Screen.lockOrientation")}}.</p>
 
-<pre class="brush: js notranslate">screen.lockOrientation('landscape');</pre>
+<pre class="brush: js">screen.lockOrientation('landscape');</pre>
 
 <div class="note">
 <p><strong>Примечание:</strong> Положение экрана зависит от конкретной настройки приложения. Если в приложении A экран блокируется на альбомную ориентацию (<code>landscape</code>), а приложение B блокирует экран на портретный режим (<code>portrait</code>),
@@ -170,7 +170,7 @@ li {
 
 <p>Для Firefox OS и Firefox Android (скоро заработает и в десктопном Firefox) существует более специфичный способ: в файле манифеста вашего приложения можно указать <a href="/en-US/Apps/Build/Manifest#orientation">ориентацию</a>:</p>
 
-<pre class="brush: json notranslate">"orientation": "portrait"</pre>
+<pre class="brush: json">"orientation": "portrait"</pre>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
@@ -180,5 +180,5 @@ li {
  <li>{{domxref("Screen.unlockOrientation()")}}</li>
  <li>{{domxref("Screen.onorientationchange")}}</li>
  <li><a href="/en-US/docs/CSS/Media_queries#orientation" title="en-US/CSS/Media queries#orientation">The orientation media query</a></li>
- <li><a class="external" href="http://hacks.mozilla.org/2009/06/media-queries/" title="http://hacks.mozilla.org/2009/06/media-queries/">A short introduction to media queries in Firefox 3.5</a></li>
+ <li><a class="external" href="http://hacks.mozilla.org/2009/06/media-queries/">A short introduction to media queries in Firefox 3.5</a></li>
 </ul>

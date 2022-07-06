@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 <div>{{jsSidebar("Statements")}}</div>
 </div>
 
-<p>Die Schleife <code>for…in</code> durchläuft alle <a href="/de/docs/Web/JavaScript/Aufzählbarkeit_und_Zugehörigkeit_von_Eigenschaften">aufzählbaren Eigenschaften</a> eines Objekts (mit Ausnahme jener, deren Name ein <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a> ist) in willkürlicher Reihenfolge und führt für jede ihren Anweisungsblock aus.</p>
+<p>Die Schleife <code>for…in</code> durchläuft alle <a href="/de/docs/Web/JavaScript/Aufzählbarkeit_und_Zugehörigkeit_von_Eigenschaften">aufzählbaren Eigenschaften</a> eines Objekts (mit Ausnahme jener, deren Name ein <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a> ist) in willkürlicher Reihenfolge und führt für jede ihren Anweisungsblock aus.</p>
 
 <p><strong style="">Syntax</strong></p>
 
@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <h2 id="Description" name="Description">Beschreibung</h2>
 
-<p>Die Schleife <code>for…in</code> durchläuft alle eigenen und geerbten Eigenschaften, die als aufzählbar gekennzeichnet sind und deren Name kein <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a> ist, in einer nicht festgelegten Reihenfolge.</p>
+<p>Die Schleife <code>for…in</code> durchläuft alle eigenen und geerbten Eigenschaften, die als aufzählbar gekennzeichnet sind und deren Name kein <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a> ist, in einer nicht festgelegten Reihenfolge.</p>
 
 <h4 id="Aufzählbare_Eigenschaften">Aufzählbare Eigenschaften</h4>
 
@@ -210,7 +210,7 @@ for(var i=0 in obj) {
 // 3
 </pre>
 
-<p>Dieses nicht standardisierte Verhalten wird ab der Version 40 ignoriert und führt im <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict-Modus</a> zu einem {{jsxref("SyntaxError")}}, "<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer">for-in loop head declarations may not have initializers</a>" (siehe {{bug(748550)}} und {{bug(1164741)}}).</p>
+<p>Dieses nicht standardisierte Verhalten wird ab der Version 40 ignoriert und führt im <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict-Modus</a> zu einem {{jsxref("SyntaxError")}}, "<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer">for-in loop head declarations may not have initializers</a>" (siehe {{bug(748550)}} und {{bug(1164741)}}).</p>
 
 <p>Andere Umgebungen wie v8 (Chrome), Chakra (IE/Edge), und JSC (WebKit/Safari) prüfen ebenfalls die Möglichkeit, dieses Verhalten zu entfernen.</p>
 

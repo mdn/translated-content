@@ -10,7 +10,10 @@ translation_of: Web/API/Document/registerElement
 <p>Метод <code><strong>Document.registerElement()</strong></code> регистрирует новый кастомный элемент (<a href="/en-US/docs/Web/Web_Components/Custom_Elements">custom element</a>) в браузере и возвращает конструктор для этого нового элемента.</p>
 
 <div class="note">
-<p><strong>Примечание:</strong> Это экспериментальная технология . Браузер который вы используете должен поддерживать Веб Компоненты (Web Components). Смотри больше: <a href="/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">Enabling Web Components in Firefox</a>.</p>
+<p><strong>Примечание:</strong> Это экспериментальная технология. Браузер который вы используете должен поддерживать Веб Компоненты (Web Components). Смотри больше: <a href="/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">Enabling Web Components in Firefox</a>.</p>
+</div>
+<div class="note">
+<p><strong>Примечание:</strong> Устарело. Используйте интерфейс <a href = "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry">CustomElementRegistry</a> и его метод <a href = "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define">define()</a>, чтобы зарегистрировать новый Тег.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -60,12 +63,12 @@ mytag.textContent = "I am a my-tag element.";
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Document.registerElement")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
- <li> </li>
+ <li>Метод <a href = "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define">CustomElementRegistry.define</a></li>
 </ul>

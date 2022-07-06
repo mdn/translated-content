@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/raw
 ---
 <div>{{JSRef}}</div>
 
-<p>O método estático <code>String.raw()</code> é uma função tag de <a href="https://wiki.developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/template_strings" title="https://wiki.developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/template_strings">modelos literais</a>, similar ao prefixo <code>r</code> no Python ou o prefixo <code>@</code> no C# para string literais (Mas não é <em>idêntico</em>, existe uma diferença, veja explicações nessa <a href="https://bugs.chromium.org/p/v8/issues/detail?id=5016">discussão</a>). Ele é usado para pegar as strings no formato "cru" de modelos literais, isto é, substituições (ex: <font face="consolas, Liberation Mono, courier, monospace"><span style="">${foo}</span></font>) são processados, mas "escapes" (ex:. <code>\n</code>) não são.</p>
+<p>O método estático <code>String.raw()</code> é uma função tag de <a href="/pt-BR/docs/Web/JavaScript/Reference/template_strings">modelos literais</a>, similar ao prefixo <code>r</code> no Python ou o prefixo <code>@</code> no C# para string literais (Mas não é <em>idêntico</em>, existe uma diferença, veja explicações nessa <a href="https://bugs.chromium.org/p/v8/issues/detail?id=5016">discussão</a>). Ele é usado para pegar as strings no formato "cru" de modelos literais, isto é, substituições (ex: <font face="consolas, Liberation Mono, courier, monospace"><span style="">${foo}</span></font>) são processados, mas "escapes" (ex:. <code>\n</code>) não são.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/string-raw.html")}}</p>
 
@@ -46,7 +46,7 @@ String.raw`templateString`
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Na maioria dos casos, <code>String.raw()</code> é usado com modelos de strings. A primeira sintaxe mencionada acima raramente é usada, porque o mecanismo JavaScript a chamará com os argumentos apropriados para você, assim como com outras <a href="https://wiki.developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/template_strings" title="https://wiki.developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/template_strings">funções de tag</a>.</p>
+<p>Na maioria dos casos, <code>String.raw()</code> é usado com modelos de strings. A primeira sintaxe mencionada acima raramente é usada, porque o mecanismo JavaScript a chamará com os argumentos apropriados para você, assim como com outras <a href="/pt-BR/docs/Web/JavaScript/Reference/template_strings">funções de tag</a>.</p>
 
 <p><code>String.raw()</code> é a única função de tag embutida de strings de template; ele funciona exatamente como a função de modelo padrão e executa a concatenação. Você pode até reimplementá-lo com o código JavaScript normal.</p>
 

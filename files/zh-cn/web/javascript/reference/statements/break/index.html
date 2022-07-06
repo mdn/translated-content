@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Statements/break
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code>break [label];</code></pre>
+<pre class="syntaxbox"><code>break [label];</code></pre>
 
 <dl>
     <dt><code>label</code> {{optional_inline}}</dt>
@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Statements/break
 
 <p><code>break</code>语句包含一个可选的标签，可允许程序摆脱一个被标记的语句。<code>break</code>语句需要内嵌在引用的标签中。被标记的语句可以是任何 {{jsxref("Statements/block", "块")}}语句；不一定是循环语句。</p>
 
-<p>break语句不能在function函数体中直接使用，break语句应嵌套在要中断的当前循环、switch或label语句中。</p>
+<p>break 语句不能在 function 函数体中直接使用，break 语句应嵌套在要中断的当前循环、switch 或 label 语句中。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -33,24 +33,24 @@ translation_of: Web/JavaScript/Reference/Statements/break
 
 <p>下面的函数里有个 <code>break</code> 语句，当 <code>i</code> 为 3 时，会中止 {{jsxref("Statements/while", "while")}} 循环，然后返回 3 * <code>x</code> 的值。</p>
 
-<pre class="brush: js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">testBreak</span><span class="punctuation token">(</span>x<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span>
+<pre class="brush: js">function testBreak(x) {
+  var i = 0;
 
-  <span class="keyword token">while</span> <span class="punctuation token">(</span>i <span class="operator token">&lt;</span> <span class="number token">6</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>i <span class="operator token">==</span> <span class="number token">3</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">break</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    i <span class="operator token">+</span><span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
+  while (i &lt; 6) {
+    if (i == 3) {
+      break;
+    }
+    i += 1;
+  }
 
-  <span class="keyword token">return</span> i <span class="operator token">*</span> x<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+  return i * x;
+}</pre>
 
 <h3 id="break_in_switch_statements">break in switch statements</h3>
 
-<p>在下面的代码中， <code>break</code> 使用在 {{jsxref("Statements/switch", "switch")}} 语句中，当遇到匹配到case后，就会执行相应的代码并中断循环体。</p>
+<p>在下面的代码中， <code>break</code> 使用在 {{jsxref("Statements/switch", "switch")}} 语句中，当遇到匹配到 case 后，就会执行相应的代码并中断循环体。</p>
 
-<pre class="notranslate">const food = "sushi";
+<pre>const food = "sushi";
 
 switch (food) {
   case "sushi":
@@ -68,7 +68,7 @@ switch (food) {
 
 <p>下面的代码中一起使用 <code>break</code> 语句和被标记的块语句。一个 <code>break</code> 语句必须内嵌在它引用的标记中。注意，<code>inner_block</code> 内嵌在 <code>outer_block</code> 中。</p>
 
-<pre class="brush:js;highlight:[1,3,5]; notranslate">outer_block:{
+<pre class="brush:js;">outer_block:{
 
   inner_block:{
     console.log ('1');
@@ -84,7 +84,7 @@ switch (food) {
 
 <p>下面的代码同样使用了 <code>break</code> 语句和被标记的块语句，但是产生了一个语法错误，因为它的 <code>break</code> 语句在 <code>block_1</code> 中，但是引用了 <code>block_2</code>。<code>break</code> 语句必须内嵌在它引用的标签中。</p>
 
-<pre class="brush:js;highlight:[1,3,6]; notranslate">block_1:{
+<pre class="brush:js;">block_1:{
   console.log ('1');
   break block_2;            // SyntaxError: label not found
 }
@@ -96,9 +96,9 @@ block_2:{
 
 <h3 id="break_within_functions">break within functions</h3>
 
-<p>在下面的代码同样会产生SyntaxError，因为它并没被正确的使用在循环、switch或label语句中。</p>
+<p>在下面的代码同样会产生 SyntaxError，因为它并没被正确的使用在循环、switch 或 label 语句中。</p>
 
-<pre class="notranslate">function testBreak(x) {
+<pre>function testBreak(x) {
   var i = 0;
 
   while (i &lt; 6) {
@@ -116,7 +116,7 @@ return i * x;
 testBreak(1); // SyntaxError: Illegal break statement
 </pre>
 
-<pre class="notranslate">block_1: {
+<pre>block_1: {
   console.log('1');
   ( function() {
     break block_1; // SyntaxError: Undefined label 'block_1'
@@ -164,7 +164,7 @@ testBreak(1); // SyntaxError: Illegal break statement
 
 <p>{{Compat("javascript.statements.break")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Statements/continue", "continue")}}</li>

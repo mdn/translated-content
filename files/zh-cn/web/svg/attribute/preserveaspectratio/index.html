@@ -3,19 +3,19 @@ title: preserveAspectRatio
 slug: Web/SVG/Attribute/preserveAspectRatio
 tags:
   - SVG
-  - SVG属性
+  - SVG 属性
   - 需要实例
 translation_of: Web/SVG/Attribute/preserveAspectRatio
 ---
 <p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG Attribute reference home</a></p>
 
-<p>有时候, 通常我们使用  {{ SVGAttr("viewBox") }} 属性时, 希望图形拉伸占据整个视口。  在其他情况下，为了保持图形的长宽比，必须使用统一的缩放比例.<br>
+<p>有时候，通常我们使用  {{ SVGAttr("viewBox") }} 属性时，希望图形拉伸占据整个视口。  在其他情况下，为了保持图形的长宽比，必须使用统一的缩放比例。<br>
  <br>
- <code>preserveAspectRatio</code>属性表示是否强制进行统一缩放.<br>
+ <code>preserveAspectRatio</code>属性表示是否强制进行统一缩放。<br>
  <br>
- 对于支持该属性的所有元素(如上所示)，除了 {{ SVGElement("image") }} 元素之外，preserveAspectRatio只适用于在同一元素上为 {{ SVGAttr("viewBox") }} 提供的值。对于这些元素，如果没有提供属性 {{ SVGAttr("viewBox") }} ，则忽略了preserveAspectRatio。<br>
+ 对于支持该属性的所有元素 (如上所示)，除了 {{ SVGElement("image") }} 元素之外，preserveAspectRatio 只适用于在同一元素上为 {{ SVGAttr("viewBox") }} 提供的值。对于这些元素，如果没有提供属性 {{ SVGAttr("viewBox") }} ，则忽略了 preserveAspectRatio。<br>
  <br>
- 对于 {{ SVGElement("image") }} 元素, preserveAspectRatio 指示引用的图像应该如何与参考矩形进行匹配，以及是否应该相对于当前用户坐标系保留参考图像的长宽比</p>
+ 对于 {{ SVGElement("image") }} 元素，preserveAspectRatio 指示引用的图像应该如何与参考矩形进行匹配，以及是否应该相对于当前用户坐标系保留参考图像的长宽比</p>
 
 <h2 id="上下文用法">上下文用法</h2>
 
@@ -35,64 +35,64 @@ translation_of: Web/SVG/Attribute/preserveAspectRatio
   </tr>
   <tr>
    <th scope="row">Normative document</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG11/coords.html#PreserveAspectRatioAttribute" title="http://www.w3.org/TR/SVG11/coords.html#PreserveAspectRatioAttribute">SVG 1.1 (2nd Edition)</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/SVG11/coords.html#PreserveAspectRatioAttribute">SVG 1.1 (2nd Edition)</a></td>
   </tr>
  </tbody>
 </table>
 
 <dl>
  <dt>&lt;align&gt;</dt>
- <dd><code>&lt;align&gt;</code> 属性值表示是否强制统一缩放，当SVG的viewbox属性与视图属性宽高比不一致时使用.  <code>&lt;align&gt;</code> 属性的值一定是下列的值之一:
+ <dd><code>&lt;align&gt;</code> 属性值表示是否强制统一缩放，当 SVG 的 viewbox 属性与视图属性宽高比不一致时使用.  <code>&lt;align&gt;</code> 属性的值一定是下列的值之一：
  <ul>
   <li><strong>none</strong><br>
    不会进行强制统一缩放，如果需要，会缩放指定元素的图形内容，使元素的边界完全匹配视图矩形。<br>
    (注意：如果 <code>&lt;align&gt;</code> 的值是 <code>none</code> ，则 <code>&lt;meetOrSlice&gt;</code> 属性的值将会被忽略。)</li>
   <li><strong>xMinYMin</strong> - 强制统一缩放。<br>
-   将SVG元素的viewbox属性的X的最小值与视图的X的最小值对齐。<br>
-   将SVG元素的viewbox属性的Y的最小值与视图的Y的最小值对齐。</li>
+   将 SVG 元素的 viewbox 属性的 X 的最小值与视图的 X 的最小值对齐。<br>
+   将 SVG 元素的 viewbox 属性的 Y 的最小值与视图的 Y 的最小值对齐。</li>
   <li><strong>xMidYMin</strong> - 强制统一缩放。<br>
-   将SVG元素的viewbox属性的X的中点值与视图的X的中点值对齐。<br>
-   将SVG元素的viewbox属性的Y的最小值与视图的Y的最小值对齐。</li>
+   将 SVG 元素的 viewbox 属性的 X 的中点值与视图的 X 的中点值对齐。<br>
+   将 SVG 元素的 viewbox 属性的 Y 的最小值与视图的 Y 的最小值对齐。</li>
   <li><strong>xMaxYMin</strong> - 强制统一缩放。<br>
-   将SVG元素的viewbox属性的X的最小值+元素的宽度与视图的X的最大值对齐。<br>
-   将SVG元素的viewbox属性的Y的最小值与视图的Y的最小值对齐。</li>
+   将 SVG 元素的 viewbox 属性的 X 的最小值 + 元素的宽度与视图的 X 的最大值对齐。<br>
+   将 SVG 元素的 viewbox 属性的 Y 的最小值与视图的 Y 的最小值对齐。</li>
   <li><strong>xMinYMid</strong> - 强制统一缩放。<br>
-   将SVG元素的viewbox属性的X的最小值与视图的X的最小值对齐。<br>
-   将SVG元素的viewbox属性的Y的中点值与视图的Y的中点值对齐。</li>
+   将 SVG 元素的 viewbox 属性的 X 的最小值与视图的 X 的最小值对齐。<br>
+   将 SVG 元素的 viewbox 属性的 Y 的中点值与视图的 Y 的中点值对齐。</li>
   <li><strong>xMidYMid</strong> (默认值) - 强制统一缩放。<br>
-   将SVG元素的viewbox属性的X的中点值与视图的X的中点值对齐。<br>
-   将SVG元素的viewbox属性的Y的中点值与视图的Y的中点值对齐。</li>
+   将 SVG 元素的 viewbox 属性的 X 的中点值与视图的 X 的中点值对齐。<br>
+   将 SVG 元素的 viewbox 属性的 Y 的中点值与视图的 Y 的中点值对齐。</li>
   <li><strong>xMaxYMid</strong> - 强制统一缩放。<br>
-   将SVG元素的viewbox属性的X的最小值+元素的宽度与视图的X的最大值对齐。<br>
-   将SVG元素的viewbox属性的Y的中点值与视图的Y的中点值对齐。</li>
+   将 SVG 元素的 viewbox 属性的 X 的最小值 + 元素的宽度与视图的 X 的最大值对齐。<br>
+   将 SVG 元素的 viewbox 属性的 Y 的中点值与视图的 Y 的中点值对齐。</li>
   <li><strong>xMinYMax</strong> - 强制统一缩放。<br>
-   将SVG元素的viewbox属性的X的最小值与视图的X的最小值对齐。<br>
-   将SVG元素的viewbox属性的Y的最小值+元素的高度与视图的Y的最大值对齐。</li>
+   将 SVG 元素的 viewbox 属性的 X 的最小值与视图的 X 的最小值对齐。<br>
+   将 SVG 元素的 viewbox 属性的 Y 的最小值 + 元素的高度与视图的 Y 的最大值对齐。</li>
   <li><strong>xMidYMax</strong> - 强制统一缩放。<br>
-   将SVG元素的viewbox属性的X的中点值与视图的X的中点值对齐。<br>
-   将SVG元素的viewbox属性的Y的最小值+元素的高度与视图的Y的最大值对齐。</li>
+   将 SVG 元素的 viewbox 属性的 X 的中点值与视图的 X 的中点值对齐。<br>
+   将 SVG 元素的 viewbox 属性的 Y 的最小值 + 元素的高度与视图的 Y 的最大值对齐。</li>
   <li><strong>xMaxYMax</strong> - 强制统一缩放。<br>
-   将SVG元素的viewbox属性的X的最小值+元素的宽度与视图的X的最大值对齐。<br>
-   将SVG元素的viewbox属性的Y的最小值+元素的高度与视图的Y的最大值对齐。</li>
+   将 SVG 元素的 viewbox 属性的 X 的最小值 + 元素的宽度与视图的 X 的最大值对齐。<br>
+   将 SVG 元素的 viewbox 属性的 Y 的最小值 + 元素的高度与视图的 Y 的最大值对齐。</li>
  </ul>
  </dd>
  <dt>&lt;meetOrSlice&gt;</dt>
- <dd><code>&lt;meetOrSlice&gt;</code> 是可选的，如果提供的话， 与 <code>&lt;align&gt;</code> 间隔一个或多个的空格 ，参数所选值必须是以下值之一:
+ <dd><code>&lt;meetOrSlice&gt;</code> 是可选的，如果提供的话， 与 <code>&lt;align&gt;</code> 间隔一个或多个的空格 ，参数所选值必须是以下值之一：
  <ul>
-  <li><strong>meet</strong> (默认值) - 图形将缩放到:
+  <li><strong>meet</strong> (默认值) - 图形将缩放到：
    <ul>
     <li>宽高比将会被保留</li>
-    <li>整个SVG的viewbox在视图范围内是可见的</li>
-    <li>尽可能的放大SVG的viewbox，同时仍然满足其他的条件。</li>
+    <li>整个 SVG 的 viewbox 在视图范围内是可见的</li>
+    <li>尽可能的放大 SVG 的 viewbox，同时仍然满足其他的条件。</li>
    </ul>
-   在这种情况下，如果图形的宽高比和视图窗口不匹配，则某些视图将会超出viewbox范围（即SVG的viewbox视图将会比可视窗口小）。</li>
-  <li><strong>slice</strong> - 图形将缩放到:
+   在这种情况下，如果图形的宽高比和视图窗口不匹配，则某些视图将会超出 viewbox 范围（即 SVG 的 viewbox 视图将会比可视窗口小）。</li>
+  <li><strong>slice</strong> - 图形将缩放到：
    <ul>
     <li>宽高比将会被保留</li>
-    <li>整个视图窗口将覆盖viewbox</li>
-    <li>SVG的viewbox属性将会被尽可能的缩小，但是仍然符合其他标准。</li>
+    <li>整个视图窗口将覆盖 viewbox</li>
+    <li>SVG 的 viewbox 属性将会被尽可能的缩小，但是仍然符合其他标准。</li>
    </ul>
-   在这种情况下，如果SVG的viewbox宽高比与可视区域不匹配，则viewbox的某些区域将会延伸到视图窗口外部（即SVG的viewbox将会比可视窗口大）。</li>
+   在这种情况下，如果 SVG 的 viewbox 宽高比与可视区域不匹配，则 viewbox 的某些区域将会延伸到视图窗口外部（即 SVG 的 viewbox 将会比可视窗口大）。</li>
  </ul>
  </dd>
 </dl>

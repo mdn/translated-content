@@ -8,7 +8,7 @@ translation_of: Web/API/AudioContext/AudioContext
 ---
 <p>{{APIRef("Web Audio API")}}{{SeeCompatTable}}</p>
 
-<p><strong><code>AudioContext()</code></strong> 构造方法创建了一个新的 {{domxref("AudioContext")}} 对象 它代表了一个由音频模块链接而成的音频处理图, 每一个模块由 {{domxref("AudioNode")}} 表示.</p>
+<p><strong><code>AudioContext()</code></strong> 构造方法创建了一个新的 {{domxref("AudioContext")}} 对象 它代表了一个由音频模块链接而成的音频处理图，每一个模块由 {{domxref("AudioNode")}} 表示。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -18,82 +18,17 @@ translation_of: Web/API/AudioContext/AudioContext
 
 <dl>
  <dt><em>options</em> {{optional_inline}}</dt>
- <dd>Options 如下所示:
+ <dd>Options 如下所示：
  <ul>
-  <li><code>latencyHint</code>: 这个参数表示了重放的类型, 参数是播放效果和资源消耗的一种权衡。可接受的值有 "balanced", "interactive" 和"playback"，默认值为 "interactive"。意思是 "平衡音频输出延迟和资源消耗", "提供最小的音频输出延迟最好没有干扰"和 "对比音频输出延迟，优先重放不被中断"。我们也可以用一个双精度的值来定义一个秒级的延迟数值做到更精确的控制。</li>
+  <li><code>latencyHint</code>: 这个参数表示了重放的类型，参数是播放效果和资源消耗的一种权衡。可接受的值有 "balanced", "interactive" 和"playback"，默认值为 "interactive"。意思是 "平衡音频输出延迟和资源消耗", "提供最小的音频输出延迟最好没有干扰"和 "对比音频输出延迟，优先重放不被中断"。我们也可以用一个双精度的值来定义一个秒级的延迟数值做到更精确的控制。</li>
  </ul>
  </dd>
 </dl>
 
-<p><font color="#4d4e53"><span style="font-size: 30.002px; letter-spacing: -1px;"><strong>规范</strong></span></font></p>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">说明</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API','#AudioContext','AudioContext()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(55.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(42)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(55.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile(42)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(55.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.AudioContext.AudioContext")}}

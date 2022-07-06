@@ -7,7 +7,7 @@ translation_of: Web/API/BeforeUnloadEvent
 
 <p>El evento <strong><code>beforeunload</code></strong> se diapara cuando la ventana, el documento y sus recursos están a punto de ser cerrados.</p>
 
-<p>Cuando una cadena no vacía es asignada a la propiedad <code>returnValue</code> del Evento, un cuadro de diálogo aparece, pidiendo a los usuarios la confirmación para la página (ver ejemplo a continuación). Cuando no es asignado un valor, el evento se procesa en silencio. Algunas implementaciones muestran solamente el cuadro de diálogo si el marco o cualquier marco embebido recibe un gesto o interacción del usuario. Ver {{anch("Compatibilidad del navegador")}} para más información.</p>
+<p>Cuando una cadena no vacía es asignada a la propiedad <code>returnValue</code> del Evento, un cuadro de diálogo aparece, pidiendo a los usuarios la confirmación para la página (ver ejemplo a continuación). Cuando no es asignado un valor, el evento se procesa en silencio. Algunas implementaciones muestran solamente el cuadro de diálogo si el marco o cualquier marco embebido recibe un gesto o interacción del usuario. Ver <a href="#compatibilidad_del_navegador">Compatibilidad del navegador</a> para más información.</p>
 
 <table class="properties">
  <tbody>
@@ -64,5 +64,5 @@ window.addEventListener("beforeunload", function( event ) {
  <li>{{Event("load")}}</li>
  <li>{{Event("beforeunload")}}</li>
  <li>{{Event("unload")}}</li>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document" title="http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document">Descargas de documentos — Solicitud para descargar un documento</a></li>
+ <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document">Descargas de documentos — Solicitud para descargar un documento</a></li>
 </ul>

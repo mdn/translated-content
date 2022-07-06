@@ -100,7 +100,7 @@ translation_of: Mozilla/Firefox/Releases/49
  <li>{{domxref("Window.open()")}} を呼び出した際に、{{domxref("Window")}} の <code>scrollbars</code> 特性をデフォルトで有効にしました。従来から、これは有効化することが強く推奨されていましたが、デフォルトでは有効化していませんでした ({{bug(1257887)}})。</li>
  <li>動画コンテンツの frame-by-frame シークを可能にする、<em>実験的</em>かつ<em>非標準</em>の {{domxref("HTMLMediaElement.seekToNextFrame()")}} メソッドを追加しました ({{bug(1235301)}}。これがどれだけ役に立つかを私たちが理解するのを助けるために試用することをお勧めしますが、<em>製品版のコードでは使用しないでください!</em></li>
  <li>{{domxref("HTMLLabelElement.form")}} プロパティが、コントロールが存在する (およびそのコントロールがフォームに関連付けられている) 場合に、ラベルのコントロールが関連付けられているフォームを返すようになりました。以前は、このプロパティを使用して label を直接フォームに関連付けていました ({{bug(1268852)}})。</li>
- <li>{{domxref("EventTarget.addEventListener()")}} の第 3 引数でサポートする値に、{{jsxref("Boolean")}} および {{interface("EventListenerOptions")}} を追加しました ({{bug(1266164)}} および {{bug(1266066)}})。</li>
+ <li>{{domxref("EventTarget.addEventListener()")}} の第 3 引数でサポートする値に、{{jsxref("Boolean")}} および <code>EventListenerOptions</code> を追加しました ({{bug(1266164)}} および {{bug(1266066)}})。</li>
  <li>{{domxref("KeyboardEvent.key")}} で、音量に関する値を改名しました。<code>"VolumeDown"</code> は <code>"AudioVolumeDown"</code> に、<code>"VolumeUp"</code> は <code>"AudioVolumeUp"</code> に、<code>"VolumeMute"</code> は <code>"AudioVolumeMute"</code> に変わりました。この変更により、Firefox が UI Events 仕様の最新ドラフトに準拠しました ({{bug(1272578)}})。使用可能なすべてのキーコードについては、{{SectionOnPage("/en-US/docs/Web/API/KeyboardEvent/code", "Code values")}} をご覧ください。</li>
  <li>以前は <code>"MozHomeScreen"</code>、<code>"MozCameraFocusAdjust"</code>、<code>"MozPhoneCall"</code> として参照されていたキーに、UI Events 仕様で公式な名称がつきました。<code>"GoHome"</code>、<code>"CameraFocus"</code>、<code>"Call"</code> になります。Firefox 49 で、新しい名称を使用するように更新しました ({{bug(1272599)}})。使用可能なすべてのキーコードについては、{{SectionOnPage("/en-US/docs/Web/API/KeyboardEvent/code", "Code values")}} をご覧ください。</li>
  <li>キーの値 <code>"Separator"</code> および <code>"MediaSkip"</code> は、非推奨になったうえに使用されていませんので、削除しました ({{bug(1232919)}})。</li>
@@ -311,9 +311,9 @@ translation_of: Mozilla/Firefox/Releases/49
  <li>{{domxref("WebKitCSSMatrix")}} インターフェイスを {{domxref("DOMMatrix")}} の別名にしました。</li>
  <li>以下のメディアクエリー特性を実装しました:
   <ul>
-   <li><code>-webkit-min-device-pixel-ratio</code> を <code><a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#resolution">min-resolution</a></code> の別名として、同じ値 (<code>dppx</code>) で実装しました。ただし、この機能は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1237720">デフォルトで無効</a> です (about:config の設定 <code>layout.css.prefixes.device-pixel-ratio-webkit</code> で制御)。</li>
-   <li><code>-webkit-max-device-pixel-ratio</code> を <code><a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#resolution">max-resolution</a></code> の別名として、同じ値 (<code>dppx</code>) で実装しました。この機能も about:config の同じ設定で、デフォルトで無効にしています。</li>
-   <li><code><a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#-webkit-transform-3d">-webkit-transform-3d</a></code> がマッチするようになりました。3D Transform をサポートすることを示します。</li>
+   <li><code>-webkit-min-device-pixel-ratio</code> を <code><a href="/ja/docs/Web/CSS/@media/resolution">min-resolution</a></code> の別名として、同じ値 (<code>dppx</code>) で実装しました。ただし、この機能は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1237720">デフォルトで無効</a> です (about:config の設定 <code>layout.css.prefixes.device-pixel-ratio-webkit</code> で制御)。</li>
+   <li><code>-webkit-max-device-pixel-ratio</code> を <code><a href="/ja/docs/Web/CSS/@media/resolution">max-resolution</a></code> の別名として、同じ値 (<code>dppx</code>) で実装しました。この機能も about:config の同じ設定で、デフォルトで無効にしています。</li>
+   <li><code><a href="/ja/docs/Web/CSS/@media/-webkit-transform-3d">-webkit-transform-3d</a></code> がマッチするようになりました。3D Transform をサポートすることを示します。</li>
   </ul>
  </li>
 </ul>
@@ -341,7 +341,6 @@ translation_of: Mozilla/Firefox/Releases/49
 
 <ul>
  <li><a href="https://www.mozilla.jp/firefox/49.0/releasenotes/">Firefox 49.0 リリースノート</a></li>
- <li><a href="https://www.fxsitecompat.com/ja/versions/49">Firefox 49 サイト互換性情報</a></li>
  <li><a href="https://dev.mozilla.jp/2016/07/firefox-49-addon-compatibility/">Firefox 49 アドオン互換性情報</a></li>
 </ul>
 

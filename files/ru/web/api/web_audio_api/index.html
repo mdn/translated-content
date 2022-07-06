@@ -89,7 +89,7 @@ translation_of: Web/API/Web_Audio_API
  <dt>{{domxref("ConvolverNode")}}</dt>
  <dd><code><strong>Convolver</strong></code><strong><code>Node</code></strong><strong> </strong>это <span style="line-height: 1.5;">{{domxref("AudioNode")}} выполняющий линейную свёртку </span><span style="line-height: 1.5;">AudioBuffer, часто применяется для достижения эффекта реверберации по заданной импульсной характеристике.</span></dd>
  <dt>{{domxref("DelayNode")}}</dt>
- <dd><strong><code>DelayNode</code></strong><strong> </strong>представляет собой линию задержки (<a href="http://en.wikipedia.org/wiki/Digital_delay_line" title="http://en.wikipedia.org/wiki/Digital_delay_line">delay-line</a>); содержит {{domxref("AudioNode")}} вызывающий задержку между выходным и входным сигналом.</dd>
+ <dd><strong><code>DelayNode</code></strong><strong> </strong>представляет собой линию задержки (<a href="http://en.wikipedia.org/wiki/Digital_delay_line">delay-line</a>); содержит {{domxref("AudioNode")}} вызывающий задержку между выходным и входным сигналом.</dd>
  <dt>{{domxref("DynamicsCompressorNode")}}</dt>
  <dd>The <strong><code>DynamicsCompressorNode</code></strong> interface provides a compression effect, which lowers the volume of the loudest parts of the signal in order to help prevent clipping and distortion that can occur when multiple sounds are played and multiplexed together at once.</dd>
  <dt>{{domxref("GainNode")}}</dt>
@@ -149,7 +149,7 @@ translation_of: Web/API/Web_Audio_API
 <p>If you want to use an external script to process your audio source, the below Node and events make it possible.</p>
 
 <div class="note">
-<p><strong>Note</strong>: As of the August 29 2014 Web Audio API spec publication, these features have been marked as deprecated, and are soon to be replaced by {{ anch("Audio_Workers") }}.</p>
+<p><strong>Note</strong>: As of the August 29 2014 Web Audio API spec publication, these features have been marked as deprecated, and are soon to be replaced by <a href="#audio_workers">Audio_Workers</a>.</p>
 </div>
 
 <dl>
@@ -174,7 +174,7 @@ translation_of: Web/API/Web_Audio_API
  <dd>The <code>OfflineAudioCompletionEvent</code> represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{event("complete")}} event implements this interface.</dd>
 </dl>
 
-<h3 id="Audio_Workers" name="Audio_Workers">Audio Workers</h3>
+<h3 id="Audio_Workers">Audio Workers</h3>
 
 <p>Audio workers provide the ability for direct scripted audio processing to be done inside a <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">web worker</a> context, and are defined by a couple of interfaces (new as of 29th August 2014.) These are not implemented in any browsers yet. When implemented, they will replace {{domxref("ScriptProcessorNode")}}, and the other features discussed in the <a href="#Audio_processing_via_JavaScript">Audio processing via JavaScript</a> section above.</p>
 
@@ -187,7 +187,7 @@ translation_of: Web/API/Web_Audio_API
  <dd>This is an <code>Event</code> object that is dispatched to {{domxref("AudioWorkerGlobalScope")}} objects to perform processing.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Obsolete interfaces</h2>
+<h2 id="Example">Obsolete interfaces</h2>
 
 <p>The following interfaces were defined in old versions of the Web Audio API spec, but are now obsolete and have been replaced by other interfaces.</p>
 
@@ -198,13 +198,13 @@ translation_of: Web/API/Web_Audio_API
  <dd>Used to define a periodic waveform. This interface is obsolete, and has been replaced by {{domxref("PeriodicWave")}}.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <p>This example shows a wide variety of Web Audio API functions being used. You can see this code in action on the <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-o-matic</a> demo (also check out the <a href="https://github.com/mdn/voice-change-o-matic">full source code at Github</a>) — this is an experimental voice changer toy demo; keep your speakers turned down low when you use it, at least to start!</p>
 
 <p>The Web Audio API lines are highlighted; if you want to find more out about what the different methods, etc. do, have a search around the reference pages.</p>
 
-<pre class="brush: js; highlight:[1,2,9,10,11,12,36,37,38,39,40,41,62,63,72,114,115,121,123,124,125,147,151] notranslate">var audioCtx = new (window.AudioContext || window.webkitAudioContext)(); // define audio context
+<pre class="brush: js; highlight:[1,2,9,10,11,12,36,37,38,39,40,41,62,63,72,114,115,121,123,124,125,147,151]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)(); // define audio context
 // Webkit/blink browsers need prefix, Safari won't work without window.
 
 var voiceSelect = document.getElementById("voice"); // select box for selecting voice effect options
@@ -390,15 +390,15 @@ function voiceMute() { // toggle to mute and unmute sound
  <li><a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic example</a></li>
  <li><a href="http://mdn.github.io/violent-theremin/">Violent Theremin example</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics">Web audio spatialisation basics</a></li>
- <li><a href="http://www.html5rocks.com/tutorials/webaudio/positional_audio/" title="http://www.html5rocks.com/tutorials/webaudio/positional_audio/">Mixing Positional Audio and WebGL</a></li>
- <li><a href="http://www.html5rocks.com/tutorials/webaudio/games/" title="http://www.html5rocks.com/tutorials/webaudio/games/">Developing Game Audio with the Web Audio API</a></li>
+ <li><a href="http://www.html5rocks.com/tutorials/webaudio/positional_audio/">Mixing Positional Audio and WebGL</a></li>
+ <li><a href="http://www.html5rocks.com/tutorials/webaudio/games/">Developing Game Audio with the Web Audio API</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext" title="/en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext">Porting webkitAudioContext code to standards based AudioContext</a></li>
  <li><a href="https://github.com/bit101/tones">Tones</a>: a simple library for playing specific tones/notes using the Web Audio API.</li>
  <li><a href="https://github.com/goldfire/howler.js/">howler.js</a>: a JS audio library that defaults to <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html">Web Audio API</a> and falls back to <a href="http://www.whatwg.org/specs/web-apps/current-work/#the-audio-element">HTML5 Audio</a>, as well as providing other useful features.</li>
  <li><a href="https://github.com/mattlima/mooog">Mooog</a>: jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.</li>
 </ul>
 
-<section id="Quick_Links">
+<section id="Quick_links">
 <h3 id="Quicklinks">Quicklinks</h3>
 
 <ol>

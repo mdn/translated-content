@@ -39,11 +39,11 @@ translation_of: Web/HTML/Element/form
  </ul>
 
  <div class="note">
- <p><strong>Note: </strong>If you set <code>autocomplete</code> to <code>off</code> in a form because the document provides its own auto-completion, then you should also set <code>autocomplete</code> to <code>off</code> for each of the form's <code>input</code> elements that the document can auto-complete. For details, see {{anch("Google Chrome notes")}}.</p>
+ <p><strong>Note: </strong>If you set <code>autocomplete</code> to <code>off</code> in a form because the document provides its own auto-completion, then you should also set <code>autocomplete</code> to <code>off</code> for each of the form's <code>input</code> elements that the document can auto-complete. For details, see <a href="#google_chrome_notes">Google Chrome notes</a>.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("enctype")}}</dt>
- <dd>When the value of the <code>method</code> attribute is <code>post</code>, this attribute is the <a href="http://en.wikipedia.org/wiki/Mime_type" title="http://en.wikipedia.org/wiki/Mime_type">MIME type</a> of content that is used to submit the form to the server. Possible values are:
+ <dd>When the value of the <code>method</code> attribute is <code>post</code>, this attribute is the <a href="http://en.wikipedia.org/wiki/Mime_type">MIME type</a> of content that is used to submit the form to the server. Possible values are:
  <ul>
   <li><code>application/x-www-form-urlencoded</code>: The default value if the attribute is not specified.</li>
   <li><code>multipart/form-data</code>: Use this value if you are using an {{HTMLElement("input")}} element with the <code>type</code> attribute set to "file".</li>
@@ -55,8 +55,8 @@ translation_of: Web/HTML/Element/form
  <dt>{{htmlattrdef("method")}}</dt>
  <dd>O <a href="/en-US/docs/HTTP" title="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP</a> method that the browser uses to submit the form. Possible values are:
  <ul>
-  <li><code>post</code>: Corresponds to the HTTP <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5">POST method</a> ; the data from the form is included in the body of the form and is sent to the server.</li>
-  <li><code>get</code>: Corresponds to the HTTP <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3">GET method</a>; the data from the form are appended to the <code>action</code> attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.</li>
+  <li><code>post</code>: Corresponds to the HTTP <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5">POST method</a> ; the data from the form is included in the body of the form and is sent to the server.</li>
+  <li><code>get</code>: Corresponds to the HTTP <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3">GET method</a>; the data from the form are appended to the <code>action</code> attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.</li>
  </ul>
 
  <p>This value can be overridden by a {{htmlattrxref("formmethod", "button")}} attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element.</p>

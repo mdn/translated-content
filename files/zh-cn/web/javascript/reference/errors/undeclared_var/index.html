@@ -22,16 +22,16 @@ ReferenceError: Variable undefined in strict mode (Edge)
 
 <p>  仅在<a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>中出现 {{jsxref("ReferenceError")}} 警告。</p>
 
-<h2 id="发生了什么">发生了什么?</h2>
+<h2 id="发生了什么">发生了什么？</h2>
 
-<p>在代码里赋值了一个未声明的变量。换句话说，有处没有带着<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/var"> var</a></code> 关键字的赋值。<span id="result_box" lang="zh-CN"><span>事实上已声明的和未声明的变量之间有一些差异，这可能会导致意想不到的结果，这就是为什么 JavaScript 在严格模式打印出这种错误。</span></span></p>
+<p>在代码里赋值了一个未声明的变量。换句话说，有处没有带着<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/var"> var</a></code> 关键字的赋值。事实上已声明的和未声明的变量之间有一些差异，这可能会导致意想不到的结果，这就是为什么 JavaScript 在严格模式打印出这种错误。</p>
 
-<p><span class="short_text" id="result_box" lang="zh-CN"><span>关于已声明和未声明的变量，其有三个注意事项：</span></span></p>
+<p>关于已声明和未声明的变量，其有三个注意事项：</p>
 
 <ul>
- <li><span class="short_text" id="result_box" lang="zh-CN"><span>已声明的变量被约束在其执行上下文中</span></span><span class="short_text" lang="zh-CN"><span>。</span><span>未声明的变量总是全局的。</span></span></li>
- <li><span class="short_text" id="result_box" lang="zh-CN"><span>已声明的变量在执行任何代码之前就创建了</span></span><span class="short_text" lang="zh-CN"><span>。未声明的变量则不存在，直到执行相关的代码。</span></span></li>
- <li><span class="short_text" id="result_box" lang="zh-CN"><span>已声明的变量是其执行上下文（函数或全局）的不可配置属性。</span><span>而未声明的变量是可配置的（例如可以删除）。</span></span></li>
+ <li>已声明的变量被约束在其执行上下文中。未声明的变量总是全局的。</li>
+ <li>已声明的变量在执行任何代码之前就创建了。未声明的变量则不存在，直到执行相关的代码。</li>
+ <li>已声明的变量是其执行上下文（函数或全局）的不可配置属性。而未声明的变量是可配置的（例如可以删除）。</li>
 </ul>
 
 <p>更多信息及例子，请参考 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/var">var</a></code> 页面。</p>

@@ -1,176 +1,53 @@
 ---
-title: String.prototype
+title: DOMString
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/String
-translation_of: Web/JavaScript/Reference/Global_Objects/String
-translation_of_original: Web/JavaScript/Reference/Global_Objects/String/prototype
-original_slug: Web/JavaScript/Reference/Global_Objects/String/prototype
+translation_of: Web/API/DOMString
+original_slug: Web/API/DOMString
 ---
-<div>{{JSRef}}</div>
+<p>{{APIRef("DOM")}}</p>
 
-<p>A <strong><code>String.prototype</code></strong> representa o prototipo de objeto  {{jsxref("String")}}.</p>
+<p><strong><code>DOMString</code></strong> é uma String UTF-16. Como o JavaScript já usa tais strings, uma <code>DOMString</code> é mapeada diretamente a uma {{jsxref("String")}}.</p>
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+<p>Passando <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code> para um método ou parâmetro que aceite uma <code>DOMString</code>, tal valor é convertido para a string <code>"null"</code>.</p>
 
-<h2 id="Descrição">Descrição</h2>
-
-<p>Todas as instâncias {{jsxref("String")}} herdam de <code>String.prototype</code>. Alterações na <code>String</code> são propagadas para todas as instâncias {{jsxref("String")}}.</p>
-
-<h2 id="Propriedades">Propriedades</h2>
-
-<dl>
- <dt><code>String.prototype.constructor</code></dt>
- <dd>Especifica a função que cria o protótipo de um objeto.</dd>
- <dt>{{jsxref("String.prototype.length")}}</dt>
- <dd>Reflete o comprimento da string.</dd>
- <dt><code><em>N</em></code></dt>
- <dd>Usado para acessar o caractere na posição <em>N</em> onde <em>N</em> é um número inteiro entre 0 e um menor que o valor da <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/length">length</a></code>. Estas propriedades são apenas de leitura.</dd>
-</dl>
-
-<h2 id="Métodos">Métodos</h2>
-
-<h3 id="Métodos_não_relacionados_ao_HTML">Métodos não relacionados ao HTML</h3>
-
-<dl>
- <dt>{{jsxref("String.prototype.charAt()")}}</dt>
- <dd>Retorna o caractere (exatamente uma unidade de código UTF-16) no índice especificado.</dd>
- <dt>{{jsxref("String.prototype.charCodeAt()")}}</dt>
- <dd>Retorna um número que é o valor da unidade de código UTF-16 em dado índice.</dd>
- <dt>{{jsxref("String.prototype.codePointAt()")}}</dt>
- <dd>Retorna um número inteiro não negativo Number que é o valor de posição de código da posição de código inicial em dado índice.</dd>
- <dt>{{jsxref("String.prototype.concat()")}}</dt>
- <dd>Combina o texto de duas strings e retorna uma nova string.</dd>
- <dt>{{jsxref("String.prototype.includes()")}}</dt>
- <dd> Determina se uma string deve ser encontrada dentro de outra string.</dd>
- <dt>{{jsxref("String.prototype.endsWith()")}}</dt>
- <dd>Determina se uma string termina com os caracteres de outra string.</dd>
- <dt>{{jsxref("String.prototype.indexOf()")}}</dt>
- <dd>Retorna o índice dentro do objeto String chamado da primeira ocorrência do valor especificado, ou -1 se não encontrado.</dd>
- <dt>{{jsxref("String.prototype.lastIndexOf()")}}</dt>
- <dd>Retorna o índice dentro do objeto String chamado da última ocorrência do valor especificado, ou -1 se não encontrado.</dd>
- <dt>{{jsxref("String.prototype.localeCompare()")}}</dt>
- <dd>Retorna um número indicando se uma string de referência vem antes ou depois ou é o mesmo que uma string dada em ordem de classificação.</dd>
- <dt>{{jsxref("String.prototype.match()")}}</dt>
- <dd>Usado para combinar uma expressão regular com uma string.</dd>
- <dt>{{jsxref("String.prototype.normalize()")}}</dt>
- <dd>Retorna o Formulário de Normalização Unicode do valor string chamado.</dd>
- <dt>{{jsxref("String.prototype.padEnd()")}}</dt>
- <dd>Empacota a string atual desde o final com uma string dada para criar uma nova string de um dado comprimento.</dd>
- <dt>{{jsxref("String.prototype.padStart()")}}</dt>
- <dd>Empacota a string atual desde o início com uma string dada para criar uma nova string de um dado comprimento.</dd>
- <dt><s class="obsoleteElement">{{jsxref("String.prototype.quote()")}} {{obsolete_inline}}</s></dt>
- <dd><s class="obsoleteElement">Envolve a cadeia entre aspas duplas ("" ").</s></dd>
- <dt>{{jsxref("String.prototype.repeat()")}}</dt>
- <dd>Retorna uma string consistindo elementos do objeto repetido pelas vezes definidas.</dd>
- <dt>{{jsxref("String.prototype.replace()")}}</dt>
- <dd>Usado para encontrar uma combinação entre uma expressão regular e uma string, e para substituir uma substring combinada com uma nova substring.</dd>
- <dt>{{jsxref("String.prototype.search()")}}</dt>
- <dd>Executa a procura por uma combinação entre uma expressão regular e uma string especificada.</dd>
- <dt>{{jsxref("String.prototype.slice()")}}</dt>
- <dd>Extrai uma seção de uma string e retorna uma nova string.</dd>
- <dt>{{jsxref("String.prototype.split()")}}</dt>
- <dd>Separa um objeto <a href="pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String" title="The String global object is a constructor for strings, or a sequence of characters."><code>String</code></a> em um array de strings separando a string em substrings.</dd>
- <dt>{{jsxref("String.prototype.startsWith()")}}</dt>
- <dd>Determina se uma string começa com os caracteres de outra string.</dd>
- <dt>{{jsxref("String.prototype.substr()")}}</dt>
- <dd>Retorna os caracteres em uma string começando no local especificado através do número especificado de caracteres.</dd>
- <dt>{{jsxref("String.prototype.substring()")}}</dt>
- <dd>Retorna os caracteres em uma string entre dois índices na string.</dd>
- <dt>{{jsxref("String.prototype.toLocaleLowerCase()")}}</dt>
- <dd>Os caracteres dentro de uma string são convertidos para letras minúsculas enquanto respeita a localidade atual. Para a maioria das línguas, irá retornar o mesmo que <a href="pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase" title="The toLowerCase() method returns the calling string value converted to lower case."><code>toLowerCase()</code></a>.</dd>
- <dt>{{jsxref("String.prototype.toLocaleUpperCase()")}}</dt>
- <dd>Os caracteres dentro de uma string são convertidas para letra maiúscula enquanto respeita a localidade atual. Para a maioria das línguas, irá retornar o mesmo que <a href="pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase" title="The toUpperCase() method returns the calling string value converted to upper case."><code>toUpperCase()</code></a>.</dd>
- <dt>{{jsxref("String.prototype.toLowerCase()")}}</dt>
- <dd>Retorna o valor da string de chamada convertido em minúsculas.</dd>
- <dt>{{jsxref("String.prototype.toSource()")}} {{non-standard_inline}}</dt>
- <dd>Retorna um objeto literal representando o objeto especificado; Você pode usar esse valor para criar um novo objeto. Substitui o metodo:{{jsxref("Object.prototype.toSource()")}}</dd>
- <dt>{{jsxref("String.prototype.toString()")}}</dt>
- <dd>Retorna uma string que representa o objeto especificado. Substitui o metodo:{{jsxref("Object.prototype.toString()")}}</dd>
- <dt>{{jsxref("String.prototype.toUpperCase()")}}</dt>
- <dd>Retorna o valor da string de chamada convertido em maiúscula.</dd>
- <dt>{{jsxref("String.prototype.trim()")}}</dt>
- <dd>Retira o espaço em branco desde o início e o fim da string. Parte do padrão ECMAScript 5.</dd>
- <dt>{{jsxref("String.prototype.trimLeft()")}} {{non-standard_inline}}</dt>
- <dd>Retira o espaço em branco do lado esquerdo da string.</dd>
- <dt>{{jsxref("String.prototype.trimRight()")}} {{non-standard_inline}}</dt>
- <dd>Retira o espaço em branco do lado esquerdo da string.</dd>
- <dt>{{jsxref("String.prototype.valueOf()")}}</dt>
- <dd>Retorna o valor primitivo do objeto especificado. Substitui o metodo: {{jsxref("Object.prototype.valueOf()")}} </dd>
- <dt>{{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]()")}}</dt>
- <dd>Retorna um novo objeto  <code>Iterator </code>que repete sobre os pontos de código de um valor String, retornando cada ponto de código como um valor String.</dd>
-</dl>
-
-<h3 id="Métodos_de_envoltório_HTML">Métodos de envoltório HTML</h3>
-
-<p>Esses métodos são de uso limitado, pois fornecem apenas um subconjunto das tags e atributos HTML disponíveis.</p>
-
-<dl>
- <dt>{{jsxref("String.prototype.anchor()")}}</dt>
- <dd>{{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (alvo hipertexto)</dd>
- <dt>{{jsxref("String.prototype.big()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("big")}}</dd>
- <dt>{{jsxref("String.prototype.blink()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("blink")}}</dd>
- <dt>{{jsxref("String.prototype.bold()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("b")}}</dd>
- <dt>{{jsxref("String.prototype.fixed()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("tt")}}</dd>
- <dt>{{jsxref("String.prototype.fontcolor()")}} {{deprecated_inline}}</dt>
- <dd>{{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}</dd>
- <dt>{{jsxref("String.prototype.fontsize()")}} {{deprecated_inline}}</dt>
- <dd>{{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}</dd>
- <dt>{{jsxref("String.prototype.italics()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("i")}}</dd>
- <dt>{{jsxref("String.prototype.link()")}}</dt>
- <dd>{{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}} (link para URL)</dd>
- <dt>{{jsxref("String.prototype.small()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("small")}}</dd>
- <dt>{{jsxref("String.prototype.strike()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("strike")}}</dd>
- <dt>{{jsxref("String.prototype.sub()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("sub")}}</dd>
- <dt>{{jsxref("String.prototype.sup()")}} {{deprecated_inline}}</dt>
- <dd>{{HTMLElement("sup")}}</dd>
-</dl>
-
-<h2 id="Especificações">Especificações</h2>
+<h2 id="Specification" name="Specification">Especificações</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="col">Especificacoes</th>
+   <th scope="col">Specification</th>
    <th scope="col">Status</th>
-   <th scope="col">Comentarios</th>
+   <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
+   <td>{{SpecName('WebIDL', '#idl-DOMString', 'DOMString')}}</td>
+   <td>{{Spec2('WebIDL')}}</td>
+   <td>Reformulação da definição para remover alguns casos estranhos.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Core', 'core.html#DOMString', 'DOMString')}}</td>
+   <td>{{Spec2('DOM3 Core')}}</td>
+   <td>Nenhuma mudança da {{SpecName('DOM2 Core')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Core', 'core.html#ID-C74D1578', 'DOMString')}}</td>
+   <td>{{Spec2('DOM2 Core')}}</td>
+   <td>Nenhuma mudança da {{SpecName('DOM1')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM1', 'level-one-core.html#ID-C74D1578', 'DOMString')}}</td>
+   <td>{{Spec2('DOM1')}}</td>
    <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.3.1', 'String.prototype')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype', 'String.prototype')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype', 'String.prototype')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
-
-<p>{{Compat("javascript.builtins.String.prototype")}}</p>
-
-<h2 id="Veja_também">Veja também </h2>
+<h2 id="Veja_também">Veja também</h2>
 
 <ul>
- <li>{{jsxref("String")}}</li>
- <li>{{jsxref("Function.prototype")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" title="/en-US/docs/Web/API/DOMString">String</a></li>
+ <li>{{domxref("USVString")}}</li>
+ <li>{{domxref("CSSOMString")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays/String_view" title="/en-US/docs/Web/JavaScript/Typed_arrays/String_view"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
+ <li><a href="/pt-BR/docs/Web/API/DOMString/Binary">Binary strings</a></li>
 </ul>

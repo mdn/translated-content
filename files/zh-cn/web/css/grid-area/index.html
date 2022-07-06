@@ -34,7 +34,7 @@ grid-area: initial;
 grid-area: unset;
 </pre>
 
-<p>如果指定了4个 <code>&lt;grid-line&gt;</code> 的值，<code>grid-row-start</code> 会被设为第一个值，<code>grid-column-start</code> 为第二个值， <code>grid-row-end</code> 为第三个值，<code>grid-column-end</code> 为第四个值。</p>
+<p>如果指定了 4 个 <code>&lt;grid-line&gt;</code> 的值，<code>grid-row-start</code> 会被设为第一个值，<code>grid-column-start</code> 为第二个值， <code>grid-row-end</code> 为第三个值，<code>grid-column-end</code> 为第四个值。</p>
 
 <p>当 <code>grid-column-end</code> 被忽略时，若 <code>grid-column-start</code> 为一 {{cssxref("&lt;custom-ident&gt;")}}（自定义关键字数据类型）， <code>grid-column-end</code> 则为该 <code>&lt;custom-ident&gt;</code>；否则为 <code>auto</code>。</p>
 
@@ -77,19 +77,19 @@ grid-area: unset;</pre>
  <dd>该关键字表明该属性未指定该如何纺织网格项目。网格项目会被以默认跨度（span）<code>1</code>自动放置。</dd>
  <dt><code>&lt;custom-ident&gt;</code> 自定义关键字数据类型</dt>
  <dd>如果存在以 '<code>&lt;custom-ident&gt;-start</code>'/'<code>&lt;custom-ident&gt;-end</code>' 命名的自定义基线，它会将第一个这样的基线贡献给网格单元以布置。
- <p class="note"><strong>注意:</strong> 被命名的网格区域（grid areas）会自动生成隐式的被命名的基线，因此指定 <code>grid-row: foo;</code> 将会选择这个命名区域的开始和结束的边界（除非在它之前存在显式指定的以 <code>foo-start</code>/<code>foo-end</code> 命名的其他基线）。</p>
+ <p><strong>注意：</strong> 被命名的网格区域（grid areas）会自动生成隐式的被命名的基线，因此指定 <code>grid-row: foo;</code> 将会选择这个命名区域的开始和结束的边界（除非在它之前存在显式指定的以 <code>foo-start</code>/<code>foo-end</code> 命名的其他基线）。</p>
 
  <p>否则，它就会被当作整数 <code>1</code> 与 <code>&lt;custom-ident&gt;</code> 一起指定。</p>
  </dd>
  <dt><code>&lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;?</code></dt>
- <dd>将第 n 条网格基线贡献给网格单元布置。如果指定的是负数，则指的是从下边界向上边界计算的反向顺序。如果提供的是 <span style="font-size: 1rem; letter-spacing: -0.00278rem;">{{cssxref("&lt;custom-ident&gt;")}}</span>，那么只有以此命名的基线才会被计算。如果所命名的基线数超过了网格线数，为了找到该位置，所有隐式的网格线会被假定拥有这个命名。</dd>
+ <dd>将第 n 条网格基线贡献给网格单元布置。如果指定的是负数，则指的是从下边界向上边界计算的反向顺序。如果提供的是 {{cssxref("&lt;custom-ident&gt;")}}，那么只有以此命名的基线才会被计算。如果所命名的基线数超过了网格线数，为了找到该位置，所有隐式的网格线会被假定拥有这个命名。</dd>
  <dd>{{cssxref("integer")}} 值不能为 <code>0</code>。</dd>
  <dt><code>span &amp;&amp; [ &lt;integer&gt; || &lt;custom-ident&gt; ]</code></dt>
  <dd>为网格单元定义一个跨度，使得网格单元的网格区域中的一条边界远离另一条边界线 n 条基线。如果提供的是
  <p>{{cssxref("&lt;custom-ident&gt;")}}，则只有以此命名的基线才会被计算。如果网格线不足，则假定与搜索方向对应的显式网格一侧的所有隐式网格线都具有该名称。</p>
  </dd>
  <dd>
- <p>如果忽略 &lt;integer&gt; ，它就默认设为 <code>1</code>。它的值也不能为0。</p>
+ <p>如果忽略 &lt;integer&gt; ，它就默认设为 <code>1</code>。它的值也不能为 0。</p>
  </dd>
 </dl>
 
@@ -220,7 +220,7 @@ grid-area: unset;</pre>
  <li>Video tutorial: <em><a href="http://gridbyexample.com/video/grid-template-areas/">Grid Template Areas</a></em></li>
 </ul>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
  <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>

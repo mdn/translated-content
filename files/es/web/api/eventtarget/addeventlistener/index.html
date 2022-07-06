@@ -251,85 +251,19 @@ for(i=0 ; i&lt;els.length ; i++){
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop(1.0) }}</td>
-   <td>9.0</td>
-   <td>7</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td><code>useCapture</code> made optional</td>
-   <td>1.0</td>
-   <td>6.0</td>
-   <td>9.0</td>
-   <td>11.60</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoMobile(1.0) }}</td>
-   <td>9.0</td>
-   <td>6.0</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h4 id="Gecko_notes">Gecko notes</h4>
-
-<ul>
- <li>Prior to Firefox 6, the browser would throw if the <code>useCapture</code> parameter was not explicitly <code>false</code>. Prior to Gecko 9.0 {{ geckoRelease("9.0") }}, <code>addEventListener()</code> would throw an exception if the <code>listener</code> parameter was <code>null</code>; now the method returns without error, but without doing anything.</li>
-</ul>
-
-<h4 id="WebKit_notes">WebKit notes</h4>
-
-<ul>
- <li>Although WebKit has explicitly added <code>[optional]</code> to the <code>useCapture</code> parameter <a class="external" href="http://trac.webkit.org/changeset/89781">as recently as June 2011</a>, it had been working before the change. The new change landed in Safari 5.1 and Chrome 13.</li>
-</ul>
+{{Compat("api.EventTarget.addEventListener")}}
 
 <h2 id="Specification" name="Specification">See Also</h2>
 
 <ul>
  <li><a href="/en-US/docs/DOM/element.removeEventListener" title="DOM/element.removeEventListener">element.removeEventListener()</a></li>
  <li><a href="/en-US/docs/DOM/Creating_and_triggering_events" title="DOM/Creating_and_triggering_custom_events">Creating and triggering custom events</a></li>
- <li><a class="external" href="http://www.quirksmode.org/js/this.html" title="http://www.quirksmode.org/js/this.html">More details on the use of <code>this</code> in event handlers</a></li>
+ <li><a class="external" href="http://www.quirksmode.org/js/this.html">More details on the use of <code>this</code> in event handlers</a></li>
 </ul>
 
 <h2 id="Specification" name="Specification">Specification</h2>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener" title="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener">DOM Level 2 Events: EventTarget.addEventListener</a></li>
- <li><a class="external" href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html#events-EventTarget-addEventListener" title="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html#events-EventTarget-addEventListener">DOM Level 3 Events: EventTarget.addEventListener</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener">DOM Level 2 Events: EventTarget.addEventListener</a></li>
+ <li><a class="external" href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html#events-EventTarget-addEventListener">DOM Level 3 Events: EventTarget.addEventListener</a></li>
 </ul>

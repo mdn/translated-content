@@ -5,17 +5,16 @@ tags:
   - CSS
   - CSS Grid
   - CSS Property
-  - CSS属性
-  - CSS网格
+  - CSS 属性
+  - CSS 网格
   - Reference
   - 参考
 translation_of: Web/CSS/grid-auto-rows
 ---
-<p>CSS属性 <strong><code>grid-auto-rows</code></strong> 用于指定隐式创建的行轨道大小。</p>
+<p>CSS 属性 <strong><code>grid-auto-rows</code></strong> 用于指定隐式创建的行轨道大小。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}</div>
 
-<p class="hidden">此交互式示例的源代码托管于GitHub中。如果您想为交互示例贡献代码，请 clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并且给我们发送pull request.</p>
 
 <p>如果定位到某行中的网格元素没有使用 {{cssxref("grid-template-rows")}}来指定大小，则会隐式创建{{glossary("grid", "grid")}} 轨道来保存它。这可能在显示定位到超出范围的行，或者由自动放置算法创建额外的行时发生。</p>
 
@@ -64,7 +63,7 @@ grid-auto-rows: unset;
  <dt><code>&lt;length&gt;</code></dt>
  <dd>一个非负的长度。</dd>
  <dt><code>&lt;percentage&gt;</code></dt>
- <dd>相对于网格窗口块尺寸的非负 {{cssxref("percentage", "&lt;percentage&gt;")}} 值。如果网格容器的块尺寸是不确定的, 则百分比值将被视为 <code>auto</code>。</dd>
+ <dd>相对于网格窗口块尺寸的非负 {{cssxref("percentage", "&lt;percentage&gt;")}} 值。如果网格容器的块尺寸是不确定的，则百分比值将被视为 <code>auto</code>。</dd>
  <dt><code>&lt;flex&gt;</code></dt>
  <dd>非负的、以 <code>fr</code> 为单位的维度指定轨道的弹性因子。每个 <code>&lt;flex&gt;</code>-尺寸的轨道都按其弹性因子的比例挤占剩余空间的一部分。
  <p>当使用在 <code>minmax()</code> 符号外时，意味着最小值为 <code>auto</code> (例： <code>minmax(auto, &lt;flex&gt;)</code>).</p>
@@ -74,11 +73,11 @@ grid-auto-rows: unset;
  <dt><code>min-content</code></dt>
  <dd>关键词，指明由网格元素中占用空间最小的那一个来决定轨道的尺寸。</dd>
  <dt><code>minmax(min, max)</code></dt>
- <dd>函数符号，定义一个不小于<code>min</code>且不大于<code>max</code>的尺寸范围。如果<code>max</code>比<code>min</code>小，则<code>max</code>会被忽略，函数会被录作<code>min</code>处理。作为最大值，<code>&lt;flex&gt;</code> 值设置了轨道的弹性因子。作为最小值，会被当作0处理（或者最小内容——当网格容器指定了尺寸为最小内容）。</dd>
+ <dd>函数符号，定义一个不小于<code>min</code>且不大于<code>max</code>的尺寸范围。如果<code>max</code>比<code>min</code>小，则<code>max</code>会被忽略，函数会被录作<code>min</code>处理。作为最大值，<code>&lt;flex&gt;</code> 值设置了轨道的弹性因子。作为最小值，会被当作 0 处理（或者最小内容——当网格容器指定了尺寸为最小内容）。</dd>
  <dt><code>auto</code></dt>
  <dd>关键字，当用来指定最大值时与最大内容一致，当用来指定最小值时，它表示轨道中所有网格元素最小尺寸中的最大值（由{{cssxref("min-width")}}/{{cssxref("min-height")}}指定）。</dd>
  <dd>
- <p class="note">注意：<code>auto</code> 轨道尺寸（且仅有 <code>auto</code> 轨道尺寸）可配合{{cssxref("align-content")}} 和{{cssxref("justify-content")}} 属性使用。</p>
+ <p>注意：<code>auto</code> 轨道尺寸（且仅有 <code>auto</code> 轨道尺寸）可配合{{cssxref("align-content")}} 和{{cssxref("justify-content")}} 属性使用。</p>
  </dd>
 </dl>
 
@@ -88,7 +87,7 @@ grid-auto-rows: unset;
 
 <h2 id="示例">示例</h2>
 
-<h3 id="HTML内容">HTML内容</h3>
+<h3 id="HTML内容">HTML 内容</h3>
 
 <pre class="brush: html">&lt;div id="grid"&gt;
   &lt;div id="item1"&gt;&lt;/div&gt;
@@ -96,7 +95,7 @@ grid-auto-rows: unset;
   &lt;div id="item3"&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<h3 id="CSS内容">CSS内容</h3>
+<h3 id="CSS内容">CSS 内容</h3>
 
 <pre class="brush: css; highlight[6]">#grid {
   width: 200px;
@@ -143,16 +142,16 @@ grid-auto-rows: unset;
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>相关的CSS属性： {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}</li>
+ <li>相关的 CSS 属性： {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}</li>
  <li>网格布局指南： <em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid">网格布局中的自动定位 - 隐式网格中的行尺寸</a></em></li>
  <li>视频教程：<em><a href="http://gridbyexample.com/video/series-auto-placement-order/">引入网格自动放置和排序</a></em></li>
 </ul>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li><a href="/zh-CN/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/zh-CN/docs/Web/CSS/Reference"><strong>CSS参考</strong></a></li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS网格布局</a></li>
+ <li><a href="/zh-CN/docs/Web/CSS/Reference"><strong>CSS 参考</strong></a></li>
+ <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS 网格布局</a></li>
  <li data-default-state="open"><a href="#"><strong>指南</strong></a>
   <ol>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">与其它布局方式的关系</a></li>
@@ -160,10 +159,10 @@ grid-auto-rows: unset;
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">网格模板区域</a></li>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">使用命名网格行布局</a></li>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">风格布局中的自动定位</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">网格布局中的框(盒子)对齐</a></li>
+   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">网格布局中的框 (盒子) 对齐</a></li>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">网格、逻辑值和书写模式</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS网格布局和辅助功能</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS网格布局与渐进式增强</a></li>
+   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS 网格布局和辅助功能</a></li>
+   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS 网格布局与渐进式增强</a></li>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">使用网格实现通用布局</a></li>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">网格布局的基本概念</a></li>
   </ol>

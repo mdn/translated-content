@@ -26,7 +26,7 @@ translation_of: Web/API/Request/mode
 <ul>
  <li><code>same-origin</code> — このモードを設定してほかのオリジンにリクエストをした場合、結果は単純にエラーになります。リクエストが常に同一オリジンに行われることを保証するために使用できます。</li>
  <li><code>no-cors</code> — <code>HEAD か</code> <code>GET、</code><code>POST </code>以外のメソッドを防ぎます。任意の ServiceWorkers がこれらをインターセプトする場合、<a href="https://fetch.spec.whatwg.org/#simple-header">シンプルヘッダー</a>を除いてヘッダーを追加したりオーバーライドしたりできなくなります。加えて、JavaScript は解決された {{domxref("Response")}} のプロパティにはアクセスできません。これはServiceWorkers が Web のセマンティクスに影響を与えないことを保証し、ドメインを跨いでデータが流出することでセキュリティやプライバシーの問題が生じるのを防ぎます。</li>
- <li><code>cors</code> — クロスオリジンリクエストを許可します。たとえば、サードパーティベンダーが提供する様々な API にアクセスできます。これらは、<a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Access_control_CORS">CORS プロトコル</a>に則ることが期待されています。<a href="https://fetch.spec.whatwg.org/#concept-filtered-response-cors">制限された</a>ヘッダーだけが {{domxref("Response")}} で使用できますが、body は読み取り可能です。</li>
+ <li><code>cors</code> — クロスオリジンリクエストを許可します。たとえば、サードパーティベンダーが提供する様々な API にアクセスできます。これらは、<a href="/ja/docs/Web/HTTP/Access_control_CORS">CORS プロトコル</a>に則ることが期待されています。<a href="https://fetch.spec.whatwg.org/#concept-filtered-response-cors">制限された</a>ヘッダーだけが {{domxref("Response")}} で使用できますが、body は読み取り可能です。</li>
  <li><code>navigate</code> — ナビゲーションを許可します。<code>navigate</code> はHTMLナビゲーションによってのみ利用されることを意図しています。ナビゲーションリクエストはドキュメント間のナビゲーションの場合にだけ生成されます。</li>
 </ul>
 
@@ -36,7 +36,7 @@ translation_of: Web/API/Request/mode
 
 <p>たとえば、<code>Request</code>オブジェクトが{{domxref("Request.Request")}}コンストラクタで生成された場合、<code>mode</code>の値は<code>cors</code>にセットされます。</p>
 
-<p>しかし、リクエストが{{domxref("Request.Request")}}コンストラクタ以外で生成された場合は<code>mode</code>として通常<code>no-cors</code>がセットされます。たとえばマークアップから生成された埋め込みリソースのようなリクエストは、<code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">crossorigin</a></code>アトリビュートが設定されていない限り、<code>no-cors</code>を利用します。そのようなものの例として、{{HTMLElement("link")}} や {{HTMLElement("script")}} エレメント（ただしモジュールを除く）、{{HTMLElement("img")}}、{{HTMLElement("audio")}}、{{HTMLElement("video")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}}、{{HTMLElement("iframe")}} エレメントなどが存在します。</p>
+<p>しかし、リクエストが{{domxref("Request.Request")}}コンストラクタ以外で生成された場合は<code>mode</code>として通常<code>no-cors</code>がセットされます。たとえばマークアップから生成された埋め込みリソースのようなリクエストは、<code><a href="/ja/docs/Web/HTML/CORS_settings_attributes">crossorigin</a></code>アトリビュートが設定されていない限り、<code>no-cors</code>を利用します。そのようなものの例として、{{HTMLElement("link")}} や {{HTMLElement("script")}} エレメント（ただしモジュールを除く）、{{HTMLElement("img")}}、{{HTMLElement("audio")}}、{{HTMLElement("video")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}}、{{HTMLElement("iframe")}} エレメントなどが存在します。</p>
 
 <h2 id="例">例</h2>
 
@@ -63,10 +63,6 @@ var myMode = myRequest.mode; // 既定で "cors" を返す。</pre>
 </table>
 
 <h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
-
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
 
 <p><br>
  {{Compat("api.Request.mode")}}</p>

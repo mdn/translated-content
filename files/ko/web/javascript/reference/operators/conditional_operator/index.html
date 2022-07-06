@@ -2,14 +2,21 @@
 title: 삼항 조건 연산자
 slug: Web/JavaScript/Reference/Operators/Conditional_Operator
 tags:
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
+- Conditional
+- Decision
+- JS
+- JavaScript
+- Language feature
+- Operator
+- Reference
+- else
+- if
+- ternary
+browser-compat: javascript.operators.conditional
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p><strong>조건부 삼항 연산자</strong>는 JavaScript에서 세 개의 피연산자를 취할 수 있는 유일한 연산자입니다. 보통 <a href="/ko/docs/Web/JavaScript/Reference/Statements/if...else"><code>if</code></a> 명령문의 단축 형태로 쓰입니다.</p>
+<p><strong>조건부 삼항 연산자</strong>는 JavaScript에서 세 개의 피연산자를 취할 수 있는 유일한 연산자입니다. 맨 앞에 조건문 들어가고. 그 뒤로 물음표(<code>?</code>)와 조건이 참{{Glossary("truthy")}}이라면 실행할 식이 물음표 뒤로 들어갑니다. 바로 뒤로 콜론(<code>:</code>)이 들어가며 조건이 거짓{{Glossary("falsy")}}이라면 실행할 식이 마지막에 들어갑니다. 보통 <a href="/ko/docs/Web/JavaScript/Reference/Statements/if...else"><code>if</code></a> 명령문의 단축 형태로 쓰입니다.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}</div>
 
@@ -17,174 +24,73 @@ translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 
 <h2 id="구문">구문</h2>
 
-<pre class="syntaxbox notranslate"><em>condition</em> ? <em>exprIfTrue</em> : <em>exprIfFalse</em> </pre>
+<pre class="syntaxbox "><em>condition</em> ? <em>exprIfTrue</em> : <em>exprIfFalse</em> </pre>
 
 <h3 id="매개변수">매개변수</h3>
 
 <dl>
- <dt><code>condition</code></dt>
- <dd>An expression whose value is used as a condition.</dd>
- <dt><code>exprIfTrue</code></dt>
- <dd>An expression which is evaluated if the <code>condition</code> evaluates to a {{Glossary("truthy")}} value (one which equals or can be converted to <code>true</code>).</dd>
- <dt><code>exprIfFalse</code></dt>
- <dd>An expression which is executed if the <code>condition</code> is {{Glossary("falsy")}} (that is, has a value which can be converted to <code>false</code>).</dd>
+ <dt><code>condition</code> (조건문)</dt>
+ <dd>조건문으로 들어갈 표현식</dd>
+ <dt><code>exprIfTrue</code> (참일 때 실행할 식)</dt>
+ <dd><code>condition</code>이 {{Glossary("Truthy")}}일 때 실행되는 표현식입니다. (<code>true</code>일 때 치환될 값입니다).</dd>
+ <dt><code>exprIfFalse</code> (거짓일 때 실행할 식)</dt>
+ <dd><code>condition</code>이 {{Glossary("falsy")}}일 때 실행되는 표현식입니다. (<code>false</code>일 때 치환될 값입니다).</dd>
 </dl>
 
 <h2 id="설명">설명</h2>
-
-<p><font face="Open Sans, Arial, sans-serif"><code>condition</code>이 </font><code>true</code>이면, 연산자는 <code>expr1</code>의 값을 반환하며, 반대의 경우 <code>expr2</code>를 반환한다.</p>
+<p><code>false</code>외에도 <code>null</code>,<code>NaN</code>, <code>0</code>, 비어있는 문자 값 (<code>""</code>), 그리고 <code>undefined</code>으로 조건문에 false 값으로 사용 가능 합니다. 이 값들이 조건문으로 사용된다면 <code>exprIfFalse</code>이 결과로 나오게 됩니다.</p>
 
 <h2 id="예제">예제</h2>
 
-<p>여러분이 술을 마실수 있는지 확인할 수 있는 간단한 예제가 여기 있습니다.</p>
+<h3 id="A_simple_example">간단한 예제</h3>
 
-<pre class="notranslate"><code>var age = 29;
-var canDrinkAlcohol = (age &gt; 19) ? "True, over 19" : "False, under 19";
-console.log(canDrinkAlcohol); // "True, over 19"</code>
+<pre class="brush: js">var age = 26;
+var beverage = (age &gt;= 21) ? "Beer" : "Juice";
+console.log(beverage); // "Beer"
 </pre>
 
-<p>isMember 변수의 값을 기준으로 다른 메시지를 보여주고자 한다면, 다음과 같이 표현할 수 있다.</p>
+<h3 id="Handling_null_values">null 값 처리하기</h3>
 
-<pre class="brush: js notranslate">"The fee is " + (isMember ? "$2.00" : "$10.00")
-</pre>
+<p>이와같이 <code>null</code> 값을 처리할 때에도 일반적으로 사용됩니다.:</p>
 
-<p>또한 다음과 같이 삼항(ternary)의 결과에 따라 변수를 할당할 수도 있다.</p>
-
-<pre class="brush: js notranslate">var elvisLives = Math.PI &gt; 4 ? "Yep" : "Nope";</pre>
-
-<p>다음의 예제처럼, 다중 삼항(ternary) 평가도 가능하다(주의: 조건 연산은 우측부터 그룹핑 됩니다.)</p>
-
-<pre class="brush: js notranslate">var firstCheck = false,
-    secondCheck = false,
-    access = firstCheck ? "Access denied" : secondCheck ? "Access denied" : "Access granted";
-
-console.log( access ); // logs "Access granted"</pre>
-
-<p>또한 다중 조건 IF 문과 같은 방식으로 여러개의 조건을 사용할 수도 있습니다.</p>
-
-<pre class="notranslate"><code>var condition1 = true,
-    condition2 = false,
-    access = condition1 ? (condition2 ? "true true": "true false") : (condition2 ? "false true" : "false false");
-
-console.log(access); // logs "true false"</code></pre>
-
-<p>참고 : 괄호는 필수는 아니며 기능에 영향을주지 않습니다. 결과가 어떻게 처리되는지 시각화하는 데 도움이됩니다.</p>
-
-<p>삼항(ternary) 평가는 다른 연산을 하기 위해 쓸 수도 있습니다.</p>
-
-<pre class="brush: js notranslate">var stop = false, age = 16;
-
-age &gt; 18 ? location.assign("continue.html") : stop = true;
-</pre>
-
-<p>하나의 케이스 당 둘 이상의 단일 작업을 수행하려면 쉼표로 구분하고 괄호로 묶으세요.</p>
-
-<pre class="brush: js notranslate">var stop = false, age = 23;
-
-age &gt; 18 ? (
-    alert("OK, you can go."),
-    location.assign("continue.html")
-) : (
-    stop = true,
-    alert("Sorry, you are much too young!")
-);
-</pre>
-
-<p>또한, 값을 할당하는 동안 하나 이상의 연산도 가능합니다. 이 경우에, 괄호 안의 값중 마지막 쉼표 (,) 다음의 값이 최종 할당 값이 됩니다.</p>
-
-<pre class="brush: js notranslate">var age = 16;
-
-var url = age &gt; 18 ? (
-    alert("OK, you can go."),
-    // alert returns "undefined", but it will be ignored because
-    // isn't the last comma-separated value of the parenthesis
-    "continue.html" // the value to be assigned if age &gt; 18
-) : (
-    alert("You are much too young!"),
-    alert("Sorry :-("),
-    // etc. etc.
-    "stop.html" // the value to be assigned if !(age &gt; 18)
-);
-
-location.assign(url); // "stop.html"</pre>
-
-
-
-<h3 id="삼항_연산자로_반환하기">삼항 연산자로 반환하기</h3>
-
-<p>삼항 연산자는 <code>if / else</code> 문을 사용하는 함수를 반환하는 데 적합합니다.</p>
-
-<pre class="notranslate"><code>var func1 = function( .. ) {
-  if (condition1) { return value1 }
-  else { return value2 }
+<pre class="brush: js">let greeting = person =&gt; {
+  let name = person ? person.name : `stranger`
+  return `Howdy, ${name}`
 }
 
-var func2 = function( .. ) {
-  return condition1 ? value1 : value2
-}</code></pre>
-
-<p>다음과 같이 법적으로 술을 마실수 있는지 여부를 반환하는 함수를 만들수 있습니다.</p>
-
-<pre class="notranslate"><code>function canDrinkAlcohol(age) {
-  return (age &gt; 21) ? "True, over 21" : "False, under 21";
-}
-var output = canDrinkAlcohol(26);
-console.log(output); // "True, over 21"</code></pre>
-
-<p><code>if / else</code> 문을 대체하는 삼항연산자가 <code>return</code>을 여러 번 사용하고 if 블록 내부에서 한줄만 나올때 <code>return</code>을 대체 할 수 있는 좋은 방법이됩니다.</p>
-
-<p>삼항연산자를 여러 행으로 나누고 그 앞에 공백을 사용하면 긴 <code>if / else</code> 문을 매우 깔끔하게 만들 수 있습니다. 이것은 동일한 로직을 표현하지만 코드를 읽기 쉽게 만들어 줍니다.</p>
-
-<pre class="notranslate"><code>var func1 = function( .. ) {
-  if (condition1) { return value1 }
-  else if (condition2) { return value2 }
-  else if (condition3) { return value3 }
-  else { return value4 }
-}
-
-var func2 = function( .. ) {
-  return condition1 ? value1
-       : condition2 ? value2
-       : condition3 ? value3
-       :              value4
-}</code>
+console.log(greeting({name: `Alice`}));  // "Howdy, Alice"
+console.log(greeting(null));             // "Howdy, stranger"
 </pre>
 
-<h2 id="명세">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-conditional-operator', 'Conditional Operator')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-conditional-operator', 'Conditional Operator')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.12', 'The conditional operator')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11.12', 'The conditional operator')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
- </tbody>
-</table>
+<h3 id="Conditional_chains">연속된 조건문 처리하기</h3>
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+<p>삼항 연산자는 <code>if … else if … else if … else</code>와 같은 "연속된 조건"을 사용할 수 있습니다.</p>
 
-<p>{{Compat("javascript.operators.conditional")}}</p>
+<pre class="brush: js">function example(…) {
+    return condition1 ? value1
+         : condition2 ? value2
+         : condition3 ? value3
+         : value4;
+}
+
+// 위의 코드는 아래의 코드와 동일합니다.
+
+function example(…) {
+    if (condition1) { return value1; }
+    else if (condition2) { return value2; }
+    else if (condition3) { return value3; }
+    else { return value4; }
+}
+</pre>
+
+<h2 id="Specifications">명세</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
+
+<p>{{Compat}}</p>
 
 <h2 id="같이_보기">같이 보기</h2>
 

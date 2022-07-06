@@ -1,15 +1,15 @@
 ---
-title: Firefox用户代理字符串(user agent string)参考
+title: Firefox 用户代理字符串 (user agent string) 参考
 slug: Web/HTTP/Headers/User-Agent/Firefox
 translation_of: Web/HTTP/Headers/User-Agent/Firefox
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>此文档描述了 Firefox 4 及之后版本的 Firefox 浏览器，以及基于 <a href="/zh-CN/docs/Mozilla/Gecko" title="/en-US/docs/Mozilla/Gecko">Gecko</a> 2.0 及以后版本的应用所使用的User Agent(user agent)。对于 Gecko 2.0 之后产生的变化，可参考 <a href="https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/">Firefox 4 中最终的 User Agent 值</a>（博客文章）。也可以参考 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">检测 User Agent</a>，以及这篇 Mozilla Hacks 博文：<a href="https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/">User Agent 检测的历史与操作清单</a>。</p>
+<p>此文档描述了 Firefox 4 及之后版本的 Firefox 浏览器，以及基于 <a href="/zh-CN/docs/Mozilla/Gecko" title="/en-US/docs/Mozilla/Gecko">Gecko</a> 2.0 及以后版本的应用所使用的 User Agent(user agent)。对于 Gecko 2.0 之后产生的变化，可参考 <a href="https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/">Firefox 4 中最终的 User Agent 值</a>（博客文章）。也可以参考 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">检测 User Agent</a>，以及这篇 Mozilla Hacks 博文：<a href="https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/">User Agent 检测的历史与操作清单</a>。</p>
 
 <h2 id="总体形式">总体形式</h2>
 
-<p>Firefox的User Agent（用户代理）值可被拆分为以下四个部分：</p>
+<p>Firefox 的 User Agent（用户代理）值可被拆分为以下四个部分：</p>
 
 <p><strong>Mozilla/5.0 (<em>platform</em>; rv:<em>geckoversion</em>) Gecko/<em>geckotrail</em> Firefox/<em>firefoxversion</em></strong></p>
 
@@ -20,7 +20,7 @@ translation_of: Web/HTTP/Headers/User-Agent/Firefox
  <li><strong><em>Gecko/geckotrail</em></strong> 标明浏览器基于 Gecko。</li>
  <li>在桌面端，<em><strong>geckotrail</strong></em> 的值恒为"20100101"。</li>
  <li><em><strong>Firefox/firefoxversion</strong></em> 标明浏览器是 Firefox，并提供了版本号（如"<em>17.0"</em>）。</li>
- <li>{{ gecko_minversion_inline("10.0") }} 自从移动版Firefox 10开始，<em><strong>geckotrail</strong></em>与<strong><em>firefoxversion</em></strong>保持一致。</li>
+ <li>自从移动版 Firefox 10 开始，<em><strong>geckotrail</strong></em>与<strong><em>firefoxversion</em></strong>保持一致。</li>
 </ul>
 
 <div class="note">（如果你必须检测浏览器引擎，而不是去做特征检测的话）推荐使用"<em>Gecko</em>"与"<em>rv:</em>"字符串来检测基于 Gecko 的浏览器。因为一些浏览器的 UA 中也包含有"<em>like Gecko</em>"字段。</div>
@@ -33,20 +33,20 @@ translation_of: Web/HTTP/Headers/User-Agent/Firefox
 <ul>
  <li><strong><em>appname/appversion</em></strong> 标明了应用名与版本，举个例子，这个字段可以是"<em>Camino/2.1.1</em>"或"<em>SeaMonkey/2.7.1</em>"。</li>
  <li>
-  <p><em><strong>Firefox/firefoxversion</strong></em> 是一个可选的兼容字段，一些基于Gecko的浏览器选择加入，以使那些支持Firefox的网页进行最大的兼容。<em><strong>firefoxversion</strong></em> 应与其提供的 Gecko 版本对应的 Firefox 版本相同。一些基于 Gecko 的浏览器可能未加入此此段，因此，在检测的时候，应当使用"Gecko"而非"Firefox"。是否展示这个字段由 about:config 中<em>"general.useragent.compatMode.firefox"</em>项设定的布尔值控制。</p>
+  <p><em><strong>Firefox/firefoxversion</strong></em> 是一个可选的兼容字段，一些基于 Gecko 的浏览器选择加入，以使那些支持 Firefox 的网页进行最大的兼容。<em><strong>firefoxversion</strong></em> 应与其提供的 Gecko 版本对应的 Firefox 版本相同。一些基于 Gecko 的浏览器可能未加入此此段，因此，在检测的时候，应当使用"Gecko"而非"Firefox"。是否展示这个字段由 about:config 中<em>"general.useragent.compatMode.firefox"</em>项设定的布尔值控制。</p>
  </li>
 </ul>
 
-<p>User Agent（UA String）的<strong><em>platform</em></strong>部分，标明了 Firefox 是否运行在手机或平板尺寸的设备上。当Firefox运行在移动设备上时，UA 中的这个字段将包含<strong>Mobile;</strong>。当Firefox运行于平板设备时，UA 中的这个字段将包含<strong>Tablet;</strong>。例如：</p>
+<p>User Agent（UA String）的<strong><em>platform</em></strong>部分，标明了 Firefox 是否运行在手机或平板尺寸的设备上。当 Firefox 运行在移动设备上时，UA 中的这个字段将包含<strong>Mobile;</strong>。当 Firefox 运行于平板设备时，UA 中的这个字段将包含<strong>Tablet;</strong>。例如：</p>
 
 <pre>Mozilla/5.0 (Android 4.4; <strong>Mobile</strong>; rv:41.0) Gecko/41.0 Firefox/41.0
 Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/41.0</pre>
 
 <div class="note">上述版本号并不对应当前版本，请避免基于此例子中的版本号。</div>
 
-<p>推荐的判断设备尺寸的方法是使用 CSS 媒体查询(CSS Media Query)。但是，当你需要使用UA判断用户是否使用移动尺寸的设备，请查找"<strong>Mobi</strong>"（以兼容使用"Mobi"的 Opera 移动浏览器）。<strong>不要</strong> 假定"Android"字符串与设备尺寸存在关联。这样的话，在“Firefox在其它操作系统的移动尺寸设备上运行”或“使用Android的笔记本电脑”的情形下，你的代码才能正确运行。此外，请使用触摸检测以分辨设备是否支持触摸，不要使用"Mobi"或"Tablet"，因为也有很多触摸设备并非移动设备或平板。</p>
+<p>推荐的判断设备尺寸的方法是使用 CSS 媒体查询 (CSS Media Query)。但是，当你需要使用 UA 判断用户是否使用移动尺寸的设备，请查找"<strong>Mobi</strong>"（以兼容使用"Mobi"的 Opera 移动浏览器）。<strong>不要</strong> 假定"Android"字符串与设备尺寸存在关联。这样的话，在“Firefox 在其它操作系统的移动尺寸设备上运行”或“使用 Android 的笔记本电脑”的情形下，你的代码才能正确运行。此外，请使用触摸检测以分辨设备是否支持触摸，不要使用"Mobi"或"Tablet"，因为也有很多触摸设备并非移动设备或平板。</p>
 
-<div class="note">Firefox OS 设备的UA中不会有标明操作系统的字段，比如"Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0"。因为其平台实为 Web。</div>
+<div class="note">Firefox OS 设备的 UA 中不会有标明操作系统的字段，比如"Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0"。因为其平台实为 Web。</div>
 
 <h2 id="Windows">Windows</h2>
 
@@ -129,7 +129,7 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
  </tbody>
 </table>
 
-<h2 id="Android_(40版本及以下)">Android (40版本及以下)</h2>
+<h2 id="Android_(40版本及以下)">Android (40 版本及以下)</h2>
 
 <table class="standard-table">
  <thead>
@@ -152,9 +152,9 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
  </tbody>
 </table>
 
-<h2 id="Android_(41版本及以上)">Android (41版本及以上)</h2>
+<h2 id="Android_(41版本及以上)">Android (41 版本及以上)</h2>
 
-<p>从41版本开始，Firefox Android 会在 <em>platform</em> 字段中包含 Android 版本号。为增加兼容性，如果浏览器在 Android 4 及以下版本的 Android 设备上运行，此字段会使用 4.4，Android 4.4 及以上版本的则会使用当前版本号。请注意，目前发布至不同版本的 Android 设备的 Gecko，是拥有相同兼容性的同一个 Gecko 的不同架构（ARMv7、x86、x86_64）编译版。</p>
+<p>从 41 版本开始，Firefox Android 会在 <em>platform</em> 字段中包含 Android 版本号。为增加兼容性，如果浏览器在 Android 4 及以下版本的 Android 设备上运行，此字段会使用 4.4，Android 4.4 及以上版本的则会使用当前版本号。请注意，目前发布至不同版本的 Android 设备的 Gecko，是拥有相同兼容性的同一个 Gecko 的不同架构（ARMv7、x86、x86_64）编译版。</p>
 
 <table class="standard-table">
  <thead>
@@ -204,9 +204,9 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <h3 id="具有设备特征的_User_Agent_值">具有设备特征的 User Agent 值</h3>
 
-<p>尽管 Mozilla <strong>强烈反对</strong>，然而一些手机制造商仍然会在其设备的 User Agent 值中包含标明设备 ID 的字段。在这种情况下，Firefox OS的 User Agent 会与上表中所示的具有设备特征(Device-specific)的字符串保持一致，其中<strong><em>nnnn;</em></strong>代表设备制造商的设备代码（参见<a href="https://wiki.mozilla.org/B2G/User_Agent/Device_Model_Inclusion_Requirements">引导</a>）。其中一些是以下几个形式： "<strong>NexusOne;</strong>"，"<strong>ZTEOpen;</strong>"，"<strong>Open C;</strong>"（另请注意，同样不鼓励在其中加入空格）。我们提供这些信息以辅助您设定 User Agent 判断逻辑，但 Mozilla 不鼓励从User Agent 值中检测设备ID。</p>
+<p>尽管 Mozilla <strong>强烈反对</strong>，然而一些手机制造商仍然会在其设备的 User Agent 值中包含标明设备 ID 的字段。在这种情况下，Firefox OS 的 User Agent 会与上表中所示的具有设备特征 (Device-specific) 的字符串保持一致，其中<strong><em>nnnn;</em></strong>代表设备制造商的设备代码（参见<a href="https://wiki.mozilla.org/B2G/User_Agent/Device_Model_Inclusion_Requirements">引导</a>）。其中一些是以下几个形式： "<strong>NexusOne;</strong>"，"<strong>ZTEOpen;</strong>"，"<strong>Open C;</strong>"（另请注意，同样不鼓励在其中加入空格）。我们提供这些信息以辅助您设定 User Agent 判断逻辑，但 Mozilla 不鼓励从 User Agent 值中检测设备 ID。</p>
 
-<p>这里有一个可以检测所有移动设备的JavaScript正则表达式，包含那些UA字符串中包含设备id的设备：</p>
+<p>这里有一个可以检测所有移动设备的 JavaScript 正则表达式，包含那些 UA 字符串中包含设备 id 的设备：</p>
 
 <pre>/mobi/i</pre>
 
@@ -214,7 +214,7 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <h3 id="Firefox_OS_版本号">Firefox OS 版本号</h3>
 
-<p>由于 Firefox OS 的版本号未被包含于User Agent 值中，我们可以通过User Agent 中的 Gecko 版本号来推断其版本信息。</p>
+<p>由于 Firefox OS 的版本号未被包含于 User Agent 值中，我们可以通过 User Agent 中的 Gecko 版本号来推断其版本信息。</p>
 
 <table class="standard-table">
  <thead>
@@ -267,7 +267,7 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 <p>通过查看 <a href="https://hg.mozilla.org/releases">Mercurial 版本库名称</a>，可以较容易地找出对应关系。其中以 <code>mozilla-b2g</code> 开头的发布便属于 Firefox OS，在其名字中包含了 Firefox OS 与 Gecko 的版本号。</p>
 </div>
 
-<p>Firefox OS 的版本号由4位数字组成：<samp>X.X.X.Y</samp>。前两位数字由 Mozilla 产品团度决定，表明是包含新特性的版本（如：v1.1, 1.2等）。第三位数字随安全更新而自增（约6周左右），第四位数字由 OEM 维护。</p>
+<p>Firefox OS 的版本号由 4 位数字组成：<samp>X.X.X.Y</samp>。前两位数字由 Mozilla 产品团度决定，表明是包含新特性的版本（如：v1.1, 1.2 等）。第三位数字随安全更新而自增（约 6 周左右），第四位数字由 OEM 维护。</p>
 
 <h2 id="iOS_上的_Firefox">iOS 上的 Firefox</h2>
 
@@ -298,11 +298,11 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <h2 id="Firefox_Web_运行库（Web_Runtime）">Firefox Web 运行库（Web Runtime）</h2>
 
-<p>在 Firefox Web 运行库（Web Runtime）中，使用与桌面版 Firefox 一致的User Agent 值。</p>
+<p>在 Firefox Web 运行库（Web Runtime）中，使用与桌面版 Firefox 一致的 User Agent 值。</p>
 
 <h2 id="其他基于_Gecko_的浏览器">其他基于 Gecko 的浏览器</h2>
 
-<p>以下是不同平台下，一些基于 Gecko 的浏览器的User Agent 值样例。请注意，其中很多并未基于Gecko 2.0 发布。</p>
+<p>以下是不同平台下，一些基于 Gecko 的浏览器的 User Agent 值样例。请注意，其中很多并未基于 Gecko 2.0 发布。</p>
 
 <table class="standard-table">
  <thead>
@@ -339,16 +339,16 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <p>在 Firefox 4 和 Gecko 2.0 之前，扩展程序可以通过 <code>general.useragent.extra.<em>identifier</em></code> 附加 User Agent 值，（参考 <a href="https://developer.mozilla.org/En/User_Agent_Strings_Reference"> 废弃的 User Agent 值参考 </a>）。不过 {{ Bug(581008) }} 出现后，这种操作已被禁止。</p>
 
-<p>在过去，特定的插件、扩展程序会在 User Agent 中添加字段，以表明他们被安装的来源网站。如果非要如此（请注意,这会减慢每个请求的发送速度），推荐的做法是 <a href="https://developer.mozilla.org/en/Setting_HTTP_request_headers">设定自定义 HTTP 请求头</a>。</p>
+<p>在过去，特定的插件、扩展程序会在 User Agent 中添加字段，以表明他们被安装的来源网站。如果非要如此（请注意，这会减慢每个请求的发送速度），推荐的做法是 <a href="https://developer.mozilla.org/en/Setting_HTTP_request_headers">设定自定义 HTTP 请求头</a>。</p>
 
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="http://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/">Firefox OS User Agent</a> （参考博客文章以及 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=777710" title="https://bugzilla.mozilla.org/show_bug.cgi?id=777710">bug 777710</a>）</li>
+ <li><a href="http://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/">Firefox OS User Agent</a> （参考博客文章以及 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=777710">bug 777710</a>）</li>
  <li><a class="external" href="https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/" title="Final User Agent string for Firefox 4">Firefox 4 的最终 User Agent</a>（博客文章）</li>
- <li><a href="/en/Browser_Detection_and_Cross_Browser_Support" title="en/Browser_Detection_and_Cross_Browser_Support">检测UA字符串以获得跨浏览器支持</a></li>
+ <li><a href="/en/Browser_Detection_and_Cross_Browser_Support" title="en/Browser_Detection_and_Cross_Browser_Support">检测 UA 字符串以获得跨浏览器支持</a></li>
  <li><a href="../../../../en/DOM/window.navigator.userAgent" rel="internal">window.navigator.userAgent</a></li>
- <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=">为Fennec UA字符串添加Android版本 (bug 1169772)</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=">为 Fennec UA 字符串添加 Android 版本 (bug 1169772)</a></li>
 </ul>
 
 <hr>

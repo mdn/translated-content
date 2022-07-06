@@ -5,15 +5,15 @@ translation_of: Web/API/URL_API
 ---
 <p>{{DefaultAPISidebar("URL API")}}</p>
 
-<p>URL API是一个URL标准的组件，它定义了有效的{{Glossary("URL", "Uniform Resource Locator")}}和访问、操作URL的API。URL标准还定义了像域名、主机和IP地址等概念，并尝试以标准的方式去描述用于以键/值对的形式提交web表单内容的遗留<code>application/x-www-form-urlencoded</code> {{Glossary("MIME type")}} 。</p>
+<p>URL API 是一个 URL 标准的组件，它定义了有效的{{Glossary("URL", "Uniform Resource Locator")}}和访问、操作 URL 的 API。URL 标准还定义了像域名、主机和 IP 地址等概念，并尝试以标准的方式去描述用于以键/值对的形式提交 web 表单内容的遗留<code>application/x-www-form-urlencoded</code> {{Glossary("MIME type")}} 。</p>
 
-<h2 id="URL的概念和用法">URL的概念和用法</h2>
+<h2 id="URL的概念和用法">URL 的概念和用法</h2>
 
-<p>URL标准的主要内容是由URL的定义以及它的结构和解析方式决定的。还介绍了与网络上计算机寻址有关的各种术语的定义，并指定了解析IP地址和DOM地址的算法。大多数开发人员更感兴趣的是API本身。</p>
+<p>URL 标准的主要内容是由 URL 的定义以及它的结构和解析方式决定的。还介绍了与网络上计算机寻址有关的各种术语的定义，并指定了解析 IP 地址和 DOM 地址的算法。大多数开发人员更感兴趣的是 API 本身。</p>
 
-<h3 id="使用URL组件">使用URL组件</h3>
+<h3 id="使用URL组件">使用 URL 组件</h3>
 
-<p>给指定的URL创建一个 {{domxref("URL")}} 对象将解析URL并通过其属性对其组成部分的快速访问。</p>
+<p>给指定的 URL 创建一个 {{domxref("URL")}} 对象将解析 URL 并通过其属性对其组成部分的快速访问。</p>
 
 <pre class="brush: js notranslate">let addr = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL_API");
 let host = addr.host;
@@ -22,20 +22,20 @@ let path = addr.pathname;
 
 <p>上面的代码片段为您正在阅读的文章创建一个<code>URL</code>对象，然后获取 {{domxref("URL.host", "host")}} 和 {{domxref("URL.pathname", "pathname")}} 属性。在本例中，这些字符串的值分别是<code>developer.mozilla.org</code> 和<code>/en-US/docs/Web/API/URL_API</code>。</p>
 
-<h3 id="修改URL">修改URL</h3>
+<h3 id="修改URL">修改 URL</h3>
 
-<p><code>URL</code>对象的大部分属性都是可设置的；您可以向它们写入新值来更改对象所表示的URL。例如，要创建一个URL对象并设置它的用户名：</p>
+<p><code>URL</code>对象的大部分属性都是可设置的；您可以向它们写入新值来更改对象所表示的 URL。例如，要创建一个 URL 对象并设置它的用户名：</p>
 
 <pre class="brush: js notranslate">let myUsername = "someguy";
 let addr = new URL("https://mysite.com/login");
 addr.username = myUsername;
 </pre>
 
-<p>设置 {{domxref("URL.username", "username")}} 值不仅是设置该属性的值，而且更新整个URL。执行上面的代码片段后， {{domxref("URL.href", "addr.href")}} 的返回值是<code>https://someguy@mysite.com/login</code>。对于任何可写属性都是如此。</p>
+<p>设置 {{domxref("URL.username", "username")}} 值不仅是设置该属性的值，而且更新整个 URL。执行上面的代码片段后， {{domxref("URL.href", "addr.href")}} 的返回值是<code>https://someguy@mysite.com/login</code>。对于任何可写属性都是如此。</p>
 
 <h3 id="查询">查询</h3>
 
-<p> {{domxref("URL.search", "search")}} 属性在URL上包含URL的查询字符串部分。例如，如果URL是<code>https://mysite.com/login?user=someguy&amp;page=news</code>，那么<code>search</code> 属性的值是<code>?user=someguy&amp;page=news</code>。您还可以使用 {{domxref("URLSearchParams")}} 对象的 {{domxref("URLSearchParams.get", "get()")}} 查找单个参数的值：</p>
+<p> {{domxref("URL.search", "search")}} 属性在 URL 上包含 URL 的查询字符串部分。例如，如果 URL 是<code>https://mysite.com/login?user=someguy&amp;page=news</code>，那么<code>search</code> 属性的值是<code>?user=someguy&amp;page=news</code>。您还可以使用 {{domxref("URLSearchParams")}} 对象的 {{domxref("URLSearchParams.get", "get()")}} 查找单个参数的值：</p>
 
 <pre class="notranslate">let addr = new URL("https://mysite.com/login?user=someguy&amp;page=news");
 try {
@@ -51,13 +51,13 @@ try {
 
 <h2 id="URL_API_接口">URL API 接口</h2>
 
-<p>URL API是一个简单的API，它的名字只有几个接口：</p>
+<p>URL API 是一个简单的 API，它的名字只有几个接口：</p>
 
 <div class="index">
 <ul>
  <li></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/URL"><code>URL</code></a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/URLSearchParams"><code>URLSearchParams</code></a></li>
+ <li><a href="/zh-CN/docs/Web/API/URL"><code>URL</code></a></li>
+ <li><a href="/zh-CN/docs/Web/API/URLSearchParams"><code>URLSearchParams</code></a></li>
  <li></li>
 </ul>
 </div>
@@ -66,7 +66,7 @@ try {
 
 <h2 id="例子">例子</h2>
 
-<p>如果希望处理URL中包含的参数，可以手动进行处理，但是创建一个URL对象更容易。下面的<code>fillTableWithParameters()</code>函数接受一个表示{{HTMLElement("table")}}的   {{domxref("HTMLTableElement")}} 对象作为输入。将行添加到表中，每个行对应参数中找到的键，第一列包含键，第二列包含值。</p>
+<p>如果希望处理 URL 中包含的参数，可以手动进行处理，但是创建一个 URL 对象更容易。下面的<code>fillTableWithParameters()</code>函数接受一个表示{{HTMLElement("table")}}的   {{domxref("HTMLTableElement")}} 对象作为输入。将行添加到表中，每个行对应参数中找到的键，第一列包含键，第二列包含值。</p>
 
 <p>注意，在生成表之前调用  {{domxref("URLSearchParams.sort()")}} 对参数列表进行排序。</p>
 
@@ -88,7 +88,7 @@ try {
   };
 }</pre>
 
-<p>在 <a href="https://url-api.glitch.me/">found on Glitch</a>上可以找到这个例子的工作版本。只要在加载页面时向URL添加参数，就可以在表中看到它们。例如，试试<code><a href="https://url-api.glitch.me/?from=mdn&amp;excitement=high&amp;likelihood=inconceivable">https://url-api.glitch.me?from=mdn&amp;excitement=high&amp;likelihood=inconceivable</a></code>。</p>
+<p>在 <a href="https://url-api.glitch.me/">found on Glitch</a>上可以找到这个例子的工作版本。只要在加载页面时向 URL 添加参数，就可以在表中看到它们。例如，试试<code><a href="https://url-api.glitch.me/?from=mdn&amp;excitement=high&amp;likelihood=inconceivable">https://url-api.glitch.me?from=mdn&amp;excitement=high&amp;likelihood=inconceivable</a></code>。</p>
 
 <h2 id="规范">规范</h2>
 

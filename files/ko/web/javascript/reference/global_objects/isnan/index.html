@@ -5,11 +5,12 @@ tags:
   - JavaScript
   - Method
   - Reference
+browser-compat: javascript.builtins.isNaN
 translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<p><code><strong>isNaN()</strong></code> 함수는 어떤 값이 {{jsxref("NaN")}}인지 판별합니다. <code>isNaN</code> 함수는 몇몇 {{anch("일반적이지 않은 규칙")}}을 가지고 있으므로, ECMAScript 2015에서 추가한 {{jsxref("Number.isNaN()")}}으로 바꾸는 편이 좋을 수도 있습니다.</p>
+<p><code><strong>isNaN()</strong></code> 함수는 어떤 값이 {{jsxref("NaN")}}인지 판별합니다. <code>isNaN</code> 함수는 몇몇 <a href="special-behavior">혼란스러운 케이스</a>을 가지고 있으므로, ECMAScript 2015에서 추가한 {{jsxref("Number.isNaN()")}}으로 바꾸는 편이 좋을 수도 있습니다.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}</p>
 
@@ -32,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 
 <h3 id="isNaN_함수의_필요성"><code>isNaN</code> 함수의 필요성</h3>
 
-<p>JavaScript의 다른 모든 값과 달리, {{jsxref("NaN")}}은 같음 연산(<code>==</code>, <code>===</code>)을 사용해 판별할 수 없습니다. <code>NaN == NaN</code>, <code>NaN === NaN</code>이기 때문입니다. 그래서 <code>NaN</code>을 판별하는 함수가 필요합니다.</p>
+<p>JavaScript의 다른 모든 값과 달리, {{jsxref("NaN")}}은 같음 연산(<code>==</code>, <code>===</code>)을 사용해 판별할 수 없습니다. <code>NaN == NaN</code>, <code>NaN === NaN</code>은 <code>false</code>로 평가되기 때문입니다. 그래서 <code>NaN</code>을 판별하는 함수가 필요합니다.</p>
 
 <h3 id="NaN_값의_기원"><code>NaN</code> 값의 기원</h3>
 
@@ -40,9 +41,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 
 <p>예를 들어 0을 0으로 나누면 <code>NaN</code>이지만, 다른 수를 0으로 나누면 그렇지 않습니다.</p>
 
-<h3 id="혼란스러운_특별_케이스_행동"><a id="special-behavior" name="special-behavior"></a>혼란스러운 특별 케이스 행동</h3>
+<h3 id="혼란스러운_특별_케이스_행동"><a  name="special-behavior"></a>혼란스러운 특별 케이스 행동</h3>
 
-<p><code>isNaN</code> 함수 스펙의 아주 초기 버전 이후로, 숫자 아닌 인수를 위한 행동이 혼란스럽습니다. <code>isNaN</code> 함수의 인수가 <a href="http://es5.github.com/#x8.5" title="http://es5.github.com/#x8.5">Number</a> 형이 아닌 경우, 그 값은 먼저 숫자로 강제됩니다. 결과값은 그 뒤에 {{jsxref("NaN")}}인지 결정하기 위해 테스트됩니다. 따라서 숫자 형으로 강제된 결과 유효한 비 NaN 숫자값(특히 강제될 때 숫자값이 0 또는 1을 주는 빈 문자열 및 불린 원시형)이 되는 비 숫자의 경우, "false" 반환값은 예기치 않을 수 있습니다; 예를 들어 빈 문자열은 분명히 "not a number"입니다. 혼란(confusion)은 용어 "not a number"가 IEEE-754 부동 소수점 값으로 표현된 숫자에 특정 의미가 있다는 사실에서 생깁니다. 함수는 "이 값이, 숫자값으로 강제되는 경우, IEEE-754 'Not A Number' 값인가?"라는 질문에 답하는 것으로 해석되어야 합니다.</p>
+<p><code>isNaN</code> 함수 스펙의 아주 초기 버전 이후로, 숫자 아닌 인수를 위한 행동이 혼란스럽습니다. <code>isNaN</code> 함수의 인수가 <a href="http://es5.github.com/#x8.5">Number</a> 형이 아닌 경우, 그 값은 먼저 숫자로 강제됩니다. 결과값은 그 뒤에 {{jsxref("NaN")}}인지 결정하기 위해 테스트됩니다. 따라서 숫자 형으로 강제된 결과 유효한 비 NaN 숫자값(특히 강제될 때 숫자값이 0 또는 1을 주는 빈 문자열 및 불린 원시형)이 되는 비 숫자의 경우, "false" 반환값은 예기치 않을 수 있습니다; 예를 들어 빈 문자열은 분명히 "not a number"입니다. 혼란(confusion)은 용어 "not a number"가 IEEE-754 부동 소수점 값으로 표현된 숫자에 특정 의미가 있다는 사실에서 생깁니다. 함수는 "이 값이, 숫자값으로 강제되는 경우, IEEE-754 'Not A Number' 값인가?"라는 질문에 답하는 것으로 해석되어야 합니다.</p>
 
 <p>ECMAScript (ES2015) 최근 버전은 {{jsxref("Number.isNaN()")}} 함수를 포함합니다. <code>Number.isNaN(x)</code>는 <code>x</code>가 <code>NaN</code>인지 아닌지 테스트하는 믿을 수 있는 방법이 됩니다. 그러나 <code>Number.isNaN</code>으로도, <code>NaN</code>의 의미는 정확한 숫자 의미로 남아있고 단순히 "not a number"는 아닙니다. 그 대신에, <code>Number.isNaN</code>이 없을 경우에, 식 <code>(x != x)</code>은 변수 <code>x</code>가 <code>NaN</code>인지 아닌지 테스트하는 더 믿을 수 있는 방법입니다, 그 결과는 <code>isNaN</code>을 믿을 수 없게 하는 오탐(false positive)의 대상이 아니기에.</p>
 
@@ -180,7 +181,7 @@ isNaN() == isNaN(Number())   // 거짓, isNaN() == true 및 Number() == 0 때문
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
-<div id="compat-mobile">{{Compat("javascript.builtins.isNaN")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="같이_보기">같이 보기</h2>
 

@@ -9,16 +9,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 ---
 <div>{{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Объект <strong><code>Intl.DateTimeFormat</code></strong> является конструктором объектов, включающих языка-зависимое форматирование даты и времени.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code>new Intl.DateTimeFormat([<var>locales</var>[, <var>options</var>]])
+<pre class="syntaxbox"><code>new Intl.DateTimeFormat([<var>locales</var>[, <var>options</var>]])
 Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>locales</code></dt>
@@ -86,43 +86,43 @@ Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</va
  </dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
-<h3 id="Properties" name="Properties">Свойства</h3>
+<h3 id="Properties">Свойства</h3>
 
 <dl>
  <dt>{{jsxref("DateTimeFormat.prototype", "Intl.DateTimeFormat.prototype")}}</dt>
  <dd>Позволяет добавлять свойства ко всем объектам.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <dl>
  <dt>{{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}</dt>
  <dd>Возвращает массив, содержащий те из предоставленных локалей, которые поддерживаются без отката к локали по умолчанию среды выполнения.</dd>
 </dl>
 
-<h2 id="DateTimeFormat_instances" name="DateTimeFormat_instances">Экземпляры объекта <code>DateTimeFormat</code></h2>
+<h2 id="DateTimeFormat_instances">Экземпляры объекта <code>DateTimeFormat</code></h2>
 
-<h3 id="Properties_of_DateTimeFormat_instance" name="Properties_of_DateTimeFormat_instance">Свойства</h3>
+<h3 id="Properties_of_DateTimeFormat_instance">Свойства</h3>
 
 <p>Экземпляры <code>DateTimeFormat</code> наследуют следующие свойства из своего прототипа:</p>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype', 'Properties')}}</div>
 
-<h3 id="Methods_of_DateTimeFormat_instance" name="Methods_of_DateTimeFormat_instance">Методы</h3>
+<h3 id="Methods_of_DateTimeFormat_instance">Методы</h3>
 
 <p>Экземпляры <code>DateTimeFormat</code> наследуют следующие методы из своего прототипа:</p>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype', 'Methods')}}</div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_DateTimeFormat" name="Example:_Using_DateTimeFormat">Пример: использование <code>DateTimeFormat</code></h3>
+<h3 id="Example_Using_DateTimeFormat">Пример: использование <code>DateTimeFormat</code></h3>
 
 <p>При базовом использовании без определения локали <code>DateTimeFormat</code> использует локаль и опции по умолчанию.</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Вывод format без аргументов зависит от реализации,
 // локали по умолчанию и часового пояса по умолчанию
@@ -130,11 +130,11 @@ console.log(new Intl.DateTimeFormat().format(date));
 // → "12/19/2012", если код запущен с локалью en-US и часовым поясом America/Los_Angeles
 </pre>
 
-<h3 id="Example_Using_locales" name="Example:_Using_locales">Пример: использование аргумента <code>locales</code></h3>
+<h3 id="Example_Using_locales">Пример: использование аргумента <code>locales</code></h3>
 
 <p>Этот пример показывает некоторые локализованные форматы даты и времени. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент <code>locales</code>:</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Форматирование ниже предполагает, что местный часовой пояс равен
 // America/Los_Angeles для локали США
@@ -166,11 +166,11 @@ console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
 // → "20/12/2012"
 </pre>
 
-<h3 id="Example_Using_options" name="Example:_Using_options">Пример: использование аргумента <code>options</code></h3>
+<h3 id="Example_Using_options">Пример: использование аргумента <code>options</code></h3>
 
 <p>Формат даты и времени может быть настроен с помощью аргумента <code>options</code>:</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Запрашиваем день недели вместе с длинным форматом даты
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -201,27 +201,14 @@ console.log(date.toLocaleString('en-US', options));
 // → "12/19/2012, 19:00:00"
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 1.0', '#sec-12.1', 'Intl.DateTimeFormat')}}</td>
-   <td>{{Spec2('ES Int 1.0')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.Intl.DateTimeFormat")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}</div>

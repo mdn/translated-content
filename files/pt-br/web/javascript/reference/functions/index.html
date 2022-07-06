@@ -77,7 +77,7 @@ function minhaFuncao(objeto) {
 
 <dl>
  <dt><code>param</code></dt>
- <dd>O nome de um argumento a ser passado para a função. Uma função pode ter até 255 argumentos.</dd>
+ <dd>O nome de um argumento a ser passado para a função.</dd>
 </dl>
 
 <dl>
@@ -101,7 +101,7 @@ function minhaFuncao(objeto) {
 
 <dl>
  <dt><code>param</code></dt>
- <dd>O nome de um argumento a ser passado para a função. Uma função pode ter até 255 argumentos.</dd>
+ <dd>O nome de um argumento a ser passado para a função.</dd>
 </dl>
 
 <dl>
@@ -211,21 +211,19 @@ param =&gt; expressão
 
 <p>Compare o seguinte:</p>
 
-<p>Uma função definida com <em><code>function</code> constructor</em> atribuiída à variável multiply</p>
+<p>Uma função definida com <code>Function</code> <em>constructor</em> atribuída à variável <code>multiply</code></p>
 
-<pre class="brush: js notranslate">function multiply(x, y) {
-   return x * y;
-}
+<pre class="brush: js notranslate">var multiply = new Function('x', 'y', 'return x * y');
 </pre>
 
-<p><code>Uma </code><em>function expression</em><code> de uma função anônima atribuída à variável multiplicar</code></p>
+<p>Uma <em>function expression</em> de uma função anônima atribuída à variável <code>multiply</code></p>
 
 <pre class="brush: js notranslate">var multiply = function(x, y) {
    return x * y;
 };
 </pre>
 
-<p><code>Uma </code><em>function expression </em><code>de uma função chamada func_name atribuída à variável multiplicar</code></p>
+<p>Uma <em>function expression </em>de uma função chamada <code>func_name</code> atribuída à variável <code>multiply</code></p>
 
 <pre class="brush: js notranslate">var multiply = function func_name(x, y) {
    return x * y;
@@ -248,7 +246,7 @@ alert(x); // throws an error
 
 <p>Como o quarto exemplo mostra, o nome da função pode ser diferente da variável à qual a função é atribuída. Eles não têm relação um com o outro. Uma declaração de função também cria uma variável com o mesmo nome da função. Assim, ao contrário daquelas definidas por expressões de função, funções definidas por declarações de função podem ser acessadas pelo seu nome no escopo onde elas foram definidas:</p>
 
-<p>Uma função definida por '<code>new Function'</code> não possui um nome. Entretanto, na máquina de JavaScript<a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>, a forma serializada da função aparece como se ela tivesse o nome "anonymous". Por exemplo, <code>alert(new Function())</code> gera como saída:</p>
+<p>Uma função definida por '<code>new Function'</code> não possui um nome. Entretanto, na máquina de JavaScript <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>, a forma serializada da função aparece como se ela tivesse o nome "anonymous". Por exemplo, <code>alert(new Function())</code> gera como saída:</p>
 
 <pre class="brush: js notranslate">function anonymous() {
 }
@@ -268,11 +266,11 @@ function foo() {
 }
 </pre>
 
-<p>Uma função definida por uma expressão de função herda o escopo atual. Isto é, a função forma um closure. Por outro lado, uma função definida por um construtor<code>Function</code> não herda qualquer escopo a não ser o escopo global (que todas as funções herdam).</p>
+<p>Uma função definida por uma expressão de função herda o escopo atual. Isto é, a função forma um closure. Por outro lado, uma função definida por um construtor <code>Function</code> não herda qualquer escopo a não ser o escopo global (que todas as funções herdam).</p>
 
-<p>Funções definidas por expressões de função e declarações de função são analisadas somente uma vez, enquanto aquelas definidas pelo construtor<code>Function</code> não são. Isto é, a string que forma o corpo da função, passada para o construtor<code>Function</code> precisa ser analisada toda vez que o construtor é chamado. Embora uma expressão de função crie um closure a cada vez, o corpo da função não é reanalisado, assim expressões de função ainda são mais rápidas do que  "<code>new Function(...)</code>". Assim, o construtor<code>Function</code> deve geralmente ser evitado sempre que possível.</p>
+<p>Funções definidas por expressões de função e declarações de função são analisadas somente uma vez, enquanto aquelas definidas pelo construtor <code>Function</code> não são. Isto é, a string que forma o corpo da função, passada para o construtor <code>Function</code> precisa ser analisada toda vez que o construtor é chamado. Embora uma expressão de função crie um closure a cada vez, o corpo da função não é reanalisado, assim expressões de função ainda são mais rápidas do que  "<code>new Function(...)</code>". Assim, o construtor <code>Function</code> deve geralmente ser evitado sempre que possível.</p>
 
-<p>Deve ser notado, entretanto, que expressões de função e declarações de função aninhadas dentro de uma função gerada pela análise da string de um construtor<code>Function</code> não são analisadas repetidamente. Por exemplo:</p>
+<p>Deve ser notado, entretanto, que expressões de função e declarações de função aninhadas dentro de uma função gerada pela análise da string de um construtor <code>Function</code> não são analisadas repetidamente. Por exemplo:</p>
 
 <pre class="brush: js notranslate">var foo = (new Function("var bar = \'FOO!\';\nreturn(function() {\n\talert(bar);\n});"))();
 foo(); // O segmento "function() {\n\talert(bar);\n}" do corpo da função não é reanalisado.</pre>
@@ -419,7 +417,7 @@ resultado = padZeros(5,4);  // retorno "0005"
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_do_navegador">Compatibilidade do navegador</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>{{ CompatibilityTable() }}</p>
 

@@ -5,7 +5,7 @@ translation_of: Web/API/Document/execCommand
 ---
 <div>{{ApiRef("DOM")}}{{Obsolete_header}}</div>
 
-<p><span class="seoSummary">Quando um documento HTML está em <code><a href="/en-US/docs/Web/API/Document/designMode">designMode</a></code>, seu objeto <code>document</code>  expõe um metodo <strong><code>execCommand</code></strong> para editar a região editável corrente, algo como elementos <a href="/en-US/docs/Web/HTML/Element/input">form inputs</a> ou <code><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contentEditable</a></code>.</span></p>
+<p><span class="seoSummary">Quando um documento HTML está em <code><a href="/en-US/docs/Web/API/Document/designMode">designMode</a></code>, seu objeto <code>document</code>  expõe um metodo <strong><code>execCommand</code></strong> para editar a região editável corrente, algo como elementos <a href="/en-US/docs/Web/HTML/Element/input">form inputs</a> ou <code><a href="/pt-BR/docs/Web/HTML/Global_attributes/contenteditable">contentEditable</a></code>.</span></p>
 
 <p>A maioria dos comandos afetam apaenas uma área selecionada [<a href="/en-US/docs/Web/API/Selection">seleção</a>] (negrito, itálico, etc.), enquantos outros adicionam novos elementos (adicionar um link por exemplo), ou afetam uma linha toda (identação). Quando usando <code>contentEditable</code>, o metódo <code>execCommand()</code> afeta o elemento editável ativo.</p>
 
@@ -26,7 +26,7 @@ translation_of: Web/API/Document/execCommand
 
 <dl>
  <dt><code>aCommandName</code></dt>
- <dd>Uma {{domxref("DOMString")}} especificando o nome do comando a ser executado. Veja {{anch("Comandos")}} para um lista dos possíveis comandos.</dd>
+ <dd>Uma {{domxref("DOMString")}} especificando o nome do comando a ser executado. Veja <a href="#comandos">Comandos</a> para um lista dos possíveis comandos.</dd>
  <dt><code>aShowDefaultUI</code></dt>
  <dd>Um {{jsxref("Boolean")}} indicando se a interface padrão do usuário deve ser mostrada. Isso não é implementado no Mozilla.</dd>
  <dt><code>aValueArgument</code></dt>
@@ -45,11 +45,11 @@ translation_of: Web/API/Document/execCommand
  <dt><code>contentReadOnly</code></dt>
  <dd>Torna o documento de conteúdo somente leitura ou editável. Isso requer um valor booleano <code>true</code> / <code>false</code> como argumento. (Não é suportado pelo Internet Explorer.)</dd>
  <dt><code>copy</code></dt>
- <dd>Copia a seleção atual para a área de transferência. As condições para ativar esse comportamento variam de um navegador para outro e evoluíram com o tempo. Verifique a Tabela de {{anch("Compatibilidade entre Browsers")}} para determinar se você pode usar no seu caso.</dd>
+ <dd>Copia a seleção atual para a área de transferência. As condições para ativar esse comportamento variam de um navegador para outro e evoluíram com o tempo. Verifique a Tabela de <a href="#compatibilidade_entre_browsers">Compatibilidade entre Browsers</a> para determinar se você pode usar no seu caso.</dd>
  <dt><code>createLink</code></dt>
  <dd>Cria um hiperlink a partir da seleção, mas apenas se houver uma seleção. Requer uma string <a href="/en-US/docs/Archive/Mozilla/URIs_and_URLs">URI</a> como argumento para o <code>href</code> do link.  O URI deve conter pelo menos um único caractere, que pode ser um espaço em branco. (O Internet Explorer criará um link com um valor nulo.)</dd>
  <dt><code>cut</code></dt>
- <dd>Remove a seleção atual e a copia para a área de transferência. Quando esse comportamento é ativado, varia entre os navegadores e suas condições evoluíram com o tempo. Verifique a Tabela de {{anch("Compatibilidade entre Browsers")}} para mais detalhes.</dd>
+ <dd>Remove a seleção atual e a copia para a área de transferência. Quando esse comportamento é ativado, varia entre os navegadores e suas condições evoluíram com o tempo. Verifique a Tabela de <a href="#compatibilidade_entre_browsers">Compatibilidade entre Browsers</a> para mais detalhes.</dd>
  <dt><code>decreaseFontSize</code></dt>
  <dd>Adiciona a tag {{HTMLElement("small")}} ao redor da seleção ou no ponto de inserção. (Não é suportado pelo Internet Explorer.)</dd>
  <dt><code>defaultParagraphSeparator</code></dt>

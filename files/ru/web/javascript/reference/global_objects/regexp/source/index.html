@@ -12,13 +12,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/source
 ---
 <div>{{JSRef("Global_Objects", "RegExp")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Свойство <strong><code>source</code></strong> возвращает {{jsxref("Global_Objects/String", "строку", "", 1)}}, содержащую текст шаблона регулярного выражения без прямых слешей с обеих сторон и без флагов регулярного выражения.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_source" name="Example:_Using_source">Пример: использование свойства <code>source</code></h3>
+<h3 id="Example_Using_source">Пример: использование свойства <code>source</code></h3>
 
 <pre class="brush: js">var regex = /fooBar/ig;
 
@@ -32,39 +32,15 @@ console.log(regex.source); // 'fooBar', не содержит прямые сл�
 new RegExp('\n').source === '\n';  // true, до появления ES5
 new RegExp('\n').source === '\\n'; // true, начиная с ES5</pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.2.<br>
-    JavaScript 1.5: свойство <code>source</code> является свойством экземпляра {{jsxref("Global_Objects/RegExp", "RegExp")}}, а не самого объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.10.7.1', 'RegExp.prototype.source')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-get-regexp.prototype.source', 'RegExp.prototype.source')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Свойство <code>source</code> теперь является свойством доступа в прототипе объекта, а не собственным свойством данных экземпляра.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("RegExp.prototype.flags")}}</li>

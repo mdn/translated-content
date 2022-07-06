@@ -3,28 +3,28 @@ title: dx
 slug: Web/SVG/Attribute/dx
 tags:
   - SVG
-  - SVG标签
+  - SVG 标签
 translation_of: Web/SVG/Attribute/dx
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG属性参考汇总</a></p>
+<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG 属性参考汇总</a></p>
 
-<p><code>dx属性表示一个元素或其内容在x轴方向上的偏移，偏移量取决于设置该属性的元素。</code></p>
+<p><code>dx 属性表示一个元素或其内容在 x 轴方向上的偏移，偏移量取决于设置该属性的元素。</code></p>
 
 <p>对于{{SVGElement("feOffset")}}元素，它的值代表所有输入的图像的偏移量之和。这个总和被表达在由{{SVGElement("filter")}}元素的{{SVGAttr("primitiveUnits")}}属性定义的坐标系中。</p>
 
-<p>对于{{SVGElement("glyphRef")}}元素，它的值代表该符号在字体坐标系中x轴上的相对坐标。</p>
+<p>对于{{SVGElement("glyphRef")}}元素，它的值代表该符号在字体坐标系中 x 轴上的相对坐标。</p>
 
 <p>对于{{SVGElement("text")}}、{{SVGElement("tspan")}}、{{SVGElement("tref")}}和{{SVGElement("altGlyph")}}元素，由于这些元素允许设置<a href="/en/SVG/Content_type#List-of-Ts" title="/en/SVG/Content_type#List-of-Ts">&lt;list-of-length&gt;</a>，所以更复杂。</p>
 
-<p>如果只提供了一个<a href="/en/SVG/Content_type#Length" title="https://developer.mozilla.org/en/SVG/Content_type#Length">&lt;length&gt;</a>，当前文本位置会沿着坐标系内x轴方向偏移<a href="/en/SVG/Content_type#Length" title="https://developer.mozilla.org/en/SVG/Content_type#Length">&lt;length&gt;</a> 。</p>
+<p>如果只提供了一个<a href="/en/SVG/Content_type#Length" title="https://developer.mozilla.org/en/SVG/Content_type#Length">&lt;length&gt;</a>，当前文本位置会沿着坐标系内 x 轴方向偏移<a href="/en/SVG/Content_type#Length" title="https://developer.mozilla.org/en/SVG/Content_type#Length">&lt;length&gt;</a> 。</p>
 
-<p>如果提供了一个由逗号或者空格分隔的<a href="/en/SVG/Content_type#Length" title="https://developer.mozilla.org/en/SVG/Content_type#Length">&lt;length&gt;</a>列表，列表中的值将会表示前n个字符沿x轴方向偏移的增量。因此，当前文本位置也因为绘制当前{{SVGElement("text")}}元素而沿x轴方向偏移。</p>
+<p>如果提供了一个由逗号或者空格分隔的<a href="/en/SVG/Content_type#Length" title="https://developer.mozilla.org/en/SVG/Content_type#Length">&lt;length&gt;</a>列表，列表中的值将会表示前 n 个字符沿 x 轴方向偏移的增量。因此，当前文本位置也因为绘制当前{{SVGElement("text")}}元素而沿 x 轴方向偏移。</p>
 
 <p>如果在<a href="/en/SVG/Content_type#Length" title="https://developer.mozilla.org/en/SVG/Content_type#Length">&lt;length&gt;</a>列表中有更多的字符，那么对于每个字符，都有</p>
 
 <ul>
- <li>如果祖先{{SVGElement("text")}}或{{SVGElement("tspan")}}元素对于给定的字符，通过dx的属性指定了相对x坐标，那么当前文本位置会沿坐标系的x轴方向偏移该数值（最近的祖先具有优先级）</li>
- <li>否则没有额外的x轴方向的偏移发生</li>
+ <li>如果祖先{{SVGElement("text")}}或{{SVGElement("tspan")}}元素对于给定的字符，通过 dx 的属性指定了相对 x 坐标，那么当前文本位置会沿坐标系的 x 轴方向偏移该数值（最近的祖先具有优先级）</li>
+ <li>否则没有额外的 x 轴方向的偏移发生</li>
 </ul>
 
 <h2 id="用法上下文">用法上下文</h2>
@@ -45,18 +45,18 @@ translation_of: Web/SVG/Attribute/dx
   </tr>
   <tr>
    <th scope="row">规范文档</th>
-   <td><a href="http://www.w3.org/TR/SVG11/text.html#AltGlyphElementDXAttribute" rel="external" title="http://www.w3.org/TR/SVG11/text.html#AltGlyphElementDXAttribute">SVG 1.1 (2nd Edition): altGlyph element</a><br>
-    <a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feOffsetDxAttribute" title="http://www.w3.org/TR/SVG11/filters.html#feOffsetDxAttribute">SVG 1.1 (2nd Edition): feOffset element</a><br>
-    <a href="http://www.w3.org/TR/SVG11/text.html#GlyphRefElementDXAttribute" rel="external" title="http://www.w3.org/TR/SVG11/text.html#GlyphRefElementDXAttribute">SVG 1.1 (2nd Edition): glyphRef element</a><br>
-    <a href="http://www.w3.org/TR/SVG11/text.html#TextElementDXAttribute" rel="external" title="http://www.w3.org/TR/SVG11/text.html#TextElementDXAttribute">SVG 1.1 (2nd Edition): text element</a><br>
-    <a href="http://www.w3.org/TR/SVG11/text.html#TSpanElementDXAttribute" rel="external" title="http://www.w3.org/TR/SVG11/text.html#TSpanElementDXAttribute">SVG 1.1 (2nd Edition): tspan element</a></td>
+   <td><a href="http://www.w3.org/TR/SVG11/text.html#AltGlyphElementDXAttribute" rel="external">SVG 1.1 (2nd Edition): altGlyph element</a><br>
+    <a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feOffsetDxAttribute">SVG 1.1 (2nd Edition): feOffset element</a><br>
+    <a href="http://www.w3.org/TR/SVG11/text.html#GlyphRefElementDXAttribute" rel="external">SVG 1.1 (2nd Edition): glyphRef element</a><br>
+    <a href="http://www.w3.org/TR/SVG11/text.html#TextElementDXAttribute" rel="external">SVG 1.1 (2nd Edition): text element</a><br>
+    <a href="http://www.w3.org/TR/SVG11/text.html#TSpanElementDXAttribute" rel="external">SVG 1.1 (2nd Edition): tspan element</a></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="元素">元素</h2>
 
-<p>这些元素可以使用dx属性</p>
+<p>这些元素可以使用 dx 属性</p>
 
 <ul>
  <li>{{ SVGElement("altGlyph") }}</li>

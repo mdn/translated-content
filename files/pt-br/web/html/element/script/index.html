@@ -47,11 +47,11 @@ translation_of: Web/HTML/Element/script
  </div>
  </dd>
  <dd>
- <p>Scripts inseridos dinamicamente (usando <code>document.createElement</code>) são executados assincronamente por padrão, então para turna-lo uma execução síncrona (ex. executar scripts na ordem que eles foram carregados) atribua <code>async=false</code>.</p>
+ <p>Scripts inseridos dinamicamente (usando <code>document.createElement</code>) são executados assincronamente por padrão, então para torná-lo uma execução síncrona (ex. executar scripts na ordem que eles foram carregados) atribua <code>async=false</code>.</p>
  </dd>
- <dd>Veja {{anch("Browser compatibility")}} para notas no suporte do navegador. Veja também  <a href="/en-US/docs/Games/Techniques/Async_scripts">Scripts assíncronos para asm.js</a>.</dd>
+ <dd>Veja <a href="#browser_compatibility">Browser compatibility</a> para notas no suporte do navegador. Veja também  <a href="/en-US/docs/Games/Techniques/Async_scripts">Scripts assíncronos para asm.js</a>.</dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
- <dd>Elementos <code>script</code> passam o mínimo de informação para  {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} em scripts que não passem na checagem do <a href="https://developer.mozilla.org/en-US/docs/HTTP_access_control">CORS</a>. Para permitir logs de erro para sites que usem domínimos diferentes para arquivos estáticos, use esse atributo. Veja <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS settings attributes</a> par uma explicação mais detalhada dos argumentos válidos.</dd>
+ <dd>Elementos <code>script</code> passam o mínimo de informação para  {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} em scripts que não passem na checagem do <a href="https://developer.mozilla.org/en-US/docs/HTTP_access_control">CORS</a>. Para permitir logs de erro para sites que usam domínios diferentes para arquivos estáticos, use esse atributo. Veja <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS settings attributes</a> para uma explicação mais detalhada dos argumentos válidos.</dd>
  <dt>{{htmlattrdef("defer")}}</dt>
  <dd>Esse atributo Boleano é usado para indicar ao navegador que o script deve ser executado depois que o documento tenha sido parseado, mas antes de disparar o evento {{event("DOMContentLoaded")}}</dd>
  <dd>Scripts com o atributo <code>defer</code> vão impedir que o evento DOMContentLoaded seja disparado até que o script seja carregado e tenha terminado de ser <em>avaliado</em>.</dd>
@@ -143,7 +143,7 @@ translation_of: Web/HTML/Element/script
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <div>{{CompatibilityTable}}</div>
 

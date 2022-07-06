@@ -40,13 +40,13 @@ translation_of: Web/JavaScript/Reference/Operators/void
 
 <h2 id="JavaScript_URIs">JavaScript URIs</h2>
 
-<p>当用户点击一个以 <code>javascript:</code> 开头的URI 时，它会执行URI中的代码，然后用返回的值替换页面内容，除非返回的值是{{jsxref("Global_Objects/undefined", "undefined")}}。<code>void</code>运算符可用于返回{{jsxref("Global_Objects/undefined", "undefined")}}。例如：</p>
+<p>当用户点击一个以 <code>javascript:</code> 开头的 URI 时，它会执行 URI 中的代码，然后用返回的值替换页面内容，除非返回的值是{{jsxref("Global_Objects/undefined", "undefined")}}。<code>void</code>运算符可用于返回{{jsxref("Global_Objects/undefined", "undefined")}}。例如：</p>
 
 <pre class="brush: html">&lt;a href="javascript:void(0);"&gt;
   这个链接点击之后不会做任何事情，如果去掉 void()，
   点击之后整个页面会被替换成一个字符 0。
 &lt;/a&gt;
-&lt;p&gt; chrome中即使&lt;a href="javascript:0;"&gt;也没变化，firefox中会变成一个字符串0 &lt;/p&gt;
+&lt;p&gt; chrome 中即使&lt;a href="javascript:0;"&gt;也没变化，firefox 中会变成一个字符串 0 &lt;/p&gt;
 &lt;a href="javascript:void(document.body.style.backgroundColor='green');"&gt;
   点击这个链接会让页面背景变成绿色。
 &lt;/a&gt;
@@ -103,7 +103,7 @@ translation_of: Web/JavaScript/Reference/Operators/void
 
 <p>{{Compat("javascript.operators.void")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></code></li>

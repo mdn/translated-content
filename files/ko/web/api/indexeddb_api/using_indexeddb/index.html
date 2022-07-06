@@ -111,7 +111,7 @@ request.onsuccess = function(event) {
 
 <h3 id="데이터베이스의_버전_생성_또는_업데이트_2">데이터베이스의 버전 생성 또는 업데이트</h3>
 
-<p><a id="데이터베이스의_버전_생성_또는_업데이트" name="데이터베이스의_버전_생성_또는_업데이트"></a>새로운 데이터베이스를 만들거나 기존 데이터베이스의 버전 번호를 높일 때({{ anch("데이터베이스 열기") }}시, 이전 버전보다 높은 버전 번호를 지정하면), <code>onupgradeneeded</code> 가 트리거되고 <code>request.result</code>(즉, 아래의 예제 : <code>db</code>)에 설정된 <code>onversionchange</code> 이벤트 핸들러에 <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> 객체가 전달됩니다. <code>upgradeneeded</code> 이벤트 처리기에서 이 버전의 데이터베이스에 필요한 객체 저장소를 만들어야합니다:</p>
+<p><a id="데이터베이스의_버전_생성_또는_업데이트" name="데이터베이스의_버전_생성_또는_업데이트"></a>새로운 데이터베이스를 만들거나 기존 데이터베이스의 버전 번호를 높일 때(<a href="#데이터베이스_열기">데이터베이스 열기</a>시, 이전 버전보다 높은 버전 번호를 지정하면), <code>onupgradeneeded</code> 가 트리거되고 <code>request.result</code>(즉, 아래의 예제 : <code>db</code>)에 설정된 <code>onversionchange</code> 이벤트 핸들러에 <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> 객체가 전달됩니다. <code>upgradeneeded</code> 이벤트 처리기에서 이 버전의 데이터베이스에 필요한 객체 저장소를 만들어야합니다:</p>
 
 <pre class="brush: js notranslate"><code>// This event is only implemented in recent browsers
 request.onupgradeneeded = function(event) {
@@ -309,7 +309,7 @@ for (var i in customerData) {
   };
 }</pre>
 
-<p>호출에서 <code>add()</code>까지의 과정에서 생성된 트랜잭션의 <code>result</code>는 추가된 데이터의 키와 같습니다. 따라서 이 경우, 오브젝트 스토어가 <code>ssn</code> 속성을 키 패스로 사용하기 때문에 추가된 데이터의 <code>ssn</code> 속성과 같은 값을 가질 것입니다. <code>add()</code> 함수를 사용할 때 같은 키를 가진 데이터가 데이터베이스 안에 존재하지 않아야 한다는 점에 주의하십시오. 만일 당신이 이미 존재하는 데이터를 수정하고 싶거나, 혹은 이미 데이터가 있건 말건 상관 없다면 문서 아래쪽의 {{ anch("Updating an entry in the database") }} 부분에서 소개하는 <code>put()</code> 함수를 사용하십시오. </p>
+<p>호출에서 <code>add()</code>까지의 과정에서 생성된 트랜잭션의 <code>result</code>는 추가된 데이터의 키와 같습니다. 따라서 이 경우, 오브젝트 스토어가 <code>ssn</code> 속성을 키 패스로 사용하기 때문에 추가된 데이터의 <code>ssn</code> 속성과 같은 값을 가질 것입니다. <code>add()</code> 함수를 사용할 때 같은 키를 가진 데이터가 데이터베이스 안에 존재하지 않아야 한다는 점에 주의하십시오. 만일 당신이 이미 존재하는 데이터를 수정하고 싶거나, 혹은 이미 데이터가 있건 말건 상관 없다면 문서 아래쪽의 <a href="#updating_an_entry_in_the_database">Updating an entry in the database</a> 부분에서 소개하는 <code>put()</code> 함수를 사용하십시오. </p>
 
 <h3 id="데이터베이스로부터_데이터를_지우기">데이터베이스로부터 데이터를 지우기</h3>
 
@@ -1302,7 +1302,7 @@ input {
 
 <ul>
  <li><a href="https://developer.mozilla.org/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB API Reference</a></li>
- <li><a href="http://www.w3.org/TR/IndexedDB/" title="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
+ <li><a href="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome" title="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">Using IndexedDB in chrome</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox">Using JavaScript generators in Firefox</a></li>
  <li>IndexedDB <a href="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom%2FindexedDB%2F.*%5C.idl&amp;regexp=1" title="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom/indexedDB/.*\.idl&amp;regexp=1">interface files</a> in the Firefox source code</li>
@@ -1311,8 +1311,8 @@ input {
 <h3 id="Tutorials_and_guides">Tutorials and guides</h3>
 
 <ul>
- <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/" title="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
- <li><a href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx" title="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
+ <li><a href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
 </ul>
 
 <h3 id="Libraries">Libraries</h3>

@@ -7,7 +7,7 @@ translation_of: Web/API/Window/prompt
 
 <p>Метод <code>Window.prompt()</code> отображает диалоговое окно с необязательным запросом на ввод текста.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><em>result</em> = window.prompt(<em>message</em>, <em>default</em>);
 </pre>
@@ -18,7 +18,7 @@ translation_of: Web/API/Window/prompt
  <li><code>default</code> — это строка, содержащая значение по умолчанию, отображаемое в поле ввода текста. Это необязательный параметр. Обратите внимание, что в Internet Explorer 7 и 8, если вы не укажете этот параметр, строка "underfined" будет значением по умолчанию.</li>
 </ul>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush: js">var sign = prompt("What's your sign?");
 
@@ -38,7 +38,7 @@ var sign = window.prompt('Are you feeling lucky', 'sure'); // открывает
 
 <p><a href="https://mdn.mozillademos.org/files/11303/prompt.png"><img alt="prompt() dialog in Chrome on OS X" src="https://mdn.mozillademos.org/files/11303/prompt.png" style="height: 298px; width: 535px;"></a></p>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <p>prompt диалог содержит однострочное текстовое поле, кнопку Cancel и кнопку OK, и возвращает (возможно пустой) текст введённый пользователем в текстовое поле.</p>
 
@@ -46,13 +46,13 @@ var sign = window.prompt('Are you feeling lucky', 'sure'); // открывает
 
 <p>Пожалуйста, обратите внимание, что результатом является строка. Это значит, что вы должны определять значение заданное пользователем. Например, если ответ должен быть Number, вы должны привести значение к Number: <span style="background-color: #f6f6f2; font-family: courier new,andale mono,monospace; font-size: 12px; line-height: normal;">var aNumber = Number(window.prompt("Type a number", "")); </span></p>
 
-<p>Пользователи <a href="/Mozilla/Firefox" title="Firefox">Mozilla Firefox</a> (например, расширений Firefox) должны использовать методы {{interface("nsIPromptService")}}.</p>
+<p>Пользователи <a href="/Mozilla/Firefox" title="Firefox">Mozilla Firefox</a> (например, расширений Firefox) должны использовать методы <code>nsIPromptService</code>.</p>
 
 <p>Начиная с Chrome {{CompatChrome(46.0)}}, этот метод блокируется внутри объекта {{htmlelement("iframe")}}, пока атрибут sandbox не будет установлен в значение <code>allow-modal</code>.</p>
 
 <p>Эта функция не действует в современной UI/Metro версии Internet Explorer для Windows 8. Он не отображает запрос для пользователя и всегда возвращает <code>undefined</code>. Неясно, является ли это ошибкой или предполагаемым поведением. Desktop версия IE выполняет функцию корректно.</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <table class="standard-table">
  <tbody>
@@ -69,7 +69,7 @@ var sign = window.prompt('Are you feeling lucky', 'sure'); // открывает
  </tbody>
 </table>
 
-<h2 id="See_also" name="See_also">Смотрите также </h2>
+<h2 id="See_also">Смотрите также </h2>
 
 <ul>
  <li>{{domxref("window.alert", "alert")}}</li>

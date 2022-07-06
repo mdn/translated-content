@@ -10,7 +10,7 @@ tags:
 translation_of: Web/API/Window/beforeunload_event
 original_slug: Web/Events/beforeunload
 ---
-<p><span style="font-family: consolas,monaco,andale mono,monospace;">当浏览器窗口关闭或者刷新时，会触发beforeunload事件。当前页面不会直接关闭，可以点击确定按钮关闭或刷新，也可以取消关闭或刷新。</span></p>
+<p>当浏览器窗口关闭或者刷新时，会触发 beforeunload 事件。当前页面不会直接关闭，可以点击确定按钮关闭或刷新，也可以取消关闭或刷新。</p>
 
 <table class="properties">
  <tbody>
@@ -46,17 +46,17 @@ original_slug: Web/Events/beforeunload
  </li>
 </ul>
 
-<p><span>某些浏览器过去在确认对话框中显示返回的字符串，从而使事件处理程序能够向用户显示自定义消息。但是，此方法已被弃用，并且在大多数浏览器中不再支持。</span></p>
+<p>某些浏览器过去在确认对话框中显示返回的字符串，从而使事件处理程序能够向用户显示自定义消息。但是，此方法已被弃用，并且在大多数浏览器中不再支持。</p>
 
 <p>为避免意外弹出窗口，除非页面已与之交互，否则浏览器可能不会显示在<code>beforeunload</code>事件中创建的提示，甚至根本不会显示它们。</p>
 
-<p>将事件处理程序/监听器加到<code>window</code>或 <code>document</code>的<code>beforeunload</code>事件后，将阻止浏览器使用内存中的页面导航缓存，例如<a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching">Firefox的Back-Forward缓存</a>或<a href="https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/">WebKit的Page Cache</a>。</p>
+<p>将事件处理程序/监听器加到<code>window</code>或 <code>document</code>的<code>beforeunload</code>事件后，将阻止浏览器使用内存中的页面导航缓存，例如<a href="/zh-CN/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching">Firefox 的 Back-Forward 缓存</a>或<a href="https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/">WebKit 的 Page Cache</a>。</p>
 
-<p>HTML规范指出在此事件中调用{{domxref("window.alert()")}}，{{domxref("window.confirm()")}}以及{{domxref("window.prompt()")}}方法，可能会失效。更多详细信息，请参见<a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts">HTML规范</a>。</p>
+<p>HTML 规范指出在此事件中调用{{domxref("window.alert()")}}，{{domxref("window.confirm()")}}以及{{domxref("window.prompt()")}}方法，可能会失效。更多详细信息，请参见<a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts">HTML 规范</a>。</p>
 
 <h2 id="示例">示例</h2>
 
-<p>HTML规范指出作者应该使用 {{domxref("Event.preventDefault()")}} 而非 {{domxref("Event.returnValue")}}，然而，不是所有浏览器都支持这么做。</p>
+<p>HTML 规范指出作者应该使用 {{domxref("Event.preventDefault()")}} 而非 {{domxref("Event.returnValue")}}，然而，不是所有浏览器都支持这么做。</p>
 
 <pre class="brush: js notranslate">window.addEventListener('beforeunload', (event) =&gt; {
   // Cancel the event as stated by the standard.

@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Object.getPrototypeOf()</strong></code> 回傳指定物件的原型，換句話說，就是取得該物件的 <code>[[Prototype]]</code> 屬性的值).</p>
+<p><code><strong>Object.getPrototypeOf()</strong></code> 回傳指定物件的原型，換句話說，就是取得該物件的 <code>[[Prototype]]</code> 屬性的值).</p>
 
 <h2 id="表達式">表達式</h2>
 
@@ -31,7 +31,7 @@ Object.getPrototypeOf(obj) === proto; // true
 
 <h2 id="備註">備註</h2>
 
-<p>如果 <code>obj</code> 參數在 ES5 並不是物件時會拋出 {{jsxref("TypeError")}} 例外，同樣狀況在 ES6 時該參數將會被強制轉換成 {{jsxref("Object")}}。</p>
+<p>如果 <code>obj</code> 參數在 ES5 並不是物件時會拋出 {{jsxref("TypeError")}} 例外，同樣狀況在 ES6 時該參數將會被強制轉換成 {{jsxref("Object")}}。</p>
 
 <pre class="brush: js">Object.getPrototypeOf("foo");
 // TypeError: "foo" is not an object (ES5 code)
@@ -41,81 +41,15 @@ Object.getPrototypeOf("foo");
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.2', 'Object.getPrototypeOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.getprototypeof', 'Object.getProtoypeOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("5")}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatOpera("12.10")}}</td>
-   <td>{{CompatSafari("5")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Opera_註">Opera 註</h2>
 
-<p>雖然舊版的 Opera 並不支援 <code>Object.getPrototypeOf()</code>，但是 Opera 從 Opera 10.50 支援非標準的 {{jsxref("Object.proto", "__proto__")}} 屬性。</p>
+<p>雖然舊版的 Opera 並不支援 <code>Object.getPrototypeOf()</code>，但是 Opera 從 Opera 10.50 支援非標準的 {{jsxref("Object.proto", "__proto__")}} 屬性。</p>
 
 <h2 id="參見">參見</h2>
 
@@ -123,6 +57,6 @@ Object.getPrototypeOf("foo");
  <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
  <li>{{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}</li>
  <li>{{jsxref("Object.prototype.__proto__")}}</li>
- <li>John Resig 的文章－－《 <a class="external" href="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a> 》</li>
+ <li>John Resig 的文章－－《 <a href="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a> 》</li>
  <li>{{jsxref("Reflect.getPrototypeOf()")}}</li>
 </ul>

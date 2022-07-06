@@ -1,119 +1,61 @@
 ---
-title: String.prototype
+title: DOMString
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/String
 tags:
-  - JavaScript
-  - Property
-  - Prototype
+  - API
+  - DOM
+  - Referencia
+  - Referencia DOM Gecko
+  - Referência DOM
   - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String
-translation_of_original: Web/JavaScript/Reference/Global_Objects/String/prototype
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/prototype
+  - WebAPI
+translation_of: Web/API/DOMString
+original_slug: Web/API/DOMString
 ---
-<p>{{JSRef("Objetos_globales", "String")}}</p>
+<p>{{APIRef("DOM")}}</p>
 
-<h2 id="Resumen" name="Resumen">Resumen</h2>
+<p><strong><code>DOMString</code></strong> es un String UTF-16. Dado que JavaScript ya usa estos strings, se mapea <code>DOMString</code> directamente a {{jsxref("String")}}.</p>
 
-<p>The <strong><code>String.prototype</code></strong> propiedad representa el prototipo de esta clase. Puede usar el prototipo para añadir propiedades o métodos a todas las instancias de una clase.</p>
+<p>Pasarle <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code> a un método o parámetro que acepte un<code>DOMString</code> suele convertirse a texto como <code>"null"</code>.</p>
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+<h2 id="Specification" name="Specification">Especificaciones</h2>
 
-<h2 id="Propiedades">Propiedades</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebIDL', '#idl-DOMString', 'DOMString')}}</td>
+   <td>{{Spec2('WebIDL')}}</td>
+   <td>Reescritura de la definición que elimina casos extraños.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Core', 'core.html#DOMString', 'DOMString')}}</td>
+   <td>{{Spec2('DOM3 Core')}}</td>
+   <td>Sin cambios desde {{SpecName('DOM2 Core')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Core', 'core.html#ID-C74D1578', 'DOMString')}}</td>
+   <td>{{Spec2('DOM2 Core')}}</td>
+   <td>Sin cambios desde {{SpecName('DOM1')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM1', 'level-one-core.html#ID-C74D1578', 'DOMString')}}</td>
+   <td>{{Spec2('DOM1')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-<dl>
- <dt><code>String.prototype.constructor</code></dt>
- <dd>Especifica la función que crea un prototipo de objeto.</dd>
- <dt>{{jsxref("String.prototype.length")}}</dt>
- <dd>Refleja la longitud de la cadena.</dd>
-</dl>
-
-<div>{{ jsOverrides("Object", "properties", "constructor", "length") }}</div>
-
-<h2 id="Métodos">Métodos</h2>
-
-<h3 id="M.C3.A9todos_no_relacionados_con_HTML" name="M.C3.A9todos_no_relacionados_con_HTML">Métodos no relacionados con HTML</h3>
-
-<dl>
- <dt>{{jsxref("String.prototype.charAt()")}}</dt>
- <dd>Devuelve el carácter en el índice especificado.</dd>
- <dt>{{jsxref("String.prototype.charCodeAt()")}}</dt>
- <dd>Devuelve el número que indica el valor Unicode del carácter en el índice especificado.</dd>
- <dt>{{jsxref("String.prototype.concat()")}}</dt>
- <dd>Combina el texto de dos cadenas y devuelve una nueva cadena.</dd>
- <dt>{{jsxref("String.prototype.indexOf()")}}</dt>
- <dd>Devuelve el índice dentro del objeto <code>String</code> que realiza la llamada de la primera ocurrencia del valor especificado, o -1 si no lo encuentra.</dd>
- <dt>{{jsxref("String.prototype.lastIndexOf()")}}</dt>
- <dd>Devuelve el índice dentro del objeto <code>String</code> que realiza la llamada de la última ocurrencia del valor especificado, o -1 si no lo encuentra.</dd>
- <dt>{{jsxref("String.prototype.match()")}}</dt>
- <dd>Se usa para emparejar una expresión regular con una cadena.</dd>
- <dt>{{jsxref("String.prototype.replace()")}}</dt>
- <dd>Se usa para emparejar una expresión regular con una cadena, y reemplezar la subcadena emparejada con una nueva subcadena.</dd>
- <dt>{{jsxref("String.prototype.search()")}}</dt>
- <dd>Realiza una búsqueda de una expresión regular en una cadena especificada.</dd>
- <dt>{{jsxref("String.prototype.slice()")}}</dt>
- <dd>Extrae una sección de una cadena y devuelve una nueva cadena.</dd>
- <dt>{{jsxref("String.prototype.split()")}}</dt>
- <dd>Divide un objeto <code>String</code> en un arreglo de cadenas, separando la cadena en subcadenas.</dd>
- <dt>{{jsxref("String.prototype.substr()")}}</dt>
- <dd>Devuelve los caracteres de una cadena comenzando en la localización especificada y hasta el número de caracteres especificado.</dd>
- <dt>{{jsxref("String.prototype.substring()")}}</dt>
- <dd>Devuelve los caracteres de una cadena entre dos índices dentro de la cadena.</dd>
- <dt>{{jsxref("String.prototype.toLowerCase()")}}</dt>
- <dd>Devuelve el valor de la cadena que realiza la llamada en minúsculas.</dd>
- <dt>{{jsxref("String.prototype.toSource()")}}</dt>
- <dd>Devuelve el objeto literal que representa el objeto especificado; puede usar este valor para crear un nuevo objeto. Sobreescribe el método {{jsxref("Object.prototype.toSource()")}}.</dd>
- <dt>{{jsxref("String.prototype.toString()")}}</dt>
- <dd>Devuelve una cadena que representa el objeto especificado. Sobreescribe el método {{jsxref("Object.prototype.toString()")}}.</dd>
- <dt>{{jsxref("String.prototype.toUpperCase()")}}</dt>
- <dd>Devuelve el valor de la cadena que realiza la llamada en mayúsculas.</dd>
- <dt>{{jsxref("String.prototype.valueOf()")}}</dt>
- <dd>Devuelve el valor primitivo del objeto especificado. Sobreescribe el método {{jsxref("Object.prototype.valueOf()")}}.</dd>
-</dl>
-
-<h3 id="HTML_wrapper_methods" name="HTML_wrapper_methods">Métodos de encapsulado HTML</h3>
-
-<p>Cada uno de los métodos siguientes devuelve una copia de la cadena encapsulada dentro de una etiqueta HTML. Por ejemplo, "test".bold() devuelve "&lt;b&gt;test&lt;/b&gt;".</p>
-
-<dl>
- <dt>{{jsxref("String.prototype.anchor()")}}</dt>
- <dd><a class="external" href="http://www.w3.org/TR/html401/struct/links.html#adef-name-A"><code>&lt;a name="<em>name</em>"&gt;</code></a> (Ancha Hipertexto)</dd>
- <dt>{{jsxref("String.prototype.big()")}}</dt>
- <dd>{{HTMLElement("big")}}</dd>
- <dt>{{jsxref("String.prototype.blink()")}}</dt>
- <dd>{{HTMLElement("blink")}}</dd>
- <dt>{{jsxref("String.prototype.bold()")}}</dt>
- <dd>{{HTMLElement("b")}}</dd>
- <dt>{{jsxref("String.prototype.fixed()")}}</dt>
- <dd>{{HTMLElement("tt")}}</dd>
- <dt>{{jsxref("String.prototype.fontcolor()")}}</dt>
- <dd><code>&lt;font color="<em>color</em>"&gt;</code></dd>
- <dt>{{jsxref("String.prototype.fontsize()")}}</dt>
- <dd><code>&lt;font size="<em>size</em>"&gt;</code></dd>
- <dt>{{jsxref("String.prototype.italics()")}}</dt>
- <dd>{{HTMLElement("i")}}</dd>
- <dt>{{jsxref("String.prototype.link()")}}</dt>
- <dd><a class="external" href="http://www.w3.org/TR/html401/struct/links.html#adef-href"><code>&lt;a href="<em>url</em>"&gt;</code></a> (Enlace a URL)</dd>
- <dt>{{jsxref("String.prototype.small()")}}</dt>
- <dd>{{HTMLElement("small")}}</dd>
- <dt>{{jsxref("String.prototype.strike()")}}</dt>
- <dd>{{HTMLElement("strike")}}</dd>
- <dt>{{jsxref("String.prototype.sub()")}}</dt>
- <dd>{{HTMLElement("sub")}}</dd>
- <dt>{{jsxref("String.prototype.sup()")}}</dt>
- <dd>{{HTMLElement("sup")}}</dd>
-</dl>
-
-<p>Estos métodos son de uso limitado, ya que sólo están disponibles un subconjunto de etiquetas HTML y atributos.</p>
-
-<p>{{ jsOverrides("Object", "methods", "charAt", "charCodeAt", "concat", "indexOf", "lastIndexOf", "localeCompare", "match", "quote", "replace", "search", "slice", "split", "substr", "substring", "toLocaleLowerCase", "toLocaleUpperCase", "toLowerCase", "toSource", "toString", "toUpperCase", "trim", "trimLeft", "trimRight", "valueOf", "anchor", "big", "blink", "bold", "fixed", "fontcolor", "fontsize", "italics", "link", "small", "strike", "sub", "sup") }}</p>
-
-<h2 id="See_also" name="See_also">Vea también</h2>
+<h2 id="Ver_también">Ver también</h2>
 
 <ul>
- <li>{{jsxref("String")}}</li>
- <li>{{jsxref("Function.prototype")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" title="/en-US/docs/Web/API/DOMString">String</a></li>
+ <li>{{domxref("USVString")}}</li>
+ <li>{{domxref("CSSOMString")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays/String_view" title="/en-US/docs/Web/JavaScript/Typed_arrays/String_view"><code>StringView</code> – una representación en C de los strings basados en arrays tipados</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMString/Binary">Strings binarios</a></li>
 </ul>
-
-<dl>
- <dt> </dt>
-</dl>

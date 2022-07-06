@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 
 <p><strong>Инструкция switch</strong> сравнивает выражение со случаями, перечисленными <font face="Courier New, Andale Mono, monospace">внутри неё</font>, а затем выполняет соответствующие инструкции.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">switch (expression) {
   case value1:
@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Statements/switch
  <dd>Инструкции, выполняемые если <code>expression</code> не соответствует ни одному случаю.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Если выражение соответствует какому-то случаю, то выполняются инструкции этого случая. Если несколько случаев соответствуют значению, только первый случай будет использован.</p>
 
@@ -51,9 +51,9 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 
 <p>Опциональная инструкция <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break" title="JavaScript/Reference/Statements/break">break</a></code> выполняет выход из блока <code>switch</code>. Она может располагаться в каждом из случаев, но не является обязательной. Если её нет, то выполняется следующая инструкция из блока <code>switch</code>.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_switch" name="Example:_Using_switch">Пример: Использование <code>switch</code></h3>
+<h3 id="Example_Using_switch">Пример: Использование <code>switch</code></h3>
 
 <p>В этом примере, если <code>expr</code> равно "Bananas", программа находит случай "Bananas" и выполняет соответствующие инструкции. При выполнении инструкции <code>break</code>, выполнение продолжится за пределами <code>switch</code>. Если бы <code>break</code> не было, то выполнились бы инструкции случая "Cherries".</p>
 
@@ -81,7 +81,7 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 console.log("Is there anything else you'd like?");
 </pre>
 
-<h3 id="What_happens_if_I_forgot_a_break" name="What_happens_if_I_forgot_a_break">Пример: Что случится, если не использовать break?</h3>
+<h3 id="What_happens_if_I_forgot_a_break">Пример: Что случится, если не использовать break?</h3>
 
 <p>Если вы не использовали инструкцию <code>break</code>, то будут выполнены инструкции следующего случая. И проверка на соответствие выражению не будет выполняться.</p>
 
@@ -103,81 +103,94 @@ switch (foo) {
         console.log('default');
 }</pre>
 
-<h3 id="Methods_for_Multi-criteria_Case" name="Methods_for_Multi-criteria_Case">Пример: Использование нескольких значений для одного случая</h3>
+<h3 id="Methods_for_Multi-criteria_Case">Цепочки case</h3>
 
-<p>Если вы хотите использовать один набор инструкций для соответствия нескольким случаям, можно использовать два способа. Первый способ является рекомендуемым, а второй - скорее трюком. Оба способа вызовут предупреждение с текстом "yes", если значение <code>foo</code> равно 0, 1, 2 или 3.</p>
+<h4 id="Одна_операция">Одна операция</h4>
 
-<p>Исходники этих способов здесь:</p>
+<p>
+  Этот метод использует тот факт, что после <code>case</code> нет прерывания и продолжится
+  выполнение следующего <code>case</code> независимо от того, соответствует ли <code>case</code> 
+  предоставленному условию. Подробнее в примере "Что случится, если не использовать break?.
+</p>
 
-<ol>
- <li><a href="http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript">Switch statement multiple cases in JavaScript (Stack Overflow)</a></li>
- <li><a href="http://stackoverflow.com/questions/21808543/multple-cripteria-single-case-switch-statement">Multiple Criteria Single Case Switch Statement (Stack Overflow)</a></li>
-</ol>
+<p>
+  Это пример <code>case</code> с одной операцией, где четыре разных значения отрабатывают одинаково.
+</p>
 
-<h4 id="Первый_способ">Первый способ</h4>
+<pre class="brush: js">var Animal = 'Giraffe';
+switch (Animal) {
+  case 'Cow':
+  case 'Giraffe':
+  case 'Dog':
+  case 'Pig':
+    console.log('This animal is not extinct.');
+    break;
+  case 'Dinosaur':
+  default:
+    console.log('This animal is extinct.');
+}</pre>
 
-<p>В первом способе используется то, что выполнение инструкции <code>switch</code> продолжится, если не использовать инструкцию <code>break</code>. Подробнее в примере "Что случится, если не использовать break?"</p>
+<h4 id="Цепочка_операций">Цепочка операций</h4>
+
+<p>
+  Это пример множественных операций внутри <code>case</code>, где в зависимости от 
+  предоставленного числа можно увидеть разный вывод. Здесь показывается, что операции 
+  отрабатывают в том порядке, в котором расположены <code>case</code>. При этом
+  числовая последовательность может не соблюдаться. Также возможно примешать в 
+  <code>case</code> строки.
+</p>
 
 <pre class="brush: js">var foo = 1;
+var output = 'Output: ';
 switch (foo) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-        alert('yes');
-        break;
-    default:
-        alert('not');
+  case 0:
+    output += 'So ';
+  case 1:
+    output += 'What ';
+    output += 'Is ';
+  case 2:
+    output += 'Your ';
+  case 3:
+    output += 'Name';
+  case 4:
+    output += '?';
+    console.log(output);
+    break;
+  case 5:
+    output += '!';
+    console.log(output);
+    break;
+  default:
+    console.log('Please pick a number from 0 to 5!');
 }</pre>
 
-<h4 id="Второй_способ">Второй способ</h4>
 
-<p>Другой способ, менее стандартный; во второй строке, где вы ожидали увидеть <code>switch(foo)</code>, расположено постоянное значение <code>true</code>, и в случаях используются выражения вместо констант:</p>
-
-<pre class="brush: js">var foo = 1;
-switch (true) { // Постоянное значение true вместо foo
-    case foo &gt;= 0 &amp;&amp; foo &lt;= 3:
-        alert('yes');
-        break;
-    default:
-        alert('not');
-}</pre>
+Вывод этого примера:
+<table>
+  <tr>
+    <th>Значение</th>
+    <th>Лог</th>
+  </tr>
+  <tr><td>`foo` is `NaN` or not `1`, `2`, `3`, `4`, `5`, or `0`</td><td>Please pick a number from 0 to 5!</td></tr>
+  <tr><td>`0`</td><td>Output: So What Is Your Name?</td></tr>
+  <tr><td>`1`</td><td>Output: What Is Your Name?</td></tr>
+  <tr><td>`2`</td><td>Output: Your Name?</td></tr>
+  <tr><td>`3`</td><td>Output: Name?</td></tr>
+  <tr><td>`4`</td><td>Output: ?</td></tr>
+  <tr><td>`5`</td><td>Output: !</td></tr>
+</table>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е Издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение.<br>
-    Реализован в JavaScript 1.2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.11', 'Инструкция switch')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-switch-statement', 'Инструкция switch')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 
 
-<p>{{Compat("javascript.statements.switch")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/docs/Web/JavaScript/Reference/Statements/if...else" lang="ru"><code>if...else</code></a></li>

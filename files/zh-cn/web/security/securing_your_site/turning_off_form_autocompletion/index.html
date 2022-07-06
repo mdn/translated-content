@@ -16,7 +16,7 @@ translation_of: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 
 <p>这些功能通常是默认启用的，但可能涉及用户的隐私，因此浏览器允许用户禁用这些功能。然而，一些数据可能会在将来失效（例如一次性密码）或包含敏感信息（例如唯一的政府身份识别码或信用卡安全码）。作为网站作者，你可能更希望浏览器不去记住这些字段的值，即使浏览器的自动填充功能已开启。</p>
 
-<p>重要的是，如果你关闭了自动填充，你就违反了这一条规则，<a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html">1.3.5: Identify Input Purpose in WCAG 2.1</a>。如果你制作的网站应该遵守WCAG，你就应该使用自动填充和自动补全。</p>
+<p>重要的是，如果你关闭了自动填充，你就违反了这一条规则，<a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html">1.3.5: Identify Input Purpose in WCAG 2.1</a>。如果你制作的网站应该遵守 WCAG，你就应该使用自动填充和自动补全。</p>
 
 <h2 id="禁用自动填充">禁用自动填充</h2>
 
@@ -68,6 +68,6 @@ translation_of: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 
 <p>如果你定义了一个用户管理页面，其中用户可以为其他人指定新的密码，因此你想阻止密码字段的自动填充，你可以使用 <code>autocomplete="new-password"</code>。</p>
 
-<p>这只是一个提示，浏览器不一定要遵守。但现代浏览器都已停止在设置了 <code>autocomplete="new-password"</code> 的 <code>&lt;input&gt;</code> 元素上使用自动填充。例如，Firefox 67 版（见 {{bug(1119063)}}）在这种情况下会停止自动填充；而 Firefox 70版（见 {{bug(1565407)}}）则可以建议一个安全生成的密码，而不自动填充已保存的密码。更多细节参见  <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete#Browser_compatibility"><code>autocomplete</code> compat table</a>。</p>
+<p>这只是一个提示，浏览器不一定要遵守。但现代浏览器都已停止在设置了 <code>autocomplete="new-password"</code> 的 <code>&lt;input&gt;</code> 元素上使用自动填充。例如，Firefox 67 版（见 {{bug(1119063)}}）在这种情况下会停止自动填充；而 Firefox 70 版（见 {{bug(1565407)}}）则可以建议一个安全生成的密码，而不自动填充已保存的密码。更多细节参见  <a href="/zh-CN/docs/Web/HTML/Attributes/autocomplete#Browser_compatibility"><code>autocomplete</code> compat table</a>。</p>
 
 <p>{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</p>

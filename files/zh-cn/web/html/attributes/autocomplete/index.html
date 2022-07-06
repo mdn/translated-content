@@ -16,16 +16,16 @@ original_slug: Web/HTML/Attributes/自动完成属性
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
-<p>HTML <code>autocomplete</code> 属性可用于以文本或数字值作为输入的 {{HTMLElement("input")}} 元素 ， {{HTMLElement("textarea")}} 元素, {{HTMLElement("select")}} 元素, 和{{HTMLElement("form")}} 元素。 <span class="seoSummary"><code>autocomplete</code> </span>允许web开发人员指定，如果有任何权限<span class="seoSummary"> {{Glossary("user agent")}} </span>必须提供填写表单字段值的自动帮助，并为浏览器提供关于字段中所期望的信息类型的指导。</p>
+<p>HTML <code>autocomplete</code> 属性可用于以文本或数字值作为输入的 {{HTMLElement("input")}} 元素 ， {{HTMLElement("textarea")}} 元素，{{HTMLElement("select")}} 元素，和{{HTMLElement("form")}} 元素。 <code>autocomplete</code> 允许 web 开发人员指定，如果有任何权限 {{Glossary("user agent")}} 必须提供填写表单字段值的自动帮助，并为浏览器提供关于字段中所期望的信息类型的指导。</p>
 
 <p>建议值的来源通常取决于浏览器。 通常，值来自用户输入的过去值，但它们也可能来自预先配置的值。 例如，浏览器可能允许用户保存其姓名，地址，电话号码和电子邮件地址，以实现自动完成目的。 也许浏览器提供了保存加密的信用卡信息的功能，以便在身份验证过程后自动完成。</p>
 
-<p>如果 {{HTMLElement("input")}}, {{HTMLElement("select")}} 或{{HTMLElement("textarea")}} 元素 没有 <code>autocomplete</code> 属性, t则该浏览器将使用该元素的表单的 <code>autocomplete</code> 属性所有者，它们可是元素的后代 {{HTMLElement("form")}} 元素 也可以是其  <code>id</code>  由元素{{htmlattrxref("form", "input")}} 属性指定的  <code>&lt;form&gt;</code>。</p>
+<p>如果 {{HTMLElement("input")}}, {{HTMLElement("select")}} 或{{HTMLElement("textarea")}} 元素 没有 <code>autocomplete</code> 属性，t 则该浏览器将使用该元素的表单的 <code>autocomplete</code> 属性所有者，它们可是元素的后代 {{HTMLElement("form")}} 元素 也可以是其  <code>id</code>  由元素{{htmlattrxref("form", "input")}} 属性指定的  <code>&lt;form&gt;</code>。</p>
 
 <p>有关更多信息，请参见 {{HTMLElement("form")}} 中的{{htmlattrxref("autocomplete", "form")}}  属性。</p>
 
 <div class="blockIndicator note">
-<p>为了提供自动完成功能，用户代理可能需要<code>&lt;input&gt;</code>/<code>&lt;select&gt;</code>/<code>&lt;textarea&gt;</code> 元素才能:</p>
+<p>为了提供自动完成功能，用户代理可能需要<code>&lt;input&gt;</code>/<code>&lt;select&gt;</code>/<code>&lt;textarea&gt;</code> 元素才能：</p>
 
 <ol>
  <li>具有 <code>name</code> 和/或 <code>id</code> 属性</li>
@@ -39,7 +39,7 @@ original_slug: Web/HTML/Attributes/自动完成属性
 <dl>
  <dt>"<code>off</code>"</dt>
  <dd>浏览器不允许为此字段自动输入或选择一个值。 文档或应用程序可能提供其自己的自动完成功能，或者出于安全方面的考虑，要求不要自动输入该字段的值。
- <div class="note"><strong>注意:</strong> 在大多数现代浏览器中， <code>autocomplete</code> 设置为 "<code>off</code>" 不会阻止密码管理器询问用户是否要保存用户名和密码信息，或者自动在网站的登录表单中填写这些值。 请参阅 <a href="/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields">the autocomplete attribute and login fields</a>.</div>
+ <div class="note"><strong>注意：</strong> 在大多数现代浏览器中， <code>autocomplete</code> 设置为 "<code>off</code>" 不会阻止密码管理器询问用户是否要保存用户名和密码信息，或者自动在网站的登录表单中填写这些值。 请参阅 <a href="/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields">the autocomplete attribute and login fields</a>.</div>
  </dd>
  <dt>"<code>on</code>"</dt>
  <dd>允许浏览器自动完成输入。 没有提供有关该字段中期望的数据类型的指导，因此浏览器可以使用自己的判断。</dd>
@@ -79,13 +79,13 @@ original_slug: Web/HTML/Attributes/自动完成属性
  <dt>"<code>address-line1</code>", "<code>address-line2</code>", <code>"address-line3"</code></dt>
  <dd>街道地址的每一行。 仅在还存在 "<code>street-address</code>" 的情况下，才应提供这些内容。.</dd>
  <dt>"<code>address-level4</code>"</dt>
- <dd>在具有四个级别的地址中，粒度最细的 {{anch("Administrative levels in addresses", "administrative level")}}。</dd>
+ <dd>在具有四个级别的地址中，粒度最细的<a href="#地址的行政级别">地址的行政级别</a>。</dd>
  <dt>"<code>address-level3</code>"</dt>
- <dd>第三个 {{anch("Administrative levels in addresses", "administrative level")}}, 在具有至少三个管理级别的地址中。</dd>
+ <dd>第三个<a href="#地址的行政级别">地址的行政级别</a>，在具有至少三个管理级别的地址中。</dd>
  <dt>"<code>address-level2</code>"</dt>
- <dd>第二个 {{anch("Administrative levels in addresses", "administrative level")}}, 在地址中至少有两个。 在具有两个行政级别的国家/地区中，通常是地址所在的城市，城镇，村庄或其他地区。</dd>
+ <dd>第二个<a href="#地址的行政级别">地址的行政级别</a>，在地址中至少有两个。 在具有两个行政级别的国家/地区中，通常是地址所在的城市，城镇，村庄或其他地区。</dd>
  <dt>"<code>address-level1</code>"</dt>
- <dd>地址中的第一个 {{anch("Administrative levels in addresses", "administrative level")}} 。 通常是地址所在的省份。 在美国，这就是州。 在瑞士，行政区。 在英国，小镇。<br>
+ <dd>地址中的第一个<a href="#地址的行政级别">地址的行政级别</a> 。通常是地址所在的省份。 在美国，这就是州。 在瑞士，行政区。 在英国，小镇。<br>
  “国家”</dd>
  <dt>"<code>country</code>"</dt>
  <dd>国家代码。</dd>
@@ -110,7 +110,7 @@ original_slug: Web/HTML/Attributes/自动完成属性
  <dt>"<code>cc-exp-year</code>"</dt>
  <dd>付款方式到期的年份。.</dd>
  <dt>"<code>cc-csc</code>"</dt>
- <dd>付款工具的安全码； 在信用卡上，这是信用卡背面的3位数验证码。</dd>
+ <dd>付款工具的安全码； 在信用卡上，这是信用卡背面的 3 位数验证码。</dd>
  <dt>"<code>cc-type</code>"</dt>
  <dd>付款方式的类型（例如“ Visa”或“ Master Card”）。</dd>
  <dt>"<code>transaction-currency</code>"</dt>
@@ -147,17 +147,17 @@ original_slug: Web/HTML/Attributes/自动完成属性
  <dt>"<code>tel-extension</code>"</dt>
  <dd>电话号码中的电话分机代码，例如旅馆中的房间或套房号或公司中的办公室分机号。</dd>
  <dt>"<code>impp</code>"</dt>
- <dd>即时消息协议端点的URL，例如“ xmpp：username@example.net”。</dd>
+ <dd>即时消息协议端点的 URL，例如“ xmpp：username@example.net”。</dd>
  <dt>"<code>url</code>"</dt>
  <dd>URL，例如在给定表单中其他字段的上下文的情况下的主页或公司网站地址等。</dd>
  <dt>"<code>photo</code>"</dt>
- <dd>代表表单中其他字段中提供的个人，公司或联系信息的图像的URL。</dd>
+ <dd>代表表单中其他字段中提供的个人，公司或联系信息的图像的 URL。</dd>
 </dl>
 
 <p>有关更多详细信息，请参见 <a href="https://html.spec.whatwg.org/multipage/forms.html#autofill">WHATWG 标准。 </a></p>
 
 <div class="note">
-<p><strong>注意:</strong> 与其他浏览器不同， <code>autocomplete</code> 属性还控制Firefox是否会跨页面加载保持— <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">是否在整个页面加载期间保持</a>  <code>&lt;input&gt;</code> 元素, <code>&lt;textarea&gt;</code> 元素, 或整个 <code>&lt;form&gt;</code> 的动态禁用状态和（如果适用）动态检查状态。 持久性功能默认情况下处于启用状态。 将 <code>autocomplete</code> 属性的值设置为<code>off</code> 将禁用此功能。即使<code>autocomplete</code> 属性通常由于其<code>type</code>而不适用，也可以这样做。 参考 {{bug(654072)}}.</p>
+<p><strong>注意：</strong> 与其他浏览器不同， <code>autocomplete</code> 属性还控制 Firefox 是否会跨页面加载保持— <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">是否在整个页面加载期间保持</a>  <code>&lt;input&gt;</code> 元素，<code>&lt;textarea&gt;</code> 元素，或整个 <code>&lt;form&gt;</code> 的动态禁用状态和（如果适用）动态检查状态。 持久性功能默认情况下处于启用状态。 将 <code>autocomplete</code> 属性的值设置为<code>off</code> 将禁用此功能。即使<code>autocomplete</code> 属性通常由于其<code>type</code>而不适用，也可以这样做。 参考 {{bug(654072)}}.</p>
 </div>
 
 <h2 id="例子">例子</h2>
@@ -185,20 +185,20 @@ original_slug: Web/HTML/Attributes/自动完成属性
 
 <p>美国境内的典型家庭住址如下所示：</p>
 
-<p>大街432号<br>
+<p>大街 432 号<br>
  Exampleville CA 95555</p>
 
 <p>在美国，地址中最不明确的部分是州，在这种情况下为“ CA”（美国邮政服务的正式缩写为“ California”）。 因此，<code>address-level1</code> 是状态，在这种情况下为“ CA”。</p>
 
 <p>地址的倒数第二个特定部分是城市或城镇名称，因此在此示例地址中， <code>address-level2</code> 为“ Exampleville”。</p>
 
-<p>美国地址不使用3级及更高级别。</p>
+<p>美国地址不使用 3 级及更高级别。</p>
 
 <h4 id="英国">英国</h4>
 
 <p>在英国，地址输入表单通常包含两个地址级别以及一个，两个或三个地址行，具体取决于地址。 完整的地址如下所示：</p>
 
-<p>Frogmarch街103号<br>
+<p>Frogmarch 街 103 号<br>
  上层包装<br>
  苏塞克斯<br>
  TN99 8ZZ</p>
@@ -208,10 +208,10 @@ original_slug: Web/HTML/Attributes/自动完成属性
 <ul>
  <li><code>address-level1</code>: 在这种情况下，该县为“苏塞克斯”。</li>
  <li><code>address-level2</code>: 在这种情况下，城镇为“上层包装”。.</li>
- <li><code>address-line1</code>: 房屋/街道详情-“ Frogmarch 街道103号”</li>
+ <li><code>address-line1</code>: 房屋/街道详情 - “ Frogmarch 街道 103 号”</li>
 </ul>
 
-<p>邮政编码是分开的。 请注意，您实际上可以仅使用邮政编码和 <code>address-line1</code> 在英国成功发送邮件, 因此它们应该是唯一的必填项，但通常人们会提供更多详细信息。</p>
+<p>邮政编码是分开的。 请注意，您实际上可以仅使用邮政编码和 <code>address-line1</code> 在英国成功发送邮件，因此它们应该是唯一的必填项，但通常人们会提供更多详细信息。</p>
 
 <h4 id="中国">中国</h4>
 

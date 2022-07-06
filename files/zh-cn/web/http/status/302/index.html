@@ -9,11 +9,11 @@ translation_of: Web/HTTP/Status/302
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>HTTP <code><strong>302</strong></code><strong><code> Found</code></strong> 重定向状态码表明请求的资源被暂时的移动到了由{{HTTPHeader("Location")}} 头部指定的 URL 上。浏览器会重定向到这个URL， 但是搜索引擎不会对该资源的链接进行更新 (In SEO-speak, it is said that the link-juice is not sent to the new URL)。</p>
+<p>HTTP <code><strong>302 Found</code></strong> 重定向状态码表明请求的资源被暂时的移动到了由该 HTTP 响应的响应头 {{HTTPHeader("Location")}} 指定的 URL 上。浏览器会重定向到这个 URL，但是搜索引擎不会对该资源的链接进行更新 (In SEO-speak, it is said that the link-juice is not sent to the new URL)。</p>
 
 <p>即使规范要求浏览器在重定向时保证请求方法和请求主体不变，但并不是所有的用户代理都会遵循这一点，你依然可以看到有缺陷的软件的存在。所以推荐仅在响应 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 方法时采用 302 状态码，而在其他时候使用 {{HTTPStatus("307")}} Temporary Redirect 来替代，因为在这些场景下方法变换是明确禁止的。</p>
 
-<p>在确实需要将重定向请求的方法转换为 {{HTTPMethod("GET")}}的场景下，可以使用 {{HTTPStatus("303")}} See Other。例如在使用 {{HTTPMethod("PUT")}} 方法进行文件上传操作时，需要返回确认信息（例如“你已经成功上传了xyz”）而不是上传的资源本身，就可以使用这个状态码。</p>
+<p>在确实需要将重定向请求的方法转换为 {{HTTPMethod("GET")}}的场景下，可以使用 {{HTTPStatus("303")}} See Other。例如在使用 {{HTTPMethod("PUT")}} 方法进行文件上传操作时，需要返回确认信息（例如“你已经成功上传了 xyz”）而不是上传的资源本身，就可以使用这个状态码。</p>
 
 <h2 id="状态">状态</h2>
 
@@ -43,5 +43,5 @@ translation_of: Web/HTTP/Status/302
 <ul>
  <li>{{HTTPStatus("307")}} <code>Temporary Redirect</code>, the equivalent of this status code, but that never changes the method used.</li>
  <li>{{HTTPStatus("303")}} <code>See Also</code>, a temporary redirect that changes the method used to {{HTTPMethod("GET")}}.</li>
- <li>{{HTTPStatus("301")}} <code>Found</code>, the temporary redirect.</li>
+ <li>{{HTTPStatus("301")}} <code>Moved Permanently</code>, the permanent redirect.</li>
 </ul>

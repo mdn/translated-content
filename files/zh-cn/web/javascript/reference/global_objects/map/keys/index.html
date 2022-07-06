@@ -1,0 +1,80 @@
+---
+title: Map.prototype.keys()
+slug: Web/JavaScript/Reference/Global_Objects/Map/keys
+tags:
+  - ECMAScript 2015
+  - Iterator
+  - JavaScript
+  - Map
+  - Method
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Map/keys
+original_slug: Web/JavaScript/Reference/Global_Objects/Map/keys
+browser-compat: javascript.builtins.Map.keys
+---
+<div>{{JSRef}}</div>
+
+<p><code><strong>keys()</strong></code> 返回一个引用的 <code><strong>Iterator</strong></code> 对象。它包含按照顺序插入 <code>Map</code> 对象中每个元素的 key 值。</p>
+
+<div>{{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}</div>
+
+
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox"><code><em>myMap</em>.keys()</code></pre>
+
+<h3 id="返回值">返回值</h3>
+
+<p>一个存在引用关系的 {{jsxref("Map")}} iterator 对象。</p>
+
+<h2 id="例子">例子</h2>
+
+<h3 id="使用_keys">使用 <code>keys()</code></h3>
+
+<pre class="brush:js">var myMap = new Map();
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
+
+var mapIter = myMap.keys();
+
+console.log(mapIter.next().value); // "0"
+console.log(mapIter.next().value); // 1
+console.log(mapIter.next().value); // Object
+</pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">备注</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-map.prototype.keys', 'Map.prototype.keys')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-map.prototype.keys', 'Map.prototype.keys')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+
+
+<p>{{Compat("javascript.builtins.Map.keys")}}</p>
+
+<h2 id="参见">参见</h2>
+
+<ul>
+ <li>{{jsxref("Map.prototype.entries()")}}</li>
+ <li>{{jsxref("Map.prototype.values()")}}</li>
+</ul>

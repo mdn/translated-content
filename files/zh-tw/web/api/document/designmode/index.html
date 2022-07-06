@@ -11,9 +11,9 @@ translation_of: Web/API/Document/designMode
 ---
 <div>{{ ApiRef() }}</div>
 
-<div> </div>
+<div> </div>
 
-<h2 id="Summary" name="Summary">概要</h2>
+<h2 id="Summary">概要</h2>
 
 <p><code>document.designMode</code> 控制整個文件是否能夠編輯。可用的數值是 <code>"on"</code> 和 <code>"off"</code>。根據規範，這個屬性預設值為 <code>"off"</code>。Firefox 遵從這個標準。較早以前的 Chrome 和 IE 預設值是 <code>"inherit"</code>。從 Chrome 43 起，預設值是 「<code>off</code>」；不再支援「<code>inherit</code>」。在 IE6-10 中，數值為大寫英文字母。</p>
 
@@ -23,7 +23,7 @@ translation_of: Web/API/Document/designMode
 document.designMode = "on";
 document.designMode = "off";</pre>
 
-<h2 id="Example" name="Example">範例</h2>
+<h2 id="Example">範例</h2>
 
 <p>讓 {{HTMLElement("iframe")}} 的文件可以給使用者編輯：</p>
 
@@ -32,80 +32,13 @@ document.designMode = "off";</pre>
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規範</th>
-   <th scope="col">狀態</th>
-   <th scope="col">註解</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#making-entire-documents-editable:-the-designmode-idl-attribute', 'designMode')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="瀏覽器相容性" style="font-size: 2.14285714285714rem;">瀏覽器相容性</h2>
+<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat("api.Document.designMode")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">功能</th>
-   <th style="line-height: 16px;">Chrome</th>
-   <th style="line-height: 16px;">Edge</th>
-   <th style="line-height: 16px;">Firefox (Gecko)</th>
-   <th style="line-height: 16px;">Internet Explorer</th>
-   <th style="line-height: 16px;">Opera</th>
-   <th style="line-height: 16px;">Safari</th>
-  </tr>
-  <tr>
-   <td>基本支援</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">功能</th>
-   <th style="line-height: 16px;">Android</th>
-   <th style="line-height: 16px;">Android Webview</th>
-   <th style="line-height: 16px;">Edge</th>
-   <th style="line-height: 16px;">Firefox Mobile (Gecko)</th>
-   <th style="line-height: 16px;">IE Mobile</th>
-   <th style="line-height: 16px;">Opera Mobile</th>
-   <th style="line-height: 16px;">Safari Mobile</th>
-   <th style="line-height: 16px;">Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>基本支援</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">參考</h2>
+<h2 id="See_also">參考</h2>
 
 <ul>
  <li><a href="/zh-TW/docs/Rich-Text_Editing_in_Mozilla">Rich-Text Editing in Mozilla</a></li>

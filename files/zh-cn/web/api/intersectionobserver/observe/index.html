@@ -5,13 +5,14 @@ translation_of: Web/API/IntersectionObserver/observe
 ---
 <div>{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">{{domxref("IntersectionObserver")}} 对象的<code><strong>observe()</strong></code> 方法向IntersectionObserver对象监听的目标集合添加一个元素。一个监听者有一组阈值和一个根， 但是可以监视多个目标元素，以查看这些目标元素可见区域的变化。</span>调用{{domxref("IntersectionObserver.unobserve()")}}方法可以停止观察元素。</p>
+<p>{{domxref("IntersectionObserver")}} 对象的<code><strong>observe()</strong></code> 方法向 IntersectionObserver 对象监听的目标集合添加一个元素。一个监听者有一组阈值和一个根， 但是可以监视多个目标元素，以查看这些目标元素可见区域的变化。调用{{domxref("IntersectionObserver.unobserve()")}}方法可以停止观察元素。</p>
 
-<p>当指定元素的可见区域超过监听者的可见区域阈值之一时（阈值列表{{domxref("IntersectionObserver.thresholds")}}），监听者的回调会被传入代表当前发生的交叉变化{{domxref("IntersectionObserverEntry")}}并执行。请注意，这种设计允许通过调用一次回调，给回调传入IntersectionObserverEntry对象数组，来实现同时处理多个被监听元素的交叉变化。</p>
+<p>当指定元素的可见区域超过监听者的可见区域阈值之一时（阈值列表{{domxref("IntersectionObserver.thresholds")}}），监听者的回调会被传入代表当前发生的交叉变化{{domxref("IntersectionObserverEntry")}}并执行。请注意，这种设计允许通过调用一次回调，给回调传入 IntersectionObserverEntry 对象数组，来实现同时处理多个被监听元素的交叉变化。</p>
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox"><em>IntersectionObserver</em>.observe(<em>targetElement</em>);</pre>
+<pre
+  class="brush: js"><em>IntersectionObserver</em>.observe(<em>targetElement</em>);</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -25,37 +26,41 @@ translation_of: Web/API/IntersectionObserver/observe
 
 <p><code>undefined</code>.</p>
 
-<dl>
-</dl>
+<h2 id="Examples">示例</h2>
 
-<h2 id="Examples">Examples</h2>
+<pre class="brush: js">
+// Register IntersectionObserver
+const io = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    // Add 'active' class if observation target is inside viewport
+    if (entry.intersectionRatio > 0) {
+      entry.target.classList.add('active');
+    }
+    // Remove 'active' class otherwise
+    else {
+      entry.target.classList.remove('active');
+    }
+  })
+})
 
-<p>&lt;&lt;&lt;...&gt;&gt;&gt;</p>
+// Declares what to observe, and observes its properties.
+const boxElList = document.querySelectorAll('.box');
+boxElList.forEach((el) => {
+    io.observe(el);
+})
+</pre>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="Specifications">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IntersectionObserver','#dom-intersectionobserver-observe','IntersectionObserver.observe()')}}</td>
-   <td>{{Spec2('IntersectionObserver')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<div>
-<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IntersectionObserver.observe")}}</p>
-</div>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
-<h2 id="See_also">See also</h2>
+<p>{{Compat}}</p>
+
+
+<h2 id="See_also">参考</h2>
 
 <ul>
  <li>{{domxref("IntersectionObserver.unobserve()")}}</li>

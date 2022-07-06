@@ -8,81 +8,81 @@ translation_of: Web/JavaScript/Guide/Numbers_and_dates
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}</div>
 
-<div>本章节介绍了在JavaScript中使用数字和日期来处理和执行计算的概念，对象和函数。</div>
+<div>本章节介绍了在 JavaScript 中使用数字和日期来处理和执行计算的概念，对象和函数。</div>
 
-<p class="summary">本章节介绍如何掌握Javascript里的数字和日期类型</p>
+<p>本章节介绍如何掌握 Javascript 里的数字和日期类型</p>
 
 <h2 id="数字">数字</h2>
 
-<p>在 JavaScript 里面，数字均为双精度浮点类型（<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">double-precision 64-bit binary format IEEE 754</a>），即一个介于±2<sup>−1023</sup>和±2<sup>+1024</sup>之间的数字，或约为±10<sup>−308</sup>到±10<sup>+308</sup>，数字精度为53位。整数数值仅在±(2<sup>53 -</sup> 1)的范围内可以表示准确。</p>
+<p>在 JavaScript 里面，数字均为双精度浮点类型（<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">double-precision 64-bit binary format IEEE 754</a>），即一个介于±2^−1023 和±2^+1024 之间的数字，或约为±10^−308 到±10^+308，数字精度为 53 位。整数数值仅在±(2^53 - 1) 的范围内可以表示准确。</p>
 
-<p>除了能够表示浮点数，数字类型也还能表示三种符号值: <code>+</code>{{jsxref("Infinity")}}（正无穷）、<code>-</code>{{jsxref("Infinity")}}（负无穷）和 {{jsxref("NaN")}} (not-a-number，非数字)。</p>
+<p>除了能够表示浮点数，数字类型也还能表示三种符号值：<code>+</code>{{jsxref("Infinity")}}（正无穷）、<code>-</code>{{jsxref("Infinity")}}（负无穷）和 {{jsxref("NaN")}} (not-a-number，非数字)。</p>
 
-<p>JavaScript最近添加了 {{jsxref("BigInt")}} 的支持，能够用于表示极大的数字。使用 BigInt 的时候有一些注意事项，例如，你不能让 BigInt 和 {{jsxref("Number")}} 直接进行运算，你也不能用 {{jsxref("Math")}} 对象去操作 BigInt 数字。</p>
+<p>JavaScript 最近添加了 {{jsxref("BigInt")}} 的支持，能够用于表示极大的数字。使用 BigInt 的时候有一些注意事项，例如，你不能让 BigInt 和 {{jsxref("Number")}} 直接进行运算，你也不能用 {{jsxref("Math")}} 对象去操作 BigInt 数字。</p>
 
-<p>请参见Javascript指南中的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures">JavaScript 数据类型和数据结构</a> ，了解其他更多的基本类型。</p>
+<p>请参见 Javascript 指南中的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures">JavaScript 数据类型和数据结构</a> ，了解其他更多的基本类型。</p>
 
 <p>您可以使用四种数字进制：十进制，二进制，八进制和十六进制。</p>
 
-<h3 id="十进制数字Decimal_numbers">十进制数字(Decimal numbers)</h3>
+<h3 id="十进制数字Decimal_numbers">十进制数字 (Decimal numbers)</h3>
 
-<pre class="brush: js notranslate">1234567890
+<pre class="brush: js">1234567890
 42
 // 以零开头的数字的注意事项：
 0888 // 888 将被当做十进制处理
-0777 // 在非严格格式下会被当做八进制处理 (用十进制表示就是511)
+0777 // 在非严格格式下会被当做八进制处理 (用十进制表示就是 511)
 </pre>
 
-<p>请注意，十进制可以以0开头，后面接其他十进制数字，但是假如下一个接的十进制数字小于8，那么该数字将会被当做八进制处理。</p>
+<p>请注意，十进制可以以 0 开头，后面接其他十进制数字，但是假如下一个接的十进制数字小于 8，那么该数字将会被当做八进制处理。</p>
 
-<h3 id="二进制数字Binary_numbers">二进制数字(Binary numbers)</h3>
+<h3 id="二进制数字Binary_numbers">二进制数字 (Binary numbers)</h3>
 
-<p>二进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母B(<code>0b或者是0B</code>)。 假如0b后面的数字不是0或者1，那么就会提示这样的语法错误（ <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a>）：</code> "Missing binary digits after 0b(0b之后缺失二有效的二进制数据)"。</p>
+<p>二进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母 B(<code>0b 或者是 0B</code>)。 假如 0b 后面的数字不是 0 或者 1，那么就会提示这样的语法错误（ <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a>）：</code> "Missing binary digits after 0b(0b 之后缺失二有效的二进制数据)"。</p>
 
-<pre class="brush: js notranslate">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+<pre class="brush: js">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
 var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
-<h3 id="八进制数字Octal_numbers">八进制数字(Octal numbers)</h3>
+<h3 id="八进制数字Octal_numbers">八进制数字 (Octal numbers)</h3>
 
-<p>八进制数字语法是以0为开头的。假如0后面的数字不在0到7的范围内，该数字将会被转换成十进制数字。</p>
+<p>八进制数字语法是以 0 为开头的。假如 0 后面的数字不在 0 到 7 的范围内，该数字将会被转换成十进制数字。</p>
 
-<pre class="brush: js notranslate">var n = 0755; // 493
+<pre class="brush: js">var n = 0755; // 493
 var m = 0644; // 420
 </pre>
 
-<p>在ECMAScript 5 严格模式下禁止使用八进制语法。八进制语法并不是ECMAScript 5规范的一部分，但是通过在八进制数字添加一个前缀0就可以被所有的浏览器支持：0644 === 420 而且 "\045" === "%"。在ECMAScript 6中使用八进制数字是需要给一个数字添加前缀"0o"。</p>
+<p>在 ECMAScript 5 严格模式下禁止使用八进制语法。八进制语法并不是 ECMAScript 5 规范的一部分，但是通过在八进制数字添加一个前缀 0 就可以被所有的浏览器支持：0644 === 420 而且 "\045" === "%"。在 ECMAScript 6 中使用八进制数字是需要给一个数字添加前缀"0o"。</p>
 
-<pre class="brush: js notranslate">var a = 0o10; // ES6 :八进制</pre>
+<pre class="brush: js">var a = 0o10; // ES6 :八进制</pre>
 
-<h3 id="十六进制Hexadecimal_numbers">十六进制(Hexadecimal numbers)</h3>
+<h3 id="十六进制Hexadecimal_numbers">十六进制 (Hexadecimal numbers)</h3>
 
-<p>十六进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母X(<code>0x或者是0X</code>)。假如<code>0x</code>后面的数字超出规定范围(0123456789ABCDEF)，那么就会提示这样的语法错误(<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a>)：</code>"Identifier starts immediately after numeric literal".</p>
+<p>十六进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母 X(<code>0x 或者是 0X</code>)。假如<code>0x</code>后面的数字超出规定范围 (0123456789ABCDEF)，那么就会提示这样的语法错误 (<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a>)：</code>"Identifier starts immediately after numeric literal".</p>
 
-<pre class="brush: js notranslate">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+<pre class="brush: js">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
 0XA                 // 10
 </pre>
 
-<h3 id="指数形式Exponentiation">指数形式(Exponentiation)</h3>
+<h3 id="指数形式Exponentiation">指数形式 (Exponentiation)</h3>
 
-<pre class="brush: js notranslate">1E3   // 1000
+<pre class="brush: js">1E3   // 1000
 2e6   // 2000000
 0.1e2 // 10
 </pre>
 
-<h2 id="数字对象"><font face="Consolas, Liberation Mono, Courier, monospace"><code>数字对象</code></font></h2>
+<h2 id="数字对象"><code>数字对象</code></h2>
 
 <p>内置的{{jsxref("Number")}}对象有一些有关数字的常量属性，如最大值、不是一个数字和无穷大的。你不能改变这些属性，但可以按下边的方式使用它们：</p>
 
-<pre class="brush: js notranslate">var biggestNum = Number.MAX_VALUE;
+<pre class="brush: js">var biggestNum = Number.MAX_VALUE;
 var smallestNum = Number.MIN_VALUE;
 var infiniteNum = Number.POSITIVE_INFINITY;
 var negInfiniteNum = Number.NEGATIVE_INFINITY;
 var notANum = Number.NaN;
 </pre>
 
-<p>你永远只用从Number对象引用上边显示的属性，而不是你自己创建的Number对象的属性。</p>
+<p>你永远只用从 Number 对象引用上边显示的属性，而不是你自己创建的 Number 对象的属性。</p>
 
 <p>下面的表格汇总了数字对象的属性：</p>
 
@@ -119,16 +119,16 @@ var notANum = Number.NaN;
   <tr>
    <td>{{jsxref("Number.EPSILON")}}</td>
    <td>
-    <p>表示1和比最接近1且大于1的最小{{jsxref("Number")}}之间的差别</p>
+    <p>表示 1 和比最接近 1 且大于 1 的最小{{jsxref("Number")}}之间的差别</p>
    </td>
   </tr>
   <tr>
    <td>{{jsxref("Number.MIN_SAFE_INTEGER")}}</td>
-   <td>JavaScript最小安全整数.</td>
+   <td>JavaScript 最小安全整数。</td>
   </tr>
   <tr>
    <td>{{jsxref("Number.MAX_SAFE_INTEGER")}}</td>
-   <td>JavaScript最大安全整数.</td>
+   <td>JavaScript 最大安全整数。</td>
   </tr>
  </tbody>
 </table>
@@ -145,12 +145,12 @@ var notANum = Number.NaN;
   <tr>
    <td>{{jsxref("Number.parseFloat()")}}</td>
    <td>把字符串参数解析成浮点数，<br>
-    和全局方法 {{jsxref("parseFloat", "parseFloat()")}} 作用一致.</td>
+    和全局方法 {{jsxref("parseFloat", "parseFloat()")}} 作用一致。</td>
   </tr>
   <tr>
    <td>{{jsxref("Number.parseInt()")}}</td>
    <td>
-    <p>把字符串解析成特定基数对应的整型数字，和全局方法 {{jsxref("parseInt", "parseInt()")}} 作用一致.</p>
+    <p>把字符串解析成特定基数对应的整型数字，和全局方法 {{jsxref("parseInt", "parseInt()")}} 作用一致。</p>
    </td>
   </tr>
   <tr>
@@ -198,7 +198,7 @@ var notANum = Number.NaN;
   <tr>
    <td>{{jsxref("Number.toPrecision", "toPrecision()")}}</td>
    <td>
-    <p>返回一个指定精度的数字。如下例子中，a=123中，3会由于精度限制消失</p>
+    <p>返回一个指定精度的数字。如下例子中，a=123 中，3 会由于精度限制消失</p>
 
     <p>var a=123,b=a.toPrecision(2)//b="1.2e+2"</p>
    </td>
@@ -206,23 +206,23 @@ var notANum = Number.NaN;
  </tbody>
 </table>
 
-<h2 id="数学对象（Math）"><font face="consolas, Liberation Mono, courier, monospace">数学对象（Math）</font></h2>
+<h2 id="数学对象（Math）">数学对象（Math）</h2>
 
-<p>对于内置的{{jsxref("Math")}}数学常项和函数也有一些属性和方法。 比方说， <code>Math对象的</code> <code>PI</code> 属性会有属性值 pi (3.141...)，你可以像这样调用它：</p>
+<p>对于内置的{{jsxref("Math")}}数学常项和函数也有一些属性和方法。 比方说， <code>Math 对象的</code> <code>PI</code> 属性会有属性值 pi (3.141...)，你可以像这样调用它：</p>
 
-<pre class="brush: js notranslate">Math.PI // π
+<pre class="brush: js">Math.PI // π
 </pre>
 
-<p>同理，标准数学函数也是Math的方法。 这些包括三角函数​​，对数，指数，和其他函数。比方说你想使用三角函数 <code>sin</code>， 你可以这么写：</p>
+<p>同理，标准数学函数也是 Math 的方法。 这些包括三角函数​​，对数，指数，和其他函数。比方说你想使用三角函数 <code>sin</code>， 你可以这么写：</p>
 
-<pre class="brush: js notranslate">Math.sin(1.56)
+<pre class="brush: js">Math.sin(1.56)
 </pre>
 
-<p>需要注意的是Math的所有三角函数参数都是弧度制。</p>
+<p>需要注意的是 Math 的所有三角函数参数都是弧度制。</p>
 
 <p>下面的表格总结了 <code>Math</code> 对象的方法。</p>
 
-<p>Math的方法</p>
+<p>Math 的方法</p>
 
 <table>
  <thead>
@@ -246,11 +246,11 @@ var notANum = Number.NaN;
   </tr>
   <tr>
    <td>{{jsxref("Math.sinh", "sinh()")}}, {{jsxref("Math.cosh", "cosh()")}}, {{jsxref("Math.tanh", "tanh()")}}</td>
-   <td>双曲三角函数; 参数为弧度.</td>
+   <td>双曲三角函数; 参数为弧度。</td>
   </tr>
   <tr>
    <td>{{jsxref("Math.asinh", "asinh()")}}, {{jsxref("Math.acosh", "acosh()")}}, {{jsxref("Math.atanh", "atanh()")}}</td>
-   <td>反双曲三角函数;返回值为弧度.</td>
+   <td>反双曲三角函数;返回值为弧度。</td>
   </tr>
   <tr>
    <td>
@@ -265,12 +265,12 @@ var notANum = Number.NaN;
   <tr>
    <td>{{jsxref("Math.min", "min()")}}, {{jsxref("Math.max", "max()")}}</td>
    <td>
-    <p>返回一个以逗号间隔的数字参数列表中的较小或较大值(分别地)</p>
+    <p>返回一个以逗号间隔的数字参数列表中的较小或较大值 (分别地)</p>
    </td>
   </tr>
   <tr>
    <td>{{jsxref("Math.random", "random()")}}</td>
-   <td>返回0和1之间的随机数。</td>
+   <td>返回 0 和 1 之间的随机数。</td>
   </tr>
   <tr>
    <td>{{jsxref("Math.round", "round()")}}, {{jsxref("Math.fround", "fround()")}}, {{jsxref("Math.trunc", "trunc()")}},</td>
@@ -286,60 +286,60 @@ var notANum = Number.NaN;
   </tr>
   <tr>
    <td>{{jsxref("Math.sign", "sign()")}}</td>
-   <td>数字的符号, 说明数字是否为正、负、零。</td>
+   <td>数字的符号，说明数字是否为正、负、零。</td>
   </tr>
   <tr>
    <td>{{jsxref("Math.clz32", "clz32()")}},<br>
     {{jsxref("Math.imul", "imul()")}}</td>
    <td>
-    <p>在32位2进制表示中，开头的0的数量.</p>
+    <p>在 32 位 2 进制表示中，开头的 0 的数量。</p>
 
-    <p><em>返回传入的两个参数相乘结果的类C的32位表现形式</em></p>
+    <p><em>返回传入的两个参数相乘结果的类 C 的 32 位表现形式</em></p>
    </td>
   </tr>
  </tbody>
 </table>
 
-<p>和其他对象不同，你不能够创建一个自己的Math对象。你只能使用内置的Math对象。</p>
+<p>和其他对象不同，你不能够创建一个自己的 Math 对象。你只能使用内置的 Math 对象。</p>
 
-<h2 id="日期对象"><font face="Consolas, Liberation Mono, Courier, monospace">日期对象</font></h2>
+<h2 id="日期对象">日期对象</h2>
 
-<p>JavaScript没有日期数据类型。但是你可以在你的程序里使用 {{jsxref("Date")}} 对象和其方法来处理日期和时间。Date对象有大量的设置、获取和操作日期的方法。 它并不含有任何属性。</p>
+<p>JavaScript 没有日期数据类型。但是你可以在你的程序里使用 {{jsxref("Date")}} 对象和其方法来处理日期和时间。Date 对象有大量的设置、获取和操作日期的方法。 它并不含有任何属性。</p>
 
-<p>JavaScript 处理日期数据类似于Java。这两种语言有许多一样的处理日期的方法，也都是以1970年1月1日00:00:00以来的毫秒数来储存数据类型的。</p>
+<p>JavaScript 处理日期数据类似于 Java。这两种语言有许多一样的处理日期的方法，也都是以 1970 年 1 月 1 日 00:00:00 以来的毫秒数来储存数据类型的。</p>
 
-<p><code>Date</code> 对象的范围是相对距离 UTC 1970年1月1日 的前后 100,000,000 天。</p>
+<p><code>Date</code> 对象的范围是相对距离 UTC 1970 年 1 月 1 日 的前后 100,000,000 天。</p>
 
 <p>创建一个日期对象：</p>
 
-<pre class="brush: js notranslate">var dateObjectName = new Date([parameters]);
+<pre class="brush: js">var dateObjectName = new Date([parameters]);
 </pre>
 
-<p>这里的 dateObjectName 对象是所创建的Date对象的一个名字，它可以成为一个新的对象或者已存在的其他对象的一个属性。</p>
+<p>这里的 dateObjectName 对象是所创建的 Date 对象的一个名字，它可以成为一个新的对象或者已存在的其他对象的一个属性。</p>
 
-<p>不使用 <em>new </em>关键字来调用Date对象将返回当前时间和日期的字符串</p>
+<p>不使用 <em>new </em>关键字来调用 Date 对象将返回当前时间和日期的字符串</p>
 
 <p>前边的语法中的参数（parameters）可以是一下任何一种：</p>
 
 <ul>
  <li>无参数 : 创建今天的日期和时间，例如： <code>today = new Date();</code>.</li>
- <li>一个符合以下格式的表示日期的字符串: "月 日, 年 时:分:秒." 例如： <code>var Xmas95 = new Date("December 25, 1995 13:30:00")。</code>如果你省略时、分、秒，那么他们的值将被设置为0。</li>
+ <li>一个符合以下格式的表示日期的字符串: "月 日，年 时：分:秒." 例如： <code>var Xmas95 = new Date("December 25, 1995 13:30:00")。</code>如果你省略时、分、秒，那么他们的值将被设置为 0。</li>
  <li>一个年，月，日的整型值的集合，例如： <code>var Xmas95 = new Date(1995, 11, 25)。</code></li>
  <li>一个年，月，日，时，分，秒的集合，例如： <code>var Xmas95 = new Date(1995, 11, 25, 9, 30, 0);</code>.</li>
 </ul>
 
-<h3 id="Date对象的方法"><code>Date对象的方法</code></h3>
+<h3 id="Date对象的方法"><code>Date 对象的方法</code></h3>
 
-<p>处理日期时间的Date对象方法可分为以下几类：</p>
+<p>处理日期时间的 Date 对象方法可分为以下几类：</p>
 
 <ul>
- <li>"set" 方法, 用于设置Date对象的日期和时间的值。</li>
- <li>"get" 方法,用于获取Date对象的日期和时间的值。</li>
- <li>"to" 方法,用于返回Date对象的字符串格式的值。</li>
- <li>parse 和UTC 方法, 用于解析Date字符串。</li>
+ <li>"set" 方法，用于设置 Date 对象的日期和时间的值。</li>
+ <li>"get" 方法，用于获取 Date 对象的日期和时间的值。</li>
+ <li>"to" 方法，用于返回 Date 对象的字符串格式的值。</li>
+ <li>parse 和 UTC 方法，用于解析 Date 字符串。</li>
 </ul>
 
-<p>通过“get”和“set”方法，你可以分别设置和获取秒，分，时，日，星期，月份，年。这里有个getDay方法可以返回星期，但是没有相应的setDay方法用来设置星期，因为星期是自动设置的。这些方法用整数来代表以下这些值：</p>
+<p>通过“get”和“set”方法，你可以分别设置和获取秒，分，时，日，星期，月份，年。这里有个 getDay 方法可以返回星期，但是没有相应的 setDay 方法用来设置星期，因为星期是自动设置的。这些方法用整数来代表以下这些值：</p>
 
 <ul>
  <li>秒，分： 0 至 59</li>
@@ -347,22 +347,22 @@ var notANum = Number.NaN;
  <li>星期： 0 (周日) 至 6 (周六)</li>
  <li>日期：1 至 31 </li>
  <li>月份： 0 (一月) to 11 (十二月)</li>
- <li>年份： 从1900开始的年数</li>
+ <li>年份： 从 1900 开始的年数</li>
 </ul>
 
-<p>例如, 假设你定义了如下日期：</p>
+<p>例如，假设你定义了如下日期：</p>
 
-<pre class="brush: js notranslate">var Xmas95 = new Date("December 25, 1995");
+<pre class="brush: js">var Xmas95 = new Date("December 25, 1995");
 </pre>
 
 <p>Then <code>Xmas95.getMonth()</code> 返回 11, and <code>Xmas95.getFullYear()</code> 返回 1995.</p>
 
-<p><code>getTime</code> 和 <code>setTime</code> 方法对于比较日期是非常有用的。<code>getTime</code>方法返回从1970年1月1日00:00:00的毫秒数。</p>
+<p><code>getTime</code> 和 <code>setTime</code> 方法对于比较日期是非常有用的。<code>getTime</code>方法返回从 1970 年 1 月 1 日 00:00:00 的毫秒数。</p>
 
 <p>例如，以下代码展示了今年剩下的天数：</p>
 
-<pre class="brush: js notranslate">var today = new Date();
-var endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // 设置日和月，注意，月份是0-11
+<pre class="brush: js">var today = new Date();
+var endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // 设置日和月，注意，月份是 0-11
 endYear.setFullYear(today.getFullYear()); // 把年设置为今年
 var msPerDay = 24 * 60 * 60 * 1000; // 每天的毫秒数
 var daysLeft = (endYear.getTime() - today.getTime()) / msPerDay;
@@ -371,17 +371,17 @@ var daysLeft = Math.round(daysLeft); //返回今年剩下的天数
 
 <p>这个例子中，创建了一个包含今天的日期的<code>Date</code>对象，并命名为<code>today</code>，然后创建了一个名为<code>endYear</code>的<code>Date</code>对象，并把年份设置为当前年份，接着使用<code>today</code>和<code>endYear</code>的<code>getTime</code>分别获取今天和年底的毫秒数，再根据每一天的毫秒数，计算出了今天到年底的天数，最后四舍五入得到今年剩下的天数。</p>
 
-<p>parse方法对于从日期字符串赋值给现有的Date对象很有用，例如：以下代码使用<code>parse</code>和<code>setTime</code>分配了一个日期值给<code>IPOdate</code>对象：</p>
+<p>parse 方法对于从日期字符串赋值给现有的 Date 对象很有用，例如：以下代码使用<code>parse</code>和<code>setTime</code>分配了一个日期值给<code>IPOdate</code>对象：</p>
 
-<pre class="brush: js notranslate">var IPOdate = new Date();
+<pre class="brush: js">var IPOdate = new Date();
 IPOdate.setTime(Date.parse("Aug 9, 1995"));
 </pre>
 
 <h3 id="例子：">例子：</h3>
 
-<p>在下边的例子中，JSClock()函数返回了用数字时钟格式的时间：</p>
+<p>在下边的例子中，JSClock() 函数返回了用数字时钟格式的时间：</p>
 
-<pre class="brush: js notranslate">function JSClock() {
+<pre class="brush: js">function JSClock() {
   var time = new Date();
   var hour = time.getHours();
   var minute = time.getMinutes();
@@ -396,12 +396,12 @@ IPOdate.setTime(Date.parse("Aug 9, 1995"));
 }
 </pre>
 
-<p><code>JSClock函数首先创建了一个叫做time的新的Date对象，因为没有参数，所以time代表了当前日期和时间。然后调用了</code><code>getHours</code>, <code>getMinutes以及getSeconds方法把当前的时分秒分别赋值给了hour</code>, <code>minute</code>,<code>second。</code></p>
+<p><code>JSClock</code>函数首先创建了一个叫做<code>time</code>的新的<code>Date</code>对象，因为没有参数，所以<code>time</code>代表了当前日期和时间。然后调用了<code>getHours</code>，<code>getMinutes</code>以及<code>getSeconds</code>方法把当前的时分秒分别赋值给了<code>hour</code>，<code>minute</code>，<code>second</code>。</p>
 
-<p>接下来的4句在time的基础上创建了一个字符串，第一句创建了一个变量temp，并通过一个条件表达式进行了赋值，如果小时大于12，就为 (<code>hour - 12</code>), 其他情况就为 hour, 除非 hour 为 0, 这种情况下，它会变成 12.</p>
+<p>接下来的 4 句在<code>time</code>的基础上创建了一个字符串，第一句创建了一个变量<code>temp</code>，并通过一个条件表达式进行了赋值，如果小时大于 12，就为 (<code>hour - 12</code>)，其他情况就为<code>hour</code>，除非<code>hour</code>为 0，这种情况下，它会变成 12。</p>
 
-<p>接下来的语句拼接了<code>minute</code>的值到<code>temp后。如果minute小于10，条件表达式就会在minute前边加个0，其他情况下加一个分号。然后按同样的方式在temp后拼接上了秒。</code></p>
+<p>接下来的语句拼接了<code>minute</code>的值到<code>temp</code>后。如果<code>minute</code>小于 10，条件表达式就会在<code>minute</code>前边加个 0，其他情况下加一个冒号。然后按同样的方式在<code>temp</code>后拼接上了秒。</p>
 
-<p>最后，如果hour是12或者更大，条件表达式会在temp后拼接"P.M."，否则拼接"A.M." 。</p>
+<p>最后，如果<code>hour</code>是 12 或者更大，条件表达式会在<code>temp</code>后拼接"P.M."，否则拼接"A.M."。</p>
 
 <p>{{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}</p>

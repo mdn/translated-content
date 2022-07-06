@@ -54,7 +54,7 @@ translation_of: Web/HTML/Element/form
 <p><span style="line-height: 21px;">이 요소는 </span><a href="/ko/docs/Web/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">전역 특성</a>을 포함합니다.</p>
 
 <dl>
- <dt class="hidden">{{htmlattrdef("accept")}} {{obsolete_inline}}</dt>
+ <dt class="hidden">{{htmlattrdef("accept")}} {{deprecated_inline}}</dt>
  <dd class="hidden">A comma-separated list of content types that the server accepts.
  <div class="note"><strong>사용시 주의:</strong> 이 속성은 HTML5에서 제거되고 더 이상 사용되서는 안됩니다. 대신에, {{HTMLElement("input")}} 요소의 <span class="st">{{htmlattrxref("accept", "input")}} 속성을 사용하세요.</span></div>
  </dd>
@@ -91,8 +91,8 @@ translation_of: Web/HTML/Element/form
  <dt>{{htmlattrdef("method")}}</dt>
  <dd>양식을 제출할 때 사용할 <a href="/ko/docs/Web/HTTP" title="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP</a> 메서드.
  <ul>
-  <li><code>post</code>: <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5">POST 메서드</a>. 양식 데이터를 <a href="/ko/docs/Web/API/Body">요청 본문</a>으로 전송합니다.</li>
-  <li><code>get</code>: <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3">GET 메서드</a>. 양식 데이터를 <code>action</code> URL과 <code>?</code> 구분자 뒤에 이어 붙여서 전송합니다.</li>
+  <li><code>post</code>: <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5">POST 메서드</a>. 양식 데이터를 <a href="/ko/docs/Web/API/Body">요청 본문</a>으로 전송합니다.</li>
+  <li><code>get</code>: <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3">GET 메서드</a>. 양식 데이터를 <code>action</code> URL과 <code>?</code> 구분자 뒤에 이어 붙여서 전송합니다.</li>
   <li>dialog: 양식이 {{htmlelement("dialog")}} 안에 위치한 경우, 제출과 함께 대화 상자를 닫습니다.</li>
  </ul>
 

@@ -8,7 +8,7 @@ translation_of: Web/API/WebGLRenderingContext/viewport
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.viewport()</code></strong> 方法，用来设置视口，即指定从标准设备到窗口坐标的x、y仿射变换。</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.viewport()</code></strong> 方法，用来设置视口，即指定从标准设备到窗口坐标的 x、y 仿射变换。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -23,9 +23,9 @@ translation_of: Web/API/WebGLRenderingContext/viewport
  <dt><code>y</code></dt>
  <dd>{{domxref("GLint")}}，用来设定视口的左下角垂直坐标。默认值：0。</dd>
  <dt>width</dt>
- <dd>非负数{{domxref("Glsizei")}}，用来设定视口的宽度。默认值：canvas的宽度。</dd>
+ <dd>非负数{{domxref("Glsizei")}}，用来设定视口的宽度。默认值：canvas 的宽度。</dd>
  <dt>height</dt>
- <dd>非负数{{domxref("Glsizei")}}，用来设定视口的高度。默认值：canvas的高度。</dd>
+ <dd>非负数{{domxref("Glsizei")}}，用来设定视口的高度。默认值：canvas 的高度。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -34,11 +34,11 @@ translation_of: Web/API/WebGLRenderingContext/viewport
 
 <h3 id="异常错误">异常错误</h3>
 
-<p>只要宽度或高度有一个为负值，<code>gl.INVALID_VALUE错误将被抛出。</code>.</p>
+<p>只要宽度或高度有一个为负值，<code>gl.INVALID_VALUE</code> 错误将被抛出。</p>
 
 <h2 id="样例">样例</h2>
 
-<p>当你第一次创建WebGL上下文的时候，视口的大小将和canvas的大小是匹配的。然而，如果你重新改变了canvas的大小，你需要告诉WebGL上下文设定新的视口。在这里，你可以使用<code>gl.viewport。</code></p>
+<p>当你第一次创建 WebGL 上下文的时候，视口的大小将和 canvas 的大小是匹配的。然而，如果你重新改变了 canvas 的大小，你需要告诉 WebGL 上下文设定新的视口。在这里，你可以使用<code>gl.viewport。</code></p>
 
 <pre class="brush: js">gl.viewport(0, 0, canvas.width, canvas.height);
 </pre>

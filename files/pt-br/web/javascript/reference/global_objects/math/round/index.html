@@ -52,7 +52,7 @@ x = Math.round(-20.51);
 
 // Retorna 1 (!)
 // Note o erro de arredondamento por causa da inacurácia de aritmética de ponto flutuante
-// Compare o exemplo abaixo com Math.round10(1.005, -2)
+// Compare o exemplo abaixo com Math.round(1.005, -2)
 x = Math.round(1.005*100)/100;
 </pre>
 
@@ -89,20 +89,20 @@ x = Math.round(1.005*100)/100;
 	}
 
 	// Arredondamento decimal
-	if (!Math.round10) {
-		Math.round10 = function(value, exp) {
+	if (!Math.round) {
+		Math.round = function(value, exp) {
 			return decimalAdjust('round', value, exp);
 		};
 	}
 	// Decimal arredondado para baixo
-	if (!Math.floor10) {
-		Math.floor10 = function(value, exp) {
+	if (!Math.floor) {
+		Math.floor = function(value, exp) {
 			return decimalAdjust('floor', value, exp);
 		};
 	}
 	// Decimal arredondado para cima
-	if (!Math.ceil10) {
-		Math.ceil10 = function(value, exp) {
+	if (!Math.ceil) {
+		Math.ceil = function(value, exp) {
 			return decimalAdjust('ceil', value, exp);
 		};
 	}
@@ -110,25 +110,25 @@ x = Math.round(1.005*100)/100;
 })();
 
 // Round (arredondamento)
-Math.round10(55.55, -1); // 55.6
-Math.round10(55.549, -1); // 55.5
-Math.round10(55, 1); // 60
-Math.round10(54.9, 1); // 50
-Math.round10(-55.55, -1); // -55.5
-Math.round10(-55.551, -1); // -55.6
-Math.round10(-55, 1); // -50
-Math.round10(-55.1, 1); // -60
-Math.round10(1.005, -2); // 1.01 -- compare este resultado com Math.round(1.005*100)/100 no exemplo acima
+Math.round(55.55, -1); // 55.6
+Math.round(55.549, -1); // 55.5
+Math.round(55, 1); // 60
+Math.round(54.9, 1); // 50
+Math.round(-55.55, -1); // -55.5
+Math.round(-55.551, -1); // -55.6
+Math.round(-55, 1); // -50
+Math.round(-55.1, 1); // -60
+Math.round(1.005, -2); // 1.01 -- compare este resultado com Math.round(1.005*100)/100 no exemplo acima
 // Floor (para baixo)
-Math.floor10(55.59, -1); // 55.5
-Math.floor10(59, 1); // 50
-Math.floor10(-55.51, -1); // -55.6
-Math.floor10(-51, 1); // -60
+Math.floor(55.59, -1); // 55.5
+Math.floor(59, 1); // 50
+Math.floor(-55.51, -1); // -55.6
+Math.floor(-51, 1); // -60
 // Ceil (para cima)
-Math.ceil10(55.51, -1); // 55.6
-Math.ceil10(51, 1); // 60
-Math.ceil10(-55.59, -1); // -55.5
-Math.ceil10(-59, 1); // -50
+Math.ceil(55.51, -1); // 55.6
+Math.ceil(51, 1); // 60
+Math.ceil(-55.59, -1); // -55.5
+Math.ceil(-59, 1); // -50
 </pre>
 
 <h3 id="Método_de_arredondamento_PHP">Método de arredondamento PHP</h3>
@@ -175,7 +175,7 @@ myNamespace.round(1234.5678, -1); // 1230</code>
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_de_Browser">Compatibilidade de Browser</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <div>{{CompatibilityTable}}</div>
 

@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/eval
 <p><strong>Warning:</strong> <font>Выполнение кода JavaScript с текстовой строки - это невероятный риск для безопасности. </font><font>Злоумышленнику слишком легко запустить какой угодно код, когда вы используете</font> <code>eval()</code>. Смотрите  <a href="#Не_используйте_eval_без_необходимости!">Никогда не используйте eval()!</a>, ниже.</p>
 </div>
 
-<p>Метод <code><strong>eval()</strong></code> выполняет JavaScript код, представленный строкой.</p>
+<p>Метод <code><strong>eval()</strong></code> выполняет JavaScript-код, представленный строкой.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}</p>
 
@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/eval
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code>eval(<em>string</em>)</code></pre>
+<pre class="syntaxbox"><code>eval(<em>string</em>)</code></pre>
 
 <h3 id="Параметры">Параметры</h3>
 
@@ -46,19 +46,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/eval
 
 <p>Если аргумент, переданный <code>eval()</code>, не является строкой, <code>eval() </code>возвращает его неизменным. В следующем примере определён конструктор <code>String</code>, и <code>eval()</code> не вычисляет значение выражения, записанного в строковом виде, а возвращает объект типа <code>String</code>.</p>
 
-<pre class="brush:js notranslate">eval(new String("2 + 2")); // возвращает объект типа String, содержащий "2 + 2"
+<pre class="brush:js">eval(new String("2 + 2")); // возвращает объект типа String, содержащий "2 + 2"
 eval("2 + 2");             // возвращает 4
 </pre>
 
 <p>Это ограничение легко обойти при помощи <code>toString()</code>.</p>
 
-<pre class="brush:js notranslate">var expression = new String("2 + 2");
+<pre class="brush:js">var expression = new String("2 + 2");
 eval(expression.toString());
 </pre>
 
 <p>Если вы используете <code>eval</code> косвенно, вызовом его через ссылку, а не просто <code>eval</code>, в<a href="http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2"> ECMAScript 5</a> это работает в глобальной области видимости, а не в локальной; это значит, что <code>eval</code> будет вызван в глобальной области видимости, а код будет выполнен с отсутствием доступа к локальным переменным в пределах области видимости, где он был вызван.</p>
 
-<pre class="brush:js notranslate">function test() {
+<pre class="brush:js">function test() {
   var x = 2, y = 4;
   console.log(eval("x + y"));  // Прямой вызов, использует локальную области видимости, результат - 6
   var geval = eval;
@@ -66,7 +66,7 @@ eval(expression.toString());
 }
 </pre>
 
-<h2 id="Не_используйте_eval_без_необходимости!"><a name="dont-use-it"><code><font face="Open Sans, Arial, sans-serif">Н</font>е используйте eval без необходимости!</code></a></h2>
+<h2 id="Не_используйте_eval_без_необходимости!"><a><code><font face="Open Sans, Arial, sans-serif">Н</font>е используйте eval без необходимости!</code></a></h2>
 
 <p><code>eval()</code> - опасная функция, которая выполняет код, проходящий со всеми привилегиями вызывателя. Если вы запускаете <code>eval()</code> со строкой, на которую могут влиять злоумышленники, то вы можете запустить вредоносный код на устройство пользователя с правами вашей веб-страницы/расширения. Наиболее важно, код третьей стороны может видеть область видимости, в которой был вызван <code>eval()</code>, что может может привести к атакам, похожим на {{jsxref("Global_Objects/Function", "Function")}}.</p>
 
@@ -78,7 +78,7 @@ eval(expression.toString());
 
 <p>Вам не следует использовать <code>eval()</code>, чтобы конвертировать имена свойств в свойства. Рассматривая следующий пример, где свойство объекта используемое для доступа неизвестно до выполнения кода. Это можно сделать с  eval:</p>
 
-<pre class="brush:js notranslate">var obj = { a: 20, b: 30 };
+<pre class="brush:js">var obj = { a: 20, b: 30 };
 var propname = getPropName();  // возвращает "a" или "b"
 
 eval( "var result = obj." + propname );
@@ -86,16 +86,16 @@ eval( "var result = obj." + propname );
 
 <p>Однако, <code>eval()</code> здесь не нужен. По факту, использование здесь его удивляет. Вместо него используйте <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors" title="JavaScript/Reference/Operators/Member_Operators">доступ к свойствам</a>, который быстрее и безопаснее:</p>
 
-<pre class="brush:js notranslate">var obj = { a: 20, b: 30 };
+<pre class="brush:js">var obj = { a: 20, b: 30 };
 var propname = getPropName();  // возвращает "a" или "b"
 var result = obj[ propname ];  //  obj[ "a" ] то же, что и obj.a
 </pre>
 
 <h3 id="Используйте_функции_вместо_исполнения_фрагментов_кода">Используйте функции вместо исполнения фрагментов кода</h3>
 
-<p>У JavaScript <a class="external" href="http://en.wikipedia.org/wiki/First-class_function" title="http://en.wikipedia.org/wiki/First-class_function">функции первого класса</a>, что значит, что вы можете передавать функции как аргументы, хранить их в переменных или свойствах объектов и так далее. Многие DOM API созданы с учётом этого, так что вы можете (и вам следует) писать:</p>
+<p>У JavaScript <a class="external" href="http://en.wikipedia.org/wiki/First-class_function">функции первого класса</a>, что значит, что вы можете передавать функции как аргументы, хранить их в переменных или свойствах объектов и так далее. Многие DOM API созданы с учётом этого, так что вы можете (и вам следует) писать:</p>
 
-<pre class="brush: js notranslate">// вместо setTimeout(" ... ", 1000) :
+<pre class="brush: js">// вместо setTimeout(" ... ", 1000) :
 setTimeout(function() { ... }, 1000);
 
 // вместо elt.setAttribute("onclick", "...") использовать:
@@ -123,7 +123,7 @@ elt.addEventListener("click", function() { ... } , false); </pre>
 
 <p>В следующем коде оба выражения содержат <code>eval()</code>, возвращающий 42. Первое определяется строкой "<code>x + y + 1</code>"; второе - строкой "<code>42</code>".</p>
 
-<pre class="brush:js notranslate">var x = 2;
+<pre class="brush:js">var x = 2;
 var y = 39;
 var z = "42";
 eval("x + y + 1"); // возвращает 42
@@ -134,7 +134,7 @@ eval(z);           // вернёт 42
 
 <p>Следующий пример использует <code>eval()</code> для получения значения выражения <code>str</code>. Эта строка состоит из JavaScript выражений, печатающих в консоль, и, если x равен пяти, призывающих z значение 42, или 0 в противном случае. Когда второе выражение будет исполнено, <code>eval()</code> будет считать выражения выполненными, а также это установит значение выражению переменной z и вернёт его.</p>
 
-<pre class="brush:js notranslate">var x = 5;
+<pre class="brush:js">var x = 5;
 var str = "if (x == 5) {console.log('z is 42'); z = 42;} else z = 0; ";
 
 console.log("z is ", eval(str));</pre>
@@ -143,7 +143,7 @@ console.log("z is ", eval(str));</pre>
 
 <p><code>eval()</code> вернёт значение последнего выполняемого выражения</p>
 
-<pre class="brush:js notranslate">var str = "if ( a ) { 1+1; } else { 1+2; }";
+<pre class="brush:js">var str = "if ( a ) { 1+1; } else { 1+2; }";
 var a = true;
 var b = eval(str);  // вернёт 2
 
@@ -156,7 +156,7 @@ console.log("b is : " + b);</pre>
 
 <h3 id="eval_как_строковое_определение_функции_включающее_и_как_префикс_и_суффикс"><code>eval</code> как строковое определение функции, включающее "(" и ")" как префикс и суффикс</h3>
 
-<pre class="brush:js notranslate">var fctStr1 = "function a() {}"
+<pre class="brush:js">var fctStr1 = "function a() {}"
 var fctStr2 = "(function a() {})"
 var fct1 = eval(fctStr1)  // вернёт undefined
 var fct2 = eval(fctStr2)  // вернёт функцию
@@ -164,35 +164,12 @@ var fct2 = eval(fctStr2)  // вернёт функцию
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.2.1', 'eval')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-eval-x', 'eval')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
 <div id="compat-mobile">
-<p>{{Compat("javascript.builtins.eval")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h3 id="Gecko-специфичные_замечания">Gecko-специфичные замечания</h3>

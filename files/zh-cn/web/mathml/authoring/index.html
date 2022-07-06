@@ -10,13 +10,13 @@ translation_of: Web/MathML/Authoring
 
 <p>这个页面解释了如何利用 MathML 语言书写数学公式。就像 HTML，MathML 是用标签和属性描述的。当你的文档包含了高级结构比如说列表或表格的时候，HTML 会变得很冗长，但是幸好还有很多来自简单记号法的生成器，“所见即所得”编辑器以及别的内容管理系统可以帮助你编写 Web 网页。</p>
 
-<p>数学公式记号法在结构方面更加复杂，像分数、平方根或者矩阵，很可能需要它们自己的标签。结果是，好的 MathML 编辑工具很重要，我们在下面描述一些工具。值得一说的是，Mozilla MathML 工作小组已经开发出了 <a href="https://github.com/fred-wang/TeXZilla/">TeXZilla</a>，这是一个基于 JavaScript、支持 Unicode 编码的 LaTeX 转 MathML 转换器，is intended to be used in many scenarios described here。当然了，这个列表并不详尽，我们建议你自己去查看 <a href="https://www.w3.org/Math/Software/">W3C MathML软件列表</a>，你可以在那里找到很多别的工具。</p>
+<p>数学公式记号法在结构方面更加复杂，像分数、平方根或者矩阵，很可能需要它们自己的标签。结果是，好的 MathML 编辑工具很重要，我们在下面描述一些工具。值得一说的是，Mozilla MathML 工作小组已经开发出了 <a href="https://github.com/fred-wang/TeXZilla/">TeXZilla</a>，这是一个基于 JavaScript、支持 Unicode 编码的 LaTeX 转 MathML 转换器，is intended to be used in many scenarios described here。当然了，这个列表并不详尽，我们建议你自己去查看 <a href="https://www.w3.org/Math/Software/">W3C MathML 软件列表</a>，你可以在那里找到很多别的工具。</p>
 
 <p>注意，根据设计，MathML 在 HTML5 中是完美整合的，而且你可以使用寻常的 Web 功能，比如说 CSS、DOM、JavaScript 或 SVG。这超出这个文档的范围了，但是任何拥有基础 Web 语言知识的人都能够轻松地学会用 MathML 综合这些功能。请阅读<a href="/en-US/docs/Mozilla/MathML_Project#Sample_MathML_Documents">我们的文档</a>以及 <a href="/zh-CN/docs/Web/MathML">MathML 参考</a>以了解详情。</p>
 
 <h2 id="使用_MathML">使用 MathML</h2>
 
-<h4 id="Example_in_HTML5_texthtml" name="Example_in_HTML5_(text/html)">HTML 网页中的 MathML</h4>
+<h4 id="Example_in_HTML5_texthtml">HTML 网页中的 MathML</h4>
 
 <p>你可以在 HTML5 文档内部使用 MathML 表达式：</p>
 
@@ -45,11 +45,11 @@ translation_of: Web/MathML/Authoring
 
 <h4 id="对不支持_MathML_的浏览器的后备计划">对不支持 MathML 的浏览器的后备计划</h4>
 
-<p>不幸的是，一些浏览器不能呈现 MathML 方程式，或者只能有限地支持它。因此，你可能需要使用一个MathML polyfill 以提供一些用于呈现的后备计划。如果你只需要基本的数学公式结构，比如说用在这个 MDN wiki 中的这些，那么，一个小型的 <a href="https://github.com/fred-wang/mathml.css">mathml.css</a> 样式表就足够了。要想使用它，只需要在你的文档中插入一行内容：</p>
+<p>不幸的是，一些浏览器不能呈现 MathML 方程式，或者只能有限地支持它。因此，你可能需要使用一个 MathML polyfill 以提供一些用于呈现的后备计划。如果你只需要基本的数学公式结构，比如说用在这个 MDN wiki 中的这些，那么，一个小型的 <a href="https://github.com/fred-wang/mathml.css">mathml.css</a> 样式表就足够了。要想使用它，只需要在你的文档中插入一行内容：</p>
 
 <pre class="brush: html">&lt;script src="http://fred-wang.github.io/mathml.css/mspace.js"&gt;&lt;/script&gt;</pre>
 
-<p>如果你需要更多复杂的结构，你需要考虑使用更重一些的 <a href="https://www.mathjax.org" title="http://www.mathjax.org">MathJax</a> 库作为一个MathML polyfill：</p>
+<p>如果你需要更多复杂的结构，你需要考虑使用更重一些的 <a href="https://www.mathjax.org">MathJax</a> 库作为一个 MathML polyfill：</p>
 
 <pre class="brush: html">&lt;script src="http://fred-wang.github.io/mathjax.js/mpadded-min.js"&gt;&lt;/script&gt;</pre>
 
@@ -93,7 +93,7 @@ m|math {
 
 <p>You can then use the <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> rule as usual to provide WOFF fallback for Latin Modern and Latin Modern Math. See this <a href="https://github.com/fred-wang/MathFonts">GitHub repository to get WOFF fonts and sample CSS stylesheets</a> to use on your Web site and check <a href="http://fred-wang.github.io/MathFonts/">its test page</a>.</p>
 
-<h4 id="XML文档中的_MathML（XHTML、EPUB，等等）">XML文档中的 MathML（XHTML、EPUB，等等）</h4>
+<h4 id="XML文档中的_MathML（XHTML、EPUB，等等）">XML 文档中的 MathML（XHTML、EPUB，等等）</h4>
 
 <p>If for some reason you need to use MathML in XML documents, be sure to satisfy the usual requirements: well-formed document, use of correct MIME type, MathML namespace <code>"http://www.w3.org/1998/Math/MathML"</code> on <code>&lt;math&gt;</code> roots. For example, the XHTML version of the previous example looks like this:<br>
   </p>
@@ -125,9 +125,9 @@ m|math {
 
 <h4 id="电子邮件和即时通讯客户端中的_MathML">电子邮件和即时通讯客户端中的 MathML</h4>
 
-<p>Modern mail clients may send and receive emails in the HTML5 format and thus can use MathML expressions. Be sure to have the "send as HTML" and "view as HTML" options enabled. In Thunderbird, you can use the "Insert HTML" command to paste your HTML+MathML code. <a href="http://disruptive-innovations.com/zoo/MathBird/" title="http://disruptive-innovations.com/zoo/MathBird/">MathBird</a> is a convenient add-on for Thunderbird to insert such MathML expressions using the AsciiMath input syntax. Moreover, a LaTeX-to-MathML input box has also been integrated into <a href="https://www.seamonkey-project.org/">SeaMonkey</a> since version 2.28 and into <a href="https://www.mozilla.org/thunderbird/">Thunderbird</a> since version 31. Again, the way MathML is handled and the quality of the MathML rendering <a href="http://www.maths-informatique-jeux.com/blog/frederic/?post/2012/11/14/Writing-mathematics-in-emails#c121" title="http://www.maths-informatique-jeux.com/blog/frederic/?post/2012/11/14/Writing-mathematics-in-emails#c121">depend on the mail clients</a>. Even if your browser supports MathML, your Webmail may prevent you to send or receive mails with MathML inside.</p>
+<p>Modern mail clients may send and receive emails in the HTML5 format and thus can use MathML expressions. Be sure to have the "send as HTML" and "view as HTML" options enabled. In Thunderbird, you can use the "Insert HTML" command to paste your HTML+MathML code. <a href="http://disruptive-innovations.com/zoo/MathBird/">MathBird</a> is a convenient add-on for Thunderbird to insert such MathML expressions using the AsciiMath input syntax. Moreover, a LaTeX-to-MathML input box has also been integrated into <a href="https://www.seamonkey-project.org/">SeaMonkey</a> since version 2.28 and into <a href="https://www.mozilla.org/thunderbird/">Thunderbird</a> since version 31. Again, the way MathML is handled and the quality of the MathML rendering <a href="http://www.maths-informatique-jeux.com/blog/frederic/?post/2012/11/14/Writing-mathematics-in-emails#c121">depend on the mail clients</a>. Even if your browser supports MathML, your Webmail may prevent you to send or receive mails with MathML inside.</p>
 
-<p>Gecko-based instant messaging clients can integrate a Javascript-based text-to-MathML converter (mentioned below) and then render the MathML expressions generated from the (plaintext) instant messages. For example, there is an <a href="https://addons.instantbird.org/en-US/instantbird/addon/340" title="https://addons.instantbird.org/en-US/instantbird/addon/340">Instantbird add-on</a> that handles LaTeX expressions.</p>
+<p>Gecko-based instant messaging clients can integrate a Javascript-based text-to-MathML converter (mentioned below) and then render the MathML expressions generated from the (plaintext) instant messages. For example, there is an <a href="https://addons.instantbird.org/en-US/instantbird/addon/340">Instantbird add-on</a> that handles LaTeX expressions.</p>
 
 <h2 id="从简单句法转换">从简单句法转换</h2>
 
@@ -173,11 +173,11 @@ m|math {
 
 <p><a href="https://github.com/fred-wang/TeXZilla">TeXZilla</a> has an <a href="https://github.com/fred-wang/x-tex">&lt;x-tex&gt;</a> custom element, that can be used to write things like</p>
 
-<pre><span class="brush: html">&lt;<span class="start-tag">x-tex</span>&gt;</span><span>\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</span><span class="brush: html">&lt;/<span class="end-tag">x-tex</span>&gt;</span></pre>
+<pre>&lt;x-tex&gt;\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1&lt;/x-tex&gt;</pre>
 
 <p>and get it automatically converted into MathML. This is still a work-in-progress, but could be improved in the future thanks to Web Components and shadow DOM. Alternatively, you can use the more traditional <a href="https://github.com/fred-wang/TeXZilla/wiki/Advanced-Usages#parsing-tex-expressions-in-your-web-page">Javascript parsing of expressions at load time</a> as all the other tools in this section do.</p>
 
-<p>One simple client-side conversion tools is <a href="http://www1.chapman.edu/~jipsen/mathml/asciimath.html" title="http://www1.chapman.edu/~jipsen/mathml/asciimath.html">ASCIIMathML</a>. Just download the <a href="https://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js" title="http://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js">ASCIIMathML.js</a> script and copy it to your Web site. Then on your Web pages, add a <code>&lt;script&gt;</code> tag to load ASCIIMathML and the mathematical expressions delimited by <code>`</code> (grave accent) will be automatically parsed and converted to MathML:</p>
+<p>One simple client-side conversion tools is <a href="http://www1.chapman.edu/~jipsen/mathml/asciimath.html">ASCIIMathML</a>. Just download the <a href="https://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js">ASCIIMathML.js</a> script and copy it to your Web site. Then on your Web pages, add a <code>&lt;script&gt;</code> tag to load ASCIIMathML and the mathematical expressions delimited by <code>`</code> (grave accent) will be automatically parsed and converted to MathML:</p>
 
 <pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
@@ -191,19 +191,19 @@ m|math {
 ...
 </pre>
 
-<p><a href="https://math.etsu.edu/LaTeXMathML/" title="http://math.etsu.edu/LaTeXMathML/">LaTeXMathML</a> is a similar script that allows to parse more LaTeX commands. The installation is similar: copy <a href="https://math.etsu.edu/LaTeXMathML/LaTeXMathML.js" title="http://math.etsu.edu/LaTeXMathML/LaTeXMathML.js">LaTeXMathML.js</a> and <a href="https://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css" title="http://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css">LaTeXMathML.standardarticle.css</a>, add links in the header of your document and the LaTeX content of your Web page marked by the "LaTeX" class will be automatically parsed and converted to HTML+MathML:</p>
+<p><a href="https://math.etsu.edu/LaTeXMathML/">LaTeXMathML</a> is a similar script that allows to parse more LaTeX commands. The installation is similar: copy <a href="https://math.etsu.edu/LaTeXMathML/LaTeXMathML.js">LaTeXMathML.js</a> and <a href="https://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css">LaTeXMathML.standardarticle.css</a>, add links in the header of your document and the LaTeX content of your Web page marked by the "LaTeX" class will be automatically parsed and converted to HTML+MathML:</p>
 
-<pre class="brush: html"><span>&lt;<span class="start-tag">head</span>&gt;</span>
-<span>...
-</span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>" <span class="attribute-name">src</span>="<a class="attribute-value">LaTeXMathML.js</a>"&gt;</span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
-</span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">rel</span>="<a class="attribute-value">stylesheet</a>" <span class="attribute-name">type</span>="<a class="attribute-value">text/css</a>" <span class="attribute-name">href</span>="<a class="attribute-value">LaTeXMathML.standardarticle.css</a>" <span>/</span>&gt;</span><span>
+<pre class="brush: html">&lt;head&gt;
 ...
-</span><span>&lt;/<span class="end-tag">head</span>&gt;</span><span>
+&lt;script type="<a class="attribute-value">text/javascript</a>" src="<a class="attribute-value">LaTeXMathML.js</a>"&gt;&lt;/script&gt;
+&lt;link rel="<a class="attribute-value">stylesheet</a>" type="<a class="attribute-value">text/css</a>" href="<a class="attribute-value">LaTeXMathML.standardarticle.css</a>" /&gt;
+...
+&lt;/head&gt;
 
-</span><span>&lt;<span class="start-tag">body</span>&gt;</span><span>
+&lt;body&gt;
 ...
 
-</span>&lt;div class="LaTeX"&gt;
+&lt;div class="LaTeX"&gt;
 \documentclass[12pt]{article}
 
 \begin{document}
@@ -223,9 +223,9 @@ This is a sample LaTeXML document.
 &lt;/div&gt;
 ...</pre>
 
-<p><a href="https://mathscribe.com/author/jqmath.html" title="http://mathscribe.com/author/jqmath.html">jqMath</a> is another script to parse a simple LaTeX-like syntax but which also accepts non-ASCII characters like  <code>√{∑↙{n=1}↖{+∞} 6/n^2} = π</code>  to write <math> <mrow> <msqrt> <mrow class="ma-repel-adj"> <munderover> <mo>∑</mo> <mrow> <mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow> <mrow> <mo>+</mo> <mi>∞</mi> </mrow> </munderover> <mfrac> <mn>6</mn> <msup> <mi>n</mi> <mn>2</mn> </msup> </mfrac> </mrow> </msqrt> <mo>=</mo> <mi>π</mi> </mrow> </math>. The installation is similar: download and copy the relevant <a href="https://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip" title="http://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip">Javascript and CSS files</a> on your Web site and reference them in your page header (see the <code>COPY-ME.html</code> file from the zip archive for an example). One of the advantage of jqMath over the previous scripts is that it will automatically add some simple CSS rules to do the mathematical layout and make the formulas readable on browsers with limited MathML support.</p>
+<p><a href="https://mathscribe.com/author/jqmath.html">jqMath</a> is another script to parse a simple LaTeX-like syntax but which also accepts non-ASCII characters like  <code>√{∑↙{n=1}↖{+∞} 6/n^2} = π</code>  to write <math> <mrow> <msqrt> <mrow class="ma-repel-adj"> <munderover> <mo>∑</mo> <mrow> <mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow> <mrow> <mo>+</mo> <mi>∞</mi> </mrow> </munderover> <mfrac> <mn>6</mn> <msup> <mi>n</mi> <mn>2</mn> </msup> </mfrac> </mrow> </msqrt> <mo>=</mo> <mi>π</mi> </mrow> </math>. The installation is similar: download and copy the relevant <a href="https://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip">Javascript and CSS files</a> on your Web site and reference them in your page header (see the <code>COPY-ME.html</code> file from the zip archive for an example). One of the advantage of jqMath over the previous scripts is that it will automatically add some simple CSS rules to do the mathematical layout and make the formulas readable on browsers with limited MathML support.</p>
 
-<p><a name="mathjax"></a>Another way to work around the lack of MathML support in some browsers is to use <a href="https://www.mathjax.org/" title="http://www.mathjax.org/">MathJax</a>. However, note that you may find conflicts and synchronization issues between MathJax and the Javascript libraries previously mentioned. So if you really want to use MathJax as a MathML polyfill, you'd better use its own LaTeX/ASCIIMath parsers too. Note that on the one hand MathJax has better parsing and rendering support but on the other hand it is much bigger, more complex and slower than the previous Javascript libraries. Fortunately, you can use MathJax's CDN so that you don't need to install it on your Web server. Also, the slowest part of MathJax is currently its HTML-CSS / SVG output modes so we recommend to use the Native MathML output for Gecko-based browsers. Hence a typical configuration to use the AMS-LaTeX input is:</p>
+<p><a name="mathjax"></a>Another way to work around the lack of MathML support in some browsers is to use <a href="https://www.mathjax.org/">MathJax</a>. However, note that you may find conflicts and synchronization issues between MathJax and the Javascript libraries previously mentioned. So if you really want to use MathJax as a MathML polyfill, you'd better use its own LaTeX/ASCIIMath parsers too. Note that on the one hand MathJax has better parsing and rendering support but on the other hand it is much bigger, more complex and slower than the previous Javascript libraries. Fortunately, you can use MathJax's CDN so that you don't need to install it on your Web server. Also, the slowest part of MathJax is currently its HTML-CSS / SVG output modes so we recommend to use the Native MathML output for Gecko-based browsers. Hence a typical configuration to use the AMS-LaTeX input is:</p>
 
 <pre class="brush: html">...
     &lt;script type="text/x-mathjax-config"&gt;
@@ -242,7 +242,7 @@ This is a sample LaTeXML document.
 ...
 </pre>
 
-<p>Note that <a href="http://docs.mathjax.org/en/latest/tex.html#tex-and-latex-math-delimiters" title="http://docs.mathjax.org/en/latest/tex.html#tex-and-latex-math-delimiters">the dollar delimiters are not used by default</a>. To use the ASCIIMathML input instead, just replace <code>TeX-AMS-MML_HTMLorMML</code> by <code>AM-MML_HTMLorMML</code>.  MathJax has many other features, see the <a href="http://docs.mathjax.org/en/latest/" title="http://docs.mathjax.org/en/latest/">MathJax documentation</a> for further details.</p>
+<p>Note that <a href="http://docs.mathjax.org/en/latest/tex.html#tex-and-latex-math-delimiters">the dollar delimiters are not used by default</a>. To use the ASCIIMathML input instead, just replace <code>TeX-AMS-MML_HTMLorMML</code> by <code>AM-MML_HTMLorMML</code>.  MathJax has many other features, see the <a href="http://docs.mathjax.org/en/latest/">MathJax documentation</a> for further details.</p>
 
 <h3 id="命令行程序">命令行程序</h3>
 
@@ -267,7 +267,7 @@ This is a sample LaTeXML document.
 
 <p><a href="https://github.com/fred-wang/TeXZilla">TeXZilla</a> can be used <a href="https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line">from the command line</a> and will essentially have the same support as itex2MML described below. However, the stream filter behavior is not implemented yet.</p>
 
-<p>If you only want to parse simple LaTeX mathematical expressions, you might want to try tools like <a href="https://golem.ph.utexas.edu/~distler/blog/itex2MML.html" title="http://golem.ph.utexas.edu/~distler/blog/itex2MML.html">itex2MML</a> or <a href="http://gva.noekeon.org/blahtexml/" title="http://gva.noekeon.org/blahtexml/">Blahtex</a>. The latter is often available on Linux distributions. Let's consider the former, which was originally written by Paul Gartside at the beginning of the Mozilla MathML project and has been maintained by Jacques Distler since then. It's a small stream filter written in C/C++ and generated with flex and bison ; in particular it is very fast. Install flex/bison as well as the classical compiler and make tools. On Unix, you can then download itex2MML, build and install it:</p>
+<p>If you only want to parse simple LaTeX mathematical expressions, you might want to try tools like <a href="https://golem.ph.utexas.edu/~distler/blog/itex2MML.html">itex2MML</a> or <a href="http://gva.noekeon.org/blahtexml/">Blahtex</a>. The latter is often available on Linux distributions. Let's consider the former, which was originally written by Paul Gartside at the beginning of the Mozilla MathML project and has been maintained by Jacques Distler since then. It's a small stream filter written in C/C++ and generated with flex and bison ; in particular it is very fast. Install flex/bison as well as the classical compiler and make tools. On Unix, you can then download itex2MML, build and install it:</p>
 
 <pre class="brush: bash">wget http://golem.ph.utexas.edu/~distler/blog/files/itexToMML.tar.gz; \
 tar -xzf itexToMML.tar.gz; \
@@ -308,8 +308,8 @@ sudo make install
 
 <p>To handle the case of browsers without MathML support, you can use the <code>--javascript</code> parameter to tell LaTeXML to include one of the <a href="#fallback_for_browsers_without_mathml_support">fallback scripts</a>:</p>
 
-<pre>  latexmlc --dest foo.html --javascript=<code class="language-html"><span class="script token"><span class="tag token"><span class="attr-value token">http://fred-wang.github.io/mathml.css/mspace.js</span></span></span></code> foo.tex  # Add the CSS fallback
-  latexmlc --dest foo.html --javascript=<code class="language-html"><span class="script token"><span class="tag token"><span class="attr-value token">http://fred-wang.github.io/mathjax.js/mpadded-min.js</span></span></span></code> foo.tex # Add the MathJax fallback
+<pre>  latexmlc --dest foo.html --javascript=<code class="language-html">http://fred-wang.github.io/mathml.css/mspace.js</code> foo.tex  # Add the CSS fallback
+  latexmlc --dest foo.html --javascript=<code class="language-html">http://fred-wang.github.io/mathjax.js/mpadded-min.js</code> foo.tex # Add the MathJax fallback
 </pre>
 
 <p>If your LaTeX document is big, you might want to split it into several small pages rather than putting everything in a single large page. For example, this will split the pages at the <code>\section</code> level:</p>
@@ -342,7 +342,7 @@ sudo make install
 
 <p><a href="https://github.com/fred-wang/TeXZilla">TeXZilla</a> has several interfaces, including a <a href="https://ckeditor.com/addon/texzilla">CKEditor plugin</a> used on MDN, an <a href="http://fred-wang.github.io/TeXZilla/">online demo</a>, a <a href="https://addons.mozilla.org/en-US/firefox/addon/texzilla/">Firefox add-on</a> or a <a href="https://marketplace.firefox.com/app/texzilla-1/">FirefoxOS Webapp</a>. It has also been integrated into <a href="https://www.seamonkey-project.org/">SeaMonkey</a> since version 2.28 and into <a href="https://www.mozilla.org/thunderbird/">Thunderbird</a> since version 31.<a href="http://abisource.org/"> Abiword</a> contains a small equation editor, based on itex2MML. Finally, <a href="http://www.bluegriffon.com/"> Bluegriffon</a> has an add-on to insert MathML formulas in your document, using ASCII/LaTeX-like syntax.</p>
 
-<p style="text-align: center;"><img alt="BlueGriffon" src="mathml-shot1.png"></p>
+<p><img alt="BlueGriffon" src="mathml-shot1.png"></p>
 
 <h3 id="所见即所得编辑器">所见即所得编辑器</h3>
 
@@ -352,7 +352,7 @@ sudo make install
 
 <p><a href="https://www.openoffice.org/">OpenOffice</a> and <a href="https://libreoffice.org/">LibreOffice</a> have an equation editor (File → New → Formula). It is semi-WYSIWYG: you enter the source of the formula using the equation panel/keyboard and a preview of the formula is regularly refreshed. The editor uses its own syntax "StarMath" for the source but MathML is also generated when the document is saved. To get the MathML code, save the document as mml and open it with any text editor. Alternatively, you can extract the odf file (which is actually a zip archive) and open an xml file called <code>content.xml</code>.</p>
 
-<p style="text-align: center;"><img alt="Open Office Math" src="openoffice.png"></p>
+<p><img alt="Open Office Math" src="openoffice.png"></p>
 
 <p><a href="https://www.w3.org/Amaya/">Amaya</a> is the W3C's web editor, which is able to handle MathML inside XHTML documents. Use the Elements and the Special Chars panels to create various advanced mathematical constructs. Simple text such as <code>a+2</code> is automatically parsed and the appropriate MathML markup is generated. Once you are done, you can directly save your XHTML page and open it in Mozilla.</p>
 
@@ -360,7 +360,7 @@ sudo make install
 
 <p><a href="https://www.inftyreader.org/">Inftyreader</a> is able to perform some Optical Character Recognition, including translation of mathematical equations into MathML. Other tools can do handwriting recognition such as the <a href="https://windows.microsoft.com/en-za/windows7/use-math-input-panel-to-write-and-correct-math-equations">Windows Math Input Panel</a></p>
 
-<p>or the online converter <a href="http://webdemo.visionobjects.com/" title="http://webdemo.visionobjects.com/portal.html">Web Equation</a>.</p>
+<p>or the online converter <a href="http://webdemo.visionobjects.com/">Web Equation</a>.</p>
 
 <div class="originaldocinfo">
 <h3 id="原始文件信息">原始文件信息</h3>

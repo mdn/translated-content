@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">object.property
+<pre class="syntaxbox">object.property
 object["property"]
 </pre>
 
@@ -25,14 +25,14 @@ object["property"]
 
 <h3 id="Точечная_запись">Точечная запись</h3>
 
-<p class="brush: js">В записи <code>object.property</code>, <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">property</span></font> должно быть действительным <a href="https://wiki.developer.mozilla.org/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Identifier">идентификатором</a>. (В стандарте ECMAScript, имена свойств технически называются "IdentifierNames", а не "Identifiers", поэтому зарезервированные слова могут быть использованы в их качестве, но это не рекомендуется). Например, <code>object.$1</code> является верной записью, а <code>object.1</code> - нет.</p>
+<p class="brush: js">В записи <code>object.property</code>, <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">property</span></font> должно быть действительным <a href="/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Identifier">идентификатором</a>. (В стандарте ECMAScript, имена свойств технически называются "IdentifierNames", а не "Identifiers", поэтому зарезервированные слова могут быть использованы в их качестве, но это не рекомендуется). Например, <code>object.$1</code> является верной записью, а <code>object.1</code> - нет.</p>
 
-<pre class="brush: js notranslate">const variable = <var>object</var>.<var>property_name;</var>
+<pre class="brush: js">const variable = <var>object</var>.<var>property_name;</var>
 
 <var>object</var>.<var>property_name</var> = value;
 </pre>
 
-<pre class="brush: js notranslate">const object = {};
+<pre class="brush: js">const object = {};
 
 object.$1 = 'foo';
 console.log(object.$1);  // 'foo'
@@ -42,11 +42,11 @@ console.log(object.1);   // SyntaxError</pre>
 
 <p>Здесь метод с именем <code>createElement</code> считывается с объекта <code>document</code> и вызывается.</p>
 
-<pre class="brush: js notranslate">document.createElement('pre')</pre>
+<pre class="brush: js">document.createElement('pre')</pre>
 
 <p>Если вы хотите вызвать метод на численном литерале, не имеющий части с экспонентой или точки, отделяющей дробную часть, нужно ставить пробел перед точкой, являющейся частью обращения к этому методу, чтобы интерпретатор не посчитал, что это точка отделяет дробную часть числа (или использовать другие способы этого избежать).</p>
 
-<pre class="brush: js notranslate">// SyntaxError, здесь считается, что 77. это число,
+<pre class="brush: js">// SyntaxError, здесь считается, что 77. это число,
 // поэтому такая запись эквивалентна (77.)toExponentional()
 // что является ошибкой
 77.toExponentional()
@@ -65,29 +65,29 @@ console.log(object.1);   // SyntaxError</pre>
 
 <p class="brush: js">В записи <code>object[property_name]</code>, <em><code>property_name</code> - </em>это выражение, вычисляющееся в строку или <a href="/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Symbol">символ</a>. Это может быть любая строка, не обязательно действительный идентификатор, например <code>'1foo'</code>, '<code>!bar!'</code> или даже <code>' '</code> (пробел).</p>
 
-<pre class="brush: js notranslate">const variable = object[property_name]
+<pre class="brush: js">const variable = object[property_name]
 object[property_name] = value</pre>
 
 <p>Пример, аналогичный примеру в предыдущем пункте:</p>
 
-<pre class="brush: js notranslate">document['createElement']('pre');
+<pre class="brush: js">document['createElement']('pre');
 </pre>
 
 <p>Пробел перед скобкой допускается:</p>
 
-<pre class="brush: js notranslate">document ['createElement']('pre')</pre>
+<pre class="brush: js">document ['createElement']('pre')</pre>
 
 <h3 id="Имена_свойств">Имена свойств</h3>
 
 <p>Имена свойств могут быть строками или <a href="/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Symbol">символами</a>. Любое другое значение приводится к строке. Следующий код выводит <code>'value'</code>, поскольку число <code>1</code> приводится к строке <code>'1'</code>.</p>
 
-<pre class="brush: js notranslate">const object = {}
+<pre class="brush: js">const object = {}
 object['1'] = 'value'
 console.log(object[1])</pre>
 
 <p>Этот пример также выводит <code>'value',</code> так как и <code>foo</code>, и <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">bar</span></font> приводятся к одной и той же строке.</p>
 
-<pre class="brush: js notranslate">const foo = {unique_prop: 1}
+<pre class="brush: js">const foo = {unique_prop: 1}
 const bar = {unique_prop: 2}
 const object = {}
 
@@ -109,12 +109,12 @@ console.log(object[bar]);
 
 <p>Например, следующий синтаксис можно часто увидеть в скриптах.</p>
 
-<pre class="brush: js notranslate">x = eval('document.forms.form_name.elements.' + strFormControl + '.value');
+<pre class="brush: js">x = eval('document.forms.form_name.elements.' + strFormControl + '.value');
 </pre>
 
 <p>Функция <code>eval()</code> очень медленная и её использования следует избегать, когда это возможно. Кроме того, строка <code>strFormControl</code> при таком использовании обязаны содержать действительный идентификатор, что не является обязательным для <code>id</code> полей формы, то есть, например, поле с id <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">1</span></font> не получится получить такой записью. Лучше вместо этого использовать скобочную запись:</p>
 
-<pre class="brush: js notranslate">x = document.forms["form_name"].elements[strFormControl].value;
+<pre class="brush: js">x = document.forms["form_name"].elements[strFormControl].value;
 </pre>
 
 <h2 id="Спецификации">Спецификации</h2>

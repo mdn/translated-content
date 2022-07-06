@@ -7,7 +7,7 @@ translation_of: Web/API/GlobalEventHandlers/onload
 
 <p>Обработчик для события загрузки объекта {{ domxref("window") }}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="eval">window.onload = <em>funcRef</em>;
 </pre>
@@ -16,7 +16,7 @@ translation_of: Web/API/GlobalEventHandlers/onload
  <li><code>funcRef</code> функция обработчик события будет вызвана, когда произойдёт событие загрузки окна.</li>
 </ul>
 
-<h2 id="Example" name="Example">Примеры</h2>
+<h2 id="Example">Примеры</h2>
 
 <pre class="brush: js">window.onload = function() {
   init();
@@ -41,15 +41,15 @@ translation_of: Web/API/GlobalEventHandlers/onload
 &lt;/html&gt;
 </pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <p>Событие загрузки возникают в конце процесса загрузки документа. В этот момент все объекты документа находятся в DOM, и все картинки, скрипты, фреймы, ссылки загружены.</p>
 
 <p>Есть также <a href="/en/Gecko-Specific_DOM_Events" title="en/Gecko-Specific_DOM_Events">Gecko</a> события как <code>DOMContentLoaded</code> и <code>DOMFrameContentLoaded</code> (которые могут быть навешены с помощью {{ domxref("EventTarget.addEventListener()") }}) которые возникают после того как DOM для страницы будет собран, но не ждут, когда другие ресурсы будут загружены.</p>
 
-<h2 id="Specification" name="Specification">Спецификации</h2>
+<h2 id="Specification">Спецификации</h2>
 
-<p>Этот обработчик события указан в стандарте <a class="external" href="http://www.whatwg.org/html/#handler-window-onload" title="http://www.whatwg.org/html/#handler-window-onload">HTML</a>.</p>
+<p>Этот обработчик события указан в стандарте <a class="external" href="http://www.whatwg.org/html/#handler-window-onload">HTML</a>.</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

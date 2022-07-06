@@ -24,11 +24,11 @@ translation_of: Web/API/WebRTC_API
 
 <h2 id="Interoperability" name="Interoperability">相互運用性</h2>
 
-<p>WebRTC の実装はまだ進化しており、ブラウザごとに<a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">コーデック</a>や WebRTC 機能のサポートレベルが異なるため、コードを書き始める前に Google が提供する <a href="https://github.com/webrtcHacks/adapter">Adapter.js</a> ライブラリを利用することを強く検討する必要があります。</p>
+<p>WebRTC の実装はまだ進化しており、ブラウザごとに<a href="/ja/docs/Web/Media/Formats/WebRTC_codecs">コーデック</a>や WebRTC 機能のサポートレベルが異なるため、コードを書き始める前に Google が提供する <a href="https://github.com/webrtcHacks/adapter">Adapter.js</a> ライブラリを利用することを強く検討する必要があります。</p>
 
 <p>Adapter.js はシム ({{Glossary("Shim")}}) やポリフィル ({{Glossary("polyfill")}}) を使用して、サポートしている環境によって異なる WebRTC 実装の違いを滑らかにします。また、接頭辞やその他の名前の違いも Adapter.js が処理することで、WebRTC の開発プロセス全体がより簡単になり、より広範な互換性のある結果が得られるようになります。このライブラリは <a href="https://www.npmjs.com/package/webrtc-adapter">NPM パッケージ</a>としても提供されています。</p>
 
-<p>Adapter.js の詳細については、<a href="/en-US/docs/Web/API/WebRTC_API/adapter.js">WebRTC adapter.js を使用した互換性の向上</a>を参照してください。</p>
+<p>Adapter.js の詳細については、<a href="/ja/docs/Web/API/WebRTC_API/adapter.js">WebRTC adapter.js を使用した互換性の向上</a>を参照してください。</p>
 
 <h2 id="WebRTC_concepts_and_usage" name="WebRTC_concepts_and_usage">WebRTC の概念と使い方</h2>
 
@@ -76,12 +76,12 @@ translation_of: Web/API/WebRTC_API
  <dt>{{DOMxRef("RTCTrackEvent")}}</dt>
  <dd>このインターフェイスは {{domxref("RTCPeerConnection.track_event", "track")}} イベントを表すもので、 {{DOMxRef("RTCRtpReceiver")}} オブジェクトが {{DOMxRef("RTCPeerConnection")}} オブジェクトに追加されたことを示すトラックイベントを表現するために使用されるインターフェースで、新しい着信 (incoming) {{DOMxRef("MediaStreamTrack")}} が生成され、<code>RTCPeerConnection</code> に追加されたことを示します。</dd>
  <dt>{{DOMxRef("RTCSctpTransport")}}</dt>
- <dd>Stream Control Transmission Protocol (<strong>{{Glossary("SCTP")}}</strong>) トランスポートを説明する情報を提供し、 {{DOMxRef("RTCPeerConnection")}} のすべての<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a> のデータチャネルの SCTP パケットが送受信される Datagram Transport Layer Security (<strong>{{Glossary("DTLS")}}</strong>) トランスポートにアクセスする方法も提供します。</dd>
+ <dd>Stream Control Transmission Protocol (<strong>{{Glossary("SCTP")}}</strong>) トランスポートを説明する情報を提供し、 {{DOMxRef("RTCPeerConnection")}} のすべての<a href="/ja/docs/Web/API/RTCPeerConnection" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a> のデータチャネルの SCTP パケットが送受信される Datagram Transport Layer Security (<strong>{{Glossary("DTLS")}}</strong>) トランスポートにアクセスする方法も提供します。</dd>
  <dt>
  <h4 id="Dictionaries" name="Dictionaries">辞書</h4>
  </dt>
  <dt>{{DOMxRef("RTCConfiguration")}}</dt>
- <dd><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a> の {{DOMxRef("RTCPeerConnection")}} の構成オプションを提供するために使用します。</dd>
+ <dd><a href="/ja/docs/Web/API/RTCPeerConnection" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a> の {{DOMxRef("RTCPeerConnection")}} の構成オプションを提供するために使用します。</dd>
  <dt>{{DOMxRef("RTCIceServer")}}</dt>
  <dd>({{Glossary("STUN")}} や {{Glossary("TURN")}} サーバのような) 単一の {{Glossary("ICE")}} サーバーを定義します。</dd>
  <dt>{{DOMxRef("RTCRtpContributingSource")}}</dt>

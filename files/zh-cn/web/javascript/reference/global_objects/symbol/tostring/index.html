@@ -5,15 +5,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 ---
 <div>{{JSRef("Global_Objects", "Symbol")}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p><code><strong>toString()</strong></code> 方法返回当前 symbol 对象的字符串表示。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><var>symbol.toString()</var>;</pre>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>{{jsxref("Symbol")}} 对象拥有自己的 <code>toString</code> 方法，因而遮蔽了原型链上的 {{jsxref("Object.prototype.toString()")}}。</p>
 
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 <pre class="brush: js">Symbol("foo") + "bar";
 // TypeError: Can't convert symbol to string
 Symbol("foo").toString() + "bar"
-// "Symbol(foo)bar"，就相当于下面的:
+// "Symbol(foo)bar"，就相当于下面的：
 Object(Symbol("foo")).toString() + "bar"
 // "Symbol(foo)bar"
 </pre>
@@ -59,57 +59,9 @@ Symbol.for("foo").toString() // "Symbol(foo)"
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("33.0") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("33.0") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_Also" name="See_Also">相关链接</h2>
+<h2 id="See_Also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Object.prototype.toString()")}}</li>

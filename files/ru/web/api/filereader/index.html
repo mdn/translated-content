@@ -25,17 +25,17 @@ translation_of: Web/API/FileReader
 
 <h2 id="Конструктор">Конструктор</h2>
 
-<pre class="syntaxbox notranslate">FileReader FileReader();</pre>
+<pre class="syntaxbox">FileReader FileReader();</pre>
 
 <p>Более детально, с примерами см. <a href="/ru/Using_files_from_web_applications" title="ru/Using files from web applications">использование файлов в веб-приложениях</a>.</p>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt>{{domxref("FileReader.error")}} {{readonlyinline}}</dt>
  <dd>{{domxref("DOMError")}} представляет собой ошибку, происходящую при чтении файла.</dd>
  <dt>{{domxref("FileReader.readyState")}} {{readonlyinline}}</dt>
- <dd>Число обозначающее состояние объекта <code>FileReader</code>. Принимает одно из значений {{ anch("State constants") }}.</dd>
+ <dd>Число обозначающее состояние объекта <code>FileReader</code>. Принимает одно из значений <a href="#state_constants">State constants</a>.</dd>
  <dt>{{domxref("FileReader.result")}} {{readonlyinline}}</dt>
  <dd>Данные из файла. Значение свойства действительно только когда завершится операция чтения, причём формат данных зависит от способа, с помощью которого процесс был вызван.</dd>
 </dl>
@@ -61,7 +61,7 @@ translation_of: Web/API/FileReader
 <p>Замечание: т.к. <code>FileReader</code> унаследован от {{domxref("EventTarget")}}, на все перечисленные события можно подписаться, используя метод {{domxref("EventTarget.addEventListener()","addEventListener")}}.</p>
 </div>
 
-<h3 id="State_constants" name="State_constants">Константы состояния</h3>
+<h3 id="State_constants">Константы состояния</h3>
 
 <ul>
  <li><code>EMPTY </code> : <code>0</code> : Данные ещё не были загружены.</li>
@@ -69,7 +69,7 @@ translation_of: Web/API/FileReader
  <li><code>DONE </code> : <code>2</code> : Операция чтения была завершена.</li>
 </ul>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <dl>
  <dt>{{domxref("FileReader.abort()")}}</dt>
@@ -86,32 +86,19 @@ translation_of: Web/API/FileReader
 
 <h2 id="Спецификация">Спецификация</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API','#FileReader-interface','FileReader')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Начальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p>{{Compat("api.FileReader")}}</p>
+<p>{{Compat}}</p>
 
 <div id="compat-mobile"></div>
 
 <h3 id="Примечания_по_реализации">Примечания по реализации</h3>
 
 <ul>
- <li>Для IE9 есть <a href="http://html5labs.interoperabilitybridges.com/prototypes/fileapi/fileapi/info" title="http://html5labs.interoperabilitybridges.com/prototypes/fileapi/fileapi/info">File API Lab</a>.</li>
- <li>Opera предоставляет <a href="http://www.opera.com/docs/specs/presto28/file/" title="http://my.opera.com/desktopteam/blog/2011/04/05/stability-gmail-socks">частичную поддержку</a> в версии 11.1.</li>
+ <li>Для IE9 есть <a href="http://html5labs.interoperabilitybridges.com/prototypes/fileapi/fileapi/info">File API Lab</a>.</li>
+ <li>Opera предоставляет <a href="http://www.opera.com/docs/specs/presto28/file/">частичную поддержку</a> в версии 11.1.</li>
 </ul>
 
 <h4 id="Относительно_движка_Gecko">Относительно движка Gecko</h4>
@@ -121,7 +108,7 @@ translation_of: Web/API/FileReader
  <li>В версиях Gecko ниже 13.0 {{ geckoRelease("13.0") }} свойство <code>FileReader.error</code> возвращало объект {{ domxref("FileError") }}. Этот интерфейс был упразднён и теперь свойство <code>FileReader.error</code> возвращает объект {{ domxref("DOMError") }}, что соответствует определению FileAPI последней спецификации.</li>
 </ul>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/Using_files_from_web_applications" title="ru/Using files from web applications">Использование файлов в веб-приложениях</a></li>

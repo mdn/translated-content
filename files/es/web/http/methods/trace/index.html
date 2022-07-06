@@ -5,9 +5,9 @@ translation_of: Web/HTTP/Methods/TRACE
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>El <strong>método HTTP <code>TRACE</code> </strong> efectua una prueba de bucle de mensaje por el camino al recurso objetivo proporcionando un útil mecanismo de debugging.</p>
+<p>El <strong>método HTTP <code>TRACE</code> </strong> efectúa una prueba de bucle de mensaje por el camino al recurso objetivo proporcionando un útil mecanismo de debugging.</p>
 
-<p>El destino final de la petición debería devolver el mensaje recibido, excluyendo algunos de los campos descritos abajo, de vuelta al cliente como el mensaje body e una respuesta 200 (OK) con un {{httpheader("Content-Type")}} de  <code>message/http</code>. El destinatario final es o el servidor de origen o el priver servidor en recivir un {{httpheader("Max-Forwards")}} de valor 0 en la petición.</p>
+<p>El destino final de la petición debería devolver el mensaje recibido, excluyendo algunos de los campos descritos abajo, de vuelta al cliente como el mensaje body y una respuesta 200 (OK) con un {{httpheader("Content-Type")}} de  <code>message/http</code>. El destinatario final es o el servidor de origen o el primer servidor en recibir un {{httpheader("Max-Forwards")}} de valor 0 en la petición.</p>
 
 <table class="properties">
  <tbody>
@@ -21,7 +21,7 @@ translation_of: Web/HTTP/Methods/TRACE
   </tr>
   <tr>
    <th scope="row">{{Glossary("Safe")}}</th>
-   <td>No</td>
+   <td>Yes</td>
   </tr>
   <tr>
    <th scope="row">{{Glossary("Idempotent")}}</th>

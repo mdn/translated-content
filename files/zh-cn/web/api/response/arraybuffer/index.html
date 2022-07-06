@@ -1,0 +1,92 @@
+---
+title: Response.arrayBuffer()
+slug: Web/API/Response/arrayBuffer
+translation_of: Web/API/Response/arrayBuffer
+tags:
+  - API
+  - ArrayBuffer
+  - Fetch
+  - Method
+  - Reference
+  - Response
+browser-compat: api.Response.arrayBuffer
+---
+<p>{{APIRef("Fetch")}}{{ SeeCompatTable() }}</p>
+
+<p> {{domxref("Response")}}上的方法 <strong><code>arrayBuffer()</code></strong> 接受一个 {{domxref("Response")}} 流，并等待其读取完成。它返回一个 promise 实例，并 resolve 一个 {{domxref("ArrayBuffer")}} 对象。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="brush: js">response.arrayBuffer().then(function(buffer) {
+  // do something with buffer
+)};</pre>
+
+<h3 id="参数">参数</h3>
+
+<p>无。</p>
+
+<h3 id="返回值">返回值</h3>
+
+<p>A promise that resolves with an {{domxref("ArrayBuffer")}}.</p>
+
+<h2 id="例子">例子</h2>
+
+<p>In our <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-array-buffer">fetch array buffer example</a> (run <a href="http://mdn.github.io/fetch-examples/fetch-array-buffer/">fetch array buffer live</a>), we have a Play button. When pressed, the <code>getData()</code> function is run.</p>
+
+<p>In <code>getData()</code> we create a new request using the {{domxref("Request.Request")}} constructor, then use it to fetch an OGG music track. We also use {{domxref("AudioContext.createBufferSource")}} to create an audio buffer source.  When the fetch is successful, we read an {{domxref("ArrayBuffer")}} out of the response using <code>arrayBuffer()</code>, decode the audio data using {{domxref("AudioContext.decodeAudioData")}}, set the decoded data as the audio buffer source's buffer (<code>source.buffer</code>), then connect the source up to the {{domxref("AudioContext.destination")}}.</p>
+
+<p>Once <code>getData()</code> has finished running, we start the audio source playing with <code>start(0)</code>, then disable the play button so it can't be clicked again when it is already playing (this would cause an error.)</p>
+
+<pre class="brush: js">function getData() {
+  source = audioCtx.createBufferSource();
+
+  var myRequest = new Request('viper.ogg');
+
+  fetch(myRequest).then(function(response) {
+    response.arrayBuffer().then(function(buffer) {
+      audioCtx.decodeAudioData(buffer, function(decodedData) {
+        source.buffer = decodedData;
+        source.connect(audioCtx.destination);
+      });
+    });
+  });
+};
+
+// wire up buttons to stop and play audio
+
+play.onclick = function() {
+  getData();
+  source.start(0);
+  play.setAttribute('disabled', 'disabled');
+}</pre>
+
+<h2 id="标准">标准</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">标准</th>
+   <th scope="col">状态</th>
+   <th scope="col">备注</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Fetch','#dom-body-arraybuffer','arrayBuffer()')}}</td>
+   <td>{{Spec2('Fetch')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+{{Compat("api.Response.arrayBuffer")}}
+
+<h2 id="参考">参考</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+ <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
+ <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+</ul>
+
+<div id="sVim-command" class="hidden">-- NORMAL --</div>

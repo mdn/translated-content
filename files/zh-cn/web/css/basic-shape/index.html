@@ -5,9 +5,9 @@ translation_of: Web/CSS/basic-shape
 ---
 <div>{{CSSRef}}</div>
 
-<div><strong><code>&lt;basic-shape&gt;</code></strong>是一种表现基础图形的CSS数据类型，作用于{{cssxref("clip-path")}} 与 {{cssxref("shape-outside")}} 属性中。</div>
+<div><strong><code>&lt;basic-shape&gt;</code></strong>是一种表现基础图形的 CSS 数据类型，作用于{{cssxref("clip-path")}} 与 {{cssxref("shape-outside")}} 属性中。</div>
 
-<div></div>
+
 
 <p>{{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}</p>
 
@@ -15,11 +15,11 @@ translation_of: Web/CSS/basic-shape
 <p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 </div>
 
-<h2 id="语法"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 40px;"><strong>语法</strong></span></font></h2>
+<h2 id="语法"><strong>语法</strong></h2>
 
 <p><strong><code>&lt;basic-shape&gt;</code></strong>数据类型可以由下列函数得到。</p>
 
-<p>当构建一个图形时，运用了<strong><code>&lt;basic-shape&gt;</code></strong>值的属性就会定义一个相关的盒模型。基础图形使用的坐标系统即设置相关的盒模型左上角顶点为原点，该坐标轴的x轴正方向为右、y轴的正方向为下。所有以百分比定义的长度将通过相关盒模型与使用的维度重定义。</p>
+<p>当构建一个图形时，运用了<strong><code>&lt;basic-shape&gt;</code></strong>值的属性就会定义一个相关的盒模型。基础图形使用的坐标系统即设置相关的盒模型左上角顶点为原点，该坐标轴的 x 轴正方向为右、y 轴的正方向为下。所有以百分比定义的长度将通过相关盒模型与使用的维度重定义。</p>
 
 <h3 id="图形函数">图形函数</h3>
 
@@ -36,13 +36,13 @@ translation_of: Web/CSS/basic-shape
 
  <p>可选参数&lt;border-radius&gt;用于定义插进长方形顶点的圆弧角度，该参数同上遵循边际速记语法（the syntax of the margin shorthand），给予一个、两个、或四个值都能设置四个偏移量。</p>
 
- <p>如果一对插进图形在通过堆叠产生的高于当前使用维度的维度中（例如，左右插进图像相叠75%）将会定义一个包围不了任何区域的图形。这种情况会在元素中产生一个空白且平坦的区域。</p>
+ <p>如果一对插进图形在通过堆叠产生的高于当前使用维度的维度中（例如，左右插进图像相叠 75%）将会定义一个包围不了任何区域的图形。这种情况会在元素中产生一个空白且平坦的区域。</p>
  </dd>
  <dt><code>circle()</code></dt>
  <dd>
  <pre class="syntaxbox"><code><code><code>circle( [&lt;shape-radius&gt;]? [at &lt;position&gt;]? )</code></code></code></pre>
 
- <p><code>&lt;shape-radius&gt;</code> 参数代表了 <em>r，</em> 即圆形的半径， 不接受负数作为该参数的值。一个以百分比表示的值将以公式 <code>sqrt(width^2+height^2)/sqrt(2)</code>计算，其中width与height为相关盒模型的宽与高。</p>
+ <p><code>&lt;shape-radius&gt;</code> 参数代表了 <em>r，</em> 即圆形的半径， 不接受负数作为该参数的值。一个以百分比表示的值将以公式 <code>sqrt(width^2+height^2)/sqrt(2)</code>计算，其中 width 与 height 为相关盒模型的宽与高。</p>
 
  <p>{{cssxref("&lt;position&gt;")}} 参数定义了圆心的位置。省缺值为盒模型的中心。</p>
  </dd>
@@ -50,7 +50,7 @@ translation_of: Web/CSS/basic-shape
  <dd>
  <pre class="syntaxbox"><code><code><code>ellipse( [&lt;shape-radius&gt;{2}]? [at &lt;position&gt;]? )</code></code></code></pre>
 
- <p><code>&lt;shape-radius&gt;</code> 参数代表了 r<sub>x</sub> 与 r<sub>y</sub>，其中 r<sub>x</sub> 代表了x轴方向的半径， r<sub>y</sub>代表了y轴方向的半径。该参数不接受负数值。以百分比表示的长度将把盒模型的宽与高作为参照，宽作为 r<sub>x</sub> 的参照值，高作为 r<sub>y</sub> 的参照值。</p>
+ <p><code>&lt;shape-radius&gt;</code> 参数代表了 r<sub>x</sub> 与 r<sub>y</sub>，其中 r<sub>x</sub> 代表了 x 轴方向的半径，r<sub>y</sub>代表了 y 轴方向的半径。该参数不接受负数值。以百分比表示的长度将把盒模型的宽与高作为参照，宽作为 r<sub>x</sub> 的参照值，高作为 r<sub>y</sub> 的参照值。</p>
 
  <p>&lt;position&gt;参数定义了椭圆形圆心的位子。其省缺值为盒模型的中心。</p>
  </dd>
@@ -58,15 +58,15 @@ translation_of: Web/CSS/basic-shape
  <dd>
  <pre class="syntaxbox"><code>polygon( [&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shape-arg&gt;]# )</code></pre>
 
- <p><code>&lt;fill-rule&gt;</code> 代表了填充规则（ <a href="/en-US/docs/Web/SVG/Attribute/fill-rule">filling rule</a> ），即，如何填充该多边形。 可选值为 nonzero 和 evenodd。 该参数的省缺值为 nonzero。</p>
+ <p><code>&lt;fill-rule&gt;</code> 代表了填充规则（ <a href="/en-US/docs/Web/SVG/Attribute/fill-rule">filling rule</a> ），即，如何填充该多边形。 可选值为 nonzero 和 evenodd。该参数的省缺值为 nonzero。</p>
 
- <p>每一对在列表中的参数都代表了多边形顶点的坐标， <em>x<sub>i</sub></em> 与 <em>y<sub>i</sub></em> ，i代表顶点的编号，即，第i个顶点。</p>
+ <p>每一对在列表中的参数都代表了多边形顶点的坐标， <em>x<sub>i</sub></em> 与 <em>y<sub>i</sub></em> ，i 代表顶点的编号，即，第 i 个顶点。</p>
  </dd>
  <dt><code>path()</code>{{Experimental_Inline}}</dt>
  <dd>
  <pre><code>path( [&lt;fill-rule&gt;,]? &lt;string&gt;)</code></pre>
 
- <p>可选的 <code>&lt;fill-rule&gt;</code> 表示 <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-rule">filling rule</a> 填充规则. 可选 <code>nonzero</code> （非零环绕规则）和 <code>evenodd</code> （奇偶规则） . 默认是（Default value when omitted） <code>nonzero</code>.</p>
+ <p>可选的 <code>&lt;fill-rule&gt;</code> 表示 <a href="/zh-CN/docs/Web/SVG/Attribute/fill-rule">filling rule</a> 填充规则。可选 <code>nonzero</code>（非零环绕规则）和 <code>evenodd</code>（奇偶规则） 。 默认是（Default value when omitted）<code>nonzero</code>。</p>
 
  <p>参数 &lt;string&gt; 是用引号包含的 <a href="https://developer.mozilla.org/en-US/docs/SVG/Attribute/d">SVG Path</a> 字符串</p>
  </dd>
@@ -84,9 +84,9 @@ translation_of: Web/CSS/basic-shape
 
 <p><code>farthest-side</code> 取图形中心到盒模型最远一条边之间的距离作为值。对于圆形，该值在任意维度都是最远的一条边。对于椭圆形，该值为半径维度最远的一条边。</p>
 
-<h2 id="基础图形的计算值"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 40px;"><strong>基础图形的计算值</strong></span></font></h2>
+<h2 id="基础图形的计算值"><strong>基础图形的计算值</strong></h2>
 
-<p>在 <code>&lt;basic-shape&gt;</code> 函数中的值通过指定的方式计算， 但是有下列情况会出现错误：</p>
+<p>在 <code>&lt;basic-shape&gt;</code> 函数中的值通过指定的方式计算，但是有下列情况会出现错误：</p>
 
 <ul>
  <li>遗漏值（omitted values）参与到了省缺值的计算中。</li>
@@ -94,19 +94,19 @@ translation_of: Web/CSS/basic-shape
  <li>一个在 <code>inset()</code>中的 <a href="/en-US/docs/Web/CSS/border-radius"><code>&lt;border-radius&gt;</code></a> 值，往往被当作一个扩展列表来计算，所有八个 {{cssxref("length")}}值或百分比代表的值都是如此。</li>
 </ul>
 
-<h2 id="基础图形的插值"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 40px;"><strong>基础图形的插值</strong></span></font></h2>
+<h2 id="基础图形的插值"><strong>基础图形的插值</strong></h2>
 
 <p> <code>&lt;basic-shape&gt;</code> 值之间的动画变化将会遵循以下规则。图形函数的值会被放进一个插入的简易列表中。这些列表中的值将会尽可能地被当作 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length" title="The &lt;length> CSS data type represents a distance value. Lengths can be used in numerous CSS properties, such as width, height, margin, padding, border-width, font-size, and text-shadow."><code>&lt;length&gt;</code></a>、<code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/percentage" title="The &lt;percentage> CSS data type represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as width, height, margin, padding, and font-size.">&lt;percentage&gt;</a></code>、 或 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc" title="The calc() CSS function lets you perform calculations when specifying CSS property values. It can be used anywhere a &lt;length>, &lt;frequency>, &lt;angle>, &lt;time>, &lt;number>, or &lt;integer> is allowed."><code>calc()</code></a> 类型插入.。如果列表中的值不为上述三种类型中的一种，然而却是相同的（比如 <code>nonzero</code> 类型的值在多个列表的相同位置出现)，那么这些值将不会被作为插值。</p>
 
 <ul>
  <li>一对的图形需要使用一样的盒模型。</li>
- <li>如果一对图形是同一种类型，例如， <code>ellipse()</code> 或 <code>circle()</code>， 并且没有任何半径使用了 <code>closest-side</code> 或 <code>farthest-side</code> 关键值， 那么这些值将会成为相应的图形函数的插值。</li>
+ <li>如果一对图形是同一种类型，例如， <code>ellipse()</code> 或 <code>circle()</code>，并且没有任何半径使用了 <code>closest-side</code> 或 <code>farthest-side</code> 关键值，那么这些值将会成为相应的图形函数的插值。</li>
  <li>如果一对图形都属于 <code>inset()</code>类，那么这些值将会成为相应的图形函数的插值。</li>
- <li>如果一对图形都属于 <code>polygon()</code>类， 并且两者有同样数量的顶点，并且使用了相同的填充规则 <code>&lt;fill-rule&gt;</code>，那么这些值将会成为相应的图形函数的插值。</li>
+ <li>如果一对图形都属于 <code>polygon()</code>类，并且两者有同样数量的顶点，并且使用了相同的填充规则 <code>&lt;fill-rule&gt;</code>，那么这些值将会成为相应的图形函数的插值。</li>
  <li>其余状况将不会出现插值。</li>
 </ul>
 
-<h2 id="示例"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 40px;"><strong>示例</strong></span></font></h2>
+<h2 id="示例"><strong>示例</strong></h2>
 
 <h3 id="动画多边形">动画多边形</h3>
 
@@ -139,7 +139,7 @@ translation_of: Web/CSS/basic-shape
 
 <p>{{EmbedLiveSample('动画多边形','340', '340')}}</p>
 
-<h2 id="规格"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 40px;"><strong>规格</strong></span></font></h2>
+<h2 id="规格"><strong>规格</strong></h2>
 
 <table class="standard-table">
  <thead>
@@ -158,7 +158,7 @@ translation_of: Web/CSS/basic-shape
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 40px;"><strong>浏览器兼容性</strong></span></font></h2>
+<h2 id="浏览器兼容性"><strong>浏览器兼容性</strong></h2>
 
 <p>{{Compat("css.types.basic-shape")}}</p>
 

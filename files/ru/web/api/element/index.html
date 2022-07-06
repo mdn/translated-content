@@ -19,7 +19,7 @@ translation_of: Web/API/Element
 
 <p>{{InheritanceDiagram}}</p>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <p><em>Наследует свойства от родительского узла {{domxref("Node")}} и от собственного родителя {{domxref("EventTarget")}} и реализует свойства {{domxref("ParentNode")}}, {{domxref("ChildNode")}}, {{domxref("NonDocumentTypeChildNode")}}, </em>and {{domxref("Animatable")}}.</p>
 
@@ -54,7 +54,7 @@ translation_of: Web/API/Element
  <dd>Пространство имён URI элемента или null, если это не пространство имён.</dd>
  <dd>
  <div class="note">
- <p><strong>Примечание:</strong> В Firefox версии 3.5 и ранее, HTML элементы не находятся в пространстве имён. В более поздних версиях, HTML элементы находятся в пространстве имён  <code><a href="http://www.w3.org/1999/xhtml" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code>  как в деревьях HTML, так и XML. {{ gecko_minversion_inline("1.9.2") }}</p>
+ <p><strong>Примечание:</strong> В Firefox версии 3.5 и ранее, HTML-элементы не находятся в пространстве имён. В более поздних версиях, HTML-элементы находятся в пространстве имён  <code><a href="http://www.w3.org/1999/xhtml" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code>  как в деревьях HTML, так и XML. {{ gecko_minversion_inline("1.9.2") }}</p>
  </div>
  </dd>
 </dl>
@@ -96,7 +96,7 @@ translation_of: Web/API/Element
 <p>Данное изменение поддерживается в Chrome начиная с версии 46.0 и в Firefox с версии 48.0.</p>
 </div>
 
-<h3 id="Handlers" name="Handlers">Обработчики событий</h3>
+<h3 id="Handlers">Обработчики событий</h3>
 
 <dl>
  <dt>{{ domxref("Element.ongotpointercapture") }}</dt>
@@ -113,7 +113,7 @@ translation_of: Web/API/Element
  <strong>Сейчас реализован в {{domxref("GlobalEventHandlers.onwheel", "GlobalEventHandlers")}}.</strong></dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <p><em>Наследует методы от своих родителей {{domxref("Node")}}, и своего собственного родителя {{domxref("EventTarget")}}<em>, и реализует методы {{domxref("ParentNode")}}, {{domxref("ChildNode")}}<em>, {{domxref("NonDocumentTypeChildNode")}}, </em></em>и {{domxref("Animatable")}}.</em></p>
 
@@ -201,97 +201,10 @@ translation_of: Web/API/Element
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Web Animations", '', '')}}</td>
-   <td>{{Spec2("Web Animations")}}</td>
-   <td>Добавлен метод <code>getAnimationPlayers()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Undo Manager', '', 'Element')}}</td>
-   <td>{{Spec2('Undo Manager')}}</td>
-   <td>Добавлены свойства <code>undoScope</code> и <code>undoManager</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#extensions-to-the-element-interface', 'Element')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>Добавлены следующие обработчики событий: <code>ongotpointercapture</code> и <code>onlostpointercapture</code>.<br>
-    Добавлены следующие методы: <code>setPointerCapture()</code> и <code>releasePointerCapture()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 2', '#interface-definitions', 'Element')}}</td>
-   <td>{{Spec2('Selectors API Level 2')}}</td>
-   <td>Добавлены следующие методы:<code> matches()</code> (реализовано как <code>mozMatchesSelector()</code>), <code>find()</code>, <code>findAll()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 1', '#interface-definitions', 'Element')}}</td>
-   <td>{{Spec2('Selectors API Level 1')}}</td>
-   <td>Добавлены следующие методы: <code>querySelector()</code> и <code>querySelectorAll()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Lock', 'index.html#element-interface', 'Element')}}</td>
-   <td>{{Spec2('Pointer Lock')}}</td>
-   <td>Добавлен метод <code>requestPointerLock()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fullscreen', '#api', 'Element')}}</td>
-   <td>{{Spec2('Fullscreen')}}</td>
-   <td>Добавлен метод <code>requestFullscreen()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#extensions-to-the-element-interface', 'Element')}}</td>
-   <td>{{Spec2('DOM Parsing')}}</td>
-   <td>Добавлены следующие свойства: <code>innerHTML</code>, и <code>outerHTML</code>.<br>
-    Добавлен следующий метод: <code>insertAdjacentHTML()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#extensions-to-the-element-interface', 'Element')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Добавлены следующие свойства: <code>scrollTop</code>, <code>scrollLeft</code>, <code>scrollWidth</code>, <code>scrollHeight</code>, <code>clientTop</code>, <code>clientLeft</code>, <code>clientWidth</code>, и <code>clientHeight</code>.<br>
-    Добавлены следующие методы: <code>getClientRects()</code>, <code>getBoundingClientRect()</code>, и <code>scrollIntoView()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Element Traversal', '#ecmascript-bindings', 'Element')}}</td>
-   <td>{{Spec2('Element Traversal')}}</td>
-   <td>Добавлено наследование интерфейса {{domxref("ElementTraversal")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-element', 'Element')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Удалены следующие методы: <code>closest()</code>, <code>setIdAttribute()</code>, <code>setIdAttributeNS()</code>, и <code>setIdAttributeNode()</code>.<br>
-    Удалено свойство <code>schemaTypeInfo</code>.<br>
-    Изменено возвращаемое значение <code>getElementsByTag()</code> и <code>getElementsByTagNS()</code>.<br>
-    Moved <code>hasAttributes()</code> form the <code>Node</code> interface to this one.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-745549614', 'Element')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Added the following methods: <code>setIdAttribute()</code>, <code>setIdAttributeNS()</code>, and <code>setIdAttributeNode()</code>. These methods were never implemented and have been removed in later specifications.<br>
-    Added the <code>schemaTypeInfo</code> property. This property was never implemented and has been removed in later specifications.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-745549614', 'Element')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Метод <code>normalize()</code> был перемещён в {{domxref("Node")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-745549614', 'Element')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Начальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<div>{{Compat("api.Element")}}</div>
+<div>{{Compat}}</div>
 
 <div id="compat-desktop"></div>

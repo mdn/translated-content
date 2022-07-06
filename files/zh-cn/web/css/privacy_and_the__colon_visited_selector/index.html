@@ -1,5 +1,5 @@
 ---
-title: '隐私与:visited选择器'
+title: '隐私与:visited 选择器'
 slug: 'Web/CSS/Privacy_and_the_:visited_selector'
 tags:
   - CSS
@@ -11,7 +11,7 @@ translation_of: 'Web/CSS/Privacy_and_the_:visited_selector'
 ---
 <div>{{cssref}}</div>
 
-<p>在大概2010年时，<a href="/en-US/docs/Web/CSS">CSS</a> 选择器 {{ cssxref(":visited") }} 被网站用来检测用户的浏览记录，并找出用户都访问过哪些网站。这些可以通过 {{domxref("window.getComputedStyle")}} 和其他技术实现。这个过程可以很迅速的执行，不仅能够判断用户是否曾经访问过这个页面，还能借此猜测出大量的用户身份信息。</p>
+<p>在大概 2010 年时，<a href="/en-US/docs/Web/CSS">CSS</a> 选择器 {{ cssxref(":visited") }} 被网站用来检测用户的浏览记录，并找出用户都访问过哪些网站。这些可以通过 {{domxref("window.getComputedStyle")}} 和其他技术实现。这个过程可以很迅速的执行，不仅能够判断用户是否曾经访问过这个页面，还能借此猜测出大量的用户身份信息。</p>
 
 <p>为了解决这个问题，{{ Gecko("2") }} 实现了一项隐私方面的更新，限制网站可以从访问过的链接中获得的信息。其他的浏览器也已经做了相同的改变。</p>
 
@@ -56,9 +56,9 @@ translation_of: 'Web/CSS/Privacy_and_the_:visited_selector'
 }
 </pre>
 
-<h2 id="对WEB开发者的影响">对WEB开发者的影响</h2>
+<h2 id="对WEB开发者的影响">对 WEB 开发者的影响</h2>
 
-<p>总体来说，这不会显著地影响到WEB开发者。但在一些特殊情况下，网站需要做些修改：</p>
+<p>总体来说，这不会显著地影响到 WEB 开发者。但在一些特殊情况下，网站需要做些修改：</p>
 
 <ul>
  <li>使用背景图片来区分链接是否被访问过的样式不再起作用，因为只有颜色才能被作用到已访问链接上。</li>
@@ -68,7 +68,7 @@ translation_of: 'Web/CSS/Privacy_and_the_:visited_selector'
 <h2 id="更多">更多</h2>
 
 <ul>
- <li><a class="external" href="http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/" title="http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/">privacy-related changes coming to CSS :visited</a> on Mozilla Hacks</li>
- <li><a class="external" href="http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/" title="http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/">Plugging the CSS History Leak</a> on the Mozilla Security Blog</li>
+ <li><a class="external" href="http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/">privacy-related changes coming to CSS :visited</a> on Mozilla Hacks</li>
+ <li><a class="external" href="http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/">Plugging the CSS History Leak</a> on the Mozilla Security Blog</li>
  <li><a class="external" href="http://dbaron.org/mozilla/visited-privacy">Preventing attacks on a user's history through CSS :visited selectors</a></li>
 </ul>

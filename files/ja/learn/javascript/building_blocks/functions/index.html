@@ -29,7 +29,7 @@ translation_of: Learn/JavaScript/Building_blocks/Functions
  <tbody>
   <tr>
    <th scope="row">前提知識:</th>
-   <td>基本的なコンピューターの知識、HTML と CSS への理解、<a href="/docs/Learn/JavaScript/First_steps">JavaScript の第一歩</a>。</td>
+   <td>基本的なコンピューターの知識、HTML と CSS への理解、<a href="/ja/docs/Learn/JavaScript/First_steps">JavaScript の第一歩</a>。</td>
   </tr>
   <tr>
    <th scope="row">目的:</th>
@@ -79,15 +79,15 @@ console.log(madeAString);
 
 <p>JavaScript言語にはたくさんの組込み関数があるので、いろいろあるあなたのやりたい事を、全部をあなた自身で書かなくてもすみます。実は、あなたが呼び出して起動(走らせたり実行する事の別の言い方)するコードのいくつかは、JavaScript では書けない、ブラウザー組込み関数です — こういった関数の多くは背後のブラウザーのコードを呼び出していて、これらは JavaScript のようなウェブ言語ではなく、大半が C++のような低レベルのシステム言語で書かれています。</p>
 
-<p>ブラウザー関数のいくつかは JavaScript言語の核に含まれない事を心に留めておいてください — いくつかはブラウザー API の一部として定義されていて、もっと多くの機能を提供すべくデフォルトの言語の上で構築されています(詳しくは<a href="/Learn/JavaScript/First_steps/What_is_JavaScript#So_what_can_it_really_do">私たちのコースのこの以前のセクション</a>を見てください)。ブラウザー API のもっと詳しい使い方については、後の方のモジュールで見ていく事になるでしょう。</p>
+<p>ブラウザー関数のいくつかは JavaScript言語の核に含まれない事を心に留めておいてください — いくつかはブラウザー API の一部として定義されていて、もっと多くの機能を提供すべくデフォルトの言語の上で構築されています(詳しくは<a href="/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#So_what_can_it_really_do">私たちのコースのこの以前のセクション</a>を見てください)。ブラウザー API のもっと詳しい使い方については、後の方のモジュールで見ていく事になるでしょう。</p>
 
 <h2 id="Functions_versus_methods" name="Functions_versus_methods">関数とメソッド</h2>
 
 <p>オブジェクトの<strong>メソッド</strong>の一部を、プログラマーは<strong>関数</strong>として呼び出します。構成された JavaScript オブジェクト内部の働きについては、まだ知る必要はありません — この後のモジュールで、オブジェクト内部の働きや自分でオブジェクトを作る方法について教える段階になってから覚えれば大丈夫です。今のところは、ウェブのあちこちにある関連したリソースを見ていると、メソッドと関数が混在している事があるとわかってもらいたいだけです。</p>
 
-<p>これまで利用してきた組込み関数は両方です: 関数でありメソッドでもあります。組み込みオブジェクトとそのメソッドと同様に、組み込み関数の一覧を<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects">こちらで</a>確認できます。</p>
+<p>これまで利用してきた組込み関数は両方です: 関数でありメソッドでもあります。組み込みオブジェクトとそのメソッドと同様に、組み込み関数の一覧を<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects">こちらで</a>確認できます。</p>
 
-<p>このコースのここまででもたくさんのカスタム関数を見てきました — ブラウザーの内部でではなくあなたのコードの中で定義された関数です。独自の名前の直後にカッコがついてるものを見かけたら、それはカスタム関数を使っているという事です。<a href="/docs/Learn/JavaScript/Building_blocks/Looping_code">繰返しの記事</a>で出てきた <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a> の例(<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">ソースコード</a>はこちら)では、独自に作った <code>draw()</code> 関数が含まれていました。こんなやつです:</p>
+<p>このコースのここまででもたくさんのカスタム関数を見てきました — ブラウザーの内部でではなくあなたのコードの中で定義された関数です。独自の名前の直後にカッコがついてるものを見かけたら、それはカスタム関数を使っているという事です。<a href="/ja/docs/Learn/JavaScript/Building_blocks/Looping_code">繰返しの記事</a>で出てきた <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a> の例(<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">ソースコード</a>はこちら)では、独自に作った <code>draw()</code> 関数が含まれていました。こんなやつです:</p>
 
 <pre class="brush: js notranslate">function draw() {
   ctx.clearRect(0,0,WIDTH,HEIGHT);
@@ -267,7 +267,7 @@ function greeting() {
  <li>コンソールに次のように入力してみてください
   <pre class="brush: js notranslate">output(y);
 output(z);</pre>
-  どちらも、"<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: y is not defined</a>"の一行のエラーが返されるはずです。なぜでしょうか？ 関数スコープのため、つまり <code>y</code> と <code>z</code> は <code>a()</code> と <code>b()</code> 関数の中でロックされているので、global スコープから呼び出されたときには <code>output()</code> はそれらにアクセスできません。</li>
+  どちらも、"<a href="/ja/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: y is not defined</a>"の一行のエラーが返されるはずです。なぜでしょうか？ 関数スコープのため、つまり <code>y</code> と <code>z</code> は <code>a()</code> と <code>b()</code> 関数の中でロックされているので、global スコープから呼び出されたときには <code>output()</code> はそれらにアクセスできません。</li>
  <li>しかし、別の関数の中から呼び出されたときはどうでしょうか？ <code>a()</code> と <code>b()</code> を次のように編集してみてください：
   <pre class="brush: js notranslate">function a() {
   let y = 2;
@@ -312,7 +312,7 @@ function b() {
  <li>
   <pre class="brush: js notranslate">a();
 b();</pre>
-  今度は <code>a()</code> と <code>b()</code> の両方の呼び出しで、迷惑な "<a href="https://wiki.developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: <em>variable name</em> is not defined</a>" エラーが返されます — これは <code>output()</code> 呼び出しと、出力しようとしている変数が同じ関数のスコープにない、つまりこれらの関数呼び出しからは変数が参照できない状態だからです。</li>
+  今度は <code>a()</code> と <code>b()</code> の両方の呼び出しで、迷惑な "<a href="/ja/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: <em>variable name</em> is not defined</a>" エラーが返されます — これは <code>output()</code> 呼び出しと、出力しようとしている変数が同じ関数のスコープにない、つまりこれらの関数呼び出しからは変数が参照できない状態だからです。</li>
 </ol>
 
 <div class="note">
@@ -320,7 +320,7 @@ b();</pre>
 </div>
 
 <div class="note">
-<p><strong>注</strong>: <a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: "x" is not defined</a> というエラーは、あなたが遭遇する最も一般的なエラーの 1 つです。このエラーが発生し、問題の変数が定義されていると確信できる場合は、変数のスコープを確認してください。</p>
+<p><strong>注</strong>: <a href="/ja/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: "x" is not defined</a> というエラーは、あなたが遭遇する最も一般的なエラーの 1 つです。このエラーが発生し、問題の変数が定義されていると確信できる場合は、変数のスコープを確認してください。</p>
 </div>
 
 <ul>
@@ -375,7 +375,7 @@ function subFunction3(value) {
 
 <h2 id="スキルをテストしよう!">スキルをテストしよう!</h2>
 
-<p>この記事の最後に来ましたが、最も大事な情報を覚えていますか？次に移る前に、この情報を保持しているか検証するテストがあります — <a href="https://wiki.developer.mozilla.org/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions">Test your skills: Functions</a> を見てください。このテストは次の 2 つの記事でカバーしているスキルを求めていますので、テストの前にそちらを読むほうが良いかもしれません。</p>
+<p>この記事の最後に来ましたが、最も大事な情報を覚えていますか？次に移る前に、この情報を保持しているか検証するテストがあります — <a href="/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions">Test your skills: Functions</a> を見てください。このテストは次の 2 つの記事でカバーしているスキルを求めていますので、テストの前にそちらを読むほうが良いかもしれません。</p>
 
 <h2 id="Conclusion" name="Conclusion">まとめ</h2>
 

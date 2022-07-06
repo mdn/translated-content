@@ -9,13 +9,13 @@ translation_of: Web/CSS/border-bottom-left-radius
 
 <p>总览</p>
 
-<p><strong><code>border-bottom-left-radius</code></strong> 这个css属性设置元素左下角的圆角。圆角可以是圆或椭圆（注：应为圆或椭圆的一部分），或者当其中一个值为0时，圆角将不被设置，这时这个角将展示为直角。</p>
+<p><strong><code>border-bottom-left-radius</code></strong> 这个 css 属性设置元素左下角的圆角。圆角可以是圆或椭圆（注：应为圆或椭圆的一部分），或者当其中一个值为 0 时，圆角将不被设置，这时这个角将展示为直角。</p>
 
 <div style="text-align: center;"><img alt="border-bottom-left-radius.png" class="default internal" src="/@api/deki/files/6136/=border-bottom-left-radius.png"></div>
 
-<p>一个无论是图像或颜色的背景，都会在边框上被裁剪，即使背景是圆角的; 裁剪的确切位置由 {{cssxref("background-clip")}} 属性定义.</p>
+<p>一个无论是图像或颜色的背景，都会在边框上被裁剪，即使背景是圆角的; 裁剪的确切位置由 {{cssxref("background-clip")}} 属性定义。</p>
 
-<div class="note">如果该属性的值没有被一个在<strong><code>border-bottom-left-radius</code></strong> 属性后，作用于当前元素上的{{cssxref("border-radius")}}简写属性设置，那么该属性值将会被<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a>重置为初始值。</div>
+<div class="note">如果该属性的值没有被一个在<strong><code>border-bottom-left-radius</code></strong> 属性后，作用于当前元素上的{{cssxref("border-radius")}}简写属性设置，那么该属性值将会被<a href="/zh-CN/docs/Web/CSS/Shorthand_properties">shorthand property</a>重置为初始值。</div>
 
 <p>{{cssinfo}}</p>
 
@@ -36,12 +36,12 @@ border-bottom-left-radius: inherit;
 <p>where:</p>
 
 <dl style="padding-left: 6em;">
- <dt style="float: left; width: 7.5em;"><em>radius</em></dt>
- <dd style="padding-left: 7.5em;">Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the radius of the circle to use for the border in that corner.</dd>
- <dt style="float: left; width: 7.5em;"><em>horizontal</em></dt>
- <dd style="padding-left: 7.5em;">Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the horizontal semi-major axis of the ellipsis to use for the border in that corner.</dd>
- <dt style="float: left; width: 7.5em;"><em>vertical</em></dt>
- <dd style="padding-left: 7.5em;">Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the vertical semi-major axis of the ellipsis to use for the border in that corner.</dd>
+ <dt><em>radius</em></dt>
+ <dd>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the radius of the circle to use for the border in that corner.</dd>
+ <dt><em>horizontal</em></dt>
+ <dd>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the horizontal semi-major axis of the ellipsis to use for the border in that corner.</dd>
+ <dt><em>vertical</em></dt>
+ <dd>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the vertical semi-major axis of the ellipsis to use for the border in that corner.</dd>
 </dl>
 </div>
 
@@ -163,107 +163,7 @@ div {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0 {{property_prefix("-webkit")}}<br>
-    4.0</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
-    {{CompatVersionUnknown}}</td>
-   <td>1.0 (1.0){{property_prefix("-moz")}}<sup>[1]</sup><br>
-    4.0 (2.0)<sup>[3]</sup></td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>3.0 (522){{property_prefix("-webkit")}}<br>
-    5.0 (532.5)</td>
-  </tr>
-  <tr>
-   <td>Percentages</td>
-   <td>4.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>1.0 (1.0)<sup>[2]</sup><br>
-    4.0 (2.0)</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>5.0 (532.5)</td>
-  </tr>
-  <tr>
-   <td>Elliptical corners</td>
-   <td>1.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>3.5 (1.9.1)</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>3.0 (522)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
-    {{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[3]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Percentages</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Elliptical corners</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] The prefixed version (allowed from Firefox 1 to Firefox 12) of this property uses a different name, <code>-moz-border-radius-bottomleft</code>, than the final property as Mozilla implemented it before the final name was coined.</p>
-
-<p>[2] Before Firefox 4, the {{cssxref("&lt;percentage&gt;")}} was relative to the width of the box even when specifying the radius for a height). This implied that <code>-moz-border-radius-bottomleft</code> was always drawing an arc of circle, and never an ellipse, when followed by a single value.</p>
-
-<p>[3] Prior to Gecko 50.0 {{geckoRelease("50.0")}}, border styles of rounded corners were always rendered as if <code>border-style</code> was <code>solid</code>. This has been fixed in Gecko 50.0.</p>
-
-<p>In addition to the unprefixed support, Gecko 44.0 {{geckoRelease("44.0")}} added support for a <code>-webkit</code> prefixed version of the property for web compatibility reasons behind the preference <code>layout.css.prefixes.webkit</code>, defaulting to <code>false</code>. Since Gecko 49.0 {{geckoRelease("49.0")}} the preference defaults to <code>true</code>.</p>
+{{Compat("css.properties.border-bottom-left-radius")}}
 
 <h2 id="See_also">See also</h2>
 

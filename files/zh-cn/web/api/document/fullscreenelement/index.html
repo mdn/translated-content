@@ -5,74 +5,18 @@ translation_of: Web/API/DocumentOrShadowRoot/fullscreenElement
 original_slug: Web/API/DocumentOrShadowRoot/fullscreenElement
 ---
 <p>{{ ApiRef() }}</p>
-<h3 id="Summary" name="Summary">概述</h3>
-<p>返回当前文档中正在以全屏模式显示的{{ domxref("Element") }}节点,如果没有使用全屏模式,则返回<code>null</code>.</p>
-<h3 id="Syntax" name="Syntax">语法</h3>
+<h3 id="Summary">概述</h3>
+<p>返回当前文档中正在以全屏模式显示的{{ domxref("Element") }}节点，如果没有使用全屏模式，则返回<code>null</code>.</p>
+<h3 id="Syntax">语法</h3>
 <pre class="eval"><em>var element</em> = <em>document</em>.mozFullScreenElement;
 </pre>
-<h3 id="Example" name="Example">示例</h3>
+<h3 id="Example">示例</h3>
 <pre class="eval">function isVideoInFullsreen() {
   if (document.mozFullScreenElement &amp;&amp; document.mozFullScreenElement.nodeName == 'VIDEO') {
     console.log('您的视频正在以全屏模式显示');
   }
 }</pre>
 <h3 id="辅助">辅助</h3>
-<p>查看<a href="/zh-CN/docs/DOM/Using_full-screen_mode" title="zh-CN/docs/DOM/Using full-screen mode">使用"全屏模式"</a>页面了解详情.</p>
-<h3 id="Specification" name="Specification">浏览器兼容性</h3>
-<p>{{ CompatibilityTable() }}</p>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatGeckoDesktop("9.0") }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Mobile</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatGeckoMobile("9.0") }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<h3 id="Specification" name="Specification">规范</h3>
-<p>该方法提案已经进入相关规范草案 <a class="external" href="http://dvcs.w3.org/hg/fullscrezh-CN/raw-file/tip/Overview.html#dom-document-fullscreenelement" title="http://dvcs.w3.org/hg/fullscrezh-CN/raw-file/tip/Overview.html#dom-document-fullscreenelement">http://dvcs.w3.org/hg/fullscrezh-CN/raw-file/tip/Overview.html#dom-document-fullscreenelement</a></p>
-<h3 id="相关链接">相关链接</h3>
-<ul>
- <li><a href="/zh-CN/docs/DOM/Using_full-screen_mode" title="zh-CN/docs/DOM/Using full-screen mode">Using full-screen mode</a></li>
- <li>{{ domxref("element.mozRequestFullScreen()") }}</li>
- <li>{{ domxref("document.mozCancelFullScreen()") }}</li>
- <li>{{ domxref("document.mozFullScreen") }}</li>
- <li>{{ domxref("document.mozFullScreenEnabled") }}</li>
- <li>{{ cssxref(":-moz-full-screen") }}</li>
- <li>{{ HTMLAttrXRef("allowfullscreen", "iframe") }}</li>
-</ul>
+<p>查看<a href="/zh-CN/docs/DOM/Using_full-screen_mode">使用"全屏模式"</a>页面了解详情。</p>
+<h3 id="Specification">浏览器兼容性</h3>
+{{Compat("api.Document.fullscreenElement")}}

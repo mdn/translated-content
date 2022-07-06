@@ -26,7 +26,7 @@ String.raw`templateString`
 
 <dl>
  <dt><code>callSite</code></dt>
- <dd>一个模板字符串的“调用点对象”。类似<code>{ raw: ['foo', 'bar', 'baz'] }</code>。</dd>
+ <dd>一个模板字符串的“调用点对象”。类似 <code>{ raw: ['foo', 'bar', 'baz'] }</code>。</dd>
  <dt><code>...substitutions</code></dt>
  <dd>任意个可选的参数，表示任意个内插表达式对应的值。</dd>
  <dt><code>templateString</code></dt>
@@ -46,7 +46,7 @@ String.raw`templateString`
 
 <h2 id="描述">描述</h2>
 
-<p>在大多数情况下, <code>String.raw()</code>是用来处理模版字符串的. 不要被上面复杂的参数要求吓到，因为像所有的 <a href="/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_literals">tag functions</a>一样，你通常不需要把它看成一个普通函数，你只需要把它放在模板字符串前面就可以了，而不是在它后面加个括号和一堆参数来调用它，引擎会替你去调用它。</p>
+<p>在大多数情况下，<code>String.raw()</code> 是用来处理模版字符串的。不要被上面复杂的参数要求吓到，因为像所有的 <a href="/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_literals">tag functions</a>一样，你通常不需要把它看成一个普通函数，你只需要把它放在模板字符串前面就可以了，而不是在它后面加个括号和一堆参数来调用它，引擎会替你去调用它。</p>
 
 <p><code>String.raw()</code> 是唯一一个内置的模板字符串标签函数，因为它太常用了。不过它并没有什么特殊能力，你自己也可以实现一个和它功能一模一样的标签函数。</p>
 
@@ -55,10 +55,10 @@ String.raw`templateString`
 <h3 id="使用_String.raw">使用 <code>String.raw()</code></h3>
 
 <pre class="brush: js">String.raw`Hi\n${2+3}!`;
-// 'Hi\n5!'，Hi 后面的字符不是换行符，\ 和 n 是两个不同的字符
+// 'Hi\\n5!'，Hi 后面的字符不是换行符，\ 和 n 是两个不同的字符
 
 String.raw `Hi\u000A!`;
-// "Hi\u000A!"，同上，这里得到的会是 \、u、0、0、0、A 6个字符，
+// "Hi\\u000A!"，同上，这里得到的会是 \、u、0、0、0、A 6 个字符，
 // 任何类型的转义形式都会失效，保留原样输出，不信你试试.length
 
 let name = "Bob";
@@ -67,10 +67,10 @@ String.raw `Hi\n${name}!`;
 
 
 // 正常情况下，你也许不需要将 String.raw() 当作函数调用。
-// 但是为了模拟 `t${0}e${1}s${2}t` 你可以这样做:
+// 但是为了模拟 `t${0}e${1}s${2}t` 你可以这样做：
 String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
-// 注意这个测试, 传入一个 string, 和一个类似数组的对象
-// 下面这个函数和 `foo${2 + 3}bar${'Java' + 'Script'}baz` 是相等的.
+// 注意这个测试，传入一个 string，和一个类似数组的对象
+// 下面这个函数和 `foo${2 + 3}bar${'Java' + 'Script'}baz` 是相等的。
 String.raw({
   raw: ['foo', 'bar', 'baz']
 }, 2 + 3, 'Java' + 'Script'); // 'foo5barJavaScriptbaz'

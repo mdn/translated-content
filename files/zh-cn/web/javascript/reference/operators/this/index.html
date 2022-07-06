@@ -14,13 +14,13 @@ translation_of: Web/JavaScript/Reference/Operators/this
 
 <p>与其他语言相比，<strong>函数的 <code>this</code> 关键字</strong>在 JavaScript 中的表现略有不同，此外，在<a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>和非严格模式之间也会有一些差别。</p>
 
-<p>在绝大多数情况下，函数的调用方式决定了 <code>this</code> 的值（运行时绑定）。<code>this</code> 不能在执行期间被赋值，并且在每次函数被调用时 <code>this</code> 的值也可能会不同。ES5 引入了 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bind</a> 方法来设置函数的 <code>this</code> 值，而不用考虑函数如何被调用的。ES2015 引入了<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>，箭头函数不提供自身的 this 绑定（<code>this</code> 的值将保持为闭合词法上下文的值）。</p>
+<p>在绝大多数情况下，函数的调用方式决定了 <code>this</code> 的值（运行时绑定）。<code>this</code> 不能在执行期间被赋值，并且在每次函数被调用时 <code>this</code> 的值也可能会不同。ES5 引入了 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bind</a> 方法来设置函数的 <code>this</code> 值，而不用考虑函数如何被调用的。ES2015 引入了<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>，箭头函数不提供自身的 this 绑定（<code>this</code> 的值将保持为闭合词法上下文的值）。</p>
 
 <p>{{EmbedInteractiveExample("pages/js/expressions-this.html")}}</p>
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">this</pre>
+<pre class="syntaxbox">this</pre>
 
 <h3 id="值">值</h3>
 
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Operators/this
 
 <p>无论是否在严格模式下，在全局执行环境中（在任何函数体外部）<code>this</code> 都指向全局对象。</p>
 
-<pre class="brush:js notranslate">// 在浏览器中, window 对象同时也是全局对象：
+<pre class="brush:js">// 在浏览器中，window 对象同时也是全局对象：
 console.log(this === window); // true
 
 a = 37;
@@ -42,8 +42,8 @@ this.b = "MDN";
 console.log(window.b)  // "MDN"
 console.log(b)         // "MDN"</pre>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> 你可以使用 {{jsxref("globalThis")}} 获取全局对象，无论你的代码是否在当前上下文运行。</p>
+<div class="note">
+<p><strong>备注：</strong>你可以使用 {{jsxref("globalThis")}} 获取全局对象，无论你的代码是否在当前上下文运行。</p>
 </div>
 
 <h3 id="函数上下文">函数上下文</h3>
@@ -52,19 +52,19 @@ console.log(b)         // "MDN"</pre>
 
 <p>因为下面的代码不在严格模式下，且 <code>this</code> 的值不是由该调用设置的，所以 <code>this</code> 的值默认指向全局对象，浏览器中就是 {{domxref("Window", "window")}}。</p>
 
-<pre class="brush:js notranslate">function f1(){
+<pre class="brush:js">function f1(){
   return this;
 }
 //在浏览器中：
-f1() === window;   //在浏览器中，全局对象是window
+f1() === window;   //在浏览器中，全局对象是 window
 
-//在Node中：
+//在 Node 中：
 f1() === globalThis;
 </pre>
 
 <p>然而，在严格模式下，如果进入执行环境时没有设置 <code>this</code> 的值，<code>this</code> 会保持为 <code>undefined</code>，如下：</p>
 
-<pre class="brush:js notranslate">function f2(){
+<pre class="brush:js">function f2(){
   "use strict"; // 这里是严格模式
   return this;
 }
@@ -72,7 +72,9 @@ f1() === globalThis;
 f2() === undefined; // true
 </pre>
 
-<div class="note">在第二个例子中，<code>this</code> 应是 <a href="/zh-CN/docs/Glossary/undefined">undefined</a>，因为 <code>f2</code> 是被直接调用的，而不是作为对象的属性或方法调用的（如 <code>window.f2()</code>）。有一些浏览器最初在支持<a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>时没有正确实现这个功能，于是它们错误地返回了<code>window</code>对象。</div>
+<div class="note">
+  <p><strong>备注：</strong>在第二个例子中，<code>this</code> 应是 <a href="/zh-CN/docs/Glossary/undefined">undefined</a>，因为 <code>f2</code> 是被直接调用的，而不是作为对象的属性或方法调用的（如 <code>window.f2()</code>）。有一些浏览器最初在支持<a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>时没有正确实现这个功能，于是它们错误地返回了<code>window</code>对象。</p>
+</div>
 
 <p>如果要想把 <code>this</code> 的值从一个环境传到另一个，就要用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a></code> 或者<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a></code> 方法，如下方的示例所示。</p>
 
@@ -82,7 +84,7 @@ f2() === undefined; // true
 
 <p>在类的构造函数中，<code>this</code> 是一个常规对象。类中所有非静态的方法都会被添加到 <code>this</code> 的原型中：</p>
 
-<pre class="notranslate">class Example {
+<pre>class Example {
   constructor() {
     const proto = Object.getPrototypeOf(this);
     console.log(Object.getOwnPropertyNames(proto));
@@ -94,23 +96,23 @@ f2() === undefined; // true
 
 new Example(); // ['constructor', 'first', 'second']</pre>
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong>静态方法不是 this 的属性，它们只是类自身的属性。</p>
+<div class="note">
+<p><strong>备注：</strong>静态方法不是 this 的属性，它们只是类自身的属性。</p>
 </div>
 
 <h3 id="派生类">派生类</h3>
 
-<p>不像基类的构造函数，派生类的构造函数没有初始的 <code>this</code> 绑定。在构造函数中调用 {{jsxref("Operators/super", "super()")}} 会生成一个 <code>this</code> 绑定，并相当于执行如下代码，Base为基类：</p>
+<p>不像基类的构造函数，派生类的构造函数没有初始的 <code>this</code> 绑定。在构造函数中调用 {{jsxref("Operators/super", "super()")}} 会生成一个 <code>this</code> 绑定，并相当于执行如下代码，Base 为基类：</p>
 
-<pre class="notranslate">this = new Base();</pre>
+<pre>this = new Base();</pre>
 
-<div class="blockIndicator warning">
+<div class="warning">
 <p><strong>警告：</strong>在调用 <code>super()</code> 之前引用 <code>this</code> 会抛出错误。</p>
 </div>
 
 <p>派生类不能在调用 <code>super()</code> 之前返回，除非其构造函数返回的是一个对象，或者根本没有构造函数。</p>
 
-<pre class="notranslate">class Base {}
+<pre>class Base {}
 class Good extends Base {}
 class AlsoGood extends Base {
   constructor() {
@@ -141,13 +143,13 @@ function whatsThis() {
 }
 
 whatsThis();          // 'Global' 因为在这个函数中 this 没有被设定，所以它默认为 全局/ window 对象
-whatsThis.call(obj);  // 'Custom' 因为函数中的 this 被设置为obj
-whatsThis.apply(obj); // 'Custom' 因为函数中的 this 被设置为obj
+whatsThis.call(obj);  // 'Custom' 因为函数中的 this 被设置为 obj
+whatsThis.apply(obj); // 'Custom' 因为函数中的 this 被设置为 obj
 </pre>
 
 <h3 id="this_和对象转换">this 和对象转换</h3>
 
-<pre class="notranslate">function add(c, d) {
+<pre>function add(c, d) {
   return this.a + this.b + c + d;
 }
 
@@ -164,7 +166,7 @@ add.apply(o, [10, 20]); // 34
 
 <p>在非严格模式下使用 <code>call</code> 和 <code>apply</code> 时，如果用作 <code>this</code> 的值不是对象，则会被尝试转换为对象。<code>null</code> 和 <code>undefined</code> 被转换为全局对象。原始值如 <code>7</code> 或 <code>'foo'</code> 会使用相应构造函数转换为对象。因此 <code>7</code> 会被转换为 <code>new Number(7)</code> 生成的对象，字符串 <code>'foo'</code> 会转换为 <code>new String('foo')</code> 生成的对象。</p>
 
-<pre class="notranslate">function bar() {
+<pre>function bar() {
   console.log(Object.prototype.toString.call(this));
 }
 
@@ -176,14 +178,14 @@ bar.call(undefined); // [object global]</pre>
 
 <p>ECMAScript 5 引入了 {{jsxref("Function.prototype.bind()")}}。调用<code>f.bind(someObject)</code>会创建一个与<code>f</code>具有相同函数体和作用域的函数，但是在这个新函数中，<code>this</code>将永久地被绑定到了<code>bind</code>的第一个参数，无论这个函数是如何被调用的。</p>
 
-<pre class="brush:js notranslate">function f(){
+<pre class="brush:js">function f(){
   return this.a;
 }
 
 var g = f.bind({a:"azerty"});
 console.log(g()); // azerty
 
-var h = g.bind({a:'yoo'}); // bind只生效一次！
+var h = g.bind({a:'yoo'}); // bind 只生效一次！
 console.log(h()); // azerty
 
 var o = {a:37, f:f, g:g, h:h};
@@ -194,34 +196,34 @@ console.log(o.a, o.f(), o.g(), o.h()); // 37, 37, azerty, azerty
 
 <p>在<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>中，<code>this</code>与封闭词法环境的<code>this</code>保持一致。在全局代码中，它将被设置为全局对象：</p>
 
-<pre class="brush: js notranslate">var globalObject = this;
+<pre class="brush: js">var globalObject = this;
 var foo = (() =&gt; this);
 console.log(foo() === globalObject); // true</pre>
 
 <div class="note">
-<p>注意：如果将<code>this</code>传递给<code>call</code>、<code>bind</code>、或者<code>apply</code>来调用箭头函数，它将被忽略。不过你仍然可以为调用添加参数，不过第一个参数（<code>thisArg</code>）应该设置为<code>null</code>。</p>
+<p><strong>备注：</strong>如果将<code>this</code>传递给<code>call</code>、<code>bind</code>、或者<code>apply</code>来调用箭头函数，它将被忽略。不过你仍然可以为调用添加参数，不过第一个参数（<code>thisArg</code>）应该设置为<code>null</code>。</p>
 </div>
 
-<pre class="brush: js notranslate">// 接着上面的代码
+<pre class="brush: js">// 接着上面的代码
 // 作为对象的一个方法调用
 var obj = {foo: foo};
 console.log(obj.foo() === globalObject); // true
 
-// 尝试使用call来设定this
+// 尝试使用 call 来设定 this
 console.log(foo.call(obj) === globalObject); // true
 
-// 尝试使用bind来设定this
+// 尝试使用 bind 来设定 this
 foo = foo.bind(obj);
 console.log(foo() === globalObject); // true</pre>
 
 <p>无论如何，<code>foo</code> 的 <code>this</code> 被设置为他被创建时的环境（在上面的例子中，就是全局对象）。这同样适用于在其他函数内创建的箭头函数：这些箭头函数的<code>this</code>被设置为封闭的词法环境的。</p>
 
-<pre class="brush: js notranslate">// 创建一个含有bar方法的obj对象，
-// bar返回一个函数，
-// 这个函数返回this，
+<pre class="brush: js">// 创建一个含有 bar 方法的 obj 对象，
+// bar 返回一个函数，
+// 这个函数返回 this，
 // 这个返回的函数是以箭头函数创建的，
-// 所以它的this被永久绑定到了它外层函数的this。
-// bar的值可以在调用中设置，这反过来又设置了返回函数的值。
+// 所以它的 this 被永久绑定到了它外层函数的 this。
+// bar 的值可以在调用中设置，这反过来又设置了返回函数的值。
 var obj = {
   bar: function() {
     var x = (() =&gt; this);
@@ -229,22 +231,22 @@ var obj = {
   }
 };
 
-// 作为obj对象的一个方法来调用bar，把它的this绑定到obj。
-// 将返回的函数的引用赋值给fn。
+// 作为 obj 对象的一个方法来调用 bar，把它的 this 绑定到 obj。
+// 将返回的函数的引用赋值给 fn。
 var fn = obj.bar();
 
-// 直接调用fn而不设置this，
-// 通常(即不使用箭头函数的情况)默认为全局对象
-// 若在严格模式则为undefined
+// 直接调用 fn 而不设置 this，
+// 通常 (即不使用箭头函数的情况) 默认为全局对象
+// 若在严格模式则为 undefined
 console.log(fn() === obj); // true
 
-// 但是注意，如果你只是引用obj的方法，
+// 但是注意，如果你只是引用 obj 的方法，
 // 而没有调用它
 var fn2 = obj.bar;
-// 那么调用箭头函数后，this指向window，因为它从 bar 继承了this。
+// 那么调用箭头函数后，this 指向 window，因为它从 bar 继承了 this。
 console.log(fn2()() == window); // true</pre>
 
-<p>在上面的例子中，一个赋值给了 <code>obj.bar</code>的函数（称为匿名函数 A），返回了另一个箭头函数（称为匿名函数 B）。因此，在 <code>A</code> 调用时，函数B的<code>this</code>被永久设置为obj.bar（函数A）的<code>this</code>。当返回的函数（函数B）被调用时，它<code>this</code>始终是最初设置的。在上面的代码示例中，函数B的<code>this</code>被设置为函数A的<code>this</code>，即obj，所以即使被调用的方式通常将其设置为 <code>undefined</code> 或全局对象（或者如前面示例中的其他全局执行环境中的方法），它的 <code>this</code> 也仍然是 <code>obj</code> 。</p>
+<p>在上面的例子中，一个赋值给了 <code>obj.bar</code>的函数（称为匿名函数 A），返回了另一个箭头函数（称为匿名函数 B）。因此，在 <code>A</code> 调用时，函数 B 的<code>this</code>被永久设置为 obj.bar（函数 A）的<code>this</code>。当返回的函数（函数 B）被调用时，它<code>this</code>始终是最初设置的。在上面的代码示例中，函数 B 的<code>this</code>被设置为函数 A 的<code>this</code>，即 obj，所以即使被调用的方式通常将其设置为 <code>undefined</code> 或全局对象（或者如前面示例中的其他全局执行环境中的方法），它的 <code>this</code> 也仍然是 <code>obj</code> 。</p>
 
 <h3 id="作为对象的方法">作为对象的方法</h3>
 
@@ -252,7 +254,7 @@ console.log(fn2()() == window); // true</pre>
 
 <p>下面的例子中，当 <code>o.f()</code> 被调用时，函数内的 <code>this</code> 将绑定到 <code>o</code> 对象。</p>
 
-<pre class="brush:js notranslate">var o = {
+<pre class="brush:js">var o = {
   prop: 37,
   f: function() {
     return this.prop;
@@ -264,7 +266,7 @@ console.log(o.f()); // 37
 
 <p>请注意，这样的行为完全不会受函数定义方式或位置的影响。在前面的例子中，我们在定义对象<code>o</code>的同时，将其中的函数定义为成员 <code>f</code> 。但是，我们也可以先定义函数，然后再将其附属到<code>o.f</code>。这样做的结果是一样的：</p>
 
-<pre class="brush:js notranslate">var o = {prop: 37};
+<pre class="brush:js">var o = {prop: 37};
 
 function independent() {
   return this.prop;
@@ -279,14 +281,14 @@ console.log(o.f()); // 37
 
 <p>同样，<code>this</code> 的绑定只受最接近的成员引用的影响。在下面的这个例子中，我们把一个方法<code>g</code>当作对象<code>o.b</code>的函数调用。在这次执行期间，函数中的<code>this</code>将指向<code>o.b</code>。事实证明，这与他是对象 <code>o</code> 的成员没有多大关系，最近的引用才是最重要的。</p>
 
-<pre class="brush: js notranslate"><code>o.b = {g: independent, prop: 42};
+<pre class="brush: js"><code>o.b = {g: independent, prop: 42};
 console.log(o.b.g()); // 42</code></pre>
 
 <h4 id="原型链中的_this">原型链中的 <code><strong>this</strong></code></h4>
 
 <p>对于在对象原型链上某处定义的方法，同样的概念也适用。如果该方法存在于一个对象的原型链上，那么 <code>this</code> 指向的是调用这个方法的对象，就像该方法就在这个对象上一样。</p>
 
-<pre class="brush:js notranslate">var o = {
+<pre class="brush:js">var o = {
   f: function() {
     return this.a + this.b;
   }
@@ -304,7 +306,7 @@ console.log(p.f()); // 5
 
 <p>再次，相同的概念也适用于当函数在一个 <code>getter</code> 或者 <code>setter</code> 中被调用。用作 <code>getter</code> 或 <code>setter</code> 的函数都会把 <code>this</code> 绑定到设置或获取属性的对象。</p>
 
-<pre class="brush: js notranslate">function sum() {
+<pre class="brush: js">function sum() {
   return this.a + this.b + this.c;
 }
 
@@ -328,19 +330,19 @@ console.log(o.average, o.sum); // logs 2, 6
 <p>当一个函数用作构造函数时（使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new</a>关键字），它的<code>this</code>被绑定到正在构造的新对象。</p>
 
 <div class="note">
-<p><span style="line-height: 22.007999420166px;">虽然构造函数返回的默认值是 <code>this</code> 所指的那个对象，但它仍可以手动返回其他的对象（如果返回值不是一个对象，则返回 <code>this</code> 对象）。</span></p>
+<p><strong>备注：</strong>虽然构造函数返回的默认值是 <code>this</code> 所指的那个对象，但它仍可以手动返回其他的对象（如果返回值不是一个对象，则返回 <code>this</code> 对象）。</p>
 </div>
 
-<pre class="brush: js notranslate">/*
- * 构造函数这样工作:
+<pre class="brush: js">/*
+ * 构造函数这样工作：
  *
  * function MyConstructor(){
  *   // 函数实体写在这里
- *   // 根据需要在this上创建属性，然后赋值给它们，比如：
+ *   // 根据需要在 this 上创建属性，然后赋值给它们，比如：
  *   this.fum = "nom";
  *   // 等等...
  *
- *   // 如果函数具有返回对象的return语句，
+ *   // 如果函数具有返回对象的 return 语句，
  *   // 则该对象将是 new 表达式的结果。
  *   // 否则，表达式的结果是当前绑定到 this 的对象。
  *   //（即通常看到的常见情况）。
@@ -366,11 +368,11 @@ console.log(o.a); // logs 38
 
 <p>在刚刚的例子中（<code>C2</code>），因为在调用构造函数的过程中，手动的设置了返回对象，与<code>this</code>绑定的默认对象被丢弃了。（这基本上使得语句 “<code>this.a = 37;</code>”成了“僵尸”代码，实际上并不是真正的“僵尸”，这条语句执行了，但是对于外部没有任何影响，因此完全可以忽略它）。</p>
 
-<h3 id="作为一个DOM事件处理函数">作为一个DOM事件处理函数</h3>
+<h3 id="作为一个DOM事件处理函数">作为一个 DOM 事件处理函数</h3>
 
 <p>当函数被用作事件处理函数时，它的 <code>this</code> 指向触发事件的元素（一些浏览器在使用非 <code>addEventListener</code> 的函数动态地添加监听函数时不遵守这个约定）。</p>
 
-<pre class="brush:js notranslate">// 被调用时，将关联的元素变成蓝色
+<pre class="brush:js">// 被调用时，将关联的元素变成蓝色
 function bluify(e){
   console.log(this === e.currentTarget); // 总是 true
 
@@ -382,34 +384,34 @@ function bluify(e){
 // 获取文档中的所有元素的列表
 var elements = document.getElementsByTagName('*');
 
-// 将bluify作为元素的点击监听函数，当元素被点击时，就会变成蓝色
+// 将 bluify 作为元素的点击监听函数，当元素被点击时，就会变成蓝色
 for(var i=0 ; i&lt;elements.length ; i++){
   elements[i].addEventListener('click', bluify, false);
 }</pre>
 
 <h3 id="作为一个内联事件处理函数">作为一个内联事件处理函数</h3>
 
-<p>当代码被内联 <a href="/zh-CN/docs/Web/Guide/Events/Event_handlers">on-event 处理函数</a> 调用时，它的<code>this</code>指向监听器所在的DOM元素：</p>
+<p>当代码被内联 <a href="/zh-CN/docs/Web/Guide/Events/Event_handlers">on-event 处理函数</a> 调用时，它的<code>this</code>指向监听器所在的 DOM 元素：</p>
 
-<pre class="brush: html notranslate">&lt;button onclick="alert(this.tagName.toLowerCase());"&gt;
+<pre class="brush: html">&lt;button onclick="alert(this.tagName.toLowerCase());"&gt;
   Show this
 &lt;/button&gt;
 </pre>
 
 <p>上面的 alert 会显示 <code>button</code>。注意只有外层代码中的 <code>this</code> 是这样设置的：</p>
 
-<pre class="brush: html notranslate">&lt;button onclick="alert((function(){return this})());"&gt;
+<pre class="brush: html">&lt;button onclick="alert((function(){return this})());"&gt;
   Show inner this
 &lt;/button&gt;
 </pre>
 
 <p>在这种情况下，没有设置内部函数的 <code>this</code>，所以它指向 global/window 对象（即非严格模式下调用的函数未设置 <code>this</code> 时指向的默认对象）。</p>
 
-<h3 id="类中的this">类中的this</h3>
+<h3 id="类中的_this">类中的 this</h3>
 
 <p>和其他普通函数一样，方法中的 <code>this</code> 值取决于它们如何被调用。有时，改写这个行为，让类中的 <code>this</code> 值总是指向这个类实例会很有用。为了做到这一点，可在构造函数中绑定类方法：</p>
 
-<pre class="notranslate">class Car {
+<pre>class Car {
   constructor() {
     // Bind sayBye but not sayHi to show the difference
     this.sayBye = this.sayBye.bind(this);
@@ -443,8 +445,8 @@ bird.sayHi(); // Hello from Tweety
 bird.sayBye = car.sayBye;
 bird.sayBye();  // Bye from Ferrari</pre>
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong>类内部总是严格模式。调用一个 <code>this</code> 值为 undefined 的方法会抛出错误。</p>
+<div class="note">
+<p><strong>备注：</strong>类内部总是严格模式。调用一个 <code>this</code> 值为 undefined 的方法会抛出错误。</p>
 </div>
 
 <h2 id="规范">规范</h2>

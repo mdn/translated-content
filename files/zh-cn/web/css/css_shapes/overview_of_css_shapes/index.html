@@ -1,19 +1,19 @@
 ---
-title: CSS的图形（Shape）概览
+title: CSS 的图形（Shape）概览
 slug: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 translation_of: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary"><a href="https://www.w3.org/TR/css-shapes/">CSS Shapes Level 1 Specification</a> 在CSS中描述了几何图形的shape（以下叫做形状）。在“Level 1 of the specification”中定义的形状被设计用来绘制浮动的元素。这篇文章提供关于“你能如何绘制这些形状”的概览。 </p>
+<p><a href="https://www.w3.org/TR/css-shapes/">CSS Shapes Level 1 Specification</a> 在 CSS 中描述了几何图形的 shape（以下叫做形状）。在“Level 1 of the specification”中定义的形状被设计用来绘制浮动的元素。这篇文章提供关于“你能如何绘制这些形状”的概览。 </p>
 
 <p>举个例子：你在左侧设计一个浮动元素，它可以令文本环绕于该浮动元素的右侧和底部，并且以一种矩形的样式。如果你接着指定一个圆形的样式，文本就会以圆形的样式环绕。.</p>
 
-<p>事实上，我们有多种方式去创建这类形状，并且我们在指导中将会发现CSS形状是怎么工作的，然后就可以跟着感觉走了。</p>
+<p>事实上，我们有多种方式去创建这类形状，并且我们在指导中将会发现 CSS 形状是怎么工作的，然后就可以跟着感觉走了。</p>
 
-<h2 id="Specification定义了什么">Specification定义了什么?</h2>
+<h2 id="Specification定义了什么">Specification 定义了什么？</h2>
 
-<p>Specification定义了三种新的权限：</p>
+<p>Specification 定义了三种新的权限：</p>
 
 <ul>
  <li>{{cssxref("shape-outside")}} — 允许定义基本形状。</li>
@@ -48,9 +48,9 @@ translation_of: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 
 <p>在我们的 <a href="/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes">Guide to Basic Shapes</a> 中，我们探索每一种形状，并且学会如何创建它们。</p>
 
-<h3 id="含有Box参数的形状">含有Box参数的形状</h3>
+<h3 id="含有Box参数的形状">含有 Box 参数的形状</h3>
 
-<p>形状可以加上Box参数，因此你可以创建形状在：</p>
+<p>形状可以加上 Box 参数，因此你可以创建形状在：</p>
 
 <ul>
  <li><code>border-box</code></li>
@@ -61,19 +61,19 @@ translation_of: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 
 <p>当中。</p>
 
-<p>在下面的例子中你可以改变 <code>border-box</code> 参数，然后查看形状靠近或者远离Box的效果。</p>
+<p>在下面的例子中你可以改变 <code>border-box</code> 参数，然后查看形状靠近或者远离 Box 的效果。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/shapes/overview/box.html", '100%', 810)}}</p>
 
 <p>详见 <a href="/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values">Shapes From Box Values</a>。</p>
 
-<h3 id="由Image创建的形状">由Image创建的形状</h3>
+<h3 id="由Image创建的形状">由 Image 创建的形状</h3>
 
-<p>有意思的是，可以使用带有Alpha通道的图像来创建（形状的）路径——文本将会围绕不透明的图像部分。这个特性允许文本覆盖图像，有时候可以将文本围绕于一幅不可见的图像，达到一种多边形文本显示的效果。</p>
+<p>有意思的是，可以使用带有 Alpha 通道的图像来创建（形状的）路径——文本将会围绕不透明的图像部分。这个特性允许文本覆盖图像，有时候可以将文本围绕于一幅不可见的图像，达到一种多边形文本显示的效果。</p>
 
-<p>需要注意的是，这种方式必须是 <a href="/en-US/docs/Web/HTTP/CORS">CORS compatible</a> 的， 否则 <code>shape-outside</code> 相当于 <code>none</code> ，你将不会得到任何形状。</p>
+<p>需要注意的是，这种方式必须是 <a href="/en-US/docs/Web/HTTP/CORS">CORS compatible</a> 的，否则 <code>shape-outside</code> 相当于 <code>none</code> ，你将不会得到任何形状。</p>
 
-<p>在下面的例子中，我们有一幅全透明的图像，使用如下 URL ，并且指定 <code>shape-outside</code>. 属性，创建出一个模糊的形状：一幅气球图像。</p>
+<p>在下面的例子中，我们有一幅全透明的图像，使用如下 URL，并且指定 <code>shape-outside</code>. 属性，创建出一个模糊的形状：一幅气球图像。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/shapes/overview/image.html", '100%', 800)}}</p>
 
@@ -85,11 +85,11 @@ translation_of: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 
 <p>{{EmbedGHLiveSample("css-examples/shapes/overview/threshold.html", '100%', 820)}}</p>
 
-<p>下面我们进入更深层次的<a href="/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images">Shapes from Images</a>学习.</p>
+<p>下面我们进入更深层次的<a href="/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images">Shapes from Images</a>学习。</p>
 
 <h2 id="shape-margin_属性"><code>shape-margin</code> 属性</h2>
 
-<p> {{cssxref("shape-margin")}} 属性在 <code>shape-outside</code>.周围加上边框。它使得文本的Box形状更短了，而且远离了形状本身。</p>
+<p> {{cssxref("shape-margin")}} 属性在 <code>shape-outside</code>.周围加上边框。它使得文本的 Box 形状更短了，而且远离了形状本身。</p>
 
 <p>在下面的例子中，我们在基本形状中加入了 <code>shape-margin</code> 属性。改变边框的宽度可以将文本的距离增大。</p>
 
@@ -97,15 +97,15 @@ translation_of: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 
 <h2 id="将创建的元素作为浮动元素">将创建的元素作为浮动元素</h2>
 
-<p>在上面的例子中，我们使用图像或者可见元素创建形状，意思是你可以在网页上看到这些图形。或者，你也可以只创建图形（而使图形不可见），这就需要一个浮动元素，在浮动元素的基础上就可以使图形不可见。 它可以是插入到文档中的冗余元素，可以是空的{{htmlelement("div")}} 或者 {{htmlelement("span")}} ，但是我们建议用创建好的内容。这就意味着我们可以保留CSS中的样式。</p>
+<p>在上面的例子中，我们使用图像或者可见元素创建形状，意思是你可以在网页上看到这些图形。或者，你也可以只创建图形（而使图形不可见），这就需要一个浮动元素，在浮动元素的基础上就可以使图形不可见。 它可以是插入到文档中的冗余元素，可以是空的{{htmlelement("div")}} 或者 {{htmlelement("span")}} ，但是我们建议用创建好的内容。这就意味着我们可以保留 CSS 中的样式。</p>
 
-<p>在下面的例子中，我们在创建好的内容中插入一个宽高为150px的内容。然后，我们可以使用基本基本形状，Box参数甚至是Alpha通道去创建图形，使得文本可以环绕这个图形。</p>
+<p>在下面的例子中，我们在创建好的内容中插入一个宽高为 150px 的内容。然后，我们可以使用基本基本形状，Box 参数甚至是 Alpha 通道去创建图形，使得文本可以环绕这个图形。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/shapes/overview/generated-content.html", '100%', 850)}}</p>
 
 <h2 id="和clip-path的关系">和<code>clip-path</code>的关系</h2>
 
-<p>基本图形和Box参数被用来创建图形时，和 {{cssxref("clip-path")}} 参数是等效的。所以如果你想要用图像创建形状的同时剪去部分图像，你可以用如下参数：</p>
+<p>基本图形和 Box 参数被用来创建图形时，和 {{cssxref("clip-path")}} 参数是等效的。所以如果你想要用图像创建形状的同时剪去部分图像，你可以用如下参数：</p>
 
 <p>下面的图像是一个蓝色背景的方形图像，使用 <code>shape-outside: ellipse(40% 50%);</code> 和 <code>clip-path: ellipse(40% 50%);</code> 参数去剪去相同的区域，这个区域被定义为形状。</p>
 
@@ -113,10 +113,10 @@ translation_of: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 
 <h2 id="形状的开发工具">形状的开发工具</h2>
 
-<p>和CSS 形状的开发工具类似，Firefox在Firefox DevTools中自带 <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Shape Path Editor</a> 开发工具。这个工具让你可以查看网页中的任意形状，甚至可以实时显示改变形状之后的效果。如果你的多边形不正确，你可以用 Shapes Editor 调节，然后复制粘贴到CSS中。</p>
+<p>和 CSS 形状的开发工具类似，Firefox 在 Firefox DevTools 中自带 <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Shape Path Editor</a> 开发工具。这个工具让你可以查看网页中的任意形状，甚至可以实时显示改变形状之后的效果。如果你的多边形不正确，你可以用 Shapes Editor 调节，然后复制粘贴到 CSS 中。</p>
 
-<p>在Firefox 60当中，对于含有 <code>clip-path</code>的属性的元素默认启用Shape Path Editor。你也可以编辑 含有 <code>shape-outside</code> 的属性的元素，但前提是开启<code>layout.css.shape-outside.enabled</code> 首选项。</p>
+<p>在 Firefox 60 当中，对于含有 <code>clip-path</code>的属性的元素默认启用 Shape Path Editor。你也可以编辑 含有 <code>shape-outside</code> 的属性的元素，但前提是开启<code>layout.css.shape-outside.enabled</code> 首选项。</p>
 
-<h2 id="未来的CSS形状特性">未来的CSS形状特性</h2>
+<h2 id="未来的CSS形状特性">未来的 CSS 形状特性</h2>
 
-<p>形状初始化包括了一个 <code>shape-inside</code> 属性，用来在元素中创建形状。这个属性有可能在非浮动元素中创建形状，被移动到了 <a href="https://drafts.csswg.org/css-shapes-2/">level 2</a> 规则中。由于 <code>shape-inside</code> 以前属于Level 1规则，你或许可以在网上查到它的详细信息和属性。</p>
+<p>形状初始化包括了一个 <code>shape-inside</code> 属性，用来在元素中创建形状。这个属性有可能在非浮动元素中创建形状，被移动到了 <a href="https://drafts.csswg.org/css-shapes-2/">level 2</a> 规则中。由于 <code>shape-inside</code> 以前属于 Level 1 规则，你或许可以在网上查到它的详细信息和属性。</p>

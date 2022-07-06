@@ -13,7 +13,7 @@ translation_of: Web/CSS/touch-action
 ---
 <div>{{ CSSRef }}</div>
 
-<p>CSS属性 <strong><code>touch-action</code></strong> 用于设置触摸屏用户如何操纵元素的区域(例如，浏览器内置的缩放功能)。</p>
+<p>CSS 属性 <strong><code>touch-action</code></strong> 用于设置触摸屏用户如何操纵元素的区域 (例如，浏览器内置的缩放功能)。</p>
 
 <pre class="brush:css">/* Keyword values */
 touch-action: auto;
@@ -35,24 +35,24 @@ touch-action: unset;
 
 <p>{{cssinfo}}</p>
 
-<p>默认情况下，平移（滚动）和缩放手势由浏览器专门处理。 使用 {{domxref("Pointer_events")}} 的应用程序将在浏览器开始处理触摸手势时收到一个 <a href="https://developer.mozilla.org/Web/Events/pointercancel">pointercancel</a> 事件。 通过明确指定浏览器应该处理哪些手势，应用程序可以在 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Web/Events/pointermove">pointermove</a> 和 <a href="https://developer.mozilla.org/Web/Events/pointerup">pointerup</a> 监听器中为其余的手势提供自己的行为。 使用 {{domxref("Touch_events")}} 的应用程序通过调用 {{domxref("Event.preventDefault","preventDefault()")}} 禁用浏览器处理手势，但也应使用<strong>触摸操作</strong>确保浏览器在调用任何事件侦听器之前，了解应用程序的意图。</p>
+<p>默认情况下，平移（滚动）和缩放手势由浏览器专门处理。使用 {{domxref("Pointer_events")}} 的应用程序将在浏览器开始处理触摸手势时收到一个 <a href="https://developer.mozilla.org/Web/Events/pointercancel">pointercancel</a> 事件。通过明确指定浏览器应该处理哪些手势，应用程序可以在 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Web/Events/pointermove">pointermove</a> 和 <a href="https://developer.mozilla.org/Web/Events/pointerup">pointerup</a> 监听器中为其余的手势提供自己的行为。使用 {{domxref("Touch_events")}} 的应用程序通过调用 {{domxref("Event.preventDefault","preventDefault()")}} 禁用浏览器处理手势，但也应使用<strong>触摸操作</strong>确保浏览器在调用任何事件侦听器之前，了解应用程序的意图。</p>
 
-<p>当手势开始时，浏览器与触摸的元素及其所有祖先的<strong>触摸动作</strong>值相交直到一个实现手势（换句话说，第一个包含滚动元素）的<strong>触摸动作</strong>值。 这意味着在实践中，<strong>触摸动作</strong>通常仅适用于具有某些自定义行为的单个元素，而无需在该元素的任何后代上明确指定<strong>触摸动作</strong>。 手势开始之后，<strong>触摸动作</strong>值的更改将不会对当前手势的行为产生任何影响。</p>
+<p>当手势开始时，浏览器与触摸的元素及其所有祖先的<strong>触摸动作</strong>值相交直到一个实现手势（换句话说，第一个包含滚动元素）的<strong>触摸动作</strong>值。这意味着在实践中，<strong>触摸动作</strong>通常仅适用于具有某些自定义行为的单个元素，而无需在该元素的任何后代上明确指定<strong>触摸动作</strong>。手势开始之后，<strong>触摸动作</strong>值的更改将不会对当前手势的行为产生任何影响。</p>
 
 <h2 id="语法">语法</h2>
 
-<p>touch-action 属性可以被指定为:</p>
+<p>touch-action 属性可以被指定为：</p>
 
 <ul>
- <li>任何一个关键字 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#auto">auto</a><font face="Open Sans, arial, sans-serif">、</font></code><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#none">none</a><font face="Open Sans, arial, sans-serif">、</font></code><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#manipulation">manipulation</a>，或</code></li>
- <li>零或任何一个关键字 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#pan-x">pan-x</a><font face="Open Sans, arial, sans-serif">、</font></code><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#pan-keywords">pan-left</a><font face="Open Sans, arial, sans-serif">、</font></code><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#pan-keywords">pan-right</a>，加</code>零或任何一个关键字 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#pan-y">pan-y</a><font face="Open Sans, arial, sans-serif">、</font></code><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#pan-keywords">pan-up</a><font face="Open Sans, arial, sans-serif">、</font></code><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#pan-keywords">pan-down</a>，加可选关键字</code> <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#">pinch-zoom</a></code>.</li>
+ <li>任何一个关键字 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#auto">auto</a>、</code><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#none">none</a>、</code><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#manipulation">manipulation</a>，或</code></li>
+ <li>零或任何一个关键字 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#pan-x">pan-x</a>、</code><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#pan-keywords">pan-left</a>、</code><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#pan-keywords">pan-right</a>，加</code>零或任何一个关键字 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#pan-y">pan-y</a>、</code><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#pan-keywords">pan-up</a>、</code><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#pan-keywords">pan-down</a>，加可选关键字</code> <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action$edit#">pinch-zoom</a></code>.</li>
 </ul>
 
 <h3 id="值">值</h3>
 
 <dl>
  <dt><code>auto</code></dt>
- <dd>当触控事件发生在元素上时，由浏览器来决定进行哪些操作，比如对viewport进行平滑、缩放等。</dd>
+ <dd>当触控事件发生在元素上时，由浏览器来决定进行哪些操作，比如对 viewport 进行平滑、缩放等。</dd>
  <dt><code>none</code></dt>
  <dd>当触控事件发生在元素上时，不进行任何操作。</dd>
  <dt><code>pan-x</code></dt>
@@ -60,11 +60,11 @@ touch-action: unset;
  <dt><code>pan-y</code></dt>
  <dd>启用单指垂直平移手势。可以与 <strong>pan-x 、pan-left 、</strong><strong>pan-right </strong>和／或 <strong>pinch-zoom </strong>组合使用。</dd>
  <dt><code>manipulation</code></dt>
- <dd>浏览器只允许进行滚动和持续缩放操作。任何其它被auto值支持的行为不被支持。启用平移和缩小缩放手势，但禁用其他非标准手势，例如双击以进行缩放。 禁用双击可缩放功能可减少浏览器在用户点击屏幕时延迟生成点击事件的需要。 这是“<strong>pan-x pan-y pinch-zoom</strong>”（为了兼容性本身仍然有效）的别名。</dd>
+ <dd>浏览器只允许进行滚动和持续缩放操作。任何其它被 auto 值支持的行为不被支持。启用平移和缩小缩放手势，但禁用其他非标准手势，例如双击以进行缩放。禁用双击可缩放功能可减少浏览器在用户点击屏幕时延迟生成点击事件的需要。这是“<strong>pan-x pan-y pinch-zoom</strong>”（为了兼容性本身仍然有效）的别名。</dd>
  <dt><a id="pan-keywords" name="pan-keywords"><code>pan-left</code>, <code>pan-right,pan-up,pan-down</code> {{experimental_inline}}</a></dt>
- <dd>启用以指定方向滚动开始的单指手势。 一旦滚动开始，方向可能仍然相反。 请注意，滚动“向上”（<strong>pan-up</strong>）意味着用户正在将其手指向下拖动到屏幕表面上，同样 <strong>pan-left </strong>表示用户将其手指向右拖动。 多个方向可以组合，除非有更简单的表示（例如，“<strong>pan-left pan-right</strong>”无效，因为“<strong>pan-x</strong>”更简单，而“<strong>pan-left pan-down</strong>”有效）。</dd>
+ <dd>启用以指定方向滚动开始的单指手势。一旦滚动开始，方向可能仍然相反。请注意，滚动“向上”（<strong>pan-up</strong>）意味着用户正在将其手指向下拖动到屏幕表面上，同样 <strong>pan-left </strong>表示用户将其手指向右拖动。多个方向可以组合，除非有更简单的表示（例如，“<strong>pan-left pan-right</strong>”无效，因为“<strong>pan-x</strong>”更简单，而“<strong>pan-left pan-down</strong>”有效）。</dd>
  <dt><a id="pinch-zoom" name="pinch-zoom"><code>pinch-zoom</code></a></dt>
- <dd>启用多手指平移和缩放页面。 这可以与任何平移值组合。</dd>
+ <dd>启用多手指平移和缩放页面。这可以与任何平移值组合。</dd>
 </dl>
 
 <h3 id="正式语法">正式语法</h3>

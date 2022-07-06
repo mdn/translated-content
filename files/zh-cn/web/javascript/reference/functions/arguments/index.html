@@ -19,34 +19,30 @@ translation_of: Web/JavaScript/Reference/Functions/arguments
 
 <p>{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}</p>
 
-<div class="hidden">
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+<h2 id="Description">描述</h2>
+
+<div class="note">
+<p><strong>备注：</strong> 如果你编写兼容 ES6 的代码，那么优先推荐使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters">剩余参数</a></p>
 </div>
 
-<h2 id="Description" name="Description">描述</h2>
-
-<div class="blockIndicator note">
-<p><strong>Note:</strong> If you're writing ES6 compatible code, then <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest parameters</a> should be preferred.</p>
+<div class="note">
+<p><strong>备注：</strong> “类数组” 意味着 <code>arguments</code> 有 {{jsxref("Functions/arguments/length", "长度")}} 属性 并且属性的索引是从零开始的，但是它没有 {{JSxRef("Array")}}的 内置方法， 例如 {{jsxref("Array.forEach", "forEach()")}} 和 {{jsxref("Array.map", "map()")}}都是没有的。详情可以看 <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments$edit#Description">§Description</a>.</p>
 </div>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> “Array-like” means that <code>arguments</code> has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{JSxRef("Array")}}'s built-in methods like {{jsxref("Array.forEach", "forEach()")}} and {{jsxref("Array.map", "map()")}}. See <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments$edit#Description">§Description</a> for details.</p>
-</div>
+<p><code>arguments</code>对象是所有（非箭头）函数中都可用的<strong>局部变量</strong>。你可以使用<code>arguments</code>对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引 0 处。例如，如果一个函数传递了三个参数，你可以以如下方式引用他们：</p>
 
-<p><code>arguments</code>对象是所有（非箭头）函数中都可用的<strong>局部变量</strong>。你可以使用<code>arguments</code>对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引0处。例如，如果一个函数传递了三个参数，你可以以如下方式引用他们：</p>
-
-<pre class="brush: js notranslate">arguments[0]
+<pre class="brush: js">arguments[0]
 arguments[1]
 arguments[2]
 </pre>
 
 <p>参数也可以被设置：</p>
 
-<pre class="brush: js notranslate">arguments[1] = 'new value';</pre>
+<pre class="brush: js">arguments[1] = 'new value';</pre>
 
-<p><code>arguments</code>对象不是一个 {{jsxref("Array")}} 。它类似于<code>Array</code>，但除了length属性和索引元素之外没有任何<code>Array</code>属性。例如，它没有 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="JavaScript/Reference/Global_Objects/Array/pop">pop</a> 方法。但是它可以被转换为一个真正的<code>Array</code>：</p>
+<p><code>arguments</code>对象不是一个 {{jsxref("Array")}} 。它类似于<code>Array</code>，但除了 length 属性和索引元素之外没有任何<code>Array</code>属性。例如，它没有 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="JavaScript/Reference/Global_Objects/Array/pop">pop</a> 方法。但是它可以被转换为一个真正的<code>Array</code>：</p>
 
-<pre class="brush: js notranslate">var args = Array.prototype.slice.call(arguments);
+<pre class="brush: js">var args = Array.prototype.slice.call(arguments);
 var args = [].slice.call(arguments);
 
 // ES2015
@@ -55,9 +51,9 @@ const args = [...arguments];
 </pre>
 
 <div class="warning">
-<p>对参数使用slice会阻止某些JavaScript引擎中的优化 (比如 V8 - <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">更多信息</a>)。如果你关心性能，尝试通过遍历arguments对象来构造一个新的数组。另一种方法是使用被忽视的<code>Array</code>构造函数作为一个函数：</p>
+<p><strong>警告：</strong>对参数使用 slice 会阻止某些 JavaScript 引擎中的优化 (比如 V8 - <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">更多信息</a>)。如果你关心性能，尝试通过遍历 arguments 对象来构造一个新的数组。另一种方法是使用被忽视的<code>Array</code>构造函数作为一个函数：</p>
 
-<pre class="brush: js notranslate">var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
+<pre class="brush: js">var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
 </pre>
 </div>
 
@@ -65,9 +61,9 @@ const args = [...arguments];
 
 <h3 id="对参数使用_typeof">对参数使用 <code>typeof</code></h3>
 
-<p>typeof参数返回 'object'。</p>
+<p>typeof 参数返回 'object'。</p>
 
-<pre class="brush: js notranslate">console.log(typeof arguments);    // 'object'
+<pre class="brush: js">console.log(typeof arguments);    // 'object'
 // arguments 对象只能在函数内使用
 function test(a){
     console.log(a,Object.prototype.toString.call(arguments));
@@ -83,44 +79,35 @@ number
 
 <p>可以使用索引确定单个参数的类型。</p>
 
-<pre class="brush: js notranslate">console.log(typeof arguments[0]); //this will return the typeof individual arguments.</pre>
+<pre class="brush: js">console.log(typeof arguments[0]); //this will return the typeof individual arguments.</pre>
 
 <h3 id="对参数使用扩展语法">对参数使用扩展语法</h3>
 
 <p>您还可以使用{{jsxref("Array.from()")}}方法或<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator">扩展运算符</a>将参数转换为真实数组：</p>
 
-<pre class="brush: js notranslate">var args = Array.from(arguments);
+<pre class="brush: js">var args = Array.from(arguments);
 var args = [...arguments];</pre>
 
-<h2 id="Properties" name="Properties">属性</h2>
+<h2 id="Properties">属性</h2>
 
 <dl>
  <dt><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee" title="JavaScript/Reference/Functions_and_function_scope/arguments/callee">arguments.callee</a></code></dt>
  <dd>指向参数所属的当前执行的函数。</dd>
- <dt>
- <div class="hidden">
- <p><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/caller" title="JavaScript/Reference/Functions_and_function_scope/arguments/caller">arguments.caller</a></code> {{ Obsolete_inline() }}</p>
- </div>
- </dt>
- <dd>
- <p>指向调用当前函数的函数。</p>
- </dd>
  <dt><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length" title="JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code></dt>
  <dd>传递给函数的参数数量。</dd>
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator">arguments[@@iterator]</a></code></dt>
  <dd>返回一个新的{{jsxref("Array/@@iterator", "Array 迭代器", "", 0)}} 对象，该对象包含参数中每个索引的值。</dd>
- <dt></dt>
 </dl>
 
-<div class="blockIndicator note">
-<p>注意: 在严格模式下，<code>arguments</code>对象已与过往不同。<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator">arguments[@@iterator]</a></code>不再与函数的实际形参之间共享，同时caller属性也被移除。</p>
+<div class="note">
+<p><strong>备注：</strong>在严格模式下，<code>arguments</code>对象已与过往不同。<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator">arguments[@@iterator]</a></code>不再与函数的实际形参之间共享，同时 caller 属性也被移除。</p>
 </div>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
 <h3 id="遍历参数求和">遍历参数求和</h3>
 
-<pre class="brush: js notranslate">function add() {
+<pre class="brush: js">function add() {
     var sum =0,
         len = arguments.length;
     for(var i=0; i&lt;len; i++){
@@ -132,18 +119,18 @@ add()                           // 0
 add(1)                          // 1
 add(1,2,3,4);                   // 10</pre>
 
-<h3 id="Example_Defining_function_that_concatenates_several_strings" name="Example:_Defining_function_that_concatenates_several_strings">定义连接字符串的函数</h3>
+<h3 id="Example_Defining_function_that_concatenates_several_strings">定义连接字符串的函数</h3>
 
 <p>这个例子定义了一个函数来连接字符串。这个函数唯一正式声明了的参数是一个字符串，该参数指定一个字符作为衔接点来连接字符串。该函数定义如下：</p>
 
-<pre class="brush:js notranslate">function myConcat(separator) {
+<pre class="brush:js">function myConcat(separator) {
   var args = Array.prototype.slice.call(arguments, 1);
   return args.join(separator);
 }</pre>
 
 <p>你可以传递任意数量的参数到该函数，并使用每个参数作为列表中的项创建列表。</p>
 
-<pre class="brush:js notranslate">// returns "red, orange, blue"
+<pre class="brush:js">// returns "red, orange, blue"
 myConcat(", ", "red", "orange", "blue");
 
 // returns "elephant; giraffe; lion; cheetah"
@@ -152,35 +139,35 @@ myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 // returns "sage. basil. oregano. pepper. parsley"
 myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 
-<h3 id="Example_Defining_a_function_that_creates_HTML_lists" name="Example:_Defining_a_function_that_creates_HTML_lists">定义创建HTML列表的方法</h3>
+<h3 id="Example_Defining_a_function_that_creates_HTML_lists">定义创建 HTML 列表的方法</h3>
 
-<p>这个例子定义了一个函数通过一个字符串来创建HTML列表。这个函数唯一正式声明了的参数是一个字符。当该参数为 "<code>u</code>" 时，创建一个无序列表 (项目列表)；当该参数为 "<code>o</code>" 时，则创建一个有序列表 (编号列表)。该函数定义如下：</p>
+<p>这个例子定义了一个函数通过一个字符串来创建 HTML 列表。这个函数唯一正式声明了的参数是一个字符。当该参数为 "<code>u</code>" 时，创建一个无序列表 (项目列表)；当该参数为 "<code>o</code>" 时，则创建一个有序列表 (编号列表)。该函数定义如下：</p>
 
-<pre class="brush:js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> <span class="function token" style="color: #dd4a68;">list<span class="punctuation token" style="color: #999999;">(</span></span>type<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
-  <span class="keyword token" style="color: #0077aa;">var</span> result <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="string token" style="color: #669900;">"&lt;"</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> type <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> <span class="string token" style="color: #669900;">"l&gt;&lt;li&gt;"</span><span class="punctuation token" style="color: #999999;">;</span>
-  <span class="keyword token" style="color: #0077aa;">var</span> args <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> Array<span class="punctuation token" style="color: #999999;">.</span>prototype<span class="punctuation token" style="color: #999999;">.</span>slice<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">call<span class="punctuation token" style="color: #999999;">(</span></span>arguments<span class="punctuation token" style="color: #999999;">,</span> <span class="number token" style="color: #990055;">1</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
-  result <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span><span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> args<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">join<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">"&lt;/li&gt;&lt;li&gt;"</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
-  result <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span><span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="string token" style="color: #669900;">"&lt;/li&gt;&lt;/"</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> type <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> <span class="string token" style="color: #669900;">"l&gt;"</span><span class="punctuation token" style="color: #999999;">;</span><span class="comment token" style="color: #708090;"> // end list
-</span>
-  <span class="keyword token" style="color: #0077aa;">return</span> result<span class="punctuation token" style="color: #999999;">;</span>
-<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+<pre class="brush:js">function list(type) {
+  var result = "&lt;" + type + "l&gt;&lt;li&gt;";
+  var args = Array.prototype.slice.call(arguments, 1);
+  result += args.join("&lt;/li&gt;&lt;li&gt;");
+  result += "&lt;/li&gt;&lt;/" + type + "l&gt;"; // end list
+
+  return result;
+}</pre>
 
 <p>你可以传递任意数量的参数到该函数，并将每个参数作为一个项添加到指定类型的列表中。例如：</p>
 
-<pre class="brush:js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> listHTML <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="function token" style="color: #dd4a68;">list<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">"u"</span><span class="punctuation token" style="color: #999999;">,</span> <span class="string token" style="color: #669900;">"One"</span><span class="punctuation token" style="color: #999999;">,</span> <span class="string token" style="color: #669900;">"Two"</span><span class="punctuation token" style="color: #999999;">,</span> <span class="string token" style="color: #669900;">"Three"</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<pre class="brush:js">var listHTML = list("u", "One", "Two", "Three");
 
-<span class="comment token" style="color: #708090;">/* listHTML is:
+/* listHTML is:
 
 "&lt;ul&gt;&lt;li&gt;One&lt;/li&gt;&lt;li&gt;Two&lt;/li&gt;&lt;li&gt;Three&lt;/li&gt;&lt;/ul&gt;"
 
-*/</span></code>
+*/
 </pre>
 
 <h3 id="剩余参数、默认参数和解构赋值参数">剩余参数、默认参数和解构赋值参数</h3>
 
 <p><code>arguments</code>对象可以与<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>、<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters">默认参数</a>和<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解构赋值</a>参数结合使用。</p>
 
-<pre class="brush: js notranslate">function foo(...args) {
+<pre class="brush: js">function foo(...args) {
   return args;
 }
 foo(1, 2, 3);  // [1,2,3]
@@ -190,8 +177,8 @@ foo(1, 2, 3);  // [1,2,3]
 
 <p>当非严格模式中的函数<strong>没有</strong>包含<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>、<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters">默认参数</a>和<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解构赋值</a>，那么<code>arguments</code>对象中的值<strong>会</strong>跟踪参数的值（反之亦然）。看下面的代码：</p>
 
-<pre class="brush: js notranslate">function func(a) {
-  arguments[0] = 99;   // 更新了arguments[0] 同样更新了a
+<pre class="brush: js">function func(a) {
+  arguments[0] = 99;   // 更新了 arguments[0] 同样更新了 a
   console.log(a);
 }
 func(10); // 99
@@ -199,16 +186,16 @@ func(10); // 99
 
 <p>并且</p>
 
-<pre class="brush: js notranslate">function func(a) {
-  a = 99;              // 更新了a 同样更新了arguments[0]
+<pre class="brush: js">function func(a) {
+  a = 99;              // 更新了 a 同样更新了 arguments[0]
   console.log(arguments[0]);
 }
 func(10); // 99
 </pre>
 
-<p>当非严格模式中的函数<strong>有</strong>包含<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>、<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters">默认参数</a>和<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解构赋值</a>，那么<code>arguments</code>对象中的值<strong>不会</strong>跟踪参数的值（反之亦然）。相反, <code>arguments</code>反映了调用时提供的参数：</p>
+<p>当非严格模式中的函数<strong>有</strong>包含<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>、<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters">默认参数</a>和<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解构赋值</a>，那么<code>arguments</code>对象中的值<strong>不会</strong>跟踪参数的值（反之亦然）。相反，<code>arguments</code>反映了调用时提供的参数：</p>
 
-<pre class="brush: js notranslate">function func(a = 55) {
+<pre class="brush: js">function func(a = 55) {
   arguments[0] = 99; // updating arguments[0] does not also update a
   console.log(a);
 }
@@ -216,7 +203,7 @@ func(10); // 10</pre>
 
 <p>并且</p>
 
-<pre class="brush: js notranslate">function func(a = 55) {
+<pre class="brush: js">function func(a = 55) {
   a = 99; // updating a does not also update arguments[0]
   console.log(arguments[0]);
 }
@@ -224,7 +211,7 @@ func(10); // 10</pre>
 
 <p>并且</p>
 
-<pre class="brush: js notranslate">function func(a = 55) {
+<pre class="brush: js">function func(a = 55) {
   console.log(arguments[0]);
 }
 func(); // undefined
@@ -264,9 +251,9 @@ func(); // undefined
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<p>{{Compat("javascript.functions.arguments")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Function")}}</li>

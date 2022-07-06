@@ -1,0 +1,79 @@
+---
+title: Response.blob()
+slug: Web/API/Response/blob
+translation_of: Web/API/Response/blob
+tags:
+  - API
+  - Blob
+  - Fetch
+  - Method
+  - Reference
+  - Response
+browser-compat: api.Response.blob
+---
+<p>{{APIRef("Fetch")}}</p>
+
+<p>{{domxref("Response")}}  mixin 的 <strong><code>blob()</code></strong>方法使用一个 {{domxref("Response")}} 流，并将其读取完成。它返回一个使用{{domxref("Blob")}}解决的 promise。</p>
+
+<h2 id="句法">句法</h2>
+
+<pre class="brush: js">response.blob().then(function(myBlob) {
+  // do something with myBlob
+});</pre>
+
+<h3 id="参数">参数</h3>
+
+<p>None.</p>
+
+<h3 id="返回值">返回值</h3>
+
+<p>A promise that resolves with a {{domxref("Blob")}}.</p>
+
+<h2 id="例子">例子</h2>
+
+<p>在我们 <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request">fetch request example</a> (run <a href="http://mdn.github.io/fetch-examples/fetch-request/">fetch request live</a>) 中，我们使用<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter">Request.Request</a>构造方法创建了一个新的 request 对象，然后使用它来获取一个 JPG 文件。当 fetch 成功的时候，我们使用 blob() 从 response 中读取一个<a href="/zh-CN/docs/Web/API/Blob">Blob</a>对象，并使用<a href="/zh-CN/docs/Web/API/URL/createObjectURL">URL.createObjectURL</a> 将它放入一个 object URL ，然后把 URL 设置为<a href="/zh-CN/docs/Web/HTML/Element/img">img</a>元素的 src 属性以显示这张图片。</p>
+
+<p> </p>
+
+<pre class="brush: js">var myImage = document.querySelector('img');
+
+var myRequest = new Request('flowers.jpg');
+
+fetch(myRequest)
+.then(function(response) {
+  return response.blob();
+})
+.then(function(myBlob) {
+  var objectURL = URL.createObjectURL(myBlob);
+  myImage.src = objectURL;
+});
+</pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">说明</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Fetch','#dom-body-blob','blob()')}}</td>
+   <td>{{Spec2('Fetch')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+{{Compat("api.Response.blob")}}
+
+<h2 id="另见">另见</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+ <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
+ <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+</ul>

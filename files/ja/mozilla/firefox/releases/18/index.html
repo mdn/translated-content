@@ -6,8 +6,6 @@ tags:
   - Firefox 18
 translation_of: Mozilla/Firefox/Releases/18
 ---
-<p>{{ draft() }}</p>
-
 <p>Gecko 18 を搭載した Firefox 18 は米国時間 2013 年 1 月 8 日にリリースされました。このページでは、開発者に影響する Firefox 18 の変更点をまとめています。</p>
 
 <h2 id="Web開発者向けの変更点一覧">Web開発者向けの変更点一覧</h2>
@@ -70,13 +68,13 @@ translation_of: Mozilla/Firefox/Releases/18
 <h3 id="インターフェース">インターフェース</h3>
 
 <dl>
- <dt>{{ interface("nsIStreamListener") }}</dt>
+ <dt><code>nsIStreamListener</code></dt>
  <dd><code>onDataAvailable()の</code>4番目の引数 (aOffset) が unsigned long long 型に変更されました。 ({{bug("784912")}})</dd>
- <dt>{{ interface("nsIUploadChannel") }}</dt>
+ <dt><code>nsIUploadChannel</code></dt>
  <dd><code>setUploadStream()</code> が 2GB を超える content-length をサポートしました。({{bug("790617")}})</dd>
- <dt>{{ interface("nsIEditor") }}</dt>
- <dd><code>addEditorObserver()</code> が削除されました。代わりに <code>setEditorObserver()</code> を使ってください。<code>removeEditorObserver()</code> は {{ interface("nsIEditorObserver") }} パラメータを受け取らなくなります。({{bug("785091")}})</dd>
- <dt>{{ interface("nsIHttpProtocolHandler") }}</dt>
+ <dt><code>nsIEditor</code></dt>
+ <dd><code>addEditorObserver()</code> が削除されました。代わりに <code>setEditorObserver()</code> を使ってください。<code>removeEditorObserver()</code> は <code>nsIEditorObserver</code> パラメータを受け取らなくなります。({{bug("785091")}})</dd>
+ <dt><code>nsIHttpProtocolHandler</code></dt>
  <dd><code>http-on-modify-request</code> オブザーバが <code>nsIChannel.asyncOpen() </code>中に同期的に呼ばれる保証はなくなります。<code>asyncOpen()</code> 中に呼び出される必要のあるオブザーバには新しく <code>http-on-opening-request</code> オブザーバトピックが追加されています<code>。詳細は</code>({{bug("800799")}})をご覧ください。</dd>
 </dl>
 
@@ -87,7 +85,7 @@ translation_of: Mozilla/Firefox/Releases/18
 <p>以下のインターフェースが削除されました:</p>
 
 <ul>
- <li>{{ interface("nsIEditorObserver") }}</li>
+ <li><code>nsIEditorObserver</code></li>
 </ul>
 
 <h2 id="関連記事">関連記事</h2>
@@ -95,7 +93,6 @@ translation_of: Mozilla/Firefox/Releases/18
 <ul>
  <li><a href="http://www.mozilla.jp/firefox/18.0/releasenotes/">Firefox 18 リリースノート</a></li>
  <li><a href="https://hacks.mozilla.org/2012/10/aurora-18-hidpi-touch-events/">Aurora 18: HiDPI &amp; Touch Events</a> (Mozilla Hacks)</li>
- <li><a href="https://www.fxsitecompat.com/ja/versions/18/">Firefox 18 サイト互換性情報</a></li>
  <li><a href="https://dev.mozilla.jp/2012/12/firefox-18-addon-compatibility/">Firefox 18 のアドオン互換性に関わる修正のまとめ</a></li>
 </ul>
 

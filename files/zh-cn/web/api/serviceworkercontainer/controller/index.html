@@ -5,7 +5,7 @@ translation_of: Web/API/ServiceWorkerContainer/controller
 ---
 <div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
 
-<p><span class="seoSummary">当状态为<code>activated</code> 时， {{domxref("ServiceWorkerContainer")}} 接口的只读属性 <strong><code>controller</code></strong> 返回一个 {{domxref("ServiceWorker")}} 对象（与 {{domxref("ServiceWorkerRegistration.active")}} 返回的对象是同一个）。当页面强制刷新 (<em>Shift</em> + refresh) 或不存在active worder时，该属性返回 <code>null</code> 。</span></p>
+<p>当状态为<code>activated</code> 时， {{domxref("ServiceWorkerContainer")}} 接口的只读属性 <strong><code>controller</code></strong> 返回一个 {{domxref("ServiceWorker")}} 对象（与 {{domxref("ServiceWorkerRegistration.active")}} 返回的对象是同一个）。当页面强制刷新 (<em>Shift</em> + refresh) 或不存在 active worder 时，该属性返回 <code>null</code> 。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -14,7 +14,7 @@ translation_of: Web/API/ServiceWorkerContainer/controller
 
 <h3 id="值">值</h3>
 
-<p>一个{{domxref("ServiceWorker")}}对象.</p>
+<p>一个{{domxref("ServiceWorker")}}对象。</p>
 
 <h2 id="示例">示例</h2>
 

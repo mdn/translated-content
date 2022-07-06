@@ -12,7 +12,7 @@ translation_of: Web/HTML/Element/input/hidden
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><code><strong>"hidden"</strong></code> 类型的 <code>{{HTMLElement("input")}}</code> 元素允许 Web 开发者存放一些用户不可见、不可改的数据，在用户提交表单时，这些数据会一并发送出。比如，正被请求或编辑的内容的 ID，或是一个唯一的安全令牌。这些隐藏的 </span><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input">&lt;input&gt;</a></code><span class="seoSummary">元素在渲染完成的页面中完全不可见，而且没有方法可以使它重新变为可见。</span></p>
+<p><code><strong>"hidden"</strong></code> 类型的 <code>{{HTMLElement("input")}}</code> 元素允许 Web 开发者存放一些用户不可见、不可改的数据，在用户提交表单时，这些数据会一并发送出。比如，正被请求或编辑的内容的 ID，或是一个唯一的安全令牌。这些隐藏的 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input">&lt;input&gt;</a></code>元素在渲染完成的页面中完全不可见，而且没有方法可以使它重新变为可见。</p>
 
 <div class="note">
 <p><strong>注意：</strong>本警告框下面的代码下，就有一个 <code>&lt;input type="hidden"&gt;</code> 的 live example 可交互示例——如果它正常运作的话，你应当什么也看不到！</p>
@@ -27,7 +27,7 @@ translation_of: Web/HTML/Element/input/hidden
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("值")}}</strong></td>
+   <td><strong><a href="#属性值">属性值</a></strong></td>
    <td><code>{{domxref("DOMString")}}</code>代表您要传递回服务器的隐藏数据的值</td>
   </tr>
   <tr>
@@ -50,7 +50,7 @@ translation_of: Web/HTML/Element/input/hidden
 </table>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong><code>{{HTMLElement("input")}}</code>和<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/change">change</a></code>事件不适用于此输入类型。隐藏的输入无法获得焦点, 即使使用JavaScript 例如(e.g. <code>hiddenInput.focus()</code>)</p>
+<p><strong>注意：</strong><code>{{HTMLElement("input")}}</code>和<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/change">change</a></code>事件不适用于此输入类型。隐藏的输入无法获得焦点， 即使使用 JavaScript 例如 (e.g. <code>hiddenInput.focus()</code>)</p>
 </div>
 
 <h2 id="属性值">属性值</h2>
@@ -58,7 +58,7 @@ translation_of: Web/HTML/Element/input/hidden
 <p><code>{{HTMLElement("input")}}</code>元素的<code>{{htmlattrxref("value", "input")}}</code>属性有<code>{{domxref("DOMString")}}</code>，其中包含您想提交到服务器的隐藏数据尽管您可以通过浏览器开发人员工具编辑该值，但明确的是，用户不能通过用户界面对其编辑或看到。</p>
 
 <div class="warning">
-<p><strong>重要提示：</strong>尽管该值未在页面内容中显示给用户，但可以使用任何浏览器的开发人员工具或“查看源代码”功能来查看并进行编辑。 请不要依赖 <code>hidden</code> 输入作为安全表单。</p>
+<p><strong>重要提示：</strong>尽管该值未在页面内容中显示给用户，但可以使用任何浏览器的开发人员工具或 “查看源代码” 功能来查看并进行编辑。 请不要依赖 <code>hidden</code> 输入作为安全表单。</p>
 </div>
 
 <h2 id="额外属性">额外属性</h2>
@@ -74,7 +74,7 @@ translation_of: Web/HTML/Element/input/hidden
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("name")}}</code></td>
+   <td><code><a href="#attr-name">name</a></code></td>
    <td>与所有输入类型一样，这可以是提交表单时反馈给服务器的 <code>{{HTMLElement("input")}}</code> 的名称；使用特殊属性值 <code>_charset_</code> 则会使当前隐藏 <code>{{HTMLElement("input")}}</code> 的值被反馈为表单内容的字符编码</td>
   </tr>
  </tbody>
@@ -95,19 +95,19 @@ translation_of: Web/HTML/Element/input/hidden
 
 <ol>
  <li>用户决定编辑他们可以控制的某些内容，例如博客文章或产品条目。 他们可以通过按编辑按钮开始。</li>
- <li>要被编辑的内容从数据库中提取并加载到HTML表单中，以允许用户进行更改。</li>
+ <li>要被编辑的内容从数据库中提取并加载到 HTML 表单中，以允许用户进行更改。</li>
  <li>编辑后，用户提交表单，并将更新后的被数据发送回服务器以在数据库中进行更新。</li>
 </ol>
 
-<p>在这里的步骤2思路中，要被更新的ID记录保留在隐藏的输入中。 在步骤3中提交表单后，该ID随记录内容自动发送回服务器。 该ID使站点的服务器端组件确切知道哪些记录需要被提交的数据更新的。</p>
+<p>在这里的步骤 2 思路中，要被更新的 ID 记录保留在隐藏的输入中。 在步骤 3 中提交表单后，该 ID 随记录内容自动发送回服务器。 该 ID 使站点的服务器端组件确切知道哪些记录需要被提交的数据更新的。</p>
 
-<p>您可以在下面的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input/hidden#例子">{{anch("例子")}}</a> 部分中看到完整的<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input/hidden#例子">示例</a>。</p>
+<p>您可以在下面的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input/hidden#例子"><a href="#例子">例子</a></a> 部分中看到完整的<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input/hidden#例子">示例</a>。</p>
 
 <h3 id="改善网站安全性">改善网站安全性</h3>
 
 <p>隐藏输入表单还用于存储和提交安全令牌或机密信息，以提高网站的安全性。基本思路是，如果用户填写敏感表格，例如在其银行网站上将某笔款项转入另一个帐户的表格，他们将被提供的密钥和证明他们就是他们所说的真实身份，并且他们使用正确的表单来提交转移请求。</p>
 
-<p>这将阻止恶意用户创建伪造的表单，伪装成银行，然后通过电子邮件将表单发送给毫无戒备心的用户，以诱骗他们将钱转入错误的位置。 这种攻击称为<a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security#Cross-Site_Request_Forgery_(CSRF)">跨站点请求伪造（CSRF）</a>；几乎任何信誉良好的服务器端框架都使用隐藏机密来防止此类攻击。</p>
+<p>这将阻止恶意用户创建伪造的表单，伪装成银行，然后通过电子邮件将表单发送给毫无戒备心的用户，以诱骗他们将钱转入错误的位置。 这种攻击称为<a href="/zh-CN/docs/Learn/Server-side/First_steps/Website_security#Cross-Site_Request_Forgery_(CSRF)">跨站点请求伪造（CSRF）</a>；几乎任何信誉良好的服务器端框架都使用隐藏机密来防止此类攻击。</p>
 
 <div class="note">
 <p>如前所述，将密钥放置在隐藏的输入中并不能使其固有安全性。 密钥的组成和编码已经可以做到这一点。隐藏输入的值是保持它与数据关联性，并在将表单发送到服务器时自动将其包含在内。 您需要使用精心设计的密钥来真正保护您的网站。</p>
@@ -119,9 +119,9 @@ translation_of: Web/HTML/Element/input/hidden
 
 <h2 id="例子">例子</h2>
 
-<p>让我们看一下如何使用隐藏输入保存正在被编辑的记录的ID，实现我们先前描述的编辑表单的简单版本（请参阅 <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/hidden#Tracking_edited_content">{{anch("Tracking edited content")}}</a></code>）。</p>
+<p>让我们看一下如何使用隐藏输入保存正在被编辑的记录的 ID，实现我们先前描述的编辑表单的简单版本（请参阅 <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/hidden#Tracking_edited_content"><a href="#跟踪被编辑的内容">跟踪被编辑的内容</a></a></code>）。</p>
 
-<p>编辑表单的HTML可能看起来像这样：</p>
+<p>编辑表单的 HTML 可能看起来像这样：</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
@@ -140,7 +140,7 @@ This is the content of my excellent blog post. I hope you enjoy it!
   &lt;input type="hidden" id="postId" name="postId" value="34657"&gt;
 &lt;/form&gt;</pre>
 
-<p>我们还添加一些简单的CSS：</p>
+<p>我们还添加一些简单的 CSS：</p>
 
 <pre class="brush: css">html {
   font-family: sans-serif;
@@ -173,14 +173,14 @@ textarea {
   height: 60px;
 }</pre>
 
-<p>在将表单发送给用户的浏览器之前，服务器会将ID <code>"postID"</code>的隐藏输入的值设置为其数据库中发送的ID，并在返回表单时使用该信息来知道要向哪个数据库记录更新改变后的信息。 内容中无需脚本即可处理。</p>
+<p>在将表单发送给用户的浏览器之前，服务器会将 ID <code>"postID"</code>的隐藏输入的值设置为其数据库中发送的 ID，并在返回表单时使用该信息来知道要向哪个数据库记录更新改变后的信息。 内容中无需脚本即可处理。</p>
 
 <p>输出看起来像这样：</p>
 
 <p>{{ EmbedLiveSample('Examples', '100%', 200) }}</p>
 
 <div class="note">
-<p>注意：您还可以在GitHub上找到示例（请参见<a href="https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html">源代码</a>，并可以<a href="https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html">实时运行</a>）。</p>
+<p>注意：您还可以在 GitHub 上找到示例（请参见<a href="https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html">源代码</a>，并可以<a href="https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html">实时运行</a>）。</p>
 </div>
 
 <p>提交后，发送到服务器的表单数据将如下所示：</p>

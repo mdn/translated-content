@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 <h2 id="Description" name="Description">解説</h2>
 
-<p>あるパターンがある文字列内で見つかるかどうか調べたいときは、 <code>test()</code> を使用してください。 <code>test()</code> は論理値を返します。これは (一致した場所のインデックス番号、または見つからない場合は <code>-1</code> を返す) {{jsxref("String.prototype.search()")}} メソッドがとは異なります。</p>
+<p>あるパターンがある文字列内で見つかるかどうか調べたいときは、 <code>test()</code> を使用してください。 <code>test()</code> は論理値を返します。これは (一致した場所のインデックス番号、または見つからない場合は <code>-1</code> を返す) {{jsxref("String.prototype.search()")}} メソッドとは異なります。</p>
 
 <p>より多くの情報を得るためには (実行が遅くなりますが)、 {{jsxref("RegExp.prototype.exec()", "exec()")}} メソッドを使用してください ({{jsxref("String.prototype.match()")}} メソッドと同様)。</p>
 
@@ -70,7 +70,7 @@ console.log(result); // true
 
 <h3 id="Using_test_on_a_regex_with_the_global_flag" name="Using_test_on_a_regex_with_the_global_flag">グローバルフラグを持つ正規表現の test() の使用</h3>
 
-<p>正規表現に<a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2">グローバルフラグ</a>が設定されている場合、 <code>test()</code> は正規表現が所有する {{jsxref("RegExp.lastIndex", "lastIndex")}} の値を加算します。 ({{jsxref("RegExp.prototype.exec()", "exec()")}} も同様に <code>lastIndex</code> プロパティの値を加算します。)</p>
+<p>正規表現に<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2">グローバルフラグ</a>が設定されている場合、 <code>test()</code> は正規表現が所有する {{jsxref("RegExp.lastIndex", "lastIndex")}} の値を加算します。 ({{jsxref("RegExp.prototype.exec()", "exec()")}} も同様に <code>lastIndex</code> プロパティの値を加算します。)</p>
 
 <p>その後にさらに <code>test(<var>str</var>)</code> を呼び出すと、 <code><var>str</var></code> を <code>lastIndex</code> から検索します。 <code>lastIndex</code> プロパティは <code>test()</code> が <code>true</code> を返すたびに増え続けます。</p>
 
@@ -116,8 +116,6 @@ regex.test('foobar')  //false
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("javascript.builtins.RegExp.test")}}</p>
 

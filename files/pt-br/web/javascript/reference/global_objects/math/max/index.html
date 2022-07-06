@@ -52,7 +52,7 @@ Math.max(-10, 20);  //  20
 <pre class="brush: js">var arr = [1, 2, 3];
 var max = arr.reduce(function(a, b) {
   return Math.max(a, b);
-});</pre>
+}, -Infinity);</pre>
 
 <p>A função a seguir utiliza {{jsxref("Function.prototype.apply()")}} para encontrar o elemento de maior valor dentro do array. <code>getMaxOfArray([1,2,3])</code> é equivalente a <code>Math.max(1, 2, 3)</code>, mas você pode usar <code>getMaxOfArray</code>  em arrays construídos programaticamente e o ideal é utilizá-la somente em arrays com relativamente poucos elementos.</p>
 
@@ -95,7 +95,7 @@ var max = Math.max(...arr);
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_de_Navegadores">Compatibilidade de Navegadores</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>{{ CompatibilityTable() }}</p>
 

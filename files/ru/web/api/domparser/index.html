@@ -10,7 +10,7 @@ translation_of: Web/API/DOMParser
 ---
 <p>{{APIRef("DOM")}}{{SeeCompatTable}}</p>
 
-<p><code>DOMParser</code> может парсить XML или HTML источник содержащийся в строке в DOM <a href="/en-US/docs/DOM/document" title="document">Document</a>. Спецификация <code>DOMParser находится в</code> <a href="https://w3c.github.io/DOM-Parsing/" title="http://html5.org/specs/dom-parsing.html">DOM Parsing and Serialization</a>.</p>
+<p><code>DOMParser</code> может парсить XML или HTML источник содержащийся в строке в DOM <a href="/en-US/docs/DOM/document" title="document">Document</a>. Спецификация <code>DOMParser находится в</code> <a href="https://w3c.github.io/DOM-Parsing/">DOM Parsing and Serialization</a>.</p>
 
 <p>Заметьте, что <a href="/en-US/docs/DOM/XMLHttpRequest" title="DOM/XMLHttpRequest">XMLHttpRequest</a> поддерживает парсинг XML и HTML из интернет ресурсов (по ссылке)</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/API/DOMParser
 var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 </pre>
 
-<h3 id="Error_handling" name="Error_handling">Обработка ошибок</h3>
+<h3 id="Error_handling">Обработка ошибок</h3>
 
 <p>Заметьте, если процесс парсинга не удастся , <code>DOMParser</code> теперь не выдаёт исключение, но вместо этого выдаёт документ ошибки (see {{Bug(45566)}}):</p>
 
@@ -113,28 +113,13 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#the-domparser-interface', 'DOMParser')}}</td>
-   <td>{{Spec2('DOM Parsing')}}</td>
-   <td>Первоначальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Поддержка браузерами</h2>
+<h2 id="Browser_compatibility">Поддержка браузерами</h2>
 
-<p>{{Compat("api.DOMParser", 3)}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/Parsing_and_serializing_XML" title="Parsing_and_serializing_XML">Анализ и сериализация XML</a></li>

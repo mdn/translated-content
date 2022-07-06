@@ -1,5 +1,5 @@
 ---
-title: 자신만의 함수 만들기
+title: 함수 만들기
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
@@ -13,7 +13,7 @@ translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
  <tbody>
   <tr>
    <th scope="row">필요한 사전 지식:</th>
-   <td>기본적인 컴퓨터 사용 능력, HTML과 CSS에 대한 기본적인 이해, <a href="/ko/docs/Learn/JavaScript/First_steps">JavaScript 첫걸음</a>, <a href="/ko/docs/Learn/JavaScript/Building_blocks/Functions">함수 — 재사용 가능한 코드 블록</a>.</td>
+   <td>기본적인 컴퓨터 사용 능력, HTML과 CSS에 대한 기본적인 이해, <a href="/ko/docs/Learn/JavaScript/First_steps">JavaScript 첫걸음</a>, <a href="/ko/docs/Learn/JavaScript/Building_blocks/Functions">함수 — 코드 재사용</a>.</td>
   </tr>
   <tr>
    <th scope="row">목표:</th>
@@ -22,7 +22,7 @@ translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
  </tbody>
 </table>
 
-<h2 id="Active_learning_Lets_build_a_function">Active learning: 함수를 만들어 봅시다</h2>
+<h2 id="Active_learning_Lets_build_a_function">직접 해보기: 함수를 만들어 봅시다</h2>
 
 <p>우리가 만들 사용자 정의 함수는 <code>displayMessage()</code>라는 이름입니다. 이 함수는 웹 페이지에 사용자 정의 메시지 박스를 표시하고 브라우저의 내장 <a href="/ko/docs/Web/API/Window/alert">alert()</a> 함수를 대체하는 역할을 할 것입니다. 우리는 이것을 전에 보긴 했지만, 기억을 되살려 봅시다. 원하는 어떤 페이지에서든지, 다음을 브라우저의 JavaScript 콘솔에 입력해 보세요:</p>
 
@@ -33,7 +33,7 @@ translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 <p><code>alert</code> 함수는 제한적입니다: 메시지를 바꿀 수는 있지만, 색상, 아이콘 등 그 밖에 다른 것에는 쉽게 변화를 줄 수 없습니다. 우리는 더 재미있는 것을 만들 것입니다.</p>
 
 <div class="note">
-<p><strong>Note</strong>: 이 예제는 모든 현대적인 브라우저에서 잘 동작할 것이지만, 약간 오래된 브라우저에서는 스타일이 조금 이상하게 적용될지도 모릅니다. Firefox, Opera, 또는 Chrome같은 브라우저에서 이 연습을 진행하기를 추천합니다.</p>
+<p><strong>참고</strong>: 이 예제는 모든 현대적인 브라우저에서 잘 동작할 것이지만, 약간 오래된 브라우저에서는 스타일이 조금 이상하게 적용될지도 모릅니다. Firefox, Opera, 또는 Chrome같은 브라우저에서 이 연습을 진행하기를 추천합니다.</p>
 </div>
 
 <h2 id="The_basic_function">기본적인 함수</h2>
@@ -41,7 +41,7 @@ translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 <p>기본적인 함수를 만들면서 시작해 봅시다.</p>
 
 <div class="note">
-<p><strong>Note</strong>: 함수에 이름을 붙일 때 <a href="/ko/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules">변수 명명 규칙</a>과 같은 규칙을 따라야 합니다. 함수와 변수를 떼어놓고 이야기할 수 있으므로, 이렇게 하는 것은 괜찮습니다 — 함수명은 뒤에 괄호가 나타나지만 변수는 그렇지 않습니다.</p>
+<p><strong>참고</strong>: 함수에 이름을 붙일 때 <a href="/ko/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules">변수 명명 규칙</a>과 같은 규칙을 따라야 합니다. 함수와 변수를 떼어놓고 이야기할 수 있으므로, 이렇게 하는 것은 괜찮습니다 — 함수명은 뒤에 괄호가 나타나지만 변수는 그렇지 않습니다.</p>
 </div>
 
 <ol>
@@ -186,7 +186,7 @@ panel.appendChild(closeBtn);</pre>
 <ol>
  <li>우선, 이 예제를 위해 필요한 아이콘들을 GitHub에서 다운로드하세요 (<a href="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png">경고</a> 그리고 <a href="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png">채팅</a>). 이것들을 HTML파일과 같은 위치에 있는 <code>icons</code> 라는 새로운 폴더에 저장하세요.
 
-  <div class="note"><strong>Note</strong>: 경고와 채팅 아이콘은 원래 <a href="https://www.iconfinder.com/">iconfinder.com</a>에서 찾아졌고, <a href="https://www.iconfinder.com/nazarr">Nazarrudin Ansyari</a>가 디자인했습니다 — 감사합니다! (실제 아이콘 페이지는 이전에 이동되거나 삭제되었습니다.)</div>
+  <div class="note"><strong>참고</strong>: 경고와 채팅 아이콘은 원래 <a href="https://www.iconfinder.com/">iconfinder.com</a>에서 찾아졌고, <a href="https://www.iconfinder.com/nazarr">Nazarrudin Ansyari</a>가 디자인했습니다 — 감사합니다! (실제 아이콘 페이지는 이전에 이동되거나 삭제되었습니다.)</div>
  </li>
  <li>다음으로, HTML 파일 내부에서 CSS를 찾으세요. 우리는 아이콘이 들어갈 자리를 만들기 위해 약간의 변경을 가할 것입니다. 우선, <code>.msgBox</code> 폭을
   <pre class="brush: css notranslate">width: 200px;</pre>
@@ -222,7 +222,7 @@ displayMessage('Brian: Hi there, how are you today?','chat');</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: 만약 이 예제를 작업하는 데 어려움이 있다면, 자유롭게 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html">GitHub에 있는 완성된 버전</a>과 비교해 보거나 (<a href="https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html">실제로 작동하는 모습</a>도 보세요), 우리에게 도움을 요청해 보세요.</p>
+<p><strong>참고</strong>: 만약 이 예제를 작업하는 데 어려움이 있다면, 자유롭게 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html">GitHub에 있는 완성된 버전</a>과 비교해 보거나 (<a href="https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html">실제로 작동하는 모습</a>도 보세요), 우리에게 도움을 요청해 보세요.</p>
 </div>
 
 <h2 id="Test_your_skills!">실력을 평가해 보세요!</h2>
@@ -238,13 +238,13 @@ displayMessage('Brian: Hi there, how are you today?','chat');</pre>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}</p>
 
-<h2 id="In_this_module">이 모듈에서는</h2>
+<h2 id="In_this_module">이 과정에서는</h2>
 
 <ul>
- <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/conditionals">판단을 만드세요 — 조건문</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/conditionals">판단 내리기 — 조건문</a></li>
  <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Looping_code">반복문</a></li>
- <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Functions">함수 — 재사용 가능한 코드 블록</a></li>
- <li><strong>자신만의 함수 만들기</strong></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Functions">함수 — 코드 재사용</a></li>
+ <li><strong>함수 만들기</strong></li>
  <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Return_values">함수 반환 값</a></li>
  <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Events">이벤트 입문</a></li>
  <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Image_gallery">이미지 갤러리</a></li>

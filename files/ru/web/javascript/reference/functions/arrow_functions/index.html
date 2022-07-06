@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 
 <p><strong>Выражения стрелочных функций</strong> имеют более короткий синтаксис по сравнению с <a href="/ru/docs/Web/JavaScript/Reference/Operators/function">функциональными выражениями</a> и лексически привязаны к значению <a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a> (но не привязаны к собственному <a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a>, <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>, <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/super">super</a>, или <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>). Выражение стрелочных функций не позволяют задавать имя, поэтому стрелочные функции <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/name">анонимны</a>, если их ни к чему не присвоить.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <h3 id="Базовый_синтаксис">Базовый синтаксис</h3>
 
@@ -36,7 +36,7 @@ singleParam =&gt; { statements }
 <pre class="brush: js">// Когда возвращаете литеральное выражение объекта, заключите тело в скобки
 params =&gt; ({foo: bar})
 
-// <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">Rest параметры</a> и <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметры по умолчанию</a> поддерживаются
+// <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">Остаточные параметры</a> и <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметры по умолчанию</a> поддерживаются
 (param1, param2, ...rest) =&gt; { statements }
 (param1 = defaultValue1, param2, …, paramN = defaultValueN) =&gt; { statements }
 
@@ -45,7 +45,7 @@ var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) =&gt; a + b + c;
 f();  // 6
 </pre>
 
-<p>Подробные примеры синтаксиса можно посмотреть <a href="http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax" title="http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax">здесь</a>.</p>
+<p>Подробные примеры синтаксиса можно посмотреть <a href="http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax">здесь</a>.</p>
 
 <h2 id="Описание">Описание</h2>
 
@@ -188,7 +188,7 @@ function foo() {
 
 foo(1); // 3</pre>
 
-<p>В большинстве случаев лучшей заменой объекта arguments в стрелочных функциях являются <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest параметры</a>:</p>
+<p>В большинстве случаев лучшей заменой объекта arguments в стрелочных функциях являются <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">остаточные параметры</a>:</p>
 
 <pre class="brush: js">function foo() {
   var f = (...args) =&gt; args[0];
@@ -342,26 +342,13 @@ setTimeout( () =&gt; {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 
 
-<p>{{Compat("javascript.functions.arrow_functions")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Замечания_для_Firefox">Замечания для Firefox</h3>
 

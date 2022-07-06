@@ -24,7 +24,7 @@ translation_of: Web/API/AudioContext
 
 <h2 id="属性">属性</h2>
 
-<p><em>也从其父接口继承属性, {{domxref("BaseAudioContext")}}.</em></p>
+<p><em>也从其父接口继承属性，{{domxref("BaseAudioContext")}}.</em></p>
 
 <dl>
  <dt>{{domxref("AudioContext.baseLatency")}} {{readonlyinline}} {{experimental_inline}}</dt>
@@ -39,7 +39,7 @@ translation_of: Web/API/AudioContext
 
 <dl>
  <dt>{{domxref("AudioContext.close()")}}</dt>
- <dd>关闭一个音频环境, 释放任何正在使用系统资源的音频。</dd>
+ <dd>关闭一个音频环境，释放任何正在使用系统资源的音频。</dd>
  <dt>{{domxref("AudioContext.createMediaElementSource()")}}</dt>
  <dd>创建一个{{domxref("MediaElementAudioSourceNode")}}接口来关联{{domxref("HTMLMediaElement")}}. 这可以用来播放和处理来自{{HTMLElement("video")}}或{{HTMLElement("audio")}} 元素的音频。</dd>
  <dt>{{domxref("AudioContext.createMediaStreamSource()")}}</dt>
@@ -49,11 +49,11 @@ translation_of: Web/API/AudioContext
  <dt>{{domxref("AudioContext.createMediaStreamTrackSource()")}}</dt>
  <dd>创建一个{{domxref("MediaStreamTrackAudioSourceNode")}}，它与一个{{domxref("MediaStream")}}相关联，表示一个媒体流轨迹。</dd>
  <dt>{{domxref("AudioContext.getOutputTimestamp()")}}</dt>
- <dd>返回一个新的AudioTimestamp对象，该对象包含两个与当前音频上下文相关的音频时间戳。</dd>
+ <dd>返回一个新的 AudioTimestamp 对象，该对象包含两个与当前音频上下文相关的音频时间戳。</dd>
  <dt>{{domxref("AudioContext.resume()")}}</dt>
  <dd>恢复之前被暂停的音频上下文中的时间进程。</dd>
  <dt>{{domxref("AudioContext.suspend()")}}</dt>
- <dd>暂停音频上下文中的时间进程，暂停音频硬件访问并减少进程中的CPU/电池使用。</dd>
+ <dd>暂停音频上下文中的时间进程，暂停音频硬件访问并减少进程中的 CPU/电池使用。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
@@ -74,30 +74,17 @@ var finish = audioCtx.destination;
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#AudioContext-section', 'AudioContext')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("api.AudioContext")}}</p>
 
-<div></div>
+
 
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>使用 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Web Audio API</a></li>
+ <li>使用 <a href="/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API">Web Audio API</a></li>
  <li>{{domxref("OfflineAudioContext")}}</li>
 </ul>

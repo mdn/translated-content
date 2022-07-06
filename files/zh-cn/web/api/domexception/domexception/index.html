@@ -20,14 +20,14 @@ var domException = new DOMException(message, name);</pre>
 
 <dl>
  <dt><code>message</code> {{optional_inline}}</dt>
- <dd>对异常的描述.如果不存在, 使用空字符串 <code>''</code> .</dd>
+ <dd>对异常的描述。如果不存在，使用空字符串 <code>''</code> .</dd>
  <dt><code>name</code> {{optional_inline}}</dt>
- <dd>返回一个 {{domxref("DOMString")}} 包含与 <a href="Web/API/DOMException#Error_constants">error constant</a> 错误相关的字符串常数之一.</dd>
+ <dd>返回一个 {{domxref("DOMString")}} 包含与 <a href="Web/API/DOMException#Error_constants">error constant</a> 错误相关的字符串常数之一。</dd>
  <dt>
  <h3 id="返回值">返回值</h3>
  </dt>
  <dt><strong>{{domxref("DOMException")}}</strong></dt>
- <dd>一个新创建的 {{domxref("DOMException")}} 对象.</dd>
+ <dd>一个新创建的 {{domxref("DOMException")}} 对象。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
@@ -36,71 +36,8 @@ var domException = new DOMException(message, name);</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebIDL', '#es-DOMException-call', 'constructor')}}</td>
-   <td>{{Spec2('WebIDL')}}</td>
-   <td>Adds the constructor for the <code>DOMException</code> class.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome(46.0) }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatChrome(46.0) }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.DOMException.DOMException")}}

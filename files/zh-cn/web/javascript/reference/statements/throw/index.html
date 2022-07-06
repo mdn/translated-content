@@ -12,10 +12,6 @@ translation_of: Web/JavaScript/Reference/Statements/throw
 
 <p>{{EmbedInteractiveExample("pages/js/statement-throw.html")}}</p>
 
-<div class="hidden">
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
-</div>
-
 <h2 id="语法">语法</h2>
 
 <pre class="syntaxbox">throw <em>expression</em>; </pre>
@@ -30,8 +26,8 @@ translation_of: Web/JavaScript/Reference/Statements/throw
 <p>使用<code>throw</code>语句来抛出一个异常。当你抛出异常时，<code>expression</code> 指定了异常的内容。下面的每行都抛出了一个异常：</p>
 
 <pre class="brush: js">throw "Error2"; // 抛出了一个值为字符串的异常
-throw 42;       // 抛出了一个值为整数42的异常
-throw true;     // 抛出了一个值为true的异常</pre>
+throw 42;       // 抛出了一个值为整数 42 的异常
+throw true;     // 抛出了一个值为 true 的异常</pre>
 
 <p>注意<code>throw</code>语句同样受到<a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">自动分号插入（ASI</a>）机制的控制，在<code>throw</code>关键字和值之间不允许有行终止符。</p>
 
@@ -71,9 +67,9 @@ try {
 <p>下面的示例中测试一个字符串是否是美国邮政编码。如果邮政编码是无效的，那么<code>throw</code>语句将会抛出一个类型为 <code>ZipCodeFormatException</code>的异常对象实例。</p>
 
 <pre class="brush: js">/*
- * 创建 ZipCode 示例.
+ * 创建 ZipCode 示例。
  *
- * 可被接受的邮政编码格式:
+ * 可被接受的邮政编码格式：
  *    12345
  *    12345-6789
  *    123456789
@@ -136,7 +132,7 @@ e = verifyZipCode("95060 1234");  // 返回 95060 1234
 
 <h3 id="重新抛出异常">重新抛出异常</h3>
 
-<p>你可以使用<code>throw</code>来抛出异常。下面的例子捕捉了一个异常值为数字的异常，并在其值大于50后重新抛出异常。重新抛出的异常传播到闭包函数或顶层，以便用户看到它。</p>
+<p>你可以使用<code>throw</code>来抛出异常。下面的例子捕捉了一个异常值为数字的异常，并在其值大于 50 后重新抛出异常。重新抛出的异常传播到闭包函数或顶层，以便用户看到它。</p>
 
 <pre class="brush: js">try {
    throw n; // 抛出一个数值异常

@@ -27,7 +27,7 @@ translation_of: Mozilla/Firefox/Releases/11
   <li>ある要素で {{ domxref("element.mozRequestFullScreen()") }} メソッドを呼び出したときに別の要素がすでにフルスクリーンモードであった場合は、{{ domxref("document.mozCancelFullScreen()") }} を呼び出すときに、前にフルスクリーンモードであった要素を復元するようになりました。</li>
   <li>{{ domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()") }} メソッドは引数がない形式をサポートしなくなりました。このような形式はあまり使用されておらず、また標準化される見込みもありません。</li>
   <li>画像としての SVG が、<a href="/ja/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">canvas を汚染せずに</a> canvas 内へ描画できるようになりました。</li>
-  <li><code>GeoPositionAddress</code>インタフェースの非標準プロパティである <code>countryCode</code> を削除しました。{{ interface("nsIDOMGeoPositionAddress") }} をご覧ください。</li>
+  <li><code>GeoPositionAddress</code>インタフェースの非標準プロパティである <code>countryCode</code> を削除しました。<code>nsIDOMGeoPositionAddress</code> をご覧ください。</li>
   <li><a href="/ja/docs/Server-sent_events" title="Server-sent events">Server-sent events</a> が <a href="/ja/docs/HTTP_access_control" title="HTTP access control (CORS)">CORS</a> をサポートしました。</li>
   <li>従来、ユーザがリンクをたどると {{ domxref("window.navigator") }} オブジェクトでセットしている値は新しいページが保持していました。これが、新しいページ用に新たな <code>navigator</code> オブジェクトを作成するようになりました。これにより、Firefox は他のブラウザと同様に動作します。</li>
 </ul>
@@ -77,16 +77,16 @@ translation_of: Mozilla/Firefox/Releases/11
 </dl>
 <h3 id="インタフェースの変更">インタフェースの変更</h3>
 <ul>
-  <li>{{ interface("mozIAsyncHistory") }} インタフェースに、ある URI が訪問済みであるかを確認するためのメソッド {{ ifmethod("mozIAsyncHistory","isURIVisited") }} が追加されました。</li>
-  <li>{{ ifmethod("mozIAsyncHistory","isURIVisited") }} でコールバックハンドリング機能を提供するため、新たに {{ interface("mozIVisitStatusCallback") }} インタフェースを追加しました。</li>
-  <li>{{ interface("nsIMacDockSupport") }} インタフェースが新属性 <code>badgeText</code> を用いて、Dock のアプリケーションアイコンへのテキスト追加をサポートしました。</li>
-  <li>{{ interface("nsINavHistoryResultObserver") }} インタフェースでは、非推奨になった <code>containerOpened()</code> および <code>containerClosed()</code> メソッドに代わり {{ ifmethod("nsINavHistoryResultObserver", "containerStateChanged") }} を実装することが必要です。</li>
+  <li><code>mozIAsyncHistory</code> インタフェースに、ある URI が訪問済みであるかを確認するためのメソッド <code>mozIAsyncHistory.isURIVisited</code> が追加されました。</li>
+  <li><code>mozIAsyncHistory.isURIVisited</code> でコールバックハンドリング機能を提供するため、新たに <code>mozIVisitStatusCallback</code> インタフェースを追加しました。</li>
+  <li><code>nsIMacDockSupport</code> インタフェースが新属性 <code>badgeText</code> を用いて、Dock のアプリケーションアイコンへのテキスト追加をサポートしました。</li>
+  <li><code>nsINavHistoryResultObserver</code> インタフェースでは、非推奨になった <code>containerOpened()</code> および <code>containerClosed()</code> メソッドに代わり <code>nsINavHistoryResultObserver.containerStateChanged</code> を実装することが必要です。</li>
 </ul>
 <h4 id="削除されたインタフェース">削除されたインタフェース</h4>
 <p>以下のインタフェースは、不要になったため削除されました:</p>
 <ul>
-  <li>{{ interface("nsICharsetResolver") }}</li>
-  <li>{{ interface("nsIDOMNSElement") }}、詳しくは <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=707576" title="https://bugzilla.mozilla.org/show_bug.cgi?id=707576">bug707576</a> をご覧いただき、代わりに {{ interface("nsIDOMElement") }} を使用してください。</li>
+  <li><code>nsICharsetResolver</code></li>
+  <li><code>nsIDOMNSElement</code>、詳しくは <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=707576">bug707576</a> をご覧いただき、代わりに <code>nsIDOMElement</code> を使用してください。</li>
 </ul>
 <h3 id="テーマに関する変更">テーマに関する変更</h3>
 <ul>
@@ -95,7 +95,7 @@ translation_of: Mozilla/Firefox/Releases/11
 <h3 id="設定項目の変更">設定項目の変更</h3>
 <dl>
   <dt>
-    {{ Pref("ui.tooltipDelay") }}</dt>
+    <code>ui.tooltipDelay</code></dt>
   <dd>
     マウスカーソルを載せてからツールチップが表示されるまでの遅延をミリ秒単位で指定します。</dd>
 </dl>

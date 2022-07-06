@@ -34,7 +34,7 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 
 <p>Люди (и животные) принимают какие-либо решения всю жизнь, от малозначимых ("стоит ли мне съесть одну печеньку или две?") до жизнеопределяющих ("стоит ли мне остаться дома и работать на ферме отца или переехать в другую страну и изучать астрофизику?")</p>
 
-<p>Операторы условия в JavaScript позволяют нам указать разного рода действия в зависимости от выбранного пользователем или системой ответа (например одна печенька или две) и связать его с действием (результатом), например, результатом "съесть одну печеньку" будет "все ещё буду чувствовать себя голодным", а результатом "съесть две печеньки" будет "буду чувствовать себя сытым, но мама меня нарушает за то, что я съел все сладости". </p>
+<p>Операторы условия в JavaScript позволяют нам указать разного рода действия в зависимости от выбранного пользователем или системой ответа (например одна печенька или две) и связать его с действием (результатом), например, результатом "съесть одну печеньку" будет "все ещё буду чувствовать себя голодным", а результатом "съесть две печеньки" будет "буду чувствовать себя сытым, но мама меня поругает за то, что я съел все сладости". </p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13703/cookie-choice-small.png" style="display: block; margin: 0 auto;"></p>
 
@@ -46,7 +46,7 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 
 <p>Базовый <code>if...else</code> синтаксис выглядит как {{glossary("pseudocode")}}:</p>
 
-<pre class="notranslate">if (condition) {
+<pre>if (condition) {
   code to run if condition is true
 } else {
   run some other code instead
@@ -66,7 +66,7 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 
 <p>Стоит заметить, что  <code>else</code> и второй блок скобок { } не обязателен — следующий код так же будет работать:</p>
 
-<pre class="notranslate">if (condition) {
+<pre>if (condition) {
   код, который должен выполнить, если условие истина
 }
 
@@ -76,7 +76,7 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 
 <p>И, наконец, иногда вы можете встретить код <code>if...else</code> без фигурных скобок в сокращённой форме:</p>
 
-<pre class="notranslate">if (condition) code to run if condition is true
+<pre>if (condition) code to run if condition is true
 else run some other code instead</pre>
 
 <p>Это абсолютно рабочий код, но он менее читаем, лучше использовать фигурные скобки, новые строки и отступы.</p>
@@ -85,7 +85,7 @@ else run some other code instead</pre>
 
 <p>Чтобы лучше понять синтаксис, давайте рассмотрим реальный пример. Представьте, что мать или отец попросили помочь с работой по дому своего ребёнка.  Родитель может сказать: "Если ты поможешь мне с покупками, то я дам тебе дополнительные деньги на карманные расходы, которые ты сможешь потратить на игрушку, какую захочешь".  В JavaScript, мы можем представить это так: </p>
 
-<pre class="brush: js notranslate">var shoppingDone = false;
+<pre class="brush: js">var shoppingDone = false;
 
 if (shoppingDone === true) {
   var childsAllowance = 10;
@@ -105,7 +105,7 @@ if (shoppingDone === true) {
 
 <p>Существует способ привязать дополнительные варианты/результаты к вашему <code>if...else</code> — использовать<code>else if</code>. Для каждого дополнительного выбора требуется дополнительный блок, который нужно расположить между <code>if() { ... }</code> и <code>else { ... }</code> — проверьте следующий более сложный пример, который может быть частью простого приложения прогноза погоды:</p>
 
-<pre class="brush: html notranslate">&lt;label for="weather"&gt;Выберите тип погоды сегодня: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="weather"&gt;Выберите тип погоды сегодня: &lt;/label&gt;
 &lt;select id="weather"&gt;
   &lt;option value=""&gt;--Сделайте выбор--&lt;/option&gt;
   &lt;option value="sunny"&gt;Солнечно&lt;/option&gt;
@@ -116,7 +116,7 @@ if (shoppingDone === true) {
 
 &lt;p&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: js notranslate">var select = document.querySelector('select');
+<pre class="brush: js">var select = document.querySelector('select');
 var para = document.querySelector('p');
 
 select.addEventListener('change', setWeather);
@@ -168,7 +168,7 @@ function setWeather() {
 
 <p>Мы хотели бы особо обратить внимание на проверку булевых значений (<code>true</code>/<code>false</code>),  и общий шаблон, который вы будете встречать снова и снова. Любое значение, которое не есть  <code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code>, или пустая строка (<code>''</code>) фактически возвращает <code>true</code> при тестировании как условного оператора. Поэтому вы можете просто использовать имя собственной переменной, чтобы проверить, равна ли она <code>true</code>, или существует (т. е. переменная не равна undefined). Например:</p>
 
-<pre class="brush: js notranslate">var cheese = 'Cheddar';
+<pre class="brush: js">var cheese = 'Cheddar';
 
 if (cheese) {
   console.log('Ура! Есть сыр для приготовления бутерброда.');
@@ -178,7 +178,7 @@ if (cheese) {
 
 <p>И, возвращаясь к нашему предыдущему примеру о ребёнке, выполняющем поручение своего родителя, вы можете это записать так:</p>
 
-<pre class="brush: js notranslate">var shoppingDone = false;
+<pre class="brush: js">var shoppingDone = false;
 
 if (shoppingDone) { // не нужно явно указывать '=== true'
   var childsAllowance = 10;
@@ -190,7 +190,7 @@ if (shoppingDone) { // не нужно явно указывать '=== true'
 
 <p>Вполне нормально использовать один условный оператор <code>if...else</code> внутри другого — вложить их. Например, мы могли бы обновить наше приложение прогноза погоды, чтобы показать ещё один набор вариантов в зависимости от температуры:</p>
 
-<pre class="brush: js notranslate">if (choice === 'sunny') {
+<pre class="brush: js">if (choice === 'sunny') {
   if (temperature &lt; 86) {
     para.textContent = 'Сейчас ' + temperature + ' градусов по фаренгейту — хорошо и солнечно. Идите на пляж, или в парк, и купите мороженое.';
   } else if (temperature &gt;= 86) {
@@ -211,7 +211,7 @@ if (shoppingDone) { // не нужно явно указывать '=== true'
 
 <p>Чтобы дать вам пример оператора И, предыдущий фрагмент кода можно переписать так:</p>
 
-<pre class="brush: js notranslate">if (choice === 'sunny' &amp;&amp; temperature &lt; 86) {
+<pre class="brush: js">if (choice === 'sunny' &amp;&amp; temperature &lt; 86) {
   para.textContent = 'Сейчас ' + temperature + ' градусов по фаренгейту — хорошо и солнечно. Идите на пляж, или в парк, и купите мороженое.';
 } else if (choice === 'sunny' &amp;&amp; temperature &gt;= 86) {
   para.textContent = 'Сейчас ' + temperature + ' градусов по фаренгейту — Жара! Если вы хотите выйти на улицу, обязательно используйте солнцезащитный крем.';
@@ -221,7 +221,7 @@ if (shoppingDone) { // не нужно явно указывать '=== true'
 
 <p>Давайте посмотрим на быстрый пример оператора ИЛИ:</p>
 
-<pre class="brush: js notranslate">if (iceCreamVanOutside || houseStatus === 'в огне') {
+<pre class="brush: js">if (iceCreamVanOutside || houseStatus === 'в огне') {
   //если подъехал фургон с мороженым или дом горит
   console.log('Вы должны быстро покинуть дом.');
 } else {
@@ -230,7 +230,7 @@ if (shoppingDone) { // не нужно явно указывать '=== true'
 
 <p>Последний тип логического оператора НЕ, выраженный <code>!</code> оператором, можно использовать для отрицания выражения. Давайте объединим его с ИЛИ в приведённом выше примере:</p>
 
-<pre class="brush: js notranslate">if (!(iceCreamVanOutside || houseStatus === 'on fire')) {
+<pre class="brush: js">if (!(iceCreamVanOutside || houseStatus === 'on fire')) {
   console.log('Вероятно, можно в нем оставаться.');
 } else {
   console.log('Вы должны быстро покинуть дом.');
@@ -240,19 +240,19 @@ if (shoppingDone) { // не нужно явно указывать '=== true'
 
 <p>Можно сочетать любое количество логических операторов, в любой последовательности и в любой комбинации. В следующем примере код в блоке будет выполняться только в том случае, если оба условия с ИЛИ возвращают true, а следовательно, и оператор И возвращает true:</p>
 
-<pre class="brush: js notranslate">if ((x === 5 || y &gt; 3 || z &lt;= 10) &amp;&amp; (loggedIn || userName === 'Steve')) {
+<pre class="brush: js">if ((x === 5 || y &gt; 3 || z &lt;= 10) &amp;&amp; (loggedIn || userName === 'Steve')) {
   // код выполняется
 }</pre>
 
 <p>Распространённой ошибкой при использовании логического оператора ИЛИ в условном выражении является указание переменной, значение которой нужно проверить со списком возможных значений этой переменной, разделённых операторами <code>||</code> (ИЛИ). Например.</p>
 
-<pre class="example-bad brush: js notranslate">if (x === 5 || 7 || 10 || 20) {
+<pre class="example-bad brush: js">if (x === 5 || 7 || 10 || 20) {
   // выполнить код
 }</pre>
 
 <p>В данном примере условие в <code>if(...)</code>  всегда будет оцениваться как true, поскольку 7 (или любое другое ненулевое значение) всегда будет оцениваться как true. Фактически, это условие гласит «если х равен 5, или 7 является true». Но нам требуется совсем не это. Чтобы достичь нужной цели, придётся выполнять полноценную проверку после каждого оператора ИЛИ:</p>
 
-<pre class="brush: js notranslate">if (x === 5 || x === 7 || x === 10 ||x === 20) {
+<pre class="brush: js">if (x === 5 || x === 7 || x === 10 ||x === 20) {
   // выполнить код
 }</pre>
 
@@ -262,7 +262,7 @@ if (shoppingDone) { // не нужно явно указывать '=== true'
 
 <p>В этом случае нам поможет <a href="/en-US/docs/Web/JavaScript/Reference/Statements/switch">оператор <code>switch</code> </a>– он принимает одно единственное выражение или значение, а затем просматривает ряд вариантов, пока не найдут вариант, соответствующий этому значению, после чего выполняет код, назначенный этому варианту. Вот пример использования этого оператора:</p>
 
-<pre class="notranslate">switch (выражение) {
+<pre>switch (выражение) {
   case choice1:
     выполнить этот код
     break;
@@ -285,7 +285,7 @@ if (shoppingDone) { // не нужно явно указывать '=== true'
  <li>Ключевое слово <code>case</code>, за которым следует вариант выбора (именно он проверяется на соответствие выражению или значению) и двоеточие.</li>
  <li>Код, который будет выполняться, если вариант совпадает с выражением.</li>
  <li>Оператор <code>break</code>, за которым следует точка с запятой. Если вариант совпал с выражением или значением, браузер закончит выполнять блок кода, дойдя до оператора <code>break</code>, и перейдёт к выполнению кода, расположенного после оператора switch.</li>
- <li>Вариантов выбора (пункты 3–5) может быть сколь угодно много.</li>
+ <li>Вариантов выбора (пункты 3–5) может быть любое количество.</li>
  <li>Ключевое слово <code>default</code> используется точно также, как любой другой вариант выбора (пункты 3–5) за тем исключением, что после <code>default</code> нет других вариантов выбора, поэтому инструкция <code>break</code> не требуется, никакого кода дальше нет. Это вариант выбора по умолчанию, выбираемый, если ни один из других вариантов не совпал с выражением.</li>
 </ol>
 
@@ -297,7 +297,7 @@ if (shoppingDone) { // не нужно явно указывать '=== true'
 
 <p>Давайте рассмотрим реальный пример — перепишем наше приложение прогноза погоды с использованием оператора switch:</p>
 
-<pre class="brush: html notranslate">&lt;label for="weather"&gt;Выберите тип погоды сегодня: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="weather"&gt;Выберите тип погоды сегодня: &lt;/label&gt;
 &lt;select id="weather"&gt;
   &lt;option value=""&gt;--Сделайте выбор--&lt;/option&gt;
   &lt;option value="sunny"&gt;Солнечно&lt;/option&gt;
@@ -308,7 +308,7 @@ if (shoppingDone) { // не нужно явно указывать '=== true'
 
 &lt;p&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: js notranslate">var select = document.querySelector('select');
+<pre class="brush: js">var select = document.querySelector('select');
 var para = document.querySelector('p');
 
 select.addEventListener('change', setWeather);
@@ -345,11 +345,11 @@ function setWeather() {
 
 <p>Это последний теоретический раздел данной статьи и мы перейдём к практическим упражнениям. <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">Тернарный или условный оператор</a> имеет простой синтаксис: он проверяет условие и возвращает одно значение или выражение, если условие является <code>true</code>, и другое значение/выражение, если условие является <code>false</code>. Часто это очень удобная альтернатива блоку <code>if...else</code>, позволяющая затрачивать меньшие усилия на написание кода, когда имеется всего лишь два варианта, выбираемых на основе условия <code>true</code>/<code>false</code>. Общая схема оператора:</p>
 
-<pre class="notranslate">( условие) ? выполнить этот код : выполнить этот код вместо первого</pre>
+<pre>( условие) ? выполнить этот код : выполнить этот код вместо первого</pre>
 
 <p>Приведём простой пример:</p>
 
-<pre class="brush: js notranslate">var greeting = ( isBirthday ) ? 'С днём рождения, г-н Кузнецов! Хорошо вам повеселиться!' : 'Доброе утро, г-н Кузнецов.';</pre>
+<pre class="brush: js">var greeting = ( isBirthday ) ? 'С днём рождения, г-н Кузнецов! Хорошо вам повеселиться!' : 'Доброе утро, г-н Кузнецов.';</pre>
 
 <p>У нас есть переменная <code>isBirthday</code> , если она <code>true</code>, мы отправляем посетителю поздравление с днём рождения; если нет – выдаём стандартное приветствие.</p>
 
@@ -357,7 +357,7 @@ function setWeather() {
 
 <p>При использовании тернарного оператора не обязательно ограничиваться лишь значениями переменной, можно выполнять функции или строки кода; все, что угодно. В следующем примере показано простое средство выбора темы, задающее внешний вид веб-сайта с помощью тернарного оператора.</p>
 
-<pre class="brush: html notranslate">&lt;label for="theme"&gt;Выберите тему: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="theme"&gt;Выберите тему: &lt;/label&gt;
 &lt;select id="theme"&gt;
   &lt;option value="white"&gt;Белая&lt;/option&gt;
   &lt;option value="black"&gt;Чёрная&lt;/option&gt;
@@ -365,7 +365,7 @@ function setWeather() {
 
 &lt;h1&gt;Это мой веб-сайт&lt;/h1&gt;</pre>
 
-<pre class="brush: js notranslate">var select = document.querySelector('select');
+<pre class="brush: js">var select = document.querySelector('select');
 var html = document.querySelector('html');
 document.body.style.padding = '10px';
 
@@ -422,7 +422,7 @@ select.onchange = function() {
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 500px;overflow: auto;"&gt;
 &lt;label for="month"&gt;Выберите месяц: &lt;/label&gt;
 &lt;select id="month"&gt;
@@ -477,7 +477,7 @@ createCalendar(31,'Январь');
  &lt;input id="solution" type="button" value="Показать решение"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">.output * {
+<pre class="brush: css">.output * {
   box-sizing: border-box;
 }
 
@@ -516,7 +516,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -611,7 +611,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code 2</h6>
 
-<pre class="brush: html notranslate">&lt;div class="output" style="height: 300px;"&gt;
+<pre class="brush: html">&lt;div class="output" style="height: 300px;"&gt;
   &lt;label for="theme"&gt;Выберите тему: &lt;/label&gt;
   &lt;select id="theme"&gt;
     &lt;option value="white"&gt;Белая&lt;/option&gt;
@@ -647,7 +647,7 @@ function update(bgColor, textColor) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;

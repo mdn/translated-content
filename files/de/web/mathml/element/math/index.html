@@ -34,7 +34,7 @@ translation_of: Web/MathML/Element/math
  </ul>
  </dd>
  <dt id="attr-mode">mode {{deprecated_inline}}</dt>
- <dd>Veraltet und durch das <a href="/de/docs/MathML/Element/math#attr-display">{{anch("display")}}</a>-Attribut ersetzt. Mögliche Werte sind: <code>display</code> (hat den gleichen Effekt wie <code>display="block"</code>) und <code>inline</code>.</dd>
+ <dd>Veraltet und durch das <a href="/de/docs/MathML/Element/math#attr-display"><a href="#display">display</a></a>-Attribut ersetzt. Mögliche Werte sind: <code>display</code> (hat den gleichen Effekt wie <code>display="block"</code>) und <code>inline</code>.</dd>
  <dt id="attr-overflow">overflow</dt>
  <dd>Bestimmt, wie sich der mathematische Ausdruck verhält, wenn er breiter ist als die erlaubte Breite des Elements. Mögliche Werte sind: <code>linebreak</code> (Standard), <code>scroll</code>, <code>elide</code>, <code>truncate</code>, <code>scale</code>.</dd>
 </dl>
@@ -111,7 +111,7 @@ translation_of: Web/MathML/Element/math
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p><strong>Hinweis</strong>: XHTML-Dokumente mit MathML müssen vom Server als <code>application/xhtml+xml</code> ausgliefert werden. Das kannst Du einfach erreichen, indem Du Deinen lokalen Dateien die Endung <code>.xhtml</code> gibst. Beim Apache-Webserver kannst Du entsprechend die<a class="external" href="http://httpd.apache.org/docs/current/mod/mod_mime.html#addtype" title="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype"> <code>.htaccess-Datei konfigurieren</code></a>, so dass die Dateiendung dem korrekten Mime type zugeordnet wird. Achte in diesem Fall auch darauf, dass die XML-Datei wohlgeformt ist, d.h. den grundsätzlichen Anforderungen an die Formatierung einer XML-Datei genügt.</p>
+<p><strong>Hinweis</strong>: XHTML-Dokumente mit MathML müssen vom Server als <code>application/xhtml+xml</code> ausgliefert werden. Das kannst Du einfach erreichen, indem Du Deinen lokalen Dateien die Endung <code>.xhtml</code> gibst. Beim Apache-Webserver kannst Du entsprechend die<a class="external" href="http://httpd.apache.org/docs/current/mod/mod_mime.html#addtype"> <code>.htaccess-Datei konfigurieren</code></a>, so dass die Dateiendung dem korrekten Mime type zugeordnet wird. Achte in diesem Fall auch darauf, dass die XML-Datei wohlgeformt ist, d.h. den grundsätzlichen Anforderungen an die Formatierung einer XML-Datei genügt.</p>
 
 <h2 id="Spezifikationen">Spezifikationen</h2>
 
@@ -295,7 +295,7 @@ translation_of: Web/MathML/Element/math
 
 <h2 id="Hinweise_zur_Gecko">Hinweise zur Gecko</h2>
 
-<p>Die Gecko Rendering Engine unterstützt seit Version 7.0 {{ geckoRelease("7.0") }} die Verwendung von MathML-Attributen auf das <code>&lt;math&gt;</code>-Element (und hat damit das gleiche Verhalten wie das {{ MathMLElement("mstyle") }}-Element). Das <code>displaystyle</code>-Attribute wurde allerdings erst in Gecko 8.0 {{ geckoRelease("8.0") }} ergänzt. <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=669719" title="https://bugzilla.mozilla.org/show_bug.cgi?id=669719">Siehe bug 669719</a>.</p>
+<p>Die Gecko Rendering Engine unterstützt seit Version 7.0 {{ geckoRelease("7.0") }} die Verwendung von MathML-Attributen auf das <code>&lt;math&gt;</code>-Element (und hat damit das gleiche Verhalten wie das {{ MathMLElement("mstyle") }}-Element). Das <code>displaystyle</code>-Attribute wurde allerdings erst in Gecko 8.0 {{ geckoRelease("8.0") }} ergänzt. <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=669719">Siehe bug 669719</a>.</p>
 
 <p>Weder Alternativer Text (<code>alttext</code>) noch der Verweis auf eine alternative Grafik mit den Attributen <code>altimg</code>, <code>altimg-width</code>, <code>altimg-height</code> oder <code>altimg-valign</code> sind in Gecko gegenwärtig implemtiert.</p>
 

@@ -24,11 +24,11 @@ translation_of: Web/HTML/Element/tr
 
 <p>セルをどのように列に収める (または列にまたがる) かを制御できるようにするため、<code>&lt;th&gt;</code> および <code>&lt;td&gt;</code> で {{htmlattrxref("colspan", "td")}} 属性をサポートします。これはセルの幅をいくつの列にするかを指定でき、既定値は 1 です。同様に、セルが複数の行にまたがることを示す {{htmlattrxref("rowspan", "td")}} 属性も使用できます。</p>
 
-<p>表を作成するとき、正しい表にするために少し経験が必要かもしれません。以下にいくつか{{anch("Examples", "例")}}がありますが、さらに多くの例や詳しいチュートリアルは、<a href="/ja/docs/Learn">ウェブ開発を学ぶ</a>エリアの <a href="/ja/docs/Learn/HTML/Tables">HTML tables</a> シリーズをご覧ください。表形式のデータを正しいレイアウトに整形するため、 table 要素やその属性の使い方を学ぶことができます。</p>
+<p>表を作成するとき、正しい表にするために少し経験が必要かもしれません。以下にいくつか<a href="#examples">例</a>がありますが、さらに多くの例や詳しいチュートリアルは、<a href="/ja/docs/Learn">ウェブ開発を学ぶ</a>エリアの <a href="/ja/docs/Learn/HTML/Tables">HTML tables</a> シリーズをご覧ください。表形式のデータを正しいレイアウトに整形するため、 table 要素やその属性の使い方を学ぶことができます。</p>
 
 <h2 id="Attributes" name="Attributes">属性</h2>
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。使用を避けるべき{{anch("deprecated attributes", "非推奨の属性")}}もいくつかありますが、古いコードを読む際は知っている必要があるでしょう。</p>
+<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。使用を避けるべき<a href="#deprecated_attributes">非推奨の属性</a>もいくつかありますが、古いコードを読む際は知っている必要があるでしょう。</p>
 
 <h3 id="Deprecated_attributes" name="Deprecated_attributes">非推奨の属性</h3>
 
@@ -204,21 +204,21 @@ th, td {
     &lt;th&gt;Canceled&lt;/th&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;th&gt;Margaret Nguyen&lt;/td&gt;
+    &lt;th&gt;Margaret Nguyen&lt;/th&gt;
     &lt;td&gt;427311&lt;/td&gt;
     &lt;td&gt;&lt;time datetime="2010-06-03"&gt;June 3, 2010&lt;/time&gt;&lt;/td&gt;
     &lt;td&gt;n/a&lt;/td&gt;
     &lt;td&gt;0.00&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;th&gt;Edvard Galinski&lt;/td&gt;
+    &lt;th&gt;Edvard Galinski&lt;/th&gt;
     &lt;td&gt;533175&lt;/td&gt;
     &lt;td&gt;&lt;time datetime="2011-01013"&gt;January 13, 2011&lt;/time&gt;&lt;/td&gt;
     &lt;td&gt;&lt;time datetime="2017-04008"&gt;April 8, 2017&lt;/time&gt;&lt;/td&gt;
     &lt;td&gt;37.00&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;th&gt;Hoshi Nakamura&lt;/td&gt;
+    &lt;th&gt;Hoshi Nakamura&lt;/th&gt;
     &lt;td&gt;601942&lt;/td&gt;
     &lt;td&gt;&lt;time datetime="2012-07-23"&gt;July 23, 2012&lt;/time&gt;&lt;/td&gt;
     &lt;td&gt;n/a&lt;/td&gt;
@@ -263,21 +263,21 @@ th, td {
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;th scope="row"&gt;Margaret Nguyen&lt;/td&gt;
+      &lt;th scope="row"&gt;Margaret Nguyen&lt;/th&gt;
       &lt;td&gt;427311&lt;/td&gt;
       &lt;td&gt;&lt;time datetime="2010-06-03"&gt;June 3, 2010&lt;/time&gt;&lt;/td&gt;
       &lt;td&gt;n/a&lt;/td&gt;
       &lt;td&gt;0.00&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;th scope="row"&gt;Edvard Galinski&lt;/td&gt;
+      &lt;th scope="row"&gt;Edvard Galinski&lt;/th&gt;
       &lt;td&gt;533175&lt;/td&gt;
       &lt;td&gt;&lt;time datetime="2011-01013"&gt;January 13, 2011&lt;/time&gt;&lt;/td&gt;
       &lt;td&gt;&lt;time datetime="2017-04008"&gt;April 8, 2017&lt;/time&gt;&lt;/td&gt;
       &lt;td&gt;37.00&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;th scope="row"&gt;Hoshi Nakamura&lt;/td&gt;
+      &lt;th scope="row"&gt;Hoshi Nakamura&lt;/th&gt;
       &lt;td&gt;601942&lt;/td&gt;
       &lt;td&gt;&lt;time datetime="2012-07-23"&gt;July 23, 2012&lt;/time&gt;&lt;/td&gt;
       &lt;td&gt;n/a&lt;/td&gt;
@@ -334,21 +334,21 @@ th, td {
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;th scope="row"&gt;Margaret Nguyen&lt;/td&gt;
+      &lt;th scope="row"&gt;Margaret Nguyen&lt;/th&gt;
       &lt;td&gt;427311&lt;/td&gt;
       &lt;td&gt;&lt;time datetime="2010-06-03"&gt;June 3, 2010&lt;/time&gt;&lt;/td&gt;
       &lt;td&gt;n/a&lt;/td&gt;
       &lt;td&gt;0.00&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;th scope="row"&gt;Edvard Galinski&lt;/td&gt;
+      &lt;th scope="row"&gt;Edvard Galinski&lt;/th&gt;
       &lt;td&gt;533175&lt;/td&gt;
       &lt;td&gt;&lt;time datetime="2011-01013"&gt;January 13, 2011&lt;/time&gt;&lt;/td&gt;
       &lt;td&gt;&lt;time datetime="2017-04008"&gt;April 8, 2017&lt;/time&gt;&lt;/td&gt;
       &lt;td&gt;37.00&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;th scope="row"&gt;Hoshi Nakamura&lt;/td&gt;
+      &lt;th scope="row"&gt;Hoshi Nakamura&lt;/th&gt;
       &lt;td&gt;601942&lt;/td&gt;
       &lt;td&gt;&lt;time datetime="2012-07-23"&gt;July 23, 2012&lt;/time&gt;&lt;/td&gt;
       &lt;td&gt;n/a&lt;/td&gt;
@@ -409,21 +409,21 @@ th, td {
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;th scope="row"&gt;Margaret Nguyen&lt;/td&gt;
+      &lt;th scope="row"&gt;Margaret Nguyen&lt;/th&gt;
       &lt;td&gt;427311&lt;/td&gt;
       &lt;td&gt;&lt;time datetime="2010-06-03"&gt;June 3, 2010&lt;/time&gt;&lt;/td&gt;
       &lt;td&gt;n/a&lt;/td&gt;
       &lt;td&gt;0.00&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;th scope="row"&gt;Edvard Galinski&lt;/td&gt;
+      &lt;th scope="row"&gt;Edvard Galinski&lt;/th&gt;
       &lt;td&gt;533175&lt;/td&gt;
       &lt;td&gt;&lt;time datetime="2011-01013"&gt;January 13, 2011&lt;/time&gt;&lt;/td&gt;
       &lt;td&gt;&lt;time datetime="2017-04008"&gt;April 8, 2017&lt;/time&gt;&lt;/td&gt;
       &lt;td&gt;37.00&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;th scope="row"&gt;Hoshi Nakamura&lt;/td&gt;
+      &lt;th scope="row"&gt;Hoshi Nakamura&lt;/th&gt;
       &lt;td&gt;601942&lt;/td&gt;
       &lt;td&gt;&lt;time datetime="2012-07-23"&gt;July 23, 2012&lt;/time&gt;&lt;/td&gt;
       &lt;td&gt;n/a&lt;/td&gt;

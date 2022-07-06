@@ -10,19 +10,19 @@ translation_of: Web/API/Worker
 
 <p>Worker 接口是 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers API </a>的一部分，指的是一种可由脚本创建的后台任务，任务执行中可以向其创建者收发信息。要创建一个 Worker<strong> ，</strong>只须调用 <code>Worker(URL) </code>构造函数，函数参数 `URL` 为指定的脚本。</p>
 
-<p>Worker 也可以创建新的 Worker，当然，所有 Worker 必须与其创建者<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy">同源</a>（注意：<a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU">Blink</a>暂时不支持嵌套 Worker）。 </p>
+<p>Worker 也可以创建新的 Worker，当然，所有 Worker 必须与其创建者<a href="/zh-CN/docs/Web/Security/Same-origin_policy">同源</a>（注意：<a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU">Blink</a>暂时不支持嵌套 Worker）。 </p>
 
-<p>需要注意的是，不是所有函数和构造函数(或者说…类)都可以在 Worker 中使用。具体参考页面 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Worker 所支持的函数和类</a>。Worker 可以使用 <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> 发送请求，但是请求的<span style="line-height: inherit;">  </span><code style="font-size: 14px; line-height: inherit;">responseXML</code><span style="line-height: inherit;"> 与 </span><code style="font-size: 14px; line-height: inherit;">channel</code><span style="line-height: inherit;"> 两个属性值始终返回</span><span style="line-height: inherit;"> </span><code style="font-size: 14px; line-height: inherit;">null</code> （<code>fetch</code> 仍可正常使用，没有类似的限制）。 </p>
+<p>需要注意的是，不是所有函数和构造函数 (或者说…类) 都可以在 Worker 中使用。具体参考页面 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Worker 所支持的函数和类</a>。Worker 可以使用 <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> 发送请求，但是请求的  <code style="font-size: 14px; line-height: inherit;">responseXML</code> 与 <code style="font-size: 14px; line-height: inherit;">channel</code> 两个属性值始终返回 <code style="font-size: 14px; line-height: inherit;">null</code> （<code>fetch</code> 仍可正常使用，没有类似的限制）。 </p>
 
 <div class="blockIndicator note">
-<p> 如果你要在火狐浏览器的扩展使用 Worker 访问 <a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/js-ctypes">js-ctypes</a>，应使用 {{ domxref("ChromeWorker") }} 对象来替代。(译者注：这里没有看懂，希望有人能驳正，或添加说明)</p>
+<p> 如果你要在火狐浏览器的扩展使用 Worker 访问 <a href="/zh-CN/docs/Mozilla/js-ctypes">js-ctypes</a>，应使用 {{ domxref("ChromeWorker") }} 对象来替代。(译者注：这里没有看懂，希望有人能驳正，或添加说明)</p>
 </div>
 
 <h2 id="构造函数">构造函数</h2>
 
 <dl>
  <dt>{{domxref("Worker.Worker", "Worker()")}}</dt>
- <dd>创建一个专用Web worker，它只执行URL指定的脚本。使用 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Blob">Blob URL</a> 作为参数亦可。</dd>
+ <dd>创建一个专用 Web worker，它只执行 URL 指定的脚本。使用 <a href="/zh-CN/docs/Web/API/Blob">Blob URL</a> 作为参数亦可。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -33,9 +33,9 @@ translation_of: Web/API/Worker
 
 <dl>
  <dt>{{domxref("AbstractWorker.onerror")}}</dt>
- <dd>当{{domxref("ErrorEvent")}} 类型的事件冒泡到 worker 时，事件监听函数 {{ domxref("EventListener") }} 被调用. 它继承于 {{domxref("AbstractWorker")}}.</dd>
+ <dd>当{{domxref("ErrorEvent")}} 类型的事件冒泡到 worker 时，事件监听函数 {{ domxref("EventListener") }} 被调用。它继承于 {{domxref("AbstractWorker")}}.</dd>
  <dt>{{domxref("Worker.onmessage")}}</dt>
- <dd>当{{domxref("MessageEvent")}}类型的事件冒泡到 worker 时，事件监听函数 {{ domxref("EventListener") }} 被调用.  例如，一个消息通过 {{domxref("DedicatedWorkerGlobalScope.postMessage")}}，从执行者发送到父页面对象，消息保存在事件对象的 {{domxref("MessageEvent.data", "data")}} 属性中.</dd>
+ <dd>当{{domxref("MessageEvent")}}类型的事件冒泡到 worker 时，事件监听函数 {{ domxref("EventListener") }} 被调用.  例如，一个消息通过 {{domxref("DedicatedWorkerGlobalScope.postMessage")}}，从执行者发送到父页面对象，消息保存在事件对象的 {{domxref("MessageEvent.data", "data")}} 属性中。</dd>
  <dt>{{domxref("Worker.onmessageerror")}}</dt>
  <dd>当{{event("messageerror")}} 类型的事件发生时，对应的{{event("Event_handlers", "event handler")}} 代码被调用。</dd>
 </dl>
@@ -88,13 +88,13 @@ first.onchange = function() {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>不同类型的worker兼容度不一致，详细参考具体定义的页面。</p>
+<p>不同类型的 worker 兼容度不一致，详细参考具体定义的页面。</p>
 
 <p>{{Compat("api.Worker")}}</p>
 
 <h3 id="跨域行为的错误事件">跨域行为的错误事件</h3>
 
-<p>浏览器的早期版本中，加载跨域的执行者脚本导致 <code>SecurityError</code>事件。根据规范的变更，而新版本的浏览器只有{{event("error")}}事件发生。关于如何处理这种事件的更多信息参考 <a href="https://www.fxsitecompat.com/en-CA/docs/2016/loading-cross-origin-worker-now-fires-error-event-instead-of-throwing-worker-in-sandboxed-iframe-no-longer-allowed/">Loading cross-origin worker now fires error event instead of throwing; worker in sandboxed iframe no longer allowed</a>.</p>
+<p>浏览器的早期版本中，加载跨域的执行者脚本导致 <code>SecurityError</code>事件。根据规范的变更，而新版本的浏览器只有{{event("error")}}事件发生</p>
 
 <h2 id="相关链接">相关链接</h2>
 

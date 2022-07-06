@@ -87,10 +87,6 @@ translation_of: Web/API/Document
  <dd>문서의 표시 상태를 나타내는 문자열을 반환합니다. 가능한 값은 <code>visible</code>, <code>hidden</code>, <code>prerender</code>, <code>unloaded</code>입니다.</dd>
 </dl>
 
-<p><code>Document</code> 인터페이스는 {{domxref("ParentNode")}} 인터페이스를 확장합니다.</p>
-
-<p>{{page("/ko/docs/Web/API/ParentNode","속성")}}</p>
-
 <h3 id="HTMLDocument_확장">HTMLDocument 확장</h3>
 
 <p>HTML 문서를 위한 <code>Document</code> 인터페이스는 HTML5 이전엔 {{domxref("HTMLDocument")}} 인터페이스를 상속하고, 이후로는 확장합니다.</p>
@@ -160,10 +156,6 @@ translation_of: Web/API/Document
  <dd>{{event("visibilitychange")}} 이벤트가 발생할 때 호출되는 코드를 나타내는 {{event("Event_handlers", "event handler")}} 입니다.</dd>
 </dl>
 
-<p><code>Document</code> 인터페이스는 {{domxref("GlobalEventHandlers")}} 인터페이스를 확장합니다.</p>
-
-<p>{{Page("/ko/docs/Web/API/GlobalEventHandlers", "속성")}}</p>
-
 <h3 id="사용하지_않는_속성">사용하지 않는 속성</h3>
 
 <dl>
@@ -183,9 +175,9 @@ translation_of: Web/API/Document
  <dd>{{domxref("DOMConfiguration")}} 객체를 반환합니다.</dd>
  <dt>{{domxref("document.fgColor")}} {{Deprecated_inline}}</dt>
  <dd>현재 다큐먼트의 foreground 색상이나 텍스트 색상을 설정하거나 반환합니다.</dd>
- <dt>{{domxref("Document.fullscreen")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Document.fullscreen")}} {{deprecated_inline}}</dt>
  <dd>다큐먼트가 {{domxref("Using_full-screen_mode","full-screen mode")}}에 있을 때 <code>true</code> 를 반환합니다.</dd>
- <dt>{{domxref("Document.height")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Document.height")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>현재 다큐먼트의 높이를 설정하거나 반환합니다.</dd>
  <dt>{{domxref("Document.inputEncoding")}} {{readonlyinline}} {{Deprecated_inline}}</dt>
  <dd>{{domxref("Document.characterSet")}} 과 동일합니다. {{domxref("Document.characterSet")}} 속성을 사용하시기 바랍니다.</dd>
@@ -193,13 +185,13 @@ translation_of: Web/API/Document
  <dd>다큐먼트내 하이퍼링크의 색상을 설정하거나 반환합니다.</dd>
  <dt>{{domxref("Document.vlinkColor")}} {{Deprecated_inline}}</dt>
  <dd>방문한 하이퍼링크의 색상을 설정하거나 반환합니다.</dd>
- <dt>{{domxref("Document.width")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Document.width")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>현재 다큐먼트의 너비를 반환합니다.</dd>
  <dt>{{domxref("Document.xmlEncoding")}} {{Deprecated_inline}}</dt>
  <dd>XML 선언으로 결정된 인코딩을 반환합니다.</dd>
- <dt>{{domxref("Document.xmlStandalone")}} {{obsolete_inline("10.0")}}</dt>
+ <dt>{{domxref("Document.xmlStandalone")}} {{deprecated_inline}}</dt>
  <dd>XML 선언이 다큐먼트를 독립되도록 지정하면 <code>true</code> 를(<em>예,</em> DTD 의 외부가 다큐먼트의 컨텐츠에 영향을 줌), 그렇지 않은 경우 <code>false</code> 를 반환합니다.</dd>
- <dt>{{domxref("Document.xmlVersion")}} {{obsolete_inline("10.0")}}</dt>
+ <dt>{{domxref("Document.xmlVersion")}} {{deprecated_inline}}</dt>
  <dd>XML 선언에 명시된 버전 넘버를 반환합니다. 선언에 명시되어 있지 않은 경우, <code>"1.0"</code> 을 반환합니다.</dd>
 </dl>
 
@@ -228,7 +220,7 @@ translation_of: Web/API/Document
  <dd>주어진 태그명을 사용해 새로운 요소를 생성합니다.</dd>
  <dt>{{domxref("Document.createElementNS()")}}</dt>
  <dd>주어진 태그명과 네임스페이스 URI를 갖는 새로운 요소를 생성합니다.</dd>
- <dt>{{domxref("Document.createEntityReference()")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Document.createEntityReference()")}} {{deprecated_inline}}</dt>
  <dd>새로운 개체 참조를 생성하고 반환합니다.</dd>
  <dt>{{domxref("Document.createEvent()")}}</dt>
  <dd>이벤트 객체를 생성합니다.</dd>
@@ -262,7 +254,7 @@ translation_of: Web/API/Document
  <dd>문서가 퍼스트파티<sup>first-party</sup> 저장소에 접근할 수 있는지 나타내는 {{jsxref("Boolean")}}으로 이행하는 {{jsxref("Promise")}}를 반환합니다.</dd>
  <dt>{{domxref("Document.importNode()")}}</dt>
  <dd>외부 문서의 노드 복제본을 반환합니다.</dd>
- <dt>{{domxref("Document.normalizeDocument()")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Document.normalizeDocument()")}} {{deprecated_inline}}</dt>
  <dd>개체 대체, 텍스트 노드 정규화 등의 작업을 실행합니다.</dd>
  <dt>{{domxref("Document.releaseCapture()")}} {{non-standard_inline}}</dt>
  <dd>문서의 요소에 현재 마우스 캡쳐가 있다면 이를 해제합니다.</dd>
@@ -270,7 +262,7 @@ translation_of: Web/API/Document
  <dd>{{domxref("Window.releaseEvents()")}}를 확인하세요.</dd>
  <dt>{{domxref("Document.requestStorageAccess()")}}</dt>
  <dd>퍼스트파티<sup>first-party</sup> 저장소로의 접근이 가능한 경우 이행하고 불가능한 경우 거부하는 {{jsxref("Promise")}}를 반환합니다.</dd>
- <dt>{{domxref("Document.routeEvent()")}} {{non-standard_inline}} {{obsolete_inline(24)}}</dt>
+ <dt>{{domxref("Document.routeEvent()")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>{{domxref("Window.routeEvent()")}}를 확인하세요.</dd>
  <dt>{{domxref("Document.mozSetImageElement()")}} {{non-standard_inline}}</dt>
  <dd>지정한 요소 ID를 위한 배경 이미지로 사용되도록 요소 변경을 허용합니다.</dd>
@@ -344,54 +336,6 @@ translation_of: Web/API/Document
  <dd>지정한 위치에 있는 모든 엘리먼트의 배열을 반환합니다.</dd>
  <dt>{{domxref("DocumentOrShadowRoot.caretPositionFromPoint()")}}</dt>
  <dd>캐럿을 포함하는 DOM 노드와 그 노드내 캐첫의 문자 오프셋을 포함하는 {{domxref('CaretPosition')}} 객체를 반환합니다.</dd>
-</dl>
-
-<h2 id="비표준_확장_non-standard_inline">비표준 확장 {{non-standard_inline}}</h2>
-
-<p>{{non-standard_header}}</p>
-
-<h3 id="Firefox_노트">Firefox 노트</h3>
-
-<p>Mozilla는 XUL 컨텐츠만을 위해 만들어진 비표준 속성의 집합을 정의합니다.</p>
-
-<dl>
- <dt>{{domxref("document.currentScript")}} {{non-standard_inline}}</dt>
- <dd>현재 실행중인 {{HTMLElement("script")}} 엘리먼트를 반환합니다.</dd>
- <dt>{{domxref("document.documentURIObject")}}</dt>
- <dd>(<strong>Mozilla 부가 기능 전용!</strong>) 다큐먼트의 URI 를 나타내는 {{Interface("nsIURI")}} 객체를 반환합니다. 이 속성은 권한을 가진 자바스크립트 코드(UniversalXPConnect 권한을 갖는)에서만 특별한 의미를 갖습니다.</dd>
- <dt>{{domxref("document.popupNode")}}</dt>
- <dd>팝업이 불려진 노드를 반환합니다.</dd>
- <dt>{{domxref("document.tooltipNode")}}</dt>
- <dd>현재 툴팁의 대상이되는 노드를 반환합니다.</dd>
-</dl>
-
-<p>Mozilla 는 또한 일부 비표준 메소드를 정의합니다.</p>
-
-<dl>
- <dt>{{domxref("document.execCommandShowHelp")}} {{obsolete_inline("14.0")}}</dt>
- <dd>이 메소드는 아무것도 하지 않았지만 항상 예외를 발생시켰으므로 Gecko 14.0 {{geckoRelease("14.0")}} 에서 제거되었습니다.</dd>
- <dt>{{domxref("document.getBoxObjectFor")}} {{obsolete_inline}}</dt>
- <dd>{{domxref("Element.getBoundingClientRect()")}} 메소드를 대신 사용하세요.</dd>
- <dt>{{domxref("document.loadOverlay")}}</dt>
- <dd><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL" title="XUL_Overlays">XUL 오버레이</a>를 동적으로 로드합니다. XUL 다큐먼트에서만 동작합니다.</dd>
- <dt>{{domxref("document.queryCommandText")}} {{obsolete_inline("14.0")}}</dt>
- <dd>이 메소드는 아무것도 하지 않았지만 예외를 발생시켰으므로 Gecko 14.0 {{geckoRelease("14.0")}} 에서 제거되었습니다.</dd>
-</dl>
-
-<h3 id="Internet_Explorer_노트">Internet Explorer 노트</h3>
-
-<p>Microsoft는 일부 비표준 속성을 정의합니다.</p>
-
-<dl>
- <dt>{{domxref("document.fileSize")}}* {{non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See <a href="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx" title="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx">MSDN</a>.</dd>
-</dl>
-
-<p>Internet Explorer는 <code>Document</code> 인터페이스내 <code>Node</code> 인터페이스의 모든 메소드를 지원하지 않습니다:</p>
-
-<dl>
- <dt>{{domxref("document.contains")}}</dt>
- <dd>대안으로 <code>document.body.contains()</code> 를 사용할 수 있습니다.</dd>
 </dl>
 
 <h2 id="명세">명세</h2>

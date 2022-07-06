@@ -48,26 +48,26 @@ grid-template-columns: unset;
  <dt>{{cssxref("&lt;length&gt;")}}</dt>
  <dd>非负值的长度大小。</dd>
  <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>非负值且相对于网格容器的 {{cssxref("percentage", "&lt;百分比&gt;")}}。 如果网格容器的尺寸大小依赖网格轨道的大小（比如 <font face="consolas, Liberation Mono, courier, monospace">inline-grid</font> ），则百分比值将被视为<code>auto</code>。</dd>
+ <dd>非负值且相对于网格容器的 {{cssxref("percentage", "&lt;百分比&gt;")}}。 如果网格容器的尺寸大小依赖网格轨道的大小（比如 inline-grid ），则百分比值将被视为<code>auto</code>。</dd>
  <dd>为了遵守网格的百分比，网格轨道本身定义的大小，将自动被调整为相对网格容器大小，并且是以最小量将网格轨道调整到最终的大小。</dd>
  <dt>{{cssxref("&lt;flex&gt;")}}</dt>
- <dd>非负值，用单位 <code>fr</code> 来定义网格轨道大小的弹性系数。 每个定义了 <code>&lt;flex&gt;</code> 的网格轨道会按比例分配剩余的可用空间。当外层用一个 <code>minmax()</code> 表示时，它将是一个自动最小值(即 <code>minmax(auto, &lt;flex&gt;)</code> ) .</dd>
- <dt id="max-content"><code>max-content</code></dt>
+ <dd>非负值，用单位 <code>fr</code> 来定义网格轨道大小的弹性系数。 每个定义了 <code>&lt;flex&gt;</code> 的网格轨道会按比例分配剩余的可用空间。当外层用一个 <code>minmax()</code> 表示时，它将是一个自动最小值 (即 <code>minmax(auto, &lt;flex&gt;)</code> ) .</dd>
+ <dt><code>max-content</code></dt>
  <dd>是一个用来表示以网格项的最大的内容来占据网格轨道的关键字。</dd>
  <dt><code>min-content</code></dt>
  <dd>是一个用来表示以网格项的最大的最小内容来占据网格轨道的关键字。</dd>
  <dt>{{cssxref("minmax", "minmax(min, max)")}}</dt>
- <dd>是一个来定义大小范围的属性，大于等于min值，并且小于等于max值。如果max值小于min值，则该值会被视为min值。最大值可以设置为网格轨道系数值<code>&lt;flex&gt;</code> ，但最小值则不行。</dd>
+ <dd>是一个来定义大小范围的属性，大于等于 min 值，并且小于等于 max 值。如果 max 值小于 min 值，则该值会被视为 min 值。最大值可以设置为网格轨道系数值<code>&lt;flex&gt;</code> ，但最小值则不行。</dd>
  <dd>
- <p class="note">Note:  该规范在将来可能会允许设置最小值为 <code>flex</code> ，也会调整网格轨道算法(<a href="https://www.w3.org/TR/css-grid-1/#track-sizing-algorithm">track sizing algorithm</a>) 计算出正确的大小。</p>
+ <p>Note:  该规范在将来可能会允许设置最小值为 <code>flex</code> ，也会调整网格轨道算法 (<a href="https://www.w3.org/TR/css-grid-1/#track-sizing-algorithm">track sizing algorithm</a>) 计算出正确的大小。</p>
  </dd>
- <dt id="auto"><code>auto</code></dt>
+ <dt><code>auto</code></dt>
  <dd>如果该网格轨道为最大时，该属性等同于 <code>&lt;max-content&gt;</code> ，为最小时，则等同于 <code>&lt;min-content&gt;</code> 。</dd>
  <dd>
- <p class="note">Note: 网格轨道大小为 <code>auto</code> (且只有为 <code>auto</code> ) 时，才可以被属性{{cssxref("align-content")}} 和 {{cssxref("justify-content")}} 拉伸 。</p>
+ <p>Note: 网格轨道大小为 <code>auto</code> (且只有为 <code>auto</code> ) 时，才可以被属性{{cssxref("align-content")}} 和 {{cssxref("justify-content")}} 拉伸。</p>
  </dd>
- <dt id="fit-content()"><code>{{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</code></dt>
- <dd>相当于公式 <code>min(max-content, max(auto, <var>argument</var>))</code>，类似于<code>auto</code> 的计算(即 <code>minmax(auto, max-content)</code>)，除了网格轨道大小值是确定下来的，否则该值都大于 <code>auto</code> 的最小值。</dd>
+ <dt><code>{{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</code></dt>
+ <dd>相当于公式 <code>min(max-content, max(auto, <var>argument</var>))</code>，类似于<code>auto</code> 的计算 (即 <code>minmax(auto, max-content)</code>)，除了网格轨道大小值是确定下来的，否则该值都大于 <code>auto</code> 的最小值。</dd>
  <dt>{{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}</dt>
  <dd>表示网格轨道的重复部分，以一种更简洁的方式去表示大量而且重复列的表达式。</dd>
 </dl>
@@ -135,12 +135,12 @@ grid-template-columns: unset;
 <h2 id="参见">参见</h2>
 
 <ul>
- <li>相关CSS属性： {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}</li>
- <li>网格布局教程: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Grid_Tracks">Basic concepts of grid layout - Grid Tracks</a></em></li>
- <li>视频教程: <em><a href="http://gridbyexample.com/video/series-define-a-grid/">Defining a Grid</a></em></li>
+ <li>相关 CSS 属性： {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}</li>
+ <li>网格布局教程：<em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Grid_Tracks">Basic concepts of grid layout - Grid Tracks</a></em></li>
+ <li>视频教程：<em><a href="http://gridbyexample.com/video/series-define-a-grid/">Defining a Grid</a></em></li>
 </ul>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
  <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>

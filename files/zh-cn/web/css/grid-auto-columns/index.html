@@ -12,7 +12,7 @@ translation_of: Web/CSS/grid-auto-columns
 
 
 
-<p>如果一个表格项目被定位在没有使用 {{cssxref("grid-template-columns")}} 显式指定尺寸的列中，隐式的 {{glossary("grid", "grid")}} 轨道就会被创建出来支撑它。显式地定位到超出范围的列中，或者通过自动布局算法创建额外的列，就会发生上诉情况。</p>
+<p>如果一个表格项目被定位在没有使用 {{cssxref("grid-template-columns")}} 显式指定尺寸的列中，隐式的 {{glossary("grid", "grid")}} 轨道就会被创建出来支撑它。显式地定位到超出范围的列中，或者通过自动布局算法创建额外的列，就会发生上述情况。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -67,7 +67,7 @@ grid-auto-columns: unset;
  <dt><code>&lt;percentage&gt;</code></dt>
  <dd>一个非负的百分数（{{cssxref("percentage", "&lt;percentage&gt;")}}），相对于 grid 容器的尺寸。如果 grid 的尺寸不确定，该百分值就会被当作 <code>auto</code> 对待。</dd>
  <dt><code>&lt;flex&gt;</code></dt>
- <dd>一个以 <code>fr</code> 为单位非负的尺寸，表示轨道的伸缩系数。每个以 <code>&lt;flex&gt;</code> 定义尺寸的轨道会以该伸缩系数为比例来占据剩余的可用空间。如果使用<span style="font-size: 1rem; letter-spacing: -0.00278rem;"> </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">minmax()</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;">，则表示自动缩小并指定最大尺寸（也就是 </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">minmax(auto, &lt;flex&gt;)</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;">）。</span></dd>
+ <dd>一个以 <code>fr</code> 为单位非负的尺寸，表示轨道的伸缩系数。每个以 <code>&lt;flex&gt;</code> 定义尺寸的轨道会以该伸缩系数为比例来占据剩余的可用空间。如果使用 <code style="font-size: 1rem; letter-spacing: -0.00278rem;">minmax()</code>，则表示自动缩小并指定最大尺寸（也就是 <code style="font-size: 1rem; letter-spacing: -0.00278rem;">minmax(auto, &lt;flex&gt;)</code>）。</dd>
  <dt><code>max-content</code></dt>
  <dd>一个关键字，表示以网格项的最大的内容来占据网格轨道。</dd>
  <dt><code>min-content</code></dt>
@@ -75,11 +75,11 @@ grid-auto-columns: unset;
  <dt><code>minmax(min, max)</code></dt>
  <dd>定义一个尺寸范围，即大于或等于 min 值，并且小于或等于 max 值。如果 max 值小于 min 值，那么 max 值会被忽略并且最终表现为 min 值。最大值可以设置为网格轨道系数值<code>&lt;flex&gt;</code> ，但最小值则不行。</dd>
  <dt><code>fit-content(<em>argument</em>)</code></dt>
- <dd>相当于公式 <code>min(max-content, max(auto, <var>argument</var>))</code>，类似于<code>auto</code> 的计算(即 <code>minmax(auto, max-content)</code>)，除了网格轨道大小值是确定下来的，否则该值都大于 <code>auto</code> 的最小值。</dd>
+ <dd>相当于公式 <code>min(max-content, max(auto, <var>argument</var>))</code>，类似于<code>auto</code> 的计算 (即 <code>minmax(auto, max-content)</code>)，除了网格轨道大小值是确定下来的，否则该值都大于 <code>auto</code> 的最小值。</dd>
  <dt><code>auto</code></dt>
  <dd>如果该网格轨道为最大时，该属性等同于 <code>&lt;max-content&gt;</code> ，为最小时，则等同于 <code>&lt;min-content&gt;</code> 。</dd>
  <dd>
- <p class="note">Note: <code>auto</code> 轨道尺寸 (且只为 <code>auto</code> 值时) 才可以被 {{cssxref("align-content")}} 和 {{cssxref("justify-content")}} 属性拉伸。</p>
+ <p>Note: <code>auto</code> 轨道尺寸 (且只为 <code>auto</code> 值时) 才可以被 {{cssxref("align-content")}} 和 {{cssxref("justify-content")}} 属性拉伸。</p>
  </dd>
 </dl>
 
@@ -149,7 +149,7 @@ grid-auto-columns: unset;
  <li>Video tutorial: <em><a href="http://gridbyexample.com/video/series-auto-placement-order/">Introducing Grid auto-placement and order</a></em></li>
 </ul>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
  <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>

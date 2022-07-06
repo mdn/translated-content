@@ -18,7 +18,7 @@ translation_of: Web/API/URL/searchParams
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">const <em>urlSearchParams</em> = <em>url</em>.searchParams</pre>
+<pre class="syntaxbox notranslate brush: js">const <em>urlSearchParams</em> = <em>url</em>.searchParams</pre>
 
 <h3 id="属性值">属性值</h3>
 
@@ -26,7 +26,7 @@ translation_of: Web/API/URL/searchParams
 
 <h2 id="例子">例子</h2>
 
-<p>如果你的 URL 是 <code>https://example.com/?name=Jonathan&amp;age=18</code> ，你可以这样解析 URL，然后得到 <code>name</code> 和 <code>age</code> 的值。</p>
+<p>如果你的 URL 是 <code>https://example.com/?name=Jonathan%20Smith&amp;age=18</code> ，你可以这样解析 URL，然后得到 <code>name</code> 和 <code>age</code> 的值。</p>
 
 <pre class="brush: js notranslate">let params = (new URL(document.location)).searchParams;
 let name = params.get('name'); // is the string "Jonathan Smith".

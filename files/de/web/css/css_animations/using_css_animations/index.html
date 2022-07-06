@@ -4,7 +4,7 @@ slug: Web/CSS/CSS_Animations/Using_CSS_animations
 translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 original_slug: Web/CSS/CSS_Animations/CSS_Animationen_nutzen
 ---
-<p>{{SeeCompatTable}}{{CSSRef}}</p>
+<p>{{CSSRef}}</p>
 
 <p><span class="seoSummary"><strong>CSS Animationen</strong> ermöglichen animierte Übergänge von einem CSS Style-Konfiguration zur nächsten. Die Animationen bestehen aus zwei Komponenten: Einem Style, der die Animation beschreibt, sowie einer Menge von Keyframes, die Start, Ende und mögliche Zwischenpositionen der Animation festlegt.</span></p>
 
@@ -16,9 +16,9 @@ original_slug: Web/CSS/CSS_Animations/CSS_Animationen_nutzen
  <li>Da der Browser die Animation kontrolliert, kann er selbstständig die Performance optimieren, zum Beispiel durch das Drosseln der Freqenz von Animationen in aktuell nicht sichtbaren Browser-Tabs.</li>
 </ol>
 
-<h2 id="Konfigurieren_der_Animation">Konfigurieren der Animation</h2>
+<h2 id="Configuring_the_animation">Konfigurieren der Animation</h2>
 
-<p>Um eine CSS-Animation zu erstellen, fügt man dem zu animierenden Element die {{ cssxref("animation") }}-Eigenschaft oder seine Sub-Eigenschaften zu. So lassen sich Timing und Dauer der Animation sowie weitere Details des Animationsablaufes bestimmen. Man legt damit <strong>nicht </strong>die eigentliche Darstellung der Animation fest, die mittels {{ cssxref("@keyframes") }} definiert wird. Siehe {{ anch("Definieren der Animationssequenz mittels Keyframes") }} weiter unten.</p>
+<p>Um eine CSS-Animation zu erstellen, fügt man dem zu animierenden Element die {{ cssxref("animation") }}-Eigenschaft oder seine Sub-Eigenschaften zu. So lassen sich Timing und Dauer der Animation sowie weitere Details des Animationsablaufes bestimmen. Man legt damit <strong>nicht </strong>die eigentliche Darstellung der Animation fest, die mittels {{ cssxref("@keyframes") }} definiert wird. Siehe <a href="#definieren_der_animationssequenz_mittels_keyframes">Definieren der Animationssequenz mittels Keyframes</a> weiter unten.</p>
 
 <p>Die Sub-Eigenschaften der {{ cssxref("animation") }}-Eigenschaft sind:</p>
 
@@ -39,10 +39,9 @@ original_slug: Web/CSS/CSS_Animations/CSS_Animationen_nutzen
  <dd>Legt fest, welche Styles vor und nach dem Ausführen der Animation auf das animierte Element angewendet werden.</dd>
  <dt>{{ cssxref("animation-play-state") }}</dt>
  <dd>Ermöglicht das Pausieren und Wiederaufnehmen einer Animationssequenz.</dd>
- <dt>
- <h2 id="Definieren_der_Animationssequenz_mittels_Keyframes">Definieren der Animationssequenz mittels Keyframes</h2>
- </dt>
-</dl>
+ </dl>
+
+<h2 id="Defining_the_animation_sequence_using_keyframes">Definieren der Animationssequenz mittels Keyframes</h2>
 
 <p>Nachdem Sie den zeitlichen Ablauf der Animation festgelegt haben, müssen Sie die Erscheinung der Animation festlegen. Sie erreichen dies, indem Sie zwei oder mehr Keyframes mit Hilfe der {{ cssxref("@keyframes") }} at-Regel erstellen. Jeder Keyframe beschreibt den Darstellungszustand des animierten Elements zum gegebenen Zeitpunkt der Animationssequenz.</p>
 
@@ -50,11 +49,11 @@ original_slug: Web/CSS/CSS_Animations/CSS_Animationen_nutzen
 
 <p>Sie können optional zusätzliche Keyframes einfügen, die jeweils Zwischenschritte auf dem Weg vom Start- zum Endpunkt der Animation beschreiben.</p>
 
-<h2 id="Beispiele">Beispiele</h2>
+<h2 id="Examples">Beispiele</h2>
 
 <div class="note"><strong>Hinweis:</strong> Einige ältere Browser (vor 2017) benötigen unter Umständen Präfixe; die Live-Beispiele, welche durch einen Klick im Browser betrachtet werden können, beinhalten die <code>-webkit</code> Präfix-Syntax.</div>
 
-<h3 id="Einen_Text_übers_Fenster_gleiten_lassen.">Einen Text übers Fenster gleiten lassen.</h3>
+<h3 id="Making_text_slide_across_the_browser_window">Einen Text übers Fenster gleiten lassen.</h3>
 
 <p>Dieses einfache Beispiel an einem {{ HTMLElement("p") }}-Element lässt einen Text von rechts über das Browserfenster gleiten.</p>
 
@@ -97,7 +96,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <p>{{EmbedLiveSample("Making_text_slide_across_the_browser_window","100%","250")}}</p>
 
-<h3 id="Hinzufügen_eines_weiteren_Keyframes">Hinzufügen eines weiteren Keyframes</h3>
+<h3 id="Adding_another_keyframe">Hinzufügen eines weiteren Keyframes</h3>
 
 <p>Lassen Sie uns eine weitere Keyframe zur Animation des vorigen Beispiels hinzufügen. Sagen wir, wir wollen zunächst für eine Weile die Schriftgröße des Headers erhöhen, während er sich von rechts nach links bewegt. Am Ende soll sie wieder auf ihre ursprüngliche Größe schrumpfen. Das ist so einfach wie das Hinzufügen dieser Keyframe:</p>
 
@@ -145,7 +144,7 @@ her in a languid, sleepy voice.&lt;/p&gt;</pre>
 
 <p>{{EmbedLiveSample("Adding_another_keyframe","100%","250")}}</p>
 
-<h3 id="Lass_es_sich_wiederholen">Lass es sich wiederholen</h3>
+<h3 id="Making_it_repeat">Lass es sich wiederholen</h3>
 
 <p>Damit die Animation sich wiederholt, nutzen Sie die {{ cssxref("animation-iteration-count") }}-Eigenschaft, um festzulegen, wie oft sich die Animation wiederholen soll. In diesem Beispiel setzen wir sie auf <code>infinite</code>, damit sich die Animation unendlich oft wiederholt:</p>
 
@@ -176,7 +175,7 @@ her in a languid, sleepy voice.&lt;/p&gt;</pre>
 
 <p>{{EmbedLiveSample("Making_it_repeat","100%","250")}}</p>
 
-<h3 id="Lassen_Sie_es_sich_vor-_und_zurück_bewegen">Lassen Sie es sich vor- und zurück bewegen</h3>
+<h3 id="Making_it_move_back_and_forth">Lassen Sie es sich vor- und zurück bewegen</h3>
 
 <p>Die vorige Anpassung sorgte dafür, dass sich die Animation wiederholte. Aber es ist sehr eigenartig, dass die Animation jedes Mal zum Anfang zurückspringt, wenn sie sich wiederholt. Was wir wirklich wollen ist ein Vor- und Zurückbewegen über den Bildschirm. Dazu muss die {{ cssxref("animation-direction") }}-Eigenschaft auf <code>alternate</code> gesetzt werden:</p>
 
@@ -208,7 +207,7 @@ her in a languid, sleepy voice.&lt;/p&gt;</pre>
 
 <p>{{EmbedLiveSample("Making_it_move_back_and_forth","100%","250")}}</p>
 
-<h3 id="Benutzen_der_Animation_Kurzversion">Benutzen der Animation Kurzversion</h3>
+<h3 id="Using_animation_shorthand">Benutzen der Animation Kurzversion</h3>
 
 <p>Die {{cssxref("animation")}}-Kurzversion ist hilfreich, um Platz zu sparen. Zum Beispiel haben wir diese Regel während dieses Artikels genutzt:</p>
 
@@ -231,7 +230,7 @@ her in a languid, sleepy voice.&lt;/p&gt;</pre>
 <p><strong>Hinweis</strong>: Sie können weitere Beispiele auf der Referenzseite von {{cssxref("animation")}} finden.</p>
 </div>
 
-<h3 id="Setzen_mehrere_Animationseigenschaftswerte">Setzen mehrere Animationseigenschaftswerte</h3>
+<h3 id="Setting_multiple_animation_property_values">Setzen mehrere Animationseigenschaftswerte</h3>
 
 <p>Die Langversion der CSS-Animation akzeptiert mehrere durch Komma getrennte Werte — eine Eigenschaft, die genutzt werden kann, um mehrere Animationen in einer einzigen Regel anzuwenden. Daneben lassen sich für die verschiedenen Animationen die Dauer, Anzahl der Wiederholungen usw. einzeln festlegen. Sehen Sie sich die folgenden kurzen Beispiele an, die die verschiedenen Kombinationen erklären:</p>
 
@@ -253,7 +252,7 @@ animation-iteration-count: 2, 1, 5;</pre>
 animation-duration: 2.5s, 5s;
 animation-iteration-count: 2, 1;</pre>
 
-<h3 id="Benutzen_von_Animations-Ereignissen">Benutzen von Animations-Ereignissen</h3>
+<h3 id="Using_animation_events">Benutzen von Animations-Ereignissen</h3>
 
 <p>Sie können zusätzliche Kontrolle über Animationen — sowie mehr nützliche Informationen — erhalten, indem sie Animations-Ereignisse nutzen. Diese Ereignisse werden durch das {{domxref("AnimationEvent")}}-Objekt repräsentiert. Es kann genutzt werden, um den Start, das Ende oder den Beginn einer Wiederholung zu erkennen. Jedes Ereignis beinhaltet die Zeit, an der es auftrat sowie den Namen der Animation, welche es getriggert hat.</p>
 
@@ -282,7 +281,7 @@ animation-iteration-count: 2, 1;</pre>
   }
 }</pre>
 
-<h4 id="Hinzufügen_der_Animations-Ereignis-Listener">Hinzufügen der Animations-Ereignis-Listener</h4>
+<h4 id="Adding_the_animation_event_listeners">Hinzufügen der Animations-Ereignis-Listener</h4>
 
 <p>Wir verwenden JavaScript-Code, um auf alle drei möglichen Animationsereignisse zu aluschen. Der folgende Code konfiguriert unsere Event Listener. Wir rufen ihn auf, wenn das Dokument das erste Mal geladen wurde, um die Dinge einzurichten.</p>
 
@@ -298,7 +297,7 @@ element.className = "slidein";
 
 <p>Warum? Weil das <code>animationstart</code> Ereignis mit dem Beginn der Animation gestartet wird. In unserem Falle vor Ausführung des Codes. Daher starten wir die Animation selber durch das Setzen von class auf dem Element zu dem Werte, welches die Animation steuert.</p>
 
-<h4 id="Empfangen_von_Ereignissen">Empfangen von Ereignissen</h4>
+<h4 id="Receiving_the_events">Empfangen von Ereignissen</h4>
 
 <p>Die Ereignisse werden an die untenstehende <code>listener()</code> Funktion durchgereicht.</p>
 
@@ -351,7 +350,7 @@ element.className = "slidein";
 
 <p>Hier gibt es eine Live-Ausgabe:</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Hinweis</strong>: Laden Sie die Seite neu, um die Animation zu sehen. Oder klicken Sie auf den CodePen-Knopf, um die Animation innerhalb der CodePen-Umgebung zu betrachten.</p>
 </div>
 
@@ -361,6 +360,6 @@ element.className = "slidein";
 
 <ul>
  <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/CSS/CSS_animations/Detecting_CSS_animation_support" title="en/CSS/CSS animations/Detecting CSS animation support">Detecting CSS animation support</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">Using CSS transitions</a></li>
+ <li><a href="/en-US/docs/CSS/CSS_animations/Detecting_CSS_animation_support" title="en/CSS/CSS animations/Detecting CSS animation support">Detecting CSS animation support</a></li>
+ <li><a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">Using CSS transitions</a></li>
 </ul>

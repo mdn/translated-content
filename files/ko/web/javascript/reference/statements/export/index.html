@@ -80,17 +80,17 @@ export default class { ... }
 
 <p>반면 기본 내보내기는 어떤 이름으로도 가져올 수 있습니다.</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="comment token">// test.js</span>
-<span class="keyword token">let</span> k<span class="punctuation token">;</span> <span class="keyword token">export</span> <span class="keyword token">default</span> k <span class="operator token">=</span> <span class="number token">12</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">// test.js
+let k; export default k = 12;</code></pre>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="comment token">// 임의의 다른 파일</span>
-<span class="keyword token">import</span> m <span class="keyword token">from</span> <span class="string token">'./test'</span><span class="punctuation token">;</span> <span class="comment token">// k가 기본 내보내기이므로, 가져오는 이름으로 k 대신 m을 사용해도 문제 없음</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>m<span class="punctuation token">)</span><span class="punctuation token">;</span>         <span class="comment token">// 12 기록</span></code></pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">// 임의의 다른 파일
+import m from './test'; // k가 기본 내보내기이므로, 가져오는 이름으로 k 대신 m을 사용해도 문제 없음
+console.log(m);         // 12 기록</code></pre>
 
 <p>식별자 충돌을 피하기 위해 유명 내보내기 중 이름을 바꿔줄 수도 있습니다.</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">export</span> <span class="punctuation token">{</span> myFunction <span class="keyword token">as</span> function1<span class="punctuation token">,</span>
-         myVariable <span class="keyword token">as</span> variable <span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">export { myFunction as function1,
+         myVariable as variable };</code></pre>
 
 <h3 id="다시_내보내기_조합">다시 내보내기 / 조합</h3>
 
@@ -148,7 +148,7 @@ console.log(foo);    // 4.555806215962888</pre>
 
 <h3 id="기본_내보내기_사용">기본 내보내기 사용</h3>
 
-<p>단일 값을 내보낼 때나 모듈의 폴백<sup>fallback</sup> 값이 필요할 땐 기본 내보내기를 사용할 수 있습니다.</p>
+<p>단일 값을 내보낼 때나 모듈의 폴백 값이 필요할 땐 기본 내보내기를 사용할 수 있습니다.</p>
 
 <pre class="brush: js">// module "my-module.js"
 export default function cube(x) {
@@ -160,7 +160,7 @@ export default function cube(x) {
 <pre class="brush: js">import cube from './my-module.js';
 console.log(cube(3)); // 27</pre>
 
-<p><code><font face="Open Sans, arial, sans-serif">e</font>xport default</code>를 사용할 때 <code>var</code>, <code>let</code>, <code>const</code>는 사용하지 못합니다.</p>
+<p><code>export default</code>를 사용할 때 <code>var</code>, <code>let</code>, <code>const</code>는 사용하지 못합니다.</p>
 
 <h2 id="명세">명세</h2>
 

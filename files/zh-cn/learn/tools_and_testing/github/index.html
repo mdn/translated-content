@@ -3,9 +3,9 @@ title: Git 和 GitHub
 slug: Learn/Tools_and_testing/GitHub
 translation_of: Learn/Tools_and_testing/GitHub
 ---
-<div>{{LearnSidebar}}{{draft}}</div>
+<div>{{LearnSidebar}}</div>
 
-<p class="summary">所有开发者都将使用到<strong>版本控制系统</strong> (<strong> V</strong>ersion <strong>C</strong>ontrol <strong>S</strong>ystem, 简称<strong> VCS</strong> ), 这种工具让他们在分工合作时避免了不必要的重复与冲突，如果遇到什么问题，也可以及时回退到之前的版本。当今最流行的<strong>版本控制系统</strong>（至少在网络开发者中是这样的）是<strong> Git</strong>，和与之关联的编程社区网站<strong> GitHub</strong> 。这篇短文将带你简单地了解他们。</p>
+<p>所有开发者都将使用到<strong>版本控制系统</strong> (<strong> V</strong>ersion <strong>C</strong>ontrol <strong>S</strong>ystem, 简称<strong> VCS</strong> ), 这种工具让他们在分工合作时避免了不必要的重复与冲突，如果遇到什么问题，也可以及时回退到之前的版本。当今最流行的<strong>版本控制系统</strong>（至少在网络开发者中是这样的）是<strong> Git</strong>，和与之关联的编程社区网站<strong> GitHub</strong> 。这篇短文将带你简单地了解他们。</p>
 
 <h2 id="主要介绍"><strong>主要介绍</strong></h2>
 
@@ -15,13 +15,13 @@ translation_of: Learn/Tools_and_testing/GitHub
  <li>我们很少独自完成一个项目，而在分工合作的同时我们都会有与他人的工作相冲突的风险：尤其是当两个人同时尝试修改同一段代码的时候。所以我们需要有相应的机制用以避免这种情况。</li>
  <li>在开发一个项目的时候，我们希望能将代码及时保存，这样就可以避免像电脑突然崩溃辛苦全部白费这样的尴尬局面。</li>
  <li>如果后期发现了问题，我们可能还会需要退回更早的版本。有的小朋友也许想到可以通过创建一堆 <code>myCode.js</code>, <code>myCode_v2.js</code>, <code>myCode_v3.js</code>, <code>myCode_final.js</code>, <code>myCode_really_really_final.js</code> 之类的文件用于保存历史版本，但这个方法不妥，容易出错。</li>
- <li>不同的团队成员也会需要创建他们自己的独特的版本（在Git中叫做<strong>branches</strong> (分支)），他们在这里添加一些新的功能特性，然后通过一些可控的方法（在 GitHub 中我们使用 <strong>pull request</strong> (拉取请求)）将它们贡献到原来的主干项目中。</li>
+ <li>不同的团队成员也会需要创建他们自己的独特的版本（在 Git 中叫做<strong>branches</strong> (分支)），他们在这里添加一些新的功能特性，然后通过一些可控的方法（在 GitHub 中我们使用 <strong>pull request</strong> (拉取请求)）将它们贡献到原来的主干项目中。</li>
 </ul>
 
-<p>版本控制系统提供了能够满足以上需求的工具。<a href="https://git-scm.com/">Git</a> 是版本控制系统的典范，而 <a href="https://github.com/">GitHub</a> 是一个为个人或团队操作 Git 储存库 ( Git Repositories) 提供了 Git 服务器和一系列非常实用的工具的网站+基础设施。它提供了报告代码错误、检查工具以及分配任务和任务状态等项目管理工具等等。</p>
+<p>版本控制系统提供了能够满足以上需求的工具。<a href="https://git-scm.com/">Git</a> 是版本控制系统的典范，而 <a href="https://github.com/">GitHub</a> 是一个为个人或团队操作 Git 储存库 ( Git Repositories) 提供了 Git 服务器和一系列非常实用的工具的网站 + 基础设施。它提供了报告代码错误、检查工具以及分配任务和任务状态等项目管理工具等等。</p>
 
 <div class="blockIndicator note">
-<p><strong>温馨提示</strong>： Git 实际上是一个分散式的版本控制系统，这意味你和其他所有人的电脑上都可以有一个这个复制了这个项目所有源代码的储存库的副本。你在自己的副本上进行了修改，然后提交给服务器，在那里将由这个项目的管理者来决定是否将你的修改添加到主本中。</p>
+<p><strong>温馨提示</strong>：Git 实际上是一个分散式的版本控制系统，这意味你和其他所有人的电脑上都可以有一个这个复制了这个项目所有源代码的储存库的副本。你在自己的副本上进行了修改，然后提交给服务器，在那里将由这个项目的管理者来决定是否将你的修改添加到主本中。</p>
 </div>
 
 <h2 id="事先准备">事先准备</h2>
@@ -30,7 +30,7 @@ translation_of: Learn/Tools_and_testing/GitHub
 
 <ul>
  <li>安装了 Git 的台式电脑（详见 <a href="https://git-scm.com/downloads">Git 下载网址</a>）。</li>
- <li>用于使用 Git 的工具。你可以使用一个 <a href="https://git-scm.com/downloads/guis/">Git 图形操作界面客户端</a> （我们推荐 GitHub Desktop 、 Source Tree 或者 Git Kraken）或者也可以直接使用命令行，这取决于你的喜好。事实上，尽管你打算使用图形界面进行操作，了解一些基本的 Git 命令行指令也或许会比较有用。</li>
+ <li>用于使用 Git 的工具。你可以使用一个 <a href="https://git-scm.com/downloads/guis/">Git 图形操作界面客户端</a> （我们推荐 GitHub Desktop、Source Tree 或者 Git Kraken）或者也可以直接使用命令行，这取决于你的喜好。事实上，尽管你打算使用图形界面进行操作，了解一些基本的 Git 命令行指令也或许会比较有用。</li>
  <li><a href="https://github.com/join">GitHub 账户</a>。如果还没有的话，现在就通过这个链接去注册一个吧！</li>
 </ul>
 
@@ -47,31 +47,31 @@ translation_of: Learn/Tools_and_testing/GitHub
 <p>先提醒一下这些链接将会带你去访问一些外部资源。我们最终将致力于开发我们专属的 Git 和 GitHub 教程，但现在，这些资料将会带你轻松入门。</p>
 
 <dl>
- <dt><a href="https://guides.github.com/activities/hello-world/">Hello World【 欢迎来到新世界】 (来自 GitHub)</a></dt>
+ <dt><a href="https://guides.github.com/activities/hello-world/">Hello World【欢迎来到新世界】 (来自 GitHub)</a></dt>
  <dd>这里是开始使用 GitHub 的正大门，在这里你可以学到 Git 的基础操作，例如：创建<strong>储存库 (Repository) </strong>和<strong>分支 (Brunch) </strong>、<strong>确认提交 (commit)</strong> 以及打开和合并<strong>拉取请求</strong> (open/merge <strong>Pull Request</strong>)。</dd>
- <dt><a href="https://guides.github.com/introduction/git-handbook/">Git Handbook 【使用手册】 (来自 GitHub)</a></dt>
+ <dt><a href="https://guides.github.com/introduction/git-handbook/">Git Handbook【使用手册】 (来自 GitHub)</a></dt>
  <dd>这个 Git 使用手册就稍微更深入一点了，它解释了什么是<strong>版本控制系统</strong>、什么是<strong>储存库</strong> <strong>(Repository) </strong>、<strong> GitHub 模型</strong>如何运行、 <strong>Git 指令</strong>和示例等。</dd>
- <dt><a href="https://guides.github.com/activities/forking/">Forking Projects 【复刻项目】 (来自 GitHub)</a></dt>
+ <dt><a href="https://guides.github.com/activities/forking/">Forking Projects【复刻项目】 (来自 GitHub)</a></dt>
  <dd>当你想要对别人的代码做出贡献时，<strong>复刻</strong>（<strong>fork</strong>，即服务端代码仓库复制）是必不可少的步骤。这个链接将告诉你如何操作。</dd>
- <dt><a href="https://help.github.com/en/articles/about-pull-requests">About Pull Requests 【关于拉取请求】 (来自 GitHub)</a></dt>
+ <dt><a href="https://help.github.com/en/articles/about-pull-requests">About Pull Requests【关于拉取请求】 (来自 GitHub)</a></dt>
  <dd>这是一个管理拉取请求的有用的指南：你所修改的代码需要通过拉取请求来让项目的管理者决定是否采纳。</dd>
- <dt><a href="https://guides.github.com/features/issues/">Mastering issues 【处理问题】 (来自 GitHub)</a></dt>
+ <dt><a href="https://guides.github.com/features/issues/">Mastering issues【处理问题】 (来自 GitHub)</a></dt>
  <dd><strong>问题区</strong> (<strong>Issues</strong>) 就像是一个关于你这个 GitHub 项目的论坛，在这里人们可以提问题和报告错误，你可以管理更新（例如给人们分配需要解决的问题、澄清问题以及告知问题已经解决）。这篇文章会让你知道所需要的一些关于问题区的知识。</dd>
 </dl>
 
 <div class="blockIndicator note">
-<p><strong>温馨提示：</strong> 在 Git 和 GitHub 上面你还可以做一大堆事情，但我们认为，如果你想要有效地使用 Git ，上面的这些知识是至少应该具备的。当你更深入地了解 Git 时，你将会意识到，当你开始使用更加复杂的指令时会更容易出错。但不要担心，即使是专业的网络工程师有时都会感到困惑，并通过网络检索或 <a href="https://github.com/k88hudson/git-flight-rules">Flight rules for Git</a> 和<a href="https://dangitgit.com/"> Dangit, git!</a> 这样的网站来寻找答案。</p>
+<p><strong>温馨提示：</strong> 在 Git 和 GitHub 上面你还可以做一大堆事情，但我们认为，如果你想要有效地使用 Git，上面的这些知识是至少应该具备的。当你更深入地了解 Git 时，你将会意识到，当你开始使用更加复杂的指令时会更容易出错。但不要担心，即使是专业的网络工程师有时都会感到困惑，并通过网络检索或 <a href="https://github.com/k88hudson/git-flight-rules">Flight rules for Git</a> 和<a href="https://dangitgit.com/"> Dangit, git!</a> 这样的网站来寻找答案。</p>
 </div>
 
 <h2 id="还可以看看">还可以看看</h2>
 
 <ul>
- <li><a href="https://guides.github.com/introduction/flow/">Understanding the GitHub flow 【理解 GitHub 流程】</a></li>
- <li><a href="https://git-scm.com/docs">Git command list 【指令列表】</a></li>
- <li><a href="https://guides.github.com/features/mastering-markdown/">Mastering markdown 【掌握 Markdown 格式】</a> （在网页上、评论区常用的格式以及 <code>.md</code> 文件所使用的格式，GitHub 中的介绍文件 (readme.md) 即用这种格式书写）。</li>
- <li><a href="https://guides.github.com/features/pages/">Getting Started with GitHub Pages 【入门 Github 页面】</a> （如何在 GitHub 上发布示例和网站）。</li>
- <li><a href="https://learngitbranching.js.org/">Learn Git branching 【学习 Git 的分支结构】</a></li>
- <li><a href="https://github.com/k88hudson/git-flight-rules">Flight rules for Git 【Git 中的飞行法则】</a> （ 在Git中实现特定功能的非常有用的方法介绍纲要，包括如何在出错时纠错等）。</li>
+ <li><a href="https://guides.github.com/introduction/flow/">Understanding the GitHub flow【理解 GitHub 流程】</a></li>
+ <li><a href="https://git-scm.com/docs">Git command list【指令列表】</a></li>
+ <li><a href="https://guides.github.com/features/mastering-markdown/">Mastering markdown【掌握 Markdown 格式】</a> （在网页上、评论区常用的格式以及 <code>.md</code> 文件所使用的格式，GitHub 中的介绍文件 (readme.md) 即用这种格式书写）。</li>
+ <li><a href="https://guides.github.com/features/pages/">Getting Started with GitHub Pages【入门 Github 页面】</a> （如何在 GitHub 上发布示例和网站）。</li>
+ <li><a href="https://learngitbranching.js.org/">Learn Git branching【学习 Git 的分支结构】</a></li>
+ <li><a href="https://github.com/k88hudson/git-flight-rules">Flight rules for Git【Git 中的飞行法则】</a> （在 Git 中实现特定功能的非常有用的方法介绍纲要，包括如何在出错时纠错等）。</li>
  <li>
   <p><a href="https://dangitgit.com/">Dangit, git! 【#网络和谐#，Git !】</a>（另一个十分有用的方法介绍纲要，特别是在出错的时候进行纠正的方法）。</p>
  </li>

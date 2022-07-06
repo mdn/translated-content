@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/progress
 ---
 <h2 id="概述">概述</h2>
 
-<p><strong>HTML</strong>中的<strong><code>&lt;progress&gt;</code></strong>元素用来显示一项任务的完成进度.虽然规范中没有规定该元素具体如何显示,浏览器开发商可以自己决定,但通常情况下,该元素都显示为一个进度条形式.</p>
+<p><strong>HTML</strong>中的<strong><code>&lt;progress&gt;</code></strong>元素用来显示一项任务的完成进度。虽然规范中没有规定该元素具体如何显示，浏览器开发商可以自己决定，但通常情况下，该元素都显示为一个进度条形式。</p>
 
 <p>{{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}</p>
 
@@ -15,16 +15,16 @@ translation_of: Web/HTML/Element/progress
 
 <h2 id="使用上下文">使用上下文</h2>
 
-<pre class="syntaxbox notranslate"><strong>使用策略                </strong>流文本(<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>), 短文本(<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>)
-<strong><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Content_categories">Content categories</a>     </strong>可标记内容,可触摸内容
+<pre class="syntaxbox notranslate"><strong>使用策略                </strong>流文本 (<a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>), 短文本 (<a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>)
+<strong><a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a>     </strong>可标记内容，可触摸内容
 
-<strong>有效内容                </strong><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>, 其中在它的后代中不能包含
-<strong>Permitted content</strong>      <code>&lt;progress&gt;</code>元素.
+<strong>有效内容                </strong><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>, 其中在它的后代中不能包含
+<strong>Permitted content</strong>      <code>&lt;progress&gt;</code>元素。
 
-<strong>标签省略                </strong>不可以,{{no_tag_omission}}
+<strong>标签省略                </strong>不可以，{{no_tag_omission}}
 <strong>Tag omission</strong>
 
-<strong>有效的父元素</strong>             任何可以包裹短文本(<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>)的元素.
+<strong>有效的父元素</strong>             任何可以包裹短文本 (<a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>) 的元素。
 
 <strong>隐式元素                </strong>{{ARIARole("progressbar")}}
 <strong>ARIA role</strong>
@@ -32,22 +32,22 @@ translation_of: Web/HTML/Element/progress
 <strong>有效的辅助元素            </strong>无
 <strong>ARIA roles</strong>
 
-<strong>DOM接口</strong>                {{domxref("HTMLProgressElement")}}
+<strong>DOM 接口</strong>                {{domxref("HTMLProgressElement")}}
 </pre>
 
 <h2 id="属性">属性</h2>
 
-<p>和其他的HTML元素一样,该元素具有<a href="/zh-cn/HTML/Global_attributes" rel="internal">全局属性</a>.</p>
+<p>和其他的 HTML 元素一样，该元素具有<a href="/zh-cn/HTML/Global_attributes" rel="internal">全局属性</a>.</p>
 
 <dl>
  <dt>{{ htmlattrdef("max") }}</dt>
- <dd>该属性描述了这个<code>progress</code>元素所表示的任务一共需要完成多少工作.</dd>
+ <dd>该属性描述了这个<code>progress</code>元素所表示的任务一共需要完成多少工作。</dd>
  <dt>{{ htmlattrdef("value") }}</dt>
- <dd>该属性用来指定该进度条已完成的工作量.如果没有<code>value属性</code>,则该进度条的进度为"不确定",也就是说,进度条不会显示任何进度,你无法估计当前的工作会在何时完成(比如在下载一个未知大小的文件时,下载对话框中的进度条就是这样的).</dd>
+ <dd>该属性用来指定该进度条已完成的工作量。如果没有<code>value 属性</code>,则该进度条的进度为"不确定",也就是说，进度条不会显示任何进度，你无法估计当前的工作会在何时完成 (比如在下载一个未知大小的文件时，下载对话框中的进度条就是这样的).</dd>
 </dl>
 
 <div class="blockIndicator note">
-<p><strong>Note: </strong>你可以使用{{ cssxref("orient") }}属性来指定该进度条的显示方向是横向(默认)还是纵向.CSS伪类{{ cssxref(":indeterminate") }}可以用来匹配那些不确定的进度条.</p>
+<p><strong>Note: </strong>你可以使用{{ cssxref("orient") }}属性来指定该进度条的显示方向是横向 (默认) 还是纵向.CSS 伪类{{ cssxref(":indeterminate") }}可以用来匹配那些不确定的进度条。</p>
 </div>
 
 <dl>
@@ -55,7 +55,7 @@ translation_of: Web/HTML/Element/progress
 
 <h2 id="DOM_接口">DOM 接口</h2>
 
-<p>该元素实现了<code><a href="/zh-cn/DOM/HTMLProgressElement" title="zh-cn/DOM/HTMLProgressElement">HTMLProgressElement</a></code>接口.</p>
+<p>该元素实现了<code><a href="/zh-cn/DOM/HTMLProgressElement" title="zh-cn/DOM/HTMLProgressElement">HTMLProgressElement</a></code>接口。</p>
 
 <h2 id="例子">例子</h2>
 
@@ -66,11 +66,11 @@ translation_of: Web/HTML/Element/progress
 
 <p>{{ EmbedLiveSample("Examples", 200, 50) }}</p>
 
-<p>在Mac OS X上,显示的进度条如下:</p>
+<p>在 Mac OS X 上，显示的进度条如下：</p>
 
 <p><img alt="progress-1.png" class="default internal" src="/@api/deki/files/4946/=progress-1.png"></p>
 
-<p>在Windows上,显示的进度条如下:</p>
+<p>在 Windows 上，显示的进度条如下：</p>
 
 <p><img alt="progress-firefox.JPG" class="default internal" src="/@api/deki/files/6031/=progress-firefox.JPG"></p>
 

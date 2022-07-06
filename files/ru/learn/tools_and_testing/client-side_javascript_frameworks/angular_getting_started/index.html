@@ -1,0 +1,335 @@
+---
+title: Начало работы с Angular
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
+original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
+translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
+tags:
+  - Новички
+  - Фреймворки
+  - Установка
+  - JavaScript
+  - Изучение
+  - client-side
+  - Angular
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+
+<p class="summary">Пришло время взглянуть на фреймворк от Google — Angular, еще один популярный вариант, с которым вы часто будете сталкиваться. В этой статье мы рассмотрим, что Angular может предложить, установим необходимые компоненты, запустим пример приложения, и разберём базовую архитектуру Angular.</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Необходимые условия:</th>
+   <td>Понимание основ <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, и <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>, знание <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">терминала/командной строки</a>.
+   </td>
+  </tr>
+  <tr>
+   <th scope="row">Цель:</th>
+   <td>Настроить локальную среду разработки Angular, создать стартовое приложение, и понять основные принципы работы.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="what_is_angular">Что такое Angular?</h2>
+
+<p>Angular — это платформа для разработки, написанная на <a href="https://www.typescriptlang.org/">TypeScript</a>. Как платформа Angular включает:</p>
+
+<ul>
+  <li>Основанный на компонентах фреймворк для создания масштабируемых веб-приложений</li>
+  <li>Набор хорошо интегрированных библиотек, охватывающих широкий спектр функций: маршрутизация, управление формами, клиент-серверное взаимодействие и т.д.</li>
+  <li>Набор инструментов разработчика, которые помогут вам разрабатывать, собирать, тестировать и обновлять ваш код</li>
+</ul>
+
+<p>Когда вы создаете приложение с помощью Angular, вы пользуетесь преимуществами платформы, которая может масштабироваться от проекта, который разрабатывает один человек, до приложений корпоративного уровня. Angular разработан, чтобы максимально упростить обновление, поэтому вы можете использовать последние разработки с минимумом усилий. А самое замечательное то, что экосистема Angular состоит из огромного сообщества, включающего более чем 1.7 миллиона разработчиков, авторов библиотек и создателей контента.</p>
+
+<p>Прежде, чем приступить к изучению платформы Angular, сначала стоит познакомиться с Angular CLI. Angular CLI - это быстрый, простой и рекомендуемый способ разработки Angular-приложений. Angular CLI облегчает выполнение ряда задач. Вот некоторые из них:</p>
+
+<table class="standard-table">
+<tr>
+<td><code><a href="https://angular.io/cli/build">ng build</a></code></td>
+<td>Компилирует Angular-приложение в выходной каталог.</td>
+</tr>
+<tr>
+<td><code><a href="https://angular.io/cli/serve">ng serve</a></code></td>
+<td>Собирает и запускает ваше приложение, пересобирая его при изменении файлов.</td>
+</tr>
+<tr>
+<td><code><a href="https://angular.io/cli/generate">ng generate</a></code></td>
+<td>Генерирует или изменяет файлы на основе схематиков</td>
+</tr>
+<tr>
+<td><code><a href="https://angular.io/cli/test">ng test</a></code></td>
+<td>Запускает модульные тесты для заданного проекта.</td>
+</tr>
+<tr>
+<td><code><a href="https://angular.io/cli/e2e">ng e2e</a></code></td>
+<td>Собирает и запускает Angular-приложение, запуская затем сквозные тесты.</td>
+</tr>
+</table>
+
+<p>Скоро вы сами убедитесь, что Angular CLI является полезным инструментом для создания ваших приложений.</p>
+
+<h2 id="what-you-ll-build">Что вы создадите</h2>
+
+<p>Эта серия руководств проведёт вас через создание приложения со списком дел (to-do list). С помощью этого приложения вы узнаете, как использовать Angular для управления, редактирования, добавления, удаления и фильтрации элементов.</p>
+
+<h2 id="prerequisites">Необходимые условия</h2>
+
+<p>Чтобы установить Angular в вашей локальной системе, вам понадобится следующее:</p>
+
+<ul>
+  <li><p><strong>Node.js</strong></p>
+    <p>Angular требует <a href="https://nodejs.org/about/releases">текущую, последнюю LTS, или поддерживаемую LTS</a> версию Node.js. Для получения информации о конкретных требованиях к версии смотрите ключ <code>engines</code> в <a href="https://unpkg.com/@angular/cli/package.json">package.json</a> файле.</p>
+    <p>Для получения дополнительной информации о установке Node.js смотрите <a href="https://nodejs.org" title="Nodejs.org">nodejs.org</a>.
+Если вы не знаете какая версия Node.js установлена в вашей системе, запустите <code>node -v</code> в терминале.</p>
+  </li>
+  <li><p><strong>пакетный менеджер npm</strong></p>
+    <p>Angular, Angular CLI, Angular приложения зависят от <a href="https://docs.npmjs.com/getting-started/what-is-npm">npm пакетов</a> которые обеспечивают множество функций.
+    Для загрузки и установки npm пакетов, вам необходим пакетный менеджер npm.
+    Это руководство использует <a href="https://docs.npmjs.com/cli/install">npm</a> через интерфейс командной строки, который устанавливается с <code>Node.js</code> по умолчанию.
+    Для того, чтобы узнать какая версия npm установлена, запустите <code>npm -v</code> в терминале.</p>
+  </li>
+</ul>
+
+<h2 id="set_up_your_application">Настройка приложения</h2>
+
+<p>Вы можете использовать Angular CLI, запуская команды в терминале для генерации, сборки, тестирования, и развертывания приложений на Angular.
+Для установки Angular CLI, запустите следующие команды в терминале:</p>
+
+<pre class="brush: js">npm install -g @angular/cli</pre>
+
+<p>Команды Angular CLI начинаются с <code>ng</code>, за которым следует то, что вы хотите CLI сделал.
+В рабочей директории (например, Desktop) выполните команду <code>ng new</code>, чтобы создать новое приложение под названием <code>todo</code>:</p>
+
+<pre class="brush: js">ng new todo --routing=false --style=css</pre>
+
+<p>В текущей директории команда <code>ng new</code> создаст необходимое для работы маленькое Angular-приложение.
+Дополнительные флаги, <code>--routing</code> и <code>--style</code>, определяют, как обрабатывать навигацию и стили в приложении.
+В этом руководстве эти функции будут описаны позже.</p>
+
+<p>Если вам будет предложено применить строгую проверку типов, вы можете ответить "yes".</p>
+
+<p>Перейдите в ваш новый проект с помощью команды <code>cd</code>:</p>
+
+<pre class="brush: js">cd todo</pre>
+
+<p>Запустите ваше приложение <code>todo</code>, выполнив команду <code>ng serve</code>:</p>
+
+<pre class="brush: js">ng serve</pre>
+
+<p>Когда CLI спросить про аналитику, ответьте <code>no</code>.</p>
+
+<p>В браузере перейдите на <a href="http://localhost:4200/">http://localhost:4200/</a>, и вы увидите ваше новое приложение.
+Если измените любой из исходных файлов, приложение автоматически перезагрузится.</p>
+
+<p>Пока выполняется <code>ng serve</code>, запускать другие команды можно в новой вкладке или окне терминала.
+Если вы захотите остановить работу приложения, нажмите <code>Ctrl+c</code> в терминале, где оно было запущено.</p>
+
+<h2 id="get_familiar_with_your_angular_application">Знакомство с вашим Angular приложением</h2>
+
+<p>Исходные файлы, на которых будет сосредоточено внимание в этом руководстве находится в <code>src/app</code>.
+Файлы, генерируемые CLI автоматически, на которые стоит обратить внимание:</p>
+
+<ol>
+  <li><code>app.module.ts</code>: определяет файлы, которые использует приложение.
+Этот файл действует как центральный узел для других файлов в вашем приложении.</li>
+  <li><code>app.component.ts</code>: Определяет класс, который содержит логику основной страницы приложения.</li>
+  <li><code>app.component.html</code>: Содержит HTML для <code>AppComponent</code>. Содержимое этого файла также называется шаблоном.
+Шаблон определяет представление или то, что вы видите в браузере.</li>
+  <li><code>app.component.css</code>: Содержит стили для <code>AppComponent</code>. Этот файл используется, когда вам нужно стилизовать определённый компонент, а не всё приложение.</li>
+</ol>
+
+<p>Компонент Angular состоит из трех основных частей: шаблон, стили, и класс.
+Например, <code>app.component.ts</code>, <code>app.component.html</code>, и <code>app.component.css</code> вместе составляют <code>AppComponent</code>.
+Эта структура разделяет логику, представление и стили, чтобы приложение было более масштабируемым и удобным в обслуживании.</p>
+
+<p>Таким образом, с самого начала вы используете лучшие приёмы разработки.</p>
+
+<p>Angular CLI также генерирует файл для тестирования компонента <code>app.component.spec.ts</code>, но в это руководство не входит тестирование, поэтому вы можете игнорировать этот файл.</p>
+
+<p>Каждый раз, когда вы генерируете компонент, CLI создает эти четыре файла в каталоге с указанным вами именем.</p>
+
+<h2 id="the_structure_of_an_angular_application">Структура Angular приложения</h2>
+
+<p>Angular построен на TypeScript.
+TypeScript — это надмножество JavaScript, т.е. любой правильный JavaScript-код будет работать в TypeScript.
+TypeScript предлагает типизацию и более лаконичный синтаксис, чем простой JavaScript, который дает вам инструмент для создание более удобного в сопровождении кода и минимизации ошибок.</p>
+
+<p>Компоненты — это строительные блоки Angular-приложений.
+Компоненты включают TypeScript-класс, который имеет декоратор <code>@Component()</code>, HTML-шаблон и стили.</p>
+
+<h3 id="the_class">Класс</h3>
+
+<p>Класс — это место, где вы помещаете любую логику, которая нужна вашему компоненту.
+Этот код должен включать функции, обработчики событий, свойства, и ссылки на сервисы.
+Класс находится в файле с таким именем, как <code>feature.component.ts</code>, где <code>feature</code> это название вашего компонента.
+Итак, у вас могут быть файлы с такими именами как <code>header.component.ts</code>, <code>signup.component.ts</code>, или <code>feed.component.ts</code>.
+Вы создаете компонент с декоратором <code>@Component()</code>, включающий метаданные, которые сообщают Angular расположение HTML- и CSS-файлов.
+Типичный компонент выглядит так:</p>
+
+<pre class="brush: js">
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-item',
+    // следующие метаданные определяют расположение других частей компонента
+  templateUrl: './item.component.html',
+  styleUrls: ['./item.component.css']
+})
+
+export class ItemComponent {
+// ваш код будет тут
+}</pre>
+
+<p>Компонент называется <code>ItemComponent</code>, и имеет селектор <code>app-item</code>.
+Вы можете использовать этот селектор как и обычные HTML-теги, помещая его в другие шаблоны.
+Когда селектор находится в компоненте, браузер отображает шаблон этого компонента.
+Это руководство поможет вам создать два компонента и использовать один в другом.</p>
+
+<p>Компонентная модель Angular предлагает надежную инкапсуляцию и интуитивно понятную структуру приложения.
+Компоненты также упрощают модульное тестирование вашего приложения и могут улучшить общую читаемость кода.</p>
+
+<h3 id="the_html_template">HTML-шаблоны</h3>
+
+<p>У каждого компонента есть HTML-шаблон, в котором определяется то, что этот компонент будет отображать.
+Шаблон можно задать либо строкой, либо как путь к файлу.</p>
+
+<p>Для ссылки на внешний HTML-файл, используется свойство <code>templateUrl</code>:</p>
+
+<pre class="brush: js">@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html'
+})
+
+export class AppComponent {
+}</pre>
+
+<p>Чтобы указать напрямую HTML-код, используется свойство <code>template</code> с обратными кавычками:</p>
+
+<pre class="brush: js">@Component({
+  selector: 'app-root',
+  template: `&lt;h1&gt;Hi!&lt;/h1&gt;`,
+})
+
+export class AppComponent {
+}</pre>
+
+<p>Angular расширяет HTML дополнительным синтаксисом, который позволяет вставлять динамические данные в компонент.
+Angular автоматически обновляет DOM, когда состояние компонента изменяется.
+Например, этот синтаксис можно применить для  вставки динамического текста, как показано в следующем примере.</p>
+
+<pre class="brush: html">&lt;h1&gt;\{{ title }}&lt;/h1&gt;</pre>
+
+<p>Двойные фигурные скобки говорят Angular, что содержимое внутри них нужно интерполировать.
+Значение для <code>title</code> берется из класса компонента:</p>
+
+<pre class="brush: js">import { Component } from '@angular/core';
+
+@Component ({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+
+export class AppComponent {
+    title = 'To do application';
+}</pre>
+
+<p>Когда приложение загружает компонент и его шаблон, браузер видит следующее:</p>
+
+<pre class="brush: html">&lt;h1&gt;To do application&lt;/h1&gt;
+</pre>
+
+<h3 id="styles">Стили</h3>
+
+<p>Компонент может наследовать общие стили приложения из файла <code>styles.css</code> или переопределять их собственными стилями.
+Вы можете писать стили для конкретных компонентов прямо в декораторе <code>@Component()</code> или указывая путь к CSS-файлу.</p>
+
+<p>Чтобы включить стили непосредственного в декоратор компонента, используется свойство <code>styles</code>:</p>
+
+<pre class="brush: js">@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styles: ['h1 { color: red; }']
+})</pre>
+
+<p>Обычно компонент использует стили определяемые в отельном файле, указанном в свойстве <code>styleUrls</code>:</p>
+
+<pre class="brush: js">@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})</pre>
+
+<p>С помощью стилей для конкретных компонентов вы можете организовывать свой CSS так, чтобы его было легко поддерживать и переносить.</p>
+
+<h2 id="summary">Резюме</h2>
+
+<p>Это ваше первое знакомство с Angular. На этом этапе всё должно быть настроено и готово к созданию Angular-приложения, а у вас быть базовое представление о том, как работает Angular. В следующей статье мы углубим эти знания и начнем создавать структуру вашего приложения списка дел.</p>
+
+<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+
+<h2 id="In_this_module">В это модуле</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Введение в клиентские фреймворки</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Основные функции фреймворков</a></li>
+ <li>React
+  <ul>
+   <li><a href="/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Начало работы с React</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Начало создания приложения списка дел с React</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Компоненты React приложения</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">Интерактивность React: события и состояние</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">Интерактивность React: редактирование, фильтрация, условная отрисовка</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Доступность в React</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">Ресурсы по React</a></li>
+  </ul>
+ </li>
+ <li>Ember
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Начало работы с Ember</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Структура Ember приложения и компоненты</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Интерактивность Ember: события, классы и состояние</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Интерактивность Ember: функциональность подвала, условная отрисовка</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Маршрутизация в Ember</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ресурсы по Ember и устранение неполадок</a></li>
+  </ul>
+ </li>
+ <li>Vue
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Начало работы с Vue</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Создание вашего первого компонента Vue</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Отрисовка списка Vue компонентов</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Добавление новой формы во Vue: события, методы, и модели</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Стилизация Vue компонентов с CSS</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Использование вычисляемых свойств во Vue</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Условная отрисовка во Vue: Редактирование существующих дел</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Управление фокусом во Vue с помощью refs</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Ресурсы по Vue</a></li>
+  </ul>
+ </li>
+ <li>Svelte
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Начало работы со Svelte</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Начинаем приложение списка дел c использованием Svelte</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Динамическое поведение в Svelte: работа с переменными и пропсами</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Компоненты Svelte приложения</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Продвинутый Svelte: реактивность, жизненный цикл, доступность</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Работа хранилищами в Svelte</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">Поддержка TypeScript в Svelte</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Развертывание и следующие шаги</a></li>
+  </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Начало работы с Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Начинаем приложение списка дел с использованием Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Стилизация Angular приложения</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Создание компонента элемента (item component)</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Фильтрация списка дел</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Сборка Angular приложений и другие ресурсы</a></li>
+   </ul>
+ </li>
+</ul>

@@ -84,7 +84,7 @@ original_slug: DragDrop/Drag_and_Drop
 
 <p>A interface HTML drag and drop é composta pelos eventos {{domxref("DragEvent")}}, {{domxref("DataTransfer")}}, {{domxref("DataTransferItem")}} e {{domxref("DataTransferItemList")}}.</p>
 
-<p>A interface {{domxref("DragEvent")}} consiste de um construtor e uma propriedade, a propriedade {{domxref("DragEvent.dataTransfer","dataTransfer")}} que é um objeto {{domxref("DataTransfer")}}. Os objetos {{domxref("DataTransfer")}} incluem estados do evento drag como o tipo de drag sendo feito (por exemplo <code>copy</code> ou <code>move</code>), os dados do do evento drag (um ou mais itens) e o tipo de cada <em>item drag</em> (um MIME type). Objetos {{domxref("DataTransfer")}} também contém métodos para adicionar itens aos dados do drag e remover um item. As interfaces {{domxref("DragEvent")}} e {{domxref("DataTransfer")}} devem as únicas necessárias para adicionar capacidades de drag and drop para uma aplicação. Entretanto, note que o Firefox provê suporte para apenas algumas {{anch("Gecko specific interfaces","Gecko-specific extensions")}} ao objeto {{domxref("DataTransfer")}}, apesar de entretanto essas extensões funcionarem apenas no Firefox.</p>
+<p>A interface {{domxref("DragEvent")}} consiste de um construtor e uma propriedade, a propriedade {{domxref("DragEvent.dataTransfer","dataTransfer")}} que é um objeto {{domxref("DataTransfer")}}. Os objetos {{domxref("DataTransfer")}} incluem estados do evento drag como o tipo de drag sendo feito (por exemplo <code>copy</code> ou <code>move</code>), os dados do do evento drag (um ou mais itens) e o tipo de cada <em>item drag</em> (um MIME type). Objetos {{domxref("DataTransfer")}} também contém métodos para adicionar itens aos dados do drag e remover um item. As interfaces {{domxref("DragEvent")}} e {{domxref("DataTransfer")}} devem as únicas necessárias para adicionar capacidades de drag and drop para uma aplicação. Entretanto, note que o Firefox provê suporte para apenas algumas <a href="#gecko_specific_interfaces">Gecko-specific extensions</a> ao objeto {{domxref("DataTransfer")}}, apesar de entretanto essas extensões funcionarem apenas no Firefox.</p>
 
 <p>Cada objeto {{domxref("DataTransfer")}} contém uma propriedade {{domxref("DataTransfer.items","items")}} que é uma {{domxref("DataTransferItemList","lista")}} dos objetos {{domxref("DataTransferItem")}}. Cada objeto {{domxref("DataTransferItem")}} representa um único <em>drag item</em> e cada item tem uma propriedade {{domxref("DataTransferItem.kind","kind (tipo)")}} que é o <em>tipo(kind)</em> de data (seja ela <code>string</code> ou <code>file</code>) e uma propriedade {{domxref("DataTransferItem.type","type (tipo)")}} que é o tipo de dado do item (ou seja, MIME type). O objeto {{domxref("DataTransferItem")}} também contém métodos para conseguir dados do item arrastável.</p>
 
@@ -92,7 +92,7 @@ original_slug: DragDrop/Drag_and_Drop
 
 <p>A diferença chave entre das interfaces {{domxref("DataTransfer")}} e {{domxref("DataTransferItem")}} é que a primeira usa o método síncrono {{domxref("DataTransfer.getData","getData()")}} para acessar os dados de um item arrastável, e a segunda usa o método assíncrono {{domxref("DataTransferItem.getAsString","getAsString()")}} para acessá-lo.</p>
 
-<p>Note: as interfaces {{domxref("DragEvent")}} e a {{domxref("DataTransfer")}} são vastamente interoperáveis com navegadores desktop. Entretanto, as interfaces {{domxref("DataTransferItem")}} e {{domxref("DataTransferItemList")}} tem suporte limitado entre navegadores. Veja {{anch("Interoperabildade")}} para mais informações.</p>
+<p>Note: as interfaces {{domxref("DragEvent")}} e a {{domxref("DataTransfer")}} são vastamente interoperáveis com navegadores desktop. Entretanto, as interfaces {{domxref("DataTransferItem")}} e {{domxref("DataTransferItemList")}} tem suporte limitado entre navegadores. Veja <a href="#interoperabildade">Interoperabildade</a> para mais informações.</p>
 
 <h3 id="Interfaces_específicas_para_o_Gecko">Interfaces específicas para o Gecko</h3>
 
@@ -244,8 +244,8 @@ function drop_handler(ev) {
 <ul>
  <li><a href="https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html">Copiando e movendo elementos com a interface <code>DataTransfer</code></a></li>
  <li><a href="http://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html">Copiando e movendo elementos com a interface <code>DataTransferListItem</code></a></li>
- <li>Arrastando e soltando arquivos; Apenas para o Firefox: <a href="http://jsfiddle.net/9C2EF/" title="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></li>
- <li>Arrastando e soltando arquivos; Todos os navegadores: <a href="https://jsbin.com/hiqasek/edit?html,js,output" title="https://jsbin.com/hiqasek">https://jsbin.com/hiqasek/</a></li>
+ <li>Arrastando e soltando arquivos; Apenas para o Firefox: <a href="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></li>
+ <li>Arrastando e soltando arquivos; Todos os navegadores: <a href="https://jsbin.com/hiqasek/edit?html,js,output">https://jsbin.com/hiqasek/</a></li>
 </ul>
 
 <h2 id="See_also" name="See_also">Veja também</h2>

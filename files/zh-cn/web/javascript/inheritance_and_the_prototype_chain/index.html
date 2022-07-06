@@ -17,9 +17,9 @@ translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 ---
 <div>{{jsSidebar("Advanced")}}</div>
 
-<p>对于使用过基于类的语言 (如 Java 或 C++) 的开发人员来说，JavaScript 有点令人困惑，因为它是动态的，并且本身不提供一个 <code>class</code> 实现。（在 ES2015/ES6 中引入了 <code>class</code> 关键字，但那只是语法糖，JavaScript 仍然是基于原型的）。</p>
+<p>对于使用过基于类的语言 (如 Java 或 C++) 的开发者们来说，JavaScript 实在是有些令人困惑 —— JavaScript 是动态的，本身不提供一个 <code>class</code> 的实现。即便是在 ES2015/ES6 中引入了 <code>class</code> 关键字，但那也只是语法糖，JavaScript 仍然是基于原型的。</p>
 
-<p>当谈到继承时，JavaScript 只有一种结构：对象。每个实例对象（ object ）都有一个私有属性（称之为 __proto__ ）指向它的构造函数的原型对象（<strong>prototype </strong>）。该原型对象也有一个自己的原型对象( __proto__ ) ，层层向上直到一个对象的原型对象为 <code>null</code>。根据定义，<code>null</code> 没有原型，并作为这个<strong>原型链</strong>中的最后一个环节。</p>
+<p>当谈到继承时，JavaScript 只有一种结构：对象。每个实例对象（object）都有一个私有属性（称之为 __proto__ ）指向它的构造函数的原型对象（<strong>prototype</strong>）。该原型对象也有一个自己的原型对象（__proto__），层层向上直到一个对象的原型对象为 <code>null</code>。根据定义，<code>null</code> 没有原型，并作为这个<strong>原型链</strong>中的最后一个环节。</p>
 
 <p>几乎所有 JavaScript 中的对象都是位于原型链顶端的 {{jsxref("Object")}} 的实例。</p>
 
@@ -32,14 +32,14 @@ translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 <p>JavaScript 对象是动态的属性“包”（指其自己的属性）。JavaScript 对象有一个指向一个原型对象的链。当试图访问一个对象的属性时，它不仅仅在该对象上搜寻，还会搜寻该对象的原型，以及该对象的原型的原型，依次层层向上搜索，直到找到一个名字匹配的属性或到达原型链的末尾。</p>
 
 <div class="note">
-<p>遵循ECMAScript标准，<code>someObject.[[Prototype]]</code> 符号是用于指向 <code>someObject</code> 的原型。从 ECMAScript 6 开始，<code>[[Prototype]]</code> 可以通过 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}} 访问器来访问。这个等同于 JavaScript 的非标准但许多浏览器实现的属性 <code>__proto__</code>。</p>
+<p><strong>备注：</strong>遵循 ECMAScript 标准，<code>someObject.[[Prototype]]</code> 符号是用于指向 <code>someObject</code> 的原型。从 ECMAScript 6 开始，<code>[[Prototype]]</code> 可以通过 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}} 访问器来访问。这个等同于 JavaScript 的非标准但许多浏览器实现的属性 <code>__proto__</code>。</p>
 
 <p>但它不应该与构造函数 <code>func</code> 的 <code>prototype</code> 属性相混淆。被构造函数创建的实例对象的 <code>[[Prototype]]</code> 指向 <code>func</code> 的 <code>prototype</code> 属性。<strong><code>Object.prototype</code> </strong>属性表示 {{jsxref("Object")}} 的原型对象。</p>
 </div>
 
 <p>这里演示当尝试访问属性时会发生什么：</p>
 
-<pre class="brush: js notranslate">// 让我们从一个函数里创建一个对象o，它自身拥有属性a和b的：
+<pre class="brush: js">// 让我们从一个函数里创建一个对象 o，它自身拥有属性 a 和 b 的：
 let f = function () {
    this.a = 1;
    this.b = 2;
@@ -52,7 +52,7 @@ function f() {
 */
 let o = new f(); // {a: 1, b: 2}
 
-// 在f函数的原型上定义属性
+// 在 f 函数的原型上定义属性
 f.prototype.b = 3;
 f.prototype.c = 4;
 
@@ -60,25 +60,25 @@ f.prototype.c = 4;
 // o.[[Prototype]] 有属性 b 和 c
 //  (其实就是 o.__proto__ 或者 o.constructor.prototype)
 // o.[[Prototype]].[[Prototype]] 是 Object.prototype.
-// 最后o.[[Prototype]].[[Prototype]].[[Prototype]]是null
+// 最后 o.[[Prototype]].[[Prototype]].[[Prototype]] 是 null
 // 这就是原型链的末尾，即 null，
 // 根据定义，null 就是没有 [[Prototype]]。
 
-// 综上，整个原型链如下:
+// 综上，整个原型链如下：
 
 // {a:1, b:2} ---&gt; {b:3, c:4} ---&gt; Object.prototype---&gt; null
 
 console.log(o.a); // 1
-// a是o的自身属性吗？是的，该属性的值为 1
+// a 是 o 的自身属性吗？是的，该属性的值为 1
 
 console.log(o.b); // 2
-// b是o的自身属性吗？是的，该属性的值为 2
+// b 是 o 的自身属性吗？是的，该属性的值为 2
 // 原型上也有一个'b'属性，但是它不会被访问到。
 // 这种情况被称为"属性遮蔽 (property shadowing)"
 
 console.log(o.c); // 4
-// c是o的自身属性吗？不是，那看看它的原型上有没有
-// c是o.[[Prototype]]的属性吗？是的，该属性的值为 4
+// c 是 o 的自身属性吗？不是，那看看它的原型上有没有
+// c 是 o.[[Prototype]] 的属性吗？是的，该属性的值为 4
 
 console.log(o.d); // undefined
 // d 是 o 的自身属性吗？不是，那看看它的原型上有没有
@@ -88,7 +88,7 @@ console.log(o.d); // undefined
 
 <p>代码来源链接：<a href="https://repl.it/@khaled_hossain_code/prototype">https://repl.it/@khaled_hossain_code/prototype</a></p>
 
-<p>给对象设置属性会创建自有属性。获取和设置属性的唯一限制是内置 <a href="/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">getter 或 setter</a> 的属性。</p>
+<p>给对象设置属性会创建自有属性。获取和设置行为规则的唯一例外是当继承的属性带有 <a href="/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">getter 或 setter</a> 时。</p>
 
 <h3 id="继承方法">继承方法</h3>
 
@@ -96,7 +96,7 @@ console.log(o.d); // undefined
 
 <p>当继承的函数被调用时，<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a> 指向的是当前继承的对象，而不是继承的函数所在的原型对象。</p>
 
-<pre class="brush: js notranslate">var o = {
+<pre class="brush: js">var o = {
   a: 2,
   m: function(){
     return this.a + 1;
@@ -107,7 +107,7 @@ console.log(o.m()); // 3
 // 当调用 o.m 时，'this' 指向了 o.
 
 var p = Object.create(o);
-// p是一个继承自 o 的对象
+// p 是一个继承自 o 的对象
 
 p.a = 4; // 创建 p 的自身属性 'a'
 console.log(p.m()); // 5
@@ -119,18 +119,18 @@ console.log(p.m()); // 5
 
 <p>接下去，来仔细分析一下这些应用场景下， JavaScript 在背后做了哪些事情。</p>
 
-<p>正如之前提到的，在 JavaScript 中，函数（function）是允许拥有属性的。所有的函数会有一个特别的属性 —— <code>prototype</code> 。请注意，以下的代码是独立的（出于严谨，假定页面没有其他的JavaScript代码）。为了最佳的学习体验，我们强烈建议阁下打开浏览器的控制台（在Chrome和火狐浏览器中，按Ctrl+Shift+I即可），进入“console”选项卡，然后把如下的JavaScript代码复制粘贴到窗口中，最后通过按下回车键运行代码。</p>
+<p>正如之前提到的，在 JavaScript 中，函数（function）是允许拥有属性的。所有的函数会有一个特别的属性 —— <code>prototype</code> 。请注意，以下的代码是独立的（出于严谨，假定页面没有其他的 JavaScript 代码）。为了最佳的学习体验，我们强烈建议阁下打开浏览器的控制台（在 Chrome 和火狐浏览器中，按 Ctrl+Shift+I 即可），进入“console”选项卡，然后把如下的 JavaScript 代码复制粘贴到窗口中，最后通过按下回车键运行代码。</p>
 
-<pre class="brush: js notranslate">function doSomething(){}
+<pre class="brush: js">function doSomething(){}
 console.log( doSomething.prototype );
 // 和声明函数的方式无关，
 // JavaScript 中的函数永远有一个默认原型属性。
 var doSomething = function(){};
 console.log( doSomething.prototype );</pre>
 
-<p>在控制台显示的JavaScript代码块中，我们可以看到doSomething函数的一个默认属性prototype。而这段代码运行之后，控制台应该显示类似如下的结果：</p>
+<p>在控制台显示的 JavaScript 代码块中，我们可以看到 doSomething 函数的一个默认属性 prototype。而这段代码运行之后，控制台应该显示类似如下的结果：</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
     constructor: ƒ doSomething(),
     __proto__: {
         constructor: ƒ Object(),
@@ -143,15 +143,15 @@ console.log( doSomething.prototype );</pre>
     }
 }</pre>
 
-<p>我们可以给doSomething函数的原型对象添加新属性，如下：</p>
+<p>我们可以给 doSomething 函数的原型对象添加新属性，如下：</p>
 
-<pre class="brush: js notranslate">function doSomething(){}
+<pre class="brush: js">function doSomething(){}
 doSomething.prototype.foo = "bar";
 console.log( doSomething.prototype );</pre>
 
 <p>可以看到运行后的结果如下：</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
     foo: "bar",
     constructor: ƒ doSomething(),
     __proto__: {
@@ -165,11 +165,11 @@ console.log( doSomething.prototype );</pre>
     }
 }</pre>
 
-<p>现在我们可以通过new操作符来创建基于这个原型对象的doSomething实例。使用new操作符，只需在调用doSomething函数语句之前添加new。这样，便可以获得这个函数的一个实例对象。一些属性就可以添加到该原型对象中。</p>
+<p>现在我们可以通过 new 操作符来创建基于这个原型对象的 doSomething 实例。使用 new 操作符，只需在调用 doSomething 函数语句之前添加 new。这样，便可以获得这个函数的一个实例对象。一些属性就可以添加到该原型对象中。</p>
 
 <p>请尝试运行以下代码：</p>
 
-<pre class="brush: js notranslate">function doSomething(){}
+<pre class="brush: js">function doSomething(){}
 doSomething.prototype.foo = "bar"; // add a property onto the prototype
 var doSomeInstancing = new doSomething();
 doSomeInstancing.prop = "some value"; // add a property onto the object
@@ -177,7 +177,7 @@ console.log( doSomeInstancing );</pre>
 
 <p>运行的结果类似于以下的语句。</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
     prop: "some value",
     __proto__: {
         foo: "bar",
@@ -194,17 +194,17 @@ console.log( doSomeInstancing );</pre>
     }
 }</pre>
 
-<p>如上所示, <code>doSomeInstancing</code> 中的<code>__proto__</code>是 <code>doSomething.prototype</code>. 但这是做什么的呢？当你访问<code>doSomeInstancing</code> 中的一个属性，浏览器首先会查看<code>doSomeInstancing</code> 中是否存在这个属性。</p>
+<p>如上所示， <code>doSomeInstancing</code> 中的<code>__proto__</code>是 <code>doSomething.prototype</code>. 但这是做什么的呢？当你访问<code>doSomeInstancing</code> 中的一个属性，浏览器首先会查看<code>doSomeInstancing</code> 中是否存在这个属性。</p>
 
-<p>如果 <code>doSomeInstancing</code> 不包含属性信息, 那么浏览器会在 <code>doSomeInstancing</code> 的 <code>__proto__</code> 中进行查找(同 doSomething.prototype). 如属性在 <code>doSomeInstancing</code> 的 <code>__proto__</code> 中查找到，则使用 <code>doSomeInstancing</code> 中 <code>__proto__</code> 的属性。</p>
+<p>如果 <code>doSomeInstancing</code> 不包含属性信息，那么浏览器会在 <code>doSomeInstancing</code> 的 <code>__proto__</code> 中进行查找 (同 doSomething.prototype). 如属性在 <code>doSomeInstancing</code> 的 <code>__proto__</code> 中查找到，则使用 <code>doSomeInstancing</code> 中 <code>__proto__</code> 的属性。</p>
 
-<p>否则，如果 <code>doSomeInstancing</code> 中 <code>__proto__</code> 不具有该属性，则检查<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 是否具有该属性。默认情况下，任何函数的原型属性 <code>__proto__</code> 都是 <code>window.Object.prototype.</code> 因此, 通过<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code>  ( 同 doSomething.prototype 的 <code>__proto__ </code>(同  <code>Object.prototype</code>)) 来查找要搜索的属性。</p>
+<p>否则，如果 <code>doSomeInstancing</code> 中 <code>__proto__</code> 不具有该属性，则检查<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 是否具有该属性。默认情况下，任何函数的原型属性 <code>__proto__</code> 都是 <code>window.Object.prototype.</code> 因此，通过<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code>  ( 同 doSomething.prototype 的 <code>__proto__ </code>(同  <code>Object.prototype</code>)) 来查找要搜索的属性。</p>
 
-<p>如果属性不存在 <code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 中， 那么就会在<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 的  <code>__proto__</code> 中查找。然而, 这里存在个问题：<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 的  <code>__proto__</code> 其实不存在。因此，只有这样，在 <code>__proto__</code> 的整个原型链被查看之后，这里没有更多的 <code>__proto__</code> ， 浏览器断言该属性不存在，并给出属性值为 <code>undefined</code> 的结论。</p>
+<p>如果属性不存在 <code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 中， 那么就会在<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 的  <code>__proto__</code> 中查找。然而，这里存在个问题：<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 的  <code>__proto__</code> 其实不存在。因此，只有这样，在 <code>__proto__</code> 的整个原型链被查看之后，这里没有更多的 <code>__proto__</code> ， 浏览器断言该属性不存在，并给出属性值为 <code>undefined</code> 的结论。</p>
 
 <p>让我们在控制台窗口中输入更多的代码，如下：</p>
 
-<pre class="brush: js notranslate">function doSomething(){}
+<pre class="brush: js">function doSomething(){}
 doSomething.prototype.foo = "bar";
 var doSomeInstancing = new doSomething();
 doSomeInstancing.prop = "some value";
@@ -217,7 +217,7 @@ console.log("doSomething.prototype.foo:  " + doSomething.prototype.foo);</pre>
 
 <p>结果如下：</p>
 
-<pre class="brush: js notranslate">doSomeInstancing.prop:      some value
+<pre class="brush: js">doSomeInstancing.prop:      some value
 doSomeInstancing.foo:       bar
 doSomething.prop:           undefined
 doSomething.foo:            undefined
@@ -228,21 +228,21 @@ doSomething.prototype.foo:  bar</pre>
 
 <h3 id="使用语法结构创建的对象">使用语法结构创建的对象</h3>
 
-<pre class="brush: js notranslate">var o = {a: 1};
+<pre class="brush: js">var o = {a: 1};
 
 // o 这个对象继承了 Object.prototype 上面的所有属性
 // o 自身没有名为 hasOwnProperty 的属性
 // hasOwnProperty 是 Object.prototype 的属性
 // 因此 o 继承了 Object.prototype 的 hasOwnProperty
 // Object.prototype 的原型为 null
-// 原型链如下:
+// 原型链如下：
 // o ---&gt; Object.prototype ---&gt; null
 
 var a = ["yo", "whadup", "?"];
 
 // 数组都继承于 Array.prototype
 // (Array.prototype 中包含 indexOf, forEach 等方法)
-// 原型链如下:
+// 原型链如下：
 // a ---&gt; Array.prototype ---&gt; Object.prototype ---&gt; null
 
 function f(){
@@ -250,15 +250,15 @@ function f(){
 }
 
 // 函数都继承于 Function.prototype
-// (Function.prototype 中包含 call, bind等方法)
-// 原型链如下:
+// (Function.prototype 中包含 call, bind 等方法)
+// 原型链如下：
 // f ---&gt; Function.prototype ---&gt; Object.prototype ---&gt; null</pre>
 
 <h3 id="使用构造器创建的对象">使用构造器创建的对象</h3>
 
 <p>在 JavaScript 中，构造器其实就是一个普通的函数。当使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new 操作符</a> 来作用这个函数时，它就可以被称为构造方法（构造函数）。</p>
 
-<pre class="brush: js notranslate">function Graph() {
+<pre class="brush: js">function Graph() {
   this.vertices = [];
   this.edges = [];
 }
@@ -277,7 +277,7 @@ var g = new Graph();
 
 <p>ECMAScript 5 中引入了一个新方法：{{jsxref("Object.create()")}}。可以调用这个方法来创建一个新对象。新对象的原型就是调用 create 方法时传入的第一个参数：</p>
 
-<pre class="brush: js notranslate">var a = {a: 1};
+<pre class="brush: js">var a = {a: 1};
 // a ---&gt; Object.prototype ---&gt; null
 
 var b = Object.create(a);
@@ -289,13 +289,13 @@ var c = Object.create(b);
 
 var d = Object.create(null);
 // d ---&gt; null
-console.log(d.hasOwnProperty); // undefined, 因为d没有继承Object.prototype</pre>
+console.log(d.hasOwnProperty); // undefined，因为 d 没有继承 Object.prototype</pre>
 
 <h3 id="使用_class_关键字创建的对象">使用 <code>class</code> 关键字创建的对象</h3>
 
 <p>ECMAScript6 引入了一套新的关键字用来实现 <a href="/zh-CN/docs/Web/JavaScript/Reference/Classes">class</a>。使用基于类语言的开发人员会对这些结构感到熟悉，但它们是不同的。JavaScript 仍然基于原型。这些新的关键字包括 {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}，{{jsxref("Classes/static", "static")}}，{{jsxref("Classes/extends", "extends")}} 和 {{jsxref("Operators/super", "super")}}。</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js">"use strict";
 
 class Polygon {
   constructor(height, width) {
@@ -325,7 +325,7 @@ var square = new Square(2);</pre>
 
 <p>遍历对象的属性时，原型链上的<strong>每个</strong>可枚举属性都会被枚举出来。要检查对象是否具有自己定义的属性，而不是其原型链上的某个属性，则必须使用所有对象从 <code>Object.prototype</code> 继承的 <code><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a></code> 方法。下面给出一个具体的例子来说明它：</p>
 
-<pre class="brush: js notranslate">console.log(g.hasOwnProperty('vertices'));
+<pre class="brush: js">console.log(g.hasOwnProperty('vertices'));
 // true
 
 console.log(g.hasOwnProperty('nope'));
@@ -353,155 +353,153 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
 
 <p>下面列举四种用于拓展原型链的方法，以及他们的优势和缺陷。下列四个例子都创建了完全相同的 <code>inst</code> 对象（所以在控制台上的输出也是一致的），为了举例，唯一的区别是他们的创建方法不同。</p>
 
-<div style="overflow: auto;">
 <table>
- <tbody>
-  <tr>
-   <td style="width: 1%;">名称</td>
-   <td style="vertical-align: top; width: 1%;">例子</td>
-   <td style="vertical-align: top;">优势</td>
-   <td style="vertical-align: top; width: 60%;">缺陷</td>
-  </tr>
-  <tr>
-   <td>New-initialization</td>
-   <td style="vertical-align: top;">
-    <pre class="brush: js notranslate">
-function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
-function bar(){}
-var proto = new foo;
-proto.bar_prop = "bar val";
-bar.prototype = proto;
-var inst = new bar;
-console.log(inst.foo_prop);
-console.log(inst.bar_prop);</pre>
-   </td>
-   <td style="vertical-align: top;">支持目前以及所有可想象到的浏览器(IE5.5都可以使用)。 这种方法非常快，非常符合标准，并且充分利用JIT优化。</td>
-   <td>为使用此方法，必须对相关函数初始化。 在初始化过程中，构造函数可以存储每个对象必须生成的唯一信息。但是，这种唯一信息只生成一次，可能会带来潜在的问题。此外，构造函数的初始化，可能会将不需要的方法放在对象上。然而，如果你只在自己的代码中使用，你也清楚（或有通过注释等写明）各段代码在做什么，这些在大体上都不是问题（事实上，通常是有益处的）。</td>
-  </tr>
-  <tr>
-   <td>Object.create</td>
-   <td style="vertical-align: top;">
-    <pre class="brush: js notranslate">
-function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
-function bar(){}
-var proto = Object.create(
-  foo.prototype
-);
-proto.bar_prop = "bar val";
-bar.prototype = proto;
-var inst = new bar;
-console.log(inst.foo_prop);
-console.log(inst.bar_prop);
-</pre>
-
-    <pre class="brush: js notranslate">
-function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
-function bar(){}
-var proto = Object.create(
-  foo.prototype,
-  {
-    bar_prop: {
-      value: "bar val"
-    }
-  }
-);
-bar.prototype = proto;
-var inst = new bar;
-console.log(inst.foo_prop);
-console.log(inst.bar_prop)</pre>
-   </td>
-   <td style="vertical-align: top;">支持当前所有非微软版本或者 IE9 以上版本的浏览器。允许一次性地直接设置 <code>__proto__</code> 属性，以便浏览器能更好地优化对象。同时允许通过 <code>Object.create(null) </code>来创建一个没有原型的对象。</td>
-   <td style="vertical-align: top;">不支持 IE8 以下的版本。然而，随着微软不再对系统中运行的旧版本浏览器提供支持，这将不是在大多数应用中的主要问题。 另外，这个慢对象初始化在使用第二个参数的时候有可能成为一个性能黑洞，因为每个对象的描述符属性都有自己的描述对象。当以对象的格式处理成百上千的对象描述的时候，可能会造成严重的性能问题。</td>
-  </tr>
-  <tr>
-   <td>
-    <p>Object.setPrototypeOf</p>
-   </td>
-   <td style="vertical-align: top;">
-    <pre class="brush: js notranslate">
-function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
-function bar(){}
-var proto = {
-  bar_prop: "bar val"
-};
-Object.setPrototypeOf(
-  proto, foo.prototype
-);
-bar.prototype = proto;
-var inst = new bar;
-console.log(inst.foo_prop);
-console.log(inst.bar_prop);
-</pre>
-
-    <pre class="brush: js notranslate">
-function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
-function bar(){}
-var proto;
-proto=Object.setPrototypeOf(
-  { bar_prop: "bar val" },
-  foo.prototype
-);
-bar.prototype = proto;
-var inst = new bar;
-console.log(inst.foo_prop);
-console.log(inst.bar_prop)</pre>
-   </td>
-   <td style="vertical-align: top;">支持所有现代浏览器和微软IE9+浏览器。允许动态操作对象的原型，甚至能强制给通过 <code>Object.create(null) </code>创建出来的没有原型的对象添加一个原型。</td>
-   <td style="vertical-align: top;">这个方式表现并不好，应该被弃用。如果你在生产环境中使用这个方法，那么快速运行 Javascript 就是不可能的，因为许多浏览器优化了原型，尝试在调用实例之前猜测方法在内存中的位置，但是动态设置原型干扰了所有的优化，甚至可能使浏览器为了运行成功，使用完全未经优化的代码进行重编译。 不支持 IE8 及以下的浏览器版本。</td>
-  </tr>
-  <tr>
-   <td>__proto__</td>
-   <td style="vertical-align: top;">
-    <pre class="brush: js notranslate">
-function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
-function bar(){}
-var proto = {
-  bar_prop: "bar val",
-  __proto__: foo.prototype
-};
-bar.prototype = proto;
-var inst = new bar;
-console.log(inst.foo_prop);
-console.log(inst.bar_prop);
-</pre>
-
-    <pre class="brush: js notranslate">
-var inst = {
-  __proto__: {
-    bar_prop: "bar val",
-    __proto__: {
-      foo_prop: "foo val",
-      __proto__: Object.prototype
-    }
-  }
-};
-console.log(inst.foo_prop);
-console.log(inst.bar_prop)</pre>
-   </td>
-   <td style="vertical-align: top;">支持所有现代非微软版本以及 IE11 以上版本的浏览器。将 <code>__proto__</code> 设置为非对象的值会静默失败，并不会抛出错误。</td>
-   <td style="vertical-align: top;">应该完全将其抛弃因为这个行为完全不具备性能可言。 如果你在生产环境中使用这个方法，那么快速运行 Javascript 就是不可能的，因为许多浏览器优化了原型，尝试在调用实例之前猜测方法在内存中的位置，但是动态设置原型干扰了所有的优化，甚至可能使浏览器为了运行成功，使用完全未经优化的代码进行重编译。不支持 IE10 及以下的浏览器版本。</td>
-  </tr>
- </tbody>
-</table>
-</div>
+  <tbody>
+   <tr>
+    <td>名称</td>
+    <td>例子</td>
+    <td>优势</td>
+    <td>缺陷</td>
+   </tr>
+   <tr>
+    <td>New-initialization</td>
+    <td>
+     <pre class="brush: js">
+ function foo(){}
+ foo.prototype = {
+   foo_prop: "foo val"
+ };
+ function bar(){}
+ var proto = new foo;
+ proto.bar_prop = "bar val";
+ bar.prototype = proto;
+ var inst = new bar;
+ console.log(inst.foo_prop);
+ console.log(inst.bar_prop);</pre>
+    </td>
+    <td>支持目前以及所有可想象到的浏览器 (IE5.5 都可以使用)。 这种方法非常快，非常符合标准，并且充分利用 JIT 优化。</td>
+    <td>为使用此方法，必须对相关函数初始化。 在初始化过程中，构造函数可以存储每个对象必须生成的唯一信息。但是，这种唯一信息只生成一次，可能会带来潜在的问题。此外，构造函数的初始化，可能会将不需要的方法放在对象上。然而，如果你只在自己的代码中使用，你也清楚（或有通过注释等写明）各段代码在做什么，这些在大体上都不是问题（事实上，通常是有益处的）。</td>
+   </tr>
+   <tr>
+    <td>Object.create</td>
+    <td>
+     <pre class="brush: js">
+ function foo(){}
+ foo.prototype = {
+   foo_prop: "foo val"
+ };
+ function bar(){}
+ var proto = Object.create(
+   foo.prototype
+ );
+ proto.bar_prop = "bar val";
+ bar.prototype = proto;
+ var inst = new bar;
+ console.log(inst.foo_prop);
+ console.log(inst.bar_prop);
+ </pre>
+ 
+     <pre class="brush: js">
+ function foo(){}
+ foo.prototype = {
+   foo_prop: "foo val"
+ };
+ function bar(){}
+ var proto = Object.create(
+   foo.prototype,
+   {
+     bar_prop: {
+       value: "bar val"
+     }
+   }
+ );
+ bar.prototype = proto;
+ var inst = new bar;
+ console.log(inst.foo_prop);
+ console.log(inst.bar_prop)</pre>
+    </td>
+    <td>支持当前所有非微软版本或者 IE9 以上版本的浏览器。允许一次性地直接设置 <code>__proto__</code> 属性，以便浏览器能更好地优化对象。同时允许通过 <code>Object.create(null) </code>来创建一个没有原型的对象。</td>
+    <td>不支持 IE8 以下的版本。然而，随着微软不再对系统中运行的旧版本浏览器提供支持，这将不是在大多数应用中的主要问题。 另外，这个慢对象初始化在使用第二个参数的时候有可能成为一个性能黑洞，因为每个对象的描述符属性都有自己的描述对象。当以对象的格式处理成百上千的对象描述的时候，可能会造成严重的性能问题。</td>
+   </tr>
+   <tr>
+    <td>
+     <p>Object.setPrototypeOf</p>
+    </td>
+    <td>
+     <pre class="brush: js">
+ function foo(){}
+ foo.prototype = {
+   foo_prop: "foo val"
+ };
+ function bar(){}
+ var proto = {
+   bar_prop: "bar val"
+ };
+ Object.setPrototypeOf(
+   proto, foo.prototype
+ );
+ bar.prototype = proto;
+ var inst = new bar;
+ console.log(inst.foo_prop);
+ console.log(inst.bar_prop);
+ </pre>
+ 
+     <pre class="brush: js">
+ function foo(){}
+ foo.prototype = {
+   foo_prop: "foo val"
+ };
+ function bar(){}
+ var proto;
+ proto=Object.setPrototypeOf(
+   { bar_prop: "bar val" },
+   foo.prototype
+ );
+ bar.prototype = proto;
+ var inst = new bar;
+ console.log(inst.foo_prop);
+ console.log(inst.bar_prop)</pre>
+    </td>
+    <td>支持所有现代浏览器和微软 IE9+ 浏览器。允许动态操作对象的原型，甚至能强制给通过 <code>Object.create(null) </code>创建出来的没有原型的对象添加一个原型。</td>
+    <td>这个方式表现并不好，应该被弃用。如果你在生产环境中使用这个方法，那么快速运行 Javascript 就是不可能的，因为许多浏览器优化了原型，尝试在调用实例之前猜测方法在内存中的位置，但是动态设置原型干扰了所有的优化，甚至可能使浏览器为了运行成功，使用完全未经优化的代码进行重编译。 不支持 IE8 及以下的浏览器版本。</td>
+   </tr>
+   <tr>
+    <td>__proto__</td>
+    <td>
+     <pre class="brush: js">
+ function foo(){}
+ foo.prototype = {
+   foo_prop: "foo val"
+ };
+ function bar(){}
+ var proto = {
+   bar_prop: "bar val",
+   __proto__: foo.prototype
+ };
+ bar.prototype = proto;
+ var inst = new bar;
+ console.log(inst.foo_prop);
+ console.log(inst.bar_prop);
+ </pre>
+ 
+     <pre class="brush: js">
+ var inst = {
+   __proto__: {
+     bar_prop: "bar val",
+     __proto__: {
+       foo_prop: "foo val",
+       __proto__: Object.prototype
+     }
+   }
+ };
+ console.log(inst.foo_prop);
+ console.log(inst.bar_prop)</pre>
+    </td>
+    <td>支持所有现代非微软版本以及 IE11 以上版本的浏览器。将 <code>__proto__</code> 设置为非对象的值会静默失败，并不会抛出错误。</td>
+    <td>应该完全将其抛弃因为这个行为完全不具备性能可言。 如果你在生产环境中使用这个方法，那么快速运行 Javascript 就是不可能的，因为许多浏览器优化了原型，尝试在调用实例之前猜测方法在内存中的位置，但是动态设置原型干扰了所有的优化，甚至可能使浏览器为了运行成功，使用完全未经优化的代码进行重编译。不支持 IE10 及以下的浏览器版本。</td>
+   </tr>
+  </tbody>
+ </table>
 
 <h2 id="prototype_和_Object.getPrototypeOf"><code>prototype</code> 和 <code>Object.getPrototypeOf</code></h2>
 
@@ -517,17 +515,17 @@ console.log(inst.bar_prop)</pre>
 
 <p>因此，当你执行：</p>
 
-<pre class="brush: js notranslate">var o = new Foo();</pre>
+<pre class="brush: js">var o = new Foo();</pre>
 
 <p>JavaScript 实际上执行的是：</p>
 
-<pre class="brush: js notranslate">var o = new Object();
+<pre class="brush: js">var o = new Object();
 o.__proto__ = Foo.prototype;
 Foo.call(o);</pre>
 
 <p>（或者类似上面这样的），然后，当你执行：</p>
 
-<pre class="brush: js notranslate">o.someProp;</pre>
+<pre class="brush: js">o.someProp;</pre>
 
 <p>它检查 o 是否具有 <code>someProp</code> 属性。如果没有，它会查找 <code>Object.getPrototypeOf(o).someProp</code>，如果仍旧没有，它会继续查找 <code>Object.getPrototypeOf(Object.getPrototypeOf(o)).someProp</code>。</p>
 
@@ -535,15 +533,15 @@ Foo.call(o);</pre>
 
 <p>在使用原型继承编写复杂代码之前，理解原型继承模型是<strong>至关重要</strong>的。此外，请注意代码中原型链的长度，并在必要时将其分解，以避免可能的性能问题。此外，原生原型<strong>不应该</strong>被扩展，除非它是为了与新的 JavaScript 特性兼容。</p>
 
-<div class="standardNoteBlock note">
-<p><strong>译者注：</strong>在英文原版中，以下内容已被移除。保留仅作参考。</p>
+<div class="note">
+<p><strong>备注：</strong>在英文原版中，以下内容已被移除。保留仅作参考。</p>
 </div>
 
 <h2 id="示例">示例</h2>
 
 <p><code>B</code> 继承自 <code>A</code>：</p>
 
-<pre class="brush: js notranslate">function A(a){
+<pre class="brush: js">function A(a){
   this.varA = a;
 }
 
@@ -555,7 +553,7 @@ A.prototype = {
 既然它没有任何作用，干嘛不将 varA 从原型（prototype）去掉 ?
 也许作为一种在隐藏类中优化分配空间的考虑 ?
 https://developers.google.com/speed/articles/optimizing-javascript
-如果varA并不是在每个实例中都被初始化，那这样做将是有效果的。
+如果 varA 并不是在每个实例中都被初始化，那这样做将是有效果的。
 */
   doSomething : function(){
     // ...

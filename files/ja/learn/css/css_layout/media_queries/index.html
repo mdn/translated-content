@@ -37,12 +37,12 @@ translation_of: Learn/CSS/CSS_layout/Media_queries
 <p>これは、次のもので構成されます。</p>
 
 <ul>
- <li>メディアタイプ（media type）。 このコードがどのようなメディア（例えば、印刷、画面）のためのものであるかをブラウザーに伝えます。</li>
+ <li>メディア種別（media type）。 このコードがどのようなメディア（例えば、印刷、画面）のためのものであるかをブラウザーに伝えます。</li>
  <li>メディア式。 規則（rule）または、含まれている CSS を適用するために合格する必要があるテストです。</li>
- <li>CSS 規則のセット。 テストに合格し、メディアタイプが正しい場合に適用されます。</li>
+ <li>CSS 規則のセット。 テストに合格し、メディア種別が正しい場合に適用されます。</li>
 </ul>
 
-<h3 id="Media_types" name="Media_types">メディアタイプ</h3>
+<h3 id="Media_types" name="Media_types">メディア種別</h3>
 
 <p>指定できるメディアの種類は次のとおりです。</p>
 
@@ -62,15 +62,15 @@ translation_of: Learn/CSS/CSS_layout/Media_queries
 }</code></pre>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: ここでのメディアタイプは、いわゆる {{glossary("MIME type","MIME タイプ")}}とは異なります。</p>
+<p><strong>注</strong>: ここでのメディア種別は、いわゆる {{glossary("MIME type","MIME タイプ")}}とは異なります。</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: レベル3のメディアクエリー仕様には、他にも多くのメディアタイプが定義されています。 これらは非推奨であり、避けるべきです。</p>
+<p><strong>注</strong>: レベル3のメディアクエリー仕様には、他にも多くのメディア種別が定義されています。 これらは非推奨であり、避けるべきです。</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: メディアタイプはオプションです。 メディアクエリーでメディアタイプを指定しない場合、メディアクエリーはデフォルトですべてのメディアタイプ用になります。</p>
+<p><strong>注</strong>: メディア種別はオプションです。 メディアクエリーでメディア種別を指定しない場合、メディアクエリーはデフォルトですべてのメディア種別用になります。</p>
 </div>
 
 <h3 id="Media_feature_rules" name="Media_feature_rules">メディア特性の規則</h3>
@@ -103,7 +103,7 @@ translation_of: Learn/CSS/CSS_layout/Media_queries
 
 <p>実際には、レスポンシブデザインでは最小値または最大値を使用する方がはるかに便利であるため、<code>width</code> または <code>height</code> を単独で使用することはほとんどありません。</p>
 
-<p>テストできるメディア特性は他にも多数ありますが、メディアクエリー仕様のレベル4および5で導入された新しい特性の一部は、ブラウザーサポートが制限されています。 各特性は、ブラウザーサポート情報とともに MDN で文書化されていて、完全なリストは、<a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">メディアクエリーの使用: メディア特性</a>で見つけることができます。</p>
+<p>テストできるメディア特性は他にも多数ありますが、メディアクエリー仕様のレベル4および5で導入された新しい特性の一部は、ブラウザーサポートが制限されています。 各特性は、ブラウザーサポート情報とともに MDN で文書化されていて、完全なリストは、<a href="/ja/docs/Web/CSS/@media#メディア特性">メディアクエリーの使用: メディア特性</a>で見つけることができます。</p>
 
 <h4 id="Orientation" name="Orientation">オリエンテーション</h4>
 
@@ -143,7 +143,7 @@ translation_of: Learn/CSS/CSS_layout/Media_queries
 
 <h3 id="and_logic_in_media_queries" name="and_logic_in_media_queries">メディアクエリーの "and" 論理</h3>
 
-<p>メディア特性を組み合わせるには、上記で <code>and</code> を使用してメディアタイプとメディア特性を組み合わせるのとほぼ同じ方法で <code>and</code> を使用できます。 例えば、<code>min-width</code> と <code>orientation</code> をテストする場合があります。 ビューポートの幅が少なくとも 600 ピクセルで、デバイスがランドスケープモードの場合にのみ <code>body</code> のテキストは青色になります。</p>
+<p>メディア特性を組み合わせるには、上記で <code>and</code> を使用してメディア種別とメディア特性を組み合わせるのとほぼ同じ方法で <code>and</code> を使用できます。 例えば、<code>min-width</code> と <code>orientation</code> をテストする場合があります。 ビューポートの幅が少なくとも 600 ピクセルで、デバイスがランドスケープモードの場合にのみ <code>body</code> のテキストは青色になります。</p>
 
 <pre class="brush: css notranslate"><code>@media screen and (min-width: 600px) and (orientation: landscape) {
     body {
@@ -358,13 +358,13 @@ article {
 
 <pre class="brush: html notranslate">&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;</pre>
 
-<p>This is the <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport meta tag</a> — it exists as a way control how mobile browsers render content. This is needed because by default, most mobile browsers lie about their viewport width. Non-responsive sites commonly look really bad when rendered in a narrow viewport, so mobile browsers usually render the site with a viewport width wider than the real device width by default (usually 960 pixels), and then shrink the rendered result so that it fits in the display.</p>
+<p>This is the <a href="/ja/docs/Mozilla/Mobile/Viewport_meta_tag">viewport meta tag</a> — it exists as a way control how mobile browsers render content. This is needed because by default, most mobile browsers lie about their viewport width. Non-responsive sites commonly look really bad when rendered in a narrow viewport, so mobile browsers usually render the site with a viewport width wider than the real device width by default (usually 960 pixels), and then shrink the rendered result so that it fits in the display.</p>
 
 <p>This is all well and good, but it means that responsive sites are not going to work as expected. If the viewport width is reported as 960 pixels, then mobile layouts (for example created using a media query of <code>@media screen and (max-width: 600px) { ... }</code>) are not going to render as expected.</p>
 
 <p>To remedy this, including a viewport meta tag like the one above on your page tells the browser "don't render the content with a 960 pixel viewport — render it using the real device width instead, and set a default initial scale level for better consistency." The media queries will then kick in as expected.</p>
 
-<p>There are a number of other options you can put inside the <code>content</code> attribute of the viewport meta tag — see <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a> for more details.</p>
+<p>There are a number of other options you can put inside the <code>content</code> attribute of the viewport meta tag — see <a href="/ja/docs/Mozilla/Mobile/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a> for more details.</p>
 
 <h2 id="Do_you_really_need_a_media_query" name="Do_you_really_need_a_media_query">メディアクエリーが本当に必要ですか？</h2>
 
@@ -415,7 +415,7 @@ article {
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/CSS/CSS_layout/rwd_skills">Test your skills: Responsive Web Design</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see <a href="/ja/docs/Learn/CSS/CSS_layout/rwd_skills">Test your skills: Responsive Web Design</a>.</p>
 
 <h2 id="Summary" name="Summary">まとめ</h2>
 

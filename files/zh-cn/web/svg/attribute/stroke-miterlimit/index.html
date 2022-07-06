@@ -3,20 +3,20 @@ title: stroke-miterlimit
 slug: Web/SVG/Attribute/stroke-miterlimit
 tags:
   - SVG
-  - SVG属性
+  - SVG 属性
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/stroke-miterlimit
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG属性参考主页</a></p>
+<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG 属性参考主页</a></p>
 
-<p>如果两条线交汇在一起形成一个尖角，而且属性{{ SVGAttr("stroke-linejoin") }}指定了<code>miter</code>，斜接有可能扩展到远远超过出路径轮廓线的线宽。属性<code>stroke-miterlimit对斜接长度和</code>{{ SVGAttr("stroke-width") }}的比率<code>强加了一个极限。当极限到达时，交汇处由斜接变成倒角。</code></p>
+<p>如果两条线交汇在一起形成一个尖角，而且属性{{ SVGAttr("stroke-linejoin") }}指定了<code>miter</code>，斜接有可能扩展到远远超过出路径轮廓线的线宽。属性<code>stroke-miterlimit 对斜接长度和</code>{{ SVGAttr("stroke-width") }}的比率<code>强加了一个极限。当极限到达时，交汇处由斜接变成倒角。</code></p>
 
 <p>斜接长度（斜接的外尖角和内夹角之间的距离）与{{ SVGAttr("stroke-width") }}的比率，直接跟两条线之间的角度（θ）有关，用如下方程表示：</p>
 
 <pre>miterLength / stroke-width = 1 / sin ( theta / 2 )
 </pre>
 
-<p>举个例子，一个极限为1.414斜接，θ小于90度的把斜接会转换成倒角，一个极限为4.0的斜接，θ小于29度的斜接会转换成倒角，一个极限为10.0的斜接，θ小于大约11.5度的斜接会转换成倒角。</p>
+<p>举个例子，一个极限为 1.414 斜接，θ小于 90 度的把斜接会转换成倒角，一个极限为 4.0 的斜接，θ小于 29 度的斜接会转换成倒角，一个极限为 10.0 的斜接，θ小于大约 11.5 度的斜接会转换成倒角。</p>
 
 <h2 id="用法">用法</h2>
 
@@ -40,14 +40,14 @@ translation_of: Web/SVG/Attribute/stroke-miterlimit
   </tr>
   <tr>
    <th scope="row">规范文档</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG11/painting.html#StrokeMiterlimitProperty" title="http://www.w3.org/TR/SVG11/painting.html#StrokeMiterlimitProperty">SVG 1.1 (2nd Edition)</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/SVG11/painting.html#StrokeMiterlimitProperty">SVG 1.1 (2nd Edition)</a></td>
   </tr>
  </tbody>
 </table>
 
 <dl>
  <dt>&lt;miterlimit&gt;</dt>
- <dd>对斜角长度与{{ SVGAttr("stroke-width") }}的比率的限制。&lt;miterlimit&gt;的值必须是一个大于或等于1的<a href="/en/SVG/Content_type#Number" title="en/SVG/Content_type#Number">&lt;number&gt;</a>。</dd>
+ <dd>对斜角长度与{{ SVGAttr("stroke-width") }}的比率的限制。&lt;miterlimit&gt;的值必须是一个大于或等于 1 的<a href="/en/SVG/Content_type#Number" title="en/SVG/Content_type#Number">&lt;number&gt;</a>。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>

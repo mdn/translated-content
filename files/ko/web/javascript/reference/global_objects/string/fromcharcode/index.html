@@ -51,7 +51,7 @@ String.fromCharCode(0x12014)      // 숫자 '1'은 무시해서 "—"
 
 <h2 id="더_큰_값과_사용하기">더 큰 값과 사용하기</h2>
 
-<p>초기 JavaScript 표준화 과정에서 예상했던 것처럼, 대부분의 흔한 유니코드 값을 16비트 숫자로 표현할 수 있고, <code>fromCharCode()</code>가 많은 흔한 값에서 하나의 문자를 반환할 수 있지만, <strong>모든</strong> 유효한 유니코드 값(최대 21비트)을 처리하려면 <code>fromCharCode()</code>만으로는 부족합니다. 높은 코드 포인트의 문자는 써로게이트<sup>surrogate</sup> 값 두 개를 합쳐 하나의 문자를 표현하므로,{{jsxref("String.fromCodePoint()")}}(ES2015 표준) 메서드는 그러한 쌍을 높은 값의 문자로 변환할 수 있습니다.</p>
+<p>초기 JavaScript 표준화 과정에서 예상했던 것처럼, 대부분의 흔한 유니코드 값을 16비트 숫자로 표현할 수 있고, <code>fromCharCode()</code>가 많은 흔한 값에서 하나의 문자를 반환할 수 있지만, <strong>모든</strong> 유효한 유니코드 값(최대 21비트)을 처리하려면 <code>fromCharCode()</code>만으로는 부족합니다. 높은 코드 포인트의 문자는 써로게이트 값 두 개를 합쳐 하나의 문자를 표현하므로,{{jsxref("String.fromCodePoint()")}}(ES2015 표준) 메서드는 그러한 쌍을 높은 값의 문자로 변환할 수 있습니다.</p>
 
 <h2 id="명세">명세</h2>
 

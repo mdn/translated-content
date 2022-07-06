@@ -15,14 +15,14 @@ translation_of: Web/JavaScript/Data_structures
 
 <p>JavaScript является <em>слабо типизированным</em> или <em>динамическим</em> языком. Это значит, что вам не нужно определять тип переменной заранее. Тип определится автоматически во время выполнения программы. Также это значит, что вы можете использовать одну переменную для хранения данных различных типов:</p>
 
-<pre class="brush: js notranslate">var foo = 42; // сейчас foo типа Number
+<pre class="brush: js">var foo = 42; // сейчас foo типа Number
 foo = "bar"; // а теперь foo типа String
 foo = true;  // foo становится типа Boolean
 </pre>
 
 <h2 id="Типы_данных">Типы данных</h2>
 
-<p>Стандарт ECMAScript определяет 9 типов:</p>
+<p>Стандарт ECMAScript определяет 8 типов:</p>
 
 <ul>
  <li>6 типов данных являющихся примитивами:
@@ -37,10 +37,11 @@ foo = true;  // foo становится типа Boolean
  </li>
  <li>{{Glossary("Null")}} (Null тип ) : <code>typeof instance === "object"</code>. Специальный примитив, используемый не только для данных но и в качестве указателя на финальную точку в <a href="/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Цепочке Прототипов</a>;</li>
  <li>{{Glossary("Object")}} (Объект) : <code>typeof instance === "object"</code>. Простая структура, используемая не только для хранения данных, но и для создания других структур, где любая структура создаётся с использованием ключевого слова <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/new">new</a></code>: new <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, new <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, new <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a>, new <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a>, new <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/WeakMap">WeakMap</a>, new <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/WeakSet">WeakSet</a>, new <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a> и множество других структур;</li>
- <li>и {{Glossary("Function")}} : <code>typeof instance === "function"</code>. Специальный случай, упрощающий определение типа для Функций, несмотря на то, что все функции конструктивно унаследованы от Object.</li>
 </ul>
 
 <p>И здесь нам необходимо сделать предостережение относительно использования оператора <code>typeof</code> для определения типа структур, т.к. все структуры будут возвращать <code>"object"</code> при его использовании, так как назначение <code>typeof</code> -- проверка типа данных, но не структур. Если проверить тип структуры всё же необходимо, то в этом случае желательно использовать оператор <a href="/ru/docs/Web/JavaScript/Reference/Operators/instanceof">instanceof</a>, так как именно он отвечает на вопрос о том, какой конструктор был использован для создания структуры.</p>
+
+<p>Стоит отметить два особых случая работы оператора <code>typeof</code>: возврат <code>"object"</code> для значения <code>null</code> и <code>"function"</code> для функций: первое принято считать ошибкой языка, сохраненной ради обратной совместимости, второе является условностью, удобной для проверки на принадлежность значения категории функций, где функция - это особый, "вызываемый", объект.</p>
 
 <h2 id="Примитивные_значения">Примитивные значения</h2>
 
@@ -66,7 +67,7 @@ foo = true;  // foo становится типа Boolean
 
 <p>Ноль в JavaScript имеет два представления: -0 и +0. («0» это синоним +0). На практике это имеет малозаметный эффект. Например, выражение <code>+0 === -0</code> является истинным. Однако, это может проявиться при делении на ноль:</p>
 
-<pre class="brush: js notranslate"><code>&gt; 42 / +0
+<pre class="brush: js"><code>&gt; 42 / +0
 Infinity
 &gt; 42 / -0
 -Infinity</code></pre>
@@ -106,7 +107,7 @@ Infinity
 
 <p><code>BigInt</code><font><font> является встроенным объектом, который предоставляет способ представления целых чисел, которые больше 2 </font></font><sup><font><font>53</font></font></sup><font><font>, что является наибольшим числом, которое JavaScript может надёжно представить с помощью </font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" title="JavaScript-объект Number - это объект-оболочка, позволяющий работать с числовыми значениями.  Объект Number создаётся с помощью конструктора Number ().  Номер объекта типа примитива создаётся с помощью функции Number ().">Number</a></code><font><font> примитива.</font></font></p>
 
-<pre class="brush: js notranslate"><code>&gt; let bigInt = 19241924124n;
+<pre class="brush: js"><code>&gt; let bigInt = 19241924124n;
 &gt; console.log(bigInt);
 19241924124n
 &gt; console.log(typeof bigInt);
@@ -270,41 +271,9 @@ Infinity
 
 <p>Оператор <code>typeof</code> может помочь определить тип вашей переменной. Смотрите <a href="/ru/docs/Web/JavaScript/Reference/Operators/typeof">страницу документации</a>, где приведены его детали и случаи использования.</p>
 
-<h2 id="Спецификации">Спецификации</h2>
-
-<table>
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Начальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-8', 'Типы')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-ecmascript-data-types-and-values', 'Типы данных и значения ECMAScript')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-ecmascript-data-types-and-values', 'Типы данных и значения ECMAScript')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li><a href="https://github.com/nzakas/computer-science-in-javascript/">Nicholas Zakas, коллекция некоторых классических структур данных и алгоритмов, написанных на JavaScript.</a></li>
- <li><a href="https://github.com/monmohan/DataStructures_In_Javascript" title="https://github.com/monmohan/DataStructures_In_Javascript">Реализация некоторых структур данных для JavaScript</a></li>
+ <li><a href="https://github.com/monmohan/DataStructures_In_Javascript">Реализация некоторых структур данных для JavaScript</a></li>
 </ul>

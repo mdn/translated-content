@@ -7,11 +7,9 @@ tags:
   - Gecko 10
 translation_of: Mozilla/Firefox/Releases/10
 ---
-<div>{{ draft }}</div>
-
 <p>Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日にリリースされました。このページでは、開発者に影響する Firefox 10 の変更点をまとめています。</p>
 
-<div class="note"><strong>重要: </strong>Firefox 10 は、2 桁の数値で表記される最初のリリースです。これにより、一部の UserAgent 検出スクリプトで問題が発生するおそれがあります。そのようなスクリプトや、ページに埋め込まれているサードパーティのソフトウェア (ライブラリなど) で UserAgent 検出を行っているものの確認を行うようにしてください。この点に関する詳細情報は、hack.mozilla.org の記事 <a class="external" href="http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/" title="http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/">Firefox goes 2-digit article on </a> をご覧ください。</div>
+<div class="note"><strong>重要: </strong>Firefox 10 は、2 桁の数値で表記される最初のリリースです。これにより、一部の UserAgent 検出スクリプトで問題が発生するおそれがあります。そのようなスクリプトや、ページに埋め込まれているサードパーティのソフトウェア (ライブラリなど) で UserAgent 検出を行っているものの確認を行うようにしてください。この点に関する詳細情報は、hack.mozilla.org の記事 <a class="external" href="http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/">Firefox goes 2-digit article on </a> をご覧ください。</div>
 
 <h2 id="Web_開発者向けの変更点一覧">Web 開発者向けの変更点一覧</h2>
 
@@ -79,7 +77,7 @@ translation_of: Mozilla/Firefox/Releases/10
 <h4 id="WebGL">WebGL</h4>
 
 <ul>
- <li>Firefox 10 で、<a class="external" href="http://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/" title="http://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/"><code>OES_standard_derivatives</code></a> 拡張がサポートされました。</li>
+ <li>Firefox 10 で、<a class="external" href="http://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/"><code>OES_standard_derivatives</code></a> 拡張がサポートされました。</li>
  <li>完全な開発環境上で、最低限のサポートにとどまるデバイスとの WebGL コードの互換性を確認するために役立つ <a href="/ja/docs/WebGL#WebGL_debugging_and_testing" title="WebGL#WebGL_debugging_and_testing">新たな設定項目</a> が追加されました。</li>
 </ul>
 
@@ -173,10 +171,10 @@ translation_of: Mozilla/Firefox/Releases/10
 <h3 id="インタフェースの変更">インタフェースの変更</h3>
 
 <ul>
- <li>{{ interface("mozISpellCheckingEngine") }} インタフェースおよび {{ interface("nsIEditorSpellCheck") }} インタフェースは、再起動の不要なアドオンがスペルチェッカに辞書を追加できるように更新されました。<strong>注: これを行う方法に関して <a href="/ja/docs/Using_an_External_Spell-checker" title="Using_an_External_Spell-checker">ドキュメントの更新</a> が必要。</strong></li>
- <li>{{ ifattribute("nsIBrowserHistory", "lastPageVisited") }} 属性は削除されました。</li>
- <li><code>nsIDocumentViewer</code> インタフェースは {{ interface("nsIContentViewer") }} に統合されました。</li>
- <li>{{ interface("nsIURIFixup") }} インタフェースに、コンバートする際にプラットフォームの文字コードではなく UTF-8 を使用することを示す <code>FIXUP_FLAG_USE_UTF8</code> フラグが追加されました。</li>
+ <li><code>mozISpellCheckingEngine</code> インタフェースおよび <code>nsIEditorSpellCheck</code> インタフェースは、再起動の不要なアドオンがスペルチェッカに辞書を追加できるように更新されました。<strong>注: これを行う方法に関して <a href="/ja/docs/Using_an_External_Spell-checker" title="Using_an_External_Spell-checker">ドキュメントの更新</a> が必要。</strong></li>
+ <li><code>nsIBrowserHistory.lastPageVisited</code> 属性は削除されました。</li>
+ <li><code>nsIDocumentViewer</code> インタフェースは <code>nsIContentViewer</code> に統合されました。</li>
+ <li><code>nsIURIFixup</code> インタフェースに、コンバートする際にプラットフォームの文字コードではなく UTF-8 を使用することを示す <code>FIXUP_FLAG_USE_UTF8</code> フラグが追加されました。</li>
 </ul>
 
 <h3 id="プラグインの変更">プラグインの変更</h3>

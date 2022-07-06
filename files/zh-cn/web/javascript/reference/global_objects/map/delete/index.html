@@ -1,0 +1,82 @@
+---
+title: Map.prototype.delete()
+slug: Web/JavaScript/Reference/Global_Objects/Map/delete
+tags:
+  - ECMAScript 2015
+  - JavaScript
+  - Map
+  - Method
+  - Prototype
+  - Reference
+translation_of: Web/JavaScript/Reference/Global_Objects/Map/delete
+original_slug: Web/JavaScript/Reference/Global_Objects/Map/delete
+browser-compat: javascript.builtins.Map.delete
+---
+<div>{{JSRef}}</div>
+
+<p><code>delete()</code> 方法用于移除 <code>Map</code> 对象中指定的元素。</p>
+
+<div>{{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}</div>
+
+
+
+<h2 id="语法">语法</h2>
+
+<pre class="brush: js">myMap.delete(key);</pre>
+
+<h3 id="参数">参数</h3>
+
+<dl>
+ <dt>key</dt>
+ <dd>必须。从 <code>Map</code> 对象中移除的元素的键。</dd>
+</dl>
+
+<h3 id="返回值">返回值</h3>
+
+<dl>
+ <dt>Boolean</dt>
+ <dd>如果 <code>Map</code> 对象中存在该元素，则移除它并返回<em> <code>true</code></em>；否则如果该元素不存在则返回 <code><em>false</em></code>。</dd>
+</dl>
+
+<h2 id="示例">示例</h2>
+
+<h3 id="使用_delete_方法">使用 <code>delete</code> 方法</h3>
+
+<pre class="brush: js">var myMap = new Map();
+myMap.set("bar", "foo");
+
+myMap.delete("bar"); // 返回 true。成功地移除元素
+myMap.has("bar");    // 返回 false。"bar" 元素将不再存在于 Map 实例中
+</pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-map.prototype.delete', 'Map.prototype.delete')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-map.prototype.delete', 'Map.prototype.delete')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<p>{{Compat("javascript.builtins.Map.delete")}}</p>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+ <li>{{jsxref("Map")}}</li>
+</ul>

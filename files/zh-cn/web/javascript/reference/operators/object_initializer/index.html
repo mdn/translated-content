@@ -138,7 +138,7 @@ console.log(a); // { x: 2}
   set <var>property</var>(<var>value</var>) {},
 };</pre>
 
-<p>ECMAScript 2015引入了一种简短写法， "function" 关键字也可以丢掉。</p>
+<p>ECMAScript 2015 引入了一种简短写法， "function" 关键字也可以丢掉。</p>
 
 <pre class="brush: js">// Shorthand method names (ES6)
 var o = {
@@ -168,7 +168,7 @@ var o = {
 
 <h3 id="计算属性名">计算属性名</h3>
 
-<p>从ECMAScript 2015开始，对象初始化语法开始支持计算属性名。其允许在[]中放入表达式，计算结果可以当做属性名。这种用法和用方括号访问<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">属性</a>非常类似，也许你已经用来读取和设置属性了。现在同样的语法也可以用于对象字面值了：</p>
+<p>从 ECMAScript 2015 开始，对象初始化语法开始支持计算属性名。其允许在 [] 中放入表达式，计算结果可以当做属性名。这种用法和用方括号访问<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">属性</a>非常类似，也许你已经用来读取和设置属性了。现在同样的语法也可以用于对象字面值了：</p>
 
 <pre class="brush: js">// Computed property names (ES6)
 var i = 0;
@@ -194,7 +194,7 @@ console.log(config); // { size: 12, mobileSize: 4 }</pre>
 
 <p> </p>
 
-<p>ECMAScript 提案（第3阶段）的<a href="https://github.com/tc39/proposal-object-rest-spread">剩余/扩展属性</a>将<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator">扩展</a>属性添加到对象文字。它将自己提供的对象的枚举属性复制到一个新的对象上。</p>
+<p>ECMAScript 提案（第 3 阶段）的<a href="https://github.com/tc39/proposal-object-rest-spread">剩余/扩展属性</a>将<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator">扩展</a>属性添加到对象字面量。它将自己提供的对象的枚举属性复制到一个新的对象上。</p>
 
 <p>使用比{{jsxref("Object.assign()")}}更短的语法，可以轻松克隆（不包括原型）或合并对象。</p>
 
@@ -214,7 +214,7 @@ var mergedObj = { ...obj1, ...obj2 };
 
 <h3 id="变更原型">变更原型</h3>
 
-<p>定义属性为<code>__proto__: 值</code> 或 <code>"__proto__": 值</code> 时，不会创建名为<code>__proto__</code>属性。如果给出的值是对象或者<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>，那么对象的<code>[[Prototype]]</code>会被设置为给出的值。（如果给出的值不是对象也不是null，那么对象的原型不会改变。）</p>
+<p>定义属性为<code>__proto__: 值</code> 或 <code>"__proto__": 值</code> 时，不会创建名为<code>__proto__</code>属性。如果给出的值是对象或者<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>，那么对象的<code>[[Prototype]]</code>会被设置为给出的值。（如果给出的值不是对象也不是 null，那么对象的原型不会改变。）</p>
 
 <pre class="brush: js">var obj1 = {};
 assert(Object.getPrototypeOf(obj1) === Object.prototype);
@@ -249,14 +249,14 @@ var obj3 = { ["__prot" + "o__"]: 17 };
 assert(obj3.__proto__ === 17);
 </pre>
 
-<h2 id="对象字面量表示法与JSON">对象字面量表示法与JSON</h2>
+<h2 id="对象字面量表示法与JSON">对象字面量表示法与 JSON</h2>
 
 <p>对象字面量表示法和 <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation（<a href="/en-US/docs/Glossary/JSON">JSON</a>）是不同的。虽然他们看起来相似，不同点有：</p>
 
 <ul>
- <li>JSON 只允许<code>"property": value</code> syntax形式的属性定义。属性名必须用双引号括起来。且属性定义不允许使用简便写法。</li>
- <li>JSON中，属性的值仅允许字符串，数字，数组，<code>true</code>，<code>false</code>，<code>null</code>或其他（JSON）对象。 </li>
- <li>JSON中，不允许将值设置为函数。</li>
+ <li>JSON 只允许<code>"property": value</code> syntax 形式的属性定义。属性名必须用双引号括起来。且属性定义不允许使用简便写法。</li>
+ <li>JSON 中，属性的值仅允许字符串，数字，数组，<code>true</code>，<code>false</code>，<code>null</code>或其他（JSON）对象。 </li>
+ <li>JSON 中，不允许将值设置为函数。</li>
  <li> {{jsxref("Date")}} 等对象，经{{jsxref("JSON.parse()")}}处理后，会变成字符串。</li>
  <li>{{jsxref("JSON.parse()")}} 不会处理计算的属性名，会当做错误抛出。</li>
 </ul>

@@ -4,12 +4,12 @@ slug: Glossary/Global_object
 translation_of: Glossary/Global_object
 original_slug: Глоссарий/Global_object
 ---
-<p>Глобальный объект - это {{glossary("object")}}, который всегда существует в {{glossary("global scope")}}.</p>
+<p>Глобальный объект - это {{glossary("object","объект")}}, который всегда существует в {{glossary("global scope","глобальной области видимости")}}.</p>
 
 <p>В JavaScript всегда определён глобальный объект. В веб-браузере, когда скрипты создают глобальные переменные, они создаются как свойства глобального объекта. (В {{Glossary("Node.js")}} это не так.) {{Glossary("Interface")}} глобального объекта зависит от контекста, в котором выполняется скрипт.К примеру:</p>
 
 <ul>
- <li>В веб-браузере любой код, который не запускается скриптом явно как фоновую задачу, имеет {{domxref("Window")}} в качестве своего глобального объекта. Это покрывает большую часть JavaScript кода в сети.</li>
+ <li>В веб-браузере любой код, который не запускается скриптом явно как фоновую задачу, имеет {{domxref("Window")}} в качестве своего глобального объекта. Это покрывает большую часть JavaScript-кода в сети.</li>
  <li>Код, работающий в {{domxref("Worker")}} имеет {{domxref("WorkerGlobalScope")}} объект в качестве своего глобального объекта.</li>
  <li>Скрипты, работающие в {{Glossary("Node.js")}} имеют объект, который называется <code><a href="https://nodejs.org/api/globals.html#globals_global">global</a></code> в качестве своего глобального объекта.</li>
 </ul>
@@ -51,7 +51,7 @@ window.greeting(); // Тоже самое что и обычный вызов: g
    console.log("Hi!");
 }</pre>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ul>
  <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
 

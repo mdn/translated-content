@@ -5,7 +5,7 @@ translation_of: Web/API/DOMParser
 ---
 <p>{{APIRef("DOM")}}{{SeeCompatTable}}</p>
 
-<p><code>DOMParser</code> puede analizar gramaticalmente (parsear, en adelante) código XML o HTML almacenado en una cadena de texto y convertirlo en un <a href="/es/docs/Web/API/Document">Documento</a> DOM. <code>DOMParser</code> está especificado en <a href="https://w3c.github.io/DOM-Parsing/" title="http://html5.org/specs/dom-parsing.html">DOM Parsing and Serialization</a>.</p>
+<p><code>DOMParser</code> puede analizar gramaticalmente (parsear, en adelante) código XML o HTML almacenado en una cadena de texto y convertirlo en un <a href="/es/docs/Web/API/Document">Documento</a> DOM. <code>DOMParser</code> está especificado en <a href="https://w3c.github.io/DOM-Parsing/">DOM Parsing and Serialization</a>.</p>
 
 <p>Tener en cuenta que <a href="/en-US/docs/DOM/XMLHttpRequest" title="DOM/XMLHttpRequest">XMLHttpRequest</a> soporta parsear XML y HTML desde recursos direccionables por URL.</p>
 
@@ -127,93 +127,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>XML support</td>
-   <td>{{CompatChrome(1)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(1)}}</td>
-   <td>{{CompatIE(9)}}</td>
-   <td>{{CompatOpera(8)}}</td>
-   <td>{{CompatSafari(3.2)}}</td>
-  </tr>
-  <tr>
-   <td>SVG support</td>
-   <td>{{CompatChrome(4)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(10.0)}}</td>
-   <td>{{CompatIE(10)}}</td>
-   <td>{{CompatOpera(15)}}</td>
-   <td>{{CompatSafari(3.2)}}</td>
-  </tr>
-  <tr>
-   <td>HTML support</td>
-   <td>{{CompatChrome(30)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(12.0)}}</td>
-   <td>{{CompatIE(10)}}</td>
-   <td>{{CompatOpera(17)}}</td>
-   <td>{{CompatSafari(7.1)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>XML support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>SVG support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(10.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>HTML support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(12.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.DOMParser")}}
 
 <h2 id="See_also" name="See_also"> </h2>
 

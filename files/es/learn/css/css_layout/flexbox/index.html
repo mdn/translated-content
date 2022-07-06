@@ -42,7 +42,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Verás que hay un elemento {{htmlelement ("header")}} con un encabezado de nivel superior en él, y un elemento {{htmlelement ("section")}} que contiene tres elementos {{htmlelement ("article")}}. Los usaremos para crear una compaginación bastante habitual de tres columnas.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13406/flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
 <h2 id="Especificar_qué_elementos_colocar_como_cajas_flexibles">Especificar qué elementos colocar como cajas flexibles</h2>
 
@@ -54,7 +54,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Esto hace que el elemento <code>&lt;section&gt;</code> se convierta en <strong>contenedor flex</strong>, y sus hijos en <strong>elementos flexibles</strong>. El resultado de esto debería ser algo así:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13408/flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
 
 <p>Así, esta declaración única nos da todo lo que necesitamos. Increíble, ¿verdad? Tenemos nuestra compaginación en columnas múltiples con columnas de igual tamaño, y todas las columnas tienen la misma altura. Esto se debe a que los valores por defecto que se han asignado a los elementos flexibles (los elementos secundarios del contenedor flexible) están pensados para resolver problemas comunes como este. Veremos más sobre el tema más adelante.</p>
 
@@ -66,7 +66,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Cuando los elementos se presentan como cajas flexibles, se distribuyen con respecto a dos ejes:</p>
 
-<p><img alt="flex_terms.png" class="default internal" src="/files/3739/flex_terms.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="flex_terms.png" class="default internal" src="flex_terms.png"></p>
 
 <ul>
  <li>El <strong>eje principal</strong> (<strong>main axis</strong>) es el eje que corre en la dirección en que se colocan los elementos flexibles (por ejemplo, según se disponen las filas en una página o hacia abajo según se disponen las columnas en una página). El inicio y el final de este eje se denominan <strong>inicio principal</strong> (<strong>main start</strong>) y <strong>final principal</strong> (<strong>main end</strong>).</li>
@@ -95,7 +95,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Un problema que surge cuando tienes una cantidad fija de ancho o alto en tu diseño es que los hijos de un elemento flexbox eventualmente desbordan el contenedor y rompen el diseño. Echa un vistazo a nuestro ejemplo <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html">flexbox-wrap0.html</a> e intenta <a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html">verlo en vivo</a> (toma una copia local de este archivo si deseas seguir este ejemplo):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13410/flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
 
 <p>Aquí vemos que los elementos hijo se salen de su contenedor. Una forma de solucionar esto es añadir la declaración siguiente a tu regla {{htmlelement ("section")}}:</p>
 
@@ -107,7 +107,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Pruébalo; observa que al haberlo incluido el aspecto de la compaginación resulta mucho más agradable:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13412/flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"> Ahora hay varias filas y en cada fila caben tantos elementos hijo de un elemento flexbox como sean necesarios, y cualquier desbordamiento hace saltar el elemento hacia la línea siguiente. La declaración <code>flex: 200px</code> que hemos establecido en los artículos significa que cada uno tendrá al menos 200 px de ancho; discutiremos esta propiedad con más detalle más adelante. Observa también que los últimos elementos hijo de la última fila se agrandan hasta rellenar toda la fila.</p>
+<p><img alt="" src="flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"> Ahora hay varias filas y en cada fila caben tantos elementos hijo de un elemento flexbox como sean necesarios, y cualquier desbordamiento hace saltar el elemento hacia la línea siguiente. La declaración <code>flex: 200px</code> que hemos establecido en los artículos significa que cada uno tendrá al menos 200 px de ancho; discutiremos esta propiedad con más detalle más adelante. Observa también que los últimos elementos hijo de la última fila se agrandan hasta rellenar toda la fila.</p>
 
 <p>Pero aquí podemos hacer mucho más. En primer lugar, cambia el valor de tu propiedad {{cssxref ("flex-direction")}} a <code>row-reverse</code>; ahora verás que todavía tienes tu compaginación en diversas filas, pero comienza desde la esquina opuesta de la ventana del navegador y fluye al revés.</p>
 
@@ -154,7 +154,7 @@ article:nth-of-type(3) {
 
 <p>Esto establece básicamente que «a cada elemento flexible se le da primero 200px del espacio disponible. Después de eso, el resto del espacio disponible se reparte de acuerdo con las unidades de proporción». Actualiza y observa de qué modo se reparte ahora el espacio.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13406/flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
 <p>El valor real del elemento flexbox se puede ver en su flexibilidad/adaptabilidad: si cambias el tamaño de la ventana del navegador o añades otro elemento {{htmlelement ("article")}}, el diseño continúa funcionando bien.</p>
 
@@ -174,7 +174,7 @@ article:nth-of-type(3) {
 
 <p>También puedes usar las funciones de los elementos flexbox para alinear elementos flexibles sobre el eje principal o transversal. Exploremos este aspecto a partir de un ejemplo nuevo: <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">flex-align0.html</a> (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">consúltalo en vivo</a>), que vamos a convertir en una barra de herramientas/botones ordenada y flexible. En este momento puedes ver una barra de menú horizontal, con algunos botones pegados en línea a la esquina superior izquierda.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13414/flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="" src="flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
 
 <p>Primero, toma una copia local de este ejemplo.</p>
 
@@ -245,7 +245,7 @@ article:nth-of-type(3) {
 
 <p>Los elementos flexbox permiten crear algunos diseños de página bastante complejos. Es perfectamente aceptable configurar un elemento flexible para que también sea un contenedor flexible, de modo que los elementos secundarios también se dispongan como cajas flexibles. Echa un vistazo a complex-flexbox.html (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html">consúltalo en vivo</a>).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13418/flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>El HTML para ello es bastante simple. Hay un elemento {{htmlelement ("section")}} que contiene tres elementos {{htmlelement ("article")}}. El tercer elemento {{htmlelement ("article")}} contiene tres elementos {{htmlelement ("div")}}:</p>
 
@@ -309,7 +309,7 @@ article:nth-of-type(3) {
 
 <h2 id="Pon_a_prueba_tus_habilidades">Pon a prueba tus habilidades</h2>
 
-<p>Hemos cubierto mucho terreno en este artículo. ¿Recuerdas la información más importante? Encontrarás más pruebas para comprobar si retienes esta información antes de seguir en <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox_skills">Test your skills: Flexbox</a>.</p>
+<p>Hemos cubierto mucho terreno en este artículo. ¿Recuerdas la información más importante? Encontrarás más pruebas para comprobar si retienes esta información antes de seguir en <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox_skills">Test your skills: Flexbox</a>.</p>
 
 <h2 id="Resumen">Resumen</h2>
 

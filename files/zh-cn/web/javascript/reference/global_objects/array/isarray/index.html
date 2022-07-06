@@ -13,16 +13,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
 <div>{{JSRef}}</div>
 
-<p><strong>Array.isArray() </strong>用于确定传递的值是否是一个 {{jsxref("Array")}}。</p>
+<p><strong>Array.isArray()</strong> 用于确定传递的值是否是一个 {{jsxref("Array")}}。</p>
 
-<pre class="brush: js">Array.isArray([1, 2, 3]);
-// true
-Array.isArray({foo: 123});
-// false
-Array.isArray("foobar");
-// false
-Array.isArray(undefined);
-// false
+<pre class="brush: js">Array.isArray([1, 2, 3]);  // true
+Array.isArray({foo: 123}); // false
+Array.isArray('foobar');   // false
+Array.isArray(undefined);  // false
 </pre>
 
 <h2 id="语法">语法</h2>
@@ -38,13 +34,13 @@ Array.isArray(undefined);
 
 <h3 id="返回值">返回值</h3>
 
-<p>如果值是 {{jsxref("Array")}}，则为true; 否则为false。</p>
+<p>如果值是 {{jsxref("Array")}}，则为 <code>true</code>；否则为 <code>false</code>。</p>
 
 <h2 id="描述">描述</h2>
 
-<p>如果对象是 {{jsxref("Array")}} ，则返回true，否则为false。</p>
+<p>如果对象是 {{jsxref("Array")}}，则返回 <code>true</code>，否则为 <code>false</code>。</p>
 
-<p>有关更多详细信息，请参阅文章<a href="http://web.mit.edu/jwalden/www/isArray.html">严格判定JavaScript对象是否为数组</a>。</p>
+<p>有关更多详细信息，请参阅文章<a href="http://web.mit.edu/jwalden/www/isArray.html">严格判定 JavaScript 对象是否为数组</a>。</p>
 
 <p>See the article <a href="http://web.mit.edu/jwalden/www/isArray.html">“Determining with absolute accuracy whether or not a JavaScript object is an array”</a> for more details. Given a {{jsxref("TypedArray")}} instance, <code>false</code> is always returned.</p>
 
@@ -71,19 +67,20 @@ Array.isArray(new Uint8Array(32))
 Array.isArray({ __proto__: Array.prototype });
 </pre>
 
-<h3 id="instanceof_和_isArray"><code>instanceof</code> 和 <code>isArray</code></h3>
+<h3 id="instanceof_和_isArray"><code>instanceof</code> VS <code>isArray</code></h3>
 
-<p>当检测Array实例时, <code>Array.isArray</code> 优于 <code>instanceof</code>,因为Array.isArray能检测<code>iframes</code>.</p>
+<p>当检测 <code>Array</code> 实例时，<code>Array.isArray</code> 优于 <code>instanceof</code>，因为 <code>Array.isArray</code> 能检测 <code>iframes</code>。</p>
 
-<pre><code>var iframe = document.createElement('iframe');
+<pre class="brush: js">const iframe = document.createElement('iframe');
 document.body.appendChild(iframe);
 xArray = window.frames[window.frames.length-1].Array;
-var arr = new xArray(1,2,3); // [1,2,3]
+const arr = new xArray(1,2,3); // [1,2,3]
 
 // Correctly checking for Array
 Array.isArray(arr);  // true
-// Considered harmful, because doesn't work though iframes
-arr instanceof Array; // false</code></pre>
+// Considered harmful, because doesn't work through iframes
+arr instanceof Array; // false
+</pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 

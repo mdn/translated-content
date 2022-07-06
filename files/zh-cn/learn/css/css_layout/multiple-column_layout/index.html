@@ -12,30 +12,30 @@ translation_of: Learn/CSS/CSS_layout/Multiple-column_Layout
 ---
 <div>{{LearnSidebar}}</div>
 
-<div>{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", " Learn/CSS/CSS_layout/Responsive_Design ", "Learn/CSS/CSS_layout")}}</div>
+<div>{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}</div>
 
-<p class="summary">多列布局声明提供了一种多列组织内容的方式，正如你在一些报纸中看到的那样。 这篇文章介绍怎么使用这一特性。</p>
+<p>多列布局声明提供了一种多列组织内容的方式，正如你在一些报纸中看到的那样。 这篇文章介绍怎么使用这一特性。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">前提:</th>
-   <td>HTML 基础 (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), 和了解CSS如何工作的(study <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>.)</td>
+   <th scope="row">前提：</th>
+   <td>HTML 基础 (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), 和了解 CSS 如何工作的 (study <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>.)</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
-   <td>掌握在web页面中创建多列布局的方法?，正如你在一些报纸中看到的那样。 </td>
+   <th scope="row">目标：</th>
+   <td>掌握在 web 页面中创建多列布局的方法？，正如你在一些报纸中看到的那样。 </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="一个简单的例子">一个简单的例子</h2>
 
-<p>我们将学习怎么使用多列布局，通常也简写为 <em>multicol</em>。你可以从这里开始 <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/multicol/0-starting-point.html">downloading the multicol starting point file</a> 然后在合适的地方加入CSS。在这一小节的结尾，你可以看到最终代码的效果。</p>
+<p>我们将学习怎么使用多列布局，通常也简写为 <em>multicol</em>。你可以从这里开始 <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/multicol/0-starting-point.html">downloading the multicol starting point file</a> 然后在合适的地方加入 CSS。在这一小节的结尾，你可以看到最终代码的效果。</p>
 
-<p>我们从一些很简单的HTML开始； 用带有类 <code>container</code> 的简单包装，里面是标题和一些段落。</p>
+<p>我们从一些很简单的 HTML 开始； 用带有类 <code>container</code> 的简单包装，里面是标题和一些段落。</p>
 
-<p>带有 <code>.container</code> 的 {{htmlelement("div")}} 将成为我们 multicol 的容器。 通过这两个属性开启 multicol {{cssxref("column-count")}} 或者 {{cssxref("column-width")}}。  <code>column-count</code> 将创建指定数量的列，所以如果你把下面的CSS加到样式表里让后重载入页面，你将得到3列：</p>
+<p>带有 <code>.container</code> 的 {{htmlelement("div")}} 将成为我们 multicol 的容器。通过这两个属性开启 multicol {{cssxref("column-count")}} 或者 {{cssxref("column-width")}}。  <code>column-count</code> 将创建指定数量的列，所以如果你把下面的 CSS 加到样式表里让后重载入页面，你将得到 3 列：</p>
 
 <pre class="brush: css">.container {
   column-count: 3;
@@ -81,7 +81,7 @@ translation_of: Learn/CSS/CSS_layout/Multiple-column_Layout
 
 <p>{{ EmbedLiveSample('Multicol_1', '100%', 400) }}</p>
 
-<p>像下面这样使用 <code>column-width</code> 更改CSS：</p>
+<p>像下面这样使用 <code>column-width</code> 更改 CSS：</p>
 
 <pre class="brush: css">.container {
   column-width: 200px;
@@ -127,7 +127,7 @@ translation_of: Learn/CSS/CSS_layout/Multiple-column_Layout
 
 <h2 id="给多列增加样式">给多列增加样式</h2>
 
-<p>Multicol 创建的列无法单独的设定样式。 不存在让单独某一列比其他列更大的方法，同样无法为某一特定的列设置独特的背景色、文本颜色。你有两个机会改变列的样式：</p>
+<p>Multicol 创建的列无法单独的设定样式。不存在让单独某一列比其他列更大的方法，同样无法为某一特定的列设置独特的背景色、文本颜色。你有两个机会改变列的样式：</p>
 
 <ul>
  <li>使用 {{cssxref("column-gap")}} 改变列间间隙。</li>
@@ -190,7 +190,7 @@ translation_of: Learn/CSS/CSS_layout/Multiple-column_Layout
 
 <h2 id="列与内容折断">列与内容折断</h2>
 
-<p>多列布局的内容被拆成碎块。 和多页媒体上的内容表现大致一样 — 比如打印网页的时候。 当你把内容放入多列布局容器内，内容被拆成碎块放进列中，内容折断（译者注：比如断词断句）使得这一效果可以实现。</p>
+<p>多列布局的内容被拆成碎块。和多页媒体上的内容表现大致一样 — 比如打印网页的时候。 当你把内容放入多列布局容器内，内容被拆成碎块放进列中，内容折断（译者注：比如断词断句）使得这一效果可以实现。</p>
 
 <p>有时，这种折断内容会降低阅读体验。在下面的举例中，我用 multicol 对一系列盒子布局，每一小块里有小标题和和一些文字。标题和文字可能被折断点拆开，从而降低阅读体验。</p>
 
@@ -280,7 +280,7 @@ translation_of: Learn/CSS/CSS_layout/Multiple-column_Layout
 
 <p>{{ EmbedLiveSample('Multicol_4', '100%', 600) }}</p>
 
-<p>我们可以使用 <a href="/en-US/docs/Web/CSS/CSS_Fragmentation">CSS Fragmentation</a> 中声明的属性控制这一特性。 这份规范提供了一些属性来控制 multicol 和多页媒体中的内容拆分、折断。比如， 在规则 <code>.card</code> 上添加属性{{cssxref("break-inside")}}，并设值 <code>avoid</code>  。<code>.card</code> 是标题和文本的容器，我们不想拆开这个盒子。</p>
+<p>我们可以使用 <a href="/en-US/docs/Web/CSS/CSS_Fragmentation">CSS Fragmentation</a> 中声明的属性控制这一特性。 这份规范提供了一些属性来控制 multicol 和多页媒体中的内容拆分、折断。比如，在规则 <code>.card</code> 上添加属性{{cssxref("break-inside")}}，并设值 <code>avoid</code>  。<code>.card</code> 是标题和文本的容器，我们不想拆开这个盒子。</p>
 
 <p>现阶段，增加旧属性 <code>page-break-inside: avoid</code> 能够获得更好的浏览器支持。</p>
 

@@ -5,15 +5,15 @@ translation_of: Web/API/ServiceWorkerGlobalScope
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> 的<code>ServiceWorkerGlobalScope</code> 接口，代表一个service worker的全局执行上下文。</p>
+<p><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> 的<code>ServiceWorkerGlobalScope</code> 接口，代表一个 service worker 的全局执行上下文。</p>
 
 <p>开发者应该知道， ServiceWorker 的状态在结束/重启的循环中不是一直保持不变的，所以每个事件处理器应该设定一个默认的全局状态。</p>
 
-<p>一旦成功地注册了service worker，为了节省内存和处理器，它将在他的状态达到了空闲的时候被终止。 一个在激活状态的service worker为了响应事件是可以自动重启的，就像这两个方法， {{domxref("ServiceWorkerGlobalScope.onfetch")}} 或者{{domxref("ServiceWorkerGlobalScope.onmessage")}}.</p>
+<p>一旦成功地注册了 service worker，为了节省内存和处理器，它将在他的状态达到了空闲的时候被终止。 一个在激活状态的 service worker 为了响应事件是可以自动重启的，就像这两个方法， {{domxref("ServiceWorkerGlobalScope.onfetch")}} 或者{{domxref("ServiceWorkerGlobalScope.onmessage")}}.</p>
 
-<p>此外, 在service worker中, 同步请求是被禁止的 - 只有异步请求，如方法{{domxref("GlobalFetch.fetch", "fetch()")}} 才被允许.</p>
+<p>此外，在 service worker 中，同步请求是被禁止的 - 只有异步请求，如方法{{domxref("GlobalFetch.fetch", "fetch()")}} 才被允许。</p>
 
-<p>该接口继承自 {{domxref("WorkerGlobalScope")}} 接口, 以及其父类 {{domxref("EventTarget")}}, 因此继承属性来自 {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, 和 {{domxref("WindowEventHandlers")}}.</p>
+<p>该接口继承自 {{domxref("WorkerGlobalScope")}} 接口，以及其父类 {{domxref("EventTarget")}}, 因此继承属性来自 {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, 和 {{domxref("WindowEventHandlers")}}.</p>
 
 <p>{{InheritanceDiagram(700, 85, 20)}}</p>
 
@@ -135,99 +135,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{CompatGeckoDesktop("44.0")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>24</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>onnotificationclick</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("42.0")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>onsync</code></td>
-   <td>{{CompatChrome(49.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("44.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>onnotificationclick</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("42.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>onsync</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(49.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 and 52 Extended Support Releases</a> (ESR.)</p>
+{{Compat("api.ServiceWorkerGlobalScope")}}
 
 <h2 id="See_also">See also</h2>
 

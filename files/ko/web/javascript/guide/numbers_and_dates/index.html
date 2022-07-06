@@ -7,11 +7,11 @@ translation_of: Web/JavaScript/Guide/Numbers_and_dates
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}</div>
 
-<p><span class="seoSummary">이 장에서는 JavaScript에서 숫자와 날짜를 사용하기 위한 개념과 객체, 함수에 대해 소개합니다.</span> 그리고 숫자를 10진법, 2진법, 16진법 등의 다양한 형태로 표현하는 방법과 더불어 {{jsxref("Math")}} 객체를 사용해 다양한 수학 연산을 수행하는 방법을 알 수 있습니다.</p>
+<p>이 장에서는 JavaScript에서 숫자와 날짜를 사용하기 위한 개념과 객체, 함수에 대해 소개합니다. 그리고 숫자를 10진법, 2진법, 16진법 등의 다양한 형태로 표현하는 방법과 더불어 {{jsxref("Math")}} 객체를 사용해 다양한 수학 연산을 수행하는 방법을 알 수 있습니다.</p>
 
 <h2 id="숫자">숫자</h2>
 
-<p>JavaScript에서 모든 숫자는 <a class="external external-icon" href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">double-precision 64-bit binary format IEEE 754</a> (즉, ±2<sup>−1022</sup> 과 ±2<sup>+1023</sup> 또는 대략 ±10<sup>−308</sup> to ±10<sup>+308</sup> 사이의 숫자이며 53bits의 수치정밀도 )로 구현되어 있습니다. ± 2<sup>53</sup> - 1까지의 정수 값을 정확하게 나타낼 수 있습니다.</p>
+<p>JavaScript에서 모든 숫자는 <a class="external external-icon" href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">double-precision 64-bit binary format IEEE 754</a> (즉, ±2^−1022 과 ±2^+1023 또는 대략 ±10^−308 to ±10^+308 사이의 숫자이며 53bits의 수치정밀도 )로 구현되어 있습니다. ±2^53 - 1까지의 정수 값을 정확하게 나타낼 수 있습니다.</p>
 
 <p>여기 부동 소수점 숫자를 나타낼 수 있으며, 숫자 형식은 세 개의 상징적인 값: <code>+</code>{{jsxref("Infinity")}}, <code>-</code>{{jsxref("Infinity")}}, and {{jsxref("NaN")}} (숫자가 아닌 값)을 갖습니다.</p>
 
@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Guide/Numbers_and_dates
 
 <h3 id="10진수">10진수</h3>
 
-<pre class="brush: js notranslate">1234567890
+<pre class="brush: js">1234567890
 42
 
 // 앞에 0이 붙은 숫자를 조심하세요:
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Guide/Numbers_and_dates
 
 <p>2진수 구문은 앞에 오는 0과 소문자 또는 대문자 라틴 문자 "B"(0B 또는 0b)를 사용합니다. 0b 다음의 숫자가 0 또는 1이 아니면 다음의 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a>가 발생합니다. "0b 이후에 누락 된 2 진수"("Missing binary digits after 0b")입니다.</p>
 
-<pre class="brush: js notranslate">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+<pre class="brush: js">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
 var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
@@ -46,26 +46,26 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
 <p>8 진수 구문은 앞에 0을 사용합니다. <code>0</code> 이후의 숫자가 0에서 7까지 범위 밖에 있는 경우, 숫자는 10진수로 해석됩니다.</p>
 
-<pre class="brush: js notranslate">var n = 0755; // 493
+<pre class="brush: js">var n = 0755; // 493
 var m = 0644; // 420
 </pre>
 
 <p>ECMAScript 5의 Strict 모드는 8 진수 구문을 금지합니다. 8 진수 구문은 ECMAScript 5의 일부가 아니지만, <code>0644 === 420</code> 및 <code>"\ 045"=== "%"</code>의 8 진수에 접두사를 붙이면 모든 브라우저에서 지원됩니다. ECMAScript 2015에서는 접두어가 <code>0o</code>인 경우 8 진수가 지원됩니다 (예 :</p>
 
-<pre class="notranslate"><code>var a = 0o10; // ES2015: 8</code></pre>
+<pre><code>var a = 0o10; // ES2015: 8</code></pre>
 
 <h3 id="16진수">16진수</h3>
 
 <p>16진수 구문은 앞에 0 다음에 소문자나 대문자 라틴어 문자 "X"(<code>0x</code> 또는 <code>0X</code>)를 사용합니다. 0X 이후 숫자가 범위(0123456789ABCDEF) 밖에 있는 경우, 다음 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a>가 발생합니다: "식별자는 숫자 리터럴 후 즉시 시작됩니다".</p>
 
-<pre class="brush: js notranslate">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+<pre class="brush: js">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
 0XA                 // 10
 </pre>
 
 <h3 id="지수_계산">지수 계산</h3>
 
-<pre class="notranslate"><code>1E3   // 1000
+<pre><code>1E3   // 1000
 2e6   // 2000000
 0.1e2 // 10</code>
 </pre>
@@ -74,7 +74,7 @@ var m = 0644; // 420
 
 <p>{{jsxref("Number")}} 내장객체는 최대값, not-a-number, 무한대와 같은 숫자 상수를 위한 속성들이 있습니다. 여러분은 이러한 속성의 값을 변경 할 수 없고 다음과 같이 사용합니다:</p>
 
-<pre class="brush: js notranslate">var biggestNum = Number.MAX_VALUE;
+<pre class="brush: js">var biggestNum = Number.MAX_VALUE;
 var smallestNum = Number.MIN_VALUE;
 var infiniteNum = Number.POSITIVE_INFINITY;
 var negInfiniteNum = Number.NEGATIVE_INFINITY;
@@ -120,11 +120,11 @@ var notANum = Number.NaN;
   </tr>
   <tr>
    <td>{{jsxref("Number.MIN_SAFE_INTEGER")}}</td>
-   <td>자바스크립트에서 안전한 최소의 정수.(−2<sup>53</sup> + 1, or <code>−9007199254740991</code>)</td>
+   <td>자바스크립트에서 안전한 최소의 정수.(−2^53 + 1, or <code>−9007199254740991</code>)</td>
   </tr>
   <tr>
    <td>{{jsxref("Number.MAX_SAFE_INTEGER")}}</td>
-   <td>자바스크립트에서 안전한 최대의 정수.(+2<sup>53</sup> − 1, or <code>+9007199254740991</code>)</td>
+   <td>자바스크립트에서 안전한 최대의 정수.(+2^53 − 1, or <code>+9007199254740991</code>)</td>
   </tr>
  </tbody>
 </table>
@@ -197,12 +197,12 @@ var notANum = Number.NaN;
 
 <p>내장 {{jsxref ( "Math")}} 객체는 수학 상수 및 함수에 대한 속성 및 메서드를 포함합니다. 예를 들어, <code>Math</code> 객체의 <code>PI</code> 속성에는 pi (3.141 ...) 값이 있습니다.이 값은 응용 프로그램에서 다음과 같이 사용합니다.</p>
 
-<pre class="brush: js notranslate">Math.PI
+<pre class="brush: js">Math.PI
 </pre>
 
 <p>마찬가지로 표준 수학 함수도 <code>Math</code>의 함수입니다. 여기에는 삼각 함수, 로그 함수, 지수 함수 및 기타 함수가 포함됩니다. 예를 들어 삼각 함수 sine을 사용하려면 다음과 같이 작성합니다.</p>
 
-<pre class="brush: js notranslate">Math.sin(1.56)
+<pre class="brush: js">Math.sin(1.56)
 </pre>
 
 <p><code>Math</code>의 모든 삼각 함수에는 라디안으로 매게변수를 입력해야 합니다.</p>
@@ -279,7 +279,7 @@ var notANum = Number.NaN;
 
 <p>다른 많은 객체와 달리 자신의 <code>Math</code> 개체를 만들필요가 없습니다. 언제든 내장 된 <code>Math</code> 객체 바로 사용할 수 있습니다.</p>
 
-<h2 id="Date_객체"><code><font face="Consolas, Monaco, Andale Mono, monospace">Date</font></code><font face="Consolas, Monaco, Andale Mono, monospace"> 객체</font></h2>
+<h2 id="Date_객체"><code>Date</code> 객체</h2>
 
 <p>자바스크립트에는 날짜 데이터 타입이 없습니다. 그러나, {{jsxref ( "Date")}} 객체와 그 메소드를 사용하여 응용 프로그램에서 날짜와 시간을 처리 할 수 ​​있습니다. <code>Date</code> 객체에는 날짜 설정, 가져 오기 및 조작을위한 많은 메소드가 있습니다. 속성(properties)이 없습니다.</p>
 
@@ -289,7 +289,7 @@ var notANum = Number.NaN;
 
 <p>Date 객체를 만들려면 :</p>
 
-<pre class="brush: js notranslate">var dateObjectName = new Date([parameters]);
+<pre class="brush: js">var dateObjectName = new Date([parameters]);
 </pre>
 
 <p>여기서 <code>dateObjectName</code>은 만들려는 <code>Date</code> 객체의 이름입니다. 새로운 객체 또는 기존 객체의 속성 일 수 있습니다.</p>
@@ -329,7 +329,7 @@ var notANum = Number.NaN;
 
 <p>예를 들어, 아래와 같이 값들을 정의해봅시다 :</p>
 
-<pre class="brush: js notranslate">var Xmas95 = new Date("December 25, 1995");
+<pre class="brush: js">var Xmas95 = new Date("December 25, 1995");
 </pre>
 
 <p>그러면 <code>Xmas95.getMonth()</code>는 11을 반환합니다, 그리고 <code>Xmas95.getFullYear()</code>는 1995를 반환합니다.</p>
@@ -338,7 +338,7 @@ var notANum = Number.NaN;
 
 <p>예를 들어, 다음 코드는 현재 년도에 남아 수를 표시합니다:</p>
 
-<pre class="brush: js notranslate">var today = new Date();
+<pre class="brush: js">var today = new Date();
 var endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // Set day and month
 endYear.setFullYear(today.getFullYear()); // Set year to this year
 var msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
@@ -350,7 +350,7 @@ var daysLeft = Math.round(daysLeft); //returns days left in the year
 
 <p><code>Parse</code> 함수는 날짜문자열부터 기존의 <code>Date</code>객체까지의 값을 할당하기에 유용합니다. 예를 들어, 다음 코드는 그 <code>IPOdate</code> 객체에 날짜값을 할당하기위해 <code>parse</code>와 <code>setTime</code>을 사용합니다;</p>
 
-<pre class="brush: js notranslate">var IPOdate = new Date();
+<pre class="brush: js">var IPOdate = new Date();
 IPOdate.setTime(Date.parse("Aug 9, 1995"));
 </pre>
 
@@ -358,7 +358,7 @@ IPOdate.setTime(Date.parse("Aug 9, 1995"));
 
 <p>다음 예제 에서 <code>JSClock()</code>는 digital 시계형식의 시간을 반환합니다.</p>
 
-<pre class="brush: js notranslate">function JSClock() {
+<pre class="brush: js">function JSClock() {
   var time = new Date();
   var hour = time.getHours();
   var minute = time.getMinutes();

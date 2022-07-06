@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Closures
 <p>Рассмотрим следующий пример:</p>
 
 <div>
-<pre class="brush: js notranslate">function init() {
+<pre class="brush: js">function init() {
     var name = "Mozilla"; // name - локальная переменная, созданная в init
     function displayName() { // displayName() - внутренняя функция, замыкание
         alert (name); // displayName() использует переменную, объявленную в родительской функции
@@ -29,13 +29,13 @@ init();</pre>
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/78dg25ax/", "js,result", 250)}}</p>
 
-<p><a href="http://jsfiddle.net/xAFs9/3/" title="http://jsfiddle.net/xAFs9/">Выполните</a> этот код и обратите внимание, что команда <code>alert()</code>  внутри <code>displayName()</code> благополучно выводит на экран содержимое переменной <code>name</code> объявленной в родительской функции. Это пример так называемой лексической области видимости <em>(lexical</em> <em>scoping)</em>: в JavaScript область действия переменной определяется по её расположению в коде (это очевидно <em>лексически</em>), и вложенные функции имеют доступ к переменным, объявленным вовне. Этот механизм и называется Lexical scoping (область действия, ограниченная лексически).</p>
+<p><a href="http://jsfiddle.net/xAFs9/3/">Выполните</a> этот код и обратите внимание, что команда <code>alert()</code>  внутри <code>displayName()</code> благополучно выводит на экран содержимое переменной <code>name</code> объявленной в родительской функции. Это пример так называемой лексической области видимости <em>(lexical</em> <em>scoping)</em>: в JavaScript область действия переменной определяется по её расположению в коде (это очевидно <em>лексически</em>), и вложенные функции имеют доступ к переменным, объявленным вовне. Этот механизм и называется Lexical scoping (область действия, ограниченная лексически).</p>
 
 <h2 id="Замыкание">Замыкание</h2>
 
 <p>Рассмотрим следующий пример:</p>
 
-<pre class="brush: js notranslate">function makeFunc() {
+<pre class="brush: js">function makeFunc() {
   var name = "Mozilla";
   function displayName() {
     alert(name);
@@ -55,7 +55,7 @@ myFunc();
 
 <p>А вот немного более интересный пример — функция <code>makeAdder</code>:</p>
 
-<pre class="brush: js notranslate">function makeAdder(x) {
+<pre class="brush: js">function makeAdder(x) {
   return function(y) {
     return x + y;
   };
@@ -84,7 +84,7 @@ console.log(add10(2)); // 12
 
 <p>Давайте рассмотрим практический пример: допустим, мы хотим добавить на страницу несколько кнопок, которые будут менять размер текста. Как вариант, мы можем указать свойство font-size на элементе body в пикселах, а затем устанавливать размер прочих элементов страницы (таких, как заголовки) с использованием относительных единиц em:</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
 }
@@ -102,7 +102,7 @@ h2 {
 
 <p>Используем следующий JavaScript:</p>
 
-<pre class="brush: js notranslate">function makeSizer(size) {
+<pre class="brush: js">function makeSizer(size) {
   return function() {
     document.body.style.fontSize = size + 'px';
   };
@@ -115,12 +115,12 @@ var size16 = makeSizer(16);
 
 <p>Теперь <code>size12</code>, <code>size14</code>, и <code>size16</code> - это функции, которые меняют размер текста в элементе body на значения 12, 14, и 16 пикселов, соответственно. После чего мы цепляем эти функции на кнопки примерно так:</p>
 
-<pre class="brush: js notranslate">document.getElementById('size-12').onclick = size12;
+<pre class="brush: js">document.getElementById('size-12').onclick = size12;
 document.getElementById('size-14').onclick = size14;
 document.getElementById('size-16').onclick = size16;
 </pre>
 
-<pre class="brush: html notranslate">&lt;a href="#" id="size-12"&gt;12&lt;/a&gt;
+<pre class="brush: html">&lt;a href="#" id="size-12"&gt;12&lt;/a&gt;
 &lt;a href="#" id="size-14"&gt;14&lt;/a&gt;
 &lt;a href="#" id="size-16"&gt;16&lt;/a&gt;
 </pre>
@@ -133,9 +133,9 @@ document.getElementById('size-16').onclick = size16;
 
 <p>JavaScript не имеет встроенной возможности сделать такое, но это можно эмулировать с помощью замыкания. Частные методы полезны не только тем, что ограничивают доступ к коду, это также мощное средство глобальной организации пространства имён, позволяющее не засорять публичный интерфейс вашего кода внутренними методами классов.</p>
 
-<p>Код ниже иллюстрирует, как можно использовать замыкания для определения публичных функций, которые имеют доступ к закрытым от пользователя (private) функциям и переменным. Такая манера программирования называется <a class="external" href="http://www.google.com/search?q=javascript+module+pattern" title="http://www.google.com/search?q=javascript+module+pattern">модульное программирование</a>: </p>
+<p>Код ниже иллюстрирует, как можно использовать замыкания для определения публичных функций, которые имеют доступ к закрытым от пользователя (private) функциям и переменным. Такая манера программирования называется <a class="external" href="http://www.google.com/search?q=javascript+module+pattern">модульное программирование</a>: </p>
 
-<pre class="brush: js notranslate">var Counter = (function() {
+<pre class="brush: js">var Counter = (function() {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
@@ -169,7 +169,7 @@ alert(Counter.value()); /* Alerts 1 */
 
 <p>Заметьте, мы описываем анонимную функцию, создающую счётчик, и тут же запускаем её, присваивая результат исполнения переменной <code>Counter</code>. Но мы также можем не запускать эту функцию сразу, а сохранить её в отдельной переменной, чтобы использовать для дальнейшего создания нескольких счётчиков вот так:</p>
 
-<pre class="brush: js notranslate">var makeCounter = function() {
+<pre class="brush: js">var makeCounter = function() {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
@@ -206,13 +206,13 @@ alert(Counter2.value()); /* Alerts 0 */
 
 <p>До того, как в версии ECMAScript 6 ввели ключевое слово <a href="/en-US/docs/JavaScript/Reference/Statements/let" title="let"><code>let</code></a>, постоянно возникала следующая проблема при создании замыканий внутри цикла. Рассмотрим пример:</p>
 
-<pre class="brush: html notranslate">&lt;p id="help"&gt;Helpful notes will appear here&lt;/p&gt;
+<pre class="brush: html">&lt;p id="help"&gt;Helpful notes will appear here&lt;/p&gt;
 &lt;p&gt;E-mail: &lt;input type="text" id="email" name="email"&gt;&lt;/p&gt;
 &lt;p&gt;Name: &lt;input type="text" id="name" name="name"&gt;&lt;/p&gt;
 &lt;p&gt;Age: &lt;input type="text" id="age" name="age"&gt;&lt;/p&gt;
 </pre>
 
-<pre class="brush: js notranslate">function showHelp(help) {
+<pre class="brush: js">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -244,7 +244,7 @@ setupHelp();
 
 <p>В качестве решения в этом случае можно предложить использование функции, фабричной функции (function factory), как уже было описано выше в примерах:</p>
 
-<pre class="brush: js notranslate">function showHelp(help) {
+<pre class="brush: js">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -282,7 +282,7 @@ setupHelp();
 
 <p>Давайте рассмотрим не очень практичный, но показательный пример:</p>
 
-<pre class="brush: js notranslate">function MyObject(name, message) {
+<pre class="brush: js">function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
   this.getName = function() {
@@ -297,7 +297,7 @@ setupHelp();
 
 <p>Поскольку вышеприведённый код никак не использует преимущества замыканий, его можно переписать следующим образом:</p>
 
-<pre class="brush: js notranslate">function MyObject(name, message) {
+<pre class="brush: js">function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
@@ -313,7 +313,7 @@ MyObject.prototype = {
 
 <p>Методы вынесены в прототип. Тем не менее, переопределять прототип — само по себе является плохой привычкой, поэтому давайте перепишем всё так, чтобы новые методы просто добавились к уже существующему прототипу.</p>
 
-<pre class="brush: js notranslate">function MyObject(name, message) {
+<pre class="brush: js">function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
@@ -327,7 +327,7 @@ MyObject.prototype.getMessage = function() {
 
 <p>Код выше можно сделать аккуратнее:</p>
 
-<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> <span class="function token" style="color: #dd4a68;">MyObject<span class="punctuation token" style="color: #999999;">(</span></span>name<span class="punctuation token" style="color: #999999;">,</span> message<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> <span class="function token" style="color: #dd4a68;">MyObject<span class="punctuation token" style="color: #999999;">(</span></span>name<span class="punctuation token" style="color: #999999;">,</span> message<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
     <span class="keyword token" style="color: #0077aa;">this</span><span class="punctuation token" style="color: #999999;">.</span>name <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> name<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">toString<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
     <span class="keyword token" style="color: #0077aa;">this</span><span class="punctuation token" style="color: #999999;">.</span>message <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> message<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">toString<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
 <span class="punctuation token" style="color: #999999;">}</span>

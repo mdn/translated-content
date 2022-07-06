@@ -12,7 +12,14 @@ original_slug: Web/JavaScript/Reference/Functions/애로우_펑션
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
-<p>화살표 함수 표현(<strong>arrow function expression</strong>)은 <a href="/ko/docs/Web/JavaScript/Reference/Operators/function" title="function expressions">function 표현</a>에 비해 구문이 짧고  자신의 <a href="/ko/docs/Web/JavaScript/Reference/Operators/this">this</a>, <a href="/ko/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>, <a href="/ko/docs/Web/JavaScript/Reference/Operators/super">super</a> 또는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>을 바인딩 하지 않습니다. 화살표 함수는 항상 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/name" title="anonymous">익명</a>입니다. 이  함수 표현은 메소드 함수가 아닌 곳에 가장 적합합니다. 그래서 생성자로서 사용할 수 없습니다.</p>
+<p>화살표 함수 표현(<strong>arrow function expression</strong>)은 <a href="/ko/docs/Web/JavaScript/Reference/Operators/function">전통적인 함수표현(function)</a>의 간편한 대안입니다.  하지만, 화살표 함수는 몇 가지 제한점이 있고 모든 상황에 사용할 수는 없습니다.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/this">this</a>나 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/super">super</a>에 대한 바인딩이 없고, <a href="https://developer.mozilla.org/ko/docs/Glossary/Method">methods</a> 로 사용될 수 없습니다.</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>키워드가 없습니다.</li>
+<li>일반적으로 스코프를 지정할 때 사용하는 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a>, <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a>, <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bind</a> methods를 이용할 수 없습니다.</li>
+<li>생성자<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes/constructor">(Constructor)</a>로 사용할 수 없습니다.</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/yield">yield</a>를 화살표 함수 내부에서 사용할 수 없습니다.</li>
+</ul>
 
 <p>{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}</p>
 
@@ -20,7 +27,7 @@ original_slug: Web/JavaScript/Reference/Functions/애로우_펑션
 
 <h3 id="기본_구문">기본 구문</h3>
 
-<pre class="syntaxbox notranslate"><strong>(</strong><em>param1</em>, <em>param2</em>, …, <em>paramN</em><strong>) =&gt; {</strong> <em>statements</em> <strong>}</strong>
+<pre class="syntaxbox "><strong>(</strong><em>param1</em>, <em>param2</em>, …, <em>paramN</em><strong>) =&gt; {</strong> <em>statements</em> <strong>}</strong>
 <strong>(</strong><em>param1</em>, <em>param2</em>, …, <em>paramN</em><strong>) =&gt;</strong> <em>expression</em>
 // 다음과 동일함:  =&gt; { return expression; }
 
@@ -33,14 +40,14 @@ original_slug: Web/JavaScript/Reference/Functions/애로우_펑션
 
 <h3 id="고급_구문">고급 구문</h3>
 
-<pre class="syntaxbox notranslate">// 객체 리터럴 표현을 반환하기 위해서는 함수 본문(body)을 괄호 속에 넣음:
+<pre class="syntaxbox ">// 객체 리터럴 표현을 반환하기 위해서는 함수 본문(body)을 괄호 속에 넣음:
 <em>params</em> =&gt; ({<em>foo: bar</em>})
 
-// <a href="/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters" title="Rest parameter">나머지 매개변수</a> 및 <a href="/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters" title="Default parameter">기본 매개변수</a>를 지원함
+// <a href="/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters">나머지 매개변수</a> 및 <a href="/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters">기본 매개변수</a>를 지원함
 (<em>param1</em>, <em>param2</em>, <strong>...rest</strong>) =&gt; { <em>statements</em> }
 (<em>param1</em> <strong>= defaultValue1</strong>, <em>param2</em>, …, paramN <strong>= defaultValueN</strong>) =&gt; { <em>statements</em> }
 
-// 매개변수 목록 내 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" title="Destructuring">구조분해할당</a>도 지원됨
+// 매개변수 목록 내 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">구조분해할당</a>도 지원됨
 var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) =&gt; a + b + c;
 f();  // 6
 </pre>
@@ -57,7 +64,7 @@ f();  // 6
 
 <p>일부 함수 패턴에서는, 짧은 함수가 환영받습니다. 비교해 보세요:</p>
 
-<pre class="notranslate">var elements = [
+<pre >var elements = [
   'Hydrogen',
   'Helium',
   'Lithium',
@@ -65,7 +72,7 @@ f();  // 6
 ];
 
 // 이 문장은 배열을 반환함: [8, 6, 7, 9]
-elements.<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(function(element) {
+elements.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(function(element) {
   return element.length;
 });
 
@@ -75,7 +82,7 @@ elements.map((element) =&gt; {
 }); // [8, 6, 7, 9]
 
 // 파라미터가 하나만 있을 때는 주변 괄호를 생략할 수 있다.
-elements.<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(element =&gt; {
+elements.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(element =&gt; {
   return element.length;
 }); // [8, 6, 7, 9]
 
@@ -87,12 +94,12 @@ elements.map(element =&gt; element.length); // [8, 6, 7, 9]
 // 'length'는 우리가 얻고자 하는 속성에 해당하는 반면,
 // lengthFooBArX'는 변경 가능한 변수의 이름일 뿐이므로
 // 원하는 유효한 변수명으로 변경할 수 있다.
-elements.<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(({ length: lengthFooBArX }) =&gt; lengthFooBArX); // [8, 6, 7, 9]
+elements.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(({ length: lengthFooBArX }) =&gt; lengthFooBArX); // [8, 6, 7, 9]
 
 // destructuring 파라미터 할당도 아래와 같이 작성할 수 있습니다.
 // 이 예에서 정의한 객체내의 'length'에 값을 지정하지 않은 점에 주목하세요. 대신, "length" 변수의
 // 리터럴 이름은 우리가 해당 객체에서 꺼내오고 싶은 속성이름 자체로 사용됩니다.
-elements.<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(({ length }) =&gt; length); // [8, 6, 7, 9] </pre>
+elements.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(({ length }) =&gt; length); // [8, 6, 7, 9] </pre>
 
 <h3 id="바인딩_되지_않은_this">바인딩 되지 않은 <code>this</code></h3>
 
@@ -100,14 +107,14 @@ elements.<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/R
 
 <ul>
  <li>이 함수가 생성자인 경우는 새로운 객체</li>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Strict_mode" title="strict mode">엄격 모드</a> 함수 호출에서는 <code>undefined</code> </li>
+ <li><a href="/ko/docs/Web/JavaScript/Reference/Strict_mode">엄격 모드</a> 함수 호출에서는 <code>undefined</code> </li>
  <li>함수가 "객체 메서드"로서 호출된 경우 문맥 객체</li>
  <li>등등</li>
 </ul>
 
 <p>이는 객체 지향 스타일로 프로그래밍할 때 별로 좋지않습니다.</p>
 
-<pre class="brush: js notranslate">function Person() {
+<pre class="brush: js ">function Person() {
   // Person() 생성자는 `this`를 자신의 인스턴스로 정의.
   this.age = 0;
 
@@ -123,7 +130,7 @@ var p = new Person();</pre>
 
 <p>ECMAScript 3/5 에서는, 이 문제를 <code>this</code> 값을 폐쇄될 수 있는 (비전역) 변수에 할당하여 해결했습니다.</p>
 
-<pre class="brush: js notranslate">function Person() {
+<pre class="brush: js ">function Person() {
   var that = this;
   that.age = 0;
 
@@ -133,13 +140,13 @@ var p = new Person();</pre>
   }, 1000);
 }</pre>
 
-<p>이렇게 하는 대신에, <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" title="bound function">바인딩한 함수</a>는 적절한 <code>this</code> 값이 <code>growUp()</code> 함수에 전달될 수 있도록 생성될 수 있습니다.</p>
+<p>이렇게 하는 대신에, <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">바인딩한 함수</a>는 적절한 <code>this</code> 값이 <code>growUp()</code> 함수에 전달될 수 있도록 생성될 수 있습니다.</p>
 
 <p>화살표 함수는 자신의 <code>this</code>가 없습니다.  대신 화살표 함수를 둘러싸는 렉시컬 범위(lexical scope)의 <code>this</code>가 사용됩니다; 화살표 함수는 일반 변수 조회 규칙(normal variable lookup rules)을 따릅니다. 때문에 현재 범위에서 존재하지 않는 <code>this</code>를 찾을 때, 화살표 함수는 바로 바깥 범위에서 <code>this</code>를 찾는것으로 검색을 끝내게 됩니다.</p>
 
 <p>따라서 다음 코드에서 <code>setInterval</code>에 전달 된 함수 내부의 <code>this</code>는 <code>setInterval</code>을 포함한 function의 <code>this</code>와 동일한 값을 갖습니다.</p>
 
-<pre class="brush: js notranslate">function Person(){
+<pre class="brush: js ">function Person(){
   this.age = 0;
 
   setInterval(() =&gt; {
@@ -151,9 +158,9 @@ var p = new Person();</pre>
 
 <h4 id="엄격_모드와의_관계">엄격 모드와의 관계</h4>
 
-<p><code>this</code>가 렉시컬(lexical, 정적)임을 감안하면, <code>this</code>에 관한 <a href="/ko/docs/Web/JavaScript/Reference/Strict_mode" title="strict mode">엄격 모드</a> 규칙은 그냥 무시됩니다.</p>
+<p><code>this</code>가 렉시컬(lexical, 정적)임을 감안하면, <code>this</code>에 관한 <a href="/ko/docs/Web/JavaScript/Reference/Strict_mode">엄격 모드</a> 규칙은 그냥 무시됩니다.</p>
 
-<pre class="notranslate">var f = () =&gt; { 'use strict'; return this; };
+<pre >var f = () =&gt; { 'use strict'; return this; };
 f() === window; // 혹은 전역객체</pre>
 
 <p>엄격 모드의 나머지 규칙은 평소대로 적용합니다.</p>
@@ -166,7 +173,7 @@ f() === window; // 혹은 전역객체</pre>
 
 <p>This code sample using Chrome 81 demonstrates that arrow functions allow the creation of global variables in such situations (both for a concise body and for a normal function body):</p>
 
-<pre class="notranslate">&gt; f1 = x =&gt; { y = x; console.log(`x: ${x}, y: ${y}`); return x + 1; }
+<pre >&gt; f1 = x =&gt; { y = x; console.log(`x: ${x}, y: ${y}`); return x + 1; }
 x =&gt; { y = x; console.log(`x: ${x}, y: ${y}`); return x + 1; }
 
 &gt; y
@@ -223,7 +230,7 @@ VM51891:1 Uncaught ReferenceError: z1 is not defined
 
 <p>화살표 함수에서는 <code>this가 </code> 바인딩되지 않았기 때문에, <code>call()</code> 또는 <code>apply()</code> 메서드는  인자만 전달 할 수 있습니다. this는 무시됩니다.</p>
 
-<pre class="brush: js notranslate">var adder = {
+<pre class="brush: js ">var adder = {
   base : 1,
 
   add : function(a) {
@@ -248,7 +255,7 @@ console.log(adder.addThruCall(1)); // 이도 2가 콘솔에 출력될 것임</pr
 
 <p>화살표 함수는 <a href="/ko/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code> 객체</a>를 바인드 하지 않습니다.  때문에, <code>arguments는</code>  그저 둘러싸는 범위(scope) 내 이름에 대한 참조입니다.</p>
 
-<pre class="brush: js notranslate"><code>var arguments = [1, 2, 3];
+<pre class="brush: js "><code>var arguments = [1, 2, 3];
 var arr = () =&gt; arguments[0];
 
 arr(); // 1
@@ -260,9 +267,9 @@ function foo(n) {
 
 foo(1); // 2</code></pre>
 
-<p>화살표 함수는 자신의 <code>arguments</code> 객체가 없지만, 대부분의 경우에 <a href="/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters" title="rest parameters">나머지 매개변수</a>가 좋은 대안입니다:</p>
+<p>화살표 함수는 자신의 <code>arguments</code> 객체가 없지만, 대부분의 경우에 <a href="/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters">나머지 매개변수</a>가 좋은 대안입니다:</p>
 
-<pre class="brush: js notranslate">function foo(n) {
+<pre class="brush: js ">function foo(n) {
   var f = (...args) =&gt; args[0] + n;
   return f(2);
 }
@@ -271,9 +278,9 @@ foo(1); // 3</pre>
 
 <h3 id="메소드로_사용되는_화살표_함수">메소드로 사용되는 화살표 함수</h3>
 
-<p>이야기 했듯이, 화살표 함수 표현은 메소드 함수가 아닌 형태로 사용 할 수 있습니다. 메소드로 사용하려고 한면 무슨일이 발생하는지 봅시다.</p>
+<p>이야기 했듯이, 화살표 함수 표현은 메소드 함수가 아닌 형태로 사용 할 수 있습니다. 메소드로 사용하려고 한다면 무슨일이 발생하는지 봅시다.</p>
 
-<pre class="brush: js notranslate"><code>'use strict';
+<pre class="brush: js "><code>'use strict';
 
 var obj = { // does not create a new scope
   i: 10,
@@ -288,7 +295,7 @@ obj.c(); // prints 10, Object {...}</code>
 
 <p>화살표 함수는 자신의 this를 가지고("bind" 바인드)있지 않습니다.{{jsxref("Object.defineProperty()")}}</p>
 
-<pre class="brush: js notranslate"><code>'use strict';
+<pre class="brush: js "><code>'use strict';
 
 var obj = {
   a: 10
@@ -305,14 +312,14 @@ Object.defineProperty(obj, 'b', {
 
 <p>화살표 함수는 생성자로서 사용될 수 없으며 <code>new</code>와 함께 사용하면 오류가 발생합니다.</p>
 
-<pre class="brush: js notranslate"><code>var Foo = () =&gt; {};
+<pre class="brush: js "><code>var Foo = () =&gt; {};
 var foo = new Foo(); // TypeError: Foo is not a constructor</code></pre>
 
 <h3 id="prototype_속성_사용"><code>prototype</code> 속성 사용</h3>
 
 <p>화살표 함수는 <code>prototype</code> 속성이 없습니다.</p>
 
-<pre class="brush: js notranslate"><code>var Foo = () =&gt; {};
+<pre class="brush: js "><code>var Foo = () =&gt; {};
 console.log(Foo.prototype); // undefined</code></pre>
 
 <h3 id="yield_키워드_사용"><code>yield</code> 키워드 사용</h3>
@@ -329,7 +336,7 @@ console.log(Foo.prototype); // undefined</code></pre>
 
 <p>block바디는 자동으로 값을 반환하지 않습니다. <code>return</code>을 사용해서 값을 반환해야 합니다.</p>
 
-<pre class="brush: js notranslate">var func = x =&gt; x * x;                  // concise 바디, 생략된 "return" 여기서는 x * x
+<pre class="brush: js ">var func = x =&gt; x * x;                  // concise 바디, 생략된 "return" 여기서는 x * x
 var func = (x, y) =&gt; { return x + y; }; // block 바디, "return"이 필요
 </pre>
 
@@ -337,7 +344,7 @@ var func = (x, y) =&gt; { return x + y; }; // block 바디, "return"이 필요
 
 <p>간결한 구문 <code>params =&gt; {object:literal}</code>을 사용한 객체 리터럴 반환은 예상대로 작동하지 않음을 명심하세요:</p>
 
-<pre class="brush: js notranslate">var func = () =&gt; {  foo: 1  };
+<pre class="brush: js ">var func = () =&gt; {  foo: 1  };
 // func() 호출은 undefined를 반환!
 
 var func = () =&gt; {  foo: function() {}  };
@@ -347,19 +354,19 @@ var func = () =&gt; {  foo: function() {}  };
 
 <p>객체 리터럴를 괄호로 감싸는 것을 기억하세요:</p>
 
-<pre class="brush: js notranslate">var func = () =&gt; ({ foo: 1 });</pre>
+<pre class="brush: js ">var func = () =&gt; ({ foo: 1 });</pre>
 
 <h3 id="줄바꿈">줄바꿈</h3>
 
 <p>화살표 함수는 파라메터와 화살표 사이에 개행 문자를 포함 할 수 없습니다.</p>
 
-<pre class="brush: js notranslate"><code>var func = (a, b, c)
+<pre class="brush: js "><code>var func = (a, b, c)
            =&gt; 1;
 // SyntaxError: expected expression, got '=&gt;'</code></pre>
 
 <p>하지만, 보기 좋은 코드를 유지하고 싶다면, 아래에 보는 것처럼 괄호나 개행을 둠으로써 이를 수정할 수 있습니다.</p>
 
-<pre class="notranslate">var func = (a, b, c) =&gt;
+<pre >var func = (a, b, c) =&gt;
   1;
 
 var func = (a, b, c) =&gt; (
@@ -382,7 +389,7 @@ var func = (a, b, c) =&gt; {
 
 <p>화살표 함수 내의 화살표는 연산자가 아닙니다. 그러나 화살표 함수는 평범한 함수와 비교했을 때 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">operator precedence</a>와 다르게 반응하는 특별한 파싱룰을 가지고 있습니다.</p>
 
-<pre class="brush: js notranslate"><code>let callback;
+<pre class="brush: js "><code>let callback;
 
 callback = callback || function() {}; // ok
 
@@ -396,7 +403,7 @@ callback = callback || (() =&gt; {});    // ok</code>
 
 <h3 id="기본_사용법">기본 사용법</h3>
 
-<pre class="brush: js notranslate"><code>// </code> empty 화살표 함수는 undefined를 반환 <code>
+<pre class="brush: js "><code>// </code> empty 화살표 함수는 undefined를 반환 <code>
 let empty = () =&gt; {};
 
 (() =&gt; 'foobar')();

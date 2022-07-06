@@ -43,7 +43,7 @@ original_slug: Web/Barrierefreiheit/An_overview_of_accessible_web_applications_a
 
 <h2 id="ARIA">ARIA</h2>
 
-<p><a class="external" href="http://www.w3.org/WAI/intro/aria.php" title="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a>, die Spezifikation für <strong>Accessible Rich Internet Applications</strong> der <a class="external" href="http://www.w3.org/WAI/" title="http://www.w3.org/WAI/">Web Accessibility Initiative</a> des W3C beschreibt, wie fehlende semantischen Informationen hinzugefügt werden können, die für das Erfassen der Inhalte bei der Benutzung von Unterstützungstechnologie, wie z.B. Screen Readern, benötigt werden. ARIA ermöglicht Entwicklern, ihre Komponenten genauer zu beschreiben, indem dem Markup spezielle Attribute hinzugefügt werden. ARIA wurde entwickelt, um die Lücke zwischen Standard-HTML-Tags und desktopartigen Komponenten von dynamischen Web-Applikationen zu schließen und legt Rollen- und Zustansbeschreibungen für verbreitete UI-Komponenten fest.</p>
+<p><a class="external" href="http://www.w3.org/WAI/intro/aria.php" title="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a>, die Spezifikation für <strong>Accessible Rich Internet Applications</strong> der <a class="external" href="http://www.w3.org/WAI/">Web Accessibility Initiative</a> des W3C beschreibt, wie fehlende semantischen Informationen hinzugefügt werden können, die für das Erfassen der Inhalte bei der Benutzung von Unterstützungstechnologie, wie z.B. Screen Readern, benötigt werden. ARIA ermöglicht Entwicklern, ihre Komponenten genauer zu beschreiben, indem dem Markup spezielle Attribute hinzugefügt werden. ARIA wurde entwickelt, um die Lücke zwischen Standard-HTML-Tags und desktopartigen Komponenten von dynamischen Web-Applikationen zu schließen und legt Rollen- und Zustansbeschreibungen für verbreitete UI-Komponenten fest.</p>
 
 <p>Die ARIA-Spezifikation beschreibt drei verschiedene Arten von Attributen: Rollen, Zustände und Eigenschaften. Rollen werden Komponenten zugewiesen, die bei HTML4 nicht vorhanden sind, wie z.B. Slider, Menüleisten, Tabs und Dialoge. Eigenschaften beschreiben Charakteristiken dieser Komponenten, wie z.B. ob sie per Drag &amp; Drop ziehbar sind, ein benötigtes Element besitzen oder ein Popup mit ihnen verbunden ist. Zustände beschreiben den aktuellen Interaktionsstatus eines Elements - so wird der Unterstützungstechnologie mitgeteilt, ob das Element gerade beschäftigt, deaktiviert, selektiert oder versteckt ist.</p>
 
@@ -89,15 +89,13 @@ original_slug: Web/Barrierefreiheit/An_overview_of_accessible_web_applications_a
  <li><code><strong>aria-grabbed</strong></code>: Zeigt an, ob sich ein Objekt bei einer Drag &amp; Drop-Interaktion im "grabbed"-Zustand befindet.</li>
 </ul>
 
-<p>(Eine komplette Liste aller Zustände finden Sie in der <a class="external" href="http://www.w3.org/TR/wai-aria/states_and_properties" title="http://www.w3.org/TR/wai-aria/states_and_properties">Liste zu ARIA-Zuständen und Eigenschaften</a>)</p>
+<p>(Eine komplette Liste aller Zustände finden Sie in der <a class="external" href="http://www.w3.org/TR/wai-aria/states_and_properties">Liste zu ARIA-Zuständen und Eigenschaften</a>)</p>
 
 <p>Entwickler sollten ARIA-Zustände einsetzen, um den Zustand von Komponenten zu deklarieren und mit CSS-Attribut-Selektoren die visuelle Darstellung je nach Zustand entsprechend verändern (anstatt per Skript den Klassennamen des Elements zu ändern).</p>
 
-<p>Die Website der Open Ajax Alliance stellt<a class="external" href="http://www.oaa-accessibility.org/example/25/" title="http://www.oaa-accessibility.org/example/25/"> Beispiel zu CSS-Attributseletoren in Verbindung mit ARIA</a> bereit. Das Beispiel zeigt die Oberfläche eines WYSIWYG-Editors mit einem dynamischen Menü-System. Elemente, die gerade selektiert sind, unterscheiden sich visuell von anderen Elementen. Relevant sind hier besonders die unten beschriebenen Teile.</p>
+<p>Die Website der Open Ajax Alliance stellt Beispiel zu CSS-Attributseletoren in Verbindung mit ARIA</a> bereit. Das Beispiel zeigt die Oberfläche eines WYSIWYG-Editors mit einem dynamischen Menü-System. Elemente, die gerade selektiert sind, unterscheiden sich visuell von anderen Elementen. Relevant sind hier besonders die unten beschriebenen Teile.</p>
 
 <p>Bei diesem Beispiel wird für des Menüs der HTML-Code aus Beispiel 1a verwendet. In Zeile 7 und 13 wird die Eigenschaft aria-checked eingesetzt, um den Zustand der Selektion anzuzeigen.</p>
-
-<p><em>Beispiel 1a. HTML für ein selektierbares Menü (übernommen von <a class="external" href="http://www.oaa-accessibility.org/example/25/" rel="freelink">http://www.oaa-accessibility.org/example/25/</a>).</em></p>
 
 <pre class="deki-transform">&lt;ul id="fontMenu" class="menu" role="menu" aria-hidden="true"&gt;
   &lt;li id="sans-serif"
@@ -117,8 +115,6 @@ original_slug: Web/Barrierefreiheit/An_overview_of_accessible_web_applications_a
 
 <p>Für die Änderung der visuellen Darstellung des selektierten Elements wird der CSS-Code aus Beispiel 1b verwendet. Beachten Sie, dass keine Klassennamen benutzt werden, einzig der Zustand des aria-checked-Attribute in Zeile 1 entscheidet also über die Darstellung des Elements.</p>
 
-<p><em><em>Beispiel 1b. Attribute-basierte Selektoren zum Anzeigen des Zustands (übernommen von<a class="external" href="http://www.oaa-accessibility.org/example/25/" rel="freelink"> http://www.oaa-accessibility.org/example/25/</a>).</em></em></p>
-
 <pre class="deki-transform">li[aria-checked="true"] {
   font-weight: bold;
   background-image: url('images/dot.png');
@@ -128,8 +124,6 @@ original_slug: Web/Barrierefreiheit/An_overview_of_accessible_web_applications_a
 </pre>
 
 <p>Zur Aktualisierung der Eigenschaft aria-checked wird der JavaScript-Code aus Beispiel 1c verwendet. Auch das Skript ändert nur den Wert der Attribute (Zeile 3 und 8) und es wird kein Klassenname hinzugefügt oder entfernt.</p>
-
-<p><em><em>Beispiel 1c. JavaScript zur Aktualisierung des Attributs aria-checked (übernommen von<a class="external" href="http://www.oaa-accessibility.org/example/25/" rel="freelink"> http://www.oaa-accessibility.org/example/25/</a>)</em></em><em><em><em>.</em></em></em></p>
 
 <pre class="deki-transform">var processMenuChoice = function(item) {
   // 'check' the selected item
@@ -148,11 +142,9 @@ original_slug: Web/Barrierefreiheit/An_overview_of_accessible_web_applications_a
 
 <p>Bei Änderungen der Sichtbarkeit von Elementen (verstecken oder sichtbar machen von Elementen) sollten Entwickler nur den Wert der Eigenschaft <strong>aria-hidden</strong> verändern. Dabei sollte die oben beschreibene Technik angewendet und CSS (<code>display:none</code>) eingesetzt werden, um das Element zu verstecken.</p>
 
-<p>Auf der Website der Open Ajax Alliance findet man hierzu <a class="external" href="http://www.oaa-accessibility.org/example/39/" title="http://www.oaa-accessibility.org/example/39/">ein Beispiel mit einem Tooltip </a>bei dem das Attribut <strong>aria-hidden</strong> eingesetzt wird, um die Sichtbarkeit des Tooltips zu verändern. Das Beispiel zeigt ein einfaches Formular, bei dem Anweisungen zu den einzelnen Feldern eingeblendet werden. Auf die wichtigsten Details wird im Folgenden genauer eingegangen.</p>
+<p>Auf der Website der Open Ajax Alliance findet man hierzu ein Beispiel mit einem Tooltip </a>bei dem das Attribut <strong>aria-hidden</strong> eingesetzt wird, um die Sichtbarkeit des Tooltips zu verändern. Das Beispiel zeigt ein einfaches Formular, bei dem Anweisungen zu den einzelnen Feldern eingeblendet werden. Auf die wichtigsten Details wird im Folgenden genauer eingegangen.</p>
 
 <p>Beispiel 2a zeigt den HTML-Code für einen Tooltip. In Zeile 9 wird der Zustand von <strong>aria-hidden</strong> auf <code>true</code> gesetzt.</p>
-
-<p><em>Beispiel 2a. HTML für ein Tooltip (übernommen von<a class="external" href="http://www.oaa-accessibility.org/example/39/" rel="freelink"> http://www.oaa-accessibility.org/example/39/</a>).</em></p>
 
 <pre class="deki-transform">&lt;div class="text"&gt;
     &lt;label id="tp1-label" for="first"&gt;First Name:&lt;/label&gt;
@@ -168,17 +160,12 @@ original_slug: Web/Barrierefreiheit/An_overview_of_accessible_web_applications_a
 
 <p>Das Beispiel 2b unten zeigt den CSS-Code für das Markup. Wie schon beim ersten Beispiel wird auch hier kein Klassenname benutzt, sondern nur der Wert der Attribute <strong>aria-hidden</strong> geändert.</p>
 
-<p><em><em>Beispiel 2b. Attributbasierte Selektoren zur Anzeige des Zustands (übernommen von<br>
- <a class="external" href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a>).</em></em></p>
-
 <pre class="deki-transform">div.tooltip[aria-hidden="true"] {
   display: none;
 }
 </pre>
 
 <p>Beispiel 2c zeigt den JavaScript-Code zur Aktulisierung der Eigenschaft <strong>aria-hidden</strong>. Wieder wird per Skript nur die Attribute <strong>aria-hidden</strong> in Zeile 2 verändert und kein Klassenname hinzugefügt oder entfernt.</p>
-
-<p><em><em>Beispiel 2c. JavaScript zur Aktualisierung des Attributs aria-checked (übernommen von <a class="external" href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a>)</em></em><em><em><em>.</em></em></em></p>
 
 <pre class="deki-transform">var showTip = function(el) {
   el.setAttribute('aria-hidden', 'false');
@@ -220,14 +207,14 @@ original_slug: Web/Barrierefreiheit/An_overview_of_accessible_web_applications_a
 
 <p>In dem Beispiel der Tab-Komponente oben sollte der Nutzer also in der Lage sein mit den Tab- und Shift-Tab Tasten in und aus dem Komponenten-Container (&lt;ol&gt; in unserem Beispiel) zu navigieren. Sobald der Fokus innerhalb des Containers liegt, sollten die Pfeiltasten dem Nutzer erlauben zwischen den einzelnen Tabs (die &lt;li&gt; Elemente) zu navigieren. Ab hier variieren die Konventionen je nach Plattform. Unter Windows wird der nächste Tab automatisch aktivieren, wenn der Nutzer die Pfeiltasten drückt. Unter macOS, kann der Nutzer entweder die Enter- oder die Leertaste drücken, um den nächsten Tab zu aktivieren. Ein umfangreiches Tutorial zur Erstellung von <a href="/en/Accessibility/Keyboard-navigable_JavaScript_widgets">Tastaturnavigation in JavaScript Komponenten</a> beschreibt wie man diese Funktionsweise mit JavaScript implementieren kann.</p>
 
-<p>Für mehr Details zu Koventionen bei desktopartiger Tastaturnavigation gibt es einen umfangreichen <a class="external" href="http://dev.aol.com/dhtml_style_guide" title="http://dev.aol.com/dhtml_style_guide">DHTML style guide</a>. Dieser stellt einen Überblick darüber bereit, wie Tastaturnavigation in jeder von ARIA unterstützten Komponente funktionieren sollte. Die W3C bietet ebenfalls ein hilfreiches <a class="external" href="http://www.w3.org/WAI/PF/aria-practices/Overview.html" title="http://www.w3.org/WAI/PF/aria-practices/Overview.html">ARIA Best Practices</a> Dokument, das Konventionen für Tastaturnavigation und Shortcuts für eine Vielzahl von Komponenten beinhaltet.</p>
+<p>Für mehr Details zu Koventionen bei desktopartiger Tastaturnavigation gibt es einen umfangreichen <a class="external" href="http://dev.aol.com/dhtml_style_guide" title="http://dev.aol.com/dhtml_style_guide">DHTML style guide</a>. Dieser stellt einen Überblick darüber bereit, wie Tastaturnavigation in jeder von ARIA unterstützten Komponente funktionieren sollte. Die W3C bietet ebenfalls ein hilfreiches <a class="external" href="http://www.w3.org/WAI/PF/aria-practices/Overview.html">ARIA Best Practices</a> Dokument, das Konventionen für Tastaturnavigation und Shortcuts für eine Vielzahl von Komponenten beinhaltet.</p>
 
 <h2 id="Weiterführende_Links">Weiterführende Links</h2>
 
 <ul>
  <li><a href="/en/ARIA" title="ARIA">ARIA</a></li>
  <li><a href="/en/Accessibility/Web_applications_and_ARIA_FAQ" title="Web applications and ARIA FAQ">Web applications and ARIA FAQ</a></li>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/" title="http://www.w3.org/TR/wai-aria/">WAI-ARIA Specification</a></li>
- <li><a class="external" href="http://www.w3.org/WAI/PF/aria-practices/Overview.html" title="http://www.w3.org/WAI/PF/aria-practices/Overview.html">WAI-ARIA Best Practices</a></li>
- <li><a class="external" href="http://dev.aol.com/dhtml_style_guide" title="http://dev.aol.com/dhtml_style_guide">DHTML Style Guide</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/wai-aria/">WAI-ARIA Specification</a></li>
+ <li><a class="external" href="http://www.w3.org/WAI/PF/aria-practices/Overview.html">WAI-ARIA Best Practices</a></li>
+ <li><a class="external" href="http://dev.aol.com/dhtml_style_guide">DHTML Style Guide</a></li>
 </ul>

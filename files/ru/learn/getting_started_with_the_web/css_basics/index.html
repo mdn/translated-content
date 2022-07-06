@@ -25,39 +25,39 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 
 <p>Как и HTML, CSS на самом деле не является языком программирования. Это не язык разметки - это <em>язык таблицы стилей. </em>Это означает, что он позволяет применять стили выборочно к элементам в документах HTML. Например, чтобы выбрать <strong>все</strong> элементы абзаца на HTML странице и изменить текст внутри них с чёрного на красный, вы должны написать этот CSS:</p>
 
-<pre class="notranslate"><code>p {
+<pre><code>p {
   color: red;
 }</code></pre>
 
 <p>Давайте попробуем: вставьте эти три строки CSS в новый файл в ваш текстовый редактор, а затем сохраните файл как <code>style.css</code> в вашей папке <code>styles</code>.</p>
 
-<p>Но нам всё равно нужно применить CSS к нашему HTML документу. В противном случае, CSS стиль не повлияет на то, как ваш браузер отобразит HTML документ. (Если вы не следили за нашим проектом, то прочитайте раздел <a href="/ru/Learn/Getting_started_with_the_web/Dealing_with_files">Работа с файлами</a> и <a href="/ru/Learn/Getting_started_with_the_web/HTML_basics">Основы HTML</a>, чтобы узнать, что вам нужно сделать в первую очередь.)</p>
+<p>Но нам всё равно нужно применить CSS к нашему HTML документу. В противном случае, CSS стиль не повлияет на то, как ваш браузер отобразит HTML документ. (Если вы не следили за нашим проектом, то прочитайте раздел <a href="/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Работа с файлами</a> и <a href="/ru/docs/Learn/Getting_started_with_the_web/HTML_basics">Основы HTML</a>, чтобы узнать, что вам нужно сделать в первую очередь.)</p>
 
 <ol>
  <li>Откройте ваш файл <code>index.html</code> и вставьте следующую строку куда-нибудь в шапку, между <code>&lt;head&gt;</code> и <code>&lt;/head&gt;</code> тегами:
 
-  <pre class="brush: html notranslate">&lt;link href="styles/style.css" rel="stylesheet" type="text/css"&gt;</pre>
+  <pre class="brush: html">&lt;link href="styles/style.css" rel="stylesheet" type="text/css"&gt;</pre>
  </li>
  <li>Сохраните <code>index.html</code> и загрузите его в вашем браузере. Вы должны увидеть что-то вроде этого:</li>
 </ol>
 
-<p><img alt="A mozilla logo and some paragraphs. The paragraph text has been styled red by our css." src="https://mdn.mozillademos.org/files/9435/website-screenshot-styled.png" style="display: block; height: 832px; margin: 0px auto; width: 711px;">Если текст вашего абзаца теперь красный, примите наши поздравления! Вы написали свой первый успешный CSS!</p>
+<p><img alt="A mozilla logo and some paragraphs. The paragraph text has been styled red by our css." src="website-screenshot-styled.png" style="display: block; margin: 0px auto;">Если текст вашего абзаца теперь красный, примите наши поздравления! Вы написали свой первый успешный CSS!</p>
 
 <h3 id="Анатомия_набора_правил_CSS">Анатомия набора правил CSS</h3>
 
 <p>Давайте взглянем на вышеупомянутый CSS немного более подробно:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9461/css-declaration-small.png" style="display: block; height: 480px; margin: 0px auto; width: 850px;"></p>
+<p><img alt="" src="css-declaration-small.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Вся структура называется <strong>набором правил</strong> (но зачастую для краткости "правило"). Отметим также имена отдельных частей:</p>
 
 <dl>
  <dt>Селектор (Selector)</dt>
- <dd>Имя HTML элемента в начале набора правил. Он выбирает элемент(ы) для применения стиля (в данном случае, элементы <code>p</code> ). Для стилизации другого элемента, просто измените селектор.</dd>
+ <dd>Имя HTML-элемента в начале набора правил. Он выбирает элемент(ы) для применения стиля (в данном случае, элементы <code>p</code> ). Для стилизации другого элемента, просто измените селектор.</dd>
  <dt>Объявление (Declaration)</dt>
  <dd>Единственное правило, например <code>color: red;</code> указывает, какие из <strong>свойств</strong> элемента вы хотите стилизовать.</dd>
  <dt>Свойства (Properties)</dt>
- <dd>Способы, которыми вы можете стилизовать определённый HTML элемент (в данном случае, <code>color</code> является свойством для элементов {{htmlelement("p")}}). В CSS вы выбираете, какие свойства вы хотите затронуть в вашем правиле.</dd>
+ <dd>Способы, которыми вы можете стилизовать определённый HTML-элемент (в данном случае, <code>color</code> является свойством для элементов {{htmlelement("p")}}). В CSS вы выбираете, какие свойства вы хотите затронуть в вашем правиле.</dd>
  <dt>Значение свойства (Property value)</dt>
  <dd>Справа от свойства, после двоеточия, у нас есть <strong>значение свойства</strong>, которое выбирает одно из множества возможных признаков для данного свойства (существует множество значений <code>color</code>, помимо <code>red</code>).</dd>
 </dl>
@@ -72,7 +72,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 
 <p>Таким образом, чтобы изменить несколько значений свойств сразу, вам просто нужно написать их, разделяя точкой с запятой, например так:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   color: red;
   width: 500px;
   border: 1px solid black;
@@ -82,7 +82,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 
 <p>Вы также можете выбрать несколько элементов разного типа и применить единый набор правил для всех из них. Добавьте несколько селекторов, разделённых запятыми. Например:</p>
 
-<pre class="brush: css notranslate">p,li,h1 {
+<pre class="brush: css">p,li,h1 {
   color: red;
 }</pre>
 
@@ -101,7 +101,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
  <tbody>
   <tr>
    <td>Селектор элемента (иногда называемый селектором тега или типа)</td>
-   <td>Все HTML элемент(ы) указанного типа.</td>
+   <td>Все HTML-элемент(ы) указанного типа.</td>
    <td><code>p</code><br>
     Выбирает <code>&lt;p&gt;</code></td>
   </tr>
@@ -139,13 +139,13 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 <p>Теперь, когда мы изучили некоторые основы CSS, давайте добавим ещё несколько правил и информацию в наш файл <code>style.css</code>, чтобы наш пример хорошо выглядел. Прежде всего, давайте сделаем, чтобы наши шрифты и текст выглядели немного лучше.</p>
 
 <ol>
- <li>Прежде всего, вернитесь и найдите <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">вывод из Google Fonts</a>, который вы уже где-то сохранили. Добавьте элемент {{htmlelement("link")}} где-нибудь внутри шапки вашего <code>index.html</code> (снова, в любом месте между тегами <code>&lt;head&gt;</code> и <code>&lt;/head&gt;</code>). Это будет выглядеть примерно так:
+ <li>Прежде всего, вернитесь и найдите <a href="/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">вывод из Google Fonts</a>, который вы уже где-то сохранили. Добавьте элемент {{htmlelement("link")}} где-нибудь внутри шапки вашего <code>index.html</code> (снова, в любом месте между тегами <code>&lt;head&gt;</code> и <code>&lt;/head&gt;</code>). Это будет выглядеть примерно так:
 
-  <pre class="brush: html notranslate">&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre>
-  Этот код связывает вашу страницу с таблицой стилями, которая загружает семейство шрифтов Open Sans вместе с вашей страницей и позволяет вам применять их к вашим HTML элементам используя свою собственную таблицу стилей.</li>
+  <pre class="brush: html">&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre>
+  Этот код связывает вашу страницу с таблицой стилями, которая загружает семейство шрифтов Open Sans вместе с вашей страницей и позволяет вам применять их к вашим HTML-элементам используя свою собственную таблицу стилей.</li>
  <li>Затем, удалите существующее правило в вашем <code>style.css</code> файле. Это был хороший тест, но красный текст, на самом деле, не очень хорошо выглядит.</li>
  <li>Добавьте следующие строки в нужное место, заменив строку <code>placeholder</code> актуальной <code>font-family</code> строкой, которую вы получили из Google Fonts. (<code>font-family</code> просто означает, какой шрифт(ы) вы хотите использовать для вашего текста). Это правило устанавливает глобальный базовый шрифт и размер шрифта для всей страницы (поскольку <code>&lt;html&gt;</code> является родительским элементом для всей страницы, и все элементы внутри него наследуют такой же <code>font-size</code> и <code>font-family</code>):
-  <pre class="brush: css notranslate">html {
+  <pre class="brush: css">html {
   font-size: 10px; /* px значит 'пиксели': базовый шрифт будет 10 пикселей в высоту  */
   font-family: placeholder: здесь должно быть имя шрифта из Google fonts
 }</pre>
@@ -155,7 +155,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
   </div>
  </li>
  <li>Теперь мы установим размер шрифта для элементов, содержащих текст внутри HTML тела ({{htmlelement("h1")}}, {{htmlelement("li")}}, и {{htmlelement("p")}}). Мы также отцентрируем текст нашего заголовка и установим некоторую высоту строки и расстояние между буквами в теле документа, чтобы сделать его немного более удобным для чтения:
-  <pre class="brush: css notranslate">h1 {
+  <pre class="brush: css">h1 {
   font-size: 60px;
   text-align: center;
 }
@@ -170,13 +170,13 @@ p, li {
 
 <p>Вы можете настроить значения <code>px</code> так, как вам нравится, чтобы ваш дизайн выглядел так, как вы хотите, но, в общем, ваш дизайн должен выглядеть вот так:</p>
 
-<p><img alt="a mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered" src="https://mdn.mozillademos.org/files/9447/website-screenshot-font-small.png" style="display: block; height: 1020px; margin: 0px auto; width: 921px;"></p>
+<p><img alt="a mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered" src="website-screenshot-font-small.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Блоки_блоки_и_ещё_раз_блоки">Блоки, блоки и ещё раз блоки</h2>
 
-<p>Одна вещь, которую вы заметите в написании CSS, заключается в том, что многое из этого касается блоков - настройка их размера, цвета, положения и т.д. Большинство HTML элементов на странице можно рассматривать как блоки, расположенные друг над другом.</p>
+<p>Одна вещь, которую вы заметите в написании CSS, заключается в том, что многое из этого касается блоков - настройка их размера, цвета, положения и т.д. Большинство HTML-элементов на странице можно рассматривать как блоки, расположенные друг над другом.</p>
 
-<p><img alt="a big stack of boxes or crates sat on top of one another" src="https://mdn.mozillademos.org/files/9441/boxes.jpg" style="display: block; height: 463px; margin: 0px auto; width: 640px;"></p>
+<p><img alt="a big stack of boxes or crates sat on top of one another" src="boxes.jpg" style="display: block; margin: 0px auto;"></p>
 
 <p>Не удивительно, макет CSS основан, главным образом, на <em>блочной модели (box model)</em>. Каждый из блоков, занимающий пространство на вашей странице имеет такие свойства, как:</p>
 
@@ -186,7 +186,7 @@ p, li {
  <li><code>margin</code>, пространство вокруг внешней стороны элемента</li>
 </ul>
 
-<p><img alt="three boxes sat inside one another. From outside to in they are labelled margin, border and padding" src="https://mdn.mozillademos.org/files/9443/box-model.png" style="display: block; height: 450px; margin: 0px auto; width: 574px;"></p>
+<p><img alt="three boxes sat inside one another. From outside to in they are labelled margin, border and padding" src="box-model.png" style="display: block; margin: 0px auto;"></p>
 
 <p>В этом разделе мы также используем:</p>
 
@@ -202,15 +202,15 @@ p, li {
 
 <h3 id="Изменение_цвета_страницы">Изменение цвета страницы</h3>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   background-color: #00539F;
 }</pre>
 
-<p>Это правило устанавливает цвет фона для всей страницы. Измените код цвета сверху, на цвет который <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">вы выбрали при планировании вашего сайта</a>.</p>
+<p>Это правило устанавливает цвет фона для всей страницы. Измените код цвета сверху, на цвет который <a href="/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">вы выбрали при планировании вашего сайта</a>.</p>
 
 <h3 id="Разбираемся_с_телом">Разбираемся с телом</h3>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 600px;
   margin: 0 auto;
   background-color: #FF9500;
@@ -222,7 +222,7 @@ p, li {
 
 <ul>
  <li><code>width: 600px;</code> — заставляет тело быть всегда 600 пикселей в ширину.</li>
- <li><code>margin: 0 auto;</code> — когда вы устанавливаете два значения для таких свойств как <code>margin</code> или <code>padding</code>, первое значение элемента влияет на верхнюю <strong>и</strong> нижнюю сторону (делает их <code>0</code> в данном случае), и второе значение на левую <strong>и</strong> правую сторону (здесь, <code>auto</code> является особым значением, которое делит доступное пространство по горизонтали поровну слева и справа). Вы также можете использовать один, три или четыре значения, как описано <a href="https://developer.mozilla.org/ru/docs/Web/CSS/margin#Values">здесь</a>.</li>
+ <li><code>margin: 0 auto;</code> — когда вы устанавливаете два значения для таких свойств как <code>margin</code> или <code>padding</code>, первое значение элемента влияет на верхнюю <strong>и</strong> нижнюю сторону (делает их <code>0</code> в данном случае), и второе значение на левую <strong>и</strong> правую сторону (здесь, <code>auto</code> является особым значением, которое делит доступное пространство по горизонтали поровну слева и справа). Вы также можете использовать один, три или четыре значения, как описано <a href="/ru/docs/Web/CSS/margin#values">здесь</a>.</li>
  <li><code>background-color: #FF9500;</code> — как и прежде, устанавливает цвет фона элемента. Я использовал красновато-оранжевый для тела, в отличие от темно-синего цвета для {{htmlelement("html")}} элемента, но не стесняйтесь и экспериментируйте.</li>
  <li><code>padding: 0 20px 20px 20px;</code> — у нас есть четыре значения, установленные для padding, чтобы сделать немного пространства вокруг нашего контента. В этот раз мы не устанавливаем padding на верхней части тела, но делаем 20 пикселей слева, снизу и справа. Значения устанавливаются сверху, справа, снизу, слева, в таком порядке.</li>
  <li><code>border: 5px solid black;</code> — просто устанавливает сплошную чёрную рамку шириной 5 пикселей со всех сторон тела.</li>
@@ -230,7 +230,7 @@ p, li {
 
 <h3 id="Позиционирование_и_стилизация_нашего_заголовка_главной_страницы">Позиционирование и стилизация нашего заголовка главной страницы</h3>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   margin: 0;
   padding: 20px 0;
   color: #00539F;
@@ -254,7 +254,7 @@ p, li {
 
 <h3 id="Центрирование_изображения">Центрирование изображения</h3>
 
-<pre class="brush: css notranslate">img {
+<pre class="brush: css">img {
   display: block;
   margin: 0 auto;
 }</pre>
@@ -271,13 +271,13 @@ p, li {
 
 <h2 id="Заключение">Заключение</h2>
 
-<p>Если вы следовали всем инструкциям в этой статье, вы должны получить страницу, которая выглядит примерно так (вы также можете <a href="http://mdn.github.io/beginner-html-site-styled/">посмотреть нашу версию здесь</a>):</p>
+<p>Если вы следовали всем инструкциям в этой статье, вы должны получить страницу, которая выглядит примерно так (вы также можете <a href="https://mdn.github.io/beginner-html-site-styled/">посмотреть нашу версию здесь</a>):</p>
 
-<p><img alt="a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip." src="https://mdn.mozillademos.org/files/9455/website-screenshot-final.png" style="display: block; height: 1084px; margin: 0px auto; width: 940px;"></p>
+<p><img alt="a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip." src="website-screenshot-final.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Если вы застряли, вы всегда можете сравнить свою работу с нашим <a href="https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css">готовым примером кода на Github</a>.</p>
 
-<p>Здесь мы узнали только самую поверхность CSS. Чтобы узнать больше, перейдите на нашу <a href="https://developer.mozilla.org/ru/Learn/CSS">страницу изучения CSS</a>.</p>
+<p>Здесь мы узнали только самую поверхность CSS. Чтобы узнать больше, перейдите на нашу <a href="/ru/docs/Learn/CSS">страницу изучения CSS</a>.</p>
 
 <p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}</p>
 
@@ -285,11 +285,11 @@ p, li {
 
 <ul>
  <li id="Installing_basic_software"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F">Установка базового программного обеспечения</a></li>
- <li id="What_will_your_website_look_like"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">Каким должен быть ваш веб-сайт?</a></li>
- <li id="Dealing_with_files"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Работа с файлами</a></li>
- <li id="HTML_basics"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/HTML_basics">Основы HTML</a></li>
- <li id="CSS_basics"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/CSS_basics">Основы CSS</a></li>
- <li id="JavaScript_basics"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics">Основы JavaScript</a></li>
- <li id="Publishing_your_website"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Публикация вашего веб-сайта</a></li>
- <li id="How_the_web_works"><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/How_the_Web_works">Как работает Веб</a></li>
+ <li id="What_will_your_website_look_like"><a href="/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">Каким должен быть ваш веб-сайт?</a></li>
+ <li id="Dealing_with_files"><a href="/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Работа с файлами</a></li>
+ <li id="HTML_basics"><a href="/ru/docs/Learn/Getting_started_with_the_web/HTML_basics">Основы HTML</a></li>
+ <li id="CSS_basics"><a href="/ru/docs/Learn/Getting_started_with_the_web/CSS_basics">Основы CSS</a></li>
+ <li id="JavaScript_basics"><a href="/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics">Основы JavaScript</a></li>
+ <li id="Publishing_your_website"><a href="/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Публикация вашего веб-сайта</a></li>
+ <li id="How_the_web_works"><a href="/ru/docs/Learn/Getting_started_with_the_web/How_the_Web_works">Как работает Веб</a></li>
 </ul>

@@ -22,7 +22,7 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.baseURI")}} {{readonlyInline}}</dt>
  <dd>Возвращает {{domxref("DOMString")}} показывающие основной URL. Понятие основного URL изменяется из одного языка в другой; В HTML, это соответствует протоколу , доменному имени и структуре каталогов, все до последнего<code> '/'</code>.</dd>
  <dt>{{domxref("Node.baseURIObject")}} {{Non-standard_inline()}}</dt>
- <dd>(Не доступно для веб-контента.) Только для чтения. Объект {{ Interface("nsIURI") }}, представляющий базовый URI элемента.</dd>
+ <dd>(Не доступно для веб-контента.) Только для чтения. Объект <code>nsIURI</code>, представляющий базовый URI элемента.</dd>
  <dt>{{domxref("Node.childNodes")}} {{readonlyInline}}</dt>
  <dd>Возвращает живой {{domxref("NodeList")}}, содержащий всех потомков данного узла. Живой {{domxref("NodeList")}} означает то, что если потомки <code>узла</code> изменяются, объект {{domxref("NodeList")}} автоматически обновляется.</dd>
  <dt>{{domxref("Node.firstChild")}} {{readonlyInline}}</dt>
@@ -30,16 +30,16 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.lastChild")}} {{readonlyInline}}</dt>
  <dd>Возвращает {{domxref("Node")}}, представляющий последний прямой узел потомок узла или <code>null</code>, если узел не имеет потомков.</dd>
  <dt>{{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("DOMString")}} представляющий локальную часть условного имени элемента. В Firefox 3.5 и более ранних версиях, свойство локального имени в верхнем регистре для HTML элементов (но не XHTML элементов). В более поздних версиях, такого не произошло, и свойство находится в нижнем регистре для HTML и XHTML {{ gecko_minversion_inline("1.9.2") }}. Хотя недавние спецификации требуют от <code>localName</code> быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.</dd>
+ <dd>Возвращает {{domxref("DOMString")}} представляющий локальную часть условного имени элемента. В Firefox 3.5 и более ранних версиях, свойство локального имени в верхнем регистре для HTML-элементов (но не XHTML элементов). В более поздних версиях, такого не произошло, и свойство находится в нижнем регистре для HTML и XHTML {{ gecko_minversion_inline("1.9.2") }}. Хотя недавние спецификации требуют от <code>localName</code> быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.</dd>
  <dt>{{domxref("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}</dt>
- <dd>Пространство имён URI данного узла или <code>null,</code> если нет пространства имён. В Firefox 3.5 и более ранних версиях, HTML элементы не имеют пространства имён. В более поздних версиях, HTML элементы находятся в пространстве имён <code><a class="linkification-ext external" href="http://www.w3.org/1999/xhtml" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> для деревьев HTML и XML. {{ gecko_minversion_inline("1.9.2") }}<br>
+ <dd>Пространство имён URI данного узла или <code>null,</code> если нет пространства имён. В Firefox 3.5 и более ранних версиях, HTML-элементы не имеют пространства имён. В более поздних версиях, HTML-элементы находятся в пространстве имён <code><a class="linkification-ext external" href="http://www.w3.org/1999/xhtml" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> для деревьев HTML и XML. {{ gecko_minversion_inline("1.9.2") }}<br>
  Хотя недавние спецификации требуют <code>namespaceURI</code> быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.</dd>
  <dt>{{domxref("Node.nextSibling")}} {{readonlyInline}}</dt>
  <dd>Возвращает {{domxref("Node")}} представляющий следующий узел в древе или <code>null,</code> если не такого узла.</dd>
  <dt>{{domxref("Node.nodeName")}} {{readonlyInline}}</dt>
  <dd>Возвращает {{domxref("DOMString")}} содержащий имя <code>узла</code>. Структура имени будет отличаться от типа имени. Например, {{domxref("HTMLElement")}} будет содержать имя соответствующего тега:<code> 'audio'</code> для {{domxref("HTMLAudioElement")}}, узел {{domxref("Text")}} будет строкой <code>'#text'</code> или узел {{domxref("Document")}} будет строкой<code> '#document'</code>.</dd>
  <dt>{{domxref("Node.nodePrincipal")}} {{Non-standard_inline()}}</dt>
- <dd>{{ Interface("nsIPrincipal") }} представляет основной узел.</dd>
+ <dd><code>nsIPrincipal</code> представляет основной узел.</dd>
  <dt>{{domxref("Node.nodeType")}}{{readonlyInline}}</dt>
  <dd>Возвращает беззнаковое короткое число <code>(unsigned short</code>) представляющее тип узла. Возможные значения:
  <table class="standard-table">
@@ -220,46 +220,10 @@ document.body.removeAll();</pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-node', 'Node')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Удалены следующие свойства: <code>attributes</code>, <code>namespaceURI</code>, <code>prefix</code>, и <code>localName</code>.<br>
-    Удалены следующие методы: <code>isSupported()</code>, <code>hasAttributes()</code>, <code>isSameNode()</code>, <code>getFeature()</code>, <code>setUserData()</code>, и <code>getUserData()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-1950641247', 'Node')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Методы <code>insertBefore()</code>, <code>replaceChild()</code>, <code>removeChild()</code>, and <code>appendChild()</code> возвращают ещё один вид ошибок (<code>NOT_SUPPORTED_ERR</code>) если вызваны из {{domxref("Document")}}.<br>
-    Метод <code>normalize()</code> был модифицирован таким образом, что узел {{domxref("Text")}} также может быть нормализован, если надлежащий флаг {{domxref("DOMConfiguration")}} установлен.<br>
-    Добавлены следующие методы: <code>compareDocumentPosition()</code>, <code>isSameNode()</code>, <code>lookupPrefix()</code>, <code>isDefaultNamespace()</code>, <code>lookupNamespaceURI()</code>, <code>isEqualNode()</code>, <code>getFeature()</code>, <code>setUserData()</code>, and <code>getUserData().</code><br>
-    Добавлены следующие свойства: <code>baseURI</code> and <code>textContent</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-1950641247', 'Node')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Свойство <code>ownerDocument</code> был слегка изменён, так что {{domxref("DocumentFragment")}} также возвращает <code>null</code>.<br>
-    Добавлены следующие свойства: <code>namespaceURI</code>, <code>prefix</code>, and <code>localName</code>.<br>
-    Добавлены следующие методы: <code>normalize()</code>, <code>isSupported()</code> and <code>hasAttributes()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-1950641247', 'Node')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Изначальное описание.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p> </p>
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Node")}}</p>
+<p>{{Compat}}</p>

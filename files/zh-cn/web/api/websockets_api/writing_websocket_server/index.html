@@ -1,5 +1,5 @@
 ---
-title: 用C＃来编写WebSocket服务器
+title: 用 C＃来编写 WebSocket 服务器
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
 tags:
   - HTML5
@@ -10,16 +10,16 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_server
 ---
 <h2 id="介绍">介绍</h2>
 
-<p>如果你想学习如何使用 WebSocket API，那么有一台服务器将会是非常有用的。在本文中，我将向你展示如何使用C#来写后端。你可以使用任何可用于后端开发的语言来做这个事<span style="line-height: 1.5;">, 但是,要为了使例子简明易懂，我选择微软的C#。</span></p>
+<p>如果你想学习如何使用 WebSocket API，那么有一台服务器将会是非常有用的。在本文中，我将向你展示如何使用 C#来写后端。你可以使用任何可用于后端开发的语言来做这个事，但是，要为了使例子简明易懂，我选择微软的 C#。</p>
 
 <p>此服务器符合 <a href="http://tools.ietf.org/html/rfc6455" title="http://tools.ietf.org/html/rfc6455">RFC 6455</a> 因此，因此它只处理来自 Chrome16，Firefox 11，IE 10 及更高版本的连接。</p>
 
 <h2 id="第一步">第一步</h2>
 
-<p>WebSockets 通过 <a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" title="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP (传输控制协议)</a> 连接进行通信.。幸运的是, C# 中有一个 <a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx">TcpListener </a>类。 它位于 <em>System.Net.Sockets</em> 的命名空间。</p>
+<p>WebSockets 通过 <a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" title="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP (传输控制协议)</a> 连接进行通信.。幸运的是，C# 中有一个 <a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx">TcpListener </a>类。 它位于 <em>System.Net.Sockets</em> 的命名空间。</p>
 
 <div class="note">
-<p><span style="line-height: 1.572;">最好使用 <code>using</code></span><span style="line-height: 1.572;"> 关键字来包含命名空间，这样在你写代码的时候就不需要指定详细的命名空间。</span></p>
+<p>最好使用 <code>using</code> 关键字来包含命名空间，这样在你写代码的时候就不需要指定详细的命名空间。</p>
 </div>
 
 <h3 id="TcpListener">TcpListener</h3>
@@ -28,21 +28,21 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_server
 
 <pre class="brush: cpp">TcpListener(System.Net.IPAddress localaddr, int port)</pre>
 
-<p><code>localaddr</code> 是监听地址,  <code>port</code> 是监听端口.</p>
+<p><code>localaddr</code> 是监听地址，  <code>port</code> 是监听端口。</p>
 
 <div class="note">
-<p><em>如果字符串创建 <code>IPAddress</code> 对象，请使用 Parse静态方法。</em></p>
+<p><em>如果字符串创建 <code>IPAddress</code> 对象，请使用 Parse 静态方法。</em></p>
 </div>
 
-<p><span style="line-height: 1.572;">方法</span><span style="line-height: 1.572;">:</span></p>
+<p>方法：</p>
 
 <ul>
- <li><code><span style="line-height: 1.572;">Start()</span></code></li>
- <li><span style="line-height: 1.572;"><code>System.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx">TcpClient</a> AcceptTcpClient()</code><br>
-  等一个Tcp 连接， 并接受一个返回的TcpClient对象。</span></li>
+ <li><code>Start()</code></li>
+ <li><code>System.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx">TcpClient</a> AcceptTcpClient()</code><br>
+  等一个 Tcp 连接， 并接受一个返回的 TcpClient 对象。</li>
 </ul>
 
-<p><span style="line-height: 1.572;">下面是基于服务端的实现：</span></p>
+<p>下面是基于服务端的实现：</p>
 
 <pre class="brush: cpp">​using System.Net.Sockets;
 using System.Net;
@@ -62,34 +62,34 @@ class Server {
 }
 </pre>
 
-<h3 id="TcpClient"><span style="line-height: 1.572;">TcpClient</span></h3>
+<h3 id="TcpClient">TcpClient</h3>
 
-<p>方法:</p>
+<p>方法：</p>
 
 <ul>
  <li><code>System.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.networkstream.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.networkstream.aspx">NetworkStream</a> GetStream()</code><br>
   获取一个通信通道的流，通道两边都具有读写能力。</li>
 </ul>
 
-<p>属性:</p>
+<p>属性：</p>
 
 <ul>
  <li><code>int Available</code><br>
-  这个属性表示已经发送了多少个字节的数据。它的值为零，直到 <code>NetworkStream.DataAvailable</code> 为true。</li>
+  这个属性表示已经发送了多少个字节的数据。它的值为零，直到 <code>NetworkStream.DataAvailable</code> 为 true。</li>
 </ul>
 
 <h3 id="NetworkStream">NetworkStream</h3>
 
-<p>方法:</p>
+<p>方法：</p>
 
 <ul>
  <li><code>Write(Byte[] buffer, int offset, int size)</code><br>
-  根据buffer数组写入字节流，offset与size参数决定了消息的长度。</li>
- <li><code><span class="brush: cpp" style="line-height: 1.572;">Read(Byte[] buffer, int offset, int size)</span></code><br>
+  根据 buffer 数组写入字节流，offset 与 size 参数决定了消息的长度。</li>
+ <li><code>Read(Byte[] buffer, int offset, int size)</code><br>
   将字节流读取到 <code>buffer</code> 中。 <code>offset</code> 和 <code>size</code> 参数决定了消息的长度。</li>
 </ul>
 
-<p>让我们扩充一下我们的示例.</p>
+<p>让我们扩充一下我们的示例。</p>
 
 <pre class="brush: cpp">TcpClient client = server.AcceptTcpClient();
 
@@ -108,9 +108,9 @@ while (true) {
 
 <h2 id="握手">握手</h2>
 
-<p>当一个客户端连接到服务器时，它会发送一个GET请求将现在一个简单的HTTP请求升级为一个WebSocket请求。这被称为握手。</p>
+<p>当一个客户端连接到服务器时，它会发送一个 GET 请求将现在一个简单的 HTTP 请求升级为一个 WebSocket 请求。这被称为握手。</p>
 
-<p>下面是一段检测从客户端发来的GET请求的代码。需要注意的是，下面的程序在没有收到消息开头的3个有效字节前将处于阻塞状态。在生产环境下，应该考虑使用可用于替代的解决方案。</p>
+<p>下面是一段检测从客户端发来的 GET 请求的代码。需要注意的是，下面的程序在没有收到消息开头的 3 个有效字节前将处于阻塞状态。在生产环境下，应该考虑使用可用于替代的解决方案。</p>
 
 <pre class="brush: cpp">using System.Text;
 using System.Text.RegularExpressions;
@@ -139,9 +139,9 @@ if (Regex.IsMatch(data, "^GET")) {
 
 <ol>
  <li>获取请求头中"Sec-WebSocket-Key"字段的值，这个字段值不能有任何的前导和后继空格字符</li>
- <li>将它与"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"(一个 RFC 6455 中规定的特殊的 GUID )拼接起来</li>
+ <li>将它与"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"(一个 RFC 6455 中规定的特殊的 GUID ) 拼接起来</li>
  <li>计算新的值的 SHA-1 和 Base64 哈希值</li>
- <li>将哈希值写回到一个HTTP响应头，作为"Sec-WebSocket-Accept"字段的值</li>
+ <li>将哈希值写回到一个 HTTP 响应头，作为"Sec-WebSocket-Accept"字段的值</li>
 </ol>
 
 <pre class="brush: cpp"><em>
@@ -189,7 +189,7 @@ if (Regex.IsMatch(data, "^GET")) {
 
 <p>让我们看看这些字节意味着什么。</p>
 
-<p>第一个字节，当前值是129，是按位组成的，分解如下：</p>
+<p>第一个字节，当前值是 129，是按位组成的，分解如下：</p>
 
 <table>
  <thead>
@@ -214,11 +214,11 @@ if (Regex.IsMatch(data, "^GET")) {
 
 <ul>
  <li>FIN 位：这个位表明是否整个消息都已经从客户端被发送出去。消息可能以多个帧的形式发送，但现在我们将情景考虑得简单一些。</li>
- <li>RSV1, RSV2, RSV3：除非规定的扩展协议支持将它们赋为非0值，否则这些位必须为0。</li>
- <li><span style="line-height: 1.572;">Opcode：</span><span style="line-height: 1.572;">这些位描述了接收的消息的类型。Opcode 0x1 意味着这是一条文本消息。</span><a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;" title="http://tools.ietf.org/html/rfc6455#section-5.2">Opcodes值的完整罗列</a></li>
+ <li>RSV1, RSV2, RSV3：除非规定的扩展协议支持将它们赋为非 0 值，否则这些位必须为 0。</li>
+ <li>Opcode：这些位描述了接收的消息的类型。Opcode 0x1 意味着这是一条文本消息。<a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;" title="http://tools.ietf.org/html/rfc6455#section-5.2">Opcodes 值的完整罗列</a></li>
 </ul>
 
-<p>第二个字节，当前值是131，是另一个按位组成的部分，分解如下：</p>
+<p>第二个字节，当前值是 131，是另一个按位组成的部分，分解如下：</p>
 
 <table>
  <thead>
@@ -236,15 +236,15 @@ if (Regex.IsMatch(data, "^GET")) {
 </table>
 
 <ul>
- <li>MASK 位：定义了是否"Payload data"进行了掩码计算。如果值设置为1，那么在Masking-Key字段中会有一个掩码密钥，并且它可以用来进行"Payload data"的去掩码计算。所有从客户端发到服务器的消息中此位都会被置1。</li>
- <li>Payload Length：如果这个值在0与125之间，那么这个值就是消息的长度。如果这个值是126，那么接下来的2个字节（16位无符号整数）是消息长度。如果这个值是127，那么接下来的8个字节（64位无符号整数）是消息长度。</li>
+ <li>MASK 位：定义了是否"Payload data"进行了掩码计算。如果值设置为 1，那么在 Masking-Key 字段中会有一个掩码密钥，并且它可以用来进行"Payload data"的去掩码计算。所有从客户端发到服务器的消息中此位都会被置 1。</li>
+ <li>Payload Length：如果这个值在 0 与 125 之间，那么这个值就是消息的长度。如果这个值是 126，那么接下来的 2 个字节（16 位无符号整数）是消息长度。如果这个值是 127，那么接下来的 8 个字节（64 位无符号整数）是消息长度。</li>
 </ul>
 
 <div class="note">
-<p>因为在客户端到服务器的消息中第一位总是1，所以你可以将这个字节减去128去除 MASK 位。</p>
+<p>因为在客户端到服务器的消息中第一位总是 1，所以你可以将这个字节减去 128 去除 MASK 位。</p>
 </div>
 
-<p>需要注意的是MASK位在我们的消息中被置为1。这意味着接下来的4个字节(61, 84, 35, 6) 是用于解码消息的掩码字节。这些字节在每个消息中都不是固定不变的。</p>
+<p>需要注意的是 MASK 位在我们的消息中被置为 1。这意味着接下来的 4 个字节 (61, 84, 35, 6) 是用于解码消息的掩码字节。这些字节在每个消息中都不是固定不变的。</p>
 
 <p>剩下的字节是加密后的消息载荷。</p>
 
@@ -269,5 +269,3 @@ for (int i = 0; i &lt; encoded.Length; i++) {
 <ul>
  <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_servers">编写 WebSocket 服务器</a></li>
 </ul>
-
-<div id="cke_pastebin" style="position: absolute; top: 2209.23px; width: 1px; height: 1px; overflow: hidden; left: -1000px;"><em> </em></div>

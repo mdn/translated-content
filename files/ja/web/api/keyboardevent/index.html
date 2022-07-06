@@ -121,7 +121,7 @@ translation_of: Web/API/KeyboardEvent
  <div class="note"><strong>メモ:</strong> このプロパティは入力データのロケールを表すことはありません。例えば、ユーザーが使用するキーボードレイアウトと入力テキストとで言語が異なる場合があります。</div>
  </dd>
  <dt>{{domxref("KeyboardEvent.location")}}{{Readonlyinline}}</dt>
- <dd>キーボードなどの入力デバイス上のキーの位置を表す {{jsxref("Number")}} を返します。位置を特定する定数の一覧は、上記の {{anch("Keyboard locations")}} の中にあります。</dd>
+ <dd>キーボードなどの入力デバイス上のキーの位置を表す {{jsxref("Number")}} を返します。位置を特定する定数の一覧は、上記の <a href="#keyboard_locations">Keyboard locations</a> の中にあります。</dd>
  <dt>{{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}</dt>
  <dd>{{jsxref("Boolean")}} を返し、そのキーイベントが発生した際に <kbd>Meta</kbd> キー（Mac キーボードは <kbd>⌘ Command</kbd> キー、 Windows キーボードは Windows キー <kbd>⊞</kbd> ）が押されていれば <code>true</code> を返します。</dd>
  <dt>{{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}</dt>
@@ -329,7 +329,7 @@ document.addEventListener('keyup', (event) =&gt; {
 <h3 id="Compatibility_notes" name="Compatibility_notes">互換性のメモ</h3>
 
 <ul>
- <li>Firefox 65 では、 <code>keypress</code> イベントは<a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)">印字可能キー以外</a>では発生しなくなりました ({{bug(968056)}})が、 <kbd>Enter</kbd> キー、 <kbd>Shift</kbd> + <kbd>Enter</kbd> キー、 <kbd>Ctrl</kbd> + <kbd>Enter</kbd> キーの組み合わせでは発生します (これらはブラウザー間の互換性の目的のために維持されています)。</li>
+ <li>Firefox 65 では、 <code>keypress</code> イベントは<a href="/ja/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)">印字可能キー以外</a>では発生しなくなりました ({{bug(968056)}})が、 <kbd>Enter</kbd> キー、 <kbd>Shift</kbd> + <kbd>Enter</kbd> キー、 <kbd>Ctrl</kbd> + <kbd>Enter</kbd> キーの組み合わせでは発生します (これらはブラウザー間の互換性の目的のために維持されています)。</li>
 </ul>
 
 <h2 id="See_also" name="See_also">関連情報</h2>

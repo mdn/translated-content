@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Number.MIN_SAFE_INTEGER</code></strong> 상수는 JavaScript에서 안전한 최소 정수값을 나타냅니다. (<code>-(2<sup>53</sup> - 1)</code>)</p>
+<p><strong><code>Number.MIN_SAFE_INTEGER</code></strong> 상수는 JavaScript에서 안전한 최소 정수값을 나타냅니다. (<code>-(2^53 - 1)</code>)</p>
 
 <div>{{EmbedInteractiveExample("pages/js/number-min-safe-integer.html")}}</div>
 
@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 
 <h2 id="설명">설명</h2>
 
-<p><code>MIN_SAFE_INTEGER</code> 상수는 <code>-9007199254740991</code>(-9,007,199,254,740,991 또는 약 -9000조)의 값을 갖고 있습니다. 이 값의 이유는 JavaScript가 <a href="http://en.wikipedia.org/wiki/IEEE_floating_point">IEEE 754</a>에 기술된 <a href="http://en.wikipedia.org/wiki/Double_precision_floating-point_format">배정밀도 부동소숫점 형식 숫자체계</a>를 사용하기 때문으로, 이로 인해 <code>-(2<sup>53</sup> - 1)</code>과 <code>2<sup>53</sup> - 1</code> 사이의 수만 안전하게 표현할 수 있습니다.</p>
+<p><code>MIN_SAFE_INTEGER</code> 상수는 <code>-9007199254740991</code>(-9,007,199,254,740,991 또는 약 -9000조)의 값을 갖고 있습니다. 이 값의 이유는 JavaScript가 <a href="http://en.wikipedia.org/wiki/IEEE_floating_point">IEEE 754</a>에 기술된 <a href="http://en.wikipedia.org/wiki/Double_precision_floating-point_format">배정밀도 부동소숫점 형식 숫자체계</a>를 사용하기 때문으로, 이로 인해 <code>-(2^53 - 1)</code>과 <code>2^53 - 1</code> 사이의 수만 안전하게 표현할 수 있습니다.</p>
 
 <p><code>MIN_SAFE_INTEGER</code>는 {{jsxref("Number")}}의 정적 속성이기 때문에, 직접 생성한 {{jsxref("Number")}} 객체의 속성이 아니라 <code>Number.MIN_SAFE_INTEGER</code> 형식으로 사용해야 합니다.</p>
 

@@ -13,16 +13,16 @@ translation_of: Web/API/Beacon_API
 ---
 <p>{{DefaultAPISidebar("Beacon")}}{{SeeCompatTable}}</p>
 
-<p><strong><code>Beacon</code></strong> 接口用于将异步和非阻塞请求发送到服务器。信标（Beacon ）请求使用HTTP协议中的POST方法，请求通常不需要响应。这个请求被保证在，页面的<strong>unload</strong>状态从发起到完成之前，被发送。而并不需要一个阻塞请求，例如 {{domxref("XMLHttpRequest")}} 。</p>
+<p><strong><code>Beacon</code></strong> 接口用于将异步和非阻塞请求发送到服务器。信标（Beacon）请求使用 HTTP 协议中的 POST 方法，请求通常不需要响应。这个请求被保证在，页面的<strong>unload</strong>状态从发起到完成之前，被发送。而并不需要一个阻塞请求，例如 {{domxref("XMLHttpRequest")}} 。</p>
 
 <p>Beacon API 的示例用例是记录活动并向服务器发送分析数据。</p>
 
 <p>本文档中描述的接口的示例代码包含在<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Beacon_API/Using_the_Beacon_API
-">使用信标API</a>中。</p>
+">使用信标 API</a>中。</p>
 
 <h2 id="为什么是信标？">为什么是信标？</h2>
 
-<p><code>Beacon</code> 接口满足了分析和诊断代码的需要，这些代码通常会尝试在卸载文档之前将数据发送到 web服务器。发送数据的任何过早时机都可能导致错失收集数据的机会。但是，确保在卸载文档期间发送数据是开发人员难以做到的。</p>
+<p><code>Beacon</code> 接口满足了分析和诊断代码的需要，这些代码通常会尝试在卸载文档之前将数据发送到 web 服务器。发送数据的任何过早时机都可能导致错失收集数据的机会。但是，确保在卸载文档期间发送数据是开发人员难以做到的。</p>
 
 <p>用户代理通常会忽略卸载文档处理程序中的异步 {{domxref("XMLHttpRequest","XMLHttpRequests")}} 请求。若要解决此问题，为了分析和诊断代码，通常会在 {{event("unload")}} 事件或 {{event("beforeunload")}} 事件中创建同步 {{domxref("XMLHttpRequest")}} 请求以提交数据。同步 {{domxref("XMLHttpRequest")}} 请求强制浏览器延迟卸载文档，并使下一个页面跳转看起来较慢。下一页面没有任何办法来避免这种页面加载性能不佳的感觉。</p>
 
@@ -32,15 +32,15 @@ translation_of: Web/API/Beacon_API
 
 <h2 id="全局环境">全局环境</h2>
 
-<p><code>Beacon</code> <span class="tlid-translation translation" lang="zh-CN"><span title="">API 的 </span></span> {{domxref("Navigator.sendBeacon()")}} <span class="tlid-translation translation" lang="zh-CN"><span title="">方法用于在<em>全局浏览上下文</em>中向服务器发送<em>数据信标</em>。该方法有两个参数，URL和要在请求中发送的数据data。</span><span title="">data参数是可选的，其类型可以是 </span></span>{{domxref("ArrayBufferView")}}、{{domxref("Blob")}}<span class="tlid-translation translation" lang="zh-CN"><span title="">、</span></span>{{domxref("DOMString")}} <span class="tlid-translation translation" lang="zh-CN"><span title="">或</span></span>{{domxref("FormData")}}<span class="tlid-translation translation" lang="zh-CN"><span title="">。</span><span title="">如果浏览器成功的以队列形式排列了用于传递的请求，则该方法返回“</span></span><code>true</code><span class="tlid-translation translation" lang="zh-CN"><span title="">”，否则返回“</span></span><code>false</code><span class="tlid-translation translation" lang="zh-CN"><span title="">”。</span></span></p>
+<p><code>Beacon</code> API 的  {{domxref("Navigator.sendBeacon()")}} 方法用于在<em>全局浏览上下文</em>中向服务器发送<em>数据信标</em>。该方法有两个参数，URL 和要在请求中发送的数据 data。data 参数是可选的，其类型可以是 {{domxref("ArrayBufferView")}}、{{domxref("Blob")}}、{{domxref("DOMString")}} 或{{domxref("FormData")}}。如果浏览器成功的以队列形式排列了用于传递的请求，则该方法返回“<code>true</code>”，否则返回“<code>false</code>”。</p>
 
 <h2 id="生产环境">生产环境</h2>
 
-<p><code>Beacon</code><span class="tlid-translation translation" lang="zh-CN"><span title=""> API的</span></span> {{domxref("WorkerNavigator.sendBeacon()")}} <span class="tlid-translation translation" lang="zh-CN"><span title=""> 方法用于从</span></span> <em>{{domxref("WorkerGlobalScope","worker global scope")}}</em> <span class="tlid-translation translation" lang="zh-CN"><span title="">向服务器发送<em>数据信标</em>。该方法有两个参数，URL和要在请求中发送的数据data。</span><span title="">data参数是可选的，其类型可以是</span></span> {{domxref("ArrayBufferView")}}、{{domxref("Blob")}}、{{domxref("DOMString")}} 或 {{domxref("FormData")}}<span class="tlid-translation translation" lang="zh-CN"><span title="">。如果浏览器成功的以队列形式排列了用于传递的请求，则该方法返回“</span></span><code>true</code><span class="tlid-translation translation" lang="zh-CN"><span title="">”，否则返回“</span></span><code>false</code><span class="tlid-translation translation" lang="zh-CN"><span title="">”。</span></span></p>
+<p><code>Beacon</code> API 的 {{domxref("WorkerNavigator.sendBeacon()")}}  方法用于从 <em>{{domxref("WorkerGlobalScope","worker global scope")}}</em> 向服务器发送<em>数据信标</em>。该方法有两个参数，URL 和要在请求中发送的数据 data。data 参数是可选的，其类型可以是 {{domxref("ArrayBufferView")}}、{{domxref("Blob")}}、{{domxref("DOMString")}} 或 {{domxref("FormData")}}。如果浏览器成功的以队列形式排列了用于传递的请求，则该方法返回“<code>true</code>”，否则返回“<code>false</code>”。</p>
 
-<h2 id="浏览器兼容性"><span class="tlid-translation translation" lang="zh-CN"><span title="">浏览器兼容性</span></span></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{domxref("Navigator.sendBeacon","Navigator.sendBeacon()","Browser_compatibility")}}<span class="tlid-translation translation" lang="zh-CN"><span title="">表说明了该方法具有相对广泛地实现。但是，</span></span>{{domxref("WorkerNavigator.sendBeacon","WorkerNavigator.sendBeacon()","Browser_compatibility")}}<span class="tlid-translation translation" lang="zh-CN"><span title="">数据显示该方法没有被实现。</span></span></p>
+<p>{{domxref("Navigator.sendBeacon","Navigator.sendBeacon()","Browser_compatibility")}}表说明了该方法具有相对广泛地实现。但是，{{domxref("WorkerNavigator.sendBeacon","WorkerNavigator.sendBeacon()","Browser_compatibility")}}数据显示该方法没有被实现。</p>
 
 <h2 id="相关知识">相关知识</h2>
 

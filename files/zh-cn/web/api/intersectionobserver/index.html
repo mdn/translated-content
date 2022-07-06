@@ -13,26 +13,26 @@ translation_of: Web/API/IntersectionObserver
 ---
 <div>{{APIRef("Intersection Observer API")}}</div>
 
-<p><span class="seoSummary"><code><strong>IntersectionObserver</strong></code><strong>接口</strong> (从属于<a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a>) 提供了一种异步观察目标元素与其</span>祖先<span class="seoSummary">元素或顶级文档视窗({{Glossary('viewport')}})交叉状态的方法。</span>祖先元素与视窗({{Glossary('viewport')}})被称为<strong>根(root)。</strong></p>
+<p><code><strong>IntersectionObserver</strong></code><strong>接口</strong> (从属于<a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a>) 提供了一种异步观察目标元素与其祖先元素或顶级文档视窗 ({{Glossary('viewport')}}) 交叉状态的方法。祖先元素与视窗 ({{Glossary('viewport')}}) 被称为<strong>根 (root)。</strong></p>
 
-<p>当一个<span class="seoSummary"><code>IntersectionObserver</code></span>对象被创建时，其被配置为监听根中一段给定比例的可见区域。一旦IntersectionObserver被创建，则无法更改其配置，所以一个给定的观察者对象只能用来监听可见区域的特定变化值；然而，你可以在同一个观察者对象中配置监听多个目标元素。</p>
+<p>当一个<code>IntersectionObserver</code>对象被创建时，其被配置为监听根中一段给定比例的可见区域。一旦 IntersectionObserver 被创建，则无法更改其配置，所以一个给定的观察者对象只能用来监听可见区域的特定变化值；然而，你可以在同一个观察者对象中配置监听多个目标元素。</p>
 
 <h2 id="构造器">构造器</h2>
 
 <dl>
  <dt>{{domxref("IntersectionObserver.IntersectionObserver()")}}</dt>
- <dd>创建一个新的<code>IntersectionObserver</code>对象，当其监听到目标元素的可见部分穿过了一个或多个<strong>阈(thresholds)</strong>时，会执行指定的回调函数。</dd>
+ <dd>创建一个新的<code>IntersectionObserver</code>对象，当其监听到目标元素的可见部分穿过了一个或多个<strong>阈 (thresholds)</strong>时，会执行指定的回调函数。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
 
 <dl>
  <dt>{{domxref("IntersectionObserver.root")}} {{readonlyinline}}</dt>
- <dd>所监听对象的具体祖先元素({{domxref("element")}})。如果未传入值或值为<code>null</code>，则默认使用顶级文档的视窗。</dd>
+ <dd>所监听对象的具体祖先元素 ({{domxref("element")}})。如果未传入值或值为<code>null</code>，则默认使用顶级文档的视窗。</dd>
  <dt>{{domxref("IntersectionObserver.rootMargin")}} {{readonlyinline}}</dt>
- <dd>计算交叉时添加到<strong>根(root)</strong>边界盒{{Glossary('bounding box')}}的矩形偏移量， 可以有效的缩小或扩大根的判定范围从而满足计算需要。此属性返回的值可能与调用构造函数时指定的值不同，因此可能需要更改该值，以匹配内部要求。所有的偏移量均可用<strong>像素(pixel)</strong>(<code>px</code>)或<strong>百分比(percentage)</strong>(<code>%</code>)来表达, 默认值为"0px 0px 0px 0px"。</dd>
+ <dd>计算交叉时添加到<strong>根 (root)</strong>边界盒{{Glossary('bounding box')}}的矩形偏移量， 可以有效的缩小或扩大根的判定范围从而满足计算需要。此属性返回的值可能与调用构造函数时指定的值不同，因此可能需要更改该值，以匹配内部要求。所有的偏移量均可用<strong>像素 (pixel)</strong>(<code>px</code>) 或<strong>百分比 (percentage)</strong>(<code>%</code>) 来表达，默认值为"0px 0px 0px 0px"。</dd>
  <dt>{{domxref("IntersectionObserver.thresholds")}} {{readonlyinline}}</dt>
- <dd>一个包含阈值的列表, 按升序排列, 列表中的每个阈值都是监听对象的交叉区域与边界区域的比率。当监听对象的任何阈值被越过时，都会生成一个通知(Notification)。如果构造器未传入值, 则默认值为0。</dd>
+ <dd>一个包含阈值的列表，按升序排列，列表中的每个阈值都是监听对象的交叉区域与边界区域的比率。当监听对象的任何阈值被越过时，都会生成一个通知 (Notification)。如果构造器未传入值，则默认值为 0。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -41,17 +41,18 @@ translation_of: Web/API/IntersectionObserver
  <dt>{{domxref("IntersectionObserver.disconnect()")}}</dt>
  <dd>使<code>IntersectionObserver</code>对象停止监听工作。</dd>
  <dt>{{domxref("IntersectionObserver.observe()")}}</dt>
- <dd><font face="Open Sans, arial, x-locale-body, sans-serif">使</font><code>IntersectionObserver</code>开始监听一个目标元素。</dd>
+ <dd>使<code>IntersectionObserver</code>开始监听一个目标元素。</dd>
  <dt>{{domxref("IntersectionObserver.takeRecords()")}}</dt>
  <dd>返回所有观察目标的{{domxref("IntersectionObserverEntry")}}对象数组。</dd>
  <dt>{{domxref("IntersectionObserver.unobserve()")}}</dt>
- <dd><font face="Open Sans, arial, x-locale-body, sans-serif">使</font><code>IntersectionObserver</code>停止监听特定目标元素。</dd>
+ <dd>使<code>IntersectionObserver</code>停止监听特定目标元素。</dd>
  <dt>
- <h2 id="示例">示例</h2>
  </dt>
 </dl>
 
-<pre><code>var intersectionObserver = new IntersectionObserver(function(entries) {
+<h2 id="示例">示例</h2>
+
+<pre class="brush: js">var intersectionObserver = new IntersectionObserver(function(entries) {
   // If intersectionRatio is 0, the target is out of view
   // and we do not need to do anything.
   if (entries[0].intersectionRatio &lt;= 0) return;
@@ -60,28 +61,15 @@ translation_of: Web/API/IntersectionObserver
   console.log('Loaded new items');
 });
 // start observing
-intersectionObserver.observe(document.querySelector('.scrollerFooter'));</code></pre>
+intersectionObserver.observe(document.querySelector('.scrollerFooter'));</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("IntersectionObserver", "#intersection-observer-interface", "IntersectionObserver")}}</td>
-   <td>{{Spec2('IntersectionObserver')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<p>{{Compat("api.IntersectionObserver")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="参考">参考</h2>
 

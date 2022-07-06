@@ -21,9 +21,9 @@ tags:
 <div>{{LearnSidebar}}<br>
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p class="summary">現在我們已經對Svelte運作機制有初步的了解後，就能開始建構我們的範例應用程式：一個待辦清單。此篇文章中，我們會先確認應用程式所需的功能有哪些，接著我們會建立<code>Todos.svelte</code>元件並寫一些靜態標記（markup）和樣式，待一切準備就緒後，就能開始開發我們待辦清單應用程式的相關功能，隨著後續文章會逐漸充實它。</p>
+<p>現在我們已經對Svelte運作機制有初步的了解後，就能開始建構我們的範例應用程式：一個待辦清單。此篇文章中，我們會先確認應用程式所需的功能有哪些，接著我們會建立<code>Todos.svelte</code>元件並寫一些靜態標記（markup）語言和樣式，待一切準備就緒後，就能開始開發我們待辦清單應用程式的相關功能，隨著後續文章會逐漸充實它。</p>
 
-<p class="summary">我們想要讓使用者們能夠瀏覽、新增和刪除任務，也能標記它們以視為完成。這將是我們在走這個教學系列時會開發到的基本功能，此外，在開發過程中我們將會看到一些更進階的概念。</p>
+<p>我們想要讓使用者們能夠瀏覽、新增和刪除任務，也能註記它們以視為完成。這將是我們在走這個教學系列時會開發到的基本功能，此外，在開發過程中我們將會看到一些更進階的概念。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -76,39 +76,39 @@ tags:
 
 <ul>
  <li>瀏覽他們的任務。</li>
- <li>標記那些任務視為已完成或待辦理，而不是刪除它們。</li>
+ <li>註記那些任務視為已完成或待辦理，而不是刪除它們。</li>
  <li>刪除那些任務。</li>
  <li>新增那些新任務。</li>
  <li>藉由狀態來過濾那些任務：全部、現行或已完成任務。</li>
  <li>編輯那些任務。</li>
- <li>標記全部任務視為現行或已完成狀態。</li>
+ <li>註記全部任務視為現行或已完成狀態。</li>
  <li>刪除全部已完成任務。</li>
 </ul>
 
-<h2 id="Building_our_first_component">Building our first component</h2>
+<h2 id="Building_our_first_component">建立我們第一個元件</h2>
 
-<p>Let's create a <code>Todos.svelte</code> component — this will contain our list of todos.</p>
+<p>建立<code>Todos.svelte</code>元件——這將包含我們的待辦任務。</p>
 
 <ol>
  <li>
-  <p>Create a new folder — <code>src/components</code>.</p>
+  <p>建立新資料夾——<code>src/components</code>。</p>
 
   <div class="notecard note">
-  <p><strong>Note</strong>: you can put your components anywhere inside the <code>src</code> folder, but the <code>components</code> folder is a recognized convention to follow, allowing you to find your components easily.</p>
+  <p><strong>注意</strong>：你可以把元件們放在<code>src</code>資料夾當中的任何地方，但放在<code>components</code>資料夾是比較常見的做法，也讓你可以更容易地找到元件們。</p>
   </div>
  </li>
  <li>
-  <p>Create a file named <code>src/components/Todos.svelte</code> with the following content:</p>
+  <p>建立<code>src/components/Todos.svelte</code>檔案並包含以下內容：</p>
 
   <pre class="brush: html">&lt;h1&gt;Svelte To-Do list&lt;/h1&gt;</pre>
  </li>
  <li>
-  <p>Change the <code>title</code> element in <code>public/index.html</code> to contain the text <em>Svelte To-do list</em>:</p>
+  <p>改變<code>public/index.html</code>中的<code>title</code>元素內容為<em>Svelte To-do list</em>：</p>
 
   <pre class="brush: html">&lt;title&gt;Svelte To-Do list&lt;/title&gt;</pre>
  </li>
  <li>
-  <p>Open <code>src/App.svelte</code> and replace its contents with the following:</p>
+  <p>打開<code>src/App.svelte</code>並替換為以下內容：</p>
 
   <pre class="brush: html">&lt;script&gt;
   import Todos from './components/Todos.svelte'
@@ -117,7 +117,7 @@ tags:
 &lt;Todos /&gt;</pre>
  </li>
  <li>
-  <p>In development mode, Svelte will issue a warning in the browser console when specifying a prop that doesn't exist in the component; in this case we have a <code>name</code> prop being specified when we instantiate the <code>App</code> component inside <code>src/main.js</code>, which isn't used inside <code>App</code>. The console should currently give you a message along the lines of "&lt;App&gt; was created with unknown prop 'name'". To get rid of this, remove the <code>name</code> prop from <code>src/main.js</code>; it should now look like so:</p>
+  <p>在開發模式中，當定義屬性沒有存在於元件時，Svelte將會在瀏覽器主控台警示問題；以此例來看，當我們於<code>src/main.js</code>實例化<code>App</code>元件時，由於我們已經明確定義出<code>name</code>屬性，但並無實際在<code>App</code>中使用到。所以主控台現在應該會給你一個警示訊息，如「&lt;App&gt; was created with unknown prop 'name'」。而為了排除這個問題，從<code>src/main.js</code>中移除<code>name</code>屬性；看起來應該要像是如下這樣：</p>
 
   <pre class="brush: js">import App from './App.svelte'
 
@@ -129,13 +129,13 @@ export default app</pre>
  </li>
 </ol>
 
-<p>Now if you check your testing server URL you'll see our <code>Todos.svelte</code> component being rendered:</p>
+<p>假如你現在檢查你的測試伺服器URL，應該會看到<code>Todos.svelte</code>元件已經被渲染出如下畫面：</p>
 
 <p><img alt="basic component rendering which a title that says 'Svelte to-do list'" src="02-todos-component-rendered.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
 
-<h2 id="Adding_static_markup">Adding static markup</h2>
+<h2 id="Adding_static_markup">加上靜態標記語言</h2>
 
-<p>For the moment we will start with a static markup representation of our app, so you can see what it will look like. Copy and paste the following into our <code>Todos.svelte</code> component file, replacing the existing content:</p>
+<p>我們將會從應用程式的靜態標記語言表示開始，所以你將會看到它長什麼樣子。複製並貼上下面內容至<code>Todos.svelte</code>元件檔案以取代現有內容：</p>
 
 <pre class="brush: html">&lt;!-- Todos.svelte --&gt;
 &lt;div class="todoapp stack-large"&gt;
@@ -258,27 +258,27 @@ export default app</pre>
 
 &lt;/div&gt;</pre>
 
-<p>Check the rendered out again, and you'll see something like this:</p>
+<p>再次確認已經渲染出來的畫面，你應該會看到如下樣子：</p>
 
 <p><img alt="A todo list app, but unstyled, with a title of `what needs to be done`, inputs, checkboxes, etc." src="03-unstyled-todo-app.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p>The HTML markup above is not very nicely styled and it's also functionally useless. Nevertheless, let's have a look at the markup and see how it relates to our desired features:</p>
+<p>上面HTML標記語言的樣式並不是那麼好看，而且也沒有實際功能。儘管如此，接著來看看它和我們想要的功能如何關聯起來：</p>
 
 <ul>
- <li>A label and a text box for entering new tasks.</li>
- <li>Three buttons to filter by task status.</li>
- <li>A label showing the total number of tasks and the completed tasks.</li>
- <li>An unordered list, which holds a list item for each task.</li>
- <li>When the task is being edited, the list item has an input and two button to cancel or save modifications.</li>
- <li>If the task is not being edited, there's a checkbox to set the completed status, and two buttons to edit or delete the task.</li>
- <li>Finally there are two buttons to check/uncheck all task and to remove completed tasks.</li>
+ <li>一個標籤和一個輸入框用來輸入新任務。</li>
+ <li>三個按鈕則依據狀態來過濾任務。</li>
+ <li>一個標籤用來顯示任務總數及已完成任務數量。</li>
+ <li>一個無順序清單，其中包含每一個任務項目。</li>
+ <li>編輯任務時，清單項目會有輸入框和兩個按鈕去取消或儲存變更。</li>
+ <li>如果任務處於非編輯狀態時，會有勾選框可以去設定已完成狀態和兩個按鈕去編輯或刪除任務。</li>
+ <li>最後有兩個按鈕可以去勾選/不勾選所有任務和刪除已完成的那些任務。</li>
 </ul>
 
-<p>In subsequent articles we'll get all these features working, and more besides.</p>
+<p>隨後的文章我們會逐一將這些功能完善，以及除此之外的功能等等。</p>
 
-<h3 id="Accessibility_features_of_the_todo_list">Accessibility features of the todo list</h3>
+<h3 id="Accessibility_features_of_the_todo_list">待辦清單的無障礙特徵</h3>
 
-<p>You may notice some unusual attributes here. For example:</p>
+<p>你可能有注意到一些特殊的屬性。例如：</p>
 
 <pre class="brush: html">&lt;button class="btn toggle-btn" aria-pressed="true"&gt;
   &lt;span class="visually-hidden"&gt;Show&lt;/span&gt;
@@ -286,34 +286,34 @@ export default app</pre>
   &lt;span class="visually-hidden"&gt;tasks&lt;/span&gt;
 &lt;/button&gt;</pre>
 
-<p>Here, <code>aria-pressed</code> tells assistive technology (like screen readers) that the button can be in one of two states: <code>pressed</code> or <code>unpressed</code>. Think of these as analogs for on and off. Setting a value of <code>true</code> means that the button is pressed by default.</p>
+<p>在這裡，<code>aria-pressed</code>告訴輔助技術（像是螢幕閱讀器）按鈕可以是兩狀態其中之一：<code>pressed</code>或<code>unpressed</code>。可以想像類似於開關狀態。設定數值為<code>true</code>時，意謂著按鈕預設是被按下的。</p>
 
-<p>The class <code>visually-hidden</code> has no effect yet, because we have not included any CSS. Once we have put our styles in place, though, any element with this class will be hidden from sighted users and still available to screen reader users — this is because these words are not needed by sighted users; they are there to provide more information about what the button does for screenreader users that do not have the extra visual context to help them.</p>
+<p><code>visually-hidden</code>類別現在還沒有效果，因為我們還沒引入任何CSS。一旦引入我們的樣式後，對於可以看見的使用者們會隱藏那些具有此類別的元素並仍能夠讓那些螢幕閱讀器使用者來使用——這是因為這些文字並不需要給可以看見的使用者看到；它們提供更多資訊讓那些螢幕閱讀器使用者了解按鈕實際可以做什麼，而不需要借助一些額外的視覺環境來幫助他們。</p>
 
-<p>Further down, you can find the following <code>&lt;ul&gt;</code> element:</p>
+<p>在往下看一點，你可以找到如下<code>&lt;ul&gt;</code>元素：</p>
 
 <pre class="brush: html">&lt;ul role="list" className="todo-list stack-large" aria-labelledby="list-heading"&gt;</pre>
 
-<p>The <code>role</code> attribute helps assistive technology explain what kind of semantic value an element has — or what its purpose is. A <code>&lt;ul&gt;</code> is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the <code>&lt;ul&gt;</code>  element. If you want to learn more about why this is necessary, you can check out Scott O'Hara’s article, “Fixing Lists”.</p>
+<p><code>role</code>屬性則幫助輔助技術去解釋元素具有什麼種類的語義數值——或它的目的。預設情況下，<code>&lt;ul&gt;</code>會被視為清單，但在加上樣式之後會破壞原有性質。明確定義規則為「list」將能復原<code>&lt;ul&gt;</code>元素本身意義。假如你想要知道更多為什麼需要明確定義的話，可以去參考Scott O'Hara’s的「Fixing Lists」文章。</p>
 
-<p>The <code>aria-labelledby</code> attribute tells assistive technologies that we're treating our <code>&lt;h2&gt;</code> with an <code>id</code> of <code>list-heading</code> as the label that describes the purpose of the list beneath it. Making this association gives the list a more informative context, which could help screen reader users better understand the purpose of it.</p>
+<p><code>aria-labelledby</code>屬性則告訴輔助技術，我們把<code>&lt;h2&gt;</code>且<code>id</code>為<code>list-heading</code>作為描述下面清單用途的標籤。建立這種關聯為清單提供更多上下文資訊，這可以幫助螢幕閱讀器使用者更好地去了解它的目的。</p>
 
-<p>This seems like a good time to talk about how Svelte deals with accessibility; let's do that now.</p>
+<p>這似乎是討論Svelte如何處理無障礙性的好時機；讓我們繼續看下去。</p>
 
-<h2 id="Svelte_accessibility_support">Svelte accessibility support</h2>
+<h2 id="Svelte_accessibility_support">Svelte無障礙性支援</h2>
 
-<p>Svelte has a special emphasis on accessibility. The intention is to encourage developers to write more accessible code "by default". Being a compiler, Svelte can statically analyze our HTML templates to provide accessibility warnings when components are being compiled.</p>
+<p>Svelte特別重視無障礙性。目的是鼓勵開發人員盡可能預設地寫出無障礙程式碼。作為編譯器，Svelte能靜態地分析我們的HTML範本，而當元件被編譯後，就能提出一些無障礙警示。</p>
 
-<p>Accessibility (shortened to a11y) isn't always easy to get right, but Svelte will help by warning you if you write inaccessible markup.</p>
+<p>無障礙性（縮寫為a11y）一直以來不容易寫正確，但Svelte將會協助並警示你，假如你寫出了不容易閱讀的標記語言。</p>
 
-<p>For example, if we add an <code>&lt;img&gt;</code> element to our <code>todos.svelte</code> component without its corresponding <code>alt</code> prop:</p>
+<p>舉例來說，假如我們新增<code>&lt;img&gt;</code>元素至我們的<code>todos.svelte</code>元件，但沒有對應的<code>alt</code>屬性時：</p>
 
 <pre class="brush: html">&lt;h1&gt;Svelte To-Do list&lt;/h1&gt;
 
 &lt;img height="32" width="88" src="https://www.w3.org/WAI/wcag2A"&gt;
 </pre>
 
-<p>The compiler will issue the following warning:</p>
+<p>編譯器將會報出下列警示：</p>
 
 <pre class="brush: bash">(!) Plugin svelte: A11y: &lt;img&gt; element should have an alt attribute
 src/components/Todos.svelte
@@ -325,21 +325,21 @@ created public/build/bundle.js in 220ms
 
 [2020-07-15 04:07:43] waiting for changes...</pre>
 
-<p>Moreover, our editor can display this warning even before calling the compiler:</p>
+<p>此外，在我們呼叫編譯器之前，編輯器也會顯示這個警示：</p>
 
 <p><img alt="A code editor window showing an image tag, with a popup error message saying that the element should have an alt attribute" src="04-svelte-accessibility-support.png"></p>
 
-<p>You can tell Svelte to ignore this warning for the next block of markup with a <a href="https://svelte.dev/docs#Comments">comment</a> beginning with <code>svelte-ignore</code>, like this:</p>
+<p>你可以使用以<code>svelte-ignore</code>開頭的<a href="https://svelte.dev/docs#Comments">註解</a>，來告訴Svelte去忽略下一個標記語言區塊的警示，像是如下：</p>
 
 <pre class="brush: html">&lt;!-- svelte-ignore a11y-missing-attribute --&gt;
 &lt;img height="32" width="88" src="https://www.w3.org/WAI/wcag2A"&gt;
 </pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: With VSCode you can automatically add this ignore comment by clicking on the <em>Quick fix...</em> link or pressing <kbd>Ctrl</kbd> + <kbd>.</kbd>.</p>
+<p><strong>注意</strong>：透過VSCode你可以點擊<em>Quick fix...</em>連結或按<kbd>Ctrl</kbd> + <kbd>.</kbd>來自動地加上這個忽略註解。</p>
 </div>
 
-<p>If you want to globally disable this warning you can add this <code>onwarn</code> handler to your <code>rollup.config.js</code> file inside the configuration for the <code>Svelte</code> plugin, like this:</p>
+<p>假如你想要全域地關閉這個警示，可以在你的<code>rollup.config.js</code>檔案中調整<code>Svelte</code>外掛組態並補上這個<code>onwarn</code>處理器即可，像是如下：</p>
 
 <pre class="brush: js">plugins: [
   svelte({
@@ -363,17 +363,17 @@ created public/build/bundle.js in 220ms
 ]
 </pre>
 
-<p>By design, these warnings are implemented in the compiler itself, and not as a plug-in that you may choose to add to your project. The idea is to check for a11y issues in your markup by default and let you opt-out of specific warnings.</p>
+<p>在設計上，這些警示被實現於編譯器本身，而不是你可以選擇性加入專案的外掛。理念是建立在預設會檢核你的標記語言有無a11y問題並讓你可以選擇排除特定警示。</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: you should only disable these warnings if you have good reasons to do so, for example while building a quick prototype. It's important to be a good web citizen and make your pages accessible to the broadest possible userbase.</p>
+<p><strong>注意</strong>：假如你有足夠充分的理由，則可以先停用這些警示，例如當你在快速建構原型時。成為一個優秀的網路公民並讓你的頁面盡可能廣泛地被用戶閱讀是很重要的。</p>
 </div>
 
-<p>The accessibility rules checked by Svelte are taken from <a href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules">eslint-plugin-jsx-a11y</a>, a plugin for eslint that provides static checks for many accessibility rules on JSX elements. Svelte aims to implement all of them in its compiler, and most of them have already been ported to Svelte. On GitHub you can see <a href="https://github.com/sveltejs/svelte/issues/820">which accessibility checks are still missing</a>. You can check the meaning of each rule by clicking on its link.</p>
+<p>Svelte透過<a href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules">eslint-plugin-jsx-a11y</a>來檢核無障礙性規則，它是提供在JSX元素上許多無障礙性規則靜態檢核的一個eslint外掛。Svelte企圖將它們全部實現於編譯器中，而大部分都已經移植至Svelte中。你可以在GitHub中看到<a href="https://github.com/sveltejs/svelte/issues/820">尚未實現的無障礙檢核</a>。點選規則的連結可以查閱它們各自的涵義。</p>
 
-<h2 id="Styling_our_markup">Styling our markup</h2>
+<h2 id="Styling_our_markup">為標記語言加上樣式</h2>
 
-<p>Let's make the todo list look a little better. Replace the contents of the file <code>public/global.css</code> with the following:</p>
+<p>讓我們來將待辦清單變得好看些。將以下內容取代至<code>public/global.css</code>檔案中：</p>
 
 <pre class="brush: css">/* RESETS */
 *,
@@ -674,33 +674,33 @@ body {
   opacity: 1;
 }</pre>
 
-<p>With our markup styled, everything now looks better:</p>
+<p>當我們為標記語言加上樣式後，現在看起來好多了：</p>
 
 <p><img alt="Our todo list app, styled, with a title of 'what needs to be done', an input to enter more todos, and a list of todos with checkboxes" src="05-styled-todo-app.png"></p>
 
-<h2 id="The_code_so_far">The code so far</h2>
+<h2 id="The_code_so_far">到目前為止的程式碼</h2>
 
 <h3 id="Git_2">Git</h3>
 
-<p>To see the state of the code as it should be at the end of this article, access your copy of our repo like this:</p>
+<p>若想要看到本文結束後程式碼所呈現的最終結果，你可以參照下列的方式存取我們已經複製下來的儲存庫：</p>
 
 <pre class="brush: bash">cd mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
 
-<p>Or directly download the folder's content:</p>
+<p>或直接下載資料夾內容：</p>
 
 <pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
 
-<p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
+<p>記得執行<code>npm install &amp;&amp; npm run dev</code>以開發模式來運行你的應用程式。</p>
 
 <h3 id="REPL_2">REPL</h3>
 
-<p>To see the current state of the code in a REPL, visit:</p>
+<p>若要在REPL看見當前程式碼狀態，請點擊如下連結：</p>
 
 <p><a href="https://svelte.dev/repl/c862d964d48d473ca63ab91709a0a5a0?version=3.23.2">https://svelte.dev/repl/c862d964d48d473ca63ab91709a0a5a0?version=3.23.2</a></p>
 
-<h2 id="Summary">Summary</h2>
+<h2 id="Summary">總結</h2>
 
-<p>With our markup and styling in place our Todo list app is starting to take shape, and we have everything ready so that we can start to focus on the features we have to implement.</p>
+<p>隨著我們對標記語言加上樣式後，待辦清單應用程式開始逐漸成形，我們終於可以專注在需要實現的功能上了。</p>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
 

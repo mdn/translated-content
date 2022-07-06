@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <h2 id="Browser_support" name="Browser_support">ブラウザーのサポート状況</h2>
 
-<p>ネイティブの JavaScript モジュール機能は、<code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a></code> と <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/export">export</a></code> 文を利用します。これらに対するブラウザーの互換性は次のとおりです。</p>
+<p>ネイティブの JavaScript モジュール機能は、<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/import">import</a></code> と <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/export">export</a></code> 文を利用します。これらに対するブラウザーの互換性は次のとおりです。</p>
 
 <h3 id="import" name="import">import</h3>
 
@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <h2 id="Introducing_an_example" name="Introducing_an_example">使用例の紹介</h2>
 
-<p>モジュールの使い方を紹介するために、GitHub 上に<a href="https://github.com/mdn/js-examples/tree/master/modules">簡単な使用例</a>を作りました。これらは、ウェブページに {{htmlelement("canvas")}} 要素を追加し、その canvas 上にいくつかの異なる図形 (と、それに関するレポート) を描画する簡単なモジュールの例です。</p>
+<p>モジュールの使い方を紹介するために、GitHub 上に<a href="https://github.com/mdn/js-examples/tree/master/module-examples">簡単な使用例</a>を作りました。これらは、ウェブページに {{htmlelement("canvas")}} 要素を追加し、その canvas 上にいくつかの異なる図形 (と、それに関するレポート) を描画する簡単なモジュールの例です。</p>
 
 <p>このような機能はあまり役に立ちませんが、モジュールの説明が明確になるように意図的に単純にしています。</p>
 
@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <h2 id="Basic_example_structure" name="Basic_example_structure">構造の基本的な例</h2>
 
-<p>最初の使用例 (<a href="https://github.com/mdn/js-examples/tree/master/modules/basic-modules">basic-modules</a> を参照) には、次のようなファイル構造があります。</p>
+<p>最初の使用例 (<a href="https://github.com/mdn/js-examples/tree/master/module-examples/basic-modules">basic-modules</a> を参照) には、次のようなファイル構造があります。</p>
 
 <pre class="notranslate">index.html
 main.js
@@ -88,7 +88,7 @@ modules/
 
 <p>しかし、少なくとも今のところは <code>.js</code> を使い続けることにしました。ブラウザでモジュールを正しく動作させるためには、サーバーが <code>text/javascript</code> などの JavaScript MIME タイプを含む <code>Content-Type</code> ヘッダでモジュールを提供していることを確認する必要があります。そうしないと、"The server responded with a non-JavaScript MIME type" のような厳格な MIME タイプチェックエラーが表示され、ブラウザは JavaScript を実行しません。ほとんどのサーバーでは、<code>.js</code> ファイルにはすでに正しい MIME タイプが設定されていますが、<code>.mjs</code> ファイルにはまだ設定されていません。すでに <code>.mjs</code> ファイルを正しく提供しているサーバーには、<a href="https://pages.github.com/">GitHub Pages</a> や Node.js の <code><a href="https://github.com/http-party/http-server#readme">http-server</a></code> などがあります。</p>
 
-<p>これは、すでにそのような環境を使用している場合や、今はまだ使用していないが、何をしているか知っていてアクセスできる場合には問題ありません(つまり、<code>.mjs</code> ファイルに正しい <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code> を設定するようにサーバーを設定することができます)。しかし、あなたがファイルを提供しているサーバーを制御できない場合には、混乱を引き起こす可能性があります。</p>
+<p>これは、すでにそのような環境を使用している場合や、今はまだ使用していないが、何をしているか知っていてアクセスできる場合には問題ありません(つまり、<code>.mjs</code> ファイルに正しい <code><a href="/ja/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code> を設定するようにサーバーを設定することができます)。しかし、あなたがファイルを提供しているサーバーを制御できない場合には、混乱を引き起こす可能性があります。</p>
 
 <p>この記事では学習と移植性を考慮して、<code>.js</code> を使用することにしました。</p>
 
@@ -133,19 +133,19 @@ export function draw(ctx, length, x, y, color) {
 
 <pre class="brush: js; notranslate">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';</pre>
 
-<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a></code> 文の後ろに、中かっこで囲まれたインポートしたい機能のカンマ区切りリストを続け、その後ろに from キーワードと、モジュールファイルへのパスを続けます。このパスは、サイトのルートからの相対パスであり、<code>basic-modules</code> の場合は <code>/js-examples/modules/basic-modules</code> です。</p>
+<p><code><a href="/ja/docs/Web/JavaScript/Reference/Statements/import">import</a></code> 文の後ろに、中かっこで囲まれたインポートしたい機能のカンマ区切りリストを続け、その後ろに from キーワードと、モジュールファイルへのパスを続けます。このパスは、サイトのルートからの相対パスであり、<code>basic-modules</code> の場合は <code>/js-examples/module-examples/basic-modules</code> です。</p>
 
 <p>しかし、この例ではパスの書き方が少し異なっています。「現在の位置」を意味するドット (<code>.</code>) 記法を使っており、その後ろに見つけようとするファイルへのパスを続けています。これは、完全な相対パスを毎回記述するよりも短くてすむためとてもよい方法であり、URL の可搬性もあるため、サイト階層構造の異なる場所に移動させた場合でも動作するでしょう。</p>
 
 <p>そのため、このようなパスは、</p>
 
-<pre class="notranslate">/js-examples/modules/basic-modules/modules/square.js</pre>
+<pre class="notranslate">/js-examples/module-examples/basic-modules/modules/square.js</pre>
 
 <p>このように書けます。</p>
 
 <pre class="notranslate">./modules/square.js</pre>
 
-<p>このような書き方の動作している例は <code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.js</a></code> にあります。</p>
+<p>このような書き方の動作している例は <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js">main.js</a></code> にあります。</p>
 
 <div class="blockIndicator note">
 <p><strong>注意</strong>: モジュールシステムの中には、ファイルの拡張子やドットを省略できるものがあります (例えば <code>'/modules/square'</code>)。このような書き方は、ネイティブの JavaScript モジュールでは動作しません。</p>
@@ -162,7 +162,7 @@ reportPerimeter(square1.length, reportList);
 </pre>
 
 <div class="blockIndicator note">
-<p><strong>注: </strong>インポートされた機能はファイル内で利用できますが、エクスポートされた機能の読み取り専用ビューです。インポートされた変数を変更することはできませんが、<code>const</code> と同様にプロパティを変更することはできます。さらに、これらの機能はライブバインディングとしてインポートされます。つまり、<code>const</code> と違ってバインディングを変更できなくても値を変更できるということです。</p>
+<p><strong>注: </strong>インポートされた機能はファイル内で利用できますが、エクスポートされた機能の読み取り専用ビューです。インポートされた変数を変更することはできませんが、<code>const</code> と同様にプロパティを変更することはできます。さらに、これらの機能はライブバインディングとしてインポートされます。つまり、<code>const</code> と違ってバインディングを変更できなくても値を変更できるということです。</p>
 </div>
 
 <h2 id="Applying_the_module_to_your_HTML" name="Applying_the_module_to_your_HTML">HTML にモジュールを適用する</h2>
@@ -176,7 +176,7 @@ reportPerimeter(square1.length, reportList);
 <p>また、<code>&lt;script&gt;</code> 要素の本文内に JavaScript コードを配置することで、モジュールのスクリプトをHTMLファイルに直接埋め込むこともできます。</p>
 
 <pre class="brush: js notranslate">&lt;script type="module"&gt;
-  /* ここに JavaScript モジュールコード */
+  /* ここに JavaScript モジュールコード */
 &lt;/script&gt;</pre>
 
 <p>モジュールをインポートする先のスクリプトは、基本的に最上位のモジュールとして動作します。これを無視すると、例えば Firefox の場合は "SyntaxError: import declarations may only appear at top level of a module" (構文エラー: インポート宣言は最上位のモジュールしか使えません) というエラーが発生します。</p>
@@ -220,7 +220,7 @@ reportPerimeter(square1.length, reportList);
 <pre class="brush: js; notranslate">import {default as randomSquare} from './modules/square.js';</pre>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>: エクスポートされる項目の名前を変更するために使われる as の文法については、以下の {{anch("Renaming imports and exports")}} セクションで説明します。</p>
+<p><strong>注意</strong>: エクスポートされる項目の名前を変更するために使われる as の文法については、以下の <a href="#renaming_imports_and_exports">Renaming imports and exports</a> セクションで説明します。</p>
 </div>
 
 <h2 id="Avoiding_naming_conflicts" name="Avoiding_naming_conflicts">名前の衝突を避ける</h2>
@@ -251,7 +251,7 @@ export { function1, function2 };
 import { function1 as newFunctionName,
          function2 as anotherNewFunctionName } from './modules/module.js';</pre>
 
-<p>実際の例を見てみましょう。<a href="https://github.com/mdn/js-examples/tree/master/modules/renaming">renaming</a> ディレクトリでは、前の使用例と同じモジュールを使っていますが、円や三角形を描画するためのモジュールである <code>circle.js</code> と <code>triangle.js</code> も追加しています。</p>
+<p>実際の例を見てみましょう。<a href="https://github.com/mdn/js-examples/tree/master/module-examples/renaming">renaming</a> ディレクトリでは、前の使用例と同じモジュールを使っていますが、円や三角形を描画するためのモジュールである <code>circle.js</code> と <code>triangle.js</code> も追加しています。</p>
 
 <p>それぞれのモジュール内部では、同じ名前を持つ機能がエクスポートされており、それゆえそれぞれの末尾の <code>export</code> 文は次のように同一であることがわかります。</p>
 
@@ -307,7 +307,7 @@ import { squareName, drawSquare, reportSquareArea, reportSquarePerimeter } from 
 Module.function2()
 など</pre>
 
-<p>実際の使用例を見てみましょう。<a href="https://github.com/mdn/js-examples/tree/master/modules/module-objects">module-objects</a>  ディレクトリでは、また同じ例を使っていますが、この新しい構文を利用するために書き直されています。モジュール内のエクスポートは、いずれも次の単純な構文を使っています。</p>
+<p>実際の使用例を見てみましょう。<a href="https://github.com/mdn/js-examples/tree/master/module-examples/module-objects">module-objects</a>  ディレクトリでは、また同じ例を使っていますが、この新しい構文を利用するために書き直されています。モジュール内のエクスポートは、いずれも次の単純な構文を使っています。</p>
 
 <pre class="brush: js; notranslate">export { name, draw, reportArea, reportPerimeter };</pre>
 
@@ -331,7 +331,7 @@ Square.reportPerimeter(square1.length, reportList);</pre>
 
 <p>最初の方で触れましたが、クラスをエクスポートしたりインポートすることもできます。これがコード上で名前の衝突を避けるもう一つの方法で、もし自分のモジュールを既にオブジェクト指向のスタイルで書いているのであれば、特に便利です。</p>
 
-<p><a href="https://github.com/mdn/js-examples/tree/master/modules/classes">classes</a> ディレクトリの中には、私たちの図形を描くモジュールを ES クラスを使って書き直した例があります。例えば <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/modules/square.js">square.js</a></code> ファイルでは、次のように全ての機能を一つのクラスの中に持たせています。</p>
+<p><a href="https://github.com/mdn/js-examples/tree/master/module-examples/classes">classes</a> ディレクトリの中には、私たちの図形を描くモジュールを ES クラスを使って書き直した例があります。例えば <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/classes/modules/square.js">square.js</a></code> ファイルでは、次のように全ての機能を一つのクラスの中に持たせています。</p>
 
 <pre class="brush: js; notranslate">class Square {
   constructor(ctx, listId, length, x, y, color) {
@@ -349,7 +349,7 @@ Square.reportPerimeter(square1.length, reportList);</pre>
 
 <pre class="brush: js; notranslate">export { Square };</pre>
 
-<p><code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/main.js">main.js</a></code> では、これを次のようにインポートします。</p>
+<p><code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/classes/main.js">main.js</a></code> では、これを次のようにインポートします。</p>
 
 <pre class="brush: js; notranslate">import { Square } from './modules/square.js';</pre>
 
@@ -367,7 +367,7 @@ square1.reportPerimeter();</pre>
 <pre class="brush: js; notranslate">export * from 'x.js'
 export { name } from 'x.js'</pre>
 
-<p>使用例は <a href="https://github.com/mdn/js-examples/tree/master/modules/module-aggregation">module-aggregation</a> ディレクトリを参照してください。この例 (クラスを使った以前の例を元にしています) には、<code>shapes.js</code> というモジュールが追加されています。これは <code>circle.js</code>、<code>square.js</code>、<code>triangle.js</code> の全ての機能をひとつに集約したものです。また、サブモジュールを <code>modules</code> ディレクトリの中にある <code>shapes</code> というサブディレクトリに移動させています。つまり、この例のモジュール構造は次のようなものです。</p>
+<p>使用例は <a href="https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation">module-aggregation</a> ディレクトリを参照してください。この例 (クラスを使った以前の例を元にしています) には、<code>shapes.js</code> というモジュールが追加されています。これは <code>circle.js</code>、<code>square.js</code>、<code>triangle.js</code> の全ての機能をひとつに集約したものです。また、サブモジュールを <code>modules</code> ディレクトリの中にある <code>shapes</code> というサブディレクトリに移動させています。つまり、この例のモジュール構造は次のようなものです。</p>
 
 <pre class="notranslate">modules/
   canvas.js
@@ -381,7 +381,7 @@ export { name } from 'x.js'</pre>
 
 <pre class="brush: js; notranslate">export { Square };</pre>
 
-<p>その次は集約を行う部分です。<code><a href="https://github.com/mdn/js-examples/blob/master/modules/module-aggregation/modules/shapes.js">shapes.js</a></code> の内部には次のような行があります。</p>
+<p>その次は集約を行う部分です。<code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/module-aggregation/modules/shapes.js">shapes.js</a></code> の内部には次のような行があります。</p>
 
 <pre class="brush: js; notranslate">export { Square } from './shapes/square.js';
 export { Triangle } from './shapes/triangle.js';
@@ -407,16 +407,16 @@ import { Triangle } from './modules/triangle.js';</pre>
 
 <p>ブラウザーで利用できる JavaScript モジュールの最新機能は、動的なモジュールの読み込みです。これにより、全てを最初に読み込んでしまうのではなく、必要が生じたときにのみ動的にモジュールを読み込むことができます。これには明らかなパフォーマンス上の利点があります。どのように動作するのか、読んで見てましょう。</p>
 
-<p>この新しい機能により、<code>import()</code> を関数として実行し、そのときのパラメーターとしてモジュールへのパスを指定することができます。これは次のように <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> を返し、エクスポートにアクセスできるモジュールオブジェクト ({{anch("Creating a module object")}} を参照) を使って fulfilled 状態になります。</p>
+<p>この新しい機能により、<code>import()</code> を関数として実行し、そのときのパラメーターとしてモジュールへのパスを指定することができます。これは次のように <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> を返し、エクスポートにアクセスできるモジュールオブジェクト (<a href="#creating_a_module_object">Creating a module object</a> を参照) を使って fulfilled 状態になります。</p>
 
 <pre class="brush: js; notranslate">import('./modules/myModule.js')
   .then((module) =&gt; {
     // モジュールを使って何かをする。
   });</pre>
 
-<p>例を見てみましょう。<a href="https://github.com/mdn/js-examples/tree/master/modules/dynamic-module-imports">dynamic-module-imports</a> ディレクトリには、以前のクラスの例に基づいた別の使用例があります。しかし、今回は使用例が読み込まれたときにはキャンバスに何も描画しません。その代わり "Circle" (円)、"Square" (正方形)、"Triangle" (三角形) という 3つのボタンを表示し、それらが押されたとき、対応した図形を描くために必要なモジュールを動的に読み込んで使用します。</p>
+<p>例を見てみましょう。<a href="https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports">dynamic-module-imports</a> ディレクトリには、以前のクラスの例に基づいた別の使用例があります。しかし、今回は使用例が読み込まれたときにはキャンバスに何も描画しません。その代わり "Circle" (円)、"Square" (正方形)、"Triangle" (三角形) という 3つのボタンを表示し、それらが押されたとき、対応した図形を描くために必要なモジュールを動的に読み込んで使用します。</p>
 
-<p>この使用例では <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/index.html">index.html</a></code> と <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/main.js">main.js</a></code> のみを変更しており、モジュールのエクスポートは以前と同じままです。</p>
+<p>この使用例では <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html">index.html</a></code> と <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js">main.js</a></code> のみを変更しており、モジュールのエクスポートは以前と同じままです。</p>
 
 <p><code>main.js</code> では、それぞれのボタンへの参照を取得するために、次のように <code><a href="/ja/docs/Web/API/Document/querySelector">document.querySelector()</a></code> を使っています。</p>
 

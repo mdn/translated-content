@@ -5,9 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Uint32Array
 ---
 <div>{{JSRef("Global_Objects", "TypedArray", "Int8Array,Uint8Array,Uint8ClampedArray,Int16Array,Uint16Array,Int32Array,Uint32Array,Float32Array,Float64Array")}}</div>
 
-<div></div>
 
-<p><strong><code>Uint32Array</code> </strong>表示一个由基于平台字节序的32位无符号字节组成的数组。如果需要对字节顺序进行控制(译者注：即 littleEndian 或 bigEndian)，请使用 {{jsxref("DataView")}} 代替。数组中每个元素的初始值都是<code>0</code>。一旦创建，你可以用对象的方法引用数组里的元素，或者使用标准的数组索引语法（即，使用中括号）。</p>
+
+<p><strong><code>Uint32Array</code> </strong>表示一个由基于平台字节序的 32 位无符号字节组成的数组。如果需要对字节顺序进行控制 (译者注：即 littleEndian 或 bigEndian)，请使用 {{jsxref("DataView")}} 代替。数组中每个元素的初始值都是<code>0</code>。一旦创建，你可以用对象的方法引用数组里的元素，或者使用标准的数组索引语法（即，使用中括号）。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,7 +25,7 @@ new Uint32Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint32Array.BYTES_PER_ELEMENT")}}</dt>
  <dd>返回一个数值，代表<code>Uint32Array</code>中单个元素的字节大小。<code>Uint32Array</code> 返回 <code>4</code>。</dd>
  <dt>Uint32Array.length</dt>
- <dd>固定值(static)属性，值为3。使用 {{jsxref("TypedArray.prototype.length", "Uint32Array.prototype.length")}} 获得数组的真实长度（元素个数）。</dd>
+ <dd>固定值 (static) 属性，值为 3。使用 {{jsxref("TypedArray.prototype.length", "Uint32Array.prototype.length")}} 获得数组的真实长度（元素个数）。</dd>
  <dt>{{jsxref("TypedArray.name", "Uint32Array.name")}}</dt>
  <dd>返回字符串类型的值，表示构造器的名字。<code>Uint32Array</code> 的返回值是: "Uint32Array"。</dd>
  <dt>{{jsxref("TypedArray.prototype", "Uint32Array.prototype")}}</dt>
@@ -41,9 +41,9 @@ new Uint32Array(buffer [, byteOffset [, length]]);</pre>
  <dd>从可变长度的参数创建一个新的 <code>Uint32Array</code> 。请参考 {{jsxref("Array.of()")}}.</dd>
 </dl>
 
-<h2 id="Boolean_instances" name="Boolean_instances"><code>Uint32Array</code> 原型</h2>
+<h2 id="Boolean_instances"><code>Uint32Array</code> 原型</h2>
 
-<p><font face="Open Sans, sans-serif">所有 </font><code>Uint32Array</code> 对象继承自 {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.</p>
+<p>所有 <code>Uint32Array</code> 对象继承自 {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.</p>
 
 <h3 id="属性_2">属性</h3>
 
@@ -86,7 +86,7 @@ new Uint32Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.join", "Uint32Array.prototype.join()")}}</dt>
  <dd>将数组内的元素拼接成一个字符串。请参考 {{jsxref("Array.prototype.join()")}}。</dd>
  <dt>{{jsxref("TypedArray.keys", "Uint32Array.prototype.keys()")}}</dt>
- <dd>返回一个 <code>Array Iterator</code> 对象，该对象包含数组中所有索引(key)。请参考 {{jsxref("Array.prototype.keys()")}}。</dd>
+ <dd>返回一个 <code>Array Iterator</code> 对象，该对象包含数组中所有索引 (key)。请参考 {{jsxref("Array.prototype.keys()")}}。</dd>
  <dt>{{jsxref("TypedArray.lastIndexOf", "Uint32Array.prototype.lastIndexOf()")}}</dt>
  <dd>返回数组中等于特定值的最后一个元素（下标最大）的下标，如果没有找到则返回 -1。请参考 {{jsxref("Array.prototype.lastIndexOf()")}}。</dd>
  <dt>{{jsxref("TypedArray.map", "Uint32Array.prototype.map()")}}</dt>

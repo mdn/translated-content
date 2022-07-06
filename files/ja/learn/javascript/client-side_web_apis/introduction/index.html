@@ -18,13 +18,13 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 
 <div>{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}</div>
 
-<p class="summary">まずはAPIを高い視点から見ていきます — これは何なのか、どう働くのか、あなたのコードでどう使うのか、どういう風に作られているのか? また様々なクラスのAPIは何なのか、どのような使い方があるのかも見ていきます。</p>
+<p class="summary">まずは API を高い視点から見ていきます — これは何なのか、どう働くのか、あなたのコードでどう使うのか、どういう風に作られているのか? また様々なクラスの API は何なのか、どのような使い方があるのかも見ていきます。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">前提条件:</th>
-   <td>基本的なコンピュータの知識および利用能力、<a href="/en-US/docs/Learn/HTML">HTML</a> と <a href="/en-US/docs/Learn/CSS">CSS</a> の基本的な理解、JavaScript の基本 (<a href="/docs/Learn/JavaScript/First_steps">第一歩</a>、<a href="/docs/Learn/JavaScript/Building_blocks">構成要素</a>, <a href="/docs/Learn/JavaScript/Objects">JavaScriptオブジェクト</a>).</td>
+   <td>基本的なコンピューターの知識および利用能力、<a href="/ja/docs/Learn/HTML">HTML</a> と <a href="/ja/docs/Learn/CSS">CSS</a> の基本的な理解、JavaScript の基本 (<a href="/ja/docs/Learn/JavaScript/First_steps">第一歩</a>、<a href="/ja/docs/Learn/JavaScript/Building_blocks">構成要素</a>, <a href="/ja/docs/Learn/JavaScript/Objects">JavaScript オブジェクト</a>).</td>
   </tr>
   <tr>
    <th scope="row">目的:</th>
@@ -39,14 +39,14 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 
 <p>実世界の例として、あなたの家、アパートや他の住処にある電気のコンセントについて考えて下さい。あなたの家で機器を使いたい時には、電源コードのプラグをコンセントに差し込めば事足ります。電源に直接結線したりしないでしょう — そんなのは非効率ですし、あなたが電気工事士でなければ、やってみるには難しいし危険です。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14317/plug-socket.png" style="display: block; height: 472px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="plug-socket.png" style="display: block; margin: 0px auto;"></p>
 
 <p><em>画像提供: <a href="https://www.flickr.com/photos/easy-pics/9518184890/in/photostream/lightbox/">超タコ足コンセント</a> by <a href="https://www.flickr.com/photos/easy-pics/">The Clear Communication People</a>, Flickr より</em></p>
 
-<p>それと同じことで、そうですね、例えば3次元グラフィックのプログラムを JavaScript や Python のような高レベル言語で書かれた API を使ってやる方が、C や C++ のような低レベル言語から直接コンピュータの GPU やグラフィック機能を叩いてやるよりも、ずっと簡単です。</p>
+<p>それと同じことで、そうですね、例えば3次元グラフィックのプログラムを JavaScript や Python のような高レベル言語で書かれた API を使ってやる方が、C や C++ のような低レベル言語から直接コンピューターの GPU やグラフィック機能を叩いてやるよりも、ずっと簡単です。</p>
 
 <div class="note">
-<p><strong>注記</strong>: API という語についてもっと詳しいことは <a href="/ja/docs/Glossary/API">APIの用語解説</a> を参照して下さい。</p>
+<p><strong>注記</strong>: API という語についてもっと詳しいことは <a href="/ja/docs/Glossary/API">API の用語解説</a> を参照して下さい。</p>
 </div>
 
 <h3 id="クライアントサイド_JavaScript_での_API">クライアントサイド JavaScript での API</h3>
@@ -54,15 +54,15 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 <p>クライアントサイド API では、実際非常にたくさんのAPIが使えます — それらは JavaScript 言語本体の一部ではなく、あなたにスーパーパワーを与えるべく JavaScript 言語のコアの上に築かれた代物です。それらはおおよそ二つのカテゴリに分けられます:</p>
 
 <ul>
- <li><strong>ブラウザ API</strong> は Web ブラウザに組込まれていて、ブラウザやコンピュータの環境の情報を取得し、これを使って役に立つややこしい事を行えるようにするものです。 例えば <a href="/en-US/docs/Web/API/Geolocation/Using_geolocation">Geolocation API</a> は位置情報を取得するための簡単な JavaScript 構造を提供するので、例えばグーグルマップにあなたの居場所を表示するような事ができます。裏で実際にはブラウザは低レベル (例えば C++) の複雑なコードをいくつか使ってデバイスの GPS 機器 (あるいは位置情報を得られる他のなんだか) と通信し、位置情報を取得し、コードから利用できるようにブラウザ環境に情報を戻しています。ですがここでもこの複雑な事柄は API で抽象化され隠蔽されます。</li>
- <li><strong>サードパーティ API</strong> はデフォルトではブラウザに組込まれておらず、普通はコードと情報を Web のどこから読み込まねばなりません。例えば <a href="https://dev.twitter.com/overview/documentation">Twitter API</a> を使えばあなたの Web サイトにあなたの最新のツイートを表示するような事が可能になります。Twitter API は、Twitter サービスに特定の情報を要求したりするのに使える特別な構造のかたまりを提供します。</li>
+ <li><strong>ブラウザー API</strong> は Web ブラウザーに組込まれていて、ブラウザーやコンピューターの環境の情報を取得し、これを使って役に立つややこしい事を行えるようにするものです。 例えば <a href="/ja/docs/Web/API/Geolocation_API">Geolocation API</a> は位置情報を取得するための簡単な JavaScript 構造を提供するので、例えばグーグルマップにあなたの居場所を表示するような事ができます。裏で実際にはブラウザーは低レベル (例えば C++) の複雑なコードをいくつか使ってデバイスの GPS 機器 (あるいは位置情報を得られる他のなんだか) と通信し、位置情報を取得し、コードから利用できるようにブラウザー環境に情報を戻しています。ですがここでもこの複雑な事柄は API で抽象化され隠蔽されます。</li>
+ <li><strong>サードパーティ API</strong> はデフォルトではブラウザーに組込まれておらず、普通はコードと情報を Web のどこから読み込まねばなりません。例えば <a href="https://dev.twitter.com/overview/documentation">Twitter API</a> を使えばあなたの Web サイトにあなたの最新のツイートを表示するような事が可能になります。Twitter API は、Twitter サービスに特定の情報を要求したりするのに使える特別な構造のかたまりを提供します。</li>
 </ul>
 
 
 
 
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13508/browser.png" style="display: block; height: 511px; margin: 0px auto; width: 815px;"></p>
+<p><img alt="" src="browser.png" style="display: block; margin: 0px auto;"></p>
 
 
 
@@ -71,31 +71,31 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 <p>ここまででクライアントサイド API とは何か、JavaScript 言語とどう関係しているのかお話しました。もっとはっきりさせるために一度おさらいして、ついでに他の JavaScript ツールがどう関係してくるのかもお話しましょう:</p>
 
 <ul>
- <li>JavaScript — ブラウザに組込まれた高レベルスクリプト言語で、Web ページやアプリに機能を実装するのに使えます。<a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Node</a> のようなブラウザ以外の他のプログラミング環境でも使えるのは覚えておいて下さい。</li>
- <li>ブラウザ API — ブラウザに組込みの JavaScript 言語の上にある構造で、何かの機能をもっと簡単に実装できるようにします。</li>
+ <li>JavaScript — ブラウザーに組込まれた高レベルスクリプト言語で、Web ページやアプリに機能を実装するのに使えます。<a href="/ja/docs/Learn/Server-side/Express_Nodejs/Introduction">Node</a> のようなブラウザー以外の他のプログラミング環境でも使えるのは覚えておいて下さい。</li>
+ <li>ブラウザー API — ブラウザーに組込みの JavaScript 言語の上にある構造で、何かの機能をもっと簡単に実装できるようにします。</li>
  <li>サードパーティ API — サードパーティのプラットフォーム (Twitter や Facebook) 上に作られた構造で、それらのプラットフォームの機能を Web ページで利用できるようにします (例えばあなたの最新のツイートをあなたの Web ページに表示する)。</li>
- <li>JavaScript ライブラリ — 多くは、<a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Custom_functions">独自の関数</a> を含んだ一つか複数の JavaScript ファイルで、Web ページにくっつけることでスピードアップしたり共通の機能を書いたりできるものです。例えば、jQuery、Mootools や React がなどが含まれます。</li>
+ <li>JavaScript ライブラリ — 多くは、<a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions#custom_functions">独自の関数</a> を含んだ一つか複数の JavaScript ファイルで、Web ページにくっつけることでスピードアップしたり共通の機能を書いたりできるものです。例えば、jQuery、Mootools や React がなどが含まれます。</li>
  <li>JavaScript フレームワーク — ライブラリの一階層上にあたり、JavaScript フレームワーク (例えば Angular や Ember) は HTML や CSS に JavaScript、インストールして一から Web アプリケーションを作成するのに使えるその他もろもろの技術がパッケージ化されている場合が多いです。ライブラリとフレームワークの大きな相違点は、「制御の逆転 (Inversion of Control)」にあります。ライブラリのメソッドを呼ぶ時には、開発者がコントロールしています。フレームワークでは、コントロールが逆転します: フレームワークから開発者のコードが呼ばれるのです。</li>
 </ul>
 
 <h2 id="API_で何ができる">API で何ができる?</h2>
 
-<p>モダンなブラウザではすごい数の API を利用できるので、コードからとてもいろいろな事ができます。 <a href="/ja/docs/Web/API">MDN API 索引</a>を見てみればわかると思います。</p>
+<p>モダンなブラウザーではすごい数の API を利用できるので、コードからとてもいろいろな事ができます。 <a href="/ja/docs/Web/API">MDN API 索引</a>を見てみればわかると思います。</p>
 
-<h3 id="一般的なブラウザ_API">一般的なブラウザ API</h3>
+<h3 id="一般的なブラウザー_API">一般的なブラウザー API</h3>
 
-<p>特に、あなたが使うであろう最も一般的なブラウザ API のカテゴリ (このモジュールでとても詳しい所まで網羅していきます) は:</p>
+<p>特に、あなたが使うであろう最も一般的なブラウザー API のカテゴリ (このモジュールでとても詳しい所まで網羅していきます) は:</p>
 
 <ul>
- <li>ブラウザで読み込んだ<strong>文書を操作するための API</strong>。一番目にする例は <a href="/ja/docs/Web/API/Document_Object_Model">DOM (Document Object Model) API</a> で、 HTML と CSS を操作できます — HTML を作成したり削除したり書き換えたり、動的に新しいスタイルをページに適用したり、などなど。例えばページにポップアップウィンドウが表われたり、何か新しい中身が表示されたりする時、DOM が使われています。この種の API については<a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model">ドキュメントの操作</a>でもっといろいろ見られます。</li>
- <li><strong>サーバからデータ取得をする API</strong> で Web ページの一部を書き換える事はとてもよく行なわれます。この一見ちょっとした事が、サイトのパフォーマンスや振舞いに巨大なインパクトを与えました  — 在庫一覧や新しいお話一覧を書き換えたい時に、サーバからページ全体をリロードする事なしにさくっとできたら、サイトやアプリはずっと反応よく素早く感じられます。これを可能にした API には <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" title="XMLHttpRequest is an API that provides client functionality for transferring data between a client and a server. It provides an easy way to retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just a part of the page without disrupting what the user is doing."><code>XMLHttpRequest</code></a> と <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a> が含まれています。<strong>Ajax</strong> という言葉を聞いた事があるかもしれませんが、これがこのテクニックの呼び名です。これらの API について <a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">サーバからのデータ取得</a>でもっといろいろ見られます。</li>
- <li><strong>グラフィックスを描画したり操作する API</strong> は多くのブラウザがサポートしています — 最も知られているものには<a href="/docs/Web/API/Canvas_API"> Canvas</a> と <a href="/docs/Web/API/WebGL_API">WebGL</a> があり、HTML の{{htmlelement("canvas")}} 要素上にあるピクセルデータを書き換えて2次元や3次元のシーンを作成するのに使えます。例えばキャンバスAPIを使って長方形や円のような形を描いたり、キャンバスに画像を読み込んだり、セピアやグレイスケールといったフィルターを適用したり、あるいは WebGL を使ってライティングやテクスチャを使った3Dシーンを作成したりできます。これらの API はよくアニメーションループを作成するAPI({{domxref("window.requestAnimationFrame()")}} など)や他のものと組み合わせて使われ、アニメやゲームのようなものの表示を定期的に書き換えるようにします。</li>
- <li><strong><a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery">動画と音声の API</a></strong> {{domxref("HTMLMediaElement")}}や <a href="/docs/Web/API/Web_Audio_API">Web Audio API</a> や <a href="/docs/Web/API/WebRTC_API">WebRTC</a> のような API を使うと、 マルチメディアを使ってとても面白い事ができます。音声や動画再生のための独自のコントロールUIの作成、字幕やサブタイトルのような音声トラックをビデオと一緒に表示したり、Web カメラの画像を取り込んで操作し、上述のキャンバスに表示したり Web カンファレンスに参加している他の誰かのコンピュータ上に表示したり、音声トラックにイフェクト(ゲイン、ディストーション、音場効果など)をかけたりできます。</li>
- <li><strong>デバイス API</strong> は基本的に Web アプリで使えるような形で、今時のハードウェアデバイスのデータを操作したり取得する API です。デバイスの位置データにアクセスして地図上にあなたの居場所を書くような位置情報 API についてはすでにお話しました。他の例にはシステム通知を使って Web アプリに役に立つアップデートがあるのを知らせたり(<a href="/docs/Web/API/Notifications_API">Notifications API</a> を参照)、ハードウェアを振動させたり(<a href="/docs/Web/API/Vibration_API">Vibration API</a> を参照)などがあります。</li>
- <li><strong>クライアント側でのデータ保持 API </strong>は今多くのブラウザに普及しつつあります。— クライアント側にデータを保存できると、ページを移動しても状態を保存したり、たとえデバイスがオフラインでも動作するようなアプリを作成したいような場合、とても役に立ちます。いくつもの選択肢があり、例えば <a href="/docs/Web/API/Web_Storage_API">Web Storage API</a> を使ったキーバリューストアや、 <a href="/docs/Web/API/IndexedDB_API">IndexedDB API</a> を使ったもっと複雑なテーブル型データ保存などです。</li>
+ <li>ブラウザーで読み込んだ<strong>文書を操作するための API</strong>。一番目にする例は <a href="/ja/docs/Web/API/Document_Object_Model">DOM (Document Object Model) API</a> で、 HTML と CSS を操作できます — HTML を作成したり削除したり書き換えたり、動的に新しいスタイルをページに適用したり、などなど。例えばページにポップアップウィンドウが表われたり、何か新しい中身が表示されたりする時、DOM が使われています。この種の API については<a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#the_document_object_model">ドキュメントの操作</a>でもっといろいろ見られます。</li>
+ <li><strong>サーバからデータ取得をする API</strong> で Web ページの一部を書き換える事はとてもよく行なわれます。この一見ちょっとした事が、サイトのパフォーマンスや振舞いに巨大なインパクトを与えました  — 在庫一覧や新しいお話一覧を書き換えたい時に、サーバからページ全体をリロードする事なしにさくっとできたら、サイトやアプリはずっと反応よく素早く感じられます。これを可能にした API には <a href="/ja/docs/Web/API/XMLHttpRequest" title="XMLHttpRequest is an API that provides client functionality for transferring data between a client and a server. It provides an easy way to retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just a part of the page without disrupting what the user is doing."><code>XMLHttpRequest</code></a> と <a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> が含まれています。<strong>Ajax</strong> という言葉を聞いた事があるかもしれませんが、これがこのテクニックの呼び名です。これらの API について <a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">サーバからのデータ取得</a>でもっといろいろ見られます。</li>
+ <li><strong>グラフィックスを描画したり操作する API</strong> は多くのブラウザーがサポートしています — 最も知られているものには<a href="/ja/docs/Web/API/Canvas_API"> Canvas</a> と <a href="/ja/docs/Web/API/WebGL_API">WebGL</a> があり、HTML の {{htmlelement("canvas")}} 要素上にあるピクセルデータを書き換えて2次元や3次元のシーンを作成するのに使えます。例えばキャンバス API を使って長方形や円のような形を描いたり、キャンバスに画像を読み込んだり、セピアやグレイスケールといったフィルターを適用したり、あるいは WebGL を使ってライティングやテクスチャを使った3Dシーンを作成したりできます。これらの API はよくアニメーションループを作成する API ({{domxref("window.requestAnimationFrame()")}} など)や他のものと組み合わせて使われ、アニメやゲームのようなものの表示を定期的に書き換えるようにします。</li>
+ <li><strong><a href="/ja/docs/Web/Guide/Audio_and_video_delivery">動画と音声の API</a></strong> {{domxref("HTMLMediaElement")}} や <a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a> や <a href="/ja/docs/Web/API/WebRTC_API">WebRTC</a> のような API を使うと、 マルチメディアを使ってとても面白い事ができます。音声や動画再生のための独自のコントロールUIの作成、字幕やサブタイトルのような音声トラックをビデオと一緒に表示したり、Web カメラの画像を取り込んで操作し、上述のキャンバスに表示したり Web カンファレンスに参加している他の誰かのコンピューター上に表示したり、音声トラックにイフェクト(ゲイン、ディストーション、音場効果など)をかけたりできます。</li>
+ <li><strong>デバイス API</strong> は基本的に Web アプリで使えるような形で、今時のハードウェアデバイスのデータを操作したり取得する API です。デバイスの位置データにアクセスして地図上にあなたの居場所を書くような位置情報 API についてはすでにお話しました。他の例にはシステム通知を使って Web アプリに役に立つアップデートがあるのを知らせたり(<a href="/ja/docs/Web/API/Notifications_API">Notifications API</a> を参照)、ハードウェアを振動させたり(<a href="/ja/docs/Web/API/Vibration_API">Vibration API</a> を参照)などがあります。</li>
+ <li><strong>クライアント側でのデータ保持 API </strong>は今多くのブラウザーに普及しつつあります。— クライアント側にデータを保存できると、ページを移動しても状態を保存したり、たとえデバイスがオフラインでも動作するようなアプリを作成したいような場合、とても役に立ちます。いくつもの選択肢があり、例えば <a href="/ja/docs/Web/API/Web_Storage_API">Web Storage API</a> を使ったキーバリューストアや、 <a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB API</a> を使ったもっと複雑なテーブル型データ保存などです。</li>
 </ul>
 
-<h3 id="一般的なサードパーティAPI">一般的なサードパーティAPI</h3>
+<h3 id="一般的なサードパーティAPI">一般的なサードパーティ API</h3>
 
 <p>サードパーティ API はバラエティーに富んでいます。あなたが遅かれ早かれ使うようになりそうな、世間でよく使われているものには以下のようなものがあります:</p>
 
@@ -104,37 +104,37 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
  <li><a href="https://developer.mapquest.com/">Mapquest</a> や <a href="https://developers.google.com/maps/">Google Maps API</a> のような地図の API は、あなたのWebページ上に地図を使ったあらゆる事を可能にします。</li>
  <li><a href="https://developers.facebook.com/docs/">Facebook APIスイート</a>によって Facebook エコシステムの様々な部品を使ってあなたのアプリを強化できます。例えばアプリへのログインを Facebook のログインで行なったり、アプリ内での支払い、ターゲット広告を出したりなどです。</li>
  <li><a href="https://core.telegram.org/api">Telegram APIs</a>  を使用すると、ボットのサポートに加えて、Telegram チャネルのコンテンツを Web サイトに埋め込むことができます。</li>
- <li><a href="https://developers.google.com/youtube/">YouTube API</a>を使ってあなたのサイトに YouTube のビデオを埋め込んだり、YouTube を検索したり、プレイリストを作成したりなどなどできます。</li>
+ <li><a href="https://developers.google.com/youtube/">YouTube API</a> を使ってあなたのサイトに YouTube のビデオを埋め込んだり、YouTube を検索したり、プレイリストを作成したりなどなどできます。</li>
  <li><a href="https://developers.pinterest.com/">Pinterest API</a> は、Pinterest のボードとピンを管理して Web サイトに含めるためのツールを提供します。</li>
  <li><a href="https://www.twilio.com/">Twilio API</a>はあなたのアプリで音声・ビデオ電話の機能を作成したり、SMS/MMSを送信したりなどするためのフレームワークを提供します。</li>
  <li><a href="https://docs.joinmastodon.org/api/">Mastodon API</a> を使用すると、Mastodon ソーシャルネットワークの機能をプログラムで操作できます。</li>
 </ul>
 
 <div class="note">
-<p><strong>注記</strong>: サードパーティAPIについては <a href="http://www.programmableweb.com/category/all/apis">Programmable Web API directory</a>でもっと多くの情報を見られます。</p>
+<p><strong>注記</strong>: サードパーティ API については <a href="http://www.programmableweb.com/category/all/apis">Programmable Web API directory</a> でもっと多くの情報を見られます。</p>
 </div>
 
-<h2 id="APIはどのように動作する">APIはどのように動作する?</h2>
+<h2 id="APIはどのように動作する">API はどのように動作する?</h2>
 
-<p>異なるJavaScript APIはそれぞれに違う方法で動作しますが、普通は、共通した機能とどのように動くべきかの類似したテーマを持ちます。</p>
+<p>異なる JavaScript APIはそれぞれに違う方法で動作しますが、普通は、共通した機能とどのように動くべきかの類似したテーマを持ちます。</p>
 
 <h3 id="オブジェクトに基づいています">オブジェクトに基づいています</h3>
 
-<p>あなたのコードは一つ以上の <a href="/docs/Learn/JavaScript/Objects">JavaScript オブジェクト</a>を通じて API とやりとりし、オブジェクトは API が使用するデータ (オブジェクトのプロパティとして持つ) や API が提供する機能(オブジェクトメソッドとして持つ) の容れ物として使われます。</p>
+<p>あなたのコードは一つ以上の <a href="/ja/docs/Learn/JavaScript/Objects">JavaScript オブジェクト</a>を通じて API とやりとりし、オブジェクトは API が使用するデータ (オブジェクトのプロパティとして持つ) や API が提供する機能(オブジェクトメソッドとして持つ) の容れ物として使われます。</p>
 
 <div class="note">
-<p><strong>注記</strong>: もしまだオブジェクトがどのように動作するかについて理解があやふやなら、先に進む前に <a href="/docs/Learn/JavaScript/Objects">JavaScript オブジェクト</a> モジュールを読みなおし、練習するのをおすすめします。</p>
+<p><strong>注記</strong>: もしまだオブジェクトがどのように動作するかについて理解があやふやなら、先に進む前に <a href="/ja/docs/Learn/JavaScript/Objects">JavaScript オブジェクト</a> モジュールを読みなおし、練習するのをおすすめします。</p>
 </div>
 
-<p>Let's return to the example of the Web Audio API — this is a fairly complex API, which consists of a number of objects. The most obvious ones are:</p>
+<p>Web Audio API の例に戻ってみましょう。Web Audio API はとても複雑な API で、たくさんのオブジェクトから成り立っています。わかりやすいものでいうと下記が挙げられます：</p>
 
 <ul>
- <li>{{domxref("AudioContext")}}, which represents an <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_graphs">audio graph</a> that can be used to manipulate audio playing inside the browser, and has a number of methods and properties available to manipulate that audio.</li>
- <li>{{domxref("MediaElementAudioSourceNode")}}, which represents an {{htmlelement("audio")}} element containing sound you want to play and manipulate inside the audio context.</li>
- <li>{{domxref("AudioDestinationNode")}}, which represents the destination of the audio, i.e. the device on your computer that will actually output it — usually your speakers or headphones.</li>
+  <li>{{domxref("AudioContext")}} は、ブラウザー内で再生する音声を操作するのに使われる<a href="/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_graphs">オーディオグラフ</a>を表し、その音声を操作するためのたくさんのメソッドとプロパティを持ちます。</li>
+ <li>{{domxref("MediaElementAudioSourceNode")}} は、音声コンテキストの中で再生または操作したい音声を含む {{htmlelement("audio")}} 要素を表します。</li>
+ <li>{{domxref("AudioDestinationNode")}} は、音声の最終目的地、つまりはコンピューターで実際に出力するデバイス（通常スピーカーやヘッドホン）を表します。</li>
 </ul>
 
-<p>So how do these objects interact? If you look at our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/web-audio/index.html">simple web audio example</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/">see it live also</a>), you'll first see the following HTML:</p>
+<p>では、どのようにこれらのオブジェクトは互いに作用するのでしょうか？ こちらの<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/web-audio/index.html">シンプルな web audio の例</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/">デモページ</a>)を見ると、最初に以下のような HTML が書かれています。</p>
 
 <pre class="brush: html notranslate">&lt;audio src="outfoxing.mp3"&gt;&lt;/audio&gt;
 
@@ -142,16 +142,16 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 &lt;br&gt;
 &lt;input type="range" min="0" max="1" step="0.01" value="1" class="volume"&gt;</pre>
 
-<p>We, first of all, include an <code>&lt;audio&gt;</code> element with which we embed an MP3 into the page. We don't include any default browser controls. Next, we include a {{htmlelement("button")}} that we'll use to play and stop the music, and an {{htmlelement("input")}} element of type range, which we'll use to adjust the volume of the track while it's playing.</p>
+<p>最初に、 <code>&lt;audio&gt;</code> 要素を記述してページに MP3 を埋め込みます。デフォルトのブラウザーのコントロールは記しません。次に音楽を再生・停止させるのに使う {{htmlelement("button")}} 、再生中の音楽の音量を調整するのに使う range タイプの {{htmlelement("input")}} 要素を記述します。</p>
 
-<p>Next, let's look at the JavaScript for this example.</p>
+<p>次にこの例の JavaScript を見てみましょう。</p>
 
-<p>We start by creating an <code>AudioContext</code> instance inside which to manipulate our track:</p>
+<p>まず、トラックを操作するための <code>AudioContext</code> インスタンスを作成します。</p>
 
 <pre class="brush: js notranslate">const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();</pre>
 
-<p>Next, we create constants that store references to our <code>&lt;audio&gt;</code>, <code>&lt;button&gt;</code>, and <code>&lt;input&gt;</code> elements, and use the {{domxref("AudioContext.createMediaElementSource()")}} method to create a <code>MediaElementAudioSourceNode</code> representing the source of our audio — the <code>&lt;audio&gt;</code> element will be played from:</p>
+<p>次に、 <code>&lt;audio&gt;</code> 、 <code>&lt;button&gt;</code> 、および <code>&lt;input&gt;</code> 要素への参照を格納する定数を作成し、 {{domxref("AudioContext.createMediaElementSource()")}} メソッドを使用して、音声のソースを表す <code>MediaElementAudioSourceNode</code> を作成します。<code>&lt;audio&gt;</code> 要素はここから再生されます。</p>
 
 <pre class="brush: js notranslate">const audioElement = document.querySelector('audio');
 const playBtn = document.querySelector('button');
@@ -159,7 +159,7 @@ const volumeSlider = document.querySelector('.volume');
 
 const audioSource = audioCtx.createMediaElementSource(audioElement);</pre>
 
-<p>Next up we include a couple of event handlers that serve to toggle between play and pause when the button is pressed and reset the display back to the beginning when the song has finished playing:</p>
+<p>次に、ボタンが押されたら再生と停止を切り替えるイベントハンドラーと、曲が再生し終わったら最初に戻るイベントハンドラーを記述します。</p>
 
 <pre class="brush: js notranslate">// play/pause audio
 playBtn.addEventListener('click', function() {
@@ -188,10 +188,10 @@ audioElement.addEventListener('ended', function() {
 });</pre>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: Some of you may notice that the <code>play()</code> and <code>pause()</code> methods being used to play and pause the track are not part of the Web Audio API; they are part of the {{domxref("HTMLMediaElement")}} API, which is different but closely-related.</p>
+<p><strong>Note</strong>: 気づいた方もいるかも知れませんが、音声を再生・停止する <code>play()</code> と <code>pause()</code> メソッドは Web Audio API の一部ではなく、 {{domxref("HTMLMediaElement")}} API の一部です。これらは異なりますが密接に関連しています。</p>
 </div>
 
-<p>Next, we create a {{domxref("GainNode")}} object using the {{domxref("AudioContext.createGain()")}} method, which can be used to adjust the volume of audio fed through it, and create another event handler that changes the value of the audio graph's gain (volume) whenever the slider value is changed:</p>
+<p>次に、 {{domxref("BaseAudioContext.createGain")}} を使用して {{domxref("GainNode")}} オブジェクトを作成します。このオブジェクトを使用して音声全体の音量を調整し、スライダーの値が変更される度にオーディオグラフのゲイン（音量）の値を変更する別のイベントハンドラーを作成します。</p>
 
 <pre class="brush: js notranslate">const gainNode = audioCtx.createGain();
 
@@ -199,29 +199,29 @@ volumeSlider.addEventListener('input', function() {
     gainNode.gain.value = this.value;
 });</pre>
 
-<p>The final thing to do to get this to work is to connect the different nodes in the audio graph up, which is done using the {{domxref("AudioNode.connect()")}} method available on every node type:</p>
+<p>これを機能させるために最後に行うことは、オーディオグラフ内のさまざまなノードを接続することです。これは、すべてのノードタイプで使用可能な {{domxref("AudioNode.connect()")}} メソッドを使用して行われます。</p>
 
 <pre class="brush: js notranslate">audioSource.connect(gainNode).connect(audioCtx.destination);</pre>
 
-<p>The audio starts in the source, which is then connected to the gain node so the audio's volume can be adjusted. The gain node is then connected to the destination node so the sound can be played on your computer (the {{domxref("AudioContext.destination")}} property represents whatever is the default {{domxref("AudioDestinationNode")}} available on your computer's hardware, e.g. your speakers).</p>
+<p>音声はソースから始まり、ソースはゲインノードに接続されるため、音声の音量を調整できます。次に、ゲインノードが宛先ノードに接続され、コンピューターでサウンドを再生できるようになります。（{{domxref("BaseAudioContext.destination")}} は、スピーカーなど、コンピューターのハードウエアで使用可能なデフォルトの {{domxref("AudioDestinationNode")}} を表します。)</p>
 
 <h3 id="認識できる入口があります">認識できる入口があります</h3>
 
-<p>APIを使うときは、その API の入口がどこなのかしっかり確認するべきです。Web Audio APIではとても単純でした — それは {{domxref("AudioContext")}} オブジェクトであり、あらゆる音声操作を行うために使用する必要があります。</p>
+<p>API を使うときは、その API の入口がどこなのかしっかり確認するべきです。Web Audio API ではとても単純でした — それは {{domxref("AudioContext")}} オブジェクトであり、あらゆる音声操作を行うために使用する必要があります。</p>
 
-<p>Document Object Model (DOM) API でも単純な入口があります — これの機能は{{domxref("Document")}} もしくは何らかの方法で影響を与えたい いHTML 要素のインスタンスにぶらさがっている場合が多く、例えば:</p>
+<p>Document Object Model (DOM) API でも単純な入口があります — これの機能は {{domxref("Document")}} もしくは何らかの方法で影響を与えたい HTML 要素のインスタンスにぶらさがっている場合が多く、例えば:</p>
 
 <pre class="brush: js notranslate">const em = document.createElement('em'); // create a new em element
 const para = document.querySelector('p'); // reference an existing p element
 em.textContent = 'Hello there!'; // give em some text content
 para.appendChild(em); // embed em inside para</pre>
 
-<p><a href="/docs/Web/API/Canvas_API">Canvas API</a> は、諸々を操作するために使用するコンテキストオブジェクトの取得にも依存していますが、この場合は、音声コンテキストではなく描画コンテキストです。そのコンテキストオブジェクトは、描画をしたい {{htmlelement("canvas")}} 要素への参照を取得して、 これの{{domxref("HTMLCanvasElement.getContext()")}} メソッドを呼ぶと作成されます:</p>
+<p><a href="/ja/docs/Web/API/Canvas_API">Canvas API</a> は、諸々を操作するために使用するコンテキストオブジェクトの取得にも依存していますが、この場合は、音声コンテキストではなく描画コンテキストです。そのコンテキストオブジェクトは、描画をしたい {{htmlelement("canvas")}} 要素への参照を取得して、 これの {{domxref("HTMLCanvasElement.getContext()")}} メソッドを呼ぶと作成されます:</p>
 
 <pre class="brush: js notranslate">const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');</pre>
 
-<p>キャンバスを使って何かやろうとする場合は何でも、コンテキストオブジェクト (これは{{domxref("CanvasRenderingContext2D")}} のインスタンスです) のプロパティやメソッドを呼んで行ないます。例えば:</p>
+<p>キャンバスを使って何かやろうとする場合は何でも、コンテキストオブジェクト (これは {{domxref("CanvasRenderingContext2D")}} のインスタンスです) のプロパティやメソッドを呼んで行ないます。例えば:</p>
 
 <pre class="brush: js notranslate">Ball.prototype.draw = function() {
   ctx.beginPath();
@@ -231,18 +231,18 @@ const ctx = canvas.getContext('2d');</pre>
 };</pre>
 
 <div class="note">
-<p><strong>注記</strong>: この実例を<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html">弾むボールのデモ</a> (<a href="http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html">ライブ実行</a> も見てね)で見られます。</p>
+<p><strong>注記</strong>: この実例を<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html">弾むボールのデモ</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html">ライブ実行</a> も見てね)で見られます。</p>
 </div>
 
 <h3 id="状態の変化を捉えるのにイベントを使います">状態の変化を捉えるのにイベントを使います</h3>
 
 <p>すでに学習コース中でイベントについてはお話しています、<a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベントの紹介</a> — この記事でクライアント側 Web イベントとは何か、コードの中でどのように使えるのか詳しく見てきました。もしまだクライアント側 WebAPI の仕組みがよくわからいなら、この先に進む前に記事を読み直しておく方が良いでしょう。</p>
 
-<p>イベントを持たないWebAPIもありますが、ほとんどの WebAPI はいくつか持っています。イベントが発火した際に関数を実行できるイベントハンドラーのプロパティについては、リファレンス記事の独立した"イベントハンドラー"セクションとしておおよそ列挙されています。</p>
+<p>イベントを持たない WebAPI もありますが、ほとんどの WebAPI はいくつか持っています。イベントが発火した際に関数を実行できるイベントハンドラーのプロパティについては、リファレンス記事の独立した"イベントハンドラー"セクションとしておおよそ列挙されています。</p>
 
 <p class="simple-translate-result" style="color: rgb(0, 0, 0);">上記の Web Audio API の例では、すでにいくつかのイベントハンドラーが使用されています。</p>
 
-<p>別の例として、<code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> オブジェクトのインスタンス (一つ一つがサーバから何らかの新しいリソースを取得しようとするHTTPリクエストを表わします) にはとてもたくさんのイベントが付随しており、たとえば <code>load</code> イベントは発火したリソースに対する正常なレスポンスが返ってきて、それが使えるようになった時点で発火します。</p>
+<p>別の例として、<code><a href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> オブジェクトのインスタンス (一つ一つがサーバから何らかの新しいリソースを取得しようとするHTTPリクエストを表わします) にはとてもたくさんのイベントが付随しており、たとえば <code>load</code> イベントは発火したリソースに対する正常なレスポンスが返ってきて、それが使えるようになった時点で発火します。</p>
 
 <p>次のコードはこれをどう使うのか示す簡単な例です:</p>
 
@@ -259,7 +259,7 @@ request.onload = function() {
 }</pre>
 
 <div class="note">
-<p><strong>注記</strong>: <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html">ajax.html</a> でこの例の動作を見られます(<a href="http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html">ライブ実行版</a>もどうぞ)。</p>
+<p><strong>注記</strong>: <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html">ajax.html</a> でこの例の動作を見られます(<a href="https://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html">ライブ実行版</a>もどうぞ)。</p>
 </div>
 
 <p>最初の 5 行で取得したいリソースを指定し、<code>XMLHttpRequest()</code> コンストラクタを使って新しいリクエストオブジェクトを生成し、指定のリソースを取得するために <code>GET</code> リクエストを作り、レスポンスを JSON 形式として吐き出すよう指定、そしてリクエストを送信します。</p>
@@ -268,13 +268,13 @@ request.onload = function() {
 
 <h3 id="必要なところには追加のセキュリティ機構があります">必要なところには追加のセキュリティ機構があります</h3>
 
-<p>WebAPI 機能は JavaScript や他の Web 技術と同等のセキュリティ上の配慮が必要です (例えば <a href="/docs/Web/Security/Same-origin_policy">same-origin ポリシー</a>) が、追加のセキュリティ機構が必要な場合もあります。例として今時の WebAPI の中に はHTTPS で配信されるページ上でしか動かないものがあり、これは機密とすべきデータをやりとりする可能性があるためです (<a href="/docs/Web/API/Service_Worker_API">ServiceWorkers</a> や <a href="/docs/Web/API/Push_API">Push</a> など)。</p>
+<p>WebAPI 機能は JavaScript や他の Web 技術と同等のセキュリティ上の配慮が必要です (例えば <a href="/ja/docs/Web/Security/Same-origin_policy">same-origin ポリシー</a>) が、追加のセキュリティ機構が必要な場合もあります。例として今時の WebAPI の中には HTTPS で配信されるページ上でしか動かないものがあり、これは機密とすべきデータをやりとりする可能性があるためです (<a href="/ja/docs/Web/API/Service_Worker_API">ServiceWorkers</a> や <a href="/ja/docs/Web/API/Push_API">Push</a> など)。</p>
 
-<p>さらには、ある種のWebAPIへの呼び出しがあなたのコードにあると、ユーザに対してそれの許可を要求します。例えば、<a href="/docs/Web/API/Notifications_API">Notifications API (通知 API)</a> はポップアップのダイアログボックスを用いて許可を要求します:</p>
+<p>さらには、ある種の WebAPI への呼び出しがあなたのコードにあると、ユーザに対してそれの許可を要求します。例えば、<a href="/ja/docs/Web/API/Notifications_API">Notifications API (通知 API)</a> はポップアップのダイアログボックスを用いて許可を要求します:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14315/notification-permission.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="notification-permission.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<p>Web Audio および {{domxref("HTMLMediaElement")}} API には、<a href="/docs/Web/API/Web_Audio_API/Best_practices#Autoplay_policy">自動再生 (autoplay) ポリシー</a> と呼ばれるセキュリティ機構が適用されます。これは、基本的に、ページの読み込み時に音声を自動的に再生できないことを意味します。ユーザーに次のことを許可する必要があります。ボタンのようなコントロールを介して音声再生を開始します。これは、音声の自動再生は通常非常に煩わしいものであり、ユーザーにそれを課すべきではないためです。</p>
+<p>Web Audio および {{domxref("HTMLMediaElement")}} API には、<a href="/ja/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy">自動再生 (autoplay) ポリシー</a> と呼ばれるセキュリティ機構が適用されます。これは、基本的に、ページの読み込み時に音声を自動的に再生できないことを意味します。ユーザーに次のことを許可する必要があります。ボタンのようなコントロールを介して音声再生を開始します。これは、音声の自動再生は通常非常に煩わしいものであり、ユーザーにそれを課すべきではないためです。</p>
 
 <div class="blockIndicator note">
 <p><strong>注記</strong>: ブラウザーの厳格さによっては、このようなセキュリティ機構により、例がローカルで機能しなくなる場合があります。つまり、ローカルの例のファイルをウェブサーバーから実行するのではなく、ブラウザーに読み込んだ場合です。執筆時点では、Web Audio API の例はローカルでは Google Chrome で動作しません。動作する前に、GitHub にアップロードする必要がありました。</p>
@@ -289,11 +289,11 @@ request.onload = function() {
 <h2 id="このモジュール">このモジュール</h2>
 
 <ul>
- <li><a href="/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">Web API の紹介</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">Web API の紹介</a></li>
  <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">ドキュメントの操作</a></li>
  <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">サーバからのデータ取得</a></li>
  <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs">サードパーティ API</a></li>
- <li><a href="/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">グラフィックの描画</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">グラフィックの描画</a></li>
  <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">動画と音声の API</a></li>
  <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">クライアント側ストレージ</a></li>
 </ul>

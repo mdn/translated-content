@@ -18,7 +18,7 @@ original_slug: Learn/Что_такое_веб_сервер
   <tr>
    <th scope="row">Необходимые<br>
     знания:</th>
-   <td>Вы должны уже знать, <a href="/ru/docs/Learn/How_the_Internet_works">как работает Интернет</a> и <a href="/en-US/docs/Learn/page_vs_site_vs_server_vs_search_engine">понимать разницу между страницей, сайтом, сервером и поисковой системой.</a></td>
+   <td>Вы должны уже знать, <a href="/ru/docs/Learn/Common_questions/How_does_the_Internet_work">как работает Интернет</a> и <a href="/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines">понимать разницу между страницей, сайтом, сервером и поисковой системой.</a></td>
   </tr>
   <tr>
    <th scope="row">Цель:</th>
@@ -40,7 +40,7 @@ original_slug: Learn/Что_такое_веб_сервер
 
 <p>На самом базовом уровне, когда браузеру нужен файл, размещённый на веб-сервере, браузер запрашивает его через HTTP-протокол. Когда запрос достигает нужного веб-сервера ("железо"), сервер HTTP (ПО) принимает запрос, находит запрашиваемый документ (если нет, то сообщает об ошибке <a href="/ru/docs/Web/HTTP/Status/404">404</a>) и отправляет обратно, также через HTTP.</p>
 
-<p><img alt="Basic representation of a client/server connection through HTTP" src="https://mdn.mozillademos.org/files/8659/web-server.svg" style="height: 200px; width: 600px;"></p>
+<p><img alt="Basic representation of a client/server connection through HTTP" src="web-server.svg"></p>
 
 <p>Чтобы опубликовать веб-сайт, необходим либо статический, либо динамический веб-сервер.</p>
 
@@ -52,7 +52,7 @@ original_slug: Learn/Что_такое_веб_сервер
 
 <h2 id="Активное_изучение">Активное изучение</h2>
 
-<p><em>Активное изучение пока не доступно. <a href="https://developer.mozilla.org/en-US/docs/MDN/Getting_started">Пожалуйста, рассмотрите возможность внести свой вклад</a>.</em></p>
+<p><em>Активное изучение пока не доступно. <a href="/en-US/docs/MDN/Contribute/Getting_started">Пожалуйста, рассмотрите возможность внести свой вклад</a>.</em></p>
 
 <h2 id="Погружаемся_глубже">Погружаемся глубже</h2>
 
@@ -71,9 +71,9 @@ original_slug: Learn/Что_такое_веб_сервер
  <li>обслуживается третьей, сторонней компанией</li>
 </ul>
 
-<p>По всем этим причинам поиск хорошего хостинг-провайдера является ключевой частью создания вашего сайта. Рассмотрите многочисленные предложения компаний и выберите то, что соответствует вашим потребностям и бюджету (предложения варьируются от бесплатных до тысяч долларов в месяц). Вы можете найти подробности в <a href="https://developer.mozilla.org/en-EU/Learn/How_much_does_it_cost#Hosting">этой статье.</a></p>
+<p>По всем этим причинам поиск хорошего хостинг-провайдера является ключевой частью создания вашего сайта. Рассмотрите многочисленные предложения компаний и выберите то, что соответствует вашим потребностям и бюджету (предложения варьируются от бесплатных до тысяч долларов в месяц). Вы можете найти подробности в <a href="/en-US/docs/Learn/Common_questions/How_much_does_it_cost#hosting">этой статье.</a></p>
 
-<p>Как только вы решили проблему с хостингом, вам понадобится только <a href="/en-US/docs/Learn/Upload_files_to_a_web_server">загрузить свои файлы на ваш веб-сервер</a>.</p>
+<p>Как только вы решили проблему с хостингом, вам понадобится только <a href="/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server">загрузить свои файлы на ваш веб-сервер</a>.</p>
 
 <h3 id="Связь_по_HTTP">Связь по HTTP</h3>
 
@@ -96,7 +96,7 @@ original_slug: Learn/Что_такое_веб_сервер
  <li>Веб-сервер  <em>должен ответить</em> на каждый HTTP-запрос, по крайней мере сообщением об ошибке.</li>
 </ul>
 
-<p><a href="https://developer.mozilla.org/en-US/404"><img alt="The MDN 404 page as an example of such error page" src="https://mdn.mozillademos.org/files/8661/mdn-404.jpg" style="float: right; height: 300px; width: 300px;"></a>На веб-сервере HTTP-сервер отвечает за обработку входящих запросов и ответ на них.</p>
+<p><a href="/en-US/404"><img alt="The MDN 404 page as an example of such error page" src="mdn-404.jpg" style="float: right;"></a>На веб-сервере HTTP-сервер отвечает за обработку входящих запросов и ответ на них.</p>
 
 <ol>
  <li>При получении запроса, HTTP-сервер сначала проверяет, существует ли ресурс по данному URL.</li>
@@ -110,7 +110,7 @@ original_slug: Learn/Что_такое_веб_сервер
 
 <p><span style="background-color: #ffffff; color: #222222; display: inline !important; float: none; font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">«</span>Динамическое<span style="background-color: #ffffff; color: #222222; display: inline !important; float: none; font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">»</span> означает, что сервер обрабатывает данные или даже генерирует их на лету из базы данных. Это обеспечивает большую гибкость, но технически сложнее в реализации и обслуживании, из-за чего процесс создания сайта очень сильно усложняется.</p>
 
-<p>Возьмём для примера страницу, которую вы сейчас читаете. На веб-сервере, где она хостится, есть сервер приложения, который извлекает содержимое статьи из базы данных, форматирует его, добавляет в HTML-шаблоны и отправляет вам результат. В нашем случае, сервер приложения называется <a href="/en-US/docs/MDN/Kuma">Kuma</a>, написан он на языке программирования <a href="https://www.python.org/">Python</a> (используя фреймворк <a href="https://www.djangoproject.com/">Django</a>). Команда Mozilla создала <cite>Kuma</cite> для конкретных нужд MDN, но есть множество подобных приложений, построенных совершенно на других технологиях.</p>
+<p>Возьмём для примера страницу, которую вы сейчас читаете. На веб-сервере, где она хостится, есть сервер приложения, который извлекает содержимое статьи из базы данных, форматирует его, добавляет в HTML-шаблоны и отправляет вам результат. В нашем случае, сервер приложения называется <a href="/en-US/docs/MDN/Yari">Kuma</a>, написан он на языке программирования <a href="https://www.python.org/">Python</a> (используя фреймворк <a href="https://www.djangoproject.com/">Django</a>). Команда Mozilla создала <cite>Kuma</cite> для конкретных нужд MDN, но есть множество подобных приложений, построенных совершенно на других технологиях.</p>
 
 <p>Существует так много серверов приложений, что довольно трудно предложить какой-то один. Некоторые серверы приложений заточены под определённые категории веб-сайтов, такие как блоги, вики-страницы или интернет-магазины; другие, называемые {{Glossary("CMS", "CMSs")}} (системы управления контентом), более универсальны. Если вы создаёте динамический сайт, потратьте немного времени на выбор инструмента, который соответствует вашим потребностям. Если вы не хотите изучать веб-программирование (хотя это увлекательно само по себе!), то вам не нужно создавать свой собственный сервер приложения. Это будет изобретением очередного велосипеда.</p>
 
@@ -119,9 +119,9 @@ original_slug: Learn/Что_такое_веб_сервер
 <p>Теперь, когда вы познакомились с веб-серверами, вы можете:</p>
 
 <ul>
- <li>прочитать <a href="/en-US/docs/Learn/How_much_does_it_cost">насколько сложно делать что-либо в веб</a></li>
- <li>узнать больше о <a href="/en-US/docs/Learn/What_software_do_I_need">разнообразии ПО, которое может пригодиться для создания веб-сайта</a></li>
- <li>двигаться к практике: например, <a href="/en-US/docs/Learn/Upload_files_to_a_web_server">узнать как загружать файлы на веб-сервер</a>.</li>
+ <li>прочитать <a href="/en-US/docs/Learn/Common_questions/How_much_does_it_cost">насколько сложно делать что-либо в веб</a></li>
+ <li>узнать больше о <a href="/en-US/docs/Learn/Common_questions/What_software_do_I_need">разнообразии ПО, которое может пригодиться для создания веб-сайта</a></li>
+ <li>двигаться к практике: например, <a href="/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server">узнать как загружать файлы на веб-сервер</a>.</li>
 </ul>
 
 <div id="s3gt_translate_tooltip" style="left: 140px; top: 658px; opacity: 0.75;"></div>

@@ -16,7 +16,7 @@ translation_of: Web/MathML/Authoring
 
 <h2 id="Использование_MathML">Использование MathML</h2>
 
-<h4 id="Example_in_HTML5_(text/html)" name="Example_in_HTML5_(text/html)">MathML на страницах HTML</h4>
+<h4 id="Example_in_HTML5_(text/html)">MathML на страницах HTML</h4>
 
 <p><span id="result_box" lang="ru"><span>Вы можете использовать Presentation MathML внутри документов HTML5</span></span>:</p>
 
@@ -49,7 +49,7 @@ translation_of: Web/MathML/Authoring
 
 <pre class="brush: html">&lt;script src="http://fred-wang.github.io/mathml.css/mspace.js"&gt;&lt;/script&gt;</pre>
 
-<p>Если вам нужны более сложные конструкции, тогда вы можете вместо этого использовать более содержательную библиотеку <a href="https://www.mathjax.org" title="http://www.mathjax.org">MathJax</a> как полифил MathML:</p>
+<p>Если вам нужны более сложные конструкции, тогда вы можете вместо этого использовать более содержательную библиотеку <a href="https://www.mathjax.org">MathJax</a> как полифил MathML:</p>
 
 <pre class="brush: html">&lt;script src="http://fred-wang.github.io/mathjax.js/mpadded-min.js"&gt;&lt;/script&gt;</pre>
 
@@ -123,9 +123,9 @@ m|math {
 
 <h4 id="MathML_в_клиентах_email_и_клиентах_обмена_мгновенными_сообщениями">MathML в клиентах email и клиентах обмена мгновенными сообщениями</h4>
 
-<p>Современные почтовые клиенты могут посылать и получать электронные сообщения в формате HTML5, то есть в них можно использовать выражения MathML. Обязательно включите опции "отправить как HTML" и "просмотреть как HTML". В Thunderbird вы можете использовать команду "Вставить HTML", чтобы вставить код HTML + MathML. <a href="http://disruptive-innovations.com/zoo/MathBird/" title="http://disruptive-innovations.com/zoo/MathBird/">MathBird</a> - удобное дополнение для Thunderbird для вставки таких выражений MathML с использованием синтаксиса ввода AsciiMath. Кроме того, поле ввода LaTeX-to-MathML также было интегрировано в <a href="https://www.seamonkey-project.org/">SeaMonkey</a> с версии 2.28 и в <a href="https://www.mozilla.org/thunderbird/">Thunderbird</a> с версии 31. С другой стороны, обработка кода MathML и качество рендеринга MathML <a href="http://www.maths-informatique-jeux.com/blog/frederic/?post/2012/11/14/Writing-mathematics-in-emails#c121" title="http://www.maths-informatique-jeux.com/blog/frederic/?post/2012/11/14/Writing-mathematics-in-emails#c121">зависит от почтового клиента</a>. Даже если ваш браузер поддерживает MathML, ваша электронная почта может помешать вам отправить или получить сообщение с MathML внутри.</p>
+<p>Современные почтовые клиенты могут посылать и получать электронные сообщения в формате HTML5, то есть в них можно использовать выражения MathML. Обязательно включите опции "отправить как HTML" и "просмотреть как HTML". В Thunderbird вы можете использовать команду "Вставить HTML", чтобы вставить код HTML + MathML. <a href="http://disruptive-innovations.com/zoo/MathBird/">MathBird</a> - удобное дополнение для Thunderbird для вставки таких выражений MathML с использованием синтаксиса ввода AsciiMath. Кроме того, поле ввода LaTeX-to-MathML также было интегрировано в <a href="https://www.seamonkey-project.org/">SeaMonkey</a> с версии 2.28 и в <a href="https://www.mozilla.org/thunderbird/">Thunderbird</a> с версии 31. С другой стороны, обработка кода MathML и качество рендеринга MathML <a href="http://www.maths-informatique-jeux.com/blog/frederic/?post/2012/11/14/Writing-mathematics-in-emails#c121">зависит от почтового клиента</a>. Даже если ваш браузер поддерживает MathML, ваша электронная почта может помешать вам отправить или получить сообщение с MathML внутри.</p>
 
-<p>Клиенты мгновенного обмена сообщениями на базе Gecko могут интегрировать конвертер на основе Javascript, преобразующий текст в код MathML (см. ниже), и отображать выражения MathML, созданные из обычного текста мгновенных сообщений. Например, есть <a href="https://addons.instantbird.org/en-US/instantbird/addon/340" title="https://addons.instantbird.org/en-US/instantbird/addon/340">дополнение Instantbird</a>, которое обрабатывает выражения LaTeX.</p>
+<p>Клиенты мгновенного обмена сообщениями на базе Gecko могут интегрировать конвертер на основе Javascript, преобразующий текст в код MathML (см. ниже), и отображать выражения MathML, созданные из обычного текста мгновенных сообщений. Например, есть <a href="https://addons.instantbird.org/en-US/instantbird/addon/340">дополнение Instantbird</a>, которое обрабатывает выражения LaTeX.</p>
 
 <h2 id="Конвертация_из_простого_синтаксиса">Конвертация из простого синтаксиса</h2>
 
@@ -175,7 +175,7 @@ m|math {
 
 <p>и автоматически преобразуется в MathML. Это все ещё в процессе разработки и может быть улучшено в будущем благодаря Web-компонентам и DOM. Кроме того, вы можете использовать более традиционный <a href="https://github.com/fred-wang/TeXZilla/wiki/Advanced-Usages#parsing-tex-expressions-in-your-web-page">Javascript парсинг выражений в процессе загрузки</a> как это используют и все другие инструменты, описанные в этом разделе.</p>
 
-<p>Одним из простых инструментов конвертации на стороне клиента является <a href="http://www1.chapman.edu/~jipsen/mathml/asciimath.html" title="http://www1.chapman.edu/~jipsen/mathml/asciimath.html">ASCIIMathML</a>. Просто загрузите скрипт <a href="https://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js" title="http://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js">ASCIIMathML.js</a> и скопируйте его на ваш Web-сайт. Затем на ваших веб-страницах добавьте тег <code>&lt;script&gt;</code> для загрузки ASCIIMathML и математические выражения, выделенные символом <code>`</code> (знак акцента) будут автоматически обработаны и преобразованы в MathML:</p>
+<p>Одним из простых инструментов конвертации на стороне клиента является <a href="http://www1.chapman.edu/~jipsen/mathml/asciimath.html">ASCIIMathML</a>. Просто загрузите скрипт <a href="https://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js">ASCIIMathML.js</a> и скопируйте его на ваш Web-сайт. Затем на ваших веб-страницах добавьте тег <code>&lt;script&gt;</code> для загрузки ASCIIMathML и математические выражения, выделенные символом <code>`</code> (знак акцента) будут автоматически обработаны и преобразованы в MathML:</p>
 
 <pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
@@ -189,7 +189,7 @@ m|math {
 ...
 </pre>
 
-<p><a href="https://math.etsu.edu/LaTeXMathML/" title="http://math.etsu.edu/LaTeXMathML/">LaTeXMathML</a> - это похожий скрипт, который позволяет анализировать больше команд LaTeX. Установка похожа: скопируйте <a href="https://math.etsu.edu/LaTeXMathML/LaTeXMathML.js" title="http://math.etsu.edu/LaTeXMathML/LaTeXMathML.js">LaTeXMathML.js</a> и <a href="https://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css" title="http://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css">LaTeXMathML.standardarticle.css</a>, добавьте ссылки в заголовок вашего документа, а содержимое LaTeX вашей веб-страницы, помеченное классом "LaTeX", будет автоматически проанализировано и преобразовано в HTML+MathML:</p>
+<p><a href="https://math.etsu.edu/LaTeXMathML/">LaTeXMathML</a> - это похожий скрипт, который позволяет анализировать больше команд LaTeX. Установка похожа: скопируйте <a href="https://math.etsu.edu/LaTeXMathML/LaTeXMathML.js">LaTeXMathML.js</a> и <a href="https://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css">LaTeXMathML.standardarticle.css</a>, добавьте ссылки в заголовок вашего документа, а содержимое LaTeX вашей веб-страницы, помеченное классом "LaTeX", будет автоматически проанализировано и преобразовано в HTML+MathML:</p>
 
 <pre class="brush: html"><span>&lt;<span class="start-tag">head</span>&gt;</span>
 <span>...
@@ -221,7 +221,7 @@ This is a sample LaTeXML document.
 &lt;/div&gt;
 ...</pre>
 
-<p><a href="https://mathscribe.com/author/jqmath.html" title="http://mathscribe.com/author/jqmath.html">jqMath</a> - это ещё один скрипт для парсинга простого LaTeX-подобного синтаксиса, который также принимает не-ASCII символы, такие как  <code>√{∑↙{n=1}↖{+∞} 6/n^2} = π</code> , чтобы написать <math> <mrow> <msqrt> <mrow class="ma-repel-adj"> <munderover> <mo>∑</mo> <mrow> <mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow> <mrow> <mo>+</mo> <mi>∞</mi> </mrow> </munderover> <mfrac> <mn>6</mn> <msup> <mi>n</mi> <mn>2</mn> </msup> </mfrac> </mrow> </msqrt> <mo>=</mo> <mi>π</mi> </mrow> </math>. Установка похожа: загрузите и скопируйте соответствующие файлы <a href="https://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip" title="http://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip">Javascript и CSS files</a> на ваш Web сайт и сделайте ссылку на них в заголовке вашей страницы (смотрите файл <code>COPY-ME.html</code> из архива zip в качестве примера). Одним из преимуществ jqMath над предыдущими сценариями является то, что он автоматически добавит некоторые простые правила CSS для математической разметки и сделает формулы доступными для браузеров с ограниченной поддержкой MathML.</p>
+<p><a href="https://mathscribe.com/author/jqmath.html">jqMath</a> - это ещё один скрипт для парсинга простого LaTeX-подобного синтаксиса, который также принимает не-ASCII символы, такие как  <code>√{∑↙{n=1}↖{+∞} 6/n^2} = π</code> , чтобы написать <math> <mrow> <msqrt> <mrow class="ma-repel-adj"> <munderover> <mo>∑</mo> <mrow> <mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow> <mrow> <mo>+</mo> <mi>∞</mi> </mrow> </munderover> <mfrac> <mn>6</mn> <msup> <mi>n</mi> <mn>2</mn> </msup> </mfrac> </mrow> </msqrt> <mo>=</mo> <mi>π</mi> </mrow> </math>. Установка похожа: загрузите и скопируйте соответствующие файлы <a href="https://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip">Javascript и CSS files</a> на ваш Web сайт и сделайте ссылку на них в заголовке вашей страницы (смотрите файл <code>COPY-ME.html</code> из архива zip в качестве примера). Одним из преимуществ jqMath над предыдущими сценариями является то, что он автоматически добавит некоторые простые правила CSS для математической разметки и сделает формулы доступными для браузеров с ограниченной поддержкой MathML.</p>
 
 <h3 id="Программы_командной_строки">Программы командной строки</h3>
 
@@ -246,7 +246,7 @@ This is a sample LaTeXML document.
 
 <p><a href="https://github.com/fred-wang/TeXZilla">TeXZilla</a> может использоваться <a href="https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line">из командной строки</a> и будет, по существу, иметь ту же поддержку, что и itex2MML, описанный ниже. Однако поведение фильтра потока ещё не реализовано.</p>
 
-<p>Если вы хотите просто парсить простые математические выражения LaTeX, вы можете попробовать такие инструменты, как <a href="https://golem.ph.utexas.edu/~distler/blog/itex2MML.html" title="http://golem.ph.utexas.edu/~distler/blog/itex2MML.html">itex2MML</a> или <a href="http://gva.noekeon.org/blahtexml/" title="http://gva.noekeon.org/blahtexml/">Blahtex</a>. Последнее часто доступно в дистрибутивах Linux. Давайте рассмотрим первое, которое изначально было написано Полом Гартсайдом в начале проекта Mozilla MathML и с тех пор поддерживается Жаком Дистлером. Это небольшой фильтр потока, написанный на C/C++ и сгенерированный с помощью flex и bison; в частности, оно очень быстрое. Установите flex/bison, а также классический компилятор и сгенерируйте инструменты. В Unix вы можете загрузить itex2MML, скомпилировать и установить его:</p>
+<p>Если вы хотите просто парсить простые математические выражения LaTeX, вы можете попробовать такие инструменты, как <a href="https://golem.ph.utexas.edu/~distler/blog/itex2MML.html">itex2MML</a> или <a href="http://gva.noekeon.org/blahtexml/">Blahtex</a>. Последнее часто доступно в дистрибутивах Linux. Давайте рассмотрим первое, которое изначально было написано Полом Гартсайдом в начале проекта Mozilla MathML и с тех пор поддерживается Жаком Дистлером. Это небольшой фильтр потока, написанный на C/C++ и сгенерированный с помощью flex и bison; в частности, оно очень быстрое. Установите flex/bison, а также классический компилятор и сгенерируйте инструменты. В Unix вы можете загрузить itex2MML, скомпилировать и установить его:</p>
 
 <pre class="brush: bash">wget http://golem.ph.utexas.edu/~distler/blog/files/itexToMML.tar.gz; \
 tar -xzf itexToMML.tar.gz; \
@@ -334,7 +334,7 @@ sudo make install
 
 <h2 id="Распознавание_видимых_символов_и_рукописного_текста">Распознавание видимых символов и рукописного текста</h2>
 
-<p><a href="https://www.inftyreader.org/">Inftyreader</a> способен выполнять некоторое распознавание видимых символов, включающее перевод математических уравнений в MathML. Другие инструменты могут выполнять распознавание рукописного ввода, например, <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd371698(v=vs.85).aspx">Windows Math Input Panel</a> или онлайн конвертер <a href="https://webdemo.myscript.com/views/math.html" title="http://webdemo.visionobjects.com/portal.html">Web Equation</a>.</p>
+<p><a href="https://www.inftyreader.org/">Inftyreader</a> способен выполнять некоторое распознавание видимых символов, включающее перевод математических уравнений в MathML. Другие инструменты могут выполнять распознавание рукописного ввода, например, <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd371698(v=vs.85).aspx">Windows Math Input Panel</a> или онлайн конвертер <a href="https://webdemo.myscript.com/views/math.html">Web Equation</a>.</p>
 
 <div class="originaldocinfo">
 <h3 id="Информация_об_исходном_документе">Информация об исходном документе</h3>

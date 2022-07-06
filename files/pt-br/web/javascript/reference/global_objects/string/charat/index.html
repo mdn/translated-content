@@ -62,7 +62,7 @@ A letra no índice 99 é ''
 
 <h3 id="Obtendo_caracteres_inteiros">Obtendo caracteres inteiros</h3>
 
-<p>O seguinte código fornece um meio de garantir que passar por um loop de string sempre forneça um caractere inteiro, mesmo se a string contiver caracteres que não estão no <a href="https://pt.wikipedia.org/wiki/Plano_(Unicode)" title="https://pt.wikipedia.org/wiki/Plano_(Unicode)">Plano Multilíngue Básico</a>.</p>
+<p>O seguinte código fornece um meio de garantir que passar por um loop de string sempre forneça um caractere inteiro, mesmo se a string contiver caracteres que não estão no <a href="https://pt.wikipedia.org/wiki/Plano_(Unicode)">Plano Multilíngue Básico</a>.</p>
 
 <pre class="brush: js notranslate">var str = 'A \uD87E\uDC04 Z'; // We could also use a non-BMP character directly
 for (var i = 0, chr; i &lt; str.length; i++) {

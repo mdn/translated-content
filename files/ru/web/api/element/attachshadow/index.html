@@ -33,7 +33,7 @@ translation_of: Web/API/Element/attachShadow
  <li>{{htmlelement("span")}}</li>
 </ul>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">var <em>shadowroot =</em><em> element</em>.attachShadow(<em>shadowRootInit</em>);
 </pre>
@@ -80,7 +80,7 @@ element.shadowRoot === null; // returns true
   </tr>
   <tr>
    <td>NotSupportedError</td>
-   <td>Вы пытаетесь прикрепить shadow DOM к HTML элементу с некорректным именем, или к запрещённому элементу. (см. выше)</td>
+   <td>Вы пытаетесь прикрепить shadow DOM к HTML-элементу с некорректным именем, или к запрещённому элементу. (см. выше)</td>
   </tr>
  </tbody>
 </table>
@@ -129,23 +129,10 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-attachshadow', 'attachShadow()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
 
-<p>{{Compat("api.Element.attachShadow")}}</p>
+<p>{{Compat}}</p>
 
 <div id="compat-mobile"> </div>

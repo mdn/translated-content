@@ -36,7 +36,7 @@ translation_of: Learn/JavaScript/Asynchronous/Introducing
 
 <p>Большая часть функциональности, которую мы рассматривали в предыдущих обучающих модулях, является синхронной — вы запускаете какой-то код, а результат возвращается, как только браузер может его вернуть. Давайте рассмотрим простой пример ( посмотрите <a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/basic-function.html">онлайн</a>, как это работает и посмотрите <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/basic-function.html">исходный код</a>):</p>
 
-<pre class="brush: js notranslate">const btn = document.querySelector('button');
+<pre class="brush: js">const btn = document.querySelector('button');
 btn.addEventListener('click', () =&gt; {
   alert('You clicked me!');
 
@@ -65,10 +65,10 @@ btn.addEventListener('click', () =&gt; {
 <p>Так и в примере выше: после нажатия кнопки абзац не сможет появиться пока не будет нажата кнопка OK в окне сообщения. Попробуйте сами:</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;<span class="pl-ent">button</span>&gt;Нажми меня&lt;/<span class="pl-ent">button</span>&gt;</pre>
+<pre class="brush: html">&lt;<span class="pl-ent">button</span>&gt;Нажми меня&lt;/<span class="pl-ent">button</span>&gt;</pre>
 </div>
 
-<p>{{EmbedLiveSample('Synchronous_JavaScript', '100%', '70px')}}</p>
+<p>{{EmbedLiveSample('Синхронный_JavaScript', '100%', '70px')}}</p>
 
 <div class="blockIndicator note">
 <p><strong>Примечание</strong>: Важно помнить, что <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code>, хоть и часто используется для демонстрации синхронных блокирующих операций, сильно не рекомендован к использованию в реальных приложениях.</p>
@@ -80,7 +80,7 @@ btn.addEventListener('click', () =&gt; {
 
 <p>Почему трудно работать, используя синхронный код? Давайте посмотрим на небольшой пример. Когда вы получаете картинку с сервера, вы не можете мгновенно вернуть результат. Это значит что следующий (псевдо) код не сработает:</p>
 
-<pre class="brush: js notranslate">let response = fetch('myImage.png');
+<pre class="brush: js">let response = fetch('myImage.png');
 let blob = response.blob();
 // display your image blob in the UI somehow</pre>
 
@@ -94,7 +94,7 @@ let blob = response.blob();
 
 <p>Пример асинхронного колбэка вторым параметром {{domxref("EventTarget.addEventListener", "addEventListener()")}} (как мы видели выше):</p>
 
-<pre class="brush: js notranslate">btn.addEventListener('click', () =&gt; {
+<pre class="brush: js">btn.addEventListener('click', () =&gt; {
   alert('You clicked me!');
 
   let pElem = document.createElement('p');
@@ -108,7 +108,7 @@ let blob = response.blob();
 
 <p>Вы можете написать свою собственную функцию, содержащую колбэк-функцию. Давайте взглянем на ещё один пример, в котором происходит загрузка ресурсов через <a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code> API</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html">запустите пример</a>, и <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html">посмотрите исходный код</a>):</p>
 
-<pre class="brush: js notranslate">function loadAsset(url, type, callback) {
+<pre class="brush: js">function loadAsset(url, type, callback) {
   let xhr = new XMLHttpRequest();
   xhr.open('GET', url);
   xhr.responseType = type;
@@ -136,7 +136,7 @@ loadAsset('coffee.jpg', 'blob', displayImage);</pre>
 
 <p>Заметьте, что не все колбэк-функции асинхронны — некоторые запускаются синхронно. Например, при использовании {{jsxref("Array.prototype.forEach()")}} для перебора элементов массива (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/foreach.html">запустите пример</a>, и <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/foreach.html">посмотрите исходный код</a>):</p>
 
-<pre class="brush: js notranslate">const gods = ['Apollo', 'Artemis', 'Ares', 'Zeus'];
+<pre class="brush: js">const gods = ['Apollo', 'Artemis', 'Ares', 'Zeus'];
 
 gods.forEach(function (eachName, index){
   console.log(index + '. ' + eachName);
@@ -148,7 +148,7 @@ gods.forEach(function (eachName, index){
 
 <p>Промисы — новый стиль написания асинхронного кода, который используется в современных Web API. Хорошим примером является <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> API, который современнее и эффективнее чем {{domxref("XMLHttpRequest")}}. Посмотрим на краткий пример, из нашей статьи <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a>:</p>
 
-<pre class="brush: js notranslate">fetch('products.json').then(function(response) {
+<pre class="brush: js">fetch('products.json').then(function(response) {
   return response.json();
 }).then(function(json) {
   products = json;
@@ -176,7 +176,7 @@ gods.forEach(function (eachName, index){
 
 <h3 id="Очередь_событий">Очередь событий</h3>
 
-<p>Асинхронные операции, такие как промисы, помещаются в <strong>очередь событий</strong>, которая запускается после завершения обработки основного потока, чтобы они <em>не блокировали</em> выполнение JavaScript кода. Поставленные в очередь операции завершатся как можно скорее, а затем вернут свои результаты в среду JavaScript  .</p>
+<p>Асинхронные операции, такие как промисы, помещаются в <strong>очередь событий</strong>, которая запускается после завершения обработки основного потока, чтобы они <em>не блокировали</em> выполнение JavaScript-кода. Поставленные в очередь операции завершатся как можно скорее, а затем вернут свои результаты в среду JavaScript  .</p>
 
 <h3 id="Промисы_и_колбэк-функции">Промисы и колбэк-функции</h3>
 
@@ -193,9 +193,9 @@ gods.forEach(function (eachName, index){
 
 <h2 id="Природа_асинхронного_кода">Природа асинхронного кода</h2>
 
-<p>Давайте рассмотрим пример, который дополнительно иллюстрирует природу асинхронного кода, показывая, что может произойти, когда мы не полностью осознаем порядок выполнения кода, и проблемы, связанные с попыткой трактовать асинхронный код как синхронный. Следующий пример довольно похож на тот, что мы видели раньше (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync.html">запустите пример</a>, и <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html">посмотреть исходный код</a>). Одно из отличий состоит в том, что мы включили ряд операторов {{domxref("console.log()")}} чтобы проиллюстрировать порядок, в котором, как вы думаете, будет выполняться код.</p>
+<p>Давайте рассмотрим пример, который дополнительно иллюстрирует природу асинхронного кода, показывая, что может произойти, когда мы не полностью осознаем порядок выполнения кода, и проблемы, связанные с попыткой трактовать асинхронный код как синхронный. Следующий пример довольно похож на тот, что мы видели раньше. Одно из отличий состоит в том, что мы включили ряд операторов {{domxref("console.log()")}} чтобы проиллюстрировать порядок, в котором, как вы думаете, будет выполняться код.</p>
 
-<pre class="brush: js notranslate">console.log ('Starting');
+<pre class="brush: js">console.log ('Starting');
 let image;
 
 fetch('coffee.jpg').then((response) =&gt; {
@@ -226,7 +226,7 @@ console.log ('All done!');</pre>
 
 <p>Если вы запутались, рассмотрим следующий небольшой пример:</p>
 
-<pre class="brush: js notranslate">console.log("registering click handler");
+<pre class="brush: js">console.log("registering click handler");
 
 button.addEventListener('click', () =&gt; {
   console.log("get click");
@@ -240,16 +240,16 @@ console.log("all done");</pre>
 
 <p>Чтобы увидеть это в действии, попробуйте взять локальную копию нашего <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html">примера</a> и измените третий вызов <code>console.log ()</code> следующим образом:</p>
 
-<pre class="brush: js notranslate">console.log ('All done! ' + image + 'displayed.');</pre>
+<pre class="brush: js">console.log ('All done! ' + image + 'displayed.');</pre>
 
 <p>Теперь вместо третьего сообщения должна возникнуть следующая ошибка:</p>
 
-<pre class="notranslate"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">TypeError: image is undefined; can't access its "src" property</span></span></span></pre>
+<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">TypeError: image is undefined; can't access its "src" property</span></span></span></pre>
 
 <p>Это происходит потому, что в то же время браузер пытается запустить третий <code>console.log()</code>, блок <code>fetch()</code> ещё не закончил выполнение, поэтому переменная <code>image</code> ещё не имеет значения.</p>
 
 <div class="blockIndicator note">
-<p><strong>Примечание</strong>: Из соображений безопасности вы не можете применять <code>fetch() </code> к файлам из вашей локальной системы (или запустить другие такие операции локально); чтобы запустить локально пример выше вам необходимо запустить его через <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">локальный веб-сервер</a>.</p>
+<p><strong>Примечание</strong>: Из соображений безопасности вы не можете применять <code>fetch() </code> к файлам из вашей локальной системы (или запустить другие такие операции локально); чтобы запустить локально пример выше вам необходимо запустить его через <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">локальный веб-сервер</a>.</p>
 </div>
 
 <h2 id="Активное_обучение_сделайте_все_это_асинхронно!">Активное обучение: сделайте все это асинхронно!</h2>
@@ -278,8 +278,8 @@ console.log("all done");</pre>
 <h2 id="В_этом_модуле">В этом модуле</h2>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/JavaScript/Asynchronous/Concepts">Основные понятия асинхронного программирования</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a></li>
+ <li><a href="/ru/docs/Learn/JavaScript/Asynchronous/Concepts">Основные понятия асинхронного программирования</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Making asynchronous programming easier with async and await</a></li>

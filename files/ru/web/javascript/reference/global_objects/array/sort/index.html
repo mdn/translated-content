@@ -10,15 +10,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
 <div>{{JSRef("Global_Objects", "Array")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <code><strong>sort()</strong></code> <em>на месте</em> сортирует элементы массива и возвращает отсортированный массив. Сортировка не обязательно <a href="https://ru.wikipedia.org/wiki/Устойчивая_сортировка">устойчива</a> (<a href="https://en.wikipedia.org/wiki/Sorting_algorithm#Stability">англ.</a>). Порядок сортировки по умолчанию соответствует порядку кодовых точек Unicode.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>arr</var>.sort([<var>compareFunction</var>])</code></pre>
+<pre class="syntaxbox"><code><var>arr</var>.sort([<var>compareFunction</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>compareFunction</code></dt>
@@ -29,11 +29,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 <p>Отсортированный массив. Важно, что копия массива не создаётся - массив сортируется <em><a href="https://en.wikipedia.org/wiki/In-place_algorithm">на месте</a></em>.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Если функция сравнения <code>compareFunction</code> не предоставляется, элементы сортируются путём преобразования их в строки и сравнения строк в порядке следования кодовых точек Unicode. Например, слово "Вишня" идёт перед словом "бананы". При числовой сортировке, 9 идёт перед 80, но поскольку числа преобразуются в строки, то "80" идёт перед "9" в соответствии с порядком в Unicode.</p>
 
-<pre class="brush: js notranslate">var fruit = ['арбузы', 'бананы', 'Вишня'];
+<pre class="brush: js">var fruit = ['арбузы', 'бананы', 'Вишня'];
 fruit.sort(); // ['Вишня', 'арбузы', 'бананы']
 
 var scores = [1, 2, 10, 21];
@@ -56,7 +56,7 @@ things.sort(); // ['1 Слово', '2 Слова', 'Слово', 'слово']
 
 <p>Итак, функция сравнения имеет следующую форму:</p>
 
-<pre class="brush: js notranslate">function compare(a, b) {
+<pre class="brush: js">function compare(a, b) {
   if (a меньше b по некоторому критерию сортировки) {
     return -1;
   }
@@ -70,14 +70,14 @@ things.sort(); // ['1 Слово', '2 Слова', 'Слово', 'слово']
 
 <p>Для числового сравнения, вместо строкового, функция сравнения может просто вычитать <code>b</code> из <code>a</code>. Следующая функция будет сортировать массив по возрастанию:</p>
 
-<pre class="brush: js notranslate">function compareNumbers(a, b) {
+<pre class="brush: js">function compareNumbers(a, b) {
   return a - b;
 }
 </pre>
 
 <p>Метод <code>sort</code> можно удобно использовать с {{jsxref("Operators/function", "функциональными выражениями", "", 1)}} (и <a href="/ru/docs/Web/JavaScript/Guide/Closures">замыканиями</a>):</p>
 
-<pre class="brush: js notranslate">var numbers = [4, 2, 5, 1, 3];
+<pre class="brush: js">var numbers = [4, 2, 5, 1, 3];
 numbers.sort(function(a, b) {
   return a - b;
 });
@@ -86,7 +86,7 @@ console.log(numbers); // [1, 2, 3, 4, 5]
 
 <p>Объекты могут быть отсортированы по значению одного из своих свойств.</p>
 
-<pre class="brush: js notranslate">var items = [
+<pre class="brush: js">var items = [
   { name: 'Edward', value: 21 },
   { name: 'Sharpe', value: 37 },
   { name: 'And', value: 45 },
@@ -106,13 +106,13 @@ items.sort(function (a, b) {
 });
 </pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Creating.2C_displaying.2C_and_sorting_an_array" name="Example:_Creating.2C_displaying.2C_and_sorting_an_array">Пример: создание, отображение и сортировка массива</h3>
+<h3 id="Example_Creating.2C_displaying.2C_and_sorting_an_array">Пример: создание, отображение и сортировка массива</h3>
 
 <p>В следующем примере создаётся четыре массива, сначала отображается первоначальный массив, а затем они сортируются. Числовые массивы сортируются сначала без, а потом с функцией сравнения.</p>
 
-<pre class="brush: js notranslate">var stringArray = ['Голубая', 'Горбатая', 'Белуга'];
+<pre class="brush: js">var stringArray = ['Голубая', 'Горбатая', 'Белуга'];
 var numericStringArray = ['80', '9', '700'];
 var numberArray = [40, 1, 5, 200];
 var mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
@@ -140,7 +140,7 @@ console.log('Сортировка с функцией compareNumbers:', mixedNum
 
 <p>Этот пример произведёт следующий вывод. Как показывает вывод, когда используется функция сравнения, числа сортируются корректно вне зависимости от того, являются ли они собственно числами или строками с числами.</p>
 
-<pre class="notranslate">stringArray: Голубая,Горбатая,Белуга
+<pre>stringArray: Голубая,Горбатая,Белуга
 Сортировка: Белуга,Голубая,Горбатая
 
 numberArray: 40,1,5,200
@@ -156,11 +156,11 @@ mixedNumericArray: 80,9,700,40,1,5,200
 Сортировка с функцией compareNumbers: 1,5,9,40,80,200,700
 </pre>
 
-<h3 id="Example_Sorting_non-ASCII_characters" name="Example:_Sorting_non-ASCII_characters">Пример: сортировка не-ASCII символов</h3>
+<h3 id="Example_Sorting_non-ASCII_characters">Пример: сортировка не-ASCII символов</h3>
 
 <p>Для сортировки строк с не-ASCII символами, то есть строк с символами акцента (e, é, è, a, ä и т.д.), строк, с языками, отличными от английского: используйте {{jsxref("String.localeCompare")}}. Эта функция может сравнивать эти символы, чтобы они становились в правильном порядке.</p>
 
-<pre class="brush: js notranslate">var items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
+<pre class="brush: js">var items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
 items.sort(function (a, b) {
   return a.localeCompare(b);
 });
@@ -168,11 +168,11 @@ items.sort(function (a, b) {
 // items равен ['adieu', 'café', 'cliché', 'communiqué', 'premier', 'réservé']
 </pre>
 
-<h3 id="Example_Sorting_maps" name="Example:_Sorting_maps">Пример: сортировка c помощью map</h3>
+<h3 id="Example_Sorting_maps">Пример: сортировка c помощью map</h3>
 
 <p>Функция сравнения <code>(compareFunction)</code> может вызываться несколько раз для каждого элемента в массиве. В зависимости от природы функции сравнения, это может привести к высоким расходам ресурсов. Чем более сложна функция сравнения и чем больше элементов требуется отсортировать, тем разумнее использовать <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> для сортировки. Идея состоит в том, чтобы обойти массив один раз, чтобы извлечь фактические значения, используемые для сортировки, во временный массив, отсортировать временный массив, а затем обойти временный массив для получения правильного порядка.</p>
 
-<pre class="brush: js notranslate">// массив для сортировки
+<pre class="brush: js">// массив для сортировки
 var list = ['Дельта', 'альфа', 'ЧАРЛИ', 'браво'];
 
 // временный массив содержит объекты с позицией и значением сортировки
@@ -195,38 +195,15 @@ var result = mapped.map(function(el) {
 });
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.11', 'Array.prototype.sort')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.sort', 'Array.prototype.sort')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.Array.sort")}}</div>
+<div>{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.reverse()")}}</li>

@@ -214,9 +214,9 @@ catch (ex) {
 
 <p>Qualquer exceção lançada será capturada apenas uma vez pelo bloco <code>catch</code> envolvente mais próximo, a não ser que seja relançada. Obviamente qualquer nova exceção elevada no bloco "interno" (pois código em um bloco <code>catch</code> pode fazer algo que lance), será capturado pelo bloco "externo".</p>
 
-<h3 id="Retornando_de_um_bloco_finnaly">Retornando de um bloco <code>finnaly</code></h3>
+<h3 id="Retornando_de_um_bloco_finnaly">Retornando de um bloco <code>finally</code></h3>
 
-<p>Caso o bloco f<code>inally</code> retorne um valor, esse valor torna-se o valor de retorno do produto de <code>try-catch-finally </code>inteiro, independente de qualquer declaração return nos blocos <code>try</code> e <code>catch</code>. Isso inclui exceções lançadas dentro do bloco <code>catch</code>:</p>
+<p>Caso o bloco <code>finally</code> retorne um valor, esse valor torna-se o valor de retorno do produto de <code>try-catch-finally </code>inteiro, independente de qualquer declaração return nos blocos <code>try</code> e <code>catch</code>. Isso inclui exceções lançadas dentro do bloco <code>catch</code>:</p>
 
 <pre><code>try {
   try {
@@ -239,7 +239,7 @@ catch (ex) {
 // "inner" "oops"
 // "finally"</pre>
 
-<p>O "oops" externo não é lançado devido ao retorno do bloco f<code>inally</code>. O mesmo se aplicaria a qualquer valor retornado do bloco <code>catch</code>.</p>
+<p>O "oops" externo não é lançado devido ao retorno do bloco <code>finally</code>. O mesmo se aplicaria a qualquer valor retornado do bloco <code>catch</code>.</p>
 
 <h2 id="See_also" name="See_also">Vejam também</h2>
 

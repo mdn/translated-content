@@ -10,7 +10,7 @@ translation_of: Web/HTML/Element/strong
 ---
 <h2 id="总结">总结</h2>
 
-<p>Strong 元素 (<code>&lt;strong&gt;</code>)表示文本十分重要，一般用粗体显示。</p>
+<p>Strong 元素 (<code>&lt;strong&gt;</code>) 表示文本十分重要，一般用粗体显示。</p>
 
 <h2 id="使用环境">使用环境</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/HTML/Element/strong
  <tbody>
   <tr>
    <td>内容分类</td>
-   <td>流内容, 语法内容</td>
+   <td>流内容，语法内容</td>
   </tr>
   <tr>
    <td>允许的内容</td>
@@ -30,11 +30,11 @@ translation_of: Web/HTML/Element/strong
   </tr>
   <tr>
    <td>允许的父级元素</td>
-   <td>任何接受<a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="https://developer.mozilla.org/en/HTML/Content_categories#Phrasing_content">phrasing content</a>的元素, 或者接受 <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="https://developer.mozilla.org/en/HTML/Content_categories#Flow_content">flow content</a>的元素</td>
+   <td>任何接受<a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="https://developer.mozilla.org/en/HTML/Content_categories#Phrasing_content">phrasing content</a>的元素，或者接受 <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="https://developer.mozilla.org/en/HTML/Content_categories#Flow_content">flow content</a>的元素</td>
   </tr>
   <tr>
    <td>规范文档</td>
-   <td><a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-strong-element" title="http://www.w3.org/TR/html5/text-level-semantics.html#the-strong-element">HTML5, section 4.6.3</a>; <a href="http://www.w3.org/TR/html401/struct/text.html#edef-STRONG" title="http://www.w3.org/TR/html401/struct/text.html#edef-STRONG">HTML 4.01, section 9.2.1</a></td>
+   <td><a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-strong-element">HTML5, section 4.6.3</a>; <a href="http://www.w3.org/TR/html401/struct/text.html#edef-STRONG">HTML 4.01, section 9.2.1</a></td>
   </tr>
  </tbody>
 </table>
@@ -48,7 +48,7 @@ translation_of: Web/HTML/Element/strong
 <p><code>实现了<a href="/en-US/docs/DOM/element" title="DOM/element">HTMLElement</a></code> 接口。</p>
 
 <div class="note">
-<p>实现注意事项<strong>: </strong>一直到Gecko 1.9.2 (含), Firefox 对这个元素实现了 <a href="/en-US/docs/DOM/span" title="DOM/span"><code>HTMLSpanElement</code></a> 接口</p>
+<p>实现注意事项<strong>: </strong>一直到 Gecko 1.9.2 (含), Firefox 对这个元素实现了 <a href="/en-US/docs/DOM/span" title="DOM/span"><code>HTMLSpanElement</code></a> 接口</p>
 </div>
 
 <h2 id="举例">举例</h2>
@@ -62,15 +62,15 @@ translation_of: Web/HTML/Element/strong
 
 <h3 id="Bold_vs._Strong">Bold vs. Strong</h3>
 
-<p>新的开发者经常感到疑惑，为什么在一个渲染的网站上会有这么多方式来表达同样的东西。Bold和Strong可能就是这其中的一种。为什么使用&lt;strong&gt;&lt;/strong&gt;而不是&lt;b&gt;&lt;/b&gt;? 使用strong的话你不得不打更多的字母，却产生出和b同样的效果，对吧？</p>
+<p>新的开发者经常感到疑惑，为什么在一个渲染的网站上会有这么多方式来表达同样的东西。Bold 和 Strong 可能就是这其中的一种。为什么使用&lt;strong&gt;&lt;/strong&gt;而不是&lt;b&gt;&lt;/b&gt;? 使用 strong 的话你不得不打更多的字母，却产生出和 b 同样的效果，对吧？</p>
 
-<p>也许并不是； strong是一个逻辑状态，而bold是一个物理状态。逻辑状态分离内容和表现形式，使用逻辑状态允许你用各种不同的方式来表达。比如你想把文字渲染成红色，使用其它大小的字体、带有下划线或其他样式，而不是加粗的样式。必须要理解使用strong呈现出的表现形式不同于单纯的加粗。 因为bold是一个物理状态，他没有区分表现形式和内容。如果让bold做了加粗文本外的其它任何事情，都将会令人困惑而且也不符合逻辑。</p>
+<p>也许并不是； strong 是一个逻辑状态，而 bold 是一个物理状态。逻辑状态分离内容和表现形式，使用逻辑状态允许你用各种不同的方式来表达。比如你想把文字渲染成红色，使用其它大小的字体、带有下划线或其他样式，而不是加粗的样式。必须要理解使用 strong 呈现出的表现形式不同于单纯的加粗。 因为 bold 是一个物理状态，他没有区分表现形式和内容。如果让 bold 做了加粗文本外的其它任何事情，都将会令人困惑而且也不符合逻辑。</p>
 
 <p>同样应该注意&lt;b&gt;&lt;/b&gt; 还有其他用途，比如想单纯地吸引注意而不增加其重要性。</p>
 
 <h3 id="Emphasis_vs._Strong">Emphasis vs. Strong</h3>
 
-<p>在 HTML4 时， Strong 简单地表示一个更强的强调(emphasis)，而在HTML5中，这个元素被描述为表征“内容强烈的重要性(strong importance for its contents) ”。这是一个重要的区别。Em标签(Emphasis)用于改变一个句子的意思(比如"我&lt;em&gt;<em>喜欢&lt;/em&gt;</em>胡萝卜" 和"我喜欢&lt;em&gt;<em>胡萝卜&lt;/em&gt;</em>"，分别强调喜欢和胡萝卜), Strong用来对一个句子的部分增加重要性(比如 "<strong>警告!</strong> 这<strong>非常危险</strong>。") Strong和Emphasis都可以分别通过嵌套来增加相对重要性或强调重点。</p>
+<p>在 HTML4 时， Strong 简单地表示一个更强的强调 (emphasis)，而在 HTML5 中，这个元素被描述为表征 “内容强烈的重要性 (strong importance for its contents) ”。这是一个重要的区别。Em 标签 (Emphasis) 用于改变一个句子的意思 (比如"我&lt;em&gt;<em>喜欢&lt;/em&gt;</em>胡萝卜" 和"我喜欢&lt;em&gt;<em>胡萝卜&lt;/em&gt;</em>"，分别强调喜欢和胡萝卜), Strong 用来对一个句子的部分增加重要性 (比如 "<strong>警告！</strong> 这<strong>非常危险</strong>。") Strong 和 Emphasis 都可以分别通过嵌套来增加相对重要性或强调重点。</p>
 
 <h2 id="同样参见">同样参见</h2>
 

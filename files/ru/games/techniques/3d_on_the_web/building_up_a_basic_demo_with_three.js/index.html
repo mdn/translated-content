@@ -31,7 +31,7 @@ translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Thr
 
 <p>Здесь находится HTML структура, которую мы будем использовать:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 	&lt;meta charset="utf-8"&gt;
@@ -46,7 +46,7 @@ translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Thr
 &lt;script&gt;
 	var WIDTH = window.innerWidth;
 	var HEIGHT = window.innerHeight;
-	/* весь наш JavaScript код будет после этого комментария */
+	/* весь наш JavaScript-код будет после этого комментария */
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -60,13 +60,13 @@ translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Thr
 
 <p>Renderer это инструмент для отрисовки сцены в браузере. Есть 2 вида таких инструментов: WebGL по умолчанию, другие - Canvas, SVG, CSS, и DOM. Они различаются по тому как все рендерится. Несмотря на различия в них, для пользователя все будет выглядеть одинаково. Поэтому, вы можете выбрать запасной вариант на случай, если браузер пользователя не поддерживает выбранную вами технологию.</p>
 
-<pre class="brush: js notranslate">var renderer = new THREE.WebGLRenderer({antialias:true});
+<pre class="brush: js">var renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize(WIDTH, HEIGHT);
 renderer.setClearColor(0xDDDDDD, 1);
 document.body.appendChild(renderer.domElement);
 </pre>
 
-<p>Создаём новый WebGL renderer, устанавливаем размер так, чтобы он занимал все пространство страницы, прикрепляем DOM элемент к странице. Вы могли заметить параметр <code>antialias</code> в первой строке — если он установлен в <code>true</code>, то границы объектов сглаживаются. Метод <code>setClearColor()</code> устанавливает цвет фона (мы установили в 0xDDDDDD, светло-серый, значение по умолчанию - чёрный).</p>
+<p>Создаём новый WebGL renderer, устанавливаем размер так, чтобы он занимал все пространство страницы, прикрепляем DOM-элемент к странице. Вы могли заметить параметр <code>antialias</code> в первой строке — если он установлен в <code>true</code>, то границы объектов сглаживаются. Метод <code>setClearColor()</code> устанавливает цвет фона (мы установили в 0xDDDDDD, светло-серый, значение по умолчанию - чёрный).</p>
 
 <p>Добавьте этот код в ваш элемент {{htmlelement("script")}}.</p>
 
@@ -74,7 +74,7 @@ document.body.appendChild(renderer.domElement);
 
 <p>Сцена (scene) это место, где все происходит. Когда создаются новые объекты, они добавляются в сцену, чтобы их можно было увидеть. В three.js роль сцены выполняет объект <code>Scene</code>. Давайте создадим его, добавив следующих код:</p>
 
-<pre class="brush: js notranslate">var scene = new THREE.Scene();
+<pre class="brush: js">var scene = new THREE.Scene();
 </pre>
 
 <p>Позже, мы будем использовать метод <code>.add()</code> для добавления объектов в сцену.</p>
@@ -83,7 +83,7 @@ document.body.appendChild(renderer.domElement);
 
 <p>У нас есть сцена, теперь необходимо создать камеру. С помощью следующих строк мы добавим камеру, установим её позицию в координатной системе и направим её на нужную нам точку, где расположено то, что мы хотим видеть:</p>
 
-<pre class="brush: js notranslate">var camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
+<pre class="brush: js">var camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
 camera.position.z = 50;
 scene.add(camera);
 </pre>
@@ -106,9 +106,9 @@ scene.add(camera);
 
 <h2 id="Отрисовка_сцены">Отрисовка сцены</h2>
 
-<p>Всё уже готово, но мы пока что ничего не видим. Хотя мы настроили рендерер, нам всё равно нужно запустить рендеринг. Функция <code>render()</code> выполнит эту работу с небольшой помощью <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code>, которая заставляет сцену постоянно перерисовываться в каждом кадре:</p>
+<p>Всё уже готово, но мы пока что ничего не видим. Хотя мы настроили рендерер, нам всё равно нужно запустить рендеринг. Функция <code>render()</code> выполнит эту работу с небольшой помощью <code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code>, которая заставляет сцену постоянно перерисовываться в каждом кадре:</p>
 
-<pre class="brush: js notranslate">function render() {
+<pre class="brush: js">function render() {
 	requestAnimationFrame(render);
 	renderer.render(scene, camera);
 }
@@ -123,7 +123,7 @@ render();
 
 <p>Now our scene is properly rendering, we can start adding 3D shapes. To speed up development, Three.js provides a bunch of predefined primitives, which you can use to create shapes instantly in a single line of code. There's cubes, spheres, cylinders, and more complicated shapes available. Detail like drawing required vertices and faces, for a given shape, is handled by the Three framework, so we can focus on higher level coding. Let's start, by defining the geometry for a cube shape, adding the following just above the <code>render()</code> function:</p>
 
-<pre class="brush: js notranslate">var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
+<pre class="brush: js">var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
 </pre>
 
 <p>In this case, we define a simple cube that is 10 x 10 x 10 units. The geometry itself is not enough though, we also need a material that will be used for our shape.</p>
@@ -132,7 +132,7 @@ render();
 
 <p>A material is what covers an object, the colors, or textures on its surface. In our case, we will choose a simple blue color to paint our box. There are a number of predefined materials which can be used: Basic, Phong, Lambert. Let's play with the last two later, but for now, the Basic one should be enough:</p>
 
-<pre class="brush: js notranslate">var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
+<pre class="brush: js">var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
 </pre>
 
 <p>Add this line below the previously added.</p>
@@ -143,7 +143,7 @@ render();
 
 <p>To apply the material to a geometry, a mesh is used. This takes on a shape, and adds the specified material to every face:</p>
 
-<pre class="brush: js notranslate">var cube = new THREE.Mesh(boxGeometry, basicMaterial);
+<pre class="brush: js">var cube = new THREE.Mesh(boxGeometry, basicMaterial);
 </pre>
 
 <p>Again, add this line below the one you previously added.</p>
@@ -152,12 +152,12 @@ render();
 
 <p>Сейчас мы создали куб, используя 'geometry' и 'material'. Последнее, что мы должны сделать - добавить куб на сцену. Добавьте в код эту строку:</p>
 
-<pre class="brush: js notranslate">scene.add(cube);
+<pre class="brush: js">scene.add(cube);
 </pre>
 
 <p>Если вы сохраните код и обновите вкладку браузера, вы увидите квадрат, а не куб, потому, что он стоит ровно напротив камеры и мы видим только одну сторону. У объектов есть полезное свойство - мы можем изменять их как хотим. Например, вы можете вращать его и масштабировать, сколько угодно. Что давайте немного повернём его, чтобы видеть больше сторон.  Добавить в конец кода эту строку:</p>
 
-<pre class="brush: js notranslate">cube.rotation.set(0.4, 0.2, 0);
+<pre class="brush: js">cube.rotation.set(0.4, 0.2, 0);
 </pre>
 
 <p>Поздравляю, вы создали объект в 3D-среде! This might have proven easier than you first thought? Here's how it should look:</p>
@@ -174,12 +174,12 @@ render();
 
 <p>Now we will add more shapes to the scene, and explore other shapes, materials, lighting, and more. Let's move the cube to the left, to make space for some friends. Adding the following line just below the previous one:</p>
 
-<pre class="brush: js notranslate">cube.position.x = -25;
+<pre class="brush: js">cube.position.x = -25;
 </pre>
 
 <p>Now onto more shapes and materials. What might you input to add a torus, wrapped in the Phong material? Try adding the following lines, just below the lines defining the cube.</p>
 
-<pre class="brush: js notranslate">var torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
+<pre class="brush: js">var torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
 var phongMaterial = new THREE.MeshPhongMaterial({color: 0xFF9500});
 var torus = new THREE.Mesh(torusGeometry, phongMaterial);
 scene.add(torus);
@@ -189,7 +189,7 @@ scene.add(torus);
 
 <p>We can choose more fun predefined shapes. Let's play some more. Add the following lines, below those defining the torus:</p>
 
-<pre class="brush: js notranslate">var dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
+<pre class="brush: js">var dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
 var lambertMaterial = new THREE.MeshLambertMaterial({color: 0xEAEFF2});
 var dodecahedron = new THREE.Mesh(dodecahedronGeometry, lambertMaterial);
 dodecahedron.position.x = 25;
@@ -204,7 +204,7 @@ scene.add(dodecahedron);
 
 <p>There are various types of light sources available in Three.js. The most basic is <code>PointLight</code>, which works like a flashlight, shining a spotlight in a defined direction. Add the following lines, below your shape definitions:</p>
 
-<pre class="brush: js notranslate">var light = new THREE.PointLight(0xFFFFFF);
+<pre class="brush: js">var light = new THREE.PointLight(0xFFFFFF);
 light.position.set(-10, 15, 50);
 scene.add(light);
 </pre>
@@ -223,7 +223,7 @@ scene.add(light);
 
 <p>Вращать фигуры просто. Вы просто добавляете или отнимаете значение по оси вращения. Добавьте эту строку кода сразу после: <code>requestAnimationFrame()</code> invocation inside the <code>render</code> function:</p>
 
-<pre class="brush: js notranslate">cube.rotation.y += 0.01;
+<pre class="brush: js">cube.rotation.y += 0.01;
 </pre>
 
 <p>This rotates the cube on every frame, by a tiny bit, so the animation looks smooth.</p>
@@ -232,12 +232,12 @@ scene.add(light);
 
 <p>We can also scale an object. Applying a constant value, we would make it grow, or shrink just once. Let's make things more interesting. First, we implement a helper variable, called <code>t,</code> for counting elapsed time. Add it right before the <code>render()</code> function:</p>
 
-<pre class="brush: js notranslate">var t = 0;
+<pre class="brush: js">var t = 0;
 </pre>
 
 <p>Now let's increase the value by a given constant value, on each frame of the animation. Add the following lines, just below the <code>requestAnimationFrame()</code> invocation:</p>
 
-<pre class="brush: js notranslate">t += 0.01;
+<pre class="brush: js">t += 0.01;
 torus.scale.y = Math.abs(Math.sin(t));
 </pre>
 
@@ -249,7 +249,7 @@ torus.scale.y = Math.abs(Math.sin(t));
 
 <p>Aside from rotation, and scaling, we can additionally move objects around the scene. Add the following, again just below our <code>requestAnimationFrame()</code> invocation:</p>
 
-<pre class="brush: js notranslate">dodecahedron.position.y = -7*Math.sin(t*2);
+<pre class="brush: js">dodecahedron.position.y = -7*Math.sin(t*2);
 </pre>
 
 <p>This will move the dodecahedron up and down, by applying the <code>sin()</code> value to the y axis on each frame, and a little adjustment to make it look cooler. Try changing these values, to see how it affects the animations.</p>

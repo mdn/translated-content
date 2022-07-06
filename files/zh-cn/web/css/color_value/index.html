@@ -18,18 +18,18 @@ translation_of: Web/CSS/color_value
 ---
 <p>{{CSSRef}}</p>
 
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/CSS_Types">数据类型</a> <code>&lt;color&gt;</code> 表示一种<a class="external" href="http://en.wikipedia.org/wiki/SRGB" title="http://en.wikipedia.org/wiki/SRGB">标准RGB色彩空间（sRGB color space）</a>的颜色。一个颜色可以包括一个<a href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha通道</a>透明度值，来表明颜色如何与它的背景色<a class="external" href="http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending" title="http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">混合（composite）</a>。</p>
+<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/CSS_Types">数据类型</a> <code>&lt;color&gt;</code> 表示一种<a class="external" href="http://en.wikipedia.org/wiki/SRGB">标准 RGB 色彩空间（sRGB color space）</a>的颜色。一个颜色可以包括一个<a href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha 通道</a>透明度值，来表明颜色如何与它的背景色<a class="external" href="http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">混合（composite）</a>。</p>
 
 <p>一个<code>&lt;color&gt;</code>可以以如下方式定义：</p>
 
 <ul>
  <li>使用一个关键字（比如<code>blue</code>或<code>transparent</code>）</li>
- <li>使用<a class="external" href="http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation" title="http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation">RGB立体坐标（RGB cubic-coordinate）</a>系统（以“#”加十六进制或者 <code>rgb()</code> 和 <code>rgba()</code> 函数表达式的形式）</li>
- <li>使用<a class="external" href="http://en.wikipedia.org/wiki/HSL_and_HSV" title="http://en.wikipedia.org/wiki/HSL_and_HSV">HSL圆柱坐标（HSL cylindrical-coordinate）</a>系统（以 <code>hsl()</code> 和 <code>hsla()</code> 函数表达式的形式）</li>
+ <li>使用<a class="external" href="http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation">RGB 立体坐标（RGB cubic-coordinate）</a>系统（以“#”加十六进制或者 <code>rgb()</code> 和 <code>rgba()</code> 函数表达式的形式）</li>
+ <li>使用<a class="external" href="http://en.wikipedia.org/wiki/HSL_and_HSV">HSL 圆柱坐标（HSL cylindrical-coordinate）</a>系统（以 <code>hsl()</code> 和 <code>hsla()</code> 函数表达式的形式）</li>
 </ul>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>本文章详细描述了<code>&lt;color&gt;</code>数据类型。如要了解更多关于在HTML中使用颜色的信息，请参阅<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTML/Applying_color">使用CSS为HTML元素应用颜色</a>。</p>
+<p><strong>注意：</strong>本文章详细描述了<code>&lt;color&gt;</code>数据类型。如要了解更多关于在 HTML 中使用颜色的信息，请参阅<a href="/zh-CN/docs/Web/HTML/Applying_color">使用 CSS 为 HTML 元素应用颜色</a>。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -37,7 +37,7 @@ translation_of: Web/CSS/color_value
 <p><code>&lt;color&gt;</code>可以以以下方式指定。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>尽管 CSS 颜色值被精确定义，但在不同的输出设备上仍然有可能显示不一。它们大多数是不可被校准的，而且有些浏览器不支持输出设备的<a class="external" href="http://en.wikipedia.org/wiki/ICC_profile" title="http://en.wikipedia.org/wiki/ICC_profile">色彩配置（color profile）</a>。</p>
+<p><strong>注意：</strong>尽管 CSS 颜色值被精确定义，但在不同的输出设备上仍然有可能显示不一。它们大多数是不可被校准的，而且有些浏览器不支持输出设备的<a class="external" href="http://en.wikipedia.org/wiki/ICC_profile">色彩配置（color profile）</a>。</p>
 </div>
 
 <h3 id="颜色关键字">颜色关键字</h3>
@@ -47,7 +47,7 @@ translation_of: Web/CSS/color_value
 <p>在使用关键字时有几个需要留意的注意事项：</p>
 
 <ul>
- <li>除了通常的 16 个 HTML 基本颜色，其它的不能被用于 HTML 。HTML 将通过一个特定的计算程序转换这些未知的值，这将导致成为完全不同的颜色。这些关键字应只被用于 SVG 和 CSS 。</li>
+ <li>除了通常的 16 个 HTML 基本颜色，其它的不能被用于 HTML。HTML 将通过一个特定的计算程序转换这些未知的值，这将导致成为完全不同的颜色。这些关键字应只被用于 SVG 和 CSS。</li>
  <li>未知的关键字会让 CSS 属性无效。无效的属性将被忽略，该颜色将没有作用。这是一个和 HTML 相比不同的行为。</li>
  <li>未使用关键字定义的颜色在 CSS 中有任意的透明度，它们是单实色。</li>
  <li>一些关键字表示同样的颜色：
@@ -65,13 +65,13 @@ translation_of: Web/CSS/color_value
 </ul>
 
 <div class="blockIndicator note">
-<p>注意：可接受的关键字列表在CSS的演变过程中发生了改变：</p>
+<p>注意：可接受的关键字列表在 CSS 的演变过程中发生了改变：</p>
 
 <ul>
- <li>CSS 标准 1 只接受 16 个基本颜色，称为<em>VGA颜色</em>，因为它们来源于 <a class="external" href="http://en.wikipedia.org/wiki/VGA" title="http://en.wikipedia.org/wiki/VGA">VGA</a> 显卡所显示的颜色集合而被称为 <em>VGA colors</em> （视频图形阵列色彩）。</li>
+ <li>CSS 标准 1 只接受 16 个基本颜色，称为<em>VGA 颜色</em>，因为它们来源于 <a class="external" href="http://en.wikipedia.org/wiki/VGA">VGA</a> 显卡所显示的颜色集合而被称为 <em>VGA colors</em> （视频图形阵列色彩）。</li>
  <li>CSS 标准 2 增加了 <code>orange</code> 关键字。</li>
  <li>从一开始，浏览器接受其它的颜色，由于一些早期浏览器是 X11 应用程序，这些颜色大多数是 X11 命名的颜色列表，虽然有一点不同。SVG 1.0 是首个正式定义这些关键字的标准；CSS 色彩标准 3 也正式定义了这些关键字。它们经常被称作<em>扩张的颜色关键字</em>， <em>X11 颜色</em>或 <em>SVG 颜色</em> 。</li>
- <li>CSS颜色标准 4 添加可<code>rebeccapurple</code>关键字来<a href="https://codepen.io/trezy/post/honoring-a-great-man">纪念web先锋Eric Meyer</a>。</li>
+ <li>CSS 颜色标准 4 添加可<code>rebeccapurple</code>关键字来<a href="https://codepen.io/trezy/post/honoring-a-great-man">纪念 web 先锋 Eric Meyer</a>。</li>
 </ul>
 </div>
 
@@ -976,10 +976,10 @@ translation_of: Web/CSS/color_value
 <p><code>transparent</code> 关键字表示一个完全透明的颜色，即该颜色看上去将是背景色。从技术上说，它是带有阿尔法通道为最小值的黑色，是 <code>rgba(0,0,0,0)</code> 的简写。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意兼容性：</strong>为避免未预料的行为，比如{{cssxref("gradient")}}中，the current CSS spec states that <code>transparent</code> should be calculated in the <a href="https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax">alpha-premultiplied color space</a>. 但是，注意旧的浏览器可能将其作为alpha值为0的黑色。</p>
+<p><strong>注意兼容性：</strong>为避免未预料的行为，比如{{cssxref("gradient")}}中，the current CSS spec states that <code>transparent</code> should be calculated in the <a href="https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax">alpha-premultiplied color space</a>. 但是，注意旧的浏览器可能将其作为 alpha 值为 0 的黑色。</p>
 </div>
 
-<div class="note"><strong>过去的注释：</strong><code>transparent</code> 关键字在 CSS Level 2 (Revision 1) 中不是一个真实的颜色。它是一个特殊的关键字，可以代替一个普通的 <code>&lt;color&gt;</code> 值用于两个 CSS 属性中： {{ Cssxref("background") }} 和 {{ Cssxref("border") }}。本质上使用它可以覆盖一个继承的单色。随着经由<a class="external" href="http://en.wikipedia.org/wiki/Alpha_compositing" title="http://en.wikipedia.org/wiki/Alpha_compositing">阿尔法通道（alpha channels）</a>透明度的支持，<code>transparent</code> 在 CSS Colors Level 3 中被重新定义为一个真实的颜色，允许在任何一个需要 <code>&lt;color&gt;</code> 值的地方使用，像 {{ Cssxref("color") }} 属性。</div>
+<div class="note"><strong>过去的注释：</strong><code>transparent</code> 关键字在 CSS Level 2 (Revision 1) 中不是一个真实的颜色。它是一个特殊的关键字，可以代替一个普通的 <code>&lt;color&gt;</code> 值用于两个 CSS 属性中： {{ Cssxref("background") }} 和 {{ Cssxref("border") }}。本质上使用它可以覆盖一个继承的单色。随着经由<a class="external" href="http://en.wikipedia.org/wiki/Alpha_compositing">阿尔法通道（alpha channels）</a>透明度的支持，<code>transparent</code> 在 CSS Colors Level 3 中被重新定义为一个真实的颜色，允许在任何一个需要 <code>&lt;color&gt;</code> 值的地方使用，像 {{ Cssxref("color") }} 属性。</div>
 
 <h3 id="currentColor_关键字"><code>currentColor</code> 关键字</h3>
 
@@ -987,7 +987,7 @@ translation_of: Web/CSS/color_value
 
 <p>它也能用于那些继承了元素的 {{ Cssxref("color") }} 属性计算值的属性，相当于在这些元素上使用 <code>inherit</code> 关键字，如果这些元素有该关键字的话。</p>
 
-<h4 id="currentcolor示例">currentcolor示例</h4>
+<h4 id="currentcolor示例">currentcolor 示例</h4>
 
 <p>该行的颜色（一个填充颜色的 div）应用它继承自父级的 {{ Cssxref("color") }} 属性。</p>
 
@@ -1003,32 +1003,32 @@ translation_of: Web/CSS/color_value
 
 <p>{{EmbedLiveSample('currentcolor_example')}}</p>
 
-<h3 id="RGB颜色">RGB颜色</h3>
+<h3 id="RGB颜色">RGB 颜色</h3>
 
-<p>颜色可以使用红-绿-蓝（red-green-blue (RGB)）模式的两种方式被定义：</p>
+<p>颜色可以使用红 - 绿-蓝（red-green-blue (RGB)）模式的两种方式被定义：</p>
 
 <h4 id="语法_2">语法</h4>
 
-<p>RGB颜色可以通过以<code>#</code>为前缀的十六进制字符和函数（<code>rgb()</code>、<code>rgba()</code>）标记表示。</p>
+<p>RGB 颜色可以通过以<code>#</code>为前缀的十六进制字符和函数（<code>rgb()</code>、<code>rgba()</code>）标记表示。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>在CSS 颜色标准 4 中，rgba()是rgb()的别称。在实行第4级标准的浏览器中，它们接受相同的参数，作用效果也相同。</p>
+<p><strong>注意：</strong>在 CSS 颜色标准 4 中，rgba() 是 rgb() 的别称。在实行第 4 级标准的浏览器中，它们接受相同的参数，作用效果也相同。</p>
 </div>
 
 <dl>
  <dt>十六进制符号：<code>#RRGGBB[AA] </code></dt>
  <dd><code>R</code>（红）、<code>G</code>（绿）、<code>B</code> （蓝）和<code>A</code> （alpha）是十六进制字符（0–9、A–F）。<code>A</code>是可选的。比如，<code>#ff0000</code>等价于<code>#ff0000ff</code>。</dd>
  <dt>十六进制符号：<code>#RGB[A]</code></dt>
- <dd><code>R</code>（红）、<code>G</code>（绿）、<code>B</code> （蓝）和<code>A</code> （alpha）是十六进制字符（0–9、A–F）。<code>A</code>是可选的。三位数符号（<code>#RGB</code>）是六位数形式（<code>#RRGGBB</code>）的减缩版。比如，<code>#f09</code>和<code>#ff0099</code>表示同一颜色。类似地，六位数符号（<code>#RGBA</code>）是八位数形式（<code>#RRGGBBAA</code>）的减缩版。比如，<code>#0f38</code>和<code>#00ff3388</code>表示相同颜色。</dd>
+ <dd><code>R</code>（红）、<code>G</code>（绿）、<code>B</code> （蓝）和<code>A</code> （alpha）是十六进制字符（0–9、A–F）。<code>A</code>是可选的。三位数符号（<code>#RGB</code>）是六位数形式（<code>#RRGGBB</code>）的减缩版。比如，<code>#f09</code>和<code>#ff0099</code>表示同一颜色。类似地，四位数符号（<code>#RGBA</code>）是八位数形式（<code>#RRGGBBAA</code>）的减缩版。比如，<code>#0f38</code>和<code>#00ff3388</code>表示相同颜色。</dd>
  <dt>函数符： <code>rgb[a](R, G, B[, A])</code></dt>
- <dd><code>R</code>（红）、<code>G</code>（绿）、<code>B</code> （蓝）可以是{{cssxref("&lt;number&gt;")}}（数字），或者{{cssxref("&lt;percentage&gt;")}}（百分比），255相当于100%。<code>A</code>（alpha）可以是<code>0</code>到<code>1</code>之间的数字，或者百分比，数字<code>1</code>相当于<code>100%</code>（完全不透明）。</dd>
+ <dd><code>R</code>（红）、<code>G</code>（绿）、<code>B</code> （蓝）可以是{{cssxref("&lt;number&gt;")}}（数字），或者{{cssxref("&lt;percentage&gt;")}}（百分比），255 相当于 100%。<code>A</code>（alpha）可以是<code>0</code>到<code>1</code>之间的数字，或者百分比，数字<code>1</code>相当于<code>100%</code>（完全不透明）。</dd>
  <dt>函数符：<code>rgb[a](R G B[ / A])</code></dt>
  <dd>CSS 颜色级别 4 支持用空格分开的值。</dd>
 </dl>
 
-<h3 id="HSL颜色">HSL颜色</h3>
+<h3 id="HSL颜色">HSL 颜色</h3>
 
-<p>颜色也可以使用 <code>hsl()</code> 函数符被定义为色相-饱和度-亮度（Hue-saturation-lightness）模式。HSL 相比 RGB 的优点是更加直观：你可以估算你想要的颜色，然后微调。它也更易于创建相称的颜色集合。（通过保持相同的色相并改变亮度/暗度和饱和度）。</p>
+<p>颜色也可以使用 <code>hsl()</code> 函数符被定义为色相 - 饱和度 - 亮度（Hue-saturation-lightness）模式。HSL 相比 RGB 的优点是更加直观：你可以估算你想要的颜色，然后微调。它也更易于创建相称的颜色集合。（通过保持相同的色相并改变亮度/暗度和饱和度）。</p>
 
 <p>Many designers find HSL more intuitive than RGB, since it allows hue, saturation, and lightness to each be adjusted independently. HSL can also make it easier to create a set of matching colors (such as when you want multiple shades of a single hue).</p>
 
@@ -1051,7 +1051,7 @@ translation_of: Web/CSS/color_value
 
 <h3 id="系统颜色">系统颜色</h3>
 
-<p>In <em>forced colors mode</em> (detectable with the <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors">forced-colors</a> media query), most colors are restricted into a user- and browser-defined palette. These system colors are exposed by the following keywords, which can be used to ensure that the rest of the page integrates well with the restricted palette. These values may also be used in other contexts, but are not widely supported by browsers. </p>
+<p>In <em>forced colors mode</em> (detectable with the <a href="/zh-CN/docs/Web/CSS/@media/forced-colors">forced-colors</a> media query), most colors are restricted into a user- and browser-defined palette. These system colors are exposed by the following keywords, which can be used to ensure that the rest of the page integrates well with the restricted palette. These values may also be used in other contexts, but are not widely supported by browsers. </p>
 
 <p>The keywords in the following list are defined by the CSS Color Module Level 4 specification.</p>
 
@@ -1241,11 +1241,11 @@ translation_of: Web/CSS/color_value
   </dd>
   <dt>-moz-Combobox</dt>
   <dd>
-  <p>{{Gecko_minversion_inline("1.9.2")}} Background color for combo-boxes. Should be used with the <code>-moz-ComboboxText</code> foreground color. In versions prior to 1.9.2, use <code>-moz-Field</code> instead.</p>
+  <p>Background color for combo-boxes. Should be used with the <code>-moz-ComboboxText</code> foreground color. In versions prior to 1.9.2, use <code>-moz-Field</code> instead.</p>
   </dd>
   <dt>-moz-ComboboxText</dt>
   <dd>
-  <p>{{Gecko_minversion_inline("1.9.2")}} Text color for combo-boxes. Should be used with the <code>-moz-Combobox</code> background color. In versions prior to 1.9.2, use <code>-moz-FieldText</code> instead.</p>
+  <p>Text color for combo-boxes. Should be used with the <code>-moz-Combobox</code> background color. In versions prior to 1.9.2, use <code>-moz-FieldText</code> instead.</p>
   </dd>
   <dt>-moz-Dialog</dt>
   <dd>
@@ -1258,15 +1258,15 @@ translation_of: Web/CSS/color_value
   <dt>-moz-dragtargetzone</dt>
   <dt>-moz-EvenTreeRow</dt>
   <dd>
-  <p>{{gecko_minversion_inline("1.9")}} Background color for even-numbered rows in a tree. Should be used with the <code>-moz-FieldText</code> foreground color. In Gecko versions prior to 1.9, use <code>-moz-Field</code>. See also <code>-moz-OddTreeRow</code>.</p>
+  <p>Background color for even-numbered rows in a tree. Should be used with the <code>-moz-FieldText</code> foreground color. In Gecko versions prior to 1.9, use <code>-moz-Field</code>. See also <code>-moz-OddTreeRow</code>.</p>
   </dd>
   <dt>-moz-html-CellHighlight</dt>
   <dd>
-  <p>{{gecko_minversion_inline("1.9")}} Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the <code>-moz-html-CellHighlightText</code> foreground color. Prior to Gecko 1.9, use <code>-moz-CellHighlight</code>.</p>
+  <p>Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the <code>-moz-html-CellHighlightText</code> foreground color. Prior to Gecko 1.9, use <code>-moz-CellHighlight</code>.</p>
   </dd>
   <dt>-moz-html-CellHighlightText</dt>
   <dd>
-  <p>{{gecko_minversion_inline("1.9")}} Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the <code>-moz-html-CellHighlight</code> background color. Prior to Gecko 1.9, use <code>-moz-CellHighlightText</code>.</p>
+  <p>Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the <code>-moz-html-CellHighlight</code> background color. Prior to Gecko 1.9, use <code>-moz-CellHighlightText</code>.</p>
   </dd>
   <dt>-moz-mac-accentdarkestshadow</dt>
   <dt>-moz-mac-accentdarkshadow</dt>
@@ -1277,11 +1277,9 @@ translation_of: Web/CSS/color_value
   <dt>-moz-mac-accentregularshadow</dt>
   <dt>-moz-mac-chrome-active</dt>
   <dd>
-  <p>{{Gecko_minversion_inline("1.9.1")}}</p>
   </dd>
   <dt>-moz-mac-chrome-inactive</dt>
   <dd>
-  <p>{{Gecko_minversion_inline("1.9.1")}}</p>
   </dd>
   <dt>-moz-mac-focusring</dt>
   <dt>-moz-mac-menuselect</dt>
@@ -1297,7 +1295,7 @@ translation_of: Web/CSS/color_value
   </dd>
   <dt>-moz-MenuBarText</dt>
   <dd>
-  <p>{{Gecko_minversion_inline("1.9.2")}} Text color in menu bars. Often similar to <code>MenuText</code>. Should be used on top of <code>Menu</code> background.</p>
+  <p>Text color in menu bars. Often similar to <code>MenuText</code>. Should be used on top of <code>Menu</code> background.</p>
   </dd>
   <dt>-moz-MenuBarHoverText</dt>
   <dd>
@@ -1305,29 +1303,27 @@ translation_of: Web/CSS/color_value
   </dd>
   <dt>-moz-nativehyperlinktext</dt>
   <dd>
-  <p>{{Gecko_minversion_inline("1.9.1")}} Default platform hyperlink color.</p>
+  <p>Default platform hyperlink color.</p>
   </dd>
   <dt>-moz-OddTreeRow</dt>
   <dd>
-  <p>{{gecko_minversion_inline("1.9")}} Background color for odd-numbered rows in a tree. Should be used with the <code>-moz-FieldText</code> foreground color. In Gecko versions prior to 1.9, use <code>-moz-Field</code>. See also <code>-moz-EvenTreeRow</code>.</p>
+  <p>Background color for odd-numbered rows in a tree. Should be used with the <code>-moz-FieldText</code> foreground color. In Gecko versions prior to 1.9, use <code>-moz-Field</code>. See also <code>-moz-EvenTreeRow</code>.</p>
   </dd>
   <dt>-moz-win-communicationstext</dt>
   <dd>
-  <p>{{gecko_minversion_inline("1.9")}} Should be used for text in objects with <code>{{cssxref("-moz-appearance")}}: -moz-win-communications-toolbox;</code>.</p>
+  <p>Should be used for text in objects with <code>{{cssxref("-moz-appearance")}}: -moz-win-communications-toolbox;</code>.</p>
   </dd>
   <dt>-moz-win-mediatext</dt>
   <dd>
-  <p>{{gecko_minversion_inline("1.9")}} Should be used for text in objects with <code>{{cssxref("-moz-appearance")}}: -moz-win-media-toolbox</code>.</p>
+  <p>Should be used for text in objects with <code>{{cssxref("-moz-appearance")}}: -moz-win-media-toolbox</code>.</p>
   </dd>
   <dt>-moz-win-accentcolor</dt>
   <dd>
-  <p>{{gecko_minversion_inline("56")}}<br>
-   Used to access the Windows 10 custom accent color that you can set on the start menu, taskbar, title bars, etc.</p>
+  <p>Used to access the Windows 10 custom accent color that you can set on the start menu, taskbar, title bars, etc.</p>
   </dd>
   <dt>-moz-win-accentcolortext</dt>
   <dd>
-  <p>{{gecko_minversion_inline("56")}}<br>
-   Used to access the color of text placed over the Windows 10 custom accent color in the start menu, taskbar, title bars, etc.</p>
+  <p>Used to access the color of text placed over the Windows 10 custom accent color in the start menu, taskbar, title bars, etc.</p>
   </dd>
  </dl>
  </div>
@@ -1344,11 +1340,11 @@ translation_of: Web/CSS/color_value
  </dd>
  <dt>-moz-default-background-color</dt>
  <dd>
- <p>{{Gecko_minversion_inline("5.0")}} User's preference for the document background color.</p>
+ <p>User's preference for the document background color.</p>
  </dd>
  <dt>-moz-default-color</dt>
  <dd>
- <p>{{Gecko_minversion_inline("5.0")}} User's preference for the text color.</p>
+ <p>User's preference for the text color.</p>
  </dd>
  <dt>-moz-hyperlinktext</dt>
  <dd>
@@ -1366,7 +1362,7 @@ translation_of: Web/CSS/color_value
 
 <h2 id="Accessibility_considerations">Accessibility considerations</h2>
 
-<p>Some people have difficulty distinguishing colors. The <a class="external external-icon" href="https://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG 2.0</a> recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a> for more information.</p>
+<p>Some people have difficulty distinguishing colors. The <a class="external external-icon" href="https://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG 2.0</a> recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See <a href="/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a> for more information.</p>
 
 <h2 id="示例">示例</h2>
 
@@ -1423,9 +1419,9 @@ inputElem.addEventListener('change', () =&gt; {
 
 <p>{{EmbedLiveSample('Color_value_tester','100%', 300)}}</p>
 
-<h3 id="RGB的多种语法">RGB的多种语法</h3>
+<h3 id="RGB的多种语法">RGB 的多种语法</h3>
 
-<p>这个例子显示了一个颜色可以以多种RGB颜色语法表示。</p>
+<p>这个例子显示了一个颜色可以以多种 RGB 颜色语法表示。</p>
 
 <pre class="notranslate">/* 这些语法都表示同一个颜色：a fully opaque hot pink */
 
@@ -1444,13 +1440,13 @@ rgb(100%, 0%, 60%)
 rgb(100%, 0, 60%) /* 错误：不要混用数字和百分比 */
 rgb(255 0 153)
 
-/* 带有alpha值的十六进制语法 */
+/* 带有 alpha 值的十六进制语法 */
 #f09f
 #F09F
 #ff0099ff
 #FF0099FF
 
-/* 带有alpha值的函数语法 */
+/* 带有 alpha 值的函数语法 */
 rgb(255, 0, 153, 1)
 rgb(255, 0, 153, 100%)
 
@@ -1462,29 +1458,29 @@ rgb(255 0 153 / 100%)
 rgb(255, 0, 153.6, 1)
 rgb(1e2, .5e1, .5e0, +.25e2%)</pre>
 
-<h3 id="RGB的多种透明度">RGB的多种透明度</h3>
+<h3 id="RGB的多种透明度">RGB 的多种透明度</h3>
 
 <pre class="notranslate">/* 十六进制语法 */
-#3a30                   <span style="background: #3a30;"> /*   完全透明的绿色 */ </span>
-#3A3F                   <span style="background: #3A3F;"> /* 完全不透明的绿色 */ </span>
-#33aa3300               <span style="background: #33aa3300;"> /*   完全透明的绿色 */ </span>
-#33AA3380               <span style="background: #33AA3380;"> /*  50%不透明的绿色 */ </span>
+#3a30                    /*   完全透明的绿色 */ 
+#3A3F                    /* 完全不透明的绿色 */ 
+#33aa3300                /*   完全透明的绿色 */ 
+#33AA3380                /*  50% 不透明的绿色 */ 
 
 /* 函数语法 */
-rgba(51, 170, 51, .1)   <span style="background: rgba(51, 170, 51, .1);"> /*  10%不透明的绿色 */ </span>
-rgba(51, 170, 51, .4)   <span style="background: rgba(51, 170, 51, .4);"> /*  40%不透明的绿色 */ </span>
-rgba(51, 170, 51, .7)   <span style="background: rgba(51, 170, 51, .7);"> /*  70%不透明的绿色 */ </span>
-rgba(51, 170, 51,  1)   <span style="background: rgba(51, 170, 51,  1);"> /* 完全不透明的绿色 */ </span>
+rgba(51, 170, 51, .1)    /*  10% 不透明的绿色 */ 
+rgba(51, 170, 51, .4)    /*  40% 不透明的绿色 */ 
+rgba(51, 170, 51, .7)    /*  70% 不透明的绿色 */ 
+rgba(51, 170, 51,  1)    /* 完全不透明的绿色 */ 
 
 /* 空格语法 */
-rgba(51 170 51 / 0.4)   <span> /*  40%不透明的绿色 */ </span>
-rgba(51 170 51 / 40%)   <span> /*  40%不透明的绿色 */ </span>
+rgba(51 170 51 / 0.4)    /*  40% 不透明的绿色 */ 
+rgba(51 170 51 / 40%)    /*  40% 不透明的绿色 */ 
 
 /* 带有浮点值的函数语法 */
 rgba(255, 0, 153.6, 1)
 rgba(1e2, .5e1, .5e0, +.25e2%)</pre>
 
-<h3 id="HSL的多种语法">HSL的多种语法</h3>
+<h3 id="HSL的多种语法">HSL 的多种语法</h3>
 
 <pre class="notranslate">/* 以下示例都表示同一颜色：a lavender */
 hsl(270,60%,70%)
@@ -1668,18 +1664,18 @@ hsl(270 60% 50% / 15%)
  </tbody>
 </table>
 
-<h3 id="HSL不同的透明度">HSL不同的透明度</h3>
+<h3 id="HSL不同的透明度">HSL 不同的透明度</h3>
 
-<pre class="notranslate">hsla(240, 100%, 50%, .05)    <span style="background: hsla(240,100%,50%,0.05);"> /*   5% opaque blue */ </span>
-hsla(240, 100%, 50%, .4)     <span style="background: hsla(240,100%,50%,0.4);"> /*  40% opaque blue */ </span>
-hsla(240, 100%, 50%, .7)     <span style="background: hsla(240,100%,50%,0.7);"> /*  70% opaque blue */ </span>
-hsla(240, 100%, 50%, 1)      <span style="background: hsla(240,100%,50%,1);"> /* full opaque blue */ </span>
+<pre class="notranslate">hsla(240, 100%, 50%, .05)     /*   5% opaque blue */ 
+hsla(240, 100%, 50%, .4)      /*  40% opaque blue */ 
+hsla(240, 100%, 50%, .7)      /*  70% opaque blue */ 
+hsla(240, 100%, 50%, 1)       /* full opaque blue */ 
 
 /* Whitespace syntax */
-hsla(240 100% 50% / .05)     <span style="background: hsla(240,100%,50%,0.05);"> /*   5% opaque blue */ </span>
+hsla(240 100% 50% / .05)      /*   5% opaque blue */ 
 
 /* Percentage value for alpha */
-hsla(240 100% 50% / 5%)      <span style="background: hsla(240,100%,50%,0.05);"> /*   5% opaque blue */ </span></pre>
+hsla(240 100% 50% / 5%)       /*   5% opaque blue */ </pre>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -22,7 +22,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototyp
 
 <dl>
  <dt><code>target</code></dt>
- <dd>被拦截目标对象.</dd>
+ <dd>被拦截目标对象。</dd>
  <dt><code>prototype</code></dt>
  <dd>对象新原型或为<code>null</code>.</dd>
 </dl>
@@ -37,7 +37,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototyp
 
 <h3 id="拦截">拦截</h3>
 
-<p>这个方法可以拦截以下操作:</p>
+<p>这个方法可以拦截以下操作：</p>
 
 <ul>
  <li>{{jsxref("Object.setPrototypeOf()")}}</li>
@@ -46,15 +46,15 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototyp
 
 <h3 id="Invariants">Invariants</h3>
 
-<p>如果违反了下列规则，则proxy将抛出一个{{jsxref("TypeError")}}:</p>
+<p>如果违反了下列规则，则 proxy 将抛出一个 {{jsxref("TypeError")}}：</p>
 
 <ul>
- <li><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">如果 </span></font>target</code> 不可扩展, 原型参数必须与<code>Object.getPrototypeOf(target)</code> 的值相同.</li>
+ <li><code>如果 target</code> 不可扩展，原型参数必须与 <code>Object.getPrototypeOf(target)</code> 的值相同。</li>
 </ul>
 
 <h2 id="示例">示例</h2>
 
-<p>如果你不想为你的对象设置一个新的原型，你的handler's的<code>setPrototypeOf</code>方法可以返回false，也可以抛出异常。</p>
+<p>如果你不想为你的对象设置一个新的原型，你的 handler 的 <code>setPrototypeOf</code> 方法可以返回 false，也可以抛出异常。</p>
 
 <p>The former approach means that any operation that performs such mutation, that throws an exception on failure to mutate, will have to create the exception itself.  For example, {{jsxref("Object.setPrototypeOf()")}} will create and throw a <code>TypeError</code> itself.  If the mutation is performed by an operation that <em>doesn't</em> ordinarily throw in case of failure, such as {{jsxref("Reflect.setPrototypeOf()")}}, no exception will be thrown.</p>
 

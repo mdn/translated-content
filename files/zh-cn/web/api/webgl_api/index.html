@@ -2,7 +2,7 @@
 title: WebGL
 slug: Web/API/WebGL_API
 tags:
-  - 3D图形
+  - 3D 图形
   - WebGL
   - WebGL API
   - 图像
@@ -13,15 +13,13 @@ translation_of: Web/API/WebGL_API
 <div class="boxed translate-rendered">
 <div>{{WebGLSidebar}}</div>
 
-<div class="summary">
-<p>WebGL（Web图形库）是一个JavaScript API，可在任何兼容的Web浏览器中渲染高性能的交互式3D和2D图形，而无需使用插件。WebGL通过引入一个与OpenGL ES 2.0非常一致的API来做到这一点，该API可以在HTML5 {{HTMLElement("canvas")}}元素中使用。 这种一致性使API可以利用用户设备提供的硬件图形加速。</p>
-</div>
+<p>WebGL（Web 图形库）是一个 JavaScript API，可在任何兼容的 Web 浏览器中渲染高性能的交互式 3D 和 2D 图形，而无需使用插件。WebGL 通过引入一个与 OpenGL ES 2.0 非常一致的 API 来做到这一点，该 API 可以在 HTML5 {{HTMLElement("canvas")}}元素中使用。 这种一致性使 API 可以利用用户设备提供的硬件图形加速。</p>
 
-<p>目前支持 WebGL 的浏览器有：<a href="https://developer.mozilla.org/zh-CN/Firefox" title="Firefox 4 for developers">Firefox</a> 4+, <a href="http://www.google.com/chrome/" title="http://www.google.com/chrome/">Google Chrome</a> 9+, <a href="http://www.opera.com/" title="http://www.opera.com/">Opera</a> 12+, <a href="http://www.apple.com/safari/" title="http://www.apple.com/fr/safari/">Safari </a>5.1+, <a href="http://windows.microsoft.com/en-us/internet-explorer/browser-ie" title="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer</a> 11+和<a href="https://www.microsoft.com/en-us/edge">Microsoft Edge</a> build 10240+；然而, WebGL一些特性也需要用户的硬件设备支持。</p>
+<p>目前支持 WebGL 的浏览器有：<a href="https://developer.mozilla.org/zh-CN/Firefox" title="Firefox 4 for developers">Firefox</a> 4+, <a href="http://www.google.com/chrome/" title="http://www.google.com/chrome/">Google Chrome</a> 9+, <a href="http://www.opera.com/" title="http://www.opera.com/">Opera</a> 12+, <a href="http://www.apple.com/safari/" title="http://www.apple.com/fr/safari/">Safari </a>5.1+, <a href="http://windows.microsoft.com/en-us/internet-explorer/browser-ie">Internet Explorer</a> 11+ 和<a href="https://www.microsoft.com/en-us/edge">Microsoft Edge</a> build 10240+；然而，WebGL 一些特性也需要用户的硬件设备支持。</p>
 
-<p>{{anch("WebGL 2")}}<font><font> API引入了对大部分的OpenGL ES 3.0功能集的支持; </font><font>它是通过</font></font>{{domxref("WebGL2RenderingContext")}}<font><font>界面</font><font>提供的</font><font>。</font></font></p>
+<p><a href="#webgl_2">WebGL 2</a> API 引入了对大部分的 OpenGL ES 3.0 功能集的支持; 它是通过{{domxref("WebGL2RenderingContext")}}界面提供的。</p>
 
-<p> {{HTMLElement("canvas")}} 元素也被 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</a> 用于在网页上进行2D图形处理。</p>
+<p> {{HTMLElement("canvas")}} 元素也被 <a href="/zh-CN/docs/Web/API/Canvas_API">Canvas API</a> 用于在网页上进行 2D 图形处理。</p>
 
 <h2 id="参考">参考</h2>
 
@@ -102,13 +100,13 @@ translation_of: Web/API/WebGL_API
 <h3 id="常量和类型">常量和类型</h3>
 
 <ul>
- <li><a href="/zh-CN/docs/Web/API/WebGL_API/Constants">WebGL常量</a></li>
- <li><a href="/zh-CN/docs/Web/API/WebGL_API/Types">WebGL类型</a></li>
+ <li><a href="/zh-CN/docs/Web/API/WebGL_API/Constants">WebGL 常量</a></li>
+ <li><a href="/zh-CN/docs/Web/API/WebGL_API/Types">WebGL 类型</a></li>
 </ul>
 
 <h3 id="WebGL_2">WebGL 2</h3>
 
-<p>WebGL 2 是WebGL的一个主要更新，它通过{{domxref("WebGL2RenderingContext")}} 接口提供。它基于OpenGL ES 3.0，新功能包括：</p>
+<p>WebGL 2 是 WebGL 的一个主要更新，它通过{{domxref("WebGL2RenderingContext")}} 接口提供。它基于 OpenGL ES 3.0，新功能包括：</p>
 
 <ul>
  <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL2RenderingContext/texImage3D">3D textures</a>,</li>
@@ -124,15 +122,15 @@ translation_of: Web/API/WebGL_API
 
 <h2 id="指南和教程">指南和教程</h2>
 
-<p>下面，您将找到各种指南，以帮助您学习WebGL概念和教程，提供分步课程和示例。</p>
+<p>下面，您将找到各种指南，以帮助您学习 WebGL 概念和教程，提供分步课程和示例。</p>
 
 <h3 id="指南">指南 </h3>
 
 <dl>
  <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/Data">WebGL 中的数据</a></dt>
- <dd>编写WebGL代码时使用的变量，缓冲区和其他类型数据的指南。</dd>
+ <dd>编写 WebGL 代码时使用的变量，缓冲区和其他类型数据的指南。</dd>
  <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/WebGL_best_practices">WebGL 最佳实践</a></dt>
- <dd>提示和建议，以帮助您提高WebGL内容的质量，性能和可靠性。</dd>
+ <dd>提示和建议，以帮助您提高 WebGL 内容的质量，性能和可靠性。</dd>
  <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/Using_Extensions">使用扩展</a></dt>
  <dd>WebGL 扩展的使用指南。</dd>
 </dl>
@@ -149,43 +147,43 @@ translation_of: Web/API/WebGL_API
 <dl>
  <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/Basic_2D_animation_example">一个基础的 WebGL 的 2D 动画示例</a></dt>
  <dd>此示例演示了单色形状的简单动画。检查的主题是适应宽高比差异，从多个着色器集合构建着色器程序的功能，以及 WebGL 绘图的基础知识。</dd>
- <dt><a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/By_example"><font><font>WebGL示例</font></font></a></dt>
- <dd><font><font>一系列带有简短说明的实时示例展示了WebGL的概念和功能。</font><font>根据主题和难易程度对示例进行了排序，涵盖了WebGL渲染上下文，着色器编程，纹理，几何图形，用户交互等。</font></font></dd>
+ <dt><a href="/zh-CN/docs/Web/API/WebGL_API/By_example">WebGL 示例</a></dt>
+ <dd>一系列带有简短说明的实时示例展示了 WebGL 的概念和功能。根据主题和难易程度对示例进行了排序，涵盖了 WebGL 渲染上下文，着色器编程，纹理，几何图形，用户交互等。</dd>
 </dl>
 
 <h3 id="高级教程">高级教程</h3>
 
 <dl>
  <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/WebGL_model_view_projection">WebGL 模型视图投影</a></dt>
- <dd>详述了常用于显示3D物体视图的三种核心矩阵：模型，视图和投影矩阵。</dd>
+ <dd>详述了常用于显示 3D 物体视图的三种核心矩阵：模型，视图和投影矩阵。</dd>
  <dt><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Web 中的矩阵运算</a></dt>
- <dd>讲述 3D 变换矩阵工作原理的指南 —— 这也能在WebGL计算和CSS3变换中派上用场。</dd>
+ <dd>讲述 3D 变换矩阵工作原理的指南 —— 这也能在 WebGL 计算和 CSS3 变换中派上用场。</dd>
 </dl>
 
 <h2 id="资源">资源</h2>
 
 <ul>
- <li><a href="https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage">Raw WebGL: WebGL入门</a> Nick Desaulniers 主讲的WebGL 基础知识。如果你从未接触过底层的图形编程，这是一个开始学习初级图形编程的好地方。</li>
- <li><a href="http://www.khronos.org/webgl/" title="http://www.khronos.org/webgl/">WebGL官网</a> Khronos Group 的WebGL官方站点。</li>
- <li><a href="http://learningwebgl.com/blog/?page_id=1217" title="http://learningwebgl.com/blog/">学习WebGL</a> 一个关于如何使用WebGL的教程站点。</li>
- <li><a href="http://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/" title="http://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/">WebGL基础</a> 一个关于WebGL的基础教程。</li>
- <li><a href="http://webglplayground.net" title="http://webglplayground.net">WebGL试炼</a> 一个在线创建和分享WebGL的工具站点，非常适合快速创建一个原型或者体验一个成品。</li>
- <li><a href="http://www.webglacademy.com" title="http://www.webglacademy.com">WebGL Academy</a> 通过一个 HTML/JavaScript 编辑器来学习一个基础的WebGl基础知识。</li>
- <li><a href="http://webglstats.com/">WebGL Stats</a> 一个统计WebGL在不同平台上能力表现的网站。</li>
+ <li><a href="https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage">Raw WebGL: WebGL 入门</a> Nick Desaulniers 主讲的 WebGL 基础知识。如果你从未接触过底层的图形编程，这是一个开始学习初级图形编程的好地方。</li>
+ <li><a href="http://www.khronos.org/webgl/">WebGL 官网</a> Khronos Group 的 WebGL 官方站点。</li>
+ <li><a href="http://learningwebgl.com/blog/?page_id=1217">学习 WebGL</a> 一个关于如何使用 WebGL 的教程站点。</li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/">WebGL 基础</a> 一个关于 WebGL 的基础教程。</li>
+ <li><a href="http://webglplayground.net">WebGL 试炼</a> 一个在线创建和分享 WebGL 的工具站点，非常适合快速创建一个原型或者体验一个成品。</li>
+ <li><a href="http://www.webglacademy.com">WebGL Academy</a> 通过一个 HTML/JavaScript 编辑器来学习一个基础的 WebGl 基础知识。</li>
+ <li><a href="http://webglstats.com/">WebGL Stats</a> 一个统计 WebGL 在不同平台上能力表现的网站。</li>
 </ul>
 
 <h3 id="库">库</h3>
 
 <ul>
- <li><a class="link-https" href="https://github.com/toji/gl-matrix" title="https://github.com/toji/gl-matrix">glMatrix</a> 创建高性能WebGL应用的JavaScript矩阵矢量库。</li>
- <li><a href="/zh-CN/docs/">PhiloGL</a> 一个用于数据可视化、创意编程和游戏开发的WebGL库。</li>
- <li><a href="http://www.pixijs.com/" rel="noopener"><font><font>Pixi.js</font></font></a><font><font>是一种快速的开源2D WebGL渲染器。</font></font></li>
- <li><a href="https://playcanvas.com/" rel="noopener"><font><font>PlayCanvas</font></font></a><font><font>是一个开源游戏引擎。</font></font></li>
- <li><a href="http://sylvester.jcoglan.com/" rel="noopener" title="http://sylvester.jcoglan.com/"><font><font>Sylvester</font></font></a><font><font>是一个用于处理向量和矩阵的开源库。</font><font>尚未针对WebGL进行优化，但功能极其强大。</font></font></li>
- <li><a href="https://threejs.org/" rel="noopener"><font><font>three.js</font></font></a><font><font>是一个开源的，功能齐全的3D WebGL库。</font></font></li>
- <li><a href="https://phaser.io/" rel="noopener"><font><font>Phaser</font></font></a><font><font>是一个适用于Canvas和WebGL的浏览器游戏的快速，免费和有趣的开源框架。</font></font></li>
- <li><a href="https://github.com/redcamel/RedGL2" rel="noopener"><font><font>RedGL</font></font></a><font><font>  是一个开源3D WebGL库。</font></font></li>
- <li><a href="https://kitware.github.io/vtk-js/" rel="noopener"><font><font>vtk.js</font></font></a><font><font>  是一个JavaScript库，用于在浏览器中进行科学可视化。</font></font></li>
+ <li><a class="link-https" href="https://github.com/toji/gl-matrix">glMatrix</a> 创建高性能 WebGL 应用的 JavaScript 矩阵矢量库。</li>
+ <li><a href="/zh-CN/docs/">PhiloGL</a> 一个用于数据可视化、创意编程和游戏开发的 WebGL 库。</li>
+ <li><a href="http://www.pixijs.com/" rel="noopener">Pixi.js</a>是一种快速的开源 2D WebGL 渲染器。</li>
+ <li><a href="https://playcanvas.com/" rel="noopener">PlayCanvas</a>是一个开源游戏引擎。</li>
+ <li><a href="http://sylvester.jcoglan.com/" rel="noopener">Sylvester</a>是一个用于处理向量和矩阵的开源库。尚未针对 WebGL 进行优化，但功能极其强大。</li>
+ <li><a href="https://threejs.org/" rel="noopener">three.js</a>是一个开源的，功能齐全的 3D WebGL 库。</li>
+ <li><a href="https://phaser.io/" rel="noopener">Phaser</a>是一个适用于 Canvas 和 WebGL 的浏览器游戏的快速，免费和有趣的开源框架。</li>
+ <li><a href="https://github.com/redcamel/RedGL2" rel="noopener">RedGL</a>  是一个开源 3D WebGL 库。</li>
+ <li><a href="https://kitware.github.io/vtk-js/" rel="noopener">vtk.js</a>  是一个 JavaScript 库，用于在浏览器中进行科学可视化。</li>
 </ul>
 
 <h2 id="规范">规范</h2>
@@ -243,25 +241,25 @@ translation_of: Web/API/WebGL_API
 
 <h3 id="兼容性说明">兼容性说明</h3>
 
-<p>不仅是浏览器，GPU本身也需要支持该特性。比如 S3 纹理压缩 (S3TC) 只在基于图睿的GPU的设备上可用。大多数浏览器可以通过 <code>webgl</code> 这一上下文名称来使用 WebGL，但是旧的浏览器需要使用 <code>experimental-webgl</code>。另外，将来的 <a href="/zh-CN/docs/Web/API/WebGL2RenderingContext">WebGL 2</a> 只会向后兼容，其使用的上下文名称为 <code>webgl2</code> 。</p>
+<p>不仅是浏览器，GPU 本身也需要支持该特性。比如 S3 纹理压缩 (S3TC) 只在基于图睿的 GPU 的设备上可用。大多数浏览器可以通过 <code>webgl</code> 这一上下文名称来使用 WebGL，但是旧的浏览器需要使用 <code>experimental-webgl</code>。另外，将来的 <a href="/zh-CN/docs/Web/API/WebGL2RenderingContext">WebGL 2</a> 只会向后兼容，其使用的上下文名称为 <code>webgl2</code> 。</p>
 
-<h3 id="Gecko备忘">Gecko备忘</h3>
+<h3 id="Gecko备忘">Gecko 备忘</h3>
 
-<h4 id="WebGL调试与检测">WebGL调试与检测</h4>
+<h4 id="WebGL调试与检测">WebGL 调试与检测</h4>
 
-<p>开始使用Gecko 10.0 {{geckoRelease("10.0")}}, 在测试中，这里有两个参数可以让你来控制WebGL性能:</p>
+<p>开始使用 Gecko 10.0 {{geckoRelease("10.0")}}, 在测试中，这里有两个参数可以让你来控制 WebGL 性能：</p>
 
 <dl>
  <dt><code>webgl.min_capability_mode</code></dt>
- <dd>一个以布尔值存储的属性。当它的值为<code>True</code>时，将会启用最小性能模式。当这个模式启用时，WebGL将会仅提供由其标准指定的最基本的功能集和性能支持。这样可以确保您的WebGL代码能够在性能的设备和浏览器上正确运行。它的默认值是<code>False</code>。</dd>
+ <dd>一个以布尔值存储的属性。当它的值为<code>True</code>时，将会启用最小性能模式。当这个模式启用时，WebGL 将会仅提供由其标准指定的最基本的功能集和性能支持。这样可以确保您的 WebGL 代码能够在性能的设备和浏览器上正确运行。它的默认值是<code>False</code>。</dd>
  <dt><code>webgl.disable_extensions</code></dt>
- <dd>一个以布尔值存储的属性。当它的值为<code>True</code>时，会禁用所有的WebGL拓展。它的默认值是<code>False</code>。</dd>
+ <dd>一个以布尔值存储的属性。当它的值为<code>True</code>时，会禁用所有的 WebGL 拓展。它的默认值是<code>False</code>。</dd>
 </dl>
 
 <h2 id="参见">参见</h2>
 
 <ul>
  <li><a href="/zh-CN/docs/Web/API/Canvas_API">Canvas(画布)</a></li>
- <li><a href="/zh-CN/docs/Web/API/WebGLRenderingContext/getSupportedExtensions#Browser_compatibility">兼容性信息关于WebGL的扩展</a></li>
+ <li><a href="/zh-CN/docs/Web/API/WebGLRenderingContext/getSupportedExtensions#Browser_compatibility">兼容性信息关于 WebGL 的扩展</a></li>
 </ul>
 </div>

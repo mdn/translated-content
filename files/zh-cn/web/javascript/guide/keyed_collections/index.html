@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Guide/Keyed_collections
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}</div>
 
-<p class="summary">这一章介绍由key值标记的数据容器；Map 和 Set 对象承载的数据元素可以按照插入时的顺序被迭代遍历。</p>
+<p>这一章介绍由 key 值标记的数据容器；Map 和 Set 对象承载的数据元素可以按照插入时的顺序被迭代遍历。</p>
 
 <h2 id="映射">映射</h2>
 
@@ -40,7 +40,7 @@ for (var [key, value] of sayings) {
 sayings.clear();
 sayings.size; // 0</pre>
 
-<h3 id="Object和Map的比较"><code><font face="Consolas, Liberation Mono, Courier, monospace">Object</font></code>和<code>Map</code>的比较</h3>
+<h3 id="Object和Map的比较"><code>Object</code>和<code>Map</code>的比较</h3>
 
 <p>一般地，{{jsxref("Object", "objects", "", 1)}}会被用于将字符串类型映射到数值。<code>Object</code>允许设置键值对、根据键获取值、删除键、检测某个键是否存在。而<code>Map</code>具有更多的优势。</p>
 
@@ -48,7 +48,7 @@ sayings.size; // 0</pre>
  <li><code>Object</code>的键均为<code>Strings</code>类型，在<code>Map</code>里键可以是任意类型。</li>
  <li>必须手动计算<code>Object</code>的尺寸，但是可以很容易地获取使用<code>Map</code>的尺寸。</li>
  <li><code>Map</code>的遍历遵循元素的插入顺序。</li>
- <li><code>Object</code>有原型，所以映射中有一些缺省的键。<font face="Open Sans, Arial, sans-serif">（</font>可以用 <code>map = Object.create(null) 回避</code>）。</li>
+ <li><code>Object</code>有原型，所以映射中有一些缺省的键。（可以用 <code>map = Object.create(null) 回避</code>）。</li>
 </ul>
 
 <p>这三条提示可以帮你决定用<code>Map</code>还是<code>Object</code>：</p>
@@ -61,7 +61,7 @@ sayings.size; // 0</pre>
 
 <h3 id="WeakMap对象"><code>WeakMap</code>对象</h3>
 
-<p>{{jsxref("WeakMap")}}对象也是键值对的集合。它的<strong>键必须是对象类型</strong>，值可以是任意类型。它的键被弱保持，也就是说，当其键所指对象没有其他地方引用的时候，它会被GC回收掉。<code>WeakMap</code>提供的接口与<code>Map</code>相同。</p>
+<p>{{jsxref("WeakMap")}}对象也是键值对的集合。它的<strong>键必须是对象类型</strong>，值可以是任意类型。它的键被弱保持，也就是说，当其键所指对象没有其他地方引用的时候，它会被 GC 回收掉。<code>WeakMap</code>提供的接口与<code>Map</code>相同。</p>
 
 <p>与<code>Map</code>对象不同的是，<code>WeakMap</code>的键是不可枚举的。不提供列出其键的方法。列表是否存在取决于垃圾回收器的状态，是不可预知的。</p>
 
@@ -92,7 +92,7 @@ module.exports = Public;
 
 <p>{{jsxref("Set")}}对象是一组值的集合，这些值是不重复的，可以按照添加顺序来遍历。</p>
 
-<p>这里演示了<code>Set</code>的基本操作，更多示例和完整API可以参考{{jsxref("Set")}}。</p>
+<p>这里演示了<code>Set</code>的基本操作，更多示例和完整 API 可以参考{{jsxref("Set")}}。</p>
 
 <pre class="brush: js">var mySet = new Set();
 mySet.add(1);
@@ -120,7 +120,7 @@ mySet2 = new Set([1,2,3,4]);
 
 <h3 id="Array和Set的对比"><code>Array</code>和<code>Set</code>的对比</h3>
 
-<p>一般情况下，在JavaScript中使用数组来存储一组元素，而新的集合对象有这些优势：</p>
+<p>一般情况下，在 JavaScript 中使用数组来存储一组元素，而新的集合对象有这些优势：</p>
 
 <ul>
  <li>数组中用于判断元素是否存在的{{jsxref("Array.indexOf", "indexOf")}} 函数效率低下。</li>
@@ -131,7 +131,7 @@ mySet2 = new Set([1,2,3,4]);
 
 <h3 id="WeakSet对象"><code>WeakSet</code>对象</h3>
 
-<p>{{jsxref("WeakSet")}}对象是一组对象的集合。<code>WeakSet</code>中的对象不重复且不可枚举<font face="Consolas, Liberation Mono, Courier, monospace">。</font></p>
+<p>{{jsxref("WeakSet")}}对象是一组对象的集合。<code>WeakSet</code>中的对象不重复且不可枚举。</p>
 
 <p>与{{jsxref("Set")}}对象的主要区别有：</p>
 
@@ -140,11 +140,11 @@ mySet2 = new Set([1,2,3,4]);
  <li><code>WeakSet</code>的“<em>weak</em>”指的是，对集合中的对象，如果不存在其他引用，那么该对象将可被垃圾回收。于是不存在一个当前可用对象组成的列表，所以<code>WeakSets</code>不可枚举</li>
 </ul>
 
-<p><code>WeakSet</code>的用例很有限，比如使用DOM元素作为键来追踪它们而不必担心内存泄漏。</p>
+<p><code>WeakSet</code>的用例很有限，比如使用 DOM 元素作为键来追踪它们而不必担心内存泄漏。</p>
 
 <h2 id="Map的键和Set的值的等值判断"><code>Map</code>的键和<code>Set</code>的值的等值判断</h2>
 
-<p><code>Map</code>的键和<code>Set</code>的值的等值判断都基于<a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero">same-value-zero algorithm</a>：</p>
+<p><code>Map</code>的键和<code>Set</code>的值的等值判断都基于<a href="https://tc39.es/ecma262/#sec-samevaluezero">same-value-zero algorithm</a>：</p>
 
 <ul>
  <li>判断使用与<code>===</code>相似的规则。</li>

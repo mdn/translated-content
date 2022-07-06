@@ -8,12 +8,12 @@ translation_of: Web/API/HTMLScriptElement
 <p>HTML脚本元素暴露HTMLScriptElement接口,它提供了特殊的属性和方法(超出了常规HTMLElement对象接口,他们也可以通过继承操纵&lt;脚本&gt;元素的布局和演示。）<br>
   </p>
 
-<h2 id="Properties" name="Properties">Properties</h2>
+<h2 id="Properties">Properties</h2>
 
 <p><em>从其父类中继承的属性, {{domxref("HTMLElement")}}。</em><br>
   </p>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <th>Name</th>
@@ -99,7 +99,7 @@ function importScript (sSrc, fOnload) {
   oScript.onerror = loadError;
   if (fOnload) { oScript.onload = fOnload; }
   document.currentScript.parentNode.insertBefore(oScript, document.currentScript);
-  <span style="line-height: normal;">oScript.src = sSrc;</span>
+  oScript.src = sSrc;
 }</pre>
 
 <p>…the same thing, but appending the new scripts as last childs of the {{ HTMLElement("head") }} tag, instead of appending them immediately before the {{domxref("document.currentScript")}} element:</p>
@@ -131,147 +131,11 @@ importScript("myScript2.js", /* onload function: */ function () { alert("You rea
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting-1.html#the-script-element", "HTMLScriptElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "scripting-1.html#the-script-element", "HTMLScriptElement")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "scripting-1.html#the-script-element", "HTMLScriptElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>The following properties are now obsolete: <code>htmlFor,</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-81598695', 'HTMLScriptElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>No change from {{SpecName("DOM1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-81598695', 'HTMLScriptElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>async</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
-   <td>10</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>defer</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>
-    <p>4 (follows a spec of its own)</p>
-
-    <p>10 (by the spec)</p>
-   </td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>crossOrigin</code> {{experimental_inline}}</td>
-   <td>{{WebKitBug(81438)}}</td>
-   <td>{{CompatGeckoDesktop("13")}} {{bug(696301)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{WebKitBug(81438)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>async</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>defer</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>crossOrigin</code> {{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
-
-<p>　　从Gecko2.0 { { geckoRelease(" 2.0 ")} },插入脚本创建的元素通过调用document.createElement(“脚本”)到DOM不再强制执行插入顺序。这种变化让Gecko正确遵守HTML5规范。让script-inserted外部脚本执行的插入顺序,设置异步属性为false。<br>
- 　　</p>
+{{Compat("api.HTMLScriptElement")}}
 
 <h2 id="See_also">See also</h2>
 

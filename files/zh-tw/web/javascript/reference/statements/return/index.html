@@ -58,12 +58,12 @@ a + b;
 
 <p>主控台會警告「unreachable code after return statement」（在 return 宣告後面有無法抵達的程式碼）。</p>
 
-<div class="note">從 Gecko 40 {{geckoRelease(40)}} 開始，如果主控台發現在 return 宣告後面有無法抵達的程式碼，就會顯示警告。</div>
+<div class="notecard note"><p><strong>備註：</strong>從 Gecko 40 {{geckoRelease(40)}} 開始，如果主控台發現在 return 宣告後面有無法抵達的程式碼，就會顯示警告。</p></div>
 
 <p>要避免 ASI 問題，可以添加括號：</p>
 
 <pre class="brush: js">return (
-  a + b
+  a + b
 );
 </pre>
 
@@ -112,45 +112,15 @@ answer(1337); // 56154
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規範</th>
-   <th scope="col">狀態</th>
-   <th scope="col">註解</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>初始定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.9', 'Return statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-return-statement', 'Return statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-return-statement', 'Return statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
-
-
 
 <p>{{Compat("javascript.statements.return")}}</p>
 
 <h2 id="參見">參見</h2>
 
 <ul>
- <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope" title="En/Core_JavaScript_1.5_Reference/Functions">函式</a></li>
+ <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope">函式</a></li>
  <li><a href="/zh-TW/docs/Web/JavaScript/Closures">閉包</a></li>
 </ul>

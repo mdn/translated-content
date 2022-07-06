@@ -51,7 +51,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 
 <h2 id="自动定位的默认规则">自动定位的默认规则</h2>
 
-<p>正如上例所示，所有子项目都会把自己摆放到网格中，每个单元格中放一个。默认的流向是按行排列项目，网格会首先尝试在第1行的每个单元格中摆放项目。如果已经通过 <code>grid-template-rows</code> 属性创建了其他行，网格就会继续把项目摆放到这些行中。如果在显式的网格中没有足够的行用来摆放所有的项目，隐式的新行就会被创建出来。</p>
+<p>正如上例所示，所有子项目都会把自己摆放到网格中，每个单元格中放一个。默认的流向是按行排列项目，网格会首先尝试在第 1 行的每个单元格中摆放项目。如果已经通过 <code>grid-template-rows</code> 属性创建了其他行，网格就会继续把项目摆放到这些行中。如果在显式的网格中没有足够的行用来摆放所有的项目，隐式的新行就会被创建出来。</p>
 
 <h3 id="调整网格中隐式行的大小">调整网格中隐式行的大小</h3>
 
@@ -378,7 +378,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 
 <p>至此，除了我们明确定位过的项目，其他项目一般都会被网格自动处理并且保持它们在 DOM 中的顺序，这正是一般情况下我们想要的结果。比如你设计了一个表单，当然不想让标签和别的表单元素因为要填充缺口而使表单变得前后错乱。不过有时候要布局的项目并没有逻辑顺序，所以我们希望能够创建一种没有缺口的布局。</p>
 
-<p>实现这个效果的方法是在网格容器的 {{cssxref("grid-auto-flow")}} 属性值中加入 <code>dense</code> 关键字。这和此前把网格流向改为列优先时设置值为 <code>column</code> 的是同一个属性，所以在列优先流向时，要设置2个值 <code>grid-auto-flow: column dense</code>。</p>
+<p>实现这个效果的方法是在网格容器的 {{cssxref("grid-auto-flow")}} 属性值中加入 <code>dense</code> 关键字。这和此前把网格流向改为列优先时设置值为 <code>column</code> 的是同一个属性，所以在列优先流向时，要设置 2 个值 <code>grid-auto-flow: column dense</code>。</p>
 
 <p>经过以上设置，网格就会回填缺口，以前网格会遗留下缺口，而现在它会为此前的缺口找到适合它的项目，然后把项目从 DOM 中拿出来再放到缺口中去。对于已经重新指定过顺序的网格，这样做不会改变项目之间原有的逻辑顺序，比如对于 Tab 键的顺序仍然与文档的顺序相同。在后面的文章中我们会讨论网格布局潜在的可用性问题，此外你应该意识到，使用这个功能会让 DOM 中看到的顺序与实际显示的顺序不一致，它们两者之间的联系会被打破。</p>
 
@@ -444,7 +444,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 
 <h3 id="匿名网格项目">匿名网格项目</h3>
 
-<p>标准中还提到了匿名网格项目。当有一些字符串或文本被包含在网格容器中，但却没有被其他元素包装，它们就会被创建为匿名网格项目。下面的例子，假设容器的类 <code>grid</code> 设置了 <code>display: grid</code> 属性，那么网格中就有三个网格项目，第一个就是匿名项目，因为它没有用标签分隔，所以会被自动定位规则处理。另2个放在 div 中的项目，它们可以被自动定位，也可以通过网格的定位属性来定位。</p>
+<p>标准中还提到了匿名网格项目。当有一些字符串或文本被包含在网格容器中，但却没有被其他元素包装，它们就会被创建为匿名网格项目。下面的例子，假设容器的类 <code>grid</code> 设置了 <code>display: grid</code> 属性，那么网格中就有三个网格项目，第一个就是匿名项目，因为它没有用标签分隔，所以会被自动定位规则处理。另 2 个放在 div 中的项目，它们可以被自动定位，也可以通过网格的定位属性来定位。</p>
 
 <pre class="brush: css">&lt;div class="grid"&gt;
   I am a string and will become an anonymous item
@@ -555,11 +555,11 @@ dd {
 
 <p>可能你在使用自动定位或网格布局的其他功能时也会遇到问题，如果遇到了，请把它们抛出来，或者作为用例追加到已有问题上，一方面便于解决，另一方面也会帮助规范在未来的新版本变得更好。</p>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li><a href="/zh-CN/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/zh-CN/docs/Web/CSS/Reference"><strong>CSS参考</strong></a></li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS网格布局</a></li>
+ <li><a href="/zh-CN/docs/Web/CSS/Reference"><strong>CSS 参考</strong></a></li>
+ <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS 网格布局</a></li>
  <li data-default-state="open"><a href="#"><strong>指南</strong></a>
   <ol>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">网格布局的基本概念</a></li>
@@ -570,8 +570,8 @@ dd {
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">网格布局中的自动定位</a></li>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">网格布局中的盒模型对齐</a></li>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">网格、逻辑值和书写模式</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS网格布局和可及性</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS网格布局和渐进增强</a></li>
+   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS 网格布局和可及性</a></li>
+   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS 网格布局和渐进增强</a></li>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">使用网格实现常见布局</a></li>
   </ol>
  </li>

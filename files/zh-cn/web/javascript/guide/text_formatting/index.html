@@ -1,5 +1,5 @@
 ---
-title: Text formatting
+title: 文本格式化
 slug: Web/JavaScript/Guide/Text_formatting
 tags:
   - Guide
@@ -8,78 +8,78 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}</div>
 
-<p class="summary">本章介绍在Javascript中如何使用字符串与文本内容。</p>
+<p>本章介绍在 Javascript 中如何使用字符串与文本内容。</p>
 
 <h2 id="字符串">字符串</h2>
 
-<p>JavaScript中的 {{Glossary("String")}} 类型用于表示文本型的数据. 它是由无符号整数值（16bit）作为元素而组成的集合. 字符串中的每个元素在字符串中占据一个位置. 第一个元素的index值是0, 下一个元素的index值是1, 以此类推. 字符串的长度就是字符串中所含的元素个数.你可以通过String字面值或者String对象两种方式创建一个字符串。</p>
+<p>JavaScript 中的 {{Glossary("String")}} 类型用于表示文本型的数据。它是由无符号整数值（16bit）作为元素而组成的集合。字符串中的每个元素在字符串中占据一个位置. 第一个元素的 index 值是 0，下一个元素的 index 值是 1，以此类推。字符串的长度就是字符串中所含的元素个数.你可以通过 String 字面值或者 String 对象两种方式创建一个字符串。</p>
 
-<h3 id="String字面量">String字面量</h3>
+<h3 id="String字面量">String 字面量</h3>
 
-<p>可以使用单引号或双引号创建简单的字符串:</p>
+<p>可以使用单引号或双引号创建简单的字符串：</p>
 
-<pre class="brush: js notranslate">'foo'
+<pre class="brush: js">'foo'
 "bar"</pre>
 
-<p>可以使用转义序列来创建更复杂的字符串:</p>
+<p>可以使用转义序列来创建更复杂的字符串：</p>
 
-<h4 id="16进制转义序列">16进制转义序列</h4>
+<h4 id="16进制转义序列">16 进制转义序列</h4>
 
-<p>\x之后的数值将被认为是一个16进制数.</p>
+<p>\x之后的数值将被认为是一个 16 进制数。</p>
 
-<pre class="brush: js notranslate">'\xA9' // "©"
+<pre class="brush: js">'\xA9' // "©"
 </pre>
 
-<h4 id="Unicode转义序列">Unicode转义序列</h4>
+<h4 id="Unicode转义序列">Unicode 转义序列</h4>
 
-<p>Unicode转义序列在\u之后需要至少4个字符.</p>
+<p>Unicode 转义序列在\u之后需要至少 4 个字符。</p>
 
-<pre class="brush: js notranslate">'\u00A9' // "©"</pre>
+<pre class="brush: js">'\u00A9' // "©"</pre>
 
-<h4 id="Unicode字元逸出">Unicode字元逸出</h4>
+<h4 id="Unicode字元逸出">Unicode 字元逸出</h4>
 
-<p>这是ECMAScript 6中的新特性。有了Unicode字元逸出，任何字符都可以用16进制数转义, 这使得通过Unicode转义表示大于<code>0x10FFFF</code>的字符成为可能。使用简单的Unicode转义时通常需要分别写字符相应的两个部分（译注：大于<span style="font-family: courier,andale mono,monospace;">0x10FFFF的字符需要拆分为相应的两个小于0x10FFFF的部分</span>）来达到同样的效果。</p>
+<p>这是 ECMAScript 6 中的新特性。有了 Unicode 字元逸出，任何字符都可以用 16 进制数转义，这使得通过 Unicode 转义表示大于<code>0x10FFFF</code>的字符成为可能。使用简单的 Unicode 转义时通常需要分别写字符相应的两个部分（译注：大于 0x10FFFF 的字符需要拆分为相应的两个小于 0x10FFFF 的部分）来达到同样的效果。</p>
 
 <p>请参阅 {{jsxref("String.fromCodePoint()")}} 或 {{jsxref("String.prototype.codePointAt()")}}。</p>
 
-<pre class="brush: js notranslate">'\u{2F804}'
+<pre class="brush: js">'\u{2F804}'
 
 // the same with simple Unicode escapes
 '\uD87E\uDC04'</pre>
 
 <h3 id="字符串对象">字符串对象</h3>
 
-<p>{{jsxref("String")}} 对象是对原始string类型的封装 .</p>
+<p>{{jsxref("String")}} 对象是对原始 string 类型的封装 .</p>
 
-<pre class="notranslate">const foo = new String('foo'); // 创建一个 String 对象
+<pre class="brush: js">const foo = new String('foo'); // 创建一个 String 对象
 console.log(foo); // 输出: [String: 'foo']
 typeof foo; // 返回 'object'</pre>
 
-<p>你可以在String字面值上使用String对象的任何方法—JavaScript自动把String字面值转换为一个临时的String对象, 然后调用其相应方法,最后丢弃此临时对象.在String字面值上也可以使用String.length属性.</p>
+<p>你可以在 String 字面值上使用 String 对象的任何方法—JavaScript 自动把 String 字面值转换为一个临时的 String 对象，然后调用其相应方法，最后丢弃此临时对象。在 String 字面值上也可以使用 String.length 属性。</p>
 
-<p>除非必要, 应该尽量使用 String 字面值，因为String对象的某些行为可能并不与直觉一致。举例：</p>
+<p>除非必要， 应该尽量使用 String 字面值，因为 String 对象的某些行为可能并不与直觉一致。举例：</p>
 
-<pre class="notranslate">const firstString = '2 + 2'; //创建一个字符串字面量
+<pre class="brush: js">const firstString = '2 + 2'; //创建一个字符串字面量
 const secondString = new String('2 + 2'); // 创建一个字符串对象
 eval(firstString); // 返回数字 4
-eval(secondString); // 返回字符串 "2 + 2"</pre>
+eval(secondString); // 返回包含 "2 + 2" 的字符串对象</pre>
 
 <p><code>String</code> 对象有一个属性 <code>length</code>，标识了字符串中 UTF-16 的码点个数。举例，下面的代码把 13 赋值给了<code>helloLength</code>，因为 "Hello, World!" 包含 13 个字符，每个字符用一个 UTF-16 码点表示。你可以通过数组的方式访问每一个码点，但你不能修改每个字符，因为字符串是不变的类数组对象： </p>
 
-<pre class="notranslate">const hello = 'Hello, World!';
+<pre class="brush: js">const hello = 'Hello, World!';
 const helloLength = hello.length;
 hello[0] = 'L'; // 无效，因为字符串是不变的
 hello[0]; // 返回 "H"</pre>
 
 <p>Characters whose Unicode scalar values are greater than U+FFFF (such as some rare Chinese/Japanese/Korean/Vietnamese characters and some emoji) are stored in UTF-16 with two surrogate code units each. For example, a string containing the single character U+1F600 "Emoji grinning face" will have length 2. Accessing the individual code units in such a string using brackets may have undesirable consequences such as the formation of strings with unmatched surrogate code units, in violation of the Unicode standard. (Examples should be added to this page after MDN bug 857438 is fixed.) See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.codePointAt()")}}.</p>
 
-<p><code>String</code>对象有许多方法: 举例来说有些方法返回字符串本身的变体, 如 <code>substring</code> 和<code>toUpperCase</code>.</p>
+<p><code>String</code>对象有许多方法：举例来说有些方法返回字符串本身的变体，如 <code>substring</code> 和<code>toUpperCase</code>.</p>
 
-<p>下表总结了 {{jsxref("String")}} 对象的方法.</p>
+<p>下表总结了 {{jsxref("String")}} 对象的方法。</p>
 
 <table class="standard-table">
  <caption>
- <h4 id="String对象方法">String对象方法</h4>
+ <h4 id="String对象方法">String 对象方法</h4>
  </caption>
  <thead>
   <tr>
@@ -106,11 +106,11 @@ hello[0]; // 返回 "H"</pre>
   </tr>
   <tr>
    <td>{{jsxref("String.fromCharCode", "fromCharCode")}}, {{jsxref("String.fromCodePoint", "fromCodePoint")}}</td>
-   <td>从指定的Unicode值序列构造一个字符串。这是一个String类方法，不是实例方法。</td>
+   <td>从指定的 Unicode 值序列构造一个字符串。这是一个 String 类方法，不是实例方法。</td>
   </tr>
   <tr>
    <td>{{jsxref("String.split", "split")}}</td>
-   <td>通过将字符串分离成一个个子串来把一个String对象分裂到一个字符串数组中。</td>
+   <td>通过将字符串分离成一个个子串来把一个 String 对象分裂到一个字符串数组中。</td>
   </tr>
   <tr>
    <td>{{jsxref("String.slice", "slice")}}</td>
@@ -122,7 +122,7 @@ hello[0]; // 返回 "H"</pre>
   </tr>
   <tr>
    <td>{{jsxref("String.match", "match")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.search", "search")}}</td>
-   <td>通过正则表达式来工作.</td>
+   <td>通过正则表达式来工作。</td>
   </tr>
   <tr>
    <td>{{jsxref("String.toLowerCase", "toLowerCase")}}, {{jsxref("String.toUpperCase", "toUpperCase")}}</td>
@@ -147,58 +147,58 @@ hello[0]; // 返回 "H"</pre>
 
 <h3 id="多行模板字符串">多行模板字符串</h3>
 
-<p>模板字符串是一种允许内嵌表达式的String字面值. 可以用它实现多行字符串或者字符串内插等特性.</p>
+<p>模板字符串是一种允许内嵌表达式的 String 字面值。可以用它实现多行字符串或者字符串内插等特性。</p>
 
-<p>模板字符串使用反勾号 (` `) (<a class="external external-icon" href="https://en.wikipedia.org/wiki/Grave_accent">grave accent</a>) 包裹内容而不是单引号或双引号. 模板字符串可以包含占位符. 占位符用美元符号和花括号标识 (<code>${expression}</code>).</p>
+<p>模板字符串使用反勾号 (` `) (<a class="external external-icon" href="https://en.wikipedia.org/wiki/Grave_accent">grave accent</a>) 包裹内容而不是单引号或双引号。模板字符串可以包含占位符. 占位符用美元符号和花括号标识 (<code>${expression}</code>).</p>
 
 <h4 id="多行">多行</h4>
 
-<p>源代码中插入的任何新行开始字符都作为模板字符串的内容. 使用一般的字符串时, 为了创建多行的字符串不得不用如下语法:</p>
+<p>源代码中插入的任何新行开始字符都作为模板字符串的内容。使用一般的字符串时，为了创建多行的字符串不得不用如下语法：</p>
 
-<pre class="brush: js notranslate">console.log("string text line 1\n\
+<pre class="brush: js">console.log("string text line 1\n\
 string text line 2");
 // "string text line 1
 // string text line 2"</pre>
 
-<p>为了实现同样效果的多行字符串, 现在可以写成如下形式:</p>
+<p>为了实现同样效果的多行字符串，现在可以写成如下形式：</p>
 
-<pre class="brush: js notranslate">console.log(`string text line 1
+<pre class="brush: js">console.log(`string text line 1
 string text line 2`);
 // "string text line 1
 // string text line 2"</pre>
 
 <h4 id="嵌入表达式">嵌入表达式</h4>
 
-<p>为了在一般的字符串中嵌入表达式, 需要使用如下语法:</p>
+<p>为了在一般的字符串中嵌入表达式，需要使用如下语法：</p>
 
-<pre class="notranslate">const five = 5;
+<pre class="brush: js">const five = 5;
 const ten = 10;
 console.log('Fifteen is ' + (five + ten) + ' and not ' + (2 * five + ten) + '.');
 // "Fifteen is 15 and not 20."</pre>
 
-<p>现在, 使用模板字符串, 可以使用语法糖让类似功能的实现代码更具可读性:</p>
+<p>现在，使用模板字符串，可以使用语法糖让类似功能的实现代码更具可读性：</p>
 
-<pre class="notranslate">const five = 5;
+<pre class="brush: js">const five = 5;
 const ten = 10;
 console.log(`Fifteen is ${five + ten} and not ${2 * five + ten}.`);
 // "Fifteen is 15 and not 20."</pre>
 
-<p>更多信息, 请阅读 <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a> 中的 <a href="/en-US/docs/Web/JavaScript/Reference/template_strings">Template strings</a>。</p>
+<p>更多信息，请阅读 <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a> 中的 <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Template literals</a>。</p>
 
 <h2 id="国际化">国际化</h2>
 
-<p>{{jsxref("Intl")}} 对象是ECMAScript国际化API的命名空间, 它提供了语言敏感的字符串比较，数字格式化和日期时间格式化功能.  {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, 和 {{jsxref("DateTimeFormat")}} 对象的构造函数是<code>Intl</code>对象的属性.</p>
+<p>{{jsxref("Intl")}} 对象是 ECMAScript 国际化 API 的命名空间，它提供了语言敏感的字符串比较，数字格式化和日期时间格式化功能.  {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, 和 {{jsxref("DateTimeFormat")}} 对象的构造函数是<code>Intl</code>对象的属性。</p>
 
 <h3 id="日期和时间格式化">日期和时间格式化</h3>
 
-<p>{{jsxref("DateTimeFormat")}} 对象在日期和时间的格式化方面很有用. 下面的代码把一个日期格式化为美式英语格式. (不同时区结果不同.)</p>
+<p>{{jsxref("DateTimeFormat")}} 对象在日期和时间的格式化方面很有用。下面的代码把一个日期格式化为美式英语格式. (不同时区结果不同.)</p>
 
-<pre class="brush: js notranslate">const msPerDay = 24 * 60 * 60 * 1000;
+<pre class="brush: js">const msPerDay = 24 * 60 * 60 * 1000;
 
 // July 17, 2014 00:00:00 UTC.
-const july172014 = new Date(msPerDay * (44 * 365 + 11 + 197));//2014-1970=44年
-//这样创建日期真是醉人。。。还要自己计算天数。。。11是闰年中多出的天数。。。
-//197是6×30+16(7月的16天)+3(3个大月)-2(2月少2天)
+const july172014 = new Date(msPerDay * (44 * 365 + 11 + 197));//2014-1970=44 年
+//这样创建日期真是醉人。。。还要自己计算天数。。。11 是闰年中多出的天数。。。
+//197 是 6×30+16(7 月的 16 天)+3(3 个大月)-2(2 月少 2 天)
 
 const options = { year: "2-digit", month: "2-digit", day: "2-digit",
                 hour: "2-digit", minute: "2-digit", timeZoneName: "short" };
@@ -209,9 +209,9 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 
 <h3 id="数字格式化">数字格式化</h3>
 
-<p>{{jsxref("NumberFormat")}} 对象在数字的格式化方面很有用, 比如货币数量值.</p>
+<p>{{jsxref("NumberFormat")}} 对象在数字的格式化方面很有用，比如货币数量值。</p>
 
-<pre class="brush: js notranslate">var gasPrice = new Intl.NumberFormat("en-US",
+<pre class="brush: js">var gasPrice = new Intl.NumberFormat("en-US",
                         { style: "currency", currency: "USD",
                           minimumFractionDigits: 3 });
 
@@ -220,16 +220,16 @@ console.log(gasPrice.format(5.259)); // $5.259
 var hanDecimalRMBInChina = new Intl.NumberFormat("zh-CN-u-nu-hanidec",
                         { style: "currency", currency: "CNY" });
 
-console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
+console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一，三一四。二五
 </pre>
 
 <h3 id="定序">定序</h3>
 
-<p>{{jsxref("Collator")}} 对象在字符串比较和排序方面很有用.</p>
+<p>{{jsxref("Collator")}} 对象在字符串比较和排序方面很有用。</p>
 
-<p>举例, 德语中<em>有两种不同的排序方式 电话本（phonebook）</em> 和 字典（<em>dictionary）</em>. 电话本排序强调发音, 比如在排序前 “ä”, “ö”等被扩展为 “ae”, “oe”等发音.</p>
+<p>举例，德语中<em>有两种不同的排序方式 电话本（phonebook）</em> 和 字典（<em>dictionary）</em>. 电话本排序强调发音，比如在排序前 “ä”, “ö”等被扩展为 “ae”, “oe”等发音。</p>
 
-<pre class="brush: js notranslate">var names = ["Hochberg", "Hönigswald", "Holzman"];
+<pre class="brush: js">var names = ["Hochberg", "Hönigswald", "Holzman"];
 
 var germanPhonebook = new Intl.Collator("de-DE-u-co-phonebk");
 
@@ -238,15 +238,15 @@ console.log(names.sort(germanPhonebook.compare).join(", "));
 // logs "Hochberg, Hönigswald, Holzman"
 </pre>
 
-<p>有些德语词包含变音, 所以在字典中忽略变音进行排序是合理的 (除非待排序的单词只有变音部分不同: <em>schon</em> 先于 <em>schön</em>).</p>
+<p>有些德语词包含变音，所以在字典中忽略变音进行排序是合理的 (除非待排序的单词只有变音部分不同：<em>schon</em> 先于 <em>schön</em>).</p>
 
-<pre class="brush: js notranslate">var germanDictionary = new Intl.Collator("de-DE-u-co-dict");
+<pre class="brush: js">var germanDictionary = new Intl.Collator("de-DE-u-co-dict");
 
 // as if sorting ["Hochberg", "Honigswald", "Holzman"]:
 console.log(names.sort(germanDictionary.compare).join(", "));
 // logs "Hochberg, Holzman, Hönigswald"
 </pre>
 
-<p>关于{{jsxref("Intl")}} API的更多信息, 请参考 <a href="https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/">Introducing the JavaScript Internationalization API</a>。</p>
+<p>关于{{jsxref("Intl")}} API 的更多信息，请参考 <a href="https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/">Introducing the JavaScript Internationalization API</a>。</p>
 
 <div>{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}</div>

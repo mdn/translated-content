@@ -55,8 +55,8 @@ translation_of: Web/API/HTMLMediaElement/canplaythrough_event
 <pre class="brush: js">const video = document.querySelector('video');
 
 video.addEventListener('canplaythrough', (event) =&gt; {
-  console.log('バッファリングを止めることなく、' + '
-      動画全体を再生できると思います。');
+  console.log('バッファリングを止めることなく、' +
+      '動画全体を再生できると思います。');
 });</pre>
 
 <p><code>oncanplaythrough</code> イベントハンドラプロパティを使用する場合</p>
@@ -64,8 +64,8 @@ video.addEventListener('canplaythrough', (event) =&gt; {
 <pre class="brush: js">const video = document.querySelector('video');
 
 video.oncanplaythrough = (event) =&gt; {
-  console.log('バッファリングを止めることなく、' + '
-      動画全体を再生できると思います。');
+  console.log('バッファリングを止めることなく、' +
+      '動画全体を再生できると思います。');
 };</pre>
 
 <h2 id="Specifications" name="Specifications">仕様</h2>

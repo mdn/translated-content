@@ -18,10 +18,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 <p>{{EmbedInteractiveExample("pages/js/function-apply.html")}}</p>
 
-<div class="hidden">
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
-</div>
-
 <h2 id="구문">구문</h2>
 
 <pre class="syntaxbox"><code><var>func</var>.apply(<var>thisArg, </var>[<var>argsArray</var>])</code></pre>
@@ -32,14 +28,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
  <dt><code>thisArg</code></dt>
  <dd>옵션. <code>func</code> 를 호출하는데 제공될 <code>this</code> 의 값. <code>this</code> 는 메소드에 의해 실제로 보여지는 값이 아닐 수 있음을 유의합니다. 메소드가 {{jsxref("Strict_mode", "non-strict mode", "", 1)}} 코드의 함수일 경우, {{jsxref("null")}} 과 {{jsxref("undefined")}} 가 전역 객체로 대체되며, 기본 값은 제한됩니다.</dd>
  <dt><code>argsArray</code></dt>
- <dd>옵션. <em><code>func</code></em> 이 호출되어야 하는 인수를 지정하는 유사 배열 객체, 함수에 제공된 인수가 없을 경우 {{jsxref("null")}} 또는 {{jsxref("undefined")}}. ECMAScript 5 의 시작으로 이러한 인수들은 배열 대신 제네릭 유사 배열 객체로 사용될 수 있습니다. 아래의 {{anch("Browser_compatibility", "브라우저 호환성")}} 정보를 보세요.</dd>
+ <dd>옵션. <em><code>func</code></em> 이 호출되어야 하는 인수를 지정하는 유사 배열 객체, 함수에 제공된 인수가 없을 경우 {{jsxref("null")}} 또는 {{jsxref("undefined")}}. ECMAScript 5 의 시작으로 이러한 인수들은 배열 대신 제네릭 유사 배열 객체로 사용될 수 있습니다. 아래의 <a href="#browser_compatibility">브라우저 호환성</a> 정보를 보세요.</dd>
 </dl>
 
 <h3 id="반환값">반환값</h3>
 
 <p>지정한 <strong><code>this</code></strong> 값과 인수들로 호출한 함수의 결과.</p>
 
-<h2 id="Description" name="Description">설명</h2>
+<h2 id="Description">설명</h2>
 
 <p>이미 존재하는 함수를 호출할 때 다른 <code>this</code> 객체를 할당할 수 있습니다. <code>this</code> 는 현재 객체, 호출하는 객체를 참조합니다. <code>apply</code> 를 사용해, 새로운 객체마다 메소드를 재작성할 필요없이 한 번만 작성해 다른 객체에 상속시킬 수 있습니다.</p>
 
@@ -55,7 +51,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 <div class="blockIndicator note">Chrome 14와 Internet Explorer 9를 포함한 대부분의 브라우저는 아직 유사배열객체를 apply에 사용할 수 없으며 오류가 출력됩니다.</div>
 
-<h2 id="Examples" name="Examples">예제</h2>
+<h2 id="Examples">예제</h2>
 
 <h3 id="Example_Using_apply_to_chain_constructors" name="Example:_Using_apply_to_chain_constructors">배열에 배열을 붙이기 위해 <code>apply</code> 사용하기</h3>
 

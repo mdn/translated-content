@@ -10,36 +10,36 @@ translation_of: Learn/CSS/CSS_layout/Normal_Flow
 
 <p>{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}</p>
 
-<p class="summary">这篇文章介绍正常的流布局，或者说，在你没有改变默认布局规则情况下的页面元素布局方式。</p>
+<p>这篇文章介绍正常的流布局，或者说，在你没有改变默认布局规则情况下的页面元素布局方式。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">前提:</th>
-   <td>HTML 基础 (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), 和了解CSS如何工作的(study <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>.)</td>
+   <th scope="row">前提：</th>
+   <td>HTML 基础 (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), 和了解 CSS 如何工作的 (study <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>.)</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
-   <td>在做出改动之前，能够解释浏览器默认的布局方式.</td>
+   <th scope="row">目标：</th>
+   <td>在做出改动之前，能够解释浏览器默认的布局方式。</td>
   </tr>
  </tbody>
 </table>
 
-<p>如上小节对布局的介绍，如果你未曾应用任何CSS规则来改变它们的展现方式，网页上的元素将会按照正常布局流来组织。同样的，开始探索前，你可以通过调整元素位置，或者完全的移除元素来改变它们的表现效果。从一副简单的、结构良好并且在正常布局流下仍然易读的文档开始，是上手任何页面的最佳方式（译者注：几乎没有很简单的CSS，标签组织符合一般用法）。这样确保了你的内容的易读性，即便用户使用受限的浏览器或者屏幕阅读设备（译者注：比如有些老旧浏览器对某些CSS特性的支持不理想，或者有用户自定义CSS样式）。此外，由于正常布局流的设计初衷在于构建易读、合理的文档，遵循这样的指引原则，你在对布局做出改动时应该是与文档协同，而不是与之对抗。</p>
+<p>如上小节对布局的介绍，如果你未曾应用任何 CSS 规则来改变它们的展现方式，网页上的元素将会按照正常布局流来组织。同样的，开始探索前，你可以通过调整元素位置，或者完全的移除元素来改变它们的表现效果。从一副简单的、结构良好并且在正常布局流下仍然易读的文档开始，是上手任何页面的最佳方式（译者注：几乎没有很简单的 CSS，标签组织符合一般用法）。这样确保了你的内容的易读性，即便用户使用受限的浏览器或者屏幕阅读设备（译者注：比如有些老旧浏览器对某些 CSS 特性的支持不理想，或者有用户自定义 CSS 样式）。此外，由于正常布局流的设计初衷在于构建易读、合理的文档，遵循这样的指引原则，你在对布局做出改动时应该是与文档协同，而不是与之对抗。</p>
 
-<p>在深入探索不同的布局方式之前， 你最好回顾下在之前模块学习到的关于正常布局流的知识点（译者注：比如position display float table flex-box grid-layout）.</p>
+<p>在深入探索不同的布局方式之前，你最好回顾下在之前模块学习到的关于正常布局流的知识点（译者注：比如 position display float table flex-box grid-layout）.</p>
 
 <h2 id="默认情况下，元素是如何布局的？">默认情况下，元素是如何布局的？</h2>
 
 <p>首先，取得元素的内容来放在一个独立的元素盒子中，然后在其周边加上内边距、边框和外边距 --- 就是我们之前看到的盒子模型。</p>
 
-<p>默认的，一个<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements">块级元素</a>的内容宽度是其父元素的100%，其高度与其内容高度一致。<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">内联元素</a>的height width与内容一致。你无法设置内联元素的height width --- 它们就那样置于块级元素的内容里。 如果你想控制内联元素的尺寸，你需要为元素设置<code>display: block;</code> （或者，<code>display: inline-block;</code> inline-block 混合了inline 和 block的特性。)</p>
+<p>默认的，一个<a href="/zh-CN/docs/Web/HTML/Block-level_elements">块级元素</a>的内容宽度是其父元素的 100%，其高度与其内容高度一致。<a href="/zh-CN/docs/Web/HTML/Inline_elements">内联元素</a>的 height width 与内容一致。你无法设置内联元素的 height width --- 它们就那样置于块级元素的内容里。如果你想控制内联元素的尺寸，你需要为元素设置<code>display: block;</code> （或者，<code>display: inline-block;</code> inline-block 混合了 inline 和 block 的特性。)</p>
 
-<p>这样解释了独立元素的布局，但是元素之间又是如何相互影响的呢？ 正常布局流（在布局介绍里提到过）是一套在浏览器视口内放置、组织元素的系统。默认的，块级元素按照基于其父元素的<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/writing-mode">书写顺序</a>(<em>默认值:</em> horizontal-tb)的<em>块流动方向(block flow direction)</em>放置 --- 每个块级元素会在上一个元素下面另起一行，它们会被设置好的margin 分隔。在英语，或者其他水平书写、自上而下模式里，块级元素是垂直组织的。</p>
+<p>这样解释了独立元素的布局，但是元素之间又是如何相互影响的呢？ 正常布局流（在布局介绍里提到过）是一套在浏览器视口内放置、组织元素的系统。默认的，块级元素按照基于其父元素的<a href="/zh-CN/docs/Web/CSS/writing-mode">书写顺序</a>(<em>默认值：</em> horizontal-tb) 的<em>块流动方向 (block flow direction)</em>放置 --- 每个块级元素会在上一个元素下面另起一行，它们会被设置好的 margin 分隔。在英语，或者其他水平书写、自上而下模式里，块级元素是垂直组织的。</p>
 
 <p>内联元素的表现有所不同 --- 它们不会另起一行；只要在其父级块级元素的宽度内有足够的空间，它们与其他内联元素、相邻的文本内容（或者被包裹的）被安排在同一行。如果空间不够，溢出的文本或元素将移到新的一行。</p>
 
-<p>如果两个相邻的元素都设置了margin 并且两个margin有重叠，那么更大的设置会被保留，小的则会消失 --- 这被称为外边距叠加，我们之前见到过。</p>
+<p>如果两个相邻的元素都设置了 margin 并且两个 margin 有重叠，那么更大的设置会被保留，小的则会消失 --- 这被称为外边距叠加，我们之前见到过。</p>
 
 <p>我们来看一个对全部这些做出解释的简单例子：</p>
 

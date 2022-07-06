@@ -10,9 +10,9 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>Оптимизация производительности загрузки страницы нужна не только для контента, который будет просматриваться узкополосным модемом или посетителями мобильных устройств. Это так же важно для широкополосного контента и может привести к значительным улучшениям даже для ваших посетителей с самыми быстрыми подключениями.</p>
 
-<h2 id="Tips" name="Tips">Советы</h2>
+<h2 id="Tips">Советы</h2>
 
-<h3 id="Reduce_page_weight" name="Reduce_page_weight">Уменьшайте вес страницы</h3>
+<h3 id="Reduce_page_weight">Уменьшайте вес страницы</h3>
 
 <p>Веб-страницы - безусловно, самый важный фактор в производительности загрузки страницы.</p>
 
@@ -20,7 +20,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>Такие инструменты, как <a class="external" href="http://tidy.sourceforge.net/">HTML Tidy</a> , могут автоматически убирать начальные пробелы и лишние пустые строки из допустимого источника HTML. Другие инструменты могут «сжимать» JavaScript, переформатируя источник или запутывая источник и заменяя длинные идентификаторы на более короткие версии</p>
 
-<h3 id="Minimize_the_number_of_files" name="Minimize_the_number_of_files">Минимизируйте количество файлов</h3>
+<h3 id="Minimize_the_number_of_files">Минимизируйте количество файлов</h3>
 
 <p>Уменьшение количества файлов, на которые есть ссылки на веб-странице, уменьшает количество HTTP-соединений, необходимых для загрузки страницы, тем самым сокращая время отправки этих запросов и получения их ответов.</p>
 
@@ -40,13 +40,13 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
  <li><a href="https://www.incapsula.com/cdn-guide/what-is-cdn-how-it-works.html">Understanding CDNs</a></li>
 </ul>
 
-<h3 id="Reduce_domain_lookups" name="Reduce_domain_lookups">Сократите поиск доменов</h3>
+<h3 id="Reduce_domain_lookups">Сократите поиск доменов</h3>
 
 <p>Поскольку каждый отдельный домен требует времени для поиска DNS, время загрузки страницы будет расти вместе с количеством отдельных доменов, отображаемых в ссылках CSS, а также в JavaScript и изображениях.</p>
 
 <p>Это не всегда может быть практичным; однако вы всегда должны позаботиться об использовании только минимально необходимого количества разных доменов на своих страницах.</p>
 
-<h3 id="Cache_reused_content" name="Cache_reused_content">Кешируйте повторно использованный контент</h3>
+<h3 id="Cache_reused_content">Кешируйте повторно использованный контент</h3>
 
 <p>Убедитесь, что любой контент, который может быть кеширован, кеширован и имеет подходящее время истечения.</p>
 
@@ -62,17 +62,17 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
  <li><a class="external" href="http://www.cmlenz.net/archives/2005/05/on-http-last-modified-and-etag">On HTTP Last-Modified and ETag</a></li>
 </ol>
 
-<h3 id="Optimally_order_the_components_of_the_page" name="Optimally_order_the_components_of_the_page">Оптимально размещайте компоненты на странице</h3>
+<h3 id="Optimally_order_the_components_of_the_page">Оптимально размещайте компоненты на странице</h3>
 
 <p>Сначала загрузите содержимое страницы вместе с любым CSS или JavaScript, которые могут потребоваться для его первоначального отображения, чтобы пользователь получил самый быстрый очевидный ответ во время загрузки страницы. Этот контент, как правило, представляет собой текст, и поэтому может получить выгоду от сжатия текста при передаче, что обеспечивает ещё более быстрый отклик для пользователя.</p>
 
 <p>Любые динамические функции, требующие полной загрузки страницы перед использованием, должны быть изначально отключены, а затем включены только после загрузки страницы. Это приведёт к загрузке JavaScript после содержимого страницы, что улучшит общий вид загрузки страницы.</p>
 
-<h3 id="Reduce_the_number_of_inline_scripts" name="Reduce_the_number_of_inline_scripts">Уменьшайте количество встроенных скриптов</h3>
+<h3 id="Reduce_the_number_of_inline_scripts">Уменьшайте количество встроенных скриптов</h3>
 
 <p>Встроенные сценарии могут быть дорогими для загрузки страницы, так как синтаксический анализатор должен предполагать, что встроенный сценарий может изменить структуру страницы во время анализа. Сокращение использования встроенных сценариев в целом и сокращение использования <code>document.write()</code> для вывода контента, в частности, может улучшить общую загрузку страницы. Используйте современные методы <a href="/en-US/docs/AJAX" title="en-US/docs/AJAX">AJAX</a> для управления содержимым страницы, а не устаревшие подходы, которые основаны на  <code>document.write()</code>.</p>
 
-<h3 id="Use_modern_CSS_and_valid_markup" name="Use_modern_CSS_and_valid_markup">Используйте современный CSS и корректную разметку</h3>
+<h3 id="Use_modern_CSS_and_valid_markup">Используйте современный CSS и корректную разметку</h3>
 
 <p>Использование современного CSS уменьшает количество текста, может уменьшить потребность в (разделительных) изображениях с точки зрения макета и очень часто может заменить изображения стилизованного текста - это «стоит» намного дороже, чем эквивалентный текст и CSS.</p>
 
@@ -80,7 +80,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>Кроме того, корректная разметка позволяет спокойно использовать другие инструменты, которые могут предварительно обрабатывать ваши веб-страницы. Например, <a class="external" href="http://tidy.sourceforge.net/">HTML Tidy</a> может удалить пробелы и необязательные конечные теги; однако он откажется запускать страницу с серьёзными ошибками разметки</p>
 
-<h3 id="Chunk_your_content" name="Chunk_your_content">Разделяйте ваш контент</h3>
+<h3 id="Chunk_your_content">Разделяйте ваш контент</h3>
 
 <p>Использование таблиц для вёрстки макетов устаревший метод, который не должен больше использоваться. Вместо этого для создания макетов нужно использовать &lt;a href="/en-US/docs/Learn/CSS/CSS_layout/Floats"&gt;floats&lt;/a&gt;, &lt;a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning"&gt;positioning&lt;/a&gt;, &lt;a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox"&gt;flexbox&lt;/a&gt;, или &lt;a href="/en-US/docs/Learn/CSS/CSS_layout/Grids"&gt;grids&lt;/a&gt;.</p>
 
@@ -103,7 +103,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 &lt;TABLE&gt;...&lt;/TABLE&gt;
 </pre>
 
-<p>Смотрите также: <a class="external" href="http://www.w3.org/TR/css3-multicol/" title="http://www.w3.org/TR/css3-multicol/">CSS3 Multi-column Layout Spec</a> и <a class="external" href="http://www.w3.org/TR/css3-flexbox/" title="http://www.w3.org/TR/css3-flexbox/">CSS3 Flexible Box Layout</a></p>
+<p>Смотрите также: <a class="external" href="http://www.w3.org/TR/css3-multicol/">CSS3 Multi-column Layout Spec</a> и <a class="external" href="http://www.w3.org/TR/css3-flexbox/">CSS3 Flexible Box Layout</a></p>
 
 <h3 id="Сокращайте_и_сжимайте_активы_SVG">Сокращайте и сжимайте активы SVG</h3>
 
@@ -113,7 +113,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>Большие изображения приводят к тому, что загрузка страницы занимает больше времени. Рассмотрите возможность сжатия ваших изображений перед добавлением их на свою страницу.  Есть онлайн-инструменты, такие как &lt;a href="https://compressjpeg.com/"&gt;Compress Jpeg&lt;/a&gt;, &lt;a href="https://tinypng.com"&gt;Tiny PNG&lt;/a&gt; и многие другие, доступны онлайн. Вы можете использовать офлайн-инструменты, такие как фотошоп и другие.</p>
 
-<h3 id="Specify_sizes_for_images_and_tables" name="Specify_sizes_for_images_and_tables">Указывайте размеры для изображений и таблиц </h3>
+<h3 id="Specify_sizes_for_images_and_tables">Указывайте размеры для изображений и таблиц </h3>
 
 <p>Если браузер может немедленно определить высоту и/или ширину ваших изображений и таблиц, он сможет отображать веб-страницу без необходимости переформатировать содержимое. Это не только ускоряет отображение страницы, но и предотвращает раздражающие изменения в макете страницы после завершения загрузки страницы. По этой причине <code>height</code> и <code>width</code>  должны быть указаны для изображений всегда, когда это возможно.</p>
 
@@ -124,7 +124,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>и должны указывать ширину колонок используя HTML теги <code>COL</code> и <code>COLGROUP</code></p>
 
-<h3 id="Choose_your_user-agent_requirements_wisely" name="Choose_your_user-agent_requirements_wisely">Мудро выбирайте требования к пользовательскому агенту</h3>
+<h3 id="Choose_your_user-agent_requirements_wisely">Мудро выбирайте требования к пользовательскому агенту</h3>
 
 <p>Чтобы добиться наибольших улучшений в дизайне страниц, убедитесь, что для проектов указаны разумные требования к пользовательским агентам. Не требуйте, чтобы ваш контент казался идеальным во всех браузерах, особенно в устаревших.</p>
 
@@ -140,7 +140,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>Примечание. Несмотря на то, что эти атрибуты очень помогают при первой загрузке страницы, вы должны использовать их, но не предполагать, что они будут работать во всех браузерах. Если вы уже следуете всем рекомендациям JavaScript, вам не нужно менять код.</p>
 
-<h2 id="Example_page_structure" name="Example_page_structure">Пример структуры страницы</h2>
+<h2 id="Example_page_structure">Пример структуры страницы</h2>
 
 <p>· <code>HTML</code></p>
 
@@ -183,16 +183,16 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
  </dd>
 </dl>
 
-<h2 id="Related_Links" name="Related_Links">Ссылки по теме</h2>
+<h2 id="Related_Links">Ссылки по теме</h2>
 
 <ul>
  <li>Книга: <a class="external" href="http://www.websiteoptimization.com/">"Speed Up Your Site" by Andy King</a></li>
- <li>Отличная и очень содержательная статья <a class="external" href="http://developer.yahoo.com/performance/rules.html" title="http://developer.yahoo.com/performance/rules.html">Best Practices for Speeding Up Your Web Site</a> (Yahoo!)</li>
- <li>Инструменты для анализа и оптимизации производительности: <a href="https://developers.google.com/speed/pagespeed/" title="https://developers.google.com/speed/pagespeed/">Google PageSpeed Tools</a></li>
+ <li>Отличная и очень содержательная статья <a class="external" href="http://developer.yahoo.com/performance/rules.html">Best Practices for Speeding Up Your Web Site</a> (Yahoo!)</li>
+ <li>Инструменты для анализа и оптимизации производительности: <a href="https://developers.google.com/speed/pagespeed/">Google PageSpeed Tools</a></li>
 </ul>
 
 <div class="originaldocinfo">
-<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+<h2 id="Original_Document_Information">Original Document Information</h2>
 
 <ul>
  <li>Author(s): Bob Clary, Technology Evangelist, Netscape Communications</li>

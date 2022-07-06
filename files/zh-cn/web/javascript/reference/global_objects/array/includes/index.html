@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
 <div>{{JSRef}} </div>
 
-<p><code><strong>includes()</strong></code> 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 true，否则返回false。</p>
+<p><code><strong>includes()</strong></code> 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 <code>true</code>，否则返回 <code>false</code>。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-includes.html")}}</div>
 
@@ -28,22 +28,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
  <dd>
  <p>需要查找的元素值。</p>
 
- <div class="blockIndicator note">
- <p><strong>Note:  </strong>使用<strong> </strong><code>includes()</code>比较字符串和字符时是区分大小写。</p>
+ <div class="note">
+ <p><strong>备注：</strong>使用<strong> </strong><code>includes()</code>比较字符串和字符时是区分大小写的。</p>
  </div>
  </dd>
  <dt><code>fromIndex</code> {{optional_inline}}</dt>
- <dd>从<code>fromIndex</code> 索引处开始查找 <code>valueToFind</code>。如果为负值，则按升序从 <code>array.length + fromIndex</code> 的索引开始搜 （即使从末尾开始往前跳 <code>fromIndex</code> 的绝对值个索引，然后往后搜寻）。默认为 0。</dd>
+ <dd>从<code>fromIndex</code> 索引处开始查找 <code>valueToFind</code>。如果为负值，则按升序从 <code>array.length + fromIndex</code> 的索引开始搜（即使从末尾开始往前跳 <code>fromIndex</code> 的绝对值个索引，然后往后搜寻）。默认为 0。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>A {{jsxref("Boolean")}} which is <code>true</code> if the value <code>valueToFind</code> is found within the array (or the part of the array indicated by the index <code>fromIndex</code>, if specified). Values of zero are all considered to be equal regardless of sign (that is, -0 is considered to be equal to both 0 and +0), but <code>false</code> is not considered to be the same as 0.</p>
+<p>返回一个布尔值 {{jsxref("Boolean")}} 。<br>如果在数组中（或 <code>fromIndex</code> 指定的范围中）找到了 <code>valueToFind</code>，则返回 <code>true</code>，否则返回 <code>false</code>。</p>
 
-<p>返回一个布尔值 {{jsxref("Boolean")}} ，如果在数组中找到了（如果传入了 <code>fromIndex</code> ，表示在 <code>fromIndex</code> 指定的索引范围中找到了）则返回 <code>true</code> 。</p>
+<p>0 的值将全部视为相等，与符号无关（即 -0 与 0 和 +0 相等），但 <code>false</code> 不被认为与 0 相等。</p>
 
 <div class="note">
-<p><strong>Note:</strong> Technically speaking, <code>includes()</code> uses the <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality">sameValueZero</a></code> algorithm to determine whether the given element is found.</p>
+<p><strong>备注：</strong> 技术上来讲，<code>includes()</code> 使用 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#%E9%9B%B6%E5%80%BC%E7%9B%B8%E7%AD%89">零值相等</a></code> 算法来确定是否找到给定的元素。</p>
 </div>
 
 <h2 id="示例">示例</h2>
@@ -57,7 +57,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 
 <h3 id="fromIndex_大于等于数组长度">fromIndex 大于等于数组长度</h3>
 
-<p>如果 <code>fromIndex</code> 大于等于数组的长度，则会返回 <code>false</code>，且该数组不会被搜索。</p>
+<p>如果 <code>fromIndex</code> 大于等于数组的长度，则将直接返回 <code>false</code>，且不搜索该数组。</p>
 
 <pre class="brush: js">var arr = ['a', 'b', 'c'];
 
@@ -66,7 +66,7 @@ arr.includes('c', 100); // false</pre>
 
 <h3 id="计算出的索引小于_0">计算出的索引小于 0</h3>
 
-<p>如果 <code>fromIndex </code>为负值，计算出的索引将作为开始搜索<code>searchElement</code>的位置。如果计算出的索引小于 0，则整个数组都会被搜索。</p>
+<p>如果 <code>fromIndex</code> 为负值，计算出的索引将作为开始搜索<code>searchElement</code>的位置。如果计算出的索引小于 0，则整个数组都会被搜索。</p>
 
 <pre class="brush: js">// array length is 3
 // fromIndex is -100
@@ -144,7 +144,7 @@ if (!Array.prototype.includes) {
 
 </pre>
 
-<p>如果你需要支持那些不支持<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的废弃JavaScript 引擎，你最好不要 polyfill <code>Array.prototype</code> 方法，因为你不能使它们不可枚举。</p>
+<p>如果你需要支持那些不支持<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的废弃 JavaScript 引擎，你最好不要 polyfill <code>Array.prototype</code> 方法，因为你不能使它们不可枚举。</p>
 
 <h2 id="规范">规范</h2>
 

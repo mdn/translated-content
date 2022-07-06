@@ -131,86 +131,10 @@ img.opacity:hover {
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad entre navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td rowspan="3">Basic support</td>
-   <td rowspan="3">1.0</td>
-   <td rowspan="3">{{ CompatGeckoDesktop("1.7") }}</td>
-   <td>9.0</td>
-   <td rowspan="3">9.0</td>
-   <td rowspan="3">1.2 (125)</td>
-  </tr>
-  <tr>
-   <td>8.0<br>
-    <code>filter: alpha(opacity=xx)<br>
-    filter: "alpha(opacity=xx)" </code><br>
-    (both are synonymous)</td>
-  </tr>
-  <tr>
-   <td>4.0<br>
-    <code>filter: alpha(opacity=xx)</code></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table" style="height: 156px; width: 827px;">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td rowspan="3">Basic support</td>
-   <td rowspan="3">1.0</td>
-   <td rowspan="3">{{ CompatGeckoMobile("1.7") }}</td>
-   <td>9.0</td>
-   <td rowspan="3">9.0</td>
-   <td rowspan="3">3.2</td>
-  </tr>
-  <tr>
-   <td>8.0<br>
-    <code>filter: alpha(opacity=xx)<br>
-    filter: "alpha(opacity=xx)" </code><br>
-    (both are synonymous)</td>
-  </tr>
-  <tr>
-   <td>4.0<br>
-    <code>filter: alpha(opacity=xx)</code></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<ul>
- <li><strong>History:</strong>  Prior to Mozilla 1.7 (Firefox 0.9) the<code> -moz-opacity </code>property was implemented in a non-standard (inherited) way. With Firefox 0.9 the behavior changed and the property was renamed to<code> opacity</code>.  Since then<code> -moz-opacity </code>was supported just as an alias for<code> opacity</code>.</li>
- <li>Gecko 1.9.1 (Firefox 3.5) and later do not support<code> -moz-opacity</code> and support for <code>MozOpacity</code> in javascript was <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=730532" title="https://bugzilla.mozilla.org/show_bug.cgi?id=730532">removed</a> in Gecko 13.  By now, you should be using simply<code> opacity</code>.</li>
- <li>Prior to version 9, Internet Explorer does not support <code>opacity</code>, rather it supports <code>filter</code> instead.</li>
- <li>IE4 to IE9 supported the extended form <code>progid:DXImageTransform.Microsoft.Alpha(Opacity=xx)</code>.</li>
- <li>IE8 introduced <code>-ms-filter</code>, which is synonymous with <code>filter</code>. Both are gone in IE10</li>
- <li>Similar to <code>-moz-opacity</code>, <code>-khtml-opacity</code> has been dead since early 2004 (release of Safari 1.2).<br>
-  Konqueror never had support for <code>-khtml-opacity</code> and had been supporting <code>opacity</code> since version 4.0.</li>
-</ul>
+{{Compat("css.properties.opacity")}}
 
 <h2 id="See_also" name="See_also">Más información</h2>
 
 <ul>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/library/ms532910%28VS.85%29.aspx" title="http://msdn.microsoft.com/en-us/library/ms532910(VS.85).aspx">MSDN Microsoft's filter:alpha(opacity=xx)</a></li>
+ <li><a class="external" href="http://msdn.microsoft.com/en-us/library/ms532910%28VS.85%29.aspx">MSDN Microsoft's filter:alpha(opacity=xx)</a></li>
 </ul>

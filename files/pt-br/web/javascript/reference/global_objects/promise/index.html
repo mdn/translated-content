@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
  <li><em>rejected (</em>rejeitado):  falha na operação.</li>
 </ul>
 
-<p>Uma promessa pendente pode se tornar <em>realizada</em> com um valor ou <em>rejeitada</em> por um motivo (erro). Quando um desses estados ocorre, o método <code>then</code> do <code>Promise</code> é chamado, e ele chama o método de tratamento associado ao estado (<code>rejected</code> ou <code>resolved</code>).  Se a promessa foi realizada ou rejeitada quando o método de tratamento correspondente for associado, o método será chamado, deste forma não há uma condição de competição entre uma operação assíncrona e seus manipuladores que estão sendo associados.</p>
+<p>Uma promessa pendente pode se tornar <em>realizada</em> com um valor ou <em>rejeitada</em> por um motivo (erro). Quando um desses estados ocorre, o método <code>then</code> do <code>Promise</code> é chamado, e ele chama o método de tratamento associado ao estado (<code>rejected</code> ou <code>resolved</code>).  Se a promessa foi realizada ou rejeitada quando o método de tratamento correspondente for associado, o método será chamado, desta forma não há uma condição de competição entre uma operação assíncrona e seus manipuladores que estão sendo associados.</p>
 
 <p>Como os métodos <code>Promise.prototype.then</code> e <code>Promise.prototype.catch</code>  retornam promises, eles podem ser encadeados — uma operação chamada <em>composição</em>.</p>
 
@@ -158,7 +158,7 @@ else {
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_de_Navegador">Compatibilidade de Navegador</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>{{Compat("javascript.builtins.Promise")}}</p>
 

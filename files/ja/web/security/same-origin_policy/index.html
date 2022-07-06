@@ -14,9 +14,11 @@ translation_of: Web/Security/Same-origin_policy
 ---
 <div>{{QuickLinksWithSubpages("/ja/docs/Web/Security")}}</div>
 
-<p><span class="seoSummary"><strong>同一オリジンポリシー</strong>とは、あるオリジンから読み込まれた文書やスクリプトについて、そのリソースから他のオリジンのリソースにアクセスできないように制限するものです。</span>同一オリジンポリシーはウェブのセキュリティにおける重要な仕組みであり、悪意ある行動を起こしかねないリソースの分離を目的としています。</p>
+<p><span class="seoSummary"><strong>同一オリジンポリシー</strong>は重要なセキュリティの仕組みであり、ある{{Glossary("origin", "オリジン")}}によって読み込まれた文書やスクリプトが、他のオリジンにあるリソースにアクセスできる方法を制限するものです。</span></p>
 
-<h2 id="Definition_of_an_origin" name="Definition_of_an_origin">オリジンの定義</h2>
+<p>これにより、悪意のある可能性のあるドキュメントを隔離し、起こりうる攻撃のベクターを減らすことができます。例えば、インターネット上の悪意のあるウェブサイトがブラウザー内で JS を実行して、 (ユーザーがサインインしている) サードパーティのウェブメールサービスや (公開 IP アドレスを持たないことで攻撃者の直接アクセスから保護されている) 企業のイントラネットからデータを読み取り、そのデータを攻撃者に中継することを防ぎます。</p>
+
+<h2 id="Definition_of_an_origin">オリジンの定義</h2>
 
 <p>二つのページの{{Glossary("protocol", "プロトコル")}}、{{Glossary("port", "ポート番号")}} (もしあれば)、{{Glossary("host", "ホスト")}}が等しい場合、両者のページは同じオリジンです。これは「スキーム/ホスト/ポート番号のタプル」または時に単に「タプル」として参照されます (「タプル」は共に全体を構成する三つの部分の組み合わせを表します)。</p>
 
@@ -57,7 +59,7 @@ translation_of: Web/Security/Same-origin_policy
  </tbody>
 </table>
 
-<h3 id="Inherited_origins" name="Inherited_origins">オリジンの継承</h3>
+<h3 id="Inherited_origins">オリジンの継承</h3>
 
 <p> <code>about:blank</code> や <code>javascript:</code> の URL のページから実行されたスクリプトは、その URL にオリジンのサーバーについての情報が明示的に含まれていないため、その URL を開いた文書のオリジンを継承します。</p>
 
@@ -69,7 +71,7 @@ translation_of: Web/Security/Same-origin_policy
 <p><code>data:</code> の URL は新しく、空のセキュリティコンテキストを生成します。</p>
 </div>
 
-<h3 id="Exceptions_in_Internet_Explorer" name="Exceptions_in_Internet_Explorer">IE における例外事項</h3>
+<h3 id="Exceptions_in_Internet_Explorer">IE における例外事項</h3>
 
 <p>Internet Explorer では、同一オリジンポリシーについて二つの大きな例外があります。</p>
 
@@ -82,7 +84,11 @@ translation_of: Web/Security/Same-origin_policy
 
 <p>これらの例外事項は標準外であり、他のブラウザーはこのような挙動に対応していません。</p>
 
-<h2 id="Changing_origin" name="Changing_origin">オリジンの変更</h2>
+<h2 id="Changing_origin">オリジンの変更</h2>
+
+<div class="notecard warning">
+<p>ここで説明している ({{domxref("document.domain")}} セッターを使用する) 方法は非推奨です。同一オリジンポリシーによるセキュリティ保護を弱め、ブラウザーのオリジンモデルを複雑にして、相互運用性の問題やセキュリティバグを引き起こすためです。</p>
+</div>
 
 <p>ページのオリジンは、いくつかの制限の下で変更されることがあります。スクリプトを用いると、 {{domxref("document.domain")}} の値を現在のドメインまたは上位ドメインに変更できます。スクリプトによって現在のドメインの上位ドメインへオリジンが変更された場合、より短くなったドメイン名は次回のオリジン検査時に用いられます。</p>
 
@@ -91,57 +97,59 @@ translation_of: Web/Security/Same-origin_policy
 <pre class="brush: js notranslate">document.domain = "company.com";
 </pre>
 
-<p>このコードが実行された後、そのページは <code>http://company.com/dir/page.html</code> におけるオリジンの検査を通過できます (許可を明示するために <code>http://company.com/dir/page.html</code> が自身の <code>document.domain</code> を "<code>company.com</code>" に変更したと仮定します。詳しくは {{domxref("document.domain")}} を参照してください)。しかし、 <code>company.com</code> <code>が自身の</code><code>document.domain</code> を <code>othercompany.com</code> に変更することは<strong>できません</strong>。なぜなら <code>company.com</code> の上位ドメインではないためです。</p>
+<p>このコードが実行された後、そのページは <code>http://company.com/dir/page.html</code> におけるオリジンの検査を通過できます (許可を明示するために <code>http://company.com/dir/page.html</code> が自身の <code>document.domain</code> を "<code>company.com</code>" に変更したと仮定します。詳しくは {{domxref("document.domain")}} を参照してください)。しかし、 <code>company.com</code> が自身の <code>document.domain</code> を <code>othercompany.com</code> に変更することは<strong>できません</strong>。なぜなら <code>company.com</code> の上位ドメインではないためです。</p>
 
 <p>ブラウザーはポート番号を個別に検査します。 <code>document.domain</code> を呼び出すと、 <code>document.domain = document.domain</code> の場合も含め、ポート番号が <code>null</code> で上書きされます。従って、スクリプトの最初に <code>document.domain = "company.com"</code> を設定しただけでは、 <code>company.com:8080</code> と <code>company.com</code> とは互いにアクセス<strong>できません</strong>。双方のポートが <code>null</code> になるように、双方で設定しなければなりません。</p>
 
+<p>この仕組みにはいくつかの制限があります。例えば、 <a href="/ja/docs/Web/HTTP/Headers/Feature-Policy/document-domain" title="The HTTP Feature-Policy header document-domain directive controls whether the current document is allowed to set document.domain. When this policy is enabled, attempting to set document.domain will fail and cause a SecurityError DOMException to be be thrown."><code>document-domain</code></a> の <a href="/ja/docs/Web/HTTP/Headers/Feature-Policy" title="HTTP の Feature-Policy ヘッダーは、自身のフレームおよび文書内の &lt;iframe&gt; 要素で、ブラウザーの機能を使用することを許可または拒否する仕組みを提供します。"><code>Feature-Policy</code></a> が有効になっている場合や、文書がサンドボックス化された <code><a href="/ja/docs/Web/HTML/Element/iframe" title="HTML のインラインフレーム要素 (&lt;iframe&gt;) は、入れ子になった閲覧コンテキストを表現し、現在の HTML ページに他のページを埋め込むことができます。">&lt;iframe&gt;</a></code> 内にある場合は、 "<code>SecurityError</code>" の <a href="/ja/docs/Web/API/DOMException"><code>DOMException</code></a> が発生します。また、この方法でオリジンを変更しても、多くの Web API (<a href="/ja/docs/Web/API/Window/localStorage"><code>localStorage</code></a>, <a href="/ja/docs/Web/API/IndexedDB_API"><code>indexedDB</code></a>, <a href="/ja/docs/Web/API/BroadcastChannel"><code>BroadcastChannel</code></a>, <a href="/ja/docs/Web/API/SharedWorker"><code>SharedWorker</code></a> など) で使用されているオリジンチェックには影響しません。失敗事例のより詳細なリストは、 <a href="/ja/docs/Web/API/Document/domain#failures">Document.domain &gt; Failures</a> にあります。</p>
+
 <div class="note">
-<p><strong>注:</strong> サブドメインから安全に親ドメインへアクセスさせるために <code>document.domain</code> を使用する際は、親ドメインとサブドメインの双方で同じ値を <code>document.domain</code> に設定することが必要です。この作業は、単に親ドメインを元の値に戻す際にも必要です。これを怠ると権限エラーが発生します。</p>
+<p><strong>注:</strong> サブドメインから親ドメインへアクセスさせるために <code>document.domain</code> を使用する際は、親ドメインとサブドメインの双方で同じ値を <code>document.domain</code> に設定することが必要です。この作業は、親ドメインを元の値に戻す際にも必要です。これを怠ると権限エラーが発生します。</p>
 </div>
 
-<h2 id="Cross-origin_network_access" name="Cross-origin_network_access">異なるオリジンへのネットワークアクセス</h2>
+<h2 id="Cross-origin_network_access">異なるオリジンへのネットワークアクセス</h2>
 
 <p>{{domxref("XMLHttpRequest")}} や {{htmlelement("img")}} 要素を使用する場合など、 同一オリジンポリシーは 2 つのオリジン間における通信を制御します。一般にこれらの通信は 3 つのカテゴリに分類されます。</p>
 
 <ul>
- <li>異なるオリジンへの<em>書き込み</em>は、概して許可されます。例えばリンクやリダイレクト、フォームの送信などがあります。まれに使用される HTTP リクエストの際は<a href="/ja/docs/Web/HTTP/CORS#Preflighted_requests">プリフライト</a>が必要です。</li>
+ <li>異なるオリジンへの<em>書き込み</em>は、概して許可されます。例えばリンクやリダイレクト、フォームの送信などがあります。まれに使用される HTTP リクエストの際は<a href="/ja/docs/Web/HTTP/CORS#preflighted_requests">プリフライト</a>が必要です。</li>
  <li>異なるオリジンの<em>埋め込み</em>は、概して許可されます。例は後述します。</li>
- <li>異なるオリジンからの<em>読み込み</em>は一般に許可されませんが、埋め込みによって読み取り権限がしばしば漏れてしまいます。例えば埋め込み画像の幅や高さ、埋め込みスクリプトの動作内容、あるいは<a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=629094">埋め込みリソースでアクセス可能なもの</a>を読み取ることができます。</li>
+ <li>異なるオリジンからの<em>読み込み</em>は一般に許可されませんが、埋め込みによって読み取り権限がしばしば漏れてしまいます。例えば埋め込み画像の幅や高さ、埋め込みスクリプトの動作内容、あるいは<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=629094">埋め込みリソースでアクセス可能なもの</a>を読み取ることができます。</li>
 </ul>
 
 <p>以下に挙げるのは、異なるオリジンに埋め込むことができるリソースの例です。</p>
 
 <ul>
  <li>JavaScript を <code>&lt;script src="..."&gt;&lt;/script&gt;</code> で使用する場合。構文に関するエラーメッセージは、同一オリジンのスクリプトについてのみ読み取り可能です。</li>
- <li>CSS を <code>&lt;link rel="stylesheet" href="..."&gt;</code> で使用する場合。 CSS は<a class="external" href="https://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html">緩い構文規則</a>を持っているため、オリジンをまたぐ CSS には適切な <code>Content-Type</code> ヘッダーを付加することが必要です。制約はブラウザーにより異なり、ブラウザーごとの詳細は <a class="external" href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622939(v=vs.85)?redirectedfrom=MSDN">Internet Explorer</a>, <a class="external" href="https://www.mozilla.org/en-US/security/advisories/mfsa2010-46/">Firefox</a>, <a class="external" href="https://bugs.chromium.org/p/chromium/issues/detail?id=9877">Chrome</a>, <a class="external" href="https://support.apple.com/kb/HT4070">Safari</a> (<a class="external" href="http://support.apple.com/kb/HT4070?viewlocale=ja_JP">日本語訳</a>) (CVE-2010-0051 までスクロールしてください), <a class="external" href="https://security.opera.com/cross-domain-data-theft-with-css-load-opera-security-advisories/">Opera</a> の各項目を参照してください。</li>
- <li>画像を {{htmlelement("img")}} で使用する場合。サポートされる画像形式は PNG、JPEG、GIF、BMP、SVG などです。</li>
- <li>メディアファイルを {{htmlelement("video")}} および {{htmlelement("audio")}} で使用する場合。</li>
- <li>外部リソースを {{htmlelement("object")}} または {{htmlelement("embed")}} で埋め込む場合。</li>
- <li>フォントを {{cssxref("@font-face")}} で指定する場合。異なるオリジンのフォントを許可するブラウザーもありますが、フォントにも同一オリジンを要求するブラウザーもあります。</li>
+ <li>CSS を <code>&lt;link rel="stylesheet" href="..."&gt;</code> で使用する場合。 CSS は<a href="https://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html">緩い構文規則</a>を持っているため、オリジンをまたぐ CSS には適切な <code>Content-Type</code> ヘッダーを付加することが必要です。制約はブラウザーにより異なり、ブラウザーごとの詳細は <a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622939(v=vs.85)?redirectedfrom=MSDN">Internet Explorer</a>, <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2010-46/">Firefox</a>, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=9877">Chrome</a>, <a href="https://support.apple.com/kb/HT4070">Safari</a> (<a href="https://support.apple.com/kb/HT4070?viewlocale=ja_JP">日本語訳</a>) (CVE-2010-0051 までスクロールしてください), <a href="https://security.opera.com/cross-domain-data-theft-with-css-load-opera-security-advisories/">Opera</a> の各項目を参照してください。</li>
+ <li>{{htmlelement("img")}} で表示された画像。</li>
+ <li>{{htmlelement("video")}} および {{htmlelement("audio")}} で再生されたメディア。</li>
+ <li>{{htmlelement("object")}} または {{htmlelement("embed")}} で埋め込まれた外部リソース。</li>
+ <li>{{cssxref("@font-face")}} が適用されたフォント。異なるオリジンのフォントを許容するブラウザーもありますが、同一オリジンを要求するものもあります。</li>
  <li>{{htmlelement("iframe")}} に関連するあらゆること。このような形のオリジン間のやりとりを防ぐため、サイトに {{HTTPHeader("X-Frame-Options")}} ヘッダーを使用することができます。</li>
 </ul>
 
-<h3 id="How_to_allow_cross-origin_access" name="How_to_allow_cross-origin_access">異なるオリジンへのアクセスを許可する方法</h3>
+<h3 id="How_to_allow_cross-origin_access">異なるオリジンへのアクセスを許可する方法</h3>
 
-<p>異なるオリジンへのアクセスを許可するには、 <a href="/ja/docs/Web/HTTP/CORS">CORS</a> を使用してください。 CORS は {{Glossary("HTTP")}} の一部で、サーバーがクライアントに、どのホストがそのサーバーからコンテンツを読み込むことが許可されているかを共有する機能です。</p>
+<p>異なるオリジンへのアクセスを許可するには、 <a href="/ja/docs/Web/HTTP/CORS">CORS</a> を使用してください。 CORS は {{Glossary("HTTP")}} の一部で、ブラウザーがコンテンツの読み込みを許可する他のホストをサーバーが指定できるようにするものです。</p>
 
-<h3 id="How_to_block_cross-origin_access" name="How_to_block_cross-origin_access">異なるオリジンへのアクセスをブロックする方法</h3>
+<h3 id="How_to_block_cross-origin_access">異なるオリジンへのアクセスをブロックする方法</h3>
 
 <ul>
- <li>異なるオリジンへの書き込みを防ぐには、リクエスト内の a class="external" href="https://owasp.org/www-community/attacks/csrf"&gt;Cross-Site Request Forgery (CSRF) トークンと呼ばれる推測できないトークンをチェックしてください。このトークンを知っているページのオリジンをまたがった読み込みを防ぎます。</li>
+ <li>異なるオリジンへの書き込みを防ぐには、リクエスト内の <a href="https://owasp.org/www-community/attacks/csrf">Cross-Site Request Forgery (CSRF)</a> トークンと呼ばれる推測できないトークンをチェックしてください。このトークンを知っているページのオリジンをまたがった読み込みを防ぎます。</li>
  <li>異なるオリジンからのリソースの読み込みを防ぐには、そのリソースが埋め込まれないようにします。リソースの埋め込まれると情報が漏えいする場合があるため、多くの場合は埋め込みの抑止が必要になります。</li>
  <li>異なるオリジンによる埋め込みを防ぐには、リソースの形式が先ほど述べたような埋め込み可能な形式だと思われないようにします。ほとんどの場合、ブラウザーは <code>Content-Type</code> を尊重しません。例えば <code>&lt;script&gt;</code> タグで HTML 文書を指した場合、ブラウザーは HTML を JavaScript としてパースしようとします。リソースがサイトの入口ではない場合は、埋め込みを抑止するため CSRF トークンも使用するとよいでしょう。</li>
 </ul>
 
-<h2 id="Cross-origin_script_API_access" name="Cross-origin_script_API_access">異なるオリジンへのスクリプトからの API によるアクセス</h2>
+<h2 id="Cross-origin_script_API_access">異なるオリジンへのスクリプトからの API によるアクセス</h2>
 
 <p>{{domxref("HTMLIFrameElement.contentWindow", "iframe.contentWindow")}}, {{domxref("window.parent")}}, {{domxref("window.open")}}, {{domxref("window.opener")}} といった JavaScript API を用いると、ドキュメントが直接互いに参照することができます。2 つのドキュメントが同一のオリジンではない場合、 {{domxref("Window")}} オブジェクトや {{domxref("Location")}} オブジェクトなど、限られたオブジェクトにのみアクセスすることができます。詳しくは次の 2 つのセクションで説明します。</p>
 
 <p>{{domxref("window.postMessage")}} を使用すると、異なるオリジンの文書間における通信がさらに可能となります。</p>
 
-<p>仕様書: <a class="external" href="https://html.spec.whatwg.org/multipage/browsers.html#cross-origin-objects">HTML Living Standard § Cross-origin objects</a>.</p>
+<p>仕様書: <a href="https://html.spec.whatwg.org/multipage/browsers.html#cross-origin-objects">HTML Living Standard § Cross-origin objects</a>.</p>
 
-<h3 id="Window" name="Window">Window</h3>
+<h3 id="Window">Window</h3>
 
 <p>以下に示した <code>Window</code> のプロパティは、異なるオリジンからのアクセスが許可されています。</p>
 
@@ -216,7 +224,7 @@ translation_of: Web/Security/Same-origin_policy
 
 <p>一部のブラウザーでは、仕様書で定められたものより多くのプロパティでアクセスが許可されています。</p>
 
-<h3 id="Location" name="Location">Location</h3>
+<h3 id="Location">Location</h3>
 
 <p>以下に示した <code>Location</code> のプロパティは、異なるオリジンからのアクセスが許可されています。</p>
 
@@ -250,23 +258,23 @@ translation_of: Web/Security/Same-origin_policy
 
 <p>一部のブラウザーでは、仕様書で定められたものより多くのプロパティでアクセスが許可されています。</p>
 
-<h2 id="Cross-origin_data_storage_access" name="Cross-origin_data_storage_access">オリジンをまたいだデータストレージアクセス</h2>
+<h2 id="Cross-origin_data_storage_access">オリジンをまたいだデータストレージアクセス</h2>
 
 <p><a href="/ja/docs/Web/API/Web_Storage_API">ウェブストレージ</a>や <a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB</a> など、ブラウザー内部に保存されるデータへのアクセスは、オリジンによって権限が分かれています。それぞれのオリジンが個別にストレージを持ち、あるオリジンの JavaScript から別のオリジンに属するストレージを読み書きすることはできません。</p>
 
-<p>{{glossary("Cookie", "Cookie")}} におけるオリジンの定義は異なります。ページは自身のドメインまたは任意の親ドメイン (親ドメインが public suffix ではない場合に限る) 用の Cookie を設定できます。 ドメインが public suffix であるかを判断する際、Firefox と Chrome は <a class="external" href="https://publicsuffix.org/">Public Suffix List</a> を使用します。 Internet Explorer は独自の方法で public suffix であるかを判断します。使用しているスキーム (HTTP/HTTPS) やポートに関係なく、ブラウザーはサブドメインも含めて Cookie を使用可能にします。Cookie の設定時に <code>Domain</code>, <code>Path</code>, <code>Secure</code>, <code>HttpOnly</code> の各フラグを用いることで、その Cookie の利用範囲を制限できます。Cookie を読み取るとき、Cookie を設定した場所から知ることはできません。安全な https 接続のみ使用していたとしても、参照している Cookie は安全でない接続を通じて設定された可能性があります。</p>
+<p>{{glossary("Cookie", "Cookie")}} におけるオリジンの定義は異なります。ページは自身のドメインまたは任意の親ドメイン (親ドメインが public suffix ではない場合に限る) 用の Cookie を設定できます。 ドメインが public suffix であるかを判断する際、Firefox と Chrome は <a href="https://publicsuffix.org/">Public Suffix List</a> を使用します。 Internet Explorer は独自の方法で public suffix であるかを判断します。使用しているスキーム (HTTP/HTTPS) やポートに関係なく、ブラウザーはサブドメインも含めて Cookie を使用可能にします。Cookie の設定時に <code>Domain</code>, <code>Path</code>, <code>Secure</code>, <code>HttpOnly</code> の各フラグを用いることで、その Cookie の利用範囲を制限できます。Cookie を読み取るとき、Cookie を設定した場所から知ることはできません。安全な https 接続のみ使用していたとしても、参照している Cookie は安全でない接続を通じて設定された可能性があります。</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li><a href="https://www.w3.org/Security/wiki/Same_Origin_Policy">Same Origin Policy at W3C</a></li>
  <li><a href="https://web.dev/secure/same-origin-policy">Same-origin policy at web.dev</a></li>
+ <li>{{httpheader("Cross-Origin-Resource-Policy")}}</li>
+ <li>{{httpheader("Cross-Origin-Embedder-Policy")}}</li>
 </ul>
 
-<div class="originaldocinfo">
-<h2 id="Original_Document_Information" name="Original_Document_Information">出典情報</h2>
+<h2 id="Original_Document_Information">原典情報</h2>
 
 <ul>
  <li>著者: Jesse Ruderman</li>
 </ul>
-</div>

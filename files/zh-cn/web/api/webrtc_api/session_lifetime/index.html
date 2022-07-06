@@ -5,32 +5,32 @@ translation_of: Web/API/WebRTC_API/Session_lifetime
 original_slug: WebRTC/介绍
 ---
 <div class="note">
-<p>此页面正在建设中，部分内容会移至其他页面，因为WebRTC指导资料已经建成。</p>
+<p>此页面正在建设中，部分内容会移至其他页面，因为 WebRTC 指导资料已经建成。</p>
 
-<p>WebRTC允许您将任意数据，音频或视频（或其任何组合）的点对点通信构建到浏览器应用程序中。 在本文中，我们将介绍一个WebRTC会话的生命周期，从建立连接到不再需要时关闭连接。</p>
+<p>WebRTC 允许您将任意数据，音频或视频（或其任何组合）的点对点通信构建到浏览器应用程序中。 在本文中，我们将介绍一个 WebRTC 会话的生命周期，从建立连接到不再需要时关闭连接。</p>
 </div>
 
 <h2 id="创建连接">创建连接</h2>
 
-<p>互联网很大 很大。 那么多年以前，聪明的人看到它有多大，增长速度有多快，32位IP寻址系统的局限性，并意识到有些事情要做，所以他们开始设计一个新的 64位寻址系统。 但是他们意识到，完成转换需要更长时间才能持续32位地址，所以其他一些机智的人们想出了让多台计算机共享同一个32位IP地址的方法。 网络地址转换（NAT）是通过操纵LAN上的所有设备的数据出入的路由来支持这种地址共享的标准，所有这些设备都共享同一个WAN（全局）IP地址。</p>
+<p>互联网很大 很大。 那么多年以前，聪明的人看到它有多大，增长速度有多快，32 位 IP 寻址系统的局限性，并意识到有些事情要做，所以他们开始设计一个新的 64 位寻址系统。 但是他们意识到，完成转换需要更长时间才能持续 32 位地址，所以其他一些机智的人们想出了让多台计算机共享同一个 32 位 IP 地址的方法。 网络地址转换（NAT）是通过操纵 LAN 上的所有设备的数据出入的路由来支持这种地址共享的标准，所有这些设备都共享同一个 WAN（全局）IP 地址。</p>
 
-<p>用户的问题是互联网上的每台个人计算机不再一定具有唯一的IP地址，实际上，每个设备的IP地址也会变，不仅可能由于设备从一个网络移动到另一个网络，也可能被NAT和/或DHCP改变。 对于尝试进行点对点网络的开发人员，这引入了一个难题：没有每个用户设备的唯一标识符，不可能立即自动地知道如何连接到Internet上的特定设备。 即使你知道你想谈论的人，你不一定知道如何到达他们，甚至也不知道他们的地址。</p>
+<p>用户的问题是互联网上的每台个人计算机不再一定具有唯一的 IP 地址，实际上，每个设备的 IP 地址也会变，不仅可能由于设备从一个网络移动到另一个网络，也可能被 NAT 和/或 DHCP 改变。 对于尝试进行点对点网络的开发人员，这引入了一个难题：没有每个用户设备的唯一标识符，不可能立即自动地知道如何连接到 Internet 上的特定设备。 即使你知道你想谈论的人，你不一定知道如何到达他们，甚至也不知道他们的地址。</p>
 
-<p>这就像您尝试向您的朋友Michelle发送一个包裹，但您只在这个包裹上贴了一个写着“Michelle”的标签，而您并不知道她的地址。 您得查到她的地址并将其包装在包中，要不然她会在想为什么你又忘记她的生日了。</p>
+<p>这就像您尝试向您的朋友 Michelle 发送一个包裹，但您只在这个包裹上贴了一个写着“Michelle”的标签，而您并不知道她的地址。 您得查到她的地址并将其包装在包中，要不然她会在想为什么你又忘记她的生日了。</p>
 
 <p>这就是信令（Signaling）的由来。</p>
 
 <h3 id="信令">信令</h3>
 
-<p>信令是在两个设备之间发送控制信息以确定通信协议、信道、媒体编解码器和格式以及数据传输方法以及任何所需的路由信息的过程。 关于WebRTC的信令流程最重要的一点是：<strong>信令在规范中并没有定义。</strong>所以开发者需要自己决定如何实现这个过程。开发者可以为应用程序引擎选择任意的信息协议（如SIP或XMPP），任意双向通信信道（如WebSocket或XMLHttpRequest)与持久连接服务器的API（如<a href="https://developers.google.com/appengine/docs/python/channel/overview" style="line-height: 1.5; text-decoration: none;" title="https://developers.google.com/appengine/docs/python/channel/overview">Google Channel API</a><span style="line-height: 1.5;">）一起工作。</span></p>
+<p>信令是在两个设备之间发送控制信息以确定通信协议、信道、媒体编解码器和格式以及数据传输方法以及任何所需的路由信息的过程。 关于 WebRTC 的信令流程最重要的一点是：<strong>信令在规范中并没有定义。</strong>所以开发者需要自己决定如何实现这个过程。开发者可以为应用程序引擎选择任意的信息协议（如 SIP 或 XMPP），任意双向通信信道（如 WebSocket 或 XMLHttpRequest) 与持久连接服务器的 API（如<a href="https://developers.google.com/appengine/docs/python/channel/overview" style="line-height: 1.5; text-decoration: none;">Google Channel API</a>）一起工作。</p>
 
-<p><span style="line-height: 1.5;">你可能会想，为什么这么一个对于建立WebRTC连接至关重要的基本过程居然没有定义在规范里？ 答案很简单：由于两个设备无法直接相互联系，规范无法预测WebRTC的所有可能用例，因此更明智的做法就是让开发人员们自己选择合适的网络技术和消息传递协议。</span></p>
+<p>你可能会想，为什么这么一个对于建立 WebRTC 连接至关重要的基本过程居然没有定义在规范里？ 答案很简单：由于两个设备无法直接相互联系，规范无法预测 WebRTC 的所有可能用例，因此更明智的做法就是让开发人员们自己选择合适的网络技术和消息传递协议。</p>
 
-<p><span style="line-height: 1.5;">尤其是如果一个开发人员已经有了一个连接两个设备的方法，那也没有必要强迫他们就为了WebRTC使用另一个规范定义的方法。 由于WebRTC没有生活在真空中，所以可能还有其他的连接，因此，如果可以使用已有的连接通道，就可以避免添加额外的连接通道。</span></p>
+<p>尤其是如果一个开发人员已经有了一个连接两个设备的方法，那也没有必要强迫他们就为了 WebRTC 使用另一个规范定义的方法。 由于 WebRTC 没有生活在真空中，所以可能还有其他的连接，因此，如果可以使用已有的连接通道，就可以避免添加额外的连接通道。</p>
 
-<p>为了交换信令信息，您可以选择通过WebSocket连接来回发送JSON对象，或者您可以在适当的通道（Channel）上使用XMPP或SIP，或者您可以通过HTTPS使用XMLHttpRequest进行轮询或者其他任何你可以想出来的技术组合。你甚至可以使用电子邮件作为信号通道。</p>
+<p>为了交换信令信息，您可以选择通过 WebSocket 连接来回发送 JSON 对象，或者您可以在适当的通道（Channel）上使用 XMPP 或 SIP，或者您可以通过 HTTPS 使用 XMLHttpRequest 进行轮询或者其他任何你可以想出来的技术组合。你甚至可以使用电子邮件作为信号通道。</p>
 
-<p>还值得注意的是，用于执行信令的信道甚至不需要通过网络。 一个Peer可以输出一个数据对象，这个数据对象可以被打印出来，然后物理携带（步行或由信鸽）直到进入另一个设备，然后由该设备输出响应，并以同种方式返回， 直到WebRTC对等连接打开。 这将带来非常高的延迟，但也是可以做到的。</p>
+<p>还值得注意的是，用于执行信令的信道甚至不需要通过网络。 一个 Peer 可以输出一个数据对象，这个数据对象可以被打印出来，然后物理携带（步行或由信鸽）直到进入另一个设备，然后由该设备输出响应，并以同种方式返回， 直到 WebRTC 对等连接打开。 这将带来非常高的延迟，但也是可以做到的。</p>
 
 <h4 id="信令期间交换的信息">信令期间交换的信息</h4>
 
@@ -38,39 +38,39 @@ original_slug: WebRTC/介绍
 
 <ul>
  <li>控制消息：用于设置、打开、关闭通信通道并处理错误。</li>
- <li>为了建立连接所需的信息：设备间能够彼此交谈所需的IP寻址和端口信息。</li>
- <li>媒体能力协商：交互双方可以理解哪些编解码器和媒体数据格式？ 这些都需要在WebRTC会议开始之前达成一致。</li>
+ <li>为了建立连接所需的信息：设备间能够彼此交谈所需的 IP 寻址和端口信息。</li>
+ <li>媒体能力协商：交互双方可以理解哪些编解码器和媒体数据格式？ 这些都需要在 WebRTC 会议开始之前达成一致。</li>
 </ul>
 
-<p>只有在信令成功完成之后，打开WebRTC对等连接的过程才真正开始。</p>
+<p>只有在信令成功完成之后，打开 WebRTC 对等连接的过程才真正开始。</p>
 
 <p>值得注意的是，在信令期间，信令服务器实际上不需要理解两个设备之间交换的数据或者对这些数据做任何处理。 信令服务器本质上就是一个中继器：两端连接的公共点，两端都知道它们的信令数据可以通过这个点来传输。 服务器不需要以任何方式对此信息做出反应。</p>
 
 <h4 id="信令过程">信令过程</h4>
 
-<p>为了开启一个WebRTC会话，以下事件需要依次发生：</p>
+<p>为了开启一个 WebRTC 会话，以下事件需要依次发生：</p>
 
 <ol>
- <li>每个Peer创建一个RTCPeerConnection对象，用来表示其WebRTC会话端。</li>
- <li>每个Peer建立一个icecandidate事件的响应程序，用来在监测到该事件时将这些candidates通过信令通道发送给另一个Peer。</li>
- <li>每个Peer建立一个track事件的响应程序，这个事件会在远程Peer添加一个track到其stream上时被触发。这个响应程序应将tracks和其消受者联系起来，例如{{HTMLElement("video")}}元素。</li>
+ <li>每个 Peer 创建一个 RTCPeerConnection 对象，用来表示其 WebRTC 会话端。</li>
+ <li>每个 Peer 建立一个 icecandidate 事件的响应程序，用来在监测到该事件时将这些 candidates 通过信令通道发送给另一个 Peer。</li>
+ <li>每个 Peer 建立一个 track 事件的响应程序，这个事件会在远程 Peer 添加一个 track 到其 stream 上时被触发。这个响应程序应将 tracks 和其消受者联系起来，例如{{HTMLElement("video")}}元素。</li>
  <li>呼叫者创建并与接收者共享一个唯一的标识符或某种令牌，使得它们之间的呼叫可以由信令服务器上的代码来识别。此标识符的确切内容和形式取决于您。</li>
- <li>每个Peer连接到一个约定的信令服务器，如WebSocket服务器，他们都知道如何与之交换消息。</li>
- <li>每个Peer告知信令服务器他们想加入同一WebRTC会话（由步骤4中建立的令牌标识）。</li>
+ <li>每个 Peer 连接到一个约定的信令服务器，如 WebSocket 服务器，他们都知道如何与之交换消息。</li>
+ <li>每个 Peer 告知信令服务器他们想加入同一 WebRTC 会话（由步骤 4 中建立的令牌标识）。</li>
  <li><em>描述，候选地址等 -- 之后会有更多</em></li>
 </ol>
 
 <h2 id="ICE_重连"><strong>ICE 重连</strong></h2>
 
-<p>有时，在WebRTC会话的整个生命周期内，网络条件会发生变化。 其中一个用户可能会从蜂窝网络转移到WiFi网络，或者网络可能会变得拥塞。 当这种情况发生时，ICE代理可以选择执行ICE重连。 在这个过程中网络连接会进行重新协商，与执行初始ICE协商的方式完全相同，除了：媒体继续流过原始网络连接直到新的开始运行。 然后媒体转移到新的网络连接，旧的关闭。</p>
+<p>有时，在 WebRTC 会话的整个生命周期内，网络条件会发生变化。 其中一个用户可能会从蜂窝网络转移到 WiFi 网络，或者网络可能会变得拥塞。 当这种情况发生时，ICE 代理可以选择执行 ICE 重连。 在这个过程中网络连接会进行重新协商，与执行初始 ICE 协商的方式完全相同，除了：媒体继续流过原始网络连接直到新的开始运行。 然后媒体转移到新的网络连接，旧的关闭。</p>
 
-<p>不同的浏览器支持在不同情况下的进行ICE重连。 例如，并不是所有的浏览器都会因为网络拥塞执行ICE重连。</p>
+<p>不同的浏览器支持在不同情况下的进行 ICE 重连。 例如，并不是所有的浏览器都会因为网络拥塞执行 ICE 重连。</p>
 
-<p>ICE重连有两个级别：<strong>全ICE重连</strong>会导致会话中的所有媒体流重新协商。 <strong>部分ICE重连</strong>允许ICE重新协商特定媒体流，而不是所有媒体流进行重新协商。 然而，有些浏览器还不支持部分ICE重启。 &lt;&lt;&lt;你如何触发每一个？&gt;&gt;&gt;</p>
+<p>ICE 重连有两个级别：<strong>全 ICE 重连</strong>会导致会话中的所有媒体流重新协商。 <strong>部分 ICE 重连</strong>允许 ICE 重新协商特定媒体流，而不是所有媒体流进行重新协商。 然而，有些浏览器还不支持部分 ICE 重启。 &lt;&lt;&lt;你如何触发每一个？&gt;&gt;&gt;</p>
 
-<p>如果您需要以某种方式更改连接的配置（例如更改为不同的ICE服务器集），您可以调用RTCPeerConnection.setConfiguration()设置新的RTCConfiguration字典，然后重新启动ICE。</p>
+<p>如果您需要以某种方式更改连接的配置（例如更改为不同的 ICE 服务器集），您可以调用 RTCPeerConnection.setConfiguration() 设置新的 RTCConfiguration 字典，然后重新启动 ICE。</p>
 
-<p>要明确触发ICE重新启动，只需通过调用RTCPeerConnection.createOffer()启动一个协商过程，同时指定iceRestart选项为true。 然后就像平时那样处理连接过程即可。</p>
+<p>要明确触发 ICE 重新启动，只需通过调用 RTCPeerConnection.createOffer() 启动一个协商过程，同时指定 iceRestart 选项为 true。 然后就像平时那样处理连接过程即可。</p>
 
 <h2 id="发送">发送</h2>
 
@@ -80,10 +80,10 @@ original_slug: WebRTC/介绍
 
 <h2 id="接收">接收</h2>
 
-<p>WebRTC 在Firefox浏览器的偏好选择选项是隐藏的。可以到 <a href="/about:config" title="/about:config">about:config</a> 这个页面设置 'media.navigator.enabled' 为 'true'。</p>
+<p>WebRTC 在 Firefox 浏览器的偏好选择选项是隐藏的。可以到 <a href="/about:config" title="/about:config">about:config</a> 这个页面设置 'media.navigator.enabled' 为 'true'。</p>
 
 <div class="note">
-<p>在Source tree 中有一些测试文件可以提供给您关于WebRTC如何工作的一个想法。具体例子请查看: <a href="http://hg.mozilla.org/projects/alder/file/tip/dom/media/tests/local_video_test.html">dom/media/tests/local_video_test.html</a>。您也可以尝试 <a href="http://webrtc-demo.herokuapp.com/mozdemo">服务器demo</a> ，源代码： <a href="https://github.com/anantn/webrtc-demo/">server source</a>。</p>
+<p>在 Source tree 中有一些测试文件可以提供给您关于 WebRTC 如何工作的一个想法。具体例子请查看：<a href="http://hg.mozilla.org/projects/alder/file/tip/dom/media/tests/local_video_test.html">dom/media/tests/local_video_test.html</a>。您也可以尝试 <a href="http://webrtc-demo.herokuapp.com/mozdemo">服务器 demo</a> ，源代码： <a href="https://github.com/anantn/webrtc-demo/">server source</a>。</p>
 </div>
 
 <p> </p>

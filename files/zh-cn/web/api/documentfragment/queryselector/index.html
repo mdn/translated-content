@@ -11,7 +11,7 @@ translation_of: Web/API/DocumentFragment/querySelector
 
 <p>如果选择器无效，将抛出一个带有 <code>SYNTAX_ERR</code> 值的 {{domxref("DOMException")}} 异常。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>element</em> = <em>documentfragment</em>.querySelector(<em>selectors</em>);</pre>
 
@@ -19,10 +19,10 @@ translation_of: Web/API/DocumentFragment/querySelector
 
 <dl>
  <dt><em>selectors </em></dt>
- <dd>为一个 {{domxref("DOMString")}} ，其包含一个或多个CSS选择器，多个选择器用逗号隔开。</dd>
+ <dd>为一个 {{domxref("DOMString")}}，其包含一个或多个 CSS 选择器，多个选择器用逗号隔开。</dd>
 </dl>
 
-<h2 id="Example" name="Example">例子</h2>
+<h2 id="Example">例子</h2>
 
 <h3 id="基本示例">基本示例</h3>
 
@@ -33,48 +33,30 @@ translation_of: Web/API/DocumentFragment/querySelector
 
 <h3 id="CSS_语法和方法的参数问题">CSS 语法和方法的参数问题</h3>
 
-<p>传递给 <code>querySelector</code> 的字符串参数遵循 CSS 语法。如果 ID 或选择器不符合 CSS 语法(比如使用了半角分号和空格)，必须使用双反斜杠对字符做转义。</p>
+<p>传递给 <code>querySelector</code> 的字符串参数遵循 CSS 语法。如果 ID 或选择器不符合 CSS 语法 (比如使用了半角分号和空格)，必须使用双反斜杠对字符做转义。</p>
 
 <pre class="brush: html">&lt;div id="foo\bar"&gt;&lt;/div&gt;
 &lt;div id="foo:bar"&gt;&lt;/div&gt;
 
 &lt;script&gt;
 document.querySelector('#foo\bar')    // 啥也不匹配
-document.querySelector('#foo\\\\bar') // 第一个DIV
+document.querySelector('#foo\\\\bar') // 第一个 DIV
 document.querySelector('#foo:bar')     // 啥也不匹配
-document.querySelector('#foo\\:bar')   // 第二个DIV
+document.querySelector('#foo\\:bar')   // 第二个 DIV
 &lt;/script&gt;
 </pre>
 
-<h2 id="Specification" name="Specification">标准</h2>
+<h2 id="Specification">标准</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">标准</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 2', '#queryselector', 'DocumentFragment.querySelector')}}</td>
-   <td>{{Spec2('Selectors API Level 2')}}</td>
-   <td>无修改，与 {{SpecName('Selectors API Level 1')}} 相同</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 1', '#queryselector', 'DocumentFragment.querySelector')}}</td>
-   <td>{{Spec2('Selectors API Level 1')}}</td>
-   <td>最初的定义。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
+<h2 id="Browser_Compatibility">浏览器兼容性</h2>
 
 
 
 <p>{{Compat("api.DocumentFragment.querySelector")}}</p>
 
-<h2 id="See_also" name="See_also">参考</h2>
+<h2 id="See_also">参考</h2>
 
 <ul>
  <li>{{domxref("DocumentFragment")}} 接口</li>

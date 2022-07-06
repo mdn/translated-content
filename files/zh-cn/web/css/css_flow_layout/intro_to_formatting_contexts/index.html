@@ -7,23 +7,23 @@ tags:
 translation_of: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 ---
 <div>{{CSSRef}}<br>
-本文介绍格式化上下文的概念，其中有几种类型，包括块格式化上下文 block formatting contexts、内联格式化上下文 inline formatting contexts和灵活格式化上下文 flex formatting contexts。还介绍了它们的基本行为以及如何利用这些行为。</div>
+本文介绍格式化上下文的概念，其中有几种类型，包括块格式化上下文 block formatting contexts、内联格式化上下文 inline formatting contexts 和灵活格式化上下文 flex formatting contexts。还介绍了它们的基本行为以及如何利用这些行为。</div>
 
 <div><br>
 页面上的所有内容都是<strong>格式化上下文 formatting context </strong>的一部分，或者是一个以特定方式显示的区域。<strong>块格式上下文（BFC）</strong>将根据块布局规则布局子元素，<strong>灵活格式上下文 flex formatting context </strong>将其子元素布局为灵活项{{Glossary("flex item", "flex items")}}等。每个格式上下文在其上下文中都有特定的布局规则。</div>
 
 <h2 id="Block_formatting_contexts_块格式化上下文">Block formatting contexts 块格式化上下文</h2>
 
-<p>文档最外层元素使用块布局规则或称为<strong>初始块格式上下文</strong>。这意味着<code>&lt;html&gt;</code>元素块中的每个元素都是按照正常流程遵循块和内联布局规则进行布局的。参与 <abbr title="Block Formatting Context">BFC</abbr> 的元素使用CSS框模型概述的规则，该模型定义了元素的边距、边框和填充如何与同一上下文中的其他块交互。</p>
+<p>文档最外层元素使用块布局规则或称为<strong>初始块格式上下文</strong>。这意味着<code>&lt;html&gt;</code>元素块中的每个元素都是按照正常流程遵循块和内联布局规则进行布局的。参与 <abbr title="Block Formatting Context">BFC</abbr> 的元素使用 CSS 框模型概述的规则，该模型定义了元素的边距、边框和填充如何与同一上下文中的其他块交互。</p>
 
 <h3 id="创建新的块格式上下文">创建新的块格式上下文</h3>
 
-<p>{{HTMLElement("html")}} 元素不是唯一能够创建块格式上下文的元素。默认为块布局的任何元素也会为其后代元素创建块格式上下文。此外，还有一些CSS属性可以使元素创建一个BFC，即使默认情况下它不这样做。</p>
+<p>{{HTMLElement("html")}} 元素不是唯一能够创建块格式上下文的元素。任何块级元素都可以通过应用某些 CSS 属性来创建一个 BFC</p>
 
-<p>除了文档的根元素({{HTMLElement("html")}}) 之外，还将在以下情况下创建一个新的BFC：</p>
+<p>除了文档的根元素 ({{HTMLElement("html")}}) 之外，还将在以下情况下创建一个新的 BFC：</p>
 
 <ul>
- <li>使用{{cssxref("float")}} 时其浮动的元素</li>
+ <li>使用{{cssxref("float")}} 使其浮动的元素</li>
  <li>绝对定位的元素 (包含 {{cssxref("position", "position: fixed", "#fixed")}} 或{{cssxref("position", "position: sticky", "#sticky")}}</li>
  <li>使用以下属性的元素 {{cssxref("display", "display: inline-block", "#inline-block")}}</li>
  <li>表格单元格或使用 <code>display: table-cell</code>, 包括使用 <code>display: table-*</code> 属性的所有表格单元格</li>
@@ -37,27 +37,27 @@ translation_of: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
  <li>元素属性 {{cssxref("column-span")}} 设置为 <code>all</code></li>
 </ul>
 
-<p>这很有用，因为新的BFC的行为与最外层的文档非常相似，它在主布局中创造了一个小布局。BFC包含其内部的所有内容，{{cssxref("float")}} 和 {{cssxref("clear")}} 仅适用于同一格式上下文中的项目，而页边距仅在同一格式上下文中的元素之间折叠。</p>
+<p>这很有用，因为新的 BFC 的行为与最外层的文档非常相似，它在主布局中创造了一个小布局。BFC 包含其内部的所有内容，{{cssxref("float")}} 和 {{cssxref("clear")}} 仅适用于同一格式上下文中的项目，而页边距仅在同一格式上下文中的元素之间折叠。</p>
 
 <h3 id="BFC_创建例子">BFC 创建例子</h3>
 
 <p>让我们看看几个例子，来理解创建 <abbr title="Block Formatting Context">BFC</abbr> 的效果。</p>
 
-<p>在下面的示例中，我们在应用了边框的 <code>&lt;div&gt;</code> 中有一个浮动元素。该 <code>div</code> 的内容与浮动元素一起浮动。由于float的内容比它旁边的内容高，所以现在DIV的边框贯穿了float。如流入和流出元素指南<a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow">guide to in-flow and out of flow elements</a>中所述，浮动已脱离文档流，因此DIV的背景和边框仅包含内容，而不包含浮动。</p>
+<p>在下面的示例中，我们在应用了边框的 <code>&lt;div&gt;</code> 中有一个浮动元素。该 <code>div</code> 的内容与浮动元素一起浮动。由于 float 的内容比它旁边的内容高，所以现在 DIV 的边框贯穿了 float。如流入和流出元素指南<a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow">guide to in-flow and out of flow elements</a>中所述，浮动已脱离文档流，因此 DIV 的背景和边框仅包含内容，而不包含浮动。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}</p>
 
-<p>创建一个新的BFC将包含该浮动。在过去，一种典型的方法是设置 <code>overflow: auto</code> 或设置其他不是 <code>overflow: visible</code> 的值。</p>
+<p>创建一个新的 BFC 将包含该浮动。在过去，一种典型的方法是设置 <code>overflow: auto</code> 或设置其他不是 <code>overflow: visible</code> 的值。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/bfc-overflow.html", '100%', 720)}}<br>
- 设置 <code>overflow: auto</code> 会自动创建包含浮动的新 <abbr title="Block Formatting Context">BFC</abbr>。现在，我们的DIV在布局中变成了一个迷你布局。任何子元素都将包含在其中。</p>
+ 设置 <code>overflow: auto</code> 会自动创建包含浮动的新 <abbr title="Block Formatting Context">BFC</abbr>。现在，我们的 DIV 在布局中变成了一个迷你布局。任何子元素都将包含在其中。</p>
 
-<p>使用 <code>overflow</code> 创建新的 <abbr title="Block Formatting Context">BFC</abbr> 的问题在于， <code>overflow</code> 属性用于告诉浏览器您希望如何处理溢出的内容。在某些情况下，当您纯粹使用此属性创建BFC时，您会发现不需要的滚动条或剪切阴影。另外，对于未来的开发人员来说，它可能不太可读，因为不能显式地表明为什么要使用溢出来实现这一目的。如果您使用了这个方法，最好对代码进行注释以便他人理解。</p>
+<p>使用 <code>overflow</code> 创建新的 <abbr title="Block Formatting Context">BFC</abbr> 的问题在于， <code>overflow</code> 属性用于告诉浏览器您希望如何处理溢出的内容。在某些情况下，当您纯粹使用此属性创建 BFC 时，您会发现不需要的滚动条或剪切阴影。另外，对于未来的开发人员来说，它可能不太可读，因为不能显式地表明为什么要使用溢出来实现这一目的。如果您使用了这个方法，最好对代码进行注释以便他人理解。</p>
 
-<h3 id="使用displayflow-root显式创建BFC">使用display:flow-root显式创建BFC</h3>
+<h3 id="使用displayflow-root显式创建BFC">使用 display:flow-root 显式创建 BFC</h3>
 
 <p><br>
- 使用 <code>display: flow-root</code> （或 <code>display: flow-root list-item</code>）将创建一个新的BFC，而不会产生任何其他潜在的问题副作用。</p>
+ 使用 <code>display: flow-root</code> （或 <code>display: flow-root list-item</code>）将创建一个新的 BFC，而不会产生任何其他潜在的问题副作用。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/bfc-flow-root.html", '100%', 720)}}</p>
 
@@ -75,7 +75,7 @@ translation_of: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 
 <h2 id="其他格式上下文">其他格式上下文</h2>
 
-<p>本指南涵盖了流式布局，因此不涉及其他可能的格式上下文。因此，了解创建任何类型的格式上下文都将改变该格式上下文中元素的行为方式是很有用的。这种行为总是在规范中描述的，在MDN中也有描述。</p>
+<p>本指南涵盖了流式布局，因此不涉及其他可能的格式上下文。因此，了解创建任何类型的格式上下文都将改变该格式上下文中元素的行为方式是很有用的。这种行为总是在规范中描述的，在 MDN 中也有描述。</p>
 
 <h2 id="总结">总结</h2>
 

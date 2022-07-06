@@ -7,7 +7,7 @@ translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 
 <p>Для отправки HTTP-запроса нужно создать XMLHttpRequest-объект, открыть URL и отправить запрос. После выполнения запроса можно получить и обработать тело и статус ответа.</p>
 
-<pre class="brush: js notranslate">function reqListener () {
+<pre class="brush: js">function reqListener () {
   console.log(this.responseText);
 }
 
@@ -54,16 +54,16 @@ oReq.send();</pre>
 
 <p>Хотя обычно <code>XMLHttpRequest</code> используется, чтобы получать и загружать текст, с его помощью можно обмениваться и двоичными данными. Есть несколько проверенных способов заставить <code>XMLHttpRequest</code> посылать двоичные данные. Они используют метод  <code>XMLHttpRequest</code>.overrideMimeType().</p>
 
-<pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush:js">var oReq = new XMLHttpRequest();
 oReq.open("GET", url, true);
 // получаем необработанные данные в виде двоичной строки
 oReq.overrideMimeType("text/plain; charset=x-user-defined");
 /* ... */
 </pre>
 
-<p>Спецификация XMLHttpRequest Level 2 добавляет новые атрибуты <a href="http://www.w3.org/TR/XMLHttpRequest2/#the-responsetype-attribute" title="http://www.w3.org/TR/XMLHttpRequest2/#the-responsetype-attribute">responseType</a>, значительно облегчающие работу с двоичными данными:</p>
+<p>Спецификация XMLHttpRequest Level 2 добавляет новые атрибуты <a href="http://www.w3.org/TR/XMLHttpRequest2/#the-responsetype-attribute">responseType</a>, значительно облегчающие работу с двоичными данными:</p>
 
-<pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush:js">var oReq = new XMLHttpRequest();
 
 oReq.open("GET", url, true);
 oReq.responseType = "arraybuffer";
@@ -80,9 +80,9 @@ oReq.send();
 
 <p><code>XMLHttpRequest</code> позволяет подписываться на различные события, которые могут произойти в процессе обработки запроса. Сюда входят периодические уведомления о состоянии запроса, сообщения об ошибках и так далее. </p>
 
-<p>Отслеживание событий процесса загрузки  следует спецификации Web API <a href="http://dev.w3.org/2006/webapi/progress/Progress.html" title="http://dev.w3.org/2006/webapi/progress/Progress.html">progress events</a>: эти события реализуют интерфейс {{domxref("ProgressEvent")}}.</p>
+<p>Отслеживание событий процесса загрузки  следует спецификации Web API <a href="http://dev.w3.org/2006/webapi/progress/Progress.html">progress events</a>: эти события реализуют интерфейс {{domxref("ProgressEvent")}}.</p>
 
-<pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush:js">var oReq = new XMLHttpRequest();
 
 oReq.addEventListener("progress", updateProgress, false);
 oReq.addEventListener("load", transferComplete, false);
@@ -123,7 +123,7 @@ function transferCanceled(evt) {
 
 <p>События <code>progress</code> есть и у входящих, и у исходящих передач. События входящих передач создаются для объекта <code>XMLHttpRequest</code>, как показано в примере выше; исходящих —для <code>XMLHttpRequest.upload:</code></p>
 
-<pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush:js">var oReq = new XMLHttpRequest();
 
 oReq.upload.addEventListener("progress", updateProgress, false);
 oReq.upload.addEventListener("load", transferComplete, false);
@@ -147,7 +147,7 @@ oReq.open();
 
 <p>Также возможно засечь все три события, завершающие загрузку (<code>abort</code>, <code>load</code>, or <code>error</code>) через событие <code>loadend</code>:</p>
 
-<pre class="brush:js notranslate">req.addEventListener("loadend", loadEnd, false);
+<pre class="brush:js">req.addEventListener("loadend", loadEnd, false);
 
 function loadEnd(e) {
   alert("Передача данных завершена (но мы не знаем, успешно ли).");
@@ -188,14 +188,14 @@ function loadEnd(e) {
  <li>
   <p>Метод: <code>POST</code>; тип кодирования: <code>application/x-www-form-urlencoded</code> (по умолчанию):</p>
 
-  <pre class="notranslate">Content-Type: application/x-www-form-urlencoded
+  <pre>Content-Type: application/x-www-form-urlencoded
 
 foo=bar&amp;baz=The+first+line.&amp;#37;0D%0AThe+second+line.%0D%0A</pre>
  </li>
  <li>
   <p>Метод: <code>POST</code>; тип кодирования: <code>text/plain</code>:</p>
 
-  <pre class="notranslate">Content-Type: text/plain
+  <pre>Content-Type: text/plain
 
 foo=bar
 baz=The first line.
@@ -222,14 +222,14 @@ The second line.
 
 <p>Instead, if you are using the <code>GET</code> method, a string like the following will be simply added to the URL:</p>
 
-<pre class="notranslate">?foo=bar&amp;baz=The%20first%20line.%0AThe%20second%20line.</pre>
+<pre>?foo=bar&amp;baz=The%20first%20line.%0AThe%20second%20line.</pre>
 
 <h4 id="Небольшой_классический_фреймворк">Небольшой классический фреймворк</h4>
 
 <p>Все данные эффекты достигаются с помощью веб браузера, когда вы отправляете {{ HTMLElement("form") }}. Но если вам требуется выполнить все операции с помощью лишь JavaScript, то вам придётся проинструктировать интерпретатор обо <em>всех</em> выполняемых операциях. Для, того чтобы отправлять формы с помощью <em>чистого</em> AJAX, потребуется слишком комплексное описание, чтобы тут рассуждать о нем во всех подробностях. В связи с этим, мы опубликовали здесь <strong>полный(но все ещё дидактический) фреймворк, </strong>который всё же способен использовать все четыре способа отправки и, так же поддерживает <strong>файловую загрузку.</strong></p>
 
 <div style="height: 400px; margin-bottom: 12px; overflow: auto;">
-<pre class="brush: html notranslate">&lt;!doctype html&gt;
+<pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
@@ -475,7 +475,7 @@ var AJAXSubmit = (function () {
 
 <p>Для того, чтобы произвести его тест, создайте страницу с названием <strong>register.php</strong> (и укажите атрибут <code>action</code> одной из данных форм) и добавьте данный <em>минимальный</em> контент</p>
 
-<pre class="brush: php notranslate">&lt;?php
+<pre class="brush: php">&lt;?php
 /* register.php */
 
 header("Content-type: text/plain");
@@ -502,7 +502,7 @@ print_r($_FILES);
 
 <p>Синтаксис данного скрипта представлен ниже:</p>
 
-<pre class="syntaxbox notranslate">AJAXSubmit(myForm);</pre>
+<pre class="syntaxbox">AJAXSubmit(myForm);</pre>
 
 <div class="note"><strong>Примечание:</strong> Данный фреймворк использует <a href="/en-US/docs/DOM/FileReader" title="/en-US/docs/DOM/FileReader"><code>FileReader</code></a> API для передачи загрузочных файлов. Это новый API и его невозможно использовать IE9 и ниже. В связи с этим, загрузки только с использованием AJAX воспринимаются, лишь как <strong>экспериментальные</strong>. Если вам не требуется загружать бинарные файлы, то данный фреймворк работает в большинстве современных браузерах.</div>
 
@@ -515,7 +515,7 @@ print_r($_FILES);
 <p>The <a href="/en-US/docs/DOM/XMLHttpRequest/FormData" title="DOM/XMLHttpRequest/FormData"><code>FormData</code></a> constructor lets you compile a set of key/value pairs to send using <code>XMLHttpRequest</code>. Its primarily intended for use in sending form data, but can be used independently from forms in order to transmit keyed data. The transmitted data is in the same format that the form's <code>submit()</code> method would use to send the data if the form's encoding type were set to "multipart/form-data". FormData objects can be utilized in a number of ways with an XMLHttpRequest. For examples and explanations of how one can utilize FormData with XMLHttpRequests see the <a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="Using FormData Objects">Using FormData Objects</a> page. For didactic purpose only we post here <strong>a <em>translation</em> of <a href="#A_little_vanilla_framework" title="#A_little_vanilla_framework">the previous example</a> transformed so as to make use of the <code>FormData</code> API</strong>. Note the brevity of the code:</p>
 
 <div style="height: 400px; margin-bottom: 12px; overflow: auto;">
-<pre class="brush: html notranslate">&lt;!doctype html&gt;
+<pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
@@ -636,7 +636,7 @@ function AJAXSubmit (oFormElement) {
 
 <h2 id="Получить_дату_последнего_изменения">Получить дату последнего изменения</h2>
 
-<pre class="brush: js notranslate">function getHeaderTime () {
+<pre class="brush: js">function getHeaderTime () {
   alert(this.getResponseHeader("Last-Modified"));  /* A valid GMTString date or null */
 }
 
@@ -649,7 +649,7 @@ oReq.send();</pre>
 
 <p>Let's create these two functions:</p>
 
-<pre class="brush: js notranslate">function getHeaderTime () {
+<pre class="brush: js">function getHeaderTime () {
 
   var
     nLastVisit = parseFloat(window.localStorage.getItem('lm_' + this.filepath)),
@@ -673,7 +673,7 @@ function ifHasChanged(sURL, fCallback) {
 
 <p>Test:</p>
 
-<pre class="brush: js notranslate">/* Let's test the file "yourpage.html"... */
+<pre class="brush: js">/* Let's test the file "yourpage.html"... */
 
 ifHasChanged("yourpage.html", function (nModif, nVisit) {
   alert("The page '" + this.filepath + "' has been changed on " + (new Date(nModif)).toLocaleString() + "!");
@@ -689,7 +689,7 @@ ifHasChanged("yourpage.html", function (nModif, nVisit) {
 
 <p>Для кросс-браузерного обхода кеширования в конец URL-запроса достаточно добавить случайную строку в GET-параметры, то есть сразу после «?», например:</p>
 
-<pre class="notranslate">http://foo.com/bar.html -&gt; http://foo.com/bar.html?12345
+<pre>http://foo.com/bar.html -&gt; http://foo.com/bar.html?12345
 http://foo.com/bar.html?foobar=baz -&gt; http://foo.com/bar.html?foobar=baz&amp;12345
 </pre>
 
@@ -697,7 +697,7 @@ http://foo.com/bar.html?foobar=baz -&gt; http://foo.com/bar.html?foobar=baz&amp;
 
 <p>Автоматизировать этот подход можно следующим сниппетом:</p>
 
-<pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush:js">var oReq = new XMLHttpRequest();
 
 oReq.open("GET", url + ((/\?/).test(url) ? "&amp;" : "?") + (new Date()).getTime(), true);
 oReq.send(null);</pre>
@@ -712,18 +712,18 @@ oReq.send(null);</pre>
 
 <h3 id="XMLHttpRequests_being_stopped">XMLHttpRequests being stopped</h3>
 
-<p>If you end up with an XMLHttpRequest having <code>status=0</code> and <code>statusText=null</code>, it means that the request was not allowed to be performed. It was <code><a href="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent" title="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent">UNSENT</a></code>. A likely cause for this is when the <a href="http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin" style="outline: 1px dotted; outline-offset: 0pt;"><code>XMLHttpRequest</code> origin</a> (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest is then <code>open()</code>. This case can happen for example when one has an XMLHttpRequest that gets fired on an onunload event for a window: the XMLHttpRequest gets in fact created when the window to be closed is still there, and then the request is sent (ie <code>open()</code>) when this window has lost its focus and potentially different window has gained focus. The way to avoid this problem is to set a listener on the new window "activate" event that gets set when the old window has its "unload" event fired.</p>
+<p>If you end up with an XMLHttpRequest having <code>status=0</code> and <code>statusText=null</code>, it means that the request was not allowed to be performed. It was <code><a href="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent">UNSENT</a></code>. A likely cause for this is when the <a href="http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin" style="outline: 1px dotted; outline-offset: 0pt;"><code>XMLHttpRequest</code> origin</a> (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest is then <code>open()</code>. This case can happen for example when one has an XMLHttpRequest that gets fired on an onunload event for a window: the XMLHttpRequest gets in fact created when the window to be closed is still there, and then the request is sent (ie <code>open()</code>) when this window has lost its focus and potentially different window has gained focus. The way to avoid this problem is to set a listener on the new window "activate" event that gets set when the old window has its "unload" event fired.</p>
 
 <h2 id="Using_XMLHttpRequest_from_JavaScript_modules_XPCOM_components">Using XMLHttpRequest from JavaScript modules / XPCOM components</h2>
 
 <p>Instantiating <code>XMLHttpRequest</code> from a <a href="/en-US/docs/JavaScript_code_modules/Using" title="https://developer.mozilla.org/en/JavaScript_code_modules/Using_JavaScript_code_modules">JavaScript module</a> or an XPCOM component works a little differently; it can't be instantiated using the <code>XMLHttpRequest()</code> constructor. The constructor is not defined inside components and the code results in an error. The best way to work around this is to use the XPCOM component constructor.</p>
 
-<pre class="brush: js notranslate">const XMLHttpRequest = Components.Constructor("@mozilla.org/xmlextras/xmlhttprequest;1", "nsIXMLHttpRequest");
+<pre class="brush: js">const XMLHttpRequest = Components.Constructor("@mozilla.org/xmlextras/xmlhttprequest;1", "nsIXMLHttpRequest");
 </pre>
 
 <p>Unfortunately in versions of Gecko prior to Gecko 16 there is a bug which can cause requests created this way to be cancelled for no reason.  If you need your code to work on Gecko 15 or earlier, you can get the XMLHttpRequest constructor from the hidden DOM window like so.</p>
 
-<pre class="brush:js notranslate">const { XMLHttpRequest } = Components.classes["@mozilla.org/appshell/appShellService;1"]
+<pre class="brush:js">const { XMLHttpRequest } = Components.classes["@mozilla.org/appshell/appShellService;1"]
                                      .getService(Components.interfaces.nsIAppShellService)
                                      .hiddenDOMWindow;
 var oReq = new XMLHttpRequest();</pre>
@@ -739,5 +739,5 @@ var oReq = new XMLHttpRequest();</pre>
  <li><a href="http://developer.apple.com/internet/webcontent/xmlhttpreq.html">Apple developers' reference</a></li>
  <li><a href="http://jibbering.com/2002/4/httprequest.html">"Using the XMLHttpRequest Object" (jibbering.com)</a></li>
  <li><a href="http://www.w3.org/TR/XMLHttpRequest/">The XMLHttpRequest Object: W3C Specification</a></li>
- <li><a href="http://dev.w3.org/2006/webapi/progress/Progress.html" title="http://dev.w3.org/2006/webapi/progress/Progress.html">Web Progress Events specification</a></li>
+ <li><a href="http://dev.w3.org/2006/webapi/progress/Progress.html">Web Progress Events specification</a></li>
 </ol>

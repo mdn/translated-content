@@ -9,26 +9,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/escape
 </div>
 </div>
 
-<h2 id="Summary" name="Summary">概览</h2>
+<h2 id="Summary">概览</h2>
 
-<p>废弃的 <code><strong>escape()</strong></code> 方法生成新的由十六进制转义序列替换的字符串. 使用 {{jsxref("Global_Objects/encodeURI", "encodeURI")}} 或 {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} 代替.</p>
+<p>废弃的 <code><strong>escape()</strong></code> 方法生成新的由十六进制转义序列替换的字符串。使用 {{jsxref("Global_Objects/encodeURI", "encodeURI")}} 或 {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} 代替。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>escape(str)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>str</code></dt>
- <dd>待编码的字符串.</dd>
+ <dd>待编码的字符串。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p><code>escape</code> 函数是全局对象的属性. 特色字符如: @*_+-./ 被排除在外.</p>
+<p><code>escape</code> 函数是全局对象的属性。特色字符如：<code>@*_+-./</code> 被排除在外。</p>
 
-<p>字符的16进制格式值,当该值小于等于0xFF时,用一个2位转移序列: %xx 表示. 大于的话则使用4位序列:%<strong>u</strong>xxxx 表示.</p>
+<p>字符的 16 进制格式值，当该值小于等于 0xFF 时，用一个 2 位转义序列: <code>%xx</code> 表示。大于的话则使用 4 位序列：%<strong>u</strong>xxxx 表示。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -68,57 +68,9 @@ escape("@*_+-./");    // "@*_+-./"</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_Also" name="See_Also">其他链接</h2>
+<h2 id="See_Also">其他链接</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/encodeURI", "encodeURI")}}</li>

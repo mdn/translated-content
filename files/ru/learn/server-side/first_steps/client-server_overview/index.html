@@ -39,7 +39,7 @@ translation_of: Learn/Server-side/First_steps/Client-Server_overview
 
 <h2 id="Веб-серверы_и_HTTP_для_начинающих">Веб-серверы и HTTP (для начинающих)</h2>
 
-<p>Веб-браузеры взаимодействуют с <a href="https://developer.mozilla.org/ru/docs/Learn/Common_questions/What_is_a_web_server">веб-серверами</a> при помощи протокола передачи гипертекста (<a href="https://wiki.developer.mozilla.org/ru/docs/Web/HTTP">HTTP</a>). Когда вы кликаете на ссылку на странице, заполняете форму или производите поиск, браузер отправляет на сервер <em>HTTP-запрос</em>.</p>
+<p>Веб-браузеры взаимодействуют с <a href="https://developer.mozilla.org/ru/docs/Learn/Common_questions/What_is_a_web_server">веб-серверами</a> при помощи протокола передачи гипертекста (<a href="/ru/docs/Web/HTTP">HTTP</a>). Когда вы кликаете на ссылку на странице, заполняете форму или производите поиск, браузер отправляет на сервер <em>HTTP-запрос</em>.</p>
 
 <p>Этот запрос включает:</p>
 
@@ -82,7 +82,7 @@ translation_of: Learn/Server-side/First_steps/Client-Server_overview
 
 <p>Каждая строка запроса содержит информацию о запросе. Первая часть называется <strong>заголовок</strong> и содержит важную информацию о запросе, точно так же, как <a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/The_head_metadata_in_HTML">HTML head</a> содержит важную информацию о HTML-документе (но не содержимое документа, которое расположено внутри тэга "body"):</p>
 
-<pre class="notranslate">GET https://developer.mozilla.org/en-US/search?q=client+server+overview&amp;topic=apps&amp;topic=html&amp;topic=css&amp;topic=js&amp;topic=api&amp;topic=webdev HTTP/1.1
+<pre>GET https://developer.mozilla.org/en-US/search?q=client+server+overview&amp;topic=apps&amp;topic=html&amp;topic=css&amp;topic=js&amp;topic=api&amp;topic=webdev HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
 Pragma: no-cache
@@ -132,7 +132,7 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSC
 
 <p>В конце сообщения мы видим содержимое <strong>body, </strong>содержащее HTML-код возвращаемого ответа.</p>
 
-<pre class="brush: html notranslate">HTTP/1.1 200 OK
+<pre class="brush: html">HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
 Vary: Accept,Cookie, Accept-Encoding
@@ -166,7 +166,7 @@ Content-Length: 41823
 
 <p>В приведённом ниже тексте показан HTTP-запрос, сделанный когда пользователь загружает новые данные профиля на этом сайте. Формат запроса почти такой же, как пример запроса <code>GET</code>, показанный ранее, хотя первая строка идентифицирует этот запрос как <code>POST</code>.</p>
 
-<pre class="brush: html notranslate">POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
+<pre class="brush: html">POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
 Content-Length: 432
@@ -190,7 +190,7 @@ csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&amp;user-username=hamishwil
 
 <p>Ответ от запроса показан ниже. Код состояния «<code>302 Found</code>» сообщает браузеру, что сообщение обработано, и что необходим второй HTTP-запрос для загрузки страницы, указанной в поле <code>Location</code>. В остальном информация аналогична информации для ответа на запрос <code>GET</code> .</p>
 
-<pre class="brush: html notranslate">HTTP/1.1 302 FOUND
+<pre class="brush: html">HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com
 Vary: Cookie
@@ -277,7 +277,7 @@ Content-Length: 0
 
 <p>Для примера рассмотрим следующий код Django (Python), который связывает два URL-шаблона с двумя функциями просмотра. Первый шаблон проверяет, что HTTP-запрос с URL-адресом ресурса <code>/best</code> будет передан функции с именем <code>index()</code> в модуле <code>views</code>. Запрос, который имеет шаблон «<code>/best/junior</code>», вместо этого будет передан функции просмотра <code>junior()</code>.</p>
 
-<pre class="brush: python notranslate"># file: best/urls.py
+<pre class="brush: python"># file: best/urls.py
 #
 
 from django.conf.urls import url
@@ -299,7 +299,7 @@ urlpatterns = [
 
 <p>В приведённом ниже примере представлен список всех команд, у которых есть точный (с учётом регистра) <code>team_type</code> «junior» («младший») — обратите внимание на формат: имя поля (<code>team_type</code>), за которым следует двойной знак подчёркивания, а затем тип соответствия для использования (в этом случае <code>exact</code> («точное»)). Существует много других типов соответствия, и мы можем объединить их. Мы также можем контролировать порядок и количество возвращаемых результатов.</p>
 
-<pre class="brush: python notranslate">#best/views.py
+<pre class="brush: python">#best/views.py
 
 from django.shortcuts import render
 

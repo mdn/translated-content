@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong><em>TypedArray</em>.of()</strong></code> 方法创建一个具有可变数量参数的新<a href="/en-US/docs/">类型数组</a> 。此方法几乎与{{jsxref("Array.of()")}} 相同。</p>
+<p><code>TypedArray.of()</code> 方法创建一个具有可变数量参数的新<a href="/en-US/docs/">类型数组</a> 。此方法几乎与{{jsxref("Array.of()")}} 相同。</p>
 
 <h2 id="句法">句法</h2>
 
@@ -44,8 +44,8 @@ Float64Array</pre>
 <p>{{jsxref("Array.of()")}} 和 <code><em>TypedArray</em>.of()</code>之间的一些细微区别：</p>
 
 <ul>
- <li>如果传递给TypedArray.of的这个值不是构造函数，TypedArray.of将抛出一个{{jsxref("TypeError")}} ，其中Array.of默认创建一个新的 {{jsxref("Array")}}。</li>
- <li><code><em>TypedArray</em>.of</code> 使用 [[Put]] 其中Array.of使用 [[DefineProperty]]。因此，当使用{{jsxref("Proxy")}} 对象时，它调用 {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} 创建新的元素，而不是 {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}}。</li>
+ <li>如果传递给 TypedArray.of 的这个值不是构造函数，TypedArray.of 将抛出一个{{jsxref("TypeError")}} ，其中 Array.of 默认创建一个新的 {{jsxref("Array")}}。</li>
+ <li><code><em>TypedArray</em>.of</code> 使用 [[Put]] 其中 Array.of 使用 [[DefineProperty]]。因此，当使用{{jsxref("Proxy")}} 对象时，它调用 {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} 创建新的元素，而不是 {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}}。</li>
 </ul>
 
 <h2 id="范例">范例</h2>
@@ -80,55 +80,7 @@ Int16Array.of(undefined);    // IntArray [ 0 ]
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(45.0)}}</td>
-   <td>{{CompatGeckoDesktop("38")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("38")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="也可以看看">也可以看看</h2>
 

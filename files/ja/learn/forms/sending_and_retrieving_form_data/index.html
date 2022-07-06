@@ -2,26 +2,27 @@
 title: フォームデータの送信
 slug: Learn/Forms/Sending_and_retrieving_form_data
 tags:
-  - Beginner
+  - 初心者
   - CodingScripting
-  - Guide
-  - HTML
-  - HTTP
-  - Web
-  - セキュリティ
   - ファイル
   - フォーム
+  - ガイド
+  - HTML
+  - HTTP
+  - ヘッダー
+  - セキュリティ
+  - Web
 translation_of: Learn/Forms/Sending_and_retrieving_form_data
 ---
 <div>{{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}</div>
 
-<p class="summary">フォームがクライアント側で検証されたら、フォームの送信は大丈夫です。前の記事では検証をカバーしたので、送信する準備はできています! この記事では、ユーザーがフォームを送信したときに何が起こるか、つまりデータがどこへ行くのか、そこに来たときにどう扱うのかを見ます。また、フォームデータの送信に関連するセキュリティの考慮事項のいくつかも見てみます。</p>
+<p class="summary">フォームがクライアント側での検証が終わったら、次はフォームの送信です。前の記事では検証を扱ったので、送信する準備はできています。この記事では、ユーザーがフォームを送信したときに何が起こるか、つまりデータがどこへ行くのか、そこに来たときにどう扱うのかを見ます。また、フォームデータの送信に関連するセキュリティの考慮事項のいくつかも見てみます。</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">前提知識:</th>
-   <td>基本的なコンピューターリテラシー, <a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML の理解</a>, <a href="/ja/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> および<a href="/ja/docs/Learn/Server-side/First_steps">サーバーサイドプログラミング</a>の基本的な知識。</td>
+   <td>基本的なコンピューターリテラシー、<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML の理解</a>、<a href="/ja/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> および<a href="/ja/docs/Learn/Server-side/First_steps">サーバーサイドプログラミング</a>の基本的な知識。</td>
   </tr>
   <tr>
    <th scope="row">目標:</th>
@@ -32,37 +33,37 @@ translation_of: Learn/Forms/Sending_and_retrieving_form_data
 
 <p>まずは、フォームが送信されたときにデータに何が起こるかを考えてみましょう。</p>
 
-<h2 id="About_clientserver_architecture" name="About_clientserver_architecture">クライアント/サーバー構成について</h2>
+<h2 id="Clientserver_architecture">クライアント/サーバー構成</h2>
 
-<p>ウェブはごく基本的なクライアント/サーバー構成に基づいており、簡単に言うと次のようになります。クライアント (通常はウェブブラウザー) は <a href="/ja/docs/HTTP">HTTP プロトコル</a>を使用して、サーバー (ほとんどの場合 <a href="http://httpd.apache.org/" rel="external">Apache</a>、<a href="http://nginx.com/" rel="external">Nginx</a>、<a href="http://www.iis.net/" rel="external">IIS</a>、<a href="http://tomcat.apache.org/" rel="external">Tomcat</a> などのウェブサーバー) にリクエストを送ります。サーバーは同じプロトコルを使用して、リクエストに応答します。</p>
+<p>ウェブはごく基本的なクライアント/サーバー構成に基づいており、簡単に言うと次のようになります。クライアント (通常はウェブブラウザー) は、サーバー (ほとんどの場合 <a href="https://httpd.apache.org/" rel="external">Apache</a>、<a href="https://www.nginx.com/" rel="external">Nginx</a>、<a href="https://www.iis.net/" rel="external">IIS</a>、<a href="https://tomcat.apache.org/" rel="external">Tomcat</a> などのウェブサーバー) に <a href="/ja/docs/Web/HTTP">HTTP プロトコル</a>を使用してリクエストを送ります。サーバーは同じプロトコルを使用して、リクエストに応答します。</p>
 
-<p><img alt="基本的なクライアント/サーバー構成" src="/files/4291/client-server.png" style="display: block; height: 141px; margin: 0px auto; width: 400px;"></p>
+<p><img alt="基本的なクライアント/サーバー構成" src="client-server.png"></p>
 
 <p>クライアント側において、HTML フォームはサーバーへデータを送信する HTTP リクエストを組み立てるのための、便利でユーザーに使いやすい手段でしかありません。フォームによって、ユーザーが HTTP リクエストで渡す情報を提供することができるようになります。</p>
 
 <div class="note">
-<p><strong>メモ</strong>: どのようにクライアント/サーバー構成が動作するかについてもっと知りたい場合は、<a href="/ja/docs/Learn/Server-side/First_steps">サーバーサイド Web サイトプログラミング入門</a>モジュールをお読みください。</p>
+<p><strong>メモ</strong>: どのようにクライアント/サーバー構成が動作するかについてもっと知りたい場合は、<a href="/ja/docs/Learn/Server-side/First_steps">サーバーサイドウェブサイトプログラミング入門</a>モジュールをお読みください。</p>
 </div>
 
-<h2 id="On_the_client_side_defining_how_to_send_the_data" name="On_the_client_side_defining_how_to_send_the_data">クライアント側: データ送信方法の定義</h2>
+<h2 id="On_the_client_side_defining_how_to_send_the_data">クライアント側: データ送信方法の定義</h2>
 
 <p>{{HTMLElement("form")}} 要素で、データを送信する方法を定義します。その属性すべてが、ユーザーが送信ボタンを押すと送信されるリクエストを調整できるように設計されています。もっとも重要な属性は {{htmlattrxref("action","form")}} と {{htmlattrxref("method","form")}} の 2 つです。</p>
 
-<h3 id="The_htmlattrxrefactionform_attribute" name="The_htmlattrxref(actionform)_attribute">action 属性</h3>
+<h3 id="The_htmlattrxrefactionform_attribute">action 属性</h3>
 
-<p><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/action">action</a></code> 属性は、どこにデータを送信するかを定義します。値は妥当な相対/絶対 <a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Common_questions/What_is_a_URL">URL</a> でなければなりません。この属性が与えられなかった場合は、フォームが含まれているページの URL にデータが送信されます。</p>
+<p><code><a href="/ja/docs/Web/HTML/Attributes/action">action</a></code> 属性は、どこにデータを送信するかを定義します。値は妥当な相対/絶対 <a href="/ja/docs/Learn/Common_questions/What_is_a_URL">URL</a> でなければなりません。この属性が与えられなかった場合は、フォームが含まれているページの URL にデータが送信されます。</p>
 
 <p>この例では、データを絶対 URL の <code>http://</code><code>example.com</code> に送信します。</p>
 
-<pre class="brush: html notranslate">&lt;form action="http://example.com"&gt;</pre>
+<pre class="brush: html">&lt;form action="https://example.com"&gt;</pre>
 
 <p>こちらは、相対 URL を使用しています。データは同一オリジン上の別の URL に送信されます。</p>
 
-<pre class="brush: html notranslate">&lt;form action="/somewhere_else"&gt;</pre>
+<pre class="brush: html">&lt;form action="/somewhere_else"&gt;</pre>
 
 <p>以下のように属性を指定しない場合は、{{HTMLElement("form")}} 要素はフォームが表示されているページ自身に対してデータを送信します。</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;</pre>
+<pre class="brush: html">&lt;form&gt;</pre>
 
 <div class="note">
 <p><strong>メモ:</strong> HTTPS (secure HTTP) プロトコルを使用して URL を指定することができます。このようにすると、フォーム自体が HTTP でアクセスされる安全ではないページで提供される場合でも、データはリクエストの残りの部分とともに暗号化されます。一方、フォームが安全なページ提供されていても、{{htmlattrxref("action","form")}} 属性で安全ではない HTTP の URL を指定すると、どのブラウザーでもデータを送信する際にユーザーに対してセキュリティの警告を表示します。これは、データが暗号化されないためです。</p>
@@ -72,19 +73,19 @@ translation_of: Learn/Forms/Sending_and_retrieving_form_data
 
 <p>データがどう送られるかは <code>method</code> 属性に依存します。</p>
 
-<h3 id="The_htmlattrxrefmethodform_attribute" name="The_htmlattrxref(methodform)_attribute">method 属性</h3>
+<h3 id="The_htmlattrxrefmethodform_attribute">method 属性</h3>
 
-<p><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/method">method</a></code> 属性は、どのようにデータを送信するかを定義します。<a href="/ja/docs/HTTP">HTTP プロトコル</a>はリクエストを実行するための方法をいくつか提供しています。HTML フォームのデータは複数の方法で送信することができます。もっとも一般的なものは <code>GET</code> メソッドと <code>POST</code> メソッドです。</p>
+<p><code><a href="/ja/docs/Web/HTML/Attributes/method">method</a></code> 属性は、どのようにデータを送信するかを定義します。<a href="/ja/docs/Web/HTTP">HTTP プロトコル</a>はリクエストを実行するための方法をいくつか提供しています。HTML フォームのデータは複数の方法で送信することができます。もっとも一般的なものは <code>GET</code> メソッドと <code>POST</code> メソッドです。</p>
 
-<p>これら2つのメソッドの違いを理解するために、一歩戻って <a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTTP/Overview">HTTP の動作</a>についてみていきましょう。ウェブ上のリソースにたどり着こうとするたびに、ブラウザーは URL へリクエストを送信します。HTTP リクエストは 2 つの部分で構成されます。ブラウザーの機能に関する包括的なメタデータのセットを持つヘッダーと、指定されたリクエストをサーバーが処理するために必要な情報を持つ本文です。</p>
+<p>これら2つのメソッドの違いを理解するために、一歩戻って <a href="/ja/docs/Web/HTTP/Overview">HTTP の動作</a>についてみていきましょう。ウェブ上のリソースにたどり着こうとするたびに、ブラウザーは URL へリクエストを送信します。HTTP リクエストは 2 つの部分で構成されます。ブラウザーの機能に関する包括的なメタデータのセットを持つヘッダーと、指定されたリクエストをサーバーが処理するために必要な情報を持つ本文です。</p>
 
-<h4 id="The_GET_method" name="The_GET_method">GET メソッド</h4>
+<h4 id="The_GET_method">GET メソッド</h4>
 
-<p><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTTP/Methods/GET"><code>GET</code> メソッド</a>は、サーバーに対して指定したリソースを返すよう求めるためにブラウザーが使用するメソッドです。"やあサーバー、このリソースをくれよ。" この場合、ブラウザーは空の本文を送信します。本文が空であるため、フォームをこのメソッドで送信する場合はデータを URL の後に付加します。</p>
+<p><a href="/ja/docs/Web/HTTP/Methods/GET"><code>GET</code> メソッド</a>は、サーバーに対して指定したリソースを返すよう求めるためにブラウザーが使用するメソッドです。"やあサーバー、このリソースをくれよ。" この場合、ブラウザーは空の本文を送信します。本文が空であるため、フォームをこのメソッドで送信する場合はデータを URL の後に付加します。</p>
 
 <p>以下のフォームについて考えてみましょう。</p>
 
-<pre class="brush: html notranslate">&lt;form action="http://foo.com" method="get"&gt;
+<pre class="brush: html">&lt;form action="http://www.foo.com" method="GET"&gt;
   &lt;div&gt;
     &lt;label for="say"&gt;What greeting do you want to say?&lt;/label&gt;
     &lt;input name="say" id="say" value="Hi"&gt;
@@ -100,7 +101,7 @@ translation_of: Learn/Forms/Sending_and_retrieving_form_data
 
 <p><code>GET</code> メソッドが使用されているので、フォームを送信するときにブラウザーのアドレスバーに <code>www.foo.com/?say=Hi&amp;to=Mom</code> という URL が見えるでしょう。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14685/url-parameters.png" style="display: block; margin: 0 auto;">URL に追加されたデータは名前/値の組の連続です。URL の Web アドレスが終了した後、疑問符 (<code>?</code>) に続いて、名前/値の組が、それぞれアンパサンド (<code>&amp;</code>) で区切られて入ります。この場合、2 つのデータの断片がサーバーに渡されます。</p>
+<p><img alt="" src="url-parameters.png">URL に追加されたデータは名前/値の組の連続です。URL のウェブアドレスが終了した後、疑問符 (<code>?</code>) に続いて、名前/値の組が、それぞれアンパサンド (<code>&amp;</code>) で区切られて入ります。この場合、2 つのデータの断片がサーバーに渡されます。</p>
 
 <ul>
  <li><code>say</code> の値は <code>Hi</code></li>
@@ -109,20 +110,20 @@ translation_of: Learn/Forms/Sending_and_retrieving_form_data
 
 <p>HTTP リクエストは次のようになります。</p>
 
-<pre class="notranslate">GET /?say=Hi&amp;to=Mom HTTP/1.1
+<pre>GET /?say=Hi&amp;to=Mom HTTP/2.0
 Host: foo.com</pre>
 
 <div class="note">
 <p><strong>メモ</strong>: この例は GitHub にあります。— <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html">get-method.html</a> を参照してください (<a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html">ライブはこちら</a>).</p>
 </div>
 
-<h4 id="The_POST_method" name="The_POST_method">POST メソッド</h4>
+<h4 id="The_POST_method">POST メソッド</h4>
 
-<p><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTTP/Methods/POST"><code>POST</code> メソッド</a>は少し異なります。これは、HTTP リクエストの本文で提供したデータを考慮したレスポンスの要求を、ブラウザーがサーバーに送信するためのメソッドです。"やあサーバー、このデータを見て適切な結果を返してよ。" このメソッドを使用してフォームを送信する場合は、データが HTTP リクエストの本文の後に追加されます。</p>
+<p><a href="/ja/docs/Web/HTTP/Methods/POST"><code>POST</code> メソッド</a>は少し異なります。これは、HTTP リクエストの本文で提供したデータを考慮したレスポンスの要求を、ブラウザーがサーバーに送信するためのメソッドです。"やあサーバー、このデータを見て適切な結果を返してよ。" このメソッドを使用してフォームを送信する場合は、データが HTTP リクエストの本文の後に追加されます。</p>
 
 <p>例を見てみましょう。— これは前述の <code>GET</code> の節で見たものと同じフォームですが、{{htmlattrxref("method","form")}} 属性が <code>post</code> に設定されています。</p>
 
-<pre class="brush: html notranslate">&lt;form action="http://foo.com" method="post"&gt;
+<pre class="brush: html">&lt;form action="http://www.foo.com" method="POST"&gt;
   &lt;div&gt;
     &lt;label for="say"&gt;What greeting do you want to say?&lt;/label&gt;
     &lt;input name="say" id="say" value="Hi"&gt;
@@ -138,7 +139,7 @@ Host: foo.com</pre>
 
 <p>フォームをが <code>POST</code> メソッドで送信されると、URL にはデータが追加されず、HTTP リクエストは次のように、リクエスト本文にデータが含まれた形になります。</p>
 
-<pre class="notranslate">POST / HTTP/1.1
+<pre>POST / HTTP/2.0
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 13
@@ -165,7 +166,7 @@ say=Hi&amp;to=Mom</pre>
 
 <p>これで下の画像にあるように、フォームデータを取得することができます。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14691/network-monitor.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="network-monitor.png"></p>
 
 <p>ユーザーに表示されるのは呼び出された URL のみです。前述のように、<code>GET</code> リクエストはユーザーが URL バーの中でデータを見ることができますが、<code>POST</code> リクエストではそうではありません。これは 2 つの理由でとても重要です。</p>
 
@@ -174,15 +175,15 @@ say=Hi&amp;to=Mom</pre>
  <li>大量のデータを送信する必要があるなら、<code>POST</code> が好ましいメソッドです。これは、URL の長さ制限があるブラウザーが存在するためです。加えて、多くのサーバーは受け入れる URL の長さを制限しています。</li>
 </ol>
 
-<h2 id="On_the_server_side_retrieving_the_data" name="On_the_server_side_retrieving_the_data">サーバー側: データの取得</h2>
+<h2 id="On_the_server_side_retrieving_the_data">サーバー側: データの取得</h2>
 
 <p>どちらの HTTP メソッドを選択しても、サーバーが受け取る文字列は、キー/値の組のリストとしてデータを取得するために解析されます。このリストにアクセスする方法は、使用する開発プラットフォームや、使用するであろう特定のフレームワークに依存します。</p>
 
-<h3 id="Example_Raw_PHP" name="Example_Raw_PHP">PHP の例</h3>
+<h3 id="Example_Raw_PHP">PHP の例</h3>
 
 <p><a href="https://php.net/">PHP</a> は、データにアクセスするためのグローバルオブジェクトを提供します。<code>POST</code> メソッドを使用したと仮定すると、データを取得してユーザーに表示する例は以下のとおりです。もちろん、データに対して何をするかはあなた次第です。データを表示したり、データベースに保管したり、メールで送信したり、他の手段で処理したりするでしょう。</p>
 
-<pre class="brush: php notranslate">&lt;?php
+<pre class="brush: php">&lt;?php
   // $_POST グローバル変数は、POST メソッドで送信されたデータへ名前でアクセスを可能にする
   // GET メソッドで送信されたデータにアクセスするには、$_GET が使用できる
   $say = htmlspecialchars($_POST['say']);
@@ -193,19 +194,20 @@ say=Hi&amp;to=Mom</pre>
 
 <p>この例では送信されたデータを含むページを表示します。これはサンプルの <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.html">php-example.html</a> ファイル、つまり以前 <code>method</code> が <code>POST</code> で <code>action</code> が <code>php-example.php</code> の時に見たサンプルフォームを含むファイルアクションの中で見ることができます。送信されると、フォームデータは上記のブロックの PHP コードを含む <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.php">php-example.php</a> へ送信されます。コードが実行されると、ブラウザーの出力は <code>Hi Mom</code> になります。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14693/php-result.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="php-result.png"></p>
 
 <div class="note">
-<p><strong>メモ</strong>: この例はブラウザーにローカルに読み込んだ時には動作しません。— ブラウザーは PHP コードを解釈できないので、フォームがブラウザーに送信されると、PHP ファイルをダウンロードしようとするでしょう。動作させるためには、この例を何らかの PHP サーバー経由で実行する必要があります。ローカルの PHP のテストには、<a href="https://www.mamp.info/en/downloads/">MAMP</a> (Mac および Windows) や <a href="http://ampps.com/download">AMPPS</a> (Mac, Windows, Linux) がいいでしょう。</p>
-
-<p>MAMP を使って MAMP Pro がない (または MAMP Pro デモトライアルの有効期限が切れた)場合、動作させるのにトラブルが起こるかもしれません。再び動作させるには MAMP アプリを閉じて、<em>MAMP</em> &gt; <em>Preferences</em> &gt; <em>PHP</em>メニューから "Standard Version:" を "7.2.x" (x はあなたがどのバージョンをインストールしたかによります)にするといいことがわかっています。</p>
+<p><strong>メモ</strong>: この例はブラウザーにローカルに読み込んだ時には動作しません。— ブラウザーは PHP コードを解釈できないので、フォームがブラウザーに送信されると、PHP ファイルをダウンロードしようとするでしょう。動作させるためには、この例を何らかの PHP サーバー経由で実行する必要があります。ローカルの PHP のテストには、<a href="https://www.mamp.info/en/downloads/">MAMP</a> (Mac および Windows) や <a href="https://ampps.com/download">AMPPS</a> (Mac, Windows, Linux) がいいでしょう。<br>
+ <br>
+ なお、MAMP を使って MAMP Pro がない (または MAMP Pro デモトライアルの有効期限が切れた) 場合、動作させるのにトラブルが起こるかもしれません。再び動作させるには MAMP アプリを閉じて、<em>MAMP</em> &gt; <em>Preferences</em> &gt; <em>PHP</em>メニューから "Standard Version:" を "7.2.x" (x はあなたがどのバージョンをインストールしたかによります)にするといいことがわかっています。</p>
 </div>
 
-<h3 id="Example_Raw_Python" name="Example_Raw_Python">Python の例</h3>
+<h3 id="Example_Python">Python の例</h3>
 
 <p>この例は、同じこと (与えられたデータをウェブページに表示する) を Python で行います。これはテンプレートの表示やフォームデータの受付などのために <a href="http://flask.pocoo.org/">Flask フレームワーク</a>を使用しています (<a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/python-example.py">python-example.py</a> を参照してください)。</p>
 
-<pre class="notranslate">from flask import Flask, render_template, request
+<pre class="brush: python">from flask import Flask, render_template, request
+
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
@@ -219,26 +221,27 @@ def hello():
 if __name__ == "__main__":
     app.run()</pre>
 
-<p>次のように、上記のコードでは 2 つのテンプレートが参照されます。(自分の環境で実行する場合、これらは <code>templates</code> というサブディレクトリにあり、<code>python-example.py</code>ファイルと同じディレクトリにある必要があります):</p>
+<p>次のように、上記のコードでは 2 つのテンプレートが参照されます。(自分の環境で実行する場合、これらは <code>templates</code> というサブディレクトリにあり、<code>python-example.py</code>ファイルと同じディレクトリにある必要があります)。</p>
 
 <ul>
- <li><a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html">form.html</a>: 以前に {{anch("The POST method", "POST メソッド")}}の節で見たフォームと同じですが、<code>action</code> が <code>\{{ url_for('hello') }}</code> に設定されています (これは <a href="http://jinja.pocoo.org/docs/2.9/">Jinja2</a> テンプレートで、基本的に HTML ですが、波括弧の中にウェブサーバーで実行されている Python のコードの呼び出しを含めることができます。<code>url_for('hello')</code> は基本的に、「フォームが送信されたら <code>/hello</code> にリダイレクトしてください」と言っています。)</li>
+ <li><a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html">form.html</a>: 以前に <a href="#the_post_method">POST メソッド</a>の節で見たフォームと同じですが、<code>action</code> が <code>\{{ url_for('hello') }}</code> に設定されています (これは <a href="http://jinja.pocoo.org/docs/2.9/">Jinja2</a> テンプレートで、基本的に HTML ですが、波括弧の中にウェブサーバーで実行されている Python のコードの呼び出しを含めることができます。<code>url_for('hello')</code> は基本的に、「フォームが送信されたら <code>/hello</code> にリダイレクトしてください」と言っています。)</li>
  <li><a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html">greeting.html</a>: このテンプレートは、表示時に渡された 2 つの小さいデータを表示する行だけを含みます。<code>/hello</code> の URL が呼び出されるときに実行される、前述の <code>hello()</code> 関数によって行われます。</li>
 </ul>
 
 <div class="note">
-<p><strong>メモ</strong>: 繰り返しますが、このコードはブラウザーに直接読み込もうとしても動作しません。Python は PHP とは若干異なる動作をします。— ローカルでこのコードを実行するには、<a href="/ja/docs/Learn/Server-side/Django/development_environment#Installing_Python_3">Python/PIP をインストール</a>する必要があり、それから <code>pip3 install flask</code> を使用して Flask をインストールしてください。この時点で <code>python3 python-example.py</code> を実行し、ブラウザーで <code>localhost:5000</code> に移動することで実行することができるでしょう。</p>
+<p><strong>メモ</strong>: 繰り返しますが、このコードはブラウザーに直接読み込もうとしても動作しません。Python は PHP とは若干異なる動作をします。— ローカルでこのコードを実行するには、<a href="/ja/docs/Learn/Server-side/Django/development_environment#installing_python_3">Python/PIP をインストール</a>する必要があり、それから <code>pip3 install flask</code> を使用して Flask をインストールしてください。この時点で <code>python3 python-example.py</code> を実行し、ブラウザーで <code>localhost:5000</code> に移動することで実行することができるでしょう。</p>
 </div>
 
-<h3 id="Other_languages_and_frameworks" name="Other_languages_and_frameworks">その他の言語やフレームワーク</h3>
+<h3 id="Other_languages_and_frameworks">その他の言語やフレームワーク</h3>
 
-<p>フォームの操作に使用できるサーバー側の技術は、Perl、Java、.Net、Ruby などたくさんあります。もっとも好きなものを選びましょう。しかしそれらの技術を直接使用することは、扱いにくいため一般的ではないことが特筆に値します。以下のような、フォームをより簡単に扱えるようにする多くの高品質フレームワークのひとつを使用する方がより一般的です:</p>
+<p>フォームの操作に使用できるサーバー側の技術は、Perl、Java、.Net、Ruby などたくさんあります。もっとも好きなものを選びましょう。しかしそれらの技術を直接使用することは、扱いにくいため一般的ではないことが特筆に値します。以下のような、フォームをより簡単に扱えるようにする多くの高品質フレームワークのひとつを使用する方がより一般的です。</p>
 
 <ul>
- <li>Python 用 <a href="https://www.djangoproject.com/" rel="external">Django</a> (<a href="http://flask.pocoo.org/">Flask</a> より若干重いものですが、ツールとオプションはもっとたくさんあります)</li>
- <li>Node.js 用 <a href="/ja/docs/Learn/Server-side/Express_Nodejs">Express</a></li>
- <li>PHP 用 <a href="https://laravel.com/">Laravel</a></li>
- <li>Ruby 用 <a href="http://rubyonrails.org/" rel="external">Ruby On Rails</a></li>
+ <li><a href="/ja/docs/Learn/Server-side/Django" rel="external">Django</a> (Python 向け、<a href="http://flask.pocoo.org/">Flask</a> より若干重いものですが、ツールとオプションがより豊富です。)</li>
+ <li><a href="/ja/docs/Learn/Server-side/Express_Nodejs">Express</a> (Node.js 向け)</li>
+ <li><a href="https://laravel.com/">Laravel</a> (PHP 向け)</li>
+ <li><a href="http://rubyonrails.org/" rel="external">Ruby On Rails</a> (Ruby 向け)</li>
+ <li><a href="https://spring.io/guides/gs/handling-form-submission/">Spring Boot</a> (Java 向け)</li>
 </ul>
 
 <p>言うまでもなく、これらのフレームワークを使用したとしても、フォームでの作業が必ずしも<em>簡単に</em>なるとは限りません。しかし、すべての機能を自分で 1 から書こうとするよりずっと簡単で、また多くの時間を節約できるでしょう。</p>
@@ -247,11 +250,11 @@ if __name__ == "__main__":
 <p><strong>メモ</strong>: サーバー側言語やフレームワークまで説明することはこの記事の範囲を超えます。上記のリンクが参考になりますので、学習してみてください。</p>
 </div>
 
-<h2 id="A_special_case_sending_files" name="A_special_case_sending_files">特別な場合: ファイル送信</h2>
+<h2 id="A_special_case_sending_files">特別な場合: ファイル送信</h2>
 
 <p>ファイルは HTML フォームで特別なケースです。他のデータがすべてテキストデータである中、ファイルはバイナリーデータ (あるいはそのように考えられるデータ) です。HTTP はテキストのプロトコルであるため、バイナリーデータを扱うための特別な要件があります。</p>
 
-<h3 id="The_htmlattrxrefenctypeform_attribute" name="The_htmlattrxref(enctypeform)_attribute">enctype 属性</h3>
+<h3 id="The_htmlattrxrefenctypeform_attribute">enctype 属性</h3>
 
 <p>この属性で <code>Content-Type</code> HTTP ヘッダーの値を指定できます。このヘッダーはサーバーに対して送信するデータの種類を伝えることから、とても重要です。既定値は <code>application/x-www-form-urlencoded</code> です。人間の言葉では、「これは URL 形式でエンコードされたフォームデータです。」という意味です。</p>
 
@@ -260,12 +263,12 @@ if __name__ == "__main__":
 <ul>
  <li>ファイルの内容は URL 引数に収めることができないので、{{htmlattrxref("method","form")}} 属性を <code>POST</code> に設定してください。</li>
  <li>データは複数の部分に分かれ、それぞれのファイルや文字列データがフォーム本体に含められているので、{{htmlattrxref("enctype","form")}} の値を <code>multipart/form-data</code> に設定ください。</li>
- <li>ユーザーがアップロードするファイルを選択できるように、1 つ以上の <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code> コントロールを含めてください。</li>
+ <li>ユーザーがアップロードするファイルを選択できるように、1 つ以上の <code><a href="/ja/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code> コントロールを含めてください。</li>
 </ul>
 
 <p>例:</p>
 
-<pre class="brush: html notranslate">&lt;form method="post" enctype="multipart/form-data"&gt;
+<pre class="brush: html">&lt;form method="post" enctype="multipart/form-data"&gt;
   &lt;div&gt;
     &lt;label for="file"&gt;Choose a file&lt;/label&gt;
     &lt;input type="file" id="file" name="myFile"&gt;
@@ -279,33 +282,33 @@ if __name__ == "__main__":
 <p><strong>警告:</strong> 多くのサーバーは悪用を防ぐために、ファイルや HTTP リクエストの長さを制限しています。</p>
 </div>
 
-<h2 id="Common_security_concerns" name="Common_security_concerns">一般的なセキュリティへの配慮</h2>
+<h2 id="Common_security_concerns">一般的なセキュリティへの配慮</h2>
 
 <p>サーバーにデータを送信するたびに、セキュリティについて考える必要があります。HTML フォームはサーバーに対するもっともよくある攻撃の入口 (攻撃が行われる場所) になります。問題が HTML フォーム自身から発生することはありません — サーバーがどのようにデータを扱うかによります。</p>
 
-<p><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Server-side">server-side</a> の学習トピックの <a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Server-side/First_steps/Website_security">Website security</a> の記事では、一般的な攻撃とその防御を詳細に扱っています。そちらへ行って記事を確認し、何が起こり得るかを理解してください。</p>
+<p><a href="/ja/docs/Learn/Server-side/First_steps/Website_security">ウェブサイトセキュリティ</a> の記事が <a href="/ja/docs/Learn/Server-side">server-side</a> の学習トピックにあり、一般的な攻撃とその防御を詳細に扱っています。そちらへ行って記事を確認し、何が起こり得るかを理解してください。</p>
 
-<h3 id="Be_paranoid_Never_trust_your_users" name="Be_paranoid_Never_trust_your_users">疑い深くあれ: ユーザーを信用してはいけません</h3>
+<h3 id="Be_paranoid_Never_trust_your_users">疑い深くあれ: ユーザーを信用してはいけません</h3>
 
 <p>さて、これらの脅威に対してどう対抗するのでしょうか? これは本ガイドの内容を超える話題です。それでも、覚えておくとよいルールがいくつかあります。もっとも重要なルールは、自分自身も含めユーザーを決して信用してはならないことです。信頼されているユーザーでさえハイジャックされるかもしれません。</p>
 
 <p>サーバーに来るすべてのデータを確認およびサニタイズしなければなりません。いつでもです。例外はありません。</p>
 
 <ul>
- <li><strong>潜在的に危険な文字をエスケープします。</strong>注意すべき具体的な文字は、データが使用される状況や使用するサーバー基盤に大きく依存しますが、どのサーバー側言語もそのための機能を持っています。注意しておくべきことは、 (<a href="https://wiki.developer.mozilla.org/ja/docs/Learn/JavaScript">JavaScript</a> や <a href="https://en.wikipedia.org/wiki/SQL">SQL</a> コマンドといった)実行可能なコードのようなキャラクターシーケンスです。</li>
+ <li><strong>潜在的に危険な文字をエスケープします。</strong>注意すべき具体的な文字は、データが使用される状況や使用するサーバー基盤に大きく依存しますが、どのサーバー側言語もそのための機能を持っています。注意しておくべきことは、 (<a href="/ja/docs/Learn/JavaScript">JavaScript</a> や <a href="https://en.wikipedia.org/wiki/SQL">SQL</a> コマンドといった)実行可能なコードのようなキャラクターシーケンスです。</li>
  <li><strong>入力データの量を、必要なサイズまでしか受け入れないように制限します。</strong></li>
  <li><strong>アップロードされたファイルをサンドボックス化します。</strong>ファイルを別のサーバーに保管して、別のサブドメインまたはよりよい方法としてまったく別のドメインを通してのみアクセスを許可します。</li>
 </ul>
 
 <p>これら 3 つのルールに従うと、多くのあるいはほとんどの問題を避けられるでしょう。ただし、適格の第三者によるセキュリティレビューを受けることもよい考えです。発生し得る問題のすべてを見いだしたとは考えないようにしてください。</p>
 
-<h2 id="Conclusion" name="Conclusion">まとめ</h2>
+<h2 id="Summary">まとめ</h2>
 
-<p>ご覧いただいたように、フォームデータの送信は簡単ですが、アプリケーションを安全にするのは容易ではありません。フロントエンドの開発者はデータのセキュリティモデルを定義すべき者ではないことを忘れないようにしてください。今後見ていくように<a href="/ja/docs/Web/HTML/Forms/Data_form_validation">クライアント側でのデータ検証</a>も可能ですが、クライアント側で実際に何が起きているかを知ることはできませんので、サーバー側でその検証内容を信用することはできません。</p>
+<p>ご覧いただいたように、フォームデータの送信は簡単ですが、アプリケーションを安全にするのは容易ではありません。フロントエンドの開発者はデータのセキュリティモデルを定義すべき者ではないことを忘れないようにしてください。今後見ていくように<a href="/ja/docs/Learn/Forms/Form_validation">クライアント側でのデータ検証</a>も可能ですが、クライアント側で実際に何が起きているかを知ることはできませんので、サーバー側でその検証内容を信用することはできません。</p>
 
 <p>このチュートリアルを順番に終えた場合、フォームのマークアップとスタイル設定の方法、クライアント側での検証の方法、フォーム送信の理解ができているでしょう。</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <p>ウェブアプリケーションのセキュア化についてさらに学びたいのでしたら、次のリソースをよく読んでください。</p>
 
@@ -315,27 +318,27 @@ if __name__ == "__main__":
  <li><a href="https://infosec.mozilla.org/guidelines/web_security">Web Security by Mozilla</a></li>
 </ul>
 
-<p>{{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}</p>
+<p>{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}</p>
 
-<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+<h2 id="In_this_module">モジュール内の記事</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Your_first_HTML_form">初めてのフォーム</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">フォームの構築方法</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/The_native_form_widgets">ネイティブフォームウィジェット</a></li>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/HTML5_input_types" rel="noopener">The HTML5 input types</a></li>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Other_form_controls" rel="noopener">Other form controls</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Styling_HTML_forms">フォームへのスタイル設定</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">フォームへの高度なスタイル設定</a></li>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/UI_pseudo-classes" rel="noopener">UI pseudo-classes</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Data_form_validation">フォームデータの検証</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">フォームデータの送信</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Your_first_form">初めてのフォーム</a></li>
+ <li><a href="/ja/docs/Learn/Forms/How_to_structure_a_web_form">フォームの構築方法</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Basic_native_form_controls">ネイティブフォームウィジェット</a></li>
+ <li><a href="/ja/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Other_form_controls">Other form controls</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Styling_web_forms">フォームへのスタイル設定</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Advanced_form_styling">フォームへの高度なスタイル設定</a></li>
+ <li><a href="/ja/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Form_validation">フォームデータの検証</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Sending_and_retrieving_form_data">フォームデータの送信</a></li>
 </ul>
 
-<h3 id="Advanced_Topics" name="Advanced_Topics">上級トピック</h3>
+<h3 id="Advanced_Topics">上級トピック</h3>
 
 <ul>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/How_to_build_custom_form_controls" rel="noopener">カスタムフォームコントロールの作成方法</a></li>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Sending_forms_through_JavaScript" rel="noopener">JavaScript によるフォームの送信</a></li>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets" rel="noopener">フォームウィジェット向けプロパティ実装状況一覧</a></li>
+ <li><a href="/ja/docs/Learn/Forms/How_to_build_custom_form_controls">カスタムフォームコントロールの作成方法</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Sending_forms_through_JavaScript">JavaScript によるフォームの送信</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls">フォームウィジェット向けプロパティ実装状況一覧</a></li>
 </ul>

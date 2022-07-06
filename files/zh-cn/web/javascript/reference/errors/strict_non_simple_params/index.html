@@ -15,20 +15,20 @@ translation_of: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 
 <pre class="syntaxbox">Firefox:
 句法错误: "use strict" 不允许在带默认参数的函数中
-句法错误: "use strict" 不允许在带rest参数的函数中
+句法错误: "use strict" 不允许在带 rest 参数的函数中
 句法错误: "use strict" 不允许在带解构参数的函数中
 
 Chrome:
-句法错误: 非法的'use strict'指令,在带有非简单参数列表的函数中
+句法错误：非法的'use strict'指令，在带有非简单参数列表的函数中
 </pre>
 
 <h2 id="错误类型">错误类型</h2>
 
 <p>{{jsxref("SyntaxError")}}.</p>
 
-<h2 id="哪里出错了">哪里出错了?</h2>
+<h2 id="哪里出错了">哪里出错了？</h2>
 
-<p><code><font face="Open Sans, Arial, sans-serif">在函数顶部直接写了 </font>"use strict"</code> ，而该函数拥有以下的参数其中之一：</p>
+<p>在函数顶部直接写了 <code>"use strict"</code> ，而该函数拥有以下的参数其中之一：</p>
 
 <ul>
  <li>{{jsxref("Functions/Default_parameters", "默认参数", "", 1)}}</li>
@@ -36,13 +36,13 @@ Chrome:
  <li>{{jsxref("Operators/Destructuring_assignment", "解构赋值", "", 1)}}</li>
 </ul>
 
-<p>根据ECMAScript规范，不允许在这些函数的顶部使用“use strict”指令。</p>
+<p>根据 ECMAScript 规范，不允许在这些函数的顶部使用“use strict”指令。</p>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="函数语句">函数语句</h3>
 
-<p>在这种情况下，函数sum具有默认参数a = 1和b = 2：</p>
+<p>在这种情况下，函数 sum 具有默认参数 a = 1 和 b = 2：</p>
 
 <pre class="brush: js example-bad">function sum(a=1, b=2) {
   // SyntaxError: "use strict" not allowed in function with default parameter
@@ -51,7 +51,7 @@ Chrome:
 }
 </pre>
 
-<p>如果这个函数应该处于 <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>，并且整个脚本或封装函数也可以在严格模式下，可以移动 "use strict" 指令到函数之外:</p>
+<p>如果这个函数应该处于 <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>，并且整个脚本或封装函数也可以在严格模式下，可以移动 "use strict" 指令到函数之外：</p>
 
 <pre class="brush: js example-good">"use strict";
 function sum(a=1, b=2) {
@@ -82,7 +82,7 @@ function sum(a=1, b=2) {
 
 <h3 id="箭头函数">箭头函数</h3>
 
-<p>如果箭头函数需要访问 <code>this</code>，则可以将箭头函数作为封闭函数来使用:</p>
+<p>如果箭头函数需要访问 <code>this</code>，则可以将箭头函数作为封闭函数来使用：</p>
 
 <pre class="brush: js example-bad">var callback = (...args) =&gt; {
   // SyntaxError: "use strict" not allowed in function with rest parameter

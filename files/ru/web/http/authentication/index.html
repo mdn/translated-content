@@ -1,124 +1,204 @@
 ---
-title: HTTP авторизация
+title: HTTP аутентификация
 slug: Web/HTTP/Authentication
 tags:
-  - Авторизация
-  - Разграничение доступа
-  - Руководство
+- Аутентификация
+- Разграничение доступа
+- Руководство
 translation_of: Web/HTTP/Authentication
-original_slug: Web/HTTP/Авторизация
+original_slug: Web/HTTP/Аутентификация
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary">HTTP предоставляет набор инструментов для разграничения доступа к ресурсам и авторизацией. Самой распространённой схемой HTTP авторизации является "Basic" (базовая) авторизация. Данное руководство описывает основные возможности HTTP авторизации и показывает способы ограничения доступа к вашему серверу с её использованием.</p>
+<p class="summary">HTTP предоставляет набор инструментов для котнроля доступа к ресурсам и аутентификации. Самой
+  распространённой схемой HTTP аутентификации является "Базовая" (Basic) аутентификация. Данное руководство описывает
+  основные возможности HTTP аутентификации и показывает способы ограничения доступа к вашему серверу с её
+  использованием.</p>
 
-<h2 id="Общий_механизм_HTTP_авторизации">Общий механизм HTTP авторизации</h2>
+<h2 id="Общий_механизм_HTTP_аутентификации">Общий механизм HTTP аутентификации</h2>
 
-<p>{{RFC("7235")}} определяет средства HTTP авторизации, которые может использовать сервер для {{glossary("запроса")}} у клиента аутентификационной информации. Сценарий запрос-ответ подразумевает, что вначале сервер отвечает клиенту со статусом {{HTTPStatus("401")}} (Unauthorized) и предоставляет информацию о порядке авторизации через заголовок {{HTTPHeader("WWW-Authenticate")}}, содержащий хотя бы один метод авторизации. Клиент, который хочет авторизоваться, может сделать это, включив в следующий запрос заголовок {{HTTPHeader("Authorization")}} с требуемыми данными. Обычно, клиент отображает запрос пароля пользователю, и после получения ответа отправляет запрос с пользовательскими данными в заголовке <code>Authorization</code>.</p>
+<p>{{RFC("7235")}} определяет средства HTTP аутентификации, которые может использовать сервер
+  для {{glossary("challenge","запроса")}} у клиента аутентификационной информации. Сценарий запрос-ответ подразумевает,
+  что вначале сервер отвечает клиенту со статусом {{HTTPStatus("401")}} (Unauthorized) и предоставляет информацию о
+  порядке авторизации через заголовок {{HTTPHeader("WWW-Authenticate")}}, содержащий хотя бы один метод авторизации.
+  Клиент, который хочет аутентифицироваться, может сделать это, включив в следующий запрос заголовок
+  {{HTTPHeader("Authorization")}} с требуемыми данными. Обычно, клиент отображает пользователю запрос (prompt) пароля, и
+  после получения ответа отправляет запрос (request) с пользовательскими данными в заголовке <code>Authorization</code>.
+</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14689/HTTPAuth.png" style="height: 335px; width: 710px;"></p>
 
 <p>В случае базовой авторизации как на иллюстрации выше, обмен <strong>должен</strong> вестись через HTTPS (TLS) соединение, чтобы обеспечить защищённость.</p>
 
-<h3 id="Прокси-авторизация">Прокси-авторизация</h3>
+<h3 id="Прокси-аутентификация">Прокси-аутентификация</h3>
 
-<p>Этот же механизм запроса и ответа может быть использован для <em>прокси-авторизации</em>. В таком случае ответ посылает промежуточный прокси-сервер, который требует авторизации. Поскольку обе формы авторизации могут использоваться одновременно, для них используются разные заголовки и коды статуса ответа. В случае с <em>прокси</em>, статус-код запроса {{HTTPStatus("407")}} (Proxy Authentication Required) и заголовок {{HTTPHeader("Proxy-Authenticate")}}, который содержит хотя бы один запрос, относящийся к прокси-авторизации, а для передачи авторизационных данных прокси-серверу используется заголовок {{HTTPHeader("Proxy-Authorization")}}.</p>
+<p>Этот же механизм запроса и ответа может быть использован для <em>прокси-аутентификации</em>. В таком случае ответ
+  посылает промежуточный прокси-сервер, который требует авторизации. Поскольку обе формы аутентификации могут
+  сосуществовать, для них используются разные заголовки и коды статуса ответа. В случае с <em>прокси</em>, статус-код
+  запроса {{HTTPStatus("407")}} (Proxy Authentication Required) и заголовок {{HTTPHeader("Proxy-Authenticate")}},
+  который содержит хотя бы один запрос, относящийся к прокси, а для передачи учётных данных прокси-серверу
+  используется заголовок {{HTTPHeader("Proxy-Authorization")}}.</p>
 
 <h3 id="Доступ_запрещён">Доступ запрещён</h3>
 
-<p>Если (прокси) сервер получает корректные учётные данные, но они не подходят для доступа к данному ресурсу, сервер должен отправить ответ со статус кодом {{HTTPStatus("403")}} <code>Forbidden</code>. В отличии от статус кода {{HTTPStatus("401")}} <code>Unauthorized</code> или {{HTTPStatus("407")}} <code>Proxy Authentication Required</code>, аутентификация для этого пользователя не возможна.</p>
+<p>Если (прокси) сервер получает корректные учётные данные, но они не подходят для доступа к данному ресурсу, сервер
+  должен отправить ответ со статус кодом {{HTTPStatus("403")}} <code>Forbidden</code>. В отличии от статус
+  кода {{HTTPStatus("401")}} <code>Unauthorized</code> или {{HTTPStatus("407")}}
+  <code>Proxy Authentication Required</code>, аутентификация для этого пользователя не возможна.
+</p>
 
-<h3 id="Аутентификация_с_помощью_изображений">Аутентификация с помощью изображений</h3>
+<p>Во всех случаях сервер может предпочесть возвращать код состояния {{HTTPStatus("404")}} <code>Not Found</code>, чтобы
+  скрыть существование страницы для пользователя без соответствующих привилегий или не прошедшего правильную
+  аутентификацию.</p>
 
-<p>Аутентификация с помощью изображений, загружаемых из разных источников, была до недавнего времени потенциальной дырой в безопасности. Начиная с <a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/59">Firefox 59</a>, изображения, загружаемые из разных источников в текущий документ, больше не запускают диалог HTTP-аутентификации, предотвращая тем самым кражу пользовательских данных (если нарушители смогли встроить это изображение в страницу).</p>
+<h3 id="Аутентификация_cross-origin_изображений">Аутентификация cross-origin изображений</h3>
+
+<p>Аутентификация с помощью изображений, загружаемых из разных источников, была до недавнего времени потенциальной дырой
+  в безопасности. Начиная с <a href="/en-US/docs/Mozilla/Firefox/Releases/59">Firefox 59</a>, изображения, загружаемые
+  из разных источников в текущий документ, больше не запускают диалог HTTP-аутентификации {{bug(1423146)}}, предотвращая
+  тем самым кражу пользовательских данных (если нарушители смогли встроить это изображение в страницу).</p>
 
 <h3 id="Кодировка_символов_HTTP_аутентификации">Кодировка символов HTTP аутентификации</h3>
 
-<p>Браузеры используют кодировку <code>utf-8</code> для имени пользователя и пароля. Firefox использовал <code>ISO-8859-1</code>, но она была заменена <code>utf-8</code> с целью уравнения с другими браузерами, а также чтобы избежать потенциальных проблем (таких как {{bug(1419658)}}).</p>
+<p>Браузеры используют кодировку <code>utf-8</code> для имени пользователя и пароля. Firefox
+  использовал <code>ISO-8859-1</code>, но она была заменена <code>utf-8</code> с целью уравнения с другими браузерами, а
+  также чтобы избежать потенциальных проблем (таких как {{bug(1419658)}}).</p>
 
-<h3 id="WWW-Authenticate_and_Proxy-Authenticate_headers"><code>WWW-Authenticate</code> and <code>Proxy-Authenticate</code> headers</h3>
+<h3 id="WWW-Authenticate_and_Proxy-Authenticate_headers">заголовки <code>WWW-Aутентификации</code> и
+  <code>Прокси-Аутентификации</code>
+</h3>
 
-<p>{{HTTPHeader("WWW-Authenticate")}} и {{HTTPHeader("Proxy-Authenticate")}} заголовки ответа которые определяют методы, что следует использовать для получения доступа к ресурсу. Они должны указывать, какую схему аутентификации использовать, чтобы клиент, желающий авторизоваться, знал, какие данные предоставить. Синтаксис для этих заголовков следующий:</p>
+<p>{{HTTPHeader("WWW-Authenticate")}} и {{HTTPHeader("Proxy-Authenticate")}} заголовки ответа которые определяют методы,
+  что следует использовать для получения доступа к ресурсу. Они должны указывать,
+  какую схему аутентификации использовать, чтобы клиент, желающий авторизоваться, знал, какие данные предоставить.
+  Синтаксис для этих заголовков следующий:</p>
 
 <pre class="syntaxbox">WWW-Authenticate: &lt;type&gt; realm=&lt;realm&gt;
 Proxy-Authenticate: &lt;type&gt; realm=&lt;realm&gt;
 </pre>
 
-<p>Here, <code>&lt;type&gt;</code> is the authentication scheme ("Basic" is the most common scheme and <a href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">introduced below</a>). The <em>realm</em> is used to describe the protected area or to indicate the scope of protection. This could be a message like "Access to the staging site" or similar, so that the user knows to which space they are trying to get access to.</p>
+<p>Здесь, <code>&lt;type&gt;</code> - это схема аутентификации ("Basic" (базовая) это наиболее распространённая, <a
+    href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">представленная ниже</a>). <em>realm</em>
+  используется для описания защищённой области или для индикации области защиты. Это может быть сообщение типа "Access
+  to the staging site" или подобное, чтобы пользователь знал, к какой области он пытается получить доступ.</p>
 
-<h3 id="Authorization_and_Proxy-Authorization_headers"><code>Authorization</code> and <code>Proxy-Authorization</code> headers</h3>
+<h3 id="Authorization_and_Proxy-Authorization_headers">заголовки <code>Авторизации</code> и
+  <code>Прокси-Авторизации</code>
+</h3>
 
-<p>The {{HTTPHeader("Authorization")}} and {{HTTPHeader("Proxy-Authorization")}} request headers contain the credentials to authenticate a user agent with a (proxy) server. Here, the type is needed again followed by the credentials, which can be encoded or encrypted depending on which authentication scheme is used.</p>
+<p>Заголовки запросов {{HTTPHeader("Authorization")}} и {{HTTPHeader("Proxy-Authorization")}} содержат учётные данные
+  для аутентификации агента пользователя (User Agent) на (прокси) сервере. Здесь снова требуется
+  <code>&lt;type&gt;</code> за которым следуют учётные данные, которые могут быть закодированы или зашифрованы в
+  зависимости от того, какая схема аутентификации используется.
+</p>
 
 <pre class="syntaxbox">Authorization: &lt;type&gt; &lt;credentials&gt;
 Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;
 </pre>
 
-<h3 id="Authentication_schemes">Authentication schemes</h3>
+<h3 id="Authentication_schemes">Схемы Аутентификации</h3>
 
-<p>The general HTTP authentication framework is used by several authentication schemes. Schemes can differ in security strength and in their availability in client or server software.</p>
+<p>Общая структура HTTP аутентификации является основной для ряда схем аутентификации. Schemes can differ in security
+  strength and in their availability in client or server software.</p>
 
-<p>The most common authentication scheme is the "Basic" authentication scheme which is introduced in more details below. IANA maintains a <a class="external external-icon" href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">list of authentication schemes</a>, but there are other schemes offered by host services, such as Amazon AWS. Common authentication schemes include:</p>
+<p>IANA поддерживат <a class="external external-icon"
+    href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">список схем аутентификации</a>,
+  однако существуют и другие схемы предлагаемые хост-сервисами, например, Amazon AWS.</p>
+<p>Некоторые распространенные схемы аутентификации включают:</p>
 
 <ul>
- <li><strong>Basic</strong> (see {{rfc(7617)}}, base64-encoded credentials. See below for more information.),</li>
- <li><strong>Bearer</strong> (see {{rfc(6750)}}, bearer tokens to access OAuth 2.0-protected resources),</li>
- <li><strong>Digest</strong> (see {{rfc(7616)}}, only md5 hashing is supported in Firefox, see {{bug(472823)}} for SHA encryption support),</li>
- <li><strong>HOBA</strong> (see {{rfc(7486)}} (draft), <strong>H</strong>TTP <strong>O</strong>rigin-<strong>B</strong>ound <strong>A</strong>uthentication, digital-signature-based),</li>
- <li><strong>Mutual</strong> (see <a href="https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11">draft-ietf-httpauth-mutual</a>),</li>
- <li>
-  <p><strong>AWS4-HMAC-SHA256</strong> (see <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">AWS docs</a>).</p>
- </li>
+  <li><strong>Basic</strong> (смотреть {{rfc(7617)}}, зашифрованные с помощью base64 учётные данные. Больше информации
+    смотреть снизу.),</li>
+  <li><strong>Bearer</strong> (смотреть {{rfc(6750)}}, bearer токены для доступа OAuth 2.0-защищённых ресурсов),</li>
+  <li><strong>Digest</strong> (смотреть {{rfc(7616)}}, Firefox 93 и более поздние версии поддерживают шифрование
+    SHA-256. Предыдущие версии поддерживают только хэширование MD5 (не рекомендуется). ),</li>
+  <li><strong>HOBA</strong> (смотреть {{rfc(7486)}}, Секция 3, <strong>H</strong>TTP
+    <strong>O</strong>rigin-<strong>B</strong>ound <strong>A</strong>uthentication, digital-signature-based),
+  </li>
+  <li><strong>Mutual</strong> (смотреть <a
+      href="https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11">draft-ietf-httpauth-mutual</a>),</li>
+  <li>
+    <p><strong>AWS4-HMAC-SHA256</strong> (смотреть <a
+        href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">AWS
+        документацию</a>).</p>
+  </li>
 </ul>
 
-<h2 id="Basic_authentication_scheme">Basic authentication scheme</h2>
+<p>Схемы могут различаться по степени безопасности и по их доступности в клиентском или серверном программном
+  обеспечении.</p>
+<p>"Базовая" (Basic) схема аутентификации обеспечивает очень низкую безопасность, но широко поддерживается и проста в
+  настройке. Более подробно она представлена ниже.</p>
 
-<p>The "Basic" HTTP authentication scheme is defined in {{rfc(7617)}}, which transmits credentials as user ID/password pairs, encoded using base64.</p>
+<h2 id="Basic_authentication_scheme">Базовя (Basic) схема аутентификации</h2>
 
-<h3 id="Security_of_basic_authentication">Security of basic authentication</h3>
+<p>"Базовая" схема HTTP-аутентификации определена в {{rfc(7617)}}, которая передаёт учётные данные в виде пар
+  пользователь ID/пароль (user ID/password), закодированных с использованием base64.</p>
 
-<p>As the user ID and password are passed over the network as clear text (it is base64 encoded, but base64 is a reversible encoding), the basic authentication scheme is not secure. HTTPS / TLS should be used in conjunction with basic authentication. Without these additional security enhancements, basic authentication should not be used to protect sensitive or valuable information.</p>
+<h3 id="Security_of_basic_authentication">Безопасность базовой аутентификации</h3>
 
-<h3 id="Restricting_access_with_Apache_and_basic_authentication">Restricting access with Apache and basic authentication</h3>
+<p>Поскольку идентификатор (ID) пользователя и пароль передаются по сети в виде открытого текста (он кодируется в
+  base64, однако base64 - это обратимое кодирование), схема базовой аутентификации не является безопасной. При базовой
+  аутентификации следует использовать HTTPS/TLS. Без этих дополнительных улучшений безопасности, базовая аутентификация
+  не должна использоваться для защиты конфиденциальной или ценной информации.</p>
 
-<p>To password-protect a directory on an Apache server, you will need a <code>.htaccess</code> and a <code>.htpasswd</code> file.</p>
+<h3 id="Restricting_access_with_Apache_and_basic_authentication">Ограничение доступа с помощью Apache и базовой
+  аутентификации</h3>
 
-<p>The <code>.htaccess</code> file typically looks like this:</p>
+<p>Чтобы защитить паролем каталог на сервере Apache, вам понадобятся файлы <code>.htaccess</code> и <code>.htpasswd</code>.
+</p>
+
+<p>Файл <code>.htaccess</code> обычно выглядит так:</p>
 
 <pre>AuthType Basic
 AuthName "Access to the staging site"
 AuthUserFile /path/to/.htpasswd
 Require valid-user</pre>
 
-<p>The <code>.htaccess</code> file references a <code>.htpasswd</code> file in which each line contains of a username and a password separated by a colon (":"). You can not see the actual passwords as they are <a href="https://httpd.apache.org/docs/2.4/misc/password_encryptions.html">encrypted</a> (md5 in this case). Note that you can name your <code>.htpasswd</code> file differently if you like, but keep in mind this file shouldn't be accessible to anyone. (Apache is usually configured to prevent access to <code>.ht*</code> files).</p>
+<p>Файл <code>.htaccess</code> ссылается на файл <code>.htpasswd</code>, в котором каждая строка состоит из имени
+  пользователя и пароля, разделенных двоеточием (":"). Вы не можете видеть фактические пароли, поскольку они <a
+    href="https://httpd.apache.org/docs/2.4/misc/password_encryptions.html">хешируются</a> (в данном случае с помощью
+  md5). Учтите, что вы можете назвать свой файл <code>.htpasswd</code> по-другому, если хотите, но помните, что этот
+  файл не должен быть доступен никому. (Apache обычно настроен на предотвращение доступа к файлам <code>.ht*</code>).
+</p>
 
 <pre>aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
 user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 </pre>
 
-<h3 id="Restricting_access_with_nginx_and_basic_authentication">Restricting access with nginx and basic authentication</h3>
+<h3 id="Restricting_access_with_nginx_and_basic_authentication">Ограничение доступа с помощью nginx и базовой
+  аутеннтификации</h3>
 
-<p>For nginx, you will need to specify a location that you are going to protect and the <code>auth_basic</code> directive that provides the name to the password-protected area. The <code>auth_basic_user_file</code> directive then points to a .htpasswd file containing the encrypted user credentials, just like in the Apache example above.</p>
+<p>Для nginx, вам потребуется указать местоположение, которое вы собираетесь защитить и директиву
+  <code>auth_basic</code>, которая задаёт имя защищённой паролем области. Директива <code>auth_basic_user_file</code>
+  затем указывает на файл .htpasswd, содержащий зашифрованные учётные данные пользователя, как и в примере Apache выше.
+</p>
 
 <pre>location /status {
     auth_basic           "Access to the staging site";
     auth_basic_user_file /etc/apache2/.htpasswd;
 }</pre>
 
-<h3 id="Access_using_credentials_in_the_URL">Access using credentials in the URL</h3>
+<h3 id="Access_using_credentials_in_the_URL">Доступ используя учётные данные в URL-адресе</h3>
 
-<p>Many clients also let you avoid the login prompt by using an encoded URL containing the username and the password like this:</p>
+<p>Многие клиенты также позволяют избежать запроса на вход в систему, используя закодированный URL, содержащий имя
+  пользователя и пароль, как показано ниже:</p>
 
 <pre class="example-bad">https://username:password@www.example.com/</pre>
 
-<p><strong>The use of these URLs is deprecated</strong>. In Chrome, the <code>username:password@</code> part in URLs is even<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7"> stripped out</a> for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site “www.example.com” with the username “username”, but the website does not require authentication. This may be an attempt to trick you.".</p>
+<p><strong>Использование таких URL-адресов устарело</strong>. В браузере Chrome в URL-адресах часть
+  <code>username:password@</code> даже<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7">
+    вырезана</a> из соображений безопасности. В браузере Firefox, проверяется, действительно ли сайт требует
+  аутентификации и если нет, тогда Firefox предупредит пользователя запросом (prompt) "You are about to log in to the
+  site “www.example.com” with the username “username”, but the website does not require authentication. This may be an
+  attempt to trick you.".
+</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="See_also">Смотреть также</h2>
 
 <ul>
- <li>{{HTTPHeader("WWW-Authenticate")}}</li>
- <li>{{HTTPHeader("Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
- <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
+  <li>{{HTTPHeader("WWW-Authenticate")}}</li>
+  <li>{{HTTPHeader("Authorization")}}</li>
+  <li>{{HTTPHeader("Proxy-Authorization")}}</li>
+  <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
+  <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
 </ul>

@@ -11,17 +11,17 @@ translation_of: Web/JavaScript/Reference/Statements/import
 ---
 <p>{{jsSidebar("Statements")}}</p>
 
-<p>静态的<code><strong>import</strong></code> 语句用于导入由另一个模块导出的绑定。无论是否声明了 {{jsxref("Strict_mode","strict mode")}} ，导入的模块都运行在严格模式下。在浏览器中，<code>import</code> 语句只能在声明了 <code>type="module"</code> 的 <code>script</code> 的标签中使用。</p>
+<p>静态的 <code><strong>import</strong></code> 语句用于导入由另一个模块导出的绑定。无论是否声明了 {{jsxref("Strict_mode","strict mode")}}，导入的模块都运行在严格模式下。在浏览器中，<code>import</code> 语句只能在声明了 <code>type="module"</code> 的 <code>script</code> 的标签中使用。</p>
 
-<p>此外，还有一个类似函数的动态 <code>import()</code>，它不需要依赖 <code>type="module"</code> 的script标签。</p>
+<p>此外，还有一个类似函数的动态 <code>import()</code>，它不需要依赖 <code>type="module"</code> 的 script 标签。</p>
 
 <p>在 <a href="/zh-CN/docs/Web/HTML/Element/script">script</a> 标签中使用 <code>nomodule</code> 属性，可以确保向后兼容。</p>
 
-<p>在您希望按照一定的条件或者按需加载模块的时候，动态<code>import()</code> 是非常有用的。而静态型的 <code>import</code> 是初始化加载依赖项的最优选择，使用静态 <code>import</code> 更容易从代码静态分析工具和 <a href="/zh-CN/docs/Glossary/Tree_shaking">tree shaking</a> 中受益。</p>
+<p>在您希望按照一定的条件或者按需加载模块的时候，动态 <code>import()</code> 是非常有用的。而静态型的 <code>import</code> 是初始化加载依赖项的最优选择，使用静态 <code>import</code> 更容易从代码静态分析工具和 <a href="/zh-CN/docs/Glossary/Tree_shaking">tree shaking</a> 中受益。</p>
 
 <p>语法</p>
 
-<pre class="syntaxbox notranslate">import <em>defaultExport</em> from "<em>module-name</em>";
+<pre class="brush: js">import <em>defaultExport</em> from "<em>module-name</em>";
 import * as <em>name</em> from "<em>module-name</em>";
 import { <em>export </em>} from "<em>module-name</em>";
 import { <em>export</em> as <em>alias </em>} from "<em>module-name</em>";
@@ -38,7 +38,7 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
  <dt><code>defaultExport</code></dt>
  <dd>导入模块的默认导出接口的引用名。</dd>
  <dt><code>module-name</code></dt>
- <dd>要导入的模块。通常是包含目标模块的<code>.js</code>文件的相对或绝对路径名，可以不包括<code>.js</code>扩展名。某些特定的打包工具可能允许或需要使用扩展或依赖文件，它会检查比对你的运行环境。只允许单引号和双引号的字符串。</dd>
+ <dd>要导入的模块。通常是包含目标模块的 <code>.js</code> 文件的相对或绝对路径名，可以不包括 <code>.js</code> 扩展名。某些特定的打包工具可能允许或需要使用扩展或依赖文件，它会检查比对你的运行环境。只允许单引号和双引号的字符串。</dd>
  <dt><code>name</code></dt>
  <dd>导入模块对象整体的别名，在引用导入模块时，它将作为一个命名空间来使用。</dd>
  <dt><code>export, exportN</code></dt>
@@ -49,43 +49,43 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
 
 <h2 id="描述">描述</h2>
 
-<p><code>name</code>参数是“导入模块对象”的名称，它将用一种名称空间来引用导入模块的接口。export参数指定单个的命名导出，而<code>import * as name</code>语法导入所有导出接口，即导入模块整体。以下示例阐明该语法。</p>
+<p><code>name</code> 参数是“导入模块对象”的名称，它将用一种名称空间来引用导入模块的接口。export 参数指定单个的命名导出，而 <code>import * as name</code> 语法导入所有导出接口，即导入模块整体。以下示例阐明该语法。</p>
 
 <h3 id="导入整个模块的内容">导入整个模块的内容</h3>
 
 <p>这将<code>myModule</code>插入当前作用域，其中包含来自位于<code>/modules/my-module.js</code>文件中导出的所有接口。</p>
 
-<pre class="brush: js notranslate">import * as myModule from '/modules/my-module.js';
+<pre class="brush: js">import * as myModule from '/modules/my-module.js';
 </pre>
 
-<p>在这里，访问导出接口意味着使用模块名称（在本例为“myModule”）作为命名空间。例如，如果上面导入的模块包含一个接口<code>doAllTheAmazingThings()</code>，你可以这样调用：</p>
+<p>在这里，访问导出接口意味着使用模块名称（在本例为“myModule”）作为命名空间。例如，如果上面导入的模块包含一个接口 <code>doAllTheAmazingThings()</code>，你可以这样调用：</p>
 
-<pre class="brush: js notranslate">myModule.doAllTheAmazingThings();</pre>
+<pre class="brush: js">myModule.doAllTheAmazingThings();</pre>
 
 <h3 id="导入单个接口">导入单个接口</h3>
 
-<p>给定一个名为<code>myExport</code>的对象或值，它已经从模块<code>my-module</code>导出（因为整个模块被导出）或显式地导出（使用{{jsxref("Statements/export", "export")}}语句），将<code>myExport</code>插入当前作用域。</p>
+<p>给定一个名为 <code>myExport</code> 的对象或值，它已经从模块 <code>my-module</code> 导出（因为整个模块被导出）或显式地导出（使用 {{jsxref("Statements/export", "export")}} 语句），将 <code>myExport</code> 插入当前作用域。</p>
 
-<pre class="brush: js notranslate">import {myExport} from '/modules/my-module.js';</pre>
+<pre class="brush: js">import {myExport} from '/modules/my-module.js';</pre>
 
 <h3 id="导入多个接口">导入多个接口</h3>
 
-<p>这将<code>foo</code>和<code>bar</code>插入当前作用域。</p>
+<p>这将 <code>foo</code> 和 <code>bar</code> 插入当前作用域。</p>
 
-<pre class="brush: js notranslate">import {foo, bar} from '/modules/my-module.js';</pre>
+<pre class="brush: js">import {foo, bar} from '/modules/my-module.js';</pre>
 
 <h3 id="导入带有别名的接口">导入带有别名的接口</h3>
 
-<p>你可以在导入时重命名接口。例如，将<code>shortName</code>插入当前作用域。</p>
+<p>你可以在导入时重命名接口。例如，将 <code>shortName</code> 插入当前作用域。</p>
 
-<pre class="brush: js notranslate">import {reallyReallyLongModuleExportName as shortName}
+<pre class="brush: js">import {reallyReallyLongModuleExportName as shortName}
   from '/modules/my-module.js';</pre>
 
 <h3 id="导入时重命名多个接口">导入时重命名多个接口</h3>
 
 <p>使用别名导入模块的多个接口。</p>
 
-<pre class="brush: js notranslate">import {
+<pre class="brush: js">import {
   reallyReallyLongModuleMemberName as shortName,
   anotherLongModuleName as short
 } from '/modules/my-module.js';
@@ -93,72 +93,72 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
 
 <h3 id="仅为副作用而导入一个模块">仅为副作用而导入一个模块</h3>
 
-<p>整个模块仅为副作用（中性词，无贬义含义）而导入，而不导入模块中的任何内容（接口）。 这将运行模块中的全局代码, 但实际上不导入任何值。</p>
+<p>整个模块仅为副作用（中性词，无贬义含义）而导入，而不导入模块中的任何内容（接口）。 这将运行模块中的全局代码，但实际上不导入任何值。</p>
 
-<pre class="notranslate"><code>import '/modules/my-module.js';</code></pre>
+<pre class="brush: js">import '/modules/my-module.js';</pre>
 
 <h3 id="导入默认值">导入默认值</h3>
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">引入模块可能有一个</span></font>default</code>{{jsxref("Statements/export", "export")}}（无论它是对象，函数，类等）可用。然后可以使用<code>import</code>语句来导入这样的默认接口。</p>
+<p>引入模块可能有一个 <code>default</code> {{jsxref("Statements/export", "export")}}（无论它是对象，函数，类等）可用。然后可以使用 <code>import</code> 语句来导入这样的默认接口。</p>
 
 <p>最简单的用法是直接导入默认值：</p>
 
-<pre class="brush: js notranslate">import myDefault from '/modules/my-module.js';</pre>
+<pre class="brush: js">import myDefault from '/modules/my-module.js';</pre>
 
-<p>也可以同时将<code>default</code>语法与上述用法（命名空间导入或命名导入）一起使用。在这种情况下，<code>default</code>导入必须首先声明。 例如：</p>
+<p>也可以同时将 <code>default</code> 语法与上述用法（命名空间导入或命名导入）一起使用。在这种情况下，<code>default</code> 导入必须首先声明。 例如：</p>
 
-<pre class="brush: js notranslate">import myDefault, * as myModule from '/modules/my-module.js';
+<pre class="brush: js">import myDefault, * as myModule from '/modules/my-module.js';
 // myModule used as a namespace</pre>
 
 <p>或者</p>
 
-<pre class="brush: js notranslate">import myDefault, {foo, bar} from '/modules/my-module.js';
+<pre class="brush: js">import myDefault, {foo, bar} from '/modules/my-module.js';
 // specific, named imports
 </pre>
 
-<p>When importing a default export with {{anch("Dynamic Imports", "dynamic imports")}}, it works a bit differently. You need to destructure and rename the "default" key from the returned object.</p>
+<p>当用<a href="#动态导入">动态导入</a>的方式导入默认导出时，其工作方式有所不同。你需要从返回的对象中解构并重命名 "default" 键。</p>
 
-<pre class="notranslate">(async () =&gt; {
+<pre class="brush: js">(async () =&gt; {
   if (somethingIsTrue) {
     const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
   }
 })();</pre>
 
-<h3 id="动态import">动态import</h3>
+<h3 id="动态import">动态 import</h3>
 
-<p>标准用法的import导入的模块是静态的，会使所有被导入的模块，在加载时就被编译（无法做到按需编译，降低首页加载速度）。有些场景中，你可能希望根据条件导入模块或者按需导入模块，这时你可以使用动态导入代替静态导入。下面的是你可能会需要动态导入的场景：</p>
+<p>标准用法的 import 导入的模块是静态的，会使所有被导入的模块，在加载时就被编译（无法做到按需编译，降低首页加载速度）。有些场景中，你可能希望根据条件导入模块或者按需导入模块，这时你可以使用动态导入代替静态导入。下面的是你可能会需要动态导入的场景：</p>
 
 <ul>
  <li>当静态导入的模块很明显的降低了代码的加载速度且被使用的可能性很低，或者并不需要马上使用它。</li>
  <li>当静态导入的模块很明显的占用了大量系统内存且被使用的可能性很低。</li>
- <li>当被导入的模块，在加载时并不存在，需要异步获取</li>
+ <li>当被导入的模块，在加载时并不存在，需要异步获取。</li>
  <li>当导入模块的说明符，需要动态构建。（静态导入只能使用静态说明符）</li>
  <li>当被导入的模块有副作用（这里说的副作用，可以理解为模块中会直接运行的代码），这些副作用只有在触发了某些条件才被需要时。（原则上来说，模块不能有副作用，但是很多时候，你无法控制你所依赖的模块的内容）</li>
 </ul>
 
-<p>请不要滥用动态导入（只有在必要情况下采用）。静态框架能更好的初始化依赖，而且更有利于静态分析工具和<a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/Tree_shaking">tree shaking</a>发挥作用</p>
+<p>请不要滥用动态导入（只有在必要情况下采用）。静态框架能更好的初始化依赖，而且更有利于静态分析工具和 <a href="/zh-CN/docs/Glossary/Tree_shaking">tree shaking</a> 发挥作用。</p>
 
-<p>关键字import可以像调用函数一样来动态的导入模块。以这种方式调用，将返回一个 <code>promise</code>。</p>
+<p>关键字 import 可以像调用函数一样来动态的导入模块。以这种方式调用，将返回一个 <code>promise</code>。</p>
 
-<pre class="brush: js notranslate"><code>import('/modules/my-module.js')
+<pre class="brush: js">import('/modules/my-module.js')
   .then((module) =&gt; {
     // Do something with the module.
-  });</code>
+  });
 </pre>
 
 <p>这种使用方式也支持 <code>await</code> 关键字。</p>
 
-<pre class="brush: js notranslate"><code>let module = await import('/modules/my-module.js');</code></pre>
+<pre class="brush: js">let module = await import('/modules/my-module.js');</pre>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="标准导入">标准导入</h3>
 
-<p>下面的代码将会演示如何从辅助模块导入以协助处理AJAX JSON请求。</p>
+<p>下面的代码将会演示如何从辅助模块导入以协助处理 AJAX JSON 请求。</p>
 
 <h4 id="模块：file.js">模块：file.js</h4>
 
-<pre class="brush: js notranslate">function getJSON(url, callback) {
+<pre class="brush: js">function getJSON(url, callback) {
   let xhr = new XMLHttpRequest();
   xhr.onload = function () {
     callback(this.responseText)
@@ -173,16 +173,16 @@ export function getUsefulContents(url, callback) {
 
 <h4 id="主程序：main.js">主程序：main.js</h4>
 
-<pre class="brush: js notranslate">import { getUsefulContents } from '/modules/file.js';
+<pre class="brush: js">import { getUsefulContents } from '/modules/file.js';
 
 getUsefulContents('http://www.example.com',
     data =&gt; { doSomethingUseful(data); });</pre>
 
 <h3 id="动态导入">动态导入</h3>
 
-<p>此示例展示了如何基于用户操作去加载功能模块到页面上，在例子中通过点击按钮，然后会调用模块内的函数。当然这不是能实现这个功能的唯一方式，<code>import()</code>函数也可以支持<code>await</code>。</p>
+<p>此示例展示了如何基于用户操作去加载功能模块到页面上，在例子中通过点击按钮，然后会调用模块内的函数。当然这不是能实现这个功能的唯一方式，<code>import()</code> 函数也可以支持 <code>await</code>。</p>
 
-<pre class="brush: js notranslate">const main = document.querySelector("main");
+<pre class="brush: js">const main = document.querySelector("main");
 for (const link of document.querySelectorAll("nav &gt; a")) {
   link.addEventListener("click", e =&gt; {
     e.preventDefault();
@@ -227,6 +227,6 @@ for (const link of document.querySelectorAll("nav &gt; a")) {
  <li>Limin Zhu, Brian Terlson and Microsoft Edge Team: <a href="https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/">Previewing ES6 Modules and more from ES2015, ES2016 and beyond</a></li>
  <li>Hacks blog post by Jason Orendorff: <a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a></li>
  <li>Hacks blog post by Lin Clark: <a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES modules: A cartoon deep-dive</a></li>
- <li>Axel Rauschmayer's book: <a class="external" href="http://exploringjs.com/es6/ch_modules.html">"Exploring JS: Modules"</a></li>
+ <li>Axel Rauschmayer's book: <a class="external" href="https://exploringjs.com/es6/ch_modules.html">"Exploring JS: Modules"</a></li>
  <li>The Modern JavaScript Tutorial(javascript.info): <a class="external" href="https://javascript.info/import-export">Export and Import</a></li>
 </ul>

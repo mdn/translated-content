@@ -50,7 +50,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automatio
 <h3 id="Setting_up_Selenium_in_Node" name="Setting_up_Selenium_in_Node">Node で Selenium のセットアップ</h3>
 
 <ol>
- <li>まず、最後の章の <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#Setting_up_Node_and_npm">Setting up Node and npm</a> で説明しているように、新しいnpmプロジェクトをセットアップします。<code>selenium-test</code>のように違うものを呼んでください。</li>
+ <li>まず、最後の章の <a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#Setting_up_Node_and_npm">Setting up Node and npm</a> で説明しているように、新しいnpmプロジェクトをセットアップします。<code>selenium-test</code>のように違うものを呼んでください。</li>
  <li>次に私たちはNodeの内部からSeleniumが機能するようにフレームワークをインストールする必要があります。 更新頻度が高く、よく改善されるため、私たちは<a href="https://www.npmjs.com/package/selenium-webdriver">selenium-webdriver</a>を選択します。もしも他の選択をするならば<a href="http://webdriver.io/">webdriver.io</a> と <a href="http://nightwatchjs.org/">nightwatch.js</a> もいい選択です。selenium-webdriverをインストールするため, プロジェクトフォルダの下で以下のコマンドを走らせます:</li>
  <li>
   <pre class="brush: bash"><code>npm install selenium-webdriver</code></pre>
@@ -356,7 +356,7 @@ input.</span>sendKeys('Filling in my form');</pre>
 <p>There has been a lot written about best practices for writing tests. You can find some good background information at <a href="http://www.seleniumhq.org/docs/06_test_design_considerations.jsp">Test Design Considerations</a>. In general, you should make sure that your tests are:</p>
 
 <ol>
- <li>Using good locator strategies: When you are {{anch("Interacting with the document")}}, make sure that you use locators and page objects that are unlikely to change — if you have a testable element that you want to perform a test on, make sure that it has a stable ID, or position on the page that can be selected using a CSS selector, which isn't going to just change with the next site iteration. You want to make your tests as non-brittle as possible, i.e. they won't just break when something changes.</li>
+ <li>Using good locator strategies: When you are <a href="#interacting_with_the_document">Interacting with the document</a>, make sure that you use locators and page objects that are unlikely to change — if you have a testable element that you want to perform a test on, make sure that it has a stable ID, or position on the page that can be selected using a CSS selector, which isn't going to just change with the next site iteration. You want to make your tests as non-brittle as possible, i.e. they won't just break when something changes.</li>
  <li>Write atomic tests: Each test should test one thing only, making it easy to keep track of what test file is testing which criterion. As an example, the <code>google_test.js</code> test we looked at above is pretty good, as it just tests a single thing — whether the title of a search results page is set correctly. We could work on giving it a better name so it is easier to work out what it does if we add more google tests. Perhaps <code>results_page_title_set_correctly.js</code> would be slightly better?</li>
  <li>Write autonomous tests: Each test should work on it's own, and not depend on other tests to work.</li>
 </ol>
@@ -614,7 +614,7 @@ driver.quit();</pre>
 
 <ol>
  <li>The Selenium remote server requires Java to run. Download the latest JDK for your platform from the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE downloads page</a>. Install it when it is downloaded.</li>
- <li>Next, download the latest <a href="http://selenium-release.storage.googleapis.com/index.html">Selenium standalone server</a> — this acts as a proxy between your script and the browser drivers. Choose the latest stable version number (i.e. not a beta), and from the list choose a file starting with "selenium-server-standalone". When this has downloaded, put it in a sensible place, like in your home directory. If you've not already added the location to your <code>PATH</code>, do so now (see the {{anch("Setting up Selenium in Node")}} section).</li>
+ <li>Next, download the latest <a href="http://selenium-release.storage.googleapis.com/index.html">Selenium standalone server</a> — this acts as a proxy between your script and the browser drivers. Choose the latest stable version number (i.e. not a beta), and from the list choose a file starting with "selenium-server-standalone". When this has downloaded, put it in a sensible place, like in your home directory. If you've not already added the location to your <code>PATH</code>, do so now (see the <a href="#setting_up_selenium_in_node">Setting up Selenium in Node</a> section).</li>
  <li>Run the standalone server by entering the following into a terminal on your server computer
   <pre class="brush: bash"><code>java -jar </code>selenium-server-standalone-3.0.0.jar</pre>
   (update the <code>.jar</code> filename) so it matches exactly what file you've got.</li>

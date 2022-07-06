@@ -21,7 +21,7 @@ translation_of: Web/API/Window/getComputedStyle
 
 <h2 id="Выводы">Выводы</h2>
 
-<p>Метод <code>Window.getComputedStyle()</code> предоставляет все значения CSS свойств элементов после применения текущей таблицы стилей или базового расчёта каких-либо значений, которые могут быть.</p>
+<p>Метод <code>Window.getComputedStyle()</code> предоставляет все значения CSS-свойств элементов после применения текущей таблицы стилей или базового расчёта каких-либо значений, которые могут быть.</p>
 
 <h2 id="Пример">Пример</h2>
 
@@ -79,7 +79,7 @@ var style = window.getComputedStyle(elem1, null);
 
 <h2 id="defaultView"><code>defaultView</code></h2>
 
-<p>Во многих примерах кода, <code>getComputedStyle</code> используется из объекта <code>document.defaultView</code>. Почти во всех случаях это не нужно, поскольку <code>getComputedStyle</code> существует в объекте <code>window</code>. Это что-то на подобии шаблона defaultView который был некой прослойкой. Люди не хотели писать спецификацию для <code>window</code> и создавали <code>API</code>  которое также могло использоваться для Java. Так или иначе <a class="link-https" href="https://github.com/jquery/jquery/pull/524#issuecomment-2241183" title="https://github.com/jquery/jquery/pull/524#issuecomment-2241183">есть только один случай</a> когда метод <code>defaultView</code> должен использоваться: когда вы используете Firefox 3.6 чтобы получить доступ к вычисленным стилям.</p>
+<p>Во многих примерах кода, <code>getComputedStyle</code> используется из объекта <code>document.defaultView</code>. Почти во всех случаях это не нужно, поскольку <code>getComputedStyle</code> существует в объекте <code>window</code>. Это что-то на подобии шаблона defaultView который был некой прослойкой. Люди не хотели писать спецификацию для <code>window</code> и создавали <code>API</code>  которое также могло использоваться для Java. Так или иначе <a class="link-https" href="https://github.com/jquery/jquery/pull/524#issuecomment-2241183">есть только один случай</a> когда метод <code>defaultView</code> должен использоваться: когда вы используете Firefox 3.6 чтобы получить доступ к вычисленным стилям.</p>
 
 <h2 id="Использования_с_псевдо-элементами">Использования с псевдо-элементами</h2>
 
@@ -113,16 +113,16 @@ var style = window.getComputedStyle(elem1, null);
 
 <h2 id="Браузерная_поддержка">Браузерная поддержка</h2>
 
-<p>{{Compat("api.Window.getComputedStyle")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
 <ul>
  <li><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle">DOM Level 2 Style: getComputedStyle</a></li>
- <li><a href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle" title="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">CSS Object Model specification</a></li>
+ <li><a href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">CSS Object Model specification</a></li>
 </ul>
 
-<h2 id="See_also" name="See_also">Смотреть также</h2>
+<h2 id="See_also">Смотреть также</h2>
 
 <ul>
  <li>{{domxref("window.getDefaultComputedStyle")}}</li>

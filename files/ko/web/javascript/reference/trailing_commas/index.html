@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Trailing_commas
 
 <p>JavaScript는 배열에 나타나는 trailing comma를 무시합니다.</p>
 
-<pre class="brush: js notranslate">var arr = [
+<pre class="brush: js ">var arr = [
   1,
   2,
   3,
@@ -39,9 +39,9 @@ translation_of: Web/JavaScript/Reference/Trailing_commas
 arr; // [1, 2, 3]
 arr.length; // 3</pre>
 
-<p>trailing comma가 여러 개 있을 경우 빈 슬롯("구멍")이 생깁니다. 구멍이 있는 배열을 성기다<sup>sparse</sup>고 합니다(조밀한<sup>dense</sup> 배열에는 구멍이 없습니다). {{jsxref("Array.prototype.forEach()")}}나 {{jsxref("Array.prototype.map()")}}을 이용해 배열을 순회할 때는 빈 슬롯을 무시합니다.</p>
+<p>trailing comma가 여러 개 있을 경우 빈 슬롯("구멍")이 생깁니다. 구멍이 있는 배열을 성기다(sparse)고 합니다(조밀한(dense) 배열에는 구멍이 없습니다). {{jsxref("Array.prototype.forEach()")}}나 {{jsxref("Array.prototype.map()")}}을 이용해 배열을 순회할 때는 빈 슬롯을 무시합니다.</p>
 
-<pre class="brush: js notranslate">var arr = [1, 2, 3,,,];
+<pre class="brush: js ">var arr = [1, 2, 3,,,];
 arr.length; // 5
 </pre>
 
@@ -49,7 +49,7 @@ arr.length; // 5
 
 <p>ECMAScript 5부터는 객체 리터럴에도 trailing comma를 사용할 수 있습니다.</p>
 
-<pre class="brush: js notranslate">var object = {
+<pre class="brush: js ">var object = {
   foo: "bar",
   baz: "qwerty",
   age: 42,
@@ -63,7 +63,7 @@ arr.length; // 5
 
 <p>아래의 두 함수 정의는 모두 유효하며, 서로 같습니다. Trailing comma는 함수 정의의 <code>length</code> 속성이나 <code>arguments</code> 객체에 영향을 주지 않습니다.</p>
 
-<pre class="brush: js notranslate">function f(p) {}
+<pre class="brush: js ">function f(p) {}
 function f(p,) {}
 
 (p) =&gt; {};
@@ -72,7 +72,7 @@ function f(p,) {}
 
 <p>Trailing comma는 클래스나 객체의 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">메소드 정의</a>에도 사용할 수 있습니다.</p>
 
-<pre class="brush: js notranslate">class C {
+<pre class="brush: js ">class C {
   one(a,) {},
   two(a, b,) {},
 }
@@ -87,7 +87,7 @@ var obj = {
 
 <p>아래의 두 함수 호출은 모두 유효하며, 서로 같습니다.</p>
 
-<pre class="brush: js notranslate">f(p);
+<pre class="brush: js ">f(p);
 f(p,);
 
 Math.max(10, 20);
@@ -98,7 +98,7 @@ Math.max(10, 20,);
 
 <p>함수의 매개변수 정의나 호출에 쉼표만 있을 경우 {{Jsxref("SyntaxError")}}가 발생합니다. 또한, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest 매개변수</a>를 사용할 때는 trailing comma를 사용할 수 없습니다.</p>
 
-<pre class="brush: js example-bad notranslate">function f(,) {} // SyntaxError: missing formal parameter
+<pre class="brush: js example-bad ">function f(,) {} // SyntaxError: missing formal parameter
 (,) =&gt; {};       // SyntaxError: expected expression, got ','
 f(,)             // SyntaxError: expected expression, got ','
 
@@ -110,7 +110,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">구조 분해 할당</a>의 좌변에도 trailing comma를 사용할 수 있습니다.</p>
 
-<pre class="brush: js notranslate">// Trailing comma가 있는 배열 구조 분해
+<pre class="brush: js ">// Trailing comma가 있는 배열 구조 분해
 [a, b,] = [1, 2];
 
 // Trailing comma가 있는 객체 구조 분해
@@ -123,7 +123,7 @@ var {p, q,} = o;
 
 <p>Rest 원소가 있을 경우 역시 {{jsxref("SyntaxError")}}가 발생합니다.</p>
 
-<pre class="brush: js example-bad notranslate">var [a, ...b,] = [1, 2, 3];
+<pre class="brush: js example-bad ">var [a, ...b,] = [1, 2, 3];
 // SyntaxError: rest element may not have a trailing comma</pre>
 
 <h2 id="JSON에서의_trailing_comma">JSON에서의 trailing comma</h2>
@@ -132,7 +132,7 @@ var {p, q,} = o;
 
 <p>아래의 두 줄 모두 <code>SyntaxError</code>를 발생합니다.</p>
 
-<pre class="brush: js example-bad notranslate">JSON.parse('[1, 2, 3, 4, ]');
+<pre class="brush: js example-bad ">JSON.parse('[1, 2, 3, 4, ]');
 JSON.parse('{"foo" : 1, }');
 // SyntaxError JSON.parse: unexpected character
 // at line 1 column 14 of the JSON data
@@ -140,7 +140,7 @@ JSON.parse('{"foo" : 1, }');
 
 <p>JSON을 올바르게 파싱하려면 trailing comma를 제거해야 합니다.</p>
 
-<pre class="brush: js example-good notranslate">JSON.parse('[1, 2, 3, 4 ]');
+<pre class="brush: js example-good ">JSON.parse('[1, 2, 3, 4 ]');
 JSON.parse('{"foo" : 1 }');</pre>
 
 <h2 id="명세">명세</h2>

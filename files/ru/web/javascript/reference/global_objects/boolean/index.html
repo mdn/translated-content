@@ -13,18 +13,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 
 <p>Объект <strong><code>Boolean</code></strong> является объектом-обёрткой над примитивом логического типа.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>new Boolean([<var>value</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>value</code></dt>
  <dd>Необязательный параметр. Начальное значение объекта <code>Boolean</code>.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Значение, переданное первым параметром, при необходимости преобразуется в логическое значение. Если значение опущено или равно <code>0</code>, <code>-0</code>, {{jsxref("Global_Objects/null", "null")}}, <code>false</code>, {{jsxref("Global_Objects/NaN", "NaN")}}, {{jsxref("Global_Objects/undefined", "undefined")}} или пустой строке (<code>""</code>), объект имеет начальное значение, равное <code>false</code>. Все остальные значения, включая любые объекты или строку <code>"false"</code>, создают объект с начальным значением, равным <code>true</code>.</p>
 
@@ -62,7 +62,7 @@ var s = new Boolean(myString);       // начальное значение ра
 
 <p>Не используйте объект <code>Boolean</code> вместо примитива логического типа.</p>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt><code>Boolean.length</code></dt>
@@ -73,27 +73,27 @@ var s = new Boolean(myString);       // начальное значение ра
 
 <p>{{jsOverrides("Function", "Properties", "prototype")}}</p>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <p>Глобальный объект <code>Boolean</code> не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов:</p>
 
 <div>{{jsOverrides("Function", "Methods")}}</div>
 
-<h2 id="Boolean_instances" name="Boolean_instances">Экземпляры объекта <code>Boolean</code></h2>
+<h2 id="Boolean_instances">Экземпляры объекта <code>Boolean</code></h2>
 
 <p>Все экземпляры объекта <code>Boolean</code> наследуются от {{jsxref("Boolean.prototype")}}. Как и все конструкторы, объект прототипа предоставляет экземплярам свойства и методы.</p>
 
-<h3 id="Properties_2" name="Properties_2">Свойства</h3>
+<h3 id="Properties_2">Свойства</h3>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Properties')}}</div>
 
-<h3 id="Methods_2" name="Methods_2">Методы</h3>
+<h3 id="Methods_2">Методы</h3>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Methods')}}</div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Creating_Boolean_objects_with_an_initial_value_of_false" name="Example:_Creating_Boolean_objects_with_an_initial_value_of_false">Пример: создание объектов <code>Boolean</code> с начальным значением, равным <code>false</code></h3>
+<h3 id="Example:_Creating_Boolean_objects_with_an_initial_value_of_false">Пример: создание объектов <code>Boolean</code> с начальным значением, равным <code>false</code></h3>
 
 <pre class="brush: js">var bNoParam = new Boolean();
 var bZero = new Boolean(0);
@@ -102,7 +102,7 @@ var bEmptyString = new Boolean('');
 var bfalse = new Boolean(false);
 </pre>
 
-<h3 id="Example:_Creating_Boolean_objects_with_an_initial_value_of_true" name="Example:_Creating_Boolean_objects_with_an_initial_value_of_true">Пример: создание объектов <code>Boolean</code> с начальным значением, равным <code>true</code></h3>
+<h3 id="Example:_Creating_Boolean_objects_with_an_initial_value_of_true">Пример: создание объектов <code>Boolean</code> с начальным значением, равным <code>true</code></h3>
 
 <pre class="brush: js">var btrue = new Boolean(true);
 var btrueString = new Boolean('true');
@@ -112,38 +112,15 @@ var bArrayProto = new Boolean([]);
 var bObjProto = new Boolean({});
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.6', 'Boolean')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-boolean-objects', 'Boolean')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Boolean.prototype")}}</li>

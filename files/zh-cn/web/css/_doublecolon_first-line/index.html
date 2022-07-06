@@ -5,11 +5,11 @@ translation_of: 'Web/CSS/::first-line'
 ---
 <p>{{ CSSRef() }}</p>
 
-<p id="描述"><strong><code>::first-line</code></strong> <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS">CSS</a> <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements">pseudo-element</a> （CSS伪元素）在某 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes">block-level element</a> （块级元素）的第一行应用样式。第一行的长度取决于很多因素，包括元素宽度，文档宽度和文本的文字大小。</p>
+<p><strong><code>::first-line</code></strong> <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS">CSS</a> <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements">pseudo-element</a> （CSS 伪元素）在某 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes">block-level element</a> （块级元素）的第一行应用样式。第一行的长度取决于很多因素，包括元素宽度，文档宽度和文本的文字大小。</p>
 
-<p>和其他所有的 伪元素一样，::first-line 不能匹配任何真实存在的html元素。</p>
+<p>和其他所有的 伪元素一样，::first-line 不能匹配任何真实存在的 html 元素。</p>
 
-<p> ::first-line 伪元素只能在块容器中,所以,<code>::first-line伪元素</code>只能在一个display值为block, <code>inline-block</code>, <code>table-cell</code> 或者 <code>table-caption中有用</code>.。在其他的类型中，<code>::first-line</code> 是不起作用的.</p>
+<p> ::first-line 伪元素只能在块容器中，所以，<code>::first-line</code>伪元素只能在一个 display 值为 block, <code>inline-block</code>, <code>table-cell</code> 或者 <code>table-caption</code>中有用.。在其他的类型中，<code>::first-line</code> 是不起作用的。</p>
 
 <p> </p>
 
@@ -17,7 +17,7 @@ translation_of: 'Web/CSS/::first-line'
 
 <p> </p>
 
-<p>在一个使用了 <code>::first-line 伪元素的选择器中，</code>只有很小的一部分css属性能被使用：</p>
+<p>在一个使用了 <code>::first-line</code> 伪元素的选择器中，只有很小的一部分 css 属性能被使用：</p>
 
 <ul>
  <li>所有和字体有关的属性：{{Cssxref("font")}}, {{cssxref("font-kerning")}}, {{Cssxref("font-style")}}, {{Cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{Cssxref("font-weight")}}, {{Cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}}, and {{Cssxref("font-family")}}</li>
@@ -30,9 +30,9 @@ translation_of: 'Web/CSS/::first-line'
 <p>这个列表将来可能会被扩展，但是推荐的是，你不要使用任何上述没有提到的属性。</p>
 
 <div class="note">
-<p>在CSS 2中，伪元素是以 : 开头的。由于伪类也遵循同一规则，使得他们之间难以区分。为了解决这个问题，在CSS 2.1中，伪元素支持以 :: 开头。现在，使用伪元素时更推荐以 :: 开头，而使用伪类时使用 : 开头。</p>
+<p>在 CSS 2 中，伪元素是以 : 开头的。由于伪类也遵循同一规则，使得他们之间难以区分。为了解决这个问题，在 CSS 2.1 中，伪元素支持以 :: 开头。现在，使用伪元素时更推荐以 :: 开头，而使用伪类时使用 : 开头。</p>
 
-<p>因为过去的浏览器都实现过CSS 2的规则，所以现在那些支持 :: 的浏览器通常同时也支持 : 的形式。</p>
+<p>因为过去的浏览器都实现过 CSS 2 的规则，所以现在那些支持 :: 的浏览器通常同时也支持 : 的形式。</p>
 
 <p>如果需要支持老旧的浏览器，那么<code>:first-line</code> 是唯一的选择，反之，更推荐使用<code>::first-line。</code></p>
 </div>
@@ -137,69 +137,7 @@ sed do eiusmod tempor incididunt ut labore.&lt;/p&gt;</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0 (buggy when using <code>text-transform</code>: <a href="//code.google.com/p/chromium/issues/detail?id=129669">issue 129669</a>)</td>
-   <td>{{ CompatGeckoDesktop("1") }}</td>
-   <td>9.0</td>
-   <td>7.0</td>
-   <td>1.0 (85) (buggy when using <code>text-transform</code>: <a href="//bugs.webkit.org/show_bug.cgi?id=3409">issue 3409</a>)</td>
-  </tr>
-  <tr>
-   <td>Old one-colon syntax (<code>:first-line</code>)</td>
-   <td>1.0 (buggy when using <code>text-transform</code>: <a href="//code.google.com/p/chromium/issues/detail?id=129669">issue 129669</a>)</td>
-   <td>{{ CompatGeckoDesktop("1") }}</td>
-   <td>5.5</td>
-   <td>3.5</td>
-   <td>1.0 (85) (buggy when using <code>text-transform</code>: <a href="//bugs.webkit.org/show_bug.cgi?id=3409">issue 3409</a>)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Old one-colon syntax (<code>:first-line</code>)</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.selectors.first-line")}}
 
 <h2 id="参见">参见</h2>
 

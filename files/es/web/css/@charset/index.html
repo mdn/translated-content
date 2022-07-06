@@ -16,7 +16,7 @@ translation_of: Web/CSS/@charset
 <p>Habiendo diferentes maneras de definir la codificación de caracteres en una hoja de estilos, el navegador intentará seguir este orden para identificarlo (deteniéndose en el primer paso que dé resultado):</p>
 
 <ol>
- <li>El valor de la <a href="https://es.wikipedia.org/wiki/Marca_de_orden_de_bytes" title="http://en.wikipedia.org/wiki/Byte_order_mark">Marca de orden de bytes</a> al principio del archivo.</li>
+ <li>El valor de la <a href="https://es.wikipedia.org/wiki/Marca_de_orden_de_bytes">Marca de orden de bytes</a> al principio del archivo.</li>
  <li>El valor dado por el atributo charset del encabezado HTTP <code>Content-Type:</code> o su equivalente en el protocolo usado para descargar la hoja de estilos.</li>
  <li>La regla-at <code>@charset</code> de CSS.</li>
  <li>Usar la codificación de caracteres definida en el documento de referencia: el atributo <code>charset</code> attribute del elemento {{ HTMLElement("link") }}. Este método es obsoleto para HTML5 y no debe ser usado.</li>
@@ -69,54 +69,4 @@ translation_of: Web/CSS/@charset
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>2.0</td>
-   <td>{{ CompatGeckoDesktop("1.8") }}<sup>[1]</sup></td>
-   <td>5.5<sup>[2]</sup></td>
-   <td>9</td>
-   <td>4</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>2.1</td>
-   <td>{{ CompatGeckoMobile("1.8") }}</td>
-   <td>5.5<sup>[2]</sup></td>
-   <td>10.0</td>
-   <td>4</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Firefox 1.0 soporta sólo una sintaxis inválida donde la codificación de caracteres no se establece entre comillas sencillas o dobles.</p>
-
-<p>[2] De IE 5.5 a IE 7, IE también soporta la sintaxis inválida donde la codificación de caracteres no se establece entre comillas sencillas o dobles.</p>
+{{Compat("css.at-rules.charset")}}

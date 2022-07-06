@@ -5,16 +5,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 <p>{{JSRef}}</p>
 
-<p><strong><code>BigInt</code></strong> 是一种内置对象，它提供了一种方法来表示大于 <code>2<sup>53 </sup>- 1</code> 的整数。这原本是 Javascript中可以用 {{JSxRef("Number")}} 表示的最大数字。<strong><code>BigInt</code></strong> 可以表示任意大的整数。</p>
+<p><strong><code>BigInt</code></strong> 是一种内置对象，它提供了一种方法来表示大于 <code>2^53 - 1</code> 的整数。这原本是 Javascript 中可以用 {{JSxRef("Number")}} 表示的最大数字。<strong><code>BigInt</code></strong> 可以表示任意大的整数。</p>
 
 <dl>
 </dl>
 
 <h2 id="描述">描述</h2>
 
-<p>可以用在一个整数字面量后面加 <code>n</code> 的方式定义一个 <code>BigInt</code> ，如：<code>10n</code>，或者调用函数<code>BigInt()</code>。</p>
+<p>可以用在一个整数字面量后面加 <code>n</code> 的方式定义一个 <code>BigInt</code> ，如：<code>10n</code>，或者调用函数 <code>BigInt()</code>（但不包含 <code>new</code> 运算符）并传递一个整数值或字符串值。</p>
 
-<pre><code>const theBiggestInt = 9007199254740991n;
+<pre class="brush: js"><code>const theBiggestInt = 9007199254740991n;
 
 const alsoHuge = BigInt(9007199254740991);
 // ↪ 9007199254740991n
@@ -34,12 +34,12 @@ const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111"
 
 <p>使用 <code>typeof</code> 测试时， <code>BigInt</code> 对象返回 "bigint" ：</p>
 
-<pre><code>typeof 1n === 'bigint'; // true
+<pre class="brush: js"><code>typeof 1n === 'bigint'; // true
 typeof BigInt('1') === 'bigint'; // true</code></pre>
 
 <p>使用 <code>Object</code> 包装后， <code>BigInt</code> 被认为是一个普通 "object" ：</p>
 
-<pre><code>typeof Object(1n) === 'object'; // true</code></pre>
+<pre class="brush: js"><code>typeof Object(1n) === 'object'; // true</code></pre>
 
 <h3 id="运算">运算</h3>
 
@@ -72,8 +72,8 @@ bigN * -1n
 
 <p><code>/</code> 操作符对于整数的运算也没问题。可是因为这些变量是 <code>BigInt</code> 而不是 <code>BigDecimal</code> ，该操作符结果会向零取整，也就是说不会返回小数部分。</p>
 
-<div class="blockIndicator warning">
-<p>当使用 <code>BigInt</code> 时，带小数的运算会被取整。</p>
+<div class="warning">
+<p><strong>警告：</strong>当使用 <code>BigInt</code> 时，带小数的运算会被取整。</p>
 </div>
 
 <pre class="brush: js">const expected = 4n / 2n;
@@ -121,7 +121,7 @@ mixed.sort();
 
 <p>注意被  <code>Object</code> 包装的 <code>BigInt</code>s 使用 object 的比较规则进行比较，只用同一个对象在比较时才会相等。</p>
 
-<pre><code>0n === Object(0n); // false
+<pre class="brush: js"><code>0n === Object(0n); // false
 Object(0n) === Object(0n); // false
 
 const o = Object(0n);
@@ -161,7 +161,7 @@ Boolean(12n)
 <h2 id="构造器">构造器</h2>
 
 <dl>
- <dt><code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt">BigInt()</a></code></dt>
+ <dt><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt">BigInt()</a></code></dt>
  <dd>创建{{jsxref("BigInt")}} 对象。</dd>
 </dl>
 
@@ -169,9 +169,9 @@ Boolean(12n)
 
 <dl>
  <dt>{{JSxRef("BigInt.asIntN()")}}</dt>
- <dd>将 BigInt 值转换为一个 -2<sup>width-1</sup> 与 2<sup>width-1</sup>-1 之间的有符号整数。</dd>
+ <dd>将 BigInt 值转换为一个 -2^(width-1) 与 2^(width-1) - 1 之间的有符号整数。</dd>
  <dt>{{JSxRef("BigInt.asUintN()")}}</dt>
- <dd>将一个 BigInt 值转换为 0 与 2<sup>width</sup>-1 之间的无符号整数。</dd>
+ <dd>将一个 BigInt 值转换为 0 与 2^(width) - 1 之间的无符号整数。</dd>
 </dl>
 
 <h2 id="实例方法">实例方法</h2>
@@ -180,7 +180,7 @@ Boolean(12n)
  <dt>{{JSxRef("BigInt.prototype.toLocaleString()")}}</dt>
  <dd>返回此数字的 language-sensitive 形式的字符串。覆盖 {{JSxRef("Object.prototype.toLocaleString()")}}  方法。</dd>
  <dt>{{JSxRef("BigInt.prototype.toString()")}}</dt>
- <dd>返回以指定基数(base)表示指定数字的字符串。覆盖 {{JSxRef("Object.prototype.toString()")}} 方法。</dd>
+ <dd>返回以指定基数 (base) 表示指定数字的字符串。覆盖 {{JSxRef("Object.prototype.toString()")}} 方法。</dd>
  <dt>{{JSxRef("BigInt.prototype.valueOf()")}}</dt>
  <dd>返回指定对象的基元值。 覆盖 {{JSxRef("Object.prototype.valueOf()")}} 方法。</dd>
 </dl>
@@ -189,7 +189,7 @@ Boolean(12n)
 
 <h3 id="转化">转化</h3>
 
-<p>由于在 {{JSxRef("Number")}} 与 <code>BigInt</code> 之间进行转换会损失精度，因而建议仅在值可能大于2<sup>53</sup> 时使用 <code>BigInt</code> 类型，并且不在两种类型之间进行相互转换。</p>
+<p>由于在 {{JSxRef("Number")}} 与 <code>BigInt</code> 之间进行转换会损失精度，因而建议仅在值可能大于 2^53 时使用 <code>BigInt</code> 类型，并且不在两种类型之间进行相互转换。</p>
 
 <h3 id="密码学">密码学</h3>
 
@@ -199,11 +199,11 @@ Boolean(12n)
 
 <p>对任何 <code>BigInt</code> 值使用 {{jsxref("JSON.stringify()")}} 都会引发 <code>TypeError</code>，因为默认情况下 <code>BigInt</code> 值不会在 <code>JSON</code> 中序列化。但是，如果需要，可以实现 <code>toJSON</code> 方法：</p>
 
-<pre><code>BigInt.prototype.toJSON = function() { return this.toString(); }</code></pre>
+<pre class="brush: js"><code>BigInt.prototype.toJSON = function() { return this.toString(); }</code></pre>
 
-<p><code>JSON.stringify</code> 现在生成如下字符串，而不是抛出异常:</p>
+<p><code>JSON.stringify</code> 现在生成如下字符串，而不是抛出异常：</p>
 
-<pre><code>JSON.stringify(BigInt(1));
+<pre class="brush: js"><code>JSON.stringify(BigInt(1));
 // '"1"'</code></pre>
 
 <h2 id="例子">例子</h2>
@@ -246,7 +246,7 @@ nthPrime(20n)
   </tr>
   <tr>
    <td><a href="https://tc39.es/proposal-bigint/#sec-bigint-objects">BigInt</a></td>
-   <td>第4阶段</td>
+   <td>第 4 阶段</td>
   </tr>
  </tbody>
 </table>

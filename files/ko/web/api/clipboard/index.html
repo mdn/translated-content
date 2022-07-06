@@ -26,10 +26,10 @@ translation_of: Web/API/Clipboard
 
 <p>The system clipboard is exposed through the global {{domxref("Navigator.clipboard")}} property.</p>
 
-<p>Calls to the methods of the <code>Clipboard</code> object will not succeed if the user hasn't granted the needed permissions using the <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</a> and the <code>"clipboard-read"</code> or <code>"clipboard-write"</code> permission as appropriate.</p>
+<p>Calls to the methods of the <code>Clipboard</code> object will not succeed if the user hasn't granted the needed permissions using the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> and the <code>"clipboard-read"</code> or <code>"clipboard-write"</code> permission as appropriate.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> In reality, at this time browser requirements for access to the clipboard vary significantly. Please see the section {{anch("Clipboard availability")}} for details.</p>
+<p><strong>Note:</strong> In reality, at this time browser requirements for access to the clipboard vary significantly. Please see the section <a href="#clipboard_availability">Clipboard availability</a> for details.</p>
 </div>
 
 <p>All of the Clipboard API methods operate asynchronously; they return a {{jsxref("Promise")}} which is resolved once the clipboard access has been completed. The promise is rejected if clipboard access is denied.</p>

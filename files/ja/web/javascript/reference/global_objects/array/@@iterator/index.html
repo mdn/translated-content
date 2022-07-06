@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>@@iterator</strong></code> メソッドは<a href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">反復プロトコル</a>の一部であり、値の列を同期的に反復する方法を定義します。</p>
+<p><code><strong>@@iterator</strong></code> メソッドは<a href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル">反復プロトコル</a>の一部であり、値の列を同期的に反復する方法を定義します。</p>
 
 <p><code><strong>@@iterator</strong></code> プロパティの初期値は {{jsxref("Array.prototype.values()", "values()")}} プロパティの初期値と同じ関数オブジェクトです。</p>
 
@@ -67,7 +67,7 @@ console.log(eArr.next().value); // e
 
 <h3 id="Use_Case_for_brace_notation" name="Use_Case_for_brace_notation">括弧表記の使用法</h3>
 
-<p>この構文をドット記法 (<code>Array.prototype.values()</code>) よりも優先して使用する場合は、事前にどのようなオブジェクトになるのかが分からない場合です。イテレータを受け取り、その値を反復処理する関数があるが、そのオブジェクトが [Iterable].prototype.values メソッドを持っているかどうかわからない場合です。これはStringオブジェクトのような組み込みオブジェクトでも、カスタムオブジェクトでもよいでしょう。これは <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator">String</a> オブジェクトのような組込みオブジェクトや、独自オブジェクトである可能性があります。</p>
+<p>この構文をドット記法 (<code>Array.prototype.values()</code>) よりも優先して使用する場合は、事前にどのようなオブジェクトになるのかが分からない場合です。イテレータを受け取り、その値を反復処理する関数があるが、そのオブジェクトが [Iterable].prototype.values メソッドを持っているかどうかわからない場合です。これはStringオブジェクトのような組み込みオブジェクトでも、カスタムオブジェクトでもよいでしょう。これは <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator">String</a> オブジェクトのような組込みオブジェクトや、独自オブジェクトである可能性があります。</p>
 
 <pre class="brush: js notranslate">function logIterable(it) {
   var iterator = it[Symbol.iterator]();
@@ -109,8 +109,6 @@ logIterable('abc');
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("javascript.builtins.Array.@@iterator")}}</p>
 
