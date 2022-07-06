@@ -19,7 +19,7 @@ new TypeError(message, fileName, lineNumber)
 ### Parameters
 
 - `message` {{optional_inline}}
-  - : Descripción legible para humanos del error.
+  - : Descripción del error humanamente legible
 - `options` {{optional_inline}}
   - : Un objeto con las siguientes propiedades:
     - `cause` {{optional_inline}}
