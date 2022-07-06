@@ -53,7 +53,7 @@ try {
 }
 ```
 
-### Creando un TypeError
+### Crear un TypeError
 
 ```js
 try {
