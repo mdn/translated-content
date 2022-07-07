@@ -1,133 +1,87 @@
 ---
 title: HTMLObjectElement
 slug: Web/API/HTMLObjectElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
   - Interface
-  - NeedsTranslation
   - Reference
-  - TopicStub
+browser-compat: api.HTMLObjectElement
 translation_of: Web/API/HTMLObjectElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLObjectElement</code></strong> interface provides special properties and methods (beyond those on the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of {{HTMLElement("object")}} element, representing external resources.</p>
+**`HTMLObjectElement`** インターフェイスは、外部リソースを表す {{HTMLElement("object")}} 要素のレイアウトや表示を操作するための特別なプロパティとメソッド（継承によって利用できる {{domxref("HTMLElement")}} インターフェイスのもの以外のもの）を提供するものです。
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## プロパティ
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
-<dl>
- <dt>{{domxref("HTMLObjectElement.align")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are <code>"left"</code>, <code>"right"</code>, <code>"justify"</code>, and <code>"center"</code>.</dd>
- <dt>{{domxref("HTMLObjectElement.archive")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("archive", "object")}} HTML attribute, containing a list of archives for resources for this object.</dd>
- <dt>{{domxref("HTMLObjectElement.border")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("border", "object")}} HTML attribute, specifying the width of a border around the object.</dd>
- <dt>{{domxref("HTMLObjectElement.code")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the name of an applet class file, containing either the applet's subclass, or the path to get to the class, including the class file itself.</dd>
- <dt>{{domxref("HTMLObjectElement.codeBase")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("codebase", "object")}} HTML attribute, specifying the base path to use to resolve relative URIs.</dd>
- <dt>{{domxref("HTMLObjectElement.codeType")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("codetype", "object")}} HTML attribute, specifying the content type of the data.</dd>
- <dt>{{domxref("HTMLObjectElement.contentDocument")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("Document")}} representing the active document of the object element's nested browsing context, if any; otherwise <code>null</code>.</dd>
- <dt>{{domxref("HTMLObjectElement.contentWindow")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("WindowProxy")}} representing the window proxy of the object element's nested browsing context, if any; otherwise <code>null</code>.</dd>
- <dt>{{domxref("HTMLObjectElement.data")}}</dt>
- <dd>Returns a {{domxref("DOMString")}} that reflects the {{htmlattrxref("data", "object")}} HTML attribute, specifying the address of a resource's data.</dd>
- <dt>{{domxref("HTMLObjectElement.declare")}} {{obsolete_inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} that reflects the {{htmlattrxref("declare", "object")}} HTML attribute, indicating that this is a declaration, not an instantiation, of the object.</dd>
- <dt>{{domxref("HTMLObjectElement.form")}} {{readonlyInline}}</dt>
- <dd>Retuns a {{domxref("HTMLFormElement")}} representing the object element's form owner, or null if there isn't one.</dd>
- <dt>{{domxref("HTMLObjectElement.height")}}</dt>
- <dd>Returns a {{domxref("DOMString")}} that reflects the {{htmlattrxref("height", "object")}} HTML attribute, specifying the displayed height of the resource in CSS pixels.</dd>
- <dt>{{domxref("HTMLObjectElement.hspace")}} {{obsolete_inline}}</dt>
- <dd>Is a <code>long</code> representing the horizontal space in pixels around the control.</dd>
- <dt>{{domxref("HTMLObjectElement.name")}}</dt>
- <dd>Returns a {{domxref("DOMString")}} that reflects the {{htmlattrxref("name", "object")}} HTML attribute, specifying the name of the browsing context.</dd>
- <dt>{{domxref("HTMLObjectElement.standby")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("standby", "object")}} HTML attribute, specifying a message to display while the object loads.</dd>
- <dt>{{domxref("HTMLObjectElement.tabindex")}}</dt>
- <dd>Is a <code>long</code> representing the position of the element in the tabbing navigation order for the current document.</dd>
- <dt>{{domxref("HTMLObjectElement.type")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("type", "object")}} HTML attribute, specifying the MIME type of the resource.</dd>
- <dt>{{domxref("HTMLObjectElement.typeMustMatch")}}</dt>
- <dd>Is a {{jsxref("Boolean")}} that reflects the {{htmlattrxref("typeMustMatch", "object")}} HTML attribute, indicating if the resource specified by {{htmlattrxref("data", "object")}} must only be played if it matches the {{htmlattrxref("type", "object")}} attribute.</dd>
- <dt>{{domxref("HTMLObjectElement.useMap")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("usemap", "object")}} HTML attribute, specifying a {{HTMLElement("map")}} element to use.</dd>
- <dt>{{domxref("HTMLObjectElement.validationMessage")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} representing a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (<code>willValidate</code> is <code>false</code>), or it satisfies its constraints.</dd>
- <dt>{{domxref("HTMLObjectElement.validity")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("ValidityState")}} with the validity states that this element is in.</dd>
- <dt>{{domxref("HTMLObjectElement.vspace")}} {{obsolete_inline}}</dt>
- <dd>Is a <code>long</code> representing the horizontal space in pixels around the control.</dd>
- <dt>{{domxref("HTMLObjectElement.width")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("width", "object")}} HTML attribute, specifying the displayed width of the resource in CSS pixels.</dd>
- <dt>{{domxref("HTMLObjectElement.willValidate")}} {{readonlyInline}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} that indicates whether the element is a candidate for constraint validation. Always <code>false</code> for <code>HTMLObjectElement</code> objects.</dd>
-</dl>
+- {{domxref("HTMLObjectElement.align")}} {{deprecated_inline}}
+  - : 文字列で、列挙型のプロパティを表し、要素のコンテンツが周囲のコンテキストに対して整列していることを示します。指定可能な値は `"left"`, `"right"`, `"justify"`, `"center"` です。
+- {{domxref("HTMLObjectElement.archive")}} {{deprecated_inline}}
+  - : HTML の {{htmlattrxref("archive", "object")}} 属性を反映した文字列で、このオブジェクトのリソースのアーカイブのリストを示します。
+- {{domxref("HTMLObjectElement.border")}} {{deprecated_inline}}
+  - : HTML の {{htmlattrxref("border", "object")}} 属性を反映した文字列で、オブジェクトの周りにある境界の幅を指定します。
+- {{domxref("HTMLObjectElement.code")}} {{deprecated_inline}}
+  - : アプレットのクラスファイルの名前を表す文字列で、アプレットのサブクラス、またはクラスファイル自体を含むクラスにアクセスするためのパスが入ります。
+- {{domxref("HTMLObjectElement.codeBase")}} {{deprecated_inline}}
+  - : HTML の {{htmlattrxref("codebase", "object")}} 属性を反映した文字列で、相対 URI を解決するために使用する基底パスを指定します。
+- {{domxref("HTMLObjectElement.codeType")}} {{deprecated_inline}}
+  - : HTML の {{htmlattrxref("codetype", "object")}} 属性を反映した文字列で、データのコンテンツ型を指定します。
+- {{domxref("HTMLObjectElement.contentDocument")}} {{readonlyInline}}
+  - : この object 要素のネストされた閲覧コンテキストのアクティブな文書を表す {{domxref("Document")}} があればそれを返し、なければ `null` を返します。
+- {{domxref("HTMLObjectElement.contentWindow")}} {{readonlyInline}}
+  - : この object 要素のネストされた閲覧コンテキストのウィンドウプロキシーがあればそれを表す {{domxref("WindowProxy")}} を返し、なければ `null` を返します。
+- {{domxref("HTMLObjectElement.data")}}
+  - : HTML の {{htmlattrxref("data", "object")}} 属性を反映した文字列で、リソースのデータのアドレスを指定するものを返します。
+- {{domxref("HTMLObjectElement.declare")}} {{deprecated_inline}}
+  - : HTML の {{htmlattrxref("declare", "object")}} 属性を反映した論理値で、これがオブジェクトのインスタンス化ではなく宣言であることを示します。
+- {{domxref("HTMLObjectElement.form")}} {{readonlyInline}}
+  - : このオブジェクトのフォームオーナーを表す {{domxref("HTMLFormElement")}} を返します。存在しなければ null を返します。
+- {{domxref("HTMLObjectElement.height")}}
+  - : HTML の {{htmlattrxref("height", "object")}} 属性を反映した文字列で、リソースが表示される高さを CSS ピクセル数で指定する値を返します。
+- {{domxref("HTMLObjectElement.hspace")}} {{deprecated_inline}}
+  - : `long` で、このコントロールの周囲にある水平方向の空間をピクセル数で表します。
+- {{domxref("HTMLObjectElement.name")}}
+  - : HTML の {{htmlattrxref("name", "object")}} 属性を反映した文字列で、閲覧コンテキストの名前を示すものを返します。
+- {{domxref("HTMLObjectElement.standby")}} {{deprecated_inline}}
+  - : HTML の {{htmlattrxref("standby", "object")}} 属性を反映した文字列で、オブジェクトの読み込み中に表示されるメッセージを指定します。
+- {{domxref("HTMLObjectElement.type")}}
+  - : HTML の {{htmlattrxref("type", "object")}} 属性を反映した文字列で、リソースの MIME タイプを指定します。
+- {{domxref("HTMLObjectElement.useMap")}}
+  - : HTML の {{htmlattrxref("usemap", "object")}} 属性を反映した文字列で、使用する {{HTMLElement("map")}} 要素を指定します。
+- {{domxref("HTMLObjectElement.validationMessage")}} {{readonlyInline}}
+  - : コントロールが満たしていない制約検証を説明する、ローカライズされたメッセージを（もしあれば）文字列で返します。コントロールが制約検証の候補でない場合（`willValidate` が `false` である場合）、あるいは制約を満たしている場合には、これは空文字列となります。
+- {{domxref("HTMLObjectElement.validity")}} {{readonlyInline}}
+  - : この要素が属する有効状態を {{domxref("ValidityState")}} で返します。
+- {{domxref("HTMLObjectElement.vspace")}} {{deprecated_inline}}
+  - : `long` で、このコントロールの周囲にある垂直方向の空間をピクセル数で表します。
+- {{domxref("HTMLObjectElement.width")}}
+  - : HTML の {{htmlattrxref("width", "object")}} 属性を反映した文字列で、リソースが表示される幅を CSS ピクセル数で指定する値を返します。
+- {{domxref("HTMLObjectElement.willValidate")}} {{readonlyInline}}
+  - : その要素が制約検証の候補であるかどうかを示す論理値を返します。 `HTMLObjectElement` オブジェクトの場合は常に `false` です。
 
-<h2 id="Methods">Methods</h2>
+## メソッド
 
-<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
-<dl>
- <dt>{{domxref("HTMLObjectElement.checkValidity()")}}</dt>
- <dd>Retuns a {{jsxref("Boolean")}} that always is <code>true</code>, because <code>object</code> objects are never candidates for constraint validation.</dd>
- <dt>{{domxref("HTMLObjectElement.setCustomValidity()")}}</dt>
- <dd>Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.</dd>
-</dl>
+- {{domxref("HTMLObjectElement.checkValidity()")}}
+  - : `object` オブジェクトは制約検証の候補になることはないので、常に `true` となる論理値を返します。
+- {{domxref("HTMLObjectElement.setCustomValidity()")}}
+  - : 要素の独自の有効性メッセージを設定します。このメッセージが空文字列でない場合、その要素は独自の有効性エラーが発生しており、検証が通りません。20
 
-<h2 id="Specifications">Specifications</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlobjectelement", "HTMLObjectElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-object-element", "HTMLObjectElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>The W3C specification is a latest of a previous version of {{SpecName("HTML WHATWG")}}<br>
-    Technically, the property <code>tabindex</code> is now defined on {{domxref("HTMLElement")}}.<br>
-    The following properties are now obsolete: <code>align</code>, <code>archive</code>, <code>border</code>, <code>code</code>, <code>codeBase</code>, <code>codeType</code>, <code>declare</code>, <code>hspace</code>, <code>standby</code>, and <code>vspace</code>.<br>
-    The following properties have been added: <code>typeMustMatch</code>, <code>contentWindow</code>, <code>willValidate</code>, <code>validity</code>, and <code>validationMessage</code>.<br>
-    The following methods have been added: <code>checkValidity()</code> and <code>setCustomValidity()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-9893177', 'HTMLObjectElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>The <code>contentDocument</code> property has been added.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-9893177', 'HTMLObjectElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.HTMLObjectElement")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("object")}}</li>
-</ul>
+- このインターフェイスを実装している HTML 要素: {{HTMLElement("object")}}
