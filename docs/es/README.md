@@ -66,7 +66,9 @@ La comunidad de español sugiere utilizar las siguientes convenciones al traduci
 Actualmente trabajando en: https://github.com/mdn/translated-content/issues/6562
 
 Charla con nosotros:
+
 Telegram: https://t.me/+Dr6qKQCAepw4MjFj
+
 Matrix: https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org
 
 <details>
