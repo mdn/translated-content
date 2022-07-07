@@ -3872,7 +3872,6 @@
 /fr/docs/Web/API/Référence_du_DOM_Gecko/window	/fr/docs/Web/API/Window
 /fr/docs/Web/API/SVGStylable	/fr/docs/Web/API/SVGElement
 /fr/docs/Web/API/Selection.toString	/fr/docs/Web/API/Selection/toString
-/fr/docs/Web/API/Selection_API	/fr/docs/conflicting/Web/API/Selection
 /fr/docs/Web/API/ServiceWorker/onstatechange	/fr/docs/Web/API/ServiceWorker/statechange_event
 /fr/docs/Web/API/ServiceWorkerState	/fr/docs/Web/API/ServiceWorker/state
 /fr/docs/Web/API/SharedWorkerGlobalScope/onconnect	/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event
@@ -6163,6 +6162,7 @@
 /fr/docs/conflicting/Web/API/PasswordCredential_cbf7b306e83a3f58ff06bccf89637c12	/fr/docs/Web/API/PasswordCredential
 /fr/docs/conflicting/Web/API/Performance/resourcetimingbufferfull_event	/fr/docs/Web/API/Performance/resourcetimingbufferfull_event
 /fr/docs/conflicting/Web/API/Pointer_events	/fr/docs/Web/API/Pointer_events
+/fr/docs/conflicting/Web/API/Selection	/fr/docs/Web/API/Selection_API
 /fr/docs/conflicting/Web/API/WebRTC_API_d8621144cbc61520339c3b10c61731f0	/fr/docs/Web/API/WebRTC_API
 /fr/docs/conflicting/Web/API/Web_Storage_API	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/conflicting/Web/API/XSLTProcessor_197eea6e529b0a946d29ce7cc292e7ef	/fr/docs/Web/API/XSLTProcessor

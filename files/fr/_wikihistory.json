@@ -40903,12 +40903,6 @@
       "BenoitL"
     ]
   },
-  "conflicting/Web/API/Selection": {
-    "modified": "2019-03-18T21:28:44.424Z",
-    "contributors": [
-      "Watilin"
-    ]
-  },
   "conflicting/Web/API/StorageManager/estimate": {
     "modified": "2020-10-15T22:17:55.065Z",
     "contributors": [
