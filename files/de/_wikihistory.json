@@ -10257,12 +10257,6 @@
       "vssn"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/toSource": {
-    "modified": "2020-10-15T22:01:02.840Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2020-10-15T21:55:07.803Z",
     "contributors": [
@@ -10410,12 +10404,6 @@
       "schlagi123",
       "FatihSyrox",
       "rbarisic"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Boolean/toSource": {
-    "modified": "2020-10-15T21:45:27.090Z",
-    "contributors": [
-      "schlagi123"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
@@ -10874,13 +10862,6 @@
       "schlagi123"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Date/toSource": {
-    "modified": "2020-10-15T21:45:56.411Z",
-    "contributors": [
-      "teoli",
-      "schlagi123"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Date/toString": {
     "modified": "2020-10-15T21:45:57.842Z",
     "contributors": [
@@ -11060,12 +11041,6 @@
       "Eiknheimer",
       "MoritzKn",
       "DavidVollmers"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Function/toSource": {
-    "modified": "2020-10-15T22:01:47.277Z",
-    "contributors": [
-      "schlagi123"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Function/toString": {
@@ -11735,12 +11710,6 @@
       "phax"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Number/toSource": {
-    "modified": "2020-10-15T21:45:18.319Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Number/toString": {
     "modified": "2020-10-15T21:45:18.952Z",
     "contributors": [
@@ -11873,7 +11842,7 @@
       "StevenS77"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Object/toSource": {
+  "Web/JavaScript/Reference/Global_Objects/Object/toString": {
     "modified": "2019-03-23T22:08:15.191Z",
     "contributors": [
       "teoli",
@@ -12366,13 +12335,6 @@
     "modified": "2020-03-12T19:41:42.907Z",
     "contributors": [
       "thusslack"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/uneval": {
-    "modified": "2020-03-12T19:44:53.530Z",
-    "contributors": [
-      "teoli",
-      "SamBrishes"
     ]
   },
   "Web/JavaScript/Reference/Iteration_protocols": {
@@ -13651,6 +13613,19 @@
       "PercyGitarrist"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects": {
+    "modified": "2020-03-12T19:44:53.530Z",
+    "contributors": [
+      "teoli",
+      "SamBrishes"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
+    "modified": "2020-10-15T22:01:02.840Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer": {
     "modified": "2020-10-15T22:01:15.339Z",
     "contributors": [
@@ -13659,6 +13634,12 @@
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean": {
     "modified": "2020-10-15T21:45:26.885Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
+    "modified": "2020-10-15T21:45:27.090Z",
     "contributors": [
       "schlagi123"
     ]
@@ -13674,6 +13655,13 @@
     "contributors": [
       "schlagi123",
       "Schollator"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString": {
+    "modified": "2020-10-15T21:45:56.411Z",
+    "contributors": [
+      "teoli",
+      "schlagi123"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Error": {
@@ -13698,6 +13686,12 @@
     "modified": "2020-10-15T22:01:36.587Z",
     "contributors": [
       "xdevs23",
+      "schlagi123"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString": {
+    "modified": "2020-10-15T22:01:47.277Z",
+    "contributors": [
       "schlagi123"
     ]
   },
@@ -13746,6 +13740,12 @@
     "contributors": [
       "schlagi123",
       "doeck"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString": {
+    "modified": "2020-10-15T21:45:18.319Z",
+    "contributors": [
+      "schlagi123"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Object": {

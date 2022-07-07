@@ -11,11 +11,11 @@ translation_of: Web/API/Document
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><strong><code>Document</code></strong> 接口表示任何在浏览器中载入的网页，并作为网页内容的入口，也就是<a href="https://developer.mozilla.org/en-US/docs/Using_the_W3C_DOM_Level_1_Core">DOM 树</a>。DOM 树包含了像 {{HTMLElement("body")}} 、{{HTMLElement("table")}} 这样的元素，以及<a href="/zh-CN/docs/Web/HTML/Element">大量其他元素</a>。它向网页文档本身提供了全局操作功能，能解决如何获取页面的 URL ，如何在文档中创建一个新的元素这样的问题。</p>
+<p><strong><code>Document</code></strong> 接口表示任何在浏览器中载入的网页，并作为网页内容的入口，也就是<a href="/en-US/docs/Using_the_W3C_DOM_Level_1_Core">DOM 树</a>。DOM 树包含了像 {{HTMLElement("body")}} 、{{HTMLElement("table")}} 这样的元素，以及<a href="/zh-CN/docs/Web/HTML/Element">大量其他元素</a>。它向网页文档本身提供了全局操作功能，能解决如何获取页面的 URL ，如何在文档中创建一个新的元素这样的问题。</p>
 
 <p>{{inheritanceDiagram}}</p>
 
-<p><code>Document</code> 接口描述了任何类型的文档的通用属性与方法。根据不同的文档类型（例如<a href="/en-US/docs/HTML" title="HTML">HTML</a>、<a href="/en-US/docs/XML" title="XML">XML</a>、<a href="/zh-CN/docs/Web/SVG">SVG</a>，...），还能使用更多 API：使用 <code>"text/html"</code> 作为内容类型（content type）的 HTML 文档，还实现了 {{DOMxRef("HTMLDocument")}} 接口，而 XML 和 SVG 文档则（额外）实现了 {{DOMxRef("XMLDocument")}} 接口。</p>
+<p><code>Document</code> 接口描述了任何类型的文档的通用属性与方法。根据不同的文档类型（例如<a href="/en-US/docs/HTML">HTML</a>、<a href="/en-US/docs/XML">XML</a>、<a href="/zh-CN/docs/Web/SVG">SVG</a>，...），还能使用更多 API：使用 <code>"text/html"</code> 作为内容类型（content type）的 HTML 文档，还实现了 {{DOMxRef("HTMLDocument")}} 接口，而 XML 和 SVG 文档则（额外）实现了 {{DOMxRef("XMLDocument")}} 接口。</p>
 
 <h2 id="构造器">构造器</h2>
 
@@ -291,7 +291,7 @@ translation_of: Web/API/Document
 
 <dl>
  <dt>{{DOMxRef("document.createExpression()")}}</dt>
- <dd>Compiles an <code><a href="/en-US/docs/XPathExpression" title="XPathExpression">XPathExpression</a></code> which can then be used for (repeated) evaluations.</dd>
+ <dd>Compiles an <code><a href="/en-US/docs/XPathExpression">XPathExpression</a></code> which can then be used for (repeated) evaluations.</dd>
  <dt>{{DOMxRef("document.createNSResolver()")}}</dt>
  <dd>创建一个 {{DOMxRef("XPathNSResolver")}} 对象。</dd>
  <dt>{{DOMxRef("document.evaluate()")}}</dt>
@@ -566,7 +566,7 @@ translation_of: Web/API/Document
  <dt>{{DOMxRef("document.getBoxObjectFor")}} {{Obsolete_Inline}}</dt>
  <dd>Use the {{DOMxRef("Element.getBoundingClientRect()")}} method instead.</dd>
  <dt>{{DOMxRef("document.loadOverlay")}}</dt>
- <dd>Loads a <a href="/en-US/docs/XUL_Overlays" title="XUL_Overlays">XUL overlay</a> dynamically. This only works in XUL documents.</dd>
+ <dd>Loads a <a href="/en-US/docs/XUL_Overlays">XUL overlay</a> dynamically. This only works in XUL documents.</dd>
  <dt>{{DOMxRef("document.queryCommandText")}} {{Obsolete_Inline("14.0")}}</dt>
  <dd>This method never did anything but throw an exception, and was removed in Gecko 14.0 {{geckoRelease("14.0")}}.</dd>
 </dl>

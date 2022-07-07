@@ -22,7 +22,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 <p>在用网格线定义网格区域时，我们是通过指定围绕网格区域的四条线来定义的。</p>
 
-<p><img alt="The Grid Area defined by lines" src="https://mdn.mozillademos.org/files/14667/4_Area.png" style="height: 354px; width: 951px;"></p>
+<p><img alt="The Grid Area defined by lines" src="4_area.png"></p>
 
 <p>我们也可以先给一个区域命名，然后在 {{cssxref("grid-template-areas")}} 属性值中指定这个区域的位置。你可以随意为区域命名，比如，如果我要创建下面的布局，我可以先划分出 4 个主要的区域：</p>
 
@@ -33,7 +33,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
  <li>主要内容（content）</li>
 </ul>
 
-<p><img alt="An image showing a simple two column layout with header and footer" src="https://mdn.mozillademos.org/files/14669/4_Layout.png" style="height: 397px; width: 900px;"></p>
+<p><img alt="An image showing a simple two column layout with header and footer" src="4_layout.png"></p>
 
 <p>通过 {{cssxref("grid-area")}} 属性为这些区域各分配一个名字，这不会影响布局。我们现在已经有了用于布局的命名过的区域了。</p>
 
@@ -323,7 +323,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 <p>下面我们举一个非常简单的例子，来创建一个“媒体对象”。这个组件由一侧的图片或其他媒体以及另一侧的内容组成，图片将显示在盒子的右边或左边。</p>
 
-<p><img alt="Images showing an example media object design" src="https://mdn.mozillademos.org/files/14671/4_Media_objects.png" style="height: 432px; width: 800px;"></p>
+<p><img alt="Images showing an example media object design" src="4_media_objects.png"></p>
 
 <p>定义一个两个列轨道的网格，图片列的尺寸是 <code>1fr</code>，文本列的尺寸是 <code>3fr</code>。如果你想让图片区域占据固定的宽度，就可以把图片列的尺寸设定一个像素值，把文本区域的尺寸设定为 <code>1fr</code>。只有一个 <code>1fr</code> 的列轨道的意思是让它占据剩余的空间。</p>
 

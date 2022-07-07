@@ -18,7 +18,7 @@ translation_of: Web/API/Window/postMessage
 
 <p>从广义上讲，一个窗口可以获得对另一个窗口的引用（比如 <code>targetWindow = window.opener</code>），然后在窗口上调用 <code>targetWindow.postMessage()</code> 方法分发一个  {{domxref("MessageEvent")}}<strong> </strong>消息。接收消息的窗口可以根据需要自由<a href="/zh-CN/docs/Web/Guide/Events">处理此事件</a>。传递给 window.postMessage() 的参数（比如 message ）将<a href="/zh-CN/docs/Web/API/Window/postMessage#The_dispatched_event">通过消息事件对象暴露给接收消息的窗口</a>。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox notranslate">otherWindow.postMessage(message, targetOrigin, [transfer]);</pre>
 
@@ -33,7 +33,7 @@ translation_of: Web/API/Window/postMessage
  <dd>是一串和 message 同时传递的 {{domxref("Transferable")}} 对象。这些对象的所有权将被转移给消息的接收方，而发送一方将不再保有所有权。</dd>
 </dl>
 
-<h2 id="The_dispatched_event" name="The_dispatched_event">The dispatched event</h2>
+<h2 id="The_dispatched_event">The dispatched event</h2>
 
 <p>执行如下代码，其他 window 可以监听分发的 message:</p>
 
@@ -67,7 +67,7 @@ function receiveMessage(event)
 <dl>
 </dl>
 
-<h2 id="Security_concerns" name="Security_concerns">安全问题</h2>
+<h2 id="Security_concerns">安全问题</h2>
 
 <p><strong>如果您不希望从其他网站接收 message，请不要为 message 事件添加任何事件侦听器。 </strong>这是一个完全万无一失的方式来避免安全问题。</p>
 
@@ -75,7 +75,7 @@ function receiveMessage(event)
 
 <p><strong>当您使用 postMessage 将数据发送到其他窗口时，始终指定精确的目标 origin，而不是*。 </strong>恶意网站可以在您不知情的情况下更改窗口的位置，因此它可以拦截使用 postMessage 发送的数据。</p>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <pre class="brush: js notranslate">/*
  * A 窗口的域名是&lt;http://example.com:8080&gt;，以下是 A 窗口的 script 标签下的代码：
@@ -128,7 +128,7 @@ function receiveMessage(event)
 window.addEventListener("message", receiveMessage, false);
 </pre>
 
-<h3 id="Notes" name="Notes"><strong>注意</strong></h3>
+<h3 id="Notes"><strong>注意</strong></h3>
 
 <p>任何窗口可以在任何其他窗口访问此方法，在任何时间，无论文档在窗口中的位置，向其发送消息。 因此，用于接收消息的任何事件监听器<strong>必须</strong>首先使用 origin 和 source 属性来检查消息的发送者的身份。 <strong>这不能低估：无法检查 origin 和 source 属性会导致跨站点脚本攻击。</strong></p>
 
@@ -144,7 +144,7 @@ window.addEventListener("message", receiveMessage, false);
 
 <p><code>window.postMessage</code>可用于以 chrome 代码运行的 JavaScript（例如，在扩展和特权代码中），但是分派事件的 source 属性总是为空作为安全限制。（其他属性具有其期望值。）发送到位于 chrome：URL 的窗口的消息的<code>targetOrigin</code>参数当前被错误解释，使得将导致发送消息的唯一值为<code>“*”</code>。 由于此值是不安全的，当目标窗口可以导航到其他地方的恶意网站，建议 postMessage 不用于与 chrome：页面的沟通; 使用不同的方法（如打开窗口时的查询字符串）与 chrome 窗口进行通信。 最后，在文件中向页面发布消息：URL 当前要求<code>targetOrigin</code>参数为<code>“*”</code>。<code> file://</code>不能用作安全限制; 这个限制可能会在将来被修改。</p>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 <table>
  <tbody>
@@ -165,7 +165,7 @@ window.addEventListener("message", receiveMessage, false);
 
 <p>{{Compat("api.Window.postMessage")}}</p>
 
-<h2 id="See_also" name="See_also">参见</h2>
+<h2 id="See_also">参见</h2>
 
 <ul>
  <li>{{domxref("Document.domain")}}</li>

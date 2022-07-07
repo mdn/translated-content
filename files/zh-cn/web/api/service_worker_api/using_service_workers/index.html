@@ -53,11 +53,11 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
  <li>Service Worker 现在可以控制页面了，但仅是在 <code>register()</code>  成功后的打开的页面。也就是说，页面起始于有没有 service worker ，且在页面的接下来生命周期内维持这个状态。所以，页面不得不重新加载以让 service worker 获得完全的控制。</li>
 </ol>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12636/sw-lifecycle.png" style="display: block; height: 867px; margin: 0px auto; width: 579px;"></p>
+<p><img src="sw-lifecycle.png"></p>
 
 <p>下图展示了 service worker 所有支持的事件：</p>
 
-<p><img alt="install, activate, message, fetch, sync, push" src="https://mdn.mozillademos.org/files/12632/sw-events.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="install, activate, message, fetch, sync, push" src="sw-events.png"></p>
 
 <h3 id="Promises">Promises</h3>
 
@@ -147,7 +147,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 <h2 id="Service_workers_demo">Service workers demo</h2>
 
 <p>为了演示 service worker 的基本的注册和安装，我们做了一个简单的例子 <a href="https://github.com/mdn/sw-test">sw-test</a>，这是一个简单的 Star wars Lego 图片库。采用了基于 promise 的函数从一个 JSON 对象来读取图片内容，在显示图片到页面上之前，采用 Ajax 来加载图片。页面非常简单，而且是静态的，但也注册、安装和激活了 service worker，当浏览器支持的时候，它将缓存所有依赖的文件，它可以在离线的时候访问！<br>
- <img alt="" src="https://mdn.mozillademos.org/files/8243/demo-screenshot.png" style="display: block; height: 410px; margin: 0px auto; width: 480px;"><br>
+ <img src="demo-screenshot.png"><br>
  <br>
  <br>
  你可以查看 <a href="https://github.com/mdn/sw-test/">Github 上的源码</a>， 也可以查看 <a href="https://mdn.github.io/sw-test/">在线示例</a>。有一点需要我们重点关注的是 promise（查看 <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47">app.js 22-47 行</a>），这是一个你上面读到的 <a href="https://github.com/mdn/promises-test">Promises test demo</a> 里的一个修改版，它们有以下不同： </p>
@@ -206,7 +206,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
  <li> service worker 在不同的 origin 而不是你的 app 的，这是不被允许的。</li>
 </ol>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12630/important-notes.png" style="display: block; height: 277px; margin: 0px auto; width: 574px;"></p>
+<p><img src="important-notes.png"></p>
 
 <p>也请注意：</p>
 
@@ -267,7 +267,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 
 <p>现在你已经将你的站点资源缓存了，你需要告诉 service worker 让它用这些缓存内容来做点什么。有了 <code>fetch</code> 事件，这是很容易做到的。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12634/sw-fetch.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="sw-fetch.png"></p>
 
 <p>每次任何被 service worker 控制的资源被请求到时，都会触发 <code>fetch</code> 事件，这些资源包括了指定的 scope 内的文档，和这些文档内引用的其他任何资源（比如 <code>index.html</code> 发起了一个跨域的请求来嵌入一个图片，这个也会通过 service worker 。）</p>
 

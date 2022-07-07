@@ -5,7 +5,7 @@ translation_of: Web/API/Window/resize_event
 ---
 <p>文档视图调整大小时会触发 <strong>resize</strong> 事件。</p>
 
-<h2 id="基本信息" style="font-family: Microsoft Yahei;">基本信息</h2>
+<h2 id="基本信息">基本信息</h2>
 
 <dl style="font-family: Microsoft Yahei;">
  <dt>规范</dt>
@@ -22,7 +22,7 @@ translation_of: Web/API/Window/resize_event
  <dd>None</dd>
 </dl>
 
-<h2 id="属性" style="font-family: Microsoft Yahei;">属性</h2>
+<h2 id="属性">属性</h2>
 
 <table class="standard-table" style="font-family: Microsoft Yahei;">
  <thead>
@@ -66,11 +66,11 @@ translation_of: Web/API/Window/resize_event
  </tbody>
 </table>
 
-<h2 id="案例" style="font-family: Microsoft Yahei;">案例</h2>
+<h2 id="案例">案例</h2>
 
 <p>由于 resize 事件可以以较高的速率触发，因此事件处理程序不应该执行计算开销很大的操作 (如 DOM 修改)。相反，建议使用<a href="/en-US/docs/DOM/window.requestAnimationFrame" title="/en-US/docs/DOM/window.requestAnimationFrame">requestAnimationFrame</a>, <a href="/en-US/docs/Web/API/WindowTimers/setTimeout">setTimeout</a> or <a href="/en-US/docs/Web/API/CustomEvent">customEvent</a>, 比如：</p>
 
-<h3 id="requestAnimationFrame_customEvent" style="font-family: Microsoft Yahei;">requestAnimationFrame + customEvent</h3>
+<h3 id="requestAnimationFrame_customEvent">requestAnimationFrame + customEvent</h3>
 
 <pre class="brush: js">;(function() {
     var throttle = function(type, name, obj) {
@@ -97,7 +97,7 @@ window.addEventListener("optimizedResize", function() {
 });
 </pre>
 
-<h3 id="requestAnimationFrame" style="font-family: Microsoft Yahei;">requestAnimationFrame</h3>
+<h3 id="requestAnimationFrame">requestAnimationFrame</h3>
 
 <pre class="brush: js">var optimizedResize = (function() {
 
@@ -155,7 +155,7 @@ optimizedResize.add(function() {
 });
 </pre>
 
-<h3 id="setTimeout" style="font-family: Microsoft Yahei;">setTimeout</h3>
+<h3 id="setTimeout">setTimeout</h3>
 
 <pre class="brush: js">(function() {
 

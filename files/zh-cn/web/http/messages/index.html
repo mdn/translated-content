@@ -13,7 +13,7 @@ translation_of: Web/HTTP/Messages
 
 <p>Web 开发人员或网站管理员，很少自己手工创建这些原始的 HTTP 消息︰ 由软件、浏览器、 代理或服务器完成。他们通过配置文件（用于代理服务器或服务器），API（用于浏览器）或其他接口提供 HTTP 消息。</p>
 
-<p><img alt="From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent." src="https://mdn.mozillademos.org/files/13825/HTTPMsg2.png" style="height: 538px; width: 1174px;"></p>
+<p><img alt="From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent." src="httpmsg2.png"></p>
 
 <p>HTTP/2 二进制框架机制被设计为不需要改动任何 API 或配置文件即可应用︰ 它大体上对用户是透明的。</p>
 
@@ -30,7 +30,7 @@ translation_of: Web/HTTP/Messages
 
 <p>起始行和  HTTP 消息中的 HTTP 头统称为请求头，而其有效负载被称为消息正文。</p>
 
-<p><img alt="Requests and responses share a common structure in HTTP" src="https://mdn.mozillademos.org/files/13827/HTTPMsgStructure2.png" style="height: 368px; width: 1239px;"></p>
+<p><img alt="Requests and responses share a common structure in HTTP" src="httpmsgstructure2.png"></p>
 
 <h2 id="HTTP_请求">HTTP 请求</h2>
 
@@ -135,7 +135,7 @@ translation_of: Web/HTTP/Messages
 
 <p>HTTP/2 引入了一个额外的步骤：它将 HTTP/1.x 消息分成帧并嵌入到流 (stream) 中。数据帧和报头帧分离，这将允许报头压缩。将多个流组合，这是一个被称为 <em>多路复用 (multiplexing) </em>的过程，它允许更有效的底层 TCP 连接。</p>
 
-<p><img alt="HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization." src="https://mdn.mozillademos.org/files/13819/Binary_framing2.png" style="height: 735px; width: 810px;"></p>
+<p><img alt="HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization." src="binary_framing2.png"></p>
 
 <p>HTTP 帧现在对 Web 开发人员是透明的。在 HTTP/2 中，这是一个在  HTTP/1.1 和底层传输协议之间附加的步骤。Web 开发人员不需要在其使用的 API 中做任何更改来利用 HTTP 帧；当浏览器和服务器都可用时，HTTP/2 将被打开并使用。</p>
 
