@@ -232,7 +232,7 @@ joe.greet();
 // Hola, yo soy Joe
 
 rg.greet();
-// Hola, yo soy Red Green, el Manitas
+// Hola, yo soy Red Green, el Reparador
 
 mike.greet();
 // Hola, yo soy Mike
