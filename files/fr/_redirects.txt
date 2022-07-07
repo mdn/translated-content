@@ -5689,7 +5689,7 @@
 /fr/docs/Web/MathML/Exemples	/fr/docs/Web/MathML/Examples
 /fr/docs/Web/MathML/Exemples/Dériver_la_Formule_Quadratique	/fr/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula
 /fr/docs/Web/MathML/Exemples/MathML_Theoreme_de_Pythagore	/fr/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem
-/fr/docs/Web/MathML/Index	/fr/docs/conflicting/Web/MathML
+/fr/docs/Web/MathML/Index	/fr/docs/Web/MathML
 /fr/docs/Web/Media/Formats/Questions_sur_le_soutien	/fr/docs/Web/Media/Formats/Support_issues
 /fr/docs/Web/Media/Formats/Types_des_images	/fr/docs/Web/Media/Formats/Image_types
 /fr/docs/Web/Performance/Budgets_de_performance	/fr/docs/Web/Performance/Performance_budgets
@@ -6245,6 +6245,7 @@
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module	/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table	/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 /fr/docs/conflicting/Web/JavaScript/Reference/Statements/switch	/fr/docs/Web/JavaScript/Reference/Statements/switch
+/fr/docs/conflicting/Web/MathML	/fr/docs/Web/MathML
 /fr/docs/conflicting/Web/Progressive_web_apps	/fr/docs/Web/Progressive_web_apps
 /fr/docs/conflicting/Web/Progressive_web_apps_0d5c38b9aa908cbb52e4c39037b4f28b	/fr/docs/Web/Progressive_web_apps
 /fr/docs/conflicting/Web/Progressive_web_apps_12fa0bab73df8b67470cc2aaa3a2effc	/fr/docs/Web/Progressive_web_apps
