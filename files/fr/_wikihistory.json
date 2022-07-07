@@ -40903,7 +40903,7 @@
       "BenoitL"
     ]
   },
-    "conflicting/Web/API/Selection": {
+  "conflicting/Web/API/Selection": {
     "modified": "2019-03-18T21:28:44.424Z",
     "contributors": [
       "Watilin"
@@ -41165,40 +41165,6 @@
     "contributors": [
       "SphinxKnight",
       "velvel53"
-    ]
-  },
-  "conflicting/Web/HTML": {
-    "modified": "2019-01-16T18:47:13.379Z",
-    "contributors": [
-      "SphinxKnight",
-      "tregagnon"
-    ]
-  },
-  "conflicting/Web/HTML/Element": {
-    "modified": "2019-03-23T23:39:45.493Z",
-    "contributors": [
-      "LiliTha",
-      "tregagnon",
-      "teoli",
-      "regisg27",
-      "Fredchat",
-      "MatthieuMaler"
-    ]
-  },
-  "conflicting/Web/HTML/Element/input/datetime-local": {
-    "modified": "2019-04-04T15:45:35.933Z",
-    "contributors": [
-      "SphinxKnight",
-      "Antoine-Demailly",
-      "marie-ototoi",
-      "KylianLM"
-    ]
-  },
-  "conflicting/Web/HTML/Global_attributes": {
-    "modified": "2019-03-23T22:41:06.193Z",
-    "contributors": [
-      "loella16",
-      "xdelatour"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects": {
