@@ -1,6 +1,7 @@
 ---
-title: HTMLObjectElement.checkValidity
+title: HTMLObjectElement.checkValidity()
 slug: Web/API/HTMLObjectElement/checkValidity
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -10,48 +11,35 @@ tags:
   - Reference
   - checkValidity
   - checkValidity()
-  - メソッド
+browser-compat: api.HTMLObjectElement.checkValidity
 translation_of: Web/API/HTMLObjectElement/checkValidity
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p class="summary"><strong><code>checkValidity()</code></strong> は {{domxref("HTMLObjectElement")}} インターフェイスのメソッドで、常に true である {{jsxref("Boolean")}} を返します。 object オブジェクトは制約の検証の候補にはならないからです。</p>
+**`checkValidity()`** は {{domxref("HTMLObjectElement")}} インターフェイスのメソッドで、常に真である論理値を返します。なぜなら、オブジェクトオブジェクトは制約検証の候補になることがないからです。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">const valid = HTMLObjectElement.checkValidity();</pre>
+```js
+checkValidity()
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p><code>true</code></p>
+`true`
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<p>なし。</p>
+なし。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','#dom-cva-checkvalidity','checkValidity')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.HTMLObjectElement.checkValidity")}}</p>
+{{Compat}}
