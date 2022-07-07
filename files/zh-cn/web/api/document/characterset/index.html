@@ -10,7 +10,7 @@ translation_of: Web/API/Document/characterSet
 <p><code><strong>Document.characterSet</strong></code> 只读属性返回当前文档的字符编码。该字符编码是用于渲染此文档的字符集，可能与该页面指定的编码不同。（用户可以重写编码方式。）</p>
 
 <div class="note">
-<p><code>document.charset</code> <code>和document.inputEncoding</code> 属性是<code>document.characterSet</code> 的遗留别名。不要再使用它们。</p>
+<p><code>document.charset</code> 和 <code>document.inputEncoding</code> 属性是 <code>document.characterSet</code> 的遗留别名。不要再使用它们。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -20,103 +20,13 @@ translation_of: Web/API/Document/characterSet
 <h2 id="示例">示例</h2>
 
 <pre class="eval">&lt;button onclick="alert(document.characterSet);"&gt;查看字符集&lt;/button&gt;
-//返回当前文档的字符集,比如"ISO-8859-1" 或者 "UTF-8"
+//返回当前文档的字符集，比如"ISO-8859-1" 或者 "UTF-8"
 </pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>规范</th>
-   <th>状态</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-characterset', 'characterSet')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>初始定义.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatChrome(45.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>9 (possibly earlier)</td>
-  </tr>
-  <tr>
-   <td><code>字符集</code></td>
-   <td>Made read-only in {{CompatChrome(45)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(44)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>9 (possibly earlier)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(45.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(45.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>字符集</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(44)}}</td>
-   <td>2.5</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Document.characterSet")}}

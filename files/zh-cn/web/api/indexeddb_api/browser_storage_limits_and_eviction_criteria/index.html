@@ -13,34 +13,34 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 ---
 <div>{{DefaultAPISidebar("IndexedDB")}}</div>
 
-<p class="summary"><font>有许多Web技术可以在客户端（即本地磁盘上）存储这种或那种数据。</font><font>浏览器计算分配给Web数据存储的空间大小以及达到该限制时要删除的内容的过程并不简单，并且浏览器之间有所不同。</font><font>本文介绍了浏览器如何确定要清除的本地内容以及何时释放所需的本地存储空间。</font></p>
+<p>有许多 Web 技术可以在客户端（即本地磁盘上）存储这种或那种数据。浏览器计算分配给 Web 数据存储的空间大小以及达到该限制时要删除的内容的过程并不简单，并且浏览器之间有所不同。本文介绍了浏览器如何确定要清除的本地内容以及何时释放所需的本地存储空间。</p>
 
 <div class="note">
-<p><span style="font-size: 14px; line-height: 21px;"><strong>注意</strong></span>: <font><font>对于大多数现代浏览器，以下信息应该相当准确，但在已知的情况下会调出特定于浏览器的信息。</font><font>Opera和Chrome在所有情况下都应该表现相同。</font></font><a href="http://www.opera.com/mobile/mini" rel="noopener"><font><font>Opera Mini</font></font></a><font><font>（仍然是基于presto的，服务器端呈现）不会在客户端上存储任何数据。</font></font></p>
+<p><strong>注意</strong>: 对于大多数现代浏览器，以下信息应该相当准确，但在已知的情况下会调出特定于浏览器的信息。Opera 和 Chrome 在所有情况下都应该表现相同。<a href="http://www.opera.com/mobile/mini" rel="noopener">Opera Mini</a>（仍然是基于 presto 的，服务器端呈现）不会在客户端上存储任何数据。</p>
 </div>
 
-<h2 id="什么技术使用浏览器数据存储？"><font><font>什么技术使用浏览器数据存储？</font></font></h2>
+<h2 id="什么技术使用浏览器数据存储？">什么技术使用浏览器数据存储？</h2>
 
-<p><font><font>在Firefox中，以下技术利用浏览器数据存储在需要时存储数据。</font><font>在这种情况下，我们将它们称为“配额客户”：</font></font></p>
+<p>在 Firefox 中，以下技术利用浏览器数据存储在需要时存储数据。在这种情况下，我们将它们称为“配额客户”：</p>
 
 <ul>
  <li><a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB</a></li>
- <li><a href="http://asmjs.org/" rel="noopener"><font><font>asm.js</font></font></a><font><font>缓存</font></font></li>
- <li><a href="/zh-CN/docs/Web/API/Cache">缓存API</a></li>
+ <li><a href="http://asmjs.org/" rel="noopener">asm.js</a>缓存</li>
+ <li><a href="/zh-CN/docs/Web/API/Cache">缓存 API</a></li>
  <li>Cookies</li>
 </ul>
 
 <div class="blockIndicator note">
-<p><strong><font><font>注意</font></font></strong><font><font>：在Firefox中，</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API"><font><font>Web Storage</font></font></a><font><font>也将很快开始使用相同的存储管理工具，如本文档中所述。</font></font></p>
+<p><strong>注意</strong>：在 Firefox 中，<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Web Storage</a>也将很快开始使用相同的存储管理工具，如本文档中所述。</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong><font><font>注意</font></font></strong><font><font>：在隐私浏览模式下，大多数数据存储不被支持。</font><font>本地存储数据和cookie仍然可用，但它们是短暂的 ——当关闭最后一个隐私浏览窗口时，数据将被删除。</font></font></p>
+<p><strong>注意</strong>：在隐私浏览模式下，大多数数据存储不被支持。本地存储数据和 cookie 仍然可用，但它们是短暂的 ——当关闭最后一个隐私浏览窗口时，数据将被删除。</p>
 </div>
 
-<p><font><font>源的“最后访问时间”会更新，当其中任何一个被激活/停用时——所有这些源下的配额客户端的数据会被回收。</font></font></p>
+<p>源的“最后访问时间”会更新，当其中任何一个被激活/停用时——所有这些源下的配额客户端的数据会被回收。</p>
 
-<p><font><font>在Chrome/Opera中，Quota Management API处理<a href="/zh-CN/docs/Web/HTML/Using_the_application_cache">AppCache</a>，<a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB</a>，WebSQL和<a href="/zh-CN/docs/WebGuide/API/File_System">File System API</a>的配额管理。</font></font></p>
+<p>在 Chrome/Opera 中，Quota Management API 处理<a href="/zh-CN/docs/Web/HTML/Using_the_application_cache">AppCache</a>，<a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB</a>，WebSQL 和<a href="/zh-CN/docs/WebGuide/API/File_System">File System API</a>的配额管理。</p>
 
 <h2 id="数据存储的不同类型">数据存储的不同类型</h2>
 
@@ -49,17 +49,17 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 <p>一般来说，数据存储的的类型主要有以下两种：</p>
 
 <ul>
- <li>持久化存储：这种数据是希望长久保留的，只有的当用户选择清除才会被删除掉（比如，<font><font>在Firefox中，您可以通过转到</font></font><em><font><font>“首选项”</font></font></em><font><font>并使用“ </font></font><em><font><font>隐私和安全”&gt;“Cookie和站点数据”</font></font></em><font><font>下的选项，</font><font>选择删除所有存储的数据或仅删除所选来源的存储数据</font></font>）。</li>
- <li>临时存储：这种数据不用保存很久，当最近一次使用时{{anch("Storage limits")}}达到限制大小就会被自动清理掉（{{anch("LRU policy")}}）。</li>
+ <li>持久化存储：这种数据是希望长久保留的，只有的当用户选择清除才会被删除掉（比如，在 Firefox 中，您可以通过转到<em>“首选项”</em>并使用“ <em>隐私和安全”&gt;“Cookie 和站点数据”</em>下的选项，选择删除所有存储的数据或仅删除所选来源的存储数据）。</li>
+ <li>临时存储：这种数据不用保存很久，当最近一次使用时<a href="#储存限制">储存限制</a>达到限制大小就会被自动清理掉（<a href="#lru策略">LRU 策略</a>）。</li>
 </ul>
 
-<p><font>在Firefox中，当使用持久存储时，会向用户提供一个UI弹出窗口，提醒他们这些数据将持续存在，并询问他们是否对此感到满意。</font><font>临时数据存储不会引发任何用户提示。</font></p>
+<p>在 Firefox 中，当使用持久存储时，会向用户提供一个 UI 弹出窗口，提醒他们这些数据将持续存在，并询问他们是否对此感到满意。临时数据存储不会引发任何用户提示。</p>
 
-<p><font>默认的是临时存储；开发人员可以选择使用</font>{{domxref("StorageManager.persist()")}}方法使用持久储存。</p>
+<p>默认的是临时存储；开发人员可以选择使用{{domxref("StorageManager.persist()")}}方法使用持久储存。</p>
 
-<h2 id="数据存储在哪里？"><font><font>数据存储在哪里？</font></font></h2>
+<h2 id="数据存储在哪里？">数据存储在哪里？</h2>
 
-<p><font>每种存储类型代表一个单独的存储库。</font><font>这是用户Firefox配置文件下目录的实际映射（其他浏览器可能略有不同）：</font></p>
+<p>每种存储类型代表一个单独的存储库。这是用户 Firefox 配置文件下目录的实际映射（其他浏览器可能略有不同）：</p>
 
 <ul>
  <li><code>&lt;profile&gt;/storage</code> — 配额管理器维护的主要顶级目录（见下文）</li>
@@ -69,35 +69,35 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 </ul>
 
 <div class="blockIndicator note">
-<p><strong><font><font>注意</font></font></strong><font><font>：引入<a href="/zh-CN/docs/Web/API/Web_Storage_API">Storage API</a>后，“permanent”文件夹可以被认为是过时的；“permanent”文件夹仅存储IndexedDB持久性数据库。</font><font>模式是“</font></font>best-effort<font><font>”还是“</font></font>persistent<font><font>”并不重要——数据存储在&lt;profile&gt;/storage/default下。</font></font></p>
+<p><strong>注意</strong>：引入<a href="/zh-CN/docs/Web/API/Web_Storage_API">Storage API</a>后，“permanent”文件夹可以被认为是过时的；“permanent”文件夹仅存储 IndexedDB 持久性数据库。模式是“best-effort”还是“persistent”并不重要——数据存储在&lt;profile&gt;/storage/default 下。</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong><font><font>注意</font></font></strong><font><font>：在Firefox中，可以通过</font></font><code>about:support</code><font><font>在URL栏中</font><font>输入</font><font>，然后按</font><font>“ </font><em><font>配置文件夹”</font></em><font>标题</font><font>旁边</font><font>的</font></font><em><font><font>“在...中显示...”</font></font></em><font><font>按钮（例如，</font><font>在Mac OS X上的</font></font><em><font><font>“在Finder中显示”）来查找</font></font></em><font><font>您的</font></font><em><font><font>配置文件文件夹</font></font></em><font><font>。</font></font></p>
+<p><strong>注意</strong>：在 Firefox 中，可以通过<code>about:support</code>在 URL 栏中输入，然后按“ <em>配置文件夹”</em>标题旁边的<em>“在...中显示...”</em>按钮（例如，在 Mac OS X 上的<em>“在 Finder 中显示”）来查找</em>您的<em>配置文件文件夹</em>。</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong><font><font>注意</font></font></strong><font><font>：如果您在存储的数据中查看配置文件，您可能会看到第四个文件夹：</font></font><code>persistent</code><font><font>。</font><font>基本上，该</font></font><code>persistent</code><font><font>文件夹刚刚重命名为</font></font><code>permanent</code><font><font>以保持升级/迁移更简单。</font></font></p>
+<p><strong>注意</strong>：如果您在存储的数据中查看配置文件，您可能会看到第四个文件夹：<code>persistent</code>。基本上，该<code>persistent</code>文件夹刚刚重命名为<code>permanent</code>以保持升级/迁移更简单。</p>
 </div>
 
-<p><strong><font><font>注意</font></font></strong><font><font>：用户不应在其下添加自己的目录或文件到</font></font><code>&lt;profile&gt;/storage</code>下<font><font>。</font><font>这将导致存储初始化失败；</font><font>例如，</font></font>{{domxref("IDBFactory.open()","open()")}}会<font><font>触发错误事件。</font></font></p>
+<p><strong>注意</strong>：用户不应在其下添加自己的目录或文件到<code>&lt;profile&gt;/storage</code>下。这将导致存储初始化失败；例如，{{domxref("IDBFactory.open()","open()")}}会触发错误事件。</p>
 
 <h3 id="储存限制">储存限制</h3>
 
-<p>浏览器的最大存储空间是动态的——它取决于您的硬盘大小。 <strong>全局限制</strong>为可用磁盘空间的50％。 在Firefox中，一个名为Quota Manager的内部浏览器工具会跟踪每个源用尽的磁盘空间，并在必要时删除数据。</p>
+<p>浏览器的最大存储空间是动态的——它取决于您的硬盘大小。 <strong>全局限制</strong>为可用磁盘空间的 50％。 在 Firefox 中，一个名为 Quota Manager 的内部浏览器工具会跟踪每个源用尽的磁盘空间，并在必要时删除数据。</p>
 
-<p>因此，如果您的硬盘驱动器是500GB，那么浏览器的总存储容量为250GB。如果超过此范围，则会发起称为<strong>源回收</strong>的过程，删除整个源的数据，直到存储量再次低于限制。删除源数据没有只删一部分的说法——因为这样可能会导致不一致的问题。</p>
+<p>因此，如果您的硬盘驱动器是 500GB，那么浏览器的总存储容量为 250GB。如果超过此范围，则会发起称为<strong>源回收</strong>的过程，删除整个源的数据，直到存储量再次低于限制。删除源数据没有只删一部分的说法——因为这样可能会导致不一致的问题。</p>
 
-<p>还有另一个限制称为<strong>组限制</strong>——这被定义为全局限制的20％，但它至少有10 MB，最大为2GB。 每个源都是一组（源组）的一部分。 每个eTLD+1域都有一个组。 例如：</p>
+<p>还有另一个限制称为<strong>组限制</strong>——这被定义为全局限制的 20％，但它至少有 10 MB，最大为 2GB。 每个源都是一组（源组）的一部分。 每个 eTLD+1 域都有一个组。 例如：</p>
 
 <ul>
- <li><code>mozilla.org</code>——组1，源1</li>
- <li><code>www.mozilla.org</code>——组1，源2</li>
- <li><code>joe.blogs.mozilla.org</code>——组1，源3</li>
- <li><code>firefox.com</code> ——组2，源4</li>
+ <li><code>mozilla.org</code>——组 1，源 1</li>
+ <li><code>www.mozilla.org</code>——组 1，源 2</li>
+ <li><code>joe.blogs.mozilla.org</code>——组 1，源 3</li>
+ <li><code>firefox.com</code> ——组 2，源 4</li>
 </ul>
 
-<p>在这个组中，<code>mozilla.org</code>、<code>www.mozilla.org</code>和<code>joe.blogs.mozilla.org</code>可以聚合使用最多20％的全局限制。 firefox.com单独最多使用20％。</p>
+<p>在这个组中，<code>mozilla.org</code>、<code>www.mozilla.org</code>和<code>joe.blogs.mozilla.org</code>可以聚合使用最多 20％的全局限制。 firefox.com 单独最多使用 20％。</p>
 
 <p>达到限制后有两种不同的反应：</p>
 
@@ -107,7 +107,7 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 </ul>
 
 <div class="blockIndicator note">
-<p>注意：尽管上面提到了最小组限制，但组限制不能超过全局限制。如果您的内存非常低，全局限制为8 MB，则组限制也将为8 MB。</p>
+<p>注意：尽管上面提到了最小组限制，但组限制不能超过全局限制。如果您的内存非常低，全局限制为 8 MB，则组限制也将为 8 MB。</p>
 </div>
 
 <div class="blockIndicator note">
@@ -115,12 +115,12 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 </div>
 
 <div class="blockIndicator note">
-<p>注意：在Chrome中，自M66以来，软硬存储配额限制已发生变化。 更多信息可以在<a href="https://chromium.googlesource.com/chromium/src/+/refs/heads/master/storage/browser/quota/quota_settings.cc#68">这里</a>找到。</p>
+<p>注意：在 Chrome 中，自 M66 以来，软硬存储配额限制已发生变化。 更多信息可以在<a href="https://chromium.googlesource.com/chromium/src/+/refs/heads/master/storage/browser/quota/quota_settings.cc#68">这里</a>找到。</p>
 </div>
 
-<h2 id="LRU策略">LRU策略</h2>
+<h2 id="LRU策略">LRU 策略</h2>
 
-<p>当可用磁盘空间已满时，配额管理器将根据LRU策略开始清除数据——最近最少使用的源将首先被删除，然后是下一个，直到浏览器不再超过限制。</p>
+<p>当可用磁盘空间已满时，配额管理器将根据 LRU 策略开始清除数据——最近最少使用的源将首先被删除，然后是下一个，直到浏览器不再超过限制。</p>
 
 <p>我们使用临时存储跟踪每个源的“上次访问时间”。 一旦达到临时存储的全局限制（之后会有更多限制），我们将尝试查找所有当前未使用的源（即没有打开选项卡/应用程序的那些来保持打开的数据存储）。 然后根据“上次访问时间”对它们进行排序。 然后删除最近最少使用的源，直到有足够的空间来满足触发此源回收的请求。</p>
 
@@ -128,5 +128,5 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 
 <ul>
  <li><a href="http://www.html5rocks.com/en/tutorials/offline/quota-research/">在移动浏览器上使用配额</a>（<a href="http://blog.agektmr.com" title="Eiji Kitamura"> Eiji Kitamura</a>著）：详细分析了移动浏览器上的客户端存储。</li>
- <li><a href="https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts">配额管理API：快速实践</a> （<a href="http://blog.agektmr.com" title="Eiji Kitamura">Eiji Kitamura</a>著）：查看Chrome / Blink中的配额管理API（也应包括Opera）。</li>
+ <li><a href="https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts">配额管理 API：快速实践</a> （<a href="http://blog.agektmr.com" title="Eiji Kitamura">Eiji Kitamura</a>著）：查看 Chrome / Blink 中的配额管理 API（也应包括 Opera）。</li>
 </ul>

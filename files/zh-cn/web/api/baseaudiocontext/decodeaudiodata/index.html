@@ -4,7 +4,7 @@ slug: Web/API/BaseAudioContext/decodeAudioData
 tags:
   - API
   - Audio
-  - audio接口
+  - audio 接口
   - 音频解码
 translation_of: Web/API/BaseAudioContext/decodeAudioData
 original_slug: Web/API/AudioContext/decodeAudioData
@@ -12,10 +12,10 @@ original_slug: Web/API/AudioContext/decodeAudioData
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>{{ domxref("AudioContext") }}接口的<code>decodeAudioData()方法可用于异步解码</code>音频文件中的 {{domxref("ArrayBuffer")}}. <code>ArrayBuffer数据可以通过</code>{{domxref("XMLHttpRequest")}}和{{domxref("FileReader")}}来获取. AudioBuffer是通过AudioContext采样率进行解码的,然后通过回调返回结果.</p>
+<p>{{ domxref("AudioContext") }}接口的<code>decodeAudioData()方法可用于异步解码</code>音频文件中的 {{domxref("ArrayBuffer")}}. <code>ArrayBuffer数据可以通过</code>{{domxref("XMLHttpRequest")}}和{{domxref("FileReader")}}来获取。AudioBuffer 是通过 AudioContext 采样率进行解码的，然后通过回调返回结果。</p>
 </div>
 
-<p>这是从音频轨道创建用于web audio API音频源的首选方法。</p>
+<p>这是从音频轨道创建用于 web audio API 音频源的首选方法。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,7 +25,7 @@ original_slug: Web/API/AudioContext/decodeAudioData
   // use the dec​oded data here
 });</pre>
 
-<p>新版的promise-based语法:</p>
+<p>新版的 promise-based 语法：</p>
 
 <pre class="syntaxbox">audioCtx.decodeAudioData(audioData).then(function(decodedData) {
   // use the decoded data here
@@ -33,13 +33,13 @@ original_slug: Web/API/AudioContext/decodeAudioData
 
 <h2 id="举例">举例</h2>
 
-<p>在本章节中，我们将首先学习基于回调的系统，然后采用新的基于promise-based的语法</p>
+<p>在本章节中，我们将首先学习基于回调的系统，然后采用新的基于 promise-based 的语法</p>
 
 <h3 id="旧的回调语法">旧的回调语法</h3>
 
-<p>在这个事例中, <code>getData()</code> 方法使用XHR加载一个音轨,设置请求的responsetype为ArrayBuffer使它返回一个arraybuffer数据，然后存储在audioData变量中. 然后我们将这个arraybuffer数据置于<code>decodeAudioData()方法中使用，当成功解码PCM Data后通过回调返回</code>, 将返回的结果通过{{ domxref("AudioContext.createBufferSource()") }}接口进行处理并获得一个{{ domxref("AudioBufferSourceNode") }}, 将源连接至{{domxref("AudioContext.destination") }}并将它设置为循环的.</p>
+<p>在这个事例中， <code>getData()</code> 方法使用 XHR 加载一个音轨，设置请求的 responsetype 为 ArrayBuffer 使它返回一个 arraybuffer 数据，然后存储在 audioData 变量中。然后我们将这个 arraybuffer 数据置于<code>decodeAudioData()方法中使用，当成功解码PCM Data后通过回调返回</code>, 将返回的结果通过{{ domxref("AudioContext.createBufferSource()") }}接口进行处理并获得一个{{ domxref("AudioBufferSourceNode") }}, 将源连接至{{domxref("AudioContext.destination") }}并将它设置为循环的。</p>
 
-<p>通过按钮来运行 <code>getData()</code> 来获取音轨并播放它. 当使用 <code>stop()</code> 方法后source将会被清除.</p>
+<p>通过按钮来运行 <code>getData()</code> 来获取音轨并播放它。当使用 <code>stop()</code> 方法后 source 将会被清除。</p>
 
 <div class="note">
 <p><strong>Note</strong>: You can <a href="http://mdn.github.io/decode-audio-data/">run the example live</a> (or <a href="https://github.com/mdn/decode-audio-data">view the source</a>.)</p>
@@ -103,7 +103,7 @@ stop.onclick = function() {
 
 pre.innerHTML = myScript.innerHTML;</pre>
 
-<h3 id="新的promise-based语法">新的promise-based语法</h3>
+<h3 id="新的promise-based语法">新的 promise-based 语法</h3>
 
 <pre class="brush: js">ctx.decodeAudioData(compressedBuffer).then(function(decodedData) {
  // use the decoded data here
@@ -113,109 +113,24 @@ pre.innerHTML = myScript.innerHTML;</pre>
 
 <dl>
  <dt>ArrayBuffer</dt>
- <dd>将会被解码的音频数据，可通过{{domxref("XMLHttpRequest")}}或{{domxref("FileReader")}}来获取.</dd>
+ <dd>将会被解码的音频数据，可通过{{domxref("XMLHttpRequest")}}或{{domxref("FileReader")}}来获取。</dd>
  <dt>DecodeSuccessCallback</dt>
- <dd>当成功解码后会被调用的回调函数. 该回调函数只有一个AudioBuffer类型参数.</dd>
+ <dd>当成功解码后会被调用的回调函数。该回调函数只有一个 AudioBuffer 类型参数。</dd>
  <dt>DecodeErrorCallback</dt>
- <dd>一个可选的错误回调函数.</dd>
+ <dd>一个可选的错误回调函数。</dd>
 </dl>
 
 <h2 id="返回">返回</h2>
 
-<p>一个 {{domxref("Promise") }}对象.</p>
+<p>一个 {{domxref("Promise") }}对象。</p>
 
 <h2 id="标准">标准</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-decodeAudioData-Promise-AudioBuffer--ArrayBuffer-audioData-DecodeSuccessCallback-successCallback-DecodeErrorCallback-errorCallback', 'decodeAudioData()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
-  <tr>
-   <td>Promise-based syntax</td>
-   <td>{{CompatChrome(49.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(33.0)}}</td>
-  </tr>
-  <tr>
-   <td>Promise-based syntax</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(49.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(49.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.BaseAudioContext.decodeAudioData")}}
 
 <h2 id="See_also">See also</h2>
 

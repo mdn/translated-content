@@ -1,0 +1,65 @@
+---
+title: StorageEstimate.quota
+slug: conflicting/Web/API/StorageManager/estimate_78aa4ffd4dfacc8f94d5c05d150d36ac
+tags:
+  - API
+  - Property
+  - Quota
+  - Quotas
+  - Reference
+  - Secure context
+  - StorageEstimate
+translation_of: Web/API/StorageEstimate/quota
+original_slug: Web/API/StorageEstimate/quota
+---
+<div>{{securecontext_header}}{{APIRef("Storage")}}</div>
+
+<p><span class="seoSummary">{{domxref("StorageEstimate")}} ディクショナリの <strong><code>quota</code></strong> プロパティは、{{domxref("StorageManager.estimate()")}} を呼ぶことで得られる、オリジンやウェブアプリに割り当てられているストレージの量の控えめな概算値です。</span> より多くの利用可能なスペースがあるかもしれませんが、少なくなることはありません。この値は、フィンガープリンティング、つまり一見無害なプロパティの値を統合してデバイスを識別するための使用を防止するのに役立つ概算値です。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox"><em>quota</em> = <em>StorageEstimate</em>.quota;
+</pre>
+
+<h3 id="Value" name="Value">値</h3>
+
+<p>アプリで使用可能な合計ストレージ容量の概算値を指定する数値。</p>
+
+<h2 id="Example" name="Example">例</h2>
+
+<p>{{page("/ja/docs/Web/API/StorageManager/estimate", "Example")}}</p>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Storage', '#site-storage-quota', 'quota')}}</td>
+   <td>{{Spec2('Storage')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+
+
+<p>{{Compat("api.StorageEstimate.quota")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Storage_API">Storage API</a></li>
+ <li>{{domxref("Navigator")}}</li>
+ <li>{{domxref("StorageManager")}}</li>
+ <li>{{domxref("StorageEstimate")}}</li>
+ <li>{{domxref("StorageEstimate.usage")}}</li>
+</ul>

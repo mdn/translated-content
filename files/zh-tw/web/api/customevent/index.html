@@ -42,22 +42,7 @@ translation_of: Web/API/CustomEvent
 
 <h2 id="規格">規格</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#interface-customevent','CustomEvent')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>原始定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器兼容性">瀏覽器兼容性</h2>
 
@@ -67,9 +52,9 @@ translation_of: Web/API/CustomEvent
 
 <h2 id="Firing_from_privileged_code_to_non-privileged_code">Firing from privileged code to non-privileged code</h2>
 
-<p>當要從 privileged code （像是插件）到非 privileged code （例如網頁）執行 CustomEvent ，你必須要考慮這之間的安全性。Firefox 和其他 Gecko 應用會對此有所限制。雖然這可以自動防止安全漏洞發生，但也可能導致您的程式碼沒辦法正常執行。</p>
+<p>當要從 privileged code （像是插件）到非 privileged code （例如網頁）執行 CustomEvent ，你必須要考慮這之間的安全性。Firefox 和其他 Gecko 應用會對此有所限制。雖然這可以自動防止安全漏洞發生，但也可能導致您的程式碼沒辦法正常執行。</p>
 
-<p>When creating a CustomEvent object, you must create the object from the same <a href="/en-US/docs/XUL/window">window</a> as you're going to fire against. The <code>detail</code> attribute of your CustomEvent will be subject to the same restrictions. String and Array values will be readable by the content without restrictions, but custom Objects will not. If using a custom Object, you will need to define the attributes of that object that are readable from the content script using <a href="/en-US/docs/">Components.utils.cloneInto()</a>.</p>
+<p>When creating a CustomEvent object, you must create the object from the same <a href="/en-US/docs/XUL/window">window</a> as you're going to fire against. The <code>detail</code> attribute of your CustomEvent will be subject to the same restrictions. String and Array values will be readable by the content without restrictions, but custom Objects will not. If using a custom Object, you will need to define the attributes of that object that are readable from the content script using <a href="/en-US/docs/">Components.utils.cloneInto()</a>.</p>
 
 <pre class="brush: js">// doc is a reference to the content document
 function dispatchCustomEvent(doc) {
@@ -83,6 +68,6 @@ function dispatchCustomEvent(doc) {
 <h2 id="參見">參見</h2>
 
 <ul>
- <li><a href="/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages" title="/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages">Interaction between privileged and non-privileged pages</a></li>
- <li><a href="/en-US/docs/Web/API/window.postMessage" title="/en-US/docs/Web/API/window.postMessage">Window.postMessage</a></li>
+ <li><a href="/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages">Interaction between privileged and non-privileged pages</a></li>
+ <li><a href="/en-US/docs/Web/API/window.postMessage">Window.postMessage</a></li>
 </ul>

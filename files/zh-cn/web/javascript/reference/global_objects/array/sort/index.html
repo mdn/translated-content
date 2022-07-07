@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>sort()</strong></code> 方法用<a href="https://en.wikipedia.org/wiki/In-place_algorithm">原地算法</a>对数组的元素进行排序，并返回数组。默认排序顺序是在将元素转换为字符串，然后比较它们的UTF-16代码单元值序列时构建的</p>
+<p><code><strong>sort()</strong></code> 方法用<a href="https://en.wikipedia.org/wiki/In-place_algorithm">原地算法</a>对数组的元素进行排序，并返回数组。默认排序顺序是在将元素转换为字符串，然后比较它们的 UTF-16 代码单元值序列时构建的</p>
 
 <p>由于它取决于具体实现，因此无法保证排序的时间和空间复杂性。</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 <dl>
  <dt><code>compareFunction</code> {{optional_inline}}</dt>
- <dd>用来指定按某种顺序进行排列的函数。如果省略，元素按照转换为的字符串的各个字符的Unicode位点进行排序。
+ <dd>用来指定按某种顺序进行排列的函数。如果省略，元素按照转换为的字符串的各个字符的 Unicode 位点进行排序。
  <dl>
   <dt><code>firstEl</code></dt>
   <dd>第一个用于比较的元素。</dd>
@@ -42,9 +42,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 <p>排序后的数组。请注意，数组已原地排序，并且不进行复制。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p>如果没有指明 <code>compareFunction</code> ，那么元素会按照转换为的字符串的诸个字符的Unicode位点进行排序。例如 "Banana" 会被排列到 "cherry" 之前。当数字按由小到大排序时，9 出现在 80 之前，但因为（没有指明 <code>compareFunction</code>），比较的数字会先被转换为字符串，所以在Unicode顺序上 "80" 要比 "9" 要靠前。</p>
+<p>如果没有指明 <code>compareFunction</code> ，那么元素会按照转换为的字符串的诸个字符的 Unicode 位点进行排序。例如 "Banana" 会被排列到 "cherry" 之前。当数字按由小到大排序时，9 出现在 80 之前，但因为（没有指明 <code>compareFunction</code>），比较的数字会先被转换为字符串，所以在 Unicode 顺序上 "80" 要比 "9" 要靠前。</p>
 
 <p>如果指明了 <code>compareFunction</code> ，那么数组会按照调用该函数的返回值排序。即 a 和 b 是两个将要被比较的元素：</p>
 
@@ -64,7 +64,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 <p>所以，比较函数格式如下：</p>
 
 <pre class="brush: js">function compare(a, b) {
-  if (a &lt; b ) {           // 按某种排序标准进行比较, a 小于 b
+  if (a &lt; b ) {           // 按某种排序标准进行比较，a 小于 b
     return -1;
   }
   if (a &gt; b ) {
@@ -100,7 +100,7 @@ console.log(numbers);
 
 <p>对象可以按照某个属性排序：</p>
 
-<pre class="brush: js line-numbers  language-js">var items = [
+<pre class="brush: js">var items = [
   { name: 'Edward', value: 21 },
   { name: 'Sharpe', value: 37 },
   { name: 'And', value: 45 },
@@ -114,24 +114,24 @@ items.sort(function (a, b) {
   return (a.value - b.value)
 });
 
-<code class="language-js"><span class="comment token">// sort by name</span>
-items<span class="punctuation token">.</span><span class="function token">sort</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>a<span class="punctuation token">,</span> b<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> nameA <span class="operator token">=</span> a<span class="punctuation token">.</span>name<span class="punctuation token">.</span><span class="function token">toUpperCase</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// ignore upper and lowercase</span>
-  <span class="keyword token">var</span> nameB <span class="operator token">=</span> b<span class="punctuation token">.</span>name<span class="punctuation token">.</span><span class="function token">toUpperCase</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// ignore upper and lowercase</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>nameA <span class="operator token">&lt;</span> nameB<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">return</span> <span class="operator token">-</span><span class="number token">1</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>nameA <span class="operator token">&gt;</span> nameB<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span></code>
+// sort by name
+items.sort(function(a, b) {
+  var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+  var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+  if (nameA &lt; nameB) {
+    return -1;
+  }
+  if (nameA &gt; nameB) {
+    return 1;
+  }
 
-  <span class="comment token">// names must be equal</span>
-  <span class="keyword token">return</span> <span class="number token">0</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></pre>
+  // names must be equal
+  return 0;
+});</pre>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Creating.2C_displaying.2C_and_sorting_an_array" name="Example:_Creating.2C_displaying.2C_and_sorting_an_array">创建、显示及排序数组</h3>
+<h3 id="Example_Creating.2C_displaying.2C_and_sorting_an_array">创建、显示及排序数组</h3>
 
 <p>下述示例创建了四个数组，并展示原数组。之后对数组进行排序。对比了数字数组分别指定与不指定比较函数的结果。</p>
 
@@ -179,7 +179,7 @@ Sorted without a compare function: 1,200,40,5,700,80,9
 Sorted with compareNumbers: 1,5,9,40,80,200,700
 </pre>
 
-<h3 id="Example_Sorting_non-ASCII_characters" name="Example:_Sorting_non-ASCII_characters">对非 ASCII 字符排序</h3>
+<h3 id="Example_Sorting_non-ASCII_characters">对非 ASCII 字符排序</h3>
 
 <p>当排序非 ASCII 字符的字符串（如包含类似 e, é, è, a, ä 等字符的字符串）。一些非英语语言的字符串需要使用 {{jsxref("String.localeCompare")}}。这个函数可以将函数排序到正确的顺序。</p>
 
@@ -191,7 +191,7 @@ items.sort(function (a, b) {
 // items is ['adieu', 'café', 'cliché', 'communiqué', 'premier', 'réservé']
 </pre>
 
-<h3 id="Example_Sorting_maps" name="Example:_Sorting_maps">使用映射改善排序</h3>
+<h3 id="Example_Sorting_maps">使用映射改善排序</h3>
 
 <p><code>compareFunction</code> 可能需要对元素做多次映射以实现排序，尤其当 <code>compareFunction</code> 较为复杂，且元素较多的时候，某些 <code>compareFunction</code> 可能会导致很高的负载。使用 map 辅助排序将会是一个好主意。基本思想是首先将数组中的每个元素比较的实际值取出来，排序后再将数组恢复。</p>
 
@@ -214,7 +214,46 @@ var result = mapped.map(function(el){
 });
 </pre>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h3 id="sort_stability">排序稳定性</h3>
+
+<p>自 ES10（EcmaScript 2019）起，<a href="https://tc39.es/ecma262/#sec-array.prototype.sort">规范</a> 要求 <code>Array.prototype.sort</code> 为稳定排序。</p>
+<p>假设有一个包含学生名字和年级的列表，已经将它按学生名字字母顺序进行预排序：</p>
+<pre class="brush: js">const students = [
+  { name: "Alex",   grade: 15 },
+  { name: "Devlin", grade: 15 },
+  { name: "Eagle",  grade: 13 },
+  { name: "Sam",    grade: 14 },
+];
+</pre>
+
+<p>对这个数组执行 <code>grade</code> 升序排序后：</p>
+
+<pre class="brush: js">students.sort((firstItem, secondItem) => firstItem.grade - secondItem.grade);
+</pre>
+
+<p><code>students</code> 变量如下：</p>
+
+<pre class="brush: js">[
+  { name: "Eagle",  grade: 13 },
+  { name: "Sam",    grade: 14 },
+  { name: "Alex",   grade: 15 }, // grade 相同时维持原先的顺序 (稳定排序)
+  { name: "Devlin", grade: 15 }, // grade 相同时维持原先的顺序 (稳定排序)
+];
+</pre>
+
+<p>注意，那些年级相同的学生（如 Alex 和 Devlin）会维持调用排序之前的顺序，这是稳定排序所确保的。</p>
+
+<p>ES10（EcmaScript 2019）以前没有要求稳定性，意味着你可能会得到以下结果：</p>
+
+<pre class="brush: js">[
+  { name: "Eagle",  grade: 13 },
+  { name: "Sam",    grade: 14 },
+  { name: "Devlin", grade: 15 }, // 没有维持原先的顺序
+  { name: "Alex",   grade: 15 }, // 没有维持原先的顺序
+];
+</pre>
+
+<h2 id="Specifications">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -246,7 +285,7 @@ var result = mapped.map(function(el){
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <div>
 <div>
@@ -256,10 +295,10 @@ var result = mapped.map(function(el){
 </div>
 </div>
 
-<h2 id="See_also" name="See_also">参考</h2>
+<h2 id="See_also">参考</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.reverse()")}}</li>
  <li>{{jsxref("String.prototype.localeCompare()")}}</li>
- <li><a href="https://zhuanlan.zhihu.com/p/55338902">[译] V8引擎中的排序</a></li>
+ <li><a href="https://zhuanlan.zhihu.com/p/55338902">[译] V8 引擎中的排序</a></li>
 </ul>

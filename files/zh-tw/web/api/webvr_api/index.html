@@ -5,13 +5,13 @@ translation_of: Web/API/WebVR_API
 ---
 <div>{{SeeCompatTable}}{{APIRef("WebVR API")}}</div>
 
-<p class="summary">WebVR 可以讓穿戴的VR裝置 (如頭戴裝置 Oculus Rift 或 HTC Vive) 與 web 應用程式結合。開發人員可以將VR裝置所提供的位置與動作資訊轉移到3D的場景中。利用 WebVR可以創造出很多有趣的應用程式: 包含虛擬導覽、互動訓練軟體等等。</p>
+<p>WebVR 可以讓穿戴的VR裝置 (如頭戴裝置 Oculus Rift 或 HTC Vive) 與 web 應用程式結合。開發人員可以將VR裝置所提供的位置與動作資訊轉移到3D的場景中。利用 WebVR可以創造出很多有趣的應用程式: 包含虛擬導覽、互動訓練軟體等等。</p>
 
 <h2 id="用法與基本觀念">用法與基本觀念</h2>
 
 <p>透過呼叫 {{domxref("Navigator.getVRDisplays()")}} 函數可以得到與電腦連接的VR裝置，每個裝置會回傳一個 {{domxref("VRDisplay")}} 物件</p>
 
-<p><img alt='Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"' src="https://mdn.mozillademos.org/files/11035/hw-setup.png" style="display: block; height: 78px; margin: 0px auto; width: 60%;"></p>
+<p><img alt='Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"' src="hw-setup.png"></p>
 
 <p>{{domxref("VRDisplay")}} 是 WebVR API 的核心，提供以下功能:</p>
 
@@ -52,7 +52,7 @@ translation_of: Web/API/WebVR_API
  <dt>{{domxref("VRDisplayCapabilities")}}</dt>
  <dd>Describes the capabilities of a {{domxref("VRDisplay")}} — it's features can be used to perform VR device capability tests, for example can it return position information.</dd>
  <dt>{{domxref("VRDisplayEvent")}}</dt>
- <dd>Represents the event object of WebVR-related events (see the {{anch("Window", "window object extensions")}} listed below).</dd>
+ <dd>Represents the event object of WebVR-related events (see the <a href="#window">window object extensions</a> listed below).</dd>
  <dt>{{domxref("VRFrameData")}}</dt>
  <dd>Represents all the information needed to render a single frame of a VR scene; constructed by {{domxref("VRDisplay.getFrameData()")}}.</dd>
  <dt>{{domxref("VRPose")}}</dt>
@@ -120,119 +120,20 @@ translation_of: Web/API/WebVR_API
 <ul>
  <li><a href="https://github.com/mdn/webvr-tests">webvr-tests</a> — very simple examples to accompany the MDN WebVR documentation.</li>
  <li><a href="https://github.com/facebook/Carmel-Starter-Kit">Carmel starter kit</a> — nice simple, well-commented examples that go along with Carmel, Facebook's WebVR browser.</li>
- <li><a href="https://webvr.info/samples/">WebVR.info samples</a> — slightly more in-depth examples plus source code</li>
- <li><a href="https://webvr.rocks/firefox#demos">WebVR.rocks Firefox demos</a> — showcase examples</li>
- <li><a href="https://aframe.io/">A-Frame homepage</a> — examples showing A-Frame usage</li>
+ <li><a href="https://webvr.info/samples/">WebVR.info samples</a> — slightly more in-depth examples plus source code</li>
+ <li><a href="https://webvr.rocks/firefox#demos">WebVR.rocks Firefox demos</a> — showcase examples</li>
+ <li><a href="https://aframe.io/">A-Frame homepage</a> — examples showing A-Frame usage</li>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("GamepadExtensions")}}</td>
-   <td>{{Spec2("GamepadExtensions")}}</td>
-   <td>Defines the <a href="/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions">Experimental Gamepad extensions</a>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+This API was specified in the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.
+
+Until all browsers have implemented the new <a href="/zh-TW/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/web/port-vr-xr/">[1]</a>.
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(55)}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Gamepad extensions</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}<sup>[4]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-   <th>Samsung Internet for GearVR</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(55)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[3]</sup></td>
-   <td>{{CompatVersionUnknown}}<br>
-     </td>
-  </tr>
-  <tr>
-   <td>Gamepad extensions</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}<sup>[4]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] API Available on all platforms behind a flag, but currently only works on desktop in an <a href="https://webvr.info/get-chrome/">experimental version of Chrome</a> (other builds won't return any devices when {{domxref("Navigator.getVRDisplays()")}} is invoked).</p>
-
-<p>[2] Currently only Windows support is enabled by default. Mac support is <a href="https://hacks.mozilla.org/2017/06/announcing-webvr-on-mac/">available in Firefox Nightly</a>.</p>
-
-<p>[3] Currently supported only by Google Daydream.</p>
-
-<p>[4] Enabled in Firefox Nightly and Beta, versions 55 and above. Enabled/disabled by the <code>dom.gamepad-extensions.enabled</code> pref.</p>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

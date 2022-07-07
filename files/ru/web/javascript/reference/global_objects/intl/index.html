@@ -9,11 +9,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 ---
 <div>{{JSRef("Global_Objects", "Intl", "Collator,DateTimeFormat,NumberFormat")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Объект <strong><code>Intl</code></strong> является пространством имён для API интернационализации ECMAScript, предоставляющим языка-зависимое сравнение строк, форматирование чисел и дат со временем. Конструкторы объектов {{jsxref("Global_Objects/Collator", "Collator")}}, {{jsxref("Global_Objects/NumberFormat", "NumberFormat")}} и {{jsxref("Global_Objects/DateTimeFormat", "DateTimeFormat")}} являются свойствами объекта <code>Intl</code>. На этой странице описаны эти свойства, а также общая функциональность конструкторов интернационализации и других языка-зависимых функций.</p>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt>{{jsxref("Global_Objects/Collator", "Intl.Collator")}}</dt>
@@ -31,11 +31,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
  <dd>Returns canonical locale names.</dd>
 </dl>
 
-<h2 id="Locale_identification_and_negotiation" name="Locale_identification_and_negotiation">Идентификация и согласование локали</h2>
+<h2 id="Locale_identification_and_negotiation">Идентификация и согласование локали</h2>
 
-<p>Конструкторы интернационализации, а также некоторые языка-зависимые методы других конструкторов (перечисленные в разделе {{anch("See_also", "Смотрите также")}}) используют общий шаблон для идентификации локалей и определения используемой локали: они все принимают аргументы <code>locales</code> и <code>options</code> и согласовывают запрошенную локаль (локали) с поддерживаемыми локалями согласно алгоритму, определённому свойством <code>options.localeMatcher</code>.</p>
+<p>Конструкторы интернационализации, а также некоторые языка-зависимые методы других конструкторов (перечисленные в разделе <a href="#see_also">Смотрите также</a>) используют общий шаблон для идентификации локалей и определения используемой локали: они все принимают аргументы <code>locales</code> и <code>options</code> и согласовывают запрошенную локаль (локали) с поддерживаемыми локалями согласно алгоритму, определённому свойством <code>options.localeMatcher</code>.</p>
 
-<h3 id="locales_argument" name="locales_argument">Аргумент <code>locales</code></h3>
+<h3 id="locales_argument">Аргумент <code>locales</code></h3>
 
 <p>Аргумент <code>locales</code> должен быть либо строкой, содержащей <a href="http://tools.ietf.org/html/rfc5646">языковую метку BCP 47</a>, либо массивом таких языковых меток. Если аргумент <code>locales</code> не предоставлен или не определён, используется локаль по умолчанию среды выполнения.</p>
 
@@ -57,42 +57,29 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
  <li><code>"ja-JP-u-ca-japanese"</code>: использовать японский календарь при форматировании даты и времени, так что 2013 год выражается 25-м годом периода Хэйсей или 平成25.</li>
 </ul>
 
-<h3 id="Locale_negotiation" name="Locale_negotiation">Согласование локали</h3>
+<h3 id="Locale_negotiation">Согласование локали</h3>
 
 <p>Аргумент <code>locales</code>, после вырезания всех расширений Unicode, интерпретируется как приоритетный запрос из приложения. Среда выполнения сравнивает его с доступными локалями в выбирает наилучшую из имеющихся. Существует два алгоритма сравнения: сопоставление <code>"lookup"</code> (поиск) следует алгоритму поиска, определённому в <a href="http://tools.ietf.org/html/rfc4647#section-3.4">BCP 47</a>; сопоставление <code>"best fit"</code> (наилучший подходящий) позволяет среде выполнения предоставлять локаль, которая, как минимум, но возможно и лучше, подходит для запроса, нежели локаль, найденная с помощью алгоритма поиска. Если приложение не предоставляет аргумент <code>locales</code> или среда выполнения не имеет локали, соответствующей запросу, то используется локаль по умолчанию для среды выполнения. Метод сопоставления можно выбрать с помощью свойства аргумента <code>options</code> (смотрите ниже).</p>
 
 <p>Если выбранная языковая метка содержит подстроку расширения Unicode, это расширение будет использоваться для настройки сконструированного объекта или поведения функции. Каждый конструктор или функция поддерживают только определённое подмножество ключей, определённых расширением Unicode, и поддерживаемые значения часто зависят от языковой метки. Например, ключ <code>"co"</code> (сравнение) поддерживается только объектом {{jsxref("Global_Objects/Collator", "Collator")}}, а его значение <code>"phonebk"</code> поддерживается только для немецкого языка.</p>
 
-<h3 id="options_argument" name="options_argument">Аргумент <code>options</code></h3>
+<h3 id="options_argument">Аргумент <code>options</code></h3>
 
 <p>Аргумент <code>options</code> должен быть объектом со свойствами, которые различаются для конструкторов и функций. Если аргумент <code>options</code> не предоставлен или не определён, для всех свойств используются значения по умолчанию.</p>
 
 <p>Одно свойство поддерживается для всех языка-зависимых конструкторов: свойство <code>localeMatcher</code>, чьим значением должна быть одна из строк <code>"lookup"</code> или <code>"best fit"</code> и которое выбирает один из алгоритмов сопоставления локалей, описанных выше.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 1.0', '#sec-8', 'Intl')}}</td>
-   <td>{{Spec2('ES Int 1.0')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div id="compat-mobile">
-<p>{{Compat("javascript.builtins.Intl")}}</p>
+<p>{{Compat}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>Введение: <a href="http://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html">API интернационализации ECMAScript</a></li>

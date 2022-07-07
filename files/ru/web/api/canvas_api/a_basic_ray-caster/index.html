@@ -11,13 +11,13 @@ translation_of: Web/API/Canvas_API/A_basic_ray-caster
 
 <p><strong><a href="http://mdn.github.io/canvas-raycaster/">Открыть в новом окне</a></strong></p>
 
-<h2 id="Why.3F" name="Why.3F">Зачем?</h2>
+<h2 id="Why.3F">Зачем?</h2>
 
 <p>Я попробовал небольшой эксперимент, понимая, к моему восторгу, что стильный элемент <code>&lt;canvas&gt;</code> о котором я <a href="https://www.whatwg.org/specs/web-apps/current-work/#dynamic">читал</a>, поддерживается не только в Fierfox, но так же поддерживается последней версией Safari.</p>
 
 <p>Хорошие <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">обзор</a> и <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">руководство</a> по canvas я нашёл в MDN, но никто ещё не писал об анимации, поэтому я решил попробовать базовый порт raycaster, над которым я работал некоторое время назад, и посмотреть, какую производительность мы можем ожидать от управляемого JavaScript-ом пиксельного буфера.</p>
 
-<h2 id="How.3F" name="How.3F">Как?</h2>
+<h2 id="How.3F">Как?</h2>
 
 <p>Основная идея заключается в использовании {{domxref("window.setInterval","setInterval()")}} с некоторой произвольной задержкой, соответствующей требуемой частоте кадров. После каждого интервала функция обновления будет перерисовывать холст, и отображать текущий вид. Я знаю, что мог бы начать с более простого примера, но я уверен, что руководство canvas <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">доберётся до этого</a>, и я хотел посмотреть, смогу ли я это сделать.</p>
 
@@ -25,13 +25,13 @@ translation_of: Web/API/Canvas_API/A_basic_ray-caster
 
 <p>Код, который я получил, - это смесь глав raycaster из старой книги Андре Ламотетрикса о гуру программирования игр (ISBN: 0672305070) и  <a class="external" href="http://www.shinelife.co.uk/java-maze/">java raycaster</a>, которую я нашёл в интернете, отфильтровал, переименовал, и внёс все изменения, которые нужно было внести, чтобы все работало хорошо.</p>
 
-<h2 id="Results" name="Results">Результаты</h2>
+<h2 id="Results">Результаты</h2>
 
 <p>Холст в Safari 2.0.1 выполнен на удивление хорошо. С коэффициентом блочности, увеличенным до отображения кусочка шириной 8 пикселей, я могу запустить окно 320 x 240 при 24 fps на моем Apple mini. Firefox 1.5 Beta 1 ещё быстрее; я могу запускать 320 x 240 при 24 fps с 4 пиксельным кусочком. Не совсем новый член семейства программного обеспечения ID, но довольно приличный, учитывая, что это полностью интерпретируемая среда, и мне не нужно было беспокоиться о выделении памяти или видеорежимах или кодировании внутренних процедур в ассемблере или чем-то ещё. Код получился очень эффективным, он использует поиск по массиву предварительно вычисленных значений, но я не гуру оптимизации, поэтому все, вероятно, можно было бы написать быстрее.</p>
 
 <p>Кроме того, он оставляет желать лучшего с точки зрения попыток быть игровым движком—нет текстур стен, нет спрайтов, нет дверей, даже нет телепортов, чтобы добраться до другого уровня. Но я уверен, что все эти вещи могут быть добавлены, через некоторое время. Canvas API поддерживает пиксельное копирование изображений, поэтому текстуры могут быть добавлены. Я оставлю это для другой статьи, возможно, от другого человека. =)</p>
 
-<h2 id="The_RayCaster" name="The_RayCaster">ray-caster</h2>
+<h2 id="The_RayCaster">ray-caster</h2>
 
 <p>Хорошие люди здесь вручную скопировали мои файлы, чтобы вы могли <a href="https://mdn.github.io/canvas-raycaster/">взглянуть</a>, и для вашего удобства я разместил содержимое отдельных файлов в виде списков кодов (см. ниже).</p>
 
@@ -39,7 +39,7 @@ translation_of: Web/API/Canvas_API/A_basic_ray-caster
 
 <p><small><a href="https://github.com/mdn/canvas-raycaster/blob/master/input.js">input.js</a> | <a href="https://github.com/mdn/canvas-raycaster/blob/master/Level.js">Level.js</a> | <a href="https://github.com/mdn/canvas-raycaster/blob/master/Player.js">Player.js</a> | <a href="https://github.com/mdn/canvas-raycaster/blob/master/index.html">RayCaster.html</a> | <a href="https://github.com/mdn/canvas-raycaster/blob/master/RayCaster.js">RayCaster.js</a> | <a href="https://github.com/mdn/canvas-raycaster/blob/master/trace.css">trace.css</a> | <a href="https://github.com/mdn/canvas-raycaster/blob/master/trace.js">trace.js</a> </small></p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas руководство</a></li>

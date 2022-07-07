@@ -9,13 +9,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Значение глобального свойства <code><strong>undefined</strong></code> представляет значение <code>{{Glossary("Undefined", "undefined")}}</code>. Это одно из {{Glossary("Primitive", "примитивных значений")}} JavaScript.</p>
 
 <div>{{js_property_attributes(0, 0, 0)}}</div>
 
-<div></div>
+
 
 <p>{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}</p>
 
@@ -23,11 +23,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 <p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>undefined</code></pre>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p><code>undefined</code> является свойством <em>глобального объекта</em>, то есть, это переменная в глобальной области видимости. Начальным значением <code>undefined</code> является примитивное значение <code>undefined</code>.</p>
 
@@ -44,9 +44,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 (function(undefined){ console.log(undefined, typeof undefined); })('foo');
 </pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Strict_equality_and_undefined" name="Strict_equality_and_undefined">Пример: строгое сравнение и <code>undefined</code></h3>
+<h3 id="Strict_equality_and_undefined">Пример: строгое сравнение и <code>undefined</code></h3>
 
 <p>Вы можете использовать <code>undefined</code> и операторы строгого равенства или неравенства для определения того, имеет ли переменная значение. В следующем коде переменная <code>x</code> не определена и инструкция <code>if</code> вычисляется в <code>true</code>.</p>
 
@@ -63,7 +63,7 @@ else {
 <p><strong>Обратите внимание:</strong> здесь используется оператор строгого равенства (идентичности) вместо простого оператора равенства, поскольку <code>x == undefined</code> также проверяет, является ли <code>x</code> равным <code>null</code>, в то время как оператор идентичности этого не делает. {{jsxref("Global_Objects/null", "null")}} не эквивалентен <code>undefined</code>. Для более подробной информации смотрите {{jsxref("Operators/Comparison_Operators", "операторы сравнения", "", 1)}}.</p>
 </div>
 
-<h3 id="Typeof_operator_and_undefined" name="Typeof_operator_and_undefined">Пример: оператор <code>typeof</code> и <code>undefined</code></h3>
+<h3 id="Typeof_operator_and_undefined">Пример: оператор <code>typeof</code> и <code>undefined</code></h3>
 
 <p>В качестве альтернативы можно использовать оператор {{jsxref("Operators/typeof", "typeof")}}:</p>
 
@@ -87,7 +87,7 @@ if (x === undefined) { // выкинет ReferenceError
 
 <p>Однако, уловки такого рода должны избегаться. JavaScript является языком со статической областью видимости, так что узнать, была ли переменная определена, можно путём просмотра, была ли она определена в охватывающем контексте. Единственным исключением являет глобальная область видимости, но глобальная область видимости привязана к глобальному объекту, так что проверка существования переменной в глобальном контексте может быть осуществлена путём проверки существования свойства <em>глобального объекта</em> (например, используя оператор {{jsxref("Operators/in", "in")}}).</p>
 
-<h3 id="Void_operator_and_undefined" name="Void_operator_and_undefined">Пример: оператор <code>void</code> и <code>undefined</code></h3>
+<h3 id="Void_operator_and_undefined">Пример: оператор <code>void</code> и <code>undefined</code></h3>
 
 <p>Третьей альтернативой является оператор {{jsxref("Operators/void", "void")}}.</p>
 
@@ -102,38 +102,15 @@ if (y === void 0) {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.1.3', 'undefined')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-undefined', 'undefined')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.undefined")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/NaN", "NaN")}}</li>

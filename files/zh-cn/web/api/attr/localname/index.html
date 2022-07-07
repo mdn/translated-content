@@ -8,7 +8,7 @@ translation_of: Web/API/Attr/localName
 <p><code><strong>Attr.localName</strong></code> 为只读属性，返回一个属性限定名称的本名部分（去除命名空间前缀的名字）。</p>
 
 <div class="note">
-<p>在之前的DOM规范中此API被定义在 {{domxref("Node")}} 接口中。</p>
+<p>在之前的 DOM 规范中此 API 被定义在 {{domxref("Node")}} 接口中。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -41,30 +41,15 @@ element.addEventListener("click", function() {
 
 <h2 id="注意">注意</h2>
 
-<p>本文档中属性的“本名(local name)”指的是属性“限定名称(qualified names)”的命名空间冒号之后的部分。“限定名称”通常作为XML文档命名空间的一部分用在XML代码内。 </p>
+<p>本文档中属性的“本名 (local name)”指的是属性“限定名称 (qualified names)”的命名空间冒号之后的部分。“限定名称”通常作为 XML 文档命名空间的一部分用在 XML 代码内。 </p>
 
 <div class="note">
-<p><strong>注意：在</strong>{{Gecko("1.9.2")}} 以及跟早的版本中，HTML DOM 访问该属性将返回 HTML 节点属性的大写字符串本名（有别于 XML DOM 的 XHTML 属性）。在后来的版本中，为遵循HTML5 标准，该属性返回 DOM 内部存储的名称，即，不论 HTML DOM 的 HTML 属性还是 XML DOM 的 XHTML属性都是小写字符串。</p>
+<p><strong>注意：在</strong>{{Gecko("1.9.2")}} 以及跟早的版本中，HTML DOM 访问该属性将返回 HTML 节点属性的大写字符串本名（有别于 XML DOM 的 XHTML 属性）。在后来的版本中，为遵循 HTML5 标准，该属性返回 DOM 内部存储的名称，即，不论 HTML DOM 的 HTML 属性还是 XML DOM 的 XHTML 属性都是小写字符串。</p>
 </div>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-attr-localname', 'Attr.localName')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

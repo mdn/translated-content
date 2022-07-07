@@ -6,10 +6,10 @@ translation_of: Web/API/AudioContext/createMediaElementSource
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>{{ domxref("AudioContext") }} 接口的 <code>createMediaElementSource() 方法用于创建一个新的 </code>{{ domxref("MediaElementAudioSourceNode") }} 对象,输入某个存在的 HTML {{htmlelement("audio")}} or {{htmlelement("video")}} 元素, 对应的音频即可被播放或者修改.</p>
+<p>{{ domxref("AudioContext") }} 接口的 <code>createMediaElementSource()</code> 方法用于创建一个新的 {{ domxref("MediaElementAudioSourceNode") }} 对象，输入某个存在的 HTML {{htmlelement("audio")}} or {{htmlelement("video")}} 元素，对应的音频即可被播放或者修改。</p>
 </div>
 
-<p>为寻求更多关于媒体元素音频源节点的具体信息,请查阅 {{ domxref("MediaElementAudioSourceNode") }} 参考页.</p>
+<p>为寻求更多关于媒体元素音频源节点的具体信息，请查阅 {{ domxref("MediaElementAudioSourceNode") }} 参考页。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -20,16 +20,16 @@ var source = audioCtx.createMediaElementSource(myMediaElement);</pre>
 
 <dl>
  <dt><code>myMediaElement</code></dt>
- <dd>某个被期待被录入音频处理图修改的 {{domxref("HTMLMediaElement")}} 对象.</dd>
+ <dd>某个被期待被录入音频处理图修改的 {{domxref("HTMLMediaElement")}} 对象。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个 {{domxref("MediaElementAudioSourceNode")}} 对象.</p>
+<p>一个 {{domxref("MediaElementAudioSourceNode")}} 对象。</p>
 
 <h2 id="示例">示例</h2>
 
-<p>该示例由 {{htmlelement("audio") }} 元素,通过使用 <code>createMediaElementSource() 方法,</code>创建了一个音源,将其通过 {{ domxref("GainNode") }} 节点,输出到{{ domxref("AudioDestinationNode") }} 节点以播放.当鼠标指针移动时, <code>updatePage()</code> 函数被调用,该函数计算当前鼠标Y坐标与页面高度的比值, 改变 {{ domxref("GainNode") }} 节点的值以调整音量.您就可以通过鼠标上下移动而改变音乐的音量了.</p>
+<p>该示例由 {{htmlelement("audio") }} 元素，通过使用 <code>createMediaElementSource()</code> 方法，创建了一个音源，将其通过 {{ domxref("GainNode") }} 节点，输出到{{ domxref("AudioDestinationNode") }} 节点以播放。当鼠标指针移动时，<code>updatePage()</code> 函数被调用，该函数计算当前鼠标 Y 坐标与页面高度的比值， 改变 {{ domxref("GainNode") }} 节点的值以调整音量。您就可以通过鼠标上下移动而改变音乐的音量了。</p>
 
 <div class="note">
 <p><strong>Note</strong>: 您也可以 <a href="http://mdn.github.io/webaudio-examples/media-source-buffer/">浏览该示例的在线演示</a>, 或者 <a href="https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer">浏览源代码</a>.</p>
@@ -73,92 +73,16 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: 作为调用<code> createMediaElementSource() </code>的结果,{{domxref("HTMLMediaElement")}} 的播放将会由AudioContext的音频处理图接管.所以对媒体进行播放/暂停等操作仍可通过media API与播放器面板来进行.</p>
+<p><strong>Note</strong>: 作为调用 <code>createMediaElementSource()</code> 的结果，{{domxref("HTMLMediaElement")}} 的播放将会由 AudioContext 的音频处理图接管。所以对媒体进行播放/暂停等操作仍可通过 media API 与播放器面板来进行。</p>
 </div>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createMediaElementSource-MediaElementAudioSourceNode-HTMLMediaElement-mediaElement', 'createMediaElementSource()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22</td>
-   <td>
-    <p>6.0{{property_prefix("webkit")}}</p>
-
-    <p>- buggy! not working -</p>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p>{{CompatUnknown}}</p>
-
-    <p>- buggy! not working -</p>
-   </td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.AudioContext.createMediaElementSource")}}
 
 <h2 id="相关链接">相关链接</h2>
 

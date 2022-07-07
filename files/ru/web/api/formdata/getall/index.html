@@ -13,9 +13,9 @@ translation_of: Web/API/FormData/getAll
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="brush: js notranslate">formData.getAll(name);</pre>
+<pre class="brush: js">formData.getAll(name);</pre>
 
-<h3 id="append_Parameters" name="append()_Parameters">Параметры</h3>
+<h3 id="append_Parameters">Параметры</h3>
 
 <dl>
  <dt><code>name</code></dt>
@@ -30,37 +30,24 @@ translation_of: Web/API/FormData/getAll
 
 <p>Эта строка создаст пустой объект FormData:</p>
 
-<pre class="brush: js notranslate">var formData = new FormData();</pre>
+<pre class="brush: js">var formData = new FormData();</pre>
 
 <p>Можем добавить два <code>username</code> при помощи {{domxref("FormData.append")}}:</p>
 
-<pre class="brush: js notranslate">formData.append('username', 'Борис');
+<pre class="brush: js">formData.append('username', 'Борис');
 formData.append('username', 'Кирилл');</pre>
 
 <p>Тогда метод <code>getAll()</code> вернёт оба значения <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">username</span></font> в виде массива:</p>
 
-<pre class="brush: js notranslate">formData.getAll('username'); // Вернёт ["Борис", "Кирилл"]</pre>
+<pre class="brush: js">formData.getAll('username'); // Вернёт ["Борис", "Кирилл"]</pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata-getall','getAll()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.FormData.getAll")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

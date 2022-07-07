@@ -10,7 +10,9 @@ original_slug: Web/JavaScript/Reference/Classes/Class_elements
 ---
 <div>{{JsSidebar("Classes")}}</div>
 
-<div class="note">公有（public）和私有（private）字段声明是一个JavaScript标准委员会<a href="https://tc39.github.io/beta/">TC39</a>提议的<a href="https://github.com/tc39/proposal-class-fields">试验性功能 （第3阶段）</a>。这项功能在浏览器中的支持还受限，但你可以通过<a href="https://babeljs.io/">Babel</a>等构建系统来使用它。参见下面的<a href="#Browser_compatibility">兼容性信息</a>。</div>
+<div class="note">
+  <p><strong>备注：</strong>公有（public）和私有（private）字段声明是一个 JavaScript 标准委员会<a href="https://tc39.github.io/beta/">TC39</a>提议的<a href="https://github.com/tc39/proposal-class-fields">试验性功能（第 3 阶段）</a>。这项功能在浏览器中的支持还受限，但你可以通过<a href="https://babeljs.io/">Babel</a>等构建系统来使用它。参见下面的<a href="#Browser_compatibility">兼容性信息</a>。</p>
+</div>
 
 <h2 id="公有字段">公有字段</h2>
 
@@ -141,10 +143,6 @@ console.log(sub.subInstanceField);
 <p>关键字<code><strong>static</strong></code>将为一个类定义一个静态方法。静态方法不会在实例中被调用，而只会被类本身调用。它们经常是工具函数，比如用来创建或者复制对象。</p>
 
 <p>{{EmbedInteractiveExample("pages/js/classes-static.html")}}</p>
-
-<div class="hidden">
-<p>这些交互案例的资源储存在GitHub仓库中。如果你想参与这个项目，请复制链接<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>并向我们发送拉取（pull）请求。</p>
-</div>
 
 <p>静态方法是在类的赋值阶段用<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a>方法添加到类中的。静态方法是可编辑的、不可遍历的和可配置的。</p>
 
@@ -345,5 +343,5 @@ new ClassWithPrivateAccessor();
 <h2 id="另请参考：">另请参考：</h2>
 
 <ul>
- <li><a href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">所有JS类元素的语义</a></li>
+ <li><a href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">所有 JS 类元素的语义</a></li>
 </ul>

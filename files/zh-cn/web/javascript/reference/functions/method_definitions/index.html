@@ -11,11 +11,9 @@ translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 ---
 <div>{{JsSidebar("Functions")}}</div>
 
-<p>从ECMAScript 2015开始，在对象初始器中引入了一种更简短定义方法的语法，这是一种把方法名直接赋给函数的简写方式。</p>
+<p>从 ECMAScript 2015 开始，在对象初始器中引入了一种更简短定义方法的语法，这是一种把方法名直接赋给函数的简写方式。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}</div>
-
-<p class="hidden">这个交互式例子的源代码位于 GitHub 仓库中。如果你想对这个交互式的样例做出一些贡献，请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 然后提一个 pull request 给我们。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -38,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 
 <h2 id="描述">描述</h2>
 
-<p>该简写语法与ECMAScript 2015的<a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a>和<a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a>语法类似。</p>
+<p>该简写语法与 ECMAScript 2015 的<a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a>和<a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a>语法类似。</p>
 
 <p>如下代码：</p>
 
@@ -63,7 +61,7 @@ translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 };</pre>
 
 <div class="note">
-<p><strong>注意：</strong>简写语法使用命名函数而不是匿名函数（如…<code>foo: function() {}</code>…）。命名函数可以从函数体调用（这对匿名函数是不可能的，因为没有标识符可以引用）。详细信息，请参阅{{jsxref("Operators/function","function","#Examples")}}。</p>
+<p><strong>备注：</strong>简写语法使用命名函数而不是匿名函数（如…<code>foo: function() {}</code>…）。命名函数可以从函数体调用（这对匿名函数是不可能的，因为没有标识符可以引用）。详细信息，请参阅{{jsxref("Operators/function","function","#Examples")}}。</p>
 </div>
 
 <h3 id="生成器方法">生成器方法</h3>
@@ -77,7 +75,7 @@ translation_of: Web/JavaScript/Reference/Functions/Method_definitions
  </li>
 </ul>
 
-<pre class="brush: js;highlight[12]">// 用有属性名的语法定义方法（ES6之前）：
+<pre class="brush: js">// 用有属性名的语法定义方法（ES6 之前）：
 var obj2 = {
   g: function*() {
     var index = 0;
@@ -103,7 +101,7 @@ console.log(it.next().value); // 1</pre>
 
 <p>{{jsxref("Statements/async_function", "Async 方法", "", 1)}}也可以使用简写语法来定义。</p>
 
-<pre class="brush: js">// 用有属性名的语法定义方法（ES6之前）：
+<pre class="brush: js">// 用有属性名的语法定义方法（ES6 之前）：
 var obj3 = {
   f: async function () {
     await some_promise;
@@ -157,7 +155,7 @@ new obj.g; // TypeError: obj.g is not a constructor (changed in ES2016)
 
 <h3 id="简单示例">简单示例</h3>
 
-<pre class="brush: js;highlight[3]">var obj = {
+<pre class="brush: js">var obj = {
   a : "foo",
   b(){ return this.a; }
 };
@@ -168,7 +166,7 @@ console.log(obj.b()); // "foo"
 
 <p>该简写语法还支持计算的属性名称作为方法名。</p>
 
-<pre class="brush: js;highlight[4]">var bar = {
+<pre class="brush: js">var bar = {
   foo0: function() { return 0; },
   foo1() { return 1; },
   ['foo' + 2]() { return 2; }

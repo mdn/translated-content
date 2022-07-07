@@ -22,7 +22,7 @@ translation_of: Web/API/CharacterData
  <dd>返回其父节点所在的子节点列表（children list）中前一个元素节点 {{domxref("Element")}}，或者 <code style="font-style: normal;">null</code>。</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
 <p><em>从其父级 {{domxref("Node")}} 继承方法，并且实现了 {{domxref("ChildNode")}} 和<em>{{domxref("NonDocumentTypeChildNode")}} 接口。</em></em></p>
 
@@ -41,108 +41,16 @@ translation_of: Web/API/CharacterData
  <dd>返回一个包含了从<code> CharacterData.data </code>中的指定位置开始，指定长度的<code> </code>{{domxref("DOMString")}} 。</dd>
 </dl>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#characterdata', 'CharacterData')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Added implemention of the {{domxref("ChildNode")}} and {{domxref("NonDocumentTypeChildNode")}} interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-FF21A306', 'CharacterData')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No change from {{SpecName('DOM2 Core')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-FF21A306', 'CharacterData')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No change from {{SpecName('DOM1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-FF21A306', 'CharacterData')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>6</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Implements {{domxref("ChildNode")}} interface.</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("25.0")}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Implements {{domxref("ChildNode")}} interface.</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("25.0")}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Two properties, <code>nextElementSibling</code> and <code>previousElementSibling</code>, have been moved to the {{domxref("NonDocumentTypeChildNode")}} interface, also implemented by <code>CharacterData</code>.</p>
+{{Compat("api.CharacterData")}}
 
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a>.</li>
+ <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a>.</li>
 </ul>

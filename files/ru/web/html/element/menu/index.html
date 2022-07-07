@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/menu
 ---
 <p>{{HTMLRef}}{{SeeCompatTable}}</p>
 
-<p><strong>HTML элемент <code>&lt;menu&gt;</code></strong> представляет группу команд, которые пользователь может выполнить или активировать. Он включает как меню-списки, которые могут отображаться в верхней части экрана, так и <a href="/en-US/docs/Web/HTML/Element/menu#Context_menu"> контекстные меню</a>, например, такие, что могут появиться под кнопкой после нажатия.</p>
+<p><strong>HTML-элемент <code>&lt;menu&gt;</code></strong> представляет группу команд, которые пользователь может выполнить или активировать. Он включает как меню-списки, которые могут отображаться в верхней части экрана, так и <a href="/en-US/docs/Web/HTML/Element/menu#Context_menu"> контекстные меню</a>, например, такие, что могут появиться под кнопкой после нажатия.</p>
 
 <table class="properties">
  <tbody>
@@ -68,15 +68,15 @@ translation_of: Web/HTML/Element/menu
 
 <p>An HTML menu can be used to create context menus (typically activated by right-clicking another element) or toolbars.</p>
 
-<p><strong>{{anch("Context menu", "Context menus</strong>")}} consist of a <code>&lt;menu&gt;</code> element which contains {{HTMLElement("menuitem")}} elements for each selectable option in the menu, <code>&lt;menu&gt;</code> elements for submenus within the menu, and {{HTMLElement("hr")}} elements for separator lines to break up the menu's content into sections. Context menus are then attached to the element they're activated from using either the associated element's {{HTMLAttrxRef("contextmenu")}} attribute or, for {{anch("Button menu", "button-activated menus")}} attached to {{HTMLElement("button")}} elements, the {{HTMLAttrxRef("menu", "button")}} attribute.</p>
+<p><strong><a href="#context_menu">Context menus</strong></a> consist of a <code>&lt;menu&gt;</code> element which contains {{HTMLElement("menuitem")}} elements for each selectable option in the menu, <code>&lt;menu&gt;</code> elements for submenus within the menu, and {{HTMLElement("hr")}} elements for separator lines to break up the menu's content into sections. Context menus are then attached to the element they're activated from using either the associated element's {{HTMLAttrxRef("contextmenu")}} attribute or, for <a href="#button_menu">button-activated menus</a> attached to {{HTMLElement("button")}} elements, the {{HTMLAttrxRef("menu", "button")}} attribute.</p>
 
-<p><strong>{{anch("Toolbar", "Toolbar menus</strong>")}} consist of a <code>&lt;menu&gt;</code> element whose content is described in one of two ways: either as an unordered list of items represented by {{HTMLElement("li")}} elements (each representing a command or option the user can utilize), or (if there are no <code>&lt;li&gt;</code> elements), <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a> describing the available commands and options.</p>
+<p><strong><a href="#toolbar">Toolbar menus</strong></a> consist of a <code>&lt;menu&gt;</code> element whose content is described in one of two ways: either as an unordered list of items represented by {{HTMLElement("li")}} elements (each representing a command or option the user can utilize), or (if there are no <code>&lt;li&gt;</code> elements), <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a> describing the available commands and options.</p>
 
 <p>This element was deprecated in HTML4, but reintroduced in HTML5.1 and the HTML living standard. This document describes the current Firefox implementation. Type 'list' is likely to change to 'toolbar' according to HTML5.1.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Context_menu" name="Context_menu">Context menu</h3>
+<h3 id="Context_menu">Context menu</h3>
 
 <p>{{Deprecated_header}}</p>
 
@@ -108,7 +108,7 @@ translation_of: Web/HTML/Element/menu
 
 <p>{{EmbedLiveSample("Context_menu", "100%", 80)}}</p>
 
-<h3 id="Menu_button" name="Menu_button">Menu button</h3>
+<h3 id="Menu_button">Menu button</h3>
 
 <div class="blockIndicator warning">
 <p>Menu buttons haven't been implemented in any known browsers yet. The {{HTMLAttrxRef("type", "menu")}} attribute on the <code>&lt;menu&gt;</code> element is now obsolete.</p>
@@ -137,7 +137,7 @@ translation_of: Web/HTML/Element/menu
 
 <p>{{EmbedLiveSample("Menu_button", "100%", 50)}}</p>
 
-<h3 id="Toolbar" name="Toolbar">Toolbar</h3>
+<h3 id="Toolbar">Toolbar</h3>
 
 <div class="blockIndicator warning">
 <p>Toolbar menus haven't been implemented in any known browsers yet.</p>
@@ -198,7 +198,7 @@ translation_of: Web/HTML/Element/menu
 
 
 
-<p>{{Compat("html.elements.menu")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

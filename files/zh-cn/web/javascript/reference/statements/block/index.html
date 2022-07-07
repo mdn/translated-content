@@ -38,9 +38,9 @@ translation_of: Web/JavaScript/Reference/Statements/block
 
 <h3 id="块级作用域">块级作用域</h3>
 
-<h4 id="在非严格模式non-strict_mode下的var_或者函数声明时">在非严格模式(non-strict mode)下的<code>var </code>或者函数声明时</h4>
+<h4 id="在非严格模式non-strict_mode下的var_或者函数声明时">在非严格模式 (non-strict mode) 下的<code>var </code>或者函数声明时</h4>
 
-<p>通过<code>var</code>声明的变量或者非严格模式下(non-strict mode)创建的函数声明<strong>没有</strong>块级作用域。在语句块里声明的变量的作用域不仅是其所在的函数或者 script 标签内，所设置变量的影响会在超出语句块本身之外持续存在。 换句话说，这种语句块不会引入一个作用域。尽管单独的语句块是合法的语句，但在JavaScript中你不会想使用单独的语句块，因为它们不像你想象的C或Java中的语句块那样处理事物。例如：</p>
+<p>通过<code>var</code>声明的变量或者非严格模式下 (non-strict mode) 创建的函数声明<strong>没有</strong>块级作用域。在语句块里声明的变量的作用域不仅是其所在的函数或者 script 标签内，所设置变量的影响会在超出语句块本身之外持续存在。 换句话说，这种语句块不会引入一个作用域。尽管单独的语句块是合法的语句，但在 JavaScript 中你不会想使用单独的语句块，因为它们不像你想象的 C 或 Java 中的语句块那样处理事物。例如：</p>
 
 <pre class="brush: js example-bad">var x = 1;
 {
@@ -49,7 +49,7 @@ translation_of: Web/JavaScript/Reference/Statements/block
 console.log(x); // 输出 2
 </pre>
 
-<p>输出结果是 2，因为块中的 <code>var x</code>语句与块前面的<code>var x</code>语句作用域相同。在 C 或 Java中，这段代码会输出 1。</p>
+<p>输出结果是 2，因为块中的 <code>var x</code>语句与块前面的<code>var x</code>语句作用域相同。在 C 或 Java 中，这段代码会输出 1。</p>
 
 
 
@@ -71,11 +71,11 @@ console.log(x); // 输出 1</pre>
 {
   const c = 2;
 }
-console.log(c); // 输出1, 而且不会报错</pre>
+console.log(c); // 输出 1，而且不会报错</pre>
 
 <p>注意，位于块范围之内的 <code>const c = 2</code> 并不会抛出<code>SyntaxError: Identifier 'c' has already been declared</code>这样的语法错误，因为在它自己的块中它可能是唯一一个被声明的常量。</p>
 
-<h5 id="使用let声明的变量在块级作用域内能强制执行更新变量，下面的两个例子对比：">使用let声明的变量在块级作用域内能强制执行更新变量，下面的两个例子对比：</h5>
+<h5 id="使用let声明的变量在块级作用域内能强制执行更新变量，下面的两个例子对比：">使用 let 声明的变量在块级作用域内能强制执行更新变量，下面的两个例子对比：</h5>
 
 <pre class="brush: js">var a = [];
 for (<strong>var</strong> i = 0; i &lt; 10; i++) {
@@ -97,7 +97,7 @@ a[6]();                // 6</pre>
 
 <h4 id="使用function">使用<code>function</code></h4>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">函数声明</a>同样被限制在声明他的语句块内:</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">函数声明</a>同样被限制在声明他的语句块内：</p>
 
 
 
@@ -152,7 +152,7 @@ a[6]();                // 6</pre>
 
 <p>{{Compat("javascript.statements.block")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Statements/while", "while")}}</li>

@@ -7,16 +7,16 @@ translation_of: Learn/Server-side/Django/Tutorial_local_library_website
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">我们实战教程系列的第一篇教程会解释你将学到什么。并提供一个“本地图书馆”的例子作为概述。在接下来的教程里，我们会不断完善和改进这个网站。</p>
+<p>我们实战教程系列的第一篇教程会解释你将学到什么。并提供一个“本地图书馆”的例子作为概述。在接下来的教程里，我们会不断完善和改进这个网站。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">前提:</th>
-   <td>阅读 <a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django介绍</a>。在接下来的文章里你需要 <a href="/en-US/docs/Learn/Server-side/Django/development_environment">创建Django开发环境</a>. </td>
+   <th scope="row">前提：</th>
+   <td>阅读 <a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django 介绍</a>。在接下来的文章里你需要 <a href="/en-US/docs/Learn/Server-side/Django/development_environment">创建 Django 开发环境</a>. </td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
+   <th scope="row">目标：</th>
    <td>介绍教程里使用的网站应用，让读者明白要讨论的主题。</td>
   </tr>
  </tbody>
@@ -24,38 +24,38 @@ translation_of: Learn/Server-side/Django/Tutorial_local_library_website
 
 <h2 id="概述">概述</h2>
 
-<p>欢迎来到MDN的”本地图书馆“Django教程。在教程里，我们会开发一个网站，用来管理本地图书馆的目录。</p>
+<p>欢迎来到 MDN 的”本地图书馆“Django 教程。在教程里，我们会开发一个网站，用来管理本地图书馆的目录。</p>
 
-<p>在这一系列的教程里你将:</p>
+<p>在这一系列的教程里你将：</p>
 
 <ul>
- <li>运用Django的工具创建网站和应用的框架。</li>
+ <li>运用 Django 的工具创建网站和应用的框架。</li>
  <li>启动和停止开发用的服务器。</li>
  <li>创建模型（models）用来代表应用里的数据。</li>
- <li>运用Django的admin站点填充网站数据。</li>
- <li>面对不同的网络请求，创建视图函数（views）取回相应的数据。并把数据用模板（templates ）渲染成HTML展示在浏览器里。</li>
- <li>创建网络分发器，将不同的URL模式分发给特定的视图函数（views）。</li>
+ <li>运用 Django 的 admin 站点填充网站数据。</li>
+ <li>面对不同的网络请求，创建视图函数（views）取回相应的数据。并把数据用模板（templates ）渲染成 HTML 展示在浏览器里。</li>
+ <li>创建网络分发器，将不同的 URL 模式分发给特定的视图函数（views）。</li>
  <li>添加用户认证和会话（sessions）管理网站行为和进入权限。</li>
  <li>使用表单。</li>
  <li>为应用编写测试。</li>
- <li>有效运用Django的安全系统。</li>
+ <li>有效运用 Django 的安全系统。</li>
  <li>把应用布置到生产环境中。</li>
 </ul>
 
-<p>关于这些主题，你已经学会了一些，并对其他的也有了简单的了解。在这系列教程的最后，你会学到足够多而可以自己开发简单的Django应用了。</p>
+<p>关于这些主题，你已经学会了一些，并对其他的也有了简单的了解。在这系列教程的最后，你会学到足够多而可以自己开发简单的 Django 应用了。</p>
 
 <h2 id="本地图书馆网站">本地图书馆网站</h2>
 
 <p><em>本地图书馆</em>是我们在本系列教程里创建和不断改善的网站。跟你期望的一样，这个网站的目标是为一个小型的图书馆提供一个在线的目录。在这个小型图书管里，用户能浏览书籍和管理他们的账户。</p>
 
-<p>这个例子是精心挑选出来的，因为它可以根据我们的需要增加或多或少的细节。也能用来展示几乎所有的Django特性。更重要的是，它提供了一条指南式的路线，在这条路线中，我们会用到Django网络框架最重要的功能：</p>
+<p>这个例子是精心挑选出来的，因为它可以根据我们的需要增加或多或少的细节。也能用来展示几乎所有的 Django 特性。更重要的是，它提供了一条指南式的路线，在这条路线中，我们会用到 Django 网络框架最重要的功能：</p>
 
 <ul>
  <li>在第一篇教程里，我们会定义一个简单到只能浏览的图书馆。图书馆的会员可以查找哪些书可以借阅。我们得以探索那些几乎所有网站都会运用的操作：阅读和展示数据库里的内容。</li>
- <li>接下来，图书馆会慢慢扩展来展示更高级的Django特性。例如，我们会扩展功能，让会员能够保留图书。这个特性会展示如何使用表单，并支持用户认证。</li>
+ <li>接下来，图书馆会慢慢扩展来展示更高级的 Django 特性。例如，我们会扩展功能，让会员能够保留图书。这个特性会展示如何使用表单，并支持用户认证。</li>
 </ul>
 
-<p>尽管这是一个非常容易扩展的例子，它被称为本地图书馆是有原因的——我们希望用最少的信息帮助你快速创建和运用Django。最后，我们会存储图书信息，图书数量，作者和其他重要信息。我们不会存储图书馆可能会存储的其他信息，或是提供一个支持多个图书馆或是”大型图书馆“功能的构建。</p>
+<p>尽管这是一个非常容易扩展的例子，它被称为本地图书馆是有原因的——我们希望用最少的信息帮助你快速创建和运用 Django。最后，我们会存储图书信息，图书数量，作者和其他重要信息。我们不会存储图书馆可能会存储的其他信息，或是提供一个支持多个图书馆或是”大型图书馆“功能的构建。</p>
 
 <h2 id="我卡住了，从哪里获得源代码呢？">我卡住了，从哪里获得源代码呢？</h2>
 

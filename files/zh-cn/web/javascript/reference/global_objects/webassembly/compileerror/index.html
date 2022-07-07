@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>WebAssembly.CompileError()</strong></code>构造函数创建一个新的WebAssembly <code>CompileError</code>对象，该对象表示WebAssembly解码或验证期间的错误。</p>
+<p><code><strong>WebAssembly.CompileError()</strong></code>构造函数创建一个新的 WebAssembly <code>CompileError</code>对象，该对象表示 WebAssembly 解码或验证期间的错误。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 
 <dl>
  <dt><code>message</code> {{optional_inline}}</dt>
- <dd><span class="tlid-translation translation" lang="zh-CN"><span title="">有可读性的错误描述。</span></span></dd>
+ <dd>有可读性的错误描述。</dd>
  <dt><code>fileName</code> {{optional_inline}}{{non-standard_inline}}</dt>
  <dd>包含导致异常的代码的文件名。</dd>
  <dt><code>lineNumber</code> {{optional_inline}}{{non-standard_inline}}</dt>
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
  <dt><code>WebAssembly.CompileError.prototype.constructor</code></dt>
  <dd>创建示例原型的特定函数。</dd>
  <dt>{{jsxref("Error.prototype.message", "WebAssembly.CompileError.prototype.message")}}</dt>
- <dd>错误信息。 尽管ECMA-262指定{{jsxref("URIError")}}应提供自己的<code>message</code>属性，但在<a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>中，它继承了 {{jsxref("Error.prototype.message")}}。</dd>
+ <dd>错误信息。尽管 ECMA-262 指定{{jsxref("URIError")}}应提供自己的<code>message</code>属性，但在<a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>中，它继承了 {{jsxref("Error.prototype.message")}}。</dd>
  <dt>{{jsxref("Error.prototype.name", "WebAssembly.CompileError.prototype.name")}}</dt>
  <dd>错误名称。继承自 {{jsxref("Error")}}。</dd>
  <dt>{{jsxref("Error.prototype.fileName", "WebAssembly.CompileError.prototype.fileName")}}</dt>
@@ -56,7 +56,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 
 <h2 id="示例">示例</h2>
 
-<p>以下代码段创建一个新的CompileError实例，并将其详细信息记录到控制台：</p>
+<p>以下代码段创建一个新的 CompileError 实例，并将其详细信息记录到控制台：</p>
 
 <pre class="brush: js">try {
   throw new WebAssembly.CompileError('Hello', 'someFile', 10);
@@ -94,7 +94,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <div>
 

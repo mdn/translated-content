@@ -36,8 +36,8 @@ browser-compat: javascript.builtins.String.trim
 <p>在任何其他的程式碼被執行之前，先執行以下的程式碼，它將會在瀏覽器本身未支援 <code>trim()</code> 的方法時創造它。</p>
 
 <pre class="brush: js">if (!String.prototype.trim) {
-  String.prototype.trim = function () {
-    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+  String.prototype.trim = function () {
+    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
   };
 }
 </pre>

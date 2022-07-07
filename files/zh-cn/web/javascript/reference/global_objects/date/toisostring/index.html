@@ -5,27 +5,27 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>toISOString()</strong></code> 方法返回一个 ISO（<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 Extended Format</a>）格式的字符串： <strong>YYYY-MM-DDTHH:mm:ss.sssZ</strong>。时区总是UTC（协调世界时），加一个后缀“Z”标识。</p>
+<p><code><strong>toISOString()</strong></code> 方法返回一个 ISO（<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 Extended Format</a>）格式的字符串： <strong>YYYY-MM-DDTHH:mm:ss.sssZ</strong>。时区总是 UTC（协调世界时），加一个后缀“Z”标识。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}</div>
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><var>dateObj</var>.toISOString()</pre>
 
 <h2 id="例子">例子</h2>
 
 <pre class="brush: js">var today = new Date("05 October 2011 14:48 UTC");
-alert(today.toISOString()); // 返回2011-10-05T14:48:00.000Z
+alert(today.toISOString()); // 返回 2011-10-05T14:48:00.000Z
 </pre>
 
-<p>上例使用了非标准字符串的解析，该字符串在某些旧的浏览器（如IE）中可能无法被正确解析。</p>
+<p>上例使用了非标准字符串的解析，该字符串在某些旧的浏览器（如 IE）中可能无法被正确解析。</p>
 
-<h2 id="Description" name="Description">Polyfill</h2>
+<h2 id="Description">Polyfill</h2>
 
-<p>该方法在ECMA-262第5版中被标准化。对于那些不支持此方法的JS引擎可以通过加上下面的代码实现：</p>
+<p>该方法在 ECMA-262 第 5 版中被标准化。对于那些不支持此方法的 JS 引擎可以通过加上下面的代码实现：</p>
 
 <pre class="brush:js">if ( !Date.prototype.toISOString ) {
   ( function() {
@@ -78,7 +78,7 @@ alert(today.toISOString()); // 返回2011-10-05T14:48:00.000Z
 
 <p>{{Compat("javascript.builtins.Date.toISOString")}}</p>
 
-<h2 id="See_Also" name="See_Also">相关链接</h2>
+<h2 id="See_Also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>

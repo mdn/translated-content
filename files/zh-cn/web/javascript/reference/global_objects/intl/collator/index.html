@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Intl.Collator<font face="Open Sans, Arial, sans-serif"> </font></code></strong><code>是用于语言敏感字符串比较的 collators构造函数。</code></p>
+<p><strong><code>Intl.Collator </code></strong><code>是用于语言敏感字符串比较的 collators 构造函数。</code></p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-collator.html")}}</div>
 
@@ -21,7 +21,7 @@ Intl.Collator.call(<var>this</var>[, <var>locales</var>[, <var>options</var>]])<
 <dl>
  <dt><code>locales</code></dt>
  <dd>
- <p>可选. 缩写语言代码 (BCP 47 language tag, 例如: cmn-Hans-CN) 的字符串或者这些字符串组成的数组. 关于参数 locales 的一般形式和解释请参见{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}. 下面的这些 Unicode 扩展键也是被允许的:</p>
+ <p>可选。缩写语言代码 (BCP 47 language tag，例如: cmn-Hans-CN) 的字符串或者这些字符串组成的数组. 关于参数 locales 的一般形式和解释请参见{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}. 下面的这些 Unicode 扩展键也是被允许的：</p>
 
  <dl>
   <dt><code>co</code></dt>
@@ -34,25 +34,25 @@ Intl.Collator.call(<var>this</var>[, <var>locales</var>[, <var>options</var>]])<
  </dd>
  <dt><code>options</code></dt>
  <dd>
- <p>可选. 包含一些或所有的下面属性的对象:</p>
+ <p>可选。包含一些或所有的下面属性的对象：</p>
 
  <dl>
   <dt><code>localeMatcher</code></dt>
-  <dd>使用的 local 的匹配算法. 可能的值有 "lookup" 和 "best fit"; 默认值是 <code>"best fit"</code>. 有关此选项的信息, 请参见{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
+  <dd>使用的 local 的匹配算法。可能的值有 "lookup" 和 "best fit"; 默认值是 <code>"best fit"</code>. 有关此选项的信息，请参见{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
   <dt><code>usage</code></dt>
   <dd>比较是用于排序还是用于搜索匹配的字符串。 可能的值为 “sort” 和 “search”; 默认为 “sort”。</dd>
   <dt><code>sensitivity</code></dt>
   <dd>
-  <p>字符串中的哪些差异应导致结果值为非零(non-zero)。 可能的值有：</p>
+  <p>字符串中的哪些差异应导致结果值为非零 (non-zero)。 可能的值有：</p>
 
   <ul>
-   <li><code>"base"</code>: 只有字母不同的字母比较不相等。例子: <code>a ≠ b</code>, <code>a = á</code>, <code>a = A。</code></li>
-   <li><code>"accent"</code>: 只有不同的基本字母或重音符号和其他变音符号的字符串比较为不相等。 例如: <code>a ≠ b</code>, <code>a ≠ á</code>, <code>a = A。</code></li>
+   <li><code>"base"</code>: 只有字母不同的字母比较不相等。例子：<code>a ≠ b</code>, <code>a = á</code>, <code>a = A。</code></li>
+   <li><code>"accent"</code>: 只有不同的基本字母或重音符号和其他变音符号的字符串比较为不相等。 例如：<code>a ≠ b</code>, <code>a ≠ á</code>, <code>a = A。</code></li>
    <li><code>"case"</code>: 只有不同的基本字母或大小写的字符串比较不相等。 Examples: <code>a ≠ b</code>, <code>a = á</code>, <code>a ≠ A。</code></li>
    <li><code>"variant"</code>: 字符串的字母，口音和其他变音符号、或不同大小写比较不相等。 也可以考虑其他差异。例如： <code>a ≠ b</code>, <code>a ≠ á</code>, <code>a ≠ A</code>.</li>
   </ul>
 
-  <p><code>"variant" 的默认值使用<font face="Open Sans, Arial, sans-serif"> </font></code><code>"sort"</code>; 它的 locale 依赖于使用 <code>"search"</code>.</p>
+  <p><code>"variant" 的默认值使用 </code><code>"sort"</code>; 它的 locale 依赖于使用 <code>"search"</code>.</p>
   </dd>
   <dt><code>ignore­Punctua­tion</code></dt>
   <dd>是否应忽略标点。 可能的值为 true 和 false; 默认值为 false。</dd>
@@ -113,11 +113,11 @@ console.log(new Intl.Collator().compare('a', 'a')); // → 0
 
 <p>{{jsxref("Collator.prototype.compare()")}} 提供的结果在不同语言之间有所不同。为了获得用于您的应用程序的用户界面的语言格式，请确保设定了语言（可能还有一些回退语言）参数：</p>
 
-<pre class="brush: js">// 德语中, ä 使用 a 的排序
+<pre class="brush: js">// 德语中，ä 使用 a 的排序
 console.log(new Intl.Collator('de').compare('ä', 'z'));
 // → 一个负值
 
-// 瑞典语中, ä 在 z 的后面
+// 瑞典语中，ä 在 z 的后面
 console.log(new Intl.Collator('sv').compare('ä', 'z'));
 // → 一个正值
 </pre>
@@ -126,11 +126,11 @@ console.log(new Intl.Collator('sv').compare('ä', 'z'));
 
 <p>{{jsxref("Collator.prototype.compare()")}} 提供的结果可以使用 options 参数自定义：</p>
 
-<pre class="brush: js">// 德语中, ä 使用 a 作为基本字母
+<pre class="brush: js">// 德语中，ä 使用 a 作为基本字母
 console.log(new Intl.Collator('de', { sensitivity: 'base' }).compare('ä', 'a'));
 // → 0
 
-// 瑞典语中, ä 和 a 是单独的基本字母
+// 瑞典语中，ä 和 a 是单独的基本字母
 console.log(new Intl.Collator('sv', { sensitivity: 'base' }).compare('ä', 'a'));
 // → 一个正值
 </pre>

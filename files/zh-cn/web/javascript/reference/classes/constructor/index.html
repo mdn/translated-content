@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
 
 <p>如果没有显式指定构造方法，则会添加默认的 constructor 方法。</p>
 
-<p>如果不指定一个构造函数(constructor)方法, 则使用一个默认的构造函数(constructor)。</p>
+<p>如果不指定一个构造函数 (constructor) 方法，则使用一个默认的构造函数 (constructor)。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -35,9 +35,9 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
 
 <pre class="brush: js">class Square extends Polygon {
     constructor(length) {
-        // 在这里, 它调用了父类的构造函数, 并将 lengths 提供给 Polygon 的"width"和"height"
+        // 在这里，它调用了父类的构造函数，并将 lengths 提供给 Polygon 的"width"和"height"
         super(length, length);
-        // 注意: 在派生类中, 必须先调用 super() 才能使用 "this"。
+        // 注意：在派生类中，必须先调用 super() 才能使用 "this"。
         // 忽略这个，将会导致一个引用错误。
         this.name = 'Square';
     }
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
     }
     set area(value) {
         // 注意：不可使用 this.area = value
-        // 否则会导致循环call setter方法导致爆栈
+        // 否则会导致循环 call setter 方法导致爆栈
         this._area = value;
     }
 }
@@ -118,7 +118,7 @@ console.log(newInstance.name); //Polygon
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<p>{{Compat("javascript.classes.constructor")}}</p>
+{{Compat}}
 
 <h2 id="参阅">参阅</h2>
 

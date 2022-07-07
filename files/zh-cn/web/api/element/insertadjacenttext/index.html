@@ -9,7 +9,7 @@ translation_of: Web/API/Element/insertAdjacentText
 
 <p><strong><code>insertAdjacentText()</code></strong> 方法将一个给定的文本节点插入在相对于被调用的元素给定的位置。</p>
 
-<h2 id="Syntax" name="Syntax">句法</h2>
+<h2 id="Syntax">句法</h2>
 
 <pre><em>element</em>.insertAdjacentText(<em>position</em>, <em>element</em>);</pre>
 
@@ -35,7 +35,7 @@ translation_of: Web/API/Element/insertAdjacentText
 
 <h3 id="例外">例外</h3>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Exception</th>
@@ -60,9 +60,9 @@ foo
 <code style="font-weight: bold;">&lt;/p&gt;</code>
 &lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
 
-<div class="note">注意：只有当节点位于树中并具有元素父元素时，beforebegin和afterend位置才能工作。</div>
+<div class="note">注意：只有当节点位于树中并具有元素父元素时，beforebegin 和 afterend 位置才能工作。</div>
 
-<h2 id="Example" name="Example">范例</h2>
+<h2 id="Example">范例</h2>
 
 <pre class="brush: js">beforeBtn.addEventListener('click', function() {
   para.insertAdjacentText('afterbegin',textInput.value);
@@ -74,74 +74,13 @@ afterBtn.addEventListener('click', function() {
 
 <p>Have a look at our <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html">insertAdjacentText.html</a> demo on GitHub (see the <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html">source code</a> too.) Here we have a simple paragraph. You can enter some text into the form element, then press the <em>Insert before</em> and <em>Insert after</em> buttons to insert it before or after the existing paragraph text using <code>insertAdjacentText()</code>. Note that the existing text node is not added to — further text nodes are created containing the new additions.</p>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-insertadjacenttext', 'insertAdjacentText()')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
+<h2 id="Browser_Compatibility">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("48.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("48.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Element.insertAdjacentText")}}
 
 <h2 id="也可以看看">也可以看看</h2>
 

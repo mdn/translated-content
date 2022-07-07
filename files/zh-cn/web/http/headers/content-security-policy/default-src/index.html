@@ -77,17 +77,17 @@ Content-Security-Policy: default-src &lt;source&gt; &lt;source&gt;;
  <dd>允许使用 eval() 以及相似的函数来从字符串创建代码。必须有单引号。</dd>
  <dt><code>'none'</code></dt>
  <dd>不允许任何内容。 必须有单引号。</dd>
- <dt>'nonce-&lt;base64值&gt;'</dt>
+ <dt>'nonce-&lt;base64 值&gt;'</dt>
  <dd>特定使用一次性加密内联脚本的白名单。服务器必须在每一次传输政策时生成唯一的一次性值。否则将存在绕过资源政策的可能。请参见<a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script">不安全的内联脚本</a>查看示例。</dd>
  <dt>&lt;hash-source&gt;</dt>
- <dd>使用 sha256、sha384 或 sha512 编码过的内联脚本或样式。其由用短划线分隔的两部分组成: 用于创建哈希的加密算法, 以及脚本或样式base64编码的哈希值。当生成哈希值的时候，不要包含 &lt;script&gt; 或 &lt;style&gt; 标签，同时注意字母大小写与空格——包括首尾空格——都是会影响生成的结果的。请参见<a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script">不安全的内联脚本</a>。</dd>
+ <dd>使用 sha256、sha384 或 sha512 编码过的内联脚本或样式。其由用短划线分隔的两部分组成：用于创建哈希的加密算法，以及脚本或样式 base64 编码的哈希值。当生成哈希值的时候，不要包含 &lt;script&gt; 或 &lt;style&gt; 标签，同时注意字母大小写与空格——包括首尾空格——都是会影响生成的结果的。请参见<a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script">不安全的内联脚本</a>。</dd>
  <dt>'strict-dynamic'</dt>
- <dd>strict-dynamic 指定对于含有标记脚本(通过附加一个随机数或散列)的信任，应该传播到由该脚本加载的所有脚本。与此同时，任何白名单以及源表达式例如 'self'  或者  'unsafe-inline' 都会被忽略。参见 <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic">script-src</a> 。</dd>
+ <dd>strict-dynamic 指定对于含有标记脚本 (通过附加一个随机数或散列) 的信任，应该传播到由该脚本加载的所有脚本。与此同时，任何白名单以及源表达式例如 'self'  或者  'unsafe-inline' 都会被忽略。参见 <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic">script-src</a> 。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="不继承_default-src_的情况"><code><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif">不继承 </font>default-src 的情况</code></h3>
+<h3 id="不继承_default-src_的情况"><code>不继承 default-src 的情况</code></h3>
 
 <p>假如设定了其他指令，那么 <code>default-src</code> 不会对它们起作用。这个首部</p>
 

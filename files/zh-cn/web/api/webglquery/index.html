@@ -7,9 +7,9 @@ translation_of: Web/API/WebGLQuery
 
 <p><strong><code>WebGLQuery</code></strong> 接口是 <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2</a> API 的一部分，并且提供几种异步查询信息的方法。缺省情况下，遮蔽查询和图元查询是可用的。</p>
 
-<p>另一种查询是分离定时器查询，它可以允许你测量GPU的性能和能力。仅当存在 {{domxref("EXT_disjoint_timer_query")}} 扩展时分离定时器查询才是可用的。</p>
+<p>另一种查询是分离定时器查询，它可以允许你测量 GPU 的性能和能力。仅当存在 {{domxref("EXT_disjoint_timer_query")}} 扩展时分离定时器查询才是可用的。</p>
 
-<p>使用 <code>WebGLQuery</code> 对象时, {{domxref("WebGL2RenderingContext")}} 的下列方法是有用的:</p>
+<p>使用 <code>WebGLQuery</code> 对象时，{{domxref("WebGL2RenderingContext")}} 的下列方法是有用的：</p>
 
 <ul>
  <li>{{domxref("WebGL2RenderingContext.createQuery()")}}</li>
@@ -25,7 +25,7 @@ translation_of: Web/API/WebGLQuery
 
 <h3 id="创建一个_WebGLQuery_对象">创建一个 <code>WebGLQuery</code> 对象</h3>
 
-<p>在本例中，<code>gl</code> 必须是 {{domxref("WebGL2RenderingContext")}}. <code>WebGLQuery</code> 对象在 WebGL 1中是不可用的。</p>
+<p>在本例中，<code>gl</code> 必须是 {{domxref("WebGL2RenderingContext")}}. <code>WebGLQuery</code> 对象在 WebGL 1 中是不可用的。</p>
 
 <pre class="brush: js">var query = gl.createQuery();
 </pre>

@@ -10,7 +10,7 @@ original_slug: Web/Events/unload
 ---
 <p>{{APIRef}}</p>
 
-<p>当文档或一个子资源正在被卸载时, 触发 <strong>unload</strong>事件。</p>
+<p>当文档或一个子资源正在被卸载时，触发 <strong>unload</strong>事件。</p>
 
 <table class="properties">
  <tbody>
@@ -33,7 +33,7 @@ original_slug: Web/Events/unload
  </tbody>
 </table>
 
-<p>它在下面两个事件后被触发:</p>
+<p>它在下面两个事件后被触发：</p>
 
 <ol>
  <li><a href="/en-US/docs/Mozilla_event_reference/beforeunload" title="/en-US/docs/Mozilla_event_reference/beforeunload">beforeunload</a> (可取消默认行为的事件)</li>
@@ -43,13 +43,13 @@ original_slug: Web/Events/unload
 <p>文档处于以下状态：</p>
 
 <ul>
- <li>所有资源仍存在 (图片, iframe 等.)</li>
+ <li>所有资源仍存在 (图片，iframe 等.)</li>
  <li>对于终端用户所有资源均不可见</li>
  <li>界面交互无效 (<code>window.open</code>, <code>alert</code>, <code>confirm</code> 等.)</li>
  <li>错误不会停止卸载文档的过程</li>
 </ul>
 
-<p>请注意<code>unload</code>事件也遵循文档树:父iframe会在子iframe卸载前卸载(参考下面的例子).</p>
+<p>请注意<code>unload</code>事件也遵循文档树：父 iframe 会在子 iframe 卸载前卸载 (参考下面的例子).</p>
 
 <h2 id="示例">示例</h2>
 
@@ -71,7 +71,7 @@ original_slug: Web/Events/unload
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>下面是 <code>child-frame.html的内容</code>:</p>
+<p>下面是 <code>child-frame.html 的内容</code>:</p>
 
 <pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -91,7 +91,7 @@ original_slug: Web/Events/unload
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>当父iframe被卸载，事件将按<code>console.log()</code> 消息描述的顺序触发。</p>
+<p>当父 iframe 被卸载，事件将按<code>console.log()</code> 消息描述的顺序触发。</p>
 
 <h2 id="规范">规范</h2>
 

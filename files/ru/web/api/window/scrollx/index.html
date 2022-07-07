@@ -7,7 +7,7 @@ translation_of: Web/API/Window/scrollX
 
 <p><code><strong>scrollX</strong></code> — свойство только для чтения интерфейса {{domxref("Window")}}. Возвращает число пикселей, на которое документ пролистали в данный момент по горизонтали. В современных браузерах это значение является точным числом субпикселей, что означает отсутствие необходимости в полном значении количества пикселей. Вы можете получить количество  пикселей, пролистанных по вертикали с помощью свойства {{domxref("Window.scrollY", "scrollY")}} .</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">var x = window.scrollX;</pre>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/Window/scrollX
 
 <p>Говоря технически, то <code>scrollX</code> возвращает X-координату от верхнего края текущего окна просмотра ({{Glossary("viewport")}}). Если окна просмотра нет, то возвращаемое значение = 0.</p>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <p>В данном примере проверяется текущая горизонтальная позиция пролистывания текущего документа. Если это число больше 400 пикселей, то окно пролистывается к началу.</p>
 
@@ -33,7 +33,7 @@ translation_of: Web/API/Window/scrollX
   window.scroll(0,0);
 }</pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <p>Свойство <code>pageXOffset</code> - другое название свойства <code>scrollX</code><span style="line-height: 1.572;">:</span></p>
 
@@ -49,7 +49,7 @@ var y = (window.pageYOffset !== undefined)
   ? window.pageYOffset
   : (document.documentElement || document.body.parentNode || document.body).scrollTop;</pre>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <table class="standard-table">
  <thead>
@@ -70,9 +70,9 @@ var y = (window.pageYOffset !== undefined)
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Window.scrollX")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("Window.scrollY")}}</li>

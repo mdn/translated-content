@@ -67,7 +67,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <p>新しい URLが、変更前のURLから hash のみを変更した URL である場合であっても、 <code>pushState()</code> は <code>hashchange</code> イベントを発火させることはないと注記しておきます。</p>
 
-<p>In a <a href="/en-US/docs/Mozilla/Tech/XUL">XUL</a> document, it creates the specified XUL element.</p>
+<p>In a <a href="/ja/docs/Mozilla/Tech/XUL">XUL</a> document, it creates the specified XUL element.</p>
 
 <p>In other documents, it creates an element with a <code>null</code> namespace URI.</p>
 
@@ -86,7 +86,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 <pre class="brush: js">var stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");</pre>
 
-<p>この2行のコードの説明は <a href="ja/docs/Web/API/History_API/Working_with_the_History_API$edit#Example_of_pushState_method">pushState()の例 </a><em>のセクションで見ることができます。次に、</em><code>http://mozilla.org/bar.html</code> が次の JavaScript を実行するものとします。</p>
+<p>この2行のコードの説明は <a href="/ja/docs/Web/API/History_API/Working_with_the_History_API$edit#Example_of_pushState_method">pushState()の例 </a><em>のセクションで見ることができます。次に、</em><code>http://mozilla.org/bar.html</code> が次の JavaScript を実行するものとします。</p>
 
 <pre class="brush: js">history.replaceState(stateObj, "page 3", "bar2.html");</pre>
 

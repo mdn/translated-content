@@ -11,131 +11,79 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 ---
-<div><font><font>{{JSRef}} {{deprecated_header}}</font></font></div>
+<div>{{JSRef}} {{deprecated_header}}</div>
 
-<p><strong><code>fontcolor()</code></strong><font><font>方法创建一个{{HTMLElement("font")}}的HTML元素让字符串被显示成指定的字体颜色。</font></font></p>
+<p><strong><code>fontcolor()</code></strong>方法创建一个{{HTMLElement("font")}}的 HTML 元素让字符串被显示成指定的字体颜色。</p>
 
 <div class="note">
-<p><strong><font><font>使用注意：</font></font></strong><font><font>&lt;font&gt;元素已经在在</font></font><a href="/en-US/docs/Web/Guide/HTML/HTML5"><font><font>HTML5中</font></font></a><font><font>被移除并且不应该在使用。</font><font>替代的是，web开发者应该使用</font></font><a href="/en-US/docs/Web/CSS"><font><font>CSS</font></font></a><font><font>属性。</font></font></p>
+<p><strong>备注：</strong>&lt;font&gt;元素已经在在<a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5 中</a>被移除并且不应该在使用。替代的是，Web 开发者应该使用<a href="/en-US/docs/Web/CSS">CSS</a>属性。</p>
 </div>
 
 <h2 id="语法">语法</h2>
 
 <pre class="syntaxbox"><code><var>str</var>.fontcolor(<var>color</var>)</code></pre>
 
-<h3 id="参数"><font><font>参数</font></font></h3>
+<h3 id="参数">参数</h3>
 
 <dl>
  <dt><code>color</code></dt>
- <dd><font><font>代表颜色的一个字符串，可以是三个一组的十六进制的RGB值，也可以是一个颜色名称的字符串字面量，</font><font>颜色名称的字符串字面量被列在了这里</font></font><a href="/en-US/docs/Web/CSS/color_value"><font><font>CSS颜色参考</font></font></a><font><font>。</font></font></dd>
+ <dd>代表颜色的一个字符串，可以是三个一组的十六进制的 RGB 值，也可以是一个颜色名称的字符串字面量，颜色名称的字符串字面量被列在了这里 <a href="/en-US/docs/Web/CSS/color_value">CSS 颜色参考</a>。</dd>
 </dl>
 
-<h3 id="返回值"><font><font>返回值</font></font></h3>
+<h3 id="返回值">返回值</h3>
 
-<dl>
- <dd><font><font>一个包含一个{{HTMLElement("font")}} HTML元素的字符串。</font></font></dd>
-</dl>
+<p>一个包含一个{{HTMLElement("font")}} HTML 元素的字符串。</p>
 
-<h2 id="描述"><font><font>描述</font></font></h2>
+<h2 id="描述">描述</h2>
 
-<p><font><font>如果你表示的颜色为十六进制RGB三原色，则必须使用的格式</font></font><code>rrggbb</code><font><font>。</font><font>例如，对于橙红色的十六进制RGB值是红色=FA，绿色=80，和蓝=72，所以橙红色的RGB三原色</font></font><code>"FA8072"</code><font><font>。</font></font></p>
+<p>如果你表示的颜色为十六进制 RGB 三原色，则必须使用的格式<code>rrggbb</code>。例如，对于橙红色的十六进制 RGB 值是红色=FA，绿色=80，和蓝=72，所以橙红色的 RGB 三原色<code>"FA8072"</code>。</p>
 
-<h2 id="例子"><font><font>例子</font></font></h2>
+<h2 id="例子">例子</h2>
 
-<h3 id="使用_fontcolor()"><font><font>使用 </font></font><code>fontcolor()</code></h3>
+<h3 id="使用_fontcolor()">使用 <code>fontcolor()</code></h3>
 
-<p><font><font>下面的示例使用</font></font><code>fontcolor()</code><font><font>方法来改变字符串的颜色，通过产生一个被HTML &lt;font&gt; 标签包裹的字符串</font></font>。</p>
+<p>下面的示例使用<code>fontcolor()</code>方法来改变字符串的颜色，通过产生一个被 HTML &lt;font&gt; 标签包裹的字符串。</p>
 
-<pre class="brush: js"><font><font>var worldString = "Hello, world"</font></font>
-<font><font>
+<pre class="brush: js">var worldString = "Hello, world"
 console.log(worldString.fontcolor('red') + ' is red in this line');
-// &lt;font color="red"&gt;Hello, world &lt;/font&gt; is red in this line"</font></font>
-<font><font>
-console.log（worldString.fontcolor('FF00') + ' is red in hexadecimal'</font></font><font><font>
-// &lt;font color="FF00"&gt;Hello，world &lt;/font&gt; is red in hexadecimal</font></font>
+// &lt;font color="red"&gt;Hello, world &lt;/font&gt; is red in this line"
+console.log（worldString.fontcolor('FF00') + ' is red in hexadecimal'
+// &lt;font color="FF00"&gt;Hello，world &lt;/font&gt; is red in hexadecimal
 </pre>
 
-<p><font><font>和{{domxref("HTMLElement.style","element.style")}}对象一起，你可以访问元素的</font></font><code>style</code><font><font>属性，并且更随意的去操纵它，例如：</font></font></p>
+<p>和{{domxref("HTMLElement.style","element.style")}}对象一起，你可以访问元素的<code>style</code>属性，并且更随意的去操纵它，例如：</p>
 
-<pre class="brush: js"><font><font>document.getElementById('yourElemId').style.color ='red';
-</font></font></pre>
+<pre class="brush: js">document.getElementById('yourElemId').style.color ='red';
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="col"><font><font>规范</font></font></th>
-   <th scope="col"><font><font>状态</font></font></th>
-   <th scope="col"><font><font>评论</font></font></th>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">评论</th>
   </tr>
   <tr>
-   <td><font><font>{{SpecName('ES6','#string.prototype.fontcolor', 'String.prototype.fontcolor')}}</font></font></td>
-   <td><font><font>{{Spec2('ES6')}}</font></font></td>
-   <td><font><font>初始定义。</font><font>实现在JavaScript中1.0。</font><font>定义为附加功能的ECMAScript针对Web浏览器（规范）附件B。</font></font></td>
+   <td>{{SpecName('ES6','#string.prototype.fontcolor', 'String.prototype.fontcolor')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>初始定义。实现在 JavaScript 中 1.0。定义为附加功能的 ECMAScript 针对 Web 浏览器（规范）附件 B。</td>
   </tr>
   <tr>
-   <td><font><font>{{SpecName('ESDraft', '#string.prototype.fontcolor', 'String.prototype.fontcolor')}}</font></font></td>
-   <td><font><font>{{Spec2('ESDraft')}}</font></font></td>
-   <td><font><font>定义为附加功能的ECMAScript针对Web浏览器（规范）附件B。</font></font></td>
+   <td>{{SpecName('ESDraft', '#string.prototype.fontcolor', 'String.prototype.fontcolor')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td>定义为附加功能的 ECMAScript 针对 Web 浏览器（规范）附件 B。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性"><font><font>浏览器兼容性</font></font></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div><font><font>{{CompatibilityTable}}</font></font></div>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th><font><font>Firefox(Gecko)</font></font></th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th><font><font>Safari</font></font></th>
-  </tr>
-  <tr>
-   <td>Basic Support</td>
-   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
-   <td><font><font>{{CompatGeckoDesktop("1.0")}}</font></font></td>
-   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
-   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
-   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th><font><font>Android</font></font></th>
-   <th><font><font>Chrome for Android</font></font></th>
-   <th><font><font>Firefox Mobile(Gecko)</font></font></th>
-   <th><font><font>IE Mobile</font></font></th>
-   <th><font><font>Opera Mobile</font></font></th>
-   <th><font><font>Safari Mobile</font></font></th>
-  </tr>
-  <tr>
-   <td>Basic Support</td>
-   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
-   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
-   <td><font><font>{{CompatGeckoMobile("1.0")}}</font></font></td>
-   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
-   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
-   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="也可以看看"><font><font>也可以看看</font></font></h2>
+<h2 id="也可以看看">也可以看看</h2>
 
 <ul>
- <li><font><font>{{jsxref("String.prototype.fontsize()")}}</font></font></li>
+ <li>{{jsxref("String.prototype.fontsize()")}}</li>
 </ul>

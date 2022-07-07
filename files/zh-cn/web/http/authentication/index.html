@@ -9,13 +9,11 @@ translation_of: Web/HTTP/Authentication
 ---
 <div>{{HTTPSidebar}}</div>
 
-<div></div>
-
-<p class="summary">HTTP 提供一个用于权限控制和认证的通用框架。最常用的HTTP认证方案是HTTP Basic authentication。本页介绍了通用的HTTP认证框架以及展示如何通过HTTP Basic authentication来限制权限访问您的服务器。</p>
+<p>HTTP 提供一个用于权限控制和认证的通用框架。最常用的 HTTP 认证方案是 HTTP Basic authentication。本页介绍了通用的 HTTP 认证框架以及展示如何通过 HTTP Basic authentication 来限制权限访问您的服务器。</p>
 
 <h2 id="通用的_HTTP_认证框架">通用的 HTTP 认证框架</h2>
 
-<p>{{RFC("7235")}} 定义了一个 HTTP 身份验证框架，服务器可以用来针对客户端的请求发送 {{glossary("challenge")}} （质询信息），客户端则可以用来提供身份验证凭证。质询与应答的工作流程如下：服务器端向客户端返回 {{HTTPStatus("401")}}（Unauthorized，未被授权的） 状态码，并在  {{HTTPHeader("WWW-Authenticate")}} 首部提供如何进行验证的信息，其中至少包含有一种质询方式。之后有意向证明自己身份的客户端可以在新的请求中添加 {{HTTPHeader("Authorization")}} 首部字段进行验证，字段值为身份验证凭证信息。通常客户端会弹出一个密码框让用户填写，然后发送包含有恰当的 <code>Authorization</code>  首部的请求。</p>
+<p>{{RFC("7235")}} 定义了一个 HTTP 身份验证框架，服务器可以用来针对客户端的请求发送 {{glossary("challenge")}}（质询信息），客户端则可以用来提供身份验证凭证。质询与应答的工作流程如下：服务器端向客户端返回 {{HTTPStatus("401")}}（Unauthorized，未被授权的）状态码，并在 {{HTTPHeader("WWW-Authenticate")}} 首部提供如何进行验证的信息，其中至少包含有一种质询方式。之后有意向证明自己身份的客户端可以在新的请求中添加 {{HTTPHeader("Authorization")}} 首部字段进行验证，字段值为身份验证凭证信息。通常客户端会弹出一个密码框让用户填写，然后发送包含有恰当的 <code>Authorization</code>  首部的请求。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14689/HTTPAuth.png" style="height: 335px; width: 710px;"></p>
 
@@ -62,10 +60,10 @@ Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;
 <p>最常见的验证方案是“基本验证方案”（"Basic"），该方案会在下面进行详细阐述。 IANA 维护了<a class="external external-icon" href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">一系列的验证方案</a>，除此之外还有其他类型的验证方案由虚拟主机服务提供，例如 Amazon AWS 。常见的验证方案包括：</p>
 
 <ul>
- <li><strong>Basic</strong> (查看 {{rfc(7617)}}, base64编码凭证. 详情请参阅下文.),</li>
- <li><strong>Bearer</strong> (查看 {{rfc(6750)}}, bearer 令牌通过OAuth 2.0保护资源),</li>
- <li><strong>Digest</strong> (查看 {{rfc(7616)}}, 只有 md5 散列 在Firefox中支持, 查看 {{bug(472823)}} 用于SHA加密支持),</li>
- <li><strong>HOBA</strong> (查看 {{rfc(7486)}} (草案), <strong>H</strong>TTP <strong>O</strong>rigin-<strong>B</strong>ound 认证, 基于数字签名),</li>
+ <li><strong>Basic</strong> (查看 {{rfc(7617)}}，base64 编码凭证。详情请参阅下文.),</li>
+ <li><strong>Bearer</strong> (查看 {{rfc(6750)}}，bearer 令牌通过 OAuth 2.0 保护资源),</li>
+ <li><strong>Digest</strong> (查看 {{rfc(7616)}}，只有 md5 散列 在 Firefox 中支持，查看 {{bug(472823)}} 用于 SHA 加密支持),</li>
+ <li><strong>HOBA</strong> (查看 {{rfc(7486)}}（草案），<strong>H</strong>TTP <strong>O</strong>rigin-<strong>B</strong>ound 认证，基于数字签名),</li>
  <li><strong>Mutual</strong> (查看 <a href="https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11">draft-ietf-httpauth-mutual</a>),</li>
  <li>
   <p><strong>AWS4-HMAC-SHA256</strong> (查看 <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">AWS docs</a>).</p>
@@ -80,28 +78,28 @@ Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;
 
 <p>由于用户 ID 与密码是是以明文的形式在网络中进行传输的（尽管采用了 base64 编码，但是 base64 算法是可逆的），所以基本验证方案并不安全。基本验证方案应与 HTTPS / TLS 协议搭配使用。假如没有这些安全方面的增强，那么基本验证方案不应该被来用保护敏感或者极具价值的信息。</p>
 
-<h3 id="使用Apache限制访问和基本身份验证">使用Apache限制访问和基本身份验证</h3>
+<h3 id="使用Apache限制访问和基本身份验证">使用 Apache 限制访问和基本身份验证</h3>
 
-<p>要对Apache服务器上的目录进行密码保护， 你需要一个 <code>.htaccess</code> 和 a <code>.htpasswd</code> 文件.</p>
+<p>要对 Apache 服务器上的目录进行密码保护， 你需要一个 <code>.htaccess</code> 和 a <code>.htpasswd</code> 文件。</p>
 
-<p>该 <code>.htaccess</code> 文件格式通常看起来像这样:</p>
+<p>该 <code>.htaccess</code> 文件格式通常看起来像这样：</p>
 
 <pre>AuthType Basic
 AuthName "Access to the staging site"
 AuthUserFile /path/to/.htpasswd
 Require valid-user</pre>
 
-<p>该 <code>.htaccess</code> 文件引用一个 <code>.htpasswd</code> 文件,其中每行用冒号（“：”）分隔的用户名和密码. 你不能看到真实的密码因为它们是 <a href="https://httpd.apache.org/docs/2.4/misc/password_encryptions.html">encrypted</a> (在这个例子中是使用了 MD5). 你可以命名<code>.htpasswd</code> 文件 为你所喜欢的名字, 但是应该保证这个文件不被其他人访问. (Apache通常配置阻止访问 <code>.ht*</code> 类的文件).</p>
+<p>该 <code>.htaccess</code> 文件引用一个 <code>.htpasswd</code> 文件，其中每行用冒号（“：”）分隔的用户名和密码。你不能看到真实的密码因为它们是 <a href="https://httpd.apache.org/docs/2.4/misc/password_encryptions.html">encrypted</a> (在这个例子中是使用了 MD5). 你可以命名<code>.htpasswd</code> 文件 为你所喜欢的名字，但是应该保证这个文件不被其他人访问. (Apache 通常配置阻止访问 <code>.ht*</code> 类的文件).</p>
 
 <pre>aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
 user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 </pre>
 
-<h3 id="nginx访问限制和基本认证">nginx访问限制和基本认证</h3>
+<h3 id="nginx访问限制和基本认证">nginx 访问限制和基本认证</h3>
 
-<p>在nginx配置中，对需要保护的location你需要做如下配置：<code>auth_basic指令提供密码保护域的名称；auth_basic_user_file指令指定包含用户密文的证书的文件（与apache例子中一致）</code></p>
+<p>在 nginx 配置中，对需要保护的 location 你需要做如下配置：<code>auth_basic 指令提供密码保护域的名称；auth_basic_user_file 指令指定包含用户密文的证书的文件（与 apache 例子中一致）</code></p>
 
-<p>在 nginx 中, 你需要指定一个保护区域和该 <code>auth_basic</code> 指令提供的保护区域名字. 然后该 <code>auth_basic_user_file</code> 指令指向一个<code>.htpasswd</code> 包含加密用户凭据的文件, 就像上面的 apache 例子.</p>
+<p>在 nginx 中，你需要指定一个保护区域和该 <code>auth_basic</code> 指令提供的保护区域名字。然后该 <code>auth_basic_user_file</code> 指令指向一个<code>.htpasswd</code> 包含加密用户凭据的文件，就像上面的 apache 例子。</p>
 
 <pre>location /status {
     auth_basic           "Access to the staging site";

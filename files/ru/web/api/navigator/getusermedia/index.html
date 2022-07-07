@@ -15,7 +15,7 @@ translation_of: Web/API/Navigator/getUserMedia
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">navigator.getUserMedia(<var>constraints</var>, <var>successCallback</var>, <var>errorCallback</var>);</pre>
+<pre class="syntaxbox">navigator.getUserMedia(<var>constraints</var>, <var>successCallback</var>, <var>errorCallback</var>);</pre>
 
 <h3 id="Параметры">Параметры</h3>
 
@@ -24,7 +24,7 @@ translation_of: Web/API/Navigator/getUserMedia
  <dd>{{domxref("MediaStreamConstraints")}} <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>объект, определяющий типы запрашиваемых медиа, а также любые требования для каждого типа.</span></span> <span class="ChMk0b JLqJ4b"><span>Подробнее см. В разделе ограничений современного метода {{domxref ("MediaDevices.getUserMedia ()")}}, а также в статье</span></span></span> <a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Возможности, ограничения и настройки.</a></dd>
  <dt><code><var>successCallback</var></code></dt>
  <dd><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Функция, которая вызывается при утверждении запроса на доступ к мультимедиа.</span></span> <span class="ChMk0b JLqJ4b"><span>Функция вызывается с одним параметром: объектом {{domxref ("MediaStream")}}, который содержит медиапоток.</span></span> <span class="ChMk0b JLqJ4b"><span>Затем колбэк может назначить поток желаемому объекту (например, элементу {{HTMLElement ("audio")}} или {{HTMLElement ("video")}}), как показано в следующем примере:</span></span></span>
- <pre class="brush: js notranslate">function(stream) {
+ <pre class="brush: js">function(stream) {
    var video = document.querySelector('video');
    video.srcObject = stream;
    video.onloadedmetadata = function(e) {
@@ -50,7 +50,7 @@ translation_of: Web/API/Navigator/getUserMedia
 
 <p>Это пример использования <code>getUserMedia()</code> <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>, включая код для работы с префиксами различных браузеров.</span></span> <span class="ChMk0b JLqJ4b"><span>Обратите внимание, что это устаревший способ сделать это: современные примеры см. В разделе «Примеры» в разделе {{domxref ("MediaDevices.getUserMedia ()")}}.</span></span></span></p>
 
-<pre class="brush: js notranslate">navigator.getUserMedia = navigator.getUserMedia ||
+<pre class="brush: js">navigator.getUserMedia = navigator.getUserMedia ||
                          navigator.webkitGetUserMedia ||
                          navigator.mozGetUserMedia;
 
@@ -76,7 +76,7 @@ if (navigator.getUserMedia) {
 
 <p class="syntaxbox"><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Чтобы использовать</span></span></span><code>getUserMedia()</code><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span><code> </code>в устанавливаемом приложении (например, приложении Firefox OS), вам необходимо указать одно или оба из следующих полей внутри файла манифеста:</span></span></span></p>
 
-<pre class="brush: js notranslate">"permissions": {
+<pre class="brush: js">"permissions": {
   "audio-capture": {
     "description": "Required to capture audio using getUserMedia()"
   },
@@ -95,7 +95,7 @@ if (navigator.getUserMedia) {
 
 
 
-<p>{{Compat("api.Navigator.getUserMedia")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

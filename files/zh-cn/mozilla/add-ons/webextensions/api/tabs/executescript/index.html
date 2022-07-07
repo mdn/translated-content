@@ -14,7 +14,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 
 <p>将 JavaScript 代码注入页面。</p>
 
-<p>You can inject code into pages whose URL can be expressed using a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match pattern</a>: meaning, its scheme must be one of "http", "https", "file", "ftp". To do this you must have the permission for the page's URL, either explicitly as a <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a>, or via the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab permission</a>.</p>
+<p>You can inject code into pages whose URL can be expressed using a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match pattern</a>: meaning, its scheme must be one of "http", "https", "file", "ftp". To do this you must have the permission for the page's URL, either explicitly as a <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a>, or via the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab permission</a>.</p>
 
 <p>You can also inject code into pages packaged with your own extension:</p>
 
@@ -30,7 +30,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 
 <p>The scripts you inject are called content scripts. <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Learn more about content scripts</a>.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -67,7 +67,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array of objects, representing the result of the script in every injected frame.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array of objects, representing the result of the script in every injected frame.</p>
 
 <p>The result of the script is the last evaluated statement, which is similar to what would be output (the results, not any <code>console.log()</code> output) if you executed the script in the <a href="/en-US/docs/Tools/Web_Console">Web Console</a>. For example, consider a script like this:</p>
 

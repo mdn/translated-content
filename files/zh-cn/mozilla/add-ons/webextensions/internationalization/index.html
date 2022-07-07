@@ -68,11 +68,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 <div class="moreinfo">你可以使用<a href="https://r12a.github.io/app-subtags/">Language subtag lookup page</a>上的查找工具查询语言子标签。请注意，你需要搜索语言的英语名称。</div>
 </div>
 
-<p>每个 i18n 系统都需要你提供想支持的各语言区域的已翻译字符串。 在 WebExtensions 中，这些字符串放在一个名为 <code>_locales</code> 的目录中，<code>_locales</code> 目录则位于扩展的根目录。每个语言区域都有一个名叫 <code>messages.json</code> 的文件，其中包含相应的字符串（在 WebExtension 中称作“消息”），这个文件放在 <code>_locales</code> 的子目录下，子目录以对应语言区域的语言子标签来命名。</p>
+<p>每个 i18n 系统都需要你提供想支持的各语言区域的已翻译字符串。在 WebExtensions 中，这些字符串放在一个名为 <code>_locales</code> 的目录中，<code>_locales</code> 目录则位于扩展的根目录。每个语言区域都有一个名叫 <code>messages.json</code> 的文件，其中包含相应的字符串（在 WebExtension 中称作“消息”），这个文件放在 <code>_locales</code> 的子目录下，子目录以对应语言区域的语言子标签来命名。</p>
 
 <p>注意，如果子标签包含一个基本语言和一个区域变种，那么语言与变种之间通常会以连字号隔开，例如 "en-US"。但作为 <code>_locales</code> 的子目录，<strong>它必须采用下划线来分隔</strong>，如 "en_US"。</p>
 
-<p>因此<a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n/_locales" title="1">在我们这个示例应用</a>中，我们有如下几个目录："en"（英语）、"de"（德语）、"nl"（荷兰语）以及 "ja"（日语）。每个目录都包含一个 <code>messages.json</code> 文件。</p>
+<p>因此<a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n/_locales">在我们这个示例应用</a>中，我们有如下几个目录："en"（英语）、"de"（德语）、"nl"（荷兰语）以及 "ja"（日语）。每个目录都包含一个 <code>messages.json</code> 文件。</p>
 
 <p>现在我们来看其中一个文件（<a href="https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/_locales/en/messages.json">_locales/en/messages.json</a>）的结构：</p>
 
@@ -104,7 +104,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
   }
 }</pre>
 
-<p>这个文件是一个标准的 JSON — 其中每个成员都是一个带有名称的对象，里面包含一个 <code>message</code>（消息）和一个 <code>description</code>（描述）。这些项目都是字符串。<code>$URL$</code> 是一个占位符，在 WebExtension 调用 <code>notificationContent</code> 成员时将被一个子字符串替换。你将在接下来的{{anch("从 JavaScript 检索消息字符串")}}章节中了解如何使用。</p>
+<p>这个文件是一个标准的 JSON — 其中每个成员都是一个带有名称的对象，里面包含一个 <code>message</code>（消息）和一个 <code>description</code>（描述）。这些项目都是字符串。<code>$URL$</code> 是一个占位符，在 WebExtension 调用 <code>notificationContent</code> 成员时将被一个子字符串替换。你将在接下来的<a href="#从_javascript_检索消息字符串">从 JavaScript 检索消息字符串</a>章节中了解如何使用。</p>
 
 <div class="note">
 <p><strong>注意：</strong>你可以在 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference">Locale-Specific Message reference</a> 里找到更多有关  <code>messages.json</code> 文件中内容的信息。</p>
@@ -143,7 +143,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 
 <pre class="brush: json">"default_locale": "en"</pre>
 
-<p>如果扩展没有包含浏览器当前语言区域的本地化字符串，则会使用该字段所指定的默认语言区域。任何浏览器语言区域下不可用的消息字符串都将用默认语言区域的字符串替换。有关浏览器如何选择字符串，还有一些细节需要注意 — 详见{{anch("选择本地化的字符串")}}。</p>
+<p>如果扩展没有包含浏览器当前语言区域的本地化字符串，则会使用该字段所指定的默认语言区域。任何浏览器语言区域下不可用的消息字符串都将用默认语言区域的字符串替换。有关浏览器如何选择字符串，还有一些细节需要注意 — 详见<a href="#选择本地化的字符串">选择本地化的字符串</a>。</p>
 
 <h2 id="依赖语言区域的_CSS">依赖语言区域的 CSS</h2>
 
@@ -153,7 +153,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
   background-image: url(../images/__MSG_extensionName__/header.png);
 }</pre>
 
-<p>这很有用，不过在这种情况下使用{{anch("预定义消息")}}来处理或许会更好。</p>
+<p>这很有用，不过在这种情况下使用<a href="#预定义消息">预定义消息</a>来处理或许会更好。</p>
 
 <h2 id="从_JavaScript_检索消息字符串">从 JavaScript 检索消息字符串</h2>
 
@@ -186,7 +186,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p><code>"placeholders"</code> 这个成员定义了所有的占位符，以及它们所检索的来源。<code>"url"</code> 这个占位符指定了其内容取自 $1，它就是<code> getMessage() 第二个参数里的第一个值。由于占位符就叫做</code> <code>"url"，我们就在实际的消息字符串中用</code> <code>$URL$</code> 调用它（<code>"name"</code> 用<code> $NAME$</code> 调用也是一样的，以此类推）。对于多个占位符，你可以将其置于数组内，并作为第二个参数传递到 {{WebExtAPIRef("i18n.getMessage()")}} — <code>[a, b, c]</code> 可替换为 <code>$1</code>, <code>$2</code>, and <code>$3，以此类推，并置于</code> <code>messages.json</code> 内。</p>
 
-<p>接下来我们看一个例子：在 <code>en/messages.json 文件中</code>原始的 <code>notificationContent</code> 消息字符串如下： in the <code>en/messages.json</code> file is</p>
+<p>接下来我们看一个例子：在 <code>en/messages.json 文件中</code>原始的 <code>notificationContent</code> 消息字符串如下：in the <code>en/messages.json</code> file is</p>
 
 <pre>您点击了 $URL$。</pre>
 
@@ -263,7 +263,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
       <ul>
        <li>messages.json
         <ul>
-         <li><code>{ "colorLocalised": { "message": "<span lang="fr">couleur</span>", "description": "Color." }, ...}</code></li>
+         <li><code>{ "colorLocalised": { "message": "couleur", "description": "Color." }, ...}</code></li>
         </ul>
        </li>
       </ul>
@@ -283,7 +283,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <h2 id="预定义消息">预定义消息</h2>
 
-<p>i18n 模块为我们提供了一些预定义的消息，我们可以用之前在 {{anch("Calling message strings from manifests and extension CSS")}} 中看到的相同的方式调用。例如：</p>
+<p>i18n 模块为我们提供了一些预定义的消息，我们可以用之前在 <a href="#在_manifests_中检索本地化的字符串">在 manifests 中检索本地化的字符串</a> 中看到的相同的方式调用。例如：</p>
 
 <pre>__MSG_extensionName__</pre>
 

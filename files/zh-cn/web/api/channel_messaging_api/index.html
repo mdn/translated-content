@@ -5,7 +5,7 @@ translation_of: Web/API/Channel_Messaging_API
 ---
 <p>{{DefaultAPISidebar("Channel Messaging API")}}</p>
 
-<p class="summary"><strong>Channel Messaging API </strong>允许两个不同的脚本运行在同一个文档的不同浏览器上下文（比如两个 iframe，或者文档主体和一个 iframe，使用 {{domxref("SharedWorker")}} 的两个文档，或者两个 worker）来直接通讯，在每端使用一个端口（port）通过双向频道（channel）向彼此传递消息。</p>
+<p><strong>Channel Messaging API </strong>允许两个不同的脚本运行在同一个文档的不同浏览器上下文（比如两个 iframe，或者文档主体和一个 iframe，使用 {{domxref("SharedWorker")}} 的两个文档，或者两个 worker）来直接通讯，在每端使用一个端口（port）通过双向频道（channel）向彼此传递消息。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -41,47 +41,22 @@ translation_of: Web/API/Channel_Messaging_API
 
 <h2 id="规格">规格</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规格</th>
-   <th scope="col">状态</th>
-   <th scope="col">补充</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'web-messaging.html#channel-messaging', 'Channel messaging')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("api.MessageChannel")}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
 <h3 id="MessageChannel"><code>MessageChannel</code></h3>
-
-<div>
-
 
 <p>{{Compat("api.MessageChannel", 0)}}</p>
 
 <h3 id="MessagePort"><code>MessagePort</code></h3>
 
-<div>
 <p>{{Compat("api.MessagePort", 0)}}</p>
-</div>
-</div>
-</div>
 
-<h2 id="参考">参考</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a></li>
  <li><a href="/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel API</a></li>
 </ul>
-
-<p>
- <audio class="hidden"> </audio>
-</p>

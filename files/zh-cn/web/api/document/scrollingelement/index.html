@@ -5,7 +5,7 @@ translation_of: Web/API/Document/scrollingElement
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><strong><code>scrollingElement</code></strong> （ {{domxref("Document")}} 的只读属性）返回滚动文档的 {{domxref("Element")}} 对象的引用。 在标准模式下, 这是文档的根元素, {{domxref("document.documentElement")}}.</p>
+<p><strong><code>scrollingElement</code></strong> （ {{domxref("Document")}} 的只读属性）返回滚动文档的 {{domxref("Element")}} 对象的引用。 在标准模式下，这是文档的根元素， {{domxref("document.documentElement")}}.</p>
 
 <p>当在怪异模式下， <code>scrollingElement</code> 属性返回 HTML <code>body</code> 元素（若不存在返回 null ）。</p>
 
@@ -21,77 +21,8 @@ scrollElm.scrollTop = 0;
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View','#dom-document-scrollingelement','scrollingElement')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(44.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("48.0")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>33.0</td>
-   <td>9.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>36</td>
-   <td>9.0</td>
-   <td>{{CompatChrome(44.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] This feature was initially implemented in Gecko 47.0 {{geckoRelease("47.0")}} behind the preference <code>dom.document.scrollingElement.enabled</code>, defaulting to <code>true</code> on Nightly builds and <code>false</code> otherwise. In Gecko 48.0 {{geckoRelease("48.0")}} the feature got enabled by default and the preference removed.</p>
+{{Compat("api.Document.scrollingElement")}}

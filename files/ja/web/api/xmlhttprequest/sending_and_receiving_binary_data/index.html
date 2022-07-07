@@ -128,7 +128,7 @@ req.sendAsBinary(aBody);
 
 <div class="note"><strong>メモ:</strong> この <code>sendAsBinary</code> メソッドは標準外であり、 Gecko 31 {{ geckoRelease(31) }} で非推奨扱いになって、まもなく削除されるでしょう。上で説明したように、標準の <code>send(Blob data)</code> メソッドを使用することができます。</div>
 
-<p>また、{{interface("nsIFileInputStream")}} のインスタンスの <a href="/ja/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a> を通す事でバイナリコンテンツを送信できます。この場合は、あなた自身が <code>Content-Length</code> ヘッダセットしてはならず、この情報はストリームから自動的に取得されます。</p>
+<p>また、<code>nsIFileInputStream</code> のインスタンスの <a href="/ja/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a> を通す事でバイナリコンテンツを送信できます。この場合は、あなた自身が <code>Content-Length</code> ヘッダセットしてはならず、この情報はストリームから自動的に取得されます。</p>
 
 <pre class="brush: js">// ファイルからストリームを作成する。
 var stream = Components.classes["@mozilla.org/network/file-input-stream;1"]

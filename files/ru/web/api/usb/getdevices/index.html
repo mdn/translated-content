@@ -17,7 +17,7 @@ translation_of: Web/API/USB/getDevices
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><em>USB</em>.getDevices()</pre>
+<pre class="syntaxbox"><em>USB</em>.getDevices()</pre>
 
 <h3 id="Параметры">Параметры</h3>
 
@@ -31,7 +31,7 @@ translation_of: Web/API/USB/getDevices
 
 <p>В следующем примере имена продуктов и серийные номера сопряжённых устройств выводятся в консоль. Для информации о сопряжённых устройствах, смотрите {{DOMxRef("USB.requestDevice","USB.requestDevice()")}}.</p>
 
-<pre class="brush: js notranslate">navigator.usb.getDevices()
+<pre class="brush: js">navigator.usb.getDevices()
 .then(devices =&gt; {
   console.log("Total devices: " + devices.length);
   devices.forEach(device =&gt; {
@@ -41,23 +41,10 @@ translation_of: Web/API/USB/getDevices
 
 <h2 id="Спецификация">Спецификация</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Web USB","#dom-usb-getdevices","getDevices")}}</td>
-   <td>{{Spec2("Web USB")}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 
 
-<p>{{Compat("api.USB.getDevices")}}</p>
+<p>{{Compat}}</p>

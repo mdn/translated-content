@@ -15,7 +15,7 @@ original_slug: Глоссарий/Idempotent
 
 <p><code>GET /pageX HTTP/1.1</code> идемпотентен. Вызвавший несколько раз подряд этот запрос, клиент получит тот же результат:</p>
 
-<pre class="notranslate">GET /pageX HTTP/1.1
+<pre>GET /pageX HTTP/1.1
 GET /pageX HTTP/1.1
 GET /pageX HTTP/1.1
 GET /pageX HTTP/1.1
@@ -23,14 +23,14 @@ GET /pageX HTTP/1.1
 
 <p><code>POST /add_row HTTP/1.1</code> не идемпотентен; если его вызвать несколько раз, то он добавит несколько строк:</p>
 
-<pre class="notranslate">POST /add_row HTTP/1.1
+<pre>POST /add_row HTTP/1.1
 POST /add_row HTTP/1.1   -&gt; Adds a 2nd row
 POST /add_row HTTP/1.1   -&gt; Adds a 3rd row
 </pre>
 
 <p><code>DELETE /idX/delete HTTP/1.1</code> идемпотентен, даже если возвращаемый код отличается:</p>
 
-<pre class="notranslate">DELETE /idX/delete HTTP/1.1   -&gt; Returns 200 if idX exists
+<pre>DELETE /idX/delete HTTP/1.1   -&gt; Returns 200 if idX exists
 DELETE /idX/delete HTTP/1.1   -&gt; Returns 404 as it just got deleted
 DELETE /idX/delete HTTP/1.1   -&gt; Returns 404</pre>
 

@@ -19,11 +19,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 <div>{{EmbedInteractiveExample("pages/js/array-lastindexof.html")}}</div>
 <p class="hidden">Источник этого интерактивного примера хранится в репозитории GitHub. Если вы хотите внести свой вклад в проект интерактивных примеров, скопируйте <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и отправьте нам запрос на перенос.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>arr</var>.lastIndexOf(<var>searchElement</var>[, <var>fromIndex</var> = arr.length])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>searchElement</code></dt>
@@ -32,13 +32,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
  <dd>Необязательный параметр. Индекс, с которого начинать поиск в обратном направлении. Если индекс больше или равен длине массива, просматривается весь массив. Если индекс является отрицательным числом, он трактуется как смещение с конца массива. Обратите внимание: если индекс отрицателен, массив всё равно просматривается от конца к началу. Если рассчитанный индекс оказывается меньше 0, массив даже не просматривается. Значение по умолчанию равно длине массива, что означает, что просматривается весь массив.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>lastIndexOf()</code> сравнивает искомый элемент <code>searchElement</code> с элементами в массиве, используя <a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">строгое сравнение</a> (тот же метод используется оператором <code>===</code>, тройное равно).</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_lastIndexOf" name="Example:_Using_lastIndexOf">Пример: использование <code>lastIndexOf()</code></h3>
+<h3 id="Example:_Using_lastIndexOf">Пример: использование <code>lastIndexOf()</code></h3>
 
 <p>В следующем примере метод <code>lastIndexOf()</code> используется для поиска значений в массиве.</p>
 
@@ -51,7 +51,7 @@ array.lastIndexOf(2, -2); // 0
 array.lastIndexOf(2, -1); // 3
 </pre>
 
-<h3 id="Example:_Finding_all_the_occurrences_of_an_element" name="Example:_Finding_all_the_occurrences_of_an_element">Пример: нахождение всех вхождений элемента</h3>
+<h3 id="Example:_Finding_all_the_occurrences_of_an_element">Пример: нахождение всех вхождений элемента</h3>
 
 <p>В следующем примере метод <code>lastIndexOf()</code> используется для поиска всех индексов элемента в указанном массиве, которые с помощью метода {{jsxref("Array.prototype.push()", "push()")}} добавляются в другой массив.</p>
 
@@ -70,7 +70,7 @@ console.log(indices);
 
 <p>Обратите внимание, что мы обрабатываем случай <code>idx == 0</code> отдельно, поскольку элемент всегда будет найден, независимо от параметра <code>fromIndex</code>, если он является первым элементом в массиве. Этим он отличается от метода {{jsxref("Array.prototype.indexOf()", "indexOf()")}}.</p>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Метод <code>lastIndexOf()</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>lastIndexOf()</code> в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; он предполагает, что {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, {{jsxref("Global_Objects/Number", "Number")}}, {{jsxref("Math.floor()")}}, {{jsxref("Math.abs()")}} и {{jsxref("Math.min()")}} имеют свои первоначальные значения.</p>
 
@@ -115,37 +115,14 @@ if (!Array.prototype.lastIndexOf) {
 
 <p>И снова обратите внимание, что данная реализация нацелена на абсолютную совместимость с методом <code>lastIndexOf()</code>, реализованным в Firefox и движке JavaScript SpiderMonkey, включая несколько случаев, которые являются спорными крайними случаями. Если вы используете этот код в реальных приложениях, вы можете вычислять параметр <code>from</code> менее сложным образом, игнорируя эти случаи.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.15', 'Array.prototype.lastIndexOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.lastindexof', 'Array.prototype.lastIndexOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.lastindexof', 'Array.prototype.lastIndexOf')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div>
-<p>{{Compat("javascript.builtins.Array.lastIndexOf")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h2 id="Замечания_по_совместимости">Замечания по совместимости</h2>
@@ -154,7 +131,7 @@ if (!Array.prototype.lastIndexOf) {
  <li>Начиная с Firefox 47 {{geckoRelease (47)}}, метод больше не будет возвращать <code>-0</code>. Например, <code>[0].lastIndexOf(0, -0)</code> теперь всегда будет возвращать <code>+0</code> ({{bug (1242043)}}).</li>
 </ul>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.charAt()")}}</li>

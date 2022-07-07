@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>slice()</strong></code>方法返回一个新的 <code>ArrayBuffer</code> ，它的内容是这个<code>ArrayBuffer的</code>字节副本，从begin（包括），到end（不包括）。</p>
+<p><code><strong>slice()</strong></code>方法返回一个新的 <code>ArrayBuffer</code> ，它的内容是这个 <code>ArrayBuffer</code> 的字节副本，从 begin（包括），到 end（不包括）。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}</div>
 
@@ -20,11 +20,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 <dl>
  <dt><code>begin</code></dt>
  <dd>从零开始的字节索引，切片从这开始。</dd>
-</dl>
-
-<dl>
  <dt><code>end</code></dt>
- <dd>结束切片的字节索引。如果没指定end，新的 <code>ArrayBuffer</code> 将包含这个 <code>ArrayBuffer</code> 从头到尾的所有字节。由begin和end指定的这个范围夹在当前数组的有效索引范围内。如果新<code>ArrayBuffer</code>的长度在计算后为负，它将强制为0 。</dd>
+ <dd>结束切片的字节索引。如果没指定 end，新的 <code>ArrayBuffer</code> 将包含这个 <code>ArrayBuffer</code> 从头到尾的所有字节。由 begin 和 end 指定的这个范围夹在当前数组的有效索引范围内。如果新<code>ArrayBuffer</code>的长度在计算后为负，它将强制为 0 。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -33,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 
 <h2 id="描述">描述</h2>
 
-<p><code>slice</code> 方法复制到但不包括由end参数指示的字节。如果begin或end是负数，则指的是从数组末尾开始的索引，而不是从头开始。</p>
+<p><code>slice</code> 方法复制到但不包括由 end 参数指示的字节。如果 begin 或 end 是负数，则指的是从数组末尾开始的索引，而不是从头开始。</p>
 
 <h2 id="示例">示例</h2>
 

@@ -9,9 +9,9 @@ translation_of: Web/HTTP/Status/301
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>HTTP <code><strong>301</strong></code><strong><code> 永久重定向</code></strong> 说明请求的资源已经被移动到了由 {{HTTPHeader("Location")}} 头部指定的url上，是固定的不会再改变。搜索引擎会根据该响应修正。</p>
+<p>HTTP <code><strong>301</strong></code><strong><code> 永久重定向</code></strong> 说明请求的资源已经被移动到了由 {{HTTPHeader("Location")}} 头部指定的 url 上，是固定的不会再改变。搜索引擎会根据该响应修正。</p>
 
-<p>尽管标准要求浏览器在收到该响应并进行重定向时不应该修改http method和body，但是有一些浏览器可能会有问题。所以最好是在应对{{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 方法时使用301，其他情况使用{{HTTPStatus("308")}} 来替代301。</p>
+<p>尽管标准要求浏览器在收到该响应并进行重定向时不应该修改 http method 和 body，但是有一些浏览器可能会有问题。所以最好是在应对{{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 方法时使用 301，其他情况使用{{HTTPStatus("308")}} 来替代 301。</p>
 
 <h2 id="状态">状态</h2>
 

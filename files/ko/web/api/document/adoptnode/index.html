@@ -37,13 +37,13 @@ translation_of: Web/API/Document/adoptNode
 
 <p>보통 <code>adoptNode</code> 호출은 다른 방식으로 구현된 곳에서 노드를 불러오기 때문에 실패하는 경우가 많다. 하지만 브라우저로 인한 문제인 경우는 문제가 된다.</p>
 
-<p></p><p>Nodes from external documents should be cloned using <a href="/ko/docs/Web/API/Document/importNode" title="현재 문서가 아닌 외부 문서의 노드를 복사하여 현재 문서에 넣을 수 있도록 해줍니다."><code>document.importNode()</code></a> (or adopted using <a href="/ko/docs/Web/API/Document/adoptNode" title="외부 문서로부터 노드를 가져온다. 해당 노드와 그 하위트리는 기존의 문서에서 지워지고 해당 노드의 ownerDocument 는 현재 문서로 바뀐다. 그리고 그 노드는 현재의 문서에 삽입된다."><code>document.adoptNode()</code></a>) before they
+<p>Nodes from external documents should be cloned using <a href="/ko/docs/Web/API/Document/importNode" title="현재 문서가 아닌 외부 문서의 노드를 복사하여 현재 문서에 넣을 수 있도록 해줍니다."><code>document.importNode()</code></a> (or adopted using <a href="/ko/docs/Web/API/Document/adoptNode" title="외부 문서로부터 노드를 가져온다. 해당 노드와 그 하위트리는 기존의 문서에서 지워지고 해당 노드의 ownerDocument 는 현재 문서로 바뀐다. 그리고 그 노드는 현재의 문서에 삽입된다."><code>document.adoptNode()</code></a>) before they
     can be inserted into the current document. For more on the <a href="/ko/docs/Web/API/Node/ownerDocument" title="Node.ownerDocument 읽기 전용 속성은 이 node 의 최상위 document 객체를 반환합니다."><code>Node.ownerDocument</code></a> issues, see the
     <a class="external" href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
 
     <p>Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many
     sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for
-    improved future compatibility.</p><p></p>
+    improved future compatibility.</p>
 
 <h2 id="Specification" name="Specification">명세</h2>
 

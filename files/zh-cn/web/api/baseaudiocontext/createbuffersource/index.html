@@ -12,7 +12,7 @@ original_slug: Web/API/AudioContext/createBufferSource
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p><code>createBufferSource()</code> 方法用于创建一个新的{{ domxref("AudioBufferSourceNode") }}接口, 该接口可以通过{{ domxref("AudioBuffer") }} 对象来播放音频数据. {{ domxref("AudioBuffer") }}对象可以通过{{domxref("AudioContext.createBuffer")}} 来创建或者通过 {{domxref("AudioContext.decodeAudioData")}}成功解码音轨后获取.</p>
+<p><code>createBufferSource()</code> 方法用于创建一个新的{{ domxref("AudioBufferSourceNode") }}接口，该接口可以通过{{ domxref("AudioBuffer") }} 对象来播放音频数据。{{ domxref("AudioBuffer") }}对象可以通过{{domxref("AudioContext.createBuffer")}} 来创建或者通过 {{domxref("AudioContext.decodeAudioData")}}成功解码音轨后获取。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -22,11 +22,11 @@ var source = audioCtx.createBufferSource();</pre>
 
 <h2 id="返回">返回</h2>
 
-<p>一个{{domxref("AudioBufferSourceNode")}}对象.</p>
+<p>一个{{domxref("AudioBufferSourceNode")}}对象。</p>
 
 <h2 id="例子">例子</h2>
 
-<p>在这个例子中, 我们将会创建一个2秒的缓冲器,并用白噪音填充它, 然后通过{{ domxref("AudioBufferSourceNode") }}来播放它. </p>
+<p>在这个例子中，我们将会创建一个 2 秒的缓冲器，并用白噪音填充它，然后通过{{ domxref("AudioBufferSourceNode") }}来播放它. </p>
 
 <div class="note">
 <p><strong>Note</strong>: You can also <a href="http://mdn.github.io/audio-buffer/">run the code live</a>, or <a href="https://github.com/mdn/audio-buffer">view the source</a>.</p>
@@ -74,75 +74,11 @@ button.onclick = function() {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createBufferSource-AudioBufferSourceNode', 'createBufferSource()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.BaseAudioContext.createBufferSource")}}
 
 <h2 id="See_also">See also</h2>
 

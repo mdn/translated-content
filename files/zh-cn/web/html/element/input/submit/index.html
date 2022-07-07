@@ -15,7 +15,7 @@ translation_of: Web/HTML/Element/input/submit
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong><code>submit</code></strong> 类型的 {{HTMLElement("input")}}  元素被渲染成按钮. 当 {{event("click")}} 事件发生时(用户点击按钮是一个典型的点击事件),  {{Glossary("用户代理")}} 试图提交表单到服务器.</span></p>
+<p><strong><code>submit</code></strong> 类型的 {{HTMLElement("input")}}  元素被渲染成按钮。当 {{event("click")}} 事件发生时 (用户点击按钮是一个典型的点击事件),  {{Glossary("用户代理")}} 试图提交表单到服务器。</p>
 
 <div id="summary-example2">
 <pre class="brush: html">&lt;input type="submit" value="发送请求"&gt;</pre>
@@ -26,7 +26,7 @@ translation_of: Web/HTML/Element/input/submit
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("值")}}</strong></td>
+   <td><strong><a href="#值">值</a></strong></td>
    <td>{{domxref("DOMString")}} 展示在按钮的标签内</td>
   </tr>
   <tr>
@@ -48,7 +48,7 @@ translation_of: Web/HTML/Element/input/submit
  </tbody>
 </table>
 
-<h2 id="Value">Value</h2>
+<h2 id="值">值</h2>
 
 <p><code>&lt;input type="submit"&gt;</code> 元素的 {{htmlattrxref("value", "input")}} 属性 包含一个展示在按钮标签上的 {{domxref("DOMString")}}，否则按钮没有正确的 value 值。</p>
 
@@ -58,7 +58,7 @@ translation_of: Web/HTML/Element/input/submit
 
 <p>{{EmbedLiveSample("summary-example3", 650, 30)}}</p>
 
-<p>如果没有指定一个<code>value</code> 值, 按钮将会有一个通过用户代理选择的默认label。 这个label可能是 "Submit" 或者"Submit Query." 这里有一个默认label的提交按钮:</p>
+<p>如果没有指定一个<code>value</code> 值，按钮将会有一个通过用户代理选择的默认 label。 这个 label 可能是 "Submit" 或者"Submit Query." 这里有一个默认 label 的提交按钮：</p>
 
 <div id="summary-example1">
 <pre class="brush: html">&lt;input type="submit"&gt;</pre>
@@ -79,43 +79,43 @@ translation_of: Web/HTML/Element/input/submit
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("formaction")}}</code></td>
-   <td>提交表单数据的URL； 覆盖表单的{{htmlattrxref("action", "form")}} 属性（如果有）</td>
+   <td><code><a href="#formaction">formaction</a></code></td>
+   <td>提交表单数据的 URL； 覆盖表单的{{htmlattrxref("action", "form")}} 属性（如果有）</td>
   </tr>
   <tr>
-   <td><code>{{anch("formenctype")}}</code></td>
+   <td><code><a href="#formenctype">formenctype</a></code></td>
    <td>一个字符串，指定用于表单数据的编码类型</td>
   </tr>
   <tr>
-   <td><code>{{anch("formmethod")}}</code></td>
-   <td>提交表单时使用的HTTP方法 ({{HTTPMethod("get")}} 或 {{HTTPMethod("post")}}) </td>
+   <td><code><a href="#formmethod">formmethod</a></code></td>
+   <td>提交表单时使用的 HTTP 方法 ({{HTTPMethod("get")}} 或 {{HTTPMethod("post")}}) </td>
   </tr>
   <tr>
-   <td><code>{{anch("formnovalidate")}}</code></td>
+   <td><code><a href="#formnovalidate">formnovalidate</a></code></td>
    <td>一个布尔值，如果存在，则意味着在将数据提交给服务器之前，表单的字段将不受约束验证（<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>）</td>
   </tr>
   <tr>
-   <td><code>{{anch("formtarget")}}</code></td>
+   <td><code><a href="#formtarget">formtarget</a></code></td>
    <td>提交表单后，将服务器返回的响应加载到 {{Glossary("browsing context")}} 中</td>
   </tr>
  </tbody>
 </table>
 
-<h3 id="htmlattrdefformaction">{{htmlattrdef("formaction")}}</h3>
+<h3 id="formaction">formaction</h3>
 
-<p>一个字符串，指示要将数据提交到的URL。 这优先于拥有 {{HTMLElement("input")}} 的 {{HTMLElement("form")}} 元素上的 {{htmlattrxref("action", "form")}} 属性。</p>
+<p>一个字符串，指示要将数据提交到的 URL。 这优先于拥有 {{HTMLElement("input")}} 的 {{HTMLElement("form")}} 元素上的 {{htmlattrxref("action", "form")}} 属性。</p>
 
 <p>此属性在 <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素和{{HTMLElement("button")}} 元素上也可用。</p>
 
-<h3 id="htmlattrdefformenctype">{{htmlattrdef("formenctype")}}</h3>
+<h3 id="formenctype">formenctype</h3>
 
 <p>一个字符串，标识在将表单数据提交到服务器时要使用的编码方法。 有三个允许的值：</p>
 
 <dl>
  <dt><code>application/x-www-form-urlencoded</code></dt>
- <dd>这是默认值，它使用 {{jsxref("encodeURI", "encodeURI()")}} 之类的算法对文本进行URL编码后，以字符串形式发送表单数据。</dd>
+ <dd>这是默认值，它使用 {{jsxref("encodeURI", "encodeURI()")}} 之类的算法对文本进行 URL 编码后，以字符串形式发送表单数据。</dd>
  <dt><code>multipart/form-data</code></dt>
- <dd>使用 {{domxref("FormData")}} API来管理数据，从而允许将文件提交到服务器。 如果您的表单包含 {{htmlattrxref("type", "input")}} <code>file</code> (<code><a href="/en-US/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code>) 的任何 {{HTMLElement("input")}} 元素，则必须使用此编码类型。</dd>
+ <dd>使用 {{domxref("FormData")}} API 来管理数据，从而允许将文件提交到服务器。 如果您的表单包含 {{htmlattrxref("type", "input")}} <code>file</code> (<code><a href="/en-US/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code>) 的任何 {{HTMLElement("input")}} 元素，则必须使用此编码类型。</dd>
  <dt><code>text/plain</code></dt>
  <dd>纯文本; 通常仅对调试有用，因此您可以轻松查看要提交的数据。</dd>
 </dl>
@@ -124,28 +124,28 @@ translation_of: Web/HTML/Element/input/submit
 
 <p>此属性在 <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素和{{HTMLElement("button")}} 元素上也可用。</p>
 
-<h3 id="htmlattrdefformmethod">{{htmlattrdef("formmethod")}}</h3>
+<h3 id="formmethod">formmethod</h3>
 
-<p>一个字符串，指示提交表单数据时要使用的HTTP方法； 此值将覆盖拥有表单上给出的任何 {{htmlattrxref("method", "form")}} 属性。 允许的值为：</p>
+<p>一个字符串，指示提交表单数据时要使用的 HTTP 方法； 此值将覆盖拥有表单上给出的任何 {{htmlattrxref("method", "form")}} 属性。 允许的值为：</p>
 
 <dl>
  <dt><code>get</code></dt>
- <dd>通过从 <code>formaction</code> 或 {{htmlattrxref("action", "form")}} 通过从 ("?") 字符，然后附加表单数据，按照如下所述进行编码来构造URL 通过 <code>formenctype</code> 或表单的 {{htmlattrxref("enctype", "form")}} 属性。 然后，使用HTTP {{HTTPMethod("get")}}请求将该URL发送到服务器。 此方法适用于仅包含ASCII字符且没有副作用的简单形式。 这是默认值。</dd>
+ <dd>通过从 <code>formaction</code> 或 {{htmlattrxref("action", "form")}} 通过从 ("?") 字符，然后附加表单数据，按照如下所述进行编码来构造 URL 通过 <code>formenctype</code> 或表单的 {{htmlattrxref("enctype", "form")}} 属性。 然后，使用 HTTP {{HTTPMethod("get")}}请求将该 URL 发送到服务器。 此方法适用于仅包含 ASCII 字符且没有副作用的简单形式。 这是默认值。</dd>
  <dt><code>post</code></dt>
- <dd>表单的数据包含在请求的正文中，该请求的正文使用HTTP {{HTTPMethod("post")}} 发送到由 <code>formaction</code> 或 {{htmlattrxref("action", "form")}} 属性指定的URL 请求。 此方法支持复杂的数据和文件附件。</dd>
+ <dd>表单的数据包含在请求的正文中，该请求的正文使用 HTTP {{HTTPMethod("post")}} 发送到由 <code>formaction</code> 或 {{htmlattrxref("action", "form")}} 属性指定的 URL 请求。 此方法支持复杂的数据和文件附件。</dd>
  <dt><code>dialog</code></dt>
  <dd>此方法用于指示按钮仅关闭与输入关联的对话框，而根本不传输表单数据。</dd>
 </dl>
 
 <p>此属性在 <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素和{{HTMLElement("button")}} 元素上也可用。</p>
 
-<h3 id="htmlattrdefformnovalidate">{{htmlattrdef("formnovalidate")}}</h3>
+<h3 id="formnovalidate">formnovalidate</h3>
 
 <p>布尔属性，如果存在，则指定在提交给服务器之前不应对表单进行验证。 这将覆盖元素拥有表单上的 {{htmlattrxref("novalidate", "form")}} 属性的值。</p>
 
 <p>此属性在 <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素和{{HTMLElement("button")}} 元素上也可用。</p>
 
-<h3 id="htmlattrdefformtarget">{{htmlattrdef("formtarget")}}</h3>
+<h3 id="formtarget">formtarget</h3>
 
 <p>一个字符串，它指定一个名称或关键字，该名称或关键字指示提交表单后在何处显示收到的响应。 该字符串必须是<strong>浏览上下文</strong>的名称 (即选项卡，窗口或 {{HTMLElement("iframe")}}。 此处指定的值将覆盖 {{HTMLElement("form")}} 上拥有此输入的 {{htmlattrxref("target", "form")}} 属性。</p>
 
@@ -166,9 +166,9 @@ translation_of: Web/HTML/Element/input/submit
 
 <h2 id="使用提交按钮">使用提交按钮</h2>
 
-<p><code>&lt;input type="submit"&gt;</code> 按钮用于提交form表单. 如果你想要创建一个自定义的按钮，然后通过JavaScript自定义按钮的行为，你需要使用 <code><a href="/en-US/docs/Web/HTML/Element/input/button">&lt;input type="button"&gt;</a></code>, 或者使用更好的 {{htmlelement("button")}} 元素.</p>
+<p><code>&lt;input type="submit"&gt;</code> 按钮用于提交 form 表单。如果你想要创建一个自定义的按钮，然后通过 JavaScript 自定义按钮的行为，你需要使用 <code><a href="/en-US/docs/Web/HTML/Element/input/button">&lt;input type="button"&gt;</a></code>, 或者使用更好的 {{htmlelement("button")}} 元素。</p>
 
-<p>如果你选择使用<code>&lt;button&gt;</code> 在你的form表单里创建按钮, 请记住:  它只是在{{HTMLElement("form")}}内部的 <code>&lt;button&gt;</code> ，  应该被当作 "submit" 按钮来处理。 所以你应该有一个明确指定哪一个按钮是提交按钮的习惯。</p>
+<p>如果你选择使用<code>&lt;button&gt;</code> 在你的 form 表单里创建按钮，请记住:  它只是在{{HTMLElement("form")}}内部的 <code>&lt;button&gt;</code> ，  应该被当作 "submit" 按钮来处理。 所以你应该有一个明确指定哪一个按钮是提交按钮的习惯。</p>
 
 <h3 id="一个简单的提交按钮">一个简单的提交按钮</h3>
 
@@ -185,19 +185,19 @@ translation_of: Web/HTML/Element/input/submit
 &lt;/form&gt;
 </pre>
 
-<p>渲染效果如下:</p>
+<p>渲染效果如下：</p>
 
 <p>{{EmbedLiveSample("A_simple_submit_button", 650, 100)}}</p>
 
-<p>试着输入一些文字到文本字段, 然后提交表单.</p>
+<p>试着输入一些文字到文本字段，然后提交表单。</p>
 
-<p>在提交时，键值对数据将会被发送到服务端。在此列子中，字符串将会是 <code>"text=<em>usertext</em>"</code>, "usertext" 是用户输入的字符在转换为被保护的特殊字符. 数据被如何提交、提交到哪都由 <code>&lt;form&gt;的设置决定</code>; 到<a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data</a> 获取更多细节.</p>
+<p>在提交时，键值对数据将会被发送到服务端。在此列子中，字符串将会是 <code>"text=<em>usertext</em>"</code>, "usertext" 是用户输入的字符在转换为被保护的特殊字符。数据被如何提交、提交到哪都由 <code>&lt;form&gt;的设置决定</code>; 到<a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data</a> 获取更多细节。</p>
 
 <h3 id="添加提交的快捷键">添加提交的快捷键</h3>
 
-<p>键盘快捷键就是使用键盘上的按键, 让用户使用按键或组合按键来触发按钮。 为了在提交按钮上添加键盘快捷键— 就像使用任何有实际意义的 {{HTMLElement("input")}} 一样，您可以使用 {{htmlattrxref("accesskey")}} 全局属性。</p>
+<p>键盘快捷键就是使用键盘上的按键，让用户使用按键或组合按键来触发按钮。 为了在提交按钮上添加键盘快捷键— 就像使用任何有实际意义的 {{HTMLElement("input")}} 一样，您可以使用 {{htmlattrxref("accesskey")}} 全局属性。</p>
 
-<p>在此示例中，将 <kbd>s</kbd> 指定为访问键 (指定为访问键 <kbd>s</kbd> p键加上浏览器/操作系统组合的特定修饰键。为了避免与用户代理自身的键盘快捷键冲突，请使用不同的修饰键 而不是主机上其他快捷方式的访问键。有关更多详细信息，请参见 {{htmlattrxref("accesskey")}}。</p>
+<p>在此示例中，将 <kbd>s</kbd> 指定为访问键 (指定为访问键 <kbd>s</kbd> p 键加上浏览器/操作系统组合的特定修饰键。为了避免与用户代理自身的键盘快捷键冲突，请使用不同的修饰键 而不是主机上其他快捷方式的访问键。有关更多详细信息，请参见 {{htmlattrxref("accesskey")}}。</p>
 
 <p>这是添加了 <kbd>s</kbd> 访问密钥的上一个示例：</p>
 
@@ -212,7 +212,7 @@ translation_of: Web/HTML/Element/input/submit
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<p>例如，在Mac版Firefox中，按 <kbd>Control</kbd>-<kbd>Option</kbd>-<kbd>S</kbd> 会触发“发送”按钮，而Windows上的Chrome使用 <kbd>Alt</kbd>+<kbd>S</kbd>.</p>
+<p>例如，在 Mac 版 Firefox 中，按 <kbd>Control</kbd>-<kbd>Option</kbd>-<kbd>S</kbd> 会触发 “发送” 按钮，而 Windows 上的 Chrome 使用 <kbd>Alt</kbd>+<kbd>S</kbd>.</p>
 
 <p>{{EmbedLiveSample("Adding_a_submit_keyboard_shortcut", 650, 100)}}</p>
 
@@ -226,7 +226,7 @@ translation_of: Web/HTML/Element/input/submit
 <pre class="brush: html">&lt;input type="submit" value="Disabled" disabled&gt;</pre>
 </div>
 
-<p>您可以在运行时通过简单地将<code>disable</code>设置为<code>true</code>或<code>false</code>来启用和禁用按钮。 在JavaScript中，这看起来像 <code>btn.disabled = true</code> or <code>btn.disabled = false</code>.</p>
+<p>您可以在运行时通过简单地将<code>disable</code>设置为<code>true</code>或<code>false</code>来启用和禁用按钮。 在 JavaScript 中，这看起来像 <code>btn.disabled = true</code> or <code>btn.disabled = false</code>.</p>
 
 <div class="note">
 <p>有关启用和禁用按钮的更多想法，请参见 <code><a href="/en-US/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button">&lt;input type="button"&gt;</a></code> 。</p>
@@ -238,7 +238,7 @@ translation_of: Web/HTML/Element/input/submit
 
 <h2 id="例子">例子</h2>
 
-<p>我们在上面提供了一些简单的示例。 关于提交按钮，实际上没有什么可说的。 有时将这种控件称为“简单按钮”是有原因的。</p>
+<p>我们在上面提供了一些简单的示例。 关于提交按钮，实际上没有什么可说的。 有时将这种控件称为 “简单按钮” 是有原因的。</p>
 
 <h2 id="规范">规范</h2>
 

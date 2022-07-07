@@ -5,11 +5,11 @@ translation_of: Web/API/Event/cancelable
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<h2 id="Summary" name="Summary">Описание</h2>
+<h2 id="Summary">Описание</h2>
 
 <p>Указывает, является ли событие отменяемым.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><var>bool</var> = <em>event</em>.cancelable
 </pre>
@@ -18,20 +18,20 @@ translation_of: Web/API/Event/cancelable
  <li>Возвращает булево значение <code>true</code>, если событие может быть отменено.</li>
 </ul>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush:js">var <var>bool</var> = <em>event</em>.cancelable;
 </pre>
 
 <p><code>bool</code> содержит <code>true</code> или <code>false</code> в зависимости от того, можно ли предотвратить действие события по умолчанию или нет.</p>
 
-<h2 id="Notes" name="Notes">Примечание</h2>
+<h2 id="Notes">Примечание</h2>
 
 <p>Независимо от того, может событие быть отменено или нет, свойство определяется при инициализации события.</p>
 
 <p>Вызов на событии метода {{domxref("event.preventDefault", "preventDefault()")}} отменяет событие. При этом действие по умолчанию, связанное с событием, не выполняется.</p>
 
-<h2 id="Specification" name="Specification">Спецификации</h2>
+<h2 id="Specification">Спецификации</h2>
 
 <ul>
  <li><a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-canCancel">DOM Level 2 Events: cancelable</a></li>

@@ -111,66 +111,7 @@ JSON<span class="punctuation token">.</span><span class="function token">parse</
 
 <h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("1.9.1") }}</td>
-   <td>8.0</td>
-   <td>10.5</td>
-   <td>4.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome para Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>Based on <a class="external" href="http://kangax.github.com/es5-compat-table/">Kangax's compat table</a>.</p>
-
-<h3 id="Especificaciones_Gecko">Especificaciones Gecko</h3>
-
-<p>Comenzando con Gecko 29 {{geckoRelease("29")}},<span class="short_text" id="result_box" lang="es"><span class="hps"> unas cadenas JSON malformadas</span></span><span class="short_text" lang="es"><span class="hps"> producen</span> </span><span id="result_box" lang="es"><span class="hps">un mensaje</span> <span class="hps">de error más detallado</span> <span class="hps">que contiene el</span> <span class="hps">número de línea y</span> <span class="hps">columna</span> <span class="hps">que provocó el</span> <span class="hps">error de parsing</span></span>. Esto es útil cuando se está haciendo debug de un JSON grande.</p>
-
-<pre class="brush: js">JSON.parse('[1, 2, 3,]')
-// SyntaxError: JSON.parse: unexpected character at
-// line 1 column 10 of the JSON data
-</pre>
+{{Compat("javascript.builtins.JSON.parse")}}
 
 <h2 id="Véase_también">Véase también</h2>
 

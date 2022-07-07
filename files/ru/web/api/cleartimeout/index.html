@@ -8,9 +8,9 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 
 <p><strong><code>clearTimeout()</code></strong> метод {{domxref("WindowOrWorkerGlobalScope")}} отменяет таймаут, ранее установленный вызовом {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><em>scope</em>.clearTimeout(<em>timeoutID</em>)
+<pre class="syntaxbox"><em>scope</em>.clearTimeout(<em>timeoutID</em>)
 </pre>
 
 <h3 id="Параметры">Параметры</h3>
@@ -23,11 +23,11 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 
 <p>It's worth noting that the pool of IDs used by {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} and {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} are shared, which means you can technically use <code>clearTimeout()</code> and {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} interchangeably. However, for clarity, you should avoid doing so.</p>
 
-<h2 id="Example" name="Example">Пример использования:</h2>
+<h2 id="Example">Пример использования:</h2>
 
 <p>Запустите приведённый ниже скрипт в контакте веб-страницы и кликните один раз. Вы увидите всплывающее сообщение через 1 секунду. Если вы щёлкните страницу несколько раз за одну секунду, предупреждение появится только один раз.</p>
 
-<pre class="brush: js notranslate">var alarm = {
+<pre class="brush: js">var alarm = {
   remind: function(aMessage) {
     alert(aMessage);
     this.timeoutID = undefined;
@@ -50,11 +50,11 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 window.onclick = function() { alarm.setup(); };
 </pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <p>Передача недействительного ID <code>clearTimeout()</code> ни к чему не приведёт. Исключение не создается.</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <table class="standard-table">
  <thead>
@@ -82,7 +82,7 @@ window.onclick = function() { alarm.setup(); };
 
 
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.clearTimeout")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

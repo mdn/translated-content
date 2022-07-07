@@ -5,10 +5,10 @@ translation_of: Web/API/Screen/lockOrientation
 ---
 <p>{{APIRef("CSSOM View")}}{{SeeCompatTable}}</p>
 
-<p><code>lockOrientation</code> 此方法会把屏幕锁定为指定的方向.</p>
+<p><code>lockOrientation</code> 此方法会把屏幕锁定为指定的方向。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 此方法仅适用于已安装的Web apps 或 <a href="/en-US/docs/Web/Guide/DOM/Using_full_screen_mode">全屏模式</a> 的Web 页面.</p>
+<p><strong>注意：</strong> 此方法仅适用于已安装的 Web apps 或 <a href="/en-US/docs/Web/Guide/DOM/Using_full_screen_mode">全屏模式</a> 的 Web 页面。</p>
 </div>
 
 <h2 id="使用方法">使用方法</h2>
@@ -26,15 +26,15 @@ translation_of: Web/API/Screen/lockOrientation
 
 <dl>
  <dt><code>portrait-primary</code></dt>
- <dd>它表示屏幕处于主要的肖像模式时的方向。如果设备处于正常位置且该位置处于纵向位置，或设备的正常位置处于横向并且设备保持顺时针转动90°，则会在主肖像模式下考虑屏幕。正常的位置是依赖于设备的。</dd>
+ <dd>它表示屏幕处于主要的肖像模式时的方向。如果设备处于正常位置且该位置处于纵向位置，或设备的正常位置处于横向并且设备保持顺时针转动 90°，则会在主肖像模式下考虑屏幕。正常的位置是依赖于设备的。</dd>
  <dt><code>portrait-secondary</code></dt>
  <dd>
- <p>它表示屏幕处于辅助肖像模式时的方向。如果设备与正常位置保持180°，并且该位置处于纵向位置，或者设备的正常位置处于横向位置，并且持有的设备逆时针转动90°，则屏幕将处于辅助人像模式。正常的位置是依赖于设备的。</p>
+ <p>它表示屏幕处于辅助肖像模式时的方向。如果设备与正常位置保持 180°，并且该位置处于纵向位置，或者设备的正常位置处于横向位置，并且持有的设备逆时针转动 90°，则屏幕将处于辅助人像模式。正常的位置是依赖于设备的。</p>
  </dd>
  <dt><code>landscape-primary</code></dt>
- <dd>它代表了屏幕处于主要风景模式时的方向。 如果设备保持在正常位置，并且该位置处于横向位置，或者设备的正常位置处于纵向位置，并且所保持的设备顺时针旋转90°，则会将其视为主要横向模式。正常的位置是依赖于设备的。</dd>
+ <dd>它代表了屏幕处于主要风景模式时的方向。 如果设备保持在正常位置，并且该位置处于横向位置，或者设备的正常位置处于纵向位置，并且所保持的设备顺时针旋转 90°，则会将其视为主要横向模式。正常的位置是依赖于设备的。</dd>
  <dt><code>landscape-secondary</code></dt>
- <dd>它代表了屏幕处于次要风景模式时的方向。如果设备与其正常位置保持180°并且该位置处于横向，或者如果设备的正常位置是纵向的，并且所保持的设备逆时针旋转90°，则将其视为次要横向模式。正常的位置是依赖于设备的。</dd>
+ <dd>它代表了屏幕处于次要风景模式时的方向。如果设备与其正常位置保持 180°并且该位置处于横向，或者如果设备的正常位置是纵向的，并且所保持的设备逆时针旋转 90°，则将其视为次要横向模式。正常的位置是依赖于设备的。</dd>
  <dt><code>portrait</code></dt>
  <dd>它表示同时包含 <code>portrait-primary</code> 和 <code>portrait-secondary</code>.</dd>
  <dt><code>landscape</code></dt>
@@ -43,11 +43,11 @@ translation_of: Web/API/Screen/lockOrientation
 
 <dl>
  <dt><code>default</code></dt>
- <dd>它代表 <code>portrait-primary</code> 和 <code>landscape-primary</code> 主要取决于设备的自然方向。例如，如果面板分辨率为1280 * 800，则 <code>default</code> 为横向，如果分辨率为800 * 1280，则 <code>default</code> 为纵向。</dd>
+ <dd>它代表 <code>portrait-primary</code> 和 <code>landscape-primary</code> 主要取决于设备的自然方向。例如，如果面板分辨率为 1280 * 800，则 <code>default</code> 为横向，如果分辨率为 800 * 1280，则 <code>default</code> 为纵向。</dd>
 </dl>
 
 <div class="note">
-<p><strong>注意:</strong> 可同时设置多个锁定值。因此，如果锁定设置为只有一个方向，屏幕方向将永远不会改变，直到屏幕方向解锁。否则，只要方向在设备锁定的方向之中，屏幕方向就会从一个方向改变到另一个方向。</p>
+<p><strong>注意：</strong> 可同时设置多个锁定值。因此，如果锁定设置为只有一个方向，屏幕方向将永远不会改变，直到屏幕方向解锁。否则，只要方向在设备锁定的方向之中，屏幕方向就会从一个方向改变到另一个方向。</p>
 </div>
 
 <h2 id="返回值">返回值</h2>
@@ -98,95 +98,7 @@ if (screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"]
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>{{CompatChrome(38)}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}} {{property_prefix("moz")}}<sup>[2]</sup></td>
-   <td>11 {{property_prefix("ms")}}<sup>[3]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>Array</code> 参数</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("18.0")}}</td>
-   <td>11 {{property_prefix("ms")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>default</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(38)}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}} {{property_prefix("moz")}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>Array</code> 参数</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("18.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>default</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("26.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 使用更新的标准语法（<code>screen.orientation.lock</code>）实现类似的方法并返回一个 <code>Promise</code> 。虽然它存在于桌面上，但总是会失败。</p>
-
-<p>[2] 此API仅作为Firefox OS和Firefox的前缀方法（<code>screen.mozLockOrientation</code>）实现。另外，由于{{Bug(966480)}}，它不适用于Android的Firefox。</p>
-
-<p>[3] 此方法在Internet Explorer for Windows 8.1和Windows RT 8.1中使用前缀（<code>screen.msLockOrientation</code>）实现。 它在Windows 7 上不受支持。</p>
+{{Compat("api.Screen.lockOrientation")}}
 
 <h2 id="参见">参见</h2>
 

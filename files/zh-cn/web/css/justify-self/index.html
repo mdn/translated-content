@@ -3,8 +3,8 @@ title: justify-self
 slug: Web/CSS/justify-self
 tags:
   - CSS
-  - CSS属性
-  - CSS盒对齐
+  - CSS 属性
+  - CSS 盒对齐
 translation_of: Web/CSS/justify-self
 ---
 <div>{{CSSRef}}</div>
@@ -19,7 +19,7 @@ translation_of: Web/CSS/justify-self
 
 <ul>
  <li>在块级布局中，它对齐一个项目在其包含块的内联轴上。</li>
- <li>对于绝对定位的元素，它对齐一个项目在其包含块的内联轴上，同时计算top，left，bottom与right的值。（原文：it aligns an item inside its containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.）</li>
+ <li>对于绝对定位的元素，它对齐一个项目在其包含块的内联轴上，同时计算 top，left，bottom 与 right 的值。（原文：it aligns an item inside its containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.）</li>
  <li>在表格布局中，这个属性被忽略（<a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables">更多</a> 关于块、绝对定位以及表格布局中的对齐方式）</li>
  <li>在弹性布局中，这个属性被忽略（<a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox">更对</a> 关于弹性布局中的对齐方式）</li>
  <li>在栅格布局中，它对齐一个元素到该元素所在的栅格区域的内联轴上。（<a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout">更多</a> 关于栅格布局中的对齐方式）</li>
@@ -35,7 +35,7 @@ justify-self: stretch;
 /* 位置对齐 */
 justify-self: center;     /* 在中间放置元素 */
 justify-self: start;      /* 在开始处放置元素 */
-justify-self: end;        /* 在结束处防止元素 */
+justify-self: end;        /* 在结束处放置元素 */
 justify-self: flex-start; /* 与 'start' 等效。注意 justify-self 在 Flexbox 布局中被忽略。 */
 justify-self: flex-end;   /* 与 'end' 等效。注意 justify-self 在 Flexbox 布局中被忽略。 */
 justify-self: self-start;
@@ -48,7 +48,7 @@ justify-self: baseline;
 justify-self: first baseline;
 justify-self: last baseline;
 
-/* 溢出对齐 （只对位置对齐有效果）*/
+/* 溢出对齐（只对位置对齐有效果）*/
 justify-self: safe center;
 justify-self: unsafe center;
 
@@ -75,7 +75,7 @@ justify-self: unset;
 
 <dl>
  <dt><code>auto</code></dt>
- <dd>该值使用其父级元素盒子的 <code>justify-items</code> 属性的值，除非它没有父级元素, 或者是绝对定位的，这些情况下，<code>auto</code> 代表了 <code>normal</code>。</dd>
+ <dd>该值使用其父级元素盒子的 <code>justify-items</code> 属性的值，除非它没有父级元素，或者是绝对定位的，这些情况下，<code>auto</code> 代表了 <code>normal</code>。</dd>
  <dt><code>normal</code></dt>
  <dd>这个效果取决于我们所处的布局模式：
  <ul>

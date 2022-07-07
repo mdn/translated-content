@@ -10,11 +10,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
 ---
 <div>
  {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</div>
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <code><strong>toString()</strong></code> возвращает строку, представляющую указанный объект {{jsxref("Error")}}.</p>
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code><var>e</var>.toString()</code></pre>
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Объект {{jsxref("Error")}} переопределяет метод {{jsxref("Object.prototype.toString()")}}, унаследованный всеми объектами. Его семантика следующая (предполагается, что объекты {{jsxref("Object")}} и {{jsxref("String")}} имеют свои изначальные значения):</p>
 <pre class="brush: js">Error.prototype.toString = function() {
   'use strict';
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
   return name + ': ' + msg;
 };
 </pre>
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 <pre class="brush: js">var e = new Error('непоправимая ошибка');
 print(e.toString()); // 'Error: непоправимая ошибка'
 
@@ -56,36 +56,13 @@ print(e.toString()); // 'Error'
 e.name = 'привет';
 print(e.toString()); // 'привет'
 </pre>
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11.4.4', 'Error.prototype.toString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-error.prototype.tostring', 'Error.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Specifications">Спецификации</h2>
+{{Specifications}}
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <div>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Error.prototype.toSource()")}}</li>
 </ul>

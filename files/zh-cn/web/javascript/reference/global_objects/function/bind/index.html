@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>function</var></code>.bind(<var>thisArg</var>[, <var>arg1</var>[, <var>arg2</var>[, ...]]])</pre>
+<pre class="syntaxbox"><code><var>function</var></code>.bind(<var>thisArg</var>[, <var>arg1</var>[, <var>arg2</var>[, ...]]])</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 <div><strong>bind()</strong> 函数会创建一个新的<strong>绑定函数</strong>（<strong>bound function</strong>，BF）。绑定函数是一个 exotic function object（怪异函数对象，ECMAScript 2015 中的术语），它包装了原函数对象。调用<strong>绑定函数</strong>通常会导致执行<strong>包装函数</strong>。<br>
 <strong>绑定函数</strong>具有以下内部属性：</div>
 
-<div></div>
+
 
 <div>
 <ul>
@@ -61,9 +61,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <h3 id="创建绑定函数">创建绑定函数</h3>
 
-<p><code>bind()</code> 最简单的用法是创建一个函数，不论怎么调用，这个函数都有同样的 <strong><code>this</code></strong> 值。JavaScript新手经常犯的一个错误是将一个方法从对象中拿出来，然后再调用，期望方法中的 <code>this</code> 是原来的对象（比如在回调中传入这个方法）。如果不做特殊处理的话，一般会丢失原来的对象。基于这个函数，用原始的对象创建一个绑定函数，巧妙地解决了这个问题：</p>
+<p><code>bind()</code> 最简单的用法是创建一个函数，不论怎么调用，这个函数都有同样的 <strong><code>this</code></strong> 值。JavaScript 新手经常犯的一个错误是将一个方法从对象中拿出来，然后再调用，期望方法中的 <code>this</code> 是原来的对象（比如在回调中传入这个方法）。如果不做特殊处理的话，一般会丢失原来的对象。基于这个函数，用原始的对象创建一个绑定函数，巧妙地解决了这个问题：</p>
 
-<pre class="brush: js notranslate">this.x = 9;    // 在浏览器中，this 指向全局的 "window" 对象
+<pre class="brush: js">this.x = 9;    // 在浏览器中，this 指向全局的 "window" 对象
 var module = {
   x: 81,
   getX: function() { return this.x; }
@@ -85,7 +85,7 @@ boundGetX(); // 81
 
 <p><code>bind()</code> 的另一个最简单的用法是使一个函数拥有预设的初始参数。只要将这些参数（如果有的话）作为 <code>bind()</code> 的参数写在 <code>this</code> 后面。当绑定函数被调用时，这些参数会被插入到目标函数的参数列表的开始位置，传递给绑定函数的参数会跟在它们后面。</p>
 
-<pre class="brush: js notranslate">function list() {
+<pre class="brush: js">function list() {
   return Array.prototype.slice.call(arguments);
 }
 
@@ -118,9 +118,9 @@ var result3 = addThirtySeven(5, 10);
 
 <h3 id="配合_setTimeout">配合 <code>setTimeout</code></h3>
 
-<p>在默认情况下，使用 {{ domxref("window.setTimeout()") }} 时，<code>this</code> 关键字会指向 {{ domxref("window") }} （或 <code>global</code>）对象。当类的方法中需要 <code>this</code> 指向类的实例时，你可能需要显式地把 <code>this</code> 绑定到回调函数，就不会丢失该实例的引用。</p>
+<p>在默认情况下，使用 {{ domxref("window.setTimeout()") }} 时，<code>this</code> 关键字会指向 {{ domxref("window") }}（或 <code>global</code>）对象。当类的方法中需要 <code>this</code> 指向类的实例时，你可能需要显式地把 <code>this</code> 绑定到回调函数，就不会丢失该实例的引用。</p>
 
-<pre class="brush: js notranslate"><code>function LateBloomer() {
+<pre class="brush: js"><code>function LateBloomer() {
   this.petalCount = Math.ceil(Math.random() * 12) + 1;
 }
 
@@ -135,17 +135,17 @@ LateBloomer.prototype.declare = function() {
 };
 
 var flower = new LateBloomer();
-flower.bloom();  // 一秒钟后, 调用 'declare' 方法</code></pre>
+flower.bloom();  // 一秒钟后，调用 'declare' 方法</code></pre>
 
 <h3 id="作为构造函数使用的绑定函数">作为构造函数使用的绑定函数</h3>
 
 <div class="warning">
-<p><strong>警告</strong> :这部分演示了 JavaScript 的能力并且记录了 <code>bind()</code> 的超前用法。以下展示的方法并不是最佳的解决方案，且可能不应该用在任何生产环境中。</p>
+<p><strong>警告：</strong>这部分演示了 JavaScript 的能力并且记录了 <code>bind()</code> 的超前用法。以下展示的方法并不是最佳的解决方案，且可能不应该用在任何生产环境中。</p>
 </div>
 
 <p>绑定函数自动适应于使用 {{jsxref("Operators/new", "new")}} 操作符去构造一个由目标函数创建的新实例。当一个绑定函数是用来构建一个值的，原来提供的 <code>this</code> 就会被忽略。不过提供的参数列表仍然会插入到构造函数调用时的参数列表之前。</p>
 
-<pre class="brush: js notranslate">function Point(x, y) {
+<pre class="brush: js">function Point(x, y) {
   this.x = x;
   this.y = y;
 }
@@ -178,11 +178,11 @@ new YAxisPoint(17, 42) instanceof Point; // true</pre>
 
 <p>请注意，你不需要做特别的处理就可以创建一个和 {{jsxref("Operators/new", "new")}} 操作符一起使用的绑定函数。也就是说，你不需要做特别处理就可以创建一个可以被直接调用的绑定函数，即使你更希望绑定函数是用 {{jsxref("Operators/new", "new")}} 操作符来调用。</p>
 
-<pre class="brush: js notranslate">// ...接着上面的代码继续的话，
+<pre class="brush: js">// ...接着上面的代码继续的话，
 // 这个例子可以直接在你的 JavaScript 控制台运行
 
 // 仍然能作为一个普通函数来调用
-// （即使通常来说这个不是被期望发生的）
+//（即使通常来说这个不是被期望发生的）
 YAxisPoint(13);
 
 emptyObj.x + ',' + emptyObj.y;   //  '0,13'
@@ -196,7 +196,7 @@ emptyObj.x + ',' + emptyObj.y;   //  '0,13'
 
 <p>你可以用 {{jsxref("Array.prototype.slice")}} 来将一个类似于数组的对象（array-like object）转换成一个真正的数组，就拿它来举例子吧。你可以简单地这样写：</p>
 
-<pre class="brush: js notranslate">var slice = Array.prototype.slice;
+<pre class="brush: js">var slice = Array.prototype.slice;
 
 // ...
 
@@ -204,7 +204,7 @@ slice.apply(arguments);</pre>
 
 <p>用 <code>bind()</code>可以使这个过程变得简单。在下面这段代码里面，<code>slice</code> 是 {{jsxref("Function.prototype")}} 的 {{jsxref("Function.prototype.apply()", "apply()")}} 方法的绑定函数，并且将 {{jsxref("Array.prototype")}} 的 {{jsxref("Array.prototype.slice()", "slice()")}} 方法作为 <strong><code>this</code></strong> 的值。这意味着我们压根儿用不着上面那个 <code>apply()</code>调用了。</p>
 
-<pre class="brush: js notranslate">// 与前一段代码的 "slice" 效果相同
+<pre class="brush: js">// 与前一段代码的 "slice" 效果相同
 var unboundSlice = Array.prototype.slice;
 var slice = Function.prototype.apply.bind(unboundSlice);
 
@@ -212,77 +212,7 @@ var slice = Function.prototype.apply.bind(unboundSlice);
 
 slice(arguments);</pre>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>有两种实现<code>bind</code>的方法，下面第一种不支持使用<code>new</code>调用新创建的构造函数，而第二种支持。</p>
-
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="comment token">// Does not work with `new (funcA.bind(thisArg, args))`</span>
-<span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span><span class="class-name token">Function</span><span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>bind<span class="punctuation token">)</span> <span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">{</span>
-  <span class="keyword token">var</span> slice <span class="operator token">=</span> <span class="class-name token">Array</span><span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>slice<span class="punctuation token">;</span>
-  <span class="class-name token">Function</span><span class="punctuation token">.</span>prototype<span class="punctuation token">.</span><span class="function function-variable token">bind</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">var</span> thatFunc <span class="operator token">=</span> <span class="keyword token">this</span><span class="punctuation token">,</span> thatArg <span class="operator token">=</span> arguments<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-    <span class="keyword token">var</span> args <span class="operator token">=</span> <span class="function token">slice</span><span class="punctuation token">.</span><span class="function token">call</span><span class="punctuation token">(</span>arguments<span class="punctuation token">,</span> <span class="number token">1</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="keyword token">typeof</span> thatFunc <span class="operator token">!==</span> <span class="string token">'function'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="comment token">// closest thing possible to the ECMAScript 5</span>
-      <span class="comment token">// internal IsCallable function</span>
-      <span class="keyword token">throw</span> <span class="keyword token">new</span> <span class="class-name token">TypeError</span><span class="punctuation token">(</span><span class="string token">'Function.prototype.bind - '</span> <span class="operator token">+</span>
-             <span class="string token">'what is trying to be bound is not callable'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    <span class="keyword token">return</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">{</span>
-      <span class="keyword token">var</span> funcArgs <span class="operator token">=</span> args<span class="punctuation token">.</span><span class="function token">concat</span><span class="punctuation token">(</span><span class="function token">slice</span><span class="punctuation token">.</span><span class="function token">call</span><span class="punctuation token">(</span>arguments<span class="punctuation token">)</span><span class="punctuation token">)</span>
-      <span class="keyword token">return</span> <span class="function token">thatFunc</span><span class="punctuation token">.</span><span class="function token">apply</span><span class="punctuation token">(</span>thatArg<span class="punctuation token">,</span> funcArgs<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
-
-<p>你可以将这段代码插入到你的脚本开头，从而使你的 <code>bind()</code> 在没有内置实现支持的环境中也可以部分地使用<code>bind</code>。</p>
-
-<pre class="brush: js notranslate">//  Yes, it does work with `new (funcA.bind(thisArg, args))`
-if (!Function.prototype.bind) (function(){
-  var ArrayPrototypeSlice = Array.prototype.slice;
-  Function.prototype.bind = function(otherThis) {
-    if (typeof this !== 'function') {
-      // closest thing possible to the ECMAScript 5
-      // internal IsCallable function
-      throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
-    }
-
-    var baseArgs= ArrayPrototypeSlice.call(arguments, 1),
-        baseArgsLength = baseArgs.length,
-        fToBind = this,
-        fNOP    = function() {},
-        fBound  = function() {
-          baseArgs.length = baseArgsLength; // reset to default base arguments
-          baseArgs.push.apply(baseArgs, arguments);
-          return fToBind.apply(
-                 fNOP.prototype.isPrototypeOf(this) ? this : otherThis, baseArgs
-          );
-        };
-
-    if (this.prototype) {
-      // Function.prototype doesn't have a prototype property
-      fNOP.prototype = this.prototype;
-    }
-    fBound.prototype = new fNOP();
-
-    return fBound;
-  };
-})();</pre>
-
-<p>上述算法和实际的实现算法还有许多其他的不同 （尽管可能还有其他不同之处，但已经没有必要再多列举）：</p>
-
-<ul>
- <li>这部分实现依赖于 {{jsxref("Array.prototype.slice()")}}， {{jsxref("Array.prototype.concat()")}}， {{jsxref("Function.prototype.apply()")}} 这些原生方法。</li>
- <li>这部分实现创建的函数并没有 {{jsxref("Function.caller", "caller")}} 以及会在 get，set 或者 deletion 上抛出 {{jsxref("Global_Objects/TypeError", "TypeError")}}错误的 arguments 属性这两个不可改变的“毒药” 。（假如环境支持{{jsxref("Object.defineProperty()")}}， 或者实现支持{{jsxref("Object.defineGetter", "__defineGetter__")}} 和 {{jsxref("Object.defineSetter", "__defineSetter__")}} 扩展）</li>
- <li>这部分实现创建的函数有 <code>prototype</code> 属性。（正确的绑定函数没有）</li>
- <li>这部分实现创建的绑定函数所有的 length 属性并不是同ECMA-262标准一致的：它创建的函数的 length 是0，而在实际的实现中根据目标函数的 length 和预先指定的参数个数可能会返回非零的 length。</li>
-</ul>
-
-<p>如果你选择使用这部分实现，<strong>你不能依赖于那些与 ECMA-262, 5th edition 规定的行为偏离的例子。</strong>在 <code>bind()</code> 函数被广泛支持之前，某些情况下（或者为了兼容某些特定需求对其做一些特定修改后）可以选择用这个实现作为过渡。</p>
-
-<p>请访问 <a href="https://github.com/Raynos/function-bind">https://github.com/Raynos/function-bind</a> 以查找更完整的解决方案！</p>
-
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -318,6 +248,7 @@ if (!Function.prototype.bind) (function(){
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
+ <li><code>Function.prototype.bind</code> 的 polyfill 可以参考 <a href="https://github.com/zloirock/core-js#ecmascript-function">core-js</a></li>
  <li>{{jsxref("Function.prototype.apply()")}}</li>
  <li>{{jsxref("Function.prototype.call()")}}</li>
  <li>{{jsxref("Functions", "函数")}}</li>

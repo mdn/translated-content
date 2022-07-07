@@ -29,7 +29,7 @@ original_slug: Web/Events/compositionupdate
 
 <h2 id="属性">属性</h2>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Property</th>
@@ -81,61 +81,13 @@ original_slug: Web/Events/compositionupdate
  </tbody>
 </table>
 
+<h2 id="规范">规范</h2>
+
+{{Specifications}}
+
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop("9.0")}}<sup>[2]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("9.0")}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在 <code>compositionstart</code> 事件之后不会立即执行。</p>
-
-<p>[2] <code>compositionupdate</code> 事件在编辑器里的内容改变之前就会触发。自从 Gecko 12.0 {{geckoRelease("12.0")}} 开始 <code>input</code> 事件在输入过程中、内容变化后就触发。使用它可以在输入过程中就获得新的内容。</p>
-
-<p>Gecko 在可信事件（trusted events）中还不支持 <code>locale</code> 属性。但是开发者可以在使用 <code>initCompositionEvent()</code> 创建不可信事件时指定一个值。</p>
+{{Compat("api.Element.compositionupdate_event")}}
 
 <h2 id="参阅">参阅</h2>
 

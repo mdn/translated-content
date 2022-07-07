@@ -69,7 +69,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
   <p><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval()_%D0%B8_%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B8%D1%89%D0%B8">Расширению не разрешено выполнять код, представленный в виде JavaScript строк.</a></p>
  </li>
  <li>
-  <p><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#%D0%92%D1%81%D1%82%D1%80%D0%B0%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_(inline)_JavaScript">Встраиваемый (inline) JavaScript код не будет выполняться.</a></p>
+  <p><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#%D0%92%D1%81%D1%82%D1%80%D0%B0%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_(inline)_JavaScript">Встраиваемый (inline) JavaScript-код не будет выполняться.</a></p>
  </li>
 </ul>
 
@@ -102,7 +102,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 
 <h3 id="Встраиваемый_(inline)_JavaScript">Встраиваемый (inline) JavaScript</h3>
 
-<p>Изначальная политика защиты содержимого не позволяет выполнять JavaScript код, встраиваемый в HTML теги. Это запрещает как выполнение JavaScript кода вложенного прямо в <code>&lt;script&gt;</code> тег, так и выполнение вписанных в атрибут обработчиков событий, означая, что следующий код так же не будет работать:</p>
+<p>Изначальная политика защиты содержимого не позволяет выполнять JavaScript-код, встраиваемый в HTML теги. Это запрещает как выполнение JavaScript-кода вложенного прямо в <code>&lt;script&gt;</code> тег, так и выполнение вписанных в атрибут обработчиков событий, означая, что следующий код так же не будет работать:</p>
 
 <pre class="brush: html">&lt;script&gt;console.log("foo");&lt;/script&gt;</pre>
 

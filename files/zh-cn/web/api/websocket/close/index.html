@@ -5,7 +5,7 @@ translation_of: Web/API/WebSocket/close
 ---
 <p>{{APIRef("Web Sockets API")}}</p>
 
-<p><strong><code>WebSocket.close()</code></strong> 方法关闭 {{domxref("WebSocket")}}  连接或连接尝试（如果有的话）。 如果连接已经关闭,则此方法不执行任何操作。</p>
+<p><strong><code>WebSocket.close()</code></strong> 方法关闭 {{domxref("WebSocket")}}  连接或连接尝试（如果有的话）。 如果连接已经关闭，则此方法不执行任何操作。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -15,9 +15,9 @@ translation_of: Web/API/WebSocket/close
 
 <dl>
  <dt><code>code</code> {{optional_inline}}</dt>
- <dd>一个数字状态码，它解释了连接关闭的原因。如果没有传这个参数，默认使用1005。{{domxref("CloseEvent")}}的允许的状态码见<a href="https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent#Status_codes">状态码列表</a> 。</dd>
+ <dd>一个数字状态码，它解释了连接关闭的原因。如果没有传这个参数，默认使用 1005。{{domxref("CloseEvent")}}的允许的状态码见<a href="https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent#Status_codes">状态码列表</a> 。</dd>
  <dt><code>reason</code> {{optional_inline}}</dt>
- <dd>一个人类可读的字符串，它解释了连接关闭的原因。这个UTF-8编码的字符串不能超过123个字节。</dd>
+ <dd>一个人类可读的字符串，它解释了连接关闭的原因。这个 UTF-8 编码的字符串不能超过 123 个字节。</dd>
 </dl>
 
 <h3 id="抛出的异常">抛出的异常</h3>
@@ -26,11 +26,11 @@ translation_of: Web/API/WebSocket/close
  <dt><code>INVALID_ACCESS_ERR</code></dt>
  <dd>一个无效的<code>code</code></dd>
  <dt><code>SYNTAX_ERR</code></dt>
- <dd><code>reason</code> 字符串太长（超过123字节）</dd>
+ <dd><code>reason</code> 字符串太长（超过 123 字节）</dd>
 </dl>
 
 <div class="note">
-<p><strong>注意:</strong> 在Gecko 8.0 {{geckoRelease("8.0")}}之前版本的Gecko里，这个方法不支持传参数。</p>
+<p><strong>注意：</strong> 在 Gecko 8.0 {{geckoRelease("8.0")}}之前版本的 Gecko 里，这个方法不支持传参数。</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
@@ -45,7 +45,7 @@ translation_of: Web/API/WebSocket/close
   <tr>
    <td><a class="external external-icon" href="https://html.spec.whatwg.org/multipage/web-sockets.html#dom-websocket-close" hreflang="en" lang="en">HTML Living Standard<br>
     <small lang="en-US">The definition of 'WebSocket.close()' in that specification.</small></a></td>
-   <td><span class="spec-Living">Living Standard</span></td>
+   <td>Living Standard</td>
    <td>Initial definition</td>
   </tr>
  </tbody>

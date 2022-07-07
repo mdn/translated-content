@@ -11,6 +11,7 @@ tags:
   - sentencias
 translation_of: Web/JavaScript/Reference/Statements/let
 original_slug: Web/JavaScript/Referencia/Sentencias/let
+browser-compat: javascript.statements.let
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
@@ -257,134 +258,11 @@ console.log(a); // 5</pre>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-let-and-const-declarations', 'Let and Const Declarations')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definición initial. No especifica expresiones ni declaraciones let.</td>
-  </tr>
- </tbody>
-</table>
+{{Specification}}
 
 <h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-<h2 id="CompatibilityTable"><span style="font-size: 14px; font-weight: normal; line-height: 1.5;">{{CompatibilityTable}}</span></h2>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>
-    <p class="p1">{{CompatChrome(41.0)}}</p>
-   </td>
-   <td>{{ CompatGeckoDesktop("1.8.1") }} [1]</td>
-   <td>11</td>
-   <td>17</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Zona muerta temporal</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("35") }} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Expresión<code> let</code> {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("1.8.1") }}-{{ CompatGeckoDesktop("40") }} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Bloque<code> let</code> {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("1.8.1") }} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome para Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p class="p1">{{CompatChrome(41.0)}}</p>
-   </td>
-   <td>{{ CompatGeckoMobile("1.8.1") }} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Zona muerta temporal</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("35") }} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Expresión<code> let</code> {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("1.8.1") }}-{{ CompatGeckoMobile("40") }}[1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Bloque<code> let</code> {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("1.8.1") }} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Notas_específicas_a_Firefox">Notas específicas a Firefox</h3>
-
-<ul>
- <li>[1]: Solo disponible para bloques de codigo HTML dentro de una etiqueta <code>&lt;script&gt; type="application/javascript;version=1.7"&gt;</code> (o de una versión mayor). Es necesario tomar en cuenta que esta es una característica no estándar, esto puede crear conflictos con otros navegadores. Las etiquetas <a href="https://developer.mozilla.org/en-US/docs/XUL">XUL</a> tienen acceso a esas características sin necesidad de dicho bloque. Ver<span style="line-height: 1.5;">{{bug(932513)}}.</span></li>
- <li>Conformidad con ES2015 para <code>let</code> en SpIderMonkey es monitoreado en {{bug(950547)}} y extensiones no-standar seran eliminadas en el futuro {{bug(1023609)}}.</li>
-</ul>
+{{Compat}}
 
 <h2 id="Ver_también">Ver también</h2>
 

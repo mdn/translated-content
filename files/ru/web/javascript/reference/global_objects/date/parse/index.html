@@ -10,11 +10,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>Date.parse()</code></strong> разбирает строковое представление даты и возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <p>Прямой вызов:</p>
 
@@ -24,20 +24,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 <pre class="syntaxbox"><code>new Date(<var>dateString</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>dateString</code></dt>
  <dd>Строковое представление даты из RFC2822 (<a href="http://tools.ietf.org/html/rfc2822#page-14">на английском</a>, <a href="http://rfc2.ru/5322.rfc/print#p3.3">на русском</a>) или ISO 8601. Могут использоваться и другие форматы, но результаты в таком случае будут непредсказуемые.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>parse()</code> принимает строку с датой (например, <code>"Dec 25, 1995"</code>) и возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC. Этот метод полезен для установки значения даты из строкового значения, например, в сочетании с методом {{jsxref("Date.prototype.setTime()", "setTime()")}} о объектом {{jsxref("Global_Objects/Date", "Date")}}.</p>
 
 <p>По данному строковому представлению времени метод <code>parse()</code> возвращает значение времени. Он принимает синтаксис даты из RFC2822 / IETF (RFC2822 раздел 3.3 — <a href="http://tools.ietf.org/html/rfc2822#page-14">на английском</a>, <a href="http://rfc2.ru/5322.rfc/print#p3.3">на русском</a>), например, <code>"Mon, 25 Dec 1995 13:30:00 GMT"</code>. Он понимает аббревиатуры континентальных часовых поясов США, но для общего пользования используйте смещение часовых поясов, например, <code>"Mon, 25 Dec 1995 13:30:00 +0430"</code> (4 часа 30 минут к востоку от Гринвичского меридиана). Если часовой пояс не определён и строка является форматом ISO, распозначаемым ES5, предполагается, что часовым поясом является UTC. GMT и UTC считаются эквивалентными. Местный часовой пояс используется для интерпретации аргумента в формате RFC2822 из раздела 3.3 (<a href="http://tools.ietf.org/html/rfc2822#page-14">на английском</a>, <a href="http://rfc2.ru/5322.rfc/print#p3.3">на русском</a>) (или в любом другом формате, не распознаваемым как ISO 8601 в ES5), если он не содержит информации о часовом поясе.</p>
 
-<h3 id="ECMAScript_5_ISO-8601_format_support" name="ECMAScript_5_ISO-8601_format_support">Поддержка формата ISO-8601 в ECMAScript 5</h3>
+<h3 id="ECMAScript_5_ISO-8601_format_support">Поддержка формата ISO-8601 в ECMAScript 5</h3>
 
 <p>Строка с датой и временем может быть в формате <a href="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a>. Например, могут быть переданы и разобраны строки <code>"2011-10-10"</code> (только дата) или <code>"2011-10-10T14:48:00"</code> (дата и время). Для интерпретации аргументов в формате <a href="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a>, не содержащих информацию о часовом поясе, используется часовой пояс UTC.</p>
 
@@ -45,11 +45,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 <p>Поскольку метод <code>parse()</code> является статическим методом объекта {{jsxref("Global_Objects/Date", "Date")}}, вы всегда должны использовать его как <code>Date.parse()</code>.</p>
 
-<h3 id="Differences_in_assumed_time-zone" name="Differences_in_assumed_time-zone">Различия в предполагаемом часовом поясе</h3>
+<h3 id="Differences_in_assumed_time-zone">Различия в предполагаемом часовом поясе</h3>
 
 <p>Для строки даты <code>"March 7, 2014"</code>, метод <code>parse()</code> будет предполагать местный часовой пояс, но если строка дана в формате ISO, например <code>"2014-03-07"</code>, он будет предполагать, что часовой пояс равен UTC. Поэтому объекты {{jsxref("Global_Objects/Date", "Date")}}, созданные из этих строк, если в системе местный часовой пояс не равен UTC, будут представлять разные моменты времени. Это значит, что две строки с датами, которые выглядят одинаковыми, могут дать два разных значения в зависимости от формата преобразуемой строки.</p>
 
-<h3 id="Fall-back_to_implementation-specific_date_formats" name="Fall-back_to_implementation-specific_date_formats">Откат к зависимым от реализации форматам даты</h3>
+<h3 id="Fall-back_to_implementation-specific_date_formats">Откат к зависимым от реализации форматам даты</h3>
 
 <p>В спецификации ECMAScript говорится: если строка не соответствует стандартному формату, функция может откатиться к любой зависимой от реализации эвристике, либо к зависимому от реализации алгоритму разбора. Нераспознанные строки, либо даты, содержащие недопустимые значения элементов в строках формата ISO, должны при вызове <code>Date.parse()</code> возвращать {{jsxref("Global_Objects/NaN", "NaN")}}.</p>
 
@@ -80,9 +80,9 @@ Date.parse('foo-bar 2014');
 // вернёт: NaN
 </pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_parse" name="Example:_Using_parse">Пример: использование метода <code>Date.parse()</code></h3>
+<h3 id="Example_Using_parse">Пример: использование метода <code>Date.parse()</code></h3>
 
 <p>Если переменная <code>IPOdate</code> содержит существующий объект {{jsxref("Global_Objects/Date", "Date")}}, она может быть установлена в 9 августа 1995 года (по местному времени) следующим способом:</p>
 
@@ -114,38 +114,15 @@ Date.parse('foo-bar 2014');
 
 <p>Вернёт <code>14400000</code> вне зависимости от местного часового пояса, поскольку предоставлен спецификатор GMT (всемирное координированное время).</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.4.2', 'Date.parse')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Добавлен формат ISO 8601.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.parse', 'Date.parse')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Date.UTC()")}}</li>

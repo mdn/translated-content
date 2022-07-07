@@ -12,28 +12,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
 <div>{{JSRef("Global_Objects", "Object")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <code><strong>hasOwnProperty()</strong></code> возвращает логическое значение, указывающее, содержит ли объект указанное свойство.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>obj</var>.hasOwnProperty(<var>prop</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>prop</code></dt>
  <dd>Имя проверяемого свойства.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Каждый объект, произошедший от {{jsxref("Global_Objects/Object", "Object")}}, наследует метод <code>hasOwnProperty</code>. Этот метод может использоваться для определения того, содержит ли объект указанное свойство в качестве собственного свойства объекта; в отличие от оператора {{jsxref("Operators/in", "in")}}, этот метод не проверяет существование свойств в цепочке прототипов объекта.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_hasOwnProperty_to_test_for_a_property.27s_existence" name="Example:_Using_hasOwnProperty_to_test_for_a_property.27s_existence">Пример: использование <code>hasOwnProperty</code> для проверки существования свойства</h3>
+<h3 id="Example:_Using_hasOwnProperty_to_test_for_a_property.27s_existence">Пример: использование <code>hasOwnProperty</code> для проверки существования свойства</h3>
 
 <p>В следующем примере определяется, содержит ли объект <code>o</code> свойство с именем <code>prop</code>:</p>
 
@@ -50,7 +50,7 @@ changeO();
 o.hasOwnProperty('prop');   // вернёт false
 </pre>
 
-<h3 id="Example:_Direct_versus_inherited_properties" name="Example:_Direct_versus_inherited_properties">Пример: собственные и унаследованные свойства</h3>
+<h3 id="Example:_Direct_versus_inherited_properties">Пример: собственные и унаследованные свойства</h3>
 
 <p>Следующий пример показывает разницу между собственными свойствами и свойствами, унаследованными через цепочку прототипов:</p>
 
@@ -61,7 +61,7 @@ o.hasOwnProperty('toString');         // вернёт false
 o.hasOwnProperty('hasOwnProperty');   // вернёт false
 </pre>
 
-<h3 id="Example:_Itarate_over_properties_not_considering_inherited_properties" name="Example:_Itarate_over_properties_not_considering_inherited_properties">Пример: обход свойств объекта</h3>
+<h3 id="Example:_Itarate_over_properties_not_considering_inherited_properties">Пример: обход свойств объекта</h3>
 
 <p>Следующий пример показывает, как итерироваться по свойствам объекта с пропуском унаследованных свойств. Обратите внимание, что цикл {{jsxref("Statements/for...in", "for...in")}} уже проходит только по перечисляемым элементам, так что не надо на основании отсутствия не перечисляемых свойств, показываемых в цикле, считать, что метод <code>hasOwnProperty</code> сам ограничивает свойства только перечисляемыми элементами (как это делает метод {{jsxref("Object.getOwnPropertyNames()")}}).</p>
 
@@ -79,7 +79,7 @@ for (var name in buz) {
 }
 </pre>
 
-<h3 id="Example:_hasOwnProperty_as_a_property" name="Example:_hasOwnProperty_as_a_property">Пример: <code>hasOwnProperty</code> как свойство</h3>
+<h3 id="Example:_hasOwnProperty_as_a_property">Пример: <code>hasOwnProperty</code> как свойство</h3>
 
 <p>JavaScript не защищает имя свойства <code>hasOwnProperty</code>; таким образом, вполне может существовать объект с таким свойством, поэтому для получения правильного результата нужно использовать <em>внешний</em> метод <code>hasOwnProperty</code>:</p>
 
@@ -101,40 +101,17 @@ Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
 
 <p>Обратите внимание, что в последнем случае новые объекты не создаются.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3rd Edition.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div>
-<p>{{Compat("javascript.builtins.Object.hasOwnProperty")}}</p>
+<p>{{Compat}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/docs/Enumerability_and_ownership_of_properties">Перечисляемость и собственность свойств</a></li>

@@ -9,13 +9,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/NaN
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Глобальное свойство <code><strong>NaN</strong></code> является значением, представляющим не-число (Not-A-Number).</p>
 
 <div>{{js_property_attributes(0, 0, 0)}}</div>
 
-<div></div>
+
 
 <p>{{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}</p>
 
@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/NaN
 <p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 </div>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p><code>NaN</code> является свойством <em>глобального объекта</em>.</p>
 
@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/NaN
 
 <p>В программах <code>NaN</code> используется довольно редко. Это возвращаемое значение в ситуациях, когда математические ({{jsxref("Math")}}) функции не срабатывают должным образом (например, при вызове <code>Math.sqrt(-1)</code>) или когда функция, пытающаяся считать число из строки, терпит неудачу по причине того, что в строке не число (<code>parseInt('blabla')</code>).</p>
 
-<h3 id="Testing_against_NaN" name="Testing_against_NaN">Проверка на равенство <code>NaN</code></h3>
+<h3 id="Testing_against_NaN">Проверка на равенство <code>NaN</code></h3>
 
 <p><code>NaN</code> является неравным (посредством сравнения через <code>==</code>, <code>!=</code>, <code>===</code>, and <code>!==</code>) любому другому значению, включая другое значение NaN. Используйте {{jsxref("Number.isNaN()")}} или {{jsxref("Global_Objects/isNaN", "isNaN()")}}, чтобы наиболее понятным образом определить является ли значение значением NaN. Или выполните само-сравнение: NaN, и только NaN, в результате такого сравнения будет неравным самому себе.</p>
 
@@ -50,47 +50,19 @@ valueIsNaN(Number.NaN); // true</code></pre>
 <pre><code>isNaN('hello world');        // true
 Number.isNaN('hello world'); // false</code></pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-value-properties-of-the-global-object-nan', 'NaN')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-value-properties-of-the-global-object-nan', 'NaN')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.1.1', 'NaN')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.3</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.NaN")}}</p>
+<p>{{Compat}}</p>
 
 <div id="compat-desktop"></div>
 
 <div id="compat-mobile"></div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Number.NaN")}}</li>

@@ -126,7 +126,7 @@ for (let value of iterable) {
 
 <p>迭代 DOM 元素集合，比如一个{{domxref("NodeList")}}对象：下面的例子演示给每一个 article 标签内的 p 标签添加一个 "<code>read</code>" 类。</p>
 
-<pre class="brush:js">//注意：这只能在实现了NodeList.prototype[Symbol.iterator]的平台上运行
+<pre class="brush:js">//注意：这只能在实现了 NodeList.prototype[Symbol.iterator] 的平台上运行
 let articleParagraphs = document.querySelectorAll("article &gt; p");
 
 for (let paragraph of articleParagraphs) {
@@ -136,7 +136,7 @@ for (let paragraph of articleParagraphs) {
 
 <h3 id="关闭迭代器">关闭迭代器</h3>
 
-<p>对于<code>for...of</code>的循环，可以由<code>break</code>, <code>throw  continue </code>   或<code>return</code>终止。在这些情况下，迭代器关闭。</p>
+<p>对于<code>for...of</code>的循环，可以由 <code>break</code>, <code>throw</code> 或 <code>return</code> 终止。在这些情况下，迭代器关闭。</p>
 
 <pre class="brush: js">function* foo(){
   yield 1;
@@ -152,7 +152,7 @@ for (let o of foo()) {
 
 <h3 id="迭代生成器">迭代生成器</h3>
 
-<p><span><span>你还可以</span></span>迭代<span><span>一个</span></span><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/function*">生成器</a>：</p>
+<p>你还可以迭代一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/function*">生成器</a>：</p>
 
 <pre class="brush:js">function* fibonacci() { // 一个生成器函数
     let [prev, curr] = [0, 1];
@@ -164,7 +164,7 @@ for (let o of foo()) {
 
 for (let n of fibonacci()) {
      console.log(n);
-    // 当n大于1000时跳出循环
+    // 当 n 大于 1000 时跳出循环
     if (n &gt;= 1000)
         break;
 }</pre>

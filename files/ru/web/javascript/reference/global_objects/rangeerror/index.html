@@ -10,13 +10,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
 ---
 <div>{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Объект <code><strong>RangeError</strong></code> представляет ошибку, возникающую, когда значение не входит в множество или выходит за диапазон допустимых значений.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code>new RangeError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>message</code></dt>
  <dd>Необязательный параметр. Человеко-читаемое описание ошибки.</dd>
@@ -26,29 +26,29 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
  <dd>Необязательный параметр. Номер строки кода, вызвавшей исключение.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Исключение <code>RangeError</code> выбрасывается при попытке передать аргументом в функцию число, которое не входит в допустимый диапазон значений аргумента этой функции. Оно может возникать при создании массива с неправильной длиной через конструктор {{jsxref("Array")}}, или при передаче плохих значений в методы числа {{jsxref("Number.toExponential()")}}, {{jsxref("Number.toFixed()")}} или {{jsxref("Number.toPrecision()")}}.</p>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 <dl>
  <dt>{{jsxref("RangeError.prototype")}}</dt>
  <dd>Позволяет добавлять свойства в объект <code>RangeError</code>.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 <p>Глобальный объект <code>RangeError</code> не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.</p>
 
-<h2 id="RangeError_instances" name="RangeError_instances">Экземпляры объекта <code>RangeError</code></h2>
+<h2 id="RangeError_instances">Экземпляры объекта <code>RangeError</code></h2>
 
-<h3 id="Properties_of_RangeError_instances" name="Properties_of_RangeError_instances">Свойства</h3>
+<h3 id="Properties_of_RangeError_instances">Свойства</h3>
 <div>{{page('/ru/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Properties')}}</div>
 
-<h3 id="Methods_of_RangeError_instances" name="Methods_of_RangeError_instances">Методы</h3>
+<h3 id="Methods_of_RangeError_instances">Методы</h3>
 <div>{{page('/ru/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Methods')}}</div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_RangeError" name="Example:_Using_RangeError">Пример: использование <code>RangeError</code></h3>
+<h3 id="Example:_Using_RangeError">Пример: использование <code>RangeError</code></h3>
 <pre class="brush: js">var check = function(num) {
   if (num &lt; MIN || num &gt; MAX) {
     throw new RangeError('Параметр должен быть между ' + MIN + ' и ' + MAX);
@@ -65,7 +65,7 @@ catch (e) {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -91,10 +91,10 @@ catch (e) {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Error")}}</li>
  <li>{{jsxref("RangeError.prototype")}}</li>

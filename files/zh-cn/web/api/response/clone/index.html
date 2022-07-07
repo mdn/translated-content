@@ -16,7 +16,7 @@ original_slug: Web/API/Response/克隆
 
 <p>{{domxref("Response")}} 接口的 clone() 方法创建了一个响应对象的克隆，这个对象在所有方面都是相同的，但是存储在一个不同的变量中。</p>
 
-<p>如果已经使用了响应 {{domxref("Body")}}，<code>clone()</code> 会抛出{{jsxref("TypeError")}}。 实际上，clone()存在的主要原因是允许多次使用{{domxref("Body")}}对象(当它们是一次性使用的时候)。</p>
+<p>如果已经使用了响应 {{domxref("Body")}}，<code>clone()</code> 会抛出{{jsxref("TypeError")}}。 实际上，clone() 存在的主要原因是允许多次使用{{domxref("Body")}}对象 (当它们是一次性使用的时候)。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -28,11 +28,11 @@ original_slug: Web/API/Response/克隆
 
 <h3 id="Value">Value</h3>
 
-<p>一个 {{domxref("Response")}} 对象.</p>
+<p>一个 {{domxref("Response")}} 对象。</p>
 
 <h2 id="示例">示例</h2>
 
-<p>在我们的 <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response-clone">Fetch Response 克隆示例</a> (请参阅 <a href="http://mdn.github.io/fetch-examples/fetch-response-clone/">Fetch Response clone live</a>) 我们使用{{domxref("Request.Request","Request()")}} 构造函数创建一个新的 {{domxref("Request")}} 来传递一个 JPG 路径。 然后我们使用 {{domxref("GlobalFetch.fetch","fetch()")}} 获取这个请求。 当 fetch resolve 时，我们克隆它，使用两个{{domxref("Body.blob")}}调用从两个响应中提取blob，使用{{domxref("URL.createObjectURL")}} 从blob创建对象URL，并将它们显示在两个单独的{{htmlelement("img")}}元素中。</p>
+<p>在我们的 <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response-clone">Fetch Response 克隆示例</a> (请参阅 <a href="http://mdn.github.io/fetch-examples/fetch-response-clone/">Fetch Response clone live</a>) 我们使用{{domxref("Request.Request","Request()")}} 构造函数创建一个新的 {{domxref("Request")}} 来传递一个 JPG 路径。 然后我们使用 {{domxref("GlobalFetch.fetch","fetch()")}} 获取这个请求。 当 fetch resolve 时，我们克隆它，使用两个{{domxref("Body.blob")}}调用从两个响应中提取 blob，使用{{domxref("URL.createObjectURL")}} 从 blob 创建对象 URL，并将它们显示在两个单独的{{htmlelement("img")}}元素中。</p>
 
 <pre class="brush: js">var image1 = document.querySelector('.img1');
 var image2 = document.querySelector('.img2');
@@ -72,68 +72,7 @@ fetch(myRequest).then(function(response) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(42)}}<br>
-    {{CompatChrome(41)}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(39)}}<br>
-    34<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>
-    <p>29<br>
-     28<sup>[1]</sup></p>
-   </td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 此功能是在首选项后面实现的。</p>
+{{Compat("api.Response.clone")}}
 
 <h2 id="See_also">See also</h2>
 

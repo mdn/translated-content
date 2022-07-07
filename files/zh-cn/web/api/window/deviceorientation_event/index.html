@@ -8,18 +8,18 @@ translation_of: Web/API/Window/deviceorientation_event
 <h2 id="常规信息">常规信息</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">标准</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/orientation-event/#deviceorientation">Orientation</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">接口</dt>
- <dd style="margin: 0 0 0 120px;">DeviceOrientationEvent</dd>
- <dt style="float: left; text-align: right; width: 120px;">冒泡</dt>
- <dd style="margin: 0 0 0 120px;">否</dd>
- <dt style="float: left; text-align: right; width: 120px;">可取消</dt>
- <dd style="margin: 0 0 0 120px;">否</dd>
- <dt style="float: left; text-align: right; width: 120px;">Target</dt>
- <dd style="margin: 0 0 0 120px;">DefaultView (<code>window</code>)</dd>
- <dt style="float: left; text-align: right; width: 120px;">默认操作</dt>
- <dd style="margin: 0 0 0 120px;">无</dd>
+ <dt>标准</dt>
+ <dd><a class="external" href="http://www.w3.org/TR/orientation-event/#deviceorientation">Orientation</a></dd>
+ <dt>接口</dt>
+ <dd>DeviceOrientationEvent</dd>
+ <dt>冒泡</dt>
+ <dd>否</dd>
+ <dt>可取消</dt>
+ <dd>否</dd>
+ <dt>Target</dt>
+ <dd>DefaultView (<code>window</code>)</dd>
+ <dt>默认操作</dt>
+ <dd>无</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -80,7 +80,7 @@ translation_of: Web/API/Window/deviceorientation_event
 
 <pre class="pass: js">if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function(event) {
-        // alpha: 在Z轴上的角度
+        // alpha: 在 Z 轴上的角度
         var rotateDegrees = event.alpha;
         // gamma: 从左到右
         var leftToRight = event.gamma;
@@ -98,55 +98,7 @@ var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基本功能支持</td>
-   <td>7.0</td>
-   <td>3.6<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本功能支持</td>
-   <td>3.0</td>
-   <td>3.6<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>12</td>
-   <td>4.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Firefox 3.6, 4, 和 5 支持 <a href="/en-US/docs/Web/Events/MozOrientation">mozOrientation</a> 这一类似 <code>DeviceOrientation</code> 的事件。</p>
+{{Compat("api.Window.deviceorientation_event")}}
 
 <h2 id="相关事件">相关事件</h2>
 

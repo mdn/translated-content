@@ -5,7 +5,7 @@ translation_of: Web/CSS/order
 ---
 <div>{{ CSSRef("CSS Flexible Boxes") }}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p><a href="/zh-CN/docs/CSS" title="CSS">CSS</a> <strong><code>order</code></strong> 属性规定了弹性容器中的可伸缩项目在布局时的顺序。元素按照 <code>order</code> 属性的值的增序进行布局。拥有相同 <code>order</code> 属性值的元素按照它们在源代码中出现的顺序进行布局。</p>
 
@@ -17,7 +17,7 @@ translation_of: Web/CSS/order
 
 <p>参考 <a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" title="使用 CSS 弹性盒子">使用 CSS 弹性盒子</a> 获取更多信息。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="brush:css">/* Numerical value including negative numbers */
 order: 5;
@@ -29,7 +29,7 @@ order: initial;
 order: unset;
 </pre>
 
-<h3 id="Values" name="Values">取值</h3>
+<h3 id="Values">取值</h3>
 
 <dl>
  <dt><code>&lt;integer&gt;</code></dt>
@@ -40,9 +40,9 @@ order: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
-<p>这里是一个基本的HTML代码片段:</p>
+<p>这里是一个基本的 HTML 代码片段：</p>
 
 <pre class="brush:html;">&lt;!DOCTYPE html&gt;
 &lt;header&gt;…&lt;/header&gt;
@@ -53,14 +53,14 @@ order: unset;
 &lt;/div&gt;
 &lt;footer&gt;…&lt;/footer&gt;</pre>
 
-<p>下面的CSS代码会创建一个经典的双 sidebar 围绕一个中央内容块的布局。 Flexible Box 布局模块会自动地创建三个具有相同高度的内容块，也会使用所有可用的水平空间。</p>
+<p>下面的 CSS 代码会创建一个经典的双 sidebar 围绕一个中央内容块的布局。Flexible Box 布局模块会自动地创建三个具有相同高度的内容块，也会使用所有可用的水平空间。</p>
 
 <pre class="brush:css;">#main { display: flex; }
 #main &gt; article { flex:1;         order: 2; }
 #main &gt; nav     { width: 200px;   order: 1; }
 #main &gt; aside   { width: 200px;   order: 3; }</pre>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="Specifications">规范</h2>
 
 <table class="standard-table">
  <thead>
@@ -79,84 +79,11 @@ order: unset;
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable }}</p>
+{{Compat("css.properties.order")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome(21.0) }}{{ property_prefix("-webkit") }}<br>
-    29</td>
-   <td>
-    <p>{{ CompatGeckoDesktop("18.0") }} (behind a pref) [1][3]<br>
-     {{CompatGeckoDesktop("20.0")}}<br>
-     28</p>
-   </td>
-   <td>
-    <p>10.0, but under the non-standard <code>-ms-flex-order</code> name {{ property_prefix("-ms") }}  [2]<br>
-     11</p>
-   </td>
-   <td>12.10</td>
-   <td>
-    <p>7 {{ property_prefix("-webkit") }}<br>
-     9</p>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown }}</td>
-   <td>{{ CompatUnknown }}</td>
-   <td>{{ CompatGeckoMobile("18.0") }} (behind a pref) [1]<br>
-    {{CompatGeckoMobile("20.0")}}</td>
-   <td>{{ CompatUnknown }}</td>
-   <td>12.10</td>
-   <td>
-    <p><span style="font-size: 12px; line-height: 18px;">7 {{ property_prefix("-webkit") }}</span><br>
-     <span style="font-size: 12px; line-height: 18px;">9</span></p>
-
-    <p> </p>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在 Firefox 18 和 19 中使用弹性布局，需要将 about:config 中 <code>layout.css.flexbox.enabled</code> 设置为 <code>true</code>。从 Firefox 28 起开始完整支持。</p>
-
-<p>Firefox 中不正确地更改元素的 Tab 顺序. 查看 {{bug("812687")}}。</p>
-
-<p>[2] In addition to the unprefixed support, Gecko 48.0 {{geckoRelease("48.0")}} added support for a <code>-webkit</code> prefixed version of the property for web compatibility reasons behind the preference <code>layout.css.prefixes.webkit</code>, defaulting to <code>false</code>. Since Gecko 49.0 {{geckoRelease("49.0")}} the preference defaults to <code>true</code>.</p>
-
-<p>[3] 在 Internet Explorer 10 中，使用 <code>display: -ms-flexbox</code> 来声明弹性盒子。<code>-ms-flex-order</code> 属性是非标准实现。</p>
-
-<h2 id="See_also" name="See_also">参考</h2>
+<h2 id="See_also">参考</h2>
 
 <ul>
  <li><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" title="使用 CSS 弹性盒子">使用 CSS 弹性盒子</a></li>

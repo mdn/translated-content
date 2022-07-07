@@ -17,9 +17,9 @@ translation_of: Web/API/HTMLInputElement
 
 <p>{{InheritanceDiagram(600,120)}}</p>
 
-<h2 id="Properties" name="Properties">属性</h2>
+<h2 id="Properties">属性</h2>
 
-<table class="standard-table">
+<table>
  <caption>与父表单相关的属性</caption>
  <thead>
  </thead>
@@ -51,16 +51,16 @@ translation_of: Web/API/HTMLInputElement
  </tbody>
 </table>
 
-<table class="standard-table">
+<table>
  <caption>可用于任何非隐藏输入元素的属性</caption>
  <tbody>
   <tr>
    <td><code>name</code></td>
-   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("name", "input") }} 属性, 包含<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">其</span></font>名称.</td>
+   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("name", "input") }} 属性, 包含其名称.</td>
   </tr>
   <tr>
    <td><code>type</code></td>
-   <td><code><em>string:</em></code> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("type", "input") }} 属性, 包含<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">其</span></font>显示类型. 查看 {{ HTMLElement("input") }} 的 {{ htmlattrxref("type", "input") }} 属性可用值.</td>
+   <td><code><em>string:</em></code> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("type", "input") }} 属性, 包含其显示类型. 查看 {{ HTMLElement("input") }} 的 {{ htmlattrxref("type", "input") }} 属性可用值.</td>
   </tr>
   <tr>
    <td><code>disabled</code></td>
@@ -77,7 +77,7 @@ translation_of: Web/API/HTMLInputElement
   <tr>
    <td><code>value</code></td>
    <td><code><em>string:</em></code> <strong>返回/ 设置</strong> 当前控件的值.
-    <p class="note"><strong>提示:</strong> 如果用户输入与预期不同，可能会返回空.</p>
+    <p><strong>提示:</strong> 如果用户输入与预期不同，可能会返回空.</p>
    </td>
   </tr>
   <tr>
@@ -95,7 +95,7 @@ translation_of: Web/API/HTMLInputElement
  </tbody>
 </table>
 
-<table class="standard-table">
+<table>
  <caption><a id="Properties_checkbox_radio" name="Properties_checkbox_radio"></a>仅适用于类型为"checkbox" 或 "radio"元素的属性</caption>
  <tbody>
   <tr>
@@ -113,7 +113,7 @@ translation_of: Web/API/HTMLInputElement
  </tbody>
 </table>
 
-<table class="standard-table">
+<table>
  <caption>仅适用于类型为"image"元素的属性</caption>
  <tbody>
   <tr>
@@ -135,7 +135,7 @@ translation_of: Web/API/HTMLInputElement
  </tbody>
 </table>
 
-<table class="standard-table">
+<table>
  <caption>仅适用于类型为"file"元素的属性</caption>
  <tbody>
   <tr>
@@ -161,7 +161,7 @@ translation_of: Web/API/HTMLInputElement
  </tbody>
 </table>
 
-<table class="standard-table">
+<table>
  <caption>仅适用于文本或数字输入元素的属性</caption>
  <tbody>
   <tr>
@@ -189,7 +189,7 @@ translation_of: Web/API/HTMLInputElement
   <tr>
    <td><code>readOnly</code></td>
    <td><em><code>boolean</code>:</em><strong> 返回/ 设置</strong> 元素的 {{ htmlattrxref("readonly", "input") }} 属性, indicating that the user cannot modify the value of the control.<br>
-    {{HTMLVersionInline(5)}}This is ignored if the value of the {{htmlattrxref("type","input")}} 属性is <code>hidden</code>, <code>range</code>, <code>color</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or a button type.</td>
+    This is ignored if the value of the {{htmlattrxref("type","input")}} 属性is <code>hidden</code>, <code>range</code>, <code>color</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or a button type.</td>
   </tr>
   <tr>
    <td><code>min</code></td>
@@ -217,7 +217,7 @@ translation_of: Web/API/HTMLInputElement
  </tbody>
 </table>
 
-<table class="standard-table">
+<table>
  <caption>未分类的属性</caption>
  <tbody>
   <tr>
@@ -282,7 +282,7 @@ translation_of: Web/API/HTMLInputElement
 
 <h2 id="方法">方法</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <td><code>focus()</code></td>
@@ -369,277 +369,11 @@ translation_of: Web/API/HTMLInputElement
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "forms.html#the-input-element", "HTMLInputElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "forms.html#the-input-element", "HTMLInputElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Technically, the  tabindex and accesskey properties, as well as the blur(), click(), and focus() methods, are now defined on {{domxref("HTMLElement")}}.<br>
-    The following properties are now obsolete: align and useMap.<br>
-    The following properties have been added: autocomplete, autofocus, dirName, files, formAction, formEncType, formMethod, formNoValidate, formTarget, height, indeterminate, labels, list, max, min, multiple, pattern, placeholder, required, selectionDirection, selectionEnd, selectionStart, step, validationMessage, validity, valueAsDate, valueAsNumber, width, and willValidate.<br>
-    The following methods have been added: checkValidity(), setCustomValidity(), setSelectionRange(), stepUp(), and stepDown().</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-6043025', 'HTMLInputElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>The size property is now an unsigned long. The type property must be entirely given in lowercase characters.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-6043025', 'HTMLInputElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(1.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>autocomplete &amp; autofocus properties</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>files property</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(1.9)}}<sup>[2]</sup></td>
-   <td>10</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>multiple property</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>indeterminate property</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>list property</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>formAction, formEncType, formMethod, formTarget properties</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(2)}}<sup>[3]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>formNoValidate, validationMessage, validity, willValidate properties and setCustomValidity() and checkValidity() methods.</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(2)}}</td>
-   <td>10</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>pattern, placeholder, required properties</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(2)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>height and weight properties</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(16)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>labels</code> property</td>
-   <td>{{CompatChrome(14.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("56")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>min, max, and step for &lt;input type="number"&gt;</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>Experimental, and without specific UI, since {{CompatGeckoDesktop(16)}}: behind the pref dom.experimental_forms</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>stepUp and stepDown methods</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>Experimental since {{CompatGeckoDesktop(16)}}: behind the pref dom.experimental_forms<br>
-    <br>
-    There are still differences with the latest spec: {{bug(835773)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>min, max, and step properties for &lt;input type="range"&gt;</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(23)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>min, max, and step properties for &lt;input type="date"&gt;</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>Experimental, and without specific UI, since {{CompatGeckoDesktop(20)}}: behind the pref dom.experimental_forms</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>min, max, and step properties for other date-related type values</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>mozGetFileNameArray() and mozSetFileNameArray() methods {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>mozSetFileArray() method {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("38")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>autocapitalize</td>
-   <td>{{CompatChrome(43.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(1.0)}}<sup>[3]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>autocapitalize</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(43.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td><span style="font-size: 12px; line-height: 16.3636360168457px;">{{CompatUnknown}}</span></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(43.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Implemented in {{bug("556743")}}.</p>
-
-<p>[2] The <code>files</code> property was made settable in Firefox 57 ({{bug(1384030)}}).</p>
-
-<p>[3] In Firefox 56, the implementation has been updated so that the <code>formAction</code> property returns the correct form submission URL, as per spec, when the associated <code>&lt;input&gt;</code> is being used to submit a form ({{bug(1366361)}}).</p>
+{{Compat("api.HTMLInputElement")}}
 
 <h2 id="参见">参见</h2>
 

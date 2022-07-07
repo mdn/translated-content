@@ -9,11 +9,12 @@ tags:
   - NeedsTranslation
   - Reference
   - TopicStub
+browser-compat: api.OffscreenCanvas
 translation_of: Web/API/OffscreenCanvas
 ---
 <div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
 
-<p>The <strong><code>OffscreenCanvas</code></strong> interface provides a canvas that can be rendered off screen. It is available in both the window and <a href="/en-US/docs/Web/API/Web_Workers_API">worker</a> contexts.</p>
+<p>The <strong><code>OffscreenCanvas</code></strong> interface provides a canvas that can be rendered off screen. It is available in both the window and <a href="/ja/docs/Web/API/Web_Workers_API">worker</a> contexts.</p>
 
 <h2 id="Constructors">Constructors</h2>
 
@@ -84,7 +85,7 @@ two.transferFromImageBitmap(bitmapTwo);
 
 <h3 id="Asynchronous_display_of_frames_produced_by_an_OffscreenCanvas">Asynchronous display of frames produced by an <code>OffscreenCanvas</code></h3>
 
-<p>Another way to use the <code>OffscreenCanvas</code> API, is to call {{domxref("HTMLCanvasElement.transferControlToOffscreen", "transferControlToOffscreen()")}} on a {{HTMLElement("canvas")}} element, either on a <a href="/en-US/docs/Web/API/Web_Workers_API">worker</a> or the main thread, which will return an <code>OffscreenCanvas</code> object from an {{domxref("HTMLCanvasElement")}} object from the main thread. Calling {{domxref("OffscreenCanvas.getContext", "getContext()")}} will then obtain a <code>RenderingContext</code> from that <code>OffscreenCanvas</code>.</p>
+<p>Another way to use the <code>OffscreenCanvas</code> API, is to call {{domxref("HTMLCanvasElement.transferControlToOffscreen", "transferControlToOffscreen()")}} on a {{HTMLElement("canvas")}} element, either on a <a href="/ja/docs/Web/API/Web_Workers_API">worker</a> or the main thread, which will return an <code>OffscreenCanvas</code> object from an {{domxref("HTMLCanvasElement")}} object from the main thread. Calling {{domxref("OffscreenCanvas.getContext", "getContext()")}} will then obtain a <code>RenderingContext</code> from that <code>OffscreenCanvas</code>.</p>
 
 <p>main.js (main thread code):</p>
 
@@ -120,20 +121,7 @@ worker.postMessage({canvas: offscreen}, [offscreen]);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#the-offscreencanvas-interface", "OffscreenCanvas")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

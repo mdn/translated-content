@@ -28,7 +28,7 @@ translation_of: Web/HTML/Element/input/password
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#value">Value</a></strong></td>
    <td>{{domxref("DOMString")}} представляет пароль или пустую строку</td>
   </tr>
   <tr>
@@ -54,7 +54,7 @@ translation_of: Web/HTML/Element/input/password
 
 <p>Атрибут {{htmlattrxref("value", "input")}} содержит {{domxref("DOMString")}} , значение которого является текущим содержимым элемента редактирования текста, используемого для ввода пароля. Если пользователь ещё ничего не указал, это значение представляет собой пустую строку (<code>""</code>). Если указано свойство {{htmlattrxref("required")}}, то поле ввода пароля должно содержать значение, отличное от пустой строки, которое должно быть действительным.</p>
 
-<p>Если указан атрибут {{htmlattrxref("pattern", "input")}}, содержимое элемента управления <code>"password"</code> считается действительным только в том случае, если значение проходит проверку; см. {{anch("Validation")}} для получения дополнительной информации.</p>
+<p>Если указан атрибут {{htmlattrxref("pattern", "input")}}, содержимое элемента управления <code>"password"</code> считается действительным только в том случае, если значение проходит проверку; см. <a href="#validation">Validation</a> для получения дополнительной информации.</p>
 
 <div class="note">
 <p>Символы строки (U+000A) и возврата каретки(U+000D) недопустимы в значении поля <code>"password"</code>. При вставке пароля, возвращаемые символы удаляются из значения.</p>
@@ -71,7 +71,7 @@ translation_of: Web/HTML/Element/input/password
 <pre class="brush: html">&lt;label for="userPassword"&gt;Пароль:&lt;/label&gt;
 &lt;input id="userPassword" type="password"&gt;</pre>
 
-<p>{{EmbedLiveSample("A_simple_password_input", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Простое_поле_ввода_пароля", 600, 40)}}</p>
 
 <h3 id="Поддержка_автозаполнения">Поддержка автозаполнения</h3>
 
@@ -102,7 +102,7 @@ translation_of: Web/HTML/Element/input/password
 <pre class="brush: html">&lt;label for="userPassword"&gt;Пароль:&lt;/label&gt;
 &lt;input id="userPassword" type="password" required&gt;</pre>
 
-<p>{{EmbedLiveSample("Making_the_password_mandatory", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Обязательное_заполнение_пароля", 600, 40)}}</p>
 
 <h3 id="Указание_режима_ввода">Указание режима ввода</h3>
 
@@ -111,7 +111,7 @@ translation_of: Web/HTML/Element/input/password
 <pre class="brush: html">&lt;label for="pin"&gt;ПИН:&lt;/label&gt;
 &lt;input id="pin" type="password" inputmode="numeric"&gt;</pre>
 
-<p>{{EmbedLiveSample("Specifying_an_input_mode", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Указание_режима_ввода", 600, 40)}}</p>
 
 <h3 id="Настройка_длины_пароля">Настройка длины пароля</h3>
 
@@ -121,7 +121,7 @@ translation_of: Web/HTML/Element/input/password
 &lt;input id="pin" type="password" inputmode="numeric" minlength="4"
        maxlength="8" size="8"&gt;</pre>
 
-<p>{{EmbedLiveSample("Setting_length_requirements", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Настройка_длины_пароля", 600, 40)}}</p>
 
 <h3 id="Выделение_текста">Выделение текста</h3>
 
@@ -142,7 +142,7 @@ translation_of: Web/HTML/Element/input/password
 
 <h4 id="Результат">Результат</h4>
 
-<p>{{EmbedLiveSample("Selecting_text", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Выделение_текста", 600, 40)}}</p>
 
 <p>Вы также можете использовать {{domxref("HTMLInputElement.selectionStart", "selectionStart")}} и {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}}, чтобы получить (или установить), какой диапазон символов в элементе управления, и {{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}}, чтобы узнать, какой выбор направления произошёл (или будет расширен в зависимости от вашей платформы, см. его документацию для объяснения) , Однако, учитывая, что текст затенён, их полезность несколько ограничена.</p>
 
@@ -158,7 +158,7 @@ translation_of: Web/HTML/Element/input/password
        title="Enter an ID consisting of 4-8 hexadecimal digits"&gt;</pre>
 </div>
 
-<p>{{EmbedLiveSample("Validation_sample1", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Валидация", 600, 40)}}</p>
 
 <dl>
  <dt>{{htmlattrdef("disabled")}}</dt>
@@ -198,32 +198,12 @@ ssn.oninput = function(event) {
 
 <h4 id="Результат_2">Результат</h4>
 
-<p>{{EmbedLiveSample("Requesting_a_Social_Security_number", 600, 60)}}</p>
+<p>{{EmbedLiveSample("Запрос_номера_социального_страхования", 600, 60)}}</p>
 
 <h2 id="Спецификация">Спецификация</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#password-state-(type=password)', '&lt;input type="password"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Начальное определение</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'forms.html#password-state-(type=password)', '&lt;input type="password"&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Начальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
 
-<p>{{Compat("html.elements.input.input-password")}}</p>
+<p>{{Compat}}</p>

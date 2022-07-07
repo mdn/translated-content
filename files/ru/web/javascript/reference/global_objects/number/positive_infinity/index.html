@@ -9,13 +9,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 ---
 <div>{{JSRef("Global_Objects", "Number")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Свойство <strong><code>Number.POSITIVE_INFINITY</code></strong> представляет значение положительной бесконечности.</p>
 <p>Вам не нужно создавать объект {{jsxref("Global_Objects/Number", "Number")}} для доступа к этому статическому свойству (используйте <code>Number.POSITIVE_INFINITY</code>).</p>
 
 <div>{{js_property_attributes(0, 0, 0)}}</div>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Значение <code>Number.POSITIVE_INFINITY</code> является тем же самым значением, что содержит свойство {{jsxref("Global_Objects/Infinity", "Infinity")}} глобального объекта.</p>
 <p>Это значение ведёт себя несколько иначе, нежели математическая бесконечность:</p>
 <ul>
@@ -30,9 +30,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 </ul>
 <p>Вы можете использовать свойство <code>Number.POSITIVE_INFINITY</code> для проверки на ошибки и возвращать конечное число в случае успеха. Однако, обратите внимание, что в этом случае более уместным было бы использование функции {{jsxref("Global_Objects/isFinite", "isFinite")}}.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_POSITIVE_INFINITY" name="Example:_Using_POSITIVE_INFINITY">Пример: использование <code>POSITIVE_INFINITY</code></h3>
+<h3 id="Example:_Using_POSITIVE_INFINITY">Пример: использование <code>POSITIVE_INFINITY</code></h3>
 <p>В следующем примере переменной <code>bigNumber</code> присваивается значение, большее максимального. Когда выполняется инструкция {{jsxref("Statements/if...else", "if")}}, переменная <code>bigNumber</code> имеет значение <code>Infinity</code>, так что перед продолжением вычислений она устанавливается в более приемлемое значение.</p>
 <pre class="brush: js">var bigNumber = Number.MAX_VALUE * 2;
 
@@ -41,7 +41,7 @@ if (bigNumber == Number.POSITIVE_INFINITY) {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -67,10 +67,10 @@ if (bigNumber == Number.POSITIVE_INFINITY) {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
  <li>{{jsxref("Number.isFinite()")}}</li>

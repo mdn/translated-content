@@ -9,7 +9,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<p><span class="seoSummary"><code><strong>encodeURIComponent()</strong></code> 함수는 {{glossary("URI")}}의 특정한 문자를 UTF-8로 인코딩해 하나, 둘, 셋, 혹은 네 개의 연속된 이스케이프 문자로 나타냅니다.</span> (두 개의 대리 문자로 이루어진 문자만 이스케이프 문자 네 개로 변환됩니다.)</p>
+<p><code><strong>encodeURIComponent()</strong></code> 함수는 {{glossary("URI")}}의 특정한 문자를 UTF-8로 인코딩해 하나, 둘, 셋, 혹은 네 개의 연속된 이스케이프 문자로 나타냅니다. (두 개의 대리 문자로 이루어진 문자만 이스케이프 문자 네 개로 변환됩니다.)</p>
+
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-encodeuricomponent.html")}}</div>
 
@@ -58,7 +59,7 @@ console.log(encodeURIComponent(set3)); // %23
 console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (the space gets encoded as %20)
 </pre>
 
-<p><span id="result_box" lang="ko"><span>상위-하위 쌍을 이루지 않은 단일 대리 문자를 인코딩 시도하면 {{jsxref("URIError")}}가 발생합니다.</span></span></p>
+<p>상위-하위 쌍을 이루지 않은 단일 대리 문자를 인코딩 시도하면 {{jsxref("URIError")}}가 발생합니다.</p>
 
 <pre class="brush: js">// high-low pair ok
 console.log(encodeURIComponent('\uD800\uDFFF'));

@@ -317,7 +317,7 @@ do {
 }
 </pre>
 
-<p>Los operadores <code>&amp;&amp;</code> y <code>||</code> utilizan lógica de cortocircuito, lo cual significa que si ejecutarán su segundo operando depende del primero. Esto es útil para verificar objetos nulos antes de acceder a sus atributos:</p>
+<p>Los operadores <code>&amp;&amp;</code> y <code>||</code> utilizan evaluación de cortocircuito, lo cual significa que la evaluación del segundo operando depende del valor del primero. Esto es útil para verificar objetos nulos antes de acceder a sus atributos:</p>
 
 <pre class="brush: js notranslate">var name = o &amp;&amp; o.getName();
 </pre>
@@ -862,7 +862,7 @@ String.prototype.reversed = function() {
 s.reversed(); // nomiS
 </pre>
 
-<p>¡Nuestro método <code>new<code> funciona incluso con cadenas literales!</code></code></p><code><code>
+<p>¡Nuestro método <code>new</code> funciona incluso con cadenas literales!</p>
 
 <pre class="brush: js notranslate">'Esto ahora se puede revertir'.reversed(); // ritrever edeup es aroha otsE
 </pre>

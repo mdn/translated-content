@@ -15,10 +15,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 
 <div>{{EmbedInteractiveExample("pages/js/promise-then.html")}}</div>
 
-<p class="hidden">The source for this interactive demo is stored in a GitHub repository. If you'd like to contribute to the interactive demo project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
-
 <div class="note">
-<p>注意：如果忽略针对某个状态的回调函数参数，或者提供非函数 (nonfunction) 参数，那么 <code>then</code> 方法将会丢失关于该状态的回调函数信息，但是并不会产生错误。如果调用 <code>then</code> 的 <code>Promise</code> 的状态（fulfillment 或 rejection）发生改变，但是 <code>then</code> 中并没有关于这种状态的回调函数，那么 <code>then</code> 将创建一个没有经过回调函数处理的新 <code>Promise</code> 对象，这个新 <code>Promise</code> 只是简单地接受调用这个 <code>then</code> 的原 <code>Promise</code> 的终态作为它的终态。</p>
+<p><strong>备注：</strong>如果忽略针对某个状态的回调函数参数，或者提供非函数 (nonfunction) 参数，那么 <code>then</code> 方法将会丢失关于该状态的回调函数信息，但是并不会产生错误。如果调用 <code>then</code> 的 <code>Promise</code> 的状态（fulfillment 或 rejection）发生改变，但是 <code>then</code> 中并没有关于这种状态的回调函数，那么 <code>then</code> 将创建一个没有经过回调函数处理的新 <code>Promise</code> 对象，这个新 <code>Promise</code> 只是简单地接受调用这个 <code>then</code> 的原 <code>Promise</code> 的终态作为它的终态。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -49,8 +47,8 @@ p.then(value =&gt; {
  <li>返回了一个值，那么 <code>then</code> 返回的 Promise 将会成为接受状态，并且将返回的值作为接受状态的回调函数的参数值。</li>
  <li>没有返回任何值，那么 <code>then</code> 返回的 Promise 将会成为接受状态，并且该接受状态的回调函数的参数值为 <code>undefined</code>。</li>
  <li>抛出一个错误，那么 <code>then</code> 返回的 Promise 将会成为拒绝状态，并且将抛出的错误作为拒绝状态的回调函数的参数值。</li>
- <li>返回一个已经是接受状态的 Promise，那么 <code>then</code> 返回的 Promise 也会成为接受状态，并且将那个 Promise 的接受状态的回调函数的参数值作为该被返回的Promise的接受状态回调函数的参数值。</li>
- <li>返回一个已经是拒绝状态的 Promise，那么 <code>then</code> 返回的 Promise 也会成为拒绝状态，并且将那个 Promise 的拒绝状态的回调函数的参数值作为该被返回的Promise的拒绝状态回调函数的参数值。</li>
+ <li>返回一个已经是接受状态的 Promise，那么 <code>then</code> 返回的 Promise 也会成为接受状态，并且将那个 Promise 的接受状态的回调函数的参数值作为该被返回的 Promise 的接受状态回调函数的参数值。</li>
+ <li>返回一个已经是拒绝状态的 Promise，那么 <code>then</code> 返回的 Promise 也会成为拒绝状态，并且将那个 Promise 的拒绝状态的回调函数的参数值作为该被返回的 Promise 的拒绝状态回调函数的参数值。</li>
  <li>返回一个未定状态（<code>pending</code>）的 Promise，那么 <code>then</code> 返回 Promise 的状态也是未定的，并且它的终态与那个 Promise 的终态相同；同时，它变为终态时调用的回调函数参数与那个 Promise 变为终态时的回调函数的参数是相同的。</li>
 </ul>
 
@@ -101,7 +99,7 @@ p1.then(value =&gt; {
 
 <h3 id="链式调用">链式调用</h3>
 
-<p><font face="Open Sans, sans-serif"><code>then</code> 方法返回</font>一个 <code>Promise</code> 对象，其允许方法链。</p>
+<p><code>then</code> 方法返回一个 <code>Promise</code> 对象，其允许方法链。</p>
 
 <p>你可以传递一个匿名函数给 <code>then</code>，并且，如果它返回一个 <code>Promise</code>，一个等价的 <code>Promise</code> 将暴露给后续的方法链。下面的代码片段使用 <code>setTimout</code> 函数来模拟异步代码操作。</p>
 
@@ -116,7 +114,7 @@ p1.then(value =&gt; {
     });
   })
   // 2. 接收 "foobar", 放入一个异步函数中处理该字符串
-  // 并将其打印到控制台中, 但是不将处理后的字符串返回到下一个。
+  // 并将其打印到控制台中，但是不将处理后的字符串返回到下一个。
   .then(function(string) {
     setTimeout(function() {
       string += 'baz';
@@ -132,7 +130,7 @@ p1.then(value =&gt; {
                 "surprising");
 
     // 注意 `string` 这时不会存在 'baz'。
-    // 因为这是发生在我们通过setTimeout模拟的异步函数中。
+    // 因为这是发生在我们通过 setTimeout 模拟的异步函数中。
     console.log(string);
   });
 
@@ -159,7 +157,7 @@ p2.then(function(value) {
 });
 </pre>
 
-<p>如果函数抛出错误或返回一个拒绝的Promise，则 <code>then</code> 将返回一个拒绝的Promise。</p>
+<p>如果函数抛出错误或返回一个拒绝的 Promise，则 <code>then</code> 将返回一个拒绝的 Promise。</p>
 
 <pre class="brush: js">Promise.resolve()
   .then(() =&gt; {
@@ -196,7 +194,7 @@ p2.then(function(value) {
 
 <pre class="brush: js">function fetch_current_data() {
   // fetch() API 返回了一个 Promise.
-  // 这个函数提供了类似的API，
+  // 这个函数提供了类似的 API，
   // 这个函数除了实现 Promise，它还能够完成更多的工作。
   return fetch('current-data.json').then(response =&gt; {
     if (response.headers.get('content-type') != 'application/json') {

@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 
 <p>{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>obj</var>.toString()</code></pre>
 
@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 
 <p>Строка, представляющая объект.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Каждый объект имеет метод <code>toString()</code>, автоматически вызывающийся, когда объект должен быть представлен в виде текстового значения или когда объект участвует в выражении, где ожидается строка. По умолчанию, метод <code>toString()</code> наследуется каждым объектом, произошедшим от объекта {{jsxref("Global_Objects/Object", "Object")}}. Если этот метод не переопределён в пользовательском объекте, <code>toString()</code> возвращает строку вида "[object <em>тип</em>]", где <code><em>тип</em></code> — это тип объекта. Это иллюстрирует следующий код:</p>
 
@@ -31,12 +31,12 @@ o.toString();           // вернёт [object Object]
 </pre>
 
 <div class="note">
-<p><strong>Примечание:</strong> начиная с JavaScript 1.8.5, метод <code>toString()</code>, вызванный на {{jsxref("Global_Objects/null", "null")}}, возвращает строку <code>[object <em>Null</em>]</code>, а вызванный для {{jsxref("Global_Objects/undefined", "undefined")}}, возвращает строку <code>[object <em>Undefined</em>]</code>, как определено в 5-м издании ECMAScript и последующих исправлениях. Смотрите пример {{anch("Using_toString_to_detect_object_type", "использование метода toString() для определения типа объекта")}}.</p>
+<p><strong>Примечание:</strong> начиная с JavaScript 1.8.5, метод <code>toString()</code>, вызванный на {{jsxref("Global_Objects/null", "null")}}, возвращает строку <code>[object <em>Null</em>]</code>, а вызванный для {{jsxref("Global_Objects/undefined", "undefined")}}, возвращает строку <code>[object <em>Undefined</em>]</code>, как определено в 5-м издании ECMAScript и последующих исправлениях. Смотрите пример <a href="#using_tostring_to_detect_object_type">использование метода toString() для определения типа объекта</a>.</p>
 </div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Overriding_the_default_toString_method" name="Example:_Overriding_the_default_toString_method">Пример: переопределение метода <code>toString</code> по умолчанию</h3>
+<h3 id="Example_Overriding_the_default_toString_method">Пример: переопределение метода <code>toString</code> по умолчанию</h3>
 
 <p>Вы можете создать функцию, которая будет вызываться вместо метода <code>toString()</code> по умолчанию. Метод <code>toString()</code> не принимает аргументов и должен возвращать строку. Создаваемый вами метод <code>toString()</code> может возвращать любую строку, какую вы захотите, но он будет наиболее полезным, если будет возвращать информацию об объекте.</p>
 
@@ -76,7 +76,7 @@ theDog = new Dog('Болтушка', 'лабрадор', 'шоколадный',
 <pre>Собачка Болтушка - девочка, шоколадный лабрадор
 </pre>
 
-<h3 id="Example_Using_toString_to_detect_object_type" name="Example:_Using_toString_to_detect_object_type">Пример: использование метода <code>toString</code> для определения типа объекта</h3>
+<h3 id="Example_Using_toString_to_detect_object_type">Пример: использование метода <code>toString</code> для определения типа объекта</h3>
 
 <p>Метод <code>toString()</code> можно использовать с любым объектом для получения его класса. Для использования метода <code>Object.prototype.toString()</code> с любым объектом, вам необходимо вызвать на нём функции {{jsxref("Function.prototype.call()")}} или {{jsxref("Function.prototype.apply()")}}, передав объект, который вы хотите исследовать, первым параметром <code>thisArg</code>.</p>
 
@@ -91,45 +91,17 @@ toString.call(undefined);   // [object Undefined]
 toString.call(null);        // [object Null]
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.tostring', 'Object.prototype.toString')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.tostring', 'Object.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.2', 'Object.prototype.toString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Вызов метода на {{jsxref("Global_Objects/null", "null")}} вернёт <code>[object <em>Null</em>]</code>, а на {{jsxref("Global_Objects/undefined", "undefined")}} — <code>[object <em>Undefined</em>]</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div></div>
 
-<div id="compat-mobile">{{Compat("javascript.builtins.Object.toString")}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<div id="compat-mobile">{{Compat}}</div>
+
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Object.prototype.toSource()")}}</li>

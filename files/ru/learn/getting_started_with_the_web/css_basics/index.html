@@ -25,7 +25,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 
 <p>Как и HTML, CSS на самом деле не является языком программирования. Это не язык разметки - это <em>язык таблицы стилей. </em>Это означает, что он позволяет применять стили выборочно к элементам в документах HTML. Например, чтобы выбрать <strong>все</strong> элементы абзаца на HTML странице и изменить текст внутри них с чёрного на красный, вы должны написать этот CSS:</p>
 
-<pre class="notranslate"><code>p {
+<pre><code>p {
   color: red;
 }</code></pre>
 
@@ -36,7 +36,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 <ol>
  <li>Откройте ваш файл <code>index.html</code> и вставьте следующую строку куда-нибудь в шапку, между <code>&lt;head&gt;</code> и <code>&lt;/head&gt;</code> тегами:
 
-  <pre class="brush: html notranslate">&lt;link href="styles/style.css" rel="stylesheet" type="text/css"&gt;</pre>
+  <pre class="brush: html">&lt;link href="styles/style.css" rel="stylesheet" type="text/css"&gt;</pre>
  </li>
  <li>Сохраните <code>index.html</code> и загрузите его в вашем браузере. Вы должны увидеть что-то вроде этого:</li>
 </ol>
@@ -53,11 +53,11 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 
 <dl>
  <dt>Селектор (Selector)</dt>
- <dd>Имя HTML элемента в начале набора правил. Он выбирает элемент(ы) для применения стиля (в данном случае, элементы <code>p</code> ). Для стилизации другого элемента, просто измените селектор.</dd>
+ <dd>Имя HTML-элемента в начале набора правил. Он выбирает элемент(ы) для применения стиля (в данном случае, элементы <code>p</code> ). Для стилизации другого элемента, просто измените селектор.</dd>
  <dt>Объявление (Declaration)</dt>
  <dd>Единственное правило, например <code>color: red;</code> указывает, какие из <strong>свойств</strong> элемента вы хотите стилизовать.</dd>
  <dt>Свойства (Properties)</dt>
- <dd>Способы, которыми вы можете стилизовать определённый HTML элемент (в данном случае, <code>color</code> является свойством для элементов {{htmlelement("p")}}). В CSS вы выбираете, какие свойства вы хотите затронуть в вашем правиле.</dd>
+ <dd>Способы, которыми вы можете стилизовать определённый HTML-элемент (в данном случае, <code>color</code> является свойством для элементов {{htmlelement("p")}}). В CSS вы выбираете, какие свойства вы хотите затронуть в вашем правиле.</dd>
  <dt>Значение свойства (Property value)</dt>
  <dd>Справа от свойства, после двоеточия, у нас есть <strong>значение свойства</strong>, которое выбирает одно из множества возможных признаков для данного свойства (существует множество значений <code>color</code>, помимо <code>red</code>).</dd>
 </dl>
@@ -72,7 +72,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 
 <p>Таким образом, чтобы изменить несколько значений свойств сразу, вам просто нужно написать их, разделяя точкой с запятой, например так:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   color: red;
   width: 500px;
   border: 1px solid black;
@@ -82,7 +82,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 
 <p>Вы также можете выбрать несколько элементов разного типа и применить единый набор правил для всех из них. Добавьте несколько селекторов, разделённых запятыми. Например:</p>
 
-<pre class="brush: css notranslate">p,li,h1 {
+<pre class="brush: css">p,li,h1 {
   color: red;
 }</pre>
 
@@ -101,7 +101,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
  <tbody>
   <tr>
    <td>Селектор элемента (иногда называемый селектором тега или типа)</td>
-   <td>Все HTML элемент(ы) указанного типа.</td>
+   <td>Все HTML-элемент(ы) указанного типа.</td>
    <td><code>p</code><br>
     Выбирает <code>&lt;p&gt;</code></td>
   </tr>
@@ -141,11 +141,11 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 <ol>
  <li>Прежде всего, вернитесь и найдите <a href="/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">вывод из Google Fonts</a>, который вы уже где-то сохранили. Добавьте элемент {{htmlelement("link")}} где-нибудь внутри шапки вашего <code>index.html</code> (снова, в любом месте между тегами <code>&lt;head&gt;</code> и <code>&lt;/head&gt;</code>). Это будет выглядеть примерно так:
 
-  <pre class="brush: html notranslate">&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre>
-  Этот код связывает вашу страницу с таблицой стилями, которая загружает семейство шрифтов Open Sans вместе с вашей страницей и позволяет вам применять их к вашим HTML элементам используя свою собственную таблицу стилей.</li>
+  <pre class="brush: html">&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre>
+  Этот код связывает вашу страницу с таблицой стилями, которая загружает семейство шрифтов Open Sans вместе с вашей страницей и позволяет вам применять их к вашим HTML-элементам используя свою собственную таблицу стилей.</li>
  <li>Затем, удалите существующее правило в вашем <code>style.css</code> файле. Это был хороший тест, но красный текст, на самом деле, не очень хорошо выглядит.</li>
  <li>Добавьте следующие строки в нужное место, заменив строку <code>placeholder</code> актуальной <code>font-family</code> строкой, которую вы получили из Google Fonts. (<code>font-family</code> просто означает, какой шрифт(ы) вы хотите использовать для вашего текста). Это правило устанавливает глобальный базовый шрифт и размер шрифта для всей страницы (поскольку <code>&lt;html&gt;</code> является родительским элементом для всей страницы, и все элементы внутри него наследуют такой же <code>font-size</code> и <code>font-family</code>):
-  <pre class="brush: css notranslate">html {
+  <pre class="brush: css">html {
   font-size: 10px; /* px значит 'пиксели': базовый шрифт будет 10 пикселей в высоту  */
   font-family: placeholder: здесь должно быть имя шрифта из Google fonts
 }</pre>
@@ -155,7 +155,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
   </div>
  </li>
  <li>Теперь мы установим размер шрифта для элементов, содержащих текст внутри HTML тела ({{htmlelement("h1")}}, {{htmlelement("li")}}, и {{htmlelement("p")}}). Мы также отцентрируем текст нашего заголовка и установим некоторую высоту строки и расстояние между буквами в теле документа, чтобы сделать его немного более удобным для чтения:
-  <pre class="brush: css notranslate">h1 {
+  <pre class="brush: css">h1 {
   font-size: 60px;
   text-align: center;
 }
@@ -174,7 +174,7 @@ p, li {
 
 <h2 id="Блоки_блоки_и_ещё_раз_блоки">Блоки, блоки и ещё раз блоки</h2>
 
-<p>Одна вещь, которую вы заметите в написании CSS, заключается в том, что многое из этого касается блоков - настройка их размера, цвета, положения и т.д. Большинство HTML элементов на странице можно рассматривать как блоки, расположенные друг над другом.</p>
+<p>Одна вещь, которую вы заметите в написании CSS, заключается в том, что многое из этого касается блоков - настройка их размера, цвета, положения и т.д. Большинство HTML-элементов на странице можно рассматривать как блоки, расположенные друг над другом.</p>
 
 <p><img alt="a big stack of boxes or crates sat on top of one another" src="boxes.jpg" style="display: block; margin: 0px auto;"></p>
 
@@ -202,7 +202,7 @@ p, li {
 
 <h3 id="Изменение_цвета_страницы">Изменение цвета страницы</h3>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   background-color: #00539F;
 }</pre>
 
@@ -210,7 +210,7 @@ p, li {
 
 <h3 id="Разбираемся_с_телом">Разбираемся с телом</h3>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 600px;
   margin: 0 auto;
   background-color: #FF9500;
@@ -230,7 +230,7 @@ p, li {
 
 <h3 id="Позиционирование_и_стилизация_нашего_заголовка_главной_страницы">Позиционирование и стилизация нашего заголовка главной страницы</h3>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   margin: 0;
   padding: 20px 0;
   color: #00539F;
@@ -254,7 +254,7 @@ p, li {
 
 <h3 id="Центрирование_изображения">Центрирование изображения</h3>
 
-<pre class="brush: css notranslate">img {
+<pre class="brush: css">img {
   display: block;
   margin: 0 auto;
 }</pre>

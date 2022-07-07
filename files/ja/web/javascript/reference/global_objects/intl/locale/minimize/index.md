@@ -6,8 +6,8 @@ tags:
   - Intl
   - JavaScript
   - メソッド
-  - Prototype
-  - Reference
+  - プロトタイプ
+  - リファレンス
 browser-compat: javascript.builtins.Intl.Locale.minimize
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 ---
@@ -16,7 +16,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 **`Intl.Locale.prototype.minimize()`** メソッドは、 {{jsxref("Intl/Locale/maximize", "Locale.maximize()")}} を呼び出したことで追加されるロケールに関する情報を削除しようとします。
 
 {{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html", "taller")}}
-
 
 ## 構文
 
@@ -30,7 +29,7 @@ minimize()
 
 ## 解説
 
-このメソッドは {{jsxref("Intl/Locale/maximize", "maximize()")}} の逆の処理を行い、ロケールの言語識別子 (基本的には `baseName` の内容) から言語、表記法、地域のサブタグをすべて削除します。これは、言語識別子の中に余分なサブタグがある場合に便利です。例えば "en-Latn" は "en" に簡略化できます。英語では "Latn" が書き言葉に使われる唯一の表記法だからです。 `minimize()` が影響を与えるのは、[言語識別子](https://www.unicode.org/reports/tr35/#Language_Locale_Field_Definitions)を構成する主要なサブタグである言語、表記法、地域の各サブタグのみです。ロケール識別子の "-u" の後にあるその他のサブタグは拡張サブタグと呼ばれ、 `minimize()` メソッドの影響を受けません。これらのサブタグの例としては、{{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}}、{{jsxref("Intl/Locale/calendar", "Locale.calendar")}}、{{jsxref("Intl/Locale/numeric", "Locale.numeric")}} などがあります。
+このメソッドは {{jsxref("Intl/Locale/maximize", "maximize()")}} の逆の処理を行い、ロケールの言語識別子 (基本的には `baseName` の内容) から言語、文字体系、地域のサブタグをすべて削除します。これは、言語識別子の中に余分なサブタグがある場合に便利です。例えば "en-Latn" は "en" に簡略化できます。英語では "Latn" が書き言葉に使われる唯一の文字体系だからです。 `minimize()` が影響を与えるのは、[言語識別子](https://www.unicode.org/reports/tr35/#Language_Locale_Field_Definitions)を構成する主要なサブタグである言語、文字体系、地域の各サブタグのみです。ロケール識別子の "-u" の後にあるその他のサブタグは拡張サブタグと呼ばれ、 `minimize()` メソッドの影響を受けません。これらのサブタグの例としては、{{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}}、{{jsxref("Intl/Locale/calendar", "Locale.calendar")}}、{{jsxref("Intl/Locale/numeric", "Locale.numeric")}} などがあります。
 
 ## 例
 

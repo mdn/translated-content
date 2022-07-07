@@ -26,16 +26,10 @@ translation_of: Web/HTML/Element/input/radio
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-radio.html", "tabbed-standard")}}</div>
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a></div>
-
-<p><a href="https://github.com/mdn/interactive-examples">をクローンしてプルリクエストを送信してください。</a></p>
-
-
-
 <div id="Basic_example">
-<p><a href="https://github.com/mdn/interactive-examples">ラジオボタンと呼ばれるのは、以下のように外見や操作方法が古い型のラジオのプッシュボタンに似ているからです。</a></p>
+<p>ラジオボタンと呼ばれるのは、以下のように外見や操作方法が古い型のラジオのプッシュボタンに似ているからです。</p>
 
-<p><a href="https://github.com/mdn/interactive-examples"><img alt="古い時代のラジオボタンの外観を示します。" src="https://mdn.mozillademos.org/files/15610/old-radio.jpg" style="height: 400px; width: 600px;" title="古い時代のラジオの写真"></a></p>
+<p><img alt="古い時代のラジオボタンの外観を示します。" src="https://mdn.mozillademos.org/files/15610/old-radio.jpg" style="height: 400px; width: 600px;" title="古い時代のラジオの写真"></p>
 </div>
 
 <div class="note">
@@ -45,7 +39,7 @@ translation_of: Web/HTML/Element/input/radio
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value", "値")}}</strong></td>
+   <td><strong><a href="#value">値</a></strong></td>
    <td>ラジオボタンの値を表す {{domxref("DOMString")}}</td>
   </tr>
   <tr>
@@ -58,7 +52,7 @@ translation_of: Web/HTML/Element/input/radio
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
-   <td><code>{{anch("checked")}}</code> および <code>{{anch("value")}}</code></td>
+   <td><code><a href="#checked">checked</a></code> および <code><a href="#value">value</a></code></td>
   </tr>
   <tr>
    <td><strong>メソッド</strong></td>
@@ -117,7 +111,7 @@ translation_of: Web/HTML/Element/input/radio
 <p><strong>注</strong>: フォームが送信されたときにラジオボタンが全く選択されていないと、ラジオグループが送信されたフォームにまったく含まれず、報告される値がなくなります。</p>
 </div>
 
-<p>実際には、フォームがグループ内のラジオボタンをまったく選択しない状態で送信するのを許可することは一般的ではないので、既定で一つを <code>checked</code> 状態を設定しておくことには意味があります。下記の{{anch("Selecting a radio button by default", "既定のラジオボタンの選択")}}を参照してください。</p>
+<p>実際には、フォームがグループ内のラジオボタンをまったく選択しない状態で送信するのを許可することは一般的ではないので、既定で一つを <code>checked</code> 状態を設定しておくことには意味があります。下記の<a href="#selecting_a_radio_button_by_default">既定のラジオボタンの選択</a>を参照してください。</p>
 
 <p>例に若干のコードを加えて、このフォームで生成されるデータを確認できるようにしましょう。 HTML を変更して、フォームデータを出力するための {{HTMLElement("pre")}} を追加します。</p>
 
@@ -174,11 +168,11 @@ form.addEventListener("submit", function(event) {
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("checked")}}</code></td>
+   <td><code><a href="#checked">checked</a></code></td>
    <td>論理属性で、このラジオボタンがグループ内で項目が現在選択されているかどうかを示す</td>
   </tr>
   <tr>
-   <td><code>{{anch("value")}}</code></td>
+   <td><code><a href="#value">value</a></code></td>
    <td>ラジオボタンがオンになっている場合に、フォームを投稿したときラジオボタンの値として使用される文字列</td>
   </tr>
  </tbody>
@@ -192,7 +186,7 @@ form.addEventListener("submit", function(event) {
 
 <h3 id="htmlattrdefvalue">{{htmlattrdef("value")}}</h3>
 
-<p><code>value</code> はすべての {{HTMLElement("input")}} で共通のものの一つです。しかし、 <code>radio</code> 型の入力欄では特別な目的になります。フォームが送信されるとき、現在チェックされているラジオボタンのみがサーバーに送信され、報告される値は <code>value</code> 属性の値になります。 <code>value</code> が指定されていない場合は、既定で <code>on</code> という文字列になります。これは前述の{{anch("Value", "値")}}の節で説明しています。</p>
+<p><code>value</code> はすべての {{HTMLElement("input")}} で共通のものの一つです。しかし、 <code>radio</code> 型の入力欄では特別な目的になります。フォームが送信されるとき、現在チェックされているラジオボタンのみがサーバーに送信され、報告される値は <code>value</code> 属性の値になります。 <code>value</code> が指定されていない場合は、既定で <code>on</code> という文字列になります。これは前述の<a href="#value">値</a>の節で説明しています。</p>
 
 <h2 id="Using_radio_inputs" name="Using_radio_inputs">ラジオボタンの使用</h2>
 

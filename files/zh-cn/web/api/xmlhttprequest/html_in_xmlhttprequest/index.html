@@ -3,15 +3,15 @@ title: HTML in XMLHttpRequest
 slug: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
 ---
-<p>W3C {{domxref("XMLHttpRequest")}} 规范为 <a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a>添加HTML语法解析功能, 此前仅支持XML语法解析。该功能允许Web应用程序使用<code>XMLHttpRequest作为解析的DOM。</code></p>
+<p>W3C {{domxref("XMLHttpRequest")}} 规范为 <a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a>添加 HTML 语法解析功能，此前仅支持 XML 语法解析。该功能允许 Web 应用程序使用<code>XMLHttpRequest 作为解析的 DOM。</code></p>
 
 <h2 id="局限">局限</h2>
 
-<p>为了阻止同步使用XMLHttpRequest，HTML在同步模式下不支持使用。并且，只有当responseType属性设置为'document'的情况下，HTML支持才可用。这种限制避免了浪费时间解析HTML，而传统代码在默认模式下使用XMLHttpRequest来检索text/html资源的responseText. 此外，该限制避免了遗留代码的问题，该代码假定Http错误页面（通常具有text/html响应正文）的responseXML为空。</p>
+<p>为了阻止同步使用 XMLHttpRequest，HTML 在同步模式下不支持使用。并且，只有当 responseType 属性设置为 'document' 的情况下，HTML 支持才可用。这种限制避免了浪费时间解析 HTML，而传统代码在默认模式下使用 XMLHttpRequest 来检索 <code>text/html</code> 资源的 responseText. 此外，该限制避免了遗留代码的问题，该代码假定 HTTP 错误页面（通常具有 <code>text/html</code> 响应正文）的 responseXML 为空。</p>
 
 <h2 id="用法">用法</h2>
 
-<p>使用XMLHttpRequest将HTML资源恢复为DOM就像使用XMLHttpRequest将XML资源恢复为DOM一样，除了您不能使用同步模式，您必须通过将字符串“document”分配给responseType属性来显式请求文档调用open（）之后调用send（）之前的XMLHttpRequest对象。</p>
+<p>使用 XMLHttpRequest 将 HTML 资源恢复为 DOM 就像使用 XMLHttpRequest 将 XML 资源恢复为 DOM 一样，除了您不能使用同步模式，您必须通过将字符串 “document” 分配给 responseType 属性来显式请求文档调用 <code>open()</code> 之后调用 <code>send</code> 之前的 XMLHttpRequest 对象。</p>
 
 <p> </p>
 
@@ -26,9 +26,9 @@ xhr.send();
 
 <h2 id="功能检测">功能检测</h2>
 
-<h3 id="方法1">方法1</h3>
+<h3 id="方法_1">方法 1</h3>
 
-<p>该方法依赖于功能的“强制异步”性质。当你尝试设置一个以“sync”方式打开的XMLHttpRequest对象后，尝试将设置responseType会在实现该功能的浏览器上引发错误，其他浏览器则运行良好。</p>
+<p>该方法依赖于功能的 “强制异步” 性质。当你尝试设置一个以 “sync” 方式打开的 XMLHttpRequest 对象后，尝试将设置 responseType 会在实现该功能的浏览器上引发错误，其他浏览器则运行良好。</p>
 
 <div class="line" id="LC13">
 <pre class="brush: js">function HTMLinXHR() {
@@ -46,21 +46,19 @@ xhr.send();
 </pre>
 </div>
 
-<p><a href="https://jsfiddle.net/HTcKP/1/">在JSFiddle中查看</a></p>
+<p><a href="https://jsfiddle.net/HTcKP/1/">在 JSFiddle 中查看</a></p>
 
 <p>This method is synchronous, does not rely on external assets though it may not be as reliable as method 2 described below since it does not check the actual feature but an indication of that feature.</p>
 
-<h3 id="方法2">方法2</h3>
+<h3 id="方法_2">方法 2</h3>
 
-<p> </p>
+<p>检测浏览器是否支持 XMLHttpRequest 中的 HTML 解析有两个挑战。首先，检测结果是异步获取的，因为 HTML 支持仅在异步模式下可用。Second, you have to actually fetch a test document over HTTP, because testing with a <code>data:</code> URL would end up testing <code>data:</code>URL support at the same time.</p>
 
-<p>检测浏览器是否支持XMLHttpRequest中的HTML解析有两个挑战。首先，检测结果是异步获取的，因为HTML支持仅在异步模式下可用。Second, you have to actually fetch a test document over HTTP, because testing with a <code>data:</code> URL would end up testing <code>data:</code>URL support at the same time.</p>
-
-<p>因此，为了检测HTML支持，服务器上需要一个测试HTML文件。这个测试文件很小，格式不是很完整：</p>
+<p>因此，为了检测 HTML 支持，服务器上需要一个测试 HTML 文件。这个测试文件很小，格式不是很完整：</p>
 
 <pre class="brush: js">&lt;title&gt;&amp;amp;&amp;&lt;&lt;/title&gt;</pre>
 
-<p>如果文件名为detect.html，以下功能可用于检测HTML解析支持：</p>
+<p>如果文件名为 detect.html，以下功能可用于检测 HTML 解析支持：</p>
 
 <pre class="brush: js">function detectHtmlInXhr(callback) {
   if (!window.XMLHttpRequest) {
@@ -96,17 +94,17 @@ xhr.send();
 }
 </pre>
 
-<p>参数callback是一个函数，如果HTML解析是支持的，则将以true作为唯一参数被异步调用，如果不支持HTML解析，则为false。</p>
+<p>参数 callback 是一个函数，如果 HTML 解析是支持的，则将以 true 作为唯一参数被异步调用，如果不支持 HTML 解析，则为 false。</p>
 
-<p><a href="https://jsfiddle.net/xfvXR/1/">在JSFiddle中查看</a></p>
+<p><a href="https://jsfiddle.net/xfvXR/1/">在 JSFiddle 中查看</a></p>
 
 <h2 id="字符编码">字符编码</h2>
 
-<p>如果在HTTP Content-Type 头部中声明了字符编码，则使用该字符编码。否则，如果存在字节顺序标记，则使用由字节顺序标记指示的编码。否则，如果有一个meta tag声明文件的前1024个字节中的编码，则使用该编码。否则，文件被解码为UTF-8。</p>
+<p>如果在 HTTP Content-Type 头部中声明了字符编码，则使用该字符编码。否则，如果存在字节顺序标记，则使用由字节顺序标记指示的编码。否则，如果有一个 meta tag 声明文件的前 1024 个字节中的编码，则使用该编码。否则，文件被解码为 UTF-8。</p>
 
-<h2 id="老版本的浏览器中处理HTML">老版本的浏览器中处理HTML</h2>
+<h2 id="老版本的浏览器中处理_HTML">老版本的浏览器中处理 HTML</h2>
 
-<p>XMLHttpRequest最初只支持XML解析。 HTML解析支持是最近的一个补充。对于较老的浏览器，您甚至可以使用与正则表达式关联的responseText属性，以获取例如已知其ID的HTML元素的源代码：</p>
+<p>XMLHttpRequest 最初只支持 XML 解析。 HTML 解析支持是最近的一个补充。对于较老的浏览器，您甚至可以使用与正则表达式关联的 responseText 属性，以获取例如已知其 ID 的 HTML 元素的源代码：</p>
 
 <pre class="brush: js">function getHTML (oXHR, sTargetId) {
   var  rOpen = new RegExp("&lt;(?!\!)\\s*([^\\s&gt;]+)[^&gt;]*\\s+id\\=[\"\']" + sTargetId + "[\"\'][^&gt;]*&gt;" ,"i"),
@@ -121,7 +119,7 @@ oReq.onload = function () { console.log(getHTML(this, "intro")); };
 oReq.send(null);
 </pre>
 
-<div class="note"><strong>注:</strong> 该解决方案对于解释器来说更为昂贵. <strong>仅在确实需要的情况下使用</strong>.</div>
+<div class="note"><strong>注：</strong> 该解决方案对于解释器来说更为昂贵。<strong>仅在确实需要的情况下使用</strong>.</div>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -142,53 +140,4 @@ oReq.send(null);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Support</td>
-   <td>18</td>
-   <td>{{CompatGeckoDesktop("11.0")}}</td>
-   <td>10</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}<br>
-    {{CompatVersionUnknown}}<sup>[1]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("11.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] This feature was implemented in {{WebKitBug("74626")}}.</p>
+{{Compat("api.XMLHttpRequest")}}

@@ -27,16 +27,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
  <dt><code>yearValue</code></dt>
  <dd>指定年份整数值，例如，1995</dd>
  <dt><code>monthValue</code></dt>
- <dd>可选。指定一个0-11之间的整数值，代表从一月到十二月。</dd>
+ <dd>可选。指定一个 0-11 之间的整数值，代表从一月到十二月。</dd>
  <dt><code>dayValue</code></dt>
- <dd>可选。指定一个1-31之间的整数值，代表月份中的第几天。如果你指定了dayValue参数，那么你必须指定monthValue参数。</dd>
+ <dd>可选。指定一个 1-31 之间的整数值，代表月份中的第几天。如果你指定了 dayValue 参数，那么你必须指定 monthValue 参数。</dd>
 </dl>
 
 <h2 id="描述">描述</h2>
 
-<p>如果你没有指定具体的<code>monthValue和dayValue，</code>将会使用 <code>getUTCMonth</code> 和<code>getUTCDate</code> 方法的返回值。</p>
+<p>如果你没有指定具体的 <code>monthValue</code> 和 <code>dayValue</code>，将会使用 <code>getUTCMonth</code> 和 <code>getUTCDate</code> 方法的返回值。</p>
 
-<p>如果你指定的参数超出了期待范围，<code>setUTCFullYear()方法将会根据Date对象，更新其他参数和日期信息。例如，如果你将monthValue设定为15，年份会增加1，月份值则为为3。</code></p>
+<p>如果你指定的参数超出了期待范围，<code>setUTCFullYear() 方法将会根据 Date 对象，更新其他参数和日期信息。例如，如果你将 monthValue 设定为 15，年份会增加 1，月份值则为为 3。</code></p>
 
 <h2 id="例子">例子</h2>
 
@@ -58,7 +58,7 @@ theBigDay.setUTCFullYear(1997);
   <tr>
    <td>{{SpecName('ES1')}}</td>
    <td>{{Spec2('ES1')}}</td>
-   <td>初始定义。 在 JavaScript 1.3实施。</td>
+   <td>初始定义。 在 JavaScript 1.3 实施。</td>
   </tr>
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.9.5.41', 'Date.prototype.setUTCFullYear')}}</td>
@@ -84,7 +84,7 @@ theBigDay.setUTCFullYear(1997);
 <p>{{Compat("javascript.builtins.Date.setUTCFullYear")}}</p>
 </div>
 
-<p><span style="font-size: 30.002px; letter-spacing: -1px; line-height: 30.002px;"><strong>相关连接</strong></span></p>
+<p><strong>相关连接</strong></p>
 
 <ul>
  <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>

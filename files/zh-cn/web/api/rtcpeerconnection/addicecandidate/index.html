@@ -5,7 +5,7 @@ translation_of: Web/API/RTCPeerConnection/addIceCandidate
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">当本机当前页面的 {{domxref("RTCPeerConnection")}} 接收到一个从远端页面通过信号通道发来的新的 ICE 候选地址信息，本机可以通过调用<code><strong>RTCPeerConnection.addIceCandidate()</strong></code> 来添加一个 {{Glossary("ICE")}} 代理。</span> This adds this new remote candidate to the <code>RTCPeerConnection</code>'s remote description, which describes the state of the remote end of the connection.</p>
+<p>当本机当前页面的 {{domxref("RTCPeerConnection")}} 接收到一个从远端页面通过信号通道发来的新的 ICE 候选地址信息，本机可以通过调用<code><strong>RTCPeerConnection.addIceCandidate()</strong></code> 来添加一个 {{Glossary("ICE")}} 代理。 This adds this new remote candidate to the <code>RTCPeerConnection</code>'s remote description, which describes the state of the remote end of the connection.</p>
 
 <p>If the value of the specified object'<code>s</code> {{domxref("RTCIceCandidate.candidate", "candidate")}} is an empty string (<code>""</code>), it signals that all remote candidates have been delivered.</p>
 
@@ -27,7 +27,7 @@ addIceCandidate(<em>candidate</em>, <em>successCallback</em>, <em>failureCallbac
 
 <h3 id="Deprecated_parameters">Deprecated parameters</h3>
 
-<p>在一些老旧的代码和文档中, 你可能会看到一个回调函数(callback)版本的函数。这种函数是过期的，强烈建议不要使用。你应该更新你的代码，使用 {{jsxref("Promise")}}-版本的 <code>addIceCandidate()</code> . 这个版本的参数格式附在下面, 方便你更新已有的代码.</p>
+<p>在一些老旧的代码和文档中，你可能会看到一个回调函数 (callback) 版本的函数。这种函数是过期的，强烈建议不要使用。你应该更新你的代码，使用 {{jsxref("Promise")}}-版本的 <code>addIceCandidate()</code> . 这个版本的参数格式附在下面，方便你更新已有的代码。</p>
 
 <dl>
  <dt><code>successCallback</code> {{deprecated_inline}}</dt>
@@ -57,7 +57,7 @@ addIceCandidate(<em>candidate</em>, <em>successCallback</em>, <em>failureCallbac
 
 <h2 id="Example">Example</h2>
 
-<p>下段代码会展示如何使用一个SDP字符串(这个字符串包含了候选的描述)去构建一个候选对象。这个字符串来自于信道(signaling channel)。</p>
+<p>下段代码会展示如何使用一个 SDP 字符串 (这个字符串包含了候选的描述) 去构建一个候选对象。这个字符串来自于信道 (signaling channel)。</p>
 
 <pre class="brush: js">// |receivedSDP| is an SDP string received over the signaling channel
 // by our handler for "new ICE candidate" messages.
@@ -96,101 +96,7 @@ pc.addIceCandidate(candidate).then(_=&gt;{
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown}}[1]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(22) }} [2]</td>
-   <td>{{ CompatNo}}</td>
-   <td>{{ CompatVersionUnknown}}</td>
-   <td>{{ CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Promise-based version</td>
-   <td>{{CompatChrome(50)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(37)}}</td>
-   <td>{{ CompatUnknown}}</td>
-   <td>{{ CompatUnknown}}</td>
-   <td>{{ CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("RTCIceCandidateInit")}} as input</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(53)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown}}[1]</td>
-   <td>{{ CompatVersionUnknown}}[1]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile(22)}}</td>
-   <td>{{ CompatNo}}</td>
-   <td>{{ CompatUnknown}}</td>
-   <td>{{ CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Promise-based version</td>
-   <td>{{CompatChrome(50)}}</td>
-   <td>{{CompatChrome(50)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(37)}}</td>
-   <td>{{ CompatUnknown}}</td>
-   <td>{{ CompatUnknown}}</td>
-   <td>{{ CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("RTCIceCandidateInit")}} as input</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(53)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Though this method is not prefixed, the interface it belongs to was until Chrome 56.</p>
-
-<p>[2] Though this method is not prefixed, the interface it belongs to was until Firefox 44.</p>
+{{Compat("api.RTCPeerConnection.addIceCandidate")}}
 
 <h2 id="See_also">See also</h2>
 

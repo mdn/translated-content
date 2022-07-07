@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>setBigUint64()</code> </strong>方法在距DataView 的起始位置的指定字节偏移处存储一个无符号的64位整数（unsigned  long long类型）值。</p>
+<p><strong><code>setBigUint64()</code> </strong>方法在距 DataView 的起始位置的指定字节偏移处存储一个无符号的 64 位整数（unsigned  long long 类型）值。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/dataview-setbiguint64.html")}}</div>
 
@@ -25,9 +25,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64
  <dt>byteOffset</dt>
  <dd>字节偏移量，为从视图的起始位置到数据存储位置的字节字节偏移量。</dd>
  <dt>value</dt>
- <dd>作为一个BigInt类型设置的数值。满足一个无符号的64位整数的最大可能数值是 <code><span class="blob-code-inner blob-code-marker">2n ** 64n - 1n</span></code><span class="blob-code-inner blob-code-marker"> (</span><code>18446744073709551615n</code><span class="blob-code-inner blob-code-marker">)</span>。当发生溢出时，将会变成0。</dd>
+ <dd>作为一个 BigInt 类型设置的数值。满足一个无符号的 64 位整数的最大可能数值是 <code>2n ** 64n - 1n</code> (<code>18446744073709551615n</code>)。当发生溢出时，将会变成 0。</dd>
  <dt>littleEndian</dt>
- <dd>为可选参数，表示这个64位整数是否以little-endian 或者big-endian格式存储。如果设置为false 或者未指定（undefined），将会写入一个big-endian（大端模式：高位字节排放在内存的低地址端，低位字节排放在内存的高地址端）格式的数值。</dd>
+ <dd>为可选参数，表示这个 64 位整数是否以 little-endian 或者 big-endian 格式存储。如果设置为 false 或者未指定（undefined），将会写入一个 big-endian（大端模式：高位字节排放在内存的低地址端，低位字节排放在内存的高地址端）格式的数值。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64
 
 <dl>
  <dt>{{jsxref("RangeError")}}</dt>
- <dd>如果 byteOffset设置导致存储该数值时超出了视图的末尾位置，将会抛出错误。</dd>
+ <dd>如果 byteOffset 设置导致存储该数值时超出了视图的末尾位置，将会抛出错误。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>

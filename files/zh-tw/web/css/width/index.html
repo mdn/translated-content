@@ -31,29 +31,29 @@ width: unset;
 
 <div class="hidden" id="width">
 <pre class="brush: html">&lt;div class="grid"&gt;
-  &lt;div class="col"&gt;
-    &lt;div class="cell"&gt;
-      &amp;lt;length&amp;gt; values
-      &lt;p class="w1"&gt;width: 150px&lt;/p&gt;
-      &lt;p class="w2"&gt;width: 20em&lt;/p&gt;
-      &lt;p class="w3 warning" title="this feature is experimental and might not work in your browser"&gt;width: 20em content-box&lt;/p&gt;
-      &lt;p class="w4 warning" title="this feature is experimental and might not work in your browser"&gt;width: 20em border-box&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="cell"&gt;
-      &amp;lt;percentage&amp;gt; values
-      &lt;p class="w5"&gt;width: 75%&lt;/p&gt;
-      &lt;p class="w6 warning" title="this feature is experimental and might not work in your browser"&gt;width: 75% content-box&lt;/p&gt;
-      &lt;p class="w7 warning" title="this feature is experimental and might not work in your browser"&gt;width: 75% border-box&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="cell"&gt;
-      Keyword values
-      &lt;p&gt;width: auto&lt;/p&gt;
-      &lt;p class="w8 warning" title="this feature is experimental and might not work in your browser"&gt;width: max-content&lt;/p&gt;
-      &lt;p class="w9 warning" title="this feature is experimental and might not work in your browser"&gt;width: min-content&lt;/p&gt;
-      &lt;p class="w10 warning" title="this feature is experimental and might not work in your browser"&gt;width: available&lt;/p&gt;
-      &lt;p class="w11 warning" title="this feature is experimental and might not work in your browser"&gt;width: fit-content&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class="col"&gt;
+    &lt;div class="cell"&gt;
+      &amp;lt;length&amp;gt; values
+      &lt;p class="w1"&gt;width: 150px&lt;/p&gt;
+      &lt;p class="w2"&gt;width: 20em&lt;/p&gt;
+      &lt;p class="w3 warning" title="this feature is experimental and might not work in your browser"&gt;width: 20em content-box&lt;/p&gt;
+      &lt;p class="w4 warning" title="this feature is experimental and might not work in your browser"&gt;width: 20em border-box&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="cell"&gt;
+      &amp;lt;percentage&amp;gt; values
+      &lt;p class="w5"&gt;width: 75%&lt;/p&gt;
+      &lt;p class="w6 warning" title="this feature is experimental and might not work in your browser"&gt;width: 75% content-box&lt;/p&gt;
+      &lt;p class="w7 warning" title="this feature is experimental and might not work in your browser"&gt;width: 75% border-box&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="cell"&gt;
+      Keyword values
+      &lt;p&gt;width: auto&lt;/p&gt;
+      &lt;p class="w8 warning" title="this feature is experimental and might not work in your browser"&gt;width: max-content&lt;/p&gt;
+      &lt;p class="w9 warning" title="this feature is experimental and might not work in your browser"&gt;width: min-content&lt;/p&gt;
+      &lt;p class="w10 warning" title="this feature is experimental and might not work in your browser"&gt;width: available&lt;/p&gt;
+      &lt;p class="w11 warning" title="this feature is experimental and might not work in your browser"&gt;width: fit-content&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
 
 <p>sd</p>
@@ -151,14 +151,14 @@ p {
  <dt><a id="auto" name="auto"><code>auto</code></a></dt>
  <dd>The browser will calculate and select a width for the specified element.</dd>
  <dt><a id="fill" name="fill"><code>fill</code></a> {{experimental_inline}}</dt>
- <dd>Use the <code>fill-available</code> inline size or <code>fill-available</code> block size, as appropriate to the writing mode.</dd>
+ <dd>Use the <code>fill-available</code> inline size or <code>fill-available</code> block size, as appropriate to the writing mode.</dd>
  <dt><a id="max-content" name="max-content"><code>max-content</code></a> {{experimental_inline}}</dt>
  <dd>The intrinsic preferred width.</dd>
  <dt><a id="min-content" name="min-content"><code>min-content</code></a> {{experimental_inline}}</dt>
  <dd>The intrinsic minimum width.</dd>
  <dt><a id="available" name="available"><code>available</code></a> {{experimental_inline}}</dt>
  <dd>The containing block width minus horizontal margin, border and padding.</dd>
- <dt id="fit-content"><a id="fit-content" name="fit-content"><code>fit-content</code></a> {{experimental_inline}}</dt>
+ <dt><a id="fit-content" name="fit-content"><code>fit-content</code></a> {{experimental_inline}}</dt>
  <dd>The larger of:
  <ul>
   <li>the intrinsic minimum width</li>
@@ -244,42 +244,7 @@ p {
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#the-width-and-height-properties', 'width')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>Added the <code>max-content</code>, <code>min-content</code>, <code>available</code>, <code>fit-content</code>, <code>border-box</code>, <code>content-box</code> keywords.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'width')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Lists <code>width</code> as animatable.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visudet.html#the-width-property', 'width')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Precises on which element it applies to.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#width', 'width')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Sizing', '#width-height-keywords', 'width')}}</td>
-   <td>{{Spec2('CSS3 Sizing')}}</td>
-   <td>Adds new sizing keywords for width and height.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 

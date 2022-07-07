@@ -10,11 +10,11 @@ tags:
 translation_of: Web/Security/Subresource_Integrity
 original_slug: Web/Security/子资源完整性
 ---
-<p><strong>子资源完整性</strong>(SRI)是允许浏览器检查其获得的资源（例如从 <a href="/en-US/docs/Glossary/CDN">CDN</a> 获得的）是否被篡改的一项安全特性。它通过验证获取文件的哈希值是否和你提供的哈希值一样来判断资源是否被篡改。</p>
+<p><strong>子资源完整性</strong>(SRI) 是允许浏览器检查其获得的资源（例如从 <a href="/en-US/docs/Glossary/CDN">CDN</a> 获得的）是否被篡改的一项安全特性。它通过验证获取文件的哈希值是否和你提供的哈希值一样来判断资源是否被篡改。</p>
 
 <h2 id="SRI_如何工作">SRI 如何工作</h2>
 
-<p>使用 {{Glossary("CDN", "内容分发网络 (CDNs)")}} 在多个站点之间共享脚本和样式表等文件可以提高站点性能并节省带宽。然而，使用CDN也存在风险，如果攻击者获得对 CDN 的控制权，则可以将任意恶意内容注入到 CDN 上的文件中 （或完全替换掉文件)<br>
+<p>使用 {{Glossary("CDN", "内容分发网络 (CDNs)")}} 在多个站点之间共享脚本和样式表等文件可以提高站点性能并节省带宽。然而，使用 CDN 也存在风险，如果攻击者获得对 CDN 的控制权，则可以将任意恶意内容注入到 CDN 上的文件中（或完全替换掉文件)<br>
  ），因此可能潜在地攻击所有从该 CDN 获取文件的站点。</p>
 
 <p>子资源完整性通过确保 Web 应用程序获得的文件未经第三方注入或其他任何形式的修改来降低这种攻击的风险。</p>
@@ -22,7 +22,7 @@ original_slug: Web/Security/子资源完整性
 
 
 <div class="note">
-<p><strong>Note</strong>: SRI并不能规避所有的风险。第三方库经常会自己请求额外的信息，这就有可能会携带用户的账号密码等关键信息。这些经常需要js功能的支持，比如一个地图库会需要取&lt;svg&gt;数据来渲染，但是包含点击事件。</p>
+<p><strong>Note</strong>: SRI 并不能规避所有的风险。第三方库经常会自己请求额外的信息，这就有可能会携带用户的账号密码等关键信息。这些经常需要 js 功能的支持，比如一个地图库会需要取&lt;svg&gt;数据来渲染，但是包含点击事件。</p>
 </div>
 
 <h2 id="如何使用_SRI">如何使用 SRI</h2>
@@ -121,73 +121,7 @@ original_slug: Web/Security/子资源完整性
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>The integrity attribute for <code>&lt;script&gt;</code> and <code>&lt;link&gt;</code></td>
-   <td>{{ CompatChrome("45.0") }}</td>
-   <td>{{ CompatGeckoDesktop("43") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera("32")}}</td>
-   <td>{{CompatNo}} [1]</td>
-  </tr>
-  <tr>
-   <td>The CSP {{CSP("require-sri-for")}} directive</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("49") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>The integrity attribute for <code>&lt;script&gt;</code> and <code>&lt;link&gt;</code></td>
-   <td>{{ CompatChrome("45.0") }}</td>
-   <td>{{CompatGeckoMobile("43")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}} [1]</td>
-  </tr>
-  <tr>
-   <td>The CSP {{CSP("require-sri-for")}} directive</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("49")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] {{WebKitBug(148363)}}</p>
-
-<p>[2] 位于 <code>security.csp.experimentalEnabled</code> 之后的是: config preference。</p>
+{{Compat("html.elements.script.integrity")}}
 
 <h2 id="相关资料">相关资料</h2>
 

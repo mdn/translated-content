@@ -35,7 +35,7 @@ original_slug: Learn/CSS/CSS_layout/Макет_с_несколькими_сто�
 
 <p>{{htmlelement("div")}} с классом контейнер станет нашим multicol контейнером. Мы включаем multicol используя одно из двух свойств {{cssxref("column-count")}} или {{cssxref("column-width")}}. Какое значение вы дадите свойству <code>column-count</code> столько столбцов он и создаст, поэтому если вы добавите следующий CSS в ваши стили и перезагрузите страницу, то получите три столбца:</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   column-count: 3;
 }
 </pre>
@@ -46,7 +46,7 @@ original_slug: Learn/CSS/CSS_layout/Макет_с_несколькими_сто�
 <div class="hidden">
 <h6 id="column-count_example">column-count example</h6>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
@@ -55,7 +55,7 @@ original_slug: Learn/CSS/CSS_layout/Макет_с_несколькими_сто�
     </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
   &lt;h1&gt;Simple multicol example&lt;/h1&gt;
 
   &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
@@ -71,7 +71,7 @@ original_slug: Learn/CSS/CSS_layout/Макет_с_несколькими_сто�
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   column-count: 3;
 }
 </pre>
@@ -81,7 +81,7 @@ original_slug: Learn/CSS/CSS_layout/Макет_с_несколькими_сто�
 
 <p>Измените ваш CSS чтобы использовать следующий <code>column-width</code>:</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   column-width: 200px;
 }
 </pre>
@@ -92,14 +92,14 @@ original_slug: Learn/CSS/CSS_layout/Макет_с_несколькими_сто�
 <div class="hidden">
 <h6 id="column-width_example">column-width example</h6>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
   font: .9em/1.2 Arial, Helvetica, sans-serif;
 }</pre>
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
   &lt;h1&gt;Simple multicol example&lt;/h1&gt;
 
   &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
@@ -115,7 +115,7 @@ original_slug: Learn/CSS/CSS_layout/Макет_с_несколькими_сто�
 &lt;/div&gt;</pre>
 </div>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   column-width: 200px;
 }
 </pre>
@@ -134,14 +134,14 @@ original_slug: Learn/CSS/CSS_layout/Макет_с_несколькими_сто�
 
 <p>Используя ваш пример выше, измените размер отступа добавлением свойства <code>column-gap</code>:</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   column-width: 200px;
   column-gap: 20px;
 }</pre>
 
 <p>Вы можете поиграть с разными значениями — свойство принимает любые единицы измерения длины. Теперь добавьте линейку между столбцами при помощи <code>column-rule</code>. Таким же способом как и свойство {{cssxref("border")}} с которым вы сталкивались в предыдущих уроках, <code>column-rule</code> — это короткая запись {{cssxref("column-rule-color")}}, {{cssxref("column-rule-style")}} и {{cssxref("column-rule-width")}} и принимает те же значения что и <code>border</code>.</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   column-count: 3;
   column-gap: 20px;
   column-rule: 4px dotted rgb(79, 185, 227);
@@ -153,7 +153,7 @@ original_slug: Learn/CSS/CSS_layout/Макет_с_несколькими_сто�
 <div class="hidden">
 <h6 id="Styling_the_columns">Styling the columns</h6>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
@@ -165,7 +165,7 @@ original_slug: Learn/CSS/CSS_layout/Макет_с_несколькими_сто�
  column-rule: 4px dotted rgb(79, 185, 227);
 }</pre>
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
   &lt;h1&gt;Simple multicol example&lt;/h1&gt;
 
   &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
@@ -198,7 +198,7 @@ original_slug: Learn/CSS/CSS_layout/Макет_с_несколькими_сто�
 <div class="hidden">
 <h6 id="Spanning_the_columns">Spanning the columns</h6>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
@@ -217,7 +217,7 @@ h2 {
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
   &lt;h1&gt;Simple multicol example&lt;/h1&gt;
 
   &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
@@ -248,7 +248,7 @@ h2 {
 <div class="hidden">
 <h6 id="Cards_example">Cards example</h6>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
@@ -256,7 +256,7 @@ h2 {
 }            </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
     &lt;div class="card"&gt;
       &lt;h2&gt;I am the heading&lt;/h2&gt;
       &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
@@ -315,7 +315,7 @@ h2 {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   column-width: 250px;
   column-gap: 20px;
 }
@@ -334,7 +334,7 @@ h2 {
 
 <p>В настоящее время также стоит добавлять старое свойство <code>page-break-inside: avoid</code> для лучшей поддержки старых браузеров.</p>
 
-<pre class="brush: css notranslate">.card {
+<pre class="brush: css">.card {
   break-inside: avoid;
   page-break-inside: avoid;
   background-color: rgb(207,232,220);
@@ -350,14 +350,14 @@ h2 {
 <div class="hidden">
 <h6 id="Multicol_Fragmentation">Multicol Fragmentation</h6>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
   font: .9em/1.2 Arial, Helvetica, sans-serif;
 }              </pre>
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
     &lt;div class="card"&gt;
       &lt;h2&gt;I am the heading&lt;/h2&gt;
       &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
@@ -417,7 +417,7 @@ h2 {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   column-width: 250px;
   column-gap: 20px;
 }

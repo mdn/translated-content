@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date
 ---
 <p>{{JSRef}}</p>
 
-<p>创建一个 JavaScript <code>Date</code> 实例，该实例呈现时间中的某个时刻。<code>Date</code> 对象则基于 <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16">Unix Time Stamp</a>，即自1970年1月1日（UTC）起经过的毫秒数。</p>
+<p>创建一个 JavaScript <code>Date</code> 实例，该实例呈现时间中的某个时刻。<code>Date</code> 对象则基于 <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16">Unix Time Stamp</a>，即自 1970 年 1 月 1 日（UTC）起经过的毫秒数。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-constructor.html")}}</div>
 
@@ -18,13 +18,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">new Date();
+<pre class="syntaxbox">new Date();
 new Date(<var>value</var>);
 new Date(<var>dateString</var>);
 new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours</var> [, <var>minutes</var> [, <var>seconds</var> [, <var>milliseconds</var>]]]]]);</pre>
 
 <div class="note">
-<p>创建一个新<code>Date</code>对象的唯一方法是通过{{jsxref("Operators/new", "new")}} 操作符，例如：<code>let now = new Date();</code><br>
+<p><strong>备注：</strong>创建一个新<code>Date</code>对象的唯一方法是通过{{jsxref("Operators/new", "new")}} 操作符，例如：<code>let now = new Date();</code><br>
  若将它作为常规函数调用（即不加 {{jsxref("Operators/new", "new")}} 操作符），将返回一个字符串，而非 <code>Date</code> 对象。 </p>
 </div>
 
@@ -34,20 +34,17 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 
 <h4 id="没有参数">没有参数</h4>
 
-<p>如果没有提供参数，那么新创建的Date对象表示实例化时刻的日期和时间。</p>
+<p>如果没有提供参数，那么新创建的 Date 对象表示实例化时刻的日期和时间。</p>
 
-<h4 id="Unix时间戳">Unix时间戳</h4>
+<h4 id="unix_时间戳">Unix 时间戳</h4>
 
 <dl>
  <dt><code>value</code></dt>
- <dd>一个 Unix 时间戳（<a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16">Unix Time Stamp</a>），它是一个整数值，表示自1970年1月1日00:00:00 UTC（the Unix epoch）以来的毫秒数，忽略了闰秒。请注意大多数 Unix 时间戳功能仅精确到最接近的秒。</dd>
- <dt>
- <h4 id="时间戳字符串">时间戳字符串</h4>
- </dt>
- <dt><code>dateString</code></dt>
- <dd>表示日期的字符串值。该字符串应该能被 {{jsxref("Date.parse()")}} 正确方法识别（即符合 <a href="http://tools.ietf.org/html/rfc2822#page-14" style="white-space: pre-line;">IETF-compliant RFC 2822 timestamps</a> 或 <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15">version of ISO8601</a>）。
+ <dd>一个 Unix 时间戳（<a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16">Unix Time Stamp</a>），它是一个整数值，表示自 1970 年 1 月 1 日 00:00:00 UTC（the Unix epoch）以来的毫秒数，忽略了闰秒。请注意大多数 Unix 时间戳功能仅精确到最接近的秒。</dd>
+ <dt>时间戳字符串 <code>dateString</code></dt>
+ <dd>表示日期的字符串值。该字符串应该能被 {{jsxref("Date.parse()")}} 正确方法识别（即符合 <a href="http://tools.ietf.org/html/rfc2822#page-14">IETF-compliant RFC 2822 timestamps</a> 或 <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15">version of ISO8601</a>）。
  <div class="note">
- <p><strong>注意:</strong> 由于浏览器之间的差异与不一致性，强烈不推荐使用<code>Date</code>构造函数来解析日期字符串 (或使用与其等价的<code>Date.parse</code>)。对 RFC 2822 格式的日期仅有约定俗称的支持。 对 ISO 8601 格式的支持中，仅有日期的串 (例如 "1970-01-01") 会被处理为 UTC 而不是本地时间，与其他格式的串的处理不同。</p>
+ <p><strong>备注：</strong>由于浏览器之间的差异与不一致性，强烈不推荐使用<code>Date</code>构造函数来解析日期字符串 (或使用与其等价的<code>Date.parse</code>)。对 RFC 2822 格式的日期仅有约定俗成的支持。 对 ISO 8601 格式的支持中，仅有日期的串 (例如 "1970-01-01") 会被处理为 UTC 而不是本地时间，与其他格式的串的处理不同。</p>
  </div>
  </dd>
 </dl>
@@ -58,43 +55,43 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 
 <dl>
  <dt><code>year</code></dt>
- <dd>表示年份的整数值。 0到99会被映射至1900年至1999年，其它值代表实际年份。参见 {{anch("Two_digit_years_map_to_1900_-_1999", "示例")}}。</dd>
+ <dd>表示年份的整数值。 0 到 99 会被映射至 1900 年至 1999 年，其它值代表实际年份。参见 <a href="#例子：将两位数年份映射为_1900_-_1999_年">示例</a>。</dd>
  <dt><code>monthIndex</code></dt>
- <dd>表示月份的整数值，从 0（1月）到 11（12月）。</dd>
+ <dd>表示月份的整数值，从 0（1 月）到 11（12 月）。</dd>
  <dt>date{{optional_inline}}</dt>
- <dd>表示一个月中的第几天的整数值，从1开始。默认值为1。</dd>
+ <dd>表示一个月中的第几天的整数值，从 1 开始。默认值为 1。</dd>
  <dt><code>hours</code> {{optional_inline}}</dt>
- <dd>表示一天中的小时数的整数值 (24小时制)。默认值为0（午夜）。</dd>
+ <dd>表示一天中的小时数的整数值 (24 小时制)。默认值为 0（午夜）。</dd>
  <dt><code>minutes</code> {{optional_inline}}</dt>
- <dd>表示一个完整时间（如 01:10:00）中的分钟部分的整数值。默认值为0。</dd>
+ <dd>表示一个完整时间（如 01:10:00）中的分钟部分的整数值。默认值为 0。</dd>
  <dt><code>seconds</code> {{optional_inline}}</dt>
- <dd>表示一个完整时间（如 01:10:00）中的秒部分的整数值。默认值为0。</dd>
+ <dd>表示一个完整时间（如 01:10:00）中的秒部分的整数值。默认值为 0。</dd>
  <dt><code>milliseconds</code> {{optional_inline}}</dt>
- <dd>表示一个完整时间的毫秒部分的整数值。默认值为0。</dd>
+ <dd>表示一个完整时间的毫秒部分的整数值。默认值为 0。</dd>
 </dl>
 
 <h2 id="使用注释">使用注释</h2>
 
 <div class="note">
-<p><strong>注意 参数</strong><code>monthIndex</code> 是从“0”开始计算的，这就意味着一月份为“0”，十二月份为“11”。</p>
+<p><strong>备注：</strong>参数<code>monthIndex</code> 是从“0”开始计算的，这就意味着一月份为“0”，十二月份为“11”。</p>
 </div>
 
 <div class="note">
-<p><strong>注意：</strong>当Date作为构造函数调用并传入多个参数时，如果数值大于合理范围时（如月份为 13 或者分钟数为 70），相邻的数值会被调整。比如 new Date(2013, 13, 1)等于new Date(2014, 1, 1)，它们都表示日期2014-02-01（注意月份是从0开始的）。其他数值也是类似，new Date(2013, 2, 1, 0, 70)等于new Date(2013, 2, 1, 1, 10)，都表示同一个时间：<code>2013-03-01T01:10:00</code>。</p>
+<p><strong>备注：</strong>当 Date 作为构造函数调用并传入多个参数时，如果数值大于合理范围时（如月份为 13 或者分钟数为 70），相邻的数值会被调整。比如 new Date(2013, 13, 1) 等于 new Date(2014, 1, 1)，它们都表示日期 2014-02-01（注意月份是从 0 开始的）。其他数值也是类似，new Date(2013, 2, 1, 0, 70) 等于 new Date(2013, 2, 1, 1, 10)，都表示同一个时间：<code>2013-03-01T01:10:00</code>。</p>
 </div>
 
 <div class="note">
-<p><strong>注意：</strong>当Date作为构造函数调用并传入多个参数时，所定义参数代表的是当地时间。如果需要使用世界协调时 UTC，使用 <code>new Date({{jsxref("Date.UTC()", "Date.UTC(...)")}})</code> 和相同参数。</p>
+<p><strong>备注：</strong>当 Date 作为构造函数调用并传入多个参数时，所定义参数代表的是当地时间。如果需要使用世界协调时 UTC，使用 <code>new Date({{jsxref("Date.UTC()", "Date.UTC(...)")}})</code> 和相同参数。</p>
 </div>
 
 <h2 id="简介">简介</h2>
 
 <ul>
- <li>如果没有输入任何参数，则Date的构造器会依据系统设置的当前时间来创建一个Date对象。</li>
+ <li>如果没有输入任何参数，则 Date 的构造器会依据系统设置的当前时间来创建一个 Date 对象。</li>
  <li>如果提供了至少两个参数，其余的参数均会默认设置为 1（如果没有指定 day 参数）或者 0（如果没有指定 day 以外的参数）。</li>
- <li>JavaScript的时间由世界标准时间（UTC）1970年1月1日开始，用毫秒计时，一天由 86,400,000 毫秒组成。<code>Date</code> 对象的范围是 -100,000,000 天至 100,000,000 天（等效的毫秒值）。</li>
+ <li>JavaScript 的时间由世界标准时间（UTC）1970 年 1 月 1 日开始，用毫秒计时，一天由 86,400,000 毫秒组成。<code>Date</code> 对象的范围是 -100,000,000 天至 100,000,000 天（等效的毫秒值）。</li>
  <li><code>Date</code> 对象为跨平台提供了统一的行为。时间属性可以在不同的系统中表示相同的时刻，而如果使用了本地时间对象，则反映当地的时间。</li>
- <li><code>Date</code> 对象支持多个处理 UTC 时间的方法，也相应地提供了应对当地时间的方法。UTC，也就是我们所说的格林威治时间，指的是time中的世界时间标准。而当地时间则是指执行JavaScript的客户端电脑所设置的时间。</li>
+ <li><code>Date</code> 对象支持多个处理 UTC 时间的方法，也相应地提供了应对当地时间的方法。UTC，也就是我们所说的格林威治时间，指的是 time 中的世界时间标准。而当地时间则是指执行 JavaScript 的客户端电脑所设置的时间。</li>
  <li>以一个函数的形式来调用 <code>Date</code> 对象（即不使用 {{jsxref("Operators/new", "new")}} 操作符）会返回一个代表当前日期和时间的字符串。</li>
 </ul>
 
@@ -115,11 +112,11 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
  <dt>{{jsxref("Date.parse()")}}</dt>
  <dd>解析一个表示日期的字符串，并返回从 1970-1-1 00:00:00 所经过的毫秒数。
  <div class="note">
- <p><strong>注意:</strong> 由于浏览器差异和不一致，强烈建议不要使用<code>Date.parse</code>解析字符串。</p>
+ <p><strong>备注：</strong> 由于浏览器差异和不一致，强烈建议不要使用<code>Date.parse</code>解析字符串。</p>
  </div>
  </dd>
  <dt>{{jsxref("Date.UTC()")}}</dt>
- <dd>接受和构造函数最长形式的参数相同的参数（从2到7），并返回从 1970-01-01 00:00:00 UTC 开始所经过的毫秒数。</dd>
+ <dd>接受和构造函数最长形式的参数相同的参数（从 2 到 7），并返回从 1970-01-01 00:00:00 UTC 开始所经过的毫秒数。</dd>
 </dl>
 
 <h2 id="JavaScript_Date_实例">JavaScript <code>Date</code> 实例</h2>
@@ -134,8 +131,100 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 </dl>
 
 <h3 id="实例方法">实例方法</h3>
-
-<p>{{ page("/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype", "Methods") }}</p>
+<dl>
+  <dt>{{jsxref("Date.prototype.getDate()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象为一个月中的哪一日（<code>1</code>-<code>31</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getDay()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象是在一周中的第几天（<code>0</code>-<code>6</code>），0 表示星期天。</dd>
+  <dt>{{jsxref("Date.prototype.getFullYear()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的完整年份（四位数年份）。</dd>
+  <dt>{{jsxref("Date.prototype.getHours()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的小时（<code>0</code>–<code>23</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getMilliseconds()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的毫秒数（<code>0</code>–<code>999</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getMinutes()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的分钟数（<code>0</code>–<code>59</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getMonth()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的月份（<code>0</code>–<code>11</code>），0 表示一年中的第一月。</dd>
+  <dt>{{jsxref("Date.prototype.getSeconds()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的秒数（<code>0</code>–<code>59</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getTime()")}}</dt>
+  <dd>返回一个数值，表示从 1970 年 1 月 1 日 0 时 0 分 0 秒（UTC，即协调世界时）距离该 {{jsxref("Date")}} 对象所代表时间的毫秒数。（更早的时间会用负数表示）</dd>
+  <dt>{{jsxref("Date.prototype.getTimezoneOffset()")}}</dt>
+  <dd>返回协调世界时（UTC）相对于当前时区的时间差值，单位为分钟。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCDate()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象为一个月中的哪一日（<code>1</code>-<code>31</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCDay()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象是在一周中的第几天（<code>0</code>-<code>6</code>），0 表示星期天。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCFullYear()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的完整年份（四位数年份）。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCHours()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的小时（<code>0</code>–<code>23</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCMilliseconds()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的毫秒数（<code>0</code>–<code>999</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCMinutes()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的分钟数（<code>0</code>–<code>59</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCMonth()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的月份（<code>0</code>–<code>11</code>），0 表示一年中的第一月。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCSeconds()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的秒数（<code>0</code>–<code>59</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getYear()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的相对年份（相对 1900 年，通常是 2 到 3 位数字）。请改用 {{jsxref("Date.getFullYear", "getFullYear")}} 。</dd>
+  <dt>{{jsxref("Date.prototype.setDate()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象在所属月份中的天数。</dd>
+  <dt>{{jsxref("Date.prototype.setFullYear()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象的完整年份（四位数年份）。</dd>
+  <dt>{{jsxref("Date.prototype.setHours()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象的小时数。</dd>
+  <dt>{{jsxref("Date.prototype.setMilliseconds()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象的豪秒数。</dd>
+  <dt>{{jsxref("Date.prototype.setMinutes()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象的分钟数。</dd>
+  <dt>{{jsxref("Date.prototype.setMonth()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象的月份。</dd>
+  <dt>{{jsxref("Date.prototype.setSeconds()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象的秒数。</dd>
+  <dt>{{jsxref("Date.prototype.setTime()")}}</dt>
+  <dd>用一个从 1970-1-1 00:00:00 UTC 计时的毫秒数来为一个 {{jsxref("Date")}} 对象设置时间。用负数来设置更早的时间。</dd>
+  <dt>{{jsxref("Date.prototype.setUTCDate()")}}</dt>
+  <dd>以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象在所属月份中的天数。</dd>
+  <dt>{{jsxref("Date.prototype.setUTCFullYear()")}}</dt>
+  <dd>以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的完整年份（四位数年份）。</dd>
+  <dt>{{jsxref("Date.prototype.setUTCHours()")}}</dt>
+  <dd>以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的小时数。</dd>
+  <dt>{{jsxref("Date.prototype.setUTCMilliseconds()")}}</dt>
+  <dd>以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的豪秒数。</dd>
+  <dt>{{jsxref("Date.prototype.setUTCMinutes()")}}</dt>
+  <dd>以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的分钟数。</dd>
+  <dt>{{jsxref("Date.prototype.setUTCMonth()")}}</dt>
+  <dd>以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的月份。</dd>
+  <dt>{{jsxref("Date.prototype.setUTCSeconds()")}}</dt>
+  <dd>以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的秒数。</dd>
+  <dt>{{jsxref("Date.prototype.setYear()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象的相对年份（相对 1900 年，通常是 2 到 3 位数字）。请改用 {{jsxref("Date.setFullYear", "setFullYear")}} 。</dd>
+  <dt>{{jsxref("Date.prototype.toDateString()")}}</dt>
+  <dd>以美式英语和人类易读的表述形式返回一个 {{jsxref("Date")}} 对象日期部分的字符串。</dd>
+  <dt>{{jsxref("Date.prototype.toISOString()")}}</dt>
+  <dd>将指定 {{jsxref("Date")}} 对象转换成 ISO 格式表述的字符串并返回。</dd>
+  <dt>{{jsxref("Date.prototype.toJSON()")}}</dt>
+  <dd>返回指定 {{jsxref("Date")}} 对象调用 {{jsxref("Date.prototype.toISOString()", "toISOString()")}} 方法的返回值。在 {{jsxref("JSON.stringify()")}} 中使用。</dd>
+  <dt>{{jsxref("Date.prototype.toGMTString()")}}</dt>
+  <dd>基于 GMT (UTC) 时区来返回一个表述指定 {{jsxref("Date")}} 对象的字符串形式。请改用 {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}}。</dd>
+  <dt>{{jsxref("Date.prototype.toLocaleDateString()")}}</dt>
+  <dd>返回一个表述指定 {{jsxref("Date")}} 对象的日期部分字符串。该字符串格式因不同语言而不同。</dd>
+  <dt>{{jsxref("Date.prototype.toLocaleString()")}}</dt>
+  <dd>返回一个表述指定 {{jsxref("Date")}} 对象的字符串。该字符串格式因不同语言而不同。</dd>
+  <dt>{{jsxref("Date.prototype.toLocaleTimeString()")}}</dt>
+  <dd>返回一个表述指定 {{jsxref("Date")}} 对象时间部分的的字符串。该字符串格式因不同语言而不同。</dd>
+  <dt>{{jsxref("Date.prototype.toString()")}}</dt>
+  <dd>返回一个字符串，表示该 {{jsxref("Date")}} 对象。覆盖了 {{jsxref("Object.prototype.toString()")}} 方法。</dd>
+  <dt>{{jsxref("Date.prototype.toTimeString()")}}</dt>
+  <dd>以人类易读形式返回一个 {{jsxref("Date")}} 对象时间部分的字符串，该字符串以美式英语格式化。</dd>
+  <dt>{{jsxref("Date.prototype.toUTCString()")}}</dt>
+  <dd>使用 UTC 时区，把一个 {{jsxref("Date")}} 对象转换为一个字符串。</dd>
+  <dt>{{jsxref("Date.prototype.valueOf()")}}</dt>
+  <dd>返回一个 {{jsxref("Date")}} 对象的原始值。覆盖了 {{jsxref("Object.prototype.valueOf()")}} 方法。</dd>
+</dl>
 
 <h2 id="例子">例子</h2>
 
@@ -144,10 +233,10 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 <p>下例展示了用来创建一个日期对象的多种方法。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 由于浏览器差异和不一致性，强烈建议不要使用<code>Date</code>构造函数（和<code>Date.parse</code>，它们是等效的）解析日期字符串。</p>
+<p><strong>备注：</strong> 由于浏览器差异和不一致性，强烈建议不要使用<code>Date</code>构造函数（和<code>Date.parse</code>，它们是等效的）解析日期字符串。</p>
 </div>
 
-<pre class="brush: js notranslate">var today = new Date();
+<pre class="brush: js">var today = new Date();
 var birthday = new Date('December 17, 1995 03:24:00');
 var birthday = new Date('1995-12-17T03:24:00');
 var birthday = new Date(1995, 11, 17);
@@ -158,9 +247,9 @@ var birthday = new Date(1995, 11, 17, 3, 24, 0);
 
 <p>为了创建和获取 0 到 99 之间的年份，应使用 {{jsxref("Date.prototype.setFullYear()")}} 和 {{jsxref("Date.prototype.getFullYear()")}} 方法。</p>
 
-<pre class="brush: js notranslate">var date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+<pre class="brush: js">var date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
-// 已弃用的方法, 同样将 98 映射为 1998
+// 已弃用的方法，同样将 98 映射为 1998
 date.setYear(98);           // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
 date.setFullYear(98);       // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
@@ -172,7 +261,7 @@ date.setFullYear(98);       // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
 
 <p>由于不同日期、月份、年份长度的不同（日期长度不同来自夏令时的切换），使用大于秒、分钟、小时的单位表示经过的时间会遇到很多问题，在使用前需要经过详尽的调研。</p>
 
-<pre class="brush: js notranslate">// 使用 Date 对象
+<pre class="brush: js">// 使用 Date 对象
 var start = Date.now();
 
 // 调用一个消耗一定时间的方法：
@@ -180,7 +269,7 @@ doSomethingForALongTime();
 var end = Date.now();
 var elapsed = end - start; // 以毫秒计的运行时长</pre>
 
-<pre class="brush: js notranslate">// 使用内建的创建方法
+<pre class="brush: js">// 使用内建的创建方法
 var start = new Date();
 
 // 调用一个消耗一定时间的方法：
@@ -188,7 +277,7 @@ doSomethingForALongTime();
 var end = new Date();
 var elapsed = end.getTime() - start.getTime(); // 运行时间的毫秒值</pre>
 
-<pre class="brush: js notranslate" dir="ltr">// to test a function and get back its return
+<pre class="brush: js">// to test a function and get back its return
 function printElapsedTime (fTest) {
     var nStartTime = Date.now(),
         vReturn = fTest(),
@@ -200,12 +289,12 @@ yourFunctionReturn = printElapsedTime(yourFunction);
 </pre>
 
 <div class="note">
-<p>注意：在支持 {{domxref("window.performance", "Web Performance API")}} 的高精细度（high-resolution）时间功能的浏览器中，{{domxref("Performance.now()")}} 提供的所经过的时间比 {{jsxref("Date.now()")}} 更加可靠、精确。</p>
+<p><strong>备注：</strong>在支持 {{domxref("window.performance", "Web Performance API")}} 的高精细度（high-resolution）时间功能的浏览器中，{{domxref("Performance.now()")}} 提供的所经过的时间比 {{jsxref("Date.now()")}} 更加可靠、精确。</p>
 </div>
 
 <h3 id="获取自_Unix_起始时间以来经过的秒数">获取自 Unix 起始时间以来经过的秒数</h3>
 
-<pre class="brush: js notranslate">var seconds = Math.floor(Date.now() / 1000);</pre>
+<pre class="brush: js">var seconds = Math.floor(Date.now() / 1000);</pre>
 
 <p>注意此处需要返回一个整数 （仅做除法得到的不是整数），并且需要返回实际已经经过的秒数（所以这里使用了{{jsxref("Math.floor()")}}而不是{{jsxref("Math.round()")}}).</p>
 

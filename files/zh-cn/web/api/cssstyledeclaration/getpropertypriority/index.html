@@ -10,7 +10,7 @@ translation_of: Web/API/CSSStyleDeclaration/getPropertyPriority
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
-<p><strong>CSSStyleDeclaration.getPropertyPriority() </strong>方法会根据传入的CSS属性，返回一个 {{domxref('DOMString')}} 来表示该属性的优先级。</p>
+<p><strong>CSSStyleDeclaration.getPropertyPriority() </strong>方法会根据传入的 CSS 属性，返回一个 {{domxref('DOMString')}} 来表示该属性的优先级。</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -30,7 +30,7 @@ translation_of: Web/API/CSSStyleDeclaration/getPropertyPriority
 
 <h2 id="例子">例子</h2>
 
-<p>下面的代码检查了<code>margin</code>，在CSS规则中是否被设置为 important 优先级。</p>
+<p>下面的代码检查了<code>margin</code>，在 CSS 规则中是否被设置为 important 优先级。</p>
 
 <pre class="brush: js">var declaration = document.styleSheets[0].cssRules[0].style;
 var isImportant = declaration.getPropertyPriority('margin') === 'important';
@@ -62,58 +62,4 @@ var isImportant = declaration.getPropertyPriority('margin') === 'important';
 
 <h2 id="浏览器兼容性"><strong>浏览器兼容性</strong></h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <thead>
-  <tr>
-   <th scope="col">Feature</th>
-   <th scope="col">Chrome</th>
-   <th scope="col">Edge</th>
-   <th scope="col">Firefox (Gecko)</th>
-   <th scope="col">Internet Explorer</th>
-   <th scope="col">Opera</th>
-   <th scope="col">Safari (WebKit)</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.CSSStyleDeclaration.getPropertyPriority")}}
