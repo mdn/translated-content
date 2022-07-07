@@ -1,4 +1,4 @@
-* Bievenido a la localización de MDN en español 
+# Bievenido a la localización de MDN en español 
 
 Puedes comenzar en la siguiente [guía de contribución](https://developer.mozilla.org/es/docs/MDN/Contribute)
 
