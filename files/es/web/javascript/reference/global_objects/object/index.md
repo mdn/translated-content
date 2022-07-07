@@ -221,7 +221,7 @@ Mime.prototype.constructor = Mime;
 
 var bob = new Employee("Bob", "Constructor");
 var joe = new Customer("Joe");
-var rg = new Employee("Red Green", "Manitas");
+var rg = new Employee("Red Green", "Reparador");
 var mike = new Customer("Mike");
 var mime = new Mime("Mime");
 
