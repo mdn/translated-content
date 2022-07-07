@@ -16,7 +16,7 @@ new TypeError(message, fileName)
 new TypeError(message, fileName, lineNumber)
 ```
 
-### Parametros
+### Parámetros
 
 - `message` {{optional_inline}}
   - : Descripción del error humanamente legible.
