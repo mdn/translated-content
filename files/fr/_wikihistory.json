@@ -40903,12 +40903,6 @@
       "BenoitL"
     ]
   },
-  "conflicting/Web/API/URL": {
-    "modified": "2019-03-23T22:29:28.869Z",
-    "contributors": [
-      "branciat"
-    ]
-  },
   "conflicting/Web/API/WebRTC_API": {
     "modified": "2019-03-23T23:07:44.484Z",
     "contributors": [
