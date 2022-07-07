@@ -5708,9 +5708,9 @@
 /fr/docs/Web/Reference	/fr/docs/Web
 /fr/docs/Web/Reference/API	/fr/docs/Web/API
 /fr/docs/Web/SVG/Application_d_effets_SVG_a_du_contenu_HTML	/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content
-/fr/docs/Web/SVG/Element/animateColor	/fr/docs/conflicting/Web/SVG/Element/animate
+/fr/docs/Web/SVG/Element/animateColor	/fr/docs/Web/SVG/Element/animate
 /fr/docs/Web/SVG/Element/cercle	/fr/docs/Web/SVG/Element/circle
-/fr/docs/Web/SVG/Index	/fr/docs/conflicting/Web/SVG
+/fr/docs/Web/SVG/Index	/fr/docs/Web/SVG
 /fr/docs/Web/SVG/SVG_en_tant_qu_image	/fr/docs/Web/SVG/SVG_as_an_Image
 /fr/docs/Web/SVG/Sources_compatibilite	/fr/docs/Web/SVG/Compatibility_sources
 /fr/docs/Web/SVG/Tutoriel	/fr/docs/Web/SVG/Tutorial
@@ -5746,7 +5746,7 @@
 /fr/docs/Web/WebGL/Commencer_avec_le_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /fr/docs/Web/WebGL/Using_shaders_to_apply_color_in_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /fr/docs/Web/WebGL/Utiliser_les_textures_avec_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
-/fr/docs/Web/Web_Components/HTML_Imports	/fr/docs/conflicting/Web/Web_Components
+/fr/docs/Web/Web_Components/HTML_Imports	/fr/docs/Web/Web_Components
 /fr/docs/Web/Web_Components/Shadow_DOM	/fr/docs/Web/Web_Components/Using_shadow_DOM
 /fr/docs/Web/Web_Components/Utilisation_des_templates_et_des_slots	/fr/docs/Web/Web_Components/Using_templates_and_slots
 /fr/docs/Web/XML/Introduction_à_XML	/fr/docs/Web/XML/XML_introduction
@@ -5788,7 +5788,7 @@
 /fr/docs/Web/XPath/Fonctions/translate	/fr/docs/Web/XPath/Functions/translate
 /fr/docs/Web/XPath/Fonctions/true	/fr/docs/Web/XPath/Functions/true
 /fr/docs/Web/XPath/Fonctions/unparsed-entity-url	/fr/docs/Web/XPath/Functions/unparsed-entity-url
-/fr/docs/Web/XSLT/Index	/fr/docs/conflicting/Web/XSLT
+/fr/docs/Web/XSLT/Index	/fr/docs/Web/XSLT
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko/Définition_de_paramètres	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_avancé	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
@@ -5802,7 +5802,7 @@
 /fr/docs/Web/XSLT/L'interface_XSLT_JavaScript_dans_Gecko/Les_liaisons_JavaScript_XSLT	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
 /fr/docs/Web/XSLT/L'interface_XSLT_JavaScript_dans_Gecko/Ressources	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 /fr/docs/Web/XSLT/Paramètres_des_instructions_de_traitement	/fr/docs/Web/XSLT/PI_Parameters
-/fr/docs/Web/XSLT/Sommaire	/fr/docs/conflicting/Web/XSLT
+/fr/docs/Web/XSLT/Sommaire	/fr/docs/Web/XSLT
 /fr/docs/Web/XSLT/Transformations_XML_avec_XSLT	/fr/docs/Web/XSLT/Transforming_XML_with_XSLT
 /fr/docs/Web/XSLT/Transformations_XML_avec_XSLT/Autres_ressources	/fr/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
 /fr/docs/Web/XSLT/Transformations_XML_avec_XSLT/La_référence_XSLT_XPath_de_Netscape	/fr/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
@@ -6252,7 +6252,11 @@
 /fr/docs/conflicting/Web/Progressive_web_apps_954d3e6cc1e06f006b865b74099f55cf	/fr/docs/Web/Progressive_web_apps
 /fr/docs/conflicting/Web/Progressive_web_apps_ab4d34f3f29326f76d3aab740be03d31	/fr/docs/Web/Progressive_web_apps
 /fr/docs/conflicting/Web/Progressive_web_apps_cb2823fe6cfc1ddee5db1f6a5d240c67	/fr/docs/Web/Progressive_web_apps
+/fr/docs/conflicting/Web/SVG	/fr/docs/Web/SVG
+/fr/docs/conflicting/Web/SVG/Element/animate	/fr/docs/Web/SVG/Element/animate
+/fr/docs/conflicting/Web/Web_Components	/fr/docs/Web/Web_Components
 /fr/docs/conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript	/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
+/fr/docs/conflicting/Web/XSLT	/fr/docs/Web/XSLT
 /fr/docs/document.createElement	/fr/docs/Web/API/Document/createElement
 /fr/docs/document.getElementById	/fr/docs/Web/API/Document/getElementById
 /fr/docs/en	/en-US/

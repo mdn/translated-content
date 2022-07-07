@@ -41275,34 +41275,6 @@
       "xdelatour"
     ]
   },
-  "conflicting/Web/SVG": {
-    "modified": "2019-01-16T21:57:35.980Z",
-    "contributors": [
-      "xdelatour"
-    ]
-  },
-  "conflicting/Web/SVG/Element/animate": {
-    "modified": "2020-10-15T21:31:44.928Z",
-    "contributors": [
-      "a-mt",
-      "Sebastianz",
-      "SphinxKnight",
-      "Barbrousse"
-    ]
-  },
-  "conflicting/Web/Web_Components": {
-    "modified": "2020-10-15T22:12:01.555Z",
-    "contributors": [
-      "ledenis",
-      "ylerjen"
-    ]
-  },
-  "conflicting/Web/XSLT": {
-    "modified": "2019-06-17T11:21:18.591Z",
-    "contributors": [
-      "Arzak656"
-    ]
-  },
   "orphaned/Web/CSS/:-moz-ui-valid": {
     "modified": "2020-10-15T21:48:25.437Z",
     "contributors": [
