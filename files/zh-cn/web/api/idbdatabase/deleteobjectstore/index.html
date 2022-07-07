@@ -6,7 +6,7 @@ translation_of: Web/API/IDBDatabase/deleteObjectStore
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
-<p> <strong><code>deleteObjectStore()</code></strong> 方法从 {{domxref("IDBDatabase")}} 中销毁指定名称的对象存储，及这个对象存储所包含的任何索引。</p>
+<p><strong><code>deleteObjectStore()</code></strong> 方法从 {{domxref("IDBDatabase")}} 中销毁指定名称的对象存储，及这个对象存储所包含的任何索引。</p>
 </div>
 
 <p>与 {{ domxref("IDBDatabase.createObjectStore") }} 一样，此方法<em>只能</em>在<a href="https://developer.mozilla.org/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE"><code>versionchange</code></a>事务中调用。</p>
@@ -73,32 +73,14 @@ request.onupgradeneeded = function(e) {
 
 <h2 id="Specification">Specification</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBDatabase-deleteObjectStore-void-DOMString-name', 'deleteObjectStore()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbdatabase-deleteobjectstore", "deleteObjectStore()")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
 
-<p>{{Compat("api.IDBDatabase.deleteObjectStore")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h2 id="See_also">See also</h2>
