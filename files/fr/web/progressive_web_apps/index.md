@@ -1,5 +1,5 @@
 ---
-title: Applications Web Progressives
+title: Applications web progressives
 slug: Web/Progressive_web_apps
 translation_of: Web/Progressive_web_apps
 ---
