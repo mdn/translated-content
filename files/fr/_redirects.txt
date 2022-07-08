@@ -3874,12 +3874,11 @@
 /fr/docs/Web/API/Référence_du_DOM_Gecko/window	/fr/docs/Web/API/Window
 /fr/docs/Web/API/SVGStylable	/fr/docs/Web/API/SVGElement
 /fr/docs/Web/API/Selection.toString	/fr/docs/Web/API/Selection/toString
-/fr/docs/Web/API/Selection_API	/fr/docs/conflicting/Web/API/Selection
 /fr/docs/Web/API/ServiceWorker/onstatechange	/fr/docs/Web/API/ServiceWorker/statechange_event
 /fr/docs/Web/API/ServiceWorkerState	/fr/docs/Web/API/ServiceWorker/state
 /fr/docs/Web/API/SharedWorkerGlobalScope/onconnect	/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/conflicting/Web/API/Window/localStorage
-/fr/docs/Web/API/StorageEstimate	/fr/docs/conflicting/Web/API/StorageManager/estimate
+/fr/docs/Web/API/StorageEstimate	/fr/docs/Web/API/StorageManager/estimate
 /fr/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/fr/docs/Web/API/Pointer_events
 /fr/docs/Web/API/UIEvent/layerX	/fr/docs/Web/API/MouseEvent/layerX
 /fr/docs/Web/API/ULongRange	/fr/docs/Web/API/MediaTrackConstraints
@@ -3950,7 +3949,7 @@
 /fr/docs/Web/API/Window.scrollTo	/fr/docs/Web/API/Window/scrollTo
 /fr/docs/Web/API/Window.setTimeout	/fr/docs/Web/API/setTimeout
 /fr/docs/Web/API/Window.showModalDialog	/fr/docs/Web/API/Window/showModalDialog
-/fr/docs/Web/API/Window/URL	/fr/docs/conflicting/Web/API/URL
+/fr/docs/Web/API/Window/URL	/fr/docs/Web/API/URL
 /fr/docs/Web/API/Window/caches	/fr/docs/Web/API/caches
 /fr/docs/Web/API/Window/crypto	/fr/docs/Web/API/crypto_property
 /fr/docs/Web/API/Window/gamepaddisconnected	/fr/docs/Web/API/Window/gamepaddisconnected_event
@@ -6165,6 +6164,9 @@
 /fr/docs/conflicting/Web/API/PasswordCredential_cbf7b306e83a3f58ff06bccf89637c12	/fr/docs/Web/API/PasswordCredential
 /fr/docs/conflicting/Web/API/Performance/resourcetimingbufferfull_event	/fr/docs/Web/API/Performance/resourcetimingbufferfull_event
 /fr/docs/conflicting/Web/API/Pointer_events	/fr/docs/Web/API/Pointer_events
+/fr/docs/conflicting/Web/API/Selection	/fr/docs/Web/API/Selection_API
+/fr/docs/conflicting/Web/API/StorageManager/estimate	/fr/docs/Web/API/StorageManager/estimate
+/fr/docs/conflicting/Web/API/URL	/fr/docs/Web/API/URL
 /fr/docs/conflicting/Web/API/WebRTC_API_d8621144cbc61520339c3b10c61731f0	/fr/docs/Web/API/WebRTC_API
 /fr/docs/conflicting/Web/API/Web_Storage_API	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/conflicting/Web/API/XSLTProcessor_197eea6e529b0a946d29ce7cc292e7ef	/fr/docs/Web/API/XSLTProcessor
