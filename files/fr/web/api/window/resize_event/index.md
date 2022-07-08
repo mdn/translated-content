@@ -1,8 +1,9 @@
 ---
 title: GlobalEventHandlers.onresize
-slug: Web/API/GlobalEventHandlers/onresize
+slug: Web/API/Window/resize_event
 translation_of: Web/API/window.onresize
 translation_of_original: Web/API/Element.onresize
+original_slug: Web/API/GlobalEventHandlers/onresize
 browser-compat: api.GlobalEventHandlers.onresize
 ---
 {{ApiRef}}

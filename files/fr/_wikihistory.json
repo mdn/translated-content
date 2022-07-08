@@ -15142,22 +15142,6 @@
       "Chbok"
     ]
   },
-  "Web/API/GlobalEventHandlers/onreset": {
-    "modified": "2019-03-18T21:35:42.230Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onresize": {
-    "modified": "2019-03-23T23:47:25.748Z",
-    "contributors": [
-      "ArthurMaurer",
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "Chbok"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onscroll": {
     "modified": "2019-03-23T23:49:06.629Z",
     "contributors": [
@@ -15578,6 +15562,12 @@
     "modified": "2019-03-18T21:15:21.862Z",
     "contributors": [
       "a-mt"
+    ]
+  },
+  "Web/API/HTMLFormElement/reset_event": {
+    "modified": "2019-03-18T21:35:42.230Z",
+    "contributors": [
+      "loella16"
     ]
   },
   "Web/API/HTMLFormElement/submit": {
@@ -20016,6 +20006,16 @@
     "modified": "2020-10-15T22:33:30.846Z",
     "contributors": [
       "Voulto"
+    ]
+  },
+  "Web/API/Window/resize_event": {
+    "modified": "2019-03-23T23:47:25.748Z",
+    "contributors": [
+      "ArthurMaurer",
+      "fscholz",
+      "teoli",
+      "khalid32",
+      "Chbok"
     ]
   },
   "Web/API/Window/screen": {

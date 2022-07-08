@@ -963,7 +963,7 @@
 /fr/docs/DOM/element.onmouseout	/fr/docs/Web/API/GlobalEventHandlers/onmouseout
 /fr/docs/DOM/element.onmouseover	/fr/docs/Web/API/GlobalEventHandlers/onmouseover
 /fr/docs/DOM/element.onmouseup	/fr/docs/Web/API/GlobalEventHandlers/onmouseup
-/fr/docs/DOM/element.onresize	/fr/docs/Web/API/GlobalEventHandlers/onresize
+/fr/docs/DOM/element.onresize	/fr/docs/Web/API/Window/resize_event
 /fr/docs/DOM/element.onscroll	/fr/docs/Web/API/GlobalEventHandlers/onscroll
 /fr/docs/DOM/element.ownerDocument	/fr/docs/Web/API/Node/ownerDocument
 /fr/docs/DOM/element.parentNode	/fr/docs/Web/API/Node/parentNode
@@ -1121,7 +1121,7 @@
 /fr/docs/DOM:element.onmouseout	/fr/docs/Web/API/GlobalEventHandlers/onmouseout
 /fr/docs/DOM:element.onmouseover	/fr/docs/Web/API/GlobalEventHandlers/onmouseover
 /fr/docs/DOM:element.onmouseup	/fr/docs/Web/API/GlobalEventHandlers/onmouseup
-/fr/docs/DOM:element.onresize	/fr/docs/Web/API/GlobalEventHandlers/onresize
+/fr/docs/DOM:element.onresize	/fr/docs/Web/API/Window/resize_event
 /fr/docs/DOM:element.onscroll	/fr/docs/Web/API/GlobalEventHandlers/onscroll
 /fr/docs/DOM:element.ownerDocument	/fr/docs/Web/API/Node/ownerDocument
 /fr/docs/DOM:element.parentNode	/fr/docs/Web/API/Node/parentNode
@@ -3739,7 +3739,7 @@
 /fr/docs/Web/API/Element.onmouseout	/fr/docs/Web/API/GlobalEventHandlers/onmouseout
 /fr/docs/Web/API/Element.onmouseover	/fr/docs/Web/API/GlobalEventHandlers/onmouseover
 /fr/docs/Web/API/Element.onmouseup	/fr/docs/Web/API/GlobalEventHandlers/onmouseup
-/fr/docs/Web/API/Element.onresize	/fr/docs/Web/API/GlobalEventHandlers/onresize
+/fr/docs/Web/API/Element.onresize	/fr/docs/Web/API/Window/resize_event
 /fr/docs/Web/API/Element.onscroll	/fr/docs/Web/API/GlobalEventHandlers/onscroll
 /fr/docs/Web/API/Element.outerHTML	/fr/docs/Web/API/Element/outerHTML
 /fr/docs/Web/API/Element.parentNode	/fr/docs/Web/API/Node/parentNode
@@ -3792,6 +3792,8 @@
 /fr/docs/Web/API/GlobalEventHandlers/onabort	/fr/docs/Web/API/HTMLMediaElement/abort_event
 /fr/docs/Web/API/GlobalEventHandlers/onblur	/fr/docs/Web/API/Window/blur_event
 /fr/docs/Web/API/GlobalEventHandlers/onfocus	/fr/docs/Web/API/Window/focus_event
+/fr/docs/Web/API/GlobalEventHandlers/onreset	/fr/docs/Web/API/HTMLFormElement/reset_event
+/fr/docs/Web/API/GlobalEventHandlers/onresize	/fr/docs/Web/API/Window/resize_event
 /fr/docs/Web/API/GlobalFetch/fetch	/fr/docs/Web/API/fetch
 /fr/docs/Web/API/HTMLFormElement/submit_event_	/fr/docs/Web/API/HTMLFormElement/submit_event
 /fr/docs/Web/API/HTMLOrForeignElement/blur	/fr/docs/Web/API/HTMLElement/blur
@@ -3940,7 +3942,7 @@
 /fr/docs/Web/API/Window.onbeforeunload	/fr/docs/conflicting/Web/API/Window/beforeunload_event
 /fr/docs/Web/API/Window.onload	/fr/docs/Web/API/GlobalEventHandlers/onload
 /fr/docs/Web/API/Window.onpopstate	/fr/docs/conflicting/Web/API/Window/popstate_event
-/fr/docs/Web/API/Window.onresize	/fr/docs/Web/API/GlobalEventHandlers/onresize
+/fr/docs/Web/API/Window.onresize	/fr/docs/Web/API/Window/resize_event
 /fr/docs/Web/API/Window.openDialog	/fr/docs/Web/API/Window/openDialog
 /fr/docs/Web/API/Window.opener	/fr/docs/Web/API/Window/opener
 /fr/docs/Web/API/Window.postMessage	/fr/docs/Web/API/Window/postMessage
@@ -3954,7 +3956,7 @@
 /fr/docs/Web/API/Window/gamepaddisconnected	/fr/docs/Web/API/Window/gamepaddisconnected_event
 /fr/docs/Web/API/Window/mozAnimationStartTime	/fr/docs/Web/API/Animation/startTime
 /fr/docs/Web/API/Window/mozPaintCount	/fr/docs/conflicting/Web/API/Window
-/fr/docs/Web/API/Window/onresize	/fr/docs/Web/API/GlobalEventHandlers/onresize
+/fr/docs/Web/API/Window/onresize	/fr/docs/Web/API/Window/resize_event
 /fr/docs/Web/API/WindowBase64/Décoder_encoder_en_base64	/fr/docs/Glossary/Base64
 /fr/docs/Web/API/WindowBase64/atob	/fr/docs/Web/API/atob
 /fr/docs/Web/API/WindowBase64/btoa	/fr/docs/Web/API/btoa
@@ -6146,7 +6148,7 @@
 /fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition_058087067b28ad25fff974fd59827fb6	/fr/docs/Web/API/Geolocation/getCurrentPosition
 /fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition_5852407122355d2ab39863042583c266	/fr/docs/Web/API/Geolocation/getCurrentPosition
 /fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition_c2c285f72be001586cb95d7989ba1b54	/fr/docs/Web/API/Geolocation/getCurrentPosition
-/fr/docs/conflicting/Web/API/GlobalEventHandlers/onresize	/fr/docs/Web/API/GlobalEventHandlers/onresize
+/fr/docs/conflicting/Web/API/GlobalEventHandlers/onresize	/fr/docs/Web/API/Window/resize_event
 /fr/docs/conflicting/Web/API/HTMLMediaElement/abort_event	/fr/docs/Web/API/HTMLMediaElement/abort_event
 /fr/docs/conflicting/Web/API/HTMLMediaElement/ended_event	/fr/docs/Web/API/HTMLMediaElement/ended_event
 /fr/docs/conflicting/Web/API/IDBTransaction/abort_event	/fr/docs/Web/API/IDBTransaction/abort_event

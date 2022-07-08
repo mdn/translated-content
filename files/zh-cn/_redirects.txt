@@ -460,7 +460,7 @@
 /zh-CN/docs/DOM/window.onhashchange	/zh-CN/docs/conflicting/Web/API/Window/hashchange_event
 /zh-CN/docs/DOM/window.oninput	/zh-CN/docs/Web/API/GlobalEventHandlers/oninput
 /zh-CN/docs/DOM/window.onpopstate	/zh-CN/docs/Web/API/Window/popstate_event
-/zh-CN/docs/DOM/window.onresize	/zh-CN/docs/Web/API/GlobalEventHandlers/onresize
+/zh-CN/docs/DOM/window.onresize	/zh-CN/docs/conflicting/Web/API/Window/resize_event
 /zh-CN/docs/DOM/window.onselect	/zh-CN/docs/Web/API/GlobalEventHandlers/onselect
 /zh-CN/docs/DOM/window.onsubmit	/zh-CN/docs/Web/API/GlobalEventHandlers/onsubmit
 /zh-CN/docs/DOM/window.onunload	/zh-CN/docs/Web/API/Window/unload_event
@@ -506,7 +506,7 @@
 /zh-CN/docs/DOM:event	/zh-CN/docs/Web/API/Event
 /zh-CN/docs/DOM:range	/zh-CN/docs/Web/API/range
 /zh-CN/docs/DOM:window	/zh-CN/docs/Web/API/Window
-/zh-CN/docs/DOM:window.onresize	/zh-CN/docs/Web/API/GlobalEventHandlers/onresize
+/zh-CN/docs/DOM:window.onresize	/zh-CN/docs/conflicting/Web/API/Window/resize_event
 /zh-CN/docs/DOM:window.open	/zh-CN/docs/Web/API/Window/open
 /zh-CN/docs/DOM:window.openDialog	/zh-CN/docs/Web/API/Window/openDialog
 /zh-CN/docs/Document_Object_Model_(DOM)/window.onbeforeunload	/zh-CN/docs/conflicting/Web/API/Window/beforeunload_event
@@ -1464,6 +1464,8 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncuechange	/zh-CN/docs/Web/API/TextTrack/cuechange_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/ondurationchange	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/durationchange_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onfocus	/zh-CN/docs/conflicting/Web/API/Window/focus_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onreset	/zh-CN/docs/conflicting/Web/API/HTMLFormElement/reset_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onresize	/zh-CN/docs/conflicting/Web/API/Window/resize_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/动画效果	/zh-CN/docs/Web/API/GlobalEventHandlers/onanimationend
 /zh-CN/docs/Web/API/GlobalEventHandlers/时长改变	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/durationchange_event
 /zh-CN/docs/Web/API/GlobalFetch/fetch	/zh-CN/docs/Web/API/fetch
@@ -1685,7 +1687,7 @@
 /zh-CN/docs/Web/API/Window.onbeforeunload	/zh-CN/docs/conflicting/Web/API/Window/beforeunload_event
 /zh-CN/docs/Web/API/Window.onhashchange	/zh-CN/docs/conflicting/Web/API/Window/hashchange_event
 /zh-CN/docs/Web/API/Window.onpopstate	/zh-CN/docs/Web/API/Window/popstate_event
-/zh-CN/docs/Web/API/Window.onresize	/zh-CN/docs/Web/API/GlobalEventHandlers/onresize
+/zh-CN/docs/Web/API/Window.onresize	/zh-CN/docs/conflicting/Web/API/Window/resize_event
 /zh-CN/docs/Web/API/Window.onunload	/zh-CN/docs/Web/API/Window/unload_event
 /zh-CN/docs/Web/API/Window.openDialog	/zh-CN/docs/Web/API/Window/openDialog
 /zh-CN/docs/Web/API/Window.opener	/zh-CN/docs/Web/API/Window/opener
@@ -1726,7 +1728,7 @@
 /zh-CN/docs/Web/API/Window/ongamepaddisconnected	/zh-CN/docs/Web/API/Window/gamepaddisconnected_event
 /zh-CN/docs/Web/API/Window/onhashchange	/zh-CN/docs/conflicting/Web/API/Window/hashchange_event
 /zh-CN/docs/Web/API/Window/onpopstate	/zh-CN/docs/Web/API/Window/popstate_event
-/zh-CN/docs/Web/API/Window/onresize	/zh-CN/docs/Web/API/GlobalEventHandlers/onresize
+/zh-CN/docs/Web/API/Window/onresize	/zh-CN/docs/conflicting/Web/API/Window/resize_event
 /zh-CN/docs/Web/API/Window/onunload	/zh-CN/docs/Web/API/Window/unload_event
 /zh-CN/docs/Web/API/Window/performance	/zh-CN/docs/Web/API/performance_property
 /zh-CN/docs/Web/API/Window/setInterval	/zh-CN/docs/Web/API/setInterval

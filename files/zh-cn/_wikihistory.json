@@ -13503,23 +13503,6 @@
       "wowoqu"
     ]
   },
-  "Web/API/GlobalEventHandlers/onreset": {
-    "modified": "2019-03-23T22:24:44.486Z",
-    "contributors": [
-      "TyrealGray",
-      "caoruiy"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onresize": {
-    "modified": "2019-03-24T00:16:24.262Z",
-    "contributors": [
-      "btooom",
-      "ziyunfei",
-      "teoli",
-      "khalid32",
-      "TigerSoldier"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onscroll": {
     "modified": "2019-05-07T07:06:53.573Z",
     "contributors": [
@@ -45966,6 +45949,13 @@
       "xgqfrms-GitHub"
     ]
   },
+  "conflicting/Web/API/HTMLFormElement/reset_event": {
+    "modified": "2019-03-23T22:24:44.486Z",
+    "contributors": [
+      "TyrealGray",
+      "caoruiy"
+    ]
+  },
   "conflicting/Web/API/HTMLInputElement": {
     "modified": "2019-03-23T23:32:37.731Z",
     "contributors": [
@@ -46329,6 +46319,16 @@
     "modified": "2019-03-23T22:24:33.524Z",
     "contributors": [
       "caoruiy"
+    ]
+  },
+  "conflicting/Web/API/Window/resize_event": {
+    "modified": "2019-03-24T00:16:24.262Z",
+    "contributors": [
+      "btooom",
+      "ziyunfei",
+      "teoli",
+      "khalid32",
+      "TigerSoldier"
     ]
   },
   "conflicting/Web/API/Window/scroll": {

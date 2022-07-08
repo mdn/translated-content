@@ -6472,12 +6472,6 @@
       "SoftwareRVG"
     ]
   },
-  "Web/API/GlobalEventHandlers/onresize": {
-    "modified": "2019-03-23T22:38:35.801Z",
-    "contributors": [
-      "NevinSantana"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onscroll": {
     "modified": "2019-03-23T22:33:14.134Z",
     "contributors": [
@@ -8625,6 +8619,12 @@
     "contributors": [
       "gnunezr",
       "jsolana"
+    ]
+  },
+  "Web/API/Window/resize_event": {
+    "modified": "2019-03-23T22:38:35.801Z",
+    "contributors": [
+      "NevinSantana"
     ]
   },
   "Web/API/Window/scroll": {

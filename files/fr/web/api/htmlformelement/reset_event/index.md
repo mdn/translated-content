@@ -1,6 +1,6 @@
 ---
 title: GlobalEventHandlers.onreset
-slug: Web/API/GlobalEventHandlers/onreset
+slug: Web/API/HTMLFormElement/reset_event
 tags:
   - API
   - DOM
@@ -8,6 +8,7 @@ tags:
   - Propriété
   - évènements
 translation_of: Web/API/GlobalEventHandlers/onreset
+original_slug: Web/API/GlobalEventHandlers/onreset
 ---
 {{ ApiRef() }}
 

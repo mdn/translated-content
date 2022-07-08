@@ -1517,7 +1517,7 @@
 /ja/docs/DOM/window.onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
 /ja/docs/DOM/window.onhashchange	/ja/docs/conflicting/Web/API/Window/hashchange_event
 /ja/docs/DOM/window.onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
-/ja/docs/DOM/window.onresize	/ja/docs/Web/API/GlobalEventHandlers/onresize
+/ja/docs/DOM/window.onresize	/ja/docs/conflicting/Web/API/Window/resize_event
 /ja/docs/DOM/window.open	/ja/docs/Web/API/Window/open
 /ja/docs/DOM/window.opener	/ja/docs/Web/API/Window/opener
 /ja/docs/DOM/window.outerHeight	/ja/docs/Web/API/Window/outerHeight
@@ -3210,6 +3210,8 @@
 /ja/docs/Web/API/GlobalEventHandlers/oncanplay	/ja/docs/conflicting/Web/API/HTMLMediaElement/canplay_event
 /ja/docs/Web/API/GlobalEventHandlers/oncanplaythrough	/ja/docs/conflicting/Web/API/HTMLMediaElement/canplaythrough_event
 /ja/docs/Web/API/GlobalEventHandlers/onfocus	/ja/docs/Web/API/Window/focus_event
+/ja/docs/Web/API/GlobalEventHandlers/onreset	/ja/docs/conflicting/Web/API/HTMLFormElement/reset_event
+/ja/docs/Web/API/GlobalEventHandlers/onresize	/ja/docs/conflicting/Web/API/Window/resize_event
 /ja/docs/Web/API/GlobalFetch	/ja/docs/Web/API/WindowOrWorkerGlobalScope
 /ja/docs/Web/API/GlobalFetch/fetch	/ja/docs/Web/API/fetch
 /ja/docs/Web/API/HTMLElement/oncopy	/ja/docs/Web/API/HTMLElement/copy_event
@@ -3487,8 +3489,8 @@
 /ja/docs/Web/API/Window/onkeyup	/ja/docs/Web/API/GlobalEventHandlers/onkeyup
 /ja/docs/Web/API/Window/onmousedown	/ja/docs/Web/API/GlobalEventHandlers/onmousedown
 /ja/docs/Web/API/Window/onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
-/ja/docs/Web/API/Window/onreset	/ja/docs/Web/API/GlobalEventHandlers/onreset
-/ja/docs/Web/API/Window/onresize	/ja/docs/Web/API/GlobalEventHandlers/onresize
+/ja/docs/Web/API/Window/onreset	/ja/docs/conflicting/Web/API/HTMLFormElement/reset_event
+/ja/docs/Web/API/Window/onresize	/ja/docs/conflicting/Web/API/Window/resize_event
 /ja/docs/Web/API/Window/performance	/ja/docs/Web/API/performance_property
 /ja/docs/Web/API/Window/restore	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/Window/setInterval	/ja/docs/Web/API/setInterval
@@ -3720,8 +3722,8 @@
 /ja/docs/Web/API/window.onload	/ja/docs/Web/API/GlobalEventHandlers/onload
 /ja/docs/Web/API/window.onmousedown	/ja/docs/Web/API/GlobalEventHandlers/onmousedown
 /ja/docs/Web/API/window.onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
-/ja/docs/Web/API/window.onreset	/ja/docs/Web/API/GlobalEventHandlers/onreset
-/ja/docs/Web/API/window.onresize	/ja/docs/Web/API/GlobalEventHandlers/onresize
+/ja/docs/Web/API/window.onreset	/ja/docs/conflicting/Web/API/HTMLFormElement/reset_event
+/ja/docs/Web/API/window.onresize	/ja/docs/conflicting/Web/API/Window/resize_event
 /ja/docs/Web/API/window.onselect	/ja/docs/Web/API/GlobalEventHandlers/onselect
 /ja/docs/Web/API/window.open	/ja/docs/Web/API/Window/open
 /ja/docs/Web/API/window.opener	/ja/docs/Web/API/Window/opener
