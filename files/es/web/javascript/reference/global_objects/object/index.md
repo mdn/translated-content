@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Object
 ---
 {{JSRef}}
 
-La clase **`Object`** representa uno de los [tipos de datos en Javascript](/es/docs/Web/JavaScript/Data_structures). Es usado para guardar una colección de datos definidos y entidades más complejas. Los objetos pueden ser creados utilizando el constructor {{jsxref("Object/Object", "Object()")}} o [la sintaxis literal / inicializador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+La clase **`Object`** representa uno de los [tipos de datos en Javascript](/es/docs/Web/JavaScript/Data_structures). Es usado para guardar una colección de datos definidos y entidades más complejas. Los objetos pueden ser creados utilizando el constructor [Object()](/es/docs/Web/JavaScript/Reference/Global_Objects/Object#constructor) o [la sintaxis literal / inicializador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 ## Descripción
 
@@ -27,11 +27,11 @@ Véase también la [la sintaxis literal / inicializador de objeto](/es/docs/Web/
 
 ## Borrando una propiedad de un objeto
 
-No hay ningún método en un Objeto que sirva para borrar sus propiedades (como {{jsxref("Map.prototype.delete", "Map.prototype.delete()")}}). Para hacerlo, es necesario el uso del [operador delete](/es/docs/Web/JavaScript/Reference/Operators/delete).
+No hay ningún método en un Objeto que sirva para borrar sus propiedades (como [WeakMap.prototype.delete()](/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/delete)). Para hacerlo, es necesario el uso del [operador delete](/es/docs/Web/JavaScript/Reference/Operators/delete).
 
 ## Constructor
 
-- {{jsxref("Object/Object", "Object()")}}
+- [Object()](/es/docs/Web/JavaScript/Reference/Global_Objects/Object#constructor)
   - : Crea un nuevo objeto `Object`. Este es un envoltorio para el valor dado.
 
 ## Métodos estáticos
@@ -129,7 +129,7 @@ let o = new Object(null);
 
 ### Usando `Object` para crear objetos `Boolean`
 
-Los siguientes ejemplos almacenan objetos {{jsxref("Boolean")}} en `o`:
+Los siguientes ejemplos almacenan objetos [Boolean](/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean) en `o`:
 
 ```js
 // equivalente a o = new Boolean(true)
