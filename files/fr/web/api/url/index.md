@@ -59,7 +59,7 @@ Pour les anciens navigateurs qui n'implémenteraient pas le constructeur [`URL()
 - [`createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL)
   - : Renvoie une chaîne de caractères contenant une URL de blob unique, c'est-à-dire une URL dont le schéma est `blob:`, suivi d'une chaîne de caractères opaque identifiant de façon unique l'objet dans le navigateur.
 - [`revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL)
-  - : Revoque un objet `URL` précédemment créé à l'aide de [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL).
+  - : Révoque un objet `URL` précédemment créé à l'aide de [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL).
 
 ## Notes d'utilisation
 
@@ -92,7 +92,7 @@ Pour obtenir les paramètres de recherche de l'URL de la fenêtre courante, on p
 ```js
 // https://mon.site/?id=123
 const parsedUrl = new URL(window.location.href);
-console.log(parsedUrl.searchParams.get("id")); // "123"
+console.log(parsedUrl.searchParams.get('id')); // "123"
 ```
 
 La méthode [`toString()`](/fr/docs/Web/API/URL/toString) de `URL` renvoie la valeur de la propriété [`href`](/fr/docs/Web/API/URL/href). On peut donc utiliser le constructeur pour normaliser et encoder une URL directement.
