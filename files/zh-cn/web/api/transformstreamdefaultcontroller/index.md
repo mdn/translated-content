@@ -23,7 +23,7 @@ translation_of: Web/api/TransformStreamDefaultController
 ## 方法
 
 - {{domxref("TransformStreamDefaultController.enqueue()")}}
-  - : 在流的可读端将一个分块（单个数据）排入队列。
+  - : 排入一个分块（单个数据）到流的可读端。
 - {{domxref("TransformStreamDefaultController.error()")}}
   - : 转换流的可写端和可读端都出现错误。
 - {{domxref("TransformStreamDefaultController.terminate()")}}
