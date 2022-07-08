@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/canvas
 ---
 <p>這個 <strong>HTML <code>&lt;canvas&gt;</code> 元素</strong> 可以被使用於對腳本程式(JaveScript) 繪圖 .舉例來說, 它能用來畫圖,組合照片,甚至作動畫. 你也許(應該) 在&lt;canvas&gt;區段內提供替代方案的內容 .這內容將能被一些不支援&lt;canvas&gt;以及無法使用Javescript功能的瀏覽器所渲染 .</p>
 
-<p>更多文章關於canvas, 請參考 <a href="/en-US/docs/Web/API/Canvas_API">canvas 主題</a></p>
+<p>更多文章關於canvas, 請參考 <a href="/en-US/docs/Web/API/Canvas_API">canvas 主題</a></p>
 
 <table class="properties">
  <tbody>
@@ -18,7 +18,7 @@ translation_of: Web/HTML/Element/canvas
     <p>被允許通過的內容</p>
    </th>
    <td>
-    <p>除了子元素不是 &lt;a&gt;的元素、 &lt;button&gt;的元素、&lt;input&gt;的元素屬性是<code>checkbox</code>, <code>radio</code>, 或 <code>button</code> 之外且是透明內容模型但不是<a href="/en-US/docs/HTML/Content_categories#Interactive_content">互動式content</a></p>
+    <p>除了子元素不是 &lt;a&gt;的元素、 &lt;button&gt;的元素、&lt;input&gt;的元素屬性是<code>checkbox</code>, <code>radio</code>, 或 <code>button</code> 之外且是透明內容模型但不是<a href="/en-US/docs/HTML/Content_categories#Interactive_content">互動式content</a></p>
    </td>
   </tr>
   <tr>
@@ -44,16 +44,16 @@ translation_of: Web/HTML/Element/canvas
 
 <dl>
  <dt>{{htmlattrdef("height")}}</dt>
- <dd>在CSS 中以 pixels 表示 座標的空間<strong>高度</strong>（預設是150）</dd>
+ <dd>在CSS 中以 pixels 表示 座標的空間<strong>高度</strong>（預設是150）</dd>
  <dt>{{htmlattrdef("moz-opaque")}} {{non-standard_inline}}</dt>
  <dd>讓canvas知道這個因素是否為半透明的。如果 canvas 知道不是半透明，則提高繪畫的效能</dd>
  <dt>{{htmlattrdef("width")}}</dt>
- <dd>在CSS 中以 pixels 表示 座標的空間<strong>寬度</strong>（預設是300）</dd>
+ <dd>在CSS 中以 pixels 表示 座標的空間<strong>寬度</strong>（預設是300）</dd>
 </dl>
 
 <h2 id="描述">描述</h2>
 
-<h3 id="需要_&lt;canvas>_結尾">需要 <code>&lt;/canvas&gt;</code> 結尾</h3>
+<h3 id="需要_&lt;canvas>_結尾">需要 <code>&lt;/canvas&gt;</code> 結尾</h3>
 
 <p>與&lt;img&gt;不同之處,<code>&lt;canvas&gt;</code>需要<code>&lt;/canvas&gt;</code> 結尾</p>
 
@@ -72,7 +72,7 @@ translation_of: Web/HTML/Element/canvas
 &lt;/canvas&gt;
 </pre>
 
-<p>如果你的canvas沒有使用透明度，可在&lt;canvas&gt;標籤設立<code>moz-opaque</code>屬性，提升它的繪圖效果。<code>moz-opaque</code> 尚未標準化，所以只適用在 Mozilla 的 效能引擎。</p>
+<p>如果你的canvas沒有使用透明度，可在&lt;canvas&gt;標籤設立<code>moz-opaque</code>屬性，提升它的繪圖效果。<code>moz-opaque</code> 尚未標準化，所以只適用在 Mozilla 的 效能引擎。</p>
 
 <pre class="brush: html">&lt;canvas id="mycanvas" moz-opaque&gt;&lt;/canvas&gt;</pre>
 

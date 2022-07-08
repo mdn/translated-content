@@ -56,11 +56,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
  <dd>The value associated with the property. Can be any valid JavaScript value (number, object, function, etc).<br>
  <strong>預設 {{jsxref("undefined")}}.</strong></dd>
  <dt><code>writable</code></dt>
- <dd><code>true</code> 則該物件屬性可透過{{jsxref("Operators/Assignment_Operators", "賦予運算子", "", 1)}}改變其值。<br>
+ <dd><code>true</code> 則該物件屬性可透過{{jsxref("Operators/Assignment_Operators", "賦予運算子", "", 1)}}改變其值。<br>
  <strong>預設 <code>false</code></strong></dd>
 </dl>
 
-<p>一個 accessor descriptor 也擁有下述之 optional keys:</p>
+<p>一個 accessor descriptor 也擁有下述之 optional keys:</p>
 
 <dl>
  <dt><code>get</code></dt>
@@ -154,15 +154,15 @@ Object.defineProperty(o, 'conflict', {
 
 <h3 id="修改屬性">修改屬性</h3>
 
-<p>如果該屬性已經存在, <code>Object.defineProperty()</code> 將會根據描述符內的值和物件當前的 configuration 來修改屬性。 如果舊的描述符之 <code>configurable</code> 的特徵為 false (屬性為 “non-configurable”), 那除了 <code>writable</code> 之外的特徵都將無法修改。 在這個情況，也不可能在 data 和 accessor 屬性類型中來回切換。</p>
+<p>如果該屬性已經存在, <code>Object.defineProperty()</code> 將會根據描述符內的值和物件當前的 configuration 來修改屬性。 如果舊的描述符之 <code>configurable</code> 的特徵為 false (屬性為 “non-configurable”), 那除了 <code>writable</code> 之外的特徵都將無法修改。 在這個情況，也不可能在 data 和 accessor 屬性類型中來回切換。</p>
 
-<p>如果有一個屬性是 non-configurable, 那它的 <code>writable</code> 特徵只能被改變為 <code>false</code>.</p>
+<p>如果有一個屬性是 non-configurable, 那它的 <code>writable</code> 特徵只能被改變為 <code>false</code>.</p>
 
-<p>若嘗試改變 non-configurable property attributes，將會丟出一個 {{jsxref("TypeError")}}，除非當前之值與新值相同。</p>
+<p>若嘗試改變 non-configurable property attributes，將會丟出一個 {{jsxref("TypeError")}}，除非當前之值與新值相同。</p>
 
 <h4 id="Writable_attribute">Writable attribute</h4>
 
-<p>當 <code>writable</code> 屬性特徵被設為 <code>false</code>, 此屬性為 “non-writable”. 它將無法被重新賦值。</p>
+<p>當 <code>writable</code> 屬性特徵被設為 <code>false</code>, 此屬性為 “non-writable”. 它將無法被重新賦值。</p>
 
 <pre class="brush: js">var o = {}; // Creates a new object
 

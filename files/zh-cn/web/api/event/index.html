@@ -18,13 +18,13 @@ translation_of: Web/API/Event
 
 <p>有许多不同类型的事件，其中一些使用基于 <code>Event</code> 主接口的二次接口。<code>Event</code> 本身包含适用于所有事件的属性和方法。</p>
 
-<p>很多 DOM 元素可以被设计接收 (或者监听) 这些事件，并且执行代码去响应（或者处理）它们。通过<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" title="The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target.">EventTarget.addEventListener()</a></code>方法可以将事件处理函数绑定到不同的<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML elements</a>上 (比如<code>&lt;button&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>等等) 。这种绑定事件处理函数的方式基本替换了老版本中使用 HTML <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">event handler attributes</a>来绑定事件处理函数的方式。除此之外，通过正确使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener" title="The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal"><code>removeEventListener()</code></a>方法，这些事件处理函数也能被移除。</p>
+<p>很多 DOM 元素可以被设计接收 (或者监听) 这些事件，并且执行代码去响应（或者处理）它们。通过<code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">EventTarget.addEventListener()</a></code>方法可以将事件处理函数绑定到不同的<a href="/en-US/docs/Web/HTML/Element">HTML elements</a>上 (比如<code>&lt;button&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>等等) 。这种绑定事件处理函数的方式基本替换了老版本中使用 HTML <a href="/en-US/docs/HTML/Global_attributes">event handler attributes</a>来绑定事件处理函数的方式。除此之外，通过正确使用<a href="/en-US/docs/Web/API/EventTarget/removeEventListener"><code>removeEventListener()</code></a>方法，这些事件处理函数也能被移除。</p>
 
 <div class="blockIndicator note">
 <p><strong>Note:</strong> 一个元素可以绑定多个事件处理函数，甚至是同一种类型的事件。尤其是这种分离的，并且相互独立的代码模块对同一个元素绑定事件处理函数，每一个模块代码都有着独立的目的。（比如，一个网页同时有着广告模块和统计模块同时监听视频播放元素）</p>
 </div>
 
-<p>当有很多嵌套的元素，并且每一个元素都有着自己的事件处理函数，事件处理过程会变得非常复杂。尤其当一个父元素和子元素绑定有相同类型的事件处理函数的时候。因为结构上的重叠，事件处理函数可能会依次被触发，触发的顺序取决于<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture">事件冒泡和事件捕获</a>在每一个元素上的设置情况。</p>
+<p>当有很多嵌套的元素，并且每一个元素都有着自己的事件处理函数，事件处理过程会变得非常复杂。尤其当一个父元素和子元素绑定有相同类型的事件处理函数的时候。因为结构上的重叠，事件处理函数可能会依次被触发，触发的顺序取决于<a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture">事件冒泡和事件捕获</a>在每一个元素上的设置情况。</p>
 
 <h2 id="基于_Event_的接口">基于 <code>Event</code> 的接口</h2>
 

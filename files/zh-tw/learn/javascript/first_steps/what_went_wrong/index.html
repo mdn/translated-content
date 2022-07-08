@@ -35,7 +35,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 <h2 id="An_erroneous_example">一個錯誤範例</h2>
 
-<p>讓我們從剛剛的猜數字遊戲開始——在這個版本中，我們將故意引入一些錯誤以便從中學習。前往Github下載一份<a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html">number-game-errors.html</a>（或運行線上版 <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html">running live here</a>）。</p>
+<p>讓我們從剛剛的猜數字遊戲開始——在這個版本中，我們將故意引入一些錯誤以便從中學習。前往Github下載一份<a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html">number-game-errors.html</a>（或運行線上版 <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html">running live here</a>）。</p>
 
 <ol>
  <li>首先，在編輯器與瀏覽器分別開啟你剛下載檔案。</li>
@@ -98,7 +98,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
   </div>
  </li>
  <li>存檔並重整，你應該會在主控台中看到<code>console.log()</code>輸出的結果。<img alt="" src="console-log-output.png" style="display: block; margin: 0 auto;">在這個時間點，<code>lowOrHi</code>的值是<code>null</code>。所以很明顯的，第 48 行一定出了什麼問題。</li>
- <li>讓我們思考一下發生了什麼問題。第48行呼叫了 <code><a href="/zh-TW/docs/Web/API/Document/querySelector">document.querySelector()</a></code> 方法來透過CSS選擇器取得一個HTML元素參照。打開我們的網頁看看我們想要取得的段落元素：
+ <li>讓我們思考一下發生了什麼問題。第48行呼叫了 <code><a href="/zh-TW/docs/Web/API/Document/querySelector">document.querySelector()</a></code> 方法來透過CSS選擇器取得一個HTML元素參照。打開我們的網頁看看我們想要取得的段落元素：
   <pre class="brush: js notranslate">&lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
  </li>
  <li>所以我們需要的是一個開頭是小數點(.)的class選擇器，但傳進第48行<code>querySelector()</code>方法的選擇器並沒有開頭的小數點。這也許就是問題所在了！試著將第48行的<code>lowOrHi</code>改成<code>.lowOrHi</code>。</li>
@@ -128,10 +128,10 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
  <li>另一個開始新回合時產生隨機數字的變數則在113行左右：
   <pre class="brush: js notranslate">randomNumber = Math.floor(Math.random()) + 1;</pre>
  </li>
- <li>為了測試問題是否出在這兩段程式碼，我們需要再次邀請<code>console.log()</code> 好朋友，將之分別放到44、113行的程式碼下一行：
+ <li>為了測試問題是否出在這兩段程式碼，我們需要再次邀請<code>console.log()</code> 好朋友，將之分別放到44、113行的程式碼下一行：
   <pre class="brush: js notranslate">console.log(randomNumber);</pre>
  </li>
- <li>儲存程式碼並更新頁面，然後再試玩幾次，你會看到<code>randomNumber</code> 在console中總是等於1，這就是問題所在。</li>
+ <li>儲存程式碼並更新頁面，然後再試玩幾次，你會看到<code>randomNumber</code> 在console中總是等於1，這就是問題所在。</li>
 </ol>
 
 <h3 id="Working_through_the_logic">修正小錯誤</h3>
@@ -161,7 +161,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 <h3 id="SyntaxError_missing_before_statement">語法錯誤：語句缺少「 ; 」<br>
  SyntaxError: missing ; before statement</h3>
 
-<p>這個錯誤是指每行程式碼結束時必須加上英文輸入法的分號<code>;</code>(請注意不要打成中文輸入法)，分號被遺忘的錯誤有時不太容易發現，此外另舉一例：如果我們改動下方變數<code>checkGuess()</code> 中的程式碼：</p>
+<p>這個錯誤是指每行程式碼結束時必須加上英文輸入法的分號<code>;</code>(請注意不要打成中文輸入法)，分號被遺忘的錯誤有時不太容易發現，此外另舉一例：如果我們改動下方變數<code>checkGuess()</code> 中的程式碼：</p>
 
 <pre class="brush: js notranslate">var userGuess = Number(guessField.value);</pre>
 
@@ -172,12 +172,12 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 <p>此時程式碼會回報錯誤，因為瀏覽器會認為你想設定不同的東西；我們需要確保自己沒有誤用、混用指派運算子(<code>=</code>)：用於賦予變數值跟嚴格比較運算子(<code>===</code>)：用於比較兩個值是否完全相等，並回覆<code>true</code>/<code>false</code>布林值。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 更多細節請參考右方關於<em>缺少分號的語法錯誤</em>文章頁面： <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement">SyntaxError: missing ; before statement</a> 。</p>
+<p><strong>Note</strong>: 更多細節請參考右方關於<em>缺少分號的語法錯誤</em>文章頁面： <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement">SyntaxError: missing ; before statement</a> 。</p>
 </div>
 
 <h3 id="The_program_always_says_youve_won_regardless_of_the_guess_you_enter">無論輸入什麼，程式總是顯示「你贏了」</h3>
 
-<p>還有另一種混用指派運算子(<code>=</code>)與嚴格比較運算子(<code>===</code>)的狀況，舉例如果我們將變數 <code>checkGuess()</code>中的嚴格比較運算子(<code>===</code>)</p>
+<p>還有另一種混用指派運算子(<code>=</code>)與嚴格比較運算子(<code>===</code>)的狀況，舉例如果我們將變數 <code>checkGuess()</code>中的嚴格比較運算子(<code>===</code>)</p>
 
 <pre class="brush: js notranslate">if (userGuess === randomNumber) {</pre>
 
@@ -185,7 +185,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 <pre class="brush: js notranslate">if (userGuess = randomNumber) {</pre>
 
-<p>這個檢查就失效了，程式會永遠回傳 <code>true</code>而勝利並結束遊戲。請小心！</p>
+<p>這個檢查就失效了，程式會永遠回傳 <code>true</code>而勝利並結束遊戲。請小心！</p>
 
 <h3 id="SyntaxError_missing_after_argument_list">語法錯誤：參數列表後面缺少「)」<br>SyntaxError: missing ) after argument list</h3>
 

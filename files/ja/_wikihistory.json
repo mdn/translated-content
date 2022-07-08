@@ -3031,17 +3031,6 @@
       "KNaka88"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2020-04-04T15:08:12.967Z",
-    "contributors": [
-      "mfuji09",
-      "technohippy",
-      "segayuu",
-      "kenji-yamasaki",
-      "chikoski",
-      "YuichiNukiyama"
-    ]
-  },
   "Glossary/Symmetric-key_cryptography": {
     "modified": "2020-01-04T00:39:30.382Z",
     "contributors": [
@@ -14439,23 +14428,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/GlobalEventHandlers/onreset": {
-    "modified": "2019-03-23T23:29:30.841Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "ethertank"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onresize": {
-    "modified": "2019-03-23T23:35:46.817Z",
-    "contributors": [
-      "YuichiNukiyama",
-      "teoli",
-      "khalid32",
-      "ethertank"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onscroll": {
     "modified": "2020-10-15T21:36:48.856Z",
     "contributors": [
@@ -24789,12 +24761,6 @@
       "davidbrouillette"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role": {
-    "modified": "2019-03-18T21:10:44.737Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute": {
     "modified": "2019-03-18T21:23:20.561Z",
     "contributors": [
@@ -24851,60 +24817,6 @@
   },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute": {
     "modified": "2019-03-18T21:23:08.424Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role": {
-    "modified": "2019-03-18T20:45:37.577Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role": {
-    "modified": "2019-03-18T21:22:39.062Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role": {
-    "modified": "2019-03-18T20:45:38.179Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role": {
-    "modified": "2019-03-18T21:21:54.666Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role": {
-    "modified": "2019-03-18T21:22:34.124Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role": {
-    "modified": "2019-03-18T21:22:36.677Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role": {
-    "modified": "2019-03-18T20:49:47.634Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role": {
-    "modified": "2019-03-18T21:22:38.552Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role": {
-    "modified": "2019-03-18T21:21:58.604Z",
     "contributors": [
       "Wind1808"
     ]
@@ -25053,6 +24965,12 @@
       "Wind1808"
     ]
   },
+  "Web/Accessibility/ARIA/Roles/alertdialog_role": {
+    "modified": "2019-03-18T21:10:44.737Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
   "Web/Accessibility/ARIA/Roles/button_role": {
     "modified": "2019-03-18T21:45:11.836Z",
     "contributors": [
@@ -25073,8 +24991,20 @@
       "Wind1808"
     ]
   },
+  "Web/Accessibility/ARIA/Roles/group_role": {
+    "modified": "2019-03-18T20:45:37.577Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
   "Web/Accessibility/ARIA/Roles/heading_role": {
     "modified": "2019-03-18T21:22:47.301Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/link_role": {
+    "modified": "2019-03-18T21:22:39.062Z",
     "contributors": [
       "Wind1808"
     ]
@@ -25085,8 +25015,50 @@
       "Wind1808"
     ]
   },
+  "Web/Accessibility/ARIA/Roles/log_role": {
+    "modified": "2019-03-18T20:45:38.179Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/presentation_role": {
+    "modified": "2019-03-18T21:21:54.666Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/progressbar_role": {
+    "modified": "2019-03-18T21:22:34.124Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/radio_role": {
+    "modified": "2019-03-18T21:22:36.677Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/slider_role": {
+    "modified": "2019-03-18T20:49:47.634Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/status_role": {
+    "modified": "2019-03-18T21:22:38.552Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
   "Web/Accessibility/ARIA/Roles/textbox_role": {
     "modified": "2019-03-18T21:22:30.263Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/toolbar_role": {
+    "modified": "2019-03-18T21:21:58.604Z",
     "contributors": [
       "Wind1808"
     ]
@@ -36131,7 +36103,7 @@
       "segayuu"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges": {
+  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences": {
     "modified": "2020-10-15T22:19:15.466Z",
     "contributors": [
       "Potappo",
@@ -37591,20 +37563,6 @@
       "shide55"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/toSource": {
-    "modified": "2020-10-16T19:55:56.555Z",
-    "contributors": [
-      "mpcjazz",
-      "hamasaki",
-      "mfuji09",
-      "segayuu",
-      "teoli",
-      "ethertank",
-      "Yuichirou",
-      "Potappo",
-      "Mgjbot"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2020-10-20T12:40:37.015Z",
     "contributors": [
@@ -37861,17 +37819,6 @@
     "modified": "2020-10-22T12:38:32.716Z",
     "contributors": [
       "mfuji09"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Boolean/toSource": {
-    "modified": "2020-10-15T21:16:38.828Z",
-    "contributors": [
-      "segayuu",
-      "teoli",
-      "ethertank",
-      "Potappo",
-      "Mgjbot",
-      "Yuichirou"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
@@ -38557,16 +38504,6 @@
       "shide55"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Date/toSource": {
-    "modified": "2020-10-30T10:18:22.506Z",
-    "contributors": [
-      "mfuji09",
-      "teoli",
-      "sutara79",
-      "Marsf",
-      "shide55"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Date/toString": {
     "modified": "2020-10-25T01:11:00.675Z",
     "contributors": [
@@ -38885,17 +38822,6 @@
       "sutara79",
       "shimataro",
       "YuichiNukiyama",
-      "ethertank",
-      "yyss"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Function/toSource": {
-    "modified": "2020-11-06T15:41:05.317Z",
-    "contributors": [
-      "mfuji09",
-      "mpcjazz",
-      "segayuu",
-      "teoli",
       "ethertank",
       "yyss"
     ]
@@ -40237,14 +40163,6 @@
       "Potappo"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Number/toSource": {
-    "modified": "2019-03-23T23:49:49.983Z",
-    "contributors": [
-      "teoli",
-      "ethertank",
-      "Potappo"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Number/toString": {
     "modified": "2020-11-03T12:23:00.195Z",
     "contributors": [
@@ -40630,18 +40548,6 @@
       "segayuu",
       "teoli",
       "ethertank",
-      "Potappo",
-      "Yuichirou"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Object/toSource": {
-    "modified": "2020-12-06T15:04:56.333Z",
-    "contributors": [
-      "mfuji09",
-      "YujiSoftware",
-      "teoli",
-      "ethertank",
-      "Mgjbot",
       "Potappo",
       "Yuichirou"
     ]
@@ -41355,17 +41261,6 @@
       "Mgjbot"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/toSource": {
-    "modified": "2020-10-15T21:16:35.592Z",
-    "contributors": [
-      "mfuji09",
-      "YujiSoftware",
-      "teoli",
-      "ethertank",
-      "Potappo",
-      "Mgjbot"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/RegExp/toString": {
     "modified": "2020-11-13T12:45:12.046Z",
     "contributors": [
@@ -42048,16 +41943,6 @@
       "Potappo"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/toSource": {
-    "modified": "2020-10-15T21:16:38.366Z",
-    "contributors": [
-      "segayuu",
-      "teoli",
-      "ethertank",
-      "Potappo",
-      "Mgjbot"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/toString": {
     "modified": "2020-10-28T13:31:48.754Z",
     "contributors": [
@@ -42130,15 +42015,14 @@
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol": {
-    "modified": "2020-11-09T08:22:56.573Z",
+    "modified": "2020-04-04T15:08:12.967Z",
     "contributors": [
-      "mpcjazz",
-      "eltociear",
+      "mfuji09",
+      "technohippy",
       "segayuu",
-      "SphinxKnight",
-      "masami-dev",
-      "YuichiNukiyama",
-      "hrysd"
+      "kenji-yamasaki",
+      "chikoski",
+      "YuichiNukiyama"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive": {
@@ -42266,13 +42150,6 @@
       "segayuu",
       "Marsf",
       "YuichiNukiyama"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Symbol/toSource": {
-    "modified": "2020-11-22T12:30:02.654Z",
-    "contributors": [
-      "mfuji09",
-      "shide55"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol/toString": {
@@ -43197,17 +43074,6 @@
       "Kisaragi",
       "x2357",
       "shide55"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/uneval": {
-    "modified": "2020-12-06T07:44:13.628Z",
-    "contributors": [
-      "mfuji09",
-      "YujiSoftware",
-      "teoli",
-      "Marsf",
-      "x2357",
-      "s_fujimoto"
     ]
   },
   "Web/JavaScript/Reference/Iteration_protocols": {
@@ -46614,13 +46480,6 @@
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Transforming_XML_with_XSLT/Resources": {
-    "modified": "2019-03-18T20:50:34.704Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto"
-    ]
-  },
   "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference": {
     "modified": "2019-03-18T20:50:35.595Z",
     "contributors": [
@@ -46985,6 +46844,14 @@
       "unarist"
     ]
   },
+  "conflicting/Web/API/HTMLFormElement/reset_event": {
+    "modified": "2019-03-23T23:29:30.841Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "ethertank"
+    ]
+  },
   "conflicting/Web/API/HTMLInputElement": {
     "modified": "2019-03-23T22:27:32.009Z",
     "contributors": [
@@ -47254,6 +47121,15 @@
       "Wind1808"
     ]
   },
+  "conflicting/Web/API/Window/resize_event": {
+    "modified": "2019-03-23T23:35:46.817Z",
+    "contributors": [
+      "YuichiNukiyama",
+      "teoli",
+      "khalid32",
+      "ethertank"
+    ]
+  },
   "conflicting/Web/API/Window/scroll": {
     "modified": "2020-10-15T22:32:16.096Z",
     "contributors": [
@@ -47393,6 +47269,52 @@
       "mfuji09"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects": {
+    "modified": "2020-12-06T07:44:13.628Z",
+    "contributors": [
+      "mfuji09",
+      "YujiSoftware",
+      "teoli",
+      "Marsf",
+      "x2357",
+      "s_fujimoto"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
+    "modified": "2020-10-16T19:55:56.555Z",
+    "contributors": [
+      "mpcjazz",
+      "hamasaki",
+      "mfuji09",
+      "segayuu",
+      "teoli",
+      "ethertank",
+      "Yuichirou",
+      "Potappo",
+      "Mgjbot"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
+    "modified": "2020-10-15T21:16:38.828Z",
+    "contributors": [
+      "segayuu",
+      "teoli",
+      "ethertank",
+      "Potappo",
+      "Mgjbot",
+      "Yuichirou"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString": {
+    "modified": "2020-10-30T10:18:22.506Z",
+    "contributors": [
+      "mfuji09",
+      "teoli",
+      "sutara79",
+      "Marsf",
+      "shide55"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString": {
     "modified": "2020-10-30T10:49:32.277Z",
     "contributors": [
@@ -47401,6 +47323,58 @@
       "teoli",
       "Marsf",
       "shide55"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString": {
+    "modified": "2020-11-06T15:41:05.317Z",
+    "contributors": [
+      "mfuji09",
+      "mpcjazz",
+      "segayuu",
+      "teoli",
+      "ethertank",
+      "yyss"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString": {
+    "modified": "2019-03-23T23:49:49.983Z",
+    "contributors": [
+      "teoli",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString": {
+    "modified": "2020-12-06T15:04:56.333Z",
+    "contributors": [
+      "mfuji09",
+      "YujiSoftware",
+      "teoli",
+      "ethertank",
+      "Mgjbot",
+      "Potappo",
+      "Yuichirou"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString": {
+    "modified": "2020-10-15T21:16:35.592Z",
+    "contributors": [
+      "mfuji09",
+      "YujiSoftware",
+      "teoli",
+      "ethertank",
+      "Potappo",
+      "Mgjbot"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String/toString": {
+    "modified": "2020-10-15T21:16:38.366Z",
+    "contributors": [
+      "segayuu",
+      "teoli",
+      "ethertank",
+      "Potappo",
+      "Mgjbot"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab": {
@@ -47423,6 +47397,13 @@
     "modified": "2020-02-18T00:42:09.363Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol/toString": {
+    "modified": "2020-11-22T12:30:02.654Z",
+    "contributors": [
+      "mfuji09",
+      "shide55"
     ]
   },
   "conflicting/Web/MathML": {
@@ -47462,6 +47443,13 @@
   },
   "conflicting/Web/XSLT": {
     "modified": "2019-03-18T20:50:34.547Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto"
+    ]
+  },
+  "conflicting/Web/XSLT/Transforming_XML_with_XSLT": {
+    "modified": "2019-03-18T20:50:34.704Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"

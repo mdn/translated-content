@@ -9,7 +9,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 
 <p>由於圖形一但產生後便靜止不動，所以我們必須重新繪圖好移動圖案，產生動畫效果，所以如果繪圖越複雜，繪圖運算也需要消耗越多運算資源和時間，換句話說，電腦效能的好壞將大大影響動畫順暢度，或許這也是畫布動畫最大的限制。</p>
 
-<h2 id="Basic_animation_steps" name="Basic_animation_steps">動畫基本步驟</h2>
+<h2 id="Basic_animation_steps">動畫基本步驟</h2>
 
 <p>產生一個畫面基本上需要以下步驟 :</p>
 
@@ -24,7 +24,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
   復原畫布狀態以備下次繪圖使用。</li>
 </ol>
 
-<h2 id="Controlling_an_animation" name="Controlling_an_animation">控制動畫</h2>
+<h2 id="Controlling_an_animation">控制動畫</h2>
 
 <p>一般來說當程式碼執行完畢後我們才會看到繪圖結果，所以說我們無法靠執行for迴圈來產生動畫，我們得靠每隔一段時間繪圖來產生動畫，下面將介紹兩種作法。</p>
 
@@ -48,7 +48,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 <p>如果希望不要有任何的使用者互動影響，請使用setInterval()，因為它會確實地每隔一段時間就執行程式碼。如果你想製作遊戲 , 我們能夠使用keyboard 或是 mouse event來控制動畫,並使用setTimeout()函數一起。藉由設定EventListeners,我們能夠捕捉任何使用者的動作,並執行我們的動畫函數。</p>
 
 <div class="note">
-<p>在下面的範例,我們將使用<strong>window.requestAnimationFrame()</strong>方法來控制動畫,<strong>window.requestAnimationFrame()</strong>方法為動畫提供更順暢更有效率的方式來執行,當系統準備好繪製畫面時,藉由呼叫動畫andmation frame()的callback函數 。callback通常每秒鐘執行60次,當執行background tab時,執行次數會更低,想知道更多關於動畫迴圈(animation loop)的資訊,尤其是遊戲的應用,請查看我們在 <a href="/en-US/docs/Games">Game development zone</a> 的主題 <a href="/en-US/docs/Games/Anatomy">Anatomy of a video game</a> 。</p>
+<p>在下面的範例,我們將使用<strong>window.requestAnimationFrame()</strong>方法來控制動畫,<strong>window.requestAnimationFrame()</strong>方法為動畫提供更順暢更有效率的方式來執行,當系統準備好繪製畫面時,藉由呼叫動畫andmation frame()的callback函數 。callback通常每秒鐘執行60次,當執行background tab時,執行次數會更低,想知道更多關於動畫迴圈(animation loop)的資訊,尤其是遊戲的應用,請查看我們在 <a href="/en-US/docs/Games">Game development zone</a> 的主題 <a href="/en-US/docs/Games/Anatomy">Anatomy of a video game</a> 。</p>
 </div>
 
 <h3 id="從使用者輸入操作控制動畫">從使用者輸入操作控制動畫</h3>
@@ -306,7 +306,7 @@ function draw() {
 
 <p>{{EmbedLiveSample("A_looping_panorama", "830", "230")}}</p>
 
-<h2 id="Other_examples" name="Other_examples">其他範例</h2>
+<h2 id="Other_examples">其他範例</h2>
 
 <dl>
  <dt><a href="http://www.gartic.net/">Gartic</a></dt>

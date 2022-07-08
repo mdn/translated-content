@@ -25,7 +25,7 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
  <li>连接声源和特效，以及特效和终点。</li>
 </ol>
 
-<p><img alt="A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information." src="https://mdn.mozillademos.org/files/12237/webaudioAPI_en.svg" style="display: block; height: 143px; margin: 0px auto; width: 643px;"></p>
+<p><img alt="A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information." src="webaudioapi_en.svg"></p>
 
 <p>每个输入和输出都可以包括几个声道，声道代表了一个特定的音效通道。各种声道分离结构都可以使用，包括<em>单声道</em>，<em>立体声</em>，<em>四声道</em>，<em>5.1</em>等等。</p>
 
@@ -372,7 +372,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 
 <p>一般来说，可视化是通过获取各个时间上的音频数据（通常是振幅或频率），之后运用图像技术将其处理为视觉输出（例如一个图像）来实现的。网页音频接口提供了一个不会改变输入信号的音频节点 {{domxref("AnalyserNode")}}，通过它可以获取声音数据并传递到像 {{htmlelement("canvas")}} 等等一样的可视化工具。</p>
 
-<p><img alt="Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT." src="https://mdn.mozillademos.org/files/12521/fttaudiodata_en.svg" style="height: 206px; width: 693px;"></p>
+<p><img alt="Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT." src="fttaudiodata_en.svg"></p>
 
 <p>你可以通过如下方法获取需要的音频数据：</p>
 
@@ -407,7 +407,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 <p> </p>
 </div>
 
-<p><img alt="The PannerNode brings a spatial position and velocity and a directionality for a given signal." src="https://mdn.mozillademos.org/files/12511/pannernode_en.svg" style="height: 340px; width: 799px;"></p>
+<p><img alt="The PannerNode brings a spatial position and velocity and a directionality for a given signal." src="pannernode_en.svg"></p>
 
 <div>
 <p>接听者的位置可以用笛卡尔坐标系来表示；他的运动可以用方向向量表示；头部姿态可以用两个向量表示：一个向上向量表示头顶正对的方向，一个向前向量表示鼻子所指向的方向（面向的方向），这两个向量应该互相垂直。</p>
@@ -423,8 +423,8 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 
 <p>对于音频来说，<strong>扇入</strong>是指 {{domxref("ChannelMergerNode")}}  节点接收一系列单声道输入声源，并将它们整合输出为一个多声道音频信号的过程：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12517/fanin.svg" style="height: 258px; width: 325px;"></p>
+<p><img src="fanin.svg"></p>
 
 <p><strong>扇出</strong>恰恰相反，是指一个{{domxref("ChannelSplitterNode")}} 节点接收一个多声道输入声源并将它分离成多个单声道音频信号的过程：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12515/fanout.svg" style="height: 258px; width: 325px;"></p>
+<p><img src="fanout.svg"></p>

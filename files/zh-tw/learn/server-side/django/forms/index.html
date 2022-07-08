@@ -12,12 +12,12 @@ translation_of: Learn/Server-side/Django/Forms
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row"> 前提:</th>
-   <td>完成先前所有的教程, 包含 <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions">Django Tutorial Part 8: User authentication and permissions</a>.</td>
+   <th scope="row"> 前提:</th>
+   <td>完成先前所有的教程, 包含 <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions">Django Tutorial Part 8: User authentication and permissions</a>.</td>
   </tr>
   <tr>
    <th scope="row">目的:</th>
-   <td>了解如何製作表單來向用戶取得資訊並更新資料庫。了解<strong>通用類別表單編輯視圖 </strong>( generic class-based form editing views ) 能夠大幅簡化用於單一模型的表單製作。</td>
+   <td>了解如何製作表單來向用戶取得資訊並更新資料庫。了解<strong>通用類別表單編輯視圖 </strong>( generic class-based form editing views ) 能夠大幅簡化用於單一模型的表單製作。</td>
   </tr>
  </tbody>
 </table>
@@ -43,15 +43,15 @@ translation_of: Learn/Server-side/Django/Forms
 <p>表單在HTML中定義為 <code>&lt;form&gt;...&lt;/form&gt;</code> 標記內元素的集合，其中至少包含<code>type="submit"</code>.的<code>input</code>元素。</p>
 
 <pre class="brush: html notranslate">&lt;form action="/team_name_url/" method="post"&gt;
-    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
-    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
-    &lt;input type="submit" value="OK"&gt;
+    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
+    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
+    &lt;input type="submit" value="OK"&gt;
 &lt;/form&gt;</pre>
 
-<p>雖然這裡只有一個用於輸入團隊名稱的文本字段，但是表單可以具有任意數量的其他輸入元素及其關聯的標籤。字段的<code>type</code> 屬性定義將顯示哪種小部件。字段的 <code>name</code> 和<code>id</code> 用於標識JavaScript / CSS / HTML中的字段，而 <code>value</code>定義該字段在首次顯示時的初始值。匹配的團隊標籤是使用<code style="font-style: normal; font-weight: normal;">label</code> 標籤指定的（請參見上面的“輸入名稱”），其中的  <code style="font-style: normal; font-weight: normal;">for</code> 字段包含相關<code style="font-style: normal; font-weight: normal;">input</code>的<code style="font-style: normal; font-weight: normal;">id</code> 值。</p>
+<p>雖然這裡只有一個用於輸入團隊名稱的文本字段，但是表單可以具有任意數量的其他輸入元素及其關聯的標籤。字段的<code>type</code> 屬性定義將顯示哪種小部件。字段的 <code>name</code> 和<code>id</code> 用於標識JavaScript / CSS / HTML中的字段，而 <code>value</code>定義該字段在首次顯示時的初始值。匹配的團隊標籤是使用<code style="font-style: normal; font-weight: normal;">label</code> 標籤指定的（請參見上面的“輸入名稱”），其中的  <code style="font-style: normal; font-weight: normal;">for</code> 字段包含相關<code style="font-style: normal; font-weight: normal;">input</code>的<code style="font-style: normal; font-weight: normal;">id</code> 值。</p>
 
 <p><code>submit</code> 輸入將顯示為一個按鈕（默認情況下），用戶可以按下該按鈕以將表單中所有其他輸入元素中的數據上載到服務器（在這種情況下，僅是<code>team_name</code>）。表單屬性定義用於發送數據的HTTP<code>method</code> 以及服務器上數據的目的地（<code>action</code>）：<br>
-  </p>
+  </p>
 
 <ul>
  <li><code>action</code>: 提交表單時，將數據發送到該資源/ URL進行處理。如果未設置（或設置為空字符串），則表單將被提交回當前頁面URL。</li>
@@ -124,7 +124,7 @@ translation_of: Learn/Server-side/Django/Forms
 <pre class="brush: python notranslate">from django import forms
 
 class RenewBookForm(forms.Form):
-    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
+    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
 </pre>
 
 <h4 id="Form_fields">Form fields</h4>
@@ -138,7 +138,7 @@ class RenewBookForm(forms.Form):
 <ul>
  <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/fields/#required">required</a>: If <code>True</code>, the field may not be left blank or given a <code>None</code> value. Fields are required by default, so you would set <code>required=False</code> to allow blank values in the form.</li>
  <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/fields/#label">label</a>: The label to use when rendering the field in HTML. If <a href="https://docs.djangoproject.com/en/2.0/ref/forms/fields/#label">label</a> is not specified then Django would create one from the field name by capitalising the first letter and replacing underscores with spaces (e.g. <em>Renewal date</em>).</li>
- <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/fields/#label-suffix">label_suffix</a>: By default a colon is displayed after the label (e.g. Renewal date<strong>:</strong>). This argument allows you to specify a different suffix containing other character(s).</li>
+ <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/fields/#label-suffix">label_suffix</a>: By default a colon is displayed after the label (e.g. Renewal date<strong>:</strong>). This argument allows you to specify a different suffix containing other character(s).</li>
  <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/fields/#initial">initial</a>: The initial value for the field when the form is displayed.</li>
  <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/fields/#widget">widget</a>: The display widget to use.</li>
  <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/fields/#help-text">help_text</a> (as seen in the example above): Additional text that can be displayed in forms to explain how to use the field.</li>
@@ -159,35 +159,35 @@ from django.utils.translation import ugettext_lazy as _
 import datetime #for checking renewal date range.
 </strong>
 class RenewBookForm(forms.Form):
-    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
+    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
 
-<strong>    def clean_renewal_date(self):
-        data = self.cleaned_data['renewal_date']
+<strong>    def clean_renewal_date(self):
+        data = self.cleaned_data['renewal_date']
 
-        #Check date is not in past.
-        if data &lt; datetime.date.today():
-            raise ValidationError(_('Invalid date - renewal in past'))
+        #Check date is not in past.
+        if data &lt; datetime.date.today():
+            raise ValidationError(_('Invalid date - renewal in past'))
 
-        #Check date is in range librarian allowed to change (+4 weeks).
-        if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
-            raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
+        #Check date is in range librarian allowed to change (+4 weeks).
+        if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
+            raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
 
-        # Remember to always return the cleaned data.
-        return data</strong></pre>
+        # Remember to always return the cleaned data.
+        return data</strong></pre>
 
-<p>There are two important things to note. The first is that we get our data using <code>self.cleaned_data['renewal_date']</code> and that we return this data whether or not we change it at the end of the function. This step gets us the data "cleaned" and sanitised of potentially unsafe input using the default validators, and converted into the correct standard type for the data (in this case a Python <code>datetime.datetime</code> object).</p>
+<p>There are two important things to note. The first is that we get our data using <code>self.cleaned_data['renewal_date']</code> and that we return this data whether or not we change it at the end of the function. This step gets us the data "cleaned" and sanitised of potentially unsafe input using the default validators, and converted into the correct standard type for the data (in this case a Python <code>datetime.datetime</code> object).</p>
 
-<p>The second point is that if a value falls outside our range we raise a <code>ValidationError</code>, specifying the error text that we want to display in the form if an invalid value is entered. The example above also wraps this text in one of <a href="https://docs.djangoproject.com/en/2.0/topics/i18n/translation/">Django's translation functions</a> <code>ugettext_lazy()</code> (imported as <code>_()</code>), which is good practice if you want to translate your site later.</p>
+<p>The second point is that if a value falls outside our range we raise a <code>ValidationError</code>, specifying the error text that we want to display in the form if an invalid value is entered. The example above also wraps this text in one of <a href="https://docs.djangoproject.com/en/2.0/topics/i18n/translation/">Django's translation functions</a> <code>ugettext_lazy()</code> (imported as <code>_()</code>), which is good practice if you want to translate your site later.</p>
 
 <div class="note">
-<p><strong>Note:</strong> There are numerious other methods and examples for validating forms in <a href="https://docs.djangoproject.com/en/2.0/ref/forms/validation/">Form and field validation</a> (Django docs). For example, in cases where you have multiple fields that depend on each other, you can override the <a href="https://docs.djangoproject.com/en/2.0/ref/forms/api/#django.forms.Form.clean">Form.clean()</a> function and again raise a <code>ValidationError</code>.</p>
+<p><strong>Note:</strong> There are numerious other methods and examples for validating forms in <a href="https://docs.djangoproject.com/en/2.0/ref/forms/validation/">Form and field validation</a> (Django docs). For example, in cases where you have multiple fields that depend on each other, you can override the <a href="https://docs.djangoproject.com/en/2.0/ref/forms/api/#django.forms.Form.clean">Form.clean()</a> function and again raise a <code>ValidationError</code>.</p>
 </div>
 
 <p>That's all we need for the form in this example!</p>
 
 <h4 id="Copy_the_Form">Copy the Form</h4>
 
-<p>Create and open the file <strong>locallibrary/catalog/forms.py</strong> and copy the entire code listing from the previous block into it.</p>
+<p>Create and open the file <strong>locallibrary/catalog/forms.py</strong> and copy the entire code listing from the previous block into it.</p>
 
 <h3 id="URL_Configuration">URL Configuration</h3>
 
@@ -197,19 +197,19 @@ class RenewBookForm(forms.Form):
     path('book/&lt;uuid:pk&gt;/renew/', views.renew_book_librarian, name='renew-book-librarian'),
 ]</pre>
 
-<p>The URL configuration will redirect URLs with the format <strong>/catalog/book/<em>&lt;bookinstance id&gt;</em>/renew/</strong> to the function named <code>renew_book_librarian()</code> in <strong>views.py</strong>, and send the <code>BookInstance</code> id as the parameter named <code>pk</code>. The pattern only matches if <code>pk</code> is a correctly formatted <code>uuid</code>.</p>
+<p>The URL configuration will redirect URLs with the format <strong>/catalog/book/<em>&lt;bookinstance id&gt;</em>/renew/</strong> to the function named <code>renew_book_librarian()</code> in <strong>views.py</strong>, and send the <code>BookInstance</code> id as the parameter named <code>pk</code>. The pattern only matches if <code>pk</code> is a correctly formatted <code>uuid</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: We can name our captured URL data "<code>pk</code>" anything we like, because we have complete control over the view function (we're not using a generic detail view class that expects parameters with a certain name). However <code>pk</code>, short for "primary key", is a reasonable convention to use!</p>
+<p><strong>Note</strong>: We can name our captured URL data "<code>pk</code>" anything we like, because we have complete control over the view function (we're not using a generic detail view class that expects parameters with a certain name). However <code>pk</code>, short for "primary key", is a reasonable convention to use!</p>
 </div>
 
 <h3 id="View">View</h3>
 
-<p>As discussed in the <a href="#django_form_handling_process">Django form handling process</a> above, the view has to render the default form when it is first called and then either re-render it with error messages if the data is invalid, or process the data and redirect to a new page if the data is valid. In order to perform these different actions, the view has to be able to know whether it is being called for the first time to render the default form, or a subsequent time to validate data. </p>
+<p>As discussed in the <a href="#django_form_handling_process">Django form handling process</a> above, the view has to render the default form when it is first called and then either re-render it with error messages if the data is invalid, or process the data and redirect to a new page if the data is valid. In order to perform these different actions, the view has to be able to know whether it is being called for the first time to render the default form, or a subsequent time to validate data. </p>
 
-<p>For forms that use a <code>POST</code> request to submit information to the server, the most common pattern is for the view to test against the <code>POST</code> request type (<code>if request.method == 'POST':</code>) to identify form validation requests and <code>GET</code> (using an <code>else</code> condition) to identify the initial form creation request. If you want to submit your data using a <code>GET</code> request then a typical approach for identifying whether this is the first or subsequent view invocation is to read the form data (e.g. to read a hidden value in the form).</p>
+<p>For forms that use a <code>POST</code> request to submit information to the server, the most common pattern is for the view to test against the <code>POST</code> request type (<code>if request.method == 'POST':</code>) to identify form validation requests and <code>GET</code> (using an <code>else</code> condition) to identify the initial form creation request. If you want to submit your data using a <code>GET</code> request then a typical approach for identifying whether this is the first or subsequent view invocation is to read the form data (e.g. to read a hidden value in the form).</p>
 
-<p>The book renewal process will be writing to our database, so by convention we use the <code>POST</code> request approach. The code fragment below shows the (very standard) pattern for this sort of function view. </p>
+<p>The book renewal process will be writing to our database, so by convention we use the <code>POST</code> request approach. The code fragment below shows the (very standard) pattern for this sort of function view. </p>
 
 <pre class="brush: python notranslate">from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
@@ -219,84 +219,84 @@ import datetime
 from .forms import RenewBookForm
 
 def renew_book_librarian(request, pk):
-    book_inst=get_object_or_404(BookInstance, pk = pk)
+    book_inst=get_object_or_404(BookInstance, pk = pk)
 
-    # If this is a POST request then process the Form data
-<strong>    if request.method == 'POST':</strong>
+    # If this is a POST request then process the Form data
+<strong>    if request.method == 'POST':</strong>
 
-        # Create a form instance and populate it with data from the request (binding):
-        form = RenewBookForm(request.POST)
+        # Create a form instance and populate it with data from the request (binding):
+        form = RenewBookForm(request.POST)
 
-        # Check if the form is valid:
-        <strong>if form.is_valid():</strong>
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_inst.due_back = form.cleaned_data['renewal_date']
-            book_inst.save()
+        # Check if the form is valid:
+        <strong>if form.is_valid():</strong>
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_inst.due_back = form.cleaned_data['renewal_date']
+            book_inst.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-    # If this is a GET (or any other method) create the default form.
-<strong>    else:</strong>
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
+    # If this is a GET (or any other method) create the default form.
+<strong>    else:</strong>
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
 
 <p>First we import our form (<code>RenewBookForm</code>) and a number of other useful objects/methods used in the body of the view function:</p>
 
 <ul>
- <li><code><a href="https://docs.djangoproject.com/en/2.0/topics/http/shortcuts/#get-object-or-404">get_object_or_404()</a></code>: Returns a specified object from a model based on its primary key value, and raises an <code>Http404</code> exception (not found) if the record does not exist. </li>
- <li><code><a href="https://docs.djangoproject.com/en/2.0/ref/request-response/#django.http.HttpResponseRedirect">HttpResponseRedirect</a></code>: This creates a redirect to a specified URL (HTTP status code 302). </li>
- <li><code><a href="https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#django.urls.reverse">reverse()</a></code>: This generates a URL from a URL configuration name and a set of arguments. It is the Python equivalent of the <code>url</code> tag that we've been using in our templates.</li>
- <li><code><a href="https://docs.python.org/3/library/datetime.html">datetime</a></code>: A Python library for manipulating dates and times. </li>
+ <li><code><a href="https://docs.djangoproject.com/en/2.0/topics/http/shortcuts/#get-object-or-404">get_object_or_404()</a></code>: Returns a specified object from a model based on its primary key value, and raises an <code>Http404</code> exception (not found) if the record does not exist. </li>
+ <li><code><a href="https://docs.djangoproject.com/en/2.0/ref/request-response/#django.http.HttpResponseRedirect">HttpResponseRedirect</a></code>: This creates a redirect to a specified URL (HTTP status code 302). </li>
+ <li><code><a href="https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#django.urls.reverse">reverse()</a></code>: This generates a URL from a URL configuration name and a set of arguments. It is the Python equivalent of the <code>url</code> tag that we've been using in our templates.</li>
+ <li><code><a href="https://docs.python.org/3/library/datetime.html">datetime</a></code>: A Python library for manipulating dates and times. </li>
 </ul>
 
-<p>In the view we first use the <code>pk</code> argument in <code>get_object_or_404()</code> to get the current <code>BookInstance</code> (if this does not exist, the view will immediately exit and the page will display a "not found" error). If this is <em>not </em>a <code>POST</code> request (handled by the <code>else</code> clause) then we create the default form passing in an <code>initial</code> value for the <code>renewal_date</code> field (as shown in bold below, this is 3 weeks from the current date). </p>
+<p>In the view we first use the <code>pk</code> argument in <code>get_object_or_404()</code> to get the current <code>BookInstance</code> (if this does not exist, the view will immediately exit and the page will display a "not found" error). If this is <em>not </em>a <code>POST</code> request (handled by the <code>else</code> clause) then we create the default form passing in an <code>initial</code> value for the <code>renewal_date</code> field (as shown in bold below, this is 3 weeks from the current date). </p>
 
 <pre class="brush: python notranslate">    book_inst=get_object_or_404(BookInstance, pk = pk)
 
-    # If this is a GET (or any other method) create the default form
-    <strong>else:</strong>
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(<strong>weeks=3</strong>)
-        <strong>form = RenewBookForm(initial={'</strong>renewal_date<strong>': </strong>proposed_renewal_date<strong>,})</strong>
+    # If this is a GET (or any other method) create the default form
+    <strong>else:</strong>
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(<strong>weeks=3</strong>)
+        <strong>form = RenewBookForm(initial={'</strong>renewal_date<strong>': </strong>proposed_renewal_date<strong>,})</strong>
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
 
 <p>After creating the form, we call <code>render()</code> to create the HTML page, specifying the template and a context that contains our form. In this case the context also contains our <code>BookInstance</code>, which we'll use in the template to provide information about the book we're renewing.</p>
 
-<p>If however this is a <code>POST</code> request, then we create our <code>form</code> object and populate it with data from the request. This process is called "binding" and allows us to validate the form. We then check if the form is valid, which runs all the validation code on all of the fields — including both the generic code to check that our date field is actually a valid date and our specific form's <code>clean_renewal_date()</code> function to check the date is in the right range. </p>
+<p>If however this is a <code>POST</code> request, then we create our <code>form</code> object and populate it with data from the request. This process is called "binding" and allows us to validate the form. We then check if the form is valid, which runs all the validation code on all of the fields — including both the generic code to check that our date field is actually a valid date and our specific form's <code>clean_renewal_date()</code> function to check the date is in the right range. </p>
 
-<pre class="brush: python notranslate">    book_inst=get_object_or_404(BookInstance, pk = pk)
+<pre class="brush: python notranslate">    book_inst=get_object_or_404(BookInstance, pk = pk)
 
-    # If this is a POST request then process the Form data
-    if request.method == 'POST':
+    # If this is a POST request then process the Form data
+    if request.method == 'POST':
 
-        # Create a form instance and populate it with data from the request (binding):
-<strong>        form = RenewBookForm(request.POST)</strong>
+        # Create a form instance and populate it with data from the request (binding):
+<strong>        form = RenewBookForm(request.POST)</strong>
 
-        # Check if the form is valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_inst.due_back = form.cleaned_data['renewal_date']
-            book_inst.save()
+        # Check if the form is valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_inst.due_back = form.cleaned_data['renewal_date']
+            book_inst.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
 
-<p>If the form is not valid we call <code>render()</code> again, but this time the form value passed in the context will include error messages. </p>
+<p>If the form is not valid we call <code>render()</code> again, but this time the form value passed in the context will include error messages. </p>
 
-<p>If the form is valid, then we can start to use the data, accessing it through the <code>form.cleaned_data</code> attribute (e.g. <code>data = form.cleaned_data['renewal_date']</code>). Here we just save the data into the <code>due_back</code> value of the associated <code>BookInstance</code> object.</p>
+<p>If the form is valid, then we can start to use the data, accessing it through the <code>form.cleaned_data</code> attribute (e.g. <code>data = form.cleaned_data['renewal_date']</code>). Here we just save the data into the <code>due_back</code> value of the associated <code>BookInstance</code> object.</p>
 
 <div class="warning">
-<p><strong>Important</strong>: While you can also access the form data directly through the request (for example <code>request.POST['renewal_date']</code> or <code>request.GET['renewal_date']</code> (if using a GET request) this is NOT recommended. The cleaned data is sanitised, validated, and converted into Python-friendly types.</p>
+<p><strong>Important</strong>: While you can also access the form data directly through the request (for example <code>request.POST['renewal_date']</code> or <code>request.GET['renewal_date']</code> (if using a GET request) this is NOT recommended. The cleaned data is sanitised, validated, and converted into Python-friendly types.</p>
 </div>
 
-<p>The final step in the form-handling part of the view is to redirect to another page, usually a "success" page. In this case we use <code>HttpResponseRedirect</code> and <code>reverse()</code> to redirect to the view named <code>'all-borrowed'</code> (this was created as the "challenge" in <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself">Django Tutorial Part 8: User authentication and permissions</a>). If you didn't create that page consider redirecting to the home page at URL '/').</p>
+<p>The final step in the form-handling part of the view is to redirect to another page, usually a "success" page. In this case we use <code>HttpResponseRedirect</code> and <code>reverse()</code> to redirect to the view named <code>'all-borrowed'</code> (this was created as the "challenge" in <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself">Django Tutorial Part 8: User authentication and permissions</a>). If you didn't create that page consider redirecting to the home page at URL '/').</p>
 
-<p>That's everything needed for the form handling itself, but we still need to restrict access to the view to librarians. We should probably create a new permission in <code>BookInstance</code> ("<code>can_renew</code>"), but to keep things simple here we just use the <code>@permission_required</code> function decorator with our existing <code>can_mark_returned</code> permission.</p>
+<p>That's everything needed for the form handling itself, but we still need to restrict access to the view to librarians. We should probably create a new permission in <code>BookInstance</code> ("<code>can_renew</code>"), but to keep things simple here we just use the <code>@permission_required</code> function decorator with our existing <code>can_mark_returned</code> permission.</p>
 
 <p>The final view is therefore as shown below. Please copy this into the bottom of <strong>locallibrary/catalog/views.py</strong>.</p>
 
@@ -311,32 +311,32 @@ from .forms import RenewBookForm
 
 <strong>@permission_required('catalog.<code>can_mark_returned</code>')</strong>
 def renew_book_librarian(request, pk):
-    """
-    View function for renewing a specific BookInstance by librarian
-    """
-    book_inst=get_object_or_404(BookInstance, pk = pk)
+    """
+    View function for renewing a specific BookInstance by librarian
+    """
+    book_inst=get_object_or_404(BookInstance, pk = pk)
 
-    # If this is a POST request then process the Form data
-    if request.method == 'POST':
+    # If this is a POST request then process the Form data
+    if request.method == 'POST':
 
-        # Create a form instance and populate it with data from the request (binding):
-        form = RenewBookForm(request.POST)
+        # Create a form instance and populate it with data from the request (binding):
+        form = RenewBookForm(request.POST)
 
-        # Check if the form is valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_inst.due_back = form.cleaned_data['renewal_date']
-            book_inst.save()
+        # Check if the form is valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_inst.due_back = form.cleaned_data['renewal_date']
+            book_inst.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-    # If this is a GET (or any other method) create the default form.
-    else:
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
+    # If this is a GET (or any other method) create the default form.
+    else:
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})
 </pre>
 
 <h3 id="The_template">The template</h3>
@@ -354,7 +354,7 @@ def renew_book_librarian(request, pk):
         {% csrf_token %}
         &lt;table&gt;
         \{{ form }}
-        &lt;/table&gt;
+        &lt;/table&gt;
         &lt;input type="submit" value="Submit" /&gt;
     &lt;/form&gt;</strong>
 
@@ -371,12 +371,12 @@ def renew_book_librarian(request, pk):
 <p>All that's left is the <code>\{{form}}</code> template variable, which we passed to the template in the context dictionary. Perhaps unsurprisingly, when used as shown this provides the default rendering of all the form fields, including their labels, widgets, and help text — the rendering is as shown below:</p>
 
 <pre class="brush: html notranslate">&lt;tr&gt;
-  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
-  &lt;td&gt;
-    &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required /&gt;
-    &lt;br /&gt;
-    &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
-  &lt;/td&gt;
+  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
+  &lt;td&gt;
+    &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required /&gt;
+    &lt;br /&gt;
+    &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
+  &lt;/td&gt;
 &lt;/tr&gt;
 </pre>
 
@@ -387,14 +387,14 @@ def renew_book_librarian(request, pk):
 <p>If you were to enter an invalid date, you'd additionally get a list of the errors rendered in the page (shown in bold below).</p>
 
 <pre class="brush: html notranslate">&lt;tr&gt;
-  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
-   &lt;td&gt;
-<strong>      &lt;ul class="errorlist"&gt;
-        &lt;li&gt;Invalid date - renewal in past&lt;/li&gt;
-      &lt;/ul&gt;</strong>
-      &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required /&gt;
-      &lt;br /&gt;
-      &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
+  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
+   &lt;td&gt;
+<strong>      &lt;ul class="errorlist"&gt;
+        &lt;li&gt;Invalid date - renewal in past&lt;/li&gt;
+      &lt;/ul&gt;</strong>
+      &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required /&gt;
+      &lt;br /&gt;
+      &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
     &lt;/td&gt;
 &lt;/tr&gt;</pre>
 
@@ -470,25 +470,25 @@ class RenewBookModelForm(ModelForm):
     help_texts = { 'due_back': _('Enter a date between now and 4 weeks (default 3).'), } </strong>
 </pre>
 
-<p>To add validation you can use the same approach as for a normal <code>Form</code> — you define a function named <code>clean_<em>field_name</em>()</code> and raise <code>ValidationError</code> exceptions for invalid values. The only difference with respect to our original form is that the model field is named <code>due_back</code> and not "<code>renewal_date</code>".</p>
+<p>To add validation you can use the same approach as for a normal <code>Form</code> — you define a function named <code>clean_<em>field_name</em>()</code> and raise <code>ValidationError</code> exceptions for invalid values. The only difference with respect to our original form is that the model field is named <code>due_back</code> and not "<code>renewal_date</code>".</p>
 
 <pre class="brush: python notranslate">from django.forms import ModelForm
 from .models import BookInstance
 
 class RenewBookModelForm(ModelForm):
-<strong>    def clean_due_back(self):
-       data = self.cleaned_data['due_back']
+<strong>    def clean_due_back(self):
+       data = self.cleaned_data['due_back']
 
-       #Check date is not in past.
-       if data &lt; datetime.date.today():
-           raise ValidationError(_('Invalid date - renewal in past'))
+       #Check date is not in past.
+       if data &lt; datetime.date.today():
+           raise ValidationError(_('Invalid date - renewal in past'))
 
-       #Check date is in range librarian allowed to change (+4 weeks)
-       if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
-           raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
+       #Check date is in range librarian allowed to change (+4 weeks)
+       if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
+           raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
 
-       # Remember to always return the cleaned data.
-       return data
+       # Remember to always return the cleaned data.
+       return data
 </strong>
     class Meta:
         model = BookInstance
@@ -497,7 +497,7 @@ class RenewBookModelForm(ModelForm):
         help_texts = { 'due_back': _('Enter a date between now and 4 weeks (default 3).'), }
 </pre>
 
-<p>The class <code>RenewBookModelForm</code> below is now functionally equivalent to our original <code>RenewBookForm</code>. You could import and use it wherever you currently use <code>RenewBookForm</code>.</p>
+<p>The class <code>RenewBookModelForm</code> below is now functionally equivalent to our original <code>RenewBookForm</code>. You could import and use it wherever you currently use <code>RenewBookForm</code>.</p>
 
 <h2 id="Generic_editing_views">Generic editing views</h2>
 
@@ -534,7 +534,7 @@ class AuthorDelete(DeleteView):
 
 <p>For the "create" and "update" cases you also need to specify the fields to display in the form (using in same syntax as for <code>ModelForm</code>). In this case we show both the syntax to display "all" fields, and how you can list them individually. You can also specify initial values for each of the fields using a dictionary of <em>field_name</em>/<em>value</em> pairs (here we arbitrarily set the date of death for demonstration purposes — you might want to remove that!). By default these views will redirect on success to a page displaying the newly created/edited model item, which in our case will be the author detail view we created in a previous tutorial. You can specify an alternative redirect location by explicitly declaring parameter <code>success_url</code> (as done for the <code>AuthorDelete</code> class).</p>
 
-<p>The <code>AuthorDelete</code> class doesn't need to display any of the fields, so these don't need to be specified. You do however need to specify the <code>success_url</code>, because there is no obvious default value for Django to use. In this case we use the <code><a href="https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#reverse-lazy">reverse_lazy()</a></code> function to redirect to our author list after an author has been deleted — <code>reverse_lazy()</code> is a lazily executed version of <code>reverse()</code>, used here because we're providing a URL to a class-based view attribute.</p>
+<p>The <code>AuthorDelete</code> class doesn't need to display any of the fields, so these don't need to be specified. You do however need to specify the <code>success_url</code>, because there is no obvious default value for Django to use. In this case we use the <code><a href="https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#reverse-lazy">reverse_lazy()</a></code> function to redirect to our author list after an author has been deleted — <code>reverse_lazy()</code> is a lazily executed version of <code>reverse()</code>, used here because we're providing a URL to a class-based view attribute.</p>
 
 <h3 id="Templates">Templates</h3>
 
@@ -581,9 +581,9 @@ class AuthorDelete(DeleteView):
 <p>Open your URL configuration file (<strong>locallibrary/catalog/urls.py</strong>) and add the following configuration to the bottom of the file:</p>
 
 <pre class="brush: python notranslate">urlpatterns += [
-    path('author/create/', views.AuthorCreate.as_view(), name='author_create'),
-    path('author/&lt;int:pk&gt;/update/', views.AuthorUpdate.as_view(), name='author_update'),
-    path('author/&lt;int:pk&gt;/delete/', views.AuthorDelete.as_view(), name='author_delete'),
+    path('author/create/', views.AuthorCreate.as_view(), name='author_create'),
+    path('author/&lt;int:pk&gt;/update/', views.AuthorUpdate.as_view(), name='author_update'),
+    path('author/&lt;int:pk&gt;/delete/', views.AuthorDelete.as_view(), name='author_delete'),
 ]</pre>
 
 <p>There is nothing particularly new here! You can see that the views are classes, and must hence be called via <code>.as_view()</code>, and you should be able to recognise the URL patterns in each case. We must use <code>pk</code> as the name for our captured primary key value, as this is the parameter name expected by the view classes.</p>
@@ -602,7 +602,7 @@ class AuthorDelete(DeleteView):
 
 <p><img alt="Form Example: Create Author" src="forms_example_create_author.png"></p>
 
-<p>Enter values for the fields and then press <strong>Submit</strong> to save the author record. You should now be taken to a detail view for your new author, with a URL of something like <em>http://127.0.0.1:8000/catalog/author/10</em>.</p>
+<p>Enter values for the fields and then press <strong>Submit</strong> to save the author record. You should now be taken to a detail view for your new author, with a URL of something like <em>http://127.0.0.1:8000/catalog/author/10</em>.</p>
 
 <p>You can test editing records by appending <em>/update/</em> to the end of the detail view URL (e.g. <em>http://127.0.0.1:8000/catalog/author/10/update/</em>) — we don't show a screenshot, because it looks just like the "create" page!</p>
 
@@ -630,8 +630,8 @@ class AuthorDelete(DeleteView):
 <ul>
  <li><a href="https://docs.djangoproject.com/en/2.0/topics/forms/">Working with forms</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/2.0/intro/tutorial04/#write-a-simple-form">Writing your first Django app, part 4 &gt; Writing a simple form</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/api/">The Forms API</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/fields/">Form fields</a> (Django docs) </li>
+ <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/api/">The Forms API</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/fields/">Form fields</a> (Django docs) </li>
  <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/validation/">Form and field validation</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/">Form handling with class-based views</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/2.0/topics/forms/modelforms/">Creating forms from models</a> (Django docs)</li>

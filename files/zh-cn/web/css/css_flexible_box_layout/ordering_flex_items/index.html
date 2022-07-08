@@ -20,19 +20,19 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 
 <p>前两个值使项目保持与它们在文档源顺序中出现的顺序相同，并从起始行开始顺序显示它们。</p>
 
-<p><img alt="The items are displayed in a row starting on the left." src="https://mdn.mozillademos.org/files/15649/Basics1.png" style="display: flex; height: 152px; margin: 0px auto; width: 522px;"></p>
+<p><img alt="The items are displayed in a row starting on the left." src="basics1.png"></p>
 
-<p><img alt="The items are displayed as a column starting from the top " src="https://mdn.mozillademos.org/files/15650/align10.png" style="display: flex; height: 273px; margin: 0px auto; width: 709px;"></p>
+<p><img alt="The items are displayed as a column starting from the top " src="align10.png"></p>
 
 <p>后两个值通过调换开始和结束行来进行项目的反转。</p>
 
-<p><img alt="The items are displayed in reverse order starting on the right-hand line." src="https://mdn.mozillademos.org/files/15651/align9.png" style="display: flex; height: 152px; margin: 0px auto; width: 631px;"></p>
+<p><img alt="The items are displayed in reverse order starting on the right-hand line." src="align9.png"></p>
 
-<p><img alt="The items are displayed in a column in reverse order starting at the bottom line." src="https://mdn.mozillademos.org/files/15652/align11.png" style="display: flex; height: 273px; margin: 0px auto; width: 709px;"></p>
+<p><img alt="The items are displayed in a column in reverse order starting at the bottom line." src="align11.png"></p>
 
 <p>请记住，起始行与写入模式有关。 上面两个示例说明了 <code>row</code> 和 <code>row-reverse</code> 在从左到右的语言是怎么工作的如英语。如果您使用的是右到左的语言，如阿拉伯语，则 <code>row</code> 的起始行将在右边， <code>row-reverse</code> 起始行会在左边。</p>
 
-<p><img alt="Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left." src="https://mdn.mozillademos.org/files/15647/order-rtl.png" style="display: flex; height: 302px; margin: 0px auto; width: 528px;"></p>
+<p><img alt="Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left." src="order-rtl.png"></p>
 
 <p>这看起来似乎是一种以相反顺序显示事物的简洁方式，但是您应该注意，这些项目只以相反顺序显示。在这个问题上，规范说明如下：</p>
 
@@ -84,7 +84,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
  <li>Source item 4: <code>order: 3</code></li>
 </ul>
 
-<p><img alt="Items have a number showing their source order which has been rearranged." src="https://mdn.mozillademos.org/files/15653/order-property.png" style="display: flex; height: 100px; margin: 0px auto; width: 634px;"></p>
+<p><img alt="Items have a number showing their source order which has been rearranged." src="order-property.png"></p>
 
 <p>您可以在下面的实时示例中使用这些值，并查看如何更改顺序。另外，尝试将<code>flex-direction</code>更改为<code>row-reverse</code>，看看会发生什么—切换了起始行，以便从相反的一侧开始排序。</p>
 
@@ -124,7 +124,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 
 <p>您可能有一个设计，也许是显示新闻的卡片。新闻项的标题是突出显示的关键内容，并且如果用户在标题之间使用键盘制表符按键（tab）以查找要阅读的内容，则可能是用户可能会跳转到的元素。该卡还带有日期；我们要创建的最终设计就是这样。</p>
 
-<p><img alt="A design component with a date, then heading and then content." src="https://mdn.mozillademos.org/files/15648/order-card.png" style="height: 400px; width: 618px;"></p>
+<p><img alt="A design component with a date, then heading and then content." src="order-card.png"></p>
 
 <p>视觉上，日期显示在源中标题上方。但是，如果卡是由屏幕阅读器读出的，则我希望标题先公布，然后再公布日期。我们可以使用<code>order</code>属性来做到这一点。</p>
 

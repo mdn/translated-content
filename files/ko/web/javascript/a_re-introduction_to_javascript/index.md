@@ -162,7 +162,7 @@ isFinite(-Infinity); // false
 isFinite(NaN);       // false
 ```
 
-> **참고:** {{jsxref("Global_Objects/parseInt", "parseInt()")}} 와 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 함수는 숫자로 아닌 문자가 나올때까지 문자열을 파싱하고, 그 지점까지 파싱된 숫자를 반환합니다. 그런데 "+"연산자는 중간에 유효하지 않은 문자가 있으면 그대로 문자열을 `NaN` 으로 그냥 변환해버립니다. console에서 "10.2abc"를 파싱해보면 어떤 점이 다른지 더 쉽게 이해할 수 있습니다.
+> **참고:** {{jsxref("Global_Objects/parseInt", "parseInt()")}} 와 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 함수는 숫자가 아닌 문자가 나올때까지 문자열을 파싱하고, 그 지점까지 파싱된 숫자를 반환합니다. 그런데 "+"연산자는 중간에 유효하지 않은 문자가 있으면 그대로 문자열을 `NaN` 으로 그냥 변환해버립니다. console에서 "10.2abc"를 파싱해보면 어떤 점이 다른지 더 쉽게 이해할 수 있습니다.
 
 ## 문자열 (Strings)
 

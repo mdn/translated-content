@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Guide/Loops_and_iteration
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}</div>
 
-<p>迴圈提供一個快速又簡潔的方法來重複地做某件事。這個章節的<a href="/zh-TW/docs/Web/JavaScript/Guide">JavaScript教學</a>會介紹在JavaScript可以使用的幾種不同的迭代陳述式。 </p>
+<p>迴圈提供一個快速又簡潔的方法來重複地做某件事。這個章節的<a href="/zh-TW/docs/Web/JavaScript/Guide">JavaScript教學</a>會介紹在JavaScript可以使用的幾種不同的迭代陳述式。 </p>
 
 <p>你可以將迴圈想成一個電腦版本的"往一個方向走X步，然後往另一個方向走Y步"的遊戲；作為範例，"往東走五步"可以用這個方法用迴圈表示：</p>
 
@@ -21,7 +21,7 @@ for (step = 0; step &lt; 5; step++) {
 }
 </pre>
 
-<p>有很多種不同種類的迴圈， 不過他們本質上都是做一樣的事：把一件動作重複地做一定的次數（而且也有可能做0次）。 各式各樣的迴圈機制提供了不同的方法來定義該迴圈的起始與結束。有些不同的情況下使用其中一種迴圈會比使用別種容易許多。</p>
+<p>有很多種不同種類的迴圈， 不過他們本質上都是做一樣的事：把一件動作重複地做一定的次數（而且也有可能做0次）。 各式各樣的迴圈機制提供了不同的方法來定義該迴圈的起始與結束。有些不同的情況下使用其中一種迴圈會比使用別種容易許多。</p>
 
 <p>在javaScript中提供的迴圈陳述式分別為：</p>
 
@@ -36,7 +36,7 @@ for (step = 0; step &lt; 5; step++) {
  <li><a href="#for...of_陳述式">for...of 陳述式</a></li>
 </ul>
 
-<h2 id="for_陳述式"><code>for </code>陳述式</h2>
+<h2 id="for_陳述式"><code>for </code>陳述式</h2>
 
 <p>一個<a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for">for迴圈</a>不斷重複直到一個指定的條件式判斷為false。JavaScript的for迴圈跟Java還有C的for迴圈很相似。一個for陳述式看起來像下面這樣：</p>
 
@@ -55,21 +55,21 @@ for (step = 0; step &lt; 5; step++) {
 
 <h3 id="範例"><strong>範例</strong></h3>
 
-<p>以下的函式包含一個用來數在一個滾動列表中被選過的選項(a {{HTMLElement("select")}} 允許複數選項的元素)的for陳述式 。這個for敘事式宣告了變數 i 並將其初始化為0。 他檢查 i ，如果 i 少於在&lt;select&gt;元素中的選項數量，進行接著的 if陳述式，並將 i 在每次通過迴圈後遞增。</p>
+<p>以下的函式包含一個用來數在一個滾動列表中被選過的選項(a {{HTMLElement("select")}} 允許複數選項的元素)的for陳述式 。這個for敘事式宣告了變數 i 並將其初始化為0。 他檢查 i ，如果 i 少於在&lt;select&gt;元素中的選項數量，進行接著的 if陳述式，並將 i 在每次通過迴圈後遞增。</p>
 
 <pre class="brush: html">&lt;form name="selectForm"&gt;
-  &lt;p&gt;
-    &lt;label for="musicTypes"&gt;Choose some music types, then click the button below:&lt;/label&gt;
-    &lt;select id="musicTypes" name="musicTypes" multiple="multiple"&gt;
-      &lt;option selected="selected"&gt;R&amp;B&lt;/option&gt;
-      &lt;option&gt;Jazz&lt;/option&gt;
-      &lt;option&gt;Blues&lt;/option&gt;
-      &lt;option&gt;New Age&lt;/option&gt;
-      &lt;option&gt;Classical&lt;/option&gt;
-      &lt;option&gt;Opera&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/p&gt;
-  &lt;p&gt;&lt;input id="btn" type="button" value="How many are selected?" /&gt;&lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="musicTypes"&gt;Choose some music types, then click the button below:&lt;/label&gt;
+    &lt;select id="musicTypes" name="musicTypes" multiple="multiple"&gt;
+      &lt;option selected="selected"&gt;R&amp;B&lt;/option&gt;
+      &lt;option&gt;Jazz&lt;/option&gt;
+      &lt;option&gt;Blues&lt;/option&gt;
+      &lt;option&gt;New Age&lt;/option&gt;
+      &lt;option&gt;Classical&lt;/option&gt;
+      &lt;option&gt;Opera&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/p&gt;
+  &lt;p&gt;&lt;input id="btn" type="button" value="How many are selected?" /&gt;&lt;/p&gt;
 &lt;/form&gt;
 
 &lt;script&gt;
@@ -100,7 +100,7 @@ btn.addEventListener("click", function(){
 while (條件式);
 </pre>
 
-<p><code>陳述式會在檢查條件式以前先執行一次。要執行多個陳述式的話，使用區塊陳述式來將那些陳述式歸為一組。如果條件式為true，那陳述式便再次執行。在每次執行的最後，條件會被檢查。當條件式為false時，</code> 停止執行並把控制傳給 <code>do...while接著的陳述式。</code></p>
+<p><code>陳述式會在檢查條件式以前先執行一次。要執行多個陳述式的話，使用區塊陳述式來將那些陳述式歸為一組。如果條件式為true，那陳述式便再次執行。在每次執行的最後，條件會被檢查。當條件式為false時，</code> 停止執行並把控制傳給 <code>do...while接著的陳述式。</code></p>
 
 <h3 id="範例_2"><strong>範例</strong></h3>
 
@@ -114,7 +114,7 @@ do {
 
 <h2 id="while_陳述式"><code>while</code> 陳述式</h2>
 
-<p><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/while">while</a></code> 陳述式會不斷執行它的陳述式只要指定的條件式判斷為true。一個while陳述式看起來如下：</p>
+<p><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/while">while</a></code> 陳述式會不斷執行它的陳述式只要指定的條件式判斷為true。一個while陳述式看起來如下：</p>
 
 <pre class="syntaxbox">while (condition)
   statement
@@ -141,9 +141,9 @@ while (n &lt; 3) {
 <p>在每次的疊代，迴圈把 n 遞增並將其值加到 x 上。因此，x 跟 n 的值會是下列情況：</p>
 
 <ul>
- <li>經過第一次迴圈後 <code>n</code> = 1 而 <code>x</code> = 1</li>
- <li>經過第二次迴圈後 <code>n</code> = 2 而 <code>x</code> = 3</li>
- <li>經過第三次迴圈後 <code>n</code> = 3 而 <code>x</code> = 6</li>
+ <li>經過第一次迴圈後 <code>n</code> = 1 而 <code>x</code> = 1</li>
+ <li>經過第二次迴圈後 <code>n</code> = 2 而 <code>x</code> = 3</li>
+ <li>經過第三次迴圈後 <code>n</code> = 3 而 <code>x</code> = 6</li>
 </ul>
 
 <p>在完成第三次迴圈後，判斷是 n&lt;3 不再是 true ，所以迴圈終止。</p>
@@ -156,9 +156,9 @@ while (n &lt; 3) {
   console.log("Hello, world");
 }</pre>
 
-<h2 id="label_陳述式"><code>label</code> 陳述式</h2>
+<h2 id="label_陳述式"><code>label</code> 陳述式</h2>
 
-<p> <a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/label">label</a> 提供一個有識別字的陳述式讓你能在程式的別的地方參考。舉個例子，你能使用label 來識別一個迴圈，然後使用break或continue陳述式來指示何時程式該中斷迴圈或是繼續他的執行。</p>
+<p> <a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/label">label</a> 提供一個有識別字的陳述式讓你能在程式的別的地方參考。舉個例子，你能使用label 來識別一個迴圈，然後使用break或continue陳述式來指示何時程式該中斷迴圈或是繼續他的執行。</p>
 
 <p>label 陳述式的語法看起來如下：</p>
 
@@ -177,16 +177,16 @@ while (theMark == true) {
    doSomething();
 }</pre>
 
-<h2 id="break_陳述式"><code>break</code> 陳述式</h2>
+<h2 id="break_陳述式"><code>break</code> 陳述式</h2>
 
-<p><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/break">break</a></code> 陳述式是用來終止一個迴圈，一個switch多重控制選項，或是和一個label陳述式聯合使用。</p>
+<p><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/break">break</a></code> 陳述式是用來終止一個迴圈，一個switch多重控制選項，或是和一個label陳述式聯合使用。</p>
 
 <ul>
  <li>當你在沒有label的情況下使用break，它會馬上終止最內部的 while , do-while , for ,或是 switch 區間並將控制交給接下來的陳述式。</li>
  <li>當你跟label一起使用的時候，它會終止那個特定的被label的陳述式。</li>
 </ul>
 
-<p>break 陳述式的語法看起來如下：</p>
+<p>break 陳述式的語法看起來如下：</p>
 
 <ol>
  <li><code>break;</code></li>
@@ -195,7 +195,7 @@ while (theMark == true) {
 
 <p>第一種語法會終止最內部的迴圈或switch區間；第二種語法會終止那個特定的label陳述式。</p>
 
-<h3 id="範例_1_2"><strong>範例</strong> <strong>1</strong></h3>
+<h3 id="範例_1_2"><strong>範例</strong> <strong>1</strong></h3>
 
 <p>以下的範例會不斷重複跑迴圈直到有在陣列裡的元素符合 theValue 的值：</p>
 
@@ -225,16 +225,16 @@ labelCancelLoops: while (true) {
 }
 </pre>
 
-<h2 id="continue_陳述式"><code>continue</code> 陳述式</h2>
+<h2 id="continue_陳述式"><code>continue</code> 陳述式</h2>
 
-<p><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/continue">continue</a></code> 陳述式可以用於重新開始一個 while , do-while, for, 或 label 陳述式。</p>
+<p><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/continue">continue</a></code> 陳述式可以用於重新開始一個 while , do-while, for, 或 label 陳述式。</p>
 
 <ul>
  <li>當你在沒有label的情況下使用continue，它會終止現在最內部while, do-while , for陳述式區間的迭代並繼續執行該迴圈的下一個迭代。跟break陳述式不同的是，continue不會把整個迴圈的執行給終止。在while 迴圈中，它會跳回條件式的判斷。在for迴圈中，它會跳至遞增陳述式。</li>
  <li>當contunue跟label一起使用的時候，它會應用至被label識別的那個迴圈陳述式。</li>
 </ul>
 
-<p>continue 陳述式的語法看起來如下：</p>
+<p>continue 陳述式的語法看起來如下：</p>
 
 <ol>
  <li><code>continue;</code></li>
@@ -279,9 +279,9 @@ while (i &lt; 5) {
       console.log("j = " + j);
   }</pre>
 
-<h2 id="for...in_陳述式"><code>for...in</code> 陳述式</h2>
+<h2 id="for...in_陳述式"><code>for...in</code> 陳述式</h2>
 
-<p><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a> 陳述式重複一個指定的變數來循環一個物件所有可枚舉的屬性。至於每個獨特的屬性，JavaScript執行特定的陳述式。一個<code>for...in</code> 陳述式看起來像以下：</p>
+<p><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a> 陳述式重複一個指定的變數來循環一個物件所有可枚舉的屬性。至於每個獨特的屬性，JavaScript執行特定的陳述式。一個<code>for...in</code> 陳述式看起來像以下：</p>
 
 <pre class="syntaxbox">for (variable in object) {
   statements
@@ -310,17 +310,17 @@ car.model = Mustang
 
 <h3 id="陣列"><strong>陣列</strong></h3>
 
-<p>雖然用for...in來迭代 {{jsxref("Array")}} 元素很吸引人，但是它傳回的除了數字的索引之外還有可能是你自己定的屬性名。因此還是用帶有數字索引的傳統<code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for">for</a>迴圈來迭帶一個陣列會比較好。因為如果你想改變陣列物件，比如增加屬性或是方法，</code><strong>for...in</strong> 陳述式迭代的是自定的屬性而不是陣列的元素。</p>
+<p>雖然用for...in來迭代 {{jsxref("Array")}} 元素很吸引人，但是它傳回的除了數字的索引之外還有可能是你自己定的屬性名。因此還是用帶有數字索引的傳統<code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for">for</a>迴圈來迭帶一個陣列會比較好。因為如果你想改變陣列物件，比如增加屬性或是方法，</code><strong>for...in</strong> 陳述式迭代的是自定的屬性而不是陣列的元素。</p>
 
-<h2 id="for...of_陳述式"><code>for...of</code> 陳述式</h2>
+<h2 id="for...of_陳述式"><code>for...of</code> 陳述式</h2>
 
-<p> <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> 陳述式在<a href="/zh-TW/docs/Web/JavaScript/Guide/iterable">iterable objects</a>(可迭代的物件)上建立了一個循環 (包含 {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, <a href="/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a>(參數) 物件 等等), 對每個獨特屬性的值使用一個準備被執行的有陳述式的自訂迭代掛勾。</p>
+<p> <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> 陳述式在<a href="/zh-TW/docs/Web/JavaScript/Guide/iterable">iterable objects</a>(可迭代的物件)上建立了一個循環 (包含 {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, <a href="/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a>(參數) 物件 等等), 對每個獨特屬性的值使用一個準備被執行的有陳述式的自訂迭代掛勾。</p>
 
 <pre class="syntaxbox">for (<em>variable</em> of <em>object</em>) {
   <em>statement
 </em>}</pre>
 
-<p>下列的範例可看出<code>for...of</code> 迴圈跟 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> 迴圈的差別。 <code>for...in</code> 在屬性名字循環，而<code>for...of</code> 在屬性的值循環。</p>
+<p>下列的範例可看出<code>for...of</code> 迴圈跟 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> 迴圈的差別。 <code>for...in</code> 在屬性名字循環，而<code>for...of</code> 在屬性的值循環。</p>
 
 <pre class="brush:js">let arr = [3, 5, 7];
 arr.foo = "hello";

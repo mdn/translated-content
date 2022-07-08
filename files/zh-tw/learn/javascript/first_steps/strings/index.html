@@ -35,9 +35,9 @@ translation_of: Learn/JavaScript/First_steps/Strings
 
 <p>到目前為止，所有我們課程上的編碼幾乎都包含一些字串的操作。</p>
 
-<h2 id="字串_—_基礎">字串 — 基礎</h2>
+<h2 id="字串_—_基礎">字串 — 基礎</h2>
 
-<p>剛開始你會覺得字串與數字的處理方式很類似，但當你越深入就會了解到一些明顯的差異。讓我們從在 console 裡輸入一些基本的程式行來熟悉它吧！在下方，我們提供一個 Console （你也可以另開一個頁籤或視窗<a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">使用他</a> ，或者使用瀏覽器的<a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">開發者工具</a>）。</p>
+<p>剛開始你會覺得字串與數字的處理方式很類似，但當你越深入就會了解到一些明顯的差異。讓我們從在 console 裡輸入一些基本的程式行來熟悉它吧！在下方，我們提供一個 Console （你也可以另開一個頁籤或視窗<a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">使用他</a> ，或者使用瀏覽器的<a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">開發者工具</a>）。</p>
 
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
@@ -116,8 +116,8 @@ translation_of: Learn/JavaScript/First_steps/Strings
       document.body.appendChild(inputDiv);
 
       if(document.querySelectorAll('div').length &gt; 1) {
-        inputForm.focus();
-      }
+        inputForm.focus();
+      }
 
       inputForm.addEventListener('change', executeCode);
     }
@@ -163,10 +163,10 @@ string;</pre>
 let badString = 'This is a test;
 let badString = This is a test';</pre>
   上述的程式無法運作，因為未使用引號包圍的文字都將被視為變數名稱、屬性名稱和保留字等。如果瀏覽器無法辨識它，便會產生錯誤（例如：「missing ; before statement」）。如果瀏覽器可以識別字段從哪裡開始，但無法找到字段的終點，意即缺少第二個引號，則會產生「unterminated string literal」的錯誤。如果你的程式出現了這樣的錯誤，檢查並確認自己的字串是否遺漏了任何引號。</li>
- <li>如果你先定義了變數 <code>string</code> ，則以下程式碼可以正常運作。馬上來試試看：
+ <li>如果你先定義了變數 <code>string</code> ，則以下程式碼可以正常運作。馬上來試試看：
   <pre class="brush: js notranslate">let badString = string;
 badString;</pre>
-  <code>badString</code> 會被設定跟 <code>string</code> 具有一樣的值。</li>
+  <code>badString</code> 會被設定跟 <code>string</code> 具有一樣的值。</li>
 </ol>
 
 <h3 id="單引號與雙引號">單引號與雙引號</h3>
@@ -199,7 +199,7 @@ dblSgl;</pre>
 <pre class="brush: js notranslate">let bigmouth = 'I\'ve got no right to take my place...';
 bigmouth;</pre>
 
-<p>這是可行的！你可以用一樣的方法跳脫其他字元，例如 <code>\"</code>。除此之外，還有一些特殊方法。更詳細的部分，請參閱<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation">跳脫符號</a> 。</p>
+<p>這是可行的！你可以用一樣的方法跳脫其他字元，例如 <code>\"</code>。除此之外，還有一些特殊方法。更詳細的部分，請參閱<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation">跳脫符號</a> 。</p>
 
 <h2 id="連接字串（Concatenating_strings）">連接字串（Concatenating strings）</h2>
 
@@ -210,8 +210,8 @@ bigmouth;</pre>
 let two = 'how are you?';
 let joined = one + two;
 joined;</pre>
-  這邊的結果是 <code>joined</code>  這個變數中，有了 「Hello, how are you?」這個值。</li>
- <li>在上一個範例中，我們只連接了兩個字串。但只要你在兩個字串之間加上 <code>+</code> ，那你要連接幾個都可以。試試看這個：
+  這邊的結果是 <code>joined</code>  這個變數中，有了 「Hello, how are you?」這個值。</li>
+ <li>在上一個範例中，我們只連接了兩個字串。但只要你在兩個字串之間加上 <code>+</code> ，那你要連接幾個都可以。試試看這個：
   <pre class="brush: js notranslate">let multiple = one + one + one + one + two;
 multiple;</pre>
  </li>
@@ -240,7 +240,7 @@ button.onclick = function() {
 
 <p>{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<p>在程式第四行我們用了 {{domxref("window.prompt()", "window.prompt()")}} 這個函式，可以要求使用者透過彈出的對話框去回答問題，並將使用者輸入的文字儲存在給訂的變數內（在這個例子中就是 <code>name</code>）。接著我們在第五行用了 {{domxref("window.alert()", "window.alert()")}} 函式，顯示另一個彈出視窗，以連接的方式將兩段字串文字以及 <code>name</code> 這個變數結合成一個字串。</p>
+<p>在程式第四行我們用了 {{domxref("window.prompt()", "window.prompt()")}} 這個函式，可以要求使用者透過彈出的對話框去回答問題，並將使用者輸入的文字儲存在給訂的變數內（在這個例子中就是 <code>name</code>）。接著我們在第五行用了 {{domxref("window.alert()", "window.alert()")}} 函式，顯示另一個彈出視窗，以連接的方式將兩段字串文字以及 <code>name</code> 這個變數結合成一個字串。</p>
 
 <h3 id="數字_vs._字串">數字 vs. 字串</h3>
 
@@ -255,18 +255,18 @@ typeof myDate;</pre>
  </li>
  <li>如果你想轉換數字變數成字串，但不要更動到原本的變數；或是想轉換字串變數成數字，也不要更動到原本的變數，你可以使用以下兩種方式：
   <ul>
-   <li>物件 {{jsxref("Number")}} 會將欲處理的變數轉換成數字（如果可行的話）。試試以下例子：
+   <li>物件 {{jsxref("Number")}} 會將欲處理的變數轉換成數字（如果可行的話）。試試以下例子：
     <pre class="brush: js notranslate">let myString = '123';
 let myNum = Number(myString);
 typeof myNum;</pre>
    </li>
-   <li>另一方面，也有 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">toString()</a></code> 方法能夠讓數字轉換為相等的字串。試試看：
+   <li>另一方面，也有 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">toString()</a></code> 方法能夠讓數字轉換為相等的字串。試試看：
     <pre class="brush: js notranslate">let myNum = 123;
 let myString = myNum.toString();
 typeof myString;</pre>
    </li>
   </ul>
-  這些結構在某些情況相當好用。舉例來說：如果使用者在文字表單中輸入了一個數字，這個數字將會是字串格式。而若想要把這個數字加上另一個數字，那你會希望它是數字格式（才能做數字相加），所以可以使用 <code>Number()</code> 來處理這個情況。可以看看實際案例：<a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L61">猜數字遊戲, 第61行</a>。</li>
+  這些結構在某些情況相當好用。舉例來說：如果使用者在文字表單中輸入了一個數字，這個數字將會是字串格式。而若想要把這個數字加上另一個數字，那你會希望它是數字格式（才能做數字相加），所以可以使用 <code>Number()</code> 來處理這個情況。可以看看實際案例：<a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L61">猜數字遊戲, 第61行</a>。</li>
 </ol>
 
 <h2 id="模版字符串Template_literals">模版字符串(Template literals)</h2>
@@ -296,7 +296,7 @@ let output = 'I like the song "' + song + '". I gave it a score of ' + (score/hi
 <pre class="brush: js notranslate">output = `I like the song "${ song }". I gave it a score of ${ score/highestScore * 100 }%.`;</pre>
 
 <p>全部一串都只需要包含在一對重音符號裡，不再需要切開、合起一堆字串碎片。<br>
- 當你想要包含變數或者算式在字串裡時，你只需要將它放在 <em>佔位符 </em><code>${ } </code>裡。</p>
+ 當你想要包含變數或者算式在字串裡時，你只需要將它放在 <em>佔位符 </em><code>${ } </code>裡。</p>
 
 <p>你能將複雜的算式包含在模版字符串裡，舉個例子:</p>
 
@@ -311,7 +311,7 @@ examReport = `You scored ${ examScore }/${ examHighestScore } (${ Math.round((ex
  <li>第四個使用了三元運算符來檢查分數是否高於指定分數且印出一個通過或著失敗的訊息結果。</li>
 </ul>
 
-<p>另一個可以注意的點是，如果你想要將傳統字串拆分成多行，你需要加上一個斷行字母, <code>\n</code></p>
+<p>另一個可以注意的點是，如果你想要將傳統字串拆分成多行，你需要加上一個斷行字母, <code>\n</code></p>
 
 <pre class="brush: js notranslate">output = 'I like the song "' + song + '".\nI gave it a score of ' + (score/highestScore * 100) + '%.';</pre>
 
@@ -324,12 +324,12 @@ I gave it a score of ${ score/highestScore * 100 }%.`;</pre>
 <p>我們建議你盡可能習慣使用模版字符串。現今流行的瀏覽器都能完好的支援它，只有一個地方你能發現它並不支援外: Internet Explorer。<br>
  我們有許多的例子仍然使用目前標準的字串語法，但我們未來將會加入更多模版字符串的應用。</p>
 
-<p>來我們的<a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Template literals</a> 相關頁面看看更多的範例與進階的特色細節。</p>
+<p>來我們的<a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Template literals</a> 相關頁面看看更多的範例與進階的特色細節。</p>
 
 <h2 id="測試您的技能！">測試您的技能！</h2>
 
 <p>你已到達文章的結尾了，但你能記得最重要的資訊嗎?<br>
- 在繼續學習之前，你可以找些難一點的測驗，來檢測你有記得這些知識 —  <a href="/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings">Test your skills: Strings</a>. 記住，接下來的文章也需要這些知識，所以你可能想先看看。</p>
+ 在繼續學習之前，你可以找些難一點的測驗，來檢測你有記得這些知識 —  <a href="/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings">Test your skills: Strings</a>. 記住，接下來的文章也需要這些知識，所以你可能想先看看。</p>
 
 <h2 id="結語">結語</h2>
 

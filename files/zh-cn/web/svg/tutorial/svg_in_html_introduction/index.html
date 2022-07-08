@@ -5,11 +5,11 @@ tags:
   - SVG
 translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 ---
-<h2 id="Overview" name="Overview">概述</h2>
+<h2 id="Overview">概述</h2>
 
 <p>本文及其相关示例展示了如何使用内联的 <a href="/zh-CN/docs/SVG" title="SVG">SVG</a> 给一个表单提供背景图片，它展示了如何按照编写常规 XHTML 代码相同的方式来通过<a href="/zh-CN/docs/JavaScript" title="JavaScript">JavaScript</a> 和 <a href="/zh-CN/docs/CSS" title="CSS">CSS</a> 操作图片。注意，该示例仅在支持 XHTML（非 HTML）并集成了 SVG 的浏览器中正常工作。</p>
 
-<h2 id="Source" name="Source">源码</h2>
+<h2 id="Source">源码</h2>
 
 <p>源码如下： <a class="external external-icon" href="/presentations/xtech2005/svg-canvas/SVGDemo.xml" title="presentations/xtech2005/svg-canvas/SVGDemo.xml">查看示例</a></p>
 
@@ -55,7 +55,7 @@ translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 &lt;/html&gt;
 </pre>
 
-<h2 id="Discussion" name="Discussion">讨论</h2>
+<h2 id="Discussion">讨论</h2>
 
 <p>该页面主要是常规的 XHTML、CSS 和 JavaScript，唯一有趣的部分就是包含了 &lt;svg&gt; 元素。该元素及其子元素都被声明在 SVG 的命名空间内。它包含一个渐变和两个渐变填充的形状。该渐变颜色的终值颜色由 CSS 设置，当用户在表单中输入了错误信息，脚本会给 &lt;body&gt; 设置一个 <code>invalid</code> 属性，样式规则将渐变颜色的<code>end-stop</code>颜色设置为红色（另一个样式规则用于展示错误提示信息）</p>
 
@@ -79,7 +79,7 @@ img.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "move.png");</c
 </pre>
 </div>
 
-<h2 id="Details" name="Details">细节</h2>
+<h2 id="Details">细节</h2>
 
 <p>viewBox 属性创建了一个与 SVG 图片坐标系相关联的逻辑坐标系，通过这种方式我们的图片被放置到了一个 100x100 的视觉系中。</p>
 
@@ -87,7 +87,7 @@ img.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "move.png");</c
 
 <p>样式属性指定了 SVG 在 form 背景中的位置。</p>
 
-<h2 id="Related_Links" name="Related_Links">相关链接</h2>
+<h2 id="Related_Links">相关链接</h2>
 
 <ul>
  <li>Another SVG in XHTML example: <a href="/en-US/docs/SVG/Namespaces_Crash_Course/Example" title="SVG/Namespaces_Crash_Course/Example">A swarm of motes</a></li>

@@ -14,7 +14,7 @@ translation_of: Web/API/NodeIterator
 
 <pre class="brush: js">var nodeIterator = document.createNodeIterator(<em>root</em>, <em>whatToShow</em>, <em>filter</em>);</pre>
 
-<h2 id="Properties" name="Properties">属性</h2>
+<h2 id="Properties">属性</h2>
 
 <p><em>这个接口不继承任何属性。</em></p>
 
@@ -110,7 +110,7 @@ translation_of: Web/API/NodeIterator
  <dd>Returns a {{domxref("Boolean")}} flag that indicates whether the {{domxref("NodeIterator")}} is anchored before, the flag being <code>true</code>, or after, the flag being <code>false</code>, the anchor node.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
 <p><em>这个接口不会继承任何属性。</em></p>
 
@@ -123,42 +123,17 @@ translation_of: Web/API/NodeIterator
  <dd>返回下一个 {{domxref("Node")}}, 如果不存在则返回<code>null</code> .</dd>
 </dl>
 
-<h2 id="Specification" name="Specification">特性</h2>
+<h2 id="Specification">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#nodeiterator', 'NodeIterator')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Added the <code>referenceNode</code> and <code>pointerBeforeReferenceNode</code> properties.<br>
-    Removed the <code>expandEntityReferences</code> property.<br>
-    The method <code>detach()</code> has been changed to be a no-op.<br>
-    The methods <code>previousNode()</code> and <code>nextNode()</code> don't raise an exception any more.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Iterator-overview', 'NodeIterator')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-{{Compat("api.NodeIterator")}}
+{{Compat}}
 
-<h2 id="扩展阅读">扩展阅读</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li>The creator method: {{domxref("Document.createNodeIterator()")}}.</li>
  <li>Related interfaces: {{domxref("NodeFilter")}}, {{domxref("TreeWalker")}}.</li>
 </ul>
-
-<p>
- <audio class="hidden"> </audio>
-</p>

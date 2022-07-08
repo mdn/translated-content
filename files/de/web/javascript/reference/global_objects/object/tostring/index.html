@@ -1,0 +1,170 @@
+---
+title: Object.prototype.toSource()
+slug: Web/JavaScript/Reference/Global_Objects/Object/toString
+translation_of: Web/JavaScript/Reference/Global_Objects/Object/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Object/toSource
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<p>Die <strong><code>toSource()</code></strong> Methode liefert einen String der den Quellcode des Objekts representiert.</p>
+
+<pre class="syntaxbox"><code>Object.toSource();
+<var>obj</var>.toSource();
+</code></pre>
+
+<h3 id="Zurückgelieferter_Wert">Zurückgelieferter Wert</h3>
+
+<p>Ein String der den Quellcode des Objekts representiert.</p>
+
+<h2 id="Beschreibung">Beschreibung</h2>
+
+<p>Die <code>toSource()</code> Methode liefer die folgenden Werte:</p>
+
+<p>Für das eingebaute {{jsxref("Object")}} Objekt, <code>liefert toSource() den folgenden String, welcher angibt, dass der Quellcode nicht verfügbar ist.</code></p>
+
+<ul>
+ <li>
+  <pre class="brush: js">function Object() {
+    [native code]
+}
+</pre>
+ </li>
+ <li>Für instanzen von {{jsxref("Object")}}, liefert <code>toSource()</code> einen String der den Sourcecode representiert.</li>
+</ul>
+
+<p><code>toSource()</code> kann während der Entwicklung aufgerufen werden um die Inhalte eines Objekts zu inspizieren.</p>
+
+<h3 id="Überschreiben_der_toSource()_Methode">Überschreiben der toSource() Methode</h3>
+
+<p>Es ist sicher die toSource() Methode zu überschreiben. Zum Beispiel:</p>
+
+<pre class="brush: js">function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.toSource = function Person_toSource() {
+  return 'new Person(' + uneval(this.name) + ')';
+};
+
+console.log(new Person('Joe').toSource()); // ---&gt; new Person("Joe")
+</pre>
+
+<h3 id="Eingebaute_toSource()_Methoden">Eingebaute toSource() Methoden</h3>
+
+<p>Jeder Kern-JavaScript Typ hat seine eigene t<code>oSource()</code> Methode. Diese sind:</p>
+
+<ul>
+ <li>{{jsxref("Array.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Array")}} Objekt.</li>
+ <li>{{jsxref("Boolean.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Boolean")}} Objekt.</li>
+ <li>{{jsxref("Date.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Date")}} Objekt.</li>
+ <li>{{jsxref("Function.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Function")}} Objekt.</li>
+ <li>{{jsxref("Number.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Number")}} Objekt.</li>
+ <li>{{jsxref("RegExp.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("RegExp")}} Objekt.</li>
+ <li>{{jsxref("SIMD.toSource()", "SIMD.%type%.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("SIMD")}} Objekt.</li>
+ <li>{{jsxref("String.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("String")}} Objekt.</li>
+ <li>{{jsxref("Symbol.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Symbol")}} Objekt.</li>
+ <li><code>Math.toSource()</code> — Liefert den String "Math".</li>
+</ul>
+
+<h3 id="Limits_bei_zyklischen_Objekten">Limits bei zyklischen Objekten</h3>
+
+<p>Im Falle, dass Objekte auf sich selbst referenzieren, z.B.: eine zyklisch verbundene Liste oder ein Baum der beide wege durchquert, erstellt <code>toSource()</code> nicht eine neue Selbst-Referenz. Dies passiert seit Firefox 24. Zum Beispiel:</p>
+
+<pre class="brush: js">var obj1 = {};
+var obj2 = { a: obj1 };
+obj1.b = obj2;
+
+console.log('Cyclical: ' + (obj1.b.a == obj1));
+
+var objSource = obj1.toSource(); // returns "({b:{a:{}}})"
+
+obj1 = eval(objSource);
+
+console.log('Cyclical: ' + (obj1.b.a == obj1));
+</pre>
+
+<p>Wenn eine zyklische Struktur existiert und <code>toSource()</code> benötigt wird, muss das Objekt eine überschriebene toSource() Methode besitzen. Entweder durch benützen einer Referenz zum Construktor oder einer anonymen Funktion.</p>
+
+<h2 id="Beispiele">Beispiele</h2>
+
+<h3 id="Benutzen_von_toSource()"><code><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif">Benutzen von </font>toSource()</code></h3>
+
+<p>Der folgende Code defniert den "Dog" Objekt Typ und kreiert "theDog", welches ein Objekt des Typs "Dog" ist:</p>
+
+<pre class="brush: js">function Dog(name, breed, color, sex) {
+  this.name = name;
+  this.breed = breed;
+  this.color = color;
+  this.sex = sex;
+}
+
+theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
+</pre>
+
+<p>Durch aufrufen der <code>toSource()</code> Methode von "<code>theDog"</code> liefert die JavaScript Quelle, welche das Objekt definiert.</p>
+
+<pre class="brush: js">theDog.toSource();
+// returns ({name:"Gabby", breed:"Lab", color:"chocolate", sex:"female"})
+</pre>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<p>Kein Teil eines Standards. Implementiert seit JavaScript 1.3.</p>
+
+<h2 id="Browser_Kompatibilität">Browser Kompatibilität</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Siehe_auch">Siehe auch</h2>
+
+<ul>
+ <li>{{jsxref("Object.prototype.toString()")}}</li>
+</ul>

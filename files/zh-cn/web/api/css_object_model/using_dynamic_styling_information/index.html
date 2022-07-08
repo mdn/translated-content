@@ -40,7 +40,7 @@ The stylesheet declaration for the body's background color is modified via JavaS
 
 <p>{{ EmbedLiveSample('Modify_a_stylesheet_rule') }}</p>
 
-<p> <a href="https://developer.mozilla.org/en-US/docs/DOM/CSS" title="en/DOM/CSS">DOM CSS Properties List</a> 中给出了 DOM 中 style 属性的可用属性列表。</p>
+<p> <a href="/en-US/docs/DOM/CSS">DOM CSS Properties List</a> 中给出了 DOM 中 style 属性的可用属性列表。</p>
 
 <p>若要使用 CSS 语法修改文档的样式，可以插入样式规则，或者插入{{HTMLElement("style")}} 标签，并将其 <code>innerHTML</code> 属性设置为期望的 CSS。</p>
 
@@ -91,11 +91,11 @@ function resetStyle(elemId) {
 
 <p>{{ EmbedLiveSample('Modify_an_element_style') }}</p>
 
-<p><code>document.defaultView</code> 对象的 {{domxref("window.getComputedStyle", "getComputedStyle()")}} 返回某个元素的所有经过计算的样式。查看<a href="/en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle" title="en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle">Example 6: getComputedStyle</a> 示例章节了解更多使用该方法的信息。.</p>
+<p><code>document.defaultView</code> 对象的 {{domxref("window.getComputedStyle", "getComputedStyle()")}} 返回某个元素的所有经过计算的样式。查看<a href="/en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle">Example 6: getComputedStyle</a> 示例章节了解更多使用该方法的信息。.</p>
 
 <h2 id="DOM_Style_Object">DOM 样式对象</h2>
 
-<p><code>style</code> 对象表示了一个单独的样式声明。不像<code><a href="/en/DOM/document.styleSheets" title="en/DOM/document.styleSheets">document.styleSheets</a></code> 集合中每个单独的样式规则，样式规则是通过 <code>document</code> 对象或者应用改样式的元素来访问的。它表示特定元素的内联样式。</p>
+<p><code>style</code> 对象表示了一个单独的样式声明。不像<code><a href="/en/DOM/document.styleSheets">document.styleSheets</a></code> 集合中每个单独的样式规则，样式规则是通过 <code>document</code> 对象或者应用改样式的元素来访问的。它表示特定元素的内联样式。</p>
 
 <p>比这两个属性更重要的是使用 <code>style</code> 对象来给某个元素设置单独的样式属性。</p>
 
@@ -130,7 +130,7 @@ function resetStyle(elemId) {
 
 <h3 id="DOM_Style_Object_SetAttribue">使用 <code>setAttribute</code> 方法</h3>
 
-<p>注意，你也可以通过获得元素的引用，然后使用它的 <code><a href="/en/DOM/element.setAttribute" title="en/DOM/element.setAttribute">setAttribute</a></code> 方法，指定 CSS 属性和值，来改变该元素的样式。</p>
+<p>注意，你也可以通过获得元素的引用，然后使用它的 <code><a href="/en/DOM/element.setAttribute">setAttribute</a></code> 方法，指定 CSS 属性和值，来改变该元素的样式。</p>
 
 <pre class="brush: js">var el = document.getElementById('some-element');
 el.setAttribute('style', 'background-color:darkblue;');

@@ -41,21 +41,21 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 
 <p>如果您创建了多个上下文菜单项目或多个工具菜单项目，则这些项目将被放置在子菜单中。子菜单的父项将标有扩展名。例如，下面是一个名为“Menu Demo”的扩展，添加了两个上下文菜单项：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15431/menus-1.png" style="display: block; height: 501px; margin-left: auto; margin-right: auto; width: 700px;"></p>
+<p><img src="menus-1.png"></p>
 
 <h2 id="图标">图标</h2>
 
 <p>如果你使用 <a href="/en-US/Add-ons/WebExtensions/manifest.json/icons">"icons" manifest key</a> 为你的扩展指定一个图标，你的菜单项的旁边就会显示一个指定的图标。浏览器会尝试在普通分辨率下使用 16 x 16 像素的图标，在高分辨率下使用 32 x 32 像素的图标：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15433/menus-2.png" style="display: block; height: 409px; margin-left: auto; margin-right: auto; width: 500px;"> 你可以通过调用 {{WebExtAPIRef("menus.create()")}} 时指定 icons 选项来给子菜单项设置图标。</p>
+<p><img src="menus-2.png"> 你可以通过调用 {{WebExtAPIRef("menus.create()")}} 时指定 icons 选项来给子菜单项设置图标。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15435/menus-3.png" style="display: block; height: 396px; margin-left: auto; margin-right: auto; width: 500px;"></p>
+<p><img src="menus-3.png"></p>
 
 <h2 id="例子">例子</h2>
 
 <p>下面是一个包含四个项目的菜单，他们分别是：一个普通选项，两个周围有分割线的单选，和一个复选框。单选框使用了自定义图标。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15437/menus-4.png" style="display: block; height: 790px; margin-left: auto; margin-right: auto; width: 500px;"></p>
+<p><img src="menus-4.png"></p>
 
 <p>你可以使用以下代码创建一个这样的子菜单：</p>
 

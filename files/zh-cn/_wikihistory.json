@@ -2043,20 +2043,6 @@
       "auntwei"
     ]
   },
-  "Glossary/Symbol": {
-    "modified": "2020-10-15T23:14:01.224Z",
-    "contributors": [
-      "woshiqiang1",
-      "BobGreen",
-      "zhangchen",
-      "after1271349141",
-      "7anshuai",
-      "zhuangyin",
-      "ReggieLee",
-      "fengma",
-      "JoeyChen"
-    ]
-  },
   "Glossary/Synchronous": {
     "modified": "2020-02-12T10:47:09.690Z",
     "contributors": [
@@ -13517,23 +13503,6 @@
       "wowoqu"
     ]
   },
-  "Web/API/GlobalEventHandlers/onreset": {
-    "modified": "2019-03-23T22:24:44.486Z",
-    "contributors": [
-      "TyrealGray",
-      "caoruiy"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onresize": {
-    "modified": "2019-03-24T00:16:24.262Z",
-    "contributors": [
-      "btooom",
-      "ziyunfei",
-      "teoli",
-      "khalid32",
-      "TigerSoldier"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onscroll": {
     "modified": "2019-05-07T07:06:53.573Z",
     "contributors": [
@@ -16362,12 +16331,6 @@
     "modified": "2019-03-23T22:05:15.893Z",
     "contributors": [
       "shockw4ver"
-    ]
-  },
-  "Web/API/MouseEvent/region": {
-    "modified": "2020-10-15T22:11:39.427Z",
-    "contributors": [
-      "fengchunsgit"
     ]
   },
   "Web/API/MouseEvent/relatedTarget": {
@@ -34826,7 +34789,7 @@
       "srq18211"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges": {
+  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences": {
     "modified": "2020-08-21T07:28:58.610Z",
     "contributors": [
       "srq18211"
@@ -36702,15 +36665,6 @@
       "AlexChao"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/toSource": {
-    "modified": "2020-10-15T21:21:06.880Z",
-    "contributors": [
-      "fscholz",
-      "badfl",
-      "teoli",
-      "ziyunfei"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2020-10-15T21:29:03.089Z",
     "contributors": [
@@ -36991,13 +36945,6 @@
       "yenshen",
       "ziyunfei",
       "teoli"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Boolean/toSource": {
-    "modified": "2020-10-15T21:51:59.093Z",
-    "contributors": [
-      "fscholz",
-      "Grizzly-Eric"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
@@ -37628,13 +37575,6 @@
       "AlexChao"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Date/toSource": {
-    "modified": "2020-10-15T22:00:19.218Z",
-    "contributors": [
-      "fscholz",
-      "haipeng.liang"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Date/toString": {
     "modified": "2020-10-15T21:28:13.694Z",
     "contributors": [
@@ -37934,13 +37874,6 @@
       "minstrel1977",
       "xgqfrms-GitHub",
       "Marco_dev",
-      "teoli",
-      "ziyunfei"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Function/toSource": {
-    "modified": "2019-03-23T23:36:01.366Z",
-    "contributors": [
       "teoli",
       "ziyunfei"
     ]
@@ -38806,12 +38739,6 @@
       "AlexChao"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Number/toSource": {
-    "modified": "2019-04-06T03:53:43.075Z",
-    "contributors": [
-      "AlexChao"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Number/toString": {
     "modified": "2019-07-09T06:38:38.264Z",
     "contributors": [
@@ -39360,17 +39287,6 @@
       "Humyang",
       "zhangchen",
       "AlexChao"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Object/toSource": {
-    "modified": "2020-10-15T21:21:01.572Z",
-    "contributors": [
-      "qiu_han",
-      "zhangchen",
-      "xgqfrms-GitHub",
-      "keller0",
-      "teoli",
-      "ziyunfei"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Object/toString": {
@@ -40135,13 +40051,6 @@
       "AlexChao"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/toSource": {
-    "modified": "2019-07-04T23:42:36.181Z",
-    "contributors": [
-      "teoli",
-      "ziyunfei"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/RegExp/toString": {
     "modified": "2019-07-04T23:42:41.541Z",
     "contributors": [
@@ -40863,13 +40772,6 @@
       "ziyunfei"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/toSource": {
-    "modified": "2019-03-18T20:48:25.704Z",
-    "contributors": [
-      "teoli",
-      "AlixWang"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/toString": {
     "modified": "2019-10-14T05:25:34.591Z",
     "contributors": [
@@ -41052,13 +40954,6 @@
       "baooab",
       "Mactaivsh",
       "Hushabyme"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Symbol/toSource": {
-    "modified": "2019-09-06T06:31:54.610Z",
-    "contributors": [
-      "teoli",
-      "purple_force"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol/toString": {
@@ -41779,15 +41674,6 @@
       "ZivHe",
       "Jiang-Xuan",
       "Ende93"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/uneval": {
-    "modified": "2020-10-15T21:40:49.845Z",
-    "contributors": [
-      "zhangchen",
-      "imnodb",
-      "codert",
-      "Vincent.Yu"
     ]
   },
   "Web/JavaScript/Reference/Iteration_protocols": {
@@ -45667,31 +45553,6 @@
       "xcffl"
     ]
   },
-  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
-    "modified": "2020-11-05T13:41:11.779Z",
-    "contributors": [
-      "ceociocto",
-      "Jepson",
-      "ChongyouXu",
-      "九千鸦",
-      "Catherine-G",
-      "voidxiaobei",
-      "oceanMIH",
-      "WindLo",
-      "real-Row",
-      "GKilyar",
-      "Ray-Eldath",
-      "HYdragon",
-      "GloryChou",
-      "1013940326",
-      "Viki-Zhang",
-      "Leivy",
-      "breakair",
-      "zhangyangcisco",
-      "cylmemory",
-      "keyulin"
-    ]
-  },
   "conflicting/Learn/Server-side/Django": {
     "modified": "2019-03-23T23:11:53.165Z",
     "contributors": [
@@ -46088,6 +45949,13 @@
       "xgqfrms-GitHub"
     ]
   },
+  "conflicting/Web/API/HTMLFormElement/reset_event": {
+    "modified": "2019-03-23T22:24:44.486Z",
+    "contributors": [
+      "TyrealGray",
+      "caoruiy"
+    ]
+  },
   "conflicting/Web/API/HTMLInputElement": {
     "modified": "2019-03-23T23:32:37.731Z",
     "contributors": [
@@ -46129,6 +45997,12 @@
     "modified": "2019-03-23T22:08:09.338Z",
     "contributors": [
       "qzn928"
+    ]
+  },
+  "conflicting/Web/API/MouseEvent": {
+    "modified": "2020-10-15T22:11:39.427Z",
+    "contributors": [
+      "fengchunsgit"
     ]
   },
   "conflicting/Web/API/MouseEvent/altKey": {
@@ -46391,12 +46265,6 @@
       "Bingdian3721"
     ]
   },
-  "conflicting/Web/API/Window/deviceorientation_event": {
-    "modified": "2019-03-18T21:38:06.143Z",
-    "contributors": [
-      "Aaron_Zhung"
-    ]
-  },
   "conflicting/Web/API/Window/focus_event": {
     "modified": "2019-03-24T00:18:09.356Z",
     "contributors": [
@@ -46451,6 +46319,16 @@
     "modified": "2019-03-23T22:24:33.524Z",
     "contributors": [
       "caoruiy"
+    ]
+  },
+  "conflicting/Web/API/Window/resize_event": {
+    "modified": "2019-03-24T00:16:24.262Z",
+    "contributors": [
+      "btooom",
+      "ziyunfei",
+      "teoli",
+      "khalid32",
+      "TigerSoldier"
     ]
   },
   "conflicting/Web/API/Window/scroll": {
@@ -46517,14 +46395,6 @@
     "contributors": [
       "liushuyu",
       "holynewbie"
-    ]
-  },
-  "conflicting/Web/API/btoa": {
-    "modified": "2019-07-07T10:35:50.508Z",
-    "contributors": [
-      "zhangchen",
-      "imgss",
-      "ArtemisZ"
     ]
   },
   "conflicting/Web/API/caches": {
@@ -46838,23 +46708,6 @@
       "ziyunfei"
     ]
   },
-  "conflicting/Web/HTTP/Status/404": {
-    "modified": "2020-09-03T07:22:13.151Z",
-    "contributors": [
-      "Damoness",
-      "NathanWangRuilin",
-      "心斩心鬼",
-      "Jiang-Xuan",
-      "ReyCG_sub"
-    ]
-  },
-  "conflicting/Web/HTTP/Status/502": {
-    "modified": "2019-03-23T22:26:50.896Z",
-    "contributors": [
-      "zhangchen",
-      "cissoid"
-    ]
-  },
   "conflicting/Web/JavaScript/Guide/Introduction": {
     "modified": "2019-03-23T23:36:14.591Z",
     "contributors": [
@@ -46883,6 +46736,24 @@
       "phone-burner"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects": {
+    "modified": "2020-10-15T21:40:49.845Z",
+    "contributors": [
+      "zhangchen",
+      "imnodb",
+      "codert",
+      "Vincent.Yu"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
+    "modified": "2020-10-15T21:21:06.880Z",
+    "contributors": [
+      "fscholz",
+      "badfl",
+      "teoli",
+      "ziyunfei"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer": {
     "modified": "2020-10-15T21:37:49.333Z",
     "contributors": [
@@ -46900,6 +46771,13 @@
       "teoli",
       "AlexChao",
       "ziyunfei"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
+    "modified": "2020-10-15T21:51:59.093Z",
+    "contributors": [
+      "fscholz",
+      "Grizzly-Eric"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/DataView": {
@@ -46922,6 +46800,13 @@
       "Cattla",
       "teoli",
       "AlexChao"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString": {
+    "modified": "2020-10-15T22:00:19.218Z",
+    "contributors": [
+      "fscholz",
+      "haipeng.liang"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Error": {
@@ -46956,6 +46841,13 @@
       "Oatn"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString": {
+    "modified": "2019-03-23T23:36:01.366Z",
+    "contributors": [
+      "teoli",
+      "ziyunfei"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/GeneratorFunction": {
     "modified": "2020-10-15T21:40:51.679Z",
     "contributors": [
@@ -46988,6 +46880,12 @@
       "AlexChao"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString": {
+    "modified": "2019-04-06T03:53:43.075Z",
+    "contributors": [
+      "AlexChao"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Object": {
     "modified": "2020-10-15T21:21:47.231Z",
     "contributors": [
@@ -47007,6 +46905,17 @@
       "LinusYu",
       "teoli",
       "iwo"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString": {
+    "modified": "2020-10-15T21:21:01.572Z",
+    "contributors": [
+      "qiu_han",
+      "zhangchen",
+      "xgqfrms-GitHub",
+      "keller0",
+      "teoli",
+      "ziyunfei"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Promise": {
@@ -47052,6 +46961,13 @@
       "ziyunfei"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString": {
+    "modified": "2019-07-04T23:42:36.181Z",
+    "contributors": [
+      "teoli",
+      "ziyunfei"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer": {
     "modified": "2020-10-15T21:58:38.272Z",
     "contributors": [
@@ -47064,6 +46980,13 @@
     "contributors": [
       "RainSlide",
       "zhouxu"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String/toString": {
+    "modified": "2019-03-18T20:48:25.704Z",
+    "contributors": [
+      "teoli",
+      "AlixWang"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab": {
@@ -47084,9 +47007,23 @@
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
-    "modified": "2020-10-15T21:42:54.702Z",
+    "modified": "2020-10-15T23:14:01.224Z",
     "contributors": [
+      "woshiqiang1",
+      "BobGreen",
       "zhangchen",
+      "after1271349141",
+      "7anshuai",
+      "zhuangyin",
+      "ReggieLee",
+      "fengma",
+      "JoeyChen"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol/toString": {
+    "modified": "2019-09-06T06:31:54.610Z",
+    "contributors": [
+      "teoli",
       "purple_force"
     ]
   },

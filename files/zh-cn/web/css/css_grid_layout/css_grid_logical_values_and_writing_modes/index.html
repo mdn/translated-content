@@ -35,7 +35,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Mode
 
 <p>在开发有多种语言的网站时，如果其中包含了从右侧而不是从左侧开始书写的文字，物理属性就会成为一个问题。浏览器很擅长处理文本方向，不需要真的在一种 {{glossary("rtl")}} （从右到左）的语言下开发，我们也可以一窥究竟。下面的例子里有两个段落，一个段落没有设置 {{cssxref("text-align")}} 属性，另一个段落的 <code>text-align</code> 设置为 <code>left</code>。在 <code>html</code> 元素上添加 <code>dir="rtl"</code> 声明，就会把书写模式从默认的 <code>ltr</code> （从左到右）的英语切换为 <code>rtl</code> （从右到左）的语言。我们可以看到，第一段仍然是从左到右显示，因为 <code>text-align</code> 的值为 <code>left</code>，但第二段把文字的流动方向切换成了从右到左。</p>
 
-<p><img alt="A simple example of text direction." src="https://mdn.mozillademos.org/files/14733/8_direction_simple_example.png" style="height: 354px; width: 1136px;"></p>
+<p><img alt="A simple example of text direction." src="8_direction_simple_example.png"></p>
 
 <p>这只是在使用物理属性和值时引起问题的一个非常简单的例子，它们阻止浏览器切换书写模式，因为这些物理属性和值已经假设文字的流动方向一定是从左到右、从上到下的。</p>
 
@@ -47,7 +47,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Mode
 
 <p>如果我们用逻辑属性而不是物理属性来思考，就不能使用从左到右、从上到下的方式观察世界，我们需要一个新的参考点，也就是在此前的文章中讨论<em>对齐</em>时接触过的<em>块轴</em>与<em>行内轴</em>。理解它们是非常重要的，如果开始用块轴与行内轴的方式来看待布局，在网格布局中使用到的术语就变得非常有意义了。</p>
 
-<p><img alt="An image showing the default direction of the Block and Inline Axes." src="https://mdn.mozillademos.org/files/14735/8-horizontal-tb.png" style="height: 256px; width: 500px;"></p>
+<p><img alt="An image showing the default direction of the Block and Inline Axes." src="8-horizontal-tb.png"></p>
 
 <h2 id="CSS_书写模式">CSS 书写模式</h2>
 
@@ -179,7 +179,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Mode
 <p>{{ EmbedLiveSample('writing_3', '500', '330') }}</p>
 </div>
 
-<p><img alt="A image showing the direction of Block and Inline when writing-mode is vertical-lr" src="https://mdn.mozillademos.org/files/14737/8-vertical-lr.png" style="height: 360px; width: 257px;"></p>
+<p><img alt="A image showing the direction of Block and Inline when writing-mode is vertical-lr" src="8-vertical-lr.png"></p>
 
 <h2 id="用于对齐的逻辑值">用于对齐的逻辑值</h2>
 

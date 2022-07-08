@@ -69,10 +69,10 @@ browser.cookies.onChanged.hasListener(listener)
 <p>本範例監聽 <code>onChanged</code> 事件並紀錄由 <code>changeInfo</code> 參數傳來的資訊：</p>
 
 <pre class="brush: js line-numbers  language-js">browser.cookies.onChanged.addListener(function(changeInfo) {
-  console.log('Cookie changed: ' +
-              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
-              '\n * Cause: ' + changeInfo.cause +
-              '\n * Removed: ' + changeInfo.removed);
+  console.log('Cookie changed: ' +
+              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
+              '\n * Cause: ' + changeInfo.cause +
+              '\n * Removed: ' + changeInfo.removed);
 });</pre>
 
 <p>{{WebExtExamples}}</p>
