@@ -110,7 +110,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 
 <p>不同的音频片段可能包含不同数量的声道个数，从基本的<em>单声道</em>（只有一个声道），<em>立体声</em>（左右两个声道），到更加复杂的<em>四声道</em>，<em>5.1</em>。由于每个声道中包含的音频数据可以不同，因此声道越多听觉效果越好。在不同声道模式中，表示特定声道的缩写如下表所示：</p>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <td><em>单声道</em></td>
@@ -165,7 +165,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 
 <p>当输入与输出的声道数不同时，我们就需要按照如下方法进行混频。这些封装好的方法可以通过设置声音节点的 {{domxref("AudioNode.channelInterpretation")}} 属性为 <code>"speakers"</code>（扬声器） 或 <code>"discrete"</code>（离散声道） 进行混频。</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
    <th scope="row">混频方式 (Interpretation)</th>
@@ -403,8 +403,6 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 <p>音频的空间化（由网页音频接口的 {{domxref("PannerNode")}} 和 {{domxref("AudioListener")}} 节点处理）允许我们对空间中某一点的音频信号，以及这一信号的接听者建立位置和行为模型。</p>
 
 <p>声相控制器的位置可以通过笛卡尔坐标系进行描述，控制器的运动可以由速度向量来表示，这会引起多普勒效应，它的传播方向可以用一个方向圆锥来表示，当它是一个全方向声源时，圆锥会变得非常大。</p>
-
-<p> </p>
 </div>
 
 <p><img alt="The PannerNode brings a spatial position and velocity and a directionality for a given signal." src="pannernode_en.svg"></p>
