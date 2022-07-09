@@ -31,7 +31,7 @@ translation_of: Web/api/TransformStreamDefaultController
 
 ## 示例
 
-在下面的示例中，一个转换流使用 {{domxref("TransformStreamDefaultController.error()","error()")}} 和 {{domxref("TransformStreamDefaultController.enqueue()","enqueue()")}} 方法接收所有的分块将其转换为 {{jsxref("Uint8Array")}}。
+在下面的示例中，一个转换流接收所有的分块将其转换为 {{jsxref("Uint8Array")}}，使用了 {{domxref("TransformStreamDefaultController.error()","error()")}} 和 {{domxref("TransformStreamDefaultController.enqueue()","enqueue()")}} 方法。
 
 ```js
 const transformContent = {
