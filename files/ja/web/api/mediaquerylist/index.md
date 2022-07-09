@@ -13,7 +13,7 @@ tags:
   - query
   - アダプティブデザイン
   - インターフェイス
-  - メディアクエリ
+  - メディアクエリー
 translation_of: Web/API/MediaQueryList
 ---
 {{APIRef("CSSOM")}}
@@ -38,7 +38,7 @@ _`MediaQueryList` インターフェイスは親インターフェイスであ�
 _`MediaQueryList` インターフェイスは親インターフェイスである {{DOMxRef("EventTarget")}} からメソッドを継承しています。_
 
 - {{DOMxRef("MediaQueryList.addListener", "addListener()")}}
-  - : `MediaQueryList` にコールバックを追加します。このコールバックは、メディアクエリの状態 (リスト内のメディアクエリと文書が一致するかどうか) が変化するたびに呼び出されます。このメソッドは、主に下位互換性のために存在します。可能であれば、代わりに {{domxref("EventTarget.addEventListener", "addEventListener()")}}を使用して {{domxref("EventTarget.change_event", "change")}} イベントを監視してください。
+  - : `MediaQueryList` にコールバックを追加します。このコールバックは、メディアクエリの状態 (リスト内のメディアクエリと文書が一致するかどうか) が変化するたびに呼び出されます。このメソッドは、主に下位互換性のために存在します。可能であれば、代わりに {{domxref("EventTarget.addEventListener", "addEventListener()")}}を使用して {{domxref("MediaQueryList.change_event", "change")}} イベントを監視してください。
 - {{DOMxRef("MediaQueryList.removeListener", "removeListener()")}}
   - : 指定されたリスナーコールバックを、 `MediaQueryList` でメディアクエリの状態が変化するたび、すなわち `MediaQueryList` に列挙されたメディアクエリの一致・不一致の状態が変化するに呼び出されるコールバックから削除します。このメソッドは下位互換性のために保持されています。可能であれば、一般的に {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} を使用して、変更通知コールバックを削除してください (以前 `addEventListener()` を使用して追加されたものです)。
 
@@ -47,7 +47,7 @@ _`MediaQueryList` インターフェイスは親インターフェイスであ�
 _以下のイベントは `MediaQueryList` オブジェクトに配信されます。_
 
 - {{DOMxRef("MediaQueryList.change_event", "change")}}
-  - : 文書に対してメディアクエリを実行した結果が変更されたときに `MediaQueryList` に送信されます。例えば、メディアクエリが `(min-width: 400px)` の場合、 `change` イベントが文書の{{Glossary("viewport", "ビューポート")}}}の幅が 400px の閾値を通過するよう変更されるたびに発行されます。  
+  - : 文書に対してメディアクエリを実行した結果が変更されたときに `MediaQueryList` に送信されます。例えば、メディアクエリが `(min-width: 400px)` の場合、 `change` イベントが文書の{{Glossary("viewport", "ビューポート")}}の幅が 400px の閾値を通過するよう変更されるたびに発行されます。  
       また、 {{DOMxRef("MediaQueryList.onchange", "onchange")}} イベントハンドラープロパティを使用することもできます。
 
 ## 例
@@ -87,8 +87,8 @@ mql.addEventListener(screenTest);
 
 ## 関連情報
 
-- [メディアクエリ](/ja/docs/CSS/Media_queries)
-- [コードからのメディアクエリの使用](/ja/docs/CSS/Using_media_queries_from_code)
+- [メディアクエリー](/ja/docs/Web/CSS/Media_Queries)
+- [プログラムによるメディアクエリーの評価](/ja/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryListListener")}}
 - {{DOMxRef("MediaQueryListEvent")}}
