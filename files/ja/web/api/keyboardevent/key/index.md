@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -9,78 +10,79 @@ tags:
   - Read-only
   - Reference
   - UI Events
-  - プロパティ
+browser-compat: api.KeyboardEvent.key
 translation_of: Web/API/KeyboardEvent/key
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("UI Events")}}
 
-<p><span class="seoSummary">{{domxref("KeyboardEvent")}} インターフェイスの <code><strong>key</strong></code> はプロパティは読み取り専用で、ユーザーが押したキーの値を、 <kbd>Shift</kbd> キーなどの修飾キーやキーボードのロケールやレイアウトを考慮した値で返します。</span>値は以下のように判断されます。</p>
+{{domxref("KeyboardEvent")}} インターフェイスの **`key`** プロパティは読み取り専用で、ユーザーが押したキーの値を、 <kbd>Shift</kbd> キーなどの修飾キーやキーボードのロケールやレイアウトを考慮した値で返します。
 
-<div class="moreinfo pull-aside">
-<h4 id="Key_values" name="Key_values">キーの値</h4>
+## 値
 
-<p><a href="/ja/docs/Web/API/KeyboardEvent/key/Key_Values">キーの値</a>の完全なリストを参照してください。</p>
+文字列です。
+
+この値は、以下のように決定されます。
+
+- 押されたキーが表示可能なものである場合、返される値は、そのキーの表示可能な表現を含む空でない Unicode 文字列になります。
+- 押されたキーが制御文字や特殊文字の場合、返される値は[事前に定義されたキー値](/ja/docs/Web/API/UI_Events/Keyboard_event_key_values)のいずれかになります。
+- もし `KeyboardEvent` が[デッドキー](https://wikipedia.org/wiki/Dead_key)が押されたことを表している場合は、キー値は "`Dead`" になります。
+- 一部の特殊なキーボードのキー（マルチメディアキーボードでメディアを制御するための拡張キーなど）は、 Windows ではキーコードを生成しません。その代わりに、 `WM_APPCOMMAND` イベントが発生します。これらのイベントは DOM キーボードイベントにマッピングされ、 Windows の「仮想キーコード」にリストアップされます（実際にはキーコードではありませんが）。
+- キーを特定できない場合、返される値は `Unidentified` になります。
+
+> **Callout:**
+>
+> [キー値の完全なリスト](/ja/docs/Web/API/UI_Events/Keyboard_event_key_values)をご覧ください。
+
+## KeyboardEvent の順序
+
+それぞれの `KeyboardEvent` はあらかじめ定められた順序で発生します。キーが押された場合、発生する一連の `KeyboardEvent` は {{domxref("Event.preventDefault")}} が呼び出されないと仮定すれば次のようになります。
+
+1. 最初に {{domxref("Element/keydown_event", "keydown")}} イベントが発生します。キーがそれ以上押され続けてそのキーが文字を入力する場合は、イベントはプラットフォームの実装に依存した間隔で発生し続け、読み取り専用の {{domxref("KeyboardEvent.repeat")}} プロパティが `true` に設定されます。
+2. もしキー入力が {{HTMLElement("input")}}、{{HTMLElement("textarea")}}もしくは{{domxref("HTMLElement.contentEditable")}} が `true` の要素に文字を挿入する場合は、 {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} と {{domxref("HTMLElement/input_event", "input")}} イベント型がその順番で発生します。一部の他の実装では、 {{domxref("Element/keypress_event", "keypress")}} イベントを実装していれば発生する可能性があることに注意してください。イベントはキーが押されている間、連続で発生します。
+3. キーを離した際に {{domxref("Element/keyup_event", "keyup")}} イベントが発生します。これで一連の処理は終わりです。
+
+1 と 3 の処理で、 `KeyboardEvent.key` 属性が定義され、先ほど定義したルールに則って値が設定されます。
+
+## 一連の KeyboardEvent の例
+
+米国キーボードレイアウトで <kbd>Shift</kbd> キーと <kbd>2</kbd> キーを使用した場合と、英国キーボードレイアウトで使用した場合のイベントシーケンスについて考えてみましょう。
+
+以下の 2 つのテストケースを使用して実験してみてください。
+
+1. <kbd>Shift</kbd> キーを押しながら、 <kbd>2</kbd> キーを押して離します。次に <kbd>Shift</kbd> キーを離します。
+
+2. <kbd>Shift</kbd> キーを押しながら、 <kbd>2</kbd> を押し続けます。 <kbd>Shift</kbd> キーを離します。最後に <kbd>2</kbd> を離します。
+
+### HTML
+
+```html
+<div class="fx">
+  <div>
+    <textarea rows="5" name="test-target" id="test-target"></textarea>
+    <button type="button" name="btn-reset" id="btn-reset">Reset</button>
+  </div>
+  <div class="flex">
+    <pre id="console-log"></pre>
+  </div>
 </div>
+```
 
-<ul>
- <li>押されたキーが印刷表現を持っている場合は、返された値は空ではない Unicode 文字の文字列で、キーの印刷表現が入ります。</li>
- <li>押されたキーが制御または特殊文字である場合は、返値は<a href="/ja/docs/Web/API/KeyboardEvent/key/Key_Values">定義済みキー値</a>の内の一つになります。</li>
- <li><code>KeyboardEvent</code> が<a href="https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%83%E3%83%89%E3%82%AD%E3%83%BC">デッドキー</a>が押されたことを表すのであれば、キーの値は "<code>Dead</code>" になります。</li>
- <li>キーボードの一部の特殊なキー (マルチメディアキーボードにおけるメディア制御のための拡張キーなど) は Windows のキーコードを生成しません。代わりに <code>WM_APPCOMMAND</code> イベントを起動します。これらのイベントは DOM キーボードイベントに対応付けられ、 Windows の「仮想キーコード」の中で、実際のキーコードではないものの紹介されます。</li>
- <li>キーが特定できなかった場合は、 <code>Unidentified</code> の値を返します。</li>
-</ul>
+### CSS
 
-<h2 id="KeyboardEvent_sequence" name="KeyboardEvent_sequence">KeyboardEvent シーケンス</h2>
-
-<p>それぞれの <code>KeyboardEvent</code> はあらかじめ定められたシーケンスで発生します。キーが押された場合、発生する一連の <code>KeyboardEvent</code> は {{domxref("Event.preventDefault")}} が呼び出されないと想定すれば次のようになります。</p>
-
-<ol>
- <li>最初に {{domxref("Element/keydown_event", "keydown")}} イベントが発生します。キーがそれ以上押され続けてそのキーが文字を入力する場合は、イベントはプラットフォームの実装に依存した間隔で発生し続け、読み取り専用の {{domxref("KeyboardEvent.repeat")}} プロパティが <code>true</code> に設定されます。</li>
- <li>もしキー入力が{{HTMLElement("input")}}、{{HTMLElement("textarea")}}もしくは{{domxref("HTMLElement.contentEditable")}}が <code>true</code> の要素に文字を挿入する場合は、 {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}と{{domxref("HTMLElement/input_event", "input")}}イベント型がその順番で発火されます。 他の実装が{{domxref("Element/keypress_event", "keypress")}}イベントを実装していれば発火する可能性があることに注意してください。イベントはキーが押されている間連続で発火します。</li>
- <li>キーを離した際に{{domxref("Element/keyup_event", "keyup")}}イベントが発火します。これで一連の処理は終わりです。</li>
-</ol>
-
-<p>1と3の処理で、 <code>KeyboardEvent.key</code> 属性が定義され、先ほど定義したルールにのっとって値が設定されます。</p>
-
-<h2 id="KeyboardEvent_sequence_example" name="KeyboardEvent_sequence_example">KeyboardEvent シーケンスの例</h2>
-
-<p>Consider the event sequence generated when we interact with the <kbd>Shift</kbd> and the <kbd>2</kbd> key using a U.S keyboard layout as compared to when we do so using a UK keyboard layout.</p>
-
-<p>Try experimenting using the following two test cases:</p>
-
-<ol>
- <li>Press and hold the <kbd>Shift</kbd> key, then press <kbd>2</kbd> and release it. Next, release the <kbd>Shift</kbd> key.</li>
- <li>Press and hold the <kbd>Shift</kbd> key, then press and hold <kbd>2</kbd>. Release the <kbd>Shift</kbd> key. Finally, release <kbd>2</kbd>.</li>
-</ol>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html notranslate">&lt;div class="fx"&gt;
-  &lt;div&gt;
-    &lt;textarea rows="5" name="test-target" id="test-target"&gt;&lt;/textarea&gt;
-    &lt;button type="button" name="btn-clear-console" id="btn-clear-console"&gt;clear console&lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class="flex"&gt;
-    &lt;pre id="console-log"&gt;&lt;/pre&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css notranslate">.fx {
+```css
+.fx {
   -webkit-display: flex;
   display: flex;
   margin-left: -20px;
   margin-right: -20px;
 }
 
-.fx &gt; div {
+.fx > div {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.fx &gt; div:first-child {
+.fx > div:first-child {
    width: 30%;
 }
 
@@ -94,78 +96,80 @@ translation_of: Web/API/KeyboardEvent/key
   width: 100%;
   margin-bottom: 10px;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">let textarea = document.getElementById('test-target'),
+```js
+let textarea = document.getElementById('test-target'),
 consoleLog = document.getElementById('console-log'),
-btnClearConsole = document.getElementById('btn-clear-console');
+btnReset = document.getElementById('btn-reset');
 
 function logMessage(message) {
-  document.getElementById("console-log").innerHTML += message + "&lt;br&gt;";
+  consoleLog.innerHTML += message + "<br>";
 }
 
-textarea.addEventListener('keydown', (e) =&gt; {
+textarea.addEventListener('keydown', (e) => {
   if (!e.repeat)
-    logMessage(`Key "${e.key}" pressed  [event: keydown]`);
+    logMessage(`Key "${e.key}" pressed [event: keydown]`);
   else
-    logMessage(`Key "${e.key}" repeating  [event: keydown]`);
+    logMessage(`Key "${e.key}" repeating [event: keydown]`);
 });
 
-textarea.addEventListener('beforeinput', (e) =&gt; {
-  logMessage(`Key "${e.data}" about to be input  [event: beforeinput]`);
+textarea.addEventListener('beforeinput', (e) => {
+  logMessage(`Key "${e.data}" about to be input [event: beforeinput]`);
 });
 
-textarea.addEventListener('input', (e) =&gt; {
-  logMessage(`Key "${e.data}" input  [event: input]`);
+textarea.addEventListener('input', (e) => {
+  logMessage(`Key "${e.data}" input [event: input]`);
 });
 
-textarea.addEventListener('keyup', (e) =&gt; {
-  logMessage(`Key "${e.key}" released  [event: keyup]`);
+textarea.addEventListener('keyup', (e) => {
+  logMessage(`Key "${e.key}" released [event: keyup]`);
 });
 
-btnClearConsole.addEventListener('click', (e) =&gt; {
+btnReset.addEventListener('click', (e) => {
   let child = consoleLog.firstChild;
   while (child) {
    consoleLog.removeChild(child);
    child = consoleLog.firstChild;
   }
-});</pre>
+  textarea.value = ''
+});
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('KeyboardEvent_sequence_example')}}</p>
+{{EmbedLiveSample('KeyboardEvent_sequence_example')}}
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> On browsers that don't fully implement the {{domxref("InputEvent")}} interface which is used for the {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events, you may get incorrect output on those lines of the log output.</p>
-</div>
+> **Note:** {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} と {{domxref("HTMLElement/input_event", "input")}} イベントで使用されている {{domxref("InputEvent")}} インターフェイスを完全に実装していないブラウザーでは、誤ったログ出力をする可能性があります。
 
-<h3 id="Case_1" name="Case_1">Case 1</h3>
+### ケース 1
 
-<p>When the shift key is pressed, a {{domxref("Element/keydown_event", "keydown")}} event is first fired, and the <code>key</code> property value is set to the string <code>Shift</code>. As we keep holding this key, the {{domxref("Element/keydown_event", "keydown")}} event does not continue to fire repeatedly because it does not produce a character key.</p>
+Shift キーが押されると、まず {{domxref("Element/keydown_event", "keydown")}} イベントが発行され、 `key` プロパティの値として文字列 `Shift` が設定されます。このキーを押し続けても、文字が発生しないので {{domxref("Element/keydown_event", "keydown")}} イベントが繰り返し発行され続けるわけではありません。
 
-<p>When <code>key 2</code> is pressed, another {{domxref("Element/keydown_event", "keydown")}} event is fired for this new key press, and the <code>key</code> property value for the event is set to the string <code>@</code> for the U.S keyboard type and <code>"</code> for the UK keyboard type, because of the active modifier <code>shift</code> key. The {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events are fired next because a character key has been produced.</p>
+`2 キー`が押されると、この新しいキー押下に対して別の {{domxref("Element/keydown_event", "keydown")}} イベントが発行され、修飾キー `shift` が有効なので、このイベントの `key` プロパティ値には米国のキーボード型の場合は `@` 、英国のキーボード型の場合は `"` という文字列が設定されます。文字キーが生成されたので、次に {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} と {{domxref("HTMLElement/input_event", "input")}} イベントが発行されます。
 
-<p>As we release the <code>key 2</code>, a {{domxref("Element/keyup_event", "keyup")}} event is fired and the <code>key</code> property will maintain the string values <code>@</code> and <code>"</code> for the different keyboard layouts respectively.</p>
+`2 キー`を離すと、{{domxref("Element/keyup_event", "keyup")}} イベントが発行され、`key` プロパティにはそれぞれ異なるキーボードレイアウト用の `@` と `"` という文字列が保持されるようになります。
 
-<p>As we finally release the <code>shift</code> key, another {{domxref("Element/keyup_event", "keyup")}} event is fired for it, and the key attribute value remains <code>Shift</code>.</p>
+最後に `shift` キーを離すと、別の {{domxref("Element/keyup_event", "keyup")}} イベントが発行され、 key 属性の値は `Shift` のまま残ります。
 
-<h3 id="Case_2" name="Case_2">Case 2</h3>
+### ケース 2
 
-<p>When the shift key is pressed, a {{domxref("Element/keydown_event", "keydown")}} event is first fired, and the <code>key</code> property value is set to be the string <code>Shift</code>. As we keep holding this key, the keydown event does not continue to fire repeatedly because it produced no character key.</p>
+Shift キーが押されると、まず {{domxref("Element/keydown_event", "keydown")}} イベントが発行され、`key` プロパティの値として文字列 `Shift` がセットされます。このキーを押し続けても、文字キーは生成されないので、 keydown イベントは繰り返し発行され続けることはありません。
 
-<p>When <code>key 2</code> is pressed, another {{domxref("Element/keydown_event", "keydown")}} event is fired for this new key press, and the <code>key</code> property value for the event is set to be the string <code>@</code> for the U.S keyboard type and <code>"</code> for the UK keyboard type, because of the active modifier <code>shift</code> key. The {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}}{{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events are fired next because a character key has been produced. As we keep holding the key, the {{domxref("Element/keydown_event", "keydown")}} event continues to fire repeatedly and the {{domxref("KeyboardEvent.repeat")}} property is set to <code>true</code>. The {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events are fired repeatedly as well.</p>
+`2 キー`が押されると、この新しいキー押下に対して別の {{domxref("Element/keydown_event", "keydown")}} イベントが発行され、修飾キー `shift` が有効になっているので、そのイベントの `key` プロパティの値は、米国キーボード型の場合は `@` 、英国キーボード型の場合は `"` という文字列に設定されています。文字が生成されたので、次に {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} と {{domxref("HTMLElement/input_event", "input")}} イベントが発行されています。キーを押し続けると、{{domxref("Element/keydown_event", "keydown")}} イベントが繰り返し発行され、{{domxref("KeyboardEvent.repeat")}}プロパティは `true` にセットされています。同様に {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} と {{domxref("HTMLElement/input_event", "input")}} イベントが繰り返し発行されています。
 
-<p>As we release the <code>shift</code> key, a {{domxref("Element/keyup_event", "keyup")}} event is fired for it, and the key attribute value remains <code>Shift</code>. At this point, notice that the <code>key</code> property value for the repeating keydown event of the <code>key 2</code> key press is now "2" because the modifier <code>shift</code> key is no longer active. The same goes for the {{domxref("InputEvent.data")}} property of the {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events.</p>
+`Shift` キーを離すと、それに対して {{domxref("Element/keyup_event", "keyup")}} イベントが発行され、キー属性の値は `Shift` のままとなります。このとき、修飾キー `shift` は有効ではなくなるので、`2 キー`を押したときの keydown イベントを繰り返すための `key` プロパティの値が "2" になっていることに注目してください。同じことが {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} と {{domxref("HTMLElement/input_event", "input")}} イベントの {{domxref("InputEvent.data")}} プロパティにも当てはまります。
 
-<p>As we finally release the <code>key 2</code>, a {{domxref("Element/keyup_event", "keyup")}} event is fired but the <code>key</code> property will be set to the string value <code>2</code> for both keyboard layouts because the modifier <code>shift</code> key is no longer active.</p>
+最後に `2 キー`を離すと、{{domxref("Element/keyup_event", "keyup")}} イベントが発行されますが、修飾キー `shift` はもはやアクティブではないので、`key` プロパティはどちらのキーボードレイアウトでも、文字列値 `2` に設定されます。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>This example uses {{domxref("EventTarget.addEventListener()")}} to listen for {{domxref("Element/keydown_event", "keydown")}} events. When they occur, the key's value is checked to see if it's one of the keys the code is interested in, and if it is, it gets processed in some way (possibly by steering a spacecraft, perhaps by changing the selected cell in a spreadsheet).</p>
+この例では {{domxref("EventTarget.addEventListener()")}} を使用して {{domxref("Element/keydown_event", "keydown")}} イベントを待ち受けています。イベントが発生すると、キーの値がチェックされ、コードが関心を持つキーの一つであるかどうかが確認され、もしそうであれば、何らかの方法で処理されます（宇宙船の操縦や、スプレッドシートの選択セルの変更など）。
 
-<pre class="brush: js notranslate">window.addEventListener("keydown", function (event) {
+```js
+window.addEventListener("keydown", function (event) {
   if (event.defaultPrevented) {
     return; // Do nothing if the event was already processed
   }
@@ -201,32 +205,12 @@ btnClearConsole.addEventListener('click', (e) =&gt; {
   // Cancel the default action to avoid it being handled twice
   event.preventDefault();
 }, true);
-</pre>
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events', '#dom-keyboardevent-key', 'KeyboardEvent.key')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#widl-KeyboardEvent-key', 'KeyboardEvent.key')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>初回定義で、キーの値を含みます。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.KeyboardEvent.key")}}</p>
+{{Compat}}
