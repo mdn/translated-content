@@ -466,6 +466,7 @@
 /ko/docs/Web/API/File/Using_files_from_web_applications	/ko/docs/Web/API/File_API/Using_files_from_web_applications
 /ko/docs/Web/API/File/size	/ko/docs/Web/API/Blob/size
 /ko/docs/Web/API/FileReader.result	/ko/docs/Web/API/FileReader/result
+/ko/docs/Web/API/GlobalEventHandlers/ontouchstart	/ko/docs/Web/API/Element/touchstart_event
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API/Drag_operations	/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations

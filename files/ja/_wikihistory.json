@@ -14428,23 +14428,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/GlobalEventHandlers/onreset": {
-    "modified": "2019-03-23T23:29:30.841Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "ethertank"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onresize": {
-    "modified": "2019-03-23T23:35:46.817Z",
-    "contributors": [
-      "YuichiNukiyama",
-      "teoli",
-      "khalid32",
-      "ethertank"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onscroll": {
     "modified": "2020-10-15T21:36:48.856Z",
     "contributors": [
@@ -14466,24 +14449,6 @@
     "contributors": [
       "mfuji09",
       "chikoski"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontouchcancel": {
-    "modified": "2020-11-13T00:53:08.096Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontouchend": {
-    "modified": "2020-11-13T00:36:12.048Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontouchstart": {
-    "modified": "2020-11-13T00:27:45.060Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "Web/API/GlobalEventHandlers/ontransitioncancel": {
@@ -46792,6 +46757,24 @@
       "mfuji09"
     ]
   },
+  "conflicting/Web/API/Element/touchcancel_event": {
+    "modified": "2020-11-13T00:53:08.096Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/Element/touchend_event": {
+    "modified": "2020-11-13T00:36:12.048Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/Element/touchstart_event": {
+    "modified": "2020-11-13T00:27:45.060Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
   "conflicting/Web/API/EventTarget/addEventListener_380cb5f366307beb2c072f74e561ee98": {
     "modified": "2020-02-11T06:17:04.429Z",
     "contributors": [
@@ -46859,6 +46842,14 @@
     "contributors": [
       "Uemmra3",
       "unarist"
+    ]
+  },
+  "conflicting/Web/API/HTMLFormElement/reset_event": {
+    "modified": "2019-03-23T23:29:30.841Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "ethertank"
     ]
   },
   "conflicting/Web/API/HTMLInputElement": {
@@ -47128,6 +47119,15 @@
     "modified": "2020-10-15T22:23:28.081Z",
     "contributors": [
       "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/Window/resize_event": {
+    "modified": "2019-03-23T23:35:46.817Z",
+    "contributors": [
+      "YuichiNukiyama",
+      "teoli",
+      "khalid32",
+      "ethertank"
     ]
   },
   "conflicting/Web/API/Window/scroll": {

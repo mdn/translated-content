@@ -9,7 +9,7 @@ translation_of: Web/API/IDBObjectStore/add
 <p>{{domxref("IDBObjectStore")}} 接口中的 <strong><code>add()</code></strong> 方法返回一个 {{domxref("IDBRequest")}} 对象，在单独的线程中创建一个结构（<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a>）化克隆值，并且在对象存储中存储这个克隆值。这个方法用作在一个对象存储中添加一条新的记录。</p>
 </div>
 
-<p> 要确定添加操作是否成功完成，可以监听事务的 <code>complete</code> 事件。除了 <code>IDBObjectStore.add </code>请求 <code>success</code> 事件之外，因为事务在成功被触发后仍然可能失败。换句话说，成功事件只有在事务成功排队后才会触发。</p>
+<p>要确定添加操作是否成功完成，可以监听事务的 <code>complete</code> 事件。除了 <code>IDBObjectStore.add </code>请求 <code>success</code> 事件之外，因为事务在成功被触发后仍然可能失败。换句话说，成功事件只有在事务成功排队后才会触发。</p>
 
 <p><strong><code>add()</code></strong> 方法是唯一的插入方法。如果以关键字参数作为主键的一条记录已经存在在存储对象中，这时在返回的请求对象中 <code>ConstrainError</code> 错误事件将被触发。对于更新存在的记录，你应该使用 {{domxref("IDBObjectStore.put")}} 方法替代它。</p>
 
@@ -135,35 +135,14 @@ function addData() {
 
 <h2 id="Specification">Specification</h2>
 
-<dl>
-</dl>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-add', 'add()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-add", "add()")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
 
-<p>{{Compat("api.IDBObjectStore.add")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h2 id="See_also">See also</h2>
