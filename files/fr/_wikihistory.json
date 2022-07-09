@@ -40892,17 +40892,6 @@
       "dattaz"
     ]
   },
-  "conflicting/Web/API": {
-    "modified": "2019-03-24T00:13:05.858Z",
-    "contributors": [
-      "loella16",
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "dextra",
-      "BenoitL"
-    ]
-  },
   "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox": {
     "modified": "2019-04-06T12:38:31.267Z",
     "contributors": [
