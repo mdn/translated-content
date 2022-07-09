@@ -40903,15 +40903,6 @@
       "BenoitL"
     ]
   },
-  "conflicting/Web/API/XSLTProcessor": {
-    "modified": "2019-03-23T23:44:00.502Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "VincentN",
-      "Fredchat"
-    ]
-  },
   "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox": {
     "modified": "2019-04-06T12:38:31.267Z",
     "contributors": [
