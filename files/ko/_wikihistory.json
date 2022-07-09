@@ -4305,6 +4305,12 @@
       "Kim.Hyunjung"
     ]
   },
+  "Web/API/Element/touchstart_event": {
+    "modified": "2019-03-23T22:28:01.859Z",
+    "contributors": [
+      "hoony"
+    ]
+  },
   "Web/API/Encoding_API": {
     "modified": "2020-10-15T22:26:02.845Z",
     "contributors": [
@@ -4764,12 +4770,6 @@
   },
   "Web/API/GlobalEventHandlers/onsubmit": {
     "modified": "2019-03-23T22:27:57.488Z",
-    "contributors": [
-      "hoony"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontouchstart": {
-    "modified": "2019-03-23T22:28:01.859Z",
     "contributors": [
       "hoony"
     ]
