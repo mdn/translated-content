@@ -26,11 +26,11 @@ terminate()
 
 ### 返回值
 
-无 ({{jsxref("undefined")}})。
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-在以下示例中，在 {{domxref("TransformStreamDefaultController")}} 调用了 `terminate()` 方法。
+在以下示例中，调用了 {{domxref("TransformStreamDefaultController")}} 的 `terminate()` 方法。
 
 ```js
 controller.terminate();
