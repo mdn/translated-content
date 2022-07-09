@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -15,258 +16,257 @@ tags:
   - UI Events
   - keyboard
   - user input
-  - イベント
+browser-compat: api.KeyboardEvent
 translation_of: Web/API/KeyboardEvent
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("UI Events")}}
 
-<p><span class="seoSummary"><strong><code>KeyboardEvent</code></strong> オブジェクトは、キーボードによるユーザーの操作を示します。個々のイベントがユーザーとキーとの間の単一の操作 (または修飾キーとの組み合わせ) を表します。</span>イベントの種類 ({{event('keydown')}}, {{event('keypress')}}, {{event('keyup')}}) はキーボード操作が発生した種類を識別します。</p>
+**`KeyboardEvent`** オブジェクトは、キーボードによるユーザーの操作を示します。個々のイベントがユーザーとキーとの間の単一の操作（または修飾キーとの組み合わせ）を表します。イベントの種類 ({{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}}, {{domxref("Element/keyup_event", "keyup")}}) はキーボード操作が発生した種類を識別します。
 
-<div class="note"><strong>メモ:</strong> <code>KeyboardEvent</code> は、単にユーザーがキーボードのキーで行った操作が何であるかを低水準で示すものであり、その操作のその場面における意味は持ちません。テキストの入力を処理したい場合は、代わりに {{event("input")}} イベントを使用してください。ユーザーが他の種類のテキスト入力、例えば、タブレット端末やタブレット機器による手書き入力システムなどを使用している場合は、キーボードイベントが発生することはありません。</div>
+> **Note:** `KeyboardEvent` は、単にユーザーがキーボードのキーで行った操作が何であるかを低水準で示すものであり、その操作のその場面における意味は持ちません。テキストの入力を処理したい場合は、代わりに {{domxref("HTMLElement/input_event", "input")}} イベントを使用してください。ユーザーが他の種類のテキスト入力、例えば、タブレット端末やタブレット機器による手書き入力システムなどを使用している場合、キーボードイベントが発生することはありません。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+## コンストラクター
 
-<dl>
- <dt>{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}</dt>
- <dd><code>KeyboardEvent</code> オブジェクトを生成します。</dd>
-</dl>
+- {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}
+  - : `KeyboardEvent` オブジェクトを生成します。
 
-<h2 id="定数">定数</h2>
+## 定数
 
-<p><code>KeyboardEvent</code> インターフェースは、以下の定数を定義しています。</p>
+`KeyboardEvent` インターフェースは、以下の定数を定義しています。
 
-<h3 id="Keyboard_locations">Keyboard locations</h3>
+### キーボード上の位置
 
-<p>以下の定数は、キーイベントがキーボードのどの部分から発信されるかを識別します。これらは、<code>KeyboardEvent.DOM_KEY_LOCATION_STANDARD</code> などとしてアクセスされます。</p>
+以下の定数は、キーイベントがキーボードのどの部分から発生したかを識別します。これらは、`KeyboardEvent.DOM_KEY_LOCATION_STANDARD` などとしてアクセスされます。
 
 <table class="standard-table">
- <caption>キーボードの場所の識別子</caption>
- <thead>
-  <tr>
-   <th scope="col">定数</th>
-   <th scope="col">値</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>DOM_KEY_LOCATION_STANDARD</code></td>
-   <td>0x00</td>
-   <td>
-    <p>イベントによって記述されたキーは、キーボードの特定の領域にあることが特定されず、テンキー上にはなく(NumLock キーでない限り)、キーボードの左右に重複しているキーについては、何らかの理由で、そのキーは、その場所に関連付けられていないことになります。</p>
-
-    <p>例としては、標準的な PC 101 US キーボードの英数字キー、NumLock キー、スペースバーなどがあります。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>DOM_KEY_LOCATION_LEFT</code></td>
-   <td>0x01</td>
-   <td>
-    <p>キーは、キーボード上の複数の位置に存在してもよいものであり、この例では、キーボードの左側にある。</p>
-
-    <p>例としては、左の Ctrl キー、Macintosh キーボードの左の Command キー、左の Shift キーなどがあります。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>DOM_KEY_LOCATION_RIGHT</code></td>
-   <td>0x02</td>
-   <td>
-    <p>キーは、キーボード上の複数の位置に存在してもよいものであり、この場合、キーボードの右側に位置している。</p>
-
-    <p>例としては、右の Shift キーや右の Alt キー (Mac キーボードの Option) などがあります。</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>DOM_KEY_LOCATION_NUMPAD</code></td>
-   <td>0x03</td>
-   <td>
-    <p>キーはテンキー上に配置されているか、またはキーの発生源となる場所が複数ある場合はテンキーに関連付けられた仮想キーとなります。NumLock キーはこのグループには該当せず、常に <code>DOM_KEY_LOCATION_STANDARD</code> の位置でエンコードされています。</p>
-
-    <p>例としては、テンキーパッドの数字、キーパッドの Enter キー、キーパッドの小数点などがあります。</p>
-   </td>
-  </tr>
- </tbody>
+  <caption>
+    キーボード上の位置の識別子
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">定数</th>
+      <th scope="col">値</th>
+      <th scope="col">説明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DOM_KEY_LOCATION_STANDARD</code></td>
+      <td>0x00</td>
+      <td>
+        <p>
+          このイベントによって記述されたキーは、キーボードの特定の範囲にあるものではないことを表します。テンキー上にあるわけでもなく（NumLock キーでない限り）、キーボードの左右で重複しているキーについては、何らかの理由でその位置と関連付けないことになっています。
+        </p>
+        <p>
+          例としては、標準的な PC 101 US キーボードの英数字キー、 NumLock キー、スペースバーなどがあります。
+      </td>
+    </tr>
+    <tr>
+      <td><code>DOM_KEY_LOCATION_LEFT</code></td>
+      <td>0x01</td>
+      <td>
+        <p>
+          このキーは、キーボード上の複数の位置に存在する可能性があるものであり、この場合は、キーボードの左側にあるものです。
+        </p>
+        <p>
+          例としては、左の Ctrl キー、 Macintosh キーボードの左の Command キー、左の Shift キーなどがあります。
+      </td>
+    </tr>
+    <tr>
+      <td><code>DOM_KEY_LOCATION_RIGHT</code></td>
+      <td>0x02</td>
+      <td>
+        <p>
+          このキーは、キーボード上の複数の位置に存在する可能性があるものであり、この場合は、キーボードの右側にあるものです。
+        </p>
+        <p>
+          例としては、右の Shift キーや右の Alt キー（Mac キーボードの Option キー）などがあります。
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>DOM_KEY_LOCATION_NUMPAD</code></td>
+      <td>0x03</td>
+      <td>
+        <p>
+          このキーは、テンキー上に配置されているか、キーが複数の場所から発信される場合は、テンキーに関連付けられた仮想キーとなります。 NumLock キーはこのグループには該当せず、常に位置を <code>DOM_KEY_LOCATION_STANDARD</code> として符号化されます。
+        </p>
+        <p>
+          例としては、テンキーの数字、テンキー側の Enter キー、テンキー側の小数点などがあります。
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
-</dl>
+## プロパティ
 
-<h2 id="Methods" name="Methods">プロパティ</h2>
+_このインターフェイスには、親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承したプロパティもあります。_
 
-<p><em>このインターフェイスでは、親に相当する {{domxref("UIEvent")}} と {{domxref("Event")}} の両者からもプロパティを継承しています。</em></p>
+- {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
 
-<dl>
- <dt>{{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}</dt>
- <dd>そのキーイベントが発生した際に <kbd>Alt</kbd> (OS X の場合は <kbd>Option</kbd> または <kbd>⌥</kbd>) キーが押されていれば {{jsxref("Boolean")}} <code>true</code> を返します。</dd>
-</dl>
+  - : 論理値で、このキーイベントが発生した際に <kbd>Alt</kbd> （macOS の場合は <kbd>Option</kbd> または <kbd>⌥</kbd>）キーが押されていれば `true` を返します。
 
-<dl>
- <dt>{{domxref("KeyboardEvent.code")}} {{Readonlyinline}}</dt>
- <dd>そのイベントが表すキーについて、キーのコード値を {{domxref("DOMString")}} で返します。
- <div class="warning"><strong>警告:</strong> これはユーザーのキーボード配列を無視しますので、ユーザーが QWERTY キーボード配列の "Y" の位置のキー (ホーム行の上の行の中ほど) を押すと、ユーザーが QWERTZ キーボード (ユーザーが "Z" だと思っており、その他のプロパティも "Z" を示している) や Dvorak キーボード配列 (ユーザーは "F" だと思っている) を使用していても、常に "KeyY" を返します。</div>
- </dd>
-</dl>
+- {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
 
-<dl>
- <dt>{{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}</dt>
- <dd>そのキーイベントが発生した際に <kbd>Ctrl</kbd> キーが押されていれば {{jsxref("Boolean")}}  <code>true</code> を返します。</dd>
- <dt>{{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}</dt>
- <dd>そのイベントが <code>compositionstart</code> と <code>compositionend</code> の間に発生したものであれば {{jsxref("Boolean")}} <code>true</code> を返します。</dd>
- <dt>{{domxref("KeyboardEvent.key")}} {{Readonlyinline}}</dt>
- <dd>イベントが表すキーのキー値を表す {{domxref("DOMString")}} を返します。</dd>
- <dt>{{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}</dt>
- <dd>キーボードが設定されているロケールを示すロケール文字列を {{domxref("DOMString")}} で返します。ブラウザやデバイスがキーボードのロケールを知らない場合は空文字列となります。
- <div class="note"><strong>メモ:</strong> このプロパティは入力データのロケールを表すことはありません。例えば、ユーザーが使用するキーボードレイアウトと入力テキストとで言語が異なる場合があります。</div>
- </dd>
- <dt>{{domxref("KeyboardEvent.location")}}{{Readonlyinline}}</dt>
- <dd>キーボードなどの入力デバイス上のキーの位置を表す {{jsxref("Number")}} を返します。位置を特定する定数の一覧は、上記の <a href="#keyboard_locations">Keyboard locations</a> の中にあります。</dd>
- <dt>{{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}</dt>
- <dd>{{jsxref("Boolean")}} を返し、そのキーイベントが発生した際に <kbd>Meta</kbd> キー（Mac キーボードは <kbd>⌘ Command</kbd> キー、 Windows キーボードは Windows キー <kbd>⊞</kbd> ）が押されていれば <code>true</code> を返します。</dd>
- <dt>{{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}</dt>
- <dd>{{jsxref("Boolean")}} を返し、そのキーが自動的に繰り返し押下されていた場合に <code>true</code> を返します。</dd>
- <dt>{{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}</dt>
- <dd>{{jsxref("Boolean")}} を返し、そのキーイベントが発生した際に <kbd>Shift</kbd> キーが押されていれば <code>true</code> を返します。</dd>
-</dl>
+  - : 文字列で、このイベントが表す物理キーのコード値を返します。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+    > **Warning:** これはユーザーのキーボードレイアウトを無視します。つまり、ユーザーが  QWERTY キーボードレイアウトの "Y" の位置（ホーム行の上の行の中央付近）でキーを押した場合、ユーザーが QWERTZ キーボード（これはユーザーが "Z" "を期待し、他のすべてのプロパティが "Z" を示すことになる）または Dvorak キーボードレイアウト（これはユーザーが "F" を期待する）であっても、常に "KeyY" を返します。ユーザーに正しいキーストロークを表示したい場合は、 {{domxref("Keyboard.getLayoutMap()")}} を使用してください。
 
-<p><em>このインターフェイスでは、親に相当する {{domxref("UIEvent")}} と {{domxref("Event")}} の両者からもメソッドを継承しています。</em></p>
+- {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
 
-<dl>
- <dt>{{domxref("KeyboardEvent.getModifierState()")}}</dt>
- <dd>そのイベントが発生した際に修飾キー (<kbd>Alt</kbd> / <kbd>Shift</kbd> / <kbd>Ctrl</kbd> / <kbd>Meta</kbd>) が押されていたかどうかを表す{{jsxref("Boolean")}} を返します。</dd>
-</dl>
+  - : 論理値で、そのキーイベントが発生した際に <kbd>Ctrl</kbd> キーが押されていれば `true` を返します。
 
-<h2 id="廃止されたメソッド">廃止されたメソッド</h2>
+- {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
+  - : 論理値で、このイベントが `compositionstart` と `compositionend` の間に発生したものであれば `true` を返します。
+- {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
+  - : 文字列で、このイベントが表すキーのキー値を表します。
+- {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
 
-<dl>
- <dt>{{domxref("KeyboardEvent.initKeyEvent()")}} {{deprecated_inline}}</dt>
- <dd><code>KeyboardEvent</code> オブジェクトを初期化します。これは Firefox でのみ実装されていたもので、Firefox でもサポートされていないため、代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクタを使用する必要があります。</dd>
- <dt>{{domxref("KeyboardEvent.initKeyboardEvent()")}} {{deprecated_inline}}</dt>
- <dd><code>KeyboardEvent</code> オブジェクトを初期化します。これは現在では非推奨です。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクタを使用する必要があります。</dd>
-</dl>
+  - : 文字列で、キーボードに設定されているロケールを示すロケール文字列を返します。ブラウザーや端末がキーボードのロケールを知らない場合は空文字列となります。
 
-<h2 id="廃止されたプロパティ">廃止されたプロパティ</h2>
+    > **Note:** このプロパティは入力データのロケールを表すわけではありません。例えば、ユーザーが使用するキーボードレイアウトと入力テキストとで言語が異なる場合があります。
 
-<dl>
- <dt>{{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>キーの文字値を表す {{domxref("DOMString")}} を返します。キーが印刷可能な文字に対応している場合、この値はその文字を含む空でない Unicode 文字列となります。キーが印刷可能な表現を持たない場合は、これは空の文字列です。
- <div class="note"><strong>注意:</strong> キーが複数の文字を挿入するマクロとして使用されている場合、この属性の値は最初の文字だけでなく文字列全体となります。</div>
- </dd>
- <dt>{{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>キーの Unicode 参照番号を表す {{jsxref("Number")}} を返します。この属性は、<code>keypress</code> イベントでのみ使用されます。<code>char</code> 属性が複数の文字を含むキーの場合、これはその属性の最初の文字の Unicode 値となります。Firefox 26 では、これは印刷可能な文字のコードを返します。
- <div class="warning"><strong>警告:</strong> この属性は非推奨です。利用可能な場合は、代わりに {{domxref("KeyboardEvent.key")}} を使用する必要があります。</div>
- </dd>
- <dt>{{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>押されたキーの変更されていない値を示す、システムや実装に依存した数値コードを表す {{jsxref("Number")}} を返します。
- <div class="warning"><strong>警告:</strong> この属性は非推奨です。利用可能な場合は、代わりに {{domxref("KeyboardEvent.key")}} を使用する必要があります。</div>
- </dd>
- <dt>{{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>このプロパティは非標準であり、{{domxref("KeyboardEvent.key")}} を支持して非推奨とされています。これは古いバージョンの DOM Level 3 Events の一部でした。</dd>
- <dt>{{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>これは {{domxref("KeyboardEvent.location")}} の非標準の非推奨エイリアスです。これは古いバージョンの DOM Level 3 Events の一部でした。</dd>
- <dt>{{domxref("KeyboardEvent.which")}} {{deprecated_inline}} {{Readonlyinline}}</dt>
- <dd>押されたキーの変更されていない値を識別するシステムおよび実装依存の数値コードを表す {{jsxref("Number")}} を返します。これは通常 <code>keyCode</code> と同じです。
- <div class="warning"><strong>警告:</strong> この属性は非推奨です。利用可能な場合は、代わりに {{domxref("KeyboardEvent.key")}} を使用する必要があります。</div>
- </dd>
-</dl>
+- {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
+  - : 数値で、キーボードなどの入力機器上のキーの位置を表す値を返します。位置を特定する定数の一覧は、上記の[キーボード上の位置](#キーボード上の位置)にあります。
+- {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
 
-<h2 id="イベント">イベント</h2>
+  - : 論理値で、このキーイベントが発生した際に <kbd>Meta</kbd> キー（Mac キーボードでは <kbd>⌘ Command</kbd> キー、 Windows キーボードでは Windows キー (<kbd>⊞</kbd>)）が押されていれば `true` を返します。
 
-<p>以下のイベントは、<code>KeyboardEvent</code> 型に基づいています。これらのイベントは、{{domxref("Element")}}、{{domxref("Document")}}、および {{domxref("Window")}} を含む {{domxref("GlobalEventHandlers")}} を実装している任意のオブジェクトに配信することができます。以下のリストでは、各イベントは、そのイベントの <code>Document</code> ハンドラのドキュメントにリンクしています。</p>
+- {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
+  - : 論理値で、このキーが押し続けられて自動リピートしている場合に `true` を返します。
+- {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
 
-<dl>
- <dt>{{domxref("Document.keydown_event", "keydown")}}</dt>
- <dd>キーが押されました。</dd>
- <dt>{{domxref("Document.keyup_event", "keyup")}}</dt>
- <dd>キーが離されました。</dd>
-</dl>
+  - : 論理値で、このキーイベントが発生した際に <kbd>Shift</kbd> キーが押されていれば `true` を返します。
 
-<h3 id="廃止されたイベント">廃止されたイベント</h3>
+## メソッド
 
-<dl>
- <dt>{{domxref("Document.keypress_event", "keypress")}} {{obsolete_inline}}</dt>
- <dd>通常は文字値を生成するキーが押されました。このイベントはデバイス依存度が高く、時代遅れのものです。使用すべきではありません。</dd>
-</dl>
+_このインターフェイスには、親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承したメソッドもあります。_
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+- {{domxref("KeyboardEvent.getModifierState()")}}
 
-<p>イベントには <code>keydown</code> / <code>keypress</code> / <code>keyup</code> の 3 種類があります。 Gecko ではほとんどのキーにおいて、以下のようにキーイベントが連続して発生します。</p>
+  - : そのイベントが発生した際に修飾キー (<kbd>Alt</kbd> / <kbd>Shift</kbd> / <kbd>Ctrl</kbd> / <kbd>Meta</kbd>) が押されていたかどうかを表す論理値を返します。
 
-<ol>
- <li>そのキーが最初に押された時点で <code>keydown</code> イベントが発生します。</li>
- <li>そのキーが修飾キーでなかった場合、 <code>keypress</code> イベントが発生します。</li>
- <li>ユーザがキーから指を離した時点で <code>keyup</code> イベントが発生します。</li>
-</ol>
+## 廃止されたメソッド
 
-<h3 id="Special_cases" name="Special_cases">特殊な場合</h3>
+- {{domxref("KeyboardEvent.initKeyEvent()")}} {{deprecated_inline}}
+  - : `KeyboardEvent` オブジェクトを初期化します。これは Firefox でのみ実装されていたものですが、もう Firefox でも対応していません。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。
+- {{domxref("KeyboardEvent.initKeyboardEvent()")}} {{deprecated_inline}}
+  - : `KeyboardEvent` オブジェクトを初期化します。これは非推奨になりました。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。
 
-<p>Caps Lock や Num Lock、 Scroll Lock などのキーは LED 表示も切り替わります。このようなキーについて、 Windows と Linux では <code>keydown</code> と <code>keyup</code> イベントのみが発生します。</p>
+## 廃止されたプロパティ
 
-<div class="note">
-<p>Linux の Firefox 12 以前では <code>keypress</code> イベントも発生していました。</p>
-</div>
+- {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}
 
-<p>しかし Mac OS X のイベントモデルに関する制約から、Mac OS X の Caps Lock は <code>keydown</code> イベントのみが発生します。 (2007 年モデル以前の) ノート型では Num Lock もサポートされていましたが、今日の Mac OS X では外部キーボードにおいても Num Lock に対応していません。 Num Lock キーがある古い MacBook 上では、Num Lock キーによってイベントは何も発生しません。また、 F14 キーが接続されている外部キーボードであれば、 Gecko は Scroll Lock に対応しています。古い特定のバージョンの Firefox では、このキーによって <code>keypress</code> イベントが発生していました。この矛盾する挙動は {{bug(602812)}} で修正されました。</p>
+  - : このキーの文字値を表す文字列を返します。キーが表示可能な文字に対応している場合、この値はその文字を含む空でない Unicode 文字列となります。キーが表示可能な表現を持たない場合は、これは空文字列です。
 
-<h3 id="Auto-repeat_handling" name="Auto-repeat_handling">自動リピートの扱い</h3>
+    > **Note:** キーが複数の文字を挿入するマクロとして使用されている場合、この属性の値は最初の文字だけでなく文字列全体となります。
 
-<p>キーが押されたままになると自動リピートが始まります。これによって以下のようにイベントが連続して発生します。</p>
+- {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}
 
-<ol>
- <li><code>keydown</code></li>
- <li><code>keypress</code></li>
- <li><code>keydown</code></li>
- <li><code>keypress</code></li>
- <li>&lt;&lt;ユーザがキーから指を離すまで繰り返し&gt;&gt;</li>
- <li><code>keyup</code></li>
-</ol>
+  - : このキーの Unicode 参照番号を表す数値を返します。この属性は、`keypress` イベントでのみ使用されます。 `char` 属性が複数の文字を含むキーの場合、これはその属性の最初の文字の Unicode 値となります。Firefox 26 では、これは表示可能な文字のコードを返します。
 
-<p>この流れは DOM Level 3 仕様書に定義されているものです。しかし、これには以下のような注意点があります。</p>
+    > **Warning:** この属性は非推奨です。可能であれば、代わりに {{domxref("KeyboardEvent.key")}} を使用してください。
 
-<h4 id="Auto-repeat_on_some_GTK_environments_such_as_Ubuntu_9.4" name="Auto-repeat_on_some_GTK_environments_such_as_Ubuntu_9.4">Ubuntu 9.4 など一部の GTK 環境における自動リピート</h4>
+- {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}
 
-<p>GTK を用いた環境の中には、自動リピート時にネイティブの key-up イベントが発生するものがあります。このため、キーが連続して押されているのか自動リピートなのかを Gecko 側から認識することはできません。そのようなプラットフォームでの自動リピート時では、以下のようにキーイベントが連続して発生します。</p>
+  - : 押されたキーの修飾されていない値を示す、 システムや実装に依存した数値コードを数値で返します。
 
-<ol>
- <li><code>keydown</code></li>
- <li><code>keypress</code></li>
- <li><code>keyup</code></li>
- <li><code>keydown</code></li>
- <li><code>keypress</code></li>
- <li><code>keyup</code></li>
- <li>&lt;&lt;ユーザがキーから指を離すまで繰り返し&gt;&gt;</li>
- <li><code>keyup</code></li>
-</ol>
+    > **Warning:** この属性は非推奨です。可能であれば、代わりに {{domxref("KeyboardEvent.key")}} を使用してください。
 
-<p>こういった環境では残念ながら、自動リピートなのか連続して押されているのかをウェブコンテンツ側から区別することはできません。</p>
+- {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}
+  - : このプロパティは標準外であり、{{domxref("KeyboardEvent.key")}} に置き換えられ非推奨になりました。これは DOM Level 3 Events の古い版に含まれていました。
+- {{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}
+  - : これは {{domxref("KeyboardEvent.location")}} の標準外で非推奨の別名です。これは DOM Level 3 Events の古い版に含まれていました。
+- {{domxref("KeyboardEvent.which")}} {{deprecated_inline}} {{Readonlyinline}}
 
-<h4 id="Auto-repeat_handling_prior_to_Gecko_5.0" name="Auto-repeat_handling_prior_to_Gecko_5.0">Gecko 5.0 以前の自動リピートの扱い</h4>
+  - : 押されたキーの修飾されていない値を示す、 システムや実装に依存した数値コードを数値で返します。これは通常 `keyCode` と同じです。
 
-<p>Gecko 5.0 {{geckoRelease('5.0')}} 以前では、プラットフォーム間でキーボードのイベントハンドリングに差異が生じていました。</p>
+    > **Warning:** この属性は非推奨です。可能であれば、代わりに {{domxref("KeyboardEvent.key")}} を使用してください。
 
-<dl>
- <dt>Windows</dt>
- <dd>自動リピートの挙動に関して Gecko 4.0 とそれ以降で変化はありません。</dd>
- <dt>Mac</dt>
- <dd>最初に keydown イベントが発生した後、 keyup イベントが発生するまでは keypress イベントのみが発生します。断続的に keydown イベントが発生することはありません。</dd>
- <dt>Linux</dt>
- <dd>イベントの挙動はプラットフォームによって異なります。ネイティブのイベントモデルによって、 Windows のような挙動を示したり、 Mac のような挙動を示すものがあります。</dd>
-</dl>
+## イベント
 
-<p class="note"><strong>メモ:</strong> 手動でイベントを発生させても、関連する既定のアクションは<em>生じません</em>。例えば、手動でキーイベントを発生させても、その文字がテキストとして入力されることはありません。このような UI イベントの挙動は、セキュリティを意識して設計されています。この設計により、ブラウザーとやり取りするユーザー操作をスクリプトが模倣できないようにしています。</p>
+以下のイベントは `KeyboardEvent` 型に基づいています。これらのイベントは {{domxref("GlobalEventHandlers")}} を実装している任意のオブジェクト、たとえば {{domxref("Element")}}、{{domxref("Document")}}、{{domxref("Window")}} に配信することができます。以下のリストでは、各イベントは、そのイベントの `Element` のハンドラーのドキュメントにリンクしおり、これは一般的にすべての宛先に適用されます。
 
-<h2 id="Example" name="Example">例</h2>
+- {{domxref("Element.keydown_event", "keydown")}}
+  - : キーが押されました。
+- {{domxref("Element.keyup_event", "keyup")}}
+  - : キーが離されました。
 
-<pre class="brush: js notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;script&gt;
+### 廃止されたイベント
+
+- {{domxref("Element.keypress_event", "keypress")}} {{deprecated_inline}}
+  - : 通常は文字値を生成するキーが押されました。このイベントは端末への依存度が高いため、廃止されました。使用すべきではありません。
+
+## 使用上の注意
+
+イベントには {{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}}, {{domxref("Element/keyup_event", "keyup")}} の 3 種類があります。 Gecko ではほとんどのキーにおいて、以下のようにキーイベントが連続して発生します。
+
+1. そのキーが最初に押された時点で `keydown` イベントが発生します。
+2. そのキーが修飾キーでなかった場合、 `keypress` イベントが発生します。
+3. ユーザーがキーから指を離した時点で `keyup` イベントが発生します。
+
+### 特殊な場合
+
+Caps Lock や Num Lock、 Scroll Lock などのキーは LED 表示も切り替わります。 Windows と Linux では、このようなキーは `keydown` と `keyup` イベントのみが発生します。
+
+> **Note:** Linux の Firefox 12 以前では `keypress` イベントも発生していました。
+
+しかし Mac OS X のイベントモデルに関する制約から、Mac OS X の Caps Lock は `keydown` イベントのみが発生します。（2007 年モデル以前の）ノート型では Num Lock にも対応していましたが、今日の Mac OS X では外部キーボードにおいても Num Lock に対応していません。 Num Lock キーがある古い MacBook 上では、Num Lock キーによってイベントは何も発生しません。また、 F14 キーが接続されている外部キーボードであれば、 Gecko は Scroll Lock に対応しています。古い特定のバージョンの Firefox では、このキーによって `keypress` イベントが発生していました。この矛盾する挙動は {{bug(602812)}} で修正されました。
+
+### 自動リピートの扱い
+
+キーが押されたままになると自動リピートが始まります。これによって以下のようにイベントが連続して発生します。
+
+1. `keydown`
+2. `keypress`
+3. `keydown`
+4. `keypress`
+5. <\<ユーザーがキーから指を離すまで繰り返し>>
+6. `keyup`
+
+この流れは DOM Level 3 仕様書に定義されているものです。しかし、これには以下のような注意点があります。
+
+#### Ubuntu 9.4 など一部の GTK 環境における自動リピート
+
+GTK を用いた環境の中には、自動リピート時にネイティブの key-up イベントが発生するものがあります。このため、キーが連続して押されているのか自動リピートなのかを Gecko 側から認識することはできません。そのようなプラットフォームでの自動リピート時では、以下のようにキーイベントが連続して発生します。
+
+1. `keydown`
+2. `keypress`
+3. `keyup`
+4. `keydown`
+5. `keypress`
+6. `keyup`
+7. <\<ユーザーがキーから指を離すまで繰り返し>>
+8. `keyup`
+
+こういった環境では残念ながら、自動リピートなのか連打されただけなのかをウェブコンテンツ側から区別することはできません。
+
+#### Gecko 5.0 以前の自動リピートの扱い
+
+Gecko 5.0 {{geckoRelease('5.0')}} 以前では、プラットフォーム間でキーボードのイベントの扱いに差異が生じていました。
+
+- Windows
+  - : 自動リピートの挙動に関して Gecko 4.0 とそれ以降で変化はありません。
+- Mac
+  - : 最初に keydown イベントが発生した後、 keyup イベントが発生するまでは keypress イベントのみが発生します。断続的に keydown イベントが発生することはありません。
+- Linux
+  - : イベントの挙動はプラットフォームによって異なります。ネイティブのイベントモデルによって、 Windows のような挙動を示したり、 Mac のような挙動を示すものがあります。
+
+> **Note:** 手動でイベントを発生させても、関連する既定のアクションは*生じません*。例えば、手動でキーイベントを発生させても、その文字がテキストとして入力されることはありません。このような UI イベントの挙動は、セキュリティを意識して設計されています。この設計により、ブラウザーとやり取りするユーザー操作をスクリプトが模倣できないようにしています。
+
+## 例
+
+```js
+<!DOCTYPE html>
+<html>
+<head>
+<script>
 'use strict';
 
-document.addEventListener('keydown', (event) =&gt; {
+document.addEventListener('keydown', (event) => {
   const keyName = event.key;
 
   if (keyName === 'Control') {
@@ -275,67 +275,48 @@ document.addEventListener('keydown', (event) =&gt; {
   }
 
   if (event.ctrlKey) {
-    // Even though event.key is not 'Control' (e.g., 'a' is pressed),
-    // event.ctrlKey may be true if Ctrl key is pressed at the same time.
-    alert(`Combination of ctrlKey + ${keyName}`);
-  } else {
-    alert(`Key pressed ${keyName}`);
-  }
+    // Even though event.key is not 'Control' (e.g., 'a' is pressed),
+    // event.ctrlKey may be true if Ctrl key is pressed at the same time.
+    alert(`Combination of ctrlKey + ${keyName}`);
+  } else {
+    alert(`Key pressed ${keyName}`);
+  }
 }, false);
 
-document.addEventListener('keyup', (event) =&gt; {
-  const keyName = event.key;
+document.addEventListener('keyup', (event) => {
+  const keyName = event.key;
 
-  // As the user releases the Ctrl key, the key is no longer active,
-  // so event.ctrlKey is false.
-  if (keyName === 'Control') {
-    alert('Control key was released');
-  }
+  // As the user releases the Ctrl key, the key is no longer active,
+  // so event.ctrlKey is false.
+  if (keyName === 'Control') {
+    alert('Control key was released');
+  }
 }, false);
 
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body>
+</body>
+</html>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#interface-keyboardevent', 'KeyboardEvent')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p><code>KeyboardEvent</code> インターフェイスの草案は数多く提案されてきました。まず最初は DOM Events Level 2 でしたが意見がまとまらず破棄され、続いて DOM Events Level 3 が提案されました。これにより、非標準な初期化メソッドが実装されてしまいました (Gecko では DOM Events Level 2 の初期に定義されていた {{domxref("KeyboardEvent.initKeyEvent()")}} が、他のブラウザでは DOM Events Level 3 の初期に定義されていた {{domxref("KeyboardEvent.initKeyboardEvent()")}} です)。しかし両者のメソッドは、モダンなコンストラクターである {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} で置き換えられています。</p>
+`KeyboardEvent` インターフェイスの草案は数多く提案されてきました。まず最初は DOM Events Level 2 でしたが意見がまとまらず破棄され、続いて DOM Events Level 3 が提案されました。これにより、標準外な初期化メソッドが実装されてしまいました (Gecko では DOM Events Level 2 の初期に定義されていた {{domxref("KeyboardEvent.initKeyEvent()")}} が、他のブラウザーでは DOM Events Level 3 の初期に定義されていた {{domxref("KeyboardEvent.initKeyboardEvent()")}} です)。しかし両者のメソッドは、現代的なコンストラクターである {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} で置き換えられてました。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.KeyboardEvent")}}</p>
+{{Compat}}
 
-<h3 id="Compatibility_notes" name="Compatibility_notes">互換性のメモ</h3>
+### 互換性のメモ
 
-<ul>
- <li>Firefox 65 では、 <code>keypress</code> イベントは<a href="/ja/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)">印字可能キー以外</a>では発生しなくなりました ({{bug(968056)}})が、 <kbd>Enter</kbd> キー、 <kbd>Shift</kbd> + <kbd>Enter</kbd> キー、 <kbd>Ctrl</kbd> + <kbd>Enter</kbd> キーの組み合わせでは発生します (これらはブラウザー間の互換性の目的のために維持されています)。</li>
-</ul>
+- Firefox 65 では、 `keypress` イベントは[表示可能でないキー](</ja/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>)では発生しなくなりました（{{bug(968056)}}）が、 <kbd>Enter</kbd> キー、 <kbd>Shift</kbd> + <kbd>Enter</kbd> キー、 <kbd>Ctrl</kbd> + <kbd>Enter</kbd> キーの組み合わせでは発生します (これらはブラウザー間の互換性の目的のために維持されています)。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("KeyboardEvent.code")}}.</li>
- <li>{{domxref("KeyboardEvent.key")}}.</li>
- <li>{{domxref("KeyboardEvent.getModifierState()")}}</li>
-</ul>
+- {{domxref("KeyboardEvent.code")}}.
+- {{domxref("KeyboardEvent.key")}}.
+- {{domxref("KeyboardEvent.getModifierState()")}}
