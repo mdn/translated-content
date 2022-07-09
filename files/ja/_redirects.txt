@@ -3212,6 +3212,9 @@
 /ja/docs/Web/API/GlobalEventHandlers/onfocus	/ja/docs/Web/API/Window/focus_event
 /ja/docs/Web/API/GlobalEventHandlers/onreset	/ja/docs/conflicting/Web/API/HTMLFormElement/reset_event
 /ja/docs/Web/API/GlobalEventHandlers/onresize	/ja/docs/conflicting/Web/API/Window/resize_event
+/ja/docs/Web/API/GlobalEventHandlers/ontouchcancel	/ja/docs/conflicting/Web/API/Element/touchcancel_event
+/ja/docs/Web/API/GlobalEventHandlers/ontouchend	/ja/docs/conflicting/Web/API/Element/touchend_event
+/ja/docs/Web/API/GlobalEventHandlers/ontouchstart	/ja/docs/conflicting/Web/API/Element/touchstart_event
 /ja/docs/Web/API/GlobalFetch	/ja/docs/Web/API/WindowOrWorkerGlobalScope
 /ja/docs/Web/API/GlobalFetch/fetch	/ja/docs/Web/API/fetch
 /ja/docs/Web/API/HTMLElement/oncopy	/ja/docs/Web/API/HTMLElement/copy_event

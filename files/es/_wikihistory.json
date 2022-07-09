@@ -5985,6 +5985,12 @@
       "HenryGR"
     ]
   },
+  "Web/API/Element/touchstart_event": {
+    "modified": "2019-03-23T22:32:02.059Z",
+    "contributors": [
+      "AlePerez92"
+    ]
+  },
   "Web/API/Element/wheel_event": {
     "modified": "2019-04-08T07:24:47.493Z",
     "contributors": [
@@ -6494,12 +6500,6 @@
     "modified": "2019-03-18T21:31:41.533Z",
     "contributors": [
       "ANDRUS74"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontouchstart": {
-    "modified": "2019-03-23T22:32:02.059Z",
-    "contributors": [
-      "AlePerez92"
     ]
   },
   "Web/API/GlobalEventHandlers/onwheel": {

@@ -12032,6 +12032,12 @@
       "plter"
     ]
   },
+  "Web/API/Element/touchmove_event": {
+    "modified": "2019-03-18T21:44:43.652Z",
+    "contributors": [
+      "loszer"
+    ]
+  },
   "Web/API/Element/touchstart_event": {
     "modified": "2020-10-15T21:21:35.043Z",
     "contributors": [
@@ -13541,24 +13547,6 @@
       "teoli",
       "basemnassar11",
       "ziyunfei"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontouchcancel": {
-    "modified": "2019-03-23T22:24:39.358Z",
-    "contributors": [
-      "caoruiy"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontouchmove": {
-    "modified": "2019-03-18T21:44:43.652Z",
-    "contributors": [
-      "loszer"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontouchstart": {
-    "modified": "2019-03-23T22:02:33.940Z",
-    "contributors": [
-      "Cybs"
     ]
   },
   "Web/API/GlobalEventHandlers/ontransitioncancel": {
@@ -45805,6 +45793,18 @@
       "jsx",
       "AshfaqHossain",
       "ziyunfei"
+    ]
+  },
+  "conflicting/Web/API/Element/touchcancel_event": {
+    "modified": "2019-03-23T22:24:39.358Z",
+    "contributors": [
+      "caoruiy"
+    ]
+  },
+  "conflicting/Web/API/Element/touchstart_event": {
+    "modified": "2019-03-23T22:02:33.940Z",
+    "contributors": [
+      "Cybs"
     ]
   },
   "conflicting/Web/API/Element_861159909c20acebf8e506c3bb0e2f7e": {

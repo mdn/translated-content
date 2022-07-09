@@ -1466,6 +1466,9 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/onfocus	/zh-CN/docs/conflicting/Web/API/Window/focus_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onreset	/zh-CN/docs/conflicting/Web/API/HTMLFormElement/reset_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onresize	/zh-CN/docs/conflicting/Web/API/Window/resize_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/ontouchcancel	/zh-CN/docs/conflicting/Web/API/Element/touchcancel_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/ontouchmove	/zh-CN/docs/Web/API/Element/touchmove_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/ontouchstart	/zh-CN/docs/conflicting/Web/API/Element/touchstart_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/动画效果	/zh-CN/docs/Web/API/GlobalEventHandlers/onanimationend
 /zh-CN/docs/Web/API/GlobalEventHandlers/时长改变	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/durationchange_event
 /zh-CN/docs/Web/API/GlobalFetch/fetch	/zh-CN/docs/Web/API/fetch

@@ -14451,24 +14451,6 @@
       "chikoski"
     ]
   },
-  "Web/API/GlobalEventHandlers/ontouchcancel": {
-    "modified": "2020-11-13T00:53:08.096Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontouchend": {
-    "modified": "2020-11-13T00:36:12.048Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontouchstart": {
-    "modified": "2020-11-13T00:27:45.060Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ontransitioncancel": {
     "modified": "2020-10-15T22:15:05.668Z",
     "contributors": [
@@ -46771,6 +46753,24 @@
   },
   "conflicting/Web/API/Element/fullscreenerror_event": {
     "modified": "2020-10-15T22:27:05.707Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/Element/touchcancel_event": {
+    "modified": "2020-11-13T00:53:08.096Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/Element/touchend_event": {
+    "modified": "2020-11-13T00:36:12.048Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/Element/touchstart_event": {
+    "modified": "2020-11-13T00:27:45.060Z",
     "contributors": [
       "mfuji09"
     ]

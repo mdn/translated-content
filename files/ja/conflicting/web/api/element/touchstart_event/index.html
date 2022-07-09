@@ -1,13 +1,16 @@
 ---
-title: GlobalEventHandlers.ontouchend
-slug: Web/API/GlobalEventHandlers/ontouchend
+title: GlobalEventHandlers.ontouchstart
+slug: conflicting/Web/API/Element/touchstart_event
 tags:
   - API
+  - Event Handler
   - Experimental
+  - GlobalEventHandlers
   - HTML DOM
+  - Property
   - Reference
-  - TouchEvent
-translation_of: Web/API/GlobalEventHandlers/ontouchend
+translation_of: Web/API/GlobalEventHandlers/ontouchstart
+original_slug: Web/API/GlobalEventHandlers/ontouchstart
 ---
 <div>{{ApiRef("HTML DOM")}} {{SeeCompatTable}}</div>
 
@@ -19,34 +22,34 @@ translation_of: Web/API/GlobalEventHandlers/ontouchend
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
-<pre class="syntaxbox notranslate">var <var>endHandler</var> = <var>targetElement</var>.ontouchend;
+<pre class="syntaxbox notranslate">var <var>startHandler</var> = <var>someElement</var>.ontouchstart;
 </pre>
 
 <h3 id="Return_value" name="Return_value">返値</h3>
 
 <dl>
- <dt><code><var>endHandler</var></code></dt>
- <dd>要素 <code><var>targetElement</var></code> の <code>touchend</code> イベントハンドラー。</dd>
+ <dt><code><var>startHandler</var></code></dt>
+ <dd>要素 <code><var>someElement</var></code> の <code>touchstart</code> イベントハンドラー。</dd>
 </dl>
 
 <h2 id="Example" name="Example">例</h2>
 
-<p>この例では、<code>ontouchend</code> を使用して要素の <code>touchend</code> イベントを処理する2つの方法を示します。</p>
+<p>この例では、<code>ontouchstart</code> を使用して要素の <code>touchstart</code> イベントを処理する2つの方法を示します。</p>
 
 <pre class="brush: js notranslate">&lt;html&gt;
 &lt;script&gt;
-function endTouch(ev) {
+function startTouch(ev) {
   // イベントの処理
 }
 function init() {
   let el = document.getElementById('target1');
-  el.ontouchend = endTouch;
+  el.ontouchstart = startTouch;
 }
 &lt;/script&gt;
 
 &lt;body onload="init();"&gt;
   &lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-  &lt;div id="target2" ontouchend="endTouch(event)"&gt; Touch me ... &lt;/div&gt;
+  &lt;div id="target2" ontouchstart="startTouch(event)"&gt; Touch me ... &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
@@ -63,7 +66,7 @@ function init() {
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('Touch Events 2','#dom-globaleventhandlers-ontouchend')}}</td>
+   <td>{{SpecName('Touch Events 2','#dom-globaleventhandlers-ontouchstart')}}</td>
    <td>{{Spec2('Touch Events 2')}}</td>
    <td>非安定版</td>
   </tr>
@@ -72,10 +75,10 @@ function init() {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("api.GlobalEventHandlers.ontouchend")}}</p>
+<p>{{Compat("api.GlobalEventHandlers.onpointercancel")}}</p>
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
- <li>{{ event("touchend") }}</li>
+ <li>{{ event("touchstart") }}</li>
 </ul>

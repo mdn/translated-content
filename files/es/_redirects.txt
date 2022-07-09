@@ -1604,6 +1604,7 @@
 /es/docs/Web/API/GlobalEventHandlers/onblur	/es/docs/Web/API/Window/blur_event
 /es/docs/Web/API/GlobalEventHandlers/onfocus	/es/docs/Web/API/Window/focus_event
 /es/docs/Web/API/GlobalEventHandlers/onresize	/es/docs/Web/API/Window/resize_event
+/es/docs/Web/API/GlobalEventHandlers/ontouchstart	/es/docs/Web/API/Element/touchstart_event
 /es/docs/Web/API/HTMLElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /es/docs/Web/API/HTMLElement/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
 /es/docs/Web/API/HTMLOrForeignElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
