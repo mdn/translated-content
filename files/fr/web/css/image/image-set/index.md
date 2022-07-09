@@ -20,7 +20,7 @@ où <image-set-option> = [ <image> | <string> ] <resolution> et
       <string> est une <url>
 ```
 
-### Values
+### Valeurs
 
 - `<image>`
   - : Une valeur de type [`<image>`](/fr/docs/Web/CSS/image) qui peut être n'importe quelle image sauf un ensemble d'image. Autrement dit, la fonction `image-set()` ne peut pas être imbriquée dans une autre fonction `image-set()`.

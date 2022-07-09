@@ -81,7 +81,7 @@ conic-gradient(red, orange, yellow, green, blue);
 conic-gradient(red 0deg, orange 90deg, yellow 180deg, green 270deg, blue 360deg);
 ```
 
-Par défaut, la transition entre les couleurs de deux arrêts se fera progressivement avec la moitié de la transition à la moitié de l'angle. Ce milieu de transition peut être déplacé en ajoutant une indication de couleur qui définit l'emplacement voulu. L'exemple suivant commence avec du rouge jusqu'à 10%, fait une transition du rouge au bleu sur 80% du tour, les 10% restants sont en bleu. Cependant, le point de changement entre le bleu et le rouge se situe à 20% plutôt qu'à 50% (ce qui se serait produit sans l'indication <code>80grad</code>).
+Par défaut, la transition entre les couleurs de deux arrêts se fera progressivement avec la moitié de la transition à la moitié de l'angle. Ce milieu de transition peut être déplacé en ajoutant une indication de couleur qui définit l'emplacement voulu. L'exemple suivant commence avec du rouge jusqu'à 10%, fait une transition du rouge au bleu sur 80% du tour, les 10% restants sont en bleu. Cependant, le point de changement entre le bleu et le rouge se situe à 20% plutôt qu'à 50% (ce qui se serait produit sans l'indication `80grad`).
 
 ```css
 conic-gradient(red 40grad, 80grad, blue 360grad);

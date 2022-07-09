@@ -25,7 +25,7 @@ Comme pour les autres dégradés, un dégradé linéaire répété n'est pas une
 repeating-linear-gradient(45deg, blue, red 33.3%);
 
 /* Un dégradé répétitif allant du coin inférieur droit
-   à coin supérieur gauche débutant bleu et finissant rouge
+   au coin supérieur gauche débutant bleu et finissant rouge
    et répété tous les 20 pixels */
 repeating-linear-gradient(to left top, blue, red 20px);
 
@@ -78,7 +78,7 @@ body {
       transparent 20px,
       black 20px,
       black 40px);
-  /* with multiple color stop lengths */
+  /* avec plusieurs arrêts de couleur */
   background-image: repeating-linear-gradient(-45deg,
       transparent 0 20px,
       black 20px 40px);

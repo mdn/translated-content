@@ -16,14 +16,12 @@ La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`image()
 
 ### Paramètres
 
-
 - `image-tags` {{Optional_Inline}}
-  - :La directionnalité de l'image, la valeur `ltr` pourra être utilisée afin d'indiquer que l'image est orientée de gauche à droite ou la valeur `rtl` pour indiquer une orientation de droite à gauche.
+  - : La directionnalité de l'image, la valeur `ltr` pourra être utilisée afin d'indiquer que l'image est orientée de gauche à droite ou la valeur `rtl` pour indiquer une orientation de droite à gauche.
 - `image-src` {{Optional_Inline}}
   - : Zéro, une ou plusieurs [URL](fr/docs/Web/CSS/url) ou chaînes de caractères ([`<string>`](/fr/docs/Web/CSS/string)) indiquant des sources d'image et qui contiennent éventuellement des identifiants de fragment
 - `color` {{Optional_Inline}}
   - : Une couleur par défaut. Cette couleur sera utilisée par défaut si aucune image n'est trouvée ou prise en charge parmi les images fournies via `image-src`.
-
 
 ### Gestion de la directionnalité
 
@@ -130,7 +128,7 @@ Lorsqu'on survole la boîte, le curseur changera pour afficher une section d'un 
 
 Dans l'exemple précédent, on placera un masque noir semi-transparent sur le logo Firefox utilisé comme image d'arrière-plan. Si on avait utilisé la propriété `background-color` à la place, la couleur aurait été placée sous le logo et non sur lui. De plus, le conteneur entier aurait eu cette couleur en arrière-plan. Avec `image()` et [`background-size`](/fr/docs/Web/CSS/background-size) (tout en empêchant l'image de se répéter grâce à [`background-repeat`](/fr/docs/Web/CSS/background-repeat)), le voile noir ne couvrira qu'un quart du conteneur.
 
-<div>{{EmbedLiveSample("","100%","220")}}</div>
+{{EmbedLiveSample("","100%","220")}}
 
 ## Spécifications
 

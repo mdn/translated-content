@@ -23,7 +23,7 @@ Un dégradé radial est défini en indiquant le centre du dégradé (là où ser
 
 ### Valeurs
 
-- [`<position>`](/fr/docs/Web/CSS/position)
+- [`<position>`](/fr/docs/Web/CSS/position_value)
   - : La position du dégradé, interprétée de la même façon que pour les propriétés [`background-position`](/fr/docs/Web/CSS/background-position) ou [`transform-origin`](/fr/docs/Web/CSS/transform-origin). La valeur par défaut est `center`.
 - `<ending-shape>`
   - : La forme du contour du dégradé. Elle vaut soit `circle` (la forme du dégradé sera un cercle de rayon constant) ou `ellipse` (la forme est une ellipse alignée sur les axes). La valeur par défaut est `ellipse`.
