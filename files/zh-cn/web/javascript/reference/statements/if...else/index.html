@@ -10,15 +10,11 @@ translation_of: Web/JavaScript/Reference/Statements/if...else
 <div> {{jsSidebar("Statements")}}</div>
 </div>
 
-<p><span style="line-height: 19.0909080505371px;">当指定条件为真，</span><strong>if 语句</strong>会执行一段语句。如果条件为假，则执行另一段语句。</p>
+<p>当指定条件为真，<strong>if 语句</strong>会执行一段语句。如果条件为假，则执行另一段语句。</p>
 
 <p>{{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}</p>
 
-<div class="hidden">
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
-</div>
-
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">if (<em>condition</em>)
    <em>statement1</em>
@@ -29,19 +25,13 @@ translation_of: Web/JavaScript/Reference/Statements/if...else
 <dl>
  <dt><code>condition</code></dt>
  <dd>值为真或假的<a href="/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions">表达式</a></dd>
-</dl>
-
-<dl>
  <dt><code>statement1</code></dt>
  <dd>当<code>condition</code>为真时执行的语句。可为任意语句，包括更深层的内部<code>if</code>语句。要执行多条语句，使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/block" title="en/JavaScript/Reference/Statements/block">块</a>语句（{ ... }）将这些语句分组；若不想执行语句，则使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/Empty">空</a>语句。 </dd>
-</dl>
-
-<dl>
  <dt><code>statement2</code></dt>
- <dd>如果<code>condition</code>为假且 <code>else</code>从句存在时执行的语句。<span style="line-height: 19.0909080505371px;">可为任意语句，包括块语句和</span>嵌套的<code>if</code>语句<span style="line-height: 19.0909080505371px;">。</span></dd>
+ <dd>如果<code>condition</code>为假且 <code>else</code>从句存在时执行的语句。可为任意语句，包括块语句和嵌套的<code>if</code>语句。</dd>
 </dl>
 
-<h2 id="Description" name="Description">说明</h2>
+<h2 id="Description">说明</h2>
 
 <p>多层 <code>if...else</code> 语句可使用 <code>else if</code> 从句。注意：在 Javascript 中没有 <code>elseif</code> （一个单词）关键字。</p>
 
@@ -78,15 +68,15 @@ else
 }
 </pre>
 
-<p>不要将原始布尔值的<code>true</code>和<code>false</code>与<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>对象的真或假混淆。任何一个值，只要它不是 <code>undefined</code><font face="Open Sans, Arial, sans-serif">、</font><code>null</code>、 <code>0</code><font face="Open Sans, Arial, sans-serif">、</font><code>NaN</code>或空字符串（<code>""</code>），那么无论是任何对象，即使是值为假的Boolean对象，在条件语句中都为真。例如：</p>
+<p>不要将原始布尔值的<code>true</code>和<code>false</code>与<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>对象的真或假混淆。任何一个值，只要它不是 <code>undefined</code>、<code>null</code>、 <code>0</code>、<code>NaN</code>或空字符串（<code>""</code>），那么无论是任何对象，即使是值为假的 Boolean 对象，在条件语句中都为真。例如：</p>
 
 <pre class="brush: js">var b = new Boolean(false);
-if (b) //表达式的值为true
+if (b) //表达式的值为 true
 </pre>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example:_Using_if...else" name="Example:_Using_if...else">使用 <code>if...else</code></h3>
+<h3 id="Example:_Using_if...else">使用 <code>if...else</code></h3>
 
 <pre class="brush: js">if (cipher_char === from_char) {
    result = result + to_char;
@@ -98,7 +88,7 @@ if (b) //表达式的值为true
 
 <h3 id="使用_else_if">使用 <code>else if</code></h3>
 
-<p>注意，Javascript中没有<code>elseif</code>语句。但可以使用<code>else</code>和<code>if</code>中间有空格的语句：</p>
+<p>注意，Javascript 中没有<code>elseif</code>语句。但可以使用<code>else</code>和<code>if</code>中间有空格的语句：</p>
 
 <pre class="brush: js">if (x &gt; 5) {
  /* do the right thing */
@@ -108,7 +98,7 @@ if (b) //表达式的值为true
  /* do the right thing */
 }</pre>
 
-<h3 id="Example:_Assignment_within_the_conditional_expression" name="Example:_Assignment_within_the_conditional_expression">条件表达式中的赋值运算</h3>
+<h3 id="Example:_Assignment_within_the_conditional_expression">条件表达式中的赋值运算</h3>
 
 <p>建议不要在条件表达式中单纯的使用赋值运算，因为粗看下赋值运算的代码很容易让人误认为是等性比较。比如，不要使用下面示例的代码：</p>
 
@@ -165,7 +155,7 @@ if (b) //表达式的值为true
 
 <p>{{Compat("javascript.statements.if_else")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Statements/block", "block")}}</li>

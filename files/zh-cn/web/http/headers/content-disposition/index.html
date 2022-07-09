@@ -12,11 +12,11 @@ translation_of: Web/HTTP/Headers/Content-Disposition
 
 <div>在常规的 HTTP 应答中，<code><strong>Content-Disposition</strong></code> 响应头指示回复的内容该以何种形式展示，是以<strong>内联</strong>的形式（即网页或者页面的一部分），还是以<strong>附件</strong>的形式下载并保存到本地。</div>
 
-<div></div>
+
 
 <p>在 multipart/form-data 类型的应答消息体中，<strong><code>Content-Disposition</code></strong> 消息头可以被用在 multipart 消息体的子部分中，用来给出其对应字段的相关信息。各个子部分由在{{HTTPHeader("Content-Type")}} 中定义的<strong>分隔符</strong>分隔。用在消息体自身则无实际意义。</p>
 
-<p>Content-Disposition 消息头最初是在 MIME 标准中定义的，HTTP 表单及 {{HTTPMethod("POST")}} 请求只用到了其所有参数的一个子集。只有 <code>form-data</code> 以及可选的 <code>name</code> 和 <code>filename</code> 三个参数可以应用在HTTP场景中。</p>
+<p>Content-Disposition 消息头最初是在 MIME 标准中定义的，HTTP 表单及 {{HTTPMethod("POST")}} 请求只用到了其所有参数的一个子集。只有 <code>form-data</code> 以及可选的 <code>name</code> 和 <code>filename</code> 三个参数可以应用在 HTTP 场景中。</p>
 
 <table class="properties">
  <tbody>
@@ -42,9 +42,9 @@ translation_of: Web/HTTP/Headers/Content-Disposition
 Content-Disposition: attachment
 Content-Disposition: attachment; filename="filename.jpg"</pre>
 
-<h3 id="作为multipart_body中的消息头">作为multipart body中的消息头</h3>
+<h3 id="作为multipart_body中的消息头">作为 multipart body 中的消息头</h3>
 
-<p>在 HTTP 场景中。第一个参数总是固定不变的 <code>form-data</code>；附加的参数不区分大小写，并且拥有参数值，参数名与参数值用等号(<code>'='</code>)连接，参数值用双引号括起来。参数之间用分号(<code>';'</code>)分隔。</p>
+<p>在 HTTP 场景中。第一个参数总是固定不变的 <code>form-data</code>；附加的参数不区分大小写，并且拥有参数值，参数名与参数值用等号 (<code>'='</code>) 连接，参数值用双引号括起来。参数之间用分号 (<code>';'</code>) 分隔。</p>
 
 <pre class="syntaxbox notranslate">Content-Disposition: form-data
 Content-Disposition: form-data; name="fieldName"
@@ -78,7 +78,7 @@ Content-Length: 22
 
 <p>这个简单的 HTML 文件会被下载到本地而不是在浏览器中展示。大多数浏览器默认会建议将 <code>cool.html</code> 作为文件名。</p>
 
-<p>以下是一个HTML表单的示例，展示了在 <code>multipart/form-data</code> 格式的报文中使用<code>Content-Disposition</code> 消息头的情况：</p>
+<p>以下是一个 HTML 表单的示例，展示了在 <code>multipart/form-data</code> 格式的报文中使用<code>Content-Disposition</code> 消息头的情况：</p>
 
 <pre class="notranslate">POST /test.html HTTP/1.1
 Host: example.org
@@ -124,7 +124,7 @@ value2
 <h2 id="兼容性说明">兼容性说明</h2>
 
 <ul>
- <li>在 <code>filename</code> 和 <code>filename*</code> 两个参数同时出现的情况下，Firefox 5 （比以前的版本）可以更好地处理 <code>Content-Disposition</code> 应答消息头。它会遍历所有提供的名称，假如 <code>filename*</code> 存在的话，就采用它的值，即使 <code>filename</code> 更靠前。之前的版本会采用出现在前面的参数的值，导致有更合适的名称而不被使用。参见{{bug(588781)}}.</li>
+ <li>在 <code>filename</code> 和 <code>filename*</code> 两个参数同时出现的情况下，Firefox 5（比以前的版本）可以更好地处理 <code>Content-Disposition</code> 应答消息头。它会遍历所有提供的名称，假如 <code>filename*</code> 存在的话，就采用它的值，即使 <code>filename</code> 更靠前。之前的版本会采用出现在前面的参数的值，导致有更合适的名称而不被使用。参见{{bug(588781)}}.</li>
 </ul>
 
 <h2 id="相关链接">相关链接</h2>
@@ -132,5 +132,5 @@ value2
 <ul>
  <li><a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a></li>
  <li>{{HTTPHeader("Content-Type")}}  中定义了 multipart body 的分隔符</li>
- <li>{{domxref("FormData")}} 接口可以用来操作在 {{domxref("XMLHttpRequest")}} API中使用的表单数据。</li>
+ <li>{{domxref("FormData")}} 接口可以用来操作在 {{domxref("XMLHttpRequest")}} API 中使用的表单数据。</li>
 </ul>

@@ -1,11 +1,6 @@
 ---
 title: Utiliser les animations CSS
 slug: Web/CSS/CSS_Animations/Using_CSS_animations
-tags:
-  - Avancé
-  - CSS
-  - Guide
-  - Reference
 translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 original_slug: Web/CSS/Animations_CSS/Utiliser_les_animations_CSS
 ---
@@ -15,9 +10,9 @@ Les **animations CSS** permettent de créer des transitions entre deux états de
 
 Trois avantages permettent de distinguer les animations CSS des techniques d'animations utilisant JavaScript :
 
-1.  On peut aisément obtenir des animations simples sans avoir à connaître JavaScript.
-2.  Les animations s'exécuteront correctement même lorsque le système est soumis à une charge modérée. Il est possible que des animations JavaScript s'exécutent lentement si elles sont mal décrites. Dans le cadre des animations CSS, le moteur de rendu peut utiliser certaines techniques (comme le _frame-skipping_) afin que le résultat obtenu soit aussi fluide que possible.
-3.  En laissant le contrôle de l'animation au navigateur, celui-ci peut optimiser les performances et l'efficacité du système, par exemple en réduisant la fréquence de mise à jour des animations qui sont exécutées dans des onglets qui ne sont pas visibles à l'écran.
+1. On peut aisément obtenir des animations simples sans avoir à connaître JavaScript.
+2. Les animations s'exécuteront correctement même lorsque le système est soumis à une charge modérée. Il est possible que des animations JavaScript s'exécutent lentement si elles sont mal décrites. Dans le cadre des animations CSS, le moteur de rendu peut utiliser certaines techniques (comme le _frame-skipping_) afin que le résultat obtenu soit aussi fluide que possible.
+3. En laissant le contrôle de l'animation au navigateur, celui-ci peut optimiser les performances et l'efficacité du système, par exemple en réduisant la fréquence de mise à jour des animations qui sont exécutées dans des onglets qui ne sont pas visibles à l'écran.
 
 ## Paramétrer l'animation
 
@@ -95,7 +90,7 @@ her in a languid, sleepy voice.</p>
 
 > **Note :** Pour observer l'animation, il peut être nécessaire de rafraîchir la page ou d'utiliser la vue CodePen/JSFiddle.
 
-{{EmbedLiveSample("Définir_les_étapes_composant_une_animation_(@keyframes)","100%","250")}}
+{{EmbedLiveSample("Utiliser_une_animation_pour_que_le_texte_traverse_la_fenêtre_du_navigateur","100%","250")}}
 
 ### Ajouter une autre étape
 

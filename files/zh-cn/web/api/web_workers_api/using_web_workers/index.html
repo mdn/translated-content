@@ -13,31 +13,31 @@ translation_of: Web/API/Web_Workers_API/Using_web_workers
 ---
 <div>{{DefaultAPISidebar("Web Workers API")}}</div>
 
-<p class="summary">Web Worker为Web内容在后台线程中运行脚本提供了一种简单的方法。线程可以执行任务而不干扰用户界面。此外，他们可以使用<code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest">XMLHttpRequest</a></code>执行 I/O  (尽管<code>responseXML</code>和<code>channel</code>属性总是为空)。一旦创建， 一个worker 可以将消息发送到创建它的JavaScript代码, 通过将消息发布到该代码指定的事件处理程序（反之亦然）。本文提供了有关使用Web Worker的详细介绍。</p>
+<p>Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的方法。线程可以执行任务而不干扰用户界面。此外，他们可以使用<code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest">XMLHttpRequest</a></code>执行 I/O  (尽管<code>responseXML</code>和<code>channel</code>属性总是为空)。一旦创建， 一个 worker 可以将消息发送到创建它的 JavaScript 代码，通过将消息发布到该代码指定的事件处理程序（反之亦然）。本文提供了有关使用 Web Worker 的详细介绍。</p>
 
 <h2 id="Web_Workers_API">Web Workers API</h2>
 
-<p>一个worker是使用一个构造函数创建的一个对象(e.g. {{domxref("Worker.Worker", "Worker()")}}) 运行一个命名的JavaScript文件 - 这个文件包含将在工作线程中运行的代码; workers 运行在另一个全局上下文中,不同于当前的{{domxref("window")}}. 因此，在 {{domxref("Worker")}} 内通过 {{domxref("window")}}获取全局作用域 (而不是{{domxref("window.self","self")}}) 将返回错误。</p>
+<p>一个 worker 是使用一个构造函数创建的一个对象 (e.g. {{domxref("Worker.Worker", "Worker()")}}) 运行一个命名的 JavaScript 文件 - 这个文件包含将在工作线程中运行的代码; workers 运行在另一个全局上下文中，不同于当前的{{domxref("window")}}. 因此，在 {{domxref("Worker")}} 内通过 {{domxref("window")}}获取全局作用域 (而不是{{domxref("window.self","self")}}) 将返回错误。</p>
 
-<p>在专用workers的情况下，{{domxref("DedicatedWorkerGlobalScope")}} 对象代表了worker的上下文（专用workers是指标准worker仅在单一脚本中被使用；共享worker的上下文是{{domxref("SharedWorkerGlobalScope")}}对象）。一个专用worker仅仅能被首次生成它的脚本使用，而共享worker可以同时被多个脚本使用。</p>
+<p>在专用 workers 的情况下，{{domxref("DedicatedWorkerGlobalScope")}} 对象代表了 worker 的上下文（专用 workers 是指标准 worker 仅在单一脚本中被使用；共享 worker 的上下文是{{domxref("SharedWorkerGlobalScope")}}对象）。一个专用 worker 仅仅能被首次生成它的脚本使用，而共享 worker 可以同时被多个脚本使用。</p>
 
-<div class="note"><strong>注意</strong>：参照 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">The Web Workers API landing page</a> 获取workers的参考文档和更多指引。</div>
+<div class="note"><strong>注意</strong>：参照 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">The Web Workers API landing page</a> 获取 workers 的参考文档和更多指引。</div>
 
-<p>在worker线程中你可以运行任何你喜欢的代码，不过有一些例外情况。比如：在worker内，不能直接操作DOM节点，也不能使用{{domxref("window")}}对象的默认方法和属性。然而你可以使用大量window对象之下的东西，包括WebSockets，IndexedDB以及FireFox OS专用的Data Store API等数据存储机制。查看<a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">Functions and classes available to workers</a>获取详情。</p>
+<p>在 worker 线程中你可以运行任何你喜欢的代码，不过有一些例外情况。比如：在 worker 内，不能直接操作 DOM 节点，也不能使用{{domxref("window")}}对象的默认方法和属性。然而你可以使用大量 window 对象之下的东西，包括 WebSockets，IndexedDB 以及 FireFox OS 专用的 Data Store API 等数据存储机制。查看<a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">Functions and classes available to workers</a>获取详情。</p>
 
-<p>workers和主线程间的数据传递通过这样的消息机制进行——双方都使用postMessage()方法发送各自的消息，使用onmessage事件处理函数来响应消息（消息被包含在{{event("Message")}}事件的data属性中）。这个过程中数据并不是被共享而是被复制。</p>
+<p>workers 和主线程间的数据传递通过这样的消息机制进行——双方都使用 postMessage() 方法发送各自的消息，使用 onmessage 事件处理函数来响应消息（消息被包含在{{event("Message")}}事件的 data 属性中）。这个过程中数据并不是被共享而是被复制。</p>
 
-<p>只要运行在同源的父页面中，workers可以依次生成新的workers；并且可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> 进行网络I/O，但是XMLHttpRequest的responseXML和channel属性总会返回null。</p>
+<p>只要运行在同源的父页面中，workers 可以依次生成新的 workers；并且可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> 进行网络 I/O，但是 XMLHttpRequest 的 responseXML 和 channel 属性总会返回 null。</p>
 
-<h2 id="专用worker">专用worker</h2>
+<h2 id="专用worker">专用 worker</h2>
 
-<p>如前文所述，一个专用worker仅仅能被生成它的脚本所使用。这一部分将探讨<a href="https://github.com/mdn/simple-web-worker"> 专用worker基础示例</a> (<a href="https://mdn.github.io/simple-web-worker/">运行专用worker</a>) 中的JavaScript代码：将你输入的2个数字作乘法。输入的数字会发送给一个专用worker，由专用worker作乘法后，再返回给页面进行展示。</p>
+<p>如前文所述，一个专用 worker 仅仅能被生成它的脚本所使用。这一部分将探讨<a href="https://github.com/mdn/simple-web-worker"> 专用 worker 基础示例</a> (<a href="https://mdn.github.io/simple-web-worker/">运行专用 worker</a>) 中的 JavaScript 代码：将你输入的 2 个数字作乘法。输入的数字会发送给一个专用 worker，由专用 worker 作乘法后，再返回给页面进行展示。</p>
 
-<p>这个例子很小，但是我们决定在保持简单的同时向你介绍基础的worker概念。更多的细节会在之后的文章中进行讲解。</p>
+<p>这个例子很小，但是我们决定在保持简单的同时向你介绍基础的 worker 概念。更多的细节会在之后的文章中进行讲解。</p>
 
-<h3 id="worker特性检测">worker特性检测</h3>
+<h3 id="worker特性检测">worker 特性检测</h3>
 
-<p>为了更好的错误处理控制以及向下兼容，将你的worker运行代码包裹在以下代码中是一个很好的想法(main.js)：</p>
+<p>为了更好的错误处理控制以及向下兼容，将你的 worker 运行代码包裹在以下代码中是一个很好的想法 (main.js)：</p>
 
 <pre class="brush: js notranslate">if (window.Worker) {
 
@@ -45,15 +45,15 @@ translation_of: Web/API/Web_Workers_API/Using_web_workers
 
 }</pre>
 
-<h3 id="生成一个专用worker">生成一个专用worker</h3>
+<h3 id="生成一个专用worker">生成一个专用 worker</h3>
 
-<p>创建一个新的worker很简单。你需要做的是调用{{domxref("Worker.Worker", "Worker()")}} 的构造器，指定一个脚本的URI来执行worker线程（main.js）：</p>
+<p>创建一个新的 worker 很简单。你需要做的是调用{{domxref("Worker.Worker", "Worker()")}} 的构造器，指定一个脚本的 URI 来执行 worker 线程（main.js）：</p>
 
 <pre class="brush: js notranslate">var myWorker = new Worker('worker.js');</pre>
 
-<h3 id="专用worker中消息的接收和发送">专用worker中消息的接收和发送</h3>
+<h3 id="专用worker中消息的接收和发送">专用 worker 中消息的接收和发送</h3>
 
-<p>你可以通过{{domxref("Worker.postMessage", "postMessage()")}} 方法和{{domxref("Worker.onmessage", "onmessage")}}事件处理函数触发workers的方法。当你想要向一个worker发送消息时，你只需要这样做（main.js）：</p>
+<p>你可以通过{{domxref("Worker.postMessage", "postMessage()")}} 方法和{{domxref("Worker.onmessage", "onmessage")}}事件处理函数触发 workers 的方法。当你想要向一个 worker 发送消息时，你只需要这样做（main.js）：</p>
 
 <pre class="brush: js notranslate">first.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
@@ -65,9 +65,9 @@ second.onchange = function() {
   console.log('Message posted to worker');
 }</pre>
 
-<p>这段代码中变量first和second代表2个{{htmlelement("input")}}元素；它们当中任意一个的值发生改变时，myWorker.postMessage([first.value,second.value])会将这2个值组成数组发送给worker。你可以在消息中发送许多你想发送的东西。</p>
+<p>这段代码中变量 first 和 second 代表 2 个{{htmlelement("input")}}元素；它们当中任意一个的值发生改变时，myWorker.postMessage([first.value,second.value]) 会将这 2 个值组成数组发送给 worker。你可以在消息中发送许多你想发送的东西。</p>
 
-<p>在worker中接收到消息后，我们可以写这样一个事件处理函数代码作为响应（worker.js）：</p>
+<p>在 worker 中接收到消息后，我们可以写这样一个事件处理函数代码作为响应（worker.js）：</p>
 
 <pre class="brush: js notranslate">onmessage = function(e) {
   console.log('Message received from main script');
@@ -76,34 +76,34 @@ second.onchange = function() {
   postMessage(workerResult);
 }</pre>
 
-<p>onmessage处理函数允许我们在任何时刻，一旦接收到消息就可以执行一些代码，代码中消息本身作为事件的data属性进行使用。这里我们简单的对这2个数字作乘法处理并再次使用postMessage()方法，将结果回传给主线程。</p>
+<p>onmessage 处理函数允许我们在任何时刻，一旦接收到消息就可以执行一些代码，代码中消息本身作为事件的 data 属性进行使用。这里我们简单的对这 2 个数字作乘法处理并再次使用 postMessage() 方法，将结果回传给主线程。</p>
 
-<p>回到主线程，我们再次使用onmessage以响应worker回传的消息：</p>
+<p>回到主线程，我们再次使用 onmessage 以响应 worker 回传的消息：</p>
 
 <pre class="brush: js notranslate">myWorker.onmessage = function(e) {
   result.textContent = e.data;
   console.log('Message received from worker');
 }</pre>
 
-<p>在这里我们获取消息事件的data，并且将它设置为result的textContent，所以用户可以直接看到运算的结果。</p>
+<p>在这里我们获取消息事件的 data，并且将它设置为 result 的 textContent，所以用户可以直接看到运算的结果。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 在主线程中使用时，<code>onmessage</code>和<code>postMessage()</code> 必须挂在worker对象上，而在worker中使用时不用这样做。原因是，在worker内部，worker是有效的全局作用域。</p>
+<p><strong>注意：</strong> 在主线程中使用时，<code>onmessage</code>和<code>postMessage()</code> 必须挂在 worker 对象上，而在 worker 中使用时不用这样做。原因是，在 worker 内部，worker 是有效的全局作用域。</p>
 </div>
 
 <div class="note">
-<p><strong>注意：</strong> 当一个消息在主线程和worker之间传递时，它被复制或者转移了，而不是共享。请参阅{{anch("Transferring data to and from workers further details", "Transferring data to and from workers: further details")}} 获取更详尽的解释。</p>
+<p><strong>注意：</strong> 当一个消息在主线程和 worker 之间传递时，它被复制或者转移了，而不是共享。请参阅<a href="#worker中数据的接收与发送：详细介绍">worker 中数据的接收与发送：详细介绍</a> 获取更详尽的解释。</p>
 </div>
 
-<h3 id="终止worker">终止worker</h3>
+<h3 id="终止worker">终止 worker</h3>
 
-<p>如果你需要从主线程中立刻终止一个运行中的worker，可以调用worker的{{domxref("Worker", "terminate")}} 方法：</p>
+<p>如果你需要从主线程中立刻终止一个运行中的 worker，可以调用 worker 的{{domxref("Worker", "terminate")}} 方法：</p>
 
 <pre class="brush: js notranslate">myWorker.terminate();</pre>
 
 <p>worker 线程会被立即杀死，不会有任何机会让它完成自己的操作或清理工作。</p>
 
-<p>而在worker线程中，workers 也可以调用自己的 {{domxref("WorkerGlobalScope", "close")}}  方法进行关闭：</p>
+<p>而在 worker 线程中，workers 也可以调用自己的 {{domxref("WorkerGlobalScope", "close")}}  方法进行关闭：</p>
 
 <pre class="brush: js notranslate"><code>close();</code></pre>
 
@@ -124,63 +124,63 @@ second.onchange = function() {
  <dd>发生错误时所在脚本文件的行号。</dd>
 </dl>
 
-<h3 id="生成subworker">生成subworker</h3>
+<h3 id="生成subworker">生成 subworker</h3>
 
-<p>如果需要的话 worker 能够生成更多的 worker。这就是所谓的subworker，它们必须托管在同源的父页面内。而且，subworker 解析 URI 时会相对于父 worker 的地址而不是自身页面的地址。这使得 worker 更容易记录它们之间的依赖关系。</p>
+<p>如果需要的话 worker 能够生成更多的 worker。这就是所谓的 subworker，它们必须托管在同源的父页面内。而且，subworker 解析 URI 时会相对于父 worker 的地址而不是自身页面的地址。这使得 worker 更容易记录它们之间的依赖关系。</p>
 
 <h3 id="引入脚本与库">引入脚本与库</h3>
 
-<p>Worker 线程能够访问一个全局函数<code>importScripts()</code>来引入脚本，该函数接受0个或者多个URI作为参数来引入资源；以下例子都是合法的：</p>
+<p>Worker 线程能够访问一个全局函数<code>importScripts()</code>来引入脚本，该函数接受 0 个或者多个 URI 作为参数来引入资源；以下例子都是合法的：</p>
 
 <pre class="brush: js notranslate">importScripts();                        /* 什么都不引入 */
 importScripts('foo.js');                /* 只引入 "foo.js" */
 importScripts('foo.js', 'bar.js');      /* 引入两个脚本 */
 </pre>
 
-<p>浏览器加载并运行每一个列出的脚本。每个脚本中的全局对象都能够被 worker 使用。如果脚本无法加载，将抛出 <code>NETWORK_ERROR</code> 异常，接下来的代码也无法执行。而之前执行的代码(包括使用 {{ domxref("window.setTimeout()") }} 异步执行的代码)依然能够运行。<code>importScripts()</code> <strong>之后</strong>的函数声明依然会被保留，因为它们始终会在其他代码之前运行。</p>
+<p>浏览器加载并运行每一个列出的脚本。每个脚本中的全局对象都能够被 worker 使用。如果脚本无法加载，将抛出 <code>NETWORK_ERROR</code> 异常，接下来的代码也无法执行。而之前执行的代码 (包括使用 {{ domxref("window.setTimeout()") }} 异步执行的代码) 依然能够运行。<code>importScripts()</code> <strong>之后</strong>的函数声明依然会被保留，因为它们始终会在其他代码之前运行。</p>
 
 <div class="note"><strong>注意：</strong> 脚本的下载顺序不固定，但执行时会按照传入 <code>importScripts()</code> 中的文件名顺序进行。这个过程是同步完成的；直到所有脚本都下载并运行完毕，<code>importScripts()</code> 才会返回。</div>
 
-<h2 id="共享worker">共享worker</h2>
+<h2 id="共享worker">共享 worker</h2>
 
-<p>一个共享worker可以被多个脚本使用——即使这些脚本正在被不同的window、iframe或者worker访问。这一部分，我们会讨论<a href="https://github.com/mdn/simple-shared-worker">共享worker基础示例</a>（<a href="https://mdn.github.io/simple-shared-worker/">运行共享worker</a>）中的javascript代码：该示例与专用worker基础示例非常相像，只是有2个可用函数被存放在不同脚本文件中：两数相乘函数，以及求平方函数。这两个脚本用同一个worker来完成实际需要的运算。</p>
+<p>一个共享 worker 可以被多个脚本使用——即使这些脚本正在被不同的 window、iframe 或者 worker 访问。这一部分，我们会讨论<a href="https://github.com/mdn/simple-shared-worker">共享 worker 基础示例</a>（<a href="https://mdn.github.io/simple-shared-worker/">运行共享 worker</a>）中的 javascript 代码：该示例与专用 worker 基础示例非常相像，只是有 2 个可用函数被存放在不同脚本文件中：两数相乘函数，以及求平方函数。这两个脚本用同一个 worker 来完成实际需要的运算。</p>
 
-<p>这里，我们关注一下专用worker和共享worker之间的区别。在这个示例中有2个HTML页面，每个页面所包含的javascript代码使用的是同一个worker。</p>
+<p>这里，我们关注一下专用 worker 和共享 worker 之间的区别。在这个示例中有 2 个 HTML 页面，每个页面所包含的 javascript 代码使用的是同一个 worker。</p>
 
 <div class="note">
-<p><strong>注意：</strong>如果共享worker可以被多个浏览上下文调用，所有这些浏览上下文必须属于同源（相同的协议，主机和端口号）。 </p>
+<p><strong>注意：</strong>如果共享 worker 可以被多个浏览上下文调用，所有这些浏览上下文必须属于同源（相同的协议，主机和端口号）。 </p>
 </div>
 
 <div class="note">
-<p><strong>注意：</strong>在 Firefox中, 共享worker不能被私有和非私有window对象的document所共享 ({{bug(1177621)}})。</p>
+<p><strong>注意：</strong>在 Firefox 中，共享 worker 不能被私有和非私有 window 对象的 document 所共享 ({{bug(1177621)}})。</p>
 </div>
 
-<h3 id="生成一个共享worker">生成一个共享worker</h3>
+<h3 id="生成一个共享worker">生成一个共享 worker</h3>
 
-<p>生成一个新的共享worker与生成一个专用worker非常相似，只是构造器的名字不同（查看 <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/index.html">index.html</a> 和 <a href="https://mdn.github.io/simple-shared-worker/index2.html">index2.html</a>）——生成共享worker的代码如下：</p>
+<p>生成一个新的共享 worker 与生成一个专用 worker 非常相似，只是构造器的名字不同（查看 <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/index.html">index.html</a> 和 <a href="https://mdn.github.io/simple-shared-worker/index2.html">index2.html</a>）——生成共享 worker 的代码如下：</p>
 
 <pre class="brush: js notranslate">var myWorker = new SharedWorker('worker.js');</pre>
 
-<p>一个非常大的区别在于，与一个共享worker通信必须通过端口对象——一个确切的打开的端口供脚本与worker通信（在专用worker中这一部分是隐式进行的）。</p>
+<p>一个非常大的区别在于，与一个共享 worker 通信必须通过端口对象——一个确切的打开的端口供脚本与 worker 通信（在专用 worker 中这一部分是隐式进行的）。</p>
 
-<p>在传递消息之前，端口连接必须被显式的打开，打开方式是使用onmessage事件处理函数或者start()方法。示例中的 <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js">multiply.js</a> 和 <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js">worker.js</a> 文件没有调用了start()方法，这些调用并不那么重要是因为onmessage事件处理函数正在被使用。start()方法的调用只在一种情况下需要，那就是消息事件被addEventListener()方法使用。</p>
+<p>在传递消息之前，端口连接必须被显式的打开，打开方式是使用 onmessage 事件处理函数或者 start() 方法。示例中的 <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js">multiply.js</a> 和 <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js">worker.js</a> 文件没有调用了 start() 方法，这些调用并不那么重要是因为 onmessage 事件处理函数正在被使用。start() 方法的调用只在一种情况下需要，那就是消息事件被 addEventListener() 方法使用。</p>
 
-<p>在使用start()方法打开端口连接时，如果父级线程和worker线程需要双向通信，那么它们都需要调用start()方法。</p>
+<p>在使用 start() 方法打开端口连接时，如果父级线程和 worker 线程需要双向通信，那么它们都需要调用 start() 方法。</p>
 
 <pre class="brush: js notranslate">myWorker.port.start();  // 父级线程中的调用</pre>
 
-<pre class="brush: js notranslate">port.start(); // worker线程中的调用, 假设port变量代表一个端口</pre>
+<pre class="brush: js notranslate">port.start(); // worker 线程中的调用，假设 port 变量代表一个端口</pre>
 
-<h3 id="共享worker中消息的接收和发送">共享worker中消息的接收和发送</h3>
+<h3 id="共享worker中消息的接收和发送">共享 worker 中消息的接收和发送</h3>
 
-<p>现在，消息可以像之前那样发送到worker了，但是<code>postMessage()</code> 方法必须被端口对象调用（你会再一次看到 <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js">multiply.js</a> 和 <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js">square.js</a>中相似的结构）：</p>
+<p>现在，消息可以像之前那样发送到 worker 了，但是<code>postMessage()</code> 方法必须被端口对象调用（你会再一次看到 <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js">multiply.js</a> 和 <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js">square.js</a>中相似的结构）：</p>
 
 <pre class="brush: js notranslate">squareNumber.onchange = function() {
   myWorker.port.postMessage([squareNumber.value,squareNumber.value]);
   console.log('Message posted to worker');
 }</pre>
 
-<p>回到worker中，这里也有一些些复杂（<a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js">worker.js</a>）:</p>
+<p>回到 worker 中，这里也有一些些复杂（<a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js">worker.js</a>）:</p>
 
 <pre class="brush: js notranslate">onconnect = function(e) {
   var port = e.ports[0];
@@ -191,11 +191,11 @@ importScripts('foo.js', 'bar.js');      /* 引入两个脚本 */
   }
 }</pre>
 
-<p>首先，当一个端口连接被创建时（例如：在父级线程中，设置onmessage事件处理函数，或者显式调用start()方法时），使用onconnect事件处理函数来执行代码。</p>
+<p>首先，当一个端口连接被创建时（例如：在父级线程中，设置 onmessage 事件处理函数，或者显式调用 start() 方法时），使用 onconnect 事件处理函数来执行代码。</p>
 
-<p>使用事件的ports属性来获取端口并存储在变量中。</p>
+<p>使用事件的 ports 属性来获取端口并存储在变量中。</p>
 
-<p>然后，为端口添加一个消息处理函数用来做运算并回传结果给主线程。在worker线程中设置此消息处理函数也会隐式的打开与主线程的端口连接，因此这里跟前文一样，对port.start()的调用也是不必要的。</p>
+<p>然后，为端口添加一个消息处理函数用来做运算并回传结果给主线程。在 worker 线程中设置此消息处理函数也会隐式的打开与主线程的端口连接，因此这里跟前文一样，对 port.start() 的调用也是不必要的。</p>
 
 <p>最后，回到主脚本，我们处理消息（你会又一次看到 <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js">multiply.js</a> 和 <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js">square.js</a>中相似的结构）：</p>
 
@@ -204,7 +204,7 @@ importScripts('foo.js', 'bar.js');      /* 引入两个脚本 */
   console.log('Message received from worker');
 }</pre>
 
-<p>当一条消息通过端口回到worker，我们检查结果的类型，然后将运算结果放入结果段落中合适的地方。</p>
+<p>当一条消息通过端口回到 worker，我们检查结果的类型，然后将运算结果放入结果段落中合适的地方。</p>
 
 <h2 id="关于线程安全">关于线程安全</h2>
 
@@ -212,21 +212,21 @@ importScripts('foo.js', 'bar.js');      /* 引入两个脚本 */
 
 <h2 id="内容安全策略">内容安全策略</h2>
 
-<p>有别于创建它的document对象，worker有它自己的执行上下文。因此普遍来说，worker并不受限于创建它的document（或者父级worker）的内容安全策略。我们来举个例子，假设一个document有如下头部声明：</p>
+<p>有别于创建它的 document 对象，worker 有它自己的执行上下文。因此普遍来说，worker 并不受限于创建它的 document（或者父级 worker）的内容安全策略。我们来举个例子，假设一个 document 有如下头部声明：</p>
 
 <pre class="notranslate">Content-Security-Policy: script-src 'self'</pre>
 
-<p>这个声明有一部分作用在于，禁止它内部包含的脚本代码使用eval()方法。然而，如果脚本代码创建了一个worker，在worker上下文中执行的代码却是可以使用eval()的。</p>
+<p>这个声明有一部分作用在于，禁止它内部包含的脚本代码使用 eval() 方法。然而，如果脚本代码创建了一个 worker，在 worker 上下文中执行的代码却是可以使用 eval() 的。</p>
 
-<p>为了给worker指定内容安全策略，必须为发送worker代码的请求本身加上一个 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">内容安全策略</a>。</p>
+<p>为了给 worker 指定内容安全策略，必须为发送 worker 代码的请求本身加上一个 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">内容安全策略</a>。</p>
 
-<p>有一个例外情况，即worker脚本的源如果是一个全局性的唯一的标识符（例如，它的URL指定了数据模式或者blob），worker则会继承创建它的document或者worker的CSP（Content security policy内容安全策略）。</p>
+<p>有一个例外情况，即 worker 脚本的源如果是一个全局性的唯一的标识符（例如，它的 URL 指定了数据模式或者 blob），worker 则会继承创建它的 document 或者 worker 的 CSP（Content security policy 内容安全策略）。</p>
 
-<h2 id="worker中数据的接收与发送：详细介绍">worker中数据的接收与发送：详细介绍</h2>
+<h2 id="worker中数据的接收与发送：详细介绍">worker 中数据的接收与发送：详细介绍</h2>
 
 <p>在主页面与 worker 之间传递的数据是通过<strong>拷贝</strong>，而不是共享来完成的。传递给 <code>worker </code>的对象需要经过序列化，接下来在另一端还需要反序列化。页面与<code> worker </code><strong>不会共享同一个实例，</strong>最终的结果就是在每次通信结束时生成了数据的<strong>一个副本。</strong>大部分浏览器使用<a href="/en/DOM/The_structured_clone_algorithm">结构化拷贝</a>来实现该特性。</p>
 
-<p>在往下进行之前，出于教学的目的，让我们创建一个名为 <code>emulateMessage()</code> 的函数，它将模拟在从 <code>worker</code> 到主页面(反之亦然)的通信过程中，变量的「<em>拷贝而非共享</em>」行为：</p>
+<p>在往下进行之前，出于教学的目的，让我们创建一个名为 <code>emulateMessage()</code> 的函数，它将模拟在从 <code>worker</code> 到主页面 (反之亦然) 的通信过程中，变量的「<em>拷贝而非共享</em>」行为：</p>
 
 <pre class="brush: js notranslate">function emulateMessage (vVal) {
     return eval("(" + JSON.stringify(vVal) + ")");
@@ -287,11 +287,11 @@ onmessage = function (oEvent) {
 };
 </pre>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/The_structured_clone_algorithm">结构化拷贝</a>算法可以接收JSON数据以及一些JSON不能表示的数据——比如循环引用。</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/The_structured_clone_algorithm">结构化拷贝</a>算法可以接收 JSON 数据以及一些 JSON 不能表示的数据——比如循环引用。</p>
 
 <h3 id="传递数据的例子">传递数据的例子</h3>
 
-<h4 id="例子_1：_创建一个通用的_「异步_eval」">例子 #1： 创建一个通用的 「异步 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval"><code>eval()</code></a>」</h4>
+<h4 id="例子_1：_创建一个通用的_「异步_eval」">例子 #1： 创建一个通用的「异步 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval"><code>eval()</code></a>」</h4>
 
 <p>下面这个例子介绍了，如何在 worker 内使用  <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval">eval()</a> </code>来按顺序执行<strong>异步的</strong>任何种类的 JavaScript 代码：</p>
 
@@ -345,7 +345,7 @@ asyncEval("(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open(\"get
 
 <p>如果你需要传输非常复杂的数据，还要同时在主页与 Worker 内调用多个方法，那么可以考虑创建一个类似下面的系统。</p>
 
-<p>首先，我们创建一个QueryableWorker的类，它接收worker的url、一个默认侦听函数、和一个错误处理函数作为参数，这个类将会记录所有的侦听的列表并且帮助我们与worker进行通信。</p>
+<p>首先，我们创建一个 QueryableWorker 的类，它接收 worker 的 url、一个默认侦听函数、和一个错误处理函数作为参数，这个类将会记录所有的侦听的列表并且帮助我们与 worker 进行通信。</p>
 
 <pre class="notranslate">function QueryableWorker(url, defaultListener, onError) {
     var instance = this,
@@ -375,7 +375,7 @@ this.removeListeners = function(name) {
     delete listeners[name];
 }</pre>
 
-<p>这里我们让worker处理2个这样的简单操作：区别2个数字并在3秒后弹框提示。为了完成这个操作，我们首先实现一个sendQuery方法，该方法可以查询worker是否真正有我们所需要的对应方法。</p>
+<p>这里我们让 worker 处理 2 个这样的简单操作：区别 2 个数字并在 3 秒后弹框提示。为了完成这个操作，我们首先实现一个 sendQuery 方法，该方法可以查询 worker 是否真正有我们所需要的对应方法。</p>
 
 <pre class="notranslate">/*
   This functions takes at least one argument, the method name we want to query.
@@ -392,7 +392,7 @@ this.sendQuery = function() {
     });
 }</pre>
 
-<p>我们以<code>onmessage方法作为</code>QueryableWorker的结尾。如果worker有我们所需要的对应的方法，它就会返回相对应的侦听方法的名字以及所需要的参数，我们只需要在侦听列表<code>listeners中找到它：</code></p>
+<p>我们以<code>onmessage 方法作为</code>QueryableWorker 的结尾。如果 worker 有我们所需要的对应的方法，它就会返回相对应的侦听方法的名字以及所需要的参数，我们只需要在侦听列表<code>listeners 中找到它：</code></p>
 
 <pre class="notranslate">worker.onmessage = function(event) {
     if (event.data instanceof Object &amp;&amp;
@@ -404,7 +404,7 @@ this.sendQuery = function() {
     }
 }</pre>
 
-<p>现在回到worker中。首先我们需要一个能够完成这2个操作的方法：</p>
+<p>现在回到 worker 中。首先我们需要一个能够完成这 2 个操作的方法：</p>
 
 <pre class="notranslate">var queryableFunctions = {
     getDifference: function(a, b) {
@@ -433,7 +433,7 @@ function defaultReply(message) {
     // do something
 }</pre>
 
-<p><code>onmessage方法也就很简单了：</code></p>
+<p><code>onmessage 方法也就很简单了：</code></p>
 
 <pre class="notranslate">onmessage = function(event) {
     if (event.data instanceof Object &amp;&amp;
@@ -446,7 +446,7 @@ function defaultReply(message) {
     }
 }</pre>
 
-<p>接下来给出一个完整的实现:</p>
+<p>接下来给出一个完整的实现：</p>
 
 <p><strong>example.html</strong> (the main page):</p>
 
@@ -569,11 +569,11 @@ onmessage = function (oEvent) {
   }
 };</pre>
 
-<p>这个实例中，可以对从主页面到worker、以及worker到主页面之间传递的消息内容进行切换。而且属性名"queryMethod", "queryMethodListeners","queryMethodArguments"可以是任何东西，只要它们在<code>QueryableWorker和worker</code>中保持一致。</p>
+<p>这个实例中，可以对从主页面到 worker、以及 worker 到主页面之间传递的消息内容进行切换。而且属性名"queryMethod", "queryMethodListeners","queryMethodArguments"可以是任何东西，只要它们在<code>QueryableWorker 和 worker</code>中保持一致。</p>
 
-<h3 id="通过转让所有权可转让对象来传递数据">通过转让所有权(可转让对象)来传递数据</h3>
+<h3 id="通过转让所有权可转让对象来传递数据">通过转让所有权 (可转让对象) 来传递数据</h3>
 
-<p>Google Chrome 17 与 Firefox 18 包含另一种性能更高的方法来将特定类型的对象(<a href="http://w3c.github.io/html/infrastructure.html#transferable-objects">可转让对象</a>) 传递给一个 worker/从 worker 传回 。可转让对象从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大数据时会获得极大的性能提升。如果你从 C/C++ 世界来，那么把它想象成按照引用传递。然而与按照引用传递不同的是，一旦对象转让，那么它在原来上下文的那个版本将不复存在。该对象的所有权被转让到新的上下文内。例如，当你将一个 <a href="/en/JavaScript_typed_arrays/ArrayBuffer">ArrayBuffer </a>对象从主应用转让到 Worker 中，原始的 <code>ArrayBuffer</code> 被清除并且无法使用。它包含的内容会(完整无差的)传递给 Worker 上下文。</p>
+<p>Google Chrome 17 与 Firefox 18 包含另一种性能更高的方法来将特定类型的对象 (<a href="http://w3c.github.io/html/infrastructure.html#transferable-objects">可转让对象</a>) 传递给一个 worker/从 worker 传回 。可转让对象从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大数据时会获得极大的性能提升。如果你从 C/C++ 世界来，那么把它想象成按照引用传递。然而与按照引用传递不同的是，一旦对象转让，那么它在原来上下文的那个版本将不复存在。该对象的所有权被转让到新的上下文内。例如，当你将一个 <a href="/en/JavaScript_typed_arrays/ArrayBuffer">ArrayBuffer </a>对象从主应用转让到 Worker 中，原始的 <code>ArrayBuffer</code> 被清除并且无法使用。它包含的内容会 (完整无差的) 传递给 Worker 上下文。</p>
 
 <pre class="brush: js notranslate">// Create a 32MB "file" and fill it.
 var uInt8Array = new Uint8Array(1024*1024*32); // 32MB
@@ -585,7 +585,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 </pre>
 
 <div class="note">
-<p><strong>注意：</strong>获取更多该方法相关的可转让对象、性能及特性检测等方法，请参阅HTML5 Rocks中的<a href="http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">Transferable Objects: Lightning Fast!</a> 。</p>
+<p><strong>注意：</strong>获取更多该方法相关的可转让对象、性能及特性检测等方法，请参阅 HTML5 Rocks 中的<a href="http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">Transferable Objects: Lightning Fast!</a> 。</p>
 </div>
 
 <h2 id="嵌入式_worker">嵌入式 worker</h2>
@@ -643,7 +643,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 <p>现在，嵌入式 worker 已经嵌套进了一个自定义的 <code>document.worker</code> 属性中。</p>
 
-<p>这样也不足为奇，你仍然可以将一个函数转换为blob，然后为这个blob生成URL对象。比如：</p>
+<p>这样也不足为奇，你仍然可以将一个函数转换为 blob，然后为这个 blob 生成 URL 对象。比如：</p>
 
 <pre class="notranslate">function fn2workerURL(fn) {
   var blob = new Blob(['('+fn.toString()+')()'], {type: 'application/javascript'})
@@ -741,19 +741,19 @@ onmessage = function(event) {
 
 <p>当多核系统流行开来，将复杂的运算任务分配给多个 worker 来运行已经变得十分有用，这些 worker 会在多处理器内核上运行这些任务。</p>
 
-<h2 id="其它类型的worker">其它类型的worker</h2>
+<h2 id="其它类型的worker">其它类型的 worker</h2>
 
-<p>除了专用和共享的web worker，还有一些其它类型的worker：</p>
+<p>除了专用和共享的 web worker，还有一些其它类型的 worker：</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a> （服务worker）一般作为web应用程序、浏览器和网络（如果可用）之前的代理服务器。它们旨在（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动并更新驻留在服务器上的资源。他们还将允许访问推送通知和后台同步API。</li>
- <li>Chrome Workers 是一种仅适用于firefox的worker。如果您正在开发附加组件，希望在扩展程序中使用worker且有在你的worker中访问  <a href="https://developer.mozilla.org/en/js-ctypes">js-ctypes</a> 的权限，你可以使用Chrome Workers。详情请参阅{{domxref("ChromeWorker")}}。</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#Audio_Workers">Audio Workers</a> （音频worker）使得在web worker上下文中直接完成脚本化音频处理成为可能。</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a> （服务 worker）一般作为 web 应用程序、浏览器和网络（如果可用）之前的代理服务器。它们旨在（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动并更新驻留在服务器上的资源。他们还将允许访问推送通知和后台同步 API。</li>
+ <li>Chrome Workers 是一种仅适用于 firefox 的 worker。如果您正在开发附加组件，希望在扩展程序中使用 worker 且有在你的 worker 中访问  <a href="https://developer.mozilla.org/en/js-ctypes">js-ctypes</a> 的权限，你可以使用 Chrome Workers。详情请参阅{{domxref("ChromeWorker")}}。</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#Audio_Workers">Audio Workers</a> （音频 worker）使得在 web worker 上下文中直接完成脚本化音频处理成为可能。</li>
 </ul>
 
-<h2 id="worker中可用的函数和接口">worker中可用的函数和接口</h2>
+<h2 id="worker中可用的函数和接口">worker 中可用的函数和接口</h2>
 
-<p>你可以在web worker中使用大多数的标准javascript特性，包括</p>
+<p>你可以在 web worker 中使用大多数的标准 javascript 特性，包括</p>
 
 <ul>
  <li>{{domxref("Navigator")}}</li>
@@ -762,10 +762,10 @@ onmessage = function(event) {
  <li>{{domxref("WindowTimers.setTimeout")}} and {{domxref("WindowTimers.setInterval")}}</li>
 </ul>
 
-<p>在一个worker中最主要的你不能做的事情就是直接影响父页面。包括操作父页面的节点以及使用页面中的对象。你只能间接地实现，通过{{domxref("DedicatedWorkerGlobalScope.postMessage")}}回传消息给主脚本，然后从主脚本那里执行操作或变化。</p>
+<p>在一个 worker 中最主要的你不能做的事情就是直接影响父页面。包括操作父页面的节点以及使用页面中的对象。你只能间接地实现，通过{{domxref("DedicatedWorkerGlobalScope.postMessage")}}回传消息给主脚本，然后从主脚本那里执行操作或变化。</p>
 
 <div class="note">
-<p><strong>注意：</strong>获取worker中完整的方法列表，请参阅<a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Functions_and_classes_available_to_workers">Functions and interfaces available to workers</a>。</p>
+<p><strong>注意：</strong>获取 worker 中完整的方法列表，请参阅<a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Functions_and_classes_available_to_workers">Functions and interfaces available to workers</a>。</p>
 </div>
 
 <h2 id="规范">规范</h2>
@@ -790,5 +790,5 @@ onmessage = function(event) {
 <ul>
  <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Worker</a></code> 接口</li>
  <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker">SharedWorker</a></code> 接口</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">worker提供的方法</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">worker 提供的方法</a></li>
 </ul>

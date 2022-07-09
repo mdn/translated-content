@@ -28,7 +28,7 @@ Un {{domxref("Uint8Array")}}.
 
 ## Exemple
 
-L'exemple suivant montre comment créer simplement un  `AnalyserNode` avec [`AudioContext`](/fr/docs/Web/API/AudioContext), puis utiliser  [`requestAnimationFrame`](/fr/docs/Web/API/Window/requestAnimationFrame) et [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)  (et en particulier [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+L'exemple suivant montre comment créer simplement un  `AnalyserNode` avec [`AudioContext`](/fr/docs/Web/API/AudioContext), puis utiliser  [`requestAnimationFrame`](/fr/docs/Web/API/Window/requestAnimationFrame) et [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)  (et en particulier [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
 ```js
 var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
@@ -44,25 +44,25 @@ var tableauDonnees = new Uint8Array(tailleMemoireTampon);
 contexteCanvas.clearRect(0, 0, LARGEUR, HAUTEUR);
 
 function dessiner() {
-  dessin = requestAnimationFrame(dessiner);
+  dessin = requestAnimationFrame(dessiner);
 
-  analyseur.getByteFrequencyData(tableauDonnees);
+  analyseur.getByteFrequencyData(tableauDonnees);
 
-  contexteCanvas.fillStyle = 'rgb(0, 0, 0)';
-  contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
+  contexteCanvas.fillStyle = 'rgb(0, 0, 0)';
+  contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
 
-  var largeurBarre = (LARGEUR / tailleMemoireTampon) * 2.5;
-  var hauteurBarre;
-  var x = 0;
+  var largeurBarre = (LARGEUR / tailleMemoireTampon) * 2.5;
+  var hauteurBarre;
+  var x = 0;
 
-  for(var i = 0; i < tailleMemoireTampon; i++) {
-    hauteurBarre = tableauDonnees[i];
-
-    contexteCanvas.fillStyle = 'rgb(' + (hauteurBarre+100) + ',50,50)';
-    contexteCanvas.fillRect(x,HAUTEUR-hauteurBarre/2,largeurBarre,hauteurBarre/2);
-
-    x += largeurBarre + 1;
-  }
+  for(var i = 0; i < tailleMemoireTampon; i++) {
+    hauteurBarre = tableauDonnees[i];
+    
+    contexteCanvas.fillStyle = 'rgb(' + (hauteurBarre+100) + ',50,50)';
+       contexteCanvas.fillRect(x,HAUTEUR-hauteurBarre/2,largeurBarre,hauteurBarre/2);
+       
+    x += largeurBarre + 1;
+  }
 };
 
 dessiner();
@@ -77,7 +77,7 @@ dessiner();
 
 | Spécification                                                                                                                                                    | Statut                               | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-getByteFrequencyData-void-Uint8Array-array', 'getByteFrequencyData()')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AnalyserNode-getByteFrequencyData-void-Uint8Array-array', 'getByteFrequencyData()')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

@@ -23,7 +23,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/get
 
 <h3 id="参数">参数</h3>
 
-<p>以下是传递给get方法的参数，<code>this上下文绑定在</code>handler对象上.</p>
+<p>以下是传递给 get 方法的参数，<code>this 上下文绑定在</code>handler 对象上。</p>
 
 <dl>
  <dt><code>target</code></dt>
@@ -31,12 +31,12 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/get
  <dt><code>property</code></dt>
  <dd>被获取的属性名。</dd>
  <dt><code>receiver</code></dt>
- <dd>Proxy或者继承Proxy的对象</dd>
+ <dd>Proxy 或者继承 Proxy 的对象</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>get方法可以返回任何值。</p>
+<p>get 方法可以返回任何值。</p>
 
 <h2 id="描述">描述</h2>
 
@@ -44,21 +44,21 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/get
 
 <h3 id="拦截">拦截</h3>
 
-<p>该方法会拦截目标对象的以下操作:</p>
+<p>该方法会拦截目标对象的以下操作：</p>
 
 <ul>
- <li>访问属性: <code>proxy[foo]和</code> <code>proxy.bar</code></li>
- <li>访问原型链上的属性: <code>Object.create(proxy)[foo]</code></li>
+ <li>访问属性：<code>proxy[foo] 和</code> <code>proxy.bar</code></li>
+ <li>访问原型链上的属性：<code>Object.create(proxy)[foo]</code></li>
  <li>{{jsxref("Reflect.get()")}}</li>
 </ul>
 
 <h3 id="约束">约束</h3>
 
-<p>如果违背了以下的约束，proxy会抛出 {{jsxref("TypeError")}}:</p>
+<p>如果违背了以下的约束，proxy 会抛出 {{jsxref("TypeError")}}:</p>
 
 <ul>
  <li>如果要访问的目标属性是不可写以及不可配置的，则返回的值必须与该目标属性的值相同。</li>
- <li>如果要访问的目标属性没有配置访问方法，即get方法是undefined的，则返回值必须为undefined。</li>
+ <li>如果要访问的目标属性没有配置访问方法，即 get 方法是 undefined 的，则返回值必须为 undefined。</li>
 </ul>
 
 <h2 id="示例">示例</h2>
@@ -92,7 +92,7 @@ var p = new Proxy(obj, {
   }
 });
 
-p.a; //会抛出TypeError
+p.a; //会抛出 TypeError
 </pre>
 
 <h2 id="规范">规范</h2>
@@ -119,55 +119,7 @@ p.a; //会抛出TypeError
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("18")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("18")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="另见">另见</h2>
 

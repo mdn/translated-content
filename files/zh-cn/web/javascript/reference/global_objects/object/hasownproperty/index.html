@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>obj</var>.hasOwnProperty(<var>prop</var>)</pre>
+<pre class="syntaxbox"><var>obj</var>.hasOwnProperty(<var>prop</var>)</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 
 <p>即使属性的值是 <code>null</code> 或 <code>undefined</code>，只要属性存在，<code>hasOwnProperty</code> 依旧会返回 <code>true</code>。</p>
 
-<pre class="brush: js notranslate">o = new Object();
+<pre class="brush: js">o = new Object();
 o.propOne = null;
 o.hasOwnProperty('propOne'); // 返回 true
 o.propTwo = undefined;
@@ -56,7 +56,7 @@ o.hasOwnProperty('propTwo'); // 返回 true
 
 <p>下面的例子检测了对象 <code>o</code> 是否含有自身属性 <code>prop</code>：</p>
 
-<pre class="brush: js notranslate">o = new Object();
+<pre class="brush: js">o = new Object();
 o.hasOwnProperty('prop'); // 返回 false
 o.prop = 'exists';
 o.hasOwnProperty('prop'); // 返回 true
@@ -68,7 +68,7 @@ o.hasOwnProperty('prop'); // 返回 false
 
 <p>下面的例子演示了 <code>hasOwnProperty</code> 方法对待自身属性和继承属性的区别：</p>
 
-<pre class="brush: js notranslate">o = new Object();
+<pre class="brush: js">o = new Object();
 o.prop = 'exists';
 o.hasOwnProperty('prop');             // 返回 true
 o.hasOwnProperty('toString');         // 返回 false
@@ -79,7 +79,7 @@ o.hasOwnProperty('hasOwnProperty');   // 返回 false
 
 <p>下面的例子演示了如何在遍历一个对象的所有属性时忽略掉继承属性，注意这里 {{jsxref("Statements/for...in", "for...in")}}  循环只会遍历可枚举属性，所以不应该基于这个循环中没有不可枚举的属性而得出 <code>hasOwnProperty</code> 是严格限制于可枚举项目的（如同 {{jsxref("Object.getOwnPropertyNames()")}}）。</p>
 
-<pre class="brush: js notranslate">var buz = {
+<pre class="brush: js">var buz = {
   fog: 'stack'
 };
 
@@ -98,7 +98,7 @@ for (var name in buz) {
 
 <p>JavaScript 并没有保护 <code>hasOwnProperty</code> 这个属性名，因此，当某个对象可能自有一个占用该属性名的属性时，就需要使用外部的 <code>hasOwnProperty</code> 获得正确的结果：</p>
 
-<pre class="brush: js notranslate">var foo = {
+<pre class="brush: js">var foo = {
   hasOwnProperty: function() {
     return false;
   },
@@ -146,7 +146,7 @@ Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
   <tr>
    <td>{{SpecName('ES3')}}</td>
    <td>{{Spec2('ES3')}}</td>
-   <td>最开始在JavaScript 1.5实现。</td>
+   <td>最开始在 JavaScript 1.5 实现。</td>
   </tr>
  </tbody>
 </table>

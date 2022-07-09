@@ -1,12 +1,6 @@
 ---
 title: GlobalEventHandlers.onselect
 slug: Web/API/GlobalEventHandlers/onselect
-tags:
-  - API
-  - Gestionnaire d'événement
-  - HTML DOM
-  - Propriété
-  - Reference
 translation_of: Web/API/GlobalEventHandlers/onselect
 ---
 {{ ApiRef("HTML DOM") }}
@@ -17,7 +11,9 @@ L'événement `select` n'est déclenché qu'après que du texte à l'intérieur 
 
 ## Syntaxe
 
-    target.onselect = functionRef;
+```js
+target.onselect = functionRef;
+```
 
 ### Valeur
 
@@ -49,7 +45,7 @@ textarea.onselect = enregistrerSelection;
 
 ### Résultat
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécification
 

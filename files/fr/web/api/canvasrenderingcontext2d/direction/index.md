@@ -1,22 +1,17 @@
 ---
 title: CanvasRenderingContext2D.direction
 slug: Web/API/CanvasRenderingContext2D/direction
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/API/CanvasRenderingContext2D/direction
 ---
 {{APIRef}} {{SeeCompatTable}}
 
-La propriété **`CanvasRenderingContext2D`\*\***`.direction`\*\* de l'API Canvas 2D indique la direction de texte courante utilisé lors du dessin de texte.
+La propriété **`CanvasRenderingContext2D.direction`** de l'API Canvas 2D indique la direction de texte courante utilisé lors du dessin de texte.
 
 ## Syntaxe
 
-    ctx.direction = "ltr" || "rtl" || "inherit";
+```js
+ctx.direction = "ltr" || "rtl" || "inherit";
+```
 
 ### Options
 
@@ -27,7 +22,7 @@ Valeurs possibles :
 - rtl
   - : La direction du texte est de droite à gauche.
 - inherit
-  - : La direction du texte est héritée de l'élément {{HTMLElement("canvas")}} ou du {{domxref("Document")}} comme approprié.
+  - : La direction du texte est héritée de l'élément {{HTMLElement("canvas")}} ou du {{domxref("Document")}} comme approprié.
 
 La valeur par défaut est `inherit`.
 
@@ -35,7 +30,7 @@ La valeur par défaut est `inherit`.
 
 ### Utilisation de la propriété `direction`
 
-Ceci est seulement un fragment de code simple utilisant la propriété `direction` pour indiquer un réglage de ligne de base différent.
+Ceci est seulement un fragment de code simple utilisant la propriété `direction` pour indiquer un réglage de ligne de base différent.
 
 #### HTML
 
@@ -61,8 +56,8 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel 
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.font = '48px serif';
@@ -96,13 +91,13 @@ textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
 ```
 
-{{EmbedLiveSample('code_jouable', 700, 360)}}
+{{EmbedLiveSample('Code_jouable', 700, 360)}}
 
 ## Spécifications
 
 | Spécification                                                                                                                                    | Statut                           | Commentaire |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-direction", "CanvasRenderingContext2D.direction")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-direction", "CanvasRenderingContext2D.direction")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

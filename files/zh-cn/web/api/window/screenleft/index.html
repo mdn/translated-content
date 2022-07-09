@@ -11,7 +11,7 @@ translation_of: Web/API/Window/screenLeft
 <p><strong>注意</strong>：<code>screenLeft</code> 只是 {{domxref("Window.screenX")}}  属性的别名，最初只被 IE 浏览器所支持。现在主流的浏览器都已支持该属性。</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>leftWindowPos</em> = window.screenLeft
 </pre>
@@ -20,7 +20,7 @@ translation_of: Web/API/Window/screenLeft
 
 <p>返回浏览器窗口到屏幕左边缘的 CSS 像素距离数值。</p>
 
-<h2 id="Specifications" name="Specifications">例子</h2>
+<h2 id="Specifications">例子</h2>
 
 <p>在 <a href="https://mdn.github.io/dom-examples/screenleft-screentop/">screenleft-screentop</a> 项目中，展示了一个监听浏览器窗口位置变化，动态更新 canvas 的例子。在这个例子中，当你移动浏览器窗口位置，绘制在 canvas 上的圆也会对应移动。我们通过监听 <code>screenLeft</code>/<code>screenTop</code> 的变化，并使用 {{domxref("Window.requestAnimationFrame()")}} 来对 canvas 实时重绘，保证了浏览器窗口移动时，canvas 内部圆的位置也会发生对应的移动。</p>
 
@@ -55,7 +55,7 @@ window.requestAnimationFrame(positionElem);</pre>
   window.screenTop = window.screenY;
 }</pre>
 
-<h2 id="Specifications" name="Specifications">说明</h2>
+<h2 id="Specifications">说明</h2>
 
 <table class="standard-table" style="height: 49px; width: 1000px;">
  <thead>

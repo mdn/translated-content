@@ -19,7 +19,9 @@ La méthode **`Object.defineProperties()`** permet de définir ou de modifier le
 
 ## Syntaxe
 
-    Object.defineProperties(obj, props)
+```js
+Object.defineProperties(obj, props)
+```
 
 ### Paramètres
 
@@ -62,7 +64,7 @@ L'objet passé à la fonction, éventuellement modifié.
 
 ## Description
 
-`Object.defineProperties` permet principalement de définir toutes les propriétés  de l'objet `obj `correspondant aux propriétés énumérable de `props`.
+`Object.defineProperties` permet principalement de définir toutes les propriétés de l'objet `obj` correspondant aux propriétés énumérable de `props`.
 
 ## Exemples
 
@@ -155,8 +157,8 @@ function defineProperties(obj, properties) {
 | Spécification                                                                                                | État                         | Commentaires                                          |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES5.1', '#sec-15.2.3.7', 'Object.defineProperties')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée par JavaScript 1.8.5 |
-| {{SpecName('ES6', '#sec-object.defineproperties', 'Object.defineProperties')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-object.defineproperties', 'Object.defineProperties')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES6', '#sec-object.defineproperties', 'Object.defineProperties')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-object.defineproperties', 'Object.defineProperties')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

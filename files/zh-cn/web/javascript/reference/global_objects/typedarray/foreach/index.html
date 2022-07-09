@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>typedarray</var>.forEach(<var>callback</var>[, <var>thisArg</var>])</code></pre>
+<pre class="syntaxbox"><code><var>typedarray</var>.forEach(<var>callback</var>[, <var>thisArg</var>])</code></pre>
 
 <h3 id="参数">参数</h3>
 
@@ -57,7 +57,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 
 <p>下面的代码为数组中的每个元素记录一行日志：</p>
 
-<pre class="brush:js notranslate">function logArrayElements(element, index, array) {
+<pre class="brush:js">function logArrayElements(element, index, array) {
   console.log('a[' + index + '] = ' + element);
 }
 
@@ -93,13 +93,7 @@ new Uint8Array([0, 1, 2, 3]).forEach(logArrayElements);
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div>
-
-
-<p>{{Compat("javascript.builtins.TypedArray.forEach")}}</p>
-</div>
+{{Compat}}
 
 <h2 id="另见">另见</h2>
 

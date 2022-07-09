@@ -82,7 +82,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 <p>The developer tools built into most browsers also feature useful tools for hunting down errors, mainly for CSS.</p>
 
 <div class="note">
-<p><strong>Note</strong>: HTML errors don't tend to show up so easily in dev tools, as the browser will try to correct badly-formed markup automatically; the W3C validator is the best way to get HTML errors — see {{anch("Validation")}} above.</p>
+<p><strong>Note</strong>: HTML errors don't tend to show up so easily in dev tools, as the browser will try to correct badly-formed markup automatically; the W3C validator is the best way to get HTML errors — see <a href="#validation">Validation</a> above.</p>
 </div>
 
 <p>As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:</p>
@@ -99,7 +99,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <p>This is a common problem, especially when you need to support old browsers (such as old IE versions) or you are using features that are implemented using CSS prefixes. In general, most core HTML and CSS functionality (such as basic HTML elements, CSS basic colors and text styling) works across most browsers you'll want to support; more problems are uncovered when you start wanting to use newer features such as <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>, or <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">HTML5 video/audio</a>, or even more nascent, <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout">CSS Grids</a> or <a href="/en-US/docs/Learn/CSS/Styling_boxes/Advanced_box_effects#-webkit-background-clip_text">-webkit-background-clip: text</a>.</p>
 
-<p>Once you've identified a list of potential problem technologies you will be using, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See {{anch("Finding help")}} below.</p>
+<p>Once you've identified a list of potential problem technologies you will be using, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See <a href="#finding_help">Finding help</a> below.</p>
 
 <h4 id="HTML_fallback_behaviour">HTML fallback behaviour</h4>
 
@@ -108,7 +108,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 <p>Unrecognised HTML elements are treated by the browser as anonymous inline elements (effectively inline elements with no semantic value, similar to {{htmlelement("span")}} elements). You can still refer to them by their names, and style them with CSS, for example — you just need to make sure they are behaving as you want them to, for example setting <code>display: block;</code> on all of the new semantic elements (such as {{htmlelement("article")}}, {{htmlelement("aside")}}, etc.), but only in old versions of IE that don't recognise them (so, IE 8 and lower). This way new browsers can just use the code as normal, but older IE versions will be able to style these elements too.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See {{anch("IE conditional comments")}} for the best way to do this.</p>
+<p><strong>Note</strong>: See <a href="#ie_conditional_comments">IE conditional comments</a> for the best way to do this.</p>
 </div>
 
 <p>More complex elements like HTML <code><a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/audio">&lt;audio&gt;</a></code>, and <code><a href="/en-US/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code> (and other features besides) have natural mechanisms for fallbacks to be added, which work on the same principle as described above. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.</p>

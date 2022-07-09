@@ -14,12 +14,11 @@ translation_of: Web/CSS/flex-basis
 
 <div>{{EmbedInteractiveExample("pages/css/flex-basis.html")}}</div>
 
-<div></div>
 
-<p class="hidden">这个交互式的例子的源代码存储在一个GitHub库。如果你想为这个项目贡献代码, 请克隆这个仓库 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 然后给我们提交一个 pull request</p>
+
 
 <div class="note">
-<p><strong>Note:</strong> 当一个元素同时被设置了 <code>flex-basis</code> (除值为 <code>auto</code> 外) 和 <code>width</code> (或者在 <code>flex-direction: column</code> 情况下设置了<code>height</code>) , <code>flex-basis</code> 具有更高的优先级.</p>
+<p><strong>Note:</strong> 当一个元素同时被设置了 <code>flex-basis</code> (除值为 <code>auto</code> 外) 和 <code>width</code> (或者在 <code>flex-direction: column</code> 情况下设置了<code>height</code>) , <code>flex-basis</code> 具有更高的优先级。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -35,7 +34,7 @@ flex-basis: max-content;
 flex-basis: min-content;
 flex-basis: fit-content;
 
-/* 在flex item内容上的自动尺寸 */
+/* 在 flex item 内容上的自动尺寸 */
 flex-basis: content;
 
 /* 全局数值 */
@@ -56,15 +55,15 @@ flex-basis: unset;
  <dt><code>content</code></dt>
  <dd>基于 flex 的元素的内容自动调整大小。</dd>
  <dd>
- <div class="note"><strong>Note:</strong>由于最初规范中没有包括这个值，在一些早期的浏览器实现的flex布局中，content值无效，可以利用设置(<a href="https://drafts.csswg.org/css2/visudet.html#propdef-width">width</a> 或 <a href="https://drafts.csswg.org/css2/visudet.html#propdef-height">height</a>) 为 auto达到同样的效果.</div>
+ <div class="note"><strong>Note:</strong>由于最初规范中没有包括这个值，在一些早期的浏览器实现的 flex 布局中，content 值无效，可以利用设置 (<a href="https://drafts.csswg.org/css2/visudet.html#propdef-width">width</a> 或 <a href="https://drafts.csswg.org/css2/visudet.html#propdef-height">height</a>) 为 auto 达到同样的效果。</div>
 
  <div class="note">
- <p id="comment_text_0"><strong>Note:简史</strong></p>
+ <p><strong>Note:简史</strong></p>
 
  <ul>
-  <li>最初, "flex-basis:auto" 的含义是 "参照我的<code>width</code>和<code>height</code>属性".</li>
-  <li>在此之后, "flex-basis:auto" 的含义变成了自动尺寸, 而 "main-size" 变成了 "参照我的<code>width</code>和<code>height</code>属性"。实际执行于 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1032922" title='RESOLVED FIXED - Rename "flex-basis:auto" to "main-size", while preserving "flex:auto" shorthand value'>bug 1032922</a>.</li>
-  <li>然后呢, 这个更改又在 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1093316" title='RESOLVED FIXED - Back out flexbox "flex-basis:main-size" rename, since the CSSWG removed it from the spec'>bug 1093316</a> 中被撤销了, 所以 "auto" 变回了原来的含义; 而一个新的关键字 'content' 变成了自动尺寸。 ({{bug("1105111")}} 包括了增加这个关键字).</li>
+  <li>最初，"flex-basis:auto" 的含义是 "参照我的<code>width</code>和<code>height</code>属性".</li>
+  <li>在此之后，"flex-basis:auto" 的含义变成了自动尺寸，而 "main-size" 变成了 "参照我的<code>width</code>和<code>height</code>属性"。实际执行于 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1032922" title='RESOLVED FIXED - Rename "flex-basis:auto" to "main-size", while preserving "flex:auto" shorthand value'>bug 1032922</a>.</li>
+  <li>然后呢，这个更改又在 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1093316" title='RESOLVED FIXED - Back out flexbox "flex-basis:main-size" rename, since the CSSWG removed it from the spec'>bug 1093316</a> 中被撤销了，所以 "auto" 变回了原来的含义; 而一个新的关键字 'content' 变成了自动尺寸。 ({{bug("1105111")}} 包括了增加这个关键字).</li>
  </ul>
  </div>
  </dd>

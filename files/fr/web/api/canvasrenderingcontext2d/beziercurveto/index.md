@@ -79,7 +79,7 @@ ctx.fill();
 
 Dans cet exemple, les points de contrôle sont rouges et les points de départ et d'arrivée sont bleus.
 
-{{EmbedLiveSample('how_beziercurveto_works', 315, 165)}}
+{{EmbedLiveSample('Fonctionnement_de_bezierCurveTo', 315, 165)}}
 
 ### Une courbe cubique de Bézier simple
 
@@ -93,7 +93,7 @@ Cet exemple dessine une courbe cubique de Bézier simple en utilisant `bezierCur
 
 #### JavaScript
 
-La courbe débute au point spécifié par `moveTo()` : (30, 30). Le premier point de contrôle est placé à (120, 160), le second à (180, 10) et le point d'arrivée à (220, 140).
+La courbe débute au point spécifié par `moveTo()`&nbsp;: (30, 30). Le premier point de contrôle est placé à (120, 160), le second à (180, 10) et le point d'arrivée à (220, 140).
 
 ```js
 const canvas = document.getElementById("canvas");
@@ -107,7 +107,7 @@ contexte2D.stroke();
 
 #### Résultat
 
-{{EmbedLiveSample('a_simple_bezier_curve', 700, 180)}}
+{{EmbedLiveSample('Une_courbe_cubique_de_Bézier_simple', 700, 180)}}
 
 ## Spécifications
 

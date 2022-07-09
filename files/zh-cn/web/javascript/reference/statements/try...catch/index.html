@@ -34,31 +34,19 @@ translation_of: Web/JavaScript/Reference/Statements/try...catch
 <dl>
  <dt><code>try_statements</code></dt>
  <dd>需要被执行的语句。</dd>
-</dl>
-
-<dl>
  <dt><code>catch_statements_1</code>, <code>catch_statements_2</code></dt>
  <dd>如果在<code>try</code>块里有异常被抛出时执行的语句。</dd>
-</dl>
-
-<dl>
  <dt><code>exception_var_1</code>, <code>exception_var_2</code></dt>
  <dd>用于保存关联<code>catch</code>子句的异常对象的标识符。</dd>
-</dl>
-
-<dl>
  <dt><code>condition_1</code></dt>
  <dd>一个条件表达式。</dd>
-</dl>
-
-<dl>
  <dt><code>finally_statements</code></dt>
  <dd>在<code>try</code>语句块之后执行的语句块。无论是否有异常抛出或捕获这些语句都将执行。</dd>
 </dl>
 
 <h2 id="描述">描述</h2>
 
-<p><code>try</code>语句包含了由一个或者多个语句组成的<code>try</code>块, 和至少一个<code>catch</code>块或者一个<code>finally</code>块的其中一个，或者两个兼有， 下面是三种形式的<code>try</code>声明：</p>
+<p><code>try</code>语句包含了由一个或者多个语句组成的<code>try</code>块，和至少一个<code>catch</code>块或者一个<code>finally</code>块的其中一个，或者两个兼有， 下面是三种形式的<code>try</code>声明：</p>
 
 <ol>
  <li><code>try...catch</code></li>
@@ -87,7 +75,7 @@ catch (e) {
 }
 </pre>
 
-<p><code>catch</code>块指定一个标识符（在上面的示例中为e），该标识符保存由<code>throw</code>语句指定的值。<code>catch</code>块是唯一的，因为当输入<code>catch</code>块时，JavaScript 会创建此标识符，并将其添加到当前作用域；标识符仅在<code>catch</code>块执行时存在；<code>catch</code>块执行完成后，标识符不再可用。</p>
+<p><code>catch</code>块指定一个标识符（在上面的示例中为 e），该标识符保存由<code>throw</code>语句指定的值。<code>catch</code>块是唯一的，因为当输入<code>catch</code>块时，JavaScript 会创建此标识符，并将其添加到当前作用域；标识符仅在<code>catch</code>块执行时存在；<code>catch</code>块执行完成后，标识符不再可用。</p>
 
 <h3 id="条件catch块">条件<code>catch</code>块</h3>
 
@@ -113,7 +101,7 @@ catch (e) {
 }
 </pre>
 
-<p>下面用符合 ECMAscript 规范的简单的 JavaScript 来编写相同的“条件catch子句”（显然更加<span class="s1">冗长的</span>，但是可以在任何地方运行）：</p>
+<p>下面用符合 ECMAscript 规范的简单的 JavaScript 来编写相同的“条件 catch 子句”（显然更加冗长的，但是可以在任何地方运行）：</p>
 
 <pre class="brush: js">try {
   myRoutine();
@@ -144,7 +132,7 @@ catch (e) {
 
 <p><code>finally</code>块包含的语句在<code>try</code>块和<code>catch</code>之后，<code>try..catch..finally</code>块后的语句之前执行。请注意，无论是否抛出异常<code>finally</code>子句都会执行。此外，如果抛出异常，即使没有<code>catch</code>子句处理异常，<code>finally</code>子句中的语句也会执行。</p>
 
-<p>以下示例打开一个文件，然后执行使用该文件的语句（服务器端 JavaScript 允许您访问文件）。如果文件打开时抛出异常，则<code>finally</code>子句会在脚本失败之前关闭该文件。finally中的代码最终也会在<code>try</code>或<code>catch block</code>显式返回时执行。</p>
+<p>以下示例打开一个文件，然后执行使用该文件的语句（服务器端 JavaScript 允许您访问文件）。如果文件打开时抛出异常，则<code>finally</code>子句会在脚本失败之前关闭该文件。finally 中的代码最终也会在<code>try</code>或<code>catch block</code>显式返回时执行。</p>
 
 <pre class="brush: js">openMyFile()
 try {
@@ -248,7 +236,7 @@ catch (ex) {
   console.error("outer", ex.message);
 }
 
-// 注: 此 try catch 语句需要在 function 中运行才能作为函数的返回值, 否则直接运行会报语法错误
+// 注：此 try catch 语句需要在 function 中运行才能作为函数的返回值，否则直接运行会报语法错误
 // Output:
 // "inner" "oops"
 // "finally"

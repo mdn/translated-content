@@ -18,7 +18,7 @@ Cet exemple montre comment détecter les gestes de _pinch/zoom_ (pincer/zoomer),
 
 ## Exemple
 
-Dans cet exemple, on utilise les {{domxref("Pointer_events","événement de pointeur")}} pour détecter simultanément plusieurs appareils de pointage quel qu'en soit le type, comme les doigts, la souris, et le stylet. Le geste de pincer (zoomer), qui consiste à déplacer deux pointeurs plus près l'un vers l'autre, change la couleur d'arrière-plan de l'élément cible en  `lightblue`. Le geste d'étirer (dézoomer), qui consiste à déplacer deux pointeur plus loin l'un de l'autre, change la couleur d'arrière-plan de l'élément cible en `pink`.
+Dans cet exemple, on utilise les {{domxref("Pointer_events","événement de pointeur")}} pour détecter simultanément plusieurs appareils de pointage quel qu'en soit le type, comme les doigts, la souris, et le stylet. Le geste de pincer (zoomer), qui consiste à déplacer deux pointeurs plus près l'un vers l'autre, change la couleur d'arrière-plan de l'élément cible en  `lightblue`. Le geste d'étirer (dézoomer), qui consiste à déplacer deux pointeur plus loin l'un de l'autre, change la couleur d'arrière-plan de l'élément cible en `pink`.
 
 ### Définir la cible du toucher
 

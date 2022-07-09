@@ -1,28 +1,17 @@
 ---
 title: CanvasRenderingContext2D.quadraticCurveTo()
 slug: Web/API/CanvasRenderingContext2D/quadraticCurveTo
-tags:
-  - API
-  - Bézier
-  - Canevas
-  - Canvas
-  - CanvasRenderingContext2D
-  - Courbe
-  - Courbe de Bézier
-  - Courbe quadratique
-  - Courbe quadratique de Bézier
-  - Méthode
-  - Quadratique
-  - Reference
 translation_of: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.quadraticCurveTo()`\*\* de l'API Canvas 2D ajoute une [courbe de Bézier](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) quadratique au sous-chemin courant. Elle requiert deux points: le premier est le point de contrôle et le second est le point d'arrivée. Le point de départ est le dernier point du chemin courant, qui peut être changé au moyen de la méthode {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} avant de créer la courbe quadratique de Bézier.
+La méthode **`CanvasRenderingContext2D.quadraticCurveTo()`** de l'API Canvas 2D ajoute une [courbe de Bézier](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) quadratique au sous-chemin courant. Elle requiert deux points: le premier est le point de contrôle et le second est le point d'arrivée. Le point de départ est le dernier point du chemin courant, qui peut être changé au moyen de la méthode {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} avant de créer la courbe quadratique de Bézier.
 
 ## Syntaxe
 
-    void contexte2D.quadraticCurveTo(pointContrôleX, pointContrôleY, pointArrivéeX, pointArrivéeY);
+```js
+void contexte2D.quadraticCurveTo(pointContrôleX, pointContrôleY, pointArrivéeX, pointArrivéeY);
+```
 
 ### Paramètress
 
@@ -77,7 +66,7 @@ contexte2D.fill();
 
 Dans cet exemple, le point de contrôle est rouge et les points de départ et d'arrivée sont en bleu.
 
-{{EmbedLiveSample('How_quadraticCurveTo_works', 315, 165)}}
+{{EmbedLiveSample('Comment_quadraticCurveTo_fonctionne', 315, 165)}}
 
 ### Une courbe quadratique simple
 
@@ -105,13 +94,13 @@ contexte2D.stroke();
 
 #### Résultat
 
-{{EmbedLiveSample('A_simple_quadratic_curve', 700, 180)}}
+{{EmbedLiveSample('Une_courbe_quadratique_simple', 700, 180)}}
 
 ## Spécifications
 
 | Spécification                                                                                                                                                        | Statut                           | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-quadraticcurveto", "CanvasRenderingContext2D.quadraticCurveTo")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-quadraticcurveto", "CanvasRenderingContext2D.quadraticCurveTo")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

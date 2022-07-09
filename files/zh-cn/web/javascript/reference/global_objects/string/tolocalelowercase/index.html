@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 
 <dl>
  <dt><code>locale</code> {{optional_inline}}</dt>
- <dd>参数 <code>locale</code> 指明要转换成小写格式的特定语言区域。 如果以一个数组 {{jsxref("Array")}}形式给出多个locales,  最合适的地区将被选出来应用（参见<a href="https://tc39.github.io/ecma402/#sec-bestavailablelocale">best available locale</a>）。默认的locale是主机环境的当前区域(locale)设置。</dd>
+ <dd>参数 <code>locale</code> 指明要转换成小写格式的特定语言区域。 如果以一个数组 {{jsxref("Array")}} 形式给出多个 locales,  最合适的地区将被选出来应用（参见<a href="https://tc39.github.io/ecma402/#sec-bestavailablelocale">best available locale</a>）。默认的 locale 是主机环境的当前区域 (locale) 设置。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -33,11 +33,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 
 <h2 id="描述">描述</h2>
 
-<p><code>toLocaleLowerCase()</code> 方法返回根据任意区域语言大小写映射集而转换成小写格式的字符串。<code>toLocaleLowerCase()</code> 并不会影响字符串原本的值。在大多数情况下，该方法和调用 {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}的结果相同，但是在某些区域环境中，比如土耳其语，它的大小写映射并不遵循在Unicode中的默认的大小写映射，因此会有一个不同的结果。</p>
+<p><code>toLocaleLowerCase()</code> 方法返回根据任意区域语言大小写映射集而转换成小写格式的字符串。<code>toLocaleLowerCase()</code> 并不会影响字符串原本的值。在大多数情况下，该方法和调用 {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}的结果相同，但是在某些区域环境中，比如土耳其语，它的大小写映射并不遵循在 Unicode 中的默认的大小写映射，因此会有一个不同的结果。</p>
 
 <h2 id="例子">例子</h2>
 
-<h3 id="使用toLocaleLowerCase"><code><font face="Open Sans, Arial, sans-serif">使用</font>toLocaleLowerCase()</code></h3>
+<h3 id="使用_tolocalelowercase">使用 <code>toLocaleLowerCase()</code></h3>
 
 <pre><code>'ALPHABET'.toLocaleLowerCase(); // 'alphabet'
 
@@ -86,55 +86,7 @@ let locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="参阅">参阅</h2>
 

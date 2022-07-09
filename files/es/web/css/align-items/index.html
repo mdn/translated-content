@@ -101,65 +101,7 @@ align-items: unset;
 
 <h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatChrome(21.0)}}{{property_prefix("-webkit")}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop("20.0")}}<sup>[2]</sup></td>
-   <td>11.0<sup>[3]</sup></td>
-   <td>12.10</td>
-   <td>7.0{{property_prefix("-webkit")}} </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>4.4</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("20.0")}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>12.10</td>
-   <td>7.0{{property_prefix("-webkit")}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Las versiones anteriores de la especificación tratan a los hijos con posición absoluta como si fueran elementos flexibles de <code>0x0</code>. Las versiones posteriores los excluyen del flujo y establecen sus posiciones con base en las propiedades de alineación y justificación. Chrome implementa el comportamiento nuevo a partir de Chrome 52.</p>
-
-<p>[2] Para activar soporte a flexbox en Firefox 18 y 19, el usuario debe acceder a <code>about:config</code> y cambiar el valor de la preferencia <code>layout.css.flexbox.enabled</code> a <code>true</code>. Los flexbox multiínea son soportados desde Firefox 28.</p>
-
-<p>Además del soporte sin prefijo, Gecko 48.0 {{geckoRelease("48.0")}} añadió soporte a la versión con prefijo <code>-webkit</code> de la propiedad, por razones de compatibilidad, usando la preferencia <code>layout.css.prefixes.webkit</code>, con valor predeterminado <code>false</code>. Desde Gecko 49.0 {{geckoRelease("49.0")}} el valor predeterminado de esta preferencia es <code>true</code>.</p>
-
-<p>[3] En Internet Explorer 10-11, si los elementos flex de una columna tienen <code>align-items: center;</code> y su contenido es muy largo, se saldrán de los límites del contenedor. Véase <a href="https://github.com/philipwalton/flexbugs#2-column-flex-items-set-to-align-itemscenter-overflow-their-container">Flexbug #2</a> para más información.</p>
+{{Compat("css.properties.align-items")}}
 
 <h2 id="Véase_también">Véase también</h2>
 

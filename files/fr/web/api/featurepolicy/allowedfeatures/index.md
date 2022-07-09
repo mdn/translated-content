@@ -11,11 +11,13 @@ translation_of: Web/API/FeaturePolicy/allowedFeatures
 ---
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
-La méthode **`allowedFeatures()`** de l'interface {{DOMxRef("FeaturePolicy")}} retourne la liste des noms des directives de fonctionnalités permises par ce Feature Policy. Elle permet l'introspection de directives spécifiques du Feature Policy sur lequel la méthode est appelée. Ainsi, la méthode `allowedFeatures()` retourne un sous-ensemble de la liste des noms de directives retournée par {{DOMxRef("FeaturePolicy.features", "features()")}}.
+La méthode **`allowedFeatures()`** de l'interface {{DOMxRef("FeaturePolicy")}} retourne la liste des noms des directives de fonctionnalités permises par ce Feature Policy. Elle permet l'introspection de directives spécifiques du Feature Policy sur lequel la méthode est appelée. Ainsi, la méthode `allowedFeatures()` retourne un sous-ensemble de la liste des noms de directives retournée par {{DOMxRef("FeaturePolicy.features", "features()")}}.
 
 ## Syntaxe
 
-    const permissions = FeaturePolicy.allowedFeatures()
+```js
+const permissions = FeaturePolicy.allowedFeatures()
+```
 
 ### Paramètres
 
@@ -37,7 +39,7 @@ const featurePolicy = document.featurePolicy
 const permissions = featurePolicy.allowedFeatures()
 
 for (const directive of permissions)
-  console.log(directive)
+  console.log(directive)
 ```
 
 ## Spécifications

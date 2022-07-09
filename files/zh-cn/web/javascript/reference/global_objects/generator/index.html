@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 ---
 <div>{{JSRef}} </div>
 
-<p><strong>生成器</strong>对象是由一个 {{jsxref("Statements/function*", "generator function", "", 1)}} 返回的,并且它符合<a href="/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterable">可迭代协议</a>和<a href="/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterator">迭代器协议</a>。</p>
+<p><strong>生成器</strong>对象是由一个 {{jsxref("Statements/function*", "generator function", "", 1)}} 返回的，并且它符合<a href="/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterable">可迭代协议</a>和<a href="/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterator">迭代器协议</a>。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -59,19 +59,19 @@ console.log(gen.next().value);
 
 <h2 id="传统的生成器对象">传统的生成器对象</h2>
 
-<p>Firefox (SpiderMonkey) 在 <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7">JavaScript 1.7</a> 中也实现了一个较早版本的生成器，其中函数声明中的星号（*）不是必需的 (只需在函数体中使用<code style="font-style: normal;">yield</code> 关键字)。但是，旧式生成器已弃用。不要使用它们;他们将被删除  ({{bug(1083482)}})。</p>
+<p>Firefox (SpiderMonkey) 在 <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7">JavaScript 1.7</a> 中也实现了一个较早版本的生成器，其中函数声明中的星号（*）不是必需的 (只需在函数体中使用<code>yield</code> 关键字)。但是，旧式生成器已弃用。不要使用它们;他们将被删除  ({{bug(1083482)}})。</p>
 
 <h3 id="传统的生成器方法">传统的生成器方法</h3>
 
 <dl>
  <dt><code>Generator.prototype.next() </code>{{non-standard_inline}}</dt>
- <dd>返回 {{jsxref("Operators/yield", "yield")}} 表达式产生的值. 与ES2015 生成器对象的<span style="font-family: courier,andale mono,monospace;">next()方法对应</span>.</dd>
+ <dd>返回 {{jsxref("Operators/yield", "yield")}} 表达式产生的值。与 ES2015 生成器对象的 next() 方法对应。</dd>
  <dt><code>Generator.prototype.close()</code> {{non-standard_inline}}</dt>
- <dd>关闭生成器，因此执行该函数后调用<code>next()函数时将会抛出</code> {{jsxref("StopIteration")}} 错误. 与ES2015 生成器对象的<span style="font-family: courier,andale mono,monospace;">return()方法对应</span>..</dd>
+ <dd>关闭生成器，因此执行该函数后调用<code>next() 函数时将会抛出</code> {{jsxref("StopIteration")}} 错误。与 ES2015 生成器对象的 return() 方法对应..</dd>
  <dt><code>Generator.prototype.send()</code> {{non-standard_inline}}</dt>
- <dd>用于将值发送到生成器。 该值由 {{jsxref("Operators/yield", "yield")}} 表达式返回, 并且返回下一个 {{jsxref("Operators/yield", "yield")}} 表达式产生的值. <code>send(x)</code> 对应于ES2015生成器对象中的 <code>next(x)</code></dd>
+ <dd>用于将值发送到生成器。 该值由 {{jsxref("Operators/yield", "yield")}} 表达式返回，并且返回下一个 {{jsxref("Operators/yield", "yield")}} 表达式产生的值。<code>send(x)</code> 对应于 ES2015 生成器对象中的 <code>next(x)</code></dd>
  <dt><strong><code>Generator.</code></strong><code>prototype.</code><strong><code>throw()</code> </strong> {{non-standard_inline}}</dt>
- <dd>向生成器抛出错误. 与ES2015 生成器对象的<span style="font-family: courier,andale mono,monospace;">throw()方法对应</span>.</dd>
+ <dd>向生成器抛出错误。与 ES2015 生成器对象的 throw() 方法对应。</dd>
 </dl>
 
 <h3 id="旧生成器对象示例">旧生成器对象示例</h3>
@@ -117,7 +117,7 @@ console.log(it.next());   // throws StopIteration (as the generator is now close
 
 <p>{{Compat("javascript.builtins.Generator")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <h3 id="Legacy_generators">Legacy generators</h3>
 

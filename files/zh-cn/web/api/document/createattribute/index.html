@@ -10,7 +10,7 @@ translation_of: Web/API/Document/createAttribute
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<p><code><strong>Document.createAttribute()</strong></code> 方法创建并返回一个新的属性节点。这个对象创建一个实现了 {{domxref("Attr")}} 接口的节点。这个方式下DOM不限制节点能够添加的属性种类。</p>
+<p><code><strong>Document.createAttribute()</strong></code> 方法创建并返回一个新的属性节点。这个对象创建一个实现了 {{domxref("Attr")}} 接口的节点。这个方式下 DOM 不限制节点能够添加的属性种类。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -29,7 +29,7 @@ translation_of: Web/API/Document/createAttribute
 <h3 id="异常">异常</h3>
 
 <ul>
- <li><code>INVALID_CHARACTER_ERR</code> 如果参数含有非法的XML属性字符。</li>
+ <li><code>INVALID_CHARACTER_ERR</code> 如果参数含有非法的 XML 属性字符。</li>
 </ul>
 
 <h2 id="例子">例子</h2>
@@ -43,7 +43,7 @@ console.log(node.getAttribute("my_attrib")); // "newVal"
 
 <h2 id="备注">备注</h2>
 
-<p>该方法的返回值是一个类型为 <code>Attr</code> 的节点。你可以通过为该节点的 <code>nodeValue</code> 属性赋值来设置该属性节点的属性值，也可以使用常用的 <a href="/zh-CN/docs/Web/API/Element/setAttribute">setAttribute()</a> 方法来替代该方法.</p>
+<p>该方法的返回值是一个类型为 <code>Attr</code> 的节点。你可以通过为该节点的 <code>nodeValue</code> 属性赋值来设置该属性节点的属性值，也可以使用常用的 <a href="/zh-CN/docs/Web/API/Element/setAttribute">setAttribute()</a> 方法来替代该方法。</p>
 
 <h2 id="规范">规范</h2>
 

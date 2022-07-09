@@ -5,11 +5,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
 ---
 <div>
  {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</div>
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 <p><code><strong>toString()</strong></code> 方法返回一个指定的错误对象（Error object）的字符串表示。</p>
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 <pre class="syntaxbox"><code><em>e</em>.toString();</code></pre>
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 <p>{{jsxref("Error")}} 对象覆盖了 {{jsxref("Object.prototype.toString()")}} 方法。该方法实现如下：（假定 <code>Object</code> 和 <code>String</code> 没有被更改）：</p>
 <pre class="brush:js">Error.prototype.toString = function()
 {
@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
   return name + ": " + msg;
 };
 </pre>
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 <pre class="brush:js">var e = new Error("fatal error");
 print(e.toString()); // "Error: fatal error"
 
@@ -49,81 +49,16 @@ print(e.toString()); // "Error"
 e.name = "hello";
 print(e.toString()); // "hello"
 </pre>
+
 <h2 id="规范">规范</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范版本</th>
-   <th scope="col">规范状态</th>
-   <th scope="col">注解</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Initial definition.<br>
-    Implemented in JavaScript 1.1</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11.4.4', 'Error.prototype.toString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-error.prototype.tostring', 'Error.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+
+{{Specifications}}
+
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-<p>{{ CompatibilityTable() }}</p>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Android</th>
-    <th>Chrome for Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Mobile</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<h2 id="See_also" name="See_also">相关链接</h2>
+
+{{Compat}}
+
+<h2 id="See_also">相关链接</h2>
 <ul>
  <li>{{jsxref("Error.prototype.toSource()")}}</li>
 </ul>

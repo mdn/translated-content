@@ -19,7 +19,9 @@ Cette caractéristique est décidée lors de la création de l'index, avec la m�
 
 ## Syntaxe
 
-    var myIndex = objectStore.index('index');
+```js
+var myIndex = objectStore.index('index');
+```
 
 ### Valeur
 
@@ -68,7 +70,7 @@ function displayDataByIndex() {
 
 | Spécification                                                                    | État                         | Commentaires |
 | -------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-unique', 'unique')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBIndex-unique', 'unique')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

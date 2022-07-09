@@ -10,7 +10,7 @@ translation_of: Web/CSS/unset
 ---
 <div>{{CSSRef}}</div>
 
-<p>如果CSS关键字 <strong><code>unset</code></strong> 从其父级继承，则将该属性重新设置为继承的值，如果没有继承父级样式，则将该属性重新设置为初始值。换句话说，在第一种情况下（继承属性）它的行为类似于{{cssxref("inherit")}} ，在第二种情况下（非继承属性）类似于{{cssxref("initial")}}。它可以应用于任何CSS属性，包括CSS简写属性 {{cssxref("all")}} 。</p>
+<p>CSS 关键字 <strong><code>unset</code></strong> 可以分为两种情况，如果这个属性本来有从父级继承的值（这个属性默认可以继承，且父级有定义），则将该属性重新设置为继承的值，如果没有继承父级样式，则将该属性重新设置为初始值。换句话说，在第一种情况下（继承属性）它的行为类似于{{cssxref("inherit")}} ，在第二种情况下（非继承属性）类似于{{cssxref("initial")}}。它可以应用于任何 CSS 属性，包括 CSS 简写属性 {{cssxref("all")}} 。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -91,7 +91,7 @@ p {
   <tr>
    <td>{{ SpecName('CSS4 Cascade', '#inherit-initial', 'unset') }}</td>
    <td>{{ Spec2('CSS4 Cascade') }}</td>
-   <td>与Level 3无变化</td>
+   <td>与 Level 3 无变化</td>
   </tr>
   <tr>
    <td>{{ SpecName('CSS3 Cascade', '#unset', 'unset') }}</td>
@@ -109,7 +109,7 @@ p {
 
 <ul>
  <li>使用{{cssxref("initial")}}将属性设置为其初始值。</li>
- <li>使用{{cssxref("revert")}}将属性重置为user-agent样式表规定的值（或用户样式，如果存在）。</li>
+ <li>使用{{cssxref("revert")}}将属性重置为 user-agent 样式表规定的值（或用户样式，如果存在）。</li>
  <li>使用{{cssxref("inherit")}}使元素的属性与其父元素相同。</li>
  <li> {{cssxref("all")}}属性允许您一次将所有属性重置为其初始，继承，恢复或未设置状态。</li>
 </ul>

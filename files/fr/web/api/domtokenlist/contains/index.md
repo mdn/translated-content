@@ -1,13 +1,6 @@
 ---
 title: DOMTokenList.contains()
 slug: Web/API/DOMTokenList/contains
-tags:
-  - API
-  - Chaînes de caractères
-  - DOM
-  - Listes
-  - Méthodes
-  - Recherche contenu
 translation_of: Web/API/DOMTokenList/contains
 ---
 {{APIRef("DOM")}}
@@ -16,7 +9,9 @@ La méthode **`contains()`** de l'interface {{domxref("DOMTokenList")}} renvoie 
 
 ## Syntaxe
 
-    tokenList.contains(token);
+```js
+tokenList.contains(token);
+```
 
 ### Paramètres
 
@@ -52,7 +47,7 @@ if(result) {
 
 La sortie ressemble à ceci :
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Exemples', '100%', 60) }}
 
 ## Spécifications
 

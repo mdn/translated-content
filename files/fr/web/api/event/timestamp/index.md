@@ -1,12 +1,6 @@
 ---
 title: Event.timeStamp
 slug: Web/API/Event/timeStamp
-tags:
-  - API
-  - DOM
-  - Evènement
-  - Propriétés
-  - temps
 translation_of: Web/API/Event/timeStamp
 ---
 {{ApiRef("DOM")}}
@@ -17,7 +11,9 @@ Retourne le temps (en millisecondes) à partir duquel l'événement a été cré
 
 ## Syntaxe
 
-    event.timeStamp
+```js
+event.timeStamp
+```
 
 ### Valeur
 
@@ -49,7 +45,7 @@ document.body.addEventListener("keypress", getTime);
 
 ### Résultat
 
-{{EmbedLiveSample("Example", "100%", 100)}}
+{{EmbedLiveSample("Exemple", "100%", 100)}}
 
 ## Précision du temps réduite
 
@@ -79,8 +75,8 @@ Dans Firefox, vous pouvez aussi activer `privacy.resistFingerprinting`, la préc
 
 | Spécification                                                                                    | Statut                               | Commentaire          |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-timestamp', 'Event.timeStamp')}}     | {{ Spec2('DOM WHATWG') }}     |                      |
-| {{SpecName('DOM4', '#dom-event-timestamp', 'Event.timeStamp')}}             | {{ Spec2('DOM4') }}             |                      |
+| {{SpecName('DOM WHATWG', '#dom-event-timestamp', 'Event.timeStamp')}}     | {{ Spec2('DOM WHATWG') }}     |                      |
+| {{SpecName('DOM4', '#dom-event-timestamp', 'Event.timeStamp')}}             | {{ Spec2('DOM4') }}             |                      |
 | {{SpecName('DOM2 Events', '#Events-Event-timeStamp', 'Event.timeStamp')}} | {{ Spec2('DOM2 Events') }} | Définition initiale. |
 
 ## Compatibilité des navigateurs

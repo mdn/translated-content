@@ -20,7 +20,9 @@ La propriété **`-webkit-mask-box-image`** permet de définir l'image de masque
 
 ## Syntaxe
 
-    -webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
+```
+-webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
+```
 
 Où :
 
@@ -51,7 +53,7 @@ Où :
 - `stretch`
   - : L'image de masque est étirée pour être contenue exactement dans la boîte de bordure.
 - `round`
-  - :  L'image de masque est étirée et répétée de telle façon à ce qu'il n'y ait pas de morceaux d'image vers la fin de la boîte de bordure.
+  - :  L'image de masque est étirée et répétée de telle façon à ce qu'il n'y ait pas de morceaux d'image vers la fin de la boîte de bordure.
 
 ## Exemples
 

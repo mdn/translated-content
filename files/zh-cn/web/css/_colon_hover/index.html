@@ -10,11 +10,11 @@ translation_of: 'Web/CSS/:hover'
 
 <h2 id="概要">概要</h2>
 
-<p><code>:hover</code> CSS伪类适用于用户使用指示设备虚指一个元素（没有激活它）的情况。这个样式会被任何与链接相关的伪类重写，像{{ cssxref(":link") }}, {{ cssxref(":visited") }}, 和 {{ cssxref(":active") }}等。为了确保生效，:hover规则需要放在:link和:visited规则之后，但是在:active规则之前，按照LVHA的循顺序声明:link－:visited－:hover－:active。</p>
+<p><code>:hover</code> CSS 伪类适用于用户使用指示设备虚指一个元素（没有激活它）的情况。这个样式会被任何与链接相关的伪类重写，像{{ cssxref(":link") }}、{{ cssxref(":visited") }} 和 {{ cssxref(":active") }} 等。为了确保生效，:hover 规则需要放在 :link 和 :visited 规则之后，但是在:active 规则之前，按照 LVHA 的顺序声明 :link－:visited－:hover－:active。</p>
 
-<p>:hover伪类可以任何伪元素上使用。{{experimental_inline}}</p>
+<p>:hover 伪类可以在任何伪元素上使用。{{experimental_inline}}</p>
 
-<p>用户的可视客户端比如Firefox, Internet Explorer, Safari, Opera or Chrome, 会在光标（鼠标指针）悬停在元素上时提供关联的样式。</p>
+<p>用户的可视客户端比如 Firefox, Internet Explorer, Safari, Opera or Chrome，会在光标（鼠标指针）悬停在元素上时提供关联的样式。</p>
 
 <div class="note"><strong>注意</strong>: 在触摸屏上 <code>:hover</code> 有问题，基本不可用。不同的浏览器上<code>:hover</code> 伪类表现不同。 可能从不会触发；或者在触摸某元素后触发了一小会儿；或者总是触发即使用户不在触摸了，直到用户触摸别的元素。 触摸屏非常普遍，所以网页开发人员不要让任何内容只能通过悬停才能展示出来，不然这些内容对于触摸屏使用者来说是很难或者说不可能看到。</div>
 
@@ -31,7 +31,7 @@ translation_of: 'Web/CSS/:hover'
 
 <h3 id="下拉按钮">下拉按钮</h3>
 
-<p><code>使用:hover</code> 伪类可以创建复杂的层叠机制。一个常见用途，比如，创建一个纯CSS的下拉按钮（不使用JavaScript）。 本质是创建如下的CSS：</p>
+<p><code>使用:hover</code> 伪类可以创建复杂的层叠机制。一个常见用途，比如，创建一个纯 CSS 的下拉按钮（不使用 JavaScript）。 本质是创建如下的 CSS：</p>
 
 <pre class="brush: css">div.menu-bar ul ul {
   display: none;
@@ -42,7 +42,7 @@ div.menu-bar li:hover &gt; ul {
 }
 </pre>
 
-<p>HTML内容如下:</p>
+<p>HTML 内容如下：</p>
 
 <pre class="brush: html">&lt;div class="menu-bar"&gt;
   &lt;ul&gt;
@@ -73,13 +73,13 @@ div.menu-bar li:hover &gt; ul {
 &lt;/div&gt;
 </pre>
 
-<p>在 <a class="internal" href="https://developer.mozilla.org/@api/deki/files/6238/=css_dropdown_menu.html" title="css_dropdown_menu.html">CSS-based dropdown menu example</a> 看示例.</p>
+<p>在 <a class="internal" href="https://developer.mozilla.org/@api/deki/files/6238/=css_dropdown_menu.html" title="css_dropdown_menu.html">CSS-based dropdown menu example</a> 看示例。</p>
 
 <h3 id="可全图预览的画廊">可全图预览的画廊 </h3>
 
 <p><code>:hover</code> 伪类可以让你实现一个当鼠标悬停在图片上时全图预览的画廊功能。 在 <a class="internal" href="/@api/deki/files/6247/=css-gallery.zip" title="css-gallery.zip">this demo</a> 看示例。</p>
 
-<div class="note"><strong>注意:</strong> 一个类似的效果，是基于 :checked伪类（用于隐藏单选框）实现的，看 <a class="internal" href="/@api/deki/files/6268/=css-checked-gallery.zip" title="css-checked-gallery.zip">this demo</a>，源于 <a class="internal" href="/en/CSS/%3Achecked" title="en/CSS/:checked">En/CSS/:checked</a>。</div>
+<div class="note"><strong>注意：</strong> 一个类似的效果，是基于 :checked 伪类（用于隐藏单选框）实现的，看 <a class="internal" href="/@api/deki/files/6268/=css-checked-gallery.zip" title="css-checked-gallery.zip">this demo</a>，源于 <a class="internal" href="/en/CSS/%3Achecked" title="en/CSS/:checked">En/CSS/:checked</a>。</div>
 
 <h2 id="规范">规范</h2>
 
@@ -112,81 +112,4 @@ div.menu-bar li:hover &gt; ul {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>for <code>&lt;a&gt;</code> elements</td>
-   <td>0.2</td>
-   <td>{{ CompatGeckoDesktop(1.0) }}</td>
-   <td>4.0</td>
-   <td>4.0</td>
-   <td>2.0.4 (419)<br>
-    <span style="font-size: small;">various bugs before</span></td>
-  </tr>
-  <tr>
-   <td>for all elements</td>
-   <td>0.2</td>
-   <td>{{ CompatGeckoDesktop(1.0) }}</td>
-   <td>7.0</td>
-   <td>7.0</td>
-   <td>2.0.4 (419)<br>
-    <span style="font-size: small;">various bugs before</span></td>
-  </tr>
-  <tr>
-   <td>for pseudo-element</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(28) }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>在IE8-11中，将鼠标指针悬停于一个元素上上下滚动页面而不移动光标会让元素停留在 {{cssxref(":hover")}} 的状态直到鼠标移动。详见 <a href="https://connect.microsoft.com/IE/feedbackdetail/view/926665">IE bug 926665</a>.</p>
-
-<p>在IE9（或是更早的版本中），如果如果一个 {{HTMLElement("table")}}元素 有一个  <code>non-auto </code>{{cssxref("width")}} 和 {{cssxref("overflow-x")}}<code>: auto; 的父对象，而且这个</code> {{HTMLElement("table")}}元素有足够多的内容以至于溢出它的父元素，同时表中的元素有 {{cssxref(":hover")}}的样式，那么悬停在其上会使这个{{HTMLElement("table")}}元素的高度增大。这是一个 <a href="http://jsbin.com/diwiqe">显示该错误的demo</a> 。一个避免这个错误的方法是在这个表格的父元素为 <code>min-height: 0%;</code>（必须强调是百分比形式，<code>0</code> 和 <code>0px 都不会起作用）</code><code>。这也是在 </code><a href="http://bugs.jquery.com/ticket/10854">jQuery ticket #10854</a> 提交过的错误，但是并没有被解决，因为这不被认为是 jQuery 的错误。</p>
-
-<p>至于iOS 7.1.2 中的Safari Mobile，点击一个<a href="/zh-CN/docs/Web/Events/click#Safari_Mobile">可以点击的元素</a>会使这个元素进入{{cssxref(":hover")}}的状态，而这个元素会保持悬停状态直到另一个元素进入{{cssxref(":hover")}}状态。</p>
-
-<p>另请参见：</p>
-
-<ul>
- <li><a href="https://code.google.com/p/chromium/issues/detail?id=370155">Chromium bug #370155: Don't make <code>:hover</code> sticky on tap on sites that set a mobile viewport</a></li>
- <li><a href="https://code.google.com/p/chromium/issues/detail?id=306581">Chromium bug #306581: Immediately show hover and active states on touch when page isn't scrollable.</a></li>
-</ul>
+{{Compat("css.selectors.hover")}}

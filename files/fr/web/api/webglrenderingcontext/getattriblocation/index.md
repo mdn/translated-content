@@ -15,18 +15,20 @@ La méthode **`WebGLRenderingContext.getAttribLocation()`** de l'[API WebGL](/fr
 
 ## Syntaxe
 
-    GLint gl.getAttribLocation(programme, nom);
+```js
+GLint gl.getAttribLocation(programme, nom);
+```
 
 ### Paramètres
 
 - programme
-  - : Un {{domxref("WebGLProgram")}} contenant la variable d'attribut.
+  - : Un {{domxref("WebGLProgram")}} contenant la variable d'attribut.
 - nom
-  - : Un {{domxref("DOMString")}} indiquant le nom de la variable d'attribut dont l'emplacement est à retourner.
+  - : Un {{domxref("DOMString")}} indiquant le nom de la variable d'attribut dont l'emplacement est à retourner.
 
 ### Valeur retournée
 
-Un nombre {{domxref("GLint")}} indiquant l'emplacement du nom de la variable si trouvé. Retourne -1 sinon.
+Un nombre {{domxref("GLint")}} indiquant l'emplacement du nom de la variable si trouvé. Retourne -1 sinon.
 
 ## Exemples
 

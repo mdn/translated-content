@@ -54,11 +54,11 @@ _Cette interface hérite des méthodes de {{domxref("HTMLElement")}}, et de {{do
 
 - {{domxref("HTMLSelectElement.add()")}}
   - : Ajoute un élément à la collection d'éléments `option` pour cet élément `select`.
-- {{domxref("HTMLSelectElement.blur()")}} {{obsolete_inline}}
+- {{domxref("HTMLSelectElement.blur()")}} {{deprecated_inline}}
   - : Supprime le focus d'entrée de cet élément. _Cette méthode est maintenant mise en œuvre sur {{domxref("HTMLElement")}}._.
 - {{domxref("HTMLSelectElement.checkValidity()")}}
   - : Vérifie si l'élément a des contraintes et s'il les satisfait. Si l'élément ne respecte pas ses contraintes, le navigateur déclenche un événement {{domxref("HTMLInputElement/invalid_event", "invalid")}} annulable sur l'élément (et retourne `false`).
-- {{domxref("HTMLSelectElement.focus()")}} {{obsolete_inline}}
+- {{domxref("HTMLSelectElement.focus()")}} {{deprecated_inline}}
   - : Donne le focus d'entrée à cet élément. _Cette méthode est maintenant mise en œuvre sur {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.item()")}}
   - : Obtient un élément de la collection d'options de l'élément {{HTMLElement("select")}}. Vous pouvez également accéder à un élément en spécifiant l'index entre des parenthèses ou des crochets de style tableau, sans appeler cette méthode explicitement.

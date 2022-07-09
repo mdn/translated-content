@@ -35,7 +35,7 @@ Le CSS détermine la _taille concrète de l'objet_ en utilisant ces _dimensions 
 | {{cssxref("shape-outside")}}                                                                                   | ?                                                                                                                                           |
 | {{cssxref("mask-border-source")}}                                                                           | ?                                                                                                                                           |
 | {{cssxref("symbols()")}} pour `@counter-style`                                                                 | Une fonctionnalité en cours de discussion. Si elle est prise en charge, la taille utilisée sera celle des curseurs utilisés par le système. |
-| {{cssxref("content")}} avec les pseudo-éléments {{cssxref("::after")}} et {{cssxref("::before")}} | Un rectangle de ` 300px`` × 150px  `                                                                                                        |
+| {{cssxref("content")}} avec les pseudo-éléments {{cssxref("::after")}} et {{cssxref("::before")}} | Un rectangle de `300px × 150px`                                                                                                        |
 
 La taille concrète de l'objet est calculée selon l'algorithme suivant :
 

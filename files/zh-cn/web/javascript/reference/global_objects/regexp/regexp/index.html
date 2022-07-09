@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 
 <p><strong><code>RegExp</code></strong> 用于创建正则表达式对象，该对象用于将文本与一个模式匹配</p>
 
-<p>阅读<a href="/zh-CN/docs/Web/JavaScript/Guide" title="JavaScript/Guide">JavaScript指南</a>中的<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" title="JavaScript/Guide/Regular_Expressions">正则表达式</a>一节以了解正则表达式。</p>
+<p>阅读<a href="/zh-CN/docs/Web/JavaScript/Guide" title="JavaScript/Guide">JavaScript 指南</a>中的<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" title="JavaScript/Guide/Regular_Expressions">正则表达式</a>一节以了解正则表达式。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}</div>
 
@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 
 <p>可以使用字面量、构造函数和工厂方法来创建正则表达式</p>
 
-<pre class="syntaxbox notranslate">/<var>pattern</var>/<var>flags</var>
+<pre class="syntaxbox">/<var>pattern</var>/<var>flags</var>
 new RegExp(<var>pattern</var>[, <var>flags</var>])
 RegExp(<var>pattern</var>[, <var>flags</var>])
 </pre>
@@ -26,25 +26,24 @@ RegExp(<var>pattern</var>[, <var>flags</var>])
 
 <dl>
  <dt><code><var>pattern</var></code></dt>
- <dd>正则表达式的文本。</dd>
- <dd>从ES5开始，这也可以是另一个<code>RegExp</code>对象或文字(仅用于两个RegExp构造函数符号)。模式可以包含特殊字符<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters">special characters</a>来匹配比字面值字符串更广泛的值范围 。 </dd>
+ <dd>正则表达式的文本。从 ES5 开始，这也可以是另一个<code>RegExp</code>对象或文字 (仅用于两个 RegExp 构造函数符号)。模式可以包含特殊字符<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters">special characters</a>来匹配比字面值字符串更广泛的值范围。</dd>
  <dt><code><var>flags</var></code></dt>
  <dd>
- <p>如果指定, <code><var>flags</var></code> 是包含要添加的标志的字符串。</p>
+ <p>如果指定，<code><var>flags</var></code> 是包含要添加的标志的字符串。</p>
 
- <p>或者，如果为模式提供了一个对象，flags字符串将替换该对象的任何标志(并且<code>lastIndex</code>将重置为0)(从ES2015开始)。</p>
+ <p>或者，如果为模式提供了一个对象，flags 字符串将替换该对象的任何标志 (并且<code>lastIndex</code>将重置为 0)(从 ES2015 开始)。</p>
  
- <p>如果没有指定<code><var>flags</var></code>并且提供了一个正则表达式对象，则该对象的flags(和lastIndex值)将被复制。</p>
+ <p>如果没有指定<code><var>flags</var></code>并且提供了一个正则表达式对象，则该对象的 flags(和 lastIndex 值) 将被复制。</p>
 
- <p><code>flags</code> 可包含下列任何字符的组合:</p>
+ <p><code>flags</code> 可包含下列任何字符的组合：</p>
 
  <dl>
   <dt><code>g</code> （全局匹配）</dt>
   <dd>找到所有的匹配，而不是在第一个匹配之后停止。</dd>
   <dt><code>i</code> （忽略大小写）</dt>
-  <dd>如果<code>u</code>标志也被启用，使用Unicode大小写折叠。</dd>
+  <dd>如果<code>u</code>标志也被启用，使用 Unicode 大小写折叠。</dd>
   <dt><code>m</code> （多行匹配）</dt>
-  <dd>将开始和结束字符(<code>^</code> and <code>$</code>)视为在多行上工作。换句话说，匹配每一行的开头或结尾<em>each</em> line (由<code>\n</code>或者<code>\r</code> 分隔)，而不仅仅是整个输入字符串的开头或结尾。</dd>
+  <dd>将开始和结束字符 (<code>^</code> and <code>$</code>) 视为在多行上工作。换句话说，匹配每一行的开头或结尾<em>each</em> line (由<code>\n</code>或者<code>\r</code> 分隔)，而不仅仅是整个输入字符串的开头或结尾。</dd>
   <dt><code>s</code> （点号匹配所有字符）</dt>
   <dd>允许<code>.</code> 去匹配新的行</dd>
   <dt><code>u</code> （unicode）</dt>
@@ -59,23 +58,23 @@ RegExp(<var>pattern</var>[, <var>flags</var>])
 
 <h3 id="字面量和构造函数">字面量和构造函数</h3>
 
-<p>这里有两种方法创建<code>RegExp</code> 对象: <em>字面量</em> 和 <em>构造函数</em>.</p>
+<p>这里有两种方法创建<code>RegExp</code> 对象：<em>字面量</em> 和 <em>构造函数</em>.</p>
 
 <ul>
  <li><strong>文字符号的</strong> 参数用斜杠括起来，不使用引号。</li>
  <li><strong>构造函数的</strong> 参数不包含在斜杠之间，但使用引号。</li>
 </ul>
 
-<p>以下三个表达式创建相同的正则表达式:</p>
+<p>以下三个表达式创建相同的正则表达式：</p>
 
-<pre class="brush: js notranslate">/ab+c/i
+<pre class="brush: js">/ab+c/i
 new RegExp(/ab+c/, 'i') // 字面量
 new RegExp('ab+c', 'i') // 构造函数
 </pre>
 
 <p>当表达式被求值时，文字表示法会导致对正则表达式的编译。当正则表达式保持不变时，请使用字面量表示法。例如，如果使用字面量表示法来构造循环中使用的正则表达式，则不会在每次迭代时重新编译正则表达式。</p>
 
-<p>正则表达式对象的构造函数—例如，new RegExp('ab+c')—会导致正则表达式的运行时编译。当您知道正则表达式模式将发生变化时，或者您不知道该模式，但正在从其他来源(如用户输入)获取它时，请使用构造函数。</p>
+<p>正则表达式对象的构造函数—例如，new RegExp('ab+c')—会导致正则表达式的运行时编译。当您知道正则表达式模式将发生变化时，或者您不知道该模式，但正在从其他来源 (如用户输入) 获取它时，请使用构造函数。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -103,7 +102,8 @@ new RegExp('ab+c', 'i') // 构造函数
 <h2 id="参见">参见</h2>
 
 <ul>
-<a href="/zh-CN/docs/Web/JavaScript/Guide" title="JavaScript/Guide">JavaScript指南</a>中的<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" title="JavaScript/Guide/Regular_Expressions">正则表达式</a>一节
+<li><a href="/zh-CN/docs/Web/JavaScript/Guide">JavaScript 指南中的</a></li>
+<li><a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">正则表达式一节</a></li>
  <li>{{jsxref("String.prototype.match()")}}</li>
  <li>{{jsxref("String.prototype.replace()")}}</li>
 </ul>

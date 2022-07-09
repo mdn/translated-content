@@ -24,7 +24,7 @@ Promise.all(iterable);
 ### 引数
 
 - `iterable`
-  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)オブジェクト、例えば {{jsxref("Array")}} など。
+  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)オブジェクト、例えば {{jsxref("Array")}} など。
 
 ### 返値
 
@@ -37,6 +37,8 @@ Promise.all(iterable);
 このメソッドは複数のプロミスの結果を集約するのに便利です。このメソッドは、コード全体が正常に動作するために依存している複数の関連する非同期タスクがあり、コードの実行を続ける前にそれらすべてを履行させたい場合によく使われます。
 
 `Promise.all()` は、入力されたプロミスの**いずれか**が拒否されると直ちに拒否されます。それに対して、{{jsxref("Promise.allSettled()")}} が返すプロミスは、入力されたプロミスが拒否されたかどうかに関わらず、すべての入力されたプロミスが完了するのを待ちます。その結果、入力された反復可能オブジェクトのすべてのプロミスと関数の最終結果を常に返します。
+
+> **Note:** プロミスの配列の順序は、このメソッドが完了された時点で保持されます。
 
 ### 履行の場合
 

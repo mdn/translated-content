@@ -19,8 +19,10 @@ Affiche un message dans la console web, avec le niveau de log "debug". Le messag
 
 ## Syntaxe
 
-    console.debug(obj1 [, obj2, ..., objN]);
-    console.debug(msg [, subst1, ..., substN]);
+```js
+console.debug(obj1 [, obj2, ..., objN]);
+console.debug(msg [, subst1, ..., substN]);
+```
 
 ### Paramètres
 

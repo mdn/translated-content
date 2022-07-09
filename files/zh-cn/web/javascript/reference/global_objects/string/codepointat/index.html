@@ -24,9 +24,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 
 <h2 id="描述">描述</h2>
 
-<p>如果在指定的位置没有元素则返回 {{jsxref("undefined")}} 。如果在索引处开始没有UTF-16 代理对，将直接返回在那个索引处的编码单元。</p>
+<p>如果在指定的位置没有元素则返回 {{jsxref("undefined")}}。如果在索引处开始没有 UTF-16 代理对，将直接返回在那个索引处的编码单元。</p>
 
-<p>Surrogate Pair是UTF-16中用于扩展字符而使用的编码方式，是一种采用四个字节(两个UTF-16编码)来表示一个字符，称作代理对。</p>
+<p>Surrogate Pair 是 UTF-16 中用于扩展字符而使用的编码方式，是一种采用四个字节 (两个 UTF-16 编码) 来表示一个字符，称作代理对。</p>
 
 <h2 id="例子">例子</h2>
 
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 'XYZ'.codePointAt(42); // undefined
 </pre>
 
-<h2 id="替补支持(Polyfill)">替补支持(Polyfill)</h2>
+<h2 id="替补支持（polyfill）">替补支持（Polyfill）</h2>
 
 <p>给原生不支持 ECMAScript 6 的浏览器使用<code>codePointAt()</code>方法的的一个字符串扩展方法。</p>
 
@@ -113,55 +113,7 @@ if (!String.prototype.codePointAt) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatChrome("41")}}</td>
-   <td>{{CompatGeckoDesktop("29")}}</td>
-   <td>11</td>
-   <td>{{CompatOpera("28")}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("29")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

@@ -42,12 +42,15 @@ translation_of: Web/JavaScript/Reference/Functions/get
 - 접근자의 식별자는 숫자나 문자열일 수 있습니다.
 - 접근자 함수는 매개변수를 가질 수 없습니다.
 - 객체 리터럴에서, 같은 속성 키에 다수의 접근자를 바인딩할 수 없습니다.
+
   ```js example-bad
   {
     get x() { }, get x() { }
   }
   ```
+
 - 객체 리터럴에서, 접근자는 데이터 속성과 같은 키를 사용할 수 없습니다.
+
   ```js example-bad
   {
     x: ..., get x() { }

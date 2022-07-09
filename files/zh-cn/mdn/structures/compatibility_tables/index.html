@@ -10,9 +10,7 @@ translation_of: MDN/Structures/Compatibility_tables
 ---
 <div>{{MDNSidebar}}</div>
 
-<div>{{IncludeSubnav("/zh-CN/docs/MDN")}}</div>
-
-<p class="summary"><span class="seoSummary">MDN 为我们的开放网页文档提供了兼容性表格的标准格式; 它是对比所有浏览器之间，包含 DOM，HTML，CSS，JavaScript，SVG 等技术的文档。</span>本文将介绍如何使用我们的功能将兼容性数据添加到MDN页面。</p>
+<p>MDN 为我们的开放网页文档提供了兼容性表格的标准格式; 它是对比所有浏览器之间，包含 DOM，HTML，CSS，JavaScript，SVG 等技术的文档。本文将介绍如何使用我们的功能将兼容性数据添加到 MDN 页面。</p>
 
 <div class="warning syntaxbox">
 <p><strong>重要</strong>: <strong><em>数据的生成方式已经发生了变更</em></strong>。过去，我们的表格直接嵌入在页面中，而且数据是手动填写的。这样效率很低，难以维护，而且使得数据不够灵活，不便更新。所以我们正在把我们的兼容性表格迁移到一个数据 repo 中（<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>）并且改为使用程序化的方式生成它。<br>
@@ -21,47 +19,47 @@ translation_of: MDN/Structures/Compatibility_tables
 </div>
 
 <div class="note">
-<p><strong>注意：</strong>如果您需要本指南任何步骤的帮助，欢迎您在<a href="https://discourse.mozilla-community.org/c/mdn">MDN论坛</a>上与我们联系。</p>
+<p><strong>注意：</strong>如果您需要本指南任何步骤的帮助，欢迎您在<a href="https://discourse.mozilla-community.org/c/mdn">MDN 论坛</a>上与我们联系。</p>
 </div>
 
 <h2 id="如何访问_data_repo">如何访问 data repo</h2>
 
-<p>数据存储在一个 GitHub repo 中，到 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 查看。想要访问它，你必须拥有一个 GitHub 账号，fork浏览器兼容数据仓库到你自己的账户，然后克隆你的fork到你的本地机器。</p>
+<p>数据存储在一个 GitHub repo 中，到 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 查看。想要访问它，你必须拥有一个 GitHub 账号，fork 浏览器兼容数据仓库到你自己的账户，然后克隆你的 fork 到你的本地机器。</p>
 
 <h2 id="选择要贡献的数据类型">选择要贡献的数据类型</h2>
 
-<p>首先，确定一下你想为何种 Web 技术贡献兼容性数据。可以是一个 HTML 元素、CSS 属性、JS 语法或者 JS API 接口。我们鼓励您贡献 API 接口的数据, 因为已经有人在贡献 HTML、JS 和 CSS 的数据了。你可以在表格 <a href="https://docs.google.com/spreadsheets/d/1ivgyPBr9Lj3Wvj5kyndT1rgGbX-pGggrxuMtrgcOmjM/edit#gid=926663640">Browser Compat Data migration</a> 中查看各个需要添加兼容性数据的 Web 技术的数据状态。</p>
+<p>首先，确定一下你想为何种 Web 技术贡献兼容性数据。可以是一个 HTML 元素、CSS 属性、JS 语法或者 JS API 接口。我们鼓励您贡献 API 接口的数据，因为已经有人在贡献 HTML、JS 和 CSS 的数据了。你可以在表格 <a href="https://docs.google.com/spreadsheets/d/1ivgyPBr9Lj3Wvj5kyndT1rgGbX-pGggrxuMtrgcOmjM/edit#gid=926663640">Browser Compat Data migration</a> 中查看各个需要添加兼容性数据的 Web 技术的数据状态。</p>
 
-<p>电子表格的使用步骤如下:</p>
+<p>电子表格的使用步骤如下：</p>
 
 <ol>
- <li>直接挑选一个还未开始或者还未完成数据录入的功能点，在“Who”一栏中填入你的名字, 最好能够和你的MDN用户名保持一致，以便我们在需要联系你的时候能够查找到你的邮件地址.</li>
- <li>如果该功能点不在表格上，那么你可以参照现有的格式在合适的位置上加一行。注意要使用同等的粒度（例如，HTML以标签元素为单位、CSS以选择器或者属性值为单位、JS以对象为单位、JS API以特定的接口为单位）</li>
+ <li>直接挑选一个还未开始或者还未完成数据录入的功能点，在“Who”一栏中填入你的名字，最好能够和你的 MDN 用户名保持一致，以便我们在需要联系你的时候能够查找到你的邮件地址。</li>
+ <li>如果该功能点不在表格上，那么你可以参照现有的格式在合适的位置上加一行。注意要使用同等的粒度（例如，HTML 以标签元素为单位、CSS 以选择器或者属性值为单位、JS 以对象为单位、JS API 以特定的接口为单位）</li>
  <li>当你已经开始录入数据的时候，把对应状态栏的下拉选项置于“In progress”（进行中）状态。</li>
  <li>一旦添加完数据，并且向主仓库提交了一个拉取请求（pull request），那么把对应状态栏的下拉选项置于“PR done”状态。</li>
- <li>当你的数据已经成功合并到主分支，或者已经添加到npm包里面的时候，请尽量更新对应的状态栏到相应的状态。</li>
+ <li>当你的数据已经成功合并到主分支，或者已经添加到 npm 包里面的时候，请尽量更新对应的状态栏到相应的状态。</li>
  <li>当你更新了你的功能文档页面，并且使用新的脚步命令使其可以在每一个页面都可以动态的生成合适的数据表格的时候，你就需要在电子表格中修改对应功能的状态为“Article updated”（文章已更新）。这意味着你已经完成了这一功能的所有数据录入工作。</li>
 </ol>
 
 <h2 id="准备添加数据">准备添加数据</h2>
 
-<p>在添加新数据之前，你应该保证您的 fork 是主 repo 的最新版本（它们应包含相同的内容）。在您的 fork 里添加一个包含您的更改的分支，然后把它pull到您本地的仓库，这样你就可以开始贡献了：</p>
+<p>在添加新数据之前，你应该保证您的 fork 是主 repo 的最新版本（它们应包含相同的内容）。在您的 fork 里添加一个包含您的更改的分支，然后把它 pull 到您本地的仓库，这样你就可以开始贡献了：</p>
 
 <p>下面是更新您的分支的一个简单方法：</p>
 
 <h3 id="将浏览器兼容信息的主_repo_添加到远端服务器列表中">将浏览器兼容信息的主 repo 添加到远端服务器列表中</h3>
 
-<p>在您的终端或命令行中进入您的fork的本地仓库，用以下命令将（服务器上的）主 repo 添加到远端服务器列表中（您只需执行以下命令一次）：</p>
+<p>在您的终端或命令行中进入您的 fork 的本地仓库，用以下命令将（服务器上的）主 repo 添加到远端服务器列表中（您只需执行以下命令一次）：</p>
 
 <pre class="brush: bash notranslate">git remote add upstream https://github.com/mdn/browser-compat-data.git</pre>
 
-<p><span id="result_box" lang="zh-CN">如果您不确定自己是否做到了这一点</span>， 您可以检查您仓库已经在用的远端服务器列表：</p>
+<p>如果您不确定自己是否做到了这一点，您可以检查您仓库已经在用的远端服务器列表：</p>
 
 <pre class="brush: bash notranslate">git remote -v</pre>
 
 <h3 id="让您的分支与服务器上的内容同步">让您的分支与服务器上的内容同步</h3>
 
-<p><span id="result_box" lang="zh-CN"><span>现在，只要您想更新您</span></span><span lang="zh-CN"><span>的分支，</span></span><span id="result_box" lang="zh-CN"><span>您</span></span><span lang="zh-CN"><span>就可以这样做：</span></span></p>
+<p>现在，只要您想更新您的分支，您就可以这样做：</p>
 
 <ol>
  <li>
@@ -75,7 +73,7 @@ translation_of: MDN/Structures/Compatibility_tables
   <pre class="brush: bash notranslate">git fetch upstream</pre>
  </li>
  <li>
-  <p>用rebase将主仓库的内容合并到您的master分支中：</p>
+  <p>用 rebase 将主仓库的内容合并到您的 master 分支中：</p>
 
   <pre class="brush: bash notranslate">git rebase upstream/master</pre>
  </li>
@@ -88,7 +86,7 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <h3 id="创建您用来工作的分支：">创建您用来工作的分支：</h3>
 
-<p>接下来，打开您在服务器上的fork（它的地址可能是<code>https://github.com/<em>your-username</em>/browser-compat-data</code>）并且创建一个新分支来存储您的改动。步骤如下：</p>
+<p>接下来，打开您在服务器上的 fork（它的地址可能是<code>https://github.com/<em>your-username</em>/browser-compat-data</code>）并且创建一个新分支来存储您的改动。步骤如下：</p>
 
 <ol>
  <li>点击"Branch: Master"按钮；</li>
@@ -96,11 +94,11 @@ translation_of: MDN/Structures/Compatibility_tables
  <li>点击下方出现的"Create branch <em>name-of-branch</em> from Master"按钮。</li>
 </ol>
 
-<p>举个例子，如果您想补充WebVR API的信息，您可以创建一个名为“webvr”的分支.</p>
+<p>举个例子，如果您想补充 WebVR API 的信息，您可以创建一个名为“webvr”的分支。</p>
 
 <h3 id="切换到新分支">切换到新分支</h3>
 
-<p>此时，回到您的终端或命令行，用以下命令将您的新分支同步到您本地的fork中：</p>
+<p>此时，回到您的终端或命令行，用以下命令将您的新分支同步到您本地的 fork 中：</p>
 
 <pre class="brush: bash notranslate">git pull</pre>
 
@@ -115,21 +113,21 @@ translation_of: MDN/Structures/Compatibility_tables
 <p>为添加新的数据，您需要新建文件以存储您的兼容性数据。对于不同技术的数据，您需要创建的文件也有所不同：</p>
 
 <ul>
- <li><a href="/zh-CN/docs/Web/HTML/">HTML</a>：被包含在 <a href="https://github.com/mdn/browser-compat-data/tree/master/html/elements">browser-compat-data/html/elements</a> 中，每个HTML元素对应一个文件。文件需要以元素的小写的名称命名，例如<code>div.json</code>。</li>
- <li><a href="/zh-CN/docs/CSS">CSS</a>：每个CSS属性或选择器对应一个文件。它们被包含在对应的目录中（请参考 <a href="https://github.com/mdn/browser-compat-data/tree/master/css">browser-compat-data/css</a>）。文件需要以CSS特性的小写的名称命名，如<code>background-color.json</code>或者<code>hover.json</code>。</li>
- <li><a href="/zh-CN/docs/JavaScript">JS</a>：被包含在 <a href="https://github.com/mdn/browser-compat-data/tree/master/javascript/builtins">browser-compat-data/javascript/builtins</a> 中，每个JavaScript对象对应一个文件。文件要以JavaScript对象的准确名称命名，保留其大小写，如 <code>Date.json</code> 或 <code>InternalError.json</code>。</li>
- <li><a href="/zh-CN/docs/Web/API">API</a>：API中的每个接口对应一个文件。它们在 <a href="https://github.com/mdn/browser-compat-data/tree/master/api">browser-compat-data/api</a> 中。每个文件要以接口的准确名称命名，保留其大小写，例如WebVR API的文件为<code>VRDisplay.json</code>，<code>VRDisplayCapabilities.json</code>，等等。</li>
+ <li><a href="/zh-CN/docs/Web/HTML/">HTML</a>：被包含在 <a href="https://github.com/mdn/browser-compat-data/tree/master/html/elements">browser-compat-data/html/elements</a> 中，每个 HTML 元素对应一个文件。文件需要以元素的小写的名称命名，例如<code>div.json</code>。</li>
+ <li><a href="/zh-CN/docs/CSS">CSS</a>：每个 CSS 属性或选择器对应一个文件。它们被包含在对应的目录中（请参考 <a href="https://github.com/mdn/browser-compat-data/tree/master/css">browser-compat-data/css</a>）。文件需要以 CSS 特性的小写的名称命名，如<code>background-color.json</code>或者<code>hover.json</code>。</li>
+ <li><a href="/zh-CN/docs/JavaScript">JS</a>：被包含在 <a href="https://github.com/mdn/browser-compat-data/tree/master/javascript/builtins">browser-compat-data/javascript/builtins</a> 中，每个 JavaScript 对象对应一个文件。文件要以 JavaScript 对象的准确名称命名，保留其大小写，如 <code>Date.json</code> 或 <code>InternalError.json</code>。</li>
+ <li><a href="/zh-CN/docs/Web/API">API</a>：API 中的每个接口对应一个文件。它们在 <a href="https://github.com/mdn/browser-compat-data/tree/master/api">browser-compat-data/api</a> 中。每个文件要以接口的准确名称命名，保留其大小写，例如 WebVR API 的文件为<code>VRDisplay.json</code>，<code>VRDisplayCapabilities.json</code>，等等。</li>
 </ul>
 
 <div class="note">
 <p><strong>注意：您会留意到，该仓库还包含了<a href="/en-US/Add-ons/WebExtensions">浏览器拓展</a>和</strong><a href="/en-US/docs/Web/HTTP">HTTP</a><strong>的数据。</strong>These data sets are basically finished as they stand, but more features may need to be added in the future.</p>
 </div>
 
-<p>你创建的每个文件都需要跟随定义在我们repo的schema中的这些模板的规定。你可以参考<a href="https://github.com/mdn/browser-compat-data/blob/master/compat-data-schema.md">详细的模板描述</a>。</p>
+<p>你创建的每个文件都需要跟随定义在我们 repo 的 schema 中的这些模板的规定。你可以参考<a href="https://github.com/mdn/browser-compat-data/blob/master/compat-data-schema.md">详细的模板描述</a>。</p>
 
 <h3 id="基本的兼容性数据的结构">基本的兼容性数据的结构</h3>
 
-<p>让我们来看一下如下例子。一个CSS属性JSON文件需要以下的结构：</p>
+<p>让我们来看一下如下例子。一个 CSS 属性 JSON 文件需要以下的结构：</p>
 
 <pre class="brush: json notranslate">{
   "css": {
@@ -145,32 +143,32 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <p>首先有一个<code>css</code>对象，其中包含了一个<code>properties</code>对象。每个您要设定兼容性数据的特性都对应一个<code>properties</code>对象中的成员。而每一个这些成员都有一个<code>__compat</code>成员，<code>__compat</code>成员中则是实际的数据。</p>
 
-<p>以上的数据能在 <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">browser-width.json</a> 文件中找到——可将这与 <a href="/zh-CN/docs/Web/CSS/border-width#Browser_compatibility">MDN上渲染后的浏览器兼容性</a> 相比较。</p>
+<p>以上的数据能在 <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">browser-width.json</a> 文件中找到——可将这与 <a href="/zh-CN/docs/Web/CSS/border-width#Browser_compatibility">MDN 上渲染后的浏览器兼容性</a> 相比较。</p>
 
 <p>对于其他类型特性，写法是类似的，但对象的名称不同：</p>
 
 <ul>
- <li>对于CSS选择器，它与CSS属性的写法基本相同，不同之处在于顶级对象结构是是 <code>css.selectors</code> 而不是<code>css.properties</code>. 请以 <a href="https://github.com/mdn/browser-compat-data/blob/master/css/selectors/cue.json">cue.json</a> 作为参考示例。</li>
- <li>对于HTML数据，它的写法基本相同，不同之处在于顶级对象结构是<code>html.elements</code>。请以<code>article.json</code>作为参考示例。</li>
- <li>JS内置对象对应的顶级结构是<code>javascript.builtins</code>；请以 <a href="https://github.com/mdn/browser-compat-data/blob/master/javascript/builtins/Array.json">Array.json</a> 作为参考示例。</li>
+ <li>对于 CSS 选择器，它与 CSS 属性的写法基本相同，不同之处在于顶级对象结构是是 <code>css.selectors</code> 而不是<code>css.properties</code>. 请以 <a href="https://github.com/mdn/browser-compat-data/blob/master/css/selectors/cue.json">cue.json</a> 作为参考示例。</li>
+ <li>对于 HTML 数据，它的写法基本相同，不同之处在于顶级对象结构是<code>html.elements</code>。请以<code>article.json</code>作为参考示例。</li>
+ <li>JS 内置对象对应的顶级结构是<code>javascript.builtins</code>；请以 <a href="https://github.com/mdn/browser-compat-data/blob/master/javascript/builtins/Array.json">Array.json</a> 作为参考示例。</li>
 </ul>
 
 <div>
-<p>在一个HTML、CSS和JS页面中，通常您只需要有一个特性。API则有些不同——它们总是包含多个子特性 （参见下边的 {{anch("Sub-features")}}）。</p>
+<p>在一个 HTML、CSS 和 JS 页面中，通常您只需要有一个特性。API 则有些不同——它们总是包含多个子特性（参见下边的 <a href="#子特性">子特性</a>）。</p>
 
 <h3 id="一个特性中的基础结构">一个特性中的基础结构</h3>
 
 <p>在一个特性的<code>__compat</code>成员中，您需要包含以下成员：</p>
 
 <ul>
- <li><code>mdn_url</code>: MDN上这个特性的页面的URL。注意，这个URL不可以带上本地化文件夹名称，例如：是 <code>/docs/...</code> 而不是 <code>/docs/en-US/...</code> （或者其他）。本地化文件夹名称会在页面加载时被添加。</li>
+ <li><code>mdn_url</code>: MDN 上这个特性的页面的 URL。注意，这个 URL 不可以带上本地化文件夹名称，例如：是 <code>/docs/...</code> 而不是 <code>/docs/en-US/...</code> （或者其他）。本地化文件夹名称会在页面加载时被添加。</li>
  <li><code>support</code>: 所有不同浏览器对这个特性的浏览器支持的信息。</li>
  <li><code>status</code>: Contains members reporting the standards track status of this feature.</li>
 </ul>
 
 <p>浏览器成员名称在架构里被定义（参见 <a href="https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#browser-identifiers">浏览器标识符</a>）。你应该使用现有定义的标识符的完整列表。如果你希望添加其他浏览器，请先联系我们，因为这可能会产生广泛的影响，不应该在未经认真考虑就这么做。</p>
 
-<p>在一个基本的浏览器兼容数据文件中，你只需要在浏览器标识符成员仲包含"version_added" （以下我们会说到{{anch("Advanced cases")}}）。其他你可能使用的值还包括： </p>
+<p>在一个基本的浏览器兼容数据文件中，你只需要在浏览器标识符成员仲包含"version_added" （以下我们会说到<a href="#添加数据：高级场景">高级场景</a>）。其他你可能使用的值还包括： </p>
 
 <ul>
  <li>一个版本号：如果你知道一个浏览器开始支持这个特性的准确版本，用一个字符串表述版本号，例如“47”。 </li>
@@ -183,7 +181,7 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <ul>
  <li> <code>"experimental"</code>: 如果这个特性是<a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">试验性</a>的，取值为 <code>true</code> ，否则为 <code>false</code> 。</li>
- <li><code>"standard_track"</code>: 如果这个特性是个在某些规范里的标准的属性（最常见的是W3C/WHATWG，但有其他规范如Khronos或TC39等），取值为<code>true</code> ，否则为 <code>false</code> 。</li>
+ <li><code>"standard_track"</code>: 如果这个特性是个在某些规范里的标准的属性（最常见的是 W3C/WHATWG，但有其他规范如 Khronos 或 TC39 等），取值为<code>true</code> ，否则为 <code>false</code> 。</li>
  <li><code>"deprecated"</code>: 如果这个特性已经<a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete">过时</a>，取值为<code>true</code> ，否则为 <code>false</code> 。</li>
 </ul>
 
@@ -318,7 +316,7 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <h3 id="Including_a_footnote">Including a footnote</h3>
 
-<p>Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>)  (at the time of writing) had a footnote "<span class="pl-s">Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:</span></p>
+<p>Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>)  (at the time of writing) had a footnote "Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:</p>
 
 <pre class="brush: json notranslate">"chrome_android": {
   "version_added": true,
@@ -327,7 +325,7 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <h3 id="包含浏览器厂商的前缀">包含浏览器厂商的前缀</h3>
 
-<p>If a feature is supported behind a vendor prefix in one or more browsers, you'll want to make that clear in the browser compat data. 例如您可能有一个特性在Firefox浏览器中要用<code>-moz-</code>前缀才被支持，要在兼容性数据中指明这一点，您需在对应的"firefox"子成员中增加一个"prefix"子成员。它看起来是这样的：</p>
+<p>If a feature is supported behind a vendor prefix in one or more browsers, you'll want to make that clear in the browser compat data. 例如您可能有一个特性在 Firefox 浏览器中要用<code>-moz-</code>前缀才被支持，要在兼容性数据中指明这一点，您需在对应的"firefox"子成员中增加一个"prefix"子成员。它看起来是这样的：</p>
 
 <pre class="brush: json notranslate">"firefox": {
   "version_added": true,
@@ -341,7 +339,7 @@ translation_of: MDN/Structures/Compatibility_tables
 <p>To represent this in the compat data, you need to add the "flags" submember inside the relevant browser identifier submember. The value of "flags" is an array of objects each of which contains of three members:</p>
 
 <ul>
- <li>"type": The type of flag or pref this is. The most common value is "preference", which is set inside the browser (for example, using <code>about:config</code> in Firefox, or <code>chrome://flags</code> in Chrome), but you might also sometimes use a value of <span class="pl-s"><span class="pl-pds">"</span>compile_flag<span class="pl-pds">", which is a preference set when the browser build is compiled.</span></span></li>
+ <li>"type": The type of flag or pref this is. The most common value is "preference", which is set inside the browser (for example, using <code>about:config</code> in Firefox, or <code>chrome://flags</code> in Chrome), but you might also sometimes use a value of "compile_flag", which is a preference set when the browser build is compiled.</li>
  <li>"name": This is a string representing the name of the preference that needs to have a value set on it. For example, "Enable Experimental Web Platform Features" is a preference that exists in Chrome, found in <code>chrome://flags</code>.</li>
  <li>"value_to_set": This is a string representing the value that needs to be set on the preference, for example "true".</li>
 </ul>
@@ -459,7 +457,7 @@ translation_of: MDN/Structures/Compatibility_tables
 <p>在您添加完您的兼容性数据之后，您应该先用以下命令测试一下：</p>
 
 <ul>
- <li><code>npm run lint</code> — 测试所有兼容性数据以确保JSON的格式和书写风格正确，例如正确的缩进和没有遗漏逗号等等。该命令会打印出一个很长的文件名和测试结果的列表；if an error is found, the linter will throw an error on the file it is found in, giving you useful debugging info like line number, error message, etc.</li>
+ <li><code>npm run lint</code> — 测试所有兼容性数据以确保 JSON 的格式和书写风格正确，例如正确的缩进和没有遗漏逗号等等。该命令会打印出一个很长的文件名和测试结果的列表；if an error is found, the linter will throw an error on the file it is found in, giving you useful debugging info like line number, error message, etc.</li>
  <li><code>npm run show-errors</code> — validates the JSON against the data schema, and highlights errors such as invalid browser version numbers being used.</li>
  <li><code>npm run render 'dotted.path.to.feature'</code> — allows you to preview the markup for the compat table for a data file in the repo. As an example, <code>npm run render 'css.properties.background'</code> shows the table markup for the {{cssxref("background")}} property.</li>
 </ul>
@@ -474,7 +472,7 @@ git push</pre>
 
 <p>At this point, you just need to wait. A reviewer will review your pull request, and merge it with the main repo, OR request that you make changes. If changes are needed, make the changes and submit again until the PR is accepted.</p>
 
-<h2 id="将数据插入MDN页">将数据插入MDN页</h2>
+<h2 id="将数据插入MDN页">将数据插入 MDN 页</h2>
 
 <p>Once your new data has been included in the main repo, you can start dynamically generating browser compat tables based on that data on MDN pages using the \{{Compat}} macro. This takes a single parameter, the dot notation required to walk down the JSON data and find the object representing the feature you want to generate the compat table for.</p>
 
@@ -491,5 +489,5 @@ git push</pre>
 <p>{{Compat("api.VRDisplay.capabilities")}}</p>
 
 <div class="note">
-<p><strong>注意</strong>: 文件名通常与给予JSON结构内的接口的标签相匹配，但事实并非总是如此。 当宏调用生成表时，他们遍历所有文件，直到找到相关的JSON使用，所以文件名不是关键。 说到这一点，你应该始终尽可能直观地命名它们。</p>
+<p><strong>注意</strong>: 文件名通常与给予 JSON 结构内的接口的标签相匹配，但事实并非总是如此。当宏调用生成表时，他们遍历所有文件，直到找到相关的 JSON 使用，所以文件名不是关键。说到这一点，你应该始终尽可能直观地命名它们。</p>
 </div>

@@ -12,7 +12,7 @@ translation_of: Web/API/Event/preventDefault
 
 <div>Метод preventDefault () интерфейса {{domxref ("Event")}} сообщает {{Glossary("User agent")}}, что если событие не обрабатывается явно, его действие по умолчанию не должно выполняться так, как обычно. Событие продолжает распространяться как обычно, до тех пор, пока один из его обработчиков не вызывает методы {{domxref ("Event.stopPropagation", " stopPropagation ()")}} или {{domxref (" Event.stopImmediatePropagation", " stopImmediatePropagation ()")}}, любой из которых сразу же прекращает распространение.</div>
 
-<div></div>
+
 
 <div>Как отмечено ниже, вызов метода preventDefault () для события, не подлежащего отмене, например события, отправленного через {{domxref("EventTarget.dispatchEvent ()")}}, без указания cancelable: true не имеет эффекта.</div>
 
@@ -115,31 +115,4 @@ function checkName(evt) {
 
 <h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-preventdefault', 'Event.preventDefault()')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4', '#dom-event-preventdefault', 'Event.preventDefault()')}}</td>
-   <td>{{ Spec2('DOM4') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', '#Events-Event-preventDefault', 'Event.preventDefault()')}}</td>
-   <td>{{ Spec2('DOM2 Events') }}</td>
-   <td>
-    <p>первичное определение.</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}

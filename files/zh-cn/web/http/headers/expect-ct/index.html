@@ -37,7 +37,7 @@ translation_of: Web/HTTP/Headers/Expect-CT
  <dd>
  <p>该指令指定接收到 <code>Expect-CT</code> 头后的秒数，在此期间用户代理应将收到消息的主机视为已知的 Expect-CT 主机。</p>
 
- <p>如果缓存接收到的值大于它可以表示的值，或者如果其随后计算溢出，则缓存将认为该值为2147483648（2的31次幂）或其可以方便表示的最大正整数。</p>
+ <p>如果缓存接收到的值大于它可以表示的值，或者如果其随后计算溢出，则缓存将认为该值为 2147483648（2 的 31 次幂）或其可以方便表示的最大正整数。</p>
  </dd>
  <dt>report-uri="&lt;uri&gt;" {{optional_inline}}</dt>
  <dd>
@@ -56,7 +56,7 @@ translation_of: Web/HTTP/Headers/Expect-CT
 
 <h2 id="示例">示例</h2>
 
-<p>以下示例指定24小时的证书透明度执行，并向 foo.example 报告违规行为.</p>
+<p>以下示例指定 24 小时的证书透明度执行，并向 foo.example 报告违规行为。</p>
 
 <pre>Expect-CT: max-age=86400; enforce; report-uri="https://foo.example/report"</pre>
 

@@ -18,7 +18,9 @@ La méthode **`toJSON()`** renvoie une chaîne représentant l'objet {{jsxref("D
 
 ## Syntaxe
 
-    dateObj.toJSON()
+```js
+dateObj.toJSON()
+```
 
 ### Valeur de retour
 
@@ -44,8 +46,8 @@ console.log(jsonDate); //2015-10-26T07:46:36.611Z
 | Spécification                                                                                            | État                         | Commentaires                                            |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------- |
 | {{SpecName('ES5.1', '#sec-15.9.5.44', 'Date.prototype.toJSON')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}}     | {{Spec2('ES6')}}         |                                                         |
-| {{SpecName('ESDraft', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}} | {{Spec2('ESDraft')}} |                                                         |
+| {{SpecName('ES6', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}}     | {{Spec2('ES6')}}         |                                                         |
+| {{SpecName('ESDraft', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}} | {{Spec2('ESDraft')}} |                                                         |
 
 ## Compatibilité des navigateurs
 

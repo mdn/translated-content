@@ -12,7 +12,7 @@ translation_of: Web/API/SVGTitleElement
 
 ## Interface DOM de l'élément SVG `title`
 
-L'interface `SVGTitleElement` correspond à l'élément {{ SVGElement("title") }}.
+L'interface `SVGTitleElement` correspond à l'élément {{ SVGElement("title") }}.
 
 ### Aperçu de l'interface
 
@@ -48,7 +48,7 @@ L'interface `SVGTitleElement` correspond à l'élément {{ SVGElement("title
 
 ## Propriétés
 
-L'interface `SVGTitleElement` n'a pas de propriétés spécifiques.
+L'interface `SVGTitleElement` n'a pas de propriétés spécifiques.
 
 ## Méthodes
 

@@ -11,7 +11,7 @@ translation_of: Web/API/IDBObjectStore/getAllKeys
 ---
 {{APIRef("IndexedDB")}}
 
-La méthode **`getAllKeys()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet  {{domxref("IDBRequest")}} qui permet de récupérer l'ensemble des clés pour les objets qui correspondent au critère passé en argument (ou les clés de tous les objets du magasin si aucun paramètre n'est fourni).
+La méthode **`getAllKeys()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet  {{domxref("IDBRequest")}} qui permet de récupérer l'ensemble des clés pour les objets qui correspondent au critère passé en argument (ou les clés de tous les objets du magasin si aucun paramètre n'est fourni).
 
 Si une valeur est trouvée, un clone structurelle sera créé et fourni comme résultat pour la requête.
 
@@ -24,16 +24,18 @@ Pour différencier ces deux situations, on peut appeler la méthode {{domxref("I
 
 ## Syntaxe
 
-    var request = objectStore.getAllKeys();
-    var request = objectStore.getAllKeys(query);
-    var request = objectStore.getAllKeys(query, count);
+```js
+var request = objectStore.getAllKeys();
+var request = objectStore.getAllKeys(query);
+var request = objectStore.getAllKeys(query, count);
+```
 
 ### Parameters
 
 - `query` {{optional_inline}}
   - : Une valeur qui est (ou se résoud) en un intervalle de clés ({{domxref("IDBKeyRange")}}).
 - `count` {{optional_inline}}
-  - : Une valeur qui définit le nombre de valeurs à renvoyer si plusieurs correspondent. Cette valeur doit être supérieure à  `0` ou inférieure `à 2^32-1`, sinon une exception {{jsxref("TypeError")}} sera levée.
+  - : Une valeur qui définit le nombre de valeurs à renvoyer si plusieurs correspondent. Cette valeur doit être supérieure à  `0` ou inférieure `à 2^32-1`, sinon une exception {{jsxref("TypeError")}} sera levée.
 
 ### Valeur de retour
 

@@ -22,13 +22,13 @@ Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecat
 
 <p>{{jsxref("SyntaxError")}} 的警告。不会终止 JavaScript 的执行。</p>
 
-<h2 id="哪里错了">哪里错了?</h2>
+<h2 id="哪里错了">哪里错了？</h2>
 
 <p>在 JavaScript 源码中使用了已废弃的 source map 语法。</p>
 
 <p>JavaScript 源代码经常被组合和压缩，以便能更高效地从服务器获取它们。使用了 <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source maps</a>，调试器就可以将正在执行的代码映射到原始源文件。</p>
 
-<p>因为 IE 浏览器只要页面在 <code>//@cc_on</code> 之后的都会被IE JScript引擎解释为打开条件编译后，所以 source map 的规范更改了语法。<a href="https://msdn.microsoft.com/en-us/library/8ka90k2e%28v=vs.94%29.aspx">条件编译注释</a> 是 IE 的一个小特色，但是它破坏了 <a href="https://bugs.jquery.com/ticket/13274">jQuery</a> 和其他库的 source map。</p>
+<p>因为在 IE 浏览器中，只要页面存在 <code>//@cc_on</code> 注释，都会被 IE JScript 引擎解释为要打开条件编译，所以 source map 的规范更改了语法。<a href="https://msdn.microsoft.com/en-us/library/8ka90k2e%28v=vs.94%29.aspx">条件编译注释</a> 是 IE 的一个鲜为人知的特性，但是它破坏了 <a href="https://bugs.jquery.com/ticket/13274">jQuery</a> 和其他库的 source map。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -49,59 +49,7 @@ Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecat
 
 <pre class="brush: js example-good">X-SourceMap: /path/to/file.js.map</pre>
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>New syntax</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(24) }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>New syntax</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile(24) }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="相关">相关</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li><a href="/en-US/docs/Tools/Debugger/How_to/Use_a_source_map">How to use a source map – Firefox Tools documentation</a></li>

@@ -6,10 +6,10 @@ translation_of: Web/API/AudioContext/createMediaStreamSource
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>{{ domxref("AudioContext") }}接口的<code>createMediaStreamSource()方法用于创建一个新的</code>{{ domxref("MediaStreamAudioSourceNode") }} 对象, 需要传入一个媒体流对象(MediaStream对象)(可以从 {{ domxref("navigator.getUserMedia") }} 获得MediaStream对象实例), 然后来自MediaStream的音频就可以被播放和操作。</p>
+<p>{{ domxref("AudioContext") }}接口的 <code>createMediaStreamSource()</code> 方法用于创建一个新的 {{ domxref("MediaStreamAudioSourceNode") }} 对象，需要传入一个媒体流对象 (MediaStream 对象)(可以从 {{ domxref("navigator.getUserMedia") }} 获得 MediaStream 对象实例), 然后来自 MediaStream 的音频就可以被播放和操作。</p>
 </div>
 
-<p>更多关于媒体流音频源(media stream audio source nodes)的细节, 请参考{{ domxref("MediaStreamAudioSourceNode") }} 页面.</p>
+<p>更多关于媒体流音频源 (media stream audio source nodes) 的细节，请参考{{ domxref("MediaStreamAudioSourceNode") }} 页面。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -29,12 +29,12 @@ var source = audioCtx.createMediaStreamSource(stream);</pre>
 
 <h2 id="示例">示例</h2>
 
-<p>本例中，我们从 {{ domxref("navigator.getUserMedia") }}获取媒体 (audio + video) 流,，把它传入 {{ htmlelement("video") }}中播放，并把视频调成静音，然后把获取到的audio传入 {{ domxref("MediaStreamAudioSourceNode") }}。接下来我们把获取到的audio传入{{ domxref("BiquadFilterNode") }} (可以把声音转化为低音)，输出到 {{domxref("AudioDestinationNode") }}.</p>
+<p>本例中，我们从 {{ domxref("navigator.getUserMedia") }}获取媒体 (audio + video) 流，把它传入 {{ htmlelement("video") }}中播放，并把视频调成静音，然后把获取到的 audio 传入 {{ domxref("MediaStreamAudioSourceNode") }}。接下来我们把获取到的 audio 传入{{ domxref("BiquadFilterNode") }} (可以把声音转化为低音)，输出到 {{domxref("AudioDestinationNode") }}.</p>
 
 <p>{{ htmlelement("video") }} 元素下面滑动杆控制低音过滤器过滤的程度，滑动杆的值越大，低音更明显</p>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意：你可以查看</strong></span> <a href="https://mdn.github.io/webaudio-examples/stream-source-buffer/">在线演示</a>，或者 <a href="https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer">查看源码</a>。</p>
+<p><strong>注意：你可以查看</strong> <a href="https://mdn.github.io/webaudio-examples/stream-source-buffer/">在线演示</a>，或者 <a href="https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer">查看源码</a>。</p>
 </div>
 
 <pre class="brush: js;highlight[23]">var pre = document.querySelector('pre');
@@ -42,9 +42,9 @@ var video = document.querySelector('video');
 var myScript = document.querySelector('script');
 var range = document.querySelector('input');
 
-// getUserMedia获取流
-// 把流放入MediaStreamAudioSourceNode
-// 输出到video元素
+// getUserMedia 获取流
+// 把流放入 MediaStreamAudioSourceNode
+// 输出到 video 元素
 
 if (navigator.mediaDevices) {
     console.log('getUserMedia supported.');
@@ -56,7 +56,7 @@ if (navigator.mediaDevices) {
             video.muted = true;
         };
 
-        // 创建MediaStreamAudioSourceNode
+        // 创建 MediaStreamAudioSourceNode
         // Feed the HTMLMediaElement into it
         var audioCtx = new AudioContext();
         var source = audioCtx.createMediaStreamSource(stream);
@@ -67,8 +67,8 @@ if (navigator.mediaDevices) {
         biquadFilter.frequency.value = 1000;
         biquadFilter.gain.value = range.value;
 
-        // 把AudioBufferSourceNode连接到gainNode
-        // gainNode连接到目的地, 所以我们可以播放
+        // 把 AudioBufferSourceNode 连接到 gainNode
+        // gainNode 连接到目的地，所以我们可以播放
         // 音乐并用鼠标调节音量
         source.connect(biquadFilter);
         biquadFilter.connect(audioCtx.destination);
@@ -92,86 +92,18 @@ if (navigator.mediaDevices) {
 pre.innerHTML = myScript.innerHTML;</pre>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: 调用<code>createMediaStreamSource()</code>, 来自于媒体流的音频回放将被重新传到AudioContext的处理器中。所以播放/暂停流仍然是可以通过media元素的API和自带的控制器控制。</p>
+<p><strong>注意</strong>: 调用<code>createMediaStreamSource()</code>, 来自于媒体流的音频回放将被重新传到 AudioContext 的处理器中。所以播放/暂停流仍然是可以通过 media 元素的 API 和自带的控制器控制。</p>
 </div>
 
 
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createMediaStreamSource-MediaStreamAudioSourceNode-MediaStream-mediaStream', 'createMediaStreamSource()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.AudioContext.createMediaStreamSource")}}
 
 <h2 id="查看更多">查看更多</h2>
 

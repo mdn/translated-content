@@ -15,88 +15,85 @@ translation_of: Web/JavaScript/Reference/Operators/in
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><em>prop</em> in <em>object</em></pre>
+<pre class="syntaxbox"><em>prop</em> in <em>object</em></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>prop</code></dt>
- <dd>一个字符串类型或者 symbol 类型的属性名或者数组索引（非symbol类型将会强制转为字符串）。</dd>
-</dl>
-
-<dl>
+ <dd>一个字符串类型或者 symbol 类型的属性名或者数组索引（非 symbol 类型将会强制转为字符串）。</dd>
  <dt><code>objectName</code></dt>
  <dd>检查它（或其原型链）是否包含具有指定名称的属性的对象。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>下面的例子演示了一些 <code>in</code> 运算符的用法。</p>
 
-<pre class="brush:js notranslate">// 数组
+<pre class="brush:js">// 数组
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
-0 in trees        // 返回true
-3 in trees        // 返回true
-6 in trees        // 返回false
-"bay" in trees    // 返回false (必须使用索引号,而不是数组元素的值)
+0 in trees        // 返回 true
+3 in trees        // 返回 true
+6 in trees        // 返回 false
+"bay" in trees    // 返回 false (必须使用索引号，而不是数组元素的值)
 
-"length" in trees // 返回true (length是一个数组属性)
+"length" in trees // 返回 true (length 是一个数组属性)
 
-Symbol.iterator in trees // 返回true (数组可迭代，只在ES2015+上有效)
+Symbol.iterator in trees // 返回 true (数组可迭代，只在 ES2015+ 上有效)
 
 
 // 内置对象
-"PI" in Math          // 返回true
+"PI" in Math          // 返回 true
 
 // 自定义对象
 var mycar = {make: "Honda", model: "Accord", year: 1998};
-"make" in mycar  // 返回true
-"model" in mycar // 返回true
+"make" in mycar  // 返回 true
+"model" in mycar // 返回 true
 </pre>
 
 <p><code>in</code>右操作数必须是一个对象值。例如，你可以指定使用<code>String</code>构造函数创建的字符串，但不能指定字符串文字。</p>
 
-<pre class="brush:js notranslate">var color1 = new String("green");
-"length" in color1 // 返回true
+<pre class="brush:js">var color1 = new String("green");
+"length" in color1 // 返回 true
 var color2 = "coral";
-"length" in color2 // 报错(color2不是对象)
+"length" in color2 // 报错 (color2 不是对象)
 </pre>
 
-<h3 id="Using_in_with_deleted_or_undefined_properties" name="Using_in_with_deleted_or_undefined_properties">对被删除或值为 undefined 的属性使用<code>in</code></h3>
+<h3 id="Using_in_with_deleted_or_undefined_properties">对被删除或值为 undefined 的属性使用<code>in</code></h3>
 
 <p>如果你使用 <code><a href="/zh-CN/docs/JavaScript/Reference/Operators/delete" title="zh-CN/docs/JavaScript/Reference/Operators/Special/delete">delete</a></code> 运算符删除了一个属性，则 <code>in</code> 运算符对所删除属性返回 <code>false</code>。</p>
 
-<pre class="brush:js notranslate">var mycar = {make: "Honda", model: "Accord", year: 1998};
+<pre class="brush:js">var mycar = {make: "Honda", model: "Accord", year: 1998};
 delete mycar.make;
-"make" in mycar;  // 返回false
+"make" in mycar;  // 返回 false
 
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
 delete trees[3];
-3 in trees; // 返回false
+3 in trees; // 返回 false
 </pre>
 
 <p>如果你只是将一个属性的值赋值为{{jsxref("Global_Objects/undefined", "undefined")}}，而没有删除它，则 <code>in</code> 运算仍然会返回<code>true</code>。</p>
 
-<pre class="brush:js notranslate">var mycar = {make: "Honda", model: "Accord", year: 1998};
+<pre class="brush:js">var mycar = {make: "Honda", model: "Accord", year: 1998};
 mycar.make = undefined;
-"make" in mycar;  // 返回true
+"make" in mycar;  // 返回 true
 </pre>
 
-<pre class="brush:js notranslate">var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
+<pre class="brush:js">var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
 trees[3] = undefined;
-3 in trees; // 返回true
+3 in trees; // 返回 true
 </pre>
 
-<h3 id="Inherited_properties" name="Inherited_properties">继承属性</h3>
+<h3 id="Inherited_properties">继承属性</h3>
 
 <p>如果一个属性是从原型链上继承来的，<code>in</code> 运算符也会返回 <code>true</code>。</p>
 
-<pre class="brush:js notranslate">"toString" in {}; // 返回true
+<pre class="brush:js">"toString" in {}; // 返回 true
 </pre>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -128,11 +125,11 @@ trees[3] = undefined;
  </tbody>
 </table>
 
-<h2 id="浏览器兼容" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容</h2>
+<h2 id="浏览器兼容">浏览器兼容</h2>
 
 <p>{{Compat("javascript.operators.in")}}</p>
 
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code></li>

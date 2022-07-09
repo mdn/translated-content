@@ -152,7 +152,7 @@ Ainsi, on dispose de méthodes permettant d'obtenir ou de définir les différen
 
 Les exemples qui suivent illustrent différentes méthodes permettant de créer des dates JavaScript :
 
-> **Note :** L'analyse de chaîne de caractères représentant des dates avec le constructeur `Date`  (ou `Date.parse` qui est équivalent) est fortement déconseillée en raison des différences de comportement existant entre les navigateurs.
+> **Note :** L'analyse de chaîne de caractères représentant des dates avec le constructeur `Date`  (ou `Date.parse` qui est équivalent) est fortement déconseillée en raison des différences de comportement existant entre les navigateurs.
 
 ```js
 let aujourdhui = new Date()

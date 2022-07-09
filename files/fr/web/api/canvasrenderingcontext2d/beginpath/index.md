@@ -1,19 +1,17 @@
 ---
 title: CanvasRenderingContext2D.beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
 translation_of: Web/API/CanvasRenderingContext2D/beginPath
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.beginPath()`\** de l'API Canvas 2D permet de commencer un nouveau chemin *e\*n vidant la liste des sous-chemins. Appelez cette méthode quand vous voulez créer un nouveau chemin.
+La méthode **`CanvasRenderingContext2D.beginPath()`** de l'API Canvas 2D permet de commencer un nouveau chemin en vidant la liste des sous-chemins. Appelez cette méthode quand vous voulez créer un nouveau chemin.
 
 ## Syntaxe
 
-    void ctx.beginPath();
+```js
+void ctx.beginPath();
+```
 
 ## Exemples
 
@@ -55,8 +53,8 @@ ctx.stroke();
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code" style="height:200px">
 // First path
@@ -100,13 +98,13 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 460) }}
+{{ EmbedLiveSample('Code_jouable', 700, 460) }}
 
 ## Spécifications
 
 | Specification                                                                                                                                    | Status                           | Comment |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-beginpath", "CanvasRenderingContext2D.beginPath")}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-beginpath", "CanvasRenderingContext2D.beginPath")}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## Compatibilité des navigateurs
 

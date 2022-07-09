@@ -3,17 +3,17 @@ title: border-inline-color
 slug: Web/CSS/border-inline-color
 tags:
   - CSS
-  - CSS Logical Property
+  - CSS 論理的プロパティ
   - CSS プロパティ
   - 実験的
-  - Reference
+  - リファレンス
   - recipe:css-property
 browser-compat: css.properties.border-inline-color
 translation_of: Web/CSS/border-inline-color
 ---
 {{CSSRef}}
 
-**`border-inline-start-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の先頭側の境界色を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界色に対応付けられます。これは {{cssxref("border-top-color")}} と {{cssxref("border-bottom-color")}}、または {{cssxref("border-right-color")}} と {{cssxref("border-left-color")}} の組み合わせのどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
+**`border-inline-start-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の先頭側の境界色を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界色に対応づけられます。これは {{cssxref("border-top-color")}} と {{cssxref("border-bottom-color")}}、または {{cssxref("border-right-color")}} と {{cssxref("border-left-color")}} の組み合わせのどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
 {{EmbedInteractiveExample("pages/css/border-inline-color.html")}}
 

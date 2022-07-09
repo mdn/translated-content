@@ -51,20 +51,6 @@ CSS は従来、画面の物理的な軸に沿って寸法を取っていまし�
 
 ![ブロック軸が水平方向、インライン軸が垂直方向に走っている図。](mdn-vertical.png)
 
-## ブラウザーの互換性
-
-論理的プロパティと値は、現在のブラウザーの対応状況の観点から、 2 つのグループに分けて考えることができます。一部のプロパティは基本的に物理的プロパティから対応付けられたものです。例えば {{CSSxRef("inline-size")}} は {{CSSxRef("width")}} から、 {{CSSxRef("margin-inline-start")}} は {{CSSxRef("margin-left")}} を代替するものです。これらの対応付けられたプロパティは、ブラウザーの対応が充実し始めており、 [MDN のリファレンス](/ja/docs/Web/CSS/CSS_Logical_Properties#reference)でプロパティの個別ページを見てみると、今では最近のブラウザーでこれらのプロパティがないのは Edge だけであることが分かります。
-
-それから、既存の物理的プロパティに直接対応付けされていないグループのプロパティもあります。これらのプロパティは、ブロック軸またはインライン軸の両端を一度に参照できることによって可能となった一括指定です。例えば、 {{CSSxRef("margin-block")}} は、 {{CSSxRef("margin-block-start")}} と {{CSSxRef("margin-block-end")}} の一括指定であると言えます。
-
-> **Note:** CSS 作業部会では、論理的プロパティにおいて 4 つの値の一括指定をどうするかを決めようとしています。例えば、 {{CSSxRef("margin")}} プロパティでマージンを指定する場合のように、 4 つの物理的なプロパティを一度に設定することに相当します。もし、 `margin` をフロー関連のプロパティに再利用するのであれば、何らかの修飾子が必要になるでしょう。この提案を読んだりコメントしたりしたい人は、 GitHub の [#1282](https://github.com/w3c/csswg-drafts/issues/1282) を参照してください。
-
-### ブラウザーの対応のテスト
-
-機能クエリーを使用すると、論理的プロパティや値の対応状況をテストすることができます。たとえば、 {{CSSxRef("width")}} を設定し、 {{CSSxRef("inline-size")}} をテストし、対応していれば、`width` を `auto` に、`inline-size` を元の `width` の値に設定するようにすることができます。
-
-{{EmbedGHLiveSample("css-examples/logical/intro-feature-queries.html", "100%", 700)}}
-
 ## 関連情報
 
 - [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)

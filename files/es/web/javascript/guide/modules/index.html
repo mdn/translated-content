@@ -37,7 +37,7 @@ original_slug: Web/JavaScript/Guide/Módulos
 
 <h2 id="Introducción_—_un_ejemplo">Introducción — un ejemplo</h2>
 
-<p>Para demostrar el uso de módulos, hemos creado un <a href="https://github.com/mdn/js-examples/tree/master/modules">sencillo conjunto de ejemplos</a> que puedes encontrar en GitHub. Estos ejemplos demuestran un sencillo conjunto de módulos que crean un elemento <a href="/es/docs/Web/HTML/Element/canvas" title="Usa el elemento ↑&lt;canvas>↓ de HTML con el scripting de la API de canvas o la API WebGL para dibujar gráficos y animaciones."><code>&lt;canvas&gt;</code></a> en una página web, y luego dibujan (y reportan información sobre) diferentes formas en el lienzo.</p>
+<p>Para demostrar el uso de módulos, hemos creado un <a href="https://github.com/mdn/js-examples/tree/master/module-examples">sencillo conjunto de ejemplos</a> que puedes encontrar en GitHub. Estos ejemplos demuestran un sencillo conjunto de módulos que crean un elemento <a href="/es/docs/Web/HTML/Element/canvas" title="Usa el elemento ↑&lt;canvas>↓ de HTML con el scripting de la API de canvas o la API WebGL para dibujar gráficos y animaciones."><code>&lt;canvas&gt;</code></a> en una página web, y luego dibujan (y reportan información sobre) diferentes formas en el lienzo.</p>
 
 <p>Estos son bastante triviales, pero se han mantenido deliberadamente simples para demostrar los módulos con claridad.</p>
 
@@ -47,7 +47,7 @@ original_slug: Web/JavaScript/Guide/Módulos
 
 <h2 id="Estructura_básica_de_los_ejemplos">Estructura básica de los ejemplos</h2>
 
-<p>En nuestro primer ejemplo (ve <a href="https://github.com/mdn/js-examples/tree/master/modules/basic-modules">basic-modules</a>) tenemos la siguiente estructura de archivos:</p>
+<p>En nuestro primer ejemplo (ve <a href="https://github.com/mdn/js-examples/tree/master/module-examples/basic-modules">basic-modules</a>) tenemos la siguiente estructura de archivos:</p>
 
 <pre class="notranslate">index.html
 main.js
@@ -147,7 +147,7 @@ export function draw(ctx, length, x, y, color) {
 
 <pre class="notranslate">./modules/square.js</pre>
 
-<p>Puedes ver estas líneas en acción en <code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.js</a></code>.</p>
+<p>Puedes ver estas líneas en acción en <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js">main.js</a></code>.</p>
 
 <div class="blockIndicator note">
 <p><strong>Nota</strong>: En algunos sistemas de módulos, puedes omitir la extensión del archivo y el punto (por ejemplo, <code>'/modules/square'</code>). Esto no funciona en módulos de JavaScript nativos.</p>
@@ -253,7 +253,7 @@ export {function1, function2};
 import {function1 as newFunctionName,
          function2 as anotherNewFunctionName } from './modules/module.js';</pre>
 
-<p>Veamos un ejemplo real. En nuestro directorio <a href="https://github.com/mdn/js-examples/tree/master/modules/renaming">renaming</a>, verás el mismo sistema de módulos que en el ejemplo anterior, excepto que hemos agregado los módulos <code>circle.js</code> y <code>triangle.js</code> para dibujar e informar sobre círculos y triángulos.</p>
+<p>Veamos un ejemplo real. En nuestro directorio <a href="https://github.com/mdn/js-examples/tree/master/module-examples/renaming">renaming</a>, verás el mismo sistema de módulos que en el ejemplo anterior, excepto que hemos agregado los módulos <code>circle.js</code> y <code>triangle.js</code> para dibujar e informar sobre círculos y triángulos.</p>
 
 <p>Dentro de cada uno de estos módulos, tenemos características con los mismos nombres que se exportan y, por lo tanto, cada una tiene la misma instrucción <code>export</code> en la parte inferior:</p>
 
@@ -309,7 +309,7 @@ import {squareName, drawSquare, reportSquareArea, reportSquarePerimeter} from '.
 Module.function2()
 etc.</pre>
 
-<p>De nuevo, veamos un ejemplo real. Si vas a nuestro directorio <a href="https://github.com/mdn/js-examples/tree/master/modules/module-objects">module-objects</a>, verás el mismo ejemplo nuevamente, pero reescrito para aprovechar esta nueva sintaxis. En los módulos, las exportaciones están todas en la siguiente forma simple:</p>
+<p>De nuevo, veamos un ejemplo real. Si vas a nuestro directorio <a href="https://github.com/mdn/js-examples/tree/master/module-examples/module-objects">module-objects</a>, verás el mismo ejemplo nuevamente, pero reescrito para aprovechar esta nueva sintaxis. En los módulos, las exportaciones están todas en la siguiente forma simple:</p>
 
 <pre class="brush: js; notranslate">export { name, draw, reportArea, reportPerimeter };</pre>
 
@@ -333,7 +333,7 @@ Square.reportPerimeter(square1.length, reportList);</pre>
 
 <p>Como dijimos antes, también puedes exportar e importar clases; esta es otra opción para evitar conflictos en tu código, y especialmente es útil si ya tienes el código de tu módulo escrito en un estilo orientado a objetos.</p>
 
-<p>Puedes ver un ejemplo de nuestro módulo de dibujo de formas reescrito con clases ES en nuestro directorio <a href="https://github.com/mdn/js-examples/tree/master/modules/classes">classes</a>. Como ejemplo, el archivo <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/modules/square.js">square.js</a></code> ahora contiene toda su funcionalidad en una sola clase:</p>
+<p>Puedes ver un ejemplo de nuestro módulo de dibujo de formas reescrito con clases ES en nuestro directorio <a href="https://github.com/mdn/js-examples/tree/master/module-examples/classes">classes</a>. Como ejemplo, el archivo <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/classes/modules/square.js">square.js</a></code> ahora contiene toda su funcionalidad en una sola clase:</p>
 
 <pre class="brush: js; notranslate">class Square {
   constructor(ctx, listId, length, x, y, color) {
@@ -351,7 +351,7 @@ Square.reportPerimeter(square1.length, reportList);</pre>
 
 <pre class="brush: js; notranslate">export { Square };</pre>
 
-<p>En <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/main.js">main.js</a></code>, lo importamos así:</p>
+<p>En <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/classes/main.js">main.js</a></code>, lo importamos así:</p>
 
 <pre class="brush: js; notranslate">import { Square } from './modules/square.js';</pre>
 
@@ -369,7 +369,7 @@ square1.reportPerimeter();</pre>
 <pre class="brush: js; notranslate">export * from 'x.js'
 export { name } from 'x.js'</pre>
 
-<p>Para ver un ejemplo, ve nuestro directorio <a href="https://github.com/mdn/js-examples/tree/master/modules/module-aggregation">module-aggregation</a>. En este ejemplo (basado en nuestro ejemplo de clases anterior) tenemos un módulo adicional llamado <code>shapes.js</code>, que reúne toda la funcionalidad de <code>circle.js</code>, <code>square.js</code> y <code>triangle.js</code>. También hemos movido nuestros submódulos dentro de un subdirectorio dentro del directorio <code>modules</code> llamado <code>shapes</code>. Entonces, la estructura del módulo en este ejemplo es:</p>
+<p>Para ver un ejemplo, ve nuestro directorio <a href="https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation">module-aggregation</a>. En este ejemplo (basado en nuestro ejemplo de clases anterior) tenemos un módulo adicional llamado <code>shapes.js</code>, que reúne toda la funcionalidad de <code>circle.js</code>, <code>square.js</code> y <code>triangle.js</code>. También hemos movido nuestros submódulos dentro de un subdirectorio dentro del directorio <code>modules</code> llamado <code>shapes</code>. Entonces, la estructura del módulo en este ejemplo es:</p>
 
 <pre class="notranslate">modules/
   canvas.js
@@ -383,7 +383,7 @@ export { name } from 'x.js'</pre>
 
 <pre class="brush: js; notranslate">export { Square };</pre>
 
-<p>Luego viene la parte de agregación. Dentro de <code><a href="https://github.com/mdn/js-examples/blob/master/modules/module-aggregation/modules/shapes.js">shapes.js</a></code>, incluimos las siguientes líneas:</p>
+<p>Luego viene la parte de agregación. Dentro de <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/module-aggregation/modules/shapes.js">shapes.js</a></code>, incluimos las siguientes líneas:</p>
 
 <pre class="brush: js; notranslate">export { Square } from './shapes/square.js';
 export { Triangle } from './shapes/triangle.js';
@@ -416,9 +416,9 @@ import { Triangle } from './modules/triangle.js';</pre>
     // Haz algo con el módulo.
   });</pre>
 
-<p>Veamos un ejemplo. En el directorio <a href="https://github.com/mdn/js-examples/tree/master/modules/dynamic-module-imports">dynamic-module-import</a> tenemos otro ejemplo basado en nuestro ejemplo de clases. Esta vez, sin embargo, no dibujamos nada en el lienzo cuando se carga el ejemplo. En su lugar, incluimos tres botones — "Círculo", "Cuadrado" y "Triángulo" — que, cuando se presionan, cargan dinámicamente el módulo requerido y luego lo usan para dibujar la forma asociada.</p>
+<p>Veamos un ejemplo. En el directorio <a href="https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports">dynamic-module-import</a> tenemos otro ejemplo basado en nuestro ejemplo de clases. Esta vez, sin embargo, no dibujamos nada en el lienzo cuando se carga el ejemplo. En su lugar, incluimos tres botones — "Círculo", "Cuadrado" y "Triángulo" — que, cuando se presionan, cargan dinámicamente el módulo requerido y luego lo usan para dibujar la forma asociada.</p>
 
-<p>En este ejemplo, solo hemos realizado cambios en nuestros archivos <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/index.html">index.html</a></code> y <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/main.mjs">main.js</a></code> — el módulo <code>exports</code> sigue siendo el mismo que antes.</p>
+<p>En este ejemplo, solo hemos realizado cambios en nuestros archivos <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html">index.html</a></code> y <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.mjs">main.js</a></code> — el módulo <code>exports</code> sigue siendo el mismo que antes.</p>
 
 <p>En <code>main.js</code> hemos tomado una referencia a cada botón usando una llamada a <a href="/es/docs/Web/API/Document/querySelector"><code>Document.querySelector()</code></a>, por ejemplo:</p>
 

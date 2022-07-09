@@ -60,7 +60,7 @@ La valeur de cette propriété est définie grâce à l'un des mots-clés défin
 
 ```html
 <p> Alice <span class="exemple">ne s’était pas fait le moindre mal.</span>
-    Vite elle se remet sur ses pieds et regarde en l’air ; mais tout
+    Vite elle se remet sur ses pieds et regarde en l’air&nbsp;; mais tout
     est noir là-haut. Elle voit devant elle un long passage et le Lapin
     Blanc qui court à toutes jambes.
 </p>

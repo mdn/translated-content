@@ -12,9 +12,9 @@ translation_of: Web/API/Worker/Worker
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p><code><strong>Worker()</strong></code> 构造函数创建一个 {{domxref("Worker")}} 对象，该对象执行指定的URL脚本。这个脚本必须遵守 <a href="/en/Same_origin_policy_for_JavaScript" title="Same origin policy for JavaScript">同源策略</a> 。</p>
+<p><code><strong>Worker()</strong></code> 构造函数创建一个 {{domxref("Worker")}} 对象，该对象执行指定的 URL 脚本。这个脚本必须遵守 <a href="/en/Same_origin_policy_for_JavaScript" title="Same origin policy for JavaScript">同源策略</a> 。</p>
 
-<p>如果 此URL有一个无效的语句，或者违反同源策略，一个 <code>SECURITY_ERR </code>类型的{{domxref("DOMException")}}被抛出。</p>
+<p>如果 此 URL 有一个无效的语句，或者违反同源策略，一个 <code>SECURITY_ERR </code>类型的{{domxref("DOMException")}}被抛出。</p>
 
 <div class="note">
 <p><strong>Note</strong>: 浏览器厂商对于 data URI 是否同源存在分歧。尽管 Gecko 10.0 {{ geckoRelease("10.0") }} 和之后的版本接受 data URIs，但在所有其他浏览器中并非如此。</p>
@@ -27,19 +27,19 @@ translation_of: Web/API/Worker/Worker
 <h3 id="参数">参数</h3>
 
 <ul>
- <li>如果文档不允许启动worker，则会引发SecurityError</li>
- <li>如果脚本之一的MIME类型为 <code>text/csv</code>, <code>image/*</code>, <code>video/*</code>,或 <code>audio/*</code>, 则会引发NetworkError。它应该始终是 text/javascript。</li>
- <li>如果aURL无法解析，则引发SyntaxError。</li>
+ <li>如果文档不允许启动 worker，则会引发 SecurityError</li>
+ <li>如果脚本之一的 MIME 类型为 <code>text/csv</code>, <code>image/*</code>, <code>video/*</code>,或 <code>audio/*</code>, 则会引发 NetworkError。它应该始终是 text/javascript。</li>
+ <li>如果 aURL 无法解析，则引发 SyntaxError。</li>
 </ul>
 
 <dl>
  <dt><em>aURL</em></dt>
- <dd>是一个{{domxref("DOMString")}} 表示<strong>worker </strong>将执行的脚本的URL。它必须遵守同源策略。</dd>
+ <dd>是一个{{domxref("DOMString")}} 表示<strong>worker </strong>将执行的脚本的 URL。它必须遵守同源策略。</dd>
  <dt><em>options</em> {{optional_inline}}</dt>
- <dd>包含可在创建对象实例时设置的选项属性的对象。可用属性如下:
+ <dd>包含可在创建对象实例时设置的选项属性的对象。可用属性如下：
  <ul>
-  <li><code>type</code>：用以指定 worker 类型的  {{domxref("DOMString")}} 值. 该值可以是 <code>classic</code> 或 <code>module</code>. 如果未指定，将使用默认值 <code>classic.</code></li>
-  <li><code>credentials</code>：用以指定 worker 凭证的 {{domxref("DOMString")}} 值.该值可以是<dfn> <code>omit</code></dfn>, <code><dfn>same-origin</dfn></code>，或 <dfn><code>include</code>.。如果未指定，或者 type 是 <code>classic</code>，将使用默认值 <code>omit</code> (不要求凭证)。</dfn></li>
+  <li><code>type</code>：用以指定 worker 类型的  {{domxref("DOMString")}} 值。该值可以是 <code>classic</code> 或 <code>module</code>. 如果未指定，将使用默认值 <code>classic.</code></li>
+  <li><code>credentials</code>：用以指定 worker 凭证的 {{domxref("DOMString")}} 值。该值可以是<dfn> <code>omit</code></dfn>, <code><dfn>same-origin</dfn></code>，或 <dfn><code>include</code>.。如果未指定，或者 type 是 <code>classic</code>，将使用默认值 <code>omit</code> (不要求凭证)。</dfn></li>
   <li><dfn><code>name</code>：</dfn>在 {{domxref("DedicatedWorkerGlobalScope")}} 的情况下，用来表示 worker 的 scope 的一个<dfn> </dfn>{{domxref("DOMString")}} 值，主要用于调试目的。</li>
  </ul>
  </dd>
@@ -97,12 +97,12 @@ first.onchange = function() {
 <div>{{Compat("api.Worker.Worker")}}</div>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: 浏览器可以被标记为对<code>Worker()</code>的完全支持尽管他并不支持一个以modules类型编写的脚本。截至2019年8月1日，暂无浏览器支持以模块类型编写的脚本。如果没有这种支持，moduleds类型的脚本必须使用编译器翻译成无module代码才能在浏览器上运行。</p>
+<p><strong>Note</strong>: 浏览器可以被标记为对<code>Worker()</code>的完全支持尽管他并不支持一个以 modules 类型编写的脚本。截至 2019 年 8 月 1 日，暂无浏览器支持以模块类型编写的脚本。如果没有这种支持，moduleds 类型的脚本必须使用编译器翻译成无 module 代码才能在浏览器上运行。</p>
 </div>
 
 
 
-<div></div>
+
 
 <div>另请参阅</div>
 

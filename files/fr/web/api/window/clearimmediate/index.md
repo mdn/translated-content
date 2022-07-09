@@ -16,7 +16,9 @@ Cette méthode efface l'action spécifiée par {{DOMxRef("window.setImmediate")}
 
 ## Syntaxe
 
-    window.clearImmediate( immediateID )
+```js
+window.clearImmediate( immediateID )
+```
 
 où immediateID est un ID retourné par {{DOMxRef("window.setImmediate")}}.
 
@@ -24,12 +26,12 @@ où immediateID est un ID retourné par {{DOMxRef("window.setImmediate")}}.
 
 ```js
 let immediateID = setImmediate(() => {
-  // Exécute du code
+  // Exécute du code
 }
 
 document.getElementById("bouton")
   .addEventListener(() => {
-  clearImmediate(immediateID);
+  clearImmediate(immediateID);
 });
 ```
 

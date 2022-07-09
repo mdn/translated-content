@@ -11,7 +11,7 @@ translation_of: Web/API/FocusEvent
 ---
 {{APIRef("DOM Events")}}{{SeeCompatTable}}
 
-L'interface **`FocusEvent` **représente les événements liés au focus tels que` `{{event("focus")}}, {{event("blur")}}, {{event("focusin")}} ou {{event("focusout")}}.
+L'interface **`FocusEvent`** représente les événements liés au focus tels que {{event("focus")}}, {{event("blur")}}, {{event("focusin")}} ou {{event("focusout")}}.
 
 ## Constructeur
 
@@ -27,7 +27,7 @@ _Hértite des propriétés de son parent domxref("UIEvent")}} et indirectement d
 
 ## Méthodes
 
-_Aucune méthode spécifique ; Hérite des propriétés de son parent _{{domxref("UIEvent")}}_ et indirectement de {{domxref("Event")}}_.
+*Aucune méthode spécifique&nbsp;; hérite des propriétés de son parent [`UIEvent`](/fr/docs/Web/API/UIEvent) et indirectement de [`Event`](/fr/docs/Web/API/Event).*
 
 ## Spécifications
 

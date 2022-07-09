@@ -35,12 +35,12 @@ translation_of: Web/API/XMLHttpRequest/timeout_event
 
 <h2 id="示例">示例</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var client <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">XMLHttpRequest</span><span class="punctuation token">(</span><span class="punctuation token">)</span>
-  client<span class="punctuation token">.</span><span class="function token">open</span><span class="punctuation token">(</span><span class="string token">"GET"</span><span class="punctuation token">,</span> <span class="string token">"http://www.example.org/example.txt"</span><span class="punctuation token">)</span>
-  client<span class="punctuation token">.</span>ontimeout <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var client = new XMLHttpRequest()
+  client.open("GET", "http://www.example.org/example.txt")
+  client.ontimeout = function(e) {
     console.error("Timeout!!")
-  <span class="punctuation token">}</span>
-  client<span class="punctuation token">.</span><span class="function token">send</span><span class="punctuation token">(</span><span class="punctuation token">)</span></code></pre>
+  }
+  client.send()</code></pre>
 
 <h2 id="继承">继承</h2>
 
@@ -65,61 +65,7 @@ translation_of: Web/API/XMLHttpRequest/timeout_event
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>10.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.9.1")}}</td>
-   <td>10.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.XMLHttpRequest.timeout_event")}}
 
 <h2 id="相关链接">相关链接</h2>
 

@@ -16,19 +16,19 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 ---
 <p>{{jsSidebar("Statements")}}</p>
 
-<p><strong><code>for await...of</code> 语句</strong>创建一个循环，该循环遍历异步可迭代对象以及同步可迭代对象，包括: <span style="">内置的 </span>{{jsxref("String")}}, {{jsxref("Array")}}，<span style="">类似数组对象 (例如 </span>{{jsxref("Functions/arguments", "arguments")}} <span style="">或</span> {{DOMxRef("NodeList")}})<span style="">，</span>{{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} <span style="">和用户定义的异步/同步迭代器。</span>它使用对象的每个不同属性的值调用要执行的语句来调用自定义迭代钩子。</p>
+<p><strong><code>for await...of</code> 语句</strong>创建一个循环，该循环遍历异步可迭代对象以及同步可迭代对象，包括: 内置的 {{jsxref("String")}}, {{jsxref("Array")}}，类似数组对象 (例如 {{jsxref("Functions/arguments", "arguments")}} 或 {{DOMxRef("NodeList")}})，{{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} 和用户定义的异步/同步迭代器。它使用对象的每个不同属性的值调用要执行的语句来调用自定义迭代钩子。</p>
 
 <p>类似于 {{jsxref("Operators/await", "await")}} 运算符一样，该语句只能在一个{{jsxref("Statements/async_function", "async function", "异步函数", 1)}} 内部使用。</p>
 
-<div class="blockIndicator note">
-<p><code>for await...of</code> 不适用于不是异步可迭代的异步迭代器。</p>
+<div class="note">
+<p><strong>备注：</strong><code>for await...of</code> 不适用于不是异步可迭代的异步迭代器。</p>
 </div>
 
 
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">for await (<em>variable</em> of <em>iterable</em>) {
+<pre class="syntaxbox">for await (<em>variable</em> of <em>iterable</em>) {
   <em>statement
 </em>}
 </pre>
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 
 <p>你还可以迭代一个明确实现异步迭代协议的对象：</p>
 
-<pre class="brush:js notranslate">var asyncIterable = {
+<pre class="brush:js">var asyncIterable = {
   [Symbol.asyncIterator]() {
     return {
       i: 0,
@@ -74,9 +74,9 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 
 <h3 id="迭代异步生成器">迭代异步生成器 </h3>
 
-<p>异步生成器已经实现了异步迭代器协议, 所以可以用 <code>for await...of</code>循环。</p>
+<p>异步生成器已经实现了异步迭代器协议，所以可以用 <code>for await...of</code>循环。</p>
 
-<pre class="brush: js notranslate">async function* asyncGenerator() {
+<pre class="brush: js">async function* asyncGenerator() {
   var i = 0;
   while (i &lt; 3) {
     yield i++;
@@ -92,9 +92,9 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 // 1
 // 2</pre>
 
-<p>有关使用<code>for await... of</code>考虑迭代API中获取数据的异步 generator 更具体的例子。这个例子首先为一个数据流创建了一个异步 generator，然后使用它来获得这个API的响应值的大小。</p>
+<p>有关使用<code>for await... of</code>考虑迭代 API 中获取数据的异步 generator 更具体的例子。这个例子首先为一个数据流创建了一个异步 generator，然后使用它来获得这个 API 的响应值的大小。</p>
 
-<pre class="brush: js notranslate">async function* streamAsyncIterator(stream) {
+<pre class="brush: js">async function* streamAsyncIterator(stream) {
   const reader = stream.getReader();
   try {
     while (true) {
@@ -108,12 +108,12 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
     reader.releaseLock();
   }
 }
-// 从url获取数据并使用异步 generator 来计算响应值的大小
+// 从 url 获取数据并使用异步 generator 来计算响应值的大小
 async function getResponseSize(url) {
   const response = await fetch(url);
   // Will hold the size of the response, in bytes.
   let responseSize = 0;
-  // 使用for-await-of循环. 异步 generator 会遍历响应值的每一部分
+  // 使用 for-await-of 循环。异步 generator 会遍历响应值的每一部分
   for await (const chunk of streamAsyncIterator(response.body)) {
     // Incrementing the total response length.
     responseSize += chunk.length;

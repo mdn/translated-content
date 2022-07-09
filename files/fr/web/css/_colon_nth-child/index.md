@@ -1,10 +1,6 @@
 ---
 title: ':nth-child'
 slug: Web/CSS/:nth-child
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:nth-child
 ---
 {{CSSRef}}
@@ -162,7 +158,7 @@ span, div em {
 
 #### Résultat
 
-{{EmbedLiveSample('Exemple_demonstratif','100%', '550')}}
+{{EmbedLiveSample('Exemple_démonstratif','100%', '550')}}
 
 ## Spécifications
 

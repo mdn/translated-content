@@ -5,7 +5,7 @@ translation_of: Web/API/CSSStyleDeclaration/item
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
-<p id="Summary"><span class="seoSummary"><code>CSSStyleDeclaration.item()</code> 通过下标从 {{domxref('CSSStyleDeclaration')}} 返回一个 CSS 属性值</span>。只要传入参数这个方法就不会抛出异常； 当传入的下标越界时会返回空字符串，当未传入参数时会抛出一个 <code>TypeError</code> 。</p>
+<p><code>CSSStyleDeclaration.item()</code> 通过下标从 {{domxref('CSSStyleDeclaration')}} 返回一个 CSS 属性值。只要传入参数这个方法就不会抛出异常； 当传入的下标越界时会返回空字符串，当未传入参数时会抛出一个 <code>TypeError</code> 。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -60,58 +60,4 @@ var propertyName = style.item(1); // or simply style[1] - returns the second sty
 
 <p><strong>浏览器兼容性</strong></p>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <thead>
-  <tr>
-   <th scope="col">Feature</th>
-   <th scope="col">Chrome</th>
-   <th scope="col">Edge</th>
-   <th scope="col">Firefox (Gecko)</th>
-   <th scope="col">Internet Explorer</th>
-   <th scope="col">Opera</th>
-   <th scope="col">Safari (WebKit)</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.CSSStyleDeclaration.item")}}

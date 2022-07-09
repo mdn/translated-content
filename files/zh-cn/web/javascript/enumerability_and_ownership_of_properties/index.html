@@ -11,15 +11,15 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 
 <p>可枚举属性是指那些内部 “可枚举” 标志设置为 <code>true</code> 的属性，对于通过直接的赋值和属性初始化的属性，该标识值默认为即为 <code>true</code>，对于通过 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a> 等定义的属性，该标识值默认为 <code>false</code>。可枚举的属性可以通过 <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> 循环进行遍历（除非该属性名是一个 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a>）。属性的所有权是通过判断该属性是否直接属于某个对象决定的，而不是通过原型链继承的。一个对象的所有的属性可以一次性的获取到。有一些内置的方法可以用于判断、迭代/枚举以及获取对象的一个或一组属性，下表对这些方法进行了列举。对于部分不可用的类别，下方的示例代码对获取方法进行了演示。</p>
 
-<div style="overflow: auto; width: 100%;">
+<div>
 <table>
  <caption>属性的可枚举性和所有权 - 内置的判断、访问和迭代方法</caption>
  <tbody>
   <tr>
-   <th style="width: 6%;">作用</th>
-   <th style="width: 50%;">自身对象</th>
-   <th style="width: 30%;">自身对象及其原型链</th>
-   <th style="width: 12%;">仅原型链</th>
+   <th>作用</th>
+   <th>自身对象</th>
+   <th>自身对象及其原型链</th>
+   <th>仅原型链</th>
   </tr>
   <tr>
    <td>判断</td>
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
       <tr>
        <th scope="col">可枚举属性</th>
        <th scope="col">不可枚举属性</th>
-       <th scope="col" style="width: 12em;">可枚举属性及不可枚举属性</th>
+       <th scope="col">可枚举属性及不可枚举属性</th>
       </tr>
      </thead>
      <tbody>
@@ -70,7 +70,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
       <tr>
        <th scope="col">可枚举属性</th>
        <th scope="col">不可枚举属性</th>
-       <th scope="col" style="width: 12em;">可枚举属性及不可枚举属性</th>
+       <th scope="col">可枚举属性及不可枚举属性</th>
       </tr>
      </thead>
      <tbody>
@@ -96,7 +96,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
       <tr>
        <th scope="col">可枚举属性</th>
        <th scope="col">不可枚举属性</th>
-       <th scope="col" style="width: 12em;">可枚举属性及不可枚举属性</th>
+       <th scope="col">可枚举属性及不可枚举属性</th>
       </tr>
      </thead>
      <tbody>
@@ -145,7 +145,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
  <li>使用 <code>SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});</code> 时将发生迭代操作。 (或使用 <code>filter()</code>、<code>map()</code> 等方法)</li>
 </ul>
 
-<pre class="brush: js notranslate">var SimplePropertyRetriever = {
+<pre class="brush: js">var SimplePropertyRetriever = {
     getOwnEnumerables: function(obj) {
         return this._getPropertyNames(obj, true, false, this._enumerable);
          // Or could use for..in filtered with hasOwnProperty or just this: return Object.keys(obj);
@@ -210,7 +210,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 
 <h2 id="统计表">统计表</h2>
 
-<div style="overflow: auto; width: 100%;">
+<div>
 <table>
  <thead>
   <tr>
@@ -249,7 +249,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
    <td>true</td>
   </tr>
   <tr>
-   <th scope="row">自身的Symbol 键</th>
+   <th scope="row">自身的 Symbol 键</th>
    <td>true</td>
    <td>false</td>
    <td>true</td>

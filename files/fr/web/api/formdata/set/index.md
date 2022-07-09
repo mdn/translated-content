@@ -34,7 +34,7 @@ formData.set(name, value, filename);
   - : Le nom du champ dont les données sont contenues en valeur (`value`).
 - `value`
   - : La valeur du champ. Il peut s'agir d'un {{domxref("USVString")}} ou d'un {{domxref("Blob")}} (y compris les sous-classes telles que {{domxref("File")}}). Si aucune de ces sous-classes n'est spécifiée, la valeur est convertie en une chaîne de caractères.
-- `filename `{{optional_inline}}
+- `filename` {{optional_inline}}
   - : Le nom de fichier communiqué au serveur (un {{domxref("USVString")}}), lorsqu'un {{domxref("Blob")}} ou un {{domxref("File")}} est passée comme deuxième paramètre. Le nom de fichier par défaut pour les objets {{domxref("Blob")}} est "blob". Le nom de fichier par défaut pour les objets {{domxref("File")}} est le nom du fichier.
 
 > **Note :** Si vous spécifiez un {{domxref("Blob")}} comme donnée à ajouter à l'objet FormData, le nom du fichier qui sera rapporté au serveur dans l'en-tête "Content-Disposition" utilisé pour varier d'un navigateur à l'autre.

@@ -1,13 +1,6 @@
 ---
 title: document.createDocumentFragment
 slug: Web/API/Document/createDocumentFragment
-tags:
-  - API
-  - DOM
-  - Document
-  - HTML
-  - Méthode
-  - Reference
 translation_of: Web/API/Document/createDocumentFragment
 ---
 {{ApiRef("DOM")}}
@@ -16,7 +9,9 @@ Crée un nouvel objet vide de type {{domxref("DocumentFragment")}}.
 
 ## Syntaxe
 
-    var fragment = document.createDocumentFragment();
+```js
+var fragment = document.createDocumentFragment();
+```
 
 `fragment` est une référence vers un objet vide de type {{domxref("DocumentFragment")}} .
 
@@ -56,7 +51,7 @@ element.appendChild(fragment);
 
 ### Résultat
 
-{{EmbedLiveSample("Example", 600, 140)}}
+{{EmbedLiveSample("Exemple", 600, 140)}}
 
 ## Spécification
 

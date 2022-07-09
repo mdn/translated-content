@@ -7,7 +7,9 @@ translation_of: Web/API/GlobalEventHandlers/ongotpointercapture
 
 ## Syntaxe
 
-    target.ongotpointercapture = functionRef;
+```js
+target.ongotpointercapture = functionRef;
+```
 
 ### Valeur
 
@@ -31,7 +33,7 @@ function init() {
 
 | Spécification                                                                                                        | Status                                   | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------- |
-| {{SpecName('Pointer Events 2', '#the-gotpointercapture-event', 'onlostpointercapture')}} | {{Spec2('Pointer Events 2')}} |             |
+| {{SpecName('Pointer Events 2', '#the-gotpointercapture-event', 'onlostpointercapture')}} | {{Spec2('Pointer Events 2')}} |             |
 
 ## Compatibilité des navigateurs
 

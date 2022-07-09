@@ -1,10 +1,6 @@
 ---
 title: HTMLButtonElement.labels
 slug: Web/API/HTMLButtonElement/labels
-tags:
-  - API
-  - DOM
-  - Propriété
 translation_of: Web/API/HTMLButtonElement/labels
 ---
 {{APIRef("DOM")}}
@@ -13,7 +9,9 @@ La propriété en lecture seule **`HTMLButtonElement.labels`** renvoie une {{dom
 
 ## Syntaxe
 
-    var labelElements = button.labels;
+```js
+var labelElements = button.labels;
+```
 
 ### Valeur de retour
 
@@ -40,7 +38,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Exemple", "100%", 30)}}
 
 ## Spécifications
 

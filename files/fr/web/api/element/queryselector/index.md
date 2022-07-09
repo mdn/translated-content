@@ -1,21 +1,6 @@
 ---
 title: Element.querySelector()
 slug: Web/API/Element/querySelector
-tags:
-  - API
-  - CSS
-  - CSS Selectors
-  - DOM
-  - Element
-  - Elements
-  - Finding Elements
-  - Locating Elements
-  - Method
-  - Reference
-  - Searching Elements
-  - Selecting Elements
-  - Selectors
-  - querySelector
 translation_of: Web/API/Element/querySelector
 ---
 {{APIRef("DOM")}}
@@ -24,7 +9,9 @@ La méthode **`querySelector()`** de l'interface [`Element`](/fr/docs/Web/API/El
 
 ## Syntaxe
 
-    element = baseElement.querySelector(selectors);
+```js
+element = baseElement.querySelector(selectors);
+```
 
 ### Paramètres
 
@@ -82,7 +69,7 @@ document.getElementById("output").innerHTML = (baseElement.querySelector("div sp
 
 Le résultat ressemble à ceci :
 
-{{EmbedLiveSample('the_entire_hierarchy_counts', '', 200)}}
+{{EmbedLiveSample('Exemple', '', 200)}}
 
 ### Plus d'exemples
 

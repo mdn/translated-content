@@ -11,13 +11,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
 <p>{{JSRef}}</p>
 
-<p><code><strong>Object.keys()</strong></code> 方法会返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和正常循环遍历该对象时返回的顺序一致 。</p>
+<p><code><strong>Object.keys()</strong></code> 方法会返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和正常循环遍历该对象时返回的顺序一致。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>Object.keys(<var>obj</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt>obj</dt>
@@ -28,9 +28,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 
 <p>一个表示给定对象的所有可枚举属性的字符串数组。</p>
 
-<h2 id="Description" name="Description" style="margin-bottom: 20px; line-height: 30px;">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p><code>Object.keys</code> 返回一个所有元素为字符串的数组，其元素来自于从给定的<code>object</code>上面可直接枚举的属性。这些属性的顺序与手动遍历该对象属性时的一致。</p>
+<p><code>Object.keys</code> 返回一个所有元素为字符串的数组，其元素来自于从给定的 <code>object</code> 上面可直接枚举的属性。这些属性的顺序与手动遍历该对象属性时的一致。</p>
 
 <h2 id="例子">例子</h2>
 
@@ -55,11 +55,11 @@ var myObj = Object.create({}, {
 myObj.foo = 1;
 console.log(Object.keys(myObj)); // console: ['foo']</pre>
 
-<p>如果你想获取一个对象的所有属性,，甚至包括不可枚举的，请查看{{jsxref("Object.getOwnPropertyNames")}}。</p>
+<p>如果你想获取一个对象的所有属性，甚至包括不可枚举的，请查看 {{jsxref("Object.getOwnPropertyNames")}}。</p>
 
 <h2 id="注意">注意</h2>
 
-<p>在ES5里，如果此方法的参数不是对象（而是一个原始值），那么它会抛出 TypeError。在ES2015中，非对象的参数将被强制转换为一个对象。</p>
+<p>在 ES5 里，如果此方法的参数不是对象（而是一个原始值），那么它会抛出 TypeError。在 ES2015 中，非对象的参数将被强制转换为一个对象。</p>
 
 <pre class="brush: js">Object.keys("foo");
 // TypeError: "foo" is not an object (ES5 code)
@@ -69,7 +69,7 @@ Object.keys("foo");
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>要在原生不支持的旧环境中添加兼容的<code>Object.keys</code>，请复制以下代码段：</p>
+<p>要在原生不支持的旧环境中添加兼容的 <code>Object.keys</code>，请复制以下代码段：</p>
 
 <pre class="brush: js">if (!Object.keys) {
   Object.keys = (function () {
@@ -106,11 +106,11 @@ Object.keys("foo");
 };
 </pre>
 
-<p>上面的代码在IE7（也许IE8也是）下有个问题，就是如果传入一个来自其他 window 对象下的对象时，不可枚举的属性也会获取到。</p>
+<p>上面的代码在 IE7（也许 IE8 也是）下有个问题，就是如果传入一个来自其他 window 对象下的对象时，不可枚举的属性也会获取到。</p>
 
 <p>另一个简单的实现，参见<a class="external" href="http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html">Javascript - Object.keys Browser Compatibility</a>。</p>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -146,7 +146,7 @@ Object.keys("foo");
 <p>{{Compat("javascript.builtins.Object.keys")}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/docs/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>

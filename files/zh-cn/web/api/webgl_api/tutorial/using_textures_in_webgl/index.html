@@ -5,11 +5,11 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 ---
 <p>{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}</p>
 
-<p>现在我们已经创建好了一个可以旋转的3D的立方体，接下来是时候使用贴图来代替每个面的单一的颜色了。</p>
+<p>现在我们已经创建好了一个可以旋转的 3D 的立方体，接下来是时候使用贴图来代替每个面的单一的颜色了。</p>
 
 <h2 id="加载纹理">加载纹理</h2>
 
-<p>首先加入加载纹理的代码。现在我们只使用一张单一的纹理贴到立方体的6个面上，但是同样的方法可以用来加载任意数量的纹理贴图。</p>
+<p>首先加入加载纹理的代码。现在我们只使用一张单一的纹理贴到立方体的 6 个面上，但是同样的方法可以用来加载任意数量的纹理贴图。</p>
 
 <div class="note"><strong>注意：</strong> 值得注意的一点是对纹理的加载同样需要遵循<a href="zh-CN/docs/Web/HTTP/Access_control_CORS">跨域访问规则</a>；也就是说你只能从允许跨域访问的网址加载你需要的纹理。下面的例子就是支持跨域访问的。</div>
 
@@ -32,25 +32,25 @@ function handleTextureLoaded(image, texture) {
 }
 </pre>
 
-<p>函数 <code>initTextures()</code> 首先调用 GL {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} 函数来创建一个GL纹理对象 cubeTexture 。为了把图片文件加载到纹理，代码首先创建了一个 <code>Image</code> 对象然后把需要当作纹理使用的图形文件加载了进来。当图片加载完成后回调函数 <code>handleTextureLoaded()</code> 就会执行。</p>
+<p>函数 <code>initTextures()</code> 首先调用 GL {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} 函数来创建一个 GL 纹理对象 cubeTexture 。为了把图片文件加载到纹理，代码首先创建了一个 <code>Image</code> 对象然后把需要当作纹理使用的图形文件加载了进来。当图片加载完成后回调函数 <code>handleTextureLoaded()</code> 就会执行。</p>
 
 <p>接下来为了真正地形成纹理，我们通过把新创建的纹理对象绑定到 <code>gl.TEXTURE_2D 来让它成为当前操作纹理。然后通过调用</code> {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} 把已经加载的图片图形数据写到纹理。</p>
 
-<div class="note"><strong>注意：</strong> 在多数情况下，纹理的宽和高都必须是2的幂（如：1，2，4，8，16等等）。如果有什么特殊情况请参考下面的“<a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#非2的幂纹理">非2的幂纹理</a>”小节。</div>
+<div class="note"><strong>注意：</strong> 在多数情况下，纹理的宽和高都必须是 2 的幂（如：1，2，4，8，16 等等）。如果有什么特殊情况请参考下面的“<a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#非2的幂纹理">非 2 的幂纹理</a>”小节。</div>
 
 <p>代码的接下来两行设置了纹理过滤器，过滤器用来控制当图片缩放时像素如何生成如何插值。在这个例子里，我们对图片放大使用的是线性过滤，而对图片缩小使用的是多级渐进纹理过滤。接下来我们通过调用 {{domxref("WebGLRenderingContext.generateMipMap()", "generateMipMap()")}} 来生成多级渐进纹理，接着通过给 <code>gl.TEXTURE_2D 绑定值 null 来告诉 WebGL 我们对当前纹理的操作已经结束了。</code></p>
 
-<h3 id="非2的幂纹理">非2的幂纹理</h3>
+<h3 id="非2的幂纹理">非 2 的幂纹理</h3>
 
-<p>一般来说，宽和高都是2的幂的纹理使用是最理想的。2的幂纹理在渲染内存里的存储更高效，而且对它们的使用限制也更少。由美术工作人员生成的纹理最终在用来渲染前都应该使用放大或缩小的方式把它生成为2的幂纹理，其实事实上来说，在创作纹理之初就应该直接使用大小是2的幂的宽和高。纹理的每一边都应该是像1，2，4，8，16，32，64，128，256，512，1024或2048这样的值。当然也要注意尺寸的大小，因为虽说现在的大部分设置都已经可以支持4096像素的图片，但也不是全部；而有一些设备甚至可以支持8192或更高像素呢。</p>
+<p>一般来说，宽和高都是 2 的幂的纹理使用是最理想的。2 的幂纹理在渲染内存里的存储更高效，而且对它们的使用限制也更少。由美术工作人员生成的纹理最终在用来渲染前都应该使用放大或缩小的方式把它生成为 2 的幂纹理，其实事实上来说，在创作纹理之初就应该直接使用大小是 2 的幂的宽和高。纹理的每一边都应该是像 1，2，4，8，16，32，64，128，256，512，1024 或 2048 这样的值。当然也要注意尺寸的大小，因为虽说现在的大部分设置都已经可以支持 4096 像素的图片，但也不是全部；而有一些设备甚至可以支持 8192 或更高像素呢。</p>
 
-<p>有的时候从你的特定情况出发，使用2的幂纹理会比较困难。当使用到第三方的资源时，一般来说最好的方式就是先使用HTML5的画布把图片修正成2的幂然后再放到WebGL中进行渲染使用，这样一来，如果图片拉伸比较明显的话纹理坐标的值可需要适当地进行修正。</p>
+<p>有的时候从你的特定情况出发，使用 2 的幂纹理会比较困难。当使用到第三方的资源时，一般来说最好的方式就是先使用 HTML5 的画布把图片修正成 2 的幂然后再放到 WebGL 中进行渲染使用，这样一来，如果图片拉伸比较明显的话纹理坐标的值可需要适当地进行修正。</p>
 
-<p>但是，如果你一定要使用非2的幂纹理的话，WebGL也有原生支持，不过这些支持是受限的。当然在某些情况下使用非2的幂纹理也是很有用的，比如这张纹理刚好与你的显示器的分辨率相匹配，或者使用画布重新生成纹理的方式并不值得时。但是要特别注意的是：这种非2的幂纹理不能用来生成多级渐进纹理，而且不能使用纹理重复（重复纹理寻址等）。</p>
+<p>但是，如果你一定要使用非 2 的幂纹理的话，WebGL 也有原生支持，不过这些支持是受限的。当然在某些情况下使用非 2 的幂纹理也是很有用的，比如这张纹理刚好与你的显示器的分辨率相匹配，或者使用画布重新生成纹理的方式并不值得时。但是要特别注意的是：这种非 2 的幂纹理不能用来生成多级渐进纹理，而且不能使用纹理重复（重复纹理寻址等）。</p>
 
 <p>使用重复纹理寻址的一个例子就是使用一张砖块的纹理来平铺满一面墙壁。</p>
 
-<p>多级渐进纹理和纹理坐标重复可以通过调用 {{domxref("WebGLRenderingContext.texParameter()", "texParameteri()")}} 来禁用，当然首先你已经通过调用 {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}} 绑定过纹理了。这样虽然已经可以使用非2的幂纹理了，但是你将无法使用多级渐进纹理，纹理坐标包装，纹理坐标重复，而且无法控制设备如何处理你的纹理。</p>
+<p>多级渐进纹理和纹理坐标重复可以通过调用 {{domxref("WebGLRenderingContext.texParameter()", "texParameteri()")}} 来禁用，当然首先你已经通过调用 {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}} 绑定过纹理了。这样虽然已经可以使用非 2 的幂纹理了，但是你将无法使用多级渐进纹理，纹理坐标包装，纹理坐标重复，而且无法控制设备如何处理你的纹理。</p>
 
 <pre class="brush: js">// gl.NEAREST is also allowed, instead of gl.LINEAR, as neither mipmap.
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
@@ -59,7 +59,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
 // Prevents t-coordinate wrapping (repeating).
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);</pre>
 
-<p>现在，当使用以上参数时，兼容WebGL的设备就会自动变得可以使用任何分辨率的纹理（当然还要考虑像素上限）。如果不使用上面这些参数的话，任何非2的幂纹理使用都会失败然后返回一张纯黑图片。</p>
+<p>现在，当使用以上参数时，兼容 WebGL 的设备就会自动变得可以使用任何分辨率的纹理（当然还要考虑像素上限）。如果不使用上面这些参数的话，任何非 2 的幂纹理使用都会失败然后返回一张纯黑图片。</p>
 
 <h2 id="映射纹理到面">映射纹理到面</h2>
 
@@ -105,11 +105,11 @@ gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoordinates),
               gl.STATIC_DRAW);
 </pre>
 
-<p>首先，代码创建了一个GL缓存区，用来保存每个面的纹理坐标信息，然后把这个缓存区绑定到GL以方便我们写入数据。</p>
+<p>首先，代码创建了一个 GL 缓存区，用来保存每个面的纹理坐标信息，然后把这个缓存区绑定到 GL 以方便我们写入数据。</p>
 
-<p><code>数组变量 textureCoordinates</code> 中定义好了与每个面上的每个顶点一一对应的纹理坐标。请注意，纹理坐标的取值范围只能从0.0到1.0，所以不论纹理贴图的实际大小是多少，为了实现纹理映射，我们要使用的纹理坐标只能规范化到0.0到1.0的范围内。</p>
+<p><code>数组变量 textureCoordinates</code> 中定义好了与每个面上的每个顶点一一对应的纹理坐标。请注意，纹理坐标的取值范围只能从 0.0 到 1.0，所以不论纹理贴图的实际大小是多少，为了实现纹理映射，我们要使用的纹理坐标只能规范化到 0.0 到 1.0 的范围内。</p>
 
-<p>纹理坐标信息给定了之后，把这个数组里的数据都写到GL缓存区，这样GL就能使用这个坐标数据了。</p>
+<p>纹理坐标信息给定了之后，把这个数组里的数据都写到 GL 缓存区，这样 GL 就能使用这个坐标数据了。</p>
 
 <h2 id="更新着色器">更新着色器</h2>
 
@@ -174,7 +174,7 @@ gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
 gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
 </pre>
 
-<p>GL 最多可同时注册32张纹理；<code>gl.TEXTURE0 是第一张。我们把我们之前加载的纹理绑定到了第一个寄存器，然后着色器程序里的采样器 uSampler</code> 就会完成它的功能：使用纹理。</p>
+<p>GL 最多可同时注册 32 张纹理；<code>gl.TEXTURE0 是第一张。我们把我们之前加载的纹理绑定到了第一个寄存器，然后着色器程序里的采样器 uSampler</code> 就会完成它的功能：使用纹理。</p>
 
 <p>好，现在我们的立方体就会像这样旋转起来了。</p>
 
@@ -184,18 +184,18 @@ gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
 
 <h2 id="关于跨域纹理">关于跨域纹理</h2>
 
-<p>加载WebGL纹理应该也可以说是跨域访问控制里的一个话题。为了在我们的显示内容里使用其它域名里的纹理图片，允许跨域访问也是要考虑的。可以通过查看<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">HTTP访问控制</a>来获取到更多的相关细节。</p>
+<p>加载 WebGL 纹理应该也可以说是跨域访问控制里的一个话题。为了在我们的显示内容里使用其它域名里的纹理图片，允许跨域访问也是要考虑的。可以通过查看<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">HTTP 访问控制</a>来获取到更多的相关细节。</p>
 
-<p><a href="http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/">这篇文章</a>也对跨域加载纹理到WebGL做出了解释。而且文章里面还包含了一个使用的<a href="http://people.mozilla.org/~bjacob/webgltexture-cors-js.html">例子</a>。</p>
+<p><a href="http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/">这篇文章</a>也对跨域加载纹理到 WebGL 做出了解释。而且文章里面还包含了一个使用的<a href="http://people.mozilla.org/~bjacob/webgltexture-cors-js.html">例子</a>。</p>
 
 <div class="note">
-<p><strong>注意：</strong>对跨域加载WebGL纹理的支持和对 image 元素的 <code>crossOrigin</code> 的属性的支持都是在 {{Gecko("8.0")}} 版本中实现的。</p>
+<p><strong>注意：</strong>对跨域加载 WebGL 纹理的支持和对 image 元素的 <code>crossOrigin</code> 的属性的支持都是在 {{Gecko("8.0")}} 版本中实现的。</p>
 </div>
 
-<p>被污染过的（只写）画布是不能拿来当作WebGL纹理来使用的。举个例子来说，当把一张跨域的图片画到一个2D的 {{ HTMLElement("canvas") }} 中时，这个画布就是“被污染过的”。</p>
+<p>被污染过的（只写）画布是不能拿来当作 WebGL 纹理来使用的。举个例子来说，当把一张跨域的图片画到一个 2D 的 {{ HTMLElement("canvas") }} 中时，这个画布就是“被污染过的”。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 对 Canvas 2D 的 <code>drawImage 的跨域支持已经在 </code>{{Gecko("9.0")}} 版本实现的。这就意味着使用支持跨域的图片来污染一个2D的画布，这张画布也已经可以作为WebGL的纹理来使用了。</p>
+<p><strong>注意：</strong> 对 Canvas 2D 的 <code>drawImage 的跨域支持已经在 </code>{{Gecko("9.0")}} 版本实现的。这就意味着使用支持跨域的图片来污染一个 2D 的画布，这张画布也已经可以作为 WebGL 的纹理来使用了。</p>
 </div>
 
 <div class="note">

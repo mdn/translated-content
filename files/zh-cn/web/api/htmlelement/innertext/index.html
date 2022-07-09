@@ -14,10 +14,10 @@ original_slug: Web/API/Node/innerText
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary"><code><strong>innerText</strong></code> 属性表示一个节点及其后代的“渲染”文本内容。</span> As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.</p>
+<p><code><strong>innerText</strong></code> 属性表示一个节点及其后代的“渲染”文本内容。 As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> <code>innerText</code> 很容易与{{domxref("Node.textContent")}}混淆, 但这两个属性间实际上有很重要的区别. 大体来说, <code>innerText</code> 可操作已被渲染的内容， 而 <code>textContent</code> 则不会.</p>
+<p><strong>Note:</strong> <code>innerText</code> 很容易与{{domxref("Node.textContent")}}混淆，但这两个属性间实际上有很重要的区别。大体来说，<code>innerText</code> 可操作已被渲染的内容， 而 <code>textContent</code> 则不会。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -27,11 +27,11 @@ original_slug: Web/API/Node/innerText
 
 <h3 id="输出值">输出值</h3>
 
-<p>一段 {{domxref("DOMString")}} 表示一个元素中已被渲染的内容. 如果元素自身没有 <a href="https://html.spec.whatwg.org/multipage/rendering.html#being-rendered">被渲染</a> (e.g 被从文档中删除或没有在视图中显示), 这时返回值与 {{domxref("Node.textContent")}} 属性相同.</p>
+<p>一段 {{domxref("DOMString")}} 表示一个元素中已被渲染的内容。如果元素自身没有 <a href="https://html.spec.whatwg.org/multipage/rendering.html#being-rendered">被渲染</a> (e.g 被从文档中删除或没有在视图中显示), 这时返回值与 {{domxref("Node.textContent")}} 属性相同。</p>
 
-<h2 id="例子">例子</h2>
+<h2 id="示例">示例</h2>
 
-<p>这个示例对比了 <code>innerText</code> 和 {{domxref("Node.textContent")}}. 这时 <code>innerText</code> 代表的含义就像 {{htmlElement("br")}} 标签, 并且忽略了隐藏的元素.</p>
+<p>这个示例对比了 <code>innerText</code> 和 {{domxref("Node.textContent")}}. 这时 <code>innerText</code> 代表的含义就像 {{htmlElement("br")}} 标签，并且忽略了隐藏的元素。</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -58,30 +58,15 @@ innerTextOutput.innerHTML = source.innerText;</pre>
 
 <h3 id="结果">结果</h3>
 
-<p>{{EmbedLiveSample("Example", 700, 450)}}</p>
+<p>{{EmbedLiveSample("示例", 700, 450)}}</p>
 
 <h2 id="规范">规范</h2>
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'dom.html#the-innertext-idl-attribute', 'innerText')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Introduced, based on the <a href="https://github.com/rocallahan/innerText-spec">draft of the innerText specification</a>. See <a href="https://github.com/whatwg/html/issues/465">whatwg/html#465</a> and <a href="https://github.com/whatwg/compat/issues/5">whatwg/compat#5</a> for history.</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-
-
-<p>{{Compat("api.HTMLElement.innerText")}}</p>
+<p>{{Compat}}</p>
 
 <p>此特性最初由 Internet Explorer 引入。 被所有主要的浏览器供应商（vendor）采用后，它于 2016 年正式进入 HTML 标准。</p>
 

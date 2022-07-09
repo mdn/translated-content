@@ -1,14 +1,6 @@
 ---
 title: DOMTokenList.forEach()
 slug: Web/API/DOMTokenList/forEach
-tags:
-  - API
-  - Boucle
-  - Chaînes de caractères
-  - DOM
-  - Itérateurs
-  - Méthodes
-  - Pour chaque
 translation_of: Web/API/DOMTokenList/forEach
 ---
 {{APIRef("DOM")}}
@@ -17,8 +9,10 @@ La méthode **`forEach()`** de l'interface {{domxref("DOMTokenList")}} appelle l
 
 ## Syntaxe
 
-    tokenList.forEach(callback);
-    tokenList.forEach(callback, argument);
+```js
+tokenList.forEach(callback);
+tokenList.forEach(callback, argument);
+```
 
 ### Paramètres
 
@@ -33,7 +27,7 @@ La méthode **`forEach()`** de l'interface {{domxref("DOMTokenList")}} appelle l
     - _`listObj`_
       - : Le tableau que `forEach()` est en train d'appliquer.
 
-- _`argument`_` {{Optional_inline}}`
+- `argument` {{Optional_Inline}}
   - : Valeur à utiliser comme {{jsxref("this")}} lors de l'exécution du `callback` (_rappel_).
 
 ### Valeur renvoyée
@@ -42,7 +36,7 @@ La méthode **`forEach()`** de l'interface {{domxref("DOMTokenList")}} appelle l
 
 ## Exemple
 
-Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous récupérons un itérateur contenant les valeurs avec `forEach()` et écrivons chacune d'elles dans le  {{domxref("Node.textContent")}} du `<span>` pendant l'exécution de la fonction interne `forEach()`.
+Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous récupérons un itérateur contenant les valeurs avec `forEach()` et écrivons chacune d'elles dans le  {{domxref("Node.textContent")}} du `<span>` pendant l'exécution de la fonction interne `forEach()`.
 
 ### HTML
 
@@ -67,7 +61,7 @@ classes.forEach(
 
 ### Résultat
 
-{{ EmbedLiveSample('Example', '100%', 60) }}
+{{ EmbedLiveSample('Exemple', '100%', 60) }}
 
 ## Spécifications
 

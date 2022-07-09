@@ -30,7 +30,9 @@ var test = document.querySelector('a:has(> img)');
 
 ## Syntaxe
 
-    :has(liste_selecteurs) { proprietes }
+```
+:has(liste_selecteurs) { proprietes }
+```
 
 ## Exemples
 

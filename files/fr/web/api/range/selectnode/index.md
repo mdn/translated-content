@@ -14,12 +14,14 @@ La méthode `Range.selectNode()` définit le {{domxref ("Range")}} destiné à c
 
 ## Syntaxe
 
-    range.selectNode(noeudDeReference);
+```js
+range.selectNode(noeudDeReference);
+```
 
 ### Paramètres
 
 - _noeudDeReference_
-  - : Le {{domxref("Node")}} à choisir à l'intérieur d'un `{domxref("Range")}}`.
+  - : Le {{domxref("Node")}} à choisir à l'intérieur d'un `{domxref("Range")}}`.
 
 ## Exemple
 

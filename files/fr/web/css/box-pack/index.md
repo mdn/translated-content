@@ -77,8 +77,8 @@ div.exemple {
   -webkit-box-align: center; /* WebKit */
 
   /* On groupe les éléments fils en bas de la boîte */
-  -moz-box-pack: end;             /* Mozilla */
-  -webkit-box-pack: end;          /* WebKit */
+  -moz-box-pack: end;      /* Mozilla */
+  -webkit-box-pack: end;   /* WebKit */
 }
 
 div.exemple p {
@@ -108,7 +108,7 @@ Le « début » et la « fin » de la boîte dépendent de l'orientation et de l
 <table class="standard-table">
   <tbody>
     <tr>
-      <th> </th>
+      <th></th>
       <th><strong>Normal</strong></th>
       <th><strong>Inverse</strong></th>
     </tr>

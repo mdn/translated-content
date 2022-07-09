@@ -133,62 +133,7 @@ text-shadow: unset;
 
 <h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>2.0</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}<sup>[1]</sup></td>
-   <td>10<sup>[3]</sup></td>
-   <td>9.5<sup>[2]</sup></td>
-   <td>1.1 (100)<sup>[4]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Gecko teóricamente soporta sombras de texto infinitas (no lo intente). Gecko 2 {{geckoRelease("2.0")}} y superiores limitan el radio de difuminación a 300 por razones de rendimiento. Si el valor &lt;color&gt; no es especificado, Gecko usará el valor de la propiedad {{cssxref("color")}} del elemento.</p>
-
-<p>[2] Opera soporta un máximo de 6-9 sombras de texto por motivos de rendimiento. El radio de difuminación está limitado a 100px. Opera 9.5 a 10.1 utiliza el antiguo orden en reversa de dibujado (CSS2, la primera sombra en aplicar es la última que se define).</p>
-
-<p>[3] Internet Explorer 5.5 soporta la propiedad <a class="external" href="http://msdn.microsoft.com/en-us/library/ms673539(loband).aspx"><code>Shadow</code> and <code>DropShadow</code> Filter</a> de Microsoft.</p>
-
-<p>[4] En Safari, cualquier sombra que no especifique explícitamente un color es transparente. Safari 1.1 a 3.2 sólo soportan una sombra de texto (muestra la primera definida en la propiedad e ignora al resto). Safari 4.0 (WebKit 528) y superiores soportan múltiples sombras de texto.<br>
- Konqueror soporta sombras de texto desde la versión 3.4.</p>
+{{Compat("css.properties.text-shadow")}}
 
 <h2 id="Véase_también">Véase también</h2>
 

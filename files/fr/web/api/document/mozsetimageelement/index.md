@@ -10,15 +10,15 @@ tags:
   - Méthodes
 translation_of: Web/API/Document/mozSetImageElement
 ---
-{{ ApiRef("DOM") }}
-
-{{ gecko_minversion_header("2.0") }}{{ non-standard_header() }}
+{{ ApiRef("DOM") }}{{ non-standard_header() }}
 
 Change l'élément utilisé comme arrière-plan CSS par un arrière-plan avec un ID d'élément d'arrière-plan donné.
 
 ## Syntaxe
 
-    document.mozSetImageElement(imageElementId, imageElement);
+```js
+document.mozSetImageElement(imageElementId, imageElement);
+```
 
 ### Paramètres
 
@@ -43,7 +43,7 @@ Cet exemple change l'arrière-plan d'un bloc {{ HTMLElement("div") }} chaque foi
 </style>
 ```
 
-Le CSS défini par le bloc {{ HTMLElement("style") }} ci-dessus est utilisé par notre {{ HTMLElement("div") }} pour afficher un élément, ayant l'id "canvasbg", en arrière-plan.
+Le CSS défini par le bloc {{ HTMLElement("style") }} ci-dessus est utilisé par notre {{ HTMLElement("div") }} pour afficher un élément, ayant l'id "canvasbg", en arrière-plan.
 
 ```js
 var c = 0x00;

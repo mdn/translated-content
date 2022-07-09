@@ -3,96 +3,29 @@ title: AnimationTimeline
 slug: Web/API/AnimationTimeline
 translation_of: Web/API/AnimationTimeline
 ---
-<div><font><font>{{ SeeCompatTable() }} {{ APIRef("Web Animations", "Web动画")}}</font></font></div>
+<div>{{ SeeCompatTable() }} {{ APIRef("Web Animations", "Web 动画")}}</div>
 
-<p><font><font><a href="/en-US/docs/Web/API/Web_Animations_API">Web动画API</a>的</font></font><code>AnimationTimeline</code><font><font>接口表示动画的时间轴。这个接口用于定义时间轴功能（被{{ domxref("DocumentTimeline", "文档时间线") }}和未来的时间轴类型所继承），但本身并不能被开发人员直接使用。无论何处当你要用</font></font><code>AnimationTimeline</code><font><font>，都应该使用</font></font><code>DocumentTimeline</code>或<font><font>其他时间轴类型来实例化。</font></font></p>
+<p><a href="/en-US/docs/Web/API/Web_Animations_API">Web 动画 API</a>的<code>AnimationTimeline</code>接口表示动画的时间轴。这个接口用于定义时间轴功能（被{{ domxref("DocumentTimeline", "文档时间线") }}和未来的时间轴类型所继承），但本身并不能被开发人员直接使用。无论何处当你要用<code>AnimationTimeline</code>，都应该使用<code>DocumentTimeline</code>或其他时间轴类型来实例化。</p>
 
-<h2 id="属性"><font><font>属性</font></font></h2>
+<h2 id="属性">属性</h2>
 
 <dl>
- <dt><font><font>{{domxref("AnimationTimeline.currentTime")}} {{readonlyInline}}</font></font></dt>
- <dd><font><font>返回此时间轴的时间值（以毫秒为单位），若此时间轴未激活则返回</font></font><code>null</code><font><font>。</font></font></dd>
+ <dt>{{domxref("AnimationTimeline.currentTime")}} {{readonlyInline}}</dt>
+ <dd>返回此时间轴的时间值（以毫秒为单位），若此时间轴未激活则返回<code>null</code>。</dd>
 </dl>
 
-<h2 id="规格"><font><font>规格</font></font></h2>
+<h2 id="规格">规格</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col"><font><font>规范</font></font></th>
-   <th scope="col"><font><font>状态</font></font></th>
-   <th scope="col"><font><font>评论</font></font></th>
-  </tr>
-  <tr>
-   <td><font><font>{{SpecName('Web Animations','#the-animationtimeline-interface','AnimationTimeline')}}</font></font></td>
-   <td><font><font>{{Spec2('Web Animations')}}</font></font></td>
-   <td><font><font>编辑者草稿。</font></font></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容性"><font><font>浏览器兼容性</font></font></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p><font><font>{{CompatibilityTable}}</font></font></p>
+{{Compat("api.AnimationTimeline")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th><font><font>Chrome</font></font></th>
-   <th><font><font>Firefox (Gecko)</font></font></th>
-   <th><font><font>Internet Explorer</font></font></th>
-   <th><font><font>Opera</font></font></th>
-   <th><font><font>Safari (WebKit)</font></font></th>
-  </tr>
-  <tr>
-   <td><font><font>基本支持</font></font></td>
-   <td><font><font>{{CompatNo}}</font></font></td>
-   <td><font><font>{{CompatGeckoDesktop(48)}} </font></font><sup><font><font>[1]</font></font></sup></td>
-   <td><font><font>{{CompatNo}}</font></font></td>
-   <td><font><font>{{CompatNo}}</font></font></td>
-   <td><font><font>{{CompatNo}}</font></font></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th><font><font>Android</font></font></th>
-   <th><font><font>Android Webview</font></font></th>
-   <th><font><font>Firefox Mobile (Gecko)</font></font></th>
-   <th><font><font>Firefox OS</font></font></th>
-   <th><font><font>IE Mobile</font></font></th>
-   <th><font><font>Opera Mobile</font></font></th>
-   <th><font><font>Safari Mobile</font></font></th>
-   <th><font><font>Chrome for Android</font></font></th>
-  </tr>
-  <tr>
-   <td><font><font>基本支持</font></font></td>
-   <td><font><font>{{CompatNo}}</font></font></td>
-   <td><font><font>{{CompatNo}}</font></font></td>
-   <td><font><font>{{CompatGeckoMobile(48)}} </font></font><sup><font><font>[1]</font></font></sup></td>
-   <td><font><font>{{CompatNo}}</font></font></td>
-   <td><font><font>{{CompatNo}}</font></font></td>
-   <td><font><font>{{CompatNo}}</font></font></td>
-   <td><font><font>{{CompatNo}}</font></font></td>
-   <td><font><font>{{CompatNo}}</font></font></td>
-  </tr>
- </tbody>
-</table>
-
-<p><font><font>[1] Web动画API仅在Firefox Developer Edition和Nightly构建中默认启用。</font><font>您可以在测试启用它，并发布版本通过设定的偏好</font></font><code>dom.animations-api.core.enabled</code><font><font>来</font></font><code>true</code><font><font>，并且可以通过设置此优先于任何版本的Firefox禁用它</font></font><code>false</code><font><font>。</font></font></p>
-</div>
-
-<h2 id="参见"><font><font>参见</font></font></h2>
+<h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API"><font><font>网页动画API</font></font></a></li>
- <li><font><font>{{domxref("DocumentTimeline")}}</font></font></li>
- <li><font><font>{{domxref("Document.timeline")}}</font></font></li>
+ <li><a href="/en-US/docs/Web/API/Web_Animations_API">网页动画 API</a></li>
+ <li>{{domxref("DocumentTimeline")}}</li>
+ <li>{{domxref("Document.timeline")}}</li>
 </ul>

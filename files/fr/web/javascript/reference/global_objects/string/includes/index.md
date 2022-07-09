@@ -18,8 +18,10 @@ La méthode **`includes()`** détermine si une chaîne de caractères est conten
 
 ## Syntaxe
 
-    str.includes(chaîneRecherchée);
-    str.includes(chaîneRecherchée, position);
+```js
+str.includes(chaîneRecherchée);
+str.includes(chaîneRecherchée, position);
+```
 
 ### Paramètres
 
@@ -70,9 +72,9 @@ if (!String.prototype.includes) {
   String.prototype.includes = function(search, start) {
     'use strict';
 
-    if (search instanceof RegExp) {
-      throw TypeError('first argument must not be a RegExp');
-    }
+    if (search instanceof RegExp) {
+      throw TypeError('first argument must not be a RegExp');
+    }
     if (start === undefined) { start = 0; }
     return this.indexOf(search, start) !== -1;
   };

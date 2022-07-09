@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
 ---
 <div>{{JsSidebar("More")}}</div>
 
-<p>这部分描述了JavaScript 的词法（lexical grammar）。ECMAScript 源码文本会被从左到右扫描，并被转换为一系列的输入元素，包括 token、控制符、行终止符、注释和空白符。ECMAScript 定义了一些关键字、字面量以及行尾分号补全的规则。</p>
+<p>这部分描述了 JavaScript 的词法（lexical grammar）。ECMAScript 源码文本会被从左到右扫描，并被转换为一系列的输入元素，包括 token、控制符、行终止符、注释和空白符。ECMAScript 定义了一些关键字、字面量以及行尾分号补全的规则。</p>
 
 <h2 id="格式控制符">格式控制符</h2>
 
@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
    <td><code>U+FEFF</code></td>
    <td>字节流方向标识</td>
    <td>&lt;BOM&gt;</td>
-   <td>在脚本开头使用，除了将脚本标记为Unicode格式以外，还用来标记文本的字节流方向（<a href="http://en.wikipedia.org/wiki/Byte_order_mark">Wikipedia</a>）</td>
+   <td>在脚本开头使用，除了将脚本标记为 Unicode 格式以外，还用来标记文本的字节流方向（<a href="http://en.wikipedia.org/wiki/Byte_order_mark">Wikipedia</a>）</td>
   </tr>
  </tbody>
 </table>
@@ -103,7 +103,7 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
    <td>Others</td>
    <td>其他 Unicode 空白</td>
    <td>&lt;USP&gt;</td>
-   <td><a href="http://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode">Wikipedia上对 Unicode 空白的介绍</a></td>
+   <td><a href="http://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode">Wikipedia 上对 Unicode 空白的介绍</a></td>
    <td></td>
   </tr>
  </tbody>
@@ -129,7 +129,7 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
    <td>U+000A</td>
    <td>换行符</td>
    <td>&lt;LF&gt;</td>
-   <td>在UNIX系统中起新行</td>
+   <td>在 UNIX 系统中起新行</td>
    <td>\n</td>
   </tr>
   <tr>
@@ -193,7 +193,7 @@ comment();</pre>
 <p>多行注释也可以用于行内注释，但这样会使代码可读性变差，所以要谨慎使用：</p>
 
 <pre class="brush: js">function comment(x) {
-  console.log("Hello " + x /* 引入x的值 */ + " !");
+  console.log("Hello " + x /* 引入 x 的值 */ + " !");
 }
 comment("world");</pre>
 
@@ -219,12 +219,12 @@ comment();</pre>
 console.log("Hello world");
 </pre>
 
-<div class="blockIndicator note">
-<p><strong>注意</strong>：JavaScript 中的 hashbang 注释模仿 <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">Unix 中的 shebangs</a>，用于指定适当的解释器运行文件。</p>
+<div class="note">
+<p><strong>备注：</strong>：JavaScript 中的 hashbang 注释模仿 <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">Unix 中的 shebangs</a>，用于指定适当的解释器运行文件。</p>
 </div>
 
-<div class="blockIndicator warning">
-<p>尽管在 hashbang 注释之前的 <a href="https://en.wikipedia.org/wiki/Byte_order_mark">BOM</a> 在浏览器中能工作，但不建议在具有 hashbang 的脚本中使用 BOM。当您尝试在 Unix/Linux 中运行脚本时，有 BOM 将不工作。因此，如果要直接从 shell 运行脚本，请使用没有 BOM 的 UTF-8。</p>
+<div class="warning">
+<p><strong>警告：</strong>尽管在 hashbang 注释之前的 <a href="https://en.wikipedia.org/wiki/Byte_order_mark">BOM</a> 在浏览器中能工作，但不建议在具有 hashbang 的脚本中使用 BOM。当您尝试在 Unix/Linux 中运行脚本时，有 BOM 将不工作。因此，如果要直接从 shell 运行脚本，请使用没有 BOM 的 UTF-8。</p>
 </div>
 
 <p>您只能使用 <code>#!</code> 注释样式以指定 JavaScript 解释器。在所有其他情况下，只需使用 <code>//</code> 注释（或多行注释）。</p>
@@ -305,7 +305,7 @@ console.log("Hello world");
 
 <h4 id="之前标准中的保留关键字">之前标准中的保留关键字</h4>
 
-<p>这里是之前版本中的ECMAScript（1到3）中的保留关键字：</p>
+<p>这里是之前版本中的 ECMAScript（1 到 3）中的保留关键字：</p>
 
 <div class="threecolumns">
 <ul>
@@ -331,14 +331,14 @@ console.log("Hello world");
 
 <h3 id="保留字的使用">保留字的使用</h3>
 
-<p>事实上保留字是仅针对标识符（Identifier）的文法定义而言的（而不是标识符名（IdentifierName）的文法定义）。如 <a href="http://es5.github.com/#A.1">es5.github.com/#A.1</a>中所描述的, 这些都是不排斥保留字的标识符名.</p>
+<p>事实上保留字是仅针对标识符（Identifier）的文法定义而言的（而不是标识符名（IdentifierName）的文法定义）。如 <a href="http://es5.github.com/#A.1">es5.github.com/#A.1</a>中所描述的，这些都是不排斥保留字的标识符名。</p>
 
 <pre class="brush: js">a.import
 a["import"]
 a = { import: "test" }.
 </pre>
 
-<p>另一方面，如下用法是不允许的。因为它是一个标识符，而标识符的文法定义是除保留字以外的标识符名。标识符用于函数声明式和函数表达式.</p>
+<p>另一方面，如下用法是不允许的。因为它是一个标识符，而标识符的文法定义是除保留字以外的标识符名。标识符用于函数声明式和函数表达式。</p>
 
 <pre class="brush: js">function import() {} // Illegal.</pre>
 
@@ -373,7 +373,7 @@ false</pre>
 
 <h4 id="二进制">二进制</h4>
 
-<p>二进制表示为开头是0后接大写或小写的B（<code>0b</code>或者<code>0B</code>）。这是ECMAScript 6中的新语法，可以参考下面的浏览器兼容性表格。如果<code>0b</code>之后有除了0或1以外的数字，将会抛出<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code>：“Missing binary digits after 0b”。</p>
+<p>二进制表示为开头是 0 后接大写或小写的 B（<code>0b</code>或者<code>0B</code>）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果<code>0b</code>之后有除了 0 或 1 以外的数字，将会抛出<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code>：“Missing binary digits after 0b”。</p>
 
 <pre class="brush: js">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
@@ -381,19 +381,19 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
 <h4 id="八进制">八进制</h4>
 
-<p>八进制表示为开头是0后接大写或小写的O（<code>0o</code>或<code>0O</code>）。这是ECMAScript 6中的新语法，可以参考下面的浏览器兼容性表格。如果有不在（01234567）中的数字，将会抛出<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code>：“Missing octal digits after 0o”。</p>
+<p>八进制表示为开头是 0 后接大写或小写的 O（<code>0o</code>或<code>0O</code>）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果有不在（01234567）中的数字，将会抛出<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code>：“Missing octal digits after 0o”。</p>
 
 <pre class="brush: js">var n = 0O755; // 493
 var m = 0o644; // 420
 
-// 用0开头也可以实现（请查看上方十进制有关部分）
+// 用 0 开头也可以实现（请查看上方十进制有关部分）
 0755
 0644
 </pre>
 
 <h4 id="十六进制">十六进制</h4>
 
-<p>十六进制表示为开头是0后接大写或小写的X（<code>0x</code>或<code>0X</code>）。如果有不在（0123456789ABCDEF）中的数字，将会抛出<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code>：“Identifier starts immediately after numeric literal”。</p>
+<p>十六进制表示为开头是 0 后接大写或小写的 X（<code>0x</code>或<code>0X</code>）。如果有不在（0123456789ABCDEF）中的数字，将会抛出<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code>：“Identifier starts immediately after numeric literal”。</p>
 
 <pre class="brush: js">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
@@ -406,7 +406,7 @@ var m = 0o644; // 420
 
 <pre class="brush: js">var o = { a: "foo", b: "bar", c: 42 };
 
-// ES6中的简略表示方法
+// ES6 中的简略表示方法
 var a = "foo", b = "bar", c = 42;
 var o = {a, b, c};
 // 不需要这样
@@ -437,7 +437,7 @@ var o = { a: a, b: b, c: c };
 
 <h4 id="Unicode_编码转义">Unicode 编码转义</h4>
 
-<p>ECMAScript 6新增特性。使用Unicode编码转义，任何字符都可以被转义为十六进制编码。最高可以用到<code>0x10FFFF</code>。使用单纯的Unicode转义通常需要写成分开的两半以达到相同的效果。</p>
+<p>ECMAScript 6 新增特性。使用 Unicode 编码转义，任何字符都可以被转义为十六进制编码。最高可以用到<code>0x10FFFF</code>。使用单纯的 Unicode 转义通常需要写成分开的两半以达到相同的效果。</p>
 
 <p>可以参考{{jsxref("String.fromCodePoint()")}}和{{jsxref("String.prototype.codePointAt()")}}。</p>
 
@@ -472,7 +472,7 @@ tag `string text ${expression} string text`</pre>
 
 <h2 id="自动分号补全">自动分号补全</h2>
 
-<p>一些 <a href="/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript 语句</a>必须用分号结束，所以会被自动分号补全 (ASI)影响：</p>
+<p>一些 <a href="/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript 语句</a>必须用分号结束，所以会被自动分号补全 (ASI) 影响：</p>
 
 <ul>
  <li>空语句</li>

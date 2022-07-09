@@ -16,11 +16,13 @@ L'opérateur **virgule** permet d'évaluer chacun de ses opérandes (de la gauch
 
 ## Syntaxe
 
-    expr1, expr2, expr3...
+```js
+expr1, expr2, expr3…
+```
 
 ### Paramètres
 
-- `expr1`, `expr2, expr3...`
+- `expr1`, `expr2, expr3…`
   - : Des expressions JavaScript.
 
 ## Description
@@ -71,9 +73,9 @@ function maFonction () {
 
 | Spécification                                                                        | État                         | Commentaires        |
 | ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ESDraft', '#sec-comma-operator', 'Comma operator')}} | {{Spec2('ESDraft')}} |                     |
-| {{SpecName('ES6', '#sec-comma-operator', 'Comma operator')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ES5.1', '#sec-11.14', 'Comma operator')}}             | {{Spec2('ES5.1')}}     |                     |
+| {{SpecName('ESDraft', '#sec-comma-operator', 'Comma operator')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ES6', '#sec-comma-operator', 'Comma operator')}}     | {{Spec2('ES6')}}         |                     |
+| {{SpecName('ES5.1', '#sec-11.14', 'Comma operator')}}             | {{Spec2('ES5.1')}}     |                     |
 | {{SpecName('ES1', '#sec-11.14', 'Comma operator')}}                 | {{Spec2('ES1')}}         | Définition initiale |
 
 ## Compatibilité des navigateurs

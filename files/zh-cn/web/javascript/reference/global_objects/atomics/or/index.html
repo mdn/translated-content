@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/or
 ---
 <div>{{JSRef}}</div>
 
-<p>静态方法 <code><strong>Atomics</strong></code><strong><code>.or()</code></strong> 用数组中指定位置的值进行一次按位或运算，并返回未计算时数组中指定位置处的值。这个atomic操作保证了在修改后的值被写回之前没有其它的写入操作发生。</p>
+<p>静态方法 <code><strong>Atomics</strong></code><strong><code>.or()</code></strong> 用数组中指定位置的值进行一次按位或运算，并返回未计算时数组中指定位置处的值。这个 atomic 操作保证了在修改后的值被写回之前没有其它的写入操作发生。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/atomics-or.html")}}</div>
 
@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/or
 
 <dl>
  <dt><code>typedArray</code></dt>
- <dd>一个共享的int数组，类型为 {{jsxref("Int8Array")}}、{{jsxref("Uint8Array")}}、{{jsxref("Int16Array")}}、{{jsxref("Uint16Array")}}、{{jsxref("Int32Array")}} 或 {{jsxref("Uint32Array")}}。</dd>
+ <dd>一个共享的 int 数组，类型为 {{jsxref("Int8Array")}}、{{jsxref("Uint8Array")}}、{{jsxref("Int16Array")}}、{{jsxref("Uint16Array")}}、{{jsxref("Int32Array")}} 或 {{jsxref("Uint32Array")}}。</dd>
  <dt><code>index</code></dt>
  <dd><code>typedArray</code> 中要进行按位或运算的索引。</dd>
  <dt><code>value</code></dt>
@@ -39,14 +39,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/or
 <h3 id="异常">异常</h3>
 
 <ul>
- <li>若 <code>typedArray</code> 不是一个可用的int类型，则抛出一个 {{jsxref("TypeError")}} 异常。</li>
+ <li>若 <code>typedArray</code> 不是一个可用的 int 类型，则抛出一个 {{jsxref("TypeError")}} 异常。</li>
  <li>若 <code>typedArray</code> 不是一个共享的数组类型，则抛出一个 {{jsxref("TypeError")}} 异常。</li>
  <li>若 <code>index</code> 索引超出了 <code>typedArray</code> 的大小，则抛出一个 {{jsxref("RangeError")}} 异常。</li>
 </ul>
 
 <h2 id="详情">详情</h2>
 
-<p>当 <code>a</code> 或者 <code>b</code> 为1时，按位或运算结果为1。或运算真值表如下：</p>
+<p>当 <code>a</code> 或者 <code>b</code> 为 1 时，按位或运算结果为 1。或运算真值表如下：</p>
 
 <table class="standard-table">
  <thead>
@@ -80,7 +80,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/or
  </tbody>
 </table>
 
-<p>例如，让 <code>5 &amp; 1</code> 进行按位或运算的结果是 <code>0101</code> ，也就是十进制的5：</p>
+<p>例如，让 <code>5 &amp; 1</code> 进行按位或运算的结果是 <code>0101</code> ，也就是十进制的 5：</p>
 
 <pre>5  0101
 1  0001

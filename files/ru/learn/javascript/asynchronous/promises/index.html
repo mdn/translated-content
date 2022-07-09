@@ -1,0 +1,416 @@
+---
+title: Making asynchronous programming easier with async and await
+slug: Learn/JavaScript/Asynchronous/Promises
+tags:
+  - Асинхронность
+  - Гайд
+  - Для новичков
+translation_of: Learn/JavaScript/Asynchronous/Async_await
+original_slug: Learn/JavaScript/Asynchronous/Async_await
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}</div>
+
+<p class="summary">В ECMAScript версии 2017 появились <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async functions</a> и ключевое слово <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> (<a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla">ECMAScript Next support in Mozilla</a>). По существу, такие функции есть синтаксический сахар над Promises и Generator functions (<a href="https://tc39.es/ecmascript-asyncawait/">ts39</a>). С их помощью легче писать/читать асинхронный код, ведь они позволяют использовать привычный синхронный стиль написания. В этой статье мы на базовом уровне разберёмся в их устройстве.</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Примечания:</th>
+   <td>Чтобы лучше понять материал, желательно перед чтением ознакомиться с основами JavaScript, асинхронными операциями вообще и объектами Promises.</td>
+  </tr>
+  <tr>
+   <th scope="row">Цель материала:</th>
+   <td>Научить писать современный асинхронный код с использованием Promises и async functions.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Основы_asyncawait">Основы async/await</h2>
+
+<h3 id="Ключевое_слово_async">Ключевое слово async</h3>
+
+<p>Ключевое слово async позволяет сделать из обычной функции (function declaration или function expression) асинхронную функцию (<a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async function</a>). Такая функция делает две вещи:<br>
+ - Оборачивает возвращаемое значение в Promise<br>
+ - Позволяет использовать ключевое слово await (см. дальше)</p>
+
+<p>Попробуйте выполнить в консоли браузера следующий код:</p>
+
+<pre class="brush: js">function hello() { return "Hello" };
+hello();</pre>
+
+<p>Функция возвращает "Hello" — ничего необычного, верно ?</p>
+
+<p>Но что если мы сделаем её асинхронной ? Проверим:</p>
+
+<pre class="brush: js">async function hello() { return "Hello" };
+hello();</pre>
+
+<p>Как было сказано ранее, вызов асинхронной функции возвращает объект Promise.</p>
+
+<p>Вот пример с <a href="/en-US/docs/Web/JavaScript/Reference/Operators/async_function">async function expression</a>:</p>
+
+<pre class="brush: js">let hello = async function() { return "Hello" };
+hello();</pre>
+
+<p>Также можно использовать стрелочные функции:</p>
+
+<pre class="brush: js">let hello = async () =&gt; { return "Hello" };</pre>
+
+<p>Все они в общем случае делают одно и то же.</p>
+
+<p>Чтобы получить значение, которое возвращает Promise, мы как обычно можем использовать метод <code>.then()</code>:</p>
+
+<pre class="brush: js">hello().then((value) =&gt; console.log(value))</pre>
+
+<p>или ещё короче</p>
+
+<pre class="brush: js">hello().then(console.log)
+</pre>
+
+<p>Итак, ключевое слово <code>async</code>, превращает обычную функцию в асинхронную и результат вызова функции оборачивает в Promise. Также асинхронная функция позволяет использовать в своём теле ключевое слово await, о котором далее.</p>
+
+<h3 id="Ключевое_слово_await">Ключевое слово await</h3>
+
+<p>Асинхронные функции становятся по настоящему мощными, когда вы используете ключевое слово <a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a>  — по факту, <strong><code>await</code> работает только в асинхронных функциях</strong>. Мы можем использовать await перед promise-based функцией, чтобы остановить поток выполнения и дождаться результата её выполнения (результат Promise). В то же время, остальной код нашего приложения не блокируется и продолжает работать.</p>
+
+<p>Вы можете использовать <code>await</code> перед любой функцией, что возвращает Promise, включая Browser API функции.</p>
+
+<p>Небольшой пример:</p>
+
+<pre class="brush: js">async function hello() {
+  return greeting = await Promise.resolve("Hello");
+};
+
+hello().then(alert);</pre>
+
+<p>Конечно, на практике код выше бесполезен, но в учебных целях он иллюстрирует синтаксис асинхронных функций. Теперь давайте перейдём к реальным примерам.</p>
+
+<h2 id="Переписываем_Promises_с_использованием_asyncawait">Переписываем Promises с использованием async/await</h2>
+
+<p>Давайте посмотрим на пример из предыдущей статьи:</p>
+
+<pre class="brush: js">fetch('coffee.jpg')
+.then(response =&gt; {
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  } else {
+    return response.blob();
+  }
+})
+.then(myBlob =&gt; {
+  let objectURL = URL.createObjectURL(myBlob);
+  let image = document.createElement('img');
+  image.src = objectURL;
+  document.body.appendChild(image);
+})
+.catch(e =&gt; {
+  console.log('There has been a problem with your fetch operation: ' + e.message);
+});</pre>
+
+<p>К этому моменту вы должны понимать как работают Promises, чтобы понять все остальное. Давайте перепишем код используя async/await и оценим разницу.</p>
+
+<pre class="brush: js">async function myFetch() {
+  let response = await fetch('coffee.jpg');
+
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  } else {
+    let myBlob = await response.blob();
+
+    let objectURL = URL.createObjectURL(myBlob);
+    let image = document.createElement('img');
+    image.src = objectURL;
+    document.body.appendChild(image);
+  }
+}
+
+myFetch()
+.catch(e =&gt; {
+  console.log('There has been a problem with your fetch operation: ' + e.message);
+});</pre>
+
+<p>Согласитесь, что код стал короче и понятнее — больше никаких блоков <code>.then()</code> по всему скрипту!</p>
+
+<p>Так как ключевое слово <code>async</code> заставляет функцию вернуть Promise, мы можем использовать гибридный подход:</p>
+
+<pre class="brush: js">async function myFetch() {
+  let response = await fetch('coffee.jpg');
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  } else {
+    return await response.blob();
+  }
+}
+
+myFetch().then((blob) =&gt; {
+  let objectURL = URL.createObjectURL(blob);
+  let image = document.createElement('img');
+  image.src = objectURL;
+  document.body.appendChild(image);
+}).catch(e =&gt; console.log(e));</pre>
+
+<p>Можете попрактиковаться самостоятельно, или запустить наш <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await.html">live example</a> (а также <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await.html">source code</a>).</p>
+
+<h3 id="Минуточку_а_как_это_все_работает">Минуточку, а как это все работает ?</h3>
+
+<p>Вы могли заметить, что мы обернули наш код в функцию и сделали её асинхронной с помощью <code>async</code>. Это было обязательно - нам надо создать контейнер, внутри которого будет запускаться асинхронный код и будет возможность дождаться его результата с помощью await, не блокируя остальной код нашего скрипта.</p>
+
+<p>Внутри <code>myFetch()</code> находится код, который слегка напоминает версию на Promise, но есть важные отличия. Вместо того, чтобы писать цепочку блоков <code>.then()</code> мы просто использует ключевое слово <code>await</code> перед вызовом promise-based функции и присваиваем результат в переменную. Ключевое слово <code>await</code> говорит JavaScript runtime приостановить код в этой строке, не блокируя остальной код скрипта за пределами асинхронной функции. Когда вызов promise-based функции будет готов вернуть результат, выполнение продолжится с этой строки дальше.<br>
+ <br>
+ Пример:</p>
+
+<pre class="brush: js">let response = await fetch('coffee.jpg');</pre>
+
+<p>Значение Promise, которое вернёт <code>fetch()</code> будет присвоено переменной <code>response</code> только тогда, когда оно будет доступно - парсер делает паузу на данной строке дожидаясь этого момента. Как только значение доступно, парсер переходит к следующей строке, в которой создаётся объект <code><a href="/en-US/docs/Web/API/Blob">Blob</a></code> из результата Promise. В этой строке, кстати, также используется <code>await</code>, потому что метод <code>.blob()</code> также возвращает Promise. Когда результат готов, мы возвращаем его наружу из <code>myFetch()</code>.</p>
+
+<p>Обратите внимание, когда мы вызываем <code>myFetch()</code>, она возвращает Promise, поэтому мы можем вызвать <code>.then()</code> на результате, чтобы отобразить его на экране.<br>
+ <br>
+ К этому моменту вы наверное думаете "Это реально круто!", и вы правы - чем меньше блоков <code>.then()</code>, тем легче читать код.</p>
+
+<h3 id="Добавляем_обработку_ошибок">Добавляем обработку ошибок</h3>
+
+<p><br>
+ Чтобы обработать ошибки у нас есть несколько вариантов</p>
+
+<p>Мы можем использовать синхронную <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> структуру с <code>async</code>/<code>await</code>. Вот изменённая версия первого примера выше:</p>
+
+<pre class="brush: js">async function myFetch() {
+  try {
+    let response = await fetch('coffee.jpg');
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    } else {
+      let myBlob = await response.blob();
+      let objectURL = URL.createObjectURL(myBlob);
+      let image = document.createElement('img');
+      image.src = objectURL;
+      document.body.appendChild(image);
+    }
+  } catch(e) {
+    console.log(e);
+  }
+}
+
+myFetch();</pre>
+
+<p>В блок <code>catch() {}</code> передаётся объект ошибки, который мы назвали <code>e</code>; мы можем вывести его в консоль, чтобы посмотреть детали: где и почему возникла ошибка.</p>
+
+<p>Если вы хотите использовать гибридный подходы (пример выше), лучше использовать блок <code>.catch()</code> после блока <code>.then()</code> вот так:</p>
+
+<pre class="brush: js">async function myFetch() {
+  let response = await fetch('coffee.jpg');
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  } else {
+    return await response.blob();
+  }
+}
+
+myFetch().then((blob) =&gt; {
+  let objectURL = URL.createObjectURL(blob);
+  let image = document.createElement('img');
+  image.src = objectURL;
+  document.body.appendChild(image);
+})
+.catch((e) =&gt;
+  console.log(e)
+);</pre>
+
+<p>Так лучше, потому что блок <code>.catch()</code> словит ошибки как из асинхронной функции, так и из Promise. Если бы мы использовали блок <code>try</code>/<code>catch</code>, мы бы не словили ошибку, которая произошла в самой <code>myFetch()</code> функции.</p>
+
+<p>Вы можете посмотреть оба примера на GitHub:</p>
+
+<ul>
+ <li><a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await-try-catch.html">simple-fetch-async-await-try-catch.html</a> (смотреть <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await-try-catch.html">source code</a>)</li>
+ <li><a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await-promise-catch.html">simple-fetch-async-await-promise-catch.html</a> (смотреть <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await-promise-catch.html">source code</a>)</li>
+</ul>
+
+<h2 id="Await_и_Promise.all">Await и Promise.all()</h2>
+
+<p>Как вы помните, асинхронные функции построены поверх <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a>, поэтому они совместимы со всеми возможностями последних. Мы легко можем подождать выполнение <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a></code>, присвоить результат в переменную и все это сделать используя синхронный стиль. Опять, вернёмся к <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html">примеру, рассмотренному в предыдущей статье</a>. Откройте пример в соседней вкладке, чтобы лучше понять разницу.</p>
+
+<p>Версия с async/await (смотрите <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-all-async-await.html">live demo</a> и <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-all-async-await.html">source code</a>), сейчас выглядит так:</p>
+
+<pre class="brush: js">async function fetchAndDecode(url, type) {
+  let response = await fetch(url);
+
+  let content;
+
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  } else {
+    if(type === 'blob') {
+      content = await response.blob();
+    } else if(type === 'text') {
+      content = await response.text();
+    }
+
+    return content;
+  }
+
+}
+
+async function displayContent() {
+  let coffee = fetchAndDecode('coffee.jpg', 'blob');
+  let tea = fetchAndDecode('tea.jpg', 'blob');
+  let description = fetchAndDecode('description.txt', 'text');
+
+  let values = await Promise.all([coffee, tea, description]);
+
+  let objectURL1 = URL.createObjectURL(values[0]);
+  let objectURL2 = URL.createObjectURL(values[1]);
+  let descText = values[2];
+
+  let image1 = document.createElement('img');
+  let image2 = document.createElement('img');
+  image1.src = objectURL1;
+  image2.src = objectURL2;
+  document.body.appendChild(image1);
+  document.body.appendChild(image2);
+
+  let para = document.createElement('p');
+  para.textContent = descText;
+  document.body.appendChild(para);
+}
+
+displayContent()
+.catch((e) =&gt;
+  console.log(e)
+);</pre>
+
+<p>Вы видите, что мы легко изменили <code>fetchAndDecode()</code> функцию в асинхронный вариант. Взгляните на строку с <code>Promise.all()</code>:</p>
+
+<pre class="brush: js">let values = await Promise.all([coffee, tea, description]);</pre>
+
+<p>С помощью <code>await</code> мы ждём массив результатов всех трёх Promises и присваиваем его в переменную <code>values</code>. Это асинхронный код, но он написан в синхронном стиле, за счёт чего он гораздо читабельнее.<br>
+ <br>
+ Мы должны обернуть весь код в синхронную функцию, <code>displayContent()</code>, и мы не сильно сэкономили на количестве кода, но мы извлекли код блока <code>.then()</code>, за счёт чего наш код стал гораздо чище.</p>
+
+<p>Для обработки ошибок мы добавили блок <code>.catch()</code> для функции <code>displayContent()</code>; Это позволило нам отловить ошибки в обоих функциях.</p>
+
+<div class="blockIndicator note">
+<p><strong>Примечание</strong>: Мы также можем использовать синхронный блок <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#The_finally_clause">finally</a></code> внутри асинхронной функции, вместо асинхронного <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#The_finally_clause">.finally</a>()</code>, чтобы получить информацию о результате нашей операции — смотрите в действии в нашем <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html">live example</a> (смотрите <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html">source code</a>).</p>
+</div>
+
+<h2 id="Недостатки_asyncawait">Недостатки async/await</h2>
+
+<p>Асинхронные функции с async/await бывают очень удобными, но есть несколько замечаний, о которых полезно знать.</p>
+
+<p>Async/await позволяет вам писать код в синхронном стиле. Ключевое слово <code>await</code> блокирует приостанавливает выполнение ptomise-based функции до того момента, пока promise примет статус fulfilled. Это не блокирует код за пределами вашей асинхронной функции, тем не менее важно помнить, что внутри асинхронной функции поток выполнения блокируется.<br>
+ <br>
+ ваш код может стать медленнее за счёт большого количества awaited promises, которые идут один за другим. Каждый <code>await</code> должен дождаться выполнения предыдущего, тогда как на самом деле мы хотим, чтобы наши Promises выполнялись одновременно, как если бы мы не использовали async/await.<br>
+ <br>
+ Есть подход, который позволяет обойти эту проблему - сохранить все выполняющиеся Promises в переменные, а уже после этого дожидаться (awaiting) их результата. Давайте посмотрим на несколько примеров.</p>
+
+<p>Мы подготовили два примера  — <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html">slow-async-await.html</a> (см. <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html">source code</a>) и <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html">fast-async-await.html</a> (см. <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html">source code</a>). Они оба начинаются с функции возвращающей promise, имитирующей асинхронность процессов при помощи вызова <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code>:</p>
+
+<pre class="brush: js">function timeoutPromise(interval) {
+  return new Promise((resolve, reject) =&gt; {
+    setTimeout(function(){
+      resolve("done");
+    }, interval);
+  });
+};</pre>
+
+<p>Далее в каждом примере есть асинхронная функция  <code>timeTest()</code> ожидающая три вызова <code>timeoutPromise()</code>:</p>
+
+<pre class="brush: js">async function timeTest() {
+  ...
+}</pre>
+
+<p>В каждом примере функция записывает время начала исполнения и сколько времени понадобилось на исполнение  <code>timeTest()</code>  промисов, вычитая время в момент запуска функции из времени в момент разрешения промисов:</p>
+
+<pre class="brush: js">let startTime = Date.now();
+timeTest().then(() =&gt; {
+  let finishTime = Date.now();
+  let timeTaken = finishTime - startTime;
+  alert("Time taken in milliseconds: " + timeTaken);
+})</pre>
+
+<p>Далее представлена асинхронная функция <code>timeTest()</code> различная для каждого из примеров.</p>
+
+<p>В случае с медленным примером <code>slow-async-await.html</code>, <code>timeTest()</code> выглядит:</p>
+
+<pre class="brush: js">async function timeTest() {
+  await timeoutPromise(3000);
+  await timeoutPromise(3000);
+  await timeoutPromise(3000);
+}</pre>
+
+<p>Здесь мы просто ждём все три  <code>timeoutPromise()</code> напрямую, блокируя выполнение на данного блока на 3 секунды при каждом вызове. Все последующие вызовы вынуждены ждать пока разрешится предыдущий. Если вы запустите первый пример (<code>slow-async-await.html</code>) вы увидите alert сообщающий время выполнения около 9 секунд. </p>
+
+<p>Во втором  <code>fast-async-await.html</code> примере, функция <code>timeTest()</code> выглядит как:</p>
+
+<pre class="brush: js">async function timeTest() {
+  const timeoutPromise1 = timeoutPromise(3000);
+  const timeoutPromise2 = timeoutPromise(3000);
+  const timeoutPromise3 = timeoutPromise(3000);
+
+  await timeoutPromise1;
+  await timeoutPromise2;
+  await timeoutPromise3;
+}</pre>
+
+<p>В данном случае мы храним три объекта <code>Promise</code> в переменных,  каждый из которых может разрешиться независимо от других.</p>
+
+<p>Ниже мы ожидаем разрешения промисов из объекта в результат, так как они были запущенны одновременно, блокируя поток, то и разрешатся одновременно. Если вы запустите второй пример вы увидите alert, сообщающий время выполнения около 3 секунд.</p>
+
+<p>Важно не забывать о быстродействии применяя await, проверяйте количество блокировок.</p>
+
+<p>
+ </p><h2 id="Asyncawait_class_methods">Async/await class methods</h2>
+
+
+<p>В качестве последнего замечания, вы можете использовать  <code>async</code>  перед методами классов или объектов, вынуждая их возвращать promises. А также  await внутри методов объявленных таким образом. Посмотрите на пример <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#ECMAScript_2015_Classes">ES class code, который мы наблюдали в статье  object-oriented JavaScript</a>,  и сравните его с модифицированной (асинхронной) <code>async</code> версией ниже:</p>
+
+<pre class="brush: js">class Person {
+  constructor(first, last, age, gender, interests) {
+    this.name = {
+      first,
+      last
+    };
+    this.age = age;
+    this.gender = gender;
+    this.interests = interests;
+  }
+
+  async greeting() {
+    return await Promise.resolve(`Hi! I'm ${this.name.first}`);
+  };
+
+  farewell() {
+    console.log(`${this.name.first} has left the building. Bye for now!`);
+  };
+}
+
+let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);</pre>
+
+<p>Первый метод класса теперь можно использовать таким образом:</p>
+
+<pre class="brush: js">han.greeting().then(console.log);</pre>
+
+<h2 id="Browser_support_Поддержка_браузерами">Browser support (Поддержка браузерами)</h2>
+
+<p>One consideration when deciding whether to use async/await is support for older browsers. They are available in modern versions of most browsers, the same as promises; the main support problems come with Internet Explorer and Opera Mini.</p>
+
+<p>If you want to use async/await but are concerned about older browser support, you could consider using the <a href="https://babeljs.io/">BabelJS</a> library — this allows you to write your applications using the latest JavaScript and let Babel figure out what changes if any are needed for your user’s browsers. On encountering a browser that does not support async/await, Babel's polyfill can automatically provide fallbacks that work in older browsers.</p>
+
+<h2 id="Заключение">Заключение</h2>
+
+<p>Вот пожалуй и все - async/await позволяют писать асинхронный код, который легче читать и поддерживать. Даже учитывая, что поддержка со стороны браузеров несколько хуже, чем у promise.then, всё же стоит обратить на него внимание.</p>
+
+<p>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}</p>
+
+<h2 id="In_this_module">In this module</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">General asynchronous programming concepts</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Making asynchronous programming easier with async and await</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Choosing the right approach</a></li>
+</ul>

@@ -20,7 +20,9 @@ Les utilisateurs peuvent surcharger l'encodage indiqué pour le document (transm
 
 ## Syntaxe
 
-    var string = document.characterSet
+```js
+var string = document.characterSet
+```
 
 ## Exemples
 

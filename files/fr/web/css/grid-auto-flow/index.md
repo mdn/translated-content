@@ -91,15 +91,15 @@ Cette propriété peut prendre deux formes :
 
 ```html
 <div id="grid">
-  <div id="item1"></div>
-  <div id="item2"></div>
-  <div id="item3"></div>
-  <div id="item4"></div>
-  <div id="item5"></div>
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+  <div id="item4"></div>
+  <div id="item5"></div>
 </div>
 <select id="direction" onchange="changeGridAutoFlow()">
-  <option value="column">column</option>
-  <option value="row">row</option>
+  <option value="column">column</option>
+  <option value="row">row</option>
 </select>
 <input id="dense" type="checkbox" onchange="changeGridAutoFlow()">
 <label for="dense">dense</label>

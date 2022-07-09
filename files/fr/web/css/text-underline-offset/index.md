@@ -79,11 +79,7 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS4 Text Decoration', '#<span class="pl-s">underline-offset</span>', 'text-underline-offset')}} | {{Spec2('CSS4 Text Decoration')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

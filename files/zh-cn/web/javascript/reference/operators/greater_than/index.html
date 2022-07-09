@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Operators/Greater_than
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>当左边操作数大于右边的时候，大于(<code>&gt;</code>) 运算符返回<code>true</code>，否则返回<code>false</code></p>
+<p>当左边操作数大于右边的时候，大于 (<code>&gt;</code>) 运算符返回<code>true</code>，否则返回<code>false</code></p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-greater-than.html")}}</div>
 
@@ -13,23 +13,23 @@ translation_of: Web/JavaScript/Reference/Operators/Greater_than
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">x &gt; y</pre>
+<pre class="syntaxbox">x &gt; y</pre>
 
 <h2 id="描述">描述</h2>
 
-<p>操作数之间按照 <a class="external external-icon" href="https://tc39.es/ecma262/#sec-abstract-relational-comparison" rel="noopener">Abstract Relational Comparison</a> 算法进行比较。进一步了解该算法，请参考 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than">小于</a> 运算符的相关文档.</p>
+<p>操作数之间按照 <a class="external external-icon" href="https://tc39.es/ecma262/#sec-abstract-relational-comparison" rel="noopener">Abstract Relational Comparison</a> 算法进行比较。进一步了解该算法，请参考 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than">小于</a> 运算符的相关文档。</p>
 
 <h2 id="例子">例子</h2>
 
 <h3 id="字符串的比较">字符串的比较</h3>
 
-<pre class="brush: js notranslate">console.log("a" &gt; "b");        // false
+<pre class="brush: js">console.log("a" &gt; "b");        // false
 console.log("a" &gt; "a");        // false
 console.log("a" &gt; "3");        // true</pre>
 
 <h3 id="字符串和数字的比较">字符串和数字的比较</h3>
 
-<pre class="brush: js notranslate">console.log("5" &gt; 3);          // true
+<pre class="brush: js">console.log("5" &gt; 3);          // true
 console.log("3" &gt; 3);          // false
 console.log("3" &gt; 5);          // false
 
@@ -41,18 +41,18 @@ console.log("3" &gt; 5n);         // false</pre>
 
 <h3 id="数字间的比较">数字间的比较</h3>
 
-<pre class="brush: js notranslate">console.log(5 &gt; 3);            // true
+<pre class="brush: js">console.log(5 &gt; 3);            // true
 console.log(3 &gt; 3);            // false
 console.log(3 &gt; 5);            // false</pre>
 
 <h3 id="数字和_BigInt_数据的比较">数字和 BigInt 数据的比较</h3>
 
-<pre class="brush: js notranslate">console.log(5n &gt; 3);           // true
+<pre class="brush: js">console.log(5n &gt; 3);           // true
 console.log(3 &gt; 5n);           // false</pre>
 
-<h3 id="Boolean_null_undefined_NaN的比较">Boolean, null, undefined, NaN的比较</h3>
+<h3 id="Boolean_null_undefined_NaN的比较">Boolean, null, undefined, NaN 的比较</h3>
 
-<pre class="brush: js notranslate">console.log(true &gt; false);     // true
+<pre class="brush: js">console.log(true &gt; false);     // true
 console.log(false &gt; true);     // false
 
 console.log(true &gt; 0);         // true

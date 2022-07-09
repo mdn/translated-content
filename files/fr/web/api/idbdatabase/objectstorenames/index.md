@@ -11,7 +11,7 @@ translation_of: Web/API/IDBDatabase/objectStoreNames
 ---
 {{APIRef("IndexedDB")}}
 
-La propriété **`objectStoreNames`**, rattachée à l'interface {{domxref("IDBDatabase")}}, est une liste de chaînes de caractères  ({{domxref("DOMStringList")}}) qui sont les noms des magasins d'objets ({{domxref("IDBObjectStore")}}) connectés à la base de données.
+La propriété **`objectStoreNames`**, rattachée à l'interface {{domxref("IDBDatabase")}}, est une liste de chaînes de caractères  ({{domxref("DOMStringList")}}) qui sont les noms des magasins d'objets ({{domxref("IDBObjectStore")}}) connectés à la base de données.
 
 {{AvailableInWorkers}}
 
@@ -49,13 +49,13 @@ DBOpenRequest.onsuccess = function(event) {
 };
 ```
 
-> **Note :**Pour un exemple fonctionnel complet, voir notre application de démo [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([l'exemple _live_](https://mdn.github.io/to-do-notifications/)).
+> **Note :** Pour un exemple fonctionnel complet, voir notre application de démo [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([l'exemple _live_](https://mdn.github.io/to-do-notifications/)).
 
 ## Spécifications
 
 | Spécification                                                                                                    | État                         | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-objectStoreNames', 'objectStoreNames')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBDatabase-objectStoreNames', 'objectStoreNames')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

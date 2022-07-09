@@ -10,14 +10,18 @@ translation_of: Web/API/SVGMatrix
 
 Beaucoup d'opération graphiques de SVG utilisent des matrices 2x3 de la forme :
 
-    [a c e]
-    [b d f]
+```
+[a c e]
+[b d f]
+```
 
 laquelle, quand étendue en une matrice 3x3 à des fins d'arithmétique matricielle, devient :
 
-    [a c e]
-    [b d f]
-    [0 0 1]
+```
+[a c e]
+[b d f]
+[0 0 1]
+```
 
 Un objet `SVGMatrix` peut être marqué en lecture-seule, ce qui signifie que les tentatives de modification sur cet objet entraîneront un lancement d'exception.
 
@@ -225,7 +229,7 @@ Une {{ domxref("DOMException") }} avec le code `NO_MODIFICATION_ALLOWED_ERR` est
         <p>
           Effectue une rotation sur la matrice courante et retourne la matrice
           résultante. L'angle de rotation est déterminé en prenant (+/-)
-          atan(y/x). La direction du vecteur (x, y) détermine si la valeur
+          atan(y/x). La direction du vecteur (x, y) détermine si la valeur
           négative ou positive de l'angle est utilisée.
         </p>
         <p><strong>Exceptions :</strong></p>
@@ -245,7 +249,7 @@ Une {{ domxref("DOMException") }} avec le code `NO_MODIFICATION_ALLOWED_ERR` est
       <td>{{ domxref("SVGMatrix") }}</td>
       <td>
         <div>
-          Effectue une transformation [-1 0 0 1 0 0] et retourne la matrice
+          Effectue une transformation [-1 0 0 1 0 0] et retourne la matrice
           résultante.
         </div>
       </td>
@@ -257,7 +261,7 @@ Une {{ domxref("DOMException") }} avec le code `NO_MODIFICATION_ALLOWED_ERR` est
       <td>{{ domxref("SVGMatrix") }}</td>
       <td>
         <div>
-          Effectue une transformation [1 0 0 -1 0 0] et retourne la matrice
+          Effectue une transformation [1 0 0 -1 0 0] et retourne la matrice
           résultante.
         </div>
       </td>

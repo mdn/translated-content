@@ -1,20 +1,18 @@
 ---
 title: CanvasRenderingContext2D.fill()
 slug: Web/API/CanvasRenderingContext2D/fill
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
 translation_of: Web/API/CanvasRenderingContext2D/fill
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.fill()`\*\* de l'API Canvas 2D remplit le chemin courant ou donné avec la couleur de fond en cours, en utilisant la règle de remplissage extérieur/intérieur non nul ou la règle de remplissage pair/impair.
+La méthode **`CanvasRenderingContext2D.fill()`** de l'API Canvas 2D remplit le chemin courant ou donné avec la couleur de fond en cours, en utilisant la règle de remplissage extérieur/intérieur non nul ou la règle de remplissage pair/impair.
 
 ## Syntaxe
 
-    void ctx.fill([fillRule]);
-    void ctx.fill(path[, fillRule]);
+```js
+void ctx.fill([fillRule]);
+void ctx.fill(path[, fillRule]);
+```
 
 ### Paramètres
 
@@ -57,8 +55,8 @@ ctx.fill();
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
@@ -91,7 +89,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ### Utiliser l'option `fillRule`
 
@@ -129,8 +127,8 @@ ctx.stroke();
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.beginPath();
@@ -174,13 +172,13 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{EmbedLiveSample('code_jouable_2', 700, 360)}}
+{{EmbedLiveSample('Code_jouable_2', 700, 360)}}
 
 ## Spécifications
 
 | Specification                                                                                                                        | Status                           | Comment |
 | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fill", "CanvasRenderingContext2D.fill")}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fill", "CanvasRenderingContext2D.fill")}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## Compatibilité des navigateurs
 

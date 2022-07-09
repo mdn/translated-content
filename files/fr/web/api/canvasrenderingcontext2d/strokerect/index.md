@@ -1,38 +1,34 @@
 ---
 title: CanvasRenderingContext2D.strokeRect()
 slug: Web/API/CanvasRenderingContext2D/strokeRect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Méthode
-  - Référence(2)
 translation_of: Web/API/CanvasRenderingContext2D/strokeRect
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.strokeRect()`\*_ de l'API 2D des Canvas dessine le contour d'un rectangle aux coordonnées de l'angle haut gauche _(x, y)* et aux dimensions déterminées par *largeur* et *hauteur\* dans la balise canvas, et en utilisant l'actuel `strokeStyle`.
+La méthode **`CanvasRenderingContext2D.strokeRect()`** de l'API 2D des Canvas dessine le contour d'un rectangle aux coordonnées de l'angle haut gauche _(x, y)_ et aux dimensions déterminées par *largeur* et *hauteur* dans la balise canvas, et en utilisant l'actuel `strokeStyle`.
 
 ## Syntaxe
 
-    void ctx.strokeRect(x, y, largeur, hauteur);
+```js
+void ctx.strokeRect(x, y, largeur, hauteur);
+```
 
 ### Paramètres
 
 - `x`
-  - : L'abcisse *x* des coordonnées du point de départ du rectangle.
+  - : L'abcisse *x* des coordonnées du point de départ du rectangle.
 - `y`
   - : L'ordonnée _y_ des coordonnées du point de départ du rectangle.
 - largeur
   - : La largeur du rectangle.
 - `hauteur`
-  - : La hauteur de rectangle.
+  - : La hauteur de rectangle.
 
 ## Exemples
 
-### Utilisation de la méthode `strokeRect`
+### Utilisation de la méthode `strokeRect`
 
-Ceci est juste un extrait de code qui utilise la méthode `strokeRect`.
+Ceci est juste un extrait de code qui utilise la méthode `strokeRect`.
 
 #### HTML
 
@@ -57,8 +53,8 @@ ctx.strokeRect(10, 10, 100, 100);
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.strokeStyle = "green";
@@ -91,13 +87,13 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ## Spécifications
 
 | Spécification                                                                                                                                        | Statut                           | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokerect", "CanvasRenderingContext2D.strokeRect")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokerect", "CanvasRenderingContext2D.strokeRect")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

@@ -64,7 +64,7 @@ window.history.go()</pre>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>В следующем примере свойству <code>onpopstate</code> назначается обработчик. А затем приводятся некоторые методы объекта истории для добавления, замени и перемещения по истории текущей вкладки браузера</p>
+<p>В следующем примере свойству <code>onpopstate</code> назначается обработчик. А затем приводятся некоторые методы объекта истории для добавления, замены и перемещения по истории текущей вкладки браузера</p>
 
 <pre>window.onpopstate = function(event) {
   alert(`location: ${document.location}, state: ${JSON.stringify(event.state)}`)
@@ -79,7 +79,29 @@ history.go(2)  // alerts "location: http://example.com/example.html?page=3, stat
 
 <h2 id="Спецификации">Спецификации</h2>
 
-{{Specifications}}
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> {{SpecName("HTML WHATWG", "browsers.html#history", "History")}}
+      </td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td>No change from {{SpecName("HTML5 W3C")}}.</td>
+    </tr>
+    <tr>
+      <td> {{SpecName("HTML5 W3C", "browsers.html#history", "History")}}
+      </td>
+      <td>{{Spec2("HTML5 W3C")}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 

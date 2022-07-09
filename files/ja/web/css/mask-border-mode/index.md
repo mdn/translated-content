@@ -3,12 +3,12 @@ title: mask-border-mode
 slug: Web/CSS/mask-border-mode
 tags:
   - CSS
-  - CSS Masking
+  - CSS マスク
   - CSS プロパティ
   - 実験的
   - NeedsContent
   - NeedsExample
-  - Reference
+  - リファレンス
   - recipe:css-property
 browser-compat: css.properties.mask-border-mode
 translation_of: Web/CSS/mask-border-mode

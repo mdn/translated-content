@@ -242,7 +242,7 @@ window.addEventListener('load', function () {
 
 Voir le résultat de cet exemple :
 
-{{EmbedLiveSample('tag_example', '100%', 30)}}
+{{EmbedLiveSample('Exemple_d\'utilisation_des_balises', '100%', 30)}}
 
 ## Spécifications
 

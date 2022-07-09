@@ -1,12 +1,6 @@
 ---
 title: DOMTokenList.length
 slug: Web/API/DOMTokenList/length
-tags:
-  - API
-  - DOM
-  - Listes
-  - Longueur
-  - Propriétés
 translation_of: Web/API/DOMTokenList/length
 ---
 {{APIRef("DOM")}}
@@ -15,7 +9,9 @@ La propriété en lecture seule **`length`** (_longueur_) de l'interface {{domxr
 
 ## Syntaxe
 
-    tokenList.length;
+```js
+tokenList.length;
+```
 
 ### Value
 
@@ -43,7 +39,7 @@ span.textContent = 'classList length = ' + length;
 
 La sortie ressemble à ceci :
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Exemples', '100%', 60) }}
 
 ## Spécifications
 

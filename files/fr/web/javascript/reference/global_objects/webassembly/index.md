@@ -21,7 +21,7 @@ L'objet JavaScript **`WebAssembly`** est un objet global qui agit comme un espac
 L'objet `WebAssembly` est notamment utilisé pour :
 
 - Charger du code WebAssembly grâce à la fonction {{jsxref("WebAssembly.instantiate()")}}
-- Créer des zones mémoires et des instances de tableaux grâce aux constructeurs  {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}}.
+- Créer des zones mémoires et des instances de tableaux grâce aux constructeurs  {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}}.
 - Fournir des outils de gestion d'erreur WebAssembly grâce aux constructeurs {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}}.
 
 ## Méthodes
@@ -31,7 +31,7 @@ L'objet `WebAssembly` est notamment utilisé pour :
 - {{jsxref("WebAssembly.instantiateStreaming()")}}
   - : Cette méthode peremet de compiler et d'instancier un module WebAssembly à partir d'un flux source (_streamed source_). Elle renvoie à la fois un objet `Module` et sa première `Instance`.
 - {{jsxref("WebAssembly.compile()")}}
-  - : Cette méthode permet de compiler un {{jsxref("WebAssembly.Module")}} à partir de *bytecode*  WebAssembly, l'instanciation doit alors être effectuée dans une autre étape.
+  - : Cette méthode permet de compiler un {{jsxref("WebAssembly.Module")}} à partir de *bytecode*  WebAssembly, l'instanciation doit alors être effectuée dans une autre étape.
 - {{jsxref("WebAssembly.compileStreaming()")}}
   - : Cette méthode permet de compiler un module {{jsxref("WebAssembly.Module")}} à partir d'un flux source (_streamed source_). L'instanciation devra alors être réalisée avec une autre étape.
 - {{jsxref("WebAssembly.validate()")}}
@@ -58,7 +58,7 @@ L'objet `WebAssembly` est notamment utilisé pour :
 
 ## Exemples
 
-L'exemple suivant (cf. le fichier [`instantiate-streaming.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) sur GitHub et [le résultat obtenu](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)) permet de récupérer le module WebAssembly via un flux depuis une source, de le compiler, puis de l'instancier. La promesse est résolue avec un objet `ResultObject`. La méthode `instantiateStreaming()` accepte une promesse pour l'argument {{domxref("Response")}}, on peut lui passer directement un appel à {{domxref("WindowOrWorkerGlobalScope.fetch()")}} qui passera ensuite la réponse à la fonction lors de la complétion de la promesse.
+L'exemple suivant (cf. le fichier [`instantiate-streaming.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) sur GitHub et [le résultat obtenu](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)) permet de récupérer le module WebAssembly via un flux depuis une source, de le compiler, puis de l'instancier. La promesse est résolue avec un objet `ResultObject`. La méthode `instantiateStreaming()` accepte une promesse pour l'argument {{domxref("Response")}}, on peut lui passer directement un appel à [`fetch()`](/fr/docs/Web/API/fetch) qui passera ensuite la réponse à la fonction lors de la complétion de la promesse.
 
 ```js
 var importObject = { imports: { imported_func: arg => console.log(arg) } };

@@ -1,37 +1,34 @@
 ---
 title: CanvasRenderingContext2D.fillRect()
 slug: Web/API/CanvasRenderingContext2D/fillRect
-tags:
-  - API
-  - Canvas
-  - CanvasRendering2D
-  - Méthode
 translation_of: Web/API/CanvasRenderingContext2D/fillRect
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.fillRect()`\*_ de l'API 2D des Canvas dessine un rectangle plein aux coordonnées _(x, y)*, aux dimensions déterminées par *largeur* et *hauteur\* et au style déterminé par l'attribut `fillStyle`.
+La méthode **`CanvasRenderingContext2D.fillRect()`** de l'API 2D des Canvas dessine un rectangle plein aux coordonnées _(x, y)_, aux dimensions déterminées par *largeur* et *hauteur* et au style déterminé par l'attribut `fillStyle`.
 
 ## Syntaxe
 
-    void ctx.fillRect(x, y, largeur, hauteur);
+```js
+void ctx.fillRect(x, y, largeur, hauteur);
+```
 
 ### Paramètres
 
 - `x`
-  - : L'ordonnée *x* des coordonnées du point de départ du rectangle.
+  - : L'ordonnée *x* des coordonnées du point de départ du rectangle.
 - `y`
-  - : L'abscisse *y* des coordonnées du point de départ du rectangle.
+  - : L'abscisse *y* des coordonnées du point de départ du rectangle.
 - `largeur`
   - : La largeur du rectangle.
 - `hauteur`
-  - : La hauteur de rectangle.
+  - : La hauteur de rectangle.
 
 ## Exemples
 
-### Utilisation de la méthode `fillRect`
+### Utilisation de la méthode `fillRect`
 
-Ceci est juste un extrait de code qui utilise la méthode `fillRect`.
+Ceci est juste un extrait de code qui utilise la méthode `fillRect`.
 
 #### HTML
 
@@ -58,8 +55,8 @@ ctx.fillRect(10, 10, 100, 100);
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = "green";
@@ -92,13 +89,13 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ## Spécifications
 
 | Spécification                                                                                                                                | Statut                           | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillrect", "CanvasRenderingContext2D.fillRect")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillrect", "CanvasRenderingContext2D.fillRect")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

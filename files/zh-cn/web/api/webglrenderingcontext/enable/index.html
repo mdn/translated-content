@@ -15,7 +15,7 @@ translation_of: Web/API/WebGLRenderingContext/enable
 
 <dl>
  <dt><code>cap</code></dt>
- <dd>让WebGL开启某种特性，可能的值：</dd>
+ <dd>让 WebGL 开启某种特性，可能的值：</dd>
  <dd>
  <table class="standard-table">
   <thead>
@@ -27,11 +27,11 @@ translation_of: Web/API/WebGLRenderingContext/enable
   <tbody>
    <tr>
     <td><code>gl.BLEND</code></td>
-    <td>激活片元的颜色融合计算. 参见 {{domxref("WebGLRenderingContext.blendFunc()")}}.</td>
+    <td>激活片元的颜色融合计算。参见 {{domxref("WebGLRenderingContext.blendFunc()")}}.</td>
    </tr>
    <tr>
     <td><code>gl.CULL_FACE</code></td>
-    <td>激活多边形正反面剔除. 参见{{domxref("WebGLRenderingContext.cullFace()")}}.</td>
+    <td>激活多边形正反面剔除。参见{{domxref("WebGLRenderingContext.cullFace()")}}.</td>
    </tr>
    <tr>
     <td><code>gl.DEPTH_TEST</code></td>
@@ -56,7 +56,7 @@ translation_of: Web/API/WebGLRenderingContext/enable
    <tr>
     <td><code>gl.SAMPLE_ALPHA_TO_COVERAGE</code></td>
     <td>
-     <p>激活通过alpha值决定的临时覆盖值计算。（抗锯齿）</p>
+     <p>激活通过 alpha 值决定的临时覆盖值计算。（抗锯齿）</p>
     </td>
    </tr>
    <tr>
@@ -79,7 +79,7 @@ translation_of: Web/API/WebGLRenderingContext/enable
    </tr>
   </tbody>
  </table>
- 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}时, 可以添加使用下面的值。
+ 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}时，可以添加使用下面的值。
 
  <table class="standard-table">
   <thead>
@@ -92,7 +92,7 @@ translation_of: Web/API/WebGLRenderingContext/enable
    <tr>
     <td><code>gl.RASTERIZER_DISCARD</code></td>
     <td>
-     <p>图元光栅化阶段之前，但在任意的transform反馈之后，就立刻被丢弃。<code>gl.clear()命令被忽略。</code></p>
+     <p>图元光栅化阶段之前，但在任意的 transform 反馈之后，就立刻被丢弃。<code>gl.clear() 命令被忽略。</code></p>
     </td>
    </tr>
   </tbody>
@@ -109,7 +109,7 @@ translation_of: Web/API/WebGLRenderingContext/enable
 <pre class="brush: js">gl.enable(gl.DITHER);
 </pre>
 
-<p>如果要检测可用性，可以使用 {{domxref("WebGLRenderingContext.isEnabled()")}} 方法:</p>
+<p>如果要检测可用性，可以使用 {{domxref("WebGLRenderingContext.isEnabled()")}} 方法：</p>
 
 <pre class="brush: js">gl.isEnabled(gl.DITHER);
 // true

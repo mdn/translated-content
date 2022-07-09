@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-meter-optimum-value'
 slug: Web/CSS/::-webkit-meter-optimum-value
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-meter-optimum-value
 ---
 {{CSSRef}}{{Non-standard_header}}
@@ -36,7 +31,7 @@ meter::-webkit-meter-optimum-value {
 
 ### Résultat
 
-{{EmbedLiveSample('Examples', '100%', 50)}}
+{{EmbedLiveSample('Exemples', '100%', 50)}}
 
 ## Spécifications
 

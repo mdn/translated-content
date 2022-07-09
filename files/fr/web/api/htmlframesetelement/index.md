@@ -10,7 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLFrameSetElement
 ---
-{{APIRef("HTML DOM")}}{{Obsolete_header}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 L'interface **`HTMLFrameSetElement`** fournit des propriétés spéciales (au-delà de celles de l'interface standard {{domxref("HTMLElement")}} dont elles héritent aussi) pour manipuler les éléments {{HTMLELEment("frameset")}}.
 
@@ -18,18 +18,18 @@ L'interface **`HTMLFrameSetElement`** fournit des propriétés spéciales (au-de
 
 _Hérite des propriétés de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
 
-- {{domxref("HTMLFrameSetElement.cols")}} {{obsolete_inline}}
+- {{domxref("HTMLFrameSetElement.cols")}} {{deprecated_inline}}
   - : Est un {{domxref("DOMString")}} structuré comme une liste séparée par des virgules spécifiant la largeur de chaque colonne à l'intérieur d'un jeu de cadres.
-- {{domxref("HTMLFrameSetElement.rows")}} {{obsolete_inline}}
+- {{domxref("HTMLFrameSetElement.rows")}} {{deprecated_inline}}
   - : Est un {{domxref("DOMString")}} structuré comme une liste séparée par des virgules spécifiant la hauteur de chaque colonne à l'intérieur d'un jeu de cadres.
 
 ## Méthodes
 
-_Pas de méthode spécifique; hérite des méthodes de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}\*\*._
+_Pas de méthode spécifique; hérite des méthodes de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
 
 ## Gestionnaires d'événements
 
-_Aucun gestionnaire d'événements spécifique; hérite des gestionnairs d'événements de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}\*\*._
+_Aucun gestionnaire d'événements spécifique; hérite des gestionnairs d'événements de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
 
 - {{domxref("WindowEventHandlers.onafterprint")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("afterprint")}} est déclenché.

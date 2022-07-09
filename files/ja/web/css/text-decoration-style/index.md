@@ -61,7 +61,7 @@ text-decoration-style: unset;
 
 {{csssyntax}}
 
-## Examples
+## 例
 
 <h3 id="Setting_a_wavy_underline">波線の下線を設定</h3>
 
@@ -92,7 +92,7 @@ text-decoration-style: unset;
 <p class="wavy">このテキストには付近に赤い波線があります。</p>
 ```
 
-#### Results
+#### 結果
 
 {{ EmbedLiveSample('Setting_a_wavy_underline', '', '', '') }}
 

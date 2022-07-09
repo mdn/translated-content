@@ -11,9 +11,11 @@ Voir également le chapitre [Ajout de styles et de couleurs](/fr/docs/Tutoriel_c
 
 ## Syntaxe
 
-    ctx.strokeStyle = color;
-    ctx.strokeStyle = gradient;
-    ctx.strokeStyle = pattern;
+```js
+ctx.strokeStyle = color;
+ctx.strokeStyle = gradient;
+ctx.strokeStyle = pattern;
+```
 
 ### Options
 
@@ -53,8 +55,8 @@ ctx.strokeRect(10, 10, 100, 100);
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.strokeStyle = 'blue';
@@ -87,7 +89,7 @@ textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ### Un exemple `strokeStyle`
 
@@ -113,13 +115,13 @@ for (var i = 0; i < 6; i++) {
 
 Le résultat devrait ressembler à ça:
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
+{{EmbedLiveSample("Un_exemple_strokeStyle", "180", "180", "canvas_strokestyle.png")}}
 
 ## Spécifications
 
 | Specification                                                                                                                                        | Status                           | Comment |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokestyle", "CanvasRenderingContext2D.strokeStyle")}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokestyle", "CanvasRenderingContext2D.strokeStyle")}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## Browser compatibility
 

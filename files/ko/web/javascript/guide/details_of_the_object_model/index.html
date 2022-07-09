@@ -4,9 +4,9 @@ slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 original_slug: Web/JavaScript/Guide/객체_모델의_세부사항
 ---
-<div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Iterators_and_Generators")}}</div>
+<div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}</div>
 
-<p class="summary">자바스크립트는 클래스 기반이 아닌 prototype에 기초한 객체 기반 언어 입니다. 이런 차이점으로 인해, 객체들의 계층 구조의 생성과 속성 및 속성 값의 상속을 어떻게 구현해야 하는지에 대한 부분이 덜 분명할 수 있습니다. 이번 장에서는 이런 상황을 명확하게 하고자 합니다. </p>
+<p >자바스크립트는 클래스 기반이 아닌 prototype에 기초한 객체 기반 언어 입니다. 이런 차이점으로 인해, 객체들의 계층 구조의 생성과 속성 및 속성 값의 상속을 어떻게 구현해야 하는지에 대한 부분이 덜 분명할 수 있습니다. 이번 장에서는 이런 상황을 명확하게 하고자 합니다. </p>
 
 <p>이번 장에선 이미 자바스크립트를 어느 정도 알고 있고, 간단한 객체를 생성하는 함수들을 사용해보았다는 가정하에 진행합니다.</p>
 
@@ -37,9 +37,9 @@ original_slug: Web/JavaScript/Guide/객체_모델의_세부사항
 
 <h3 id="하위_클래스와_상속">하위 클래스와 상속</h3>
 
-<p>클래스 기반 언어에서는 클래스 정의를 통해 클래스 계층구조를 생성합니다. 클래스를 정의할 때 이미 존재하는 클래스의 하위 클래스를 새로운 클래스로 지정할 수 있습니다. 이 하위 클래스는 부모 클래스의 모든 속성을 상속받으며 추가로 새로운 속성을 추가하거나 상속받은 속성을 수정할 수 있습니다. 예를 들어  이름(<code>name</code>)과 부서(<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">dept</span></font>)을 가진 직원(<code>Employee</code>) 클래스와 그 하위 클래스에 보고(<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">reports</span></font>) 속성을 추가한 관리자(<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Manager</span></font>) 클래스가 있다고 해봅시다. 이 경우 관리자(<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Manager</span></font>)의 인스턴스는 다음과 같이 세가지 속성을 모두 가질 수 있습니다 - 이름(<code>name</code>),  부서(<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">dept</span></font>),  보고(<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">reports</span></font>).</p>
+<p>클래스 기반 언어에서는 클래스 정의를 통해 클래스 계층구조를 생성합니다. 클래스를 정의할 때 이미 존재하는 클래스의 하위 클래스를 새로운 클래스로 지정할 수 있습니다. 이 하위 클래스는 부모 클래스의 모든 속성을 상속받으며 추가로 새로운 속성을 추가하거나 상속받은 속성을 수정할 수 있습니다. 예를 들어  이름(<code>name</code>)과 부서(<code>dept</code>)을 가진 직원(<code>Employee</code>) 클래스와 그 하위 클래스에 보고(<code>reports</code>) 속성을 추가한 관리자(<code>Manager</code>) 클래스가 있다고 해봅시다. 이 경우 관리자(<code>Manager</code>)의 인스턴스는 다음과 같이 세가지 속성을 모두 가질 수 있습니다 - 이름(<code>name</code>),  부서(<code>dept</code>),  보고(<code>reports</code>).</p>
 
-<p>자바스크립트는 생성자 함수와 프로토타입 객체를 연결해 상속을 구현합니다. 이런 식으로 직원(<code>Employee</code>) — 관리자(<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Manager</span></font>) 예제를 똑같이 구현할 수 있지만 조금 다른 * 사용합니다. 먼저, 이름(<code>name</code>),  부서(<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">dept</span></font>) 속성을 명시하여 직원(<code>Employee</code>) 생성자 함수를 정의합니다. 그런 다음, 직원(<code>Employee</code>)의 생성자를 호출한 후 보고(<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">reports</span></font>) 속성을 명시해 관리자(<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Manager</span></font>) 생성자 함수를 정의합니다. 마지막으로 <code>Employee.prototype</code> 에서 파생된 새로운 객체를  관리자(<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Manager</span></font>) 생성자 함수의 프로토타입으로 지정합니다. 그런 다음 새로운 관리자(<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Manager</span></font>)를 만들면 관리자(<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Manager</span></font>) 객체를 직원(<code>Employee</code>) 객체로부터 이름(<code>name</code>),  부서(<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">dept</span></font>) 속성을 상속받습니다. </p>
+<p>자바스크립트는 생성자 함수와 프로토타입 객체를 연결해 상속을 구현합니다. 이런 식으로 직원(<code>Employee</code>) — 관리자(<code>Manager</code>) 예제를 똑같이 구현할 수 있지만 조금 다른 * 사용합니다. 먼저, 이름(<code>name</code>),  부서(<code>dept</code>) 속성을 명시하여 직원(<code>Employee</code>) 생성자 함수를 정의합니다. 그런 다음, 직원(<code>Employee</code>)의 생성자를 호출한 후 보고(<code>reports</code>) 속성을 명시해 관리자(<code>Manager</code>) 생성자 함수를 정의합니다. 마지막으로 <code>Employee.prototype</code> 에서 파생된 새로운 객체를  관리자(<code>Manager</code>) 생성자 함수의 프로토타입으로 지정합니다. 그런 다음 새로운 관리자(<code>Manager</code>)를 만들면 관리자(<code>Manager</code>) 객체를 직원(<code>Employee</code>) 객체로부터 이름(<code>name</code>),  부서(<code>dept</code>) 속성을 상속받습니다. </p>
 
 <h3 id="속성의_추가_삭제">속성의 추가 삭제</h3>
 
@@ -96,7 +96,7 @@ original_slug: Web/JavaScript/Guide/객체_모델의_세부사항
 
 <ul>
  <li>직원(<code>Employee</code>) 객체는 빈 문자열을 기본값으로 가지는 이름(<code>name</code>) 그리고 "일반(general)"을 기본 값으로 가지는 부서(<code>dept</code>)를 속성으로 가집니다.</li>
- <li><font face="Consolas, Liberation Mono, Courier, monospace">관리자(</font><code>Manager</code>)객체는 직원(<code>Employee</code>) 객체를 근간으로 하며, 직원 객체들을 포함하기 위한 빈 배열을 기본 값으로 하는 보고(<code>reports</code>)속성을 가지고 있습니다.</li>
+ <li>관리자(<code>Manager</code>)객체는 직원(<code>Employee</code>) 객체를 근간으로 하며, 직원 객체들을 포함하기 위한 빈 배열을 기본 값으로 하는 보고(<code>reports</code>)속성을 가지고 있습니다.</li>
  <li>근로자(<code>WorkerBee</code>)객체 또한 직원(<code>Employee</code>) 객체를 근간으로 하며, 문자열들을 포함하기 위한 빈 배열을 기본 값으로 하는 프로젝트(<code>projects</code>)속성을 가집니다.</li>
  <li>영업사원(<code>SalesPerson</code>)객체는 또한 근로자(<code>WorkerBee</code>) 객체를 근간으로 하며, 100을 기본값으로 하는 할당량(<code>quota</code>)를 속성으로 가집니다. 또한 같은 부서내의 모든 영업사원을 지칭하기 위한 부서 속성을 "판매부서"로 재정의 합니다. </li>
  <li>엔지니어(<code>Engineer</code>)객체도 근로자(<code>WorkerBee</code>) 객체를 근간으로 하며, 빈 문자열을 기본값으로 가지는 장비(<code>machine</code>) 속성을 가집니다.그리고 엔지니어링(engineering)이라는 값으로 부서 속성을 재정의 합니다.</li>
@@ -213,7 +213,7 @@ public class Engineer extends WorkerBee {
 <p>이런 정의 방법을 통해, 기본값을 가지는 각각의 속성을 포함하는 객체의 인스턴스를 생성할 수 있습니다. 다음 그림은 새로운 객체를 생성하고 새로운 객체에 대한 속성값들을 보여 표시하기 위한 자바스크립트의 정의들을 보여 줍니다.</p>
 
 <div class="note">
-<p><strong>유의사항: </strong>클래스 기반 언어들에서 인스턴스라는 용어는 특정한 기술적 의미를 가지고 있습니다. 이러한 언어들에서,  하나의 인스턴스란 하나의 클래스의 개별적인  실체이며 클래스와는 근본적으로 다릅니다. 자바스크립트에서는 클래스와 인스턴스 간의 차이가 없기 때문에, "인스턴스"가 이런 기술적 의미를 갖지 않습니다. 하지만, 자바스크립트에 대해서 얘기하자면, 비공식적으로 "인스턴스"는 특정한 생성자 함수를 이용하여 생성된 오브젝트를  의미합니다. 그래서 이번 예제에서는 <code><code>jane</code></code>이 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: #eeeeee; font-size: 16px;"> Engineer </span></font>의 인스턴스라고 할 수 있습니다. 이와 유사하게, 부모, 자식, 상위, 하위의 용어들은 자바스크립트에서 공식적인 의미를 갖지 않습니다; 다만 프로토타입 체인 상의 상위 또는 하위 객체를 지칭하기 위해서 비공식적으로 사용할 수 있습니다.</p>
+<p><strong>유의사항: </strong>클래스 기반 언어들에서 인스턴스라는 용어는 특정한 기술적 의미를 가지고 있습니다. 이러한 언어들에서,  하나의 인스턴스란 하나의 클래스의 개별적인  실체이며 클래스와는 근본적으로 다릅니다. 자바스크립트에서는 클래스와 인스턴스 간의 차이가 없기 때문에, "인스턴스"가 이런 기술적 의미를 갖지 않습니다. 하지만, 자바스크립트에 대해서 얘기하자면, 비공식적으로 "인스턴스"는 특정한 생성자 함수를 이용하여 생성된 오브젝트를  의미합니다. 그래서 이번 예제에서는 <code>jane</code>이 <code> Engineer </code>의 인스턴스라고 할 수 있습니다. 이와 유사하게, 부모, 자식, 상위, 하위의 용어들은 자바스크립트에서 공식적인 의미를 갖지 않습니다; 다만 프로토타입 체인 상의 상위 또는 하위 객체를 지칭하기 위해서 비공식적으로 사용할 수 있습니다.</p>
 </div>
 
 <h3 id="간단한_정의로_객체_생성">간단한 정의로 객체 생성</h3>
@@ -298,14 +298,14 @@ mark.projects = ["navigator"];</pre>
 
 <p>위의 구문을 실행한 직후, <code>mark</code>객체는 <code>"none"</code>이라는 값을 가지는 전문분야<code>(specialty)</code>속성을 가지게 됩니다.아래의 그림들은 해당 속성을 추가한 후 엔지니어<code>(Engineer)</code> 프로토타입에 대해 해당 속성을 재정의 했을 경우 각 객체에 미치는 영향을 보여줍니다.</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4422/=figure8.4.png" style="height: 519px; width: 833px;"><br>
- <span style="font-size: 12px; line-height: 17px;"><strong>속성의 추가</strong></span></p>
+<p><img alt="" class="internal" src="/@api/deki/files/4422/=figure8.4.png"><br>
+ <strong>속성의 추가</strong></p>
 
 <h2 id="좀_더_유연한_생성자들">좀 더 유연한 생성자들</h2>
 
 <p>지금까지 살펴 본 생성자 함수들은 인스턴스를 생성하면서 동시에 속성값을 지정할 수 없었습니다. 자바의 경우, 인스턴스를 생성 시 생성자에 인자들을 넘겨주어 인스턴스의 속성들을 초기화 할 수 있습니다. 다음의 예제 그림들은 자바처럼 인스턴스 생성 시 속성값을 설정하는 방법을 보여줍니다.</p>
 
-<p><img alt="" class="internal" id="figure8.5" src="/@api/deki/files/4423/=figure8.5.png" style="height: 481px; width: 1012px;"><br>
+<p><img alt="" class="internal"  src="/@api/deki/files/4423/=figure8.5.png"><br>
  <small><strong>Specifying properties in a constructor, take 1</strong></small></p>
 
 <p>다음의 표는 자바와 자바스크립트 각각의 생성자와 객체에 대한 정의를 보여 줍니다. </p>
@@ -411,7 +411,7 @@ jane.machine == "belau"
 
 <p>지금까지, 원형 객체를 생성한 후, 그 새로운 객체 자신의 속성과 속성 값을 지정하는 것을 살펴 보았습니다. 프로토타입 체인상에서 해당 생성자가 상위 객체에 대한 생성자를 직접 호출 함으로써 더 많은 속성을 추가하도록 할 수 있습니다. 다음의 그림은 새로운 정의 방법을 보여 줍니다.</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4430/=figure8.6.png" style="height: 534px; width: 1063px;"><br>
+<p><img alt="" class="internal" src="/@api/deki/files/4430/=figure8.6.png"><br>
  <small><strong>생성자내에서 속성들 정의, 그림 2</strong></small></p>
 
 <p>그럼 좀 더 상세하게 생성자 내에서 속성들을 정의하는 것을 살펴 보겠습니다. 다음은 엔지니어(<code>Engineer)</code> 생성자의 새로운 정의입니다:</p>
@@ -581,7 +581,7 @@ chris.__proto__.__proto__.__proto__.__proto__ == Object.prototype;
 chris.__proto__.__proto__.__proto__.__proto__.__proto__ == null;
 </pre>
 
-<p>주어진 이런 상황에서, <code>instanceOf</code>를 다음과 같이 <font face="Consolas, Liberation Mono, Courier, monospace">직접 작성할 수 있을 것입니다:</font></p>
+<p>주어진 이런 상황에서, <code>instanceOf</code>를 다음과 같이 직접 작성할 수 있을 것입니다:</p>
 
 <pre class="brush: js">function instanceOf(object, constructor) {
    object = object.__proto__;
@@ -712,4 +712,4 @@ dennis.hobby == "scuba"
 
 <p><code>dennis</code>객체는 새로이 추가된 속성을 상속받지 않습니다.</p>
 
-<div>{{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Iterators_and_Generators")}}</div>
+<div>{{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}</div>

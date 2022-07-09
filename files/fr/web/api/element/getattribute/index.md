@@ -12,11 +12,13 @@ translation_of: Web/API/Element/getAttribute
 ---
 {{APIRef("DOM")}}
 
-`getAttribute` renvoie la valeur d'un attribut donné de l'élément spécifié. Si l'attribut n'existe pas, la valeur renvoyée sera soit `null` soit `""` (une chaine vide) ; voir {{ Anch("Notes") }} pour plus de détails.
+`getAttribute` renvoie la valeur d'un attribut donné de l'élément spécifié. Si l'attribut n'existe pas, la valeur renvoyée sera soit `null` soit `""` (une chaine vide)&nbsp;; voir la section [Attributs inexistants](#attributs_inexistants) pour plus de détails.
 
 ## Syntaxe
 
-    let attribut = element.getAttribute(nom_attribut)
+```js
+let attribut = element.getAttribute(nom_attribut)
+```
 
 où
 
@@ -27,18 +29,22 @@ où
 
 Soit l'HTML :
 
-    const div1 = document.getElementById("div1");
+```js
+const div1 = document.getElementById("div1");
+```
 
 Exemple de JavaScript :
 
-    const div1 = document.getElementById("div1");
-    //=> <div id="div1">Hi Champ!</div>
+```js
+const div1 = document.getElementById("div1");
+//=> <div id="div1">Hi Champ!</div>
 
-    const attributID = div1.getAttribute("id");
-    //=> "div1"
+const attributID = div1.getAttribute("id");
+//=> "div1"
 
-    cont alignement = div1.getAttribute("align");
-    //=> null
+const alignement = div1.getAttribute("align");
+//=> null
+```
 
 ## Description
 

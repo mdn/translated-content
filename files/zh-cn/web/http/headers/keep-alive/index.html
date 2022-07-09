@@ -11,7 +11,7 @@ translation_of: Web/HTTP/Headers/Keep-Alive
 <p><code><strong>Keep-Alive</strong></code> 是一个通用消息头，允许消息发送者暗示连接的状态，还可以用来设置超时时长和最大请求数。</p>
 
 <div class="note">
-<p>需要将 The {{HTTPHeader("Connection")}} 首部的值设置为  "keep-alive" 这个首部才有意义。同时需要注意的是，在HTTP/2 协议中， {{HTTPHeader("Connection")}} 和 {{HTTPHeader("Keep-Alive")}}  是被忽略的；在其中采用其他机制来进行连接管理。</p>
+<p>需要将 The {{HTTPHeader("Connection")}} 首部的值设置为  "keep-alive" 这个首部才有意义。同时需要注意的是，在 HTTP/2 协议中， {{HTTPHeader("Connection")}} 和 {{HTTPHeader("Keep-Alive")}}  是被忽略的；在其中采用其他机制来进行连接管理。</p>
 </div>
 
 <table class="properties">
@@ -45,7 +45,7 @@ translation_of: Web/HTTP/Headers/Keep-Alive
 
 <h2 id="示例">示例</h2>
 
-<p><code><font face="Open Sans, arial, sans-serif">含有 </font>Keep-Alive</code> 首部的响应示例:</p>
+<p><code>含有 Keep-Alive</code> 首部的响应示例：</p>
 
 <pre>HTTP/1.1 200 OK
 <strong>Connection: Keep-Alive</strong>

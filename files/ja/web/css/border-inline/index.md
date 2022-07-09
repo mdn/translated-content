@@ -3,21 +3,21 @@ title: border-inline
 slug: Web/CSS/border-inline
 tags:
   - CSS
-  - CSS Logical Property
+  - CSS 論理的プロパティ
   - CSS プロパティ
   - 実験的
-  - Reference
+  - リファレンス
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-inline
 translation_of: Web/CSS/border-inline
 ---
 {{CSSRef}}
 
-The **`border-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、論理的なインライン方向のそれぞれの境界プロパティをスタイルシートの 1 ヶ所で設定する[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。
+**`border-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、論理的なインライン方向のそれぞれの境界プロパティをスタイルシートの 1 ヶ所で設定する[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。
 
 {{EmbedInteractiveExample("pages/css/border-inline.html")}}
 
-`border-inline` の割り当て先の物理的な境界は、要素の書字方向によって決まります。 {{cssxref("border-top")}} と {{cssxref("border-bottom")}}、または {{cssxref("border-right")}} と {{cssxref("border-left")}} のどちらかの組み合わせに対して、 {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} に設定された値に応じて対応付けられます。
+`border-inline` の割り当て先の物理的な境界は、要素の書字方向によって決まります。 {{cssxref("border-top")}} と {{cssxref("border-bottom")}}、または {{cssxref("border-right")}} と {{cssxref("border-left")}} のどちらかの組み合わせに対して、 {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} に設定された値に応じて対応づけられます。
 
 他の方向の境界については、 {{cssxref("border-block")}} によって、 {{cssxref("border-block-start")}} と {{cssxref("border-block-end")}} の両方を設定することができます。
 
@@ -103,5 +103,5 @@ div {
 
 ## 関連情報
 
-- このプロパティは物理的な境界プロパティである {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} の何れかに対応付けられます。
+- このプロパティは物理的な境界プロパティである {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} の何れかに対応づけられます。
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

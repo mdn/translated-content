@@ -9,13 +9,15 @@ tags:
   - Propriétés
 translation_of: Web/API/Document/styleSheetSets
 ---
-{{APIRef("DOM")}}{{gecko_minversion_header("1.9")}}
+{{APIRef("DOM")}}
 
 Renvoie une liste active de tous les jeux de feuilles de styles actuellement disponibles.
 
 ## Syntaxe
 
-    sets = document.styleSheetSets
+```js
+sets = document.styleSheetSets
+```
 
 En retour, `sets` est une liste de jeux de feuilles de styles disponibles.
 
