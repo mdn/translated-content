@@ -16,49 +16,46 @@ tags:
   - メディアクエリ
 translation_of: Web/API/MediaQueryList
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p><span class="seoSummary">A <strong><code>MediaQueryList</code></strong> オブジェクトは文書に適用されている<a href="/ja/docs/Web/CSS/Media_Queries">メディアクエリ</a>の情報を格納し、文書の状態に対する中間かつイベントドリブンのマッチングに対応します。</span> <code>MediaQueryList</code> は {{DOMxRef("Window.matchMedia", "matchMedia()")}} を {{DOMxRef("window")}} オブジェクト上で呼び出すことで作成することができます。結果として得られるオブジェクトは、メディアクエリの状態が変化したとき (つまり、メディアクエリのテストが <code>true</code> の評価が開始または停止したとき) に、リスナーへの通知の送信を処理します。</p>
+A **`MediaQueryList`** オブジェクトは文書に適用されている[メディアクエリ](/ja/docs/Web/CSS/Media_Queries)の情報を格納し、文書の状態に対する中間かつイベントドリブンのマッチングに対応します。
 
-<p>これにより、定期的に値をポーリングするのではなく、文書を観察してメディアクエリが変更されたときに検出することが可能になり、メディアクエリの状態に基づいて文書にプログラム的に変更を加えることができるので、アダプティブデザインにとても便利です。</p>
+`MediaQueryList` は {{DOMxRef("Window.matchMedia", "matchMedia()")}} を {{DOMxRef("window")}} オブジェクト上で呼び出すことで作成することができます。結果として得られるオブジェクトは、メディアクエリの状態が変化したとき (つまり、メディアクエリのテストが `true` の評価が開始または停止したとき) に、リスナーへの通知の送信を処理します。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+これにより、定期的に値をポーリングするのではなく、文書を観察してメディアクエリが変更されたときに検出することが可能になり、メディアクエリの状態に基づいて文書にプログラム的に変更を加えることができるので、アダプティブデザインにとても便利です。
 
-<p><em><code>MediaQueryList</code> インターフェイスは親インターフェイスである {{DOMxRef("EventTarget")}} からプロパティを継承しています。</em></p>
+## プロパティ
 
-<dl>
- <dt>{{DOMxRef("MediaQueryList.matches", "matches")}}{{ReadOnlyInline}}</dt>
- <dd>{{jsxref("Boolean")}} で、 <code>true</code> であれば {{DOMxRef("document")}} が現在メディアクエリリストに一致しており、 <code>false</code> であればそうではありません。</dd>
- <dt>{{DOMxRef("MediaQueryList.media", "media")}}{{ReadOnlyInline}}</dt>
- <dd>{{DOMxRef("DOMString")}} で、シリアライズされたメディアクエリを表します。</dd>
-</dl>
+_`MediaQueryList` インターフェイスは親インターフェイスである {{DOMxRef("EventTarget")}} からプロパティを継承しています。_
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+- {{DOMxRef("MediaQueryList.matches", "matches")}}{{ReadOnlyInline}}
+  - : {{jsxref("Boolean")}} で、 `true` であれば {{DOMxRef("document")}} が現在メディアクエリリストに一致しており、 `false` であればそうではありません。
+- {{DOMxRef("MediaQueryList.media", "media")}}{{ReadOnlyInline}}
+  - : {{DOMxRef("DOMString")}} で、シリアライズされたメディアクエリを表します。
 
-<p><em><code>MediaQueryList</code> インターフェイスは親インターフェイスである {{DOMxRef("EventTarget")}} からメソッドを継承しています。</em></p>
+## メソッド
 
-<dl>
- <dt>{{DOMxRef("MediaQueryList.addListener", "addListener()")}}</dt>
- <dd><code>MediaQueryList</code> にコールバックを追加します。このコールバックは、メディアクエリの状態 (リスト内のメディアクエリと文書が一致するかどうか) が変化するたびに呼び出されます。このメソッドは、主に下位互換性のために存在します。可能であれば、代わりに {{domxref("EventTarget.addEventListener", "addEventListener()")}}を使用して {{domxref("EventTarget.change_event", "change")}} イベントを監視してください。</dd>
- <dt>{{DOMxRef("MediaQueryList.removeListener", "removeListener()")}}</dt>
- <dd>指定されたリスナーコールバックを、 <code>MediaQueryList</code> でメディアクエリの状態が変化するたび、すなわち <code>MediaQueryList</code> に列挙されたメディアクエリの一致・不一致の状態が変化するに呼び出されるコールバックから削除します。このメソッドは下位互換性のために保持されています。可能であれば、一般的に {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} を使用して、変更通知コールバックを削除してください (以前 <code>addEventListener()</code> を使用して追加されたものです)。</dd>
-</dl>
+_`MediaQueryList` インターフェイスは親インターフェイスである {{DOMxRef("EventTarget")}} からメソッドを継承しています。_
 
-<h2 id="Events" name="Events">イベント</h2>
+- {{DOMxRef("MediaQueryList.addListener", "addListener()")}}
+  - : `MediaQueryList` にコールバックを追加します。このコールバックは、メディアクエリの状態 (リスト内のメディアクエリと文書が一致するかどうか) が変化するたびに呼び出されます。このメソッドは、主に下位互換性のために存在します。可能であれば、代わりに {{domxref("EventTarget.addEventListener", "addEventListener()")}}を使用して {{domxref("EventTarget.change_event", "change")}} イベントを監視してください。
+- {{DOMxRef("MediaQueryList.removeListener", "removeListener()")}}
+  - : 指定されたリスナーコールバックを、 `MediaQueryList` でメディアクエリの状態が変化するたび、すなわち `MediaQueryList` に列挙されたメディアクエリの一致・不一致の状態が変化するに呼び出されるコールバックから削除します。このメソッドは下位互換性のために保持されています。可能であれば、一般的に {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} を使用して、変更通知コールバックを削除してください (以前 `addEventListener()` を使用して追加されたものです)。
 
-<p><em>以下のイベントは <code>MediaQueryList</code> オブジェクトに配信されます。</em></p>
+## イベント
 
-<dl>
- <dt>{{DOMxRef("MediaQueryList.change_event", "change")}}</dt>
- <dd>文書に対してメディアクエリを実行した結果が変更されたときに <code>MediaQueryList</code> に送信されます。例えば、メディアクエリが <code>(min-width: 400px)</code> の場合、 <code>change</code> イベントが文書の{{Glossary("viewport", "ビューポート")}}}の幅が 400px の閾値を通過するよう変更されるたびに発行されます。<br>
- また、 {{DOMxRef("MediaQueryList.onchange", "onchange")}} イベントハンドラープロパティを使用することもできます。</dd>
-</dl>
+_以下のイベントは `MediaQueryList` オブジェクトに配信されます。_
 
-<h2 id="Examples" name="Examples">例</h2>
+- {{DOMxRef("MediaQueryList.change_event", "change")}}
+  - : 文書に対してメディアクエリを実行した結果が変更されたときに `MediaQueryList` に送信されます。例えば、メディアクエリが `(min-width: 400px)` の場合、 `change` イベントが文書の{{Glossary("viewport", "ビューポート")}}}の幅が 400px の閾値を通過するよう変更されるたびに発行されます。  
+      また、 {{DOMxRef("MediaQueryList.onchange", "onchange")}} イベントハンドラープロパティを使用することもできます。
 
-<p>このシンプルな例では、 <code>MediaQueryList</code> を作成し、メディアクエリの状態が変化したときにそれを検出するリスナーを設定し、それがページの表示を変更するときにカスタム関数を実行します。</p>
+## 例
 
-<pre class="brush: js notranslate">var para = document.querySelector('p');
+このシンプルな例では、 `MediaQueryList` を作成し、メディアクエリの状態が変化したときにそれを検出するリスナーを設定し、それがページの表示を変更するときにカスタム関数を実行します。
+
+```js
+var para = document.querySelector('p');
 var mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
@@ -73,44 +70,26 @@ function screenTest(e) {
   }
 }
 
-mql.addEventListener(screenTest);</pre>
+mql.addEventListener(screenTest);
+```
 
-<div class="note">
-<p><strong>注</strong>: この例は GitHub にあります (<a href="https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html">ソースコード</a>を参照、および<a href="https://mdn.github.io/dom-examples/mediaquerylist/index.html">ライブで実行</a>)。</p>
-</div>
+> **Note:** この例は GitHub にあります ([ソースコード](https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html)を参照、および[ライブで実行](https://mdn.github.io/dom-examples/mediaquerylist/index.html))。
 
-<p>他の例は個別のプロパティやメソッドのページにあります。</p>
+他の例は個別のプロパティやメソッドのページにあります。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#the-mediaquerylist-interface", "MediaQueryList")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaQueryList")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/CSS/Media_queries">メディアクエリ</a></li>
- <li><a href="/ja/docs/CSS/Using_media_queries_from_code">コードからのメディアクエリの使用</a></li>
- <li>{{DOMxRef("window.matchMedia()")}}</li>
- <li>{{DOMxRef("MediaQueryListListener")}}</li>
- <li>{{DOMxRef("MediaQueryListEvent")}}</li>
- <li>{{DOMxRef("Window.devicePixelRatio")}} の記事にも有益な例があります</li>
-</ul>
+- [メディアクエリ](/ja/docs/CSS/Media_queries)
+- [コードからのメディアクエリの使用](/ja/docs/CSS/Using_media_queries_from_code)
+- {{DOMxRef("window.matchMedia()")}}
+- {{DOMxRef("MediaQueryListListener")}}
+- {{DOMxRef("MediaQueryListEvent")}}
+- {{DOMxRef("Window.devicePixelRatio")}} の記事にも有益な例があります

@@ -14,83 +14,69 @@ tags:
   - メディアクエリー
 translation_of: Web/API/MediaQueryList/media
 ---
-<p>{{APIRef("CSSOM")}}</p>
 
-<p><code><strong>media</strong></code> は {{DOMxRef("MediaQueryList")}} インターフェイスの読取専用プロパティであり、 {{DOMxRef("DOMString")}} でシリアライズされたメディアクエリーを表します。</p>
+{{APIRef("CSSOM")}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+**`media`** は {{DOMxRef("MediaQueryList")}} インターフェイスの読取専用プロパティであり、 {{DOMxRef("DOMString")}} でシリアライズされたメディアクエリーを表します。
 
-<pre class="syntaxbox notranslate">var <var>media</var> = <var>MediaQueryList</var>.media;</pre>
+## 構文
 
-<h3 id="Value" name="Value">値</h3>
+```js
+var _media_ = MediaQueryList.media;
+```
 
-<p>{{DOMxRef("DOMString")}} で、シリアライズされたメディアクエリーを表します。</p>
+### 値
 
-<h2 id="Examples" name="Examples">例</h2>
+{{DOMxRef("DOMString")}} で、シリアライズされたメディアクエリーを表します。
 
-<p>この例では、 <code>(max-width: 600px)</code> のメディアクエリーを実行し、 <code>MediaQueryList</code> の <code>media</code> プロパティの結果の値を {{HTMLElement("span")}} の中に表示します。</p>
+## 例
 
-<h3 id="JavaScript">JavaScript</h3>
+この例では、 `(max-width: 600px)` のメディアクエリーを実行し、 `MediaQueryList` の `media` プロパティの結果の値を {{HTMLElement("span")}} の中に表示します。
 
-<pre class="brush: js notranslate">let mql = window.matchMedia('(max-width: 600px)');
+### JavaScript
+
+```js
+let mql = window.matchMedia('(max-width: 600px)');
 
 document.querySelector(".mq-value").innerText = mql.media;
-</pre>
+```
 
-<p>この JavaScript コードは一致させるメディアクエリーを単に {{DOMxRef("Window.matchMedia", "matchMedia()")}} に渡してコンパイルし、それから <code>&lt;span&gt;</code> の {{DOMxRef("HTMLElement.innerText", "innerText")}} に {{DOMxRef("MediaQueryList.media", "media")}} プロパティの結果の値を設定します。</p>
+この JavaScript コードは一致させるメディアクエリーを単に {{DOMxRef("Window.matchMedia", "matchMedia()")}} に渡してコンパイルし、それから `<span>` の {{DOMxRef("HTMLElement.innerText", "innerText")}} に {{DOMxRef("MediaQueryList.media", "media")}} プロパティの結果の値を設定します。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;span class="mq-value"&gt;&lt;/span&gt;</pre>
+```html
+<span class="mq-value"></span>
+```
 
-<p>シンプルな <code>&lt;span&gt;</code> は出力を受け取るためのものです。</p>
+シンプルな `<span>` は出力を受け取るためのものです。
 
-<div class="hidden">
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css notranslate">.mq-value {
+```css hidden
+.mq-value {
   font: 18px arial, sans-serif;
   font-weight: bold;
   color: #88f;
   padding: 0.4em;
   border: 1px solid #dde;
 }
-</pre>
-</div>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Examples", "100%", "60")}}</p>
+{{EmbedLiveSample("Examples", "100%", "60")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-mediaquerylist-media", "media")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaQueryList.media")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/CSS/Media_queries">メディアクエリー</a></li>
- <li><a href="/ja/docs/CSS/Using_media_queries_from_code">コードからのメディアクエリーの使用</a></li>
- <li>{{DOMxRef("window.matchMedia()")}}</li>
- <li>{{DOMxRef("MediaQueryList")}}</li>
- <li>{{DOMxRef("MediaQueryListEvent")}}</li>
-</ul>
+- [メディアクエリー](/ja/docs/CSS/Media_queries)
+- [コードからのメディアクエリーの使用](/ja/docs/CSS/Using_media_queries_from_code)
+- {{DOMxRef("window.matchMedia()")}}
+- {{DOMxRef("MediaQueryList")}}
+- {{DOMxRef("MediaQueryListEvent")}}

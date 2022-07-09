@@ -17,25 +17,29 @@ tags:
   - メディアクエリー
 translation_of: Web/API/MediaQueryList/matches
 ---
-<p>{{APIRef("CSSOM")}}</p>
 
-<p><strong><code>matches</code></strong> は {{DOMxRef("MediaQueryList")}} インターフェイスの読み取り専用プロパティで、 {{jsxref("Boolean")}} であり、文書が現在メディアクエリーリストと一致している場合は <code>true</code> を返し、一致していない場合は <code>false</code> を返します。</p>
+{{APIRef("CSSOM")}}
 
-<p><code>matches</code> の値が変化した場合は、 <code>MediaQueryList</code> で発生する {{domxref("MediaQueryList.change_event", "change")}} イベントを監視することで通知を受けることができます。</p>
+**`matches`** は {{DOMxRef("MediaQueryList")}} インターフェイスの読み取り専用プロパティで、 {{jsxref("Boolean")}} であり、文書が現在メディアクエリーリストと一致している場合は `true` を返し、一致していない場合は `false` を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+`matches` の値が変化した場合は、 `MediaQueryList` で発生する {{domxref("MediaQueryList.change_event", "change")}} イベントを監視することで通知を受けることができます。
 
-<pre class="syntaxbox notranslate">var <var>matches</var> = &lt;varm&gt;MediaQueryList.matches;</pre>
+## 構文
 
-<h3 id="Value" name="Value">値</h3>
+```js
+var matches = <varm>MediaQueryList.matches;
+```
 
-<p>{{DOMxRef("Boolean")}}。 {{DOMxRef("document")}} が現在メディアクエリーのリストに一致していれば <code>true</code> を返し、そうでなければ <code>false</code> を返します。</p>
+### 値
 
-<h2 id="Example" name="Example">例</h2>
+{{DOMxRef("Boolean")}}。 {{DOMxRef("document")}} が現在メディアクエリーのリストに一致していれば `true` を返し、そうでなければ `false` を返します。
 
-<p>この例では <code><a href="/ja/docs/Web/CSS/@media/orientation">orientation</a></code> メディア特性を使用したメディアクエリーを作成することにより、ビューポートの向きの変化を検出します。</p>
+## 例
 
-<pre class="brush: js notranslate">function addMQListener(mq, callback) {
+この例では [orientation](/ja/docs/Web/CSS/@media/orientation) メディア特性を使用したメディアクエリーを作成することにより、ビューポートの向きの変化を検出します。
+
+```js
+function addMQListener(mq, callback) {
   if (mq.addEventListener) {
     mq.addEventListener("change", callback);
   } else {
@@ -44,7 +48,7 @@ translation_of: Web/API/MediaQueryList/matches
 }
 
 addMQListener(window.matchMedia("(orientation:landscape)"),
-  event =&gt; {
+  event => {
     if (event.matches) {
       /* 横向きの画面になった */
     } else {
@@ -52,37 +56,20 @@ addMQListener(window.matchMedia("(orientation:landscape)"),
     }
   }
 );
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-mediaquerylist-matches", "matches")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>編集者草稿</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaQueryList.matches")}}</p>
+{{Compat("api.MediaQueryList.matches")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/CSS/Media_queries">メディアクエリー</a></li>
- <li><a href="/ja/docs/CSS/Using_media_queries_from_code">コードからのメディアクエリーの使用</a></li>
- <li>{{DOMxRef("window.matchMedia()")}}</li>
- <li>{{DOMxRef("MediaQueryList")}}</li>
- <li>{{DOMxRef("MediaQueryListEvent")}}</li>
-</ul>
+- [メディアクエリー](/ja/docs/CSS/Media_queries)
+- [コードからのメディアクエリーの使用](/ja/docs/CSS/Using_media_queries_from_code)
+- {{DOMxRef("window.matchMedia()")}}
+- {{DOMxRef("MediaQueryList")}}
+- {{DOMxRef("MediaQueryListEvent")}}
