@@ -22,7 +22,7 @@ new XSLTProcessor()
 - [`importStylesheet()`](/fr/docs/Web/API/XSLTProcessor/importStylesheet)
   - : Importe une feuille de style XSLT. Si le nœud passé en argument est un nœud de document, vous pouvez passer une transformation XSL complète ou une [transformation d'élément résultant](https://www.w3.org/TR/xslt/#result-element-stylesheet)&nbsp;; sinon, il doit s'agir d'un élément `<xsl:stylesheet>` ou `<xsl:transform>`.
 - [`transformToFragment()`](/fr/docs/Web/API/XSLTProcessor/transformToFragment)
-  - : Transforme la source du nœud en appliquant la fonction[`importStylesheet()`](/fr/docs/Web/API/XSLTProcessor/importStylesheet). Le document propriétaire du fragment de document résultant est le nœud propriétaire.
+  - : Transforme la source du nœud en appliquant la fonction [`importStylesheet()`](/fr/docs/Web/API/XSLTProcessor/importStylesheet). Le document propriétaire du fragment de document résultant est le nœud propriétaire.
 - [`transformToDocument()`](/fr/docs/Web/API/XSLTProcessor/transformToDocument)
   - : Transforme la source du nœud en appliquant la feuille de style donnée lors de l'importation à l'aide de la fonction [`importStylesheet()`](/fr/docs/Web/API/XSLTProcessor/importStylesheet).
 
@@ -30,11 +30,11 @@ new XSLTProcessor()
 
     | Méthode de sortie | Type de résultat                                                                                                    |
     | ----------------- | ------------------------------------------------------------------------------------------------------------------- |
-    | `html`            | [`HTMLDocument`](/fr/docs/Web/API/HTMLDocument)                                                                                |
+    | `html`            | [`HTMLDocument`](/fr/docs/Web/API/HTMLDocument)                                                                              |
     | `xml`             | [`XMLDocument`](/fr/docs/Web/API/XMLDocument)                                                                                |
     | `text`            | [`XMLDocument`](/fr/docs/Web/API/XMLDocument) avec un seul élément racine `<transformiix:result>` avec le texte comme enfant |
 
-- [`setParameter()`](/fr/docs/Web/API/XSLTProcessor/setParameter)`
+- [`setParameter()`](/fr/docs/Web/API/XSLTProcessor/setParameter)
   - : Définit un paramètre dans la feuille de style XSLT qui a été importée (définit la valeur d'un `<xsl:param>`). Une valeur nulle pour le paramètre `namespaceURI` sera traitée comme une chaîne vide.
 - [`getParameter()`](/fr/docs/Web/API/XSLTProcessor/getParameter)
   - : Récupère un paramètre de la feuille de style XSLT. Une valeur nulle pour le paramètre `namespaceURI` sera traitée comme une chaîne vide.
