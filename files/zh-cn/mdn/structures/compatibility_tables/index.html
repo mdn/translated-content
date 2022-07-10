@@ -13,13 +13,13 @@ translation_of: MDN/Structures/Compatibility_tables
 <p>MDN 为我们的开放网页文档提供了兼容性表格的标准格式; 它是对比所有浏览器之间，包含 DOM，HTML，CSS，JavaScript，SVG 等技术的文档。本文将介绍如何使用我们的功能将兼容性数据添加到 MDN 页面。</p>
 
 <div class="warning syntaxbox">
-<p><strong>重要</strong>: <strong><em>数据的生成方式已经发生了变更</em></strong>。过去，我们的表格直接嵌入在页面中，而且数据是手动填写的。这样效率很低，难以维护，而且使得数据不够灵活，不便更新。所以我们正在把我们的兼容性表格迁移到一个数据 repo 中（<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>）并且改为使用程序化的方式生成它。<br>
+<p><strong>警告：</strong> <em>数据的生成方式已经发生了变更</em>。过去，我们的表格直接嵌入在页面中，而且数据是手动填写的。这样效率很低，难以维护，而且使得数据不够灵活，不便更新。所以我们正在把我们的兼容性表格迁移到一个数据 repo 中（<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>）并且改为使用程序化的方式生成它。<br>
  <br>
  本指南中，我们撰写了关于如何向 MDN 添加新的兼容性数据的文档，但是我们仍然保留了旧的方法来保证旧文档的兼容性表格可用：正如你所见，手动输入的表格依然存在于 MDN 上。如果你有必要使用旧方法的话，可以参考这篇文章：<a href="/en-US/docs/MDN/Contribute/Structures/Old_compatibility_tables">Old compatibility tables</a>。</p>
 </div>
 
 <div class="note">
-<p><strong>注意：</strong>如果您需要本指南任何步骤的帮助，欢迎您在<a href="https://discourse.mozilla-community.org/c/mdn">MDN 论坛</a>上与我们联系。</p>
+<p><strong>备注：</strong> 如果您需要本指南任何步骤的帮助，欢迎您在<a href="https://discourse.mozilla-community.org/c/mdn">MDN 论坛</a>上与我们联系。</p>
 </div>
 
 <h2 id="如何访问_data_repo">如何访问 data repo</h2>
@@ -120,7 +120,7 @@ translation_of: MDN/Structures/Compatibility_tables
 </ul>
 
 <div class="note">
-<p><strong>注意：您会留意到，该仓库还包含了<a href="/en-US/Add-ons/WebExtensions">浏览器拓展</a>和</strong><a href="/en-US/docs/Web/HTTP">HTTP</a><strong>的数据。</strong>These data sets are basically finished as they stand, but more features may need to be added in the future.</p>
+<p><strong>备注：</strong> 您会留意到，该仓库还包含了<a href="/en-US/Add-ons/WebExtensions">浏览器拓展</a>和<a href="/en-US/docs/Web/HTTP">HTTP</a><strong>的数据。</strong>These data sets are basically finished as they stand, but more features may need to be added in the future.</p>
 </div>
 
 <p>你创建的每个文件都需要跟随定义在我们 repo 的 schema 中的这些模板的规定。你可以参考<a href="https://github.com/mdn/browser-compat-data/blob/master/compat-data-schema.md">详细的模板描述</a>。</p>
@@ -143,12 +143,12 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <p>首先有一个<code>css</code>对象，其中包含了一个<code>properties</code>对象。每个您要设定兼容性数据的特性都对应一个<code>properties</code>对象中的成员。而每一个这些成员都有一个<code>__compat</code>成员，<code>__compat</code>成员中则是实际的数据。</p>
 
-<p>以上的数据能在 <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">browser-width.json</a> 文件中找到——可将这与 <a href="/zh-CN/docs/Web/CSS/border-width#Browser_compatibility">MDN 上渲染后的浏览器兼容性</a> 相比较。</p>
+<p>以上的数据能在 <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">browser-width.json</a> 文件中找到——可将这与 <a href="/zh-CN/docs/Web/CSS/border-width#Browser_compatibility">MDN 上渲染后的浏览器兼容性</a> 相比较。</p>
 
 <p>对于其他类型特性，写法是类似的，但对象的名称不同：</p>
 
 <ul>
- <li>对于 CSS 选择器，它与 CSS 属性的写法基本相同，不同之处在于顶级对象结构是是 <code>css.selectors</code> 而不是<code>css.properties</code>. 请以 <a href="https://github.com/mdn/browser-compat-data/blob/master/css/selectors/cue.json">cue.json</a> 作为参考示例。</li>
+ <li>对于 CSS 选择器，它与 CSS 属性的写法基本相同，不同之处在于顶级对象结构是是 <code>css.selectors</code> 而不是<code>css.properties</code>. 请以 <a href="https://github.com/mdn/browser-compat-data/blob/master/css/selectors/cue.json">cue.json</a> 作为参考示例。</li>
  <li>对于 HTML 数据，它的写法基本相同，不同之处在于顶级对象结构是<code>html.elements</code>。请以<code>article.json</code>作为参考示例。</li>
  <li>JS 内置对象对应的顶级结构是<code>javascript.builtins</code>；请以 <a href="https://github.com/mdn/browser-compat-data/blob/master/javascript/builtins/Array.json">Array.json</a> 作为参考示例。</li>
 </ul>
@@ -161,31 +161,31 @@ translation_of: MDN/Structures/Compatibility_tables
 <p>在一个特性的<code>__compat</code>成员中，您需要包含以下成员：</p>
 
 <ul>
- <li><code>mdn_url</code>: MDN 上这个特性的页面的 URL。注意，这个 URL 不可以带上本地化文件夹名称，例如：是 <code>/docs/...</code> 而不是 <code>/docs/en-US/...</code> （或者其他）。本地化文件夹名称会在页面加载时被添加。</li>
+ <li><code>mdn_url</code>: MDN 上这个特性的页面的 URL。注意，这个 URL 不可以带上本地化文件夹名称，例如：是 <code>/docs/...</code> 而不是 <code>/docs/en-US/...</code> （或者其他）。本地化文件夹名称会在页面加载时被添加。</li>
  <li><code>support</code>: 所有不同浏览器对这个特性的浏览器支持的信息。</li>
  <li><code>status</code>: Contains members reporting the standards track status of this feature.</li>
 </ul>
 
-<p>浏览器成员名称在架构里被定义（参见 <a href="https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#browser-identifiers">浏览器标识符</a>）。你应该使用现有定义的标识符的完整列表。如果你希望添加其他浏览器，请先联系我们，因为这可能会产生广泛的影响，不应该在未经认真考虑就这么做。</p>
+<p>浏览器成员名称在架构里被定义（参见 <a href="https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#browser-identifiers">浏览器标识符</a>）。你应该使用现有定义的标识符的完整列表。如果你希望添加其他浏览器，请先联系我们，因为这可能会产生广泛的影响，不应该在未经认真考虑就这么做。</p>
 
-<p>在一个基本的浏览器兼容数据文件中，你只需要在浏览器标识符成员仲包含"version_added" （以下我们会说到<a href="#添加数据：高级场景">高级场景</a>）。其他你可能使用的值还包括： </p>
+<p>在一个基本的浏览器兼容数据文件中，你只需要在浏览器标识符成员仲包含"version_added" （以下我们会说到<a href="#添加数据：高级场景">高级场景</a>）。其他你可能使用的值还包括： </p>
 
 <ul>
- <li>一个版本号：如果你知道一个浏览器开始支持这个特性的准确版本，用一个字符串表述版本号，例如“47”。 </li>
+ <li>一个版本号：如果你知道一个浏览器开始支持这个特性的准确版本，用一个字符串表述版本号，例如“47”。 </li>
  <li><code>true</code>: 如果一个浏览器支持这个特性，但你不知道准确的版本号，取值用<code>true</code>。</li>
- <li><code>false</code>: 如果一个浏览器支持这个特性，取值用 <code>false</code>。</li>
+ <li><code>false</code>: 如果一个浏览器支持这个特性，取值用 <code>false</code>。</li>
  <li><code>null</code>: 如果一个浏览器支持这个特性，取值用 <code>null</code>。</li>
 </ul>
 
-<p>在 <code>status</code> 成员中，包含三个子成员：</p>
+<p>在 <code>status</code> 成员中，包含三个子成员：</p>
 
 <ul>
- <li> <code>"experimental"</code>: 如果这个特性是<a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">试验性</a>的，取值为 <code>true</code> ，否则为 <code>false</code> 。</li>
- <li><code>"standard_track"</code>: 如果这个特性是个在某些规范里的标准的属性（最常见的是 W3C/WHATWG，但有其他规范如 Khronos 或 TC39 等），取值为<code>true</code> ，否则为 <code>false</code> 。</li>
- <li><code>"deprecated"</code>: 如果这个特性已经<a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete">过时</a>，取值为<code>true</code> ，否则为 <code>false</code> 。</li>
+ <li> <code>"experimental"</code>: 如果这个特性是<a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">试验性</a>的，取值为 <code>true</code> ，否则为 <code>false</code> 。</li>
+ <li><code>"standard_track"</code>: 如果这个特性是个在某些规范里的标准的属性（最常见的是 W3C/WHATWG，但有其他规范如 Khronos 或 TC39 等），取值为<code>true</code> ，否则为 <code>false</code> 。</li>
+ <li><code>"deprecated"</code>: 如果这个特性已经<a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete">过时</a>，取值为<code>true</code> ，否则为 <code>false</code> 。</li>
 </ul>
 
-<p>作为例子，以下是 <a href="/en-US/docs/Web/CSS/border-width#Browser_compatibility">border-width</a> 特性的数据 (参见 <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a>) ：</p>
+<p>作为例子，以下是 <a href="/en-US/docs/Web/CSS/border-width#Browser_compatibility">border-width</a> 特性的数据 (参见 <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a>) ：</p>
 
 <pre class="brush: json notranslate">"__compat": {
   "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-width",
@@ -316,7 +316,7 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <h3 id="Including_a_footnote">Including a footnote</h3>
 
-<p>Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>)  (at the time of writing) had a footnote "Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:</p>
+<p>Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>)  (at the time of writing) had a footnote "Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:</p>
 
 <pre class="brush: json notranslate">"chrome_android": {
   "version_added": true,
@@ -412,7 +412,7 @@ translation_of: MDN/Structures/Compatibility_tables
 ],</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You should put the most current or important support point first in the array — this makes the data easier to read for people who just want to scan it for the latest info.</p>
+<p><strong>备注：</strong> You should put the most current or important support point first in the array — this makes the data easier to read for people who just want to scan it for the latest info.</p>
 </div>
 
 <h3 id="包含一个可选的名字">包含一个可选的名字</h3>
@@ -422,7 +422,7 @@ translation_of: MDN/Structures/Compatibility_tables
 <p>To include such a case in the browser compat data, you can include a support information point that specifies the alternative name inside an "alternative_name" member.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The alternative name might not be an exact alias — it might have differing behaviour to the standard version.</p>
+<p><strong>备注：</strong> The alternative name might not be an exact alias — it might have differing behaviour to the standard version.</p>
 </div>
 
 <p>Let's look at an example. The {{cssxref("border-top-right-radius")}} property (see also <a href="https://github.com/mdn/browser-compat-data/blob/2a0cc3f6bb17aa4345441bed47a059dffd847793/css/properties/border-top-right-radius.json">border-top-right-radius.json</a>) was supported in Firefox:</p>
@@ -489,5 +489,5 @@ git push</pre>
 <p>{{Compat("api.VRDisplay.capabilities")}}</p>
 
 <div class="note">
-<p><strong>注意</strong>: 文件名通常与给予 JSON 结构内的接口的标签相匹配，但事实并非总是如此。当宏调用生成表时，他们遍历所有文件，直到找到相关的 JSON 使用，所以文件名不是关键。说到这一点，你应该始终尽可能直观地命名它们。</p>
+<p><strong>备注：</strong> 文件名通常与给予 JSON 结构内的接口的标签相匹配，但事实并非总是如此。当宏调用生成表时，他们遍历所有文件，直到找到相关的 JSON 使用，所以文件名不是关键。说到这一点，你应该始终尽可能直观地命名它们。</p>
 </div>
