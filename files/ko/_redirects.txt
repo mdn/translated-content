@@ -449,6 +449,8 @@
 /ko/docs/Web/API/Document/defaultView/popstate_event	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/Document/defaultView/resize_event	/ko/docs/Web/API/Window/resize_event
 /ko/docs/Web/API/Document/drag_이벤트	/ko/docs/Web/API/Document/drag_event
+/ko/docs/Web/API/Document/keydown_event	/ko/docs/Web/API/Element/keydown_event
+/ko/docs/Web/API/Document/keyup_event	/ko/docs/Web/API/Element/keyup_event
 /ko/docs/Web/API/DocumentOrShadowRoot/activeElement	/ko/docs/Web/API/Document/activeElement
 /ko/docs/Web/API/DocumentOrShadowRoot/getSelection	/ko/docs/Web/API/Document/getSelection
 /ko/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ko/docs/Web/API/Document/styleSheets
@@ -460,12 +462,16 @@
 /ko/docs/Web/API/Element/accessKey	/ko/docs/Web/API/HTMLElement/accessKey
 /ko/docs/Web/API/Element/childNodes	/ko/docs/Web/API/Node/childNodes
 /ko/docs/Web/API/Element/firstChild	/ko/docs/Web/API/Node/firstChild
+/ko/docs/Web/API/Element/select_event	/ko/docs/Web/API/HTMLInputElement/select_event
 /ko/docs/Web/API/Event/createEvent	/ko/docs/Web/API/Document/createEvent
 /ko/docs/Web/API/EventListener	/ko/docs/Web/API/EventTarget/addEventListener
 /ko/docs/Web/API/Fetch_API/Fetch의_사용법	/ko/docs/Web/API/Fetch_API/Using_Fetch
 /ko/docs/Web/API/File/Using_files_from_web_applications	/ko/docs/Web/API/File_API/Using_files_from_web_applications
 /ko/docs/Web/API/File/size	/ko/docs/Web/API/Blob/size
 /ko/docs/Web/API/FileReader.result	/ko/docs/Web/API/FileReader/result
+/ko/docs/Web/API/GlobalEventHandlers/onchange	/ko/docs/Web/API/HTMLElement/change_event
+/ko/docs/Web/API/GlobalEventHandlers/onkeydown	/ko/docs/conflicting/Web/API/Element/keydown_event
+/ko/docs/Web/API/GlobalEventHandlers/onkeyup	/ko/docs/conflicting/Web/API/Element/keyup_event
 /ko/docs/Web/API/GlobalEventHandlers/ontouchstart	/ko/docs/Web/API/Element/touchstart_event
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
@@ -605,7 +611,7 @@
 /ko/docs/Web/Events/canplaythrough	/ko/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /ko/docs/Web/Events/click	/ko/docs/Web/API/Element/click_event
 /ko/docs/Web/Events/dragstart	/ko/docs/Web/API/Document/dragstart_event
-/ko/docs/Web/Events/keydown	/ko/docs/Web/API/Document/keydown_event
+/ko/docs/Web/Events/keydown	/ko/docs/Web/API/Element/keydown_event
 /ko/docs/Web/Events/load	/ko/docs/Web/API/Window/load_event
 /ko/docs/Web/Events/message	/ko/docs/Web/API/BroadcastChannel/message_event
 /ko/docs/Web/Events/orientationchange	/ko/docs/Web/API/Window/orientationchange_event
@@ -733,7 +739,7 @@
 /ko/docs/Web/Reference/Events/canplay	/ko/docs/Web/API/HTMLMediaElement/canplay_event
 /ko/docs/Web/Reference/Events/canplaythrough	/ko/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /ko/docs/Web/Reference/Events/click	/ko/docs/Web/API/Element/click_event
-/ko/docs/Web/Reference/Events/keydown	/ko/docs/Web/API/Document/keydown_event
+/ko/docs/Web/Reference/Events/keydown	/ko/docs/Web/API/Element/keydown_event
 /ko/docs/Web/Reference/Events/load	/ko/docs/Web/API/Window/load_event
 /ko/docs/Web/Reference/Events/message	/ko/docs/Web/API/BroadcastChannel/message_event
 /ko/docs/Web/Reference/Events/orientationchange	/ko/docs/Web/API/Window/orientationchange_event
