@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -12,7 +13,7 @@ tags:
   - Reference
   - Video
   - WebRTC
-  - インターフェイス
+browser-compat: api.MediaStreamTrack
 translation_of: Web/API/MediaStreamTrack
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
