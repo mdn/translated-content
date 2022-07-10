@@ -5421,25 +5421,6 @@
       "AsLogd"
     ]
   },
-  "Web/API/Document/keydown_event": {
-    "modified": "2020-04-03T23:31:41.800Z",
-    "contributors": [
-      "camsa",
-      "irenesmith",
-      "ExE-Boss",
-      "fscholz",
-      "juan-ferrer-toribio"
-    ]
-  },
-  "Web/API/Document/keyup_event": {
-    "modified": "2019-04-18T03:50:20.204Z",
-    "contributors": [
-      "irenesmith",
-      "ExE-Boss",
-      "fscholz",
-      "gabojkz"
-    ]
-  },
   "Web/API/Document/open": {
     "modified": "2020-10-15T22:31:23.051Z",
     "contributors": [
@@ -5831,6 +5812,25 @@
     "contributors": [
       "AlePerez92",
       "mikekrn"
+    ]
+  },
+  "Web/API/Element/keydown_event": {
+    "modified": "2020-04-03T23:31:41.800Z",
+    "contributors": [
+      "camsa",
+      "irenesmith",
+      "ExE-Boss",
+      "fscholz",
+      "juan-ferrer-toribio"
+    ]
+  },
+  "Web/API/Element/keyup_event": {
+    "modified": "2019-04-18T03:50:20.204Z",
+    "contributors": [
+      "irenesmith",
+      "ExE-Boss",
+      "fscholz",
+      "gabojkz"
     ]
   },
   "Web/API/Element/localName": {
@@ -6413,12 +6413,6 @@
       "fscholz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onchange": {
-    "modified": "2019-03-23T22:18:11.571Z",
-    "contributors": [
-      "gama"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onclick": {
     "modified": "2019-08-28T11:37:06.287Z",
     "contributors": [
@@ -6452,18 +6446,6 @@
       "Diegosolo"
     ]
   },
-  "Web/API/GlobalEventHandlers/onkeydown": {
-    "modified": "2019-03-18T21:31:44.954Z",
-    "contributors": [
-      "ANDRUS74"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onkeyup": {
-    "modified": "2019-03-18T21:31:50.304Z",
-    "contributors": [
-      "ANDRUS74"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onload": {
     "modified": "2019-03-23T23:33:14.527Z",
     "contributors": [
@@ -6480,12 +6462,6 @@
   },
   "Web/API/GlobalEventHandlers/onscroll": {
     "modified": "2019-03-23T22:33:14.134Z",
-    "contributors": [
-      "Grijander81"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onselect": {
-    "modified": "2019-03-23T22:33:14.413Z",
     "contributors": [
       "Grijander81"
     ]
@@ -6729,6 +6705,12 @@
     "modified": "2019-03-18T21:34:04.996Z",
     "contributors": [
       "AlePerez92"
+    ]
+  },
+  "Web/API/HTMLInputElement/select_event": {
+    "modified": "2019-03-23T22:33:14.413Z",
+    "contributors": [
+      "Grijander81"
     ]
   },
   "Web/API/HTMLLIElement": {
@@ -20900,6 +20882,18 @@
       "fscholz"
     ]
   },
+  "conflicting/Web/API/Element/keydown_event": {
+    "modified": "2019-03-18T21:31:44.954Z",
+    "contributors": [
+      "ANDRUS74"
+    ]
+  },
+  "conflicting/Web/API/Element/keyup_event": {
+    "modified": "2019-03-18T21:31:50.304Z",
+    "contributors": [
+      "ANDRUS74"
+    ]
+  },
   "conflicting/Web/API/Element/namespaceURI": {
     "modified": "2019-03-23T22:08:52.990Z",
     "contributors": [
@@ -20933,6 +20927,12 @@
       "fscholz",
       "LeoHirsch",
       "lupomontero"
+    ]
+  },
+  "conflicting/Web/API/HTMLElement/change_event": {
+    "modified": "2019-03-23T22:18:11.571Z",
+    "contributors": [
+      "gama"
     ]
   },
   "conflicting/Web/API/HTML_Drag_and_Drop_API": {

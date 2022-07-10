@@ -1,0 +1,54 @@
+---
+title: GlobalEventHandlers.onkeypress
+slug: conflicting/Web/API/Element/keypress_event
+translation_of: Web/API/GlobalEventHandlers/onkeypress
+original_slug: Web/API/GlobalEventHandlers/onkeypress
+---
+<div>{{ApiRef("HTML DOM")}}</div>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Свойство<strong> onkeypress</strong> задаёт и возвращает код обработчика событий onKeyPress для текущего элемента.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">element.onkeypress = <em>код обработчика событий</em>
+</pre>
+
+<h2 id="Примечания">Примечания</h2>
+
+<p>Событие нажатия <strong>должно</strong> вызываться тогда, когда пользователь нажимает клавишу на клавиатуре. Тем не менее, не все браузеры отрабатывают это событие для некоторых (определённых) клавиш.</p>
+
+<h3 id="Несовместимость_в_браузерах">Несовместимость в браузерах</h3>
+
+<p>Браузеры на основе Webkit (к примеру, Google Chrome и Safari) не отрабатывают события нажатия клавиш-указателей ("стрелок").</p>
+
+<p>Firefox не отрабатывает события, в основе которых лежат клавиши управления (модификаторы) - такие, как, например, SHIFT.</p>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<p>Не является частью спецификации.</p>
+
+<h2 id="Пример">Пример</h2>
+
+<p>Следующий пример демонстрирует использование события <code>onkeypress</code>  в процессе заполнения поля формы (только) цифрами:</p>
+
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;title&gt;Пример&lt;/title&gt;
+&lt;script&gt;
+  function numbersOnly(oToCheckField, oKeyEvent) {
+    return oKeyEvent.char === 0 || /\d/.test(String.fromCharCode(oKeyEvent.char));
+  }
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;form name="myForm"&gt;
+&lt;p&gt;Вводите только цифры: &lt;input type="text" name="myInput" onkeypress="return numbersOnly(this, event);" onpaste="return false;" /&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>

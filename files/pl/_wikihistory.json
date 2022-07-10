@@ -2083,6 +2083,32 @@
       "RetupK"
     ]
   },
+  "Web/API/Element/keydown_event": {
+    "modified": "2019-03-23T23:46:41.310Z",
+    "contributors": [
+      "AshfaqHossain",
+      "Mgjbot",
+      "Ptak82",
+      "Jan Dudek"
+    ]
+  },
+  "Web/API/Element/keypress_event": {
+    "modified": "2019-03-23T23:41:39.155Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Jan Dudek"
+    ]
+  },
+  "Web/API/Element/keyup_event": {
+    "modified": "2019-03-23T23:46:25.129Z",
+    "contributors": [
+      "teoli",
+      "AshfaqHossain",
+      "Mgjbot",
+      "Jan Dudek"
+    ]
+  },
   "Web/API/Element/localName": {
     "modified": "2019-03-23T23:46:58.657Z",
     "contributors": [
@@ -2091,6 +2117,26 @@
       "Mgjbot",
       "Ptak82",
       "Jan Dudek"
+    ]
+  },
+  "Web/API/Element/mousedown_event": {
+    "modified": "2019-03-23T23:47:20.727Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "Bedi",
+      "Mgjbot",
+      "Ptak82"
+    ]
+  },
+  "Web/API/Element/mousemove_event": {
+    "modified": "2019-03-24T00:00:26.392Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "Hasilt",
+      "mwysinski",
+      "Bedi"
     ]
   },
   "Web/API/Element/namespaceURI": {
@@ -2387,32 +2433,6 @@
       "Jan Dudek"
     ]
   },
-  "Web/API/GlobalEventHandlers/onkeydown": {
-    "modified": "2019-03-23T23:46:41.310Z",
-    "contributors": [
-      "AshfaqHossain",
-      "Mgjbot",
-      "Ptak82",
-      "Jan Dudek"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onkeypress": {
-    "modified": "2019-03-23T23:41:39.155Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "Jan Dudek"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onkeyup": {
-    "modified": "2019-03-23T23:46:25.129Z",
-    "contributors": [
-      "teoli",
-      "AshfaqHossain",
-      "Mgjbot",
-      "Jan Dudek"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onload": {
     "modified": "2019-03-24T00:18:31.426Z",
     "contributors": [
@@ -2421,26 +2441,6 @@
       "AshfaqHossain",
       "wojciech.fornal",
       "Ptak82"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onmousedown": {
-    "modified": "2019-03-23T23:47:20.727Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "Bedi",
-      "Mgjbot",
-      "Ptak82"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onmousemove": {
-    "modified": "2019-03-24T00:00:26.392Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "Hasilt",
-      "mwysinski",
-      "Bedi"
     ]
   },
   "Web/API/HTMLCanvasElement": {

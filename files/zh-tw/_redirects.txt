@@ -553,6 +553,7 @@
 /zh-TW/docs/Web/API/Coordinates/speed	/zh-TW/docs/Web/API/GeolocationCoordinates/speed
 /zh-TW/docs/Web/API/DOMString	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
 /zh-TW/docs/Web/API/Detecting_device_orientation	/zh-TW/docs/orphaned/Web/API/Detecting_device_orientation
+/zh-TW/docs/Web/API/Document/keyup_event	/zh-TW/docs/Web/API/Element/keyup_event
 /zh-TW/docs/Web/API/DocumentTemp	/zh-TW/docs/Web/API/Document
 /zh-TW/docs/Web/API/DocumentTemp/createElement	/zh-TW/docs/Web/API/Document/createElement
 /zh-TW/docs/Web/API/DocumentTemp/createRange	/zh-TW/docs/Web/API/Document/createRange
@@ -636,7 +637,7 @@
 /zh-TW/docs/Web/Events/DOMContentLoaded	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
 /zh-TW/docs/Web/Events/abort	/zh-TW/docs/Web/API/HTMLMediaElement/abort_event
 /zh-TW/docs/Web/Events/click	/zh-TW/docs/Web/API/Element/click_event
-/zh-TW/docs/Web/Events/keyup	/zh-TW/docs/Web/API/Document/keyup_event
+/zh-TW/docs/Web/Events/keyup	/zh-TW/docs/Web/API/Element/keyup_event
 /zh-TW/docs/Web/Events/load	/zh-TW/docs/Web/API/Window/load_event
 /zh-TW/docs/Web/Events/orientationchange	/zh-TW/docs/Web/API/Window/orientationchange_event
 /zh-TW/docs/Web/Events/ratechange	/zh-TW/docs/Web/API/HTMLMediaElement/ratechange_event

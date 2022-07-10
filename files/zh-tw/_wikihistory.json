@@ -3061,14 +3061,6 @@
       "Shiyou"
     ]
   },
-  "Web/API/Document/keyup_event": {
-    "modified": "2019-04-18T03:52:12.531Z",
-    "contributors": [
-      "irenesmith",
-      "fscholz",
-      "JoanneWu"
-    ]
-  },
   "Web/API/Document/querySelector": {
     "modified": "2019-03-23T23:28:13.625Z",
     "contributors": [
@@ -3220,6 +3212,14 @@
     "contributors": [
       "akccakcctw",
       "NoobTW"
+    ]
+  },
+  "Web/API/Element/keyup_event": {
+    "modified": "2019-04-18T03:52:12.531Z",
+    "contributors": [
+      "irenesmith",
+      "fscholz",
+      "JoanneWu"
     ]
   },
   "Web/API/Element/querySelectorAll": {
