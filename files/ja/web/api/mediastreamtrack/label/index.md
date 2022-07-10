@@ -1,43 +1,38 @@
 ---
 title: MediaStreamTrack.label
 slug: Web/API/MediaStreamTrack/label
+page-type: web-api-instance-property
+tags:
+  - Media Capture and Streams
+  - MediaStreamTrack
+  - NeedsExample
+  - Property
+  - Read-only
+  - Reference
+  - WebRTC
+browser-compat: api.MediaStreamTrack.label
 translation_of: Web/API/MediaStreamTrack/label
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p><code><strong>MediaStreamTrack.label</strong></code> は読み取り専用のプロパティであり、 <code>"internal microphone"</code>のようなトラックソースを識別するユーザエージェントによって割り当てられたラベルを含む<a href="/ja/docs/Web/API/DOMString" title="DOMString は、UTF-16 文字列です。JavaScript では UTF-16 文字列を用いるため、DOMString は直接 String に対応します。"><code>DOMString</code></a>を返します。この文字列は空になることもあり、ソースが接続されていないと空になります。トラックのソースとの関連付けが解除されても、このラベルは変更されません。</p>
+**`MediaStreamTrack.label`** は読み取り専用のプロパティであり、トラックのソースを識別するために{{glossary("user agent", "ユーザーエージェント")}}によって割り当てられたラベルを含む文字列を返します。例えば `"internal microphone"` などです。
 
-<h2 id="文法">文法</h2>
+この文字列は空になることもあり、ソースが接続されていないと空になります。トラックのソースとの関連付けが解除されても、このラベルは変更されません。
 
-<pre class="syntaxbox"> var <em>name</em> = <em>track</em>.label;</pre>
+## 構文
 
-<h2 id="例">例</h2>
+```js
+const label = track.label
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Media Capture', '#widl-MediaStreamTrack-label', 'MediaStreamTrack.label') }}</td>
-   <td>{{ Spec2('Media Capture') }}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaStreamTrack.label")}}</p>
+{{Compat}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-</ul>
+- [WebRTC](/ja/docs/Web/API/WebRTC_API)

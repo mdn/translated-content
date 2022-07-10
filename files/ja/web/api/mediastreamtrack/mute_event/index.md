@@ -1,6 +1,7 @@
 ---
 title: 'MediaStreamTrack: mute イベント'
 slug: Web/API/MediaStreamTrack/mute_event
+page-type: web-api-event
 tags:
   - API
   - Audio
@@ -11,92 +12,98 @@ tags:
   - Reference
   - Video
   - mute
-  - イベント
+browser-compat: api.MediaStreamTrack.mute_event
 translation_of: Web/API/MediaStreamTrack/mute_event
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p><span class="seoSummary"><code><strong>mute</strong></code> イベントは、トラックのソースが一時的にメディアデータを提供することができなくなったときに {{domxref("MediaStreamTrack")}} へ送られます。</span>トラックがメディア出力可能になると、 {{domxref("MediaStreamTrack/unmute_event", "unmute")}} が送られます。</p>
+**`mute`** イベントは、トラックのソースが一時的にメディアデータを提供することができなくなったときに {{domxref("MediaStreamTrack")}} へ送られます。
 
-<p><code>mute</code> イベントと <code>unmute</code> イベントとの間、トラックの {{domxref("MediaStreamTrack.muted", "muted")}} プロパティの値は <code>true</code> になります。</p>
+トラックがメディア出力可能になると、 {{domxref("MediaStreamTrack/unmute_event", "unmute")}} が送られます。
 
-<div class="note">
-<p><strong>メモ:</strong> 多くの人が「ミュート」と考える状態 (すなわち、トラックを無音にすることをユーザーが制御できる方法) は実際には {{domxref("MediaStreamTrack.enabled")}} プロパティを使用して管理され、こちらではイベントが発生しません。</p>
-</div>
+`mute` イベントと `unmute` イベントとの間で、トラックの {{domxref("MediaStreamTrack.muted", "muted")}} プロパティの値は `true` になります。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("MediaStreamTrack.onmute", "onmute")}}</td>
-  </tr>
- </tbody>
-</table>
+> **Note:** 多くの人が「ミュート」と考える状態（すなわち、トラックを無音にすることをユーザーが制御できる方法）は実際には {{domxref("MediaStreamTrack.enabled")}} プロパティを使用して管理され、こちらではイベントが発生しません。
 
-<h2 id="Examples" name="Examples">例</h2>
+このイベントはキャンセル不可で、バブリングしません。
 
-<p>この例では、イベントハンドラーを <code>mute</code> および {{domxref("MediaStreamTrack/unmute_event", "unmute")}} の各イベントに設定し、 {{domxref("MediaStreamTrack")}} が入った変数 <code>musicTrack</code> のソースからメディアが流れていない場合を検出しています。</p>
+## 構文
 
-<pre class="brush: js">musicTrack.addEventListener("mute", event =&gt; {
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('mute', event => { });
+
+onmute = event => { };
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
+
+## 例
+
+この例では、イベントハンドラーを `mute` および {{domxref("MediaStreamTrack/unmute_event", "unmute")}} の各イベントに設定し、 {{domxref("MediaStreamTrack")}} が入った変数 `musicTrack` のソースからメディアが流れていない場合を検出しています。
+
+```js
+musicTrack.addEventListener("mute", event => {
   document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
 }, false);
 
-musicTrack.addEventListener("unmute", event =&gt; {
+musicTrack.addEventListener("unmute", event => {
  document.getElementById("timeline-widget").style.backgroundColor = "#fff";
 }, false);
-</pre>
+```
 
-<p>これらのイベントハンドラーのある場面で、トラック <code>musicTrack</code> が {{domxref("MediaStreamTrack.muted", "muted")}} の状態になったとき、 <code>timeline-widget</code> の ID を持った要素の背景色が <code>#aaa</code> に変化します。トラックのミュート状態を抜けたことを — <code>unmute</code> イベントが到着したことによって — 検出すると、背景色は白に戻ります。</p>
+これらのイベントハンドラーのある場面で、トラック `musicTrack` が {{domxref("MediaStreamTrack.muted", "muted")}} の状態になったとき、 `timeline-widget` の ID を持った要素の背景色が `#aaa` に変化します。トラックのミュート状態を抜けたことを — `unmute` イベントが到着したことによって — 検出すると、背景色は白に戻ります。
 
-<p>{{domxref("MediaStreamTrack.onmute", "onmute")}} イベントハンドラープロパティを使用してこのイベントのハンドラーを設定することもできます。同様に、 {{domxref("MediaStreamTrack.onunmute", "onunmute")}} イベントハンドラープロパティが <code>unmute</code> イベントを設定するために利用できます。以下の例ではこれを示しています。</p>
+`onmute` イベントハンドラープロパティを使用してこのイベントのハンドラーを設定することもできます。同様に、 {{domxref("MediaStreamTrack.unmute_event", "onunmute")}} イベントハンドラープロパティが `unmute` イベントを設定するために利用できます。以下の例ではこれを示しています。
 
-<pre class="brush: js">musicTrack.onmute = event =&gt; {
+```js
+musicTrack.onmute = event => {
   document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
 }
 
-musicTrack.mute = event = &gt; {
+musicTrack.onunmute = event = > {
   document.getElementById("timeline-widget").style.backgroundColor = "#fff";
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+### レシーバーによるトラックのミュート
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture', '#event-mediastreamtrack-unmute', 'unmute')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+次の例は、レシーバーを使用してトラックをミュートする方法です。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+```js
+// Peer 1 (Receiver)
+audioTrack.addEventListener('mute', event => {
+  // Do something in UI
+});
 
-<p>{{Compat("api.MediaStreamTrack.mute_event")}}</p>
+videoTrack.addEventListener('mute', event => {
+  // Do something in UI
+});
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+// Peer 2 (Sender)
+const transceivers = peer.getTransceivers();
 
-<ul>
- <li>{{domxref("MediaStreamTrack.onmute", "onmute")}} イベントハンドラープロパティ</li>
- <li>{{domxref("MediaStreamTrack/unmute_event", "unmute")}} イベント</li>
-</ul>
+const audioTrack = transceivers[0];
+audioTrack.direction = 'recvonly';
+
+const videoTrack = transceivers[1];
+videoTrack.direction = 'recvonly';
+```
+
+`transceivers` は {{domxref("RTCRtpTransceiver")}} の配列で、送受信される音声または映像トラックを見つけることができます。詳しくは {{domxref("RTCRtpTransceiver.direction", "direction")}} の記事を参照してください。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("MediaStreamTrack/unmute_event", "unmute")}} イベント
+- {{domxref("RTCRtpTransceiver.direction", "direction")}}

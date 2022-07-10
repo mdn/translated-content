@@ -1,41 +1,49 @@
 ---
-title: muted
+title: MediaStreamTrack.muted
 slug: Web/API/MediaStreamTrack/muted
+page-type: web-api-instance-property
+tags:
+  - API
+  - Media Capture and Streams
+  - MediaStreamTrack
+  - Property
+  - Read-only
+  - Reference
+  - muted
+browser-compat: api.MediaStreamTrack.muted
 translation_of: Web/API/MediaStreamTrack/muted
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p><strong><code>MediaStreamTrack.muted</code></strong>は読み取り専用のプロパティであり、トラックがミュートであるかどうかを示すBooleanの値を返します。</p>
+**`muted`** は {{domxref("MediaStreamTrack")}} 読み取り専用のプロパティであり、トラックが現在メディア出力を提供できない状態であるかどうかを示します。
 
-<h2 id="文法">文法</h2>
+> **Note:** ユーザーがトラックをミュート/ミュート解除する方法を実装するには、{{domxref("MediaStreamTrack.enabled", "enabled")}} プロパティを使用してください。 `enabled` を `false` に設定してトラックを無効にすると、空のフレーム（すべてのサンプルが 0 である音声フレーム、またはすべてのピクセルが黒である映像フレーム）だけが生成されます。
 
-<pre class="syntaxbox">var <em>bool</em> = <em>track.</em>muted;</pre>
+## 値
 
-<h3 id="値">値</h3>
+論理値で、トラックが現在ミュートされている場合は `true` となり、ミュートされていない場合は `false` となります。
 
-<p>{{jsxref('Boolean')}}型の値。</p>
+> **Note:** 可能であれば、`muted` をポーリングしてトラックのミュート状態を監視することは避けてください。
+> 代わりに、 {{domxref("MediaStreamTrack.mute_event", "mute")}} と {{domxref("MediaStreamTrack.unmute_event", "unmute")}} イベントに対するイベントリスナーを追加してください。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">// TBD</pre>
+この例では、 {{domxref("MediaStreamTrack")}} オブジェクトの配列の中で、現在ミュートされているトラックの数を数えます。
 
-<h2 id="仕様">仕様</h2>
+```js
+let mutedCount = 0;
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#dom-mediastreamtrack-muted', 'muted')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+trackList.forEach((track) => {
+  if (track.muted) {
+    mutedCount += 1;
+  }
+});
+```
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## 仕様書
 
-<p>{{Compat("api.MediaStreamTrack.muted")}}</p>
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
