@@ -87,9 +87,9 @@ tags:
 
 <p>這個範例就過於簡短。它缺乏太多資訊了，譬如，所謂的「 stroke 」 文字到底是什麼意思、文字又會被繪製在哪裡等。</p>
 
-<div class="example-bad">
+<blockquote>
 <p><strong><code>CanvasRenderingContext2D.strokeText()</code></strong> draws a string.</p>
-</div>
+</blockquote>
 
 <h5 id="Example_Too_long!">範例：過於冗長！</h5>
 
@@ -97,7 +97,7 @@ tags:
 
 <p>反之，概述應該著重在 <code>strokeText()</code> 方法本身，在輔以適當的參考指南作為其他細節的補充</p>
 
-<div class="example-bad">
+<blockquote>
 <p>When called, the Canvas 2D API method <strong><code>CanvasRenderingContext2D.strokeText()</code></strong> strokes the characters in the specified string beginning at the coordinates specified, using the current pen color. In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.</p>
 
 <p>The text is drawn using the context's current font as specified in the context's {{domxref("CanvasRenderingContext2D.font", "font")}} property.</p>
@@ -109,17 +109,17 @@ tags:
 <p>You can, optionally, provide a fourth parameter that lets you specify a maximum width for the string, in pixels. If you provide this parameter, the text is compressed horizontally or scaled (or otherwise adjusted) to fit inside a space that wide when being drawn.</p>
 
 <p>You can call the <strong><code>fillText()</code></strong> method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.</p>
-</div>
+</blockquote>
 
 <h5 id="Example_Much_better!">範例：恰到好處！</h5>
 
 <p>下列是一個針對 <code>strokeText()</code> 方法更好的概述。</p>
 
-<div class="example-good">
+<blockquote>
 <p>The {{domxref("CanvasRenderingContext2D")}} method <code><strong>strokeText()</strong></code>, part of the <a href="/zh-TW/docs/Web/API/Canvas_API">Canvas 2D API</a>, strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.</p>
 
 <p>For more details and further examples, see {{SectionOnPage("/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, <a href="/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_text">Drawing text</a>.</p>
-</div>
+</blockquote>
 
 <h4 id="Include_all_relevant_examples">涵蓋所有相關的範例</h4>
 
@@ -171,7 +171,7 @@ tags:
 
 <p>一個正確結構的無序清單範例：</p>
 
-<div class="example-good">
+<blockquote>
 <p>在此範例中，必須包含：</p>
 
 <ul>
@@ -179,7 +179,7 @@ tags:
  <li>一個類似的條件，以及一些簡短的說明。</li>
  <li>再一個條件，以及更深入的說明。</li>
 </ul>
-</div>
+</blockquote>
 
 <p>注意看，相同的句子結構在項目重複出現。在此範例中，每個項目闡述一個條件並在逗號後緊隨著簡短的說明，而每一個項目都以句號作為結尾。</p>
 
@@ -189,7 +189,7 @@ tags:
 
 <p>一個正確結構的有序清單：</p>
 
-<div class="example-good">
+<blockquote>
 <p>想要正確地結構有序清單，必須做到：</p>
 
 <ol>
@@ -199,7 +199,7 @@ tags:
 </ol>
 
 <p>這是最後結語的範例。上述就是簡短的有序清單，說明如何如何建立一個具備正確格式的有序清單操作指南。</p>
-</div>
+</blockquote>
 
 <p>注意看，有序清單的每個項目讀起來都像是一個簡短的段落。那是因為有序清單通常是用於說明操作指南的目的，或是帶領讀者走過一步步的程序，也請確保每一個項目都著重在：一個序號項目說明一個步驟。</p>
 
@@ -207,16 +207,16 @@ tags:
 
 <p>使用<strong>「格式化樣式」</strong>的下拉清單來對選取內容套用預定義的樣式。</p>
 
-<div class="note notecard"><strong>「備註區塊」</strong>樣式是用於標示重要的備註，就好比這樣。</div>
+<div class="note notecard"><p><strong>備註：</strong> <strong>「備註區塊」</strong>樣式是用於標示重要的備註，就好比這樣。</p></div>
 
-<div class="warning">類似地，<strong>「警告區塊」</strong>樣式用於建立警告區塊，就好比這樣。</div>
+<div class="warning"><p><strong>警告：</strong> 類似地，<strong>「警告區塊」</strong>樣式用於建立警告區塊，就好比這樣。</p></div>
 
 <p>除非有特別地指示，否則<em>不要</em>使用 HTML <code>style</code> 屬性來手動套用樣式。如果碰到無法使用預定義地 class ，請在 <a href="https://discourse.mozilla.org/c/mdn">MDN 討論論壇</a>尋求協助。</p>
 
 <h3 id="Code_sample_style_and_formatting">程式碼範例的樣式與格式</h3>
 
 <div class="note notecard">
-<p><strong>注意</strong>：此章節說明透過樣式／格式來影響程式碼如何在 MDN 文章中顯示。如果你需要撰寫程式碼例子的實際指導方針，請參閱<a href="/zh-TW/docs/MDN/Guidelines/Code_guidelines">程式碼範例指導方針</a></p>
+<p><strong>備註：</strong> 此章節說明透過樣式／格式來影響程式碼如何在 MDN 文章中顯示。如果你需要撰寫程式碼例子的實際指導方針，請參閱<a href="/zh-TW/docs/MDN/Guidelines/Code_guidelines">程式碼範例指導方針</a></p>
 </div>
 
 <h4 id="Tabs_and_line_breaks">Tabs 以及換行</h4>
@@ -263,8 +263,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
  <dt>屬性定義</dt>
  <dd>對定義的術語使用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs"><code>htmlattrdef</code></a> 巨集（舉例， \{{htmlattrdef("type")}} ） ，以便它們可以用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs"><code>htmlattrxref</code></a> 巨集（舉例，\{{htmlattrxref("type","element")}} ）的方式被其他頁面連結來參照屬性定義。</dd>
  <dt>屬性值</dt>
- <dd>使用「行內程式碼」樣式來套用 <code>&lt;code&gt;</code> 屬性值，而且不要使用引述標示環繞字串值，除非程式碼範例有此需要。</dd>
- <dd><strong>譬如：</strong>「當 <code>&lt;input&gt;</code> 的 <code>type</code> 屬性被設定為 <code>email</code> 或 <code>tel</code> ……」</dd>
+ <dd>使用「行內程式碼」樣式來套用 <code>&lt;code&gt;</code> 屬性值，而且不要使用引述標示環繞字串值，除非程式碼範例有此需要。
+ <strong>譬如：</strong>「當 <code>&lt;input&gt;</code> 的 <code>type</code> 屬性被設定為 <code>email</code> 或 <code>tel</code> ……」</dd>
 </dl>
 
 <h3 id="Latin_abbreviations">拉丁文縮寫</h3>
@@ -353,7 +353,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 </table>
 
 <div class="note notecard">
-<p><strong>備註</strong>：總是想清楚使用拉丁文縮寫是否真的有效益。某些縮寫甚少使用，讀者根本不明白其意義，而某些甚至會跟其他縮寫產生混淆。</p>
+<p><strong>備註：</strong> 總是想清楚使用拉丁文縮寫是否真的有效益。某些縮寫甚少使用，讀者根本不明白其意義，而某些甚至會跟其他縮寫產生混淆。</p>
 
 <p>若你選擇使用這些縮寫，請確保<em>你</em>能夠正確地使用它們。例如，常見的錯誤是把「 e.g. 」和「 i.e. 」搞混。</p>
 </div>
@@ -404,7 +404,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>在主體文字中使用標準的英文大寫規則以及大寫化「 World Wide Web 」。用小寫的「 web 」（單獨使用或作為修飾）以及「 internet 」是可以接受的。</p>
 
 <div class="notecard note">
-<p><strong>備註</strong>：這項指導方針跟之前的版本有所不同，所以你可能會發現在 MDN 中有多處出現「 Web ］跟「 Internet 」。</p>
+<p><strong>備註：</strong> 這項指導方針跟之前的版本有所不同，所以你可能會發現在 MDN 中有多處出現「 Web ］跟「 Internet 」。</p>
 
 <p>當你在編輯其他變更的時候你可以順手把它也改了，但不需要特別為了改變這些大寫而編輯文章。</p>
 </div>
@@ -456,7 +456,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p><em>A confirmation dialog appears, asking the user if they allow the Web page to make use of their Web cam.</em></p>
 
 <div class="note notecard">
-<p><strong>備註：</strong>： MDN 允許使用這種非常常見的語法（在使用正當性上存在爭議）來彌補英文中缺乏性別中性的詞彙。</p>
+<p><strong>備註：</strong> MDN 允許使用這種非常常見的語法（在使用正當性上存在爭議）來彌補英文中缺乏性別中性的詞彙。</p>
 
 <p>使用複數第三人稱做為性別中立的代名詞是被接受的慣例，常被當作「<a href="https://en.wikipedia.org/wiki/Singular_they">單數的『他們』</a>」。</p>
 </div>

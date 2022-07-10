@@ -203,13 +203,13 @@ Hello #&lt;%= i %&gt;
  <dt><code>md5(string)</code></dt>
  <dd>Returns an MD5 hex digest of the given string.</dd>
  <dt><code>template("name", ["arg0", "arg1", ..., "argN"])</code></dt>
- <dd>Executes and returns the result of the named template with the given list of parameters.</dd>
- <dd>Example: <code>&lt;%- template("warning", ["foo", "bar", "baz"]) %&gt;</code>.</dd>
- <dd>Example using the <code>domxref</code> macro: <code>&lt;%- template("domxref", ["Event.bubbles", "bubbles"]) %&gt;</code>.</dd>
- <dd>This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: <code>&lt;%- template("warning", [$1, $2, "baz"]) %&gt;</code>. If you need to call another template from within a block of code, do not use <code>&lt;%</code> ... <code>%&gt;</code>. Example: <code>myvar = "&lt;li&gt;" + template("LXRSearch", ["ident", "i", $1]) + "&lt;/li&gt;";</code></dd>
+ <dd>Executes and returns the result of the named template with the given list of parameters.
+ Example: <code>&lt;%- template("warning", ["foo", "bar", "baz"]) %&gt;</code>.
+ Example using the <code>domxref</code> macro: <code>&lt;%- template("domxref", ["Event.bubbles", "bubbles"]) %&gt;</code>.
+ This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: <code>&lt;%- template("warning", [$1, $2, "baz"]) %&gt;</code>. If you need to call another template from within a block of code, do not use <code>&lt;%</code> ... <code>%&gt;</code>. Example: <code>myvar = "&lt;li&gt;" + template("LXRSearch", ["ident", "i", $1]) + "&lt;/li&gt;";</code></dd>
  <dt><code>require(name)</code></dt>
- <dd>Loads another template as a module; any output is ignored. Anything assigned to <code>module.exports</code> in the template is returned.</dd>
- <dd>Used in templates like so: <code>&lt;% var my_module = require('MyModule'); %&gt;</code>.</dd>
+ <dd>Loads another template as a module; any output is ignored. Anything assigned to <code>module.exports</code> in the template is returned.
+ Used in templates like so: <code>&lt;% var my_module = require('MyModule'); %&gt;</code>.</dd>
  <dt><code>cacheFn(key, timeout, function_to_cache)</code></dt>
  <dd>Using the given key and cache entry lifetime, cache the results of the given function. Honors the value of <code>env.cache_control</code> to invalidate cache on <code>no-cache</code>, which can be sent by a logged-in user hitting shift-refresh.</dd>
  <dt><code>request</code></dt>
@@ -289,7 +289,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 <p>The reason for this is because DekiScript is case-insensitive when it comes to references to API methods, whereas JavaScript is strict about uppercase and lowercase in references. So, <code>buildAPI()</code> is a hack to try to cover common case variations in DekiScript calls found in legacy templates.</p>
 
 <div class="note">
-<p>With that in mind, please do not use <code>buildAPI()</code> in new modules.</p>
+<p><strong>備註：</strong> With that in mind, please do not use <code>buildAPI()</code> in new modules.</p>
 </div>
 
 <h2 id="Tips_and_caveats">Tips and caveats</h2>
@@ -335,7 +335,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 
 <p>The resulting dialog looks something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14432/Screen%20Shot%202016-11-28%20at%203.08.39%20PM.png" style="height: 289px; width: 500px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/14432/Screen%20Shot%202016-11-28%20at%203.08.39%20PM.png"></p>
 
 <p>Then click the "Add" button to save your new search keyword. From then on, typing your keyword, then a space, then the name of a macro will open that macro in your current tab. So if you used "t" as the keyword, typing <kbd>t ListSubpages</kbd> will show you the page at <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/ListSubpages.ejs"><code>ListSubpages</code></a>.</p>
 
@@ -403,7 +403,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 <pre class="notranslate">&lt;%-mdn.getFileContent(env.files[0])%&gt;
 </pre>
 
-<div class="note"><strong>Note:</strong> You probably don't want to try to embed the contents of a non-text file this way, as the raw contents would be injected as text. This is meant to let you access the contents of text attachments.</div>
+<div class="note"><p><strong>備註：</strong> You probably don't want to try to embed the contents of a non-text file this way, as the raw contents would be injected as text. This is meant to let you access the contents of text attachments.</p></div>
 
 <p>If the file isn't found, an empty string is returned. There is currently no way to tell the difference between an empty file and a nonexistent one. But if you're putting empty files on the wiki, you're doing it wrong.</p>
 
