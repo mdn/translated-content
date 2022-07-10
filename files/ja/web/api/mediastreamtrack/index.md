@@ -16,116 +16,83 @@ tags:
 browser-compat: api.MediaStreamTrack
 translation_of: Web/API/MediaStreamTrack
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p><span class="seoSummary"><strong><code>MediaStreamTrack</code></strong> インターフェイスは、ストリームに含まれる一つのメディアトラックを表現します。一般的に、オーディオやビデオのトラックですが、他の種類のトラックも存在することができます。</span></p>
+**`MediaStreamTrack`** インターフェイスは、ストリームに含まれる一つのメディアトラックを表現します。一般的に、音声や動画のトラックですが、他の種類のトラックも存在することがあります。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+{{InheritanceDiagram}}
 
-<p>以下に示すプロパティに加えて、 <code>MediaStreamTrack</code> は制約可能なプロパティを持っています。これらのプロパティは、 {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} によって設定でき、 {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} と {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} によって取得できます。制約可能なプロパティを用いて適切に動作させるためにはどのようにすればいいかを知りたい場合は、 <a href="/ja/docs/Web/API/Media_Streams_API/Constraints">Capabilities, constraints, and settings</a> を見てください。適切に動作させなかった場合の結果として、あなたが作成したコードは信頼できないものになります。</p>
+## プロパティ
 
-<dl>
- <dt>{{domxref("MediaStreamTrack.contentHint")}}</dt>
- <dd>文字列で、 API 利用者がどのように扱うかをガイドするために、トラックが含んでいるものコンテンツの種類が何であるかのヒントを提供するためにウェブアプリケーションが使用します。</dd>
- <dt>{{domxref("MediaStreamTrack.enabled")}}</dt>
- <dd>論理型で、トラックが有効の場合は <code>true</code> の値になり、メディアソースストリームを描画することができます。トラックが無効の場合は <code>false</code> の値になり、メディアソースストリームに描画されません。トラックの接続が解除された場合、この値は変更することはできますが影響を与えることはありません。
- <div class="note"><strong>メモ:</strong> 標準的なミュート (消音) 機能を実装するには <code>enabled</code> を <code>false</code> にします。 <code>muted</code> プロパティは技術的な問題でメディアがない状態を表します。</div>
- </dd>
- <dt>{{domxref("MediaStreamTrack.id")}} {{readonlyInline}}</dt>
- <dd>トラックの固有識別子 (GUID) を含む {{domxref("DOMString")}} を返します。この識別子はブラウザーによって生成されます。</dd>
- <dt>{{domxref("MediaStreamTrack.isolated")}} {{readonlyInline}}</dt>
- <dd>Returns a Boolean value which is <code>true</code> if the track is <strong>isolated</strong>; that is, the track cannot be accessed by the document that owns the <code>MediaStreamTrack</code>. This happens when the {{domxref("MediaStreamTrack.peerIdentity", "peerIdentity")}} property is set, or if the track comes from a cross-origin source.</dd>
- <dt>{{domxref("MediaStreamTrack.kind")}} {{readonlyInline}}</dt>
- <dd>{{domxref("DOMString")}}を返します。このトラックがオーディオトラックの場合は<code>"audio"</code>が設定され、ビデオトラックの場合は<code>"video"</code>が設定されます。ソースからの関連付けが解除された場合、この値が変更されることはありません。</dd>
- <dt>{{domxref("MediaStreamTrack.label")}} {{readonlyInline}}</dt>
- <dd><code>"internal microphone"</code>のようなトラックソースを識別するユーザエージェントによって割り当てられたラベルを含む{{domxref("DOMString")}}を返します。この文字列は空になることもあり、ソースが接続されていないと空になります。トラックのソースとの関連付けが解除されても、このラベルは変更されません。</dd>
- <dt>{{domxref("MediaStreamTrack.muted")}} {{readonlyInline}}</dt>
- <dd>Booleanの値を返します。トラックがミュートであるかどうかを示します。
- <div class="note"><strong>Note:</strong> You can implement standard "mute" functionality by setting <code>enabled</code> to <code>false</code>, and unmute the media by setting it back to <code>true</code> again.</div>
- </dd>
- <dt>{{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}</dt>
- <dd>Booleanの値を返します。トラックが読み取り専用の場合(ビデオファイルソースやカメラなどの設定を変更することができないもののような)は<code>true</code>を返し、それ以外の場合は<code>false</code>を返します。</dd>
- <dt>{{domxref("MediaStreamTrack.readyState")}} {{readonlyInline}}</dt>
- <dd>トラックの状態を表す列挙型の値を返します。この値は次のどれかになります。
- <ul>
-  <li><code>"live"</code>は入力デバイスが接続されており、ベストエフォートでリアルタイムなデータを提供することを表します。この状態では、<code>MediaStreamTrack.enabled</code>属性を用いることで、データの出力のオンとオフを切り替えることができます。</li>
-  <li><code>"ended"</code>は入力デバイスがこれ以上データを提供することがなく、新しいデータも一切提供されないことを示します。</li>
- </ul>
- </dd>
- <dt>{{domxref("MediaStreamTrack.remote")}} {{obsolete_inline("")}} {{readonlyInline}}</dt>
- <dd>Booleanの値を返します。トラックのソースが{{domxref("RTCPeerConnection")}}の場合は<code>true</code>であり、それ以外は<code>false</code>です。</dd>
-</dl>
+以下に示すプロパティに加えて、 `MediaStreamTrack` は制約可能なプロパティを持っています。これらのプロパティは、 {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} によって設定でき、 {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} と {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} によって取得できます。制約可能なプロパティを用いて適切に動作させるためにはどのようにすればいいかを知りたい場合は、[能力と制約と設定](/ja/docs/Web/API/Media_Streams_API/Constraints)を見てください。適切に動作させなかった場合の結果として、あなたが作成したコードは信頼できないものになります。
 
-<h2 id="メソッド">メソッド</h2>
+- {{domxref("MediaStreamTrack.contentHint")}}
+  - : 文字列で、ウェブアプリケーションが、トラックがどのような種類のコンテンツを含んでいるかについてのヒントを提供し、 API 利用者がどのように扱うべきかをガイドするために使用することがあります。
+- {{domxref("MediaStreamTrack.enabled")}}
 
-<dl>
- <dt>{{domxref("MediaStreamTrack.applyConstraints()")}}</dt>
- <dd><code>MediaStreamTrack</code>の有効な制約可能な値についての許容できる値の範囲を指定します。</dd>
- <dt>{{domxref("MediaStreamTrack.clone()")}}</dt>
- <dd><code>MediaStreamTrack</code>の複製を返します。</dd>
- <dt>{{domxref("MediaStreamTrack.getCapabilities()")}}</dt>
- <dd><code>MediaStreamTrack</code>で有効な制約可能なプロパティの一覧を返します。</dd>
- <dt>{{domxref("MediaStreamTrack.getConstraints()")}}</dt>
- <dd>トラックに設定されている制約を含む{{domxref('MediaTrackConstraints')}}を返します。戻り値は、最後に{{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}を用いて設定した制約に一致します。</dd>
- <dt>{{domxref("MediaStreamTrack.getSettings()")}}</dt>
- <dd><code>MediaStreamTrack</code>の制約可能なプロパティの値を含む{{domxref("MediaTrackSettings")}}オブジェクトを返します。</dd>
- <dt>{{domxref("MediaStreamTrack.stop()")}}</dt>
- <dd>トラックに関連付けられたソースの再生を停止し、ソースとトラックの関連付けを解除します。トラックの状態は<code>ended</code>に設定されます。</dd>
-</dl>
+  - : 論理型で、トラックが有効の場合は `true` の値になり、メディアソースストリームを出力することができます。トラックが無効な場合は `false` の値になり、メディアソースストリームに出力されません。トラックの接続が解除された場合、この値は変更することはできますが、影響を与えることはありません。
 
-<h2 id="Events" name="Events">イベント</h2>
+    > **Note:** 標準的な「ミュート」（消音）機能は `enabled` を `false` に設定することで実装できます。 `muted` プロパティは技術的な問題でメディアがない状態を表します。
 
-<p>これらのイベントを待ち受けするには、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用するか、イベントリスナーをこのインターフェイスの <code>on<em>イベント名</em></code> プロパティに代入するかします。</p>
+- {{domxref("MediaStreamTrack.id")}} {{readonlyInline}}
+  - : トラックの固有識別子 (GUID) を含む文字列を返します。この識別子はブラウザーによって生成されます。
+- {{domxref("MediaStreamTrack.kind")}} {{readonlyInline}}
+  - : このトラックが音声トラックの場合は `"audio"` が設定され、動画トラックの場合は `"video"` が設定される文字列を返します。ソースからの関連付けが解除された場合、この値が変更されることはありません。
+- {{domxref("MediaStreamTrack.label")}} {{readonlyInline}}
+  - : ユーザーエージェントによって割り当てられた、 `"internal microphone"` のようなトラックソースを識別するラベルを含む文字列を返します。この文字列は空になることもあり、ソースが接続されていないと空になります。トラックのソースとの関連付けが解除されても、このラベルは変更されません。
+- {{domxref("MediaStreamTrack.muted")}} {{readonlyInline}}
 
-<dl>
- <dt>{{domxref("MediaStreamTrack/ended_event", "ended")}}</dt>
- <dd>Sent when playback of the track ends (when the value {{domxref("MediaStreamTrack.readyState", "readyState")}} changes to <code>ended</code>).<br>
- Also available using the {{domxref("MediaStreamTrack/onended", "onended")}} event handler property.</dd>
- <dt>{{domxref("MediaStreamTrack/mute_event", "mute")}}</dt>
- <dd>Sent to the <code>MediaStreamTrack</code> when the value of the {{domxref("MediaStreamTrack.muted", "muted")}} property is changed to <code>true</code>, indicating that the track is unable to provide data temporarily (such as when the network is experiencing a service malfunction).<br>
- Also available using the {{domxref("MediaStreamTrack/onmute", "onmute")}} event handler property.</dd>
- <dt>{{domxref("MediaStreamTrack/isolationchange_event", "isolationchange")}}</dt>
- <dd>Sent whenever the value of the {{domxref("MediaStreamTrack.isolated", "isolated")}} property changes due to the document gaining or losing permission to access the track.<br>
- Also available through the {{domxref("MediaStreamTrack/onisolationchange", "onisolationchange")}} event handler property.</dd>
- <dt>{{domxref("MediaStreamTrack/overconstrained_event", "overconstrained")}} {{deprecated_inline}}</dt>
- <dd>Sent when the constraints specified for the track cause the track to be incompatible and therefore to not be used.<br>
- Also available through the {{domxref("MediaStreamTrack/onoverconstrained", "onoverconstrained")}} event handler property.</dd>
- <dt>{{domxref("MediaStreamTrack/unmute_event", "unmute")}}</dt>
- <dd>Sent to the track when data becomes available again, ending the <code>muted</code> state.<br>
- Also available through the {{domxref("MediaStreamTrack/onunmute", "onunmute")}} event handler property.</dd>
-</dl>
+  - : 技術的な問題でこのトラックがメディアデータを提供できないかどうかを示す論理値を返します。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+    > **Note:** 標準的な「ミュート」（消音）機能は `enabled` を `false` に設定することで実装でき、再び `true` に設定することでメディアのミュートを解除することができます。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("WebRTC Identity", "#isolated-track", "Isolated tracks")}}</td>
-   <td>{{Spec2("WebRTC Identity")}}</td>
-   <td>独立トラック対応のための追加プロパティ</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#mediastreamtrack', 'MediaStreamTrack')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+- {{domxref("MediaStreamTrack.readyState")}} {{readonlyInline}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+  - : トラックの状態を表す列挙型の値を返します。この値は次のいずれかになります。
 
-<p>{{Compat("api.MediaStreamTrack")}}</p>
+    - `"live"` は入力機器が接続されており、ベストエフォートでリアルタイムなデータを提供することを表します。この状態では、 {{domxref("MediaStreamTrack.enabled", "enabled")}} 属性を用いることで、データの出力のオンとオフを切り替えることができます。
+    - `"ended"` は入力機器がこれ以上データを提供することがなく、新しいデータも一切提供されないことを示します。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+- {{domxref("MediaStreamTrack.remote")}} {{readonlyInline}} {{deprecated_inline}}
+  - : トラックのソースが {{domxref("RTCPeerConnection")}} の場合は `true` であり、それ以外は `false` となる論理値を返します。
 
-<ul>
- <li><a href="/ja/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a></li>
- <li>{{domxref("MediaStream")}}</li>
-</ul>
+## メソッド
+
+- {{domxref("MediaStreamTrack.applyConstraints()")}}
+  - : `MediaStreamTrack` の制約可能なプロパティについて、理想的な値や許容される値の範囲を指定することができます。
+- {{domxref("MediaStreamTrack.clone()")}}
+  - : `MediaStreamTrack` の複製を返します。
+- {{domxref("MediaStreamTrack.getCapabilities()")}}
+  - : `MediaStreamTrack` で利用できる制約可能なプロパティの一覧を返します。
+- {{domxref("MediaStreamTrack.getConstraints()")}}
+  - : トラックに設定されている制約を含む {{domxref('MediaTrackConstraints')}} を返します。返値は、最後に {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} を用いて設定した制約に一致します。
+- {{domxref("MediaStreamTrack.getSettings()")}}
+  - : `MediaStreamTrack` の制約可能なプロパティの値を含む {{domxref("MediaTrackSettings")}} オブジェクトを返します。
+- {{domxref("MediaStreamTrack.stop()")}}
+  - : トラックに関連付けられたソースの再生を停止し、ソースとトラックの関連付けを解除します。トラックの状態は `ended` に設定されます。
+
+## イベント
+
+これらのイベントを待ち受けするには、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用するか、イベントリスナーをこのインターフェイスの `onイベント名` プロパティに代入するかしてください。。
+
+- {{domxref("MediaStreamTrack/ended_event", "ended")}}
+  - : トラックの再生が終わったとき（{{domxref("MediaStreamTrack.readyState", "readyState")}} の値が `ended` に変化したとき）に送られます
+- {{domxref("MediaStreamTrack/mute_event", "mute")}}
+  - : そのトラックが一時的にデータを提供できなくなったこと（ネットワークに異常が発生した場合など）を示すために {{domxref("MediaStreamTrack.muted", "muted")}} プロパティの値が `true` になったときに `MediaStreamTrack` に送られます。
+- {{domxref("MediaStreamTrack/overconstrained_event", "overconstrained")}} {{deprecated_inline}}
+  - : トラックに指定された制約により、トラックに互換性がなくなり、その結果として使用できない場合に送信されます。
+- {{domxref("MediaStreamTrack/unmute_event", "unmute")}}
+  - : データが再び利用可能になり、 `muted` 状態が終わったときにトラックに送信されます。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API)
+- {{domxref("MediaStream")}}
