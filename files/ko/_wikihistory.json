@@ -3952,21 +3952,6 @@
       "Cho.Eun"
     ]
   },
-  "Web/API/Document/keydown_event": {
-    "modified": "2019-04-15T09:18:19.341Z",
-    "contributors": [
-      "irenesmith",
-      "ExE-Boss",
-      "fscholz",
-      "jinahya"
-    ]
-  },
-  "Web/API/Document/keyup_event": {
-    "modified": "2020-11-24T11:14:25.912Z",
-    "contributors": [
-      "yoonseungho"
-    ]
-  },
   "Web/API/Document/links": {
     "modified": "2019-03-23T22:27:09.273Z",
     "contributors": [
@@ -4254,6 +4239,21 @@
       "dragonist"
     ]
   },
+  "Web/API/Element/keydown_event": {
+    "modified": "2019-04-15T09:18:19.341Z",
+    "contributors": [
+      "irenesmith",
+      "ExE-Boss",
+      "fscholz",
+      "jinahya"
+    ]
+  },
+  "Web/API/Element/keyup_event": {
+    "modified": "2020-11-24T11:14:25.912Z",
+    "contributors": [
+      "yoonseungho"
+    ]
+  },
   "Web/API/Element/outerHTML": {
     "modified": "2020-10-15T22:16:55.354Z",
     "contributors": [
@@ -4282,12 +4282,6 @@
       "fscholz",
       "khalid32",
       "hooriza"
-    ]
-  },
-  "Web/API/Element/select_event": {
-    "modified": "2020-12-10T04:51:39.433Z",
-    "contributors": [
-      "gwanduke"
     ]
   },
   "Web/API/Element/tagName": {
@@ -4714,13 +4708,6 @@
       "jwhitlock"
     ]
   },
-  "Web/API/GlobalEventHandlers/onchange": {
-    "modified": "2020-10-15T22:05:47.826Z",
-    "contributors": [
-      "alattalatta",
-      "chocojoa"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onclick": {
     "modified": "2020-10-15T22:10:25.598Z",
     "contributors": [
@@ -4740,20 +4727,6 @@
       "baleineindigo",
       "alattalatta",
       "chocojoa"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onkeydown": {
-    "modified": "2020-10-15T22:05:49.061Z",
-    "contributors": [
-      "alattalatta",
-      "chocojoa"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onkeyup": {
-    "modified": "2019-03-23T22:48:40.096Z",
-    "contributors": [
-      "teoli",
-      "wizardbear"
     ]
   },
   "Web/API/GlobalEventHandlers/onpointerenter": {
@@ -4844,6 +4817,13 @@
       "cs09g"
     ]
   },
+  "Web/API/HTMLElement/change_event": {
+    "modified": "2020-10-15T22:05:47.826Z",
+    "contributors": [
+      "alattalatta",
+      "chocojoa"
+    ]
+  },
   "Web/API/HTMLElement/click": {
     "modified": "2020-10-15T22:14:46.730Z",
     "contributors": [
@@ -4890,6 +4870,12 @@
       "jsx",
       "teoli",
       "Netaras"
+    ]
+  },
+  "Web/API/HTMLInputElement/select_event": {
+    "modified": "2020-12-10T04:51:39.433Z",
+    "contributors": [
+      "gwanduke"
     ]
   },
   "Web/API/HTMLLIElement": {
@@ -17071,6 +17057,20 @@
     "modified": "2019-03-23T23:26:56.400Z",
     "contributors": [
       "Sheppy"
+    ]
+  },
+  "conflicting/Web/API/Element/keydown_event": {
+    "modified": "2020-10-15T22:05:49.061Z",
+    "contributors": [
+      "alattalatta",
+      "chocojoa"
+    ]
+  },
+  "conflicting/Web/API/Element/keyup_event": {
+    "modified": "2019-03-23T22:48:40.096Z",
+    "contributors": [
+      "teoli",
+      "wizardbear"
     ]
   },
   "conflicting/Web/API/Geolocation/getCurrentPosition": {

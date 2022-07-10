@@ -52,7 +52,7 @@
 /ru/docs/DOM/element	/ru/docs/Web/API/Element
 /ru/docs/DOM/element.dispatchEvent	/ru/docs/Web/API/EventTarget/dispatchEvent
 /ru/docs/DOM/element.getAttribute	/ru/docs/Web/API/Element/getAttribute
-/ru/docs/DOM/element.onkeypress	/ru/docs/Web/API/GlobalEventHandlers/onkeypress
+/ru/docs/DOM/element.onkeypress	/ru/docs/conflicting/Web/API/Element/keypress_event
 /ru/docs/DOM/table	/ru/docs/Web/API/HTMLTableElement
 /ru/docs/DOM/window.requestAnimationFrame	/ru/docs/Web/API/window/requestAnimationFrame
 /ru/docs/DOM:document.createElement	/ru/docs/Web/API/Document/createElement
@@ -381,6 +381,7 @@
 /ru/docs/Web/API/Document/defaultView/resize_event	/ru/docs/Web/API/Window/resize_event
 /ru/docs/Web/API/Document/defaultView/storage_event	/ru/docs/Web/API/Window/storage_event
 /ru/docs/Web/API/Document/domConfig	/ru/docs/Web/API/Document
+/ru/docs/Web/API/Document/keypress_event	/ru/docs/Web/API/Element/keypress_event
 /ru/docs/Web/API/DocumentOrShadowRoot/activeElement	/ru/docs/Web/API/Document/activeElement
 /ru/docs/Web/API/DocumentOrShadowRoot/getSelection	/ru/docs/Web/API/Document/getSelection
 /ru/docs/Web/API/EffectTiming	/ru/docs/Web/API/KeyframeEffect/KeyframeEffect
@@ -397,7 +398,13 @@
 /ru/docs/Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API	/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
 /ru/docs/Web/API/GlobalEventHandlers/onabort	/ru/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /ru/docs/Web/API/GlobalEventHandlers/onblur	/ru/docs/Web/API/Window/blur_event
+/ru/docs/Web/API/GlobalEventHandlers/onchange	/ru/docs/Web/API/HTMLElement/change_event
 /ru/docs/Web/API/GlobalEventHandlers/onfocus	/ru/docs/Web/API/Window/focus_event
+/ru/docs/Web/API/GlobalEventHandlers/onkeydown	/ru/docs/conflicting/Web/API/Element/keydown_event
+/ru/docs/Web/API/GlobalEventHandlers/onkeypress	/ru/docs/conflicting/Web/API/Element/keypress_event
+/ru/docs/Web/API/GlobalEventHandlers/onmousedown	/ru/docs/conflicting/Web/API/Element/mousedown_event
+/ru/docs/Web/API/GlobalEventHandlers/onmouseup	/ru/docs/conflicting/Web/API/Element/mouseup_event
+/ru/docs/Web/API/GlobalEventHandlers/onselect	/ru/docs/Web/API/HTMLInputElement/select_event
 /ru/docs/Web/API/HTMLAudioElement/Audio()	/ru/docs/Web/API/HTMLAudioElement/Audio
 /ru/docs/Web/API/HTMLElement/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/hash	/ru/docs/Web/API/HTMLAnchorElement/hash
@@ -547,7 +554,7 @@
 /ru/docs/Web/Events/gamepaddisconnected	/ru/docs/Web/API/Window/gamepaddisconnected_event
 /ru/docs/Web/Events/hashchange	/ru/docs/Web/API/Window/hashchange_event
 /ru/docs/Web/Events/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
-/ru/docs/Web/Events/keypress	/ru/docs/Web/API/Document/keypress_event
+/ru/docs/Web/Events/keypress	/ru/docs/Web/API/Element/keypress_event
 /ru/docs/Web/Events/load	/ru/docs/Web/API/Window/load_event
 /ru/docs/Web/Events/loadstart	/ru/docs/Web/API/XMLHttpRequest/loadstart_event
 /ru/docs/Web/Events/mousedown	/ru/docs/Web/API/Element/mousedown_event

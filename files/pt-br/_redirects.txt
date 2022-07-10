@@ -544,6 +544,9 @@
 /pt-BR/docs/Web/API/Document/async	/pt-BR/docs/Web/API/XMLDocument/async
 /pt-BR/docs/Web/API/Document/defaultView/popstate_event	/pt-BR/docs/Web/API/Window/popstate_event
 /pt-BR/docs/Web/API/Document/defaultView/resize_event	/pt-BR/docs/Web/API/Window/resize_event
+/pt-BR/docs/Web/API/Document/keydown_event	/pt-BR/docs/Web/API/Element/keydown_event
+/pt-BR/docs/Web/API/Document/keypress_event	/pt-BR/docs/Web/API/Element/keypress_event
+/pt-BR/docs/Web/API/Document/keyup_event	/pt-BR/docs/Web/API/Element/keyup_event
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/activeElement	/pt-BR/docs/Web/API/Document/activeElement
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/pt-BR/docs/Web/API/Document/elementFromPoint
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/getSelection	/pt-BR/docs/Web/API/Document/getSelection
@@ -565,7 +568,9 @@
 /pt-BR/docs/Web/API/FullscreenOptions	/pt-BR/docs/orphaned/Web/API/FullscreenOptions
 /pt-BR/docs/Web/API/GlobalEventHandlers/onabort	/pt-BR/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onblur	/pt-BR/docs/Web/API/Window/blur_event
+/pt-BR/docs/Web/API/GlobalEventHandlers/onchange	/pt-BR/docs/Web/API/HTMLElement/change_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onfocus	/pt-BR/docs/Web/API/Window/focus_event
+/pt-BR/docs/Web/API/GlobalEventHandlers/onkeyup	/pt-BR/docs/conflicting/Web/API/Element/keyup_event
 /pt-BR/docs/Web/API/HTMLContentElement/Seletor	/pt-BR/docs/Web/API/HTMLContentElement/select
 /pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Example
 /pt-BR/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
@@ -702,9 +707,9 @@
 /pt-BR/docs/Web/Events/focusin	/pt-BR/docs/Web/API/Element/focusin_event
 /pt-BR/docs/Web/Events/focusout	/pt-BR/docs/Web/API/Element/focusout_event
 /pt-BR/docs/Web/Events/input	/pt-BR/docs/Web/API/HTMLElement/input_event
-/pt-BR/docs/Web/Events/keydown	/pt-BR/docs/Web/API/Document/keydown_event
-/pt-BR/docs/Web/Events/keypress	/pt-BR/docs/Web/API/Document/keypress_event
-/pt-BR/docs/Web/Events/keyup	/pt-BR/docs/Web/API/Document/keyup_event
+/pt-BR/docs/Web/Events/keydown	/pt-BR/docs/Web/API/Element/keydown_event
+/pt-BR/docs/Web/Events/keypress	/pt-BR/docs/Web/API/Element/keypress_event
+/pt-BR/docs/Web/Events/keyup	/pt-BR/docs/Web/API/Element/keyup_event
 /pt-BR/docs/Web/Events/load	/pt-BR/docs/Web/API/Window/load_event
 /pt-BR/docs/Web/Events/mousedown	/pt-BR/docs/Web/API/Element/mousedown_event
 /pt-BR/docs/Web/Events/mouseenter	/pt-BR/docs/Web/API/Element/mouseenter_event

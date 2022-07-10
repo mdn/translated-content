@@ -4121,31 +4121,6 @@
       "VitorVRS"
     ]
   },
-  "Web/API/Document/keydown_event": {
-    "modified": "2019-04-15T09:18:45.968Z",
-    "contributors": [
-      "irenesmith",
-      "manoelcampos"
-    ]
-  },
-  "Web/API/Document/keypress_event": {
-    "modified": "2019-09-23T02:29:04.664Z",
-    "contributors": [
-      "SphinxKnight",
-      "TiagoEmanuel",
-      "wbamberg",
-      "chrisdavidmills",
-      "JRodrigues13"
-    ]
-  },
-  "Web/API/Document/keyup_event": {
-    "modified": "2019-04-18T03:51:22.396Z",
-    "contributors": [
-      "irenesmith",
-      "fscholz",
-      "thaynacoelho"
-    ]
-  },
   "Web/API/Document/location": {
     "modified": "2019-03-23T22:22:06.393Z",
     "contributors": [
@@ -4412,6 +4387,31 @@
       "rafaelcavalcante",
       "raphaelchaib",
       "belsanpesou"
+    ]
+  },
+  "Web/API/Element/keydown_event": {
+    "modified": "2019-04-15T09:18:45.968Z",
+    "contributors": [
+      "irenesmith",
+      "manoelcampos"
+    ]
+  },
+  "Web/API/Element/keypress_event": {
+    "modified": "2019-09-23T02:29:04.664Z",
+    "contributors": [
+      "SphinxKnight",
+      "TiagoEmanuel",
+      "wbamberg",
+      "chrisdavidmills",
+      "JRodrigues13"
+    ]
+  },
+  "Web/API/Element/keyup_event": {
+    "modified": "2019-04-18T03:51:22.396Z",
+    "contributors": [
+      "irenesmith",
+      "fscholz",
+      "thaynacoelho"
     ]
   },
   "Web/API/Element/matches": {
@@ -4957,13 +4957,6 @@
       "teoli"
     ]
   },
-  "Web/API/GlobalEventHandlers/onchange": {
-    "modified": "2019-03-23T22:28:49.180Z",
-    "contributors": [
-      "nathaliabruno",
-      "cezaraugusto"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onclick": {
     "modified": "2020-10-15T22:17:11.589Z",
     "contributors": [
@@ -4980,13 +4973,6 @@
     "modified": "2019-03-23T22:31:39.576Z",
     "contributors": [
       "mantovani"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onkeyup": {
-    "modified": "2020-10-15T22:03:53.967Z",
-    "contributors": [
-      "Sipmann",
-      "kinkurek"
     ]
   },
   "Web/API/GlobalEventHandlers/onload": {
@@ -5076,6 +5062,13 @@
     "modified": "2019-03-23T22:27:15.059Z",
     "contributors": [
       "DiasNetoJ"
+    ]
+  },
+  "Web/API/HTMLElement/change_event": {
+    "modified": "2019-03-23T22:28:49.180Z",
+    "contributors": [
+      "nathaliabruno",
+      "cezaraugusto"
     ]
   },
   "Web/API/HTMLElement/click": {
@@ -15948,6 +15941,13 @@
     "modified": "2019-03-23T23:35:40.503Z",
     "contributors": [
       "teoli"
+    ]
+  },
+  "conflicting/Web/API/Element/keyup_event": {
+    "modified": "2020-10-15T22:03:53.967Z",
+    "contributors": [
+      "Sipmann",
+      "kinkurek"
     ]
   },
   "conflicting/Web/API/EventTarget/addEventListener": {

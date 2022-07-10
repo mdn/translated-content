@@ -11806,18 +11806,6 @@
       "Shoot"
     ]
   },
-  "Web/API/Document/keydown_event": {
-    "modified": "2020-10-15T22:21:34.130Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/API/Document/keyup_event": {
-    "modified": "2020-10-15T22:21:32.585Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/Document/lastModified": {
     "modified": "2020-10-17T14:40:03.352Z",
     "contributors": [
@@ -12822,6 +12810,28 @@
       "shuuji3"
     ]
   },
+  "Web/API/Element/keydown_event": {
+    "modified": "2020-10-15T22:21:34.130Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/API/Element/keypress_event": {
+    "modified": "2020-10-15T21:22:57.650Z",
+    "contributors": [
+      "Marsf",
+      "SphinxKnight",
+      "fscholz",
+      "khalid32",
+      "ethertank"
+    ]
+  },
+  "Web/API/Element/keyup_event": {
+    "modified": "2020-10-15T22:21:32.585Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
   "Web/API/Element/localName": {
     "modified": "2019-03-23T22:26:35.086Z",
     "contributors": [
@@ -13056,12 +13066,6 @@
   },
   "Web/API/Element/scroll_event": {
     "modified": "2020-11-21T10:22:05.855Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/API/Element/select_event": {
-    "modified": "2020-10-15T22:27:56.033Z",
     "contributors": [
       "mfuji09"
     ]
@@ -14192,13 +14196,6 @@
       "genzai"
     ]
   },
-  "Web/API/GlobalEventHandlers/onchange": {
-    "modified": "2020-10-15T21:36:50.058Z",
-    "contributors": [
-      "Marsf",
-      "Kenju"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onclick": {
     "modified": "2020-10-15T22:15:07.656Z",
     "contributors": [
@@ -14283,29 +14280,6 @@
       "mpcjazz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onkeydown": {
-    "modified": "2020-10-15T22:24:55.292Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onkeypress": {
-    "modified": "2020-10-15T21:22:57.650Z",
-    "contributors": [
-      "Marsf",
-      "SphinxKnight",
-      "fscholz",
-      "khalid32",
-      "ethertank"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onkeyup": {
-    "modified": "2020-10-15T22:25:00.881Z",
-    "contributors": [
-      "Marsf"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onload": {
     "modified": "2019-03-23T23:29:36.980Z",
     "contributors": [
@@ -14324,46 +14298,6 @@
     "modified": "2020-10-15T22:20:35.103Z",
     "contributors": [
       "Wind1808"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onmouseenter": {
-    "modified": "2020-10-15T22:35:16.847Z",
-    "contributors": [
-      "mpcjazz"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onmouseleave": {
-    "modified": "2020-10-15T22:35:16.567Z",
-    "contributors": [
-      "mpcjazz"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onmousemove": {
-    "modified": "2020-10-15T21:38:10.704Z",
-    "contributors": [
-      "mpcjazz",
-      "FumioNonaka"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onmouseout": {
-    "modified": "2020-10-15T22:35:17.642Z",
-    "contributors": [
-      "mpcjazz"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onmouseover": {
-    "modified": "2020-10-15T22:35:17.521Z",
-    "contributors": [
-      "mpcjazz"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onmouseup": {
-    "modified": "2020-10-15T21:23:46.743Z",
-    "contributors": [
-      "mpcjazz",
-      "fscholz",
-      "AshfaqHossain",
-      "ethertank"
     ]
   },
   "Web/API/GlobalEventHandlers/onplaying": {
@@ -14433,15 +14367,6 @@
     "contributors": [
       "mfuji09",
       "Kenju"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onselect": {
-    "modified": "2020-10-15T21:23:44.292Z",
-    "contributors": [
-      "sutara79",
-      "teoli",
-      "khalid32",
-      "ethertank"
     ]
   },
   "Web/API/GlobalEventHandlers/onselectionchange": {
@@ -15339,6 +15264,12 @@
     "modified": "2020-10-15T22:34:38.674Z",
     "contributors": [
       "silverskyvicto"
+    ]
+  },
+  "Web/API/HTMLInputElement/select_event": {
+    "modified": "2020-10-15T22:27:56.033Z",
+    "contributors": [
+      "mfuji09"
     ]
   },
   "Web/API/HTMLInputElement/setRangeText": {
@@ -46757,6 +46688,59 @@
       "mfuji09"
     ]
   },
+  "conflicting/Web/API/Element/keydown_event": {
+    "modified": "2020-10-15T22:24:55.292Z",
+    "contributors": [
+      "mfuji09",
+      "Marsf"
+    ]
+  },
+  "conflicting/Web/API/Element/keyup_event": {
+    "modified": "2020-10-15T22:25:00.881Z",
+    "contributors": [
+      "Marsf"
+    ]
+  },
+  "conflicting/Web/API/Element/mouseenter_event": {
+    "modified": "2020-10-15T22:35:16.847Z",
+    "contributors": [
+      "mpcjazz"
+    ]
+  },
+  "conflicting/Web/API/Element/mouseleave_event": {
+    "modified": "2020-10-15T22:35:16.567Z",
+    "contributors": [
+      "mpcjazz"
+    ]
+  },
+  "conflicting/Web/API/Element/mousemove_event": {
+    "modified": "2020-10-15T21:38:10.704Z",
+    "contributors": [
+      "mpcjazz",
+      "FumioNonaka"
+    ]
+  },
+  "conflicting/Web/API/Element/mouseout_event": {
+    "modified": "2020-10-15T22:35:17.642Z",
+    "contributors": [
+      "mpcjazz"
+    ]
+  },
+  "conflicting/Web/API/Element/mouseover_event": {
+    "modified": "2020-10-15T22:35:17.521Z",
+    "contributors": [
+      "mpcjazz"
+    ]
+  },
+  "conflicting/Web/API/Element/mouseup_event": {
+    "modified": "2020-10-15T21:23:46.743Z",
+    "contributors": [
+      "mpcjazz",
+      "fscholz",
+      "AshfaqHossain",
+      "ethertank"
+    ]
+  },
   "conflicting/Web/API/Element/touchcancel_event": {
     "modified": "2020-11-13T00:53:08.096Z",
     "contributors": [
@@ -46844,6 +46828,13 @@
       "unarist"
     ]
   },
+  "conflicting/Web/API/HTMLElement/change_event": {
+    "modified": "2020-10-15T21:36:50.058Z",
+    "contributors": [
+      "Marsf",
+      "Kenju"
+    ]
+  },
   "conflicting/Web/API/HTMLFormElement/reset_event": {
     "modified": "2019-03-23T23:29:30.841Z",
     "contributors": [
@@ -46856,6 +46847,15 @@
     "modified": "2019-03-23T22:27:32.009Z",
     "contributors": [
       "MakeNowJust"
+    ]
+  },
+  "conflicting/Web/API/HTMLInputElement/select_event": {
+    "modified": "2020-10-15T21:23:44.292Z",
+    "contributors": [
+      "sutara79",
+      "teoli",
+      "khalid32",
+      "ethertank"
     ]
   },
   "conflicting/Web/API/HTMLMediaElement/canplay_event": {
