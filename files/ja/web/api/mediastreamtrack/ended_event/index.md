@@ -1,58 +1,86 @@
 ---
-title: MediaStreamTrack.onended
+title: 'MediaStreamTrack: ended イベント'
 slug: Web/API/MediaStreamTrack/ended_event
-translation_of: Web/API/MediaStreamTrack/onended
+page-type: web-api-event
+tags:
+  - Audio
+  - Event
+  - HTML DOM
+  - HTMLMediaElement
+  - Media
+  - Media Streams API
+  - Reference
+  - Video
+  - Web Audio API
+  - ended
+browser-compat: api.MediaStreamTrack.ended_event
+translation_of: Web/API/MediaStreamTrack/ended_event
 original_slug: Web/API/MediaStreamTrack/onended
 ---
-<p>{{ APIRef("Media Capture and Streams") }}</p>
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
-<p><code><strong>MediaStreamTrack.onended</strong></code> イベントハンドラは<code><a href="/ja/docs/Web/Reference/Events/ended_(MediaStream)" rel="nofollow" title="/ja/docs/Web/Reference/Events/ended_(MediaStream)">ended</a></code>イベントが発生した時に実行する<code><a href="/ja/docs/Web/API/EventHandler" rel="nofollow" title="この項目についての文書はまだ書かれていません。書いてみませんか？">EventHandler</a></code>の関数です。このイベントは、<a href="/ja/docs/Web/API/MediaStreamTrack" title="MediaStreamTrack インタフェースは、ストリームに含まれる一つのメディアトラックを表現します。 一般的に、オーディオやビデオのトラックですが、他の種類のトラックも存在することができます。"><code>MediaStreamTrack</code></a>オブジェクトのソースが、これ以上データを提供することがないか、ユーザーの操作によって許可が無効になったか、ソースデバイスが取り出されたか、リモートのピアがデータの送信を停止した時に発生します。</p>
+**`ended`** は {{domxref("MediaStreamTrack")}} インターフェイスのイベントで、メディアの終端に到達したため、あるいはそれ以上のデータが利用できないために再生やストリーミングが停止したときに発行さ れます。
 
-<h2 id="文法">文法</h2>
+このイベントはキャンセル不可で、バブリングしません。
 
-<pre class="syntaxbox"><em>MediaStreamTrack</em>.onended = <em>function</em>;
-</pre>
+## 構文
 
-<h3 id="値">値</h3>
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-<p>{{event("ended")}}イベントが発生した時の実行する処理の関数を{{event("Event_handlers", "event handler")}}として設定します。このイベントハンドラーの関数は1つのパラメータ持ちます。このパラメータはイベントオブジェクトであり、単純な{{domxref("Event")}}のオブジェクトです。</p>
+```js
+addEventListener('ended', event => { });
 
-<h2 id="例">例</h2>
+onended = event => { };
+```
 
-<p>この例では、endedイベントのイベントハンドラを設定しています。このイベントハンドラでは、トラックがアクティブでない状態を示すために画面上のアイコンを変更します。</p>
+## イベント型
 
-<pre class="brush: js">track.onended = function(event) {
+一般的な {{domxref("Event")}} です。
+
+## 使用上のメモ
+
+`ended` イベントは、メディアストリームトラックのソースがストリームのデータ送信を恒久的に停止したときに発行されます。これが起こるには、以下のような様々な方法があります。
+
+- 送信できるデータが残っていない。
+- ユーザーがデータ送信に必要な権限を剥奪した。
+- 送信元データを生成していたハードウェアが取り外されたか、排出された。
+- リモート通信相手がデータの送信を永久に停止した。メディアを
+
+## 例
+
+この例では、 `ended` イベントのイベントハンドラーを設定しています。このイベントハンドラーでは、トラックがアクティブでない状態を示すために画面上のアイコンを変更します。
+
+```js
+track.addEventListener('ended', () => {
+  let statusElem = document.getElementById("status-icon");
+  statusElem.src = "/images/stopped-icon.png";
+})
+```
+
+`onended` プロパティを使用してイベントハンドラーを設定することもできます。
+
+```js
+track.onended = function() {
   let statusElem = document.getElementById("status-icon");
 
   statusElem.src = "/images/stopped-icon.png";
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Media Capture', '#widl-MediaStreamTrack-onended', 'MediaStreamTrack.onended') }}</td>
-   <td>{{ Spec2('Media Capture') }}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaStreamTrack.onended")}}</p>
+{{Compat}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連情報
 
-<ul>
- <li>{{event("ended")}} イベント、およびその型である{{domxref("Event")}}.</li>
-</ul>
+- HTMLMediaElement の {{domxref("HTMLMediaElement.playing_event", 'playing')}} イベント
+- HTMLMediaElement の {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} イベント
+- HTMLMediaElement の {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} イベント
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}
+- HTMLMediaElement の {{domxref("HTMLMediaElement.ended_event", 'ended')}} イベント
+- AudioScheduledSourceNode の {{domxref("AudioScheduledSourceNode.ended_event", 'ended')}} イベント
