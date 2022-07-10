@@ -5,499 +5,435 @@ slug: >-
 translation_of: >-
   MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
 ---
-<div>
-<p>{{MDNSidebar}}</p>
+{{MDNSidebar}}
 
-<p>在编写有关 API 的文档时，信息来源很多：规范描述了应该实现的内容以及模型，实现描述了实际放在浏览器中的内容。WebIDL 文件是一种非常简洁的方式，可以提供很多（但不是全部）有关 API 的信息。本文档提供了有助于理解 WebIDL 语法的参考。</p>
+在编写有关 API 的文档时，信息来源很多：规范描述了应该实现的内容以及模型，实现描述了实际放在浏览器中的内容。WebIDL 文件是一种非常简洁的方式，可以提供很多（但不是全部）有关 API 的信息。本文档提供了有助于理解 WebIDL 语法的参考。
 
-<p>IDL 代表<em><strong>接口定义语言</strong></em>，它用于描述 API。在更广泛的计算领域，有几种 IDL。在浏览器领域，我们使用的 IDL 称为<em>WebIDL</em>。有两种 WebIDL 可用：WebIDL 规范中给出的一种，以及在浏览器中实现的一种。规范是规范引用，浏览器 WebIDL 描述了在特定浏览器中实际实现的内容，并包含其他内容，例如注释和有关非标准元素的信息。</p>
-</div>
+IDL 代表**_接口定义语言_**，它用于描述 API。在更广泛的计算领域，有几种 IDL。在浏览器领域，我们使用的 IDL 称为*WebIDL*。有两种 WebIDL 可用：WebIDL 规范中给出的一种，以及在浏览器中实现的一种。规范是规范引用，浏览器 WebIDL 描述了在特定浏览器中实际实现的内容，并包含其他内容，例如注释和有关非标准元素的信息。
 
-<h2 id="在哪里可以找到WebIDL文件">在哪里可以找到 WebIDL 文件</h2>
+## 在哪里可以找到 WebIDL 文件
 
-<p>WebIDL 可以在多个位置找到：</p>
+WebIDL 可以在多个位置找到：
 
-<ul>
- <li>每个规范在文本中都包含 WebIDL：它是一种传达精确定义的非常方便的方法。这些描述了 API 的语法。虽然是规范参考，但我们必须记住，它们可能与实际实施不同。在 MDN 上，我们希望实用并记录 Web 平台的真正含义，而不是理想应该是什么。因此，请仔细检查实现中的内容（如果发现错误，请不要犹豫，立即提交）。</li>
- <li>三个浏览器引擎使用（修改）WebIDL 作为其工具链的一部分：Gecko，Chromium / Blink 和 WebCore / WebKit。Edge 在内部使用它，但遗憾的是它们不公开（它会帮助我们很多）。
-  <ul>
-   <li>对于 Gecko，所有 WebIDL 文件都分组在一个目录中：<a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/">https://dxr.mozilla.org/mozilla-central/source/dom/webidl/</a> </li>
-   <li>他们的延伸是<code>.webidl</code>。<code>*.idl</code>Gecko 源代码树中还有其他  文件，但它们不是 WebIDL，因此您可以忽略它们。旧版本的 Gecko 有一些 WebIDL 分散在某些地方，甚至可能使用 Mozilla 的 IDL 而不是 WebIDL 来描述一些 Web 界面，但这在任何最近的 Gecko 代码中都不会成为问题。</li>
-   <li>对于 Chromium，它们分散在源代码中，所以你需要多花点功夫：例如<a href="http://src.chromium.org/viewvc/blink/trunk/Source/modules/mediastream/MediaStream.idl">http://src.chromium.org/viewvc/blink/trunk/Source/modules/mediastream/MediaStream.idl</a></li>
-   <li>同样，WebCore 正如预期的那样，因为 Chromium 是从它分叉出来的，例如<a href="https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl">https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl</a> </li>
-  </ul>
- </li>
-</ul>
+- 每个规范在文本中都包含 WebIDL：它是一种传达精确定义的非常方便的方法。这些描述了 API 的语法。虽然是规范参考，但我们必须记住，它们可能与实际实施不同。在 MDN 上，我们希望实用并记录 Web 平台的真正含义，而不是理想应该是什么。因此，请仔细检查实现中的内容（如果发现错误，请不要犹豫，立即提交）。
+- 三个浏览器引擎使用（修改）WebIDL 作为其工具链的一部分：Gecko，Chromium / Blink 和 WebCore / WebKit。Edge 在内部使用它，但遗憾的是它们不公开（它会帮助我们很多）。
 
-<h2 id="Different_dialects_of_WebIDL">Different dialects of WebIDL</h2>
+  - 对于 Gecko，所有 WebIDL 文件都分组在一个目录中：<https://dxr.mozilla.org/mozilla-central/source/dom/webidl/>
+  - 他们的延伸是`.webidl`。`*.idl`Gecko 源代码树中还有其他 文件，但它们不是 WebIDL，因此您可以忽略它们。旧版本的 Gecko 有一些 WebIDL 分散在某些地方，甚至可能使用 Mozilla 的 IDL 而不是 WebIDL 来描述一些 Web 界面，但这在任何最近的 Gecko 代码中都不会成为问题。
+  - 对于 Chromium，它们分散在源代码中，所以你需要多花点功夫：例如<http://src.chromium.org/viewvc/blink/trunk/Source/modules/mediastream/MediaStream.idl>
+  - 同样，WebCore 正如预期的那样，因为 Chromium 是从它分叉出来的，例如<https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl>
 
-<p>WebIDL is defined in <a href="https://heycam.github.io/webidl/">its specification</a>. But it has been designed to be extended to convey more information, and browser vendors have done so:</p>
+## Different dialects of WebIDL
 
-<ul>
- <li>For Gecko, MDN has the <a href="/en-US/docs/Mozilla/WebIDL_bindings">documentation</a> of its dialectal WebIDL.</li>
- <li>For Chromium, Google also created a <a href="https://www.chromium.org/blink/webidl">document</a> to describe its extensions.</li>
- <li>For WebCore, Apple also made available a <a href="https://trac.webkit.org/wiki/WebKitIDL">page</a> for its dialect.</li>
-</ul>
+WebIDL is defined in [its specification](https://heycam.github.io/webidl/). But it has been designed to be extended to convey more information, and browser vendors have done so:
 
-<div class="note">
-<p><strong>备注：</strong> We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.</p>
-</div>
+- For Gecko, MDN has the [documentation](/en-US/docs/Mozilla/WebIDL_bindings) of its dialectal WebIDL.
+- For Chromium, Google also created a [document](https://www.chromium.org/blink/webidl) to describe its extensions.
+- For WebCore, Apple also made available a [page](https://trac.webkit.org/wiki/WebKitIDL) for its dialect.
 
-<h2 id="Interfaces">Interfaces</h2>
+> **备注：** We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.
 
-<p>This section explains the WebIDL syntax that describes overall API features.</p>
+## Interfaces
 
-<h3 id="Name_of_the_interface">Name of the interface</h3>
+This section explains the WebIDL syntax that describes overall API features.
 
-<p>The interface name is the string that appears after the keyword <code>interface</code><em> </em>and before the next opening bracket (<code>'{'</code>) or colon (<code>':'</code>).</p>
+### Name of the interface
 
-<pre class="syntaxbox"><strong>interface</strong> URL {};</pre>
+The interface name is the string that appears after the keyword `interface` and before the next opening bracket (`'{'`) or colon (`':'`).
 
-<p>Each WebIDL interface, being a true interface or a mixin, has its own page in the documentation, listing every constructor, property and method defined for it.</p>
+    interface URL {};
 
-<h3 id="Inheritance_chain">Inheritance chain</h3>
+Each WebIDL interface, being a true interface or a mixin, has its own page in the documentation, listing every constructor, property and method defined for it.
 
-<p>The parent, if any, of a given interface is defined after the interface name, following a colon (<code>':'</code>). There can be only one parent per interface.</p>
+### Inheritance chain
 
-<pre class="syntaxbox">interface HTMLMediaElement : <strong>HTMLElement</strong> {…}</pre>
+The parent, if any, of a given interface is defined after the interface name, following a colon (`':'`). There can be only one parent per interface.
 
-<p>The inheritance chain is listed automatically in the sidebar (using the \{{APIRef}} macro). It can also be added as an SVG image via the macro \{{InheritanceDiagram}}.</p>
+    interface HTMLMediaElement : HTMLElement {…}
 
-<h3 id="Mixins">Mixins</h3>
+The inheritance chain is listed automatically in the sidebar (using the \\{{APIRef}} macro). It can also be added as an SVG image via the macro \\{{InheritanceDiagram}}.
 
-<p>Some properties or methods are available to several interfaces. To prevent redefinition they are defined in special WebIDL interfaces called <em>mixins</em>. In the WebIDL, they are prefixed using the <code>[NoInterfaceObject]</code> annotation. The name of a mixin, <code>Body</code> in the following example, doesn't appear in JavaScript.</p>
+### Mixins
 
-<pre class="syntaxbox"><strong>[NoInterfaceObject]</strong>
-   <strong>interface</strong> Body {…}</pre>
+Some properties or methods are available to several interfaces. To prevent redefinition they are defined in special WebIDL interfaces called _mixins_. In the WebIDL, they are prefixed using the `[NoInterfaceObject]` annotation. The name of a mixin, `Body` in the following example, doesn't appear in JavaScript.
 
-<p>For documentation purposes, we create a mixin page, with the same structure as an interface page. As they are not true interfaces, the word <em>interface</em> is not used — <em>mixin</em> is used instead.</p>
+    [NoInterfaceObject]
+       interface Body {…}
 
-<p>Mixin methods and properties are listed in the same way as regular methods and properties:</p>
+For documentation purposes, we create a mixin page, with the same structure as an interface page. As they are not true interfaces, the word _interface_ is not used — _mixin_ is used instead.
 
-<ul>
- <li>They have their own pages, prefixed with the mixin name. E.g {{domxref('Body.bodyUsed')}} or {{domxref('Body.blob()')}}.</li>
- <li>They are listed on the interface page when the interface <em>implements</em> the mixin. Unlike regular properties and methods, they are prefixed with the mixin name and not the interface name. You can see <code>Body</code> properties and methods listed on both {{domxref('Request')}} and {{domxref('Response')}} interfaces, as they both implement the <code>Body</code> mixin.</li>
-</ul>
+Mixin methods and properties are listed in the same way as regular methods and properties:
 
-<p>Mixins implemented on an interface are defined using the <code>implements</code> keyword.</p>
+- They have their own pages, prefixed with the mixin name. E.g {{domxref('Body.bodyUsed')}} or {{domxref('Body.blob()')}}.
+- They are listed on the interface page when the interface _implements_ the mixin. Unlike regular properties and methods, they are prefixed with the mixin name and not the interface name. You can see `Body` properties and methods listed on both {{domxref('Request')}} and {{domxref('Response')}} interfaces, as they both implement the `Body` mixin.
 
-<pre class="syntaxbox">Request <strong>implements</strong> Body;
-Response <strong>implements</strong> Body;</pre>
+Mixins implemented on an interface are defined using the `implements` keyword.
 
-<div class="note">
-<p><strong>备注：</strong> Mixin names do not appear in a Web developer console. We shouldn't show them, but we currently do this as it saves us from duplicating content, which would lead to a maintenance issue. We do this if the mixin is only used in one interface (such cases are bugs in the relevant specs — they shouldn't be defined as mixins, but as partial interfaces.)</p>
-</div>
+    Request implements Body;
+    Response implements Body;
 
-<h3 id="Availability_in_workers">Availability in workers</h3>
+> **备注：** Mixin names do not appear in a Web developer console. We shouldn't show them, but we currently do this as it saves us from duplicating content, which would lead to a maintenance issue. We do this if the mixin is only used in one interface (such cases are bugs in the relevant specs — they shouldn't be defined as mixins, but as partial interfaces.)
 
-<p>Availability in Web workers (of any type) and on the Window scope is defined using an annotation: <code>[Exposed=(Window,Worker)]</code>. The annotation applies to the partial interface it is listed with. If no annotation is available, the default value is <code>Window</code>.</p>
+### Availability in workers
 
-<pre class="syntaxbox"><strong>[Exposed=(Window,Worker)]</strong>
-interface Performance {
-   [DependsOn=DeviceState, Affects=Nothing]<a class="l d1" href="http://mxr.mozilla.org/mozilla-central/source/dom/webidl/Performance.webidl#19">
-</a>   DOMHighResTimeStamp now();
-};
+Availability in Web workers (of any type) and on the Window scope is defined using an annotation: `[Exposed=(Window,Worker)]`. The annotation applies to the partial interface it is listed with. If no annotation is available, the default value is `Window`.
 
-<strong>[Exposed=Window]</strong>
-partial interface Performance {
-   [Constant]
-   readonly attribute PerformanceTiming timing;
-   [Constant]
-   readonly attribute PerformanceNavigation navigation;
+    [Exposed=(Window,Worker)]
+    interface Performance {
+       [DependsOn=DeviceState, Affects=Nothing]
+       DOMHighResTimeStamp now();
+    };
 
-   jsonifier;
-};</pre>
+    [Exposed=Window]
+    partial interface Performance {
+       [Constant]
+       readonly attribute PerformanceTiming timing;
+       [Constant]
+       readonly attribute PerformanceNavigation navigation;
 
-<p>In this case <code>Performance.now()</code> is available on the <code>Window</code> scope and to any worker, while <code>Performance.timing</code>, <code>Performance.navigation</code> and <code>Performance.toJSON()</code> are not available to Web workers.</p>
+       jsonifier;
+    };
 
-<p>The most common values for the <code>[Exposed]</code> are:</p>
+In this case `Performance.now()` is available on the `Window` scope and to any worker, while `Performance.timing`, `Performance.navigation` and `Performance.toJSON()` are not available to Web workers.
 
-<dl>
- <dt><code>Window</code></dt>
- <dd>The partial interface is available to the {{domxref('Window')}} global scope.</dd>
- <dt><code>Worker</code></dt>
- <dd>The partial interface is available to any kind of worker, that is if the global scope is a descendant of {{domxref('WorkerGlobalScope')}} — {{domxref('DedicatedWorkerGlobalScope')}}, {{domxref('SharedWorkerGlobalScope')}}, or {{domxref('ServiceWorkerGlobalScope')}} (It also is available to <code>ChromeWorker</code>, but we don't document this as they are not visible on the Web and are internal to Firefox.)</dd>
- <dt><code>DedicatedWorker</code></dt>
- <dd>The partial interface is available to the {{domxref('DedicatedWorkerGlobalScope')}} only.<code> </code></dd>
- <dt><code>SharedWorker</code></dt>
- <dd>The partial interface is available to the {{domxref('SharedWorkerGlobalScope')}} only.</dd>
- <dt><code>ServiceWorker</code></dt>
- <dd>The partial interface is available to the {{domxref('ServiceWorkerGlobalScope')}} only.</dd>
-</dl>
+The most common values for the `[Exposed]` are:
 
-<p>Another value is possible, like <code>System</code>, but this has a <a href="/en-US/docs/Mozilla/WebIDL_bindings#Exposed">special meaning</a> and doesn't need to be documented.</p>
+- `Window`
+  - : The partial interface is available to the {{domxref('Window')}} global scope.
+- `Worker`
+  - : The partial interface is available to any kind of worker, that is if the global scope is a descendant of {{domxref('WorkerGlobalScope')}} — {{domxref('DedicatedWorkerGlobalScope')}}, {{domxref('SharedWorkerGlobalScope')}}, or {{domxref('ServiceWorkerGlobalScope')}} (It also is available to `ChromeWorker`, but we don't document this as they are not visible on the Web and are internal to Firefox.)
+- `DedicatedWorker`
+  - : The partial interface is available to the {{domxref('DedicatedWorkerGlobalScope')}} only.``
+- `SharedWorker`
+  - : The partial interface is available to the {{domxref('SharedWorkerGlobalScope')}} only.
+- `ServiceWorker`
+  - : The partial interface is available to the {{domxref('ServiceWorkerGlobalScope')}} only.
 
-<p>Note that these possible values are themselves defined in WebIDL files. Interfaces may have a <code>[Global=xyz]</code> annotation. It means that when an object of this type is used as a global scope, any interface, property or method, with <code>xyz</code> as a value of <code>[Exposed]</code> is available.</p>
+Another value is possible, like `System`, but this has a [special meaning](/en-US/docs/Mozilla/WebIDL_bindings#Exposed) and doesn't need to be documented.
 
-<pre class="syntaxbox">[Global=(Worker,DedicatedWorker), Exposed=DedicatedWorker]
-interface DedicatedWorkerGlobalScope : WorkerGlobalScope {…}</pre>
+Note that these possible values are themselves defined in WebIDL files. Interfaces may have a `[Global=xyz]` annotation. It means that when an object of this type is used as a global scope, any interface, property or method, with `xyz` as a value of `[Exposed]` is available.
 
-<p>Here, it is defined that when the global scope is of type <code>DedicatedWorkerGlobalScope</code>, that is if we are in a dedicated worker, any interface, property or method exposed – using the <code>[Exposed]</code> annotation – to <code>Worker</code> or <code>DedicatedWorker</code> is available.</p>
+    [Global=(Worker,DedicatedWorker), Exposed=DedicatedWorker]
+    interface DedicatedWorkerGlobalScope : WorkerGlobalScope {…}
 
-<p>Even the primary global is defined in WebIDL. The primary global is the value of an <code>[Exposed]</code> annotation when not present. This is defined using the <code>[PrimaryGlobal]</code> annotation and is present on {{domxref('Window')}}:</p>
+Here, it is defined that when the global scope is of type `DedicatedWorkerGlobalScope`, that is if we are in a dedicated worker, any interface, property or method exposed – using the `[Exposed]` annotation – to `Worker` or `DedicatedWorker` is available.
 
-<pre class="syntaxbox">[PrimaryGlobal, NeedResolve]
-/*sealed*/ interface Window : EventTarget {…}</pre>
+Even the primary global is defined in WebIDL. The primary global is the value of an `[Exposed]` annotation when not present. This is defined using the `[PrimaryGlobal]` annotation and is present on {{domxref('Window')}}:
 
-<h3 id="Preferences">Preferences</h3>
+    [PrimaryGlobal, NeedResolve]
+    /*sealed*/ interface Window : EventTarget {…}
 
-<div class="note">
-<p><strong>备注：</strong> this information is specific to Gecko and should only be used in the Browser compatibility section.</p>
-</div>
+### Preferences
 
-<p>In Gecko, the availability of a partial interface, including its constructor, properties and methods may be controlled by a preference (usually called a "pref"). This is marked in the WebIDL too.</p>
+> **备注：** this information is specific to Gecko and should only be used in the Browser compatibility section.
 
-<pre class="syntaxbox"><strong>[Pref="media.webspeech.synth.enabled"]</strong>
-interface SpeechSynthesis {
-   readonly attribute boolean pending;
-   readonly attribute boolean speaking;
-   readonly attribute boolean paused;
-};</pre>
+In Gecko, the availability of a partial interface, including its constructor, properties and methods may be controlled by a preference (usually called a "pref"). This is marked in the WebIDL too.
 
-<p>Here <code>media.webspeech.synth.enabled</code> controls the <code>SpeechSynthesis</code> interface and its properties (the full listing has more than 3.)</p>
+    [Pref="media.webspeech.synth.enabled"]
+    interface SpeechSynthesis {
+       readonly attribute boolean pending;
+       readonly attribute boolean speaking;
+       readonly attribute boolean paused;
+    };
 
-<div class="note">
-<p><strong>备注：</strong> the default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)</p>
-</div>
+Here `media.webspeech.synth.enabled` controls the `SpeechSynthesis` interface and its properties (the full listing has more than 3.)
 
-<h2 id="Properties">Properties</h2>
+> **备注：** the default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
 
-<p>You can recognize the definition of a property by the presence of the <code>attribute</code> keyword.</p>
+## Properties
 
-<h3 id="Name_of_the_property">Name of the property</h3>
+You can recognize the definition of a property by the presence of the `attribute` keyword.
 
-<pre class="syntaxbox">readonly attribute MediaError? <strong>error</strong>;</pre>
+### Name of the property
 
-<p>In the above example the name of the property is <code>error</code>; in the docs we will refer to it as <code>HTMLMediaElement.error</code> as it belongs to the <code>HTMLMediaElement</code> interface. Linking to the page is either done <strong>with</strong> the interface prefix using \{{domxref('HTMLMediaElement.error')}} or <strong>without</strong> the prefix using \{{domxref('HTMLMediaElement.error', 'error')}} when the context is obvious and unambiguous.</p>
+    readonly attribute MediaError? error;
 
-<h3 id="Type_of_the_property">Type of the property</h3>
+In the above example the name of the property is `error`; in the docs we will refer to it as `HTMLMediaElement.error` as it belongs to the `HTMLMediaElement` interface. Linking to the page is either done **with** the interface prefix using \\{{domxref('HTMLMediaElement.error')}} or **without** the prefix using \\{{domxref('HTMLMediaElement.error', 'error')}} when the context is obvious and unambiguous.
 
-<pre class="syntaxbox">readonly attribute <strong>MediaError?</strong> error;</pre>
+### Type of the property
 
-<p>The property value is an object of type <code>MediaError</code>. The question mark (<code>'?'</code>) indicates that it can take a value of <code>null</code>, and the documentation must explain <em>when</em> this may occur. If no question mark is present, the <code>error</code> property can't be <code>null</code>.</p>
+    readonly attribute MediaError? error;
 
-<h3 id="Writing_permissions_on_the_property">Writing permissions on the property</h3>
+The property value is an object of type `MediaError`. The question mark (`'?'`) indicates that it can take a value of `null`, and the documentation must explain _when_ this may occur. If no question mark is present, the `error` property can't be `null`.
 
-<pre class="syntaxbox"><strong>readonly</strong> attribute MediaError? error;</pre>
+### Writing permissions on the property
 
-<p>If the keyword <code>readonly</code> is present, the property can't be modified. It must be marked as read-only:</p>
+    readonly attribute MediaError? error;
 
-<ul>
- <li>In the interface, by adding the \{{ReadOnlyInline}} macro next to its definition term.</li>
- <li>In the first sentence of its own page, by starting the description with: <em>The read-only <code><strong>HTMLMediaElement.error</strong></code> property…</em></li>
- <li>By adding the <code>Read-only</code> tag to its own page.</li>
- <li>By starting its description in the interface page with <em>Returns…</em></li>
-</ul>
+If the keyword `readonly` is present, the property can't be modified. It must be marked as read-only:
 
-<div class="note">
-<p><strong>备注：</strong>  Only read-only properties can be described as 'returning' a value. Non read-only properties can also be used to set a value.</p>
-</div>
+- In the interface, by adding the \\{{ReadOnlyInline}} macro next to its definition term.
+- In the first sentence of its own page, by starting the description with: _The read-only **`HTMLMediaElement.error`** property…_
+- By adding the `Read-only` tag to its own page.
+- By starting its description in the interface page with _Returns…_
 
-<ul>
-</ul>
+> **备注：** Only read-only properties can be described as 'returning' a value. Non read-only properties can also be used to set a value.
 
-<h3 id="Throwing_exceptions">Throwing exceptions</h3>
+### Throwing exceptions
 
-<pre class="syntaxbox"><strong>[SetterThrows]</strong>
-            attribute DOMString src;</pre>
+    [SetterThrows]
+                attribute DOMString src;
 
-<p>In some cases, like when some values are illegal, setting a new value can lead to an exception being raised. This is marked using the <code>[SetterThrows]</code> annotation. When this happens, the Syntax section of the property page <em>must</em> have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.</p>
+In some cases, like when some values are illegal, setting a new value can lead to an exception being raised. This is marked using the `[SetterThrows]` annotation. When this happens, the Syntax section of the property page _must_ have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.
 
-<p>Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. <a href="http://heycam.github.io/webidl/#es-enumeration">Trying to set an illegal enumerated value</a> (mapped to a JavaScript {{jsxref('String')}}) raises a {{jsxref('TypeError')}} exception. This must be documented, but is only implicitly marked in the WebIDL document.</p>
+Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](http://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) raises a {{jsxref('TypeError')}} exception. This must be documented, but is only implicitly marked in the WebIDL document.
 
-<p>It is uncommon to have getters throwing exceptions, though it happens in a few cases. In this case the <code>[GetterThrows]</code> annotation is used. Here also, the Syntax section of the property page <em>must</em> have an Exceptions subsection.</p>
+It is uncommon to have getters throwing exceptions, though it happens in a few cases. In this case the `[GetterThrows]` annotation is used. Here also, the Syntax section of the property page _must_ have an Exceptions subsection.
 
-<pre class="syntaxbox"><code id="line-16">partial interface Blob {</code><code id="line-17">
-</code><code id="line-18">  <strong>[GetterThrows]</strong>
-</code><code id="line-19">  readonly attribute unsigned long long size;
-};</code>
-</pre>
+    partial interface Blob {
+      [GetterThrows]
+      readonly attribute unsigned long long size;
+    };
 
-<h3 id="Not_throwing_exceptions">Not throwing exceptions</h3>
+### Not throwing exceptions
 
-<p>When the semantics of Webidl is not followed, an exception is often thrown, even without <code>[SetterThrows]</code> or <code>[GetterThrows]</code> set. For example, in strict mode, if we try to set a read-only property to a new value, that is to call its implicit setter, a read-only property will throw in strict mode.</p>
+When the semantics of Webidl is not followed, an exception is often thrown, even without `[SetterThrows]` or `[GetterThrows]` set. For example, in strict mode, if we try to set a read-only property to a new value, that is to call its implicit setter, a read-only property will throw in strict mode.
 
-<p>Mostly for compatibility purpose, this behavior is sometimes annoying. To prevent this by creating a no-op setter (that is by silently ignoring any attempt to set the property to a new value), the <code>[LenientSetter]</code> annotation can be used.</p>
+Mostly for compatibility purpose, this behavior is sometimes annoying. To prevent this by creating a no-op setter (that is by silently ignoring any attempt to set the property to a new value), the `[LenientSetter]` annotation can be used.
 
-<pre class="syntaxbox"><code id="line-223">partial interface Document {</code><code id="line-225">
-</code><code id="line-226"><strong>  [LenientSetter]</strong>
-</code><code id="line-227">  readonly attribute boolean fullscreen;</code><code id="line-229">
-</code><code id="line-230"><strong>  [LenientSetter]</strong>
-</code><code id="line-231">  readonly attribute boolean fullscreenEnabled;
-};</code>
-</pre>
+    partial interface Document {
+      [LenientSetter]
+      readonly attribute boolean fullscreen;
+      [LenientSetter]
+      readonly attribute boolean fullscreenEnabled;
+    };
 
-<p>In these cases, an extra sentence is added to the description of the property. E.g</p>
+In these cases, an extra sentence is added to the description of the property. E.g
 
-<p><em>Although this property is read-only, it will not throw if it is modified (even in strict mode); the setter is a no-operation and it will be ignored.</em></p>
+_Although this property is read-only, it will not throw if it is modified (even in strict mode); the setter is a no-operation and it will be ignored._
 
-<h3 id="New_objects_or_references">New objects or references</h3>
+### New objects or references
 
-<p>The return value of a property can be either a copy of an internal object, a newly created synthetic object, or a reference to an internal object.</p>
+The return value of a property can be either a copy of an internal object, a newly created synthetic object, or a reference to an internal object.
 
-<p>Basic objects with types like {{jsxref("String")}} (being an IDL <code>DOMString</code>, or other), {{jsxref("Number")}} (being an IDL <code>byte</code>, <code>octet</code>, <code>unsigned int</code>, or other), and {{jsxref("Boolean")}} are always copied and nothing special has to be noted about them (it is natural behavior expected by a JavaScript developer.)</p>
+Basic objects with types like {{jsxref("String")}} (being an IDL `DOMString`, or other), {{jsxref("Number")}} (being an IDL `byte`, `octet`, `unsigned int`, or other), and {{jsxref("Boolean")}} are always copied and nothing special has to be noted about them (it is natural behavior expected by a JavaScript developer.)
 
-<p>For interface objects, the default is to return a <em>reference</em> to the internal object. This has to be mentioned both in the short description in the interface page, and in the description in the specific sub-pages.</p>
+For interface objects, the default is to return a _reference_ to the internal object. This has to be mentioned both in the short description in the interface page, and in the description in the specific sub-pages.
 
-<div class="note">
-<p><strong>备注：</strong> The keyword <code>readonly</code> used with a property returning an object applies to the <em>reference</em> (the internal object cannot be changed.) The properties of the returned object can be changed, even if they are marked as read-only in the relevant interface.</p>
-</div>
+> **备注：** The keyword `readonly` used with a property returning an object applies to the _reference_ (the internal object cannot be changed.) The properties of the returned object can be changed, even if they are marked as read-only in the relevant interface.
 
-<p>Sometimes an API must return a <em>new</em> object, or a <em>copy</em> of an internal one. This case is indicated in the WebIDL using the <code>[NewObject]</code> annotation.</p>
+Sometimes an API must return a _new_ object, or a _copy_ of an internal one. This case is indicated in the WebIDL using the `[NewObject]` annotation.
 
-<pre class="syntaxbox"><strong>[NewObject]</strong>
-   readonly attribute TimeRanges buffered;</pre>
+    [NewObject]
+       readonly attribute TimeRanges buffered;
 
-<p>In this case, each call to <code>buffered</code> returns a different object: changing it will not change the internal value, and a change in the internal value will not affect each object instance. In the documentation, we will mark it by using the adjective <em>new</em> next to object:</p>
+In this case, each call to `buffered` returns a different object: changing it will not change the internal value, and a change in the internal value will not affect each object instance. In the documentation, we will mark it by using the adjective _new_ next to object:
 
-<p><em>The <strong><code>HTMLMediaElement.buffered</code></strong> read-only property returns a new \{{domxref("TimeRanges")}} object that… </em></p>
+_The **`HTMLMediaElement.buffered`** read-only property returns a new \\{{domxref("TimeRanges")}} object that…_
 
-<p>and</p>
+and
 
-<dl>
- <dt><em>\{{domxref("HTMLMediaElement.buffered")}}\{{readonlyinline}}</em></dt>
- <dd><em>Returns a new \{{domxref("TimeRanges")}} object that …</em></dd>
-</dl>
+- _\\{{domxref("HTMLMediaElement.buffered")}}\\{{readonlyinline}}_
+  - : _Returns a new \\{{domxref("TimeRanges")}} object that …_
 
-<p>In the case of a reference to a collection object (like <code>HTMLCollection</code>, <code>HTMLFormElementsCollection</code>, or <code>HTMLOptionsCollection</code>, always without <code>[NewObject]</code>), we make it explicit that changes to the underlying object will be available via the returned reference. To mark this, we qualify the collection as a <strong>live </strong><code>HTMLCollection</code><strong> </strong>(or <code>HTMLFormElementsCollections</code>, or <code>HTMLOptionsCollection</code>), both in the interface description and in the subpage.</p>
+In the case of a reference to a collection object (like `HTMLCollection`, `HTMLFormElementsCollection`, or `HTMLOptionsCollection`, always without `[NewObject]`), we make it explicit that changes to the underlying object will be available via the returned reference. To mark this, we qualify the collection as a **live** `HTMLCollection` (or `HTMLFormElementsCollections`, or `HTMLOptionsCollection`), both in the interface description and in the subpage.
 
-<p>E.g.</p>
+E.g.
 
-<dl>
- <dt>\{{domxref("HTMLFormElement.elements")}}\{{readonlyinline}}</dt>
- <dd>Returns a live \{{domxref("HTMLFormControlsCollection")}} containing…</dd>
-</dl>
+- \\{{domxref("HTMLFormElement.elements")}}\\{{readonlyinline}}
+  - : Returns a live \\{{domxref("HTMLFormControlsCollection")}} containing…
 
-<h3 id="Availability_in_workers_2">Availability in workers</h3>
+### Availability in workers
 
-<p>Individual property availability in workers is also found in the WebIDL. For a property, the default is the same availability as the <code>interface</code> (that is available to {{domxref('Window')}} context only if nothing special is marked) or as the <code>partial interface</code> it is defined in.</p>
+Individual property availability in workers is also found in the WebIDL. For a property, the default is the same availability as the `interface` (that is available to {{domxref('Window')}} context only if nothing special is marked) or as the `partial interface` it is defined in.
 
-<p>For documentation, the subpage must contain a sentence indicating if it is available or not in Web workers, right before the "Syntax" section.</p>
+For documentation, the subpage must contain a sentence indicating if it is available or not in Web workers, right before the "Syntax" section.
 
-<h3 id="Preferences_2">Preferences</h3>
+### Preferences
 
-<div class="note">
-<p><strong>备注：</strong> This information is specific to Gecko and should only be used in the Browser compatibility section.</p>
-</div>
+> **备注：** This information is specific to Gecko and should only be used in the Browser compatibility section.
 
-<p>In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.</p>
+In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.
 
-<pre class="syntaxbox"><strong>[Pref="media.webvtt.enabled"]</strong>
-    readonly attribute TextTrackList? textTracks;</pre>
+    [Pref="media.webvtt.enabled"]
+        readonly attribute TextTrackList? textTracks;
 
-<p>Here <code>media.webvtt.enabled</code> controls the <code>textTracks</code> property. </p>
+Here `media.webvtt.enabled` controls the `textTracks` property.
 
-<div class="note">
-<p><strong>备注：</strong> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another).</p>
-</div>
+> **备注：** The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>You can recognize the definition of a method by the presence of parentheses after the name.</p>
+You can recognize the definition of a method by the presence of parentheses after the name.
 
-<h3 id="Name_of_the_method">Name of the method</h3>
+### Name of the method
 
-<pre class="syntaxbox">DOMString <strong>canPlayType</strong>(DOMString type);</pre>
+    DOMString canPlayType(DOMString type);
 
-<p>The name of the method is <code>canPlayType</code>, and we will refer to it as <code>HTMLMediaElement.canPlayType()</code> (with the parentheses that indicate that it is a method) in the docs, as it belongs to the <code>HTMLMediaElement</code> interface. Linking to the page is either done <strong>with</strong> the interface prefix using \{{domxref('HTMLMediaElement.canPlayType()')}}, or <strong>without</strong> the prefix using \{{domxref('HTMLMediaElement.canPlayType', 'canPlayType()')}} when the context is obvious and unambiguous. The parentheses should always be included.</p>
+The name of the method is `canPlayType`, and we will refer to it as `HTMLMediaElement.canPlayType()` (with the parentheses that indicate that it is a method) in the docs, as it belongs to the `HTMLMediaElement` interface. Linking to the page is either done **with** the interface prefix using \\{{domxref('HTMLMediaElement.canPlayType()')}}, or **without** the prefix using \\{{domxref('HTMLMediaElement.canPlayType', 'canPlayType()')}} when the context is obvious and unambiguous. The parentheses should always be included.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<pre class="syntaxbox">TextTrack addTextTrack(TextTrackKind <strong>kind</strong>,
-                       optional DOMString <strong>label</strong> = "",
-                       optional DOMString <strong>language</strong> = "");</pre>
+    TextTrack addTextTrack(TextTrackKind kind,
+                           optional DOMString label = "",
+                           optional DOMString language = "");
 
-<p>The parameters of a method are listed in the Syntax section of the method sub-page. They are listed in the WebIDL in order, between the parenthesis, as a comma-separated list. Each parameter has a name (indicated above) and a type (e.g. a <code>'?'</code> means that the <code>null</code> value is valid.) If marked <code>optional</code>, the parameter is optional to include in a method call and must have the \{{OptionalInline}} flag included when it is listed in the Syntax section. The parameter's default value is listed after the equality sign (<code>'='</code>).</p>
+The parameters of a method are listed in the Syntax section of the method sub-page. They are listed in the WebIDL in order, between the parenthesis, as a comma-separated list. Each parameter has a name (indicated above) and a type (e.g. a `'?'` means that the `null` value is valid.) If marked `optional`, the parameter is optional to include in a method call and must have the \\{{OptionalInline}} flag included when it is listed in the Syntax section. The parameter's default value is listed after the equality sign (`'='`).
 
-<h3 id="Type_of_the_return_value">Type of the return value</h3>
+### Type of the return value
 
-<pre class="syntaxbox">DOMString <strong>canPlayType</strong>(DOMString type);</pre>
+    DOMString canPlayType(DOMString type);
 
-<p>The return value type is indicated first inside the parentheses — in the above case the value is an object of type <code>DOMString</code>. if followed by a question mark (<code>'?'</code>), a value of <code>null</code> can be returned too, and the documentation must explain <em>when</em> this may happen. If no question mark is present, like here,  the return value can't be <code>null</code>.</p>
+The return value type is indicated first inside the parentheses — in the above case the value is an object of type `DOMString`. if followed by a question mark (`'?'`), a value of `null` can be returned too, and the documentation must explain _when_ this may happen. If no question mark is present, like here, the return value can't be `null`.
 
-<p>The keyword <code>void</code> means that there is no return value. It is not a return value type. If the WebIDL entry reads <code>void</code>, the <em>Return value</em> section in the docs should contain only a simple <em>None</em>.</p>
+The keyword `void` means that there is no return value. It is not a return value type. If the WebIDL entry reads `void`, the _Return value_ section in the docs should contain only a simple _None_.
 
-<h3 id="Throwing_exceptions_2">Throwing exceptions</h3>
+### Throwing exceptions
 
-<pre class="syntaxbox"><strong>[Throws]</strong>
-   void fastSeek(double time);</pre>
+    [Throws]
+       void fastSeek(double time);
 
-<p>Some methods can throw exceptions. This is marked using the <code>[Throws]</code> annotation. When this happens, the Syntax section of the method page <em>must</em> have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.</p>
+Some methods can throw exceptions. This is marked using the `[Throws]` annotation. When this happens, the Syntax section of the method page _must_ have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.
 
-<p>Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. <a href="http://heycam.github.io/webidl/#es-enumeration">Trying to set an illegal enumerated value</a> (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{jsxref('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.</p>
+Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](http://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{jsxref('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.
 
-<p>Have a look at one of these <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#Exceptions"><em>Exceptions</em> sections</a>.</p>
+Have a look at one of these [_Exceptions_ sections](/en-US/docs/Web/API/SubtleCrypto/importKey#Exceptions).
 
-<h3 id="Availability_in_workers_3">Availability in workers</h3>
+### Availability in workers
 
-<p>Individual method availability in workers is also found in the WebIDL. For a method, the default is the same availability as the <code>interface</code> (that is available to {{domxref('Window')}} context only if nothing special is marked) or as the <code>partial interface</code> it is defined it.</p>
+Individual method availability in workers is also found in the WebIDL. For a method, the default is the same availability as the `interface` (that is available to {{domxref('Window')}} context only if nothing special is marked) or as the `partial interface` it is defined it.
 
-<p>For the documentation, the sub-page must contain a sentence indicating if it is available in Web workers, right before the Syntax section.</p>
+For the documentation, the sub-page must contain a sentence indicating if it is available in Web workers, right before the Syntax section.
 
-<h3 id="Preferences_3">Preferences</h3>
+### Preferences
 
-<div class="note">
-<p><strong>备注：</strong> this information is specific to Gecko and should only be used in the Browser compatibility section.</p>
-</div>
+> **备注：** this information is specific to Gecko and should only be used in the Browser compatibility section.
 
-<p>In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.</p>
+In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.
 
-<pre class="syntaxbox"><strong>[Pref="media.webvtt.enabled"]</strong>
-   TextTrack addTextTrack(TextTrackKind kind,
-                          optional DOMString label = "",
-                          optional DOMString language = "");</pre>
+    [Pref="media.webvtt.enabled"]
+       TextTrack addTextTrack(TextTrackKind kind,
+                              optional DOMString label = "",
+                              optional DOMString language = "");
 
-<p>Here <code>media.webvtt.enabled</code> controls the <code>addTextTrack()</code> method. </p>
+Here `media.webvtt.enabled` controls the `addTextTrack()` method.
 
-<div class="note">
-<p><strong>备注：</strong> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)</p>
-</div>
+> **备注：** The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
 
-<h3 id="sect1"> </h3>
+###
 
-<h2 id="Special_methods">Special methods</h2>
+## Special methods
 
-<p>Some methods are not listed as regular methods in WebIDL but instead as special keywords, which translate to specific standard JavaScript methods.</p>
+Some methods are not listed as regular methods in WebIDL but instead as special keywords, which translate to specific standard JavaScript methods.
 
-<h3 id="toString()_and_toJSON()">toString() and toJSON()</h3>
+### toString() and toJSON()
 
-<p>A stringifier is mapped to <code>toString()</code> and defined as:</p>
+A stringifier is mapped to `toString()` and defined as:
 
-<pre class="syntaxbox"><strong>stringifier;</strong></pre>
+    stringifier;
 
-<p>The <code>toString()</code> method is listed just like any other method of the interface and has its own sub-page (E.g. {{domxref("Range.toString()")}})</p>
+The `toString()` method is listed just like any other method of the interface and has its own sub-page (E.g. {{domxref("Range.toString()")}})
 
-<p>A jsonifier is mapped to <code>toJSON()</code> and defined as:</p>
+A jsonifier is mapped to `toJSON()` and defined as:
 
-<pre class="syntaxbox"><strong>jsonifier; </strong>// Gecko version<strong>
-serializer;</strong> // Standard version
-</pre>
+    jsonifier; // Gecko version
+    serializer; // Standard version
 
-<p>The <code>toJSON()</code> method is listed just like any other method of the interface and has its own sub-page (E.g. {{domxref("Performance.toJSON()")}})</p>
+The `toJSON()` method is listed just like any other method of the interface and has its own sub-page (E.g. {{domxref("Performance.toJSON()")}})
 
-<div class="note">
-<p><strong>备注：</strong> the WebIDL specification uses <code>serializer</code> instead of <code>jsonifier</code>. This is not used in Gecko — only the non-standard likely early proposal <code>jsonifier</code> is found in mozilla-central.</p>
-</div>
+> **备注：** the WebIDL specification uses `serializer` instead of `jsonifier`. This is not used in Gecko — only the non-standard likely early proposal `jsonifier` is found in mozilla-central.
 
-<p> </p>
+### Iterator-like methods
 
-<h3 id="Iterator-like_methods">Iterator-like methods</h3>
+An interface may be defined as _iterable_, meaning that it will have the following methods: `entries()`, `keys()`, `values()` and `forEach()`. They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface.
 
-<p>An interface may be defined as <em>iterable</em>, meaning that it will have the following methods: <code>entries()</code>, <code>keys()</code>, <code>values()</code> and <code>forEach()</code>. They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface.</p>
+There are two kinds of iteration possible: the _value iterator_ and the _pair iterator._
 
-<p>There are two kinds of iteration possible: the <em>value iterator</em> and the <em>pair iterator.</em></p>
+#### Value iterator
 
-<h4 id="Value_iterator">Value iterator</h4>
+    iterable<valueType>
 
-<pre class="syntaxbox">iterable&lt;<em>valueType</em>&gt;</pre>
+The iterator will iterate over values of type _valueType_. The generated methods will be:
 
-<p>The iterator will iterate over values of type <em>valueType</em>. The generated methods will be:</p>
+- `entries()`, which returns an {{jsxref('iterator')}} on the indexes (that are `unsigned long`).
+- `values()`, which returns an {{jsxref('iterator')}} on the values.
+- `keys()`, which returns an {{jsxref('iterator')}} on the keys, that are its indexes (that are `unsigned long`). In the case of value iterators, `keys()` and `entries()` are identical.
+- `forEach()`, which returns an {{jsxref('iterator')}} on the keys that calls a given callback function one for each entry in the list.
 
-<ul>
- <li><code>entries()</code>, which returns an {{jsxref('iterator')}} on the indexes (that are <code>unsigned long</code>).</li>
- <li><code>values()</code>, which returns an {{jsxref('iterator')}} on the values.</li>
- <li><code>keys()</code>, which returns an {{jsxref('iterator')}} on the keys, that are its indexes (that are <code>unsigned long</code>). In the case of value iterators, <code>keys()</code> and <code>entries()</code> are identical.</li>
- <li><code>forEach()</code>, which returns an {{jsxref('iterator')}} on the keys that calls a given callback function one for each entry in the list.</li>
-</ul>
+Such an iterator allows to use the syntax `for (var p in object)` as a shorthand of `for (var p in object.entries())`. We add a sentence about it in the interface description.
 
-<p>Such an iterator allows to use the syntax <code>for (var p in object)</code> as a shorthand of <code>for (var p in object.entries())</code>. We add a sentence about it in the interface description.</p>
+> **备注：** the value pairs to iterate over can be defined in two different ways:
+>
+> 1.  Outside the webidl file, in the prose accompanying it. Such a prose is in the spec and usually starts with: _"The [values to iterate over](https://heycam.github.io/webidl/#dfn-values-to-iterate-over)…"_.
+> 2.  In the webidl file, implicitly, if the interface supports indexed properties, that is when the interface has a `getter` methods with a parameter of type `unsigned long`.
 
-<div class="note">
-<p><strong>备注：</strong> the value pairs to iterate over can be defined in two different ways:</p>
+#### Pair iterator
 
-<ol>
- <li>Outside the webidl file, in the prose accompanying it. Such a prose is in the spec and usually starts with: <em>"The <a href="https://heycam.github.io/webidl/#dfn-values-to-iterate-over">values to iterate over</a>…"</em>.</li>
- <li>In the webidl file, implicitly, if the interface supports indexed properties, that is when the interface has a <code>getter</code> methods with a parameter of type <code>unsigned long</code>.</li>
-</ol>
-</div>
+    iterable<keyType, valueType>
 
-<h4 id="Pair_iterator">Pair iterator</h4>
+The iterator will iterate over values of type _valueType_, with keys of type _keyType_. The generated methods will be:
 
-<pre class="syntaxbox">iterable&lt;<em>keyType, valueType</em>&gt;</pre>
+- `entries()` that returns an {{jsxref('iterator')}} on the indexes (of type _keyType_). E.g. {{domxref('FormData.entries()')}}
+- `values()` that returns an {{jsxref('iterator')}} on the values. E.g. {{domxref('FormData.values()')}}
+- `keys()` that returns an {{jsxref('iterator')}} on the keys. E.g. {{domxref('FormData.keys()')}}
+- Once {{bug(1216751)}} lands, `forEach()`.
 
-<p>The iterator will iterate over values of type <em>valueType</em>, with keys of type <em>keyType</em>. The generated methods will be:</p>
+Such an iterator allows to use the syntax `for (var p in object)` as a shorthand of `for (var p in object.entries())`. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.
 
-<ul>
- <li><code>entries()</code> that returns an {{jsxref('iterator')}} on the indexes (of type <em>keyType</em>). E.g. {{domxref('FormData.entries()')}}</li>
- <li><code>values()</code> that returns an {{jsxref('iterator')}} on the values. E.g. {{domxref('FormData.values()')}}</li>
- <li><code>keys()</code> that returns an {{jsxref('iterator')}} on the keys. E.g. {{domxref('FormData.keys()')}}</li>
- <li>Once {{bug(1216751)}} lands, <code>forEach()</code>.</li>
-</ul>
+> **备注：** the value pairs to iterate over are _not_ defined in the webidl file, but in the prose accompanying it. Such a prose is in the spec and usually starts with: _"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over)…"_
+> E.g, for {{domxref('FormData')}} you find in the spec: _"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry) with the key being the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name) and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value). "_
 
-<p>Such an iterator allows to use the syntax <code>for (var p in object)</code> as a shorthand of <code>for (var p in object.entries())</code>. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.</p>
+### Set-like methods
 
-<div class="note">
-<p><strong>备注：</strong> the value pairs to iterate over are <em>not</em> defined in the webidl file, but in the prose accompanying it. Such a prose is in the spec and usually starts with: <em>"The <a href="https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over">value pairs to iterate over</a>…"</em><br>
- E.g, for {{domxref('FormData')}} you find in the spec: <em>"The <a href="https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over">value pairs to iterate over</a> are the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry">entries</a> with the key being the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry-name">name</a> and the value the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry-value">value</a>. "</em></p>
-</div>
+An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`, `values()`, `forEach(),` and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
 
-<h3 id="Set-like_methods">Set-like methods</h3>
+    setlike<valueType>
 
-<p>An interface may be defined as <em>set-like</em>, meaning that it represents an <em>ordered set of values</em> will have the following methods: <code>entries()</code>, <code>keys()</code>,  <code>values()</code>, <code>forEach(),</code> and <code>has()</code> (it also has the <code>size</code> property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed <code>readonly</code> or not. If not read-only, the methods to modify the set are also implemented: <code>add()</code>, <code>clear()</code>, and <code>delete()</code>.</p>
+The generated properties will be:
 
-<pre class="syntaxbox">setlike&lt;<em>valueType</em>&gt;</pre>
+- `entries()` that returns an {{jsxref('iterator')}} on the indexes. E.g. {{domxref('FontFaceSet.entries()')}}.
+- `values()` that returns an {{jsxref('iterator')}} on the values. E.g. {{domxref('FontFaceSet.values()')}}.
+- `keys()` that returns an {{jsxref('iterator')}} on the keys. E.g. {{domxref('FontFaceSet.keys()')}},
+- `forEach()`.
 
-<p>The generated properties will be:</p>
+In the case, the set-like declaration is not prefixed by read-only, the following methods are also generated:
 
-<ul>
- <li><code>entries()</code> that returns an {{jsxref('iterator')}} on the indexes. E.g. {{domxref('FontFaceSet.entries()')}}.</li>
- <li><code>values()</code> that returns an {{jsxref('iterator')}} on the values. E.g. {{domxref('FontFaceSet.values()')}}.</li>
- <li><code>keys()</code> that returns an {{jsxref('iterator')}} on the keys. E.g. {{domxref('FontFaceSet.keys()')}},</li>
- <li><code>forEach()</code>.</li>
-</ul>
+- `add()` that adds an entry. E.g. {{domxref('FontFaceSet.add()')}}.
+- `clear()` that empty the set-like. E.g. {{domxref('FontFaceSet.clear()')}}.
+- `delete()` that remove an entry. E.g. {{domxref('FontFaceSet.delete()')}}.
 
-<p>In the case, the set-like declaration is not prefixed by read-only, the following methods are also generated:</p>
+Such an set interface also allows to use the syntax `for (var p in object)` as a shorthand of `for (var p in object.entries())`. We add a sentence about it in the interface description. E.g. {{domxref('FontFaceSet')}}.
 
-<ul>
- <li><code>add()</code> that adds an entry. E.g. {{domxref('FontFaceSet.add()')}}.</li>
- <li><code>clear()</code> that empty the set-like. E.g. {{domxref('FontFaceSet.clear()')}}.</li>
- <li><code>delete()</code> that remove an entry. E.g. {{domxref('FontFaceSet.delete()')}}.</li>
-</ul>
+## Constructors
 
-<p>Such an set interface also allows to use the syntax <code>for (var p in object)</code> as a shorthand of <code>for (var p in object.entries())</code>. We add a sentence about it in the interface description. E.g. {{domxref('FontFaceSet')}}.</p>
+Constructors are a little bit hidden in WebIDL: they are listed as annotations of the main interface.
 
-<p> </p>
+### Unnamed constructors
 
-<h2 id="Constructors">Constructors</h2>
+This is the most common case for constructors. The constructor of a given interface A, can be used as `a = new A(parameters);`
 
-<p>Constructors are a little bit hidden in WebIDL: they are listed as annotations of the main interface.</p>
+     [Constructor, Func="MessageChannel::Enabled",
+      Exposed=(Window,Worker)]
+        interface MessageChannel {…};
 
-<h3 id="Unnamed_constructors">Unnamed constructors</h3>
+A constructor with the same interface is defined using the `Constructor` annotation on the interface. There can be parenthesis and a list of parameters or not (like in the above example.) We document all the unnamed constructors on a sub-page — for example the above is given the slug _Web/API/MessageChannel/MessageChannel_ and the title `MessageChannel()`.
 
-<p>This is the most common case for constructors. The constructor of a given interface A, can be used as <code>a = new A(<em>parameters</em>);</code></p>
+Another example of an unnamed constructor, with parameters:
 
-<pre class="syntaxbox"> [<strong>Constructor</strong>, Func="MessageChannel::Enabled",
-  Exposed=(Window,Worker)]
-    interface MessageChannel {…};</pre>
+    [Constructor(DOMString type, optional MessageEventInit eventInitDict),
+     Exposed=(Window,Worker,System)]
+       interface MessageEvent : Event {…};
 
-<p>A constructor with the same interface is defined using the <code>Constructor</code> annotation on the interface. There can be parenthesis and a list of parameters or not (like in the above example.) We document all the unnamed constructors on a sub-page — for example the above is given the slug <em>Web/API/MessageChannel/MessageChannel</em> and the title <code>MessageChannel()</code>.</p>
+There can also be several unnamed constructors, differing by their parameter lists. All syntax is documented in one single sub-page.
 
-<p>Another example of an unnamed constructor, with parameters:</p>
+    [Constructor(DOMString url, URL base),
+     Constructor(DOMString url, optional DOMString base),
+     Exposed=(Window,Worker)]
+        interface URL {};
 
-<pre class="syntaxbox">[<strong>Constructor</strong>(DOMString type, optional MessageEventInit eventInitDict),
- Exposed=(Window,Worker,System)]
-   interface MessageEvent : Event {…};</pre>
+### Named constructors
 
-<p>There can also be several unnamed constructors, differing by their parameter lists. All syntax is documented in one single sub-page.</p>
+    [NamedConstructor=Image(optional unsigned long width, optional unsigned long height)]
+        interface HTMLImageElement : HTMLElement {…
 
-<pre class="syntaxbox">[<strong>Constructor</strong>(DOMString url, URL base),
- <strong>Constructor</strong>(DOMString url, optional DOMString base),
- Exposed=(Window,Worker)]
-    interface URL {};</pre>
+A named constructor is a constructor that has a different name than that of its interface. For example` new Image(…)` creates a new `HTMLImageElement` object. They are defined in the WebIDL using the `NamedConstructor` annotation on the interface, followed by the name of the constructor after the equality sign (`'='`) and the parameter inside the parenthesis, in the same format as you'll see for methods.
 
-<h3 id="Named_constructors">Named constructors</h3>
+There can be several named constructors for a specific interface, but this is extremely rare; in such a case we include one sub-page per name.
 
-<pre class="syntaxbox">[<strong>NamedConstructor</strong>=Image(optional unsigned long width, optional unsigned long height)]
-    interface HTMLImageElement : HTMLElement {…</pre>
+### Availability in workers
 
-<p>A named constructor is a constructor that has a different name than that of its interface. For example<code> new Image(…)</code> creates a new <code>HTMLImageElement</code> object. They are defined in the WebIDL using the <code>NamedConstructor</code> annotation on the interface, followed by the name of the constructor after the equality sign (<code>'='</code>) and the parameter inside the parenthesis, in the same format as you'll see for methods.</p>
+Constructors have the same availability as the interface, or partial interface, they are defined on. The sub-page provides this information in the same way as for a method.
 
-<p>There can be several named constructors for a specific interface, but this is extremely rare; in such a case we include one sub-page per name.</p>
+### Preferences
 
-<h3 id="Availability_in_workers_4">Availability in workers</h3>
-
-<p>Constructors have the same availability as the interface, or partial interface, they are defined on. The sub-page provides this information in the same way as for a method.</p>
-
-<h3 id="Preferences_4">Preferences</h3>
-
-<p>Constructors are controlled by the same preference as the interface, or partial interface, they are defined on. The sub-page provides this information in the same way as for a method.</p>
+Constructors are controlled by the same preference as the interface, or partial interface, they are defined on. The sub-page provides this information in the same way as for a method.
