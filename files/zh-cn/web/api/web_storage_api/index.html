@@ -45,7 +45,7 @@ translation_of: Web/API/Web_Storage_API
  <dt>{{domxref("Window")}}</dt>
  <dd>Web Storage API 继承于{{domxref("Window")}} 对象，并提供两个新属性  — {{domxref("Window.sessionStorage")}} 和 {{domxref("Window.localStorage")}} — 它们分别地提供对当前域的会话和本地{{domxref("Storage")}} 对象的访问。</dd>
  <dt>{{domxref("StorageEvent")}}</dt>
- <dd> 当一个存储区更改时，存储事件从文档的 <code>Window</code> 对象上被发布。</dd>
+ <dd>当一个存储区更改时，存储事件从文档的 <code>Window</code> 对象上被发布。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
@@ -56,40 +56,19 @@ translation_of: Web/API/Web_Storage_API
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Storage')}}</td>
-   <td>{{Spec2('Web Storage')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<h3 id="Window.localStorage"><code>Window.localStorage</code></h3>
-
-<p>{{Compat("api.Window.localStorage")}}</p>
-
-<h3 id="Window.sessionStorage"><code>Window.sessionStorage</code></h3>
-
-<p>{{Compat("api.Window.sessionStorage")}}</p>
+<p>{{Compat}}</p>
 
 <p>不同的浏览器对 localStorage 和 sessionStorage 有不同的容量限制。<a href="http://dev-test.nemikor.com/web-storage/support-test/">点此查看各版本浏览器对存储容量的描述详情</a></p>
-
-<div id="compat-mobile"></div>
 
 <div class="note">
 <p><strong>注意：</strong>手机 Safari 从 iOS 5.1 版本开始，将 localStorage 数据到存放到缓存文件夹中，当空间不足时，系统将会时不时地自动清理缓存。</p>
 </div>
 
-<h2 id="隐私浏览_隐身模式">隐私浏览/ 隐身模式</h2>
+<h2 id="隐私浏览_隐身模式">隐私浏览/隐身模式</h2>
 
 <p>大多数现代浏览器支持称为 'Incognito' 的用户隐私选择，“隐私浏览” 或类似的功能可以不像历史记录和 cookie 那样存储数据。 这明显与 Web Storage 不兼容。因此，浏览器厂商正尝试不同的方式来处理不兼容问题。</p>
 
@@ -97,7 +76,7 @@ translation_of: Web/API/Web_Storage_API
 
 <p>开发者需明确不同的实现，并在用 Web Storage API 开发网站时考虑这些实现的差别。更多信息请查看 <a href="https://blog.whatwg.org/tag/localstorage">this WHATWG blog post</a> ，这里有更详细的讨论。</p>
 
-<h2 id="参见"><strong>参见</strong></h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Web Storage API 的使用</a></li>
