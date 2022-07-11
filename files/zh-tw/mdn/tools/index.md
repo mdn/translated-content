@@ -6,8 +6,8 @@ tags:
   - MDN Meta
 translation_of: MDN/Tools
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>MDN 提供了許多功能來簡化追蹤進度、管理內容，並跟上網站最新的修改。</p>
+MDN 提供了許多功能來簡化追蹤進度、管理內容，並跟上網站最新的修改。
 
-<p>{{LandingPageListSubpages}}</p>
+{{LandingPageListSubpages}}

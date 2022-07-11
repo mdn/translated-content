@@ -3,372 +3,367 @@ title: How to properly tag pages
 slug: MDN/Contribute/Howto/Tag
 translation_of: MDN/Contribute/Howto/Tag
 ---
-<div>{{MDNSidebar}}</div><p><strong>Article tags</strong> are an important way to put visitors in touch with helpful content. Each page should normally have several tags to help keep content organized. This page explains the best way to tag pages so that our readers can find information and we can keep ourselves organized.</p>
+{{MDNSidebar}}
 
-<p>For a help with the user interface for editing tags, see the <a href="/en-US/docs/MDN/Contribute/Editor/Basics#The_tags_box">tagging section</a> in our editor guide.</p>
+**Article tags** are an important way to put visitors in touch with helpful content. Each page should normally have several tags to help keep content organized. This page explains the best way to tag pages so that our readers can find information and we can keep ourselves organized.
 
-<p>Please use tags properly as explained below. If you don't, our automated tools will not correctly generate lists of content, landing pages, and cross-linking of articles.</p>
+For a help with the user interface for editing tags, see the [tagging section](/en-US/docs/MDN/Contribute/Editor/Basics#The_tags_box) in our editor guide.
 
-<h2 id="How_MDN_uses_tags">How MDN uses tags</h2>
+Please use tags properly as explained below. If you don't, our automated tools will not correctly generate lists of content, landing pages, and cross-linking of articles.
 
-<p>Tags get used on MDN several ways:</p>
+## How MDN uses tags
 
-<dl>
- <dt>Document categorization</dt>
- <dd>What type of document is it? Is it a reference? A tutorial? A landing page? Our visitors can use these tags to filter searches, so they're really important!</dd>
- <dt>Topic identification</dt>
- <dd>What is the article about? Is it about an API? The DOM? Graphics? Again, these tags are important because they can filter searches.</dd>
- <dt>Technology status</dt>
- <dd>What's the status of the technology? Is it non-standard? Obsolete or deprecated? Experimental?</dd>
- <dt>Skill level</dt>
- <dd>For tutorials and guides, how advanced is the material covered by the article?</dd>
- <dt>Document metadata</dt>
- <dd>The writing community needs tags to keep track of which pages need what kind of work.</dd>
-</dl>
+Tags get used on MDN several ways:
 
-<h2 id="Tag_type_guide">Tag type guide</h2>
+- Document categorization
+  - : What type of document is it? Is it a reference? A tutorial? A landing page? Our visitors can use these tags to filter searches, so they're really important!
+- Topic identification
+  - : What is the article about? Is it about an API? The DOM? Graphics? Again, these tags are important because they can filter searches.
+- Technology status
+  - : What's the status of the technology? Is it non-standard? Obsolete or deprecated? Experimental?
+- Skill level
+  - : For tutorials and guides, how advanced is the material covered by the article?
+- Document metadata
+  - : The writing community needs tags to keep track of which pages need what kind of work.
 
-<p>Here's a quick guide to the types of tags and possible values for them.</p>
+## Tag type guide
 
-<h3 id="Document_category">Document category</h3>
+Here's a quick guide to the types of tags and possible values for them.
 
-<p>When you tag an article with one of these categories, you help the automated tools more accurately generate landing pages, tables of contents, and so on. Our new search system will also use these terms so that our visitors can locate reference or guide information at will.</p>
+### Document category
 
-<p>We use the following category names as standard tagging terms:</p>
+When you tag an article with one of these categories, you help the automated tools more accurately generate landing pages, tables of contents, and so on. Our new search system will also use these terms so that our visitors can locate reference or guide information at will.
 
-<dl>
- <dt><code>{{Tag("Intro")}}</code></dt>
- <dd>The article provides introductory material about a topic. Ideally each technology area should have only one "Intro".</dd>
- <dt><code>{{Tag("Featured")}}</code></dt>
- <dd>The article is critical and will display prominently on landing pages. Use this tag sparingly (never more than three documents in each documentation area).</dd>
- <dt><code>{{Tag("Reference")}}</code></dt>
- <dd>The article contains reference material about an API, element, attribute, property, or the like.</dd>
- <dt><code>{{Tag("Landing")}}</code></dt>
- <dd>The page is a landing page.</dd>
- <dt><code>{{Tag("Guide")}}</code></dt>
- <dd>The article is a how-to or guide page.</dd>
- <dt><code>{{Tag("Example")}}</code></dt>
- <dd>The article is a code sample page, or has code samples (that is, actual snippets of useful code, not one-line "syntax examples").</dd>
-</dl>
+We use the following category names as standard tagging terms:
 
-<h3 id="Topic">Topic</h3>
+- `{{Tag("Intro")}}`
+  - : The article provides introductory material about a topic. Ideally each technology area should have only one "Intro".
+- `{{Tag("Featured")}}`
+  - : The article is critical and will display prominently on landing pages. Use this tag sparingly (never more than three documents in each documentation area).
+- `{{Tag("Reference")}}`
+  - : The article contains reference material about an API, element, attribute, property, or the like.
+- `{{Tag("Landing")}}`
+  - : The page is a landing page.
+- `{{Tag("Guide")}}`
+  - : The article is a how-to or guide page.
+- `{{Tag("Example")}}`
+  - : The article is a code sample page, or has code samples (that is, actual snippets of useful code, not one-line "syntax examples").
 
-<p>By identifying the article's topic area, you are helping generate better search results (and landing pages and navigation as well).</p>
+### Topic
 
-<p>While there's some room for flexibility here as we identify new topic areas, we try to limit ourselves to the names of APIs or technologies. Some useful examples:</p>
+By identifying the article's topic area, you are helping generate better search results (and landing pages and navigation as well).
 
-<ul>
- <li><code>{{Tag("HTML")}}</code></li>
- <li><code>{{Tag("CSS")}}</code></li>
- <li><code>{{Tag("JavaScript")}}</code> (notice the capital "S"!)</li>
- <li><code>{{Tag("Document")}}</code></li>
- <li><code>{{Tag("DOM")}}</code></li>
- <li><code>{{Tag("API")}}</code> for each interface, method and property.</li>
- <li><code>{{Tag("Method")}}</code> for each method of an API</li>
- <li><code>{{Tag("Property")}}</code> for each property of an API</li>
- <li><code>{{Tag("Graphics")}}</code></li>
- <li><code>{{Tag("Firefox OS")}}</code></li>
- <li><code>{{Tag("Gecko")}}</code></li>
- <li><code>{{Tag("XUL")}}</code></li>
- <li><code>{{Tag("XPCOM")}}</code></li>
- <li><code>{{Tag("SVG")}}</code></li>
- <li><code>{{Tag("WebGL")}}</code></li>
- <li><code>{{Tag("Element")}}</code></li>
- <li><code>{{Tag("Node")}}</code></li>
- <li><code>{{Tag("Tools")}}</code></li>
- <li><code>{{Tag("Web")}}</code></li>
-</ul>
+While there's some room for flexibility here as we identify new topic areas, we try to limit ourselves to the names of APIs or technologies. Some useful examples:
 
-<p>In general, your topic identification tag should be the name of an interface with a number of related pages (like <a href="/en-US/docs/Web/API/Node">Node</a>, which has many pages for its various properties and methods), or the name of an overall technology type. You might tag a page about WebGL with <code>Graphics</code> and <code>WebGL</code>, for example, but a page about {{HTMLElement("canvas")}} with <code>HTML</code>, <code>Element</code>, <code>Canvas</code>, and <code>Graphics</code>.</p>
+- `{{Tag("HTML")}}`
+- `{{Tag("CSS")}}`
+- `{{Tag("JavaScript")}}` (notice the capital "S"!)
+- `{{Tag("Document")}}`
+- `{{Tag("DOM")}}`
+- `{{Tag("API")}}` for each interface, method and property.
+- `{{Tag("Method")}}` for each method of an API
+- `{{Tag("Property")}}` for each property of an API
+- `{{Tag("Graphics")}}`
+- `{{Tag("Firefox OS")}}`
+- `{{Tag("Gecko")}}`
+- `{{Tag("XUL")}}`
+- `{{Tag("XPCOM")}}`
+- `{{Tag("SVG")}}`
+- `{{Tag("WebGL")}}`
+- `{{Tag("Element")}}`
+- `{{Tag("Node")}}`
+- `{{Tag("Tools")}}`
+- `{{Tag("Web")}}`
 
-<h3 id="Technology_status">Technology status</h3>
+In general, your topic identification tag should be the name of an interface with a number of related pages (like [Node](/en-US/docs/Web/API/Node), which has many pages for its various properties and methods), or the name of an overall technology type. You might tag a page about WebGL with `Graphics` and `WebGL`, for example, but a page about {{HTMLElement("canvas")}} with `HTML`, `Element`, `Canvas`, and `Graphics`.
 
-<p>To help the reader understand how viable a technology is, we use tags to label pages as to the status of the technology's specification. This isn't as detailed as actually explaining what the spec is and how far the technology has come in the specification process (that's what the Specifications table is for), but it helps the reader judge, at a glance, whether it's a good idea to use the technology described in the article.</p>
+### Technology status
 
-<p>Here are possible values for these tags:</p>
+To help the reader understand how viable a technology is, we use tags to label pages as to the status of the technology's specification. This isn't as detailed as actually explaining what the spec is and how far the technology has come in the specification process (that's what the Specifications table is for), but it helps the reader judge, at a glance, whether it's a good idea to use the technology described in the article.
 
-<dl>
- <dt><code>{{Tag("Non-standard")}}</code></dt>
- <dd>Indicates that the technology or API described on the page is not part of a standard, but is considered stable in any implementing browser(s). If you don't use this tag, your readers will assume the technology is standard. The compatibility table on the page should clarify which browser(s) support this technology or API.</dd>
- <dt><code>{{Tag("Deprecated")}}</code></dt>
- <dd>The technology or API covered on the page is marked as deprecated in the specification, and is likely to eventually be removed, but is generally still available in current versions of browsers.</dd>
- <dt><code>{{Tag("Obsolete")}}</code></dt>
- <dd>The technology or API has been deemed obsolete and has been removed (or actively being removed) from all or most current browsers.</dd>
- <dt><code>{{Tag("Experimental")}}</code></dt>
- <dd>The technology is not standardized, and is an experimental technology or API that may or may not ever become part of a standard. It is also subject to change in the browser engine (typically only one) that implements it.</dd>
- <dt><code>{{Tag("Needs Privileges")}}</code></dt>
- <dd>The API requires privileged access to the device on which the code is running.</dd>
- <dt><code>{{Tag("Certified Only")}}</code></dt>
- <dd>The API only works in certified code.</dd>
-</dl>
+Here are possible values for these tags:
 
-<p>These tags are no excuse to leave out the <a href="/en-US/docs/Project:Compatibility_tables">compatibility table</a> in your article!</p>
+- `{{Tag("Non-standard")}}`
+  - : Indicates that the technology or API described on the page is not part of a standard, but is considered stable in any implementing browser(s). If you don't use this tag, your readers will assume the technology is standard. The compatibility table on the page should clarify which browser(s) support this technology or API.
+- `{{Tag("Deprecated")}}`
+  - : The technology or API covered on the page is marked as deprecated in the specification, and is likely to eventually be removed, but is generally still available in current versions of browsers.
+- `{{Tag("Obsolete")}}`
+  - : The technology or API has been deemed obsolete and has been removed (or actively being removed) from all or most current browsers.
+- `{{Tag("Experimental")}}`
+  - : The technology is not standardized, and is an experimental technology or API that may or may not ever become part of a standard. It is also subject to change in the browser engine (typically only one) that implements it.
+- `{{Tag("Needs Privileges")}}`
+  - : The API requires privileged access to the device on which the code is running.
+- `{{Tag("Certified Only")}}`
+  - : The API only works in certified code.
 
-<h3 id="Skill_level">Skill level</h3>
+These tags are no excuse to leave out the [compatibility table](/en-US/docs/Project:Compatibility_tables) in your article!
 
-<p>Use the skill-level tag type only for guides and tutorials (that is, pages tagged <code>Guide</code>) to help users choose tutorials based on how familiar they are with a technology. There are three values for this:</p>
+### Skill level
 
-<dl>
- <dt><code>{{Tag("Beginner")}}</code></dt>
- <dd>Articles designed to introduce the reader to a technology they've never used or have only a passing familiarity with.</dd>
- <dt><code>{{Tag("Intermediate")}}</code></dt>
- <dd>Articles for users who have gotten started with the technology but aren't experts.</dd>
- <dt><code>{{Tag("Advanced")}}</code></dt>
- <dd>Articles about stretching the capabilities of a technology and of the reader.</dd>
-</dl>
+Use the skill-level tag type only for guides and tutorials (that is, pages tagged `Guide`) to help users choose tutorials based on how familiar they are with a technology. There are three values for this:
 
-<h3 id="Document_metadata">Document metadata</h3>
+- `{{Tag("Beginner")}}`
+  - : Articles designed to introduce the reader to a technology they've never used or have only a passing familiarity with.
+- `{{Tag("Intermediate")}}`
+  - : Articles for users who have gotten started with the technology but aren't experts.
+- `{{Tag("Advanced")}}`
+  - : Articles about stretching the capabilities of a technology and of the reader.
 
-<p>The writing community uses tags to label articles as requiring specific types of work. Here's a list of the ones we use most:</p>
+### Document metadata
 
-<dl>
- <dt><code>{{Tag("junk")}}</code></dt>
- <dd>The article needs to be deleted.</dd>
- <dt><code>{{Tag("NeedsContent")}}</code></dt>
- <dd>The article is a stub, or is otherwise lacking information. This tag means that someone should review the content and add more details and/or finish writing the article.</dd>
- <dt><code>{{Tag("NeedsExample")}}</code></dt>
- <dd>The article needs one or more examples created to help illustrate the article's point. These examples should use the <a href="/en-US/docs/Project:MDN/Contributing/How_to_help/Code_samples">live sample system</a>.</dd>
- <dt><code>{{Tag("NeedsLiveSamples")}}</code></dt>
- <dd>The article has one or more examples that need to be updated to use the <a href="/en-US/docs/Project:MDN/Contributing/How_to_help/Code_samples">live sample system</a>.</dd>
- <dt><code>{{Tag("NeedsUpdate")}}</code></dt>
- <dd>The content is out of date and needs to updating.</dd>
- <dt><code>{{Tag("l10n:exclude")}}</code></dt>
- <dd>The content is not really worth localizing and will not appear on localization status pages.</dd>
- <dt><code>{{Tag("l10n:priority")}}</code></dt>
- <dd>The content is important and should be marked as a priority for MDN translators. Shows up in an extra priority table on localization status pages.</dd>
-</dl>
+The writing community uses tags to label articles as requiring specific types of work. Here's a list of the ones we use most:
 
-<h3 id="Web_Literacy_Map">Web Literacy Map</h3>
+- `{{Tag("junk")}}`
+  - : The article needs to be deleted.
+- `{{Tag("NeedsContent")}}`
+  - : The article is a stub, or is otherwise lacking information. This tag means that someone should review the content and add more details and/or finish writing the article.
+- `{{Tag("NeedsExample")}}`
+  - : The article needs one or more examples created to help illustrate the article's point. These examples should use the [live sample system](/en-US/docs/Project:MDN/Contributing/How_to_help/Code_samples).
+- `{{Tag("NeedsLiveSamples")}}`
+  - : The article has one or more examples that need to be updated to use the [live sample system](/en-US/docs/Project:MDN/Contributing/How_to_help/Code_samples).
+- `{{Tag("NeedsUpdate")}}`
+  - : The content is out of date and needs to updating.
+- `{{Tag("l10n:exclude")}}`
+  - : The content is not really worth localizing and will not appear on localization status pages.
+- `{{Tag("l10n:priority")}}`
+  - : The content is important and should be marked as a priority for MDN translators. Shows up in an extra priority table on localization status pages.
 
-<p>The <a href="https://webmaker.org">WebMaker</a> project, through the <a href="https://webmaker.org/literacy">Web Literacy Map</a>, has defined skills needed to optimally read, write, and participate on the Web. We use Web literacy skills as tags on MDN to help our users find the resources that best suit their needs:</p>
+### Web Literacy Map
 
-<dl>
- <dt>{{Tag("Navigation")}}</dt>
- <dd>how to browse the Web</dd>
- <dt>{{Tag("WebMechanics")}}</dt>
- <dd>how the Web is organized and how it works</dd>
- <dt>{{Tag("Search")}}</dt>
- <dd>how to find information, people, and resources on the Web</dd>
- <dt>{{Tag("Credibility")}}</dt>
- <dd>how to critically evaluate information you find on the Web</dd>
- <dt>{{Tag("Security")}}</dt>
- <dd>how to keep systems, identities, and content safe</dd>
- <dt>{{Tag("Composing")}}</dt>
- <dd>how to create and curate content for the Web</dd>
- <dt>{{Tag("Remixing")}}</dt>
- <dd>how to modify existing Web resources to create something new</dd>
- <dt>{{Tag("DesignAccessibility")}}</dt>
- <dd>how to create universally effective communications through Web resources</dd>
- <dt>{{Tag("CodingScripting")}}</dt>
- <dd>how to code and/or create interactive experiences on the Web</dd>
- <dt>{{Tag("infrastructure")}}</dt>
- <dd>how the Internet's technical stack works</dd>
- <dt>{{Tag("Sharing")}}</dt>
- <dd>how to create resources with others</dd>
- <dt>{{Tag("Collaborating")}}</dt>
- <dd>how to work with other people</dd>
- <dt>{{Tag("Community")}}</dt>
- <dd>how to get involved in Web communities and understand how they work</dd>
- <dt>{{Tag("Privacy")}}</dt>
- <dd>how to examine the consequences of sharing data online</dd>
- <dt>{{Tag("OpenPractices")}}</dt>
- <dd>how to help keep the Web accessible to everybody</dd>
-</dl>
+The [WebMaker](https://webmaker.org) project, through the [Web Literacy Map](https://webmaker.org/literacy), has defined skills needed to optimally read, write, and participate on the Web. We use Web literacy skills as tags on MDN to help our users find the resources that best suit their needs:
 
-<h2 id="Putting_it_all_together">Putting it all together</h2>
+- {{Tag("Navigation")}}
+  - : how to browse the Web
+- {{Tag("WebMechanics")}}
+  - : how the Web is organized and how it works
+- {{Tag("Search")}}
+  - : how to find information, people, and resources on the Web
+- {{Tag("Credibility")}}
+  - : how to critically evaluate information you find on the Web
+- {{Tag("Security")}}
+  - : how to keep systems, identities, and content safe
+- {{Tag("Composing")}}
+  - : how to create and curate content for the Web
+- {{Tag("Remixing")}}
+  - : how to modify existing Web resources to create something new
+- {{Tag("DesignAccessibility")}}
+  - : how to create universally effective communications through Web resources
+- {{Tag("CodingScripting")}}
+  - : how to code and/or create interactive experiences on the Web
+- {{Tag("infrastructure")}}
+  - : how the Internet's technical stack works
+- {{Tag("Sharing")}}
+  - : how to create resources with others
+- {{Tag("Collaborating")}}
+  - : how to work with other people
+- {{Tag("Community")}}
+  - : how to get involved in Web communities and understand how they work
+- {{Tag("Privacy")}}
+  - : how to examine the consequences of sharing data online
+- {{Tag("OpenPractices")}}
+  - : how to help keep the Web accessible to everybody
 
-<p>So to each page you assign tags from several tag types, for example</p>
+## Putting it all together
 
-<dl>
- <dt>A tutorial about WebGL for beginners</dt>
- <dd><code>WebGL</code>, <code>Graphics</code>, <code>Guide</code>, <code>Beginner</code></dd>
- <dt>Reference page for {{HTMLElement("canvas")}}</dt>
- <dd><code>Canvas</code>, <code>HTML</code>, <code>Element</code>, <code>Graphics,</code> <code>Reference</code></dd>
- <dt>A landing page for Firefox OS developer tools</dt>
- <dd><code>Tools</code>, <code>Firefox OS</code>, <code>Landing</code></dd>
-</dl>
+So to each page you assign tags from several tag types, for example
 
-<h2 id="Tagging_and_search_filters">Tagging and search filters</h2>
+- A tutorial about WebGL for beginners
+  - : `WebGL`, `Graphics`, `Guide`, `Beginner`
+- Reference page for {{HTMLElement("canvas")}}
+  - : `Canvas`, `HTML`, `Element`, `Graphics,` `Reference`
+- A landing page for Firefox OS developer tools
+  - : `Tools`, `Firefox OS`, `Landing`
 
-<p>Search filters won't work properly unless we tag MDN pages properly. Here's a table of search filters and which tags they look for.</p>
+## Tagging and search filters
 
-<div class="note">
-<p><strong>Note:</strong> If multiple tags are listed under "Tag name," that means any one or more of these tags must be present for the article to match.</p>
-</div>
+Search filters won't work properly unless we tag MDN pages properly. Here's a table of search filters and which tags they look for.
+
+> **備註：** If multiple tags are listed under "Tag name," that means any one or more of these tags must be present for the article to match.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Filter group</th>
-   <th scope="col">Search filter name</th>
-   <th scope="col">Tag name</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th>Topic</th>
-   <td>Open Web Apps</td>
-   <td>{{Tag("Apps")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>HTML</td>
-   <td>{{Tag("HTML")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>CSS</td>
-   <td>{{Tag("CSS")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>JavaScript</td>
-   <td>{{Tag("JavaScript")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>APIs and DOM</td>
-   <td>{{Tag("API")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>Canvas</td>
-   <td>{{Tag("Canvas")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>SVG</td>
-   <td>{{Tag("SVG")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>MathML</td>
-   <td>{{Tag("MathML")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>WebGL</td>
-   <td>{{Tag("WebGL")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>XUL</td>
-   <td>{{Tag("XUL")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>Marketplace</td>
-   <td>{{Tag("Marketplace")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>Firefox</td>
-   <td>{{Tag("Firefox")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>Firefox for Android</td>
-   <td>{{Tag("Firefox Mobile")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>Firefox for Desktop</td>
-   <td>{{Tag("Firefox Desktop")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>Firefox OS</td>
-   <td>{{Tag("Firefox OS")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>Mobile</td>
-   <td>{{Tag("Mobile")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>Web Development</td>
-   <td>{{Tag("Web Development")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>Add-ons &amp; Extensions</td>
-   <td>{{Tag("Add-ons ")}}|| {{Tag("Extensions")}} || {{Tag("Plugins")}} || {{Tag("Themes")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>Games</td>
-   <td>{{Tag("Games")}}</td>
-  </tr>
-  <tr>
-   <th>Skill level</th>
-   <td>I'm an Expert</td>
-   <td>{{Tag("Advanced")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>Intermediate</td>
-   <td>{{Tag("Intermediate")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>I'm Learning</td>
-   <td>{{Tag("Beginner")}}</td>
-  </tr>
-  <tr>
-   <th>Document type</th>
-   <td>Docs</td>
-   <td><em>This restricts the search to docs content, leaving out Hacks and other MDN content.</em></td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>Demos</td>
-   <td><em>This includes Demo Studio content in the search results.</em></td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>Tools</td>
-   <td>{{Tag("Tools")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>Code Samples</td>
-   <td>{{Tag("Example")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>How-To &amp; Tutorial</td>
-   <td>{{Tag("Guide")}}</td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>Developer Profiles</td>
-   <td><em>This includes developer profiles from the MDN site in the search results.</em></td>
-  </tr>
-  <tr>
-   <th> </th>
-   <td>External Resources</td>
-   <td><em>The dev team is still figuring this out...</em></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Filter group</th>
+      <th scope="col">Search filter name</th>
+      <th scope="col">Tag name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Topic</th>
+      <td>Open Web Apps</td>
+      <td>{{Tag("Apps")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>HTML</td>
+      <td>{{Tag("HTML")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>CSS</td>
+      <td>{{Tag("CSS")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>JavaScript</td>
+      <td>{{Tag("JavaScript")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>APIs and DOM</td>
+      <td>{{Tag("API")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Canvas</td>
+      <td>{{Tag("Canvas")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>SVG</td>
+      <td>{{Tag("SVG")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>MathML</td>
+      <td>{{Tag("MathML")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>WebGL</td>
+      <td>{{Tag("WebGL")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>XUL</td>
+      <td>{{Tag("XUL")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Marketplace</td>
+      <td>{{Tag("Marketplace")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Firefox</td>
+      <td>{{Tag("Firefox")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Firefox for Android</td>
+      <td>{{Tag("Firefox Mobile")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Firefox for Desktop</td>
+      <td>{{Tag("Firefox Desktop")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Firefox OS</td>
+      <td>{{Tag("Firefox OS")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Mobile</td>
+      <td>{{Tag("Mobile")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Web Development</td>
+      <td>{{Tag("Web Development")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Add-ons &#x26; Extensions</td>
+      <td>
+        {{Tag("Add-ons ")}}|| {{Tag("Extensions")}} ||
+        {{Tag("Plugins")}} || {{Tag("Themes")}}
+      </td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Games</td>
+      <td>{{Tag("Games")}}</td>
+    </tr>
+    <tr>
+      <th>Skill level</th>
+      <td>I'm an Expert</td>
+      <td>{{Tag("Advanced")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Intermediate</td>
+      <td>{{Tag("Intermediate")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>I'm Learning</td>
+      <td>{{Tag("Beginner")}}</td>
+    </tr>
+    <tr>
+      <th>Document type</th>
+      <td>Docs</td>
+      <td>
+        <em
+          >This restricts the search to docs content, leaving out Hacks and
+          other MDN content.</em
+        >
+      </td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Demos</td>
+      <td><em>This includes Demo Studio content in the search results.</em></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Tools</td>
+      <td>{{Tag("Tools")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Code Samples</td>
+      <td>{{Tag("Example")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>How-To &#x26; Tutorial</td>
+      <td>{{Tag("Guide")}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Developer Profiles</td>
+      <td>
+        <em
+          >This includes developer profiles from the MDN site in the search
+          results.</em
+        >
+      </td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>External Resources</td>
+      <td><em>The dev team is still figuring this out...</em></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Tagging_problems_you_can_fix">Tagging problems you can fix</h2>
+## Tagging problems you can fix
 
-<p>There are several kinds of tag problems you can help fix:</p>
+There are several kinds of tag problems you can help fix:
 
-<dl>
- <dt>No tags</dt>
- <dd>Generally articles should have at <em>least</em> a "<a href="/en-US/docs/Project:MDN/Contributing/Tagging_standards#Category">category</a>" tag and a "<a href="/en-US/docs/Project:MDN/Contributing/Tagging_standards#Topic">topic</a>" tag. Usually other tags are appropriate as well, but if you can help us ensure that the minimum tags are present, you'll be a documentation hero!</dd>
- <dt>Tags that don't follow our tagging standards</dt>
- <dd>Please fix any documents whose tags don't follow the standards on this page.<br>
- Note that due to a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=776048">bug in Kuma</a>, some localized tags (such as <code>Référence</code>) may show up on some English pages. These tags are likely to reappear even if you delete them; don't bother trying to fix them until the Kuma bug is fixed.</dd>
- <dt>Incorrect tags</dt>
- <dd>If you're looking at an article about HTML and it's tagged "JavaScript", that's probably wrong! Likewise, if an article discusses Mozilla internals but has a "Web" tag, that's probably wrong too. Remove these tags and add the right tags if they aren't already there. Please also correct misspelled tags (e.g., "Javascript" will still match, since tags are case-insensitive, but let's not be sloppy!).</dd>
- <dt>Missing tags</dt>
- <dd>If an article has some but not all of the tags it needs, feel free to add more. For example, if a page in JavaScript reference is (correctly) tagged "JavaScript" but nothing else, you're invited to tag the page "Reference" as well!</dd>
- <dt>Tag spam</dt>
- <dd>This insidious beast is the most revolting tag problem of all: some Web vermin has deposited its droppings in the page tags (like "Free warez!" or "Hey I was browsing your site and wanted to ask you if you could help me solve this problem I'm having with Flash crashing all the time"). We've got to delete these right away!</dd>
-</dl>
+- No tags
+  - : Generally articles should have at _least_ a "[category](/en-US/docs/Project:MDN/Contributing/Tagging_standards#Category)" tag and a "[topic](/en-US/docs/Project:MDN/Contributing/Tagging_standards#Topic)" tag. Usually other tags are appropriate as well, but if you can help us ensure that the minimum tags are present, you'll be a documentation hero!
+- Tags that don't follow our tagging standards
+  - : Please fix any documents whose tags don't follow the standards on this page.
+    Note that due to a [bug in Kuma](https://bugzilla.mozilla.org/show_bug.cgi?id=776048), some localized tags (such as `Référence`) may show up on some English pages. These tags are likely to reappear even if you delete them; don't bother trying to fix them until the Kuma bug is fixed.
+- Incorrect tags
+  - : If you're looking at an article about HTML and it's tagged "JavaScript", that's probably wrong! Likewise, if an article discusses Mozilla internals but has a "Web" tag, that's probably wrong too. Remove these tags and add the right tags if they aren't already there. Please also correct misspelled tags (e.g., "Javascript" will still match, since tags are case-insensitive, but let's not be sloppy!).
+- Missing tags
+  - : If an article has some but not all of the tags it needs, feel free to add more. For example, if a page in JavaScript reference is (correctly) tagged "JavaScript" but nothing else, you're invited to tag the page "Reference" as well!
+- Tag spam
+  - : This insidious beast is the most revolting tag problem of all: some Web vermin has deposited its droppings in the page tags (like "Free warez!" or "Hey I was browsing your site and wanted to ask you if you could help me solve this problem I'm having with Flash crashing all the time"). We've got to delete these right away!
 
-<p>If you see one (or more) of these problems, please <a href="/en-US/docs/Project:MDN/Contributing/Getting_started#Logging_into_MDN">log into MDN</a> and click EDIT at the top right of the MDN window. Once the editor loads up, scroll down to the bottom of the page, where you'll see the tag box. For more details on the tagging interface, see "<a href="/en-US/docs/Project:MDN/Contributing/Editor_guide#The_tags_box">The tags box</a>" in the <a href="/en-US/docs/Project:MDN/Contributing/Editor_guide">MDN editor guide</a>.</p>
+If you see one (or more) of these problems, please [log into MDN](/en-US/docs/Project:MDN/Contributing/Getting_started#Logging_into_MDN) and click EDIT at the top right of the MDN window. Once the editor loads up, scroll down to the bottom of the page, where you'll see the tag box. For more details on the tagging interface, see "[The tags box](/en-US/docs/Project:MDN/Contributing/Editor_guide#The_tags_box)" in the [MDN editor guide](/en-US/docs/Project:MDN/Contributing/Editor_guide).

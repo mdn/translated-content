@@ -1,490 +1,424 @@
 ---
 title: KumaScript
 slug: MDN/Tools/KumaScript
-translation_of: MDN/Tools/KumaScript
+tags:
+  - Guide
+  - Kuma
+  - KumaScript
+  - MDN Meta
+  - NeedsContent
+  - Site-wide
 ---
-<div>{{MDNSidebar}}</div><h2 id="概要">概要</h2>
+{{MDNSidebar}}
 
-<p>On the <a href="/en-US/docs/MDN/Kuma">Kuma</a> platform that powers MDN, the template system for automating aspects of content on the wiki is called <a href="https://github.com/mdn/kumascript">KumaScript</a>. KumaScript is powered by server-side JavaScript, implemented using <a href="https://nodejs.org/en/">Node.js</a>. This article provides basic information on how to use KumaScript.</p>
+On the [Yari](/en-US/docs/MDN/Yari) platform that powers MDN, we still have a legacy template/macro system available called [KumaScript](https://github.com/mdn/yari/tree/main/kumascript) for automating certain aspects of content. We are hoping to stop using it some day, but until then MDN will still rely on it. This article provides basic information about using KumaScript
 
-<p>For a detailed overview and Q&amp;A of KumaScript, watch the MDN dev team's <a href="https://vreplay.mozilla.com/replay/showRecordDetails.html?sortBy=date&amp;viewCount=1&amp;currentPage=1&amp;groupBy=combo&amp;roomFilter=&amp;usernameFilter=&amp;searchFilter=&amp;usernameFullFilter=&amp;myManager=-1&amp;adminManager=0&amp;webCast=0&amp;command=&amp;recId=1082&amp;auxMessage=&amp;auxMessage1=&amp;lang=en&amp;langChanged=&amp;tenantFilter=&amp;securityTab=">KumaScript Fireside Chat</a> (the meeting starts at 10 minutes into the video). KumaScript replaced DekiScript, which was the template language for MindTouch, the previous platform used by MDN.</p>
+### What is KumaScript?
 
-<h3 id="What_is_KumaScript">What is KumaScript?</h3>
+- A way to reuse and localize content that appears repeatedly between documents (e.g., compatibility labels, section navigation, warning banners).
+- A way to build documents out of content pulled from other documents.
+- A way to fetch and include content from other websites and services (e.g., Bugzilla).
 
-<ul>
- <li>A way to reuse and localize content that appears repeatedly between documents (e.g., compatibility labels, section navigation, warning banners).</li>
- <li>A way to build documents out of content pulled from other documents.</li>
- <li>A way to fetch and include content from other web sites and services (e.g., Bugzilla).</li>
-</ul>
+### What KumaScript is not
 
-<h3 id="What_KumaScript_is_not">What KumaScript is not</h3>
+KumaScript does not
 
-<ul>
- <li>KumaScript does not support interactive scripting of the kind that can accept form submissions.</li>
- <li>KumaScript does not have access to a database, files, or any other way to store information persistently.</li>
- <li>KumaScript does not support site personalization based on the user currently logged in.</li>
- <li>KumaScript does not have access to user information, only to the content and metadata of a wiki page being viewed.</li>
-</ul>
+- support interactive scripting of the kind that can accept form submissions.
+- have access to a database, files, or any other way to store information persistently.
+- support site personalization based on the currently logged in user.
+- have access to user information, only to the content and metadata of an MDN page being viewed.
 
-<h2 id="基礎">基礎</h2>
+## 基礎
 
-<p>KumaScript is used on MDN in <a href="https://github.com/visionmedia/ejs">embedded JavaScript templates</a>. These templates can be invoked in document content by any MDN author, through the use of macros.</p>
+KumaScript is used on MDN via [embedded JavaScript templates](https://github.com/mde/ejs). These templates can be invoked in document content by any MDN author, through the use of macros.
 
-<p>A script in KumaScript is a <em>template</em>, and each template is a file in <a href="https://github.com/mdn/kumascript/tree/master/macros">the macros directory of the KumaScript repository</a> on Github. A  <a href="https://github.com/mdn/kumascript/blob/master/macros/hello.ejs">template</a> looks like this:</p>
+A script in KumaScript is a _template_, and each template is a file in [the macros directory](https://github.com/mdn/yari/tree/main/kumascript/macros) of the yari/kumascript repository on GitHub. A sample template might look like this:
 
-<pre class="notranslate">&lt;% for (var i = 0; i &lt; $0; i++) { %&gt;
-Hello #&lt;%= i %&gt;
-&lt;% } %&gt;</pre>
+```js
+<% for (let i = 0; i < $0; i++) { %>
+  Hello #<%= i %>
+<% } %>
+```
 
-<p>Invoking a template is done with a <em>macro</em>, which can be used anywhere in any wiki content. A macro looks like this:</p>
+Invoking a template is done with a _macro_, which can be used anywhere in any wiki content. Invoking the above template would look like this (provided it was saved in the macros directory with a filename of `hello.ejs`):
 
-<pre class="notranslate">\{{ hello("3") }}</pre>
+```js
+\{{hello(3)}}
+```
 
-<p>The output of the macro looks like this:</p>
+The output of the macro would look like this:
 
-<pre class="notranslate">Hello #0
+```html
+Hello #0
 Hello #1
-Hello #2</pre>
+Hello #2
+```
 
-<h3 id="Macro_syntax">Macro syntax</h3>
+### Macro syntax
 
-<p>KumaScript templates are invoked in document content with macros, like this:</p>
+Macro syntax takes the following general form:
 
-<pre class="notranslate">\{{ templateName("arg0", "arg1", ..., "argN") }}
-</pre>
+```js
+\{{templateName("arg0", "arg1", ..., "argN")}}
+```
 
-<p>Macro syntax consists of these rules:</p>
+Macro syntax follows these rules:
 
-<ul>
- <li>Macros start and end with <code>\{{</code> and <code>\}}</code> characters.</li>
- <li>The first part of the macro is the name of a template. The lowercase value of this name should match the lowercase value of one of the filenames under <a href="https://github.com/mdn/kumascript/tree/master/macros">the macros directory of KumaScript</a>.</li>
- <li>A template can accept parameters, and this parameter list starts and ends with parentheses.</li>
- <li>All non-numeric parameters must be in quotes. Numbers can be left unquoted.</li>
-</ul>
+- Macros start and end with `\{{</code> and <code>\}}` characters.
+- The first part of the macro is the name of a template. The lowercase value of this name should match the lowercase value of one of the filenames under the macros directory.
+- A template can accept parameters, and this parameter list starts and ends with parentheses.
+- All non-numeric parameters must be in quotes. Numbers can be left unquoted.
 
-<h4 id="Using_JSON_as_a_macro_parameter">Using JSON as a macro parameter</h4>
+#### Using JSON as a macro parameter
 
-<p>As a semi-experimental feature (not guaranteed to work), you can supply a JSON object for the first and only parameter, like so:</p>
+As a semi-experimental feature (not guaranteed to work), you can supply a JSON object for the first and only parameter, like so:
 
-<pre class="notranslate">\{{ templateName({ "Alpha":"one", "Beta":["a","b","c"], "Foo":"http:\/\/mozilla.org\/" }) }}
-</pre>
+```js
+\{{templateName({ "Alpha": "one", "Beta": ["a", "b", "c"], "Foo": "https:\/\/mozilla.org\/" })}}
+```
 
-<p>The data from this macro is available in template code as an object in the <code>$0</code> argument (e.g., <code>$0.Alpha</code>, <code>$0.Beta</code>, <code>$0.Foo</code>). This also allows you to express complex data structures in macro parameters that are hard or impossible to do with a simple list of parameters.</p>
+The data from this macro is available in template code as an object in the `$0` argument (e.g., `$0.Alpha`, `$0.Beta`, `$0.Foo`). This also allows you to express complex data structures in macro parameters that are hard or impossible to do with a simple list of parameters.
 
-<p>Note that this parameter style is very picky — it must adhere to <a href="http://json.org/">JSON syntax</a> exactly, which has some requirements about escaping characters that are easy to miss (e.g., all forward slashes are escaped). When in doubt, <a href="http://jsonlint.com/">try running your JSON through a validator</a>.</p>
+Note that this parameter style is very picky — it must adhere to [JSON syntax](https://json.org/) exactly, which has some requirements about escaping characters that are easy to miss (e.g., all forward slashes are escaped). When in doubt, [try running your JSON through a validator](https://jsonlint.com/).
 
 <h4 id="How_to_write_in_text">How to write "\{{" in text</h4>
 
-<p>Since the character sequence "<code>\{{</code>" is used to indicate the start of a macro, this can be troublesome if you actually just want to use "<code>\{{</code>" and "<code>}}</code>" in a page. It will probably produce <code>DocumentParsingError</code> messages.</p>
+<p>Since the character sequence "<code>\{{</code>" is used to indicate the start of a macro, this can be troublesome if you actually just want to use "<code>\{{</code>" and "<code>\}\}</code>" in a page. It will probably produce <code>DocumentParsingError</code> messages.</p>
 
-<p>In this case, you can escape the first brace with a backslash, like so: <code>\\{</code></p>
+<p>In this case, you can escape the first brace with a backslash, like so: <code>\\{{</code>.</p>
 
-<h3 id="Template_syntax">Template syntax</h3>
+### Template syntax
 
-<p>Each KumaScript template is a file under <a href="https://github.com/mdn/kumascript/tree/master/macros">the macros directory of KumaScript</a>. You create and edit these files as you would the files of any open-source project on GitHub (see <a href="https://github.com/mdn/kumascript">the KumaScript README</a> for more information).</p>
+Each KumaScript template is a file under [the macros directory](https://github.com/mdn/yari/tree/main/kumascript/macros) of the yari/kumascript repository on GitHub. You create and edit these files as you would the files of any open-source project on GitHub.
 
-<p>KumaScript templates are processed by an <a href="https://github.com/visionmedia/ejs">embedded JavaScript template engine</a> with a few simple rules:</p>
+KumaScript templates are processed by an [embedded JavaScript template engine](https://ejs.co) with a few simple rules:
 
-<ul>
- <li>Within a template, the parameters passed in from the macro are available as the variables <code>$0</code>, <code>$1</code>, <code>$2</code>, and so on. The entire list of parameters is also available in a template as the variable <code>arguments</code>.</li>
- <li>Most text is treated as output and included in the output stream.</li>
- <li>JavaScript variables and expressions can be inserted into the output stream with these blocks:
-  <ul>
-   <li><code>&lt;%= expr %&gt;</code> — the value of a JavaScript expression is escaped for HTML before being included in output (e.g., characters like <code>&lt;</code> and <code>&gt;</code> are turned into <code>&amp;lt;</code> and <code>&amp;gt;</code>).</li>
-   <li><code>&lt;%- expr %&gt;</code> — the value of a JavaScript expression is included in output without any escaping. (Use this if you want to dynamically build markup or use the results of another template that may include markup.)</li>
-   <li>It is an error to include semicolons inside these blocks.</li>
-  </ul>
- </li>
- <li>Anything inside a <code>&lt;% %&gt;</code> block is interpreted as JavaScript. This can include loops, conditionals, etc.</li>
- <li>Nothing inside a <code>&lt;% %&gt;</code> block can ever contribute to the output stream. But, you can transition from JS mode to output mode using <code>&lt;% %&gt;</code>—for example:
-  <pre class="notranslate">&lt;% for (var i = 0; i &lt; $0; i++) { %&gt;
-Hello #&lt;%= i %&gt;
-&lt;% } %&gt;
-</pre>
+- Within a template, the parameters passed in from the macro are available as the variables `$0`, `$1`, `$2`, and so on. The entire list of parameters is also available in a template as the variable `arguments`.
+- Most text is treated as output and included in the output stream.
+- JavaScript variables and expressions can be inserted into the output stream with these blocks:
 
-  <p>Note how the JavaScript code is contained in <code>&lt;% ... %&gt;</code>, and output happens in the space between <code>%&gt; ... &lt;%</code>. The <code>for</code> loop in JS can begin with one <code>&lt;% %&gt;</code> block, transition to output mode, and finish up in a second <code>&lt;% %&gt;</code> JS block.</p>
- </li>
- <li>For more details on EJS syntax, <a href="https://github.com/visionmedia/ejs">check out the upstream module documentation</a>.</li>
-</ul>
+  - `<%= expr %>` — the value of a JavaScript expression is escaped for HTML before being included in output (e.g., characters like `<` and `>` are turned into `&lt;` and `&gt;`).
+  - `<%- expr %>` — the value of a JavaScript expression is included in output without any escaping. (Use this if you want to dynamically build markup or use the results of another template that may include markup.)
+  - It is an error to include semicolons inside these blocks.
 
-<h3 id="Tips">Tips</h3>
+- Anything inside a `<% %>` block is interpreted as JavaScript. This can include loops, conditionals, etc.
+- Nothing inside a `<% %>` block can ever contribute to the output stream. But, you can transition from JS mode to output mode using `<% %>`—for example:
 
-<p>You can see a list of macros and how they are used on MDN on the <a href="/en-US/dashboards/macros">macros dashboard</a>.</p>
+  ```js
+  <% for (var i = 0; i < $0; i++) { %>
+    Hello #<%= i %>
+  <% } %>
+  ```
 
-<h2 id="進階功能">進階功能</h2>
+  Note how the JavaScript code is contained in `<% ... %>`, and output happens in the space between `%> ... <%`. The `for` loop in JS can begin with one `<% %>` block, transition to output mode, and finish up in a second `<% %>` JS block.
 
-<p>Beyond the basics, the KumaScript system offers some advanced features.</p>
+- For more details on EJS syntax, [check out the upstream module documentation](https://ejs.co).
 
-<h3 id="Environment_variables">Environment variables</h3>
+## 進階功能
 
-<p>When the wiki makes a call to the KumaScript service, it passes along some context on the current document that KumaScript makes available to templates as variables:</p>
+Beyond the basics, the KumaScript system offers some advanced features.
 
-<dl>
- <dt><code>env.path</code></dt>
- <dd>The path to the current wiki document</dd>
- <dt><code>env.url</code></dt>
- <dd>The full URL to the current wiki document</dd>
- <dt><code>env.id</code></dt>
- <dd>A short, unique ID for the current wiki document</dd>
- <dt><code>env.files</code></dt>
- <dd>An array of the files attached to the current wiki document; each object in the array is as described under <a href="#file_objects">File objects</a> below</dd>
- <dt><code>env.review_tags</code></dt>
- <dd>An array of the review tags on the article ("technical", "editorial", etc.)</dd>
- <dt><code>env.locale</code></dt>
- <dd>The locale of the current wiki document</dd>
- <dt><code>env.title</code></dt>
- <dd>The title of the current wiki document</dd>
- <dt><code>env.slug</code></dt>
- <dd>The URL slug of the current wiki document</dd>
- <dt><code>env.tags</code></dt>
- <dd>An array list of tag names for the current wiki document</dd>
- <dt><code>env.modified</code></dt>
- <dd>Last modified timestamp for the current wiki document</dd>
- <dt><code>env.cache_control</code></dt>
- <dd><code>Cache-Control</code> header sent in the request for the current wiki document, useful in deciding whether to invalidate caches</dd>
-</dl>
+### Environment variables
 
-<h4 id="File_objects">File objects</h4>
+When the wiki makes a call to the KumaScript service, it passes along some context on the current document that KumaScript makes available to templates as variables:
 
-<p>Each file object has the following fields:</p>
+- `env.path`
+  - : The path to the current MDN document
+- `env.url`
+  - : The full URL to the current MDN document
+- `env.id`
+  - : A short, unique ID for the current MDN document
+- `env.files`
+  - : An array of the files attached to the current MDN document; each object in the array is as described under [File objects](#file_objects) below
+- `env.review_tags`
+  - : An array of the review tags on the article ("technical", "editorial", etc.)
+- `env.locale`
+  - : The locale of the current MDN document
+- `env.title`
+  - : The title of the current MDN document
+- `env.slug`
+  - : The URL slug of the current MDN document
+- `env.tags`
+  - : An array list of tag names for the current MDN document
+- `env.modified`
+  - : Last modified timestamp for the current MDN document
+- `env.cache_control`
+  - : `Cache-Control` header sent in the request for the current MDN document, useful in deciding whether to invalidate caches
 
-<dl>
- <dt><code>title</code></dt>
- <dd>The attachment's title</dd>
- <dt><code>description</code></dt>
- <dd>A textual description of the current revision of the file</dd>
- <dt><code>filename</code></dt>
- <dd>The file's name</dd>
- <dt><code>size</code></dt>
- <dd>The size of the file in bytes</dd>
- <dt><code>author</code></dt>
- <dd>The username of the person who uploaded the file</dd>
- <dt><code>mime</code></dt>
- <dd>The MIME type of the file</dd>
- <dt><code>url</code></dt>
- <dd>The URL at which the file can be found</dd>
-</dl>
+#### File objects
 
-<h4 id="Working_with_tag_lists">Working with tag lists</h4>
+Each file object has the following fields:
 
-<p>The <code>env.tags</code> and <code>env.review_tags</code> variables return arrays of tags. You can work with these in many ways, of course, but here are a couple of suggestions.</p>
+- `title`
+  - : The attachment's title
+- `description`
+  - : A textual description of the current revision of the file
+- `filename`
+  - : The file's name
+- `size`
+  - : The size of the file in bytes
+- `author`
+  - : The username of the person who uploaded the file
+- `mime`
+  - : The MIME type of the file
+- `url`
+  - : The URL at which the file can be found
 
-<h5 id="Looking_to_see_if_a_specific_tag_is_set">Looking to see if a specific tag is set</h5>
+#### Working with tag lists
 
-<p>You can look to see if a specific tag exists on a page like this:</p>
+The `env.tags` and `env.review_tags` variables return arrays of tags. You can work with these in many ways, of course, but here are a couple of suggestions.
 
-<pre class="brush: js notranslate">if (env.tags.indexOf("tag") != −1) {
+##### Looking to see if a specific tag is set
+
+You can look to see if a specific tag exists on a page like this:
+
+```js
+if (env.tags.indexOf("tag") !== −1) {
   // The page has the tag "tag"
 }
-</pre>
+```
 
-<h5 id="Iterating_over_all_the_tags_on_a_page">Iterating over all the tags on a page</h5>
+##### Iterating over all the tags on a page
 
-<p>You can also iterate over all the tags on a page, like this:</p>
+You can also iterate over all the tags on a page, like this:
 
-<pre class="brush: js notranslate">env.tag.forEach(function(tag) {
+```js
+env.tag.forEach(function(tag) {
   // do whatever you need to do, such as:
-  if (tag.indexOf("a") == 0) {
+  if (tag.indexOf("a") === 0) {
     // this tag starts with "a" - woohoo!
   }
-});</pre>
+});
+```
 
-<h3 id="APIs_and_Modules">APIs and Modules</h3>
+### APIs and Modules
 
-<p>KumaScript offers some built-in methods and APIs for KumaScript macros.  Macros can also use <code>module.exports</code> to export new API methods.</p>
+KumaScript offers some built-in methods and APIs for KumaScript macros. Macros can also use `module.exports` to export new API methods.
 
-<p>API changes require updating the KumaScript engine or macros via a pull request to the <a href="https://github.com/mdn/kumascript">KumaScript repository</a>.</p>
+#### Built-in methods
 
-<h4 id="Built-in_methods">Built-in methods</h4>
+This manually-maintained documentation is likely to fall out of date with the code. With that in mind, [you can always check out the latest state of built-in APIs in the KumaScript source](https://github.com/mdn/yari/tree/main/kumascript/src/api). But here is a selection of useful methods exposed to templates:
 
-<p>This manually-maintained documentation is likely to fall out of date with the code. With that in mind, <a href="https://github.com/mdn/kumascript/blob/master/lib/kumascript/api.js#L175">you can always check out the latest state of built-in APIs in the KumaScript source</a>. But here is a selection of useful methods exposed to templates:</p>
+- `md5(string)`
+  - : Returns an MD5 hex digest of the given string.
+- `template("name", ["arg0", "arg1", ..., "argN"])`
 
-<dl>
- <dt><code>md5(string)</code></dt>
- <dd>Returns an MD5 hex digest of the given string.</dd>
- <dt><code>template("name", ["arg0", "arg1", ..., "argN"])</code></dt>
- <dd>Executes and returns the result of the named template with the given list of parameters.
- Example: <code>&lt;%- template("warning", ["foo", "bar", "baz"]) %&gt;</code>.
- Example using the <code>domxref</code> macro: <code>&lt;%- template("domxref", ["Event.bubbles", "bubbles"]) %&gt;</code>.
- This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: <code>&lt;%- template("warning", [$1, $2, "baz"]) %&gt;</code>. If you need to call another template from within a block of code, do not use <code>&lt;%</code> ... <code>%&gt;</code>. Example: <code>myvar = "&lt;li&gt;" + template("LXRSearch", ["ident", "i", $1]) + "&lt;/li&gt;";</code></dd>
- <dt><code>require(name)</code></dt>
- <dd>Loads another template as a module; any output is ignored. Anything assigned to <code>module.exports</code> in the template is returned.
- Used in templates like so: <code>&lt;% var my_module = require('MyModule'); %&gt;</code>.</dd>
- <dt><code>cacheFn(key, timeout, function_to_cache)</code></dt>
- <dd>Using the given key and cache entry lifetime, cache the results of the given function. Honors the value of <code>env.cache_control</code> to invalidate cache on <code>no-cache</code>, which can be sent by a logged-in user hitting shift-refresh.</dd>
- <dt><code>request</code></dt>
- <dd>Access to <a href="https://github.com/mikeal/request"><code>mikeal/request</code></a>, a library for making HTTP requests. Using this module in KumaScript templates is not yet very friendly, so you may want to wrap usage in module APIs that simplify things.</dd>
- <dt><code>log.debug(string)</code></dt>
- <dd>Outputs a debug message into the script log on the page (i.e. the big red box that usually displays errors).</dd>
-</dl>
+  - : Executes and returns the result of the named template with the given list of parameters.
 
-<h4 id="Built-in_API_modules">Built-in API modules</h4>
+    Example: `<%- template("warning", ["foo", "bar", "baz"]) %>`.
 
-<p>There's only one API built in at the moment, in the <code>kuma</code> namespace. You can see the most up to date list of methods under <code>kuma</code> from <a href="https://github.com/mdn/kumascript/blob/master/lib/kumascript/api.js#L74">the KumaScript source code</a>, but here are a few:</p>
+    Example using the `DOMxRef` macro: `<%- template("DOMxRef", ["Event.bubbles", "bubbles"]) %>`.
 
-<dl>
- <dt><code>kuma.inspect(object)</code></dt>
- <dd>Renders any JS object as a string, handy for use with <code>log.debug()</code>. See also: <a href="http://nodejs.org/api/util.html#util_util_inspect_object_options">node.js <code>util.inspect()</code></a>.</dd>
-</dl>
+    This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: `<%- template("warning", [$1, $2, "baz"]) %>`. If you need to call another template from within a block of code, do not use `<%` ... `%>`. Example: `myvar = "<li>" + template("LXRSearch", ["ident", "i", $1]) + "</li>";`
 
-<dl>
- <dt><code>kuma.htmlEscape(string)</code></dt>
- <dd>Escapes the characters <code>&amp;, &lt;, &gt;, "</code> to <code>&amp;amp, &amp;lt;, &amp;gt;, &amp;quot;</code>, respectively.</dd>
- <dt><code>kuma.url</code></dt>
- <dd>See also: <a href="http://nodejs.org/api/url.html">node.js <code>url</code> module</a>.</dd>
- <dt><code>kuma.fetchFeed(url)</code></dt>
- <dd>Fetch an RSS feed and parse it into a JS object. See also: <a href="https://github.com/mdn/kumascript/blob/master/macros/InsertFeedLinkList.ejs"><code>InsertFeedLinkList</code></a></dd>
-</dl>
+- `require(name)`
+  - : Loads another template as a module; any output is ignored. Anything assigned to `module.exports` in the template is returned. Used in templates like so: `<% const my_module = require('MyModule'); %>`.
+- `cacheFn(key, timeout, function_to_cache)`
+  - : Using the given key and cache entry lifetime, cache the results of the given function. Honors the value of `env.cache_control` to invalidate cache on `no-cache`, which can be sent by a logged-in user hitting shift-refresh.
+- `request`
+  - : Access to [`request/request`](https://github.com/request/request), a library for making HTTP requests. Using this module in KumaScript templates is not yet very friendly, so you may want to wrap usage in module APIs that simplify things.
+- `log.debug(string)`
+  - : Outputs a debug message into the script log on the page (i.e. the big red box that usually displays errors).
 
-<h4 id="Creating_modules">Creating modules</h4>
+#### Built-in API modules
 
-<p>Using the built-in <code>require()</code> method, you can load a template as a module to share common variables and methods between templates. A module can be defined in a template like this:</p>
+There are a set of built-in APIs that are automatically loaded and made available to every template by the environment script, as well as providing some features from the ancient legacy DekiScript system that MDN relied on many years ago.
 
-<pre class="notranslate">&lt;%
+These are used to share common variables and methods between templates:
+
+- `kuma.*` - [Kuma](https://github.com/mdn/yari/blob/main/kumascript/src/api/kuma.js)
+- `MDN.*` - [MDN:Common](https://github.com/mdn/yari/blob/main/kumascript/src/api/mdn.js)
+- `page.*` - [DekiScript:Page](https://github.com/mdn/yari/blob/main/kumascript/src/api/page.js)
+- `string.*` - [DekiScript:String](https://github.com/mdn/yari/blob/main/kumascript/src/api/string.js)
+- `web.*` - [DekiScript:Web](https://github.com/mdn/yari/blob/main/kumascript/src/api/web.js)
+- `wiki.*` - [DekiScript:Wiki](https://github.com/mdn/yari/blob/main/kumascript/src/api/wiki.js)
+
+Other available APIs include:
+
+- `kuma.inspect(object)`
+  - : Renders any JS object as a string, handy for use with `log.debug()`. See also: [node.js `util.inspect()`](https://nodejs.org/api/util.html#util_util_inspect_object_options).
+- `kuma.htmlEscape(string)`
+  - : Escapes the characters `&, <, >, "` to `&amp, &lt;, &gt;, &quot;`, respectively.
+- `kuma.url`
+  - : See also: [node.js `url` module](https://nodejs.org/api/url.html).
+- `kuma.fetchFeed(url)`
+  - : Fetch an RSS feed and parse it into a JS object.
+
+#### Creating modules
+
+Using the built-in `require()` method, you can load a template as a module to share common variables and methods between templates. A module can be defined in a template like this:
+
+```js
+<%
 module.exports = {
     add: function (a, b) {
         return a + b;
     }
 }
-%&gt;
-</pre>
+%>
+```
 
-<p>Assuming this template is saved under <a href="https://github.com/mdn/kumascript/tree/master/macros">https://github.com/mdn/kumascript/tree/master/macros</a> as <code>MathLib.ejs</code>, you can use it in another template like so:</p>
+Assuming this template were saved in the macros directory as `MathLib.ejs`, you could use it in another template like so:
 
-<pre class="notranslate">&lt;%
+```js
+<%
 var math_lib = require("MathLib");
-%&gt;
-The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
-</pre>
+%>
+The result of 2 + 2 = <%= math_lib.add(2, 2) %>
+```
 
-<p>And, the output of this template will be:</p>
+And, the output of this template would be:
 
-<pre class="notranslate">The result of 2 + 2 = 4
-</pre>
+```html
+The result of 2 + 2 = 4
+```
 
-<h4 id="Auto-loaded_modules">Auto-loaded modules</h4>
+## Tips and caveats
 
-<p>There are a set of modules editable as wiki templates that are automatically loaded and made available to every template. This set is defined in the configuration file for the KumaScript service - any changes to this requires an IT bug to edit configuration and a restart of the service.</p>
+### Debugging
 
-<p>For the most part, these attempt to provide stand-ins for legacy DekiScript features to ease template migration. But, going forward, these can be used to share common variables and methods between templates:</p>
+A useful tip when debugging. You can use the `log.debug()` method to output text to the scripting messages area at the top of the page that's running your template. Note that you need to be really sure to remove these when you're done debugging, as they're visible to all users! To use it, just do something like this:
 
-<ul>
- <li><code>mdn.*</code> - <a href="https://github.com/mdn/kumascript/blob/master/macros/MDN-Common.ejs">MDN-Common</a></li>
- <li><code>Page.*</code> - <a href="https://github.com/mdn/kumascript/blob/master/macros/DekiScript-Page.ejs">DekiScript-Page</a></li>
- <li><code>String.*</code> - <a href="https://github.com/mdn/kumascript/blob/master/macros/DekiScript-String.ejs">DekiScript-String</a></li>
- <li><code>Uri.*</code> - <a href="https://github.com/mdn/kumascript/blob/master/macros/DekiScript-Uri.ejs">DekiScript-Uri</a></li>
- <li><code>Web.*</code> - <a href="https://github.com/mdn/kumascript/blob/master/macros/DekiScript-Web.ejs">DekiScript-Web</a></li>
- <li><code>Wiki.*</code> - <a href="https://github.com/mdn/kumascript/blob/master/macros/DekiScript-Wiki.ejs">DekiScript-Wiki</a></li>
-</ul>
+```js
+<%- log.debug("Some text goes here"); %>
+```
 
-<p><strong>Note:</strong> You might notice that the DekiScript modules use a built-in method named <code>buildAPI()</code>, like so:</p>
+You can, of course, create more complex output using script code if it's helpful.
 
-<pre class="notranslate">&lt;% module.exports = buildAPI({
-    StartsWith: function (str, sub_str) {
-        return (''+str).indexOf(sub_str) === 0;
-    }
-}); %&gt;
-</pre>
+### Caching
 
-<p>The reason for this is because DekiScript is case-insensitive when it comes to references to API methods, whereas JavaScript is strict about uppercase and lowercase in references. So, <code>buildAPI()</code> is a hack to try to cover common case variations in DekiScript calls found in legacy templates.</p>
+KumaScript templates are heavily cached to improve performance. For the most part, this works great to serve up content that doesn't change very often. But, as a logged-in user, you have two options to force a page to be regenerated, in case you notice issues with scripting:
 
-<div class="note">
-<p><strong>備註：</strong> With that in mind, please do not use <code>buildAPI()</code> in new modules.</p>
-</div>
+- Hit Refresh in your browser. This causes KumaScript to invalidate its cache for the content on the current page by issuing a request with a `Cache-Control: max-age=0` header.
+- Hit Shift-Refresh in your browser. This causes KumaScript to invalidate cache for the current page, as well as for any templates or content used by the current page by issuing a request with a `Cache-Control: no-cache` header.
 
-<h2 id="Tips_and_caveats">Tips and caveats</h2>
+## Cookbook
 
-<h3 id="Debugging">Debugging</h3>
+This section will list examples of common patterns for templates used on MDN, including samples of legacy DekiScript templates and their new KumaScript equivalents.
 
-<p>A useful tip when debugging. You can use the <code>log.debug()</code> method to output text to the scripting messages area at the top of the page that's running your template. Note that you need to be really sure to remove these when you're done debugging, as they're visible to all users! To use it, just do something like this:</p>
+### Force templates used on a page to be reloaded
 
-<pre class="notranslate">&lt;%- log.debug("Some text goes here"); %&gt;
-</pre>
+It bears repeating: To force templates used on a page to be reloaded after editing, hit Shift-Reload. Just using Reload by itself will cause the page contents to be regenerated, but using cached templates and included content. A Shift-Reload is necessary to invalidate caches beyond just the content of the page itself.
 
-<p>You can, of course, create more complex output using script code if it's helpful.</p>
+### Recovering from "Unknown Error"
 
-<h3 id="Caching">Caching</h3>
+Sometimes, you'll see a scripting message like this when you load a page:
 
-<p>KumaScript templates are heavily cached to improve performance. For the most part, this works great to serve up content that doesn't change very often. But, as a logged-in user, you have two options to force a page to be regenerated, in case you notice issues with scripting:</p>
+```plain
+Kumascript service failed unexpectedly: <class 'httplib.BadStatusLine'>
+```
 
-<ul>
- <li>Hit Refresh in your browser. This causes KumaScript to invalidate its cache for the content on the current page by issuing a request with a <code>Cache-Control: max-age=0</code> header.</li>
- <li>Hit Shift-Refresh in your browser. This causes KumaScript to invalidate cache for the current page, as well as for any templates or content used by the current page by issuing a request with a <code>Cache-Control: no-cache</code> header.</li>
-</ul>
+This is probably a temporary failure of the KumaScript service. If you Refresh the page, the error may disappear. If that doesn't work, try a Shift-Refresh. If, after a few tries, the error persists - [file an IT bug](https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org&format=itrequest) for Mozilla Developer Network to ask for an investigation.
 
-<h3 id="Using_search_keywords_to_open_template_pages">Using search keywords to open template pages</h3>
+### Broken wiki.languages() macros
 
-<p>When using templates, it's common to open the template's code in a browser window to review the comments at the top, which are used to document the template, its parameters, and how to use it properly. To quickly access templates, you can create a Firefox <a href="http://kb.mozillazine.org/Using_keyword_searches">search keyword</a>, which gives you a shortcut you can type in the URL box to get to a template more easily.</p>
+On some pages, you'll see a scripting error like this:
 
-<p>To create a search keyword, open the bookmarks window by choosing "Show all bookmarks" in the Bookmarks menu, or by pressing <kbd>Control</kbd>-<kbd>Shift</kbd>-<kbd>B</kbd> (<kbd>Command</kbd>-<kbd>Shift</kbd>-<kbd>B</kbd> on Mac). Then from the utility ("Gear") menu in the Library window that appears, choose "New Bookmark...".</p>
+```plain
+Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...
+```
 
-<p>This causes the bookmark editing dialog to appear. Fill that out as follows:</p>
+If you edit the page, you'll probably see a macro like this at the bottom of the page:
 
-<dl>
- <dt>Name</dt>
- <dd>A suitable name for your search keyword; "Open MDN Template" is a good one.</dd>
- <dt>Location</dt>
- <dd><kbd>https://github.com/mdn/kumascript/blob/master/macros/%s</kbd></dd>
- <dt>Tags {{optional_inline}}</dt>
- <dd>A list of tags used to organize your bookmarks; these are entirely optional and what (if any) tags you use is up to you.</dd>
- <dt>Keyword</dt>
- <dd>The shortcut text you wish to use to access the template. Ideally, this should be something short and quick to type, such as simply "t" or "mdnt".</dd>
- <dt>Description {{optional_inline}}</dt>
- <dd>A suitable description explaining what the search keyword does.</dd>
-</dl>
+```plain
+\{{ wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) }}
+```
 
-<p>The resulting dialog looks something like this:</p>
+To fix the problem, just delete the macro. Or, replace the curly braces on either side with HTML comments `<!-- -->` to preserve the information, like so:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14432/Screen%20Shot%202016-11-28%20at%203.08.39%20PM.png"></p>
+```html
+<!-- wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) -->
+```
 
-<p>Then click the "Add" button to save your new search keyword. From then on, typing your keyword, then a space, then the name of a macro will open that macro in your current tab. So if you used "t" as the keyword, typing <kbd>t ListSubpages</kbd> will show you the page at <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/ListSubpages.ejs"><code>ListSubpages</code></a>.</p>
+Because Kuma supports localization differently, these macros aren't actually needed any more. But, they've been left intact in case we need to revisit the relationships between localized pages. Unfortunately, it seems like migration has failed to convert some of them properly.
 
-<h2 id="Cookbook">Cookbook</h2>
+### Finding the Current Page's Language
 
-<p>This section will list examples of common patterns for templates used on MDN, including samples of legacy DekiScript templates and their new KumaScript equivalents.</p>
+In KumaScript, the locale of the current document is exposed as an environment variable:
 
-<h3 id="Force_templates_used_on_a_page_to_be_reloaded">Force templates used on a page to be reloaded</h3>
+```js
+const lang = env.locale;
+```
 
-<p>It bears repeating: To force templates used on a page to be reloaded after editing, hit Shift-Reload. Just using Reload by itself will cause the page contents to be regenerated, but using cached templates and included content. A Shift-Reload is necessary to invalidate caches beyond just the content of the page itself.</p>
+The `env.locale` variable should be reliable and defined for every document.
 
-<h3 id="Recovering_from_Unknown_Error">Recovering from "Unknown Error"</h3>
+### Reading the contents of a page attachment
 
-<p>Sometimes, you'll see a scripting message like this when you load a page:</p>
+You can read the contents of an attached file by using the `mdn.getFileContent()` function, like this:
 
-<pre class="notranslate">Kumascript service failed unexpectedly: &lt;class 'httplib.BadStatusLine'&gt;</pre>
+```js
+<%
+  let contents = mdn.getFileContent(fileUrl);
+  // ... do stuff with the contents ...
+%>
+```
 
-<p>This is probably a temporary failure of the KumaScript service. If you Refresh the page, the error may disappear. If that doesn't work, try a Shift-Refresh. If, after a few tries, the error persists - <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org&amp;format=itrequest">file an IT bug</a> for Mozilla Developer Network to ask for an investigation.</p>
+or
 
-<h3 id="Broken_wiki.languages_macros">Broken wiki.languages() macros</h3>
+```js
+<%- mdn.getFileContent(fileObject); %>
+```
 
-<p>On some pages, you'll see a scripting error like this:</p>
+In other words, you may specify either the URL of the file to read or as a file object. The file objects for a page can be accessed through the array `env.files`. So, for example, to embed the contents of the first file attached to the article, you can do this:
 
-<pre class="notranslate">Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...
-</pre>
+```js
+<%- mdn.getFileContent(env.files[0]); %>
+```
 
-<p>If you edit the page, you'll probably see a macro like this at the bottom of the page:</p>
+> **備註：** You probably don't want to try to embed the contents of a non-text file this way, as the raw contents would be injected as text. This is meant to let you access the contents of text attachments.
 
-<pre class="notranslate">\{{ wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) }}
-</pre>
+If the file isn't found, an empty string is returned. There is currently no way to tell the difference between an empty file and a nonexistent one. But if you're putting empty files on the wiki, you're doing it wrong.
 
-<p>To fix the problem, just delete the macro. Or, replace the curly braces on either side with HTML comments <code>&lt;!-- --&gt;</code> to preserve the information, like so:</p>
+### Localizing template content
 
-<pre class="notranslate">&lt;!-- wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) --&gt;
-</pre>
+Templates are not translated like wiki pages, rather any single template might be used for any number of locales.
 
-<p>Because Kuma supports localization differently, these macros aren't actually needed any more. But, they've been left intact in case we need to revisit the relationships between localized pages. Unfortunately, it seems like migration has failed to convert some of them properly.</p>
+So the main way to output content tailored to the current document locale is to pivot on the value of `env.locale`. There are many ways to do this, but a few patterns are common in the conversion of legacy DekiScript templates:
 
-<h3 id="Finding_the_Current_Pages_Language">Finding the Current Page's Language</h3>
+#### If/else blocks in KumaScript
 
-<p>In KumaScript, the locale of the current document is exposed as an environment variable:</p>
+The KumaScript equivalent of this can be achieved with simple if/else blocks, like so:
 
-<pre class="notranslate">var lang = env.locale;
-</pre>
+```js
+<% if ("fr" == env.locale) { %>
+<%- template("CSSRef") %> « <a href="/fr/docs/Référence_CSS/Extensions_Mozilla">Référence CSS: Extensions Mozilla</a>
+<% } else if ("ja" == env.locale) { %>
+<%- template("CSSRef") %> « <a href="/ja/docs/CSS_Reference/Mozilla_Extensions">CSS リファレンス: Mozilla 拡張仕様</a>
+<% } else if ("pl" == env.locale) { %>
+<%- template("CSSRef") %> « <a href="/pl/docs/Dokumentacja_CSS/Rozszerzenia_Mozilli">Dokumentacja CSS: Rozszerzenia Mozilli</a>
+<% } else if ("de" == env.locale) { %>
+<%- template("CSSRef") %> « <a href="/de/docs/CSS_Referenz/Mozilla_CSS_Erweiterungen">CSS Referenz: Mozilla Erweiterungen</a>
+<% } else { %>
+<%- template("CSSRef") %> « <a href="/en-US/docs/CSS_Reference/Mozilla_Extensions">CSS Reference: Mozilla Extensions</a>
+<% } %>
+```
 
-<p>The <code>env.locale</code> variable should be reliable and defined for every document.</p>
+Depending on what text editor is your favorite, you may be able to copy & paste from the browser-based editor and attack this pattern with a series of search/replace regexes to get you most of the way there.
 
-<h3 id="Reading_the_contents_of_a_page_attachment">Reading the contents of a page attachment</h3>
+My favorite editor is MacVim, and a series of regexes like this does the bulk of the work with just a little manual clean up following:
 
-<p>You can read the contents of an attached file by using the <code>mdn.getFileContent()</code> function, like this:</p>
+```plain
+%s#<span#^M<span#g
+%s#<span lang="\(.*\)" .*>#<% } else if ("\1" == env.locale) { %>#g
+%s#<span class="script">template.CSSxRef(#<%- template("CSSxRef", [#
+%s#)</span> </span>#]) %>
+```
 
-<pre class="notranslate">&lt;%
-  var contents = mdn.getFileContent(fileUrl);
-  ... do stuff with the contents ...
-%&gt;
-</pre>
+Your mileage may vary, and patterns change slightly from template to template. That's why the migration script was unable to just handle this automatically, after all.
 
-<p>or</p>
+#### String variables and switch
 
-<pre class="notranslate">&lt;%-mdn.getFileContent(fileObject)%&gt;
-</pre>
+Different strings are defined and chosen depending on locale using `mdn.localString()`, like this:
 
-<p>In other words, you may specify either the URL of the file to read or as a file object. The file objects for a page can be accessed through the array <code>env.files</code>. So, for example, to embed the contents of the first file attached to the article, you can do this:</p>
-
-<pre class="notranslate">&lt;%-mdn.getFileContent(env.files[0])%&gt;
-</pre>
-
-<div class="note"><p><strong>備註：</strong> You probably don't want to try to embed the contents of a non-text file this way, as the raw contents would be injected as text. This is meant to let you access the contents of text attachments.</p></div>
-
-<p>If the file isn't found, an empty string is returned. There is currently no way to tell the difference between an empty file and a nonexistent one. But if you're putting empty files on the wiki, you're doing it wrong.</p>
-
-<h3 id="Localizing_template_content">Localizing template content</h3>
-
-<p>Templates are not translated like wiki pages, rather any single template might be used for any number of locales.</p>
-
-<p>So the main way to output content tailored to the current document locale is to pivot on the value of <code>env.locale</code>. There are many ways to do this, but a few patterns are common in the conversion of legacy DekiScript templates:</p>
-
-<h4 id="Ifelse_blocks_in_KumaScript">If/else blocks in KumaScript</h4>
-
-<p>The KumaScript equivalent of this can be achieved with simple if/else blocks, like so:</p>
-
-<pre class="notranslate">&lt;% if ("fr" == env.locale) { %&gt;
-&lt;%- template("CSSRef") %&gt; « &lt;a title="Référence_CSS/Extensions_Mozilla" href="/fr/docs/Référence_CSS/Extensions_Mozilla"&gt;Référence CSS:Extensions Mozilla&lt;/a&gt;
-&lt;% } else if ("ja" == env.locale) { %&gt;
-&lt;%- template("CSSRef") %&gt; « &lt;a title="CSS_Reference/Mozilla_Extensions" href="/ja/docs/CSS_Reference/Mozilla_Extensions"&gt;CSS リファレンス:Mozilla 拡張仕様&lt;/a&gt;
-&lt;% } else if ("pl" == env.locale) { %&gt;
-&lt;%- template("CSSRef") %&gt; « &lt;a title="Dokumentacja_CSS/Rozszerzenia_Mozilli" href="/pl/docs/Dokumentacja_CSS/Rozszerzenia_Mozilli"&gt;Dokumentacja CSS:Rozszerzenia Mozilli&lt;/a&gt;
-&lt;% } else if ("de" == env.locale) { %&gt;
-&lt;%- template("CSSRef") %&gt; « &lt;a title="CSS_Referenz/Mozilla_CSS_Erweiterungen" href="/de/docs/CSS_Referenz/Mozilla_CSS_Erweiterungen"&gt;CSS Referenz: Mozilla Erweiterungen&lt;/a&gt;
-&lt;% } else { %&gt;
-&lt;%- template("CSSRef") %&gt; « &lt;a title="CSS_Reference/Mozilla_Extensions" href="/en-US/docs/CSS_Reference/Mozilla_Extensions"&gt;CSS Reference:Mozilla Extensions&lt;/a&gt;
-&lt;% } %&gt;
-</pre>
-
-<p>Depending on what text editor is your favorite, you may be able to copy &amp; paste from the browser-based editor and attack this pattern with a series of search/replace regexes to get you most of the way there.</p>
-
-<p>My favorite editor is MacVim, and a series of regexes like this does the bulk of the work with just a little manual clean up following:</p>
-
-<pre class="notranslate">%s#&lt;span#^M&lt;span#g
-%s#&lt;span lang="\(.*\)" .*&gt;#&lt;% } else if ("\1" == env.locale) { %&gt;#g
-%s#&lt;span class="script"&gt;template.Cssxref(#&lt;%- template("Cssxref", [#
-%s#)&lt;/span&gt; &lt;/span&gt;#]) %&gt;
-</pre>
-
-<p>Your mileage may vary, and patterns change slightly from template to template. That's why the migration script was unable to just handle this automatically, after all.</p>
-
-<h4 id="String_variables_and_switch">String variables and switch</h4>
-
-<p>Rather than switch between full chunks of markup, you can define a set of strings, switch them based on locale, and then use them to fill in placeholders in a single chunk of markup:</p>
-
-<pre class="notranslate">&lt;%
-var s_title = 'Firefox for Developers';
-switch (env.locale) {
-    case 'de':
-        s_title = "Firefox für Entwickler";
-        break;
-    case 'fr':
-        s_title = "Firefox pour les développeurs";
-        break;
-    case 'es':
-        s_title = "Firefox para desarrolladores";
-        break;
-};
-%&gt;
-&lt;span class="title"&gt;&lt;%= s_title %&gt;&lt;/span&gt;
-</pre>
-
-<h4 id="Use_mdn.localString">Use <code>mdn.localString()</code></h4>
-
-<p>A recent addition to the <code>MDN:Common</code> module is <code>mdn.localString()</code>, used like this:</p>
-
-<pre class="notranslate">&lt;%
+```js
+<%
 var s_title = mdn.localString({
   "en-US": "Firefox for Developers",
   "de": "Firefox für Entwickler",
   "es": "Firefox para desarrolladores"
 });
-%&gt;
-&lt;span class="title"&gt;&lt;%= s_title %&gt;&lt;/span&gt;
-</pre>
+%>
+<span class="title"><%= s_title %></span>
+```
 
-<p>This is more concise than the switch statement, and may be a better choice where a single string is concerned. However, if many strings need to be translated (e.g., as in <a href="https://github.com/mdn/kumascript/blob/master/macros/CSSRef.ejs">CSSRef</a>), a switch statement might help keep all the strings grouped by locale and more easily translated that way.</p>
-
-<p>When the object does not have the appropriate locale, the value of "en-US" is used as the initial value.</p>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li><a href="http://kuma.readthedocs.io/en/latest/">Getting started with Kuma</a></li>
- <li><a href="https://github.com/mdn/kumascript">KumaScript reference</a></li>
- <li><a href="https://wiki.mozilla.org/MDN/Kuma">Kuma wiki</a></li>
-</ul>
+When the object does not have the appropriate locale, the value of "en-US" is used as the initial value.
