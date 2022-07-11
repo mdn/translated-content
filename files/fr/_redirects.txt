@@ -3793,6 +3793,7 @@
 /fr/docs/Web/API/GlobalEventHandlers/onabort	/fr/docs/Web/API/HTMLMediaElement/abort_event
 /fr/docs/Web/API/GlobalEventHandlers/onblur	/fr/docs/Web/API/Window/blur_event
 /fr/docs/Web/API/GlobalEventHandlers/onchange	/fr/docs/conflicting/Web/API/HTMLElement/change_event
+/fr/docs/Web/API/GlobalEventHandlers/onclose	/fr/docs/conflicting/Web/API/HTMLDialogElement/close_event
 /fr/docs/Web/API/GlobalEventHandlers/onfocus	/fr/docs/Web/API/Window/focus_event
 /fr/docs/Web/API/GlobalEventHandlers/onkeydown	/fr/docs/Web/API/Element/keydown_event
 /fr/docs/Web/API/GlobalEventHandlers/onkeypress	/fr/docs/conflicting/Web/API/Element/keypress_event

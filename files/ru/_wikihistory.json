@@ -7780,13 +7780,6 @@
       "YozhEzhi"
     ]
   },
-  "Web/API/GlobalEventHandlers/onclose": {
-    "modified": "2019-03-23T22:16:16.756Z",
-    "contributors": [
-      "katsanva",
-      "sergey-jr"
-    ]
-  },
   "Web/API/GlobalEventHandlers/oncontextmenu": {
     "modified": "2020-10-15T22:08:31.397Z",
     "contributors": [
@@ -7807,12 +7800,6 @@
       "xercool"
     ]
   },
-  "Web/API/GlobalEventHandlers/oninput": {
-    "modified": "2019-03-18T21:31:39.381Z",
-    "contributors": [
-      "dieuromodin"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onload": {
     "modified": "2019-03-23T22:57:03.709Z",
     "contributors": [
@@ -7829,12 +7816,6 @@
     "modified": "2019-03-23T22:26:43.386Z",
     "contributors": [
       "Drugak"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onsubmit": {
-    "modified": "2019-03-23T22:27:43.421Z",
-    "contributors": [
-      "DmitryK"
     ]
   },
   "Web/API/Gyroscope": {
@@ -8040,6 +8021,13 @@
       "andSKLV"
     ]
   },
+  "Web/API/HTMLDialogElement/close_event": {
+    "modified": "2019-03-23T22:16:16.756Z",
+    "contributors": [
+      "katsanva",
+      "sergey-jr"
+    ]
+  },
   "Web/API/HTMLDialogElement/open": {
     "modified": "2020-10-15T22:14:23.426Z",
     "contributors": [
@@ -8109,6 +8097,12 @@
       "YozhEzhi",
       "ivandoroshenko",
       "Aleksander3007"
+    ]
+  },
+  "Web/API/HTMLElement/input_event": {
+    "modified": "2019-03-18T21:31:39.381Z",
+    "contributors": [
+      "dieuromodin"
     ]
   },
   "Web/API/HTMLElement/offsetHeight": {
@@ -8194,6 +8188,12 @@
     "modified": "2020-10-15T22:28:40.979Z",
     "contributors": [
       "RenJeka"
+    ]
+  },
+  "Web/API/HTMLFormElement/submit_event": {
+    "modified": "2019-03-23T22:27:43.421Z",
+    "contributors": [
+      "DmitryK"
     ]
   },
   "Web/API/HTMLHeadElement": {

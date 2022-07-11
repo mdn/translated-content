@@ -3670,12 +3670,6 @@
       "StanleyDing"
     ]
   },
-  "Web/API/GlobalEventHandlers/onclose": {
-    "modified": "2019-03-23T22:13:45.424Z",
-    "contributors": [
-      "StanleyDing"
-    ]
-  },
   "Web/API/HTMLCanvasElement": {
     "modified": "2019-03-23T22:48:19.691Z",
     "contributors": [
@@ -3701,6 +3695,12 @@
     "modified": "2020-10-15T22:09:39.473Z",
     "contributors": [
       "qwer5656"
+    ]
+  },
+  "Web/API/HTMLDialogElement/close_event": {
+    "modified": "2019-03-23T22:13:45.424Z",
+    "contributors": [
+      "StanleyDing"
     ]
   },
   "Web/API/HTMLDocument": {

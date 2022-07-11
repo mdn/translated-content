@@ -3213,7 +3213,10 @@
 /ja/docs/Web/API/GlobalEventHandlers/oncanplay	/ja/docs/conflicting/Web/API/HTMLMediaElement/canplay_event
 /ja/docs/Web/API/GlobalEventHandlers/oncanplaythrough	/ja/docs/conflicting/Web/API/HTMLMediaElement/canplaythrough_event
 /ja/docs/Web/API/GlobalEventHandlers/onchange	/ja/docs/conflicting/Web/API/HTMLElement/change_event
+/ja/docs/Web/API/GlobalEventHandlers/onclose	/ja/docs/Web/API/HTMLDialogElement/close_event
 /ja/docs/Web/API/GlobalEventHandlers/onfocus	/ja/docs/Web/API/Window/focus_event
+/ja/docs/Web/API/GlobalEventHandlers/onformdata	/ja/docs/conflicting/Web/API/HTMLFormElement/formdata_event
+/ja/docs/Web/API/GlobalEventHandlers/oninput	/ja/docs/conflicting/Web/API/HTMLElement/input_event
 /ja/docs/Web/API/GlobalEventHandlers/onkeydown	/ja/docs/conflicting/Web/API/Element/keydown_event
 /ja/docs/Web/API/GlobalEventHandlers/onkeypress	/ja/docs/Web/API/Element/keypress_event
 /ja/docs/Web/API/GlobalEventHandlers/onkeyup	/ja/docs/conflicting/Web/API/Element/keyup_event
@@ -3732,7 +3735,7 @@
 /ja/docs/Web/API/window.onblur	/ja/docs/Web/API/Window/blur_event
 /ja/docs/Web/API/window.onchange	/ja/docs/conflicting/Web/API/HTMLElement/change_event
 /ja/docs/Web/API/window.onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
-/ja/docs/Web/API/window.onclose	/ja/docs/Web/API/GlobalEventHandlers/onclose
+/ja/docs/Web/API/window.onclose	/ja/docs/Web/API/HTMLDialogElement/close_event
 /ja/docs/Web/API/window.onfocus	/ja/docs/Web/API/Window/focus_event
 /ja/docs/Web/API/window.onhashchange	/ja/docs/conflicting/Web/API/Window/hashchange_event
 /ja/docs/Web/API/window.onkeydown	/ja/docs/conflicting/Web/API/Element/keydown_event

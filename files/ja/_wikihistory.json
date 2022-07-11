@@ -14203,15 +14203,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/GlobalEventHandlers/onclose": {
-    "modified": "2020-10-15T21:23:57.919Z",
-    "contributors": [
-      "mpcjazz",
-      "teoli",
-      "arunpandianp",
-      "ethertank"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ondrag": {
     "modified": "2020-10-15T22:34:34.036Z",
     "contributors": [
@@ -14254,24 +14245,11 @@
       "silverskyvicto"
     ]
   },
-  "Web/API/GlobalEventHandlers/onformdata": {
-    "modified": "2020-10-15T22:34:40.776Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ongotpointercapture": {
     "modified": "2020-10-15T22:20:35.800Z",
     "contributors": [
       "mfuji09",
       "Wind1808"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/oninput": {
-    "modified": "2020-10-15T21:48:35.627Z",
-    "contributors": [
-      "Marsf",
-      "YuichiNukiyama"
     ]
   },
   "Web/API/GlobalEventHandlers/oninvalid": {
@@ -14642,6 +14620,15 @@
     "modified": "2020-10-15T22:28:07.370Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "Web/API/HTMLDialogElement/close_event": {
+    "modified": "2020-10-15T21:23:57.919Z",
+    "contributors": [
+      "mpcjazz",
+      "teoli",
+      "arunpandianp",
+      "ethertank"
     ]
   },
   "Web/API/HTMLDivElement": {
@@ -46833,6 +46820,19 @@
     "contributors": [
       "Marsf",
       "Kenju"
+    ]
+  },
+  "conflicting/Web/API/HTMLElement/input_event": {
+    "modified": "2020-10-15T21:48:35.627Z",
+    "contributors": [
+      "Marsf",
+      "YuichiNukiyama"
+    ]
+  },
+  "conflicting/Web/API/HTMLFormElement/formdata_event": {
+    "modified": "2020-10-15T22:34:40.776Z",
+    "contributors": [
+      "mfuji09"
     ]
   },
   "conflicting/Web/API/HTMLFormElement/reset_event": {

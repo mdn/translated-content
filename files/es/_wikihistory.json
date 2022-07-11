@@ -6421,12 +6421,6 @@
       "gama"
     ]
   },
-  "Web/API/GlobalEventHandlers/onclose": {
-    "modified": "2020-10-15T22:12:16.407Z",
-    "contributors": [
-      "alexisrazok"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onerror": {
     "modified": "2019-03-23T22:53:42.268Z",
     "contributors": [
@@ -6438,12 +6432,6 @@
     "modified": "2019-03-23T22:25:49.346Z",
     "contributors": [
       "SoftwareRVG"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/oninput": {
-    "modified": "2019-03-23T22:55:01.733Z",
-    "contributors": [
-      "Diegosolo"
     ]
   },
   "Web/API/GlobalEventHandlers/onload": {
@@ -6470,12 +6458,6 @@
     "modified": "2019-03-18T21:23:16.974Z",
     "contributors": [
       "Grijander81"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onsubmit": {
-    "modified": "2019-03-18T21:31:41.533Z",
-    "contributors": [
-      "ANDRUS74"
     ]
   },
   "Web/API/GlobalEventHandlers/onwheel": {
@@ -6541,6 +6523,12 @@
       "diego_bardelas",
       "kromsoft",
       "djrm"
+    ]
+  },
+  "Web/API/HTMLDialogElement/close_event": {
+    "modified": "2020-10-15T22:12:16.407Z",
+    "contributors": [
+      "alexisrazok"
     ]
   },
   "Web/API/HTMLDivElement": {
@@ -6664,6 +6652,12 @@
     "modified": "2020-11-28T13:27:49.559Z",
     "contributors": [
       "hiperion"
+    ]
+  },
+  "Web/API/HTMLFormElement/submit_event": {
+    "modified": "2019-03-18T21:31:41.533Z",
+    "contributors": [
+      "ANDRUS74"
     ]
   },
   "Web/API/HTMLHeadElement": {
@@ -20933,6 +20927,12 @@
     "modified": "2019-03-23T22:18:11.571Z",
     "contributors": [
       "gama"
+    ]
+  },
+  "conflicting/Web/API/HTMLElement/input_event": {
+    "modified": "2019-03-23T22:55:01.733Z",
+    "contributors": [
+      "Diegosolo"
     ]
   },
   "conflicting/Web/API/HTML_Drag_and_Drop_API": {

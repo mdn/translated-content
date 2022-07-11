@@ -15010,13 +15010,6 @@
       "BenoitL"
     ]
   },
-  "Web/API/GlobalEventHandlers/onclose": {
-    "modified": "2019-03-23T22:45:51.255Z",
-    "contributors": [
-      "SphinxKnight",
-      "smumu"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ondblclick": {
     "modified": "2019-03-23T23:46:40.744Z",
     "contributors": [
@@ -40885,6 +40878,13 @@
       "teoli",
       "mimzi_fahia",
       "Chbok"
+    ]
+  },
+  "conflicting/Web/API/HTMLDialogElement/close_event": {
+    "modified": "2019-03-23T22:45:51.255Z",
+    "contributors": [
+      "SphinxKnight",
+      "smumu"
     ]
   },
   "conflicting/Web/API/HTMLElement/change_event": {

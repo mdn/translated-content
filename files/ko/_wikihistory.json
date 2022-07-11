@@ -4741,12 +4741,6 @@
       "rodeck826"
     ]
   },
-  "Web/API/GlobalEventHandlers/onsubmit": {
-    "modified": "2019-03-23T22:27:57.488Z",
-    "contributors": [
-      "hoony"
-    ]
-  },
   "Web/API/HTMLAnchorElement/href": {
     "modified": "2020-10-15T22:15:22.693Z",
     "contributors": [
@@ -4870,6 +4864,12 @@
       "jsx",
       "teoli",
       "Netaras"
+    ]
+  },
+  "Web/API/HTMLFormElement/submit_event": {
+    "modified": "2019-03-23T22:27:57.488Z",
+    "contributors": [
+      "hoony"
     ]
   },
   "Web/API/HTMLInputElement/select_event": {
