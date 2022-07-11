@@ -17,17 +17,11 @@ translation_of: Web/API/MediaQueryList/media
 
 {{APIRef("CSSOM")}}
 
-**`media`** は {{DOMxRef("MediaQueryList")}} インターフェイスの読取専用プロパティであり、 {{DOMxRef("DOMString")}} でシリアライズされたメディアクエリーを表します。
-
-## 構文
-
-```js
-var _media_ = MediaQueryList.media;
-```
+**`media`** は {{DOMxRef("MediaQueryList")}} インターフェイスの読取専用プロパティであり、 文字列で、シリアライズされたメディアクエリーを表します。
 
 ### 値
 
-{{DOMxRef("DOMString")}} で、シリアライズされたメディアクエリーを表します。
+文字列で、シリアライズされたメディアクエリーを表します。
 
 ## 例
 

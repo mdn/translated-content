@@ -20,17 +20,17 @@ translation_of: Web/API/MediaQueryList/matches
 
 {{APIRef("CSSOM")}}
 
-**`matches`** は {{DOMxRef("MediaQueryList")}} インターフェイスの読み取り専用プロパティで、 {{jsxref("Boolean")}} であり、文書が現在メディアクエリーリストと一致している場合は `true` を返し、一致していない場合は `false` を返します。
+**`matches`** は {{DOMxRef("MediaQueryList")}} インターフェイスの読み取り専用プロパティで、 `boolean` であり、文書が現在メディアクエリーリストと一致している場合は `true` を返し、一致していない場合は `false` を返します。
 
 `matches` の値が変化した場合は、 `MediaQueryList` で発生する {{domxref("MediaQueryList.change_event", "change")}} イベントを監視することで通知を受けることができます。
 
 ### 値
 
-{{DOMxRef("Boolean")}}。 {{DOMxRef("document")}} が現在メディアクエリーのリストに一致していれば `true` を返し、そうでなければ `false` を返します。
+boolean。 {{DOMxRef("document")}} が現在メディアクエリーのリストに一致していれば `true` を返し、そうでなければ `false` を返します。
 
 ## 例
 
-この例では [orientation](/ja/docs/Web/CSS/@media/orientation) メディア特性を使用したメディアクエリーを作成することにより、ビューポートの向きの変化を検出します。
+この例では [`orientation`](/ja/docs/Web/CSS/@media/orientation) メディア特性を使用したメディアクエリーを作成することにより、ビューポートの向きの変化を検出します。
 
 ```js
 function addMQListener(mq, callback) {
