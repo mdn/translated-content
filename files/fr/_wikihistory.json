@@ -40898,83 +40898,8 @@
       "SphinxKnight"
     ]
   },
-  "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox": {
-    "modified": "2019-03-23T22:29:57.804Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_Scroll_Snap": {
-    "modified": "2019-07-21T13:28:24.043Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Web/CSS/Filter_Effects": {
-    "modified": "2019-03-23T22:35:55.917Z",
-    "contributors": [
-      "SphinxKnight",
-      "xdelatour"
-    ]
-  },
-  "conflicting/Web/CSS/Mozilla_Extensions": {
-    "modified": "2019-04-06T13:16:07.903Z",
-    "contributors": [
-      "SphinxKnight",
-      "xdelatour"
-    ]
-  },
-  "conflicting/Web/CSS/Reference": {
-    "modified": "2019-04-06T13:18:27.677Z",
-    "contributors": [
-      "SphinxKnight",
-      "xdelatour"
-    ]
-  },
-  "conflicting/Web/CSS/cursor": {
-    "modified": "2019-04-06T12:43:13.926Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "teoli",
-      "Kyodev",
-      "Mgjbot",
-      "Sheppy",
-      "BenoitL",
-      "Fredchat",
-      "Learning",
-      "Chbok"
-    ]
-  },
-  "conflicting/Web/CSS/float": {
-    "modified": "2019-03-18T21:17:42.214Z",
-    "contributors": [
-      "teoli",
-      "FredB",
-      "ThePrisoner"
-    ]
-  },
-  "conflicting/Web/CSS/mask-image": {
-    "modified": "2019-03-23T22:58:08.427Z",
-    "contributors": [
-      "mrstork",
-      "ZorGleH"
-    ]
-  },
   "conflicting/Web/CSS/print-color-adjust": {
     "modified": "2020-10-15T22:07:37.043Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Web/CSS/scroll-snap-type": {
-    "modified": "2019-03-18T21:33:34.445Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Web/CSS/shape-outside": {
-    "modified": "2019-03-23T22:32:55.011Z",
     "contributors": [
       "SphinxKnight"
     ]
@@ -40985,46 +40910,6 @@
       "chrisdavidmills",
       "SphinxKnight",
       "prayash"
-    ]
-  },
-  "conflicting/Web/CSS/url()": {
-    "modified": "2019-04-06T11:57:29.213Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Web/CSS/url()_168028c4e5edd9e19c061adb4b604d4f": {
-    "modified": "2020-10-15T21:10:36.777Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "teoli",
-      "FredB",
-      "ThePrisoner"
-    ]
-  },
-  "conflicting/Web/CSS/user-select": {
-    "modified": "2019-03-18T21:33:21.174Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Web/CSS/width": {
-    "modified": "2019-03-24T00:14:22.694Z",
-    "contributors": [
-      "goofy_bz",
-      "louuis",
-      "teoli",
-      "FredB",
-      "tregagnon",
-      "ThePrisoner"
-    ]
-  },
-  "conflicting/Web/CSS_c2c099599c0a58c69d1390033045f244": {
-    "modified": "2019-04-06T13:47:45.843Z",
-    "contributors": [
-      "SphinxKnight",
-      "velvel53"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
