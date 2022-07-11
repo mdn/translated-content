@@ -4121,31 +4121,6 @@
       "VitorVRS"
     ]
   },
-  "Web/API/Document/keydown_event": {
-    "modified": "2019-04-15T09:18:45.968Z",
-    "contributors": [
-      "irenesmith",
-      "manoelcampos"
-    ]
-  },
-  "Web/API/Document/keypress_event": {
-    "modified": "2019-09-23T02:29:04.664Z",
-    "contributors": [
-      "SphinxKnight",
-      "TiagoEmanuel",
-      "wbamberg",
-      "chrisdavidmills",
-      "JRodrigues13"
-    ]
-  },
-  "Web/API/Document/keyup_event": {
-    "modified": "2019-04-18T03:51:22.396Z",
-    "contributors": [
-      "irenesmith",
-      "fscholz",
-      "thaynacoelho"
-    ]
-  },
   "Web/API/Document/location": {
     "modified": "2019-03-23T22:22:06.393Z",
     "contributors": [
@@ -4412,6 +4387,31 @@
       "rafaelcavalcante",
       "raphaelchaib",
       "belsanpesou"
+    ]
+  },
+  "Web/API/Element/keydown_event": {
+    "modified": "2019-04-15T09:18:45.968Z",
+    "contributors": [
+      "irenesmith",
+      "manoelcampos"
+    ]
+  },
+  "Web/API/Element/keypress_event": {
+    "modified": "2019-09-23T02:29:04.664Z",
+    "contributors": [
+      "SphinxKnight",
+      "TiagoEmanuel",
+      "wbamberg",
+      "chrisdavidmills",
+      "JRodrigues13"
+    ]
+  },
+  "Web/API/Element/keyup_event": {
+    "modified": "2019-04-18T03:51:22.396Z",
+    "contributors": [
+      "irenesmith",
+      "fscholz",
+      "thaynacoelho"
     ]
   },
   "Web/API/Element/matches": {
@@ -4957,13 +4957,6 @@
       "teoli"
     ]
   },
-  "Web/API/GlobalEventHandlers/onchange": {
-    "modified": "2019-03-23T22:28:49.180Z",
-    "contributors": [
-      "nathaliabruno",
-      "cezaraugusto"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onclick": {
     "modified": "2020-10-15T22:17:11.589Z",
     "contributors": [
@@ -4980,13 +4973,6 @@
     "modified": "2019-03-23T22:31:39.576Z",
     "contributors": [
       "mantovani"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onkeyup": {
-    "modified": "2020-10-15T22:03:53.967Z",
-    "contributors": [
-      "Sipmann",
-      "kinkurek"
     ]
   },
   "Web/API/GlobalEventHandlers/onload": {
@@ -5076,6 +5062,13 @@
     "modified": "2019-03-23T22:27:15.059Z",
     "contributors": [
       "DiasNetoJ"
+    ]
+  },
+  "Web/API/HTMLElement/change_event": {
+    "modified": "2019-03-23T22:28:49.180Z",
+    "contributors": [
+      "nathaliabruno",
+      "cezaraugusto"
     ]
   },
   "Web/API/HTMLElement/click": {
@@ -12301,14 +12294,6 @@
       "ErickWendel"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/toSource": {
-    "modified": "2020-06-02T16:37:19.766Z",
-    "contributors": [
-      "mablook",
-      "teoli",
-      "raduq"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2019-03-23T22:48:37.450Z",
     "contributors": [
@@ -12375,13 +12360,6 @@
       "Hikashii",
       "pdanker",
       "icaromh"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Boolean/toSource": {
-    "modified": "2019-03-23T22:47:21.468Z",
-    "contributors": [
-      "teoli",
-      "raduq"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
@@ -12708,12 +12686,6 @@
       "jbwestphal"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Date/toSource": {
-    "modified": "2020-10-15T22:34:13.547Z",
-    "contributors": [
-      "FernandoKGA"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Date/toString": {
     "modified": "2020-10-15T22:34:16.319Z",
     "contributors": [
@@ -12847,12 +12819,6 @@
     "modified": "2020-10-15T22:06:36.004Z",
     "contributors": [
       "leo-ls"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Function/toSource": {
-    "modified": "2020-10-15T21:58:35.614Z",
-    "contributors": [
-      "alinedmelo"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Function/toString": {
@@ -13387,12 +13353,6 @@
       "milovaz"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Number/toSource": {
-    "modified": "2020-10-15T22:17:14.004Z",
-    "contributors": [
-      "milovaz"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Number/toString": {
     "modified": "2019-03-23T22:52:50.933Z",
     "contributors": [
@@ -13630,13 +13590,6 @@
   "Web/JavaScript/Reference/Global_Objects/Object/toLocaleString": {
     "modified": "2020-10-15T22:34:13.476Z",
     "contributors": [
-      "FernandoKGA"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Object/toSource": {
-    "modified": "2020-10-15T22:34:16.108Z",
-    "contributors": [
-      "rafaelflorespereira",
       "FernandoKGA"
     ]
   },
@@ -14262,14 +14215,6 @@
       "JaconsMorais"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/toSource": {
-    "modified": "2020-10-14T02:19:39.086Z",
-    "contributors": [
-      "ricardo.passos.cr",
-      "teoli",
-      "netstudenton"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/toString": {
     "modified": "2020-10-14T02:23:54.563Z",
     "contributors": [
@@ -14565,13 +14510,6 @@
     "modified": "2020-03-12T19:46:40.592Z",
     "contributors": [
       "IsmaelEzequiel"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/uneval": {
-    "modified": "2020-03-12T19:42:19.284Z",
-    "contributors": [
-      "teoli",
-      "ffabiosales"
     ]
   },
   "Web/JavaScript/Reference/Iteration_protocols": {
@@ -16005,6 +15943,13 @@
       "teoli"
     ]
   },
+  "conflicting/Web/API/Element/keyup_event": {
+    "modified": "2020-10-15T22:03:53.967Z",
+    "contributors": [
+      "Sipmann",
+      "kinkurek"
+    ]
+  },
   "conflicting/Web/API/EventTarget/addEventListener": {
     "modified": "2019-03-23T22:20:33.890Z",
     "contributors": [
@@ -16169,10 +16114,38 @@
       "fernando.karpinski"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects": {
+    "modified": "2020-03-12T19:42:19.284Z",
+    "contributors": [
+      "teoli",
+      "ffabiosales"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
+    "modified": "2020-06-02T16:37:19.766Z",
+    "contributors": [
+      "mablook",
+      "teoli",
+      "raduq"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean": {
     "modified": "2019-03-23T22:47:24.930Z",
     "contributors": [
       "raduq"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
+    "modified": "2019-03-23T22:47:21.468Z",
+    "contributors": [
+      "teoli",
+      "raduq"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString": {
+    "modified": "2020-10-15T22:34:13.547Z",
+    "contributors": [
+      "FernandoKGA"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString": {
@@ -16186,6 +16159,12 @@
     "contributors": [
       "GuilhermeVazz",
       "leo-ls"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString": {
+    "modified": "2020-10-15T21:58:35.614Z",
+    "contributors": [
+      "alinedmelo"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat": {
@@ -16208,6 +16187,12 @@
       "gutoribeiro"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString": {
+    "modified": "2020-10-15T22:17:14.004Z",
+    "contributors": [
+      "milovaz"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Object": {
     "modified": "2019-03-23T23:02:44.390Z",
     "contributors": [
@@ -16217,6 +16202,13 @@
       "dafnk",
       "gabefurlan",
       "igorapa"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString": {
+    "modified": "2020-10-15T22:34:16.108Z",
+    "contributors": [
+      "rafaelflorespereira",
+      "FernandoKGA"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Promise": {
@@ -16238,6 +16230,14 @@
     "modified": "2019-03-23T22:03:59.387Z",
     "contributors": [
       "oirodolfo"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String/toString": {
+    "modified": "2020-10-14T02:19:39.086Z",
+    "contributors": [
+      "ricardo.passos.cr",
+      "teoli",
+      "netstudenton"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {

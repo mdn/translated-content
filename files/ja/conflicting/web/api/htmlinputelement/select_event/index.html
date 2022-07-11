@@ -1,0 +1,82 @@
+---
+title: window.onselect
+slug: conflicting/Web/API/HTMLInputElement/select_event
+tags:
+  - DOM
+  - Gecko
+  - Window
+translation_of: Web/API/GlobalEventHandlers/onselect
+original_slug: Web/API/GlobalEventHandlers/onselect
+---
+<div>{{ ApiRef("HTML DOM") }}</div>
+
+<p>{{domxref("window")}} の <code>select</code> イベントに対応するイベントハンドラです。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox">window.onselect = <em>funcRef</em>;
+</pre>
+
+<ul>
+ <li><code>funcRef</code> : 関数への参照、または関数式</li>
+</ul>
+
+<h2 id="Example" name="Example">例</h2>
+
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;onselect のテスト&lt;/title&gt;
+
+&lt;style&gt;
+.text1 { border: 2px solid red; }
+&lt;/style&gt;
+
+&lt;script&gt;
+window.onselect = selectText;
+
+function selectText() {
+  alert("select イベントが発生しました。");
+}
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;textarea class="text1" cols="30" rows="3"&gt;
+マウスでこのテキストを選択状態にすると
+onselect イベントが発生し、
+アラートを表示する関数が実行されます。
+&lt;/textarea&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h2 id="Notes" name="Notes">注記</h2>
+
+<p><code>select</code> イベントは、テキストインプット (<code>&lt;input type="text"&gt;</code>) もしくは {{htmlelement("textarea")}} 要素のテキストが<em>選択された直後に</em> 発生します。</p>
+
+<h2 id="Specification" name="Specification">仕様</h2>
+
+<table class="spectable standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onselect','onselect')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザー実装状況</h2>
+
+<div>
+
+
+<p>{{Compat("api.GlobalEventHandlers.onselect")}}</p>
+</div>

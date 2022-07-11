@@ -25,12 +25,12 @@ translation_of: Web/API/window/requestAnimationFrame
 <p>请确保总是使用第一个参数 (或其它获得当前时间的方法) 计算每次调用之间的时间间隔，否则动画在高刷新率的屏幕中会运行得更快。请参考下面例子的做法。</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox notranslate">window.requestAnimationFrame(callback);
 </pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -41,7 +41,7 @@ translation_of: Web/API/window/requestAnimationFrame
 
 <p>一个 <code>long</code> 整数，请求 ID ，是回调列表中唯一的标识。是个非零值，没别的意义。你可以传这个值给 {{domxref("window.cancelAnimationFrame()")}} 以取消回调函数。</p>
 
-<h2 id="Notes" name="Notes">范例</h2>
+<h2 id="Notes">范例</h2>
 
 <pre class="brush: js notranslate">const element = document.getElementById('some-element-you-want-to-animate');
 let start;
@@ -61,7 +61,7 @@ function step(timestamp) {
 
 window.requestAnimationFrame(step);</pre>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 <table class="standard-table">
  <thead>
@@ -93,7 +93,7 @@ window.requestAnimationFrame(step);</pre>
 <p>{{Compat("api.Window.requestAnimationFrame")}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">参阅</h2>
+<h2 id="See_also">参阅</h2>
 
 <ul>
  <li>{{domxref("Window.mozAnimationStartTime")}}</li>

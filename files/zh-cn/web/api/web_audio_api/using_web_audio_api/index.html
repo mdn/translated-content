@@ -24,7 +24,7 @@ translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 
 <p>我们的音箱看起来像这样：</p>
 
-<p><img alt="A boombox with play, pan, and volume controls" src="https://mdn.mozillademos.org/files/16197/boombox.png"></p>
+<p><img alt="A boombox with play, pan, and volume controls" src="boombox.png"></p>
 
 <p>注意带有播放按钮的复古磁带卡座，及用于改变音量和立体声声像的平移滑块。我们可以使其更复杂，但这是该阶段进行简单学习的理想选择。</p>
 
@@ -106,7 +106,7 @@ const track = audioContext.createMediaElementSource(audioElement);</code>
 
 <p>可视化这些节点的一个好方法是绘制音频图形以便可视化它。这是我们当前的音频图：</p>
 
-<p><img alt="an audio graph with an audio element source connected to the default destination" src="https://mdn.mozillademos.org/files/16195/graph1.jpg"></p>
+<p><img alt="an audio graph with an audio element source connected to the default destination" src="graph1.jpg"></p>
 
 <p>现在我们可以添加播放和暂停功能。</p>
 
@@ -165,7 +165,7 @@ playButton.addEventListener('click', function() {
 
 <p>这会让我们的音频图看起来如下：</p>
 
-<p><img alt="an audio graph with an audio element source, connected to a gain node that modifies the audio source, and then going to the default destination" src="https://mdn.mozillademos.org/files/16196/graph2.jpg"></p>
+<p><img alt="an audio graph with an audio element source, connected to a gain node that modifies the audio source, and then going to the default destination" src="graph2.jpg"></p>
 
 <p>默认增益为 1；这使当前音量保持不变。增益可以设置的最小值约<code>-3.4028235E38</code>，最大约<code>3.4028235E38</code>。这里我们将允许音箱增益可以设置到 2（2 倍的原音量）和降低到 0（这可以有效的静音）。</p>
 
@@ -205,7 +205,7 @@ volumeControl.addEventListener('input', function() {
 
 <p>为了使其可视化，我们将使我们的音频图如下：</p>
 
-<p><img alt="An image showing the audio graph showing an input node, two modification nodes (a gain node and a stereo panner node) and a destination node." src="https://mdn.mozillademos.org/files/16229/graphPan.jpg"></p>
+<p><img alt="An image showing the audio graph showing an input node, two modification nodes (a gain node and a stereo panner node) and a destination node." src="graphpan.jpg"></p>
 
 <p>这次让我们使用构造函数来生成节点。当我们这样做，我们需要传入上下文及该特定节点可能采用的任何选项：</p>
 
@@ -250,11 +250,11 @@ pannerControl.addEventListener('input', function() {
 
 <p> <a href="https://github.com/mdn/voice-change-o-matic">Voice-change-O-matic</a> 是一个有趣的语音操纵器和音频可视化 web 应用程序，允许你选择不同的效果和可视化。该应用程序相当初级，但它演示了同时使用多个 Web Audio API 特性（<a href="https://mdn.github.io/voice-change-o-matic/">运行 Voice-change-O-matic live</a>）。</p>
 
-<p><img alt="A UI with a sound wave being shown, and options for choosing voice effects and visualizations." src="https://mdn.mozillademos.org/files/7921/voice-change-o-matic.png" style="display: block; height: 500px; margin: 0px auto; width: 640px;"></p>
+<p><img alt="A UI with a sound wave being shown, and options for choosing voice effects and visualizations." src="voice-change-o-matic.png"></p>
 
 <p>另一个专门用于演示 Web Audio API 的例子是 <a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a>， 一个允许你通过移动鼠标来改变它的音调音量的简单的应用程序。它还提供了一个迷幻的灯光秀（<a href="https://github.com/mdn/violent-theremin">查看 Violent Theremin 源代码</a>）</p>
 
-<p><img alt="A page full of rainbow colours, with two buttons labeled Clear screen and mute. " src="https://mdn.mozillademos.org/files/7919/violent-theremin.png" style="display: block; height: 458px; margin: 0px auto; width: 640px;"></p>
+<p><img alt="A page full of rainbow colours, with two buttons labeled Clear screen and mute. " src="violent-theremin.png"></p>
 
 <p>另参阅我们的 <a href="https://github.com/mdn/webaudio-examples">webaudio-examples repo</a> 以获取更多示例。</p>
 

@@ -39,7 +39,7 @@ translation_of: Web/HTML/Element/button
 <p>這元素的屬性包含<a href="/en-US/docs/HTML/Global_attributes">全域屬性</a>.</p>
 
 <dl>
- <dt>{{htmlattrdef("autofocus")}} {{HTMLVersionInline(5)}}</dt>
+ <dt>{{htmlattrdef("autofocus")}}</dt>
  <dd>頁面載入後, 該按鈕如有輸入的焦點, 這個布林值式屬性即可指定上去, 除非使用者覆寫之, 例如通過不同的控制. 文本中只有一個關聯形式元素可以被指定該屬性.</dd>
  <dt>{{htmlattrdef("autocomplete")}} {{non-standard_inline}}</dt>
  <dd>The use of this attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. By default, unlike other browsers, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox persists the dynamic disabled state</a> of a {{HTMLElement("button")}} across page loads. Setting the value of this attribute to <code>off</code> (i.e. <code>autocomplete="off"</code>) disables this feature. See {{bug(654072)}}.</dd>
@@ -49,11 +49,11 @@ translation_of: Web/HTML/Element/button
 
  <p>Firefox will, unlike other browsers, by default, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state</a> of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.</p>
  </dd>
- <dt>{{htmlattrdef("form")}} {{HTMLVersionInline(5)}}</dt>
+ <dt>{{htmlattrdef("form")}}</dt>
  <dd>The form element that the button is associated with (its <em>form owner</em>). The value of the attribute must be the <strong>id</strong> attribute of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, the <code>&lt;button&gt;</code> element will be associated to an ancestor {{HTMLElement("form")}} element, if one exists. This attribute enables you to associate <code>&lt;button&gt;</code> elements to {{HTMLElement("form")}} elements anywhere within a document, not just as descendants of {{HTMLElement("form")}} elements.</dd>
- <dt>{{htmlattrdef("formaction")}} {{HTMLVersionInline(5)}}</dt>
+ <dt>{{htmlattrdef("formaction")}}</dt>
  <dd>The URI of a program that processes the information submitted by the button. If specified, it overrides the {{htmlattrxref("action","form")}} attribute of the button's form owner.</dd>
- <dt>{{htmlattrdef("formenctype")}} {{HTMLVersionInline(5)}}</dt>
+ <dt>{{htmlattrdef("formenctype")}}</dt>
  <dd>If the button is a submit button, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:
  <ul>
   <li><code>application/x-www-form-urlencoded</code>: The default value if the attribute is not specified.</li>
@@ -63,7 +63,7 @@ translation_of: Web/HTML/Element/button
 
  <p>If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the button's form owner.</p>
  </dd>
- <dt>{{htmlattrdef("formmethod")}} {{HTMLVersionInline(5)}}</dt>
+ <dt>{{htmlattrdef("formmethod")}}</dt>
  <dd>If the button is a submit button, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values are:
  <ul>
   <li><code>post</code>: The data from the form is included in the body of the form and is sent to the server.</li>
@@ -72,9 +72,9 @@ translation_of: Web/HTML/Element/button
 
  <p>If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the button's form owner.</p>
  </dd>
- <dt>{{htmlattrdef("formnovalidate")}} {{HTMLVersionInline(5)}}</dt>
+ <dt>{{htmlattrdef("formnovalidate")}}</dt>
  <dd>If the button is a submit button, this Boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the button's form owner.</dd>
- <dt>{{htmlattrdef("formtarget")}} {{HTMLVersionInline(5)}}</dt>
+ <dt>{{htmlattrdef("formtarget")}}</dt>
  <dd>If the button is a submit button, this attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a <em>browsing context</em> (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:
  <ul>
   <li><code>_self</code>: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.</li>
@@ -126,28 +126,28 @@ translation_of: Web/HTML/Element/button
   </tr>
   <tr>
    <th>Firefox 30.0</th>
-   <td style="background-color: LawnGreen;">Yes</td>
-   <td style="background-color: red;">No (even with a <code>tabindex</code>)</td>
+   <td>Yes</td>
+   <td>No (even with a <code>tabindex</code>)</td>
   </tr>
   <tr>
    <th>Chrome 35</th>
-   <td style="background-color: LawnGreen;">Yes</td>
-   <td style="background-color: LawnGreen;">Yes</td>
+   <td>Yes</td>
+   <td>Yes</td>
   </tr>
   <tr>
    <th>Safari 7.0.5</th>
-   <td style="background-color: silver;">N/A</td>
-   <td style="background-color: red;">No (even with a <code>tabindex</code>)</td>
+   <td>N/A</td>
+   <td>No (even with a <code>tabindex</code>)</td>
   </tr>
   <tr>
    <th>Internet Explorer 11</th>
-   <td style="background-color: LawnGreen;">Yes</td>
-   <td style="background-color: silver;">N/A</td>
+   <td>Yes</td>
+   <td>N/A</td>
   </tr>
   <tr>
    <th>Presto (Opera 12)</th>
-   <td style="background-color: LawnGreen;">Yes</td>
-   <td style="background-color: LawnGreen;">Yes</td>
+   <td>Yes</td>
+   <td>Yes</td>
   </tr>
  </tbody>
 </table>
@@ -162,13 +162,13 @@ translation_of: Web/HTML/Element/button
   </tr>
   <tr>
    <th>Safari Mobile</th>
-   <td style="background-color: red;">No (even with a <code>tabindex</code>)</td>
-   <td style="background-color: silver;">N/A</td>
+   <td>No (even with a <code>tabindex</code>)</td>
+   <td>N/A</td>
   </tr>
   <tr>
    <th>Chrome 35</th>
-   <td style="background-color: red;">No (even with a <code>tabindex</code>)</td>
-   <td style="background-color: LawnGreen;">Yes</td>
+   <td>No (even with a <code>tabindex</code>)</td>
+   <td>Yes</td>
   </tr>
  </tbody>
 </table>

@@ -14,7 +14,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 <p>为了使我们的盒子居中，通过<code>align-items</code>属性，可以将交叉轴上的 item 对齐，此时使用的是垂直方向的块轴。而使用<code>justify-content</code>则可以对齐主轴上的项目，主轴是水平方向的。</p>
 
-<p><img alt="一个包含另一个盒子的元素在其中心。" src="https://mdn.mozillademos.org/files/15627/align1.png" style="display: block; height: 357px; margin: 0px auto; width: 616px;"></p>
+<p><img alt="一个包含另一个盒子的元素在其中心。" src="align1.png"></p>
 
 <p>如下代码所示，即使改变容器或内嵌元素的 size，内嵌元素也会保持居中状态</p>
 
@@ -43,9 +43,9 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 <p>我们正在用一个最简单的例子做交叉轴对齐。如果我们在父级的容器元素上添加<code>display: flex</code> 属性，那么容器里的所有子元素将会变成横向排列的 flex items。所有的 flex 项目会撑满交叉轴方向的高度，因为<code>display: flex</code> 属性会将 flex 项目的高定义成容器的高度。如果你的父级容器有设置高度，则 flex 项目会撑满整个父级容器的高度，不会管 flex 项目里的内容的多少。</p>
 
-<p><img alt="三个项目，其中一个附加文本使其比其他文件更高。" src="https://mdn.mozillademos.org/files/15628/align2.png" style="display: block; height: 131px; margin: 0px auto; width: 509px;"></p>
+<p><img alt="三个项目，其中一个附加文本使其比其他文件更高。" src="align2.png"></p>
 
-<p><img alt="三项拉伸到200像素高" src="https://mdn.mozillademos.org/files/15629/align3.png" style="display: block; height: 207px; margin: 0px auto; width: 637px;"></p>
+<p><img alt="三项拉伸到200像素高" src="align3.png"></p>
 
 <p>flex items 的高度全都变成一样的原因是 <code>align-items</code> 属性的初始值设成 <code>stretch</code> 控制交叉轴对齐。</p>
 
@@ -75,11 +75,11 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 <p>到目前为止我们已经看到了我们的 <code>flex-direction</code> 是 <code>row</code> 和使用的语言的书写方式为从上至下的表现行为。这意味着主轴是水平方向，交叉轴对齐则是有上至下垂直方向。</p>
 
-<p><img alt="三个项目，第一个对齐到flex-start，第二个到中心，第三个到flex-end。 在垂直轴上对齐。" src="https://mdn.mozillademos.org/files/15630/align4.png" style="display: block; height: 204px; margin: 0px auto; width: 671px;"></p>
+<p><img alt="三个项目，第一个对齐到flex-start，第二个到中心，第三个到flex-end。 在垂直轴上对齐。" src="align4.png"></p>
 
 <p>如果我们改变我们的 <code>flex-direction</code> 为 <code>column</code> ，<code>align-items</code> 和 <code>align-self</code> 对齐的 flex 项目则是水平方向从左往右。</p>
 
-<p><img alt="三个项目，第一个对齐到flex-start，第二个到中心，第三个到flex-end。 在水平轴上对齐。" src="https://mdn.mozillademos.org/files/15631/align5.png" style="display: block; height: 239px; margin: 0px auto; width: 687px;"></p>
+<p><img alt="三个项目，第一个对齐到flex-start，第二个到中心，第三个到flex-end。 在水平轴上对齐。" src="align5.png"></p>
 
 <p>你能在下面这个例子体验一下，它除了 <code>flex-direction</code> 为 <code>column</code> 这个属性，其他的属性值和前一个例子是一样的。</p>
 
@@ -125,7 +125,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 <p>在我们的最开始的例子中，我们在 flex 容器定义了 <code>display: flex</code>，flex 项目则水平排队从容器的初始端显示。这是因为 <code>justify-content</code> 的初始值是 <code>flex-start</code> ，其他多余的空间都会显示在 flex 项目的最后。</p>
 
-<p><img alt="Three items, each 100 pixels wide in a 500 pixel container. The available space is at the end of the items." src="https://mdn.mozillademos.org/files/15632/align6.png" style="display: block; height: 198px; margin: 0px auto; width: 528px;"></p>
+<p><img alt="Three items, each 100 pixels wide in a 500 pixel container. The available space is at the end of the items." src="align6.png"></p>
 
 <p><code>justify-content</code> 属性有和 <code>align-content</code> 一样的属性值：</p>
 
@@ -151,11 +151,11 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 <p>记得这些所有的对齐方法，属性值 <code>flex-start</code> 和 <code>flex-end</code> 是受书写模式的影响的。如果 <code>justify-content</code> 的值是 <code>flex-start</code> 而已你的书写模式是从左到右的话，那么 flex items 就会从 flex container 的左边开始排列。</p>
 
-<p><img alt="Three items lined up on the left" src="https://mdn.mozillademos.org/files/15638/Basics5.png" style="display: block; height: 152px; margin: 0px auto; width: 631px;"></p>
+<p><img alt="Three items lined up on the left" src="basics5.png"></p>
 
 <p>反之，则会 flex 项目就会从 flex 容器的右边开始排列。</p>
 
-<p><img alt="Three items lined up from the right" src="https://mdn.mozillademos.org/files/15639/Basics6.png" style="display: block; height: 152px; margin: 0px auto; width: 634px;"></p>
+<p><img alt="Three items lined up from the right" src="basics6.png"></p>
 
 <p>下面的例子将 <code>direction</code> 属性值设成 <code>rtl</code> 强行让 flex 项目从右到左排列，你可以移除这个属性值或者改变 <code>justify-content</code> 的值，看他是如何影响 flex 项目的排列方向的。</p>
 
@@ -171,17 +171,17 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 <p>这似乎有一点令人困惑，需要记住的规则就是，当没有设置 <code>flex-direction</code> 时，弹性项目的排列方向与文档语言的文本沿行内轴的排列方向一致。<code>flex-start</code> 就是一个句子中文本的起始处。</p>
 
-<p><img alt="Diagram showing start on the left and end on the right." src="https://mdn.mozillademos.org/files/15634/align8.png" style="display: block; height: 152px; margin: 0px auto; width: 631px;"></p>
+<p><img alt="Diagram showing start on the left and end on the right." src="align8.png"></p>
 
 <p>你可以通过设置 <code>flex-direction: column</code>，使弹性项目沿着文档语言的块级轴方向显示。那样话，<code>flex-start</code> 就是文本第一个段落的顶端起始处。</p>
 
-<p><img alt="Diagram showing start and the top and end at the bottom." src="https://mdn.mozillademos.org/files/15636/align10.png" style="display: block; height: 273px; margin: 0px auto; width: 709px;"></p>
+<p><img alt="Diagram showing start and the top and end at the bottom." src="align10.png"></p>
 
 <p>如果你将 <code>flex-direction</code> 的值改成 <code>row-reverse</code> 或者 <code>column-revers</code> ，那么弹性项目会沿着文档语言的文本书写方向的相反方向，从轴的尾端开始排列。<code>flex-start</code> 就会变为轴的尾端。也就是说，沿着行内轴时，这个位置就是每行文本的换行处；沿着块级轴时，就是文本最后一个段落的底部。</p>
 
-<p><img alt="Diagram showing start on the right and end on the left." src="https://mdn.mozillademos.org/files/15635/align9.png" style="display: block; height: 152px; margin: 0px auto; width: 631px;"></p>
+<p><img alt="Diagram showing start on the right and end on the left." src="align9.png"></p>
 
-<p><img alt="Diagram showing end at the top and start at the bottom" src="https://mdn.mozillademos.org/files/15637/align11.png" style="display: block; height: 273px; margin: 0px auto; width: 709px;"></p>
+<p><img alt="Diagram showing end at the top and start at the bottom" src="align11.png"></p>
 
 <h2 id="使用自动的外边距在主轴上对齐">使用自动的外边距在主轴上对齐</h2>
 
@@ -189,7 +189,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 <p>一个常见的案例是导航栏，一些重要项目右对齐，而一组其它主要项目左对齐。你可能会想，这个时候就需要一个 <code>justify-self</code> 属性。但是下面的情况，如图所示，有 3 个项目在左边，2 个在右边。假设可以在项目 d 上设置 <code>justify-self</code> 的话，那么跟在后面的项目 e 的对齐方式也会发生改变。可能这正是我们想要的效果，但某些时候并不是。</p>
 
-<p><img alt="Five items, in two groups. Three on the left and two on the right." src="https://mdn.mozillademos.org/files/15633/align7.png" style="display: block; height: 84px; margin: 0px auto; width: 645px;"></p>
+<p><img alt="Five items, in two groups. Three on the left and two on the right." src="align7.png"></p>
 
 <p>另一个办法是，单独把项目 d 的 <code>margin-left</code> 属性设置成 <code>auto</code>。自动的外边距会占据全部的多余的空间——在一个块上设置自动的左右外边距可以使它居中。两边尽可能占据多的空间，块就被置于中间位置了。</p>
 

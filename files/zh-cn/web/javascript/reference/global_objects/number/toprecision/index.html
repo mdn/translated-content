@@ -16,8 +16,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 <h3 id="Parameter">参数</h3>
 
 <dl>
- <dt>precision</dt>
- <dd>可选。一个用来指定有效数个数的整数。</dd>
+ <dt><code>precision</code> {{optional_inline}}</dt>
+ <dd>一个用来指定有效数个数的整数。</dd>
 </dl>
 
 <h3 id="Returns">返回值</h3>
@@ -35,42 +35,27 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 
 <h2 id="Example">示例</h2>
 
-<pre class="brush: js">var numObj = 5.123456;
-console.log("numObj.toPrecision()  is " + numObj.toPrecision());  //输出 5.123456
-console.log("numObj.toPrecision(5) is " + numObj.toPrecision(5)); //输出 5.1235
-console.log("numObj.toPrecision(2) is " + numObj.toPrecision(2)); //输出 5.1
-console.log("numObj.toPrecision(1) is " + numObj.toPrecision(1)); //输出 5
+<pre class="brush: js">let numObj = 5.123456
 
-// 注意：在某些情况下会以指数表示法返回
-console.log((1234.5).toPrecision(2)); // "1.2e+3"
+console.log(numObj.toPrecision())    // 输出 '5.123456'
+console.log(numObj.toPrecision(5))   // 输出 '5.1235'
+console.log(numObj.toPrecision(2))   // 输出 '5.1'
+console.log(numObj.toPrecision(1))   // 输出 '5'
+
+numObj = 0.000123
+
+console.log(numObj.toPrecision())    // 输出 '0.000123'
+console.log(numObj.toPrecision(5))   // 输出 '0.00012300'
+console.log(numObj.toPrecision(2))   // 输出 '0.00012'
+console.log(numObj.toPrecision(1))   // 输出 '0.0001'
+
+// 请注意，在某些情况下可能会返回科学计数法字符串
+console.log((1234.5).toPrecision(2)) // 输出 '1.2e+3'
 </pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">规范状态</th>
-   <th scope="col">注解</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3rd Edition. Implemented in JavaScript 1.5</td>
-   <td>Standard</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.4.7', 'Number.prototype.toPrecision')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.prototype.toprecision', 'Number.prototype.toPrecision')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

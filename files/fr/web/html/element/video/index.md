@@ -39,7 +39,7 @@ Quelques notes d'utilisation :
 - La propriété {{cssxref("object-position")}} permet d'ajuster la position de la vidéo dans le cadre du lecteur et la propriété {{cssxref("object-fit")}} permet de contrôler l'ajustement de la taille de la vidéo dans le cadre.
 - Afin de fournir des sous-titres et légendes à la vidéo, on peut utiliser du code JavaScript ainsi que des éléments {{htmlelement("track")}} au format [WebVTT](/fr/docs/Web/API/WebVTT_API). Voir l'article [Ajouter des sous-titres et légendes à une vidéo HTML5](/fr/docs/Web/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) pour plus d'informations.
 
-Pour apprendre les bases concernant `<video>`, nosu vous conseillons de consulter [le tutoriel sur le contenu audio et video](/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video).
+Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulter [le tutoriel sur le contenu audio et video](/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video).
 
 ## Attributs
 

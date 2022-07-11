@@ -47,11 +47,11 @@ translation_of: Web/HTML/Element/th
 <p>该元素包含 <a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a></p>
 
 <dl>
- <dt>{{htmlattrdef("abbr")}} {{obsolete_inline}} in {{HTMLVersionInline("5")}}</dt>
+ <dt>{{htmlattrdef("abbr")}} {{Deprecated_Inline}}</dt>
  <dd>这个属性包含一个关于单元格内容的简单的介绍。一个用户代理（例如，语音阅读器）可能出现在描述之前。
  <div class="note"><strong>使用提醒 : 不要使用这个属性，因为它已经在最新标准中过时。相对的，你可以把简短的描述放置于单元格内，把较长的描述内容放到 title 属性内。</strong></div>
  </dd>
- <dt>{{htmlattrdef("align")}} {{Deprecated_inline}} in {{HTMLVersionInline("4")}}, {{obsolete_inline}} in {{HTMLVersionInline("5")}}</dt>
+ <dt>{{htmlattrdef("align")}} {{Deprecated_Inline}}</dt>
  <dd>这个枚举属性指定单元格内容的水平对齐方式。可能的值有：
  <ul>
   <li><code>left</code>: 单元格内容左对齐</li>
@@ -71,7 +71,7 @@ translation_of: Web/HTML/Element/th
  </ul>
  </div>
  </dd>
- <dt>{{htmlattrdef("axis")}} {{obsolete_inline}} in {{HTMLVersionInline("5")}}</dt>
+ <dt>{{htmlattrdef("axis")}} {{Deprecated_Inline}}</dt>
  <dd>这个属性包含了一个空间分隔的字符串的列表。每个字符串是一组单元格的 ID，而该表头适用于这个 ID。
  <div class="note"><strong>使用提示：不要使用这个属性，因为它已经在最新标准中过时。应该使用</strong> {{htmlattrxref("scope", "th")}} 属性代替。</div>
  </dd>
@@ -135,14 +135,14 @@ translation_of: Web/HTML/Element/th
 </dl>
 
 <dl>
- <dt>{{htmlattrdef("char")}} {{Deprecated_inline}} in {{HTMLVersionInline("4")}}, {{obsolete_inline}} in {{HTMLVersionInline("5")}}</dt>
+ <dt>{{htmlattrdef("char")}} {{Deprecated_inline}}</dt>
  <dd>列中的内容与<code>&lt;th&gt;</code> 元素中的字母对齐。通常其值包含一个 (.) 来排列数字或者货币值。 如果 {{htmlattrxref("align", "th")}}没有被设置为<code>char</code>，这个属性就会被忽略。
  <div class="note"><strong>使用提示：</strong>不要使用这个属性，因为它已经在最新标准中过时。为了达到同样的效果， 你可以指定该字母为{{cssxref("text-align")}} 属性中的第一个值，或通过 CSS3 中的{{unimplemented_inline}}。</div>
  </dd>
 </dl>
 
 <dl>
- <dt>{{htmlattrdef("charoff")}} {{Deprecated_inline}} in {{HTMLVersionInline("4")}}, {{obsolete_inline}} in {{HTMLVersionInline("5")}}</dt>
+ <dt>{{htmlattrdef("charoff")}} {{Deprecated_inline}}</dt>
  <dd>这个属性用来将列数据移到<strong>char</strong>属性指定字母的右边。 其值指定了移动的长度。
  <div class="note"><strong>使用提示：</strong>不要使用这个属性，因为它已经在最新标准中过时。</div>
  </dd>
@@ -165,7 +165,7 @@ translation_of: Web/HTML/Element/th
   <li><code>auto</code></li>
  </ul>
  </dd>
- <dt>{{htmlattrdef("valign")}} {{Deprecated_inline}} in {{HTMLVersionInline("4")}}, {{obsolete_inline}} in {{HTMLVersionInline("5")}}</dt>
+ <dt>{{htmlattrdef("valign")}} {{Deprecated_inline}}</dt>
  <dd>这个属性指定了单元格内文本的垂直对齐方式。这个属性可能有以下值：
  <ul>
   <li><code>baseline</code>: 将文本置于单元格底部并将其与字母的<a href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a>对齐而不是与底部。若字母没有 baseline 以下的部分（即为无<a href="https://www.wikiwand.com/zh/%E9%99%8D%E9%83%A8">降部</a>）那么 baseline 值起到的效果便和<code>bottom 相同。</code></li>
@@ -176,7 +176,7 @@ translation_of: Web/HTML/Element/th
 
  <div class="note"><strong>使用提示：</strong>不要使用这个属性，因为它已经在最新标准中过时。使用 CSS {{cssxref("vertical-align")}}特性代替。</div>
  </dd>
- <dt>{{htmlattrdef("width")}} {{Deprecated_inline}} in {{HTMLVersionInline(4.01)}}</dt>
+ <dt>{{htmlattrdef("width")}} {{Deprecated_inline}}</dt>
  <dd>这个属性用来定义一个期望的单元格宽。额外的空间可以藉由<a href="/en-US/docs/Web/API/HTMLTableElement/cellSpacing">cellspacing</a>和 <a href="/en-US/docs/Web/API/HTMLTableElement/cellPadding">cellpadding</a> 属性来增加，并且{{HTMLElement("col")}}元素的宽也可以创造额外空间。但是，如果一列宽太窄以至于无法恰当显示 某单元格时，它会被自动加宽。
  <div class="note"><strong>使用提示：</strong>不要使用这个属性，因为它已经在最新标准中过时。使用 CSS {{cssxref("width")}}属性代替。</div>
  </dd>
