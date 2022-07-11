@@ -4,26 +4,24 @@ slug: MDN/At_ten
 translation_of: MDN_at_ten
 original_slug: MDN_at_ten
 ---
-<div>慶祝文件化網頁10年.</div>
+慶祝文件化網頁 10 年.
 
-<h2 id="MDN_的歷史">MDN 的歷史</h2>
+## MDN 的歷史
 
-<p>在 2005 早期, 一個小團隊開始創見一個新穎, 免費的網路社群資源給所有的網路開發者. 他們的才華和不一樣的想法成為了今天的 Mozilla 開發者網路平台(Mozilla Developer Network)—所有開放網路技術的主要資源. 十年後, 我們全球的社群比以往都來的大, 而且我們也持續為開放網路科技創建文件, 提供範例程式碼和學習資源, 包含 CSS, HTML, JavaScript 及其他.</p>
+在 2005 早期, 一個小團隊開始創見一個新穎, 免費的網路社群資源給所有的網路開發者. 他們的才華和不一樣的想法成為了今天的 Mozilla 開發者網路平台(Mozilla Developer Network)—所有開放網路技術的主要資源. 十年後, 我們全球的社群比以往都來的大, 而且我們也持續為開放網路科技創建文件, 提供範例程式碼和學習資源, 包含 CSS, HTML, JavaScript 及其他.
 
-<p><a href="/en-US/docs/MDN_at_ten/History_of_MDN">了解更多 about the history</a></p>
+[了解更多 about the history](/en-US/docs/MDN_at_ten/History_of_MDN)
 
-<h2 id="協助_MDN">協助 MDN</h2>
+## 協助 MDN
 
-<p>十年來, MDN 社群紀錄開放網路. 從修改錯別字到撰寫整個 API 文件, 每個人不分多少都有貢獻. 我們擁有超過 90,000 頁的資料內容已經被我們傑出的成員(Mozillians)翻譯或編寫. 你也可以成為其中的一員.</p>
+十年來, MDN 社群紀錄開放網路. 從修改錯別字到撰寫整個 API 文件, 每個人不分多少都有貢獻. 我們擁有超過 90,000 頁的資料內容已經被我們傑出的成員(Mozillians)翻譯或編寫. 你也可以成為其中的一員.
 
-<p><a href="/en-US/docs/MDN_at_ten/Contributing_to_MDN">了解更多 about contributing</a></p>
+[了解更多 about contributing](/en-US/docs/MDN_at_ten/Contributing_to_MDN)
 
-<div>{{TenthCampaignQuote}}</div>
+{{TenthCampaignQuote}}
 
-<h2 id="Subnav">Subnav</h2>
+## Subnav
 
-<ol>
- <li><a href="/en-US/docs/MDN_at_ten/">MDN 10 週年</a></li>
- <li><a href="/en-US/docs/MDN_at_ten/History_of_MDN">MDN 的歷史</a></li>
- <li><a href="/en-US/docs/MDN_at_ten/Contributing_to_MDN">協助 MDN</a></li>
-</ol>
+1.  [MDN 10 週年](/en-US/docs/MDN_at_ten/)
+2.  [MDN 的歷史](/en-US/docs/MDN_at_ten/History_of_MDN)
+3.  [協助 MDN](/en-US/docs/MDN_at_ten/Contributing_to_MDN)

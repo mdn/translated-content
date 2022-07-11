@@ -9,6 +9,8 @@ tags:
   - TopicStub
 translation_of: MDN/Contribute/Howto
 ---
-<div>{{MDNSidebar}}</div><p>這些文章將會帶領你一步步完成貢獻 MDN 專案所需完成的目標</p>
+{{MDNSidebar}}
 
-<p>{{LandingPageListSubpages}}</p>
+這些文章將會帶領你一步步完成貢獻 MDN 專案所需完成的目標
+
+{{LandingPageListSubpages}}
