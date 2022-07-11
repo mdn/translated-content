@@ -937,7 +937,7 @@
 /fr/docs/DOM/element.lang	/fr/docs/Web/API/HTMLElement/lang
 /fr/docs/DOM/element.lastChild	/fr/docs/Web/API/Node/lastChild
 /fr/docs/DOM/element.localName	/fr/docs/Web/API/Element/localName
-/fr/docs/DOM/element.name	/fr/docs/conflicting/Web/API
+/fr/docs/DOM/element.name	/fr/docs/Web/API
 /fr/docs/DOM/element.namespaceURI	/fr/docs/Web/API/Element/namespaceURI
 /fr/docs/DOM/element.nextSibling	/fr/docs/Web/API/Node/nextSibling
 /fr/docs/DOM/element.nodeName	/fr/docs/Web/API/Node/nodeName
@@ -1095,7 +1095,7 @@
 /fr/docs/DOM:element.lang	/fr/docs/Web/API/HTMLElement/lang
 /fr/docs/DOM:element.lastChild	/fr/docs/Web/API/Node/lastChild
 /fr/docs/DOM:element.localName	/fr/docs/Web/API/Element/localName
-/fr/docs/DOM:element.name	/fr/docs/conflicting/Web/API
+/fr/docs/DOM:element.name	/fr/docs/Web/API
 /fr/docs/DOM:element.namespaceURI	/fr/docs/Web/API/Element/namespaceURI
 /fr/docs/DOM:element.nextSibling	/fr/docs/Web/API/Node/nextSibling
 /fr/docs/DOM:element.nodeName	/fr/docs/Web/API/Node/nodeName
@@ -3716,7 +3716,7 @@
 /fr/docs/Web/API/Element.lang	/fr/docs/Web/API/HTMLElement/lang
 /fr/docs/Web/API/Element.lastChild	/fr/docs/Web/API/Node/lastChild
 /fr/docs/Web/API/Element.localName	/fr/docs/Web/API/Element/localName
-/fr/docs/Web/API/Element.name	/fr/docs/conflicting/Web/API
+/fr/docs/Web/API/Element.name	/fr/docs/Web/API
 /fr/docs/Web/API/Element.namespaceURI	/fr/docs/Web/API/Element/namespaceURI
 /fr/docs/Web/API/Element.nodeName	/fr/docs/Web/API/Node/nodeName
 /fr/docs/Web/API/Element.nodeType	/fr/docs/Web/API/Node/nodeType
@@ -3766,7 +3766,7 @@
 /fr/docs/Web/API/Element.textContent	/fr/docs/Web/API/Node/textContent
 /fr/docs/Web/API/Element/accessKey	/fr/docs/Web/API/HTMLElement/accessKey
 /fr/docs/Web/API/Element/innertHTML	/fr/docs/Web/API/Element/innerHTML
-/fr/docs/Web/API/Element/name	/fr/docs/conflicting/Web/API
+/fr/docs/Web/API/Element/name	/fr/docs/Web/API
 /fr/docs/Web/API/Element/ongotpointercapture	/fr/docs/Web/API/GlobalEventHandlers/ongotpointercapture
 /fr/docs/Web/API/Element/onwheel	/fr/docs/Web/API/GlobalEventHandlers/onwheel
 /fr/docs/Web/API/Element/removeChild	/fr/docs/Web/API/Node/removeChild
@@ -6135,6 +6135,7 @@
 /fr/docs/conflicting/Tools/Page_Inspector/UI_Tour	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html
 /fr/docs/conflicting/Tools/Performance/Waterfall	https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html
 /fr/docs/conflicting/Tools/Responsive_Design_Mode	https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html
+/fr/docs/conflicting/Web/API	/fr/docs/Web/API
 /fr/docs/conflicting/Web/API/Canvas_API/Tutorial	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/conflicting/Web/API/Document/createEvent	/fr/docs/Web/API/Document/createEvent
 /fr/docs/conflicting/Web/API/Document/createNodeIterator	/fr/docs/Web/API/Document/createNodeIterator

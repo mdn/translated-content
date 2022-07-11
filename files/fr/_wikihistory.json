@@ -40809,17 +40809,6 @@
       "dattaz"
     ]
   },
-  "conflicting/Web/API": {
-    "modified": "2019-03-24T00:13:05.858Z",
-    "contributors": [
-      "loella16",
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "dextra",
-      "BenoitL"
-    ]
-  },
   "conflicting/Web/API/Element/keypress_event": {
     "modified": "2019-03-24T00:01:54.246Z",
     "contributors": [
