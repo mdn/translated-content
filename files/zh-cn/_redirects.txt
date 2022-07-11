@@ -2210,7 +2210,7 @@
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/require-sri-for	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/sandbox	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/upgrade-insecure-requests	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
-/zh-CN/docs/Web/HTTP/Headers/Cookie2	/zh-CN/docs/conflicting/Web/HTTP/Headers/Cookie
+/zh-CN/docs/Web/HTTP/Headers/Cookie2	/zh-CN/docs/Web/HTTP/Headers/Cookie
 /zh-CN/docs/Web/HTTP/Headers/Set-Cookie2	/zh-CN/docs/conflicting/Web/HTTP/Headers/Set-Cookie
 /zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /zh-CN/docs/Web/HTTP/Response_codes	/zh-CN/docs/Web/HTTP/Status
