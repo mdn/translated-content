@@ -24,12 +24,6 @@ translation_of: Web/API/MediaQueryList/matches
 
 `matches` の値が変化した場合は、 `MediaQueryList` で発生する {{domxref("MediaQueryList.change_event", "change")}} イベントを監視することで通知を受けることができます。
 
-## 構文
-
-```js
-var matches = <varm>MediaQueryList.matches;
-```
-
 ### 値
 
 {{DOMxRef("Boolean")}}。 {{DOMxRef("document")}} が現在メディアクエリーのリストに一致していれば `true` を返し、そうでなければ `false` を返します。
