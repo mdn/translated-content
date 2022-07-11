@@ -42,7 +42,7 @@ tee()
 
 ## 示例
 
-在下面的简单示例中，一个 先前生成的流被 tee，然后将两个生成的流(包含在生成的数组的两个成员中)传递给一个函数，该函数将从两个流中读取数据并且将每个流的分块按顺序打印到不同的 UI 部分。完整代码参见[简单 tee 例子](https://mdn.github.io/dom-examples/streams/simple-tee-example/)。
+在下面的简单示例中，一个先前生成的流被 tee，然后将两个生成的流(包含在生成的数组的两个成员中)传递给一个函数，该函数将从两个流中读取数据并且将每个流的分块按顺序打印到不同的 UI 部分。完整代码参见[简单 tee 例子](https://mdn.github.io/dom-examples/streams/simple-tee-example/)。
 
 ```js
 function teeStream() {
