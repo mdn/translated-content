@@ -18,7 +18,7 @@ translation_of: Web/API/MediaQueryList
 ---
 {{APIRef("CSSOM")}}
 
-**`MediaQueryList`** オブジェクトは文書に適用されている[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)の情報を格納し、文書の状態に対する中間かつイベントドリブンのマッチングに対応します。
+**`MediaQueryList`** オブジェクトは文書に適用されている[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)の情報を格納し、文書の状態に対する即時かつイベントドリブンのマッチングに対応します。
 
 `MediaQueryList` は {{DOMxRef("Window.matchMedia", "matchMedia()")}} を {{DOMxRef("window")}} オブジェクト上で呼び出すことで作成することができます。結果として得られるオブジェクトは、メディアクエリーの状態が変化したとき (つまり、メディアクエリーのテストが `true` の評価が開始または停止したとき) に、リスナーへの通知の送信を処理します。
 
@@ -48,7 +48,6 @@ _以下のイベントは `MediaQueryList` オブジェクトに配信されま�
 
 - {{DOMxRef("MediaQueryList.change_event", "change")}}
   - : 文書に対してメディアクエリーを実行した結果が変更されたときに `MediaQueryList` に送信されます。例えば、メディアクエリーが `(min-width: 400px)` の場合、 `change` イベントが文書の{{Glossary("viewport", "ビューポート")}}の幅が 400px の閾値を通過するよう変更されるたびに発行されます。  
-      また、 {{DOMxRef("MediaQueryList.onchange", "onchange")}} イベントハンドラープロパティを使用することもできます。
 
 ## 例
 
