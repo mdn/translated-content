@@ -93,4 +93,4 @@ fileInput.addEventListener("change", () => {
 ## 関連情報
 
 - [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file): file 型の入力要素
-- The {{domxref("DataTransfer")}} interface
+- {{domxref("DataTransfer")}} インターフェイス
