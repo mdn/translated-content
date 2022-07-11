@@ -6,65 +6,54 @@ tags:
   - HTTP
   - 请求
   - 超文本传输协议
-  - 首部
+  - 标头
 translation_of: Web/HTTP/Headers/Cookie
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>Cookie</code></strong> 是一个请求首部，其中含有先前由服务器通过 {{HTTPHeader("Set-Cookie")}}  首部投放并存储到客户端的 <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a>。</p>
+**`Cookie`** 是一个 HTTP 请求标头，其中含有先前由服务器通过 {{HTTPHeader("Set-Cookie")}} 标头投放或通过 JavaScript 的 {{domxref("Document.cookie")}} 方法设置，然后存储到客户端的 [HTTP cookie](/zh-CN/docs/Web/HTTP/Cookies) 。
 
-<p>这个首部可能会被完全移除，例如在浏览器的隐私设置里面设置为禁用 cookie。</p>
+这个标头是可选的，而且可能会被忽略，例如在浏览器的隐私设置里面设置为禁用 cookie。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
+   <th scope="row">标头类型</th>
+   <td>{{Glossary("Request header", "请求标头")}}</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
+   <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+   <td>是</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Cookie: &lt;cookie-list&gt;
+```
+Cookie: <cookie-list>
 Cookie: name=value
-Cookie: name=value; name2=value2; name3=value3</pre>
+Cookie: name=value; name2=value2; name3=value3
+```
 
-<dl>
- <dt>&lt;cookie-list&gt;</dt>
- <dd>一系列的名称/值对，形式为 <code>&lt;cookie-name&gt;=&lt;cookie-value&gt;。</code>名称/值对之间用分号和空格 ('; ') 隔开。</dd>
-</dl>
+- \<cookie-list>
+  - : 一系列的名称/值对，形式为 `<cookie-name>=<cookie-value>`。名称/值对之间用分号和空格（`'; '`）隔开。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre>Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1;</pre>
+```
+Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("6265", "Cookie", "5.4")}}</td>
-   <td>HTTP State Management Mechanism</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("http.headers.Cookie")}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 参见
 
-<ul>
- <li>{{HTTPHeader("Set-Cookie")}}</li>
- <li>{{domxref("Document.cookie")}}</li>
-</ul>
+- {{HTTPHeader("Set-Cookie")}}
+- {{domxref("Document.cookie")}}
