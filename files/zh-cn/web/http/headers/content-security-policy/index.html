@@ -5,9 +5,9 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
 <div>{{HTTPSidebar}}</div>
 
-<div>HTTP 响应头<strong><code>Content-Security-Policy</code></strong>允许站点管理者控制用户代理能够为指定的页面加载哪些资源。除了少数例外情况，设置的政策主要涉及指定服务器的源和脚本结束点。这将帮助防止跨站脚本攻击（<code>Cross-Site Script</code>）（{{Glossary("XSS")}}）。</div>
+<div>HTTP 响应头 <strong><code>Content-Security-Policy</code></strong> 允许站点管理者控制用户代理能够为指定的页面加载哪些资源。除了少数例外情况，设置的政策主要涉及指定服务器的源和脚本结束点。这将帮助防止跨站脚本攻击（<code>Cross-Site Script</code>）（{{Glossary("XSS")}}）。</div>
 
-<p>如需更多信息，请查阅<a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a>。</p>
+<p>如需更多信息，请查阅<a href="/zh-CN/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a>。</p>
 
 <table class="properties">
  <tbody>
@@ -35,37 +35,37 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 
 <dl>
  <dt>{{CSP("child-src")}}</dt>
- <dd><strong>child-src：</strong>为 <a href="/zh-CN/docs/Web/API/Web_Workers_API">web workers</a> 和其他内嵌浏览器内容（例如用{{HTMLElement("frame")}}和{{HTMLElement("iframe")}}加载到页面的内容）定义合法的源地址。</dd>
+ <dd><strong>child-src</strong>：为 <a href="/zh-CN/docs/Web/API/Web_Workers_API">Web Workers</a> 和其他内嵌浏览器内容（例如用 {{HTMLElement("frame")}} 和 {{HTMLElement("iframe")}} 加载到页面的内容）定义合法的源地址。</dd>
  <dt>
  <div class="warning">
- <p>如果开发者希望管控内嵌浏览器内容和 web worker 应分别使用{{CSP("frame-src")}}和{{CSP("worker-src")}} 指令，来相对的取代 <code><strong>child-src</strong></code>。</p>
+ <p>如果开发者希望管控内嵌浏览器内容和 web worker 应分别使用 {{CSP("frame-src")}} 和 {{CSP("worker-src")}} 指令，来相对的取代 <code><strong>child-src</strong></code>。</p>
  </div>
  </dt>
  <dt></dt>
  <dt>{{CSP("connect-src")}}</dt>
- <dd><strong>connect-src：</strong>限制能通过脚本接口加载的 URL。</dd>
+ <dd><strong>connect-src</strong>：限制能通过脚本接口加载的 URL。</dd>
  <dt>{{CSP("default-src")}}</dt>
- <dd><strong>default-src：</strong>为其他取指令提供备用服务{{Glossary("Fetch directive", "fetch directives")}}。</dd>
+ <dd><strong>default-src</strong>：为其他取指令提供备用服务 {{Glossary("Fetch directive", "fetch directives")}}。</dd>
  <dt>{{CSP("font-src")}}</dt>
- <dd><strong>font-src：</strong>设置允许通过{{cssxref("@font-face")}}加载的字体源地址。</dd>
+ <dd><strong>font-src</strong>：设置允许通过 {{cssxref("@font-face")}} 加载的字体源地址。</dd>
  <dt>{{CSP("frame-src")}}</dt>
- <dd><strong>frame-src： </strong>设置允许通过类似{{HTMLElement("frame")}}和{{HTMLElement("iframe")}}标签加载的内嵌内容的源地址。</dd>
+ <dd><strong>frame-src</strong>：设置允许通过类似 {{HTMLElement("frame")}} 和 {{HTMLElement("iframe")}} 标签加载的内嵌内容的源地址。</dd>
  <dt>{{CSP("img-src")}}</dt>
- <dd><strong>img-src: </strong>限制图片和图标的源地址</dd>
+ <dd><strong>img-src</strong>：限制图片和图标的源地址。</dd>
  <dt>{{CSP("manifest-src")}}</dt>
- <dd><strong>manifest-src ： </strong>限制应用声明文件的源地址。</dd>
+ <dd><strong>manifest-src</strong>：限制应用声明文件的源地址。</dd>
  <dt>{{CSP("media-src")}}</dt>
- <dd><strong>media-src：</strong>限制通过{{HTMLElement("audio")}}、{{HTMLElement("video")}}或{{HTMLElement("track")}}标签加载的媒体文件的源地址。</dd>
+ <dd><strong>media-src</strong>：限制通过 {{HTMLElement("audio")}}、{{HTMLElement("video")}} 或 {{HTMLElement("track")}} 标签加载的媒体文件的源地址。</dd>
  <dt>{{CSP("object-src")}}</dt>
- <dd><strong>object-src：</strong>限制{{HTMLElement("object")}}、{{HTMLElement("embed")}}、{{HTMLElement("applet")}}标签的源地址。</dd>
+ <dd><strong>object-src</strong>：限制 {{HTMLElement("object")}}、{{HTMLElement("embed")}} 或 {{HTMLElement("applet")}} 标签的源地址。</dd>
 </dl>
 
 <div class="blockIndicator note">
-<p>被<code>object-src</code>控制的元素可能碰巧被当作遗留 HTML 元素，导致不支持新标准中的功能（例如<code>&lt;iframe&gt;</code>中的安全属性<code>sandbox</code>和<code>allow</code>）。因此<strong>建议</strong>限制该指令的使用（比如，如果可行，将<code>object-src</code>显式设置为<code>'none'</code>）。</p>
+<p>被 <code>object-src</code> 控制的元素可能碰巧被当作遗留 HTML 元素，导致不支持新标准中的功能（例如 <code>&lt;iframe&gt;</code> 中的安全属性 <code>sandbox</code> 和 <code>allow</code>）。因此<strong>建议</strong>限制该指令的使用（比如，如果可行，将 <code>object-src</code> 显式设置为 <code>'none'</code>）。</p>
 </div>
 
 <dl>
- <dt>{{CSP("prefetch-src")}} </dt>
+ <dt>{{CSP("prefetch-src")}}</dt>
  <dd>指定预加载或预渲染的允许源地址。</dd>
  <dt>{{CSP("script-src")}}</dt>
  <dd>限制 JavaScript 的源地址。</dd>
@@ -74,7 +74,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
  <dt>{{CSP("webrtc-src")}} {{experimental_inline}}</dt>
  <dd>指定<a href="https://developer.mozilla.org/docs/Web/API/WebRTC_API">WebRTC</a>连接的合法源地址。</dd>
  <dt>{{CSP("worker-src")}}</dt>
- <dd>限制{{domxref("Worker")}}、{{domxref("SharedWorker")}}或者{{domxref("ServiceWorker")}}脚本源。</dd>
+ <dd>限制 {{domxref("Worker")}}、{{domxref("SharedWorker")}} 或 {{domxref("ServiceWorker")}} 脚本源。</dd>
 </dl>
 
 <h3 id="文档指令_Document_directives">文档指令 | Document directives</h3>
@@ -83,11 +83,11 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 
 <dl>
  <dt>{{CSP("base-uri")}}</dt>
- <dd>限制在 DOM 中{{HTMLElement("base")}}元素可以使用的 URL。</dd>
+ <dd>限制在 DOM 中 {{HTMLElement("base")}} 元素可以使用的 URL。</dd>
  <dt>{{CSP("plugin-types")}}</dt>
  <dd>通过限制可以加载的资源类型来限制哪些插件可以被嵌入到文档中。</dd>
  <dt>{{CSP("sandbox")}}</dt>
- <dd>类似{{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}}属性，为请求的资源启用沙盒。</dd>
+ <dd>类似 {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} 属性，为请求的资源启用沙盒。</dd>
  <dt>{{CSP("disown-opener")}} {{obsolete_inline}}</dt>
  <dd>确保资源在导航的时候能够脱离父页面。（windown.opener 对象）Ensures a resource will disown its opener when navigated to.</dd>
 </dl>
@@ -100,9 +100,9 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
  <dt>{{CSP("form-action")}}</dt>
  <dd>限制能被用来作为给定上下文的表单提交的目标 URL（说白了，就是限制 form 的 action 属性的链接地址）</dd>
  <dt>{{CSP("frame-ancestors")}}</dt>
- <dd>指定可能嵌入页面的有效父项{{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or {{HTMLElement("applet")}}.</dd>
+ <dd>指定可能嵌入页面的有效父项 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}} 或 {{HTMLElement("applet")}}.</dd>
  <dt>{{CSP("navigation-to")}} {{experimental_inline}}</dt>
- <dd>限制文档可以通过以下任何方式访问 URL (a, form, window.location, window.open, etc.)</dd>
+ <dd>限制文档可以通过以下任何方式访问 URL (如 a, form, window.location, window.open 等)</dd>
 </dl>
 
 <h3 id="报告指令">报告指令</h3>
@@ -131,7 +131,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 
 <h2 id="CSP_和_Workers">CSP 和 Workers</h2>
 
-<p><a href="/en-US/docs/Web/API/Worker">Workers</a> 一般来说不被创建他的文档（或者父级 Worker）的 CSP 策略管理。如果要为 Worker 指定 CSP 策略，可以为 Worker 脚本的请求的响应的头部设置 CSP 策略。 </p>
+<p><a href="/zh-CN/docs/Web/API/Worker">Workers</a> 一般来说不被创建他的文档（或者父级 Worker）的 CSP 策略管理。如果要为 Worker 指定 CSP 策略，可以为 Worker 脚本的请求的响应的头部设置 CSP 策略。 </p>
 
 <p>例外的情况是，如果 Worker 脚本的来源是一个全局唯一 ID（比如，它的 URL 是一个结构化的数据或者 BLOB）。在这种情况下，这个 Worker 会继承它所属的文档或者创建它的 Worker 的 CSP 策略。</p>
 
@@ -148,7 +148,7 @@ Content-Security-Policy: connect-src http://example.com/;
 
 <h2 id="示例">示例</h2>
 
-<p>示例：禁用不安全的内联/动态执行，只允许通过 https 加载这些资源 (images, fonts, scripts, etc.)</p>
+<p>示例：禁用不安全的内联/动态执行，只允许通过 https 加载这些资源（如图片、字体、脚本等）：</p>
 
 <pre>// header
 Content-Security-Policy: default-src https:
@@ -179,7 +179,7 @@ Content-Security-Policy: default-src https:
   <tr>
    <td>{{specName("CSP 3.0")}}</td>
    <td>{{Spec2('CSP 3.0')}}</td>
-   <td>Adds <code>disown-opener</code>, <code>manifest-src</code>, <code>navigation-to</code>, <code>report-uri</code>, <code>strict-dynamic</code>, <code>worker-src</code>. Undeprecates <code>frame-src</code>. Deprecates report-uri in favor if <code>report-to</code>.</td>
+   <td>Adds <code>disown-opener</code>, <code>manifest-src</code>, <code>navigation-to</code>, <code>report-uri</code>, <code>strict-dynamic</code>, <code>worker-src</code>. Undeprecates <code>frame-src</code>. Deprecates report-uri in favor if <code>report-to</code>.</td>
   </tr>
   <tr>
    <td>{{specName("Mixed Content")}}</td>
@@ -204,7 +204,7 @@ Content-Security-Policy: default-src https:
   <tr>
    <td>{{specName("CSP 1.0")}}</td>
    <td>{{Spec2('CSP 1.0')}}</td>
-   <td>Defines <code>connect-src</code>, <code>default-src</code>, <code>font-src</code>, <code>frame-src</code>, <code>img-src</code>, <code>media-src</code>, <code>object-src</code>, report-uri, <code>sandbox</code>, <code>script-src,</code> and <code>style-src</code>.</td>
+   <td>Defines <code>connect-src</code>, <code>default-src</code>, <code>font-src</code>, <code>frame-src</code>, <code>img-src</code>, <code>media-src</code>, <code>object-src</code>, report-uri, <code>sandbox</code>, <code>script-src,</code> and <code>style-src</code>.</td>
   </tr>
  </tbody>
 </table>
@@ -217,8 +217,8 @@ Content-Security-Policy: default-src https:
 
 <ul>
  <li>{{HTTPHeader("Content-Security-Policy-Report-Only")}}</li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security in WebExtensions</a></li>
+ <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security in WebExtensions</a></li>
  <li>
-  <p><a href="/en-US/docs/Tools/GCLI/Display_security_and_privacy_policies">Display security and privacy policies In Firefox Developer Tools</a></p>
+  <p><a href="/zh-CN/docs/Tools/GCLI/Display_security_and_privacy_policies">Display security and privacy policies In Firefox Developer Tools</a></p>
  </li>
 </ul>
