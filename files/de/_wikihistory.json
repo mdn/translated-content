@@ -2852,12 +2852,6 @@
       "Anonymous"
     ]
   },
-  "Web/API/GlobalEventHandlers/onresize": {
-    "modified": "2019-03-23T22:10:57.097Z",
-    "contributors": [
-      "mecograph"
-    ]
-  },
   "Web/API/HTMLCanvasElement": {
     "modified": "2019-03-23T22:34:59.417Z",
     "contributors": [
@@ -3841,6 +3835,12 @@
     "contributors": [
       "Aloso",
       "G3nadi"
+    ]
+  },
+  "Web/API/Window/resize_event": {
+    "modified": "2019-03-23T22:10:57.097Z",
+    "contributors": [
+      "mecograph"
     ]
   },
   "Web/API/Window/screenX": {
