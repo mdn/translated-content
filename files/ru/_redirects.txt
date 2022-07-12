@@ -400,6 +400,7 @@
 /ru/docs/Web/API/GlobalEventHandlers/onblur	/ru/docs/Web/API/Window/blur_event
 /ru/docs/Web/API/GlobalEventHandlers/onchange	/ru/docs/Web/API/HTMLElement/change_event
 /ru/docs/Web/API/GlobalEventHandlers/onclose	/ru/docs/Web/API/HTMLDialogElement/close_event
+/ru/docs/Web/API/GlobalEventHandlers/oncontextmenu	/ru/docs/Web/API/Element/contextmenu_event
 /ru/docs/Web/API/GlobalEventHandlers/onfocus	/ru/docs/Web/API/Window/focus_event
 /ru/docs/Web/API/GlobalEventHandlers/oninput	/ru/docs/Web/API/HTMLElement/input_event
 /ru/docs/Web/API/GlobalEventHandlers/onkeydown	/ru/docs/conflicting/Web/API/Element/keydown_event
@@ -410,6 +411,7 @@
 /ru/docs/Web/API/GlobalEventHandlers/onsubmit	/ru/docs/Web/API/HTMLFormElement/submit_event
 /ru/docs/Web/API/HTMLAudioElement/Audio()	/ru/docs/Web/API/HTMLAudioElement/Audio
 /ru/docs/Web/API/HTMLElement/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
+/ru/docs/Web/API/HTMLElement/pointerover_event	/ru/docs/Web/API/Element/pointerover_event
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/hash	/ru/docs/Web/API/HTMLAnchorElement/hash
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/host	/ru/docs/Web/API/HTMLAnchorElement/host
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/hostname	/ru/docs/Web/API/HTMLAnchorElement/hostname
