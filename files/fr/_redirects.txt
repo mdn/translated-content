@@ -4458,8 +4458,7 @@
 /fr/docs/Web/CSS/transform-function/scaleZ()	/fr/docs/Web/CSS/transform-function/scaleZ
 /fr/docs/Web/CSS/transform-function/skew()	/fr/docs/Web/CSS/transform-function/skew
 /fr/docs/Web/CSS/transform-function/skewX()	/fr/docs/Web/CSS/transform-function/skewX
-/fr/docs/Web/CSS/transform-function/skewY	/fr/docs/conflicting/Web/CSS/transform-function/skewX
-/fr/docs/Web/CSS/transform-function/skewY()	/fr/docs/conflicting/Web/CSS/transform-function/skewX
+/fr/docs/Web/CSS/transform-function/skewY()	/fr/docs/Web/CSS/transform-function/skewY
 /fr/docs/Web/CSS/transform-function/translate()	/fr/docs/Web/CSS/transform-function/translate
 /fr/docs/Web/CSS/transform-function/translate3d()	/fr/docs/Web/CSS/transform-function/translate3d
 /fr/docs/Web/CSS/transform-function/translateX()	/fr/docs/Web/CSS/transform-function/translateX
@@ -6241,6 +6240,7 @@
 /fr/docs/conflicting/Web/CSS/mask-image	/fr/docs/Web/CSS/mask-image
 /fr/docs/conflicting/Web/CSS/scroll-snap-type	/fr/docs/Web/CSS/scroll-snap-type
 /fr/docs/conflicting/Web/CSS/shape-outside	/fr/docs/Web/CSS/shape-outside
+/fr/docs/conflicting/Web/CSS/transform-function/skewX	/fr/docs/Web/CSS/transform-function/skewY
 /fr/docs/conflicting/Web/CSS/url()	/fr/docs/Web/CSS/url
 /fr/docs/conflicting/Web/CSS/url()_168028c4e5edd9e19c061adb4b604d4f	/fr/docs/Web/CSS/url
 /fr/docs/conflicting/Web/CSS/user-select	/fr/docs/Web/CSS/user-select

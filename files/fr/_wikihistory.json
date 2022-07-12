@@ -40821,14 +40821,6 @@
       "SphinxKnight"
     ]
   },
-  "conflicting/Web/CSS/transform-function/skewX": {
-    "modified": "2020-11-30T10:28:12.012Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SphinxKnight",
-      "prayash"
-    ]
-  },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
     "modified": "2020-10-15T21:27:51.341Z",
     "contributors": [
