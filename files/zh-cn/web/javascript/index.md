@@ -91,7 +91,7 @@ translation_of: Web/JavaScript
 
 用于编写和调试 JavaScript 代码的实用工具。
 
-- [Firefox 开发者工具](/zh-CN/docs/Tools)
+- [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   -：包括[Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)、[JavaScript Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)、[Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)等
 - [JavaScript Shells](/zh-CN/docs/Web/JavaScript/Shells)
   - ：Javascript Shell 使你可以即时测试 JavaScript 代码片段。
