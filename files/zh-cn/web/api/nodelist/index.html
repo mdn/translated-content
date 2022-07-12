@@ -75,7 +75,7 @@ for (var checkbox of list) {
 
 <p>最近，浏览器也支持一些遍历方法，比如 {{domxref("NodeList.forEach()", "forEach()")}} 与 {{domxref("NodeList.entries()", "entries()")}}、{{domxref("NodeList.values()", "values()")}}、和 {{domxref("NodeList.keys()", "keys()")}}。</p>
 
-<p>也有一种使用数组 <code>Array</code> 的 {{jsxref("Array.forEach()", "Array.prototype.forEach")}} 来遍历 <code>NodeList</code> 的方法，这种方法兼容 Internet Explorer {{obsolete_inline}}：</p>
+<p>也有一种使用数组 <code>Array</code> 的 {{jsxref("Array.forEach()", "Array.prototype.forEach")}} 来遍历 <code>NodeList</code> 的方法，这种方法兼容 Internet Explorer {{Deprecated_Inline}}：</p>
 
 <pre class="brush: js">var list = document.querySelectorAll('input[type=checkbox]');
 Array.prototype.forEach.call(list, function (checkbox) {

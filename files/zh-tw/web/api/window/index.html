@@ -28,19 +28,19 @@ translation_of: Web/API/Window
  <dd>The entry point to many <a href="/zh-TW/docs/XPCOM">XPCOM</a> features. Some properties, e.g. <a href="/zh-TW/docs/Components.classes">classes</a>, are only available to sufficiently privileged code. <strong>Web code should not use this property.</strong></dd>
  <dt>{{domxref("Window.console")}} {{ReadOnlyInline}}</dt>
  <dd>Returns a reference to the console object which provides access to the browser's debugging console.</dd>
- <dt>{{domxref("Window.content")}} and Window._content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}</dt>
+ <dt>{{domxref("Window.content")}} and Window._content {{Non-standard_inline}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns a reference to the content element in the current window. The obsolete variant with underscore is no longer available from Web content.</dd>
  <dt>{{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the XUL controller objects for the current chrome window.</dd>
  <dt>{{domxref("Window.crypto")}} {{readOnlyInline}}</dt>
  <dd>Returns the browser crypto object.</dd>
- <dt>{{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}</dt>
+ <dt>{{domxref("Window.defaultStatus")}} {{Deprecated_Inline}}</dt>
  <dd>Gets/sets the status bar text for the given window.</dd>
  <dt>{{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the ratio between physical pixels and device independent pixels in the current display.</dd>
  <dt>{{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}</dt>
  <dd>Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an <code>nsIArray</code>.</dd>
- <dt>{{domxref("Window.directories")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.directories")}} {{Deprecated_Inline}}</dt>
  <dd>Synonym of {{domxref("window.personalbar")}}</dd>
  <dt>{{domxref("Window.document")}} {{ReadOnlyInline}}</dt>
  <dd>指向此 <code>window</code> 中的 <code>document</code> 物件。</dd>
@@ -50,7 +50,7 @@ translation_of: Web/API/Window
  <dd>Returns an array of the subframes in the current window.</dd>
  <dt>{{domxref("Window.fullScreen")}}</dt>
  <dd>此屬性表示目前視窗是否為全螢幕顯示。</dd>
- <dt>{{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}</dt>
+ <dt>{{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Unsupported since Gecko 13 (Firefox 13). Use {{domxref("Window.localStorage")}} instead.<br>
  Was: Multiple storage objects that are used for storing data across multiple pages.</dd>
  <dt>{{domxref("Window.history")}} {{ReadOnlyInline}}</dt>
@@ -105,7 +105,7 @@ translation_of: Web/API/Window
  <dd>Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing <a href="/zh-TW/docs/Navigation_timing">performance-related</a> data. See also <a href="/zh-TW/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing">Using Navigation Timing</a> for additional information and examples.</dd>
  <dt>{{domxref("Window.personalbar")}} {{readOnlyInline}}</dt>
  <dd>Returns the personalbar object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("Window.pkcs11")}} {{obsolete_inline(29)}}</dt>
+ <dt>{{domxref("Window.pkcs11")}} {{Deprecated_Inline}}</dt>
  <dd>Formerly provided access to install and remove PKCS11 modules.</dd>
  <dt>{{domxref("Window.returnValue")}}</dt>
  <dd>The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.</dd>
@@ -167,7 +167,7 @@ translation_of: Web/API/Window
 <dl>
  <dt>{{domxref("Window.alert()")}}</dt>
  <dd>Displays an alert dialog.</dd>
- <dt>{{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.back()")}} {{Non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Moves back one in the window history.</dd>
  <dt>{{domxref("Window.blur()")}}</dt>
  <dd>Sets focus away from the window.</dd>
@@ -183,21 +183,21 @@ translation_of: Web/API/Window
  <dd>Closes the current window.</dd>
  <dt>{{domxref("Window.confirm()")}}</dt>
  <dd>Displays a dialog with a message that the user needs to respond to.</dd>
- <dt>{{domxref("Window.disableExternalCapture()")}} {{obsolete_inline(24)}}</dt>
+ <dt>{{domxref("Window.disableExternalCapture()")}} {{Deprecated_Inline}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.dispatchEvent()")}}</dt>
  <dd>Used to trigger an event.</dd>
  <dt>{{domxref("Window.dump()")}} {{Non-standard_inline}}</dt>
  <dd>Writes a message to the console.</dd>
- <dt>{{domxref("Window.enableExternalCapture()")}} {{obsolete_inline(24)}}</dt>
+ <dt>{{domxref("Window.enableExternalCapture()")}} {{Deprecated_Inline}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.find()")}}</dt>
  <dd>Searches for a given string in a window.</dd>
  <dt>{{domxref("Window.focus()")}}</dt>
  <dd>Sets focus on the current window.</dd>
- <dt>{{domxref("Window.forward()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.forward()")}} {{Non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Moves the window one document forward in the history.</dd>
- <dt>{{domxref("Window.getAttention()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.getAttention()")}} {{Non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Flashes the application icon.</dd>
  <dt>{{domxref("Window.getAttentionWithCycleCount()")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
@@ -207,7 +207,7 @@ translation_of: Web/API/Window
  <dd>Gets default computed style for the specified element, ignoring author stylesheets.</dd>
  <dt>{{domxref("Window.getSelection()")}}</dt>
  <dd>Returns the selection object representing the selected item(s).</dd>
- <dt>{{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.home()")}} {{Non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Returns the browser to the home page.</dd>
  <dt>{{domxref("Window.matchMedia()")}}</dt>
  <dd>Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.</dd>
@@ -221,7 +221,7 @@ translation_of: Web/API/Window
  <dd>Moves the window to the specified coordinates.</dd>
  <dt>{{domxref("Window.open()")}}</dt>
  <dd>Opens a new window.</dd>
- <dt>{{domxref("Window.openDialog()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.openDialog()")}} {{Non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Opens a new dialog window.</dd>
  <dt>{{domxref("Window.postMessage()")}}</dt>
  <dd>Provides a secure means for one window to send a string of data to another window, which need not be within the same domain as the first.</dd>
@@ -239,9 +239,9 @@ translation_of: Web/API/Window
  <dd>Resizes the current window by a certain amount.</dd>
  <dt>{{domxref("Window.resizeTo()")}}</dt>
  <dd>Dynamically resizes window.</dd>
- <dt>{{domxref("Window.restore()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.restore()")}} {{Non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("Window.routeEvent()")}} {{obsolete_inline(24)}}</dt>
+ <dt>{{domxref("Window.routeEvent()")}} {{Deprecated_Inline}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.scroll()")}}</dt>
  <dd>Scrolls the window to a particular place in the document.</dd>
@@ -295,7 +295,7 @@ translation_of: Web/API/Window
 <h3 id="Obsolete_methods">Obsolete methods</h3>
 
 <dl>
- <dt>{{domxref("Window.showModalDialog()")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.showModalDialog()")}} {{Deprecated_Inline}}</dt>
  <dd>Displays a modal dialog. <strong>This method was removed completely in Chrome 43, and Firefox 55.</strong></dd>
 </dl>
 
