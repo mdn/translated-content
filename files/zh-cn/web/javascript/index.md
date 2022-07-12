@@ -33,7 +33,7 @@ translation_of: Web/JavaScript
 如果你想学习 JavaScript，却从未接触过 JavaScript 或编程，你可以投入到我们的 [JavaScript 主题学习区](/zh-CN/docs/Learn/JavaScript)。下面列出了这部分的所有章节：
 
 - [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)
-  - :回答了一些基本问题，比如“JavaScript 是什么？”、“它长什么样子？”、“它可以用来做什么？”等，同时还谈及了如变量、字符串、数值、数组等 JavaScript 的关键特性。
+  - : 回答了一些基本问题，比如“JavaScript 是什么？”、“它长什么样子？”、“它可以用来做什么？”等，同时还谈及了如变量、字符串、数值、数组等 JavaScript 的关键特性。
 - [JavaScript 基本结构](/zh-CN/docs/Learn/JavaScript/Building_blocks)
   - : 继介绍了 JavaScript 关键的基本特性后，我们需要关注常见的代码组成部分，如条件语句、循环、函数、事件等。
 - [介绍 JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects)
@@ -72,7 +72,7 @@ translation_of: Web/JavaScript
 - [内存管理](/zh-CN/docs/Web/JavaScript/Memory_Management)
   - : JavaScript 中的内存生命周期和垃圾回收机制。
 - [并发模型以及事件循环](/zh-CN/docs/Web/JavaScript/EventLoop)
-  - JavaScript 具有基于“事件循环”的并发模型。
+  - : JavaScript 具有基于“事件循环”的并发模型。
 
 ## 参考
 
@@ -92,7 +92,7 @@ translation_of: Web/JavaScript
 用于编写和调试 JavaScript 代码的实用工具。
 
 - [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-  -: 包括[Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)、[JavaScript Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)、[Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)等
+  - : 包括[Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)、[JavaScript Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)、[Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)等
 - [JavaScript Shells](/zh-CN/docs/Web/JavaScript/Shells)
   - : Javascript Shell 使你可以即时测试 JavaScript 代码片段。
 - [TogetherJS](https://togetherjs.com/)
