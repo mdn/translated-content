@@ -33,44 +33,44 @@ translation_of: Web/JavaScript
 如果你想学习 JavaScript，却从未接触过 JavaScript 或编程，你可以投入到我们的 [JavaScript 主题学习区](/zh-CN/docs/Learn/JavaScript)。下面列出了这部分的所有章节：
 
 - [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)
-  - ：回答了一些基本问题，比如“JavaScript 是什么？”、“它长什么样子？”、“它可以用来做什么？”等，同时还谈及了如变量、字符串、数值、数组等 JavaScript 的关键特性。
+  - :回答了一些基本问题，比如“JavaScript 是什么？”、“它长什么样子？”、“它可以用来做什么？”等，同时还谈及了如变量、字符串、数值、数组等 JavaScript 的关键特性。
 - [JavaScript 基本结构](/zh-CN/docs/Learn/JavaScript/Building_blocks)
-  - ：继介绍了 JavaScript 关键的基本特性后，我们需要关注常见的代码组成部分，如条件语句、循环、函数、事件等。
+  - : 继介绍了 JavaScript 关键的基本特性后，我们需要关注常见的代码组成部分，如条件语句、循环、函数、事件等。
 - [介绍 JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects)
-  - ：如果你想进一步使用它撰写更有效率的代码，理解 JavaScript 面向对象的特性是很重要的，因此我们提供了该模块来帮助你理解它。
+  - : 如果你想进一步使用它撰写更有效率的代码，理解 JavaScript 面向对象的特性是很重要的，因此我们提供了该模块来帮助你理解它。
 - [异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
-  - ：介绍异步 Javascript，解释为什么这个特性是重要的，以及如何借助这个特性，有效解决诸如从服务器抓取资源这类潜在的阻塞操作
+  - : 介绍异步 Javascript，解释为什么这个特性是重要的，以及如何借助这个特性，有效解决诸如从服务器抓取资源这类潜在的阻塞操作
 - [客户端 web API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs)
-  - ：了解 API 是什么，以及如何使用那些在开发工作中常见的 API。
+  - : 了解 API 是什么，以及如何使用那些在开发工作中常见的 API。
 
 ### JavaScript 指南
 
 - [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)
-  - ：一份更详尽的 JavaScript 指南，适用于有过 JavaScript 或其他语言编程经验的读者。
+  - : 一份更详尽的 JavaScript 指南，适用于有过 JavaScript 或其他语言编程经验的读者。
 
 ### 中级内容
 
 - [理解客户端 Javascript 框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
-  - ：作为现代前端 Web 开发中不可或缺的一部分，Javascript 框架给开发者提供了一套经过验证的工具，用来构建可扩展的交互式 Web 应用。在你移步一系列涵盖了当前流行前端框架的教程前，这部分内容提供了一些基础的背景知识，包括这些客户端框架是如何工作的，以及它们如何与你现有的工具集相配合。
+  - : 作为现代前端 Web 开发中不可或缺的一部分，Javascript 框架给开发者提供了一套经过验证的工具，用来构建可扩展的交互式 Web 应用。在你移步一系列涵盖了当前流行前端框架的教程前，这部分内容提供了一些基础的背景知识，包括这些客户端框架是如何工作的，以及它们如何与你现有的工具集相配合。
 - [重新介绍 JavaScript](/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
-  - ：给那些 _认为自己了解 Javascript_ 的朋友们准备的 JavaScript 概述。
+  - : 给那些 _认为自己了解 Javascript_ 的朋友们准备的 JavaScript 概述。
 - [JavaScript 数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
   - : 概述JavaScript 中涉及的数据结构。
 - [相同、相等的比较性判断](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)
-  - :JavaScript 提供了三种比较操作符，包括严格比较操作符`===`和非严格的比较操作符 `==`，以及 {{jsxref("Global_Objects/Object/is", "Object.is()")}} 方法。
+  - : JavaScript 提供了三种比较操作符，包括严格比较操作符`===`和非严格的比较操作符 `==`，以及 {{jsxref("Global_Objects/Object/is", "Object.is()")}} 方法。
 - [闭包](/zh-CN/docs/Web/JavaScript/Closures)
-  - ：闭包由一个函数与其本身所被定义的词法环境的结合而成。
+  - : 闭包由一个函数与其本身所被定义的词法环境的结合而成。
 
 ### 高级内容
 
 - [继承和原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
-  - ：基于原型继承被外界广泛地误解与低估，这一版块对基于原型的继承作了阐述。
+  - : 基于原型继承被外界广泛地误解与低估，这一版块对基于原型的继承作了阐述。
 - [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
-  - ：在严格模式中，规定不能使用未定义的变量。它是 ECMAScript 5 的限制版本，以求得更高效的性能和更便利的调试。
+  - : 在严格模式中，规定不能使用未定义的变量。它是 ECMAScript 5 的限制版本，以求得更高效的性能和更便利的调试。
 - [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
-  - ：Javascript 类型化数组提供了操作原始二进制数据的机制。
+  - : Javascript 类型化数组提供了操作原始二进制数据的机制。
 - [内存管理](/zh-CN/docs/Web/JavaScript/Memory_Management)
-  - ：JavaScript 中的内存生命周期和垃圾回收机制。
+  - : JavaScript 中的内存生命周期和垃圾回收机制。
 - [并发模型以及事件循环](/zh-CN/docs/Web/JavaScript/EventLoop)
   - JavaScript 具有基于“事件循环”的并发模型。
 
@@ -79,35 +79,35 @@ translation_of: Web/JavaScript
 浏览完整的 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)文档。
 
 - [标准对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)
-  - ：例如 {{jsxref("Array")}}、{{jsxref("Boolean")}}、{{jsxref("Date")}}、{{jsxref("Error")}}、{{jsxref("Function")}}、{{jsxref("JSON")}}、{{jsxref("Math")}}、{{jsxref("Number")}}、{{jsxref("Object")}}、{{jsxref("RegExp")}}、{{jsxref("String")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}} 、{{jsxref("WeakSet")}} 等标准内置对象。
+  - : 例如 {{jsxref("Array")}}、{{jsxref("Boolean")}}、{{jsxref("Date")}}、{{jsxref("Error")}}、{{jsxref("Function")}}、{{jsxref("JSON")}}、{{jsxref("Math")}}、{{jsxref("Number")}}、{{jsxref("Object")}}、{{jsxref("RegExp")}}、{{jsxref("String")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}} 、{{jsxref("WeakSet")}} 等标准内置对象。
 - [表达式和运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)
-  - ：运算符的作用：{{jsxref("Operators/instanceof", "instanceof")}}、{{jsxref("Operators/typeof", "typeof")}}、{{jsxref("Operators/new", "new")}}、{{jsxref("Operators/this", "this")}}，[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)，以及其他运算符。
+  - : 运算符的作用：{{jsxref("Operators/instanceof", "instanceof")}}、{{jsxref("Operators/typeof", "typeof")}}、{{jsxref("Operators/new", "new")}}、{{jsxref("Operators/this", "this")}}，[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)，以及其他运算符。
 - [语句和声明](/zh-CN/docs/Web/JavaScript/Reference/Statements)
-  - ：了解 {{jsxref("Statements/do...while", "do-while")}}、{{jsxref("Statements/for...in", "for-in")}}、{{jsxref("Statements/for...of", "for-of")}}、{{jsxref("Statements/try...catch", "try-catch")}}、{{jsxref("Statements/let", "let")}}、{{jsxref("Statements/var", "var")}}、{{jsxref("Statements/const", "const")}}、{{jsxref("Statements/if...else", "if-else")}}、{{jsxref("Statements/switch", "switch")}} 以及其他语句和关键字的作用。
+  - : 了解 {{jsxref("Statements/do...while", "do-while")}}、{{jsxref("Statements/for...in", "for-in")}}、{{jsxref("Statements/for...of", "for-of")}}、{{jsxref("Statements/try...catch", "try-catch")}}、{{jsxref("Statements/let", "let")}}、{{jsxref("Statements/var", "var")}}、{{jsxref("Statements/const", "const")}}、{{jsxref("Statements/if...else", "if-else")}}、{{jsxref("Statements/switch", "switch")}} 以及其他语句和关键字的作用。
 - [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)
-  - ：学习如何使用 JavaScript 函数来开发你的应用。
+  - : 学习如何使用 JavaScript 函数来开发你的应用。
 
 ## 工具和资源
 
 用于编写和调试 JavaScript 代码的实用工具。
 
 - [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-  -：包括[Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)、[JavaScript Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)、[Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)等
+  -: 包括[Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)、[JavaScript Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)、[Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)等
 - [JavaScript Shells](/zh-CN/docs/Web/JavaScript/Shells)
-  - ：Javascript Shell 使你可以即时测试 JavaScript 代码片段。
+  - : Javascript Shell 使你可以即时测试 JavaScript 代码片段。
 - [TogetherJS](https://togetherjs.com/)
-  - ：添加 TogetherJS 到您的网站，让用户实时互助，协作更简单。
+  - : 添加 TogetherJS 到您的网站，让用户实时互助，协作更简单。
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/javascript)
-  - ：你可以在 StackOverflow 查看或者发布带有 JavaScript 标签的问题。
+  - : 你可以在 StackOverflow 查看或者发布带有 JavaScript 标签的问题。
 - [JSFiddle](https://jsfiddle.net/)
-  - ：编辑 JavaScript、CSS 和 HTML 并获得实时结果。使用外置资源，并同你的团队在线合作。
+  - : 编辑 JavaScript、CSS 和 HTML 并获得实时结果。使用外置资源，并同你的团队在线合作。
 - [Plunker](https://plnkr.co/)
-  - ：Plunker 是一个在线社区，用于创建、协作和共享您的 Web 开发创意。编辑您的 JavaScript、CSS 和 HTML 文件并获取实时结果和文件结构。
+  - : Plunker 是一个在线社区，用于创建、协作和共享您的 Web 开发创意。编辑您的 JavaScript、CSS 和 HTML 文件并获取实时结果和文件结构。
 - [JSBin](https://jsbin.com/)
-  - ：JS Bin 是一个开源的协作式的 web 开发调试工具。
+  - : JS Bin 是一个开源的协作式的 web 开发调试工具。
 - [Codepen](https://codepen.io/)
-  - ：Codepen 也是一个 Web 协作工具，可用作展示实时结果的 playground。
+  - : Codepen 也是一个 Web 协作工具，可用作展示实时结果的 playground。
 - [StackBlitz](https://stackblitz.com/)
-  - ：StackBlitz 同样是一个支持调试的在线 playground，它支持部署使用了 React、Angular等技术的全栈应用
+  - : StackBlitz 同样是一个支持调试的在线 playground，它支持部署使用了 React、Angular等技术的全栈应用
 - [RunJS](https://runjs.app/)
-  - ：RunJS 是一个桌面端便笺式 playground，可提供实时执行结果并支持调用 Node 与 浏览器 API。
+  - : RunJS 是一个桌面端便笺式 playground，可提供实时执行结果并支持调用 Node 与 浏览器 API。
