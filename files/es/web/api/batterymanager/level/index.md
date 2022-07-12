@@ -63,3 +63,4 @@ getLevel.addEventListener('click', async () => {
 
 - {{domxref("BatteryManager")}}
 - {{domxref("Navigator.getBattery")}}
+
