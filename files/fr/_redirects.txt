@@ -4377,7 +4377,7 @@
 /fr/docs/Web/CSS/auto	/fr/docs/Web/CSS/width
 /fr/docs/Web/CSS/calc()	/fr/docs/Web/CSS/calc
 /fr/docs/Web/CSS/clamp()	/fr/docs/Web/CSS/clamp
-/fr/docs/Web/CSS/color-adjust	/fr/docs/conflicting/Web/CSS/print-color-adjust
+/fr/docs/Web/CSS/color-adjust	/fr/docs/Web/CSS/print-color-adjust
 /fr/docs/Web/CSS/conic-gradient	/fr/docs/Web/CSS/gradient/conic-gradient
 /fr/docs/Web/CSS/conic-gradient()	/fr/docs/Web/CSS/gradient/conic-gradient
 /fr/docs/Web/CSS/counter()	/fr/docs/Web/CSS/counter
@@ -6238,6 +6238,7 @@
 /fr/docs/conflicting/Web/CSS/float	/fr/docs/Web/CSS/float
 /fr/docs/conflicting/Web/CSS/font-variant	/fr/docs/Web/CSS/font-variant
 /fr/docs/conflicting/Web/CSS/mask-image	/fr/docs/Web/CSS/mask-image
+/fr/docs/conflicting/Web/CSS/print-color-adjust	/fr/docs/Web/CSS/print-color-adjust
 /fr/docs/conflicting/Web/CSS/scroll-snap-type	/fr/docs/Web/CSS/scroll-snap-type
 /fr/docs/conflicting/Web/CSS/shape-outside	/fr/docs/Web/CSS/shape-outside
 /fr/docs/conflicting/Web/CSS/transform-function/skewX	/fr/docs/Web/CSS/transform-function/skewY
