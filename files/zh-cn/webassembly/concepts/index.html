@@ -36,7 +36,7 @@ translation_of: WebAssembly/Concepts
 </ul>
 
 <div class="note">
-<p>注：WebAssembly 也用在网络和 JavaScript 环境之外（参考<a href="http://webassembly.org/docs/non-web/">非网络嵌入</a>）。</p>
+<p><strong>备注：</strong> WebAssembly 也用在网络和 JavaScript 环境之外（参考<a href="http://webassembly.org/docs/non-web/">非网络嵌入</a>）。</p>
 </div>
 
 <h2 id="WebAssembly如何适应网络平台？">WebAssembly 如何适应网络平台？</h2>
@@ -45,7 +45,7 @@ translation_of: WebAssembly/Concepts
 
 <ul>
  <li>一个运行网络程序（Web app）代码——比如，给你的程序提供能力的 JavaScript——的虚拟机</li>
- <li>一系列网络程序能够调用从而控制网络浏览器/设备功能，并且能够让事物发生变化的网络API（<a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a>、<a href="/en-US/docs/Web/API/CSS_Object_Model">CSSOM</a>、<a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>、<a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>、<a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>等）。</li>
+ <li>一系列网络程序能够调用从而控制网络浏览器/设备功能，并且能够让事物发生变化的网络API（<a href="/zh-CN/docs/Web/API/Document_Object_Model">DOM</a>、<a href="/zh-CN/docs/Web/API/CSS_Object_Model">CSSOM</a>、<a href="/zh-CN/docs/Web/API/WebGL_API">WebGL</a>、<a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB</a>、<a href="/zh-CN/docs/Web/API/Web_Audio_API">Web Audio API</a>等）。</li>
 </ul>
 
 <p>从历史角度讲，虚拟机过去只能加载 JavaScript。这对我们而言足够了，因为 JavaScript 足够强大从而能够解决人们在当今网络上遇到的绝大部分问题。尽管如此，当试图把 JavaScript 应用到诸如 3D 游戏、虚拟现实、增强现实、计算机视觉、图像/视频编辑以及大量的要求原生性能的其他领域的时候，我们遇到了性能问题（参考 <a href="http://webassembly.org/docs/use-cases/">WebAssembly 使用案例</a> 获取更多细节）。</p>
@@ -104,8 +104,6 @@ translation_of: WebAssembly/Concepts
 
 <h3 id="从CC移植">从C/C++移植</h3>
 
-<p> </p>
-
 <p>创建 WASM 代码的众多选项中有两个是在线 WASM 汇编程序或<a href="/zh-CN/docs/Mozilla/Projects/Emscripten">Emscripten</a>。有许多在线 WASM 汇编程序可供选择，例如：</p>
 
 <ul>
@@ -135,7 +133,7 @@ translation_of: WebAssembly/Concepts
 </ol>
 
 <div class="note">
-<p>注意：计划将来<a href="https://github.com/WebAssembly/gc/blob/master/README.md">允许 WebAssembly 直接调用 Web API</a>。</p>
+<p><strong>备注：</strong> 计划将来<a href="https://github.com/WebAssembly/gc/blob/master/README.md">允许 WebAssembly 直接调用 Web API</a>。</p>
 </div>
 
 <p>JavaScript 胶水代码并不是像你想象的那么简单。首先，Emscripten 实现了流行的 C/C++库，比如， <a href="https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer">SDL</a>、 <a href="https://en.wikipedia.org/wiki/OpenGL">OpenGL</a>、 <a href="https://en.wikipedia.org/wiki/OpenAL">OpenAL</a>以及部分<a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a>。这些库以 Web API 的形式实现，并且每个库需要一个 JavaScript 胶水代码来连接 WebAssembly 和低层的 Web API。</p>
