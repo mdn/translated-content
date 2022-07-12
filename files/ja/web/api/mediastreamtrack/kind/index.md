@@ -1,56 +1,37 @@
 ---
 title: MediaStreamTrack.kind
 slug: Web/API/MediaStreamTrack/kind
+page-type: web-api-instance-property
+tags:
+  - Media Capture and Streams
+  - MediaStreamTrack
+  - NeedsExample
+  - Property
+  - Read-only
+  - Reference
+  - WebRTC
+browser-compat: api.MediaStreamTrack.kind
 translation_of: Web/API/MediaStreamTrack/kind
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p><code><strong>MediaStreamTrack.kind</strong></code>は読み取り専用のプロパティであり、トラックの種類を示す{{domxref("DOMString")}}を返します。トラックがオーディオトラックの場合は<code>"audio"</code>を返し、ビデオトラックの場合は<code>"video"</code>を返します。トラックがソースから切り離されている場合は、何も変更されません。</p>
+**`MediaStreamTrack.kind`** は読み取り専用のプロパティであり、トラックの種類を示す文字列を返します。トラックが音声トラックの場合は `"audio"` を返し、映像トラックの場合は `"video"` を返します。トラックがソースから切り離されている場合は、何も変更されません。
 
-<h2 id="文法">文法</h2>
+## 値
 
-<pre class="syntaxbox"> var <em>type</em> = <em>track</em>.kind;</pre>
+有効な値は、以下のいずれかの値を取る文字列です。
 
-<h3 id="値">値</h3>
+- `"audio"`: このトラックは音声トラックです。
+- `"video"`: このトラックは映像トラックです。
 
-<p>以下に示す{{domxref("DOMString")}}型の値を取ります。</p>
+## 仕様書
 
-<ul>
- <li><code>"audio"</code>: このトラックはオーディオトラックであることを表します。</li>
- <li><code>"video"</code>: このトラックはビデオトラックであることを表します。</li>
-</ul>
+{{Specifications}}
 
-<h2 id="例">例</h2>
+## ブラウザーの互換性
 
-<pre></pre>
+{{Compat}}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 関連情報
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Media Capture', '#widl-MediaStreamTrack-kind', 'MediaStreamTrack.kind') }}</td>
-   <td>{{ Spec2('Media Capture') }}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
-
-
-
-<p>{{Compat("api.MediaStreamTrack.kind")}}</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-</ul>
+- [WebRTC](/ja/docs/Web/API/WebRTC_API)
