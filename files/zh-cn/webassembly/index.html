@@ -18,8 +18,6 @@ translation_of: WebAssembly
 
 <p>而且，更棒的是，这是通过<a href="https://www.w3.org/community/webassembly/">W3C WebAssembly Community Group</a>开发的一项网络标准，并得到了来自各大主要浏览器厂商的积极参与。</p>
 
-<div class="row topicpage-table">
-<div class="section">
 <h2 id="指南">指南</h2>
 
 <dl>
@@ -28,9 +26,9 @@ translation_of: WebAssembly
  <dt><a href="/zh-CN/docs/WebAssembly/C_to_wasm">从C/C++编译为WebAssembly</a></dt>
  <dd>当你使用C/C++编写了代码后，你可以使用诸如Emscripten的工具把它编译为.wasm文件。让我们看看这是如何工作的。</dd>
  <dt><a href="/zh-CN/docs/WebAssembly/Loading_and_running">加载运行 WebAssembly 代码</a></dt>
- <dd>本文介绍如何通过把<a href="/en-US/docs/Web/API/Fetch_API">Fetch</a>或者<a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a> API 与<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly">WebAssembly JavaScript </a>API 结合在一起来获取、编译和实例化.wasm 文件。</dd>
+ <dd>本文介绍如何通过把<a href="/zh-CN/docs/Web/API/Fetch_API">Fetch</a>或者<a href="/zh-CN/docs/Web/API/XMLHttpRequest">XHR</a> API 与<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly">WebAssembly JavaScript </a>API 结合在一起来获取、编译和实例化.wasm 文件。</dd>
  <dt><a href="/zh-CN/docs/WebAssembly/Caching_modules">缓存编译后的 WebAssembly 模块</a></dt>
- <dd>就提升应用启动速度而言，在客户端缓存大的 WebAssembly 模块是有用的。本文解释了如何使用<a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>来实现这一点。</dd>
+ <dd>就提升应用启动速度而言，在客户端缓存大的 WebAssembly 模块是有用的。本文解释了如何使用<a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB</a>来实现这一点。</dd>
  <dt><a href="/zh-CN/docs/WebAssembly/Using_the_JavaScript_API">使用 WebAssembly 的 JavaScript API</a></dt>
  <dd>当加载了一个.wasm 模块之后，你就想要使用它。在本文中，我们向你展示了如何通过 WebAssembly 的 JavaScript API 来使用 WebAssembly。</dd>
  <dt><a href="/zh-CN/docs/WebAssembly/Exported_functions">导出的 WebAssembly 函数</a></dt>
@@ -38,20 +36,18 @@ translation_of: WebAssembly
  <dt><a href="/zh-CN/docs/WebAssembly/Understanding_the_text_format">理解 WebAssembly 的文本格式</a></dt>
  <dd>本文介绍了 wasm 的文本格式。这是在进行调试的时候浏览器开发者工具中展现出来的.wasm 模块的一种低级文本表示。</dd>
  <dt><a href="/zh-CN/docs/WebAssembly/Text_format_to_wasm">把 WebAssembly 文本格式转换为 wasm</a></dt>
- <dd>本文提供了一个如何把编写的文本格式的 WebAssembly 模块转换为 wasm 二进制的指南。</dd>
+ <dd>本文提供了一个如何把编写的文本格式的 WebAssembly 模块转换为 wasm 二进制的指南。</dd>
 </dl>
-</div>
 
-<div class="section">
 <h2 id="API参考">API 参考</h2>
 
 <dl>
  <dt>{{jsxref("Global_objects/WebAssembly", "WebAssembly")}}</dt>
  <dd>本对象是所有与 WebAssembly 相关功能的命名空间。</dd>
  <dt>{{jsxref("Global_objects/WebAssembly/Module", "WebAssembly.Module")}}</dt>
- <dd>一个<code>WebAssembly.Module</code>对象包括了无状态的 WebAssembly 代码。该代码已经被浏览器编译并且能够<a href="/en-US/docs/Web/API/Worker/postMessage">通过 Workers 高效地共享</a>，<a href="/en-US/docs/WebAssembly/Caching_modules">缓存到 IndexedDB 中</a>以及多次实例化。</dd>
+ <dd>一个<code>WebAssembly.Module</code>对象包括了无状态的 WebAssembly 代码。该代码已经被浏览器编译并且能够<a href="/zh-CN/docs/Web/API/Worker/postMessage">通过 Workers 高效地共享</a>，<a href="/zh-CN/docs/WebAssembly/Caching_modules">缓存到 IndexedDB 中</a>以及多次实例化。</dd>
  <dt>{{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance")}}</dt>
- <dd>一个<code>WebAssembly.Instance</code>对象是一个有状态的、可执行的模块的实例。实例对象包含所有的能够从 JavaScript 调用到 WebAssembly 代码的<a href="/en-US/docs/WebAssembly/Exported_functions">导出的 WebAssembly 函数</a>。</dd>
+ <dd>一个<code>WebAssembly.Instance</code>对象是一个有状态的、可执行的模块的实例。实例对象包含所有的能够从 JavaScript 调用到 WebAssembly 代码的<a href="/zh-CN/docs/WebAssembly/Exported_functions">导出的 WebAssembly 函数</a>。</dd>
  <dt>{{jsxref("Global_objects/WebAssembly/instantiate", "WebAssembly.instantiate()")}}</dt>
  <dd><code>WebAssembly.instantiate()</code> 函数是编译和实例化 WebAssembly 代码的主要的 API，它返回一个<code>Module</code>及其第一个实例。</dd>
  <dt>{{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}</dt>
@@ -65,49 +61,32 @@ translation_of: WebAssembly
  <dt>{{jsxref("WebAssembly.RuntimeError()")}}</dt>
  <dd>创建一个新的 WebAssembly <code>RuntimeError</code>对象。</dd>
 </dl>
-</div>
-</div>
 
 <h2 id="示例">示例</h2>
 
-<ul dir="ltr">
+<ul>
  <li><a href="https://github.com/JasonWeathersby/WASMSobel">WASMSobel</a></li>
  <li>参考我们的<a href="https://github.com/mdn/webassembly-examples/">WebAssembly 示例</a>库来获取一些其他的例子。</li>
 </ul>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAssembly JS')}}</td>
-   <td>{{Spec2('WebAssembly JS')}}</td>
-   <td>Initial draft definition of the JavaScript API.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <div>
 
 
-<p>{{Compat("javascript.builtins.WebAssembly")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h2 id="参见">参见</h2>
 
-<ul dir="ltr">
+<ul>
  <li><a href="https://research.mozilla.org/webassembly/">WebAssembly on Mozilla Research</a></li>
  <li><a href="http://webassembly.org/">webassembly.org</a></li>
  <li><a href="https://hacks.mozilla.org/category/webassembly/">WebAssembly articles on Mozilla Hacks blog</a></li>
  <li><a href="https://www.w3.org/community/webassembly/">W3C WebAssembly Community Group</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Large-Allocation">Large-Allocation HTTP header</a></li>
+ <li><a href="/zh-CN/docs/Web/HTTP/Headers/Large-Allocation">Large-Allocation HTTP header</a></li>
 </ul>
