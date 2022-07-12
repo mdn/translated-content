@@ -1,69 +1,78 @@
 ---
 title: MediaStreamTrack.stop()
 slug: Web/API/MediaStreamTrack/stop
+page-type: web-api-instance-method
+tags:
+  - API
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaStreamTrack
+  - Method
+  - Reference
+  - Streams
+  - WebRTC
+  - stop
+browser-compat: api.MediaStreamTrack.stop
 translation_of: Web/API/MediaStreamTrack/stop
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>{{domxref("MediaStreamTrack")}}の<strong><code>stop()</code></strong>はトラックを停止します。</p>
+**`MediaStreamTrack.stop()`** メソッドは、トラックを停止します。
 
-<h2 id="文法">文法</h2>
+## 構文
 
-<pre class="syntaxbox"><em>MediaStreamTrack</em>.stop();
-</pre>
+```js
+stop()
+```
 
-<p><code>stop()</code> の呼び出しは、 {{glossary("user agent")}}へ、トラックのソース(ファイル、ネットワークストリーム、ローカルカメラやマイク)がこれ以上<code>MediaStreamTrack</code>で必要とされないことを伝えます。複数のトラックが同じソースを使用すること(例えば、2つのタブがデバイスのマイクを使っている場合など)もあるため、ソースが必ずしも直ぐに停止させられる必要はありません。その代わり、トラックからの関連付けが解除され、そのトラックオブジェクトが停止されます。ソースからメディアトラックが使用されなくなると、ソースは実際に完全に停止させられるでしょう。</p>
+### 引数
 
-<p><code>stop()</code>を呼び出した直後に、{{domxref("MediaStreamTrack.readyState", "track")}}の状態は<code>ended</code>になります。</p>
+なし。
 
-<h2 id="例">例</h2>
+### 返値
 
-<p>In this example, we see a function which stops a streamed video by calling <code>stop()</code> on every track on a given {{HTMLElement("video")}}.</p>
+なし ({{jsxref("undefined")}})。
 
-<p>この例では、与えられた{{HTMLElement("video")}}の各トラックの<code>stop()</code>を呼び出すことで、ストリーミングされているビデオを停止する関数を定義しています。</p>
+## 解説
 
-<pre class="brush: js">function stopStreamedVideo(videoElem) {
-  let stream = videoElem.srcObject;
-  let tracks = stream.getTracks();
+`stop()` の呼び出しは、{{glossary("user agent", "ユーザーエージェント")}}へ、トラックのソース（ファイル、ネットワークストリーム、ローカルカメラやマイク）がこれ以上この {{domxref("MediaStreamTrack")}} で必要とされないことを伝えます。複数のトラックが同じソースを使用すること（例えば、 2 つのタブが端末のマイクを使っている場合など）もあるため、ソースが必ずしも直ぐに停止させられる必要はありません。その代わり、トラックからの関連付けが解除され、そのトラックオブジェクトが停止されます。ソースからメディアトラックが使用されなくなると、ソースは実際に完全に停止させられるでしょう。
+
+`stop()` を呼び出した直後に、 {{domxref("MediaStreamTrack.readyState", "readyState")}} の状態は `ended` になります。なお、この場合は [`ended`](/ja/docs/Web/API/MediaStreamTrack/ended_event) イベントは発生しません。
+
+## 例
+
+### 映像ストリームの停止
+
+この例では、この {{HTMLElement("video")}} の各トラックで `stop()` を呼び出すことで、ストリーミングされている映像を停止する関数を定義しています。
+
+```js
+function stopStreamedVideo(videoElem) {
+  const stream = videoElem.srcObject;
+  const tracks = stream.getTracks();
 
   tracks.forEach(function(track) {
     track.stop();
   });
 
   videoElem.srcObject = null;
-}</pre>
+}
+```
 
-<p>{{domxref("HTMLMediaElement.srcObject", "srcObject")}}プロパティからビデオ要素のストリームを取得することで機能しています。次に、{{domxref("MediaStream.getTracks", "getTracks()")}}メソッドを呼び出すことで、ストリームのトラックリストを取得しています。ここから、{{jsxref("Array.forEach", "forEach()")}}を使ってトラックリストから各トラックを繰り返し呼び出し、それぞれのトラックで<code>stop()</code>メソッドを呼び出しています。</p>
+{{domxref("HTMLMediaElement.srcObject", "srcObject")}} プロパティから video 要素のストリームを取得することで機能しています。次に、 {{domxref("MediaStream.getTracks", "getTracks()")}} メソッドを呼び出すことで、ストリームのトラックリストを取得しています。ここから、 {{jsxref("Array.forEach", "forEach()")}} を使ってトラックリストから各トラックを繰り返し呼び出し、それぞれのトラックで `stop()` メソッドを呼び出しています。
 
-<p>最後に、{{domxref("MediaStream")}}オブジェクトへの参照を解くために<code>srcObject</code>に<code>null</code>を設定することで、このオブジェクトは解放できるようになります。</p>
+最後に、 `srcObject` に `null` を設定することで、この {{domxref("MediaStream")}} オブジェクトへの参照を解き、解放できるようにします。
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Media Capture', '#widl-MediaStreamTrack-stop', 'MediaStreamTrack.stop()') }}</td>
-   <td>{{ Spec2('Media Capture') }}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaStreamTrack.stop")}}</p>
+{{Compat}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連情報
 
-<ul>
- <li>このメソッドが属する{{domxref("MediaStreamTrack")}}インタフェース</li>
- <li>{{domxref("MediaStreamTrack.readyState")}}</li>
- <li>{{event("ended")}}</li>
-</ul>
+- このメソッドが属する {{domxref("MediaStreamTrack")}} インターフェイス
+- {{domxref("MediaStreamTrack.readyState")}}
+- {{domxref("MediaStreamTrack/ended_event", "ended")}}
