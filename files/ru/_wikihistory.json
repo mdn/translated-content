@@ -6769,6 +6769,12 @@
       "In4in"
     ]
   },
+  "Web/API/Element/contextmenu_event": {
+    "modified": "2020-10-15T22:08:31.397Z",
+    "contributors": [
+      "Enroller"
+    ]
+  },
   "Web/API/Element/createShadowRoot": {
     "modified": "2019-03-18T21:17:10.452Z",
     "contributors": [
@@ -6979,6 +6985,12 @@
     "contributors": [
       "l_MrBoom_l",
       "volter9"
+    ]
+  },
+  "Web/API/Element/pointerover_event": {
+    "modified": "2020-10-15T22:17:20.391Z",
+    "contributors": [
+      "vkrbt"
     ]
   },
   "Web/API/Element/prefix": {
@@ -7780,12 +7792,6 @@
       "YozhEzhi"
     ]
   },
-  "Web/API/GlobalEventHandlers/oncontextmenu": {
-    "modified": "2020-10-15T22:08:31.397Z",
-    "contributors": [
-      "Enroller"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ondragstart": {
     "modified": "2020-10-15T22:26:58.289Z",
     "contributors": [
@@ -8138,12 +8144,6 @@
     "modified": "2020-10-15T22:28:18.137Z",
     "contributors": [
       "rookhive"
-    ]
-  },
-  "Web/API/HTMLElement/pointerover_event": {
-    "modified": "2020-10-15T22:17:20.391Z",
-    "contributors": [
-      "vkrbt"
     ]
   },
   "Web/API/HTMLElement/transitionend_event": {

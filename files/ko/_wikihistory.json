@@ -4196,6 +4196,12 @@
       "composite"
     ]
   },
+  "Web/API/Element/contextmenu_event": {
+    "modified": "2019-03-23T22:08:19.174Z",
+    "contributors": [
+      "project42da"
+    ]
+  },
   "Web/API/Element/getAttribute": {
     "modified": "2020-10-15T21:30:04.251Z",
     "contributors": [
@@ -4258,6 +4264,12 @@
     "modified": "2020-10-15T22:16:55.354Z",
     "contributors": [
       "lifeisnovel"
+    ]
+  },
+  "Web/API/Element/pointerenter_event": {
+    "modified": "2020-10-15T22:31:17.998Z",
+    "contributors": [
+      "baleineindigo"
     ]
   },
   "Web/API/Element/removeAttribute": {
@@ -4715,24 +4727,12 @@
       "Parcovia"
     ]
   },
-  "Web/API/GlobalEventHandlers/oncontextmenu": {
-    "modified": "2019-03-23T22:08:19.174Z",
-    "contributors": [
-      "project42da"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ondblclick": {
     "modified": "2020-10-15T22:05:47.608Z",
     "contributors": [
       "baleineindigo",
       "alattalatta",
       "chocojoa"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onpointerenter": {
-    "modified": "2020-10-15T22:31:17.998Z",
-    "contributors": [
-      "baleineindigo"
     ]
   },
   "Web/API/GlobalEventHandlers/onscroll": {

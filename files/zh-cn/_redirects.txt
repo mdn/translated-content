@@ -456,7 +456,7 @@
 /zh-CN/docs/DOM/window.navigator.vendor	/zh-CN/docs/Web/API/Navigator/vendor
 /zh-CN/docs/DOM/window.navigator.vendorSub	/zh-CN/docs/Web/API/Navigator/vendorSub
 /zh-CN/docs/DOM/window.onbeforeunload	/zh-CN/docs/conflicting/Web/API/Window/beforeunload_event
-/zh-CN/docs/DOM/window.oncontextmenu	/zh-CN/docs/Web/API/GlobalEventHandlers/oncontextmenu
+/zh-CN/docs/DOM/window.oncontextmenu	/zh-CN/docs/conflicting/Web/API/Element/contextmenu_event
 /zh-CN/docs/DOM/window.onhashchange	/zh-CN/docs/conflicting/Web/API/Window/hashchange_event
 /zh-CN/docs/DOM/window.oninput	/zh-CN/docs/conflicting/Web/API/HTMLElement/input_event
 /zh-CN/docs/DOM/window.onpopstate	/zh-CN/docs/Web/API/Window/popstate_event
@@ -1443,7 +1443,7 @@
 /zh-CN/docs/Web/API/GeolocationPosition/获取该位置时的时间戳	/zh-CN/docs/Web/API/GeolocationPosition/timestamp
 /zh-CN/docs/Web/API/GlobalEventHandlers.onblur	/zh-CN/docs/conflicting/Web/API/Window/blur_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onchange	/zh-CN/docs/conflicting/Web/API/HTMLElement/change_event
-/zh-CN/docs/Web/API/GlobalEventHandlers.oncontextmenu	/zh-CN/docs/Web/API/GlobalEventHandlers/oncontextmenu
+/zh-CN/docs/Web/API/GlobalEventHandlers.oncontextmenu	/zh-CN/docs/conflicting/Web/API/Element/contextmenu_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.ondblclick	/zh-CN/docs/Web/API/GlobalEventHandlers/ondblclick
 /zh-CN/docs/Web/API/GlobalEventHandlers.onfocus	/zh-CN/docs/conflicting/Web/API/Window/focus_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.oninput	/zh-CN/docs/conflicting/Web/API/HTMLElement/input_event
@@ -1465,6 +1465,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncanplaythrough	/zh-CN/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onchange	/zh-CN/docs/conflicting/Web/API/HTMLElement/change_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onclose	/zh-CN/docs/Web/API/HTMLDialogElement/close_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/oncontextmenu	/zh-CN/docs/conflicting/Web/API/Element/contextmenu_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncuechange	/zh-CN/docs/Web/API/TextTrack/cuechange_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/ondurationchange	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/durationchange_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onended	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/ended_event
@@ -1481,6 +1482,14 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmouseout	/zh-CN/docs/conflicting/Web/API/Element/mouseout_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmouseover	/zh-CN/docs/Web/API/Element/mouseover_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmouseup	/zh-CN/docs/conflicting/Web/API/Element/mouseup_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onpointercancel	/zh-CN/docs/Web/API/Element/pointercancel_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onpointerdown	/zh-CN/docs/Web/API/Element/pointerdown_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onpointerenter	/zh-CN/docs/Web/API/Element/pointerenter_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onpointerleave	/zh-CN/docs/Web/API/Element/pointerleave_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onpointermove	/zh-CN/docs/Web/API/Element/pointermove_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onpointerout	/zh-CN/docs/Web/API/Element/pointerout_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onpointerover	/zh-CN/docs/Web/API/Element/pointerover_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onpointerup	/zh-CN/docs/Web/API/Element/pointerup_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onreset	/zh-CN/docs/conflicting/Web/API/HTMLFormElement/reset_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onresize	/zh-CN/docs/conflicting/Web/API/Window/resize_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onselect	/zh-CN/docs/conflicting/Web/API/HTMLInputElement/select_event
@@ -1506,6 +1515,7 @@
 /zh-CN/docs/Web/API/HTMLElement/oncopy	/zh-CN/docs/Web/API/HTMLElement/copy_event
 /zh-CN/docs/Web/API/HTMLElement/oncut	/zh-CN/docs/Web/API/HTMLElement/cut_event
 /zh-CN/docs/Web/API/HTMLElement/onpaste	/zh-CN/docs/Web/API/HTMLElement/paste_event
+/zh-CN/docs/Web/API/HTMLElement/pointercancel_event	/zh-CN/docs/conflicting/Web/API/Element/pointercancel_event
 /zh-CN/docs/Web/API/HTMLFormElement.elements	/zh-CN/docs/Web/API/HTMLFormElement/elements
 /zh-CN/docs/Web/API/HTMLFormElement.reset	/zh-CN/docs/Web/API/HTMLFormElement/reset
 /zh-CN/docs/Web/API/HTMLFormElement.submit	/zh-CN/docs/Web/API/HTMLFormElement/submit
