@@ -8,108 +8,106 @@ tags:
   - priority
 translation_of: Web/JavaScript
 ---
-<div>{{JsSidebar()}}</div>
+{{JsSidebar()}}
 
-<p><strong>JavaScript ( </strong><strong>JS </strong>) 是一种具有{{Glossary("First-class Function", "函数优先")}}的轻量级，解释型或即时编译型的编程语言。虽然它是作为开发 Web 页面的脚本语言而出名的，但是它也被用到了很多<a class="external" href="https://en.wikipedia.org/wiki/JavaScript#Uses_outside_Web_pages">非浏览器环境</a>中，例如 <a class="external" href="https://nodejs.org/">Node.js</a>、 <a class="external" href="https://couchdb.apache.org">Apache CouchDB</a> 和 <a href="http://www.adobe.com/devnet/acrobat/javascript.html">Adobe Acrobat</a>。JavaScript 是一种{{Glossary("Prototype-based_programming", "基于原型编程")}}、多范式的动态脚本语言，并且支持面向对象、命令式和声明式（如函数式编程）风格。了解更多<a href="/zh-CN/docs/Web/JavaScript/About_JavaScript"> JavaScript</a>。</p>
+**JavaScript**（**JS**）是一种具有{{Glossary("First-class Function", "函数优先")}}特性的轻量级、解释型或者说[即时编译型](https://zh.wikipedia.org/wiki/即時編譯)的编程语言。虽然作为 Web 页面中的脚本语言被人所熟知，但是它也被用到了很多[非浏览器环境](https://en.wikipedia.org/wiki/JavaScript#Other_usage)中，例如 {{Glossary("Node.js")}}、[Apache CouchDB](https://couchdb.apache.org)、[Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/) 等。进一步说，JavaScript 是一种{{Glossary("Prototype-based_programming", "基于原型")}}、多范式、单线程的动态语言，并且支持面向对象、命令式和声明式（如函数式编程）风格。了解更多[关于 JavaScript](/zh-CN/docs/Web/JavaScript/About_JavaScript)。
 
-<p>本部分将专注于 JavaScript 语言本身，而非局限于网页或其他限制环境。想要了解网页有关的 {{Glossary("API","APIs")}} ，请参考 <a href="/zh-CN/docs/Web/API">Web APIs</a> 以及 <a href="/zh-CN/docs/Glossary/DOM">DOM</a>。</p>
+本部分文档将专注于 JavaScript 语言本身，而非局限于网页或其他运行环境。想要了解网页中特有的 {{Glossary("API")}} ，请参考 [Web API](/zh-CN/docs/Web/API) 以及 {{Glossary("DOM")}}。
 
-<p>JavaScript 的标准是 <a href="/zh-CN/docs/Web/JavaScript/Language_Resources">ECMAScript</a> 。截至 2012 年，所有的<a href="https://kangax.github.io/compat-table/es5/">现代浏览器</a>都完整的支持  ECMAScript 5.1，旧版本的浏览器至少支持 ECMAScript 3 标准。2015 年 6 月 17 日，<a href="https://www.ecma-international.org">ECMA 国际组织</a>发布了 ECMAScript 的第六版，该版本正式名称为 ECMAScript 2015，但通常被称为 ECMAScript 6 或者 ES6。自此，ECMAScript 每年发布一次新标准。本文档目前覆盖了最新 ECMAScript 的草案，也就是 <a href="https://tc39.github.io/ecma262/">ECMAScript2020</a>。</p>
+[ECMAScript 语言规范（ECMAScript Language Specification）](https://tc39.es/ecma262/)（ECMA-262）和[ECMAScript 国际化 API 规范（ECMAScript Internationalization API specification）](https://tc39.es/ecma262/)（ECMA-402）是 Javascript 的标准。当某个 [ECMAScript 新特性的提案](https://github.com/tc39/proposals)已经被一些浏览器实现时，MDN 上的文档或示例就可能会涉及到这些新特性。大多数时候，处在 [stages](https://tc39.es/process-document/) 3 和 4 的新特性会被收录到文档中，且收录时间通常早于其正式发布的时间。
 
-<p>不要将 JavaScript 与 <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java 编程语言</a> 混淆。虽然“Java”和“JavaScript”都是 Oracle 公司在美国和其他国家注册（或未注册）的商标，但是这两门语言在语法、语义与用途方面有很大不同。</p>
+不要将 JavaScript 与 [Java 编程语言](<https://en.wikipedia.org/wiki/Java_(programming_language)>)混淆。虽然“Java”和“JavaScript”都是 Oracle 公司在美国和其他国家注册（或未注册）的商标，但是这两门语言在语法、语义与用途方面有相当大的不同。
 
-<h2 id="教程">教程</h2>
+> **标注：** **想成为一名前端网页开发人员吗？**
+>
+> 为了帮助你实现这个目标，我们总结了一条包含所有必要信息的学习路线。
+>
+> [**从这里起步**](/zh-CN/docs/Learn/Front-end_web_developer)
 
-<p>通过使用指南和教程来学习如何用 JavaScript 语言编程。</p>
+## 教程
 
-<h3 id="对于完全初学者">对于完全初学者</h3>
+借助指南和教程来学习如何用 JavaScript 编程。
 
-<p>如果你想学习 JavaScript，但苦于没有过 JavaScript 或者其他语言的编程经验，你可以投入到我们的 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript 主题学习区</a>。那里有完整的学习资源：</p>
+### 对于完全的初学者
 
-<dl>
- <dt><a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a></dt>
- <dd>回答一些基本问题，比如“JavaScript 是什么？”、“它是怎么样的？”、“它可以用来做什么？”；同时还讨论如变量、字符串、数值和数组等 JavaScript 的核心特性。</dd>
- <dt><a href="/zh-CN/docs/Learn/JavaScript/Building_blocks">JavaScript 基本结构</a></dt>
- <dd>继介绍了 JavaScript 基本的核心特性后，我们需要关注常见的代码块类型，如条件语句，循环，函数和事件。</dd>
- <dt><a href="/zh-CN/docs/Learn/JavaScript/Objects">介绍 JavaScript 对象</a></dt>
- <dd>如果你想进一步使用该语言撰写更有效率的代码，理解 JavaScript 面向对象的精髓是很重要的，因此我们提供了该模块来帮助你理解它。</dd>
-</dl>
+如果你想学习 JavaScript，却从未接触过 JavaScript 或编程，你可以投入到我们的 [JavaScript 主题学习区](/zh-CN/docs/Learn/JavaScript)。下面列出了这部分的所有章节：
 
-<h3 id="JavaScript_指南">JavaScript 指南</h3>
+- [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)
+  - : 回答了一些基本问题，比如“JavaScript 是什么？”、“它长什么样子？”、“它可以用来做什么？”等，同时还谈及了如变量、字符串、数值、数组等 JavaScript 的关键特性。
+- [JavaScript 基本结构](/zh-CN/docs/Learn/JavaScript/Building_blocks)
+  - : 继介绍了 JavaScript 关键的基本特性后，我们需要关注常见的代码组成部分，如条件语句、循环、函数、事件等。
+- [介绍 JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects)
+  - : 如果你想进一步使用它撰写更有效率的代码，理解 JavaScript 面向对象的特性是很重要的，因此我们提供了该模块来帮助你理解它。
+- [异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
+  - : 介绍异步 Javascript，解释为什么这个特性是重要的，以及如何借助这个特性，有效解决诸如从服务器抓取资源这类潜在的阻塞操作
+- [客户端 web API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs)
+  - : 了解 API 是什么，以及如何使用那些在开发工作中常见的 API。
 
-<dl>
- <dt><a href="/zh-CN/docs/Web/JavaScript/Guide">JavaScript 指南</a></dt>
- <dd>一份更详尽的 JavaScript 指南，适用于有过 JavaScript 或其他语言编程经验的读者。</dd>
-</dl>
+### JavaScript 指南
 
-<h3 id="中级内容">中级内容</h3>
+- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)
+  - : 一份更详尽的 JavaScript 指南，适用于有过 JavaScript 或其他语言编程经验的读者。
 
-<dl>
- <dt><a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs">客户端 Web API</a></dt>
- <dd>当你正在给网页或者网页 APP 编写客户端 JavaScript 时， 你离不开使用这些 API — 这些用来操作浏览器各个不同方面和网页所在的操作系统，甚至是来自于其他网页和服务器的数据的接口。在这个模块，我们来探究这些 API 是什么，以及怎么在你的日常开发工作中使用一些最常用的 API。</dd>
- <dt><a href="/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript">重新介绍 JavaScript（JS 教程）</a></dt>
- <dd>给那些有 JavaScript 基础的朋友们的 JavaScript 概述。</dd>
- <dt><a href="/zh-CN/docs/Web/JavaScript/Data_structures">JavaScript 数据结构</a></dt>
- <dd>JavaScript 数据结构的概述。</dd>
- <dt><a href="/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them">如何使用比较操作符</a></dt>
- <dd>JavaScript 提供了三种比较操作符，包括严格比较操作符 <code>===</code> 和非严格的比较操作符 <code>==</code>，以及 {{jsxref("Global_Objects/Object/is", "Object.is()")}} 方法。</dd>
- <dt><a href="/zh-CN/docs/Web/JavaScript/Closures">闭包</a></dt>
- <dd>闭包是一个函数与其本身所被定义的词法环境的结合。</dd>
-</dl>
+### 中级内容
 
-<h3 id="高级内容">高级内容</h3>
+- [理解客户端 Javascript 框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+  - : 作为现代前端 Web 开发中不可或缺的一部分，Javascript 框架给开发者提供了一套经过验证的工具，用来构建可扩展的交互式 Web 应用。在你移步一系列涵盖了当前流行前端框架的教程前，这部分内容提供了一些基础的背景知识，包括这些客户端框架是如何工作的，以及它们如何与你现有的工具集相配合。
+- [重新介绍 JavaScript](/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+  - : 给那些 _认为自己了解 Javascript_ 的朋友们准备的 JavaScript 概述。
+- [JavaScript 数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
+  - : 概述JavaScript 中涉及的数据结构。
+- [相同、相等的比较性判断](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+  - : JavaScript 提供了三种比较操作符，包括严格比较操作符`===`和非严格的比较操作符 `==`，以及 {{jsxref("Global_Objects/Object/is", "Object.is()")}} 方法。
+- [闭包](/zh-CN/docs/Web/JavaScript/Closures)
+  - : 闭包由一个函数与其本身所被定义的词法环境的结合而成。
 
-<dl>
- <dt><a href="/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">继承和原型链</a></dt>
- <dd>基于原型继承被外界广泛地误解与低估，这一版块对基于原型的继承作出详细解释。</dd>
- <dt><a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a></dt>
- <dd>严格模式规定不能使用未定义的变量。严格模式是对 ECMAScript 5 的严格限制，以求得更高效的性能和更便利的调试。</dd>
- <dt><a href="/zh-CN/docs/Web/JavaScript/Typed_arrays">JavaScript 类型数组</a></dt>
- <dd>为使 JavaScript 处理原始二进制数据而提供的类型数组。</dd>
- <dt><a href="/zh-CN/docs/Web/JavaScript/Memory_Management">内存管理</a></dt>
- <dd>JavaScript 中的内存生命周期和垃圾回收机制。</dd>
- <dt><a href="/zh-CN/docs/Web/JavaScript/EventLoop">并发模型以及事件循环</a></dt>
- <dd>JavaScript 具有基于“事件循环”的并发模型。</dd>
-</dl>
+### 高级内容
 
-<h2 id="参考">参考</h2>
+- [继承和原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+  - : 基于原型继承被外界广泛地误解与低估，这一版块对基于原型的继承作了阐述。
+- [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
+  - : 在严格模式中，规定不能使用未定义的变量。它是 ECMAScript 5 的限制版本，以求得更高效的性能和更便利的调试。
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+  - : Javascript 类型化数组提供了操作原始二进制数据的机制。
+- [内存管理](/zh-CN/docs/Web/JavaScript/Memory_Management)
+  - : JavaScript 中的内存生命周期和垃圾回收机制。
+- [并发模型以及事件循环](/zh-CN/docs/Web/JavaScript/EventLoop)
+  - : JavaScript 具有基于“事件循环”的并发模型。
 
-<p>浏览完整的 <a href="/zh-CN/docs/Web/JavaScript/Reference">JavaScript 参考</a>文档。</p>
+## 参考
 
-<dl>
- <dt><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects">标准对象 </a></dt>
- <dd>标准的内置对象例如 {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}} , {{jsxref("WeakSet")}} 以及其他对象</dd>
- <dt><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators">表达式和运算符</a></dt>
- <dd>运算符的作用：{{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}，<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">运算符优先级</a>，以及其他运算符。</dd>
- <dt><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements">语句和声明</a></dt>
- <dd>了解 {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}} 以及其他语句和关键字的作用。</dd>
- <dt><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions">函数</a></dt>
- <dd>学习如何使用 JavaScript 函数来开发你的应用。</dd>
-</dl>
+浏览完整的 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)文档。
 
-<h2 id="工具和资源">工具和资源</h2>
+- [标准对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)
+  - : 例如 {{jsxref("Array")}}、{{jsxref("Boolean")}}、{{jsxref("Date")}}、{{jsxref("Error")}}、{{jsxref("Function")}}、{{jsxref("JSON")}}、{{jsxref("Math")}}、{{jsxref("Number")}}、{{jsxref("Object")}}、{{jsxref("RegExp")}}、{{jsxref("String")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}} 、{{jsxref("WeakSet")}} 等标准内置对象。
+- [表达式和运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)
+  - : 运算符的作用{{jsxref("Operators/instanceof", "instanceof")}}、{{jsxref("Operators/typeof", "typeof")}}、{{jsxref("Operators/new", "new")}}、{{jsxref("Operators/this", "this")}}，[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)，以及其他运算符。
+- [语句和声明](/zh-CN/docs/Web/JavaScript/Reference/Statements)
+  - : 了解 {{jsxref("Statements/do...while", "do-while")}}、{{jsxref("Statements/for...in", "for-in")}}、{{jsxref("Statements/for...of", "for-of")}}、{{jsxref("Statements/try...catch", "try-catch")}}、{{jsxref("Statements/let", "let")}}、{{jsxref("Statements/var", "var")}}、{{jsxref("Statements/const", "const")}}、{{jsxref("Statements/if...else", "if-else")}}、{{jsxref("Statements/switch", "switch")}} 以及其他语句和关键字的作用。
+- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)
+  - : 学习如何使用 JavaScript 函数来开发你的应用。
 
-<p>用于编写和调试 JavaScript 代码的实用工具。</p>
+## 工具和资源
 
-<dl>
- <dt><a href="/zh-CN/docs/Tools">Firefox 开发工具</a></dt>
- <dd>包括 <a href="/zh-CN/docs/Tools/Scratchpad">Scratchpad</a>、<a href="/zh-CN/docs/Tools/Web_Console">Web Console</a>、<a href="/zh-CN/docs/Tools/Profiler">JavaScript Profiler</a>、<a href="/zh-CN/docs/Tools/Debugger">Debugger</a> 等等</dd>
- <dt><a href="/zh-CN/docs/Web/JavaScript/Shells">JavaScript Shells</a></dt>
- <dd>允许您快速测试 JavaScript 代码片段。</dd>
- <dt><a href="https://togetherjs.com/">TogetherJS</a></dt>
- <dd>
- <p>添加 TogetherJS 到您的网站，让用户实时互助，协作更简单。</p>
- </dd>
- <dt><a href="https://stackoverflow.com/questions/tagged/javascript">Stack Overflow</a></dt>
- <dd>你可以在 <a href="https://stackoverflow.com/">StackOverflow </a>查看或者发布带有 JavaScript 标签的问题。</dd>
- <dt><a href="/zh-CN/docs/Web/JavaScript/New_in_JavaScript">JavaScript 版本和发行记录</a></dt>
- <dd>浏览 JavaScript 的历史版本特性和实现情况。</dd>
- <dt><a href="https://jsfiddle.net/">JSFiddle</a></dt>
- <dd>编辑 JavaScript、CSS 和 HTML 并获得实时结果。使用外置资源，并和你的团队在线合作。</dd>
- <dt><a href="https://plnkr.co/">Plunker</a></dt>
- <dd>Plunker 是一个在线社区，用于创建，协作和共享您的 Web 开发创意。编辑您的 JavaScript、CSS 和 HTML 文件并获取实时结果和文件结构。</dd>
- <dt><a href="https://jsbin.com/">JSBin</a></dt>
- <dd>
- <p>JS Bin 是一种开源的协作式的 web 开发调试工具。</p>
- </dd>
-</dl>
+用于编写和调试 JavaScript 代码的实用工具。
+
+- [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : 包括[Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)、[JavaScript Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)、[Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)等
+- [JavaScript Shells](/zh-CN/docs/Web/JavaScript/Shells)
+  - : Javascript Shell 使你可以即时测试 JavaScript 代码片段。
+- [TogetherJS](https://togetherjs.com/)
+  - : 添加 TogetherJS 到您的网站，让用户实时互助，协作更简单。
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/javascript)
+  - : 你可以在 StackOverflow 查看或者发布带有 JavaScript 标签的问题。
+- [JSFiddle](https://jsfiddle.net/)
+  - : 编辑 JavaScript、CSS 和 HTML 并获得实时结果。使用外置资源，并同你的团队在线合作。
+- [Plunker](https://plnkr.co/)
+  - : Plunker 是一个在线社区，用于创建、协作和共享您的 Web 开发创意。编辑您的 JavaScript、CSS 和 HTML 文件并获取实时结果和文件结构。
+- [JSBin](https://jsbin.com/)
+  - : JS Bin 是一个开源的协作式的 web 开发调试工具。
+- [Codepen](https://codepen.io/)
+  - : Codepen 也是一个 Web 协作工具，可用作展示实时结果的 playground。
+- [StackBlitz](https://stackblitz.com/)
+  - : StackBlitz 同样是一个支持调试的在线 playground，它支持部署使用了 React、Angular等技术的全栈应用
+- [RunJS](https://runjs.app/)
+  - : RunJS 是一个桌面端便笺式 playground，可提供实时执行结果并支持调用 Node 与 浏览器 API。
