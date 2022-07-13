@@ -4454,12 +4454,6 @@
       "IsaacSchemm"
     ]
   },
-  "Web/API/WindowEventHandlers": {
-    "modified": "2019-03-23T22:30:52.273Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
   "Web/API/XMLHttpRequest": {
     "modified": "2020-10-15T21:21:13.079Z",
     "contributors": [
