@@ -46690,12 +46690,6 @@
       "shevacjs"
     ]
   },
-  "conflicting/Web/HTTP/Headers/Set-Cookie": {
-    "modified": "2020-10-15T21:54:57.437Z",
-    "contributors": [
-      "WayneCui"
-    ]
-  },
   "conflicting/Web/HTTP/Status": {
     "modified": "2019-01-16T13:20:30.376Z",
     "contributors": [
