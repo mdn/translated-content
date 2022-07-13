@@ -1,79 +1,58 @@
 ---
 title: Notification.dir
 slug: Web/API/Notification/dir
+page-type: web-api-instance-property
 tags:
   - API
-  - DOM
   - Notification
   - Notifications
   - Notifications API
   - Property
   - Reference
   - dir
-  - プロパティ
-  - 通知
+browser-compat: api.Notification.dir
 translation_of: Web/API/Notification/dir
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p><strong><code>dir</code></strong> は {{domxref("Notification")}} インターフェイスの読取専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの <code>dir</code> オプションで指定されたテキストの書字方向を示します。</p>
+`dir` は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `dir` オプションで指定されたテキストの書字方向を示します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate">var <var>dir</var> = <var>Notification</var>.dir;
-</pre>
+文字列で、書字方向を指定します。取りうる値は次の通りです。
 
-<h3 id="Value" name="Value">値</h3>
+- `auto`
+  - : ブラウザーの言語設定の動作に合わせます（既定値）。
+- `ltr`
+  - : 左書き。
+- `rtl`
+  - : 右書き。
 
-<p>書字方向を指定する {{domxref("DOMString")}} です。取りうる値は次の通りです。</p>
+> **Note:** 多くのブラウザーは明示的な ltr や rtl の設定を無視し、ブラウザー全体の設定どおりに実行するようです。
 
-<ul>
- <li><code>auto</code>: ブラウザーの言語設定の動作に合わせます (既定値)。</li>
- <li><code>ltr</code>: 左書き</li>
- <li><code>rtl</code> : 右書き</li>
-</ul>
+## 例
 
-<div class="note">
-<p><strong>注</strong>: 多くのブラウザーは明示的な ltr や rtl の設定を無視し、ブラウザー全体の設定どおりに実行するようです。</p>
-</div>
+次のスニペットは通知を発行するためのものです。単純な `options` オブジェクトが生成され、通知が `Notification()` コンストラクターを使用して発行されます。
 
-<h2 id="Examples" name="Examples">例</h2>
-
-<p>次のスニペットは通知を発行するためのものです。単純な <code>options</code> オブジェクトが生成され、通知が <code>Notification()</code> コンストラクターを使用して発行されます。</p>
-
-<pre class="brush: js notranslate">var options = {
+```js
+const options = {
   body: 'Do you like my body?',
   dir: 'rtl'
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification',options);
 
 console.log(n.dir) // should return 'rtl'
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notification-dir','dir')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Notification.dir")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API">通知 API の使用</a></li>
-</ul>
+- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)

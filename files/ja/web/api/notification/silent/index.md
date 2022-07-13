@@ -1,6 +1,7 @@
 ---
 title: Notification.silent
 slug: Web/API/Notification/silent
+page-type: web-api-instance-property
 tags:
   - API
   - Notification
@@ -9,59 +10,40 @@ tags:
   - Property
   - Reference
   - silent
-  - プロパティ
-  - 通知
+browser-compat: api.Notification.silent
 translation_of: Web/API/Notification/silent
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p><strong><code>silent</code></strong> は {{domxref("Notification")}} インターフェイスの読取専用プロパティで、通知が静かに行われるべきかどうか、すなわち、端末の設定に関わらず、音やバイブレーションを発生させないようにするかを指定します。これは {{domxref("Notification.Notification","Notification()")}} コンストラクターの <code>silent</code> オプションで指定されます。</p>
+**`silent`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、通知が静かに行われるべきかどうか、すなわち、端末の設定に関わらず、音やバイブレーションを発生させないようにするかを指定します。これは {{domxref("Notification.Notification","Notification()")}} コンストラクターの `silent` オプションで指定されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate">var <var>silent</var> = <var>Notification</var>.silent;
-</pre>
+論理値です。 `false` が既定値です。 `true` で通知を静かに行います。
 
-<h3 id="Value" name="Value">値</h3>
+## 例
 
-<p>{{domxref("Boolean")}} です。 <code>false</code> が既定値です。 <code>true</code> で通知を静かに行います。</p>
+次のスニペットは静かな通知を発行するためのものです。単純な `options` オブジェクトが生成され、通知が {{DOMxRef("Notification.Notification","Notification()")}} コンストラクターを使用して発行されます。
 
-<h2 id="Examples" name="Examples">例</h2>
-
-<p>次のスニペットは静かな通知を発行するためのものです。単純な <code>options</code> オブジェクトが生成され、通知が <code>Notification()</code> コンストラクターを使用して発行されます。</p>
-
-<pre class="brush: js notranslate">var options = {
+```js
+const options = {
   body: 'Do you like my body?',
   silent: true
 }
 
-var n = new Notification('Test notification', options);
+const n = new Notification('Test notification', options);
 
-console.log(n.silent) // should log true</pre>
+console.log(n.silent) // should log true
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notification-silent','silent')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Notification.silent")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API">通知 API の使用</a></li>
-</ul>
+- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
