@@ -13467,6 +13467,25 @@
       "HereComesJuju"
     ]
   },
+  "Web/API/Element/animationend_event": {
+    "modified": "2019-03-23T22:24:25.318Z",
+    "contributors": [
+      "edspeedy",
+      "Kalwyn"
+    ]
+  },
+  "Web/API/Element/animationiteration_event": {
+    "modified": "2019-03-23T22:24:12.393Z",
+    "contributors": [
+      "Kalwyn"
+    ]
+  },
+  "Web/API/Element/animationstart_event": {
+    "modified": "2019-03-23T22:24:27.835Z",
+    "contributors": [
+      "Kalwyn"
+    ]
+  },
   "Web/API/Element/attachShadow": {
     "modified": "2020-11-16T08:31:28.051Z",
     "contributors": [
@@ -13486,6 +13505,12 @@
       "Takenbot",
       "BenoitL",
       "GT"
+    ]
+  },
+  "Web/API/Element/auxclick_event": {
+    "modified": "2020-10-15T22:33:47.986Z",
+    "contributors": [
+      "Voulto"
     ]
   },
   "Web/API/Element/childElementCount": {
@@ -14232,6 +14257,14 @@
       "jsx",
       "Mgjbot",
       "BenoitL"
+    ]
+  },
+  "Web/API/Element/wheel_event": {
+    "modified": "2019-03-18T21:09:01.795Z",
+    "contributors": [
+      "fscholz",
+      "loella16",
+      "alexandre-le-borgne"
     ]
   },
   "Web/API/Encoding_API": {
@@ -14987,39 +15020,6 @@
       "fscholz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onauxclick": {
-    "modified": "2020-10-15T22:33:47.986Z",
-    "contributors": [
-      "Voulto"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onclick": {
-    "modified": "2020-03-06T22:16:53.219Z",
-    "contributors": [
-      "noelmace",
-      "sudwebdesign",
-      "williamdes",
-      "Bpruneau",
-      "louity",
-      "Daimanu06",
-      "fscholz",
-      "teoli",
-      "jsx",
-      "Priam",
-      "Mgjbot",
-      "BenoitL"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ondblclick": {
-    "modified": "2019-03-23T23:46:40.744Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "BenoitL",
-      "Pitoutompoilu"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onerror": {
     "modified": "2019-03-23T22:47:31.401Z",
     "contributors": [
@@ -15065,14 +15065,6 @@
       "teoli",
       "khalid32",
       "BenoitL"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onwheel": {
-    "modified": "2019-03-18T21:09:01.795Z",
-    "contributors": [
-      "fscholz",
-      "loella16",
-      "alexandre-le-borgne"
     ]
   },
   "Web/API/HTMLBRElement": {
@@ -15214,25 +15206,6 @@
     "contributors": [
       "loella16",
       "alexandre-le-borgne"
-    ]
-  },
-  "Web/API/HTMLElement/animationend_event": {
-    "modified": "2019-03-23T22:24:25.318Z",
-    "contributors": [
-      "edspeedy",
-      "Kalwyn"
-    ]
-  },
-  "Web/API/HTMLElement/animationiteration_event": {
-    "modified": "2019-03-23T22:24:12.393Z",
-    "contributors": [
-      "Kalwyn"
-    ]
-  },
-  "Web/API/HTMLElement/animationstart_event": {
-    "modified": "2019-03-23T22:24:27.835Z",
-    "contributors": [
-      "Kalwyn"
     ]
   },
   "Web/API/HTMLElement/beforeinput_event": {
@@ -40807,6 +40780,33 @@
       "nvana",
       "si0ls",
       "dattaz"
+    ]
+  },
+  "conflicting/Web/API/Element/click_event": {
+    "modified": "2020-03-06T22:16:53.219Z",
+    "contributors": [
+      "noelmace",
+      "sudwebdesign",
+      "williamdes",
+      "Bpruneau",
+      "louity",
+      "Daimanu06",
+      "fscholz",
+      "teoli",
+      "jsx",
+      "Priam",
+      "Mgjbot",
+      "BenoitL"
+    ]
+  },
+  "conflicting/Web/API/Element/dblclick_event": {
+    "modified": "2019-03-23T23:46:40.744Z",
+    "contributors": [
+      "fscholz",
+      "teoli",
+      "khalid32",
+      "BenoitL",
+      "Pitoutompoilu"
     ]
   },
   "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox": {

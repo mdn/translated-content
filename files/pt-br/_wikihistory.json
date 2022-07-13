@@ -4963,12 +4963,6 @@
       "teoli"
     ]
   },
-  "Web/API/GlobalEventHandlers/onclick": {
-    "modified": "2020-10-15T22:17:11.589Z",
-    "contributors": [
-      "g-otn"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onerror": {
     "modified": "2019-03-23T22:31:39.576Z",
     "contributors": [
@@ -15941,6 +15935,12 @@
     "modified": "2019-03-23T23:35:40.503Z",
     "contributors": [
       "teoli"
+    ]
+  },
+  "conflicting/Web/API/Element/click_event": {
+    "modified": "2020-10-15T22:17:11.589Z",
+    "contributors": [
+      "g-otn"
     ]
   },
   "conflicting/Web/API/Element/keyup_event": {

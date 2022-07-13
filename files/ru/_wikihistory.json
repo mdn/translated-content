@@ -6674,6 +6674,19 @@
       "Yialo"
     ]
   },
+  "Web/API/Element/animationcancel_event": {
+    "modified": "2019-03-23T22:08:48.963Z",
+    "contributors": [
+      "FlowerDeLuce"
+    ]
+  },
+  "Web/API/Element/animationend_event": {
+    "modified": "2019-03-23T22:08:47.464Z",
+    "contributors": [
+      "arturparkhisenko",
+      "FlowerDeLuce"
+    ]
+  },
   "Web/API/Element/attachShadow": {
     "modified": "2020-10-15T21:57:11.880Z",
     "contributors": [
@@ -6719,6 +6732,12 @@
     "modified": "2019-03-23T22:51:17.806Z",
     "contributors": [
       "In4in"
+    ]
+  },
+  "Web/API/Element/click_event": {
+    "modified": "2020-10-15T21:52:46.086Z",
+    "contributors": [
+      "YozhEzhi"
     ]
   },
   "Web/API/Element/clientHeight": {
@@ -7773,31 +7792,6 @@
       "fscholz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onanimationcancel": {
-    "modified": "2019-03-23T22:08:48.963Z",
-    "contributors": [
-      "FlowerDeLuce"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onanimationend": {
-    "modified": "2019-03-23T22:08:47.464Z",
-    "contributors": [
-      "arturparkhisenko",
-      "FlowerDeLuce"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onclick": {
-    "modified": "2020-10-15T21:52:46.086Z",
-    "contributors": [
-      "YozhEzhi"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ondragstart": {
-    "modified": "2020-10-15T22:26:58.289Z",
-    "contributors": [
-      "opereverzeva"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onerror": {
     "modified": "2019-03-23T22:57:01.164Z",
     "contributors": [
@@ -8088,6 +8082,12 @@
     "modified": "2019-03-23T22:52:28.875Z",
     "contributors": [
       "amurchick"
+    ]
+  },
+  "Web/API/HTMLElement/dragstart_event": {
+    "modified": "2020-10-15T22:26:58.289Z",
+    "contributors": [
+      "opereverzeva"
     ]
   },
   "Web/API/HTMLElement/hidden": {

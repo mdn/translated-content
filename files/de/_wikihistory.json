@@ -2575,6 +2575,13 @@
       "Frexeptabel"
     ]
   },
+  "Web/API/Element/click_event": {
+    "modified": "2019-03-23T22:40:31.019Z",
+    "contributors": [
+      "patrickGold",
+      "MrTroble"
+    ]
+  },
   "Web/API/Element/getBoundingClientRect": {
     "modified": "2020-10-15T21:37:23.206Z",
     "contributors": [
@@ -2837,13 +2844,6 @@
     "contributors": [
       "matschibatschi",
       "AFBarstow"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onclick": {
-    "modified": "2019-03-23T22:40:31.019Z",
-    "contributors": [
-      "patrickGold",
-      "MrTroble"
     ]
   },
   "Web/API/GlobalEventHandlers/onload": {
