@@ -1,6 +1,7 @@
 ---
 title: Notification.badge
 slug: Web/API/Notification/badge
+page-type: web-api-instance-property
 tags:
   - API
   - Notification
@@ -9,39 +10,21 @@ tags:
   - Property
   - Reference
   - badge
-  - プロパティ
-  - 通知
+browser-compat: api.Notification.badge
 translation_of: Web/API/Notification/badge
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p><strong><code>badge</code></strong> は {{domxref("Notification")}} インターフェイスのプロパティで、通知自体を表示する空間が充分にない場合に通知を表す画像の URL を返します。</p>
+**`badge`** は {{domxref("Notification")}} インターフェイスのプロパティで、通知自体を表示する空間が充分にない場合に通知を表す画像の URL を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate">var <var>url</var> = <var>Notification</var>.badge</pre>
+URL が入った文字列です。
 
-<h3 id="Value" name="Value">値</h3>
+## 仕様書
 
-<p>URL が入った {{domxref('USVString')}} です。</p>
+{{Specifications}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## ブラウザーの互換性
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notification-badge','badge')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("api.Notification.badge")}}</p>
+{{Compat}}
