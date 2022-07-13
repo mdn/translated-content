@@ -1,54 +1,46 @@
 ---
-title: Notification.onerror
+title: 'Notification: error イベント'
 slug: Web/API/Notification/error_event
+page-type: web-api-event
 tags:
   - API
-  - DOM
   - Notification
   - Notifications
   - Notifications API
-  - Property
+  - Event
   - Reference
-  - onerror
-  - プロパティ
-  - 通知
-translation_of: Web/API/Notification/onerror
+  - error
+browser-compat: api.Notification.error_event
+translation_of: Web/API/Notification/error_event
 original_slug: Web/API/Notification/onerror
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<strong><code>onerror</code></strong> は {{domxref("Notification")}} インターフェイスのプロパティで、 {{domxref("HTMLElement/error_event", "error")}} イベントを受信するイベントリスナーを指定します。これらのイベントは {{domxref("Notification")}} が失敗したとき (多くの場合は通知の表示が阻止されたというエラーの場合) に発生します。
+**`error`** イベントは {{domxref("Notification")}} インターフェイスのイベントで、 {{domxref("Notification")}} が失敗したとき (多くの場合は通知の表示が阻止されたというエラーの場合) に発生します。
 
 ## 構文
 
-<pre class="syntaxbox notranslate"><var>Notification</var>.onerror = function() { ... };</pre>
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使うか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('error', event => { });
+
+onerror = event => { };
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notification-onerror','onerror')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Notification.onerror")}}
+{{Compat}}
 
 ## 関連情報
 
-<ul>
- <li>{{domxref("Notification")}}</li>
- <li><a href="/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API">通知 API の使用</a></li>
-</ul>
+- {{domxref("Notification")}}
+- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
