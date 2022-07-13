@@ -1,69 +1,50 @@
 ---
 title: Notification.lang
 slug: Web/API/Notification/lang
+page-type: web-api-instance-property
 tags:
   - API
-  - DOM
   - Notification
   - Notifications
   - Notifications API
   - Property
   - Reference
-  - プロパティ
-  - 通知
+browser-compat: api.Notification.lang
 translation_of: Web/API/Notification/lang
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p><strong><code>lang</code></strong> は {{domxref("Notification")}} インターフェイスの読取専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの <code>lang</code> オプションで指定された通知の言語を示します。</p>
+**`lang`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `lang` オプションで指定された通知の言語を示します。
 
-<p>言語自体は {{domxref("DOMString")}} で <a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47 言語タグ</a>を表します。簡単なリファレンスとしては. Sitepoint の <a href="http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/">ISO 2 letter language codes</a> ページを見てください。</p>
+言語自体は文字列で{{RFC(5646, "言語識別タグ (BCP 47)")}} を表します。簡単なリファレンスとしては、 Sitepoint の [ISO 2 letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) ページを見てください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate">var <var>language</var> = <var>Notification</var>.lang;
-</pre>
+文字列で、言語タグを指定します。
 
-<h3 id="Value" name="Value">値</h3>
+## 例
 
-<p>言語タグを指定する {{domxref("DOMString")}} です。</p>
+次のスニペットは通知を発行するためのものです。単純な `options` オブジェクトが生成され、通知が `Notification()` コンストラクターを使用して発行されます。
 
-<h2 id="Examples" name="Examples">例</h2>
-
-<p>次のスニペットは通知を発行するためのものです。単純な <code>options</code> オブジェクトが生成され、通知が <code>Notification()</code> コンストラクターを使用して発行されます。</p>
-
-<pre class="brush: js notranslate">var options = {
+```js
+const options = {
   body: 'Do you like my body?',
   lang: 'en-US'
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification',options);
 
-console.log(n.lang) // should return 'en-US'</pre>
+console.log(n.lang) // should return 'en-US'
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notification-lang','lang')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Notification.lang")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API">通知 API の使用</a></li>
-</ul>
+- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)

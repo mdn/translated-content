@@ -1,6 +1,7 @@
 ---
 title: Notification.data
 slug: Web/API/Notification/data
+page-type: web-api-instance-property
 tags:
   - API
   - Notification
@@ -9,61 +10,42 @@ tags:
   - Property
   - Reference
   - data
-  - プロパティ
-  - 通知
+browser-compat: api.Notification.data
 translation_of: Web/API/Notification/data
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p><strong><code>data</code></strong> は {{domxref("Notification")}} インターフェイスの読取専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの <code>data</code> オプションで指定された通知の構造化されたデータのクローンを返します。</p>
+**`data`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `data` オプションで指定された通知の構造化されたデータのクローンを返します。
 
-<p>通知のデータは、通知と関連付けたい任意のデータを使用することができます。</p>
+通知のデータは、通知と関連付けたい任意のデータを使用することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate">var <var>data</var> = <var>Notification</var>.data;
-</pre>
+構造化されたクローン。
 
-<h3 id="Value" name="Value">値</h3>
+## 例
 
-<p>構造化されたクローン。</p>
+次のスニペットは通知を発行します。単純な `options` オブジェクトを生成し、それから `Notification()` コンストラクターを使用して通知を発行します。
 
-<h2 id="Examples" name="Examples">例</h2>
-
-<p>次のスニペットは通知を発行します。単純な <code>options</code> オブジェクトを生成し、それから <code>Notification()</code> コンストラクターを使用して通知を発行します。</p>
-
-<pre class="brush: js notranslate">var options = {
+```js
+const options = {
   body: 'Do you like my body?',
   data: 'I like peas.'
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification',options);
 
-console.log(n.data) // should return 'I like peas.'</pre>
+console.log(n.data) // should return 'I like peas.'
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notification-data','data')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Notification.data")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API">通知 API の使用</a></li>
-</ul>
+- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
