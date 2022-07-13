@@ -397,10 +397,14 @@
 /ru/docs/Web/API/Geolocation/Using_geolocation	/ru/docs/Web/API/Geolocation_API
 /ru/docs/Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API	/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
 /ru/docs/Web/API/GlobalEventHandlers/onabort	/ru/docs/conflicting/Web/API/HTMLMediaElement/abort_event
+/ru/docs/Web/API/GlobalEventHandlers/onanimationcancel	/ru/docs/Web/API/Element/animationcancel_event
+/ru/docs/Web/API/GlobalEventHandlers/onanimationend	/ru/docs/Web/API/Element/animationend_event
 /ru/docs/Web/API/GlobalEventHandlers/onblur	/ru/docs/Web/API/Window/blur_event
 /ru/docs/Web/API/GlobalEventHandlers/onchange	/ru/docs/Web/API/HTMLElement/change_event
+/ru/docs/Web/API/GlobalEventHandlers/onclick	/ru/docs/Web/API/Element/click_event
 /ru/docs/Web/API/GlobalEventHandlers/onclose	/ru/docs/Web/API/HTMLDialogElement/close_event
 /ru/docs/Web/API/GlobalEventHandlers/oncontextmenu	/ru/docs/Web/API/Element/contextmenu_event
+/ru/docs/Web/API/GlobalEventHandlers/ondragstart	/ru/docs/Web/API/HTMLElement/dragstart_event
 /ru/docs/Web/API/GlobalEventHandlers/onfocus	/ru/docs/Web/API/Window/focus_event
 /ru/docs/Web/API/GlobalEventHandlers/oninput	/ru/docs/Web/API/HTMLElement/input_event
 /ru/docs/Web/API/GlobalEventHandlers/onkeydown	/ru/docs/conflicting/Web/API/Element/keydown_event

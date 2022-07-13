@@ -1945,6 +1945,16 @@
       "Ptak82"
     ]
   },
+  "Web/API/Element/click_event": {
+    "modified": "2019-03-24T00:04:00.144Z",
+    "contributors": [
+      "teoli",
+      "AshfaqHossain",
+      "fscholz",
+      "Bedi",
+      "Jan Dudek"
+    ]
+  },
   "Web/API/Element/clientHeight": {
     "modified": "2019-03-23T23:43:28.841Z",
     "contributors": [
@@ -2421,16 +2431,6 @@
     "modified": "2019-03-18T21:40:36.589Z",
     "contributors": [
       "chrisdavidmills"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onclick": {
-    "modified": "2019-03-24T00:04:00.144Z",
-    "contributors": [
-      "teoli",
-      "AshfaqHossain",
-      "fscholz",
-      "Bedi",
-      "Jan Dudek"
     ]
   },
   "Web/API/GlobalEventHandlers/onload": {

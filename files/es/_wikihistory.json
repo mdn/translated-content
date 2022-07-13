@@ -5492,6 +5492,12 @@
       "Thargelion"
     ]
   },
+  "Web/API/Document/selectstart_event": {
+    "modified": "2019-03-18T21:23:16.974Z",
+    "contributors": [
+      "Grijander81"
+    ]
+  },
   "Web/API/Document/styleSheets": {
     "modified": "2019-03-23T23:58:05.224Z",
     "contributors": [
@@ -5613,6 +5619,13 @@
     "modified": "2019-03-23T22:26:03.841Z",
     "contributors": [
       "SoftwareRVG"
+    ]
+  },
+  "Web/API/Element/animationend_event": {
+    "modified": "2019-03-23T22:31:35.580Z",
+    "contributors": [
+      "ExE-Boss",
+      "soncco"
     ]
   },
   "Web/API/Element/attachShadow": {
@@ -6413,14 +6426,6 @@
       "fscholz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onclick": {
-    "modified": "2019-08-28T11:37:06.287Z",
-    "contributors": [
-      "J-Lobo",
-      "Noreen",
-      "gama"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onerror": {
     "modified": "2019-03-23T22:53:42.268Z",
     "contributors": [
@@ -6452,19 +6457,6 @@
     "modified": "2019-03-23T22:33:14.134Z",
     "contributors": [
       "Grijander81"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onselectstart": {
-    "modified": "2019-03-18T21:23:16.974Z",
-    "contributors": [
-      "Grijander81"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onwheel": {
-    "modified": "2019-03-18T21:09:09.483Z",
-    "contributors": [
-      "fscholz",
-      "SoftwareRVG"
     ]
   },
   "Web/API/HTMLAnchorElement": {
@@ -6549,13 +6541,6 @@
     "modified": "2019-03-23T22:26:12.172Z",
     "contributors": [
       "SoftwareRVG"
-    ]
-  },
-  "Web/API/HTMLElement/animationend_event": {
-    "modified": "2019-03-23T22:31:35.580Z",
-    "contributors": [
-      "ExE-Boss",
-      "soncco"
     ]
   },
   "Web/API/HTMLElement/change_event": {
@@ -20876,6 +20861,14 @@
       "fscholz"
     ]
   },
+  "conflicting/Web/API/Element/click_event": {
+    "modified": "2019-08-28T11:37:06.287Z",
+    "contributors": [
+      "J-Lobo",
+      "Noreen",
+      "gama"
+    ]
+  },
   "conflicting/Web/API/Element/keydown_event": {
     "modified": "2019-03-18T21:31:44.954Z",
     "contributors": [
@@ -20892,6 +20885,13 @@
     "modified": "2019-03-23T22:08:52.990Z",
     "contributors": [
       "tureey"
+    ]
+  },
+  "conflicting/Web/API/Element/wheel_event": {
+    "modified": "2019-03-18T21:09:09.483Z",
+    "contributors": [
+      "fscholz",
+      "SoftwareRVG"
     ]
   },
   "conflicting/Web/API/EventTarget/addEventListener": {

@@ -356,7 +356,7 @@
 /pl/docs/DOM/element.offsetLeft	/pl/docs/Web/API/HTMLElement/offsetLeft
 /pl/docs/DOM/element.offsetParent	/pl/docs/Web/API/HTMLElement/offsetParent
 /pl/docs/DOM/element.offsetWidth	/pl/docs/Web/API/HTMLElement/offsetWidth
-/pl/docs/DOM/element.onclick	/pl/docs/Web/API/GlobalEventHandlers/onclick
+/pl/docs/DOM/element.onclick	/pl/docs/Web/API/Element/click_event
 /pl/docs/DOM/element.onkeydown	/pl/docs/Web/API/Element/keydown_event
 /pl/docs/DOM/element.onkeypress	/pl/docs/Web/API/Element/keypress_event
 /pl/docs/DOM/element.onkeyup	/pl/docs/Web/API/Element/keyup_event
@@ -590,7 +590,7 @@
 /pl/docs/DOM:element.offsetLeft	/pl/docs/Web/API/HTMLElement/offsetLeft
 /pl/docs/DOM:element.offsetParent	/pl/docs/Web/API/HTMLElement/offsetParent
 /pl/docs/DOM:element.offsetWidth	/pl/docs/Web/API/HTMLElement/offsetWidth
-/pl/docs/DOM:element.onclick	/pl/docs/Web/API/GlobalEventHandlers/onclick
+/pl/docs/DOM:element.onclick	/pl/docs/Web/API/Element/click_event
 /pl/docs/DOM:element.onkeydown	/pl/docs/Web/API/Element/keydown_event
 /pl/docs/DOM:element.onkeypress	/pl/docs/Web/API/Element/keypress_event
 /pl/docs/DOM:element.onkeyup	/pl/docs/Web/API/Element/keyup_event
@@ -1442,7 +1442,7 @@
 /pl/docs/Web/API/Element/offsetLeft	/pl/docs/Web/API/HTMLElement/offsetLeft
 /pl/docs/Web/API/Element/offsetParent	/pl/docs/Web/API/HTMLElement/offsetParent
 /pl/docs/Web/API/Element/offsetWidth	/pl/docs/Web/API/HTMLElement/offsetWidth
-/pl/docs/Web/API/Element/onclick	/pl/docs/Web/API/GlobalEventHandlers/onclick
+/pl/docs/Web/API/Element/onclick	/pl/docs/Web/API/Element/click_event
 /pl/docs/Web/API/Element/onkeypress	/pl/docs/Web/API/Element/keypress_event
 /pl/docs/Web/API/Element/onkeyup	/pl/docs/Web/API/Element/keyup_event
 /pl/docs/Web/API/Element/onmousedown	/pl/docs/Web/API/Element/mousedown_event
@@ -1474,6 +1474,7 @@
 /pl/docs/Web/API/Event/shiftKey	/pl/docs/Web/API/MouseEvent/shiftKey
 /pl/docs/Web/API/Event/view	/pl/docs/Web/API/UIEvent/view
 /pl/docs/Web/API/GlobalEventHandlers/onblur	/pl/docs/Web/API/Window/blur_event
+/pl/docs/Web/API/GlobalEventHandlers/onclick	/pl/docs/Web/API/Element/click_event
 /pl/docs/Web/API/GlobalEventHandlers/onfocus	/pl/docs/Web/API/Window/focus_event
 /pl/docs/Web/API/GlobalEventHandlers/onkeydown	/pl/docs/Web/API/Element/keydown_event
 /pl/docs/Web/API/GlobalEventHandlers/onkeypress	/pl/docs/Web/API/Element/keypress_event

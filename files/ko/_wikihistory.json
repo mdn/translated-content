@@ -4202,6 +4202,14 @@
       "project42da"
     ]
   },
+  "Web/API/Element/dblclick_event": {
+    "modified": "2020-10-15T22:05:47.608Z",
+    "contributors": [
+      "baleineindigo",
+      "alattalatta",
+      "chocojoa"
+    ]
+  },
   "Web/API/Element/getAttribute": {
     "modified": "2020-10-15T21:30:04.251Z",
     "contributors": [
@@ -4718,21 +4726,6 @@
       "alattalatta",
       "cs09g",
       "jwhitlock"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onclick": {
-    "modified": "2020-10-15T22:10:25.598Z",
-    "contributors": [
-      "alattalatta",
-      "Parcovia"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ondblclick": {
-    "modified": "2020-10-15T22:05:47.608Z",
-    "contributors": [
-      "baleineindigo",
-      "alattalatta",
-      "chocojoa"
     ]
   },
   "Web/API/GlobalEventHandlers/onscroll": {
@@ -17057,6 +17050,13 @@
     "modified": "2019-03-23T23:26:56.400Z",
     "contributors": [
       "Sheppy"
+    ]
+  },
+  "conflicting/Web/API/Element/click_event": {
+    "modified": "2020-10-15T22:10:25.598Z",
+    "contributors": [
+      "alattalatta",
+      "Parcovia"
     ]
   },
   "conflicting/Web/API/Element/keydown_event": {
