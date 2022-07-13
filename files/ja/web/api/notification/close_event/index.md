@@ -1,36 +1,42 @@
 ---
-title: Notification.onclose
+title: 'Notification: close イベント'
 slug: Web/API/Notification/close_event
+page-type: web-api-event
 tags:
   - API
-  - DOM
   - Notification
   - Notifications
   - Notifications API
-  - Property
+  - Event
   - Reference
-  - onclose
-  - プロパティ
-  - 通知
-translation_of: Web/API/Notification/onclose
+  - close
+browser-compat: api.Notification.close_event
+translation_of: Web/API/Notification/close_event
 original_slug: Web/API/Notification/onclose
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p><strong><code>onclose</code></strong> は {{domxref("Notification")}} インターフェイスのプロパティで、 {{domxref("HTMLDialogElement/close_event", "close")}} イベントを受信するイベントリスナーを指定します。これらのイベントは {{domxref("Notification")}} が閉じるときに発生します。</p>
+**`close`** は {{domxref("Notification")}} インターフェイスのイベントで、 {{domxref("Notification")}} が閉じるときに発生します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>Notification</var>.onclose = function() { ... };
-</pre>
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使うか、イベントハンドラープロパティを設定するかしてください。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+```js
+addEventListener('close', event => { });
 
-<p>{{Compat("api.Notification.onclose")}}</p>
+onclose = event => { };
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## イベント型
 
-<ul>
- <li>{{domxref("Notification")}}</li>
- <li><a href="/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API">通知 API の使用</a></li>
-</ul>
+一般的な {{domxref("Event")}} です。
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("Notification")}}
+- [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
