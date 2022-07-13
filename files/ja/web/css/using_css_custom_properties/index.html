@@ -14,7 +14,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 ---
 <div>{{cssref}}</div>
 
-<p><strong>カスタムプロパティ</strong> (<strong>CSS 変数</strong>や<strong>カスケード変数</strong>と呼ばれることもあります) は、 CSS の作者によって作成され、文書全体で再利用可能な特定の値を含むエンティティです。それらは、カスタムプロパティ記法 (たとえば、<strong><code>--main-color: black;</code></strong>) によって設定し、 <code>var()</code> 関数 (たとえば、 <code>color: <strong>var(--main-color)</strong>;</code>) を使ってアクセスします。</p>
+<p><strong>カスタムプロパティ</strong> (<strong>CSS 変数</strong>や<strong>カスケード変数</strong>と呼ばれることもあります) は、 CSS の作者によって作成され、文書全体で再利用可能な特定の値を含むエンティティです。それらは、カスタムプロパティ記法 (たとえば、<strong><code>--main-color: black;</code></strong>) によって設定し、 <code><a href="/ja/docs/Web/CSS/var">var()</a></code> 関数 (たとえば、 <code>color: <strong>var(--main-color)</strong>;</code>) を使ってアクセスします。</p>
 
 <p>複雑なウェブサイトには、膨大な量の CSS があり、しばしば同じ値が使われています。たとえば、同じ色が異なる場所で数百使われており、色を変更する場合、グローバルに検索し、置き換えをしなくてはなりません。カスタムプロパティを使えば、一ヶ所に値を保存しておき、複数の場所から参照することができます。更なるメリットとして、意味的な識別をしやすくなります。たとえば、 <code>--main-text-color</code> は <code>#00ff00</code> より、とりわけ同じ色がさまざまな文脈で使われる場合は理解しやすいでしょう。</p>
 
