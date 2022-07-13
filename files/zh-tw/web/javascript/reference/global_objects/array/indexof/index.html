@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 <h2 id="範例">範例</h2>
 
-<h3 id="使用_indexOf()">使用 <code>indexOf()</code></h3>
+<h3 id="使用_indexOf()">使用 <code>indexOf()</code></h3>
 
 <p>下面範例使用<code>indexOf()</code>來定位在陣列中的值。</p>
 
@@ -94,7 +94,7 @@ updateVegetablesCollection(veggies, 'spinach');
 
 <p><code>indexOf()</code> was added to the ECMA-262 standard in the 5th edition; as such it may not be present in all browsers. You can work around this by utilizing the following code at the beginning of your scripts. This will allow you to use <code>indexOf()</code> when there is still no native support. This algorithm matches the one specified in ECMA-262, 5th edition, assuming {{jsxref("Global_Objects/TypeError", "TypeError")}} and {{jsxref("Math.abs()")}} have their original values.</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">if (!Array.prototype.indexOf) {
   Array.prototype.indexOf = function indexOf(member, startFrom) {
@@ -143,9 +143,9 @@ updateVegetablesCollection(veggies, 'spinach');
   };
 }</pre>
 
-<p> </p>
+<p> </p>
 
-<p>However, if you are more interested in all the little technical bits defined by the ECMA standard, and are less concerned about performance or conciseness, then you may find this more descriptive polyfill to be more usefull.</p>
+<p>However, if you are more interested in all the little technical bits defined by the ECMA standard, and are less concerned about performance or conciseness, then you may find this more descriptive polyfill to be more usefull.</p>
 
 <pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.14
 // Reference: http://es5.github.io/#x15.4.4.14
@@ -225,7 +225,7 @@ if (!Array.prototype.indexOf) {
 <h2 id="相容性備註">相容性備註</h2>
 
 <ul>
- <li>Starting with Firefox 47 {{geckoRelease(47)}},  this method will no longer return <code>-0</code>. For example, <code>[0].indexOf(0, -0)</code> will now always return <code>+0</code> ({{bug(1242043)}}).</li>
+ <li>Starting with Firefox 47 {{geckoRelease(47)}},  this method will no longer return <code>-0</code>. For example, <code>[0].indexOf(0, -0)</code> will now always return <code>+0</code> ({{bug(1242043)}}).</li>
 </ul>
 
 <h2 id="參見">參見</h2>

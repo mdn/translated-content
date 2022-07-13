@@ -171,7 +171,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 <h3 id="Non-semantic_wrappers">Non-semantic wrappers</h3>
 
-<p>Sometimes you'll come across a situation where you can't find an ideal semantic element to group some items together or wrap some content. Sometimes you might want to just group a set of elements together to affect them all as a single entity with some {{glossary("CSS")}} or {{glossary("JavaScript")}}. For cases like these, HTML provides the {{HTMLElement("div")}} and {{HTMLElement("span")}} elements. You should use these preferably with a suitable {{htmlattrxref('class')}} attribute, to provide some kind of label for them so they can be easily targeted.</p>
+<p>Sometimes you'll come across a situation where you can't find an ideal semantic element to group some items together or wrap some content. Sometimes you might want to just group a set of elements together to affect them all as a single entity with some {{glossary("CSS")}} or {{glossary("JavaScript")}}. For cases like these, HTML provides the {{HTMLElement("div")}} and {{HTMLElement("span")}} elements. You should use these preferably with a suitable {{htmlattrxref('class')}} attribute, to provide some kind of label for them so they can be easily targeted.</p>
 
 <p>{{HTMLElement("span")}} is an inline non-semantic element, which you should only use if you can't think of a better semantic text element to wrap your content, or don't want to add any specific meaning. For example:</p>
 
@@ -197,7 +197,7 @@ play, the lights should be down low]&lt;/span&gt;.&lt;/p&gt;</pre>
   &lt;p&gt;Total cost: $237.89&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<p>This isn't really an <code>&lt;aside&gt;</code>, as it doesn't necessarily relate to the main content of the page (you want it viewable from anywhere). It doesn't even particularly warrant using a  <code>&lt;section&gt;</code>, as it isn't part of the main content of the page. So a <code>&lt;div&gt;</code> is fine in this case. We've included a heading as a signpost to aid screenreader users in finding it.</p>
+<p>This isn't really an <code>&lt;aside&gt;</code>, as it doesn't necessarily relate to the main content of the page (you want it viewable from anywhere). It doesn't even particularly warrant using a  <code>&lt;section&gt;</code>, as it isn't part of the main content of the page. So a <code>&lt;div&gt;</code> is fine in this case. We've included a heading as a signpost to aid screenreader users in finding it.</p>
 
 <div class="warning">
 <p><strong>Warning</strong>: Divs are so convenient to use that it's easy to use them too much. As they carry no semantic value, they just clutter your HTML code. Take care to use them only when there is no better semantic solution and try to reduce their usage to the minimum otherwise you'll have a hard time updating and maintaining your documents.</p>

@@ -17,14 +17,14 @@ translation_of: Web/API/HTMLElement/offsetLeft
 
 <p>然而，对于可被截断到下一行的行内元素（如 <strong>span</strong>），<code>offsetTop</code> 和 <code>offsetLeft</code> 描述的是<em>第一个</em>边界框的位置（使用 {{domxref("Element.getClientRects()")}} 来获取其宽度和高度），而 <code>offsetWidth</code> 和 <code>offsetHeight</code> 描述的是边界框的尺寸（使用 {{domxref("Element.getBoundingClientRect")}} 来获取其位置）。因此，使用 <code>offsetLeft、offsetTop、offsetWidth</code>、<code>offsetHeight</code> 来对应 left、top、width 和 height 的一个盒子将不会是文本容器 span 的盒子边界。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="eval"><em>left</em> = <em>element</em>.offsetLeft;
 </pre>
 
 <p><code>left</code> 是一个整数，表示向左偏移的像素值。</p>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <pre>var colorTable = document.getElementById("t1");
 var tOLeft = colorTable.offsetLeft;
@@ -66,11 +66,11 @@ if (tOLeft &gt; 5) {
 
 {{Specifications}}
 
-<h2 id="Compatibility" name="Compatibility">浏览器兼容性</h2>
+<h2 id="Compatibility">浏览器兼容性</h2>
 
 {{Compat("api.HTMLElement.offsetLeft")}}
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref(" HTMLElement.offsetHeight")}}</li>

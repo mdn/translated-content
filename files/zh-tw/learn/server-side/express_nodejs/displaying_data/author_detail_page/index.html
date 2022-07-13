@@ -19,25 +19,25 @@ var Book = require('../models/book');</pre>
 <pre class="brush: js">// Display detail page for a specific Author.
 exports.author_detail = function(req, res, next) {
 
-<strong>    async.parallel({
-        author: function(callback) {
-            Author.findById(req.params.id)
-              .exec(callback)
-        },
-        authors_books: function(callback) {
-          Book.find({ 'author': req.params.id },'title summary')
-          .exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); } // Error in API usage.
-        if (results.author==null) { // No results.
-            var err = new Error('Author not found');
-            err.status = 404;
-            return next(err);
-        }
-        // Successful, so render.
-        res.render('author_detail', { title: 'Author Detail', author: results.author, author_books: results.authors_books } );
-    });</strong>
+<strong>    async.parallel({
+        author: function(callback) {
+            Author.findById(req.params.id)
+              .exec(callback)
+        },
+        authors_books: function(callback) {
+          Book.find({ 'author': req.params.id },'title summary')
+          .exec(callback)
+        },
+    }, function(err, results) {
+        if (err) { return next(err); } // Error in API usage.
+        if (results.author==null) { // No results.
+            var err = new Error('Author not found');
+            err.status = 404;
+            return next(err);
+        }
+        // Successful, so render.
+        res.render('author_detail', { title: 'Author Detail', author: results.author, author_books: results.authors_books } );
+    });</strong>
 
 };
 </pre>
@@ -52,21 +52,21 @@ exports.author_detail = function(req, res, next) {
 
 block content
 
-<strong>  h1 Author: #{author.name}</strong>
-  p #{author.date_of_birth} - #{author.date_of_death}
+<strong>  h1 Author: #{author.name}</strong>
+  p #{author.date_of_birth} - #{author.date_of_death}
 
-  div(style='margin-left:20px;margin-top:20px')
+  div(style='margin-left:20px;margin-top:20px')
 
-    h4 Books
+    h4 Books
 
-    dl
-      each book in author_books
-        dt
-          a(href=book.url) #{book.title}
-        dd #{book.summary}
+    dl
+      each book in author_books
+        dt
+          a(href=book.url) #{book.title}
+        dd #{book.summary}
 
-      else
-        p This author has no books.
+      else
+        p This author has no books.
 </pre>
 
 <p>本模板裡的所有事物，都在先前的章節演示過了。</p>
@@ -78,7 +78,7 @@ block content
 <p><img alt="Author Detail Page - Express Local Library site" src="locallibary_express_author_detail.png"></p>
 
 <div class="note">
-<p><strong>注意:</strong>  作者的出生與死亡日期的外觀很醜！我們將在本文最後的自我挑戰處理它。</p>
+<p><strong>注意:</strong>  作者的出生與死亡日期的外觀很醜！我們將在本文最後的自我挑戰處理它。</p>
 </div>
 
 <h2 id="下一步">下一步</h2>

@@ -14,14 +14,14 @@ original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
 
 <p>使用 XPath 的主要接口是 <a href="/zh-CN/DOM/document" title="zh-CN/DOM/document">document</a> 对象的 <a href="/zh-CN/DOM/document.evaluate" title="zh-CN/DOM/document.evaluate">evaluate</a> 方法。</p>
 
-<h2 id="document.evaluate" name="document.evaluate">document.evaluate</h2>
+<h2 id="document.evaluate">document.evaluate</h2>
 
 <p>此方法针对基于 <a href="https://developer.mozilla.org/en-US/docs/Glossary/XML">XML</a> 的文档（包括 HTML 文档）评估 XPath 表达式，并返回 <a href="https://developer.mozilla.org/en-US/docs/XPathResult">XPathResult</a> 对象，该对象可以是单个节点或一组节点。这个方法的现有文档位于 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document.evaluate">document.evaluate</a>，但是对于我们现在的需求来说它相当稀疏；下面将给出更全面的研究。</p>
 
 <pre class="brush: js">var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceResolver, resultType, result );
 </pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document.evaluate">evaluate</a> 函数共有五个参数：</p>
 
@@ -55,7 +55,7 @@ original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
  </li>
 </ul>
 
-<h3 id="Return_Value" name="Return_Value">返回值</h3>
+<h3 id="Return_Value">返回值</h3>
 
 <p>返回 <code>xpathResult</code>，它是 <code>resultType</code> 参数中<a href="https://developer.mozilla.org/en-US/docs/Introduction_to_using_XPath_in_JavaScript#Specifying_the_Return_Type">指定的</a>类型的 <code>XPathResult</code> 对象。<code>XPathResult</code> 在<a href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xpath/nsIDOMXPathResult.idl">这里</a>定义。</p>
 
@@ -76,11 +76,11 @@ original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
 
 <p>适应任何 DOM 节点以解析命名空间，以便可以相对于文档中出现的节点的上下文轻松地评估 XPath 表达式。此适配器的工作方式类似于 DOM 级别 3 方法 <code>lookupNamespaceURI</code> 在解析 <code>namespaceuRI</code> 时节点的层次结构中的可用的当前信息的节点。也正确解析了隐式 <code>xml</code> 前缀。</p>
 
-<h3 id="Specifying_the_Return_Type" name="Specifying_the_Return_Type">指定返回类型</h3>
+<h3 id="Specifying_the_Return_Type">指定返回类型</h3>
 
 <p><code>document.evaluate</code> 返回的变量 <code>xpathResult</code> 可以由单个节点（<a href="https://developer.mozilla.org/en-US/docs/Introduction_to_using_XPath_in_JavaScript#Simple_Types">简单类型</a>）或节点集合（<a href="https://developer.mozilla.org/en-US/docs/Introduction_to_using_XPath_in_JavaScript#Node-Set_Types">节点集类型</a>）组成。</p>
 
-<h4 id="Simple_Types" name="Simple_Types">简单类型</h4>
+<h4 id="Simple_Types">简单类型</h4>
 
 <p>当 <code>resultType</code> 中的所需结果类型指定为：</p>
 
@@ -98,7 +98,7 @@ original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
  <li><code>booleanValue</code></li>
 </ul>
 
-<h5 id="Example" name="Example">示例</h5>
+<h5 id="Example">示例</h5>
 
 <p>以下使用 XPath 表达式 <a href="https://developer.mozilla.org/en-US/docs/XPath/Functions/count"><code>count(//p)</code></a> 来获取 HTML 文档中的 <code>&lt;p&gt;</code> 元素数：</p>
 
@@ -116,7 +116,7 @@ alert( 'This document contains ' + paragraphCount.stringValue + ' paragraph elem
 
 <p>相反，它将返回一个带有 <code>NS_DOM_TYPE_ERROR</code> 的异常。</p>
 
-<h4 id="Node-Set_Types" name="Node-Set_Types">节点集类型</h4>
+<h4 id="Node-Set_Types">节点集类型</h4>
 
 <p><code>XPathResult</code> 对象允许以 3 种主要不同类型返回节点集：</p>
 
@@ -126,7 +126,7 @@ alert( 'This document contains ' + paragraphCount.stringValue + ' paragraph elem
  <li><a href="#First_Node">First Nodes</a></li>
 </ul>
 
-<h5 id="Iterators" name="Iterators">Iterators</h5>
+<h5 id="Iterators">Iterators</h5>
 
 <p>当 <code>resultType</code> 参数中的指定结果类型为：</p>
 
@@ -141,7 +141,7 @@ alert( 'This document contains ' + paragraphCount.stringValue + ' paragraph elem
 
 <p>但请注意，如果在迭代过程中，文档发生突变（文档树被修改），将使迭代无效，并且 <code>XPathResult</code> 的 <code>invalidIteratorState</code> 属性设置为 <code>true</code>，抛出 <code>NS_ERROR_DOM_INVALID_STATE_ERR</code> 异常。</p>
 
-<h6 id="Iterator_Example" name="Iterator_Example">Iterator Example</h6>
+<h6 id="Iterator_Example">Iterator Example</h6>
 
 <pre class="brush: js">var iterator = document.evaluate('//phoneNumber', documentNode, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null );
 
@@ -158,7 +158,7 @@ catch (e) {
 }
 </pre>
 
-<h5 id="Snapshots" name="Snapshots">Snapshots</h5>
+<h5 id="Snapshots">Snapshots</h5>
 
 <p>当 <code>resultType</code> 参数中的指定结果类型为：</p>
 
@@ -171,7 +171,7 @@ catch (e) {
 
 <p>快照不随文档突变而改变，因此与迭代器不同，快照不会变得无效，但是它可能不对应于当前文档，例如节点可能已被移动，它可能包含不再存在的节点，或新节点可能已添加。</p>
 
-<h6 id="Snapshot_Example" name="Snapshot_Example">Snapshot Example</h6>
+<h6 id="Snapshot_Example">Snapshot Example</h6>
 
 <pre class="brush: js">var nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
 
@@ -181,7 +181,7 @@ for ( var i=0 ; i &lt; nodesSnapshot.snapshotLength; i++ )
 }
 </pre>
 
-<h5 id="First_Node" name="First_Node">First Node</h5>
+<h5 id="First_Node">First Node</h5>
 
 <p>当 <code>resultType</code> 参数中的指定结果类型为：</p>
 
@@ -194,7 +194,7 @@ for ( var i=0 ; i &lt; nodesSnapshot.snapshotLength; i++ )
 
 <p>请注意，对于无序子类型，返回的单个节点可能不是文档顺序中的第一个，但是对于有序子类型，保证以文档顺序获取第一个匹配的节点。</p>
 
-<h6 id="First_Node_Example" name="First_Node_Example">First Node Example</h6>
+<h6 id="First_Node_Example">First Node Example</h6>
 
 <pre class="brush: js">var firstPhoneNumber = document.evaluate('//phoneNumber', documentNode, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null );
 
@@ -209,9 +209,9 @@ dump( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.text
 
 <p>要在评估后确定类型，我们使用 <code>XPathResult</code> 对象的 <code>resultType</code> 属性。此属性的<a href="https://developer.mozilla.org/en-US/docs/Introduction_to_using_XPath_in_JavaScript#XPathResult_Defined_Constants">常量</a>值在附录中定义。 None Yet =====Any_Type Example===== &lt;pre&gt; &lt;/pre&gt;</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Within_an_HTML_Document" name="Within_an_HTML_Document">在 HTML 文档中</h3>
+<h3 id="Within_an_HTML_Document">在 HTML 文档中</h3>
 
 <p>以下代码旨在放置在要针对其评估 XPath 表达式的 HTML 文档中内嵌或外链的任何 JavaScript 片段中。</p>
 
@@ -417,14 +417,14 @@ var thisitemEl = thislevel.iterateNext();
  </tbody>
 </table>
 
-<h2 id="See_also" name="See_also">参见</h2>
+<h2 id="See_also">参见</h2>
 
 <ul>
  <li><a href="/zh-CN/Using_XPath" title="zh-CN/Using_XPath">Using XPath</a></li>
 </ul>
 
 <div class="originaldocinfo">
-<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+<h2 id="Original_Document_Information">Original Document Information</h2>
 
 <ul>
  <li>Based Upon Original Document <a class="external" href="http://www-xray.ast.cam.ac.uk/~jgraham/mozilla/xpath-tutorial.html">Mozilla XPath Tutorial</a></li>

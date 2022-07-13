@@ -108,7 +108,7 @@ translation_of: Web/Web_Components
 
   - : シャドウ DOM に関する `Event` インターフェイスの拡張です。
 
-    - {{domxref("Event.composed")}}: このイベントがシャドウ DOM 境界を超えて標準 DOM にまで電波する場合は `true`、そうでなければ `false` を返します。
+    - {{domxref("Event.composed")}}: このイベントがシャドウ DOM 境界を超えて標準 DOM にまで伝播する場合は `true`、そうでなければ `false` を返します。
     - {{domxref("Event.composedPath")}}: イベントのパス（リスナーが呼び出されたオブジェクト）を返します。 {{domxref("ShadowRoot.mode")}} が closed でシャドウルートが生成された場合、シャドウツリー内のノードは含まれません。
 
 ### HTML テンプレート

@@ -15,7 +15,7 @@ original_slug: Web/Guide/CSS/Consistent_list_indentation
 
 <p>为了弄明白这是为什么，以及如何避免这些问题发生，有必要研究一下列表结构的具体细节。</p>
 
-<h3 id="Making_a_List" name="Making_a_List">创建一个列表</h3>
+<h3 id="Making_a_List">创建一个列表</h3>
 
 <p>首先，来看一个简单，单独的列表项目。该列表项目没有标记符号（或称之为“着重号”），并且没有被列表包裹起来。如下图图 1 所示，单独的列表项是无效的，简单且没有任何装饰。</p>
 
@@ -39,7 +39,7 @@ original_slug: Web/Guide/CSS/Consistent_list_indentation
 
 <p>这就是为什么在除了 IE 浏览器以外的所有浏览器上，标记符号都被放在&lt;li&gt;元素的边框外，假设列表项位置的值为外部"outside"。如果该值被改为内部"inside"，则标记符号会被放到&lt;li&gt;的内容区域里面，像是放在&lt;li&gt;最开头的内联盒子一样。</p>
 
-<h3 id="Indenting_It_Twice" name="Indenting_It_Twice">二次缩进</h3>
+<h3 id="Indenting_It_Twice">二次缩进</h3>
 
 <p>So how will all this appear in a document? At the moment, we have a situation analogous to these styles:</p>
 
@@ -67,7 +67,7 @@ original_slug: Web/Guide/CSS/Consistent_list_indentation
 
 <p>As we can see, the markers remain attached to the <code>&lt;li&gt;</code> elements, no matter where they are. The difference is entirely in how the <code>&lt;ul&gt;</code> is styled. We can only see the difference if we try to set a background or border on the <code>&lt;ul&gt;</code> element.</p>
 
-<h3 id="Finding_Consistency" name="Finding_Consistency">Finding Consistency</h3>
+<h3 id="Finding_Consistency">Finding Consistency</h3>
 
 <p>Boil it all down, and what we're left with is this: if you want consistent rendering of lists between Gecko, Internet Explorer, and Opera, you need to set <strong>both</strong> the left margin and left padding of the <code>&lt;ul&gt;</code> element. We can ignore <code>&lt;li&gt;</code> altogether for these purposes. If you want to reproduce the default display in Netscape 6.x, you write:</p>
 
@@ -83,18 +83,18 @@ original_slug: Web/Guide/CSS/Consistent_list_indentation
 
 <p>Remember, though, that in so doing, you'll have the bullets hanging outside the list and its parent element. If the parent is the <code>body</code>, there's a strong chance your bullets will be completely outside the browser window, and thus will not be visible.</p>
 
-<h3 id="Conclusion" name="Conclusion">结论</h3>
+<h3 id="Conclusion">结论</h3>
 
 <p>In the end, we can see that none of the browsers mentioned in this article is right or wrong about how they lay out lists. They use different default styles, and that's where the problems creep in. By making sure you style both the left padding and left margin of lists, you can find much greater cross-browser consistency in your list indentation.</p>
 
-<h3 id="Recommendations" name="Recommendations">建议</h3>
+<h3 id="Recommendations">建议</h3>
 
 <ul>
  <li>在你调整列表的缩进的时候，务必确认同时设置了 padding 和 margin.</li>
 </ul>
 
 <div class="originaldocinfo">
-<h3 id="Original_Document_Information" name="Original_Document_Information">原始文档信息</h3>
+<h3 id="Original_Document_Information">原始文档信息</h3>
 
 <ul>
  <li>Author(s): Eric A. Meyer, Netscape Communications</li>

@@ -12,12 +12,12 @@ translation_of: Web/API/HTMLCanvasElement/toDataURL
 </div>
 </div>
 
-<p><strong><code>HTMLCanvasElement.toDataURL()</code></strong> 方法回傳含有圖像和參數設置特定格式的 <a href="/en-US/docs/Web/HTTP/data_URIs">data URIs</a> (預設 <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>). 回傳的圖像解析度為 96 dpi.</p>
+<p><strong><code>HTMLCanvasElement.toDataURL()</code></strong> 方法回傳含有圖像和參數設置特定格式的 <a href="/en-US/docs/Web/HTTP/data_URIs">data URIs</a> (預設 <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>). 回傳的圖像解析度為 96 dpi.</p>
 
 <ul>
  <li>如果 canvas 的高度或是寬度為 <code>0</code>, 將會回傳字串 <code>"data:,"</code>.</li>
  <li>如果要求的圖像類型並非 <code>image/png</code>, 但是回傳的類型卻是 <code>data:image/png</code>, 表示要求的圖像類型並不支援.</li>
- <li>Chrome 也支援 <code>image/webp</code> 類型.</li>
+ <li>Chrome 也支援 <code>image/webp</code> 類型.</li>
 </ul>
 
 <h2 id="Syntax">表達式</h2>
@@ -31,13 +31,13 @@ translation_of: Web/API/HTMLCanvasElement/toDataURL
  <dt><code>type</code> {{optional_inline}}</dt>
  <dd>圖像格式的 {{domxref("DOMString")}}. 預設為 <code>image/png</code>.</dd>
  <dt><code>encoderOptions</code> {{optional_inline}}</dt>
- <dd><code>表示 image/jpeg 或是 image/webp 的圖像品質, 為0</code> 到 <code>1</code> 之間的 {{jsxref("Number")}}.<br>
+ <dd><code>表示 image/jpeg 或是 image/webp 的圖像品質, 為0</code> 到 <code>1</code> 之間的 {{jsxref("Number")}}.<br>
  如果值不在上述範圍中, 將會使用預設值. 其他的會忽略.</dd>
 </dl>
 
 <h3 id="回傳值">回傳值</h3>
 
-<p>包含 <a href="/en-US/docs/Web/HTTP/data_URIs">data URI</a> 的 {{domxref("DOMString")}}.</p>
+<p>包含 <a href="/en-US/docs/Web/HTTP/data_URIs">data URI</a> 的 {{domxref("DOMString")}}.</p>
 
 <h2 id="範例">範例</h2>
 

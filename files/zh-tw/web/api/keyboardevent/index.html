@@ -9,7 +9,7 @@ translation_of: Web/API/KeyboardEvent
 
 <p><strong><code>KeyboardEvent</code></strong> objects 用來詳述使用者和網頁之間，經由鍵盤產生的互動。每個事件（<code>event</code>）都記錄著一次鍵盤動作。事件類型（<code>keydown</code> 、 <code>keypress</code> 和 <code>keyup</code>）用來表示鍵盤執行哪種動作。</p>
 
-<div class="note"><strong>注意：</strong> <code>KeyboardEvent</code> 僅顯示在鍵盤上發生的事。當你需要進行文字輸入的操作，請使用 HTML5 <code><a href="/en-US/docs/DOM/DOM_event_reference/input">input</a></code> event 代替 <code>KeyboardEvent</code> 。舉例來說，當使用者在手寫系統，例如平板電腦，輸入文字時，並不會啟動 key events 。</div>
+<div class="note"><strong>注意：</strong> <code>KeyboardEvent</code> 僅顯示在鍵盤上發生的事。當你需要進行文字輸入的操作，請使用 HTML5 <code><a href="/en-US/docs/DOM/DOM_event_reference/input">input</a></code> event 代替 <code>KeyboardEvent</code> 。舉例來說，當使用者在手寫系統，例如平板電腦，輸入文字時，並不會啟動 key events 。</div>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -20,33 +20,33 @@ translation_of: Web/API/KeyboardEvent
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>本介面（ interface）亦繼承其父， {{domxref("UIEvent")}} 和 {{domxref("Event")}} ，的 methods</em></p>
+<p><em>本介面（ interface）亦繼承其父， {{domxref("UIEvent")}} 和 {{domxref("Event")}} ，的 methods</em></p>
 
 <dl>
  <dt>{{domxref("KeyboardEvent.getModifierState()")}}</dt>
- <dd>回傳一 {{jsxref("Boolean")}}。用來表示當事件建立時，修飾鍵（例如 <kbd>Alt</kbd>、 <kbd>Shift</kbd>、 <kbd>Ctrl</kbd>、或是 <kbd>Meta</kbd>） 是否是按下的。</dd>
+ <dd>回傳一 {{jsxref("Boolean")}}。用來表示當事件建立時，修飾鍵（例如 <kbd>Alt</kbd>、 <kbd>Shift</kbd>、 <kbd>Ctrl</kbd>、或是 <kbd>Meta</kbd>） 是否是按下的。</dd>
  <dt>{{domxref("KeyboardEvent.initKeyEvent()")}}{{deprecated_inline}}</dt>
- <dd>初始化一個 <code>KeyboardEvent</code> object。這個 method 只有 Gecko 有在使用（其他瀏覽器是使用 {{domxref("KeyboardEvent.initKeyboardEvent()")}}），並且不應該再繼續使用。現代的標準規範是使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor。</dd>
+ <dd>初始化一個 <code>KeyboardEvent</code> object。這個 method 只有 Gecko 有在使用（其他瀏覽器是使用 {{domxref("KeyboardEvent.initKeyboardEvent()")}}），並且不應該再繼續使用。現代的標準規範是使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor。</dd>
  <dt>{{domxref("KeyboardEvent.initKeyboardEvent()")}}{{deprecated_inline}}</dt>
- <dd>初始化一個 <code>KeyboardEvent</code> object。 Gecko 從未實作過該 method （Gecko 是使用 {{domxref("KeyboardEvent.initKeyEvent()")}}) ，並且不應該再繼續使用。現代的標準規範是使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor。</dd>
+ <dd>初始化一個 <code>KeyboardEvent</code> object。 Gecko 從未實作過該 method （Gecko 是使用 {{domxref("KeyboardEvent.initKeyEvent()")}}) ，並且不應該再繼續使用。現代的標準規範是使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor。</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>本介面（ interface）亦繼承其父，{{domxref("UIEvent")}} 和 {{domxref("Event")}} ，的 properties 。</em></p>
+<p><em>本介面（ interface）亦繼承其父，{{domxref("UIEvent")}} 和 {{domxref("Event")}} ，的 properties 。</em></p>
 
 <dl>
  <dt>{{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}</dt>
- <dd>一個 {{jsxref("Boolean")}} 。用來表示在事件建立時， <kbd>Alt</kbd> （OS X 中是 <kbd>Option</kbd> 或 <kbd>⌥</kbd> ） 鍵是否執行中。</dd>
+ <dd>一個 {{jsxref("Boolean")}} 。用來表示在事件建立時， <kbd>Alt</kbd> （OS X 中是 <kbd>Option</kbd> 或 <kbd>⌥</kbd> ） 鍵是否執行中。</dd>
  <dt>{{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>一個 {{domxref("DOMString")}} ，返回鍵盤對應的字符。若是該鍵對應一個實際的字符，則其值為對應該字符的一個非空的 Unicode 字串；若沒對應的話，則返回一個空字串。
+ <dd>一個 {{domxref("DOMString")}} ，返回鍵盤對應的字符。若是該鍵對應一個實際的字符，則其值為對應該字符的一個非空的 Unicode 字串；若沒對應的話，則返回一個空字串。
  <div class="note"><strong>Note:</strong> If the key is used as a macro that inserts multiple characters, this attribute's value is the entire string, not just the first character.</div>
 
- <div class="warning"><strong>警告:</strong> 在 DOM Level 3 Events ，該 propertie 已被移除。現在只有 IE9+ 支持它。</div>
+ <div class="warning"><strong>警告:</strong> 在 DOM Level 3 Events ，該 propertie 已被移除。現在只有 IE9+ 支持它。</div>
  </dd>
  <dt>{{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Number")}} representing the Unicode reference number of the key; this attribute is used only by the <code>keypress</code> event. For keys whose <code>char</code> attribute contains multiple characters, this is the Unicode value of the first character in that attribute. In Firefox 26 this returns codes for printable characters.
- <div class="warning"><strong>警告:</strong> 此 attribute 已被淘汰。如果可以，建議使用 {{domxref("KeyboardEvent.key")}} 。</div>
+ <dd>Returns a {{jsxref("Number")}} representing the Unicode reference number of the key; this attribute is used only by the <code>keypress</code> event. For keys whose <code>char</code> attribute contains multiple characters, this is the Unicode value of the first character in that attribute. In Firefox 26 this returns codes for printable characters.
+ <div class="warning"><strong>警告:</strong> 此 attribute 已被淘汰。如果可以，建議使用 {{domxref("KeyboardEvent.key")}} 。</div>
  </dd>
  <dt>{{domxref("KeyboardEvent.code")}} {{Readonlyinline}}</dt>
  <dd>一個 {{domxref("DOMString")}} 。返回事件對應的按鍵的代碼。</dd>
@@ -56,8 +56,8 @@ translation_of: Web/API/KeyboardEvent
  <dd>一個 {{jsxref("Boolean")}} 。用來表示其觸發時間是否在 <code>compositionstart</code> 和 <code>compositionend</code> 之間。</dd>
  <dt>{{domxref("KeyboardEvent.key")}} {{Readonlyinline}}</dt>
  <dd>一個 {{domxref("DOMString")}} ，用來事件對應的按鍵的值（key value）。</dd>
- <dt>{{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Number")}} representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
+ <dt>{{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}</dt>
+ <dd>Returns a {{jsxref("Number")}} representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
  <div class="warning"><strong>警告:</strong> 此 attribute 已被淘汰。如果可以，建議使用{{domxref("KeyboardEvent.key")}} 。</div>
  </dd>
  <dt>{{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}</dt>
@@ -65,7 +65,7 @@ translation_of: Web/API/KeyboardEvent
  <div class="note"><strong>Note:</strong> This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.</div>
  </dd>
  <dt>{{domxref("KeyboardEvent.location")}}<a> {{Readonlyinline}}</a></dt>
- <dd>Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device.</dd>
+ <dd>Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device.</dd>
  <dt>{{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}</dt>
  <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the <kbd>Meta</kbd> (on Mac keyboards, the <kbd>⌘ Command</kbd> key; on Windows keyboards, the Windows key (<kbd>⊞</kbd>)) key was active when the key event was generated.</dd>
  <dt>{{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}</dt>
@@ -73,7 +73,7 @@ translation_of: Web/API/KeyboardEvent
  <dt>{{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}</dt>
  <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the <kbd>Shift</kbd> key was active when the key event was generated.</dd>
  <dt>{{domxref("KeyboardEvent.which")}} {{deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Number")}} representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as <code>keyCode</code>.
+ <dd>Returns a {{jsxref("Number")}} representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as <code>keyCode</code>.
  <div class="warning"><strong>警告:</strong> 此 attribute 已被淘汰。如果可以，建議使用 {{domxref("KeyboardEvent.key")}} 。</div>
  </dd>
 </dl>
@@ -90,11 +90,11 @@ translation_of: Web/API/KeyboardEvent
 
 <h3 id="特殊狀況">特殊狀況</h3>
 
-<p>某些按鍵，例如 <kbd>Caps Lock</kbd> 、 <kbd>Num Lock</kbd> 和 <kbd>Scroll Lock</kbd> 能切換鍵盤上的 LED 燈。在 Windows 和 Linux 系統上，這些按鍵只會觸發 <code>keydown</code> 和 <code>keyup</code> 事件。但是 Linux 上的 Firefox 12 或更早的版本亦會觸發 <code>keypress</code> 事件。</p>
+<p>某些按鍵，例如 <kbd>Caps Lock</kbd> 、 <kbd>Num Lock</kbd> 和 <kbd>Scroll Lock</kbd> 能切換鍵盤上的 LED 燈。在 Windows 和 Linux 系統上，這些按鍵只會觸發 <code>keydown</code> 和 <code>keyup</code> 事件。但是 Linux 上的 Firefox 12 或更早的版本亦會觸發 <code>keypress</code> 事件。</p>
 
-<p>而在 Mac 電腦則不同， <kbd>Caps Lock</kbd> 只會觸發 <code>keydown</code> 事件；而 <kbd>Num Lock</kbd> 則是只有舊版的 Mac 電腦（2007 或之前的版本）才有，現在的 Mac 即便使用外部鍵盤也不支援  <kbd>Num Lock</kbd> 。雖說舊版的 Mac 電腦支援 <kbd>Num Lock</kbd> 鍵，但 <kbd>Num Lock</kbd>  並不會執行任何 KeyboardEvent；而 Gecko 瀏覽器在特殊情況（外接一個有 <kbd>F14</kbd> 的鍵盤）下能支援 <kbd>Scroll Lock</kbd> ，但是它會產生 <code>keypress</code> 事件。這個異常狀態是個 bug ，詳情可參考 {{bug(602812)}}。</p>
+<p>而在 Mac 電腦則不同， <kbd>Caps Lock</kbd> 只會觸發 <code>keydown</code> 事件；而 <kbd>Num Lock</kbd> 則是只有舊版的 Mac 電腦（2007 或之前的版本）才有，現在的 Mac 即便使用外部鍵盤也不支援  <kbd>Num Lock</kbd> 。雖說舊版的 Mac 電腦支援 <kbd>Num Lock</kbd> 鍵，但 <kbd>Num Lock</kbd>  並不會執行任何 KeyboardEvent；而 Gecko 瀏覽器在特殊情況（外接一個有 <kbd>F14</kbd> 的鍵盤）下能支援 <kbd>Scroll Lock</kbd> ，但是它會產生 <code>keypress</code> 事件。這個異常狀態是個 bug ，詳情可參考 {{bug(602812)}}。</p>
 
-<h3 id="自動迴圈（Auto-Repeat_）的執行">自動迴圈（Auto-Repeat ）的執行</h3>
+<h3 id="自動迴圈（Auto-Repeat_）的執行">自動迴圈（Auto-Repeat ）的執行</h3>
 
 <p>當按鍵按下去不放時，它會開始一個自動迴圈。並導致觸發一系列的相似事件，如下所示：</p>
 
@@ -111,7 +111,7 @@ translation_of: Web/API/KeyboardEvent
 
 <h4 id="部分_GTK_環境，例如_Ubuntu_9.4_，的自動迴圈">部分 GTK 環境，例如 Ubuntu 9.4 ，的自動迴圈</h4>
 
-<p>部分的 GTK-based 環境之中，自動迴圈在發生的過程中會自動觸發電腦本機的 key-up 事件。然而，對 Gecko 而言，並沒有方法可以分辨使用者重複點擊按鍵與自動迴圈（按鍵按住不放）的差異。在這類的環境下，按鍵按住不放會重複執行下列事件：</p>
+<p>部分的 GTK-based 環境之中，自動迴圈在發生的過程中會自動觸發電腦本機的 key-up 事件。然而，對 Gecko 而言，並沒有方法可以分辨使用者重複點擊按鍵與自動迴圈（按鍵按住不放）的差異。在這類的環境下，按鍵按住不放會重複執行下列事件：</p>
 
 <ol>
  <li><code>keydown</code></li>
@@ -124,7 +124,7 @@ translation_of: Web/API/KeyboardEvent
  <li><code>keyup</code></li>
 </ol>
 
-<p>不幸地，在這些環境之下，web content 亦沒有方法告訴使用者重複點擊按鍵與自動迴圈的差異。</p>
+<p>不幸地，在這些環境之下，web content 亦沒有方法告訴使用者重複點擊按鍵與自動迴圈的差異。</p>
 
 <h4 id="Gecko_5.0_以前的自動迴圈">Gecko 5.0 以前的自動迴圈</h4>
 
@@ -134,9 +134,9 @@ translation_of: Web/API/KeyboardEvent
  <dt>Windows</dt>
  <dd>自動迴圈的結果與 Gecko 4.0 或更新的版本類似</dd>
  <dt>Mac</dt>
- <dd>在第一個 keydown 執行後，僅執行 keypress 事件，一直到案件放開（即送出 keyup 事件指令），過程中不會送出任何 keydown 事件。</dd>
+ <dd>在第一個 keydown 執行後，僅執行 keypress 事件，一直到案件放開（即送出 keyup 事件指令），過程中不會送出任何 keydown 事件。</dd>
  <dt>Linux</dt>
- <dd>鍵盤事件的執行根據平台不同而有所不同。它有可能表現得像是 Windows 也有可能像 Mac ，這取決於本地的事件模型（native event model）是如何執行的。</dd>
+ <dd>鍵盤事件的執行根據平台不同而有所不同。它有可能表現得像是 Windows 也有可能像 Mac ，這取決於本地的事件模型（native event model）是如何執行的。</dd>
 </dl>
 
 <h2 id="範例">範例</h2>
@@ -190,9 +190,9 @@ function metaKeyUp (event) {
 <p>More compatibility data is available on other pages:</p>
 
 <ul>
- <li><code>.code</code>  ：請參考《瀏覽器支援度》的 {{domxref("KeyboardEvent.code")}} 部分。</li>
- <li><code>.key</code>：請參考《瀏覽器支援度》的 {{domxref("KeyboardEvent.key")}} 部分。</li>
- <li><code>.getModifierState()</code> ：請參考《瀏覽器支援度》的 {{domxref("KeyboardEvent.getModifierState")}} 部分。</li>
+ <li><code>.code</code>  ：請參考《瀏覽器支援度》的 {{domxref("KeyboardEvent.code")}} 部分。</li>
+ <li><code>.key</code>：請參考《瀏覽器支援度》的 {{domxref("KeyboardEvent.key")}} 部分。</li>
+ <li><code>.getModifierState()</code> ：請參考《瀏覽器支援度》的 {{domxref("KeyboardEvent.getModifierState")}} 部分。</li>
 </ul>
 
 {{Compat("api.KeyboardEvent")}}

@@ -13,7 +13,7 @@ translation_of: Web/API/EventTarget/removeEventListener
 
 <p>删除使用 {{domxref("EventTarget.addEventListener()")}} 方法添加的事件。使用事件类型，事件侦听器函数本身，以及可能影响匹配过程的各种可选择的选项的组合来标识要删除的事件侦听器。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>target</em>.removeEventListener(<em>type</em>, <em>listener</em>[, options]);
 <em>target</em>.removeEventListener(<em>type</em>, <em>listener</em>[, <em>useCapture</em>]);</pre>
@@ -79,7 +79,7 @@ element.removeEventListener("mousedown", handleMouseDown, true);                
 
 <p>值得注意的是，一些浏览器版本在这方面会有些不一致，除非你有特别的理由， 使用与调用 <code>addEventListener()</code> 时配置的参数去调用<code>removeEventListener() 是明智的</code>.</p>
 
-<h2 id="Compatibility" name="Compatibility">备注</h2>
+<h2 id="Compatibility">备注</h2>
 
 <p>一个 {{ domxref("EventTarget") }} 上的 {{ domxref("EventListener") }} 被移除之后，如果此事件正在执行，会立即停止。 {{ domxref("EventListener") }} 移除之后不能被触发，但可以重新绑定。</p>
 
@@ -125,7 +125,7 @@ mouseOverTarget.addEventListener('mouseover', function () {
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
+<h2 id="Browser_Compatibility">浏览器兼容性</h2>
 
 <p>{{Compat("api.EventTarget.removeEventListener", 3)}}</p>
 

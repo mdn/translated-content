@@ -62,7 +62,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <h3 id="验证">验证</h3>
 
-<p>对于 HTML，要确保所有的标签都被正确地关闭和嵌套，写好 DOCTYPE，而且正确地使用各种标签。一个好的策略是定期验证你的代码。一个可以做到这一点的<a href="https://validator.w3.org/">服务</a>是 W3C<a href="https://validator.w3.org/"> 标记验证服务</a>，提供您的代码，它就能返回错误列表：<img alt="The HTML validator homepage" src="https://mdn.mozillademos.org/files/12441/validator.png"></p>
+<p>对于 HTML，要确保所有的标签都被正确地关闭和嵌套，写好 DOCTYPE，而且正确地使用各种标签。一个好的策略是定期验证你的代码。一个可以做到这一点的<a href="https://validator.w3.org/">服务</a>是 W3C<a href="https://validator.w3.org/"> 标记验证服务</a>，提供您的代码，它就能返回错误列表：<img alt="The HTML validator homepage" src="validator.png"></p>
 
 <p>CSS 有一个类似的路线——你需要检查你的属性名拼写是否正确，属性值拼写正确，并且对于它们使用的属性是有效的，你不会丢失任何大括号，等等。为了这个目的，W3C 也有一个 <a href="http://jigsaw.w3.org/css-validator/">CSS 验证器</a>。</p>
 
@@ -72,7 +72,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <p>有许多在线 Linter 程序，其中最好的可能是“脏标记”<a href="https://www.dirtymarkup.com/">Dirty Markup</a>（HTML，CSS，JavaScript）和 <a href="http://csslint.net/">CSS Lint</a>（仅限 CSS）。它们可以让你把代码粘贴到一个窗口中，并且会用十字标记任何错误，然后可以将它们悬停，以获得错误信息，通知你问题是什么。肮脏的标记还允许您使用清理按钮修复您的标记。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14113/dirty-markup.png" style="border-style: solid; border-width: 1px; display: block; height: 203px; margin: 0px auto; width: 1204px;"></p>
+<p><img src="dirty-markup.png"></p>
 
 <p>但是，将代码复制并粘贴到网页上以检查其有效性是不太方便的。你真正想要的 Linter 可以和你的工作流更加契合，减免一切窗口切换等麻烦。</p>
 
@@ -86,7 +86,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
  <li>软件包完成安装后，尝试加载一个 HTML 文件和一个 CSS 文件：在行号旁边会看到用绿色（警告）和红色（错误）圆圈，突出显示任何存在的问题，底部则提供行号、错误消息，有时有建议的值或者其他修复。</li>
 </ol>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14109/atom-htmltidy.png" style="display: block; margin: 0 auto;"><img alt="" src="https://mdn.mozillademos.org/files/14107/atom-csslint.png" style="display: block; height: 516px; margin: 0px auto; width: 700px;"></p>
+<p><img src="atom-htmltidy.png"><img src="atom-csslint.png"></p>
 
 <p>其他受欢迎的编辑器也有类似的 linting 包可用。例如：</p>
 
@@ -106,7 +106,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <p>例如，在 Firefox 中，CSS 检查器将显示未应用的 CSS 声明，并带有警告三角形。悬停警告三角将提供一个描述性的错误信息：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14111/css-message-devtools.png" style="display: block; height: 311px; margin: 0px auto; width: 451px;"></p>
+<p><img src="css-message-devtools.png"></p>
 
 <p>其他浏览器的开发者工具有相似的功能。</p>
 
@@ -225,7 +225,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <p>让我们来看一个例子——一个简单的 CSS 风格的框，它有一些 CSS3 特性提供的样式：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14141/blingy-button.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="blingy-button.png"></p>
 
 <div class="note">
 <p><strong>注意</strong>：你也可以在 GitHub 上浏览这个例子：<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">button-with-fallback.html 的形式运行</a>（另见<a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">源代码</a>）。</p>
@@ -253,7 +253,7 @@ button:active {
 
 <p>在这里，我们提供了一个 <a href="/zh-CN/docs/Web/CSS/color_value#rgba()">RGBA</a> <a href="/zh-CN/docs/Web/CSS/background-color">background-color</a>，改变悬停的不透明度，给用户一个暗示该按钮是交互式的提示，以及一些半透明的嵌入式 <a href="/zh-CN/docs/Web/CSS/box-shadow">box-shadow</a> 阴影，使按钮有一点纹理和深度。问题在于 RGBA 颜色和方块阴影在 9 以前的 IE 版本中不起作用 - 在较旧的版本中，背景根本不会显示出来，所以文本将是不可读的，这没有任何好处！</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14135/unreadable-button.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="unreadable-button.png"></p>
 
 <p>为了解决这个问题，我们添加了第二个 background-color 声明，它只是指定了一个十六进制颜色 - 这在旧版本的浏览器中得到了支持，并且在现代闪亮功能无法使用的情况下作为后备。访问此页面的浏览器首先应用第一个 background-color 值，当它到达第二个 background-color 声明时，如果它支持 RGBA 颜色，它将用这个值覆盖初始值。如果不是的话，它会忽略整个声明，继续前进。</p>
 
@@ -295,7 +295,7 @@ button:active {
 
 <p>例如，在 Firefox 开发工具中，您可以在 DOM 检查器的底部获得这种输出：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14139/dom-breadcrumb-trail.png" style="display: block; height: 24px; margin: 0px auto; width: 448px;"></p>
+<p><img src="dom-breadcrumb-trail.png"></p>
 
 <p>例如，如果您尝试使用此选择器，则可以看到它不会根据需要选择输入元素：</p>
 
@@ -318,7 +318,7 @@ button:active {
 
 <p>如果你尝试在旧版本的 IE 中运行它，它应该可以正常工作。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14137/new-selector-ie7.png" style="border-style: solid; border-width: 1px; display: block; height: 516px; margin: 0px auto; width: 771px;"></p>
+<p><img src="new-selector-ie7.png"></p>
 
 <h4 id="处理_CSS_前缀">处理 CSS 前缀</h4>
 

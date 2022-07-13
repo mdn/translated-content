@@ -12,7 +12,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 <p>不同的模板語言使用不同的方法，來定義佈局和標記數據的佔位符 — 一些使用 HTML 來定義佈局，而另一些則使用可以編譯為 HTML 的不同標記格式。 Pug 是第二種類型；它使用 HTML 的<em>表示形式</em>，其中任何行中的第一個單詞，通常表示HTML元素，後續行中的縮進，用於表示嵌套在這些元素中的任何內容。結果是一個頁面定義直接轉換為 HTML，但可以說更簡潔，更容易閱讀。</p>
 
 <div class="note">
-<p><strong>Note:</strong> The downside of using <em>Pug</em> is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). However once you have your templates in place, they are very easy to read and maintain.</p>
+<p><strong>Note:</strong> The downside of using <em>Pug</em> is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). However once you have your templates in place, they are very easy to read and maintain.</p>
 </div>
 
 <h2 id="Template_configuration">Template configuration</h2>
@@ -74,16 +74,16 @@ html(lang="en")
       each val in [1, 2, 3, 4, 5]
         li= val</code></pre>
 
-<p>Element attributes are defined in parentheses after their associated element. Inside the parentheses, the attributes are defined in comma- or whitespace- separated lists of the pairs of attribute names and attribute values, for example:</p>
+<p>Element attributes are defined in parentheses after their associated element. Inside the parentheses, the attributes are defined in comma- or whitespace- separated lists of the pairs of attribute names and attribute values, for example:</p>
 
 <ul>
  <li><code>script(type='text/javascript')</code>, <code>link(rel='stylesheet', href='/stylesheets/style.css')</code></li>
  <li><code>meta(name='viewport' content='width=device-width initial-scale=1')</code></li>
 </ul>
 
-<p>The values of all attributes are <em>escaped</em> (e.g. characters like "<code>&gt;</code>" are converted to their HTML code equivalents like "<code>&amp;gt;"</code>) to prevent injection of JavaScript/cross-site scripting attacks.</p>
+<p>The values of all attributes are <em>escaped</em> (e.g. characters like "<code>&gt;</code>" are converted to their HTML code equivalents like "<code>&amp;gt;"</code>) to prevent injection of JavaScript/cross-site scripting attacks.</p>
 
-<p>If a tag is followed by the equals sign, the following text is treated as a JavaScript <em>expression</em>. So for example, in the first line below, the content of the <code>h1</code> tag will be <em>variable</em> <code>title</code> (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatented with the <code>title</code> variable. In both cases the default behaviour is to <em>escape</em> the line.</p>
+<p>If a tag is followed by the equals sign, the following text is treated as a JavaScript <em>expression</em>. So for example, in the first line below, the content of the <code>h1</code> tag will be <em>variable</em> <code>title</code> (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatented with the <code>title</code> variable. In both cases the default behaviour is to <em>escape</em> the line.</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">h1= title
 p= 'Evaluated and &lt;em&gt;escaped expression&lt;/em&gt;:' + title</code></pre>
@@ -94,7 +94,7 @@ p= 'Evaluated and &lt;em&gt;escaped expression&lt;/em&gt;:' + title</code></pre>
 p This line has an un-escaped string: !{'&lt;em&gt; is emphasised&lt;/em&gt;'}, an escaped string: #{'&lt;em&gt; is not emphasised&lt;/em&gt;'}, and escaped variables: #{title}.</code></pre>
 
 <div class="note">
-<p><strong>Tip:</strong> You will almost always want to escape data from users (via the <strong><code>#{}</code></strong> syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.</p>
+<p><strong>Tip:</strong> You will almost always want to escape data from users (via the <strong><code>#{}</code></strong> syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.</p>
 </div>
 
 <p>You can use the pipe ('<strong>|</strong>') character at the beginning of a line to indicate "<a href="https://pugjs.org/language/plain-text.html">plain text</a>". For example, the additional text shown below will be displayed on the same line as the preceding anchor, but will not be linked.</p>
@@ -144,6 +144,6 @@ block content
 <h2 id="Next_steps">Next steps</h2>
 
 <ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
+ <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
  <li>Proceed to the next subarticle of part 5: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template">The LocalLibrary base template</a>.</li>
 </ul>

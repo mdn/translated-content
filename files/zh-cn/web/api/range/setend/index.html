@@ -15,7 +15,7 @@ translation_of: Web/API/Range/setEnd
 
 <p> </p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>range</em>.setEnd(<em>endNode</em>, <em>endOffset</em>);
 </pre>
@@ -29,7 +29,7 @@ translation_of: Web/API/Range/setEnd
  <dd>必须为不小于 0 的整数。表示从<em>endNode</em>的结束位置算起的偏移量。</dd>
 </dl>
 
-<h2 id="Example" name="Example">例子</h2>
+<h2 id="Example">例子</h2>
 
 <pre class="brush: js">var range = document.createRange();
 var endNode = document.getElementsByTagName("p").item(3);
@@ -37,27 +37,9 @@ var endOffset = endNode.childNodes.length;
 range.setEnd(endNode, endOffset);
 </pre>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-range-setend', 'Range.setEnd()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-setEnd', 'Range.setEnd()')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

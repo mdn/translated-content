@@ -39,7 +39,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler
  <dd>
  <div class="note">这个处理器的 URL 必须以 <code>http</code> 或者 <code>https</code> 协议标记作为开头，最好是 <code>https</code> ，以满足一些浏览器出于安全考虑的要求。</div>
  </dd>
- <dt><code>title {{Obsolete_Inline}}</code></dt>
+ <dt><code>title</code> {{Deprecated_Inline}}</dt>
  <dd>一个用户可理解的处理器标题。标题会展示给用户，例如弹出对话框“允许这个站点处理 [scheme] 链接吗？”或者在浏览器设置中列出注册的处理器时。</dd>
  <dd>
  <div class="blockIndicator note">
@@ -111,7 +111,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler
 
 <p>将通知用户您的代码要求注册协议处理程序，以便他们可以决定是否允许它。有关 <code>https://www.google.com/ </code>上的示例，请参见以下屏幕截图：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9683/protocolregister.png"></p>
+<p><img src="protocolregister.png"></p>
 
 <div class="note">
 <p>"<a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#Getting_most_recent_window">Register a webmail service as mailto handler</a>" 展示了如何从跨平台组件对象模块 (XPCOM) 中做到这一切。</p>
@@ -119,22 +119,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-navigator-registerprotocolhandler', 'registerProtocolHandler()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

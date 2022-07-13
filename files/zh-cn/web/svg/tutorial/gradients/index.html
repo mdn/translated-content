@@ -9,7 +9,7 @@ translation_of: Web/SVG/Tutorial/Gradients
 
 <p>有两种类型的渐变：线性渐变和径向渐变。你<strong>必须</strong>给渐变内容指定一个 id 属性，否则文档内的其他元素就不能引用它。为了让渐变能被重复使用，渐变内容需要定义在&lt;defs&gt;标签内部，而不是定义在形状上面。</p>
 
-<h2 id="SVGLinearGradient" name="SVGLinearGradient">线性渐变</h2>
+<h2 id="SVGLinearGradient">线性渐变</h2>
 
 <p>线性渐变沿着直线改变颜色，要插入一个线性渐变，你需要在 SVG 文件的<code>defs 元素</code>内部，创建一个{{SVGElement('linearGradient')}} 节点。</p>
 
@@ -66,7 +66,7 @@ translation_of: Web/SVG/Tutorial/Gradients
 </pre>
 尽管通常你可能在文档的顶部就定义了 Gradient1，但我在结点上直接包含了 xlink 的命名空间，关于这点的更多信息我们会在<a href="/en-US/Web/SVG/Tutorial/Other_content_in_SVG" title="en-US/Web/SVG/Tutorial/Other content in SVG">讨论图片</a>的时候详解。</div>
 
-<h2 id="Radial_Gradient" name="Radial_Gradient">径向渐变</h2>
+<h2 id="Radial_Gradient">径向渐变</h2>
 
 <p>径向渐变与线性渐变相似，只是它是从一个点开始发散绘制渐变。创建径向渐变需要在文档的<code>defs</code>中添加一个{{SVGElement('radialGradient')}}元素</p>
 

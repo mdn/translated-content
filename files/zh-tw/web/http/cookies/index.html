@@ -32,7 +32,7 @@ translation_of: Web/HTTP/Cookies
 
 <p>收到一個 HTTP 請求時，伺服器可以傳送一個 {{HTTPHeader("Set-Cookie")}} 的標頭和回應。Cookie 通常存於瀏覽器中，並隨著請求被放在{{HTTPHeader("Cookie")}} HTTP 標頭內，傳給同個伺服器。可以註明 Cookie 的有效或終止時間，超過後 Cookie 將不再發送。此外，也可以限制 Cookie 不傳送到特定的網域或路徑。</p>
 
-<h3 id="Set-Cookie_及_Cookie_標頭"><code>Set-Cookie</code> 及 <code>Cookie</code> 標頭</h3>
+<h3 id="Set-Cookie_及_Cookie_標頭"><code>Set-Cookie</code> 及 <code>Cookie</code> 標頭</h3>
 
 <p>{{HTTPHeader("Set-Cookie")}} HTTP 回應標頭從伺服器傳送 cookies 至用戶代理。一個簡單的 cookie 可以如下例設定：</p>
 
@@ -79,7 +79,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <h3 id="Secure_以及_HttpOnly_cookies"><code>Secure</code> 以及 <code>HttpOnly</code> cookies</h3>
 
-<p>Secure cookie 只有在以加密的請求透過 HTTPS 協議時，傳送給伺服器。但即便是 <code>Secure</code> ，敏感的資訊絕對不該存在 cookies 內，因為他們本質上是不安全的，這個旗標不能提供真正的保護。自 Chrome 52 以及 Firefox 52 開始，不安全的網站（<code>http:</code>）就不能以 <code>Secure</code> 的指示設定 cookies。</p>
+<p>Secure cookie 只有在以加密的請求透過 HTTPS 協議時，傳送給伺服器。但即便是 <code>Secure</code> ，敏感的資訊絕對不該存在 cookies 內，因為他們本質上是不安全的，這個旗標不能提供真正的保護。自 Chrome 52 以及 Firefox 52 開始，不安全的網站（<code>http:</code>）就不能以 <code>Secure</code> 的指示設定 cookies。</p>
 
 <p>為了避免跨站腳本攻擊 ({{Glossary("XSS")}})，JavaScript 的{{domxref("Document.cookie")}} API 無法取得 <code>HttpOnly</code> cookies；他們只傳送到伺服器。舉例來說，不需要讓 JavaScript 可以取用仍在伺服器 sessions 中的 cookies 時，就應該立 <code>HttpOnly</code> 的旗幟。</p>
 
@@ -124,7 +124,7 @@ console.log(document.cookie);
 <p>機密或敏感的資訊永遠不應該以 HTTP Cookies 的方式儲存或傳送，因為整個機制的本質是不安全的。</p>
 </div>
 
-<h3 id="Session_hijacking_以及_XSS">Session hijacking 以及 XSS</h3>
+<h3 id="Session_hijacking_以及_XSS">Session hijacking 以及 XSS</h3>
 
 <p>Cookies 常用於網頁應用程式中，識別使用者與其 authenticated session，因此竊取 cookie 可能造成使用者的 authenticated session 被劫持。一般偷取 cookies 的作法包括社交工程（Social Engineering），或利用應用程式中的 {{Glossary("XSS")}} 漏洞。</p>
 

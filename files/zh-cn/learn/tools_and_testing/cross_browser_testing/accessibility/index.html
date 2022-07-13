@@ -122,9 +122,9 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>某些 HTML 功能可以使用键盘来选择 — 这是默认的，从早期 web 开始就是这样的。具有此功能的元素是允许用户与网页交互的常见元素，比如 links, {{htmlelement("button")}}s, 以及表单元素，比如{{htmlelement("input")}}.</p>
 
-<p>浏览<a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">native-keyboard-accessibility.html</a> (查看<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">源码</a>) 尝试一下— 在新标签页中打开它，然后尝试按 Tab 键；按下几下后，你应该看到标签焦点开始在不同的可聚焦元素之间移动；在每个浏览器中，被聚焦的元素都被赋予突出的默认样式 (不同的浏览器表现略有不同) 以便你能分辨聚焦在哪个元素上。</p>
+<p>浏览<a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">native-keyboard-accessibility.html</a> (查看<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">源码</a>) 尝试一下— 在新标签页中打开它，然后尝试按 Tab 键；按下几下后，你应该看到标签焦点开始在不同的可聚焦元素之间移动；在每个浏览器中，被聚焦的元素都被赋予突出的默认样式 (不同的浏览器表现略有不同) 以便你能分辨聚焦在哪个元素上。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14215/button-focused-unfocused.png" style="border-style: solid; border-width: 1px; display: block; height: 39px; margin: 0px auto; width: 288px;"></p>
+<p><img src="button-focused-unfocused.png"></p>
 
 <p>然后，你可以按 Enter / Return 键来关注焦点链接，或者按一个按钮（我们已经包含一些 JavaScript 来使按钮提醒消息），或者在输入框开始输入文本，（其他表单元素具有不同的控件，例如{{htmlelement("select")}}元素可以使用向上和向下箭头键显示和循环显示其选项）。</p>
 
@@ -230,7 +230,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>在许多情况下，视觉设计要求并非一次显示所有内容。例如，在我们的<a href="http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a>“示例（查看<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">源码</a>）中，我们有三个信息面板，但是我们将它们放在彼此的顶部，用户可以通过单击以显示每个选项卡（也可以通过键盘访问 — 可以使用 Tab 键和回车键选择它们）。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13368/tabbed-info-box.png" style="display: block; height: 400px; margin: 0px auto; width: 450px;"></p>
+<p><img alt="" src="20191022144107.png"></p>
 
 <p>屏幕阅读器用户根本不关心这些，只要源内容顺序有意义，他们就很满意，并且他们可以全部获取。绝对定位（在本示例中使用的定位）通常被视为隐藏内容以产生视觉效果的最佳机制之一，因为它不会阻止屏幕阅读器获取相关内容。</p>
 
@@ -312,7 +312,7 @@ a:focus, input:focus, button:focus, select:focus {
  <li>下滑，直到你看到错误/描述部分，如下图。</li>
 </ol>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14217/tenon-screenshot.png" style="border-style: solid; border-width: 1px; display: block; height: 593px; margin: 0px auto; width: 870px;"></p>
+<p><img src="https://mdn.mozillademos.org/files/14217/tenon-screenshot.png" style="border-style: solid; border-width: 1px; display: block; height: 593px; margin: 0px auto; width: 870px;"></p>
 
 <p>你还可以探索一些选项（请参阅页面顶部附近的<em>Show Options（译者注：显示选项）</em>链接），或者使用 Tenon 的 API。</p>
 
@@ -331,7 +331,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>扩展程序将可访问性选项卡添加到浏览器开发人员工具。例如，我们安装了 Firefox 版本，然后使用它来审核<a href="http://mdn.github.io/learning-area/accessibility/html/bad-table.html">bad-table.html</a>示例。我们得到以下结果：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14213/aXe-screenshot.png" style="display: block; height: 580px; margin: 0px auto; width: 800px;"></p>
+<p><img src="axe-screenshot.png"></p>
 
 <p>aXe 也可以使用<code>npm</code>安装，并且可以与任务运行器（如<a href="http://gruntjs.com/">Grunt</a> 和<a href="http://gulpjs.com/">Gulp</a>），自动化框架（如<a href="http://www.seleniumhq.org/">Selenium</a>和<a href="https://cucumber.io/">Cucumber</a>），单元测试框架（如<a href="http://jasmine.github.io/">Jasmin</a>）集成，以及更多其他功能（详见<a href="https://www.deque.com/products/axe/">main aXe page</a> ）。</p>
 
@@ -365,7 +365,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>当 VO 开启时，你会看到一个会显示当前选中信息的黑色框在屏幕的左下角，除此之外屏幕显示大体还是相同的。当前选中的部分也会出现一个黑色的边框以进行高亮显示，这个黑色框就是 VO 的光标。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14219/voiceover.png" style="border-style: solid; border-width: 1px; display: block; height: 386px; margin: 0px auto; width: 800px;"></p>
+<p><img src="voiceover.png"></p>
 
 <p>在使用中，你会用到"VO 修饰键"，"VO 修饰键"是一个单独键或组合键，当你使用 VO 的快捷键时，你需要额外按下这个"VO 修饰键"。屏幕阅读器通常都会有修饰键，防止它们的快捷键和其他程序的快捷键冲突。VO 的修饰键是 CapsLock, 或 Ctrl + Option。</p>
 

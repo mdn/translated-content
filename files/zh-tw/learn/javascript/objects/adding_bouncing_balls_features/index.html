@@ -54,7 +54,7 @@ translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 <ol>
  <li><code>Shape()</code> 建構子對 <code>x</code>、<code>y</code>、<code>velX</code>、<code>velY</code> 屬性的定義方式，就如同 <code>Ball()</code> 建構子所用的方式。</li>
  <li>另須定義新的 <code>exists</code> 屬性，用以追蹤球體是否存在於程式之中 (也就是尚未遭邪惡圈所吃掉)。此屬性必為布林值 (Boolean)，初始值為 <code>true</code>。</li>
- <li><code>Ball()</code> 建構子應從 <code>Shape()</code> 建構子繼承 <code>x</code>、<code>y</code>、<code>velX</code>、<code>velY</code>、<code>exists</code> 等屬性。另必須將這些屬性定義為參數以利呼叫之。</li>
+ <li><code>Ball()</code> 建構子應從 <code>Shape()</code> 建構子繼承 <code>x</code>、<code>y</code>、<code>velX</code>、<code>velY</code>、<code>exists</code> 等屬性。另必須將這些屬性定義為參數以利呼叫之。</li>
  <li>必須定義 <code>color</code> 與 <code>size</code> 屬性各 1 組，且由於兩者均來自於原始的 <code>Ball()</code> 建構子之中，所以剛開始的隨機值亦須相同。</li>
  <li>記得應正確設定 <code>Ball()</code> 建構子的 <code>prototype</code> 與 <code>constructor</code>。</li>
 </ol>
@@ -90,7 +90,7 @@ translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 <ul>
  <li>我們要空心的邪惡圈，但不只是單純實心黑線畫成的圓而已 (要有邊框)。只要將 <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> 與 <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fill">fill()</a></code> 更新成 <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle">strokeStyle</a></code> 與 <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/stroke">stroke()</a></code> 即可辦到。</li>
- <li>還可以讓邊框更粗一點，有助你更容易看到邪惡圈。只要在 <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath">beginPath()</a></code> 呼叫之後的某個地方設定 <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth">lineWidth</a></code> 的值 (「3」就可以) 即可。</li>
+ <li>還可以讓邊框更粗一點，有助你更容易看到邪惡圈。只要在 <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath">beginPath()</a></code> 呼叫之後的某個地方設定 <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth">lineWidth</a></code> 的值 (「3」就可以) 即可。</li>
 </ul>
 
 <h4 id="checkBounds()"><code>checkBounds()</code></h4>
@@ -99,7 +99,7 @@ translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 <ul>
  <li>Get rid of the last two lines — we don't want to automatically update the evil circle's position on every frame, because we will be moving it in some other way, as you'll see below.</li>
- <li>Inside the <code>if()</code> statements, if the tests return true we don't want to update <code>velX</code>/<code>velY</code>; we want to instead change the value of <code>x</code>/<code>y</code> so the evil circle is bounced back onto the screen slightly. Adding or subtracting (as appropriate) the evil circle's <code>size</code> property would make sense.</li>
+ <li>Inside the <code>if()</code> statements, if the tests return true we don't want to update <code>velX</code>/<code>velY</code>; we want to instead change the value of <code>x</code>/<code>y</code> so the evil circle is bounced back onto the screen slightly. Adding or subtracting (as appropriate) the evil circle's <code>size</code> property would make sense.</li>
 </ul>
 
 <h4 id="setControls()"><code>setControls()</code></h4>

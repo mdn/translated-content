@@ -35,11 +35,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <h2 id="說明">說明</h2>
 
-<p><code>slice</code> 不會修改原本的陣列，而是回傳由原本的陣列淺層複製的元素。原始陣列的元素會按照下列規則拷貝：</p>
+<p><code>slice</code> 不會修改原本的陣列，而是回傳由原本的陣列淺層複製的元素。原始陣列的元素會按照下列規則拷貝：</p>
 
 <ul>
- <li>如果該元素是個對象引用（不是實際的對象），<code>slice</code> 會拷貝這個對象引用到新的陣列內。兩個對象引用都引用了同一個對象。如果被引用的對象發生改變，則新的和原來的陣列中的這個元素也會發生改變。</li>
- <li>對於字串、數字、布林來說 (不是 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>、<a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a> 或者 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a> 對象), <code>slice</code> 會拷貝這些值到新的陣列內。在別的陣列內修改這些字串、數字或是布林，將不會影響另一個陣列。</li>
+ <li>如果該元素是個對象引用（不是實際的對象），<code>slice</code> 會拷貝這個對象引用到新的陣列內。兩個對象引用都引用了同一個對象。如果被引用的對象發生改變，則新的和原來的陣列中的這個元素也會發生改變。</li>
+ <li>對於字串、數字、布林來說 (不是 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>、<a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a> 或者 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a> 對象), <code>slice</code> 會拷貝這些值到新的陣列內。在別的陣列內修改這些字串、數字或是布林，將不會影響另一個陣列。</li>
 </ul>
 
 <p>如果添加了新的元素到另一個陣列內，則另一個不會受到影響。</p>

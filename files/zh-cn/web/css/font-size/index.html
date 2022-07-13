@@ -34,7 +34,7 @@ font-size: inherit;
 
 <p>{{cssinfo}}</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <p><strong>font-size</strong> 属性以两种方式之一指定：</p>
 
@@ -43,7 +43,7 @@ font-size: inherit;
  <li>作为一个  <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size$edit#&lt;length-percentage>">&lt;length-percentage&gt;</a></code> 值。</li>
 </ul>
 
-<h3 id="Values" name="Values">值</h3>
+<h3 id="Values">值</h3>
 
 <dl>
  <dt><code>xx-small, x-small, small, medium, large, x-large, xx-large</code></dt>
@@ -62,15 +62,15 @@ font-size: inherit;
 
 {{csssyntax("font-size")}}
 
-<h2 id="Possible_approaches" name="Possible_approaches">可用方法</h2>
+<h2 id="Possible_approaches">可用方法</h2>
 
 <p>有多重定义字体大小的方法，包括了使用关键字及使用像素或 em 数字值。请根据网页的特定需求选择适用的方法。</p>
 
-<h3 id="Keywords" name="Keywords">关键字</h3>
+<h3 id="Keywords">关键字</h3>
 
 <p>关键字是定义网络字体大小的好方法。通过在 body 元素上定义关键字字体大小，你可以在网页的任何地方设置相对字体大小，这让你能轻易地缩放整个网页的字体大小。</p>
 
-<h3 id="Pixels" name="Pixels">像素</h3>
+<h3 id="Pixels">像素</h3>
 
 <p>当你需要精确地像素时，用 px 设定字体大小是一种好方法。一像素的大小是固定的。这是一个不取决于平台的、跨浏览器的准确设置字体大小高度为你所想的像素大小的方法。因为不同浏览器为得到同样效果的算法可能不同，所以显示效果可能有微小的不同。</p>
 
@@ -78,7 +78,7 @@ font-size: inherit;
 
 <div class="note"><strong>注意：</strong> 用像素字体定义使得字体大小不可由用户的浏览器改变。（例如，视力较低用户可能希望使用比网页设计师设定的字体大小大很多的字体）所以，如果你想创造能广泛使用的设计请避免使用像素设定字体。</div>
 
-<h3 id="Ems" name="Ems">Em</h3>
+<h3 id="Ems">Em</h3>
 
 <p>另一种方法是用<code>em</code>值设定字体大小。<code>em</code> 值的大小是动态的。当定义或继承 font-size 属性时，1em 等于该元素的字体大小。如果你在网页中任何地方都没有设置文字大小的话，那它将等于浏览器默认文字大小，通常是 16px。所以通常 1em = 16px。2em = 32px。 如果你设置了 body 元素的字体大小为 20px，那 1em = 20px、2em = 40px。那个 2 就是当前 em 大小的倍数。</p>
 
@@ -99,9 +99,9 @@ p {
 
 <p>因为 em 可以自动适应用户的字体，em 是一个非常有用的 CSS 单位。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_1" name="Example_1">示例 1</h3>
+<h3 id="Example_1">示例 1</h3>
 
 <pre class="brush: css">/* 设定段落文字大小为非常大 */
 p { font-size: xx-large }
@@ -113,7 +113,7 @@ h1 { font-size: 250% }
 span { font-size: 16px; }
 </pre>
 
-<h3 id="Example_2" name="Example_2">示例 2</h3>
+<h3 id="Example_2">示例 2</h3>
 
 <pre class="brush: css">.small {
 	font-size: xx-small;
@@ -139,11 +139,11 @@ span { font-size: 16px; }
 
 <p>{{EmbedLiveSample('Example_2','600','200')}}</p>
 
-<h2 id="Notes" name="Notes">备注</h2>
+<h2 id="Notes">备注</h2>
 
 <p>{{Cssxref("font-size")}}属性的<code style="font-style: normal;">em 和</code><code style="font-style: normal;">ex</code>单位值相对于父元素的字体大小（不像其他属性，它们指的是相对当前元素的字体大小）。这意味对于{{Cssxref("font-size")}}属性来说，<code style="font-style: normal;">em 单位</code>和百分比单位的作用是一样的。</p>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="Specifications">规范</h2>
 
 <table class="standard-table">
  <thead>
@@ -177,6 +177,6 @@ span { font-size: 16px; }
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 {{Compat("css.properties.font-size")}}

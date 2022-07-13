@@ -145,7 +145,7 @@ translation_of: Web/API/Element/wheel_event
 
 <h3 id="滚轮事件和其它的鼠标滚动事件">滚轮事件和其它的鼠标滚动事件</h3>
 
-<p>如果一个用户真实操作触发的滚轮事件没有被处理，这会触发一个 <code>DOMMouseScroll</code> 事件和一个 <code>MozMousePixelScroll</code> 事件以向下兼容。它们的属性值由滚轮事件 delta 值和最近的 ancestor clipped 元素计算出。(i.e., <a href="/en-US/CSS/overflow" title="en-US/CSS/overflow"><code>overflow</code></a> 不可见). 如果滚轮事件或其它任意一个剩余事件被 {{ domxref("event.preventDefault()") }}阻止，将什么都不会发生。</p>
+<p>如果一个用户真实操作触发的滚轮事件没有被处理，这会触发一个 <code>DOMMouseScroll</code> 事件和一个 <code>MozMousePixelScroll</code> 事件以向下兼容。它们的属性值由滚轮事件 delta 值和最近的 ancestor clipped 元素计算出。(i.e., <a href="/en-US/CSS/overflow"><code>overflow</code></a> 不可见). 如果滚轮事件或其它任意一个剩余事件被 {{ domxref("event.preventDefault()") }}阻止，将什么都不会发生。</p>
 
 <p>以下为事件顺序：</p>
 
@@ -214,9 +214,9 @@ translation_of: Web/API/Element/wheel_event
  </tbody>
 </table>
 
-<p>如果一个浏览器插件需要知道剩余事件是否被 web 内容所处理，它可以使用第 6 个滚轮事件判断，详细内容请查阅系统事件组 <a href="/en-US/docs/XPCOM_Interface_Reference/nsIEventListenerService" title="/en-US/docs/XPCOM_Interface_Reference/nsIEventListenerService"><code>nsIEventListenerService</code></a> 的文档。</p>
+<p>如果一个浏览器插件需要知道剩余事件是否被 web 内容所处理，它可以使用第 6 个滚轮事件判断，详细内容请查阅系统事件组 <a href="/en-US/docs/XPCOM_Interface_Reference/nsIEventListenerService"><code>nsIEventListenerService</code></a> 的文档。</p>
 
-<p>通过设置用户偏好可以修改 delta 值和默认行为 (<a href="https://wiki.mozilla.org/Gecko:Mouse_Wheel_Scrolling#Preferences_for_customizing_delta_values_and_default_action" title="/en-US/docs/HTML/Element/details">details</a>)， 因此开发者不应该期望在处理这个事件后发生特殊的行为。</p>
+<p>通过设置用户偏好可以修改 delta 值和默认行为 (<a href="https://wiki.mozilla.org/Gecko:Mouse_Wheel_Scrolling#Preferences_for_customizing_delta_values_and_default_action">details</a>)， 因此开发者不应该期望在处理这个事件后发生特殊的行为。</p>
 
 <h3 id="delta_值">delta 值</h3>
 

@@ -79,10 +79,10 @@ translation_of: Web/Security/Same-origin_policy
  <li>&lt;script src=”…”&gt;&lt;/script&gt;內的Javascript，但語法錯誤訊息只限於同源程式碼腳本。</li>
  <li>CSS的&lt;link rel="stylesheet" href="..."&gt;，由於CSS寬鬆語法規則，跨來源CSS要求正確的Content-Type標頭。限制在瀏覽器間各有差異: <a href="http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx">IE</a>, <a href="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html">Firefox</a>, <a href="http://code.google.com/p/chromium/issues/detail?id=9877">Chrome</a>, <a href="http://support.apple.com/kb/HT4070">Safari</a> (請至CVE-2010-0051)以及<a href="http://www.opera.com/support/kb/view/943/">Opera</a>.</li>
  <li>{{htmlelement("img")}}的影像；支援格式有PNG, JPEG, GIF, BMP, SVG等等</li>
- <li> {{htmlelement("video")}}和{{htmlelement("audio")}}媒體檔案</li>
- <li> <a href="/en-US/docs/HTML/Element/object"><code>&lt;object&gt;</code></a>, <a href="/en-US/docs/HTML/Element/embed"><code>&lt;embed&gt;</code></a>和<a href="/en-US/docs/HTML/Element/applet"><code>&lt;applet&gt;</code></a>的外掛</li>
+ <li> {{htmlelement("video")}}和{{htmlelement("audio")}}媒體檔案</li>
+ <li> <a href="/en-US/docs/HTML/Element/object"><code>&lt;object&gt;</code></a>, <a href="/en-US/docs/HTML/Element/embed"><code>&lt;embed&gt;</code></a>和<a href="/en-US/docs/HTML/Element/applet"><code>&lt;applet&gt;</code></a>的外掛</li>
  <li><a href="/en-US/docs/CSS/@font-face"><code>@font-face</code></a> 的字型；有些瀏覽器允許跨來源字型，有些則不。</li>
- <li> <a href="/en-US/docs/HTML/Element/frame"><code>&lt;frame&gt;</code></a>以及<a href="/en-US/docs/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>中的內容；如果一個網站想要避免跨來源載入互動，可以藉由<code><a href="/en-US/docs/HTTP/X-Frame-Options">X-Frame-Options</a></code>標頭避免。</li>
+ <li> <a href="/en-US/docs/HTML/Element/frame"><code>&lt;frame&gt;</code></a>以及<a href="/en-US/docs/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>中的內容；如果一個網站想要避免跨來源載入互動，可以藉由<code><a href="/en-US/docs/HTTP/X-Frame-Options">X-Frame-Options</a></code>標頭避免。</li>
 </ul>
 
 <h3 id="如何允許跨來源存取">如何允許跨來源存取</h3>

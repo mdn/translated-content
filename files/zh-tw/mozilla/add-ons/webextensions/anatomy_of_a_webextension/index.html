@@ -30,7 +30,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>擴展套件通常需要保持長期狀態或長時間執行操作，而生命週期不依賴於任何特定網頁或瀏覽器視窗。這是後台腳本的用途。</p>
 
-<p>後台腳本會在擴充套件讀取時立即執行且會持續執行直到擴充套件被禁用或是解除安裝。你可以在腳本裡使用任何WebExtension APIs， 只要你已經申請了必要的權限。</p>
+<p>後台腳本會在擴充套件讀取時立即執行且會持續執行直到擴充套件被禁用或是解除安裝。你可以在腳本裡使用任何WebExtension APIs， 只要你已經申請了必要的權限。</p>
 
 <h3 id="Specifying_background_scripts_載入後台腳本">Specifying background scripts 載入後台腳本</h3>
 
@@ -121,7 +121,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 <ul>
  <li>Make cross-domain XHR requests.</li>
  <li>Use a small subset of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension APIs</a>.</li>
- <li>Exchange messages with their background scripts and can in this way indirectly access all the WebExtension APIs.</li>
+ <li>Exchange messages with their background scripts and can in this way indirectly access all the WebExtension APIs.</li>
 </ul>
 
 <p>Content scripts cannot directly access normal page scripts but can exchange messages with them using the standard <code><a href="/en-US/docs/Web/API/Window/postMessage">window.postMessage()</a></code> API.</p>
@@ -132,7 +132,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <h2 id="Web_accessible_resources_網頁無障礙資源">Web accessible resources 網頁無障礙資源</h2>
 
-<p>Web accessible resources are resources such as images, HTML, CSS, and JavaScript that you include in the extension and want to make accessible to content scripts and page scripts. Resources which are made web-accessible can be referenced by page scripts and content scripts using a special URI scheme.</p>
+<p>Web accessible resources are resources such as images, HTML, CSS, and JavaScript that you include in the extension and want to make accessible to content scripts and page scripts. Resources which are made web-accessible can be referenced by page scripts and content scripts using a special URI scheme.</p>
 
 <p>For example, if a content script wants to insert some images into web pages, you could include them in the extension and make them web accessible. Then the content script could create and append <code><a href="/en-US/docs/Web/HTML/Element/img">img</a></code> tags which reference the images via the <code>src</code> attribute.</p>
 

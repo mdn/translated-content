@@ -42,13 +42,13 @@ translation_of: Web/HTTP/Compression
 
 <p>对于各种压缩手段来说，端到端压缩技术是 Web 站点性能提升最大的部分之所在。端到端压缩技术指的是消息体压缩是在服务器端完成的，并且在传输过程中保持不变，直到抵达客户端。不管途中遇到什么样的中间节点，它们都会使消息体保持原样。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13801/HTTPEnco1.png" style="height: 307px; width: 955px;"></p>
+<p><img src="httpenco1.png"></p>
 
 <p>所有的现代浏览器及服务器都支持该技术，唯一需要协商的是所采用的压缩算法。这些压缩算法是为文本内容进行过优化的。在 20 世纪，压缩技术快速发展，为数众多的算法相继出现，扩大了可选的范围。如今只有两种算法有着举足轻重的地位：gzip 应用最广泛，br 则是新的挑战者。</p>
 
 <p>为了选择要采用的压缩算法，浏览器和服务器之间会使用<a href="/en-US/docs/Web/HTTP/Content_negotiation">主动协商机制</a>。浏览器发送 {{HTTPHeader("Accept-Encoding")}} 首部，其中包含有它所支持的压缩算法，以及各自的优先级，服务器则从中选择一种，使用该算法对响应的消息主体进行压缩，并且发送 {{HTTPHeader("Content-Encoding")}} 首部来告知浏览器它选择了哪一种算法。由于该内容协商过程是基于编码类型来选择资源的展现形式的，在响应中， {{HTTPHeader("Vary")}} 首部中至少要包含 {{HTTPHeader("Accept-Encoding")}} ；这样的话，缓存服务器就可以对资源的不同展现形式进行缓存。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13811/HTTPCompression1.png" style="height: 307px; width: 771px;"></p>
+<p><img src="httpcompression1.png"></p>
 
 <p>由于压缩技术可以带来很大的性能提升，建议对除了已经经过压缩的文件如图片、音频和视频文件之外的其他类型的文件均进行应用。</p>
 
@@ -58,11 +58,11 @@ translation_of: Web/HTTP/Compression
 
 <p>逐跳压缩技术尽管与端到端压缩技术有些类似，但是它们在一点上有着本质的区别，即这里的压缩指的不是对源头服务器上的资源的压缩，以此来创建一份特定的展现形式然后进行传输，而是对客户端与服务器端之间的任意两个节点之间传递的消息的主体的压缩。在两个相邻的中间节点之间的连接上，可能会应用不同的压缩方式。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13807/HTTPTE1.png"></p>
+<p><img src="httpte1.png"></p>
 
 <p>为了实现这个目的，HTTP 协议中采用了与端到端压缩技术所使用的内容协商机制相类似的机制：节点发送请求，使用 {{HTTPHeader("TE")}} 首部来宣布它的意愿，另外一个节点则从中选择合适的方法，进行应用，然后在 {{HTTPHeader("Transfer-Encoding")}} 首部中指出它所选择的方法。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13809/HTTPComp2.png"></p>
+<p><img src="httpcomp2.png"></p>
 
 <p>在实际应用中，逐跳压缩对于服务器和客户端来说是不可见的，并且很少使用。{{HTTPHeader("TE")}} 首部和 {{HTTPHeader("Transfer-Encoding")}} 首部最常用来发送分块响应，允许在获得资源的确切长度之前就可以开始传输。</p>
 

@@ -236,7 +236,7 @@ window.addEventListener('deviceorientation', handleOrientation);</code></pre>
 <p><strong>警告：</strong> Chrome 和 Firefox 处理角度的机制不同，所以某些轴上的方向是相反的。</p>
 </div>
 
-<h2 id="处理移动（motion）事件" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">处理移动（motion）事件</h2>
+<h2 id="处理移动（motion）事件">处理移动（motion）事件</h2>
 
 <p>移动事件的处理跟方向事件是一样的，除了他们有自己的事件名：{{ event("devicemotion") }}</p>
 
@@ -255,7 +255,7 @@ window.addEventListener('deviceorientation', handleOrientation);</code></pre>
  <li>{{ domxref("DeviceMotionEvent.interval") }}</li>
 </ul>
 
-<h3 id="相关值解释_2" style="line-height: 24px; font-size: 1.71428571428571rem;">相关值解释</h3>
+<h3 id="相关值解释_2">相关值解释</h3>
 
 <p>{{ domxref("DeviceMotionEvent") }}对象提供给 web 开发者设备在位置和方向上的改变速度的相关信息。这些变化信息是通过三个轴来体现的。（<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained" style="line-height: 1.5;" title="/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a>有更详细的说明。）</p>
 
@@ -277,7 +277,7 @@ window.addEventListener('deviceorientation', handleOrientation);</code></pre>
 
 <p>最后，<a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent.interval" style="line-height: 1.5;" title="Returns the interval, in milliseconds, at which data is obtained from the underlaying hardware. You can use this to determine the granularity of motion events."><code>interval</code></a> 表示的是从设备获取数据的间隔时间，单位是毫秒。</p>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <thead>
@@ -296,7 +296,7 @@ window.addEventListener('deviceorientation', handleOrientation);</code></pre>
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <h3 id="DeviceMotionEvent"><code>DeviceMotionEvent</code></h3>
 
@@ -306,7 +306,7 @@ window.addEventListener('deviceorientation', handleOrientation);</code></pre>
 
 <p>{{Compat("api.DeviceOrientationEvent")}}</p>
 
-<h2 id="参见" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">参见</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li>{{domxref("DeviceOrientationEvent")}}</li>
