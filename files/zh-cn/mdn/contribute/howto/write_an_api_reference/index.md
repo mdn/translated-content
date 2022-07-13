@@ -197,7 +197,6 @@ Now you should be ready to start writing your interface pages. Each interface re
 
     - \\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)
     - \\{{Deprecated_header}}
-    - \\{{Obsolete_header}}
     - \\{{Non-standard_header}}
 
 3.  **Description**: the first paragraph of the interface page should provide a short concise description of the interface's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Note that if the interface defines a mixin, you shouldn't use the term "Interface" to describe it, but mixin instead — it isn't really a standalone interface as such, but a mixin that adds functionality to multiple other interfaces. Similarly, if the interface is actually a dictionary, you should use that term instead of "interface".
@@ -252,7 +251,6 @@ Property pages must have the following sections:
 
     - \\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)
     - \\{{Deprecated_header}}
-    - \\{{Obsolete_header}}
     - \\{{Non-standard_header}}
 
 4.  **Description**: the first paragraph of the property page should provide a short, concise description of the property's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default/initial value, and whether it's read only or not. The structure of the first sentence must be:
@@ -300,7 +298,6 @@ Method pages need the following sections:
 
     - \\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)
     - \\{{Deprecated_header}}
-    - \\{{Obsolete_header}}
     - \\{{Non-standard_header}}
 
 4.  **Description**: The first paragraph of the method page should provide a short concise description of the method's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default parameter values, any theory that the method relies on, and what the parameter values do.
