@@ -2241,7 +2241,7 @@
 /zh-CN/docs/Web/HTTP/Headers/Cookie2	/zh-CN/docs/Web/HTTP/Headers/Cookie
 /zh-CN/docs/Web/HTTP/Headers/Public-Key-Pins	/zh-CN/docs/conflicting/Web/HTTP/Headers/Expect-CT
 /zh-CN/docs/Web/HTTP/Headers/Public-Key-Pins-Report-Only	/zh-CN/docs/conflicting/Web/HTTP/Headers/Expect-CT_63e560324d2c47190db4456d746ba07b
-/zh-CN/docs/Web/HTTP/Headers/Set-Cookie2	/zh-CN/docs/conflicting/Web/HTTP/Headers/Set-Cookie
+/zh-CN/docs/Web/HTTP/Headers/Set-Cookie2	/zh-CN/docs/Web/HTTP/Headers/Set-Cookie
 /zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /zh-CN/docs/Web/HTTP/Public_Key_Pinning	/zh-CN/docs/Web/Security/Certificate_Transparency
 /zh-CN/docs/Web/HTTP/Response_codes	/zh-CN/docs/Web/HTTP/Status
