@@ -15,15 +15,15 @@ tags:
 translation_of: Web/API/Notification/onerror
 original_slug: Web/API/Notification/onerror
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p><strong><code>onerror</code></strong> は {{domxref("Notification")}} インターフェイスのプロパティで、 {{domxref("HTMLElement/error_event", "error")}} イベントを受信するイベントリスナーを指定します。これらのイベントは {{domxref("Notification")}} が失敗したとき (多くの場合は通知の表示が阻止されたというエラーの場合) に発生します。</p>
+<strong><code>onerror</code></strong> は {{domxref("Notification")}} インターフェイスのプロパティで、 {{domxref("HTMLElement/error_event", "error")}} イベントを受信するイベントリスナーを指定します。これらのイベントは {{domxref("Notification")}} が失敗したとき (多くの場合は通知の表示が阻止されたというエラーの場合) に発生します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 <pre class="syntaxbox notranslate"><var>Notification</var>.onerror = function() { ... };</pre>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
 <table class="standard-table">
  <thead>
@@ -42,11 +42,11 @@ original_slug: Web/API/Notification/onerror
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Notification.onerror")}}</p>
+{{Compat("api.Notification.onerror")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
 <ul>
  <li>{{domxref("Notification")}}</li>
