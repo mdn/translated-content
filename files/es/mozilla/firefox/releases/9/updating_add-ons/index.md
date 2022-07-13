@@ -44,8 +44,6 @@ Las preferencia `geo.wifi.*` no tendrán valores por defecto, aunque son respeta
 
 `nodePrincipal` y `baseURIObject` han sido movidos de `nsDOMClassInfo` a `XrayWrapper`. Esto no debería afectar a demasiados complementos, ya que esto solo sería un problema si estos intentan accedar a esas propiedades en los objetos DOM {{ domxref("Node") }} desde scripts no privilegiados que han pedido privilegios XPConnect usando `enablePrivilege()`.
 
-This shouldn't affect many add-ons, since it would only be an issue if they try to access these properties on DOM {{ domxref("Node") }} objects from unprivileged script that have requested XPConnect privileges using `enablePrivilege()`.
-
 ## Cambios en el DOM
 
 - El hace tiempo obsoleto `Navigator.taintEnabled()` ha sido removido. No ha sido útil por mucho tiempo, pero era comúnmente utilizado en la deteción de script en navegadores, ya que era algo específico de Netscape. Llamar a este método arrojará una excepción en Firefox 9.
@@ -63,4 +61,3 @@ Estos cambios son notables, pudiendo afectar a los componentes binarios XPCOM. D
 El atributo `pending` ha sido añadido al elemento `tab`. Si este atributo está presente, la pestaña está en el proceso de ser restaurada por el servicio de almacenamiento de sesión. Tú puedes usar esto para dar estilos a la pestaña miestras dura el proceso de restauración. No importa si el usuario ha activado en preferencia la opción "No cargar las pestañas hasta que sean seleccionadas", el atributo `pending` se establece en las pestañas hasta que se cargan.
 
 Similarmente, las pestañas también ahora tienen un atributo `unread`. Esta propiedad, si esta presente, indica que la pestaña ha cambiado desde el último momento en que estuvo activa. Tú puedes usarlo para dar diferentes estilos a las pestañas cuando hayan cambiado desde la última vez que el usuario las abrió. Este atributo también está presente en las pestañas que no han sido vistas durante la sesión actual.
-
