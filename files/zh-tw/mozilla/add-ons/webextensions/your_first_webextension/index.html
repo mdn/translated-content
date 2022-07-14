@@ -57,7 +57,7 @@ cd borderify</pre>
 </ul>
 
 <div class="warning">
-<p><a href="/zh-TW/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID">某些情況下，你需要給附加元件指定 ID</a>。如果需要指定附加元件 ID，請在 <code>manifest.json</code> 引入 <code><a href="/zh-TW/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> key，並設定 <code>gecko.id</code> 屬性：</p>
+<p><strong>警告：</strong> <a href="/zh-TW/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID">某些情況下，你需要給附加元件指定 ID</a>。如果需要指定附加元件 ID，請在 <code>manifest.json</code> 引入 <code><a href="/zh-TW/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> key，並設定 <code>gecko.id</code> 屬性：</p>
 
 <pre class="brush: json">"applications": {
   "gecko": {
@@ -124,7 +124,7 @@ cd borderify</pre>
 <p>{{EmbedYouTube("rxBQl2Z9IBQ")}}</p>
 
 <div class="note">
-<p>不過，別把這招用在 addons.mozilla.org 上，該網域目前會阻擋 content scripts。</p>
+<p><strong>備註：</strong> 不過，別把這招用在 addons.mozilla.org 上，該網域目前會阻擋 content scripts。</p>
 </div>
 
 <p>再做點小實驗吧。改一下腳本讓外框顏色改變，或是做其他更動。接著存檔，並按下 about:debugging 的 Reload 鍵重啟附加元件。現在你能看到更動了：</p>

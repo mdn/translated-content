@@ -5,13 +5,12 @@ tags:
   - 擴充套件
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 ---
-<div>
 <div>{{AddonSidebar}}</div>
 
 <table class="fullwidth-table standard-table">
  <tbody>
   <tr>
-   <th scope="row" style="width: 30%;">型別</th>
+   <th scope="row">型別</th>
    <td><code>Object</code></td>
   </tr>
   <tr>
@@ -21,13 +20,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
   <tr>
    <th scope="row">範例</th>
    <td>
-    <pre class="brush: json no-line-numbers  language-json">
-<code class="language-json">"applications": {
+    <pre class="brush: json">"applications": {
   "gecko": {
     "id": "addon@example.com",
     "strict_min_version": "42.0"
   }
-}</code></pre>
+}</pre>
    </td>
   </tr>
  </tbody>
@@ -54,33 +52,30 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
 
 <ul>
  <li><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">GUID</a></li>
- <li>寫得像信箱地址的字串：<code class="plain">extensionname@example.org</code></li>
+ <li>寫得像信箱地址的字串：<code>extensionname@example.org</code></li>
 </ul>
 
 <p>後者比較容易產生與操作。小心，在這裡使用真實信箱地址可能會引來垃圾信件。</p>
 
 <p>例如：</p>
 
-<pre class="brush:json;auto-links:false no-line-numbers  language-json"><code class="language-json">"id": "extensionname@example.org",
+<pre class="brush: json">"id": "extensionname@example.org",
 
-"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"</code></pre>
-
-<p> </p>
+"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"</pre>
 
 <h2 id="範例">範例</h2>
 
 <p>包含所有可用鍵的範例。註：大多數套件會忽略 <code>strict_max_version</code> 和 <code>update_url</code>。</p>
 
-<pre class="brush: json no-line-numbers  language-json"><code class="language-json">"applications": {
+<pre class="brush: json">"applications": {
   "gecko": {
     "id": "addon@example.com",
     "strict_min_version": "42.0",
     "strict_max_version": "50.*",
     "update_url": "https://example.com/updates.json"
   }
-}</code></pre>
+}</pre>
 
 <h2 id="瀏覽器兼容">瀏覽器兼容</h2>
-</div>
 
 <p>{{Compat("webextensions.manifest.browser_specific_settings")}}</p>

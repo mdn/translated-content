@@ -5,13 +5,12 @@ tags:
   - 擴充套件
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 ---
-<div>
 <div>{{AddonSidebar}}</div>
 
 <table class="fullwidth-table standard-table">
  <tbody>
   <tr>
-   <th scope="row" style="width: 30%;">型別</th>
+   <th scope="row">型別</th>
    <td><code>Object</code></td>
   </tr>
   <tr>
@@ -21,10 +20,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
   <tr>
    <th scope="row">範例</th>
    <td>
-    <pre class="brush: json no-line-numbers  language-json">
-<code class="language-json">"background": {
+    <pre class="brush: json">"background": {
   "scripts": ["background.js"]
-}</code></pre>
+}</pre>
    </td>
   </tr>
  </tbody>
@@ -51,10 +49,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 
     <p>腳本根據陣列裡的順序讀入。</p>
 
-    <p><strong>註：Firefox 版本50以前有一個錯誤</strong> 當 Firefox 除錯器開啓時，腳本並不總是按照陣列裡的順序讀入。要解決這個錯誤，你可以用 <code>"page"</code> 屬性並且在頁面中透過 <code>&lt;script&gt;</code> 標籤讀入後端腳本。這個錯誤在 Firefox 50 被修正，從那開始腳本總是會依照陣列中的順序讀入。</p>
+    <p><strong>註：</strong>Firefox 版本50以前有一個錯誤當 Firefox 除錯器開啓時，腳本並不總是按照陣列裡的順序讀入。要解決這個錯誤，你可以用 <code>"page"</code> 屬性並且在頁面中透過 <code>&lt;script&gt;</code> 標籤讀入後端腳本。這個錯誤在 Firefox 50 被修正，從那開始腳本總是會依照陣列中的順序讀入。</p>
 
     <div class="note">
-    <p><strong>註：</strong> 如果你想要用<code>&lt;script&gt;標籤</code>從遠端取得一個腳本（例如 <code>&lt;script src = "https://code.jquery.com/jquery-1.7.1.min.js"&gt;</code>），你必須要修改套件 manifest.json 中的 <code>content_security_policy</code> 鍵。</p>
+    <p><strong>備註：</strong> 如果你想要用<code>&lt;script&gt;標籤</code>從遠端取得一個腳本（例如 <code>&lt;script src = "https://code.jquery.com/jquery-1.7.1.min.js"&gt;</code>），你必須要修改套件 manifest.json 中的 <code>content_security_policy</code> 鍵。</p>
     </div>
    </td>
   </tr>
@@ -73,19 +71,18 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 
 <h2 id="範例">範例</h2>
 
-<pre class="brush: json no-line-numbers  language-json"><code class="language-json">  "background": {
+<pre class="brush: json">"background": {
     "scripts": ["jquery.js", "my-background.js"]
-  }</code></pre>
+  }</pre>
 
 <p>讀取兩個後端腳本。</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json">"background": {
+<pre class="brush: json">"background": {
     "page": "my-background.html"
-  }</code></pre>
+  }</pre>
 
 <p>讀取一個自訂的後端頁面。</p>
 
 <h2 id="瀏覽器兼容">瀏覽器兼容</h2>
-</div>
 
 <p>{{Compat("webextensions.manifest.background", 10)}}</p>

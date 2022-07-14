@@ -11,7 +11,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 <div>{{AddonSidebar}}</div>
 
 <div class="note">
-<p>Firefox 54 以後可以使用這個功能。</p>
+<p><strong>備註：</strong> Firefox 54 以後可以使用這個功能。</p>
 </div>
 
 <p>當套件提供開發者使用的工具時，可以以一個瀏覽器開發工具的新面板的形式在開發者工具裡添加一個UI。</p>
@@ -24,7 +24,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 
 <p>透過在套件的 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> 添加 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a></code> 鍵並提供HTML檔案來添加開發工具頁面：</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json">"devtools_page": "devtools-page.html"</code></pre>
+<pre class="brush: json">"devtools_page": "devtools-page.html"</pre>
 
 <p>在開發工具頁面，呼叫腳本會添加開發工具面板：</p>
 
@@ -51,7 +51,7 @@ browser.devtools.panels.create(
   newPanel.onHidden.addListener(handleHidden);
 });</pre>
 
-<p>套件現在可以在檢測器視窗透過 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval"><code>devtools</code>.inspectedWindow.eval()</a></code> 或透過後端腳本傳送訊息來插入內容腳本兩種方式執行。你可以在<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">擴充開發者工具</a>找到更多相關訊息。</p>
+<p>套件現在可以在檢測器視窗透過 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval"><code>devtools.inspectedWindow.eval()</code></a> 或透過後端腳本傳送訊息來插入內容腳本兩種方式執行。你可以在<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">擴充開發者工具</a>找到更多相關訊息。</p>
 
 <h2 id="開發面板設計">開發面板設計</h2>
 

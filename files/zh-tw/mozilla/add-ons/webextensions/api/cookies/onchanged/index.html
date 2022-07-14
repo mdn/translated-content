@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 
 <h2 id="語法">語法</h2>
 
-<pre class="syntaxbox brush:js">browser.cookies.onChanged.addListener(listener)
+<pre class="brush: js">browser.cookies.onChanged.addListener(listener)
 browser.cookies.onChanged.removeListener(listener)
 browser.cookies.onChanged.hasListener(listener)
 </pre>
@@ -43,11 +43,10 @@ browser.cookies.onChanged.hasListener(listener)
  <dd>
  <p>能被呼叫的 callback 函式會在此事件發生的時候觸發。函式會 passed 以下參數：</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>changeInfo</code></dt>
-  <dd>一個含有觸發事件資訊的 <code>object</code>。它有兩個屬性：</dd>
-  <dd>
-  <dl class="reference-values">
+  <dd>一個含有觸發事件資訊的 <code>object</code>。它有兩個屬性：
+  <dl>
    <dt><code>removed</code></dt>
    <dd>一個 <code>boolean</code>。如果 cookie 被刪除則為 <code>true</code>，否則為 <code>false</code>。</dd>
    <dt><code>cookie</code></dt>
@@ -68,7 +67,7 @@ browser.cookies.onChanged.hasListener(listener)
 
 <p>本範例監聽 <code>onChanged</code> 事件並紀錄由 <code>changeInfo</code> 參數傳來的資訊：</p>
 
-<pre class="brush: js line-numbers  language-js">browser.cookies.onChanged.addListener(function(changeInfo) {
+<pre class="brush: js">browser.cookies.onChanged.addListener(function(changeInfo) {
   console.log('Cookie changed: ' +
               '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
               '\n * Cause: ' + changeInfo.cause +
@@ -77,9 +76,8 @@ browser.cookies.onChanged.hasListener(listener)
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>致謝</strong>
-
-<p>此 API 基於 Chromium 的 <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a> API 而來，文件改作自 Chromium 程式碼裡的 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a>。</p>
+<div class="note">
+<p><strong>備註：</strong> 此 API 基於 Chromium 的 <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a> API 而來，文件改作自 Chromium 程式碼裡的 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a>。</p>
 
 <p>Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。</p>
 </div>
