@@ -353,7 +353,7 @@ Les littéraux sont utilisés pour représenter des valeurs en JavaScript. Ce so
 - [Littéraux booléens](<#les_littéraux_booléens>)
 - [Littéraux de nombres flottants](<#les_littéraux_de_nombres_décimaux>)
 - [Littéraux numériques](<#les_littéraux_numériques>)
-- [Littéraux d'objets](<#les_littéraux_dobjets)>)
+- [Littéraux d'objets](<#les_littéraux_dobjets>)
 - [Littéraux d'expressions rationnelles](#les_littéraux_dexpressions_rationnelles)
 - [Littéraux de chaînes de caractères](<#les_littéraux_de_chaînes_de_caractères>)
 
