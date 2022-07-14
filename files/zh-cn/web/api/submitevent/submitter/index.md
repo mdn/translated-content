@@ -17,7 +17,7 @@ translation_of: Web/api/SubmitEven/submitter
 ---
 {{APIRef("HTML DOM")}}
 
-在 {{domxref("SubmitEvent")}} 接口找到的只读属性 **`submitter`** 用于指定提交按钮或者被用来提交表单的其他元素。
+在 {{domxref("SubmitEvent")}} 接口的只读属性 **`submitter`** 用于指定提交按钮或者被用来提交表单的其他元素。
 
 ## 值
 
