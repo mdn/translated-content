@@ -32,9 +32,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findLast
 findLast((element) => { /* ... */ } )
 findLast((element, index) => { /* ... */ } )
 findLast((element, index, array) => { /* ... */ } )
+
 // Callback function
 findLast(callbackFn)
 findLast(callbackFn, thisArg)
+
 // Inline callback function
 findLast(function(element) { /* ... */ })
 findLast(function(element, index) { /* ... */ })
@@ -97,10 +99,12 @@ const inventory = [
   {name: 'fish', quantity: 1},
   {name: 'cherries', quantity: 5}
 ];
+
 // return true inventory stock is low
 function isNotEnough(item) {
   return item.quantity < 2;
 }
+
 console.log(inventory.findLast(isNotEnough));
 // { name: "fish", quantity: 1 }
 ```
@@ -116,7 +120,9 @@ const inventory = [
   {name: 'fish', quantity: 1},
   {name: 'cherries', quantity: 5}
 ];
+
 const result = inventory.findLast( ({ quantity }) => quantity < 2 );
+
 console.log(result) 
 // { name: "fish", quantity: 1 }
 ```
@@ -137,6 +143,7 @@ function isPrime(element) {
   }
   return true;
 }
+
 console.log([4, 6, 8, 12].findLast(isPrime)); // undefined, not found
 console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 ```
@@ -148,10 +155,12 @@ console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 ```js
 // Declare array with no elements at indexes 2, 3, and 4
 const array = [0,1,,,,5,6];
+
 // Shows all indexes, not just those with assigned values
 array.findLast(function(value, index) {
   console.log(`Visited index ${index} with value ${value}`);
 });
+
 // Shows all indexes, including deleted
 array.findLast(function(value, index) {
   // Delete element 5 on first iteration
