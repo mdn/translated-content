@@ -13,7 +13,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 
 <p>此型別的值都是物件，並包含以下屬性：</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>id</code></dt>
  <dd><code>string</code>，代表 cookie 存放空間內的唯一識別號（identifier）。</dd>
  <dt><code>tabIds</code></dt>
@@ -28,20 +28,19 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 
 <p>在以下程式碼片段內，{{WebExtAPIRef("cookies.getAllCookieStores()")}} 用來查找瀏覽器內，所有目前能用 cookie 存放空間，並列出每個 cookie 存放空間的 ID、還有分享此 cookie 存放空間的頁籤。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function logStores(cookieStores) {
+<pre class="brush: js">function logStores(cookieStores) {
   for(store of cookieStores) {
     console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
   }
 }
 
 var getting = browser.cookies.getAllCookieStores();
-getting.then(logStores);</code></pre>
+getting.then(logStores);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>致謝</strong>
-
-<p>此 API 基於 Chromium 的 <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a> API 而來，文件改作自 Chromium 程式碼裡的 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a>。</p>
+<div class="note">
+<p><strong>備註：</strong> 此 API 基於 Chromium 的 <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a> API 而來，文件改作自 Chromium 程式碼裡的 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a>。</p>
 
 <p>Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。</p>
 </div>

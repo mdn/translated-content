@@ -16,17 +16,17 @@ translation_of: Mozilla/Add-ons/WebExtensions/API
 
 <p>You can access the APIs using the <code>browser</code> namespace:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function logTabs(tabs) {
+<pre class="brush: js">function logTabs(tabs) {
   console.log(tabs);
 }
 
-browser.tabs.query({currentWindow: true}, logTabs);</code></pre>
+browser.tabs.query({currentWindow: true}, logTabs);</pre>
 </div>
 
 <div>
 <p>Many of the APIs are asynchronous, returning a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function logCookie(c) {
+<pre class="brush: js">function logCookie(c) {
   console.log(c);
 }
 
@@ -37,7 +37,7 @@ function logError(e) {
 var setCookie = browser.cookies.set(
   {url: "https://developer.mozilla.org/"}
 );
-setCookie.then(logCookie, logError);</code></pre>
+setCookie.then(logCookie, logError);</pre>
 </div>
 
 <div>

@@ -7,11 +7,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
 <div>{{AddonSidebar}}</div>
 
-<div>內容腳本（content script）是擴充套件的一部分，它會在在特定的網頁執行（與之相對的則是同樣屬於套件</div>
-
-<div>的後端腳本（background scripts）或者網站本身的腳本，像是那些那些透過 {{HTMLElement("script")}} 標籤讀取的內</div>
-
-<div>容）</div>
+<div>內容腳本（content script）是擴充套件的一部分，它會在在特定的網頁執行（與之相對的則是同樣屬於套件的後端腳本（background scripts）或者網站本身的腳本，像是那些那些透過 {{HTMLElement("script")}} 標籤讀取的內容）</div>
 
 <div> </div>
 
@@ -22,11 +18,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 <p>Content scripts 只能使用can only access <a href="/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs">一小部分的擴充套件APIs</a>，但它們可以透過一個訊息系統<a href="/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">來與後端腳本溝通</a>，從而間接地使用擴充套件APIs。</p>
 
 <div class="note">
-<p>留意到 content scripts 目前會在 addons.mozilla.org 和 testpilot.firefox.com 中被阻擋。如果你嘗試在這些網域下的頁面注入一段 content script 會失敗並且在日誌裡記下一個 <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> 錯誤。</p>
+<p><strong>備註：</strong> 留意到 content scripts 目前會在 addons.mozilla.org 和 testpilot.firefox.com 中被阻擋。如果你嘗試在這些網域下的頁面注入一段 content script 會失敗並且在日誌裡記下一個 <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> 錯誤。</p>
 </div>
 
 <div class="note">
-<p>由於錯誤 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1408996">1408996</a>，透過 <code>var foo</code> or <code>window.foo = "bar"</code> 加入 content script 的 global 作用域的值可能會消失。</p>
+<p><strong>備註：</strong> 由於錯誤 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1408996">1408996</a>，透過 <code>var foo</code> or <code>window.foo = "bar"</code> 加入 content script 的 global 作用域的值可能會消失。</p>
 </div>
 
 <h2 id="讀入內容腳本">讀入內容腳本</h2>
@@ -358,7 +354,7 @@ window.addEventListener("message", function(event) {
 <p>完全版的範例請<a href="https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html">查看GitHub上的示範頁面</a>並按照教學做。</p>
 
 <div class="warning">
-<p>注意到當你透過這個方式跟不被信任的內容腳本互動時要非常小心。套件有很強的權限，惡意網頁可以輕易地騙出這些權限。</p>
+<p><strong>警告：</strong> 注意到當你透過這個方式跟不被信任的內容腳本互動時要非常小心。套件有很強的權限，惡意網頁可以輕易地騙出這些權限。</p>
 
 <p>舉個簡單的例子，假設一接收訊息的內容腳本長這樣：</p>
 
