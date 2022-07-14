@@ -699,7 +699,7 @@
 /es/docs/HTML/Elemento/aside	/es/docs/Web/HTML/Element/aside
 /es/docs/HTML/Elemento/b	/es/docs/Web/HTML/Element/b
 /es/docs/HTML/Elemento/base	/es/docs/Web/HTML/Element/base
-/es/docs/HTML/Elemento/basefont	/es/docs/Web/HTML/Element/basefont
+/es/docs/HTML/Elemento/basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/HTML/Elemento/bdo	/es/docs/Web/HTML/Element/bdo
 /es/docs/HTML/Elemento/big	/es/docs/Web/HTML/Element/big
 /es/docs/HTML/Elemento/blockquote	/es/docs/Web/HTML/Element/blockquote
@@ -793,7 +793,7 @@
 /es/docs/HTML:Elemento:area	/es/docs/Web/HTML/Element/area
 /es/docs/HTML:Elemento:b	/es/docs/Web/HTML/Element/b
 /es/docs/HTML:Elemento:base	/es/docs/Web/HTML/Element/base
-/es/docs/HTML:Elemento:basefont	/es/docs/Web/HTML/Element/basefont
+/es/docs/HTML:Elemento:basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/HTML:Elemento:bdo	/es/docs/Web/HTML/Element/bdo
 /es/docs/HTML:Elemento:big	/es/docs/Web/HTML/Element/big
 /es/docs/HTML:Elemento:blockquote	/es/docs/Web/HTML/Element/blockquote
@@ -1589,7 +1589,7 @@
 /es/docs/Web/API/Element/accessKey	/es/docs/Web/API/HTMLElement/accessKey
 /es/docs/Web/API/Element/ongotpointercapture	/es/docs/Web/API/GlobalEventHandlers/ongotpointercapture
 /es/docs/Web/API/Element/onlostpointercapture	/es/docs/Web/API/GlobalEventHandlers/onlostpointercapture
-/es/docs/Web/API/Element/onwheel	/es/docs/Web/API/GlobalEventHandlers/onwheel
+/es/docs/Web/API/Element/onwheel	/es/docs/conflicting/Web/API/Element/wheel_event
 /es/docs/Web/API/ElementosHTMLparaVideo	/es/docs/Web/API/HTMLVideoElement
 /es/docs/Web/API/Event/createEvent	/es/docs/Web/API/Document/createEvent
 /es/docs/Web/API/EventListener	/es/docs/conflicting/Web/API/EventTarget/addEventListener
@@ -1605,6 +1605,7 @@
 /es/docs/Web/API/Geolocation.watchPosition	/es/docs/Web/API/Geolocation/watchPosition
 /es/docs/Web/API/GlobalEventHandlers/onblur	/es/docs/Web/API/Window/blur_event
 /es/docs/Web/API/GlobalEventHandlers/onchange	/es/docs/conflicting/Web/API/HTMLElement/change_event
+/es/docs/Web/API/GlobalEventHandlers/onclick	/es/docs/conflicting/Web/API/Element/click_event
 /es/docs/Web/API/GlobalEventHandlers/onclose	/es/docs/Web/API/HTMLDialogElement/close_event
 /es/docs/Web/API/GlobalEventHandlers/onfocus	/es/docs/Web/API/Window/focus_event
 /es/docs/Web/API/GlobalEventHandlers/oninput	/es/docs/conflicting/Web/API/HTMLElement/input_event
@@ -1612,8 +1613,11 @@
 /es/docs/Web/API/GlobalEventHandlers/onkeyup	/es/docs/conflicting/Web/API/Element/keyup_event
 /es/docs/Web/API/GlobalEventHandlers/onresize	/es/docs/Web/API/Window/resize_event
 /es/docs/Web/API/GlobalEventHandlers/onselect	/es/docs/Web/API/HTMLInputElement/select_event
+/es/docs/Web/API/GlobalEventHandlers/onselectstart	/es/docs/Web/API/Document/selectstart_event
 /es/docs/Web/API/GlobalEventHandlers/onsubmit	/es/docs/Web/API/HTMLFormElement/submit_event
 /es/docs/Web/API/GlobalEventHandlers/ontouchstart	/es/docs/Web/API/Element/touchstart_event
+/es/docs/Web/API/GlobalEventHandlers/onwheel	/es/docs/conflicting/Web/API/Element/wheel_event
+/es/docs/Web/API/HTMLElement/animationend_event	/es/docs/Web/API/Element/animationend_event
 /es/docs/Web/API/HTMLElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /es/docs/Web/API/HTMLElement/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
 /es/docs/Web/API/HTMLOrForeignElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
@@ -1807,7 +1811,7 @@
 /es/docs/Web/CSS/url()	/es/docs/Web/CSS/url
 /es/docs/Web/CSS/var()	/es/docs/Web/CSS/var
 /es/docs/Web/Demos_of_open_web_technologies	/es/docs/Web/Demos
-/es/docs/Web/Events/animationend	/es/docs/Web/API/HTMLElement/animationend_event
+/es/docs/Web/Events/animationend	/es/docs/Web/API/Element/animationend_event
 /es/docs/Web/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/Events/blur	/es/docs/Web/API/Element/blur_event
 /es/docs/Web/Events/canplay	/es/docs/Web/API/HTMLMediaElement/canplay_event
@@ -1881,6 +1885,7 @@
 /es/docs/Web/HTML/Canvas	/es/docs/Web/API/Canvas_API
 /es/docs/Web/HTML/Canvas/A_basic_ray-caster	/es/docs/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/HTML/Consejos_para_la_creación_de_páginas_HTML_de_carga_rápida	/es/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
+/es/docs/Web/HTML/Element/basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/Web/HTML/Element/input/datetime	/es/docs/Web/HTML/Element/input/datetime-local
 /es/docs/Web/HTML/Elemento	/es/docs/Web/HTML/Element
 /es/docs/Web/HTML/Elemento/Audio2	/es/docs/Web/HTML/Element/audio
@@ -1897,7 +1902,7 @@
 /es/docs/Web/HTML/Elemento/audio	/es/docs/Web/HTML/Element/audio
 /es/docs/Web/HTML/Elemento/b	/es/docs/Web/HTML/Element/b
 /es/docs/Web/HTML/Elemento/base	/es/docs/Web/HTML/Element/base
-/es/docs/Web/HTML/Elemento/basefont	/es/docs/Web/HTML/Element/basefont
+/es/docs/Web/HTML/Elemento/basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/Web/HTML/Elemento/bdi	/es/docs/Web/HTML/Element/bdi
 /es/docs/Web/HTML/Elemento/bdo	/es/docs/Web/HTML/Element/bdo
 /es/docs/Web/HTML/Elemento/bgsound	/es/docs/Web/HTML/Element/bgsound
@@ -2595,7 +2600,7 @@
 /es/docs/Web/Progressive_web_apps/Developer_guide/Installing	/es/docs/Web/Progressive_web_apps/Installing
 /es/docs/Web/Progressive_web_apps/Responsive/Media_types	/es/docs/Web/CSS/Media_Queries/Using_media_queries
 /es/docs/Web/Reference/Events	/es/docs/Web/Events
-/es/docs/Web/Reference/Events/animationend	/es/docs/Web/API/HTMLElement/animationend_event
+/es/docs/Web/Reference/Events/animationend	/es/docs/Web/API/Element/animationend_event
 /es/docs/Web/Reference/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/Reference/Events/blur	/es/docs/Web/API/Element/blur_event
 /es/docs/Web/Reference/Events/canplay	/es/docs/Web/API/HTMLMediaElement/canplay_event

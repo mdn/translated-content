@@ -470,7 +470,9 @@
 /ko/docs/Web/API/File/size	/ko/docs/Web/API/Blob/size
 /ko/docs/Web/API/FileReader.result	/ko/docs/Web/API/FileReader/result
 /ko/docs/Web/API/GlobalEventHandlers/onchange	/ko/docs/Web/API/HTMLElement/change_event
+/ko/docs/Web/API/GlobalEventHandlers/onclick	/ko/docs/conflicting/Web/API/Element/click_event
 /ko/docs/Web/API/GlobalEventHandlers/oncontextmenu	/ko/docs/Web/API/Element/contextmenu_event
+/ko/docs/Web/API/GlobalEventHandlers/ondblclick	/ko/docs/Web/API/Element/dblclick_event
 /ko/docs/Web/API/GlobalEventHandlers/onkeydown	/ko/docs/conflicting/Web/API/Element/keydown_event
 /ko/docs/Web/API/GlobalEventHandlers/onkeyup	/ko/docs/conflicting/Web/API/Element/keyup_event
 /ko/docs/Web/API/GlobalEventHandlers/onpointerenter	/ko/docs/Web/API/Element/pointerenter_event

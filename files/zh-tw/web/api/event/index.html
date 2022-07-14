@@ -118,7 +118,7 @@ translation_of: Web/API/Event
  <dd>事件重新導向前的原定目標（Mozilla 專屬）。</dd>
  <dt>{{domxref("Event.returnValue")}}</dt>
  <dd>非標準屬性。用以替代 {{domxref("Event.preventDefault()", "preventDefault()")}} 方法與 {{domxref("Event.defaultPrevented", "defaultPrevented")}} 屬性（舊版 Internet Explorer 專屬）。</dd>
- <dt>{{domxref("Event.scoped")}} {{readonlyinline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Event.scoped")}} {{readonlyinline}} {{Deprecated_Inline}}</dt>
  <dd>A {{jsxref("Boolean")}} indicating whether the given event will bubble across through the shadow root into the standard DOM. This property has been renamed to {{domxref("Event.composed", "composed")}}.</dd>
  <dt>{{domxref("Event.srcElement")}} {{non-standard_inline}}</dt>
  <dd>非標準屬性。為 {{domxref("Event.target", "target")}} 屬性的別名（舊版 Internet Explorer 專屬）。</dd>
@@ -135,7 +135,7 @@ translation_of: Web/API/Event
 <h3 id="Obsolete_properties">Obsolete properties</h3>
 
 <dl>
- <dt>{{domxref("Event.scoped")}} {{readonlyinline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Event.scoped")}} {{readonlyinline}} {{Deprecated_Inline}}</dt>
  <dd>A {{jsxref("Boolean")}} indicating whether the given event will bubble across through the shadow root into the standard DOM. This property has been renamed to {{domxref("Event.composed", "composed")}}.</dd>
 </dl>
 
@@ -166,9 +166,9 @@ translation_of: Web/API/Event
 <dl>
  <dt>{{domxref("Event.getPreventDefault()")}} {{non-standard_inline}}</dt>
  <dd>非標準方法。回傳 <code>defaultPrevented</code> 屬性值。請直接改用 {{domxref("Event.defaultPrevented", "defaultPrevented")}} 屬性。</dd>
- <dt>{{domxref("Event.preventBubble()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}</dt>
+ <dt>{{domxref("Event.preventBubble()")}} {{non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>已廢棄方法。阻止事件繼續冒泡傳遞。請改用 {{domxref("event.stopPropagation()", "stopPropagation()")}} 方法。</dd>
- <dt>{{domxref("Event.preventCapture()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}</dt>
+ <dt>{{domxref("Event.preventCapture()")}} {{non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>已廢棄方法。請改用 {{domxref("event.stopPropagation()", "stopPropagation()")}} 方法。</dd>
 </dl>
 

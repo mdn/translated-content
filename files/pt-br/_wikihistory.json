@@ -4963,12 +4963,6 @@
       "teoli"
     ]
   },
-  "Web/API/GlobalEventHandlers/onclick": {
-    "modified": "2020-10-15T22:17:11.589Z",
-    "contributors": [
-      "g-otn"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onerror": {
     "modified": "2019-03-23T22:31:39.576Z",
     "contributors": [
@@ -10345,18 +10339,6 @@
   },
   "Web/HTTP/Headers/Proxy-Authorization": {
     "modified": "2020-07-09T11:07:07.810Z",
-    "contributors": [
-      "FernandoKGA"
-    ]
-  },
-  "Web/HTTP/Headers/Public-Key-Pins": {
-    "modified": "2020-10-15T22:31:35.978Z",
-    "contributors": [
-      "FernandoKGA"
-    ]
-  },
-  "Web/HTTP/Headers/Public-Key-Pins-Report-Only": {
-    "modified": "2020-10-15T22:31:47.341Z",
     "contributors": [
       "FernandoKGA"
     ]
@@ -15943,6 +15925,12 @@
       "teoli"
     ]
   },
+  "conflicting/Web/API/Element/click_event": {
+    "modified": "2020-10-15T22:17:11.589Z",
+    "contributors": [
+      "g-otn"
+    ]
+  },
   "conflicting/Web/API/Element/keyup_event": {
     "modified": "2020-10-15T22:03:53.967Z",
     "contributors": [
@@ -16085,6 +16073,18 @@
   },
   "conflicting/Web/HTTP/Headers/Cookie": {
     "modified": "2020-10-15T22:29:27.166Z",
+    "contributors": [
+      "FernandoKGA"
+    ]
+  },
+  "conflicting/Web/HTTP/Headers/Expect-CT": {
+    "modified": "2020-10-15T22:31:35.978Z",
+    "contributors": [
+      "FernandoKGA"
+    ]
+  },
+  "conflicting/Web/HTTP/Headers/Expect-CT_63e560324d2c47190db4456d746ba07b": {
+    "modified": "2020-10-15T22:31:47.341Z",
     "contributors": [
       "FernandoKGA"
     ]

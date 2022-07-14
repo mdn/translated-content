@@ -64,9 +64,9 @@ translation_of: Web/API/Attr
  <dd>
  <p>当前该属性总是返回 <code>NULL</code></p>
  </dd>
- <dt><code>childNodes</code> {{obsolete_inline(14)}}</dt>
+ <dt><code>childNodes</code> {{Deprecated_Inline}}</dt>
  <dd>当前该属性总是返回一个空的 {{domxref("NodeList")}}.</dd>
- <dt><code>firstChild</code> {{obsolete_inline(14)}}</dt>
+ <dt><code>firstChild</code> {{Deprecated_Inline}}</dt>
  <dd><code>当前该属性总是返回 NULL</code></dd>
  <dt><code>isId</code> {{readOnlyInline}}</dt>
  <dd>表明该属性是否一个“ID 属性”。“ID 属性”的值在整个 DOM 文档中应当是唯一。在 HTML DOM 文档中属性“id”是一个 ID 属性，也是唯一一个 ID 属性；但是在 XML 文档中可以定义其他 ID 属性。一个属性是否是唯一的，通常由{{Glossary("DTD")}}或其他文档模式描述文件决定。</dd>
@@ -86,7 +86,7 @@ translation_of: Web/API/Attr
  <dd><code>当前该属性总是返回 NULL</code></dd>
  <dt><code>previousSibling</code></dt>
  <dd><code>当前该属性总是返回 NULL</code></dd>
- <dt><code>schemaTypeInfo</code> {{obsolete_inline}} {{readOnlyInline}}</dt>
+ <dt><code>schemaTypeInfo</code> {{Deprecated_Inline}} {{readOnlyInline}}</dt>
  <dd>当前属性的类型信息。然而当加载完文档完或调用{{domxref("Document.normalizeDocument")}}后，这个被认定为绝对正确的包含在节点内的类型信息，会因为节点的移动而变得不可信。</dd>
  <dt><code>specified</code></dt>
  <dd><code>当前该属性总是返回 true</code></dd>
@@ -97,7 +97,7 @@ translation_of: Web/API/Attr
 <p>这些方法已经被废弃：</p>
 
 <dl>
- <dt><code>appendChild()</code>{{obsolete_inline(14)}}</dt>
+ <dt><code>appendChild()</code> {{Deprecated_Inline}}</dt>
  <dd>通过编辑{{domxref("Attr.value")}}属性来实现相同的效果</dd>
  <dt><code>cloneNode()</code></dt>
  <dd>这个方法本不应当在这里被使用，所以无须担心其演变</dd>
@@ -109,7 +109,7 @@ translation_of: Web/API/Attr
  <dd>使用{{domxref("Element.getAttribute()")}}来代替</dd>
  <dt><code>getAttributeNodeNS()</code></dt>
  <dd>使用{{domxref("Element.getAttributeNS()")}}来代替</dd>
- <dt><code>hasAttributes() </code>{{obsolete_inline("21.0")}}</dt>
+ <dt><code>hasAttributes() </code> {{Deprecated_Inline}}</dt>
  <dd><code>当前该方法总是返回</code>false.</dd>
  <dt><code>hasChildNodes()</code></dt>
  <dd><code>当前该方法总是返回</code>false.</dd>
@@ -123,9 +123,9 @@ translation_of: Web/API/Attr
  <dd>这个方法本不应当被在这里使用，所以无须担心其演变</dd>
  <dt><code>removeAttributeNode()</code></dt>
  <dd>使用{{domxref("Element.removeAttribute()")}}来代替</dd>
- <dt><code>removeChild()</code>{{obsolete_inline(14)}}</dt>
+ <dt><code>removeChild()</code> {{Deprecated_Inline}}</dt>
  <dd>通过编辑{{domxref("Attr.value")}}来实现相同效果</dd>
- <dt><code>replaceChild()</code>{{obsolete_inline(14)}}</dt>
+ <dt><code>replaceChild()</code> {{Deprecated_Inline}}</dt>
  <dd>通过编辑{{domxref("Attr.value")}}来实现相同效果</dd>
  <dt><code>setAttributeNode()</code></dt>
  <dd>使用{{domxref("Element.setAttribute()")}}来代替</dd>

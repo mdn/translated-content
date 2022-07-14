@@ -3664,12 +3664,6 @@
       "jackblackevo"
     ]
   },
-  "Web/API/GlobalEventHandlers/onclick": {
-    "modified": "2019-08-27T10:57:49.300Z",
-    "contributors": [
-      "StanleyDing"
-    ]
-  },
   "Web/API/HTMLCanvasElement": {
     "modified": "2019-03-23T22:48:19.691Z",
     "contributors": [
@@ -7794,6 +7788,12 @@
     "modified": "2019-03-23T22:30:38.352Z",
     "contributors": [
       "jackblackevo"
+    ]
+  },
+  "conflicting/Web/API/Element/click_event": {
+    "modified": "2019-08-27T10:57:49.300Z",
+    "contributors": [
+      "StanleyDing"
     ]
   },
   "conflicting/Web/API/Geolocation/getCurrentPosition": {

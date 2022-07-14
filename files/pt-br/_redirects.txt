@@ -569,6 +569,7 @@
 /pt-BR/docs/Web/API/GlobalEventHandlers/onabort	/pt-BR/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onblur	/pt-BR/docs/Web/API/Window/blur_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onchange	/pt-BR/docs/Web/API/HTMLElement/change_event
+/pt-BR/docs/Web/API/GlobalEventHandlers/onclick	/pt-BR/docs/conflicting/Web/API/Element/click_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/oncontextmenu	/pt-BR/docs/Web/API/Element/contextmenu_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onfocus	/pt-BR/docs/Web/API/Window/focus_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onkeyup	/pt-BR/docs/conflicting/Web/API/Element/keyup_event
@@ -777,6 +778,8 @@
 /pt-BR/docs/Web/HTTP/Headers/Cookie2	/pt-BR/docs/conflicting/Web/HTTP/Headers/Cookie
 /pt-BR/docs/Web/HTTP/Headers/Expira	/pt-BR/docs/Web/HTTP/Headers/Expires
 /pt-BR/docs/Web/HTTP/Headers/Localização	/pt-BR/docs/Web/HTTP/Headers/Location
+/pt-BR/docs/Web/HTTP/Headers/Public-Key-Pins	/pt-BR/docs/conflicting/Web/HTTP/Headers/Expect-CT
+/pt-BR/docs/Web/HTTP/Headers/Public-Key-Pins-Report-Only	/pt-BR/docs/conflicting/Web/HTTP/Headers/Expect-CT_63e560324d2c47190db4456d746ba07b
 /pt-BR/docs/Web/HTTP/Headers/Set-Cookie2	/pt-BR/docs/conflicting/Web/HTTP/Headers/Set-Cookie
 /pt-BR/docs/Web/HTTP/Mensagens	/pt-BR/docs/Web/HTTP/Messages
 /pt-BR/docs/Web/HTTP/Redirecionamento	/pt-BR/docs/Web/HTTP/Redirections

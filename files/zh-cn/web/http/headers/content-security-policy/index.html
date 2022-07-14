@@ -88,7 +88,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
  <dd>通过限制可以加载的资源类型来限制哪些插件可以被嵌入到文档中。</dd>
  <dt>{{CSP("sandbox")}}</dt>
  <dd>类似 {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} 属性，为请求的资源启用沙盒。</dd>
- <dt>{{CSP("disown-opener")}} {{obsolete_inline}}</dt>
+ <dt>{{CSP("disown-opener")}} {{Deprecated_Inline}}</dt>
  <dd>确保资源在导航的时候能够脱离父页面。（windown.opener 对象）Ensures a resource will disown its opener when navigated to.</dd>
 </dl>
 
@@ -121,7 +121,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 <dl>
  <dt>{{CSP("block-all-mixed-content")}}</dt>
  <dd>当使用 HTTPS 加载页面时阻止使用 HTTP 加载任何资源。</dd>
- <dt>{{CSP("referrer")}} {{obsolete_inline}}</dt>
+ <dt>{{CSP("referrer")}} {{Deprecated_Inline}}</dt>
  <dd>用来指定会离开当前页面的跳转链接的 referer header 信息。应该使用 {{HTTPHeader("Referrer-Policy")}} 替代。</dd>
  <dt>{{CSP("require-sri-for")}}</dt>
  <dd>需要使用 {{Glossary("SRI")}} 作用于页面上的脚本或样式。</dd>

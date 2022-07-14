@@ -183,9 +183,9 @@ translation_of: Web/API/Document
  <dd>Should return a {{DOMxRef("DOMConfiguration")}} 对象。</dd>
  <dt>{{DOMxRef("document.fgColor")}} {{Deprecated_Inline}}</dt>
  <dd>获取或设置 the foreground color, or text color, of 当前文档。</dd>
- <dt>{{DOMxRef("Document.fullscreen")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}</dt>
  <dd><code>true</code> when the document is in {{DOMxRef("Using_full-screen_mode","full-screen mode")}}.</dd>
- <dt>{{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
  <dd>获取或设置 the height of 当前文档。</dd>
  <dt>{{DOMxRef("Document.inputEncoding")}} {{ReadOnlyInline}} {{Deprecated_Inline}}</dt>
  <dd>Alias of {{DOMxRef("Document.characterSet")}}. Use this property instead.</dd>
@@ -193,13 +193,13 @@ translation_of: Web/API/Document
  <dd>获取或设置 the color of hyperlinks in the document.</dd>
  <dt>{{DOMxRef("Document.vlinkColor")}} {{Deprecated_Inline}}</dt>
  <dd>获取或设置 the color of visited hyperlinks.</dd>
- <dt>{{DOMxRef("Document.width")}} {{Non-standard_Inline}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.width")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
  <dd>返回 width of 当前文档。</dd>
  <dt>{{DOMxRef("Document.xmlEncoding")}} {{Deprecated_Inline}}</dt>
  <dd>返回 encoding as determined by the XML declaration.</dd>
- <dt>{{DOMxRef("Document.xmlStandalone")}} {{Obsolete_Inline("10.0")}}</dt>
+ <dt>{{DOMxRef("Document.xmlStandalone")}} {{Deprecated_Inline}}</dt>
  <dd>Returns <code>true</code> if the XML declaration specifies the document to be standalone (<em>e.g.,</em> An external part of the DTD affects the document's content), else <code>false</code>.</dd>
- <dt>{{DOMxRef("Document.xmlVersion")}} {{Obsolete_Inline("10.0")}}</dt>
+ <dt>{{DOMxRef("Document.xmlVersion")}} {{Deprecated_Inline}}</dt>
  <dd>返回 version number as specified in the XML declaration or <code>"1.0"</code> if the declaration is absent.</dd>
 </dl>
 
@@ -228,7 +228,7 @@ translation_of: Web/API/Document
  <dd>用给定标签名 tagName 创建一个新的元素。</dd>
  <dt>{{DOMxRef("Document.createElementNS()")}}</dt>
  <dd>用给定标签名 tagName 和命名空间创建一个新的元素。</dd>
- <dt>{{DOMxRef("Document.createEntityReference()")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.createEntityReference()")}} {{Deprecated_Inline}}</dt>
  <dd>创建一个 new entity reference object and returns it.</dd>
  <dt>{{DOMxRef("Document.createEvent()")}}</dt>
  <dd>创建一个 event 对象。</dd>
@@ -262,7 +262,7 @@ translation_of: Web/API/Document
  <dd>Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to its first-party storage.</dd>
  <dt>{{DOMxRef("Document.importNode()")}}</dt>
  <dd>Returns a clone of a node from an external document.</dd>
- <dt>{{DOMxRef("Document.normalizeDocument()")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.normalizeDocument()")}} {{Deprecated_Inline}}</dt>
  <dd>Replaces entities, normalizes text nodes, etc.</dd>
  <dt>{{DOMxRef("Document.releaseCapture()")}} {{Non-standard_Inline}}</dt>
  <dd>Releases the current mouse capture if it's on an element in this document.</dd>
@@ -270,7 +270,7 @@ translation_of: Web/API/Document
  <dd>详见 {{DOMxRef("Window.releaseEvents()")}}。</dd>
  <dt>{{DOMxRef("Document.requestStorageAccess()")}}</dt>
  <dd>Returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.</dd>
- <dt>{{DOMxRef("Document.routeEvent()")}} {{Non-standard_Inline}} {{Obsolete_Inline(24)}}</dt>
+ <dt>{{DOMxRef("Document.routeEvent()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
  <dd>See {{DOMxRef("Window.routeEvent()")}}.</dd>
  <dt>{{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}</dt>
  <dd>Allows you to change the element being used as the background image for a specified element ID.</dd>
@@ -561,13 +561,13 @@ translation_of: Web/API/Document
 <p>Mozilla also define some non-standard methods:</p>
 
 <dl>
- <dt>{{DOMxRef("document.execCommandShowHelp")}} {{Obsolete_Inline("14.0")}}</dt>
+ <dt>{{DOMxRef("document.execCommandShowHelp")}} {{Deprecated_Inline}}</dt>
  <dd>This method never did anything and always threw an exception, so it was removed in Gecko 14.0 {{geckoRelease("14.0")}}.</dd>
- <dt>{{DOMxRef("document.getBoxObjectFor")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("document.getBoxObjectFor")}} {{Deprecated_Inline}}</dt>
  <dd>Use the {{DOMxRef("Element.getBoundingClientRect()")}} method instead.</dd>
  <dt>{{DOMxRef("document.loadOverlay")}}</dt>
  <dd>Loads a <a href="/en-US/docs/XUL_Overlays">XUL overlay</a> dynamically. This only works in XUL documents.</dd>
- <dt>{{DOMxRef("document.queryCommandText")}} {{Obsolete_Inline("14.0")}}</dt>
+ <dt>{{DOMxRef("document.queryCommandText")}} {{Deprecated_Inline}}</dt>
  <dd>This method never did anything but throw an exception, and was removed in Gecko 14.0 {{geckoRelease("14.0")}}.</dd>
 </dl>
 
@@ -576,7 +576,7 @@ translation_of: Web/API/Document
 <p>Microsoft defines some non-standard properties:</p>
 
 <dl>
- <dt>{{DOMxRef("document.fileSize")}}* {{Non-standard_Inline}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("document.fileSize")}}* {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
  <dd>Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See <a href="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx">MSDN</a>.</dd>
 </dl>
 
