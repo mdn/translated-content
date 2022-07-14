@@ -7,15 +7,13 @@ tags:
   - Encoding
   - Overview
   - Reference
-translation-of:
-  - Web/api/TextDecoder
-  - Web/api/TextEncoder
+translation-of: Web/API/Encoding_API
 ---
 {{DefaultAPISidebar("Encoding API")}}
 
-**Encoding API** 提供了一种机制来处理各种 {{Glossary("character encoding", "字符编码文本")}}，包括传递的非 {{Glossary("UTF-8")}} 编码。
+**Encoding API** 提供了一种机制来处理各种 {{Glossary("character encoding", "字符编码文本")}}，包括传统的非 {{Glossary("UTF-8")}} 编码。
 
-API 提供四个接口：{{domxref("TextDecoder")}}、{{domxref("TextEncoder")}}、{{domxref("TextDecoderStream")}} 和 {{domxref("TextEncoderStream")}}。
+API 提供了四个接口：{{domxref("TextDecoder")}}、{{domxref("TextEncoder")}}、{{domxref("TextDecoderStream")}} 和 {{domxref("TextEncoderStream")}}。
 
 {{AvailableInWorkers}}
 
