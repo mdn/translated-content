@@ -8444,16 +8444,6 @@
       "sklicek"
     ]
   },
-  "Web/HTTP/Public_Key_Pinning": {
-    "modified": "2020-10-15T21:39:59.794Z",
-    "contributors": [
-      "Dschubba",
-      "GanbaruTobi",
-      "rugk",
-      "TheAlxH",
-      "mozjan"
-    ]
-  },
   "Web/HTTP/Status": {
     "modified": "2020-11-15T16:45:22.616Z",
     "contributors": [
@@ -13590,6 +13580,16 @@
     "modified": "2019-03-23T23:29:04.477Z",
     "contributors": [
       "HolgerSinn.Com"
+    ]
+  },
+  "conflicting/Web/Security/Certificate_Transparency": {
+    "modified": "2020-10-15T21:39:59.794Z",
+    "contributors": [
+      "Dschubba",
+      "GanbaruTobi",
+      "rugk",
+      "TheAlxH",
+      "mozjan"
     ]
   },
   "conflicting/Web/Web_Components/Using_custom_elements": {

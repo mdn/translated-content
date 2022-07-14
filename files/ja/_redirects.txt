@@ -1923,7 +1923,7 @@
 /ja/docs/HTML/Element/b	/ja/docs/Web/HTML/Element/b
 /ja/docs/HTML/Element/base	/ja/docs/Web/HTML/Element/base
 /ja/docs/HTML/Element/base-redirect-1	/ja/docs/Web/HTML/Element/base
-/ja/docs/HTML/Element/basefont	/ja/docs/Web/HTML/Element/basefont
+/ja/docs/HTML/Element/basefont	/ja/docs/conflicting/Web/CSS/CSS_Fonts
 /ja/docs/HTML/Element/bdi	/ja/docs/Web/HTML/Element/bdi
 /ja/docs/HTML/Element/bdo	/ja/docs/Web/HTML/Element/bdo
 /ja/docs/HTML/Element/bgsound	/ja/docs/Web/HTML/Element/bgsound
@@ -4280,6 +4280,7 @@
 /ja/docs/Web/HTML/Element/Input1/week	/ja/docs/Web/HTML/Element/input/week
 /ja/docs/Web/HTML/Element/Script1	/ja/docs/Web/HTML/Element/Script
 /ja/docs/Web/HTML/Element/Video/canplay_event	/ja/docs/Web/API/HTMLMediaElement/canplay_event
+/ja/docs/Web/HTML/Element/basefont	/ja/docs/conflicting/Web/CSS/CSS_Fonts
 /ja/docs/Web/HTML/Element/h1	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h2	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h3	/ja/docs/Web/HTML/Element/Heading_Elements
@@ -4380,6 +4381,7 @@
 /ja/docs/Web/HTTP/Headers/Set-Cookie2	/ja/docs/Web/HTTP/Headers/Set-Cookie
 /ja/docs/Web/HTTP/Index	/ja/docs/conflicting/Web/HTTP
 /ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
+/ja/docs/Web/HTTP/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency
 /ja/docs/Web/HTTP/Response_codes	/ja/docs/Web/HTTP/Status
 /ja/docs/Web/HTTP/Response_codes/204	/ja/docs/Web/HTTP/Status/204
 /ja/docs/Web/HTTP/Server-Side_Access_Control	/ja/docs/Web/HTTP/CORS
@@ -4704,7 +4706,7 @@
 /ja/docs/Web/Security/CSP_not_connected/Using_Content_Security_Policy	/ja/docs/Web/HTTP/CSP
 /ja/docs/Web/Security/HTTP_Strict_Transport_Security	/ja/docs/Web/HTTP/Headers/Strict-Transport-Security
 /ja/docs/Web/Security/Information_Security_Basics	/ja/docs/orphaned/Web/Security/Information_Security_Basics
-/ja/docs/Web/Security/Public_Key_Pinning	/ja/docs/Web/HTTP/Public_Key_Pinning
+/ja/docs/Web/Security/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency
 /ja/docs/Web/Specification_list	/ja/docs/orphaned/Web/Specification_list
 /ja/docs/Web/WebGL	/ja/docs/Web/API/WebGL_API
 /ja/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context

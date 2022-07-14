@@ -13484,12 +13484,6 @@
       "pantao"
     ]
   },
-  "Web/API/HTMLBaseFontElement": {
-    "modified": "2020-10-15T22:31:35.341Z",
-    "contributors": [
-      "laampui"
-    ]
-  },
   "Web/API/HTMLBodyElement": {
     "modified": "2019-03-23T22:02:20.934Z",
     "contributors": [
@@ -30165,12 +30159,6 @@
       "nobug"
     ]
   },
-  "Web/HTML/Element/basefont": {
-    "modified": "2019-03-23T22:20:23.098Z",
-    "contributors": [
-      "hoyt"
-    ]
-  },
   "Web/HTML/Element/bdi": {
     "modified": "2020-10-15T21:45:31.840Z",
     "contributors": [
@@ -32754,20 +32742,6 @@
       "WayneCui"
     ]
   },
-  "Web/HTTP/Headers/Public-Key-Pins": {
-    "modified": "2020-10-15T21:55:02.367Z",
-    "contributors": [
-      "shevacjs",
-      "WayneCui"
-    ]
-  },
-  "Web/HTTP/Headers/Public-Key-Pins-Report-Only": {
-    "modified": "2020-10-15T22:04:11.647Z",
-    "contributors": [
-      "ujsxn",
-      "shevacjs"
-    ]
-  },
   "Web/HTTP/Headers/Range": {
     "modified": "2020-10-15T21:54:38.123Z",
     "contributors": [
@@ -33198,12 +33172,6 @@
       "cnryb",
       "archerc",
       "msy"
-    ]
-  },
-  "Web/HTTP/Public_Key_Pinning": {
-    "modified": "2020-10-15T22:15:40.587Z",
-    "contributors": [
-      "Yayure"
     ]
   },
   "Web/HTTP/Range_requests": {
@@ -44726,6 +44694,12 @@
       "Freeopen"
     ]
   },
+  "Web/Security/Certificate_Transparency": {
+    "modified": "2020-10-15T22:15:40.587Z",
+    "contributors": [
+      "Yayure"
+    ]
+  },
   "Web/Security/Same-origin_policy": {
     "modified": "2020-04-07T00:07:57.795Z",
     "contributors": [
@@ -46566,6 +46540,18 @@
       "lazurey"
     ]
   },
+  "conflicting/Web/CSS/CSS_Fonts": {
+    "modified": "2020-10-15T22:31:35.341Z",
+    "contributors": [
+      "laampui"
+    ]
+  },
+  "conflicting/Web/CSS/CSS_Fonts_25d4b407d3e5044aeffb97faa9669a95": {
+    "modified": "2019-03-23T22:20:23.098Z",
+    "contributors": [
+      "hoyt"
+    ]
+  },
   "conflicting/Web/CSS/cursor": {
     "modified": "2019-03-23T23:32:59.999Z",
     "contributors": [
@@ -46688,6 +46674,20 @@
       "lcxfs1991",
       "Breezewish",
       "ziyunfei"
+    ]
+  },
+  "conflicting/Web/HTTP/Headers/Expect-CT": {
+    "modified": "2020-10-15T21:55:02.367Z",
+    "contributors": [
+      "shevacjs",
+      "WayneCui"
+    ]
+  },
+  "conflicting/Web/HTTP/Headers/Expect-CT_63e560324d2c47190db4456d746ba07b": {
+    "modified": "2020-10-15T22:04:11.647Z",
+    "contributors": [
+      "ujsxn",
+      "shevacjs"
     ]
   },
   "conflicting/Web/HTTP/Headers/Set-Cookie": {

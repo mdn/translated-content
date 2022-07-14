@@ -658,6 +658,7 @@
 /de/docs/Web/HTTP/CORS/Errors/CORSFehlenderAllowHeaderAusPreflight	/de/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 /de/docs/Web/HTTP/CORS/Errors/CORSFehltQuelleErlauben	/de/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 /de/docs/Web/HTTP/Caching_FAQ	/de/docs/Web/HTTP/Caching
+/de/docs/Web/HTTP/Public_Key_Pinning	/de/docs/conflicting/Web/Security/Certificate_Transparency
 /de/docs/Web/JavaScript/Aufzählbarkeit_und_Zugehörigkeit_von_Eigenschaften	/de/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
 /de/docs/Web/JavaScript/Datenstrukturen	/de/docs/Web/JavaScript/Data_structures
 /de/docs/Web/JavaScript/Datenstruktures	/de/docs/Web/JavaScript/Data_structures
@@ -836,7 +837,7 @@
 /de/docs/Web/SVG/Tutorial/Einführung	/de/docs/Web/SVG/Tutorial/Introduction
 /de/docs/Web/SVG/Tutorial/Pfade	/de/docs/Web/SVG/Tutorial/Paths
 /de/docs/Web/SVG/Tutorial/SVG_Schriftarten	/de/docs/Web/SVG/Tutorial/SVG_fonts
-/de/docs/Web/Security/Public_Key_Pinning	/de/docs/Web/HTTP/Public_Key_Pinning
+/de/docs/Web/Security/Public_Key_Pinning	/de/docs/conflicting/Web/Security/Certificate_Transparency
 /de/docs/Web/WebAPI/verwenden_von_geolocation	/de/docs/Web/API/Geolocation_API
 /de/docs/Web/WebGL	/de/docs/Web/API/WebGL_API
 /de/docs/Web/WebGL/3D-Objekte_mit_WebGL_erstellen	/de/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL

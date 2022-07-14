@@ -7938,12 +7938,6 @@
       "AlexAlex"
     ]
   },
-  "Web/API/HTMLBaseFontElement": {
-    "modified": "2019-03-23T22:43:41.613Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
   "Web/API/HTMLBodyElement": {
     "modified": "2019-03-18T21:15:56.882Z",
     "contributors": [
@@ -14680,12 +14674,6 @@
       "kaifonaft",
       "Angelskih",
       "coollibins"
-    ]
-  },
-  "Web/HTML/Element/basefont": {
-    "modified": "2020-10-15T22:03:44.661Z",
-    "contributors": [
-      "maxim20121776"
     ]
   },
   "Web/HTML/Element/bdi": {
@@ -23696,6 +23684,18 @@
       "dixiony",
       "SKaznadei",
       "iamale"
+    ]
+  },
+  "conflicting/Web/CSS/CSS_Fonts": {
+    "modified": "2019-03-23T22:43:41.613Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "conflicting/Web/CSS/CSS_Fonts_25d4b407d3e5044aeffb97faa9669a95": {
+    "modified": "2020-10-15T22:03:44.661Z",
+    "contributors": [
+      "maxim20121776"
     ]
   },
   "conflicting/Web/CSS/cursor": {

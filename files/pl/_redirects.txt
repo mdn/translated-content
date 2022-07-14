@@ -1207,7 +1207,7 @@
 /pl/docs/HTML/Element/applet	/pl/docs/Web/HTML/Element/applet
 /pl/docs/HTML/Element/b	/pl/docs/Web/HTML/Element/b
 /pl/docs/HTML/Element/base	/pl/docs/Web/HTML/Element/base
-/pl/docs/HTML/Element/basefont	/pl/docs/Web/HTML/Element/basefont
+/pl/docs/HTML/Element/basefont	/pl/docs/Web/CSS/CSS_Fonts
 /pl/docs/HTML/Element/bdo	/pl/docs/Web/HTML/Element/bdo
 /pl/docs/HTML/Element/bgsound	/pl/docs/Web/HTML/Element/bgsound
 /pl/docs/HTML/Element/big	/pl/docs/Web/HTML/Element/big
@@ -1270,7 +1270,7 @@
 /pl/docs/HTML:Element:applet	/pl/docs/Web/HTML/Element/applet
 /pl/docs/HTML:Element:b	/pl/docs/Web/HTML/Element/b
 /pl/docs/HTML:Element:base	/pl/docs/Web/HTML/Element/base
-/pl/docs/HTML:Element:basefont	/pl/docs/Web/HTML/Element/basefont
+/pl/docs/HTML:Element:basefont	/pl/docs/Web/CSS/CSS_Fonts
 /pl/docs/HTML:Element:bdo	/pl/docs/Web/HTML/Element/bdo
 /pl/docs/HTML:Element:bgsound	/pl/docs/Web/HTML/Element/bgsound
 /pl/docs/HTML:Element:big	/pl/docs/Web/HTML/Element/big
@@ -1613,6 +1613,7 @@
 /pl/docs/Web/Guide/Liczniki_CSS	/pl/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /pl/docs/Web/HTML(PL)/Tryb_Zgodnosci_oraz_Tryb_Standardow	/pl/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /pl/docs/Web/HTML/Canvas	/pl/docs/Web/API/Canvas_API
+/pl/docs/Web/HTML/Element/basefont	/pl/docs/Web/CSS/CSS_Fonts
 /pl/docs/Web/HTML/Elementy	/pl/docs/Web/HTML/Element
 /pl/docs/Web/HTML/Elementy/a	/pl/docs/Web/HTML/Element/a
 /pl/docs/Web/HTML/Elementy/abbr	/pl/docs/Web/HTML/Element/abbr

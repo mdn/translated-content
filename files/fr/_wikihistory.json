@@ -15082,12 +15082,6 @@
       "Kalwyn"
     ]
   },
-  "Web/API/HTMLBaseFontElement": {
-    "modified": "2020-10-15T22:35:14.285Z",
-    "contributors": [
-      "Voulto"
-    ]
-  },
   "Web/API/HTMLBodyElement": {
     "modified": "2019-04-19T13:59:15.144Z",
     "contributors": [
@@ -29500,14 +29494,6 @@
       "tregagnon"
     ]
   },
-  "Web/HTML/Element/basefont": {
-    "modified": "2020-10-15T21:23:31.867Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "tregagnon"
-    ]
-  },
   "Web/HTML/Element/bdi": {
     "modified": "2020-10-15T21:23:16.145Z",
     "contributors": [
@@ -31615,14 +31601,6 @@
       "marie-ototoi",
       "Hell_Carlito",
       "dattaz"
-    ]
-  },
-  "Web/HTTP/Public_Key_Pinning": {
-    "modified": "2019-03-18T21:11:18.056Z",
-    "contributors": [
-      "totopsy",
-      "Tom_D",
-      "Hell_Carlito"
     ]
   },
   "Web/HTTP/Redirections": {
@@ -39700,6 +39678,14 @@
       "marumari"
     ]
   },
+  "Web/Security/Certificate_Transparency": {
+    "modified": "2019-03-18T21:11:18.056Z",
+    "contributors": [
+      "totopsy",
+      "Tom_D",
+      "Hell_Carlito"
+    ]
+  },
   "Web/Security/Referer_header:_privacy_and_security_concerns": {
     "modified": "2020-11-02T18:51:04.362Z",
     "contributors": [
@@ -40813,6 +40799,20 @@
     "modified": "2019-04-06T12:38:31.267Z",
     "contributors": [
       "SphinxKnight"
+    ]
+  },
+  "conflicting/Web/CSS/CSS_Fonts": {
+    "modified": "2020-10-15T22:35:14.285Z",
+    "contributors": [
+      "Voulto"
+    ]
+  },
+  "conflicting/Web/CSS/CSS_Fonts_25d4b407d3e5044aeffb97faa9669a95": {
+    "modified": "2020-10-15T21:23:31.867Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "tregagnon"
     ]
   },
   "conflicting/Web/CSS/print-color-adjust": {

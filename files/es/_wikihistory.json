@@ -13434,15 +13434,6 @@
       "Jorolo"
     ]
   },
-  "Web/HTML/Element/basefont": {
-    "modified": "2019-03-23T23:42:33.059Z",
-    "contributors": [
-      "Sebastianz",
-      "jigs12",
-      "teoli",
-      "Jorolo"
-    ]
-  },
   "Web/HTML/Element/bdi": {
     "modified": "2019-03-23T22:37:44.087Z",
     "contributors": [
@@ -21109,6 +21100,15 @@
     "modified": "2019-03-23T22:31:07.427Z",
     "contributors": [
       "miguelsp"
+    ]
+  },
+  "conflicting/Web/CSS/CSS_Fonts": {
+    "modified": "2019-03-23T23:42:33.059Z",
+    "contributors": [
+      "Sebastianz",
+      "jigs12",
+      "teoli",
+      "Jorolo"
     ]
   },
   "conflicting/Web/CSS/cursor": {

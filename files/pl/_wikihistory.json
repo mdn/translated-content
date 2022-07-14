@@ -4135,6 +4135,13 @@
       "andrzejkrecicki"
     ]
   },
+  "Web/CSS/CSS_Fonts": {
+    "modified": "2019-01-22T18:17:17.900Z",
+    "contributors": [
+      "teoli",
+      "Witia"
+    ]
+  },
   "Web/CSS/CSS_Grid_Layout": {
     "modified": "2020-04-30T03:28:17.468Z",
     "contributors": [
@@ -5325,13 +5332,6 @@
       "DoctorLarva",
       "teoli",
       "Ptak82",
-      "Witia"
-    ]
-  },
-  "Web/HTML/Element/basefont": {
-    "modified": "2019-01-22T18:17:17.900Z",
-    "contributors": [
-      "teoli",
       "Witia"
     ]
   },

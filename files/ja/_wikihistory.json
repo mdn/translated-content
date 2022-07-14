@@ -32112,15 +32112,6 @@
       "Marsf"
     ]
   },
-  "Web/HTML/Element/basefont": {
-    "modified": "2020-10-15T21:19:16.759Z",
-    "contributors": [
-      "mfuji09",
-      "yyss",
-      "fscholz",
-      "ethertank"
-    ]
-  },
   "Web/HTML/Element/bdi": {
     "modified": "2020-10-15T21:19:22.899Z",
     "contributors": [
@@ -34969,15 +34960,6 @@
       "t-ataku",
       "j15338tn",
       "orisano"
-    ]
-  },
-  "Web/HTTP/Public_Key_Pinning": {
-    "modified": "2020-10-15T21:36:10.884Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "hashedhyphen",
-      "clariroid"
     ]
   },
   "Web/HTTP/Range_requests": {
@@ -47191,6 +47173,15 @@
       "8845musign"
     ]
   },
+  "conflicting/Web/CSS/CSS_Fonts": {
+    "modified": "2020-10-15T21:19:16.759Z",
+    "contributors": [
+      "mfuji09",
+      "yyss",
+      "fscholz",
+      "ethertank"
+    ]
+  },
   "conflicting/Web/CSS/CSS_Scroll_Snap": {
     "modified": "2020-02-21T23:37:52.316Z",
     "contributors": [
@@ -47426,6 +47417,15 @@
       "Sebastianz",
       "teoli",
       "manzyun"
+    ]
+  },
+  "conflicting/Web/Security/Certificate_Transparency": {
+    "modified": "2020-10-15T21:36:10.884Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto",
+      "hashedhyphen",
+      "clariroid"
     ]
   },
   "conflicting/Web/Web_Components": {

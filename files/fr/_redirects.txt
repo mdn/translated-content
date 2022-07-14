@@ -1878,7 +1878,7 @@
 /fr/docs/HTML/Element/audio	/fr/docs/Web/HTML/Element/audio
 /fr/docs/HTML/Element/b	/fr/docs/Web/HTML/Element/b
 /fr/docs/HTML/Element/base	/fr/docs/Web/HTML/Element/base
-/fr/docs/HTML/Element/basefont	/fr/docs/Web/HTML/Element/basefont
+/fr/docs/HTML/Element/basefont	/fr/docs/conflicting/Web/CSS/CSS_Fonts_25d4b407d3e5044aeffb97faa9669a95
 /fr/docs/HTML/Element/bdi	/fr/docs/Web/HTML/Element/bdi
 /fr/docs/HTML/Element/bdo	/fr/docs/Web/HTML/Element/bdo
 /fr/docs/HTML/Element/bgsound	/fr/docs/Web/HTML/Element/bgsound
@@ -3811,6 +3811,7 @@
 /fr/docs/Web/API/GlobalEventHandlers/onselect	/fr/docs/Web/API/HTMLInputElement/select_event
 /fr/docs/Web/API/GlobalEventHandlers/onwheel	/fr/docs/Web/API/Element/wheel_event
 /fr/docs/Web/API/GlobalFetch/fetch	/fr/docs/Web/API/fetch
+/fr/docs/Web/API/HTMLBaseFontElement	/fr/docs/conflicting/Web/CSS/CSS_Fonts
 /fr/docs/Web/API/HTMLElement/animationend_event	/fr/docs/Web/API/Element/animationend_event
 /fr/docs/Web/API/HTMLElement/animationiteration_event	/fr/docs/Web/API/Element/animationiteration_event
 /fr/docs/Web/API/HTMLElement/animationstart_event	/fr/docs/Web/API/Element/animationstart_event
@@ -4667,6 +4668,7 @@
 /fr/docs/Web/HTML/Element/Video/canplay_event	/fr/docs/Web/API/HTMLMediaElement/canplay_event
 /fr/docs/Web/HTML/Element/Video/emptied_event	/fr/docs/Web/API/HTMLMediaElement/emptied_event
 /fr/docs/Web/HTML/Element/Video/ended_event	/fr/docs/Web/API/HTMLMediaElement/ended_event
+/fr/docs/Web/HTML/Element/basefont	/fr/docs/conflicting/Web/CSS/CSS_Fonts_25d4b407d3e5044aeffb97faa9669a95
 /fr/docs/Web/HTML/Element/h1	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Element/h2	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Element/h3	/fr/docs/Web/HTML/Element/Heading_Elements
@@ -4731,6 +4733,7 @@
 /fr/docs/Web/HTTP/Méthode/POST	/fr/docs/Web/HTTP/Methods/POST
 /fr/docs/Web/HTTP/Méthode/PUT	/fr/docs/Web/HTTP/Methods/PUT
 /fr/docs/Web/HTTP/Méthode/TRACE	/fr/docs/Web/HTTP/Methods/TRACE
+/fr/docs/Web/HTTP/Public_Key_Pinning	/fr/docs/Web/Security/Certificate_Transparency
 /fr/docs/Web/HTTP/Requêtes_conditionnelles	/fr/docs/Web/HTTP/Conditional_requests
 /fr/docs/Web/JavaScript/A_propos	/fr/docs/Web/JavaScript/About_JavaScript
 /fr/docs/Web/JavaScript/Autres_outils_JavaScript	https://firefox-source-docs.mozilla.org/devtools-user/index.html
@@ -5747,7 +5750,7 @@
 /fr/docs/Web/SVG/Tutoriel_SVG	/fr/docs/Web/SVG/Tutorial
 /fr/docs/Web/SVG/Tutoriel_SVG/Introduction	/fr/docs/Web/SVG/Tutorial/Introduction
 /fr/docs/Web/SVG/Tutoriel_SVG/Premiers_pas	/fr/docs/Web/SVG/Tutorial/Getting_Started
-/fr/docs/Web/Security/Public_Key_Pinning	/fr/docs/Web/HTTP/Public_Key_Pinning
+/fr/docs/Web/Security/Public_Key_Pinning	/fr/docs/Web/Security/Certificate_Transparency
 /fr/docs/Web/Security/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Same-origin_policy
 /fr/docs/Web/Tutoriels	/fr/docs/Web/Tutorials
 /fr/docs/Web/WebGL	/fr/docs/Web/API/WebGL_API

@@ -699,7 +699,7 @@
 /es/docs/HTML/Elemento/aside	/es/docs/Web/HTML/Element/aside
 /es/docs/HTML/Elemento/b	/es/docs/Web/HTML/Element/b
 /es/docs/HTML/Elemento/base	/es/docs/Web/HTML/Element/base
-/es/docs/HTML/Elemento/basefont	/es/docs/Web/HTML/Element/basefont
+/es/docs/HTML/Elemento/basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/HTML/Elemento/bdo	/es/docs/Web/HTML/Element/bdo
 /es/docs/HTML/Elemento/big	/es/docs/Web/HTML/Element/big
 /es/docs/HTML/Elemento/blockquote	/es/docs/Web/HTML/Element/blockquote
@@ -793,7 +793,7 @@
 /es/docs/HTML:Elemento:area	/es/docs/Web/HTML/Element/area
 /es/docs/HTML:Elemento:b	/es/docs/Web/HTML/Element/b
 /es/docs/HTML:Elemento:base	/es/docs/Web/HTML/Element/base
-/es/docs/HTML:Elemento:basefont	/es/docs/Web/HTML/Element/basefont
+/es/docs/HTML:Elemento:basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/HTML:Elemento:bdo	/es/docs/Web/HTML/Element/bdo
 /es/docs/HTML:Elemento:big	/es/docs/Web/HTML/Element/big
 /es/docs/HTML:Elemento:blockquote	/es/docs/Web/HTML/Element/blockquote
@@ -1885,6 +1885,7 @@
 /es/docs/Web/HTML/Canvas	/es/docs/Web/API/Canvas_API
 /es/docs/Web/HTML/Canvas/A_basic_ray-caster	/es/docs/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/HTML/Consejos_para_la_creación_de_páginas_HTML_de_carga_rápida	/es/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
+/es/docs/Web/HTML/Element/basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/Web/HTML/Element/input/datetime	/es/docs/Web/HTML/Element/input/datetime-local
 /es/docs/Web/HTML/Elemento	/es/docs/Web/HTML/Element
 /es/docs/Web/HTML/Elemento/Audio2	/es/docs/Web/HTML/Element/audio
@@ -1901,7 +1902,7 @@
 /es/docs/Web/HTML/Elemento/audio	/es/docs/Web/HTML/Element/audio
 /es/docs/Web/HTML/Elemento/b	/es/docs/Web/HTML/Element/b
 /es/docs/Web/HTML/Elemento/base	/es/docs/Web/HTML/Element/base
-/es/docs/Web/HTML/Elemento/basefont	/es/docs/Web/HTML/Element/basefont
+/es/docs/Web/HTML/Elemento/basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/Web/HTML/Elemento/bdi	/es/docs/Web/HTML/Element/bdi
 /es/docs/Web/HTML/Elemento/bdo	/es/docs/Web/HTML/Element/bdo
 /es/docs/Web/HTML/Elemento/bgsound	/es/docs/Web/HTML/Element/bgsound
