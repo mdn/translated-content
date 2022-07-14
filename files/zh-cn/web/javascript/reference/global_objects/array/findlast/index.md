@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findLast
 ---
 {{JSRef}}
 
-**`findLast()`** 方法返回满足提供测试函数中最后一个元素的值。如果没有值满足测试函数，则返回 {{jsxref("undefined")}}。
+**`findLast()`** 方法返回满足提供测试函数中最后一个元素的值。如果没有找到对应元素，则返回 {{jsxref("undefined")}}。
 
 {{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
 
