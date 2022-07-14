@@ -22618,13 +22618,6 @@
       "xrr2016"
     ]
   },
-  "Web/API/WindowEventHandlers": {
-    "modified": "2019-03-27T10:53:28.796Z",
-    "contributors": [
-      "fanerge",
-      "fscholz"
-    ]
-  },
   "Web/API/Worker": {
     "modified": "2020-10-15T21:22:11.206Z",
     "contributors": [
