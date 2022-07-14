@@ -16,7 +16,7 @@ original_slug: Web/JavaScript/Guide/Usar_promesas
 
 <p>Esencialmente, una promesa es un objeto devuelto al cual se adjuntan funciones <code>callback</code>, en lugar de pasar callbacks a una función.</p>
 
-<p>Considera la función <code>crearArchivoAudioAsync()</code>, el cual genera de manera asíncrona un archivo de sonido de acuerdo a un archivo de configuración, y dos funciones callback, una que es llamada si el archivo de audio es creado satisfactoriamente, y la otra que es llamada si ocurre un error. El código podría verse de la siguiente forma:</p>
+<p>Considera la función <code>crearArchivoAudioAsync()</code>, la cual genera de manera asíncrona un archivo de sonido de acuerdo a un archivo de configuración, y dos funciones callback, una que es llamada si el archivo de audio es creado satisfactoriamente, y la otra que es llamada si ocurre un error. El código podría verse de la siguiente forma:</p>
 
 <pre class="brush: js line-numbers  language-js">function exitoCallback(resultado) {
   console.log("Archivo de audio disponible en la URL " + resultado);
