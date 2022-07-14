@@ -49,7 +49,7 @@ requestSubmit(submitter)
 
 显而易见的问题是：当我们一开始就有 {{domxref("HTMLFormElement.submit", "submit()")}} 方法，为什么这个方法会存在?
 
-答案是简单的。`submit()` 提交表单，但是仅此而已。在另一方面，`requestSubmit()`像点击了单机提交按钮一样。表单的内容被验证并且表单只有被成功验证时提交。一旦表单被提交，{{domxref("HTMLFormElement.submit_event", "submit")}} 事件就会被发送回表单对象。
+答案是简单的。`submit()` 提交表单，但是仅此而已。在另一方面，`requestSubmit()` 像点击了提交按钮一样。表单的内容被验证并且表单只有被成功验证时提交。一旦表单被提交，{{domxref("HTMLFormElement.submit_event", "submit")}} 事件就会被发送回表单对象。
 
 ## 示例
 
